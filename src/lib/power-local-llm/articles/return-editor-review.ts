@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-10',
-    dateModified: '2026-10-10',
+    dateModified: '2026-10-16',
     next_refresh_due: '2027-04-10',
     theme: 'RAG & Document Chat',
     heroImage: '/images/return-editor-review-hero-en.webp',
@@ -84,6 +84,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: 'local-vs-cloud',
       },
       {
+        label: 'From the Maker',
+        anchor: 'from-the-maker',
+      },
+      {
         label: 'Trade-Offs: Benefits vs. Limitations',
         anchor: 'tradeoffs',
       },
@@ -133,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Developer: a sole proprietorship registered in Kraków, Poland, according to its privacy policy; the person who submitted the listing is the developer.',
-          'Workflow: Analyze flags clauses, Ask answers with citations, Fix proposes rewrites, and Returns re-runs saved checks such as key-date extraction.',
+          'Workflow: Analyze flags clauses, Ask answers with citations, Fix proposes rewrites, and Returns runs saved checks; built-in ones are Risk Assessment, Plain-Language Notes, Summarize, Extract Key Points, Action Items and Translate.',
           'Local engine: a bundled llama.cpp server that runs downloadable models; the default model is a 5.3 GB download and 16 GB of memory is recommended.',
           'Plans: Free (local, no account) and Pro (adds cloud AI); a firm-oriented Counsel tier is announced but waitlist-only.',
         ],
@@ -238,7 +242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Analyze.** Imports PDF, DOCX, ODT, RTF and HTML, converts them to Markdown, and marks findings in traffic-light colors: red for risk, amber for items that need attention.',
           '**Ask.** Answers questions about a document with citations to the relevant clause, and runs semantic search across a whole folder of Markdown files.',
           '**Fix.** Proposes inline rewrites that you accept or reject; nothing changes until you choose.',
-          '**Returns.** Saved, reusable checks, such as key-date extraction, that you run on any document; the documentation describes chaining several model passes.',
+          '**Returns.** Saved, reusable checks that you run on any document. According to the developer, the built-in Returns are Risk Assessment, Plain-Language Notes, Summarize, Extract Key Points, Action Items and Translate; you can edit their prompts or create your own, such as a key-date extraction. The documentation describes chaining several model passes.',
           '**Editor.** Variables and formulas inside documents, Mermaid charts, and export to PDF and HTML with charts and images carried over since version 1.3.6.',
         ],
       },
@@ -261,6 +265,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'These are the maker\'s declarations, not audit results, and the code is closed. PromptQuorum has not inspected network traffic; for confidential contracts, check the mode shown in the status bar and test with the network disconnected.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'From the Maker',
+        content: [
+          'Michał, the developer of Return Editor (called "Return" in the quote), shared the following about the app and the reasons for building it. It is presented as the developer\'s own words, not as PromptQuorum\'s independent editorial assessment. The developer also reviewed this article for technical accuracy, and the corrections are reflected above. Statements that documents never have to leave the computer describe the Free plan: in Pro cloud mode the content of each request goes to Anthropic.',
+          '"I like law. Not the paperwork, but the idea behind it: that people can agree on rules, write them down and hold each other to them. I think it is one of the most important things our civilization has built.',
+          'The problem is that today most of it lives in long documents that few people can read with confidence. A lawyer\'s time is expensive, so many people sign contracts they have only skimmed, and lawyers spend hours on a first pass that software can do.',
+          'I built Return so that anyone can get a careful first read of a contract: which clauses are risky, why, and for which side, with every answer pointing to the clause it came from. It runs on your own computer, so a confidential document never has to leave it to be understood. It is not a replacement for a lawyer. It helps you know what to ask, and it lets lawyers spend their time on judgment instead of reading.',
+          'What makes it different: the analysis lives inside the document, every AI change is a suggestion you accept or reject, and your own review standards can be saved and reused. Files stay plain Markdown on your disk.',
+          'I am building Return on my own, in Poland. Next on my list: a Linux version and more reliable local models on long contracts."',
+        ],
+        note: '— Michał, developer',
       },
       tradeOffs: {
         id: 'tradeOffs',
@@ -313,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What We Could Not Verify',
         items: [
           '**Accuracy of the risk flags.** PromptQuorum did not run the app, so which clauses it flags, misses or mis-rates is not assessed.',
-          '**What the flags are tuned for.** The pages we read do not say which contract types, jurisdictions or standards the analysis is based on.',
+          '**What the flags are tuned for.** The pages we read do not say which standards the analysis is based on. The developer says Risk Assessment takes two settings, jurisdiction (EU, US, UK, International or Polish) and perspective (receiving party, providing party or neutral), and that prompts can be edited; PromptQuorum did not test how well these settings work.',
           '**Source code and audits.** No public repository, third-party audit or certification was found, so privacy statements cannot be checked against code.',
           '**Company and install base.** The site names no team; the privacy policy identifies a sole proprietorship in Kraków, Poland, and customer numbers are not published.',
           '**Legal reliability.** AI-generated flags and rewrites are not legal advice; a qualified lawyer should check any contract you sign.',
@@ -375,7 +392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Does it work in languages other than English?',
-            a: 'The pages we read do not list interface languages. Search uses a multilingual embedding model (bge-m3) and the model list includes the Polish-specialist Bielik, so test your own language on the Free plan first.',
+            a: 'According to the developer, the interface is in English. Documents can be in other languages, with quality depending on the model; search uses a multilingual embedding model (bge-m3) and the model list includes the Polish-specialist Bielik, so test your own language on the Free plan first.',
           },
           {
             q: 'How often is it updated?',
@@ -419,7 +436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://promptquorum.com/power-local-llm/return-editor-review',
       inLanguage: 'en',
       datePublished: '2026-10-10',
-      dateModified: '2026-10-10',
+      dateModified: '2026-10-16',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -487,7 +504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-10',
-    dateModified: '2026-10-10',
+    dateModified: '2026-10-16',
     next_refresh_due: '2027-04-10',
     theme: 'RAG & Document Chat',
     heroImage: '/images/return-editor-review-hero-de.webp',
@@ -560,6 +577,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: 'local-vs-cloud',
       },
       {
+        label: 'Vom Entwickler',
+        anchor: 'from-the-maker',
+      },
+      {
         label: 'Abwägungen: Vorteile vs. Einschränkungen',
         anchor: 'tradeoffs',
       },
@@ -609,7 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Entwickler: laut Datenschutzerklärung ein in Krakau (Polen) eingetragenes Einzelunternehmen; die Person, die den Eintrag eingereicht hat, ist der Entwickler.',
-          'Ablauf: Analyze markiert Klauseln, Ask antwortet mit Zitaten, Fix schlägt Umformulierungen vor, und Returns führt gespeicherte Prüfungen wie die Extraktion von Schlüsseldaten erneut aus.',
+          'Ablauf: Analyze markiert Klauseln, Ask antwortet mit Zitaten, Fix schlägt Umformulierungen vor, und Returns führt gespeicherte Prüfungen aus; integriert sind Risk Assessment, Plain-Language Notes, Summarize, Extract Key Points, Action Items und Translate.',
           'Lokale Engine: ein mitgelieferter llama.cpp-Server für herunterladbare Modelle; das Standardmodell ist ein Download von 5,3 GB, empfohlen werden 16 GB Arbeitsspeicher.',
           'Tarife: Free (lokal, ohne Konto) und Pro (ergänzt Cloud-KI); eine auf Kanzleien ausgerichtete Stufe Counsel ist angekündigt, aber nur per Warteliste verfügbar.',
         ],
@@ -714,7 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Analyze.** Importiert PDF, DOCX, ODT, RTF und HTML, wandelt sie in Markdown um und kennzeichnet Befunde in Ampelfarben: Rot für Risiko, Gelb für Punkte, die Aufmerksamkeit brauchen.',
           '**Ask.** Beantwortet Fragen zu einem Dokument mit Verweis auf die relevante Klausel und durchsucht einen ganzen Ordner mit Markdown-Dateien semantisch.',
           '**Fix.** Schlägt Umformulierungen im Text vor, die Sie annehmen oder ablehnen; nichts ändert sich ohne Ihre Entscheidung.',
-          '**Returns.** Gespeicherte, wiederverwendbare Prüfungen, etwa die Extraktion von Schlüsseldaten, die Sie auf jedes Dokument anwenden; die Dokumentation beschreibt das Verketten mehrerer Modelldurchläufe.',
+          '**Returns.** Gespeicherte, wiederverwendbare Prüfungen, die Sie auf jedes Dokument anwenden. Laut Entwickler sind Risk Assessment, Plain-Language Notes, Summarize, Extract Key Points, Action Items und Translate integriert; Sie können deren Prompts bearbeiten oder eigene Returns anlegen, etwa eine Extraktion von Schlüsseldaten. Die Dokumentation beschreibt das Verketten mehrerer Modelldurchläufe.',
           '**Editor.** Variablen und Formeln in Dokumenten, Mermaid-Diagramme sowie Export als PDF und HTML mit übernommenen Diagrammen und Bildern seit Version 1.3.6.',
         ],
       },
@@ -737,6 +758,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Das sind Angaben des Herstellers, keine Audit-Ergebnisse, und der Code ist geschlossen. PromptQuorum hat den Netzwerkverkehr nicht untersucht; prüfen Sie bei vertraulichen Verträgen den in der Statusleiste angezeigten Modus und testen Sie mit getrennter Netzwerkverbindung.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Vom Entwickler',
+        content: [
+          'Michał, der Entwickler von Return Editor (im Zitat kurz „Return“ genannt), hat Folgendes zur App und zu den Gründen für ihre Entwicklung mitgeteilt. Es wird als eigene Worte des Entwicklers wiedergegeben, nicht als unabhängige redaktionelle Einschätzung von PromptQuorum. Der Entwickler hat diesen Artikel außerdem fachlich geprüft; die Korrekturen sind oben eingearbeitet. Aussagen, dass Dokumente den Computer nie verlassen müssen, beschreiben den Free-Tarif: Im Pro-Cloud-Modus geht der Inhalt jeder Anfrage an Anthropic.',
+          '„Ich mag das Recht. Nicht den Papierkram, sondern die Idee dahinter: dass Menschen sich auf Regeln einigen, sie aufschreiben und sich gegenseitig daran halten können. Ich halte das für eines der wichtigsten Dinge, die unsere Zivilisation hervorgebracht hat.',
+          'Das Problem ist, dass das meiste davon heute in langen Dokumenten steckt, die kaum jemand sicher lesen kann. Anwaltszeit ist teuer, deshalb unterschreiben viele Menschen Verträge, die sie nur überflogen haben, und Anwälte verbringen Stunden mit einer ersten Durchsicht, die Software erledigen kann.',
+          'Ich habe Return gebaut, damit jeder eine sorgfältige erste Lesart eines Vertrags bekommen kann: welche Klauseln riskant sind, warum und für welche Seite, wobei jede Antwort auf die Klausel verweist, aus der sie stammt. Es läuft auf Ihrem eigenen Computer, ein vertrauliches Dokument muss ihn also nicht verlassen, um verstanden zu werden. Es ersetzt keinen Anwalt. Es hilft Ihnen zu wissen, was Sie fragen sollten, und lässt Anwälte ihre Zeit mit Urteilen statt mit Lesen verbringen.',
+          'Was es anders macht: Die Analyse lebt im Dokument, jede KI-Änderung ist ein Vorschlag, den Sie annehmen oder ablehnen, und Ihre eigenen Prüfstandards lassen sich speichern und wiederverwenden. Die Dateien bleiben schlichtes Markdown auf Ihrer Festplatte.',
+          'Ich entwickle Return allein, in Polen. Als Nächstes auf meiner Liste: eine Linux-Version und zuverlässigere lokale Modelle für lange Verträge.“',
+        ],
+        note: '— Michał, Entwickler',
       },
       tradeOffs: {
         id: 'tradeOffs',
@@ -789,7 +823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was wir nicht überprüfen konnten',
         items: [
           '**Genauigkeit der Risikomarkierungen.** PromptQuorum hat die App nicht ausgeführt; welche Klauseln sie markiert, übersieht oder falsch einstuft, wurde nicht bewertet.',
-          '**Worauf die Markierungen abgestimmt sind.** Die geprüften Seiten sagen nicht, auf welche Vertragsarten, Rechtsordnungen oder Standards sich die Analyse stützt.',
+          '**Worauf die Markierungen abgestimmt sind.** Die geprüften Seiten nennen die zugrunde liegenden Standards nicht. Laut Entwickler hat Risk Assessment zwei Einstellungen, Rechtsordnung (EU, US, UK, International oder Polnisch) und Perspektive (empfangende Partei, bereitstellende Partei oder neutral), und Prompts lassen sich bearbeiten; wie gut diese Einstellungen funktionieren, hat PromptQuorum nicht getestet.',
           '**Quellcode und Audits.** Es wurden weder ein öffentliches Repository noch ein Drittanbieter-Audit oder eine Zertifizierung gefunden; Datenschutzangaben lassen sich daher nicht am Code überprüfen.',
           '**Unternehmen und Nutzerbasis.** Die Website nennt kein Team; die Datenschutzerklärung nennt ein Einzelunternehmen in Krakau (Polen), und Kundenzahlen werden nicht veröffentlicht.',
           '**Rechtliche Verlässlichkeit.** KI-generierte Markierungen und Umformulierungen sind keine Rechtsberatung; jeden Vertrag, den Sie unterschreiben, sollte ein qualifizierter Jurist prüfen.',
@@ -851,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Funktioniert die App auch in anderen Sprachen als Englisch?',
-            a: 'Die geprüften Seiten nennen keine Oberflächensprachen. Die Suche nutzt ein mehrsprachiges Embedding-Modell (bge-m3), und die Modellliste enthält das auf Polnisch spezialisierte Bielik; testen Sie Ihre Sprache daher zuerst im Free-Tarif.',
+            a: 'Laut Entwickler ist die Oberfläche auf Englisch. Dokumente können in anderen Sprachen vorliegen, die Qualität hängt vom Modell ab; die Suche nutzt ein mehrsprachiges Embedding-Modell (bge-m3), und die Modellliste enthält das auf Polnisch spezialisierte Bielik. Testen Sie Ihre Sprache daher zuerst im Free-Tarif.',
           },
           {
             q: 'Wie oft wird sie aktualisiert?',
@@ -891,7 +925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-10',
-    dateModified: '2026-10-10',
+    dateModified: '2026-10-16',
     next_refresh_due: '2027-04-10',
     theme: 'RAG & Document Chat',
     heroImage: '/images/return-editor-review-hero-es.webp',
@@ -964,6 +998,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: 'local-vs-cloud',
       },
       {
+        label: 'La voz del creador',
+        anchor: 'from-the-maker',
+      },
+      {
         label: 'Ventajas y limitaciones',
         anchor: 'tradeoffs',
       },
@@ -1013,7 +1051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Desarrollador: según su política de privacidad, un empresario individual registrado en Cracovia (Polonia); quien envió la ficha es el desarrollador.',
-          'Flujo: Analyze marca cláusulas, Ask responde con citas, Fix propone reescrituras y Returns vuelve a ejecutar comprobaciones guardadas, como la extracción de fechas clave.',
+          'Flujo: Analyze marca cláusulas, Ask responde con citas, Fix propone reescrituras y Returns ejecuta comprobaciones guardadas; las integradas son Risk Assessment, Plain-Language Notes, Summarize, Extract Key Points, Action Items y Translate.',
           'Motor local: un servidor llama.cpp incluido que ejecuta modelos descargables; el modelo por defecto es una descarga de 5,3 GB y se recomiendan 16 GB de memoria.',
           'Planes: Free (local, sin cuenta) y Pro (añade IA en la nube); un nivel Counsel pensado para despachos está anunciado, pero solo con lista de espera.',
         ],
@@ -1118,7 +1156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Analyze.** Importa PDF, DOCX, ODT, RTF y HTML, los convierte a Markdown y marca los hallazgos con colores de semáforo: rojo para riesgo, ámbar para puntos que requieren atención.',
           '**Ask.** Responde preguntas sobre un documento citando la cláusula relevante y realiza búsqueda semántica en una carpeta entera de archivos Markdown.',
           '**Fix.** Propone reescrituras en el texto que usted acepta o rechaza; nada cambia hasta que usted lo decide.',
-          '**Returns.** Comprobaciones guardadas y reutilizables, como la extracción de fechas clave, que se aplican a cualquier documento; la documentación describe el encadenado de varias pasadas del modelo.',
+          '**Returns.** Comprobaciones guardadas y reutilizables que se aplican a cualquier documento. Según el desarrollador, las integradas son Risk Assessment, Plain-Language Notes, Summarize, Extract Key Points, Action Items y Translate; se pueden editar sus prompts o crear Returns propios, por ejemplo una extracción de fechas clave. La documentación describe el encadenado de varias pasadas del modelo.',
           '**Editor.** Variables y fórmulas dentro de los documentos, gráficos Mermaid y exportación a PDF y HTML con gráficos e imágenes conservados desde la versión 1.3.6.',
         ],
       },
@@ -1141,6 +1179,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Son declaraciones del desarrollador, no resultados de una auditoría, y el código es cerrado. PromptQuorum no ha inspeccionado el tráfico de red; con contratos confidenciales, compruebe el modo que muestra la barra de estado y pruebe con la red desconectada.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'La voz del creador',
+        content: [
+          'Michał, el desarrollador de Return Editor (que en la cita lo llama simplemente «Return»), compartió lo siguiente sobre la app y los motivos por los que se creó. Se presenta como las propias palabras del desarrollador, no como una evaluación editorial independiente de PromptQuorum. El desarrollador también revisó este artículo en cuanto a exactitud técnica, y las correcciones ya están incorporadas arriba. Las afirmaciones de que los documentos no tienen que salir del ordenador describen el plan Free: en el modo en la nube de Pro, el contenido de cada solicitud llega a Anthropic.',
+          '«Me gusta el derecho. No el papeleo, sino la idea que hay detrás: que las personas puedan acordar reglas, ponerlas por escrito y exigirse mutuamente su cumplimiento. Creo que es una de las cosas más importantes que ha construido nuestra civilización.',
+          'El problema es que hoy la mayor parte vive en documentos largos que pocas personas pueden leer con confianza. El tiempo de un abogado es caro, así que muchas personas firman contratos que solo han hojeado, y los abogados dedican horas a una primera revisión que el software puede hacer.',
+          'Creé Return para que cualquiera pueda obtener una primera lectura cuidadosa de un contrato: qué cláusulas son arriesgadas, por qué y para qué parte, con cada respuesta señalando la cláusula de la que procede. Funciona en su propio ordenador, así que un documento confidencial no tiene que salir de él para ser comprendido. No sustituye a un abogado. Le ayuda a saber qué preguntar y permite que los abogados dediquen su tiempo al criterio en lugar de a la lectura.',
+          'Lo que lo hace diferente: el análisis vive dentro del documento, cada cambio de la IA es una sugerencia que usted acepta o rechaza, y sus propios criterios de revisión pueden guardarse y reutilizarse. Los archivos siguen siendo Markdown simple en su disco.',
+          'Estoy creando Return por mi cuenta, en Polonia. Lo siguiente en mi lista: una versión para Linux y modelos locales más fiables con contratos largos.»',
+        ],
+        note: '— Michał, desarrollador',
       },
       tradeOffs: {
         id: 'tradeOffs',
@@ -1193,7 +1244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lo que no pudimos verificar',
         items: [
           '**Precisión de las alertas de riesgo.** PromptQuorum no ejecutó la aplicación, así que no se evaluó qué cláusulas marca, omite o valora mal.',
-          '**Para qué están ajustadas las alertas.** Las páginas consultadas no indican en qué tipos de contrato, jurisdicciones o estándares se basa el análisis.',
+          '**Para qué están ajustadas las alertas.** Las páginas consultadas no indican en qué estándares se basa el análisis. Según el desarrollador, Risk Assessment tiene dos parámetros, jurisdicción (UE, EE. UU., Reino Unido, internacional o polaca) y perspectiva (parte receptora, parte proveedora o neutral), y los prompts se pueden editar; PromptQuorum no ha probado qué tan bien funcionan estos ajustes.',
           '**Código fuente y auditorías.** No se encontró repositorio público, auditoría de terceros ni certificación, por lo que las declaraciones de privacidad no pueden contrastarse con el código.',
           '**Empresa y base de usuarios.** El sitio no nombra a ningún equipo; la política de privacidad identifica a un empresario individual en Cracovia (Polonia) y no se publican cifras de clientes.',
           '**Fiabilidad jurídica.** Las alertas y reescrituras generadas por IA no son asesoramiento jurídico; un abogado cualificado debería revisar cualquier contrato que firme.',
@@ -1255,7 +1306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Funciona en otros idiomas además del inglés?',
-            a: 'Las páginas consultadas no enumeran los idiomas de la interfaz. La búsqueda usa un modelo de embeddings multilingüe (bge-m3) y la lista de modelos incluye Bielik, especializado en polaco; pruebe primero su idioma con el plan Free.',
+            a: 'Según el desarrollador, la interfaz está en inglés. Los documentos pueden estar en otros idiomas y la calidad depende del modelo; la búsqueda usa un modelo de embeddings multilingüe (bge-m3) y la lista de modelos incluye Bielik, especializado en polaco. Pruebe primero su idioma con el plan Free.',
           },
           {
             q: '¿Con qué frecuencia se actualiza?',
@@ -1295,7 +1346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-10',
-    dateModified: '2026-10-10',
+    dateModified: '2026-10-16',
     next_refresh_due: '2027-04-10',
     theme: 'RAG & Document Chat',
     heroImage: '/images/return-editor-review-hero-fr.webp',
@@ -1368,6 +1419,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: 'local-vs-cloud',
       },
       {
+        label: 'Le mot du développeur',
+        anchor: 'from-the-maker',
+      },
+      {
         label: 'Compromis : avantages et limites',
         anchor: 'tradeoffs',
       },
@@ -1417,7 +1472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Éditeur : une entreprise individuelle immatriculée à Cracovie (Pologne) d\'après sa politique de confidentialité ; la personne qui a soumis la fiche est le développeur.',
-          'Fonctionnement : Analyze signale les clauses, Ask répond avec des citations, Fix propose des reformulations et Returns relance des vérifications enregistrées, comme l\'extraction des dates clés.',
+          'Fonctionnement : Analyze signale les clauses, Ask répond avec des citations, Fix propose des reformulations et Returns exécute des vérifications enregistrées ; les vérifications intégrées sont Risk Assessment, Plain-Language Notes, Summarize, Extract Key Points, Action Items et Translate.',
           'Moteur local : un serveur llama.cpp intégré qui exécute des modèles téléchargeables ; le modèle par défaut pèse 5,3 Go et 16 Go de mémoire sont recommandés.',
           'Offres : Free (local, sans compte) et Pro (ajoute l\'IA cloud) ; une offre Counsel destinée aux cabinets est annoncée mais disponible uniquement sur liste d\'attente.',
         ],
@@ -1522,7 +1577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Analyze.** Importe PDF, DOCX, ODT, RTF et HTML, les convertit en Markdown et signale les constats par couleurs de feu tricolore : rouge pour un risque, orange pour un point d\'attention.',
           '**Ask.** Répond aux questions sur un document en citant la clause concernée et lance une recherche sémantique dans tout un dossier de fichiers Markdown.',
           '**Fix.** Propose des réécritures dans le texte que vous acceptez ou refusez ; rien ne change sans votre décision.',
-          '**Returns.** Des vérifications enregistrées et réutilisables, comme l\'extraction des dates clés, à appliquer à n\'importe quel document ; la documentation décrit l\'enchaînement de plusieurs passes de modèle.',
+          '**Returns.** Des vérifications enregistrées et réutilisables, à appliquer à n\'importe quel document. Selon le développeur, les Returns intégrés sont Risk Assessment, Plain-Language Notes, Summarize, Extract Key Points, Action Items et Translate ; on peut modifier leurs prompts ou créer les siens, par exemple une extraction des dates clés. La documentation décrit l\'enchaînement de plusieurs passes de modèle.',
           '**Éditeur.** Variables et formules dans les documents, diagrammes Mermaid, et export PDF et HTML avec graphiques et images conservés depuis la version 1.3.6.',
         ],
       },
@@ -1545,6 +1600,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Ce sont des déclarations de l\'éditeur, pas des résultats d\'audit, et le code est fermé. PromptQuorum n\'a pas inspecté le trafic réseau ; pour des contrats confidentiels, vérifiez le mode affiché dans la barre d\'état et testez réseau coupé.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Le mot du développeur',
+        content: [
+          'Michał, le développeur de Return Editor (que la citation appelle simplement « Return »), a partagé ce qui suit au sujet de l\'application et des raisons de sa création. Ce texte est présenté comme les propres mots du développeur, et non comme une évaluation éditoriale indépendante de PromptQuorum. Le développeur a aussi relu cet article pour en vérifier l\'exactitude technique, et les corrections sont intégrées plus haut. Les affirmations selon lesquelles les documents n\'ont jamais besoin de quitter l\'ordinateur décrivent l\'offre Free : en mode cloud Pro, le contenu de chaque requête est transmis à Anthropic.',
+          '« J\'aime le droit. Pas la paperasse, mais l\'idée qui le sous-tend : que les gens puissent convenir de règles, les écrire et se tenir mutuellement à ces règles. Je pense que c\'est l\'une des choses les plus importantes que notre civilisation ait construites.',
+          'Le problème, c\'est qu\'aujourd\'hui l\'essentiel se trouve dans de longs documents que peu de gens savent lire avec assurance. Le temps d\'un avocat coûte cher : beaucoup de personnes signent donc des contrats qu\'elles n\'ont fait que survoler, et des avocats passent des heures sur une première lecture qu\'un logiciel peut faire.',
+          'J\'ai créé Return pour que chacun puisse obtenir une première lecture soignée d\'un contrat : quelles clauses sont risquées, pourquoi, et pour quelle partie, chaque réponse renvoyant à la clause dont elle provient. Il fonctionne sur votre propre ordinateur, de sorte qu\'un document confidentiel n\'a jamais besoin de le quitter pour être compris. Ce n\'est pas un remplaçant de l\'avocat. Il vous aide à savoir quoi demander, et il permet aux avocats de consacrer leur temps au jugement plutôt qu\'à la lecture.',
+          'Ce qui le distingue : l\'analyse vit à l\'intérieur du document, chaque modification de l\'IA est une suggestion que vous acceptez ou rejetez, et vos propres critères de revue peuvent être enregistrés et réutilisés. Les fichiers restent du Markdown brut sur votre disque.',
+          'Je développe Return à titre individuel, en Pologne. Prochaines étapes sur ma liste : une version Linux et des modèles locaux plus fiables sur les longs contrats. »',
+        ],
+        note: '— Michał, développeur',
       },
       tradeOffs: {
         id: 'tradeOffs',
@@ -1597,7 +1665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Ce que nous n\'avons pas pu vérifier',
         items: [
           '**Fiabilité des alertes de risque.** PromptQuorum n\'a pas exécuté l\'application ; les clauses qu\'elle signale, manque ou évalue mal n\'ont donc pas été examinées.',
-          '**Sur quoi les alertes sont calibrées.** Les pages consultées n\'indiquent pas à quels types de contrats, juridictions ou référentiels l\'analyse se rapporte.',
+          '**Sur quoi les alertes sont calibrées.** Les pages consultées n\'indiquent pas sur quels référentiels l\'analyse repose. Selon le développeur, Risk Assessment comporte deux paramètres, la juridiction (UE, États-Unis, Royaume-Uni, internationale ou polonaise) et la perspective (partie destinataire, partie prestataire ou neutre), et les prompts sont modifiables ; PromptQuorum n\'a pas testé l\'efficacité de ces réglages.',
           '**Code source et audits.** Aucun dépôt public, audit tiers ni certification n\'a été trouvé ; les déclarations de confidentialité ne peuvent donc pas être vérifiées dans le code.',
           '**Entreprise et base d\'utilisateurs.** Le site ne nomme aucune équipe ; la politique de confidentialité désigne une entreprise individuelle à Cracovie (Pologne), et le nombre de clients n\'est pas publié.',
           '**Fiabilité juridique.** Les alertes et réécritures générées par l\'IA ne constituent pas un conseil juridique ; un juriste qualifié devrait relire tout contrat que vous signez.',
@@ -1659,7 +1727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Fonctionne-t-il dans d\'autres langues que l\'anglais ?',
-            a: 'Les pages consultées n\'indiquent pas les langues de l\'interface. La recherche utilise un modèle d\'embedding multilingue (bge-m3) et la liste des modèles inclut Bielik, spécialisé en polonais ; testez donc votre langue d\'abord avec l\'offre Free.',
+            a: 'Selon le développeur, l\'interface est en anglais. Les documents peuvent être dans d\'autres langues, la qualité dépendant du modèle ; la recherche utilise un modèle d\'embedding multilingue (bge-m3) et la liste des modèles inclut Bielik, spécialisé en polonais. Testez donc votre langue d\'abord avec l\'offre Free.',
           },
           {
             q: 'À quelle fréquence est-il mis à jour ?',
@@ -1699,7 +1767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-10',
-    dateModified: '2026-10-10',
+    dateModified: '2026-10-16',
     next_refresh_due: '2027-04-10',
     theme: 'RAG & Document Chat',
     heroImage: '/images/return-editor-review-hero-ja.webp',
@@ -1772,6 +1840,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: 'local-vs-cloud',
       },
       {
+        label: '開発者から',
+        anchor: 'from-the-maker',
+      },
+      {
         label: 'トレードオフ：利点と制約',
         anchor: 'tradeoffs',
       },
@@ -1821,7 +1893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '開発元：プライバシーポリシーによれば、ポーランドのクラクフに登録された個人事業です。掲載を申請した人物が開発者です。',
-          'ワークフロー：Analyzeが条項に印を付け、Askが引用付きで回答し、Fixが書き換えを提案し、Returnsが重要日付の抽出などの保存済みチェックを再実行します。',
+          'ワークフロー：Analyzeが条項に印を付け、Askが引用付きで回答し、Fixが書き換えを提案し、Returnsが保存済みチェックを実行します。標準搭載はRisk Assessment、Plain-Language Notes、Summarize、Extract Key Points、Action Items、Translateです。',
           'ローカルエンジン：同梱のllama.cppサーバーがダウンロードしたモデルを実行します。既定モデルは5.3GBで、メモリは16GBが推奨されています。',
           'プラン：Free（ローカル、アカウント不要）とPro（クラウドAIを追加）。法律事務所向けのCounselは発表済みですが、順番待ちリストのみです。',
         ],
@@ -1926,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Analyze。** PDF、DOCX、ODT、RTF、HTMLを取り込んでMarkdownへ変換し、指摘を信号機の色で表示します。赤はリスク、琥珀色は要注意です。',
           '**Ask。** 文書への質問に該当条項を引用して回答し、Markdownファイルのフォルダ全体をセマンティック検索します。',
           '**Fix。** 文中に書き換え案を提示し、承認または却下できます。選ぶまで何も変更されません。',
-          '**Returns。** 重要日付の抽出など、保存して再利用できるチェックを任意の文書に実行できます。ドキュメントには複数回のモデル処理を連結する仕組みが説明されています。',
+          '**Returns。** 保存して再利用でき、任意の文書に実行できるチェックです。開発者によると、標準搭載はRisk Assessment、Plain-Language Notes、Summarize、Extract Key Points、Action Items、Translateで、プロンプトの編集や、重要日付の抽出など独自のReturnsの作成もできます。ドキュメントには複数回のモデル処理を連結する仕組みが説明されています。',
           '**エディタ。** 文書内の変数と数式、Mermaid図、バージョン1.3.6以降はグラフや画像を保持したPDF・HTMLエクスポートに対応します。',
         ],
       },
@@ -1949,6 +2021,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'これらは開発元の表明であり、監査結果ではありません。コードも非公開です。PromptQuorumはネットワーク通信を検査していません。機密性の高い契約書では、ステータスバーに表示されるモードを確認し、ネットワークを切断した状態で試してください。',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '開発者から',
+        content: [
+          'Return Editorの開発者であるMichał氏（引用文中では単に「Return」と呼んでいます）が、このアプリと開発の理由について次のように述べています。以下は開発者自身の言葉として提示するものであり、PromptQuorumによる独立した編集上の評価ではありません。開発者は本記事の技術的な正確性も確認しており、その指摘は上記に反映済みです。文書がコンピューターの外に出る必要がないという説明はFreeプランに関するものです。Proのクラウドモードでは、各リクエストの内容がAnthropicに送られます。',
+          '「私は法律が好きです。書類仕事ではなく、その根底にある考え方が好きなのです。人々がルールに合意し、それを書き留め、互いにそれを守らせることができるという考え方です。それは、私たちの文明が築いた最も重要なものの一つだと思っています。',
+          '問題は、今日その大半が、自信を持って読める人がほとんどいない長い文書の中にあることです。弁護士の時間は高価なので、多くの人がざっと目を通しただけの契約書に署名し、弁護士はソフトウェアにできる最初の確認作業に何時間も費やしています。',
+          'Returnを作ったのは、誰もが契約書の丁寧な最初の読み込みを得られるようにするためです。どの条項が危険なのか、なぜなのか、どちらの側にとってなのかを示し、すべての回答は根拠となった条項を指し示します。Returnはお使いのコンピューター上で動くため、機密文書を理解するために外へ出す必要はありません。弁護士の代わりではありません。何を尋ねるべきかを知る助けとなり、弁護士が読む作業ではなく判断に時間を使えるようにします。',
+          '他との違いは、分析が文書の中に存在すること、AIによる変更はすべて承認または却下できる提案であること、そして独自のレビュー基準を保存して再利用できることです。ファイルはディスク上のプレーンなMarkdownのままです。',
+          'Returnはポーランドで、一人で開発しています。次の予定は、Linux版と、長い契約書でより信頼できるローカルモデルです。」',
+        ],
+        note: '— Michał氏、開発者',
       },
       tradeOffs: {
         id: 'tradeOffs',
@@ -2001,7 +2086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '確認できなかった点',
         items: [
           '**リスク表示の精度。** PromptQuorumはアプリを実行していないため、どの条項を指摘し、見落とし、誤って評価するかは評価していません。',
-          '**表示の基準。** 確認したページには、分析がどの契約類型、法域、基準に基づくのかが書かれていません。',
+          '**表示の基準。** 確認したページには、分析がどの基準に基づくのかが書かれていません。開発者によると、Risk Assessmentには法域（EU、米国、英国、国際、ポーランド）と立場（受領側、提供側、中立）の2つのパラメータがあり、プロンプトも編集できます。これらの設定がどの程度機能するかは、PromptQuorumでは検証していません。',
           '**ソースコードと監査。** 公開リポジトリ、第三者監査、認証は見つからず、プライバシーに関する記述をコードで確認することはできません。',
           '**運営主体と利用者数。** サイトにチームの記載はなく、プライバシーポリシーはポーランドのクラクフの個人事業を示しています。顧客数は公表されていません。',
           '**法的な信頼性。** AIが生成した指摘や書き換えは法的助言ではありません。署名する契約書は、資格のある弁護士に確認してもらってください。',
@@ -2063,7 +2148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '英語以外の言語でも使えますか？',
-            a: '確認したページにはインターフェースの対応言語が載っていません。検索には多言語の埋め込みモデル（bge-m3）が使われ、モデル一覧にはポーランド語特化のBielikも含まれます。まずFreeプランでお使いの言語を試してください。',
+            a: '開発者によると、インターフェースは英語です。文書は他の言語でも扱えますが、品質はモデルによって異なります。検索には多言語の埋め込みモデル（bge-m3）が使われ、モデル一覧にはポーランド語特化のBielikも含まれます。まずFreeプランでお使いの言語を試してください。',
           },
           {
             q: '更新の頻度は？',
@@ -2103,7 +2188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-10',
-    dateModified: '2026-10-10',
+    dateModified: '2026-10-16',
     next_refresh_due: '2027-04-10',
     theme: 'RAG & Document Chat',
     heroImage: '/images/return-editor-review-hero-pt.webp',
@@ -2176,6 +2261,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: 'local-vs-cloud',
       },
       {
+        label: 'A palavra do criador',
+        anchor: 'from-the-maker',
+      },
+      {
         label: 'Prós e contras: benefícios vs. limitações',
         anchor: 'tradeoffs',
       },
@@ -2225,7 +2314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Desenvolvedor: segundo a política de privacidade, uma empresa individual registrada em Cracóvia (Polônia); quem enviou o cadastro é o desenvolvedor.',
-          'Fluxo: Analyze marca cláusulas, Ask responde com citações, Fix propõe reescritas e Returns executa de novo verificações salvas, como a extração de datas-chave.',
+          'Fluxo: Analyze marca cláusulas, Ask responde com citações, Fix propõe reescritas e Returns executa verificações salvas; as integradas são Risk Assessment, Plain-Language Notes, Summarize, Extract Key Points, Action Items e Translate.',
           'Motor local: um servidor llama.cpp incluído que executa modelos baixáveis; o modelo padrão é um download de 5,3 GB e 16 GB de memória são recomendados.',
           'Planos: Free (local, sem conta) e Pro (adiciona IA na nuvem); um nível Counsel voltado a escritórios foi anunciado, mas só com lista de espera.',
         ],
@@ -2330,7 +2419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Analyze.** Importa PDF, DOCX, ODT, RTF e HTML, converte para Markdown e marca os achados com cores de semáforo: vermelho para risco, âmbar para pontos que exigem atenção.',
           '**Ask.** Responde a perguntas sobre um documento citando a cláusula relevante e faz busca semântica em uma pasta inteira de arquivos Markdown.',
           '**Fix.** Propõe reescritas no texto que você aceita ou rejeita; nada muda até que você decida.',
-          '**Returns.** Verificações salvas e reutilizáveis, como a extração de datas-chave, que você aplica a qualquer documento; a documentação descreve o encadeamento de várias passagens do modelo.',
+          '**Returns.** Verificações salvas e reutilizáveis que você aplica a qualquer documento. Segundo o desenvolvedor, as integradas são Risk Assessment, Plain-Language Notes, Summarize, Extract Key Points, Action Items e Translate; é possível editar os prompts delas ou criar Returns próprios, como uma extração de datas-chave. A documentação descreve o encadeamento de várias passagens do modelo.',
           '**Editor.** Variáveis e fórmulas nos documentos, diagramas Mermaid e exportação para PDF e HTML com gráficos e imagens preservados desde a versão 1.3.6.',
         ],
       },
@@ -2353,6 +2442,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Estas são declarações do desenvolvedor, não resultados de auditoria, e o código é fechado. O PromptQuorum não inspecionou o tráfego de rede; para contratos confidenciais, confira o modo exibido na barra de status e teste com a rede desconectada.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'A palavra do criador',
+        content: [
+          'Michał, o desenvolvedor do Return Editor (que na citação o chama apenas de “Return”), compartilhou o seguinte sobre o aplicativo e os motivos de tê-lo criado. É apresentado como as próprias palavras do desenvolvedor, não como uma avaliação editorial independente da PromptQuorum. O desenvolvedor também revisou este artigo quanto à exatidão técnica, e as correções já estão incorporadas acima. As afirmações de que os documentos nunca precisam sair do computador descrevem o plano Free: no modo em nuvem do Pro, o conteúdo de cada solicitação vai para a Anthropic.',
+          '“Eu gosto de direito. Não da papelada, mas da ideia por trás dele: que as pessoas possam combinar regras, escrevê-las e cobrar umas das outras o seu cumprimento. Acho que é uma das coisas mais importantes que a nossa civilização construiu.',
+          'O problema é que hoje a maior parte disso vive em documentos longos que poucas pessoas conseguem ler com segurança. O tempo de um advogado é caro, então muita gente assina contratos que só leu por cima, e advogados gastam horas numa primeira leitura que um software pode fazer.',
+          'Criei o Return para que qualquer pessoa possa ter uma primeira leitura cuidadosa de um contrato: quais cláusulas são arriscadas, por quê e para qual lado, com cada resposta apontando para a cláusula de onde veio. Ele roda no seu próprio computador, então um documento confidencial não precisa sair dele para ser compreendido. Não substitui um advogado. Ajuda você a saber o que perguntar e permite que os advogados usem o tempo em julgamento em vez de leitura.',
+          'O que o torna diferente: a análise vive dentro do documento, toda alteração da IA é uma sugestão que você aceita ou rejeita, e os seus próprios padrões de revisão podem ser salvos e reutilizados. Os arquivos continuam sendo Markdown simples no seu disco.',
+          'Estou criando o Return por conta própria, na Polônia. O próximo item da minha lista: uma versão para Linux e modelos locais mais confiáveis em contratos longos.”',
+        ],
+        note: '— Michał, desenvolvedor',
       },
       tradeOffs: {
         id: 'tradeOffs',
@@ -2405,7 +2507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que não conseguimos verificar',
         items: [
           '**Precisão dos alertas de risco.** O PromptQuorum não executou o aplicativo, então não avaliou quais cláusulas ele marca, deixa passar ou classifica mal.',
-          '**Para que os alertas foram ajustados.** As páginas consultadas não dizem em quais tipos de contrato, jurisdições ou padrões a análise se baseia.',
+          '**Para que os alertas foram ajustados.** As páginas consultadas não dizem em quais padrões a análise se baseia. Segundo o desenvolvedor, o Risk Assessment tem dois parâmetros, jurisdição (UE, EUA, Reino Unido, internacional ou polonesa) e perspectiva (parte receptora, parte fornecedora ou neutra), e os prompts podem ser editados; a PromptQuorum não testou o quão bem esses ajustes funcionam.',
           '**Código-fonte e auditorias.** Não foram encontrados repositório público, auditoria de terceiros nem certificação, portanto as declarações de privacidade não podem ser conferidas no código.',
           '**Empresa e base de usuários.** O site não nomeia nenhuma equipe; a política de privacidade identifica uma empresa individual em Cracóvia (Polônia), e números de clientes não são divulgados.',
           '**Confiabilidade jurídica.** Alertas e reescritas geradas por IA não são aconselhamento jurídico; um advogado qualificado deve revisar qualquer contrato que você assinar.',
@@ -2467,7 +2569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Funciona em outros idiomas além do inglês?',
-            a: 'As páginas consultadas não listam os idiomas da interface. A busca usa um modelo de embeddings multilíngue (bge-m3) e a lista de modelos inclui o Bielik, especializado em polonês; teste primeiro o seu idioma no plano Free.',
+            a: 'Segundo o desenvolvedor, a interface está em inglês. Os documentos podem estar em outros idiomas, e a qualidade depende do modelo; a busca usa um modelo de embeddings multilíngue (bge-m3) e a lista de modelos inclui o Bielik, especializado em polonês. Teste primeiro o seu idioma no plano Free.',
           },
           {
             q: 'Com que frequência é atualizado?',
@@ -2507,7 +2609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-10',
-    dateModified: '2026-10-10',
+    dateModified: '2026-10-16',
     next_refresh_due: '2027-04-10',
     theme: 'RAG & Document Chat',
     heroImage: '/images/return-editor-review-hero-ar.webp',
@@ -2580,6 +2682,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: 'local-vs-cloud',
       },
       {
+        label: 'من صانع التطبيق',
+        anchor: 'from-the-maker',
+      },
+      {
         label: 'المقايضات: المزايا مقابل القيود',
         anchor: 'tradeoffs',
       },
@@ -2629,7 +2735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'المطوّر: وفق سياسة الخصوصية مؤسسة فردية مسجلة في كراكوف ببولندا؛ ومن قدّم الإدراج هو المطوّر نفسه.',
-          'سير العمل: Analyze يعلّم البنود، وAsk يجيب باستشهادات، وFix يقترح صياغات بديلة، وReturns يعيد تشغيل فحوص محفوظة مثل استخراج التواريخ الأساسية.',
+          'سير العمل: Analyze يعلّم البنود، وAsk يجيب باستشهادات، وFix يقترح صياغات بديلة، وReturns يشغّل فحوصًا محفوظة؛ والمدمجة منها Risk Assessment وPlain-Language Notes وSummarize وExtract Key Points وAction Items وTranslate.',
           'المحرك المحلي: خادم llama.cpp مرفق يشغّل نماذج قابلة للتنزيل؛ النموذج الافتراضي حجمه 5.3 جيجابايت ويُوصى بذاكرة 16 جيجابايت.',
           'الخطط: Free (محلية، دون حساب) وPro (تضيف الذكاء الاصطناعي السحابي)؛ وأُعلن عن مستوى Counsel الموجّه لمكاتب المحاماة لكنه متاح عبر قائمة انتظار فقط.',
         ],
@@ -2734,7 +2840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Analyze.** يستورد PDF وDOCX وODT وRTF وHTML ويحوّلها إلى Markdown ويعلّم النتائج بألوان إشارة المرور: الأحمر للمخاطر والعنبري للبنود التي تستحق الانتباه.',
           '**Ask.** يجيب عن الأسئلة حول مستند مع استشهاد بالبند المعني، ويجري بحثًا دلاليًا في مجلد كامل من ملفات Markdown.',
           '**Fix.** يقترح إعادة صياغة داخل النص تقبلها أو ترفضها؛ ولا يتغير شيء حتى تقرّر أنت.',
-          '**Returns.** فحوص محفوظة قابلة لإعادة الاستخدام، مثل استخراج التواريخ الأساسية، تطبّقها على أي مستند؛ وتصف الوثائق ربط عدة مرّات تشغيل للنموذج معًا.',
+          '**Returns.** فحوص محفوظة قابلة لإعادة الاستخدام تطبّقها على أي مستند. وبحسب المطوّر فإن المدمجة منها هي Risk Assessment وPlain-Language Notes وSummarize وExtract Key Points وAction Items وTranslate؛ ويمكنك تعديل مطالباتها أو إنشاء Returns خاصة بك، مثل استخراج التواريخ الأساسية. وتصف الوثائق ربط عدة مرّات تشغيل للنموذج معًا.',
           '**المحرر.** متغيرات ومعادلات داخل المستندات ومخططات Mermaid وتصدير إلى PDF وHTML مع الاحتفاظ بالمخططات والصور منذ الإصدار 1.3.6.',
         ],
       },
@@ -2757,6 +2863,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'هذه إفادات من المطوّر وليست نتائج تدقيق، والشيفرة مغلقة. لم يفحص PromptQuorum حركة الشبكة؛ ففي العقود السرّية تحقّق من الوضع المعروض في شريط الحالة وجرّب مع فصل الشبكة.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'من صانع التطبيق',
+        content: [
+          'شارك Michał، مطوّر Return Editor (ويُسمّى في الاقتباس Return فقط)، ما يلي عن التطبيق وأسباب بنائه. يُعرض هنا بوصفه كلمات المطوّر نفسه، وليس تقييمًا تحريريًا مستقلًا من PromptQuorum. وقد راجع المطوّر هذا المقال من الناحية التقنية، وانعكست التصحيحات أعلاه. أما القول إن المستندات لا تضطر إلى مغادرة الحاسوب فيصف الخطة Free: ففي وضع السحابة في Pro يُرسل محتوى كل طلب إلى Anthropic.',
+          '“أحب القانون. لا أحب الأوراق، بل الفكرة التي يقوم عليها: أن يتفق الناس على قواعد ويكتبوها ويحاسب بعضهم بعضًا عليها. وأعتقد أنه من أهم ما بنته حضارتنا.',
+          'المشكلة أن معظمه يعيش اليوم في وثائق طويلة قلّما يستطيع أحد قراءتها بثقة. ووقت المحامي مكلف، فيوقّع كثيرون عقودًا لم يمرّوا عليها إلا مرورًا سريعًا، ويقضي المحامون ساعات في قراءة أولى يستطيع البرنامج القيام بها.',
+          'بنيتُ Return ليحصل أي شخص على قراءة أولى متأنية للعقد: أي البنود خطِرة، ولماذا، وبالنسبة لأي طرف، مع إحالة كل إجابة إلى البند الذي جاءت منه. وهو يعمل على حاسوبك الخاص، فلا يضطر مستند سري إلى مغادرته كي يُفهم. وهو ليس بديلًا عن المحامي. إنه يساعدك على معرفة ما ينبغي أن تسأل عنه، ويتيح للمحامين صرف وقتهم في الحكم بدل القراءة.',
+          'ما يميّزه: التحليل يعيش داخل المستند، وكل تغيير بالذكاء الاصطناعي هو اقتراح تقبله أو ترفضه، ويمكن حفظ معايير المراجعة الخاصة بك وإعادة استخدامها. وتبقى الملفات بصيغة Markdown بسيطة على قرصك.',
+          'أطوّر Return بمفردي، في بولندا. والتالي في قائمتي: نسخة لنظام Linux ونماذج محلية أكثر موثوقية مع العقود الطويلة.”',
+        ],
+        note: '— Michał، مطوّر',
       },
       tradeOffs: {
         id: 'tradeOffs',
@@ -2809,7 +2928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما لم نتمكن من التحقق منه',
         items: [
           '**دقة تنبيهات المخاطر.** لم يشغّل PromptQuorum التطبيق، لذا لم يقيّم أي البنود يعلّمها أو يغفلها أو يخطئ تقديرها.',
-          '**ما الذي ضُبطت عليه التنبيهات.** لا تذكر الصفحات التي اطلعنا عليها أنواع العقود أو الولايات القضائية أو المعايير التي يستند إليها التحليل.',
+          '**ما الذي ضُبطت عليه التنبيهات.** لا تذكر الصفحات التي اطلعنا عليها المعايير التي يستند إليها التحليل. وبحسب المطوّر فإن لـ Risk Assessment معلمتين: الولاية القضائية (الاتحاد الأوروبي أو الولايات المتحدة أو المملكة المتحدة أو دولية أو بولندية) والمنظور (الطرف المتلقي أو الطرف المزوِّد أو محايد)، ويمكن تعديل المطالبات؛ ولم تختبر PromptQuorum مدى جودة عمل هذه الإعدادات.',
           '**الشيفرة المصدرية وعمليات التدقيق.** لم نعثر على مستودع عام أو تدقيق من طرف ثالث أو شهادة اعتماد، لذا لا يمكن مطابقة تصريحات الخصوصية مع الشيفرة.',
           '**الشركة وقاعدة المستخدمين.** لا يذكر الموقع فريقًا؛ وتحدد سياسة الخصوصية مؤسسة فردية في كراكوف ببولندا، ولا تُنشر أعداد العملاء.',
           '**الموثوقية القانونية.** التنبيهات والصياغات التي يولّدها الذكاء الاصطناعي ليست استشارة قانونية؛ وينبغي أن يراجع محامٍ مؤهَّل أي عقد توقّعه.',
@@ -2871,7 +2990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يعمل بلغات غير الإنجليزية؟',
-            a: 'لا تذكر الصفحات التي اطلعنا عليها لغات الواجهة. يستخدم البحث نموذج تضمينات متعدد اللغات (bge-m3) وتضم قائمة النماذج Bielik المتخصص في البولندية؛ فجرّب لغتك أولًا في الخطة Free.',
+            a: 'بحسب المطوّر، الواجهة بالإنجليزية. يمكن أن تكون المستندات بلغات أخرى، وتعتمد الجودة على النموذج؛ يستخدم البحث نموذج تضمينات متعدد اللغات (bge-m3) وتضم قائمة النماذج Bielik المتخصص في البولندية؛ فجرّب لغتك أولًا في الخطة Free.',
           },
           {
             q: 'كم مرة يُحدَّث؟',
@@ -2911,7 +3030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-10',
-    dateModified: '2026-10-10',
+    dateModified: '2026-10-16',
     next_refresh_due: '2027-04-10',
     theme: 'RAG & Document Chat',
     heroImage: '/images/return-editor-review-hero-zh.webp',
@@ -2984,6 +3103,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: 'local-vs-cloud',
       },
       {
+        label: '来自开发者',
+        anchor: 'from-the-maker',
+      },
+      {
         label: '权衡：优点与局限',
         anchor: 'tradeoffs',
       },
@@ -3033,7 +3156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '开发方：据其隐私政策，是在波兰克拉科夫注册的个体经营者；提交收录申请的人即为开发者。',
-          '工作流：Analyze 标记条款，Ask 带引用回答，Fix 提出改写建议，Returns 重新运行已保存的检查，例如提取关键日期。',
+          '工作流：Analyze 标记条款，Ask 带引用回答，Fix 提出改写建议，Returns 运行已保存的检查；内置的有 Risk Assessment、Plain-Language Notes、Summarize、Extract Key Points、Action Items 和 Translate。',
           '本地引擎：内置 llama.cpp 服务器，运行可下载的模型；默认模型需下载 5.3 GB，推荐 16 GB 内存。',
           '方案：Free（本地、无需账号）和 Pro（增加云端 AI）；面向律所的 Counsel 层级已宣布，但目前仅提供候补名单。',
         ],
@@ -3138,7 +3261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Analyze。** 导入 PDF、DOCX、ODT、RTF 和 HTML，转换为 Markdown，并用红绿灯颜色标记发现：红色表示风险，琥珀色表示需要注意。',
           '**Ask。** 回答关于文档的问题并引用相关条款，还可对整个 Markdown 文件夹进行语义搜索。',
           '**Fix。** 在原文中提出改写建议，由你接受或拒绝；在你做出选择之前不会有任何改动。',
-          '**Returns。** 可保存并重复使用的检查，例如提取关键日期，可对任意文档运行；文档介绍了把多轮模型处理串联起来的做法。',
+          '**Returns。** 可保存并重复使用的检查，可对任意文档运行。据开发者介绍，内置的有 Risk Assessment、Plain-Language Notes、Summarize、Extract Key Points、Action Items 和 Translate；可以编辑它们的提示词，也可以创建自己的 Returns，例如提取关键日期。文档介绍了把多轮模型处理串联起来的做法。',
           '**编辑器。** 文档内的变量和公式、Mermaid 图表，自 1.3.6 版起导出 PDF 和 HTML 时保留图表与图片。',
         ],
       },
@@ -3161,6 +3284,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '这些是开发者的声明，而非审计结果，代码也不公开。PromptQuorum 没有检查网络流量；处理机密合同时，请查看状态栏显示的模式，并在断开网络的情况下测试。',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '来自开发者',
+        content: [
+          'Return Editor 的开发者 Michał 分享了以下关于这款应用及其开发原因的内容（引文中简称“Return”）。以下内容以开发者本人的话呈现，并非 PromptQuorum 独立的编辑评估。开发者还审阅了本文的技术准确性，相关更正已体现在上文中。文档无需离开电脑的说法描述的是 Free 方案；在 Pro 的云端模式下，每次请求的内容会发送给 Anthropic。',
+          '“我喜欢法律。不是喜欢文书工作，而是喜欢它背后的理念：人们可以就规则达成一致，把它们写下来，并相互督促遵守。我认为这是我们的文明所建立的最重要的东西之一。',
+          '问题在于，如今这些规则大多藏在冗长的文件里，很少有人能有把握地读懂。律师的时间很贵，所以很多人在签合同时只是匆匆浏览，而律师则要花数小时做软件就能完成的初读。',
+          '我开发 Return，是为了让任何人都能对合同做一次认真的初读：哪些条款有风险、为什么、对哪一方有风险，并且每个回答都指向它所依据的条款。它在你自己的电脑上运行，所以机密文件不必离开电脑就能被理解。它不能取代律师。它帮助你知道该问什么，也让律师把时间花在判断上，而不是阅读上。',
+          '它的不同之处在于：分析就在文档之中，AI 的每项修改都是由你接受或拒绝的建议，你自己的审查标准可以保存并重复使用。文件始终是你磁盘上的纯 Markdown。',
+          '我在波兰独自开发 Return。接下来的计划是：Linux 版本，以及在长合同上更可靠的本地模型。”',
+        ],
+        note: '— Michał，开发者',
       },
       tradeOffs: {
         id: 'tradeOffs',
@@ -3213,7 +3349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '我们无法验证的内容',
         items: [
           '**风险标记的准确性。** PromptQuorum 没有运行该应用，因此未评估它会标出、漏掉或误判哪些条款。',
-          '**标记依据的标准。** 我们查阅的页面没有说明分析针对哪些合同类型、司法辖区或标准。',
+          '**标记依据的标准。** 我们查阅的页面没有说明分析依据哪些标准。据开发者介绍，Risk Assessment 有两个参数：司法辖区（欧盟、美国、英国、国际、波兰）和立场（接收方、提供方、中立），提示词也可以编辑；这些设置的实际效果如何，PromptQuorum 未做测试。',
           '**源代码与审计。** 未发现公开仓库、第三方审计或认证，因此无法对照代码检验隐私声明。',
           '**公司与用户规模。** 网站没有列出团队；隐私政策显示其为波兰克拉科夫的个体经营者，客户数量未公布。',
           '**法律可靠性。** AI 生成的标记和改写不构成法律意见；你签署的任何合同都应由有资质的律师审阅。',
@@ -3275,7 +3411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '支持英语以外的语言吗？',
-            a: '我们查阅的页面没有列出界面语言。搜索使用多语言嵌入模型（bge-m3），模型列表中也有专精波兰语的 Bielik；请先在 Free 方案中测试你的语言。',
+            a: '据开发者介绍，界面为英文。文档可以使用其他语言，效果取决于所用模型；搜索使用多语言嵌入模型（bge-m3），模型列表中也有专精波兰语的 Bielik。请先在 Free 方案中测试你的语言。',
           },
           {
             q: '更新频率如何？',
@@ -3315,7 +3451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-10',
-    dateModified: '2026-10-10',
+    dateModified: '2026-10-16',
     next_refresh_due: '2027-04-10',
     theme: 'RAG & Document Chat',
     heroImage: '/images/return-editor-review-hero-ko.webp',
@@ -3388,6 +3524,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: 'local-vs-cloud',
       },
       {
+        label: '개발자의 말',
+        anchor: 'from-the-maker',
+      },
+      {
         label: '장단점: 이점과 한계',
         anchor: 'tradeoffs',
       },
@@ -3437,7 +3577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '개발사: 개인정보 처리방침에 따르면 폴란드 크라쿠프에 등록된 개인 사업자이며, 등록을 요청한 사람이 개발자입니다.',
-          '작업 흐름: Analyze가 조항을 표시하고, Ask가 인용과 함께 답하고, Fix가 수정안을 제안하고, Returns가 핵심 날짜 추출 같은 저장된 점검을 다시 실행합니다.',
+          '작업 흐름: Analyze가 조항을 표시하고, Ask가 인용과 함께 답하고, Fix가 수정안을 제안하고, Returns가 저장된 점검을 실행합니다. 기본 제공 항목은 Risk Assessment, Plain-Language Notes, Summarize, Extract Key Points, Action Items, Translate입니다.',
           '로컬 엔진: 내장 llama.cpp 서버가 내려받은 모델을 실행하며, 기본 모델은 5.3GB이고 메모리 16GB가 권장됩니다.',
           '요금제: Free(로컬, 계정 불필요)와 Pro(클라우드 AI 추가). 법률 사무소를 겨냥한 Counsel은 발표만 되었고 대기자 명단으로만 받습니다.',
         ],
@@ -3542,7 +3682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Analyze.** PDF, DOCX, ODT, RTF, HTML을 가져와 Markdown으로 변환하고, 지적 사항을 신호등 색으로 표시합니다. 빨강은 위험, 호박색은 주의가 필요한 항목입니다.',
           '**Ask.** 문서에 대한 질문에 관련 조항을 인용해 답하고, Markdown 파일이 담긴 폴더 전체를 의미 기반으로 검색합니다.',
           '**Fix.** 본문에 수정안을 제안하며, 수락하거나 거부할 수 있습니다. 선택하기 전에는 아무것도 바뀌지 않습니다.',
-          '**Returns.** 핵심 날짜 추출처럼 저장해 두고 어떤 문서에도 다시 실행할 수 있는 점검입니다. 문서에는 여러 모델 처리 단계를 이어 붙이는 방식이 설명되어 있습니다.',
+          '**Returns.** 저장해 두고 어떤 문서에도 실행할 수 있는 점검입니다. 개발자에 따르면 기본 제공 항목은 Risk Assessment, Plain-Language Notes, Summarize, Extract Key Points, Action Items, Translate이며, 프롬프트를 수정하거나 핵심 날짜 추출 같은 자체 Returns를 만들 수 있습니다. 문서에는 여러 모델 처리 단계를 이어 붙이는 방식이 설명되어 있습니다.',
           '**편집기.** 문서 안의 변수와 수식, Mermaid 차트를 지원하며, 버전 1.3.6부터 차트와 이미지를 유지한 채 PDF와 HTML로 내보냅니다.',
         ],
       },
@@ -3565,6 +3705,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '이는 개발사의 주장이지 감사 결과가 아니며, 코드도 공개되어 있지 않습니다. PromptQuorum은 네트워크 트래픽을 검사하지 않았습니다. 기밀 계약서라면 상태 표시줄에 나타나는 모드를 확인하고 네트워크를 끊은 상태에서 테스트하세요.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '개발자의 말',
+        content: [
+          'Return Editor의 개발자 Michał이 앱과 개발 이유에 대해 다음과 같이 전했습니다(인용문에서는 간단히 “Return”이라고 부릅니다). 개발자 본인의 말로 제시하는 것이며, PromptQuorum의 독립적인 편집 평가가 아닙니다. 개발자는 이 글의 기술적 정확성도 검토했고, 정정 사항은 위에 반영되어 있습니다. 문서가 컴퓨터를 떠날 필요가 없다는 설명은 Free 요금제에 해당하며, Pro의 클라우드 모드에서는 각 요청의 내용이 Anthropic으로 전송됩니다.',
+          '“저는 법을 좋아합니다. 서류 작업이 아니라 그 바탕에 있는 생각을 좋아합니다. 사람들이 규칙에 합의하고, 그것을 글로 적고, 서로 지키도록 할 수 있다는 생각입니다. 우리 문명이 만들어 낸 가장 중요한 것 중 하나라고 생각합니다.',
+          '문제는 오늘날 그 대부분이 자신 있게 읽을 수 있는 사람이 드문 긴 문서 속에 있다는 점입니다. 변호사의 시간은 비싸기 때문에 많은 사람이 훑어보기만 한 계약서에 서명하고, 변호사는 소프트웨어가 할 수 있는 첫 검토에 몇 시간을 씁니다.',
+          'Return은 누구나 계약서를 꼼꼼하게 처음 읽어 볼 수 있도록 만들었습니다. 어떤 조항이 위험한지, 왜 그런지, 어느 쪽에 위험한지를 알려 주고, 모든 답변은 근거가 된 조항을 가리킵니다. 사용자의 컴퓨터에서 실행되므로 기밀 문서를 이해하기 위해 밖으로 내보낼 필요가 없습니다. 변호사를 대체하는 것은 아닙니다. 무엇을 물어야 할지 알도록 돕고, 변호사가 읽는 대신 판단하는 데 시간을 쓸 수 있게 합니다.',
+          '차별점은 이렇습니다. 분석이 문서 안에 있고, AI의 모든 변경은 수락하거나 거절하는 제안이며, 자신만의 검토 기준을 저장해 다시 쓸 수 있습니다. 파일은 디스크에 일반 Markdown으로 남습니다.',
+          '저는 폴란드에서 혼자 Return을 만들고 있습니다. 다음 계획은 Linux 버전과, 긴 계약서에서 더 믿을 수 있는 로컬 모델입니다.”',
+        ],
+        note: '— Michał, 개발자',
       },
       tradeOffs: {
         id: 'tradeOffs',
@@ -3617,7 +3770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '확인하지 못한 사항',
         items: [
           '**위험 표시의 정확도.** PromptQuorum이 앱을 실행하지 않았으므로 어떤 조항을 표시하고, 놓치고, 잘못 평가하는지는 평가하지 않았습니다.',
-          '**표시의 기준.** 확인한 페이지에는 분석이 어떤 계약 유형, 관할권, 기준에 근거하는지 나와 있지 않습니다.',
+          '**표시의 기준.** 확인한 페이지에는 분석이 어떤 기준에 근거하는지 나와 있지 않습니다. 개발자에 따르면 Risk Assessment에는 관할권(EU, 미국, 영국, 국제, 폴란드)과 관점(수령 당사자, 제공 당사자, 중립)이라는 두 가지 매개변수가 있고 프롬프트도 수정할 수 있습니다. 이 설정들이 얼마나 잘 작동하는지는 PromptQuorum이 테스트하지 않았습니다.',
           '**소스 코드와 감사.** 공개 저장소, 제3자 감사, 인증을 찾지 못해 개인정보 관련 설명을 코드로 확인할 수 없습니다.',
           '**회사와 사용자 규모.** 사이트에는 팀이 명시되어 있지 않고, 개인정보 처리방침은 폴란드 크라쿠프의 개인 사업자를 밝히고 있으며, 고객 수는 공개되지 않았습니다.',
           '**법적 신뢰성.** AI가 생성한 표시와 수정안은 법률 자문이 아닙니다. 서명하는 계약서는 자격 있는 변호사가 검토해야 합니다.',
@@ -3679,7 +3832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '영어 외의 언어에서도 작동하나요?',
-            a: '확인한 페이지에는 인터페이스 언어가 나와 있지 않습니다. 검색에는 다국어 임베딩 모델(bge-m3)이 쓰이고 모델 목록에는 폴란드어 특화 Bielik도 있으니, 먼저 Free 요금제에서 사용하는 언어를 시험해 보세요.',
+            a: '개발자에 따르면 인터페이스는 영어입니다. 문서는 다른 언어여도 되지만 품질은 모델에 따라 달라집니다. 검색에는 다국어 임베딩 모델(bge-m3)이 쓰이고 모델 목록에는 폴란드어 특화 Bielik도 있으니, 먼저 Free 요금제에서 사용하는 언어를 시험해 보세요.',
           },
           {
             q: '업데이트는 얼마나 자주 되나요?',
