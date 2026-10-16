@@ -1046,6 +1046,7 @@ const HUB_THEMES: Array<{
       'tokforge-review',
       'local-ai-geetmark-review',
       'local-ai-mail-review',
+      'pcai-photo-retouch-review',
       'honey-llm-review',
       'oscilla-review',
       'tina-review',

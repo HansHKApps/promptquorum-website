@@ -96,19 +96,19 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "return-editor-review",
+        "title": "Return Editor Review: Local-First AI Contract Review for Mac and Windows",
+        "url": "/power-local-llm/return-editor-review",
+        "dateModified": "2026-10-16",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
         "url": "/local-llms/apple-silicon-m5-local-llm",
         "dateModified": "2026-10-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "return-editor-review",
-        "title": "Return Editor Review: Local-First AI Contract Review for Mac and Windows",
-        "url": "/power-local-llm/return-editor-review",
-        "dateModified": "2026-10-10",
         "tier": "about"
       },
       {
@@ -3456,7 +3456,7 @@
         "slug": "return-editor-review",
         "title": "Return Editor Review: Local-First AI Contract Review for Mac and Windows",
         "url": "/power-local-llm/return-editor-review",
-        "dateModified": "2026-10-10",
+        "dateModified": "2026-10-16",
         "tier": "mentioned"
       },
       {
@@ -7093,6 +7093,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "pcai-photo-retouch-review",
+        "title": "pcAI Photo Retouch Review: Offline Photo Restoration and Art Styles on iPhone and Mac",
+        "url": "/power-local-llm/pcai-photo-retouch-review",
+        "dateModified": "2026-10-16",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-images-video-compared",
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
@@ -7100,7 +7108,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "AnimateDiff": {
@@ -10580,6 +10588,14 @@
         "tier": "mentioned"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "return-editor-review",
+        "title": "Return Editor Review: Local-First AI Contract Review for Mac and Windows",
+        "url": "/power-local-llm/return-editor-review",
+        "dateModified": "2026-10-16",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
@@ -10592,14 +10608,6 @@
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
         "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-10-10",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "return-editor-review",
-        "title": "Return Editor Review: Local-First AI Contract Review for Mac and Windows",
-        "url": "/power-local-llm/return-editor-review",
         "dateModified": "2026-10-10",
         "tier": "mentioned"
       },
@@ -11442,7 +11450,7 @@
         "slug": "return-editor-review",
         "title": "Return Editor Review: Local-First AI Contract Review for Mac and Windows",
         "url": "/power-local-llm/return-editor-review",
-        "dateModified": "2026-10-10",
+        "dateModified": "2026-10-16",
         "tier": "about"
       }
     ],
@@ -11471,6 +11479,20 @@
         "title": "Local AI Mail Review: Brand-New Android Email Client with an On-Device AI",
         "url": "/power-local-llm/local-ai-mail-review",
         "dateModified": "2026-10-11",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "pcAI Photo Retouch": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pcai-photo-retouch-review",
+        "title": "pcAI Photo Retouch Review: Offline Photo Restoration and Art Styles on iPhone and Mac",
+        "url": "/power-local-llm/pcai-photo-retouch-review",
+        "dateModified": "2026-10-16",
         "tier": "about"
       }
     ],
