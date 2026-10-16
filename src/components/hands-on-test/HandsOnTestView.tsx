@@ -6,6 +6,8 @@ import { FindingsTable } from './FindingsTable'
 import { featureReviewUrl } from '@/components/local-ai-directory/reviewLinks'
 import { getHandsOnTest } from '@/lib/hands-on-tests'
 import { HANDS_ON_TEST_SLUGS, handsOnTestUrl } from '@/lib/hands-on-tests/links'
+import { TESTING_STANDARDS_COPY, TESTING_STANDARDS_PATH } from '@/lib/testing-standards/copy'
+import { DISCLAIMER_COPY } from '@/lib/testing-standards/disclaimer'
 
 const H2 = 'mt-12 mb-4 border-t-2 border-text-primary pt-3 text-2xl font-bold text-text-primary'
 const CARD = 'rounded-md border border-border bg-white p-5'
@@ -357,6 +359,10 @@ export function HandsOnTestView({ test, lang }: { test: HandsOnTest; lang: Langu
         <h3 className="mb-2 mt-6 font-semibold text-text-primary">{ui.sources_h}</h3>
         <ul className="mb-4 list-disc space-y-1 ps-5 text-sm">{test.sources.map((s) => <li key={s}>{s}</li>)}</ul>
         <p className="font-mono text-xs text-text-muted">{fill(ui.footer_line, { id: test.id, version: test.standard_version })}</p>
+        <p className="mt-4 text-sm">
+          <a href={`${prefix}${TESTING_STANDARDS_PATH}`} className="text-primary underline">{TESTING_STANDARDS_COPY[lang].linkLabel}</a>
+          <span className="text-text-muted"> — {DISCLAIMER_COPY[lang].shortNote}</span>
+        </p>
       </footer>
     </div>
   )
