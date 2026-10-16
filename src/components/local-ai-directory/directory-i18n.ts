@@ -929,6 +929,27 @@ const DIR_UI = {
     ar: "إظهار",
     ko: "펼치기",
   },
+  altReplaceTitle: {
+    en: "Replace a cloud app", de: "Eine Cloud-App ersetzen", fr: "Remplacer une application cloud", ja: "クラウドアプリを置き換える", zh: "替换云端应用",
+    es: "Reemplaza una aplicación en la nube", pt: "Substitua um app na nuvem", ar: "استبدل تطبيقًا سحابيًا", ko: "클라우드 앱 대체하기",
+  },
+  altCountAlternatives: {
+    en: "{count} alternatives", de: "{count} Alternativen", fr: "{count} alternatives", ja: "代替{count}件", zh: "{count} 个替代方案",
+    es: "{count} alternativas", pt: "{count} alternativas", ar: "{count} بدائل", ko: "대안 {count}개",
+  },
+  altAppAlternatives: {
+    en: "{name} alternatives", de: "{name}-Alternativen", fr: "Alternatives à {name}", ja: "{name}の代替", zh: "{name} 的替代方案",
+    es: "Alternativas a {name}", pt: "Alternativas ao {name}", ar: "بدائل {name}", ko: "{name} 대안",
+  },
+  altSeeAll: {
+    en: "See all {count} {name} alternatives", de: "Alle {count} {name}-Alternativen anzeigen", fr: "Voir les {count} alternatives à {name}",
+    ja: "{name}の代替{count}件をすべて見る", zh: "查看全部 {count} 个 {name} 替代方案", es: "Ver las {count} alternativas a {name}",
+    pt: "Ver todas as {count} alternativas ao {name}", ar: "عرض جميع بدائل {name} ({count})", ko: "{name} 대안 {count}개 모두 보기",
+  },
+  altSeeFewer: {
+    en: "Show fewer", de: "Weniger anzeigen", fr: "Afficher moins", ja: "表示を減らす", zh: "收起",
+    es: "Mostrar menos", pt: "Mostrar menos", ar: "عرض أقل", ko: "간단히 보기",
+  },
   altClearResults: {
     en: "Close results",
     de: "Ergebnisse schließen",
