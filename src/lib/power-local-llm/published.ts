@@ -574,6 +574,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // MLXHub review (Mobile & Edge LLMs) — 2026-10-05
   'mlxhub-review',
+
+  // AI CutoutWerk review (Image editing, iOS/macOS) — 2026-10-16
+  'ai-cutoutwerk-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

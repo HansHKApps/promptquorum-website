@@ -11251,6 +11251,20 @@
     "totalCount": 1,
     "capped": false
   },
+  "AI CutoutWerk": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ai-cutoutwerk-review",
+        "title": "AI CutoutWerk Review: Offline AI Background Remover for iPhone, iPad and Mac",
+        "url": "/power-local-llm/ai-cutoutwerk-review",
+        "dateModified": "2026-10-16",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Private Mind": {
     "articles": [
       {
