@@ -316,6 +316,7 @@ https://www.promptquorum.com/power-local-llm/deepseek-offline-china-self-hosted-
 https://www.promptquorum.com/power-local-llm/deepseek-r1-vs-distills-explained-2026
 https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-coding-local-2026
 https://www.promptquorum.com/power-local-llm/deepseek-vs-qwen-local-comparison-2026
+https://www.promptquorum.com/power-local-llm/diffusionbee-hands-on-test
 https://www.promptquorum.com/power-local-llm/diffusionbee-review
 https://www.promptquorum.com/power-local-llm/dify-ai-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/digitalocean-vs-aws-cloud-for-ai-companies
@@ -547,6 +548,7 @@ https://www.promptquorum.com/power-local-llm/turbo-fieldfare-review
 https://www.promptquorum.com/power-local-llm/twinny-review
 https://www.promptquorum.com/power-local-llm/txtai-embedded-vector-database-review
 https://www.promptquorum.com/power-local-llm/uncensored-local-llm-creative-writing-ethics
+https://www.promptquorum.com/power-local-llm/unsloth-hands-on-test
 https://www.promptquorum.com/power-local-llm/unsloth-review
 https://www.promptquorum.com/power-local-llm/us-state-ai-employment-laws-compliance
 https://www.promptquorum.com/power-local-llm/vane-review
