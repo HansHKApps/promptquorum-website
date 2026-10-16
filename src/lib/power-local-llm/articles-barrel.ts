@@ -44,6 +44,7 @@ import { article as a_lm_playground_review } from './articles/lm-playground-revi
 import { article as a_tokforge_review } from './articles/tokforge-review'
 import { article as a_local_ai_geetmark_review } from './articles/local-ai-geetmark-review'
 import { article as a_local_ai_mail_review } from './articles/local-ai-mail-review'
+import { article as a_honey_llm_review } from './articles/honey-llm-review'
 import { article as a_friedrichai_review } from './articles/friedrichai-review'
 import { article as a_spiritbox_ultimate_review } from './articles/spiritbox-ultimate-review'
 import { article as a_oscilla_review } from './articles/oscilla-review'
@@ -632,6 +633,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'tokforge-review':                               a_tokforge_review,
   'local-ai-geetmark-review':                      a_local_ai_geetmark_review,
   'local-ai-mail-review':                         a_local_ai_mail_review,
+  'honey-llm-review':                             a_honey_llm_review,
   'friedrichai-review':                            a_friedrichai_review,
   'spiritbox-ultimate-review':                     a_spiritbox_ultimate_review,
   'oscilla-review':                                a_oscilla_review,

@@ -391,6 +391,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'tokforge-review':                         'tokforge-review',
   'local-ai-geetmark-review':                'local-ai-geetmark-review',
   'local-ai-mail-review':                    'local-ai-mail-review',
+  'honey-llm-review':                        'honey-llm-review',
   'friedrichai-review':                      'friedrichai-review',
   'spiritbox-ultimate-review':               'spiritbox-ultimate-review',
   'oscilla-review':                          'oscilla-review',

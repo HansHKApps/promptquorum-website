@@ -560,6 +560,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'tokforge-review',
   'local-ai-geetmark-review',
   'local-ai-mail-review',
+  'honey-llm-review',
   'friedrichai-review',
   'spiritbox-ultimate-review',
 

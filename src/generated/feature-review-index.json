@@ -1213,5 +1213,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "local-ai-mail-review",
     "url": "/power-local-llm/local-ai-mail-review"
+  },
+  "honey-llm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "honey-llm-review",
+    "url": "/power-local-llm/honey-llm-review"
   }
 }
