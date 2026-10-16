@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 159,
+    "totalCount": 160,
     "capped": true
   },
   "vLLM": {
@@ -5870,7 +5870,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 30,
+    "totalCount": 31,
     "capped": true
   },
   "Pocket AI": {
@@ -6627,6 +6627,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "cloud-gpu-rental-comparison-2026",
+        "title": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026",
+        "url": "/local-llms/cloud-gpu-rental-comparison-2026",
+        "dateModified": "2026-10-16",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
         "url": "/local-llms/apple-silicon-m5-local-llm",
@@ -6686,14 +6694,6 @@
         "slug": "automatic1111-review",
         "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
         "url": "/power-local-llm/automatic1111-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "comfyui-review",
-        "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
-        "url": "/power-local-llm/comfyui-review",
         "dateModified": "2026-09-06",
         "tier": "about"
       }
@@ -10564,6 +10564,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "lm-playground-review",
+        "title": "LM Playground Review: Open-Source Offline LLM Chat for Android",
+        "url": "/power-local-llm/lm-playground-review",
+        "dateModified": "2026-10-16",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
@@ -10626,17 +10634,9 @@
         "url": "/power-local-llm/cognira-review",
         "dateModified": "2026-10-05",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mlxhub-review",
-        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
-        "url": "/power-local-llm/mlxhub-review",
-        "dateModified": "2026-10-05",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 189,
+    "totalCount": 190,
     "capped": true
   },
   "Qdrant": {
@@ -11325,6 +11325,20 @@
       }
     ],
     "totalCount": 5,
+    "capped": false
+  },
+  "LM Playground": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "lm-playground-review",
+        "title": "LM Playground Review: Open-Source Offline LLM Chat for Android",
+        "url": "/power-local-llm/lm-playground-review",
+        "dateModified": "2026-10-16",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "TokForge": {

@@ -175,6 +175,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'paios':                                   'paios',
   'private-mind':                            'private-mind',
   'llm-hub':                                 'llm-hub',
+  'lm-playground':                           'lm-playground',
   'tokforge':                                'tokforge',
   'friedrichai':                             'friedrichai',
   'spiritbox-ultimate':                      'spiritbox-ultimate',

@@ -116,6 +116,7 @@ import { app as app_llm_farm } from './apps/llm-farm'
 import { app as app_ollama_local_ai } from './apps/ollama-local-ai'
 import { app as app_private_mind } from './apps/private-mind'
 import { app as app_llm_hub } from './apps/llm-hub'
+import { app as app_lm_playground } from './apps/lm-playground'
 import { app as app_tokforge } from './apps/tokforge'
 import { app as app_friedrichai } from './apps/friedrichai'
 import { app as app_spiritbox_ultimate } from './apps/spiritbox-ultimate'
@@ -489,6 +490,7 @@ export const localAiApps: ToolRecord[] = [
   app_paios,
   app_private_mind,
   app_llm_hub,
+  app_lm_playground,
   app_tokforge,
   app_friedrichai,
   app_spiritbox_ultimate,
