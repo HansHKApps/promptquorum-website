@@ -353,6 +353,7 @@ import { article as a_web_search_mcp_review } from './articles/web-search-mcp-re
 import { article as a_candle_vllm_review } from './articles/candle-vllm-review'
 import { article as a_swiftlm_review } from './articles/swiftlm-review'
 import { article as a_radiant_canvas } from './articles/radiant-canvas'
+import { article as a_ai_cutoutwerk_review } from './articles/ai-cutoutwerk-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -745,6 +746,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'candle-vllm-review':                                  a_candle_vllm_review,
   'swiftlm-review':                                      a_swiftlm_review,
   'radiant-canvas':                                      a_radiant_canvas,
+  'ai-cutoutwerk-review':                                a_ai_cutoutwerk_review,
 }
 
 // The directory page's "Last updated" date follows the tool list: every 5 tools added after the article's own

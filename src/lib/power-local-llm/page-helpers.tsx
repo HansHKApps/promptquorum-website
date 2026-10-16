@@ -1169,6 +1169,7 @@ const HUB_THEMES: Array<{
       'diffusionbee-review',
       'stable-diffusion-forge-review',
       'radiant-canvas',
+      'ai-cutoutwerk-review',
     ],
   },
   {

@@ -257,6 +257,7 @@ import { app as app_web_search_mcp } from './apps/web-search-mcp'
 import { app as app_willow_inference_server } from './apps/willow-inference-server'
 import { app as app_radiant_canvas } from './apps/radiant-canvas'
 import { app as app_paios } from './apps/paios'
+import { app as app_ai_cutoutwerk } from './apps/ai-cutoutwerk'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -490,6 +491,7 @@ export const localAiApps: ToolRecord[] = [
   app_radiant_canvas,
   app_ollama_local_ai,
   app_paios,
+  app_ai_cutoutwerk,
   app_private_mind,
   app_llm_hub,
   app_lm_playground,

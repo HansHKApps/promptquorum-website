@@ -19199,81 +19199,81 @@
   {
     "lang": "en",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
-    "excerpt": "3 local RAG platforms tested on a 5,047-page corpus. AnythingLLM, PrivateGPT, Open WebUI benchmarked for accuracy, latency, citations. August 2026 verdict.",
+    "excerpt": "AnythingLLM vs Open WebUI vs PrivateGPT on 5,047 pages: AnythingLLM has the best citations (6% hallucination), PrivateGPT the fastest retrieval (240 ms). 2026.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Die beste lokale RAG 2026",
-    "excerpt": "3 lokale RAG-Plattformen auf 5.047 Seiten getestet. AnythingLLM, PrivateGPT, Open WebUI: Genauigkeit, Latenz, Zitierqualität. Testergebnis August 2026.",
+    "excerpt": "AnythingLLM vs Open WebUI vs PrivateGPT auf 5.047 Seiten getestet: AnythingLLM zitiert am besten (6 % Halluzination), PrivateGPT ruft am schnellsten ab (240 ms). 2026.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI : La meilleure RAG locale 2026",
-    "excerpt": "3 plateformes RAG locales testées sur 5 047 pages. AnythingLLM, PrivateGPT, Open WebUI : benchmarks de précision, latence, citations. Août 2026.",
+    "excerpt": "AnythingLLM vs Open WebUI vs PrivateGPT sur 5 047 pages : AnythingLLM cite le mieux (6 % d'hallucinations), PrivateGPT récupère le plus vite (240 ms). 2026.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI：2026年のベストローカルRAG",
-    "excerpt": "AnythingLLM、PrivateGPT、Open WebUIを5,047ページのコーパスでテスト。精度、レイテンシ、引用、スケーリング性能を比較。2026年8月の検証結果。",
+    "excerpt": "AnythingLLM・Open WebUI・PrivateGPTを5,047ページで比較。引用はAnythingLLM（ハルシネーション6%）、検索速度はPrivateGPT（240ms）が最良。2026年版。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI：2026年最佳本地RAG平台",
-    "excerpt": "在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年8月的测试结果。",
+    "excerpt": "AnythingLLM、Open WebUI、PrivateGPT在5,047页语料上的实测：AnythingLLM引用最佳（幻觉率6%），PrivateGPT检索最快（240毫秒）。2026年。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI: El mejor RAG local en 2026",
-    "excerpt": "3 plataformas RAG locales probadas en un corpus de 5.047 páginas. AnythingLLM, PrivateGPT y Open WebUI: precisión, latencia y citas. Veredicto de 2026.",
+    "excerpt": "AnythingLLM vs Open WebUI vs PrivateGPT en 5.047 páginas: AnythingLLM cita mejor (6 % de alucinaciones) y PrivateGPT recupera más rápido (240 ms). 2026.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI: O melhor RAG local em 2026",
-    "excerpt": "3 plataformas RAG locais testadas em um corpus de 5.047 páginas. AnythingLLM, PrivateGPT e Open WebUI: precisão, latência e citações. Veredito de 2026.",
+    "excerpt": "AnythingLLM vs Open WebUI vs PrivateGPT em 5.047 páginas: AnythingLLM cita melhor (6% de alucinações) e PrivateGPT recupera mais rápido (240 ms). 2026.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "⁨AnythingLLM⁩ مقابل ⁨PrivateGPT⁩ مقابل ⁨Open WebUI⁩: أفضل ⁨RAG⁩ محلي في ⁨2026⁩",
-    "excerpt": "اختُبرت 3 منصات RAG محلية على مجموعة 5,047 صفحة: AnythingLLM تتفوق في الدقة، وOpen WebUI في السرعة، وPrivateGPT في الاستشهادات. نتائج أغسطس 2026.",
+    "excerpt": "AnythingLLM وOpen WebUI وPrivateGPT على 5,047 صفحة: AnythingLLM الأفضل استشهادًا (هلوسة 6%) وPrivateGPT الأسرع استرجاعًا (240 مللي ثانية). 2026.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI: 2026년 최고의 로컬 RAG 플랫폼 비교",
-    "excerpt": "5,047페이지 코퍼스에서 테스트한 로컬 RAG 플랫폼 3종 비교. AnythingLLM, PrivateGPT, Open WebUI의 정확도, 지연 시간, 인용 품질. 2026년 최종 평가.",
+    "excerpt": "AnythingLLM·Open WebUI·PrivateGPT를 5,047페이지로 비교. 인용은 AnythingLLM(환각률 6%), 검색 속도는 PrivateGPT(240ms)가 가장 우수합니다. 2026년.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
@@ -21709,82 +21709,82 @@
   },
   {
     "lang": "en",
-    "title": "The Complete Local AI & LLM Software Directory: 244 Apps & Tools for Running AI Locally (2026)",
-    "excerpt": "244 local AI and LLM apps and tools. Compare software by use case, platform, price, license, hardware and more for running AI on your own computer or phone.",
+    "title": "The Complete Local AI & LLM Software Directory: 246 Apps & Tools for Running AI Locally (2026)",
+    "excerpt": "Browse 246 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-10-16",
     "url": "/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 244 Apps und Tools, um KI lokal auszuführen (2026)",
-    "excerpt": "244 lokale KI- und LLM-Apps und -Tools. Vergleichen Sie Software nach Einsatzzweck, Plattform, Preis, Lizenz und Hardware — für KI auf Ihrem eigenen Rechner oder Smartphone.",
+    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 246 Apps und Tools, um KI lokal auszuführen (2026)",
+    "excerpt": "Entdecken Sie 246 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-10-16",
     "url": "/de/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 244 apps et outils pour exécuter l'IA en local (2026)",
-    "excerpt": "244 apps et outils d’IA et de LLM locaux. Comparez les logiciels par usage, plateforme, prix, licence et matériel pour exécuter l’IA sur votre ordinateur ou votre téléphone.",
+    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 246 apps et outils pour exécuter l'IA en local (2026)",
+    "excerpt": "Parcourez 246 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-10-16",
     "url": "/fr/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす244のアプリ＆ツール（2026年版）",
-    "excerpt": "244のローカルAI・LLMアプリとツールを掲載。用途、プラットフォーム、価格、ライセンス、ハードウェアなどで比較し、自分のパソコンやスマートフォンでAIを動かすソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす246のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを246件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-10-16",
     "url": "/ja/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "本地AI与LLM软件完整目录：244款应用与工具，在本地运行AI（2026）",
-    "excerpt": "244款本地AI与LLM应用和工具。按用途、平台、价格、许可证、硬件等对比软件，在自己的电脑或手机上运行AI。",
+    "title": "本地AI与LLM软件完整目录：246款应用与工具，在本地运行AI（2026）",
+    "excerpt": "收录246款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-10-16",
     "url": "/zh/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "El directorio completo de software de IA y LLM local: 244 apps y herramientas para ejecutar IA en local (2026)",
-    "excerpt": "244 apps y herramientas de IA y LLM local. Compara software por caso de uso, plataforma, precio, licencia y hardware para ejecutar IA en tu propio ordenador o teléfono.",
+    "title": "El directorio completo de software de IA y LLM local: 246 apps y herramientas para ejecutar IA en local (2026)",
+    "excerpt": "Explora 246 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-10-16",
     "url": "/es/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 244 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "244 apps e ferramentas de IA e LLM local. Compare softwares por caso de uso, plataforma, preço, licença e hardware para executar IA no seu próprio computador ou celular.",
+    "title": "O diretório completo de software de IA e LLM local: 246 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 246 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-10-16",
     "url": "/pt/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 244 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "244 تطبيقاً وأداة للذكاء الاصطناعي والنماذج اللغوية المحلية. قارِن البرامج حسب حالة الاستخدام والمنصة والسعر والترخيص والعتاد لتشغيل الذكاء الاصطناعي على حاسوبك أو هاتفك.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 246 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 246 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-10-16",
     "url": "/ar/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 244개 앱과 도구 (2026)",
-    "excerpt": "로컬 AI·LLM 앱과 도구 244개. 사용 사례, 플랫폼, 가격, 라이선스, 하드웨어 기준으로 비교해 내 컴퓨터나 스마트폰에서 AI를 실행해 보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 246개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 246개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-11",
+    "dateModified": "2026-10-16",
     "url": "/ko/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
@@ -38881,6 +38881,87 @@
   },
   {
     "lang": "en",
+    "title": "pcAI Photo Retouch Review: Offline Photo Restoration and Art Styles on iPhone and Mac",
+    "excerpt": "pcAI Photo Retouch review: free-to-install iPhone and Mac app that restores old photos with on-device AI. No update since February 2026, untested.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "pcAI Photo Retouch im Test: Foto-Restaurierung und Kunststile offline auf iPhone und Mac",
+    "excerpt": "pcAI Photo Retouch im Test: kostenlose iPhone- und Mac-App, die alte Fotos mit KI auf dem Gerät restauriert. Seit Februar 2026 ohne Update, ungetestet.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/de/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de pcAI Photo Retouch : restauration de photos et styles artistiques hors ligne sur iPhone et Mac",
+    "excerpt": "Test de pcAI Photo Retouch : appli iPhone et Mac qui restaure les vieilles photos avec une IA locale. Sans mise à jour depuis février 2026, non testée.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/fr/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "pcAI Photo Retouchレビュー:iPhoneとMacでオフライン写真修復とアートスタイル",
+    "excerpt": "pcAI Photo Retouchのレビュー。端末内AIで古い写真を修復する、無料でインストールできるiPhone・Mac向けアプリ。2026年2月以降は更新なし、未検証。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ja/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "pcAI Photo Retouch评测:iPhone和Mac上的离线照片修复与艺术风格",
+    "excerpt": "pcAI Photo Retouch评测:可免费安装的iPhone和Mac应用,用设备端AI修复老照片并应用艺术风格。2026年2月起未更新,尚未经过实际测试。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/zh/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de pcAI Photo Retouch: restauración de fotos y estilos artísticos sin conexión en iPhone y Mac",
+    "excerpt": "Análisis de pcAI Photo Retouch: app para iPhone y Mac que restaura fotos antiguas con IA local. Sin actualizaciones desde febrero de 2026, sin probar.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/es/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do pcAI Photo Retouch: restauração de fotos e estilos artísticos offline no iPhone e no Mac",
+    "excerpt": "Análise do pcAI Photo Retouch: app para iPhone e Mac que restaura fotos antigas com IA no aparelho. Sem atualização desde fevereiro de 2026, não testado.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/pt/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة pcAI Photo Retouch: ترميم الصور وأنماط فنية دون اتصال على iPhone وMac",
+    "excerpt": "مراجعة pcAI Photo Retouch: تطبيق iPhone وMac مجاني التثبيت يرمّم الصور القديمة بذكاء اصطناعي على الجهاز. لا تحديث منذ فبراير 2026 وغير مُختبَر.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ar/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "pcAI Photo Retouch 리뷰: iPhone·Mac의 오프라인 사진 복원과 아트 스타일",
+    "excerpt": "pcAI Photo Retouch 리뷰. 기기 내 AI로 오래된 사진을 복원하는 무료 설치 iPhone·Mac 앱. 2026년 2월 이후 업데이트 없음, 미검증.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ko/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "Honey LLM Review: Offline AI Chat and Document Q&A for Android",
     "excerpt": "Honey LLM review: an Android app for offline AI chat and document Q&A with a free demo and a one-time unlock. Source not published, claims not yet tested.",
     "publishDate": "2026-10-16",
@@ -46653,6 +46734,87 @@
     "publishDate": "2026-09-25",
     "dateModified": "2026-09-25",
     "url": "/ko/power-local-llm/radiant-canvas",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "AI CutoutWerk Review: Offline AI Background Remover for iPhone, iPad and Mac",
+    "excerpt": "AI CutoutWerk review: free Apple app for offline AI background removal and cutout collages on iPhone, iPad and Mac, plus prices and update status.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "AI CutoutWerk Review: Offline-KI-Freisteller für iPhone, iPad und Mac",
+    "excerpt": "AI CutoutWerk Review: Apple-App für Hintergrundentfernung und Freisteller-Collagen offline auf iPhone, iPad und Mac – mit Preisen und Update-Status.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/de/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test d'AI CutoutWerk : détourage IA hors ligne pour iPhone, iPad et Mac",
+    "excerpt": "Test d'AI CutoutWerk : app Apple gratuite de détourage IA et de compositions hors ligne sur iPhone, iPad et Mac, avec prix et état des mises à jour.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/fr/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "AI CutoutWerkレビュー：iPhone・iPad・Mac向けオフラインAI切り抜きアプリ",
+    "excerpt": "AI CutoutWerkのレビュー。iPhone・iPad・Macでオフラインに背景削除と切り抜き合成ができる無料ダウンロードのAppleアプリを、価格・プライバシー・更新状況とともに解説します。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ja/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "AI CutoutWerk评测：适用于iPhone、iPad和Mac的离线AI抠图应用",
+    "excerpt": "AI CutoutWerk评测：可免费下载的苹果应用，在iPhone、iPad和Mac上离线完成AI抠图与合成，并介绍应用内购买价格、隐私情况和更新状态。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/zh/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de AI CutoutWerk: recorte de fondo con IA sin conexión para iPhone, iPad y Mac",
+    "excerpt": "Reseña de AI CutoutWerk: app de Apple gratuita para recortar fondos con IA y crear composiciones sin conexión en iPhone, iPad y Mac, con precios y estado.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/es/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do AI CutoutWerk: recorte de fundo com IA offline para iPhone, iPad e Mac",
+    "excerpt": "Análise do AI CutoutWerk: app da Apple gratuito para remover fundo com IA e criar composições offline no iPhone, iPad e Mac, com preços e status.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/pt/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة AI CutoutWerk: تطبيق إزالة الخلفية بالذكاء الاصطناعي دون اتصال لأجهزة iPhone وiPad وMac",
+    "excerpt": "مراجعة AI CutoutWerk: تطبيق Apple مجاني لإزالة خلفيات الصور وتركيب المقتطعات دون اتصال على iPhone وiPad وMac، مع الأسعار والخصوصية وحالة التحديث.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ar/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "AI CutoutWerk 리뷰: iPhone, iPad, Mac용 오프라인 AI 배경 제거 앱",
+    "excerpt": "AI CutoutWerk 리뷰: iPhone, iPad, Mac에서 오프라인으로 AI 배경 제거와 컷아웃 합성을 하는 무료 다운로드 Apple 앱의 가격, 개인정보, 업데이트 상태를 정리했습니다.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ko/power-local-llm/ai-cutoutwerk-review",
     "cluster": "power-local-llm"
   },
   {
@@ -55730,81 +55892,81 @@
   {
     "lang": "en",
     "title": "Is Balcony Solar Legal in Connecticut?",
-    "excerpt": "Signed, not yet in effect. HB 5340 takes effect October 1, 2026 as part of a broader omnibus solar bill, with a 1,200W cap. Quick answer from PromptQuorum.",
+    "excerpt": "In effect since October 1, 2026. HB 5340 is part of a broader omnibus solar bill, with a 1,200W cap. Quick answer from PromptQuorum.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "de",
     "title": "Ist Balkonsolar in Connecticut legal?",
-    "excerpt": "Unterzeichnet, aber noch nicht in Kraft. HB 5340 tritt am 1. Oktober 2026 im Rahmen eines umfassenderen Solar-Sammelgesetzes in Kraft, mit einer Obergrenze von 1.200 W. Kurzantwort von PromptQuorum.",
+    "excerpt": "In Kraft seit dem 1. Oktober 2026. HB 5340 ist Teil eines umfassenderen Solar-Sammelgesetzes, mit einer Obergrenze von 1.200 W. Kurzantwort von PromptQuorum.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/de/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "fr",
     "title": "Le solaire de balcon est-il légal dans le Connecticut ?",
-    "excerpt": "Signée, pas encore en vigueur. La loi HB 5340 entre en vigueur le 1er octobre 2026 dans le cadre d'une loi solaire omnibus, avec un plafond de 1 200 W. Réponse rapide de PromptQuorum.",
+    "excerpt": "En vigueur depuis le 1er octobre 2026. La loi HB 5340 s'inscrit dans une loi solaire omnibus, avec un plafond de 1 200 W. Réponse rapide de PromptQuorum.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/fr/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ja",
     "title": "コネチカット州でバルコニーソーラーは合法ですか？",
-    "excerpt": "署名済みですが、まだ発効していません。HB 5340は包括的なソーラー法案の一部として2026年10月1日に発効し、上限は1,200Wです。PromptQuorumによるクイックアンサー。",
+    "excerpt": "2026年10月1日から施行済みです。HB 5340は包括的なソーラー法案の一部で、上限は1,200Wです。PromptQuorumによるクイックアンサー。",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/ja/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "zh",
     "title": "康涅狄格州的阳台太阳能合法吗？",
-    "excerpt": "已签署，但尚未生效。HB 5340作为一项更广泛的综合太阳能法案的一部分，将于2026年10月1日生效，功率上限为1,200W。来自PromptQuorum的快速解答。",
+    "excerpt": "自2026年10月1日起已生效。HB 5340是更广泛的综合太阳能法案的一部分，功率上限为1,200W。来自PromptQuorum的快速解答。",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/zh/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "es",
     "title": "¿Es legal la energía solar de balcón en Connecticut?",
-    "excerpt": "Firmada, pero aún no vigente. La HB 5340 entra en vigor el 1 de octubre de 2026 como parte de una ley solar general más amplia, con un límite de 1,200W. Respuesta rápida de PromptQuorum.",
+    "excerpt": "En vigor desde el 1 de octubre de 2026. La HB 5340 forma parte de una ley solar general más amplia, con un límite de 1,200W. Respuesta rápida de PromptQuorum.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/es/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
     "title": "A energia solar de varanda é legal em Connecticut?",
-    "excerpt": "Sancionada, mas ainda não em vigor. A HB 5340 entra em vigor em 1º de outubro de 2026 como parte de uma lei solar abrangente mais ampla, com limite de 1.200W. Resposta rápida da PromptQuorum.",
+    "excerpt": "Em vigor desde 1º de outubro de 2026. A HB 5340 faz parte de uma lei solar abrangente mais ampla, com limite de 1.200W. Resposta rápida da PromptQuorum.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/pt/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ar",
     "title": "هل الطاقة الشمسية للشرفات قانونية في كونيتيكت؟",
-    "excerpt": "تم التوقيع عليه، لكنه لم يدخل حيز التنفيذ بعد. يدخل HB 5340 حيز التنفيذ في 1 أكتوبر 2026 كجزء من مشروع قانون شامل للطاقة الشمسية، بحد أقصى 1,200 واط. إجابة سريعة من PromptQuorum.",
+    "excerpt": "ساري المفعول منذ 1 أكتوبر 2026. HB 5340 جزء من مشروع قانون شامل للطاقة الشمسية، بحد أقصى 1,200 واط. إجابة سريعة من PromptQuorum.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/ar/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ko",
     "title": "코네티컷주에서 발코니 태양광은 합법입니까?",
-    "excerpt": "서명되었지만 아직 시행되지 않았습니다. HB 5340은 포괄적인 태양광 법안의 일부로 2026년 10월 1일에 시행되며, 상한선은 1,200W입니다. PromptQuorum의 빠른 답변입니다.",
+    "excerpt": "2026년 10월 1일부터 시행 중입니다. HB 5340은 포괄적인 태양광 법안의 일부이며, 상한선은 1,200W입니다. PromptQuorum의 빠른 답변입니다.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/ko/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
@@ -55892,81 +56054,81 @@
   {
     "lang": "en",
     "title": "Is Balcony Solar Legal in California?",
-    "excerpt": "Not yet — SB 868 passed the legislature and awaits Governor Newsom's signature by September 30, 2026. Would cap devices at 1,200W. Quick answer from PromptQuorum.",
+    "excerpt": "Signed, not yet in effect. California SB 868 takes effect January 1, 2027 with a 1,200W cap per dwelling. Quick answer from PromptQuorum.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "de",
     "title": "Ist Balkonsolar in Kalifornien legal?",
-    "excerpt": "Noch nicht – SB 868 hat das Parlament passiert und wartet auf die Unterschrift von Gouverneur Newsom bis zum 30. September 2026. Obergrenze wäre 1.200 W. Schnelle Antwort von PromptQuorum.",
+    "excerpt": "Unterzeichnet, noch nicht in Kraft. Kaliforniens SB 868 tritt am 1. Januar 2027 in Kraft, mit einer Obergrenze von 1.200 W pro Wohneinheit. Schnelle Antwort von PromptQuorum.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/de/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "fr",
     "title": "Le solaire de balcon est-il légal en Californie ?",
-    "excerpt": "Pas encore — le SB 868 a été adopté par le Parlement et attend la signature du gouverneur Newsom avant le 30 septembre 2026. Plafond prévu de 1 200 W. Réponse rapide de PromptQuorum.",
+    "excerpt": "Signée, pas encore en vigueur. Le SB 868 de Californie entre en vigueur le 1er janvier 2027 avec un plafond de 1 200 W par logement. Réponse rapide de PromptQuorum.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/fr/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ja",
     "title": "カリフォルニア州でバルコニーソーラーは合法ですか？",
-    "excerpt": "まだです — SB 868は州議会を通過し、2026年9月30日までにニューサム知事の署名を待っています。上限は1,200Wになる見込みです。PromptQuorumによるクイックアンサー。",
+    "excerpt": "署名済みですが、まだ発効していません。カリフォルニア州のSB 868は2027年1月1日に発効し、上限は住戸あたり1,200Wです。PromptQuorumによるクイックアンサー。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/ja/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "zh",
     "title": "加利福尼亚州的阳台太阳能合法吗？",
-    "excerpt": "尚未合法——SB 868已通过州议会,正等待州长纽森在2026年9月30日前签署。拟定功率上限为1,200瓦。PromptQuorum为您解答。",
+    "excerpt": "已签署，但尚未生效。加利福尼亚州SB 868将于2027年1月1日生效，每套住宅功率上限为1,200瓦。PromptQuorum为您解答。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/zh/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "es",
     "title": "¿Es legal la energía solar de balcón en California?",
-    "excerpt": "Todavía no — el SB 868 pasó la legislatura y espera la firma del gobernador Newsom antes del 30 de septiembre de 2026. Límite propuesto de 1200 W. Respuesta rápida de PromptQuorum.",
+    "excerpt": "Firmada, aún no vigente. El SB 868 de California entra en vigor el 1 de enero de 2027 con un límite de 1200 W por vivienda. Respuesta rápida de PromptQuorum.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/es/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
     "title": "A energia solar de varanda é legal na Califórnia?",
-    "excerpt": "Ainda não — o SB 868 foi aprovado pela assembleia legislativa e aguarda a assinatura do governador Newsom até 30 de setembro de 2026. Limite proposto de 1.200 W. Resposta rápida da PromptQuorum.",
+    "excerpt": "Sancionada, ainda não em vigor. O SB 868 da Califórnia entra em vigor em 1º de janeiro de 2027, com limite de 1.200 W por unidade habitacional. Resposta rápida da PromptQuorum.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/pt/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ar",
     "title": "هل الطاقة الشمسية للشرفات قانونية في كاليفورنيا؟",
-    "excerpt": "ليس بعد — أقرّ SB 868 مجلسي التشريع الأمريكي وينتظر توقيع الحاكم نيوسوم بحلول 30 سبتمبر 2026. الحد المقترح 1,200 واط. إجابة سريعة من PromptQuorum.",
+    "excerpt": "تم التوقيع عليه، لكنه لم يدخل حيز التنفيذ بعد. يبدأ سريان SB 868 في كاليفورنيا في 1 يناير 2027 بحد أقصى 1,200 واط لكل وحدة سكنية. إجابة سريعة من PromptQuorum.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/ar/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ko",
     "title": "캘리포니아주에서 발코니 태양광은 합법입니까?",
-    "excerpt": "아직 아닙니다 — SB 868은 주 의회를 통과했으며 2026년 9월 30일까지 뉴섬 주지사의 서명을 기다리고 있습니다. 상한은 1,200W가 될 예정입니다. PromptQuorum의 빠른 답변입니다.",
+    "excerpt": "서명되었지만 아직 발효되지 않았습니다. 캘리포니아주 SB 868은 2027년 1월 1일 발효되며 세대당 상한은 1,200W입니다. PromptQuorum의 빠른 답변입니다.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/ko/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
@@ -65607,6 +65769,87 @@
     "publishDate": "2026-10-09",
     "dateModified": "2026-10-09",
     "url": "/zh/power-local-llm/bobe-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "⁦DiffusionBee⁩ على جهاز ⁦Mac⁩ بذاكرة ⁦24 GB⁩: التوليد نجح فورًا، والتحرير فشل في معظمه",
+    "excerpt": "اختبار عملي على جهاز ⁦Mac⁩ بمعالج ⁦M3⁩ وذاكرة ⁦24 GB⁩. ظهرت الصور خلال نحو دقيقة؛ أما التعديلات الموجّهة على صورة موجودة فقد فشلت في معظمها.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ar/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "DiffusionBee auf einem 24-GB-Mac: Bilder erzeugen klappte sofort, Bearbeiten meist nicht",
+    "excerpt": "Praxistest auf einem M3-Mac mit 24 GB. Bilder entstanden in etwa einer Minute; gezielte Änderungen an einem vorhandenen Bild scheiterten meist.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/de/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "DiffusionBee en un Mac de 24 GB: generar funcionó enseguida, editar casi nunca",
+    "excerpt": "Prueba práctica en un Mac con M3 y 24 GB. Las imágenes salían en cerca de un minuto; las ediciones dirigidas sobre una imagen existente casi siempre fallaron.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/es/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "DiffusionBee sur un Mac de 24 Go : la génération a marché tout de suite, la retouche presque jamais",
+    "excerpt": "Test pratique sur un Mac M3 avec 24 Go. Les images sortaient en une minute environ ; les retouches ciblées d'une image existante ont presque toutes échoué.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/fr/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "24 GBのMacでDiffusionBee：画像の生成はすぐ動いたが、編集はほとんど動かなかった",
+    "excerpt": "M3搭載・24 GBのMacでの実機テストです。画像は約1分で生成できましたが、既存の画像への的を絞った編集はほとんど失敗しました。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ja/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "DiffusionBee on a 24 GB Mac: Generating Worked at Once, Editing Mostly Did Not",
+    "excerpt": "Hands-on test on an M3 Mac with 24 GB. Pictures came out in about a minute; targeted edits to an existing picture mostly failed.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "24 GB Mac에서 DiffusionBee: 이미지 생성은 바로 되었지만 편집은 대부분 되지 않았습니다",
+    "excerpt": "24 GB M3 Mac에서의 직접 사용 테스트. 그림은 약 1분 만에 나왔지만, 기존 그림의 부분 편집은 대부분 실패했습니다.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ko/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "DiffusionBee em um Mac de 24 GB: gerar funcionou de imediato, editar quase nunca",
+    "excerpt": "Teste prático em um Mac M3 com 24 GB. As imagens saíam em cerca de um minuto; as edições direcionadas em uma imagem existente falharam quase sempre.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/pt/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "24 GB Mac 上的 DiffusionBee：生图立刻见效，改图基本不行",
+    "excerpt": "在 24 GB 内存的 M3 Mac 上的实测。图片约一分钟出一张；针对已有图片的局部修改基本失败。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/zh/power-local-llm/diffusionbee-hands-on-test",
     "cluster": "power-local-llm"
   },
   {
