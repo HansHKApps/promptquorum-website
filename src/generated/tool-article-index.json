@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-10-11",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
@@ -72,14 +80,6 @@
         "url": "/power-local-llm/exo-review",
         "dateModified": "2026-09-25",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "wechat-local-llm-integration-2026",
-        "title": "WeChat + Local LLM Integration: Developer Guide 2026",
-        "url": "/power-local-llm/wechat-local-llm-integration-2026",
-        "dateModified": "2026-09-25",
-        "tier": "about"
       }
     ],
     "totalCount": 297,
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-10-11",
         "tier": "about"
       },
       {
@@ -156,14 +164,6 @@
         "slug": "exo-review",
         "title": "exo Review: Distributed AI Inference Across Multiple Devices",
         "url": "/power-local-llm/exo-review",
-        "dateModified": "2026-09-25",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "hilbertraum-review",
-        "title": "HilbertRaum Review: A Portable, Offline AI Workspace for Chat and Your Own Documents",
-        "url": "/power-local-llm/hilbertraum-review",
         "dateModified": "2026-09-25",
         "tier": "about"
       }
@@ -861,6 +861,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "spiritbox-ultimate-review",
+        "title": "SpiritBox Ultimate Review: Windows Early Access for LM Studio Users",
+        "url": "/power-local-llm/spiritbox-ultimate-review",
+        "dateModified": "2026-10-16",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atlarix-review",
         "title": "Atlarix Review: A Free, Local-First AI Coding Agent",
         "url": "/power-local-llm/atlarix-review",
@@ -922,17 +930,9 @@
         "url": "/power-local-llm/local-deep-research-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "translate-books-with-llms-review",
-        "title": "TranslateBooksWithLLMs Review: Translate Full Books With a Local or Cloud LLM",
-        "url": "/power-local-llm/translate-books-with-llms-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 144,
+    "totalCount": 145,
     "capped": true
   },
   "Atomic Chat": {
@@ -6626,6 +6626,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-10-11",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "draw-things-review",
         "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
@@ -6686,14 +6694,6 @@
         "slug": "comfyui-review",
         "title": "ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux",
         "url": "/power-local-llm/comfyui-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "controlnet-review",
-        "title": "ControlNet Review: Structural Control for Stable Diffusion",
-        "url": "/power-local-llm/controlnet-review",
         "dateModified": "2026-09-06",
         "tier": "about"
       }
@@ -6784,7 +6784,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "AUTOMATIC1111": {
@@ -8721,15 +8721,15 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "baserow-review",
-        "title": "Baserow Review: A No-Code Database With a Local-AI Field",
-        "url": "/power-local-llm/baserow-review",
-        "dateModified": "2026-09-19",
+        "slug": "spiritbox-ultimate-review",
+        "title": "SpiritBox Ultimate Review: Windows Early Access for LM Studio Users",
+        "url": "/power-local-llm/spiritbox-ultimate-review",
+        "dateModified": "2026-10-16",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Docker Model Runner": {
     "articles": [
@@ -10420,6 +10420,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-10-11",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
@@ -10468,7 +10476,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "openai-edge-tts": {
@@ -10556,6 +10564,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "apple-silicon-m5-local-llm",
+        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
+        "url": "/local-llms/apple-silicon-m5-local-llm",
+        "dateModified": "2026-10-11",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
@@ -10617,14 +10633,6 @@
         "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
         "url": "/power-local-llm/mlxhub-review",
         "dateModified": "2026-10-05",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "aquavoice-review",
-        "title": "AquaVoice Review: Voice Dictation for AI Prompts",
-        "url": "/power-local-llm/aquavoice-review",
-        "dateModified": "2026-10-03",
         "tier": "mentioned"
       }
     ],
@@ -11341,6 +11349,28 @@
         "title": "FriedrichAI Review: Offline Windows AI Assistant Sold on Steam",
         "url": "/power-local-llm/friedrichai-review",
         "dateModified": "2026-10-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "spiritbox-ultimate-review",
+        "title": "SpiritBox Ultimate Review: Windows Early Access for LM Studio Users",
+        "url": "/power-local-llm/spiritbox-ultimate-review",
+        "dateModified": "2026-10-16",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "SpiritBox Ultimate": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "spiritbox-ultimate-review",
+        "title": "SpiritBox Ultimate Review: Windows Early Access for LM Studio Users",
+        "url": "/power-local-llm/spiritbox-ultimate-review",
+        "dateModified": "2026-10-16",
         "tier": "about"
       }
     ],

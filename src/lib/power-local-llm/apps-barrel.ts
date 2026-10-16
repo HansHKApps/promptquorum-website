@@ -118,6 +118,7 @@ import { app as app_private_mind } from './apps/private-mind'
 import { app as app_llm_hub } from './apps/llm-hub'
 import { app as app_tokforge } from './apps/tokforge'
 import { app as app_friedrichai } from './apps/friedrichai'
+import { app as app_spiritbox_ultimate } from './apps/spiritbox-ultimate'
 import { app as app_oscilla } from './apps/oscilla'
 import { app as app_tina } from './apps/tina'
 import { app as app_return_editor } from './apps/return-editor'
@@ -490,6 +491,7 @@ export const localAiApps: ToolRecord[] = [
   app_llm_hub,
   app_tokforge,
   app_friedrichai,
+  app_spiritbox_ultimate,
   app_oscilla,
   app_tina,
   app_return_editor,

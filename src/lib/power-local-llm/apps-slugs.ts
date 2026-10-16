@@ -177,6 +177,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'llm-hub':                                 'llm-hub',
   'tokforge':                                'tokforge',
   'friedrichai':                             'friedrichai',
+  'spiritbox-ultimate':                      'spiritbox-ultimate',
   'oscilla':                                 'oscilla',
   'tina':                                    'tina',
   'return-editor':                           'return-editor',
