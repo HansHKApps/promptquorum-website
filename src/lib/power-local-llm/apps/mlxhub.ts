@@ -45,4 +45,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value taken from the App Store listing / official site on 2026-10-05; a missing key = not stated there, never false.
   compare: { offline: true, modelDownloads: true, visionInput: true },
   lastVerifiedDate: '2026-10-05',
+  lastUpstreamUpdate: '2026-10-12', // App Store version history, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/mlxhub/id6766485144',
 }

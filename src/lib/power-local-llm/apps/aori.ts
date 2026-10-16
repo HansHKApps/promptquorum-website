@@ -41,4 +41,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { memory: true, toolUse: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  lastUpstreamUpdate: '2026-07-25', // GitHub release v0.4.1, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/R0bert75/Aori-AI-Releases/releases',
 }

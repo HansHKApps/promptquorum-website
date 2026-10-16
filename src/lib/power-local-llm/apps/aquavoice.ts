@@ -38,4 +38,6 @@ export const app: ToolRecord = {
   // Each value verified against aquavoice.com on 2026-10-03; a missing key = not stated there, never false.
   compare: { languages: 49, realtime: true },
   lastVerifiedDate: '2026-10-03',
+  lastUpstreamUpdate: '2026-10-13', // official changelog, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://aquavoice.com/changelog',
 }

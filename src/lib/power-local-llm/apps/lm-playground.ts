@@ -54,6 +54,8 @@ export const app: ToolRecord = {
   // voice = on-device voice DICTATION (Nemotron ASR, website + release 1.10.0; not in the Play description) — no spoken replies stated.
   compare: { offline: true, importModels: true, modelDownloads: true, visionInput: true, voice: true },
   lastVerifiedDate: '2026-10-16',
+  lastUpstreamUpdate: '2026-10-12', // GitHub release 1.10.1, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/andriydruk/LMPlayground/releases',
   reviewSlug: 'lm-playground-review',
   pqReview: {
     date: '2026-10-16',

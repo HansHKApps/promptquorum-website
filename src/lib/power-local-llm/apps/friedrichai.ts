@@ -47,6 +47,8 @@ export const app: ToolRecord = {
   // ollama / customEndpoint / mcp stay unset: not documented (MCP is in development per the maker only).
   compare: { builtInEngine: true, fileChat: true, voice: true },
   lastVerifiedDate: '2026-10-09',
+  lastUpstreamUpdate: '2026-10-12', // Steam update announcement, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://store.steampowered.com/news/app/4111530',
   founderReviewedDate: '2026-10-09', // Randolph Smith supplied his own comment and offered a technical review 2026-10-09; drives the amber Founder-reviewed banner + star
   reviewSlug: 'friedrichai-review',
   pqReview: {
