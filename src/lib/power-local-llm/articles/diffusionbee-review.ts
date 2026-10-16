@@ -223,6 +223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[DiffusionBee Hands-on Test](/power-local-llm/diffusionbee-hands-on-test) — a first-hand test on a 24 GB Mac (M3): text to image worked, targeted picture edits mostly failed, with every statement labelled by how it is known.',
           '[ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux](/power-local-llm/comfyui-review) — the node-graph alternative for readers who want reusable, shareable pipelines across Mac, Windows, and Linux.',
           '[Fooocus Review: The Simplest Local Stable Diffusion UI](/power-local-llm/fooocus-review) — another simplicity-focused option, cross-platform, with a browser-based interface instead of a native app.',
           '[AUTOMATIC1111 Review: Stable Diffusion WebUI Explained](/power-local-llm/automatic1111-review) — the tool with the largest extension ecosystem for readers who outgrow DiffusionBee\'s built-in feature set.',

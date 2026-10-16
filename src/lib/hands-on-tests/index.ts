@@ -2,6 +2,7 @@ import type { Language } from '@/lib/blog/blogContent'
 import drawThings from './data/draw-things.json'
 import bobe from './data/bobe.json'
 import pageAssist from './data/page-assist.json'
+import diffusionbee from './data/diffusionbee.json'
 import pageAssistDe from './data/page-assist.de.json'
 import pageAssistFr from './data/page-assist.fr.json'
 import pageAssistJa from './data/page-assist.ja.json'
@@ -204,6 +205,9 @@ const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
     pt: bobePt as unknown as HandsOnTest,
     ar: bobeAr as unknown as HandsOnTest,
     ko: bobeKo as unknown as HandsOnTest,
+  },
+  diffusionbee: {
+    en: diffusionbee as unknown as HandsOnTest,
   },
   'page-assist': {
     en: pageAssist as unknown as HandsOnTest,
