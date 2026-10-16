@@ -2585,5 +2585,176 @@
     ],
     "reason": "geo-meta-optimizer: coherence-E/B2 - GSC README-feature queries (prompt caching, WhatsApp, multimodal, heartbeat, benchmarks); new README-documents section + 5 FAQs, truncated H1 fixed, meta shortened",
     "baseline": null
+  },
+  {
+    "id": "ead7f2ac-2532-4418-b6cd-58614afdc87a",
+    "slug": "/power-local-llm/local-llm-software-directory",
+    "date": "2026-10-16T12:12:05.219Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local AI & LLM Apps: 245 Tools Compared",
+        "new": "Local LLM Software Directory: 245 Apps & Tools (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "245 local AI and LLM apps and tools. Compare software by use case, platform, price, license, hardware and more for running AI on your own computer or phone.",
+        "new": "Browse 245 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit."
+      }
+    ],
+    "reason": "geo-meta-optimizer: No-GSC-position run on pasted GSC queries (generic \"llm apps/tools/software\" intent, 0 clicks) — title/meta rewritten around \"software directory\" + platforms; FAQ +3 (iOS/Android, Open WebUI alternatives, AnythingLLM vs Jan); dateModified bumped for visible FAQ addition",
+    "baseline": null
+  },
+  {
+    "id": "005c770a-579b-4266-b47b-ea212e60d417",
+    "slug": "/de/power-local-llm/local-llm-software-directory",
+    "date": "2026-10-16T12:12:05.325Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lokale KI- & LLM-Apps: 245 Tools im Vergleich",
+        "new": "Verzeichnis lokaler LLM-Software: 245 Apps & Tools (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "245 lokale KI- und LLM-Apps und -Tools. Vergleichen Sie Software nach Einsatzzweck, Plattform, Preis, Lizenz und Hardware — für KI auf Ihrem eigenen Rechner oder Smartphone.",
+        "new": "Entdecken Sie 245 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl."
+      }
+    ],
+    "reason": "geo-meta-optimizer: No-GSC-position run on pasted GSC queries (generic \"llm apps/tools/software\" intent, 0 clicks) — title/meta rewritten around \"software directory\" + platforms; FAQ +3 (iOS/Android, Open WebUI alternatives, AnythingLLM vs Jan); dateModified bumped for visible FAQ addition",
+    "baseline": null
+  },
+  {
+    "id": "fd9f0e5e-9269-4fb4-bd60-f545a11a82fb",
+    "slug": "/fr/power-local-llm/local-llm-software-directory",
+    "date": "2026-10-16T12:12:05.430Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Apps IA & LLM locaux : 245 outils comparés",
+        "new": "Logiciels LLM locaux : 245 outils et apps (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "245 apps et outils d’IA et de LLM locaux. Comparez les logiciels par usage, plateforme, prix, licence et matériel pour exécuter l’IA sur votre ordinateur ou votre téléphone.",
+        "new": "Parcourez 245 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté."
+      }
+    ],
+    "reason": "geo-meta-optimizer: No-GSC-position run on pasted GSC queries (generic \"llm apps/tools/software\" intent, 0 clicks) — title/meta rewritten around \"software directory\" + platforms; FAQ +3 (iOS/Android, Open WebUI alternatives, AnythingLLM vs Jan); dateModified bumped for visible FAQ addition",
+    "baseline": null
+  },
+  {
+    "id": "0cd9cf22-01a3-4187-93e2-4de63a612bd5",
+    "slug": "/es/power-local-llm/local-llm-software-directory",
+    "date": "2026-10-16T12:12:05.545Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Apps de IA y LLM local: 245 herramientas comparadas",
+        "new": "Software de LLM local: 245 apps y herramientas (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "245 apps y herramientas de IA y LLM local. Compara software por caso de uso, plataforma, precio, licencia y hardware para ejecutar IA en tu propio ordenador o teléfono.",
+        "new": "Explora 245 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada."
+      }
+    ],
+    "reason": "geo-meta-optimizer: No-GSC-position run on pasted GSC queries (generic \"llm apps/tools/software\" intent, 0 clicks) — title/meta rewritten around \"software directory\" + platforms; FAQ +3 (iOS/Android, Open WebUI alternatives, AnythingLLM vs Jan); dateModified bumped for visible FAQ addition",
+    "baseline": null
+  },
+  {
+    "id": "7be67986-634c-4d92-886c-702225959a8a",
+    "slug": "/ja/power-local-llm/local-llm-software-directory",
+    "date": "2026-10-16T12:12:05.653Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ローカルAI・LLMアプリ：245ツールを比較",
+        "new": "ローカルLLMアプリ・ツール245選一覧（2026年）"
+      },
+      {
+        "field": "metaDescription",
+        "old": "245のローカルAI・LLMアプリとツールを掲載。用途、プラットフォーム、価格、ライセンス、ハードウェアなどで比較し、自分のパソコンやスマートフォンでAIを動かすソフトを探せます。",
+        "new": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを245件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: No-GSC-position run on pasted GSC queries (generic \"llm apps/tools/software\" intent, 0 clicks) — title/meta rewritten around \"software directory\" + platforms; FAQ +3 (iOS/Android, Open WebUI alternatives, AnythingLLM vs Jan); dateModified bumped for visible FAQ addition",
+    "baseline": null
+  },
+  {
+    "id": "73f3294c-9424-4d0c-9cba-c53086677eaa",
+    "slug": "/zh/power-local-llm/local-llm-software-directory",
+    "date": "2026-10-16T12:12:05.764Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "本地AI与LLM应用：245款工具对比",
+        "new": "本地LLM工具与AI应用大全：245款（2026）"
+      },
+      {
+        "field": "metaDescription",
+        "old": "245款本地AI与LLM应用和工具。按用途、平台、价格、许可证、硬件等对比软件，在自己的电脑或手机上运行AI。",
+        "new": "收录245款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: No-GSC-position run on pasted GSC queries (generic \"llm apps/tools/software\" intent, 0 clicks) — title/meta rewritten around \"software directory\" + platforms; FAQ +3 (iOS/Android, Open WebUI alternatives, AnythingLLM vs Jan); dateModified bumped for visible FAQ addition",
+    "baseline": null
+  },
+  {
+    "id": "0a7c2086-a662-419f-af87-171c80095ed4",
+    "slug": "/pt/power-local-llm/local-llm-software-directory",
+    "date": "2026-10-16T12:12:05.873Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Apps de IA e LLM local: 245 ferramentas comparadas",
+        "new": "Software de LLM local: 245 apps e ferramentas (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "245 apps e ferramentas de IA e LLM local. Compare softwares por caso de uso, plataforma, preço, licença e hardware para executar IA no seu próprio computador ou celular.",
+        "new": "Explore 245 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo."
+      }
+    ],
+    "reason": "geo-meta-optimizer: No-GSC-position run on pasted GSC queries (generic \"llm apps/tools/software\" intent, 0 clicks) — title/meta rewritten around \"software directory\" + platforms; FAQ +3 (iOS/Android, Open WebUI alternatives, AnythingLLM vs Jan); dateModified bumped for visible FAQ addition",
+    "baseline": null
+  },
+  {
+    "id": "91d1fb78-020f-4606-9022-48653216eb14",
+    "slug": "/ar/power-local-llm/local-llm-software-directory",
+    "date": "2026-10-16T12:12:05.982Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "تطبيقات الذكاء الاصطناعي و⁨LLM⁩ المحلية: ⁨245⁩ أداة مقارنة",
+        "new": "دليل برامج LLM المحلية: ⁨245⁩ أداة وتطبيق (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "245 تطبيقاً وأداة للذكاء الاصطناعي والنماذج اللغوية المحلية. قارِن البرامج حسب حالة الاستخدام والمنصة والسعر والترخيص والعتاد لتشغيل الذكاء الاصطناعي على حاسوبك أو هاتفك.",
+        "new": "تصفّح 245 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب."
+      }
+    ],
+    "reason": "geo-meta-optimizer: No-GSC-position run on pasted GSC queries (generic \"llm apps/tools/software\" intent, 0 clicks) — title/meta rewritten around \"software directory\" + platforms; FAQ +3 (iOS/Android, Open WebUI alternatives, AnythingLLM vs Jan); dateModified bumped for visible FAQ addition",
+    "baseline": null
+  },
+  {
+    "id": "19a1d901-f476-4c83-a95f-8c2200ac7ed9",
+    "slug": "/ko/power-local-llm/local-llm-software-directory",
+    "date": "2026-10-16T12:12:06.089Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "로컬 AI·LLM 앱: 245개 도구 비교",
+        "new": "로컬 LLM 앱·도구 추천: 245개 비교 (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "로컬 AI·LLM 앱과 도구 245개. 사용 사례, 플랫폼, 가격, 라이선스, 하드웨어 기준으로 비교해 내 컴퓨터나 스마트폰에서 AI를 실행해 보세요.",
+        "new": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 245개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요."
+      }
+    ],
+    "reason": "geo-meta-optimizer: No-GSC-position run on pasted GSC queries (generic \"llm apps/tools/software\" intent, 0 clicks) — title/meta rewritten around \"software directory\" + platforms; FAQ +3 (iOS/Android, Open WebUI alternatives, AnythingLLM vs Jan); dateModified bumped for visible FAQ addition",
+    "baseline": null
   }
 ]
