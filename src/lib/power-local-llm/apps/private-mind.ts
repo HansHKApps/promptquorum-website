@@ -50,6 +50,8 @@ export const app: ToolRecord = {
   // (LFM 2.5 VL, Gemma 4 VL) in the repo's model catalog and the README's "send a photo" line.
   compare: { offline: true, importModels: true, modelDownloads: true, visionInput: true, voice: true },
   lastVerifiedDate: '2026-10-03',
+  lastUpstreamUpdate: '2026-10-14', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/software-mansion-labs/private-mind',
   reviewSlug: 'private-mind-review',
   pqReview: {
     date: '2026-10-03',

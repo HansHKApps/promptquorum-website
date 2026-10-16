@@ -18,7 +18,7 @@ import { CloseIcon, StarIcon, CopyIcon, CheckIcon } from './icons'
 import { getValueLabels } from './FilterBar'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { isFounderStarActive } from './founderStar'
-import { getListingFreshness } from './staleness'
+import { getListingFreshness, getAppActivity } from './staleness'
 import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderText'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { HardwareProfile, MachineType } from './types'
@@ -206,6 +206,7 @@ export function ToolDrawer({
       [t('detailMcp', ui), app.mcpSupport ? t('mcpSupported', ui) : null],
       [t('detailVersion', ui), app.pqReview?.version ? `${app.pqReview.version} (${formatDisplayDate(app.pqReview.date, lang)})` : null],
       [t('detailAdded', ui), app.addedDate ? formatDisplayDate(app.addedDate, lang) : null],
+      [t('appLastUpdateLabel', ui), app.lastUpstreamUpdate ? formatDisplayDate(app.lastUpstreamUpdate, lang) : null],
       [t('detailLastVerified', ui), app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null],
     ]
 
@@ -284,6 +285,24 @@ export function ToolDrawer({
               <Dialog.Description className="text-sm text-text-secondary mb-4">
                 {app.tagline[lang] ?? app.tagline.en ?? ''}
               </Dialog.Description>
+
+              {(() => {
+                const activity = getAppActivity(app.lastUpstreamUpdate)
+                if (activity !== 'quiet' && activity !== 'dead') return null
+                return (
+                  <div
+                    role="alert"
+                    className={`mb-4 rounded-lg border-2 p-3 text-sm ${
+                      activity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-red-500 bg-red-50 text-red-900'
+                    }`}
+                  >
+                    <p className="font-extrabold">⚠ {t(activity === 'dead' ? 'appDeadBadge' : 'appQuietBadge', ui)}</p>
+                    <p className="mt-1 text-xs">
+                      {t('appLastUpdateLabel', ui)}: {app.lastUpstreamUpdate ? formatDisplayDate(app.lastUpstreamUpdate, lang) : ''}. {t(activity === 'dead' ? 'appDeadTooltip' : 'appQuietTooltip', ui)}
+                    </p>
+                  </div>
+                )
+              })()}
 
               {app.upstreamStatus && (
                 <span className="mb-4 inline-flex w-fit items-center gap-1 rounded-full border border-gray-300 bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-700">

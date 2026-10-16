@@ -16,7 +16,7 @@ import { computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardwa
 import { StarIcon, CpuIcon, PlugIcon, TagIcon, ChevronRightIcon } from './icons'
 import { LastUpdatedBadge } from './LastUpdatedBadge'
 import { isFounderStarActive } from './founderStar'
-import { getListingFreshness } from './staleness'
+import { getListingFreshness, getAppActivity } from './staleness'
 import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderText'
 import type { HardwareProfile, MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
@@ -120,6 +120,8 @@ export function ToolCard({
   const lastUpdatedIso = app.lastVerifiedDate ?? app.addedDate
   const lastUpdatedLabel = lastUpdatedIso ? formatDisplayDate(lastUpdatedIso, lang) : null
   const listingFreshness = app.upstreamStatus ? 'fresh' : getListingFreshness(lastUpdatedIso)
+  const appActivity = getAppActivity(app.lastUpstreamUpdate)
+  const appUpdateLabel = app.lastUpstreamUpdate ? formatDisplayDate(app.lastUpstreamUpdate, lang) : null
   const primaryCategory = app.categories[0]
   const accent = GROUP_ACCENT[CATEGORY_SUB_GROUP[primaryCategory]]
   const categoryLabel = CATEGORY_SUB_LABEL[primaryCategory][lang]
@@ -149,7 +151,9 @@ export function ToolCard({
   return (
     <div
       className={`group relative flex flex-col text-left h-full overflow-hidden rounded-xl cursor-pointer transition-all hover:shadow-lg hover:-translate-y-0.5 ${
-        isFounderReviewed
+        appActivity === 'dead'
+          ? 'border border-gray-300 bg-gray-100 grayscale opacity-80 hover:opacity-100 hover:border-gray-400'
+          : isFounderReviewed
           ? 'border-2 border-amber-400 bg-gradient-to-b from-amber-50 to-white shadow-[0_2px_16px_-4px_rgba(217,119,6,0.35)] hover:border-amber-500 hover:shadow-[0_4px_24px_-4px_rgba(217,119,6,0.45)]'
           : 'border border-primary/10 bg-white hover:border-primary/40'
       }`}
@@ -317,6 +321,24 @@ export function ToolCard({
           {lastUpdatedLabel && (
             <div onClick={stop}>
               <LastUpdatedBadge lang={lang} date={lastUpdatedLabel} />
+            </div>
+          )}
+
+          {appUpdateLabel && (
+            <p className={`text-[11px] mb-1.5 ${appActivity === 'dead' ? 'font-bold text-gray-700' : appActivity === 'quiet' ? 'font-bold text-red-700' : 'text-text-secondary'}`}>
+              {t('appLastUpdateLabel', lang)}: {appUpdateLabel}
+            </p>
+          )}
+
+          {(appActivity === 'quiet' || appActivity === 'dead') && (
+            <div
+              role="alert"
+              className={`mb-2 rounded-md border-2 px-2 py-1.5 text-xs font-extrabold leading-snug ${
+                appActivity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-red-500 bg-red-50 text-red-800'
+              }`}
+              title={t(appActivity === 'dead' ? 'appDeadTooltip' : 'appQuietTooltip', lang)}
+            >
+              ⚠ {t(appActivity === 'dead' ? 'appDeadBadge' : 'appQuietBadge', lang)}
             </div>
           )}
 

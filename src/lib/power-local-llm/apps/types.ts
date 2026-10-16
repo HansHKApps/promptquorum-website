@@ -193,6 +193,13 @@ export interface ToolRecord {
   // 173 of 175 tools nobody has checked.
   mcpSupport?: boolean
   lastVerifiedDate: string | null // ISO 8601; separate from the article's own dateModified — null = not yet verified
+  // ISO 8601 date of the app's own latest release/update (GitHub release or last substantive commit,
+  // official release page, or store listing) — NOT when PromptQuorum checked it (that is
+  // `lastVerifiedDate`). Drives the activity warning on tiles: >90 days = "quiet" warning, >180 days =
+  // grey "likely dead" tile (see components/local-ai-directory/staleness.ts). Unset = not yet researched,
+  // never "no updates" — no warning is shown without a verified date. Source: `lastUpstreamUpdateSource`.
+  lastUpstreamUpdate?: string
+  lastUpstreamUpdateSource?: string // URL the date was read from
   // One-line "best for / limits" statement, written ONCE here and reused verbatim by both this
   // tool's review article and its category comparison article, so the two can never disagree
   // about who the tool is for. English only; unset until the tool has been reviewed.

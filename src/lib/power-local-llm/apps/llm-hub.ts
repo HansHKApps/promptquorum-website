@@ -54,6 +54,8 @@ export const app: ToolRecord = {
   compare: { offline: true, importModels: true, modelDownloads: true, visionInput: true, voice: true },
   mcpSupport: true, // Play + README: connect compatible MCP servers; every MCP tool call needs user approval
   lastVerifiedDate: '2026-10-03',
+  lastUpstreamUpdate: '2026-10-11', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/timmyy123/LLM-Hub',
   reviewSlug: 'llm-hub-review',
   pqReview: {
     date: '2026-10-03',

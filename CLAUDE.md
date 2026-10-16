@@ -338,6 +338,22 @@ This applies identically to `local-llms`, `prompt-engineering`, `power-local-llm
 
 **Enforcement:** `scripts/validate-freshness-tier.mjs` fails the build if any article's slug (derived from the filename, or the `slugs.ts` key) contains a 4-digit year or a full month name. There is no allowlist for this one — if you think a page needs it, that's a sign the freshness tier or the URL naming is wrong, not that the rule needs an exception. Raise it instead of routing around the gate.
 
+## App Maintenance Recency — last upstream update + 3-month stale warning (MANDATORY, owner rule 2026-10-16)
+
+Whenever you work on the App Directory — a tile, a FeatureAppPost review, a category comparison, the post writer, or a `/updater` run on any of them — establish **when the app itself last received an update** (latest release/tag, or last substantive commit, from the official site, GitHub Releases or store listing) and record it. This shows readers whether the project is still being developed.
+
+1. **Look it up every time, from a primary source** (official release page / GitHub Releases / store listing). Never guess, never reuse an old value without re-checking. Write the date down in the report even when nothing else changes.
+2. **State it in the text.** Every review and comparison entry names the app's last update date (localized via `formatDisplayDate`, in all 9 locales) next to the version. It is separate from the page's own `dateModified` and from `lastVerifiedDate`/`pqReview.date` (those say when *we* checked).
+3. **Stale = last upstream update more than 3 months before today.** Then:
+   - put a **large, clearly visible warning** at the top of the review/comparison text (all 9 locales): the project has had no update since `<date>`, so it may be unmaintained — check before relying on it;
+   - show a **warning badge on the directory tile** (and in the drawer) — same wording logic, same date;
+   - never soften it in the verdict, and never remove it unless a newer upstream update is verified.
+4. **Distinct from `upstreamStatus`:** `archived`/`unmaintained` is a hard statement from the project itself. The 3-month warning is date-based and applies to every app that has simply gone quiet; if both apply, show both.
+5. **Re-evaluate at every touch.** A warning set earlier is cleared only by a newly verified upstream update; a fresh app crossing the 3-month line gets the warning on the next run.
+6. **Report it:** every run's report lists, per app, the last-update date, its source URL and whether the stale warning is on or off.
+
+**Implementation (2026-10-16):** `ToolRecord.lastUpstreamUpdate` (ISO date) + `lastUpstreamUpdateSource` (URL) in `src/lib/power-local-llm/apps/types.ts`; thresholds in `src/components/local-ai-directory/staleness.ts` (`getAppActivity`: >90 days = `quiet` → red warning banner on tile/drawer/table row; >180 days = `dead` → grey tile + dark "likely a dead project" banner). Unset = no warning (unknown, never "no updates"). Set the field on every tile you touch, from a primary source (GitHub: newer of latest release and last push; otherwise official release page/store listing), and run `npm run test:app-activity` (also validates the field). Backfilled 2026-10-16 for 119 tiles with a verifiable GitHub repo; the rest are still unset and must be researched when touched. Left unset on purpose (repo mapping unreliable): `mlx-lm` (lives at ml-explore/mlx-lm, not mlx-examples), `piper-tts` (original archived, development moved to a successor repo).
+
 ## Freshness Tier (MANDATORY before writing any new article)
 
 Before writing or substantially editing any article, ask:

@@ -97,4 +97,6 @@ export const app: ToolRecord = {
     },
   },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-10-15', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/AmariahAK/atlarix-releases',
 }

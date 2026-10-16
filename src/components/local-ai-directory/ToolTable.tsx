@@ -15,7 +15,7 @@ import { computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardwa
 import { StarIcon } from './icons'
 import type { HardwareProfile, MachineType, SortDir, SortKey } from './types'
 import { t } from './directory-i18n'
-import { getListingFreshness } from './staleness'
+import { getListingFreshness, getAppActivity } from './staleness'
 
 // Platform values (macOS/Windows/Linux/iOS/Android/Web) are OS product
 // names — kept identical across locales, matching ToolCard.tsx's own map.
@@ -116,14 +116,23 @@ export function ToolTable({
             const price = app.price !== 'TODO' ? app.price : null
             const lastUpdatedDate = app.lastVerifiedDate ?? app.addedDate
             const listingFreshness = app.upstreamStatus ? 'fresh' : getListingFreshness(lastUpdatedDate)
+            const appActivity = getAppActivity(app.lastUpstreamUpdate)
             return (
               <tr
                 key={app.slug}
                 onClick={() => onOpen(app.slug)}
-                className="border-b border-primary/10 hover:bg-primary/5 transition-colors cursor-pointer group"
+                className={`border-b border-primary/10 hover:bg-primary/5 transition-colors cursor-pointer group ${appActivity === 'dead' ? 'grayscale bg-gray-100 text-gray-500' : ''}`}
               >
                 <td className="p-2 sm:p-3 sticky left-0 z-10 bg-white group-hover:bg-primary/5 transition-colors font-medium text-text-primary whitespace-nowrap">
                   {app.name}
+                  {(appActivity === 'quiet' || appActivity === 'dead') && (
+                    <span
+                      className={`ml-2 rounded border px-1.5 py-0.5 text-[10px] font-extrabold ${appActivity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-red-500 bg-red-50 text-red-800'}`}
+                      title={t(appActivity === 'dead' ? 'appDeadTooltip' : 'appQuietTooltip', lang)}
+                    >
+                      ⚠ {t(appActivity === 'dead' ? 'appDeadBadge' : 'appQuietBadge', lang)}
+                    </span>
+                  )}
                 </td>
                 <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
                   {app.stars != null ? (

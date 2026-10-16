@@ -42,4 +42,6 @@ export const app: ToolRecord = {
   reviewSlug: 'openhands-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v1.20.0', versionSourceUrl: 'https://github.com/OpenHands/OpenHands/releases/tag/v1.20.0' },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/OpenHands/OpenHands',
 }

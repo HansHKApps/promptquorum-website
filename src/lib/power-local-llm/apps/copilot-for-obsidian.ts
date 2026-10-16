@@ -36,6 +36,8 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { localLlm: true, noteApp: 'Obsidian' },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/logancyang/obsidian-copilot',
   reviewSlug: 'copilot-for-obsidian-review',
   pqReview: { date: '2026-09-20', version: '4.0.9', versionSourceUrl: 'https://github.com/logancyang/obsidian-copilot/releases/tag/4.0.9' },
 }
