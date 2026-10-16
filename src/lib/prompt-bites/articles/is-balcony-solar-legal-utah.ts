@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is balcony solar legal in Utah?',
-        answer: 'Yes. Utah HB 340 (the Solar Power Amendments) has been law since May 7, 2025 — the first state law of its kind in the US. It allows plug-in solar devices up to 1,200W with no utility interconnection agreement, fee, or notification required.',
+        answer: 'In effect. Utah HB 340 (the Solar Power Amendments) has been law since May 7, 2025 — the first state law of its kind in the US. It allows plug-in solar devices up to 1,200W with no utility interconnection agreement, fee, or notification required.',
         bullets: [
           'HB 340 signed March 2025, effective May 7, 2025 — the first US state law of its kind',
           '1,200W cap via a standard 120V AC outlet, no utility approval needed',
@@ -148,7 +148,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Ist Balkonsolar in Utah legal?',
-        answer: 'Ja. Utahs HB 340 (die Solar Power Amendments) ist seit dem 7. Mai 2025 geltendes Recht – das erste Gesetz dieser Art in einem US-Bundesstaat. Es erlaubt steckerfertige Solargeräte bis 1.200 W ohne Netzanschlussvereinbarung, Gebühr oder Meldepflicht gegenüber dem Versorgungsunternehmen.',
+        answer: 'In Kraft. Utahs HB 340 (die Solar Power Amendments) ist seit dem 7. Mai 2025 geltendes Recht – das erste Gesetz dieser Art in einem US-Bundesstaat. Es erlaubt steckerfertige Solargeräte bis 1.200 W ohne Netzanschlussvereinbarung, Gebühr oder Meldepflicht gegenüber dem Versorgungsunternehmen.',
         bullets: [
           'HB 340 im März 2025 unterzeichnet, in Kraft seit dem 7. Mai 2025 – das erste US-Bundesstaatsgesetz dieser Art',
           'Obergrenze von 1.200 W über eine Standard-120-V-AC-Steckdose, keine Genehmigung des Versorgungsunternehmens nötig',
@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: "Le solaire de balcon est-il légal dans l'Utah ?",
-        answer: "Oui. La loi HB 340 de l'Utah (Solar Power Amendments) est en vigueur depuis le 7 mai 2025 — la première loi de ce type dans un État américain. Elle autorise les dispositifs solaires branchables jusqu'à 1 200 W, sans convention de raccordement, sans frais ni notification au fournisseur d'électricité.",
+        answer: "En vigueur. La loi HB 340 de l'Utah (Solar Power Amendments) est en vigueur depuis le 7 mai 2025 — la première loi de ce type dans un État américain. Elle autorise les dispositifs solaires branchables jusqu'à 1 200 W, sans convention de raccordement, sans frais ni notification au fournisseur d'électricité.",
         bullets: [
           "HB 340 signée en mars 2025, en vigueur depuis le 7 mai 2025 — la première loi d'État américaine de ce type",
           'Plafond de 1 200 W via une prise standard 120 V AC, aucune approbation du fournisseur requise',
@@ -362,7 +362,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'ユタ州でバルコニーソーラーは合法ですか？',
-        answer: 'はい。ユタ州のHB 340（Solar Power Amendments）は2025年5月7日から施行されており、米国の州法としては初の事例です。最大1,200Wのプラグイン式ソーラー機器について、電力会社との系統連系契約・手数料・通知のいずれも不要としています。',
+        answer: '施行済み。ユタ州のHB 340（Solar Power Amendments）は2025年5月7日から施行されており、米国の州法としては初の事例です。最大1,200Wのプラグイン式ソーラー機器について、電力会社との系統連系契約・手数料・通知のいずれも不要としています。',
         bullets: [
           'HB 340は2025年3月に署名され、2025年5月7日に施行 — 米国州法として初の事例',
           '標準120V ACコンセント経由で上限1,200W、電力会社の承認は不要',
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '犹他州的阳台太阳能合法吗？',
-        answer: '合法。犹他州HB 340法案（《太阳能修正案》）自2025年5月7日起生效，是美国首部此类州级法律。该法案允许使用最高1,200瓦的插电式太阳能设备，无需与电力公司签订并网协议、支付费用或提交通知。',
+        answer: '已生效。犹他州HB 340法案（《太阳能修正案》）自2025年5月7日起生效，是美国首部此类州级法律。该法案允许使用最高1,200瓦的插电式太阳能设备，无需与电力公司签订并网协议、支付费用或提交通知。',
         bullets: [
           'HB 340于2025年3月签署，2025年5月7日生效——美国首部此类州级法律',
           '通过标准120V交流插座供电，上限1,200瓦，无需电力公司批准',
@@ -576,7 +576,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Es legal la energía solar de balcón en Utah?',
-        answer: 'Sí. La ley HB 340 de Utah (Solar Power Amendments) es ley vigente desde el 7 de mayo de 2025 — la primera ley estatal de este tipo en EE. UU. Permite dispositivos solares enchufables de hasta 1200 W sin necesidad de acuerdo de interconexión, tarifa ni notificación a la empresa eléctrica.',
+        answer: 'En vigor. La ley HB 340 de Utah (Solar Power Amendments) es ley vigente desde el 7 de mayo de 2025 — la primera ley estatal de este tipo en EE. UU. Permite dispositivos solares enchufables de hasta 1200 W sin necesidad de acuerdo de interconexión, tarifa ni notificación a la empresa eléctrica.',
         bullets: [
           'HB 340 se firmó en marzo de 2025 y entró en vigor el 7 de mayo de 2025 — la primera ley estatal de EE. UU. de este tipo',
           'Límite de 1200 W a través de un tomacorriente estándar de 120 V CA, sin necesidad de aprobación de la empresa eléctrica',
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'A energia solar de varanda é legal em Utah?',
-        answer: 'Sim. A lei HB 340 de Utah (Solar Power Amendments) está em vigor desde 7 de maio de 2025 — a primeira lei estadual desse tipo nos EUA. Ela permite dispositivos solares plug-in de até 1.200 W sem necessidade de acordo de interconexão, taxa ou notificação à concessionária de energia.',
+        answer: 'Em vigor. A lei HB 340 de Utah (Solar Power Amendments) está em vigor desde 7 de maio de 2025 — a primeira lei estadual desse tipo nos EUA. Ela permite dispositivos solares plug-in de até 1.200 W sem necessidade de acordo de interconexão, taxa ou notificação à concessionária de energia.',
         bullets: [
           'HB 340 assinada em março de 2025, em vigor desde 7 de maio de 2025 — a primeira lei estadual dos EUA desse tipo',
           'Limite de 1.200 W via tomada padrão de 120 V CA, sem necessidade de aprovação da concessionária',
@@ -790,7 +790,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل الطاقة الشمسية للشرفات قانونية في يوتا؟',
-        answer: 'نعم. قانون HB 340 في يوتا (Solar Power Amendments) سارٍ منذ 7 مايو 2025 — وهو أول قانون من نوعه على مستوى الولايات في الولايات المتحدة. يسمح القانون بأجهزة الطاقة الشمسية القابلة للتوصيل المباشر حتى 1,200 واط دون الحاجة إلى اتفاقية ربط شبكي أو رسوم أو إخطار لشركة الكهرباء.',
+        answer: 'ساري المفعول. قانون HB 340 في يوتا (Solar Power Amendments) سارٍ منذ 7 مايو 2025 — وهو أول قانون من نوعه على مستوى الولايات في الولايات المتحدة. يسمح القانون بأجهزة الطاقة الشمسية القابلة للتوصيل المباشر حتى 1,200 واط دون الحاجة إلى اتفاقية ربط شبكي أو رسوم أو إخطار لشركة الكهرباء.',
         bullets: [
           'تم توقيع HB 340 في مارس 2025، ودخل حيز التنفيذ في 7 مايو 2025 — أول قانون من نوعه على مستوى الولايات الأمريكية',
           'حد أقصى 1,200 واط عبر مقبس قياسي 120V AC، دون الحاجة إلى موافقة شركة الكهرباء',
@@ -897,7 +897,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '유타주에서 발코니 태양광은 합법입니까?',
-        answer: '예, 합법입니다. 유타주 HB 340(Solar Power Amendments) 법안은 2025년 5월 7일부터 시행되고 있으며, 미국에서 이런 종류로는 최초의 주법입니다. 이 법안은 최대 1,200W의 플러그인 태양광 기기를 전력회사와의 계통연계 계약, 수수료, 통보 절차 없이 사용할 수 있도록 허용합니다.',
+        answer: '시행 중입니다. 유타주 HB 340(Solar Power Amendments) 법안은 2025년 5월 7일부터 시행되고 있으며, 미국에서 이런 종류로는 최초의 주법입니다. 이 법안은 최대 1,200W의 플러그인 태양광 기기를 전력회사와의 계통연계 계약, 수수료, 통보 절차 없이 사용할 수 있도록 허용합니다.',
         bullets: [
           'HB 340은 2025년 3월에 서명되어 2025년 5월 7일부터 시행됨 — 미국에서 이런 종류로는 최초의 주법',
           '표준 120V AC 콘센트를 통해 상한 1,200W, 전력회사 승인 불필요',
