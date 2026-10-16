@@ -1214,6 +1214,11 @@
     "urlSlug": "local-ai-mail-review",
     "url": "/power-local-llm/local-ai-mail-review"
   },
+  "pcai-photo-retouch": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pcai-photo-retouch-review",
+    "url": "/power-local-llm/pcai-photo-retouch-review"
+  },
   "honey-llm": {
     "cluster": "power-local-llm",
     "urlSlug": "honey-llm-review",
