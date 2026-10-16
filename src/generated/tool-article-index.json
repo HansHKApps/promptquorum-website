@@ -8859,6 +8859,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "honey-llm-review",
+        "title": "Honey LLM Review: Offline AI Chat and Document Q&A for Android",
+        "url": "/power-local-llm/honey-llm-review",
+        "dateModified": "2026-10-16",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -8866,7 +8874,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "LocalAI: Offline AI Chat LLM": {
@@ -11247,6 +11255,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "honey-llm-review",
+        "title": "Honey LLM Review: Offline AI Chat and Document Q&A for Android",
+        "url": "/power-local-llm/honey-llm-review",
+        "dateModified": "2026-10-16",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-geetmark-review",
         "title": "Local AI: Offline Chat & Image Review: Free Android App with Stable Diffusion and Prompt Toolkits",
         "url": "/power-local-llm/local-ai-geetmark-review",
@@ -11278,7 +11294,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "LLM Hub": {
@@ -11455,6 +11471,20 @@
         "title": "Local AI Mail Review: Brand-New Android Email Client with an On-Device AI",
         "url": "/power-local-llm/local-ai-mail-review",
         "dateModified": "2026-10-11",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Honey LLM": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "honey-llm-review",
+        "title": "Honey LLM Review: Offline AI Chat and Document Q&A for Android",
+        "url": "/power-local-llm/honey-llm-review",
+        "dateModified": "2026-10-16",
         "tier": "about"
       }
     ],
