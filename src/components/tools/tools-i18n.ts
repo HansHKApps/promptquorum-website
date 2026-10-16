@@ -17,15 +17,15 @@ const TOOLS_UI = {
     pt: 'Ferramentas de IA local', ar: 'أدوات الذكاء الاصطناعي المحلي', ko: '로컬 AI 도구',
   },
   toolsSectionSub: {
-    en: 'Four ways to match your hardware to the right software.',
-    de: 'Vier Wege, Ihre Hardware mit der passenden Software abzugleichen.',
-    fr: 'Quatre façons de faire correspondre votre matériel au bon logiciel.',
-    ja: 'お使いのハードウェアに合ったソフトウェアを見つける4つの方法。',
-    zh: '四种方式，帮你把硬件和合适的软件匹配起来。',
-    es: 'Cuatro formas de hacer coincidir tu hardware con el software adecuado.',
-    pt: 'Quatro formas de combinar seu hardware com o software certo.',
-    ar: 'أربع طرق لمطابقة جهازك مع البرنامج المناسب.',
-    ko: '하드웨어에 맞는 소프트웨어를 찾는 네 가지 방법입니다.',
+    en: 'Three ways to match your hardware to the right software.',
+    de: 'Drei Wege, Ihre Hardware mit der passenden Software abzugleichen.',
+    fr: 'Trois façons de faire correspondre votre matériel au bon logiciel.',
+    ja: 'お使いのハードウェアに合ったソフトウェアを見つける3つの方法。',
+    zh: '三种方式，帮你把硬件和合适的软件匹配起来。',
+    es: 'Tres formas de hacer coincidir tu hardware con el software adecuado.',
+    pt: 'Três formas de combinar seu hardware com o software certo.',
+    ar: 'ثلاث طرق لمطابقة جهازك مع البرنامج المناسب.',
+    ko: '하드웨어에 맞는 소프트웨어를 찾는 세 가지 방법입니다.',
   },
 
   // --- Card: VRAM Calculator (links to the existing article/tool page) ---
@@ -118,6 +118,55 @@ const TOOLS_UI = {
     en: 'Set up MCP', de: 'MCP einrichten', fr: 'Configurer MCP',
     ja: 'MCPを設定', zh: '设置 MCP', es: 'Configurar MCP',
     pt: 'Configurar MCP', ar: 'إعداد MCP', ko: 'MCP 설정하기',
+  },
+
+  // --- Homepage full-width MCP banner ---
+  mcpBannerEyebrow: {
+    en: 'PromptQuorum MCP', de: 'PromptQuorum MCP', fr: 'PromptQuorum MCP',
+    ja: 'PromptQuorum MCP', zh: 'PromptQuorum MCP', es: 'PromptQuorum MCP',
+    pt: 'PromptQuorum MCP', ar: 'PromptQuorum MCP', ko: 'PromptQuorum MCP',
+  },
+  mcpBannerHeading: {
+    en: 'Ask your AI about local AI apps. Straight from this directory.',
+    de: 'Fragen Sie Ihre KI nach lokalen KI-Apps. Direkt aus diesem Verzeichnis.',
+    fr: 'Interrogez votre IA sur les applications d\'IA locale. Directement depuis ce répertoire.',
+    ja: 'ローカルAIアプリについて、AIに直接質問。このディレクトリから回答します。',
+    zh: '直接问你的 AI 关于本地 AI 应用的问题，答案来自本目录。',
+    es: 'Pregunta a tu IA sobre apps de IA local. Directamente desde este directorio.',
+    pt: 'Pergunte à sua IA sobre apps de IA local. Direto deste diretório.',
+    ar: 'اسأل الذكاء الاصطناعي لديك عن تطبيقات الذكاء الاصطناعي المحلي، مباشرة من هذا الدليل.',
+    ko: '로컬 AI 앱에 대해 AI에게 바로 물어보세요. 이 디렉터리에서 직접 답해 드립니다.',
+  },
+  mcpBannerSub: {
+    en: 'Connect Claude, ChatGPT, or any MCP client to the PromptQuorum directory to search, compare, and hardware-check apps right inside your chat.',
+    de: 'Verbinden Sie Claude, ChatGPT oder einen beliebigen MCP-Client mit dem PromptQuorum-Verzeichnis, um Apps direkt im Chat zu suchen, zu vergleichen und auf Hardware-Kompatibilität zu prüfen.',
+    fr: 'Connectez Claude, ChatGPT ou tout client MCP au répertoire PromptQuorum pour rechercher, comparer et vérifier la compatibilité matérielle des applications, directement dans votre chat.',
+    ja: 'Claude、ChatGPT、その他のMCPクライアントをPromptQuorumディレクトリに接続すれば、チャット内でアプリの検索、比較、ハードウェア適合チェックができます。',
+    zh: '将 Claude、ChatGPT 或任何 MCP 客户端连接到 PromptQuorum 目录，即可在聊天中直接搜索、对比应用并检查硬件兼容性。',
+    es: 'Conecta Claude, ChatGPT o cualquier cliente MCP al directorio de PromptQuorum para buscar, comparar y comprobar la compatibilidad de hardware de las apps sin salir del chat.',
+    pt: 'Conecte o Claude, o ChatGPT ou qualquer cliente MCP ao diretório do PromptQuorum para pesquisar, comparar e verificar a compatibilidade de hardware dos apps dentro do próprio chat.',
+    ar: 'اربط Claude أو ChatGPT أو أي عميل MCP بدليل PromptQuorum للبحث عن التطبيقات ومقارنتها والتحقق من توافقها مع جهازك داخل المحادثة نفسها.',
+    ko: 'Claude, ChatGPT 또는 모든 MCP 클라이언트를 PromptQuorum 디렉터리에 연결해, 채팅 안에서 앱을 검색하고 비교하고 하드웨어 호환성까지 확인하세요.',
+  },
+  mcpBannerChip1: {
+    en: 'Works with Claude & ChatGPT', de: 'Funktioniert mit Claude & ChatGPT', fr: 'Compatible Claude et ChatGPT',
+    ja: 'ClaudeとChatGPTに対応', zh: '支持 Claude 和 ChatGPT', es: 'Compatible con Claude y ChatGPT',
+    pt: 'Funciona com Claude e ChatGPT', ar: 'يعمل مع Claude وChatGPT', ko: 'Claude·ChatGPT 지원',
+  },
+  mcpBannerChip2: {
+    en: 'Search & compare apps', de: 'Apps suchen & vergleichen', fr: 'Rechercher et comparer des apps',
+    ja: 'アプリの検索・比較', zh: '搜索与对比应用', es: 'Buscar y comparar apps',
+    pt: 'Pesquisar e comparar apps', ar: 'بحث ومقارنة التطبيقات', ko: '앱 검색·비교',
+  },
+  mcpBannerChip3: {
+    en: 'VRAM & hardware checks', de: 'VRAM- & Hardware-Checks', fr: 'Vérifications VRAM et matériel',
+    ja: 'VRAM・ハードウェア確認', zh: '显存与硬件检查', es: 'Comprobación de VRAM y hardware',
+    pt: 'Verificação de VRAM e hardware', ar: 'فحص VRAM والعتاد', ko: 'VRAM·하드웨어 확인',
+  },
+  mcpBannerChip4: {
+    en: 'Live usage stats', de: 'Live-Nutzungsstatistiken', fr: 'Statistiques d\'usage en direct',
+    ja: 'リアルタイム利用統計', zh: '实时使用统计', es: 'Estadísticas de uso en vivo',
+    pt: 'Estatísticas de uso ao vivo', ar: 'إحصاءات استخدام حيّة', ko: '실시간 사용 통계',
   },
 
   // --- Shared form labels ---

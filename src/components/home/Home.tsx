@@ -15,6 +15,7 @@ import { RecentMentionsBlock } from './RecentMentionsBlock'
 import { FeedbackBlock } from './FeedbackBlock'
 import { QuickTipBlock } from './QuickTipBlock'
 import { PqAppBannerBlock } from './PqAppBannerBlock'
+import { McpBannerBlock } from './McpBannerBlock'
 import { LocalAiToolsBlock } from './LocalAiToolsBlock'
 import { t } from './home-i18n'
 import { getHomeStats } from '@/lib/home/stats'
@@ -55,6 +56,8 @@ export function Home({ lang }: { lang: Language }) {
         </section>
 
         <PqAppBannerBlock lang={lang} />
+
+        <McpBannerBlock lang={lang} />
 
         <LocalAiToolsBlock lang={lang} />
 
