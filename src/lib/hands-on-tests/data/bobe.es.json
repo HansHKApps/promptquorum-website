@@ -54,7 +54,7 @@
     ],
     [
       "Versión",
-      "v0.1.0-alpha, tomada del banner de descarga del sitio web, tal como la pegó el evaluador. La versión instalada no se registró.",
+      "v0.1.0-alpha, según el banner de descarga del sitio web, tal como lo pegó el probador. No se registró la versión instalada. Desde la prueba, el sitio web y las versiones se han actualizado: la última versión es v0.9.1 (16 de octubre de 2026).",
       "vendor-claim"
     ],
     [
@@ -115,7 +115,7 @@
   ],
   "disclosure": "El evaluador fundó PromptQuorum (promptquorum.com), un sitio de contenido y directorio sobre apps de IA local. Las notas no recogen ningún contacto con el fabricante, ningún pago ni ningún patrocinio. El evaluador dice que podría volver a intentarlo después de hablar con el fundador.",
   "verdict": {
-    "general": "Una alfa temprana (v0.1.0-alpha según el sitio web). La instalación es fácil y la elección de modelo, clara. La idea central, un asistente que vigila la pantalla para ayudar, no pudo demostrarse funcionando en esta prueba: el asistente de la propia app no nombró el ajuste de macOS necesario para conceder la grabación de pantalla, y la comprobación de si funciona la percepción de pantalla no dio una respuesta utilizable. Para eliminarla hizo falta el Monitor de Actividad.",
+    "general": "Una alfa temprana (v0.1.0-alpha según el sitio web). La instalación es fácil y la elección de modelo, clara. La idea central, un asistente que vigila la pantalla para ayudar, no pudo demostrarse funcionando en esta prueba: el asistente de la propia app no nombró el ajuste de macOS necesario para conceder la grabación de pantalla, y la comprobación de si funciona la percepción de pantalla no dio una respuesta utilizable. Para eliminarla hizo falta el Monitor de Actividad. Esta prueba solo cubre v0.1.0-alpha. Las versiones más recientes, hasta v0.9.1 (16 de octubre de 2026), se publicaron después de la prueba y no se probaron.",
     "fit": "Desinstalada tras la configuración. 'Concept I like. Concept is interesting. Implementation is missing.' El evaluador podría volver a intentarlo en 3 a 6 meses, o después de hablar con el fundador."
   },
   "scores": [
@@ -445,8 +445,8 @@
           null
         ],
         [
-          "assumption",
-          "La impresión del evaluador es que el proyecto puede estar muerto. 'M2 or higher' también abarca chips más recientes, la fecha de compilación no está clara y no se comprobó ningún repositorio ni historial de versiones, por lo que la inferencia es débil.",
+          "third-party",
+          "Actualización posterior a la prueba: la impresión del probador de que el proyecto podría estar muerto era errónea. Las GitHub Releases del proyecto (github.com/Sombrace/BoBe/releases) listan v0.2.0 (20 de marzo de 2026), luego v0.8.1 (14 de octubre de 2026), v0.9.0 (15 de octubre de 2026) y v0.9.1 (16 de octubre de 2026). El sitio web ofrece ahora v0.9.1. El banner v0.1.0-alpha visto en la prueba está desactualizado, y esta prueba no cubre las versiones más nuevas.",
           null
         ]
       ]
@@ -621,8 +621,8 @@
       "Dejó lagunas en el registro: versión instalada, versión de macOS, hora de inicio y de fin, qué descarga corresponde a qué modelo y la respuesta exacta a la pregunta sobre la percepción de pantalla."
     ],
     [
-      "assumption",
-      "La impresión de 'project is dead' se basa en una formulación ('M2 or higher') que también abarca chips más recientes y en un 'February 26' poco claro. No se comprobó el historial de versiones."
+      "tester-error",
+      "La impresión de que «project is dead» era errónea. Se basaba en una formulación («M2 or higher») que también abarca chips más nuevos y en un «February 26» poco claro. El historial de versiones, revisado después en GitHub, muestra desarrollo activo: v0.8.1, v0.9.0 y v0.9.1 se publicaron del 14 al 16 de octubre de 2026."
     ],
     [
       "tester-view",
@@ -778,7 +778,7 @@
         "Personas a las que incomoda una app que graba la pantalla sin una revisión de seguridad independiente."
       ]
     ],
-    "retest": "Volver a probar en 3 a 6 meses, después de hablar con el fundador o cuando salga una versión posterior a v0.1.0-alpha (el plan del evaluador, más un desencadenante añadido)."
+    "retest": "Se recomienda repetir la prueba: desde entonces se han publicado versiones posteriores a v0.1.0-alpha (última: v0.9.1, 16 de octubre de 2026). Plan anterior del probador: repetirla en 3 a 6 meses o tras hablar con el fundador."
   },
   "background_intro": "",
   "background": [],

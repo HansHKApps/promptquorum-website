@@ -54,7 +54,7 @@
     ],
     [
       "Version",
-      "v0.1.0-alpha, from the website's download banner as pasted by the tester. The installed version was not recorded.",
+      "v0.1.0-alpha, from the website's download banner as pasted by the tester. The installed version was not recorded. Since the test, the website and the releases have been updated: the latest version is v0.9.1 (16 October 2026).",
       "vendor-claim"
     ],
     [
@@ -115,7 +115,7 @@
   ],
   "disclosure": "The tester founded PromptQuorum (promptquorum.com), a content site and directory about local AI apps. The notes record no contact with the vendor, no payment and no sponsorship. The tester says he may retry after talking to the founder.",
   "verdict": {
-    "general": "An early alpha (v0.1.0-alpha per the website). Installation is easy and the model choice is clear. The core idea, an assistant that watches the screen to help, could not be shown working in this test: the app's own assistant did not name the macOS setting needed to grant screen recording, and the check whether screen awareness works returned no usable answer. Removal needed Activity Monitor.",
+    "general": "An early alpha (v0.1.0-alpha per the website). Installation is easy and the model choice is clear. The core idea, an assistant that watches the screen to help, could not be shown working in this test: the app's own assistant did not name the macOS setting needed to grant screen recording, and the check whether screen awareness works returned no usable answer. Removal needed Activity Monitor. This test covers v0.1.0-alpha only. Newer versions up to v0.9.1 (16 October 2026) were released after the test and were not tested.",
     "fit": "Uninstalled after setup. 'Concept I like. Concept is interesting. Implementation is missing.' The tester may retry in 3 to 6 months, or after talking to the founder."
   },
   "scores": [
@@ -445,8 +445,8 @@
           null
         ],
         [
-          "assumption",
-          "The tester's impression is that the project may be dead. 'M2 or higher' also covers newer chips, the build date is unclear, and no repository or release history was checked, so the inference is weak.",
+          "third-party",
+          "Update after the test: the tester's impression that the project may be dead was wrong. The project's GitHub Releases (github.com/Sombrace/BoBe/releases) list v0.2.0 (20 March 2026), then v0.8.1 (14 October 2026), v0.9.0 (15 October 2026) and v0.9.1 (16 October 2026). The website now offers v0.9.1. The v0.1.0-alpha banner seen in the test is outdated, and this test does not cover the newer versions.",
           null
         ]
       ]
@@ -621,8 +621,8 @@
       "Left gaps in the record: installed version, macOS version, start and end time, which download belongs to which model, and the exact reply to the screen-reporting question."
     ],
     [
-      "assumption",
-      "The 'project is dead' impression rests on wording ('M2 or higher') that also covers newer chips, and on an unclear 'February 26'. No release history was checked."
+      "tester-error",
+      "The 'project is dead' impression was wrong. It rested on wording ('M2 or higher') that also covers newer chips and on an unclear 'February 26'. The release history, checked afterwards on GitHub, shows active development: v0.8.1, v0.9.0 and v0.9.1 were published on 14 to 16 October 2026."
     ],
     [
       "tester-view",
@@ -778,7 +778,7 @@
         "People who are uneasy about an app that records the screen without an independent security review."
       ]
     ],
-    "retest": "Retest in 3 to 6 months, after talking to the founder, or when a version newer than v0.1.0-alpha is released (the tester's plan, plus one trigger added)."
+    "retest": "Retest recommended: versions newer than v0.1.0-alpha have since been released (latest: v0.9.1, 16 October 2026). The tester's earlier plan: retest in 3 to 6 months or after talking to the founder."
   },
   "background_intro": "",
   "background": [],
