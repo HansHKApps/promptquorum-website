@@ -38,6 +38,8 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { ollama: true, mcp: true },
   lastVerifiedDate: '2026-09-20', // license, stars, platforms and release status checked against the GitHub repo/releases API; maker statement supplied by the Cherry Studio team by email 2026-09-20
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/CherryHQ/cherry-studio',
   founderReviewedDate: '2026-09-20', // badge enabled at the operator's direction; the maker supplied the statement and spec corrections by email 2026-09-20
   founder: {
     who: {

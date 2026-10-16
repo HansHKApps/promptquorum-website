@@ -33,5 +33,7 @@ export const app: ToolRecord = {
     ko: 'iOS, Android, macOS, Windows에서 LLM, STT, TTS, VAD를 완전히 로컬로 실행하는 온디바이스 AI SDK',
   },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  lastUpstreamUpdate: '2026-10-15', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/RunanywhereAI/runanywhere-sdks',
   reviewSlug: 'runanywhere-review', // dedicated PromptQuorum review
 }

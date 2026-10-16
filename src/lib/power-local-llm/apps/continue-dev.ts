@@ -45,4 +45,6 @@ export const app: ToolRecord = {
   // README: 'no longer actively maintained and is read-only for all users'; GitHub archived flag is false, checked 2026-09-21
   upstreamStatus: { state: 'unmaintained' },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-14', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/continuedev/continue',
 }

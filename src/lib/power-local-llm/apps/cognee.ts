@@ -39,4 +39,6 @@ export const app: ToolRecord = {
   // multiVector confirmed via built-in (LanceDB, PGVector, Turso/libSQL, Neptune Analytics, ChromaDB) + community adapters (Qdrant, Redis, FalkorDB, Pinecone, Turbopuffer, Milvus, Weaviate): https://docs.cognee.ai/setup-configuration/vector-stores
   compare: { visualBuilder: false, localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true },
   lastVerifiedDate: '2026-09-18',
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/topoteretes/cognee',
 }
