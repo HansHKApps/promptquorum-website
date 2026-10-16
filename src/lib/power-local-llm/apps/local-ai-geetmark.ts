@@ -49,6 +49,8 @@ export const app: ToolRecord = {
   // Stable Diffusion, not chat models, so importModels stays unset; voice / vision input are not mentioned.
   compare: { offline: true, modelDownloads: true },
   lastVerifiedDate: '2026-10-09',
+  lastUpstreamUpdate: '2026-09-30', // Google Play updated-on, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://play.google.com/store/apps/details?id=com.geetmark.localai',
   reviewSlug: 'local-ai-geetmark-review',
   pqReview: {
     date: '2026-10-09',

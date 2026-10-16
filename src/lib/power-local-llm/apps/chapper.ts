@@ -35,4 +35,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'chapper-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-08-06', // App Store version history, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://apps.apple.com/app/chapper/id6760984679',
 }

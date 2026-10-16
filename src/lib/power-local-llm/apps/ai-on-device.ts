@@ -39,4 +39,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'ai-on-device-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: '2026-09-12',
+  lastUpstreamUpdate: '2025-10-13', // App Store version history, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/ai-on-device/id6753206463',
 }

@@ -54,6 +54,8 @@ export const app: ToolRecord = {
   // localLlm = on-device LLM; voice = voice-dictated prompts. memory and toolUse stay unset: neither is described.
   compare: { localLlm: true, voice: true },
   lastVerifiedDate: '2026-10-11',
+  lastUpstreamUpdate: '2026-10-12', // Google Play updated-on, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai',
   reviewSlug: 'local-ai-mail-review',
   pqReview: {
     date: '2026-10-11',

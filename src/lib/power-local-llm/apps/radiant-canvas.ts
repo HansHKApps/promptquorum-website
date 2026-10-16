@@ -46,4 +46,6 @@ export const app: ToolRecord = {
     versionSourceUrl: 'https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075',
   },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-10-13', // Mac App Store version history, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/radiant-canvas/id6802973075',
 }

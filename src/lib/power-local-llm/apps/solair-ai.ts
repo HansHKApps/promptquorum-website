@@ -38,4 +38,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { voice: true, offline: true, visionInput: true },
   lastVerifiedDate: '2026-09-12',
+  lastUpstreamUpdate: '2026-09-28', // App Store version history, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/solair-ai/id6758450823',
 }

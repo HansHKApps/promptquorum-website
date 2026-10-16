@@ -55,6 +55,8 @@ export const app: ToolRecord = {
   // "supporting page or section references". importModels, voice and visionInput stay unset: none is described.
   compare: { offline: true, modelDownloads: true, localLlm: true, multiFormat: true, citations: true },
   lastVerifiedDate: '2026-10-16',
+  lastUpstreamUpdate: '2026-10-01', // Google Play updated-on, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://play.google.com/store/apps/details?id=com.ronbee.honeyllm',
   reviewSlug: 'honey-llm-review',
   pqReview: {
     date: '2026-10-16',

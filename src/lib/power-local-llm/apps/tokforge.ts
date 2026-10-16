@@ -48,6 +48,8 @@ export const app: ToolRecord = {
   // voice cloning and voice input. importModels / visionInput are not stated in the sources read and stay unset.
   compare: { offline: true, modelDownloads: true, voice: true },
   lastVerifiedDate: '2026-10-09',
+  lastUpstreamUpdate: '2026-10-11', // official what's-new page, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://tokforge.ai/whats-new/',
   founderReviewedDate: '2026-10-05', // Isaac Maple supplied his own comment 2026-10-05; drives the amber Founder-reviewed banner + star on tile, drawer and review
   founder: {
     who: {

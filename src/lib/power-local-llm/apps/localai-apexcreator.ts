@@ -40,4 +40,6 @@ export const app: ToolRecord = {
     ko: 'llama.cpp 기반 오프라인 LLM 채팅을 위한 무료 안드로이드 앱, 선택적 프리미엄 등급 제공',
   },
   lastVerifiedDate: null,
+  lastUpstreamUpdate: '2026-10-07', // Google Play updated-on, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp',
 }

@@ -40,6 +40,8 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { offline: true, modelDownloads: true },
   lastVerifiedDate: null, // TODO: not yet independently verified beyond the vendor's own claims
+  lastUpstreamUpdate: '2026-10-03', // App Store version history, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702',
   founderReviewedDate: '2026-09-13', // matches the hardware-field verification note above
   founder: {
     who: {

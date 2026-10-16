@@ -42,4 +42,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'chatty-mini-review', // dedicated PromptQuorum review
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  lastUpstreamUpdate: '2026-09-15', // Google Play updated-on, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://play.google.com/store/apps/details?id=io.instance001.chatmini',
 }

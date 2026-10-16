@@ -35,4 +35,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'bobe-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-16', // GitHub release v0.9.1, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/Sombrace/BoBe/releases',
 }

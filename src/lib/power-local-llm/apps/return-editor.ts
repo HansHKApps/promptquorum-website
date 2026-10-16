@@ -49,6 +49,8 @@ export const app: ToolRecord = {
   // dockerDeploy / apiServer stay unset: neither is documented.
   compare: { localLlm: true, multiFormat: true, citations: true, desktopApp: true },
   lastVerifiedDate: '2026-10-10',
+  lastUpstreamUpdate: '2026-10-09', // official changelog, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://returneditor.ai/changelog/',
   reviewSlug: 'return-editor-review',
   pqReview: {
     date: '2026-10-10',
