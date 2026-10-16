@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-10-16",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "apple-silicon-m5-local-llm",
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
@@ -70,14 +78,6 @@
         "slug": "atlarix-review",
         "title": "Atlarix Review: A Free, Local-First AI Coding Agent",
         "url": "/power-local-llm/atlarix-review",
-        "dateModified": "2026-09-25",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "exo-review",
-        "title": "exo Review: Distributed AI Inference Across Multiple Devices",
-        "url": "/power-local-llm/exo-review",
         "dateModified": "2026-09-25",
         "tier": "about"
       }
@@ -1164,6 +1164,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-10-16",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "open-webui-review",
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
@@ -1225,14 +1233,6 @@
         "title": "AnythingLLM Mobile Review: On-Device Chat + RAG",
         "url": "/power-local-llm/anythingllm-mobile-review",
         "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "msty-review",
-        "title": "Msty Review: Local + Cloud Chat in One Desktop App",
-        "url": "/power-local-llm/msty-review",
-        "dateModified": "2026-09-05",
         "tier": "about"
       }
     ],
@@ -2041,6 +2041,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-10-16",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -2100,14 +2108,6 @@
         "slug": "page-assist-review",
         "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
         "url": "/local-llms/page-assist-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anythingllm-review",
-        "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
-        "url": "/power-local-llm/anythingllm-review",
         "dateModified": "2026-09-11",
         "tier": "about"
       }
@@ -3397,6 +3397,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-10-16",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -3433,14 +3441,6 @@
         "title": "h2oGPT Review: Features, Setup, and Why the Project Is Archived",
         "url": "/power-local-llm/h2ogpt-review",
         "dateModified": "2026-09-03",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
-        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
-        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
-        "dateModified": "2026-08-27",
         "tier": "about"
       },
       {
@@ -3817,6 +3817,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-10-16",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -3876,14 +3884,6 @@
         "slug": "ragflow-document-understanding-rag-review",
         "title": "RAGFlow Review: Citation-Grade RAG for Complex Documents",
         "url": "/power-local-llm/ragflow-document-understanding-rag-review",
-        "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "txtai-embedded-vector-database-review",
-        "title": "txtai Review: The Embedded Vector Database That Skips the Server",
-        "url": "/power-local-llm/txtai-embedded-vector-database-review",
         "dateModified": "2026-09-02",
         "tier": "about"
       }
@@ -10581,6 +10581,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-10-16",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "lm-playground-review",
         "title": "LM Playground Review: Open-Source Offline LLM Chat for Android",
         "url": "/power-local-llm/lm-playground-review",
@@ -10642,14 +10650,6 @@
         "url": "/power-local-llm/stableswarmui-review",
         "dateModified": "2026-10-09",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cognira-review",
-        "title": "Cognira Review: A Self-Learning AI Assistant With a Local Binary and Private Memory",
-        "url": "/power-local-llm/cognira-review",
-        "dateModified": "2026-10-05",
-        "tier": "mentioned"
       }
     ],
     "totalCount": 190,
@@ -10663,6 +10663,14 @@
         "title": "Qdrant Review: The Self-Hosted Vector Database for RAG",
         "url": "/power-local-llm/qdrant-review",
         "dateModified": "2026-09-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-10-16",
         "tier": "about"
       },
       {
@@ -10727,14 +10735,6 @@
         "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
         "url": "/power-local-llm/anythingllm-review",
         "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "superagi-review",
-        "title": "SuperAGI Review: Features, Pricing, Is It Maintained?",
-        "url": "/power-local-llm/superagi-review",
-        "dateModified": "2026-09-07",
         "tier": "about"
       }
     ],
@@ -11091,6 +11091,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
+        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
+        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+        "dateModified": "2026-10-16",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "enterprise-rag-vector-database-deployment-guide-2026",
         "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
         "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
@@ -11143,14 +11151,6 @@
         "title": "Pinecone vs Weaviate vs Qdrant vs Chroma: Best Vector DB (2026)",
         "url": "/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-chroma",
         "dateModified": "2026-09-01",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
-        "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
-        "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
-        "dateModified": "2026-08-27",
         "tier": "about"
       },
       {
