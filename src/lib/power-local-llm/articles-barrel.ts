@@ -284,6 +284,7 @@ import { article as a_superagi_review } from './articles/superagi-review'
 import { article as a_toolneuron_review } from './articles/toolneuron-review'
 import { article as a_localai_apexcreator_review } from './articles/localai-apexcreator-review'
 import { article as a_diffusionbee_review } from './articles/diffusionbee-review'
+import { article as a_easy_diffusion_review } from './articles/easy-diffusion-review'
 import { article as a_macwhisper_review } from './articles/macwhisper-review'
 import { article as a_aquavoice_review } from './articles/aquavoice-review'
 import { article as a_solair_ai_review } from './articles/solair-ai-review'
@@ -679,6 +680,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'localai-apexcreator-review':                      a_localai_apexcreator_review,
   // DiffusionBee review — 2026-09-12
   'diffusionbee-review':                            a_diffusionbee_review,
+  'easy-diffusion-review':                         a_easy_diffusion_review,
   // MacWhisper review — 2026-09-12
   'macwhisper-review':                              a_macwhisper_review,
   // AquaVoice review — 2026-10-03

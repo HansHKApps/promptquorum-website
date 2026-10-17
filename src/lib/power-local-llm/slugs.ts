@@ -429,6 +429,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'localai-apexcreator-review':               'localai-apexcreator-review',
   // DiffusionBee review — 2026-09-12
   'diffusionbee-review':                     'diffusionbee-review',
+  'easy-diffusion-review':                    'easy-diffusion-review',
   // MacWhisper review — 2026-09-12
   'macwhisper-review':                       'macwhisper-review',
   // AquaVoice review — 2026-10-03

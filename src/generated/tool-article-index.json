@@ -6634,6 +6634,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "easy-diffusion-review",
+        "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
+        "url": "/power-local-llm/easy-diffusion-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "cloud-gpu-rental-comparison-2026",
         "title": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026",
@@ -6696,17 +6704,9 @@
         "url": "/power-local-llm/diffusionbee-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "automatic1111-review",
-        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
-        "url": "/power-local-llm/automatic1111-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 31,
+    "totalCount": 32,
     "capped": true
   },
   "ComfyUI": {
@@ -7063,6 +7063,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "easy-diffusion-review",
+        "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
+        "url": "/power-local-llm/easy-diffusion-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "draw-things-review",
         "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
         "url": "/power-local-llm/draw-things-review",
@@ -7076,17 +7084,9 @@
         "url": "/power-local-llm/comfyui-review",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
-        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
-        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-09-01",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "Real-ESRGAN": {
@@ -8929,6 +8929,20 @@
     "totalCount": 2,
     "capped": false
   },
+  "Easy Diffusion": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "easy-diffusion-review",
+        "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
+        "url": "/power-local-llm/easy-diffusion-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "MacWhisper": {
     "articles": [
       {
@@ -10667,6 +10681,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "easy-diffusion-review",
+        "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
+        "url": "/power-local-llm/easy-diffusion-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "firecrawl-review",
         "title": "Firecrawl Review: Open-Source Web Data API for LLM Pipelines",
         "url": "/power-local-llm/firecrawl-review",
@@ -10678,14 +10700,6 @@
         "slug": "localmind-review",
         "title": "LocalMind Review: Free Chat App for On-Device and Self-Hosted Models",
         "url": "/power-local-llm/localmind-review",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openmontage-review",
-        "title": "OpenMontage Review: Open-Source Agentic Video Production With Your AI Coding Assistant",
-        "url": "/power-local-llm/openmontage-review",
         "dateModified": "2026-10-17",
         "tier": "mentioned"
       }

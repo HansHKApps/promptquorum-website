@@ -168,6 +168,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'google-ai-edge-gallery':                  'google-ai-edge-gallery',
   'toolneuron':                              'toolneuron',
   'diffusionbee':                            'diffusionbee',
+  'easy-diffusion':                          'easy-diffusion',
   'macwhisper':                              'macwhisper',
   'aquavoice':                               'aquavoice',
   'solair-ai':                               'solair-ai',
