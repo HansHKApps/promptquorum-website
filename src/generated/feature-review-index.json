@@ -1224,6 +1224,11 @@
     "urlSlug": "mlxhub-review",
     "url": "/power-local-llm/mlxhub-review"
   },
+  "local-ai-chat-pocket": {
+    "cluster": "power-local-llm",
+    "urlSlug": "local-ai-chat-pocket-review",
+    "url": "/power-local-llm/local-ai-chat-pocket-review"
+  },
   "anyllm": {
     "cluster": "power-local-llm",
     "urlSlug": "anyllm-review",
