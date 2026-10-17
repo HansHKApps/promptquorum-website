@@ -554,7 +554,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local Speech-to-Text 2026: Whisper.cpp vs faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026) — STT component deep dive.',
+          '[Local Speech-to-Text 2026: Whisper.cpp vs faster-whisper](/power-local-llm/local-whisper-stt-comparison) — STT component deep dive.',
           '[Local Vision Models 2026: LLaVA, Llama 3.2 Vision, and Ollama](/power-local-llm/local-vision-models-llava-ollama-2026) — Vision component deep dive.',
           '[Local TTS and Voice Cloning 2026](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — TTS component deep dive.',
           '[Build a Fully Offline Voice Assistant in 2026](/power-local-llm/build-local-voice-assistant-2026) — The voice-only version (simpler, voice + LLM + TTS without vision).',
@@ -927,7 +927,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Lokale Spracherkennung 2026: Whisper.cpp vs. faster-whisper](/de/power-local-llm/local-whisper-stt-comparison-2026) — STT-Komponente im Detail.',
+          '[Lokale Spracherkennung 2026: Whisper.cpp vs. faster-whisper](/de/power-local-llm/local-whisper-stt-comparison) — STT-Komponente im Detail.',
           '[Lokale Vision-Modelle 2026: LLaVA, Llama 3.2 Vision und Ollama](/de/power-local-llm/local-vision-models-llava-ollama-2026) — Vision-Komponente im Detail.',
           '[Lokales TTS und Voice Cloning 2026](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — TTS-Komponente im Detail.',
           '[Vollständig offline: Sprachassistenten selbst entwickeln 2026](/de/power-local-llm/build-local-voice-assistant-2026) — Die reine Sprachversion (einfacher, ohne Vision).',
@@ -1265,7 +1265,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: 'Lecture complémentaire',
         items: [
-          '[Reconnaissance vocale locale 2026 : Whisper.cpp vs faster-whisper](/fr/power-local-llm/local-whisper-stt-comparison-2026) — Analyse approfondie du composant STT.',
+          '[Reconnaissance vocale locale 2026 : Whisper.cpp vs faster-whisper](/fr/power-local-llm/local-whisper-stt-comparison) — Analyse approfondie du composant STT.',
           '[Modèles de vision locaux 2026 : LLaVA, Llama 3.2 Vision et Ollama](/fr/power-local-llm/local-vision-models-llava-ollama-2026) — Analyse approfondie du composant vision.',
           '[TTS local et clonage vocal 2026](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Analyse approfondie du composant TTS.',
           '[Construire un assistant vocal 100 % hors ligne en 2026](/fr/power-local-llm/build-local-voice-assistant-2026) — La version voix uniquement (plus simple, sans vision).',
@@ -1603,7 +1603,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカル音声認識2026：Whisper.cpp vs faster-whisper](/ja/power-local-llm/local-whisper-stt-comparison-2026) — STTコンポーネントの詳細解説。',
+          '[ローカル音声認識2026：Whisper.cpp vs faster-whisper](/ja/power-local-llm/local-whisper-stt-comparison) — STTコンポーネントの詳細解説。',
           '[ローカルビジョンモデル2026：LLaVA、Llama 3.2 Vision、Ollama](/ja/power-local-llm/local-vision-models-llava-ollama-2026) — ビジョンコンポーネントの詳細解説。',
           '[ローカルTTSと音声クローニング2026](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — TTSコンポーネントの詳細解説。',
           '[2026年：完全オフライン音声アシスタントの構築](/ja/power-local-llm/build-local-voice-assistant-2026) — 音声のみのバージョン（ビジョンなし、よりシンプル）。',
@@ -1941,7 +1941,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地语音识别2026：Whisper.cpp vs faster-whisper](/zh/power-local-llm/local-whisper-stt-comparison-2026) — STT组件深度解析。',
+          '[本地语音识别2026：Whisper.cpp vs faster-whisper](/zh/power-local-llm/local-whisper-stt-comparison) — STT组件深度解析。',
           '[本地视觉模型2026：LLaVA、Llama 3.2 Vision和Ollama](/zh/power-local-llm/local-vision-models-llava-ollama-2026) — 视觉组件深度解析。',
           '[本地TTS与语音克隆2026](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — TTS组件深度解析。',
           '[2026年构建完全离线语音助手](/zh/power-local-llm/build-local-voice-assistant-2026) — 纯语音版本（更简单，无视觉）。',
@@ -2497,7 +2497,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
-          '[Reconocimiento de voz local 2026: Whisper.cpp vs faster-whisper](/es/power-local-llm/local-whisper-stt-comparison-2026) — Análisis detallado del componente STT.',
+          '[Reconocimiento de voz local 2026: Whisper.cpp vs faster-whisper](/es/power-local-llm/local-whisper-stt-comparison) — Análisis detallado del componente STT.',
           '[Modelos de visión locales 2026: LLaVA, Llama 3.2 Vision y Ollama](/es/power-local-llm/local-vision-models-llava-ollama-2026) — Análisis detallado del componente de visión.',
           '[TTS local y clonación de voz 2026](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Análisis detallado del componente TTS.',
           '[Cómo construir un asistente de voz completamente offline en 2026](/es/power-local-llm/build-local-voice-assistant-2026) — La versión solo de voz (más simple, voz + LLM + TTS sin visión).',
@@ -3067,7 +3067,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
-          '[Reconhecimento de voz local 2026: Whisper.cpp vs faster-whisper](/pt/power-local-llm/local-whisper-stt-comparison-2026) — Análise detalhada do componente STT.',
+          '[Reconhecimento de voz local 2026: Whisper.cpp vs faster-whisper](/pt/power-local-llm/local-whisper-stt-comparison) — Análise detalhada do componente STT.',
           '[Modelos de visão locais 2026: LLaVA, Llama 3.2 Vision e Ollama](/pt/power-local-llm/local-vision-models-llava-ollama-2026) — Análise detalhada do componente de visão.',
           '[TTS local e clonagem de voz 2026](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Análise detalhada do componente TTS.',
           '[Como construir um assistente de voz totalmente offline em 2026](/pt/power-local-llm/build-local-voice-assistant-2026) — A versão só de voz (mais simples, voz + LLM + TTS sem visão).',
@@ -3639,7 +3639,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: 'مزيد من القراءة',
         items: [
-          '[التعرف على الكلام المحلي 2026: Whisper.cpp مقابل faster-whisper](/ar/power-local-llm/local-whisper-stt-comparison-2026) — تحليل معمّق لمكوِّن STT.',
+          '[التعرف على الكلام المحلي 2026: Whisper.cpp مقابل faster-whisper](/ar/power-local-llm/local-whisper-stt-comparison) — تحليل معمّق لمكوِّن STT.',
           '[نماذج الرؤية المحلية 2026: LLaVA وLlama 3.2 Vision وOllama](/ar/power-local-llm/local-vision-models-llava-ollama-2026) — تحليل معمّق لمكوِّن الرؤية.',
           '[TTS المحلي واستنساخ الصوت 2026](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — تحليل معمّق لمكوِّن TTS.',
           '[بناء مساعد صوتي يعمل بالكامل دون اتصال في 2026](/ar/power-local-llm/build-local-voice-assistant-2026) — النسخة الصوتية فقط (أبسط، صوت + LLM + TTS بدون رؤية).',
@@ -4195,7 +4195,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 음성 인식 2026: Whisper.cpp vs faster-whisper](/ko/power-local-llm/local-whisper-stt-comparison-2026) — STT 컴포넌트 심층 분석.',
+          '[로컬 음성 인식 2026: Whisper.cpp vs faster-whisper](/ko/power-local-llm/local-whisper-stt-comparison) — STT 컴포넌트 심층 분석.',
           '[로컬 비전 모델 2026: LLaVA, Llama 3.2 Vision, Ollama](/ko/power-local-llm/local-vision-models-llava-ollama-2026) — 비전 컴포넌트 심층 분석.',
           '[로컬 TTS 및 음성 클로닝 2026](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — TTS 컴포넌트 심층 분석.',
           '[2026년 완전 오프라인 음성 어시스턴트 구축](/ko/power-local-llm/build-local-voice-assistant-2026) — 음성 전용 버전(더 간단, 비전 없이 음성 + LLM + TTS).',

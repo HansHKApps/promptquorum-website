@@ -6655,7 +6655,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 7 categories of a local LLM stack: 252 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
+          "title": "The 7 categories of a local LLM stack: 253 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -7291,9 +7291,9 @@
         }
       ]
     },
-    "local-whisper-stt-comparison-2026": {
-      "dateModified": "2026-08-28",
-      "lastFactChecked": "2026-08-28",
+    "local-whisper-stt-comparison": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": "2026-10-17",
       "publishDate": "2026-05-14",
       "hasSections": true,
       "langs": [
@@ -10231,7 +10231,7 @@
       "images": []
     },
     "koboldcpp-review": {
-      "dateModified": "2026-10-09",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -10447,7 +10447,7 @@
       "images": []
     },
     "windsurf-review": {
-      "dateModified": "2026-10-09",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -12628,6 +12628,24 @@
       "dateModified": "2026-10-16",
       "lastFactChecked": null,
       "publishDate": "2026-10-16",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "openmontage-review": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-17",
       "hasSections": true,
       "langs": [
         "en",

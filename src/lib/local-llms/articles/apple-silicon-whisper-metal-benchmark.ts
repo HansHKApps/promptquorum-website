@@ -274,7 +274,7 @@ while True:
         items: [
           '[Apple Silicon for Local LLMs: Complete Guide](/local-llms/apple-silicon-local-llm-guide-2026)',
           '[M5 Pro vs M5 Max Benchmarks 2026](/local-llms/m5-pro-max-llm-benchmarks-2026)',
-          '[Local Whisper STT Comparison (whisper.cpp vs faster-whisper)](/power-local-llm/local-whisper-stt-comparison-2026)',
+          '[Local Whisper STT Comparison (whisper.cpp vs faster-whisper)](/power-local-llm/local-whisper-stt-comparison)',
           '[Build a Local Voice Assistant](/power-local-llm/build-local-voice-assistant-2026)',
           '[Local TTS and Voice Cloning](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)',
           '[Mac Mini M5 as Local AI Server](/local-llms/mac-mini-m5-local-ai-server)',
@@ -548,7 +548,7 @@ while True:
         items: [
           '[Apple Silicon para LLMs locales: Guía completa](/es/local-llms/apple-silicon-local-llm-guide-2026)',
           '[Benchmarks M5 Pro vs M5 Max 2026](/es/local-llms/m5-pro-max-llm-benchmarks-2026)',
-          '[Comparativa Whisper STT local (whisper.cpp vs faster-whisper)](/es/power-local-llm/local-whisper-stt-comparison-2026)',
+          '[Comparativa Whisper STT local (whisper.cpp vs faster-whisper)](/es/power-local-llm/local-whisper-stt-comparison)',
           '[Construir un asistente de voz local](/es/power-local-llm/build-local-voice-assistant-2026)',
           '[TTS local y clonación de voz](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)',
           '[Mac Mini M5 como servidor de IA local](/es/local-llms/mac-mini-m5-local-ai-server)',
@@ -840,7 +840,7 @@ while True:
         items: [
           '[Apple Silicon لنماذج LLM المحلية: دليل كامل](/ar/local-llms/apple-silicon-local-llm-guide-2026)',
           '[اختبارات M5 Pro مقابل M5 Max المرجعية 2026](/ar/local-llms/m5-pro-max-llm-benchmarks-2026)',
-          '[مقارنة Whisper STT المحلي (whisper.cpp مقابل faster-whisper)](/ar/power-local-llm/local-whisper-stt-comparison-2026)',
+          '[مقارنة Whisper STT المحلي (whisper.cpp مقابل faster-whisper)](/ar/power-local-llm/local-whisper-stt-comparison)',
           '[بناء مساعد صوتي محلي](/ar/power-local-llm/build-local-voice-assistant-2026)',
           '[TTS المحلي واستنساخ الصوت](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)',
           '[Mac Mini M5 كخادم ذكاء اصطناعي محلي](/ar/local-llms/mac-mini-m5-local-ai-server)',
@@ -1295,7 +1295,7 @@ while True:
         items: [
           '[Apple Silicon für lokale LLMs: Vollständiger Leitfaden](/de/local-llms/apple-silicon-local-llm-guide-2026)',
           '[M5 Pro vs M5 Max Benchmarks 2026](/de/local-llms/m5-pro-max-llm-benchmarks-2026)',
-          '[Lokale Whisper STT Vergleich (whisper.cpp vs faster-whisper)](/de/power-local-llm/local-whisper-stt-comparison-2026)',
+          '[Lokale Whisper STT Vergleich (whisper.cpp vs faster-whisper)](/de/power-local-llm/local-whisper-stt-comparison)',
           '[Bauen Sie einen lokalen Voice Assistant](/de/power-local-llm/build-local-voice-assistant-2026)',
           '[Lokale TTS und Voice Cloning](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)',
           '[Mac Mini M5 als lokaler KI-Server](/de/local-llms/mac-mini-m5-local-ai-server)',
@@ -1574,7 +1574,7 @@ while True:
         items: [
           '[Apple Silicon pour les LLM locaux : Guide complet](/fr/local-llms/apple-silicon-local-llm-guide-2026)',
           '[Benchmarks M5 Pro vs M5 Max 2026](/fr/local-llms/m5-pro-max-llm-benchmarks-2026)',
-          '[Comparaison STT Whisper local (whisper.cpp vs faster-whisper)](/fr/power-local-llm/local-whisper-stt-comparison-2026)',
+          '[Comparaison STT Whisper local (whisper.cpp vs faster-whisper)](/fr/power-local-llm/local-whisper-stt-comparison)',
           '[Créer un assistant vocal local](/fr/power-local-llm/build-local-voice-assistant-2026)',
           '[TTS local et clonage vocal](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)',
           '[Mac Mini M5 comme serveur IA local](/fr/local-llms/mac-mini-m5-local-ai-server)',
@@ -1853,7 +1853,7 @@ while True:
         items: [
           '[ローカルLLM向けApple Silicon：完全ガイド](/ja/local-llms/apple-silicon-local-llm-guide-2026)',
           '[M5 Pro vs M5 Maxベンチマーク 2026](/ja/local-llms/m5-pro-max-llm-benchmarks-2026)',
-          '[ローカルWhisper STT比較（whisper.cpp vs faster-whisper）](/ja/power-local-llm/local-whisper-stt-comparison-2026)',
+          '[ローカルWhisper STT比較（whisper.cpp vs faster-whisper）](/ja/power-local-llm/local-whisper-stt-comparison)',
           '[ローカル音声アシスタントを構築する](/ja/power-local-llm/build-local-voice-assistant-2026)',
           '[ローカルTTSと音声クローニング](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)',
           '[ローカルAIサーバーとしてのMac Mini M5](/ja/local-llms/mac-mini-m5-local-ai-server)',
@@ -2132,7 +2132,7 @@ while True:
         items: [
           '[本地LLM的Apple Silicon：完整指南](/zh/local-llms/apple-silicon-local-llm-guide-2026)',
           '[M5 Pro vs M5 Max基准测试2026](/zh/local-llms/m5-pro-max-llm-benchmarks-2026)',
-          '[本地Whisper STT比较（whisper.cpp vs faster-whisper）](/zh/power-local-llm/local-whisper-stt-comparison-2026)',
+          '[本地Whisper STT比较（whisper.cpp vs faster-whisper）](/zh/power-local-llm/local-whisper-stt-comparison)',
           '[构建本地语音助手](/zh/power-local-llm/build-local-voice-assistant-2026)',
           '[本地TTS和声音克隆](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)',
           '[Mac Mini M5作为本地AI服务器](/zh/local-llms/mac-mini-m5-local-ai-server)',
@@ -2406,7 +2406,7 @@ while True:
         items: [
           '[로컬 LLM용 Apple Silicon: 완전 가이드](/ko/local-llms/apple-silicon-local-llm-guide-2026)',
           '[M5 Pro vs M5 Max 벤치마크 2026](/ko/local-llms/m5-pro-max-llm-benchmarks-2026)',
-          '[로컬 Whisper STT 비교(whisper.cpp vs faster-whisper)](/ko/power-local-llm/local-whisper-stt-comparison-2026)',
+          '[로컬 Whisper STT 비교(whisper.cpp vs faster-whisper)](/ko/power-local-llm/local-whisper-stt-comparison)',
           '[로컬 음성 어시스턴트 구축하기](/ko/power-local-llm/build-local-voice-assistant-2026)',
           '[로컬 TTS 및 음성 복제](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)',
           '[로컬 AI 서버로서의 Mac Mini M5](/ko/local-llms/mac-mini-m5-local-ai-server)',

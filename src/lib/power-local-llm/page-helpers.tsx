@@ -1111,7 +1111,7 @@ const HUB_THEMES: Array<{
     colorBadge: 'bg-violet-50 text-violet-700 border-violet-200',
     colorDot: 'bg-violet-400',
     slugs: [
-      'local-whisper-stt-comparison-2026',
+      'local-whisper-stt-comparison',
       'local-vision-models-llava-ollama-2026',
       'local-tts-voice-cloning-piper-coqui-xtts',
       'build-local-voice-assistant-2026',

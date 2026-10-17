@@ -217,7 +217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Build a Local Voice Assistant: Full Guide (2026)](/power-local-llm/build-local-voice-assistant-2026) — a fully specified open-source voice pipeline (speech-to-text, local LLM, text-to-speech) for readers who want every component documented.',
           '[Build a Local Voice Assistant on Your Phone: Whisper + Local LLM (No Cloud)](/power-local-llm/voice-assistant-local-mobile-offline) — the mobile-focused counterpart, with measured latency and battery data.',
-          '[Local Whisper STT Comparison 2026](/power-local-llm/local-whisper-stt-comparison-2026) — for readers comparing local speech-to-text options rather than a hybrid cloud/local app like Voxa.',
+          '[Local Whisper STT Comparison 2026](/power-local-llm/local-whisper-stt-comparison) — for readers comparing local speech-to-text options rather than a hybrid cloud/local app like Voxa.',
           '[Local TTS and Voice Cloning: Piper, Coqui, XTTS](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — local text-to-speech options for a fully offline voice pipeline.',
           '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools and apps this review belongs to.',
         ],
@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Einen lokalen Sprachassistenten bauen: Vollständige Anleitung (2026)](/de/power-local-llm/build-local-voice-assistant-2026) — eine vollständig spezifizierte Open-Source-Sprachpipeline (Speech-to-Text, lokales LLM, Text-to-Speech) für Leser, die jede Komponente dokumentiert haben möchten.',
           '[Einen lokalen Sprachassistenten auf dem Smartphone bauen: Whisper + lokales LLM (ohne Cloud)](/de/power-local-llm/voice-assistant-local-mobile-offline) — das mobile Gegenstück, mit gemessenen Latenz- und Akkudaten.',
-          '[Vergleich lokaler Whisper-STT-Optionen 2026](/de/power-local-llm/local-whisper-stt-comparison-2026) — für Leser, die lokale Speech-to-Text-Optionen statt einer hybriden Cloud/lokal-App wie Voxa vergleichen möchten.',
+          '[Vergleich lokaler Whisper-STT-Optionen 2026](/de/power-local-llm/local-whisper-stt-comparison) — für Leser, die lokale Speech-to-Text-Optionen statt einer hybriden Cloud/lokal-App wie Voxa vergleichen möchten.',
           '[Lokale TTS und Voice Cloning: Piper, Coqui, XTTS](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — lokale Text-to-Speech-Optionen für eine vollständig offline nutzbare Sprachpipeline.',
           '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools und -Apps, zu dem dieses Review gehört.',
         ],
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Construire un assistant vocal local : guide complet (2026)](/fr/power-local-llm/build-local-voice-assistant-2026) — une pipeline vocale open source entièrement spécifiée (reconnaissance vocale, LLM local, synthèse vocale) pour les lecteurs qui veulent chaque composant documenté.',
           '[Construire un assistant vocal local sur son téléphone : Whisper + LLM local (sans cloud)](/fr/power-local-llm/voice-assistant-local-mobile-offline) — le pendant mobile, avec des données de latence et d\'autonomie mesurées.',
-          '[Comparatif des options Whisper STT locales 2026](/fr/power-local-llm/local-whisper-stt-comparison-2026) — pour les lecteurs comparant des options de reconnaissance vocale locale plutôt qu\'une application hybride cloud/locale comme Voxa.',
+          '[Comparatif des options Whisper STT locales 2026](/fr/power-local-llm/local-whisper-stt-comparison) — pour les lecteurs comparant des options de reconnaissance vocale locale plutôt qu\'une application hybride cloud/locale comme Voxa.',
           '[Synthèse vocale et clonage de voix locaux : Piper, Coqui, XTTS](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — options de synthèse vocale locale pour une pipeline vocale entièrement hors ligne.',
           '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet d\'outils et d\'applications d\'IA locale auquel appartient cet avis.',
         ],
@@ -883,7 +883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Construye un asistente de voz local: guía completa (2026)](/es/power-local-llm/build-local-voice-assistant-2026) — una canalización de voz de código abierto totalmente especificada (reconocimiento de voz, LLM local, síntesis de voz) para quienes quieren cada componente documentado.',
           '[Construye un asistente de voz local en tu teléfono: Whisper + LLM local (sin nube)](/es/power-local-llm/voice-assistant-local-mobile-offline) — la contraparte móvil, con datos medidos de latencia y batería.',
-          '[Comparativa de opciones locales de Whisper STT 2026](/es/power-local-llm/local-whisper-stt-comparison-2026) — para quienes comparan opciones de reconocimiento de voz local en lugar de una app híbrida nube/local como Voxa.',
+          '[Comparativa de opciones locales de Whisper STT 2026](/es/power-local-llm/local-whisper-stt-comparison) — para quienes comparan opciones de reconocimiento de voz local en lugar de una app híbrida nube/local como Voxa.',
           '[TTS local y clonación de voz: Piper, Coqui, XTTS](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — opciones de síntesis de voz local para una canalización de voz totalmente sin conexión.',
           '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas y apps de IA local al que pertenece esta reseña.',
         ],
@@ -1105,7 +1105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Construa um assistente de voz local: guia completo (2026)](/pt/power-local-llm/build-local-voice-assistant-2026) — um pipeline de voz de código aberto totalmente especificado (reconhecimento de voz, LLM local, síntese de voz) para quem quer cada componente documentado.',
           '[Construa um assistente de voz local no seu celular: Whisper + LLM local (sem nuvem)](/pt/power-local-llm/voice-assistant-local-mobile-offline) — o equivalente para dispositivos móveis, com dados medidos de latência e bateria.',
-          '[Comparativo de opções locais de Whisper STT 2026](/pt/power-local-llm/local-whisper-stt-comparison-2026) — para quem compara opções de reconhecimento de voz local em vez de um app híbrido nuvem/local como o Voxa.',
+          '[Comparativo de opções locais de Whisper STT 2026](/pt/power-local-llm/local-whisper-stt-comparison) — para quem compara opções de reconhecimento de voz local em vez de um app híbrido nuvem/local como o Voxa.',
           '[TTS local e clonagem de voz: Piper, Coqui, XTTS](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — opções de síntese de voz local para um pipeline de voz totalmente offline.',
           '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas e apps de IA local ao qual esta análise pertence.',
         ],
@@ -1327,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[ローカル音声アシスタントを構築する：完全ガイド（2026年）](/ja/power-local-llm/build-local-voice-assistant-2026) — すべてのコンポーネントが文書化された、完全に仕様化されたオープンソース音声パイプライン（音声認識、ローカルLLM、音声合成）。',
           '[スマートフォンでローカル音声アシスタントを構築する：Whisper + ローカルLLM（クラウド不要）](/ja/power-local-llm/voice-assistant-local-mobile-offline) — 測定されたレイテンシとバッテリーデータを含む、モバイル向けの対をなす記事。',
-          '[ローカルWhisper STT比較2026](/ja/power-local-llm/local-whisper-stt-comparison-2026) — Voxaのようなクラウド/ローカルのハイブリッドアプリではなく、ローカルの音声認識オプションを比較したい読者向け。',
+          '[ローカルWhisper STT比較2026](/ja/power-local-llm/local-whisper-stt-comparison) — Voxaのようなクラウド/ローカルのハイブリッドアプリではなく、ローカルの音声認識オプションを比較したい読者向け。',
           '[ローカルTTSと音声クローニング：Piper、Coqui、XTTS](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 完全にオフラインな音声パイプラインのためのローカル音声合成オプション。',
           '[Local LLM Software Directory 2026](/ja/directory) — このレビューが属する、ローカルAIツールとアプリの完全なカタログ。',
         ],
@@ -1549,7 +1549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[搭建本地语音助手：完整指南（2026年）](/zh/power-local-llm/build-local-voice-assistant-2026) — 一套完全说明的开源语音管线（语音转文本、本地LLM、文本转语音），适合希望每个组件都有文档记录的读者。',
           '[在手机上搭建本地语音助手：Whisper + 本地LLM（无需云端）](/zh/power-local-llm/voice-assistant-local-mobile-offline) — 面向移动端的对应文章，附有实测延迟和电池数据。',
-          '[本地Whisper语音识别对比2026](/zh/power-local-llm/local-whisper-stt-comparison-2026) — 适合想比较本地语音识别选项，而非Voxa这类云端/本地混合应用的读者。',
+          '[本地Whisper语音识别对比2026](/zh/power-local-llm/local-whisper-stt-comparison) — 适合想比较本地语音识别选项，而非Voxa这类云端/本地混合应用的读者。',
           '[本地文本转语音与声音克隆：Piper、Coqui、XTTS](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 用于完全离线语音管线的本地文本转语音选项。',
           '[Local LLM Software Directory 2026](/zh/directory) — 本评测所属的本地AI工具和应用完整目录。',
         ],
@@ -1771,7 +1771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[بناء مساعد صوتي محلي: دليل كامل (2026)](/ar/power-local-llm/build-local-voice-assistant-2026) — خط أنابيب صوتي مفتوح المصدر محدد بالكامل (تحويل الصوت إلى نص، نموذج لغوي محلي، تحويل النص إلى صوت) للقراء الراغبين في توثيق كل مكوّن.',
           '[بناء مساعد صوتي محلي على هاتفك: Whisper + نموذج لغوي محلي (بلا سحابة)](/ar/power-local-llm/voice-assistant-local-mobile-offline) — النظير الموجّه للهواتف المحمولة، مع بيانات زمن استجابة وبطارية مقاسة فعلياً.',
-          '[مقارنة خيارات Whisper المحلية لتحويل الصوت إلى نص 2026](/ar/power-local-llm/local-whisper-stt-comparison-2026) — للقراء الذين يقارنون خيارات تحويل الصوت إلى نص المحلية بدلاً من تطبيق هجين سحابي/محلي مثل Voxa.',
+          '[مقارنة خيارات Whisper المحلية لتحويل الصوت إلى نص 2026](/ar/power-local-llm/local-whisper-stt-comparison) — للقراء الذين يقارنون خيارات تحويل الصوت إلى نص المحلية بدلاً من تطبيق هجين سحابي/محلي مثل Voxa.',
           '[تحويل النص إلى صوت واستنساخ الصوت محلياً: Piper وCoqui وXTTS](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — خيارات تحويل نص إلى صوت محلية لخط أنابيب صوتي يعمل دون اتصال بالكامل.',
           '[Local LLM Software Directory 2026](/ar/directory) — الدليل الكامل لأدوات وتطبيقات الذكاء الاصطناعي المحلي الذي تنتمي إليه هذه المراجعة.',
         ],
@@ -1993,7 +1993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[로컬 음성 어시스턴트 구축: 완전 가이드(2026년)](/ko/power-local-llm/build-local-voice-assistant-2026) — 모든 구성 요소가 문서화되기를 원하는 독자를 위한, 완전히 명시된 오픈소스 음성 파이프라인(음성 인식, 로컬 LLM, 음성 합성).',
           '[휴대폰에서 로컬 음성 어시스턴트 구축하기: Whisper + 로컬 LLM(클라우드 불필요)](/ko/power-local-llm/voice-assistant-local-mobile-offline) — 실측 지연 시간과 배터리 데이터를 포함한 모바일 중심의 대응편.',
-          '[로컬 Whisper STT 비교 2026](/ko/power-local-llm/local-whisper-stt-comparison-2026) — Voxa와 같은 클라우드/로컬 하이브리드 앱이 아니라 로컬 음성 인식 옵션을 비교하려는 독자를 위한 글.',
+          '[로컬 Whisper STT 비교 2026](/ko/power-local-llm/local-whisper-stt-comparison) — Voxa와 같은 클라우드/로컬 하이브리드 앱이 아니라 로컬 음성 인식 옵션을 비교하려는 독자를 위한 글.',
           '[로컬 TTS 및 음성 클로닝: Piper, Coqui, XTTS](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 완전히 오프라인인 음성 파이프라인을 위한 로컬 텍스트 음성 변환 옵션.',
           '[Local LLM Software Directory 2026](/ko/directory) — 이 리뷰가 속한 로컬 AI 도구 및 앱의 전체 카탈로그.',
         ],

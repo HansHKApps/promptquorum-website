@@ -430,7 +430,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local Speech-to-Text 2026: Whisper.cpp vs faster-whisper](/power-local-llm/local-whisper-stt-comparison-2026) — Deep dive on the STT layer of this pipeline.',
+          '[Local Speech-to-Text 2026: Whisper.cpp vs faster-whisper](/power-local-llm/local-whisper-stt-comparison) — Deep dive on the STT layer of this pipeline.',
           '[Local TTS and Voice Cloning 2026: Piper vs Coqui vs XTTS v2](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Deep dive on the TTS layer and voice cloning options.',
           '[Local Multimodal AI Pipeline 2026](/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Extend this voice pipeline with vision model support.',
           '[How to Install Ollama](/local-llms/how-to-install-ollama) — Ollama installation and model management.',
@@ -843,7 +843,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Lokale Spracherkennung 2026: Whisper.cpp vs. faster-whisper](/de/power-local-llm/local-whisper-stt-comparison-2026) — Detailanalyse der STT-Schicht dieser Pipeline.',
+          '[Lokale Spracherkennung 2026: Whisper.cpp vs. faster-whisper](/de/power-local-llm/local-whisper-stt-comparison) — Detailanalyse der STT-Schicht dieser Pipeline.',
           '[Lokale TTS und Voice-Cloning 2026: Piper vs. Coqui vs. XTTS v2](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Detailanalyse der TTS-Schicht und Voice-Cloning-Optionen.',
           '[Lokale multimodale KI-Pipeline 2026](/de/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Sprachpipeline um Vision-Modell-Unterstützung erweitern.',
           '[Ollama installieren](/de/local-llms/how-to-install-ollama) — Ollama-Installation und Modellverwaltung.',
@@ -1248,7 +1248,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: 'Lectures connexes',
         items: [
-          '[Reconnaissance vocale locale 2026 : Whisper.cpp vs faster-whisper](/fr/power-local-llm/local-whisper-stt-comparison-2026) — Analyse approfondie de la couche STT de ce pipeline.',
+          '[Reconnaissance vocale locale 2026 : Whisper.cpp vs faster-whisper](/fr/power-local-llm/local-whisper-stt-comparison) — Analyse approfondie de la couche STT de ce pipeline.',
           '[TTS local et clonage vocal 2026 : Piper vs Coqui vs XTTS v2](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Analyse approfondie de la couche TTS et des options de clonage vocal.',
           '[Pipeline IA multimodale local 2026](/fr/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Étendre ce pipeline vocal avec le support de modèles de vision.',
           '[Installer Ollama](/fr/local-llms/how-to-install-ollama) — Installation d\'Ollama et gestion des modèles.',
@@ -1652,7 +1652,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカル音声認識2026：Whisper.cpp vs faster-whisper](/ja/power-local-llm/local-whisper-stt-comparison-2026) — このパイプラインのSTTレイヤーの詳細解説。',
+          '[ローカル音声認識2026：Whisper.cpp vs faster-whisper](/ja/power-local-llm/local-whisper-stt-comparison) — このパイプラインのSTTレイヤーの詳細解説。',
           '[ローカルTTSと音声クローニング2026：Piper vs Coqui vs XTTS v2](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — TTSレイヤーと音声クローニングオプションの詳細解説。',
           '[ローカルマルチモーダルAIパイプライン2026](/ja/power-local-llm/local-multimodal-pipeline-voice-vision-text) — この音声パイプラインをビジョンモデルサポートで拡張。',
           '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) — Ollamaのインストールとモデル管理。',
@@ -2056,7 +2056,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地语音识别2026：Whisper.cpp vs faster-whisper](/zh/power-local-llm/local-whisper-stt-comparison-2026) — 此流水线STT层的深度解析。',
+          '[本地语音识别2026：Whisper.cpp vs faster-whisper](/zh/power-local-llm/local-whisper-stt-comparison) — 此流水线STT层的深度解析。',
           '[本地TTS与语音克隆2026：Piper vs Coqui vs XTTS v2](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — TTS层与语音克隆选项的深度解析。',
           '[本地多模态AI流水线2026](/zh/power-local-llm/local-multimodal-pipeline-voice-vision-text) — 为此语音流水线添加视觉模型支持。',
           '[如何安装Ollama](/zh/local-llms/how-to-install-ollama) — Ollama安装与模型管理。',
@@ -2492,7 +2492,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
-          '[Reconocimiento de voz local 2026: Whisper.cpp vs faster-whisper](/es/power-local-llm/local-whisper-stt-comparison-2026) — Análisis en profundidad de la capa STT de este pipeline.',
+          '[Reconocimiento de voz local 2026: Whisper.cpp vs faster-whisper](/es/power-local-llm/local-whisper-stt-comparison) — Análisis en profundidad de la capa STT de este pipeline.',
           '[TTS local y clonación de voz 2026: Piper vs Coqui vs XTTS v2](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Análisis en profundidad de la capa TTS y las opciones de clonación de voz.',
           '[Pipeline de IA multimodal local 2026](/es/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Amplía este pipeline de voz con soporte para modelos de visión.',
           '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) — Instalación de Ollama y gestión de modelos.',
@@ -2924,7 +2924,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: '관련 읽기',
         items: [
-          '[2026년 로컬 음성 인식: Whisper.cpp vs faster-whisper](/ko/power-local-llm/local-whisper-stt-comparison-2026) — 이 파이프라인의 STT 레이어 심층 분석.',
+          '[2026년 로컬 음성 인식: Whisper.cpp vs faster-whisper](/ko/power-local-llm/local-whisper-stt-comparison) — 이 파이프라인의 STT 레이어 심층 분석.',
           '[2026년 로컬 TTS 및 음성 복제: Piper vs Coqui vs XTTS v2](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — TTS 레이어와 음성 복제 옵션 심층 분석.',
           '[2026년 로컬 멀티모달 AI 파이프라인](/ko/power-local-llm/local-multimodal-pipeline-voice-vision-text) — 이 음성 파이프라인을 비전 모델 지원으로 확장.',
           '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — Ollama 설치 및 모델 관리.',
@@ -3372,7 +3372,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Reconhecimento de voz local 2026: Whisper.cpp vs faster-whisper](/pt/power-local-llm/local-whisper-stt-comparison-2026) — Análise aprofundada da camada STT deste pipeline.',
+          '[Reconhecimento de voz local 2026: Whisper.cpp vs faster-whisper](/pt/power-local-llm/local-whisper-stt-comparison) — Análise aprofundada da camada STT deste pipeline.',
           '[TTS local e clonagem de voz 2026: Piper vs Coqui vs XTTS v2](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Análise aprofundada da camada TTS e das opções de clonagem de voz.',
           '[Pipeline de IA multimodal local 2026](/pt/power-local-llm/local-multimodal-pipeline-voice-vision-text) — Amplie este pipeline de voz com suporte para modelos de visão.',
           '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) — Instalação do Ollama e gestão de modelos.',
@@ -3821,7 +3821,7 @@ if __name__ == "__main__":
         id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
-          '[التعرف على الكلام المحلي 2026: Whisper.cpp مقابل faster-whisper](/ar/power-local-llm/local-whisper-stt-comparison-2026) — تحليل معمّق لطبقة STT في هذا المسار.',
+          '[التعرف على الكلام المحلي 2026: Whisper.cpp مقابل faster-whisper](/ar/power-local-llm/local-whisper-stt-comparison) — تحليل معمّق لطبقة STT في هذا المسار.',
           '[TTS المحلي واستنساخ الصوت 2026: Piper مقابل Coqui مقابل XTTS v2](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — تحليل معمّق لطبقة TTS وخيارات استنساخ الصوت.',
           '[مسار ذكاء اصطناعي متعدد الأوضاع محلي 2026](/ar/power-local-llm/local-multimodal-pipeline-voice-vision-text) — وسّع مسار الصوت هذا لدعم نماذج الرؤية.',
           '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) — تثبيت Ollama وإدارة النماذج.',

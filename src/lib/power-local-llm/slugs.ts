@@ -123,7 +123,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Category 9 — Voice, Speech & Multimodal
   'elevenlabs-vs-local-tts-piper-xtts':          'elevenlabs-vs-local-tts-piper-xtts',
   'voice-ai-writers-cloud-vs-local': 'voice-ai-writers-cloud-vs-local',
-  'local-whisper-stt-comparison-2026':           'local-whisper-stt-comparison-2026',
+  'local-whisper-stt-comparison':           'local-whisper-stt-comparison',
   'local-vision-models-llava-ollama-2026':        'local-vision-models-llava-ollama-2026',
   'local-tts-voice-cloning-piper-coqui-xtts':    'local-tts-voice-cloning-piper-coqui-xtts',
   'build-local-voice-assistant-2026':             'build-local-voice-assistant-2026',
