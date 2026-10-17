@@ -123,7 +123,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Best 14B Models for Coding](/prompt-bites/best-14b-models-coding) -- dense coding models for 10–16 GB',
           '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) -- coding models by VRAM tier',
-          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.dev Acquired by Cursor: Shutdown and Alternatives](/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
       sources: {
@@ -250,7 +250,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Beste 14B-Modelle für Coding](/de/prompt-bites/best-14b-models-coding) -- Dense-Coding-Modelle für 10–16 GB',
           '[Beste lokale LLMs für Coding](/de/local-llms/best-local-llms-for-coding) -- Coding-Modelle nach VRAM-Stufe',
-          '[Cursor Pro vs Continue.dev: Welches KI-Coding-Tool?](/de/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.dev von Cursor übernommen: Einstellung und Alternativen](/de/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
       sources: {
@@ -377,7 +377,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Meilleurs modèles 14B pour le codage](/fr/prompt-bites/best-14b-models-coding) -- modèles de codage denses pour 10–16 Go',
           '[Meilleurs LLM locaux pour le codage](/fr/local-llms/best-local-llms-for-coding) -- modèles de codage par palier de VRAM',
-          '[Cursor Pro vs Continue.dev : quel outil de coding IA ?](/fr/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.dev racheté par Cursor : arrêt et alternatives](/fr/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
       sources: {
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[コーディング向け14Bモデル比較](/ja/prompt-bites/best-14b-models-coding) -- 10〜16GB向けのDenseコーディングモデル',
           '[コーディング向けベストローカルLLM](/ja/local-llms/best-local-llms-for-coding) -- VRAM帯別のコーディングモデル',
-          '[Cursor Pro vs Continue.dev：どちらのAIコーディングツールが良いか？](/ja/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.devがCursorに買収：終了と代替ツール](/ja/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
       sources: {
@@ -631,7 +631,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[最佳 14B 编程模型](/zh/prompt-bites/best-14b-models-coding) -- 适合 10–16GB 的稠密编程模型',
           '[本地编程最佳 LLM](/zh/local-llms/best-local-llms-for-coding) -- 按显存档位划分的编程模型',
-          '[Cursor Pro vs Continue.dev：哪款AI编程工具更好？](/zh/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.dev被Cursor收购：停运与替代方案](/zh/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
       sources: {
@@ -758,7 +758,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Mejores modelos de 14B para coding](/es/prompt-bites/best-14b-models-coding) -- modelos de coding densos para 10–16 GB',
           '[Mejores LLM locales para coding](/es/local-llms/best-local-llms-for-coding) -- modelos de coding por nivel de VRAM',
-          '[Cursor Pro vs Continue.dev: ¿Cuál herramienta de coding con IA?](/es/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Cursor adquiere Continue.dev: cierre y alternativas](/es/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
       sources: {
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Melhores modelos de 14B para programação](/pt/prompt-bites/best-14b-models-coding) -- modelos densos de programação para 10–16 GB',
           '[Melhores LLMs locais para programação](/pt/local-llms/best-local-llms-for-coding) -- modelos de programação por faixa de VRAM',
-          '[Cursor Pro vs Continue.dev: Qual ferramenta de coding com IA?](/pt/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.dev adquirido pela Cursor: encerramento e alternativas](/pt/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
       sources: {
@@ -1012,7 +1012,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[أفضل نماذج ⁨14B⁩ للبرمجة](/ar/prompt-bites/best-14b-models-coding) -- نماذج برمجة كثيفة لذاكرة ⁨10⁩–⁨16 GB⁩',
           '[أفضل نماذج ⁨LLM⁩ المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding) -- نماذج البرمجة حسب فئة ⁨VRAM⁩',
-          '[⁨Cursor Pro⁩ مقابل ⁨Continue.dev:⁩ أي أداة برمجة بالذكاء الاصطناعي؟](/ar/prompt-bites/cursor-pro-vs-continue-dev) -- ⁨coding tool comparison⁩',
+          '[استحواذ Cursor على Continue.dev: الإغلاق والبدائل](/ar/prompt-bites/cursor-pro-vs-continue-dev) -- ⁨coding tool comparison⁩',
         ],
       },
       sources: {
@@ -1139,7 +1139,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[코딩용 최적 14B 모델](/ko/prompt-bites/best-14b-models-coding) -- 10~16GB용 밀집 코딩 모델',
           '[코딩용 최적 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) -- VRAM 구간별 코딩 모델',
-          '[Cursor Pro vs Continue.dev: 어떤 AI 코딩 도구?](/ko/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.dev, Cursor에 인수: 종료와 대안](/ko/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
       sources: {

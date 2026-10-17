@@ -245,9 +245,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           {
             url: 'https://www.cursor.com/pricing',
-            productName: 'Cursor Pro',
+            productName: 'Cursor',
             productCategory: 'software',
-            priceRange: '20/mo',
+            priceRange: 'from 8/mo',
             label: 'Check Cursor pricing',
           },
         ],
@@ -836,9 +836,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           {
             url: 'https://www.cursor.com/pricing',
-            productName: 'Cursor Pro',
+            productName: 'Cursor',
             productCategory: 'software',
-            priceRange: '20/mo',
+            priceRange: 'from 8/mo',
             label: 'Cursor-Preise prüfen',
           },
         ],
@@ -1430,9 +1430,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           {
             url: 'https://www.cursor.com/pricing',
-            productName: 'Cursor Pro',
+            productName: 'Cursor',
             productCategory: 'software',
-            priceRange: '20/mo',
+            priceRange: 'from 8/mo',
             label: 'Vérifier les tarifs Cursor',
           },
         ],
@@ -2015,9 +2015,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           {
             url: 'https://www.cursor.com/pricing',
-            productName: 'Cursor Pro',
+            productName: 'Cursor',
             productCategory: 'software',
-            priceRange: '20/mo',
+            priceRange: 'from 8/mo',
             label: 'Cursorの料金を確認する',
           },
         ],
@@ -2602,9 +2602,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           {
             url: 'https://www.cursor.com/pricing',
-            productName: 'Cursor Pro',
+            productName: 'Cursor',
             productCategory: 'software',
-            priceRange: '20/mo',
+            priceRange: 'from 8/mo',
             label: '查看Cursor价格',
           },
         ],
@@ -3189,9 +3189,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           {
             url: 'https://www.cursor.com/pricing',
-            productName: 'Cursor Pro',
+            productName: 'Cursor',
             productCategory: 'software',
-            priceRange: '20/mo',
+            priceRange: 'from 8/mo',
             label: 'Ver precios de Cursor',
           },
         ],
@@ -3790,9 +3790,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           {
             url: 'https://www.cursor.com/pricing',
-            productName: 'Cursor Pro',
+            productName: 'Cursor',
             productCategory: 'software',
-            priceRange: '20/mo',
+            priceRange: 'from 8/mo',
             label: 'Ver preços do Cursor',
           },
         ],
@@ -4390,9 +4390,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           {
             url: 'https://www.cursor.com/pricing',
-            productName: 'Cursor Pro',
+            productName: 'Cursor',
             productCategory: 'software',
-            priceRange: '20/mo',
+            priceRange: 'from 8/mo',
             label: 'عرض أسعار Cursor',
           },
         ],
@@ -4994,9 +4994,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         affiliateLinks: [
           {
             url: 'https://www.cursor.com/pricing',
-            productName: 'Cursor Pro',
+            productName: 'Cursor',
             productCategory: 'software',
-            priceRange: '20/mo',
+            priceRange: 'from 8/mo',
             label: 'Cursor 가격 확인',
           },
         ],
