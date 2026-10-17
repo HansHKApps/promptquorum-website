@@ -403,6 +403,7 @@ https://www.promptquorum.com/power-local-llm/local-ai-agents-with-mcp-2026
 https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users
 https://www.promptquorum.com/power-local-llm/local-ai-app-with-built-in-rag
 https://www.promptquorum.com/power-local-llm/local-ai-behind-firewall-offline-2026
+https://www.promptquorum.com/power-local-llm/local-ai-chat-pocket-review
 https://www.promptquorum.com/power-local-llm/local-ai-geetmark-review
 https://www.promptquorum.com/power-local-llm/local-ai-image-generation-vs-cloud
 https://www.promptquorum.com/power-local-llm/local-ai-mail-review
@@ -430,7 +431,7 @@ https://www.promptquorum.com/power-local-llm/local-rag-for-private-business-data
 https://www.promptquorum.com/power-local-llm/local-rag-on-your-pdfs-step-by-step
 https://www.promptquorum.com/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts
 https://www.promptquorum.com/power-local-llm/local-vision-models-llava-ollama-2026
-https://www.promptquorum.com/power-local-llm/local-whisper-stt-comparison-2026
+https://www.promptquorum.com/power-local-llm/local-whisper-stt-comparison
 https://www.promptquorum.com/power-local-llm/localai-apexcreator-review
 https://www.promptquorum.com/power-local-llm/localai-explained
 https://www.promptquorum.com/power-local-llm/locally-ai-review
