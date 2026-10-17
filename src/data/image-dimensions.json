@@ -41569,6 +41569,11 @@
     "width": 1200,
     "height": 675
   },
+  "/images/qwen-coder-deepseek-mistral-dispatch-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/qwen-coder-deepseek-mistral-dispatch-hero-en.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -41584,12 +41589,22 @@
     "width": 1200,
     "height": 675
   },
+  "/images/qwen-coder-deepseek-mistral-dispatch-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/qwen-coder-deepseek-mistral-dispatch-hero-ko.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
   },
   "/images/qwen-coder-deepseek-mistral-dispatch-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/qwen-coder-deepseek-mistral-dispatch-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
