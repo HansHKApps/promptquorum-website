@@ -644,7 +644,7 @@
       "superseded_by": null,
       "source_url": "https://github.com/QwenLM/Qwen3.6",
       "verified_date": "2026-07-29",
-      "notes": "Small/mid-size dense variant. Qwen3.6 has only shipped 27B and 35B-A3B sizes so far (per the Qwen3.6 registry entry) — no small-class successor exists yet, so Qwen3 8B remains the current best pick for 8-16GB RAM/VRAM tiers. Added 2026-07-29 as an exact-name entry so the validator stops flagging it via the generic family-level 'Qwen3' superseded entry, which only applies to sizes Qwen3.6 has actually replaced."
+      "notes": "Small/mid-size dense variant. Qwen3.6 has only shipped 27B and 35B-A3B sizes so far (per the Qwen3.6 registry entry) — no small-class successor exists yet, so Qwen3 8B remains a valid pick for 8-16GB RAM/VRAM tiers (Qwen3.5 9B is the newer small-class option as of 2026-10-17). Added 2026-07-29 as an exact-name entry so the validator stops flagging it via the generic family-level 'Qwen3' superseded entry, which only applies to sizes Qwen3.6 has actually replaced."
     },
     {
       "company": "Alibaba / Qwen",
@@ -3105,6 +3105,30 @@
       "source_url": "https://huggingface.co/NousResearch/Hermes-4.3-36B",
       "verified_date": "2026-10-17",
       "notes": "Built on ByteDance Seed-OSS-36B, Apache 2.0, GGUF quantizations on Hugging Face (NousResearch/Hermes-4.3-36B-GGUF). Not in the Ollama library as hermes4 (hermes3 only, checked 2026-10-17). Release month from third-party sources; the HF card gives no date."
+    },
+    {
+      "company": "Alibaba Cloud (Qwen team)",
+      "family": "Qwen",
+      "model": "Qwen3.5 9B",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ollama.com/library/qwen3.5",
+      "verified_date": "2026-10-17",
+      "notes": "Small-class member of the Qwen3.5 generation (9B); Ollama lists qwen3.5:9b at 6.6-7.6 GB, 256K context, text+image input; Qwen/Qwen3.5-9B Hugging Face card states Apache-2.0. Qwen3.6 ships only 27B and 35B-A3B (verified on Ollama 2026-10-17), so Qwen3.5 remains the newest generation with a model that fits 8-16GB RAM. Exact-name entry so the validator does not flag it via the family-level Qwen3.5 superseded entry."
+    },
+    {
+      "company": "Alibaba Cloud (Qwen team)",
+      "family": "Qwen",
+      "model": "Qwen3.5 4B",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ollama.com/library/qwen3.5",
+      "verified_date": "2026-10-17",
+      "notes": "Small-class member of the Qwen3.5 generation (4B); Ollama lists qwen3.5:4b at 3.3-4.0 GB, 256K context, text+image input; Qwen/Qwen3.5-9B Hugging Face card states Apache-2.0. Qwen3.6 ships only 27B and 35B-A3B (verified on Ollama 2026-10-17), so Qwen3.5 remains the newest generation with a model that fits 8-16GB RAM. Exact-name entry so the validator does not flag it via the family-level Qwen3.5 superseded entry."
     }
   ],
   "sources": [
