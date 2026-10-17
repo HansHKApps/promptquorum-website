@@ -1433,15 +1433,6 @@ schema: {
             '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — Não sabe se sua máquina aguenta esses modelos? Veja os requisitos →',
           ],
         },
-        nextSteps: {
-          id: 'next-steps',
-          title: 'Próximos passos',
-          items: [
-            '[Melhores LLMs locais para código](/pt/local-llms/best-local-llms-for-coding) — O melhor modelo Ollama especialmente para programação →',
-            '[Melhores LLMs só com CPU](/pt/local-llms/best-cpu-only-llm) — Sem GPU? Comece por aqui →',
-            '[Guia de hardware LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — Seu computador aguenta esses modelos? →',
-          ],
-        },
         faqSection: {
           id: 'faq',
           title: 'Perguntas frequentes',
