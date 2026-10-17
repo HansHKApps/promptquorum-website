@@ -3336,5 +3336,30 @@
       "ctr": 0.08333333333333333,
       "period": "GSC top queries, pasted 2026-10-17"
     }
+  },
+  {
+    "id": "4af785c7-826f-4a0f-8dfe-ab2df00180fd",
+    "slug": "/prompt-bites/best-14b-models-coding",
+    "date": "2026-10-17T18:46:05.118Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best 14B Models for Coding 2026 | Prompt Bites | PromptQuorum",
+        "new": "Best 14B Models 2026: Coding and General Use"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen2.5-Coder 14B Instruct: 89.6% HumanEval, ~10 GB VRAM. DeepSeek-Coder-V2-Lite: 81.1%. StarCoder2 15B: 67.7% (Qwen-reported). Quick answer.",
+        "new": "Best 14B model for coding: Qwen2.5-Coder 14B, 89.6% HumanEval (Qwen-reported) in ~10 GB VRAM. For general use: Qwen3 14B or Phi-4. Compared on Ollama."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-C-fix, generic 14B queries vs coding-only page; added general-purpose section",
+    "baseline": {
+      "position": 2.3,
+      "impressions": 89,
+      "clicks": 1,
+      "ctr": 0.011235955056179775,
+      "period": "GSC top queries, pasted 2026-10-17"
+    }
   }
 ]

@@ -6,8 +6,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     title: 'Best 14B Model for Coding?',
     dateModified: '2026-10-17',
-    seoTitle: 'Best 14B Models for Coding 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Qwen2.5-Coder 14B Instruct: 89.6% HumanEval, ~10 GB VRAM. DeepSeek-Coder-V2-Lite: 81.1%. StarCoder2 15B: 67.7% (Qwen-reported). Quick answer.',
+    seoTitle: 'Best 14B Models 2026: Coding and General Use',
+    metaDescription: 'Best 14B model for coding: Qwen2.5-Coder 14B, 89.6% HumanEval (Qwen-reported) in ~10 GB VRAM. For general use: Qwen3 14B or Phi-4. Compared on Ollama.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-en.webp',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -15,6 +15,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     current_models_mentioned: [
       'Qwen2.5-Coder 14B',
       'DeepSeek-Coder-V2-Lite',
+      'Qwen3 14B',
+      'Phi-4',
     ],
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
@@ -118,10 +120,30 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         image: '/images/best-14b-models-coding-vram-headroom-hero-en.webp',
         imageCaption: 'VRAM Headroom at Longer Context -- Q4_K_M usage as context grows',
       },
+      general14b: {
+        title: 'Best General-Purpose 14B Models: Qwen3 14B and Phi-4',
+        content: [
+          '<strong>For non-coding work, the two main general-purpose 14B models on Ollama are Qwen3 14B (qwen3:14b, 9.3 GB download, 40K context) and Phi-4 (phi4:14b, 9.1 GB download, 16K context).</strong> Both fit on a 12 GB card at the default Q4 quantization, in the same VRAM class as the coding models above.',
+          'Qwen3 14B suits longer context and broad multilingual use; Phi-4 targets reasoning- and math-heavy prompts. For pure code, the coding-specific models above still lead. We have not run a head-to-head benchmark of the general models, so no score is listed here.',
+        ],
+        columns: ['Model', 'Ollama tag', 'Download', 'Context'],
+        rows: [
+          { 'Model': 'Qwen3 14B', 'Ollama tag': 'qwen3:14b', 'Download': '9.3 GB', 'Context': '40K' },
+          { 'Model': 'Phi-4', 'Ollama tag': 'phi4:14b', 'Download': '9.1 GB', 'Context': '16K' },
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Quick Answers About 14B Coding Models',
         faqs: [
+          {
+            q: 'What is the best 14B model overall?',
+            a: 'There is no single winner. Qwen2.5-Coder 14B leads for coding; for general chat and reasoning, Qwen3 14B and Phi-4 are the main choices on Ollama, at about 9 GB each.',
+          },
+          {
+            q: 'How much VRAM does a 14B model need?',
+            a: 'About 9–10 GB at Q4 quantization. A 12 GB card runs it with limited headroom for long context; 16 GB gives comfortable room.',
+          },
           {
             q: 'Can Qwen2.5-Coder 14B run on 8 GB VRAM?',
             a: 'Not reliably. At Q4_K_M the model requires ~10 GB VRAM. You could use Q3_K_M to squeeze it into 8 GB, but the quality drop is noticeable. A better option for 8 GB VRAM is Qwen2.5-Coder 7B or DeepSeek Coder 7B.',
@@ -153,8 +175,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Model Comparisons',
     title: 'Bestes 14B-Modell für Coding?',
-    seoTitle: 'Beste 14B-Modelle für lokales Coding 2026',
-    metaDescription: 'Qwen2.5-Coder 14B Instruct: 89,6 % HumanEval, ~10 GB VRAM. DeepSeek-Coder-V2-Lite: 81,1 %. StarCoder2 15B: 67,7 % (Qwen-Angaben). Schnelle Antwort.',
+    seoTitle: 'Beste 14B-Modelle 2026: Coding und Allgemeinnutzung',
+    metaDescription: 'Bestes 14B-Modell fürs Coding: Qwen2.5-Coder 14B, 89,6 % HumanEval (Qwen-Angabe) bei ~10 GB VRAM. Allgemein: Qwen3 14B oder Phi-4. Vergleich auf Ollama.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-de.webp',
     publishDate: '2026-05-18',
     dateModified: '2026-10-17',
@@ -213,10 +235,30 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         image: '/images/best-14b-models-coding-vram-headroom-hero-de.webp',
         imageCaption: 'VRAM-Spielraum bei Längerem Kontext -- Q4_K_M-Nutzung mit wachsendem Kontext',
       },
+      general14b: {
+        title: 'Beste allgemeine 14B-Modelle: Qwen3 14B und Phi-4',
+        content: [
+          '<strong>Für Aufgaben außerhalb des Codings sind Qwen3 14B (qwen3:14b, 9,3 GB Download, 40K Kontext) und Phi-4 (phi4:14b, 9,1 GB Download, 16K Kontext) die beiden wichtigsten allgemeinen 14B-Modelle auf Ollama.</strong> Beide passen in der Standard-Quantisierung Q4 auf eine 12-GB-Karte und liegen in derselben VRAM-Klasse wie die Coding-Modelle oben.',
+          'Qwen3 14B eignet sich für längeren Kontext und breite mehrsprachige Nutzung; Phi-4 zielt auf Aufgaben mit viel Reasoning und Mathematik. Beim reinen Code führen weiterhin die spezialisierten Modelle oben. Einen direkten Benchmark-Vergleich der allgemeinen Modelle haben wir nicht durchgeführt, daher steht hier kein Score.',
+        ],
+        columns: ['Modell', 'Ollama-Tag', 'Download', 'Kontext'],
+        rows: [
+          { 'Modell': 'Qwen3 14B', 'Ollama-Tag': 'qwen3:14b', 'Download': '9,3 GB', 'Kontext': '40K' },
+          { 'Modell': 'Phi-4', 'Ollama-Tag': 'phi4:14b', 'Download': '9,1 GB', 'Kontext': '16K' },
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Schnelle Antworten zu 14B-Coding-Modellen',
         faqs: [
+          {
+            q: 'Was ist das beste 14B-Modell insgesamt?',
+            a: 'Einen einzelnen Sieger gibt es nicht. Qwen2.5-Coder 14B führt beim Coding; für allgemeinen Chat und Reasoning sind Qwen3 14B und Phi-4 auf Ollama die wichtigsten Optionen, jeweils etwa 9 GB groß.',
+          },
+          {
+            q: 'Wie viel VRAM braucht ein 14B-Modell?',
+            a: 'Etwa 9–10 GB bei Q4-Quantisierung. Eine 12-GB-Karte reicht, lässt aber wenig Spielraum für langen Kontext; mit 16 GB haben Sie komfortablen Puffer.',
+          },
           {
             q: 'Kann Qwen2.5-Coder 14B mit 8 GB VRAM betrieben werden?',
             a: 'Nicht zuverlässig. Bei Q4_K_M benötigt das Modell ~10 GB VRAM. Mit Q3_K_M könnte es in 8 GB passen, aber der Qualitätsabfall ist spürbar. Eine bessere Option für 8 GB VRAM ist Qwen2.5-Coder 7B oder DeepSeek Coder 7B.',
@@ -240,8 +282,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Model Comparisons',
     title: 'Meilleur modèle 14B pour le coding ?',
-    seoTitle: 'Meilleurs 14B Modèles pour Coding 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Qwen2.5-Coder 14B Instruct : 89,6 % HumanEval, ~10 Go de VRAM. DeepSeek-Coder-V2-Lite : 81,1 %. StarCoder2 15B : 67,7 % (chiffres Qwen). Réponse rapide.',
+    seoTitle: 'Meilleurs modèles 14B 2026 : coding et usage général',
+    metaDescription: 'Meilleur modèle 14B pour coder : Qwen2.5-Coder 14B, 89,6 % HumanEval (chiffre Qwen) pour ~10 Go de VRAM. Usage général : Qwen3 14B ou Phi-4. Comparatif Ollama.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-fr.webp',
     publishDate: '2026-05-18',
     dateModified: '2026-10-17',
@@ -300,10 +342,30 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         image: '/images/best-14b-models-coding-vram-headroom-hero-fr.webp',
         imageCaption: 'Marge VRAM avec Contexte Étendu -- Utilisation Q4_K_M selon le contexte',
       },
+      general14b: {
+        title: 'Meilleurs modèles 14B généralistes : Qwen3 14B et Phi-4',
+        content: [
+          '<strong>Hors coding, les deux principaux modèles 14B généralistes sur Ollama sont Qwen3 14B (qwen3:14b, 9,3 Go à télécharger, contexte 40K) et Phi-4 (phi4:14b, 9,1 Go, contexte 16K).</strong> Tous deux tiennent sur une carte de 12 Go en quantification Q4 par défaut, dans la même classe de VRAM que les modèles de coding ci-dessus.',
+          'Qwen3 14B convient à un contexte plus long et à un usage multilingue large ; Phi-4 vise les requêtes riches en raisonnement et en mathématiques. Pour le code pur, les modèles spécialisés ci-dessus restent en tête. Nous n\'avons pas mené de benchmark comparatif des modèles généralistes ; aucun score n\'est donc indiqué.',
+        ],
+        columns: ['Modèle', 'Tag Ollama', 'Téléchargement', 'Contexte'],
+        rows: [
+          { 'Modèle': 'Qwen3 14B', 'Tag Ollama': 'qwen3:14b', 'Téléchargement': '9,3 Go', 'Contexte': '40K' },
+          { 'Modèle': 'Phi-4', 'Tag Ollama': 'phi4:14b', 'Téléchargement': '9,1 Go', 'Contexte': '16K' },
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Réponses rapides sur les modèles de coding 14B',
         faqs: [
+          {
+            q: 'Quel est le meilleur modèle 14B dans l\'ensemble ?',
+            a: 'Il n\'y a pas de vainqueur unique. Qwen2.5-Coder 14B domine pour le coding ; pour le chat général et le raisonnement, Qwen3 14B et Phi-4 sont les principaux choix sur Ollama, à environ 9 Go chacun.',
+          },
+          {
+            q: 'De combien de VRAM un modèle 14B a-t-il besoin ?',
+            a: 'Environ 9 à 10 Go en quantification Q4. Une carte de 12 Go suffit avec peu de marge pour un long contexte ; 16 Go offrent une marge confortable.',
+          },
           {
             q: 'Qwen2.5-Coder 14B peut-il fonctionner avec 8 Go de VRAM ?',
             a: 'Pas de manière fiable. En Q4_K_M, le modèle nécessite ~10 Go de VRAM. En Q3_K_M il pourrait tenir en 8 Go, mais la baisse de qualité est perceptible. Une meilleure option pour 8 Go de VRAM est Qwen2.5-Coder 7B ou DeepSeek Coder 7B.',
@@ -327,8 +389,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Model Comparisons',
     title: 'コーディングに最適な14Bモデルは？',
-    seoTitle: 'コーディング向け最適14Bモデル 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Qwen2.5-Coder 14B Instruct：HumanEval 89.6%、約10 GB VRAM。DeepSeek-Coder-V2-Lite：81.1%。StarCoder2 15B：67.7%（Qwen公表値）。簡潔な回答。',
+    seoTitle: '最適な14Bモデル2026：コーディングと汎用向け',
+    metaDescription: 'コーディング向け最適14BはQwen2.5-Coder 14B（HumanEval 89.6%・Qwen公表値、約10 GB VRAM）。汎用ならQwen3 14BかPhi-4。Ollamaで比較します。',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-ja.webp',
     publishDate: '2026-05-18',
     dateModified: '2026-10-17',
@@ -387,10 +449,30 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         image: '/images/best-14b-models-coding-vram-headroom-hero-ja.webp',
         imageCaption: '長いコンテキストでのVRAM余裕 -- コンテキスト増加時のQ4_K_M使用量',
       },
+      general14b: {
+        title: '汎用14Bモデルのおすすめ：Qwen3 14BとPhi-4',
+        content: [
+          '<strong>コーディング以外の用途では、Ollamaの主な汎用14BモデルはQwen3 14B（qwen3:14b、ダウンロード9.3 GB、コンテキスト40K）とPhi-4（phi4:14b、9.1 GB、コンテキスト16K）です。</strong>どちらも標準のQ4量子化で12 GBカードに収まり、上記のコーディング向けモデルと同じVRAMクラスです。',
+          'Qwen3 14Bは長いコンテキストと幅広い多言語利用に向き、Phi-4は推論や数学が中心のプロンプトを狙っています。純粋なコードでは、上記の専用モデルが引き続き優位です。汎用モデル同士の直接ベンチマークは実施していないため、スコアは記載していません。',
+        ],
+        columns: ['モデル', 'Ollamaタグ', 'ダウンロード', 'コンテキスト'],
+        rows: [
+          { 'モデル': 'Qwen3 14B', 'Ollamaタグ': 'qwen3:14b', 'ダウンロード': '9.3 GB', 'コンテキスト': '40K' },
+          { 'モデル': 'Phi-4', 'Ollamaタグ': 'phi4:14b', 'ダウンロード': '9.1 GB', 'コンテキスト': '16K' },
+        ],
+      },
       faq: {
         id: 'faq',
         title: '14Bコーディングモデルに関するよくある質問',
         faqs: [
+          {
+            q: '総合で最適な14Bモデルは？',
+            a: '単独の勝者はいません。コーディングではQwen2.5-Coder 14Bが首位で、汎用チャットや推論ではQwen3 14BとPhi-4がOllamaの主な選択肢です（各約9 GB）。',
+          },
+          {
+            q: '14Bモデルに必要なVRAMは？',
+            a: 'Q4量子化で約9〜10 GBです。12 GBカードで動作しますが、長いコンテキストの余裕は少なく、16 GBあれば余裕があります。',
+          },
           {
             q: 'Qwen2.5-Coder 14Bは8 GB VRAMで動作しますか？',
             a: '確実には動作しません。Q4_K_Mではモデルに~10 GB VRAMが必要です。Q3_K_Mなら8 GBに収まりますが品質低下が目立ちます。8 GB VRAMにはQwen2.5-Coder 7BまたはDeepSeek Coder 7Bがより良い選択肢です。',
@@ -414,8 +496,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Model Comparisons',
     title: '编程最佳14B模型是哪款？',
-    seoTitle: '编程最佳14B模型 2026：Qwen2.5-Coder 与 HumanEval 对比',
-    metaDescription: 'Qwen2.5-Coder 14B Instruct：HumanEval 89.6%，约10 GB 显存。DeepSeek-Coder-V2-Lite：81.1%。StarCoder2 15B：67.7%（Qwen 公布）。快速解答。',
+    seoTitle: '2026年最佳14B模型：编程与通用场景推荐对比',
+    metaDescription: '编程首选14B模型是Qwen2.5-Coder 14B：HumanEval 89.6%（Qwen公布），约10 GB显存。通用场景可选Qwen3 14B或Phi-4。基于Ollama的对比。',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-zh.webp',
     publishDate: '2026-05-18',
     dateModified: '2026-10-17',
@@ -474,10 +556,30 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         image: '/images/best-14b-models-coding-vram-headroom-hero-zh.webp',
         imageCaption: '更长上下文下的显存余量 -- 随上下文增长的Q4_K_M占用',
       },
+      general14b: {
+        title: '通用14B模型推荐：Qwen3 14B与Phi-4',
+        content: [
+          '<strong>在编程之外的场景，Ollama上主要的通用14B模型是Qwen3 14B（qwen3:14b，下载9.3 GB，40K上下文）和Phi-4（phi4:14b，9.1 GB，16K上下文）。</strong>两者在默认Q4量化下都能放进12 GB显卡，与上文编程模型属于同一显存档位。',
+          'Qwen3 14B适合较长上下文和广泛的多语言使用；Phi-4面向推理和数学类提示。纯代码任务上，上文的专用编程模型仍然领先。我们没有对通用模型做直接基准对比，因此此处不列出分数。',
+        ],
+        columns: ['模型', 'Ollama标签', '下载大小', '上下文'],
+        rows: [
+          { '模型': 'Qwen3 14B', 'Ollama标签': 'qwen3:14b', '下载大小': '9.3 GB', '上下文': '40K' },
+          { '模型': 'Phi-4', 'Ollama标签': 'phi4:14b', '下载大小': '9.1 GB', '上下文': '16K' },
+        ],
+      },
       faq: {
         id: 'faq',
         title: '关于14B编程模型的快速解答',
         faqs: [
+          {
+            q: '综合来看最好的14B模型是哪个？',
+            a: '没有唯一的赢家。编程方面Qwen2.5-Coder 14B领先；通用对话和推理方面，Qwen3 14B与Phi-4是Ollama上的主要选择，各约9 GB。',
+          },
+          {
+            q: '14B模型需要多少显存？',
+            a: 'Q4量化约9–10 GB。12 GB显卡可以运行，但长上下文的余量有限；16 GB则较为宽裕。',
+          },
           {
             q: 'Qwen2.5-Coder 14B 能在8 GB VRAM 上运行吗？',
             a: '不能可靠运行。Q4_K_M 下模型需要约10 GB VRAM。使用 Q3_K_M 可以勉强塞入8 GB，但质量下降明显。8 GB VRAM 的更好选择是 Qwen2.5-Coder 7B 或 DeepSeek Coder 7B。',
@@ -501,8 +603,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Model Comparisons',
     title: '¿El mejor modelo 14B para coding?',
-    seoTitle: 'Mejores modelos 14B para coding 2026 | PromptQuorum',
-    metaDescription: 'Qwen2.5-Coder 14B Instruct: 89,6 % HumanEval, ~10 GB de VRAM. DeepSeek-Coder-V2-Lite: 81,1 %. StarCoder2 15B: 67,7 % (cifras de Qwen). Respuesta rápida.',
+    seoTitle: 'Mejores modelos 14B 2026: coding y uso general',
+    metaDescription: 'Mejor modelo 14B para coding: Qwen2.5-Coder 14B, 89,6 % en HumanEval (cifra de Qwen) con ~10 GB de VRAM. Uso general: Qwen3 14B o Phi-4. Comparativa en Ollama.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-es.webp',
     publishDate: '2026-05-18',
     dateModified: '2026-10-17',
@@ -561,10 +663,30 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         image: '/images/best-14b-models-coding-vram-headroom-hero-es.webp',
         imageCaption: 'Margen de VRAM con Contexto Más Largo -- Uso de Q4_K_M según crece el contexto',
       },
+      general14b: {
+        title: 'Mejores modelos 14B de uso general: Qwen3 14B y Phi-4',
+        content: [
+          '<strong>Fuera del coding, los dos principales modelos 14B de uso general en Ollama son Qwen3 14B (qwen3:14b, descarga de 9,3 GB, contexto de 40K) y Phi-4 (phi4:14b, 9,1 GB, contexto de 16K).</strong> Ambos caben en una tarjeta de 12 GB con la cuantización Q4 por defecto, en la misma clase de VRAM que los modelos de coding anteriores.',
+          'Qwen3 14B encaja con contextos más largos y uso multilingüe amplio; Phi-4 apunta a tareas de razonamiento y matemáticas. Para código puro, los modelos especializados anteriores siguen liderando. No hemos hecho un benchmark directo de los modelos generales, así que no se indica ninguna puntuación.',
+        ],
+        columns: ['Modelo', 'Etiqueta de Ollama', 'Descarga', 'Contexto'],
+        rows: [
+          { 'Modelo': 'Qwen3 14B', 'Etiqueta de Ollama': 'qwen3:14b', 'Descarga': '9,3 GB', 'Contexto': '40K' },
+          { 'Modelo': 'Phi-4', 'Etiqueta de Ollama': 'phi4:14b', 'Descarga': '9,1 GB', 'Contexto': '16K' },
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Respuestas rápidas sobre modelos de coding 14B',
         faqs: [
+          {
+            q: '¿Cuál es el mejor modelo 14B en general?',
+            a: 'No hay un único ganador. Qwen2.5-Coder 14B lidera en coding; para chat general y razonamiento, Qwen3 14B y Phi-4 son las opciones principales en Ollama, de unos 9 GB cada uno.',
+          },
+          {
+            q: '¿Cuánta VRAM necesita un modelo 14B?',
+            a: 'Unos 9–10 GB con cuantización Q4. Una tarjeta de 12 GB lo ejecuta con poco margen para contexto largo; con 16 GB hay espacio cómodo.',
+          },
           {
             q: '¿Puede Qwen2.5-Coder 14B correr con 8 GB de VRAM?',
             a: 'No de forma fiable. En Q4_K_M el modelo necesita ~10 GB de VRAM. Podrías usar Q3_K_M para ajustarlo a 8 GB, pero la caída de calidad es notable. Una mejor opción para 8 GB de VRAM es Qwen2.5-Coder 7B o DeepSeek Coder 7B.',
@@ -588,8 +710,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   pt: {
     theme: 'Model Comparisons',
     title: '¿El mejor modelo 14B para coding?',
-    seoTitle: 'Melhores modelos 14B para programação 2026 | PromptQuorum',
-    metaDescription: 'Qwen2.5-Coder 14B Instruct: 89,6% HumanEval, ~10 GB de VRAM. DeepSeek-Coder-V2-Lite: 81,1%. StarCoder2 15B: 67,7% (números da Qwen). Resposta rápida.',
+    seoTitle: 'Melhores modelos 14B 2026: programação e uso geral',
+    metaDescription: 'Melhor modelo 14B para programar: Qwen2.5-Coder 14B, 89,6% no HumanEval (número da Qwen) com ~10 GB de VRAM. Uso geral: Qwen3 14B ou Phi-4. Comparativo no Ollama.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-pt.webp',
     publishDate: '2026-05-18',
     dateModified: '2026-10-17',
@@ -648,10 +770,30 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         image: '/images/best-14b-models-coding-vram-headroom-hero-pt.webp',
         imageCaption: 'Margem de VRAM com Contexto Mais Longo -- Uso do Q4_K_M conforme o contexto cresce',
       },
+      general14b: {
+        title: 'Melhores modelos 14B de uso geral: Qwen3 14B e Phi-4',
+        content: [
+          '<strong>Fora da programação, os dois principais modelos 14B de uso geral no Ollama são o Qwen3 14B (qwen3:14b, download de 9,3 GB, contexto de 40K) e o Phi-4 (phi4:14b, 9,1 GB, contexto de 16K).</strong> Ambos cabem numa placa de 12 GB com a quantização Q4 padrão, na mesma classe de VRAM dos modelos de programação acima.',
+          'O Qwen3 14B serve para contextos mais longos e uso multilíngue amplo; o Phi-4 mira tarefas de raciocínio e matemática. Para código puro, os modelos especializados acima continuam na frente. Não fizemos um benchmark direto dos modelos gerais, por isso nenhuma pontuação é listada.',
+        ],
+        columns: ['Modelo', 'Tag do Ollama', 'Download', 'Contexto'],
+        rows: [
+          { 'Modelo': 'Qwen3 14B', 'Tag do Ollama': 'qwen3:14b', 'Download': '9,3 GB', 'Contexto': '40K' },
+          { 'Modelo': 'Phi-4', 'Tag do Ollama': 'phi4:14b', 'Download': '9,1 GB', 'Contexto': '16K' },
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Respostas rápidas sobre modelos de programação 14B',
         faqs: [
+          {
+            q: 'Qual é o melhor modelo 14B no geral?',
+            a: 'Não há um único vencedor. O Qwen2.5-Coder 14B lidera em programação; para chat geral e raciocínio, Qwen3 14B e Phi-4 são as principais opções no Ollama, com cerca de 9 GB cada.',
+          },
+          {
+            q: 'Quanta VRAM um modelo 14B precisa?',
+            a: 'Cerca de 9–10 GB com quantização Q4. Uma placa de 12 GB roda com pouca folga para contexto longo; com 16 GB há espaço confortável.',
+          },
           {
             q: 'O Qwen2.5-Coder 14B pode rodar com 8 GB de VRAM?',
             a: 'Não de forma confiável. Em Q4_K_M o modelo requer ~10 GB de VRAM. Você poderia usar Q3_K_M para encaixá-lo em 8 GB, mas a queda de qualidade é perceptível. Uma opção melhor para 8 GB de VRAM é Qwen2.5-Coder 7B ou DeepSeek Coder 7B.',
@@ -675,8 +817,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Model Comparisons',
     title: 'أفضل نموذج ⁨14B⁩ للبرمجة؟',
-    seoTitle: 'أفضل نماذج 14B للبرمجة 2026: مقارنة HumanEval',
-    metaDescription: 'Qwen2.5-Coder 14B Instruct: ‏89.6% في HumanEval، نحو 10 GB VRAM. DeepSeek-Coder-V2-Lite: ‏81.1%. StarCoder2 15B: ‏67.7% (أرقام Qwen). إجابة سريعة.',
+    seoTitle: 'أفضل نماذج ⁨14B⁩ لعام ⁨2026⁩: للبرمجة وللاستخدام العام',
+    metaDescription: 'أفضل نموذج ⁨14B⁩ للبرمجة هو ⁨Qwen2.5-Coder 14B⁩: ‏⁨89.6%⁩ على ⁨HumanEval⁩ بنحو ⁨10 GB VRAM⁩. للاستخدام العام: ⁨Qwen3 14B⁩ أو ⁨Phi-4⁩. مقارنة على ⁨Ollama⁩.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-ar.webp',
     publishDate: '2026-05-18',
     dateModified: '2026-10-17',
@@ -735,10 +877,30 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         image: '/images/best-14b-models-coding-vram-headroom-hero-ar.webp',
         imageCaption: 'هامش الذاكرة مع سياق أطول -- استخدام Q4_K_M مع نمو السياق',
       },
+      general14b: {
+        title: 'أفضل نماذج ⁨14B⁩ للاستخدام العام: ⁨Qwen3 14B⁩ و⁨Phi-4⁩',
+        content: [
+          '<strong>خارج البرمجة، أهم نموذجين عامين بحجم ⁨14B⁩ على ⁨Ollama⁩ هما ⁨Qwen3 14B⁩ (‏⁨qwen3:14b⁩، تنزيل ⁨9.3 GB⁩، سياق ⁨40K⁩) و⁨Phi-4⁩ (‏⁨phi4:14b⁩، ‏⁨9.1 GB⁩، سياق ⁨16K⁩).</strong> يتسع كلاهما في بطاقة ⁨12 GB⁩ بتكميم ⁨Q4⁩ الافتراضي، وفي فئة ⁨VRAM⁩ نفسها التي تنتمي إليها نماذج البرمجة أعلاه.',
+          'يناسب ⁨Qwen3 14B⁩ السياقات الأطول والاستخدام متعدد اللغات، بينما يستهدف ⁨Phi-4⁩ المهام الثقيلة في الاستدلال والرياضيات. وفي الكود الصرف تبقى النماذج المتخصصة أعلاه في الصدارة. لم نُجرِ اختبار مقارنة مباشرًا بين النماذج العامة، لذلك لا نذكر درجة هنا.',
+        ],
+        columns: ['النموذج', 'وسم Ollama', 'حجم التنزيل', 'السياق'],
+        rows: [
+          { 'النموذج': '⁨Qwen3 14B⁩', 'وسم Ollama': 'qwen3:14b', 'حجم التنزيل': '9.3 GB', 'السياق': '40K' },
+          { 'النموذج': '⁨Phi-4⁩', 'وسم Ollama': 'phi4:14b', 'حجم التنزيل': '9.1 GB', 'السياق': '16K' },
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'إجابات سريعة حول نماذج البرمجة 14B',
         faqs: [
+          {
+            q: 'ما أفضل نموذج 14B بشكل عام؟',
+            a: 'لا يوجد فائز واحد. يتصدر ⁨Qwen2.5-Coder 14B⁩ في البرمجة؛ أما للمحادثة العامة والاستدلال فالخياران الرئيسيان على ⁨Ollama⁩ هما ⁨Qwen3 14B⁩ و⁨Phi-4⁩، بحجم نحو ⁨9 GB⁩ لكل منهما.',
+          },
+          {
+            q: 'كم تحتاج نماذج 14B من VRAM؟',
+            a: 'نحو ⁨9–10 GB⁩ بتكميم ⁨Q4⁩. تعمل على بطاقة ⁨12 GB⁩ لكن مع هامش محدود للسياق الطويل؛ وتمنح ⁨16 GB⁩ مساحة مريحة.',
+          },
           {
             q: 'هل يمكن تشغيل Qwen2.5-Coder 14B بـ 8 GB من VRAM؟',
             a: 'ليس باستمرار. يحتاج النموذج عند Q4_K_M إلى ~10 GB من VRAM. يمكنك استخدام Q3_K_M لضغطه في 8 GB، لكن تراجع الجودة ملحوظ. الخيار الأفضل لـ 8 GB من VRAM هو Qwen2.5-Coder 7B أو DeepSeek Coder 7B.',
@@ -762,8 +924,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ko: {
     theme: 'Model Comparisons',
     title: '코딩에 최적인 14B 모델은 무엇입니까?',
-    seoTitle: '코딩용 최적 14B 모델 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Qwen2.5-Coder 14B Instruct: HumanEval 89.6%, 약 10 GB VRAM. DeepSeek-Coder-V2-Lite: 81.1%. StarCoder2 15B: 67.7%(Qwen 발표). 간단 답변.',
+    seoTitle: '2026 최고의 14B 모델: 코딩·범용 추천 비교',
+    metaDescription: '코딩용 최고의 14B 모델은 Qwen2.5-Coder 14B: HumanEval 89.6%(Qwen 발표), VRAM 약 10 GB. 범용은 Qwen3 14B 또는 Phi-4. Ollama 기준 비교.',
     heroImage: '/images/best-14b-models-coding-humaneval-comparison-hero-ko.webp',
     publishDate: '2026-05-18',
     dateModified: '2026-10-17',
@@ -832,10 +994,30 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         image: '/images/best-14b-models-coding-vram-headroom-hero-ko.webp',
         imageCaption: '더 긴 컨텍스트에서의 VRAM 여유 공간 -- 컨텍스트 증가에 따른 Q4_K_M 사용량',
       },
+      general14b: {
+        title: '범용 14B 모델 추천: Qwen3 14B와 Phi-4',
+        content: [
+          '<strong>코딩 외 용도에서 Ollama의 주요 범용 14B 모델은 Qwen3 14B(qwen3:14b, 다운로드 9.3 GB, 컨텍스트 40K)와 Phi-4(phi4:14b, 9.1 GB, 컨텍스트 16K)입니다.</strong> 두 모델 모두 기본 Q4 양자화에서 12 GB 카드에 들어가며, 위의 코딩 모델과 같은 VRAM 구간입니다.',
+          'Qwen3 14B는 긴 컨텍스트와 폭넓은 다국어 사용에 적합하고, Phi-4는 추론·수학 중심 프롬프트를 겨냥합니다. 순수 코드에서는 위의 전용 모델이 여전히 앞섭니다. 범용 모델끼리의 직접 벤치마크는 수행하지 않아 점수는 싣지 않았습니다.',
+        ],
+        columns: ['모델', 'Ollama 태그', '다운로드', '컨텍스트'],
+        rows: [
+          { '모델': 'Qwen3 14B', 'Ollama 태그': 'qwen3:14b', '다운로드': '9.3 GB', '컨텍스트': '40K' },
+          { '모델': 'Phi-4', 'Ollama 태그': 'phi4:14b', '다운로드': '9.1 GB', '컨텍스트': '16K' },
+        ],
+      },
       faq: {
         id: 'faq',
         title: '14B 코딩 모델에 관한 빠른 답변',
         faqs: [
+          {
+            q: '전반적으로 가장 좋은 14B 모델은?',
+            a: '단일 승자는 없습니다. 코딩은 Qwen2.5-Coder 14B가 앞서고, 일반 대화와 추론은 Ollama에서 Qwen3 14B와 Phi-4가 주요 선택지이며 각각 약 9 GB입니다.',
+          },
+          {
+            q: '14B 모델에는 VRAM이 얼마나 필요한가요?',
+            a: 'Q4 양자화 기준 약 9–10 GB입니다. 12 GB 카드에서 실행되지만 긴 컨텍스트 여유는 적고, 16 GB면 넉넉합니다.',
+          },
           {
             q: 'Qwen2.5-Coder 14B를 8 GB VRAM에서 실행할 수 있습니까?',
             a: '안정적으로는 불가능합니다. Q4_K_M에서 모델은 ~10 GB VRAM이 필요합니다. Q3_K_M을 사용하면 8 GB에 넣을 수 있지만 품질 저하가 눈에 띕니다. 8 GB VRAM에는 Qwen2.5-Coder 7B 또는 DeepSeek Coder 7B가 더 나은 선택입니다.',
