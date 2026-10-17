@@ -54,6 +54,7 @@ import { article as a_tina_review } from './articles/tina-review'
 import { article as a_return_editor_review } from './articles/return-editor-review'
 import { article as a_mlxhub_review } from './articles/mlxhub-review'
 import { article as a_local_ai_chat_pocket_review } from './articles/local-ai-chat-pocket-review'
+import { article as a_pixlstash_review } from './articles/pixlstash-review'
 import { article as a_anyllm_review } from './articles/anyllm-review'
 import { article as a_ollama_local_ai_review } from './articles/ollama-local-ai-review'
 import { article as a_comfyui_review } from './articles/comfyui-review'
@@ -650,6 +651,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'return-editor-review':                          a_return_editor_review,
   'mlxhub-review':                                 a_mlxhub_review,
   'local-ai-chat-pocket-review':                   a_local_ai_chat_pocket_review,
+  'pixlstash-review':                              a_pixlstash_review,
   'anyllm-review':                                 a_anyllm_review,
   'ollama-local-ai-review':                        a_ollama_local_ai_review,
   // ComfyUI review — 2026-09-06

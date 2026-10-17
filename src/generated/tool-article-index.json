@@ -6792,7 +6792,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 22,
     "capped": true
   },
   "AUTOMATIC1111": {
@@ -10690,7 +10690,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 195,
+    "totalCount": 196,
     "capped": true
   },
   "Qdrant": {
@@ -11575,6 +11575,20 @@
         "title": "Local AI Chat Pocket Review: Offline LLM and Image Chat for iPhone and iPad",
         "url": "/power-local-llm/local-ai-chat-pocket-review",
         "dateModified": "2026-10-06",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "PixlStash": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pixlstash-review",
+        "title": "PixlStash Review: Self-Hosted Image Library Manager with Local AI Tagging",
+        "url": "/power-local-llm/pixlstash-review",
+        "dateModified": "2026-10-17",
         "tier": "about"
       }
     ],

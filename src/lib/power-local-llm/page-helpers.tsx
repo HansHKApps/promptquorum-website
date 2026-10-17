@@ -1161,6 +1161,7 @@ const HUB_THEMES: Array<{
       'local-ai-image-generation-vs-cloud',
       'automatic1111-review',
       'comfyui-review',
+      'pixlstash-review',
       'controlnet-review',
       'draw-things-review',
       'fooocus-review',
