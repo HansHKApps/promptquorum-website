@@ -348,7 +348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Related Reading',
           items: [
             '[AMD Ryzen AI Max+ Mini PCs (2026)](/local-llms/best-amd-mini-pc-local-llm-2026) — Fourth hardware category: iGPU + NPU in compact form factor.',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Full hardware recommendations for every budget tier.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — Full hardware recommendations for every budget tier.',
             '[Best GPUs For Local LLMs](/local-llms/best-gpus-for-local-llms) — GPU selection guide with VRAM benchmarks.',
             '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) — Power draw and cooling requirements by hardware.',
             '[How Much VRAM Do You Need for Local LLMs?](/local-llms/how-much-vram-local-llm) — VRAM requirements by model size and quantization level.',
@@ -649,7 +649,7 @@ schema: {
           title: 'Lecturas relacionadas',
           items: [
             '[Mini PCs AMD Ryzen AI Max+ (2026)](/es/local-llms/best-amd-mini-pc-local-llm-2026) — Cuarta categoría de hardware: iGPU + NPU en factor de forma compacto.',
-            '[Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026) — Recomendaciones completas de hardware para todos los niveles de presupuesto.',
+            '[Guía de hardware para LLMs locales](/es/local-llms/local-llm-hardware-guide) — Recomendaciones completas de hardware para todos los niveles de presupuesto.',
             '[Las mejores GPU para LLMs locales](/es/local-llms/best-gpus-for-local-llms) — Guía de selección de GPU con benchmarks de VRAM.',
             '[Consumo energético de LLMs locales](/es/local-llms/local-llm-power-consumption) — Consumo y requisitos de refrigeración por hardware.',
             '[¿Cuánta VRAM necesitas para LLMs locales?](/es/local-llms/how-much-vram-local-llm) — Requisitos de VRAM por tamaño de modelo y nivel de cuantización.',
@@ -955,7 +955,7 @@ schema: {
           title: 'قراءات ذات صلة',
           items: [
             '[أجهزة Mini PC من AMD Ryzen AI Max+ (2026)](/ar/local-llms/best-amd-mini-pc-local-llm-2026) — فئة أجهزة رابعة: iGPU + NPU بحجم مدمج.',
-            '[دليل الأجهزة لنماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) — توصيات أجهزة كاملة لجميع مستويات الميزانية.',
+            '[دليل الأجهزة لنماذج LLM المحلية](/ar/local-llms/local-llm-hardware-guide) — توصيات أجهزة كاملة لجميع مستويات الميزانية.',
             '[أفضل GPU لنماذج LLM المحلية](/ar/local-llms/best-gpus-for-local-llms) — دليل اختيار GPU مع معايير VRAM.',
             '[استهلاك الطاقة لنماذج LLM المحلية](/ar/local-llms/local-llm-power-consumption) — الاستهلاك ومتطلبات التبريد حسب الجهاز.',
             '[كم تحتاج لنماذج LLM المحلية من VRAM؟](/ar/local-llms/how-much-vram-local-llm) — متطلبات VRAM حسب حجم النموذج ومستوى التكميم.',
@@ -1529,7 +1529,7 @@ schema: {
           id: 'related-reading',
           title: 'Empfohlene Lektüre',
           items: [
-            '[Leitfaden zur lokalen LLM-Hardware 2026](/de/local-llms/local-llm-hardware-guide-2026) — Vollständige Hardware-Empfehlungen für jede Budgetklasse.',
+            '[Leitfaden zur lokalen LLM-Hardware](/de/local-llms/local-llm-hardware-guide) — Vollständige Hardware-Empfehlungen für jede Budgetklasse.',
             '[Die besten GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms) — GPU-Auswahlhandbuch mit VRAM-Benchmarks.',
             '[Stromverbrauch lokaler LLMs](/de/local-llms/local-llm-power-consumption) — Stromverbrauch und Kühlungsanforderungen nach Hardware.',
             '[Wie viel VRAM benötigen Sie für lokale LLMs?](/de/local-llms/how-much-vram-local-llm) — VRAM-Anforderungen nach Modellgröße und Quantisierungslevel.',
@@ -1831,7 +1831,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures Recommandées',
           items: [
-            '[Guide du Matériel LLM Local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Recommandations matérielles complètes pour tous les niveaux de budget.',
+            '[Guide du Matériel LLM Local](/fr/local-llms/local-llm-hardware-guide) — Recommandations matérielles complètes pour tous les niveaux de budget.',
             '[Meilleurs GPU pour les LLM Locaux](/fr/local-llms/best-gpus-for-local-llms) — Guide de sélection GPU avec benchmarks VRAM.',
             '[Consommation d\'Énergie des LLM Locaux](/fr/local-llms/local-llm-power-consumption) — Consommation d\'énergie et exigences de refroidissement par matériel.',
             '[Combien de VRAM Avez-vous Besoin pour les LLM Locaux ?](/fr/local-llms/how-much-vram-local-llm) — Exigences VRAM par taille de modèle et niveau de quantification.',
@@ -2648,7 +2648,7 @@ schema: {
           title: '관련 글',
           items: [
             '[AMD Ryzen AI Max+ 미니 PC (2026)](/ko/local-llms/best-amd-mini-pc-local-llm-2026) — 네 번째 하드웨어 카테고리: 소형 폼팩터의 iGPU + NPU.',
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 모든 예산 등급에 대한 전체 하드웨어 권장 사항.',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 모든 예산 등급에 대한 전체 하드웨어 권장 사항.',
             '[로컬 LLM 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms) — VRAM 벤치마크가 포함된 GPU 선택 가이드.',
             '[로컬 LLM 전력 소비](/ko/local-llms/local-llm-power-consumption) — 하드웨어별 전력 소비 및 냉각 요구 사항.',
             '[로컬 LLM에 얼마나 많은 VRAM이 필요합니까?](/ko/local-llms/how-much-vram-local-llm) — 모델 크기 및 양자화 수준별 VRAM 요구 사항.',

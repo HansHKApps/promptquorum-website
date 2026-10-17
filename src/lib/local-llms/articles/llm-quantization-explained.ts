@@ -427,7 +427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Related Reading',
           items: [
             '[VRAM Calculator for Local LLMs](/local-llms/vram-calculator-local-llm) -- Interactive calculator: compute exact VRAM for Q4/Q5/Q8 quantized models.',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- GPU, CPU, and RAM requirements for quantized models at every size.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- GPU, CPU, and RAM requirements for quantized models at every size.',
             '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) -- Top-ranked GGUF models by task with Q4_K_M download links.',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- Step-by-step setup to run Q4_K_M models with Ollama.',
             '[Long Context Local LLMs](/local-llms/long-context-local-llms) -- Models with 32K-128K context and their quantized RAM requirements.',
@@ -1132,7 +1132,7 @@ schema: {
           title: 'Lecturas relacionadas',
           items: [
             '[Calculadora de VRAM para LLMs locales](/es/local-llms/vram-calculator-local-llm) — Calculadora interactiva: calcula la VRAM exacta para modelos cuantizados Q4/Q5/Q8.',
-            '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — Requisitos de GPU, CPU y RAM para modelos cuantizados de todos los tamaños.',
+            '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) — Requisitos de GPU, CPU y RAM para modelos cuantizados de todos los tamaños.',
             '[Mejores LLMs locales 2026](/es/local-llms/best-local-llms-2026) — Modelos GGUF mejor valorados por tarea con enlaces de descarga Q4_K_M.',
             '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) — Configuración paso a paso para ejecutar modelos Q4_K_M con Ollama.',
             '[LLMs locales de contexto largo](/es/local-llms/long-context-local-llms) — Modelos con contexto de 32K-128K y sus requisitos de RAM cuantizada.',
@@ -1774,7 +1774,7 @@ schema: {
           title: 'قراءات ذات صلة',
           items: [
             '[حاسبة VRAM لنماذج LLM المحلية](/ar/local-llms/vram-calculator-local-llm) — حاسبة تفاعلية: احسب VRAM الدقيقة للنماذج المكمَّمة Q4/Q5/Q8.',
-            '[دليل عتاد تشغيل LLM محلياً 2026](/ar/local-llms/local-llm-hardware-guide-2026) — متطلبات GPU وCPU وRAM للنماذج المكمَّمة بجميع الأحجام.',
+            '[دليل عتاد تشغيل LLM محلياً](/ar/local-llms/local-llm-hardware-guide) — متطلبات GPU وCPU وRAM للنماذج المكمَّمة بجميع الأحجام.',
             '[أفضل نماذج LLM المحلية 2026](/ar/local-llms/best-local-llms-2026) — أعلى نماذج GGUF تقييماً حسب المهمة مع روابط تنزيل Q4_K_M.',
             '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) — إعداد خطوة بخطوة لتشغيل نماذج Q4_K_M مع Ollama.',
             '[نماذج LLM المحلية ذات السياق الطويل](/ar/local-llms/long-context-local-llms) — نماذج بسياق 32K-128K ومتطلبات RAM المكمَّمة لها.',
@@ -2578,7 +2578,7 @@ schema: {
           title: 'Leitura relacionada',
           items: [
             '[Calculadora de VRAM para LLMs locais](/pt/local-llms/vram-calculator-local-llm) — Calculadora interativa para VRAM exata com modelos Q4/Q5/Q8.',
-            '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — Requisitos de GPU, CPU e RAM para modelos quantizados em cada tamanho.',
+            '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) — Requisitos de GPU, CPU e RAM para modelos quantizados em cada tamanho.',
             '[Melhores LLMs locais 2026](/pt/local-llms/best-local-llms-2026) — Modelos GGUF mais bem avaliados por tarefa com links de download Q4_K_M.',
             '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) — Configuração passo a passo para executar modelos Q4_K_M com Ollama.',
             '[LLMs locais de contexto longo](/pt/local-llms/long-context-local-llms) — Modelos com contexto de 32K-128K e seus requisitos de RAM quantizada.',
@@ -2999,7 +2999,7 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Literatur',
           items: [
-            '[Leitfaden zur Hardware für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026) -- GPU-, CPU- und RAM-Anforderungen für quantisierte Modelle.',
+            '[Leitfaden zur Hardware für lokale LLMs](/de/local-llms/local-llm-hardware-guide) -- GPU-, CPU- und RAM-Anforderungen für quantisierte Modelle.',
             '[Beste lokale LLM-Modelle für Anfänger](/de/local-llms/best-beginner-local-llm-models) -- Wählen Sie Ihr erstes Modell mit Quantisierungsempfehlungen.',
             '[Kleine LLM-Modelle für Consumer-Hardware](/de/local-llms/small-local-llm-models) -- 3B und 7B Modelle, die auf Quantisierung laufen.',
             '[Ollama installieren](/de/local-llms/how-to-install-ollama) -- GGUF-quantisierte Modelle herunterladen und ausführen.',
@@ -3668,7 +3668,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures complémentaires',
           items: [
-            '[Guide du matériel LLM local](/fr/local-llms/local-llm-hardware-guide-2026) -- Exigences GPU, CPU et RAM pour les modèles quantifiés.',
+            '[Guide du matériel LLM local](/fr/local-llms/local-llm-hardware-guide) -- Exigences GPU, CPU et RAM pour les modèles quantifiés.',
             '[Meilleurs modèles LLM locaux pour débutants](/fr/local-llms/best-beginner-local-llm-models) -- Choisissez votre premier modèle avec recommandations de quantification.',
             '[Petits modèles LLM pour matériel grand public](/fr/local-llms/small-local-llm-models) -- Modèles 3B et 7B qui s\'exécutent sur quantification.',
             '[Installer Ollama](/fr/local-llms/how-to-install-ollama) -- Télécharger et exécuter les modèles quantifiés GGUF.',
@@ -4328,7 +4328,7 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) -- 量子化モデル実行のためのGPU、CPU、RAM要件。',
+            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) -- 量子化モデル実行のためのGPU、CPU、RAM要件。',
             '[初心者向けベストローカルLLMモデル](/ja/local-llms/best-beginner-local-llm-models) -- 量子化推奨事項付きで最初のモデルを選択。',
             '[コンシューマーハードウェア向け小規模LLMモデル](/ja/local-llms/small-local-llm-models) -- 量子化で実行される3Bおよび7Bモデル。',
             '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) -- GGUF量子化モデルのダウンロードと実行。',
@@ -5006,7 +5006,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)----运行量化模型的GPU、CPU和RAM要求。',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)----运行量化模型的GPU、CPU和RAM要求。',
             '[初学者最佳本地LLM模型](/zh/local-llms/best-beginner-local-llm-models)----选择您的第一个模型附带量化建议。',
             '[消费级硬件小型LLM模型](/zh/local-llms/small-local-llm-models)----在量化上运行的3B和7B模型。',
             '[如何安装Ollama](/zh/local-llms/how-to-install-ollama)----下载并运行GGUF量化模型。',
@@ -5918,7 +5918,7 @@ schema: {
           title: '관련 자료',
           items: [
             '[로컬 LLM용 VRAM 계산기](/ko/local-llms/vram-calculator-local-llm) — Q4/Q5/Q8 양자화 모델의 정확한 VRAM을 계산하는 인터랙티브 계산기.',
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 모든 크기에서 양자화 모델을 위한 GPU, CPU, RAM 요구 사항.',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 모든 크기에서 양자화 모델을 위한 GPU, CPU, RAM 요구 사항.',
             '[최고의 로컬 LLM 2026](/ko/local-llms/best-local-llms-2026) — Q4_K_M 다운로드 링크를 포함한 작업별 상위 GGUF 모델.',
             '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — Ollama로 Q4_K_M 모델을 실행하기 위한 단계별 설정.',
             '[긴 컨텍스트 로컬 LLM](/ko/local-llms/long-context-local-llms) — 32K–128K 컨텍스트를 가진 모델과 양자화된 RAM 요구 사항.',

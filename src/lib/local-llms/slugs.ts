@@ -55,7 +55,7 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'headless-local-llms':                  'headless-local-llms',
 
   // Hardware & Performance
-  'local-llm-hardware-guide-2026':        'local-llm-hardware-guide-2026',
+  'local-llm-hardware-guide':        'local-llm-hardware-guide',
   'vram-calculator-local-llm':            'vram-calculator-local-llm',
   'gpu-vs-cpu-vs-apple-silicon':          'gpu-vs-cpu-vs-apple-silicon',
   'apple-silicon-vs-nvidia-gpu-local-llm': 'apple-silicon-vs-nvidia-gpu-local-llm',

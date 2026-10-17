@@ -586,12 +586,12 @@ schema: {
           items: [
             '[Wie man LM Studio installiert](/de/local-llms/how-to-install-lm-studio) - Vollständige Installationsanleitung für macOS, Windows und Linux.',
             '[Wie viel VRAM für lokale LLMs](/de/local-llms/how-much-vram-local-llm) - Hardware-Anforderungen und VRAM-Planung für verschiedene Modellgrößen.',
-            '[Lokaler LLM Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026) - GPU-, CPU- und RAM-Empfehlungen für optimale Leistung.',
+            '[Lokaler LLM Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide) - GPU-, CPU- und RAM-Empfehlungen für optimale Leistung.',
             '[Qwen vs Llama vs Mistral](/de/local-llms/qwen-vs-llama-vs-mistral) - Modellvergleich und Qualitäts-Benchmarks zur Auswahl helfen.',
             '[Die besten lokalen LLMs zum Programmieren](/de/local-llms/best-local-llms-for-coding) - Spezialisierte Modell-Rankings für Code-Vervollständigung.',
             '[How to Install LM Studio](/de/local-llms/how-to-install-lm-studio) - Feature-Vergleich zwischen den zwei beliebtesten Tools.',
             '[Lokale LLM OpenAI-kompatible API](/de/local-llms/local-llm-openai-compatible-api) - So stellen Sie Ihr lokales Modell als API zur Verfügung.',
-            '[Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) - Alternative Inferenz-Engines und deren Abwägungen.',
+            '[Local LLM Hardware Guide](/de/local-llms/local-llm-hardware-guide) - Alternative Inferenz-Engines und deren Abwägungen.',
           ],
         },
         sources: {
@@ -976,12 +976,12 @@ schema: {
           items: [
             '[Comment installer LM Studio](/fr/local-llms/how-to-install-lm-studio) - Guide complet pour macOS, Windows et Linux.',
             '[Combien VRAM pour LLMs locaux](/fr/local-llms/how-much-vram-local-llm) - Besoins hardware et planification VRAM pour différentes tailles modèles.',
-            '[Guide hardware LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) - Recommandations GPU, CPU, RAM pour performance optimale.',
+            '[Guide hardware LLM local](/fr/local-llms/local-llm-hardware-guide) - Recommandations GPU, CPU, RAM pour performance optimale.',
             '[Qwen vs Llama vs Mistral](/fr/local-llms/qwen-vs-llama-vs-mistral) - Comparaison modèles et benchmarks qualité pour choisir.',
             '[Meilleurs LLMs locaux pour programmation](/fr/local-llms/best-local-llms-for-coding) - Classements modèles spécialisés pour complétion code.',
             '[How to Install LM Studio](/fr/local-llms/how-to-install-lm-studio) - Comparaison fonctionnalités entre deux outils populaires.',
             '[API locale LLM compatible OpenAI](/fr/local-llms/local-llm-openai-compatible-api) - Comment exposer votre modèle local en tant qu\'API.',
-            '[Local LLM Hardware Guide 2026](/fr/local-llms/local-llm-hardware-guide-2026) - Moteurs inférence alternatifs et compromis.',
+            '[Local LLM Hardware Guide](/fr/local-llms/local-llm-hardware-guide) - Moteurs inférence alternatifs et compromis.',
           ],
         },
         sources: {

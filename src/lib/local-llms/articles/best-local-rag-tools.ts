@@ -1433,7 +1433,7 @@ schema: {
           items: [
             '[ローカルLLMの完全ガイド](/ja/local-llms/what-are-local-llms) -- ローカルLLMの基礎とセットアップ。',
             '[Ollamaコマンドガイド](/ja/local-llms/ollama-command-guide) -- Ollamaのセットアップと使用方法。',
-            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) -- GPU選択と本番環境セットアップ。',
+            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) -- GPU選択と本番環境セットアップ。',
             '[LM Studioの詳細機能](/ja/local-llms/lm-studio-advanced-features) -- 高度なLLM実験とプロンプトエンジニアリング。',
             '[LlamaIndexレビュー：コードファーストRAGフレームワーク](/ja/power-local-llm/llamaindex-rag-framework-review) -- LlamaIndexのアーキテクチャ、LlamaCloudの料金、動作するコード例を詳しく解説。',
           ],
@@ -1686,7 +1686,7 @@ schema: {
           items: [
             '[本地LLM完整指南](/zh/local-llms/what-are-local-llms) -- 本地LLM基础和设置。',
             '[Ollama命令指南](/zh/local-llms/ollama-command-guide) -- Ollama设置和使用。',
-            '[2026年本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) -- GPU选择和生产部署。',
+            '[年本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) -- GPU选择和生产部署。',
             '[LM Studio高级功能](/zh/local-llms/lm-studio-advanced-features) -- 高级LLM实验和提示工程。',
             '[LlamaIndex评测：代码优先的RAG框架](/zh/power-local-llm/llamaindex-rag-framework-review) -- 深入解析LlamaIndex的架构、LlamaCloud定价与可运行代码示例。',
           ],

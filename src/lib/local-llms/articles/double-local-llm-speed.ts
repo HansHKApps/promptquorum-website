@@ -176,7 +176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Related Reading',
           items: [
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Engine comparison.',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- Hardware tuning.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- Hardware tuning.',
             '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) -- Scaling techniques.',
           ],
         },
@@ -471,7 +471,7 @@ schema: {
           title: 'Lectura relacionada',
           items: [
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/es/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Comparación de motores.',
-            '[Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026) -- Ajuste de hardware.',
+            '[Guía de hardware para LLMs locales](/es/local-llms/local-llm-hardware-guide) -- Ajuste de hardware.',
             '[LLMs locales con múltiples GPUs](/es/local-llms/multi-gpu-local-llms) -- Técnicas de escalado.',
           ],
         },
@@ -767,7 +767,7 @@ schema: {
           title: 'قراءات ذات صلة',
           items: [
             '[Text-Generation-WebUI مقابل vLLM مقابل llama.cpp](/ar/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- مقارنة المحركات.',
-            '[دليل عتاد نماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- ضبط العتاد.',
+            '[دليل عتاد نماذج LLM المحلية](/ar/local-llms/local-llm-hardware-guide) -- ضبط العتاد.',
             '[نماذج LLM المحلية بوحدات GPU متعددة](/ar/local-llms/multi-gpu-local-llms) -- تقنيات التوسيع.',
           ],
         },
@@ -1212,7 +1212,7 @@ schema: {
           title: 'Weiterführende Links',
           items: [
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/de/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Engine-Vergleich.',
-            '[Lokaler LLM Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026) -- Hardware-Tuning.',
+            '[Lokaler LLM Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide) -- Hardware-Tuning.',
             '[Multi-GPU Lokale LLMs](/de/local-llms/multi-gpu-local-llms) -- Skalierungstechniken.',
           ],
         },
@@ -1541,7 +1541,7 @@ schema: {
           title: 'Lecture complémentaire',
           items: [
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/fr/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Comparaison des moteurs.',
-            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Réglage matériel.',
+            '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) -- Réglage matériel.',
             '[LLM locaux multi-GPU](/fr/local-llms/multi-gpu-local-llms) -- Techniques de mise à l\'échelle.',
           ],
         },
@@ -1845,7 +1845,7 @@ schema: {
           title: '関連記事',
           items: [
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/ja/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- エンジン比較。',
-            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) -- ハードウェアチューニング。',
+            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) -- ハードウェアチューニング。',
             '[マルチGPUローカルLLM](/ja/local-llms/multi-gpu-local-llms) -- スケーリング技術。',
           ],
         },
@@ -2140,7 +2140,7 @@ schema: {
           title: '延伸阅读',
           items: [
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/zh/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 推理引擎对比。',
-            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) -- 硬件调优。',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) -- 硬件调优。',
             '[多GPU本地LLM](/zh/local-llms/multi-gpu-local-llms) -- 扩展技术。',
           ],
         },
@@ -2465,7 +2465,7 @@ schema: {
           title: '관련 읽을거리',
           items: [
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/ko/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 엔진 비교.',
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 하드웨어 튜닝.',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) -- 하드웨어 튜닝.',
             '[멀티 GPU 로컬 LLM](/ko/local-llms/multi-gpu-local-llms) -- 확장 기법.',
           ],
         },

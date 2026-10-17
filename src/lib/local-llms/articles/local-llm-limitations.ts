@@ -383,7 +383,7 @@ schema: {
         hardware: {
           title: 'What Hardware Do You Need to Run Local LLMs?',
           content: [
-            '**Running a capable local model (13B+) requires hardware that not every user has.** The minimum for a genuinely useful local LLM experience -- matching GPT-5.6 Luna quality -- is 16 GB RAM and a modern CPU or Apple Silicon chip. This rules out roughly half of consumer laptops currently in use. For a detailed breakdown and VRAM calculations, see [Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026).',
+            '**Running a capable local model (13B+) requires hardware that not every user has.** The minimum for a genuinely useful local LLM experience -- matching GPT-5.6 Luna quality -- is 16 GB RAM and a modern CPU or Apple Silicon chip. This rules out roughly half of consumer laptops currently in use. For a detailed breakdown and VRAM calculations, see [Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide).',
             'Matching frontier model quality locally requires a 70B model, which demands 40-48 GB of RAM -- only available on high-end workstations or Mac Studio / Mac Pro with 64+ GB unified memory. If your hardware is constrained, cloud APIs provide better quality at lower setup cost.',
             'Apple\'s August 2026 Mac Studio refresh (M5 Max and M5 Ultra, shipping September 22, 2026) raised the top-end unified memory ceiling from 192 GB to 512 GB. That 512 GB M5 Ultra configuration is a $10,000+ extreme config for running very large models locally, not the practical mainstream option -- for running a 70B model at full quality, the base M5 Max (from $2,499, up to 128 GB) is the realistic choice.',
             '**CPU-only (no GPU): best models for laptops without a dedicated GPU.** Phi-4 (14B, Q4) is the strongest reasoning model that runs at a usable 4–8 tok/s on a modern Intel or AMD laptop CPU with 16 GB RAM. Qwen3 1.7B and Llama 3.1 8B Q4 are also practical at 5–10 tok/s CPU-only. Apple Silicon (M-series) is the exception — the unified memory architecture runs at 45–120 tok/s on the same model sizes that a PC CPU would run at 5 tok/s, making it far more practical for CPU-only local inference.',
@@ -600,7 +600,7 @@ schema: {
           title: 'Common Mistakes Regarding LLM Limitations',
           items: [
             '**Expecting 7B models to match GPT-5.6:** They are 10–20% lower on reasoning. HumanEval: local 7B scores 45–55% vs GPT-5.6\'s 90%. Use 70B locally or cloud for complex tasks.',
-            '**Ignoring hardware limits:** 16 GB RAM is the minimum for useful models. Below that, quality degrades significantly. Check [hardware requirements](/local-llms/local-llm-hardware-guide-2026) before starting.',
+            '**Ignoring hardware limits:** 16 GB RAM is the minimum for useful models. Below that, quality degrades significantly. Check [hardware requirements](/local-llms/local-llm-hardware-guide) before starting.',
             '**Assuming local = faster:** CPU inference is 4–10× slower (10–25 tok/sec vs 80–150 tok/sec cloud). Requires $2,000–$2,600 GPU to match cloud speed.',
             '**Underestimating setup time:** Local setup takes 20–40 minutes. Cloud is 5 minutes. Add ongoing maintenance (updates, drivers) to your local cost calculation.',
           ],
@@ -878,7 +878,7 @@ schema: {
         hardware: {
           title: '¿Qué hardware necesitas para ejecutar LLMs locales?',
           content: [
-            '**Ejecutar un modelo local capaz (13B+) requiere hardware que no todos los usuarios tienen.** El mínimo para una experiencia local genuinamente útil — igualando la calidad de GPT-5.6 Luna — es 16 GB de RAM y una CPU moderna o chip Apple Silicon. Esto excluye a aproximadamente la mitad de los laptops de consumo actualmente en uso. Para un desglose detallado y cálculos de VRAM, consulta la [Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026).',
+            '**Ejecutar un modelo local capaz (13B+) requiere hardware que no todos los usuarios tienen.** El mínimo para una experiencia local genuinamente útil — igualando la calidad de GPT-5.6 Luna — es 16 GB de RAM y una CPU moderna o chip Apple Silicon. Esto excluye a aproximadamente la mitad de los laptops de consumo actualmente en uso. Para un desglose detallado y cálculos de VRAM, consulta la [Guía de hardware para LLMs locales](/es/local-llms/local-llm-hardware-guide).',
             'Igualar la calidad de los modelos de última generación localmente requiere un modelo 70B, que demanda 40-48 GB de RAM — solo disponible en estaciones de trabajo de alta gama o Mac Studio / Mac Pro con 64+ GB de memoria unificada. Si tu hardware es limitado, las APIs en la nube ofrecen mejor calidad a un menor costo de configuración.',
             'La actualización de Mac Studio de Apple de agosto de 2026 (M5 Max y M5 Ultra, disponibles desde el 22 de septiembre de 2026) elevó el límite superior de memoria unificada de 192 GB a 512 GB. Esa configuración de 512 GB del M5 Ultra es una config extrema de más de $10,000, no la opción práctica habitual — para ejecutar un modelo 70B con calidad completa, el M5 Max base (desde $2,499, hasta 128 GB) es la opción realista.',
           ],
@@ -1094,7 +1094,7 @@ schema: {
           title: 'Errores comunes sobre las limitaciones de los LLMs',
           items: [
             '**Esperar que los modelos 7B igualen a GPT-5.6:** Son un 10–20% inferiores en razonamiento. HumanEval: los 7B locales puntúan 45–55% vs el 90% de GPT-5.6. Usa 70B localmente o la nube para tareas complejas.',
-            '**Ignorar los límites del hardware:** 16 GB de RAM es el mínimo para modelos útiles. Por debajo de eso, la calidad se degrada significativamente. Verifica los [requisitos de hardware](/es/local-llms/local-llm-hardware-guide-2026) antes de empezar.',
+            '**Ignorar los límites del hardware:** 16 GB de RAM es el mínimo para modelos útiles. Por debajo de eso, la calidad se degrada significativamente. Verifica los [requisitos de hardware](/es/local-llms/local-llm-hardware-guide) antes de empezar.',
             '**Asumir que local = más rápido:** La inferencia en CPU es 4–10× más lenta (10–25 tok/seg vs 80–150 tok/seg en la nube). Requiere una GPU de $1,600+ para igualar la velocidad de la nube.',
             '**Subestimar el tiempo de configuración:** La configuración local toma 20–40 minutos. La nube tarda 5 minutos. Añade el mantenimiento continuo (actualizaciones, drivers) a tu cálculo de costos local.',
           ],
@@ -1372,7 +1372,7 @@ schema: {
         hardware: {
           title: 'أي أجهزة تحتاج لتشغيل نماذج LLM المحلية؟',
           content: [
-            '**يتطلب تشغيل نموذج محلي قادر (13B+) أجهزة لا يمتلكها كل المستخدمين.** الحد الأدنى لتجربة محلية مفيدة فعلًا — مجارية لجودة GPT-5.6 Luna — هو 16 GB من RAM وCPU حديث أو شريحة Apple Silicon. يستبعد هذا نحو نصف لابتوبات المستهلك المستخدمة حاليًا. للتفصيل الكامل وحسابات VRAM، راجع [دليل أجهزة نماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026).',
+            '**يتطلب تشغيل نموذج محلي قادر (13B+) أجهزة لا يمتلكها كل المستخدمين.** الحد الأدنى لتجربة محلية مفيدة فعلًا — مجارية لجودة GPT-5.6 Luna — هو 16 GB من RAM وCPU حديث أو شريحة Apple Silicon. يستبعد هذا نحو نصف لابتوبات المستهلك المستخدمة حاليًا. للتفصيل الكامل وحسابات VRAM، راجع [دليل أجهزة نماذج LLM المحلية](/ar/local-llms/local-llm-hardware-guide).',
             'تتطلب مجاراة جودة النماذج المتطورة محليًا نموذج 70B، الذي يستلزم 40-48 GB من RAM — متاح فقط في محطات عمل راقية أو Mac Studio / Mac Pro بذاكرة موحَّدة 64+ GB. إذا كانت أجهزتك محدودة، تقدم واجهات API السحابية جودة أفضل بتكلفة إعداد أقل.',
             'رفع تحديث Mac Studio من Apple في أغسطس 2026 (M5 Max وM5 Ultra، بدءًا من الشحن في 22 سبتمبر 2026) سقف الذاكرة الموحَّدة من 192 GB إلى 512 GB. تُعد فئة M5 Ultra بسعة 512 GB إعدادًا استثنائيًا يتجاوز سعره 10,000 دولار، وليست الخيار العملي السائد — لتشغيل نموذج 70B بجودة كاملة، يُعد طراز M5 Max الأساسي (بدءًا من 2,499 دولارًا، حتى 128 GB) الخيار الواقعي.',
           ],
@@ -1588,7 +1588,7 @@ schema: {
           title: 'الأخطاء الشائعة حول قيود نماذج LLM',
           items: [
             '**توقُّع أن تجاري نماذج 7B جودة GPT-5.6:** فهي أدنى بنسبة 10–20% في الاستدلال. HumanEval: تحصل نماذج 7B المحلية على 45–55% مقابل 90% لـ GPT-5.6. استخدم 70B محليًا أو السحابة للمهام المعقدة.',
-            '**تجاهل حدود الأجهزة:** 16 GB من RAM هي الحد الأدنى للنماذج المفيدة. دون ذلك، تتدهور الجودة بشكل ملحوظ. تحقق من [متطلبات الأجهزة](/ar/local-llms/local-llm-hardware-guide-2026) قبل البدء.',
+            '**تجاهل حدود الأجهزة:** 16 GB من RAM هي الحد الأدنى للنماذج المفيدة. دون ذلك، تتدهور الجودة بشكل ملحوظ. تحقق من [متطلبات الأجهزة](/ar/local-llms/local-llm-hardware-guide) قبل البدء.',
             '**افتراض أن المحلي = أسرع:** الاستدلال على CPU أبطأ بـ 4–10× (10–25 token/ثانية مقابل 80–150 token/ثانية في السحابة). يتطلب GPU بسعر $1,600+ لمجاراة سرعة السحابة.',
             '**التقليل من تقدير وقت الإعداد:** يستغرق الإعداد المحلي 20–40 دقيقة. تستغرق السحابة 5 دقائق. أضِف الصيانة المستمرة (تحديثات، برامج تشغيل) إلى حساب تكلفتك المحلية.',
           ],
@@ -4416,7 +4416,7 @@ schema: {
         hardware: {
           title: '로컬 LLM을 실행하려면 어떤 하드웨어가 필요합니까?',
           content: [
-            '**유능한 로컬 모델(13B 이상)을 실행하려면 모든 사용자가 갖추지 못한 하드웨어가 필요합니다.** GPT-5.6 Luna 품질에 맞는 진정으로 유용한 로컬 LLM 경험을 위한 최소 조건은 16GB RAM과 현대적인 CPU 또는 Apple Silicon 칩입니다. 이는 현재 사용 중인 소비자용 노트북의 약 절반을 제외합니다. 자세한 내용과 VRAM 계산은 [로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026)을 참조하십시오.',
+            '**유능한 로컬 모델(13B 이상)을 실행하려면 모든 사용자가 갖추지 못한 하드웨어가 필요합니다.** GPT-5.6 Luna 품질에 맞는 진정으로 유용한 로컬 LLM 경험을 위한 최소 조건은 16GB RAM과 현대적인 CPU 또는 Apple Silicon 칩입니다. 이는 현재 사용 중인 소비자용 노트북의 약 절반을 제외합니다. 자세한 내용과 VRAM 계산은 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)을 참조하십시오.',
             '로컬에서 최첨단 모델 품질에 맞추려면 70B 모델이 필요하며, 이는 40~48GB의 RAM을 요구합니다. 이는 고급 워크스테이션이나 64GB 이상의 통합 메모리가 있는 Mac Studio/Mac Pro에서만 가능합니다. 하드웨어가 제한적이라면, 클라우드 API가 더 낮은 설정 비용으로 더 나은 품질을 제공합니다.',
             'Apple의 2026년 8월 Mac Studio 업데이트(M5 Max, M5 Ultra, 2026년 9월 22일 출시)로 통합 메모리 상한이 192GB에서 512GB로 상향되었습니다. 512GB M5 Ultra 구성은 1만 달러 이상의 극단적인 구성이며 실용적인 주류 선택지는 아닙니다 — 70B 모델을 완전한 품질로 실행하려면 기본 M5 Max(2,499달러부터, 최대 128GB)가 현실적인 선택입니다.',
           ],
@@ -4632,7 +4632,7 @@ schema: {
           title: 'LLM 한계에 관한 일반적인 오해',
           items: [
             '**7B 모델이 GPT-5.6와 동등하다고 기대하는 것:** 추론에서 10~20% 더 낮습니다. HumanEval: 로컬 7B는 45~55%, GPT-5.6는 90%를 기록합니다. 복잡한 작업에는 로컬 70B 또는 클라우드를 사용하십시오.',
-            '**하드웨어 한계를 무시하는 것:** 유용한 모델에는 16GB RAM이 최소입니다. 그 이하에서는 품질이 크게 저하됩니다. 시작하기 전에 [하드웨어 요구사항](/ko/local-llms/local-llm-hardware-guide-2026)을 확인하십시오.',
+            '**하드웨어 한계를 무시하는 것:** 유용한 모델에는 16GB RAM이 최소입니다. 그 이하에서는 품질이 크게 저하됩니다. 시작하기 전에 [하드웨어 요구사항](/ko/local-llms/local-llm-hardware-guide)을 확인하십시오.',
             '**로컬 = 더 빠름이라고 가정하는 것:** CPU 추론은 4~10배 더 느립니다(초당 10~25 tok vs 클라우드 80~150 tok). 클라우드 속도에 맞추려면 $1,600 이상의 GPU가 필요합니다.',
             '**설정 시간을 과소평가하는 것:** 로컬 설정은 20~40분이 소요됩니다. 클라우드는 5분입니다. 로컬 비용 계산에 지속적인 유지 관리(업데이트, 드라이버)를 추가하십시오.',
           ],

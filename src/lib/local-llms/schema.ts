@@ -210,7 +210,7 @@ export function generateLocalLlmsJsonLd(lang: Language, canonicalUrl: string, la
       hasPart: [
         { '@type': 'WebPage', name: lang === 'es' ? 'Cómo instalar Ollama' : 'How to Install Ollama', url: `https://www.promptquorum.com${langPrefix}/local-llms/how-to-install-ollama` },
         { '@type': 'WebPage', name: lang === 'es' ? 'Mejores LLMs locales 2026' : 'Best Local LLMs 2026', url: `https://www.promptquorum.com${langPrefix}/local-llms/best-local-llms-2026` },
-        { '@type': 'WebPage', name: lang === 'es' ? 'Guía de hardware para LLM local 2026' : 'Local LLM Hardware Guide 2026', url: `https://www.promptquorum.com${langPrefix}/local-llms/local-llm-hardware-guide-2026` },
+        { '@type': 'WebPage', name: lang === 'es' ? 'Guía de hardware para LLM local 2026' : 'Local LLM Hardware Guide 2026', url: `https://www.promptquorum.com${langPrefix}/local-llms/local-llm-hardware-guide` },
         { '@type': 'WebPage', name: lang === 'es' ? 'Cuantización LLM explicada' : 'LLM Quantization Explained', url: `https://www.promptquorum.com${langPrefix}/local-llms/llm-quantization-explained` },
         { '@type': 'WebPage', name: lang === 'es' ? 'Ollama vs LM Studio' : 'Ollama vs LM Studio', url: `https://www.promptquorum.com${langPrefix}/local-llms/ollama-vs-lm-studio` },
       ],

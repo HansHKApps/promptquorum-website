@@ -354,7 +354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**The single-user laptop is the easiest pattern to make air-gapped and the hardest to scale.** Right for solo professionals and one-off matter reviews; wrong for anything that needs to outlive a single user or survive their departure.',
         items: [
-          '**Hardware** — a workstation-class laptop with full-disk encryption, a discrete GPU (or a recent unified-memory machine), and at least 32 GB of RAM. The model and embedder must fit in memory alongside the vector store cache. For hardware requirements and model selection by VRAM, see the [local LLM hardware guide](https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026).',
+          '**Hardware** — a workstation-class laptop with full-disk encryption, a discrete GPU (or a recent unified-memory machine), and at least 32 GB of RAM. The model and embedder must fit in memory alongside the vector store cache. For hardware requirements and model selection by VRAM, see the [local LLM hardware guide](https://www.promptquorum.com/local-llms/local-llm-hardware-guide).',
           '**Software** — a self-contained desktop RAG application running locally; an open-source LLM with weights downloaded once and pinned to a hash; an open-source embedder; a local vector store on the encrypted disk. For a comparison of open-source models suitable for local RAG, see [top open-source models for Ollama](https://www.promptquorum.com/local-llms/top-open-source-models-ollama).',
           '**Network posture** — air-gapped during work; reconnected only for explicit signed updates. Configure the OS firewall to drop all outbound connections by default and create explicit exceptions for the update workflow.',
           '**Document handling** — source documents on the encrypted disk; a separate per-matter folder structure; weekly encrypted backups to an external drive stored at a different location.',
@@ -973,7 +973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Der Einzelnutzer-Laptop ist das Muster, das sich am einfachsten air-gappen und am schwersten skalieren lässt.** Richtig für Einzelpersonen und einmalige Mandatsprüfungen; falsch für alles, was einen einzelnen Nutzer überdauern oder dessen Ausscheiden überstehen muss.',
         items: [
-          '**Hardware** — ein Workstation-Laptop mit Vollverschlüsselung der Festplatte, einer dedizierten GPU (oder einer aktuellen Unified-Memory-Maschine) und mindestens 32 GB RAM. Modell und Embedder müssen neben dem Vektorspeicher-Cache in den Speicher passen. Hardwareanforderungen und Modellauswahl nach VRAM finden Sie im [Hardware-Leitfaden für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026).',
+          '**Hardware** — ein Workstation-Laptop mit Vollverschlüsselung der Festplatte, einer dedizierten GPU (oder einer aktuellen Unified-Memory-Maschine) und mindestens 32 GB RAM. Modell und Embedder müssen neben dem Vektorspeicher-Cache in den Speicher passen. Hardwareanforderungen und Modellauswahl nach VRAM finden Sie im [Hardware-Leitfaden für lokale LLMs](/de/local-llms/local-llm-hardware-guide).',
           '**Software** — eine in sich geschlossene Desktop-RAG-Anwendung, die lokal läuft; ein Open-Source-LLM mit einmal heruntergeladenen und auf einen Hash fixierten Gewichten; ein Open-Source-Embedder; ein lokaler Vektorspeicher auf der verschlüsselten Festplatte. Einen Vergleich von Open-Source-Modellen, die für lokales RAG geeignet sind, finden Sie unter [Top-Open-Source-Modelle für Ollama](/de/local-llms/top-open-source-models-ollama).',
           '**Netzwerk-Posture** — air-gapped während der Arbeit; nur für ausdrücklich signierte Updates wieder verbunden. Konfigurieren Sie die OS-Firewall so, dass sie standardmäßig alle ausgehenden Verbindungen verwirft, und legen Sie explizite Ausnahmen für den Update-Workflow an.',
           '**Dokumentenhandhabung** — Quelldokumente auf der verschlüsselten Festplatte; eine separate Mandatsstruktur pro Mandat; wöchentliche verschlüsselte Backups auf einer externen Festplatte, die an einem anderen Ort gelagert wird.',
@@ -1601,7 +1601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Le laptop mono-utilisateur est le modèle le plus facile à air-gapper et le plus difficile à mettre à l'échelle.** Adapté pour les solos et les revues ponctuelles ; inadapté à tout ce qui doit survivre à un seul utilisateur ou à son départ.",
         items: [
-          '**Matériel** — un laptop classe workstation avec chiffrement disque complet, GPU dédié (ou machine récente à mémoire unifiée) et au moins 32 Go de RAM. Le modèle et l\'embedder doivent tenir en mémoire avec le cache du store vectoriel. Pour les besoins matériels et la sélection par VRAM, voir le [guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide-2026).',
+          '**Matériel** — un laptop classe workstation avec chiffrement disque complet, GPU dédié (ou machine récente à mémoire unifiée) et au moins 32 Go de RAM. Le modèle et l\'embedder doivent tenir en mémoire avec le cache du store vectoriel. Pour les besoins matériels et la sélection par VRAM, voir le [guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide).',
           "**Logiciel** — application RAG desktop autonome qui tourne en local ; LLM open source dont les poids sont téléchargés une fois et figés sur un hash ; embedder open source ; store vectoriel local sur le disque chiffré. Pour une comparaison de modèles open source adaptés au RAG local, voir [meilleurs modèles open source pour Ollama](/fr/local-llms/top-open-source-models-ollama).",
           "**Posture réseau** — air-gappé pendant le travail ; reconnecté uniquement pour des mises à jour signées explicites. Configurez le pare-feu OS pour rejeter par défaut toutes les connexions sortantes et créez des exceptions explicites pour le workflow de mise à jour.",
           '**Manipulation des documents** — documents source sur le disque chiffré ; arborescence par dossier dédié à chaque dossier ; sauvegardes hebdomadaires chiffrées sur disque externe stocké dans un autre lieu.',
@@ -2221,7 +2221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**単一ユーザーラップトップは最もAir-Gap化しやすく、最もスケールしにくいパターンです。** 単独プロフェッショナルや単発の案件レビューに最適、単一ユーザーを超えて存続する必要のあるものや退職に耐える必要のあるものには不適です。',
         items: [
-          '**ハードウェア** — フルディスク暗号化、専用GPU（または近年のunified-memoryマシン）、最低32 GBのRAMを備えたワークステーションクラスのラップトップ。モデルとembedderはベクトルストアキャッシュとともにメモリに収まる必要があります。VRAMによるハード要件とモデル選択については[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026)を参照してください。',
+          '**ハードウェア** — フルディスク暗号化、専用GPU（または近年のunified-memoryマシン）、最低32 GBのRAMを備えたワークステーションクラスのラップトップ。モデルとembedderはベクトルストアキャッシュとともにメモリに収まる必要があります。VRAMによるハード要件とモデル選択については[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)を参照してください。',
           '**ソフトウェア** — ローカルで動く自己完結型のデスクトップRAGアプリ、重みを一度ダウンロードしハッシュにピン留めしたOpen-source LLM、Open-source embedder、暗号化ディスク上のローカルベクトルストア。ローカルRAGに適したオープンソースモデルの比較は[Ollama向けトップオープンソースモデル](/ja/local-llms/top-open-source-models-ollama)を参照してください。',
           '**ネットワークposture** — 業務中はAir-Gap、明示的な署名付き更新時のみ再接続。OSファイアウォールをデフォルトで全外向きdrop、更新ワークフロー用に明示的例外を作成してください。',
           '**文書の取り扱い** — 暗号化ディスク上のソース文書、案件ごとの分離フォルダ構造、別場所保管の外付けディスクへの週次暗号化バックアップ。',
@@ -2848,7 +2848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**单用户笔记本是最容易做到空气隔离、最难规模化的模式。** 适合独立专业人员与单次案件评审；不适合任何需要超越单一用户或抗用户离职的场景。',
         items: [
-          '**硬件** — 工作站级笔记本，具备全盘加密、独立 GPU（或近年的统一内存机型）、至少 32 GB 内存。模型与嵌入器要与向量库缓存共驻内存。按 VRAM 选择硬件与模型可参考 [本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)。',
+          '**硬件** — 工作站级笔记本，具备全盘加密、独立 GPU（或近年的统一内存机型）、至少 32 GB 内存。模型与嵌入器要与向量库缓存共驻内存。按 VRAM 选择硬件与模型可参考 [本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide)。',
           '**软件** — 自包含的桌面 RAG 应用本地运行；权重一次性下载并固定哈希的开源 LLM；开源嵌入器；运行在加密磁盘上的本地向量库。适合本地 RAG 的开源模型对比见 [Ollama 顶级开源模型](/zh/local-llms/top-open-source-models-ollama)。',
           '**网络姿态** — 工作时空气隔离；仅在显式签名更新时重新连接。把 OS 防火墙配置为默认拒绝所有出站，并为更新流程开放显式例外。',
           '**文档处置** — 源文档放加密磁盘；按案件分目录；每周加密备份到异地外置驱动器。',
@@ -3475,7 +3475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**El portátil de un solo usuario es el patrón más fácil de hacer con air-gap y el más difícil de escalar.** Adecuado para profesionales individuales y revisiones puntuales; inadecuado para cualquier cosa que deba sobrevivir a un solo usuario o a su salida.',
         items: [
-          '**Hardware** — un portátil de categoría workstation con cifrado de disco completo, una GPU discreta (o una máquina reciente de memoria unificada) y al menos 32 GB de RAM. El modelo y el embedder deben caber en memoria junto con la caché del almacén vectorial. Para requisitos de hardware y selección de modelos por VRAM, consulta la [guía de hardware para LLM locales](https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026).',
+          '**Hardware** — un portátil de categoría workstation con cifrado de disco completo, una GPU discreta (o una máquina reciente de memoria unificada) y al menos 32 GB de RAM. El modelo y el embedder deben caber en memoria junto con la caché del almacén vectorial. Para requisitos de hardware y selección de modelos por VRAM, consulta la [guía de hardware para LLM locales](https://www.promptquorum.com/local-llms/local-llm-hardware-guide).',
           '**Software** — una aplicación RAG de escritorio autocontenida que se ejecuta localmente; un LLM de código abierto con pesos descargados una vez y fijados a un hash; un embedder de código abierto; un almacén vectorial local en el disco cifrado. Para una comparación de modelos de código abierto adecuados para RAG local, consulta [los mejores modelos de código abierto para Ollama](https://www.promptquorum.com/local-llms/top-open-source-models-ollama).',
           '**Postura de red** — con air-gap durante el trabajo; reconectado solo para actualizaciones firmadas explícitas. Configura el cortafuegos del SO para descartar todas las conexiones de salida por defecto y crea excepciones explícitas para el flujo de actualización.',
           '**Manejo de documentos** — documentos de origen en el disco cifrado; una estructura de carpetas por asunto; copias de seguridad semanales cifradas en un disco externo almacenado en un lugar diferente.',
@@ -4106,7 +4106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**단일 사용자 노트북은 air-gap 구성이 가장 쉽고 확장이 가장 어려운 패턴입니다.** 개인 전문가와 단발성 검토에는 적합하지만, 단일 사용자 또는 해당 사용자의 퇴사 이후에도 살아남아야 하는 것에는 부적합합니다.',
         items: [
-          '**하드웨어** — 전체 디스크 암호화, 독립 GPU(또는 최신 통합 메모리 머신), 최소 32GB RAM을 갖춘 워크스테이션급 노트북. 모델과 임베더는 벡터 저장소 캐시와 함께 메모리에 맞아야 합니다. 하드웨어 요건 및 VRAM별 모델 선택에 대해서는 [로컬 LLM 하드웨어 가이드](https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026)를 참조하십시오.',
+          '**하드웨어** — 전체 디스크 암호화, 독립 GPU(또는 최신 통합 메모리 머신), 최소 32GB RAM을 갖춘 워크스테이션급 노트북. 모델과 임베더는 벡터 저장소 캐시와 함께 메모리에 맞아야 합니다. 하드웨어 요건 및 VRAM별 모델 선택에 대해서는 [로컬 LLM 하드웨어 가이드](https://www.promptquorum.com/local-llms/local-llm-hardware-guide)를 참조하십시오.',
           '**소프트웨어** — 로컬에서 실행되는 자급자족 데스크톱 RAG 애플리케이션, 한 번 다운로드하여 해시에 고정된 오픈 소스 LLM, 오픈 소스 임베더, 암호화된 디스크의 로컬 벡터 저장소. 로컬 RAG에 적합한 오픈 소스 모델 비교는 [Ollama 최고의 오픈 소스 모델](https://www.promptquorum.com/local-llms/top-open-source-models-ollama)을 참조하십시오.',
           '**네트워크 자세** — 작업 중 air-gap 적용, 명시적인 서명된 업데이트를 위해서만 재연결. OS 방화벽을 모든 outbound 연결을 기본적으로 차단하도록 구성하고, 업데이트 흐름에 대해서만 명시적인 예외를 만드십시오.',
           '**문서 처리** — 암호화된 디스크의 출처 문서, 사안별 폴더 구조, 다른 위치에 보관된 외부 드라이브에 주간 암호화 백업.',
@@ -4748,7 +4748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**O notebook de usuário único é o padrão mais fácil de tornar air-gapped e o mais difícil de escalar.** Adequado para profissionais individuais e revisões pontuais; inadequado para qualquer coisa que precise sobreviver a um único usuário ou à sua saída.',
         items: [
-          '**Hardware** — um notebook de categoria workstation com criptografia de disco completo, uma GPU discreta (ou uma máquina recente de memória unificada) e ao menos 32 GB de RAM. O modelo e o embedder devem caber na memória junto com o cache do repositório vetorial. Para requisitos de hardware e seleção de modelos por VRAM, consulte o [guia de hardware para LLMs locais](https://www.promptquorum.com/pt/local-llms/local-llm-hardware-guide-2026).',
+          '**Hardware** — um notebook de categoria workstation com criptografia de disco completo, uma GPU discreta (ou uma máquina recente de memória unificada) e ao menos 32 GB de RAM. O modelo e o embedder devem caber na memória junto com o cache do repositório vetorial. Para requisitos de hardware e seleção de modelos por VRAM, consulte o [guia de hardware para LLMs locais](https://www.promptquorum.com/pt/local-llms/local-llm-hardware-guide).',
           '**Software** — uma aplicação RAG de desktop autocontida que roda localmente; um LLM de código aberto com pesos baixados uma vez e fixados a um hash; um embedder de código aberto; um repositório vetorial local no disco criptografado. Para uma comparação de modelos de código aberto adequados para RAG local, consulte [os melhores modelos de código aberto para Ollama](https://www.promptquorum.com/pt/local-llms/top-open-source-models-ollama).',
           '**Postura de rede** — air-gapped durante o trabalho; reconectado somente para atualizações assinadas explícitas. Configure o firewall do SO para descartar todas as conexões de saída por padrão e crie exceções explícitas para o fluxo de atualização.',
           '**Manuseio de documentos** — documentos de origem no disco criptografado; uma estrutura de pastas por caso; backups semanais criptografados em um disco externo armazenado em local diferente.',
@@ -5379,7 +5379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**الحاسوب المحمول لمستخدم واحد هو أسهل نمط لجعله معزولًا شبكيًا وأصعب نمط لتوسيع نطاقه.** مناسب للمهنيين الأفراد والمراجعات الفردية؛ وغير مناسب لأي شيء يجب أن يصمد بعد مستخدم واحد أو بعد مغادرته.',
         items: [
-          '**الأجهزة** — حاسوب محمول من فئة محطات العمل بتشفير قرص كامل، وبطاقة رسوميات منفصلة (أو جهاز حديث بذاكرة موحّدة)، و32 غيغابايت على الأقل من ذاكرة الوصول العشوائي. يجب أن يتسع النموذج والمُضمِّن في الذاكرة إلى جانب ذاكرة التخزين المؤقت لمخزن المتجهات. للاطلاع على متطلبات الأجهزة واختيار النماذج حسب ذاكرة الرسوميات، راجع [دليل الأجهزة لنماذج LLM المحلية](https://www.promptquorum.com/ar/local-llms/local-llm-hardware-guide-2026).',
+          '**الأجهزة** — حاسوب محمول من فئة محطات العمل بتشفير قرص كامل، وبطاقة رسوميات منفصلة (أو جهاز حديث بذاكرة موحّدة)، و32 غيغابايت على الأقل من ذاكرة الوصول العشوائي. يجب أن يتسع النموذج والمُضمِّن في الذاكرة إلى جانب ذاكرة التخزين المؤقت لمخزن المتجهات. للاطلاع على متطلبات الأجهزة واختيار النماذج حسب ذاكرة الرسوميات، راجع [دليل الأجهزة لنماذج LLM المحلية](https://www.promptquorum.com/ar/local-llms/local-llm-hardware-guide).',
           '**البرمجيات** — تطبيق RAG مكتبي مكتفٍ ذاتيًا يعمل محليًا؛ ونموذج LLM مفتوح المصدر بأوزان مُنزّلة مرة واحدة ومثبّتة على بصمة تجزئة؛ ومُضمِّن مفتوح المصدر؛ ومخزن متجهات محلي على القرص المشفّر. لمقارنة النماذج مفتوحة المصدر المناسبة لـ RAG المحلي، راجع [أفضل النماذج مفتوحة المصدر لـ Ollama](https://www.promptquorum.com/ar/local-llms/top-open-source-models-ollama).',
           '**وضع الشبكة** — معزول شبكيًا أثناء العمل؛ ويُعاد توصيله فقط لتحديثات موقّعة صريحة. اضبط جدار حماية نظام التشغيل على إسقاط جميع اتصالات الخروج افتراضيًا وأنشئ استثناءات صريحة لتدفق التحديث.',
           '**التعامل مع المستندات** — مستندات المصدر على القرص المشفّر؛ وبنية مجلدات لكل قضية؛ ونسخ احتياطية أسبوعية مشفّرة على قرص خارجي مخزّن في مكان مختلف.',

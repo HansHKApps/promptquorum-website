@@ -221,7 +221,7 @@ sections: {
           title: 'Related Reading',
           items: [
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) -- Why Q4_K_M is the default and how quantization affects RAM',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- Hardware requirements to run 7B–70B models',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- Hardware requirements to run 7B–70B models',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- Installation and setup guide',
             '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- Comparison of the two most popular local LLM tools',
             '[How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) -- Laptop-specific thermal and battery optimization',
@@ -564,7 +564,7 @@ schema: {
           title: 'Lectura relacionada',
           items: [
             '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) — Por qué Q4_K_M es el predeterminado y cómo la cuantización afecta la RAM',
-            '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — Requisitos de hardware para ejecutar modelos 7B–70B',
+            '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) — Requisitos de hardware para ejecutar modelos 7B–70B',
             '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) — Guía de instalación y configuración',
             '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) — Comparación de las dos herramientas de LLM local más populares',
             '[Cómo ejecutar LLM locales en un portátil](/es/local-llms/local-llm-on-laptop) — Optimización térmica y de batería específica para portátiles',
@@ -907,7 +907,7 @@ schema: {
           title: 'قراءات ذات صلة',
           items: [
             '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) -- لماذا Q4_K_M هو الافتراضي وكيف يؤثر التكميم في RAM',
-            '[دليل عتاد LLM المحلي 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- متطلبات العتاد لتشغيل نماذج 7B–70B',
+            '[دليل عتاد LLM المحلي](/ar/local-llms/local-llm-hardware-guide) -- متطلبات العتاد لتشغيل نماذج 7B–70B',
             '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- دليل التثبيت والإعداد',
             '[Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) -- مقارنة أشهر أداتين لـ LLM المحلي',
             '[كيفية تشغيل نماذج LLM المحلية على حاسوب محمول](/ar/local-llms/local-llm-on-laptop) -- تحسين حراري وبطارية خاص بالحواسيب المحمولة',
@@ -1252,7 +1252,7 @@ schema: {
           title: 'Leitura relacionada',
           items: [
             '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) -- Por que Q4_K_M é o padrão e como a quantização afeta a RAM',
-            '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) -- Requisitos de hardware para rodar modelos de 7B a 70B',
+            '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) -- Requisitos de hardware para rodar modelos de 7B a 70B',
             '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) -- Guia de instalação e configuração',
             '[Ollama vs. LM Studio](/pt/local-llms/ollama-vs-lm-studio) -- Comparação das duas ferramentas de LLM local mais populares',
             '[Como rodar LLMs locais em um notebook](/pt/local-llms/local-llm-on-laptop) -- Otimização térmica e de bateria específica para notebooks',
@@ -2022,7 +2022,7 @@ schema: {
           title: 'Lectures connexes',
           items: [
             '[Quantification LLM expliquée](/fr/local-llms/llm-quantization-explained) -- Pourquoi Q4_K_M est la valeur par défaut et comment la quantification affecte la RAM',
-            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Exigences matérielles pour exécuter des modèles 7B–70B',
+            '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) -- Exigences matérielles pour exécuter des modèles 7B–70B',
             '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) -- Guide d\'installation et de configuration',
             '[Ollama vs LM Studio](/fr/local-llms/ollama-vs-lm-studio) -- Comparaison des deux outils LLM locaux les plus populaires',
             '[Comment exécuter des LLMs locaux sur un portable](/fr/local-llms/local-llm-on-laptop) -- Optimisation thermique et batterie spécifique au portable',
@@ -2456,7 +2456,7 @@ schema: {
       title: '関連記事',
       items: [
         '[LLM量子化について説明](/ja/local-llms/llm-quantization-explained) — Q4_K_Mがデフォルトな理由と、量子化がRAMにどう影響するか',
-        '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — 7B–70Bモデルを実行するためのハードウェア要件',
+        '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — 7B–70Bモデルを実行するためのハードウェア要件',
         '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) — インストールとセットアップガイド',
         '[Ollama対LM Studio](/ja/local-llms/ollama-vs-lm-studio) — 2つの最も一般的なローカルLLMツールの比較',
         '[ラップトップでローカルLLMを実行する方法](/ja/local-llms/local-llm-on-laptop) — ラップトップ固有の熱とバッテリー最適化',
@@ -2831,7 +2831,7 @@ schema: {
       title: '相关阅读',
       items: [
         '[LLM 量化解释](/zh/local-llms/llm-quantization-explained) —— Q4_K_M 为什么是默认值以及量化如何影响 RAM',
-        '[本地 LLM 硬件指南 2026](/zh/local-llms/local-llm-hardware-guide-2026) —— 本地运行 7B–70B 模型的硬件需求',
+        '[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide) —— 本地运行 7B–70B 模型的硬件需求',
         '[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) —— 安装和设置指南',
         '[Ollama vs LM Studio](/zh/local-llms/ollama-vs-lm-studio) —— 两个最流行的本地 LLM 工具的比较',
         '[如何在笔记本电脑上运行本地 LLM](/zh/local-llms/local-llm-on-laptop) —— 笔记本电脑特定的热管理和电池优化',
@@ -3092,7 +3092,7 @@ schema: {
           title: '관련 자료',
           items: [
             '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — Q4_K_M이 기본값인 이유와 양자화가 RAM에 미치는 영향',
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 7B~70B 모델 실행을 위한 하드웨어 요구 사항',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 7B~70B 모델 실행을 위한 하드웨어 요구 사항',
             '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 설치 및 설정 가이드',
             '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio) — 가장 인기 있는 두 로컬 LLM 도구 비교',
             '[노트북에서 로컬 LLM 실행하기](/ko/local-llms/local-llm-on-laptop) — 노트북 특화 열 및 배터리 최적화',

@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- Ollama setup.',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Engine comparison.',
             '[Local LLM OpenAI-Compatible API](/local-llms/local-llm-openai-compatible-api) -- API documentation.',
-            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide-2026) -- Hardware requirements.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- Hardware requirements.',
           ],
         },
         sources: {
@@ -300,7 +300,7 @@ schema: {
             '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) -- Configuración de Ollama.',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/es/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Comparación de motores.',
             '[API local compatible con OpenAI](/es/local-llms/local-llm-openai-compatible-api) -- Documentación de la API.',
-            '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide-2026) -- Requisitos de hardware.',
+            '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) -- Requisitos de hardware.',
           ],
         },
         sources: {
@@ -480,7 +480,7 @@ schema: {
             '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- إعداد Ollama.',
             '[Text-Generation-WebUI مقابل vLLM مقابل llama.cpp](/ar/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- مقارنة المحركات.',
             '[API محلي متوافق مع OpenAI](/ar/local-llms/local-llm-openai-compatible-api) -- توثيق API.',
-            '[دليل الأجهزة لـ LLM محلي](/ar/local-llms/local-llm-hardware-guide-2026) -- متطلبات الأجهزة.',
+            '[دليل الأجهزة لـ LLM محلي](/ar/local-llms/local-llm-hardware-guide) -- متطلبات الأجهزة.',
           ],
         },
         sources: {
@@ -660,7 +660,7 @@ schema: {
             '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) -- Configuração do Ollama.',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/pt/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Comparação de motores.',
             '[API local compatível com OpenAI](/pt/local-llms/local-llm-openai-compatible-api) -- Documentação da API.',
-            '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide-2026) -- Requisitos de hardware.',
+            '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) -- Requisitos de hardware.',
           ],
         },
         sources: {
@@ -849,7 +849,7 @@ schema: {
             '[Ollama installieren](/de/local-llms/how-to-install-ollama) -- Ollama-Setup.',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/de/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Engine-Vergleich.',
             '[Local LLM OpenAI-kompatible API](/de/local-llms/local-llm-openai-compatible-api) -- API-Dokumentation.',
-            '[Local LLM Hardware Guide](/de/local-llms/local-llm-hardware-guide-2026) -- Hardware-Anforderungen.',
+            '[Local LLM Hardware Guide](/de/local-llms/local-llm-hardware-guide) -- Hardware-Anforderungen.',
           ],
         },
         sources: {
@@ -1021,7 +1021,7 @@ schema: {
             '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) -- Configuration d\'Ollama.',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/fr/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- Comparaison des moteurs.',
             '[API locale OpenAI-compatible](/fr/local-llms/local-llm-openai-compatible-api) -- Documentation de l\'API.',
-            '[Guide du matériel LLM local](/fr/local-llms/local-llm-hardware-guide-2026) -- Exigences en matériel.',
+            '[Guide du matériel LLM local](/fr/local-llms/local-llm-hardware-guide) -- Exigences en matériel.',
           ],
         },
         sources: {
@@ -1190,7 +1190,7 @@ schema: {
             '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) -- Ollamaセットアップ。',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/ja/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- エンジン比較。',
             '[Local LLM OpenAI互換API](/ja/local-llms/local-llm-openai-compatible-api) -- API ドキュメント。',
-            '[Local LLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) -- ハードウェア要件。',
+            '[Local LLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) -- ハードウェア要件。',
           ],
         },
         sources: {
@@ -1364,7 +1364,7 @@ schema: {
             '[如何安装Ollama](/zh/local-llms/how-to-install-ollama) -- Ollama设置。',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/zh/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 引擎比较。',
             '[本地LLM OpenAI兼容API](/zh/local-llms/local-llm-openai-compatible-api) -- API文档。',
-            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) -- 硬件要求。',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) -- 硬件要求。',
           ],
         },
         sources: {
@@ -1539,7 +1539,7 @@ schema: {
             '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- Ollama 설정.',
             '[Text-Generation-WebUI vs vLLM vs llama.cpp](/ko/local-llms/text-generation-webui-vs-vllm-vs-llamacpp) -- 엔진 비교.',
             '[로컬 LLM OpenAI 호환 API](/ko/local-llms/local-llm-openai-compatible-api) -- API 문서.',
-            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026) -- 하드웨어 요구 사항.',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) -- 하드웨어 요구 사항.',
           ],
         },
         sources: {

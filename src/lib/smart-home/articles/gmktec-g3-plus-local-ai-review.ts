@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Upgrading to 32 GB helps context length and model size more than raw token speed — memory bandwidth is unchanged, so throughput stays similar.',
           'No NPU and limited iGPU acceleration, so inference is entirely CPU-bound.',
           'For heavier local AI (vision, a fast 7B assistant), choose a Ryzen box instead — see the [Beelink SER8 review](/smart-home/beelink-ser8-local-ai-review).',
-          'See [how to install Ollama](/local-llms/how-to-install-ollama) to try a small model, and the [local LLM hardware guide](/local-llms/local-llm-hardware-guide-2026) for context.',
+          'See [how to install Ollama](/local-llms/how-to-install-ollama) to try a small model, and the [local LLM hardware guide](/local-llms/local-llm-hardware-guide) for context.',
         ],
         affiliateLinks: [
           { label: 'Check current price — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die Aufrüstung auf 32 GB hilft der Kontextlänge und Modellgröße mehr als der reinen Token-Geschwindigkeit — die Speicherbandbreite bleibt unverändert, der Durchsatz bleibt also ähnlich.',
           'Kein NPU und begrenzte iGPU-Beschleunigung, daher ist die Inferenz vollständig CPU-gebunden.',
           'Für anspruchsvollere lokale KI (Vision, ein schneller 7B-Assistent) wählen Sie stattdessen eine Ryzen-Box — siehe den [Beelink-SER8-Rezension](/de/smart-home/beelink-ser8-local-ai-review).',
-          'Siehe [wie man Ollama installiert](/de/local-llms/how-to-install-ollama), um ein kleines Modell auszuprobieren, und den [Hardware-Guide für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026) für den Kontext.',
+          'Siehe [wie man Ollama installiert](/de/local-llms/how-to-install-ollama), um ein kleines Modell auszuprobieren, und den [Hardware-Guide für lokale LLMs](/de/local-llms/local-llm-hardware-guide) für den Kontext.',
         ],
         affiliateLinks: [
           { label: 'Aktuellen Preis prüfen — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Passer à 32 Go aide surtout la longueur de contexte et la taille du modèle, pas la vitesse brute — la bande passante mémoire reste inchangée, donc le débit reste similaire.',
           'Pas de NPU et une accélération iGPU limitée : l\'inférence dépend entièrement du CPU.',
           'Pour une IA locale plus lourde (vision, un assistant 7B rapide), choisissez plutôt un boîtier Ryzen — voir le [test du Beelink SER8](/fr/smart-home/beelink-ser8-local-ai-review).',
-          'Consultez [comment installer Ollama](/fr/local-llms/how-to-install-ollama) pour essayer un petit modèle, et le [guide matériel des LLM locaux](/fr/local-llms/local-llm-hardware-guide-2026) pour le contexte.',
+          'Consultez [comment installer Ollama](/fr/local-llms/how-to-install-ollama) pour essayer un petit modèle, et le [guide matériel des LLM locaux](/fr/local-llms/local-llm-hardware-guide) pour le contexte.',
         ],
         affiliateLinks: [
           { label: 'Vérifier le prix actuel — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
@@ -1465,7 +1465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ampliar a 32 GB ayuda más a la longitud de contexto y al tamaño del modelo que a la velocidad bruta de tokens — el ancho de banda de memoria no cambia, así que el rendimiento se mantiene similar.',
           'Sin NPU y con aceleración iGPU limitada, así que la inferencia depende por completo de la CPU.',
           'Para IA local más exigente (visión, un asistente 7B rápido), elige una caja Ryzen en su lugar — consulta el [análisis del Beelink SER8](/es/smart-home/beelink-ser8-local-ai-review).',
-          'Consulta [cómo instalar Ollama](/es/local-llms/how-to-install-ollama) para probar un modelo pequeño, y la [guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide-2026) para más contexto.',
+          'Consulta [cómo instalar Ollama](/es/local-llms/how-to-install-ollama) para probar un modelo pequeño, y la [guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) para más contexto.',
         ],
         affiliateLinks: [
           { label: 'Consultar precio actual — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
@@ -1875,7 +1875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '32 GB への増設は、生の速度よりコンテキスト長やモデルサイズに効きます — メモリ帯域幅は変わらないため、スループットは同水準にとどまります。',
           'NPU がなく iGPU アクセラレーションも限定的なため、推論は完全に CPU 律速です。',
           'より重いローカルAI（ビジョン、高速な 7B アシスタント）には、代わりに Ryzen 機を選んでください — [Beelink SER8 レビュー](/ja/smart-home/beelink-ser8-local-ai-review) を参照。',
-          '小型モデルを試すには [Ollama のインストール方法](/ja/local-llms/how-to-install-ollama) を、背景には [ローカルLLM ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) を参照してください。',
+          '小型モデルを試すには [Ollama のインストール方法](/ja/local-llms/how-to-install-ollama) を、背景には [ローカルLLM ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) を参照してください。',
         ],
         affiliateLinks: [
           { label: '現在の価格を確認 — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
@@ -2283,7 +2283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '升级到 32 GB 对上下文长度和模型规模的帮助大于原始 token 速度——内存带宽不变，因此吞吐量基本相同。',
           '无 NPU 且核显加速有限，因此推理完全受 CPU 限制。',
           '对更重的本地 AI（视觉、快速的 7B 助手），请改选 Ryzen 主机——参见 [Beelink SER8 评测](/zh/smart-home/beelink-ser8-local-ai-review)。',
-          '参见[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) 试用小型模型，以及[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) 了解背景。',
+          '参见[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) 试用小型模型，以及[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide) 了解背景。',
         ],
         affiliateLinks: [
           { label: '查看当前价格 — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
@@ -2691,7 +2691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '32 GB로 업그레이드하면 원시 토큰 속도보다 컨텍스트 길이와 모델 크기에 더 도움이 됩니다 — 메모리 대역폭은 변하지 않으므로 처리량은 비슷하게 유지됩니다.',
           'NPU가 없고 iGPU 가속도 제한적이라 추론은 전적으로 CPU에 의존합니다.',
           '더 무거운 로컬 AI(비전, 빠른 7B 어시스턴트)에는 대신 Ryzen 제품을 선택하십시오 — [Beelink SER8 리뷰](/ko/smart-home/beelink-ser8-local-ai-review)를 참고하십시오.',
-          '소형 모델을 시험해 보려면 [Ollama 설치 방법](/ko/local-llms/how-to-install-ollama)을, 배경 지식은 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참고하십시오.',
+          '소형 모델을 시험해 보려면 [Ollama 설치 방법](/ko/local-llms/how-to-install-ollama)을, 배경 지식은 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참고하십시오.',
         ],
         affiliateLinks: [
           { label: '현재 가격 확인 — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
@@ -3100,7 +3100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Subir para 32 GB ajuda mais no comprimento de contexto e no tamanho do modelo do que na velocidade bruta de tokens — a largura de banda de memória não muda, então a vazão fica parecida.',
           'Sem NPU e com aceleração de iGPU limitada, então a inferência depende totalmente da CPU.',
           'Para IA local mais pesada (visão, um assistente 7B rápido), escolha uma caixa Ryzen em vez desta — veja a [análise do Beelink SER8](/pt/smart-home/beelink-ser8-local-ai-review).',
-          'Veja [como instalar o Ollama](/pt/local-llms/how-to-install-ollama) para testar um modelo pequeno, e o [guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide-2026) para contexto.',
+          'Veja [como instalar o Ollama](/pt/local-llms/how-to-install-ollama) para testar um modelo pequeno, e o [guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) para contexto.',
         ],
         affiliateLinks: [
           { label: 'Ver preço atual — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },
@@ -3509,7 +3509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الترقية إلى 32 GB تفيد طول السياق وحجم النموذج أكثر من سرعة الرموز الخام — عرض نطاق الذاكرة لا يتغير، فتبقى الإنتاجية مشابهة.',
           'لا يوجد NPU وتسريع كرت الرسوم المدمج محدود، لذا يعتمد الاستدلال كلياً على المعالج.',
           'للذكاء الاصطناعي المحلي الأثقل (الرؤية، مساعد 7B سريع)، اختر جهاز Ryzen بدلاً منه — انظر [مراجعة Beelink SER8](/ar/smart-home/beelink-ser8-local-ai-review).',
-          'انظر [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) لتجربة نموذج صغير، و[دليل عتاد الـ LLM المحلي](/ar/local-llms/local-llm-hardware-guide-2026) للسياق.',
+          'انظر [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) لتجربة نموذج صغير، و[دليل عتاد الـ LLM المحلي](/ar/local-llms/local-llm-hardware-guide) للسياق.',
         ],
         affiliateLinks: [
           { label: 'تحقق من السعر الحالي — GMKtec G3 Plus', url: 'https://www.gmktec.com/products/nucbox-g3-plus-enhanced-performance-mini-pc-with-intel-n150-processor', productName: 'GMKtec G3 Plus', productCategory: 'Mini PC' },

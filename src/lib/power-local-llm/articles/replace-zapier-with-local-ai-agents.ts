@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'For full local-LLM hardware sizing including VRAM tables for larger models, see the [Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026).',
+            text: 'For full local-LLM hardware sizing including VRAM tables for larger models, see the [Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide).',
           },
           {
             type: 'note',
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local AI Agents With MCP in 2026: Connect Ollama to Databases and APIs](/power-local-llm/local-ai-agents-with-mcp-2026) — what enables truly autonomous local agents (vs the fixed n8n pipelines here).',
           '[Autonomous Local Agents: Do They Actually Work in 2026?](/power-local-llm/autonomous-local-agents-actually-work) — context for limitations of LLM-driven decision making.',
           '[Replace Grammarly and Notion AI With a Local LLM](/power-local-llm/replace-grammarly-notion-ai-with-local) — adjacent SaaS-replacement guide.',
-          '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — sizing your machine for n8n + Ollama and beyond.',
+          '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — sizing your machine for n8n + Ollama and beyond.',
           '[Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026) — which model to pick when your workflow needs structured tool use.',
           '[Best Local LLMs for Enterprise Customer Support & Call Centers](/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — a vertical-specific application of local agents/RAG, for teams whose automation need is contact-center support rather than general workflows.',
           '[Power Local LLM Hub](/power-local-llm) — full guide library.',
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Für die vollständige Local-LLM-Hardware-Sizing einschließlich VRAM-Tabellen für größere Modelle siehe [Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026).',
+            text: 'Für die vollständige Local-LLM-Hardware-Sizing einschließlich VRAM-Tabellen für größere Modelle siehe [Local LLM Hardware Guide](/de/local-llms/local-llm-hardware-guide).',
           },
           {
             type: 'note',
@@ -961,7 +961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lokale KI-Agenten mit MCP in 2026: Ollama mit Datenbanken und APIs verbinden](/de/power-local-llm/local-ai-agents-with-mcp-2026) — was wahrhaft autonome lokale Agenten ermöglicht (vs die festen n8n-Pipelines hier).',
           '[Autonome lokale Agenten: Funktionieren sie 2026 wirklich?](/de/power-local-llm/autonomous-local-agents-actually-work) — Kontext für Grenzen von LLM-gesteuerten Entscheidungen.',
           '[Grammarly und Notion AI durch lokales LLM ersetzen](/de/power-local-llm/replace-grammarly-notion-ai-with-local) — benachbarter SaaS-Ersatz-Leitfaden.',
-          '[Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) — Dimensionierung Ihrer Maschine für n8n + Ollama und darüber hinaus.',
+          '[Local LLM Hardware Guide](/de/local-llms/local-llm-hardware-guide) — Dimensionierung Ihrer Maschine für n8n + Ollama und darüber hinaus.',
           '[Beste lokale Modelle für Tool Calling in 2026](/de/power-local-llm/best-local-models-tool-calling-2026) — welches Modell wählen, wenn Ihr Workflow strukturierten Tool-Use braucht.',
           '[Lokale LLMs für Enterprise-Kundensupport & Callcenter](/de/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — eine branchenspezifische Anwendung lokaler Agenten/RAG für Teams, deren Automatisierungsbedarf Contact-Center-Support statt allgemeiner Workflows ist.',
           '[Power Local LLM Hub](/de/power-local-llm) — vollständige Leitfads-Bibliothek.',
@@ -1349,7 +1349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Pour le dimensionnement matériel complet du LLM local, y compris des tableaux VRAM pour les modèles plus grands, voir le [Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026).',
+            text: 'Pour le dimensionnement matériel complet du LLM local, y compris des tableaux VRAM pour les modèles plus grands, voir le [Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide).',
           },
           {
             type: 'note',
@@ -1441,7 +1441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Agents IA locaux avec MCP en 2026 : connecter Ollama aux bases de données et APIs](/fr/power-local-llm/local-ai-agents-with-mcp-2026) — ce qui rend possibles les vrais agents locaux autonomes (par rapport aux pipelines n8n fixes ici).',
           '[Agents locaux autonomes : fonctionnent-ils réellement en 2026 ?](/fr/power-local-llm/autonomous-local-agents-actually-work) — contexte des limites de la prise de décision pilotée par LLM.',
           '[Remplacer Grammarly et Notion AI avec un LLM local](/fr/power-local-llm/replace-grammarly-notion-ai-with-local) — guide de remplacement SaaS adjacent.',
-          '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — dimensionner votre machine pour n8n + Ollama et au-delà.',
+          '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) — dimensionner votre machine pour n8n + Ollama et au-delà.',
           '[Meilleurs modèles locaux pour Tool Calling en 2026](/fr/power-local-llm/best-local-models-tool-calling-2026) — quel modèle choisir quand votre workflow a besoin d\'un tool use structuré.',
           '[Meilleurs LLM locaux pour le support client et les centres d\'appels en entreprise](/fr/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — une application sectorielle des agents/RAG locaux, pour les équipes dont le besoin d\'automatisation est le support en centre de contact plutôt que des workflows généraux.',
           '[Hub Power Local LLM](/fr/power-local-llm) — bibliothèque complète des guides.',
@@ -1829,7 +1829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'full ローカル LLM ハードウェア sizing (大モデル VRAM テーブル含む) は [ローカル LLM ハードウェアガイド 2026](/ja/local-llms/local-llm-hardware-guide-2026) 参照。',
+            text: 'full ローカル LLM ハードウェア sizing (大モデル VRAM テーブル含む) は [ローカル LLM ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) 参照。',
           },
           {
             type: 'note',
@@ -1921,7 +1921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026年ローカル AI エージェント MCP版：Ollama をデータベース・API と接続](/ja/power-local-llm/local-ai-agents-with-mcp-2026) — what enables true autonomous local agent (vs fixed n8n pipeline here)。',
           '[autonomous local agent 本当に 2026 で work？](/ja/power-local-llm/autonomous-local-agents-actually-work) — LLM-driven decision-making の限界 context。',
           '[Grammarly・Notion AI をローカル LLM に置き換え](/ja/power-local-llm/replace-grammarly-notion-ai-with-local) — adjacent SaaS-replacement guide。',
-          '[ローカル LLM ハードウェアガイド 2026](/ja/local-llms/local-llm-hardware-guide-2026) — n8n + Ollama 用マシン size、beyond。',
+          '[ローカル LLM ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — n8n + Ollama 用マシン size、beyond。',
           '[2026年 tool calling で最高 local モデル](/ja/power-local-llm/best-local-models-tool-calling-2026) — workflow が structured tool-use 必須の場合、モデル選び。',
           '[エンタープライズ向けカスタマーサポート・コールセンター用ローカルLLM](/ja/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — 一般的なワークフローではなくコンタクトセンターのサポートを自動化ニーズとするチーム向けの、ローカルエージェント/RAGの業種特化版。',
           '[Power Local LLM Hub](/ja/power-local-llm) — full guide library。',
@@ -2309,7 +2309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '完整本地 LLM 硬件尺寸(大模型 VRAM 表)，见 [本地 LLM 硬件指南 2026](/zh/local-llms/local-llm-hardware-guide-2026)。',
+            text: '完整本地 LLM 硬件尺寸(大模型 VRAM 表)，见 [本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide)。',
           },
           {
             type: 'note',
@@ -2401,7 +2401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026 年本地 AI 代理 MCP：连接 Ollama 到数据库和 API](/zh/power-local-llm/local-ai-agents-with-mcp-2026) —— 什么启用真正自主本地代理(vs 此处固定 n8n 管道)。',
           '[自主本地代理：2026 年真的动吗？](/zh/power-local-llm/autonomous-local-agents-actually-work) —— LLM 驱动决策制定限制的背景。',
           '[用本地 LLM 替代 Grammarly 和 Notion AI](/zh/power-local-llm/replace-grammarly-notion-ai-with-local) —— 相邻 SaaS 替代指南。',
-          '[本地 LLM 硬件指南 2026](/zh/local-llms/local-llm-hardware-guide-2026) —— 为 n8n + Ollama 及超越的机器尺寸。',
+          '[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide) —— 为 n8n + Ollama 及超越的机器尺寸。',
           '[2026 年工具调用最佳本地模型](/zh/power-local-llm/best-local-models-tool-calling-2026) —— 当工作流需结构化工具使用时选哪个模型。',
           '[企业客户支持与呼叫中心最佳本地LLM](/zh/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) —— 本地代理/RAG在垂直领域的具体应用，面向自动化需求是联络中心支持而非通用工作流的团队。',
           '[Power Local LLM Hub](/zh/power-local-llm) —— 完整指南库。',
@@ -2789,7 +2789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Para el dimensionamiento completo de hardware para LLM local, incluidas tablas de VRAM para modelos más grandes, consulta la [Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026).',
+            text: 'Para el dimensionamiento completo de hardware para LLM local, incluidas tablas de VRAM para modelos más grandes, consulta la [Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide).',
           },
           {
             type: 'note',
@@ -2881,7 +2881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Agentes de IA locales con MCP en 2026: conecta Ollama a bases de datos y APIs](/es/power-local-llm/local-ai-agents-with-mcp-2026) — qué habilita los verdaderos agentes locales autónomos (vs los pipelines fijos de n8n aquí).',
           '[Agentes locales autónomos: ¿realmente funcionan en 2026?](/es/power-local-llm/autonomous-local-agents-actually-work) — contexto sobre las limitaciones de la toma de decisiones guiada por LLM.',
           '[Reemplaza Grammarly y Notion AI con un LLM local](/es/power-local-llm/replace-grammarly-notion-ai-with-local) — guía adyacente de reemplazo de SaaS.',
-          '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — dimensiona tu máquina para n8n + Ollama y más allá.',
+          '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) — dimensiona tu máquina para n8n + Ollama y más allá.',
           '[Mejores modelos locales para tool calling en 2026](/es/power-local-llm/best-local-models-tool-calling-2026) — qué modelo elegir cuando tu flujo necesita uso estructurado de herramientas.',
           '[Mejores LLM locales para soporte al cliente y call centers empresariales](/es/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — una aplicación sectorial de agentes/RAG locales, para equipos cuya necesidad de automatización es el soporte de centro de contacto y no flujos de trabajo generales.',
           '[Hub Power Local LLM](/es/power-local-llm) — biblioteca completa de guías.',
@@ -3282,7 +3282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Para o dimensionamento completo de hardware para LLM local, incluindo tabelas de VRAM para modelos maiores, consulte o [Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026).',
+            text: 'Para o dimensionamento completo de hardware para LLM local, incluindo tabelas de VRAM para modelos maiores, consulte o [Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide).',
           },
           {
             type: 'note',
@@ -3374,7 +3374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Agentes de IA locais com MCP em 2026: conecte o Ollama a bancos de dados e APIs](/pt/power-local-llm/local-ai-agents-with-mcp-2026) — o que habilita os verdadeiros agentes locais autônomos (vs os pipelines fixos do n8n aqui).',
           '[Agentes locais autônomos: eles realmente funcionam em 2026?](/pt/power-local-llm/autonomous-local-agents-actually-work) — contexto sobre as limitações da tomada de decisão guiada por LLM.',
           '[Substitua o Grammarly e o Notion AI por um LLM local](/pt/power-local-llm/replace-grammarly-notion-ai-with-local) — guia adjacente de substituição de SaaS.',
-          '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — dimensione sua máquina para n8n + Ollama e além.',
+          '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) — dimensione sua máquina para n8n + Ollama e além.',
           '[Melhores modelos locais para tool calling em 2026](/pt/power-local-llm/best-local-models-tool-calling-2026) — qual modelo escolher quando seu fluxo precisa de uso estruturado de ferramentas.',
           '[Melhores LLMs locais para suporte ao cliente e call centers corporativos](/pt/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — uma aplicação setorial de agentes/RAG locais, para times cuja necessidade de automação é o suporte em central de atendimento em vez de fluxos de trabalho gerais.',
           '[Hub Power Local LLM](/pt/power-local-llm) — biblioteca completa de guias.',
@@ -3670,7 +3670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[وكلاء ذكاء اصطناعي محليون مع MCP في 2026: اربط Ollama بقواعد البيانات وAPIs](/ar/power-local-llm/local-ai-agents-with-mcp-2026) — ما الذي يُتيح الوكلاء المحليين الحقيقيين المستقلين (مقابل خطوط أنابيب n8n الثابتة هنا).',
           '[الوكلاء المحليون المستقلون: هل يعملون فعلًا في 2026؟](/ar/power-local-llm/autonomous-local-agents-actually-work) — سياق حول قيود اتخاذ القرار المُوجَّه بـ LLM.',
           '[استبدل Grammarly وNotion AI بنموذج LLM محلي](/ar/power-local-llm/replace-grammarly-notion-ai-with-local) — دليل استبدال SaaS مجاور.',
-          '[دليل أجهزة LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) — حجّم جهازك لـ n8n + Ollama وما بعد.',
+          '[دليل أجهزة LLM المحلية](/ar/local-llms/local-llm-hardware-guide) — حجّم جهازك لـ n8n + Ollama وما بعد.',
           '[أفضل نماذج محلية لـ tool calling في 2026](/ar/power-local-llm/best-local-models-tool-calling-2026) — أي نموذج تختار عندما يحتاج سير عملك استخدام أدوات منظّم.',
           '[أفضل نماذج اللغة المحلية لدعم العملاء ومراكز الاتصال في المؤسسات](/ar/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — تطبيق قطاعي للوكلاء المحليين وRAG، للفرق التي تكون حاجتها للأتمتة دعم مركز الاتصال بدلًا من سير عمل عام.',
           '[مركز Power Local LLM](/ar/power-local-llm) — مكتبة كاملة من الأدلة.',
@@ -4071,7 +4071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '더 큰 모델을 위한 VRAM 표를 포함한 로컬 LLM의 전체 하드웨어 사이즈 조정은 [2026 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참조하십시오.',
+            text: '더 큰 모델을 위한 VRAM 표를 포함한 로컬 LLM의 전체 하드웨어 사이즈 조정은 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참조하십시오.',
           },
           {
             type: 'note',
@@ -4163,7 +4163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026년 MCP를 활용한 로컬 AI 에이전트: Ollama를 데이터베이스와 API에 연결](/ko/power-local-llm/local-ai-agents-with-mcp-2026) — 진정한 로컬 자율 에이전트를 가능하게 하는 것(대 여기서의 고정 n8n 파이프라인).',
           '[자율 로컬 에이전트: 2026년에 실제로 작동합니까?](/ko/power-local-llm/autonomous-local-agents-actually-work) — LLM 기반 의사 결정의 한계에 대한 컨텍스트.',
           '[로컬 LLM으로 Grammarly와 Notion AI 교체](/ko/power-local-llm/replace-grammarly-notion-ai-with-local) — 인접 SaaS 교체 가이드.',
-          '[2026 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026) — n8n + Ollama 이상을 위한 기기 사이즈 조정.',
+          '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — n8n + Ollama 이상을 위한 기기 사이즈 조정.',
           '[2026년 도구 호출을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026) — 워크플로우에 구조화된 도구 사용이 필요할 때 어떤 모델을 선택할지.',
           '[엔터프라이즈 고객 지원 및 콜센터를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llms-customer-support-call-centers-enterprise) — 자동화 요구가 일반적인 워크플로우가 아닌 컨택센터 지원인 팀을 위한, 로컬 에이전트/RAG의 업종 특화 적용.',
           '[Power Local LLM 허브](/ko/power-local-llm) — 전체 가이드 라이브러리.',

@@ -96,7 +96,7 @@ export const llmThemes: LLMTheme[] = [
     title: 'Hardware & Performance',
     description: 'Real hardware recommendations, VRAM math, GPU benchmarks, quantization trade-offs, and optimization tricks for RTX 5090, 4090, Mac Silicon, and budget builds. RTX 4060 (8 GB VRAM, ~$300) runs 7B models at 30+ tokens/sec. Apple Silicon M2 handles 7B–13B natively via Metal with no discrete GPU required.',
     articleKeys: [
-      'local-llm-hardware-guide-2026',
+      'local-llm-hardware-guide',
       'vram-calculator-local-llm',
       'gpu-vs-cpu-vs-apple-silicon',
       'double-local-llm-speed',

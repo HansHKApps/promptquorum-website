@@ -122,7 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             'You need portability and work from multiple locations.',
             'You run short inference sessions (chat, experimentation).',
-            'You already own a high-end MacBook or gaming laptop. Check the [local LLM hardware guide](/local-llms/local-llm-hardware-guide-2026) to verify your device meets requirements.',
+            'You already own a high-end MacBook or gaming laptop. Check the [local LLM hardware guide](/local-llms/local-llm-hardware-guide) to verify your device meets requirements.',
           ],
         },
         desktopChoose: {
@@ -267,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Full hardware recommendations for CPUs, GPUs, and RAM.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — Full hardware recommendations for CPUs, GPUs, and RAM.',
             '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms) — GPU selection guide: RTX 4060 through RTX 5090, plus AMD and Apple Silicon.',
             '[How Much VRAM Do Local LLMs Need?](/local-llms/how-much-vram-local-llm) — VRAM requirements by model size and quantization level.',
             '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) — Thermal and power concerns for laptops and desktops.',
@@ -479,7 +479,7 @@ schema: {
           items: [
             'Necesitas portabilidad y trabajas desde múltiples ubicaciones.',
             'Ejecutas sesiones de inferencia cortas (chat, experimentación).',
-            'Ya tienes un MacBook de alta gama o un laptop gaming. Consulta la [guía de hardware para LLMs locales](/es/local-llms/local-llm-hardware-guide-2026) para verificar que tu dispositivo cumple los requisitos.',
+            'Ya tienes un MacBook de alta gama o un laptop gaming. Consulta la [guía de hardware para LLMs locales](/es/local-llms/local-llm-hardware-guide) para verificar que tu dispositivo cumple los requisitos.',
           ],
         },
         desktopChoose: {
@@ -624,7 +624,7 @@ schema: {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            '[Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026) — Recomendaciones completas de hardware para CPUs, GPUs y RAM.',
+            '[Guía de hardware para LLMs locales](/es/local-llms/local-llm-hardware-guide) — Recomendaciones completas de hardware para CPUs, GPUs y RAM.',
             '[Mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms) — Guía de selección de GPU: RTX 4060 hasta RTX 5090, AMD y Apple Silicon.',
             '[¿Cuánta VRAM necesitan los LLMs locales?](/es/local-llms/how-much-vram-local-llm) — Requisitos de VRAM por tamaño de modelo y nivel de cuantización.',
             '[Consumo de energía de LLMs locales](/es/local-llms/local-llm-power-consumption) — Preocupaciones térmicas y de energía para laptops y escritorios.',
@@ -836,7 +836,7 @@ schema: {
           items: [
             'تحتاج قابلية الحمل وتعمل من مواقع متعددة.',
             'تشغّل جلسات استدلال قصيرة (محادثة، تجريب).',
-            'تملك بالفعل MacBook عالي الفئة أو محمول ألعاب. راجع [دليل الأجهزة لنماذج LLM المحلية](/ar/local-llms/local-llm-hardware-guide-2026) للتحقق من أن جهازك يلبي المتطلبات.',
+            'تملك بالفعل MacBook عالي الفئة أو محمول ألعاب. راجع [دليل الأجهزة لنماذج LLM المحلية](/ar/local-llms/local-llm-hardware-guide) للتحقق من أن جهازك يلبي المتطلبات.',
           ],
         },
         desktopChoose: {
@@ -981,7 +981,7 @@ schema: {
           id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
-            '[دليل الأجهزة لنماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) — توصيات أجهزة كاملة لـ CPU و GPU و RAM.',
+            '[دليل الأجهزة لنماذج LLM المحلية](/ar/local-llms/local-llm-hardware-guide) — توصيات أجهزة كاملة لـ CPU و GPU و RAM.',
             '[أفضل GPU لنماذج LLM المحلية](/ar/local-llms/best-gpus-for-local-llms) — دليل اختيار GPU: من RTX 4060 إلى RTX 5090 و AMD و Apple Silicon.',
             '[كم تحتاج نماذج LLM المحلية من VRAM؟](/ar/local-llms/how-much-vram-local-llm) — متطلبات VRAM حسب حجم النموذج ومستوى التكميم.',
             '[استهلاك الطاقة لنماذج LLM المحلية](/ar/local-llms/local-llm-power-consumption) — مخاوف حرارية وطاقة للحواسيب المحمولة والمكتبية.',
@@ -1339,7 +1339,7 @@ schema: {
           items: [
             'Sie Mobilität benötigen und von mehreren Standorten aus arbeiten.',
             'Sie kurze Inferenzsitzungen durchführen (Chat, Experimente).',
-            'Sie bereits einen leistungsstarken MacBook oder Gaming-Laptop besitzen. Prüfen Sie den [Hardware-Leitfaden für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026), um Ihr Gerät zu beurteilen.',
+            'Sie bereits einen leistungsstarken MacBook oder Gaming-Laptop besitzen. Prüfen Sie den [Hardware-Leitfaden für lokale LLMs](/de/local-llms/local-llm-hardware-guide), um Ihr Gerät zu beurteilen.',
           ],
         },
         desktopChoose: {
@@ -1456,7 +1456,7 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Artikel',
           items: [
-            '[Hardware-Leitfaden für lokale LLMs 2026](/de/local-llms/local-llm-hardware-guide-2026) — Vollständige Hardware-Empfehlungen für CPUs, GPUs und RAM.',
+            '[Hardware-Leitfaden für lokale LLMs](/de/local-llms/local-llm-hardware-guide) — Vollständige Hardware-Empfehlungen für CPUs, GPUs und RAM.',
             '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms) — GPU-Auswahl: RTX 4060 bis RTX 4090, AMD und Apple Silicon.',
             '[Wie viel VRAM benötigen lokale LLMs?](/de/local-llms/how-much-vram-local-llm) — VRAM-Anforderungen nach Modellgröße und Quantisierungsstufe.',
             '[Energieverbrauch lokaler LLMs](/de/local-llms/local-llm-power-consumption) — Thermische und Energieaspekte für Laptops und Desktops.',
@@ -1670,7 +1670,7 @@ schema: {
           items: [
             'Vous avez besoin de mobilité et travaillez depuis plusieurs endroits.',
             'Vous effectuez des sessions d\'inférence courtes (chat, expérimentation).',
-            'Vous possédez déjà un MacBook haut de gamme ou un gaming laptop. Consultez le [guide matériel pour LLMs locaux](/fr/local-llms/local-llm-hardware-guide-2026) pour vérifier votre configuration.',
+            'Vous possédez déjà un MacBook haut de gamme ou un gaming laptop. Consultez le [guide matériel pour LLMs locaux](/fr/local-llms/local-llm-hardware-guide) pour vérifier votre configuration.',
           ],
         },
         desktopChoose: {
@@ -1778,7 +1778,7 @@ schema: {
           id: 'related-reading',
           title: 'Lecture complémentaire',
           items: [
-            '[Guide matériel pour LLMs locaux 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Recommandations complètes pour CPU, GPU et RAM.',
+            '[Guide matériel pour LLMs locaux](/fr/local-llms/local-llm-hardware-guide) — Recommandations complètes pour CPU, GPU et RAM.',
             '[Meilleurs GPU pour les LLMs locaux](/fr/local-llms/best-gpus-for-local-llms) — Sélection GPU : RTX 4060 à RTX 4090, AMD et Apple Silicon.',
             '[Quelle VRAM pour les LLMs locaux ?](/fr/local-llms/how-much-vram-local-llm) — Exigences VRAM par taille de modèle et niveau de quantification.',
             '[Consommation électrique des LLMs locaux](/fr/local-llms/local-llm-power-consumption) — Considérations thermiques et énergétiques pour laptops et bureaux.',
@@ -1982,7 +1982,7 @@ schema: {
           items: [
             '複数の場所から作業する携帯性が必要な場合。',
             '短い推論セッション（チャット、実験）を実行する場合。',
-            'すでにハイエンドのMacBookやゲーミングラップトップを所有している場合。デバイスが要件を満たすか[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026)で確認してください。',
+            'すでにハイエンドのMacBookやゲーミングラップトップを所有している場合。デバイスが要件を満たすか[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)で確認してください。',
           ],
         },
         desktopChoose: {
@@ -2090,7 +2090,7 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — CPU、GPU、RAMの完全なハードウェア推奨。',
+            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — CPU、GPU、RAMの完全なハードウェア推奨。',
             '[ローカルLLM向けベストGPU](/ja/local-llms/best-gpus-for-local-llms) — GPUセレクションガイド：RTX 4060〜RTX 4090、AMD、Apple Silicon。',
             '[ローカルLLMに必要なVRAMは？](/ja/local-llms/how-much-vram-local-llm) — モデルサイズと量子化レベル別のVRAM要件。',
             '[ローカルLLMの消費電力](/ja/local-llms/local-llm-power-consumption) — ラップトップとデスクトップの熱と電力の問題。',
@@ -2294,7 +2294,7 @@ schema: {
           items: [
             '需要在多个地点工作的便携性。',
             '运行短时推理会话（聊天、实验）。',
-            '已拥有高端MacBook或游戏笔记本。请通过[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)确认设备是否满足要求。',
+            '已拥有高端MacBook或游戏笔记本。请通过[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)确认设备是否满足要求。',
           ],
         },
         desktopChoose: {
@@ -2402,7 +2402,7 @@ schema: {
           id: 'related-reading',
           title: '延伸阅读',
           items: [
-            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — CPU、GPU、RAM的完整硬件推荐。',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) — CPU、GPU、RAM的完整硬件推荐。',
             '[本地LLM最佳GPU](/zh/local-llms/best-gpus-for-local-llms) — GPU选购指南：RTX 4060至RTX 4090、AMD和Apple Silicon。',
             '[本地LLM需要多少VRAM？](/zh/local-llms/how-much-vram-local-llm) — 按模型大小和量化级别的VRAM需求。',
             '[本地LLM功耗](/zh/local-llms/local-llm-power-consumption) — 笔记本和台式机的散热与功耗问题。',
@@ -2612,7 +2612,7 @@ schema: {
           items: [
             '여러 장소에서 작업하며 이동성이 필요한 경우.',
             '짧은 추론 세션(채팅, 실험)을 실행하는 경우.',
-            '이미 고사양 MacBook 또는 게임용 노트북을 보유한 경우. 기기가 요구사항을 충족하는지 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)에서 확인하십시오.',
+            '이미 고사양 MacBook 또는 게임용 노트북을 보유한 경우. 기기가 요구사항을 충족하는지 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)에서 확인하십시오.',
           ],
         },
         desktopChoose: {
@@ -2757,7 +2757,7 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — CPU, GPU, RAM에 대한 전체 하드웨어 권장 사항.',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — CPU, GPU, RAM에 대한 전체 하드웨어 권장 사항.',
             '[로컬 LLM에 최적인 GPU](/ko/local-llms/best-gpus-for-local-llms) — GPU 선택 가이드: RTX 4060부터 RTX 5090, AMD 및 Apple Silicon 포함.',
             '[로컬 LLM에 필요한 VRAM 용량](/ko/local-llms/how-much-vram-local-llm) — 모델 크기 및 양자화 수준별 VRAM 요구사항.',
             '[로컬 LLM 전력 소비](/ko/local-llms/local-llm-power-consumption) — 노트북과 데스크톱의 열 및 전력 관련 사항.',

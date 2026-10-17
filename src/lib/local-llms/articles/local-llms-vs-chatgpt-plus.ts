@@ -112,7 +112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'breakeven',
           title: 'When Does a Local Setup Break Even with ChatGPT Plus?',
           content: [
-            '**Breakeven at 10 hrs/week: ~11 months for RTX 5060 Ti ($400 GPU) vs ChatGPT Plus ($240/year).** After 11 months, local costs only electricity (~$30/year). See the [full hardware cost guide](/local-llms/local-llm-hardware-guide-2026) for per-inference-hour calculations.',
+            '**Breakeven at 10 hrs/week: ~11 months for RTX 5060 Ti ($400 GPU) vs ChatGPT Plus ($240/year).** After 11 months, local costs only electricity (~$30/year). See the [full hardware cost guide](/local-llms/local-llm-hardware-guide) for per-inference-hour calculations.',
             'At 15 hrs/week: breakeven at ~8 months. At 5 hrs/week: breakeven at ~14 months. At 2 hrs/week: ChatGPT Plus ($20/month) is cheaper than any hardware purchase for 2+ years — local is only justified if privacy, rate limits, or offline access matters.',
             'Comparing against ChatGPT Go ($8/month = $96/year): local RTX 5060 Ti breaks even vs Go in ~3.5 years. For light users choosing between Free/Go and a local GPU, the financial case for local only holds if you need 24B+ model quality (which ChatGPT Go with GPT-5.3 already provides).',
           ],
@@ -231,7 +231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Cloud GPU Rental Comparison: RunPod vs Vast.ai vs Lambda Labs](/local-llms/cloud-gpu-rental-comparison-2026) — Spot prices, per-provider features, and decision matrix for quick GPU bursts',
             '[Is Buying a GPU Worth It vs Paying for AI Subscriptions?](/local-llms/gpu-vs-ai-subscription-roi) — ROI calculator for GPU purchase vs ChatGPT Plus, Claude Pro, and API subscriptions',
             '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm) — Top affordable options: RTX 4060, RTX 3060, RX 6700, ranked by performance-per-dollar',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Comprehensive GPU and RAM recommendations for every model size and budget',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — Comprehensive GPU and RAM recommendations for every model size and budget',
             '[LLMs Locais vs ChatGPT Plus (Português)](/pt/local-llms/local-llms-vs-chatgpt-plus) — versão em português deste guia',
           ],
         },
@@ -399,7 +399,7 @@ schema: {
           id: 'breakeven',
           title: 'Wann amortisiert sich ein lokales Setup gegenüber ChatGPT Plus?',
           content: [
-            '**Amortisationspunkt bei 10 Std./Woche: ~11 Monate für RTX 5060 Ti (~400€ GPU) vs ChatGPT Plus (240€/Jahr).** Nach 11 Monaten kostet lokal nur noch Strom (~30€/Jahr). Siehe das [vollständige Hardware-Kostenhandbuch](/de/local-llms/local-llm-hardware-guide-2026) für detaillierte Berechnungen pro Inferenzstunde.',
+            '**Amortisationspunkt bei 10 Std./Woche: ~11 Monate für RTX 5060 Ti (~400€ GPU) vs ChatGPT Plus (240€/Jahr).** Nach 11 Monaten kostet lokal nur noch Strom (~30€/Jahr). Siehe das [vollständige Hardware-Kostenhandbuch](/de/local-llms/local-llm-hardware-guide) für detaillierte Berechnungen pro Inferenzstunde.',
             'Bei 15 Std./Woche: Amortisationspunkt bei ~8 Monaten. Bei 5 Std./Woche: Amortisationspunkt bei ~14 Monaten. Bei 2 Std./Woche: ChatGPT Plus (20€/Monat) ist für 2+ Jahre billiger als ein Hardware-Kauf — lokal ist nur gerechtfertigt, wenn Datenschutz, Ratenbegrenzungen oder Offline-Zugriff wichtig sind.',
             'Vergleich mit ChatGPT Go (8€/Monat = 96€/Jahr): Lokale RTX 5060 Ti amortisiert sich gegenüber Go in ~3,5 Jahren. Für Leichtnutzer, die zwischen Free/Go und einer lokalen GPU wählen, ist die finanzielle Begründung für lokal nur sinnvoll, wenn Sie 24B+-Modellqualität benötigen (die ChatGPT Go mit GPT-5.3 bereits bietet).',
           ],
@@ -525,7 +525,7 @@ schema: {
             '[Lokales LLM vs Cloud GPU: Kostenvergleich](/de/local-llms/local-llm-vs-cloud-gpu-cost) — Amortisierungsanalyse: Lokale RTX 4070 vs Lambda Labs, Paperspace, AWS GPUs',
             '[Lohnt sich der GPU-Kauf vs Zahlung für AI-Abos?](/de/local-llms/gpu-vs-ai-subscription-roi) — ROI-Rechner für GPU-Kauf vs ChatGPT Plus, Claude Pro und API-Abos',
             '[Best Budget GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm) — Top bezahlbare Optionen: RTX 4060, RTX 3060, RX 6700, nach Leistung-pro-Euro bewertet',
-            '[Lokales LLM Hardware-Handbuch 2026](/de/local-llms/local-llm-hardware-guide-2026) — Umfassendes GPU und RAM Empfehlungen für alle Modellgrößen und Budgets',
+            '[Lokales LLM Hardware-Handbuch](/de/local-llms/local-llm-hardware-guide) — Umfassendes GPU und RAM Empfehlungen für alle Modellgrößen und Budgets',
           ],
         },
         'sources': {
@@ -694,7 +694,7 @@ schema: {
           id: 'breakeven',
           title: 'Quand une configuration locale devient-elle rentable par rapport à ChatGPT Plus ?',
           content: [
-            '**Rentabilité à 10 heures/semaine : ~11 mois pour RTX 5060 Ti (400€ GPU) vs ChatGPT Plus (240€/an).** Après 11 mois, le local ne coûte que l\'électricité (~30€/an). Consultez le [guide complet des coûts matériels](/fr/local-llms/local-llm-hardware-guide-2026) pour les calculs détaillés par heure d\'inférence.',
+            '**Rentabilité à 10 heures/semaine : ~11 mois pour RTX 5060 Ti (400€ GPU) vs ChatGPT Plus (240€/an).** Après 11 mois, le local ne coûte que l\'électricité (~30€/an). Consultez le [guide complet des coûts matériels](/fr/local-llms/local-llm-hardware-guide) pour les calculs détaillés par heure d\'inférence.',
             'À 15 heures/semaine : rentabilité à ~8 mois. À 5 heures/semaine : rentabilité à ~14 mois. À 2 heures/semaine : ChatGPT Plus (20€/mois) est moins cher que tout achat matériel pendant 2+ ans — le local n\'est justifié que si la confidentialité, les limites de débit ou l\'accès hors ligne comptent.',
             'Comparaison avec ChatGPT Go (8€/mois = 96€/an) : RTX 5060 Ti local se rentabilise par rapport à Go en ~3,5 ans. Pour les utilisateurs légers choisissant entre Free/Go et un GPU local, le cas financier pour le local ne tient que si vous avez besoin de qualité de modèle 24B+ (que ChatGPT Go avec GPT-5.3 fournit déjà).',
           ],
@@ -812,7 +812,7 @@ schema: {
             '[LLM local vs GPU cloud : Comparaison tarifaire](/fr/local-llms/local-llm-vs-cloud-gpu-cost) — Analyse de rentabilité : RTX 4070 local vs Lambda Labs, Paperspace, GPUs AWS',
             '[L\'achat d\'une GPU vaut-il la peine vs payer les abos IA ?](/fr/local-llms/gpu-vs-ai-subscription-roi) — Calculateur ROI pour achat GPU vs ChatGPT Plus, Claude Pro et abos API',
             '[Meilleurs GPUs pas chers pour LLMs locaux](/fr/local-llms/best-budget-gpus-local-llm) — Options abordables top : RTX 4060, RTX 3060, RX 6700, classées par performance-par-euro',
-            '[Guide du matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Recommandations complètes GPU et RAM pour toutes les tailles de modèles et budgets',
+            '[Guide du matériel LLM local](/fr/local-llms/local-llm-hardware-guide) — Recommandations complètes GPU et RAM pour toutes les tailles de modèles et budgets',
           ],
         },
         'sources': {
@@ -979,7 +979,7 @@ schema: {
           id: 'breakeven',
           title: 'ローカルセットアップは ChatGPT Plus と比べていつ損益分岐点に達する？',
           content: [
-            '**週10時間利用での損益分岐点：RTX 5060 Ti（約75,800円 GPU）vs ChatGPT Plus（年24,000円程度）で約11ヶ月。** 11ヶ月後、ローカルは電気代のみ（年約7,500円）です。詳細なユーザー/時間あたり計算については、[完全なハードウェアコストガイド](/ja/local-llms/local-llm-hardware-guide-2026)を参照してください。',
+            '**週10時間利用での損益分岐点：RTX 5060 Ti（約75,800円 GPU）vs ChatGPT Plus（年24,000円程度）で約11ヶ月。** 11ヶ月後、ローカルは電気代のみ（年約7,500円）です。詳細なユーザー/時間あたり計算については、[完全なハードウェアコストガイド](/ja/local-llms/local-llm-hardware-guide)を参照してください。',
             '週15時間：損益分岐点は約8ヶ月。週5時間：損益分岐点は約14ヶ月。週2時間：ChatGPT Plus（20€/月）は2年以上、どのハードウェア購入よりも安いです — ローカルは、プライバシー、レート制限なし、またはオフラインアクセスが重要な場合にのみ正当化されます。',
             'ChatGPT Go（8€/月 = 年96€）との比較：ローカル RTX 5060 Ti は Go と比較して約3.5年で損益分岐点に達します。Free/Go と ローカル GPU のどちらかを選択するライトユーザーにとって、ローカルの経済的な場合は、24B 以上のモデル品質が必要な場合のみです（ChatGPT Go は GPT-5.3 で既に提供しています）。',
           ],
@@ -1097,7 +1097,7 @@ schema: {
             '[ローカル LLM vs クラウド GPU：コスト比較](/ja/local-llms/local-llm-vs-cloud-gpu-cost) — 損益分岐点分析：ローカル RTX 4070 vs Lambda Labs、Paperspace、AWS GPU',
             '[GPU 購入は AI サブスク支払いに対して価値がある？](/ja/local-llms/gpu-vs-ai-subscription-roi) — GPU 購入 vs ChatGPT Plus、Claude Pro、API サブスク用 ROI 計算機',
             '[ローカル LLM 向けベスト予算 GPU](/ja/local-llms/best-budget-gpus-local-llm) — トップ手頃なオプション：RTX 4060、RTX 3060、RX 6700、パフォーマンス/円でランク付け',
-            '[ローカル LLM ハードウェアガイド 2026](/ja/local-llms/local-llm-hardware-guide-2026) — すべてのモデルサイズと予算向けの包括的な GPU および RAM 推奨事項',
+            '[ローカル LLM ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — すべてのモデルサイズと予算向けの包括的な GPU および RAM 推奨事項',
           ],
         },
         'sources': {
@@ -1264,7 +1264,7 @@ schema: {
           id: 'breakeven',
           title: '本地设置何时与ChatGPT Plus平衡？',
           content: [
-            '**每周10小时使用的平衡点：约11个月，用于RTX 5060 Ti（约$400 GPU）与ChatGPT Plus（$240/年）的对比。** 11个月后，本地仅成本电费（约$30/年）。请参阅[完整硬件成本指南](/zh/local-llms/local-llm-hardware-guide-2026)了解详细的每推理小时计算。',
+            '**每周10小时使用的平衡点：约11个月，用于RTX 5060 Ti（约$400 GPU）与ChatGPT Plus（$240/年）的对比。** 11个月后，本地仅成本电费（约$30/年）。请参阅[完整硬件成本指南](/zh/local-llms/local-llm-hardware-guide)了解详细的每推理小时计算。',
             '每周15小时：平衡点约8个月。每周5小时：平衡点约14个月。每周2小时：ChatGPT Plus（$20/月）在2年多的时间内比任何硬件购买都便宜——本地仅在隐私、无速率限制或离线访问重要时正当化。',
             '与ChatGPT Go（$8/月 = 年$96）比较：本地RTX 5060 Ti在约3.5年内与Go相比平衡。对于选择Free/Go或本地GPU的轻度用户，本地的经济案例仅在您需要24B+模型质量时成立（ChatGPT Go已通过GPT-5.3提供）。',
           ],
@@ -1381,7 +1381,7 @@ schema: {
             '[本地LLM vs云GPU：成本对比](/zh/local-llms/local-llm-vs-cloud-gpu-cost)——损益分岐点分析：本地RTX 4070 vs Lambda Labs、Paperspace、AWS GPU',
             '[购买GPU是否值得vs支付AI订阅？](/zh/local-llms/gpu-vs-ai-subscription-roi)——GPU购买vs ChatGPT Plus、Claude Pro、API订阅的ROI计算器',
             '[本地LLM最佳预算GPU](/zh/local-llms/best-budget-gpus-local-llm)——顶级经济选项：RTX 4060、RTX 3060、RX 6700，按性能/美元排名',
-            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026)——所有模型大小和预算的综合GPU和RAM推荐',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)——所有模型大小和预算的综合GPU和RAM推荐',
           ],
         },
         'sources': {
@@ -1548,7 +1548,7 @@ schema: {
           id: 'breakeven',
           title: '¿Cuándo amortiza una configuración local frente a ChatGPT Plus?',
           content: [
-            '**Punto de equilibrio a 10 hrs/semana: ~11 meses para RTX 5060 Ti ($400 GPU) vs ChatGPT Plus ($240/año).** Después de 11 meses, lo local cuesta solo electricidad (~$30/año). Consulta la [guía completa de costos de hardware](/es/local-llms/local-llm-hardware-guide-2026) para los cálculos por hora de inferencia.',
+            '**Punto de equilibrio a 10 hrs/semana: ~11 meses para RTX 5060 Ti ($400 GPU) vs ChatGPT Plus ($240/año).** Después de 11 meses, lo local cuesta solo electricidad (~$30/año). Consulta la [guía completa de costos de hardware](/es/local-llms/local-llm-hardware-guide) para los cálculos por hora de inferencia.',
             'A 15 hrs/semana: equilibrio en ~8 meses. A 5 hrs/semana: equilibrio en ~14 meses. A 2 hrs/semana: ChatGPT Plus ($20/mes) es más barato que cualquier compra de hardware durante más de 2 años — lo local solo se justifica si la privacidad, los límites de velocidad o el acceso sin conexión importan.',
             'Comparado con ChatGPT Go ($8/mes = $96/año): la RTX 5060 Ti local alcanza el equilibrio frente a Go en ~3.5 años. Para usuarios ligeros que eligen entre Free/Go y una GPU local, el argumento financiero para lo local solo se sostiene si necesitas calidad de modelo 24B+ (que ChatGPT Go con GPT-5.3 ya proporciona).',
           ],
@@ -1667,7 +1667,7 @@ schema: {
             '[Comparación de alquiler de GPU en la nube: RunPod vs Vast.ai vs Lambda Labs](/es/local-llms/cloud-gpu-rental-comparison-2026) — Precios al contado, características por proveedor y matriz de decisión para ráfagas rápidas de GPU',
             '[¿Vale la pena comprar una GPU vs pagar suscripciones de IA?](/es/local-llms/gpu-vs-ai-subscription-roi) — Calculadora de ROI para compra de GPU vs ChatGPT Plus, Claude Pro y suscripciones de API',
             '[Las mejores GPUs económicas para LLMs locales](/es/local-llms/best-budget-gpus-local-llm) — Las mejores opciones asequibles: RTX 4060, RTX 3060, RX 6700, clasificadas por rendimiento por dólar',
-            '[Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026) — Recomendaciones completas de GPU y RAM para cada tamaño de modelo y presupuesto',
+            '[Guía de hardware para LLMs locales](/es/local-llms/local-llm-hardware-guide) — Recomendaciones completas de GPU y RAM para cada tamaño de modelo y presupuesto',
           ],
         },
         'sources': {
@@ -1834,7 +1834,7 @@ schema: {
           id: 'breakeven',
           title: 'متى يسترد الإعداد المحلي تكلفته مقابل ChatGPT Plus؟',
           content: [
-            '**نقطة التعادل بمعدل 10 ساعات/أسبوع: ~11 شهرًا لـRTX 5060 Ti (400$ GPU) مقابل ChatGPT Plus (240$/سنة).** بعد 11 شهرًا، يكلّف المحلي الكهرباء فقط (~30$/سنة). راجع [دليل تكاليف العتاد الكامل](/ar/local-llms/local-llm-hardware-guide-2026) لحسابات تكلفة ساعة الاستدلال.',
+            '**نقطة التعادل بمعدل 10 ساعات/أسبوع: ~11 شهرًا لـRTX 5060 Ti (400$ GPU) مقابل ChatGPT Plus (240$/سنة).** بعد 11 شهرًا، يكلّف المحلي الكهرباء فقط (~30$/سنة). راجع [دليل تكاليف العتاد الكامل](/ar/local-llms/local-llm-hardware-guide) لحسابات تكلفة ساعة الاستدلال.',
             'بمعدل 15 ساعة/أسبوع: التعادل خلال ~8 أشهر. بمعدل 5 ساعات/أسبوع: التعادل خلال ~14 شهرًا. بمعدل ساعتين/أسبوع: ChatGPT Plus (20$/شهر) أرخص من أي شراء عتاد لأكثر من سنتين — يُبرَّر المحلي فقط إذا كانت الخصوصية أو حدود المعدل أو الوصول دون اتصال مهمة.',
             'مقارنة بـChatGPT Go (8$/شهر = 96$/سنة): تبلغ RTX 5060 Ti المحلية نقطة التعادل مقابل Go خلال ~3.5 سنوات. للمستخدمين الخفيفين الذين يختارون بين Free/Go وGPU محلية، تصمد الحجة المالية للمحلي فقط إذا احتجت جودة نموذج 24B+ (التي يوفّرها ChatGPT Go بـGPT-5.3 بالفعل).',
           ],
@@ -1953,7 +1953,7 @@ schema: {
             '[مقارنة تأجير GPU السحابية: RunPod مقابل Vast.ai مقابل Lambda Labs](/ar/local-llms/cloud-gpu-rental-comparison-2026) — أسعار فورية وميزات لكل مزود ومصفوفة قرار لدفعات GPU السريعة',
             '[هل يستحق شراء GPU مقابل دفع اشتراكات الذكاء الاصطناعي؟](/ar/local-llms/gpu-vs-ai-subscription-roi) — حاسبة العائد على الاستثمار لشراء GPU مقابل ChatGPT Plus وClaude Pro واشتراكات API',
             '[أفضل بطاقات GPU الاقتصادية لنماذج LLM المحلية](/ar/local-llms/best-budget-gpus-local-llm) — أفضل الخيارات المعقولة: RTX 4060 وRTX 3060 وRX 6700، مرتّبة حسب الأداء لكل دولار',
-            '[دليل عتاد نماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) — توصيات كاملة لـGPU وRAM لكل حجم نموذج وميزانية',
+            '[دليل عتاد نماذج LLM المحلية](/ar/local-llms/local-llm-hardware-guide) — توصيات كاملة لـGPU وRAM لكل حجم نموذج وميزانية',
           ],
         },
         'sources': {
@@ -2120,7 +2120,7 @@ schema: {
           id: 'breakeven',
           title: 'Quando um setup local se paga frente ao ChatGPT Plus?',
           content: [
-            '**Ponto de equilíbrio a 10 h/semana: ~11 meses para RTX 5060 Ti ($400 GPU) vs ChatGPT Plus ($240/ano).** Após 11 meses, o local custa apenas energia (~$30/ano). Consulte o [guia completo de custos de hardware](/pt/local-llms/local-llm-hardware-guide-2026) para cálculos por hora de inferência.',
+            '**Ponto de equilíbrio a 10 h/semana: ~11 meses para RTX 5060 Ti ($400 GPU) vs ChatGPT Plus ($240/ano).** Após 11 meses, o local custa apenas energia (~$30/ano). Consulte o [guia completo de custos de hardware](/pt/local-llms/local-llm-hardware-guide) para cálculos por hora de inferência.',
             'A 15 h/semana: equilíbrio em ~8 meses. A 5 h/semana: equilíbrio em ~14 meses. A 2 h/semana: ChatGPT Plus ($20/mês) é mais barato do que qualquer compra de hardware por 2+ anos — o local só se justifica se privacidade, limites de taxa ou acesso offline importam.',
             'Comparado ao ChatGPT Go ($8/mês = $96/ano): a RTX 5060 Ti local atinge o equilíbrio vs Go em ~3,5 anos. Para usuários leves que escolhem entre Free/Go e uma GPU local, o argumento financeiro para o local só se sustenta se você precisar de qualidade de modelo 24B+ (que o ChatGPT Go com GPT-5.3 já oferece).',
           ],
@@ -2239,7 +2239,7 @@ schema: {
             '[Comparação de aluguel de GPU na nuvem: RunPod vs Vast.ai vs Lambda Labs](/pt/local-llms/cloud-gpu-rental-comparison-2026) — Preços spot, recursos por provedor e matriz de decisão para bursts rápidos de GPU',
             '[Comprar uma GPU vale mais do que pagar assinaturas de IA?](/pt/local-llms/gpu-vs-ai-subscription-roi) — Calculadora de ROI para compra de GPU vs ChatGPT Plus, Claude Pro e assinaturas de API',
             '[Melhores GPUs econômicas para LLMs locais](/pt/local-llms/best-budget-gpus-local-llm) — Melhores opções acessíveis: RTX 4060, RTX 3060, RX 6700, classificadas por desempenho por dólar',
-            '[Guia de hardware para LLMs locais 2026](/pt/local-llms/local-llm-hardware-guide-2026) — Recomendações completas de GPU e RAM para cada tamanho de modelo e orçamento',
+            '[Guia de hardware para LLMs locais](/pt/local-llms/local-llm-hardware-guide) — Recomendações completas de GPU e RAM para cada tamanho de modelo e orçamento',
           ],
         },
         'sources': {
@@ -2407,7 +2407,7 @@ schema: {
           id: 'breakeven',
           title: '로컬 구성은 언제 ChatGPT Plus와 손익분기점에 도달하나요?',
           content: [
-            '**주 10시간 사용 기준 손익분기점: RTX 5060 Ti(GPU $400) vs ChatGPT Plus($240/년) 약 11개월.** 11개월 이후 로컬 비용은 전기료(연간 약 $30)뿐입니다. 추론 시간당 계산은 [전체 하드웨어 비용 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참조하십시오.',
+            '**주 10시간 사용 기준 손익분기점: RTX 5060 Ti(GPU $400) vs ChatGPT Plus($240/년) 약 11개월.** 11개월 이후 로컬 비용은 전기료(연간 약 $30)뿐입니다. 추론 시간당 계산은 [전체 하드웨어 비용 가이드](/ko/local-llms/local-llm-hardware-guide)를 참조하십시오.',
             '주 15시간 사용 시: 약 8개월에 손익분기점 도달. 주 5시간 사용 시: 약 14개월. 주 2시간 사용 시: ChatGPT Plus($20/월)가 어떤 하드웨어 구매보다 2년 이상 저렴합니다 — 프라이버시, 사용 한도, 오프라인 접근이 필요한 경우에만 로컬이 정당화됩니다.',
             'ChatGPT Go($8/월 = $96/년)와 비교: 로컬 RTX 5060 Ti는 Go 대비 약 3.5년 후 손익분기점에 도달합니다. Go와 로컬 GPU 중 선택하는 라이트 유저에게는 24B+ 모델 품질이 필요한 경우에만 로컬의 경제적 타당성이 있습니다(ChatGPT Go의 GPT-5.3도 이미 충분한 품질을 제공합니다).',
           ],
@@ -2526,7 +2526,7 @@ schema: {
             '[클라우드 GPU 렌털 비교: RunPod vs Vast.ai vs Lambda Labs](/ko/local-llms/cloud-gpu-rental-comparison-2026) — 스팟 가격, 제공업체별 기능, 빠른 GPU 버스트를 위한 의사결정 매트릭스',
             '[GPU 구매 vs AI 구독 결제, 어느 쪽이 가치 있나?](/ko/local-llms/gpu-vs-ai-subscription-roi) — GPU 구매 vs ChatGPT Plus, Claude Pro, API 구독 ROI 계산기',
             '[예산별 최고의 로컬 LLM GPU](/ko/local-llms/best-budget-gpus-local-llm) — RTX 4060, RTX 3060, RX 6700 등 성능 대비 가격으로 순위를 매긴 최고의 저렴한 옵션',
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 모든 모델 크기 및 예산에 맞는 포괄적인 GPU 및 RAM 권장 사항',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 모든 모델 크기 및 예산에 맞는 포괄적인 GPU 및 RAM 권장 사항',
             '[LLMs Locais vs ChatGPT Plus (Português)](/pt/local-llms/local-llms-vs-chatgpt-plus) — 이 가이드의 포르투갈어 버전',
           ],
         },

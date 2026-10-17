@@ -10693,83 +10693,83 @@
   },
   {
     "lang": "en",
-    "title": "Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared",
+    "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
     "excerpt": "Local LLM system requirements by VRAM: best models for 8, 16 and 24 GB GPUs, exact 70B and GLM-5.3 needs. RTX 50-series, Apple M5, and AI PC builds.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-09-16",
-    "url": "/local-llms/local-llm-hardware-guide-2026",
+    "url": "/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
-    "title": "Lokale-LLM-Hardware 2026: GPU vs. Mini-PC vs. Mac im Vergleich",
+    "title": "Lokale-LLM-Hardware: GPU vs. Mini-PC vs. Mac im Vergleich",
     "excerpt": "Lokale LLM Hardware-Anforderungen nach VRAM: beste Modelle fuer 8-, 16- und 24-GB-GPUs plus exakter Bedarf fuer 70B und GLM-5.3. RTX-50-Serie, Apple M5.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-09-16",
-    "url": "/de/local-llms/local-llm-hardware-guide-2026",
+    "url": "/de/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
-    "title": "Materiel pour LLM local en 2026 : GPU, mini PC et Mac compares",
+    "title": "Materiel pour LLM local : GPU, mini PC et Mac compares",
     "excerpt": "Besoins materiels LLM local par VRAM : meilleurs modeles pour GPU 8, 16 et 24 Go plus ce qu'exigent exactement le 70B et GLM-5.3. RTX serie 50, Apple M5.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-09-16",
-    "url": "/fr/local-llms/local-llm-hardware-guide-2026",
+    "url": "/fr/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
-    "title": "2026年のローカルLLMハードウェア：GPU vs ミニPC vs Mac 比較",
+    "title": "ローカルLLMハードウェア：GPU vs ミニPC vs Mac 比較",
     "excerpt": "VRAM別ローカルLLMハードウェア要件：8、16、24 GB GPU向けベストモデルと70BおよびGLM-5.3をローカルで動かすために必要なもの。RTX 50シリーズ、Apple M5。",
     "publishDate": "2026-04-04",
     "dateModified": "2026-09-16",
-    "url": "/ja/local-llms/local-llm-hardware-guide-2026",
+    "url": "/ja/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
-    "title": "2026年本地LLM硬件：GPU vs 迷你PC vs Mac 对比",
+    "title": "本地LLM硬件：GPU vs 迷你PC vs Mac 对比",
     "excerpt": "对比GPU、迷你PC和Mac运行本地LLM：性价比、显存需求(8B–70B)、实测速度。附RTX 50系列与Apple M5选购建议，助你不花冤枉钱。",
     "publishDate": "2026-04-04",
     "dateModified": "2026-09-16",
-    "url": "/zh/local-llms/local-llm-hardware-guide-2026",
+    "url": "/zh/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
-    "title": "Hardware para LLM locales en 2026: GPU vs Mini PC vs Mac comparados",
+    "title": "Hardware para LLM locales: GPU vs Mini PC vs Mac comparados",
     "excerpt": "Requisitos de hardware para LLM locales por VRAM: mejores modelos para GPU de 8, 16 y 24 GB, además de las necesidades exactas para 70B y GLM-5.3. RTX serie 50, Apple M5.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-09-16",
-    "url": "/es/local-llms/local-llm-hardware-guide-2026",
+    "url": "/es/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
-    "title": "Hardware para LLM Local em 2026: GPU vs Mini PC vs Mac Comparados",
+    "title": "Hardware para LLM Local: GPU vs Mini PC vs Mac Comparados",
     "excerpt": "Requisitos de hardware para LLM local por VRAM: melhores modelos para GPUs de 8, 16 e 24 GB e o que 70B e GLM-5.3 precisam. RTX série 50, Apple M5.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-09-16",
-    "url": "/pt/local-llms/local-llm-hardware-guide-2026",
+    "url": "/pt/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
-    "title": "عتاد ⁨LLM⁩ المحلي في ⁨2026⁩: مقارنة بين ⁨GPU⁩ و⁨Mini PC⁩ و⁨Mac⁩",
+    "title": "عتاد ⁨LLM⁩ المحلي: مقارنة بين ⁨GPU⁩ و⁨Mini PC⁩ و⁨Mac⁩",
     "excerpt": "متطلبات عتاد ⁨LLM⁩ المحلي حسب ⁨VRAM⁩: أفضل النماذج لبطاقات ⁨8⁩ و⁨16⁩ و⁨24 GB⁩ إضافة إلى الاحتياجات الدقيقة لـ ⁨70B⁩ و⁨GLM-5.3⁩. ⁨RTX 50-series⁩ و⁨Apple M5⁩.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-09-16",
-    "url": "/ar/local-llms/local-llm-hardware-guide-2026",
+    "url": "/ar/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
-    "title": "2026년 로컬 LLM 하드웨어: GPU vs 미니 PC vs Mac 비교",
+    "title": "로컬 LLM 하드웨어: GPU vs 미니 PC vs Mac 비교",
     "excerpt": "VRAM별 LLM 하드웨어 요구 사항: 8, 16, 24GB GPU를 위한 최적 모델과 70B 및 GLM-5.3에 정확히 필요한 사양. RTX 50 시리즈, Apple M5.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-09-16",
-    "url": "/ko/local-llms/local-llm-hardware-guide-2026",
+    "url": "/ko/local-llms/local-llm-hardware-guide",
     "cluster": "local-llms"
   },
   {
@@ -23492,7 +23492,7 @@
   {
     "lang": "en",
     "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-    "excerpt": "Best uncensored local LLMs with no content restrictions, for erotica and NSFW writing: Hermes 3 vs Dolphin 3.0, Ollama setup, and the ethical limits.",
+    "excerpt": "Best uncensored local LLMs for NSFW & erotica, with no content restrictions: Hermes 3 vs Dolphin 3.0 in Ollama or LM Studio. Setup, model table, ethics.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-08-24",
     "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
