@@ -3311,5 +3311,30 @@
       "clicks": 9,
       "ctr": 0.006474820143884892
     }
+  },
+  {
+    "id": "5781bd9c-fe80-4d07-9a4d-d6c78aba0244",
+    "slug": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-10-17T09:41:15.762Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Uncensored LLMs for Erotica & NSFW Writing 2026",
+        "new": "Best Uncensored Local LLMs for NSFW & Erotica 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Best uncensored local LLMs with no content restrictions, for erotica and NSFW writing: Hermes 3 vs Dolphin 3.0, Ollama setup, and the ethical limits.",
+        "new": "Best uncensored local LLMs for NSFW & erotica, with no content restrictions: Hermes 3 vs Dolphin 3.0 in Ollama or LM Studio. Setup, model table, ethics."
+      }
+    ],
+    "reason": "geo-meta-optimizer: CTR + query-match (nsfw llm 1,104 imps pos 5.3; best nsfw llm, best uncensored local llm, llm without restrictions, lm studio nsfw); added Best + Local, kept NSFW/erotica",
+    "baseline": {
+      "position": 5.3,
+      "impressions": 1104,
+      "clicks": 92,
+      "ctr": 0.08333333333333333,
+      "period": "GSC top queries, pasted 2026-10-17"
+    }
   }
 ]
