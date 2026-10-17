@@ -1164,6 +1164,11 @@
     "urlSlug": "ai-cutoutwerk-review",
     "url": "/power-local-llm/ai-cutoutwerk-review"
   },
+  "openmontage": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openmontage-review",
+    "url": "/power-local-llm/openmontage-review"
+  },
   "private-mind": {
     "cluster": "power-local-llm",
     "urlSlug": "private-mind-review",

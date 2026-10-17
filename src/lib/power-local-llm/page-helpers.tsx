@@ -1171,6 +1171,7 @@ const HUB_THEMES: Array<{
       'stable-diffusion-forge-review',
       'radiant-canvas',
       'ai-cutoutwerk-review',
+      'openmontage-review',
     ],
   },
   {
