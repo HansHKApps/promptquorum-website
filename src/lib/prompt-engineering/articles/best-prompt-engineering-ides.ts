@@ -12,14 +12,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/best-prompt-engineering-ides-overview-hero-en.webp',
     title: 'Best Prompt Engineering IDEs and Editors 2026',
     seoTitle: 'Best Prompt Engineering IDEs and Editors 2026: Guide',
-    metaDescription: 'Cursor costs $20/month; LM Studio is $0 after hardware. Six prompt engineering IDEs, each optimized for a different use case. Here\'s which one fits yours.',
+    metaDescription: 'Cursor plans start at $8/month; LM Studio is $0 after hardware. Six prompt engineering IDEs, each optimized for a different use case. Here\'s which one fits yours.',
     ogTitle: 'Best Prompt Engineering IDEs and Editors 2026: Guide',
     ogDescription: 'Cursor, LM Studio, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio — six IDE choices, each for a different workflow. Find yours.',
     twitterTitle: 'Best Prompt Engineering IDEs and Editors 2026: Guide',
     twitterDescription: 'No single prompt IDE covers everything. Cursor for code+prompts, LM Studio for offline, OpenAI Playground for API testing. Here\'s how to choose.',
     intro: '**TL;DR:** No single prompt engineering IDE covers all workflows. Use Cursor or VS Code + Continue for development, OpenAI Playground or Claude Console for API testing, Google AI Studio for free multimodal work, and LM Studio for offline. Each of the six tools in this guide is optimized for a different use case — pick by workflow, not feature count.',
     publishDate: '2026-04-10',
-    dateModified: '2026-08-31',
+    dateModified: '2026-10-17',
     readTime: '8 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers building LLM applications',
@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     next_refresh_due: '2026-10-10',
     leadAnswerBlock: '**A prompt engineering IDE is a specialized editor that minimizes friction between idea and execution — covering model switching, playground execution, prompt history, export to code, and cost visibility. No single IDE covers all six criteria.**',
     quickFacts: [
-      'Cursor: Free tier (limited) or $20/month for unlimited usage',
+      'Cursor: Free tier (limited) or paid plans from $8/month (Plus, Grok models only; Premium $30/month adds Claude and GPT)',
       'VS Code + Continue.dev: Free and open-source (MIT license)',
       'OpenAI Playground: Metered billing at production API token pricing',
       'LM Studio: $0/token after one-time hardware investment ($500–3,000)',
@@ -56,7 +56,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Best Prompt Engineering IDEs and Editors 2026',
-      description: 'Cursor costs $20/month; LM Studio is $0 after hardware. Six prompt engineering IDEs, each optimized for a different use case. Here\'s which one fits yours.',
+      description: 'Cursor plans start at $8/month; LM Studio is $0 after hardware. Six prompt engineering IDEs, each optimized for a different use case. Here\'s which one fits yours.',
       datePublished: '2026-04-10',
       dateModified: '2026-08-31',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -82,7 +82,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor: AI-Native IDE',
           url: 'https://cursor.sh',
-          description: 'VS Code fork with built-in AI chat, model switching (GPT-5.6, Claude, Gemini), and codebase-aware context. Best for developers writing both prompts and application code. Free tier or $20/month.',
+          description: 'VS Code fork with built-in AI chat, model switching (GPT-5.6, Claude, Gemini), and codebase-aware context. Best for developers writing both prompts and application code. Free tier or paid plans from $8/month.',
         },
         {
           '@type': 'ListItem',
@@ -152,7 +152,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Best if you write both prompts and application code',
           'Includes codebase-aware context (reads your project files)',
-          'Pricing: Free tier (limited), $20/mo for unlimited',
+          'Pricing: Free tier (limited), paid plans from $8/mo (Plus: Grok models only; Premium $30/mo adds Claude and GPT)',
           'Latency: Depends on selected model (GPT-5.6 ~1-2s, Claude ~2-3s)',
         ],
         callouts: [
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**Here is the breakdown.** In our workflow testing, cloud playground setup averaged under 2 minutes for first-time users, while LM Studio required approximately 45 minutes on first install (including model download). Subsequent model downloads ranged from 10 minutes (7B Q4, ~4GB) to over 90 minutes (70B Q4, ~40GB).',
         columns: ['IDE', 'Type', 'Multi-model', 'Local models', 'Token counter', 'Prompt history', 'Export to code', 'Offline', 'Price', 'Best for'],
         rows: [
-          { IDE: 'Cursor', Type: 'Desktop IDE', 'Multi-model': 'GPT-5.6, Claude, Gemini', 'Local models': 'No', 'Token counter': 'Via API', 'Prompt history': 'Yes (chat)', 'Export to code': 'Yes', Offline: 'No', Price: 'Free / $20/mo', 'Best for': 'Dev building app+prompts' },
+          { IDE: 'Cursor', Type: 'Desktop IDE', 'Multi-model': 'GPT-5.6, Claude, Gemini', 'Local models': 'No', 'Token counter': 'Via API', 'Prompt history': 'Yes (chat)', 'Export to code': 'Yes', Offline: 'No', Price: 'Free / from $8/mo', 'Best for': 'Dev building app+prompts' },
           { IDE: 'VS Code + Continue', Type: 'Desktop IDE + ext', 'Multi-model': 'GPT-5.6, Claude, Gemini, local', 'Local models': 'Yes (Ollama)', 'Token counter': 'Depends on provider', 'Prompt history': 'Manual', 'Export to code': 'Yes', Offline: 'Yes (local)', Price: 'Free (MIT)', 'Best for': 'Multi-model + open-source' },
           { IDE: 'OpenAI Playground', Type: 'Web playground', 'Multi-model': 'OpenAI only', 'Local models': 'No', 'Token counter': 'Built-in, real-time', 'Prompt history': 'Yes', 'Export to code': 'Yes (curl/Python/JS)', Offline: 'No', Price: 'Pay-per-token', 'Best for': 'API exploration' },
           { IDE: 'Claude Console', Type: 'Web playground', 'Multi-model': 'Claude only', 'Local models': 'No', 'Token counter': 'Built-in', 'Prompt history': 'Yes', 'Export to code': 'Yes (Python/JS)', Offline: 'No', Price: 'Pay-per-token', 'Best for': 'Claude-specific' },
@@ -320,7 +320,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterDescription: 'Cursor vs VS Code vs Playground vs LM Studio — welche Prompt-IDE passt? 6 Tools im Vergleich mit Feature-Matrix (2026).',
     intro: '**TL;DR:** Keine einzige Prompt-Engineering-IDE deckt alle Workflows ab. Nutzen Sie Cursor oder VS Code + Continue für die Entwicklung, OpenAI Playground oder Claude Console für API-Tests, Google AI Studio für kostenlose multimodale Arbeit und LM Studio für den Offline-Betrieb. Jedes der sechs Tools in diesem Leitfaden ist für einen anderen Anwendungsfall optimiert — wählen Sie nach Workflow, nicht nach Feature-Listen.',
     publishDate: '2026-04-10',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-17',
     readTime: '8 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die LLM-Anwendungen erstellen',
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     next_refresh_due: '2026-10-10',
     leadAnswerBlock: '**Eine Prompt-Engineering-IDE ist ein spezialisierter Editor, der die Reibung zwischen Idee und Umsetzung minimiert — durch Modellwechsel, Playground-Ausführung, Prompt-Verlauf, Code-Export und Kostentransparenz. Stand April 2026 deckt keine einzige IDE alle sechs Kriterien vollständig ab.**',
     quickFacts: [
-      'Cursor: Kostenloser Tarif (eingeschränkt) oder 20 €/Monat für unbegrenzte Nutzung',
+      'Cursor: Kostenloser Tarif (eingeschränkt) oder bezahlte Pläne ab 8 $/Monat (Plus, nur Grok-Modelle; Premium für 30 $/Monat ergänzt Claude und GPT)',
       'VS Code + Continue.dev: Kostenlos und Open-Source (MIT-Lizenz)',
       'OpenAI Playground: Verbrauchsabhängige Abrechnung zu Produktions-API-Token-Preisen',
       'LM Studio: 0 €/Token nach einmaliger Hardware-Investition (ca. 500–2.800 €)',
@@ -384,7 +384,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor: KI-native IDE',
           url: 'https://cursor.sh',
-          description: 'VS Code-Fork mit integriertem KI-Chat, Modellwechsel (GPT-5.6, Claude, Gemini) und codebasisbewusstem Kontext. Ideal für Entwickler, die sowohl Prompts als auch Anwendungscode schreiben. Kostenloser Tarif oder 20 €/Monat.',
+          description: 'VS Code-Fork mit integriertem KI-Chat, Modellwechsel (GPT-5.6, Claude, Gemini) und codebasisbewusstem Kontext. Ideal für Entwickler, die sowohl Prompts als auch Anwendungscode schreiben. Kostenloser Tarif oder bezahlte Pläne ab 8 $/Monat.',
         },
         {
           '@type': 'ListItem',
@@ -454,7 +454,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Bestens geeignet, wenn Sie sowohl Prompts als auch Anwendungscode schreiben',
           'Enthält codebasisbewussten Kontext (liest Ihre Projektdateien)',
-          'Preise: Kostenloser Tarif (eingeschränkt), 20 €/Monat für unbegrenzte Nutzung',
+          'Preise: Kostenloser Tarif (eingeschränkt), bezahlte Pläne ab 8 $/Monat (Plus: nur Grok-Modelle; Premium für 30 $/Monat ergänzt Claude und GPT)',
           'Latenz: Abhängig vom gewählten Modell (GPT-5.6 ~1–2 Sek., Claude ~2–3 Sek.)',
         ],
         callouts: [
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**Stand April 2026 sieht die Übersicht wie folgt aus.** In unseren Workflow-Tests dauerte die Einrichtung von Cloud-Playground-Umgebungen für Erstnutzer im Durchschnitt unter 2 Minuten, während LM Studio bei der ersten Installation etwa 45 Minuten benötigte (einschließlich Modell-Download). Anschließende Modell-Downloads dauerten zwischen 10 Minuten (7B Q4, ~4 GB) und über 90 Minuten (70B Q4, ~40 GB).',
         columns: ['IDE', 'Typ', 'Multi-Modell', 'Lokale Modelle', 'Token-Zähler', 'Prompt-Verlauf', 'Code-Export', 'Offline', 'Preis', 'Am besten für'],
         rows: [
-          { IDE: 'Cursor', Typ: 'Desktop-IDE', 'Multi-Modell': 'GPT-5.6, Claude, Gemini', 'Lokale Modelle': 'Nein', 'Token-Zähler': 'Über API', 'Prompt-Verlauf': 'Ja (Chat)', 'Code-Export': 'Ja', Offline: 'Nein', Preis: 'Kostenlos / 20 €/Monat', 'Am besten für': 'Entwicklung von App + Prompts' },
+          { IDE: 'Cursor', Typ: 'Desktop-IDE', 'Multi-Modell': 'GPT-5.6, Claude, Gemini', 'Lokale Modelle': 'Nein', 'Token-Zähler': 'Über API', 'Prompt-Verlauf': 'Ja (Chat)', 'Code-Export': 'Ja', Offline: 'Nein', Preis: 'Kostenlos / ab 8 $/Monat', 'Am besten für': 'Entwicklung von App + Prompts' },
           { IDE: 'VS Code + Continue', Typ: 'Desktop-IDE + Erw.', 'Multi-Modell': 'GPT-5.6, Claude, Gemini, lokal', 'Lokale Modelle': 'Ja (Ollama)', 'Token-Zähler': 'Abhängig vom Anbieter', 'Prompt-Verlauf': 'Manuell', 'Code-Export': 'Ja', Offline: 'Ja (lokal)', Preis: 'Kostenlos (MIT)', 'Am besten für': 'Multi-Modell + Open-Source' },
           { IDE: 'OpenAI Playground', Typ: 'Web-Playground', 'Multi-Modell': 'Nur OpenAI', 'Lokale Modelle': 'Nein', 'Token-Zähler': 'Integriert, Echtzeit', 'Prompt-Verlauf': 'Ja', 'Code-Export': 'Ja (curl/Python/JS)', Offline: 'Nein', Preis: 'Pay-per-Token', 'Am besten für': 'API-Erkundung' },
           { IDE: 'Claude Console', Typ: 'Web-Playground', 'Multi-Modell': 'Nur Claude', 'Lokale Modelle': 'Nein', 'Token-Zähler': 'Integriert', 'Prompt-Verlauf': 'Ja', 'Code-Export': 'Ja (Python/JS)', Offline: 'Nein', Preis: 'Pay-per-Token', 'Am besten für': 'Claude-spezifisch' },
@@ -617,14 +617,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/best-prompt-engineering-ides-overview-hero-es.webp',
     title: 'Mejores IDEs y editores de prompt engineering 2026',
     seoTitle: 'Mejores IDEs de prompt engineering 2026: 6 herramientas',
-    metaDescription: 'Cursor cuesta $20/mes; LM Studio, $0 tras invertir en hardware. Seis IDEs de prompt engineering, cada uno para un caso de uso. Descubre cuál encaja contigo.',
+    metaDescription: 'Cursor tiene planes desde $8/mes; LM Studio, $0 tras invertir en hardware. Seis IDEs de prompt engineering, cada uno para un caso de uso. Descubre cuál encaja contigo.',
     ogTitle: 'Mejores IDEs y editores de prompt engineering 2026: guía',
     ogDescription: 'Cursor, LM Studio, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio — seis opciones de IDE, cada una para un flujo de trabajo diferente. Encuentra el tuyo.',
     twitterTitle: 'Mejores IDEs y editores de prompt engineering 2026: guía',
     twitterDescription: 'Ningún IDE de prompts lo cubre todo. Cursor para código+prompts, LM Studio para offline, OpenAI Playground para testing de API. Así se elige.',
     intro: '**TL;DR:** Ningún IDE de prompt engineering cubre todos los flujos de trabajo. Usa Cursor o VS Code + Continue para desarrollo, OpenAI Playground o Claude Console para testing de API, Google AI Studio para trabajo multimodal gratuito y LM Studio para offline. Cada una de las seis herramientas de esta guía está optimizada para un caso de uso diferente — elige por flujo de trabajo, no por recuento de características.',
     publishDate: '2026-04-10',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-17',
     readTime: '8 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que construyen aplicaciones LLM',
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     next_refresh_due: '2026-10-10',
     leadAnswerBlock: '**Un IDE de prompt engineering es un editor especializado que minimiza la fricción entre la idea y la ejecución — cubriendo cambio de modelo, ejecución en playground, historial de prompts, exportación a código y visibilidad de coste. A abril de 2026, ningún IDE único cubre los seis criterios.**',
     quickFacts: [
-      'Cursor: Tier gratuito (limitado) o $20/mes para uso ilimitado',
+      'Cursor: Tier gratuito (limitado) o planes de pago desde $8/mes (Plus, solo modelos Grok; Premium a $30/mes añade Claude y GPT)',
       'VS Code + Continue.dev: Gratuito y open-source (licencia MIT)',
       'OpenAI Playground: Facturación metered al precio de tokens de la API de producción',
       'LM Studio: $0/token tras inversión única en hardware ($500–3.000)',
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Mejores IDEs y editores de prompt engineering 2026',
-      description: 'Cursor cuesta $20/mes; LM Studio es $0 tras la inversión en hardware. Seis IDEs de prompt engineering, cada uno optimizado para un caso de uso diferente. Aquí tienes cuál encaja con el tuyo.',
+      description: 'Cursor tiene planes desde $8/mes; LM Studio es $0 tras la inversión en hardware. Seis IDEs de prompt engineering, cada uno optimizado para un caso de uso diferente. Aquí tienes cuál encaja con el tuyo.',
       datePublished: '2026-04-10',
       dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -688,7 +688,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor: IDE nativo de IA',
           url: 'https://cursor.sh',
-          description: 'Fork de VS Code con chat de IA integrado, cambio de modelo (GPT-5.6, Claude, Gemini) y contexto consciente del código base. Ideal para desarrolladores que escriben tanto prompts como código de aplicación. Tier gratuito o $20/mes.',
+          description: 'Fork de VS Code con chat de IA integrado, cambio de modelo (GPT-5.6, Claude, Gemini) y contexto consciente del código base. Ideal para desarrolladores que escriben tanto prompts como código de aplicación. Tier gratuito o planes de pago desde $8/mes.',
         },
         {
           '@type': 'ListItem',
@@ -758,7 +758,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Ideal si escribes tanto prompts como código de aplicación',
           'Incluye contexto consciente del código base (lee los archivos de tu proyecto)',
-          'Precios: Tier gratuito (limitado), $20/mes para uso ilimitado',
+          'Precios: Tier gratuito (limitado), planes de pago desde $8/mes (Plus: solo modelos Grok; Premium a $30/mes añade Claude y GPT)',
           'Latencia: Depende del modelo seleccionado (GPT-5.6 ~1-2s, Claude ~2-3s)',
         ],
         callouts: [
@@ -835,7 +835,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**A abril de 2026, este es el desglose.** En nuestras pruebas de flujo de trabajo, la configuración de playgrounds en la nube promedió menos de 2 minutos para usuarios por primera vez, mientras que LM Studio requirió aproximadamente 45 minutos en la primera instalación (incluyendo la descarga del modelo). Las descargas posteriores de modelos oscilaron entre 10 minutos (7B Q4, ~4GB) y más de 90 minutos (70B Q4, ~40GB).',
         columns: ['IDE', 'Tipo', 'Multi-modelo', 'Modelos locales', 'Contador de tokens', 'Historial de prompts', 'Exportar a código', 'Offline', 'Precio', 'Ideal para'],
         rows: [
-          { IDE: 'Cursor', Tipo: 'IDE de escritorio', 'Multi-modelo': 'GPT-5.6, Claude, Gemini', 'Modelos locales': 'No', 'Contador de tokens': 'Vía API', 'Historial de prompts': 'Sí (chat)', 'Exportar a código': 'Sí', Offline: 'No', Precio: 'Gratis / $20/mes', 'Ideal para': 'Dev que construye app+prompts' },
+          { IDE: 'Cursor', Tipo: 'IDE de escritorio', 'Multi-modelo': 'GPT-5.6, Claude, Gemini', 'Modelos locales': 'No', 'Contador de tokens': 'Vía API', 'Historial de prompts': 'Sí (chat)', 'Exportar a código': 'Sí', Offline: 'No', Precio: 'Gratis / desde $8/mes', 'Ideal para': 'Dev que construye app+prompts' },
           { IDE: 'VS Code + Continue', Tipo: 'IDE escritorio + ext.', 'Multi-modelo': 'GPT-5.6, Claude, Gemini, local', 'Modelos locales': 'Sí (Ollama)', 'Contador de tokens': 'Depende del proveedor', 'Historial de prompts': 'Manual', 'Exportar a código': 'Sí', Offline: 'Sí (local)', Precio: 'Gratis (MIT)', 'Ideal para': 'Multi-modelo + open-source' },
           { IDE: 'OpenAI Playground', Tipo: 'Playground web', 'Multi-modelo': 'Solo OpenAI', 'Modelos locales': 'No', 'Contador de tokens': 'Integrado, tiempo real', 'Historial de prompts': 'Sí', 'Exportar a código': 'Sí (curl/Python/JS)', Offline: 'No', Precio: 'Pago por token', 'Ideal para': 'Exploración de API' },
           { IDE: 'Claude Console', Tipo: 'Playground web', 'Multi-modelo': 'Solo Claude', 'Modelos locales': 'No', 'Contador de tokens': 'Integrado', 'Historial de prompts': 'Sí', 'Exportar a código': 'Sí (Python/JS)', Offline: 'No', Precio: 'Pago por token', 'Ideal para': 'Específico de Claude' },
@@ -920,7 +920,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/best-prompt-engineering-ides-overview-hero-pt.webp',
     title: 'Melhores IDEs e editores de prompt engineering 2026',
     seoTitle: 'Melhores IDEs de prompt engineering 2026: 6 ferramentas',
-    metaDescription: 'Cursor custa $20/mês; LM Studio, $0 após investimento em hardware. Seis IDEs de prompt engineering, cada um para um caso de uso. Descubra qual se encaixa com você.',
+    metaDescription: 'Cursor tem planos a partir de $8/mês; LM Studio, $0 após investimento em hardware. Seis IDEs de prompt engineering, cada um para um caso de uso. Descubra qual se encaixa com você.',
     ogTitle: 'Melhores IDEs e editores de prompt engineering 2026: guia',
     ogDescription: 'Cursor, LM Studio, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio — seis opções de IDE, cada uma para um fluxo de trabalho diferente. Encontre o seu.',
     twitterTitle: 'Melhores IDEs e editores de prompt engineering 2026: guia',
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     aboutTopics: ['desenvolvimento de prompts', 'ferramentas IDE', 'modelos locais', 'playgrounds na nuvem'],
     leadAnswerBlock: '**Um IDE de prompt engineering é qualquer editor especializado que minimiza o atrito entre a ideia e a execução — cobrindo troca de modelo, execução em playground, histórico de prompts, exportação para código e visibilidade de custo. Em abril de 2026, nenhum IDE único cobre os seis critérios.**',
     quickFacts: [
-      'Cursor: Tier gratuito (limitado) ou $20/mês para uso ilimitado',
+      'Cursor: Tier gratuito (limitado) ou planos pagos a partir de $8/mês (Plus, somente modelos Grok; Premium a $30/mês inclui Claude e GPT)',
       'VS Code + Continue.dev: Gratuito e open-source (licença MIT)',
       'OpenAI Playground: Faturamento medido ao preço de tokens da API de produção',
       'LM Studio: $0/token após investimento único em hardware ($500–3.000)',
@@ -961,7 +961,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Melhores IDEs e editores de prompt engineering 2026',
-      description: 'Cursor custa $20/mês; LM Studio é $0 após o investimento em hardware. Seis IDEs de prompt engineering, cada um otimizado para um caso de uso diferente. Descubra qual se encaixa com o seu.',
+      description: 'Cursor tem planos a partir de $8/mês; LM Studio é $0 após o investimento em hardware. Seis IDEs de prompt engineering, cada um otimizado para um caso de uso diferente. Descubra qual se encaixa com o seu.',
       datePublished: '2026-04-10',
       dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -988,7 +988,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor: IDE nativo de IA',
           url: 'https://cursor.sh',
-          description: 'Fork do VS Code com chat de IA integrado, troca de modelo (GPT-5.6, Claude, Gemini) e contexto consciente da base de código. Ideal para desenvolvedores que escrevem tanto prompts quanto código de aplicação. Tier gratuito ou $20/mês.',
+          description: 'Fork do VS Code com chat de IA integrado, troca de modelo (GPT-5.6, Claude, Gemini) e contexto consciente da base de código. Ideal para desenvolvedores que escrevem tanto prompts quanto código de aplicação. Tier gratuito ou planos pagos a partir de $8/mês.',
         },
         {
           '@type': 'ListItem',
@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Ideal se você escreve tanto prompts quanto código de aplicação',
           'Inclui contexto consciente da base de código (lê os arquivos do seu projeto)',
-          'Preços: Tier gratuito (limitado), $20/mês para uso ilimitado',
+          'Preços: Tier gratuito (limitado), planos pagos a partir de $8/mês (Plus: somente modelos Grok; Premium a $30/mês inclui Claude e GPT)',
           'Latência: Depende do modelo selecionado (GPT-5.6 ~1-2s, Claude ~2-3s)',
         ],
         callouts: [
@@ -1135,7 +1135,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**Em abril de 2026, este é o detalhamento.** Em nossos testes de fluxo de trabalho, a configuração de playgrounds na nuvem teve média de menos de 2 minutos para usuários iniciantes, enquanto o LM Studio exigiu aproximadamente 45 minutos na primeira instalação (incluindo o download do modelo). Os downloads subsequentes de modelos variaram de 10 minutos (7B Q4, ~4GB) a mais de 90 minutos (70B Q4, ~40GB).',
         columns: ['IDE', 'Tipo', 'Multi-modelo', 'Modelos locais', 'Contador de tokens', 'Histórico de prompts', 'Exportar para código', 'Offline', 'Preço', 'Ideal para'],
         rows: [
-          { IDE: 'Cursor', Tipo: 'IDE de desktop', 'Multi-modelo': 'GPT-5.6, Claude, Gemini', 'Modelos locais': 'Não', 'Contador de tokens': 'Via API', 'Histórico de prompts': 'Sim (chat)', 'Exportar para código': 'Sim', Offline: 'Não', Preço: 'Gratuito / $20/mês', 'Ideal para': 'Dev que constrói app+prompts' },
+          { IDE: 'Cursor', Tipo: 'IDE de desktop', 'Multi-modelo': 'GPT-5.6, Claude, Gemini', 'Modelos locais': 'Não', 'Contador de tokens': 'Via API', 'Histórico de prompts': 'Sim (chat)', 'Exportar para código': 'Sim', Offline: 'Não', Preço: 'Gratuito / a partir de $8/mês', 'Ideal para': 'Dev que constrói app+prompts' },
           { IDE: 'VS Code + Continue', Tipo: 'IDE desktop + ext.', 'Multi-modelo': 'GPT-5.6, Claude, Gemini, local', 'Modelos locais': 'Sim (Ollama)', 'Contador de tokens': 'Depende do provedor', 'Histórico de prompts': 'Manual', 'Exportar para código': 'Sim', Offline: 'Sim (local)', Preço: 'Gratuito (MIT)', 'Ideal para': 'Multi-modelo + open-source' },
           { IDE: 'OpenAI Playground', Tipo: 'Playground web', 'Multi-modelo': 'Apenas OpenAI', 'Modelos locais': 'Não', 'Contador de tokens': 'Integrado, tempo real', 'Histórico de prompts': 'Sim', 'Exportar para código': 'Sim (curl/Python/JS)', Offline: 'Não', Preço: 'Pagamento por token', 'Ideal para': 'Exploração de API' },
           { IDE: 'Claude Console', Tipo: 'Playground web', 'Multi-modelo': 'Apenas Claude', 'Modelos locais': 'Não', 'Contador de tokens': 'Integrado', 'Histórico de prompts': 'Sim', 'Exportar para código': 'Sim (Python/JS)', Offline: 'Não', Preço: 'Pagamento por token', 'Ideal para': 'Específico de Claude' },
@@ -1227,7 +1227,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterDescription: 'Cursor vs VS Code vs Playground vs LM Studio — quel IDE de prompt choisir ? Comparaison 6 outils avec matrice (2026).',
     intro: '**TL;DR :** Aucun IDE de prompt engineering ne couvre tous les workflows. Utilisez Cursor ou VS Code + Continue pour le développement, OpenAI Playground ou Claude Console pour les tests d\'API, Google AI Studio pour le multimodal gratuit et LM Studio pour le travail hors ligne. Chacun des six outils de ce guide est optimisé pour un cas d\'usage différent — choisissez selon votre workflow, pas selon le nombre de fonctionnalités.',
     publishDate: '2026-04-10',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-17',
     readTime: '8 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs créant des applications LLM',
@@ -1237,7 +1237,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     next_refresh_due: '2026-10-10',
     leadAnswerBlock: '**Un IDE de prompt engineering est un éditeur spécialisé qui minimise la friction entre l\'idée et l\'exécution — en couvrant la sélection de modèles, l\'exécution en playground, l\'historique des prompts, l\'export en code et la visibilité sur les coûts. En avril 2026, aucun IDE ne remplit les six critères à lui seul.**',
     quickFacts: [
-      'Cursor : version gratuite (limitée) ou 20 €/mois pour une utilisation illimitée',
+      'Cursor : version gratuite (limitée) ou forfaits payants dès 8 $/mois (Plus, modèles Grok uniquement ; Premium à 30 $/mois ajoute Claude et GPT)',
       'VS Code + Continue.dev : gratuit et open source (licence MIT)',
       'OpenAI Playground : facturation à la consommation aux tarifs de l\'API de production',
       'LM Studio : 0 €/token après investissement matériel unique (env. 500–2 800 €)',
@@ -1291,7 +1291,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor : IDE natif IA',
           url: 'https://cursor.sh',
-          description: 'Fork de VS Code avec chat IA intégré, sélection de modèle (GPT-5.6, Claude, Gemini) et contexte aware de la base de code. Idéal pour les développeurs écrivant des prompts et du code applicatif. Version gratuite ou 20 €/mois.',
+          description: 'Fork de VS Code avec chat IA intégré, sélection de modèle (GPT-5.6, Claude, Gemini) et contexte aware de la base de code. Idéal pour les développeurs écrivant des prompts et du code applicatif. Version gratuite ou forfaits payants dès 8 $/mois.',
         },
         {
           '@type': 'ListItem',
@@ -1361,7 +1361,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Idéal si vous écrivez à la fois des prompts et le code applicatif qui les utilise',
           'Contexte aware de la base de code (lit vos fichiers de projet)',
-          'Tarifs : version gratuite (limitée), 20 €/mois pour une utilisation illimitée',
+          'Tarifs : version gratuite (limitée), forfaits payants dès 8 $/mois (Plus : modèles Grok uniquement ; Premium à 30 $/mois ajoute Claude et GPT)',
           'Latence : selon le modèle choisi (GPT-5.6 ~1–2s, Claude ~2–3s)',
         ],
         callouts: [
@@ -1438,7 +1438,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**En avril 2026, voici le récapitulatif.** Dans nos tests de workflow, la configuration des environnements cloud a pris en moyenne moins de 2 minutes pour les nouveaux utilisateurs, tandis que LM Studio a nécessité environ 45 minutes à la première installation (téléchargement du modèle inclus). Les téléchargements ultérieurs ont duré de 10 minutes (7B Q4, ~4 Go) à plus de 90 minutes (70B Q4, ~40 Go).',
         columns: ['IDE', 'Type', 'Multi-modèle', 'Modèles locaux', 'Compteur de tokens', 'Historique des prompts', 'Export en code', 'Hors ligne', 'Prix', 'Idéal pour'],
         rows: [
-          { IDE: 'Cursor', Type: 'IDE bureau', 'Multi-modèle': 'GPT-5.6, Claude, Gemini', 'Modèles locaux': 'Non', 'Compteur de tokens': 'Via API', 'Historique des prompts': 'Oui (chat)', 'Export en code': 'Oui', 'Hors ligne': 'Non', Prix: 'Gratuit / 20 €/mois', 'Idéal pour': 'Développement app + prompts' },
+          { IDE: 'Cursor', Type: 'IDE bureau', 'Multi-modèle': 'GPT-5.6, Claude, Gemini', 'Modèles locaux': 'Non', 'Compteur de tokens': 'Via API', 'Historique des prompts': 'Oui (chat)', 'Export en code': 'Oui', 'Hors ligne': 'Non', Prix: 'Gratuit / dès 8 $/mois', 'Idéal pour': 'Développement app + prompts' },
           { IDE: 'VS Code + Continue', Type: 'IDE bureau + ext.', 'Multi-modèle': 'GPT-5.6, Claude, Gemini, local', 'Modèles locaux': 'Oui (Ollama)', 'Compteur de tokens': 'Selon le fournisseur', 'Historique des prompts': 'Manuel', 'Export en code': 'Oui', 'Hors ligne': 'Oui (local)', Prix: 'Gratuit (MIT)', 'Idéal pour': 'Multi-modèle + open source' },
           { IDE: 'OpenAI Playground', Type: 'Playground web', 'Multi-modèle': 'OpenAI uniquement', 'Modèles locaux': 'Non', 'Compteur de tokens': 'Intégré, temps réel', 'Historique des prompts': 'Oui', 'Export en code': 'Oui (curl/Python/JS)', 'Hors ligne': 'Non', Prix: 'Pay-per-token', 'Idéal pour': 'Exploration API' },
           { IDE: 'Claude Console', Type: 'Playground web', 'Multi-modèle': 'Claude uniquement', 'Modèles locaux': 'Non', 'Compteur de tokens': 'Intégré', 'Historique des prompts': 'Oui', 'Export en code': 'Oui (Python/JS)', 'Hors ligne': 'Non', Prix: 'Pay-per-token', 'Idéal pour': 'Spécifique à Claude' },
@@ -1529,7 +1529,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterDescription: 'Cursor vs VS Code vs Playground vs LM Studio——ワークフロー別プロンプトIDE比較。6ツールの機能マトリクス（2026年）。',
     intro: '**TL;DR：** プロンプトエンジニアリングIDEは一つですべてのワークフローをカバーできません。開発にはCursorまたはVS Code + Continueを、APIテストにはOpenAI PlaygroundまたはClaude Consoleを、無料のマルチモーダル作業にはGoogle AI Studioを、オフライン作業にはLM Studioを使いましょう。このガイドの6つのツールはそれぞれ異なるユースケースに最適化されています。機能の数ではなく、ワークフローで選んでください。',
     publishDate: '2026-04-10',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-17',
     readTime: '8分で読める',
     educationalLevel: 'Intermediate',
     audience: 'LLMアプリケーションを開発するエンジニア',
@@ -1539,7 +1539,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     next_refresh_due: '2026-10-10',
     leadAnswerBlock: '**プロンプトエンジニアリングIDEとは、アイデアから実行までの摩擦を最小化する専用エディタです。** モデルの切り替え、Playgroundでの実行、プロンプト履歴、コードエクスポート、コスト可視化を一つのツールでカバーします。2026年4月時点で、6つの基準をすべて満たすIDEはありません。',
     quickFacts: [
-      'Cursor：無料プラン（制限あり）または$20/月（約¥3,000）で無制限利用',
+      'Cursor：無料プラン（制限あり）または月額$8からの有料プラン（Plusは月額$8でGrokモデルのみ、月額$30のPremiumでClaudeとGPTを追加）',
       'VS Code + Continue.dev：無料・オープンソース（MITライセンス）',
       'OpenAI Playground：本番APIと同じトークン単価で従量課金',
       'LM Studio：初期ハードウェア投資（約¥75,000–¥450,000）後はトークン料金ゼロ',
@@ -1593,7 +1593,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor：AIネイティブIDE',
           url: 'https://cursor.sh',
-          description: 'VS CodeフォークにAIチャット、モデル切り替え（GPT-5.6、Claude、Gemini）、コードベース認識機能を搭載。プロンプトとアプリケーションコードを同時に書く開発者に最適。無料プランまたは$20/月（約¥3,000）。',
+          description: 'VS CodeフォークにAIチャット、モデル切り替え（GPT-5.6、Claude、Gemini）、コードベース認識機能を搭載。プロンプトとアプリケーションコードを同時に書く開発者に最適。無料プランまたは月額$8からの有料プラン。',
         },
         {
           '@type': 'ListItem',
@@ -1663,7 +1663,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'プロンプトとアプリケーションコードの両方を書く場合に最適',
           'コードベース認識コンテキスト（プロジェクトファイルを読み込む）',
-          '料金：無料プラン（制限あり）、$20/月（約¥3,000）で無制限利用',
+          '料金：無料プラン（制限あり）、月額$8からの有料プラン（Plusは月額$8でGrokモデルのみ、月額$30のPremiumでClaudeとGPTを追加）',
           '遅延：選択モデルに依存（GPT-5.6 約1–2秒、Claude 約2–3秒）',
         ],
         callouts: [
@@ -1740,7 +1740,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**2026年4月時点の概要は以下の通りです。** ワークフローテストでは、クラウドPlayground環境の初回セットアップは平均2分未満でした。LM Studioは初回インストール（モデルダウンロード含む）に約45分かかりました。その後のモデルダウンロードは10分（7B Q4、約4GB）から90分以上（70B Q4、約40GB）の範囲でした。',
         columns: ['IDE', '種類', 'マルチモデル', 'ローカルモデル', 'トークンカウンター', 'プロンプト履歴', 'コードエクスポート', 'オフライン', '価格', '最適な用途'],
         rows: [
-          { IDE: 'Cursor', '種類': 'デスクトップIDE', 'マルチモデル': 'GPT-5.6、Claude、Gemini', 'ローカルモデル': '非対応', 'トークンカウンター': 'API経由', 'プロンプト履歴': 'あり（チャット）', 'コードエクスポート': 'あり', 'オフライン': '非対応', '価格': '無料 / $20/月', '最適な用途': 'アプリ+プロンプト開発' },
+          { IDE: 'Cursor', '種類': 'デスクトップIDE', 'マルチモデル': 'GPT-5.6、Claude、Gemini', 'ローカルモデル': '非対応', 'トークンカウンター': 'API経由', 'プロンプト履歴': 'あり（チャット）', 'コードエクスポート': 'あり', 'オフライン': '非対応', '価格': '無料 / 月額$8から', '最適な用途': 'アプリ+プロンプト開発' },
           { IDE: 'VS Code + Continue', '種類': 'デスクトップIDE+拡張', 'マルチモデル': 'GPT-5.6、Claude、Gemini、ローカル', 'ローカルモデル': 'あり（Ollama）', 'トークンカウンター': 'プロバイダー依存', 'プロンプト履歴': '手動', 'コードエクスポート': 'あり', 'オフライン': 'あり（ローカル）', '価格': '無料（MIT）', '最適な用途': 'マルチモデル+オープンソース' },
           { IDE: 'OpenAI Playground', '種類': 'WebPlayground', 'マルチモデル': 'OpenAIのみ', 'ローカルモデル': '非対応', 'トークンカウンター': '内蔵・リアルタイム', 'プロンプト履歴': 'あり', 'コードエクスポート': 'あり（curl/Python/JS）', 'オフライン': '非対応', '価格': 'Pay-per-token', '最適な用途': 'API探索' },
           { IDE: 'Claude Console', '種類': 'WebPlayground', 'マルチモデル': 'Claudeのみ', 'ローカルモデル': '非対応', 'トークンカウンター': '内蔵', 'プロンプト履歴': 'あり', 'コードエクスポート': 'あり（Python/JS）', 'オフライン': '非対応', '価格': 'Pay-per-token', '最適な用途': 'Claude専用' },
@@ -1831,7 +1831,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     twitterDescription: 'Cursor vs VS Code vs Playground vs LM Studio——哪款Prompt IDE适合你？6工具功能矩阵对比（2026）。',
     intro: '**TL;DR：** 没有哪款Prompt工程IDE能覆盖所有工作流。开发场景用Cursor或VS Code + Continue，API测试用OpenAI Playground或Claude Console，免费多模态用Google AI Studio，离线场景用LM Studio。本指南的6款工具各有其最佳适用场景——按工作流选择，而非按功能数量。',
     publishDate: '2026-04-10',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-17',
     readTime: '阅读约8分钟',
     educationalLevel: 'Intermediate',
     audience: '开发LLM应用的工程师',
@@ -1841,7 +1841,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     next_refresh_due: '2026-10-10',
     leadAnswerBlock: '**Prompt工程IDE是最小化创意到执行摩擦的专用编辑器。** 覆盖模型切换、Playground执行、Prompt历史、代码导出和成本可视化。截至2026年4月，没有任何一款IDE能完整满足这六个标准。',
     quickFacts: [
-      'Cursor：免费版（有限制）或$20/月（无限制）',
+      'Cursor：免费版（有限制）或$8/月起的付费套餐（Plus仅限Grok模型，Premium $30/月加入Claude和GPT）',
       'VS Code + Continue.dev：免费开源（MIT协议）',
       'OpenAI Playground：按生产API Token价格计费',
       'LM Studio：一次性硬件投入（$500–$3,000）后Token费用为零',
@@ -1895,7 +1895,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor：AI原生IDE',
           url: 'https://cursor.sh',
-          description: '集成AI聊天、模型切换（GPT-5.6、Claude、Gemini）和代码库感知上下文的VS Code分支。最适合同时编写Prompt和应用代码的开发者。免费版或$20/月。',
+          description: '集成AI聊天、模型切换（GPT-5.6、Claude、Gemini）和代码库感知上下文的VS Code分支。最适合同时编写Prompt和应用代码的开发者。免费版或$8/月起的付费套餐。',
         },
         {
           '@type': 'ListItem',
@@ -1965,7 +1965,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           '最适合同时编写Prompt和应用代码的开发者',
           '具备代码库感知上下文（读取项目文件）',
-          '价格：免费版（有限制），$20/月无限制使用',
+          '价格：免费版（有限制），$8/月起的付费套餐（Plus仅限Grok模型，Premium $30/月加入Claude和GPT）',
           '延迟：取决于选择的模型（GPT-5.6 约1–2秒，Claude 约2–3秒）',
         ],
         callouts: [
@@ -2042,7 +2042,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**以下是截至2026年4月的数据对比。** 工作流测试显示，云端Playground环境的首次配置平均不到2分钟，而LM Studio首次安装（含模型下载）约需45分钟。后续模型下载时间从10分钟（7B Q4，约4GB）到90分钟以上（70B Q4，约40GB）不等。',
         columns: ['IDE', '类型', '多模型支持', '本地模型', 'Token计数器', 'Prompt历史', '导出为代码', '离线', '价格', '最适合'],
         rows: [
-          { IDE: 'Cursor', '类型': '桌面IDE', '多模型支持': 'GPT-5.6、Claude、Gemini', '本地模型': '不支持', 'Token计数器': '通过API', 'Prompt历史': '有（聊天）', '导出为代码': '支持', '离线': '不支持', '价格': '免费 / $20/月', '最适合': '应用+Prompt开发' },
+          { IDE: 'Cursor', '类型': '桌面IDE', '多模型支持': 'GPT-5.6、Claude、Gemini', '本地模型': '不支持', 'Token计数器': '通过API', 'Prompt历史': '有（聊天）', '导出为代码': '支持', '离线': '不支持', '价格': '免费 / $8/月起', '最适合': '应用+Prompt开发' },
           { IDE: 'VS Code + Continue', '类型': '桌面IDE+插件', '多模型支持': 'GPT-5.6、Claude、Gemini、本地', '本地模型': '支持（Ollama）', 'Token计数器': '取决于提供商', 'Prompt历史': '手动', '导出为代码': '支持', '离线': '支持（本地）', '价格': '免费（MIT）', '最适合': '多模型+开源' },
           { IDE: 'OpenAI Playground', '类型': 'Web Playground', '多模型支持': '仅OpenAI', '本地模型': '不支持', 'Token计数器': '内置，实时', 'Prompt历史': '有', '导出为代码': '支持（curl/Python/JS）', '离线': '不支持', '价格': '按Token计费', '最适合': 'API探索' },
           { IDE: 'Claude Console', '类型': 'Web Playground', '多模型支持': '仅Claude', '本地模型': '不支持', 'Token计数器': '内置', 'Prompt历史': '有', '导出为代码': '支持（Python/JS）', '离线': '不支持', '价格': '按Token计费', '最适合': 'Claude专用' },
@@ -2129,14 +2129,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/best-prompt-engineering-ides-overview-hero-ar.webp',
     title: 'أفضل بيئات تطوير هندسة البرومبت لعام ⁨2026⁩',
     seoTitle: 'أفضل ⁨IDEs⁩ لهندسة البرومبت ⁨2026⁩: دليل المقارنة',
-    metaDescription: '⁨Cursor⁩ بـ ⁨20⁩ دولار/شهر؛ ⁨LM Studio⁩ مجاني بعد الأجهزة. مقارنة ⁨6⁩ بيئات تطوير للبرومبت: ⁨Cursor⁩ و⁨VS Code⁩ و⁨OpenAI Playground⁩ و⁨LM Studio⁩ وغيرها.',
+    metaDescription: '⁨Cursor⁩ من ⁨8⁩ دولارات/شهر؛ ⁨LM Studio⁩ مجاني بعد الأجهزة. مقارنة ⁨6⁩ بيئات تطوير للبرومبت: ⁨Cursor⁩ و⁨VS Code⁩ و⁨OpenAI Playground⁩ و⁨LM Studio⁩ وغيرها.',
     ogTitle: 'أفضل بيئات تطوير هندسة البرومبت 2026: Cursor وVS Code والمزيد',
     ogDescription: 'Cursor للمطورين، OpenAI Playground للاختبار السريع، LM Studio للنماذج المحلية. دليل اختيار بيئة البرومبت المناسبة لفريقك.',
     twitterTitle: 'أفضل بيئات تطوير هندسة البرومبت 2026',
     twitterDescription: 'مقارنة ⁨6⁩ بيئات تطوير للبرومبت: ⁨Cursor⁩ و⁨VS Code⁩ و⁨OpenAI Playground⁩ و⁨Claude Console⁩ و⁨Google AI Studio⁩ و⁨LM Studio⁩.',
     intro: '**لا توجد بيئة تطوير واحدة مثالية لجميع مهام هندسة البرومبت. Cursor يُتقن تكامل الكود، وOpenAI Playground مثالي للاختبار السريع، وLM Studio يُتيح العمل مع النماذج المحلية دون الاتصال بالإنترنت. هذا الدليل يقارن 6 بيئات وفق معايير التكامل والسعر ودعم النماذج لمساعدتك في اختيار الأنسب.**',
     publishDate: '2026-05-01',
-    dateModified: '2026-08-31',
+    dateModified: '2026-10-17',
     readTime: '10 دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'مهندسو البرومبت والمطورون الذين يختارون بيئة تطوير لهندسة البرومبت',
@@ -2144,7 +2144,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     aboutTopics: ['هندسة البرومبت', 'أدوات تطوير الذكاء الاصطناعي', 'نماذج اللغة الكبيرة'],
     leadAnswerBlock: 'Cursor هي الأفضل للمطورين الذين يحتاجون إلى تكامل الكود مع الذكاء الاصطناعي. OpenAI Playground أسرع للاختبار التجريبي. LM Studio هو الخيار الأمثل للنماذج المحلية والخصوصية. الاختيار يعتمد على نوع مهمتك وميزانيتك وما إذا كنت تحتاج إلى نماذج محلية أو سحابية.',
     quickFacts: [
-      'Cursor يبدأ بـ $20/شهر؛ VS Code + Continue.dev مجاني تمامًا',
+      'Cursor يبدأ من $8/شهر؛ VS Code + Cline مجاني تمامًا',
       'LM Studio وVS Code + Continue.dev يدعمان النماذج المحلية عبر Ollama وvLLM',
       'OpenAI Playground وClaude Console وGoogle AI Studio سحابية بالكامل ويُحاسَب عليها بالtoken',
       'Google AI Studio يوفر طبقة مجانية سخية لاختبار نماذج Gemini',
@@ -2208,7 +2208,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       keyTakeaways: {
         isTldr: true,
         items: [
-          'Cursor هو الأفضل للمطورين الذين يريدون تكاملًا عميقًا للذكاء الاصطناعي في سير عمل الكود بسعر $20/شهر.',
+          'Cursor هو الأفضل للمطورين الذين يريدون تكاملًا عميقًا للذكاء الاصطناعي في سير عمل الكود بخطط تبدأ من $8/شهر.',
           'VS Code + Continue.dev هو البديل المجاني مفتوح المصدر مع دعم النماذج المحلية — مثالي لمن لا يريد الاشتراكات.',
           'OpenAI Playground هو الأسرع للاختبار التجريبي مع GPT — لا حاجة للإعداد، يعمل في ثوانٍ.',
           'Claude Console من Anthropic هو الأفضل لاختبار البرومبتات على Claude مع دعم سياق يصل إلى 1M token.',
@@ -2234,7 +2234,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Cursor: محرر الكود المدعوم بالذكاء الاصطناعي',
         content: '**Cursor هو فرع من VS Code مُحسَّن للذكاء الاصطناعي — مع دردشة جانبية مدمجة وإكمال تلقائي ذكي ووعي بقاعدة الكود بالكامل.** الأفضل للمطورين الذين يكتبون كودًا ويريدون مساعدة الذكاء الاصطناعي مدمجة في سير العمل.',
         items: [
-          '**الطبقة المجانية:** محدودة؛ الطبقة Pro بـ $20/شهر توفر استخدامًا غير محدود مع GPT-5.6 وClaude',
+          '**الطبقة المجانية:** محدودة؛ والخطط المدفوعة تبدأ من $8/شهر (Plus لنماذج Grok فقط، وPremium بـ $30/شهر تضيف Claude وGPT)',
           '**نقطة القوة:** Cmd+K لتحرير الكود بالذكاء الاصطناعي؛ الدردشة الجانبية تفهم مستودعك بالكامل',
           '**القيود:** سحابي بالكامل — لا دعم للنماذج المحلية في الطبقة القياسية',
           '**الأنسب لـ:** المطورين الذين يريدون إنتاجية أعلى في الكود وليس فقط اختبار البرومبت',
@@ -2310,7 +2310,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tableFormat: true,
         columns: ['البيئة', 'السعر', 'النماذج', 'نماذج محلية', 'تصدير الكود', 'الأنسب لـ'],
         rows: [
-          { 'البيئة': 'Cursor', 'السعر': '$20/شهر', 'النماذج': 'GPT-5.6، Claude', 'نماذج محلية': 'لا', 'تصدير الكود': 'نعم', 'الأنسب لـ': 'المطورون' },
+          { 'البيئة': 'Cursor', 'السعر': 'من $8/شهر', 'النماذج': 'GPT-5.6، Claude', 'نماذج محلية': 'لا', 'تصدير الكود': 'نعم', 'الأنسب لـ': 'المطورون' },
           { 'البيئة': 'VS Code + Continue.dev', 'السعر': 'مجاني', 'النماذج': 'جميع المزودين', 'نماذج محلية': 'نعم (Ollama)', 'تصدير الكود': 'نعم', 'الأنسب لـ': 'من يريد المرونة' },
           { 'البيئة': 'OpenAI Playground', 'السعر': 'بالاستخدام', 'النماذج': 'GPT فقط', 'نماذج محلية': 'لا', 'تصدير الكود': 'نعم', 'الأنسب لـ': 'تجربة GPT السريعة' },
           { 'البيئة': 'Claude Console', 'السعر': 'بالاستخدام', 'النماذج': 'Claude فقط', 'نماذج محلية': 'لا', 'تصدير الكود': 'جزئي', 'الأنسب لـ': 'تجربة Claude' },
@@ -2323,7 +2323,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'كيف تختار البيئة المناسبة لمهمتك',
         content: '**اختر البيئة بناءً على طبيعة مهمتك الأساسية وميزانيتك ومتطلبات الخصوصية.**',
         numberedItems: [
-          '**إذا كنت مطورًا تكتب كودًا بشكل أساسي:** ابدأ بـ Cursor ($20/شهر) أو VS Code + Continue.dev (مجاني). كلاهما يُدمج الذكاء الاصطناعي في سير عمل الكود.',
+          '**إذا كنت مطورًا تكتب كودًا بشكل أساسي:** ابدأ بـ Cursor (من $8/شهر) أو VS Code + Cline (مجاني). كلاهما يُدمج الذكاء الاصطناعي في سير عمل الكود.',
           '**إذا كنت تريد اختبار GPT سريعًا:** OpenAI Playground هو الأسرع — لا إعداد، ضبط البارامترات فوري، تصدير الكود بنقرة.',
           '**إذا كنت تعمل على مستندات طويلة أو سياق كبير:** Claude Console يوفر 1M token مع دعم رفع PDF مباشرة.',
           '**إذا كنت تريد تجربة الذكاء الاصطناعي متعدد الوسائط مجانًا:** Google AI Studio يوفر اختبار الفيديو والصوت والصور مع Gemini مجانًا.',
@@ -2393,14 +2393,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/best-prompt-engineering-ides-overview-hero-ko.webp',
     title: '2026년 최고의 프롬프트 엔지니어링 IDE 및 에디터',
     seoTitle: '2026년 최고의 프롬프트 엔지니어링 IDE: 6가지 도구 비교',
-    metaDescription: 'Cursor는 월 $20; LM Studio는 하드웨어 투자 후 $0. 용도별로 최적화된 6가지 프롬프트 엔지니어링 IDE를 비교합니다. 나에게 맞는 도구를 찾아보세요.',
+    metaDescription: 'Cursor는 월 $8부터; LM Studio는 하드웨어 투자 후 $0. 용도별로 최적화된 6가지 프롬프트 엔지니어링 IDE를 비교합니다. 나에게 맞는 도구를 찾아보세요.',
     ogTitle: '2026년 최고의 프롬프트 엔지니어링 IDE 및 에디터: 완전 가이드',
     ogDescription: 'Cursor, LM Studio, VS Code + Continue, OpenAI Playground, Claude Console, Google AI Studio — 워크플로우별로 최적화된 6가지 IDE 옵션. 나에게 맞는 것을 찾아보세요.',
     twitterTitle: '2026년 최고의 프롬프트 엔지니어링 IDE 및 에디터: 가이드',
     twitterDescription: '어떤 IDE도 모든 것을 커버하지는 않습니다. 코드+프롬프트에는 Cursor, 오프라인에는 LM Studio, API 테스트에는 OpenAI Playground. 선택 방법을 알아보세요.',
     intro: '**TL;DR:** 어떤 프롬프트 엔지니어링 IDE도 모든 워크플로우를 커버하지는 않습니다. 개발에는 Cursor 또는 VS Code + Continue, API 테스트에는 OpenAI Playground 또는 Claude Console, 무료 멀티모달 작업에는 Google AI Studio, 오프라인에는 LM Studio를 사용하십시오. 이 가이드의 6가지 도구는 각각 서로 다른 사용 사례에 최적화되어 있습니다 — 기능 목록이 아닌 워크플로우를 기준으로 선택하십시오.',
     publishDate: '2026-04-10',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-17',
     readTime: '8분 분량',
     educationalLevel: 'Intermediate',
     audience: 'LLM 애플리케이션을 개발하는 개발자',
@@ -2410,7 +2410,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     next_refresh_due: '2026-10-10',
     leadAnswerBlock: '**프롬프트 엔지니어링 IDE는 아이디어와 실행 사이의 마찰을 최소화하는 특화된 에디터입니다 — 모델 전환, 플레이그라운드 실행, 프롬프트 히스토리, 코드 내보내기, 비용 가시성을 포함합니다. 2026년 4월 기준, 6가지 기준을 모두 충족하는 단일 IDE는 없습니다.**',
     quickFacts: [
-      'Cursor: 무료 티어(제한) 또는 무제한 사용 월 $20',
+      'Cursor: 무료 티어(제한) 또는 월 $8부터의 유료 요금제(Plus는 Grok 모델 전용, 월 $30 Premium은 Claude와 GPT 추가)',
       'VS Code + Continue.dev: 무료 오픈소스 (MIT 라이선스)',
       'OpenAI Playground: 프로덕션 API 토큰 가격으로 종량 과금',
       'LM Studio: 하드웨어 초기 투자($500–3,000) 후 토큰당 $0',
@@ -2437,7 +2437,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026년 최고의 프롬프트 엔지니어링 IDE 및 에디터',
-      description: 'Cursor는 월 $20; LM Studio는 하드웨어 투자 후 $0. 용도별로 최적화된 6가지 프롬프트 엔지니어링 IDE. 나에게 맞는 도구를 찾아보세요.',
+      description: 'Cursor는 월 $8부터; LM Studio는 하드웨어 투자 후 $0. 용도별로 최적화된 6가지 프롬프트 엔지니어링 IDE. 나에게 맞는 도구를 찾아보세요.',
       datePublished: '2026-04-10',
       dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', url: 'https://www.promptquorum.com/about', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2463,7 +2463,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           position: 1,
           name: 'Cursor: AI 네이티브 IDE',
           url: 'https://cursor.sh',
-          description: '내장 AI 채팅, 모델 전환(GPT-5.6, Claude, Gemini), 코드베이스 인식 컨텍스트를 갖춘 VS Code 포크. 프롬프트와 애플리케이션 코드를 모두 작성하는 개발자에게 이상적. 무료 티어 또는 월 $20.',
+          description: '내장 AI 채팅, 모델 전환(GPT-5.6, Claude, Gemini), 코드베이스 인식 컨텍스트를 갖춘 VS Code 포크. 프롬프트와 애플리케이션 코드를 모두 작성하는 개발자에게 이상적. 무료 티어 또는 월 $8부터의 유료 요금제.',
         },
         {
           '@type': 'ListItem',
@@ -2532,7 +2532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           '프롬프트와 애플리케이션 코드를 모두 작성하는 경우 이상적',
           '코드베이스 인식 컨텍스트 포함(프로젝트 파일을 읽음)',
-          '가격: 무료 티어(제한), 무제한 사용 월 $20',
+          '가격: 무료 티어(제한), 월 $8부터의 유료 요금제(Plus는 Grok 모델 전용, 월 $30 Premium은 Claude와 GPT 추가)',
           '지연 시간: 선택된 모델에 따라 다름(GPT-5.6 ~1-2초, Claude ~2-3초)',
         ],
         callouts: [
@@ -2609,7 +2609,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '**2026년 4월 기준 현황입니다.** 워크플로우 테스트에서 클라우드 플레이그라운드 설정은 첫 사용자 기준 평균 2분 미만이었으며, LM Studio는 첫 설치(모델 다운로드 포함)에 약 45분이 소요되었습니다. 이후 모델 다운로드는 10분(7B Q4, ~4GB)에서 90분 이상(70B Q4, ~40GB)까지 다양했습니다.',
         columns: ['IDE', '유형', '멀티모델', '로컬 모델', '토큰 카운터', '프롬프트 히스토리', '코드 내보내기', '오프라인', '가격', '이상적인 용도'],
         rows: [
-          { IDE: 'Cursor', '유형': '데스크톱 IDE', '멀티모델': 'GPT-5.6, Claude, Gemini', '로컬 모델': '아니오', '토큰 카운터': 'API 경유', '프롬프트 히스토리': '예(채팅)', '코드 내보내기': '예', '오프라인': '아니오', '가격': '무료 / 월 $20', '이상적인 용도': '앱+프롬프트 개발자' },
+          { IDE: 'Cursor', '유형': '데스크톱 IDE', '멀티모델': 'GPT-5.6, Claude, Gemini', '로컬 모델': '아니오', '토큰 카운터': 'API 경유', '프롬프트 히스토리': '예(채팅)', '코드 내보내기': '예', '오프라인': '아니오', '가격': '무료 / 월 $8부터', '이상적인 용도': '앱+프롬프트 개발자' },
           { IDE: 'VS Code + Continue', '유형': '데스크톱 IDE + 확장', '멀티모델': 'GPT-5.6, Claude, Gemini, 로컬', '로컬 모델': '예(Ollama)', '토큰 카운터': '공급업체마다 다름', '프롬프트 히스토리': '수동', '코드 내보내기': '예', '오프라인': '예(로컬)', '가격': '무료(MIT)', '이상적인 용도': '멀티모델 + 오픈소스' },
           { IDE: 'OpenAI Playground', '유형': '웹 플레이그라운드', '멀티모델': 'OpenAI만', '로컬 모델': '아니오', '토큰 카운터': '통합, 실시간', '프롬프트 히스토리': '예', '코드 내보내기': '예(curl/Python/JS)', '오프라인': '아니오', '가격': '토큰당 과금', '이상적인 용도': 'API 탐색' },
           { IDE: 'Claude Console', '유형': '웹 플레이그라운드', '멀티모델': 'Claude만', '로컬 모델': '아니오', '토큰 카운터': '통합', '프롬프트 히스토리': '예', '코드 내보내기': '예(Python/JS)', '오프라인': '아니오', '가격': '토큰당 과금', '이상적인 용도': 'Claude 특화' },
