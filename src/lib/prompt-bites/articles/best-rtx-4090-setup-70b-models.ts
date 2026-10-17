@@ -6,14 +6,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-en.webp',
     title: 'Best RTX 4090 Setup for Running 70B Models?',
-    seoTitle: 'RTX 4090 Setup for 70B Models 2026 | Prompt Bites',
-    metaDescription: 'A single RTX 4090 (24GB) cannot fully fit a 70B model — it needs ~40GB at Q4. Two RTX 4090s (48GB) or CPU offload are the realistic 70B setups.',
+    seoTitle: 'RTX 4090: Best Model & 70B Setup 2026 | Prompt Bites',
+    metaDescription: 'A single RTX 4090 (24 GB) cannot fit a 70B model at Q4 (~40 GB). Best single-4090 models: Qwen3.8-27B or Gemma 4 26B-A4B. For 70B, use two 4090s.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-14',
-    current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090'],
+    next_refresh_due: '2027-04-17',
+    current_models_mentioned: ['Qwen3.8-27B', 'Gemma 4 26B-A4B', 'Qwen3.6-35B-A3B'],
+    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090', 'RTX 5090 32 GB'],
     educationalLevel: 'Advanced',
     audience: 'Enthusiasts planning a 70B-capable local LLM build around RTX 4090s',
     affiliateDisclosure: true,
@@ -24,6 +24,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     toc: [
       { label: 'Best Pick: Two RTX 4090s (48 GB Combined)', anchor: '#best-pick' },
       { label: 'Dual RTX 4090 vs Single RTX 4090 + Quantization', anchor: '#comparison' },
+      { label: 'Best Model for a Single RTX 4090', anchor: '#best-model' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related' },
     ],
@@ -35,8 +36,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'A 70B model needs ~40 GB of VRAM at Q4_K_M — well above one RTX 4090\'s 24 GB.',
           'Two RTX 4090s (48 GB combined) via vLLM or llama.cpp tensor-parallel is the cleanest full-quality path.',
           'One RTX 4090 alone can run 70B only at Q2_K quantization, which visibly degrades output quality versus Q4.',
+          'For a single RTX 4090, run Qwen3.8-27B or Gemma 4 26B-A4B at Q4 instead of a 70B model at Q2_K.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -48,6 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Best full-quality setup: two RTX 4090s (48 GB combined) via vLLM or llama.cpp tensor-parallel',
           'Single-4090 workaround: Q2_K quantization fits in 24 GB but visibly degrades output quality',
           'CPU/RAM offload (llama.cpp `--n-gpu-layers`) works on one 4090 but drops throughput significantly',
+          'Best model for one RTX 4090: a 27B–35B-class model at Q4 (Qwen3.8-27B, Gemma 4 26B-A4B) — not a 70B squeezed to Q2_K',
         ],
       },
       bestPick: {
@@ -75,12 +78,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      bestModels: {
+        id: 'best-model',
+        title: 'Best Model for a Single RTX 4090',
+        content: [
+          '<strong>The best model for a single RTX 4090 is a current 27B–35B-class model at Q4, not a 70B model squeezed to Q2_K.</strong> A 27B–32B model at Q4 stays within 24 GB without the quality loss of 2-bit quantization, which hits code and math hardest. Picks follow [Best Local LLMs 2026](/local-llms/best-local-llms-2026).',
+        ],
+        items: [
+          'Qwen3.8-27B (`ollama pull qwen3.8:27b`) — strongest all-rounder and coding pick; 18 GB download, but long contexts get tight on 24 GB',
+          'Gemma 4 26B-A4B — mixture-of-experts, ~15 GB at Q4_K_M; leaves room for long context and runs at roughly 4B-model speed',
+          'Qwen3.6-35B-A3B — mixture-of-experts alternative with ~3B active parameters per token for faster generation',
+        ],
+      },
       comparison: {
         id: 'comparison',
         title: 'Dual RTX 4090 vs Single RTX 4090 + Quantization',
         content: [
           'Dual RTX 4090 gives full Q4 quality at real cost (a second card plus a beefier PSU and case). Single RTX 4090 + Q2_K keeps the build to one card but trades away noticeable output quality on tasks that need precision, like code generation or math.',
           'A middle path: run a 32B model instead of 70B on a single RTX 4090 at full Q4 quality (fits in 24 GB with room to spare) — for many tasks, a well-chosen 32B model closes most of the gap with a quality-degraded 70B.',
+          'For coding specifically, a current 27B–32B model at Q4 is the practical choice on one RTX 4090: it fits entirely on the GPU, while a 70B only fits at Q2_K, where code and math degrade most. Two RTX 4090s running a 70B at Q4 add capacity, but for typical coding tasks the gap to a current 27B model is often small — test your own prompts before buying a second card.',
         ],
       },
       faq: {
@@ -89,7 +105,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Can NVLink combine two RTX 4090s\' VRAM?',
-            a: 'No. The RTX 4090 does not support NVLink (NVIDIA removed it from this generation\'s consumer cards). Multi-GPU VRAM pooling for LLM inference works through software-level tensor-parallel splitting in tools like vLLM, not a hardware bridge.',
+            a: 'No. NVIDIA removed NVLink from the RTX 4090 — the RTX 3090 was the last GeForce card to support it. Multi-GPU VRAM pooling for LLM inference works through software-level tensor-parallel splitting in tools like vLLM and llama.cpp, not a hardware bridge, and runs over PCIe.',
           },
           {
             q: 'Is a 70B model at Q2_K actually usable?',
@@ -102,6 +118,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'Does dual-GPU inference double the tokens per second?',
             a: 'No — tensor-parallel inference splits the model across GPUs to fit it, but adds inter-GPU communication overhead. Expect faster inference than a heavily-offloaded single GPU, but not a clean 2x speedup over a model that already fit on one card.',
+          },
+          {
+            q: 'What is the best model for a single RTX 4090?',
+            a: 'A 27B–35B-class model at Q4. Qwen3.8-27B is the strongest all-rounder (18 GB download on Ollama; long contexts get tight on 24 GB), and Gemma 4 26B-A4B (~15 GB at Q4_K_M) leaves more room for context. Both avoid the quality loss of running a 70B model at Q2_K.',
+          },
+          {
+            q: 'Is a 32B model good enough for coding compared with a 70B model?',
+            a: 'For most practical coding tasks on one RTX 4090, yes: a current 27B–32B model at Q4 fits entirely on the GPU, while a 70B only fits at Q2_K, where code quality suffers most. A 70B at Q4 on two RTX 4090s offers more capacity, but the gap is often small — test your own prompts before buying a second card.',
+          },
+          {
+            q: 'Does a 70B model fit on an RTX 5090 (32 GB)?',
+            a: 'Not at Q4. A 70B model needs roughly 40 GB at Q4, above the RTX 5090\'s 32 GB, so a single 5090 still needs lower-bit quantization or CPU offload for 70B.',
           },
         ],
       },
@@ -120,14 +148,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-ar.webp',
     title: 'أفضل إعداد RTX 4090 لتشغيل نماذج 70B؟',
-    seoTitle: 'إعداد RTX 4090 لنماذج 70B 2026 | Prompt Bites',
-    metaDescription: 'بطاقة RTX 4090 واحدة (24GB) لا يمكنها استيعاب نموذج 70B بالكامل — يحتاج إلى ~40GB بدقة Q4. بطاقتا RTX 4090 (48GB) أو تفريغ CPU هما الإعدادان الواقعيان لتشغيل 70B.',
+    seoTitle: 'RTX 4090: أفضل نموذج وإعداد 70B لعام 2026 | Prompt Bites',
+    metaDescription: 'بطاقة RTX 4090 واحدة (24 GB) لا تستوعب نموذج 70B بدقة Q4 (~40 GB). أفضل نماذج بطاقة 4090 واحدة: Qwen3.8-27B أو Gemma 4 26B-A4B. وللنموذج 70B استخدم بطاقتين 4090.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-14',
-    current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090'],
+    next_refresh_due: '2027-04-17',
+    current_models_mentioned: ['Qwen3.8-27B', 'Gemma 4 26B-A4B', 'Qwen3.6-35B-A3B'],
+    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090', 'RTX 5090 32 GB'],
     educationalLevel: 'Advanced',
     audience: 'الهواة المخططون لبناء قادر على تشغيل نماذج 70B حول بطاقات RTX 4090',
     affiliateDisclosure: true,
@@ -138,6 +166,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     toc: [
       { label: 'أفضل اختيار: بطاقتا RTX 4090 (48 GB مجتمعة)', anchor: '#best-pick' },
       { label: 'بطاقتا RTX 4090 مقابل بطاقة RTX 4090 واحدة + تكميم', anchor: '#comparison' },
+      { label: 'أفضل نموذج لبطاقة RTX 4090 واحدة', anchor: '#best-model' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
       { label: 'قراءات ذات صلة', anchor: '#related' },
     ],
@@ -149,8 +178,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'نموذج 70B يحتاج ~40 GB من VRAM بدقة Q4_K_M — أعلى بكثير من 24 GB لبطاقة RTX 4090 الواحدة.',
           'بطاقتا RTX 4090 (48 GB مجتمعة) عبر vLLM أو llama.cpp بوضع متوازي الموتّرات هو الطريق الأنظف لجودة كاملة.',
           'بطاقة RTX 4090 واحدة يمكنها تشغيل 70B فقط بدقة Q2_K، ما يقلل بشكل ملحوظ من جودة المخرجات مقارنة بـ Q4.',
+          'على بطاقة RTX 4090 واحدة، شغّل Qwen3.8-27B أو Gemma 4 26B-A4B بدقة Q4 بدلًا من نموذج 70B بدقة Q2_K.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -162,6 +192,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'أفضل إعداد بجودة كاملة: بطاقتا RTX 4090 (48 GB مجتمعة) عبر vLLM أو llama.cpp بوضع متوازي الموتّرات',
           'حل بديل ببطاقة واحدة: تكميم Q2_K يستوعب في 24 GB لكنه يقلل بشكل ملحوظ من جودة المخرجات',
           'تفريغ CPU/RAM (خيار `--n-gpu-layers` في llama.cpp) يعمل على بطاقة 4090 واحدة لكنه يقلل الإنتاجية بشكل كبير',
+          'أفضل نموذج لبطاقة RTX 4090 واحدة: نموذج من فئة 27B–35B بدقة Q4 (Qwen3.8-27B وGemma 4 26B-A4B) — وليس نموذج 70B مضغوطًا إلى Q2_K',
         ],
       },
       bestPick: {
@@ -189,12 +220,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      bestModels: {
+        id: 'best-model',
+        title: 'أفضل نموذج لبطاقة RTX 4090 واحدة',
+        content: [
+          '<strong>أفضل نموذج لبطاقة RTX 4090 واحدة هو نموذج حديث من فئة 27B–35B بدقة Q4، وليس نموذج 70B مضغوطًا إلى Q2_K.</strong> يتسع نموذج 27B–32B بدقة Q4 داخل 24 GB دون خسارة الجودة الناتجة عن التكميم بـ2 بت، التي تضرّ بالأكواد والرياضيات أكثر من غيرها. تتبع الاختيارات [أفضل نماذج LLM المحلية 2026](/ar/local-llms/best-local-llms-2026).',
+        ],
+        items: [
+          'Qwen3.8-27B (`ollama pull qwen3.8:27b`) — الأقوى كنموذج شامل وللبرمجة؛ حجم التنزيل 18 GB، لكن السياقات الطويلة تضيق على 24 GB',
+          'Gemma 4 26B-A4B — مزيج خبراء، ~15 GB بدقة Q4_K_M؛ يترك مساحة لسياق طويل ويعمل بسرعة تقارب نموذج 4B',
+          'Qwen3.6-35B-A3B — بديل مزيج خبراء بنحو 3B معامل نشط لكل رمز لتوليد أسرع',
+        ],
+      },
       comparison: {
         id: 'comparison',
         title: 'بطاقتا RTX 4090 مقابل بطاقة RTX 4090 واحدة + تكميم',
         content: [
           'توفّر البطاقتان RTX 4090 جودة Q4 كاملة بتكلفة حقيقية (بطاقة ثانية بالإضافة إلى مزود طاقة وهيكل أقوى). بينما تحافظ بطاقة RTX 4090 واحدة + Q2_K على البناء ببطاقة واحدة لكنها تضحي بجودة مخرجات ملحوظة في المهام التي تحتاج دقة، مثل توليد الأكواد أو الرياضيات.',
           'طريق وسط: تشغيل نموذج 32B بدلًا من 70B على بطاقة RTX 4090 واحدة بجودة Q4 كاملة (يستوعب في 24 GB مع هامش متبقٍّ) — للعديد من المهام، يغلق نموذج 32B مختار جيدًا معظم الفجوة مع نموذج 70B منخفض الجودة.',
+          'للبرمجة تحديدًا، يمثّل نموذج حديث من فئة 27B–32B بدقة Q4 الخيار العملي على بطاقة RTX 4090 واحدة: فهو يتسع بالكامل في الـGPU، بينما لا يتسع نموذج 70B إلا بدقة Q2_K حيث تتراجع جودة الأكواد والرياضيات أكثر. تضيف بطاقتا RTX 4090 مع نموذج 70B بدقة Q4 سعة أكبر، لكن في مهام البرمجة المعتادة غالبًا ما يكون الفارق عن نموذج 27B حديث صغيرًا — جرّب مطالباتك الخاصة قبل شراء بطاقة ثانية.',
         ],
       },
       faq: {
@@ -203,7 +247,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'هل يمكن لتقنية NVLink دمج ذاكرة VRAM لبطاقتي RTX 4090؟',
-            a: 'لا. لا تدعم RTX 4090 تقنية NVLink (أزالتها NVIDIA من بطاقات هذا الجيل الاستهلاكية). يعمل تجميع VRAM متعدد GPU لاستدلال LLM عبر تقسيم متوازي للموتّرات على مستوى البرمجيات في أدوات مثل vLLM، وليس عبر جسر عتادي.',
+            a: 'لا. أزالت NVIDIA تقنية NVLink من RTX 4090 — وكانت RTX 3090 آخر بطاقة GeForce تدعمها. يعمل تجميع VRAM متعدد GPU لاستدلال LLM عبر تقسيم متوازي للموتّرات على مستوى البرمجيات في أدوات مثل vLLM وllama.cpp، وليس عبر جسر عتادي، ويمر عبر PCIe.',
           },
           {
             q: 'هل نموذج 70B بدقة Q2_K قابل للاستخدام فعليًا؟',
@@ -216,6 +260,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'هل يضاعف الاستدلال ثنائي GPU عدد الرموز في الثانية؟',
             a: 'لا — يقسّم الاستدلال متوازي الموتّرات النموذج عبر بطاقات GPU لاستيعابه، لكنه يضيف عبء اتصال بين البطاقات. توقع استدلالًا أسرع من بطاقة واحدة مثقلة بالتفريغ، لكن ليس تسريعًا مضاعفًا نظيفًا مقارنة بنموذج يستوعب أصلًا على بطاقة واحدة.',
+          },
+          {
+            q: 'ما أفضل نموذج لبطاقة RTX 4090 واحدة؟',
+            a: 'نموذج من فئة 27B–35B بدقة Q4. يُعد Qwen3.8-27B الأقوى كنموذج شامل (تنزيل 18 GB على Ollama؛ تضيق السياقات الطويلة على 24 GB)، بينما يترك Gemma 4 26B-A4B (~15 GB بدقة Q4_K_M) مساحة أكبر للسياق. كلاهما يتجنب خسارة الجودة عند تشغيل نموذج 70B بدقة Q2_K.',
+          },
+          {
+            q: 'هل يكفي نموذج 32B للبرمجة مقارنة بنموذج 70B؟',
+            a: 'في معظم مهام البرمجة العملية على بطاقة RTX 4090 واحدة، نعم: يتسع نموذج حديث من فئة 27B–32B بدقة Q4 بالكامل في الـGPU، بينما لا يتسع نموذج 70B إلا بدقة Q2_K حيث تتضرر جودة الأكواد أكثر. يوفر 70B بدقة Q4 على بطاقتي RTX 4090 سعة أكبر، لكن الفارق غالبًا صغير — جرّب مطالباتك الخاصة قبل شراء بطاقة ثانية.',
+          },
+          {
+            q: 'هل يتسع نموذج 70B في بطاقة RTX 5090 (32 GB)؟',
+            a: 'ليس بدقة Q4. يحتاج نموذج 70B إلى نحو 40 GB بدقة Q4، أي أكثر من 32 GB في RTX 5090، لذا تظل بطاقة 5090 الواحدة بحاجة إلى تكميم أدنى أو تفريغ إلى CPU لتشغيل 70B.',
           },
         ],
       },
@@ -234,14 +290,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-de.webp',
     title: 'Das beste RTX-4090-Setup für den Betrieb von 70B-Modellen?',
-    seoTitle: 'RTX-4090-Setup für 70B-Modelle 2026 | Prompt Bites',
-    metaDescription: 'Eine einzelne RTX 4090 (24 GB) fasst ein 70B-Modell nicht vollständig — braucht ~40 GB bei Q4. Zwei RTX 4090 (48 GB) oder CPU-Offload sind realistischer.',
+    seoTitle: 'RTX 4090: Bestes Modell & 70B-Setup 2026 | Prompt Bites',
+    metaDescription: 'Eine einzelne RTX 4090 (24 GB) fasst ein 70B-Modell in Q4 (~40 GB) nicht. Beste Modelle für eine 4090: Qwen3.8-27B oder Gemma 4 26B-A4B. Für 70B: zwei 4090.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-14',
-    current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090'],
+    next_refresh_due: '2027-04-17',
+    current_models_mentioned: ['Qwen3.8-27B', 'Gemma 4 26B-A4B', 'Qwen3.6-35B-A3B'],
+    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090', 'RTX 5090 32 GB'],
     educationalLevel: 'Advanced',
     audience: 'Enthusiasten, die einen 70B-fähigen lokalen LLM-Build rund um RTX-4090-Karten planen',
     affiliateDisclosure: true,
@@ -252,6 +308,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     toc: [
       { label: 'Beste Wahl: Zwei RTX 4090 (48 GB kombiniert)', anchor: '#best-pick' },
       { label: 'Dual-RTX-4090 vs. einzelne RTX 4090 + Quantisierung', anchor: '#comparison' },
+      { label: 'Bestes Modell für eine einzelne RTX 4090', anchor: '#best-model' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Weiterführende Artikel', anchor: '#related' },
     ],
@@ -263,8 +320,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Ein 70B-Modell benötigt ~40 GB VRAM bei Q4_K_M — deutlich über den 24 GB einer RTX 4090.',
           'Zwei RTX 4090 (48 GB kombiniert) über vLLM oder llama.cpp tensor-parallel ist der sauberste Weg mit voller Qualität.',
           'Eine einzelne RTX 4090 kann 70B nur bei Q2_K-Quantisierung betreiben, was die Ausgabequalität gegenüber Q4 sichtbar mindert.',
+          'Auf einer einzelnen RTX 4090 laufen Qwen3.8-27B oder Gemma 4 26B-A4B in Q4 besser als ein 70B-Modell in Q2_K.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -276,6 +334,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Bestes Setup mit voller Qualität: zwei RTX 4090 (48 GB kombiniert) über vLLM oder llama.cpp tensor-parallel',
           'Workaround mit einer 4090: Q2_K-Quantisierung passt in 24 GB, mindert die Ausgabequalität aber sichtbar',
           'CPU/RAM-Offload (llama.cpp `--n-gpu-layers`) funktioniert auf einer 4090, senkt den Durchsatz aber deutlich',
+          'Bestes Modell für eine RTX 4090: ein Modell der 27B–35B-Klasse in Q4 (Qwen3.8-27B, Gemma 4 26B-A4B) – kein auf Q2_K gequetschtes 70B-Modell',
         ],
       },
       bestPick: {
@@ -303,12 +362,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      bestModels: {
+        id: 'best-model',
+        title: 'Bestes Modell für eine einzelne RTX 4090',
+        content: [
+          '<strong>Das beste Modell für eine einzelne RTX 4090 ist ein aktuelles Modell der 27B–35B-Klasse in Q4, kein auf Q2_K gequetschtes 70B-Modell.</strong> Ein 27B–32B-Modell in Q4 bleibt innerhalb von 24 GB, ohne den Qualitätsverlust der 2-Bit-Quantisierung, der Code und Mathematik am stärksten trifft. Die Auswahl folgt [Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026).',
+        ],
+        items: [
+          'Qwen3.8-27B (`ollama pull qwen3.8:27b`) – stärkster Allrounder und Coding-Favorit; 18 GB Download, bei langem Kontext wird es auf 24 GB eng',
+          'Gemma 4 26B-A4B – Mixture-of-Experts, ~15 GB in Q4_K_M; lässt Platz für langen Kontext und läuft etwa so schnell wie ein 4B-Modell',
+          'Qwen3.6-35B-A3B – Mixture-of-Experts-Alternative mit ~3B aktiven Parametern pro Token für schnellere Generierung',
+        ],
+      },
       comparison: {
         id: 'comparison',
         title: 'Dual-RTX-4090 vs. einzelne RTX 4090 + Quantisierung',
         content: [
           'Dual-RTX-4090 liefert volle Q4-Qualität zu echten Kosten (eine zweite Karte plus stärkeres Netzteil und Gehäuse). Einzelne RTX 4090 + Q2_K hält den Build auf eine Karte beschränkt, opfert aber merkliche Ausgabequalität bei Aufgaben, die Präzision erfordern, etwa Codegenerierung oder Mathematik.',
           'Ein Mittelweg: Statt 70B ein 32B-Modell auf einer einzelnen RTX 4090 in voller Q4-Qualität betreiben (passt mit Reserve in 24 GB) — für viele Aufgaben schließt ein gut gewähltes 32B-Modell einen Großteil der Lücke zu einem qualitätsgeminderten 70B.',
+          'Speziell fürs Programmieren ist ein aktuelles 27B–32B-Modell in Q4 die praktische Wahl auf einer RTX 4090: Es passt vollständig auf die GPU, während ein 70B-Modell nur in Q2_K passt, wo Code und Mathematik am stärksten leiden. Zwei RTX 4090 mit einem 70B-Modell in Q4 bieten mehr Kapazität, doch bei typischen Coding-Aufgaben ist der Abstand zu einem aktuellen 27B-Modell oft gering – testen Sie eigene Prompts, bevor Sie eine zweite Karte kaufen.',
         ],
       },
       faq: {
@@ -317,7 +389,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Kann NVLink den VRAM zweier RTX 4090 kombinieren?',
-            a: 'Nein. Die RTX 4090 unterstützt kein NVLink (NVIDIA hat es aus dieser Generation der Consumer-Karten entfernt). VRAM-Pooling für mehrere GPUs bei LLM-Inferenz funktioniert über softwareseitiges tensor-paralleles Splitting in Tools wie vLLM, nicht über eine Hardware-Brücke.',
+            a: 'Nein. NVIDIA hat NVLink bei der RTX 4090 entfernt – die RTX 3090 war die letzte GeForce-Karte mit NVLink. Das VRAM-Pooling mehrerer GPUs für LLM-Inferenz funktioniert über softwareseitige Tensor-Parallelität in Tools wie vLLM und llama.cpp, nicht über eine Hardware-Brücke, und läuft über PCIe.',
           },
           {
             q: 'Ist ein 70B-Modell bei Q2_K tatsächlich nutzbar?',
@@ -330,6 +402,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'Verdoppelt Dual-GPU-Inferenz die Tokens pro Sekunde?',
             a: 'Nein — tensor-parallele Inferenz teilt das Modell auf mehrere GPUs auf, um es überhaupt unterzubringen, fügt aber Kommunikations-Overhead zwischen den GPUs hinzu. Erwarten Sie schnellere Inferenz als bei einer stark ausgelagerten einzelnen GPU, aber keine saubere Verdopplung gegenüber einem Modell, das bereits auf eine Karte passte.',
+          },
+          {
+            q: 'Was ist das beste Modell für eine einzelne RTX 4090?',
+            a: 'Ein Modell der 27B–35B-Klasse in Q4. Qwen3.8-27B ist der stärkste Allrounder (18 GB Download bei Ollama; bei langem Kontext wird es auf 24 GB eng), Gemma 4 26B-A4B (~15 GB in Q4_K_M) lässt mehr Platz für Kontext. Beide vermeiden den Qualitätsverlust eines 70B-Modells in Q2_K.',
+          },
+          {
+            q: 'Reicht ein 32B-Modell fürs Programmieren im Vergleich zu einem 70B-Modell?',
+            a: 'Für die meisten praktischen Coding-Aufgaben auf einer RTX 4090 ja: Ein aktuelles 27B–32B-Modell in Q4 passt komplett auf die GPU, ein 70B-Modell nur in Q2_K, wo die Code-Qualität am stärksten leidet. Ein 70B in Q4 auf zwei RTX 4090 bietet mehr Kapazität, der Abstand ist aber oft gering – testen Sie eigene Prompts, bevor Sie eine zweite Karte kaufen.',
+          },
+          {
+            q: 'Passt ein 70B-Modell auf eine RTX 5090 (32 GB)?',
+            a: 'Nicht in Q4. Ein 70B-Modell braucht in Q4 etwa 40 GB und damit mehr als die 32 GB der RTX 5090; eine einzelne 5090 benötigt für 70B weiterhin eine stärkere Quantisierung oder CPU-Offload.',
           },
         ],
       },
@@ -348,14 +432,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-es.webp',
     title: '¿Cuál es la Mejor Configuración RTX 4090 para Ejecutar Modelos de 70B?',
-    seoTitle: 'Configuración RTX 4090 para Modelos de 70B 2026 | Prompt Bites',
-    metaDescription: 'Una sola RTX 4090 (24GB) no puede cargar un modelo de 70B completo — necesita ~40GB en Q4. Dos RTX 4090 (48GB) o descarga a CPU son la opción realista.',
+    seoTitle: 'RTX 4090: mejor modelo y configuración 70B 2026 | Prompt Bites',
+    metaDescription: 'Una sola RTX 4090 (24 GB) no aloja un modelo de 70B en Q4 (~40 GB). Mejores modelos para una 4090: Qwen3.8-27B o Gemma 4 26B-A4B. Para 70B, dos 4090.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-14',
-    current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090'],
+    next_refresh_due: '2027-04-17',
+    current_models_mentioned: ['Qwen3.8-27B', 'Gemma 4 26B-A4B', 'Qwen3.6-35B-A3B'],
+    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090', 'RTX 5090 32 GB'],
     educationalLevel: 'Advanced',
     audience: 'Entusiastas que planean una configuración local de LLM capaz de 70B con RTX 4090',
     affiliateDisclosure: true,
@@ -366,6 +450,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     toc: [
       { label: 'Mejor Opción: Dos RTX 4090 (48 GB Combinados)', anchor: '#best-pick' },
       { label: 'RTX 4090 Dual vs RTX 4090 Individual + Cuantización', anchor: '#comparison' },
+      { label: 'Mejor modelo para una sola RTX 4090', anchor: '#best-model' },
       { label: 'Preguntas Frecuentes', anchor: '#faq' },
       { label: 'Lecturas Relacionadas', anchor: '#related' },
     ],
@@ -377,8 +462,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Un modelo de 70B necesita ~40 GB de VRAM en Q4_K_M — muy por encima de los 24 GB de una sola RTX 4090.',
           'Dos RTX 4090 (48 GB combinados) vía vLLM o tensor-paralelo de llama.cpp es el camino más limpio para calidad completa.',
           'Una sola RTX 4090 solo puede ejecutar un 70B con cuantización Q2_K, lo que degrada visiblemente la calidad de salida frente a Q4.',
+          'En una sola RTX 4090, ejecuta Qwen3.8-27B o Gemma 4 26B-A4B en Q4 en lugar de un modelo de 70B en Q2_K.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -390,6 +476,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Mejor configuración de calidad completa: dos RTX 4090 (48 GB combinados) vía vLLM o tensor-paralelo de llama.cpp',
           'Solución con una sola 4090: la cuantización Q2_K cabe en 24 GB pero degrada visiblemente la calidad de salida',
           'La descarga a CPU/RAM (`--n-gpu-layers` de llama.cpp) funciona en una 4090 pero reduce significativamente el rendimiento',
+          'Mejor modelo para una RTX 4090: uno de la clase 27B–35B en Q4 (Qwen3.8-27B, Gemma 4 26B-A4B), no un 70B forzado a Q2_K',
         ],
       },
       bestPick: {
@@ -417,12 +504,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      bestModels: {
+        id: 'best-model',
+        title: 'Mejor modelo para una sola RTX 4090',
+        content: [
+          '<strong>El mejor modelo para una sola RTX 4090 es un modelo actual de la clase 27B–35B en Q4, no un modelo de 70B forzado a Q2_K.</strong> Un modelo de 27B–32B en Q4 cabe en 24 GB sin la pérdida de calidad de la cuantización de 2 bits, que afecta sobre todo al código y a las matemáticas. Las elecciones siguen [Mejores LLM locales 2026](/es/local-llms/best-local-llms-2026).',
+        ],
+        items: [
+          'Qwen3.8-27B (`ollama pull qwen3.8:27b`) — el mejor modelo polivalente y para programar; descarga de 18 GB, pero con contextos largos va justo en 24 GB',
+          'Gemma 4 26B-A4B — mezcla de expertos, ~15 GB en Q4_K_M; deja margen para contextos largos y funciona a una velocidad similar a un modelo de 4B',
+          'Qwen3.6-35B-A3B — alternativa de mezcla de expertos con ~3B parámetros activos por token para una generación más rápida',
+        ],
+      },
       comparison: {
         id: 'comparison',
         title: 'RTX 4090 Dual vs RTX 4090 Individual + Cuantización',
         content: [
           'Dos RTX 4090 dan calidad Q4 completa a un costo real (una segunda tarjeta más una fuente de poder y una caja más robustas). Una sola RTX 4090 + Q2_K mantiene la construcción en una sola tarjeta, pero sacrifica una calidad de salida notable en tareas que requieren precisión, como generación de código o matemáticas.',
           'Un camino intermedio: ejecutar un modelo de 32B en lugar de 70B en una sola RTX 4090 con calidad Q4 completa (cabe en 24 GB con margen de sobra) — para muchas tareas, un modelo de 32B bien elegido cierra la mayor parte de la brecha con un 70B degradado en calidad.',
+          'Para programar en concreto, un modelo actual de 27B–32B en Q4 es la opción práctica en una RTX 4090: cabe por completo en la GPU, mientras que un 70B solo cabe en Q2_K, donde el código y las matemáticas se degradan más. Dos RTX 4090 con un 70B en Q4 aportan más capacidad, pero en tareas de programación típicas la diferencia con un modelo actual de 27B suele ser pequeña: prueba tus propios prompts antes de comprar una segunda tarjeta.',
         ],
       },
       faq: {
@@ -431,7 +531,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Puede NVLink combinar la VRAM de dos RTX 4090?',
-            a: 'No. La RTX 4090 no soporta NVLink (NVIDIA lo eliminó de las tarjetas de consumo de esta generación). La agrupación de VRAM multi-GPU para inferencia de LLM funciona mediante división tensor-paralela a nivel de software en herramientas como vLLM, no mediante un puente de hardware.',
+            a: 'No. NVIDIA eliminó NVLink de la RTX 4090; la RTX 3090 fue la última GeForce compatible. La puesta en común de VRAM multi-GPU para inferencia de LLM funciona mediante división tensor-paralela por software en herramientas como vLLM y llama.cpp, no con un puente de hardware, y se comunica por PCIe.',
           },
           {
             q: '¿Es realmente usable un modelo de 70B en Q2_K?',
@@ -444,6 +544,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '¿La inferencia dual-GPU duplica los tokens por segundo?',
             a: 'No — la inferencia tensor-paralela divide el modelo entre GPUs para que quepa, pero añade sobrecarga de comunicación entre GPUs. Espera una inferencia más rápida que una sola GPU con descarga intensiva, pero no un aumento limpio de 2x sobre un modelo que ya cabía en una sola tarjeta.',
+          },
+          {
+            q: '¿Cuál es el mejor modelo para una sola RTX 4090?',
+            a: 'Un modelo de la clase 27B–35B en Q4. Qwen3.8-27B es el mejor polivalente (descarga de 18 GB en Ollama; con contextos largos va justo en 24 GB) y Gemma 4 26B-A4B (~15 GB en Q4_K_M) deja más margen para el contexto. Ambos evitan la pérdida de calidad de un modelo de 70B en Q2_K.',
+          },
+          {
+            q: '¿Un modelo de 32B basta para programar frente a uno de 70B?',
+            a: 'Para la mayoría de las tareas de programación en una RTX 4090, sí: un modelo actual de 27B–32B en Q4 cabe entero en la GPU, mientras que un 70B solo cabe en Q2_K, donde la calidad del código se resiente más. Un 70B en Q4 con dos RTX 4090 ofrece más capacidad, pero la diferencia suele ser pequeña: prueba tus propios prompts antes de comprar una segunda tarjeta.',
+          },
+          {
+            q: '¿Cabe un modelo de 70B en una RTX 5090 (32 GB)?',
+            a: 'No en Q4. Un modelo de 70B necesita unos 40 GB en Q4, por encima de los 32 GB de la RTX 5090, así que una sola 5090 sigue necesitando una cuantización más baja o descarga a CPU para 70B.',
           },
         ],
       },
@@ -462,14 +574,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-fr.webp',
     title: 'Meilleure configuration RTX 4090 pour faire tourner des modèles 70B ?',
-    seoTitle: 'Configuration RTX 4090 pour modèles 70B 2026',
-    metaDescription: 'Une seule RTX 4090 (24 Go) ne peut pas contenir un 70B complet — faut ~40 Go en Q4. Deux RTX 4090 (48 Go) ou déchargement CPU sont la config réaliste.',
+    seoTitle: 'RTX 4090 : meilleur modèle et setup 70B 2026 | Prompt Bites',
+    metaDescription: 'Une seule RTX 4090 (24 Go) ne peut pas contenir un modèle 70B en Q4 (~40 Go). Meilleurs modèles pour une 4090 : Qwen3.8-27B ou Gemma 4 26B-A4B. Pour du 70B : deux 4090.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-14',
-    current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090'],
+    next_refresh_due: '2027-04-17',
+    current_models_mentioned: ['Qwen3.8-27B', 'Gemma 4 26B-A4B', 'Qwen3.6-35B-A3B'],
+    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090', 'RTX 5090 32 GB'],
     educationalLevel: 'Advanced',
     audience: 'Passionnés planifiant une configuration LLM locale compatible 70B autour de RTX 4090',
     affiliateDisclosure: true,
@@ -480,6 +592,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     toc: [
       { label: 'Meilleur choix : deux RTX 4090 (48 Go combinés)', anchor: '#best-pick' },
       { label: 'Deux RTX 4090 vs une RTX 4090 + quantification', anchor: '#comparison' },
+      { label: 'Meilleur modèle pour une seule RTX 4090', anchor: '#best-model' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related' },
     ],
@@ -491,8 +604,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Un modèle 70B nécessite ~40 Go de VRAM en Q4_K_M — bien au-dessus des 24 Go d\'une seule RTX 4090.',
           'Deux RTX 4090 (48 Go combinés) via vLLM ou llama.cpp en parallélisme tensoriel est la voie la plus propre en pleine qualité.',
           'Une seule RTX 4090 ne peut faire tourner un 70B qu\'en quantification Q2_K, qui dégrade visiblement la qualité de sortie par rapport à Q4.',
+          'Sur une seule RTX 4090, exécutez Qwen3.8-27B ou Gemma 4 26B-A4B en Q4 plutôt qu\'un modèle 70B en Q2_K.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -504,6 +618,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Meilleure configuration en pleine qualité : deux RTX 4090 (48 Go combinés) via vLLM ou llama.cpp en parallélisme tensoriel',
           'Solution de contournement mono-4090 : la quantification Q2_K tient dans 24 Go mais dégrade visiblement la qualité de sortie',
           'Le déchargement CPU/RAM (`--n-gpu-layers` de llama.cpp) fonctionne sur une seule 4090 mais réduit fortement le débit',
+          'Meilleur modèle pour une RTX 4090 : un modèle de classe 27B–35B en Q4 (Qwen3.8-27B, Gemma 4 26B-A4B), pas un 70B forcé en Q2_K',
         ],
       },
       bestPick: {
@@ -531,12 +646,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      bestModels: {
+        id: 'best-model',
+        title: 'Meilleur modèle pour une seule RTX 4090',
+        content: [
+          '<strong>Le meilleur modèle pour une seule RTX 4090 est un modèle actuel de classe 27B–35B en Q4, et non un modèle 70B forcé en Q2_K.</strong> Un modèle 27B–32B en Q4 tient dans 24 Go sans la perte de qualité de la quantification 2 bits, qui touche surtout le code et les mathématiques. Ces choix suivent [Meilleurs LLM locaux 2026](/fr/local-llms/best-local-llms-2026).',
+        ],
+        items: [
+          'Qwen3.8-27B (`ollama pull qwen3.8:27b`) — le meilleur généraliste et choix pour le code ; téléchargement de 18 Go, mais les longs contextes deviennent serrés sur 24 Go',
+          'Gemma 4 26B-A4B — mélange d\'experts, ~15 Go en Q4_K_M ; laisse de la place pour un long contexte et tourne à une vitesse proche d\'un modèle 4B',
+          'Qwen3.6-35B-A3B — alternative en mélange d\'experts avec ~3B de paramètres actifs par token pour une génération plus rapide',
+        ],
+      },
       comparison: {
         id: 'comparison',
         title: 'Deux RTX 4090 vs une RTX 4090 + quantification',
         content: [
           'Deux RTX 4090 offrent une pleine qualité Q4 à un coût réel (une seconde carte plus une alimentation et un boîtier plus robustes). Une RTX 4090 + Q2_K permet de rester sur une seule carte mais sacrifie une qualité de sortie perceptible sur les tâches nécessitant de la précision, comme la génération de code ou les mathématiques.',
           'Une voie intermédiaire : faire tourner un modèle 32B plutôt que 70B sur une seule RTX 4090 en pleine qualité Q4 (tient dans 24 Go avec de la marge) — pour de nombreuses tâches, un modèle 32B bien choisi comble une grande partie de l\'écart avec un 70B à qualité dégradée.',
+          'Pour le code en particulier, un modèle actuel 27B–32B en Q4 est le choix pratique sur une RTX 4090 : il tient entièrement sur le GPU, alors qu\'un 70B ne tient qu\'en Q2_K, où le code et les mathématiques se dégradent le plus. Deux RTX 4090 avec un 70B en Q4 apportent plus de capacité, mais sur des tâches de code courantes l\'écart avec un modèle 27B actuel est souvent faible : testez vos propres prompts avant d\'acheter une seconde carte.',
         ],
       },
       faq: {
@@ -545,7 +673,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Le NVLink peut-il combiner la VRAM de deux RTX 4090 ?',
-            a: 'Non. La RTX 4090 ne prend pas en charge le NVLink (NVIDIA l\'a retiré des cartes grand public de cette génération). La mise en commun de la VRAM multi-GPU pour l\'inférence LLM passe par un partage tensoriel logiciel dans des outils comme vLLM, pas par un pont matériel.',
+            a: 'Non. NVIDIA a supprimé NVLink de la RTX 4090 — la RTX 3090 a été la dernière GeForce à le prendre en charge. La mise en commun de la VRAM multi-GPU pour l\'inférence de LLM passe par un découpage tensor-parallèle logiciel dans des outils comme vLLM et llama.cpp, pas par un pont matériel, et transite par le PCIe.',
           },
           {
             q: 'Un modèle 70B en Q2_K est-il réellement utilisable ?',
@@ -558,6 +686,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'L\'inférence double-GPU double-t-elle les tokens par seconde ?',
             a: 'Non — l\'inférence en parallélisme tensoriel répartit le modèle entre les GPU pour le faire tenir, mais ajoute une surcharge de communication inter-GPU. Attendez-vous à une inférence plus rapide qu\'un GPU unique fortement déchargé, mais pas à un doublement propre par rapport à un modèle qui tenait déjà sur une seule carte.',
+          },
+          {
+            q: 'Quel est le meilleur modèle pour une seule RTX 4090 ?',
+            a: 'Un modèle de classe 27B–35B en Q4. Qwen3.8-27B est le meilleur généraliste (téléchargement de 18 Go sur Ollama ; les longs contextes deviennent serrés sur 24 Go), et Gemma 4 26B-A4B (~15 Go en Q4_K_M) laisse plus de place au contexte. Les deux évitent la perte de qualité d\'un 70B en Q2_K.',
+          },
+          {
+            q: 'Un modèle 32B suffit-il pour coder face à un 70B ?',
+            a: 'Pour la plupart des tâches de code sur une RTX 4090, oui : un modèle actuel 27B–32B en Q4 tient entièrement sur le GPU, alors qu\'un 70B ne tient qu\'en Q2_K, où la qualité du code souffre le plus. Un 70B en Q4 sur deux RTX 4090 offre plus de capacité, mais l\'écart est souvent faible : testez vos propres prompts avant d\'acheter une seconde carte.',
+          },
+          {
+            q: 'Un modèle 70B tient-il sur une RTX 5090 (32 Go) ?',
+            a: 'Pas en Q4. Un modèle 70B demande environ 40 Go en Q4, soit plus que les 32 Go de la RTX 5090 ; une seule 5090 nécessite donc encore une quantification plus basse ou un déchargement CPU pour du 70B.',
           },
         ],
       },
@@ -576,14 +716,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-ja.webp',
     title: '70Bモデルを動かすための最適なRTX 4090セットアップは?',
-    seoTitle: '2026年版 70Bモデル向けRTX 4090セットアップ | Prompt Bites',
-    metaDescription: '単一のRTX 4090(24GB)は70Bモデルを完全には収められません — Q4で約40GB必要です。2枚のRTX 4090(48GB)かCPUオフロードが現実的な70Bセットアップです。',
+    seoTitle: 'RTX 4090：最適モデルと70B構成ガイド2026 | Prompt Bites',
+    metaDescription: 'RTX 4090 1枚（24GB）ではQ4の70Bモデル（約40GB）は収まりません。4090 1枚の最適モデルはQwen3.8-27BかGemma 4 26B-A4B。70Bなら4090を2枚使います。',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-14',
-    current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090'],
+    next_refresh_due: '2027-04-17',
+    current_models_mentioned: ['Qwen3.8-27B', 'Gemma 4 26B-A4B', 'Qwen3.6-35B-A3B'],
+    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090', 'RTX 5090 32 GB'],
     educationalLevel: 'Advanced',
     audience: 'RTX 4090を中心に70B対応のローカルLLM構成を計画するエンスージアスト',
     affiliateDisclosure: true,
@@ -594,6 +734,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     toc: [
       { label: 'ベストピック: 2枚のRTX 4090(合計48GB)', anchor: '#best-pick' },
       { label: 'デュアルRTX 4090 vs 単一RTX 4090+量子化', anchor: '#comparison' },
+      { label: 'RTX 4090 1枚に最適なモデル', anchor: '#best-model' },
       { label: 'よくある質問', anchor: '#faq' },
       { label: '関連記事', anchor: '#related' },
     ],
@@ -605,8 +746,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '70Bモデルは Q4_K_Mで約40GBのVRAMが必要 — RTX 4090単体の24GBを大きく上回ります。',
           'vLLMかllama.cppのテンソル並列を使った2枚のRTX 4090(合計48GB)が最もクリーンなフル品質経路です。',
           'RTX 4090単体で70Bを動かせるのはQ2_K量子化のみで、Q4に比べ出力品質が目に見えて低下します。',
+          'RTX 4090 1枚なら、Q2_Kの70BモデルよりQ4のQwen3.8-27BまたはGemma 4 26B-A4Bを動かしてください。',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -618,6 +760,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '最良のフル品質セットアップ: vLLMかllama.cppのテンソル並列モードによる2枚のRTX 4090(合計48GB)',
           '単一4090での回避策: Q2_K量子化は24GBに収まるが出力品質が目に見えて低下',
           'CPU/RAMオフロード(llama.cppの`--n-gpu-layers`)は単一4090で動作するがスループットが大幅に低下',
+          'RTX 4090 1枚の最適モデル：Q4の27B〜35Bクラス（Qwen3.8-27B、Gemma 4 26B-A4B）。Q2_Kに押し込んだ70Bではない',
         ],
       },
       bestPick: {
@@ -645,12 +788,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      bestModels: {
+        id: 'best-model',
+        title: 'RTX 4090 1枚に最適なモデル',
+        content: [
+          '<strong>RTX 4090 1枚に最適なのは、Q2_Kに押し込んだ70Bモデルではなく、Q4の最新27B〜35Bクラスのモデルです。</strong>Q4の27B〜32Bモデルは24GBに収まり、コードや数学に最も響く2ビット量子化の品質低下も避けられます。選定は[2026年版ローカルLLMベスト](/ja/local-llms/best-local-llms-2026)に準拠しています。',
+        ],
+        items: [
+          'Qwen3.8-27B（`ollama pull qwen3.8:27b`）— 最も万能でコーディングにも強い。ダウンロード18GB、ただし長いコンテキストでは24GBだと余裕が少ない',
+          'Gemma 4 26B-A4B — Mixture-of-Experts、Q4_K_Mで約15GB。長いコンテキストの余裕があり、4Bモデル並みの速度で動作',
+          'Qwen3.6-35B-A3B — 1トークンあたり約3Bのアクティブパラメータで高速に生成できるMixture-of-Experts代替',
+        ],
+      },
       comparison: {
         id: 'comparison',
         title: 'デュアルRTX 4090 vs 単一RTX 4090+量子化',
         content: [
           'デュアルRTX 4090は実質的なコスト(2枚目のカードに加え、より強力なPSUとケース)で完全なQ4品質を実現します。単一RTX 4090+Q2_Kはビルドを1枚のカードに抑えられますが、コード生成や数学のような精度が必要なタスクで出力品質が目に見えて犠牲になります。',
           '中間的な道: 70Bの代わりに32Bモデルを単一のRTX 4090で完全なQ4品質で動かす(24GBに余裕を持って収まる) — 多くのタスクにおいて、よく選ばれた32Bモデルは品質が劣化した70Bとのギャップの大半を埋めます。',
+          '特にコーディング用途では、Q4の最新27B〜32Bモデルが RTX 4090 1枚の現実的な選択です。GPUに完全に収まる一方、70BはQ2_Kでしか収まらず、コードと数学の品質が最も落ちます。RTX 4090 2枚でQ4の70Bを動かせば容量は増えますが、一般的なコーディング作業では最新の27Bモデルとの差が小さいことが多いため、2枚目を買う前に自分のプロンプトで試してください。',
         ],
       },
       faq: {
@@ -659,7 +815,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'NVLinkで2枚のRTX 4090のVRAMを結合できますか?',
-            a: 'できません。RTX 4090はNVLinkに対応していません(NVIDIAはこの世代のコンシューマーカードから削除しました)。LLM推論のマルチGPU VRAMプーリングは、ハードウェアブリッジではなく、vLLMなどのツールにおけるソフトウェアレベルのテンソル並列分割によって機能します。',
+            a: 'いいえ。NVIDIAはRTX 4090からNVLinkを廃止しました。NVLinkに対応した最後のGeForceはRTX 3090です。LLM推論でのマルチGPUのVRAM統合は、vLLMやllama.cppなどのソフトウェアによるテンソル並列分割で実現し、ハードウェアブリッジではなくPCIe経由で動作します。',
           },
           {
             q: 'Q2_Kの70Bモデルは実際に使い物になりますか?',
@@ -672,6 +828,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'デュアルGPU推論はトークン毎秒を2倍にしますか?',
             a: 'いいえ — テンソル並列推論はモデルを収めるためにGPU間で分割しますが、GPU間通信のオーバーヘッドが加わります。大幅にオフロードされた単一GPUより高速な推論は期待できますが、1枚のカードに既に収まっていたモデルに対するクリーンな2倍の高速化にはなりません。',
+          },
+          {
+            q: 'RTX 4090 1枚に最適なモデルは？',
+            a: 'Q4の27B〜35Bクラスのモデルです。Qwen3.8-27Bが最も万能です（Ollamaで18GB、長いコンテキストでは24GBだと余裕が少ない）。Gemma 4 26B-A4B（Q4_K_Mで約15GB）はコンテキストの余裕が大きくなります。どちらもQ2_Kの70Bモデルのような品質低下を避けられます。',
+          },
+          {
+            q: 'コーディングでは32Bモデルで70Bモデルの代わりになりますか？',
+            a: 'RTX 4090 1枚での実用的なコーディングの多くでは、はい。Q4の最新27B〜32BモデルはGPUに完全に収まりますが、70BはQ2_Kでしか収まらず、コード品質が最も落ちます。RTX 4090 2枚でのQ4の70Bは容量が増えますが、差は小さいことが多いので、2枚目を買う前に自分のプロンプトで試してください。',
+          },
+          {
+            q: '70BモデルはRTX 5090（32GB）に収まりますか？',
+            a: 'Q4では収まりません。70BモデルはQ4で約40GBが必要で、RTX 5090の32GBを上回ります。5090 1枚で70Bを動かすには、より低ビットの量子化またはCPUオフロードが必要です。',
           },
         ],
       },
@@ -690,14 +858,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-ko.webp',
     title: '70B 모델 구동을 위한 최적의 RTX 4090 설정은?',
-    seoTitle: '70B 모델을 위한 RTX 4090 설정 2026 | Prompt Bites',
-    metaDescription: '단일 RTX 4090(24GB)은 70B 모델을 완전히 수용할 수 없습니다 — Q4에서 약 40GB가 필요합니다. 두 RTX 4090(48GB)이나 CPU 오프로드가 현실적인 70B 설정입니다.',
+    seoTitle: 'RTX 4090: 최적 모델과 70B 구성 가이드 2026 | Prompt Bites',
+    metaDescription: 'RTX 4090 한 장(24GB)에는 Q4 70B 모델(약 40GB)이 들어가지 않습니다. 4090 한 장의 최적 모델은 Qwen3.8-27B 또는 Gemma 4 26B-A4B이며, 70B는 4090 두 장이 필요합니다.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-14',
-    current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090'],
+    next_refresh_due: '2027-04-17',
+    current_models_mentioned: ['Qwen3.8-27B', 'Gemma 4 26B-A4B', 'Qwen3.6-35B-A3B'],
+    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090', 'RTX 5090 32 GB'],
     educationalLevel: 'Advanced',
     audience: 'RTX 4090을 중심으로 70B급 로컬 LLM 구성을 계획하는 애호가',
     affiliateDisclosure: true,
@@ -708,6 +876,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     toc: [
       { label: '최적의 선택: 두 대의 RTX 4090(합산 48GB)', anchor: '#best-pick' },
       { label: '듀얼 RTX 4090 대 단일 RTX 4090 + 양자화', anchor: '#comparison' },
+      { label: 'RTX 4090 한 장을 위한 최적 모델', anchor: '#best-model' },
       { label: '자주 묻는 질문', anchor: '#faq' },
       { label: '관련 읽을거리', anchor: '#related' },
     ],
@@ -719,8 +888,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '70B 모델은 Q4_K_M에서 약 40GB의 VRAM이 필요합니다 — 단일 RTX 4090의 24GB를 훨씬 웃돕니다.',
           'vLLM이나 llama.cpp의 텐서 병렬을 통한 두 대의 RTX 4090(합산 48GB)이 가장 깔끔한 완전 품질 경로입니다.',
           '단일 RTX 4090만으로는 Q2_K 양자화에서만 70B를 구동할 수 있으며, 이는 Q4 대비 출력 품질을 눈에 띄게 저하시킵니다.',
+          'RTX 4090 한 장이라면 Q2_K의 70B 모델 대신 Q4의 Qwen3.8-27B 또는 Gemma 4 26B-A4B를 실행하세요.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -732,6 +902,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '최적의 완전 품질 설정: vLLM이나 llama.cpp 텐서 병렬을 통한 두 대의 RTX 4090(합산 48GB)',
           '단일 4090 대안: Q2_K 양자화는 24GB에 맞지만 출력 품질을 눈에 띄게 저하시킵니다',
           'CPU/RAM 오프로드(llama.cpp의 `--n-gpu-layers`)는 단일 4090에서 작동하지만 처리량이 크게 떨어집니다',
+          'RTX 4090 한 장의 최적 모델: Q4의 27B–35B급 모델(Qwen3.8-27B, Gemma 4 26B-A4B) — Q2_K로 억지로 줄인 70B가 아닙니다',
         ],
       },
       bestPick: {
@@ -759,12 +930,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      bestModels: {
+        id: 'best-model',
+        title: 'RTX 4090 한 장을 위한 최적 모델',
+        content: [
+          '<strong>RTX 4090 한 장에 가장 좋은 모델은 Q2_K로 억지로 줄인 70B 모델이 아니라 Q4의 최신 27B–35B급 모델입니다.</strong> Q4의 27B–32B 모델은 24GB 안에 들어가며, 코드와 수학에 가장 큰 타격을 주는 2비트 양자화의 품질 저하를 피할 수 있습니다. 추천은 [2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026)을 따릅니다.',
+        ],
+        items: [
+          'Qwen3.8-27B(`ollama pull qwen3.8:27b`) — 가장 강력한 범용·코딩 선택; 다운로드 18GB, 다만 긴 컨텍스트에서는 24GB가 빠듯함',
+          'Gemma 4 26B-A4B — 전문가 혼합(MoE), Q4_K_M 기준 약 15GB; 긴 컨텍스트 여유가 있고 4B 모델에 가까운 속도로 동작',
+          'Qwen3.6-35B-A3B — 토큰당 활성 파라미터 약 3B로 더 빠르게 생성하는 전문가 혼합 대안',
+        ],
+      },
       comparison: {
         id: 'comparison',
         title: '듀얼 RTX 4090 대 단일 RTX 4090 + 양자화',
         content: [
           '듀얼 RTX 4090은 완전한 Q4 품질을 제공하지만 실질적인 비용(두 번째 카드에 더 강력한 PSU와 케이스)이 듭니다. 단일 RTX 4090 + Q2_K는 하나의 카드로 구성을 유지하지만 코드 생성이나 수학처럼 정밀도가 필요한 작업에서 눈에 띄는 출력 품질을 희생합니다.',
           '중간 경로: 단일 RTX 4090에서 70B 대신 32B 모델을 완전한 Q4 품질로 구동하십시오(24GB에 여유 있게 맞습니다) — 많은 작업에서 잘 선택된 32B 모델은 품질이 저하된 70B와의 격차 대부분을 좁혀줍니다.',
+          '특히 코딩에서는 Q4의 최신 27B–32B 모델이 RTX 4090 한 장의 현실적인 선택입니다. GPU에 완전히 들어가는 반면 70B는 Q2_K에서만 들어가고, 이때 코드와 수학 품질이 가장 크게 떨어집니다. RTX 4090 두 장으로 Q4의 70B를 돌리면 용량은 늘지만, 일반적인 코딩 작업에서는 최신 27B 모델과의 차이가 작은 경우가 많으니 두 번째 카드를 사기 전에 직접 프롬프트로 테스트해 보세요.',
         ],
       },
       faq: {
@@ -773,7 +957,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'NVLink로 두 RTX 4090의 VRAM을 결합할 수 있습니까?',
-            a: '아닙니다. RTX 4090은 NVLink를 지원하지 않습니다(NVIDIA가 이번 세대 소비자 카드에서 제거했습니다). LLM 추론을 위한 멀티 GPU VRAM 풀링은 하드웨어 브리지가 아니라 vLLM 같은 도구의 소프트웨어 수준 텐서 병렬 분할을 통해 작동합니다.',
+            a: '아니요. NVIDIA는 RTX 4090에서 NVLink를 제거했으며, NVLink를 지원한 마지막 GeForce는 RTX 3090입니다. LLM 추론의 멀티 GPU VRAM 풀링은 vLLM, llama.cpp 같은 도구의 소프트웨어 텐서 병렬 분할로 이루어지며 하드웨어 브리지가 아니라 PCIe를 통해 동작합니다.',
           },
           {
             q: 'Q2_K의 70B 모델은 실제로 사용할 만합니까?',
@@ -786,6 +970,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '듀얼 GPU 추론은 초당 토큰 수를 두 배로 만듭니까?',
             a: '아닙니다 — 텐서 병렬 추론은 모델을 GPU 간에 분할하여 맞추지만 GPU 간 통신 오버헤드가 추가됩니다. 심하게 오프로드된 단일 GPU보다는 빠른 추론을 기대할 수 있지만, 이미 하나의 카드에 맞았던 모델 대비 깔끔한 2배 속도 향상은 아닙니다.',
+          },
+          {
+            q: 'RTX 4090 한 장에 가장 좋은 모델은 무엇인가요?',
+            a: 'Q4의 27B–35B급 모델입니다. Qwen3.8-27B가 가장 강력한 범용 모델이며(Ollama 다운로드 18GB, 긴 컨텍스트에서는 24GB가 빠듯함), Gemma 4 26B-A4B(Q4_K_M 약 15GB)는 컨텍스트 여유가 더 큽니다. 둘 다 Q2_K의 70B 모델이 겪는 품질 저하를 피합니다.',
+          },
+          {
+            q: '코딩에서 32B 모델이 70B 모델을 대신할 수 있나요?',
+            a: 'RTX 4090 한 장에서의 대부분의 실용적인 코딩 작업에서는 그렇습니다. Q4의 최신 27B–32B 모델은 GPU에 완전히 들어가지만 70B는 Q2_K에서만 들어가며 코드 품질이 가장 크게 떨어집니다. RTX 4090 두 장의 Q4 70B는 용량이 더 크지만 차이가 작은 경우가 많으니, 두 번째 카드를 사기 전에 직접 프롬프트로 테스트해 보세요.',
+          },
+          {
+            q: '70B 모델이 RTX 5090(32GB)에 들어가나요?',
+            a: 'Q4에서는 들어가지 않습니다. 70B 모델은 Q4에서 약 40GB가 필요해 RTX 5090의 32GB를 넘으므로, 5090 한 장으로 70B를 돌리려면 더 낮은 비트 양자화나 CPU 오프로드가 여전히 필요합니다.',
           },
         ],
       },
@@ -804,14 +1000,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-pt.webp',
     title: 'Qual a Melhor Configuração RTX 4090 para Rodar Modelos de 70B?',
-    seoTitle: 'Configuração RTX 4090 para Modelos de 70B 2026',
-    metaDescription: 'Uma única RTX 4090 (24GB) não comporta totalmente um modelo de 70B — precisa de ~40GB em Q4. Duas RTX 4090 (48GB) ou offload de CPU são a opção real.',
+    seoTitle: 'RTX 4090: melhor modelo e setup para 70B 2026 | Prompt Bites',
+    metaDescription: 'Uma única RTX 4090 (24 GB) não comporta um modelo 70B em Q4 (~40 GB). Melhores modelos para uma 4090: Qwen3.8-27B ou Gemma 4 26B-A4B. Para 70B, duas 4090.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-14',
-    current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090'],
+    next_refresh_due: '2027-04-17',
+    current_models_mentioned: ['Qwen3.8-27B', 'Gemma 4 26B-A4B', 'Qwen3.6-35B-A3B'],
+    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090', 'RTX 5090 32 GB'],
     educationalLevel: 'Advanced',
     audience: 'Entusiastas planejando uma montagem local para LLM capaz de rodar modelos de 70B com RTX 4090',
     affiliateDisclosure: true,
@@ -822,6 +1018,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     toc: [
       { label: 'Melhor Escolha: Duas RTX 4090 (48 GB Combinados)', anchor: '#best-pick' },
       { label: 'RTX 4090 Dupla vs RTX 4090 Única + Quantização', anchor: '#comparison' },
+      { label: 'Melhor modelo para uma única RTX 4090', anchor: '#best-model' },
       { label: 'Perguntas Frequentes', anchor: '#faq' },
       { label: 'Leitura Relacionada', anchor: '#related' },
     ],
@@ -833,8 +1030,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Um modelo de 70B precisa de ~40 GB de VRAM em Q4_K_M — bem acima dos 24 GB de uma única RTX 4090.',
           'Duas RTX 4090 (48 GB combinados) via vLLM ou tensor-parallel do llama.cpp é o caminho mais limpo para qualidade total.',
           'Uma única RTX 4090 só consegue rodar um 70B em quantização Q2_K, o que degrada visivelmente a qualidade da saída em comparação com Q4.',
+          'Em uma única RTX 4090, rode Qwen3.8-27B ou Gemma 4 26B-A4B em Q4 em vez de um modelo 70B em Q2_K.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -846,6 +1044,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Melhor configuração de qualidade total: duas RTX 4090 (48 GB combinados) via vLLM ou tensor-parallel do llama.cpp',
           'Alternativa com uma única 4090: quantização Q2_K cabe em 24 GB, mas degrada visivelmente a qualidade da saída',
           'O offload de CPU/RAM (`--n-gpu-layers` do llama.cpp) funciona em uma 4090, mas reduz significativamente a taxa de transferência',
+          'Melhor modelo para uma RTX 4090: um modelo da classe 27B–35B em Q4 (Qwen3.8-27B, Gemma 4 26B-A4B), não um 70B espremido em Q2_K',
         ],
       },
       bestPick: {
@@ -873,12 +1072,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      bestModels: {
+        id: 'best-model',
+        title: 'Melhor modelo para uma única RTX 4090',
+        content: [
+          '<strong>O melhor modelo para uma única RTX 4090 é um modelo atual da classe 27B–35B em Q4, e não um modelo 70B espremido em Q2_K.</strong> Um modelo 27B–32B em Q4 cabe em 24 GB sem a perda de qualidade da quantização de 2 bits, que atinge mais o código e a matemática. As escolhas seguem [Melhores LLMs locais 2026](/pt/local-llms/best-local-llms-2026).',
+        ],
+        items: [
+          'Qwen3.8-27B (`ollama pull qwen3.8:27b`) — melhor modelo versátil e para programar; download de 18 GB, mas contextos longos ficam apertados em 24 GB',
+          'Gemma 4 26B-A4B — mistura de especialistas, ~15 GB em Q4_K_M; deixa espaço para contexto longo e roda em velocidade próxima à de um modelo de 4B',
+          'Qwen3.6-35B-A3B — alternativa de mistura de especialistas com ~3B de parâmetros ativos por token para geração mais rápida',
+        ],
+      },
       comparison: {
         id: 'comparison',
         title: 'RTX 4090 Dupla vs RTX 4090 Única + Quantização',
         content: [
           'A RTX 4090 dupla oferece qualidade Q4 total a um custo real (uma segunda placa mais uma fonte e um gabinete mais robustos). A RTX 4090 única + Q2_K mantém a montagem em uma única placa, mas troca por uma qualidade de saída perceptivelmente pior em tarefas que exigem precisão, como geração de código ou matemática.',
           'Um caminho intermediário: rode um modelo de 32B em vez de 70B em uma única RTX 4090 em qualidade Q4 total (cabe em 24 GB com espaço de sobra) — para muitas tarefas, um modelo de 32B bem escolhido fecha a maior parte da diferença com um 70B com qualidade degradada.',
+          'Para programação em particular, um modelo atual de 27B–32B em Q4 é a escolha prática em uma RTX 4090: cabe inteiro na GPU, enquanto um 70B só cabe em Q2_K, onde código e matemática mais se degradam. Duas RTX 4090 com um 70B em Q4 dão mais capacidade, mas em tarefas típicas de código a diferença para um modelo atual de 27B costuma ser pequena — teste seus próprios prompts antes de comprar uma segunda placa.',
         ],
       },
       faq: {
@@ -887,7 +1099,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'O NVLink consegue combinar a VRAM de duas RTX 4090?',
-            a: 'Não. A RTX 4090 não suporta NVLink (a NVIDIA removeu esse recurso das placas de consumo desta geração). O agrupamento de VRAM multi-GPU para inferência de LLM funciona através de divisão de tensor em nível de software em ferramentas como o vLLM, não uma ponte de hardware.',
+            a: 'Não. A NVIDIA removeu o NVLink da RTX 4090 — a RTX 3090 foi a última GeForce a oferecê-lo. O agrupamento de VRAM multi-GPU para inferência de LLM funciona por divisão tensor-paralela em software em ferramentas como vLLM e llama.cpp, não por uma ponte de hardware, e trafega via PCIe.',
           },
           {
             q: 'Um modelo de 70B em Q2_K é realmente utilizável?',
@@ -900,6 +1112,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'A inferência com duas GPUs dobra os tokens por segundo?',
             a: 'Não — a inferência tensor-parallel divide o modelo entre as GPUs para encaixá-lo, mas adiciona sobrecarga de comunicação entre GPUs. Espere uma inferência mais rápida do que uma única GPU com offload pesado, mas não um ganho limpo de 2x sobre um modelo que já cabia em uma placa só.',
+          },
+          {
+            q: 'Qual é o melhor modelo para uma única RTX 4090?',
+            a: 'Um modelo da classe 27B–35B em Q4. O Qwen3.8-27B é o melhor versátil (download de 18 GB no Ollama; contextos longos ficam apertados em 24 GB) e o Gemma 4 26B-A4B (~15 GB em Q4_K_M) deixa mais espaço para o contexto. Ambos evitam a perda de qualidade de um modelo 70B em Q2_K.',
+          },
+          {
+            q: 'Um modelo de 32B basta para programar, comparado a um de 70B?',
+            a: 'Para a maioria das tarefas práticas de código em uma RTX 4090, sim: um modelo atual de 27B–32B em Q4 cabe inteiro na GPU, enquanto um 70B só cabe em Q2_K, onde a qualidade do código mais sofre. Um 70B em Q4 em duas RTX 4090 oferece mais capacidade, mas a diferença costuma ser pequena — teste seus próprios prompts antes de comprar uma segunda placa.',
+          },
+          {
+            q: 'Um modelo 70B cabe em uma RTX 5090 (32 GB)?',
+            a: 'Não em Q4. Um modelo 70B precisa de cerca de 40 GB em Q4, acima dos 32 GB da RTX 5090; uma única 5090 ainda exige quantização mais baixa ou offload para CPU em 70B.',
           },
         ],
       },
@@ -918,14 +1142,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/best-rtx-4090-setup-70b-models-overview-hero-zh.webp',
     title: '运行 70B 模型的最佳 RTX 4090 配置是什么？',
-    seoTitle: '2026 年 70B 模型的 RTX 4090 配置 | Prompt Bites',
-    metaDescription: '单张 RTX 4090（24GB）无法完整装下 70B 模型——需要约 40GB 才能在 Q4 下运行。双 RTX 4090（48GB）或 CPU 卸载是现实可行的 70B 配置方案。',
+    seoTitle: 'RTX 4090：最佳模型与 70B 配置指南 2026 | Prompt Bites',
+    metaDescription: '单张 RTX 4090（24GB）装不下 Q4 的 70B 模型（约 40GB）。单卡 4090 的最佳模型是 Qwen3.8-27B 或 Gemma 4 26B-A4B；要跑 70B 需两张 4090。',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-01-14',
-    current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090'],
+    next_refresh_due: '2027-04-17',
+    current_models_mentioned: ['Qwen3.8-27B', 'Gemma 4 26B-A4B', 'Qwen3.6-35B-A3B'],
+    current_hardware_mentioned: ['RTX 4090 24 GB', 'dual RTX 4090', 'RTX 5090 32 GB'],
     educationalLevel: 'Advanced',
     audience: '计划围绕 RTX 4090 打造可运行 70B 模型的本地 LLM 配置的爱好者',
     affiliateDisclosure: true,
@@ -936,6 +1160,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     toc: [
       { label: '最佳选择：两张 RTX 4090（合计 48 GB）', anchor: '#best-pick' },
       { label: '双 RTX 4090 对比 单张 RTX 4090 + 量化', anchor: '#comparison' },
+      { label: '单张 RTX 4090 的最佳模型', anchor: '#best-model' },
       { label: '常见问题', anchor: '#faq' },
       { label: '相关阅读', anchor: '#related' },
     ],
@@ -947,8 +1172,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '70B 模型在 Q4_K_M 下大约需要 40 GB 显存——远超单张 RTX 4090 的 24 GB。',
           '通过 vLLM 或 llama.cpp 的张量并行，两张 RTX 4090（合计 48 GB）是最干净的全质量方案。',
           '单张 RTX 4090 只能以 Q2_K 量化运行 70B，相比 Q4 输出质量明显下降。',
+          '单张 RTX 4090 请运行 Q4 的 Qwen3.8-27B 或 Gemma 4 26B-A4B，而不是 Q2_K 的 70B 模型。',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -960,6 +1186,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '最佳全质量方案：通过 vLLM 或 llama.cpp 张量并行的两张 RTX 4090（合计 48 GB）',
           '单卡 4090 的折衷方案：Q2_K 量化可装入 24 GB，但输出质量明显下降',
           'CPU/内存卸载（llama.cpp 的 `--n-gpu-layers`）在单张 4090 上可行，但吞吐量会大幅下降',
+          '单张 RTX 4090 的最佳模型：Q4 的 27B–35B 级模型（Qwen3.8-27B、Gemma 4 26B-A4B），而不是被压到 Q2_K 的 70B',
         ],
       },
       bestPick: {
@@ -987,12 +1214,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
         ],
       },
+      bestModels: {
+        id: 'best-model',
+        title: '单张 RTX 4090 的最佳模型',
+        content: [
+          '<strong>单张 RTX 4090 的最佳模型是 Q4 的新一代 27B–35B 级模型，而不是被压到 Q2_K 的 70B 模型。</strong>Q4 的 27B–32B 模型可放进 24GB，且避免了 2 比特量化带来的质量下降（代码和数学受影响最大）。推荐依据[2026 年最佳本地 LLM](/zh/local-llms/best-local-llms-2026)。',
+        ],
+        items: [
+          'Qwen3.8-27B（`ollama pull qwen3.8:27b`）— 综合能力最强，也是编程首选；下载 18GB，但长上下文时 24GB 会比较紧张',
+          'Gemma 4 26B-A4B — 混合专家（MoE）模型，Q4_K_M 约 15GB；为长上下文留出空间，速度接近 4B 模型',
+          'Qwen3.6-35B-A3B — 混合专家替代方案，每个 token 约 3B 激活参数，生成更快',
+        ],
+      },
       comparison: {
         id: 'comparison',
         title: '双 RTX 4090 对比 单张 RTX 4090 + 量化',
         content: [
           '双 RTX 4090 能以全 Q4 质量运行，但需要真实成本（第二张显卡加上更强的电源和机箱）。单张 RTX 4090 + Q2_K 将配置控制在一张卡内，但会在需要精度的任务（如代码生成或数学）上明显牺牲输出质量。',
           '折衷方案：在单张 RTX 4090 上以全 Q4 质量运行 32B 模型而非 70B（24 GB 内轻松容纳并留有余量）——对许多任务而言，精心挑选的 32B 模型能弥补大部分与质量下降的 70B 之间的差距。',
+          '就编程而言，Q4 的新一代 27B–32B 模型是单张 RTX 4090 的务实选择：它能完整放进 GPU，而 70B 只能以 Q2_K 放入，代码和数学质量下降最明显。两张 RTX 4090 运行 Q4 的 70B 容量更大，但在常见编程任务中，它与新一代 27B 模型的差距往往不大——购买第二张显卡前，请先用自己的提示词测试。',
         ],
       },
       faq: {
@@ -1001,7 +1241,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'NVLink 能合并两张 RTX 4090 的显存吗？',
-            a: '不能。RTX 4090 不支持 NVLink（NVIDIA 已在这一代消费级显卡中移除该功能）。LLM 推理的多 GPU 显存池化是通过 vLLM 等工具中的软件层张量并行拆分实现的，而非硬件桥接。',
+            a: '不能。NVIDIA 已在 RTX 4090 上移除 NVLink——RTX 3090 是最后一款支持它的 GeForce 显卡。LLM 推理的多 GPU 显存汇聚依靠 vLLM、llama.cpp 等工具的软件级张量并行切分，而非硬件桥接，数据经由 PCIe 传输。',
           },
           {
             q: 'Q2_K 量化的 70B 模型真的能用吗？',
@@ -1014,6 +1254,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '双 GPU 推理会让每秒 token 数翻倍吗？',
             a: '不会——张量并行推理会将模型拆分到多张 GPU 上以适配显存，但会增加 GPU 间的通信开销。相比大量卸载的单 GPU，推理会更快，但不会是相对已能装入单卡的模型的简单 2 倍加速。',
+          },
+          {
+            q: '单张 RTX 4090 的最佳模型是什么？',
+            a: 'Q4 的 27B–35B 级模型。Qwen3.8-27B 综合能力最强（Ollama 下载 18GB，长上下文时 24GB 较紧张），Gemma 4 26B-A4B（Q4_K_M 约 15GB）为上下文留出更多空间。两者都避免了 Q2_K 的 70B 模型带来的质量损失。',
+          },
+          {
+            q: '编程方面，32B 模型比得上 70B 模型吗？',
+            a: '在单张 RTX 4090 上的大多数实际编程任务中可以：Q4 的新一代 27B–32B 模型能完整放进 GPU，而 70B 只能以 Q2_K 放入，代码质量受损最大。两张 RTX 4090 运行 Q4 的 70B 容量更大，但差距往往不大——购买第二张显卡前请先用自己的提示词测试。',
+          },
+          {
+            q: '70B 模型能放进 RTX 5090（32GB）吗？',
+            a: 'Q4 放不下。70B 模型在 Q4 约需 40GB，超过 RTX 5090 的 32GB；单张 5090 跑 70B 仍需更低比特的量化或 CPU 卸载。',
           },
         ],
       },
