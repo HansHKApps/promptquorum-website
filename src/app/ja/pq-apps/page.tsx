@@ -551,7 +551,7 @@ export default function JaPQAppsPage() {
                     <span className="text-primary text-lg">✓</span>
                   </div>
                   <h3 className="font-semibold text-text-primary mb-2">ローカルで動作</h3>
-                  <p className="text-text-secondary text-sm">ElectronによるデスクトップApp、CapacitorによるモバイルApp。ローカルLLMで完全オフライン動作。</p>
+                  <p className="text-text-secondary text-sm">ElectronによるデスクトップApp（モバイルAppはCapacitorで予定）。デスクトップAppはローカルLLMで完全オフライン動作。</p>
                 </div>
             </div>
 

@@ -27081,7 +27081,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: 'Go to the Download Page',
             href: '/download',
-            description: 'Pick your platform, verify the checksum, and install — private beta, unsigned build, free to use.',
+            description: 'Pick your platform, verify the checksum, and install — public beta, unsigned build, free to use.',
           },
         },
         faq: {
@@ -27445,7 +27445,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: 'Zur Download-Seite',
             href: '/download',
-            description: 'Plattform auswählen, Prüfsumme überprüfen und installieren — private Beta, nicht signierter Build, kostenlos nutzbar.',
+            description: 'Plattform auswählen, Prüfsumme überprüfen und installieren — öffentliche Beta, nicht signierter Build, kostenlos nutzbar.',
           },
         },
         faq: {
@@ -27627,7 +27627,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: 'Ir a la Página de Descargas',
             href: '/download',
-            description: 'Elige tu plataforma, verifica el checksum e instala — beta privada, compilación sin firmar, gratis.',
+            description: 'Elige tu plataforma, verifica el checksum e instala — beta pública, compilación sin firmar, gratis.',
           },
         },
         faq: {
@@ -27809,7 +27809,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: 'Accéder à la page de téléchargement',
             href: '/download',
-            description: 'Choisissez votre plateforme, vérifiez l\'empreinte, et installez — bêta privée, build non signé, utilisation gratuite.',
+            description: 'Choisissez votre plateforme, vérifiez l\'empreinte, et installez — bêta publique, build non signé, utilisation gratuite.',
           },
         },
         faq: {
@@ -28173,7 +28173,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: '다운로드 페이지로 이동',
             href: '/download',
-            description: '플랫폼을 선택하고 체크섬을 검증한 후 설치하십시오 — 비공개 베타, 미서명 빌드, 무료로 사용할 수 있습니다.',
+            description: '플랫폼을 선택하고 체크섬을 검증한 후 설치하십시오 — 공개 베타, 미서명 빌드, 무료로 사용할 수 있습니다.',
           },
         },
         faq: {
@@ -28355,7 +28355,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: 'Ir para a Página de Download',
             href: '/download',
-            description: 'Escolha sua plataforma, verifique o checksum e instale — beta privado, build não assinada, gratuito para usar.',
+            description: 'Escolha sua plataforma, verifique o checksum e instale — beta pública, build não assinada, gratuito para usar.',
           },
         },
         faq: {

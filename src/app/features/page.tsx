@@ -88,7 +88,7 @@ export default async function FeaturesPage({ searchParams }: PageProps) {
                 {
                   '@type': 'Question',
                   'name': 'How many AI models can I dispatch to simultaneously?',
-                  'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum dispatches to 25+ cloud AI models including GPT-4o, Claude 4.6 Sonnet, Gemini 2.5 Pro, Mistral Large, DeepSeek, and others. You can also add custom API endpoints.' },
+                  'acceptedAnswer': { '@type': 'Answer', 'text': 'PromptQuorum dispatches to 25+ cloud AI models including GPT, Claude, Gemini, Mistral Large, DeepSeek, and others. You can also add custom API endpoints.' },
                 },
                 {
                   '@type': 'Question',

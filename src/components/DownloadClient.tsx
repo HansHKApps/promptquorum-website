@@ -70,7 +70,7 @@ const COPY: Record<string, Copy> = {
     fileLabel: 'File',
     download: 'Download',
     betaNote:
-      'PromptQuorum is in private beta. All installers are hosted in one shared folder — pick the button for your platform above.',
+      'PromptQuorum is in public beta. All installers are hosted in one shared folder — pick the button for your platform above.',
     unsignedHeading: 'Opening the app on a beta (unsigned) build',
     unsignedIntro:
       'PromptQuorum is in beta and not yet code-signed, so your operating system may warn you the first time you open it. This is expected — the app is safe to run.',
@@ -96,7 +96,7 @@ const COPY: Record<string, Copy> = {
     fileLabel: 'Datei',
     download: 'Herunterladen',
     betaNote:
-      'PromptQuorum befindet sich in der privaten Beta. Alle Installer liegen in einem gemeinsamen Ordner — wählen Sie oben die Schaltfläche für Ihre Plattform.',
+      'PromptQuorum befindet sich in der öffentlichen Beta. Alle Installer liegen in einem gemeinsamen Ordner — wählen Sie oben die Schaltfläche für Ihre Plattform.',
     unsignedHeading: 'Die App aus einem Beta-Build (unsigniert) öffnen',
     unsignedIntro:
       'PromptQuorum befindet sich in der Beta-Phase und ist noch nicht code-signiert. Ihr Betriebssystem zeigt beim ersten Öffnen möglicherweise eine Warnung an. Das ist normal — die App kann sicher ausgeführt werden.',
@@ -122,7 +122,7 @@ const COPY: Record<string, Copy> = {
     fileLabel: 'Fichier',
     download: 'Télécharger',
     betaNote:
-      'PromptQuorum est en bêta privée. Tous les installateurs sont hébergés dans un dossier partagé — choisissez le bouton correspondant à votre plateforme ci-dessus.',
+      'PromptQuorum est en bêta publique. Tous les installateurs sont hébergés dans un dossier partagé — choisissez le bouton correspondant à votre plateforme ci-dessus.',
     unsignedHeading: 'Ouvrir l\'application depuis une build bêta (non signée)',
     unsignedIntro:
       'PromptQuorum est en bêta et n\'est pas encore signé numériquement, votre système d\'exploitation peut donc afficher un avertissement la première fois que vous l\'ouvrez. C\'est normal — l\'application est sûre à utiliser.',
@@ -200,7 +200,7 @@ const COPY: Record<string, Copy> = {
     fileLabel: 'Archivo',
     download: 'Descargar',
     betaNote:
-      'PromptQuorum está en beta privada. Todos los instaladores están alojados en una carpeta compartida — elige el botón de tu plataforma arriba.',
+      'PromptQuorum está en beta pública. Todos los instaladores están alojados en una carpeta compartida — elige el botón de tu plataforma arriba.',
     unsignedHeading: 'Abrir la app en una compilación beta (sin firmar)',
     unsignedIntro:
       'PromptQuorum está en beta y aún no tiene firma de código, por lo que tu sistema operativo puede advertirte la primera vez que la abras. Esto es normal — la app es segura de ejecutar.',
@@ -226,7 +226,7 @@ const COPY: Record<string, Copy> = {
     fileLabel: 'Arquivo',
     download: 'Baixar',
     betaNote:
-      'O PromptQuorum está em beta privada. Todos os instaladores estão hospedados em uma pasta compartilhada — escolha o botão da sua plataforma acima.',
+      'O PromptQuorum está em beta pública. Todos os instaladores estão hospedados em uma pasta compartilhada — escolha o botão da sua plataforma acima.',
     unsignedHeading: 'Abrindo o app em uma versão beta (não assinada)',
     unsignedIntro:
       'O PromptQuorum está em beta e ainda não possui assinatura de código, então seu sistema operacional pode exibir um aviso na primeira vez que você abri-lo. Isso é esperado — o app é seguro para executar.',
@@ -278,7 +278,7 @@ const COPY: Record<string, Copy> = {
     fileLabel: '파일',
     download: '다운로드',
     betaNote:
-      'PromptQuorum은 비공개 베타 단계입니다. 모든 설치 파일은 하나의 공유 폴더에 있습니다 — 위에서 사용 중인 플랫폼에 맞는 버튼을 선택하세요.',
+      'PromptQuorum은 공개 베타 단계입니다. 모든 설치 파일은 하나의 공유 폴더에 있습니다 — 위에서 사용 중인 플랫폼에 맞는 버튼을 선택하세요.',
     unsignedHeading: '베타(서명되지 않은) 빌드에서 앱 열기',
     unsignedIntro:
       'PromptQuorum은 베타 단계이며 아직 코드 서명이 되어 있지 않아, 처음 열 때 운영체제가 경고를 표시할 수 있습니다. 이는 정상적인 동작이며 — 앱을 실행해도 안전합니다.',

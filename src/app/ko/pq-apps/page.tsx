@@ -555,7 +555,7 @@ export default function KoPQAppsPage() {
                     <span className="text-primary text-lg">✓</span>
                   </div>
                   <h3 className="font-semibold text-text-primary mb-2">오프라인 작동</h3>
-                  <p className="text-text-secondary text-sm">데스크톱 앱(Electron)과 모바일 앱(Capacitor)은 Ollama, LM Studio, Jan AI 또는 호환 엔드포인트를 통한 로컬 모델로 완전 오프라인 작동을 지원합니다.</p>
+                  <p className="text-text-secondary text-sm">데스크톱 앱(Electron)은 Ollama, LM Studio, Jan AI 또는 호환 엔드포인트를 통한 로컬 모델로 완전 오프라인 작동을 지원합니다. 모바일 앱(Capacitor)은 예정되어 있습니다.</p>
                 </div>
             </div>
 

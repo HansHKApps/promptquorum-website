@@ -555,7 +555,7 @@ export default function EsPQAppsPage() {
                     <span className="text-primary text-lg">✓</span>
                   </div>
                   <h3 className="font-semibold text-text-primary mb-2">Funciona sin conexión</h3>
-                  <p className="text-text-secondary text-sm">La app de escritorio (Electron) y la app móvil (Capacitor) admiten operación completamente sin conexión con modelos locales a través de Ollama, LM Studio, Jan AI o endpoints compatibles.</p>
+                  <p className="text-text-secondary text-sm">La app de escritorio (Electron) admite operación completamente sin conexión con modelos locales a través de Ollama, LM Studio, Jan AI o endpoints compatibles. La app móvil (Capacitor) está prevista.</p>
                 </div>
             </div>
 

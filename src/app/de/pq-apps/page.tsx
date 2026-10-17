@@ -551,7 +551,7 @@ export default function DePQAppsPage() {
                     <span className="text-primary text-lg">✓</span>
                   </div>
                   <h3 className="font-semibold text-text-primary mb-2">Läuft lokal</h3>
-                  <p className="text-text-secondary text-sm">Desktop-App via Electron, mobil via Capacitor. Funktioniert vollständig offline mit einem lokalen LLM.</p>
+                  <p className="text-text-secondary text-sm">Desktop-App via Electron; mobile App (Capacitor) geplant. Die Desktop-App funktioniert vollständig offline mit einem lokalen LLM.</p>
                 </div>
             </div>
 
