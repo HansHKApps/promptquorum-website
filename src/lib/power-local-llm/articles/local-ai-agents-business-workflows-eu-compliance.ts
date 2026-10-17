@@ -253,7 +253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.2 3B (`llama3.2:3b`).** Lightweight pick for high-volume triage. Runs comfortably on 8 GB VRAM. Good enough for "is this email customer support / sales / spam"; not good enough for drafting replies. Pair with a 27B+ model for the drafting step.',
           '**Mistral Large 3.** EU-hosted alternative for hybrid setups where pure local is overkill but US cloud is non-starter. Run via Mistral\'s EU endpoint with a DPA in place; data still stays in EU jurisdiction.',
           '**Avoid for tool-calling work:** anything below 7B for production work, any general-purpose model without explicit tool-call training, and quantisations harsher than Q4_K_M on the smaller end. Symptoms are malformed tool calls, hallucinated arguments, and stalled agent loops.',
-          'For the head-to-head data, see [Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026). For VRAM and hardware sizing across the same models, see [Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026).',
+          'For the head-to-head data, see [Best Local Models for Tool Calling in 2026](/power-local-llm/best-local-models-tool-calling-2026). For VRAM and hardware sizing across the same models, see [Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide).',
         ],
         callouts: [
           {
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.2 3B (`llama3.2:3b`).** Leichte Wahl für Hochvolumen-Triage. Läuft komfortabel auf 8 GB VRAM. Gut genug für "Ist das Kundensupport / Vertrieb / Spam"; nicht gut genug für das Verfassen von Antworten. Kombinieren Sie mit einem 27B+-Modell für den Entwurfsschritt.',
           '**Mistral Large 3.** EU-gehostete Alternative für hybride Setups, in denen rein lokal überdimensioniert ist, US-Cloud aber nicht infrage kommt. Über Mistrals EU-Endpoint mit AVV einsetzen; Daten bleiben in der EU-Jurisdiktion.',
           '**Für Tool-Calling vermeiden:** alles unter 7B für Produktionsarbeit, jedes Allzweckmodell ohne explizites Tool-Call-Training und stärkere Quantisierungen als Q4_K_M am unteren Ende. Symptome sind fehlerhafte Tool-Aufrufe, halluzinierte Argumente und stehengebliebene Agent-Loops.',
-          'Für die Vergleichsdaten siehe [Beste lokale Modelle für Tool-Calling 2026](/de/power-local-llm/best-local-models-tool-calling-2026). Für VRAM- und Hardware-Dimensionierung über dieselben Modelle siehe [Lokaler-LLM-Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026).',
+          'Für die Vergleichsdaten siehe [Beste lokale Modelle für Tool-Calling 2026](/de/power-local-llm/best-local-models-tool-calling-2026). Für VRAM- und Hardware-Dimensionierung über dieselben Modelle siehe [Lokaler-LLM-Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide).',
         ],
       },
       stackComparison: {
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.2 3B (`llama3.2:3b`).** Choix léger pour le tri à fort volume. Tourne confortablement sur 8 GB VRAM. Suffisant pour "support client / commercial / spam" ; insuffisant pour rédiger des réponses. À combiner avec un 27B+ pour l\'étape de rédaction.',
           '**Mistral Large 3.** Alternative hébergée en UE pour les configurations hybrides où le tout-local est surdimensionné mais le cloud US est exclu. À déployer via l\'endpoint UE de Mistral avec un DPA en place ; les données restent en juridiction UE.',
           '**À éviter pour le tool-calling :** tout modèle sous 7B en production, tout modèle généraliste sans entraînement explicite au tool-calling, et toute quantification plus agressive que Q4_K_M sur les petits modèles. Symptômes : appels d\'outils malformés, arguments hallucinés, boucles d\'agent bloquées.',
-          'Pour les données comparatives, voir [Meilleurs modèles locaux pour le tool-calling 2026](/fr/power-local-llm/best-local-models-tool-calling-2026). Pour le dimensionnement VRAM et matériel sur les mêmes modèles, voir [Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026).',
+          'Pour les données comparatives, voir [Meilleurs modèles locaux pour le tool-calling 2026](/fr/power-local-llm/best-local-models-tool-calling-2026). Pour le dimensionnement VRAM et matériel sur les mêmes modèles, voir [Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide).',
         ],
       },
       stackComparison: {
@@ -1191,7 +1191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.2 3B（`llama3.2:3b`）。** 高ボリュームトリアージ向けの軽量選択。8 GB VRAMで快適に動作。「これはカスタマーサポート / 営業 / スパムか」には十分；返信ドラフトには不十分。ドラフトステップには27B+モデルとペアリング。',
           '**Mistral Large 3。** 純粋ローカルが過剰でUSクラウドが選択肢にないハイブリッド構成向けのEUホスト型代替。MistralのEUエンドポイント経由でDPA設置済みで運用；データはEU管轄内に滞留。',
           '**Tool-callingで避けるべきもの：** 本番作業向けに7B未満のもの、明示的tool-callトレーニングがない汎用モデル、小型モデルでQ4_K_Mより厳しい量子化。症状は不正なtool-call、ハルシネーション引数、停止したエージェントループ。',
-          '対面比較データについては [Tool-Calling向け2026年最高のローカルモデル](/ja/power-local-llm/best-local-models-tool-calling-2026) を参照。同じモデルのVRAMとハードウェアサイジングについては [ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) を参照。',
+          '対面比較データについては [Tool-Calling向け2026年最高のローカルモデル](/ja/power-local-llm/best-local-models-tool-calling-2026) を参照。同じモデルのVRAMとハードウェアサイジングについては [ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) を参照。',
         ],
       },
       stackComparison: {
@@ -1497,7 +1497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.2 3B（`llama3.2:3b`）。** 大批量分流的轻量选择。8 GB显存即可舒适运行。"是客户支持/销售/垃圾邮件"够用；起草回复不够。起草步骤需配合27B+模型。',
           '**Mistral Large 3。** 适合纯本地过度而美国云不可行的混合配置的欧盟托管替代。通过Mistral的欧盟端点+签订DPA运行；数据仍在欧盟司法管辖。',
           '**工具调用应避免：** 生产工作中的7B以下模型、未经显式工具调用训练的通用模型，以及小尺寸端比Q4_K_M更激进的量化。症状是工具调用畸形、参数幻觉、智能体循环停滞。',
-          '正面对比数据请参阅[2026年最佳本地工具调用模型](/zh/power-local-llm/best-local-models-tool-calling-2026)。同一组模型的显存与硬件配置请参阅[2026本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)。',
+          '正面对比数据请参阅[2026年最佳本地工具调用模型](/zh/power-local-llm/best-local-models-tool-calling-2026)。同一组模型的显存与硬件配置请参阅[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)。',
         ],
       },
       stackComparison: {
@@ -1852,7 +1852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.2 3B (`llama3.2:3b`).** Opción ligera para triaje de alto volumen. Corre cómodamente en 8 GB de VRAM. Suficiente para "¿es este correo de soporte al cliente / ventas / spam?"; no suficiente para redactar respuestas. Combínalo con un modelo de 27B+ para el paso de redacción.',
           '**Mistral Large 3.** Alternativa alojada en la UE para configuraciones híbridas donde el local puro es excesivo pero la nube estadounidense no es una opción. Ejecuta a través del endpoint de la UE de Mistral con un DPA en vigor; los datos permanecen en jurisdicción de la UE.',
           '**Evitar para trabajo de tool-calling:** cualquier cosa por debajo de 7B para trabajo en producción, cualquier modelo de propósito general sin entrenamiento explícito en tool-calling, y cuantizaciones más agresivas que Q4_K_M en el extremo pequeño. Los síntomas son llamadas a herramientas malformadas, argumentos alucinados y bucles de agente detenidos.',
-          'Para los datos comparativos, consulta [Los mejores modelos locales para tool-calling en 2026](/es/power-local-llm/best-local-models-tool-calling-2026). Para el dimensionamiento de VRAM y hardware con los mismos modelos, consulta [Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026).',
+          'Para los datos comparativos, consulta [Los mejores modelos locales para tool-calling en 2026](/es/power-local-llm/best-local-models-tool-calling-2026). Para el dimensionamiento de VRAM y hardware con los mismos modelos, consulta [Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide).',
         ],
         callouts: [
           {
@@ -2911,7 +2911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Llama 3.2 3B (`llama3.2:3b`).** 대용량 분류를 위한 경량 선택. VRAM 8GB에서 편안하게 실행됩니다. "이 이메일이 고객 지원 / 영업 / 스팸인가?"에 충분합니다. 응답 초안 작성에는 충분하지 않습니다. 초안 작성 단계를 위해 27B 이상의 모델과 결합하십시오.',
           '**Mistral Large 3.** 순수 로컬이 과도하지만 미국 클라우드가 옵션이 아닌 하이브리드 구성을 위한 EU 호스팅 대안. DPA를 통해 Mistral의 EU 엔드포인트를 통해 실행합니다. 데이터는 EU 관할권에 유지됩니다.',
           '**tool-calling 작업에 피해야 할 것:** 프로덕션 작업에서 7B 미만인 것, 명시적 tool-calling 훈련 없는 범용 모델, 소형 끝에서 Q4_K_M보다 더 공격적인 양자화. 증상은 잘못 형성된 도구 호출, 환각된 인수, 중단된 에이전트 루프입니다.',
-          '비교 데이터는 [2026년 tool-calling을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026)을 참조하십시오. 동일한 모델로 VRAM 및 하드웨어 크기 조정에 대해서는 [2026년 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참조하십시오.',
+          '비교 데이터는 [2026년 tool-calling을 위한 최고의 로컬 모델](/ko/power-local-llm/best-local-models-tool-calling-2026)을 참조하십시오. 동일한 모델로 VRAM 및 하드웨어 크기 조정에 대해서는 [년 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참조하십시오.',
         ],
         callouts: [
           {

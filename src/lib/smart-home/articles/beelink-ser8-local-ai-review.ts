@@ -183,7 +183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'For 14B models: use 64 GB if you want the model to feel as responsive as the 7B tier does on 32 GB; it works on 32 GB but competes with Home Assistant and Frigate for memory.',
           '32B-class models fit only tightly even at 64 GB and run slowly — if 32B is your actual target, buy a discrete-GPU system instead (see the GPU-server comparison).',
           'The 16-TOPS NPU is not used by mainstream LLM runtimes (Ollama, llama.cpp) in 2026 — see the NPU note below.',
-          'See [Ollama on Home Assistant](/smart-home/home-assistant-ollama-integration) to connect the model, and the [local LLM hardware guide](/local-llms/local-llm-hardware-guide-2026) for VRAM depth on other platforms.',
+          'See [Ollama on Home Assistant](/smart-home/home-assistant-ollama-integration) to connect the model, and the [local LLM hardware guide](/local-llms/local-llm-hardware-guide) for VRAM depth on other platforms.',
         ],
         affiliateLinks: [
           { label: 'Check current SER8 price', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -405,7 +405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Best Mini PCs for Home Assistant + Local AI](/smart-home/best-mini-pc-home-assistant-local-ai) — the roundup this review belongs to',
           '[Local-AI Workstation Build Guide](/power-local-llm/best-workstation-build-local-ai-2026) — the GPU-server path for 32B+ models',
-          '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide-2026) — cross-cluster: VRAM and quantization depth',
+          '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — cross-cluster: VRAM and quantization depth',
           '[Running Your Smart Home on a Local LLM](/smart-home/local-llm-smart-home-complete-guide) — what the box actually runs',
           '[Connect Ollama to Home Assistant](/smart-home/home-assistant-ollama-integration) — wire the model in',
           '[Best Hardware for a Local Smart Home](/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS',
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Für 14B-Modelle: nutzen Sie 64 GB, wenn das Modell so reaktionsschnell wirken soll wie die 7B-Klasse bei 32 GB; auf 32 GB funktioniert es, konkurriert aber mit Home Assistant und Frigate um Speicher.',
           'Modelle der 32B-Klasse passen selbst bei 64 GB nur knapp und laufen langsam — wenn 32B Ihr tatsächliches Ziel ist, kaufen Sie stattdessen ein System mit dedizierter GPU (siehe den GPU-Server-Vergleich).',
           'Die 16-TOPS-NPU wird 2026 von gängigen LLM-Laufzeiten (Ollama, llama.cpp) nicht genutzt — siehe den NPU-Hinweis unten.',
-          'Siehe [Ollama auf Home Assistant](/de/smart-home/home-assistant-ollama-integration), um das Modell anzubinden, und den [Leitfaden zu lokaler LLM-Hardware](/de/local-llms/local-llm-hardware-guide-2026) für die VRAM-Tiefe auf anderen Plattformen.',
+          'Siehe [Ollama auf Home Assistant](/de/smart-home/home-assistant-ollama-integration), um das Modell anzubinden, und den [Leitfaden zu lokaler LLM-Hardware](/de/local-llms/local-llm-hardware-guide) für die VRAM-Tiefe auf anderen Plattformen.',
         ],
         affiliateLinks: [
           { label: 'Aktuellen SER8-Preis prüfen', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -858,7 +858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — der Überblick, zu dem diese Rezension gehört',
           '[Leitfaden zum Bau einer lokalen KI-Workstation](/de/power-local-llm/best-workstation-build-local-ai-2026) — der GPU-Server-Weg für Modelle ab 32B',
-          '[Leitfaden zu lokaler LLM-Hardware](/de/local-llms/local-llm-hardware-guide-2026) — clusterübergreifend: VRAM- und Quantisierungstiefe',
+          '[Leitfaden zu lokaler LLM-Hardware](/de/local-llms/local-llm-hardware-guide) — clusterübergreifend: VRAM- und Quantisierungstiefe',
           '[Ihr Smart Home auf einem lokalen LLM betreiben](/de/smart-home/local-llm-smart-home-complete-guide) — was die Box tatsächlich betreibt',
           '[Ollama mit Home Assistant verbinden](/de/smart-home/home-assistant-ollama-integration) — das Modell anbinden',
           '[Beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home) — Pi vs. Mini-PC vs. NAS',
@@ -1087,7 +1087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Pour les modèles 14B : utilisez 64 Go si vous voulez que le modèle soit aussi réactif que la classe 7B l'est sur 32 Go ; cela fonctionne sur 32 Go mais entre en concurrence avec Home Assistant et Frigate pour la mémoire.",
           "Les modèles de classe 32B ne tiennent que de justesse même à 64 Go et tournent lentement — si 32B est votre cible réelle, achetez plutôt un système avec GPU dédiée (voir la comparaison avec un serveur GPU).",
           "La NPU 16 TOPS n'est pas utilisée par les runtimes LLM courants (Ollama, llama.cpp) en 2026 — voir la note NPU ci-dessous.",
-          "Voir [Ollama sur Home Assistant](/fr/smart-home/home-assistant-ollama-integration) pour connecter le modèle, et le [guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide-2026) pour la profondeur de VRAM sur d'autres plateformes.",
+          "Voir [Ollama sur Home Assistant](/fr/smart-home/home-assistant-ollama-integration) pour connecter le modèle, et le [guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) pour la profondeur de VRAM sur d'autres plateformes.",
         ],
         affiliateLinks: [
           { label: 'Vérifier le prix actuel du SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -1309,7 +1309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) — le comparatif auquel appartient ce test',
           '[Guide de montage d\'une station de travail IA locale](/fr/power-local-llm/best-workstation-build-local-ai-2026) — la voie serveur GPU pour les modèles 32B+',
-          '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide-2026) — inter-cluster : profondeur de VRAM et de quantification',
+          '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) — inter-cluster : profondeur de VRAM et de quantification',
           '[Faire tourner votre maison connectée sur un LLM local](/fr/smart-home/local-llm-smart-home-complete-guide) — ce que la machine fait réellement tourner',
           '[Connecter Ollama à Home Assistant](/fr/smart-home/home-assistant-ollama-integration) — brancher le modèle',
           '[Meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home) — Pi vs mini-PC vs NAS',
@@ -1538,7 +1538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para modelos 14B: usa 64 GB si quieres que el modelo se sienta tan ágil como la clase 7B en 32 GB; funciona en 32 GB pero compite con Home Assistant y Frigate por la memoria.',
           'Los modelos de clase 32B entran solo justos incluso con 64 GB y corren lentos — si 32B es tu objetivo real, compra en su lugar un sistema con GPU dedicada (ver la comparación con servidor GPU).',
           'La NPU de 16 TOPS no la usan los runtimes de LLM habituales (Ollama, llama.cpp) en 2026 — ver la nota sobre la NPU abajo.',
-          'Consulta [Ollama en Home Assistant](/es/smart-home/home-assistant-ollama-integration) para conectar el modelo, y la [guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide-2026) para la profundidad de VRAM en otras plataformas.',
+          'Consulta [Ollama en Home Assistant](/es/smart-home/home-assistant-ollama-integration) para conectar el modelo, y la [guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) para la profundidad de VRAM en otras plataformas.',
         ],
         affiliateLinks: [
           { label: 'Consultar precio actual del SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -1760,7 +1760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) — el resumen al que pertenece este análisis',
           '[Guía de montaje de una estación de trabajo de IA local](/es/power-local-llm/best-workstation-build-local-ai-2026) — la vía de servidor con GPU para modelos 32B+',
-          '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide-2026) — entre clústeres: profundidad de VRAM y cuantización',
+          '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) — entre clústeres: profundidad de VRAM y cuantización',
           '[Ejecuta tu hogar inteligente en un LLM local](/es/smart-home/local-llm-smart-home-complete-guide) — lo que el equipo ejecuta realmente',
           '[Conecta Ollama a Home Assistant](/es/smart-home/home-assistant-ollama-integration) — integrar el modelo',
           '[Mejor hardware para un hogar inteligente local](/es/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS',
@@ -1989,7 +1989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '14Bモデルの場合: 32 GBでの7Bクラスと同じくらい反応良く感じさせたいなら64 GBを使ってください。32 GBでも動きますが、Home AssistantやFrigateとメモリを奪い合います。',
           '32Bクラスのモデルは64 GBでも厳しく、動作は遅くなります — 32Bが実際の目標なら、代わりに専用GPUを搭載したシステムを購入してください（GPUサーバー比較を参照）。',
           '2026年時点で、Ollamaやllama.cppといった主流のLLMランタイムは16-TOPS NPUを使用しません — 下記のNPUに関する注記を参照してください。',
-          'モデルを接続するには[Home AssistantでのOllama連携](/ja/smart-home/home-assistant-ollama-integration)を、他のプラットフォームでのVRAM深掘りには[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026)を参照してください。',
+          'モデルを接続するには[Home AssistantでのOllama連携](/ja/smart-home/home-assistant-ollama-integration)を、他のプラットフォームでのVRAM深掘りには[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)を参照してください。',
         ],
         affiliateLinks: [
           { label: 'SER8の現在価格を確認', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -2211,7 +2211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Home Assistant + ローカルAI向けベストミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai) — このレビューが属するまとめ記事',
           '[ローカルAIワークステーション構築ガイド](/ja/power-local-llm/best-workstation-build-local-ai-2026) — 32B以上のモデル向けGPUサーバーの道筋',
-          '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) — クラスター横断: VRAMと量子化の深掘り',
+          '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — クラスター横断: VRAMと量子化の深掘り',
           '[ローカルLLMでスマートホームを運用する](/ja/smart-home/local-llm-smart-home-complete-guide) — この機器が実際に何を動かすか',
           '[Ollama を Home Assistant に接続する](/ja/smart-home/home-assistant-ollama-integration) — モデルを組み込む',
           '[ローカルスマートホーム向けベストハードウェア](/ja/smart-home/best-hardware-for-local-smart-home) — Pi対ミニPC対NAS',
@@ -2440,7 +2440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '对于14B模型：如果希望模型像32 GB上的7B级别那样反应灵敏，请使用64 GB；在32 GB上也能运行，但会与Home Assistant和Frigate争抢内存。',
           '32B级模型即使在64 GB下也只能勉强装下且运行缓慢——如果32B是你的真实目标，请改为购买配备独立GPU的系统（参见GPU服务器对比）。',
           '2026年主流LLM运行时（Ollama、llama.cpp）并不使用16-TOPS NPU——参见下方的NPU说明。',
-          '连接模型请参见[在Home Assistant上使用Ollama](/zh/smart-home/home-assistant-ollama-integration)，其他平台的VRAM深度内容请参见[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)。',
+          '连接模型请参见[在Home Assistant上使用Ollama](/zh/smart-home/home-assistant-ollama-integration)，其他平台的VRAM深度内容请参见[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)。',
         ],
         affiliateLinks: [
           { label: '查看SER8当前价格', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -2662,7 +2662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Home Assistant + 本地AI最佳迷你PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai)——本评测所属的汇总文章',
           '[本地AI工作站搭建指南](/zh/power-local-llm/best-workstation-build-local-ai-2026)——32B以上模型的GPU服务器路线',
-          '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)——跨集群：显存与量化深度内容',
+          '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)——跨集群：显存与量化深度内容',
           '[在本地LLM上运行你的智能家居](/zh/smart-home/local-llm-smart-home-complete-guide)——这台设备实际运行什么',
           '[将Ollama连接到Home Assistant](/zh/smart-home/home-assistant-ollama-integration)——接入模型',
           '[本地智能家居最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home)——树莓派对比迷你PC对比NAS',
@@ -2891,7 +2891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para modelos 14B: use 64 GB se quiser que o modelo fique tão responsivo quanto a classe 7B fica em 32 GB; funciona em 32 GB, mas compete com Home Assistant e Frigate pela memória.',
           'Modelos de classe 32B cabem apenas justos mesmo com 64 GB e rodam devagar — se 32B é seu alvo real, compre um sistema com GPU dedicada em vez disso (veja a comparação com servidor de GPU).',
           'A NPU de 16 TOPS não é usada pelos runtimes de LLM comuns (Ollama, llama.cpp) em 2026 — veja a nota sobre a NPU abaixo.',
-          'Veja [Ollama no Home Assistant](/pt/smart-home/home-assistant-ollama-integration) para conectar o modelo, e o [guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide-2026) para a profundidade de VRAM em outras plataformas.',
+          'Veja [Ollama no Home Assistant](/pt/smart-home/home-assistant-ollama-integration) para conectar o modelo, e o [guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) para a profundidade de VRAM em outras plataformas.',
         ],
         affiliateLinks: [
           { label: 'Ver preço atual do SER8', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -3114,7 +3114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) — o resumo ao qual esta análise pertence',
           '[Guia de montagem de workstation de IA local](/pt/power-local-llm/best-workstation-build-local-ai-2026) — o caminho de servidor com GPU para modelos 32B+',
-          '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide-2026) — entre clusters: profundidade de VRAM e quantização',
+          '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) — entre clusters: profundidade de VRAM e quantização',
           '[Rode sua casa inteligente em um LLM local](/pt/smart-home/local-llm-smart-home-complete-guide) — o que a caixa realmente roda',
           '[Conecte o Ollama ao Home Assistant](/pt/smart-home/home-assistant-ollama-integration) — integrar o modelo',
           '[Melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS',
@@ -3343,7 +3343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لنماذج 14B: استخدم 64 غيغابايت إذا أردت أن يبدو النموذج بنفس سرعة استجابة فئة 7B على 32 غيغابايت؛ يعمل على 32 غيغابايت لكنه يتنافس مع Home Assistant وFrigate على الذاكرة.',
           'نماذج فئة 32B تتّسع بالكاد حتى مع 64 غيغابايت وتعمل ببطء — إذا كان 32B هدفك الفعلي، فاشترِ بدلًا من ذلك نظامًا ببطاقة رسومات منفصلة (راجع مقارنة خادم GPU).',
           'لا تستخدم واجهات تشغيل LLM السائدة (Ollama وllama.cpp) وحدة NPU ذات 16 TOPS في 2026 — راجع ملاحظة NPU أدناه.',
-          'راجع [Ollama على Home Assistant](/ar/smart-home/home-assistant-ollama-integration) لتوصيل النموذج، و[دليل أجهزة LLM المحلي](/ar/local-llms/local-llm-hardware-guide-2026) لتفاصيل الذاكرة على منصات أخرى.',
+          'راجع [Ollama على Home Assistant](/ar/smart-home/home-assistant-ollama-integration) لتوصيل النموذج، و[دليل أجهزة LLM المحلي](/ar/local-llms/local-llm-hardware-guide) لتفاصيل الذاكرة على منصات أخرى.',
         ],
         affiliateLinks: [
           { label: 'تحقق من سعر SER8 الحالي', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -3565,7 +3565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[أفضل الحواسيب الصغيرة لـ Home Assistant + الذكاء الاصطناعي المحلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) — التجميعة التي تنتمي إليها هذه المراجعة',
           '[دليل بناء محطة عمل ذكاء اصطناعي محلي](/ar/power-local-llm/best-workstation-build-local-ai-2026) — مسار خادم GPU للنماذج من فئة 32B فما فوق',
-          '[دليل أجهزة LLM المحلي](/ar/local-llms/local-llm-hardware-guide-2026) — عبر التجميعات: تفاصيل الذاكرة والتكميم',
+          '[دليل أجهزة LLM المحلي](/ar/local-llms/local-llm-hardware-guide) — عبر التجميعات: تفاصيل الذاكرة والتكميم',
           '[تشغيل منزلك الذكي على نموذج LLM محلي](/ar/smart-home/local-llm-smart-home-complete-guide) — ما الذي يُشغّله الجهاز فعليًا',
           '[توصيل Ollama بـ Home Assistant](/ar/smart-home/home-assistant-ollama-integration) — دمج النموذج',
           '[أفضل الأجهزة لمنزل ذكي محلي](/ar/smart-home/best-hardware-for-local-smart-home) — Pi مقابل حاسوب صغير مقابل NAS',
@@ -3794,7 +3794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '14B 모델의 경우: 32 GB에서의 7B급만큼 반응이 빠르길 원한다면 64 GB를 사용하세요. 32 GB에서도 작동하지만 Home Assistant 및 Frigate와 메모리를 두고 경쟁합니다.',
           '32B급 모델은 64 GB에서도 빠듯하게 들어가고 느리게 실행됩니다 — 32B가 실제 목표라면 대신 별도 GPU를 탑재한 시스템을 구매하세요(GPU 서버 비교 참조).',
           '2026년 기준 Ollama, llama.cpp와 같은 주류 LLM 런타임은 16-TOPS NPU를 사용하지 않습니다 — 아래 NPU 관련 참고 사항을 확인하세요.',
-          '모델을 연결하려면 [Home Assistant에서 Ollama 사용하기](/ko/smart-home/home-assistant-ollama-integration)를, 다른 플랫폼의 VRAM 세부 정보는 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참조하세요.',
+          '모델을 연결하려면 [Home Assistant에서 Ollama 사용하기](/ko/smart-home/home-assistant-ollama-integration)를, 다른 플랫폼의 VRAM 세부 정보는 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참조하세요.',
         ],
         affiliateLinks: [
           { label: 'SER8 현재 가격 확인', url: 'https://www.bee-link.com/products/beelink-ser8-8845hs', productName: 'Beelink SER8', productCategory: 'Mini PC' },
@@ -4016,7 +4016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai) — 이 리뷰가 속한 종합 정리',
           '[로컬 AI 워크스테이션 구축 가이드](/ko/power-local-llm/best-workstation-build-local-ai-2026) — 32B 이상 모델을 위한 GPU 서버 경로',
-          '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026) — 클러스터 간: VRAM과 양자화 심화',
+          '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 클러스터 간: VRAM과 양자화 심화',
           '[로컬 LLM으로 스마트홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide) — 이 기기가 실제로 무엇을 실행하는지',
           '[Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration) — 모델 연결하기',
           '[로컬 스마트홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home) — Pi 대 미니 PC 대 NAS',

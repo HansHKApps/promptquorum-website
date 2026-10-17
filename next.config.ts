@@ -642,6 +642,16 @@ const nextConfig: NextConfig = {
       },
       // Year removed from slug (2026-10-17): no year or month in URLs.
       {
+        source: '/local-llms/local-llm-hardware-guide-2026',
+        destination: '/local-llms/local-llm-hardware-guide',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/local-llms/local-llm-hardware-guide-2026',
+        destination: '/:lang/local-llms/local-llm-hardware-guide',
+        permanent: true,
+      },
+      {
         source: '/power-local-llm/local-whisper-stt-comparison-2026',
         destination: '/power-local-llm/local-whisper-stt-comparison',
         permanent: true,

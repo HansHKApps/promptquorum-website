@@ -1235,7 +1235,7 @@ schema: {
             '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm)',
             '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms)',
             '[GPU vs. CPU vs. Apple Silicon](/de/local-llms/gpu-vs-cpu-vs-apple-silicon)',
-            '[Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026)',
+            '[Local LLM Hardware Guide](/de/local-llms/local-llm-hardware-guide)',
           ],
         },
         'sources': {
@@ -1428,7 +1428,7 @@ schema: {
             '[Meilleures GPU budget pour LLM locaux](/fr/local-llms/best-budget-gpus-local-llm)',
             '[Meilleures GPU pour LLM locaux](/fr/local-llms/best-gpus-for-local-llms)',
             '[GPU vs CPU vs Apple Silicon](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon)',
-            '[Local LLM Hardware Guide 2026](/fr/local-llms/local-llm-hardware-guide-2026)',
+            '[Local LLM Hardware Guide](/fr/local-llms/local-llm-hardware-guide)',
           ],
         },
         'sources': {

@@ -79,7 +79,7 @@ import { article as a_apple_on_device_ai_vs_local_llms } from "./articles/apple-
 // UAE Sprint 2026-06-14 — data sovereignty + Arabic local LLMs
 import { article as a_uae_pdpl_data_sovereignty_local_ai_2026 } from "./articles/uae-pdpl-data-sovereignty-local-ai-2026";
 import { article as a_best_arabic_local_llms_2026 } from "./articles/best-arabic-local-llms-2026";
-import { article as a_local_llm_hardware_guide_2026 } from "./articles/local-llm-hardware-guide-2026";
+import { article as a_local_llm_hardware_guide } from "./articles/local-llm-hardware-guide";
 import { article as a_vram_calculator_local_llm } from "./articles/vram-calculator-local-llm";
 import { article as a_gpu_vs_cpu_vs_apple_silicon } from "./articles/gpu-vs-cpu-vs-apple-silicon";
 import { article as a_apple_silicon_vs_nvidia_gpu_local_llm } from "./articles/apple-silicon-vs-nvidia-gpu-local-llm";
@@ -222,7 +222,7 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   "desktop-vs-webui-local-llm": a_desktop_vs_webui_local_llm,
   "local-llms-with-vscode-cursor": a_local_llms_with_vscode_cursor,
   "headless-local-llms": a_headless_local_llms,
-  "local-llm-hardware-guide-2026": a_local_llm_hardware_guide_2026,
+  "local-llm-hardware-guide": a_local_llm_hardware_guide,
   "vram-calculator-local-llm": a_vram_calculator_local_llm,
   "gpu-vs-cpu-vs-apple-silicon": a_gpu_vs_cpu_vs_apple_silicon,
   "apple-silicon-vs-nvidia-gpu-local-llm": a_apple_silicon_vs_nvidia_gpu_local_llm,

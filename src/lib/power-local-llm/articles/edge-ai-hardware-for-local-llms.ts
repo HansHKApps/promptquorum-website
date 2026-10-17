@@ -222,7 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — the desktop/workstation side of this same decision, for comparison',
+          '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — the desktop/workstation side of this same decision, for comparison',
           '[Run a Local LLM on a Raspberry Pi 5](/prompt-bites/local-llm-raspberry-pi-5) — the cheapest on-ramp into the SBC + NPU hat class described above',
           '[Best CPU-Only LLM Setups](/local-llms/best-cpu-only-llm) — for products where even an SBC + NPU hat is more hardware than the task needs',
           '[Best Small Local LLM Models](/local-llms/small-local-llm-models) — model candidates sized for the power envelopes discussed in this guide',
@@ -475,7 +475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local-LLM-Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026) — die Desktop-/Workstation-Seite derselben Entscheidung, zum Vergleich',
+          '[Local-LLM-Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide) — die Desktop-/Workstation-Seite derselben Entscheidung, zum Vergleich',
           '[Ein lokales LLM auf einem Raspberry Pi 5 ausführen](/de/prompt-bites/local-llm-raspberry-pi-5) — der günstigste Einstieg in die oben beschriebene SBC + NPU-Hat-Klasse',
           '[Beste reine CPU-LLM-Setups](/de/local-llms/best-cpu-only-llm) — für Produkte, bei denen selbst ein SBC + NPU-Hat mehr Hardware ist, als die Aufgabe braucht',
           '[Beste kleine lokale LLM-Modelle](/de/local-llms/small-local-llm-models) — Modellkandidaten für die in diesem Leitfaden besprochenen Leistungsbudgets',
@@ -726,7 +726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
-          '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — le pendant bureau/station de travail de cette même décision, à titre de comparaison',
+          '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) — le pendant bureau/station de travail de cette même décision, à titre de comparaison',
           '[Exécuter un LLM local sur un Raspberry Pi 5](/fr/prompt-bites/local-llm-raspberry-pi-5) — la voie d\'entrée la moins chère vers la classe boîtier SBC + NPU décrite ci-dessus',
           '[Meilleures configurations LLM CPU seul](/fr/local-llms/best-cpu-only-llm) — pour les produits où même un boîtier SBC + NPU dépasse ce que la tâche exige',
           '[Meilleurs petits modèles LLM locaux](/fr/local-llms/small-local-llm-models) — des modèles candidats dimensionnés pour les enveloppes de puissance évoquées dans ce guide',
@@ -977,7 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — 比較のための、同じ判断のデスクトップ／ワークステーション側',
+          '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — 比較のための、同じ判断のデスクトップ／ワークステーション側',
           '[Raspberry Pi 5でローカルLLMを動かす](/ja/prompt-bites/local-llm-raspberry-pi-5) — 上述のSBC＋NPU HATクラスへの最も安価な入り口',
           '[CPUのみで動く最適なLLM構成](/ja/local-llms/best-cpu-only-llm) — SBC＋NPU HATですら過剰な用途向け',
           '[小型ローカルLLMモデル最適候補](/ja/local-llms/small-local-llm-models) — 本ガイドで扱う電力枠に見合うモデル候補',
@@ -1227,7 +1227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) — 同一决策在桌面/工作站场景的对照版本',
+          '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) — 同一决策在桌面/工作站场景的对照版本',
           '[在树莓派5上运行本地LLM](/zh/prompt-bites/local-llm-raspberry-pi-5) — 进入上述SBC+NPU扩展板类别最便宜的入门途径',
           '[最佳纯CPU LLM方案](/zh/local-llms/best-cpu-only-llm) — 适合连SBC+NPU扩展板都算过度配置的场景',
           '[最佳小型本地LLM模型](/zh/local-llms/small-local-llm-models) — 与本文所述功耗范围匹配的候选模型',
@@ -1478,7 +1478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — el lado de escritorio/estación de trabajo de esta misma decisión, para comparar',
+          '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) — el lado de escritorio/estación de trabajo de esta misma decisión, para comparar',
           '[Ejecuta un LLM local en una Raspberry Pi 5](/es/prompt-bites/local-llm-raspberry-pi-5) — la entrada más económica a la clase placa SBC + HAT NPU descrita arriba',
           '[Mejores configuraciones de LLM solo con CPU](/es/local-llms/best-cpu-only-llm) — para productos donde incluso una placa SBC + HAT NPU es más hardware del que la tarea necesita',
           '[Mejores modelos de LLM local pequeños](/es/local-llms/small-local-llm-models) — modelos candidatos dimensionados para los envolventes de potencia analizados en esta guía',
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
-          '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — o lado desktop/estação de trabalho desta mesma decisão, para comparação',
+          '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) — o lado desktop/estação de trabalho desta mesma decisão, para comparação',
           '[Rode um LLM local num Raspberry Pi 5](/pt/prompt-bites/local-llm-raspberry-pi-5) — a entrada mais barata para a classe placa SBC + HAT NPU descrita acima',
           '[Melhores configurações de LLM só com CPU](/pt/local-llms/best-cpu-only-llm) — para produtos onde até uma placa SBC + HAT NPU é mais hardware do que a tarefa exige',
           '[Melhores modelos de LLM local pequenos](/pt/local-llms/small-local-llm-models) — modelos candidatos dimensionados para os envelopes de energia discutidos neste guia',
@@ -1980,7 +1980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل عتاد نماذج اللغة المحلية 2026](/local-llms/local-llm-hardware-guide-2026) — الجانب المكتبي/محطة العمل من نفس القرار، للمقارنة',
+          '[دليل عتاد نماذج اللغة المحلية](/local-llms/local-llm-hardware-guide) — الجانب المكتبي/محطة العمل من نفس القرار، للمقارنة',
           '[شغّل نموذج لغة محلياً على Raspberry Pi 5](/prompt-bites/local-llm-raspberry-pi-5) — أرخص مدخل إلى فئة لوحة SBC + وحدة NPU إضافية الموصوفة أعلاه',
           '[أفضل إعدادات نماذج لغة تعمل بالمعالج فقط](/local-llms/best-cpu-only-llm) — للمنتجات التي حتى لوحة SBC + وحدة NPU إضافية فيها عتاد أكثر مما تحتاجه المهمة',
           '[أفضل نماذج لغة محلية صغيرة](/local-llms/small-local-llm-models) — نماذج مرشحة بأحجام تناسب أغلفة الطاقة المناقشة في هذا الدليل',
@@ -2231,7 +2231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[2026 로컬 LLM 하드웨어 가이드](/local-llms/local-llm-hardware-guide-2026) — 비교를 위한, 같은 의사결정의 데스크톱/워크스테이션 측면',
+          '[로컬 LLM 하드웨어 가이드](/local-llms/local-llm-hardware-guide) — 비교를 위한, 같은 의사결정의 데스크톱/워크스테이션 측면',
           '[Raspberry Pi 5에서 로컬 LLM 실행하기](/prompt-bites/local-llm-raspberry-pi-5) — 위에서 설명한 SBC+NPU HAT 클래스로 가는 가장 저렴한 입문 경로',
           '[최고의 CPU 전용 LLM 구성](/local-llms/best-cpu-only-llm) — SBC+NPU HAT조차 과분한 작업을 위한 제품',
           '[최고의 소형 로컬 LLM 모델](/local-llms/small-local-llm-models) — 본 가이드에서 다룬 전력 범위에 맞는 모델 후보',

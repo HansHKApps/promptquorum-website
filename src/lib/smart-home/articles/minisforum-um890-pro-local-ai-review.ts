@@ -192,7 +192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OCuLink adds an external desktop GPU for large-model speed the iGPU cannot reach — a differentiator over USB4-only boxes.',
           'Ollama, LM Studio, and llama.cpp run well; the 16-TOPS NPU is not used by mainstream LLM runtimes.',
           'Dual 2.5GbE suits a wired, reliable home server; see [Ollama on Home Assistant](/smart-home/home-assistant-ollama-integration).',
-          'For VRAM and quantization depth, see the cross-cluster [local LLM hardware guide](/local-llms/local-llm-hardware-guide-2026).',
+          'For VRAM and quantization depth, see the cross-cluster [local LLM hardware guide](/local-llms/local-llm-hardware-guide).',
         ],
         affiliateLinks: [
           { label: 'Check current price — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -360,7 +360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Best Mini PCs for Home Assistant + Local AI](/smart-home/best-mini-pc-home-assistant-local-ai) — the roundup this review belongs to',
-          '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide-2026) — cross-cluster: VRAM and quantization depth',
+          '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — cross-cluster: VRAM and quantization depth',
           '[Running Your Smart Home on a Local LLM](/smart-home/local-llm-smart-home-complete-guide) — what the box actually runs',
           '[Connect Ollama to Home Assistant](/smart-home/home-assistant-ollama-integration) — wire the model in',
           '[Best Hardware for a Local Smart Home](/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS',
@@ -650,7 +650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OCuLink ergänzt eine externe Desktop-GPU für eine Modellgeschwindigkeit, die die iGPU nicht erreicht — ein Unterscheidungsmerkmal gegenüber reinen USB4-Boxen.',
           'Ollama, LM Studio und llama.cpp laufen gut; die 16-TOPS-NPU wird von gängigen LLM-Runtimes nicht genutzt.',
           'Zwei 2,5GbE eignen sich für einen kabelgebundenen, zuverlässigen Heimserver; siehe [Ollama auf Home Assistant](/de/smart-home/home-assistant-ollama-integration).',
-          'Zu VRAM und Quantisierungstiefe siehe den clusterübergreifenden [Hardware-Guide für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026).',
+          'Zu VRAM und Quantisierungstiefe siehe den clusterübergreifenden [Hardware-Guide für lokale LLMs](/de/local-llms/local-llm-hardware-guide).',
         ],
         affiliateLinks: [
           { label: 'Aktuellen Preis prüfen — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -747,7 +747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — der Überblick, zu dem diese Rezension gehört',
-          '[Hardware-Guide für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026) — clusterübergreifend: VRAM und Quantisierungstiefe',
+          '[Hardware-Guide für lokale LLMs](/de/local-llms/local-llm-hardware-guide) — clusterübergreifend: VRAM und Quantisierungstiefe',
           '[Ihr Smart Home mit einem lokalen LLM betreiben](/de/smart-home/local-llm-smart-home-complete-guide) — was die Box tatsächlich ausführt',
           '[Ollama mit Home Assistant verbinden](/de/smart-home/home-assistant-ollama-integration) — das Modell einbinden',
           '[Beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home) — Pi vs. Mini-PC vs. NAS',
@@ -970,7 +970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OCuLink ajoute un GPU de bureau externe pour une vitesse que l\'iGPU ne peut atteindre — un différenciateur face aux box USB4 seules.',
           'Ollama, LM Studio et llama.cpp tournent bien ; le NPU 16 TOPS n\'est pas utilisé par les runtimes LLM courants.',
           'Deux 2.5GbE conviennent à un serveur maison filaire et fiable ; voir [Ollama sur Home Assistant](/fr/smart-home/home-assistant-ollama-integration).',
-          'Pour la VRAM et la profondeur de quantification, voir le [guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide-2026) inter-clusters.',
+          'Pour la VRAM et la profondeur de quantification, voir le [guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) inter-clusters.',
         ],
         affiliateLinks: [
           { label: 'Vérifier le prix actuel — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -1134,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'À lire aussi',
         items: [
           '[Meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) — le comparatif dont ce test fait partie',
-          '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide-2026) — inter-clusters : VRAM et profondeur de quantification',
+          '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) — inter-clusters : VRAM et profondeur de quantification',
           '[Faire tourner votre maison connectée sur un LLM local](/fr/smart-home/local-llm-smart-home-complete-guide) — ce que la box exécute réellement',
           '[Connecter Ollama à Home Assistant](/fr/smart-home/home-assistant-ollama-integration) — intégrer le modèle',
           '[Meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home) — Pi vs mini-PC vs NAS',
@@ -1358,7 +1358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OCuLink añade una GPU de escritorio externa para una velocidad que la iGPU no alcanza — un diferenciador frente a las cajas solo con USB4.',
           'Ollama, LM Studio y llama.cpp funcionan bien; la NPU de 16 TOPS no la usan los runtimes LLM habituales.',
           'Dos 2.5GbE encajan en un servidor doméstico cableado y fiable; ver [Ollama en Home Assistant](/es/smart-home/home-assistant-ollama-integration).',
-          'Para la VRAM y la profundidad de cuantización, consulta la [guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide-2026) entre clústeres.',
+          'Para la VRAM y la profundidad de cuantización, consulta la [guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) entre clústeres.',
         ],
         affiliateLinks: [
           { label: 'Consultar precio actual — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -1522,7 +1522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) — el resumen al que pertenece este análisis',
-          '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide-2026) — entre clústeres: VRAM y profundidad de cuantización',
+          '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) — entre clústeres: VRAM y profundidad de cuantización',
           '[Ejecutar tu hogar inteligente en un LLM local](/es/smart-home/local-llm-smart-home-complete-guide) — lo que la caja ejecuta realmente',
           '[Conectar Ollama a Home Assistant](/es/smart-home/home-assistant-ollama-integration) — integrar el modelo',
           '[Mejor hardware para un hogar inteligente local](/es/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS',
@@ -1817,7 +1817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OCuLinkは、iGPUが到達できない速度のために外付けデスクトップGPUを追加します — USB4のみの機種との差別化点です。',
           'Ollama、LM Studio、llama.cppは良好に動作します。16 TOPSのNPUは主要なLLMランタイムでは使われません。',
           '2基の2.5GbEは、有線で信頼性の高いホームサーバーに適します。[Home AssistantでのOllama](/ja/smart-home/home-assistant-ollama-integration)を参照。',
-          'VRAMと量子化の深さについては、クラスター横断の[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026)を参照してください。',
+          'VRAMと量子化の深さについては、クラスター横断の[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)を参照してください。',
         ],
         affiliateLinks: [
           { label: '現在の価格を確認 — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -1910,7 +1910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[Home Assistant + ローカルAI向けベストミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai) — このレビューが属するまとめ',
-          '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) — クラスター横断: VRAMと量子化の深さ',
+          '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — クラスター横断: VRAMと量子化の深さ',
           '[ローカルLLMでスマートホームを動かす](/ja/smart-home/local-llm-smart-home-complete-guide) — この機種が実際に動かすもの',
           '[OllamaをHome Assistantに接続する](/ja/smart-home/home-assistant-ollama-integration) — モデルを組み込む',
           '[ローカルスマートホームに最適なハードウェア](/ja/smart-home/best-hardware-for-local-smart-home) — Pi対ミニPC対NAS',
@@ -2198,7 +2198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OCuLink 增加一块外接台式 GPU，实现核显无法达到的速度——相较仅有 USB4 的机器是差异化优势。',
           'Ollama、LM Studio 和 llama.cpp 运行良好；16 TOPS 的 NPU 不被主流 LLM 运行时使用。',
           '双 2.5GbE 适合有线、可靠的家庭服务器；参见 [Home Assistant 上的 Ollama](/zh/smart-home/home-assistant-ollama-integration)。',
-          '关于 VRAM 与量化深度，参见跨集群的 [本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)。',
+          '关于 VRAM 与量化深度，参见跨集群的 [本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide)。',
         ],
         affiliateLinks: [
           { label: '查看当前价格 — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -2290,7 +2290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '延伸阅读',
         items: [
           '[Home Assistant + 本地 AI 最佳迷你主机](/zh/smart-home/best-mini-pc-home-assistant-local-ai) — 本评测所属的汇总',
-          '[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) — 跨集群：VRAM 与量化深度',
+          '[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide) — 跨集群：VRAM 与量化深度',
           '[用本地 LLM 驱动你的智能家居](/zh/smart-home/local-llm-smart-home-complete-guide) — 这台机器实际运行什么',
           '[将 Ollama 连接到 Home Assistant](/zh/smart-home/home-assistant-ollama-integration) — 接入模型',
           '[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home) — Pi 对比迷你主机对比 NAS',
@@ -2508,7 +2508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OCuLink는 iGPU가 도달할 수 없는 속도를 위해 외장 데스크톱 GPU를 더합니다 — USB4만 있는 기기와의 차별점입니다.',
           'Ollama, LM Studio, llama.cpp가 잘 작동합니다. 16 TOPS NPU는 주요 LLM 런타임에서 사용되지 않습니다.',
           '듀얼 2.5GbE는 유선의 안정적인 홈 서버에 적합합니다. [Home Assistant의 Ollama](/ko/smart-home/home-assistant-ollama-integration)를 참조하십시오.',
-          'VRAM과 양자화 깊이는 클러스터 전반의 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참조하십시오.',
+          'VRAM과 양자화 깊이는 클러스터 전반의 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참조하십시오.',
         ],
         affiliateLinks: [
           { label: '현재 가격 확인 — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -2677,7 +2677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '함께 읽기',
         items: [
           '[Home Assistant + 로컬 AI 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai) — 이 리뷰가 속한 정리글',
-          '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026) — 클러스터 전반: VRAM과 양자화 깊이',
+          '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 클러스터 전반: VRAM과 양자화 깊이',
           '[로컬 LLM으로 스마트홈 운영하기](/ko/smart-home/local-llm-smart-home-complete-guide) — 이 기기가 실제로 실행하는 것',
           '[Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration) — 모델 연동',
           '[로컬 스마트홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home) — Pi 대 미니 PC 대 NAS',
@@ -2895,7 +2895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A OCuLink adiciona uma GPU de desktop externa para uma velocidade que a iGPU não alcança — um diferencial em relação a caixas só com USB4.',
           'Ollama, LM Studio e llama.cpp rodam bem; a NPU de 16 TOPS não é usada pelos runtimes de LLM mais comuns.',
           'Duas 2.5GbE combinam com um servidor doméstico cabeado e confiável; veja [Ollama no Home Assistant](/pt/smart-home/home-assistant-ollama-integration).',
-          'Para VRAM e profundidade de quantização, veja o [guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide-2026) entre clusters.',
+          'Para VRAM e profundidade de quantização, veja o [guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) entre clusters.',
         ],
         affiliateLinks: [
           { label: 'Ver preço atual — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -3059,7 +3059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leitura relacionada',
         items: [
           '[Melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) — o resumo ao qual esta análise pertence',
-          '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide-2026) — entre clusters: VRAM e profundidade de quantização',
+          '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) — entre clusters: VRAM e profundidade de quantização',
           '[Rodando sua casa inteligente em um LLM local](/pt/smart-home/local-llm-smart-home-complete-guide) — o que a caixa realmente roda',
           '[Conectar o Ollama ao Home Assistant](/pt/smart-home/home-assistant-ollama-integration) — integrar o modelo',
           '[Melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home) — Pi vs mini PC vs NAS',
@@ -3277,7 +3277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يضيف OCuLink بطاقة رسوميات مكتبية خارجية لسرعة لا يبلغها الكرت المدمج — ميزة مقابل الأجهزة ذات USB4 فقط.',
           'يعمل Ollama وLM Studio وllama.cpp بشكل جيد؛ ولا تستخدم أطر تشغيل LLM الشائعة وحدة NPU بقدرة 16 TOPS.',
           'منفذا 2.5GbE مناسبان لخادم منزلي سلكي وموثوق؛ انظر [Ollama على Home Assistant](/ar/smart-home/home-assistant-ollama-integration).',
-          'لمعرفة VRAM وعمق التكميم، راجع [دليل عتاد الـ LLM المحلي](/ar/local-llms/local-llm-hardware-guide-2026) بين العناقيد.',
+          'لمعرفة VRAM وعمق التكميم، راجع [دليل عتاد الـ LLM المحلي](/ar/local-llms/local-llm-hardware-guide) بين العناقيد.',
         ],
         affiliateLinks: [
           { label: 'تحقق من السعر الحالي — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -3448,7 +3448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[أفضل أجهزة mini PC لـ Home Assistant + الذكاء الاصطناعي المحلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) — الملخص الذي تنتمي إليه هذه المراجعة',
-          '[دليل عتاد الـ LLM المحلي](/ar/local-llms/local-llm-hardware-guide-2026) — بين العناقيد: VRAM وعمق التكميم',
+          '[دليل عتاد الـ LLM المحلي](/ar/local-llms/local-llm-hardware-guide) — بين العناقيد: VRAM وعمق التكميم',
           '[تشغيل منزلك الذكي على LLM محلي](/ar/smart-home/local-llm-smart-home-complete-guide) — ما الذي يشغّله الجهاز فعلاً',
           '[ربط Ollama بـ Home Assistant](/ar/smart-home/home-assistant-ollama-integration) — دمج النموذج',
           '[أفضل عتاد لمنزل ذكي محلي](/ar/smart-home/best-hardware-for-local-smart-home) — Pi مقابل mini PC مقابل NAS',

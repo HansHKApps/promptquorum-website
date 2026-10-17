@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Related Reading',
           items: [
             '[VRAM Calculator for Local LLMs](/local-llms/vram-calculator-local-llm) -- Interactive calculator: exact VRAM for any model, quantization, and GPU.',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- Complete GPU tier recommendations with prices and tok/sec benchmarks.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- Complete GPU tier recommendations with prices and tok/sec benchmarks.',
             '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms) -- RTX 4090, 4080, 4070 Ti benchmarks and cost analysis.',
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) -- Deep dive into Q4, Q5, Q8 formats and quality trade-offs.',
             '[How Much Unified Memory for Local LLMs?](/local-llms/how-much-unified-memory-for-local-llm) -- Mac equivalent of VRAM: 16GB vs 36GB vs 64GB vs 128GB for Apple Silicon.',
@@ -565,7 +565,7 @@ schema: {
           title: 'Lecturas relacionadas',
           items: [
             '[Calculadora de VRAM para LLMs locales](/es/local-llms/vram-calculator-local-llm) -- Calculadora interactiva: VRAM exacta para cualquier modelo, cuantización y GPU.',
-            '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) -- Recomendaciones completas de niveles de GPU con precios y benchmarks de tok/seg.',
+            '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) -- Recomendaciones completas de niveles de GPU con precios y benchmarks de tok/seg.',
             '[Mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms) -- Benchmarks y análisis de costes de RTX 4090, 4080 y 4070 Ti.',
             '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) -- Análisis profundo de los formatos Q4, Q5 y Q8 y sus compromisos de calidad.',
             '[¿Cuánta memoria unificada para LLMs locales?](/es/local-llms/how-much-unified-memory-for-local-llm) -- Equivalente Mac de VRAM: 16 GB vs 36 GB vs 64 GB vs 128 GB para Apple Silicon.',
@@ -901,7 +901,7 @@ schema: {
           title: 'قراءات ذات صلة',
           items: [
             '[حاسبة VRAM لنماذج LLM المحلية](/ar/local-llms/vram-calculator-local-llm) -- حاسبة تفاعلية: VRAM الدقيقة لأي نموذج وتكميم و GPU.',
-            '[دليل الأجهزة لـ LLM محلي 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- توصيات كاملة لمستويات GPU بالأسعار ومعايير tok/ثانية.',
+            '[دليل الأجهزة لـ LLM محلي](/ar/local-llms/local-llm-hardware-guide) -- توصيات كاملة لمستويات GPU بالأسعار ومعايير tok/ثانية.',
             '[أفضل GPU لنماذج LLM المحلية](/ar/local-llms/best-gpus-for-local-llms) -- معايير وتحليل تكلفة لـ RTX 4090 و4080 و4070 Ti.',
             '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) -- تحليل معمّق لصيغ Q4 و Q5 و Q8 ومقايضات جودتها.',
             '[كم تحتاج من الذاكرة الموحدة لنماذج LLM المحلية؟](/ar/local-llms/how-much-unified-memory-for-local-llm) -- مكافئ Mac لـ VRAM: 16 GB مقابل 36 GB مقابل 64 GB مقابل 128 GB لـ Apple Silicon.',
@@ -1236,7 +1236,7 @@ schema: {
           title: 'Leituras relacionadas',
           items: [
             '[Calculadora de VRAM para LLMs locais](/pt/local-llms/vram-calculator-local-llm) -- Calculadora interativa: VRAM exata para qualquer modelo, quantização e GPU.',
-            '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) -- Recomendações completas de níveis de GPU com preços e benchmarks de tok/seg.',
+            '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) -- Recomendações completas de níveis de GPU com preços e benchmarks de tok/seg.',
             '[Melhores GPUs para LLMs locais](/pt/local-llms/best-gpus-for-local-llms) -- Benchmarks e análise de custos de RTX 4090, 4080 e 4070 Ti.',
             '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) -- Análise aprofundada dos formatos Q4, Q5 e Q8 e seus compromissos de qualidade.',
             '[Quanta memória unificada para LLMs locais?](/pt/local-llms/how-much-unified-memory-for-local-llm) -- Equivalente Mac de VRAM: 16 GB vs 36 GB vs 64 GB vs 128 GB para Apple Silicon.',
@@ -1560,7 +1560,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures complémentaires',
           items: [
-            '[Guide de matériel Local LLM 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- recommandations de tiers GPU complètes avec prix et benchmarks tok/sec pour chaque tiers VRAM',
+            '[Guide de matériel Local LLM](/fr/local-llms/local-llm-hardware-guide) -- recommandations de tiers GPU complètes avec prix et benchmarks tok/sec pour chaque tiers VRAM',
             '[Installer Ollama](/fr/local-llms/how-to-install-ollama) -- configurez Ollama pour exécuter les modèles correspondant à votre tiers VRAM avec quantification correcte',
             '[Qwen vs Llama vs Mistral](/fr/local-llms/qwen-vs-llama-vs-mistral) -- comparaison de famille de modèles avec exigences VRAM exactes pour chaque taille en Q4_K_M',
             '[Exécuter les Local LLMs sur un Laptop](/fr/local-llms/local-llm-on-laptop) -- contraintes VRAM spécifiques au laptop et recommandations de quantification pour mémoire unifiée',
@@ -1689,7 +1689,7 @@ schema: {
         faqSection: {
           id: 'faq', faqs: [{ q: 'Kann ein 3B-Modell auf meiner GPU laufen?', a: 'RTX 3060 (3 GB) oder CPU. Q4-Quantisierung benötigt 1,5-2 GB VRAM. Ollama, Llama.cpp, LM Studio unterstützen alle.' }, { q: 'Ist RTX 4060 ausreichend für 7B Q4?', a: 'Knapp. RTX 4060 (8 GB) sollte 5 GB theoretisch verwalten, aber OS/Laufzeit-Overhead (0,5-1,5 GB) wird eng. RTX 4070 (12 GB) empfohlen.' }, { q: 'Sind 12 GB für Llama3 13B ausreichend?', a: 'Ja, deutlich. Ein 13B-Modell braucht bei Q4 nur etwa 8 GB, 12 GB lässt also echten Puffer. Bei Q5 (~9 GB) ist es noch komfortabel; bei Q8 (~14 GB) wird es eng.' }, { q: 'Benötige ich 24 GB für ein 70B-Modell?', a: 'Nein, aber Sie brauchen fast so viel. Ein 70B-Modell benötigt etwa 42 GB bei Q4 allein für die Gewichte. Bei Q5+ sind es 50 GB+. 24 GB reichen bei keiner Quantisierungsstufe.' }, { q: 'Reduziert höhere Batch-Größe VRAM für einzelne Inferenz?', a: 'Nein. Einzelne Inferenz verwendet immer batch=1. Batch-Größe hilft nur Durchsatz (Multi-User-Szenarios).' }, { q: 'Was ist die präziseste Quantisierung?', a: 'Q8 nahezu unmerklicher Verlust. Q5 ~2% Verlust. Q4 ~1% Verlust. Für die meisten Fälle Q4 beste Balance.' }, { q: 'Kann ich Teil des VRAM auf CPU-RAM auslagern?', a: 'Ja, über Layer-Splitting (NVLink). Llama.cpp und Ollama unterstützen es. Leistung sinkt 30-50%.' }, { q: 'Was ist die minimale VRAM für lokale LLM-Ausführung?', a: '4 GB VRAM mit 3B Q4-Modell -- Modell ~1,8 GB, KV-Cache hat Platz. Praktisches Minimum 8 GB VRAM + 7B Q4. Unter 6 GB OOM für die meisten 7B-Modelle.' }, { q: 'Ist Apple Silicon VRAM dasselbe wie GPU VRAM?', a: 'Apple Silicon verwendet Unified Memory zwischen CPU/GPU gemeinsam -- ganzer Speicherpool verfügbar für Modell-Inferenz. M3 18 GB = GPU 18 GB VRAM. MacBook Pro M3 18 GB kann Llama3 13B Q4 (~7 GB) + Overhead ausführen.' }, { q: 'Wie viel VRAM benötigt 7B bei verschiedenen Quantisierungen?', a: '7B FP32: ~28 GB -- unpraktisch auf Consumer-GPUs. 7B Q8: ~7 GB -- passt auf RTX 4070 Ti 12 GB mit Puffer. 7B Q5: ~5 GB -- passt auf 8 GB GPU. 7B Q4: ~4 GB Gewichte + ~1-2 GB Overhead = ~5-6 GB -- passt auf 6 GB GPU eng, 8 GB komfortabel.' }, { q: 'Was sind die VRAM-Anforderungen für DSGVO-konforme lokale Inferenz in Unternehmen?', a: 'Minimum RTX 4070 Ti (12 GB) für bis zu 50 Nutzer mit Llama3 13B Q4. Für 50-500 Nutzer RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB). ECC-GPU empfohlen für Speicherfehler-Detektion. GPU-Speicher-Dumps müssen verhindert werden (Firmware/physische Sicherheit).' }, { q: 'Welche GPU empfiehlt sich für einen Team-Server im deutschen Mittelstand?', a: 'RTX 4070 Ti (12 GB) für 1-50 Mitarbeiter. RTX A6000 (48 GB) oder Dual RTX 4080 (32 GB) für 50-500 Mitarbeiter. RTX 4070 Ti kann Llama3 13B Q4 + vLLM mit 3-5 gleichzeitigen Anfragen verwalten. Größere Teams benötigen A100 (80 GB) oder H100 und Enterprise-Clustering.' }] },
         relatedReading: {
-          id: 'related-reading', title: 'Weiterführende Literatur', items: ['/de/local-llms/best-local-llms-2026', '/de/local-llms/how-to-run-ollama-locally', '/de/local-llms/local-llm-hardware-guide-2026', '/de/local-llms/best-amd-gpus-local-llm', '/de/local-llms/local-llm-security-privacy-checklist', '/de/local-llms/how-much-unified-memory-for-local-llm', '/de/local-llms/running-70b-models-apple-silicon-m5-max', '/de/local-llms/best-models-apple-silicon-2026', '/de/local-llms/gpu-vs-cpu-vs-apple-silicon'] },
+          id: 'related-reading', title: 'Weiterführende Literatur', items: ['/de/local-llms/best-local-llms-2026', '/de/local-llms/how-to-run-ollama-locally', '/de/local-llms/local-llm-hardware-guide', '/de/local-llms/best-amd-gpus-local-llm', '/de/local-llms/local-llm-security-privacy-checklist', '/de/local-llms/how-much-unified-memory-for-local-llm', '/de/local-llms/running-70b-models-apple-silicon-m5-max', '/de/local-llms/best-models-apple-silicon-2026', '/de/local-llms/gpu-vs-cpu-vs-apple-silicon'] },
         sources: {
           id: 'sources', title: 'Quellen', items: ['NVIDIA CUDA-Dokumentation: GPU-Speicherverwaltung, Tensor Cores, Compute Capability', 'Ollama-Dokumentation: VRAM-Anforderungen, Quantisierungsschemata, GPU-Kompatibilitätsmatrix', 'Llama.cpp GitHub: GGUF-Format, Q4/Q5/Q8-Implementierung, Speicher-Profilierung'] },
       },
@@ -2284,7 +2284,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
           title: '관련 읽을거리',
           items: [
             '[로컬 LLM용 VRAM 계산기](/ko/local-llms/vram-calculator-local-llm) -- 인터랙티브 계산기: 모든 모델, 양자화 및 GPU에 대한 정확한 VRAM.',
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 가격 및 tok/초 벤치마크가 포함된 완전한 GPU 등급 권장 사항.',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) -- 가격 및 tok/초 벤치마크가 포함된 완전한 GPU 등급 권장 사항.',
             '[로컬 LLM을 위한 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms) -- RTX 4090, 4080, 4070 Ti 벤치마크 및 비용 분석.',
             '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) -- Q4, Q5, Q8 형식과 품질 트레이드오프에 대한 심층 분석.',
             '[로컬 LLM에 통합 메모리가 얼마나 필요합니까?](/ko/local-llms/how-much-unified-memory-for-local-llm) -- Apple Silicon을 위한 VRAM의 Mac 동등물: 16GB vs 36GB vs 64GB vs 128GB.',

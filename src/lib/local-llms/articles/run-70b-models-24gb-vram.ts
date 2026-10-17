@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- Buy better hardware instead.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- Buy better hardware instead.',
             '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) -- Use layer splitting instead.',
             '[Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) -- Smaller models often sufficient.',
           '[How Much VRAM for a 70B Model?](/prompt-bites/vram-for-70b-model) -- quick reference: hardware options, tok/s, and cost comparison.',
@@ -386,7 +386,7 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführendes Material',
           items: [
-            '[Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) -- Kaufen Sie bessere Hardware.',
+            '[Local LLM Hardware Guide](/de/local-llms/local-llm-hardware-guide) -- Kaufen Sie bessere Hardware.',
             '[Multi-GPU Local LLMs](/de/local-llms/multi-gpu-local-llms) -- Verwenden Sie statt dessen Layer-Splitting.',
             '[Best Local LLMs for Coding](/de/local-llms/best-local-llms-for-coding) -- Kleinere Modelle sind oft ausreichend.',
           '[Wie viel VRAM für ein 70B-Modell?](/de/prompt-bites/vram-for-70b-model) -- Kurzübersicht: Hardware-Optionen, tok/s und Kostenvergleich.',
@@ -607,7 +607,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures connexes',
           items: [
-            '[Local LLM Hardware Guide 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Achetez du meilleur matériel.',
+            '[Local LLM Hardware Guide](/fr/local-llms/local-llm-hardware-guide) -- Achetez du meilleur matériel.',
             '[Multi-GPU Local LLMs](/fr/local-llms/multi-gpu-local-llms) -- Utilisez plutôt la division de couches.',
             '[Best Local LLMs for Coding](/fr/local-llms/best-local-llms-for-coding) -- Les modèles plus petits suffisent souvent.',
           '[Combien de VRAM pour un modèle 70B ?](/fr/prompt-bites/vram-for-70b-model) -- référence rapide : options matérielles, tok/s et comparaison des coûts.',
@@ -828,7 +828,7 @@ schema: {
           id: 'related-reading',
           title: '関連資料',
           items: [
-            '[Local LLM Hardware Guide 2026](/ja/local-llms/local-llm-hardware-guide-2026) -- より良いハードウェアを購入。',
+            '[Local LLM Hardware Guide](/ja/local-llms/local-llm-hardware-guide) -- より良いハードウェアを購入。',
             '[Multi-GPU Local LLMs](/ja/local-llms/multi-gpu-local-llms) -- 代わりにレイヤー分割を使用。',
             '[Best Local LLMs for Coding](/ja/local-llms/best-local-llms-for-coding) -- より小さいモデルはしばしば十分。',
           '[70Bモデルに必要なVRAM量は？](/ja/prompt-bites/vram-for-70b-model) -- クイックリファレンス：ハードウェアオプション、tok/s、コスト比較。',
@@ -1058,7 +1058,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[Local LLM Hardware Guide 2026](/zh/local-llms/local-llm-hardware-guide-2026) -- 购买更好硬件。',
+            '[Local LLM Hardware Guide](/zh/local-llms/local-llm-hardware-guide) -- 购买更好硬件。',
             '[Multi-GPU Local LLMs](/zh/local-llms/multi-gpu-local-llms) -- 改用层分割。',
             '[Best Local LLMs for Coding](/zh/local-llms/best-local-llms-for-coding) -- 较小模型通常足够。',
           '[70B模型需要多少VRAM？](/zh/prompt-bites/vram-for-70b-model) -- 快速参考：硬件选项、tok/s和成本对比。',
@@ -1296,7 +1296,7 @@ schema: {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            '[Guía de hardware para LLM locales 2026](/es/local-llms/local-llm-hardware-guide-2026) -- Compra mejor hardware.',
+            '[Guía de hardware para LLM locales](/es/local-llms/local-llm-hardware-guide) -- Compra mejor hardware.',
             '[LLMs locales con múltiples GPU](/es/local-llms/multi-gpu-local-llms) -- Usa la división de capas en su lugar.',
             '[Los mejores LLMs locales para programación](/es/local-llms/best-local-llms-for-coding) -- Los modelos más pequeños suelen ser suficientes.',
           '[¿Cuánta VRAM para un Modelo 70B?](/es/prompt-bites/vram-for-70b-model) -- referencia rápida: opciones de hardware, tok/s y comparación de costos.',
@@ -1538,7 +1538,7 @@ schema: {
           id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
-            '[دليل أجهزة نماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- اشترِ أجهزة أفضل.',
+            '[دليل أجهزة نماذج LLM المحلية](/ar/local-llms/local-llm-hardware-guide) -- اشترِ أجهزة أفضل.',
             '[نماذج LLM المحلية ببطاقات رسوم متعددة](/ar/local-llms/multi-gpu-local-llms) -- استخدم تقسيم الطبقات بدلًا من ذلك.',
             '[أفضل نماذج LLM المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding) -- النماذج الأصغر غالبًا ما تكون كافية.',
           '[كم VRAM تحتاج لنموذج 70B؟](/ar/prompt-bites/vram-for-70b-model) -- مرجع سريع: خيارات الأجهزة، tok/s ومقارنة التكاليف.',
@@ -1780,7 +1780,7 @@ schema: {
           id: 'related-reading',
           title: 'Leitura relacionada',
           items: [
-            '[Guia de hardware para LLM locais 2026](/pt/local-llms/local-llm-hardware-guide-2026) -- Compre hardware melhor.',
+            '[Guia de hardware para LLM locais](/pt/local-llms/local-llm-hardware-guide) -- Compre hardware melhor.',
             '[LLMs locais com múltiplas GPUs](/pt/local-llms/multi-gpu-local-llms) -- Use divisão de camadas.',
             '[Melhores LLMs locais para programação](/pt/local-llms/best-local-llms-for-coding) -- Modelos menores frequentemente suficientes.',
           '[Quanto VRAM para um Modelo 70B?](/pt/prompt-bites/vram-for-70b-model) -- referência rápida: opções de hardware, tok/s e comparação de custos.',
@@ -1983,7 +1983,7 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 더 나은 하드웨어를 구입하십시오.',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) -- 더 나은 하드웨어를 구입하십시오.',
             '[멀티 GPU 로컬 LLM](/ko/local-llms/multi-gpu-local-llms) -- 레이어 분할을 사용하십시오.',
             '[코딩을 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) -- 소형 모델로도 충분한 경우가 많습니다.',
           '[70B 모델에 VRAM이 얼마나 필요한가?](/ko/prompt-bites/vram-for-70b-model) -- 빠른 참조: 하드웨어 옵션, tok/s 및 비용 비교.',

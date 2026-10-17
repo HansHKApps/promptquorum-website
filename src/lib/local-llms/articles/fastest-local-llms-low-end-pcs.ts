@@ -384,7 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Deep dive into Q4, Q3, Q2 quantization trade-offs.',
             '[Local LLM on Laptop](/local-llms/local-llm-on-laptop) — Optimize inference on MacBook Air, Windows laptop, or Chromebook.',
             '[Best Beginner Local LLM Models 2026](/local-llms/best-beginner-local-llm-models) — Recommended starting models for new users on any hardware.',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Full hardware requirements by model size for 2026.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — Full hardware requirements by model size for 2026.',
             '[Best CPU-Only LLMs](/local-llms/best-cpu-only-llm) — Ranked picks for machines with no GPU at all, with measured CPU tok/s.',
             '[Small Local LLM Models](/local-llms/small-local-llm-models) — The sub-4B tier ranked on quality, for the lightest models that still hold up.',
           ],
@@ -867,7 +867,7 @@ schema: {
             '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) — Análisis detallado de los compromisos de cuantización Q4, Q3, Q2.',
             '[LLM local en portátil](/es/local-llms/local-llm-on-laptop) — Optimiza la inferencia en MacBook Air, portátil Windows o Chromebook.',
             '[Mejores modelos LLM locales para principiantes 2026](/es/local-llms/best-beginner-local-llm-models) — Modelos recomendados para nuevos usuarios en cualquier hardware.',
-            '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — Requisitos completos de hardware por tamaño de modelo para 2026.',
+            '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) — Requisitos completos de hardware por tamaño de modelo para 2026.',
           ],
         },
         'sources': {
@@ -1348,7 +1348,7 @@ schema: {
             '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) — تحليل مفصّل لمفاضلات تكميم Q4 وQ3 وQ2.',
             '[LLM محلي على حاسوب محمول](/ar/local-llms/local-llm-on-laptop) — حسّن الاستدلال على MacBook Air أو حاسوب Windows محمول أو Chromebook.',
             '[أفضل نماذج LLM المحلية للمبتدئين 2026](/ar/local-llms/best-beginner-local-llm-models) — نماذج موصى بها للمستخدمين الجدد على أي عتاد.',
-            '[دليل عتاد LLM المحلي 2026](/ar/local-llms/local-llm-hardware-guide-2026) — متطلبات عتاد كاملة حسب حجم النموذج لـ 2026.',
+            '[دليل عتاد LLM المحلي](/ar/local-llms/local-llm-hardware-guide) — متطلبات عتاد كاملة حسب حجم النموذج لـ 2026.',
           ],
         },
         'sources': {
@@ -1832,7 +1832,7 @@ schema: {
             '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) — Análise detalhada dos trade-offs de quantização Q4, Q3, Q2.',
             '[LLM local em notebook](/pt/local-llms/local-llm-on-laptop) — Otimize a inferência em MacBook Air, notebook Windows ou Chromebook.',
             '[Melhores modelos de LLM local para iniciantes 2026](/pt/local-llms/best-beginner-local-llm-models) — Modelos recomendados para novos usuários em qualquer hardware.',
-            '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — Requisitos completos de hardware por tamanho de modelo para 2026.',
+            '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) — Requisitos completos de hardware por tamanho de modelo para 2026.',
           ],
         },
         'sources': {
@@ -2315,7 +2315,7 @@ schema: {
             '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — Detaillierte Analyse der Q4-, Q3-, Q2-Quantisierungskompromisse.',
             '[Lokale LLMs auf Notebooks](/de/local-llms/local-llm-on-laptop) — Inferenz auf MacBook Air, Windows-Notebook oder Chromebook optimieren.',
             '[Beste Einsteiger-LLM-Modelle 2026](/de/local-llms/best-beginner-local-llm-models) — Empfohlene Einstiegsmodelle für neue Nutzer auf jeder Hardware.',
-            '[Lokaler LLM-Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026) — Vollständige Hardwareanforderungen nach Modellgröße für 2026.',
+            '[Lokaler LLM-Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide) — Vollständige Hardwareanforderungen nach Modellgröße für 2026.',
           ],
         },
         'sources': {
@@ -2812,7 +2812,7 @@ schema: {
             '[Quantification LLM expliquée](/fr/local-llms/llm-quantization-explained) — Analyse approfondie des compromis Q4, Q3, Q2.',
             '[LLM local sur portable](/fr/local-llms/local-llm-on-laptop) — Optimiser l\'inférence sur MacBook Air, portable Windows ou Chromebook.',
             '[Meilleurs modèles LLM locaux débutants 2026](/fr/local-llms/best-beginner-local-llm-models) — Modèles recommandés pour les nouveaux utilisateurs sur tout matériel.',
-            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Prérequis matériels complets par taille de modèle pour 2026.',
+            '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) — Prérequis matériels complets par taille de modèle pour 2026.',
           ],
         },
         'sources': {
@@ -3293,7 +3293,7 @@ schema: {
             '[LLM量子化解説](/ja/local-llms/llm-quantization-explained) — Q4、Q3、Q2量子化のトレードオフを詳しく解説。',
             '[ノートPCでのローカルLLM](/ja/local-llms/local-llm-on-laptop) — MacBook Air、Windowsノート、Chromebookでの推論最適化。',
             '[初心者向けローカルLLMモデル2026](/ja/local-llms/best-beginner-local-llm-models) — あらゆるハードウェアの新規ユーザー向け推奨モデル。',
-            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — 2026年のモデルサイズ別ハードウェア要件の完全版。',
+            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — 2026年のモデルサイズ別ハードウェア要件の完全版。',
           ],
         },
         'sources': {
@@ -3774,7 +3774,7 @@ schema: {
             '[LLM量化详解](/zh/local-llms/llm-quantization-explained) — Q4、Q3、Q2量化权衡深度解析。',
             '[笔记本上的本地LLM](/zh/local-llms/local-llm-on-laptop) — 在MacBook Air、Windows笔记本或Chromebook上优化推理。',
             '[2026年最佳入门本地LLM模型](/zh/local-llms/best-beginner-local-llm-models) — 适合任何硬件新用户的推荐起始模型。',
-            '[2026年本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) — 2026年按模型大小划分的完整硬件需求。',
+            '[年本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) — 2026年按模型大小划分的完整硬件需求。',
           ],
         },
         'sources': {
@@ -4255,7 +4255,7 @@ schema: {
             '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — Q4, Q3, Q2 양자화 트레이드오프에 대한 심층 분석.',
             '[노트북에서의 로컬 LLM](/ko/local-llms/local-llm-on-laptop) — MacBook Air, Windows 노트북 또는 Chromebook에서 추론 최적화.',
             '[2026년 최고의 입문자 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models) — 어떤 하드웨어에서든 신규 사용자를 위한 권장 시작 모델.',
-            '[2026년 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026) — 2026년 모델 크기별 전체 하드웨어 요구 사항.',
+            '[년 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 2026년 모델 크기별 전체 하드웨어 요구 사항.',
           ],
         },
         'sources': {

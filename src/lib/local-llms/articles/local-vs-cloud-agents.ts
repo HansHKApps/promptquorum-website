@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'cost',
           title: 'What Does Each Approach Cost?',
           content: [
-            '**Cloud is cheaper below 50M tokens/month. Local is cheaper above.** Local "amortized" includes GPU cost ($2,000–$2,600 RTX 4090 EOL) spread over 3 years plus electricity (~$200/year). The [hardware guide](/local-llms/local-llm-hardware-guide-2026) covers exact GPU costs.',
+            '**Cloud is cheaper below 50M tokens/month. Local is cheaper above.** Local "amortized" includes GPU cost ($2,000–$2,600 RTX 4090 EOL) spread over 3 years plus electricity (~$200/year). The [hardware guide](/local-llms/local-llm-hardware-guide) covers exact GPU costs.',
           ],
           columns: ['Monthly Volume', 'Cloud (GPT-5.6)', 'Cloud (Claude)', 'Local (amortized)'],
           rows: [
@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Can I run a local agent on consumer hardware?',
-              a: 'Yes. A Llama 13B agent runs on RTX 4090 (24GB VRAM) at 2–3 sec per step. For 7B agents, RTX 4070 Ti (12GB) is sufficient. See the [hardware guide](/local-llms/local-llm-hardware-guide-2026) for exact specs.',
+              a: 'Yes. A Llama 13B agent runs on RTX 4090 (24GB VRAM) at 2–3 sec per step. For 7B agents, RTX 4070 Ti (12GB) is sufficient. See the [hardware guide](/local-llms/local-llm-hardware-guide) for exact specs.',
             },
             {
               q: 'Do local agents support tool use and function calling?',
@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[Local AI Agents with LangGraph & Ollama](/local-llms/local-ai-agents-langgraph-ollama) — Build multi-step local agents with tool use and memory',
             '[Private Local AI For Business](/local-llms/private-local-ai-for-business) — On-premises AI deployment for enterprise compliance',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — GPU and hardware recommendations for agent workloads',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — GPU and hardware recommendations for agent workloads',
             '[Local LLMs vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus) — Cost comparison: subscription vs local inference',
             '[Top Open Source Models for Ollama](/local-llms/top-open-source-models-ollama) — Best models for local agent deployment',
             '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) — Cost, compliance, and control analysis',
@@ -337,7 +337,7 @@ schema: {
           id: 'cost',
           title: '¿Cuánto cuesta cada enfoque?',
           content: [
-            '**Cloud es más barato por debajo de 50M tokens/mes. Local es más barato por encima.** El coste "amortizado" local incluye el precio de la GPU ($2.000–$2.600 RTX 4090 EOL) repartido en 3 años más electricidad (~$200/año). La [guía de hardware](/es/local-llms/local-llm-hardware-guide-2026) detalla los costes exactos de GPU.',
+            '**Cloud es más barato por debajo de 50M tokens/mes. Local es más barato por encima.** El coste "amortizado" local incluye el precio de la GPU ($2.000–$2.600 RTX 4090 EOL) repartido en 3 años más electricidad (~$200/año). La [guía de hardware](/es/local-llms/local-llm-hardware-guide) detalla los costes exactos de GPU.',
           ],
           columns: ['Volumen mensual', 'Cloud (GPT-5.6)', 'Cloud (Claude)', 'Local (amortizado)'],
           rows: [
@@ -438,7 +438,7 @@ schema: {
             },
             {
               q: '¿Puedo ejecutar un agente local en hardware de consumo?',
-              a: 'Sí. Un agente Llama 13B funciona en una RTX 4090 (24GB VRAM) a 2–3 s por paso. Para agentes de 7B, una RTX 4070 Ti (12GB) es suficiente. Consulta la [guía de hardware](/es/local-llms/local-llm-hardware-guide-2026) para especificaciones exactas.',
+              a: 'Sí. Un agente Llama 13B funciona en una RTX 4090 (24GB VRAM) a 2–3 s por paso. Para agentes de 7B, una RTX 4070 Ti (12GB) es suficiente. Consulta la [guía de hardware](/es/local-llms/local-llm-hardware-guide) para especificaciones exactas.',
             },
             {
               q: '¿Los agentes locales admiten uso de herramientas y function calling?',
@@ -468,7 +468,7 @@ schema: {
           items: [
             '[Agentes de IA local con LangGraph y Ollama](/es/local-llms/local-ai-agents-langgraph-ollama) — Construye agentes locales multietapa con uso de herramientas y memoria',
             '[IA local privada para empresas](/es/local-llms/private-local-ai-for-business) — Despliegue de IA en las instalaciones para cumplimiento empresarial',
-            '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — Recomendaciones de GPU y hardware para cargas de trabajo de agentes',
+            '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) — Recomendaciones de GPU y hardware para cargas de trabajo de agentes',
             '[LLMs locales vs ChatGPT Plus](/es/local-llms/local-llms-vs-chatgpt-plus) — Comparativa de costes: suscripción vs inferencia local',
             '[Mejores modelos de código abierto para Ollama](/es/local-llms/top-open-source-models-ollama) — Los mejores modelos para el despliegue de agentes locales',
             '[Por qué las empresas usan LLMs locales](/es/local-llms/why-enterprises-use-local-llms) — Análisis de coste, cumplimiento y control',
@@ -609,7 +609,7 @@ schema: {
           id: 'cost',
           title: 'كم يكلّف كل نهج؟',
           content: [
-            '**السحابة أرخص دون 50 مليون رمز/شهر. المحلي أرخص فوق ذلك.** تشمل التكلفة المحلية "الموزّعة" سعر GPU (2,000–2,600$ لـRTX 4090 EOL) موزّعًا على 3 سنوات زائد الكهرباء (~200$/سنة). يفصّل [دليل العتاد](/ar/local-llms/local-llm-hardware-guide-2026) تكاليف GPU الدقيقة.',
+            '**السحابة أرخص دون 50 مليون رمز/شهر. المحلي أرخص فوق ذلك.** تشمل التكلفة المحلية "الموزّعة" سعر GPU (2,000–2,600$ لـRTX 4090 EOL) موزّعًا على 3 سنوات زائد الكهرباء (~200$/سنة). يفصّل [دليل العتاد](/ar/local-llms/local-llm-hardware-guide) تكاليف GPU الدقيقة.',
           ],
           columns: ['Volumen mensual', 'Cloud (GPT-5.6)', 'Cloud (Claude)', 'Local (amortizado)'],
           rows: [
@@ -710,7 +710,7 @@ schema: {
             },
             {
               q: 'هل يمكنني تشغيل وكيل محلي على عتاد استهلاكي؟',
-              a: 'نعم. يعمل وكيل Llama 13B على RTX 4090 (24GB VRAM) بـ2–3 ثوانٍ لكل خطوة. لوكلاء 7B، RTX 4070 Ti (12GB) كافية. راجع [دليل العتاد](/ar/local-llms/local-llm-hardware-guide-2026) للمواصفات الدقيقة.',
+              a: 'نعم. يعمل وكيل Llama 13B على RTX 4090 (24GB VRAM) بـ2–3 ثوانٍ لكل خطوة. لوكلاء 7B، RTX 4070 Ti (12GB) كافية. راجع [دليل العتاد](/ar/local-llms/local-llm-hardware-guide) للمواصفات الدقيقة.',
             },
             {
               q: 'هل يدعم الوكلاء المحليون استخدام الأدوات وfunction calling؟',
@@ -740,7 +740,7 @@ schema: {
           items: [
             '[وكلاء الذكاء الاصطناعي المحليون بـLangGraph وOllama](/ar/local-llms/local-ai-agents-langgraph-ollama) — ابنِ وكلاء محليين متعددي المراحل باستخدام الأدوات والذاكرة',
             '[ذكاء اصطناعي محلي خاص للأعمال](/ar/local-llms/private-local-ai-for-business) — نشر الذكاء الاصطناعي داخل المؤسسة للامتثال المؤسسي',
-            '[دليل عتاد LLM المحلي 2026](/ar/local-llms/local-llm-hardware-guide-2026) — توصيات GPU والعتاد لأحمال عمل الوكلاء',
+            '[دليل عتاد LLM المحلي](/ar/local-llms/local-llm-hardware-guide) — توصيات GPU والعتاد لأحمال عمل الوكلاء',
             '[نماذج LLM المحلية مقابل ChatGPT Plus](/ar/local-llms/local-llms-vs-chatgpt-plus) — مقارنة التكاليف: اشتراك مقابل استدلال محلي',
             '[أفضل النماذج مفتوحة المصدر لـOllama](/ar/local-llms/top-open-source-models-ollama) — أفضل النماذج لنشر الوكلاء المحليين',
             '[لماذا تستخدم المؤسسات نماذج LLM المحلية](/ar/local-llms/why-enterprises-use-local-llms) — تحليل التكلفة والامتثال والتحكم',
@@ -999,7 +999,7 @@ schema: {
           items: [
             '[Agentes de IA local com LangGraph e Ollama](/pt/local-llms/local-ai-agents-langgraph-ollama) — Construa agentes locais multi-etapa com uso de ferramentas e memória',
             '[IA local privada para empresas](/pt/local-llms/private-local-ai-for-business) — Implantação de IA nas instalações para conformidade empresarial',
-            '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — Recomendações de GPU e hardware para cargas de trabalho de agentes',
+            '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) — Recomendações de GPU e hardware para cargas de trabalho de agentes',
             '[LLMs Locais vs ChatGPT Plus](/pt/local-llms/local-llms-vs-chatgpt-plus) — Comparação de custos: assinatura vs inferência local',
             '[Melhores modelos open-source para Ollama](/pt/local-llms/top-open-source-models-ollama) — Os melhores modelos para implantação de agentes locais',
           ],
@@ -1112,7 +1112,7 @@ schema: {
           id: 'cost',
           title: 'Was kostet jeder Ansatz?',
           content: [
-            '**Cloud ist günstiger unter 50M Token pro Monat. Local ist günstiger darüber.** Bei Local müssen die Hardware-Kosten (RTX 4090 EOL: ca. 1.900–2.470 €) über 3 Jahre amortisiert werden, plus Stromkosten (~200 €/Jahr). Der [Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide-2026) behandelt exakte GPU-Kosten.',
+            '**Cloud ist günstiger unter 50M Token pro Monat. Local ist günstiger darüber.** Bei Local müssen die Hardware-Kosten (RTX 4090 EOL: ca. 1.900–2.470 €) über 3 Jahre amortisiert werden, plus Stromkosten (~200 €/Jahr). Der [Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide) behandelt exakte GPU-Kosten.',
           ],
           columns: ['Monatliches Volumen', 'Cloud (GPT-5.6)', 'Cloud (Claude)', 'Local (amortisiert)'],
           rows: [
@@ -1208,7 +1208,7 @@ schema: {
           faqs: [
             { q: 'Sind Local AI Agenten 2026 genauso gut wie Cloud-Agenten?', a: 'Bei Routineaufgaben (Q&A, Zusammenfassung, einfache Automatisierung): ja, lokales Llama 13B+ entspricht der Cloud-Qualität. Bei komplexem Multi-Step-Reasoning, Code-Generierung mit Kontext und Tool-Nutzung: Cloud-Agenten (GPT-5.6, Claude Sonnet 5) sind immer noch deutlich besser. Die Lücke schließt sich jährlich.' },
             { q: 'Was ist der Break-Even-Punkt für Local vs Cloud?', a: 'Ungefähr 50M Token pro Monat. Darunter ist Cloud günstiger (keine Hardware-Kosten). Darüber spart Local 60–90% — Sie zahlen nur Strom (~200 €/Jahr) nach der ersten GPU-Investition (ca. 1.599 € für RTX 4090).' },
-            { q: 'Kann ich einen Local-Agenten auf Consumer-Hardware ausführen?', a: 'Ja. Ein Llama 13B Agent läuft auf RTX 4090 (24GB VRAM) mit 2–3 sec pro Schritt. Für 7B-Agenten ist RTX 4070 Ti (12GB) ausreichend. Siehe den [Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide-2026) für exakte Spezifikationen.' },
+            { q: 'Kann ich einen Local-Agenten auf Consumer-Hardware ausführen?', a: 'Ja. Ein Llama 13B Agent läuft auf RTX 4090 (24GB VRAM) mit 2–3 sec pro Schritt. Für 7B-Agenten ist RTX 4070 Ti (12GB) ausreichend. Siehe den [Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide) für exakte Spezifikationen.' },
             { q: 'Unterstützen Local-Agenten Tool-Nutzung und Function Calling?', a: 'Ja, über Ollamas Tool-Calling-API (unterstützt seit Ollama 0.4+). LangGraph und LangChain integrieren sich mit lokalen Modellen für Multi-Step-Tool-Nutzung. Setup ist komplexer als Cloud, aber vollständig funktionsfähig.' },
             { q: 'Lohnt sich eine Hybrid-Bereitstellung angesichts der Komplexität?', a: 'Ja, für die meisten Unternehmen, die 10M+ Token pro Monat verarbeiten. Die Routing-Logik ist einfach: Klassifizieren Sie Anfrage-Schwierigkeit, senden Sie einfache Anfragen lokal, schwierige Anfragen an Cloud. PromptQuorum übernimmt dies automatisch.' },
             { q: 'Welches lokale Modell ist am besten für Agenten?', a: 'Llama 3.3 70B für Qualität (benötigt dual RTX 4090), Qwen3 32B für ausgewogene Geschwindigkeit/Qualität (einzelne RTX 4090), Llama 13B für kostengünstige Agenten auf RTX 4070 Ti. DeepSeek-R1 7B für Reasoning-intensive Aufgaben auf Budget-Hardware.' },
@@ -1224,7 +1224,7 @@ schema: {
           items: [
             '[Local AI Agenten mit LangGraph & Ollama](/de/local-llms/local-ai-agents-langgraph-ollama) — Bauen Sie Multi-Step-Local-Agenten mit Tool-Nutzung und Memory',
             '[Private lokale KI für Unternehmen](/de/local-llms/private-local-ai-for-business) — On-Premises-KI-Bereitstellung für Enterprise-Compliance',
-            '[Local LLM Hardware Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) — GPU- und Hardware-Empfehlungen für Agent-Workloads',
+            '[Local LLM Hardware Guide](/de/local-llms/local-llm-hardware-guide) — GPU- und Hardware-Empfehlungen für Agent-Workloads',
             '[Local LLMs vs ChatGPT Plus](/de/local-llms/local-llms-vs-chatgpt-plus) — Kostenvergleich: Abonnement vs lokale Inference',
             '[Top Open Source Modelle für Ollama](/de/local-llms/top-open-source-models-ollama) — Beste Modelle für Local-Agent-Bereitstellung',
             '[Warum Unternehmen lokale LLMs nutzen](/de/local-llms/why-enterprises-use-local-llms) — Kosten-, Compliance- und Kontrollanalyse',
@@ -1287,7 +1287,7 @@ schema: {
             'name': 'Kann ich einen Local-Agenten auf Consumer-Hardware ausführen?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ja. Ein Llama 13B Agent läuft auf RTX 4090 (24GB VRAM) mit 2–3 sec pro Schritt. Für 7B-Agenten ist RTX 4070 Ti (12GB) ausreichend. Siehe den [Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide-2026) für exakte Spezifikationen.',
+              'text': 'Ja. Ein Llama 13B Agent läuft auf RTX 4090 (24GB VRAM) mit 2–3 sec pro Schritt. Für 7B-Agenten ist RTX 4070 Ti (12GB) ausreichend. Siehe den [Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide) für exakte Spezifikationen.',
             },
           },
           {
@@ -1428,7 +1428,7 @@ schema: {
           id: 'cost',
           title: 'Quel est le coût de chaque approche?',
           content: [
-            '**Cloud est moins cher en dessous de 50M tokens/mois. Local est moins cher au-dessus.** Pour Local, amortissez les coûts matériel (RTX 4090 EOL : ~1.900–2.470 €) sur 3 ans, plus l\'électricité (~200 €/an). Le [guide matériel](/fr/local-llms/local-llm-hardware-guide-2026) couvre les coûts GPU exacts.',
+            '**Cloud est moins cher en dessous de 50M tokens/mois. Local est moins cher au-dessus.** Pour Local, amortissez les coûts matériel (RTX 4090 EOL : ~1.900–2.470 €) sur 3 ans, plus l\'électricité (~200 €/an). Le [guide matériel](/fr/local-llms/local-llm-hardware-guide) couvre les coûts GPU exacts.',
           ],
           columns: ['Volume mensuel', 'Cloud (GPT-5.6)', 'Cloud (Claude)', 'Local (amorti)'],
           rows: [
@@ -1523,7 +1523,7 @@ schema: {
           faqs: [
             { q: 'Les agents IA locaux sont-ils aussi bons que les agents Cloud en 2026?', a: 'Pour les tâches routinières (Q&A, résumé, automatisation simple) : oui, le Llama 13B+ local correspond à la qualité Cloud. Pour le raisonnement multi-étapes complexe et l\'utilisation d\'outils : les agents Cloud (GPT-5.6, Claude Sonnet 5) sont encore nettement meilleurs. L\'écart se réduit chaque année.' },
             { q: 'Quel est le point d\'équilibre Local vs Cloud?', a: 'Environ 50M tokens/mois. En dessous, Cloud est moins cher (pas de coûts matériel). Au-dessus, Local économise 60–90% — vous ne payez que l\'électricité (~200 €/an) après investissement GPU initial (~1.499 € RTX 4090).' },
-            { q: 'Puis-je exécuter un agent local sur du matériel grand public?', a: 'Oui. Un agent Llama 13B fonctionne sur RTX 4090 (24GB VRAM) à 2–3 sec par étape. Pour les agents 7B, RTX 4070 Ti (12GB) suffit. Voir le [guide matériel](/fr/local-llms/local-llm-hardware-guide-2026) pour les specs exactes.' },
+            { q: 'Puis-je exécuter un agent local sur du matériel grand public?', a: 'Oui. Un agent Llama 13B fonctionne sur RTX 4090 (24GB VRAM) à 2–3 sec par étape. Pour les agents 7B, RTX 4070 Ti (12GB) suffit. Voir le [guide matériel](/fr/local-llms/local-llm-hardware-guide) pour les specs exactes.' },
             { q: 'Les agents locaux supportent-ils l\'utilisation d\'outils et l\'appel de fonction?', a: 'Oui, via l\'API d\'outils Ollama (supportée depuis Ollama 0.4+). LangGraph et LangChain s\'intègrent avec les modèles locaux pour l\'utilisation d\'outils multi-étapes. Configuration plus complexe que Cloud, mais complètement fonctionnelle.' },
             { q: 'Le déploiement hybride vaut-il la complexité?', a: 'Oui, pour la plupart des entreprises traitant 10M+ tokens/mois. La logique de routage est simple : classifiez la difficulté, envoyez les requêtes faciles en local (gratuit), les requêtes difficiles vers Cloud (exact). 80% réduction coûts sans perte qualité sur requêtes complexes.' },
             { q: 'Quel modèle local convient le mieux aux agents?', a: 'Llama 3.3 70B pour la qualité (nécessite dual RTX 4090), Qwen3 32B pour vitesse/qualité équilibrée (single RTX 4090), Llama 13B pour agents économiques sur RTX 4070 Ti. DeepSeek-R1 7B pour tâches lourdes en raisonnement sur matériel budget.' },
@@ -1539,7 +1539,7 @@ schema: {
           items: [
             '[Agents IA locaux avec LangGraph & Ollama](/fr/local-llms/local-ai-agents-langgraph-ollama) — Construisez agents locaux multi-étapes avec utilisation d\'outils et mémoire',
             '[IA locale privée pour les entreprises](/fr/local-llms/private-local-ai-for-business) — Déploiement d\'IA on-premises pour conformité Enterprise',
-            '[Guide matériel Local LLM 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Recommandations GPU et matériel pour workloads agents',
+            '[Guide matériel Local LLM](/fr/local-llms/local-llm-hardware-guide) — Recommandations GPU et matériel pour workloads agents',
             '[LLMs locaux vs ChatGPT Plus](/fr/local-llms/local-llms-vs-chatgpt-plus) — Comparaison coûts : abonnement vs inférence locale',
             '[Meilleurs modèles Open Source pour Ollama](/fr/local-llms/top-open-source-models-ollama) — Meilleurs modèles pour déploiement agents locaux',
             '[Pourquoi les entreprises utilisent les LLMs locaux](/fr/local-llms/why-enterprises-use-local-llms) — Analyse coûts, conformité et contrôle',
@@ -1602,7 +1602,7 @@ schema: {
             'name': 'Puis-je exécuter un agent local sur du matériel grand public?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui. Un agent Llama 13B fonctionne sur RTX 4090 (24GB VRAM) à 2–3 sec par étape. Pour les agents 7B, RTX 4070 Ti (12GB) suffit. Voir le [guide matériel](/fr/local-llms/local-llm-hardware-guide-2026) pour les specs exactes.',
+              'text': 'Oui. Un agent Llama 13B fonctionne sur RTX 4090 (24GB VRAM) à 2–3 sec par étape. Pour les agents 7B, RTX 4070 Ti (12GB) suffit. Voir le [guide matériel](/fr/local-llms/local-llm-hardware-guide) pour les specs exactes.',
             },
           },
           {
@@ -1743,7 +1743,7 @@ schema: {
           id: 'cost',
           title: 'それぞれのアプローチのコストは?',
           content: [
-            '**Cloudは50M tokens/月以下で安い。Localはそれ以上で安い。** Localはハードウェアコスト(RTX 4090 EOL: 約¥300,000–390,000)を3年償却、電気代(~¥24,000/年)追加。 [ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) で正確なGPUコストをご確認ください。',
+            '**Cloudは50M tokens/月以下で安い。Localはそれ以上で安い。** Localはハードウェアコスト(RTX 4090 EOL: 約¥300,000–390,000)を3年償却、電気代(~¥24,000/年)追加。 [ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) で正確なGPUコストをご確認ください。',
           ],
           columns: ['月間ボリューム', 'Cloud (GPT-5.6)', 'Cloud (Claude)', 'Local (償却)'],
           rows: [
@@ -1846,7 +1846,7 @@ schema: {
             },
             {
               q: 'コンシューマーハードウェアでLocalエージェント実行可?',
-              a: 'はい。Llama 13B エージェントはRTX 4090(24GB VRAM)で2–3秒/ステップ。7Bエージェント用ならRTX 4070 Ti(12GB)で充分。[ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) で正確スペックを確認。',
+              a: 'はい。Llama 13B エージェントはRTX 4090(24GB VRAM)で2–3秒/ステップ。7Bエージェント用ならRTX 4070 Ti(12GB)で充分。[ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) で正確スペックを確認。',
             },
             {
               q: 'Localエージェントはツール利用と関数呼び出し対応?',
@@ -1884,7 +1884,7 @@ schema: {
           items: [
             '[LangGraph & Ollama使用 Local AIエージェント](/ja/local-llms/local-ai-agents-langgraph-ollama) — ツール利用とメモリ搭載マルチステップLocal構築',
             '[企業向けプライベートLocal AI](/ja/local-llms/private-local-ai-for-business) — エンタープライズコンプライアンス用オンプレミスAI導入',
-            '[Local LLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — エージェントワークロード用GPU・ハードウェア推奨',
+            '[Local LLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — エージェントワークロード用GPU・ハードウェア推奨',
             '[Local LLMs vs ChatGPT Plus](/ja/local-llms/local-llms-vs-chatgpt-plus) — コスト比較: サブスク vs Local推論',
             '[Ollama用トップOpen Sourceモデル](/ja/local-llms/top-open-source-models-ollama) — Local エージェント導入向けベストモデル',
             '[企業がLocal LLMを使う理由](/ja/local-llms/why-enterprises-use-local-llms) — コスト・コンプライアンス・制御分析',
@@ -2018,7 +2018,7 @@ schema: {
           id: 'cost',
           title: '各种方案的成本是多少?',
           content: [
-            '**云端在50M令牌/月以下成本更低。本地在此之上成本更低。** 本地需要摊销硬件成本(RTX 4090 EOL约$2,000–$2,600)至3年，加上电费(~$200/年)。 [硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) 详细说明GPU成本。',
+            '**云端在50M令牌/月以下成本更低。本地在此之上成本更低。** 本地需要摊销硬件成本(RTX 4090 EOL约$2,000–$2,600)至3年，加上电费(~$200/年)。 [硬件指南](/zh/local-llms/local-llm-hardware-guide) 详细说明GPU成本。',
           ],
           columns: ['月度体量', 'Cloud (GPT-5.6)', 'Cloud (Claude)', 'Local (摊销)'],
           rows: [
@@ -2121,7 +2121,7 @@ schema: {
             },
             {
               q: '我能在消费级硬件上运行本地代理吗?',
-              a: '能。Llama 13B代理在RTX 4090(24GB VRAM)上以2–3秒/步运行。7B代理用RTX 4070 Ti(12GB)足够。详见 [硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) 了解精确规格。',
+              a: '能。Llama 13B代理在RTX 4090(24GB VRAM)上以2–3秒/步运行。7B代理用RTX 4070 Ti(12GB)足够。详见 [硬件指南](/zh/local-llms/local-llm-hardware-guide) 了解精确规格。',
             },
             {
               q: '本地代理支持工具使用和函数调用吗?',
@@ -2159,7 +2159,7 @@ schema: {
           items: [
             '[使用LangGraph和Ollama构建本地AI代理](/zh/local-llms/local-ai-agents-langgraph-ollama) — 构建包含工具使用和内存的多步本地代理',
             '[企业隐私本地AI](/zh/local-llms/private-local-ai-for-business) — 企业合规的本地部署',
-            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — 代理工作负载的GPU和硬件推荐',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) — 代理工作负载的GPU和硬件推荐',
             '[本地LLM vs ChatGPT Plus](/zh/local-llms/local-llms-vs-chatgpt-plus) — 成本对比: 订阅 vs 本地推论',
             '[Ollama顶级开源模型](/zh/local-llms/top-open-source-models-ollama) — 本地代理部署最佳模型',
             '[企业为何使用本地LLM](/zh/local-llms/why-enterprises-use-local-llms) — 成本、合规和控制分析',
@@ -2293,7 +2293,7 @@ schema: {
           id: 'cost',
           title: '각 방식의 비용은 얼마입니까?',
           content: [
-            '**월 5,000만 토큰 미만에서는 클라우드가 더 저렴합니다. 그 이상에서는 로컬이 더 저렴합니다.** 로컬의 "상각된 비용"에는 3년에 걸쳐 분산된 GPU 비용(RTX 4090 EOL $2,000–$2,600)과 전기료(연간 약 $200)가 포함됩니다. [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)에서 정확한 GPU 비용을 확인하실 수 있습니다.',
+            '**월 5,000만 토큰 미만에서는 클라우드가 더 저렴합니다. 그 이상에서는 로컬이 더 저렴합니다.** 로컬의 "상각된 비용"에는 3년에 걸쳐 분산된 GPU 비용(RTX 4090 EOL $2,000–$2,600)과 전기료(연간 약 $200)가 포함됩니다. [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)에서 정확한 GPU 비용을 확인하실 수 있습니다.',
           ],
           columns: ['월간 사용량', '클라우드 (GPT-5.6)', '클라우드 (Claude)', '로컬 (상각)'],
           rows: [
@@ -2394,7 +2394,7 @@ schema: {
             },
             {
               q: '소비자용 하드웨어에서 로컬 에이전트를 실행할 수 있습니까?',
-              a: '네. Llama 13B 에이전트는 RTX 4090(24GB VRAM)에서 단계당 2–3초로 실행됩니다. 7B 에이전트의 경우 RTX 4070 Ti(12GB)로 충분합니다. 정확한 사양은 [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참조하십시오.',
+              a: '네. Llama 13B 에이전트는 RTX 4090(24GB VRAM)에서 단계당 2–3초로 실행됩니다. 7B 에이전트의 경우 RTX 4070 Ti(12GB)로 충분합니다. 정확한 사양은 [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참조하십시오.',
             },
             {
               q: '로컬 에이전트는 도구 사용과 함수 호출을 지원합니까?',
@@ -2424,7 +2424,7 @@ schema: {
           items: [
             '[LangGraph & Ollama를 활용한 로컬 AI 에이전트](/ko/local-llms/local-ai-agents-langgraph-ollama) — 도구 사용 및 메모리를 갖춘 다단계 로컬 에이전트 구축',
             '[비즈니스를 위한 프라이빗 로컬 AI](/ko/local-llms/private-local-ai-for-business) — 기업 규정 준수를 위한 온프레미스 AI 배포',
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 에이전트 워크로드를 위한 GPU 및 하드웨어 추천',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 에이전트 워크로드를 위한 GPU 및 하드웨어 추천',
             '[로컬 LLM vs ChatGPT Plus](/ko/local-llms/local-llms-vs-chatgpt-plus) — 비용 비교: 구독 vs 로컬 추론',
             '[Ollama를 위한 최고의 오픈소스 모델](/ko/local-llms/top-open-source-models-ollama) — 로컬 에이전트 배포를 위한 최적 모델',
             '[기업이 로컬 LLM을 사용하는 이유](/ko/local-llms/why-enterprises-use-local-llms) — 비용, 규정 준수 및 제어 분석',

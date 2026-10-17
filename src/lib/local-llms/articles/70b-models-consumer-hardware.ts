@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- full GPU and RAM tier table for every model size including 70B hardware requirements',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- full GPU and RAM tier table for every model size including 70B hardware requirements',
             '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) -- benchmark rankings for both 70B models plus mid-range alternatives under 40 GB RAM',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- complete setup including layer offloading configuration for NVIDIA GPUs',
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) -- understand Q4_K_M vs Q8_0 and why Q8_0 is the right choice on 128 GB machines',
@@ -520,7 +520,7 @@ schema: {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            '[Guía de hardware para LLM locales 2026](/es/local-llms/local-llm-hardware-guide-2026) -- tabla completa de GPU y RAM por tamaño de modelo, incluyendo requisitos de hardware para 70B',
+            '[Guía de hardware para LLM locales](/es/local-llms/local-llm-hardware-guide) -- tabla completa de GPU y RAM por tamaño de modelo, incluyendo requisitos de hardware para 70B',
             '[Mejores LLMs locales 2026](/es/local-llms/best-local-llms-2026) -- rankings de benchmarks para ambos modelos 70B y alternativas intermedias con menos de 40 GB de RAM',
             '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) -- configuración completa incluyendo layer offloading para GPUs NVIDIA',
             '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) -- entiende Q4_K_M vs Q8_0 y por qué Q8_0 es la elección correcta en máquinas de 128 GB',
@@ -847,7 +847,7 @@ schema: {
           id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
-            '[دليل العتاد لنماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- جدول كامل لـ GPU والذاكرة حسب حجم النموذج، بما في ذلك متطلبات العتاد لـ 70B',
+            '[دليل العتاد لنماذج LLM المحلية](/ar/local-llms/local-llm-hardware-guide) -- جدول كامل لـ GPU والذاكرة حسب حجم النموذج، بما في ذلك متطلبات العتاد لـ 70B',
             '[أفضل نماذج LLM المحلية 2026](/ar/local-llms/best-local-llms-2026) -- ترتيبات الاختبارات المرجعية لكلا نموذجي 70B والبدائل المتوسطة بأقل من 40 GB من الذاكرة',
             '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) -- التهيئة الكاملة بما في ذلك layer offloading لكروت رسوميات NVIDIA',
             '[تكميم LLM موضَّحًا](/ar/local-llms/llm-quantization-explained) -- افهم Q4_K_M مقابل Q8_0 ولماذا يُعد Q8_0 الخيار الصحيح على أجهزة 128 GB',
@@ -1175,7 +1175,7 @@ schema: {
           id: 'related-reading',
           title: 'Leitura relacionada',
           items: [
-            '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) -- tabela completa de GPU e RAM por tamanho de modelo, incluindo requisitos de hardware para 70B',
+            '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) -- tabela completa de GPU e RAM por tamanho de modelo, incluindo requisitos de hardware para 70B',
             '[Melhores LLMs locais 2026](/pt/local-llms/best-local-llms-2026) -- rankings de benchmarks para ambos os modelos 70B e alternativas intermediárias com menos de 40 GB de RAM',
             '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) -- configuração completa incluindo layer offloading para GPUs NVIDIA',
             '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) -- entenda Q4_K_M vs Q8_0 e por que Q8_0 é a escolha certa em máquinas de 128 GB',
@@ -2923,7 +2923,7 @@ schema: {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 70B 하드웨어 요구사항을 포함한 모든 모델 크기에 대한 전체 GPU 및 RAM 등급 표',
+          '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 70B 하드웨어 요구사항을 포함한 모든 모델 크기에 대한 전체 GPU 및 RAM 등급 표',
           '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 두 70B 모델과 40GB 미만 RAM의 중간급 대안에 대한 벤치마크 순위',
           '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — NVIDIA GPU의 레이어 오프로딩 구성을 포함한 완전한 설정',
           '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — Q4_K_M vs Q8_0 이해 및 128GB 시스템에서 Q8_0이 올바른 선택인 이유',

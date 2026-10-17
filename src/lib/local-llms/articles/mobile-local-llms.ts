@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'performance',
           title: 'How Fast Are Mobile LLMs vs Desktop?',
           content: [
-            '**Mobile is 15–50× slower than desktop due to memory bandwidth.** An iPhone A18 has ~68 GB/sec bandwidth; an [RTX 4090](/local-llms/local-llm-hardware-guide-2026) has 1,008 GB/sec. LLM inference speed scales directly with memory bandwidth.',
+            '**Mobile is 15–50× slower than desktop due to memory bandwidth.** An iPhone A18 has ~68 GB/sec bandwidth; an [RTX 4090](/local-llms/local-llm-hardware-guide) has 1,008 GB/sec. LLM inference speed scales directly with memory bandwidth.',
           ],
           image: '/images/mobile-local-llms-speed-comparison-en.svg',
           imageCaption: 'Mobile vs desktop LLM speed: RTX 4090 at 150 tok/sec is 10× faster than iPad M4 (15 tok/sec) and 37× faster than iPhone 16 Pro (4 tok/sec).',
@@ -228,7 +228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Late 2027 is the inflection point.** Apple A19 Pro and Snapdragon X2 will bring 7–13B models to phones at 15–25 tok/sec — fast enough for real-time chat. Until then, mobile LLMs are a niche tool for specific use cases.',
             '**2027 phones:** 7–13B models at 15–25 tok/sec. Practical for most chat and Q&A tasks. Still no 70B.',
             '**2028+ phones:** 13–24B models expected. Quality approaching GPT-4o mini level on-device. Battery and thermal constraints remain the bottleneck.',
-            '**Best option today:** Use your phone for quick offline queries and run a [Mac mini M6 or Mac mini M5 Pro](/local-llms/best-mini-pcs-local-llm) as a local server accessible from your phone via Wi-Fi — the 64 GB M5 Pro configuration is the more useful tier if you plan to run larger models as your phone\'s backend — or a [desktop GPU](/local-llms/local-llm-hardware-guide-2026). This gives you mobile convenience with desktop-quality inference.',
+            '**Best option today:** Use your phone for quick offline queries and run a [Mac mini M6 or Mac mini M5 Pro](/local-llms/best-mini-pcs-local-llm) as a local server accessible from your phone via Wi-Fi — the 64 GB M5 Pro configuration is the more useful tier if you plan to run larger models as your phone\'s backend — or a [desktop GPU](/local-llms/local-llm-hardware-guide). This gives you mobile convenience with desktop-quality inference.',
           ],
         },
         videoWalkthrough: {
@@ -258,7 +258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — GPU, Apple Silicon, and CPU options for local inference at every budget',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — GPU, Apple Silicon, and CPU options for local inference at every budget',
             '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — Web UIs and chat interfaces for desktop and mobile LLM workflows',
             '[Laptop vs Desktop Local LLM](/local-llms/laptop-vs-desktop-local-llm) — Performance, portability, and cost comparison for portable AI',
             '[Best Small Local LLMs Under 4 GB](/prompt-bites/best-ollama-models-4gb-vram) — 1–3B models ideal for mobile and edge deployment',
@@ -641,7 +641,7 @@ schema: {
           id: 'performance',
           title: 'Wie schnell sind mobile LLMs im Vergleich zu Desktop?',
           content: [
-            '**Mobile ist 15–50× langsamer als Desktop aufgrund der Speicherbandbreite.** Ein iPhone A18 hat ~68 GB/Sek Bandbreite; eine [RTX 4090](/de/local-llms/local-llm-hardware-guide-2026) hat 1.008 GB/Sek. Die LLM-Inferenzgeschwindigkeit skaliert direkt mit der Speicherbandbreite.',
+            '**Mobile ist 15–50× langsamer als Desktop aufgrund der Speicherbandbreite.** Ein iPhone A18 hat ~68 GB/Sek Bandbreite; eine [RTX 4090](/de/local-llms/local-llm-hardware-guide) hat 1.008 GB/Sek. Die LLM-Inferenzgeschwindigkeit skaliert direkt mit der Speicherbandbreite.',
           ],
           image: '/images/mobile-local-llms-speed-comparison-de.svg',
           imageCaption: 'Mobile vs Desktop LLM-Geschwindigkeit: RTX 4090 mit 150 Tok/Sek ist 10× schneller als iPad M4 (15 Tok/Sek) und 37× schneller als iPhone 16 Pro (4 Tok/Sek).',
@@ -700,7 +700,7 @@ schema: {
             '**Ende 2027 ist der Wendepunkt.** Apple A19 Pro und Snapdragon X2 bringen 7–13B-Modelle mit 15–25 Tok/Sek auf Telefone.',
             '**2027er Telefone:** 7–13B-Modelle mit 15–25 Tok/Sek. Praktisch für die meisten Chat-Aufgaben.',
             '**2028+:** 13–24B-Modelle erwartet. Qualität nähert sich GPT-4o mini-Niveau.',
-            '**Beste Option heute:** Telefon für Offline-Anfragen und einen [Mac mini M6 oder Mac mini M5 Pro](/de/local-llms/best-mini-pcs-local-llm) als lokalen Server per WLAN — die 64-GB-Konfiguration des M5 Pro ist die nützlichere Stufe, wenn größere Modelle als Backend fürs Telefon laufen sollen — oder eine [Desktop-GPU](/de/local-llms/local-llm-hardware-guide-2026).',
+            '**Beste Option heute:** Telefon für Offline-Anfragen und einen [Mac mini M6 oder Mac mini M5 Pro](/de/local-llms/best-mini-pcs-local-llm) als lokalen Server per WLAN — die 64-GB-Konfiguration des M5 Pro ist die nützlichere Stufe, wenn größere Modelle als Backend fürs Telefon laufen sollen — oder eine [Desktop-GPU](/de/local-llms/local-llm-hardware-guide).',
           ],
         },
         faqSection: {
@@ -726,7 +726,7 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Lektüre',
           items: [
-            '[Lokaler LLM Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026) — GPU, Apple Silicon und CPU-Optionen für lokale Inferenz',
+            '[Lokaler LLM Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide) — GPU, Apple Silicon und CPU-Optionen für lokale Inferenz',
             '[Beste lokale LLM-Frontends](/de/local-llms/best-local-llm-frontends) — Web-UIs und Chat-Oberflächen für Desktop- und mobile LLM-Workflows',
             '[Laptop vs Desktop lokale LLM](/de/local-llms/laptop-vs-desktop-local-llm) — Leistungs-, Portabilitäts- und Kostenvergleich für portable KI',
             '[Beste kleine lokale LLMs unter 4 GB](/de/prompt-bites/best-ollama-models-4gb-vram) — 1–3B-Modelle ideal für Mobile- und Edge-Einsatz',
@@ -1094,7 +1094,7 @@ schema: {
           id: 'performance',
           title: 'Quelle vitesse : LLM mobiles vs bureau ?',
           content: [
-            '**Le mobile est 15–50× plus lent que le bureau en raison de la bande passante mémoire.** Un iPhone A18 dispose de ~68 Go/sec ; une [RTX 4090](/fr/local-llms/local-llm-hardware-guide-2026) atteint 1 008 Go/sec. La vitesse d\'inférence LLM est directement proportionnelle à la bande passante.',
+            '**Le mobile est 15–50× plus lent que le bureau en raison de la bande passante mémoire.** Un iPhone A18 dispose de ~68 Go/sec ; une [RTX 4090](/fr/local-llms/local-llm-hardware-guide) atteint 1 008 Go/sec. La vitesse d\'inférence LLM est directement proportionnelle à la bande passante.',
           ],
           image: '/images/mobile-local-llms-speed-comparison-fr.svg',
           imageCaption: 'Vitesse LLM mobile vs bureau : RTX 4090 à 150 tok/sec est 10× plus rapide que iPad M4 (15 tok/sec) et 37× plus rapide que iPhone 16 Pro (4 tok/sec).',
@@ -1153,7 +1153,7 @@ schema: {
             '**Fin 2027 est le point d\'inflexion.** Apple A19 Pro et Snapdragon X2 apporteront les 7–13B à 15–25 tok/sec sur téléphones.',
             '**Téléphones 2027 :** 7–13B à 15–25 tok/sec. Pratique pour la plupart des tâches de chat.',
             '**2028+ :** Modèles 13–24B attendus. Qualité approchant GPT-4o mini.',
-            '**Meilleure option aujourd\'hui :** Téléphone pour requêtes rapides et un [Mac mini M6 ou Mac mini M5 Pro](/fr/local-llms/best-mini-pcs-local-llm) comme serveur local via Wi-Fi — la configuration 64 Go du M5 Pro est le palier le plus utile pour faire tourner des modèles plus grands en backend de votre téléphone — ou un [GPU bureau](/fr/local-llms/local-llm-hardware-guide-2026).',
+            '**Meilleure option aujourd\'hui :** Téléphone pour requêtes rapides et un [Mac mini M6 ou Mac mini M5 Pro](/fr/local-llms/best-mini-pcs-local-llm) comme serveur local via Wi-Fi — la configuration 64 Go du M5 Pro est le palier le plus utile pour faire tourner des modèles plus grands en backend de votre téléphone — ou un [GPU bureau](/fr/local-llms/local-llm-hardware-guide).',
           ],
         },
         faqSection: {
@@ -1177,7 +1177,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures complémentaires',
           items: [
-            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Options GPU, Apple Silicon et CPU pour l\'inférence locale',
+            '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) — Options GPU, Apple Silicon et CPU pour l\'inférence locale',
             '[Meilleures interfaces LLM locaux](/fr/local-llms/best-local-llm-frontends) — Interfaces web et chat pour workflows LLM desktop et mobile',
             '[Laptop vs Desktop LLM local](/fr/local-llms/laptop-vs-desktop-local-llm) — Comparaison performance, portabilité et coût',
             '[Meilleurs petits LLM locaux sous 4 Go](/fr/prompt-bites/best-ollama-models-4gb-vram) — Modèles 1–3B idéaux pour mobile et edge',
@@ -1529,7 +1529,7 @@ schema: {
           id: 'performance',
           title: 'モバイルLLMの速度 vs デスクトップ',
           content: [
-            '**モバイルはメモリ帯域幅の差でデスクトップより15–50倍遅い。** iPhone A18は約68 GB/秒の帯域幅、[RTX 4090](/ja/local-llms/local-llm-hardware-guide-2026)は1,008 GB/秒。LLM推論速度はメモリ帯域幅に直接比例します。',
+            '**モバイルはメモリ帯域幅の差でデスクトップより15–50倍遅い。** iPhone A18は約68 GB/秒の帯域幅、[RTX 4090](/ja/local-llms/local-llm-hardware-guide)は1,008 GB/秒。LLM推論速度はメモリ帯域幅に直接比例します。',
           ],
           image: '/images/mobile-local-llms-speed-comparison-ja.svg',
           imageCaption: 'モバイル vs デスクトップ LLM速度：RTX 4090は150トークン/秒でiPad M4（15トークン/秒）の10倍、iPhone 16 Pro（4トークン/秒）の37倍高速。',
@@ -1588,7 +1588,7 @@ schema: {
             '**2027年後半が転換点です。** Apple A19 ProとSnapdragon X2が7–13Bモデルを15–25トークン/秒でスマートフォンに提供。',
             '**2027年スマートフォン：** 7–13Bモデルを15–25トークン/秒。ほとんどのチャットタスクに実用的。',
             '**2028年以降：** 13–24Bモデルが期待。品質はGPT-4o miniレベルに近づく。',
-            '**今日の最適オプション：** スマートフォンでオフラインクエリを処理しつつ、[Mac mini M6またはMac mini M5 Pro](/ja/local-llms/best-mini-pcs-local-llm)をWi-Fi経由のローカルサーバーとして使用（スマートフォンのバックエンドとしてより大きなモデルを動かすなら64GB構成のM5 Proが有用）、または[デスクトップGPU](/ja/local-llms/local-llm-hardware-guide-2026)を利用。',
+            '**今日の最適オプション：** スマートフォンでオフラインクエリを処理しつつ、[Mac mini M6またはMac mini M5 Pro](/ja/local-llms/best-mini-pcs-local-llm)をWi-Fi経由のローカルサーバーとして使用（スマートフォンのバックエンドとしてより大きなモデルを動かすなら64GB構成のM5 Proが有用）、または[デスクトップGPU](/ja/local-llms/local-llm-hardware-guide)を利用。',
           ],
         },
         faqSection: {
@@ -1613,7 +1613,7 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — GPU、Apple Silicon、CPUのローカル推論オプション',
+            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — GPU、Apple Silicon、CPUのローカル推論オプション',
             '[最良のローカルLLMフロントエンド](/ja/local-llms/best-local-llm-frontends) — デスクトップ・モバイルLLMワークフロー向けWebUIとチャットインターフェース',
             '[ラップトップ vs デスクトップ ローカルLLM](/ja/local-llms/laptop-vs-desktop-local-llm) — パフォーマンス、携帯性、コスト比較',
             '[4 GB以下の最良小型ローカルLLM](/ja/prompt-bites/best-ollama-models-4gb-vram) — モバイル・エッジ展開に最適な1–3Bモデル',
@@ -1973,7 +1973,7 @@ schema: {
           id: 'performance',
           title: '移动端LLM vs 桌面速度对比',
           content: [
-            '**移动端因内存带宽差距比桌面慢15–50倍。** iPhone A18带宽约68 GB/秒；[RTX 4090](/zh/local-llms/local-llm-hardware-guide-2026)达1,008 GB/秒。LLM推理速度与内存带宽成正比。',
+            '**移动端因内存带宽差距比桌面慢15–50倍。** iPhone A18带宽约68 GB/秒；[RTX 4090](/zh/local-llms/local-llm-hardware-guide)达1,008 GB/秒。LLM推理速度与内存带宽成正比。',
           ],
           image: '/images/mobile-local-llms-speed-comparison-zh.svg',
           imageCaption: '移动端 vs 桌面端 LLM速度：RTX 4090以150令牌/秒比iPad M4（15令牌/秒）快10倍，比iPhone 16 Pro（4令牌/秒）快37倍。',
@@ -2032,7 +2032,7 @@ schema: {
             '**2027年底是转折点。** Apple A19 Pro和Snapdragon X2将在手机上实现7–13B模型15–25令牌/秒——足以进行实时聊天。在此之前，移动端LLM是特定场景的利基工具。',
             '**2027年手机：** 7–13B模型15–25令牌/秒。大多数聊天和问答任务可实用。仍无70B。',
             '**2028年及以后：** 预期13–24B模型。质量接近GPT-4o mini级别。电池和散热仍是瓶颈。',
-            '**今天的最佳方案：** 手机用于快速离线查询，[Mac mini M6或Mac mini M5 Pro](/zh/local-llms/best-mini-pcs-local-llm)作为Wi-Fi局域网内的本地服务器——若要让手机的后端运行更大的模型，64GB版M5 Pro是更实用的档位——或使用[桌面GPU](/zh/local-llms/local-llm-hardware-guide-2026)。',
+            '**今天的最佳方案：** 手机用于快速离线查询，[Mac mini M6或Mac mini M5 Pro](/zh/local-llms/best-mini-pcs-local-llm)作为Wi-Fi局域网内的本地服务器——若要让手机的后端运行更大的模型，64GB版M5 Pro是更实用的档位——或使用[桌面GPU](/zh/local-llms/local-llm-hardware-guide)。',
           ],
         },
         faqSection: {
@@ -2058,7 +2058,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — GPU、Apple Silicon和CPU本地推理选项',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) — GPU、Apple Silicon和CPU本地推理选项',
             '[最佳本地LLM前端](/zh/local-llms/best-local-llm-frontends) — 桌面和移动LLM工作流的Web UI和聊天界面',
             '[笔记本 vs 台式机本地LLM](/zh/local-llms/laptop-vs-desktop-local-llm) — 性能、便携性和成本对比',
             '[4 GB以下最佳小型本地LLM](/zh/prompt-bites/best-ollama-models-4gb-vram) — 适合移动和边缘部署的1–3B模型',
@@ -2426,7 +2426,7 @@ schema: {
           id: 'performance',
           title: '¿Qué tan rápidos son los LLMs móviles vs escritorio?',
           content: [
-            '**El móvil es 15–50× más lento que el escritorio debido al ancho de banda de memoria.** Un iPhone A18 tiene ~68 GB/seg de ancho de banda; una [RTX 4090](/es/local-llms/local-llm-hardware-guide-2026) tiene 1.008 GB/seg. La velocidad de inferencia de LLM escala directamente con el ancho de banda de memoria.',
+            '**El móvil es 15–50× más lento que el escritorio debido al ancho de banda de memoria.** Un iPhone A18 tiene ~68 GB/seg de ancho de banda; una [RTX 4090](/es/local-llms/local-llm-hardware-guide) tiene 1.008 GB/seg. La velocidad de inferencia de LLM escala directamente con el ancho de banda de memoria.',
           ],
           image: '/images/mobile-local-llms-speed-comparison-es.svg',
           imageCaption: 'Velocidad de LLM móvil vs escritorio: RTX 4090 a 150 tok/seg es 10× más rápido que iPad M4 (15 tok/seg) y 37× más rápido que iPhone 16 Pro (4 tok/seg).',
@@ -2486,7 +2486,7 @@ schema: {
             '**Finales de 2027 es el punto de inflexión.** Apple A19 Pro y Snapdragon X2 llevarán modelos 7–13B a los teléfonos a 15–25 tok/seg — suficientemente rápido para chat en tiempo real. Hasta entonces, los LLMs móviles son una herramienta de nicho para casos de uso específicos.',
             '**Teléfonos 2027:** Modelos 7–13B a 15–25 tok/seg. Práctico para la mayoría de tareas de chat y preguntas. Sin 70B todavía.',
             '**Teléfonos 2028+:** Se esperan modelos 13–24B. Calidad acercándose al nivel de GPT-4o mini en dispositivo. Las limitaciones de batería y temperatura siguen siendo el cuello de botella.',
-            '**Mejor opción hoy:** Usa tu teléfono para consultas rápidas sin conexión y ejecuta un [Mac mini M6 o Mac mini M5 Pro](/es/local-llms/best-mini-pcs-local-llm) como servidor local accesible desde tu teléfono por Wi-Fi — la configuración de 64 GB del M5 Pro es el nivel más útil si vas a ejecutar modelos más grandes como backend de tu teléfono — o una [GPU de escritorio](/es/local-llms/local-llm-hardware-guide-2026). Esto te da comodidad móvil con inferencia de calidad de escritorio.',
+            '**Mejor opción hoy:** Usa tu teléfono para consultas rápidas sin conexión y ejecuta un [Mac mini M6 o Mac mini M5 Pro](/es/local-llms/best-mini-pcs-local-llm) como servidor local accesible desde tu teléfono por Wi-Fi — la configuración de 64 GB del M5 Pro es el nivel más útil si vas a ejecutar modelos más grandes como backend de tu teléfono — o una [GPU de escritorio](/es/local-llms/local-llm-hardware-guide). Esto te da comodidad móvil con inferencia de calidad de escritorio.',
           ],
         },
         faqSection: {
@@ -2543,7 +2543,7 @@ schema: {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — Opciones de GPU, Apple Silicon y CPU para inferencia local en cada presupuesto',
+            '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) — Opciones de GPU, Apple Silicon y CPU para inferencia local en cada presupuesto',
             '[Mejores interfaces para LLM local](/es/local-llms/best-local-llm-frontends) — Interfaces web y de chat para flujos de trabajo de LLM en escritorio y móvil',
             '[Portátil vs escritorio para LLM local](/es/local-llms/laptop-vs-desktop-local-llm) — Comparación de rendimiento, portabilidad y costo para IA portátil',
             '[Mejores LLMs locales pequeños de menos de 4 GB](/es/prompt-bites/best-ollama-models-4gb-vram) — Modelos 1–3B ideales para despliegue en móvil y dispositivos de borde',
@@ -2816,7 +2816,7 @@ schema: {
           id: 'performance',
           title: 'ما مدى سرعة نماذج LLM للهواتف مقابل سطح المكتب؟',
           content: [
-            '**الهاتف أبطأ بمقدار 15–50× من سطح المكتب بسبب عرض نطاق الذاكرة.** يملك iPhone A18 عرض نطاق ~68 GB/ث؛ بينما [RTX 4090](/ar/local-llms/local-llm-hardware-guide-2026) لها 1,008 GB/ث. تتناسب سرعة استدلال LLM طرديًا مع عرض نطاق الذاكرة.',
+            '**الهاتف أبطأ بمقدار 15–50× من سطح المكتب بسبب عرض نطاق الذاكرة.** يملك iPhone A18 عرض نطاق ~68 GB/ث؛ بينما [RTX 4090](/ar/local-llms/local-llm-hardware-guide) لها 1,008 GB/ث. تتناسب سرعة استدلال LLM طرديًا مع عرض نطاق الذاكرة.',
           ],
           image: '/images/mobile-local-llms-speed-comparison-es.svg',
           imageCaption: 'سرعة LLM للهواتف مقابل سطح المكتب: RTX 4090 بسرعة 150 tok/ث أسرع بمقدار 10× من iPad M4 (15 tok/ث) وأسرع بمقدار 37× من iPhone 16 Pro (4 tok/ث).',
@@ -2876,7 +2876,7 @@ schema: {
             '**أواخر 2027 هي نقطة التحول.** ستنقل Apple A19 Pro وSnapdragon X2 نماذج 7–13B إلى الهواتف بسرعة 15–25 tok/ث — سريع بما يكفي للمحادثة الفورية. حتى ذلك الحين، نماذج LLM للهواتف أداة متخصصة لحالات استخدام محددة.',
             '**هواتف 2027:** نماذج 7–13B بسرعة 15–25 tok/ث. عملي لمعظم مهام المحادثة والأسئلة. لا 70B بعد.',
             '**هواتف 2028+:** يُتوقع نماذج 13–24B. جودة تقترب من مستوى GPT-4o mini على الجهاز. تظل قيود البطارية والحرارة عنق الزجاجة.',
-            '**أفضل خيار اليوم:** استخدم هاتفك للاستعلامات السريعة دون اتصال وشغّل [Mac mini M6 أو Mac mini M5 Pro](/ar/local-llms/best-mini-pcs-local-llm) كخادم محلي يمكن الوصول إليه من هاتفك عبر Wi-Fi — تُعد نسخة M5 Pro بسعة 64 جيجابايت الفئة الأكثر فائدة إذا كنت ستشغّل نماذج أكبر كخادم خلفي لهاتفك — أو [GPU سطح مكتب](/ar/local-llms/local-llm-hardware-guide-2026). هذا يمنحك راحة الهاتف باستدلال بجودة سطح المكتب.',
+            '**أفضل خيار اليوم:** استخدم هاتفك للاستعلامات السريعة دون اتصال وشغّل [Mac mini M6 أو Mac mini M5 Pro](/ar/local-llms/best-mini-pcs-local-llm) كخادم محلي يمكن الوصول إليه من هاتفك عبر Wi-Fi — تُعد نسخة M5 Pro بسعة 64 جيجابايت الفئة الأكثر فائدة إذا كنت ستشغّل نماذج أكبر كخادم خلفي لهاتفك — أو [GPU سطح مكتب](/ar/local-llms/local-llm-hardware-guide). هذا يمنحك راحة الهاتف باستدلال بجودة سطح المكتب.',
           ],
         },
         faqSection: {
@@ -2933,7 +2933,7 @@ schema: {
           id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
-            '[دليل العتاد لـ LLM المحلي 2026](/ar/local-llms/local-llm-hardware-guide-2026) — خيارات GPU وApple Silicon وCPU للاستدلال المحلي بكل ميزانية',
+            '[دليل العتاد لـ LLM المحلي](/ar/local-llms/local-llm-hardware-guide) — خيارات GPU وApple Silicon وCPU للاستدلال المحلي بكل ميزانية',
             '[أفضل واجهات LLM المحلي](/ar/local-llms/best-local-llm-frontends) — واجهات الويب والمحادثة لسير عمل LLM على سطح المكتب والهاتف',
             '[الحاسوب المحمول مقابل المكتبي لـ LLM المحلي](/ar/local-llms/laptop-vs-desktop-local-llm) — مقارنة الأداء وقابلية الحمل والتكلفة للذكاء الاصطناعي المحمول',
             '[أفضل نماذج LLM المحلية الصغيرة أقل من 4 GB](/ar/prompt-bites/best-ollama-models-4gb-vram) — نماذج 1–3B مثالية للنشر على الهواتف وأجهزة الحافة',
@@ -3490,7 +3490,7 @@ schema: {
           id: 'performance',
           title: '모바일 LLM과 데스크톱의 속도는 얼마나 차이 나는가?',
           content: [
-            '**메모리 대역폭으로 인해 모바일은 데스크톱보다 15–50배 느립니다.** iPhone A18의 대역폭은 ~68 GB/sec이지만 [RTX 4090](/ko/local-llms/local-llm-hardware-guide-2026)은 1,008 GB/sec입니다. LLM 추론 속도는 메모리 대역폭과 직접적으로 비례합니다.',
+            '**메모리 대역폭으로 인해 모바일은 데스크톱보다 15–50배 느립니다.** iPhone A18의 대역폭은 ~68 GB/sec이지만 [RTX 4090](/ko/local-llms/local-llm-hardware-guide)은 1,008 GB/sec입니다. LLM 추론 속도는 메모리 대역폭과 직접적으로 비례합니다.',
           ],
           image: '/images/mobile-local-llms-speed-comparison-en.svg',
           imageCaption: '모바일 vs 데스크톱 LLM 속도: RTX 4090의 150 tok/sec는 iPad M4(15 tok/sec)보다 10배, iPhone 16 Pro(4 tok/sec)보다 37배 빠릅니다.',
@@ -3549,7 +3549,7 @@ schema: {
             '**2027년 후반이 변곡점입니다.** Apple A19 Pro와 Snapdragon X2는 스마트폰에서 7–13B 모델을 15–25 tok/sec로 구동할 수 있게 해줄 것입니다 — 실시간 채팅에 충분한 속도입니다. 그때까지 모바일 LLM은 특정 사용 사례에 특화된 틈새 도구입니다.',
             '**2027년 스마트폰:** 15–25 tok/sec로 7–13B 모델 지원. 대부분의 채팅 및 Q&A 작업에 실용적. 여전히 70B는 불가합니다.',
             '**2028년 이후 스마트폰:** 13–24B 모델 예상. 온디바이스에서 GPT-4o mini 수준에 근접하는 품질. 배터리 및 열 제약은 여전히 병목으로 남습니다.',
-            '**현재 최선의 선택:** 빠른 오프라인 쿼리에는 스마트폰을 사용하고, Wi-Fi를 통해 스마트폰에서 접근 가능한 로컬 서버로 [Mac mini M6 또는 Mac mini M5 Pro](/ko/local-llms/best-mini-pcs-local-llm)를 운용하십시오 — 스마트폰의 백엔드로 더 큰 모델을 돌릴 계획이라면 64GB M5 Pro 구성이 더 유용한 등급입니다 — 또는 [데스크톱 GPU](/ko/local-llms/local-llm-hardware-guide-2026)를 사용하십시오. 이렇게 하면 모바일의 편의성과 데스크톱 품질의 추론을 모두 누릴 수 있습니다.',
+            '**현재 최선의 선택:** 빠른 오프라인 쿼리에는 스마트폰을 사용하고, Wi-Fi를 통해 스마트폰에서 접근 가능한 로컬 서버로 [Mac mini M6 또는 Mac mini M5 Pro](/ko/local-llms/best-mini-pcs-local-llm)를 운용하십시오 — 스마트폰의 백엔드로 더 큰 모델을 돌릴 계획이라면 64GB M5 Pro 구성이 더 유용한 등급입니다 — 또는 [데스크톱 GPU](/ko/local-llms/local-llm-hardware-guide)를 사용하십시오. 이렇게 하면 모바일의 편의성과 데스크톱 품질의 추론을 모두 누릴 수 있습니다.',
           ],
         },
         videoWalkthrough: {
@@ -3612,7 +3612,7 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 모든 예산에 맞는 로컬 추론을 위한 GPU, Apple Silicon, CPU 옵션',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 모든 예산에 맞는 로컬 추론을 위한 GPU, Apple Silicon, CPU 옵션',
             '[최고의 로컬 LLM 프론트엔드](/ko/local-llms/best-local-llm-frontends) — 데스크톱 및 모바일 LLM 워크플로우를 위한 웹 UI 및 채팅 인터페이스',
             '[노트북 vs 데스크톱 로컬 LLM](/ko/local-llms/laptop-vs-desktop-local-llm) — 이동 가능한 AI를 위한 성능, 이동성, 비용 비교',
             '[4 GB 미만 최고의 소형 로컬 LLM](/ko/prompt-bites/best-ollama-models-4gb-vram) — 모바일 및 엣지 배포에 적합한 1–3B 모델',

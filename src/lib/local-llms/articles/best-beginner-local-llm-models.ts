@@ -346,7 +346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'regional-context',
           title: 'Which Model Should You Choose Based on Your Region?',
           content: [
-            '**EU / GDPR**: For EU organizations processing personal data locally, model provenance matters for compliance documentation. German BSI guidelines require documenting model origin and licence type for AI systems used in professional contexts. Llama (Meta/USA), Gemma (Google/USA), and Qwen (Alibaba/China) are all technically usable under GDPR for local inference -- for the cleanest EU-provenance narrative, Mistral AI (France) offers Apache 2.0-licensed models, though current Mistral Small releases (24B+) exceed this page\'s 4-8 GB beginner RAM range; see the [hardware guide](/local-llms/local-llm-hardware-guide-2026) for the GPU tier needed to run them.',
+            '**EU / GDPR**: For EU organizations processing personal data locally, model provenance matters for compliance documentation. German BSI guidelines require documenting model origin and licence type for AI systems used in professional contexts. Llama (Meta/USA), Gemma (Google/USA), and Qwen (Alibaba/China) are all technically usable under GDPR for local inference -- for the cleanest EU-provenance narrative, Mistral AI (France) offers Apache 2.0-licensed models, though current Mistral Small releases (24B+) exceed this page\'s 4-8 GB beginner RAM range; see the [hardware guide](/local-llms/local-llm-hardware-guide) for the GPU tier needed to run them.',
             '**Japan (METI)**: For Japanese-language workflows, Qwen3 8B is the correct first model -- native Japanese tokenization produces better token efficiency on Japanese text than Llama. Run: `ollama run qwen3:8b`. METI AI Governance Guidelines require documenting the model name and version -- all five models here have versioned Ollama tags satisfying this.',
             '**China**: Qwen3 8B (Alibaba) is the natural first model for Chinese-language workflows. Native Chinese tokenization and 29+-language support make it the standard for Mandarin-first workflows. For Chinese enterprise deployment under China\'s Data Security Law (数据安全法), Qwen3 running locally via Ollama satisfies data localization requirements.',
             '**Korea**: Among these five beginner-tier picks, Qwen3 8B has the strongest native Korean tokenization. For dedicated Korean-language local models beyond this beginner tier, see [Best Korean Language Models for Local Use](/prompt-bites/best-korean-language-models-local).',
@@ -380,7 +380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[How to Run Local LLMs on a Laptop](/local-llms/local-llm-on-laptop) -- RAM and thermal optimization',
             '[Troubleshooting Local LLM Setup](/local-llms/troubleshooting-local-llm-setup) -- Debugging common issues',
             '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral) -- full benchmark comparison of all three model families at 7B, 13B, and 70B',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- GPU and RAM requirements to move from 3B to 7B to 13B models as your hardware allows',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- GPU and RAM requirements to move from 3B to 7B to 13B models as your hardware allows',
             '[Qwen Local Deployment Guide (2026)](/local-llms/qwen-local-deployment-guide-2026) -- Beginner-friendly Qwen3 8B setup via Ollama: one command to running.',
             '[Best Open-Source Alternatives to ChatGPT Plus](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- No-code frontends for first-time local LLM users.',
             '[Melhores Modelos LLM para Iniciantes (Português)](/pt/local-llms/best-beginner-local-llm-models) — versão em português deste guia',
@@ -405,7 +405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Is Mistral Small 3.2 a good beginner local LLM?',
-              a: 'No -- Mistral Small 3.2 is a 24B-parameter model that needs roughly 14 GB+ of RAM/VRAM, well above the 4-8 GB beginner range covered on this page. It is a different, larger model from the 7B "Mistral Small v0.3" once recommended here. If you have 8 GB RAM, start with Llama 3.1 8B or Qwen3 8B instead. See the [hardware guide](/local-llms/local-llm-hardware-guide-2026) for the 16GB+ GPU tier needed to run Mistral Small 3.2.',
+              a: 'No -- Mistral Small 3.2 is a 24B-parameter model that needs roughly 14 GB+ of RAM/VRAM, well above the 4-8 GB beginner range covered on this page. It is a different, larger model from the 7B "Mistral Small v0.3" once recommended here. If you have 8 GB RAM, start with Llama 3.1 8B or Qwen3 8B instead. See the [hardware guide](/local-llms/local-llm-hardware-guide) for the 16GB+ GPU tier needed to run Mistral Small 3.2.',
             },
             {
               q: 'How do I run these models with Ollama?',
@@ -752,7 +752,7 @@ schema: {
           id: 'regional-context',
           title: '¿Qué modelo elegir según tu región?',
           content: [
-            '**UE / RGPD**: Para organizaciones europeas que procesan datos personales localmente, la procedencia del modelo importa para la documentación de cumplimiento. Las directrices alemanas del BSI requieren documentar el origen y el tipo de licencia del modelo para sistemas de IA usados en contextos profesionales. Llama (Meta/EE.UU.), Gemma (Google/EE.UU.) y Qwen (Alibaba/China) son técnicamente utilizables bajo el RGPD para inferencia local -- para la narrativa de procedencia europea más sencilla, Mistral AI (Francia) ofrece modelos con licencia Apache 2.0, aunque las versiones actuales de Mistral Small (24B+) superan el rango de RAM para principiantes de esta página (4-8 GB); consulta la [guía de hardware](/es/local-llms/local-llm-hardware-guide-2026) para el nivel de GPU necesario para ejecutarlos.',
+            '**UE / RGPD**: Para organizaciones europeas que procesan datos personales localmente, la procedencia del modelo importa para la documentación de cumplimiento. Las directrices alemanas del BSI requieren documentar el origen y el tipo de licencia del modelo para sistemas de IA usados en contextos profesionales. Llama (Meta/EE.UU.), Gemma (Google/EE.UU.) y Qwen (Alibaba/China) son técnicamente utilizables bajo el RGPD para inferencia local -- para la narrativa de procedencia europea más sencilla, Mistral AI (Francia) ofrece modelos con licencia Apache 2.0, aunque las versiones actuales de Mistral Small (24B+) superan el rango de RAM para principiantes de esta página (4-8 GB); consulta la [guía de hardware](/es/local-llms/local-llm-hardware-guide) para el nivel de GPU necesario para ejecutarlos.',
             '**Japón (METI)**: Para flujos de trabajo en japonés, Qwen3 8B es el primer modelo correcto -- la tokenización japonesa nativa produce una mejor eficiencia de tokens en textos japoneses que Llama. Ejecuta: `ollama run qwen3:8b`. Las directrices de gobernanza de IA del METI requieren documentar el nombre y la versión del modelo -- los cinco modelos aquí tienen etiquetas de Ollama versionadas que satisfacen este requisito.',
             '**China**: Qwen3 8B (Alibaba) es el primer modelo natural para flujos de trabajo en chino. La tokenización nativa en chino y el soporte de más de 29 idiomas lo convierten en el estándar para flujos de trabajo en mandarín. Para el despliegue empresarial en China bajo la Ley de Seguridad de Datos de China (数据安全法), Qwen3 ejecutado localmente mediante Ollama cumple los requisitos de localización de datos.',
             '**Corea**: Entre estas cinco opciones para principiantes, Qwen3 8B tiene la tokenización nativa coreana más sólida. Para modelos locales dedicados al idioma coreano más allá de este nivel de principiante, consulta [Mejores modelos de idioma coreano para uso local](/es/prompt-bites/best-korean-language-models-local).',
@@ -786,7 +786,7 @@ schema: {
             '[Cómo ejecutar LLMs locales en un portátil](/es/local-llms/local-llm-on-laptop) -- Optimización de RAM y temperatura',
             '[Solución de problemas de configuración de LLM local](/es/local-llms/troubleshooting-local-llm-setup) -- Depuración de problemas comunes',
             '[Qwen vs Llama vs Mistral](/es/local-llms/qwen-vs-llama-vs-mistral) -- comparación completa de benchmarks de las tres familias de modelos en 7B, 13B y 70B',
-            '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) -- Requisitos de GPU y RAM para pasar de modelos de 3B a 7B a 13B',
+            '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) -- Requisitos de GPU y RAM para pasar de modelos de 3B a 7B a 13B',
             '[Guía de despliegue local de Qwen (2026)](/es/local-llms/qwen-local-deployment-guide-2026) -- Configuración de Qwen3 8B para principiantes mediante Ollama: un comando para empezar.',
             '[Las mejores alternativas de código abierto a ChatGPT Plus](/es/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- Interfaces sin código para usuarios de LLM local por primera vez.',
             '[Mejores modelos 7B para hardware de consumo](/es/local-llms/best-7b-models-consumer-hardware) -- mejores modelos 7B para hardware de consumo',
@@ -810,7 +810,7 @@ schema: {
             },
             {
               q: '¿Es Mistral Small 3.2 un buen LLM local para principiantes?',
-              a: 'No -- Mistral Small 3.2 es un modelo de 24B de parámetros que necesita aproximadamente 14 GB o más de RAM/VRAM, muy por encima del rango de 4-8 GB para principiantes de esta página. Es un modelo diferente y más grande que el "Mistral Small v0.3" de 7B que antes se recomendaba aquí. Si tienes 8 GB de RAM, empieza mejor con Llama 3.1 8B o Qwen3 8B. Consulta la [guía de hardware](/es/local-llms/local-llm-hardware-guide-2026) para el nivel de GPU de 16 GB+ necesario para ejecutar Mistral Small 3.2.',
+              a: 'No -- Mistral Small 3.2 es un modelo de 24B de parámetros que necesita aproximadamente 14 GB o más de RAM/VRAM, muy por encima del rango de 4-8 GB para principiantes de esta página. Es un modelo diferente y más grande que el "Mistral Small v0.3" de 7B que antes se recomendaba aquí. Si tienes 8 GB de RAM, empieza mejor con Llama 3.1 8B o Qwen3 8B. Consulta la [guía de hardware](/es/local-llms/local-llm-hardware-guide) para el nivel de GPU de 16 GB+ necesario para ejecutar Mistral Small 3.2.',
             },
             {
               q: '¿Cómo ejecuto estos modelos con Ollama?',
@@ -1164,7 +1164,7 @@ schema: {
           id: 'regional-context',
           title: 'أي نموذج تختار حسب منطقتك؟',
           content: [
-            '**الاتحاد الأوروبي / GDPR**: للمؤسسات الأوروبية التي تعالج بيانات شخصية محلياً، يهم مصدر النموذج لتوثيق الامتثال. تتطلب إرشادات BSI الألمانية توثيق مصدر النموذج ونوع الرخصة لأنظمة الذكاء الاصطناعي المستخدمة في سياقات مهنية. Llama (Meta/الولايات المتحدة) وGemma (Google/الولايات المتحدة) وQwen (Alibaba/الصين) قابلة للاستخدام تقنياً بموجب GDPR للاستدلال المحلي -- وللحصول على أوضح سردية منشأ أوروبي، توفّر Mistral AI (فرنسا) نماذج برخصة Apache 2.0، رغم أن إصدارات Mistral Small الحالية (24B فما فوق) تتجاوز نطاق RAM الخاص بالمبتدئين في هذه الصفحة (4-8 GB)؛ راجع [دليل العتاد](/ar/local-llms/local-llm-hardware-guide-2026) لمعرفة فئة GPU اللازمة لتشغيلها.',
+            '**الاتحاد الأوروبي / GDPR**: للمؤسسات الأوروبية التي تعالج بيانات شخصية محلياً، يهم مصدر النموذج لتوثيق الامتثال. تتطلب إرشادات BSI الألمانية توثيق مصدر النموذج ونوع الرخصة لأنظمة الذكاء الاصطناعي المستخدمة في سياقات مهنية. Llama (Meta/الولايات المتحدة) وGemma (Google/الولايات المتحدة) وQwen (Alibaba/الصين) قابلة للاستخدام تقنياً بموجب GDPR للاستدلال المحلي -- وللحصول على أوضح سردية منشأ أوروبي، توفّر Mistral AI (فرنسا) نماذج برخصة Apache 2.0، رغم أن إصدارات Mistral Small الحالية (24B فما فوق) تتجاوز نطاق RAM الخاص بالمبتدئين في هذه الصفحة (4-8 GB)؛ راجع [دليل العتاد](/ar/local-llms/local-llm-hardware-guide) لمعرفة فئة GPU اللازمة لتشغيلها.',
             '**اليابان (METI)**: لسير العمل باللغة اليابانية، Qwen3 8B هو النموذج الأول الصحيح -- ينتج الترميز الياباني الأصلي كفاءة رموز أفضل بنسبة 30-40% في النصوص اليابانية من Llama أو Mistral. شغّل: `ollama run qwen3:8b`. تتطلب إرشادات حوكمة الذكاء الاصطناعي من METI توثيق اسم النموذج وإصداره -- تملك النماذج الخمسة هنا وسوم Ollama مُصدَّرة تلبّي هذا المتطلب.',
             '**الصين**: Qwen3 8B (Alibaba) هو النموذج الأول الطبيعي لسير العمل باللغة الصينية. يجعله الترميز الأصلي بالصينية ودعم أكثر من 29 لغة المعيار لسير العمل باللغة الماندرين. للنشر المؤسسي في الصين بموجب قانون أمن البيانات الصيني (数据安全法)، يلبّي تشغيل Qwen3 محلياً عبر Ollama متطلبات توطين البيانات.',
             '**كوريا**: من بين الخيارات الخمسة للمبتدئين هنا، يتميّز Qwen3 8B بأقوى ترميز أصلي للغة الكورية. للنماذج المحلية المخصصة للغة الكورية بما يتجاوز مستوى المبتدئين هذا، راجع [أفضل نماذج اللغة الكورية للاستخدام المحلي](/ar/prompt-bites/best-korean-language-models-local).',
@@ -1198,7 +1198,7 @@ schema: {
             '[كيفية تشغيل نماذج LLM محلية على لابتوب](/ar/local-llms/local-llm-on-laptop) -- تحسين RAM ودرجة الحرارة',
             '[استكشاف أخطاء إعداد LLM المحلي وإصلاحها](/ar/local-llms/troubleshooting-local-llm-setup) -- تصحيح المشكلات الشائعة',
             '[Qwen مقابل Llama مقابل Mistral](/ar/local-llms/qwen-vs-llama-vs-mistral) -- مقارنة اختبارات كاملة لعائلات النماذج الثلاث في 7B و13B و70B',
-            '[دليل عتاد تشغيل LLM محلياً 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- متطلبات GPU وRAM للانتقال من نماذج 3B إلى 7B إلى 13B',
+            '[دليل عتاد تشغيل LLM محلياً](/ar/local-llms/local-llm-hardware-guide) -- متطلبات GPU وRAM للانتقال من نماذج 3B إلى 7B إلى 13B',
             '[دليل النشر المحلي لـ Qwen (2026)](/ar/local-llms/qwen-local-deployment-guide-2026) -- إعداد Qwen3 8B للمبتدئين عبر Ollama: أمر واحد للبدء.',
             '[أفضل بدائل ChatGPT Plus مفتوحة المصدر](/ar/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- واجهات بلا كود لمستخدمي LLM المحلي لأول مرة.',
             '[أفضل نماذج 7B لعتاد المستهلك](/ar/local-llms/best-7b-models-consumer-hardware) -- أفضل نماذج 7B للمستهلكين',
@@ -1222,7 +1222,7 @@ schema: {
             },
             {
               q: 'هل Mistral Small 3.2 نموذج LLM محلي جيد للمبتدئين؟',
-              a: 'لا -- Mistral Small 3.2 نموذج بحجم 24 مليار معامل يحتاج إلى نحو 14 GB أو أكثر من RAM/VRAM، وهو أعلى بكثير من نطاق 4-8 GB الخاص بالمبتدئين في هذه الصفحة. إنه نموذج مختلف وأكبر من "Mistral Small v0.3" بحجم 7B الذي كان يُوصى به هنا سابقاً. إذا كان لديك 8 GB من RAM، ابدأ بـ Llama 3.1 8B أو Qwen3 8B بدلاً من ذلك. راجع [دليل العتاد](/ar/local-llms/local-llm-hardware-guide-2026) لمعرفة فئة GPU بذاكرة 16GB+ اللازمة لتشغيل Mistral Small 3.2.',
+              a: 'لا -- Mistral Small 3.2 نموذج بحجم 24 مليار معامل يحتاج إلى نحو 14 GB أو أكثر من RAM/VRAM، وهو أعلى بكثير من نطاق 4-8 GB الخاص بالمبتدئين في هذه الصفحة. إنه نموذج مختلف وأكبر من "Mistral Small v0.3" بحجم 7B الذي كان يُوصى به هنا سابقاً. إذا كان لديك 8 GB من RAM، ابدأ بـ Llama 3.1 8B أو Qwen3 8B بدلاً من ذلك. راجع [دليل العتاد](/ar/local-llms/local-llm-hardware-guide) لمعرفة فئة GPU بذاكرة 16GB+ اللازمة لتشغيل Mistral Small 3.2.',
             },
             {
               q: 'كيف أشغّل هذه النماذج عبر Ollama؟',
@@ -1734,7 +1734,7 @@ schema: {
           id: 'regional-context',
           title: 'Welches Modell sollten Sie je nach Region wählen?',
           content: [
-            '**EU / DSGVO**: Für EU-Organisationen, die personenbezogene Daten lokal verarbeiten, spielt die Herkunft des Modells für die Compliance-Dokumentation eine Rolle. Die BSI-Grundschutz-Kataloge (BSI IT-Grundschutz-Kompendium) erfordern die Dokumentation von Modellherkunft und Lizenztyp für KI-Systeme in professionellen Kontexten. Llama (Meta/USA), Gemma (Google/USA) und Qwen (Alibaba/China) sind unter der DSGVO für lokale Inferenz technisch alle nutzbar – für die sauberste EU-Herkunftsnarrative bietet Mistral AI (Frankreich) Apache-2.0-lizenzierte Modelle, wobei die aktuellen Mistral-Small-Versionen (24B+) den in diesem Artikel behandelten 4–8-GB-Einsteigerbereich übersteigen; siehe den [Hardware-Guide](/de/local-llms/local-llm-hardware-guide-2026) für die benötigte GPU-Klasse.',
+            '**EU / DSGVO**: Für EU-Organisationen, die personenbezogene Daten lokal verarbeiten, spielt die Herkunft des Modells für die Compliance-Dokumentation eine Rolle. Die BSI-Grundschutz-Kataloge (BSI IT-Grundschutz-Kompendium) erfordern die Dokumentation von Modellherkunft und Lizenztyp für KI-Systeme in professionellen Kontexten. Llama (Meta/USA), Gemma (Google/USA) und Qwen (Alibaba/China) sind unter der DSGVO für lokale Inferenz technisch alle nutzbar – für die sauberste EU-Herkunftsnarrative bietet Mistral AI (Frankreich) Apache-2.0-lizenzierte Modelle, wobei die aktuellen Mistral-Small-Versionen (24B+) den in diesem Artikel behandelten 4–8-GB-Einsteigerbereich übersteigen; siehe den [Hardware-Guide](/de/local-llms/local-llm-hardware-guide) für die benötigte GPU-Klasse.',
             '**Japan (METI)**: Für japanischsprachige Workflows ist Qwen3 8B das richtige erste Modell – native japanische Tokenisierung erzeugt eine bessere Token-Effizienz bei japanischem Text als Llama. Befehl: `ollama run qwen3:8b`. Die METI-KI-Governance-Richtlinien erfordern die Dokumentation von Modellname und Version – alle fünf hier aufgeführten Modelle haben versionierte Ollama-Tags, die dies erfüllen.',
             '**China**: Qwen3 8B (Alibaba) ist das natürliche erste Modell für chinesischsprachige Workflows. Native chinesische Tokenisierung und 29+-Sprachen-Unterstützung machen es zum Standard für Mandarin-orientierte Workflows. Für den chinesischen Unternehmenseinsatz unter dem Datensicherheitsgesetz Chinas (数据安全法) erfüllt Qwen3, das lokal via Ollama läuft, die Anforderungen an die Datenlokalisierung.',
             '**Korea**: Unter diesen fünf Einsteiger-Modellen hat Qwen3 8B die stärkste native koreanische Tokenisierung. Für dedizierte koreanischsprachige lokale Modelle jenseits dieser Einsteigerstufe siehe [Beste koreanischsprachige Modelle für lokalen Einsatz](/de/prompt-bites/best-korean-language-models-local).',
@@ -1768,7 +1768,7 @@ schema: {
             '[Lokale LLMs auf dem Laptop ausführen](/de/local-llms/local-llm-on-laptop) – RAM- und Wärme-Optimierung',
             '[Probleme bei der lokalen LLM-Einrichtung beheben](/de/local-llms/troubleshooting-local-llm-setup) – Häufige Probleme debuggen',
             '[Qwen vs Llama vs Mistral](/de/local-llms/qwen-vs-llama-vs-mistral) – Vollständiger Benchmark-Vergleich aller drei Modellfamilien bei 7B, 13B und 70B',
-            '[Lokaler LLM Hardware-Guide 2026](/de/local-llms/local-llm-hardware-guide-2026) – GPU- und RAM-Anforderungen für den Aufstieg von 3B auf 7B auf 13B-Modelle',
+            '[Lokaler LLM Hardware-Guide](/de/local-llms/local-llm-hardware-guide) – GPU- und RAM-Anforderungen für den Aufstieg von 3B auf 7B auf 13B-Modelle',
             '[Qwen Lokaler Deployment-Guide (2026)](/de/local-llms/qwen-local-deployment-guide-2026) -- Einsteigerfreundliches Qwen3 8B-Setup via Ollama: ein Befehl bis zum Laufen.',
             '[Beste Open-Source-Alternativen zu ChatGPT Plus](/de/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- No-Code-Frontends für Erstnutzer lokaler LLMs.',
             '[Beste 7B-Modelle für Consumer-Hardware](/de/local-llms/best-7b-models-consumer-hardware) -- beste 7B-Modelle für Consumer-Hardware',
@@ -1792,7 +1792,7 @@ schema: {
             },
             {
               q: 'Ist Mistral Small 3.2 ein gutes Einsteiger-LLM?',
-              a: 'Nein – Mistral Small 3.2 ist ein Modell mit 24 Mrd. Parametern, das etwa 14 GB+ RAM/VRAM benötigt, weit über dem in diesem Artikel behandelten 4–8-GB-Einsteigerbereich. Es ist ein anderes, deutlich größeres Modell als das hier früher empfohlene 7B-Modell „Mistral Small v0.3". Bei 8 GB RAM starten Sie stattdessen mit Llama 3.1 8B oder Qwen3 8B. Siehe den [Hardware-Guide](/de/local-llms/local-llm-hardware-guide-2026) für die 16GB+-GPU-Klasse, die für Mistral Small 3.2 benötigt wird.',
+              a: 'Nein – Mistral Small 3.2 ist ein Modell mit 24 Mrd. Parametern, das etwa 14 GB+ RAM/VRAM benötigt, weit über dem in diesem Artikel behandelten 4–8-GB-Einsteigerbereich. Es ist ein anderes, deutlich größeres Modell als das hier früher empfohlene 7B-Modell „Mistral Small v0.3". Bei 8 GB RAM starten Sie stattdessen mit Llama 3.1 8B oder Qwen3 8B. Siehe den [Hardware-Guide](/de/local-llms/local-llm-hardware-guide) für die 16GB+-GPU-Klasse, die für Mistral Small 3.2 benötigt wird.',
             },
             {
               q: 'Wie führe ich diese Modelle mit Ollama aus?',
@@ -2146,7 +2146,7 @@ schema: {
           id: 'regional-context',
           title: 'Quel modèle choisir selon votre région ?',
           content: [
-            '**UE / RGPD** : Pour les organisations européennes traitant des données personnelles localement, la provenance du modèle compte pour la documentation de conformité. Les directives allemandes du BSI exigent de documenter l\'origine et le type de licence des modèles pour les systèmes IA utilisés en contexte professionnel. Llama (Meta/USA), Gemma (Google/USA) et Qwen (Alibaba/Chine) sont tous techniquement utilisables sous RGPD pour l\'inférence locale — pour la justification de provenance UE la plus simple, Mistral AI (France) propose des modèles sous licence Apache 2.0 ; la CNIL recommande d\'ailleurs l\'inférence locale pour les professionnels manipulant des données sensibles (documents juridiques, dossiers médicaux, analyses financières). Notez toutefois que les versions actuelles de Mistral Small (24B+) dépassent la plage de RAM débutant de 4–8 Go de cette page ; consultez le [guide matériel](/fr/local-llms/local-llm-hardware-guide-2026) pour connaître le palier GPU nécessaire pour les exécuter.',
+            '**UE / RGPD** : Pour les organisations européennes traitant des données personnelles localement, la provenance du modèle compte pour la documentation de conformité. Les directives allemandes du BSI exigent de documenter l\'origine et le type de licence des modèles pour les systèmes IA utilisés en contexte professionnel. Llama (Meta/USA), Gemma (Google/USA) et Qwen (Alibaba/Chine) sont tous techniquement utilisables sous RGPD pour l\'inférence locale — pour la justification de provenance UE la plus simple, Mistral AI (France) propose des modèles sous licence Apache 2.0 ; la CNIL recommande d\'ailleurs l\'inférence locale pour les professionnels manipulant des données sensibles (documents juridiques, dossiers médicaux, analyses financières). Notez toutefois que les versions actuelles de Mistral Small (24B+) dépassent la plage de RAM débutant de 4–8 Go de cette page ; consultez le [guide matériel](/fr/local-llms/local-llm-hardware-guide) pour connaître le palier GPU nécessaire pour les exécuter.',
             '**Japon (METI)** : Pour les workflows en japonais, Qwen3 8B est le premier modèle approprié — la tokenisation japonaise native produit une meilleure efficacité sur les textes japonais que Llama. Commande : `ollama run qwen3:8b`. Les directives de gouvernance IA du METI exigent la documentation du nom et de la version du modèle — les cinq modèles de cette page utilisent des tags Ollama versionnés satisfaisant cette exigence.',
             '**Chine** : Qwen3 8B (Alibaba) est le premier modèle naturel pour les workflows en chinois. La tokenisation chinoise native et le support de 29+ langues en font le standard pour les workflows Mandarin. Pour les déploiements d\'entreprise chinois sous la loi sur la sécurité des données (数据安全法), Qwen3 exécuté localement via Ollama satisfait les exigences de localisation des données.',
             '**Corée** : Parmi ces cinq choix pour débutants, Qwen3 8B offre la meilleure tokenisation coréenne native. Pour des modèles locaux dédiés au coréen au-delà de ce niveau débutant, consultez [Meilleurs modèles de langue coréenne pour usage local](/fr/prompt-bites/best-korean-language-models-local).',
@@ -2180,7 +2180,7 @@ schema: {
             '[Exécuter des LLM locaux sur laptop](/fr/local-llms/local-llm-on-laptop) — Optimisation RAM et thermique',
             '[Dépanner la configuration LLM locale](/fr/local-llms/troubleshooting-local-llm-setup) — Résoudre les problèmes courants',
             '[Qwen vs Llama vs Mistral](/fr/local-llms/qwen-vs-llama-vs-mistral) — comparaison complète des benchmarks des trois familles de modèles',
-            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Exigences GPU et RAM pour passer de 3B à 7B à 13B',
+            '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) — Exigences GPU et RAM pour passer de 3B à 7B à 13B',
             '[Guide de déploiement local Qwen (2026)](/fr/local-llms/qwen-local-deployment-guide-2026) -- Configuration Qwen3 8B pour débutants via Ollama : une commande pour démarrer.',
             '[Meilleures alternatives open-source à ChatGPT Plus](/fr/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- Interfaces sans code pour les premiers utilisateurs de LLM locaux.',
             '[Meilleurs modèles 7B pour les GPU grand public](/fr/local-llms/best-7b-models-consumer-hardware) -- meilleurs modèles 7B pour hardware grand public',
@@ -2204,7 +2204,7 @@ schema: {
             },
             {
               q: 'Mistral Small 3.2 est-il un bon LLM local pour débutants ?',
-              a: 'Non — Mistral Small 3.2 est un modèle de 24 milliards de paramètres qui nécessite environ 14 Go ou plus de RAM/VRAM, bien au-delà de la plage débutant de 4–8 Go couverte sur cette page. Il s\'agit d\'un modèle différent, bien plus volumineux, du 7B « Mistral Small v0.3 » autrefois recommandé ici. Avec 8 Go de RAM, commencez plutôt avec Llama 3.1 8B ou Qwen3 8B. Consultez le [guide matériel](/fr/local-llms/local-llm-hardware-guide-2026) pour connaître le palier GPU de 16 Go+ nécessaire pour exécuter Mistral Small 3.2.',
+              a: 'Non — Mistral Small 3.2 est un modèle de 24 milliards de paramètres qui nécessite environ 14 Go ou plus de RAM/VRAM, bien au-delà de la plage débutant de 4–8 Go couverte sur cette page. Il s\'agit d\'un modèle différent, bien plus volumineux, du 7B « Mistral Small v0.3 » autrefois recommandé ici. Avec 8 Go de RAM, commencez plutôt avec Llama 3.1 8B ou Qwen3 8B. Consultez le [guide matériel](/fr/local-llms/local-llm-hardware-guide) pour connaître le palier GPU de 16 Go+ nécessaire pour exécuter Mistral Small 3.2.',
             },
             {
               q: 'Comment exécuter ces modèles avec Ollama ?',
@@ -2549,7 +2549,7 @@ schema: {
           content: [
             '**日本（METI）**：日本語ワークフローには、Qwen3 8Bが正しい最初のモデルです——ネイティブ日本語トークン化によりLlamaより30〜40%優れたトークン効率を実現。コマンド：`ollama run qwen3:8b`。2024年のMETI AIガバナンスガイドラインでは、モデル名とバージョンの文書化が求められています——ここに記載された5つのモデルすべてに、これを満たすバージョン付きOllamaタグがあります。',
             '**東アジア（データ主権）**：中国語・韓国語ワークフローにもQwen3 8Bが推奨されます。29言語以上のネイティブサポートにより、アジア太平洋地域全体で最も効率的な多言語モデルです。Ollama経由のローカル推論はデータをローカルに保持するため、APAC地域のデータ越境規制要件を満たします。',
-            '**グローバル（EU・その他）**：EU組織がローカルで個人データを処理する場合、モデルの出所はコンプライアンス文書上重要です。ドイツBSIガイドラインでは、業務でAIシステムを使用する際にモデルの出所とライセンス種別の文書化が求められています。Llama（Meta／米国）、Gemma（Google／米国）、Qwen（Alibaba／中国）はいずれもGDPR下でローカル推論に技術的に使用可能です——最もクリーンなEU出自を求めるなら、Mistral AI（フランス）がApache 2.0ライセンスのモデルを提供していますが、現行のMistral Small系（24B以上）はこのページの初心者向け4〜8 GB RAM範囲を超えます。必要なGPU階層については[ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026)を参照してください。',
+            '**グローバル（EU・その他）**：EU組織がローカルで個人データを処理する場合、モデルの出所はコンプライアンス文書上重要です。ドイツBSIガイドラインでは、業務でAIシステムを使用する際にモデルの出所とライセンス種別の文書化が求められています。Llama（Meta／米国）、Gemma（Google／米国）、Qwen（Alibaba／中国）はいずれもGDPR下でローカル推論に技術的に使用可能です——最もクリーンなEU出自を求めるなら、Mistral AI（フランス）がApache 2.0ライセンスのモデルを提供していますが、現行のMistral Small系（24B以上）はこのページの初心者向け4〜8 GB RAM範囲を超えます。必要なGPU階層については[ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)を参照してください。',
             '**韓国**：この5つの初心者向けモデルの中では、Qwen3 8Bが最も強いネイティブ韓国語トークン化を持ちます。この入門レベルを超えた韓国語専用のローカルモデルについては、[韓国語対応のベストローカルモデル](/ja/prompt-bites/best-korean-language-models-local)を参照してください。',
           ],
         },
@@ -2581,7 +2581,7 @@ schema: {
             '[ノートPCでローカルLLMを実行する方法](/ja/local-llms/local-llm-on-laptop) — RAMと熱管理の最適化',
             '[ローカルLLMセットアップのトラブルシューティング](/ja/local-llms/troubleshooting-local-llm-setup) — よくある問題のデバッグ',
             '[Qwen vs Llama vs Mistral](/ja/local-llms/qwen-vs-llama-vs-mistral) — 7B・13B・70Bの3モデルファミリー全体の詳細ベンチマーク比較',
-            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — 3Bから7B・13Bモデルへのアップグレードに必要なGPUとRAM要件',
+            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — 3Bから7B・13Bモデルへのアップグレードに必要なGPUとRAM要件',
             '[Qwenローカルデプロイガイド (2026)](/ja/local-llms/qwen-local-deployment-guide-2026) -- Ollamaを使った初心者向けQwen3 8Bセットアップ：一コマンドで起動。',
             '[ChatGPT Plusのベストオープンソース代替品](/ja/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- 初めてのローカルLLMユーザー向けノーコードフロントエンド。',
             '[コンシューマハードウェア向け最良の7Bモデル](/ja/local-llms/best-7b-models-consumer-hardware) -- コンシューマハードウェア向けベスト7Bモデル',
@@ -2594,7 +2594,7 @@ schema: {
             { q: '2026年に初心者向けの最良のローカルLLMモデルは何ですか？', a: 'ほとんどのユーザーにはLlama 3.2 3B——4 GB RAMのどのマシンでも動作し、5分以内にダウンロードでき、優れた指示追従出力を提供します。8 GB RAMにはQwen3 8Bがより良いコーディングと多言語性能を提供。最低RAMにはGemma 4 E2Bが1.7 GBでCPUで40〜60トークン/秒で動作、またはRAM 2 GB以下ならLlama 3.2 1B。' },
             { q: 'ローカルLLMを実行するために必要な最低RAMはどれくらいですか？', a: '有用な出力の実用的な最低値はQ4_K_M量子化の3Bモデルで4 GB RAMです。RAM 2 GB以下では、Llama 3.2 1Bが実用的な最小構成ですが、品質は明らかに低下します。8 GB RAMで7-8Bモデルが解放され、複雑なタスクで明らかに優れた結果を生成します。' },
             { q: '最良の1BパラメータのローカルLLMは何ですか？', a: 'Llama 3.2 1Bが推奨の1Bモデルです——ダウンロード約1.3 GB、`ollama run llama3.2:1b`でRAM 2 GB以下でも動作します。基本的な要約や短いQ&Aには使えますが、多段階推論では3B以上のモデルより明らかに弱くなります。ハードウェアが本当に3Bモデルを動かせない場合のみ使用してください。' },
-            { q: 'Mistral Small 3.2は初心者向けのローカルLLMとして良い選択ですか？', a: 'いいえ——Mistral Small 3.2は240億パラメータのモデルで、RAM/VRAMが14 GB以上必要になり、このページで扱う4〜8 GBの初心者向け範囲を大きく超えます。これはかつてここで推奨していた7Bの「Mistral Small v0.3」とは異なる、より大きな別モデルです。RAM 8 GBがある場合は、代わりにLlama 3.1 8BまたはQwen3 8Bから始めてください。Mistral Small 3.2の実行に必要な16 GB以上のGPU階層については[ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026)を参照してください。' },
+            { q: 'Mistral Small 3.2は初心者向けのローカルLLMとして良い選択ですか？', a: 'いいえ——Mistral Small 3.2は240億パラメータのモデルで、RAM/VRAMが14 GB以上必要になり、このページで扱う4〜8 GBの初心者向け範囲を大きく超えます。これはかつてここで推奨していた7Bの「Mistral Small v0.3」とは異なる、より大きな別モデルです。RAM 8 GBがある場合は、代わりにLlama 3.1 8BまたはQwen3 8Bから始めてください。Mistral Small 3.2の実行に必要な16 GB以上のGPU階層については[ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)を参照してください。' },
             { q: 'Ollamaでこれらのモデルをどうやって実行しますか？', a: 'ollama.comからOllamaをインストールし、推奨入門モデルのために`ollama run llama3.2:3b`を実行します。Ollamaは最初の実行時にモデルをダウンロードします。ここに記載された5つのモデルはすべてOllamaライブラリにあります。' },
             { q: 'Llama 3.2 3Bは日常的なタスクに十分ですか？', a: '可：要約、シンプルなQ&A、基本的なコード説明、会話チャット。不可：多段階推論、複雑なコーディング、長形式の構造化文章作成。それらのタスクには8 GB RAMでLlama 3.1 8BまたはQwen3 8Bにアップグレード。' },
             { q: '3Bモデルと7Bモデルの違いは何ですか？', a: '7Bモデルは複雑な指示と推論で明らかに優れた出力を生成します。3Bモデルは約半分のRAMを使用し、2〜3倍速く動作します。選択はほぼ常に利用可能なRAMで決まります——4〜6 GBマシンには3B、8 GBマシンには7B。' },
@@ -2691,7 +2691,7 @@ schema: {
             'name': 'Mistral Small 3.2は初心者向けのローカルLLMとして良い選択ですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'いいえ——Mistral Small 3.2は240億パラメータのモデルで、RAM/VRAMが14 GB以上必要になり、このページで扱う4〜8 GBの初心者向け範囲を大きく超えます。これはかつてここで推奨していた7Bの「Mistral Small v0.3」とは異なる、より大きな別モデルです。RAM 8 GBがある場合は、代わりにLlama 3.1 8BまたはQwen3 8Bから始めてください。Mistral Small 3.2の実行に必要な16 GB以上のGPU階層については[ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026)を参照してください。',
+              'text': 'いいえ——Mistral Small 3.2は240億パラメータのモデルで、RAM/VRAMが14 GB以上必要になり、このページで扱う4〜8 GBの初心者向け範囲を大きく超えます。これはかつてここで推奨していた7Bの「Mistral Small v0.3」とは異なる、より大きな別モデルです。RAM 8 GBがある場合は、代わりにLlama 3.1 8BまたはQwen3 8Bから始めてください。Mistral Small 3.2の実行に必要な16 GB以上のGPU階層については[ハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)を参照してください。',
             },
           },
           {
@@ -3037,7 +3037,7 @@ schema: {
             '[如何在笔记本电脑上运行本地LLM](/zh/local-llms/local-llm-on-laptop) — 内存和散热优化',
             '[本地LLM设置故障排查](/zh/local-llms/troubleshooting-local-llm-setup) — 调试常见问题',
             '[Qwen vs Llama vs Mistral](/zh/local-llms/qwen-vs-llama-vs-mistral) — 三大模型系列在7B、13B和70B的完整基准对比',
-            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — 从3B升级到7B再到13B模型所需的GPU和内存要求',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) — 从3B升级到7B再到13B模型所需的GPU和内存要求',
             '[Qwen本地部署指南 (2026)](/zh/local-llms/qwen-local-deployment-guide-2026) -- 通过Ollama的初学者友好型Qwen3 8B设置：一条命令即可运行。',
             '[ChatGPT Plus最佳开源替代品](/zh/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- 首次使用本地LLM用户的无代码前端。',
             '[消费级硬件最佳7B模型](/zh/local-llms/best-7b-models-consumer-hardware) -- 消费级硬件最佳7B模型',
@@ -3061,7 +3061,7 @@ schema: {
             },
             {
               q: 'Mistral Small 3.2适合作为初学者本地LLM吗？',
-              a: '不适合——Mistral Small 3.2是一款24B参数模型，大约需要14 GB以上的内存/显存，远超本页4–8 GB的入门范围。它与本页此前推荐的7B "Mistral Small v0.3"是不同、更大的模型。如果您有8 GB内存，请改用Llama 3.1 8B或Qwen3 8B。运行Mistral Small 3.2所需的16GB以上GPU等级请参见[硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)。',
+              a: '不适合——Mistral Small 3.2是一款24B参数模型，大约需要14 GB以上的内存/显存，远超本页4–8 GB的入门范围。它与本页此前推荐的7B "Mistral Small v0.3"是不同、更大的模型。如果您有8 GB内存，请改用Llama 3.1 8B或Qwen3 8B。运行Mistral Small 3.2所需的16GB以上GPU等级请参见[硬件指南](/zh/local-llms/local-llm-hardware-guide)。',
             },
             {
               q: '如何用Ollama运行这些模型？',
@@ -3413,7 +3413,7 @@ schema: {
         title: '지역에 따라 어떤 모델을 선택해야 할까요?',
         content: [
           '**한국 (개인정보보호법)**: 한국 개인정보보호법(PIPA)에 따라 개인 데이터를 로컬에서 처리하는 조직은 데이터 처리 내역을 문서화해야 합니다. Ollama를 통한 로컬 추론은 데이터가 외부 서버로 전송되지 않으므로 데이터 현지화 요건을 충족합니다. 금융, 의료, 법률 등 규제 산업의 경우 로컬 LLM 추론은 API 호출의 규정 준수 대안입니다. 이 다섯 가지 초보자 추천 모델 중에서는 Qwen3 8B가 가장 강력한 네이티브 한국어 토크나이제이션을 갖추고 있습니다. 이 입문 등급을 넘어서는 전용 한국어 로컬 모델은 [로컬용 최고의 한국어 언어 모델](/ko/prompt-bites/best-korean-language-models-local)을 참조하세요.',
-          '**EU / GDPR**: EU 조직이 개인 데이터를 로컬에서 처리할 때 컴플라이언스 문서화를 위해 모델 출처가 중요합니다. 독일 BSI 지침은 전문적 맥락에서 사용되는 AI 시스템에 대해 모델 출처와 라이선스 유형의 문서화를 요구합니다. Llama(Meta/미국), Gemma(Google/미국), Qwen(Alibaba/중국)은 모두 로컬 추론에서 GDPR 상 기술적으로 사용 가능합니다 -- 가장 깔끔한 EU 출처 서술을 원한다면 Mistral AI(프랑스)가 Apache 2.0 라이선스 모델을 제공하지만, 현재 Mistral Small 릴리스(24B 이상)는 이 페이지의 4-8 GB 초보자 RAM 범위를 초과합니다. 실행에 필요한 GPU 등급은 [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참조하세요.',
+          '**EU / GDPR**: EU 조직이 개인 데이터를 로컬에서 처리할 때 컴플라이언스 문서화를 위해 모델 출처가 중요합니다. 독일 BSI 지침은 전문적 맥락에서 사용되는 AI 시스템에 대해 모델 출처와 라이선스 유형의 문서화를 요구합니다. Llama(Meta/미국), Gemma(Google/미국), Qwen(Alibaba/중국)은 모두 로컬 추론에서 GDPR 상 기술적으로 사용 가능합니다 -- 가장 깔끔한 EU 출처 서술을 원한다면 Mistral AI(프랑스)가 Apache 2.0 라이선스 모델을 제공하지만, 현재 Mistral Small 릴리스(24B 이상)는 이 페이지의 4-8 GB 초보자 RAM 범위를 초과합니다. 실행에 필요한 GPU 등급은 [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참조하세요.',
           '**중국**: Qwen3 8B (Alibaba)가 중국어 워크플로우의 첫 번째 모델로 자연스러운 선택입니다. 네이티브 중국어 토크나이제이션과 29개 이상 언어 지원으로 중국어 우선 워크플로우의 표준이 됩니다. 중국 데이터 보안법(数据安全法)에 따른 중국 기업 배포의 경우, Ollama를 통한 로컬 실행의 Qwen3가 데이터 현지화 요건을 충족합니다.',
         ],
       },
@@ -3445,7 +3445,7 @@ schema: {
           '[노트북에서 로컬 LLM 실행 방법](/ko/local-llms/local-llm-on-laptop) -- RAM 및 발열 최적화',
           '[로컬 LLM 설정 트러블슈팅](/ko/local-llms/troubleshooting-local-llm-setup) -- 일반적인 문제 디버깅',
           '[Qwen vs Llama vs Mistral](/ko/local-llms/qwen-vs-llama-vs-mistral) -- 7B, 13B, 70B의 세 모델 패밀리 전체 벤치마크 비교',
-          '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 3B에서 7B, 13B 모델로 업그레이드하기 위한 GPU 및 RAM 요구사항',
+          '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) -- 3B에서 7B, 13B 모델로 업그레이드하기 위한 GPU 및 RAM 요구사항',
           '[Qwen 로컬 배포 가이드 (2026)](/ko/local-llms/qwen-local-deployment-guide-2026) -- Ollama를 통한 초보자 친화적 Qwen3 8B 설정: 실행까지 한 명령으로.',
           '[ChatGPT Plus 최고의 오픈소스 대안](/ko/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- 처음 로컬 LLM을 사용하는 사용자를 위한 노코드 프론트엔드.',
           '[소비자 하드웨어를 위한 최고의 7B 모델](/ko/local-llms/best-7b-models-consumer-hardware) -- 소비자 하드웨어를 위한 최고의 7B 모델',
@@ -3477,7 +3477,7 @@ schema: {
           },
           {
             q: 'Mistral Small 3.2는 좋은 초보자용 로컬 LLM인가요?',
-            a: '아닙니다 -- Mistral Small 3.2는 24B 파라미터 모델로 약 14 GB 이상의 RAM/VRAM이 필요하며, 이 페이지가 다루는 4-8 GB 초보자 범위를 크게 초과합니다. 이는 과거 이 페이지에서 추천했던 7B "Mistral Small v0.3"와는 다른, 더 큰 모델입니다. RAM이 8 GB라면 대신 Llama 3.1 8B나 Qwen3 8B로 시작하세요. Mistral Small 3.2를 실행하는 데 필요한 16GB 이상 GPU 등급은 [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참조하세요.',
+            a: '아닙니다 -- Mistral Small 3.2는 24B 파라미터 모델로 약 14 GB 이상의 RAM/VRAM이 필요하며, 이 페이지가 다루는 4-8 GB 초보자 범위를 크게 초과합니다. 이는 과거 이 페이지에서 추천했던 7B "Mistral Small v0.3"와는 다른, 더 큰 모델입니다. RAM이 8 GB라면 대신 Llama 3.1 8B나 Qwen3 8B로 시작하세요. Mistral Small 3.2를 실행하는 데 필요한 16GB 이상 GPU 등급은 [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참조하세요.',
           },
           {
             q: 'Ollama로 이 모델들을 어떻게 실행하나요?',

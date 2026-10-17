@@ -131,7 +131,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     ],
     externalLinks: [
       { url: '/prompt-engineering/rag-explained', reasoning: 'concept authority' },
-      { url: '/local-llms/local-llm-hardware-guide-2026', reasoning: 'hardware sizing for RAG workloads' },
+      { url: '/local-llms/local-llm-hardware-guide', reasoning: 'hardware sizing for RAG workloads' },
     ],
     structure: {
       label: 'Comparison table structure',
@@ -179,7 +179,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     ],
     externalLinks: [
       { url: '/prompt-engineering/rag-explained', reasoning: 'concept authority' },
-      { url: '/local-llms/local-llm-hardware-guide-2026', reasoning: 'hardware sizing reference' },
+      { url: '/local-llms/local-llm-hardware-guide', reasoning: 'hardware sizing reference' },
     ],
     structure: {
       label: 'Step-by-step format (no comparison table)',
@@ -256,7 +256,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
       { ref: 'best-embedding-models-local-rag-2026', reasoning: 'scaling embedding choice' },
       { ref: 'local-rag-for-private-business-data', reasoning: 'natural escalation to enterprise' },
     ],
-    externalLinks: [{ url: '/local-llms/local-llm-hardware-guide-2026', reasoning: 'hardware sizing for scale' }],
+    externalLinks: [{ url: '/local-llms/local-llm-hardware-guide', reasoning: 'hardware sizing for scale' }],
     structure: {
       label: 'Architecture comparison table',
       headers: [
@@ -642,7 +642,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
       { ref: 'autonomous-local-agents-actually-work', reasoning: 'context for limitations' },
       { ref: 'replace-grammarly-notion-ai-with-local', reasoning: 'adjacent SaaS replacement' },
     ],
-    externalLinks: [{ url: '/local-llms/local-llm-hardware-guide-2026', reasoning: 'hardware sizing' }],
+    externalLinks: [{ url: '/local-llms/local-llm-hardware-guide', reasoning: 'hardware sizing' }],
     structure: {
       label: 'Workflow comparison table',
       headers: ['Workflow', 'Zapier setup time', 'Local setup time', 'Monthly cost (Zapier)', 'Reliability after 30d'],
@@ -995,7 +995,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     ],
     externalLinks: [
       { url: '/prompt-engineering/rag-explained', reasoning: 'concept authority for the retrieval layer' },
-      { url: '/local-llms/local-llm-hardware-guide-2026', reasoning: 'hardware sizing — 16 GB floor, 32 GB recommended past 10K items' },
+      { url: '/local-llms/local-llm-hardware-guide', reasoning: 'hardware sizing — 16 GB floor, 32 GB recommended past 10K items' },
     ],
     structure: {
       label: 'Architecture comparison table (5-col)',

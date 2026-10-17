@@ -184,7 +184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- GPU, Apple Silicon, and CPU options for local inference.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- GPU, Apple Silicon, and CPU options for local inference.',
             '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) -- Latest open-source model rankings.',
             '[Why Enterprises Use Local LLMs](/local-llms/why-enterprises-use-local-llms) -- Cost, compliance, and control analysis.',
             '[How to Double Local LLM Speed](/local-llms/double-local-llm-speed) -- Production optimization techniques.',
@@ -465,7 +465,7 @@ schema: {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            '[Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026) -- Opciones de GPU, Apple Silicon y CPU para inferencia local.',
+            '[Guía de hardware para LLMs locales](/es/local-llms/local-llm-hardware-guide) -- Opciones de GPU, Apple Silicon y CPU para inferencia local.',
             '[Mejores LLMs locales 2026](/es/local-llms/best-local-llms-2026) -- Últimas clasificaciones de modelos de código abierto.',
             '[Por qué las empresas usan LLMs locales](/es/local-llms/why-enterprises-use-local-llms) -- Análisis de costo, cumplimiento y control.',
             '[Cómo duplicar la velocidad de tu LLM local](/es/local-llms/double-local-llm-speed) -- Técnicas de optimización para producción.',
@@ -752,7 +752,7 @@ schema: {
           id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
-            '[دليل الأجهزة لنماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- خيارات GPU و Apple Silicon و CPU للاستدلال المحلي.',
+            '[دليل الأجهزة لنماذج LLM المحلية](/ar/local-llms/local-llm-hardware-guide) -- خيارات GPU و Apple Silicon و CPU للاستدلال المحلي.',
             '[أفضل نماذج LLM المحلية 2026](/ar/local-llms/best-local-llms-2026) -- أحدث تصنيفات النماذج مفتوحة المصدر.',
             '[لماذا تستخدم الشركات نماذج LLM المحلية](/ar/local-llms/why-enterprises-use-local-llms) -- تحليل التكلفة والامتثال والتحكم.',
             '[كيفية مضاعفة سرعة نموذج LLM المحلي لديك](/ar/local-llms/double-local-llm-speed) -- تقنيات التحسين للإنتاج.',
@@ -1147,7 +1147,7 @@ schema: {
           id: 'related-reading',
           title: 'Weitere Ressourcen',
           items: [
-            '[Lokale LLM-Hardware-Anleitung 2026](/de/local-llms/local-llm-hardware-guide-2026) -- GPU, Apple Silicon und CPU-Optionen für lokale Inferenz.',
+            '[Lokale LLM-Hardware-Anleitung](/de/local-llms/local-llm-hardware-guide) -- GPU, Apple Silicon und CPU-Optionen für lokale Inferenz.',
             '[Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026) -- Neueste Open-Source-Modell-Rankings.',
             '[Warum Unternehmen lokale LLMs nutzen](/de/local-llms/why-enterprises-use-local-llms) -- Kosten-, Compliance- und Kontrollanalyse.',
             '[Lokale LLM-Geschwindigkeit verdoppeln](/de/local-llms/double-local-llm-speed) -- Produktions-Optimierungstechniken.',
@@ -1477,7 +1477,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures connexes',
           items: [
-            '[Guide du matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Options GPU, Apple Silicon et CPU pour l\'inférence locale.',
+            '[Guide du matériel LLM local](/fr/local-llms/local-llm-hardware-guide) -- Options GPU, Apple Silicon et CPU pour l\'inférence locale.',
             '[Meilleurs LLM locaux 2026](/fr/local-llms/best-local-llms-2026) -- Classements des derniers modèles open-source.',
             '[Pourquoi les entreprises utilisent les LLM locaux](/fr/local-llms/why-enterprises-use-local-llms) -- Analyse des coûts, conformité et contrôle.',
             '[Comment doubler la vitesse des LLM locaux](/fr/local-llms/double-local-llm-speed) -- Techniques d\'optimisation de la production.',
@@ -1764,7 +1764,7 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) -- ローカル推論GPU・Apple Silicon・CPU選択肢',
+            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) -- ローカル推論GPU・Apple Silicon・CPU選択肢',
             '[ベストローカルLLM2026](/ja/local-llms/best-local-llms-2026) -- 最新オープンソースモデルランキング',
             '[エンタープライズなぜローカルLLM](/ja/local-llms/why-enterprises-use-local-llms) -- コスト・コンプライアンス・コントロール分析',
             '[ローカルLLM速度2倍化](/ja/local-llms/double-local-llm-speed) -- 本番最適化技法',
@@ -2051,7 +2051,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) -- GPU、Apple Silicon和CPU本地推理选项',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) -- GPU、Apple Silicon和CPU本地推理选项',
             '[最佳本地LLM 2026](/zh/local-llms/best-local-llms-2026) -- 最新开源模型排名',
             '[企业为何使用本地LLM](/zh/local-llms/why-enterprises-use-local-llms) -- 成本、合规和控制分析',
             '[本地LLM速度加倍](/zh/local-llms/double-local-llm-speed) -- 生产优化技术',
@@ -2365,7 +2365,7 @@ schema: {
           id: 'related-reading',
           title: '관련 읽을거리',
           items: [
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 로컬 추론을 위한 GPU, Apple Silicon, CPU 옵션.',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) -- 로컬 추론을 위한 GPU, Apple Silicon, CPU 옵션.',
             '[최고의 로컬 LLM 2026](/ko/local-llms/best-local-llms-2026) -- 최신 오픈소스 모델 순위.',
             '[기업이 로컬 LLM을 사용하는 이유](/ko/local-llms/why-enterprises-use-local-llms) -- 비용, 규정 준수, 통제 분석.',
             '[로컬 LLM 속도를 두 배로 높이는 방법](/ko/local-llms/double-local-llm-speed) -- 프로덕션 최적화 기법.',
