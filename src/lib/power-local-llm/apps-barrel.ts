@@ -119,6 +119,7 @@ import { app as app_tokforge } from './apps/tokforge'
 import { app as app_oscilla } from './apps/oscilla'
 import { app as app_tina } from './apps/tina'
 import { app as app_mlxhub } from './apps/mlxhub'
+import { app as app_local_ai_chat_pocket } from './apps/local-ai-chat-pocket'
 import { app as app_layla } from './apps/layla'
 import { app as app_maid } from './apps/maid'
 import { app as app_chapper } from './apps/chapper'
@@ -486,6 +487,7 @@ export const localAiApps: ToolRecord[] = [
   app_oscilla,
   app_tina,
   app_mlxhub,
+  app_local_ai_chat_pocket,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length

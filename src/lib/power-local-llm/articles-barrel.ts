@@ -44,6 +44,7 @@ import { article as a_tokforge_review } from './articles/tokforge-review'
 import { article as a_oscilla_review } from './articles/oscilla-review'
 import { article as a_tina_review } from './articles/tina-review'
 import { article as a_mlxhub_review } from './articles/mlxhub-review'
+import { article as a_local_ai_chat_pocket_review } from './articles/local-ai-chat-pocket-review'
 import { article as a_ollama_local_ai_review } from './articles/ollama-local-ai-review'
 import { article as a_comfyui_review } from './articles/comfyui-review'
 import { article as a_rikkahub_review } from './articles/rikkahub-review'
@@ -626,6 +627,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'oscilla-review':                                a_oscilla_review,
   'tina-review':                                   a_tina_review,
   'mlxhub-review':                                 a_mlxhub_review,
+  'local-ai-chat-pocket-review':                   a_local_ai_chat_pocket_review,
   'ollama-local-ai-review':                        a_ollama_local_ai_review,
   // ComfyUI review — 2026-09-06
   'comfyui-review':                                a_comfyui_review,
