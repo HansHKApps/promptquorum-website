@@ -10770,6 +10770,24 @@
       ],
       "images": []
     },
+    "localmind-review": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-17",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "tokforge-review": {
       "dateModified": "2026-10-09",
       "lastFactChecked": null,
