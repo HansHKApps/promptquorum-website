@@ -37,6 +37,7 @@ const GROUP_ACCENT: Record<CategoryGroupKey, { bar: string; chip: string; avatar
   'voice-audio': { bar: 'bg-rose-500', chip: 'bg-rose-50 text-rose-700', avatar: 'bg-rose-100 text-rose-700' },
   'images-video': { bar: 'bg-fuchsia-500', chip: 'bg-fuchsia-50 text-fuchsia-700', avatar: 'bg-fuchsia-100 text-fuchsia-700' },
   'train-operate': { bar: 'bg-amber-500', chip: 'bg-amber-50 text-amber-700', avatar: 'bg-amber-100 text-amber-700' },
+  'at-the-edge': { bar: 'bg-orange-500', chip: 'bg-orange-50 text-orange-700', avatar: 'bg-orange-100 text-orange-700' },
 }
 
 const LOCALITY_BADGE: Record<'local' | 'hybrid' | 'cloud', string> = {

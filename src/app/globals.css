@@ -61,6 +61,9 @@
     --cat-train-operate: 178 55% 38%;
     --cat-train-operate-tint: 178 70% 96%;
     --cat-train-operate-edge: 178 45% 78%;
+    --cat-at-the-edge: 24 70% 42%;
+    --cat-at-the-edge-tint: 24 85% 96%;
+    --cat-at-the-edge-edge: 24 60% 78%;
   }
 }
 

@@ -181,6 +181,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'localmind':                               'localmind',
   'tokforge':                                'tokforge',
   'friedrichai':                             'friedrichai',
+  'snug-protocol':                           'snug-protocol',
   'spiritbox-ultimate':                      'spiritbox-ultimate',
   'oscilla':                                 'oscilla',
   'tina':                                    'tina',
