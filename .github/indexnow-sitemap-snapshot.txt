@@ -147,7 +147,7 @@ https://www.promptquorum.com/local-llms/local-ai-code-review-vs-coderabbit
 https://www.promptquorum.com/local-llms/local-llm-commercial-license-guide-business
 https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026
 https://www.promptquorum.com/local-llms/local-llm-developer-stack
-https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026
+https://www.promptquorum.com/local-llms/local-llm-hardware-guide
 https://www.promptquorum.com/local-llms/local-llm-lgpd-compliance-brazil-2026
 https://www.promptquorum.com/local-llms/local-llm-limitations
 https://www.promptquorum.com/local-llms/local-llm-model-updates-2026
@@ -269,7 +269,7 @@ https://www.promptquorum.com/power-local-llm/best-local-ai-app-low-end-pc
 https://www.promptquorum.com/power-local-llm/best-local-coding-models-2026
 https://www.promptquorum.com/power-local-llm/best-local-llm-apps-android-2026
 https://www.promptquorum.com/power-local-llm/best-local-llm-apps-iphone-2026
-https://www.promptquorum.com/power-local-llm/best-local-llm-creative-writing-2026
+https://www.promptquorum.com/power-local-llm/best-local-llm-creative-writing
 https://www.promptquorum.com/power-local-llm/best-local-llm-ide-plugins-2026
 https://www.promptquorum.com/power-local-llm/best-local-llms-customer-support-call-centers-enterprise
 https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026
