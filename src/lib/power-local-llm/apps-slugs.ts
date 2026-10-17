@@ -190,6 +190,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'pcai-photo-retouch':                      'pcai-photo-retouch',
   'honey-llm':                               'honey-llm',
   'mlxhub':                                  'mlxhub',
+  'local-ai-chat-pocket':                    'local-ai-chat-pocket',
   'openmontage':                             'openmontage',
   'whisper-notes':                           'whisper-notes',
   'anyllm':                                  'anyllm',

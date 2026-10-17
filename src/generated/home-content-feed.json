@@ -8345,9 +8345,9 @@
   {
     "lang": "en",
     "title": "LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)",
-    "excerpt": "Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, and Q8_K_XL compared. VRAM per 7B model, quality loss, and which GGUF quant to pick for your hardware in 2026.",
+    "excerpt": "Q4_K_M is the default 4-bit GGUF quant: ~4.5 GB per 7B model, 1–3% quality loss. Compare Q4_K_S, Q5_K_M, Q6_K and Q8_0 by VRAM to pick yours in 2026.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-17",
     "url": "/local-llms/llm-quantization-explained",
     "cluster": "local-llms"
   },
@@ -21709,8 +21709,8 @@
   },
   {
     "lang": "en",
-    "title": "The Complete Local AI & LLM Software Directory: 253 Apps & Tools for Running AI Locally (2026)",
-    "excerpt": "Browse 253 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
+    "title": "The Complete Local AI & LLM Software Directory: 254 Apps & Tools for Running AI Locally (2026)",
+    "excerpt": "Browse 254 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/power-local-llm/local-llm-software-directory",
@@ -21718,8 +21718,8 @@
   },
   {
     "lang": "de",
-    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 253 Apps und Tools, um KI lokal auszuführen (2026)",
-    "excerpt": "Entdecken Sie 253 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
+    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 254 Apps und Tools, um KI lokal auszuführen (2026)",
+    "excerpt": "Entdecken Sie 254 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/de/power-local-llm/local-llm-software-directory",
@@ -21727,8 +21727,8 @@
   },
   {
     "lang": "fr",
-    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 253 apps et outils pour exécuter l'IA en local (2026)",
-    "excerpt": "Parcourez 253 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
+    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 254 apps et outils pour exécuter l'IA en local (2026)",
+    "excerpt": "Parcourez 254 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/fr/power-local-llm/local-llm-software-directory",
@@ -21736,8 +21736,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす253のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを253件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす254のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを254件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/ja/power-local-llm/local-llm-software-directory",
@@ -21745,8 +21745,8 @@
   },
   {
     "lang": "zh",
-    "title": "本地AI与LLM软件完整目录：253款应用与工具，在本地运行AI（2026）",
-    "excerpt": "收录253款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI与LLM软件完整目录：254款应用与工具，在本地运行AI（2026）",
+    "excerpt": "收录254款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/zh/power-local-llm/local-llm-software-directory",
@@ -21754,8 +21754,8 @@
   },
   {
     "lang": "es",
-    "title": "El directorio completo de software de IA y LLM local: 253 apps y herramientas para ejecutar IA en local (2026)",
-    "excerpt": "Explora 253 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
+    "title": "El directorio completo de software de IA y LLM local: 254 apps y herramientas para ejecutar IA en local (2026)",
+    "excerpt": "Explora 254 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/es/power-local-llm/local-llm-software-directory",
@@ -21763,8 +21763,8 @@
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 253 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 253 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 254 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 254 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/pt/power-local-llm/local-llm-software-directory",
@@ -21772,8 +21772,8 @@
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 253 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 253 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 254 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 254 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/ar/power-local-llm/local-llm-software-directory",
@@ -21781,8 +21781,8 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 253개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 253개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 254개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 254개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/ko/power-local-llm/local-llm-software-directory",
@@ -30296,81 +30296,81 @@
   {
     "lang": "en",
     "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-    "excerpt": "Locally Uncensored is a free, open-source (AGPL-3.0) desktop app for local chat, a coding agent, image and video generation, and LoRA training on Windows and Linux, with QR-code phone pairing. Verified 2026 review.",
+    "excerpt": "Locally Uncensored is a free, open-source (AGPL-3.0) local AI app for Windows and Linux. Safety, download, GPU needs, Mac and phone access reviewed.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-22",
+    "dateModified": "2026-10-17",
     "url": "/power-local-llm/locally-uncensored-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Locally Uncensored Review: Lokaler Chat, Bild und Video in einer App",
-    "excerpt": "Locally Uncensored ist eine kostenlose, quelloffene (AGPL-3.0) Desktop-App für lokalen Chat, Code und Bildgenerierung unter Windows und Linux, mit QR-Code-Smartphone-Kopplung. Geprüfte Review 2026.",
+    "excerpt": "Locally Uncensored: kostenlose Open-Source-App (AGPL-3.0) für lokale KI unter Windows und Linux. Sicherheit, Download, GPU-Bedarf, Mac und Handy geprüft.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-22",
+    "dateModified": "2026-10-17",
     "url": "/de/power-local-llm/locally-uncensored-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Locally Uncensored: avis sur le chat, l'image et la vidéo locaux en une seule application",
-    "excerpt": "Locally Uncensored est une application de bureau gratuite et open source (AGPL-3.0) pour le chat, le code et la génération d'images en local sous Windows et Linux, avec couplage par QR code. Avis vérifié 2026.",
+    "excerpt": "Locally Uncensored est une appli d'IA locale gratuite et open source (AGPL-3.0) pour Windows et Linux. Sécurité, téléchargement, GPU, Mac et mobile analysés.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-22",
+    "dateModified": "2026-10-17",
     "url": "/fr/power-local-llm/locally-uncensored-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "Locally Uncensored レビュー：チャット・画像・動画をローカルで1つに統合するアプリ",
-    "excerpt": "Locally UncensoredはWindows・Linux向けの無料・オープンソース（AGPL-3.0）デスクトップアプリ。QRコードでスマホ連携も可能なローカルチャット・コード・画像生成ツール。2026年検証済みレビュー。",
+    "excerpt": "Locally UncensoredはWindows・Linux向けの無料オープンソース（AGPL-3.0）ローカルAIアプリ。安全性、ダウンロード、必要GPU、Mac対応、スマホ連携を検証。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-22",
+    "dateModified": "2026-10-17",
     "url": "/ja/power-local-llm/locally-uncensored-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "Locally Uncensored 评测：一个应用搞定本地聊天、图像与视频",
-    "excerpt": "Locally Uncensored是一款面向Windows和Linux的免费开源（AGPL-3.0）桌面应用，支持本地聊天、代码与图像生成，并可通过二维码与手机配对。2026年经核实评测。",
+    "excerpt": "Locally Uncensored是面向Windows和Linux的免费开源（AGPL-3.0）本地AI应用。评测安全性、下载方式、GPU需求、Mac支持和手机连接。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-22",
+    "dateModified": "2026-10-17",
     "url": "/zh/power-local-llm/locally-uncensored-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Locally Uncensored: reseña de chat, imagen y video local en una sola app",
-    "excerpt": "Locally Uncensored es una app de escritorio gratuita y de código abierto (AGPL-3.0) para chat, código e imágenes en local en Windows y Linux, con emparejamiento por código QR. Reseña verificada 2026.",
+    "excerpt": "Locally Uncensored es una app de IA local gratuita y de código abierto (AGPL-3.0) para Windows y Linux. Seguridad, descarga, GPU, Mac y móvil revisados.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-22",
+    "dateModified": "2026-10-17",
     "url": "/es/power-local-llm/locally-uncensored-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Locally Uncensored: análise de chat, imagem e vídeo locais em um só app",
-    "excerpt": "Locally Uncensored é um app de desktop gratuito e de código aberto (AGPL-3.0) para chat, código e geração de imagens local no Windows e Linux, com pareamento por QR code. Análise verificada 2026.",
+    "excerpt": "Locally Uncensored é um app de IA local gratuito e de código aberto (AGPL-3.0) para Windows e Linux. Segurança, download, GPU, Mac e celular analisados.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-22",
+    "dateModified": "2026-10-17",
     "url": "/pt/power-local-llm/locally-uncensored-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مراجعة Locally Uncensored: الدردشة والصور والفيديو محليًا في تطبيق واحد",
-    "excerpt": "Locally Uncensored تطبيق سطح مكتب مجاني ومفتوح المصدر (AGPL-3.0) للدردشة والبرمجة وتوليد الصور محليًا على Windows وLinux، مع اقتران عبر رمز QR بالهاتف. مراجعة موثّقة لعام 2026.",
+    "excerpt": "Locally Uncensored تطبيق ذكاء اصطناعي محلي مجاني ومفتوح المصدر (AGPL-3.0) لنظامي Windows وLinux. مراجعة الأمان والتنزيل ومتطلبات GPU ودعم Mac والهاتف.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-22",
+    "dateModified": "2026-10-17",
     "url": "/ar/power-local-llm/locally-uncensored-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "Locally Uncensored 리뷰: 로컬 채팅·이미지·비디오를 하나의 앱으로",
-    "excerpt": "Locally Uncensored는 Windows와 Linux용 무료 오픈소스(AGPL-3.0) 데스크톱 앱으로, QR 코드로 스마트폰과 연동하며 로컬 채팅·코드·이미지 생성을 지원합니다. 2026년 검증된 리뷰.",
+    "excerpt": "Locally Uncensored는 Windows·Linux용 무료 오픈소스(AGPL-3.0) 로컬 AI 앱입니다. 안전성, 다운로드, GPU 요구사항, Mac 지원, 스마트폰 연동을 검증했습니다.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-22",
+    "dateModified": "2026-10-17",
     "url": "/ko/power-local-llm/locally-uncensored-review",
     "cluster": "power-local-llm"
   },
@@ -33536,7 +33536,7 @@
   {
     "lang": "en",
     "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-    "excerpt": "Compare 84 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
+    "excerpt": "Compare 85 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -33554,7 +33554,7 @@
   {
     "lang": "fr",
     "title": "Applications de chat IA locales et assistants : comparatif (2026) — bureau, mobile, auto-hébergé, assistants et jeu de rôle",
-    "excerpt": "Comparez 84 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
+    "excerpt": "Comparez 85 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-chat-assistants-compared",
@@ -33563,7 +33563,7 @@
   {
     "lang": "ja",
     "title": "ローカルチャットアプリとAIアシスタント比較(2026):デスクトップ、モバイル、セルフホスト、アシスタント、ロールプレイ",
-    "excerpt": "ローカルチャットアプリとAIアシスタント84種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
+    "excerpt": "ローカルチャットアプリとAIアシスタント85種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-chat-assistants-compared",
@@ -33572,7 +33572,7 @@
   {
     "lang": "zh",
     "title": "本地聊天应用与助手对比(2026):桌面、手机、自托管、助手与角色扮演",
-    "excerpt": "并排对比84款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
+    "excerpt": "并排对比85款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-chat-assistants-compared",
@@ -33581,7 +33581,7 @@
   {
     "lang": "es",
     "title": "Apps de chat y asistentes locales, comparados (2026): escritorio, móvil, autoalojados, asistentes y rol",
-    "excerpt": "Compara 84 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
+    "excerpt": "Compara 85 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-chat-assistants-compared",
@@ -33590,7 +33590,7 @@
   {
     "lang": "pt",
     "title": "Apps de chat locais e assistentes comparados (2026): desktop, celular, self-hosted, assistentes e roleplay",
-    "excerpt": "Compare 84 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
+    "excerpt": "Compare 85 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-chat-assistants-compared",
@@ -33599,7 +33599,7 @@
   {
     "lang": "ar",
     "title": "مقارنة تطبيقات الدردشة والمساعدات المحلية (2026): سطح المكتب والجوال والاستضافة الذاتية والمساعدات ولعب الأدوار",
-    "excerpt": "قارن 84 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
+    "excerpt": "قارن 85 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-chat-assistants-compared",
@@ -33608,7 +33608,7 @@
   {
     "lang": "ko",
     "title": "로컬 채팅 앱·AI 어시스턴트 비교(2026): 데스크톱, 모바일, 셀프 호스팅, 어시스턴트, 롤플레이",
-    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 84개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 85개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-chat-assistants-compared",
@@ -39606,6 +39606,87 @@
     "publishDate": "2026-10-05",
     "dateModified": "2026-10-05",
     "url": "/ko/power-local-llm/mlxhub-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Local AI Chat Pocket Review: Offline LLM and Image Chat for iPhone and iPad",
+    "excerpt": "Local AI Chat Pocket review: iPhone and iPad app for offline on-device LLM and image chat. Pricing from $6.99 weekly, iOS 18.6 requirement, privacy policy and cloud option, limits, alternatives.",
+    "publishDate": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "url": "/power-local-llm/local-ai-chat-pocket-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Local AI Chat Pocket Rezension: Offline-LLM und Bild-Chat für iPhone und iPad",
+    "excerpt": "Local AI Chat Pocket Rezension: iPhone- und iPad-App für Offline-LLM- und Bild-Chat auf dem Gerät. Preise ab $6.99 pro Woche, iOS-18.6-Voraussetzung, Datenschutzerklärung und Cloud-Option, Grenzen, Alternativen.",
+    "publishDate": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "url": "/de/power-local-llm/local-ai-chat-pocket-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Avis Local AI Chat Pocket: chat LLM et images hors ligne pour iPhone et iPad",
+    "excerpt": "Avis Local AI Chat Pocket : application iPhone et iPad pour chat LLM et images hors ligne sur l'appareil. Tarifs dès $6.99 par semaine, prérequis iOS 18.6, confidentialité et mode cloud, limites, alternatives.",
+    "publishDate": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "url": "/fr/power-local-llm/local-ai-chat-pocket-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Local AI Chat Pocketレビュー:iPhoneとiPad向けのオフラインLLM・画像チャットアプリ",
+    "excerpt": "Local AI Chat Pocketレビュー:オフラインのオンデバイスLLMと画像チャットに対応するiPhoneとiPad向けアプリ。料金は週額$6.99から、iOS 18.6の要件、プライバシーポリシーとクラウドモード、制約、代替アプリを解説。",
+    "publishDate": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "url": "/ja/power-local-llm/local-ai-chat-pocket-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Local AI Chat Pocket评测：适用于iPhone和iPad的离线大模型与图像聊天",
+    "excerpt": "Local AI Chat Pocket评测：支持设备端离线大模型和图像聊天的iPhone和iPad应用。每周$6.99起的定价、iOS 18.6要求、隐私政策与云端选项、局限、替代方案。",
+    "publishDate": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "url": "/zh/power-local-llm/local-ai-chat-pocket-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Local AI Chat Pocket: chat de LLM e imágenes sin conexión para iPhone y iPad",
+    "excerpt": "Reseña de Local AI Chat Pocket: app para iPhone y iPad con chat de LLM e imágenes sin conexión en el dispositivo. Precios desde $6.99 semanales, requisito de iOS 18.6, política de privacidad y modo nube, límites, alternativas.",
+    "publishDate": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "url": "/es/power-local-llm/local-ai-chat-pocket-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Local AI Chat Pocket: chat offline com LLM e imagens no iPhone e iPad",
+    "excerpt": "Análise do Local AI Chat Pocket: app para iPhone e iPad com chat de LLM e imagens offline no dispositivo. Preços a partir de $6.99 por semana, exigência do iOS 18.6, política de privacidade, modo na nuvem, limites e alternativas.",
+    "publishDate": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "url": "/pt/power-local-llm/local-ai-chat-pocket-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Local AI Chat Pocket: دردشة نماذج لغوية وصور دون إنترنت للآيفون والآيباد",
+    "excerpt": "مراجعة Local AI Chat Pocket: تطبيق للآيفون والآيباد للدردشة مع نماذج لغوية وصور على الجهاز دون إنترنت. الأسعار من $6.99 أسبوعيًا، ومتطلب iOS 18.6، وسياسة الخصوصية وخيار السحابة، والقيود والبدائل.",
+    "publishDate": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "url": "/ar/power-local-llm/local-ai-chat-pocket-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Local AI Chat Pocket 리뷰: 아이폰과 아이패드용 오프라인 LLM 및 이미지 채팅",
+    "excerpt": "Local AI Chat Pocket 리뷰: 오프라인 온디바이스 LLM 및 이미지 채팅용 아이폰·아이패드 앱. 주간 $6.99부터 시작하는 가격, iOS 18.6 요구 사항, 개인정보 처리방침과 클라우드 옵션, 한계, 대안.",
+    "publishDate": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "url": "/ko/power-local-llm/local-ai-chat-pocket-review",
     "cluster": "power-local-llm"
   },
   {
