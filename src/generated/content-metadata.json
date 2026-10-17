@@ -2405,7 +2405,7 @@
       ]
     },
     "lm-studio-vs-jan-ai": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2423,11 +2423,11 @@
       "images": [
         {
           "url": "/images/lm-studio-vs-jan-ai-decision-tree-en.svg",
-          "title": "Decision tree: choose LM Studio 0.4.16 for first-time setup and built-in HuggingFace search, or Jan AI 0.8.2 for plugins, multi-port API endpoints, and no-telemetry MIT open-source."
+          "title": "Decision tree: choose LM Studio for the simplest start with a built-in model store, or Jan AI for open source (Apache 2.0), MCP and extensions."
         },
         {
           "url": "/images/lm-studio-vs-jan-ai-shared-backend-en.svg",
-          "title": "LM Studio 0.4.16 (500MB–1GB base RAM, port 1234) and Jan AI 0.8.2 (1GB+ base RAM, port 1337) both run on the same llama.cpp inference engine, so tokens-per-second output is tied between the two apps."
+          "title": "LM Studio 0.4.26 and Jan AI 0.8.6 both run models on llama.cpp-based engines, so tokens per second depends on GPU, model size and quantization rather than the app."
         }
       ]
     },
@@ -14625,7 +14625,7 @@
       "images": []
     },
     "bestLocalLlmCustomerSupportChatbot": {
-      "dateModified": "2026-07-15",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-15",
       "hasSections": true,
