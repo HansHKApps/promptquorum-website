@@ -13,11 +13,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-24',
     theme: 'Creative & Roleplay',
     title: 'Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin',
-    seoTitle: 'Uncensored LLMs for Erotica & NSFW Writing 2026',
+    seoTitle: 'Best Uncensored Local LLMs for NSFW & Erotica 2026',
     intro:
       'Uncensored local LLMs let fiction writers generate mature, erotic, morally complex, and dark content that cloud services refuse — with no data leaving your machine. This guide covers which models allow erotica writing, how to set them up through Ollama or LM Studio, the genuine ethical responsibilities that apply even when there is no terms-of-service enforcement, and the specific use cases where uncensored models are appropriate versus where they are not.',
     metaDescription:
-      'Best uncensored local LLMs with no content restrictions, for erotica and NSFW writing: Hermes 3 vs Dolphin 3.0, Ollama setup, and the ethical limits.',
+      'Best uncensored local LLMs for NSFW & erotica, with no content restrictions: Hermes 3 vs Dolphin 3.0 in Ollama or LM Studio. Setup, model table, ethics.',
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-en.webp',
     twitterDescription:
       'Best uncensored local LLMs for erotica writing: Hermes 3 vs Dolphin 3.0, Ollama setup, and what ethical responsibilities still apply to creative writers.',
