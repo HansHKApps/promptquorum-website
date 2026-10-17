@@ -740,7 +740,7 @@
     ]
   },
   {
-    "file": "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts",
+    "file": "src/lib/power-local-llm/articles/best-local-llm-creative-writing.ts",
     "models": [
       "Command A+",
       "Dolphin 3.0 Llama",

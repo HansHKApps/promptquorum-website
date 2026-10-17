@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Chinese-language users setting up SillyTavern with local LLMs for roleplay',
     parentArticle: '/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
-    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing-2026'],
+    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing'],
     is_living_page: false,
     quickAnswerTop: {
       en: {
@@ -280,7 +280,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Chinesischsprachige Nutzer, die SillyTavern mit lokalen LLMs für Rollenspiele einrichten',
     parentArticle: '/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
-    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing-2026'],
+    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing'],
     is_living_page: false,
     quickAnswerTop: {
       en: {
@@ -527,7 +527,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Utilisateurs chinois configurant SillyTavern avec des LLM locaux pour le jeu de rôle',
     parentArticle: '/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
-    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing-2026'],
+    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing'],
     is_living_page: false,
     quickAnswerTop: {
       en: {
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'ローカルLLMでSillyTavernを使った中国語ロールプレイを設定する中国語ユーザー',
     parentArticle: '/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
-    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing-2026'],
+    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing'],
     is_living_page: false,
     quickAnswerTop: {
       en: {
@@ -983,7 +983,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: '使用本地 LLM 在 SillyTavern 进行中文角色扮演的用户',
     parentArticle: '/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
-    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing-2026'],
+    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing'],
     is_living_page: false,
     quickAnswerTop: {
       en: {
@@ -1226,7 +1226,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Usuários de língua chinesa configurando SillyTavern com LLMs locais para roleplay',
     parentArticle: '/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
-    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing-2026'],
+    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing'],
     is_living_page: false,
     quickAnswerTop: {
       en: {
@@ -1468,7 +1468,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Usuarios de habla china que configuran SillyTavern con LLMs locales para roleplay',
     parentArticle: '/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
-    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing-2026'],
+    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing'],
     is_living_page: false,
     quickAnswerTop: {
       en: {
@@ -1710,7 +1710,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'المستخدمون العرب الذين يضبطون SillyTavern مع نماذج لغة محلية للعب الأدوار باللغة الصينية',
     parentArticle: '/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
-    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing-2026'],
+    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing'],
     is_living_page: false,
     quickAnswerTop: {
       ar: {
@@ -1922,7 +1922,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'SillyTavern과 로컬 LLM으로 중국어 롤플레이를 설정하는 한국어 사용자',
     parentArticle: '/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay',
-    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing-2026'],
+    siblingBites: ['sillytavern-vs-agnai-vs-risuai-roleplay', 'best-local-llm-creative-writing'],
     is_living_page: false,
     quickAnswerTop: {
       ko: {
@@ -2090,7 +2090,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '관련 자료',
         items: [
           '[SillyTavern vs Agn.ai vs RisuAI 롤플레이 비교](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay)',
-          '[2026년 창작 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing-2026)',
+          '[2026년 창작 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing)',
         ],
       },
     },

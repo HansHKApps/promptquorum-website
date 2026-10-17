@@ -60,7 +60,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'hilbertraum-review':                      'hilbertraum-review',
 
   // Category 5 — Creative & Roleplay
-  'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
+  'best-local-llm-creative-writing':        'best-local-llm-creative-writing',
   'sillytavern-vs-agnai-vs-risuai-roleplay':     'sillytavern-vs-agnai-vs-risuai-roleplay',
   // Clarifies MetaGPT (multi-agent dev framework) vs Agnai/RisuAI (roleplay chat) — 2026-09-05
   'metagpt-agnai-risuai-explained':              'metagpt-agnai-risuai-explained',
