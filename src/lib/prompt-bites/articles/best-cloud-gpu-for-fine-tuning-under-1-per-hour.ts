@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     type: 'comparison',
     title: 'Best Cloud GPU for LLM Fine-Tuning Under $1/Hour (2026)',
     seoTitle: 'Best Cloud GPU Fine-Tuning Under $1/Hour 2026',
-    metaDescription: 'Rent a GPU to fine-tune Llama 3.1 8B or Qwen3 14B for under $1/hour: RTX 4090 at $0.34/hr on RunPod, RTX 3090 from ~$0.13/hr on Vast.ai. Real costs and steps.',
+    metaDescription: 'Rent a GPU to fine-tune Llama 3.1 8B or Qwen3 14B for under $1/hour: RTX 4090 at $0.34/hr on RunPod, RTX 3090 from ~$0.13/hr on Vast.ai. Real costs.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -82,7 +82,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       costCalculator: {
         title: 'Real Fine-Tuning Cost Estimates',
-        content: 'Estimated compute costs for common QLoRA scenarios with Unsloth, using the prices above (storage not included):',
+        content: 'Estimated compute costs for common QLoRA scenarios with Unsloth, using the prices above (storage not included): Prices come from the providers\' public pricing pages and third-party price trackers; they change frequently, so confirm on the provider\'s site before renting.',
         columns: ['Task', 'GPU Needed', 'Duration', 'Platform', 'Total Cost'],
         rows: [
           { 'Task': 'Llama 3.1 8B QLoRA, 1K samples, 1K steps', 'GPU Needed': 'RTX 4090 (24 GB)', 'Duration': '~2 hrs', 'Platform': 'RunPod Community ($0.34/hr)', 'Total Cost': '~$0.68' },
@@ -208,7 +208,7 @@ schema: { '@type': 'TechArticle', headline: 'Best Cloud GPU for LLM Fine-Tuning 
     type: 'comparison',
     title: 'Günstigste Cloud-GPU für LLM-Fine-Tuning unter 1 $/Stunde (2026)',
     seoTitle: 'Cloud-GPU Fine-Tuning unter 1 $/Stunde 2026',
-    metaDescription: 'GPU mieten und Llama 3.1 8B oder Qwen3 14B für unter 1 $/Std. fine-tunen: RTX 4090 ab 0,34 $/Std. bei RunPod, RTX 3090 ab ca. 0,13 $/Std. bei Vast.ai. Echte Kosten.',
+    metaDescription: 'GPU mieten und Llama 3.1 8B oder Qwen3 14B für unter 1 $/Std. fine-tunen: RTX 4090 ab 0,34 $/Std. bei RunPod, RTX 3090 ab ca. 0,13 $/Std. bei Vast.ai.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -280,7 +280,7 @@ schema: { '@type': 'TechArticle', headline: 'Best Cloud GPU for LLM Fine-Tuning 
       },
       costCalculator: {
         title: 'Realistische Kostenschätzungen für Fine-Tuning',
-        content: 'Geschätzte Rechenkosten für typische QLoRA-Szenarien mit Unsloth auf Basis der obigen Preise (ohne Speicher):',
+        content: 'Geschätzte Rechenkosten für typische QLoRA-Szenarien mit Unsloth auf Basis der obigen Preise (ohne Speicher): Die Preise stammen von den öffentlichen Preisseiten der Anbieter und von Preis-Trackern Dritter; sie ändern sich häufig, bitte vor dem Mieten auf der Anbieterseite prüfen.',
         columns: ['Aufgabe', 'Benötigte GPU', 'Dauer', 'Plattform', 'Gesamtkosten'],
         rows: [
           { 'Aufgabe': 'Llama 3.1 8B QLoRA, 1K Samples, 1K Schritte', 'Benötigte GPU': 'RTX 4090 (24 GB)', 'Dauer': '~2 Std.', 'Plattform': 'RunPod Community (0,34 $/Std.)', 'Gesamtkosten': '~0,68 $' },
@@ -478,7 +478,7 @@ schema: { '@type': 'TechArticle', headline: 'Günstigste Cloud-GPU für LLM-Fine
       },
       costCalculator: {
         title: 'Estimations réalistes du coût du fine-tuning',
-        content: 'Coûts de calcul estimés pour des scénarios QLoRA courants avec Unsloth, d\'après les prix ci-dessus (stockage non inclus) :',
+        content: 'Coûts de calcul estimés pour des scénarios QLoRA courants avec Unsloth, d\'après les prix ci-dessus (stockage non inclus) : Les prix proviennent des pages tarifaires publiques des fournisseurs et de suivis de prix tiers ; ils changent souvent, vérifiez sur le site du fournisseur avant de louer.',
         columns: ['Tâche', 'GPU requis', 'Durée', 'Plateforme', 'Coût total'],
         rows: [
           { 'Tâche': 'Llama 3.1 8B QLoRA, 1K échantillons, 1K étapes', 'GPU requis': 'RTX 4090 (24 Go)', 'Durée': '~2 h', 'Plateforme': 'RunPod Community (0,34 $/h)', 'Coût total': '~0,68 $' },
@@ -604,7 +604,7 @@ schema: { '@type': 'TechArticle', headline: 'Meilleur GPU cloud pour fine-tuner 
     type: 'comparison',
     title: 'LLMファインチューニングに最安クラウドGPU（時間1ドル以下、2026年）',
     seoTitle: '1ドル以下LLMファインチューニング クラウドGPU 2026',
-    metaDescription: 'GPUをレンタルしてLlama 3.1 8BやQwen3 14Bを時間1ドル以下でファインチューニング。RunPod RTX 4090は0.34ドル/時、Vast.ai RTX 3090は約0.13ドル/時から。実コストと手順。',
+    metaDescription: 'GPUを借りてLlama 3.1 8B/Qwen3 14Bを時間1ドル以下でファインチューニング。RunPod RTX 4090は0.34ドル/時、Vast.ai RTX 3090は約0.13ドル/時から。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -676,7 +676,7 @@ schema: { '@type': 'TechArticle', headline: 'Meilleur GPU cloud pour fine-tuner 
       },
       costCalculator: {
         title: 'ファインチューニングの実コスト見積もり',
-        content: '上記の価格に基づく、UnslothでのQLoRA代表シナリオの計算コスト見積もり（ストレージは含まず）：',
+        content: '上記の価格に基づく、UnslothでのQLoRA代表シナリオの計算コスト見積もり（ストレージは含まず）：価格は各社の公開料金ページと第三者の価格トラッカーに基づいており、頻繁に変動します。レンタル前に必ず提供元のサイトで確認してください。',
         columns: ['タスク', '必要なGPU', '所要時間', 'プラットフォーム', '合計コスト'],
         rows: [
           { 'タスク': 'Llama 3.1 8B QLoRA、1Kサンプル、1Kステップ', '必要なGPU': 'RTX 4090（24GB）', '所要時間': '約2時間', 'プラットフォーム': 'RunPod Community（0.34ドル/時）', '合計コスト': '約0.68ドル' },
@@ -874,7 +874,7 @@ schema: { '@type': 'TechArticle', headline: 'LLMファインチューニング�
       },
       costCalculator: {
         title: '微调的实际成本估算',
-        content: '基于上述价格、使用Unsloth的常见QLoRA场景的估算算力成本（不含存储）：',
+        content: '基于上述价格、使用Unsloth的常见QLoRA场景的估算算力成本（不含存储）：价格来自各服务商公开的价格页面和第三方价格追踪器，变动频繁，租用前请在服务商网站上确认。',
         columns: ['任务', '所需GPU', '时长', '平台', '总成本'],
         rows: [
           { '任务': 'Llama 3.1 8B QLoRA，1K样本，1K步', '所需GPU': 'RTX 4090（24GB）', '时长': '约2小时', '平台': 'RunPod Community（0.34美元/小时）', '总成本': '约0.68美元' },
@@ -1000,7 +1000,7 @@ schema: { '@type': 'TechArticle', headline: '2026年最便宜LLM微调云GPU（�
     type: 'comparison',
     title: 'Mejor GPU cloud para fine-tuning de LLMs por menos de $1/hora (2026)',
     seoTitle: 'GPU cloud fine-tuning LLM menos $1/hora 2026',
-    metaDescription: 'Alquila una GPU para hacer fine-tuning de Llama 3.1 8B o Qwen3 14B por menos de $1/h: RTX 4090 a $0.34/hora en RunPod, RTX 3090 desde ~$0.13/hora en Vast.ai.',
+    metaDescription: 'Alquila una GPU para fine-tuning de Llama 3.1 8B o Qwen3 14B por menos de $1/h: RTX 4090 a $0.34/hora en RunPod, RTX 3090 desde ~$0.13/hora en Vast.ai.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -1072,7 +1072,7 @@ schema: { '@type': 'TechArticle', headline: '2026年最便宜LLM微调云GPU（�
       },
       costCalculator: {
         title: 'Estimaciones realistas del coste del fine-tuning',
-        content: 'Costes de cómputo estimados para escenarios QLoRA habituales con Unsloth, según los precios anteriores (sin almacenamiento):',
+        content: 'Costes de cómputo estimados para escenarios QLoRA habituales con Unsloth, según los precios anteriores (sin almacenamiento): Los precios proceden de las páginas de precios públicas de los proveedores y de rastreadores de precios de terceros; cambian con frecuencia, así que confírmalos en el sitio del proveedor antes de alquilar.',
         columns: ['Tarea', 'GPU necesaria', 'Duración', 'Plataforma', 'Coste total'],
         rows: [
           { 'Tarea': 'Llama 3.1 8B QLoRA, 1K muestras, 1K pasos', 'GPU necesaria': 'RTX 4090 (24 GB)', 'Duración': '~2 h', 'Plataforma': 'RunPod Community ($0.34/hora)', 'Coste total': '~$0.68' },
@@ -1198,7 +1198,7 @@ schema: { '@type': 'TechArticle', headline: 'Mejor GPU cloud para fine-tuning de
     type: 'comparison',
     title: 'Melhor GPU cloud para fine-tuning de LLMs por menos de $1/hora (2026)',
     seoTitle: 'GPU cloud fine-tuning LLM menos $1/hora 2026',
-    metaDescription: 'Alugue uma GPU para fazer fine-tuning de Llama 3.1 8B ou Qwen3 14B por menos de $1/h: RTX 4090 a $0,34/hora no RunPod, RTX 3090 a partir de ~$0,13/hora na Vast.ai.',
+    metaDescription: 'Alugue uma GPU para fine-tuning de Llama 3.1 8B ou Qwen3 14B por menos de $1/h: RTX 4090 a $0,34/hora no RunPod, RTX 3090 desde ~$0,13/hora na Vast.ai.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -1270,7 +1270,7 @@ schema: { '@type': 'TechArticle', headline: 'Mejor GPU cloud para fine-tuning de
       },
       costCalculator: {
         title: 'Estimativas realistas de custo de fine-tuning',
-        content: 'Custos de computação estimados para cenários QLoRA comuns com Unsloth, com base nos preços acima (sem armazenamento):',
+        content: 'Custos de computação estimados para cenários QLoRA comuns com Unsloth, com base nos preços acima (sem armazenamento): Os preços vêm das páginas públicas de preços dos provedores e de rastreadores de preços de terceiros; mudam com frequência, então confirme no site do provedor antes de alugar.',
         columns: ['Tarefa', 'GPU necessária', 'Duração', 'Plataforma', 'Custo total'],
         rows: [
           { 'Tarefa': 'Llama 3.1 8B QLoRA, 1K amostras, 1K passos', 'GPU necessária': 'RTX 4090 (24 GB)', 'Duração': '~2 h', 'Plataforma': 'RunPod Community ($0,34/hora)', 'Custo total': '~$0,68' },
@@ -1396,7 +1396,7 @@ schema: { '@type': 'TechArticle', headline: 'Melhor GPU cloud para fine-tuning d
     type: 'comparison',
     title: 'أفضل معالج رسومات سحابي للضبط الدقيق للنماذج اللغوية الكبيرة بأقل من دولار/ساعة (⁨2026⁩)',
     seoTitle: 'أرخص ⁨GPU⁩ سحابي لضبط ⁨LLMs⁩ دون دولار/ساعة ⁨2026⁩',
-    metaDescription: 'استأجر وحدة GPU لضبط Llama 3.1 8B أو Qwen3 14B بأقل من دولار/ساعة: RTX 4090 بـ 0.34 دولار/ساعة على RunPod وRTX 3090 من نحو 0.13 دولار/ساعة على Vast.ai. تكاليف فعلية.',
+    metaDescription: 'استأجر GPU لضبط Llama 3.1 8B أو Qwen3 14B بأقل من دولار/ساعة: RTX 4090 بـ 0.34 دولار/ساعة على RunPod وRTX 3090 من نحو 0.13 دولار/ساعة على Vast.ai.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -1468,7 +1468,7 @@ schema: { '@type': 'TechArticle', headline: 'Melhor GPU cloud para fine-tuning d
       },
       costCalculator: {
         title: 'تقديرات واقعية لتكلفة الضبط الدقيق',
-        content: 'تكاليف حوسبة تقديرية لسيناريوهات QLoRA الشائعة مع Unsloth وفق الأسعار أعلاه (دون التخزين):',
+        content: 'تكاليف حوسبة تقديرية لسيناريوهات QLoRA الشائعة مع Unsloth وفق الأسعار أعلاه (دون التخزين): الأسعار مأخوذة من صفحات الأسعار العامة للمزوّدين ومن متتبعات أسعار خارجية، وهي تتغير باستمرار، فتأكد منها على موقع المزوّد قبل الاستئجار.',
         columns: ['المهمة', 'GPU المطلوب', 'المدة', 'المنصة', 'التكلفة الإجمالية'],
         rows: [
           { 'المهمة': 'Llama 3.1 8B QLoRA، 1K عيّنة، 1K خطوة', 'GPU المطلوب': 'RTX 4090 (24 GB)', 'المدة': '~2 ساعة', 'المنصة': 'RunPod Community (0.34 دولار/ساعة)', 'التكلفة الإجمالية': '~0.68 دولار' },
@@ -1594,7 +1594,7 @@ schema: { '@type': 'TechArticle', headline: 'أفضل معالج رسومات س
     type: 'comparison',
     title: 'LLM 파인튜닝을 위한 최저가 클라우드 GPU — 시간당 $1 미만 (2026)',
     seoTitle: '클라우드 GPU LLM 파인튜닝 시간당 1달러 미만 2026',
-    metaDescription: 'GPU를 빌려 Llama 3.1 8B·Qwen3 14B를 시간당 $1 미만으로 파인튜닝: RunPod RTX 4090 $0.34/시간, Vast.ai RTX 3090 약 $0.13/시간부터. 실제 비용과 임대 절차.',
+    metaDescription: 'GPU를 빌려 Llama 3.1 8B·Qwen3 14B를 시간당 $1 미만으로 파인튜닝: RunPod RTX 4090 $0.34/시간, Vast.ai RTX 3090 약 $0.13/시간부터.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -1666,7 +1666,7 @@ schema: { '@type': 'TechArticle', headline: 'أفضل معالج رسومات س
       },
       costCalculator: {
         title: '실제 파인튜닝 비용 추정',
-        content: '위 가격을 기준으로 한 Unsloth QLoRA 대표 시나리오의 컴퓨팅 비용 추정(스토리지 제외):',
+        content: '위 가격을 기준으로 한 Unsloth QLoRA 대표 시나리오의 컴퓨팅 비용 추정(스토리지 제외): 가격은 각 업체의 공개 가격 페이지와 제3자 가격 추적 사이트를 기준으로 하며 자주 바뀌므로, 임대 전에 업체 사이트에서 확인하세요.',
         columns: ['작업', '필요한 GPU', '소요 시간', '플랫폼', '총비용'],
         rows: [
           { '작업': 'Llama 3.1 8B QLoRA, 1K 샘플, 1K 스텝', '필요한 GPU': 'RTX 4090 (24GB)', '소요 시간': '약 2시간', '플랫폼': 'RunPod Community ($0.34/시간)', '총비용': '약 $0.68' },
