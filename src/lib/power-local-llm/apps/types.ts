@@ -49,6 +49,17 @@ export type StatusKey = 'planned' | 'listed' | 'verified' | 'tested'
 // use it). A tool can have more than one, e.g. an app on both the App Store and Google Play.
 export type StoreLinkKey = 'appStore' | 'googlePlay' | 'github' | 'web'
 
+// How much work it is for a user to get the tool running, judged by the EASIEST officially supported
+// path — NOT by where the files are hosted. A GitHub repo whose Releases page ships a .dmg/.exe/.AppImage
+// is `installer`; GitHub is only its delivery channel. Orthogonal to `interfaces` (how you use it),
+// `platforms` (which OS) and `storeLinks` (where you get it). Unset = not yet verified, never "none".
+//   installer       double-click install: .dmg/.exe/.msi/.AppImage/.deb, Microsoft Store, App Store, Google Play
+//   one-command     one documented command fully installs it (brew, winget, pip, npm, curl | sh, docker run)
+//   terminal-setup  multi-step: clone/build from source, Python/CUDA toolchain, config files, several services
+//   hosted          nothing to install: web app / SaaS / browser extension
+export type InstallEffortKey = 'installer' | 'one-command' | 'terminal-setup' | 'hosted'
+export const INSTALL_EFFORT_KEYS: readonly InstallEffortKey[] = ['installer', 'one-command', 'terminal-setup', 'hosted']
+
 export const STORE_LINK_LABEL: Record<StoreLinkKey, string> = {
   appStore: 'App Store',
   googlePlay: 'Google Play',
@@ -144,6 +155,16 @@ export interface ToolRecord {
   // 2+ entries, the UI renders one button per channel instead of a single "Get it" link
   // built from `url`. Omit entirely for tools that only need the single `url` field.
   storeLinks?: Partial<Record<StoreLinkKey, string>>
+  // Easiest verified install path (see InstallEffortKey). Set only after checking the website AND the
+  // GitHub Releases page / store listing — a README that shows only `pip install` can hide a .dmg on the
+  // Releases tab. `installEvidence` records what was seen so the next refresh can re-check it.
+  installEffort?: InstallEffortKey
+  // OSes on which `installEffort` is actually true, when narrower than `platforms` — e.g. a Windows-only
+  // .exe while macOS/Linux need a terminal, or an Android-only APK. Omit when the tier holds on every
+  // platform the tool lists. The UI appends these to the badge so a Mac user is never told "Download & run"
+  // for a Windows-only installer.
+  installOn?: OSKey[]
+  installEvidence?: string
   tagline: Partial<Record<Language, string>>
   founder?: ToolRecordFounder
   // ISO 8601 date the founder/maintainer reviewed THIS entry's technical specs and
@@ -172,6 +193,13 @@ export interface ToolRecord {
   // 173 of 175 tools nobody has checked.
   mcpSupport?: boolean
   lastVerifiedDate: string | null // ISO 8601; separate from the article's own dateModified — null = not yet verified
+  // ISO 8601 date of the app's own latest release/update (GitHub release or last substantive commit,
+  // official release page, or store listing) — NOT when PromptQuorum checked it (that is
+  // `lastVerifiedDate`). Drives the activity warning on tiles: >90 days = "quiet" warning, >180 days =
+  // grey "likely dead" tile (see components/local-ai-directory/staleness.ts). Unset = not yet researched,
+  // never "no updates" — no warning is shown without a verified date. Source: `lastUpstreamUpdateSource`.
+  lastUpstreamUpdate?: string
+  lastUpstreamUpdateSource?: string // URL the date was read from
   // One-line "best for / limits" statement, written ONCE here and reused verbatim by both this
   // tool's review article and its category comparison article, so the two can never disagree
   // about who the tool is for. English only; unset until the tool has been reviewed.

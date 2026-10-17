@@ -16,7 +16,13 @@ export const app: ToolRecord = {
   addedDate: '2026-09-13',
   status: 'listed',
   uses: ['build', 'serve'],
-  url: 'github.com/unslothai/unsloth',
+  url: 'unsloth.ai',
+  storeLinks: {
+    web: 'https://unsloth.ai',
+    github: 'https://github.com/unslothai/unsloth',
+  },
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'GitHub Releases v0.1.905-beta ships Unsloth-Desktop-MacOS.dmg, Unsloth-Desktop-Windows.exe, Unsloth-Desktop-Linux.AppImage and Ubuntu .deb builds; unsloth.ai homepage shows "Download for Mac" (Unsloth Desktop). Studio is a one-line curl install and Core is pip, both harder. checked 2026-10-09',
   tagline: {
     en: 'Free, open-source fine-tuning for LLMs, diffusion, TTS, and embedding models',
     de: 'Kostenloses Open-Source-Fine-Tuning für LLMs, Diffusionsmodelle, TTS und Embeddings',
@@ -32,4 +38,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { lowVram: true, loraQlora: true, webUi: true, multiGpu: true, exportGguf: true },
   lastVerifiedDate: '2026-09-13',
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/unslothai/unsloth',
 }

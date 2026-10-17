@@ -77,9 +77,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Exposes an OpenAI-compatible API and can provision SSH-accessible GPU instances on demand, not just an inference endpoint',
           'GitHub repository shows 5,607 stars, verified against [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) on September 5, 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to GPUStack\'s entry in the [Local LLM Software Directory](/directory) — see that page for how GPUStack compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-gpustack',
@@ -352,9 +349,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Worker-Knoten sind ausschließlich Linux:** Der Server läuft über Docker unter Linux, macOS oder Windows, aber laut offizieller Dokumentation können nur Linux-Maschinen als Worker GPU-Kapazität beisteuern',
           'Bietet eine OpenAI-kompatible API und kann bei Bedarf per SSH erreichbare GPU-Instanzen bereitstellen, nicht nur einen Inferenz-Endpunkt',
           'GitHub-Repository zeigt 5.607 Sterne, geprüft gegen [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) am 5. September 2026',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zum Eintrag von GPUStack im [Local LLM Software Directory](/de/directory) — dort finden Sie, wie GPUStack im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -629,9 +623,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Expose une API compatible OpenAI et peut fournir à la demande des instances GPU accessibles en SSH, pas seulement un point de terminaison d\'inférence',
           'Le dépôt GitHub affiche 5 607 étoiles, vérifié sur [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) le 5 septembre 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette revue est le complément approfondi de l\'entrée de GPUStack dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir comment GPUStack se positionne face à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-gpustack',
@@ -904,9 +895,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ワーカーノードはLinux専用：** サーバーはDocker経由でLinux・macOS・Windowsで動作するが、公式ドキュメントによるとGPU容量を提供できるワーカーはLinuxマシンのみ',
           'OpenAI互換APIを提供し、推論エンドポイントだけでなく、必要に応じてSSHでアクセス可能なGPUインスタンスをプロビジョニング可能',
           'GitHubリポジトリは2026年9月5日時点で[github.com/gpustack/gpustack](https://github.com/gpustack/gpustack)に対して検証済みの5,607スターを記録',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるGPUStackのエントリーを深掘りした記事です——他の数十のローカルAIツールと比べてGPUStackがどう位置づけられるかは、そちらのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1181,9 +1169,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '提供OpenAI兼容API，并能按需配置可通过SSH访问的GPU实例，而不仅仅是一个推理端点',
           '截至2026年9月5日，经与[github.com/gpustack/gpustack](https://github.com/gpustack/gpustack)核实，其GitHub仓库显示为5,607颗星',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中GPUStack条目的深度补充——请查看该页面了解GPUStack与其他数十种本地AI工具的整体对比。' },
-        ],
       },
       overview: {
         id: 'what-is-gpustack',
@@ -1456,9 +1441,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Los nodos worker son exclusivamente Linux:** el servidor funciona mediante Docker en Linux, macOS o Windows, pero solo las máquinas Linux pueden actuar como worker aportando capacidad de GPU, según la documentación oficial',
           'Expone una API compatible con OpenAI y puede aprovisionar bajo demanda instancias de GPU accesibles por SSH, no solo un endpoint de inferencia',
           'El repositorio de GitHub muestra 5.607 estrellas, verificadas en [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) el 5 de septiembre de 2026',
-        ],
-        callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada de GPUStack en el [Directorio de Software LLM Local](/es/directory) — consulte esa página para ver cómo se compara GPUStack a simple vista con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1733,9 +1715,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Expõe uma API compatível com OpenAI e pode provisionar sob demanda instâncias de GPU acessíveis via SSH, não apenas um endpoint de inferência',
           'O repositório no GitHub mostra 5.607 estrelas, verificadas em [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) em 5 de setembro de 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do GPUStack no [Diretório de Software LLM Local](/pt/directory) — veja essa página para saber como o GPUStack se compara, de forma resumida, a dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-gpustack',
@@ -2009,9 +1988,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يوفّر واجهة برمجة تطبيقات متوافقة مع OpenAI ويمكنه توفير نسخ وحدات معالجة رسومية يمكن الوصول إليها عبر SSH عند الطلب، وليس فقط نقطة نهاية للاستدلال',
           'يُظهر مستودع GitHub 5,607 نجمة، تم التحقق منها على [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) في 5 سبتمبر 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لإدخال GPUStack في [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارن GPUStack بسرعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-gpustack',
@@ -2284,9 +2260,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**워커 노드는 Linux 전용:** 서버는 Docker를 통해 Linux, macOS, Windows에서 실행되지만, 공식 문서에 따르면 GPU 용량을 제공하는 워커 역할은 Linux 머신만 가능',
           'OpenAI 호환 API를 제공하며, 추론 엔드포인트뿐 아니라 필요 시 SSH로 접근 가능한 GPU 인스턴스도 프로비저닝 가능',
           'GitHub 저장소는 2026년 9월 5일 [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) 기준으로 검증된 5,607개의 스타를 기록',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 GPUStack 항목을 심층적으로 다루는 글입니다 — GPUStack이 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

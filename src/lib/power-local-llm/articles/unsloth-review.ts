@@ -71,9 +71,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Can connect trained or downloaded models to coding agents (Claude Code, Codex, and others) via a one-command `unsloth start` integration, and exposes an OpenAI/Anthropic-compatible API',
           'Developed by Unsloth AI, a US-based organization per its GitHub profile; the repository was created in November 2023 and the `unsloth` PyPI package has shipped 241 releases since its first upload in August 2024',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Unsloth\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Unsloth compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-unsloth',
@@ -273,6 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Unsloth\'s directory entry.',
+          '[Unsloth Hands-on Test](/power-local-llm/unsloth-hands-on-test) — a first-hand test on a 24 GB M3 Mac, with every statement labelled by how it is known.',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/local-llms/best-llm-fine-tuning-framework-2026) — a direct comparison covering Unsloth against Axolotl, MLX-LM, and cloud fine-tuning APIs in depth.',
           '[MLX-LM Explained](/power-local-llm/mlx-lm-explained) — a dedicated review of Apple\'s own Apple-Silicon-native alternative.',
           '[Fine-Tuning Local LLMs with LoRA](/local-llms/fine-tuning-local-llms-lora) — a deeper look at the LoRA technique Unsloth and others use to fine-tune efficiently.',
@@ -348,9 +346,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Multi-GPU-Unterstützung über NVIDIA-, AMD- und Intel-GPUs hinweg, plus reiner CPU-Betrieb über ein Vulkan-Backend, unter Windows, Linux, WSL und macOS',
           'Kann trainierte oder heruntergeladene Modelle über eine Ein-Befehl-Integration (`unsloth start`) mit Coding-Agenten (Claude Code, Codex u. a.) verbinden und bietet eine OpenAI-/Anthropic-kompatible API',
           'Entwickelt von Unsloth AI, laut GitHub-Profil ein in den USA ansässiges Unternehmen; das Repository wurde im November 2023 erstellt, und das `unsloth`-PyPI-Paket verzeichnet seit dem ersten Upload im August 2024 241 Releases',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu Unsloths Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie Unsloth im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -551,6 +546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Unsloths Directory-Eintrag.',
+          '[Unsloth Praxistest](/de/power-local-llm/unsloth-hands-on-test) — ein Praxistest auf einem M3-Mac mit 24 GB, bei dem jede Aussage danach gekennzeichnet ist, woher sie stammt.',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/de/local-llms/best-llm-fine-tuning-framework-2026) — ein direkter Vergleich von Unsloth mit Axolotl, MLX-LM und Cloud-Fine-Tuning-APIs.',
           '[MLX-LM Explained](/de/power-local-llm/mlx-lm-explained) — eine dedizierte Review von Apples eigener, Apple-Silicon-nativer Alternative.',
           '[Fine-Tuning lokaler LLMs mit LoRA](/de/local-llms/fine-tuning-local-llms-lora) — ein tieferer Blick auf die LoRA-Technik, die Unsloth und andere zum effizienten Fine-Tuning nutzen.',
@@ -626,9 +622,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Support multi-GPU sur GPU NVIDIA, AMD et Intel, plus un fonctionnement CPU seul via un backend Vulkan, sous Windows, Linux, WSL et macOS",
           "Peut connecter un modèle entraîné ou téléchargé à des agents de code (Claude Code, Codex, etc.) via une intégration en une commande (`unsloth start`), et expose une API compatible OpenAI/Anthropic",
           "Développé par Unsloth AI, une organisation basée aux États-Unis selon son profil GitHub ; le dépôt a été créé en novembre 2023, et le paquet PyPI `unsloth` compte 241 versions depuis son premier envoi en août 2024",
-        ],
-        callouts: [
-          { type: 'note', text: "Ce test est le complément approfondi de la fiche d'Unsloth dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d'œil comment Unsloth se compare à des dizaines d'autres outils d'IA locale." },
         ],
       },
       overview: {
@@ -829,6 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           "[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d'IA locale auquel appartient cet article, incluant la fiche d'Unsloth dans le répertoire.",
+          "[Test pratique d'Unsloth](/fr/power-local-llm/unsloth-hands-on-test) — un test réalisé sur un Mac M3 de 24 GB, où chaque affirmation est étiquetée selon son origine.",
           "[Best LLM Fine-Tuning Framework 2026 : Unsloth vs Axolotl vs Cloud](/fr/local-llms/best-llm-fine-tuning-framework-2026) — une comparaison directe d'Unsloth face à Axolotl, MLX-LM et aux API de fine-tuning cloud.",
           "[MLX-LM Explained](/fr/power-local-llm/mlx-lm-explained) — un test dédié de l'alternative native Apple Silicon d'Apple.",
           "[Fine-Tuning Local LLMs with LoRA](/fr/local-llms/fine-tuning-local-llms-lora) — un regard plus approfondi sur la technique LoRA qu'Unsloth et d'autres utilisent pour un fine-tuning efficace.",
@@ -904,9 +898,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Soporte Multi-GPU en GPUs NVIDIA, AMD e Intel, además de funcionamiento solo con CPU mediante un backend Vulkan, en Windows, Linux, WSL y macOS',
           'Puede conectar modelos entrenados o descargados a agentes de codificación (Claude Code, Codex y otros) mediante una integración de un solo comando `unsloth start`, y expone una API compatible con OpenAI/Anthropic',
           'Desarrollado por Unsloth AI, una organización con sede en EE. UU. según su perfil de GitHub; el repositorio se creó en noviembre de 2023 y el paquete `unsloth` de PyPI ha publicado 241 versiones desde su primera subida en agosto de 2024',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Unsloth en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara Unsloth con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1107,6 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de Unsloth en el directorio.',
+          '[Prueba práctica de Unsloth](/es/power-local-llm/unsloth-hands-on-test) — una prueba en un Mac M3 de 24 GB en la que cada afirmación se etiqueta según cómo se conoce.',
           '[Mejor Framework de Fine-Tuning de LLM 2026: Unsloth vs Axolotl vs Cloud](/es/local-llms/best-llm-fine-tuning-framework-2026) — una comparación directa que analiza a Unsloth frente a Axolotl, MLX-LM y las APIs de fine-tuning en la nube en profundidad.',
           '[MLX-LM Explained](/es/power-local-llm/mlx-lm-explained) — una reseña dedicada a la alternativa propia de Apple, nativa de Apple Silicon.',
           '[Fine-Tuning de LLMs Locales con LoRA](/es/local-llms/fine-tuning-local-llms-lora) — un análisis más profundo de la técnica LoRA que usan Unsloth y otros para hacer fine-tuning de forma eficiente.',
@@ -1182,9 +1174,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Suporte Multi-GPU em GPUs NVIDIA, AMD e Intel, além de operação somente com CPU via um backend Vulkan, em Windows, Linux, WSL e macOS',
           'Pode conectar modelos treinados ou baixados a agentes de codificação (Claude Code, Codex e outros) por meio de uma integração de um único comando `unsloth start`, e expõe uma API compatível com OpenAI/Anthropic',
           'Desenvolvido pela Unsloth AI, uma organização sediada nos EUA segundo seu perfil no GitHub; o repositório foi criado em novembro de 2023 e o pacote `unsloth` no PyPI lançou 241 versões desde o primeiro upload em agosto de 2024',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Unsloth no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para uma comparação rápida entre o Unsloth e dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1385,6 +1374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Unsloth no diretório.',
+          '[Teste prático do Unsloth](/pt/power-local-llm/unsloth-hands-on-test) — um teste em um Mac M3 de 24 GB em que cada afirmação é rotulada conforme a origem.',
           '[Melhor Framework de Fine-Tuning de LLM 2026: Unsloth vs Axolotl vs Cloud](/pt/local-llms/best-llm-fine-tuning-framework-2026) — uma comparação direta que analisa o Unsloth em relação ao Axolotl, ao MLX-LM e às APIs de fine-tuning na nuvem em profundidade.',
           '[MLX-LM Explained](/pt/power-local-llm/mlx-lm-explained) — uma análise dedicada à alternativa própria da Apple, nativa de Apple Silicon.',
           '[Fine-Tuning de LLMs Locais com LoRA](/pt/local-llms/fine-tuning-local-llms-lora) — um olhar mais profundo sobre a técnica LoRA que o Unsloth e outros usam para fazer fine-tuning de forma eficiente.',
@@ -1460,9 +1450,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NVIDIA、AMD、Intel GPUをまたいだMulti-GPU対応、加えてVulkanバックエンド経由のCPU専用動作を、Windows、Linux、WSL、macOSでサポート',
           'トレーニング済みまたはダウンロード済みのモデルを、`unsloth start`のワンコマンド統合でコーディングエージェント（Claude Code、Codexなど）に接続でき、OpenAI/Anthropic互換のAPIも公開できる',
           'GitHubプロフィールによれば米国拠点の組織であるUnsloth AIが開発。リポジトリは2023年11月に作成され、`unsloth` PyPIパッケージは2024年8月の初回アップロード以来241回のリリースを重ねている',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)におけるUnslothの項目を掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1663,6 +1650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[ローカルLLMソフトウェアディレクトリ 2026](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。Unslothのディレクトリ項目を含む。',
+          '[Unslothの実機テスト](/ja/power-local-llm/unsloth-hands-on-test)——24 GBのM3 Macで行ったテスト。各記述に根拠のラベルを付けています。',
           '[ファインチューニングフレームワーク完全比較 2026：Unsloth vs Axolotl vs クラウド](/ja/local-llms/best-llm-fine-tuning-framework-2026) — Unslothを、Axolotl、MLX-LM、クラウドファインチューニングAPIと詳しく比較する記事。',
           '[MLX-LM 解説](/ja/power-local-llm/mlx-lm-explained) — AppleによるApple Siliconネイティブな代替ツールの専用レビュー。',
           '[LoRAによるローカルLLMのファインチューニング](/ja/local-llms/fine-tuning-local-llms-lora) — UnslothなどがLLMを効率よくファインチューニングするために使うLoRA手法をより深く掘り下げた記事。',
@@ -1738,9 +1726,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '支持 NVIDIA、AMD 和 Intel GPU 的多 GPU 配置，以及通过 Vulkan 后端实现的纯 CPU 运行，覆盖 Windows、Linux、WSL 和 macOS',
           '可以通过一条`unsloth start`命令，将训练好或下载的模型连接到编码智能体（Claude Code、Codex 等），并公开一个兼容 OpenAI/Anthropic 的 API',
           '由 Unsloth AI 开发，根据其 GitHub 资料显示为美国注册的组织；仓库创建于 2023 年 11 月，`unsloth` PyPI 包自 2024 年 8 月首次发布以来已发布 241 个版本',
-        ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地 LLM 软件目录](/zh/directory)中 Unsloth 条目的深度解读——如需查看 Unsloth 与其他数十款本地 AI 工具的对比，请参阅该页面。' },
         ],
       },
       overview: {
@@ -1941,6 +1926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[本地 LLM 软件目录 2026](/zh/directory) — 本文所属的本地 AI 工具完整目录，包含 Unsloth 的目录条目。',
+          '[Unsloth 上手测试](/zh/power-local-llm/unsloth-hands-on-test)——在 24 GB M3 Mac 上的实际测试，每条陈述都标注了其依据。',
           '[2026 年最佳 LLM 微调框架：Unsloth vs Axolotl vs 云端](/zh/local-llms/best-llm-fine-tuning-framework-2026) — 一篇将 Unsloth 与 Axolotl、MLX-LM 及云端微调 API 进行深入对比的文章。',
           '[MLX-LM 详解](/zh/power-local-llm/mlx-lm-explained) — 对 Apple 自家 Apple Silicon 原生替代方案的专门评测。',
           '[用 LoRA 微调本地 LLM](/zh/local-llms/fine-tuning-local-llms-lora) — 深入介绍 Unsloth 等工具用于高效微调的 LoRA 技术。',
@@ -2016,9 +2002,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NVIDIA, AMD, Intel GPU에서의 Multi-GPU를 지원하며, Vulkan 백엔드를 통한 CPU 전용 작동도 Windows, Linux, WSL, macOS에서 가능합니다',
           '`unsloth start`라는 단일 명령으로 학습했거나 다운로드한 모델을 코딩 에이전트(Claude Code, Codex 등)에 연결할 수 있으며, OpenAI/Anthropic 호환 API도 제공합니다',
           'GitHub 프로필에 따르면 미국 소재 조직인 Unsloth AI가 개발했으며, 저장소는 2023년 11월에 생성되었고, `unsloth` PyPI 패키지는 2024년 8월 최초 업로드 이후 241회의 릴리스를 기록했습니다',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등재된 Unsloth 항목의 심층 분석 자료입니다 — 다른 수십 개의 로컬 AI 도구와 Unsloth를 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {
@@ -2219,6 +2202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Unsloth의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그입니다.',
+          '[Unsloth 직접 테스트](/ko/power-local-llm/unsloth-hands-on-test) — 24 GB M3 Mac에서 진행한 직접 사용 테스트로, 모든 진술에 근거 라벨이 붙어 있습니다.',
           '[최고의 LLM 파인튜닝 프레임워크 2026: Unsloth vs Axolotl vs Cloud](/ko/local-llms/best-llm-fine-tuning-framework-2026) — Unsloth를 Axolotl, MLX-LM, 클라우드 파인튜닝 API와 심도 있게 비교한 글입니다.',
           '[MLX-LM Explained](/ko/power-local-llm/mlx-lm-explained) — Apple 자체의 Apple Silicon 네이티브 대안을 전용으로 다룬 리뷰입니다.',
           '[LoRA로 로컬 LLM 파인튜닝하기](/ko/local-llms/fine-tuning-local-llms-lora) — Unsloth 등이 효율적인 파인튜닝을 위해 사용하는 LoRA 기법을 더 깊이 살펴보는 글입니다.',
@@ -2294,9 +2278,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'دعم Multi-GPU عبر بطاقات NVIDIA وAMD وIntel، إضافة إلى التشغيل بالاعتماد على CPU فقط عبر خلفية Vulkan، على Windows وLinux وWSL وmacOS',
           'يمكنها ربط النماذج المدرَّبة أو المُنزَّلة بوكلاء البرمجة (Claude Code وCodex وغيرهما) عبر أمر واحد هو `unsloth start`، وتوفر واجهة برمجة تطبيقات متوافقة مع OpenAI/Anthropic',
           'طوّرتها Unsloth AI، وهي منظمة مقرها الولايات المتحدة وفقًا لملفها على GitHub؛ أُنشئ المستودع في نوفمبر 2023، وأصدرت حزمة `unsloth` على PyPI 241 إصدارًا منذ أول رفع لها في أغسطس 2024',
-        ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل Unsloth في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين Unsloth وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2497,6 +2478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Unsloth في الدليل.',
+          '[اختبار Unsloth العملي](/ar/power-local-llm/unsloth-hands-on-test) — اختبار عملي على جهاز Mac بشريحة M3 وذاكرة 24 GB، وكل عبارة فيه موسومة بمصدر معرفتها.',
           '[أفضل إطار عمل لضبط نماذج LLM 2026: Unsloth مقابل Axolotl مقابل السحابة](/ar/local-llms/best-llm-fine-tuning-framework-2026) — مقارنة مباشرة تغطي Unsloth مقابل Axolotl وMLX-LM وواجهات برمجة التطبيقات السحابية للضبط الدقيق.',
           '[MLX-LM Explained](/ar/power-local-llm/mlx-lm-explained) — مراجعة مخصصة لبديل Apple الأصلي الخاص بـ Apple Silicon.',
           '[ضبط نماذج LLM المحلية باستخدام LoRA](/ar/local-llms/fine-tuning-local-llms-lora) — نظرة أعمق على تقنية LoRA التي تستخدمها Unsloth وغيرها للضبط الفعّال.',

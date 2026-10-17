@@ -70,7 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atlarix Pro is $19/month and adds Atlarix Reviewer plus included managed-inference credits',
         ],
         callouts: [
-          { type: 'note', text: 'This review is based on a founder outreach email exchange with Amariah Abishai, corroborated by Atlarix\'s own site, plus PromptQuorum\'s own research into secondary sources. PromptQuorum has not independently tested Atlarix\'s agent or benchmarked its accuracy. See Atlarix\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) alongside other coding agents like it.' },
+          { type: 'note', text: 'This review is based on a founder outreach email exchange with Amariah Abishai, corroborated by Atlarix\'s own site, plus PromptQuorum\'s own research into secondary sources. PromptQuorum has not independently tested Atlarix\'s agent or benchmarked its accuracy. See Atlarix\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) alongside other coding agents like it.' },
         ],
       },
       overview: {
@@ -261,7 +261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Continue.dev Review](/power-local-llm/continue-dev-review) — a VS Code/JetBrains assistant now read-only after Cursor acquired its maker, for comparison against Atlarix\'s local/hybrid split.',
           '[Cline Review](/power-local-llm/cline-review) — an open-source, IDE-integrated autonomous coding agent.',
           '[Aider Review](/power-local-llm/aider-review) — a free, terminal-native, git-centric AI pair programmer.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Atlarix\'s own entry.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — the full catalog of local AI tools this article belongs to, including Atlarix\'s own entry.',
         ],
       },
     },
@@ -337,7 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atlarix Pro kostet 19 $/Monat und fügt Atlarix Reviewer sowie enthaltene Managed-Inference-Guthaben hinzu; kostenpflichtige Auto-Nutzung unter Pro wird laut Gründer nicht zum Training verwendet',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review basiert auf einem E-Mail-Austausch mit Gründer Amariah Abishai im Rahmen einer Kontaktaufnahme durch den Hersteller, bestätigt durch Atlarix\' eigene Website sowie eigene Recherche von PromptQuorum zu Sekundärquellen. PromptQuorum hat Atlarix\' Agenten nicht eigenständig getestet und seine Genauigkeit nicht benchmarkt. Siehe Atlarix\' Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) neben anderen vergleichbaren Coding-Agenten.' },
+          { type: 'note', text: 'Diese Review basiert auf einem E-Mail-Austausch mit Gründer Amariah Abishai im Rahmen einer Kontaktaufnahme durch den Hersteller, bestätigt durch Atlarix\' eigene Website sowie eigene Recherche von PromptQuorum zu Sekundärquellen. PromptQuorum hat Atlarix\' Agenten nicht eigenständig getestet und seine Genauigkeit nicht benchmarkt. Siehe Atlarix\' Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/directory) neben anderen vergleichbaren Coding-Agenten.' },
         ],
       },
       overview: {
@@ -528,7 +528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Continue.dev Review](/de/power-local-llm/continue-dev-review) — ein VS-Code-/JetBrains-Assistent, mittlerweile read-only, nachdem Cursor den Hersteller übernahm, zum Vergleich mit Atlarix\' lokal/hybrid-Aufteilung.',
           '[Cline Review](/de/power-local-llm/cline-review) — ein quelloffener, IDE-integrierter autonomer Coding-Agent.',
           '[Aider Review](/de/power-local-llm/aider-review) — ein kostenloser, terminalbasierter, git-zentrierter KI-Pair-Programmer.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Atlarix\' eigenem Eintrag.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Atlarix\' eigenem Eintrag.',
         ],
       },
     },
@@ -604,7 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atlarix Pro coûte 19 $/mois et ajoute Atlarix Reviewer ainsi que des crédits d\'inférence gérée inclus ; l\'usage payant d\'Auto sous Pro n\'est pas utilisé pour l\'entraînement, selon le fondateur',
         ],
         callouts: [
-          { type: 'note', text: 'Cette revue repose sur un échange d\'e-mails initié par le fondateur Amariah Abishai dans le cadre d\'une démarche de contact, corroboré par le site officiel d\'Atlarix et par les propres recherches de PromptQuorum sur des sources secondaires. PromptQuorum n\'a pas testé l\'agent d\'Atlarix de manière indépendante, ni évalué sa précision. Voir la fiche d\'Atlarix dans l\'[annuaire des logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), aux côtés d\'autres agents de codage comparables.' },
+          { type: 'note', text: 'Cette revue repose sur un échange d\'e-mails initié par le fondateur Amariah Abishai dans le cadre d\'une démarche de contact, corroboré par le site officiel d\'Atlarix et par les propres recherches de PromptQuorum sur des sources secondaires. PromptQuorum n\'a pas testé l\'agent d\'Atlarix de manière indépendante, ni évalué sa précision. Voir la fiche d\'Atlarix dans l\'[annuaire des logiciels LLM locaux](https://www.promptquorum.com/directory), aux côtés d\'autres agents de codage comparables.' },
         ],
       },
       overview: {
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Continue.dev avis](/fr/power-local-llm/continue-dev-review) — un assistant VS Code/JetBrains désormais en lecture seule après le rachat de son créateur par Cursor, pour comparaison avec la séparation local/hybride d\'Atlarix.',
           '[Cline avis](/fr/power-local-llm/cline-review) — un agent de codage autonome open source et intégré à l\'IDE.',
           '[Aider avis](/fr/power-local-llm/aider-review) — un pair-programmeur IA gratuit, natif au terminal et centré sur git.',
-          '[Annuaire des logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, y compris la fiche d\'Atlarix.',
+          '[Annuaire des logiciels LLM locaux](https://www.promptquorum.com/directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, y compris la fiche d\'Atlarix.',
         ],
       },
     },
@@ -871,7 +871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atlarix Proは月額19ドルで、Atlarix Reviewerとマネージド推論クレジットが追加されます。開発者によれば、Pro下の有料Auto利用は学習に使われません',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、開発者Amariah Abishai氏からの働きかけによるメールでのやり取りと、Atlarix自身の公式サイト、そしてPromptQuorum独自の二次情報源の調査に基づいています。PromptQuorumはAtlarixのエージェントを独自にテストしておらず、精度をベンチマークしていません。同様のコーディングエージェントと並んだAtlarixの登録内容は、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)をご覧ください。' },
+          { type: 'note', text: 'このレビューは、開発者Amariah Abishai氏からの働きかけによるメールでのやり取りと、Atlarix自身の公式サイト、そしてPromptQuorum独自の二次情報源の調査に基づいています。PromptQuorumはAtlarixのエージェントを独自にテストしておらず、精度をベンチマークしていません。同様のコーディングエージェントと並んだAtlarixの登録内容は、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)をご覧ください。' },
         ],
       },
       overview: {
@@ -1062,7 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Continue.devレビュー](/ja/power-local-llm/continue-dev-review) — 開発元がCursorに買収された後、現在は読み取り専用のVS Code/JetBrainsアシスタント。Atlarixのローカル/ハイブリッドの区分との比較に。',
           '[Clineレビュー](/ja/power-local-llm/cline-review) — オープンソースでIDEに統合された自律型コーディングエージェント。',
           '[Aiderレビュー](/ja/power-local-llm/aider-review) — 無料でターミナルネイティブかつgit中心のAIペアプログラマー。',
-          '[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — Atlarix自身の登録を含む、この記事が属するローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory) — Atlarix自身の登録を含む、この記事が属するローカルAIツールの完全なカタログ。',
         ],
       },
     },
@@ -1138,7 +1138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atlarix Pro每月19美元,新增Atlarix Reviewer以及包含的托管推理额度;据创始人介绍,无论额度来自Pro订阅额度还是购买的按量付费额度,付费Auto使用都不会被用于训练',
         ],
         callouts: [
-          { type: 'note', text: '本文基于创始人Amariah Abishai主动联系PromptQuorum后的邮件往来,并结合Atlarix官方网站以及PromptQuorum自行对二手信息源的调查撰写。PromptQuorum并未独立测试Atlarix的代理,也未对其准确性进行基准测试。可在[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中查看Atlarix的条目及其他同类编程代理。' },
+          { type: 'note', text: '本文基于创始人Amariah Abishai主动联系PromptQuorum后的邮件往来,并结合Atlarix官方网站以及PromptQuorum自行对二手信息源的调查撰写。PromptQuorum并未独立测试Atlarix的代理,也未对其准确性进行基准测试。可在[本地LLM软件目录](https://www.promptquorum.com/directory)中查看Atlarix的条目及其他同类编程代理。' },
         ],
       },
       overview: {
@@ -1329,7 +1329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Continue.dev评测](/zh/power-local-llm/continue-dev-review) — 开发商被Cursor收购后现已转为只读的VS Code/JetBrains助手,可与Atlarix的本地/混合划分方式对比。',
           '[Cline评测](/zh/power-local-llm/cline-review) — 一款开源、集成于IDE的自主编程代理。',
           '[Aider评测](/zh/power-local-llm/aider-review) — 一款免费、终端原生、以git为中心的AI结对编程工具。',
-          '[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录,其中包含Atlarix自己的条目。',
+          '[本地LLM软件目录](https://www.promptquorum.com/directory) — 本文所属的本地AI工具完整目录,其中包含Atlarix自己的条目。',
         ],
       },
     },
@@ -1405,7 +1405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atlarix Pro cuesta 19 $/mes y añade Atlarix Reviewer además de créditos de inferencia gestionada incluidos; según el fundador, cualquier uso de pago de Auto — ya sea del cupo de Pro o de crédito de prepago comprado — nunca se usa para entrenamiento',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña se basa en un intercambio de correos iniciado por el fundador Amariah Abishai como parte de una gestión de contacto, corroborado por el propio sitio de Atlarix y por la investigación de PromptQuorum sobre fuentes secundarias. PromptQuorum no ha probado el agente de Atlarix de forma independiente, ni evaluado su precisión. Consulta la ficha de Atlarix en el [Directorio de software LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) junto a otros agentes de codificación similares.' },
+          { type: 'note', text: 'Esta reseña se basa en un intercambio de correos iniciado por el fundador Amariah Abishai como parte de una gestión de contacto, corroborado por el propio sitio de Atlarix y por la investigación de PromptQuorum sobre fuentes secundarias. PromptQuorum no ha probado el agente de Atlarix de forma independiente, ni evaluado su precisión. Consulta la ficha de Atlarix en el [Directorio de software LLM local](https://www.promptquorum.com/directory) junto a otros agentes de codificación similares.' },
         ],
       },
       overview: {
@@ -1596,7 +1596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Continue.dev reseña](/es/power-local-llm/continue-dev-review) — un asistente de VS Code/JetBrains ahora de solo lectura tras la adquisición de su creador por Cursor, para comparar con la división local/híbrida de Atlarix.',
           '[Cline reseña](/es/power-local-llm/cline-review) — un agente de codificación autónomo de código abierto e integrado en el IDE.',
           '[Aider reseña](/es/power-local-llm/aider-review) — un programador en pareja con IA gratuito, nativo de terminal y centrado en git.',
-          '[Directorio de software LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia ficha de Atlarix.',
+          '[Directorio de software LLM local](https://www.promptquorum.com/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia ficha de Atlarix.',
         ],
       },
     },
@@ -1672,7 +1672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O Atlarix Pro custa US$ 19/mês e adiciona o Atlarix Reviewer além de créditos de inferência gerenciada inclusos; segundo o fundador, o uso pago do Auto no plano Pro não é usado para treinamento',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise se baseia em uma troca de e-mails iniciada pelo fundador Amariah Abishai como parte de uma abordagem de contato, corroborada pelo próprio site da Atlarix e pela pesquisa da PromptQuorum sobre fontes secundárias. A PromptQuorum não testou o agente da Atlarix de forma independente nem avaliou sua precisão. Veja a ficha da Atlarix no [Diretório de Software LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), ao lado de outros agentes de codificação semelhantes.' },
+          { type: 'note', text: 'Esta análise se baseia em uma troca de e-mails iniciada pelo fundador Amariah Abishai como parte de uma abordagem de contato, corroborada pelo próprio site da Atlarix e pela pesquisa da PromptQuorum sobre fontes secundárias. A PromptQuorum não testou o agente da Atlarix de forma independente nem avaliou sua precisão. Veja a ficha da Atlarix no [Diretório de Software LLM Local](https://www.promptquorum.com/directory), ao lado de outros agentes de codificação semelhantes.' },
         ],
       },
       overview: {
@@ -1863,7 +1863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Continue.dev análise](/pt/power-local-llm/continue-dev-review) — um assistente para VS Code/JetBrains agora somente leitura após a aquisição de sua criadora pela Cursor, para comparação com a divisão local/híbrida do Atlarix.',
           '[Cline análise](/pt/power-local-llm/cline-review) — um agente de codificação autônomo, open source e integrado ao IDE.',
           '[Aider análise](/pt/power-local-llm/aider-review) — um par de programação com IA gratuito, nativo de terminal e centrado em git.',
-          '[Diretório de Software LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria ficha do Atlarix.',
+          '[Diretório de Software LLM Local](https://www.promptquorum.com/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria ficha do Atlarix.',
         ],
       },
     },
@@ -1939,7 +1939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يبلغ سعر Atlarix Pro 19 دولارًا شهريًا ويضيف Atlarix Reviewer بالإضافة إلى رصيد استدلال مُدار مُضمّن؛ ووفق المؤسس، لا يُستخدم استخدام Auto المدفوع للتدريب أبدًا، سواء جاء الرصيد من خطة Pro أو من رصيد مدفوع بحسب الاستخدام',
         ],
         callouts: [
-          { type: 'note', text: 'تستند هذه المراجعة إلى تبادل رسائل بريد إلكتروني بدأه المؤسس أماريا أبيشاي في إطار تواصل من صاحب الأداة، وتؤكدها معلومات موقع Atlarix نفسه وبحث PromptQuorum الخاص في مصادر ثانوية. لم تختبر PromptQuorum وكيل Atlarix بشكل مستقل، ولم تقيّم دقته. راجع قيد Atlarix في [دليل برمجيات LLM المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) إلى جانب وكلاء برمجة مشابهين آخرين.' },
+          { type: 'note', text: 'تستند هذه المراجعة إلى تبادل رسائل بريد إلكتروني بدأه المؤسس أماريا أبيشاي في إطار تواصل من صاحب الأداة، وتؤكدها معلومات موقع Atlarix نفسه وبحث PromptQuorum الخاص في مصادر ثانوية. لم تختبر PromptQuorum وكيل Atlarix بشكل مستقل، ولم تقيّم دقته. راجع قيد Atlarix في [دليل برمجيات LLM المحلية](https://www.promptquorum.com/directory) إلى جانب وكلاء برمجة مشابهين آخرين.' },
         ],
       },
       overview: {
@@ -2130,7 +2130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Continue.dev](/ar/power-local-llm/continue-dev-review) — مساعد VS Code/JetBrains أصبح للقراءة فقط بعد استحواذ Cursor على الشركة المطوّرة، للمقارنة مع تقسيم Atlarix المحلي/الهجين.',
           '[مراجعة Cline](/ar/power-local-llm/cline-review) — وكيل برمجة مستقل مفتوح المصدر ومتكامل مع IDE.',
           '[مراجعة Aider](/ar/power-local-llm/aider-review) — مبرمج مساعد مجاني بالذكاء الاصطناعي، أصلي للطرفية، ومرتكز على git.',
-          '[دليل برمجيات LLM المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك قيد Atlarix نفسه.',
+          '[دليل برمجيات LLM المحلية](https://www.promptquorum.com/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك قيد Atlarix نفسه.',
         ],
       },
     },
@@ -2206,7 +2206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atlarix Pro는 월 19달러이며 Atlarix Reviewer와 포함된 관리형 추론 크레딧을 추가합니다. 창립자에 따르면 Pro 할당량이든 구매한 종량제 크레딧이든, 유료 Auto 사용은 학습에 사용되지 않습니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 창립자 아마리아 아비샤이가 제안한 이메일 연락 내용과 Atlarix 자체 웹사이트, 그리고 PromptQuorum이 직접 조사한 2차 자료를 바탕으로 작성되었습니다. PromptQuorum은 Atlarix의 에이전트를 독자적으로 테스트하지 않았고 정확도를 벤치마크하지 않았습니다. 유사한 코딩 에이전트들과 함께 있는 Atlarix의 등록 정보는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에서 확인할 수 있습니다.' },
+          { type: 'note', text: '이 리뷰는 창립자 아마리아 아비샤이가 제안한 이메일 연락 내용과 Atlarix 자체 웹사이트, 그리고 PromptQuorum이 직접 조사한 2차 자료를 바탕으로 작성되었습니다. PromptQuorum은 Atlarix의 에이전트를 독자적으로 테스트하지 않았고 정확도를 벤치마크하지 않았습니다. 유사한 코딩 에이전트들과 함께 있는 Atlarix의 등록 정보는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에서 확인할 수 있습니다.' },
         ],
       },
       overview: {
@@ -2397,7 +2397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Continue.dev 리뷰](/ko/power-local-llm/continue-dev-review) — 개발사가 Cursor에 인수된 후 현재는 읽기 전용인 VS Code/JetBrains 어시스턴트로, Atlarix의 로컬/하이브리드 구분과 비교하기 좋습니다.',
           '[Cline 리뷰](/ko/power-local-llm/cline-review) — IDE에 통합된 오픈소스 자율 코딩 에이전트.',
           '[Aider 리뷰](/ko/power-local-llm/aider-review) — 무료, 터미널 네이티브, git 중심의 AI 페어 프로그래머.',
-          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — Atlarix 자체 등록 정보를 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory) — Atlarix 자체 등록 정보를 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

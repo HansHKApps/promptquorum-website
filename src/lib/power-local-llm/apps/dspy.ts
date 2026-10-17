@@ -36,4 +36,6 @@ export const app: ToolRecord = {
   reviewSlug: 'dspy-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: '3.3.1', versionSourceUrl: 'https://github.com/stanfordnlp/dspy/releases/tag/3.3.1' },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-15', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/stanfordnlp/dspy',
 }

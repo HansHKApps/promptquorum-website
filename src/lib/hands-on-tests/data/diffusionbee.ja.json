@@ -1,0 +1,1894 @@
+{
+  "id": "pq-test-diffusionbee-2026-10-14",
+  "hero": "juggernaut_clown",
+  "date_human": "2026年10月14日",
+  "captured": "2026-10-14 or later; exact times not recorded",
+  "standard_version": "0.1",
+  "locale": "ja",
+  "app": {
+    "name": "DiffusionBee",
+    "slug": "diffusionbee",
+    "vendor": "Not stated on the vendor page (GitHub handle: divamgupta)",
+    "category": "Local AI image generation",
+    "platform": "macOS (DMG)",
+    "pricing_url": "https://diffusionbee.com"
+  },
+  "title": "24 GBのMacでDiffusionBee：画像の生成はすぐ動いたが、編集はほとんど動かなかった",
+  "page_title": "DiffusionBee Test",
+  "dek": "M3搭載・24 GBのMacでの実機テストです。画像は約1分で生成できましたが、既存の画像への的を絞った編集はほとんど失敗しました。",
+  "seo": {
+    "title": "DiffusionBee実機テスト：画像編集はほぼ失敗",
+    "description": "24 GBのMac（M3）でDiffusionBeeを実機テスト。テキストから画像は約1分で成功したが、画像の部分編集はほぼ失敗した。"
+  },
+  "faq": [
+    [
+      "DiffusionBeeは無料で、Macで動きますか？",
+      "ベンダーは、無料でオフラインで動くとしています。テストでは支払いの画面は出ず、モデルはアプリ経由でダウンロードされ、画像はMac上で生成されました。オフラインでの利用とネットワーク通信は未テストです。",
+      "observed"
+    ],
+    [
+      "DiffusionBeeで既存の画像を編集できますか？",
+      "このテストでは、ほとんどできませんでした。Inpaintingで通行人を消す操作は惜しいところまで行きました。ロゴの除去はピンク色の斑点が残り、空の変更、ポップアート風への変更、クルーズ船の追加は動きませんでした。",
+      "observed"
+    ],
+    [
+      "24 GBのMacで、1枚の生成にどのくらいかかりますか？",
+      "テスターの見積もりでは、24 GBのM3 Mac上でJuggernautXL、1216 x 1216のとき、1枚あたり約1分です。計時はしていません。",
+      "tester-estimate"
+    ],
+    [
+      "DiffusionBeeは、ダウンロード前にモデルの大きさを表示しますか？",
+      "いいえ。Modelsページのカードには名前、短い説明、タグが表示されるだけで、サイズはありません。ダウンロードのダイアログにはパーセンテージしか表示されません。",
+      "observed"
+    ],
+    [
+      "FLUX.1モデルに、アプリの更新が必要と表示されるのはなぜですか？",
+      "FLUX.1-schnellとFLUX.1-devのカードには「You need to update DiffusionBee to use this model」と表示されますが、テスターはその約2分前にアプリをダウンロードしたばかりでした。これらのモデルはダウンロードも使用もしていません。",
+      "observed"
+    ]
+  ],
+  "status": "Completed",
+  "published": "2026-10-16",
+  "started": "2026-10-14",
+  "ended": null,
+  "meta": [
+    [
+      "アプリ",
+      "DiffusionBee。メモでは'Diffusion B'、'Diffusion Bee'、'DiffusionBee'と表記が揺れています。このレポートはアプリ自身の表記を使います。",
+      "observed"
+    ],
+    [
+      "バージョン",
+      "記録なし。ベンダーのページにはバージョンもリリース日も載っていません。",
+      null
+    ],
+    [
+      "テスター",
+      "Hans Kuepper（PromptQuorum創設者）",
+      null
+    ],
+    [
+      "開始",
+      "2026年10月14日（時刻は記録なし）。メモには'14 Oktober 2027'とありますが、テストは2026年に行われたため、年は誤記と判断しました（Mstyのドキュメントにあるファイル情報のスクリーンショットの日付は2026年10月14日）。",
+      "assumption"
+    ],
+    [
+      "終了",
+      "記録なし",
+      null
+    ],
+    [
+      "ハードウェア",
+      "24 GBのApple M3系Mac。メモには'M3 as usual'とあり、別の箇所には'24 gigabyte Mac M3'とあります。標準のテストマシンはM3 ProのMacBook Proで、同じマシンと推定しています。",
+      "assumption"
+    ],
+    [
+      "システム",
+      "macOS。バージョンは記録なし",
+      null
+    ],
+    [
+      "入手元",
+      "DiffusionBeeのウェブサイトのダウンロードページ（最初のスクリーンショットで、アプリの背後にブラウザのタブ'diffusionbee.com/download'が見えます）",
+      "observed"
+    ],
+    [
+      "ダウンロード",
+      "270 MBのDMG（テスターが読み取った値）",
+      "observed"
+    ],
+    [
+      "テストの理由",
+      "メモには記載なし。",
+      null
+    ],
+    [
+      "目的",
+      "記載なし。タスクから推定：24 GBのMacでローカルの画像生成を動かし、そのうえで実在の場所、ブランド名の文字、編集、ネガティブプロンプトを試す。",
+      "assumption"
+    ],
+    [
+      "使用したAI支援",
+      "Juggernaut XLに関するGoogleの回答がメモに貼り付けられていました。長いブランド用プロンプトにはMarkdownの太字記号が含まれており、AIが書いたことをうかがわせますが、確認はできていません。ハイデルベルクのプロンプトは何年も前に、「たぶん」ChatGPTか別のフロンティアモデルで書かれたものです。",
+      "observed"
+    ]
+  ],
+  "disclosure": "テスターはPromptQuorum（promptquorum.com）の創設者です。PromptQuorumはローカルAIアプリに関するコンテンツサイト兼ディレクトリです。DiffusionBeeはそのディレクトリに掲載されており、サイトには別途書かれた既存のレビューページがあります。メモには、ベンダーとの接触、金銭の授受、スポンサー関係の記録はありません。",
+  "verdict": {
+    "general": "無料でローカルで動き、始めやすい：270 MBのダウンロード1つ、6つのツールが並ぶホーム画面、既定のモデルのダウンロードが終われば数分で最初の画像ができます。複数の画像をキューに入れて1回で実行する使い方はうまく機能し、良いモデル（JuggernautXL）では1枚あたり約1分で説得力のあるシーンが得られました。弱点：Modelsページにサイズや案内がない、ダウンロードに残り時間の表示がなく、1回はタイムアウトした、FLUXモデルは一覧にあるのにアプリの更新が必要、プロンプトへの従い方はモデル次第（ネガティブプロンプトは無視された）。既存の画像の編集はほとんど失敗しました：惜しいところまで行ったのは6回中1回（人物の除去）だけです。",
+    "fit": "評価は分かれます。テスターは、これまで試したローカル画像アプリで最高と述べ、「本当に動く」最初の画像アプリだとも述べました。一方で、彼が望む創作のワークフロー（この画像は残して、ここを変えて、あそこも変えて、と段階的に進める）は自分には動かなかったとも述べています。理由と最後のコメントは「テストの経過」にあります。最後の判断は、Mstyのドキュメントにあったメモに基づきます（「その他のテストと最後の見解」の章を参照）。"
+  },
+  "scores": [
+    [
+      "インストール",
+      4,
+      "270 MBのDMG、「開くをクリックするだけ」。最初のモデルはまだダウンロードが必要で、そのダウンロードは1回タイムアウトした。"
+    ],
+    [
+      "導入とモデル選び",
+      2,
+      "Modelsページには名前とタグだけでサイズがない。FLUXのカードはアプリの更新が必要。ツールごとに別のモデルのダウンロードを求められることがある。インポートボタンはある。"
+    ],
+    [
+      "中核機能",
+      3,
+      "テキストから画像は動作し、良いモデルでは説得力のあるシーンが得られた。ブランド名の文字は崩れ、ネガティブプロンプトは無視され、6回の編集のうち4回は失敗した。"
+    ],
+    [
+      "ガイダンスと反復",
+      2,
+      "アプリ内にモデルの情報がなく、テスターには段階的な編集の流れも見つからなかった。Input StrengthとSeedは分かりにくい。キューとActionsボタンは役に立つ。"
+    ],
+    [
+      "パフォーマンス",
+      4,
+      "高解像度で1枚あたり約1分、1つのモデルでメモリ約5 GB（いずれもテスターの推定）。アプリに速度や時間の表示はない。"
+    ],
+    [
+      "ドキュメント",
+      null,
+      "未テスト。"
+    ],
+    [
+      "信頼性とプライバシー",
+      null,
+      "監査していません。ベンダーは100パーセントオフラインでの利用を主張しています。モデルはアプリ経由でダウンロードされます。オフライン動作は未テストです。"
+    ],
+    [
+      "アンインストール",
+      null,
+      "未テスト。"
+    ]
+  ],
+  "scores_note": "スコアは、以下の根拠から導いた案です（1 = 低い、5 = 非常に良い）。確定はテスターが行います。",
+  "tldr": [
+    [
+      "observed",
+      "テキストから画像は素早く動作しました：既定のモデルでは単純な円、JuggernautXLでは説得力のあるシーン。アプリでは複数の画像をキューに入れ、その間に別の作業ができます。"
+    ],
+    [
+      "observed",
+      "始めるまでに引っかかりがあります：モデルのサイズがなく、ダウンロードの残り時間の表示もなく、最初のダウンロードでタイムアウトし、FLUXモデルはテスターがインストールしたばかりのアプリの更新を求めます。"
+    ],
+    [
+      "tester-view",
+      "既存の画像の編集はほとんど失敗しました：ロゴの除去では残骸が残り、空とポップアートの変更は反映されず、クルーズ船は追加できませんでした。"
+    ]
+  ],
+  "quotes": [
+    "モデルの大きさがどこにも書かれていないので、自分のコンピューターで何が動くのか分かりません。",
+    "それが、インターネットにアクセスできるフロンティアモデルと、画像を生成するだけの純粋なLLMとの違いです。",
+    "本当に動く、最初の画像アプリ。"
+  ],
+  "quote_note": "テスターのメモ。音声の文字起こしを軽く編集しています。英語から翻訳。",
+  "moments_title": "このテストを形づくった6つの場面",
+  "moments_nav": "6つの場面",
+  "moments": [
+    [
+      "サイズなし、FLUXは更新が必要",
+      "Modelsページには名前とタグがあるだけで、サイズはありません。FLUX.1のカードには'You need to update DiffusionBee to use this model'と表示されます。",
+      "models",
+      "chapter-models"
+    ],
+    [
+      "ゼロからやり直し",
+      "最初のモデルのダウンロードがESOCKETTIMEDOUTで失敗しました。テスターによれば65パーセントまで進んでおり、最初からやり直す必要がありました。",
+      "timeout",
+      "chapter-install"
+    ],
+    [
+      "ハイデルベルクではなく、ただの城",
+      "テスターのハイデルベルクのプロンプトからは、きれいだがありふれた城の風景が返ってきました。",
+      "heidelberg",
+      "chapter-heidelberg"
+    ],
+    [
+      "ロゴは消え、スパゲッティは戻らず",
+      "Inpaintingで読めるロゴは消えましたが、ピンク色の斑点とにじんだ麺が残りました。",
+      "barilla_result",
+      "chapter-inpaint"
+    ],
+    [
+      "惜しい、惜しい、惜しい",
+      "ガイダンスを最大にすると、ピエロ、ゾウ、火山が現れました。ビーチと海は現れませんでした。",
+      "clown_guidance",
+      "chapter-clown"
+    ],
+    [
+      "船もカップルもなし",
+      "ビーチの画像にクルーズ船を追加するよう頼むと、アプリはデッキ上の船を返し、カップルは消えました。",
+      "cruise1",
+      "chapter-more"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "ダウンロード、初回起動、最初のモデル",
+      "items": [
+        [
+          "observed",
+          "インストーラーはウェブサイトの270 MBのDMGです。テスター：'とても良い起動。偽物のように見える［メモでは言葉が不明］。もうやることはない。開くをクリックするだけ。'",
+          null
+        ],
+        [
+          "observed",
+          "ホーム画面'All AI Tools'には、Text to image、Image to image、AI Canvas、Illusion Generator、Inpainting、Upscalerが表示されます（リストはスクロール済みで、下にさらにあるかもしれません）。",
+          "home"
+        ],
+        [
+          "observed",
+          "初回の利用ではモデルを求められます：'Download model to get started. You need to download the following models to generate: DiffusionBee Default 0.1'。進捗バーはパーセンテージだけで、サイズも残り時間もありません。メモでは1分足らずで2パーセントとありますが、スクリーンショットでは3パーセントです。",
+          "dl_progress"
+        ],
+        [
+          "tester-view",
+          "ダイアログには、モデルの大きさとダウンロードにかかる時間を表示してほしい。",
+          null
+        ],
+        [
+          "observed",
+          "モデルのダウンロード中も、アプリの他の部分を開いて使えます（メモによる）。",
+          null
+        ],
+        [
+          "observed",
+          "最初のダウンロードは'Please check your internet connection or firewall. ESOCKETTIMEDOUT'で失敗し、選択肢は'Download Again'の1つだけでした。",
+          "timeout"
+        ],
+        [
+          "assumption",
+          "テスターは、テスト場所の回線が遅いことがタイムアウトの原因だと考えています。未検証です。ダウンロードは65パーセントまで進んでいて、最初からやり直す必要があったと報告しています。ゼロから再開されたのかは確認していません。",
+          null
+        ],
+        [
+          "tester-view",
+          "'いい加減にしてほしい、これはあまりにもプロらしくない。'ダウンロード後：'やった、ダウンロードしたら動いた。'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-models",
+      "title": "Modelsページ",
+      "items": [
+        [
+          "observed",
+          "Modelsページはカードのグリッドで、各カードには名前、1行の説明、'sdxl_base float8_1'のようなタグがあります。SDXL Base、Juggernaut XL、BluePencil XL、RealVis XL、Animagine XL V3.1、Anything XL、DreamShaper XL Turboなどが並びます。どのカードにもダウンロードサイズは表示されません。",
+          "models"
+        ],
+        [
+          "observed",
+          "FLUX.1-schnellとFLUX.1-devには、赤い文字で'You need to update DiffusionBee to use this model.'と表示されます。テスターはその約2分前にアプリをダウンロードしたばかりでした。",
+          null
+        ],
+        [
+          "third-party",
+          "PromptQuorumのディレクトリは、DiffusionBeeの最終アップストリーム更新を2024年10月30日（このテストの1年以上前）としており、ベンダーページのフッターは'© 2024'です。プロジェクトのREADMEにはSD 1.x、SD 2.x、SD XL、Inpainting、ControlNet、LoRAが挙がっていますが、FLUXへの言及はありません。2026年10月16日に確認。GitHubのリリース一覧は読めませんでした。",
+          null
+        ],
+        [
+          "observed",
+          "Modelsページには'Import From Computer'ボタンがあります。テスターは、すでに持っているモデルをインポートできるのだろうと推測しています（未テスト）。",
+          null
+        ],
+        [
+          "tester-view",
+          "彼は、自分のコンピューターで何が動くか分かるように、なぜモデルのサイズが表示されないのか、そして各モデルが何のためのものかを短く説明する文がないのはなぜか、と問うています。'しかも説明がないので、またランダムにダウンロードするのと同じだ。'",
+          null
+        ],
+        [
+          "observed",
+          "Samaritan 3d Cartoonのカードには、サイズなしで1パーセントのダウンロードバーが表示されていました（メモと小さなスクリーンショットによる）。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-first-images",
+      "title": "最初の画像：円とブランドのビジュアル",
+      "items": [
+        [
+          "observed",
+          "プロンプト'circle with green dot in the middle'：緑の背景に、中心が緑の白い円盤。設定：Default_SDB_0.1、512 x 512、1枚、シード-1、25ステップ。どの画像にも'Actions'ボタンが付いています。",
+          "first_gen"
+        ],
+        [
+          "observed",
+          "次に「本物の挑戦」：PromptQuorumのブランドビジュアルとロゴのための、長く構造化されたプロンプト。設定：Default_SDB_0.1、1024 x 1024、3枚、25ステップ。画面にはスピナーと、'Add to Queue'、'Stop all'が表示されます。",
+          null
+        ],
+        [
+          "observed",
+          "3つの結果は、文字が崩れた白黒の箱とカードです。読める'PromptQuorum.com'も、使えるロゴもありません。",
+          "logo_result"
+        ],
+        [
+          "assumption",
+          "テスターは「プロンプトが失敗したのは、それが求められていなかったからだと思う」と書いています。メモでは意味がはっきりしません。",
+          null
+        ],
+        [
+          "tester-view",
+          "彼は、画像の枚数とサイズを選べる点を気に入っています。足りないと感じたのは、速度の表示、終了時刻、そして待っている間の「ちょっとした楽しみ」です。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-heidelberg",
+      "title": "実在の場所：ハイデルベルク",
+      "items": [
+        [
+          "observed",
+          "プロンプトは何年も前にフロンティアモデル向けに書いたもので、ハイデルベルクのホイマルクトから城を見上げる写真のようなリアルな画像、城の後ろに鳥と日の出、というものです。モデルと設定は記録なし。",
+          null
+        ],
+        [
+          "observed",
+          "3つの結果には、古い木組みの家々の上にある、森に覆われた丘の上の城と鳥が写っています。どれも、ホイマルクトからの眺めにも、ハイデルベルク城そのものにも見えません。",
+          "heidelberg"
+        ],
+        [
+          "tester-error",
+          "テスターは、画像モデルが実在の場所とその角度を知っていると期待していました。本人も'このツールに期待しすぎた'と述べています。",
+          null
+        ],
+        [
+          "tester-view",
+          "'丘の上に城、後ろに夕日と鳥、と書けばよかった。それが、インターネットにアクセスできるフロンティアモデルと、画像を生成するだけの純粋なLLMとの違いだ。'",
+          null
+        ],
+        [
+          "assumption",
+          "違いは、インターネットや場所に関する知識にアクセスできるかどうかだ、というものです。このレポートでは検証していません。",
+          null
+        ],
+        [
+          "observed",
+          "テスターは、「他のシステムなら断るかもしれない」画像も試しました。メモには、アプリは'何に対してもストップとは言わなかった'とあります。プロンプトは記録されておらず、スクリーンショットもありません。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-inpaint",
+      "title": "Inpainting：ロゴと通行人",
+      "items": [
+        [
+          "observed",
+          "Inpaintingを開くと、さらに別のモデルを求められます：'ControlNet Inpaint'、3パーセント、サイズなし。",
+          "controlnet"
+        ],
+        [
+          "observed",
+          "テスト1：パスタの箱の写真。プロンプト'remove barillia logo'（ブランド名のつづりが誤り）で、ロゴの上にマスクをかけました。メモによると、最初の試行は「失敗」でした。",
+          "barilla_ui"
+        ],
+        [
+          "observed",
+          "2回目の試行後、ロゴの文字は読めなくなりましたが、ピンク色の斑点が残り、スパゲッティの麺がにじんでいます。",
+          "barilla_result"
+        ],
+        [
+          "tester-view",
+          "'技術的には、消すことはできた。ただ、スパゲッティを元どおりにまとめることができなかった。'",
+          null
+        ],
+        [
+          "observed",
+          "テスト2：通行人が写った街の写真。結果では人物が消えています。テスター：'あと一歩。何かがあると思わず、探しもしなければ、気づかない。'",
+          "church_result"
+        ],
+        [
+          "tester-error",
+          "プロンプトのブランド名のつづりが誤っていました（'barillia'）。作業をしたのはプロンプトではなくマスクなので、影響はおそらく小さいでしょう（推測）。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-canvas",
+      "title": "AI CanvasとImage to image：空とポップアート",
+      "items": [
+        [
+          "observed",
+          "街の写真を使ったAI Canvasで、プロンプト'Make the sky dark blue, real summer day'、Input Strength 30。結果は記録されていません。",
+          "canvas_sky"
+        ],
+        [
+          "tester-view",
+          "'青空はうまくいかなかった。あるいは、仕組みを理解していない。'",
+          null
+        ],
+        [
+          "observed",
+          "Image to imageで、Samaritan_3d_Cartoon_v1_s2、Input Strength 80.02、プロンプト'make this into a pop art cartoon picture'。結果は写真をやわらかく、くすませたコピーで、ポップアートではありません。テスター：'ポップアートもうまくいかなかった。理由は分からない。'",
+          "popart"
+        ],
+        [
+          "assumption",
+          "このスクリーンショットはメモの最後、速度についてのコメントの後にあり、ポップアートの試行と判断しました。確認はできていません。",
+          null
+        ],
+        [
+          "assumption",
+          "Input Strengthが高いほど元の画像が多く残る、という推測です。データ点：21.07と21.46では画像が大きく変わり、90.13ではほぼそのまま返され、80.02ではほぼコピーでした。4つの設定だけで、アプリ自身の説明は記録されていません。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-clown",
+      "title": "ピエロ、ゾウ、火山：モデル、ガイダンス、ネガティブプロンプト",
+      "items": [
+        [
+          "observed",
+          "テスターはSamaritan 3D Cartoonでメモリ使用量を確認しました。プロンプト'draw a clown dancing on an elephant'、512 x 512、1枚：踊る漫画風のピエロと、その後ろに溶け合った薄茶色のゾウのような形。",
+          "clown_samaritan"
+        ],
+        [
+          "tester-estimate",
+          "このモデルで必要なメモリ：「自分のVRAM」で約5 GB。方法は記録なし。Apple Siliconではメモリは1つの共有プールです。",
+          null
+        ],
+        [
+          "observed",
+          "より長いプロンプト（ゾウの上のピエロ、ビーチ、青い海、噴火する火山）とネガティブプロンプト'No blue sky!!'、1024 x 1024：火花を散らす青い筋肉質の生き物。ピエロもゾウもビーチも火山も見分けられません。テスター：'良い結果だが、私が示したものとはあまり違う'。",
+          "clown_nobluesky"
+        ],
+        [
+          "observed",
+          "ガイダンススケールを最大にすると（アプリの説明では、本当に頼んだとおりにするという意味）：ピエロ、ゾウのような動物、噴火する火山が現れます。ビーチも青い海も見分けられず、地面は暗いままです。",
+          "clown_guidance"
+        ],
+        [
+          "tester-view",
+          "'惜しい、惜しい、惜しい、あるいは完璧かもしれない、と言いたい。'",
+          null
+        ],
+        [
+          "observed",
+          "同じプロンプトをJuggernautXL_v7_f8（別途ダウンロード）で：風船を持つピエロがゾウに乗り、大きな火山の噴煙、パラソルのあるビーチと青い水。空は青く、ネガティブプロンプト'No blue sky!!'は守られていません。テスター：'すばらしく見えるが、ネガティブプロンプトが飛ばされた。'",
+          null
+        ],
+        [
+          "tester-view",
+          "モデルが何なのかを、別の場所で調べるのではなく、ウィンドウに表示してほしいと彼は望んでいます。メモに貼り付けられたGoogleの回答は、Juggernaut XLを、写実性を重視したSDXLのファインチューンと説明しています（「背景」を参照）。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-couple",
+      "title": "写真のようなカップルと、速度",
+      "items": [
+        [
+          "observed",
+          "プロンプト：'photorealist a couple in love on the beach, watching the sunset over the ocean, birds in the sky, some boats on the water, some palm trees seen'。JuggernautXL_v7_f8、1216 x 1216、6枚を指定。2つの結果が記録されました。",
+          "settings"
+        ],
+        [
+          "observed",
+          "2つとも夕日、ヤシの木、鳥があります。1つ目には帆船が1隻と砂の上のカメラがあり、2つ目には複数の船がありますが、カップルを求めたプロンプトに対して、2つのベンチに3人がいます。",
+          "couple_a"
+        ],
+        [
+          "observed",
+          "2つ目の結果（図19）をここに示します。",
+          "couple_b"
+        ],
+        [
+          "tester-view",
+          "'少しAIっぽいが、よくできている、よくできている。'彼は、画像の枚数とサイズを選べること、そして他のことをしている間もアプリが'ひたすら動き続け'、あとから一番良いものを選べることを気に入っています。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "最高解像度で1枚あたり約1分、ファイルは1枚あたり約2メガバイト。どちらも計時やスクリーンショットでの確認はしていません。'あまり速くはないが、問題ない。'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-more",
+      "title": "その他のテストと最後の見解（Mstyのドキュメントにあったメモ）",
+      "items": [
+        [
+          "assumption",
+          "Mstyのテスト用のWordファイルには、DiffusionBeeに関するメモとスクリーンショットも含まれています。ここでは2つ目の情報源として使っています。日付と、上記のテストとの前後関係は記録されていません。2026年10月14日17:58付のファイル情報のスクリーンショットから、同じ日と考えられます。",
+          null
+        ],
+        [
+          "observed",
+          "'Generate similar images'は、1枚の画像から似たビーチのカップルのシーンを4つ作りました。テスター：便利な機能で、'本当に印象的'と評しています。",
+          "similar"
+        ],
+        [
+          "measured",
+          "Downloadsに2026年10月14日17:58に保存されたPNGは、38,733,330バイト（38.7 MB）でした。どの画像かは記録されていません。",
+          null
+        ],
+        [
+          "observed",
+          "ビーチのカップルの画像でImage to image、プロンプト'add a cruise ship to the picture'、Input Strength 21.07：デッキの手すりから見た夕暮れのクルーズ船が現れます。カップルとヤシの木は消えています。",
+          "cruise1"
+        ],
+        [
+          "observed",
+          "2回目（長いプロンプト、Input Strength 21.46）：ヤシの木と椅子のあるデッキから見た夕暮れの海。水平線に船はありません。",
+          null
+        ],
+        [
+          "observed",
+          "3回目（Input Strength 90.13）：出力は入力とほぼ同じで、船はありません。",
+          "cruise3"
+        ],
+        [
+          "observed",
+          "メモによると、Input Strengthを100にするとアプリが「クラッシュ」します。スクリーンショットなし。バージョンは記録なし。",
+          null
+        ],
+        [
+          "observed",
+          "エッフェル塔のプロンプト（JuggernautXL_v7_f8、2枚、シード770465）：下から見上げた、ほぼ同じ2つの塔。テスターは、塔自体は良いが向きと比率がずれており、フランス式庭園の木々は'ぴったり'だが、塔の周りのそれ以外は外れていると述べています。",
+          "eiffel"
+        ],
+        [
+          "observed",
+          "ニューヨークの夜景に'add 3 helicopters flying'（epicrealismXL_v8、75ステップ）：3機より多いヘリコプターが見えます。テスター：'3まで数えられず、2つ目のマンハッタン島を作ってしまった'。",
+          "nyc"
+        ],
+        [
+          "observed",
+          "料理の写真にプロンプト'make this german dinner into a cartoon style, many colors, really funny'：メモによると、アプリは'同じ画像を何度も返してきた'。結果は記録されていません。",
+          null
+        ],
+        [
+          "observed",
+          "Seedの入力欄にはヘルプテキストがあり、テスターはそれを'Starting point for iteration. Any number will do. [App?] will pick one if left blank.'と引用しています。彼は'この値が何なのか分からない'と述べています。'will pick one'の前の単語は、メモでは判読できません。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "Claudeアプリ、Word、WhatsApp、Chromeなどを開いた状態で、彼はメモリ使用量を24 GBのうち約20 GBと見積もっています。彼の読み：'24 GBのMacでも……またもや限界ぎりぎりだ'。彼のテストから得た本当の教訓はVRAMです。",
+          null
+        ],
+        [
+          "tester-view",
+          "'機能面でも画面面でも、これまで試したローカルLLMアプリのツールの中で最高だ……これらの機能のうち、何をするのか分からない2〜3個を覚える必要があるかは分からない。''本当に動く、最初の画像アプリ。'",
+          null
+        ],
+        [
+          "tester-view",
+          "足りないもの：画像を段階的に整えていくこと（「ここを少し、あそこを少し」）。'今のところ動いていない。'彼の扱い方が悪いのかもしれません。'1年後には、これは完璧になるだろう。'最後の一文：'スムーズな画面で、小さめのモデルでも動き、ほとんど説明なしで分かる。1枚の画像を別のツールに渡せる優れた機能がある。'",
+          null
+        ],
+        [
+          "assumption",
+          "ローカルモデルが1〜2年のうちにクラウドモデルと肩を並べる、というテスターの予想は、ここでは検証していません。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "'Runs 100% offline.' 'Your prompts, models and generated images never leave your device.'",
+      "ベンダーのウェブサイト、2026年10月16日に確認",
+      "モデルはアプリ経由でダウンロードされた（接続が必要で、1回はダウンロードがタイムアウトした）。生成はMac上で行われた。オフラインでの利用とネットワーク通信は未テスト。",
+      "observed"
+    ],
+    [
+      "'Completely free of charge.'",
+      "ベンダーのウェブサイト（メタディスクリプション）",
+      "メモにもスクリーンショットにも、支払いの画面は出てこない。",
+      "observed"
+    ],
+    [
+      "8 GBのM1 MacBook Airで1枚あたり約30秒",
+      "ベンダーのウェブサイト",
+      "テスターは、24 GBのM3でJuggernautXL、1216 x 1216のとき、1枚あたり約1分と報告している。モデルもサイズも異なり、比較はできない。",
+      "tester-estimate"
+    ],
+    [
+      "Text to image、Image to image、Inpainting、AI Canvas、Upscaler、Illusion Generator、generative fill、動画ツール、画像のバリエーション、モデルのトレーニング、コントロール画像を含むツールボックス",
+      "ベンダーのウェブサイト、2026年10月16日に確認",
+      "ホーム画面には6つのツールが表示された。Text to image、Image to image、Inpainting、AI Canvas、バリエーションは使用した。Upscaler、Illusion Generator、動画ツール、トレーニングは試していない。",
+      "observed"
+    ],
+    [
+      "ModelsページにFLUX.1-schnellとFLUX.1-devがある",
+      "アプリ",
+      "どちらにも'You need to update DiffusionBee to use this model'と表示される。ダウンロードも使用もしていない。",
+      "observed"
+    ],
+    [
+      "ガイダンススケール：最大にすると、モデルはプロンプトにより忠実に従う",
+      "アプリの説明（テスターによる言い換え）",
+      "1つのプロンプトでは近づいた（ゾウと火山が現れた）が、ビーチと海は依然として欠けていた。1回の実行のみ。",
+      "observed"
+    ],
+    [
+      "ネガティブプロンプト'No blue sky!!'",
+      "テスターのプロンプト",
+      "JuggernautXLでは無視された（青い空）。Samaritanでは、どちらの実行でも空は見えなかった。",
+      "observed"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 30,
+    "rows": [
+      [
+        "生成中のSamaritan 3D Cartoon",
+        5.0,
+        "約5 GB（方法は記録なし）",
+        "tester-estimate"
+      ],
+      [
+        "多くのアプリを開いた状態のMac全体、生成中",
+        20.0,
+        "約20 GBを使用（テスターが声に出して読み上げた値）",
+        "tester-estimate"
+      ]
+    ],
+    "note": "アプリにモデルのサイズが表示されないため、ダウンロードサイズの行はありません。DMG：270 MB。ダウンロード後の最初の画面には、メモリに関する目安がありません。上の2つの値はテスターが口頭で述べたもので、スクリーンショットでは確認していません。20 GBはアプリ単体ではなくMac全体の値です。"
+  },
+  "usage_log": [
+    [
+      "最初のモデルをダウンロードして起動",
+      "DiffusionBee Default 0.1",
+      "1回タイムアウト（ESOCKETTIMEDOUT）、再起動後に動作",
+      "記録なし",
+      "Partial",
+      [
+        "dl_progress",
+        "timeout"
+      ]
+    ],
+    [
+      "Text to image：緑の点のある円",
+      "Default_SDB_0.1, 512",
+      "緑の中心のある白い円盤、一致",
+      "記録なし",
+      "Pass",
+      [
+        "first_gen"
+      ]
+    ],
+    [
+      "PromptQuorumのブランドビジュアル、長いプロンプト、3枚",
+      "Default_SDB_0.1, 1024",
+      "文字が崩れた箱とカード、使えるロゴなし",
+      "記録なし",
+      "Fail",
+      [
+        "logo_result"
+      ]
+    ],
+    [
+      "ハイデルベルク、城が見えるホイマルクトからの眺め",
+      "記録なし",
+      "ありふれた城の風景、その場所ではない",
+      "記録なし",
+      "Partial",
+      [
+        "heidelberg"
+      ]
+    ],
+    [
+      "Inpainting：パスタの箱のロゴを消す",
+      "Default_SDB_0.1 + ControlNet Inpaint",
+      "ロゴは読めなくなったが、ピンク色の斑点とにじんだ麺が残る",
+      "記録なし",
+      "Partial",
+      [
+        "barilla_ui",
+        "barilla_result"
+      ]
+    ],
+    [
+      "Inpainting：街の写真から通行人を消す",
+      "記録なし",
+      "人物が消えた、'あと一歩'",
+      "記録なし",
+      "Pass",
+      [
+        "church_result"
+      ]
+    ],
+    [
+      "AI Canvas：空を濃い青にする",
+      "Default_SDB_0.1, strength 30",
+      "テスターによれば動かなかった、結果は記録なし",
+      "記録なし",
+      "Fail",
+      [
+        "canvas_sky"
+      ]
+    ],
+    [
+      "Image to image：ポップアート",
+      "Samaritan_3d_Cartoon_v1_s2, strength 80.02",
+      "写真のほぼコピー",
+      "記録なし",
+      "Fail",
+      [
+        "popart"
+      ]
+    ],
+    [
+      "ゾウの上のピエロ、短いプロンプト",
+      "Samaritan_3d_Cartoon_v1_s2, 512",
+      "ゾウのような形のあるピエロ",
+      "記録なし",
+      "Partial",
+      [
+        "clown_samaritan"
+      ]
+    ],
+    [
+      "ピエロ、ゾウ、ビーチ、海、火山 + ネガティブプロンプト",
+      "Samaritan_3d_Cartoon_v1_s2, 1024",
+      "青い生き物、どの物体も見分けられない",
+      "記録なし",
+      "Fail",
+      [
+        "clown_nobluesky"
+      ]
+    ],
+    [
+      "同じプロンプト、ガイダンス最大",
+      "Samaritan_3d_Cartoon_v1_s2, 1024",
+      "ピエロ、ゾウのような動物、火山。ビーチと海はなし",
+      "記録なし",
+      "Partial",
+      [
+        "clown_guidance"
+      ]
+    ],
+    [
+      "同じプロンプトを2つ目のモデルで",
+      "JuggernautXL_v7_f8, 1024",
+      "すべての物体がある、空は青いまま",
+      "約1分（テスターの推定）",
+      "Partial",
+      [
+        "juggernaut_clown"
+      ]
+    ],
+    [
+      "ビーチのカップル、6枚",
+      "JuggernautXL_v7_f8, 1216",
+      "説得力のあるシーン、1枚に余分な人物が1人",
+      "1枚あたり約1分（テスターの推定）",
+      "Pass",
+      [
+        "settings",
+        "couple_a",
+        "couple_b"
+      ]
+    ],
+    [
+      "Generate similar images",
+      "記録なし",
+      "似たシーンが4つ",
+      "記録なし",
+      "Pass",
+      [
+        "similar"
+      ]
+    ],
+    [
+      "Image to image：クルーズ船を追加（3回）",
+      "Default_SDB_0.1, strength 21.07 / 21.46 / 90.13",
+      "デッキの船でカップルは消えた、船なし、ほぼコピー",
+      "記録なし",
+      "Fail",
+      [
+        "cruise1",
+        "cruise3"
+      ]
+    ],
+    [
+      "Input Strengthを100に設定",
+      "記録なし",
+      "アプリがクラッシュ（メモのみ）",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "エッフェル塔、2枚",
+      "JuggernautXL_v7_f8, 1216",
+      "塔は分かるが、角度と比率がずれている、ほぼ同じ結果が2つ",
+      "記録なし",
+      "Partial",
+      [
+        "eiffel"
+      ]
+    ],
+    [
+      "3機のヘリコプターがいるニューヨークの夜景",
+      "epicrealismXL_v8, 75 steps",
+      "3機より多いヘリコプター",
+      "記録なし",
+      "Partial",
+      [
+        "nyc"
+      ]
+    ],
+    [
+      "料理の写真を漫画風に",
+      "記録なし",
+      "同じ画像が何度も返された",
+      "記録なし",
+      "Fail",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "画像モデルが実在の場所とその角度を知っていると期待していた（ハイデルベルク）。本人もそう述べている。"
+    ],
+    [
+      "tester-error",
+      "Inpaintingのプロンプトでブランド名のつづりを誤った（'barillia'）。"
+    ],
+    [
+      "tester-error",
+      "開始日を'14 Oktober 2027'と書いた。ここでは2026年と読んでいる。"
+    ],
+    [
+      "tester-error",
+      "記録に抜けがある：アプリのバージョン、macOSのバージョン、終了時刻、複数の画像のモデルと設定、空の編集の結果、メモリ使用量の測り方。"
+    ],
+    [
+      "tester-error",
+      "このテストの一部をMstyのドキュメントに入れたため、メモが2つのファイルに分かれ、順序は記録されていない。"
+    ],
+    [
+      "assumption",
+      "テスターは、Input Strengthのコントロールの扱いを誤っているのではないかと考えている。データ点からは、値が高いほど元の画像が多く残ると見られ、いくつかの失敗（80.02のポップアート、90.13の船）の説明になりうる。未確認。"
+    ],
+    [
+      "assumption",
+      "ピエロの画像についての「惜しい、惜しい、惜しい、あるいは完璧かも」という評価は、ビーチも青い海も見分けられないスクリーンショットよりも好意的である。"
+    ]
+  ],
+  "findings": [
+    [
+      "DB-01",
+      "モデルのカードには名前、1行の説明、タグがあるが、ダウンロードサイズ、用途、ハードウェアへの適合度はない。",
+      "導入",
+      "observed",
+      "High",
+      [
+        "models"
+      ]
+    ],
+    [
+      "DB-02",
+      "アプリを新規にインストールしたばかりなのに、FLUX.1のカードには'You need to update DiffusionBee to use this model'と表示される。",
+      "導入",
+      "observed",
+      "High",
+      [
+        "models"
+      ]
+    ],
+    [
+      "DB-03",
+      "ディレクトリは最終アップストリーム更新を2024年10月30日（1年以上前）としている。READMEにFLUXへの言及はない。",
+      "メンテナンス",
+      "third-party",
+      "Medium",
+      []
+    ],
+    [
+      "DB-04",
+      "モデルのダウンロードにはパーセンテージだけが表示され、サイズも残り時間もない。メモによれば、その間アプリの他の部分は使える。",
+      "UX",
+      "observed",
+      "Medium",
+      [
+        "dl_progress"
+      ]
+    ],
+    [
+      "DB-05",
+      "最初のダウンロードはESOCKETTIMEDOUTで失敗した。選択肢は'Download Again'だけで、テスターは最初からのやり直しだったと報告している。",
+      "UX",
+      "observed",
+      "Medium",
+      [
+        "timeout"
+      ]
+    ],
+    [
+      "DB-06",
+      "Inpaintingには、さらにモデルのダウンロード（ControlNet Inpaint）が必要で、サイズは表示されない。",
+      "UX",
+      "observed",
+      "Medium",
+      [
+        "controlnet"
+      ]
+    ],
+    [
+      "DB-07",
+      "既定のモデルで、Text to imageは最初の試行から動作した。",
+      "中核機能",
+      "observed",
+      "Positive",
+      [
+        "first_gen"
+      ]
+    ],
+    [
+      "DB-08",
+      "複数の画像をキューに入れられる（'Add to Queue'、'Stop all'）。その間もテスターは作業を続けられる。",
+      "中核機能",
+      "observed",
+      "Positive",
+      [
+        "couple_a"
+      ]
+    ],
+    [
+      "DB-09",
+      "生成中に速度の表示や終了時刻がない。",
+      "UX",
+      "tester-view",
+      "Low",
+      []
+    ],
+    [
+      "DB-10",
+      "長いブランド用プロンプトからは、文字が崩れ、使えるロゴのない画像が返ってきた。",
+      "中核機能",
+      "observed",
+      "Medium",
+      [
+        "logo_result"
+      ]
+    ],
+    [
+      "DB-11",
+      "実在の場所とその眺め（ハイデルベルク）は再現されず、画像はありふれたものだった。",
+      "中核機能",
+      "observed",
+      "Low",
+      [
+        "heidelberg"
+      ]
+    ],
+    [
+      "DB-12",
+      "Inpaintingによるロゴの除去では、ピンク色の斑点とにじんだディテールが残った。",
+      "編集",
+      "observed",
+      "Medium",
+      [
+        "barilla_result"
+      ]
+    ],
+    [
+      "DB-13",
+      "Inpaintingによる人物の除去は成功した（'あと一歩'）。",
+      "編集",
+      "observed",
+      "Positive",
+      [
+        "church_result"
+      ]
+    ],
+    [
+      "DB-14",
+      "AI Canvasでの空の変更は、テスターによれば動かなかった。",
+      "編集",
+      "tester-view",
+      "Medium",
+      [
+        "canvas_sky"
+      ]
+    ],
+    [
+      "DB-15",
+      "Strength 80.02でのImage to imageのポップアートは、ほぼコピーを返した。",
+      "編集",
+      "observed",
+      "Medium",
+      [
+        "popart"
+      ]
+    ],
+    [
+      "DB-16",
+      "クルーズ船の追加は3回とも失敗した：カップルが消えた船、船なし、ほぼコピー。",
+      "編集",
+      "observed",
+      "High",
+      [
+        "cruise1",
+        "cruise3"
+      ]
+    ],
+    [
+      "DB-17",
+      "Input Strengthが高いほど、元の画像が多く残る（4つの設定のみ）。",
+      "操作",
+      "assumption",
+      "Medium",
+      [
+        "cruise1",
+        "cruise3",
+        "popart"
+      ]
+    ],
+    [
+      "DB-18",
+      "メモによれば、Input Strengthを100にするとアプリがクラッシュする（スクリーンショットなし）。",
+      "安定性",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "DB-19",
+      "ネガティブプロンプト'No blue sky!!'は、JuggernautXLでは無視された。",
+      "中核機能",
+      "observed",
+      "Medium",
+      [
+        "juggernaut_clown"
+      ]
+    ],
+    [
+      "DB-20",
+      "ガイダンスを最大にすると、Samaritanでピエロ、ゾウ、火山がプロンプトに近づいた。",
+      "中核機能",
+      "tester-view",
+      "Low",
+      [
+        "clown_guidance"
+      ]
+    ],
+    [
+      "DB-21",
+      "アプリはモデルが何なのかを説明しない。テスターはGoogleで調べた。",
+      "ガイダンス",
+      "tester-view",
+      "Medium",
+      [
+        "models"
+      ]
+    ],
+    [
+      "DB-22",
+      "SeedとInput Strengthは、テスターには分かりにくかった。",
+      "ガイダンス",
+      "tester-view",
+      "Low",
+      []
+    ],
+    [
+      "DB-23",
+      "Samaritanでメモリ約5 GB、1216 x 1216のJuggernautXLで1枚あたり約1分。",
+      "パフォーマンス",
+      "tester-estimate",
+      "Positive",
+      [
+        "settings"
+      ]
+    ],
+    [
+      "DB-24",
+      "'Generate similar images'は4つの近いバリエーションを作った。各画像のActionsボタンから、他のツールに渡せる。",
+      "中核機能",
+      "observed",
+      "Positive",
+      [
+        "similar",
+        "first_gen"
+      ]
+    ],
+    [
+      "DB-25",
+      "テスターは、これまで試したローカル画像アプリで最高と評価している。",
+      "総合",
+      "tester-view",
+      "Positive",
+      []
+    ]
+  ],
+  "severity_note": "重大度は、初めて使う人への影響度です。案であり、実測値ではありません。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "無料のローカルなText-to-imageツールを求め、複数のモデルをダウンロードして試す意欲のあるMacユーザー。"
+      ],
+      [
+        "vendor-claim",
+        "ベンダーが説明するとおり、すべてを自分のマシン上で済ませたい人（未検証）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "1枚の画像を取り、それを段階的に変えていきたいクリエイター。テスターはこれを動かせなかった。"
+      ],
+      [
+        "assumption",
+        "どのモデルが自分のMacに合うか、あるいはモデルが何のためのものかを、アプリが教えてくれると期待する初めての利用者。"
+      ]
+    ],
+    "retest": "未テストの部分（Upscaler、Illusion Generator、動画ツール、モデルのインポート、オフライン利用、アンインストール）を再テストし、その際は先にバージョンとmacOSを記録してください。次のリリース後にも再テストしてください。ディレクトリ上の最終アップストリーム更新は2024年10月なので、リリースはまだ先かもしれません（推測）。"
+  },
+  "background_intro": "実機テストには含まれていません。以下の項目は、ベンダーのウェブサイトとGitHubプロジェクト、PromptQuorumのディレクトリ、そしてテスターが貼り付けたGoogleの回答に由来します。2026年10月16日に、ページを要約するウェブ取得ツールで読み取ったもので、独立した検証はしていません。",
+  "background": [
+    [
+      "vendor-claim",
+      "ベンダーのページには、会社名も個人名もありません。GitHubのリポジトリと、ハンドル'divamgupta'のアカウントへのリンクがあります。生成した画像は、CreativeML Open RAIL-Mライセンスに従う限り使用してよい、と記されています。"
+    ],
+    [
+      "third-party",
+      "PromptQuorumのディレクトリは、DiffusionBeeを無料、AGPL-3.0、macOSのみ、GitHubスター約13,600としています。GitHubではAGPL-3.0、スター13.6k、フォーク727、未解決のイシュー385と表示されます。ディレクトリのデータは2026年9月12日に最終確認。"
+    ],
+    [
+      "vendor-claim",
+      "READMEによるシステム要件：IntelではmacOS 12.3.1以降、M1/M2ではmacOS 11.0.0以降。ベンダーのページにはmacOS 13.1とあり、Apple Siliconを推奨しています。RAMの要件は記載されていません。"
+    ],
+    [
+      "third-party",
+      "テスターが貼り付けたGoogleの回答は、Juggernaut XLを、KandooAIがRunDiffusionと共同で公開した、写実性と解剖学的な正確さを狙うStable Diffusion XLの人気のオープンソースのファインチューンで、複数のバージョンがあると説明しています。そこで挙げられている情報源：rundiffusion.com、openlaboratory.com、huggingface.coなど。ここでは確認していません。使用したモデルのライセンス条件は確認していません。"
+    ]
+  ],
+  "sources": [
+    "テスターの実機テストのメモ、2026年10月14日（元のWordドキュメント「Diffusion Bee test」。元メモのPDFは追加予定）。",
+    "テスターのMstyのWordドキュメントにあった、DiffusionBeeに関する追加のメモとスクリーンショット（2つ目の情報源。「その他のテストと最後の見解」で使用）。",
+    "DiffusionBeeのウェブサイト（diffusionbee.com）とGitHubプロジェクト（divamgupta/diffusionbee-stable-diffusion-ui）、2026年10月16日に確認。",
+    "DiffusionBeeのPromptQuorumディレクトリ掲載情報（スラッグ：diffusionbee）。",
+    "テスターが貼り付けた、Juggernaut XLに関するGoogleの回答。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "観察",
+      "meaning": "アプリ、スクリーンショット、またはテスターのメモの中で、直接確認したもの。"
+    },
+    "measured": {
+      "label": "実測",
+      "meaning": "ダイアログ、カウンター、ツールから読み取った値。数値を併記。"
+    },
+    "tester-estimate": {
+      "label": "テスターの推定",
+      "meaning": "テスター自身の推定。計時や計数はしていない。"
+    },
+    "vendor-claim": {
+      "label": "ベンダーの主張",
+      "meaning": "アプリ、ストア掲載情報、またはウェブサイトが述べていること。未検証。"
+    },
+    "third-party": {
+      "label": "第三者情報",
+      "meaning": "別の情報源（AIアシスタント、記事など）によるもの。ここでは未検証。"
+    },
+    "assumption": {
+      "label": "推測",
+      "meaning": "推論です。誤りの可能性があります。"
+    },
+    "tester-view": {
+      "label": "テスターの見解",
+      "meaning": "テスターの判断または意見。"
+    },
+    "tester-error": {
+      "label": "テスターの誤り",
+      "meaning": "テスターが間違えた、または見落とした点。"
+    }
+  },
+  "images": [
+    {
+      "id": "juggernaut_clown",
+      "figure": 1,
+      "file": "diffusionbee-juggernaut-xl-clown-elephant-volcano-result.webp",
+      "path": "images/diffusionbee-juggernaut-xl-clown-elephant-volcano-result.webp",
+      "alt": "DiffusionBeeのText to image画面。JuggernautXL_v7_f8が1024 x 1024で生成した、風船を持つピエロがゾウに乗り、火山とビーチがある画像。",
+      "caption": "JuggernautXL_v7_f8、1024 x 1024、1枚。プロンプト：'draw a clown dancing on top of an elephant, with a beach, blue ocean and an exploding volcano in the background'。ネガティブプロンプト：'No blue sky!!'。求めた物体はすべてあるが、空は青いまま。",
+      "role": "hero",
+      "width": 828,
+      "height": 638,
+      "bytes": 59622,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-clown"
+      ],
+      "subject": "AI-generated output as shown in DiffusionBee (screenshot)",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image24.png"
+    },
+    {
+      "id": "home",
+      "figure": 2,
+      "file": "diffusionbee-home-all-ai-tools-text-to-image-inpainting.webp",
+      "path": "images/diffusionbee-home-all-ai-tools-text-to-image-inpainting.webp",
+      "alt": "DiffusionBeeのホーム画面'All AI Tools'。Text to image、Image to image、AI Canvas、Illusion Generator、Inpainting、Upscalerのカードが並ぶ。",
+      "caption": "初回起動後のホーム画面、リストはスクロール済み。6つのツールが見える：Text to image、Image to image、AI Canvas、Illusion Generator、Inpainting、Upscaler。カード上のサンプル画像はベンダーのもの。",
+      "role": "inline",
+      "width": 1092,
+      "height": 714,
+      "bytes": 97588,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image1.png"
+    },
+    {
+      "id": "dl_progress",
+      "figure": 3,
+      "file": "diffusionbee-first-model-download-3-percent-no-size.webp",
+      "path": "images/diffusionbee-first-model-download-3-percent-no-size.webp",
+      "alt": "DiffusionBeeのダイアログ'Download model to get started'。DiffusionBee Default 0.1の進捗バーが3パーセントで、サイズも残り時間も表示されない。",
+      "caption": "初回起動：'DiffusionBee Default 0.1'のダウンロードダイアログで、バーは3パーセント。ファイルサイズも残り時間も表示されない。",
+      "role": "inline",
+      "width": 336,
+      "height": 244,
+      "bytes": 7274,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image3.png"
+    },
+    {
+      "id": "timeout",
+      "figure": 4,
+      "file": "diffusionbee-download-error-esockettimedout-download-again.webp",
+      "path": "images/diffusionbee-download-error-esockettimedout-download-again.webp",
+      "alt": "DiffusionBeeのダイアログに、エラー'Please check your internet connection or firewall. ESOCKETTIMEDOUT'とDownload Againボタンが表示されている。",
+      "caption": "'DiffusionBee Default 0.1'のダウンロードエラー：'Please check your internet connection or firewall. ESOCKETTIMEDOUT'。選択肢は'Download Again'のみ。テスターによれば、ダウンロードは65パーセントまで進んでいた。",
+      "role": "moment",
+      "width": 342,
+      "height": 334,
+      "bytes": 13578,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image7.png"
+    },
+    {
+      "id": "models",
+      "figure": 5,
+      "file": "diffusionbee-models-page-flux-needs-app-update.webp",
+      "path": "images/diffusionbee-models-page-flux-needs-app-update.webp",
+      "alt": "DiffusionBeeのModelsページ。SDXL Base、Juggernaut XL、BluePencil XL、RealVis XLのカードと、'You need to update DiffusionBee'と表示されたFLUX.1のカード。",
+      "caption": "Modelsページ（スクロール済み）。各カードには名前、短い説明、'sdxl_base float8_1'のようなタグがある。ダウンロードサイズは表示されない。FLUX.1-schnellとFLUX.1-devには、赤い文字で'You need to update DiffusionBee to use this model'とある。",
+      "role": "moment",
+      "width": 1057,
+      "height": 651,
+      "bytes": 79250,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-models",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image4.png"
+    },
+    {
+      "id": "first_gen",
+      "figure": 6,
+      "file": "diffusionbee-first-image-circle-with-green-dot.webp",
+      "path": "images/diffusionbee-first-image-circle-with-green-dot.webp",
+      "alt": "DiffusionBeeのText to image画面。プロンプト'circle with green dot in the middle'と、緑の背景に中心が緑の白い円盤。",
+      "caption": "最初の画像。プロンプト：'circle with green dot in the middle'。Default_SDB_0.1、512 x 512、1枚、シード-1、25サンプリングステップ。結果はプロンプトに一致している。画像には'Actions'ボタンがある。",
+      "role": "inline",
+      "width": 1055,
+      "height": 679,
+      "bytes": 64164,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-images"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image8.png"
+    },
+    {
+      "id": "logo_result",
+      "figure": 7,
+      "file": "diffusionbee-brand-logo-prompt-garbled-box-results.webp",
+      "path": "images/diffusionbee-brand-logo-prompt-garbled-box-results.webp",
+      "alt": "DiffusionBeeで、長いブランドロゴ用プロンプトに対して返された、文字が崩れた白黒の箱とカードの生成画像3枚。",
+      "caption": "PromptQuorumの長いブランド用プロンプトに対する3つの結果（Default_SDB_0.1、1024 x 1024、3枚）。文字が崩れた箱とカード。読める'PromptQuorum.com'も、使えるロゴもない。",
+      "role": "inline",
+      "width": 637,
+      "height": 607,
+      "bytes": 30436,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-images"
+      ],
+      "subject": "AI-generated output as shown in DiffusionBee (screenshot)",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image10.png"
+    },
+    {
+      "id": "heidelberg",
+      "figure": 8,
+      "file": "diffusionbee-heidelberg-castle-prompt-generic-results.webp",
+      "path": "images/diffusionbee-heidelberg-castle-prompt-generic-results.webp",
+      "alt": "ハイデルベルクのプロンプトで生成された、森に覆われた丘の上の城、木組みの家々、空を飛ぶ鳥の画像3枚。",
+      "caption": "ハイデルベルクのプロンプト（ホイマルクトから城を見上げ、後ろに鳥と日の出）の結果。モデルと設定は記録なし。画像には城、丘、古い家々が写っているが、その場所でもその眺めでもない。",
+      "role": "moment",
+      "width": 657,
+      "height": 626,
+      "bytes": 54560,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-heidelberg",
+        "moments-card"
+      ],
+      "subject": "AI-generated output as shown in DiffusionBee (screenshot)",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image11.png"
+    },
+    {
+      "id": "controlnet",
+      "figure": 9,
+      "file": "diffusionbee-inpainting-controlnet-inpaint-model-download.webp",
+      "path": "images/diffusionbee-inpainting-controlnet-inpaint-model-download.webp",
+      "alt": "DiffusionBeeのInpainting画面。'ControlNet Inpaint'を3パーセントでダウンロードするダイアログで、サイズは表示されない。",
+      "caption": "Inpaintingを初めて開くと、別のモデルのダウンロードを求められる：'ControlNet Inpaint'、3パーセント。サイズも残り時間もない。",
+      "role": "inline",
+      "width": 1069,
+      "height": 590,
+      "bytes": 21420,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-inpaint"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image12.png"
+    },
+    {
+      "id": "barilla_ui",
+      "figure": 10,
+      "file": "diffusionbee-inpainting-remove-barilla-logo-prompt.webp",
+      "path": "images/diffusionbee-inpainting-remove-barilla-logo-prompt.webp",
+      "alt": "DiffusionBeeのInpainting画面。赤い楕円のロゴが付いたパスタの箱の写真の上に、プロンプト'remove barillia logo'がある。",
+      "caption": "パスタの箱の写真に対するInpainting。プロンプト：'remove barillia logo'（ブランド名のつづりが誤り）。Default_SDB_0.1。画像の上のツール：Stroke Size、Open、Save、Clear Mask。",
+      "role": "inline",
+      "width": 1092,
+      "height": 735,
+      "bytes": 59240,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-inpaint"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image13.png"
+    },
+    {
+      "id": "barilla_result",
+      "figure": 11,
+      "file": "diffusionbee-inpainting-logo-removed-with-pink-remnants.webp",
+      "path": "images/diffusionbee-inpainting-logo-removed-with-pink-remnants.webp",
+      "alt": "Inpainting後のパスタの箱の写真。ロゴは消えたが、ピンク色の斑点が残り、スパゲッティの麺が歪んでいる。",
+      "caption": "2回目のInpainting試行の結果。ロゴの文字はもう読めない。その場所にはピンク色の斑点とにじんだスパゲッティの麺が残っている。",
+      "role": "moment",
+      "width": 339,
+      "height": 272,
+      "bytes": 12232,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-inpaint",
+        "moments-card"
+      ],
+      "subject": "AI-edited photo as shown in DiffusionBee (screenshot)",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image15.png"
+    },
+    {
+      "id": "church_result",
+      "figure": 12,
+      "file": "diffusionbee-inpainting-person-removed-from-street-photo.webp",
+      "path": "images/diffusionbee-inpainting-person-removed-from-street-photo.webp",
+      "alt": "石畳の小道が、時計のある小さな教会へと続く街の写真。Inpaintingで人物を消した後のもの。",
+      "caption": "街の写真から歩いている人物を消した結果。人物は見えない。テスターは'あと一歩'と評価した。人物が写った元の写真は公開していない。",
+      "role": "inline",
+      "width": 321,
+      "height": 629,
+      "bytes": 33760,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-inpaint"
+      ],
+      "subject": "AI-edited photo as shown in DiffusionBee (screenshot)",
+      "rights": "Tester's own photo, edited in DiffusionBee. The original (with a passer-by) is withheld.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image18.png"
+    },
+    {
+      "id": "canvas_sky",
+      "figure": 13,
+      "file": "diffusionbee-ai-canvas-sky-prompt-input-strength-30.webp",
+      "path": "images/diffusionbee-ai-canvas-sky-prompt-input-strength-30.webp",
+      "alt": "DiffusionBeeのAI Canvas。キャンバスに街の写真が置かれ、プロンプト'Make the sky dark blue, real summer day'とInput Strength 30が設定されている。",
+      "caption": "AI Canvas。プロンプト：'Make the sky dark blue, real summer day'。Default_SDB_0.1、Input Strength 30、25ステップ。結果は記録されていない。写真に写った通行人には、ここでモザイクをかけている。",
+      "role": "inline",
+      "width": 1086,
+      "height": 662,
+      "bytes": 42348,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-canvas"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot of third-party software UI. A person in the photo is pixelated.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image19.png"
+    },
+    {
+      "id": "popart",
+      "figure": 14,
+      "file": "diffusionbee-image-to-image-pop-art-prompt-strength-80.webp",
+      "path": "images/diffusionbee-image-to-image-pop-art-prompt-strength-80.webp",
+      "alt": "DiffusionBeeのImage to image。街の写真とプロンプト'make this into a pop art cartoon picture'、ほとんど変わっていないように見える結果。",
+      "caption": "Image to image。プロンプト：'make this into a pop art cartoon picture'。Samaritan_3d_Cartoon_v1_s2、Input Strength 80.02。結果はわずかにやわらかく、くすんでいるだけで、ポップアートではない。通行人には、ここでモザイクをかけている。",
+      "role": "inline",
+      "width": 903,
+      "height": 738,
+      "bytes": 51296,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-canvas"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot of third-party software UI. Persons in the photo are pixelated.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image28.png"
+    },
+    {
+      "id": "clown_samaritan",
+      "figure": 15,
+      "file": "diffusionbee-samaritan-3d-cartoon-clown-dancing-on-elephant.webp",
+      "path": "images/diffusionbee-samaritan-3d-cartoon-clown-dancing-on-elephant.webp",
+      "alt": "DiffusionBeeでプロンプト'draw a clown dancing on an elephant'を実行した結果。3D漫画風のピエロと、その後ろにゾウのような形。",
+      "caption": "Samaritan_3d_Cartoon_v1_s2、512 x 512、1枚。プロンプト：'draw a clown dancing on an elephant'。踊る漫画風のピエロと、その後ろに溶け合った薄茶色のゾウのような形。",
+      "role": "inline",
+      "width": 848,
+      "height": 641,
+      "bytes": 32322,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-clown"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image20.png"
+    },
+    {
+      "id": "clown_nobluesky",
+      "figure": 16,
+      "file": "diffusionbee-samaritan-clown-prompt-no-blue-sky-monster-result.webp",
+      "path": "images/diffusionbee-samaritan-clown-prompt-no-blue-sky-monster-result.webp",
+      "alt": "DiffusionBeeで、ピエロ、ビーチ、火山の長いプロンプトとネガティブプロンプト'No blue sky!!'を実行し、火花を散らす青い怪物のような姿が生成された。",
+      "caption": "Samaritan_3d_Cartoon_v1_s2、1024 x 1024、1枚。より長いプロンプトとネガティブプロンプト'No blue sky!!'。結果は火花を散らす筋肉質の青い生き物で、ピエロ、ゾウ、ビーチ、火山は見分けられない。",
+      "role": "inline",
+      "width": 835,
+      "height": 626,
+      "bytes": 44016,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-clown"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image21.png"
+    },
+    {
+      "id": "clown_guidance",
+      "figure": 17,
+      "file": "diffusionbee-samaritan-clown-elephant-volcano-max-guidance.webp",
+      "path": "images/diffusionbee-samaritan-clown-elephant-volcano-max-guidance.webp",
+      "alt": "暗い背景の前で、青緑色のゾウのような動物に乗ったピエロと、右側で噴火する火山を描いた、生成された3D漫画。",
+      "caption": "ガイダンススケールを最大にした同じプロンプト（メモによる。スライダーは記録されていない）。ピエロ、ゾウのような動物、噴火する火山が現れる。ビーチも青い海も見分けられず、地面は暗い。",
+      "role": "moment",
+      "width": 493,
+      "height": 493,
+      "bytes": 36542,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-clown",
+        "moments-card"
+      ],
+      "subject": "AI-generated output as shown in DiffusionBee (screenshot)",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image22.png"
+    },
+    {
+      "id": "couple_a",
+      "figure": 18,
+      "file": "diffusionbee-juggernaut-couple-on-beach-sunset-palms-birds.webp",
+      "path": "images/diffusionbee-juggernaut-couple-on-beach-sunset-palms-birds.webp",
+      "alt": "夕暮れのビーチに座るカップル、2本のヤシの木、鳥、帆船、砂の上のカメラが写った、生成された写真風の画像。",
+      "caption": "ビーチのカップルの結果2つのうち1つ目（JuggernautXL_v7_f8、1216 x 1216、6枚を指定）。ヤシの木、鳥、夕日、帆船1隻がある。砂の上のカメラは、求めていないものである。",
+      "role": "inline",
+      "width": 1216,
+      "height": 1216,
+      "bytes": 175080,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-couple"
+      ],
+      "subject": "AI-generated output (screenshot)",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image25.png"
+    },
+    {
+      "id": "couple_b",
+      "figure": 19,
+      "file": "diffusionbee-juggernaut-couple-on-beach-three-people-boats.webp",
+      "path": "images/diffusionbee-juggernaut-couple-on-beach-three-people-boats.webp",
+      "alt": "夕暮れのビーチのベンチにいる3人と、ヤシの木、鳥、水上の複数の船が写った、生成された写真風の画像。",
+      "caption": "2つ目の結果。船、ヤシの木、鳥、夕日はあるが、カップルを求めたプロンプトに対して3人が写っている（1人の男性は別のベンチに1人でいる）。",
+      "role": "inline",
+      "width": 1216,
+      "height": 1216,
+      "bytes": 164982,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-couple"
+      ],
+      "subject": "AI-generated output (screenshot)",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image26.png"
+    },
+    {
+      "id": "settings",
+      "figure": 20,
+      "file": "diffusionbee-settings-juggernaut-1216-by-1216-six-images.webp",
+      "path": "images/diffusionbee-settings-juggernaut-1216-by-1216-six-images.webp",
+      "alt": "DiffusionBeeの設定パネル：モデルJuggernautXL_v7_f8、解像度1216 x 1216、画像数6、シード-1。",
+      "caption": "カップルの実行の設定：JuggernautXL_v7_f8、1216 x 1216、6枚、シード-1。",
+      "role": "inline",
+      "width": 339,
+      "height": 292,
+      "bytes": 7740,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-couple"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "DiffusionBee doc image27.png"
+    },
+    {
+      "id": "similar",
+      "figure": 21,
+      "file": "diffusionbee-generate-similar-images-four-beach-couple-variants.webp",
+      "path": "images/diffusionbee-generate-similar-images-four-beach-couple-variants.webp",
+      "alt": "'generate similar images'機能で作られた、夕暮れのヤシの木、鳥、船があるカップルのビーチの風景4枚。",
+      "caption": "'Generate similar images'で作った、似たビーチのカップルの画像4枚。出典：Mstyのテスト用Wordファイル。日付と設定は記録なし。",
+      "role": "inline",
+      "width": 451,
+      "height": 456,
+      "bytes": 48602,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-more"
+      ],
+      "subject": "AI-generated output (screenshot)",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "Msty doc image12.png"
+    },
+    {
+      "id": "cruise1",
+      "figure": 22,
+      "file": "diffusionbee-image-to-image-add-cruise-ship-result.webp",
+      "path": "images/diffusionbee-image-to-image-add-cruise-ship-result.webp",
+      "alt": "DiffusionBeeのImage to image：入力はビーチのカップルの画像、プロンプト'add a cruise ship to the picture'、結果はデッキから見た夕暮れのクルーズ船。",
+      "caption": "Image to imageの1回目。入力：ビーチのカップルの画像。プロンプト：'add a cruise ship to the picture'。Default_SDB_0.1、Input Strength 21.07。デッキの手すりから見た夕暮れのクルーズ船が現れ、カップルとヤシの木は消えている。",
+      "role": "moment",
+      "width": 1146,
+      "height": 708,
+      "bytes": 67928,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-more",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "Msty doc image13.png"
+    },
+    {
+      "id": "cruise3",
+      "figure": 23,
+      "file": "diffusionbee-image-to-image-strength-90-picture-unchanged.webp",
+      "path": "images/diffusionbee-image-to-image-strength-90-picture-unchanged.webp",
+      "alt": "Input Strength 90.13のDiffusionBeeのImage to image。ビーチのカップルの画像がほぼそのまま返り、クルーズ船はない。",
+      "caption": "3回目、長いプロンプト（'Keep the picture exactly as is, but on the horizon next to the sunbeam add a big cruise ship'）、Input Strength 90.13。出力は入力画像とほぼ同じで、船はない。",
+      "role": "inline",
+      "width": 1134,
+      "height": 703,
+      "bytes": 88244,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-more"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "Msty doc image15.png"
+    },
+    {
+      "id": "eiffel",
+      "figure": 24,
+      "file": "diffusionbee-juggernaut-eiffel-tower-two-similar-results.webp",
+      "path": "images/diffusionbee-juggernaut-eiffel-tower-two-similar-results.webp",
+      "alt": "青空、木々、池の前で、下から見上げたエッフェル塔の生成写真2枚。互いにほぼ同じ。",
+      "caption": "プロンプト：'Eiffeltower in paris from the Marsfield with a blue sky, extra photorealistic'。JuggernautXL_v7_f8、1216 x 1216、2枚、シード770465、25ステップ。近いバリエーションが2つで、塔は分かる。",
+      "role": "inline",
+      "width": 1288,
+      "height": 618,
+      "bytes": 94204,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-more"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "Msty doc image16.png"
+    },
+    {
+      "id": "nyc",
+      "figure": 25,
+      "file": "diffusionbee-epicrealism-new-york-night-skyline-helicopters.webp",
+      "path": "images/diffusionbee-epicrealism-new-york-night-skyline-helicopters.webp",
+      "alt": "epicrealismXL_v8モデル、75サンプリングステップで生成された、黄色いヘリコプターが空にいるニューヨークの夜景。",
+      "caption": "プロンプト：'new york city skyline at night., photorealist, add 3 helicopters flying'。epicrealismXL_v8、1216 x 1216、1枚、シード770465、75ステップ、スタイル'enhance'。3機より多いヘリコプターが見える。",
+      "role": "inline",
+      "width": 1139,
+      "height": 695,
+      "bytes": 141014,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-more"
+      ],
+      "subject": "Screenshot of the DiffusionBee app",
+      "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+      "captured": "2026-10-14 or later; exact time not recorded",
+      "original_docx_media": "Msty doc image17.png"
+    }
+  ],
+  "figure_order": [
+    "juggernaut_clown",
+    "home",
+    "dl_progress",
+    "timeout",
+    "models",
+    "first_gen",
+    "logo_result",
+    "heidelberg",
+    "controlnet",
+    "barilla_ui",
+    "barilla_result",
+    "church_result",
+    "canvas_sky",
+    "popart",
+    "clown_samaritan",
+    "clown_nobluesky",
+    "clown_guidance",
+    "couple_a",
+    "couple_b",
+    "settings",
+    "similar",
+    "cruise1",
+    "cruise3",
+    "eiffel",
+    "nyc"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum ハンズオンテスト · {app} · {date}",
+    "date_line": "2026年10月14日",
+    "nav_aria": "セクション",
+    "nav": {
+      "verdict": "結論",
+      "moments": "6つの場面",
+      "story": "経過",
+      "claims": "主張",
+      "fit": "24 GB",
+      "log": "利用ログ",
+      "errors": "テスターの誤り",
+      "findings": "所見",
+      "background": "背景"
+    },
+    "related": "関連：",
+    "review_link": "{app}のPromptQuorumレビュー",
+    "directory_link": "ローカルAIアプリディレクトリ",
+    "verdict_h": "結論",
+    "general_assessment": "総合評価",
+    "fit_for_tester": "テスターの用途への適合度",
+    "scorecard": "スコアカード",
+    "status_prefix": "ステータス：",
+    "na": "該当なし",
+    "score_aria": "5点満点中{n}点",
+    "details_h": "テストの詳細",
+    "label_intro": "すべての記述にラベルが付いています：",
+    "legend_link": "ラベルの意味",
+    "disclosure_label": "開示事項。",
+    "raw_notes": "元ノートのPDF：",
+    "to_be_added": "追加予定",
+    "moments_h": "このテストを形作った6つの場面",
+    "see_context": "文脈の中で見る",
+    "story_h": "テストの経過",
+    "claims_h": "主張とテスターが確認した内容",
+    "claims_cols": [
+      "主張",
+      "出典",
+      "確認した内容",
+      "ラベル"
+    ],
+    "fit_h": "24 GBに収まるか",
+    "memory_line": "{gb} GBメモリ",
+    "above": "{gb} GB超",
+    "below": "{gb} GB未満",
+    "log_h": "利用ログ",
+    "log_cols": [
+      "#",
+      "タスク",
+      "モデル",
+      "結果",
+      "時間",
+      "ステータス",
+      "図"
+    ],
+    "statuses": {
+      "Fail": "失敗",
+      "Partial": "一部成功",
+      "Pass": "合格",
+      "Not completed": "未完了"
+    },
+    "errors_h": "テスターが誤った点",
+    "findings_h": "所見一覧",
+    "filter_aria": "ラベルで所見を絞り込む",
+    "filter_all": "すべて",
+    "findings_cols": [
+      "ID",
+      "所見",
+      "カテゴリ",
+      "ラベル",
+      "重要度",
+      "図"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "良好"
+    },
+    "fig_abbr": "図",
+    "figure": "図",
+    "enlarge": "拡大：",
+    "audience_h": "こんな人に向いています",
+    "likely_fit": "向いている可能性が高い人",
+    "likely_poor_fit": "向いていない可能性が高い人",
+    "retest": "再テスト。",
+    "background_h": "開発元の背景",
+    "gallery_h": "テストからのその他の画像",
+    "legend_h": "ラベルの見方",
+    "sources_h": "出典",
+    "footer_line": "テストID {id} · テスト標準 v{version} · 元ノートのPDF：追加予定",
+    "crumb_home": "ホーム",
+    "crumb_directory": "ディレクトリ",
+    "crumb_test": "{app} ハンズオンテスト",
+    "faq_h": "よくある質問",
+    "more_tests_h": "ほかの実機テスト"
+  }
+}

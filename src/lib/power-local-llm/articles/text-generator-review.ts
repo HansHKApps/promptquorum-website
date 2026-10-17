@@ -73,9 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Actively maintained: a commit as recently as August 2026, and a tagged release, v0.8.7, published April 27, 2026',
           'Template engine driven by note frontmatter, plus a community hub for discovering and sharing templates',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Text Generator\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local-AI-capable tools.' },
-        ],
       },
       overview: {
         id: 'what-is-text-generator',
@@ -349,9 +346,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das GitHub-Repository ([github.com/nhaouari/obsidian-textgenerator-plugin](https://github.com/nhaouari/obsidian-textgenerator-plugin)) zeigt am 12. September 2026 laut [GitHub-API](https://api.github.com/repos/nhaouari/obsidian-textgenerator-plugin) 1.985 Sterne',
           'Aktiv gepflegt: ein Commit erst im August 2026, und ein getaggtes Release, v0.8.7, veröffentlicht am 27. April 2026',
           'Vorlagen-Engine gesteuert über die Frontmatter der Notiz, dazu ein Community-Hub zum Entdecken und Teilen von Vorlagen',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zum Eintrag von Text Generator im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie es im Vergleich zu Dutzenden anderer lokal-KI-fähiger Tools abschneidet.' },
         ],
       },
       overview: {
@@ -627,9 +621,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Activement maintenu : un commit aussi récent qu\'août 2026, et une release taguée, v0.8.7, publiée le 27 avril 2026',
           'Moteur de modèles piloté par le frontmatter des notes, plus un hub communautaire pour découvrir et partager des modèles',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de Text Generator dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils IA locaux.' },
-        ],
       },
       overview: {
         id: 'what-is-text-generator',
@@ -903,9 +894,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El repositorio de GitHub ([github.com/nhaouari/obsidian-textgenerator-plugin](https://github.com/nhaouari/obsidian-textgenerator-plugin)) muestra 1.985 estrellas al 12 de septiembre de 2026, según la [API de GitHub](https://api.github.com/repos/nhaouari/obsidian-textgenerator-plugin)',
           'Mantenido activamente: un commit tan reciente como agosto de 2026, y una release etiquetada, v0.8.7, publicada el 27 de abril de 2026',
           'Motor de plantillas controlado por el frontmatter de la nota, además de un centro comunitario para descubrir y compartir plantillas',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento a fondo de la ficha de Text Generator en el [Local LLM Software Directory](/es/directory) — consulte esa página para ver de un vistazo cómo se compara con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1181,9 +1169,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ativamente mantido: um commit tão recente quanto agosto de 2026, e uma release marcada, v0.8.7, publicada em 27 de abril de 2026',
           'Mecanismo de modelos controlado pelo frontmatter da nota, além de um hub comunitário para descobrir e compartilhar modelos',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do Text Generator no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-text-generator',
@@ -1457,9 +1442,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubリポジトリ（[github.com/nhaouari/obsidian-textgenerator-plugin](https://github.com/nhaouari/obsidian-textgenerator-plugin)）は[GitHub API](https://api.github.com/repos/nhaouari/obsidian-textgenerator-plugin)によると2026年9月12日時点で1,985個のスター',
           '活発に保守されている：直近では2026年8月にもコミットがあり、タグ付きリリースv0.8.7は2026年4月27日に公開',
           'ノートのフロントマターで駆動されるテンプレートエンジンに加え、テンプレートを発見・共有するためのコミュニティハブ',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/directory)にあるText Generatorのエントリーを深掘りした補足記事です——他の数十のローカルAI対応ツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1735,9 +1717,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '积极维护：最近一次提交发生在2026年8月，打标签的发布版本v0.8.7发布于2026年4月27日',
           '由笔记前言驱动的模板引擎，外加一个用于发现和分享模板的社区中心',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Text Generator条目的深度补充——请查看该页面，快速了解它与数十款其他本地AI工具相比的表现。' },
-        ],
       },
       overview: {
         id: 'what-is-text-generator',
@@ -2012,9 +1991,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تحت صيانة نشطة: التزام حديث بقدر أغسطس 2026، وإصدار موسوم، v0.8.7، منشور في 27 أبريل 2026',
           'محرك قوالب يتحكّم به الـfrontmatter الخاص بالملاحظة، إضافة إلى مركز مجتمعي لاكتشاف القوالب ومشاركتها',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لمدخل Text Generator في [دليل برامج الذكاء الاصطناعي المحلية](/ar/directory) — راجعوا تلك الصفحة لمعرفة كيف تُقارَن هذه الإضافة بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-text-generator',
@@ -2288,9 +2264,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 저장소([github.com/nhaouari/obsidian-textgenerator-plugin](https://github.com/nhaouari/obsidian-textgenerator-plugin))는 [GitHub API](https://api.github.com/repos/nhaouari/obsidian-textgenerator-plugin)에 따르면 2026년 9월 12일 기준 1,985개의 스타를 보유',
           '활발히 유지보수됨: 2026년 8월에도 커밋이 있었고, 태그 릴리스인 v0.8.7이 2026년 4월 27일에 공개됨',
           '노트 프런트매터로 구동되는 템플릿 엔진과, 템플릿을 발견하고 공유하는 커뮤니티 허브',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Text Generator 항목의 심층 버전입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

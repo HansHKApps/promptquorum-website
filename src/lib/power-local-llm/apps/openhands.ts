@@ -21,7 +21,13 @@ export const app: ToolRecord = {
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['code', 'agent'],
-  url: 'github.com/All-Hands-AI/OpenHands',
+  url: 'openhands.dev',
+  storeLinks: {
+    web: 'https://openhands.dev',
+    github: 'https://github.com/All-Hands-AI/OpenHands',
+  },
+  installEffort: 'one-command', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README: npm install -g @openhands/agent-canvas (needs Node 24+, uv, Docker for sandboxes). Releases ship Agent Canvas .dmg/.exe/.AppImage/.deb, but docs.openhands.dev labels the desktop app a "preview build", so it is not counted. checked 2026-10-09',
   tagline: {
     en: 'AI software engineer agent (formerly OpenDevin)',
     de: 'KI-Software-Entwickler-Agent (ehemals OpenDevin)',
@@ -36,4 +42,6 @@ export const app: ToolRecord = {
   reviewSlug: 'openhands-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v1.20.0', versionSourceUrl: 'https://github.com/OpenHands/OpenHands/releases/tag/v1.20.0' },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/OpenHands/OpenHands',
 }

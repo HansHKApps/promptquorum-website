@@ -386,12 +386,22 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'private-mind-review':                     'private-mind-review',
   // LLM Hub review — 2026-10-03
   'llm-hub-review':                          'llm-hub-review',
+  'lm-playground-review':                    'lm-playground-review',
+  'localmind-review':                        'localmind-review',
   // TokForge review — 2026-10-03
   'tokforge-review':                         'tokforge-review',
+  'local-ai-geetmark-review':                'local-ai-geetmark-review',
+  'local-ai-mail-review':                    'local-ai-mail-review',
+  'pcai-photo-retouch-review':               'pcai-photo-retouch-review',
+  'honey-llm-review':                        'honey-llm-review',
+  'friedrichai-review':                      'friedrichai-review',
+  'spiritbox-ultimate-review':               'spiritbox-ultimate-review',
   'oscilla-review':                          'oscilla-review',
   'mlxhub-review':                           'mlxhub-review',
   'local-ai-chat-pocket-review':             'local-ai-chat-pocket-review',
+  'anyllm-review':                           'anyllm-review',
   'tina-review':                             'tina-review',
+  'return-editor-review':                    'return-editor-review',
   // Ollama Local AI review — 2026-10-02
   'ollama-local-ai-review':                  'ollama-local-ai-review',
   // ComfyUI review — 2026-09-06
@@ -488,6 +498,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'mission-control-review':                   'mission-control-review',
   'kserve-review':                            'kserve-review',
   'baserow-review':                           'baserow-review',
+  'firecrawl-review':                         'firecrawl-review',
   'shimmy-review':                            'shimmy-review',
   // FeatureAppPost batch 4 (ranks 21-30 of the 2026-09-18 directory additions) — 2026-09-19
   'longmemory-review':                        'longmemory-review',
@@ -513,4 +524,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'candle-vllm-review':                       'candle-vllm-review',
   'swiftlm-review':                           'swiftlm-review',
   'radiant-canvas':                           'radiant-canvas',
+  'ai-cutoutwerk-review':                     'ai-cutoutwerk-review',
+  'openmontage-review':                       'openmontage-review',
 }

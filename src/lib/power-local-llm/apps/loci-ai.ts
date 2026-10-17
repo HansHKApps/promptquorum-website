@@ -37,4 +37,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { offline: true, modelDownloads: true },
   lastVerifiedDate: '2026-08-22',
+  lastUpstreamUpdate: '2026-09-30', // App Store (mobile builds only), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/loci/id6762100748',
 }

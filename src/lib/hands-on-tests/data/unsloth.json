@@ -1,0 +1,1800 @@
+{
+  "id": "pq-test-unsloth-2026-10-09",
+  "standard_version": "0.1",
+  "locale": "en",
+  "app": {
+    "name": "Unsloth",
+    "slug": "unsloth",
+    "vendor": "Not named on the pages read (GitHub organisation: unslothai)",
+    "category": "Local AI: run and train models (desktop app, 'Unsloth Studio')",
+    "platform": "macOS (DMG)",
+    "pricing_url": "https://unsloth.ai"
+  },
+  "title": "Unsloth on a 24 GB Mac: Polished App, Out of Memory Before the First Picture",
+  "page_title": "Unsloth Test",
+  "dek": "Hands-on test on a 24 GB Mac, aimed at picture generation. Chat worked; picture models were refused for lack of memory, and no picture was made.",
+  "status": "Partial",
+  "started": "2026-10-09",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "Unsloth, the desktop app (Unsloth Studio). The notes spell it 'Unsloth', 'Unslothh' and 'Onslaught'; this report uses 'Unsloth'.",
+      "observed"
+    ],
+    [
+      "Version",
+      "Setup log: 'unsloth 2026.8.18 -> 2026.10.3 available, updating'. The version in use after the update is assumed to be 2026.10.3. The window carries the label BETA. The desktop app's own version is not recorded.",
+      "assumption"
+    ],
+    [
+      "Tester",
+      "Hans Kuepper, founder of PromptQuorum",
+      null
+    ],
+    [
+      "Started",
+      "9 October 2026, 1 PM (per the notes). One screenshot shows 5:13 PM, so the test ran for at least four hours.",
+      "observed"
+    ],
+    [
+      "Ended",
+      "Not recorded",
+      null
+    ],
+    [
+      "Hardware",
+      "Mac with 24 GB. The notes say 'macOS M3 24 GB' and later 'M3 24 GB Pro MacBook'. The app's Model hub shows '24 GiB RAM', '0 GiB VRAM + 24 GiB shared' and '12/12 CPU'. The exact chip is not recorded.",
+      "observed"
+    ],
+    [
+      "System",
+      "macOS; version not recorded",
+      null
+    ],
+    [
+      "Install state",
+      "Not a clean install. The setup log says 'Updating existing Unsloth install' and 'existing install detected'; the tester says 'same as before'. Earlier use may explain why models from LM Studio and Ollama were already known.",
+      "observed"
+    ],
+    [
+      "Download",
+      "24 MB DMG (as read by the tester). A dependency step ran on first start (see chapter 1).",
+      "observed"
+    ],
+    [
+      "Why tested",
+      "To see how Unsloth works, 'especially the picture functions'. The tester did not plan to use model optimisation (training).",
+      null
+    ],
+    [
+      "Objective",
+      "Generate pictures locally on the 24 GB Mac. Chat and the model hub were tried on the way.",
+      "observed"
+    ],
+    [
+      "AI help used",
+      "A New York skyline prompt of several hundred words is in the notes; its Markdown bold marks suggest it was AI-written. Not confirmed. The chat model's answers (for example on where it got the model) were not relied on here.",
+      "assumption"
+    ]
+  ],
+  "disclosure": "The tester founded PromptQuorum (promptquorum.com), a content site and directory about local AI apps. Unsloth is listed in that directory and has an existing, separately written review page on the site. The notes record no contact with the vendor, no payment and no sponsorship.",
+  "verdict": {
+    "general": "The app looks and feels polished: a 24 MB installer, a setup window that shows what it does, a model hub with hardware readout, size warnings and a download timer, and a chat that finds models already on the disk from LM Studio and Ollama. A calculation ran at 11.0 tokens per second on a 27B model. The goal of the test, a picture, was not reached. Picture models were refused because the app counted only 2 GB (before a reboot) and 6 GB (after) as usable against about 17 GB needed; web search and an event search ended in 'Ran out of memory'; and a model start gave no progress for minutes. The tester ran the first tests with many other apps open and did not record the models and settings of some runs.",
+    "fit": "Not for this tester on this machine, for now. In his words: 'Everything works, except that the end result is I didn't get it to work.' Chat and model management work on 24 GB; picture generation did not in this test. Training was not tried. The tester plans to look again in three to six months."
+  },
+  "scores": [
+    [
+      "Installation",
+      4,
+      "24 MB DMG; setup window with a detail log. No time or disk estimate; four to five minutes (tester estimate). The test started from an existing install."
+    ],
+    [
+      "Onboarding and model choice",
+      3,
+      "Picker, hub, hardware readout, size warnings and a download timer are strong. The picker shows parameter counts, not gigabytes; the '7 GB' and '17 GB' messages confused the tester."
+    ],
+    [
+      "Core function",
+      2,
+      "Chat answered a calculation. Web page reading and an event search ended in out-of-memory errors; no picture was produced."
+    ],
+    [
+      "Guidance and iteration",
+      3,
+      "The refusal message explains the cause and names an override. No progress while a model starts; no explanation of why 7 GB was 'free'."
+    ],
+    [
+      "Performance",
+      2,
+      "11.0 tok/s on a 27B 4-bit model; out of memory at 34.4k context on a 24 GB Mac, with other apps open."
+    ],
+    [
+      "Documentation",
+      null,
+      "Not tested."
+    ],
+    [
+      "Trust and privacy",
+      null,
+      "Not audited. The vendor claims 100 percent offline use; web search and downloads need the internet. Offline operation was not tested."
+    ],
+    [
+      "Uninstall",
+      null,
+      "Not tested."
+    ]
+  ],
+  "scores_note": "Scores are proposals derived from the evidence below (1 = poor, 5 = very good). They are the tester's to confirm. Picture generation, the tester's goal, scores low because no picture was made on this machine.",
+  "tldr": [
+    [
+      "observed",
+      "Chat works: a 27B 4-bit model from the LM Studio folder answered a calculation at 11.0 tokens per second. Models from Ollama and LM Studio show up in the app."
+    ],
+    [
+      "measured",
+      "Picture models were refused: flux.2-klein needs about 17 GB; the app counted about 2 GB usable (7 GB free) and, after a reboot, about 6 GB (11 GB free). No picture was produced."
+    ],
+    [
+      "tester-view",
+      "A beautiful interface where everything works, but the end result was not reached on a 24 GB Mac."
+    ]
+  ],
+  "quotes": [
+    "Everything works, except that the end result is I didn't get it to work.",
+    "The worst way you can treat a client is to do the work and not update the client.",
+    "I'll check again in three or six months from now."
+  ],
+  "quote_note": "Tester notes, lightly edited from voice transcription.",
+  "moments": [
+    [
+      "A 24 MB installer",
+      "The smallest installer the tester has seen. The setup window explains its steps but gives no time or size estimate.",
+      "splash",
+      "chapter-install"
+    ],
+    [
+      "Where did the model come from?",
+      "A 27B model started in under a minute. The loading toast shows the path: LM Studio's model folder.",
+      "lm_load",
+      "chapter-first-chat"
+    ],
+    [
+      "20 GB at 3 h 47 min",
+      "The hub shows hardware, speed and time left. The 20 GB download would take close to four hours on this connection.",
+      "hub",
+      "chapter-hub"
+    ],
+    [
+      "Out of memory, again",
+      "An event search failed with 'Ran out of memory' after 110 seconds, and a load error about missing safetensors.",
+      "heidelberg",
+      "chapter-web"
+    ],
+    [
+      "17 GB needed, 6 GB usable",
+      "After a clean reboot the app still refused the picture model: 11 GB free, 6 GB usable.",
+      "flux_6gb",
+      "chapter-images"
+    ],
+    [
+      "The Mac before any model",
+      "Activity Monitor shows 9.67 GB used right after startup, before a model is loaded.",
+      "mem9",
+      "chapter-memory"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "Download, setup and first start",
+      "items": [
+        [
+          "observed",
+          "The installer is a DMG of 24 MB, read by the tester as 'the smallest file I've ever seen'.",
+          null
+        ],
+        [
+          "observed",
+          "First window: 'Getting things ready... This won't take long.' with a link 'Show setup details'. The tester: 'Already feels much more polished than the other apps... a clear communication.'",
+          "splash"
+        ],
+        [
+          "observed",
+          "The detail log reads: 'Updating existing Unsloth install', 'frontend bundled (Tauri)', 'node v24.13.0 | npm 11.6.2 (system)', 'unsloth 2026.8.18 -> 2026.10.3 available, updating', then a 13-step dependency bar (pip bootstrap, MLX stack for Apple Silicon, base packages, unsloth extras, codecs, overrides, studio deps, data designer, local plugin, diffusers pin, finalizing). Notes: 'torch 2.10.0 detected -- installing torchao==0.16.0'; 'transformers 5.3.0, 5.5.0, 5.10.2 pre-installed'; 'gpu Apple Silicon (Metal, unified memory)'; 'installing prebuilt llama.cpp'.",
+          null
+        ],
+        [
+          "observed",
+          "The tester says it ran for about four or five minutes, then the app opened. The log shows no time estimate and no disk space estimate.",
+          null
+        ],
+        [
+          "tester-estimate",
+          "Four to five minutes for the setup. Not timed.",
+          null
+        ],
+        [
+          "assumption",
+          "The small DMG probably downloads most of the software during this first step. Not checked.",
+          null
+        ],
+        [
+          "tester-view",
+          "'It gives me the details about what it does -- great -- but it doesn't tell me anything about estimated time, volumes, how much disk space it takes up.'",
+          null
+        ],
+        [
+          "observed",
+          "The main window opens with 'How can I help?' and a sidebar: New chat, Model hub, Library, Images, Train, More. The logo carries the label BETA.",
+          "main"
+        ],
+        [
+          "tester-error",
+          "Started from an existing install ('same as before'), so this is an update, not a first-run test. Onboarding conclusions need a clean install to confirm.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-first-chat",
+      "title": "Model picker and the first chat",
+      "items": [
+        [
+          "observed",
+          "The model picker lists Recommended models with figures such as 27.3B and 271.0M. These are parameter counts, not gigabytes. Two entries are greyed out (176.9B and 320.8B).",
+          "picker"
+        ],
+        [
+          "assumption",
+          "Greyed entries are probably too large for this machine. The app view captured does not say so.",
+          null
+        ],
+        [
+          "tester-view",
+          "'There were lots of models listed with the size. Very good.' The numbers shown are parameter counts, so this does not tell the reader how much memory a model needs.",
+          null
+        ],
+        [
+          "observed",
+          "Instead of choosing a model, the tester typed a request for a calculation. The app started loading models by itself. A Qwen3.8-27B MLX 4-bit model started in under a minute, per the notes; a second toast showed Mistral-7B-Instruct-v0.3-4bit loading (screenshot withheld, same type as Figure 5).",
+          null
+        ],
+        [
+          "observed",
+          "The loading toast shows the path /Users/hanskuepper/.lmstudio/models/lmstudio-community/Qwen3.8-27B-MLX-4bit. The model was read from LM Studio's folder on the disk.",
+          "lm_load"
+        ],
+        [
+          "tester-view",
+          "He suspected it came from the hard drive, because 'that's a big model that doesn't go over the internet in one minute'. The path supports this. Why Unsloth chose this model and the Mistral one is not recorded.",
+          null
+        ],
+        [
+          "observed",
+          "The question 'what is 5 times 866' was answered '5 x 866 = 4,330' (correct), after 'Worked for 10s', at 11.0 tok/s. The header shows 'Local' and a context meter '120 / 262.1k'.",
+          "calc"
+        ],
+        [
+          "observed",
+          "The tester then asked the model where it got the model from. The captured part of the answer talks about MLX weights and Apple Silicon unified memory; the full answer is not captured. The notes say the answer was that the app does not search the drive.",
+          null
+        ],
+        [
+          "assumption",
+          "The chat model's own account of the app is not reliable evidence. One answer calls the model 'Qwen 3 27B MLX 4-bit', while the app names it Qwen3.8-27B-MLX-4bit.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-models",
+      "title": "Models already on the disk: LM Studio and Ollama",
+      "items": [
+        [
+          "observed",
+          "The On Device tab lists models by source. Under CUSTOM FOLDERS two paths appear (.lmstudio/models and .ollama/models) with Ollama models gemma4:latest, gemma3:1b and qwen3-coder:30b. Under LM STUDIO the Qwen3.8-27B model is marked 'Loaded'.",
+          "ondevice"
+        ],
+        [
+          "assumption",
+          "Either the tester added the two folders or the app found them on its own. Not recorded. Earlier use of the app may have set them up.",
+          null
+        ],
+        [
+          "observed",
+          "Switching to qwen3-coder:30b (30.5B, Q4_K_M, GGUF) shows 'Starting model... Switching models. Loading cached model into memory.' with a Cancel button. The context meter reads '1.3k / 8.2k', much smaller than the 262.1k of the first model.",
+          "coder"
+        ],
+        [
+          "tester-view",
+          "'I like how easy to change models.' 'Some Ollama models do not work inside Unsloth, but great that it tried at least.'",
+          null
+        ],
+        [
+          "observed",
+          "Per the notes, an older model worked and a newer one crashed. Which models were meant is not recorded.",
+          null
+        ],
+        [
+          "tester-view",
+          "He says it is 'great that it tried' to use his Ollama models, and that reading models already on the disk avoids another large download.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-hub",
+      "title": "Model hub and downloads",
+      "items": [
+        [
+          "observed",
+          "The hub shows the device: '0 GiB VRAM + 24 GiB shared', '24 GiB RAM', '12/12 CPU', plus filters (format, capabilities, newest). Cards show likes, downloads, age and license (embeddinggemma-2-GGUF: apache-2.0, 1.5 GB).",
+          "hub"
+        ],
+        [
+          "tester-view",
+          "'Yes, great model hub.' The hub lists, among others, Qwen-Image-2.1-GGUF (850.0K downloads, 16 days old), GLM-5.3-GGUF and Qwen3.8-Flash-Next-GGUF.",
+          null
+        ],
+        [
+          "observed",
+          "Per the notes, clicking a file that is too big for the Mac gave several warnings ('this file is 30 to 40 gigabytes total'); the download is still allowed. No screenshot.",
+          null
+        ],
+        [
+          "measured",
+          "The download panel for unsloth/Qwen3.8-27B-GGUF UD-Q5_K_S reads 1.2 GB of 20 GB at 1.4 MB/s, 3 h 47 m left; later 7.1 GB of 20 GB at 983 KB/s, 3 h 31 m left.",
+          "download"
+        ],
+        [
+          "tester-view",
+          "'The professionalism of this app is visible. It has a timer attached. It tells you the download speed.'",
+          null
+        ],
+        [
+          "assumption",
+          "The speeds suggest a slow connection at the test location; the tester does not say so. Whether the download finished is not recorded.",
+          null
+        ],
+        [
+          "measured",
+          "The Z-Image (BF16) dialog lists model files 12.3 GB plus required encoder and decoder 8.2 GB, total 20.5 GB. This explains the 'difference between the gigabytes that the model has and then something else', which the tester mentions elsewhere.",
+          "zimage"
+        ],
+        [
+          "tester-view",
+          "The notes say 'the picture LLM was downloaded'. Which one is not recorded; the screenshots show picture models FLUX.2-klein-4B and its GGUF variant on the device (Figure 18).",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-web",
+      "title": "Web search, voice and the crashes",
+      "items": [
+        [
+          "observed",
+          "The tester pasted a PromptQuorum page URL and asked 'from a seo perspective will this help me?'. The chat shows 'Using tool: Reading promptquorum.com' and 'Waiting for approval: web_search' with the buttons Allow, Always allow and Deny. Timestamp 5:13 PM; context '648 / 34.4k'.",
+          "web_approval"
+        ],
+        [
+          "observed",
+          "Per the notes, the first try said it could not read the page; after clicking the Search function it worked the second time. 'Maybe the first time should have had a warning.'",
+          null
+        ],
+        [
+          "assumption",
+          "The first failure may have come from the missing web-search approval or the Search toggle being off. Not verified.",
+          null
+        ],
+        [
+          "observed",
+          "The run ended with 'Ran out of memory. Try a smaller model or shorter input.' after 168.10 s, with a Retry button.",
+          "oom_web"
+        ],
+        [
+          "observed",
+          "Voice input is built in. Using it asks to download the 'Qwen3-ASR 0.6B' speech model, about 1.0 GB, which it says is fetched once into the Hugging Face cache. Whether the tester downloaded it is not recorded.",
+          "voice"
+        ],
+        [
+          "observed",
+          "A local event search ('What is happening tonight in Heidelberg, Germany?') ran two rounds of tool calls and ended with 'Ran out of memory' after 110.65 s. The header shows a red note: 'Failed to load model: No safetensors found in /Users/.../.cache/huggin...'.",
+          "heidelberg"
+        ],
+        [
+          "assumption",
+          "The load error and the out-of-memory message may be linked (a model being swapped while memory ran short). The screenshot does not show a link.",
+          null
+        ],
+        [
+          "tester-view",
+          "'But yes, local AI, always some issues.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-images",
+      "title": "Picture models: refused for memory",
+      "items": [
+        [
+          "observed",
+          "The tester's goal was pictures. The sidebar has an 'Images' item. The notes show a long New York skyline prompt (Brooklyn view, Brooklyn Bridge, golden hour, 8K detail) with composition and avoid lists. No result, error or settings are recorded for it.",
+          null
+        ],
+        [
+          "measured",
+          "Loading the picture model flux.2-klein was refused: 'needs about 17 GB of memory for its weights, but only about 2 GB is usable on this device (of the 7 GB currently free, after reserving room for the operating system)'. It adds that the Mac has one memory pool, offloading to the CPU frees nothing, and suggests a smaller model, a lower quant or closing other apps. It names UNSLOTH_DIFFUSION_ALLOW_OVERSIZED_LOAD=1 as an override.",
+          "flux_2gb"
+        ],
+        [
+          "measured",
+          "After a clean reboot the message reads: about 17 GB needed, about 6 GB usable, of 11 GB currently free.",
+          "flux_6gb"
+        ],
+        [
+          "assumption",
+          "The two messages differ by 5 GB in both pairs (7 - 2 and 11 - 6), so the app seems to hold back about 5 GB for the operating system. Two data points only.",
+          null
+        ],
+        [
+          "observed",
+          "The device list shows FLUX.2-klein-4B-GGUF (7.8 GB), FLUX.2-klein-4B (16 GB) and mistral-7b-v0.3-bnb-4bit (4.1 GB). The tester: 'This should be small enough.' The tester says the smallest picture model on the hub crashes his 24 GB machine, and that the models he clicked all said they were too big because only 'seven gigabytes' were available.",
+          "list"
+        ],
+        [
+          "tester-error",
+          "The tester wonders why only seven gigabytes are available ('I have much more'). The dialog states that 7 GB were free at that moment and that the other apps were running; after the reboot it states 11 GB. The notes place the '7 GB' remark next to the Z-Image dialog; the 7 GB figure is in the flux.2-klein message.",
+          null
+        ],
+        [
+          "tester-view",
+          "'I'm lost... I have a 24-gigabyte machine and I cannot find an LLM that can serve me and can do the job.' He thinks 24 GB is more than 80 percent of his readers have (his estimate, not a measured figure).",
+          null
+        ],
+        [
+          "tester-estimate",
+          "'More than 80% of my readers' have 24 GB or less. Source not given.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-memory",
+      "title": "Memory on the Mac",
+      "items": [
+        [
+          "observed",
+          "The tester concludes that local models and daily work compete for the same memory, and that Chrome and other apps take 5 to 8 GB. He wrote 'VRAM' throughout; Apple Silicon has one memory pool, as the hub says ('0 GiB VRAM + 24 GiB shared').",
+          null
+        ],
+        [
+          "measured",
+          "Activity Monitor, one capture: memory used 12.92 GB, cached files 10.95 GB, app memory 9.81 GB, wired 1.83 GB, swap 0.",
+          "mem12"
+        ],
+        [
+          "measured",
+          "Activity Monitor, another capture: memory used 9.67 GB, cached files 8.14 GB, app memory 6.97 GB, wired 1.71 GB, swap 0. The short history graph fits a recent start.",
+          "mem9"
+        ],
+        [
+          "assumption",
+          "The 11 GB 'currently free' in Figure 15 is consistent with 24.00 - 12.92 = 11.08 GB from Figure 16. That the two were taken at the same time is not recorded.",
+          null
+        ],
+        [
+          "tester-view",
+          "'Even after reboot, already nine gigabytes gone for general things.' 'Either I shut the computer down, reboot, stop all the processes... or I cannot run the LLM.'",
+          null
+        ],
+        [
+          "tester-view",
+          "Two possible answers: models must get smaller and better, or computers need 48 or 64 GB. 'All of this talk about this works on your computer is a little bit fake.'",
+          null
+        ],
+        [
+          "assumption",
+          "That 48 or 64 GB would 'confidently' fix this is untested.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-end",
+      "title": "Loading without feedback, and the closing view",
+      "items": [
+        [
+          "observed",
+          "Starting a model shows a toast 'Starting model... Loading cached model into memory.' with a spinner and Cancel. No percentage, size or time.",
+          "starting"
+        ],
+        [
+          "tester-estimate",
+          "The wait ran longer than two or three minutes (not timed).",
+          null
+        ],
+        [
+          "tester-view",
+          "'The worst way you can treat a client is to do the work and not update the client.' The tester names this a user interface issue.",
+          null
+        ],
+        [
+          "observed",
+          "Header meters show tokens used against the context (for example '648 / 34.4k') and tokens per second (11.0 tok/s).",
+          null
+        ],
+        [
+          "tester-error",
+          "The notes say 'no token counter'. The screenshots show a context meter and a tokens-per-second figure. A per-message token count may be what he meant (assumption).",
+          null
+        ],
+        [
+          "tester-error",
+          "The notes call a local chat model 'the most stupid idea' because it 'does not research the internet'. The same notes and screenshots show a Search function, a web-search approval prompt and tool calls reading a page.",
+          null
+        ],
+        [
+          "tester-view",
+          "He does not want to train models; the chat function is of little use to him; he wants a picture and video tool and 'is not seeing it yet'. Training and the 'Train' tab were not tried.",
+          null
+        ],
+        [
+          "tester-view",
+          "'Maybe it's on my side, but no, not for me. I'll check again in three or six months, but currently not on a M3 24 GB Pro MacBook.'",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "'Run and train image and video diffusion or multimodal models', locally (GitHub README; docs page)",
+      "Vendor, read 16 Oct 2026",
+      "No picture was made. flux.2-klein was refused (about 17 GB needed; 2 GB and 6 GB usable). Smaller picture variants were not shown to load. Training not tried.",
+      "observed"
+    ],
+    [
+      "'Training, MLX and GGUF inference all work inside of Unsloth' on macOS (docs)",
+      "Vendor, read 16 Oct 2026",
+      "An MLX model (Qwen3.8-27B 4-bit) and a GGUF model (qwen3-coder:30b) loaded and answered. Training not tried.",
+      "observed"
+    ],
+    [
+      "'Can be used 100% offline and locally on your computer' (docs)",
+      "Vendor, read 16 Oct 2026",
+      "Web search and downloads used the internet. Offline use was not tested.",
+      "observed"
+    ],
+    [
+      "Web search 'visits pages directly' (docs)",
+      "Vendor, read 16 Oct 2026",
+      "A page read was attempted; per the notes the first try failed and the second read the page. The run then ran out of memory.",
+      "observed"
+    ],
+    [
+      "Desktop app 'free and open source' (release notes)",
+      "Vendor, read 16 Oct 2026",
+      "No payment prompt appears in the notes or screenshots.",
+      "observed"
+    ],
+    [
+      "Hardware shown in the hub",
+      "App",
+      "The hub showed 24 GiB RAM, 0 GiB VRAM + 24 GiB shared and 12/12 CPU. The RAM figure matches the Mac's 24.00 GB.",
+      "measured"
+    ],
+    [
+      "'No hardware requirements stated' (pages read)",
+      "Vendor, read 16 Oct 2026",
+      "Neither the GitHub page nor the docs page stated a memory requirement in the text returned. The app states its own need at load time (17 GB for flux.2-klein).",
+      "observed"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale_gb": 30,
+    "rows": [
+      [
+        "flux.2-klein weights, per the refusal message",
+        17.0,
+        "about 17 GB needed",
+        "measured"
+      ],
+      [
+        "FLUX.2-klein-4B (device list)",
+        16.0,
+        "16 GB file size",
+        "measured"
+      ],
+      [
+        "FLUX.2-klein-4B-GGUF (device list)",
+        7.8,
+        "7.8 GB file size",
+        "measured"
+      ],
+      [
+        "Usable per the app, before the reboot",
+        2.0,
+        "about 2 GB of 7 GB free",
+        "measured"
+      ],
+      [
+        "Usable per the app, after the reboot",
+        6.0,
+        "about 6 GB of 11 GB free",
+        "measured"
+      ],
+      [
+        "Mac memory used, Activity Monitor (first capture)",
+        12.92,
+        "12.92 GB used",
+        "measured"
+      ],
+      [
+        "Mac memory used, Activity Monitor (second capture)",
+        9.67,
+        "9.67 GB used",
+        "measured"
+      ],
+      [
+        "Z-Image BF16 total download",
+        20.5,
+        "12.3 GB model + 8.2 GB required files (download size)",
+        "measured"
+      ]
+    ],
+    "note": "Rows 2, 3 and 8 are file or download sizes, not memory use at run time. The 17 GB figure is the app's own estimate for flux.2-klein; which file variant it refers to is not recorded. 'Usable' is the app's figure after reserving room for the operating system. The Qwen3.8-27B MLX 4-bit model ran in chat; its memory use was not read."
+  },
+  "usage_log": [
+    [
+      "Open the 24 MB app, update, first start",
+      "Unsloth 2026.8.18 -> 2026.10.3 (assumed)",
+      "Opened after the setup log; existing install",
+      "About 4-5 min (tester estimate)",
+      "Pass",
+      [
+        "splash",
+        "main"
+      ]
+    ],
+    [
+      "Choose a model from the picker",
+      "Not recorded",
+      "List with parameter counts; tester did not pick",
+      "Not recorded",
+      "Pass",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "Chat: calculation (5 x 866)",
+      "Qwen3.8-27B-MLX-4bit",
+      "4,330, correct; 11.0 tok/s; 10 s",
+      "10 s (measured)",
+      "Pass",
+      [
+        "calc"
+      ]
+    ],
+    [
+      "Ask the chat model where the model came from",
+      "Qwen3.8-27B-MLX-4bit",
+      "Answer only partly captured",
+      "Not recorded",
+      "Partial",
+      [
+        "ondevice"
+      ]
+    ],
+    [
+      "Switch to an Ollama model",
+      "qwen3-coder:30b (Q4_K_M, GGUF)",
+      "Loaded; context 8.2k. Per the notes some Ollama models do not work",
+      "Not recorded",
+      "Partial",
+      [
+        "coder"
+      ]
+    ],
+    [
+      "Browse the hub and start a 20 GB download",
+      "unsloth/Qwen3.8-27B-GGUF UD-Q5_K_S",
+      "Download started; 3 h 47 m then 3 h 31 m left; end not recorded",
+      "Not recorded",
+      "Partial",
+      [
+        "hub",
+        "download"
+      ]
+    ],
+    [
+      "Warning for a too-large model (30-40 GB)",
+      "Not recorded",
+      "Several warnings, download still allowed (notes only)",
+      "-",
+      "Pass",
+      []
+    ],
+    [
+      "Review a web page for SEO",
+      "Qwen3.8-27B-MLX-4bit",
+      "Approval prompt; ended in 'Ran out of memory'",
+      "168.10 s",
+      "Fail",
+      [
+        "web_approval",
+        "oom_web"
+      ]
+    ],
+    [
+      "Voice input",
+      "Qwen3-ASR 0.6B (about 1.0 GB)",
+      "Download dialog; outcome not recorded",
+      "Not recorded",
+      "Not completed",
+      [
+        "voice"
+      ]
+    ],
+    [
+      "Local event search (Heidelberg)",
+      "Qwen3.8-27B-MLX-4bit",
+      "Load error and out-of-memory",
+      "110.65 s",
+      "Fail",
+      [
+        "heidelberg"
+      ]
+    ],
+    [
+      "New York skyline picture, long prompt",
+      "Not recorded",
+      "No result recorded",
+      "Not recorded",
+      "Not completed",
+      []
+    ],
+    [
+      "Load flux.2-klein, many apps open",
+      "flux.2-klein",
+      "Refused: 17 GB needed, 2 GB usable of 7 GB free",
+      "-",
+      "Fail",
+      [
+        "flux_2gb"
+      ]
+    ],
+    [
+      "Load flux.2-klein after a clean reboot",
+      "flux.2-klein",
+      "Refused: 17 GB needed, 6 GB usable of 11 GB free",
+      "-",
+      "Fail",
+      [
+        "flux_6gb"
+      ]
+    ],
+    [
+      "Try the smaller picture models on the device",
+      "FLUX.2-klein-4B-GGUF 7.8 GB; FLUX.2-klein-4B 16 GB",
+      "'All too big' per the notes; no screenshot of each",
+      "-",
+      "Fail",
+      [
+        "list"
+      ]
+    ],
+    [
+      "Z-Image BF16 download dialog",
+      "Z-Image BF16",
+      "20.5 GB total; download not recorded",
+      "-",
+      "Not completed",
+      [
+        "zimage"
+      ]
+    ],
+    [
+      "Start a model (cached)",
+      "Not recorded",
+      "Spinner and 'Loading cached model into memory' with no progress; outcome not recorded",
+      "Over 2-3 min (tester estimate)",
+      "Partial",
+      [
+        "starting"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "Tested an update of an existing install ('same as before'), not a first-run install."
+    ],
+    [
+      "tester-error",
+      "Ran the first memory tests with Chrome, the Claude app, Word, WhatsApp and other apps open on a 24 GB Mac. The first refusal showed 7 GB free."
+    ],
+    [
+      "tester-error",
+      "Used 'VRAM' for memory throughout, although the app says '0 GiB VRAM + 24 GiB shared'."
+    ],
+    [
+      "tester-error",
+      "Wrote that there is 'no token counter'; the screenshots show a context meter and tokens per second."
+    ],
+    [
+      "tester-error",
+      "Wrote that a local chat model 'does not research the internet'; the screenshots show a Search function and web-search tool calls."
+    ],
+    [
+      "tester-error",
+      "Read the model picker's figures as sizes; they are parameter counts."
+    ],
+    [
+      "tester-error",
+      "Noted that only seven gigabytes were available without saying what else was open; the dialog says 7 GB were free at that moment."
+    ],
+    [
+      "tester-error",
+      "Left gaps in the record: the desktop app's version, macOS version, the chip, end time, which model was used for the New York prompt and what happened to it, which Ollama models failed, whether the 20 GB download finished, the settings of the picture runs, and uninstall."
+    ],
+    [
+      "tester-error",
+      "Spelled the app 'Onslaught' and 'Unslothh' in the notes (voice transcription)."
+    ],
+    [
+      "assumption",
+      "The notes place the Z-Image dialog next to the remark about 'only seven gigabytes'; the 7 GB figure is in the flux.2-klein messages. Screenshots were matched to the text by what they show, not only by their order."
+    ]
+  ],
+  "findings": [
+    [
+      "UN-01",
+      "The DMG is 24 MB, much smaller than the other apps the tester has seen.",
+      "Installation",
+      "observed",
+      "Positive",
+      [
+        "splash"
+      ]
+    ],
+    [
+      "UN-02",
+      "First start runs a 13-step dependency install of about four to five minutes with no time or disk estimate. The detail log is visible.",
+      "Installation",
+      "tester-estimate",
+      "Medium",
+      [
+        "splash"
+      ]
+    ],
+    [
+      "UN-03",
+      "The test began from an existing install (2026.8.18 to 2026.10.3), so first-run behaviour was not tested.",
+      "Test limit",
+      "observed",
+      "Medium",
+      [
+        "main"
+      ]
+    ],
+    [
+      "UN-04",
+      "The model picker shows parameter counts (27.3B, 271.0M), not download or memory size; some entries are greyed with no explanation in the capture.",
+      "Onboarding",
+      "observed",
+      "Medium",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "UN-05",
+      "A 27B 4-bit model answered '5 x 866' correctly at 11.0 tok/s in 10 s.",
+      "Core function",
+      "measured",
+      "Positive",
+      [
+        "calc"
+      ]
+    ],
+    [
+      "UN-06",
+      "The first chat loaded a model from LM Studio's folder without a download or a prompt.",
+      "Model handling",
+      "observed",
+      "Medium",
+      [
+        "lm_load"
+      ]
+    ],
+    [
+      "UN-07",
+      "Models from LM Studio and Ollama folders appear in the On Device list.",
+      "Model handling",
+      "observed",
+      "Positive",
+      [
+        "ondevice"
+      ]
+    ],
+    [
+      "UN-08",
+      "Some Ollama models did not work inside Unsloth; which ones is not recorded.",
+      "Compatibility",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "UN-09",
+      "The hub shows RAM, shared memory, CPU count and a download panel with speed and time left.",
+      "Model hub",
+      "observed",
+      "Positive",
+      [
+        "hub",
+        "download"
+      ]
+    ],
+    [
+      "UN-10",
+      "A 20 GB download showed 3 h 47 m left at 1.4 MB/s (connection-dependent).",
+      "Model hub",
+      "measured",
+      "Low",
+      [
+        "hub"
+      ]
+    ],
+    [
+      "UN-11",
+      "Too-large models gave several warnings but could still be downloaded (notes only).",
+      "Model hub",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "UN-12",
+      "The download dialog splits model files and required files (12.3 + 8.2 = 20.5 GB).",
+      "Model hub",
+      "measured",
+      "Positive",
+      [
+        "zimage"
+      ]
+    ],
+    [
+      "UN-13",
+      "Web search needs an approval; the first attempt failed to read the page without a warning, per the notes.",
+      "UX",
+      "observed",
+      "Low",
+      [
+        "web_approval"
+      ]
+    ],
+    [
+      "UN-14",
+      "Reading a web page with the 27B model ended in 'Ran out of memory' after 168.10 s.",
+      "Stability",
+      "observed",
+      "High",
+      [
+        "oom_web"
+      ]
+    ],
+    [
+      "UN-15",
+      "An event search failed with 'Failed to load model: No safetensors found' and 'Ran out of memory' after 110.65 s.",
+      "Stability",
+      "observed",
+      "High",
+      [
+        "heidelberg"
+      ]
+    ],
+    [
+      "UN-16",
+      "Voice input is built in but needs its own 1.0 GB speech model download.",
+      "Features",
+      "observed",
+      "Low",
+      [
+        "voice"
+      ]
+    ],
+    [
+      "UN-17",
+      "flux.2-klein refused to load: about 17 GB needed, about 2 GB usable (7 GB free).",
+      "Core function",
+      "measured",
+      "High",
+      [
+        "flux_2gb"
+      ]
+    ],
+    [
+      "UN-18",
+      "After a clean reboot: about 6 GB usable of 11 GB free; load refused again.",
+      "Core function",
+      "measured",
+      "High",
+      [
+        "flux_6gb"
+      ]
+    ],
+    [
+      "UN-19",
+      "The app seems to reserve about 5 GB for the operating system (two data points).",
+      "Memory",
+      "assumption",
+      "Medium",
+      [
+        "flux_2gb",
+        "flux_6gb"
+      ]
+    ],
+    [
+      "UN-20",
+      "The refusal explains the cause (one memory pool, no benefit from CPU offload) and names an override variable.",
+      "Guidance",
+      "observed",
+      "Positive",
+      [
+        "flux_2gb"
+      ]
+    ],
+    [
+      "UN-21",
+      "The Mac uses about 9.67 GB right after startup, before a model is loaded.",
+      "Memory",
+      "measured",
+      "Medium",
+      [
+        "mem9"
+      ]
+    ],
+    [
+      "UN-22",
+      "No picture was produced on the 24 GB Mac; the smallest picture models listed (7.8 GB, 16 GB) were also called 'too big' in the notes.",
+      "Core function",
+      "observed",
+      "High",
+      [
+        "list"
+      ]
+    ],
+    [
+      "UN-23",
+      "Starting a model shows a spinner with no percentage or time, for two to three minutes or more.",
+      "UX",
+      "observed",
+      "Medium",
+      [
+        "starting"
+      ]
+    ],
+    [
+      "UN-24",
+      "A context meter and tokens per second are shown in the chat header, contrary to the 'no token counter' note.",
+      "UX",
+      "observed",
+      "Positive",
+      [
+        "calc"
+      ]
+    ],
+    [
+      "UN-25",
+      "The tester judges the interface beautiful and smooth, but could not reach a result and sees no reason to use the app now.",
+      "Overall",
+      "tester-view",
+      "Medium",
+      []
+    ],
+    [
+      "UN-26",
+      "Directory lists the license as Apache-2.0; the GitHub page says the Studio UI is AGPL-3.0 and the core Apache-2.0.",
+      "Maintenance",
+      "third-party",
+      "Medium",
+      []
+    ]
+  ],
+  "severity_note": "Severity is the impact on a first-time user. Proposed, not measured.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Users with more memory than 24 GB, or a clean machine with few apps open, who want chat, a model hub and local models from LM Studio and Ollama in one app."
+      ],
+      [
+        "vendor-claim",
+        "People who want to train or fine-tune models, which is the project's main purpose per the vendor (not tested here)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "Someone who wants local picture generation on a 24 GB Mac while other apps are open. It did not work for the tester."
+      ],
+      [
+        "tester-view",
+        "Someone who wants a quick result without learning about models, memory and training."
+      ]
+    ],
+    "retest": "The tester plans to check again in three to six months (about January to April 2027). Before then, record the desktop app version, macOS version and chip; start from a clean install; close other apps and note free memory; try a picture model that fits (for example the 7.8 GB GGUF) and record each setting and result; test training, offline use and uninstall."
+  },
+  "background_intro": "Not hands-on. The items below come from the vendor's GitHub page, documentation and release page, and the PromptQuorum directory. They were read on 16 October 2026 by a web-fetch tool that summarises pages, and were not independently verified.",
+  "background": [
+    [
+      "vendor-claim",
+      "The GitHub page describes Unsloth as the 'first desktop app to run and train models' and 'Local UI to run and train LLMs and diffusion models'. It offers Unsloth Studio (web UI) and Unsloth Core (code). The pages read did not name a company or a person."
+    ],
+    [
+      "vendor-claim",
+      "License: core package Apache 2.0; 'certain optional components, such as the Unsloth Studio UI' are AGPL-3.0."
+    ],
+    [
+      "vendor-claim",
+      "Platforms: Windows, Linux, WSL and macOS. Install options: desktop app (a .dmg for macOS), a shell script, Homebrew and Docker. Hardware requirements were not stated in the text returned."
+    ],
+    [
+      "vendor-claim",
+      "Studio docs: runs GGUF, MLX and diffusion image and video models locally; 'Training, MLX and GGUF inference all work inside of Unsloth' on macOS; web search 'visits pages directly'; 'can be used 100% offline'."
+    ],
+    [
+      "third-party",
+      "The PromptQuorum directory lists Unsloth as free, Apache-2.0, for Mac, Windows and Linux, in the category fine-tuning and LoRA, with about 76,100 GitHub stars (data verified 13 Sep 2026). It records a macOS DMG in release v0.1.905-beta (checked 9 Oct 2026) and a last upstream update on 16 Oct 2026. PromptQuorum has not hands-on tested it before this report."
+    ],
+    [
+      "assumption",
+      "The release page read on 16 Oct 2026 returned v0.1.806-beta (2 Sep) as the latest, which differs from the directory's v0.1.905-beta; the summarising tool may have read a stale page. The Python package version in the setup log (2026.10.3) is a different numbering from the desktop app's tags."
+    ]
+  ],
+  "sources": [
+    "Tester's hands-on notes, 9 October 2026 (original Word document '20261009_Unslothh'; PDF of the raw notes to be added).",
+    "Unsloth GitHub project (github.com/unslothai/unsloth), its releases page and the Unsloth Studio docs page (unsloth.ai/docs/new/studio), read 16 October 2026.",
+    "PromptQuorum directory listing for Unsloth (slug: unsloth), data verified 13 September 2026."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Observed",
+      "meaning": "Seen first-hand in the app, a screenshot or the tester's notes."
+    },
+    "measured": {
+      "label": "Measured",
+      "meaning": "A value read from a dialog, counter or tool, with the number given."
+    },
+    "tester-estimate": {
+      "label": "Tester estimate",
+      "meaning": "The tester's own estimate; not timed or counted."
+    },
+    "vendor-claim": {
+      "label": "Vendor claim",
+      "meaning": "Stated by the app, its store listing or its website; not verified."
+    },
+    "third-party": {
+      "label": "Third party",
+      "meaning": "From another source (an AI assistant, an article); not verified here."
+    },
+    "assumption": {
+      "label": "Assumption",
+      "meaning": "An inference. It may be wrong."
+    },
+    "tester-view": {
+      "label": "Tester view",
+      "meaning": "The tester's judgment or opinion."
+    },
+    "tester-error": {
+      "label": "Tester error",
+      "meaning": "Where the tester made a mistake or missed something."
+    }
+  },
+  "images": [
+    {
+      "id": "flux_2gb",
+      "figure": 1,
+      "file": "unsloth-flux2-klein-load-refused-17gb-needed-2gb-usable.webp",
+      "path": "images/unsloth-flux2-klein-load-refused-17gb-needed-2gb-usable.webp",
+      "alt": "Unsloth error: flux.2-klein needs about 17 GB for its weights, but only about 2 GB is usable on this device, of the 7 GB currently free.",
+      "caption": "Refusal to load the picture model flux.2-klein. The app reports about 17 GB needed, about 2 GB usable (7 GB currently free, minus room for the operating system). It names an override variable, UNSLOTH_DIFFUSION_ALLOW_OVERSIZED_LOAD=1, which was not tried.",
+      "role": "hero",
+      "width": 392,
+      "height": 334,
+      "bytes": 25580,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "measured",
+      "used_in": [
+        "hero",
+        "chapter-images"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image15.png"
+    },
+    {
+      "id": "splash",
+      "figure": 2,
+      "file": "unsloth-setup-window-getting-things-ready.webp",
+      "path": "images/unsloth-setup-window-getting-things-ready.webp",
+      "alt": "Unsloth setup window with the logo, a spinner, 'Getting things ready... This won't take long.' and a 'Show setup details' link.",
+      "caption": "First window after opening the 24 MB DMG app. The text says it will not take long; the tester measured nothing, and estimates four to five minutes (the update log is in the text). No time or disk estimate is shown.",
+      "role": "moment",
+      "width": 814,
+      "height": 585,
+      "bytes": 13838,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image1.png"
+    },
+    {
+      "id": "main",
+      "figure": 3,
+      "file": "unsloth-main-window-how-can-i-help-sidebar.webp",
+      "path": "images/unsloth-main-window-how-can-i-help-sidebar.webp",
+      "alt": "Unsloth main window labelled BETA with a sidebar (New chat, Model hub, Library, Images, Train, More) and the prompt 'How can I help?'.",
+      "caption": "Main window after the setup. Sidebar: New chat, Model hub, Library, Images, Train, More. The logo carries the label BETA. A browser tab behind the window shows a GitHub page for the project.",
+      "role": "inline",
+      "width": 1247,
+      "height": 728,
+      "bytes": 21210,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image2.png"
+    },
+    {
+      "id": "picker",
+      "figure": 4,
+      "file": "unsloth-model-picker-recommended-list-parameter-counts.webp",
+      "path": "images/unsloth-model-picker-recommended-list-parameter-counts.webp",
+      "alt": "Unsloth 'Select model' list under Recommended with GGUF models; the numbers beside each name are parameter counts such as 27.3B and 271.0M.",
+      "caption": "Model picker, Recommended tab. The figures are parameter counts (B = billion, M = million), not gigabytes. Two entries are greyed out (Qwen3.8-Flash-Next-GGUF 176.9B, GLM-5.3-Flash-GGUF 320.8B). What the grey and the yellow dot mean is not stated in the app view captured.",
+      "role": "inline",
+      "width": 660,
+      "height": 536,
+      "bytes": 21134,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-chat"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image3.png"
+    },
+    {
+      "id": "lm_load",
+      "figure": 5,
+      "file": "unsloth-loading-model-from-lmstudio-folder-qwen-27b-mlx.webp",
+      "path": "images/unsloth-loading-model-from-lmstudio-folder-qwen-27b-mlx.webp",
+      "alt": "Unsloth toast 'Loading a model...' with the path .lmstudio/models/lmstudio-community/Qwen3.8-27B-MLX-4bit.",
+      "caption": "Toast shown when the first chat started. The path points into LM Studio's model folder: /Users/hanskuepper/.lmstudio/models/lmstudio-community/Qwen3.8-27B-MLX-4bit. The model was loaded from disk, not downloaded.",
+      "role": "moment",
+      "width": 474,
+      "height": 140,
+      "bytes": 4148,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-chat",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image4.png"
+    },
+    {
+      "id": "calc",
+      "figure": 6,
+      "file": "unsloth-chat-5-times-866-answer-11-tokens-per-second.webp",
+      "path": "images/unsloth-chat-5-times-866-answer-11-tokens-per-second.webp",
+      "alt": "Unsloth chat with Qwen3.8-27B-MLX-4bit: 'what is 5 times 866' answered '5 x 866 = 4,330', worked for 10 s, 11.0 tok/s.",
+      "caption": "First chat. The answer 4,330 is correct (5 x 866). The screen shows 'Worked for 10s', 11.0 tok/s and a context meter '120 / 262.1k'.",
+      "role": "inline",
+      "width": 912,
+      "height": 308,
+      "bytes": 6390,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-first-chat"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image6.png"
+    },
+    {
+      "id": "ondevice",
+      "figure": 7,
+      "file": "unsloth-on-device-models-custom-folders-lmstudio-ollama.webp",
+      "path": "images/unsloth-on-device-models-custom-folders-lmstudio-ollama.webp",
+      "alt": "Unsloth On Device model list with Custom Folders for .lmstudio/models and .ollama/models, listing ollama/gemma4:latest, gemma3:1b and qwen3-coder:30b.",
+      "caption": "On Device tab. Under CUSTOM FOLDERS two paths are listed (.lmstudio/models and .ollama/models) with Ollama models gemma4:latest, gemma3:1b and qwen3-coder:30b; under LM STUDIO the Qwen3.8-27B model is marked 'Loaded'. A partly visible chat answer behind the list talks about MLX weights. Whether the folders were added by the tester or found automatically is not recorded.",
+      "role": "inline",
+      "width": 826,
+      "height": 537,
+      "bytes": 33366,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-models"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image7.png"
+    },
+    {
+      "id": "coder",
+      "figure": 8,
+      "file": "unsloth-switching-to-ollama-qwen3-coder-30b-gguf.webp",
+      "path": "images/unsloth-switching-to-ollama-qwen3-coder-30b-gguf.webp",
+      "alt": "Unsloth header 'qwen3-coder:30b (30.5B Q4_K_M) GGUF', context 1.3k / 8.2k, and a toast 'Starting model... Switching models.'",
+      "caption": "Switching to the Ollama model qwen3-coder:30b (30.5B, Q4_K_M, GGUF). Context meter '1.3k / 8.2k'. The toast reads 'Starting model... Switching models. Loading cached model into memory.' with a Cancel button.",
+      "role": "inline",
+      "width": 991,
+      "height": 220,
+      "bytes": 16648,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-models"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image8.png"
+    },
+    {
+      "id": "hub",
+      "figure": 9,
+      "file": "unsloth-model-hub-hardware-24gib-download-3h47m.webp",
+      "path": "images/unsloth-model-hub-hardware-24gib-download-3h47m.webp",
+      "alt": "Unsloth Model hub showing 24 GiB RAM, 0 GiB VRAM + 24 GiB shared, and a download of Qwen3.8-27B-GGUF at 1.4 MB/s with 3 h 47 m left.",
+      "caption": "Model hub. Top right: '0 GiB VRAM + 24 GiB shared', '24 GiB RAM', '12/12 CPU'. Download panel: unsloth/Qwen3.8-27B-GGUF UD-Q5_K_S, 1.2 GB of 20 GB, 1.4 MB/s, 3 h 47 m left. The open model card, embeddinggemma-2-GGUF (1.5 GB, apache-2.0), is not the downloading model.",
+      "role": "moment",
+      "width": 888,
+      "height": 681,
+      "bytes": 46546,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-hub",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image9.png"
+    },
+    {
+      "id": "download",
+      "figure": 10,
+      "file": "unsloth-download-progress-7gb-of-20gb-3h31m-left.webp",
+      "path": "images/unsloth-download-progress-7gb-of-20gb-3h31m-left.webp",
+      "alt": "Unsloth download panel for unsloth/Qwen3.8-27B-GGUF UD-Q5_K_S: 7.1 GB of 20 GB, 983 KB/s, 3 h 31 m left.",
+      "caption": "Same download later: 7.1 GB of 20 GB at 983 KB/s with 3 h 31 m left. The time between this and the previous screenshot is not recorded.",
+      "role": "inline",
+      "width": 424,
+      "height": 142,
+      "bytes": 4234,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-hub"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image10.png"
+    },
+    {
+      "id": "web_approval",
+      "figure": 11,
+      "file": "unsloth-chat-web-page-read-waiting-for-approval.webp",
+      "path": "images/unsloth-chat-web-page-read-waiting-for-approval.webp",
+      "alt": "Unsloth chat asking to review a promptquorum.com URL for SEO, with 'Using tool: Reading promptquorum.com', Allow, Always allow and Deny buttons.",
+      "caption": "Chat with Qwen3.8-27B-MLX-4bit, context '648 / 34.4k', time stamp 5:13 PM. The prompt gives a PromptQuorum URL and asks about SEO. The app shows 'Waiting for approval: web_search' and the buttons Allow, Always allow, Deny. The mode is 'Approve for me'.",
+      "role": "inline",
+      "width": 927,
+      "height": 715,
+      "bytes": 31210,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-web"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image11.png"
+    },
+    {
+      "id": "oom_web",
+      "figure": 12,
+      "file": "unsloth-chat-out-of-memory-after-reading-web-page.webp",
+      "path": "images/unsloth-chat-out-of-memory-after-reading-web-page.webp",
+      "alt": "Unsloth chat after 'Used tool: Read promptquorum.com' and the red message 'Ran out of memory. Try a smaller model or shorter input.' with a Retry button.",
+      "caption": "The same chat ends with 'Ran out of memory. Try a smaller model or shorter input.' after 168.10 s.",
+      "role": "inline",
+      "width": 838,
+      "height": 205,
+      "bytes": 7430,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-web"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image12.png"
+    },
+    {
+      "id": "voice",
+      "figure": 13,
+      "file": "unsloth-voice-dictation-download-qwen3-asr-1gb.webp",
+      "path": "images/unsloth-voice-dictation-download-qwen3-asr-1gb.webp",
+      "alt": "Unsloth dialog 'Download Qwen3-ASR 0.6B?' explaining local dictation needs a speech model of about 1.0 GB, with Cancel and Download.",
+      "caption": "Voice input: 'Local dictation runs entirely offline, but it needs the Qwen3-ASR 0.6B speech model first. About 1.0 GB, fetched once into your Hugging Face cache.' Whether the tester downloaded it is not recorded.",
+      "role": "inline",
+      "width": 516,
+      "height": 233,
+      "bytes": 10162,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-web"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image13.png"
+    },
+    {
+      "id": "heidelberg",
+      "figure": 14,
+      "file": "unsloth-heidelberg-search-out-of-memory-no-safetensors.webp",
+      "path": "images/unsloth-heidelberg-search-out-of-memory-no-safetensors.webp",
+      "alt": "Unsloth chat on 'What is happening tonight in Heidelberg, Germany?' with tool calls, a red 'Failed to load model' note and 'Ran out of memory'.",
+      "caption": "Local event search. Header (red): 'Failed to load model: No safetensors found in /Users/.../.cache/huggin...'. In the chat, two rounds of 'tool calls', then 'Ran out of memory. Try a smaller model or shorter input.' after 110.65 s. Context '- / 34.4k'. The download badge shows 5.",
+      "role": "moment",
+      "width": 1227,
+      "height": 700,
+      "bytes": 28520,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-web",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image14.png"
+    },
+    {
+      "id": "flux_6gb",
+      "figure": 15,
+      "file": "unsloth-flux2-klein-load-refused-6gb-usable-after-reboot.webp",
+      "path": "images/unsloth-flux2-klein-load-refused-6gb-usable-after-reboot.webp",
+      "alt": "Unsloth error: flux.2-klein needs about 17 GB, but only about 6 GB is usable on this device, of the 11 GB currently free after reserving room for the OS.",
+      "caption": "Second refusal of flux.2-klein: about 17 GB needed, about 6 GB usable (11 GB currently free). Read here as taken after the clean reboot, per the order in the notes.",
+      "role": "moment",
+      "width": 415,
+      "height": 344,
+      "bytes": 26442,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-images",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image16.png"
+    },
+    {
+      "id": "mem12",
+      "figure": 16,
+      "file": "unsloth-activity-monitor-memory-used-12-92-gb.webp",
+      "path": "images/unsloth-activity-monitor-memory-used-12-92-gb.webp",
+      "alt": "macOS Activity Monitor: physical memory 24.00 GB, memory used 12.92 GB, cached files 10.95 GB, app memory 9.81 GB, wired 1.83 GB, swap 0.",
+      "caption": "Memory panel with a long, flat history. Memory used 12.92 GB, cached files 10.95 GB, app memory 9.81 GB, wired 1.83 GB, swap used 0 bytes. The moment of capture and the apps open are not recorded.",
+      "role": "inline",
+      "width": 701,
+      "height": 132,
+      "bytes": 7206,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-memory"
+      ],
+      "subject": "Screenshot of macOS Activity Monitor",
+      "rights": "Tester's own screenshot of macOS Activity Monitor.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image17.png"
+    },
+    {
+      "id": "mem9",
+      "figure": 17,
+      "file": "unsloth-activity-monitor-memory-used-9-67-gb.webp",
+      "path": "images/unsloth-activity-monitor-memory-used-9-67-gb.webp",
+      "alt": "macOS Activity Monitor: physical memory 24.00 GB, memory used 9.67 GB, cached files 8.14 GB, app memory 6.97 GB, wired 1.71 GB, swap 0.",
+      "caption": "Memory panel with a short history that starts late in the graph. Memory used 9.67 GB, cached files 8.14 GB, app memory 6.97 GB, wired 1.71 GB, swap 0. Matches the '10 GB at startup' remark in the notes; which moment it shows is not recorded.",
+      "role": "moment",
+      "width": 1250,
+      "height": 208,
+      "bytes": 16864,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-memory",
+        "moments-card"
+      ],
+      "subject": "Screenshot of macOS Activity Monitor",
+      "rights": "Tester's own screenshot of macOS Activity Monitor.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image18.png"
+    },
+    {
+      "id": "list",
+      "figure": 18,
+      "file": "unsloth-on-device-flux2-klein-4b-and-mistral-7b-sizes.webp",
+      "path": "images/unsloth-on-device-flux2-klein-4b-and-mistral-7b-sizes.webp",
+      "alt": "Unsloth On Device list under UNSLOTH: FLUX.2-klein-4B-GGUF 7.8 GB, FLUX.2-klein-4B 16 GB and mistral-7b-v0.3-bnb-4bit 4.1 GB.",
+      "caption": "Models on the device under UNSLOTH: FLUX.2-klein-4B-GGUF (BF16, picture icon, 4B, 7.8 GB), FLUX.2-klein-4B (picture icon, 4B, 16 GB), mistral-7b-v0.3-bnb-4bit (7B, 4.1 GB).",
+      "role": "inline",
+      "width": 538,
+      "height": 130,
+      "bytes": 5598,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-images"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image19.png"
+    },
+    {
+      "id": "zimage",
+      "figure": 19,
+      "file": "unsloth-download-z-image-bf16-20-5-gb-total.webp",
+      "path": "images/unsloth-download-z-image-bf16-20-5-gb-total.webp",
+      "alt": "Unsloth dialog 'Download model' for Z-Image BF16: model files 12.3 GB, required encoder and decoder 8.2 GB, total download 20.5 GB.",
+      "caption": "Download dialog for Z-Image (BF16): model files 12.3 GB, 'Include required files' 8.2 GB (encoder and decoder, shared across compatible variants), total 20.5 GB. 'Downloading will not load this model or switch your current model.'",
+      "role": "inline",
+      "width": 496,
+      "height": 438,
+      "bytes": 12042,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-hub"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image20.png"
+    },
+    {
+      "id": "starting",
+      "figure": 20,
+      "file": "unsloth-starting-model-loading-cached-model-no-progress.webp",
+      "path": "images/unsloth-starting-model-loading-cached-model-no-progress.webp",
+      "alt": "Unsloth with 'Select model' in the header and a toast 'Starting model... Loading cached model into memory.' with a spinner and a Cancel button.",
+      "caption": "Model start. The toast shows a spinner and 'Loading cached model into memory.' No percentage, no size, no time. The tester says it ran longer than two or three minutes (estimate).",
+      "role": "inline",
+      "width": 1114,
+      "height": 158,
+      "bytes": 3718,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-end"
+      ],
+      "subject": "Screenshot of the Unsloth app",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-09 (one time stamp, 5:13 PM, is visible); exact times not recorded",
+      "original_docx_media": "Unsloth doc image21.png"
+    }
+  ],
+  "figure_order": [
+    "flux_2gb",
+    "splash",
+    "main",
+    "picker",
+    "lm_load",
+    "calc",
+    "ondevice",
+    "coder",
+    "hub",
+    "download",
+    "web_approval",
+    "oom_web",
+    "voice",
+    "heidelberg",
+    "flux_6gb",
+    "mem12",
+    "mem9",
+    "list",
+    "zimage",
+    "starting"
+  ],
+  "seo": {
+    "title": "Unsloth Hands-on Test: Out of Memory on a 24 GB Mac",
+    "description": "Hands-on test of Unsloth on a 24 GB Mac: chat ran at 11 tokens per second, but picture models were refused for memory and no picture was made."
+  },
+  "faq": [
+    [
+      "Can Unsloth generate images on a 24 GB Mac?",
+      "Not in this test. Loading the picture model flux.2-klein was refused twice: about 17 GB needed, about 2 GB usable (7 GB free) at first, and about 6 GB usable (11 GB free) after a reboot. No picture was produced.",
+      "measured"
+    ],
+    [
+      "Does Unsloth find models I already have in LM Studio or Ollama?",
+      "Yes, in this test. The first chat loaded a Qwen3.8-27B 4-bit model from LM Studio's model folder without a download, and the On Device list showed Ollama models such as gemma4:latest and qwen3-coder:30b. Some Ollama models did not work; which ones is not recorded.",
+      "observed"
+    ],
+    [
+      "How fast is Unsloth chat on a 24 GB Mac?",
+      "A 27B 4-bit model answered 'what is 5 times 866' (4,330, correct) in 10 seconds at 11.0 tokens per second. Reading a web page and an event search with the same model ended in 'Ran out of memory', with other apps open.",
+      "measured"
+    ],
+    [
+      "How big is the Unsloth installer, and how long does setup take?",
+      "The DMG is 24 MB. The first start ran a 13-step dependency update that the tester estimates at four to five minutes; the window shows no time or disk estimate. The test started from an existing install, not a clean one.",
+      "observed"
+    ],
+    [
+      "Can Unsloth be used fully offline?",
+      "The vendor's documentation says it can be used 100 percent offline and locally. Offline use was not tested; web search and model downloads used the internet.",
+      "vendor-claim"
+    ]
+  ],
+  "published": "2026-10-16",
+  "ui": {
+    "kicker": "PromptQuorum hands-on test · {app} · {date}",
+    "date_line": "9 October 2026",
+    "nav_aria": "Sections",
+    "nav": {
+      "verdict": "Verdict",
+      "moments": "Six moments",
+      "story": "How it went",
+      "claims": "Claims",
+      "fit": "24 GB",
+      "log": "Usage log",
+      "errors": "Tester errors",
+      "findings": "Findings",
+      "background": "Background"
+    },
+    "related": "Related:",
+    "review_link": "PromptQuorum review of {app}",
+    "directory_link": "Local AI app directory",
+    "verdict_h": "Verdict",
+    "general_assessment": "General assessment",
+    "fit_for_tester": "Fit for the tester's use",
+    "scorecard": "Scorecard",
+    "status_prefix": "Status:",
+    "na": "n/a",
+    "score_aria": "{n} out of 5",
+    "details_h": "Test details",
+    "label_intro": "Every statement carries a label:",
+    "legend_link": "What the labels mean",
+    "disclosure_label": "Disclosure.",
+    "raw_notes": "Raw notes PDF:",
+    "to_be_added": "to be added",
+    "moments_h": "Six moments that shaped this test",
+    "see_context": "See it in context",
+    "story_h": "How the test went",
+    "claims_h": "Claims versus what the tester saw",
+    "claims_cols": [
+      "Claim",
+      "Source",
+      "Observed",
+      "Label"
+    ],
+    "fit_h": "Does it fit in 24 GB?",
+    "memory_line": "{gb} GB memory",
+    "above": "above {gb} GB",
+    "below": "below {gb} GB",
+    "log_h": "Usage log",
+    "log_cols": [
+      "#",
+      "Task",
+      "Model",
+      "Result",
+      "Time",
+      "Status",
+      "Figures"
+    ],
+    "statuses": {
+      "Fail": "Fail",
+      "Partial": "Partial",
+      "Pass": "Pass",
+      "Not completed": "Not completed"
+    },
+    "errors_h": "Where the tester got it wrong",
+    "findings_h": "Findings register",
+    "filter_aria": "Filter findings by label",
+    "filter_all": "All",
+    "findings_cols": [
+      "ID",
+      "Finding",
+      "Category",
+      "Label",
+      "Severity",
+      "Figures"
+    ],
+    "severities": {
+      "High": "High",
+      "Medium": "Medium",
+      "Low": "Low",
+      "Positive": "Positive"
+    },
+    "fig_abbr": "Fig.",
+    "figure": "Figure",
+    "enlarge": "Enlarge:",
+    "audience_h": "Who it is for",
+    "likely_fit": "Likely fit",
+    "likely_poor_fit": "Likely poor fit",
+    "retest": "Retest.",
+    "background_h": "Background on the maker",
+    "gallery_h": "More from the test",
+    "legend_h": "How to read the labels",
+    "sources_h": "Sources",
+    "footer_line": "Test ID {id} · Test standard v{version} · Raw notes PDF: to be added",
+    "crumb_home": "Home",
+    "crumb_directory": "Directory",
+    "crumb_test": "{app} hands-on test",
+    "faq_h": "Frequently asked questions",
+    "more_tests_h": "More hands-on tests"
+  }
+}

@@ -40,11 +40,21 @@ import { article as a_llm_farm_review } from './articles/llm-farm-review'
 import { article as a_layla_review } from './articles/layla-review'
 import { article as a_private_mind_review } from './articles/private-mind-review'
 import { article as a_llm_hub_review } from './articles/llm-hub-review'
+import { article as a_lm_playground_review } from './articles/lm-playground-review'
+import { article as a_localmind_review } from './articles/localmind-review'
 import { article as a_tokforge_review } from './articles/tokforge-review'
+import { article as a_local_ai_geetmark_review } from './articles/local-ai-geetmark-review'
+import { article as a_local_ai_mail_review } from './articles/local-ai-mail-review'
+import { article as a_pcai_photo_retouch_review } from './articles/pcai-photo-retouch-review'
+import { article as a_honey_llm_review } from './articles/honey-llm-review'
+import { article as a_friedrichai_review } from './articles/friedrichai-review'
+import { article as a_spiritbox_ultimate_review } from './articles/spiritbox-ultimate-review'
 import { article as a_oscilla_review } from './articles/oscilla-review'
 import { article as a_tina_review } from './articles/tina-review'
+import { article as a_return_editor_review } from './articles/return-editor-review'
 import { article as a_mlxhub_review } from './articles/mlxhub-review'
 import { article as a_local_ai_chat_pocket_review } from './articles/local-ai-chat-pocket-review'
+import { article as a_anyllm_review } from './articles/anyllm-review'
 import { article as a_ollama_local_ai_review } from './articles/ollama-local-ai-review'
 import { article as a_comfyui_review } from './articles/comfyui-review'
 import { article as a_rikkahub_review } from './articles/rikkahub-review'
@@ -323,6 +333,7 @@ import { article as a_funclip_review } from './articles/funclip-review'
 import { article as a_mission_control_review } from './articles/mission-control-review'
 import { article as a_kserve_review } from './articles/kserve-review'
 import { article as a_baserow_review } from './articles/baserow-review'
+import { article as a_firecrawl_review } from './articles/firecrawl-review'
 import { article as a_shimmy_review } from './articles/shimmy-review'
 import { article as a_longmemory_review } from './articles/longmemory-review'
 import { article as a_lorax_review } from './articles/lorax-review'
@@ -346,6 +357,8 @@ import { article as a_web_search_mcp_review } from './articles/web-search-mcp-re
 import { article as a_candle_vllm_review } from './articles/candle-vllm-review'
 import { article as a_swiftlm_review } from './articles/swiftlm-review'
 import { article as a_radiant_canvas } from './articles/radiant-canvas'
+import { article as a_ai_cutoutwerk_review } from './articles/ai-cutoutwerk-review'
+import { article as a_openmontage_review } from './articles/openmontage-review'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -623,11 +636,21 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'layla-review':                                  a_layla_review,
   'private-mind-review':                           a_private_mind_review,
   'llm-hub-review':                                a_llm_hub_review,
+  'lm-playground-review':                          a_lm_playground_review,
+  'localmind-review':                              a_localmind_review,
   'tokforge-review':                               a_tokforge_review,
+  'local-ai-geetmark-review':                      a_local_ai_geetmark_review,
+  'local-ai-mail-review':                         a_local_ai_mail_review,
+  'pcai-photo-retouch-review':                    a_pcai_photo_retouch_review,
+  'honey-llm-review':                             a_honey_llm_review,
+  'friedrichai-review':                            a_friedrichai_review,
+  'spiritbox-ultimate-review':                     a_spiritbox_ultimate_review,
   'oscilla-review':                                a_oscilla_review,
   'tina-review':                                   a_tina_review,
+  'return-editor-review':                          a_return_editor_review,
   'mlxhub-review':                                 a_mlxhub_review,
   'local-ai-chat-pocket-review':                   a_local_ai_chat_pocket_review,
+  'anyllm-review':                                 a_anyllm_review,
   'ollama-local-ai-review':                        a_ollama_local_ai_review,
   // ComfyUI review — 2026-09-06
   'comfyui-review':                                a_comfyui_review,
@@ -708,6 +731,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'mission-control-review':                              a_mission_control_review,
   'kserve-review':                                       a_kserve_review,
   'baserow-review':                                      a_baserow_review,
+  'firecrawl-review':                                    a_firecrawl_review,
   'shimmy-review':                                       a_shimmy_review,
   'longmemory-review':                                   a_longmemory_review,
   'lorax-review':                                        a_lorax_review,
@@ -731,6 +755,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'candle-vllm-review':                                  a_candle_vllm_review,
   'swiftlm-review':                                      a_swiftlm_review,
   'radiant-canvas':                                      a_radiant_canvas,
+  'ai-cutoutwerk-review':                                a_ai_cutoutwerk_review,
+  'openmontage-review':                                  a_openmontage_review,
 }
 
 // The directory page's "Last updated" date follows the tool list: every 5 tools added after the article's own

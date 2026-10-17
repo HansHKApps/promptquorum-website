@@ -36,4 +36,6 @@ export const app: ToolRecord = {
   reviewSlug: 'llamafile-explained', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: '0.10.6', versionSourceUrl: 'https://github.com/mozilla-ai/llamafile/releases/tag/0.10.6' },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-12', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/mozilla-ai/llamafile',
 }

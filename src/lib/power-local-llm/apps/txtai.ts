@@ -39,4 +39,6 @@ export const app: ToolRecord = {
   // multiVector confirmed via 11 supported ANN/vector index backends (faiss, hnsw, annoy, ggml, milvus, numpy, torch, turbovec, zvec, pgvector, sqlite-vec) plus custom backends: https://neuml.github.io/txtai/embeddings/configuration/ann/
   compare: { visualBuilder: false, localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-10-15', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/neuml/txtai',
 }

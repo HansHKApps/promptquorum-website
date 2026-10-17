@@ -165,7 +165,7 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
     {
       key: 'document-chat',
       label: 'Document & PDF chat',
-      subs: ['document-pdf-chat'],
+      subs: ['document-pdf-chat', 'contract-review'],
       attributes: [
         { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
         { key: 'multiFormat', label: 'Several document formats', kind: 'boolean' },

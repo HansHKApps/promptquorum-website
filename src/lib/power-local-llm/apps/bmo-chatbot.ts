@@ -36,6 +36,8 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { localLlm: true, noteApp: 'Obsidian', chatNotes: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2024-09-12', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/longy2k/obsidian-bmo-chatbot',
   reviewSlug: 'bmo-chatbot-review', // dedicated PromptQuorum review
   pqReview: { date: '2026-09-20', version: '2.3.3', versionSourceUrl: 'https://github.com/longy2k/obsidian-bmo-chatbot/releases/tag/2.3.3' },
 }

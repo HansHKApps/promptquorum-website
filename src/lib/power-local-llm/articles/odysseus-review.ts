@@ -68,9 +68,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Works with local model backends (Ollama, llama.cpp, vLLM) and API providers (OpenAI, OpenRouter) — you choose which to connect',
           'Bundles chat/agents, deep research, document editing, email (IMAP/SMTP), notes, tasks, calendar (CalDAV), and an image gallery/editor in one self-hosted workspace',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Odysseus\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Odysseus compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-odysseus',
@@ -302,9 +299,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation per Docker (`git clone`, dann `docker compose up -d --build`), die Oberfläche ist unter `http://localhost:7000` erreichbar',
           'Funktioniert mit lokalen Modell-Backends (Ollama, llama.cpp, vLLM) und API-Anbietern (OpenAI, OpenRouter) — Sie wählen, was verbunden wird',
           'Vereint Chat/Agenten, Tiefenrecherche, Dokumentbearbeitung, E-Mail (IMAP/SMTP), Notizen, Aufgaben, Kalender (CalDAV) und eine Bildergalerie/-editor in einem selbstgehosteten Arbeitsbereich',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Odysseus\' Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie Odysseus im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -538,9 +532,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fonctionne avec des moteurs de modèles locaux (Ollama, llama.cpp, vLLM) et des fournisseurs d\'API (OpenAI, OpenRouter) — vous choisissez la connexion',
           'Regroupe chat/agents, recherche approfondie, édition de documents, e-mail (IMAP/SMTP), notes, tâches, calendrier (CalDAV) et une galerie/éditeur d\'images dans un espace de travail auto-hébergé',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche d\'Odysseus dans le [répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir comment Odysseus se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-odysseus',
@@ -772,9 +763,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se instala mediante Docker (`git clone`, luego `docker compose up -d --build`), con la interfaz accesible en `http://localhost:7000`',
           'Funciona con motores de modelos locales (Ollama, llama.cpp, vLLM) y proveedores de API (OpenAI, OpenRouter) — usted elige qué conectar',
           'Agrupa chat/agentes, investigación profunda, edición de documentos, correo (IMAP/SMTP), notas, tareas, calendario (CalDAV) y una galería/editor de imágenes en un espacio de trabajo autoalojado',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de Odysseus en el [directorio de software de IA local](/es/directory) — consulte esa página para ver de un vistazo cómo se compara Odysseus con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1008,9 +996,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Funciona com back-ends de modelo local (Ollama, llama.cpp, vLLM) e provedores de API (OpenAI, OpenRouter) — você escolhe o que conectar',
           'Reúne chat/agentes, pesquisa aprofundada, edição de documentos, e-mail (IMAP/SMTP), notas, tarefas, calendário (CalDAV) e uma galeria/editor de imagens em um espaço de trabalho auto-hospedado',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do Odysseus no [diretório de software de IA local](/pt/directory) — veja essa página para comparar rapidamente o Odysseus com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-odysseus',
@@ -1242,9 +1227,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Docker経由でインストール（`git clone`、続いて`docker compose up -d --build`）。インターフェースは`http://localhost:7000`でアクセス可能',
           'ローカルモデルバックエンド（Ollama、llama.cpp、vLLM）とAPIプロバイダー（OpenAI、OpenRouter）の両方に対応 — どちらを接続するかはユーザーが選択',
           'チャット/エージェント、ディープリサーチ、文書編集、メール（IMAP/SMTP）、メモ、タスク、カレンダー（CalDAV）、画像ギャラリー/エディタを1つのセルフホスト型ワークスペースに統合',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/directory)にあるOdysseusのエントリーの詳細版です。Odysseusが他の数十ものローカルAIツールと比べてどう位置づけられるかは、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1478,9 +1460,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '支持本地模型后端（Ollama、llama.cpp、vLLM）和API提供方（OpenAI、OpenRouter）——由你选择连接哪一个',
           '将聊天/代理、深度研究、文档编辑、邮件（IMAP/SMTP）、笔记、任务、日历（CalDAV）以及图片库/编辑器整合进一个自托管工作空间',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地AI软件目录](/zh/directory)中Odysseus条目的深度补充——该页面展示了Odysseus与数十种其他本地AI工具相比的一览对比。' },
-        ],
       },
       overview: {
         id: 'what-is-odysseus',
@@ -1713,9 +1692,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يعمل مع محركات نماذج محلية (Ollama وllama.cpp وvLLM) ومزودي واجهات برمجة التطبيقات (OpenAI وOpenRouter) — أنت من تختار ما تريد ربطه',
           'يجمع الدردشة/الوكلاء والبحث المعمّق وتحرير المستندات والبريد الإلكتروني (IMAP/SMTP) والملاحظات والمهام والتقويم (CalDAV) ومعرض/محرر صور في مساحة عمل واحدة ذاتية الاستضافة',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لإدخال Odysseus في [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تُقارَن Odysseus بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-odysseus',
@@ -1947,9 +1923,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Docker로 설치(`git clone` 후 `docker compose up -d --build`), 인터페이스는 `http://localhost:7000`에서 접근 가능',
           '로컬 모델 백엔드(Ollama, llama.cpp, vLLM)와 API 제공업체(OpenAI, OpenRouter) 모두와 작동 — 어느 쪽을 연결할지는 직접 선택',
           '채팅/에이전트, 심층 리서치, 문서 편집, 이메일(IMAP/SMTP), 메모, 작업, 캘린더(CalDAV), 이미지 갤러리/편집기를 하나의 셀프 호스팅 워크스페이스에 결합',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)에 있는 Odysseus 항목의 심층 보완판입니다 — Odysseus가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

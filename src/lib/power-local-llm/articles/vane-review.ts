@@ -71,9 +71,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No visual, drag-and-drop workflow builder — Vane is a search/answering app configured through settings, not a builder',
           'Free with no paid tier; roughly 36,700 GitHub stars and over 4,000 forks as of this review',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Vane\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Vane compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-vane',
@@ -299,9 +296,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Eine eingebaute Agenten-Orchestrierung ist bereits vorhanden — Query-Klassifizierung, parallele Recherche- und Widget-Ausführung sowie eine iterative "Reason-Search-Scrape-Extract"-Deep-Research-Pipeline — laut Vanes [Architektur-Dokumentation](https://github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md); benutzerdefinierte, individuelle Agenten sind ein separater, noch nicht ausgelieferter README-Punkt (siehe Hinweis unten)',
           'Kein visueller Drag-and-drop-Workflow-Builder — Vane ist eine über Einstellungen konfigurierte Such-/Antwort-App, kein Builder',
           'Kostenlos ohne kostenpflichtige Stufe; rund 36.700 GitHub-Sterne und über 4.000 Forks zum Zeitpunkt dieser Review',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu Vanes Eintrag im [Local LLM Software Directory](/directory) — dort sieht man auf einen Blick, wie Vane im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -529,9 +523,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aucun constructeur visuel de workflow par glisser-déposer — Vane est une application de recherche/réponse configurée via des paramètres, pas un constructeur',
           'Gratuit sans offre payante ; environ 36 700 étoiles GitHub et plus de 4 000 forks au moment de cet avis',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis complète l\'entrée de Vane dans le [Local LLM Software Directory](/directory) — consultez cette page pour voir en un coup d\'œil comment Vane se compare à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-vane',
@@ -757,9 +748,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '組み込みのエージェント・オーケストレーションはすでに実装済み——クエリ分類、並列でのリサーチとウィジェット実行、反復型の「Reason-Search-Scrape-Extract」ディープリサーチパイプライン——Vaneの[アーキテクチャドキュメント](https://github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md)より。ユーザー定義のカスタムエージェントは、README上まだ未実装の別項目として残っている(下記の注を参照)',
           'ビジュアルなドラッグ&ドロップ式ワークフロービルダーはない——Vaneは設定で構成する検索・回答アプリであり、ビルダーではない',
           '無料で有料プランなし。本レビュー時点で約36,700個のGitHubスターと4,000を超えるフォーク',
-        ],
-        callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/directory)にあるVaneのエントリーを深掘りする補完記事です――他の数十のローカルAIツールとVaneがひと目でどう比較されるかは、そちらのページをご覧ください。' },
         ],
       },
       overview: {
@@ -987,9 +975,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '没有可视化拖放式工作流构建器——Vane是通过设置项配置的搜索/问答应用,而非构建工具',
           '免费且无付费套餐;截至本评测,GitHub星标数约36,700个,fork数超过4,000个',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是对[本地LLM软件目录](/directory)中Vane条目的深入补充——该页面可让你一目了然地看到Vane与其他数十种本地AI工具的对比情况。' },
-        ],
       },
       overview: {
         id: 'what-is-vane',
@@ -1215,9 +1200,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ya incluye orquestación de agentes integrada — clasificación de consultas, ejecución paralela de investigación y widgets, y un pipeline iterativo de investigación profunda "Reason-Search-Scrape-Extract" — según la [documentación de arquitectura](https://github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md) de Vane; los agentes personalizados definidos por el usuario siguen siendo un punto aparte del README aún no disponible (ver nota abajo)',
           'Sin constructor visual de flujos de trabajo por arrastrar y soltar — Vane es una aplicación de búsqueda/respuesta configurada mediante ajustes, no un constructor',
           'Gratuito sin plan de pago; aproximadamente 36.700 estrellas en GitHub y más de 4.000 forks al momento de esta reseña',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento detallado a la entrada de Vane en el [Directorio de software de LLM local](/directory) — consulta esa página para ver de un vistazo cómo se compara Vane con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1445,9 +1427,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sem construtor visual de workflow por arrastar e soltar — o Vane é um app de busca/resposta configurado por ajustes, não um construtor',
           'Gratuito, sem plano pago; aproximadamente 36.700 estrelas no GitHub e mais de 4.000 forks no momento desta análise',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Vane no [Diretório de software de LLM local](/directory) — veja essa página para comparar rapidamente o Vane com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-vane',
@@ -1674,9 +1653,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لا توجد أداة بناء مرئية بالسحب والإفلات لسير العمل — Vane تطبيق بحث/إجابة يُهيَّأ عبر الإعدادات، وليس أداة بناء',
           'مجاني دون باقة مدفوعة؛ نحو 36,700 نجمة على GitHub وأكثر من 4,000 نسخة متفرعة حتى وقت كتابة هذه المراجعة',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمق لإدخال Vane في [دليل برمجيات LLM المحلية](/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Vane بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-vane',
@@ -1902,9 +1878,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '내장 에이전트 오케스트레이션이 이미 탑재됨 — 쿼리 분류, 병렬 리서치·위젯 실행, 반복형 "Reason-Search-Scrape-Extract" 딥 리서치 파이프라인 — Vane의 [아키텍처 문서](https://github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md) 기준; 사용자 정의 커스텀 에이전트는 README상 아직 출시되지 않은 별도 항목으로 남아 있음(아래 참고 사항 참조)',
           '시각적인 드래그 앤 드롭 워크플로 빌더는 없음 — Vane은 설정으로 구성하는 검색·답변 앱이며 빌더가 아님',
           '유료 플랜 없이 무료; 이 리뷰 작성 시점 기준 약 36,700개의 GitHub 스타와 4,000개 이상의 포크',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 있는 Vane 항목의 심화 보완 자료입니다—Vane이 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

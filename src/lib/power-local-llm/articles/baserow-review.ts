@@ -71,9 +71,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '5,933 GitHub stars as of this review (github.com/baserow/baserow, verified via GitHub API)',
           'Developed by Baserow B.V.; per Baserow\'s own marketing, over 150,000 users rely on the platform — this review could not independently verify that figure',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Baserow\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Baserow compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-baserow',
@@ -353,9 +350,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das KI-Feld ist hinter einem Premium-Plan (Cloud, ab 10 $/Nutzer/Monat bei jährlicher Abrechnung) oder einer erworbenen selbst gehosteten Premium-/Enterprise-Lizenz gesperrt — es ist nicht Teil der kostenlosen MIT-Edition',
           '5.933 GitHub-Stars zum Zeitpunkt dieser Review (github.com/baserow/baserow, verifiziert über die GitHub-API)',
           'Entwickelt von Baserow B.V.; laut Baserows eigenem Marketing verlassen sich über 150.000 Nutzer auf die Plattform — diese Review konnte diese Zahl nicht unabhängig verifizieren',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleiter zu Baserows Eintrag im [Local LLM Software Directory](/de/directory) — siehe diese Seite für einen Überblick, wie Baserow im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -639,9 +633,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '5 933 étoiles GitHub au moment de cet avis (github.com/baserow/baserow, vérifié via l\'API GitHub)',
           'Développé par Baserow B.V. ; selon le marketing de Baserow lui-même, plus de 150 000 utilisateurs s\'appuient sur la plateforme — cet avis n\'a pas pu vérifier ce chiffre de manière indépendante',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Baserow dans le [Répertoire de logiciels LLM locaux](/fr/directory) — consultez cette page pour voir comment Baserow se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-baserow',
@@ -921,9 +912,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AIフィールドはPremiumプラン（クラウド、年払いでユーザーあたり月10ドルから）またはセルフホスト向けに購入したPremium/Enterpriseライセンスの背後にあり、無料のMIT版には含まれない',
           'このレビュー時点でGitHubスター5,933（github.com/baserow/baserow、GitHub API経由で確認）',
           'Baserow B.V.が開発。Baserow自身のマーケティングによれば15万人以上のユーザーがプラットフォームを利用しているとされるが、このレビューではこの数字を独自に検証できなかった',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるBaserowのエントリの詳細版です。他の数十のローカルAIツールとの比較についてはそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1205,9 +1193,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测时，GitHub星标数为5,933（github.com/baserow/baserow，已通过GitHub API核实）',
           '由Baserow B.V.开发；根据Baserow自身的宣传，有超过15万用户依赖该平台——本评测无法独立核实这一数字',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Baserow条目的深度补充——如需了解Baserow与其他数十款本地AI工具的一览式对比，请参阅该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-baserow',
@@ -1487,9 +1472,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El campo de IA está restringido a un plan Premium (en la nube, desde 10 $/usuario/mes con facturación anual) o a una licencia Premium/Enterprise autoalojada comprada — no forma parte de la edición MIT gratuita',
           '5.933 estrellas en GitHub al momento de este análisis (github.com/baserow/baserow, verificado vía la API de GitHub)',
           'Desarrollado por Baserow B.V.; según el propio material de marketing de Baserow, más de 150.000 usuarios confían en la plataforma — este análisis no pudo verificar esa cifra de forma independiente',
-        ],
-        callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada de Baserow en el [Directorio de software LLM local](/es/directory) — consulta esa página para ver cómo se compara Baserow de un vistazo con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1771,9 +1753,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '5.933 estrelas no GitHub no momento desta análise (github.com/baserow/baserow, verificado via API do GitHub)',
           'Desenvolvido pela Baserow B.V.; segundo o próprio marketing do Baserow, mais de 150.000 usuários confiam na plataforma — esta análise não conseguiu verificar esse número de forma independente',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Baserow no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente o Baserow com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-baserow',
@@ -2054,9 +2033,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '5,933 نجمة على GitHub وقت إعداد هذه المراجعة (github.com/baserow/baserow، تم التحقق عبر واجهة برمجة GitHub)',
           'طوّرتها شركة Baserow B.V.؛ وبحسب تسويق Baserow نفسها، يعتمد أكثر من 150,000 مستخدم على المنصة — لم تتمكن هذه المراجعة من التحقق من هذا الرقم بشكل مستقل',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لإدخال Baserow في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارن Baserow بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-baserow',
@@ -2336,9 +2312,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AI 필드는 Premium 플랜(클라우드, 연간 결제 기준 사용자당 월 10달러부터) 또는 구매한 셀프 호스팅 Premium/Enterprise 라이선스 뒤에 잠겨 있음——무료 MIT 에디션에는 포함되지 않음',
           '이 리뷰 작성 시점 기준 GitHub 스타 5,933개(github.com/baserow/baserow, GitHub API로 확인)',
           'Baserow B.V.가 개발했으며, Baserow 자체 마케팅에 따르면 15만 명 이상의 사용자가 이 플랫폼을 이용하고 있다고 하지만, 이 리뷰는 해당 수치를 독립적으로 검증할 수 없었음',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 Baserow 항목의 심층 버전입니다. Baserow가 수십 개의 다른 로컬 AI 도구와 어떻게 비교되는지 한눈에 보려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

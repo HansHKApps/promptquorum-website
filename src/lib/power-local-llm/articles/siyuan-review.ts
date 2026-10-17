@@ -72,9 +72,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Available on Windows, macOS, Linux, Android, iOS, and HarmonyOS, with a self-hostable server/web (Docker) mode for browser access',
           'GitHub repository shows roughly 46,400 stars as of September 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to SiYuan\'s entry in the [Local LLM Software Directory](/directory) — see that page for how SiYuan compares at a glance to dozens of other local-first AI and knowledge tools.' },
-        ],
       },
       overview: {
         id: 'what-is-siyuan',
@@ -346,9 +343,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Erweiterbar durch ein Plugin-System sowie JavaScript-/CSS-Snippets',
           'Verfügbar für Windows, macOS, Linux, Android, iOS und HarmonyOS, mit einem selbst hostbaren Server-/Web-Modus (Docker) für den Browser-Zugriff',
           'Das GitHub-Repository zeigt Stand September 2026 rund 46.400 Stars',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Rezension ist der vertiefende Begleitartikel zu SiYuans Eintrag im [Local LLM Software Directory](/de/directory) — dort sieht man auf einen Blick, wie SiYuan im Vergleich zu Dutzenden anderer lokal-first KI- und Wissenstools abschneidet.' },
         ],
       },
       overview: {
@@ -622,9 +616,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponible sur Windows, macOS, Linux, Android, iOS et HarmonyOS, avec un mode serveur/web auto-hébergeable (Docker) pour un accès depuis un navigateur',
           'Le dépôt GitHub affiche environ 46 400 étoiles en septembre 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de SiYuan dans l\'[annuaire des logiciels LLM locaux](/fr/directory) — consultez cette page pour voir comment SiYuan se compare en un coup d\'œil à des dizaines d\'autres outils IA et de connaissances local-first.' },
-        ],
       },
       overview: {
         id: 'what-is-siyuan',
@@ -896,9 +887,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'プラグインシステムとJavaScript/CSSスニペットで拡張可能',
           'Windows、macOS、Linux、Android、iOS、HarmonyOSに対応し、ブラウザからアクセスできるセルフホスト可能なサーバー/Web（Docker）モードも用意',
           'GitHubリポジトリのスター数は2026年9月時点で約46,400',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるSiYuanのエントリーを掘り下げた詳細版です。SiYuanが他の数十種類のローカルファーストなAI・ナレッジツールと比べてどう位置づけられるかは、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1172,9 +1160,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '支持 Windows、macOS、Linux、Android、iOS 和鸿蒙，并提供可自托管的服务器/网页（Docker）模式以便浏览器访问',
           '截至 2026 年 9 月，GitHub 仓库星标约 46,400',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是 SiYuan 在[本地 LLM 软件目录](/zh/directory)中条目的深度补充——该页面可让你一览 SiYuan 与其他数十款本地优先 AI 与知识管理工具的对比。' },
-        ],
       },
       overview: {
         id: 'what-is-siyuan',
@@ -1446,9 +1431,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ampliable mediante un sistema de plugins además de fragmentos de JavaScript/CSS',
           'Disponible en Windows, macOS, Linux, Android, iOS y HarmonyOS, con un modo servidor/web (Docker) autoalojable para acceso desde el navegador',
           'El repositorio de GitHub muestra alrededor de 46.400 estrellas en septiembre de 2026',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de SiYuan en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara SiYuan con docenas de otras herramientas de IA y conocimiento local-first.' },
         ],
       },
       overview: {
@@ -1722,9 +1704,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponível em Windows, macOS, Linux, Android, iOS e HarmonyOS, com um modo servidor/web (Docker) self-hosted para acesso via navegador',
           'O repositório no GitHub mostra cerca de 46.400 estrelas em setembro de 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o aprofundamento complementar à entrada do SiYuan no [Diretório de Softwares de LLM Local](/pt/directory) — veja essa página para comparar o SiYuan rapidamente com dezenas de outras ferramentas locais de IA e conhecimento.' },
-        ],
       },
       overview: {
         id: 'what-is-siyuan',
@@ -1997,9 +1976,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'متاح على Windows وmacOS وLinux وAndroid وiOS وHarmonyOS، مع وضع خادم/ويب (Docker) قابل للاستضافة الذاتية للوصول عبر المتصفح',
           'تُظهر مستودع GitHub نحو 46,400 نجمة اعتبارًا من سبتمبر 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيقة المتعمقة لمدخل SiYuan في [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن SiYuan بلمحة سريعة بعشرات الأدوات الأخرى للذكاء الاصطناعي والمعرفة المحلية.' },
-        ],
       },
       overview: {
         id: 'what-is-siyuan',
@@ -2271,9 +2247,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '플러그인 시스템과 JavaScript/CSS 스니펫으로 확장 가능',
           'Windows, macOS, Linux, Android, iOS, HarmonyOS에서 사용 가능하며, 브라우저 접근을 위한 셀프 호스팅 가능한 서버/웹(Docker) 모드도 제공',
           'GitHub 저장소 기준 2026년 9월 현재 약 46,400개의 스타 보유',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 SiYuan 항목의 심층 분석판입니다 — SiYuan이 수십 개의 다른 로컬 우선 AI 및 지식 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

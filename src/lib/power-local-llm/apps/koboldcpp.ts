@@ -22,6 +22,9 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['serve'],
   url: 'github.com/LostRuins/koboldcpp',
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installOn: ['win'],
+  installEvidence: 'README: "One executable file, no installation required"; on Windows download koboldcpp.exe and double-click it. Linux/macOS binaries need chmod +x and a terminal, so the tier is scoped to Windows. checked 2026-10-09',
   tagline: {
     en: 'Lightweight llama.cpp wrapper with built-in UI',
     de: 'Schlanker llama.cpp-Wrapper mit integrierter Benutzeroberfläche',
@@ -34,8 +37,10 @@ export const app: ToolRecord = {
     ko: '내장 인터페이스가 포함된 llama.cpp 경량 래퍼',
   },
   reviewSlug: 'koboldcpp-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  pqReview: { date: '2026-09-20', version: 'v1.121', versionSourceUrl: 'https://github.com/LostRuins/koboldcpp/releases/tag/v1.121' },
+  pqReview: { date: '2026-10-17', version: 'v1.123.1', versionSourceUrl: 'https://github.com/LostRuins/koboldcpp/releases/tag/v1.123.1' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { dockerDeploy: true, mcp: true, fileChat: true, openaiApi: true, nvidiaGpu: true, appleSilicon: true, amdGpu: true, cpuInference: true },
   lastVerifiedDate: '2026-09-20',
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/LostRuins/koboldcpp',
 }

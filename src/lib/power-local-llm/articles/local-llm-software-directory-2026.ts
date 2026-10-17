@@ -12,16 +12,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-17',
     next_refresh_due: '2026-11-05',
     theme: 'Overview & Reference',
     title: 'The Complete Local AI & LLM Software Directory: ' + TOTAL_TOOL_COUNT + ' Apps & Tools for Running AI Locally (2026)',
-    seoTitle: 'Local AI & LLM Apps: ' + TOTAL_TOOL_COUNT + ' Tools Compared',
+    seoTitle: 'Local LLM Software Directory: ' + TOTAL_TOOL_COUNT + ' Apps & Tools (2026)',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + ' local AI and LLM apps and tools across ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories, with licensing, pricing, platforms, hardware requirements, and use cases. Search, filter, compare, and find the right software for running AI locally on your Mac, Windows PC, Linux machine, or phone.',
     metaDescription:
-      '' + TOTAL_TOOL_COUNT + ' local AI and LLM apps and tools. Compare software by use case, platform, price, license, hardware and more for running AI on your own computer or phone.',
+      'Browse ' + TOTAL_TOOL_COUNT + ' local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' local-LLM tools across ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories — run & serve, chat & assistants, code & development, knowledge & retrieval, voice & audio, images & video, train & operate. Licences, links & primary URLs. The "what exists" map before you commit to your stack.',
     advertiserHighlight: {
@@ -552,6 +552,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Can I do image generation locally without cloud calls?',
             a: 'Yes — Stable Diffusion, ComfyUI, Invoke AI, AUTOMATIC1111 WebUI, and others in the Images & Video category run entirely on local hardware. Stable Diffusion needs 6+ GB VRAM (RTX 3060, RTX 4060, or equivalent); Fooocus and other optimized UIs can run on cards with 4-6 GB. Real-ESRGAN upscales generated images; ControlNet adds spatial control (edges, poses, depth maps); AnimateDiff generates video from text. All run without sending data to external servers.',
           },
+          {
+            q: 'Which local LLM apps work on iPhone and Android?',
+            a: 'PocketPal AI, MLC Chat, and AnythingLLM Mobile run on both iOS and Android and are free and open source (MIT or Apache 2.0). Enchanted (free, Apache 2.0), Private LLM (paid), and Locally AI (freemium) cover iPhone and Mac, and Layla (freemium) is Android-only. On a flagship phone, expect usable speed from models in the 2-4B parameter range.',
+          },
+          {
+            q: 'What are the best alternatives to Open WebUI?',
+            a: 'LibreChat (MIT) and LobeChat (MIT, freemium) are the closest browser-based alternatives. Chatbox (GPL 3.0) is a lightweight cross-platform client, and AnythingLLM (MIT) adds built-in document chat on desktop and web. All of them connect to a local Ollama instance, so switching UIs does not change your models.',
+          },
+          {
+            q: 'Should I choose AnythingLLM or Jan?',
+            a: 'Choose AnythingLLM (MIT, desktop and web) if you want to chat with your own documents or need multi-user admin features. Choose Jan (desktop for Mac, Windows, and Linux) if you want a simple, privacy-first chat app for local models. Both are free and both can run against the same Ollama runtime.',
+          },
         ],
       },
       relatedReading: {
@@ -587,16 +599,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-17',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Das vollständige Verzeichnis für lokale KI- & LLM-Software: ' + TOTAL_TOOL_COUNT + ' Apps und Tools, um KI lokal auszuführen (2026)',
-    seoTitle: 'Lokale KI- & LLM-Apps: ' + TOTAL_TOOL_COUNT + ' Tools im Vergleich',
+    seoTitle: 'Verzeichnis lokaler LLM-Software: ' + TOTAL_TOOL_COUNT + ' Apps & Tools (2026)',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + ' lokale KI- und LLM-Apps und -Tools in ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien, mit Lizenz, Preis, Plattformen, Hardware-Anforderungen und Anwendungsfällen. Suchen, filtern, vergleichen und die passende Software finden, um KI lokal auf Mac, Windows-PC, Linux-Rechner oder Smartphone auszuführen.',
     metaDescription:
-      '' + TOTAL_TOOL_COUNT + ' lokale KI- und LLM-Apps und -Tools. Vergleichen Sie Software nach Einsatzzweck, Plattform, Preis, Lizenz und Hardware — für KI auf Ihrem eigenen Rechner oder Smartphone.',
+      'Entdecken Sie ' + TOTAL_TOOL_COUNT + ' lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' lokale LLM-Tools über ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate. Lizenzen, Links & primäre URLs. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
     advertiserHighlight: {
@@ -1136,6 +1148,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Sind diese Tools für den deutschen Mittelstand geeignet?',
             a: 'Ja — für mittelständische Unternehmen in Deutschland, Österreich und der Schweiz bieten lokale LLM-Stacks konkrete Vorteile: Datensouveränität (keine Cloud-Abhängigkeit, keine Datenübermittlung an US-Anbieter), planbare Kosten (keine token-basierten Nutzungsgebühren) und Anpassbarkeit (Feinabstimmung auf Branchensprache möglich). Empfohlene Einstiegskonfiguration für den Mittelstand: Ollama als Laufzeitumgebung, Open WebUI für den Team-Chat, AnythingLLM für interne Wissensdatenbanken. Für IT-Sicherheitsanforderungen nach BSI-Grundschutz empfiehlt sich der Einsatz von Tools mit MIT- oder Apache-2.0-Lizenz und eine Netzwerksegmentierung des LLM-Servers vom Produktionsnetz.',
           },
+          {
+            q: 'Welche lokalen LLM-Apps laufen auf iPhone und Android?',
+            a: 'PocketPal AI, MLC Chat und AnythingLLM Mobile laufen auf iOS und Android und sind kostenlos sowie Open Source (MIT oder Apache 2.0). Enchanted (kostenlos, Apache 2.0), Private LLM (kostenpflichtig) und Locally AI (Freemium) decken iPhone und Mac ab, Layla (Freemium) gibt es nur für Android. Auf einem Flaggschiff-Smartphone sind Modelle mit 2–4 Mrd. Parametern flüssig nutzbar.',
+          },
+          {
+            q: 'Was sind die besten Alternativen zu Open WebUI?',
+            a: 'LibreChat (MIT) und LobeChat (MIT, Freemium) sind die nächsten browserbasierten Alternativen. Chatbox (GPL 3.0) ist ein schlanker plattformübergreifender Client, und AnythingLLM (MIT) bringt zusätzlich Dokumenten-Chat für Desktop und Web mit. Alle verbinden sich mit einer lokalen Ollama-Instanz, ein Wechsel der Oberfläche ändert Ihre Modelle also nicht.',
+          },
+          {
+            q: 'Sollte ich AnythingLLM oder Jan wählen?',
+            a: 'Wählen Sie AnythingLLM (MIT, Desktop und Web), wenn Sie mit eigenen Dokumenten chatten möchten oder Mehrbenutzer-Verwaltung brauchen. Wählen Sie Jan (Desktop für Mac, Windows und Linux) für eine einfache, datenschutzorientierte Chat-App mit lokalen Modellen. Beide sind kostenlos und können mit derselben Ollama-Laufzeit arbeiten.',
+          },
         ],
       },
       relatedReading: {
@@ -1169,16 +1193,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-17',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Le répertoire complet des logiciels d\'IA et de LLM locaux : ' + TOTAL_TOOL_COUNT + ' apps et outils pour exécuter l\'IA en local (2026)',
-    seoTitle: 'Apps IA & LLM locaux : ' + TOTAL_TOOL_COUNT + ' outils comparés',
+    seoTitle: 'Logiciels LLM locaux : ' + TOTAL_TOOL_COUNT + ' outils et apps (2026)',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + ' apps et outils d’IA et de LLM locaux répartis en ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories, avec licence, prix, plateformes, configuration matérielle requise et cas d’usage. Recherchez, filtrez, comparez et trouvez le bon logiciel pour exécuter l’IA en local sur votre Mac, PC Windows, machine Linux ou téléphone.',
     metaDescription:
-      '' + TOTAL_TOOL_COUNT + ' apps et outils d’IA et de LLM locaux. Comparez les logiciels par usage, plateforme, prix, licence et matériel pour exécuter l’IA sur votre ordinateur ou votre téléphone.',
+      'Parcourez ' + TOTAL_TOOL_COUNT + ' apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' outils LLM locaux en ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate. Licences, liens & URL primaires. La carte d\'orientation avant de choisir votre stack.',
     advertiserHighlight: {
@@ -1709,6 +1733,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Puis-je faire de la génération d\'images en local, sans appel cloud ?',
             a: 'Oui — Stable Diffusion, ComfyUI, Invoke AI, AUTOMATIC1111 WebUI et d\'autres outils du niveau 10 fonctionnent entièrement sur votre matériel local. Stable Diffusion nécessite 6+ Go de VRAM (RTX 3060, RTX 4060 ou équivalent) ; Fooocus et d\'autres interfaces optimisées peuvent tourner avec 4-6 Go. Real-ESRGAN agrandit les images générées ; ControlNet ajoute un contrôle spatial (contours, poses, cartes de profondeur) ; AnimateDiff génère de la vidéo à partir de texte. Aucune donnée n\'est envoyée à des serveurs externes.',
           },
+          {
+            q: 'Quelles apps LLM locales fonctionnent sur iPhone et Android ?',
+            a: 'PocketPal AI, MLC Chat et AnythingLLM Mobile fonctionnent sur iOS et Android et sont gratuits et open source (MIT ou Apache 2.0). Enchanted (gratuit, Apache 2.0), Private LLM (payant) et Locally AI (freemium) couvrent iPhone et Mac, et Layla (freemium) est réservé à Android. Sur un smartphone haut de gamme, les modèles de 2 à 4 milliards de paramètres offrent une vitesse correcte.',
+          },
+          {
+            q: 'Quelles sont les meilleures alternatives à Open WebUI ?',
+            a: 'LibreChat (MIT) et LobeChat (MIT, freemium) sont les alternatives les plus proches dans le navigateur. Chatbox (GPL 3.0) est un client multiplateforme léger, et AnythingLLM (MIT) ajoute le chat avec vos documents sur bureau et web. Tous se connectent à une instance Ollama locale : changer d’interface ne change pas vos modèles.',
+          },
+          {
+            q: 'Faut-il choisir AnythingLLM ou Jan ?',
+            a: 'Choisissez AnythingLLM (MIT, bureau et web) pour discuter avec vos propres documents ou gérer plusieurs utilisateurs. Choisissez Jan (bureau pour Mac, Windows et Linux) pour une app de chat simple et respectueuse de la vie privée avec des modèles locaux. Les deux sont gratuits et peuvent s’appuyer sur le même runtime Ollama.',
+          },
         ],
       },
       relatedReading: {
@@ -1742,16 +1778,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-17',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす' + TOTAL_TOOL_COUNT + 'のアプリ＆ツール（2026年版）',
-    seoTitle: 'ローカルAI・LLMアプリ：' + TOTAL_TOOL_COUNT + 'ツールを比較',
+    seoTitle: 'ローカルLLMアプリ・ツール' + TOTAL_TOOL_COUNT + '選一覧（2026年）',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + 'のローカルAI・LLMアプリとツールを' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリに整理。ライセンス、価格、対応プラットフォーム、ハードウェア要件、用途を掲載しています。検索・絞り込み・比較して、Mac、Windows PC、Linux、スマートフォンでAIをローカル実行するのに最適なソフトウェアを見つけましょう。',
     metaDescription:
-      '' + TOTAL_TOOL_COUNT + 'のローカルAI・LLMアプリとツールを掲載。用途、プラットフォーム、価格、ライセンス、ハードウェアなどで比較し、自分のパソコンやスマートフォンでAIを動かすソフトを探せます。',
+      'Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを' + TOTAL_TOOL_COUNT + '件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。',
     twitterDescription:
       'ローカルLLMツール' + TOTAL_TOOL_COUNT + '件を' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリで網羅 — Run & Serve、Chat & Assistants、Code & Development、Knowledge & Retrieval、Voice & Audio、Images & Video、Train & Operate。ライセンス・リンク・主要URL付き。スタックを決める前の「全体像」マップです。',
     advertiserHighlight: {
@@ -2284,6 +2320,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '画像生成をクラウド呼び出しなしでローカルに行えますか？',
             a: 'はい — Stable Diffusion、ComfyUI、Invoke AI、AUTOMATIC1111 WebUIなど、Tier 10のツールはすべてローカルハードウェア上で完結します。Stable Diffusionには6GB以上のVRAM（RTX 3060、RTX 4060など）が必要です。Fooocusなどの最適化UIは4〜6GBのカードでも動作します。Real-ESRGANは生成画像をアップスケールし、ControlNetは空間的な制御（エッジ・ポーズ・深度マップ）を追加、AnimateDiffはテキストから動画を生成します。すべて外部サーバーへデータを送信せずに動作します。',
           },
+          {
+            q: 'iPhoneとAndroidで使えるローカルLLMアプリは？',
+            a: 'PocketPal AI、MLC Chat、AnythingLLM MobileはiOSとAndroidの両方で動作し、無料のオープンソース（MITまたはApache 2.0）です。Enchanted（無料、Apache 2.0）、Private LLM（有料）、Locally AI（フリーミアム）はiPhoneとMacに対応し、Layla（フリーミアム）はAndroid専用です。ハイエンドのスマートフォンでは、2〜4Bパラメータ級のモデルが実用的な速度で動きます。',
+          },
+          {
+            q: 'Open WebUIのおすすめ代替ツールは？',
+            a: 'ブラウザ型で最も近い代替はLibreChat（MIT）とLobeChat（MIT、フリーミアム）です。Chatbox（GPL 3.0）は軽量なクロスプラットフォームクライアントで、AnythingLLM（MIT）はデスクトップとWebで文書チャットも使えます。いずれもローカルのOllamaに接続できるため、UIを変えてもモデルはそのまま使えます。',
+          },
+          {
+            q: 'AnythingLLMとJanはどちらを選ぶべき？',
+            a: '自分の文書とチャットしたい、またはマルチユーザー管理が必要ならAnythingLLM（MIT、デスクトップとWeb）を選びましょう。ローカルモデルでシンプルかつプライバシー重視のチャットアプリを使いたいなら、Jan（Mac・Windows・Linux向けデスクトップ）が向いています。どちらも無料で、同じOllamaランタイムに接続できます。',
+          },
         ],
       },
       relatedReading: {
@@ -2317,16 +2365,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-17',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: '本地AI与LLM软件完整目录：' + TOTAL_TOOL_COUNT + '款应用与工具，在本地运行AI（2026）',
-    seoTitle: '本地AI与LLM应用：' + TOTAL_TOOL_COUNT + '款工具对比',
+    seoTitle: '本地LLM工具与AI应用大全：' + TOTAL_TOOL_COUNT + '款（2026）',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + '款本地AI与LLM应用和工具，分为' + TOTAL_CATEGORY_GROUP_COUNT + '大类，附许可证、价格、支持平台、硬件要求与使用场景。可搜索、筛选、对比，找到适合在你的Mac、Windows电脑、Linux设备或手机上本地运行AI的软件。',
     metaDescription:
-      '' + TOTAL_TOOL_COUNT + '款本地AI与LLM应用和工具。按用途、平台、价格、许可证、硬件等对比软件，在自己的电脑或手机上运行AI。',
+      '收录' + TOTAL_TOOL_COUNT + '款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。',
     twitterDescription:
       '本地LLM工具' + TOTAL_TOOL_COUNT + '款，覆盖' + TOTAL_CATEGORY_GROUP_COUNT + '大类——Run & Serve、Chat & Assistants、Code & Development、Knowledge & Retrieval、Voice & Audio、Images & Video、Train & Operate。含许可证、链接与主要网址。确定技术栈前的"现有工具"全景图。',
     advertiserHighlight: {
@@ -2859,6 +2907,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '我能否在不联网的情况下本地生成图像？',
             a: '可以——Stable Diffusion、ComfyUI、Invoke AI、AUTOMATIC1111 WebUI以及第10层中的其他工具均完全运行在本地硬件上。Stable Diffusion需要6 GB以上显存（RTX 3060、RTX 4060或同等级别）；Fooocus等优化后的UI可在4-6 GB显存的显卡上运行。Real-ESRGAN用于放大生成的图像；ControlNet提供空间控制（边缘、姿态、深度图）；AnimateDiff可根据文本生成视频。以上工具均无需向外部服务器发送任何数据。',
           },
+          {
+            q: '哪些本地LLM应用可以在iPhone和Android上运行？',
+            a: 'PocketPal AI、MLC Chat和AnythingLLM Mobile同时支持iOS和Android，均为免费开源（MIT或Apache 2.0）。Enchanted（免费，Apache 2.0）、Private LLM（付费）和Locally AI（免费增值）支持iPhone和Mac，Layla（免费增值）仅支持Android。在旗舰手机上，2–4B参数的模型可以达到可用的速度。',
+          },
+          {
+            q: 'Open WebUI有哪些好用的替代品？',
+            a: '最接近的浏览器端替代品是LibreChat（MIT）和LobeChat（MIT，免费增值）。Chatbox（GPL 3.0）是轻量的跨平台客户端，AnythingLLM（MIT）则在桌面端和网页端额外提供文档对话。它们都能连接本地的Ollama，因此更换界面不会改变你使用的模型。',
+          },
+          {
+            q: '应该选择AnythingLLM还是Jan？',
+            a: '如果想与自己的文档对话，或需要多用户管理，请选择AnythingLLM（MIT，桌面端和网页端）。如果想要一个简单、注重隐私的本地模型聊天应用，请选择Jan（支持Mac、Windows和Linux的桌面端）。两者都免费，并且可以连接同一个Ollama运行时。',
+          },
         ],
       },
       relatedReading: {
@@ -2892,16 +2952,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-17',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'El directorio completo de software de IA y LLM local: ' + TOTAL_TOOL_COUNT + ' apps y herramientas para ejecutar IA en local (2026)',
-    seoTitle: 'Apps de IA y LLM local: ' + TOTAL_TOOL_COUNT + ' herramientas comparadas',
+    seoTitle: 'Software de LLM local: ' + TOTAL_TOOL_COUNT + ' apps y herramientas (2026)',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + ' apps y herramientas de IA y LLM local en ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías, con licencia, precio, plataformas, requisitos de hardware y casos de uso. Busca, filtra, compara y encuentra el software adecuado para ejecutar IA en local en tu Mac, PC con Windows, equipo Linux o teléfono.',
     metaDescription:
-      '' + TOTAL_TOOL_COUNT + ' apps y herramientas de IA y LLM local. Compara software por caso de uso, plataforma, precio, licencia y hardware para ejecutar IA en tu propio ordenador o teléfono.',
+      'Explora ' + TOTAL_TOOL_COUNT + ' apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' herramientas LLM local en ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate. Licencias, enlaces y URLs principales. El mapa de "qué existe" antes de elegir tu stack.',
     advertiserHighlight: {
@@ -3434,6 +3494,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Puedo generar imágenes localmente sin llamadas a la nube?',
             a: 'Sí — Stable Diffusion, ComfyUI, Invoke AI, AUTOMATIC1111 WebUI y otras herramientas del Nivel 10 funcionan completamente en hardware local. Stable Diffusion necesita 6+ GB VRAM (RTX 3060, RTX 4060 o equivalente); Fooocus y otras interfaces optimizadas pueden funcionar con tarjetas de 4-6 GB. Real-ESRGAN amplía las imágenes generadas; ControlNet añade control espacial (bordes, poses, mapas de profundidad); AnimateDiff genera video a partir de texto. Todas funcionan sin enviar datos a servidores externos.',
           },
+          {
+            q: '¿Qué apps de LLM local funcionan en iPhone y Android?',
+            a: 'PocketPal AI, MLC Chat y AnythingLLM Mobile funcionan en iOS y Android y son gratuitas y de código abierto (MIT o Apache 2.0). Enchanted (gratuita, Apache 2.0), Private LLM (de pago) y Locally AI (freemium) cubren iPhone y Mac, y Layla (freemium) es solo para Android. En un móvil de gama alta, los modelos de 2 a 4 mil millones de parámetros ofrecen una velocidad aceptable.',
+          },
+          {
+            q: '¿Cuáles son las mejores alternativas a Open WebUI?',
+            a: 'LibreChat (MIT) y LobeChat (MIT, freemium) son las alternativas más cercanas en el navegador. Chatbox (GPL 3.0) es un cliente multiplataforma ligero, y AnythingLLM (MIT) añade chat con documentos en escritorio y web. Todas se conectan a una instancia local de Ollama, así que cambiar de interfaz no cambia tus modelos.',
+          },
+          {
+            q: '¿Debo elegir AnythingLLM o Jan?',
+            a: 'Elige AnythingLLM (MIT, escritorio y web) si quieres chatear con tus propios documentos o necesitas administración multiusuario. Elige Jan (escritorio para Mac, Windows y Linux) si buscas una app de chat sencilla y centrada en la privacidad para modelos locales. Ambas son gratuitas y pueden usar el mismo runtime de Ollama.',
+          },
         ],
       },
       relatedReading: {
@@ -3481,16 +3553,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-17',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'O diretório completo de software de IA e LLM local: ' + TOTAL_TOOL_COUNT + ' apps e ferramentas para executar IA localmente (2026)',
-    seoTitle: 'Apps de IA e LLM local: ' + TOTAL_TOOL_COUNT + ' ferramentas comparadas',
+    seoTitle: 'Software de LLM local: ' + TOTAL_TOOL_COUNT + ' apps e ferramentas (2026)',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + ' apps e ferramentas de IA e LLM local em ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias, com licença, preço, plataformas, requisitos de hardware e casos de uso. Pesquise, filtre, compare e encontre o software certo para executar IA localmente no seu Mac, PC com Windows, máquina Linux ou celular.',
     metaDescription:
-      '' + TOTAL_TOOL_COUNT + ' apps e ferramentas de IA e LLM local. Compare softwares por caso de uso, plataforma, preço, licença e hardware para executar IA no seu próprio computador ou celular.',
+      'Explore ' + TOTAL_TOOL_COUNT + ' apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' ferramentas LLM local em ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate. Licenças, links e URLs principais. O mapa de "o que existe" antes de escolher seu stack.',
     advertiserHighlight: {
@@ -4023,6 +4095,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Posso fazer geração de imagens localmente sem chamadas à nuvem?',
             a: 'Sim — Stable Diffusion, ComfyUI, Invoke AI, AUTOMATIC1111 WebUI e outras ferramentas do Nível 10 rodam inteiramente em hardware local. O Stable Diffusion precisa de 6+ GB de VRAM (RTX 3060, RTX 4060 ou equivalente); o Fooocus e outras interfaces otimizadas podem rodar em placas com 4–6 GB. O Real-ESRGAN amplia imagens geradas; o ControlNet adiciona controle espacial (bordas, poses, mapas de profundidade); o AnimateDiff gera vídeo a partir de texto. Todos funcionam sem enviar dados a servidores externos.',
           },
+          {
+            q: 'Quais apps de LLM local funcionam no iPhone e no Android?',
+            a: 'PocketPal AI, MLC Chat e AnythingLLM Mobile funcionam em iOS e Android e são gratuitos e de código aberto (MIT ou Apache 2.0). Enchanted (gratuito, Apache 2.0), Private LLM (pago) e Locally AI (freemium) cobrem iPhone e Mac, e o Layla (freemium) é exclusivo para Android. Em um celular topo de linha, modelos de 2 a 4 bilhões de parâmetros têm velocidade utilizável.',
+          },
+          {
+            q: 'Quais são as melhores alternativas ao Open WebUI?',
+            a: 'LibreChat (MIT) e LobeChat (MIT, freemium) são as alternativas mais próximas no navegador. O Chatbox (GPL 3.0) é um cliente multiplataforma leve, e o AnythingLLM (MIT) acrescenta chat com documentos no desktop e na web. Todos se conectam a uma instância local do Ollama, então trocar de interface não muda seus modelos.',
+          },
+          {
+            q: 'Devo escolher AnythingLLM ou Jan?',
+            a: 'Escolha o AnythingLLM (MIT, desktop e web) se quiser conversar com seus próprios documentos ou precisar de administração multiusuário. Escolha o Jan (desktop para Mac, Windows e Linux) se quiser um app de chat simples e focado em privacidade para modelos locais. Ambos são gratuitos e podem usar o mesmo runtime Ollama.',
+          },
         ],
       },
       relatedReading: {
@@ -4069,16 +4153,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-17',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: ' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)',
-    seoTitle: 'تطبيقات الذكاء الاصطناعي و⁨LLM⁩ المحلية: ⁨' + TOTAL_TOOL_COUNT + '⁩ أداة مقارنة',
+    seoTitle: 'دليل برامج LLM المحلية: ⁨' + TOTAL_TOOL_COUNT + '⁩ أداة وتطبيق (2026)',
     affiliateDisclosure: true,
     intro:
       '' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة للذكاء الاصطناعي والنماذج اللغوية المحلية في ' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات، مع الترخيص والسعر والمنصات ومتطلبات العتاد وحالات الاستخدام. ابحث وصفِّ وقارِن واعثر على البرنامج المناسب لتشغيل الذكاء الاصطناعي محلياً على جهاز Mac أو حاسوب Windows أو Linux أو هاتفك.',
     metaDescription:
-      '' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة للذكاء الاصطناعي والنماذج اللغوية المحلية. قارِن البرامج حسب حالة الاستخدام والمنصة والسعر والترخيص والعتاد لتشغيل الذكاء الاصطناعي على حاسوبك أو هاتفك.',
+      'تصفّح ' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' أداة للنماذج اللغوية المحلية في ' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات — Run & Serve وChat & Assistants وCode & Development وKnowledge & Retrieval وVoice & Audio وImages & Video وTrain & Operate. التراخيص والروابط وعناوين URL الرئيسية. خريطة "ما الموجود" قبل اختيار stack.',
     advertiserHighlight: {
@@ -4611,6 +4695,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'هل يمكنني توليد الصور محلياً دون أي استدعاءات سحابية؟',
             a: 'نعم — Stable Diffusion وComfyUI وInvoke AI وAUTOMATIC1111 WebUI وغيرها في فئة الصور والفيديو تعمل بالكامل على الأجهزة المحلية. يحتاج Stable Diffusion إلى 6+ GB VRAM (RTX 3060 أو RTX 4060 أو ما يعادلها)؛ يمكن لـFooocus وواجهات محسَّنة أخرى العمل على بطاقات بـ4-6 GB. يُكبِّر Real-ESRGAN الصور المولَّدة؛ يضيف ControlNet تحكماً مكانياً (حواف، أوضاع، خرائط عمق)؛ يولِّد AnimateDiff فيديو من نص. تعمل جميعها دون إرسال بيانات إلى خوادم خارجية.',
           },
+          {
+            q: 'ما تطبيقات النماذج اللغوية المحلية التي تعمل على iPhone وAndroid؟',
+            a: 'تعمل PocketPal AI وMLC Chat وAnythingLLM Mobile على iOS وAndroid معاً، وهي مجانية ومفتوحة المصدر (MIT أو Apache 2.0). أما Enchanted (مجاني، Apache 2.0) وPrivate LLM (مدفوع) وLocally AI (مجاني جزئياً) فتغطي iPhone وMac، وتقتصر Layla (مجاني جزئياً) على Android. على هاتف رائد، تعمل النماذج بحجم 2–4 مليار معامل بسرعة مقبولة.',
+          },
+          {
+            q: 'ما أفضل بدائل Open WebUI؟',
+            a: 'أقرب البدائل داخل المتصفح هما LibreChat (MIT) وLobeChat (MIT، مجاني جزئياً). أما Chatbox (GPL 3.0) فهو عميل خفيف متعدد المنصات، ويضيف AnythingLLM (MIT) الدردشة مع المستندات على سطح المكتب والويب. وتتصل جميعها بنسخة Ollama محلية، لذا لا يغيّر تبديل الواجهة نماذجك.',
+          },
+          {
+            q: 'هل أختار AnythingLLM أم Jan؟',
+            a: 'اختر AnythingLLM (MIT، سطح المكتب والويب) إذا أردت الدردشة مع مستنداتك أو احتجت إلى إدارة متعددة المستخدمين. واختر Jan (سطح المكتب لأنظمة Mac وWindows وLinux) إذا أردت تطبيق دردشة بسيطاً يركّز على الخصوصية للنماذج المحلية. كلاهما مجاني ويمكنه العمل مع بيئة Ollama نفسها.',
+          },
         ],
       },
       relatedReading: {
@@ -4657,16 +4753,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-17',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: '로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 ' + TOTAL_TOOL_COUNT + '개 앱과 도구 (2026)',
-    seoTitle: '로컬 AI·LLM 앱: ' + TOTAL_TOOL_COUNT + '개 도구 비교',
+    seoTitle: '로컬 LLM 앱·도구 추천: ' + TOTAL_TOOL_COUNT + '개 비교 (2026)',
     affiliateDisclosure: true,
     intro:
       '로컬 AI·LLM 앱과 도구 ' + TOTAL_TOOL_COUNT + '개를 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리로 정리했습니다. 라이선스, 가격, 지원 플랫폼, 하드웨어 요구 사항, 사용 사례를 함께 제공합니다. 검색·필터링·비교로 Mac, Windows PC, Linux 컴퓨터, 스마트폰에서 AI를 로컬로 실행할 알맞은 소프트웨어를 찾아보세요.',
     metaDescription:
-      '로컬 AI·LLM 앱과 도구 ' + TOTAL_TOOL_COUNT + '개. 사용 사례, 플랫폼, 가격, 라이선스, 하드웨어 기준으로 비교해 내 컴퓨터나 스마트폰에서 AI를 실행해 보세요.',
+      'Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 ' + TOTAL_TOOL_COUNT + '개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.',
     twitterDescription:
       '로컬 LLM 도구 ' + TOTAL_TOOL_COUNT + '개를 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리로 정리 — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate. 라이선스·링크·주요 URL 수록. 스택 선택 전 전체 지도 확인.',
     advertiserHighlight: {
@@ -5202,6 +5298,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '클라우드 호출 없이 로컬에서 이미지 생성을 할 수 있습니까?',
             a: '네 — Stable Diffusion, ComfyUI, Invoke AI, AUTOMATIC1111 WebUI 등 10번 계층에 속한 도구들은 모두 로컬 하드웨어에서 완전히 동작합니다. Stable Diffusion은 6 GB 이상의 VRAM(RTX 3060, RTX 4060 또는 동급)이 필요하며, Fooocus를 비롯한 최적화된 UI는 4-6 GB급 카드에서도 동작합니다. Real-ESRGAN은 생성된 이미지를 업스케일하고, ControlNet은 공간적 제어(윤곽선, 포즈, 깊이 맵)를 추가하며, AnimateDiff는 텍스트로부터 영상을 생성합니다. 모두 데이터를 외부 서버로 전송하지 않고 동작합니다.',
+          },
+          {
+            q: 'iPhone과 Android에서 쓸 수 있는 로컬 LLM 앱은 무엇인가요?',
+            a: 'PocketPal AI, MLC Chat, AnythingLLM Mobile은 iOS와 Android를 모두 지원하며 무료 오픈소스(MIT 또는 Apache 2.0)입니다. Enchanted(무료, Apache 2.0), Private LLM(유료), Locally AI(프리미엄)는 iPhone과 Mac을 지원하고, Layla(프리미엄)는 Android 전용입니다. 플래그십 스마트폰에서는 2~4B 파라미터급 모델을 실용적인 속도로 쓸 수 있습니다.',
+          },
+          {
+            q: 'Open WebUI의 가장 좋은 대안은 무엇인가요?',
+            a: '브라우저 기반에서 가장 가까운 대안은 LibreChat(MIT)과 LobeChat(MIT, 프리미엄)입니다. Chatbox(GPL 3.0)는 가벼운 크로스 플랫폼 클라이언트이고, AnythingLLM(MIT)은 데스크톱과 웹에서 문서 채팅까지 제공합니다. 모두 로컬 Ollama에 연결되므로 UI를 바꿔도 사용하는 모델은 그대로입니다.',
+          },
+          {
+            q: 'AnythingLLM과 Jan 중 무엇을 골라야 하나요?',
+            a: '내 문서와 대화하고 싶거나 다중 사용자 관리가 필요하다면 AnythingLLM(MIT, 데스크톱·웹)을 고르세요. 로컬 모델용으로 단순하고 프라이버시를 중시하는 채팅 앱이 필요하다면 Jan(Mac·Windows·Linux 데스크톱)이 적합합니다. 둘 다 무료이며 같은 Ollama 런타임에 연결해 쓸 수 있습니다.',
           },
         ],
       },

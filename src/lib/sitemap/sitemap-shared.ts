@@ -3,6 +3,7 @@ import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { POWER_LLM_PUBLISHED_SLUGS, POWER_LLM_HUB_PUBLISHED } from '@/lib/power-local-llm/published'
 import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
+import { HANDS_ON_TEST_SLUGS, appSlugFromHandsOnUrlSlug, handsOnTestLangs, handsOnTestUrlSlug } from '@/lib/hands-on-tests/links'
 import { PROMPT_BITES_PUBLISHED_SLUGS, PROMPT_BITES_HUB_PUBLISHED } from '@/lib/prompt-bites/published'
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import { SMART_HOME_PUBLISHED_SLUGS, SMART_HOME_HUB_PUBLISHED } from '@/lib/smart-home/published'
@@ -151,6 +152,11 @@ export function availableLangsForPath(path: string): readonly string[] | null {
     ['/smart-home/', metadata['smart-home'], SMART_HOME_SLUG_TO_KEY],
     ['/balcony-solar/', metadata['balcony-solar'], BALCONY_SOLAR_SLUG_TO_KEY],
   ]
+  // Hands-on tests have no slug-map entry; they are served in exactly the languages that have a data file.
+  if (path.startsWith('/power-local-llm/')) {
+    const testApp = appSlugFromHandsOnUrlSlug(path.slice('/power-local-llm/'.length))
+    if (testApp) return handsOnTestLangs(testApp)
+  }
   if (path === '/directory') {
     const key = POWER_LLM_SLUG_TO_KEY['local-llm-software-directory']
     const langs = key ? metadata['power-local-llm'][key]?.langs : undefined
@@ -185,6 +191,7 @@ export function availableLangsForPath(path: string): readonly string[] | null {
 const POWER_LLM_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
   ...(POWER_LLM_HUB_PUBLISHED ? ['/power-local-llm'] : []),
   ...Array.from(POWER_LLM_PUBLISHED_SLUGS).map(slug => `/power-local-llm/${slug}`),
+  ...HANDS_ON_TEST_SLUGS.map(appSlug => `/power-local-llm/${handsOnTestUrlSlug(appSlug)}`),
 ])
 
 const PROMPT_BITES_PUBLISHED_PATHS: ReadonlySet<string> = new Set([

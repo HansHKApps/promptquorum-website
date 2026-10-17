@@ -9,9 +9,9 @@ export const app: ToolRecord = {
   slug: 'risuai',
   name: 'RisuAI',
   categories: ['roleplay-companions'],
-  interfaces: ['web', 'mobile'],
+  interfaces: ['web', 'desktop', 'mobile'],
   locality: 'hybrid',
-  platforms: ['web'],
+  platforms: ['web', 'mac', 'win', 'linux'],
   worksWith: ['text-generation-webui', 'OpenAI API', 'OpenRouter'],
   engine: 'external',
   license: 'GPL 3.0',
@@ -22,7 +22,13 @@ export const app: ToolRecord = {
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat', 'phone'],
-  url: 'github.com/kwaroran/RisuAI',
+  url: 'risuai.net',
+  storeLinks: {
+    web: 'https://risuai.net',
+    github: 'https://github.com/kwaroran/RisuAI',
+  },
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'GitHub Releases v2026.8.250 ships RisuAI_*_aarch64.dmg, _x64.dmg, _x64-setup.exe, _amd64.AppImage, _amd64.deb and .rpm desktop builds (platforms/interfaces widened to match). checked 2026-10-09',
   tagline: {
     en: 'Mobile-friendly roleplay frontend',
     de: 'Mobilfreundliches Rollenspiel-Frontend',
@@ -37,4 +43,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { lorebooks: true, groupChats: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/kwaroran/Risuai',
 }

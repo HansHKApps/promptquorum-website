@@ -73,7 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Developed by [Deta](https://deta.surf); this open-source release replaces an earlier closed-source "managed Surf" product that bundled AI, code signing, and auto-updates',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Surf\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Surf compares at a glance to dozens of other local AI tools.' },
           { type: 'note', text: 'This review covers [github.com/deta/surf](https://github.com/deta/surf), the Deta-team "Personal AI Notebook" app. It is unrelated to steel-dev/surf.new, a separate browser-automation project with a similar name — do not confuse the two when searching.' },
         ],
       },
@@ -346,7 +345,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickelt von [Deta](https://deta.surf); diese Open-Source-Version ersetzt ein früheres, closed-source „managed Surf"-Produkt mit integrierter KI, Code-Signierung und automatischen Updates',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleittext zu Surfs Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie einen Überblick, wie Surf im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
           { type: 'note', text: 'Diese Review behandelt [github.com/deta/surf](https://github.com/deta/surf), die „Personal AI Notebook"-App des Deta-Teams. Sie ist nicht verwandt mit steel-dev/surf.new, einem separaten Browser-Automatisierungsprojekt mit ähnlichem Namen — verwechseln Sie die beiden bei der Suche nicht.' },
         ],
       },
@@ -621,7 +619,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développé par [Deta](https://deta.surf) ; cette version open source remplace un précédent produit fermé « managed Surf » qui intégrait IA, signature de code et mises à jour automatiques',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Surf dans le [répertoire des logiciels LLM locaux](/fr/directory) — consultez cette page pour comparer Surf en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
           { type: 'note', text: 'Cet avis porte sur [github.com/deta/surf](https://github.com/deta/surf), l\'application « Personal AI Notebook » de l\'équipe Deta. Elle n\'a aucun rapport avec steel-dev/surf.new, un projet distinct d\'automatisation de navigateur au nom similaire — ne confondez pas les deux lors de vos recherches.' },
         ],
       },
@@ -894,7 +891,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Deta](https://deta.surf)が開発。このオープンソース版は、組み込みAI・コード署名・自動更新を備えた以前のクローズドソース製品「managed Surf」の後継',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるSurfのエントリーを詳しく解説したものです——他の数十種類のローカルAIツールとの比較は同ページを参照してください。' },
           { type: 'note', text: 'このレビューが対象とするのは、Detaチームによる「Personal AI Notebook」アプリ[github.com/deta/surf](https://github.com/deta/surf)です。名前が似ているブラウザ自動化プロジェクト「steel-dev/surf.new」とは無関係なので、検索時に混同しないよう注意してください。' },
         ],
       },
@@ -1167,7 +1163,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由 [Deta](https://deta.surf) 开发；此开源版本取代了此前包含内置 AI、代码签名和自动更新功能的闭源"托管版 Surf"产品',
         ],
         callouts: [
-          { type: 'note', text: '本评测是 Surf 在[本地 LLM 软件目录](/zh/directory)条目的深度补充版——该页面展示了 Surf 与数十款其他本地 AI 工具的横向对比。' },
           { type: 'note', text: '本评测涵盖的是 [github.com/deta/surf](https://github.com/deta/surf)，即 Deta 团队开发的"个人 AI 笔记本"应用。它与 steel-dev/surf.new（一个名称相似但完全无关的浏览器自动化项目）没有任何关系——搜索时请勿混淆两者。' },
         ],
       },
@@ -1440,7 +1435,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desarrollada por [Deta](https://deta.surf); esta versión de código abierto reemplaza a un producto anterior de código cerrado, "managed Surf", que incluía IA integrada, firma de código y actualizaciones automáticas',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Surf en el [directorio de software de LLM local](/es/directory) — consulta esa página para ver cómo se compara Surf, de un vistazo, con docenas de otras herramientas de IA local.' },
           { type: 'note', text: 'Esta reseña cubre [github.com/deta/surf](https://github.com/deta/surf), la app "Personal AI Notebook" del equipo de Deta. No tiene relación con steel-dev/surf.new, un proyecto independiente de automatización de navegador con un nombre similar — no confundas los dos proyectos al buscar.' },
         ],
       },
@@ -1713,7 +1707,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'طوّرته [Deta](https://deta.surf)؛ يحل هذا الإصدار مفتوح المصدر محل منتج "Surf المُدار" السابق مغلق المصدر الذي تضمّن ذكاءً اصطناعيًا مدمجًا وتوقيع كود وتحديثات تلقائية',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المقال المتعمّق المرافق لإدراج Surf في [دليل برامج نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارن Surf بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
           { type: 'note', text: 'تغطي هذه المراجعة [github.com/deta/surf](https://github.com/deta/surf)، تطبيق "دفتر الملاحظات الشخصي بالذكاء الاصطناعي" من فريق Deta. وهو غير مرتبط بمشروع steel-dev/surf.new، وهو مشروع أتمتة متصفح منفصل يحمل اسمًا مشابهًا — لا تخلط بينهما عند البحث.' },
         ],
       },
@@ -1986,7 +1979,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Deta](https://deta.surf)가 개발했으며, 이 오픈소스 릴리스는 AI 내장, 코드 서명, 자동 업데이트를 포함했던 이전의 폐쇄형 소스 "매니지드 Surf" 제품을 대체합니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등록된 Surf 항목의 심층 분석판입니다 — Surf가 수십 개의 다른 로컬 AI 도구와 비교해 한눈에 어떤 위치에 있는지는 해당 페이지를 참고하세요.' },
           { type: 'note', text: '이 리뷰는 Deta 팀의 "Personal AI Notebook" 앱인 [github.com/deta/surf](https://github.com/deta/surf)를 다룹니다. 이름이 비슷한 별개의 브라우저 자동화 프로젝트인 steel-dev/surf.new와는 무관하므로, 검색 시 혼동하지 않도록 주의하세요.' },
         ],
       },
@@ -2259,7 +2251,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvido pela [Deta](https://deta.surf); esta versão open source substitui um produto anterior de código fechado chamado "managed Surf", que reunia IA, assinatura de código e atualizações automáticas',
         ],
         callouts: [
-          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do Surf no [Diretório de Softwares de LLM Local](/pt/directory) — veja essa página para comparar o Surf rapidamente com dezenas de outras ferramentas de IA local.' },
           { type: 'note', text: 'Esta avaliação cobre o [github.com/deta/surf](https://github.com/deta/surf), o aplicativo "Personal AI Notebook" da equipe da Deta. Ele não tem relação com o steel-dev/surf.new, um projeto separado de automação de navegador com nome parecido — não confunda os dois ao pesquisar.' },
         ],
       },

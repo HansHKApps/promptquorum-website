@@ -82,6 +82,7 @@ import { app as app_txtai } from './apps/txtai'
 import { app as app_langchain } from './apps/langchain'
 import { app as app_crewai } from './apps/crewai'
 import { app as app_autogen } from './apps/autogen'
+import { app as app_microsoft_agent_framework } from './apps/microsoft-agent-framework'
 import { app as app_semantic_kernel } from './apps/semantic-kernel'
 import { app as app_langgraph } from './apps/langgraph'
 import { app as app_letta } from './apps/letta'
@@ -99,6 +100,7 @@ import { app as app_msty_go } from './apps/msty-go'
 import { app as app_whisper_cpp } from './apps/whisper-cpp'
 import { app as app_faster_whisper } from './apps/faster-whisper'
 import { app as app_piper_tts } from './apps/piper-tts'
+import { app as app_parrot } from './apps/parrot'
 import { app as app_coqui_tts } from './apps/coqui-tts'
 import { app as app_xtts_v2 } from './apps/xtts-v2'
 import { app as app_bark } from './apps/bark'
@@ -115,11 +117,22 @@ import { app as app_llm_farm } from './apps/llm-farm'
 import { app as app_ollama_local_ai } from './apps/ollama-local-ai'
 import { app as app_private_mind } from './apps/private-mind'
 import { app as app_llm_hub } from './apps/llm-hub'
+import { app as app_lm_playground } from './apps/lm-playground'
+import { app as app_localmind } from './apps/localmind'
 import { app as app_tokforge } from './apps/tokforge'
+import { app as app_friedrichai } from './apps/friedrichai'
+import { app as app_spiritbox_ultimate } from './apps/spiritbox-ultimate'
 import { app as app_oscilla } from './apps/oscilla'
 import { app as app_tina } from './apps/tina'
+import { app as app_return_editor } from './apps/return-editor'
 import { app as app_mlxhub } from './apps/mlxhub'
 import { app as app_local_ai_chat_pocket } from './apps/local-ai-chat-pocket'
+import { app as app_whisper_notes } from './apps/whisper-notes'
+import { app as app_anyllm } from './apps/anyllm'
+import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
+import { app as app_local_ai_mail } from './apps/local-ai-mail'
+import { app as app_pcai_photo_retouch } from './apps/pcai-photo-retouch'
+import { app as app_honey_llm } from './apps/honey-llm'
 import { app as app_layla } from './apps/layla'
 import { app as app_maid } from './apps/maid'
 import { app as app_chapper } from './apps/chapper'
@@ -198,6 +211,7 @@ import { app as app_vane } from './apps/vane'
 import { app as app_agentic_inbox } from './apps/agentic-inbox'
 import { app as app_aiclient2api } from './apps/aiclient2api'
 import { app as app_baserow } from './apps/baserow'
+import { app as app_firecrawl } from './apps/firecrawl'
 import { app as app_blinko } from './apps/blinko'
 import { app as app_candle_vllm } from './apps/candle-vllm'
 import { app as app_chroma } from './apps/chroma'
@@ -222,6 +236,7 @@ import { app as app_longmemory } from './apps/longmemory'
 import { app as app_lorax } from './apps/lorax'
 import { app as app_lucebox } from './apps/lucebox'
 import { app as app_meetily } from './apps/meetily'
+import { app as app_transcriptionsuite } from './apps/transcriptionsuite'
 import { app as app_milvus } from './apps/milvus'
 import { app as app_mission_control } from './apps/mission-control'
 import { app as app_mlx_serve } from './apps/mlx-serve'
@@ -249,6 +264,8 @@ import { app as app_web_search_mcp } from './apps/web-search-mcp'
 import { app as app_willow_inference_server } from './apps/willow-inference-server'
 import { app as app_radiant_canvas } from './apps/radiant-canvas'
 import { app as app_paios } from './apps/paios'
+import { app as app_ai_cutoutwerk } from './apps/ai-cutoutwerk'
+import { app as app_openmontage } from './apps/openmontage'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -323,6 +340,7 @@ export const localAiApps: ToolRecord[] = [
   app_langchain,
   app_crewai,
   app_autogen,
+  app_microsoft_agent_framework,
   app_semantic_kernel,
   app_langgraph,
   app_letta,
@@ -340,6 +358,7 @@ export const localAiApps: ToolRecord[] = [
   app_whisper_cpp,
   app_faster_whisper,
   app_piper_tts,
+  app_parrot,
   app_coqui_tts,
   app_xtts_v2,
   app_bark,
@@ -429,6 +448,7 @@ export const localAiApps: ToolRecord[] = [
   app_agentic_inbox,
   app_aiclient2api,
   app_baserow,
+  app_firecrawl,
   app_blinko,
   app_candle_vllm,
   app_chroma,
@@ -453,6 +473,7 @@ export const localAiApps: ToolRecord[] = [
   app_lorax,
   app_lucebox,
   app_meetily,
+  app_transcriptionsuite,
   app_milvus,
   app_mission_control,
   app_mlx_serve,
@@ -481,13 +502,26 @@ export const localAiApps: ToolRecord[] = [
   app_radiant_canvas,
   app_ollama_local_ai,
   app_paios,
+  app_ai_cutoutwerk,
+  app_openmontage,
   app_private_mind,
   app_llm_hub,
+  app_lm_playground,
+  app_localmind,
   app_tokforge,
+  app_friedrichai,
+  app_spiritbox_ultimate,
   app_oscilla,
   app_tina,
+  app_return_editor,
   app_mlxhub,
   app_local_ai_chat_pocket,
+  app_whisper_notes,
+  app_anyllm,
+  app_local_ai_geetmark,
+  app_local_ai_mail,
+  app_pcai_photo_retouch,
+  app_honey_llm,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length

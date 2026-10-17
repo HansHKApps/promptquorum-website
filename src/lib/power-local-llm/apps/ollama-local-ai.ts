@@ -47,6 +47,8 @@ export const app: ToolRecord = {
   // and does not mention image or voice input.
   compare: { offline: true },
   lastVerifiedDate: '2026-10-02',
+  lastUpstreamUpdate: '2026-10-12', // Google Play updated-on, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://play.google.com/store/apps/details?id=com.llmproxy',
   reviewSlug: 'ollama-local-ai-review',
   verdict: 'Best for developers who want to point Cursor, VS Code or other OpenAI-compatible tools at their Android phone over Wi-Fi; limited by Android-only availability, no stated license or source, and an unverified in-app-purchase scope.',
 }

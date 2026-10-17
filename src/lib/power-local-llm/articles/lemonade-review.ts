@@ -69,9 +69,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installs via a Windows MSI installer, Linux packages (Ubuntu, Debian, Fedora, Arch, Snap), Docker, or `pip install lemonade-sdk` for the Python SDK',
           'Roughly 5,700 GitHub stars and 497 forks as of this review',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Lemonade\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Lemonade compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-lemonade',
@@ -285,9 +282,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Stellt Chat, Bildverständnis, Bildgenerierung, Sprache-zu-Text und Text-zu-Sprache über eine einzige OpenAI-kompatible API unter `http://localhost:13305/v1` bereit',
           'Installation per Windows-MSI-Installer, Linux-Paketen (Ubuntu, Debian, Fedora, Arch, Snap), Docker oder `pip install lemonade-sdk` für das Python-SDK',
           'Rund 5.700 GitHub-Sterne und 497 Forks zum Zeitpunkt dieser Review',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu Lemonades Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie Lemonade im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -504,9 +498,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'S\'installe via un installeur MSI Windows, des paquets Linux (Ubuntu, Debian, Fedora, Arch, Snap), Docker, ou `pip install lemonade-sdk` pour le SDK Python',
           'Environ 5 700 étoiles GitHub et 497 forks au moment de cette review',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de Lemonade dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer Lemonade en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-lemonade',
@@ -720,9 +711,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'チャット、ビジョン、画像生成、音声認識、音声合成を`http://localhost:13305/v1`の単一のOpenAI互換APIで提供',
           'Windows用MSIインストーラー、Linuxパッケージ（Ubuntu、Debian、Fedora、Arch、Snap）、Docker、またはPython SDK用の`pip install lemonade-sdk`でインストール可能',
           '本レビュー時点でGitHubスター約5,700件、フォーク約497件',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のLemonadeの項目を深掘りする内容です——他の数十のローカルAIツールとLemonadeを一目で比較するには、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -938,9 +926,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可通过Windows MSI安装程序、Linux软件包（Ubuntu、Debian、Fedora、Arch、Snap）、Docker或`pip install lemonade-sdk`（Python SDK）安装',
           '截至本评测约有5,700颗GitHub星标和497次分支（fork）',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Lemonade条目的深入版本——请查看该页面，一览Lemonade与其他数十款本地AI工具的对比。' },
-        ],
       },
       overview: {
         id: 'what-is-lemonade',
@@ -1154,9 +1139,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sirve chat, visión, generación de imágenes, voz a texto y texto a voz mediante una única API compatible con OpenAI en `http://localhost:13305/v1`',
           'Se instala con un instalador MSI para Windows, paquetes Linux (Ubuntu, Debian, Fedora, Arch, Snap), Docker, o `pip install lemonade-sdk` para el SDK de Python',
           'Aproximadamente 5.700 estrellas en GitHub y 497 forks al momento de esta review',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento detallado de la ficha de Lemonade en el [Local LLM Software Directory](/es/directory) — consulta esa página para comparar Lemonade de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1372,9 +1354,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instala-se via instalador MSI para Windows, pacotes Linux (Ubuntu, Debian, Fedora, Arch, Snap), Docker, ou `pip install lemonade-sdk` para o SDK Python',
           'Aproximadamente 5.700 estrelas no GitHub e 497 forks no momento desta review',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do Lemonade no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar o Lemonade rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-lemonade',
@@ -1589,9 +1568,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُثبَّت عبر مثبِّت MSI لويندوز، أو حزم لينكس (Ubuntu وDebian وFedora وArch وSnap)، أو Docker، أو `pip install lemonade-sdk` لحزمة تطوير Python',
           'نحو 5,700 نجمة و497 نسخة متفرعة (fork) على GitHub وقت كتابة هذه المراجعة',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لسجل Lemonade في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة Lemonade بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-lemonade',
@@ -1805,9 +1781,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`http://localhost:13305/v1`의 단일 OpenAI 호환 API를 통해 채팅, 비전, 이미지 생성, 음성 인식, 음성 합성 제공',
           'Windows용 MSI 설치 프로그램, Linux 패키지(Ubuntu, Debian, Fedora, Arch, Snap), Docker, 또는 Python SDK용 `pip install lemonade-sdk`로 설치 가능',
           '이 리뷰 작성 시점 기준 GitHub 스타 약 5,700개, 포크 약 497개',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등록된 Lemonade 항목의 심층 버전입니다 — Lemonade를 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {

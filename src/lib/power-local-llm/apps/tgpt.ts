@@ -22,6 +22,8 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat'],
   url: 'github.com/aandrew-me/tgpt',
+  installEffort: 'one-command', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README Installation: curl -sSL .../install | bash, or brew install tgpt / pacman -S tgpt. checked 2026-10-09',
   tagline: {
     en: 'Terminal wrapper for local LLM chat',
     de: 'Terminal-Wrapper für lokalen LLM-Chat',
@@ -35,4 +37,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'tgpt-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-14', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/aandrew-me/tgpt',
 }

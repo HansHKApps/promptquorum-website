@@ -38,4 +38,6 @@ export const app: ToolRecord = {
   // localLlm confirmed via the dedicated Ollama bundle (component + embeddings): https://docs.langflow.org/bundles-ollama
   compare: { visualBuilder: true, localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true, mcp: true },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/langflow-ai/langflow',
 }

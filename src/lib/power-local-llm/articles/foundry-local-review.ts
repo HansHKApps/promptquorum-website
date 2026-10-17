@@ -78,9 +78,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Exposes an OpenAI-compatible API (including OpenAI Responses API request/response formats) through a local web server, and uses ONNX Runtime for inference',
           'GitHub repository shows 2,541 stars, verified against [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local) on September 5, 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Foundry Local\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Foundry Local compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-foundry-local',
@@ -368,9 +365,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kuratierter Modellkatalog umfasst Modellfamilien wie Qwen, DeepSeek, Mistral, Phi und GPT-OSS sowie Whisper für Audiotranskription — jedes heruntergeladene Modell hat eigene, separate Lizenzbedingungen',
           'Bietet eine OpenAI-kompatible API (einschließlich der Anfrage-/Antwortformate der OpenAI Responses API) über einen lokalen Webserver und nutzt ONNX Runtime für die Inferenz',
           'GitHub-Repository zeigt 2.541 Sterne, geprüft gegen [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local) am 5. September 2026',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zum Eintrag von Foundry Local im [Local LLM Software Directory](/de/directory) — dort finden Sie, wie Foundry Local im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -660,9 +654,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Expose une API compatible OpenAI (y compris les formats de requête/réponse de l\'OpenAI Responses API) via un serveur web local, et utilise ONNX Runtime pour l\'inférence',
           'Le dépôt GitHub affiche 2 541 étoiles, vérifié sur [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local) le 5 septembre 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée de Foundry Local dans le [Local LLM Software Directory](/fr/directory) — voir cette page pour comparer Foundry Local en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-foundry-local',
@@ -950,9 +941,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El catálogo de modelos seleccionado incluye familias como Qwen, DeepSeek, Mistral, Phi y GPT-OSS, además de Whisper para transcripción de audio — cada modelo descargado tiene sus propios términos de licencia independientes',
           'Expone una API compatible con OpenAI (incluidos los formatos de solicitud/respuesta de la OpenAI Responses API) mediante un servidor web local, y usa ONNX Runtime para la inferencia',
           'El repositorio de GitHub muestra 2.541 estrellas, verificado en [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local) el 5 de septiembre de 2026',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Foundry Local en el [Local LLM Software Directory](/es/directory) — consulta esa página para ver cómo se compara Foundry Local de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1242,9 +1230,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Expõe uma API compatível com a OpenAI (incluindo os formatos de solicitação/resposta da OpenAI Responses API) por meio de um servidor web local, e usa o ONNX Runtime para a inferência',
           'O repositório no GitHub mostra 2.541 estrelas, verificado em [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local) em 5 de setembro de 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Foundry Local no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar o Foundry Local rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-foundry-local',
@@ -1532,9 +1517,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '厳選されたモデルカタログには、Qwen、DeepSeek、Mistral、Phi、GPT-OSSなどのモデルファミリーに加え、音声文字起こし用のWhisperが含まれる — ダウンロードした各モデルには独自の個別ライセンス条項がある',
           'ローカルWebサーバー経由で（OpenAI Responses API形式を含む）OpenAI互換APIを提供し、推論にはONNX Runtimeを使用',
           'GitHubリポジトリは2,541のスターを表示、2026年9月5日に[github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local)で確認',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるFoundry Localのエントリーを補完する詳細版です — 数十の他のローカルAIツールとFoundry Localが一目でどう比較されるかは、そのページを参照してください。' },
         ],
       },
       overview: {
@@ -1824,9 +1806,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '通过本地Web服务器提供兼容OpenAI的API（包括OpenAI Responses API的请求/响应格式），并使用ONNX Runtime进行推理',
           'GitHub仓库显示有2,541个星标，于2026年9月5日在[github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local)核实',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Foundry Local条目的深度补充——欲了解Foundry Local与数十种其他本地AI工具的一览对比，请参阅该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-foundry-local',
@@ -2115,9 +2094,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يعرض واجهة برمجة تطبيقات متوافقة مع OpenAI (بما في ذلك تنسيقات الطلب/الاستجابة الخاصة بـ OpenAI Responses API) عبر خادم ويب محلي، ويستخدم ONNX Runtime للاستدلال',
           'يُظهر مستودع GitHub 2,541 نجمة، تم التحقق منها في [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local) بتاريخ 5 سبتمبر 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المعمّق لإدخال Foundry Local في [دليل برامج LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن Foundry Local بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-foundry-local',
@@ -2405,9 +2381,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '엄선된 모델 카탈로그에는 Qwen, DeepSeek, Mistral, Phi, GPT-OSS 등의 모델 계열과 음성 텍스트 변환용 Whisper가 포함됨 — 다운로드한 각 모델은 자체적인 별도 라이선스 조건을 가짐',
           '로컬 웹 서버를 통해(OpenAI Responses API 형식을 포함한) OpenAI 호환 API를 제공하며, 추론에는 ONNX Runtime을 사용',
           'GitHub 저장소는 2,541개의 스타를 표시, 2026년 9월 5일 [github.com/microsoft/Foundry-Local](https://github.com/microsoft/Foundry-Local)에서 확인',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Foundry Local 항목을 심층적으로 보완합니다 — Foundry Local이 다른 수십 가지 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참조하세요.' },
         ],
       },
       overview: {

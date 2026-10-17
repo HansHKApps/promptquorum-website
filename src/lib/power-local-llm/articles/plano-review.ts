@@ -70,9 +70,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Routing runs through a purpose-built, roughly 4-billion-parameter orchestrator model ("Plano-Orchestrator") rather than a general-purpose LLM or a rules-only framework',
           'Over 7,050 GitHub stars and 480+ forks as of this review',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Plano\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Plano compares at a glance to dozens of other local and self-hosted AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-plano',
@@ -335,9 +332,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Vier Kernfunktionen laut eigenem README: Agent-Orchestrierung, Modell-Routing („Model Agility"), Zero-Code-Observability („Agentic Signals" plus OpenTelemetry) und Guardrail-/Moderations-Filter-Chains',
           'Routing läuft über ein zweckgebautes Orchestrator-Modell mit rund 4 Milliarden Parametern („Plano-Orchestrator") statt über ein Allzweck-LLM oder ein reines Regelwerk-Framework',
           'Über 7.050 GitHub-Stars und 480+ Forks zum Zeitpunkt dieser Review',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleiter zu Planos Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie, wie Plano im Vergleich zu Dutzenden anderer lokaler und selbst gehosteter KI-Tools auf einen Blick abschneidet.' },
         ],
       },
       overview: {
@@ -602,9 +596,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le routage passe par un modèle orchestrateur dédié d\'environ 4 milliards de paramètres (« Plano-Orchestrator ») plutôt que par un LLM généraliste ou un framework purement basé sur des règles',
           'Plus de 7 050 étoiles GitHub et 480+ forks au moment de cette revue',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette revue est le complément approfondi de l\'entrée de Plano dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir comment Plano se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
-        ],
       },
       overview: {
         id: 'what-is-plano',
@@ -867,9 +858,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '自身のREADMEによる4つの中核機能: エージェントオーケストレーション、モデルルーティング（「Model Agility」）、ゼロコード可観測性（「Agentic Signals」とOpenTelemetry）、ガードレール/モデレーションのFilter Chains',
           'ルーティングは、汎用LLMやルールのみのフレームワークではなく、専用の約40億パラメータのオーケストレーターモデル（「Plano-Orchestrator」）を通じて実行される',
           'このレビュー時点でGitHubスター7,050以上、フォーク480以上',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/directory)にあるPlanoのエントリーの詳細版です——Planoが他の数十のローカル/セルフホスト型AIツールと一目でどう比較されるかはそちらを参照してください。' },
         ],
       },
       overview: {
@@ -1134,9 +1122,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '路由通过一个专用、约40亿参数的编排模型（"Plano-Orchestrator"）完成，而非通用LLM或纯规则框架',
           '截至本评测时，GitHub星标超过7,050，fork超过480',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Plano条目的深度扩展篇——想快速了解Plano与其他数十款本地及自托管AI工具的对比，请参阅该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-plano',
@@ -1399,9 +1384,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cuatro capacidades principales según su propio README: orquestación de agentes, enrutamiento de modelos ("Model Agility"), observabilidad sin código ("Agentic Signals" más OpenTelemetry) y Filter Chains de barreras de protección/moderación',
           'El enrutamiento se ejecuta mediante un modelo orquestador dedicado de unos 4.000 millones de parámetros ("Plano-Orchestrator") en lugar de un LLM de propósito general o un framework basado únicamente en reglas',
           'Más de 7.050 estrellas en GitHub y 480+ forks al momento de esta reseña',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento detallado de la entrada de Plano en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver cómo se compara Plano de un vistazo con docenas de otras herramientas de IA locales y autoalojadas.' },
         ],
       },
       overview: {
@@ -1666,9 +1648,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O roteamento passa por um modelo orquestrador dedicado de cerca de 4 bilhões de parâmetros ("Plano-Orchestrator"), em vez de um LLM de propósito geral ou um framework baseado apenas em regras',
           'Mais de 7.050 estrelas no GitHub e 480+ forks no momento desta análise',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento detalhado da entrada do Plano no [Diretório de Software LLM Local](/pt/directory) — veja essa página para saber como o Plano se compara rapidamente a dezenas de outras ferramentas de IA locais e auto-hospedadas.' },
-        ],
       },
       overview: {
         id: 'what-is-plano',
@@ -1932,9 +1911,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يعمل التوجيه عبر نموذج تنسيق مخصص بنحو 4 مليارات معامل ("Plano-Orchestrator") بدلاً من نموذج LLM عام الغرض أو إطار عمل قائم على القواعد فقط',
           'أكثر من 7,050 نجمة على GitHub وأكثر من 480 fork حتى وقت كتابة هذه المراجعة',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لإدخال Plano في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن Plano بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية والمستضافة ذاتياً الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-plano',
@@ -2197,9 +2173,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '자체 README에 따른 4가지 핵심 기능: 에이전트 오케스트레이션, 모델 라우팅("Model Agility"), 코드 작성 없는 관측 가능성("Agentic Signals" 및 OpenTelemetry), 가드레일/모더레이션 Filter Chains',
           '라우팅은 범용 LLM이나 순수 규칙 기반 프레임워크가 아니라, 전용의 약 40억 파라미터 오케스트레이터 모델("Plano-Orchestrator")을 통해 이루어짐',
           '이 리뷰 시점 기준 GitHub 스타 7,050개 이상, 포크 480개 이상',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Plano 항목의 심화 버전입니다 — Plano가 수십 개의 다른 로컬·셀프 호스팅 AI 도구들과 한눈에 어떻게 비교되는지는 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {

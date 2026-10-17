@@ -9,7 +9,7 @@ export const app: ToolRecord = {
   slug: 'comfyui',
   name: 'ComfyUI',
   categories: ['workflow-node-builders', 'image-generation'],
-  interfaces: ['web'],
+  interfaces: ['web', 'desktop'],
   locality: 'local',
   platforms: ['mac', 'win', 'linux'],
   worksWith: null,
@@ -21,7 +21,13 @@ export const app: ToolRecord = {
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['image'],
-  url: 'github.com/comfyanonymous/ComfyUI',
+  url: 'comfy.org',
+  storeLinks: {
+    web: 'https://www.comfy.org',
+    github: 'https://github.com/comfyanonymous/ComfyUI',
+  },
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'comfy.org/download.md: "Desktop: one-click installer with auto-updates. Portable: self-contained build"; README "We highly recommend using the desktop app" and ships a Windows portable 7z. checked 2026-10-09',
   tagline: {
     en: 'Node-based UI for advanced image generation workflows — active, release 1wk ago',
     de: 'Node-basiertes UI für fortgeschrittene Bildgenerierungs-Workflows — aktiv, Release vor 1 Woche',
@@ -38,4 +44,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { visualBuilder: true, apiServer: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/Comfy-Org/ComfyUI',
 }

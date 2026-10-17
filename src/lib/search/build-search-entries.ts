@@ -5,6 +5,8 @@ import { peContent } from '@/lib/prompt-engineering/articles-barrel'
 import { llmContent } from '@/lib/local-llms/articles-barrel'
 import { powerLLMContent } from '@/lib/power-local-llm/articles-barrel'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+import { getHandsOnTest } from '@/lib/hands-on-tests'
+import { HANDS_ON_TEST_SLUGS, handsOnTestLangs, handsOnTestUrl } from '@/lib/hands-on-tests/links'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { balconySolarContent } from '@/lib/balcony-solar/articles-barrel'
 import { smartHomeContent } from '@/lib/smart-home/articles-barrel'
@@ -20,6 +22,11 @@ import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { POWER_LLM_PUBLISHED_SLUGS } from '@/lib/power-local-llm/published'
 import { BALCONY_SOLAR_PUBLISHED_SLUGS } from '@/lib/balcony-solar/published'
 import { SMART_HOME_PUBLISHED_SLUGS } from '@/lib/smart-home/published'
+
+const handsOnTestSection: Record<(typeof SUPPORTED_LANGS)[number], string> = {
+  en: 'Hands-on test', de: 'Praxistest', fr: 'Test pratique', ja: '実機テスト', zh: '实测',
+  es: 'Prueba práctica', pt: 'Teste prático', ar: 'اختبار عملي', ko: '직접 테스트',
+}
 
 // Content key stays '-2026' (matches articles-barrel.ts / the article file's own
 // filename, unchanged); the URL slug dropped it per the "no year in slugs" rule.
@@ -245,6 +252,28 @@ export function buildAllSearchEntries(): SearchEntry[] {
         level: (article.educationalLevel ?? '').toLowerCase(),
         tags: [],
         url: articleUrl('blog', slug, lang),
+        lang,
+        contentType: 'article',
+      })
+    }
+  }
+
+  // ── Hands-on tests (one entry per published language) ─────────────────
+  for (const appSlug of HANDS_ON_TEST_SLUGS) {
+    for (const lang of handsOnTestLangs(appSlug)) {
+      const test = getHandsOnTest(appSlug, lang)
+      const url = handsOnTestUrl(appSlug, lang)
+      if (!test || !url) continue
+      entries.push({
+        id: `hot-${lang}-${appSlug}`,
+        articleKey: `hot-${appSlug}`,
+        title: test.title,
+        description: test.dek,
+        section: handsOnTestSection[lang],
+        hub: 'power-local-llm',
+        level: '',
+        tags: [test.app.name, 'hands-on test'],
+        url,
         lang,
         contentType: 'article',
       })

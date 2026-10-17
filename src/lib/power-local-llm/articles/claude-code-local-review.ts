@@ -73,7 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository ([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)) shows 3,314 stars and 625 forks as of September 2026',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to claude-code-local\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
           { type: 'note', text: 'Naming note: "claude-code-local" repurposes Anthropic\'s Claude Code client/CLI to talk to a different, locally-hosted open-weight model. It is not an Anthropic product, and it does not make Anthropic\'s Claude model run offline.' },
         ],
       },
@@ -345,7 +344,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das GitHub-Repository ([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)) zeigt mit Stand September 2026 3.314 Sterne und 625 Forks',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleittext zum Eintrag von claude-code-local im [Local LLM Software Directory](/de/directory) — dort finden Sie einen Überblick, wie es im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
           { type: 'note', text: 'Hinweis zur Namensgebung: „claude-code-local" nutzt Anthropics Claude-Code-Client/CLI um, damit dieser mit einem anderen, lokal gehosteten offenen Modell spricht. Es ist kein Anthropic-Produkt und lässt Anthropics Claude-Modell nicht offline laufen.' },
         ],
       },
@@ -619,7 +617,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub ([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)) affiche 3 314 étoiles et 625 forks en septembre 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de claude-code-local dans le [répertoire des logiciels LLM locaux](/fr/directory) — consultez cette page pour comparer le projet en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
           { type: 'note', text: 'Remarque sur le nom : « claude-code-local » détourne le client/CLI Claude Code d\'Anthropic pour dialoguer avec un modèle ouvert différent, hébergé localement. Ce n\'est pas un produit Anthropic, et cela ne fait pas fonctionner le modèle Claude d\'Anthropic hors ligne.' },
         ],
       },
@@ -891,7 +888,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 仓库（[github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)）截至 2026 年 9 月显示 3,314 颗星和 625 次分叉',
         ],
         callouts: [
-          { type: 'note', text: '本评测是 claude-code-local 在[本地 LLM 软件目录](/zh/directory)条目的深度补充版——该页面展示了它与数十款其他本地 AI 工具的横向对比。' },
           { type: 'note', text: '命名说明："claude-code-local"重新利用了 Anthropic 的 Claude Code 客户端/CLI，使其与另一个本地托管的开源权重模型对话。它不是 Anthropic 的产品，也不会让 Anthropic 的 Claude 模型离线运行。' },
         ],
       },
@@ -1163,7 +1159,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El repositorio de GitHub ([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)) muestra 3.314 estrellas y 625 forks a septiembre de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de claude-code-local en el [directorio de software de LLM local](/es/directory) — consulta esa página para ver cómo se compara, de un vistazo, con docenas de otras herramientas de IA local.' },
           { type: 'note', text: 'Nota sobre el nombre: "claude-code-local" reutiliza el cliente/CLI Claude Code de Anthropic para comunicarse con un modelo distinto, de peso abierto y alojado localmente. No es un producto de Anthropic, y no hace que el modelo Claude de Anthropic se ejecute sin conexión.' },
         ],
       },
@@ -1435,7 +1430,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubリポジトリ（[github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)）は2026年9月時点で3,314スター、625フォーク',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のclaude-code-localのエントリーを深掘りしたものです。他の数十のローカルAIツールとの比較は、そちらのページを参照してください。' },
           { type: 'note', text: '命名についての注記: 「claude-code-local」は、Anthropicの Claude Codeクライアント/CLIを転用し、別の、ローカルにホストされたオープンウェイトモデルと会話させるものです。Anthropicの製品ではなく、Anthropicの実際のClaudeモデルをオフラインで動かすものでもありません。' },
         ],
       },
@@ -1707,7 +1701,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 저장소([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local))는 2026년 9월 기준 3,314개의 스타와 625개의 포크를 기록함',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등재된 claude-code-local 항목의 심층 분석 자료입니다 — 다른 수십 개의 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
           { type: 'note', text: '명칭 관련 참고: "claude-code-local"은 Anthropic의 Claude Code 클라이언트/CLI를 재활용하여 다른 로컬 호스팅 오픈 웨이트 모델과 통신하도록 만든 것입니다. Anthropic의 제품이 아니며, Anthropic의 Claude 모델을 오프라인으로 실행시키지 않습니다.' },
         ],
       },
@@ -1979,7 +1972,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مستودع GitHub ([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)) يُظهر 3,314 نجمة و625 تفرعًا (forks) حتى سبتمبر 2026',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الجزء التفصيلي المكمّل لإدراج claude-code-local ضمن [دليل برامج نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة للاطلاع على مقارنة سريعة بينه وبين عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
           { type: 'note', text: 'ملاحظة حول التسمية: يعيد "claude-code-local" توظيف عميل/أداة Claude Code التابعة لـ Anthropic للتواصل مع نموذج آخر مفتوح الأوزان يعمل محليًا. وهو ليس منتجًا من Anthropic، ولا يجعل نموذج Claude التابع لها يعمل دون اتصال بالإنترنت.' },
         ],
       },
@@ -2251,7 +2243,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub ([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)) mostra 3.314 estrelas e 625 forks em setembro de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do claude-code-local no [Diretório de Softwares de LLM Local](/pt/directory) — veja essa página para comparar o projeto rapidamente com dezenas de outras ferramentas de IA local.' },
           { type: 'note', text: 'Nota sobre o nome: "claude-code-local" reaproveita o cliente/CLI Claude Code da Anthropic para conversar com um modelo open-weight diferente, hospedado localmente. Não é um produto da Anthropic, e não faz o modelo Claude da Anthropic rodar offline.' },
         ],
       },

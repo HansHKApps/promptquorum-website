@@ -73,9 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Developed by [Nomic AI](https://www.nomic.ai), the same company behind the Nomic Atlas data-visualization platform and Nomic Embed embedding models',
           'As of this review, the most recent tagged release on GitHub was v3.10.0 (February 25, 2025) — check the [official releases page](https://github.com/nomic-ai/gpt4all/releases) directly for anything shipped more recently',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to GPT4All\'s entry in the [Local LLM Software Directory](/directory) — see that page for how GPT4All compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-gpt4all',
@@ -359,9 +356,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Verfügbar für Windows (x64 und ARM), macOS (Apple Silicon und Intel) und Ubuntu/Linux x86-64, zusätzlich ein Community-gepflegtes Flathub-Paket',
           'Entwickelt von [Nomic AI](https://www.nomic.ai), demselben Unternehmen hinter der Datenvisualisierungsplattform Nomic Atlas und den Nomic-Embed-Embedding-Modellen',
           'Zum Zeitpunkt dieser Review war v3.10.0 (25. Februar 2025) das jüngste getaggte Release auf GitHub — prüfen Sie die [offizielle Releases-Seite](https://github.com/nomic-ai/gpt4all/releases) direkt für alles, was seither erschienen ist',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu GPT4Alls Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie GPT4All im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -647,9 +641,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développé par [Nomic AI](https://www.nomic.ai), la même entreprise derrière la plateforme de visualisation de données Nomic Atlas et les modèles d\'embedding Nomic Embed',
           'Au moment de cette revue, la version taguée la plus récente sur GitHub était v3.10.0 (25 février 2025) — consultez directement la [page officielle des releases](https://github.com/nomic-ai/gpt4all/releases) pour toute mise à jour plus récente',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette revue est le complément approfondi de l\'entrée de GPT4All dans le [répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir comment GPT4All se positionne face à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-gpt4all',
@@ -933,9 +924,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponible en Windows (x64 y ARM), macOS (Apple Silicon e Intel) y Ubuntu/Linux x86-64, además de un paquete de Flathub mantenido por la comunidad',
           'Desarrollada por [Nomic AI](https://www.nomic.ai), la misma empresa detrás de la plataforma de visualización de datos Nomic Atlas y los modelos de embedding Nomic Embed',
           'Al momento de esta reseña, la versión etiquetada más reciente en GitHub era v3.10.0 (25 de febrero de 2025) — revisa directamente la [página oficial de releases](https://github.com/nomic-ai/gpt4all/releases) para lo que se haya publicado después',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de GPT4All en el [directorio de software de IA local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara GPT4All con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1221,9 +1209,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvido pela [Nomic AI](https://www.nomic.ai), a mesma empresa por trás da plataforma de visualização de dados Nomic Atlas e dos modelos de embedding Nomic Embed',
           'No momento desta análise, a versão marcada (tag) mais recente no GitHub era a v3.10.0 (25 de fevereiro de 2025) — confira diretamente a [página oficial de releases](https://github.com/nomic-ai/gpt4all/releases) para o que foi lançado depois disso',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do GPT4All no [Diretório de Software de IA Local](/pt/directory) — veja essa página para comparar rapidamente o GPT4All com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-gpt4all',
@@ -1507,9 +1492,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windows（x64およびARM）、macOS（Apple SiliconとIntel）、Ubuntu/Linux x86-64で利用可能。加えてコミュニティ管理のFlathubパッケージもあり',
           '[Nomic AI](https://www.nomic.ai)が開発。データ可視化プラットフォームNomic Atlasや埋め込みモデルNomic Embedを手がける同じ企業',
           'このレビュー時点で、GitHub上の最新のタグ付きリリースはv3.10.0（2025年2月25日）— それ以降の情報は[公式リリースページ](https://github.com/nomic-ai/gpt4all/releases)を直接確認すること',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるGPT4Allのエントリーを深掘りする姉妹記事です — GPT4Allが他の数十のローカルAIツールと比べてどう位置づけられるか、一目で確認できます。' },
         ],
       },
       overview: {
@@ -1795,9 +1777,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由[Nomic AI](https://www.nomic.ai)开发，该公司也打造了数据可视化平台Nomic Atlas和嵌入模型Nomic Embed',
           '截至本评测撰写时，GitHub上最新的标记版本是v3.10.0（2025年2月25日）——如需了解之后的更新，请直接查看[官方发布页面](https://github.com/nomic-ai/gpt4all/releases)',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中GPT4All条目的深度姊妹篇——请查阅该页面，快速了解GPT4All相较于其他数十种本地AI工具的定位。' },
-        ],
       },
       overview: {
         id: 'what-is-gpt4all',
@@ -2082,9 +2061,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'طوّرته [Nomic AI](https://www.nomic.ai)، الشركة نفسها التي تقف وراء منصة تصور البيانات Nomic Atlas ونماذج التضمين Nomic Embed',
           'حتى وقت إعداد هذه المراجعة، كان أحدث إصدار موسوم على GitHub هو v3.10.0 (25 فبراير 2025) — راجع [صفحة الإصدارات الرسمية](https://github.com/nomic-ai/gpt4all/releases) مباشرةً لمعرفة ما صدر بعد ذلك',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيق المتعمّق لإدخال GPT4All في [دليل برمجيات نماذج الذكاء الاصطناعي المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن GPT4All بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-gpt4all',
@@ -2368,9 +2344,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Windows(x64 및 ARM), macOS(Apple Silicon 및 Intel), Ubuntu/Linux x86-64에서 사용 가능하며, 커뮤니티가 관리하는 Flathub 패키지도 존재',
           '데이터 시각화 플랫폼 Nomic Atlas와 임베딩 모델 Nomic Embed도 만드는 동일한 회사 [Nomic AI](https://www.nomic.ai)가 개발',
           '이 리뷰 작성 시점 기준, GitHub에서 가장 최근에 태그된 릴리스는 v3.10.0(2025년 2월 25일)이었습니다 — 그 이후 내용은 [공식 릴리스 페이지](https://github.com/nomic-ai/gpt4all/releases)에서 직접 확인하십시오',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 GPT4All 항목을 심층적으로 다루는 자매 기사입니다 — GPT4All이 다른 수십 개의 로컬 AI 도구와 비교해 어떤 위치에 있는지 한눈에 확인할 수 있습니다.' },
         ],
       },
       overview: {

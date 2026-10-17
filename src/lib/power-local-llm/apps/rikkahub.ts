@@ -21,7 +21,14 @@ export const app: ToolRecord = {
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['phone', 'chat'],
-  url: 'github.com/rikkahub/rikkahub',
+  url: 'rikka-ai.com',
+  storeLinks: {
+    googlePlay: 'https://play.google.com/store/apps/details?id=me.rerere.rikkahub',
+    web: 'https://rikka-ai.com',
+    github: 'https://github.com/rikkahub/rikkahub',
+  },
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README Download section: website (rikka-ai.com/download) and Google Play; Releases 2.5.6 ships rikkahub-2.5.6-arm64-v8a.apk. checked 2026-10-09',
   tagline: {
     en: 'Open-source Android local AI',
     de: 'Open-Source Android-App für lokale KI',
@@ -37,4 +44,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { visionInput: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/rikkahub/rikkahub',
 }

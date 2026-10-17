@@ -22,6 +22,8 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['phone', 'chat'],
   url: 'github.com/guinmoon/LLMFarm',
+  installEffort: 'terminal-setup', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README: "The app is temporarily unavailable in TestFlight and Appstore"; Releases ship no binaries; llmfarm.space was unreachable, so the repo is the only route (build from source). checked 2026-10-09',
   tagline: {
     en: 'iOS local LLM with model browser',
     de: 'iOS-Client für lokale LLMs mit Modell-Browser',
@@ -36,4 +38,6 @@ export const app: ToolRecord = {
   reviewSlug: 'llm-farm-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: '1.4.3', versionSourceUrl: 'https://github.com/guinmoon/LLMFarm/releases/tag/1.4.3' },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-01-30', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/guinmoon/LLMFarm',
 }

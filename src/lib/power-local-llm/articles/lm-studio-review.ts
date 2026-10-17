@@ -13,9 +13,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'People who want a polished, free desktop app with a built-in model browser to download and chat with AI models on their own computer, without using a terminal',
     primaryTerm: 'LM Studio',
     title: 'LM Studio Review: The GUI-First Local AI Desktop App',
-    seoTitle: 'LM Studio Review: Features, Pricing & License',
+    seoTitle: 'LM Studio Review 2026: Free to Use, Not Open Source',
     intro: 'LM Studio ([lmstudio.ai](https://lmstudio.ai)) is a free desktop application, developed by Element Labs, Inc., for downloading and running AI models on your own computer through a graphical interface, a built-in Hugging Face model browser, and a local OpenAI-compatible API server. Unlike command-line-first tools, LM Studio is built around a GUI from the ground up, running models locally through [llama.cpp](https://github.com/ggml-org/llama.cpp) (GGUF format) or Apple\'s MLX framework on Apple Silicon Macs. This review covers what LM Studio actually does, its exact license terms, how to download it, and where it fits next to other local-first chat apps.',
-    metaDescription: 'LM Studio is a free desktop app for running AI models locally with a built-in model browser and OpenAI-compatible server. Verified license, downloads, and features for 2026.',
+    metaDescription: 'Is LM Studio free? Yes, for personal and work use since July 2025, but it is closed-source. Pricing, license, system requirements and downloads.',
     readTime: '13 min read',
     targetKeywords: [
       'LM Studio review',
@@ -75,9 +75,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Can run headless (without the GUI) via the `lms` CLI and its `llmster` server-native package, or by enabling background-server mode in the desktop app',
           'Runs on Apple Silicon Macs, x64/ARM64 Windows PCs, and x64 Linux PCs',
           'Developed by Element Labs, Inc.; a separate companion product, Bionic (launched July 2026), adds an autonomous coding/work agent on top of LM Studio\'s model runtime, with its own paid tiers',
-        ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to LM Studio\'s entry in the [Local LLM Software Directory](/directory) — see that page for how LM Studio compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -300,9 +297,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Menschen, die eine ausgereifte, kostenlose Desktop-App mit integriertem Modell-Browser suchen, um KI-Modelle auf dem eigenen Rechner herunterzuladen und mit ihnen zu chatten, ohne ein Terminal zu benutzen',
     primaryTerm: 'LM Studio',
     title: 'LM Studio Review: Die GUI-first lokale KI-Desktop-App',
-    seoTitle: 'LM Studio Review: Funktionen, Preise & Lizenz',
+    seoTitle: 'LM Studio Review 2026: Kostenlos, aber nicht Open Source',
     intro: 'LM Studio ([lmstudio.ai](https://lmstudio.ai)) ist eine kostenlose Desktop-Anwendung von Element Labs, Inc. zum Herunterladen und Ausführen von KI-Modellen auf dem eigenen Rechner über eine grafische Oberfläche, einen integrierten Hugging-Face-Modell-Browser und einen lokalen, OpenAI-kompatiblen API-Server. Anders als kommandozeilenbasierte Tools ist LM Studio von Grund auf als GUI konzipiert und führt Modelle lokal über [llama.cpp](https://github.com/ggml-org/llama.cpp) (GGUF-Format) oder Apples MLX-Framework auf Apple-Silicon-Macs aus. Diese Review behandelt, was LM Studio tatsächlich kann, die genauen Lizenzbedingungen, wie man es herunterlädt und wo es sich im Vergleich zu anderen lokal-first Chat-Apps einordnet.',
-    metaDescription: 'LM Studio ist eine kostenlose Desktop-App zum lokalen Ausführen von KI-Modellen mit integriertem Modell-Browser und OpenAI-kompatiblem Server. Geprüfte Lizenz, Downloads und Funktionen für 2026.',
+    metaDescription: 'Ist LM Studio kostenlos? Ja, für private und berufliche Nutzung seit Juli 2025, aber Closed Source. Preise, Lizenz, Systemanforderungen und Downloads.',
     readTime: '13 Min. Lesezeit',
     targetKeywords: [
       'LM Studio Review',
@@ -362,9 +359,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kann headless (ohne GUI) über die `lms`-CLI und das server-native Paket `llmster` laufen, oder durch Aktivieren des Hintergrund-Server-Modus in der Desktop-App',
           'Läuft auf Apple-Silicon-Macs, x64/ARM64-Windows-PCs und x64-Linux-PCs',
           'Entwickelt von Element Labs, Inc.; ein separates Begleitprodukt namens Bionic (gestartet im Juli 2026) fügt einen autonomen Coding-/Arbeits-Agenten auf Basis von LM Studios Modell-Laufzeitumgebung hinzu, mit eigenen kostenpflichtigen Stufen',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu LM Studios Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie LM Studio im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -587,9 +581,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Personnes qui veulent une application de bureau gratuite et aboutie, avec un navigateur de modèles intégré, pour télécharger et discuter avec des modèles d\'IA sur leur propre ordinateur, sans utiliser de terminal',
     primaryTerm: 'LM Studio',
     title: 'LM Studio Review: l\'application de bureau IA locale GUI-first',
-    seoTitle: 'LM Studio Review: fonctionnalités, tarifs et licence',
+    seoTitle: 'LM Studio Review 2026 : gratuit, mais pas open source',
     intro: 'LM Studio ([lmstudio.ai](https://lmstudio.ai)) est une application de bureau gratuite, développée par Element Labs, Inc., pour télécharger et exécuter des modèles d\'IA sur votre propre ordinateur via une interface graphique, un navigateur de modèles Hugging Face intégré, et un serveur API local compatible OpenAI. Contrairement aux outils d\'abord en ligne de commande, LM Studio est construit autour d\'une interface graphique dès le départ, exécutant des modèles localement via [llama.cpp](https://github.com/ggml-org/llama.cpp) (format GGUF) ou le framework MLX d\'Apple sur les Mac Apple Silicon. Cette review couvre ce que fait réellement LM Studio, ses conditions de licence exactes, comment le télécharger, et sa place face aux autres applications de chat local-first.',
-    metaDescription: 'LM Studio est une application de bureau gratuite pour exécuter des modèles d\'IA localement avec un navigateur de modèles intégré et un serveur compatible OpenAI. Licence, téléchargements et fonctionnalités vérifiés pour 2026.',
+    metaDescription: 'LM Studio est-il gratuit ? Oui, en usage personnel et pro depuis juillet 2025, mais il est propriétaire. Tarifs, licence, configuration requise, liens.',
     readTime: '13 min de lecture',
     targetKeywords: [
       'LM Studio avis',
@@ -649,9 +643,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Peut fonctionner en mode headless (sans interface graphique) via la CLI `lms` et son paquet server-native `llmster`, ou en activant le mode serveur en arrière-plan dans l\'application de bureau',
           'Fonctionne sur les Mac Apple Silicon, les PC Windows x64/ARM64, et les PC Linux x64',
           'Développé par Element Labs, Inc. ; un produit compagnon distinct, Bionic (lancé en juillet 2026), ajoute un agent autonome de codage/travail par-dessus le moteur d\'exécution de modèles de LM Studio, avec ses propres offres payantes',
-        ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément détaillé de la fiche de LM Studio dans le [répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir comment LM Studio se compare, en un coup d\'œil, à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -874,9 +865,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Personas que quieren una aplicación de escritorio gratuita y pulida, con un navegador de modelos integrado, para descargar y chatear con modelos de IA en su propio ordenador, sin usar una terminal',
     primaryTerm: 'LM Studio',
     title: 'LM Studio Review: la aplicación de escritorio de IA local GUI-first',
-    seoTitle: 'LM Studio Review: funciones, precios y licencia',
+    seoTitle: 'LM Studio Review 2026: gratis, pero no es de código abierto',
     intro: 'LM Studio ([lmstudio.ai](https://lmstudio.ai)) es una aplicación de escritorio gratuita, desarrollada por Element Labs, Inc., para descargar y ejecutar modelos de IA en su propio ordenador mediante una interfaz gráfica, un navegador de modelos de Hugging Face integrado, y un servidor API local compatible con OpenAI. A diferencia de las herramientas centradas en la línea de comandos, LM Studio está construido en torno a una GUI desde el principio, ejecutando modelos localmente mediante [llama.cpp](https://github.com/ggml-org/llama.cpp) (formato GGUF) o el framework MLX de Apple en Macs con Apple Silicon. Esta review cubre lo que LM Studio realmente hace, sus condiciones de licencia exactas, cómo descargarlo, y su lugar frente a otras aplicaciones de chat local-first.',
-    metaDescription: 'LM Studio es una aplicación de escritorio gratuita para ejecutar modelos de IA localmente con un navegador de modelos integrado y un servidor compatible con OpenAI. Licencia, descargas y funciones verificadas para 2026.',
+    metaDescription: '¿LM Studio es gratis? Sí, para uso personal y laboral desde julio de 2025, pero es de código cerrado. Precios, licencia, requisitos y descargas.',
     readTime: '13 min de lectura',
     targetKeywords: [
       'LM Studio review',
@@ -936,9 +927,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Puede ejecutarse en modo headless (sin GUI) mediante la CLI `lms` y su paquete server-native `llmster`, o activando el modo de servidor en segundo plano en la aplicación de escritorio',
           'Funciona en Macs con Apple Silicon, PCs Windows x64/ARM64, y PCs Linux x64',
           'Desarrollado por Element Labs, Inc.; un producto complementario independiente, Bionic (lanzado en julio de 2026), añade un agente autónomo de codificación/trabajo sobre el motor de ejecución de modelos de LM Studio, con sus propios niveles de pago',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de LM Studio en el [directorio de software de IA local](/es/directory) — consulte esa página para ver de un vistazo cómo se compara LM Studio con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1161,9 +1149,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Pessoas que querem um aplicativo de desktop gratuito e polido, com um navegador de modelos integrado, para baixar e conversar com modelos de IA no próprio computador, sem usar um terminal',
     primaryTerm: 'LM Studio',
     title: 'LM Studio Review: o aplicativo de desktop de IA local GUI-first',
-    seoTitle: 'LM Studio Review: recursos, preços e licença',
+    seoTitle: 'LM Studio Review 2026: grátis, mas não é código aberto',
     intro: 'LM Studio ([lmstudio.ai](https://lmstudio.ai)) é um aplicativo de desktop gratuito, desenvolvido pela Element Labs, Inc., para baixar e executar modelos de IA no próprio computador por meio de uma interface gráfica, um navegador de modelos do Hugging Face integrado, e um servidor API local compatível com OpenAI. Diferente das ferramentas centradas em linha de comando, o LM Studio é construído em torno de uma GUI desde o início, executando modelos localmente via [llama.cpp](https://github.com/ggml-org/llama.cpp) (formato GGUF) ou o framework MLX da Apple em Macs com Apple Silicon. Esta review cobre o que o LM Studio realmente faz, seus termos de licença exatos, como baixá-lo, e onde ele se posiciona em relação a outros aplicativos de chat local-first.',
-    metaDescription: 'LM Studio é um aplicativo de desktop gratuito para executar modelos de IA localmente com um navegador de modelos integrado e um servidor compatível com OpenAI. Licença, downloads e recursos verificados para 2026.',
+    metaDescription: 'O LM Studio é grátis? Sim, para uso pessoal e profissional desde julho de 2025, mas é código fechado. Preços, licença, requisitos e downloads.',
     readTime: '13 min de leitura',
     targetKeywords: [
       'LM Studio review',
@@ -1223,9 +1211,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pode rodar em modo headless (sem GUI) via a CLI `lms` e seu pacote server-native `llmster`, ou ativando o modo de servidor em segundo plano no aplicativo de desktop',
           'Roda em Macs com Apple Silicon, PCs Windows x64/ARM64, e PCs Linux x64',
           'Desenvolvido pela Element Labs, Inc.; um produto complementar separado, Bionic (lançado em julho de 2026), adiciona um agente autônomo de codificação/trabalho sobre o motor de execução de modelos do LM Studio, com seus próprios níveis pagos',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do LM Studio no [diretório de software de IA local](/pt/directory) — veja essa página para comparar rapidamente o LM Studio com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1448,9 +1433,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'ターミナルを使わずに、組み込みのモデルブラウザを備えた洗練された無料デスクトップアプリで、自分のコンピュータでAIモデルをダウンロードしてチャットしたい人',
     primaryTerm: 'LM Studio',
     title: 'LM Studio レビュー：GUIファーストのローカルAIデスクトップアプリ',
-    seoTitle: 'LM Studio レビュー：機能・料金・ライセンス',
+    seoTitle: 'LM Studio レビュー2026：無料だが非オープンソース',
     intro: 'LM Studio（[lmstudio.ai](https://lmstudio.ai)）は、Element Labs, Inc.が開発した無料のデスクトップアプリケーションで、グラフィカルインターフェース、組み込みのHugging Faceモデルブラウザ、そしてローカルのOpenAI互換APIサーバーを通じて、自分のコンピュータでAIモデルをダウンロード・実行できます。コマンドライン中心のツールとは異なり、LM Studioは最初からGUIを軸に構築されており、[llama.cpp](https://github.com/ggml-org/llama.cpp)（GGUF形式）またはApple Silicon Mac上のAppleのMLXフレームワークを通じてローカルでモデルを実行します。このレビューでは、LM Studioが実際に何をするか、正確なライセンス条件、ダウンロード方法、そして他のローカルファーストのチャットアプリとの位置づけを取り上げます。',
-    metaDescription: 'LM Studioは、組み込みモデルブラウザとOpenAI互換サーバーを備え、AIモデルをローカル実行できる無料のデスクトップアプリです。2026年版として検証済みのライセンス、ダウンロード、機能を掲載。',
+    metaDescription: 'LM Studioは無料？個人利用・業務利用ともに2025年7月から無料ですが、オープンソースではありません。料金、ライセンス、動作要件、ダウンロードを解説。',
     readTime: '13分で読めます',
     targetKeywords: [
       'LM Studio レビュー',
@@ -1510,9 +1495,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`lms` CLIとそのサーバーネイティブなパッケージ`llmster`を通じて、あるいはデスクトップアプリでバックグラウンドサーバーモードを有効にすることで、ヘッドレス（GUIなし）で実行可能',
           'Apple Silicon Mac、x64/ARM64 Windows PC、x64 Linux PCで動作',
           'Element Labs, Inc.が開発。別の姉妹製品であるBionic（2026年7月に開始）は、LM Studioのモデルランタイムの上に自律的なコーディング/作業エージェントを追加し、独自の有料階層を持つ',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/directory)にあるLM Studioのエントリーの詳細版です——他の数十のローカルAIツールとLM Studioが一目でどう比較されるかは、そのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1735,9 +1717,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: '希望通过内置模型浏览器的精良免费桌面应用，在自己电脑上下载AI模型并与之聊天、而无需使用终端的用户',
     primaryTerm: 'LM Studio',
     title: 'LM Studio 评测：GUI优先的本地AI桌面应用',
-    seoTitle: 'LM Studio 评测：功能、价格与许可证',
+    seoTitle: 'LM Studio 评测 2026：免费可用，但不是开源软件',
     intro: 'LM Studio（[lmstudio.ai](https://lmstudio.ai)）是由Element Labs, Inc.开发的免费桌面应用程序，通过图形界面、内置的Hugging Face模型浏览器以及本地OpenAI兼容API服务器，在您自己的电脑上下载并运行AI模型。与以命令行为主的工具不同，LM Studio从一开始就围绕GUI构建，通过[llama.cpp](https://github.com/ggml-org/llama.cpp)（GGUF格式）或苹果的MLX框架（在Apple Silicon Mac上）在本地运行模型。本评测涵盖LM Studio实际能做什么、其确切的许可证条款、如何下载它，以及它与其他本地优先聊天应用的定位对比。',
-    metaDescription: 'LM Studio是一款免费的桌面应用，可通过内置模型浏览器和OpenAI兼容服务器在本地运行AI模型。本文提供2026年经过核实的许可证、下载方式与功能信息。',
+    metaDescription: 'LM Studio免费吗？自2025年7月起个人和工作使用均免费，但属于闭源软件。涵盖价格、许可证、系统要求与下载方式。',
     readTime: '13分钟阅读',
     targetKeywords: [
       'LM Studio 评测',
@@ -1797,9 +1779,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可通过`lms` CLI及其服务器原生软件包`llmster`以无头（headless）方式运行，或在桌面应用中启用后台服务器模式',
           '可在配备Apple Silicon的Mac、x64/ARM64 Windows PC以及x64 Linux PC上运行',
           '由Element Labs, Inc.开发；一款独立的配套产品Bionic（于2026年7月推出）在LM Studio的模型运行时之上增加了自主编码/工作智能体功能，拥有自己的付费层级',
-        ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地AI软件目录](/zh/directory)中LM Studio条目的深度配套文章——如需一目了然地了解LM Studio与数十种其他本地AI工具的对比，请参阅该页面。' },
         ],
       },
       overview: {
@@ -2022,9 +2001,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: '터미널을 사용하지 않고 내장된 모델 브라우저를 갖춘 세련된 무료 데스크톱 앱으로 자신의 컴퓨터에서 AI 모델을 다운로드하고 대화하고 싶은 사람들',
     primaryTerm: 'LM Studio',
     title: 'LM Studio 리뷰: GUI 우선 로컬 AI 데스크톱 앱',
-    seoTitle: 'LM Studio 리뷰: 기능, 가격 및 라이선스',
+    seoTitle: 'LM Studio 리뷰 2026: 무료지만 오픈소스는 아님',
     intro: 'LM Studio([lmstudio.ai](https://lmstudio.ai))는 Element Labs, Inc.가 개발한 무료 데스크톱 애플리케이션으로, 그래픽 인터페이스, 내장된 Hugging Face 모델 브라우저, 로컬 OpenAI 호환 API 서버를 통해 자신의 컴퓨터에서 AI 모델을 다운로드하고 실행합니다. 명령줄 중심 도구와 달리 LM Studio는 처음부터 GUI를 중심으로 구축되었으며, [llama.cpp](https://github.com/ggml-org/llama.cpp)(GGUF 형식) 또는 Apple Silicon Mac에서는 Apple의 MLX 프레임워크를 통해 로컬에서 모델을 실행합니다. 이 리뷰는 LM Studio가 실제로 무엇을 하는지, 정확한 라이선스 조건, 다운로드 방법, 그리고 다른 로컬 우선 채팅 앱들과의 비교 위치를 다룹니다.',
-    metaDescription: 'LM Studio는 내장 모델 브라우저와 OpenAI 호환 서버를 갖춘 무료 데스크톱 앱으로 AI 모델을 로컬에서 실행합니다. 2026년 기준으로 검증된 라이선스, 다운로드, 기능 정보를 제공합니다.',
+    metaDescription: 'LM Studio는 무료일까요? 2025년 7월부터 개인 및 업무용 모두 무료이지만 오픈소스는 아닙니다. 가격, 라이선스, 시스템 요구 사항, 다운로드를 안내합니다.',
     readTime: '13분 소요',
     targetKeywords: [
       'LM Studio 리뷰',
@@ -2084,9 +2063,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`lms` CLI와 서버 네이티브 패키지 `llmster`를 통해, 또는 데스크톱 앱에서 백그라운드 서버 모드를 활성화하여 헤드리스(GUI 없이)로 실행할 수 있습니다',
           'Apple Silicon Mac, x64/ARM64 Windows PC, x64 Linux PC에서 실행됩니다',
           'Element Labs, Inc.가 개발했습니다; 별도의 동반 제품인 Bionic(2026년 7월 출시)은 LM Studio의 모델 런타임 위에 자율 코딩/작업 에이전트를 추가하며 자체 유료 계층을 가지고 있습니다',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)에 있는 LM Studio 항목의 심층 보완 자료입니다 — LM Studio가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2309,9 +2285,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'الأشخاص الذين يريدون تطبيق سطح مكتب مجاني ومصقول مع مستعرض نماذج مدمج، لتنزيل نماذج AI والدردشة معها على أجهزتهم الخاصة دون استخدام الطرفية',
     primaryTerm: 'LM Studio',
     title: 'مراجعة LM Studio: تطبيق سطح المكتب المحلي الذي يعطي الأولوية للواجهة الرسومية',
-    seoTitle: 'مراجعة LM Studio: الميزات والأسعار والترخيص',
+    seoTitle: 'مراجعة LM Studio 2026: مجاني لكن ليس مفتوح المصدر',
     intro: 'LM Studio ([lmstudio.ai](https://lmstudio.ai)) هو تطبيق سطح مكتب مجاني طوّرته شركة Element Labs, Inc. لتنزيل وتشغيل نماذج AI على جهازك الخاص عبر واجهة رسومية، ومستعرض نماذج Hugging Face مدمج، وخادم API محلي متوافق مع OpenAI. على عكس الأدوات التي تعطي الأولوية لسطر الأوامر، بُني LM Studio حول واجهة رسومية منذ البداية، ويشغّل النماذج محليًا عبر [llama.cpp](https://github.com/ggml-org/llama.cpp) (تنسيق GGUF) أو إطار عمل MLX من Apple على أجهزة Mac ذات شريحة Apple Silicon. تتناول هذه المراجعة ما يفعله LM Studio فعليًا، وشروط ترخيصه الدقيقة، وكيفية تنزيله، وموقعه مقارنة بتطبيقات الدردشة المحلية الأخرى.',
-    metaDescription: 'LM Studio تطبيق سطح مكتب مجاني لتشغيل نماذج AI محليًا مع مستعرض نماذج مدمج وخادم متوافق مع OpenAI. ترخيص وتنزيلات وميزات مُتحقَّق منها لعام 2026.',
+    metaDescription: 'هل LM Studio مجاني؟ نعم للاستخدام الشخصي والمهني منذ يوليو 2025، لكنه مغلق المصدر. الأسعار والترخيص ومتطلبات النظام والتنزيل.',
     readTime: '13 دقيقة قراءة',
     targetKeywords: [
       'مراجعة LM Studio',
@@ -2371,9 +2347,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يمكن تشغيله بدون واجهة رسومية عبر أداة CLI باسم `lms` وحزمتها الخادمية الأصلية `llmster`، أو عبر تفعيل وضع الخادم في الخلفية داخل تطبيق سطح المكتب',
           'يعمل على أجهزة Mac ذات شريحة Apple Silicon، وأجهزة Windows بمعمارية x64/ARM64، وأجهزة Linux بمعمارية x64',
           'تُطوّره شركة Element Labs, Inc.؛ يضيف منتج مرافق منفصل باسم Bionic (أُطلق في يوليو 2026) عميلًا ذكيًا مستقلًا للبرمجة/العمل فوق بيئة تشغيل نماذج LM Studio، وله مستويات مدفوعة خاصة به',
-        ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافقة المتعمّقة لمدخل LM Studio في [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارَن LM Studio بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {

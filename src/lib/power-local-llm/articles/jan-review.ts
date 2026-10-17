@@ -73,9 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Available on macOS, Windows, and Linux, plus the Microsoft Store and Flathub',
           'Developed by [Menlo Research](https://menlo.ai), a Singapore-based company; the GitHub organization hosting the code is [janhq](https://github.com/janhq/jan)',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Jan\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Jan compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-jan',
@@ -357,9 +354,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Unterstützt das Model Context Protocol (MCP) zur Anbindung externer Tools und agentenähnlicher Workflows',
           'Verfügbar für macOS, Windows und Linux sowie über den Microsoft Store und Flathub',
           'Entwickelt von [Menlo Research](https://menlo.ai), einem Unternehmen mit Sitz in Singapur; die GitHub-Organisation, die den Code hostet, heißt [janhq](https://github.com/janhq/jan)',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Jans Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie Jan im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -643,9 +637,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponible sous macOS, Windows et Linux, ainsi que via le Microsoft Store et Flathub',
           'Développé par [Menlo Research](https://menlo.ai), une entreprise basée à Singapour ; l\'organisation GitHub hébergeant le code s\'appelle [janhq](https://github.com/janhq/jan)',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette revue est le complément détaillé de la fiche de Jan dans le [Répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment Jan se compare à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-jan',
@@ -927,9 +918,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Model Context Protocol（MCP）に対応し、外部ツールやエージェント的なワークフローを接続可能',
           'macOS、Windows、Linuxで利用可能。Microsoft StoreやFlathubでも配布',
           'シンガポール拠点の[Menlo Research](https://menlo.ai)が開発。コードをホストするGitHub組織は[janhq](https://github.com/janhq/jan)',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)におけるJanの項目を掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1213,9 +1201,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '支持 macOS、Windows 和 Linux，也可通过 Microsoft Store 和 Flathub 获取',
           '由总部位于新加坡的[Menlo Research](https://menlo.ai)开发；托管代码的 GitHub 组织为[janhq](https://github.com/janhq/jan)',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地 LLM 软件目录](/zh/directory)中 Jan 条目的深度解读——如需快速了解 Jan 与其他数十款本地 AI 工具的对比，请查看该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-jan',
@@ -1497,9 +1482,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Soporta el Model Context Protocol (MCP) para conectar herramientas externas y flujos de trabajo tipo agente',
           'Disponible en macOS, Windows y Linux, además de Microsoft Store y Flathub',
           'Desarrollado por [Menlo Research](https://menlo.ai), una empresa con sede en Singapur; la organización de GitHub que aloja el código es [janhq](https://github.com/janhq/jan)',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Jan en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara Jan con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1783,9 +1765,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponível para macOS, Windows e Linux, além da Microsoft Store e do Flathub',
           'Desenvolvido pela [Menlo Research](https://menlo.ai), uma empresa sediada em Singapura; a organização no GitHub que hospeda o código é a [janhq](https://github.com/janhq/jan)',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Jan no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para uma comparação rápida entre o Jan e dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-jan',
@@ -2068,9 +2047,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'متوفر على macOS وWindows وLinux، بالإضافة إلى Microsoft Store وFlathub',
           'من تطوير [Menlo Research](https://menlo.ai)، وهي شركة مقرها سنغافورة؛ منظمة GitHub التي تستضيف الكود هي [janhq](https://github.com/janhq/jan)',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل Jan في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين Jan وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-jan',
@@ -2352,9 +2328,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '외부 도구 및 에이전트 유형의 워크플로 연결을 위한 Model Context Protocol(MCP)을 지원합니다',
           'macOS, Windows, Linux에서 사용 가능하며, Microsoft Store와 Flathub에서도 이용할 수 있습니다',
           '싱가포르에 본사를 둔 [Menlo Research](https://menlo.ai)가 개발했습니다. 코드를 호스팅하는 GitHub 조직은 [janhq](https://github.com/janhq/jan)입니다',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 수록된 Jan 항목을 심층적으로 다룬 글입니다 — Jan이 수십 개의 다른 로컬 AI 도구와 비교해 어떤 위치에 있는지 한눈에 보려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {

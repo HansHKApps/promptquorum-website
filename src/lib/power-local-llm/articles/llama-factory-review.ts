@@ -72,9 +72,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Deploys trained models through an OpenAI-style local API server or a vLLM worker, and can optionally accelerate training using Unsloth\'s kernels as one of several backend options',
           'Maintained by hiyouga (an individual GitHub maintainer, per the GitHub API); repository created May 28, 2023, with commits pushed within days of this review\'s research date, 9,153 forks, and 1,152 open issues',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to LLaMA-Factory\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-llama-factory',
@@ -350,9 +347,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Multi-Backend-Hardware-Unterstützung: NVIDIA CUDA, AMD ROCm und Ascend NPU, jeweils mit eigenem Docker-Image, plus native Installation unter Linux, Windows und macOS',
           'Stellt trainierte Modelle über einen OpenAI-artigen lokalen API-Server oder einen vLLM-Worker bereit und kann Training optional über Unsloths Kernel als einen von mehreren Backend-Optionen beschleunigen',
           'Gepflegt von hiyouga (laut GitHub-API ein einzelner Maintainer, kein Unternehmen); Repository erstellt am 28. Mai 2023, mit Commits innerhalb weniger Tage vor dem Recherchedatum dieser Review, 9.153 Forks und 1.152 offenen Issues',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu LLaMA-Factorys Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie es im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -630,9 +624,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Déploie les modèles entraînés via une API locale de type OpenAI ou un worker vLLM, et peut accélérer optionnellement l\'entraînement en utilisant les kernels d\'Unsloth comme l\'une de ses options de backend',
           'Maintenu par hiyouga (un mainteneur individuel sur GitHub, selon l\'API GitHub) ; dépôt créé le 28 mai 2023, avec des commits poussés à quelques jours de la date de recherche de cette review, 9 153 forks et 1 152 issues ouvertes',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de LLaMA-Factory dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment LLaMA-Factory se compare à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-llama-factory',
@@ -908,9 +899,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'マルチバックエンドのハードウェア対応：NVIDIA CUDA、AMD ROCm、Ascend NPUそれぞれに専用Dockerイメージがあり、Linux・Windows・macOSへのネイティブインストールも可能',
           'OpenAI形式のローカルAPIサーバーまたはvLLMワーカーを通じて学習済みモデルをデプロイでき、複数あるバックエンドの一つとしてUnslothのカーネルを使ったオプションの学習高速化も可能',
           'hiyouga（GitHub APIによれば個人メンテナー）によって保守されている。リポジトリは2023年5月28日に作成され、本レビューの調査日から数日以内にコミットがプッシュされ、フォーク数9,153、オープンなIssue数1,152',
-        ],
-        callouts: [
-          { type: 'note', text: '本レビューは[Local LLM Software Directory](/ja/directory)にあるLLaMA-Factoryの掲載情報を深掘りする補足記事です——他の数十のローカルAIツールとの比較は同ページで一目で確認できます。' },
         ],
       },
       overview: {
@@ -1188,9 +1176,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可通过类OpenAI风格的本地API服务器或vLLM工作进程部署训练好的模型，并可选择将Unsloth的内核作为多个加速后端之一，用于加速训练',
           '由hiyouga维护（根据GitHub API，为个人维护者而非组织）；仓库创建于2023年5月28日，在本评测调研日期前数天内仍有提交推送，拥有9,153次复刻和1,152个未关闭issue',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中LLaMA-Factory词条的深度延伸——该页面可让你一目了然地对比LLaMA-Factory与其他数十款本地AI工具。' },
-        ],
       },
       overview: {
         id: 'what-is-llama-factory',
@@ -1466,9 +1451,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Soporte de hardware multi-backend: NVIDIA CUDA, AMD ROCm y Ascend NPU, cada uno con su propia imagen de Docker, además de instalación nativa en Linux, Windows y macOS',
           'Despliega modelos entrenados mediante una API local de estilo OpenAI o un worker de vLLM, y puede acelerar opcionalmente el entrenamiento usando los kernels de Unsloth como una de varias opciones de backend',
           'Mantenido por hiyouga (un mantenedor individual en GitHub, según la API de GitHub); repositorio creado el 28 de mayo de 2023, con commits publicados a pocos días de la fecha de investigación de esta review, 9.153 forks y 1.152 issues abiertas',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de LLaMA-Factory en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara LLaMA-Factory con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1746,9 +1728,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Implanta modelos treinados via uma API local no estilo OpenAI ou um worker vLLM, e pode acelerar opcionalmente o treinamento usando os kernels do Unsloth como uma das várias opções de backend',
           'Mantido por hiyouga (um mantenedor individual no GitHub, segundo a API do GitHub); repositório criado em 28 de maio de 2023, com commits enviados a poucos dias da data de pesquisa desta análise, 9.153 forks e 1.152 issues abertas',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do LLaMA-Factory no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente o LLaMA-Factory com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-llama-factory',
@@ -2025,9 +2004,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ينشر النماذج المدربة عبر واجهة برمجة تطبيقات محلية بأسلوب OpenAI أو عبر عامل vLLM، ويمكنه اختياريًا تسريع التدريب باستخدام نوى Unsloth كأحد خيارات الخلفية المتعددة',
           'يصونه hiyouga (مطوّر فردي على GitHub، وفقًا لواجهة برمجة تطبيقات GitHub)؛ أُنشئ المستودع في 28 مايو 2023، مع دفعات تعديل خلال أيام قليلة من تاريخ بحث هذه المراجعة، و9,153 تفريعة و1,152 مشكلة مفتوحة',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لبطاقة LLaMA-Factory في [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين LLaMA-Factory وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-llama-factory',
@@ -2303,9 +2279,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '멀티 백엔드 하드웨어 지원: NVIDIA CUDA, AMD ROCm, Ascend NPU 각각에 전용 Docker 이미지가 있으며, Linux·Windows·macOS 네이티브 설치도 가능',
           'OpenAI 스타일의 로컬 API 서버 또는 vLLM 워커를 통해 학습된 모델을 배포할 수 있으며, 여러 백엔드 옵션 중 하나로 Unsloth의 커널을 사용해 학습을 선택적으로 가속할 수 있음',
           'hiyouga(GitHub API 기준 개인 관리자)가 유지 관리; 저장소는 2023년 5월 28일에 생성되었으며, 이 리뷰의 조사일로부터 며칠 이내에 커밋이 푸시되었고, 포크 9,153개, 열린 이슈 1,152개를 기록',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 LLaMA-Factory 항목을 심층적으로 다루는 보완 글입니다——다른 수십 개 로컬 AI 도구와의 비교는 해당 페이지에서 한눈에 확인할 수 있습니다.' },
         ],
       },
       overview: {

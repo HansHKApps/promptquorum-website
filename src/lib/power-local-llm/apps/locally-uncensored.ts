@@ -41,6 +41,8 @@ export const app: ToolRecord = {
   // particular is an LLM-fine-tuning concept (GGUF/Ollama) that doesn't apply to this image LoRA trainer.
   compare: { localLlm: true, ollama: true, mcp: true, fileChat: true, memory: true, videoGeneration: true, nodeWorkflow: false, loraQlora: true, webUi: true },
   lastVerifiedDate: '2026-09-22', // per maker (David, LU Labs) technical corrections email
+  lastUpstreamUpdate: '2026-10-11', // GitHub release v3.0.6, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/PurpleDoubleD/locally-uncensored/releases',
   reviewSlug: 'locally-uncensored-review', // dedicated PromptQuorum review
   pqReview: {
     date: '2026-09-22',

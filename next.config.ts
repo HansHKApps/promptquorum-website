@@ -113,6 +113,12 @@ const nextConfig: NextConfig = {
         destination: '/:lang/pq-apps#faq',
         permanent: true,
       },
+      // Hands-on tests moved next to the app's review (2026-10-09).
+      {
+        source: '/hands-on-tests/draw-things',
+        destination: '/power-local-llm/draw-things-hands-on-test',
+        permanent: true,
+      },
       {
         source: '/local-llms/quantization-offloading-layer-splitting',
         destination: '/local-llms/llm-quantization-explained',

@@ -72,9 +72,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Available for Windows and Apple Silicon Mac; Linux has no prebuilt binary and requires a source build',
           'GitHub repository ([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)) shows roughly 30,898 stars as of September 2026',
         ],
-        callouts: [
-          { type: 'note', text: "This review is the deep-dive companion to Meetily's entry in the [Local LLM Software Directory](/directory) — see that page for how Meetily compares at a glance to dozens of other local AI tools." },
-        ],
       },
       overview: {
         id: 'what-is-meetily',
@@ -339,9 +336,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Als Tauri-Desktop-App gebaut (Rust-Backend, Next.js-Frontend), laut GitHub-Repository',
           'Verfügbar für Windows und Apple-Silicon-Mac; Linux hat kein vorgefertigtes Binary und erfordert einen Build aus dem Quellcode',
           'Das GitHub-Repository ([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)) zeigt Stand September 2026 rund 30.898 Sterne',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Meetilys Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie Meetily im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -608,9 +602,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponible pour Windows et Mac Apple Silicon ; Linux n\'a pas de binaire prêt à l\'emploi et nécessite une compilation depuis les sources',
           'Le dépôt GitHub ([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)) affiche environ 30 898 étoiles en septembre 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Meetily dans le [répertoire des logiciels IA locaux](/fr/directory) — consultez cette page pour voir comment Meetily se compare rapidement à des dizaines d\'autres outils IA locaux.' },
-        ],
       },
       overview: {
         id: 'what-is-meetily',
@@ -875,9 +866,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubリポジトリによれば、Tauriデスクトップアプリ（Rustバックエンド、Next.jsフロントエンド）として構築',
           'Windowsおよび Apple Silicon Mac向けに提供。Linuxにはビルド済みバイナリがなく、ソースからのビルドが必要',
           'GitHubリポジトリ（[github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)）は2026年9月時点で約30,898スターを記録',
-        ],
-        callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるMeetilyのエントリーを深掘りする補足コンテンツです。他の数十のローカルAIツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1144,9 +1132,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '适用于Windows和Apple Silicon Mac；Linux没有预编译二进制文件，需要从源代码构建',
           'GitHub仓库（[github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)）截至2026年9月显示约30,898颗星',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Meetily条目的深度补充——该页面提供了Meetily与其他数十款本地AI工具的一览式对比。' },
-        ],
       },
       overview: {
         id: 'what-is-meetily',
@@ -1411,9 +1396,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Construido como una app de escritorio Tauri (backend en Rust, frontend en Next.js), según el repositorio de GitHub',
           'Disponible para Windows y Mac con Apple Silicon; Linux no tiene binario precompilado y requiere compilación desde el código fuente',
           'El repositorio de GitHub ([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)) muestra aproximadamente 30.898 estrellas en septiembre de 2026',
-        ],
-        callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada de Meetily en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver cómo se compara Meetily de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1680,9 +1662,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponível para Windows e Mac com Apple Silicon; o Linux não tem binário pré-compilado e exige compilação a partir do código-fonte',
           'O repositório no GitHub ([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)) mostra cerca de 30.898 estrelas em setembro de 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Meetily no [Diretório de Software LLM Local](/pt/directory) — veja essa página para comparar rapidamente o Meetily com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-meetily',
@@ -1948,9 +1927,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'متاح لأنظمة Windows وApple Silicon Mac؛ لا يتوفر لنظام Linux ملف تنفيذي جاهز ويتطلب البناء من الكود المصدري',
           'يُظهر مستودع GitHub ([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)) نحو 30,898 نجمة اعتباراً من سبتمبر 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمق لإدخال Meetily في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارن Meetily بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-meetily',
@@ -2215,9 +2191,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 저장소에 따르면 Tauri 데스크톱 앱(Rust 백엔드, Next.js 프론트엔드)으로 구축됨',
           'Windows와 Apple Silicon Mac에서 사용 가능하며, Linux는 빌드된 바이너리가 없어 소스에서 직접 빌드해야 함',
           'GitHub 저장소([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily))는 2026년 9월 기준 약 30,898개의 스타를 기록',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 Meetily 항목의 심층 보완 자료입니다 — 수십 개의 다른 로컬 AI 도구와 Meetily를 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {

@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is balcony solar legal in Vermont?',
-        answer: 'Yes. Vermont S.202/H.598 took effect July 1, 2026. It caps devices at 1,200W and explicitly requires UL 3700 (or equivalent) certification by statute, with net metering excluded — one of the more explicitly worded laws among the 8 enacted states.',
+        answer: 'In effect. Vermont S.202/H.598 took effect July 1, 2026. It caps devices at 1,200W and explicitly requires UL 3700 (or equivalent) certification by statute, with net metering excluded — one of the more explicitly worded laws among the 8 enacted states.',
         bullets: [
           'S.202/H.598 in effect since July 1, 2026',
           '1,200W cap, with UL 3700 (or equivalent) certification explicitly required by the statute\'s own text',
@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Ist Balkonsolar in Vermont legal?',
-        answer: 'Ja. Vermonts S.202/H.598 trat am 1. Juli 2026 in Kraft. Das Gesetz begrenzt Geräte auf 1.200 W und schreibt die UL-3700-Zertifizierung (oder eine gleichwertige) ausdrücklich im Gesetzestext vor, wobei Net Metering ausgeschlossen ist – eines der explizitesten Gesetze unter den 8 verabschiedenden Bundesstaaten.',
+        answer: 'In Kraft. Vermonts S.202/H.598 trat am 1. Juli 2026 in Kraft. Das Gesetz begrenzt Geräte auf 1.200 W und schreibt die UL-3700-Zertifizierung (oder eine gleichwertige) ausdrücklich im Gesetzestext vor, wobei Net Metering ausgeschlossen ist – eines der explizitesten Gesetze unter den 8 verabschiedenden Bundesstaaten.',
         bullets: [
           'S.202/H.598 seit 1. Juli 2026 in Kraft',
           '1.200-W-Obergrenze, UL-3700-Zertifizierung (oder gleichwertig) im Gesetzestext selbst ausdrücklich vorgeschrieben',
@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Le solaire de balcon est-il légal dans le Vermont ?',
-        answer: "Oui. La loi S.202/H.598 du Vermont est entrée en vigueur le 1er juillet 2026. Elle plafonne les appareils à 1 200 W et exige explicitement, dans le texte même de la loi, la certification UL 3700 (ou équivalente), tout en excluant la revente au réseau — l'une des lois les plus explicites parmi les 8 États l'ayant adoptée.",
+        answer: "En vigueur. La loi S.202/H.598 du Vermont est entrée en vigueur le 1er juillet 2026. Elle plafonne les appareils à 1 200 W et exige explicitement, dans le texte même de la loi, la certification UL 3700 (ou équivalente), tout en excluant la revente au réseau — l'une des lois les plus explicites parmi les 8 États l'ayant adoptée.",
         bullets: [
           'S.202/H.598 en vigueur depuis le 1er juillet 2026',
           'Plafond de 1 200 W, avec certification UL 3700 (ou équivalente) explicitement exigée par le texte même de la loi',
@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'バーモント州でバルコニーソーラーは合法ですか？',
-        answer: 'はい。バーモント州のS.202/H.598は2026年7月1日に施行されました。機器の出力を1,200Wに制限し、法文でUL 3700（またはそれと同等の認証）を明示的に義務付けており、ネットメータリングは対象外です――8つの制定州の中でも特に明示的な条文を持つ法律の一つです。',
+        answer: '施行済み。バーモント州のS.202/H.598は2026年7月1日に施行されました。機器の出力を1,200Wに制限し、法文でUL 3700（またはそれと同等の認証）を明示的に義務付けており、ネットメータリングは対象外です――8つの制定州の中でも特に明示的な条文を持つ法律の一つです。',
         bullets: [
           'S.202/H.598は2026年7月1日から施行済み',
           '上限1,200W。UL 3700（またはそれと同等の認証）を法文自体が明示的に要求',
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '佛蒙特州的阳台太阳能合法吗？',
-        answer: '合法。佛蒙特州S.202/H.598法案已于2026年7月1日生效。该法律将设备功率上限设为1,200W，并在法条中明确要求UL 3700（或同等）认证，同时明确排除净计量——是已立法的8个州中措辞最为明确的法律之一。',
+        answer: '已生效。佛蒙特州S.202/H.598法案已于2026年7月1日生效。该法律将设备功率上限设为1,200W，并在法条中明确要求UL 3700（或同等）认证，同时明确排除净计量——是已立法的8个州中措辞最为明确的法律之一。',
         bullets: [
           'S.202/H.598自2026年7月1日起生效',
           '功率上限1,200W，法律条文本身明确要求UL 3700（或同等）认证',
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Es legal la energía solar de balcón en Vermont?',
-        answer: 'Sí. La ley S.202/H.598 de Vermont entró en vigor el 1 de julio de 2026. Limita los dispositivos a 1,200W y exige explícitamente, en el propio texto de la ley, la certificación UL 3700 (o equivalente), excluyendo el net metering — una de las leyes redactadas de forma más explícita entre los 8 estados que la han aprobado.',
+        answer: 'En vigor. La ley S.202/H.598 de Vermont entró en vigor el 1 de julio de 2026. Limita los dispositivos a 1,200W y exige explícitamente, en el propio texto de la ley, la certificación UL 3700 (o equivalente), excluyendo el net metering — una de las leyes redactadas de forma más explícita entre los 8 estados que la han aprobado.',
         bullets: [
           'S.202/H.598 vigente desde el 1 de julio de 2026',
           'Tope de 1,200W, con certificación UL 3700 (o equivalente) exigida explícitamente por el propio texto de la ley',
@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'A energia solar de varanda é legal em Vermont?',
-        answer: 'Sim. A lei S.202/H.598 de Vermont entrou em vigor em 1º de julho de 2026. Ela limita os dispositivos a 1.200W e exige explicitamente, no próprio texto da lei, a certificação UL 3700 (ou equivalente), com o net metering excluído — uma das leis com redação mais explícita entre os 8 estados que já aprovaram legislação semelhante.',
+        answer: 'Em vigor. A lei S.202/H.598 de Vermont entrou em vigor em 1º de julho de 2026. Ela limita os dispositivos a 1.200W e exige explicitamente, no próprio texto da lei, a certificação UL 3700 (ou equivalente), com o net metering excluído — uma das leis com redação mais explícita entre os 8 estados que já aprovaram legislação semelhante.',
         bullets: [
           'S.202/H.598 em vigor desde 1º de julho de 2026',
           'Limite de 1.200W, com certificação UL 3700 (ou equivalente) exigida explicitamente pelo próprio texto da lei',
@@ -786,7 +786,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل الطاقة الشمسية للشرفات قانونية في فيرمونت؟',
-        answer: 'نعم. دخل قانون فيرمونت S.202/H.598 حيّز التنفيذ في 1 يوليو 2026. يحدد القانون سقف الأجهزة عند 1,200 واط ويشترط صراحةً في نص القانون شهادة UL 3700 (أو ما يعادلها)، مع استبعاد قياس الصافي (net metering) — وهو من أكثر القوانين وضوحًا في صياغته بين الولايات الثماني التي سنّت تشريعات مماثلة.',
+        answer: 'ساري المفعول. دخل قانون فيرمونت S.202/H.598 حيّز التنفيذ في 1 يوليو 2026. يحدد القانون سقف الأجهزة عند 1,200 واط ويشترط صراحةً في نص القانون شهادة UL 3700 (أو ما يعادلها)، مع استبعاد قياس الصافي (net metering) — وهو من أكثر القوانين وضوحًا في صياغته بين الولايات الثماني التي سنّت تشريعات مماثلة.',
         bullets: [
           'قانون S.202/H.598 ساري المفعول منذ 1 يوليو 2026',
           'سقف 1,200 واط، مع اشتراط شهادة UL 3700 (أو ما يعادلها) صراحةً في نص القانون نفسه',
@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '버몬트주에서 발코니 태양광은 합법입니까?',
-        answer: '예. 버몬트주의 S.202/H.598 법안은 2026년 7월 1일부터 시행되었습니다. 이 법은 기기 용량을 1,200W로 제한하고, 법률 조문에서 UL 3700(또는 동등 인증)을 명시적으로 요구하며, 넷미터링은 제외됩니다 — 이는 법안을 제정한 8개 주 가운데서도 조문이 특히 명시적인 법률 중 하나입니다.',
+        answer: '시행 중입니다. 버몬트주의 S.202/H.598 법안은 2026년 7월 1일부터 시행되었습니다. 이 법은 기기 용량을 1,200W로 제한하고, 법률 조문에서 UL 3700(또는 동등 인증)을 명시적으로 요구하며, 넷미터링은 제외됩니다 — 이는 법안을 제정한 8개 주 가운데서도 조문이 특히 명시적인 법률 중 하나입니다.',
         bullets: [
           'S.202/H.598은 2026년 7월 1일부터 시행 중',
           '상한 1,200W, 법률 조문 자체가 UL 3700(또는 동등 인증)을 명시적으로 요구',

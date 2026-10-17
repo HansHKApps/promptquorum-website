@@ -41,6 +41,8 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { desktopApp: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
+  lastUpstreamUpdate: '2026-08-31', // GitHub release v1.3.2, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/iunera/ypipe/releases',
   reviewSlug: 'ypipe-review', // dedicated PromptQuorum review — added Batch 21, 2026-09-12
   mcpSupport: true, // tagline claims it bundles "MCP servers" into its executable — verified 2026-09-14
 }

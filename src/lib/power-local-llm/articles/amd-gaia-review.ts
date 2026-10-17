@@ -76,9 +76,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Was Windows-only at launch; version 0.14 (December 11, 2025) added native Linux and macOS support — GAIA is no longer a Windows-exclusive tool, even though its NPU acceleration remains AMD-hardware-exclusive',
           'GitHub repository shows 1,539 stars, verified against [github.com/amd/gaia](https://github.com/amd/gaia) on September 5, 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to AMD GAIA\'s entry in the [Local LLM Software Directory](/directory) — see that page for how GAIA compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-amd-gaia',
@@ -360,9 +357,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kann Anfragen optional an Cloud-Anbieter (Fireworks AI, AMD LLM Gateway) für zu große Modelle weiterleiten, wobei lokale NPU-/iGPU-Inferenz der Standardweg ist',
           'War beim Start nur für Windows verfügbar; Version 0.14 (11. Dezember 2025) fügte native Unterstützung für Linux und macOS hinzu — GAIA ist damit kein Windows-exklusives Tool mehr, auch wenn die NPU-Beschleunigung weiterhin AMD-Hardware-exklusiv bleibt',
           'GitHub-Repository zeigt 1.539 Sterne, geprüft gegen [github.com/amd/gaia](https://github.com/amd/gaia) am 5. September 2026',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu AMD GAIAs Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie GAIA im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -646,9 +640,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Était réservé à Windows au lancement ; la version 0.14 (11 décembre 2025) a ajouté la prise en charge native de Linux et macOS — GAIA n\'est plus un outil exclusif à Windows, même si son accélération NPU reste exclusive au matériel AMD',
           'Le dépôt GitHub affiche 1 539 étoiles, vérifiées sur [github.com/amd/gaia](https://github.com/amd/gaia) le 5 septembre 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche d\'AMD GAIA dans le [répertoire des logiciels IA locaux](/fr/directory) — consultez cette page pour voir comment GAIA se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-amd-gaia',
@@ -930,9 +921,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Puede enviar opcionalmente solicitudes a proveedores en la nube (Fireworks AI, AMD LLM Gateway) para modelos demasiado grandes para ejecutarse localmente, aunque la inferencia local por NPU/iGPU es la vía predeterminada',
           'Era exclusivo de Windows al lanzarse; la versión 0.14 (11 de diciembre de 2025) añadió soporte nativo para Linux y macOS — GAIA ya no es una herramienta exclusiva de Windows, aunque su aceleración por NPU sigue siendo exclusiva de hardware AMD',
           'El repositorio de GitHub muestra 1.539 estrellas, verificadas en [github.com/amd/gaia](https://github.com/amd/gaia) el 5 de septiembre de 2026',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la ficha de AMD GAIA en el [Directorio de software de IA local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara GAIA con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1216,9 +1204,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Era exclusivo do Windows no lançamento; a versão 0.14 (11 de dezembro de 2025) adicionou suporte nativo a Linux e macOS — o GAIA deixou de ser uma ferramenta exclusiva do Windows, embora sua aceleração por NPU continue exclusiva de hardware AMD',
           'O repositório no GitHub mostra 1.539 estrelas, verificadas em [github.com/amd/gaia](https://github.com/amd/gaia) em 5 de setembro de 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do AMD GAIA no [Diretório de Software de IA Local](/pt/directory) — veja essa página para comparar rapidamente o GAIA com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-amd-gaia',
@@ -1500,9 +1485,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ローカル実行できない大きなモデルの場合、オプションでクラウドプロバイダー(Fireworks AI、AMD LLM Gateway)にリクエストをルーティング可能。ただし既定はローカルNPU/iGPU推論',
           '発売当初はWindows専用だったが、バージョン0.14(2025年12月11日)でLinuxとmacOSのネイティブ対応を追加 — NPU高速化はAMDハードウェア専用のままだが、GAIAはもはやWindows専用ツールではない',
           'GitHubリポジトリは2026年9月5日時点で[github.com/amd/gaia](https://github.com/amd/gaia)で検証された1,539個のスターを表示',
-        ],
-        callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるAMD GAIAのエントリーを深掘りする姉妹記事です。GAIAが他の数十のローカルAIツールと比べてどう位置づけられるか、一目で確認できます。' },
         ],
       },
       overview: {
@@ -1786,9 +1768,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '发布之初仅支持Windows;0.14版本(2025年12月11日)新增了对Linux和macOS的原生支持——GAIA不再是Windows专属工具,尽管其NPU加速依然专属于AMD硬件',
           'GitHub仓库显示1,539个星标,已于2026年9月5日在[github.com/amd/gaia](https://github.com/amd/gaia)验证',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中AMD GAIA词条的深度补充——请访问该页面,一目了然地了解GAIA与其他数十种本地AI工具的对比情况。' },
-        ],
       },
       overview: {
         id: 'what-is-amd-gaia',
@@ -2071,9 +2050,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'كان حصريًا لنظام Windows عند إطلاقه؛ وأضاف الإصدار 0.14 (11 ديسمبر 2025) دعمًا أصليًا لـ Linux وmacOS — لم يعد GAIA أداة حصرية لـ Windows، رغم أن تسريع NPU لديه يبقى حصريًا لأجهزة AMD',
           'يُظهر مستودع GitHub 1,539 نجمة، تم التحقق منها عبر [github.com/amd/gaia](https://github.com/amd/gaia) في 5 سبتمبر 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لقيد AMD GAIA في [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن GAIA بلمحة سريعة بعشرات من أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-amd-gaia',
@@ -2355,9 +2331,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '로컬에서 실행하기에 너무 큰 모델의 경우 클라우드 제공업체(Fireworks AI, AMD LLM Gateway)로 요청을 선택적으로 라우팅할 수 있지만, 로컬 NPU/iGPU 추론이 기본 경로',
           '출시 당시에는 Windows 전용이었으나, 버전 0.14(2025년 12월 11일)에서 Linux 및 macOS 네이티브 지원이 추가됨 — GAIA는 더 이상 Windows 전용 도구가 아니지만, NPU 가속은 여전히 AMD 하드웨어 전용',
           'GitHub 저장소는 2026년 9월 5일 [github.com/amd/gaia](https://github.com/amd/gaia)에서 검증된 1,539개의 스타를 표시',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 AMD GAIA 항목을 심층적으로 다루는 자매 글입니다. GAIA가 수십 개의 다른 로컬 AI 도구와 비교했을 때 어떤 위치에 있는지 한눈에 확인하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

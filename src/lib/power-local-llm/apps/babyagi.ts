@@ -36,4 +36,6 @@ export const app: ToolRecord = {
   reviewSlug: 'babyagi-review-autonomous-agent', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v0.1.0', versionSourceUrl: 'https://github.com/yoheinakajima/babyagi/releases/tag/v0.1.0' },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-01-31', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/yoheinakajima/babyagi',
 }

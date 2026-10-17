@@ -42,4 +42,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { builtInEngine: true, ollama: true, fileChat: true, voice: true, offline: true, importModels: true, modelDownloads: true, visionInput: true },
   lastVerifiedDate: '2026-09-12',
+  lastUpstreamUpdate: '2026-10-05', // App Store version history, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/on-device-ai/id6497060890',
 }

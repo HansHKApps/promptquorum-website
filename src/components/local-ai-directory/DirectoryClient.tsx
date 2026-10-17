@@ -34,17 +34,18 @@ import { emptyFilterState, machineCategory, type FilterState, type HardwareProfi
 import { cn } from '@/lib/utils'
 import { t, machineLabelsFromUi, deviceCategoryLabelsFromUi, type DirUi } from './directory-ui-client'
 import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
+import { INSTALL_EFFORT_KEYS } from '@/lib/power-local-llm/apps/types'
 
 const DESKTOP_MACHINES: readonly MachineType[] = ['dgpu', 'apple', 'cpu']
 const MOBILE_MACHINES: readonly MachineType[] = ['ios', 'android']
 
 const OS_FILTER_VALUES: readonly string[] = ['mac', 'win', 'linux', 'ios', 'android', 'web']
 const PRICE_FILTER_VALUES: readonly string[] = ['free', 'freemium', 'paid']
+const INSTALL_FILTER_VALUES: readonly string[] = INSTALL_EFFORT_KEYS
 
 // Reads a filtered-view deep link produced by the MCP server's search_apps/
 // get_app_details "directoryUrl" (see src/lib/power-local-llm/app-search.ts's
-// directoryUrlFor) — e.g. /power-local-llm/local-llm-software-directory-2026
-// ?category=editing-upscaling&os=mac&price=free. Same one-time
+// directoryUrlFor) — e.g. /directory?category=editing-upscaling&os=mac&price=free. Same one-time
 // hydration-divergence pattern as `want`/`hw` below: server always sees no
 // params, client may diverge once on first render. Unknown/invalid values
 // are dropped rather than passed through blindly.
@@ -58,6 +59,8 @@ function filtersFromUrl(): FilterState {
   if (os && OS_FILTER_VALUES.includes(os)) state.platforms.add(os)
   const price = params.get('price')
   if (price && PRICE_FILTER_VALUES.includes(price)) state.price.add(price)
+  const install = params.get('install')
+  if (install && INSTALL_FILTER_VALUES.includes(install)) state.install.add(install)
   return state
 }
 
@@ -135,7 +138,45 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
     setHwWidgetExpanded(true)
     document.getElementById('hw-profile-widget')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-  const [openSlug, setOpenSlug] = useState<string | null>(null)
+  // Deep-linkable from `?tool=<slug>` (the review pages' "View X in the
+  // directory" and similar-tool links): opens that tool's drawer on load. Same
+  // one-time hydration-divergence pattern as `want`/`hw` above — the server
+  // always sees null; an unknown slug is ignored rather than passed through.
+  const [openSlug, setOpenSlug] = useState<string | null>(() => {
+    if (typeof window === 'undefined') return null
+    const fromUrl = new URLSearchParams(window.location.search).get('tool')
+    return fromUrl && apps.some((a) => a.slug === fromUrl) ? fromUrl : null
+  })
+  // Client-side navigation (a <Link> from a review page, the About page, ...) renders this component
+  // BEFORE the router has updated window.location, so the lazy initialisers above read the PREVIOUS
+  // URL and miss every deep-link param — the link "worked" but opened the bare directory. Effects run
+  // after the URL has committed, so re-read it once on mount and apply whatever the initialisers
+  // missed. Direct loads are unaffected (the initialisers already matched), and a value the viewer
+  // already chose is never overridden.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    let scroll = false
+
+    const tool = params.get('tool')
+    if (tool && apps.some((a) => a.slug === tool)) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setOpenSlug((cur) => cur ?? tool)
+    }
+    const wantParam = params.get('want')
+    if (wantParam && (WANT_ORDER as readonly string[]).includes(wantParam)) {
+      setWant((cur) => cur ?? wantParam)
+      scroll = true
+    }
+    const fromUrl = filtersFromUrl()
+    if (fromUrl.category.size || fromUrl.platforms.size || fromUrl.price.size || fromUrl.install.size) {
+      setFilters((cur) => (cur.category.size || cur.platforms.size || cur.price.size || cur.install.size ? cur : fromUrl))
+      scroll = true
+    }
+    if (params.get('hw') === '1') setHwWidgetExpanded(true)
+    if (scroll) document.getElementById('directory-toolbar')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    // Mount-only on purpose: `apps` is a static prop and the filters/state are read via updaters.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   // Filter panel collapsed by default (page-redesign-v2.md §2: "sticky
   // filter bar ... panel (collapsed by default)").
   const [filtersOpen, setFiltersOpen] = useState(false)
@@ -171,17 +212,21 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
     handleMachineChange(next === 'mobile' ? 'ios' : 'dgpu')
   }
 
-  const query = useMemo(() => ({ filters, search, want }), [filters, search, want])
+  // "Only apps that run on my machine" — on by default, so a Mac owner never
+  // sees Windows-only tools. Per-viewer convenience, not persisted.
+  const [fitMyMachine, setFitMyMachine] = useState(true)
+  const fit = useMemo(() => (fitMyMachine ? { machine, profile } : null), [fitMyMachine, machine, profile])
+  const query = useMemo(() => ({ filters, search, want, fit }), [filters, search, want, fit])
 
   const filtered = useMemo(() => filterTools(apps, query), [apps, query])
   const sorted = useMemo(() => sortTools(filtered, sortKey, sortDir, machine), [filtered, sortKey, sortDir, machine])
 
   const countsByGroup = useMemo(() => {
-    const groups: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price', 'mcp']
+    const groups: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price', 'install', 'mcp']
     return Object.fromEntries(groups.map((g) => [g, countsForGroup(apps, query, g)])) as Record<keyof FilterState, ReturnType<typeof countsForGroup>>
   }, [apps, query])
 
-  const wantCounts = useMemo(() => countsForUses(apps, { filters, search }), [apps, filters, search])
+  const wantCounts = useMemo(() => countsForUses(apps, { filters, search, fit }), [apps, filters, search, fit])
 
   const localityCounts = useMemo(() => countByLocality(filtered), [filtered])
 
@@ -360,6 +405,16 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
                 <option key={m} value={m}>{MACHINE_LABEL[m]}</option>
               ))}
             </select>
+          </label>
+
+          <label className="flex items-center gap-2 text-sm text-text-secondary cursor-pointer">
+            <input
+              type="checkbox"
+              checked={fitMyMachine}
+              onChange={(e) => { setFitMyMachine(e.target.checked); resetPaging() }}
+              className="h-4 w-4 accent-primary"
+            />
+            {t('fitMyMachineLabel', ui)}
           </label>
 
           <HardwareProfileWidget

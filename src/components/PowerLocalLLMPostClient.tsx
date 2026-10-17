@@ -40,6 +40,9 @@ import { CopyButton } from '@/components/CopyButton'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 import { getCalloutLabel } from '@/lib/calloutLabels'
 import { StarIcon } from '@/components/local-ai-directory/icons'
+import { DirectoryBlock } from '@/components/local-ai-directory/DirectoryBlock'
+import { DirectoryPopupLoader } from '@/components/local-ai-directory/DirectoryPopupLoader'
+import type { DirectoryFunnelData } from '@/lib/power-local-llm/directory-funnel'
 import { t as directoryT, type DirUi } from '@/components/local-ai-directory/directory-ui-client'
 
 // Lazy-loaded, client-only: EdgeHardwareSelector is a self-contained,
@@ -103,6 +106,13 @@ interface Props {
     siblings: { name: string; reviewPath: string }[]
     ui: { blockTitle: string; blockComparedIn: string; blockCategory: string; blockAlsoReviewed: string }
   }
+  /**
+   * Set only on a tool's dedicated review (page-helpers.tsx, via
+   * buildDirectoryFunnel): the pre-resolved data for the two "Part of the Local
+   * AI Directory" blocks (after Quick Answer, before Related Reading). Undefined
+   * on every non-review article, which therefore renders no block.
+   */
+  directoryFunnel?: DirectoryFunnelData
 }
 
 // Section header translations
@@ -632,12 +642,19 @@ interface LightboxImage {
 // Data is generated at build time by scripts/generate-tool-article-index.mjs
 // (src/generated/tool-article-index.json) — matched articles are always the
 // EN edition (first-pass scope, see TASK-related-articles-block.md Step 5).
-function RelatedArticlesDisclosure({ toolName, lang }: { toolName: string; lang: Language }) {
+function RelatedArticlesDisclosure({ toolName, lang, pageSlug }: { toolName: string; lang: Language; pageSlug?: string }) {
   const entry = (toolArticleIndex as ToolArticleIndex)[toolName]
   if (!entry || entry.articles.length === 0) return null
 
-  const about = entry.articles.filter((a) => a.tier === 'about')
-  const mentioned = entry.articles.filter((a) => a.tier === 'mentioned')
+  // A page must never list itself ("Return Editor Review" under PrivateGPT on the Return Editor
+  // review). The index stores canonical, unprefixed URLs, so compare on the URL.
+  const ownUrl = pageSlug ? `/power-local-llm/${pageSlug}` : null
+  const articles = ownUrl ? entry.articles.filter((a) => a.url !== ownUrl) : entry.articles
+  const hidden = entry.articles.length - articles.length
+  if (articles.length === 0) return null
+
+  const about = articles.filter((a) => a.tier === 'about')
+  const mentioned = articles.filter((a) => a.tier === 'mentioned')
   const hasAbout = about.length > 0
 
   const summaryTemplate = hasAbout
@@ -689,14 +706,14 @@ function RelatedArticlesDisclosure({ toolName, lang }: { toolName: string; lang:
       )}
       {entry.capped && (
         <p className="mt-1.5 text-xs text-text-secondary italic">
-          {moreTemplate.replace('{count}', String(entry.totalCount - entry.articles.length))}
+          {moreTemplate.replace('{count}', String(entry.totalCount - hidden - articles.length))}
         </p>
       )}
     </details>
   )
 }
 
-function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode; compareData?: CategoryCompareData }) {
+function SectionBlock({ section, colors, id, lang, renderLinks, compareData, pageSlug }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode; compareData?: CategoryCompareData; pageSlug?: string }) {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
   const tableScrollRef = useRef<HTMLDivElement>(null)
   const [tableIsScrollable, setTableIsScrollable] = useState(false)
@@ -1078,7 +1095,10 @@ function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: {
           {section.rows.map((row, i) => {
             const [nameCol, ...restCols] = section.columns!
             const name = row[nameCol] ?? row['0'] ?? ''
-            const itemId = slugifyAnchor(name.replace(/\*\*/g, ''))
+            // Plain text of the name: link markup (hand-authored or added by competitor-links.ts)
+            // must not leak into the anchor id or the related-articles lookup.
+            const plainName = name.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/\*\*/g, '')
+            const itemId = slugifyAnchor(plainName)
             return (
               <div key={i} id={itemId || undefined} className="border border-primary/10 rounded-xl p-4 scroll-mt-24">
                 <h3 className="text-lg font-bold text-text-primary mb-2">
@@ -1107,7 +1127,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: {
                     )
                   })}
                 </dl>
-                <RelatedArticlesDisclosure toolName={name.replace(/\*\*/g, '')} lang={lang} />
+                <RelatedArticlesDisclosure toolName={plainName} lang={lang} pageSlug={pageSlug} />
               </div>
             )
           })}
@@ -1173,6 +1193,20 @@ function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: {
             </p>
           )}
         </div>
+      )}
+
+      {/* "Compare in directory" under a review's competitor/comparison table or list (competitor-links.ts) */}
+      {section.directoryCompare && (
+        <p className="my-3 text-sm">
+          <Link
+            href={section.directoryCompare.href}
+            className="font-medium text-primary underline underline-offset-2 hover:no-underline"
+            data-directory-compare
+          >
+            {section.directoryCompare.label}
+            <span aria-hidden="true" className="ms-1 inline-block rtl:rotate-180">→</span>
+          </Link>
+        </p>
       )}
 
       {/* Code block */}
@@ -1372,7 +1406,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: {
   )
 }
 
-function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs, directorySlot, founderReviewed, compareData, categoryLinks }: Props) {
+function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs, directorySlot, founderReviewed, compareData, categoryLinks, directoryFunnel }: Props) {
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
   }
@@ -1575,6 +1609,9 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
           )
         })()}
 
+        {directoryFunnel && <DirectoryBlock data={directoryFunnel} position="start" />}
+        {directoryFunnel && <DirectoryPopupLoader popup={directoryFunnel.popup} dir={directoryFunnel.dir} />}
+
         {/* Quick Answer Block — AI-crawler-optimized featured snippet */}
         {article.quickAnswer && (
           <section className="quick-answer bg-primary/5 border border-primary/20 rounded-xl p-6 mb-6">
@@ -1717,9 +1754,18 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
                 // article data but must not render a second time here.
                 return null
               }
-              return (
-                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} compareData={compareData} />
+              const sectionEl = (
+                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} compareData={compareData} pageSlug={slug} />
               )
+              if (directoryFunnel && key === 'relatedReading') {
+                return (
+                  <Fragment key={key}>
+                    <DirectoryBlock data={directoryFunnel} position="end" />
+                    {sectionEl}
+                  </Fragment>
+                )
+              }
+              return sectionEl
             })
           })()}
         </article>

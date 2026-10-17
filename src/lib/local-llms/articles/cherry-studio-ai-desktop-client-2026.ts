@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Get Cherry Studio',
         content: [
           '**Cherry Studio is a free download for Windows, macOS, and Linux from the official site or from GitHub releases.** No account is required to install it.',
-          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), which lists Cherry Studio with the maker\'s own statement and compares it with other local-AI apps.',
+          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/directory), which lists Cherry Studio with the maker\'s own statement and compares it with other local-AI apps.',
         ],
         columns: ['Platform', 'Get It'],
         rows: [
@@ -281,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — Cherry Studio listed alongside other local-AI apps, with the maker\'s statement.',
+          '[The Complete Local LLM Software Directory](/directory) — Cherry Studio listed alongside other local-AI apps, with the maker\'s statement.',
           '[Best Local LLM Frontends](/local-llms/best-local-llm-frontends) — how Cherry Studio compares to Open WebUI, LobeChat, and other client options.',
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — the two local runtimes Cherry Studio connects to most often.',
           '[LobeChat, Big-AGI, NextChat, Page Assist, Chatbox Compared](/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared) — more multi-provider chat clients.',
@@ -427,7 +427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cherry Studio herunterladen',
         content: [
           '**Cherry Studio ist ein kostenloser Download für Windows, macOS und Linux von der offiziellen Website oder von den GitHub-Releases.** Für die Installation ist kein Konto erforderlich.',
-          'Diese Rezension ergänzt das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) von PromptQuorum, das Cherry Studio mit der eigenen Aussage des Herstellers auflistet und mit anderen lokalen KI-Apps vergleicht.',
+          'Diese Rezension ergänzt das [Local LLM Software Directory](/de/directory) von PromptQuorum, das Cherry Studio mit der eigenen Aussage des Herstellers auflistet und mit anderen lokalen KI-Apps vergleicht.',
         ],
         columns: ['Plattform', 'Bezugsquelle'],
         rows: [
@@ -581,7 +581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Ressourcen',
         items: [
-          '[Das vollständige Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — Cherry Studio neben anderen lokalen KI-Apps aufgelistet, mit der Aussage des Herstellers.',
+          '[Das vollständige Local LLM Software Directory](/de/directory) — Cherry Studio neben anderen lokalen KI-Apps aufgelistet, mit der Aussage des Herstellers.',
           '[Best Local LLM Frontends](/de/local-llms/best-local-llm-frontends) — wie Cherry Studio im Vergleich zu Open WebUI, LobeChat und anderen Client-Optionen abschneidet.',
           '[Ollama vs LM Studio](/de/local-llms/ollama-vs-lm-studio) — die zwei lokalen Laufzeitumgebungen, mit denen sich Cherry Studio am häufigsten verbindet.',
           '[LobeChat, Big-AGI, NextChat, Page Assist, Chatbox im Vergleich](/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared) — weitere Multi-Provider-Chat-Clients.',
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Obtener Cherry Studio',
         content: [
           '**Cherry Studio se descarga gratis para Windows, macOS y Linux desde el sitio oficial o desde las versiones de GitHub.** No se necesita cuenta para instalarlo.',
-          'Este análisis complementa el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) de PromptQuorum, que incluye Cherry Studio con la declaración del propio creador y lo compara con otras apps de IA local.',
+          'Este análisis complementa el [Directorio de software de LLM local](/es/directory) de PromptQuorum, que incluye Cherry Studio con la declaración del propio creador y lo compara con otras apps de IA local.',
         ],
         columns: ['Plataforma', 'Cómo obtenerlo'],
         rows: [
@@ -881,7 +881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[El directorio completo de software de LLM local](/es/power-local-llm/local-llm-software-directory) — Cherry Studio junto a otras apps de IA local, con la declaración del creador.',
+          '[El directorio completo de software de LLM local](/es/directory) — Cherry Studio junto a otras apps de IA local, con la declaración del creador.',
           '[Best Local LLM Frontends](/es/local-llms/best-local-llm-frontends) — cómo se compara Cherry Studio con Open WebUI, LobeChat y otras opciones de cliente.',
           '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) — los dos runtimes locales con los que Cherry Studio se conecta más a menudo.',
           '[LobeChat, Big-AGI, NextChat, Page Assist y Chatbox comparados](/es/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared) — más clientes de chat multi-proveedor.',
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Obtenir Cherry Studio',
         content: [
           '**Cherry Studio se télécharge gratuitement pour Windows, macOS et Linux depuis le site officiel ou depuis les releases GitHub.** Aucun compte n\'est requis pour l\'installer.',
-          'Cet avis accompagne le [répertoire des logiciels de LLM locaux](/fr/power-local-llm/local-llm-software-directory) de PromptQuorum, qui référence Cherry Studio avec la déclaration de l\'éditeur et le compare à d\'autres applications d\'IA locale.',
+          'Cet avis accompagne le [répertoire des logiciels de LLM locaux](/fr/directory) de PromptQuorum, qui référence Cherry Studio avec la déclaration de l\'éditeur et le compare à d\'autres applications d\'IA locale.',
         ],
         columns: ['Plateforme', 'Où l\'obtenir'],
         rows: [
@@ -1181,7 +1181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Le répertoire complet des logiciels de LLM locaux](/fr/power-local-llm/local-llm-software-directory) — Cherry Studio référencé parmi d\'autres applications d\'IA locale, avec la déclaration de l\'éditeur.',
+          '[Le répertoire complet des logiciels de LLM locaux](/fr/directory) — Cherry Studio référencé parmi d\'autres applications d\'IA locale, avec la déclaration de l\'éditeur.',
           '[Best Local LLM Frontends](/fr/local-llms/best-local-llm-frontends) — comment Cherry Studio se compare à Open WebUI, LobeChat et d\'autres clients.',
           '[Ollama vs LM Studio](/fr/local-llms/ollama-vs-lm-studio) — les deux runtimes locaux auxquels Cherry Studio se connecte le plus souvent.',
           '[LobeChat, Big-AGI, NextChat, Page Assist, Chatbox comparés](/fr/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared) — d\'autres clients de chat multi-fournisseurs.',
@@ -1327,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cherry Studioの入手方法',
         content: [
           '**Cherry Studioは、公式サイトまたはGitHubのリリースページから、Windows、macOS、Linux向けに無料でダウンロードできます。** インストールにアカウントは不要です。',
-          'このレビューは、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)の姉妹記事です。同ディレクトリでは、Cherry Studioを開発元自身の声明とともに掲載し、他のローカルAIアプリと比較しています。',
+          'このレビューは、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/directory)の姉妹記事です。同ディレクトリでは、Cherry Studioを開発元自身の声明とともに掲載し、他のローカルAIアプリと比較しています。',
         ],
         columns: ['プラットフォーム', '入手先'],
         rows: [
@@ -1481,7 +1481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェア完全ディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 開発元の声明とともに、他のローカルAIアプリと並べて掲載したCherry Studio。',
+          '[ローカルLLMソフトウェア完全ディレクトリ](/ja/directory) — 開発元の声明とともに、他のローカルAIアプリと並べて掲載したCherry Studio。',
           '[Best Local LLM Frontends](/ja/local-llms/best-local-llm-frontends) — Cherry StudioをOpen WebUI、LobeChatなどのクライアントの選択肢と比較。',
           '[Ollama vs LM Studio](/ja/local-llms/ollama-vs-lm-studio) — Cherry Studioが最もよく接続する2つのローカルランタイム。',
           '[LobeChat、Big-AGI、NextChat、Page Assist、Chatbox比較](/ja/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared) — その他のマルチプロバイダー対応チャットクライアント。',
@@ -1627,7 +1627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '获取Cherry Studio',
         content: [
           '**Cherry Studio可从官网或GitHub发布页免费下载,支持Windows、macOS和Linux。** 安装无需账号。',
-          '本评测是PromptQuorum[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)的配套文章,该目录收录了Cherry Studio及其开发团队的自述,并与其他本地AI应用做了对比。',
+          '本评测是PromptQuorum[本地LLM软件目录](/zh/directory)的配套文章,该目录收录了Cherry Studio及其开发团队的自述,并与其他本地AI应用做了对比。',
         ],
         columns: ['平台', '获取方式'],
         rows: [
@@ -1781,7 +1781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[完整的本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — Cherry Studio与其他本地AI应用一同收录,并附有开发团队的自述。',
+          '[完整的本地LLM软件目录](/zh/directory) — Cherry Studio与其他本地AI应用一同收录,并附有开发团队的自述。',
           '[Best Local LLM Frontends](/zh/local-llms/best-local-llm-frontends) — Cherry Studio与Open WebUI、LobeChat等客户端的对比。',
           '[Ollama vs LM Studio](/zh/local-llms/ollama-vs-lm-studio) — Cherry Studio最常连接的两个本地运行环境。',
           '[LobeChat、Big-AGI、NextChat、Page Assist、Chatbox对比](/zh/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared) — 更多多提供商聊天客户端。',
@@ -1927,7 +1927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como obter o Cherry Studio',
         content: [
           '**O Cherry Studio é um download gratuito para Windows, macOS e Linux, disponível no site oficial ou nas releases do GitHub.** Nenhuma conta é necessária para instalá-lo.',
-          'Esta análise é complementar ao [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) do PromptQuorum, que lista o Cherry Studio com a declaração do próprio fabricante e o compara com outros apps de IA local.',
+          'Esta análise é complementar ao [Diretório de Software de LLM Local](/pt/directory) do PromptQuorum, que lista o Cherry Studio com a declaração do próprio fabricante e o compara com outros apps de IA local.',
         ],
         columns: ['Plataforma', 'Como obter'],
         rows: [
@@ -2081,7 +2081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[O Diretório Completo de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — Cherry Studio listado junto com outros apps de IA local, com a declaração do fabricante.',
+          '[O Diretório Completo de Software de LLM Local](/pt/directory) — Cherry Studio listado junto com outros apps de IA local, com a declaração do fabricante.',
           '[Best Local LLM Frontends](/pt/local-llms/best-local-llm-frontends) — como o Cherry Studio se compara ao Open WebUI, LobeChat e outras opções de cliente.',
           '[Ollama vs LM Studio](/pt/local-llms/ollama-vs-lm-studio) — os dois runtimes locais aos quais o Cherry Studio mais se conecta.',
           '[LobeChat, Big-AGI, NextChat, Page Assist, Chatbox comparados](/pt/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared) — mais clientes de chat multiprovedor.',
@@ -2227,7 +2227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الحصول على Cherry Studio',
         content: [
           '**Cherry Studio تنزيل مجاني لأنظمة Windows وmacOS وLinux من الموقع الرسمي أو من إصدارات GitHub.** لا حاجة لحساب لتثبيته.',
-          'هذه المراجعة مرافقة لـ [دليل برمجيات النماذج المحلية](/ar/power-local-llm/local-llm-software-directory) من PromptQuorum، الذي يدرج Cherry Studio مع بيان الجهة المطوّرة نفسها ويقارنه بتطبيقات الذكاء الاصطناعي المحلية الأخرى.',
+          'هذه المراجعة مرافقة لـ [دليل برمجيات النماذج المحلية](/ar/directory) من PromptQuorum، الذي يدرج Cherry Studio مع بيان الجهة المطوّرة نفسها ويقارنه بتطبيقات الذكاء الاصطناعي المحلية الأخرى.',
         ],
         columns: ['النظام', 'رابط التنزيل'],
         rows: [
@@ -2381,7 +2381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات النماذج المحلية الكامل](/ar/power-local-llm/local-llm-software-directory) — Cherry Studio مدرج إلى جانب تطبيقات الذكاء الاصطناعي المحلية الأخرى، مع بيان الجهة المطوّرة.',
+          '[دليل برمجيات النماذج المحلية الكامل](/ar/directory) — Cherry Studio مدرج إلى جانب تطبيقات الذكاء الاصطناعي المحلية الأخرى، مع بيان الجهة المطوّرة.',
           '[Best Local LLM Frontends](/ar/local-llms/best-local-llm-frontends) — كيف يقارن Cherry Studio بـ Open WebUI وLobeChat وخيارات عملاء أخرى.',
           '[Ollama vs LM Studio](/ar/local-llms/ollama-vs-lm-studio) — بيئتا التشغيل المحليتان اللتان يتصل بهما Cherry Studio في أغلب الأحيان.',
           '[مقارنة LobeChat وBig-AGI وNextChat وPage Assist وChatbox](/ar/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared) — المزيد من عملاء المحادثة متعددي المزودين.',
@@ -2527,7 +2527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cherry Studio 받기',
         content: [
           '**Cherry Studio는 공식 사이트 또는 GitHub 릴리스에서 Windows, macOS, Linux용으로 무료 다운로드할 수 있습니다.** 설치에는 계정이 필요하지 않습니다.',
-          '이 리뷰는 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)와 짝을 이루는 글입니다. 이 디렉터리는 개발사의 직접 발언과 함께 Cherry Studio를 소개하고 다른 로컬 AI 앱과 비교합니다.',
+          '이 리뷰는 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)와 짝을 이루는 글입니다. 이 디렉터리는 개발사의 직접 발언과 함께 Cherry Studio를 소개하고 다른 로컬 AI 앱과 비교합니다.',
         ],
         columns: ['플랫폼', '받는 곳'],
         rows: [
@@ -2681,7 +2681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 전체 목록](/ko/power-local-llm/local-llm-software-directory) — 개발사의 발언과 함께 다른 로컬 AI 앱과 나란히 소개된 Cherry Studio.',
+          '[로컬 LLM 소프트웨어 디렉터리 전체 목록](/ko/directory) — 개발사의 발언과 함께 다른 로컬 AI 앱과 나란히 소개된 Cherry Studio.',
           '[Best Local LLM Frontends](/ko/local-llms/best-local-llm-frontends) — Cherry Studio가 Open WebUI, LobeChat 등 다른 클라이언트 옵션과 어떻게 비교되는지.',
           '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio) — Cherry Studio가 가장 자주 연결하는 두 로컬 런타임.',
           '[LobeChat, Big-AGI, NextChat, Page Assist, Chatbox 비교](/ko/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared) — 더 많은 멀티 프로바이더 채팅 클라이언트.',

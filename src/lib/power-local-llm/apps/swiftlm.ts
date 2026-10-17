@@ -25,6 +25,8 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat', 'serve'],
   url: 'github.com/SharpAI/SwiftLM',
+  installEffort: 'one-command', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README "Fastest: Download Pre-built Binary" is a Releases tarball (SwiftLM-b836-macos-arm64.tar.gz) run from the terminal. Releases also ship SwiftBuddy-macOS-*.dmg, but the README does not present it as the install path, so it is not counted. checked 2026-10-09',
   tagline: {
     en: 'Native Swift inference server for Apple Silicon that serves MLX models through a strict OpenAI-compatible API, with no Python required.',
     de: 'Nativer Swift-Inferenz-Server für Apple Silicon, der MLX-Modelle über eine strikt OpenAI-kompatible API bereitstellt – ganz ohne Python.',
@@ -40,4 +42,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { openaiApi: true, appleSilicon: true },
   lastVerifiedDate: '2026-09-18',
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/SharpAI/SwiftLM',
 }

@@ -522,6 +522,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'mission-control-review',
   'kserve-review',
   'baserow-review',
+  'firecrawl-review',
   'shimmy-review',
   'longmemory-review',
   'lorax-review',
@@ -554,21 +555,36 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // LLM Hub review (Mobile & Edge LLMs) — 2026-10-03
   'llm-hub-review',
+  'lm-playground-review',
+  'localmind-review',
 
   // TokForge review (Mobile & Edge LLMs) — 2026-10-03
   'tokforge-review',
+  'local-ai-geetmark-review',
+  'local-ai-mail-review',
+  'pcai-photo-retouch-review',
+  'honey-llm-review',
+  'friedrichai-review',
+  'spiritbox-ultimate-review',
 
   // Oscilla review (Mobile & Edge LLMs) — 2026-10-04
   'oscilla-review',
 
   // Tina review (Mobile & Edge LLMs) — 2026-10-04
   'tina-review',
+  'return-editor-review',
 
   // MLXHub review (Mobile & Edge LLMs) — 2026-10-05
   'mlxhub-review',
 
   // Local AI Chat Pocket review (Mobile & Edge LLMs) — 2026-10-06
   'local-ai-chat-pocket-review',
+  // AnyLLM review (Mobile & Edge LLMs) — 2026-10-17
+  'anyllm-review',
+
+  // AI CutoutWerk review (Image editing, iOS/macOS) — 2026-10-16
+  'ai-cutoutwerk-review',
+  'openmontage-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

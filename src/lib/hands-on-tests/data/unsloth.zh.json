@@ -1,0 +1,1800 @@
+{
+  "id": "pq-test-unsloth-2026-10-09",
+  "standard_version": "0.1",
+  "locale": "zh",
+  "app": {
+    "name": "Unsloth",
+    "slug": "unsloth",
+    "vendor": "Not named on the pages read (GitHub organisation: unslothai)",
+    "category": "本地 AI：运行和训练模型（桌面应用，'Unsloth Studio'）",
+    "platform": "macOS（DMG）",
+    "pricing_url": "https://unsloth.ai"
+  },
+  "title": "24 GB Mac 上的 Unsloth：界面精致，但在生成第一张图之前就内存不足",
+  "page_title": "Unsloth 测试",
+  "dek": "在 24 GB Mac 上的上手测试，目标是生成图片。聊天能用；图像模型因内存不足被拒绝加载，没有生成任何图片。",
+  "status": "部分完成",
+  "started": "2026-10-09",
+  "ended": null,
+  "meta": [
+    [
+      "应用",
+      "Unsloth 桌面应用（Unsloth Studio）。笔记里写作'Unsloth'、'Unslothh'和'Onslaught'（语音转写）；本报告采用'Unsloth'。",
+      "observed"
+    ],
+    [
+      "版本",
+      "安装日志：'unsloth 2026.8.18 -> 2026.10.3 available, updating'。更新后使用的版本假定为 2026.10.3。窗口带有 BETA 标记。桌面应用自身的版本未记录。",
+      "assumption"
+    ],
+    [
+      "测试者",
+      "Hans Kuepper，PromptQuorum 创始人",
+      null
+    ],
+    [
+      "开始时间",
+      "2026 年 10 月 9 日下午 1 点（按笔记）。有一张截图显示下午 5:13，所以测试至少持续了四个小时。",
+      "observed"
+    ],
+    [
+      "结束时间",
+      "未记录",
+      null
+    ],
+    [
+      "硬件",
+      "24 GB 的 Mac。笔记写的是'macOS M3 24 GB'，后来又写'M3 24 GB Pro MacBook'。应用的 Model hub 显示'24 GiB RAM'、'0 GiB VRAM + 24 GiB shared'和'12/12 CPU'。具体芯片未记录。",
+      "observed"
+    ],
+    [
+      "系统",
+      "macOS；版本未记录",
+      null
+    ],
+    [
+      "安装状态",
+      "不是全新安装。安装日志写着'Updating existing Unsloth install'和'existing install detected'；测试者说'和以前一样'。此前用过，可能就是应用已经认得 LM Studio 和 Ollama 模型的原因。",
+      "observed"
+    ],
+    [
+      "下载",
+      "24 MB 的 DMG（按测试者读到的数值）。首次启动时会运行一个依赖安装步骤（见第 1 章）。",
+      "observed"
+    ],
+    [
+      "测试原因",
+      "想看看 Unsloth 怎么用，'尤其是图片功能'。测试者没打算用模型优化（训练）功能。",
+      null
+    ],
+    [
+      "测试目标",
+      "在 24 GB 的 Mac 上本地生成图片。过程中顺便试了聊天和模型中心。",
+      "observed"
+    ],
+    [
+      "使用的 AI 辅助",
+      "笔记里有一段几百字的纽约天际线提示词，其中的 Markdown 粗体标记表明它可能由 AI 撰写，但未经确认。聊天模型的回答（例如关于它从哪里得到模型）在这里没有作为依据。",
+      "assumption"
+    ]
+  ],
+  "disclosure": "测试者创办了 PromptQuorum（promptquorum.com），一个关于本地 AI 应用的内容网站和目录。Unsloth 收录在该目录中，网站上已有一篇单独撰写的评测页。笔记中没有与供应商联系、付款或赞助的记录。",
+  "verdict": {
+    "general": "应用看起来、用起来都很精致：24 MB 的安装包，会展示各个步骤的安装窗口，带硬件读数、大小警告和下载计时器的模型中心，以及能找到磁盘上已有的 LM Studio 和 Ollama 模型的聊天。一道计算题在 27B 模型上以 11.0 tokens/秒运行。但测试目标，也就是生成图片，没有达成。图像模型被拒绝加载，因为应用只把 2 GB（重启前）和 6 GB（重启后）算作可用，而需要约 17 GB；网页搜索和活动搜索都以'Ran out of memory'告终；有一次模型启动，几分钟都没有任何进度提示。测试者在开着许多其他应用的情况下做了最初几项测试，部分运行所用的模型和设置也没有记录。",
+    "fit": "目前不适合这位测试者的这台机器。用他的话说：'一切都能用，只是最终结果是我没能让它跑起来。'聊天和模型管理在 24 GB 上可以用；图片生成在这次测试中不行。训练没有试。测试者打算三到六个月后再看。"
+  },
+  "scores": [
+    [
+      "安装",
+      4,
+      "24 MB 的 DMG；安装窗口带详细日志。没有时间或磁盘占用估算；测试者估计要四到五分钟。测试是从已有的安装开始的。"
+    ],
+    [
+      "引导与模型选择",
+      3,
+      "选择器、模型中心、硬件读数、大小警告和下载计时器都很出色。选择器显示的是参数量而不是 GB；'7 GB'和'17 GB'的提示让测试者困惑。"
+    ],
+    [
+      "核心功能",
+      2,
+      "聊天回答了一道计算题。读取网页和活动搜索以内存不足错误告终；没有生成图片。"
+    ],
+    [
+      "引导与迭代",
+      3,
+      "拒绝加载的提示说明了原因，并给出了一个覆盖选项。模型启动时没有进度；也没有解释为什么'空闲'的是 7 GB。"
+    ],
+    [
+      "性能",
+      2,
+      "27B 4-bit 模型 11.0 tok/s；在开着其他应用的 24 GB Mac 上，34.4k 上下文时内存不足。"
+    ],
+    [
+      "文档",
+      null,
+      "未测试。"
+    ],
+    [
+      "信任与隐私",
+      null,
+      "未做审计。供应商宣称可以 100% 离线使用；网页搜索和下载需要联网。离线运行没有测试。"
+    ],
+    [
+      "卸载",
+      null,
+      "未测试。"
+    ]
+  ],
+  "scores_note": "评分是根据下方证据提出的建议值（1 = 差，5 = 很好），需由测试者确认。图片生成是测试者的目标，因为在这台机器上没有生成任何图片，所以得分较低。",
+  "tldr": [
+    [
+      "observed",
+      "聊天可以用：LM Studio 文件夹里的 27B 4-bit 模型以 11.0 tokens/秒回答了一道计算题。Ollama 和 LM Studio 的模型都会显示在应用里。"
+    ],
+    [
+      "measured",
+      "图像模型被拒绝加载：flux.2-klein 需要约 17 GB；应用算出约 2 GB 可用（7 GB 空闲），重启后约 6 GB 可用（11 GB 空闲）。没有生成图片。"
+    ],
+    [
+      "tester-view",
+      "界面很漂亮，一切都能用，但在 24 GB 的 Mac 上没有得到最终结果。"
+    ]
+  ],
+  "quotes": [
+    "一切都能用，只是最终结果是我没能让它跑起来。",
+    "对待客户最糟糕的方式，就是把活干了却不告诉客户进展。",
+    "三个月或六个月后我会再看一次。"
+  ],
+  "quote_note": "测试者笔记，由语音转写稍作整理。",
+  "moments": [
+    [
+      "24 MB 的安装包",
+      "测试者见过的最小的安装包。安装窗口会解释各个步骤，但不给时间或大小估算。",
+      "splash",
+      "chapter-install"
+    ],
+    [
+      "模型是从哪来的？",
+      "一个 27B 模型不到一分钟就启动了。加载提示显示了路径：LM Studio 的模型文件夹。",
+      "lm_load",
+      "chapter-first-chat"
+    ],
+    [
+      "20 GB，剩 3 小时 47 分",
+      "模型中心显示硬件、速度和剩余时间。在这个网络下，20 GB 的下载要将近四个小时。",
+      "hub",
+      "chapter-hub"
+    ],
+    [
+      "又是内存不足",
+      "一次活动搜索在 110 秒后以'Ran out of memory'失败，并出现了缺少 safetensors 的加载错误。",
+      "heidelberg",
+      "chapter-web"
+    ],
+    [
+      "需要 17 GB，可用 6 GB",
+      "干净重启之后，应用仍然拒绝加载图像模型：空闲 11 GB，可用 6 GB。",
+      "flux_6gb",
+      "chapter-images"
+    ],
+    [
+      "还没加载模型的 Mac",
+      "活动监视器显示，刚启动后、还没加载模型时就已用掉 9.67 GB。",
+      "mem9",
+      "chapter-memory"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "下载、安装与首次启动",
+      "items": [
+        [
+          "observed",
+          "安装包是一个 24 MB 的 DMG，测试者形容它是'我见过的最小的文件'。",
+          null
+        ],
+        [
+          "observed",
+          "第一个窗口：'Getting things ready... This won't take long.'，旁边有链接'Show setup details'。测试者说：'比其他应用感觉精致多了……沟通很清楚。'",
+          "splash"
+        ],
+        [
+          "observed",
+          "详细日志写着：'Updating existing Unsloth install'、'frontend bundled (Tauri)'、'node v24.13.0 | npm 11.6.2 (system)'、'unsloth 2026.8.18 -> 2026.10.3 available, updating'，然后是一个 13 步的依赖进度条（pip bootstrap、面向 Apple Silicon 的 MLX 栈、基础包、unsloth extras、编解码器、overrides、studio deps、data designer、本地插件、diffusers pin、收尾）。备注：'torch 2.10.0 detected -- installing torchao==0.16.0'；'transformers 5.3.0, 5.5.0, 5.10.2 pre-installed'；'gpu Apple Silicon (Metal, unified memory)'；'installing prebuilt llama.cpp'。",
+          null
+        ],
+        [
+          "observed",
+          "测试者说大约运行了四五分钟，然后应用打开。日志里没有时间估算，也没有磁盘空间估算。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "安装过程四到五分钟。未计时。",
+          null
+        ],
+        [
+          "assumption",
+          "这个很小的 DMG 很可能是在这第一步里下载大部分软件。未核实。",
+          null
+        ],
+        [
+          "tester-view",
+          "'它告诉我它在做什么——很好——但没有告诉我预计耗时、数据量，或者会占多少磁盘空间。'",
+          null
+        ],
+        [
+          "observed",
+          "主窗口打开，显示'How can I help?'，侧边栏有：New chat、Model hub、Library、Images、Train、More。标志上带有 BETA 标记。",
+          "main"
+        ],
+        [
+          "tester-error",
+          "测试是从已有的安装开始的（'和以前一样'），所以这是一次更新，而不是首次运行测试。引导方面的结论需要在全新安装上确认。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-first-chat",
+      "title": "模型选择器与第一次聊天",
+      "items": [
+        [
+          "observed",
+          "模型选择器列出了 Recommended 模型，数字如 27.3B 和 271.0M。这些是参数量，不是 GB。有两个条目呈灰色（176.9B 和 320.8B）。",
+          "picker"
+        ],
+        [
+          "assumption",
+          "灰色条目大概是对这台机器来说太大了。截取到的应用界面没有这么说。",
+          null
+        ],
+        [
+          "tester-view",
+          "'列出了很多模型，还带着大小。非常好。'但显示的数字是参数量，所以读者看不出模型需要多少内存。",
+          null
+        ],
+        [
+          "observed",
+          "测试者没有选模型，而是直接输入了一个计算请求。应用自己开始加载模型。按笔记，一个 Qwen3.8-27B MLX 4-bit 模型不到一分钟就启动了；第二个提示显示 Mistral-7B-Instruct-v0.3-4bit 正在加载（截图未收录，与图 5 同类）。",
+          null
+        ],
+        [
+          "observed",
+          "加载提示显示路径 /Users/hanskuepper/.lmstudio/models/lmstudio-community/Qwen3.8-27B-MLX-4bit。模型是从磁盘上 LM Studio 的文件夹读取的。",
+          "lm_load"
+        ],
+        [
+          "tester-view",
+          "他怀疑是从硬盘来的，因为'这么大的模型不可能一分钟内从网上下完'。路径印证了这一点。Unsloth 为什么选了这个模型和那个 Mistral 模型，没有记录。",
+          null
+        ],
+        [
+          "observed",
+          "问题'what is 5 times 866'在'Worked for 10s'之后得到回答'5 x 866 = 4,330'（正确），速度 11.0 tok/s。标题栏显示'Local'和上下文计量'120 / 262.1k'。",
+          "calc"
+        ],
+        [
+          "observed",
+          "测试者接着问模型，它是从哪里得到这个模型的。截取到的回答部分谈到了 MLX 权重和 Apple Silicon 统一内存；完整回答没有截取。按笔记，回答是应用不会搜索磁盘。",
+          null
+        ],
+        [
+          "assumption",
+          "聊天模型对这个应用的自述不是可靠的证据。其中一个回答把模型称为'Qwen 3 27B MLX 4-bit'，而应用里的名称是 Qwen3.8-27B-MLX-4bit。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-models",
+      "title": "磁盘上已有的模型：LM Studio 和 Ollama",
+      "items": [
+        [
+          "observed",
+          "On Device 标签页按来源列出模型。在 CUSTOM FOLDERS 下出现两个路径（.lmstudio/models 和 .ollama/models），Ollama 模型有 gemma4:latest、gemma3:1b 和 qwen3-coder:30b。在 LM STUDIO 下，Qwen3.8-27B 模型标着'Loaded'。",
+          "ondevice"
+        ],
+        [
+          "assumption",
+          "这两个文件夹要么是测试者添加的，要么是应用自己找到的。没有记录。此前使用应用时可能已经设置好了。",
+          null
+        ],
+        [
+          "observed",
+          "切换到 qwen3-coder:30b（30.5B、Q4_K_M、GGUF）时显示'Starting model... Switching models. Loading cached model into memory.'，带一个 Cancel 按钮。上下文计量显示'1.3k / 8.2k'，比第一个模型的 262.1k 小得多。",
+          "coder"
+        ],
+        [
+          "tester-view",
+          "'我喜欢切换模型这么容易。''有些 Ollama 模型在 Unsloth 里不能用，但至少它试了，这很好。'",
+          null
+        ],
+        [
+          "observed",
+          "按笔记，一个较旧的模型能用，一个较新的崩溃了。具体指哪些模型，没有记录。",
+          null
+        ],
+        [
+          "tester-view",
+          "他说它'试着去用'他的 Ollama 模型，这很好；而且直接读取磁盘上已有的模型，可以避免再下载一次大文件。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-hub",
+      "title": "模型中心与下载",
+      "items": [
+        [
+          "observed",
+          "模型中心显示设备信息：'0 GiB VRAM + 24 GiB shared'、'24 GiB RAM'、'12/12 CPU'，以及筛选项（格式、能力、最新）。卡片显示点赞数、下载量、发布时间和许可证（embeddinggemma-2-GGUF：apache-2.0，1.5 GB）。",
+          "hub"
+        ],
+        [
+          "tester-view",
+          "'是的，很棒的模型中心。'中心里列有 Qwen-Image-2.1-GGUF（85.0 万次下载，发布 16 天）、GLM-5.3-GGUF 和 Qwen3.8-Flash-Next-GGUF 等。",
+          null
+        ],
+        [
+          "observed",
+          "按笔记，点击一个对这台 Mac 来说太大的文件时出现了好几条警告（'this file is 30 to 40 gigabytes total'）；但仍然允许下载。没有截图。",
+          null
+        ],
+        [
+          "measured",
+          "unsloth/Qwen3.8-27B-GGUF UD-Q5_K_S 的下载面板显示 20 GB 中的 1.2 GB，1.4 MB/s，剩余 3 小时 47 分；之后是 20 GB 中的 7.1 GB，983 KB/s，剩余 3 小时 31 分。",
+          "download"
+        ],
+        [
+          "tester-view",
+          "'这个应用的专业性看得出来。它带着计时器，还告诉你下载速度。'",
+          null
+        ],
+        [
+          "assumption",
+          "这些速度说明测试地点的网络较慢；测试者没有这么说。下载是否完成，没有记录。",
+          null
+        ],
+        [
+          "measured",
+          "Z-Image (BF16) 对话框列出模型文件 12.3 GB，加上必需的编码器和解码器 8.2 GB，共 20.5 GB。这说明了测试者在别处提到的'模型本身的 GB 数和另外那部分之间的差别'。",
+          "zimage"
+        ],
+        [
+          "tester-view",
+          "笔记里写着'图像 LLM 已经下载了'。具体是哪一个，没有记录；截图显示设备上有图像模型 FLUX.2-klein-4B 及其 GGUF 版本（图 18）。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-web",
+      "title": "网页搜索、语音与崩溃",
+      "items": [
+        [
+          "observed",
+          "测试者粘贴了一个 PromptQuorum 页面的网址，问'from a seo perspective will this help me?'。聊天显示'Using tool: Reading promptquorum.com'和'Waiting for approval: web_search'，按钮有 Allow、Always allow 和 Deny。时间戳下午 5:13；上下文'648 / 34.4k'。",
+          "web_approval"
+        ],
+        [
+          "observed",
+          "按笔记，第一次尝试说读不了这个页面；点击 Search 功能后，第二次成功了。'第一次也许应该给个警告。'",
+          null
+        ],
+        [
+          "assumption",
+          "第一次失败可能是因为没有批准网页搜索，或者 Search 开关是关着的。未核实。",
+          null
+        ],
+        [
+          "observed",
+          "这次运行在 168.10 秒后以'Ran out of memory. Try a smaller model or shorter input.'结束，带一个 Retry 按钮。",
+          "oom_web"
+        ],
+        [
+          "observed",
+          "语音输入是内置的。使用它会要求下载'Qwen3-ASR 0.6B'语音模型，约 1.0 GB，提示说会一次性下载到 Hugging Face 缓存里。测试者是否下载了，没有记录。",
+          "voice"
+        ],
+        [
+          "observed",
+          "一次本地活动搜索（'What is happening tonight in Heidelberg, Germany?'）经过两轮工具调用，在 110.65 秒后以'Ran out of memory'结束。标题栏有一条红色提示：'Failed to load model: No safetensors found in /Users/.../.cache/huggin...'。",
+          "heidelberg"
+        ],
+        [
+          "assumption",
+          "加载错误和内存不足的提示可能有关（内存紧张时正在切换模型）。截图没有显示两者之间的联系。",
+          null
+        ],
+        [
+          "tester-view",
+          "'不过是啊，本地 AI，总是有些问题。'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-images",
+      "title": "图像模型：因内存被拒绝",
+      "items": [
+        [
+          "observed",
+          "测试者的目标是图片。侧边栏有一个'Images'条目。笔记里有一段很长的纽约天际线提示词（布鲁克林视角、布鲁克林大桥、黄金时刻、8K 细节），附带构图和避免项列表。没有记录它的结果、错误或设置。",
+          null
+        ],
+        [
+          "measured",
+          "加载图像模型 flux.2-klein 被拒绝：'needs about 17 GB of memory for its weights, but only about 2 GB is usable on this device (of the 7 GB currently free, after reserving room for the operating system)'。提示还补充说，Mac 只有一个内存池，卸载到 CPU 并不能释放内存，并建议换更小的模型、更低的量化或关闭其他应用。它给出了 UNSLOTH_DIFFUSION_ALLOW_OVERSIZED_LOAD=1 作为覆盖选项。",
+          "flux_2gb"
+        ],
+        [
+          "measured",
+          "干净重启之后，提示变成：需要约 17 GB，可用约 6 GB，当前空闲 11 GB。",
+          "flux_6gb"
+        ],
+        [
+          "assumption",
+          "两条提示中，两组数字都相差 5 GB（7 - 2 和 11 - 6），所以应用似乎为操作系统预留了约 5 GB。只有两个数据点。",
+          null
+        ],
+        [
+          "observed",
+          "设备列表显示 FLUX.2-klein-4B-GGUF（7.8 GB）、FLUX.2-klein-4B（16 GB）和 mistral-7b-v0.3-bnb-4bit（4.1 GB）。测试者：'这个应该够小了。'测试者说，中心里最小的图像模型会让他的 24 GB 机器崩溃，而且他点开的模型都说太大，因为只有'七个 GB'可用。",
+          "list"
+        ],
+        [
+          "tester-error",
+          "测试者不明白为什么只有七个 GB 可用（'我的内存多得多'）。对话框写明，当时空闲的是 7 GB，其他应用都在运行；重启之后则显示 11 GB。笔记把'7 GB'这句话放在 Z-Image 对话框旁边；而 7 GB 这个数字出现在 flux.2-klein 的提示里。",
+          null
+        ],
+        [
+          "tester-view",
+          "'我迷茫了……我有一台 24 GB 的机器，却找不到一个能为我所用、能把事情做完的 LLM。'他认为 24 GB 已经超过他读者所用内存的 80%（他自己的估计，不是实测数据）。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "'我的读者中超过 80%'的内存不超过 24 GB。未给出来源。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-memory",
+      "title": "Mac 上的内存",
+      "items": [
+        [
+          "observed",
+          "测试者的结论是，本地模型和日常工作在争用同一份内存，Chrome 和其他应用就要占 5 到 8 GB。他通篇写的都是'VRAM'；Apple Silicon 只有一个内存池，模型中心也是这么显示的（'0 GiB VRAM + 24 GiB shared'）。",
+          null
+        ],
+        [
+          "measured",
+          "活动监视器，一次截取：已使用内存 12.92 GB，缓存文件 10.95 GB，App 内存 9.81 GB，联动内存 1.83 GB，交换 0。",
+          "mem12"
+        ],
+        [
+          "measured",
+          "活动监视器，另一次截取：已使用内存 9.67 GB，缓存文件 8.14 GB，App 内存 6.97 GB，联动内存 1.71 GB，交换 0。较短的历史曲线与刚启动不久相符。",
+          "mem9"
+        ],
+        [
+          "assumption",
+          "图 15 中'当前空闲'的 11 GB，与图 16 的 24.00 - 12.92 = 11.08 GB 吻合。两者是否在同一时刻截取，没有记录。",
+          null
+        ],
+        [
+          "tester-view",
+          "'即使重启之后，通用的东西就已经占掉九个 GB 了。''要么我关机、重启、停掉所有进程……要么就没法运行 LLM。'",
+          null
+        ],
+        [
+          "tester-view",
+          "两种可能的出路：模型必须变得更小更好，或者电脑需要 48 或 64 GB。'所有那些说在你的电脑上也能跑的话，有点假。'",
+          null
+        ],
+        [
+          "assumption",
+          "48 或 64 GB 能'稳稳地'解决这个问题，未经测试。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-end",
+      "title": "加载时没有反馈，以及最后的看法",
+      "items": [
+        [
+          "observed",
+          "启动模型时会出现一个提示'Starting model... Loading cached model into memory.'，带一个转圈图标和 Cancel。没有百分比、大小或时间。",
+          "starting"
+        ],
+        [
+          "tester-estimate",
+          "等待时间超过了两三分钟（未计时）。",
+          null
+        ],
+        [
+          "tester-view",
+          "'对待客户最糟糕的方式，就是把活干了却不告诉客户进展。'测试者称这是用户界面问题。",
+          null
+        ],
+        [
+          "observed",
+          "标题栏的计量显示已用 token 与上下文的对比（例如'648 / 34.4k'）以及每秒 token 数（11.0 tok/s）。",
+          null
+        ],
+        [
+          "tester-error",
+          "笔记里写着'没有 token 计数器'。但截图显示有上下文计量和每秒 token 数。他指的可能是每条消息的 token 数（假设）。",
+          null
+        ],
+        [
+          "tester-error",
+          "笔记把本地聊天模型称为'最蠢的主意'，因为它'不会上网查资料'。而同一份笔记和截图里却有 Search 功能、网页搜索批准提示，以及读取页面的工具调用。",
+          null
+        ],
+        [
+          "tester-view",
+          "他不想训练模型；聊天功能对他用处不大；他想要的是图片和视频工具，而'目前还没看到'。训练和'Train'标签页没有试。",
+          null
+        ],
+        [
+          "tester-view",
+          "'也许问题出在我这边，但不，不适合我。我三个月或六个月后会再看看，但目前在 M3 24 GB 的 Pro MacBook 上不行。'",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "'Run and train image and video diffusion or multimodal models'，本地运行（GitHub README；文档页面）",
+      "供应商，2026 年 10 月 16 日查阅",
+      "没有生成图片。flux.2-klein 被拒绝加载（需要约 17 GB；可用 2 GB 和 6 GB）。更小的图像版本没有显示能够加载。训练没有试。",
+      "observed"
+    ],
+    [
+      "macOS 上'Training, MLX and GGUF inference all work inside of Unsloth'（文档）",
+      "供应商，2026 年 10 月 16 日查阅",
+      "一个 MLX 模型（Qwen3.8-27B 4-bit）和一个 GGUF 模型（qwen3-coder:30b）都加载并回答了。训练没有试。",
+      "observed"
+    ],
+    [
+      "'Can be used 100% offline and locally on your computer'（文档）",
+      "供应商，2026 年 10 月 16 日查阅",
+      "网页搜索和下载使用了互联网。离线使用没有测试。",
+      "observed"
+    ],
+    [
+      "网页搜索'visits pages directly'（文档）",
+      "供应商，2026 年 10 月 16 日查阅",
+      "尝试过读取页面；按笔记，第一次失败，第二次读取成功。随后这次运行内存不足。",
+      "observed"
+    ],
+    [
+      "桌面应用'free and open source'（发布说明）",
+      "供应商，2026 年 10 月 16 日查阅",
+      "笔记和截图中都没有出现付款提示。",
+      "observed"
+    ],
+    [
+      "模型中心显示的硬件",
+      "应用",
+      "模型中心显示 24 GiB RAM、0 GiB VRAM + 24 GiB shared 和 12/12 CPU。RAM 数值与这台 Mac 的 24.00 GB 相符。",
+      "measured"
+    ],
+    [
+      "'No hardware requirements stated'（已读页面）",
+      "供应商，2026 年 10 月 16 日查阅",
+      "GitHub 页面和文档页面返回的文本中都没有写明内存要求。应用在加载时会说明自己的需求（flux.2-klein 为 17 GB）。",
+      "observed"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale_gb": 30,
+    "rows": [
+      [
+        "flux.2-klein 权重，按拒绝加载的提示",
+        17.0,
+        "需要约 17 GB",
+        "measured"
+      ],
+      [
+        "FLUX.2-klein-4B（设备列表）",
+        16.0,
+        "文件大小 16 GB",
+        "measured"
+      ],
+      [
+        "FLUX.2-klein-4B-GGUF（设备列表）",
+        7.8,
+        "文件大小 7.8 GB",
+        "measured"
+      ],
+      [
+        "应用算出的可用内存，重启前",
+        2.0,
+        "7 GB 空闲中约 2 GB 可用",
+        "measured"
+      ],
+      [
+        "应用算出的可用内存，重启后",
+        6.0,
+        "11 GB 空闲中约 6 GB 可用",
+        "measured"
+      ],
+      [
+        "Mac 已用内存，活动监视器（第一次截取）",
+        12.92,
+        "已用 12.92 GB",
+        "measured"
+      ],
+      [
+        "Mac 已用内存，活动监视器（第二次截取）",
+        9.67,
+        "已用 9.67 GB",
+        "measured"
+      ],
+      [
+        "Z-Image BF16 总下载量",
+        20.5,
+        "12.3 GB 模型 + 8.2 GB 必需文件（下载大小）",
+        "measured"
+      ]
+    ],
+    "note": "第 2、3 和 8 行是文件或下载大小，不是运行时的内存占用。17 GB 是应用自己对 flux.2-klein 的估算；它指的是哪个文件版本，没有记录。'可用'是应用在为操作系统预留空间之后的数值。Qwen3.8-27B MLX 4-bit 模型在聊天中运行过；它的内存占用没有读取。"
+  },
+  "usage_log": [
+    [
+      "打开 24 MB 的应用、更新、首次启动",
+      "Unsloth 2026.8.18 -> 2026.10.3（假定）",
+      "安装日志之后打开；已有安装",
+      "约 4-5 分钟（测试者估计）",
+      "Pass",
+      [
+        "splash",
+        "main"
+      ]
+    ],
+    [
+      "从选择器里选一个模型",
+      "未记录",
+      "列表带参数量；测试者没有选",
+      "未记录",
+      "Pass",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "聊天：计算题（5 x 866）",
+      "Qwen3.8-27B-MLX-4bit",
+      "4,330，正确；11.0 tok/s；10 秒",
+      "10 秒（已测量）",
+      "Pass",
+      [
+        "calc"
+      ]
+    ],
+    [
+      "问聊天模型这个模型是从哪来的",
+      "Qwen3.8-27B-MLX-4bit",
+      "回答只截取到一部分",
+      "未记录",
+      "Partial",
+      [
+        "ondevice"
+      ]
+    ],
+    [
+      "切换到一个 Ollama 模型",
+      "qwen3-coder:30b（Q4_K_M，GGUF）",
+      "已加载；上下文 8.2k。按笔记，有些 Ollama 模型不能用",
+      "未记录",
+      "Partial",
+      [
+        "coder"
+      ]
+    ],
+    [
+      "浏览模型中心并开始一个 20 GB 的下载",
+      "unsloth/Qwen3.8-27B-GGUF UD-Q5_K_S",
+      "下载已开始；剩余 3 小时 47 分，随后 3 小时 31 分；结束情况未记录",
+      "未记录",
+      "Partial",
+      [
+        "hub",
+        "download"
+      ]
+    ],
+    [
+      "对过大模型（30-40 GB）的警告",
+      "未记录",
+      "出现多条警告，仍允许下载（仅见于笔记）",
+      "-",
+      "Pass",
+      []
+    ],
+    [
+      "从 SEO 角度评估一个网页",
+      "Qwen3.8-27B-MLX-4bit",
+      "出现批准提示；以'Ran out of memory'结束",
+      "168.10 秒",
+      "Fail",
+      [
+        "web_approval",
+        "oom_web"
+      ]
+    ],
+    [
+      "语音输入",
+      "Qwen3-ASR 0.6B（约 1.0 GB）",
+      "下载对话框；结果未记录",
+      "未记录",
+      "Not completed",
+      [
+        "voice"
+      ]
+    ],
+    [
+      "本地活动搜索（海德堡）",
+      "Qwen3.8-27B-MLX-4bit",
+      "加载错误和内存不足",
+      "110.65 秒",
+      "Fail",
+      [
+        "heidelberg"
+      ]
+    ],
+    [
+      "纽约天际线图片，长提示词",
+      "未记录",
+      "没有记录结果",
+      "未记录",
+      "Not completed",
+      []
+    ],
+    [
+      "加载 flux.2-klein，开着许多应用",
+      "flux.2-klein",
+      "被拒绝：需要 17 GB，7 GB 空闲中 2 GB 可用",
+      "-",
+      "Fail",
+      [
+        "flux_2gb"
+      ]
+    ],
+    [
+      "干净重启后加载 flux.2-klein",
+      "flux.2-klein",
+      "被拒绝：需要 17 GB，11 GB 空闲中 6 GB 可用",
+      "-",
+      "Fail",
+      [
+        "flux_6gb"
+      ]
+    ],
+    [
+      "试用设备上更小的图像模型",
+      "FLUX.2-klein-4B-GGUF 7.8 GB；FLUX.2-klein-4B 16 GB",
+      "按笔记'都太大'；没有每个模型的截图",
+      "-",
+      "Fail",
+      [
+        "list"
+      ]
+    ],
+    [
+      "Z-Image BF16 下载对话框",
+      "Z-Image BF16",
+      "共 20.5 GB；下载情况未记录",
+      "-",
+      "Not completed",
+      [
+        "zimage"
+      ]
+    ],
+    [
+      "启动一个模型（已缓存）",
+      "未记录",
+      "转圈图标和'Loading cached model into memory'，没有进度；结果未记录",
+      "超过 2-3 分钟（测试者估计）",
+      "Partial",
+      [
+        "starting"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "测试的是已有安装的更新（'和以前一样'），不是首次运行的安装。"
+    ],
+    [
+      "tester-error",
+      "在 24 GB 的 Mac 上，开着 Chrome、Claude 应用、Word、WhatsApp 和其他应用的情况下做了最初的内存测试。第一次被拒绝时显示空闲 7 GB。"
+    ],
+    [
+      "tester-error",
+      "通篇用'VRAM'指内存，尽管应用显示的是'0 GiB VRAM + 24 GiB shared'。"
+    ],
+    [
+      "tester-error",
+      "写道'没有 token 计数器'；而截图显示有上下文计量和每秒 token 数。"
+    ],
+    [
+      "tester-error",
+      "写道本地聊天模型'不会上网查资料'；而截图显示有 Search 功能和网页搜索工具调用。"
+    ],
+    [
+      "tester-error",
+      "把模型选择器里的数字当成了大小；它们其实是参数量。"
+    ],
+    [
+      "tester-error",
+      "记下只有七个 GB 可用，却没有说明当时还开着什么；对话框写的是当时空闲 7 GB。"
+    ],
+    [
+      "tester-error",
+      "记录有缺口：桌面应用的版本、macOS 版本、芯片型号、结束时间、纽约提示词用的是哪个模型以及结果如何、哪些 Ollama 模型失败了、20 GB 的下载是否完成、图像运行的设置，以及卸载。"
+    ],
+    [
+      "tester-error",
+      "在笔记里把应用写成了'Onslaught'和'Unslothh'（语音转写）。"
+    ],
+    [
+      "assumption",
+      "笔记把 Z-Image 对话框放在'只有七个 GB'那句话旁边；而 7 GB 这个数字出现在 flux.2-klein 的提示里。截图是根据其内容与文字对应的，而不只是按顺序。"
+    ]
+  ],
+  "findings": [
+    [
+      "UN-01",
+      "DMG 只有 24 MB，比测试者见过的其他应用小得多。",
+      "安装",
+      "observed",
+      "Positive",
+      [
+        "splash"
+      ]
+    ],
+    [
+      "UN-02",
+      "首次启动会运行一个 13 步的依赖安装，约四到五分钟，没有时间或磁盘估算。详细日志可见。",
+      "安装",
+      "tester-estimate",
+      "Medium",
+      [
+        "splash"
+      ]
+    ],
+    [
+      "UN-03",
+      "测试是从已有的安装开始的（2026.8.18 到 2026.10.3），所以首次运行的表现没有测试。",
+      "测试局限",
+      "observed",
+      "Medium",
+      [
+        "main"
+      ]
+    ],
+    [
+      "UN-04",
+      "模型选择器显示的是参数量（27.3B、271.0M），而不是下载或内存大小；有些条目呈灰色，截图中没有说明原因。",
+      "引导",
+      "observed",
+      "Medium",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "UN-05",
+      "一个 27B 4-bit 模型以 11.0 tok/s 在 10 秒内正确回答了'5 x 866'。",
+      "核心功能",
+      "measured",
+      "Positive",
+      [
+        "calc"
+      ]
+    ],
+    [
+      "UN-06",
+      "第一次聊天从 LM Studio 的文件夹加载了模型，没有下载，也没有提示。",
+      "模型处理",
+      "observed",
+      "Medium",
+      [
+        "lm_load"
+      ]
+    ],
+    [
+      "UN-07",
+      "LM Studio 和 Ollama 文件夹里的模型都出现在 On Device 列表中。",
+      "模型处理",
+      "observed",
+      "Positive",
+      [
+        "ondevice"
+      ]
+    ],
+    [
+      "UN-08",
+      "有些 Ollama 模型在 Unsloth 里不能用；具体是哪些，没有记录。",
+      "兼容性",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "UN-09",
+      "模型中心显示 RAM、共享内存、CPU 数量，以及带速度和剩余时间的下载面板。",
+      "模型中心",
+      "observed",
+      "Positive",
+      [
+        "hub",
+        "download"
+      ]
+    ],
+    [
+      "UN-10",
+      "一个 20 GB 的下载在 1.4 MB/s 时显示剩余 3 小时 47 分（取决于网络）。",
+      "模型中心",
+      "measured",
+      "Low",
+      [
+        "hub"
+      ]
+    ],
+    [
+      "UN-11",
+      "过大的模型会触发多条警告，但仍可下载（仅见于笔记）。",
+      "模型中心",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "UN-12",
+      "下载对话框把模型文件和必需文件分开列出（12.3 + 8.2 = 20.5 GB）。",
+      "模型中心",
+      "measured",
+      "Positive",
+      [
+        "zimage"
+      ]
+    ],
+    [
+      "UN-13",
+      "网页搜索需要批准；按笔记，第一次尝试在没有任何警告的情况下读取页面失败。",
+      "用户体验",
+      "observed",
+      "Low",
+      [
+        "web_approval"
+      ]
+    ],
+    [
+      "UN-14",
+      "用 27B 模型读取网页，在 168.10 秒后以'Ran out of memory'结束。",
+      "稳定性",
+      "observed",
+      "High",
+      [
+        "oom_web"
+      ]
+    ],
+    [
+      "UN-15",
+      "一次活动搜索以'Failed to load model: No safetensors found'失败，并在 110.65 秒后出现'Ran out of memory'。",
+      "稳定性",
+      "observed",
+      "High",
+      [
+        "heidelberg"
+      ]
+    ],
+    [
+      "UN-16",
+      "语音输入是内置的，但需要另外下载 1.0 GB 的语音模型。",
+      "功能",
+      "observed",
+      "Low",
+      [
+        "voice"
+      ]
+    ],
+    [
+      "UN-17",
+      "flux.2-klein 拒绝加载：需要约 17 GB，可用约 2 GB（空闲 7 GB）。",
+      "核心功能",
+      "measured",
+      "High",
+      [
+        "flux_2gb"
+      ]
+    ],
+    [
+      "UN-18",
+      "干净重启后：11 GB 空闲中约 6 GB 可用；再次被拒绝加载。",
+      "核心功能",
+      "measured",
+      "High",
+      [
+        "flux_6gb"
+      ]
+    ],
+    [
+      "UN-19",
+      "应用似乎为操作系统预留了约 5 GB（两个数据点）。",
+      "内存",
+      "assumption",
+      "Medium",
+      [
+        "flux_2gb",
+        "flux_6gb"
+      ]
+    ],
+    [
+      "UN-20",
+      "拒绝加载的提示解释了原因（只有一个内存池，卸载到 CPU 没有帮助），并给出了一个覆盖用的环境变量。",
+      "引导",
+      "observed",
+      "Positive",
+      [
+        "flux_2gb"
+      ]
+    ],
+    [
+      "UN-21",
+      "Mac 在刚启动后、还没加载模型时就已用掉约 9.67 GB。",
+      "内存",
+      "measured",
+      "Medium",
+      [
+        "mem9"
+      ]
+    ],
+    [
+      "UN-22",
+      "在 24 GB 的 Mac 上没有生成图片；笔记里提到，列出的最小图像模型（7.8 GB、16 GB）也被说成'太大'。",
+      "核心功能",
+      "observed",
+      "High",
+      [
+        "list"
+      ]
+    ],
+    [
+      "UN-23",
+      "启动模型时显示一个没有百分比或时间的转圈图标，持续两三分钟甚至更久。",
+      "用户体验",
+      "observed",
+      "Medium",
+      [
+        "starting"
+      ]
+    ],
+    [
+      "UN-24",
+      "聊天标题栏显示上下文计量和每秒 token 数，与'没有 token 计数器'的笔记相反。",
+      "用户体验",
+      "observed",
+      "Positive",
+      [
+        "calc"
+      ]
+    ],
+    [
+      "UN-25",
+      "测试者认为界面漂亮、流畅，但没能得到结果，现在也看不出有什么理由使用这个应用。",
+      "总体",
+      "tester-view",
+      "Medium",
+      []
+    ],
+    [
+      "UN-26",
+      "目录里把许可证列为 Apache-2.0；GitHub 页面说 Studio UI 是 AGPL-3.0，核心是 Apache-2.0。",
+      "维护",
+      "third-party",
+      "Medium",
+      []
+    ]
+  ],
+  "severity_note": "严重程度指对第一次使用的用户的影响。为建议值，并非实测。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "内存超过 24 GB，或机器干净、开着的应用很少，并希望在一个应用里同时拥有聊天、模型中心以及来自 LM Studio 和 Ollama 的本地模型的用户。"
+      ],
+      [
+        "vendor-claim",
+        "想训练或微调模型的人，按供应商的说法，这是该项目的主要用途（这里没有测试）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "想在开着其他应用的 24 GB Mac 上本地生成图片的人。对测试者来说，这行不通。"
+      ],
+      [
+        "tester-view",
+        "想不了解模型、内存和训练就快速得到结果的人。"
+      ]
+    ],
+    "retest": "测试者打算三到六个月后再看（大约 2027 年 1 月到 4 月）。在此之前，请先记录桌面应用版本、macOS 版本和芯片型号；从全新安装开始；关闭其他应用并记下空闲内存；试一个能放得下的图像模型（例如 7.8 GB 的 GGUF），并记录每项设置和结果；测试训练、离线使用和卸载。"
+  },
+  "background_intro": "不属于上手测试过程。以下内容来自供应商的 GitHub 页面、文档和发布页面，以及 PromptQuorum 目录，由一个会概述页面的网页抓取工具于 2026 年 10 月 16 日读取，未经独立验证。",
+  "background": [
+    [
+      "vendor-claim",
+      "GitHub 页面把 Unsloth 描述为'first desktop app to run and train models'和'Local UI to run and train LLMs and diffusion models'。它提供 Unsloth Studio（网页界面）和 Unsloth Core（代码）。已读的页面没有写明公司或个人名称。"
+    ],
+    [
+      "vendor-claim",
+      "许可证：核心包为 Apache 2.0；'certain optional components, such as the Unsloth Studio UI'为 AGPL-3.0。"
+    ],
+    [
+      "vendor-claim",
+      "平台：Windows、Linux、WSL 和 macOS。安装方式：桌面应用（macOS 上为 .dmg）、shell 脚本、Homebrew 和 Docker。返回的文本中没有写明硬件要求。"
+    ],
+    [
+      "vendor-claim",
+      "Studio 文档：在本地运行 GGUF、MLX 以及扩散式图像和视频模型；macOS 上'Training, MLX and GGUF inference all work inside of Unsloth'；网页搜索'visits pages directly'；'can be used 100% offline'。"
+    ],
+    [
+      "third-party",
+      "PromptQuorum 目录把 Unsloth 列为免费、Apache-2.0，支持 Mac、Windows 和 Linux，类别为微调与 LoRA，GitHub 星标约 76,100（数据于 2026 年 9 月 13 日核实）。目录记录了 v0.1.905-beta 版本中的 macOS DMG（2026 年 10 月 9 日查阅）以及 2026 年 10 月 16 日的最近一次上游更新。在这份报告之前，PromptQuorum 没有对它做过上手测试。"
+    ],
+    [
+      "assumption",
+      "2026 年 10 月 16 日读取的发布页面返回的最新版本是 v0.1.806-beta（9 月 2 日），与目录中的 v0.1.905-beta 不一致；可能是概述页面的工具读到了过期页面。安装日志里的 Python 包版本（2026.10.3）与桌面应用的标签使用的是不同的编号。"
+    ]
+  ],
+  "sources": [
+    "测试者的上手笔记，2026 年 10 月 9 日（原始 Word 文档'20261009_Unslothh'；原始笔记 PDF 待补充）。",
+    "Unsloth 的 GitHub 项目（github.com/unslothai/unsloth）、其发布页面和 Unsloth Studio 文档页面（unsloth.ai/docs/new/studio），2026 年 10 月 16 日查阅。",
+    "PromptQuorum 目录中的 Unsloth 条目（slug：unsloth），数据于 2026 年 9 月 13 日核实。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "已观察",
+      "meaning": "在应用、截图或测试者笔记中亲眼所见。"
+    },
+    "measured": {
+      "label": "已测量",
+      "meaning": "从对话框、计数器或工具中读取的数值，并给出了该数字。"
+    },
+    "tester-estimate": {
+      "label": "测试者估计",
+      "meaning": "测试者自己的估计；未计时或计数。"
+    },
+    "vendor-claim": {
+      "label": "厂商声明",
+      "meaning": "由应用、其商店页面或其网站所述；未经核实。"
+    },
+    "third-party": {
+      "label": "第三方",
+      "meaning": "来自其他来源（AI 助手、文章）；此处未核实。"
+    },
+    "assumption": {
+      "label": "假设",
+      "meaning": "一种推断，可能有误。"
+    },
+    "tester-view": {
+      "label": "测试者观点",
+      "meaning": "测试者的判断或看法。"
+    },
+    "tester-error": {
+      "label": "测试者失误",
+      "meaning": "测试者出错或遗漏之处。"
+    }
+  },
+  "images": [
+    {
+      "id": "flux_2gb",
+      "figure": 1,
+      "file": "unsloth-flux2-klein-load-refused-17gb-needed-2gb-usable.webp",
+      "path": "images/unsloth-flux2-klein-load-refused-17gb-needed-2gb-usable.webp",
+      "alt": "Unsloth 报错：flux.2-klein 的权重需要约 17 GB，但这台设备上只有约 2 GB 可用，当前空闲为 7 GB。",
+      "caption": "加载图像模型 flux.2-klein 被拒绝。应用报告需要约 17 GB，可用约 2 GB（当前空闲 7 GB，减去为操作系统预留的空间）。它给出了一个覆盖用的环境变量 UNSLOTH_DIFFUSION_ALLOW_OVERSIZED_LOAD=1，测试者没有试。",
+      "role": "hero",
+      "width": 392,
+      "height": 334,
+      "bytes": 25580,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "measured",
+      "used_in": [
+        "hero",
+        "chapter-images"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image15.png"
+    },
+    {
+      "id": "splash",
+      "figure": 2,
+      "file": "unsloth-setup-window-getting-things-ready.webp",
+      "path": "images/unsloth-setup-window-getting-things-ready.webp",
+      "alt": "Unsloth 安装窗口，有标志、转圈图标、'Getting things ready... This won't take long.'和'Show setup details'链接。",
+      "caption": "打开 24 MB DMG 应用后的第一个窗口。文字说不会花很久；测试者没有计时，估计要四到五分钟（更新日志见正文）。窗口没有显示时间或磁盘估算。",
+      "role": "moment",
+      "width": 814,
+      "height": 585,
+      "bytes": 13838,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install",
+        "moments-card"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image1.png"
+    },
+    {
+      "id": "main",
+      "figure": 3,
+      "file": "unsloth-main-window-how-can-i-help-sidebar.webp",
+      "path": "images/unsloth-main-window-how-can-i-help-sidebar.webp",
+      "alt": "Unsloth 主窗口，带 BETA 标记，侧边栏有 New chat、Model hub、Library、Images、Train、More，提示语为'How can I help?'。",
+      "caption": "安装完成后的主窗口。侧边栏：New chat、Model hub、Library、Images、Train、More。标志上带有 BETA 标记。窗口后面的浏览器标签页显示的是该项目的 GitHub 页面。",
+      "role": "inline",
+      "width": 1247,
+      "height": 728,
+      "bytes": 21210,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-install"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image2.png"
+    },
+    {
+      "id": "picker",
+      "figure": 4,
+      "file": "unsloth-model-picker-recommended-list-parameter-counts.webp",
+      "path": "images/unsloth-model-picker-recommended-list-parameter-counts.webp",
+      "alt": "Unsloth 的'Select model'列表，Recommended 下是 GGUF 模型；每个名称旁的数字是参数量，如 27.3B 和 271.0M。",
+      "caption": "模型选择器，Recommended 标签页。这些数字是参数量（B = 十亿，M = 百万），不是 GB。有两个条目呈灰色（Qwen3.8-Flash-Next-GGUF 176.9B、GLM-5.3-Flash-GGUF 320.8B）。灰色和黄点是什么意思，截取到的应用界面没有说明。",
+      "role": "inline",
+      "width": 660,
+      "height": 536,
+      "bytes": 21134,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-chat"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image3.png"
+    },
+    {
+      "id": "lm_load",
+      "figure": 5,
+      "file": "unsloth-loading-model-from-lmstudio-folder-qwen-27b-mlx.webp",
+      "path": "images/unsloth-loading-model-from-lmstudio-folder-qwen-27b-mlx.webp",
+      "alt": "Unsloth 的提示'Loading a model...'，路径为 .lmstudio/models/lmstudio-community/Qwen3.8-27B-MLX-4bit。",
+      "caption": "第一次聊天开始时显示的提示。路径指向 LM Studio 的模型文件夹：/Users/hanskuepper/.lmstudio/models/lmstudio-community/Qwen3.8-27B-MLX-4bit。模型是从磁盘加载的，不是下载的。",
+      "role": "moment",
+      "width": 474,
+      "height": 140,
+      "bytes": 4148,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-chat",
+        "moments-card"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image4.png"
+    },
+    {
+      "id": "calc",
+      "figure": 6,
+      "file": "unsloth-chat-5-times-866-answer-11-tokens-per-second.webp",
+      "path": "images/unsloth-chat-5-times-866-answer-11-tokens-per-second.webp",
+      "alt": "Unsloth 与 Qwen3.8-27B-MLX-4bit 的聊天：'what is 5 times 866'得到回答'5 x 866 = 4,330'，用时 10 秒，11.0 tok/s。",
+      "caption": "第一次聊天。答案 4,330 是正确的（5 x 866）。屏幕显示'Worked for 10s'、11.0 tok/s，以及上下文计量'120 / 262.1k'。",
+      "role": "inline",
+      "width": 912,
+      "height": 308,
+      "bytes": 6390,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-first-chat"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image6.png"
+    },
+    {
+      "id": "ondevice",
+      "figure": 7,
+      "file": "unsloth-on-device-models-custom-folders-lmstudio-ollama.webp",
+      "path": "images/unsloth-on-device-models-custom-folders-lmstudio-ollama.webp",
+      "alt": "Unsloth 的 On Device 模型列表，Custom Folders 下有 .lmstudio/models 和 .ollama/models，列出 ollama/gemma4:latest、gemma3:1b 和 qwen3-coder:30b。",
+      "caption": "On Device 标签页。在 CUSTOM FOLDERS 下列出两个路径（.lmstudio/models 和 .ollama/models），Ollama 模型有 gemma4:latest、gemma3:1b 和 qwen3-coder:30b；在 LM STUDIO 下，Qwen3.8-27B 模型标着'Loaded'。列表后面隐约可见的一段聊天回答谈到了 MLX 权重。这些文件夹是测试者添加的还是自动发现的，没有记录。",
+      "role": "inline",
+      "width": 826,
+      "height": 537,
+      "bytes": 33366,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-models"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image7.png"
+    },
+    {
+      "id": "coder",
+      "figure": 8,
+      "file": "unsloth-switching-to-ollama-qwen3-coder-30b-gguf.webp",
+      "path": "images/unsloth-switching-to-ollama-qwen3-coder-30b-gguf.webp",
+      "alt": "Unsloth 标题栏显示'qwen3-coder:30b (30.5B Q4_K_M) GGUF'，上下文 1.3k / 8.2k，以及提示'Starting model... Switching models.'",
+      "caption": "切换到 Ollama 模型 qwen3-coder:30b（30.5B、Q4_K_M、GGUF）。上下文计量'1.3k / 8.2k'。提示写着'Starting model... Switching models. Loading cached model into memory.'，带一个 Cancel 按钮。",
+      "role": "inline",
+      "width": 991,
+      "height": 220,
+      "bytes": 16648,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-models"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image8.png"
+    },
+    {
+      "id": "hub",
+      "figure": 9,
+      "file": "unsloth-model-hub-hardware-24gib-download-3h47m.webp",
+      "path": "images/unsloth-model-hub-hardware-24gib-download-3h47m.webp",
+      "alt": "Unsloth 的 Model hub，显示 24 GiB RAM、0 GiB VRAM + 24 GiB shared，以及 Qwen3.8-27B-GGUF 以 1.4 MB/s 下载、剩余 3 小时 47 分。",
+      "caption": "Model hub。右上角：'0 GiB VRAM + 24 GiB shared'、'24 GiB RAM'、'12/12 CPU'。下载面板：unsloth/Qwen3.8-27B-GGUF UD-Q5_K_S，20 GB 中的 1.2 GB，1.4 MB/s，剩余 3 小时 47 分。打开的模型卡片 embeddinggemma-2-GGUF（1.5 GB，apache-2.0）并不是正在下载的模型。",
+      "role": "moment",
+      "width": 888,
+      "height": 681,
+      "bytes": 46546,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-hub",
+        "moments-card"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image9.png"
+    },
+    {
+      "id": "download",
+      "figure": 10,
+      "file": "unsloth-download-progress-7gb-of-20gb-3h31m-left.webp",
+      "path": "images/unsloth-download-progress-7gb-of-20gb-3h31m-left.webp",
+      "alt": "Unsloth 对 unsloth/Qwen3.8-27B-GGUF UD-Q5_K_S 的下载面板：20 GB 中的 7.1 GB，983 KB/s，剩余 3 小时 31 分。",
+      "caption": "同一个下载的稍后状态：20 GB 中的 7.1 GB，983 KB/s，剩余 3 小时 31 分。这张与上一张截图之间相隔多久，没有记录。",
+      "role": "inline",
+      "width": 424,
+      "height": 142,
+      "bytes": 4234,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-hub"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image10.png"
+    },
+    {
+      "id": "web_approval",
+      "figure": 11,
+      "file": "unsloth-chat-web-page-read-waiting-for-approval.webp",
+      "path": "images/unsloth-chat-web-page-read-waiting-for-approval.webp",
+      "alt": "Unsloth 聊天，要求从 SEO 角度评估一个 promptquorum.com 网址，显示'Using tool: Reading promptquorum.com'以及 Allow、Always allow 和 Deny 按钮。",
+      "caption": "与 Qwen3.8-27B-MLX-4bit 的聊天，上下文'648 / 34.4k'，时间戳下午 5:13。提示词给出了一个 PromptQuorum 网址并询问 SEO。应用显示'Waiting for approval: web_search'和按钮 Allow、Always allow、Deny。模式为'Approve for me'。",
+      "role": "inline",
+      "width": 927,
+      "height": 715,
+      "bytes": 31210,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-web"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image11.png"
+    },
+    {
+      "id": "oom_web",
+      "figure": 12,
+      "file": "unsloth-chat-out-of-memory-after-reading-web-page.webp",
+      "path": "images/unsloth-chat-out-of-memory-after-reading-web-page.webp",
+      "alt": "Unsloth 聊天，在'Used tool: Read promptquorum.com'之后出现红色消息'Ran out of memory. Try a smaller model or shorter input.'和 Retry 按钮。",
+      "caption": "同一个聊天在 168.10 秒后以'Ran out of memory. Try a smaller model or shorter input.'结束。",
+      "role": "inline",
+      "width": 838,
+      "height": 205,
+      "bytes": 7430,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-web"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image12.png"
+    },
+    {
+      "id": "voice",
+      "figure": 13,
+      "file": "unsloth-voice-dictation-download-qwen3-asr-1gb.webp",
+      "path": "images/unsloth-voice-dictation-download-qwen3-asr-1gb.webp",
+      "alt": "Unsloth 对话框'Download Qwen3-ASR 0.6B?'，说明本地听写需要约 1.0 GB 的语音模型，有 Cancel 和 Download 按钮。",
+      "caption": "语音输入：'Local dictation runs entirely offline, but it needs the Qwen3-ASR 0.6B speech model first. About 1.0 GB, fetched once into your Hugging Face cache.'测试者是否下载了，没有记录。",
+      "role": "inline",
+      "width": 516,
+      "height": 233,
+      "bytes": 10162,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-web"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image13.png"
+    },
+    {
+      "id": "heidelberg",
+      "figure": 14,
+      "file": "unsloth-heidelberg-search-out-of-memory-no-safetensors.webp",
+      "path": "images/unsloth-heidelberg-search-out-of-memory-no-safetensors.webp",
+      "alt": "Unsloth 聊天，问题是'What is happening tonight in Heidelberg, Germany?'，有工具调用、一条红色的'Failed to load model'提示和'Ran out of memory'。",
+      "caption": "本地活动搜索。标题栏（红色）：'Failed to load model: No safetensors found in /Users/.../.cache/huggin...'。聊天里有两轮'tool calls'，然后在 110.65 秒后出现'Ran out of memory. Try a smaller model or shorter input.'上下文'- / 34.4k'。下载角标显示 5。",
+      "role": "moment",
+      "width": 1227,
+      "height": 700,
+      "bytes": 28520,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-web",
+        "moments-card"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image14.png"
+    },
+    {
+      "id": "flux_6gb",
+      "figure": 15,
+      "file": "unsloth-flux2-klein-load-refused-6gb-usable-after-reboot.webp",
+      "path": "images/unsloth-flux2-klein-load-refused-6gb-usable-after-reboot.webp",
+      "alt": "Unsloth 报错：flux.2-klein 需要约 17 GB，但这台设备上只有约 6 GB 可用，当前空闲 11 GB，已扣除为操作系统预留的空间。",
+      "caption": "flux.2-klein 第二次被拒绝：需要约 17 GB，可用约 6 GB（当前空闲 11 GB）。按笔记中的顺序，这里视为干净重启之后截取的。",
+      "role": "moment",
+      "width": 415,
+      "height": 344,
+      "bytes": 26442,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-images",
+        "moments-card"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image16.png"
+    },
+    {
+      "id": "mem12",
+      "figure": 16,
+      "file": "unsloth-activity-monitor-memory-used-12-92-gb.webp",
+      "path": "images/unsloth-activity-monitor-memory-used-12-92-gb.webp",
+      "alt": "macOS 活动监视器：物理内存 24.00 GB，已使用内存 12.92 GB，缓存文件 10.95 GB，App 内存 9.81 GB，联动内存 1.83 GB，交换 0。",
+      "caption": "内存面板，历史曲线长而平。已使用内存 12.92 GB，缓存文件 10.95 GB，App 内存 9.81 GB，联动内存 1.83 GB，已用交换 0 字节。截取的时刻和当时打开的应用都没有记录。",
+      "role": "inline",
+      "width": 701,
+      "height": 132,
+      "bytes": 7206,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-memory"
+      ],
+      "subject": "macOS 活动监视器截图",
+      "rights": "测试者自己对 macOS 活动监视器的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image17.png"
+    },
+    {
+      "id": "mem9",
+      "figure": 17,
+      "file": "unsloth-activity-monitor-memory-used-9-67-gb.webp",
+      "path": "images/unsloth-activity-monitor-memory-used-9-67-gb.webp",
+      "alt": "macOS 活动监视器：物理内存 24.00 GB，已使用内存 9.67 GB，缓存文件 8.14 GB，App 内存 6.97 GB，联动内存 1.71 GB，交换 0。",
+      "caption": "内存面板，历史曲线较短，在图的后段才开始。已使用内存 9.67 GB，缓存文件 8.14 GB，App 内存 6.97 GB，联动内存 1.71 GB，交换 0。与笔记中'启动时 10 GB'的说法相符；它显示的是哪个时刻，没有记录。",
+      "role": "moment",
+      "width": 1250,
+      "height": 208,
+      "bytes": 16864,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-memory",
+        "moments-card"
+      ],
+      "subject": "macOS 活动监视器截图",
+      "rights": "测试者自己对 macOS 活动监视器的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image18.png"
+    },
+    {
+      "id": "list",
+      "figure": 18,
+      "file": "unsloth-on-device-flux2-klein-4b-and-mistral-7b-sizes.webp",
+      "path": "images/unsloth-on-device-flux2-klein-4b-and-mistral-7b-sizes.webp",
+      "alt": "Unsloth 的 On Device 列表，UNSLOTH 下有 FLUX.2-klein-4B-GGUF 7.8 GB、FLUX.2-klein-4B 16 GB 和 mistral-7b-v0.3-bnb-4bit 4.1 GB。",
+      "caption": "UNSLOTH 下设备上的模型：FLUX.2-klein-4B-GGUF（BF16，图片图标，4B，7.8 GB）、FLUX.2-klein-4B（图片图标，4B，16 GB）、mistral-7b-v0.3-bnb-4bit（7B，4.1 GB）。",
+      "role": "inline",
+      "width": 538,
+      "height": 130,
+      "bytes": 5598,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-images"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image19.png"
+    },
+    {
+      "id": "zimage",
+      "figure": 19,
+      "file": "unsloth-download-z-image-bf16-20-5-gb-total.webp",
+      "path": "images/unsloth-download-z-image-bf16-20-5-gb-total.webp",
+      "alt": "Unsloth 对 Z-Image BF16 的'Download model'对话框：模型文件 12.3 GB，必需的编码器和解码器 8.2 GB，总下载量 20.5 GB。",
+      "caption": "Z-Image (BF16) 的下载对话框：模型文件 12.3 GB，'Include required files' 8.2 GB（编码器和解码器，兼容的变体之间共用），共 20.5 GB。'Downloading will not load this model or switch your current model.'",
+      "role": "inline",
+      "width": 496,
+      "height": 438,
+      "bytes": 12042,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-hub"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image20.png"
+    },
+    {
+      "id": "starting",
+      "figure": 20,
+      "file": "unsloth-starting-model-loading-cached-model-no-progress.webp",
+      "path": "images/unsloth-starting-model-loading-cached-model-no-progress.webp",
+      "alt": "Unsloth 标题栏里有'Select model'，以及提示'Starting model... Loading cached model into memory.'，带转圈图标和 Cancel 按钮。",
+      "caption": "模型启动。提示显示一个转圈图标和'Loading cached model into memory.'没有百分比，没有大小，没有时间。测试者说持续了两三分钟以上（估计）。",
+      "role": "inline",
+      "width": 1114,
+      "height": 158,
+      "bytes": 3718,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-end"
+      ],
+      "subject": "Unsloth 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-09（可见一个时间戳，下午 5:13）；具体时间未记录",
+      "original_docx_media": "Unsloth doc image21.png"
+    }
+  ],
+  "figure_order": [
+    "flux_2gb",
+    "splash",
+    "main",
+    "picker",
+    "lm_load",
+    "calc",
+    "ondevice",
+    "coder",
+    "hub",
+    "download",
+    "web_approval",
+    "oom_web",
+    "voice",
+    "heidelberg",
+    "flux_6gb",
+    "mem12",
+    "mem9",
+    "list",
+    "zimage",
+    "starting"
+  ],
+  "seo": {
+    "title": "Unsloth 实测：24 GB Mac 上内存不足",
+    "description": "在 24 GB Mac 上测试 Unsloth：聊天速度约 11 tokens/秒，但图像模型因内存不足被拒绝加载，没有生成图片。"
+  },
+  "faq": [
+    [
+      "Unsloth 能在 24 GB 的 Mac 上生成图片吗？",
+      "这次测试中不能。加载图像模型 flux.2-klein 被拒绝了两次：一开始需要约 17 GB，可用约 2 GB（空闲 7 GB），重启后可用约 6 GB（空闲 11 GB）。没有生成图片。",
+      "measured"
+    ],
+    [
+      "Unsloth 能找到我已经在 LM Studio 或 Ollama 里的模型吗？",
+      "在这次测试中可以。第一次聊天直接从 LM Studio 的模型文件夹加载了一个 Qwen3.8-27B 4-bit 模型，没有下载；On Device 列表还显示了 gemma4:latest 和 qwen3-coder:30b 等 Ollama 模型。有些 Ollama 模型不能用，具体是哪些没有记录。",
+      "observed"
+    ],
+    [
+      "Unsloth 在 24 GB 的 Mac 上聊天有多快？",
+      "一个 27B 4-bit 模型在 10 秒内以 11.0 tokens/秒回答了'what is 5 times 866'（4,330，正确）。在开着其他应用的情况下，用同一个模型读取网页和做活动搜索都以'Ran out of memory'结束。",
+      "measured"
+    ],
+    [
+      "Unsloth 的安装包有多大，安装要多久？",
+      "DMG 为 24 MB。首次启动运行了一个 13 步的依赖更新，测试者估计需要四到五分钟；窗口没有显示时间或磁盘估算。测试是从已有的安装开始的，不是全新安装。",
+      "observed"
+    ],
+    [
+      "Unsloth 可以完全离线使用吗？",
+      "供应商的文档说可以 100% 离线、在本地使用。离线使用没有测试；网页搜索和模型下载用到了互联网。",
+      "vendor-claim"
+    ]
+  ],
+  "published": "2026-10-16",
+  "ui": {
+    "kicker": "PromptQuorum 上手测试 · {app} · {date}",
+    "date_line": "2026 年 10 月 9 日",
+    "nav_aria": "章节",
+    "nav": {
+      "verdict": "结论",
+      "moments": "六个时刻",
+      "story": "测试经过",
+      "claims": "说法核对",
+      "fit": "24 GB",
+      "log": "使用记录",
+      "errors": "测试者失误",
+      "findings": "发现项",
+      "background": "背景"
+    },
+    "related": "相关内容：",
+    "review_link": "PromptQuorum 对 {app} 的评测",
+    "directory_link": "本地 AI 应用目录",
+    "verdict_h": "结论",
+    "general_assessment": "总体评价",
+    "fit_for_tester": "是否适合测试者的使用场景",
+    "scorecard": "评分卡",
+    "status_prefix": "状态：",
+    "na": "不适用",
+    "score_aria": "满分 5 分，得 {n} 分",
+    "details_h": "测试详情",
+    "label_intro": "每条陈述都带有标签：",
+    "legend_link": "标签含义",
+    "disclosure_label": "利益披露。",
+    "raw_notes": "原始笔记 PDF：",
+    "to_be_added": "待补充",
+    "moments_h": "左右这次测试的六个时刻",
+    "see_context": "查看上下文",
+    "story_h": "测试经过",
+    "claims_h": "官方说法与测试者所见",
+    "claims_cols": [
+      "说法",
+      "来源",
+      "已观察",
+      "标签"
+    ],
+    "fit_h": "能装进 24 GB 吗？",
+    "memory_line": "{gb} GB 内存",
+    "above": "高于 {gb} GB",
+    "below": "低于 {gb} GB",
+    "log_h": "使用记录",
+    "log_cols": [
+      "#",
+      "任务",
+      "模型",
+      "结果",
+      "用时",
+      "状态",
+      "图"
+    ],
+    "statuses": {
+      "Fail": "失败",
+      "Partial": "部分完成",
+      "Pass": "通过",
+      "Not completed": "未完成"
+    },
+    "errors_h": "测试者出错的地方",
+    "findings_h": "发现清单",
+    "filter_aria": "按标签筛选发现项",
+    "filter_all": "全部",
+    "findings_cols": [
+      "编号",
+      "发现项",
+      "类别",
+      "标签",
+      "严重程度",
+      "图"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "正面"
+    },
+    "fig_abbr": "图",
+    "figure": "图",
+    "enlarge": "放大：",
+    "audience_h": "适合谁",
+    "likely_fit": "可能适合",
+    "likely_poor_fit": "可能不适合",
+    "retest": "复测。",
+    "background_h": "开发方背景",
+    "gallery_h": "测试中的更多图片",
+    "legend_h": "如何理解标签",
+    "sources_h": "资料来源",
+    "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
+    "crumb_home": "首页",
+    "crumb_directory": "目录",
+    "crumb_test": "{app} 上手测试",
+    "faq_h": "常见问题",
+    "more_tests_h": "更多实测"
+  }
+}

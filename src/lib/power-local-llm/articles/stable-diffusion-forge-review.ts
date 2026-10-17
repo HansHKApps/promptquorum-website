@@ -71,9 +71,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uses a Gradio 4 interface, with a Windows one-click package plus manual git-clone setup for macOS and Linux',
           'Runs on Windows, macOS, and Linux; a GPU is strongly recommended, with no single documented VRAM minimum — it depends on the checkpoint and resolution',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Stable Diffusion WebUI Forge\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Forge compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-forge',
@@ -349,9 +346,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Bringt integrierte ControlNet- und IP-Adapter-Unterstützung, LoRA-Unterstützung sowie Flux-Modell-Unterstützung (NF4-/GGUF-Quantisierung) mit, ohne zusätzliche Erweiterungen',
           'Nutzt eine Gradio-4-Oberfläche, mit einem Windows-Ein-Klick-Paket sowie manuellem Git-Clone-Setup für macOS und Linux',
           'Läuft unter Windows, macOS und Linux; eine GPU wird dringend empfohlen, ohne dokumentierte feste VRAM-Untergrenze — abhängig von Checkpoint und Auflösung',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zum Eintrag von Stable Diffusion WebUI Forge im [Local LLM Software Directory](/directory) — dort sehen Sie auf einen Blick, wie Forge im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -629,9 +623,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Utilise une interface Gradio 4, avec un paquet Windows en un clic et une installation manuelle par clonage Git pour macOS et Linux',
           'Fonctionne sous Windows, macOS et Linux ; un GPU est fortement recommandé, sans minimum de VRAM officiellement documenté — cela dépend du checkpoint et de la résolution',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Stable Diffusion WebUI Forge dans le [Local LLM Software Directory](/directory) — consultez cette page pour comparer Forge en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-forge',
@@ -907,9 +898,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '追加の拡張機能なしで、標準搭載のControlNetとIP-Adapterサポート、LoRAサポート、Fluxモデル対応（NF4/GGUF量子化）を提供します',
           'Gradio 4インターフェースを採用し、Windows向けのワンクリックパッケージとmacOS・Linux向けの手動git clone設定を用意しています',
           'Windows、macOS、Linuxで動作します。GPUが強く推奨されますが、単一の文書化されたVRAM最低要件はなく、チェックポイントと解像度に依存します',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/directory)にあるStable Diffusion WebUI Forgeのエントリーの詳細版です。数十の他のローカルAIツールとForgeを一目で比較するには、そちらのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1187,9 +1175,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '采用Gradio 4界面，Windows提供一键打包版本，macOS和Linux则需手动克隆仓库进行设置',
           '支持Windows、macOS和Linux；强烈建议使用GPU，官方未记录单一固定的显存下限——具体取决于所用模型和分辨率',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/directory)中Stable Diffusion WebUI Forge词条的深度补充——请查看该页面，快速了解Forge与数十款其他本地AI工具的对比情况。' },
-        ],
       },
       overview: {
         id: 'what-is-forge',
@@ -1465,9 +1450,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Incorpora soporte integrado de ControlNet e IP-Adapter, soporte de LoRA, y soporte de modelos Flux (cuantización NF4/GGUF) sin necesidad de extensiones adicionales',
           'Utiliza una interfaz Gradio 4, con un paquete de un clic para Windows y una instalación manual mediante clonado con Git para macOS y Linux',
           'Funciona en Windows, macOS y Linux; se recomienda encarecidamente una GPU, sin un mínimo de VRAM único documentado — depende del modelo y la resolución',
-        ],
-        callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la ficha de Stable Diffusion WebUI Forge en el [Directorio de Software LLM Local](/directory) — consulta esa página para ver de un vistazo cómo se compara Forge con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1745,9 +1727,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Usa uma interface Gradio 4, com um pacote de um clique para Windows e configuração manual via clonagem do repositório para macOS e Linux',
           'Funciona em Windows, macOS e Linux; uma GPU é fortemente recomendada, sem um mínimo de VRAM único documentado — depende do checkpoint e da resolução',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do Stable Diffusion WebUI Forge no [Diretório de Software de LLM Local](/directory) — veja essa página para comparar rapidamente o Forge com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-forge',
@@ -2024,9 +2003,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يستخدم واجهة Gradio 4، مع حزمة تثبيت بنقرة واحدة لنظام Windows وإعداد يدوي عبر استنساخ Git لنظامي macOS وLinux',
           'يعمل على Windows وmacOS وLinux؛ يُنصح بشدة باستخدام معالج رسومات، دون حد أدنى موثّق لذاكرة الفيديو — الأمر يعتمد على نقطة التفتيش (checkpoint) ودقة الصورة',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لسجل Stable Diffusion WebUI Forge في [دليل برمجيات الذكاء الاصطناعي المحلي](/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Forge بسرعة بعشرات الأدوات المحلية الأخرى للذكاء الاصطناعي.' },
-        ],
       },
       overview: {
         id: 'what-is-forge',
@@ -2302,9 +2278,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '추가 확장 프로그램 없이 ControlNet 및 IP-Adapter 기본 지원, LoRA 지원, Flux 모델 지원(NF4/GGUF 양자화)을 제공합니다',
           'Gradio 4 인터페이스를 사용하며, Windows용 원클릭 패키지와 macOS·Linux용 수동 git clone 설정을 제공합니다',
           'Windows, macOS, Linux에서 실행됩니다. GPU를 강력히 권장하며, 문서화된 단일 VRAM 최소 사양은 없습니다. 체크포인트와 해상도에 따라 다릅니다',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 등록된 Stable Diffusion WebUI Forge 항목의 심층 보완 자료입니다. 수십 개의 다른 로컬 AI 도구와 Forge를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

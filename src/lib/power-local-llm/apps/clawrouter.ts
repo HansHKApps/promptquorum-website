@@ -39,4 +39,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { fallback: true },
   lastVerifiedDate: '2026-09-18',
+  lastUpstreamUpdate: '2026-10-13', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/BlockRunAI/ClawRouter',
 }

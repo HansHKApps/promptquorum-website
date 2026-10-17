@@ -72,9 +72,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Roughly 32,000 GitHub stars as of this review',
           "Current version: v4.8.1 (released 2026-09-24), per Onyx's GitHub [releases](https://github.com/onyx-dot-app/onyx/releases)",
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Onyx\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Onyx compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-onyx',
@@ -312,9 +309,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation per Einzeiler-Installationsskript, `uv tool install onyx-cli`-CLI, Docker Compose, Kubernetes oder Helm',
           'Rund 32.000 GitHub-Sterne zum Zeitpunkt dieser Review',
           'Aktuelle Version: v4.8.1 (veröffentlicht am 24.09.2026), laut Onyx\' GitHub-[Releases](https://github.com/onyx-dot-app/onyx/releases)',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu Onyx\' Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie Onyx im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -555,9 +549,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Environ 32 000 étoiles GitHub au moment de cette review',
           'Version actuelle : v4.8.1 (publiée le 24/09/2026), selon les [releases](https://github.com/onyx-dot-app/onyx/releases) GitHub d\'Onyx',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche d\'Onyx dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer Onyx en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-onyx',
@@ -795,9 +786,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ワンライナーのインストールスクリプト、`uv tool install onyx-cli`によるCLI、Docker Compose、Kubernetes、またはHelmでインストール可能',
           '本レビュー時点でGitHubスター約32,000件',
           '現在のバージョン：v4.8.1（2026年9月24日リリース）、OnyxのGitHub[リリース](https://github.com/onyx-dot-app/onyx/releases)より',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のOnyxの項目を深掘りする内容です——他の数十のローカルAIツールとOnyxを一目で比較するには、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1037,9 +1025,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测约有32,000颗GitHub星标',
           '当前版本：v4.8.1（发布于2026-09-24），来自Onyx的GitHub[发布页](https://github.com/onyx-dot-app/onyx/releases)',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Onyx条目的深入版本——请查看该页面，一览Onyx与其他数十款本地AI工具的对比。' },
-        ],
       },
       overview: {
         id: 'what-is-onyx',
@@ -1277,9 +1262,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se instala mediante un script de instalación de una línea, una CLI `uv tool install onyx-cli`, Docker Compose, Kubernetes o Helm',
           'Aproximadamente 32.000 estrellas en GitHub al momento de esta review',
           'Versión actual: v4.8.1 (publicada el 24-09-2026), según las [releases](https://github.com/onyx-dot-app/onyx/releases) de GitHub de Onyx',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento detallado de la ficha de Onyx en el [Local LLM Software Directory](/es/directory) — consulta esa página para comparar Onyx de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1519,9 +1501,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aproximadamente 32.000 estrelas no GitHub no momento desta review',
           'Versão atual: v4.8.1 (lançada em 24/09/2026), segundo os [releases](https://github.com/onyx-dot-app/onyx/releases) do GitHub do Onyx',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do Onyx no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar o Onyx rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-onyx',
@@ -1760,9 +1739,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'نحو 32,000 نجمة على GitHub وقت كتابة هذه المراجعة',
           'الإصدار الحالي: v4.8.1 (صدر في 2026-09-24)، وفق [إصدارات](https://github.com/onyx-dot-app/onyx/releases) Onyx على GitHub',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لسجل Onyx في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة Onyx بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-onyx',
@@ -2000,9 +1976,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '원라인 설치 스크립트, `uv tool install onyx-cli` CLI, Docker Compose, Kubernetes 또는 Helm으로 설치 가능',
           '이 리뷰 작성 시점 기준 GitHub 스타 약 32,000개',
           '현재 버전: v4.8.1(2026-09-24 출시), Onyx GitHub [릴리스](https://github.com/onyx-dot-app/onyx/releases) 기준',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등록된 Onyx 항목의 심층 버전입니다 — Onyx를 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {

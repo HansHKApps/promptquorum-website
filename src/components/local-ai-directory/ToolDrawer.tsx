@@ -18,12 +18,14 @@ import { CloseIcon, StarIcon, CopyIcon, CheckIcon } from './icons'
 import { getValueLabels } from './FilterBar'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { isFounderStarActive } from './founderStar'
-import { getListingFreshness } from './staleness'
+import { getListingFreshness, getAppActivity } from './staleness'
 import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderText'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { HardwareProfile, MachineType } from './types'
 import { getDownloadLinks } from './ToolCard'
+import { INSTALL_EFFORT_UI, installOnSuffix } from './installEffort'
 import { featureReviewUrl } from './reviewLinks'
+import { handsOnTestUrl } from '@/lib/hands-on-tests/links'
 import { guideForCategories } from '@/lib/power-local-llm/compare-guide'
 import { LicenseInfoModal } from './LicenseInfoModal'
 import { LastUpdatedBadge } from './LastUpdatedBadge'
@@ -174,6 +176,7 @@ export function ToolDrawer({
   const [copied, setCopied] = useState(false)
   const [licenseModalOpen, setLicenseModalOpen] = useState(false)
   const featureReview = app ? featureReviewUrl(app.slug, lang) : null
+  const handsOn = app ? handsOnTestUrl(app.slug, lang) : null
   const guide = app ? guideForCategories(app.categories, lang) : null
   const guideHref = guide ? `${lang === 'en' ? '' : `/${lang}`}/power-local-llm/${guide.slug}` : null
 
@@ -195,6 +198,7 @@ export function ToolDrawer({
       [t('detailInterface', ui), app.interfaces.map((i) => INTERFACE_LABEL[i][lang]).join(', ')],
       [t('detailRuns', ui), labelFor('locality', app.locality, lang, ui)],
       [t('detailEngine', ui), labelFor('engine', app.engine, lang, ui)],
+      ...(app.installEffort ? [[t('groupInstall', ui), t(INSTALL_EFFORT_UI[app.installEffort].label, ui) + installOnSuffix(app)] as [string, ReactNode]] : []),
       [t('detailPrice', ui), labelFor('price', app.price, lang, ui)],
       [t('detailLicense', ui), app.license === 'TODO' ? null : app.license],
       [t('detailPlatforms', ui), labelList('platforms', app.platforms, lang, ui)],
@@ -202,6 +206,7 @@ export function ToolDrawer({
       [t('detailMcp', ui), app.mcpSupport ? t('mcpSupported', ui) : null],
       [t('detailVersion', ui), app.pqReview?.version ? `${app.pqReview.version} (${formatDisplayDate(app.pqReview.date, lang)})` : null],
       [t('detailAdded', ui), app.addedDate ? formatDisplayDate(app.addedDate, lang) : null],
+      [t('appLastUpdateLabel', ui), app.lastUpstreamUpdate ? formatDisplayDate(app.lastUpstreamUpdate, lang) : null],
       [t('detailLastVerified', ui), app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null],
     ]
 
@@ -281,6 +286,24 @@ export function ToolDrawer({
                 {app.tagline[lang] ?? app.tagline.en ?? ''}
               </Dialog.Description>
 
+              {(() => {
+                const activity = getAppActivity(app.lastUpstreamUpdate)
+                if (activity !== 'quiet' && activity !== 'dead') return null
+                return (
+                  <div
+                    role="alert"
+                    className={`mb-4 rounded-lg border-2 p-3 text-sm ${
+                      activity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-red-500 bg-red-50 text-red-900'
+                    }`}
+                  >
+                    <p className="font-extrabold">⚠ {t(activity === 'dead' ? 'appDeadBadge' : 'appQuietBadge', ui)}</p>
+                    <p className="mt-1 text-xs">
+                      {t('appLastUpdateLabel', ui)}: {app.lastUpstreamUpdate ? formatDisplayDate(app.lastUpstreamUpdate, lang) : ''}. {t(activity === 'dead' ? 'appDeadTooltip' : 'appQuietTooltip', ui)}
+                    </p>
+                  </div>
+                )
+              })()}
+
               {app.upstreamStatus && (
                 <span className="mb-4 inline-flex w-fit items-center gap-1 rounded-full border border-gray-300 bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-700">
                   {t(app.upstreamStatus.state === 'archived' ? 'archivedBadge' : 'unmaintainedBadge', ui)}
@@ -345,6 +368,7 @@ export function ToolDrawer({
                   <DetailRow label={t('detailRuns', ui)} value={labelFor('locality', app.locality, lang, ui)} />
                   <DetailRow label={t('detailEngine', ui)} value={labelFor('engine', app.engine, lang, ui)} />
                   <DetailRow label={t('detailPrice', ui)} value={labelFor('price', app.price, lang, ui)} />
+                  <DetailRow label={t('groupInstall', ui)} value={app.installEffort ? <span title={t(INSTALL_EFFORT_UI[app.installEffort].tip, ui)}>{t(INSTALL_EFFORT_UI[app.installEffort].label, ui)}{installOnSuffix(app)}</span> : null} />
                   <DetailRow
                     label={t('detailLicense', ui)}
                     value={
@@ -461,6 +485,11 @@ export function ToolDrawer({
                   >
                     {t('readReview', ui)}
                   </Link>
+                  {handsOn && (
+                    <Link href={handsOn} className="mt-2 block text-sm font-semibold underline underline-offset-2 text-primary hover:text-primary/80">
+                      {t('handsOnTest', ui)}
+                    </Link>
+                  )}
                   {guideHref && (
                     <Link href={guideHref} className="mt-2 block text-sm font-semibold underline underline-offset-2 text-primary hover:text-primary/80">
                       {t('readGuide', ui)}{guide ? ` — ${guide.label}` : ''}

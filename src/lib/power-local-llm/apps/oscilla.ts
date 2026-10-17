@@ -46,4 +46,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value taken from the App Store listing on 2026-10-04; a missing key = not stated there, never false.
   compare: { voice: true, offline: true, modelDownloads: true, visionInput: true },
   lastVerifiedDate: '2026-10-04',
+  lastUpstreamUpdate: '2026-05-21', // App Store version history, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/oscilla/id6759628356',
 }

@@ -55,6 +55,8 @@ export interface LLMSection {
   codeBlock?: string
   codeLanguage?: string
   note?: string
+  /** Set at render time on competitor/comparison sections of review pages (competitor-links.ts). */
+  directoryCompare?: { label: string; href: string }
   callouts?: Array<{ type: string; text: string }>
   snippetBlocks?: Array<{ type: 'one-sentence' | 'plain-terms'; text: string }>
   promptExamples?: Array<{ label: string; text: string }>

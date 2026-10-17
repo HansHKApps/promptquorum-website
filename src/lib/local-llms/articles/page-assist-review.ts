@@ -276,6 +276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Local LLM Software Directory](/directory) -- the full catalog of local AI tools this article belongs to, including Page Assist\'s own directory entry.',
+          '[Page Assist Hands-on Test](/power-local-llm/page-assist-hands-on-test) — a first-hand test on a 24 GB MacBook Pro (M3 Pro), with every statement labelled by how it is known.',
           '[LobeChat Review](/local-llms/lobechat-review) -- a self-hosted alternative with a plugin marketplace and agent builder.',
           '[Big-AGI Review](/local-llms/big-agi-review) -- a self-hosted or hosted alternative built around comparing multiple models on one prompt.',
           '[NextChat Review](/local-llms/nextchat-review) -- the lightest-weight self-hosted alternative in the same directory segment.',
@@ -570,6 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Local LLM Software Directory](/de/directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des eigenen Directory-Eintrags von Page Assist.',
+          '[Page Assist Praxistest](/de/power-local-llm/page-assist-hands-on-test) — ein Praxistest auf einem MacBook Pro mit M3 Pro und 24 GB, bei dem jede Aussage danach gekennzeichnet ist, woher sie stammt.',
           '[LobeChat-Rezension](/de/local-llms/lobechat-review) -- eine selbst gehostete Alternative mit Plugin-Marktplatz und Agent-Builder.',
           '[Big-AGI-Rezension](/de/local-llms/big-agi-review) -- eine selbst gehostete oder gehostete Alternative rund um den Vergleich mehrerer Modelle bei einem Prompt.',
           '[NextChat-Rezension](/de/local-llms/nextchat-review) -- die leichtgewichtigste selbst gehostete Alternative im selben Directory-Segment.',
@@ -864,6 +866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pour aller plus loin',
         items: [
           '[Local LLM Software Directory](/fr/directory) -- le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la propre fiche de Page Assist dans l\'annuaire.',
+          '[Test pratique de Page Assist](/fr/power-local-llm/page-assist-hands-on-test) — un test réalisé sur un MacBook Pro M3 Pro de 24 Go, où chaque affirmation est étiquetée selon son origine.',
           '[Test LobeChat](/fr/local-llms/lobechat-review) -- une alternative auto-hébergée avec marketplace de plugins et agent builder.',
           '[Test Big-AGI](/fr/local-llms/big-agi-review) -- une alternative auto-hébergée ou hébergée conçue autour de la comparaison de plusieurs modèles sur un même prompt.',
           '[Test NextChat](/fr/local-llms/nextchat-review) -- l\'alternative auto-hébergée la plus légère du même segment de l\'annuaire.',
@@ -1158,6 +1161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[ローカルLLMソフトウェアディレクトリ](/ja/directory)——この記事が属するローカルAIツールの全カタログ。Page Assist自身のディレクトリ掲載情報を含みます。',
+          '[Page Assistの実機テスト](/ja/power-local-llm/page-assist-hands-on-test)——24 GBのMacBook Pro（M3 Pro）で行ったテスト。各記述に根拠のラベルを付けています。',
           '[LobeChatレビュー](/ja/local-llms/lobechat-review)——プラグイン市場とエージェントビルダーを備えたセルフホスト型の代替ツール。',
           '[Big-AGIレビュー](/ja/local-llms/big-agi-review)——1つのプロンプトで複数モデルを比較することを中心に構築された、セルフホストまたはホスト型の代替ツール。',
           '[NextChatレビュー](/ja/local-llms/nextchat-review)——同じディレクトリセグメントの中で最も軽量なセルフホスト型の代替ツール。',
@@ -1452,6 +1456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '延伸阅读',
         items: [
           '[本地LLM软件目录](/zh/directory)——本文所属的本地AI工具完整目录，包含Page Assist自身的目录条目。',
+          '[Page Assist实测](/zh/power-local-llm/page-assist-hands-on-test)——在24 GB内存的MacBook Pro（M3 Pro）上进行的测试，每条陈述都标明了依据。',
           '[LobeChat评测](/zh/local-llms/lobechat-review)——一款拥有插件市场和智能体构建器的自托管替代方案。',
           '[Big-AGI评测](/zh/local-llms/big-agi-review)——一款围绕在同一提示词下比较多个模型而打造的自托管或托管替代方案。',
           '[NextChat评测](/zh/local-llms/nextchat-review)——同一目录分类中最轻量的自托管替代方案。',
@@ -1746,6 +1751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Directorio de software para LLM local](/es/directory) -- el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia ficha de Page Assist en el directorio.',
+          '[Prueba práctica de Page Assist](/es/power-local-llm/page-assist-hands-on-test) — una prueba en un MacBook Pro con M3 Pro y 24 GB, en la que cada afirmación indica cómo se sabe.',
           '[Análisis de LobeChat](/es/local-llms/lobechat-review) -- una alternativa autoalojada con marketplace de plugins y agent builder.',
           '[Análisis de Big-AGI](/es/local-llms/big-agi-review) -- una alternativa autoalojada o alojada diseñada en torno a comparar varios modelos en un mismo prompt.',
           '[Análisis de NextChat](/es/local-llms/nextchat-review) -- la alternativa autoalojada más ligera dentro del mismo segmento del directorio.',
@@ -2040,6 +2046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Diretório de software para LLM local](/pt/directory) -- o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria listagem do Page Assist no diretório.',
+          '[Teste prático do Page Assist](/pt/power-local-llm/page-assist-hands-on-test) — um teste em um MacBook Pro com M3 Pro e 24 GB, em que cada afirmação indica como se sabe.',
           '[Análise do LobeChat](/pt/local-llms/lobechat-review) -- uma alternativa auto-hospedada com marketplace de plugins e agent builder.',
           '[Análise do Big-AGI](/pt/local-llms/big-agi-review) -- uma alternativa auto-hospedada ou hospedada construída em torno da comparação de vários modelos no mesmo prompt.',
           '[Análise do NextChat](/pt/local-llms/nextchat-review) -- a alternativa auto-hospedada mais leve do mesmo segmento do diretório.',
@@ -2334,6 +2341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[دليل برمجيات النماذج اللغوية المحلية](/ar/directory) -- الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال، بما في ذلك بطاقة Page Assist الخاصة بها في الدليل.',
+          '[اختبار Page Assist العملي](/ar/power-local-llm/page-assist-hands-on-test) — اختبار على جهاز MacBook Pro بمعالج M3 Pro وذاكرة 24 جيجابايت، مع وسم كل عبارة بمصدر معرفتها.',
           '[مراجعة LobeChat](/ar/local-llms/lobechat-review) -- بديل ذاتي الاستضافة مع سوق إضافات وأداة بناء وكلاء.',
           '[مراجعة Big-AGI](/ar/local-llms/big-agi-review) -- بديل ذاتي الاستضافة أو مستضاف مبني حول مقارنة عدة نماذج على نفس الطلب.',
           '[مراجعة NextChat](/ar/local-llms/nextchat-review) -- أخف بديل ذاتي الاستضافة ضمن نفس قسم الدليل.',
@@ -2628,6 +2636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) -- 이 글이 속한 로컬 AI 도구 전체 카탈로그로, Page Assist 자체의 디렉터리 항목을 포함합니다.',
+          '[Page Assist 직접 테스트](/ko/power-local-llm/page-assist-hands-on-test) — 24GB MacBook Pro(M3 Pro)에서 진행한 테스트로, 모든 서술에 근거 라벨을 붙였습니다.',
           '[LobeChat 리뷰](/ko/local-llms/lobechat-review) -- 플러그인 마켓플레이스와 에이전트 빌더를 갖춘 셀프 호스팅 대안입니다.',
           '[Big-AGI 리뷰](/ko/local-llms/big-agi-review) -- 하나의 프롬프트로 여러 모델을 비교하는 것을 중심으로 만들어진 셀프 호스팅 또는 호스팅형 대안입니다.',
           '[NextChat 리뷰](/ko/local-llms/nextchat-review) -- 같은 디렉터리 세그먼트 안에서 가장 가벼운 셀프 호스팅 대안입니다.',

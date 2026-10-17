@@ -3,7 +3,7 @@ import { freshAgeDays } from '@/lib/article-freshness'
 import { getLatestApps } from './apps-feed'
 import { getLatestPosts } from './content-feed'
 
-export type FreshKind = 'review' | 'app' | 'guide'
+export type FreshKind = 'review' | 'test' | 'app' | 'guide'
 
 export interface FreshItem {
   key: string
@@ -31,7 +31,7 @@ export function getFreshItems(lang: Language = 'en', limit = 6): FreshItem[] {
     if (ageDays === null) continue
     byUrl.set(p.url, {
       key: p.url,
-      kind: /-review$/.test(p.url) ? 'review' : 'guide',
+      kind: /-review$/.test(p.url) ? 'review' : /-hands-on-test$/.test(p.url) ? 'test' : 'guide',
       title: p.title,
       description: p.excerpt,
       url: p.url,

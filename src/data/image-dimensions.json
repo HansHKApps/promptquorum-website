@@ -364,6 +364,51 @@
     "width": 1000,
     "height": 600
   },
+  "/images/ai-cutoutwerk-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-cutoutwerk-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-cutoutwerk-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-cutoutwerk-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-cutoutwerk-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-cutoutwerk-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-cutoutwerk-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-cutoutwerk-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ai-cutoutwerk-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/ai-limitations-what-llms-cant-do-can-llms-do-x-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -1068,6 +1113,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 450
+  },
+  "/images/anyllm-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anyllm-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anyllm-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anyllm-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anyllm-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anyllm-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anyllm-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anyllm-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/anyllm-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
   "/images/anythingllm-mobile-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -13639,6 +13729,26 @@
     "width": 1200,
     "height": 675
   },
+  "/images/bobe-chat-asks-for-clarification-instead-of-macos-permission-steps.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1429,
+    "height": 893
+  },
+  "/images/bobe-chat-user-asks-answer-or-joke.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1431,
+    "height": 349
+  },
+  "/images/bobe-desktop-chat-no-macos-setting-given.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1100,
+    "height": 984
+  },
+  "/images/bobe-model-choice-dialog-small-medium-large-local-models.webp": {
+    "encodingFormat": "image/webp",
+    "width": 572,
+    "height": 636
+  },
   "/images/bobe-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -13683,6 +13793,16 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/bobe-screen-awareness-dialog-screen-recording-not-granted.webp": {
+    "encodingFormat": "image/webp",
+    "width": 613,
+    "height": 665
+  },
+  "/images/bobe-setup-downloading-ai-engine-and-language-model.webp": {
+    "encodingFormat": "image/webp",
+    "width": 597,
+    "height": 654
   },
   "/images/bodega-one-code-review-2026-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -17674,6 +17794,111 @@
     "width": 800,
     "height": 450
   },
+  "/images/diffusionbee-ai-canvas-sky-prompt-input-strength-30.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1086,
+    "height": 662
+  },
+  "/images/diffusionbee-brand-logo-prompt-garbled-box-results.webp": {
+    "encodingFormat": "image/webp",
+    "width": 637,
+    "height": 607
+  },
+  "/images/diffusionbee-download-error-esockettimedout-download-again.webp": {
+    "encodingFormat": "image/webp",
+    "width": 342,
+    "height": 334
+  },
+  "/images/diffusionbee-epicrealism-new-york-night-skyline-helicopters.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1139,
+    "height": 695
+  },
+  "/images/diffusionbee-first-image-circle-with-green-dot.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1055,
+    "height": 679
+  },
+  "/images/diffusionbee-first-model-download-3-percent-no-size.webp": {
+    "encodingFormat": "image/webp",
+    "width": 336,
+    "height": 244
+  },
+  "/images/diffusionbee-generate-similar-images-four-beach-couple-variants.webp": {
+    "encodingFormat": "image/webp",
+    "width": 451,
+    "height": 456
+  },
+  "/images/diffusionbee-heidelberg-castle-prompt-generic-results.webp": {
+    "encodingFormat": "image/webp",
+    "width": 657,
+    "height": 626
+  },
+  "/images/diffusionbee-home-all-ai-tools-text-to-image-inpainting.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1092,
+    "height": 714
+  },
+  "/images/diffusionbee-image-to-image-add-cruise-ship-result.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1146,
+    "height": 708
+  },
+  "/images/diffusionbee-image-to-image-pop-art-prompt-strength-80.webp": {
+    "encodingFormat": "image/webp",
+    "width": 903,
+    "height": 738
+  },
+  "/images/diffusionbee-image-to-image-strength-90-picture-unchanged.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1134,
+    "height": 703
+  },
+  "/images/diffusionbee-inpainting-controlnet-inpaint-model-download.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1069,
+    "height": 590
+  },
+  "/images/diffusionbee-inpainting-logo-removed-with-pink-remnants.webp": {
+    "encodingFormat": "image/webp",
+    "width": 339,
+    "height": 272
+  },
+  "/images/diffusionbee-inpainting-person-removed-from-street-photo.webp": {
+    "encodingFormat": "image/webp",
+    "width": 321,
+    "height": 629
+  },
+  "/images/diffusionbee-inpainting-remove-barilla-logo-prompt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1092,
+    "height": 735
+  },
+  "/images/diffusionbee-juggernaut-couple-on-beach-sunset-palms-birds.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1216,
+    "height": 1216
+  },
+  "/images/diffusionbee-juggernaut-couple-on-beach-three-people-boats.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1216,
+    "height": 1216
+  },
+  "/images/diffusionbee-juggernaut-eiffel-tower-two-similar-results.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1288,
+    "height": 618
+  },
+  "/images/diffusionbee-juggernaut-xl-clown-elephant-volcano-result.webp": {
+    "encodingFormat": "image/webp",
+    "width": 828,
+    "height": 638
+  },
+  "/images/diffusionbee-models-page-flux-needs-app-update.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1057,
+    "height": 651
+  },
   "/images/diffusionbee-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -17718,6 +17943,26 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/diffusionbee-samaritan-3d-cartoon-clown-dancing-on-elephant.webp": {
+    "encodingFormat": "image/webp",
+    "width": 848,
+    "height": 641
+  },
+  "/images/diffusionbee-samaritan-clown-elephant-volcano-max-guidance.webp": {
+    "encodingFormat": "image/webp",
+    "width": 493,
+    "height": 493
+  },
+  "/images/diffusionbee-samaritan-clown-prompt-no-blue-sky-monster-result.webp": {
+    "encodingFormat": "image/webp",
+    "width": 835,
+    "height": 626
+  },
+  "/images/diffusionbee-settings-juggernaut-1216-by-1216-six-images.webp": {
+    "encodingFormat": "image/webp",
+    "width": 339,
+    "height": 292
   },
   "/images/dify-ai-workflow-builder-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -17954,6 +18199,76 @@
     "width": 1200,
     "height": 675
   },
+  "/images/draw-things-control-inputs-panel-image-depth-pose.webp": {
+    "encodingFormat": "image/webp",
+    "width": 307,
+    "height": 634
+  },
+  "/images/draw-things-documentation-basic-ui-missing-image.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1477,
+    "height": 689
+  },
+  "/images/draw-things-ernie-image-turbo-8bit-download-progress.webp": {
+    "encodingFormat": "image/webp",
+    "width": 527,
+    "height": 575
+  },
+  "/images/draw-things-first-generation-red-ball-gray-result.webp": {
+    "encodingFormat": "image/webp",
+    "width": 909,
+    "height": 889
+  },
+  "/images/draw-things-first-launch-welcome-model-source-dialog.webp": {
+    "encodingFormat": "image/webp",
+    "width": 486,
+    "height": 573
+  },
+  "/images/draw-things-generated-gothic-cathedral-on-tropical-beach.webp": {
+    "encodingFormat": "image/webp",
+    "width": 699,
+    "height": 664
+  },
+  "/images/draw-things-generated-motorhome-with-garbled-text.webp": {
+    "encodingFormat": "image/webp",
+    "width": 638,
+    "height": 636
+  },
+  "/images/draw-things-model-dropdown-local-and-official-models.webp": {
+    "encodingFormat": "image/webp",
+    "width": 470,
+    "height": 735
+  },
+  "/images/draw-things-model-picker-list-ltx-names-without-sizes.webp": {
+    "encodingFormat": "image/webp",
+    "width": 475,
+    "height": 573
+  },
+  "/images/draw-things-neuschwanstein-keith-haring-style-result.webp": {
+    "encodingFormat": "image/webp",
+    "width": 884,
+    "height": 900
+  },
+  "/images/draw-things-noise-output-after-parameter-change.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1431,
+    "height": 837
+  },
+  "/images/draw-things-promptquorum-hero-attempt-garbled-interface-text.webp": {
+    "encodingFormat": "image/webp",
+    "width": 972,
+    "height": 886
+  },
+  "/images/draw-things-promptquorum-hero-attempt-readable-headline.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1012,
+    "height": 802
+  },
+  "/images/draw-things-promptquorum-hero-final-cartoon-style.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1432,
+    "height": 716
+  },
   "/images/draw-things-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -17998,6 +18313,16 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/draw-things-seedvr2-7b-model-description-video-restoration.webp": {
+    "encodingFormat": "image/webp",
+    "width": 315,
+    "height": 153
+  },
+  "/images/draw-things-seedvr2-download-16gb-save-folder-step.webp": {
+    "encodingFormat": "image/webp",
+    "width": 472,
+    "height": 571
   },
   "/images/dspy-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -19565,6 +19890,51 @@
     "height": 675
   },
   "/images/frameworks-co-star-fields-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/friedrichai-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/friedrichai-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/friedrichai-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/friedrichai-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/friedrichai-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/friedrichai-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/friedrichai-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/friedrichai-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/friedrichai-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -22050,6 +22420,51 @@
     "height": 675
   },
   "/images/home-digital-twin-explained-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/honey-llm-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/honey-llm-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/honey-llm-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/honey-llm-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/honey-llm-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/honey-llm-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/honey-llm-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/honey-llm-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/honey-llm-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -25919,6 +26334,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/lm-playground-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-playground-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-playground-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-playground-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-playground-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-playground-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-playground-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-playground-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/lm-playground-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/lm-studio-advanced-features-context-window-vram-scaling-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -26949,6 +27409,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/local-ai-geetmark-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-geetmark-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-geetmark-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-geetmark-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-geetmark-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-geetmark-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-geetmark-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-geetmark-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-geetmark-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/local-ai-image-generation-vs-cloud-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -26990,6 +27495,51 @@
     "height": 675
   },
   "/images/local-ai-image-generation-vs-cloud-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-mail-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-mail-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-mail-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-mail-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-mail-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-mail-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-mail-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-mail-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/local-ai-mail-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -32844,6 +33394,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/localmind-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/localmind-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/localmind-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/localmind-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/localmind-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/localmind-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/localmind-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/localmind-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/localmind-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/loci-ai-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -35279,6 +35874,16 @@
     "width": 1200,
     "height": 675
   },
+  "/images/msty-chat-text-model-declines-qr-code-request.webp": {
+    "encodingFormat": "image/webp",
+    "width": 953,
+    "height": 539
+  },
+  "/images/msty-first-launch-gemma-4-download-or-connect-provider.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1282,
+    "height": 1042
+  },
   "/images/msty-go-review-2026-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -35324,6 +35929,41 @@
     "width": 1200,
     "height": 675
   },
+  "/images/msty-knowledge-stacks-start-screen-sources.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1428,
+    "height": 880
+  },
+  "/images/msty-media-studio-prompt-box-and-model-selector.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1429,
+    "height": 860
+  },
+  "/images/msty-model-hub-local-models-featured-list.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1023,
+    "height": 603
+  },
+  "/images/msty-model-hub-qwen3-vl-fits-this-mac-tooltip.webp": {
+    "encodingFormat": "image/webp",
+    "width": 940,
+    "height": 510
+  },
+  "/images/msty-model-matchmaker-ranking-claude-opus-top.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1431,
+    "height": 889
+  },
+  "/images/msty-model-picker-ollama-models-gemma-qwen-flux.webp": {
+    "encodingFormat": "image/webp",
+    "width": 939,
+    "height": 485
+  },
+  "/images/msty-new-model-provider-list-with-ollama-and-mlx.webp": {
+    "encodingFormat": "image/webp",
+    "width": 939,
+    "height": 626
+  },
   "/images/msty-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -35368,6 +36008,11 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/msty-vendor-website-one-private-ai-workspace-headline.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1405,
+    "height": 582
   },
   "/images/multi-gpu-local-llms-layer-splitting-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -37754,6 +38399,21 @@
     "width": 1200,
     "height": 675
   },
+  "/images/page-assist-chat-gemma4-reply-empty-thought-0ms.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1598,
+    "height": 726
+  },
+  "/images/page-assist-chat-second-empty-reply-thought-0ms.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1024,
+    "height": 436
+  },
+  "/images/page-assist-chrome-web-store-install-dialog.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1428,
+    "height": 650
+  },
   "/images/page-assist-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -37798,6 +38458,31 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/page-assist-settings-menu-chrome-ai-page-action-webmcp.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1596,
+    "height": 722
+  },
+  "/images/page-assist-side-panel-no-answer-after-question.webp": {
+    "encodingFormat": "image/webp",
+    "width": 698,
+    "height": 714
+  },
+  "/images/page-assist-side-panel-search-console-no-ctr-found.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1535,
+    "height": 566
+  },
+  "/images/page-assist-side-panel-start-screen-chat-with-current-page.webp": {
+    "encodingFormat": "image/webp",
+    "width": 693,
+    "height": 580
+  },
+  "/images/page-assist-web-ui-opens-full-screen-ollama-running.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1269,
+    "height": 733
   },
   "/images/paios-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -37858,6 +38543,51 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 450
+  },
+  "/images/pcai-photo-retouch-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pcai-photo-retouch-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pcai-photo-retouch-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pcai-photo-retouch-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pcai-photo-retouch-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pcai-photo-retouch-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pcai-photo-retouch-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pcai-photo-retouch-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pcai-photo-retouch-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
   },
   "/images/pe-for-content-teams-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -40349,6 +41079,11 @@
     "width": 800,
     "height": 420
   },
+  "/images/promptquorum-optimizer-popup-offline-own-extension.webp": {
+    "encodingFormat": "image/webp",
+    "width": 408,
+    "height": 428
+  },
   "/images/prompts-for-reliable-structured-data-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -42515,6 +43250,51 @@
     "height": 675
   },
   "/images/replace-zapier-with-local-ai-agents-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/return-editor-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/return-editor-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/return-editor-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/return-editor-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/return-editor-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/return-editor-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/return-editor-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/return-editor-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/return-editor-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -45379,6 +46159,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/spiritbox-ultimate-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/spiritbox-ultimate-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/spiritbox-ultimate-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/spiritbox-ultimate-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/spiritbox-ultimate-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/spiritbox-ultimate-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/spiritbox-ultimate-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/spiritbox-ultimate-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/spiritbox-ultimate-review-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/stable-diffusion-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -47099,6 +47924,86 @@
     "width": 800,
     "height": 455
   },
+  "/images/unsloth-activity-monitor-memory-used-12-92-gb.webp": {
+    "encodingFormat": "image/webp",
+    "width": 701,
+    "height": 132
+  },
+  "/images/unsloth-activity-monitor-memory-used-9-67-gb.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1250,
+    "height": 208
+  },
+  "/images/unsloth-chat-5-times-866-answer-11-tokens-per-second.webp": {
+    "encodingFormat": "image/webp",
+    "width": 912,
+    "height": 308
+  },
+  "/images/unsloth-chat-out-of-memory-after-reading-web-page.webp": {
+    "encodingFormat": "image/webp",
+    "width": 838,
+    "height": 205
+  },
+  "/images/unsloth-chat-web-page-read-waiting-for-approval.webp": {
+    "encodingFormat": "image/webp",
+    "width": 927,
+    "height": 715
+  },
+  "/images/unsloth-download-progress-7gb-of-20gb-3h31m-left.webp": {
+    "encodingFormat": "image/webp",
+    "width": 424,
+    "height": 142
+  },
+  "/images/unsloth-download-z-image-bf16-20-5-gb-total.webp": {
+    "encodingFormat": "image/webp",
+    "width": 496,
+    "height": 438
+  },
+  "/images/unsloth-flux2-klein-load-refused-17gb-needed-2gb-usable.webp": {
+    "encodingFormat": "image/webp",
+    "width": 392,
+    "height": 334
+  },
+  "/images/unsloth-flux2-klein-load-refused-6gb-usable-after-reboot.webp": {
+    "encodingFormat": "image/webp",
+    "width": 415,
+    "height": 344
+  },
+  "/images/unsloth-heidelberg-search-out-of-memory-no-safetensors.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1227,
+    "height": 700
+  },
+  "/images/unsloth-loading-model-from-lmstudio-folder-qwen-27b-mlx.webp": {
+    "encodingFormat": "image/webp",
+    "width": 474,
+    "height": 140
+  },
+  "/images/unsloth-main-window-how-can-i-help-sidebar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1247,
+    "height": 728
+  },
+  "/images/unsloth-model-hub-hardware-24gib-download-3h47m.webp": {
+    "encodingFormat": "image/webp",
+    "width": 888,
+    "height": 681
+  },
+  "/images/unsloth-model-picker-recommended-list-parameter-counts.webp": {
+    "encodingFormat": "image/webp",
+    "width": 660,
+    "height": 536
+  },
+  "/images/unsloth-on-device-flux2-klein-4b-and-mistral-7b-sizes.webp": {
+    "encodingFormat": "image/webp",
+    "width": 538,
+    "height": 130
+  },
+  "/images/unsloth-on-device-models-custom-folders-lmstudio-ollama.webp": {
+    "encodingFormat": "image/webp",
+    "width": 826,
+    "height": 537
+  },
   "/images/unsloth-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -47143,6 +48048,26 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/unsloth-setup-window-getting-things-ready.webp": {
+    "encodingFormat": "image/webp",
+    "width": 814,
+    "height": 585
+  },
+  "/images/unsloth-starting-model-loading-cached-model-no-progress.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1114,
+    "height": 158
+  },
+  "/images/unsloth-switching-to-ollama-qwen3-coder-30b-gguf.webp": {
+    "encodingFormat": "image/webp",
+    "width": 991,
+    "height": 220
+  },
+  "/images/unsloth-voice-dictation-download-qwen3-asr-1gb.webp": {
+    "encodingFormat": "image/webp",
+    "width": 516,
+    "height": 233
   },
   "/images/used-gpus-for-local-llms-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",

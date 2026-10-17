@@ -73,9 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository ([github.com/qdrant/qdrant](https://github.com/qdrant/qdrant)) shows roughly 34,655 stars as of September 2026',
           'Qdrant Cloud is a separate, optional managed hosting offering on AWS, GCP, or Azure from the same company — not required to use the open-source software',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Qdrant\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Qdrant compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-qdrant',
@@ -385,9 +382,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Unterstützt Vektor-Quantisierung; Qdrants eigene Dokumentation beschreibt Reduzierungen des Speicherbedarfs von bis zu rund 97 % in günstigen Konfigurationen — die tatsächliche Einsparung hängt von Ihren Daten und der Quantisierungsmethode ab, benchmarken Sie also Ihre eigene Last, statt anzunehmen, dass diese Zahl universell gilt',
           'Das GitHub-Repository ([github.com/qdrant/qdrant](https://github.com/qdrant/qdrant)) zeigt Stand September 2026 rund 34.655 Sterne',
           'Qdrant Cloud ist ein separates, optionales verwaltetes Hosting-Angebot auf AWS, GCP oder Azure desselben Unternehmens — nicht erforderlich, um die Open-Source-Software zu nutzen',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Qdrants Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie Qdrant im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -700,9 +694,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub ([github.com/qdrant/qdrant](https://github.com/qdrant/qdrant)) affiche environ 34 655 étoiles en septembre 2026',
           'Qdrant Cloud est une offre d\'hébergement managée séparée et optionnelle sur AWS, GCP ou Azure proposée par la même entreprise — non requise pour utiliser le logiciel open source',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi à la fiche de Qdrant dans le [répertoire de logiciels LLM locaux](/fr/directory) — consultez cette page pour voir comment Qdrant se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locaux.' },
-        ],
       },
       overview: {
         id: 'what-is-qdrant',
@@ -1013,9 +1004,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ベクトル量子化に対応。Qdrant独自のドキュメントでは、好条件下でメモリフットプリントを最大約97%削減できるとされている——実際の削減率はデータや量子化手法により異なるため、この数値が一律に当てはまると想定せず自分のワークロードでベンチマークすること',
           'GitHubリポジトリ（[github.com/qdrant/qdrant](https://github.com/qdrant/qdrant)）は2026年9月時点で約34,655スター',
           'Qdrant Cloudは同社が提供するAWS・GCP・Azure上の別立ての任意の管理ホスティングサービス——オープンソースソフトウェアの利用に必須ではない',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるQdrantのエントリーの詳細版です。他の数十のローカルAIツールとの比較は、そちらのページで一目で確認できます。' },
         ],
       },
       overview: {
@@ -1328,9 +1316,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub仓库（[github.com/qdrant/qdrant](https://github.com/qdrant/qdrant)）截至2026年9月显示约34,655颗星',
           'Qdrant Cloud是同一家公司在AWS、GCP或Azure上提供的独立、可选托管服务——使用开源软件并非必须使用它',
         ],
-        callouts: [
-          { type: 'note', text: '本文是[本地LLM软件目录](/zh/directory)中Qdrant条目的深度补充——该页面可让你一目了然地看到Qdrant与其他数十种本地AI工具的对比。' },
-        ],
       },
       overview: {
         id: 'what-is-qdrant',
@@ -1641,9 +1626,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Admite cuantización vectorial; la propia documentación de Qdrant describe reducciones de la huella de memoria de hasta aproximadamente un 97% en configuraciones favorables — el ahorro real depende de tus datos y del método de cuantización, así que haz benchmark de tu propia carga de trabajo en lugar de asumir que esa cifra aplica de forma universal',
           'El repositorio de GitHub ([github.com/qdrant/qdrant](https://github.com/qdrant/qdrant)) muestra aproximadamente 34.655 estrellas a septiembre de 2026',
           'Qdrant Cloud es una oferta de hosting gestionado independiente y opcional en AWS, GCP o Azure de la misma empresa — no es necesaria para usar el software open source',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Qdrant en el [directorio de software de LLM local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara Qdrant con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1956,9 +1938,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub ([github.com/qdrant/qdrant](https://github.com/qdrant/qdrant)) mostra cerca de 34.655 estrelas em setembro de 2026',
           'O Qdrant Cloud é uma oferta de hospedagem gerenciada separada e opcional na AWS, GCP ou Azure da mesma empresa — não é necessária para usar o software open source',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Qdrant no [diretório de software de LLM local](/pt/directory) — veja essa página para comparar rapidamente o Qdrant com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-qdrant',
@@ -2270,9 +2249,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مستودع GitHub (‏[github.com/qdrant/qdrant](https://github.com/qdrant/qdrant)‏) يُظهر نحو 34,655 نجمة اعتبارًا من سبتمبر 2026',
           'Qdrant Cloud خدمة استضافة مُدارة منفصلة واختيارية على AWS أو GCP أو Azure من الشركة نفسها — وليست مطلوبة لاستخدام البرنامج مفتوح المصدر',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمل المعمّق لمدخل Qdrant في [دليل برامج LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارَن Qdrant بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-qdrant',
@@ -2583,9 +2559,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '벡터 quantization(양자화)을 지원합니다. Qdrant 자체 문서에 따르면 유리한 구성에서 메모리 사용량을 최대 약 97%까지 줄일 수 있다고 하지만 — 실제 절감 효과는 데이터와 양자화 방식에 따라 달라지므로, 이 수치가 보편적으로 적용된다고 가정하지 말고 자신의 워크로드로 직접 벤치마크해야 합니다',
           'GitHub 저장소([github.com/qdrant/qdrant](https://github.com/qdrant/qdrant))는 2026년 9월 기준 약 34,655개의 스타를 기록하고 있습니다',
           'Qdrant Cloud는 동일한 회사가 AWS·GCP·Azure에서 제공하는 별도의 선택형 관리형 호스팅 서비스이며 — 오픈소스 소프트웨어를 사용하는 데 필수는 아닙니다',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Qdrant 항목의 심층 보완 자료입니다 — 다른 수십 가지 로컬 AI 도구와 Qdrant를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

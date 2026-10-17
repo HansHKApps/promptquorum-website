@@ -73,7 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Install via Obsidian\'s Community Plugins directory (search "Smart Connections") or manually from [GitHub](https://github.com/brianpetro/obsidian-smart-connections)',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Smart Connections\' entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local-AI-capable tools.' },
           { type: 'note', text: 'The plugin\'s license changed in 2026 from GPLv3 to a source-available license (see the License and Pricing section below) — it is not accurate to describe the current version as "open source" or "GPL."' },
         ],
       },
@@ -321,7 +320,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation über Obsidians Community-Plugins-Verzeichnis (Suche nach „Smart Connections") oder manuell von [GitHub](https://github.com/brianpetro/obsidian-smart-connections)',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu Smart Connections\' Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie den Vergleich zu Dutzenden weiterer lokal-KI-fähiger Tools auf einen Blick.' },
           { type: 'note', text: 'Die Lizenz des Plugins wechselte 2026 von GPLv3 zu einer quellverfügbaren Lizenz (siehe Abschnitt Lizenz und Preise unten) — es ist nicht korrekt, die aktuelle Version als „Open Source" oder „GPL" zu bezeichnen.' },
         ],
       },
@@ -569,7 +567,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation via le répertoire Community Plugins d\'Obsidian (rechercher « Smart Connections ») ou manuellement depuis [GitHub](https://github.com/brianpetro/obsidian-smart-connections)',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée de Smart Connections dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils IA locaux.' },
           { type: 'note', text: 'La licence du plugin est passée en 2026 de GPLv3 à une licence à code source disponible (voir la section Licence et tarifs ci-dessous) — il n\'est plus exact de décrire la version actuelle comme « open source » ou « GPL ».' },
         ],
       },
@@ -817,7 +814,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Obsidianのコミュニティプラグインディレクトリ（「Smart Connections」を検索）経由、または[GitHub](https://github.com/brianpetro/obsidian-smart-connections)から手動でインストール',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは[Local LLM Software Directory](/ja/directory)内のSmart Connectionsのエントリーを掘り下げた記事です — 他の数十のローカルAI対応ツールとの比較は同ページをご覧ください。' },
           { type: 'note', text: 'このプラグインのライセンスは2026年にGPLv3からソース公開型ライセンスに変更されました（下記「ライセンスと料金」参照）— 現在のバージョンを「オープンソース」や「GPL」と表現するのは正確ではありません。' },
         ],
       },
@@ -1065,7 +1061,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可通过Obsidian的社区插件目录（搜索"Smart Connections"）安装，或从[GitHub](https://github.com/brianpetro/obsidian-smart-connections)手动安装',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[Local LLM Software Directory](/zh/directory)中Smart Connections条目的深度补充——请查看该页面，一览它与数十款其他支持本地AI的工具的对比。' },
           { type: 'note', text: '该插件的许可证于2026年从GPLv3变更为源代码可用许可证（见下方"许可证与定价"部分）——将当前版本描述为"开源"或"GPL"并不准确。' },
         ],
       },
@@ -1313,7 +1308,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se instala desde el directorio de plugins de la comunidad de Obsidian (buscar "Smart Connections") o manualmente desde [GitHub](https://github.com/brianpetro/obsidian-smart-connections)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Smart Connections en el [Local LLM Software Directory](/es/directory) — consulta esa página para ver de un vistazo cómo se compara con docenas de otras herramientas de IA local.' },
           { type: 'note', text: 'La licencia del plugin cambió en 2026 de GPLv3 a una licencia de código disponible (ver la sección de Licencia y precios más abajo) — no es exacto describir la versión actual como "de código abierto" o "GPL".' },
         ],
       },
@@ -1561,7 +1555,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instalação pelo diretório de Community Plugins do Obsidian (busque por "Smart Connections") ou manualmente pelo [GitHub](https://github.com/brianpetro/obsidian-smart-connections)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Smart Connections no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
           { type: 'note', text: 'A licença do plugin mudou em 2026, de GPLv3 para uma licença de código disponível (veja a seção Licença e preços abaixo) — não é correto descrever a versão atual como "código aberto" ou "GPL".' },
         ],
       },
@@ -1809,7 +1802,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التثبيت عبر دليل Community Plugins في Obsidian (ابحث عن "Smart Connections") أو يدويًا من [GitHub](https://github.com/brianpetro/obsidian-smart-connections)',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لمدخل Smart Connections في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارن بسرعة بعشرات الأدوات الأخرى القادرة على العمل بالذكاء الاصطناعي محليًا.' },
           { type: 'note', text: 'تغيّر ترخيص الإضافة في 2026 من GPLv3 إلى ترخيص متاح المصدر (انظر قسم الترخيص والأسعار أدناه) — ليس من الدقيق وصف النسخة الحالية بأنها "مفتوحة المصدر" أو "GPL".' },
         ],
       },
@@ -2057,7 +2049,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Obsidian 커뮤니티 플러그인 디렉터리("Smart Connections" 검색)를 통해 설치하거나 [GitHub](https://github.com/brianpetro/obsidian-smart-connections)에서 수동 설치',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등재된 Smart Connections 항목을 심층적으로 다루는 자료입니다 — 다른 수십 개의 로컬 AI 지원 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
           { type: 'note', text: '이 플러그인의 라이선스는 2026년에 GPLv3에서 소스 공개형 라이선스로 변경되었습니다(아래 "라이선스 및 가격" 섹션 참조) — 현재 버전을 "오픈소스" 또는 "GPL"로 표현하는 것은 정확하지 않습니다.' },
         ],
       },

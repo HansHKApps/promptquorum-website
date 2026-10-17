@@ -71,9 +71,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository shows roughly 15,300 stars and around 3,800 forks as of September 2026',
           'Curated and maintained by [n8n](https://n8n.io), the low-code workflow automation company behind the [n8n platform itself](/power-local-llm/n8n-review)',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to the Self-hosted AI Starter Kit\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-starter-kit',
@@ -351,9 +348,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Liefert einen vorinstallierten Beispiel-Workflow in n8n, der eine lokale RAG-Pipeline mit den gebündelten Diensten Ollama und Qdrant demonstriert',
           'Das GitHub-Repository zeigt rund 15.300 Stars und rund 3.800 Forks, Stand September 2026',
           'Kuratiert und gepflegt von [n8n](https://n8n.io), dem Low-Code-Workflow-Automatisierungsunternehmen hinter der [n8n-Plattform selbst](/power-local-llm/n8n-review)',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Rezension ist das vertiefende Gegenstück zum Eintrag des Self-hosted AI Starter Kits im [Local LLM Software Directory](/directory) — dort finden Sie den Vergleich auf einen Blick mit Dutzenden anderen lokalen KI-Tools.' },
         ],
       },
       overview: {
@@ -633,9 +627,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub affiche environ 15 300 étoiles et environ 3 800 forks en septembre 2026',
           'Conçu et maintenu par [n8n](https://n8n.io), l\'entreprise d\'automatisation de workflows low-code derrière la [plateforme n8n elle-même](/power-local-llm/n8n-review)',
         ],
-        callouts: [
-          { type: 'note', text: 'Ce test est le complément approfondi de l\'entrée du Self-hosted AI Starter Kit dans le [Local LLM Software Directory](/directory) — consultez cette page pour un comparatif rapide avec des dizaines d\'autres outils IA locaux.' },
-        ],
       },
       overview: {
         id: 'what-is-starter-kit',
@@ -913,9 +904,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Incluye un workflow de n8n precargado que demuestra un pipeline RAG local con los servicios Ollama y Qdrant incluidos',
           'El repositorio de GitHub muestra unas 15.300 estrellas y unos 3.800 forks en septiembre de 2026',
           'Creado y mantenido por [n8n](https://n8n.io), la empresa de automatización de workflows low-code detrás de la [propia plataforma n8n](/power-local-llm/n8n-review)',
-        ],
-        callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada del Self-hosted AI Starter Kit en el [Local LLM Software Directory](/directory) — consulta esa página para verlo comparado de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1195,9 +1183,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub mostra cerca de 15.300 estrelas e cerca de 3.800 forks em setembro de 2026',
           'Selecionado e mantido pela [n8n](https://n8n.io), a empresa de automação de workflows low-code por trás da [própria plataforma n8n](/power-local-llm/n8n-review)',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Self-hosted AI Starter Kit no [Local LLM Software Directory](/directory) — veja essa página para uma comparação rápida com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-starter-kit',
@@ -1475,9 +1460,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'バンドルされたOllamaとQdrantを使ったローカルRAGパイプラインの例を示す、あらかじめ読み込まれたn8nワークフローが付属',
           'GitHubリポジトリは2026年9月時点で約15,300個のスターと約3,800個のフォークを獲得',
           '[n8nプラットフォーム自体](/power-local-llm/n8n-review)の背後にあるローコードワークフロー自動化企業である[n8n](https://n8n.io)がキュレーション・保守',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/directory)内にあるSelf-hosted AI Starter Kitのエントリーに対応する詳細版です。他の数十のローカルAIツールとの比較は、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1757,9 +1739,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至2026年9月，GitHub仓库约有15,300颗星、约3,800次fork',
           '由低代码工作流自动化公司[n8n](https://n8n.io)整理维护，也是[n8n平台本身](/power-local-llm/n8n-review)的开发方',
         ],
-        callouts: [
-          { type: 'note', text: '这篇评测是[本地LLM软件目录](/directory)中Self-hosted AI Starter Kit条目的深度补充版——想了解它与其他数十款本地AI工具的一览式对比，请查看该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-starter-kit',
@@ -2038,9 +2017,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُظهر مستودع GitHub نحو 15,300 نجمة وحوالي 3,800 تشعبّة (fork) حتى سبتمبر 2026',
           'تُعِدّه وتحافظ عليه [n8n](https://n8n.io)، شركة أتمتة سير العمل منخفضة الكود التي تقف خلف [منصة n8n نفسها](/power-local-llm/n8n-review)',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي النسخة المتعمّقة المرافقة لمدخل Self-hosted AI Starter Kit في [دليل برمجيات النماذج اللغوية المحلية](/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن سريعًا بعشرات الأدوات المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-starter-kit',
@@ -2318,9 +2294,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '번들된 Ollama와 Qdrant를 사용하는 로컬 RAG 파이프라인을 보여주는 미리 로드된 예제 n8n 워크플로 제공',
           'GitHub 저장소는 2026년 9월 기준 약 15,300개의 스타와 약 3,800개의 포크를 기록',
           '[n8n 플랫폼 자체](/power-local-llm/n8n-review)를 만든 로우코드 워크플로 자동화 기업인 [n8n](https://n8n.io)이 큐레이션하고 유지관리',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 있는 Self-hosted AI Starter Kit 항목의 심화 버전입니다. 다른 수십 개의 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참조하십시오.' },
         ],
       },
       overview: {

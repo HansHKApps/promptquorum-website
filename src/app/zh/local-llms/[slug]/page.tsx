@@ -8,6 +8,7 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { LocalLLMArticleJsonLd } from '@/lib/local-llms/jsonld'
 import { narrowArticleData } from '@/lib/narrowArticleData'
+import { reviewPageProps } from '@/lib/power-local-llm/review-page-props'
 
 export const revalidate = 86400
 
@@ -137,7 +138,7 @@ export default async function ZhLocalLLMsArticlePage({ params }: PageProps) {
       <LocalLLMsPostClient
         slug={slug}
         initialLang="zh"
-        {...narrowArticleData(llmContent[key], "zh")}
+        {...reviewPageProps('local-llms', slug, 'zh', narrowArticleData(llmContent[key], 'zh'))}
       />
     </>
   )

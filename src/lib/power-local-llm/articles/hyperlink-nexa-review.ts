@@ -78,7 +78,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NVIDIA\'s own blog post on RTX acceleration for Hyperlink reports indexing up to 3x faster and inference up to 2x faster on RTX GPUs versus CPU-only — a vendor claim this review has not independently reproduced.',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Hyperlink\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Hyperlink compares at a glance to dozens of other local AI tools.' },
           { type: 'note', text: 'Hyperlink is closed-source, so this review cannot independently verify its on-device/no-upload claims the way it could for an open-source tool. Those claims come from Nexa AI\'s own documentation and are corroborated by NVIDIA\'s official blog post on the RTX integration (see Sources) — not from PromptQuorum\'s own network testing.' },
         ],
       },
@@ -347,7 +346,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NVIDIAs eigener Blogbeitrag zur RTX-Beschleunigung für Hyperlink berichtet von bis zu 3-fach schnellerer Indizierung und bis zu 2-fach schnellerer Inferenz auf RTX-GPUs gegenüber reiner CPU-Verarbeitung — eine Herstellerangabe, die diese Rezension nicht unabhängig reproduziert hat.',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Rezension ist der ausführliche Begleitartikel zu Hyperlinks Eintrag im [Local LLM Software Directory](/de/directory) — dort findet sich der Vergleich von Hyperlink mit Dutzenden anderer lokaler KI-Tools auf einen Blick.' },
           { type: 'note', text: 'Hyperlink ist Closed Source, daher kann diese Rezension die Angaben zu lokaler Verarbeitung/keinem Upload nicht so unabhängig prüfen wie bei einem Open-Source-Tool. Diese Angaben stammen aus Nexa AIs eigener Dokumentation und werden durch NVIDIAs offiziellen Blogbeitrag zur RTX-Integration (siehe Quellen) bestätigt — nicht aus eigenen Netzwerktests von PromptQuorum.' },
         ],
       },
@@ -616,7 +614,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le billet de blog de NVIDIA sur l\'accélération RTX pour Hyperlink rapporte une indexation jusqu\'à 3 fois plus rapide et une inférence jusqu\'à 2 fois plus rapide sur GPU RTX par rapport au CPU seul — une affirmation du fournisseur que cet avis n\'a pas reproduite de manière indépendante.',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément détaillé de la fiche de Hyperlink dans le [répertoire de logiciels LLM locaux](/fr/directory) — consultez cette page pour comparer Hyperlink en un coup d\'œil à des dizaines d\'autres outils IA locaux.' },
           { type: 'note', text: 'Hyperlink étant à code source fermé, cet avis ne peut pas vérifier de manière indépendante ses affirmations de traitement local / absence d\'envoi comme il le ferait pour un outil open source. Ces affirmations proviennent de la documentation propre de Nexa AI et sont corroborées par le billet de blog officiel de NVIDIA sur l\'intégration RTX (voir Sources) — pas de tests réseau réalisés par PromptQuorum.' },
         ],
       },
@@ -885,7 +882,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'HyperlinkのRTXアクセラレーションに関するNVIDIA自身のブログ記事では、RTX GPUでCPUのみの場合と比較してインデックス化が最大3倍、推論が最大2倍高速化すると報告されているが、これはこのレビューが独自に再現検証したものではないベンダー側の主張である。',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるHyperlinkのエントリーを深掘りした関連記事です——他の数多くのローカルAIツールとHyperlinkを一目で比較するには、そちらのページをご覧ください。' },
           { type: 'note', text: 'Hyperlinkはクローズドソースのため、本レビューはオープンソースツールのようにオンデバイス処理・アップロードなしという主張を独自に検証することはできません。これらの主張はNexa AI自身のドキュメントによるもので、RTX統合に関するNVIDIAの公式ブログ記事(出典を参照)でも裏付けられていますが、PromptQuorum自身のネットワークテストによるものではありません。' },
         ],
       },
@@ -1154,7 +1150,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NVIDIA自己关于Hyperlink的RTX加速的博客文章称,在RTX GPU上,相比仅使用CPU,索引速度最高提升3倍,推理速度最高提升2倍——这是厂商的说法,本评测未独立重现。',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Hyperlink条目的深度补充——想一眼比较Hyperlink与其他数十种本地AI工具,请查看该页面。' },
           { type: 'note', text: '由于Hyperlink是闭源软件,本评测无法像对开源工具那样独立核实其本地处理/不上传的说法。这些说法来自Nexa AI自身的文档,并得到了NVIDIA关于RTX集成的官方博客文章(见资料来源)的佐证——并非来自PromptQuorum自己的网络测试。' },
         ],
       },
@@ -1423,7 +1418,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La propia entrada de blog de NVIDIA sobre la aceleración RTX para Hyperlink informa de una indexación hasta 3 veces más rápida y una inferencia hasta 2 veces más rápida en GPU RTX frente a solo CPU: una afirmación del fabricante que esta reseña no ha reproducido de forma independiente.',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Hyperlink en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver cómo se compara Hyperlink de un vistazo con docenas de otras herramientas de IA local.' },
           { type: 'note', text: 'Como Hyperlink es de código cerrado, esta reseña no puede verificar de forma independiente sus afirmaciones sobre el procesamiento en el dispositivo y la ausencia de subidas, como sí podría hacerlo con una herramienta de código abierto. Esas afirmaciones provienen de la documentación propia de Nexa AI y están corroboradas por la entrada oficial del blog de NVIDIA sobre la integración RTX (ver Fuentes), no de pruebas de red realizadas por PromptQuorum.' },
         ],
       },
@@ -1692,7 +1686,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A própria postagem no blog da NVIDIA sobre aceleração RTX para o Hyperlink relata indexação até 3x mais rápida e inferência até 2x mais rápida em GPUs RTX versus somente CPU — uma alegação do fabricante que esta análise não reproduziu de forma independente.',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Hyperlink no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar o Hyperlink rapidamente com dezenas de outras ferramentas de IA local.' },
           { type: 'note', text: 'Como o Hyperlink é de código fechado, esta análise não pode verificar de forma independente suas afirmações sobre processamento no dispositivo e ausência de upload, como poderia fazer com uma ferramenta de código aberto. Essas afirmações vêm da própria documentação da Nexa AI e são corroboradas pela postagem oficial do blog da NVIDIA sobre a integração RTX (veja Fontes) — não de testes de rede feitos pela PromptQuorum.' },
         ],
       },
@@ -1961,7 +1954,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تفيد تدوينة NVIDIA نفسها حول تسريع RTX لتطبيق Hyperlink بأن الفهرسة أسرع حتى 3 مرات والاستدلال أسرع حتى مرتين على معالجات RTX مقارنة بالمعالجة عبر CPU فقط — وهو ادعاء من الشركة المصنّعة لم تُعِد هذه المراجعة إنتاجه بشكل مستقل.',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لإدخال Hyperlink في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Hyperlink بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
           { type: 'note', text: 'بما أن Hyperlink برنامج مغلق المصدر، لا يمكن لهذه المراجعة التحقق بشكل مستقل من ادعاءات المعالجة على الجهاز وعدم الرفع كما يمكنها فعل ذلك مع أداة مفتوحة المصدر. تأتي هذه الادعاءات من توثيق Nexa AI نفسها، وتؤكدها تدوينة NVIDIA الرسمية حول تكامل RTX (انظر المصادر) — وليس من اختبارات شبكة أجرتها PromptQuorum بنفسها.' },
         ],
       },
@@ -2230,7 +2222,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hyperlink용 RTX 가속에 관한 NVIDIA 자체 블로그 게시물은 CPU 전용 처리 대비 RTX GPU에서 인덱싱 최대 3배, 추론 최대 2배 빠르다고 보고합니다 — 이는 제조사 주장이며 이 리뷰가 독립적으로 재현한 것은 아닙니다.',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Hyperlink 항목의 심층 분석 보완편입니다 — Hyperlink가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지 확인하려면 해당 페이지를 참고하세요.' },
           { type: 'note', text: 'Hyperlink는 클로즈드 소스이므로, 이 리뷰는 오픈소스 도구에 대해서처럼 온디바이스 처리 및 업로드 없음 주장을 독립적으로 검증할 수 없습니다. 이러한 주장은 Nexa AI 자체 문서에서 나온 것이며, RTX 통합에 관한 NVIDIA의 공식 블로그 게시물(출처 참고)로 뒷받침되지만, PromptQuorum 자체의 네트워크 테스트에 의한 것은 아닙니다.' },
         ],
       },

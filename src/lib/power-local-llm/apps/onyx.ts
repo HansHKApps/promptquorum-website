@@ -44,5 +44,7 @@ export const app: ToolRecord = {
   // multiVector false — Vespa is a fixed, required part of the architecture; a GitHub issue requesting alternative vector DB support was closed "not planned" (github.com/onyx-dot-app/onyx/issues/1165).
   compare: { visualBuilder: false, localLlm: true, agents: true, multiVector: false, dockerDeploy: true, apiServer: true, webSearch: true, privateDocs: true },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/onyx-dot-app/onyx',
   reviewSlug: 'onyx-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }

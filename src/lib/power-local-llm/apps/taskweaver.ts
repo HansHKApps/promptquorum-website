@@ -39,4 +39,6 @@ export const app: ToolRecord = {
   // GitHub repo archived 2026-03-23 (per its review; GitHub API archived=true, checked 2026-09-21)
   upstreamStatus: { state: 'archived', since: '2026-03-23' },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-03-23', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/microsoft/TaskWeaver',
 }

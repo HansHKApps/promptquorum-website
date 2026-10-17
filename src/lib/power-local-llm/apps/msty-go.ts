@@ -37,4 +37,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { localLlm: true, memory: true, sandbox: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-15', // official changelog (beta), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://msty.ai/resources/changelog/go/',
 }

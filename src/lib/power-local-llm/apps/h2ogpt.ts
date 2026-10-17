@@ -22,6 +22,8 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['serve'],
   url: 'github.com/h2oai/h2ogpt',
+  installEffort: 'terminal-setup', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README: Docker recommended, plus Linux script and Windows/macOS install scripts with fewer features; repository archived upstream. checked 2026-10-09',
   tagline: {
     en: 'Enterprise-feature-heavy desktop and server',
     de: 'Funktionsreiche Enterprise-Desktop- und Serveranwendung',
@@ -40,4 +42,6 @@ export const app: ToolRecord = {
   // GitHub repo archived 2026-02-26 (per its review; GitHub API archived=true, checked 2026-09-21)
   upstreamStatus: { state: 'archived', since: '2026-02-26' },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2025-10-09', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/h2oai/h2ogpt',
 }

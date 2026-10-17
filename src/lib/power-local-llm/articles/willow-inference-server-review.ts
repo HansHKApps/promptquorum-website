@@ -73,9 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No longer supports general LLM/chat inference — that feature was explicitly removed in a February 2026 commit; the project\'s own maintainers direct users to run a separate tool such as [Ollama](https://ollama.com) alongside it for that need',
           'GitHub repository ([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)) shows roughly 510 stars as of September 2026; commit activity is bursty rather than continuous — treat this as a smaller, slower-moving project than a heavily staffed commercial one',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Willow Inference Server\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-wis',
@@ -350,9 +347,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickelt von [Tovera](https://github.com/toverainc) als Backend für das quelloffene Sprachassistenz-Hardware-Projekt Willow',
           'Unterstützt keine allgemeine LLM-/Chat-Inferenz mehr — diese Funktion wurde in einem Commit im Februar 2026 explizit entfernt; die eigenen Maintainer des Projekts verweisen Nutzer darauf, dafür ein separates Tool wie [Ollama](https://ollama.com) daneben laufen zu lassen',
           'Das GitHub-Repository ([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)) zeigt Stand September 2026 rund 510 Sterne; die Commit-Aktivität verläuft in Schüben statt kontinuierlich — betrachten Sie dies als kleineres, langsamer voranschreitendes Projekt als ein stark besetztes kommerzielles',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zum Eintrag von Willow Inference Server im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie es im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -629,9 +623,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ne prend plus en charge l\'inférence LLM/chat générale — cette fonctionnalité a été explicitement retirée dans un commit de février 2026 ; les mainteneurs du projet indiquent aux utilisateurs de faire tourner un outil séparé comme [Ollama](https://ollama.com) à côté pour ce besoin',
           'Le dépôt GitHub ([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)) affiche environ 510 étoiles en septembre 2026 ; l\'activité des commits se fait par rafales plutôt que de manière continue — considérez ceci comme un projet plus petit et plus lent qu\'un projet commercial fortement doté en personnel',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Willow Inference Server dans le [Répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir comment il se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-wis',
@@ -906,9 +897,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Tovera](https://github.com/toverainc)がオープンソースの音声アシスタントハードウェアプロジェクトWillowのバックエンドとして開発',
           '一般的なLLM/チャット推論はもはやサポートされていない——この機能は2026年2月のコミットで明示的に削除され、プロジェクトのメンテナー自身がその用途には[Ollama](https://ollama.com)などの別ツールをWISと並行して動かすよう案内している',
           'GitHubリポジトリ（[github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)）は2026年9月時点で約510スターを記録。コミット活動は継続的というより断続的で、人員豊富な商用プロジェクトよりも小規模でペースの遅いプロジェクトと捉えるべき',
-        ],
-        callouts: [
-          { type: 'note', text: '本レビューは[ローカルAIソフトウェアディレクトリ](/ja/directory)にあるWillow Inference Serverのエントリーの詳細版です。他の数十のローカルAIツールと一目で比較できます。' },
         ],
       },
       overview: {
@@ -1185,9 +1173,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '不再支持通用LLM/聊天推理——该功能已在2026年2月的一次提交中明确移除；项目自身的维护者建议用户搭配运行[Ollama](https://ollama.com)等独立工具来满足这一需求',
           '截至2026年9月，GitHub仓库（[github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)）显示约510颗星；提交活动呈阵发性而非持续性——应将其视为一个规模较小、节奏较慢的项目，而非人手充足的商业项目',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地AI软件目录](/zh/directory)中Willow Inference Server条目的深度版本——请查看该页面，了解它与其他数十款本地AI工具的一览对比。' },
-        ],
       },
       overview: {
         id: 'what-is-wis',
@@ -1462,9 +1447,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Creado por [Tovera](https://github.com/toverainc) como backend del proyecto de hardware de código abierto del asistente de voz Willow',
           'Ya no admite inferencia LLM/chat general — esa función se eliminó explícitamente en un commit de febrero de 2026; los propios mantenedores del proyecto indican a los usuarios que ejecuten una herramienta separada como [Ollama](https://ollama.com) en paralelo para esa necesidad',
           'El repositorio de GitHub ([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)) muestra unas 510 estrellas a septiembre de 2026; la actividad de commits es intermitente en lugar de continua — considera esto un proyecto más pequeño y de ritmo más lento que uno comercial con mucho personal',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la ficha de Willow Inference Server en el [Directorio de Software de IA Local](/es/directory) — consulta esa página para ver cómo se compara de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1741,9 +1723,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Não suporta mais inferência LLM/chat geral — esse recurso foi explicitamente removido em um commit de fevereiro de 2026; os próprios mantenedores do projeto orientam os usuários a rodar uma ferramenta separada, como o [Ollama](https://ollama.com), em paralelo para essa necessidade',
           'O repositório no GitHub ([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)) mostra cerca de 510 estrelas em setembro de 2026; a atividade de commits acontece em rajadas em vez de contínua — considere este um projeto menor e mais lento do que um projeto comercial com equipe extensa',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do Willow Inference Server no [Diretório de Software de IA Local](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-wis',
@@ -2019,9 +1998,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لم يعد يدعم استدلال LLM/المحادثة العام — أُزيلت هذه الميزة صراحةً في تعديل (commit) بتاريخ فبراير 2026؛ ويوجّه القائمون على المشروع أنفسهم المستخدمين لتشغيل أداة منفصلة مثل [Ollama](https://ollama.com) جنبًا إلى جنب لتلبية هذه الحاجة',
           'يُظهر مستودع GitHub ([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)) نحو 510 نجمة اعتبارًا من سبتمبر 2026؛ ونشاط التعديلات متقطع وليس مستمرًا — اعتبر هذا مشروعًا أصغر وأبطأ وتيرة مقارنة بمشروع تجاري ذي طاقم كبير',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي النسخة المتعمقة المرافقة لمدخل Willow Inference Server في [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارن بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-wis',
@@ -2296,9 +2272,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '오픈소스 음성 비서 하드웨어 프로젝트 Willow의 백엔드로 [Tovera](https://github.com/toverainc)가 개발',
           '일반적인 LLM/채팅 추론은 더 이상 지원하지 않음 — 이 기능은 2026년 2월 커밋에서 명시적으로 제거되었으며, 프로젝트 관리자들은 해당 용도로 [Ollama](https://ollama.com) 같은 별도 도구를 WIS와 함께 실행하도록 안내함',
           'GitHub 저장소([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server))는 2026년 9월 기준 약 510개의 스타를 보유하며, 커밋 활동은 지속적이라기보다 단속적임 — 인력이 풍부한 상업 프로젝트보다 규모가 작고 속도가 느린 프로젝트로 간주해야 함',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)에 있는 Willow Inference Server 항목의 심층 버전입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 확인하세요.' },
         ],
       },
       overview: {

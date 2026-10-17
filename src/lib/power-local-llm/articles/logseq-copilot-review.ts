@@ -72,9 +72,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository ([github.com/jarodise/logseq-copilot](https://github.com/jarodise/logseq-copilot)) shows 17 stars as of September 12, 2026',
           'Install is manual: download the release from GitHub and enable it in Logseq\'s Settings → Plugins — no confirmed listing in Logseq\'s official plugin marketplace',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to logseq-copilot\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local-AI-capable tools.' },
-        ],
       },
       overview: {
         id: 'what-is-logseq-copilot',
@@ -299,9 +296,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kostenlos und quelloffen — nirgendwo im Projekt ist ein kostenpflichtiger Tarif dokumentiert',
           'GitHub-Repository ([github.com/jarodise/logseq-copilot](https://github.com/jarodise/logseq-copilot)) zeigt mit Stand 12. September 2026 17 Sterne',
           'Die Installation ist manuell: Release von GitHub herunterladen und in Logseqs Einstellungen → Plugins aktivieren — kein bestätigter Eintrag im offiziellen Plugin-Marktplatz von Logseq',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu logseq-copilots Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie den Vergleich zu Dutzenden weiterer lokal-KI-fähiger Tools auf einen Blick.' },
         ],
       },
       overview: {
@@ -528,9 +522,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub ([github.com/jarodise/logseq-copilot](https://github.com/jarodise/logseq-copilot)) affiche 17 étoiles au 12 septembre 2026',
           'L\'installation est manuelle : télécharger la release depuis GitHub et l\'activer dans Paramètres → Plugins de Logseq — aucune inscription confirmée dans la marketplace officielle des plugins de Logseq',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche logseq-copilot dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer d\'un coup d\'œil des dizaines d\'autres outils IA locaux.' },
-        ],
       },
       overview: {
         id: 'what-is-logseq-copilot',
@@ -755,9 +746,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '無料かつオープンソース — プロジェクト内のどこにも有料プランは文書化されていない',
           'GitHubリポジトリ（[github.com/jarodise/logseq-copilot](https://github.com/jarodise/logseq-copilot)）は2026年9月12日時点で17スター',
           'インストールは手動：GitHubからリリースをダウンロードし、Logseqの設定 → プラグインで有効化 — Logseqの公式プラグインマーケットプレイスへの掲載は確認されていない',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるlogseq-copilotの項目を深掘りした補足記事です — 他の数十のローカルAI対応ツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -984,9 +972,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub仓库（[github.com/jarodise/logseq-copilot](https://github.com/jarodise/logseq-copilot)）截至2026年9月12日显示17颗星',
           '安装为手动方式：从GitHub下载发行版并在Logseq的设置→插件中启用——未确认已上架Logseq官方插件市场',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中logseq-copilot条目的深度补充——该页面提供与数十款其他本地AI工具的一览式对比。' },
-        ],
       },
       overview: {
         id: 'what-is-logseq-copilot',
@@ -1211,9 +1196,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratuito y de código abierto — en ningún lugar del proyecto se documenta un plan de pago',
           'El repositorio de GitHub ([github.com/jarodise/logseq-copilot](https://github.com/jarodise/logseq-copilot)) muestra 17 estrellas al 12 de septiembre de 2026',
           'La instalación es manual: descargar el release desde GitHub y activarlo en Configuración → Plugins de Logseq — sin inclusión confirmada en el mercado oficial de plugins de Logseq',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de logseq-copilot en el [Directorio de software LLM local](/es/directory) — consulta esa página para compararlo de un vistazo con docenas de otras herramientas con capacidad de IA local.' },
         ],
       },
       overview: {
@@ -1440,9 +1422,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub ([github.com/jarodise/logseq-copilot](https://github.com/jarodise/logseq-copilot)) mostra 17 estrelas em 12 de setembro de 2026',
           'A instalação é manual: baixar o release do GitHub e ativá-lo em Configurações → Plugins do Logseq — sem listagem confirmada no marketplace oficial de plugins do Logseq',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do logseq-copilot no [Diretório de Software LLM Local](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas com capacidade de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-logseq-copilot',
@@ -1668,9 +1647,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُظهر مستودع GitHub ([github.com/jarodise/logseq-copilot](https://github.com/jarodise/logseq-copilot)) 17 نجمة اعتبارًا من 12 سبتمبر 2026',
           'التثبيت يدوي: تنزيل الإصدار من GitHub وتفعيله من الإعدادات ← الإضافات في Logseq — بلا تأكيد على الإدراج في سوق إضافات Logseq الرسمي',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمق لمدخل logseq-copilot في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنتها بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-logseq-copilot',
@@ -1895,9 +1871,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '무료 오픈소스 — 프로젝트 어디에도 유료 요금제가 문서화되어 있지 않음',
           'GitHub 저장소([github.com/jarodise/logseq-copilot](https://github.com/jarodise/logseq-copilot))는 2026년 9월 12일 기준 17개 스타 기록',
           '설치는 수동: GitHub에서 릴리스를 내려받아 Logseq의 설정 → 플러그인에서 활성화 — Logseq 공식 플러그인 마켓플레이스 등록 확인 안 됨',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 logseq-copilot 항목을 심층적으로 보완하는 글입니다 — 다른 수십 개의 로컬 AI 지원 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

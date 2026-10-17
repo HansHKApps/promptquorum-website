@@ -40,7 +40,7 @@ import { PageTracker } from '@/components/PageTracker'
 import { ClarityRouteTracker } from '@/components/ClarityRouteTracker'
 import { OneSignalInit } from '@/components/OneSignalInit'
 import { PushPromptBanner } from '@/components/PushPromptBanner'
-import { BetaFloatingCta } from '@/components/BetaFloatingCta'
+import { McpFloatingCta } from '@/components/McpFloatingCta'
 import { TableOfContentsButton } from '@/components/TableOfContentsButton'
 import { GooglePreferredSourcesCard } from '@/components/GooglePreferredSourcesCard'
 import { ConsentedAnalytics } from '@/components/ConsentedAnalytics'
@@ -257,7 +257,7 @@ export default function RootLayout({
           <Suspense><Footer /></Suspense>
           <CookieBanner />
           <PushPromptBanner />
-          <BetaFloatingCta />
+          <McpFloatingCta />
           <TableOfContentsButton />
           <GooglePreferredSourcesCard />
 

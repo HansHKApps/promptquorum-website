@@ -359,6 +359,11 @@
     "urlSlug": "autogen-review",
     "url": "/power-local-llm/autogen-review"
   },
+  "microsoft-agent-framework": {
+    "cluster": "power-local-llm",
+    "urlSlug": "microsoft-agent-framework-review",
+    "url": "/power-local-llm/microsoft-agent-framework-review"
+  },
   "semantic-kernel": {
     "cluster": "power-local-llm",
     "urlSlug": "semantic-kernel-review",
@@ -889,6 +894,11 @@
     "urlSlug": "baserow-review",
     "url": "/power-local-llm/baserow-review"
   },
+  "firecrawl": {
+    "cluster": "power-local-llm",
+    "urlSlug": "firecrawl-review",
+    "url": "/power-local-llm/firecrawl-review"
+  },
   "blinko": {
     "cluster": "power-local-llm",
     "urlSlug": "blinko-review",
@@ -1149,6 +1159,16 @@
     "urlSlug": "paios-review",
     "url": "/power-local-llm/paios-review"
   },
+  "ai-cutoutwerk": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ai-cutoutwerk-review",
+    "url": "/power-local-llm/ai-cutoutwerk-review"
+  },
+  "openmontage": {
+    "cluster": "power-local-llm",
+    "urlSlug": "openmontage-review",
+    "url": "/power-local-llm/openmontage-review"
+  },
   "private-mind": {
     "cluster": "power-local-llm",
     "urlSlug": "private-mind-review",
@@ -1159,10 +1179,30 @@
     "urlSlug": "llm-hub-review",
     "url": "/power-local-llm/llm-hub-review"
   },
+  "lm-playground": {
+    "cluster": "power-local-llm",
+    "urlSlug": "lm-playground-review",
+    "url": "/power-local-llm/lm-playground-review"
+  },
+  "localmind": {
+    "cluster": "power-local-llm",
+    "urlSlug": "localmind-review",
+    "url": "/power-local-llm/localmind-review"
+  },
   "tokforge": {
     "cluster": "power-local-llm",
     "urlSlug": "tokforge-review",
     "url": "/power-local-llm/tokforge-review"
+  },
+  "friedrichai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "friedrichai-review",
+    "url": "/power-local-llm/friedrichai-review"
+  },
+  "spiritbox-ultimate": {
+    "cluster": "power-local-llm",
+    "urlSlug": "spiritbox-ultimate-review",
+    "url": "/power-local-llm/spiritbox-ultimate-review"
   },
   "oscilla": {
     "cluster": "power-local-llm",
@@ -1174,9 +1214,39 @@
     "urlSlug": "tina-review",
     "url": "/power-local-llm/tina-review"
   },
+  "return-editor": {
+    "cluster": "power-local-llm",
+    "urlSlug": "return-editor-review",
+    "url": "/power-local-llm/return-editor-review"
+  },
   "mlxhub": {
     "cluster": "power-local-llm",
     "urlSlug": "mlxhub-review",
     "url": "/power-local-llm/mlxhub-review"
+  },
+  "anyllm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "anyllm-review",
+    "url": "/power-local-llm/anyllm-review"
+  },
+  "local-ai-geetmark": {
+    "cluster": "power-local-llm",
+    "urlSlug": "local-ai-geetmark-review",
+    "url": "/power-local-llm/local-ai-geetmark-review"
+  },
+  "local-ai-mail": {
+    "cluster": "power-local-llm",
+    "urlSlug": "local-ai-mail-review",
+    "url": "/power-local-llm/local-ai-mail-review"
+  },
+  "pcai-photo-retouch": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pcai-photo-retouch-review",
+    "url": "/power-local-llm/pcai-photo-retouch-review"
+  },
+  "honey-llm": {
+    "cluster": "power-local-llm",
+    "urlSlug": "honey-llm-review",
+    "url": "/power-local-llm/honey-llm-review"
   }
 }

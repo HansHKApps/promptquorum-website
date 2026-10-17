@@ -73,9 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Current version: v2.10.6-lts, released 2026-09-03',
           'Every application gets an OpenAI-compatible [API key](https://docs.maxkb.pro/dev_manual/APIKey_chat/), so existing OpenAI-client code can point at MaxKB by swapping the base URL and key — no separate local API server to set up',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to MaxKB\'s entry in the [Local LLM Software Directory](/directory) — see that page for how MaxKB compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-maxkb',
@@ -302,9 +299,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Zum Zeitpunkt dieser Review rund 22.700 GitHub-Sterne, mit neuen Releases alle paar Wochen laut der [GitHub-Releases-Seite](https://github.com/1Panel-dev/MaxKB/releases)',
           'Aktuelle Version: v2.10.6-lts, veröffentlicht am 2026-09-03',
           'Jede Anwendung erhält einen OpenAI-kompatiblen [API-Schlüssel](https://docs.maxkb.pro/dev_manual/APIKey_chat/), sodass bestehender OpenAI-Client-Code durch Austausch von Basis-URL und Schlüssel auf MaxKB zeigen kann — kein separater lokaler API-Server nötig',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu MaxKBs Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie MaxKB im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -535,9 +529,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Version actuelle : v2.10.6-lts, publiée le 2026-09-03',
           'Chaque application reçoit une [clé API](https://docs.maxkb.pro/dev_manual/APIKey_chat/) compatible OpenAI, permettant à du code client OpenAI existant de pointer vers MaxKB en changeant simplement l\'URL de base et la clé — sans serveur API local séparé à mettre en place',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de MaxKB dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer MaxKB en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-maxkb',
@@ -764,9 +755,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Alrededor de 22.700 estrellas en GitHub al momento de esta reseña, con nuevas versiones cada pocas semanas según la [página de releases de GitHub](https://github.com/1Panel-dev/MaxKB/releases)',
           'Versión actual: v2.10.6-lts, publicada el 2026-09-03',
           'Cada aplicación recibe una [clave de API](https://docs.maxkb.pro/dev_manual/APIKey_chat/) compatible con OpenAI, de modo que el código cliente de OpenAI existente puede apuntar a MaxKB cambiando solo la URL base y la clave — sin necesidad de configurar un servidor API local aparte',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento detallado de la ficha de MaxKB en el [Local LLM Software Directory](/es/directory) — consulta esa página para comparar MaxKB de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -995,9 +983,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Versão atual: v2.10.6-lts, lançada em 2026-09-03',
           'Cada aplicação recebe uma [chave de API](https://docs.maxkb.pro/dev_manual/APIKey_chat/) compatível com OpenAI, permitindo que código cliente OpenAI existente aponte para o MaxKB apenas trocando a URL base e a chave — sem precisar configurar um servidor de API local separado',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do MaxKB no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar o MaxKB rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-maxkb',
@@ -1224,9 +1209,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '本レビュー時点でGitHubスターは約22,700件。[GitHubのリリースページ](https://github.com/1Panel-dev/MaxKB/releases)によれば数週間ごとに新バージョンをリリース',
           '現行バージョン：v2.10.6-lts（2026-09-03リリース）',
           '各アプリケーションにOpenAI互換の[APIキー](https://docs.maxkb.pro/dev_manual/APIKey_chat/)が発行されるため、既存のOpenAIクライアントコードはベースURLとキーを差し替えるだけでMaxKBに向けられる——別途ローカルAPIサーバーを構築する必要はない',
-        ],
-        callouts: [
-          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のMaxKBの項目を深掘りする内容です——他の数十のローカルAIツールとMaxKBを一目で比較するには、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1455,9 +1437,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '当前版本：v2.10.6-lts，发布于2026-09-03',
           '每个应用都会获得一个兼容OpenAI的[API密钥](https://docs.maxkb.pro/dev_manual/APIKey_chat/)，现有的OpenAI客户端代码只需更换Base URL和密钥即可指向MaxKB——无需单独搭建本地API服务器',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中MaxKB条目的深入版本——请查看该页面，一览MaxKB与其他数十款本地AI工具的对比。' },
-        ],
       },
       overview: {
         id: 'what-is-maxkb',
@@ -1685,9 +1664,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الإصدار الحالي: v2.10.6-lts، صدر في 2026-09-03',
           'يحصل كل تطبيق على [مفتاح API](https://docs.maxkb.pro/dev_manual/APIKey_chat/) متوافق مع OpenAI، بحيث يمكن لكود عميل OpenAI الحالي الاتصال بـ MaxKB بمجرد تبديل عنوان URL الأساسي والمفتاح — دون الحاجة لإعداد خادم API محلي منفصل',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لسجل MaxKB في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة MaxKB بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-maxkb',
@@ -1914,9 +1890,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 작성 시점 기준 GitHub 스타 약 22,700개, [GitHub 릴리스 페이지](https://github.com/1Panel-dev/MaxKB/releases)에 따르면 몇 주마다 새 버전 출시',
           '현재 버전: v2.10.6-lts, 2026-09-03 출시',
           '모든 애플리케이션에 OpenAI 호환 [API 키](https://docs.maxkb.pro/dev_manual/APIKey_chat/)가 발급되어, 기존 OpenAI 클라이언트 코드가 기본 URL과 키만 교체하면 MaxKB를 가리킬 수 있음 — 별도의 로컬 API 서버를 구축할 필요 없음',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등록된 MaxKB 항목의 심층 버전입니다 — MaxKB를 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {

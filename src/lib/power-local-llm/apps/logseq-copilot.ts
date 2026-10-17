@@ -38,4 +38,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { localLlm: true, noteApp: 'Logseq' },
   lastVerifiedDate: '2026-09-12',
+  lastUpstreamUpdate: '2025-01-10', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/jarodise/logseq-copilot',
 }

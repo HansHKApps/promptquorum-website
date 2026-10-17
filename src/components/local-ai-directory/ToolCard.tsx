@@ -16,15 +16,17 @@ import { computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardwa
 import { StarIcon, CpuIcon, PlugIcon, TagIcon, ChevronRightIcon } from './icons'
 import { LastUpdatedBadge } from './LastUpdatedBadge'
 import { isFounderStarActive } from './founderStar'
-import { getListingFreshness } from './staleness'
+import { getListingFreshness, getAppActivity } from './staleness'
 import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderText'
 import type { HardwareProfile, MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 import { featureReviewUrl } from './reviewLinks'
+import { handsOnTestUrl } from '@/lib/hands-on-tests/links'
 import { guideForCategories } from '@/lib/power-local-llm/compare-guide'
 import { t } from './directory-i18n'
 import { LicenseInfoModal } from './LicenseInfoModal'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
+import { INSTALL_EFFORT_UI, installOnSuffix } from './installEffort'
 
 /** Per-group accent so a grid of cards reads as a colour-coded map, not a wall of grey. */
 const GROUP_ACCENT: Record<CategoryGroupKey, { bar: string; chip: string; avatar: string }> = {
@@ -80,7 +82,13 @@ export function getDownloadLinks(app: ToolRecord, lang: Language): { href: strin
     }))
   }
   if (app.url) {
-    return [{ href: `https://${app.url}`, label: app.url.includes('github.com') ? t('githubLink', lang) : t('getItLink', lang) }]
+    const isGithub = app.url.includes('github.com')
+    // GitHub is a delivery channel, not an install experience: an installer-tier tool whose only link is its
+    // repo sends the reader to the Releases page (where the .dmg/.exe lives), labelled as a download.
+    if (isGithub && app.installEffort === 'installer' && /^github\.com\/[^/]+\/[^/]+$/.test(app.url)) {
+      return [{ href: `https://${app.url}/releases/latest`, label: t('downloadLink', lang) }]
+    }
+    return [{ href: `https://${app.url}`, label: isGithub ? t('githubLink', lang) : t('getItLink', lang) }]
   }
   return []
 }
@@ -106,11 +114,14 @@ export function ToolCard({
   const price = app.price !== 'TODO' ? app.price : null
   const count = articleCount(app.name)
   const review = featureReviewUrl(app.slug, lang)
+  const handsOn = handsOnTestUrl(app.slug, lang)
   const guide = guideForCategories(app.categories, lang)
   const guideHref = guide ? `${lang === 'en' ? '' : `/${lang}`}/power-local-llm/${guide.slug}` : null
   const lastUpdatedIso = app.lastVerifiedDate ?? app.addedDate
   const lastUpdatedLabel = lastUpdatedIso ? formatDisplayDate(lastUpdatedIso, lang) : null
   const listingFreshness = app.upstreamStatus ? 'fresh' : getListingFreshness(lastUpdatedIso)
+  const appActivity = getAppActivity(app.lastUpstreamUpdate)
+  const appUpdateLabel = app.lastUpstreamUpdate ? formatDisplayDate(app.lastUpstreamUpdate, lang) : null
   const primaryCategory = app.categories[0]
   const accent = GROUP_ACCENT[CATEGORY_SUB_GROUP[primaryCategory]]
   const categoryLabel = CATEGORY_SUB_LABEL[primaryCategory][lang]
@@ -140,7 +151,9 @@ export function ToolCard({
   return (
     <div
       className={`group relative flex flex-col text-left h-full overflow-hidden rounded-xl cursor-pointer transition-all hover:shadow-lg hover:-translate-y-0.5 ${
-        isFounderReviewed
+        appActivity === 'dead'
+          ? 'border border-gray-300 bg-gray-100 grayscale opacity-80 hover:opacity-100 hover:border-gray-400'
+          : isFounderReviewed
           ? 'border-2 border-amber-400 bg-gradient-to-b from-amber-50 to-white shadow-[0_2px_16px_-4px_rgba(217,119,6,0.35)] hover:border-amber-500 hover:shadow-[0_4px_24px_-4px_rgba(217,119,6,0.45)]'
           : 'border border-primary/10 bg-white hover:border-primary/40'
       }`}
@@ -208,7 +221,7 @@ export function ToolCard({
           </p>
         )}
 
-        {(engine || price || app.mcpSupport) && (
+        {(engine || price || app.mcpSupport || app.installEffort) && (
           <div className="flex flex-wrap gap-1.5 mb-2.5">
             {engine && (
               <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${ENGINE_BADGE[engine]}`}>
@@ -220,6 +233,14 @@ export function ToolCard({
               <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${PRICE_BADGE[price]}`}>
                 <TagIcon className="h-3 w-3" />
                 {PRICE_LABEL[price]}
+              </span>
+            )}
+            {app.installEffort && (
+              <span
+                className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${INSTALL_EFFORT_UI[app.installEffort].badge}`}
+                title={t(INSTALL_EFFORT_UI[app.installEffort].tip, lang)}
+              >
+                {t(INSTALL_EFFORT_UI[app.installEffort].label, lang)}{installOnSuffix(app)}
               </span>
             )}
             {app.mcpSupport && (
@@ -303,6 +324,24 @@ export function ToolCard({
             </div>
           )}
 
+          {appUpdateLabel && (
+            <p className={`text-[11px] mb-1.5 ${appActivity === 'dead' ? 'font-bold text-gray-700' : appActivity === 'quiet' ? 'font-bold text-red-700' : 'text-text-secondary'}`}>
+              {t('appLastUpdateLabel', lang)}: {appUpdateLabel}
+            </p>
+          )}
+
+          {(appActivity === 'quiet' || appActivity === 'dead') && (
+            <div
+              role="alert"
+              className={`mb-2 rounded-md border-2 px-2 py-1.5 text-xs font-extrabold leading-snug ${
+                appActivity === 'dead' ? 'border-gray-700 bg-gray-800 text-white' : 'border-red-500 bg-red-50 text-red-800'
+              }`}
+              title={t(appActivity === 'dead' ? 'appDeadTooltip' : 'appQuietTooltip', lang)}
+            >
+              ⚠ {t(appActivity === 'dead' ? 'appDeadBadge' : 'appQuietBadge', lang)}
+            </div>
+          )}
+
           {app.upstreamStatus && (
             <span className="inline-flex w-fit items-center gap-1 rounded-full border border-gray-300 bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-700 mb-1.5">
               {t(app.upstreamStatus.state === 'archived' ? 'archivedBadge' : 'unmaintainedBadge', lang)}
@@ -336,6 +375,15 @@ export function ToolCard({
                 >
                   {t('readReview', lang)}
                 </Link>
+                {handsOn && (
+                  <Link
+                    href={handsOn}
+                    onClick={stop}
+                    className="w-full text-center rounded-lg border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/5"
+                  >
+                    {t('handsOnTest', lang)}
+                  </Link>
+                )}
                 {guideHref && (
                   <Link
                     href={guideHref}

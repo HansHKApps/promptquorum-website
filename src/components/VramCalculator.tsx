@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import { useLang } from '@/hooks/useLang';
+import { MODEL_SIZES, QUANT_BITS, CONTEXT_OVERHEAD, BATCH_MULTIPLIER, estimateVram } from '@/lib/vram';
 
 interface GPU {
   name: string;
@@ -401,51 +402,6 @@ const GPUS: GPU[] = [
   { name: 'Mac Studio M5 Ultra (96 GB+)', vram: 96, price: 5499 },
 ];
 
-const MODEL_SIZES: { [key: string]: number } = {
-  '1B': 1,
-  '3B': 3,
-  '4B': 4,
-  '7B': 7,
-  '8B': 8,
-  '13B': 13,
-  '20B': 20,
-  '22B': 22,
-  '24B': 24,
-  '27B': 27,
-  '30B': 30,
-  '32B': 32,
-  '70B': 70,
-  '109B': 109,
-  '120B': 120,
-  '405B': 405,
-};
-
-const QUANT_BITS: { [key: string]: number } = {
-  'FP16': 16,
-  'Q8': 8,
-  'Q6': 6,
-  'Q5': 5,
-  'Q4': 4,
-  'Q3': 3,
-  'Q2': 2,
-};
-
-const CONTEXT_OVERHEAD: { [key: string]: number } = {
-  '2K': 0.5,
-  '4K': 1.5,
-  '8K': 2.5,
-  '16K': 4,
-  '32K': 6,
-  '128K': 12,
-};
-
-const BATCH_MULTIPLIER: { [key: string]: number } = {
-  '1': 0,
-  '2': 0.5,
-  '4': 1.5,
-  '8': 3,
-};
-
 export function VramCalculator() {
   const detectedLang = useLang() as Language
   const lang = detectedLang in VRAM_TRANSLATIONS ? detectedLang : 'en';
@@ -503,21 +459,15 @@ export function VramCalculator() {
     const contextOH = CONTEXT_OVERHEAD[contextLength] || 1.5;
     const batchOH = BATCH_MULTIPLIER[batchSize] || 0;
 
-    const baseVram = (modelBillions * quantBits) / 8;
-    const contextVram = contextOH;
-    const batchVram = batchOH;
-    const systemVram = 1;
-
-    const totalRequired = baseVram + contextVram + batchVram + systemVram;
-    const withSafety = Math.ceil(totalRequired * 1.25 * 4) / 4; // Round up to nearest 0.25
+    const est = estimateVram({ modelBillions, quantBits, contextGb: contextOH, batchGb: batchOH });
 
     return {
-      baseVram: baseVram.toFixed(2),
-      contextVram: contextVram.toFixed(2),
-      batchVram: batchVram.toFixed(2),
-      systemVram: systemVram.toFixed(2),
-      totalRequired: totalRequired.toFixed(2),
-      withSafety: withSafety.toFixed(2),
+      baseVram: est.baseGb.toFixed(2),
+      contextVram: est.contextGb.toFixed(2),
+      batchVram: est.batchGb.toFixed(2),
+      systemVram: est.systemGb.toFixed(2),
+      totalRequired: est.totalGb.toFixed(2),
+      withSafety: est.recommendedGb.toFixed(2),
     };
   }, [modelSize, quantization, contextLength, batchSize]);
 

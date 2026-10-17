@@ -25,7 +25,13 @@ export const app: ToolRecord = {
   addedDate: '2026-09-18',
   status: 'listed',
   uses: ['docs', 'chat'],
-  url: 'github.com/deta/surf',
+  url: 'deta.surf',
+  storeLinks: {
+    web: 'https://deta.surf',
+    github: 'https://github.com/deta/surf',
+  },
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'GitHub Releases 1.4.7-beta.0 ships Surf-*-setup.exe, .arm64.dmg, .x64.dmg and .x86_64.AppImage. checked 2026-10-09',
   tagline: {
     en: 'Desktop AI notebook that organizes your files and webpages and writes notes from them, with local, open, or cloud model choice',
     de: 'Desktop-KI-Notizbuch, das Dateien und Webseiten organisiert und daraus Notizen erstellt — mit freier Wahl zwischen lokalen, offenen oder Cloud-Modellen',
@@ -41,4 +47,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { localLlm: true, citations: true, desktopApp: true, noteApp: 'Surf' },
   lastVerifiedDate: '2026-09-18',
+  lastUpstreamUpdate: '2026-08-24', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/deta/surf',
 }

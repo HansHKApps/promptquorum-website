@@ -38,4 +38,6 @@ export const app: ToolRecord = {
   // agents true — the architecture docs describe a built-in "Agents and Orchestration" layer (query classification, parallel research/widgets, cited final answer) plus an iterative Deep Research pipeline: github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md
   compare: { visualBuilder: false, localLlm: true, agents: true, dockerDeploy: true, apiServer: true, citations: true, webSearch: true },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-09-01', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/ItzCrazyKns/Vane',
 }

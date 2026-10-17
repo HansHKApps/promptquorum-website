@@ -921,7 +921,7 @@
       "images": []
     },
     "open-webui-review": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -2873,7 +2873,7 @@
       ]
     },
     "cloud-gpu-rental-comparison-2026": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-10-16",
       "lastFactChecked": null,
       "publishDate": "2026-05-17",
       "hasSections": true,
@@ -2997,7 +2997,7 @@
       "images": []
     },
     "apple-silicon-m5-local-llm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-10-11",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -5710,7 +5710,7 @@
       "images": []
     },
     "anythingllm-vs-privategpt-vs-openwebui-rag": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-10-16",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6637,7 +6637,7 @@
       "images": []
     },
     "local-llm-software-directory-2026": {
-      "dateModified": "2026-10-05",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6655,7 +6655,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 7 categories of a local LLM stack: 236 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
+          "title": "The 7 categories of a local LLM stack: 252 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -7656,7 +7656,7 @@
       "images": []
     },
     "enterprise-rag-vector-database-deployment-guide-2026": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -8192,7 +8192,7 @@
       "images": []
     },
     "nanobot-review": {
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-10-10",
       "lastFactChecked": null,
       "publishDate": "2026-09-14",
       "hasSections": true,
@@ -8966,7 +8966,7 @@
       "images": []
     },
     "draw-things-review": {
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-07",
       "hasSections": true,
@@ -9421,7 +9421,7 @@
       "images": []
     },
     "cognira-review": {
-      "dateModified": "2026-09-26",
+      "dateModified": "2026-10-05",
       "lastFactChecked": null,
       "publishDate": "2026-09-26",
       "hasSections": true,
@@ -10231,7 +10231,7 @@
       "images": []
     },
     "koboldcpp-review": {
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -10447,7 +10447,7 @@
       "images": []
     },
     "windsurf-review": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -10609,7 +10609,7 @@
       "images": []
     },
     "stableswarmui-review": {
-      "dateModified": "2026-09-06",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -10752,10 +10752,154 @@
       ],
       "images": []
     },
+    "lm-playground-review": {
+      "dateModified": "2026-10-16",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-16",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "localmind-review": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-17",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "tokforge-review": {
-      "dateModified": "2026-10-05",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-10-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "local-ai-geetmark-review": {
+      "dateModified": "2026-10-09",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-09",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "local-ai-mail-review": {
+      "dateModified": "2026-10-11",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-11",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "pcai-photo-retouch-review": {
+      "dateModified": "2026-10-16",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-16",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "honey-llm-review": {
+      "dateModified": "2026-10-16",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-16",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "friedrichai-review": {
+      "dateModified": "2026-10-09",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-09",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "spiritbox-ultimate-review": {
+      "dateModified": "2026-10-16",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-16",
       "hasSections": true,
       "langs": [
         "en",
@@ -10806,10 +10950,46 @@
       ],
       "images": []
     },
+    "return-editor-review": {
+      "dateModified": "2026-10-16",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-10",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "mlxhub-review": {
       "dateModified": "2026-10-05",
       "lastFactChecked": null,
       "publishDate": "2026-10-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "anyllm-review": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-17",
       "hasSections": true,
       "langs": [
         "en",
@@ -11653,7 +11833,7 @@
       "images": []
     },
     "omlx-review": {
-      "dateModified": "2026-09-18",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-18",
       "hasSections": true,
@@ -11998,6 +12178,24 @@
       "dateModified": "2026-09-19",
       "lastFactChecked": null,
       "publishDate": "2026-09-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "firecrawl-review": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-17",
       "hasSections": true,
       "langs": [
         "en",
@@ -12412,6 +12610,24 @@
       "dateModified": "2026-09-25",
       "lastFactChecked": null,
       "publishDate": "2026-09-25",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "ai-cutoutwerk-review": {
+      "dateModified": "2026-10-16",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-16",
       "hasSections": true,
       "langs": [
         "en",
@@ -14535,7 +14751,7 @@
       "images": []
     },
     "isBalconySolarLegalConnecticut": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-16",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -14571,7 +14787,7 @@
       "images": []
     },
     "isBalconySolarLegalCalifornia": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-10-16",
       "lastFactChecked": null,
       "publishDate": "2026-09-02",
       "hasSections": true,

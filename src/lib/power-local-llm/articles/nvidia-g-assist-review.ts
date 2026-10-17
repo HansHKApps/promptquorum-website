@@ -72,9 +72,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The core application is closed-source and proprietary; NVIDIA separately publishes an Apache License 2.0 plugin SDK and sample plugins at [github.com/NVIDIA/G-Assist](https://github.com/NVIDIA/G-Assist) for developers',
           'Activated with the Alt+G shortcut once installed; voice commands require an RTX 30-series GPU or newer',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to G-Assist\'s entry in the [Local LLM Software Directory](/directory) — see that page for how G-Assist compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-g-assist',
@@ -360,9 +357,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Übernimmt Spiel-/Systemanpassung, Echtzeit-Leistungsüberwachung (FPS, Latenz, GPU-Auslastung, Temperaturen), Treiberprüfungen sowie die Steuerung unterstützter Peripheriegeräte (Logitech G, Corsair, MSI, Nanoleaf)',
           'Die Kernanwendung ist quellgeschlossen und proprietär; NVIDIA veröffentlicht separat ein Plugin-SDK unter der Apache License 2.0 sowie Beispiel-Plugins unter [github.com/NVIDIA/G-Assist](https://github.com/NVIDIA/G-Assist) für Entwickler',
           'Wird nach der Installation mit der Tastenkombination Alt+G aktiviert; Sprachbefehle erfordern eine RTX-30-Serie-GPU oder neuer',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu G-Assists Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie G-Assist im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -650,9 +644,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'L\'application principale est fermée et propriétaire ; NVIDIA publie séparément un SDK de plugins sous licence Apache 2.0 ainsi que des exemples de plugins sur [github.com/NVIDIA/G-Assist](https://github.com/NVIDIA/G-Assist) pour les développeurs',
           'Activé avec le raccourci Alt+G une fois installé ; les commandes vocales nécessitent un GPU RTX série 30 ou plus récent',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de G-Assist dans le [Répertoire de logiciels IA locaux](/fr/directory) — consultez cette page pour voir comment G-Assist se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux.' },
-        ],
       },
       overview: {
         id: 'what-is-g-assist',
@@ -938,9 +929,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gestiona el ajuste de juegos/sistema, monitoreo de rendimiento en tiempo real (FPS, latencia, uso de GPU, temperaturas), verificaciones de controladores y control de periféricos compatibles (Logitech G, Corsair, MSI, Nanoleaf)',
           'La aplicación principal es de código cerrado y propietaria; NVIDIA publica por separado un SDK de complementos bajo licencia Apache 2.0 y complementos de ejemplo en [github.com/NVIDIA/G-Assist](https://github.com/NVIDIA/G-Assist) para desarrolladores',
           'Se activa con el atajo Alt+G una vez instalado; los comandos de voz requieren una GPU RTX serie 30 o posterior',
-        ],
-        callouts: [
-          { type: 'note', text: 'Este análisis es el complemento detallado de la ficha de G-Assist en el [Directorio de software de IA local](/es/directory); consulta esa página para ver de un vistazo cómo se compara G-Assist con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1228,9 +1216,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O aplicativo principal é de código fechado e proprietário; a NVIDIA publica separadamente um SDK de plugins sob a licença Apache 2.0 e plugins de exemplo em [github.com/NVIDIA/G-Assist](https://github.com/NVIDIA/G-Assist) para desenvolvedores',
           'Ativado com o atalho Alt+G após a instalação; comandos de voz exigem uma GPU RTX série 30 ou mais recente',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do G-Assist no [Diretório de Software de IA Local](/pt/directory) — veja essa página para comparar rapidamente o G-Assist com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-g-assist',
@@ -1516,9 +1501,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ゲーム/システム調整、リアルタイムのパフォーマンス監視（FPS、レイテンシ、GPU使用率、温度）、ドライバーチェック、対応周辺機器（Logitech G、Corsair、MSI、Nanoleaf）の制御を担当',
           'コアアプリケーションはクローズドソースかつプロプライエタリ。NVIDIAは開発者向けに、Apache License 2.0のプラグインSDKとサンプルプラグインを[github.com/NVIDIA/G-Assist](https://github.com/NVIDIA/G-Assist)で別途公開',
           'インストール後はAlt+Gのショートカットで起動。音声コマンドにはRTX 30シリーズ以降のGPUが必要',
-        ],
-        callouts: [
-          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるG-Assistの項目を補完する詳細な解説です。他の数十のローカルAIツールとG-Assistを一目で比較できます。' },
         ],
       },
       overview: {
@@ -1806,9 +1788,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '核心应用是闭源且专有的；NVIDIA另外为开发者在[github.com/NVIDIA/G-Assist](https://github.com/NVIDIA/G-Assist)发布了采用Apache License 2.0许可的插件SDK和示例插件',
           '安装后使用Alt+G快捷键激活；语音命令需要RTX 30系列或更新的GPU',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中G-Assist条目的深度补充——请查看该页面，一览G-Assist与数十种其他本地AI工具的对比情况。' },
-        ],
       },
       overview: {
         id: 'what-is-g-assist',
@@ -2095,9 +2074,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التطبيق الأساسي مغلق المصدر وملكية خاصة؛ تنشر NVIDIA بشكل منفصل حزمة تطوير برمجيات للإضافات مرخّصة بموجب Apache License 2.0 وإضافات نموذجية على [github.com/NVIDIA/G-Assist](https://github.com/NVIDIA/G-Assist) للمطورين',
           'يُفعَّل باختصار Alt+G بعد التثبيت؛ تتطلب الأوامر الصوتية بطاقة من سلسلة RTX 30 أو أحدث',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المُعمّق لإدخال G-Assist في [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارن G-Assist بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-g-assist',
@@ -2383,9 +2359,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '게임/시스템 조정, 실시간 성능 모니터링(FPS, 지연 시간, GPU 사용률, 온도), 드라이버 확인, 지원되는 주변기기(Logitech G, Corsair, MSI, Nanoleaf) 제어를 담당합니다',
           '핵심 애플리케이션은 클로즈드 소스이자 독점 소프트웨어입니다. NVIDIA는 개발자를 위해 Apache License 2.0으로 라이선스된 플러그인 SDK와 샘플 플러그인을 [github.com/NVIDIA/G-Assist](https://github.com/NVIDIA/G-Assist)에서 별도로 공개합니다',
           '설치 후 Alt+G 단축키로 활성화되며, 음성 명령에는 RTX 30 시리즈 이상 GPU가 필요합니다',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 G-Assist 항목을 보완하는 심층 자료입니다 — 수십 개의 다른 로컬 AI 도구와 G-Assist를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

@@ -39,4 +39,6 @@ export const app: ToolRecord = {
   // dockerDeploy/apiServer confirmed via the Full-Stack Web Application guide (apps "packaged into a Docker container", served via a Flask/FastAPI backend): https://developers.llamaindex.ai/python/framework/understanding/putting_it_all_together/apps/
   compare: { visualBuilder: false, localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-10-14', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/run-llama/llama_index',
 }

@@ -24,3 +24,23 @@ export function getListingFreshness(dateIso: string | null | undefined): Listing
   if (ageDays > STALE_LISTING_WARN_DAYS) return 'warn'
   return 'fresh'
 }
+
+// Upstream-activity signal — about the APP, not about our listing. Based on
+// `lastUpstreamUpdate` (the app's own latest release/commit date). Owner rule
+// 2026-10-16: > 3 months without an app update = visible warning, > 6 months =
+// grey tile that reads as a likely dead project. No date = 'unknown' (no
+// warning; unset means "not yet researched", never "no updates").
+export const APP_QUIET_DAYS = 90
+export const APP_DEAD_DAYS = 180
+
+export type AppActivity = 'active' | 'quiet' | 'dead' | 'unknown'
+
+export function getAppActivity(lastUpstreamUpdate: string | null | undefined, now: number = Date.now()): AppActivity {
+  if (!lastUpstreamUpdate) return 'unknown'
+  const date = new Date(lastUpstreamUpdate).getTime()
+  if (Number.isNaN(date)) return 'unknown'
+  const ageDays = (now - date) / (1000 * 60 * 60 * 24)
+  if (ageDays > APP_DEAD_DAYS) return 'dead'
+  if (ageDays > APP_QUIET_DAYS) return 'quiet'
+  return 'active'
+}

@@ -72,9 +72,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Requires macOS 26.2 or later on Apple Silicon (M-series) hardware — no Windows or Linux support, no Intel Mac support',
           'Developed by [David Dalcu](https://github.com/ddalcu); ships near-daily tagged releases as of this review',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to mlx-serve\'s entry in the [Local LLM Software Directory](/directory) — see that page for how mlx-serve compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-mlx-serve',
@@ -351,9 +348,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Vorkonfigurierte Launcher für Coding-Agenten, darunter Claude Code, OpenCode und Cursor',
           'Erfordert macOS 26.2 oder neuer auf Apple-Silicon-Hardware (M-Serie) — keine Unterstützung für Windows, Linux oder Intel-Macs',
           'Entwickelt von [David Dalcu](https://github.com/ddalcu); liefert Stand dieser Review nahezu tägliche getaggte Releases',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zum Eintrag von mlx-serve im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie mlx-serve im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -632,9 +626,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nécessite macOS 26.2 ou ultérieur sur du matériel Apple Silicon (série M) — aucune prise en charge de Windows, Linux ou des Mac Intel',
           'Développé par [David Dalcu](https://github.com/ddalcu) ; publie des versions taguées quasi quotidiennes au moment de cette revue',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette revue est le complément détaillé de la fiche de mlx-serve dans le [Répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment mlx-serve se compare à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-mlx-serve',
@@ -911,9 +902,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Claude Code、OpenCode、Cursorを含むコーディングエージェント向けの設定済みランチャーを備えます',
           'Apple Silicon（Mシリーズ）ハードウェアでmacOS 26.2以降が必要です — WindowsやLinuxへの対応、Intel Macへの対応はありません',
           '[David Dalcu](https://github.com/ddalcu)氏が開発しており、本レビュー時点でほぼ毎日タグ付きリリースが行われています',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)におけるmlx-serveの項目を掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1192,9 +1180,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '需要 Apple Silicon（M 系列）硬件上的 macOS 26.2 或更高版本 —— 不支持 Windows、Linux 或 Intel Mac',
           '由 [David Dalcu](https://github.com/ddalcu) 开发；截至本评测，项目几乎每天都有打标签的发布',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地 LLM 软件目录](/zh/directory)中 mlx-serve 条目的深度解读——如需快速了解 mlx-serve 与其他数十款本地 AI 工具的对比，请查看该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-mlx-serve',
@@ -1471,9 +1456,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Lanzadores preconfigurados para agentes de codificación, incluyendo Claude Code, OpenCode y Cursor',
           'Requiere macOS 26.2 o posterior en hardware Apple Silicon (serie M) — sin soporte para Windows, Linux, ni Mac Intel',
           'Desarrollado por [David Dalcu](https://github.com/ddalcu); publica lanzamientos etiquetados casi diarios al momento de esta reseña',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de mlx-serve en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara mlx-serve con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1752,9 +1734,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Requer macOS 26.2 ou posterior em hardware Apple Silicon (série M) — sem suporte a Windows, Linux ou Mac Intel',
           'Desenvolvido por [David Dalcu](https://github.com/ddalcu); lança versões com tag quase diariamente no momento desta análise',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do mlx-serve no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para uma comparação rápida entre o mlx-serve e dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-mlx-serve',
@@ -2032,9 +2011,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يتطلب نظام macOS 26.2 أو أحدث على عتاد Apple Silicon (سلسلة M) — لا يدعم Windows أو Linux أو أجهزة Mac بمعالج Intel',
           'طوّره [David Dalcu](https://github.com/ddalcu)؛ يصدر إصدارات موسومة شبه يومية وقت كتابة هذه المراجعة',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل mlx-serve في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين mlx-serve وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-mlx-serve',
@@ -2311,9 +2287,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Claude Code, OpenCode, Cursor를 포함한 코딩 에이전트용 사전 구성된 실행기를 제공합니다',
           'Apple Silicon(M 시리즈) 하드웨어에서 macOS 26.2 이상이 필요합니다 — Windows, Linux, Intel Mac은 지원하지 않습니다',
           '[David Dalcu](https://github.com/ddalcu)가 개발했으며, 이 리뷰 작성 시점 기준 거의 매일 태그 릴리스가 이루어지고 있습니다',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 수록된 mlx-serve 항목을 심층적으로 다룬 글입니다 — mlx-serve가 수십 개의 다른 로컬 AI 도구와 비교해 어떤 위치에 있는지 한눈에 보려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {

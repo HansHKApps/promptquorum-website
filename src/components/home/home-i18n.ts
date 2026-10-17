@@ -211,6 +211,18 @@ const HOME_UI = {
     pt: 'Novos apps em breve.', ar: 'تطبيقات جديدة قادمة قريبًا.', ko: '새 앱이 곧 제공됩니다.',
   },
 
+  // --- Hands-on Tests ---
+  handsOnTitle: {
+    en: 'Latest Hands-on Tests', de: 'Neueste Praxistests', fr: 'Derniers tests pratiques', ja: '最新の実機テスト',
+    zh: '最新实测评测', es: 'Últimas pruebas prácticas', pt: 'Últimos testes práticos', ar: 'أحدث الاختبارات العملية',
+    ko: '최신 직접 테스트',
+  },
+  handsOnEmpty: {
+    en: 'Hands-on tests coming soon.', de: 'Praxistests folgen in Kürze.', fr: 'Tests pratiques bientôt disponibles.',
+    ja: '実機テストは近日公開予定です。', zh: '实测评测即将上线。', es: 'Pruebas prácticas próximamente.',
+    pt: 'Testes práticos em breve.', ar: 'اختبارات عملية قادمة قريبًا.', ko: '직접 테스트가 곧 제공됩니다.',
+  },
+
   // --- Founder Reviews ---
   founderReviewsTitle: {
     en: 'Latest Founder/Maker Reviews', de: 'Neueste Gründer-/Macher-Bewertungen',
@@ -293,14 +305,42 @@ const HOME_UI = {
     pt: 'Idiomas', ar: 'اللغات', ko: '언어',
   },
   statFounderVerified: {
-    en: 'Founder-verified', de: 'Von Gründern bestätigt', fr: 'Vérifié par le fondateur', ja: '開発者確認済み',
-    zh: '创始人已验证', es: 'Verificado por el fundador', pt: 'Verificado pelo fundador',
-    ar: 'موثَّق من المؤسس', ko: '창업자 검증 완료',
+    en: 'Apps verified by their makers', de: 'Von ihren Machern bestätigte Apps',
+    fr: 'Applications vérifiées par leurs créateurs', ja: '開発元が確認したアプリ',
+    zh: '经开发者确认的应用', es: 'Apps verificadas por sus creadores', pt: 'Apps verificados por seus criadores',
+    ar: 'تطبيقات تحقق منها صانعوها', ko: '개발자가 직접 확인한 앱',
+  },
+  statFounderVerifiedDesc: {
+    en: 'The makers confirm the information presented about their apps.',
+    de: 'Die Macher bestätigen die Angaben zu ihren Apps.',
+    fr: 'Les créateurs confirment les informations présentées sur leurs applications.',
+    ja: '開発元が、掲載しているアプリ情報の内容を確認しています。',
+    zh: '开发者已确认本站所展示的应用信息。',
+    es: 'Los creadores confirman la información que mostramos sobre sus apps.',
+    pt: 'Os criadores confirmam as informações apresentadas sobre seus apps.',
+    ar: 'يؤكد صانعو التطبيقات صحة المعلومات المعروضة عن تطبيقاتهم.',
+    ko: '개발자가 앱에 대해 게재된 정보를 직접 확인했습니다.',
   },
   statArticlesPublished: {
     en: 'Articles published', de: 'Veröffentlichte Artikel', fr: 'Articles publiés', ja: '公開記事数',
     zh: '已发布文章数', es: 'Artículos publicados', pt: 'Artigos publicados', ar: 'المقالات المنشورة',
     ko: '게시된 글',
+  },
+  statHandsOnTests: {
+    en: 'Apps tested hands-on', de: 'Apps im Praxistest', fr: 'Applications testées en pratique',
+    ja: '実機でテストしたアプリ', zh: '亲自实测的应用', es: 'Apps probadas en la práctica',
+    pt: 'Apps testados na prática', ar: 'تطبيقات اختبرناها عمليًا', ko: '직접 테스트한 앱',
+  },
+  statHandsOnTestsDesc: {
+    en: 'PromptQuorum has installed and tested the software itself.',
+    de: 'PromptQuorum hat die Software selbst installiert und getestet.',
+    fr: 'PromptQuorum a installé et testé le logiciel lui-même.',
+    ja: 'PromptQuorum が自らソフトウェアをインストールし、テストしました。',
+    zh: 'PromptQuorum 已亲自安装并测试了这些软件。',
+    es: 'PromptQuorum ha instalado y probado el software por sí mismo.',
+    pt: 'O PromptQuorum instalou e testou o software por conta própria.',
+    ar: 'قام PromptQuorum بتثبيت البرنامج واختباره بنفسه.',
+    ko: 'PromptQuorum이 소프트웨어를 직접 설치하고 테스트했습니다.',
   },
   /** Links to /mcp-stats (see that page for the full per-tool breakdown). Label doubles as the pitch that PromptQuorum is queryable by AI assistants, not just browsers. */
   statMcpCalls: {
@@ -403,6 +443,7 @@ const HOME_UI = {
   freshNew: { en: 'New', de: 'Neu', fr: 'Nouveau', ja: '新着', zh: '新', es: 'Nuevo', pt: 'Novo', ar: 'جديد', ko: '신규' },
   freshUpdated: { en: 'Updated', de: 'Aktualisiert', fr: 'Mis à jour', ja: '更新', zh: '已更新', es: 'Actualizado', pt: 'Atualizado', ar: 'محدَّث', ko: '업데이트됨' },
   freshKindReview: { en: 'Review', de: 'Rezension', fr: 'Avis', ja: 'レビュー', zh: '点评', es: 'Reseña', pt: 'Análise', ar: 'مراجعة', ko: '리뷰' },
+  freshKindTest: { en: 'Hands-on test', de: 'Praxistest', fr: 'Test pratique', ja: '実機テスト', zh: '实测', es: 'Prueba práctica', pt: 'Teste prático', ar: 'اختبار عملي', ko: '직접 테스트' },
   freshKindApp: { en: 'App', de: 'App', fr: 'Appli', ja: 'アプリ', zh: '应用', es: 'App', pt: 'App', ar: 'تطبيق', ko: '앱' },
   freshKindGuide: { en: 'Guide', de: 'Ratgeber', fr: 'Guide', ja: 'ガイド', zh: '指南', es: 'Guía', pt: 'Guia', ar: 'دليل', ko: '가이드' },
   freshToday: { en: 'Today', de: 'Heute', fr: "Aujourd'hui", ja: '今日', zh: '今天', es: 'Hoy', pt: 'Hoje', ar: 'اليوم', ko: '오늘' },
@@ -421,7 +462,7 @@ const HOME_UI = {
   pqBannerChip5: { en: 'Local LLM support', de: "Unterstützung für lokale LLMs", fr: "Prise en charge des LLM locaux", ja: "ローカルLLM対応", zh: "支持本地 LLM", es: "Compatibilidad con LLM locales", pt: "Suporte a LLMs locais", ar: "دعم النماذج المحلية", ko: "로컬 LLM 지원" },
 
   // --- Directory CTA (inside the "Find What You Need" card) ---
-  directoryCtaTitle: { en: 'Largest local LLM app directory outside GitHub', de: "Größtes Verzeichnis für lokale LLM-Apps außerhalb von GitHub", fr: "Le plus grand annuaire d'applications LLM locales hors GitHub", ja: "GitHub 以外で最大のローカルLLMアプリディレクトリ", zh: "GitHub 之外最大的本地 LLM 应用目录", es: "El mayor directorio de apps de LLM locales fuera de GitHub", pt: "Maior diretório de apps de LLM locais fora do GitHub", ar: "أكبر دليل لتطبيقات النماذج المحلية خارج GitHub", ko: "GitHub 밖에서 가장 큰 로컬 LLM 앱 디렉터리" },
+  directoryCtaTitle: { en: 'Largest local LLM app directory outside GitHub with real reviews and hands-on tests', de: "Größtes Verzeichnis für lokale LLM-Apps außerhalb von GitHub mit echten Tests und Praxistests", fr: "Le plus grand annuaire d'applications LLM locales hors GitHub avec de vrais tests et des essais pratiques", ja: "GitHub 以外で最大のローカルLLMアプリディレクトリ（実際のレビューと実機テスト付き）", zh: "GitHub 之外最大的本地 LLM 应用目录，附真实评测和实测", es: "El mayor directorio de apps de LLM locales fuera de GitHub, con reseñas reales y pruebas prácticas", pt: "Maior diretório de apps de LLM locais fora do GitHub, com análises reais e testes práticos", ar: "أكبر دليل لتطبيقات النماذج المحلية خارج GitHub مع مراجعات حقيقية واختبارات عملية", ko: "GitHub 밖에서 가장 큰 로컬 LLM 앱 디렉터리, 실제 리뷰와 직접 사용 테스트 포함" },
   directoryCtaCount: { en: 'Browse {count} apps →', de: "{count} Apps durchsuchen →", fr: "Parcourir {count} applications →", ja: "{count} 個のアプリを見る →", zh: "浏览 {count} 个应用 →", es: "Explorar {count} apps →", pt: "Explorar {count} apps →", ar: "تصفّح {count} تطبيقًا ←", ko: "앱 {count}개 둘러보기 →" },
 } satisfies Record<string, Dict>
 

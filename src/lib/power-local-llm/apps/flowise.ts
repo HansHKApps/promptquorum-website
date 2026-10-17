@@ -41,4 +41,6 @@ export const app: ToolRecord = {
   // GitHub repo archived 2026-08-10 (per its review; GitHub API archived=true, checked 2026-09-21)
   upstreamStatus: { state: 'archived', since: '2026-08-10' },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-08-13', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/FlowiseAI/Flowise',
 }

@@ -25,7 +25,13 @@ export const app: ToolRecord = {
   addedDate: '2026-09-18',
   status: 'listed',
   uses: ['chat', 'docs'],
-  url: 'github.com/johnbean393/Sidekick',
+  url: 'johnbean393.github.io/Sidekick',
+  storeLinks: {
+    web: 'https://johnbean393.github.io/Sidekick/',
+    github: 'https://github.com/johnbean393/Sidekick',
+  },
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'GitHub Releases 1.0.0-rc.18 (pre-release) ships Sidekick.1.0.0-rc.18.dmg. checked 2026-10-09',
   tagline: {
     en: 'Native macOS app to chat with a fully local LLM that can read your files, folders, and websites, powered by llama.cpp',
     de: 'Native macOS-App zum Chatten mit einem vollständig lokalen LLM, das Dateien, Ordner und Webseiten lesen kann — angetrieben von llama.cpp',
@@ -41,4 +47,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { localLlm: true, citations: true, builtInEngine: true, customEndpoint: true, fileChat: true },
   lastVerifiedDate: '2026-09-18',
+  lastUpstreamUpdate: '2026-09-30', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/johnbean393/Sidekick',
 }

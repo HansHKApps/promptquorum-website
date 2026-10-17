@@ -35,4 +35,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'mlc-chat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: '2026-09-07', // Verified against the App Store listing, MLC's GitHub Android APK release, and mlc-ai/mlc-llm docs — see /power-local-llm/mlc-chat-review
+  lastUpstreamUpdate: '2026-10-06', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/mlc-ai/mlc-llm',
 }

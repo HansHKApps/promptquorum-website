@@ -5,6 +5,7 @@
 import { CATEGORY_COMPARE_ARTICLE } from '@/lib/power-local-llm/apps/compare-schema'
 import type { CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
 import { buildCategoryCompareData, getCategoryLinksForReview } from '@/lib/power-local-llm/compare-data'
+import { reviewPageProps } from '@/lib/power-local-llm/review-page-props'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
@@ -429,6 +430,8 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   const compareGroup = (Object.keys(CATEGORY_COMPARE_ARTICLE) as CategoryGroupKey[]).find((g) => CATEGORY_COMPARE_ARTICLE[g] === slug)
   const compareData = compareGroup ? buildCategoryCompareData(compareGroup, lang) : undefined
   const categoryLinks = getCategoryLinksForReview(slug, lang) ?? undefined
+  // Review pages only (untouched elsewhere): directory-funnel blocks + linked competitor tables.
+  const reviewProps = reviewPageProps('power-local-llm', slug, lang, narrowArticleData(articleData, lang))
 
   return (
     <>
@@ -443,7 +446,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       {itemListSchemas.map((schema, i) => (
         <script key={`itemlist-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <PowerLocalLLMPostClient slug={slug} lang={lang} ui={ui} directorySlot={directorySlot} founderReviewed={founderReviewed} compareData={compareData} categoryLinks={categoryLinks} {...narrowArticleData(articleData, lang)} />
+      <PowerLocalLLMPostClient slug={slug} lang={lang} ui={ui} directorySlot={directorySlot} founderReviewed={founderReviewed} compareData={compareData} categoryLinks={categoryLinks} {...reviewProps} />
     </>
   )
 }
@@ -851,6 +854,8 @@ const HUB_THEMES: Array<{
       'voxa-review',
       'locally-ai-review',
       'hilbertraum-review',
+      'friedrichai-review',
+      'spiritbox-ultimate-review',
       'local-llm-chat-assistants-compared',
       'lm-studio-review',
       'sidekick-review',
@@ -890,6 +895,7 @@ const HUB_THEMES: Array<{
       'cognee-review',
       'chroma-review',
       'longmemory-review',
+      'return-editor-review',
     ],
   },
   {
@@ -954,6 +960,7 @@ const HUB_THEMES: Array<{
       'dify-ai-workflow-builder-review',
       'flowise-ai-visual-workflow-builder-review',
       'langchain-review',
+      'firecrawl-review',
       'langflow-visual-ai-orchestration-review',
       'langgraph-review',
       'letta-review',
@@ -1036,11 +1043,18 @@ const HUB_THEMES: Array<{
       'maid-review',
       'private-mind-review',
       'llm-hub-review',
+      'lm-playground-review',
+      'localmind-review',
       'tokforge-review',
+      'local-ai-geetmark-review',
+      'local-ai-mail-review',
+      'pcai-photo-retouch-review',
+      'honey-llm-review',
       'oscilla-review',
       'tina-review',
       'mlxhub-review',
       'local-ai-chat-pocket-review',
+      'anyllm-review',
       'ollama-local-ai-review',
       'mlc-chat-review',
       'pocket-ai-review',
@@ -1159,6 +1173,8 @@ const HUB_THEMES: Array<{
       'diffusionbee-review',
       'stable-diffusion-forge-review',
       'radiant-canvas',
+      'ai-cutoutwerk-review',
+      'openmontage-review',
     ],
   },
   {

@@ -9236,81 +9236,81 @@
   {
     "lang": "en",
     "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-    "excerpt": "Open WebUI turns Ollama or any OpenAI-compatible API into a self-hosted ChatGPT interface with RAG, multi-user auth, and plugins. History, install links, pricing, and honest limits.",
+    "excerpt": "What is Open WebUI? A self-hosted, multi-user ChatGPT-style interface for Ollama and any OpenAI-compatible API, with RAG, plugins, install steps and license.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Open WebUI 2026: Die selbst gehostete ChatGPT-Oberfläche für Ollama und jedes KI-Modell",
-    "excerpt": "Open WebUI macht aus Ollama oder jeder OpenAI-kompatiblen API eine selbst gehostete ChatGPT-Oberfläche mit RAG, Mehrbenutzer-Login und Plugins. Geschichte, Installation, Preise, ehrliche Grenzen.",
+    "excerpt": "Was ist Open WebUI? Selbst gehostete, mehrbenutzerfähige ChatGPT-Oberfläche für Ollama und jede OpenAI-kompatible API mit RAG, Plugins, Installation, Lizenz.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/de/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Open WebUI en 2026 : l'interface ChatGPT auto-hébergée pour Ollama et tous les modèles d'IA",
-    "excerpt": "Open WebUI transforme Ollama ou toute API compatible OpenAI en interface ChatGPT auto-hébergée avec RAG, authentification multi-utilisateur et plugins. Histoire, installation, tarifs et limites honnêtes.",
+    "excerpt": "Qu'est-ce qu'Open WebUI ? Interface auto-hébergée multi-utilisateur façon ChatGPT pour Ollama et toute API compatible OpenAI : RAG, plugins, licence.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/fr/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "Open WebUI 2026年版:Ollamaとあらゆるモデルに対応するセルフホスト型ChatGPTインターフェース",
-    "excerpt": "Open WebUIはOllamaやOpenAI互換APIを、RAG・マルチユーザー認証・プラグイン対応のセルフホスト型ChatGPTインターフェースに変えます。歴史、インストールリンク、料金、率直な制限をまとめました。",
+    "excerpt": "Open WebUIとは？OllamaやOpenAI互換APIをChatGPT風のセルフホスト型マルチユーザー画面にするツール。RAG、プラグイン、導入手順、ライセンスを解説します。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/ja/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "Open WebUI 2026：面向 Ollama 和任意 AI 模型的自托管 ChatGPT 界面",
-    "excerpt": "Open WebUI 把 Ollama 或任何兼容 OpenAI 的 API 变成带 RAG、多用户认证和插件的自托管 ChatGPT 界面。历史、安装方式、定价与真实局限一次说清。",
+    "excerpt": "Open WebUI是什么？可为Ollama和任何兼容OpenAI的API提供自托管、多用户的ChatGPT风格界面，含RAG、插件、安装步骤与许可证说明。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/zh/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "Open WebUI en 2026: la interfaz ChatGPT autoalojada para Ollama y cualquier modelo de IA",
-    "excerpt": "Open WebUI convierte Ollama o cualquier API compatible con OpenAI en una interfaz ChatGPT autoalojada con RAG, login multiusuario y plugins. Historia, enlaces de descarga, precios y límites reales.",
+    "excerpt": "¿Qué es Open WebUI? Una interfaz autoalojada y multiusuario al estilo ChatGPT para Ollama y cualquier API compatible con OpenAI, con RAG, plugins y licencia.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/es/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Open WebUI em 2026: A Interface ChatGPT Auto-Hospedada para Ollama e Qualquer Modelo de IA",
-    "excerpt": "Open WebUI transforma o Ollama ou qualquer API compatível com OpenAI em uma interface ChatGPT auto-hospedada com RAG, autenticação multiusuário e plugins. História, links de instalação, preços e limitações honestas.",
+    "excerpt": "O que é o Open WebUI? Interface auto-hospedada, multiusuário e estilo ChatGPT para Ollama e qualquer API compatível com OpenAI, com RAG, plugins e licença.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/pt/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "Open WebUI في 2026: واجهة ChatGPT ذاتية الاستضافة لـ Ollama وأي نموذج ذكاء اصطناعي",
-    "excerpt": "تحوّل Open WebUI أداة Ollama أو أي واجهة برمجية متوافقة مع OpenAI إلى واجهة ChatGPT ذاتية الاستضافة مع RAG ومصادقة متعددة المستخدمين وإضافات. التاريخ، روابط التثبيت، الأسعار، والحدود الصريحة.",
+    "excerpt": "ما هو Open WebUI؟ واجهة ذاتية الاستضافة متعددة المستخدمين على طراز ChatGPT لـ Ollama وأي واجهة متوافقة مع OpenAI، مع RAG وإضافات وخطوات التثبيت والترخيص.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/ar/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "Open WebUI 2026: Ollama와 모든 AI 모델을 위한 자체 호스팅 ChatGPT 인터페이스",
-    "excerpt": "Open WebUI는 Ollama나 모든 OpenAI 호환 API를 RAG, 다중 사용자 인증, 플러그인을 갖춘 자체 호스팅 ChatGPT 인터페이스로 바꿔줍니다. 역사, 설치 링크, 가격, 솔직한 한계를 소개합니다.",
+    "excerpt": "Open WebUI란? Ollama와 모든 OpenAI 호환 API를 위한 자체 호스팅 다중 사용자 ChatGPT 스타일 인터페이스. RAG, 플러그인, 설치 방법, 라이선스를 다룹니다.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/ko/local-llms/open-webui-review",
     "cluster": "local-llms"
   },
@@ -14989,7 +14989,7 @@
     "title": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026",
     "excerpt": "RunPod vs Vast.ai vs Lambda Labs for LLM inference: RTX 4090, A100, H100, RTX 5090 hourly pricing, uptime SLA, and GDPR compliance compared.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-16",
     "url": "/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
@@ -14998,7 +14998,7 @@
     "title": "RunPod vs Vast.ai vs Lambda Labs für LLM-Inferenz 2026",
     "excerpt": "RunPod vs Vast.ai vs Lambda Labs für LLM-Inferenz: Stundenpreise für RTX 4090, A100, H100, RTX 5090, Verfügbarkeits-SLA und DSGVO-Konformität. Aktualisiert August 2026.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-16",
     "url": "/de/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
@@ -15007,7 +15007,7 @@
     "title": "RunPod vs Vast.ai vs Lambda Labs pour l'inférence LLM 2026",
     "excerpt": "RunPod vs Vast.ai vs Lambda Labs pour l'inférence LLM : tarifs horaires RTX 4090, A100, H100, RTX 5090, SLA de disponibilité et conformité RGPD. Mis à jour août 2026.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-16",
     "url": "/fr/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
@@ -15016,7 +15016,7 @@
     "title": "RunPod vs Vast.ai vs Lambda Labs：LLM推論向けGPUレンタル比較2026",
     "excerpt": "LLM推論向けRunPod・Vast.ai・Lambda Labs比較:RTX 4090・A100・H100・RTX 5090の時間料金、稼働率SLA、GDPR対応。",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-16",
     "url": "/ja/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
@@ -15025,7 +15025,7 @@
     "title": "RunPod vs Vast.ai vs Lambda Labs：LLM推理云GPU租赁对比2026",
     "excerpt": "面向LLM推理的RunPod、Vast.ai、Lambda Labs对比:RTX 4090、A100、H100、RTX 5090的每小时价格、正常运行时间SLA、GDPR合规性。",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-16",
     "url": "/zh/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
@@ -15034,7 +15034,7 @@
     "title": "RunPod vs Vast.ai vs Lambda Labs para Inferencia LLM 2026",
     "excerpt": "RunPod vs Vast.ai vs Lambda Labs para inferencia LLM: precios por hora de RTX 4090, A100, H100 y RTX 5090, SLA de uptime y cumplimiento GDPR.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-16",
     "url": "/es/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
@@ -15043,7 +15043,7 @@
     "title": "Aluguel de GPU na Nuvem 2026: RunPod vs Vast.ai vs Lambda Labs",
     "excerpt": "Compare RunPod, Vast.ai e Lambda Labs para inferência LLM: preços ($0,34–$3,99/hr), SLA de uptime, conformidade LGPD e tempo de configuração. 2026.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-16",
     "url": "/pt/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
@@ -15052,7 +15052,7 @@
     "title": "RunPod مقابل Vast.ai مقابل Lambda Labs لاستدلال LLM 2026",
     "excerpt": "RunPod مقابل Vast.ai مقابل Lambda Labs لاستدلال LLM: أسعار RTX 4090 وA100 وH100 وRTX 5090 بالساعة، واتفاقية وقت التشغيل، وامتثال GDPR. محدَّثة أغسطس 2026.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-16",
     "url": "/ar/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
@@ -15061,7 +15061,7 @@
     "title": "클라우드 GPU 렌탈 2026: RunPod vs Vast.ai vs Lambda Labs",
     "excerpt": "로컬 LLM 추론을 위한 RunPod, Vast.ai, Lambda Labs 비교: 가격($0.34–$3.99/시간), 가동률 SLA, GDPR 준수 여부, 설정 시간.",
     "publishDate": "2026-05-17",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-16",
     "url": "/ko/local-llms/cloud-gpu-rental-comparison-2026",
     "cluster": "local-llms"
   },
@@ -15392,16 +15392,16 @@
   {
     "lang": "en",
     "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
-    "excerpt": "M5 Pro vs M5 Max bandwidth (307-614 GB/s), tokens/sec benchmarks, and how to speed up Ollama on Apple Silicon M5. Mac mini, Studio, MacBook Pro compared.",
+    "excerpt": "Apple M5 memory bandwidth: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1.2 TB/s. LLM tokens/sec, Ollama speed tips, Mac mini vs Studio vs MacBook Pro.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-11",
     "url": "/local-llms/apple-silicon-m5-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Apple Silicon für lokale LLMs 2026: M5 Pro vs. M5 Max vs. Mac Studio im Vergleich",
-    "excerpt": "Vergleich Apple M5 Pro, M5 Max und M5 Ultra für lokale LLMs: Mac mini, Mac Studio, MacBook Pro. Bandbreite, Speicher, Preise — Analyse 2026.",
+    "excerpt": "Apple M5 Speicherbandbreite: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. LLM-Tokens/s, Ollama-Tuning, Mac mini vs. Studio vs. MacBook Pro.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-05-18",
     "url": "/de/local-llms/apple-silicon-m5-local-llm",
@@ -15409,8 +15409,8 @@
   },
   {
     "lang": "fr",
-    "title": "Apple Silicon M5 pour Local LLM 2026 : M5 Pro vs M5 Max vs Mac Studio comparés",
-    "excerpt": "Comparez M5 Pro, M5 Max et M5 Ultra : Mac mini, Mac Studio, MacBook Pro. Bande passante, mémoire, prix réels. Guide Apple Silicon 2026.",
+    "title": "Apple Silicon M5 pour LLM local 2026 : M5 Pro vs M5 Max vs Mac Studio comparés",
+    "excerpt": "Bande passante mémoire Apple M5 : M5 Pro 307, M5 Max 460–614 Go/s, M5 Ultra 1,2 To/s. Tokens/s LLM, astuces Ollama, Mac mini vs Studio vs MacBook Pro.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-05-18",
     "url": "/fr/local-llms/apple-silicon-m5-local-llm",
@@ -15418,8 +15418,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルLLM向けApple Silicon M5 2026：M5 Pro・M5 Max・Mac Studio完全比較",
-    "excerpt": "Apple M5 Pro・M5 Max・M5 UltraをMac mini・Mac Studio・MacBook Proで比較。帯域幅、メモリ、実際の価格。2026年版Apple Siliconガイド。",
+    "title": "ローカルLLM向けApple Silicon 2026：M5 Pro vs M5 Max vs Mac Studio徹底比較",
+    "excerpt": "Apple M5のメモリ帯域幅：M5 Pro 307、M5 Max 460〜614GB/s、M5 Ultra 1.2TB/s。LLMのトークン/秒とOllama高速化を比較。",
     "publishDate": "2026-05-18",
     "dateModified": "2026-05-18",
     "url": "/ja/local-llms/apple-silicon-m5-local-llm",
@@ -15427,8 +15427,8 @@
   },
   {
     "lang": "zh",
-    "title": "2026年本地LLM最佳Apple Silicon:M5 Pro、M5 Max、Mac Studio对比",
-    "excerpt": "对比Apple M5 Pro、M5 Max、M5 Ultra：Mac mini、Mac Studio、MacBook Pro。带宽、内存、真实价格。2026年Apple Silicon完整指南。",
+    "title": "本地LLM的Apple Silicon 2026：M5 Pro vs M5 Max vs Mac Studio 对比",
+    "excerpt": "Apple M5内存带宽：M5 Pro 307、M5 Max 460–614GB/s、M5 Ultra 1.2TB/s。LLM每秒token数与Ollama提速技巧一文看懂。",
     "publishDate": "2026-05-18",
     "dateModified": "2026-05-18",
     "url": "/zh/local-llms/apple-silicon-m5-local-llm",
@@ -15437,7 +15437,7 @@
   {
     "lang": "es",
     "title": "Apple Silicon para LLM local 2026: M5 Pro vs M5 Max vs Mac Studio comparados",
-    "excerpt": "M5 Pro, M5 Max y M5 Ultra para IA local: Mac mini, Mac Studio, MacBook Pro. Ancho de banda, tokens/s y precios reales — guía 2026.",
+    "excerpt": "Ancho de banda de memoria del Apple M5: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. Tokens/s de LLM y consejos para Ollama.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-05-18",
     "url": "/es/local-llms/apple-silicon-m5-local-llm",
@@ -15446,16 +15446,16 @@
   {
     "lang": "pt",
     "title": "Apple Silicon para LLM local 2026: M5 Pro vs M5 Max vs Mac Studio comparados",
-    "excerpt": "Compare Apple M5 Pro, M5 Max e M5 Ultra para LLM local: Mac mini, Mac Studio, MacBook Pro. Largura de banda, tok/s e preços reais. Guia 2026.",
+    "excerpt": "Largura de banda de memória do Apple M5: M5 Pro 307, M5 Max 460–614 GB/s, M5 Ultra 1,2 TB/s. Tokens/s de LLM e dicas de Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-11",
     "url": "/pt/local-llms/apple-silicon-m5-local-llm",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
-    "title": "⁨Apple Silicon⁩ لـ ⁨LLM⁩ المحلي ⁨2026⁩: ⁨M5 Pro⁩ مقابل ⁨M5 Max⁩ مقابل ⁨Mac Studio⁩",
-    "excerpt": "⁨M5 Pro⁩ و⁨M5 Max⁩ و⁨M5 Ultra⁩ لـ LLM المحلي: ⁨Mac mini⁩ و⁨Mac Studio⁩ و⁨MacBook Pro⁩. عرض النطاق والذاكرة والأسعار الفعلية — دليل ⁨2026⁩.",
+    "title": "Apple Silicon لـ LLM المحلي 2026: M5 Pro مقابل M5 Max مقابل Mac Studio",
+    "excerpt": "عرض نطاق ذاكرة Apple M5: M5 Pro بسرعة 307 وM5 Max من 460 إلى 614 GB/s وM5 Ultra بسرعة 1.2 TB/s. رموز/ثانية ونصائح Ollama وMac mini وMac Studio وMacBook Pro.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-05-18",
     "url": "/ar/local-llms/apple-silicon-m5-local-llm",
@@ -15463,8 +15463,8 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 LLM을 위한 Apple Silicon 2026: M5 Pro vs M5 Max vs Mac Studio 비교",
-    "excerpt": "Apple M5 Pro, M5 Max, M5 Ultra의 로컬 LLM 성능 비교: Mac mini, Mac Studio, MacBook Pro. 대역폭, 메모리, 실제 가격. 2026년 Apple Silicon 가이드.",
+    "title": "로컬 LLM용 Apple Silicon 2026: M5 Pro vs M5 Max vs Mac Studio 비교",
+    "excerpt": "Apple M5 메모리 대역폭: M5 Pro 307, M5 Max 460–614GB/s, M5 Ultra 1.2TB/s. LLM 토큰/초와 Ollama 속도 팁.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-05-18",
     "url": "/ko/local-llms/apple-silicon-m5-local-llm",
@@ -19199,81 +19199,81 @@
   {
     "lang": "en",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
-    "excerpt": "3 local RAG platforms tested on a 5,047-page corpus. AnythingLLM, PrivateGPT, Open WebUI benchmarked for accuracy, latency, citations. August 2026 verdict.",
+    "excerpt": "AnythingLLM vs Open WebUI vs PrivateGPT on 5,047 pages: AnythingLLM has the best citations (6% hallucination), PrivateGPT the fastest retrieval (240 ms). 2026.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Die beste lokale RAG 2026",
-    "excerpt": "3 lokale RAG-Plattformen auf 5.047 Seiten getestet. AnythingLLM, PrivateGPT, Open WebUI: Genauigkeit, Latenz, Zitierqualität. Testergebnis August 2026.",
+    "excerpt": "AnythingLLM vs Open WebUI vs PrivateGPT auf 5.047 Seiten getestet: AnythingLLM zitiert am besten (6 % Halluzination), PrivateGPT ruft am schnellsten ab (240 ms). 2026.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI : La meilleure RAG locale 2026",
-    "excerpt": "3 plateformes RAG locales testées sur 5 047 pages. AnythingLLM, PrivateGPT, Open WebUI : benchmarks de précision, latence, citations. Août 2026.",
+    "excerpt": "AnythingLLM vs Open WebUI vs PrivateGPT sur 5 047 pages : AnythingLLM cite le mieux (6 % d'hallucinations), PrivateGPT récupère le plus vite (240 ms). 2026.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI：2026年のベストローカルRAG",
-    "excerpt": "AnythingLLM、PrivateGPT、Open WebUIを5,047ページのコーパスでテスト。精度、レイテンシ、引用、スケーリング性能を比較。2026年8月の検証結果。",
+    "excerpt": "AnythingLLM・Open WebUI・PrivateGPTを5,047ページで比較。引用はAnythingLLM（ハルシネーション6%）、検索速度はPrivateGPT（240ms）が最良。2026年版。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI：2026年最佳本地RAG平台",
-    "excerpt": "在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年8月的测试结果。",
+    "excerpt": "AnythingLLM、Open WebUI、PrivateGPT在5,047页语料上的实测：AnythingLLM引用最佳（幻觉率6%），PrivateGPT检索最快（240毫秒）。2026年。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI: El mejor RAG local en 2026",
-    "excerpt": "3 plataformas RAG locales probadas en un corpus de 5.047 páginas. AnythingLLM, PrivateGPT y Open WebUI: precisión, latencia y citas. Veredicto de 2026.",
+    "excerpt": "AnythingLLM vs Open WebUI vs PrivateGPT en 5.047 páginas: AnythingLLM cita mejor (6 % de alucinaciones) y PrivateGPT recupera más rápido (240 ms). 2026.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI: O melhor RAG local em 2026",
-    "excerpt": "3 plataformas RAG locais testadas em um corpus de 5.047 páginas. AnythingLLM, PrivateGPT e Open WebUI: precisão, latência e citações. Veredito de 2026.",
+    "excerpt": "AnythingLLM vs Open WebUI vs PrivateGPT em 5.047 páginas: AnythingLLM cita melhor (6% de alucinações) e PrivateGPT recupera mais rápido (240 ms). 2026.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "⁨AnythingLLM⁩ مقابل ⁨PrivateGPT⁩ مقابل ⁨Open WebUI⁩: أفضل ⁨RAG⁩ محلي في ⁨2026⁩",
-    "excerpt": "اختُبرت 3 منصات RAG محلية على مجموعة 5,047 صفحة: AnythingLLM تتفوق في الدقة، وOpen WebUI في السرعة، وPrivateGPT في الاستشهادات. نتائج أغسطس 2026.",
+    "excerpt": "AnythingLLM وOpen WebUI وPrivateGPT على 5,047 صفحة: AnythingLLM الأفضل استشهادًا (هلوسة 6%) وPrivateGPT الأسرع استرجاعًا (240 مللي ثانية). 2026.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "AnythingLLM vs PrivateGPT vs Open WebUI: 2026년 최고의 로컬 RAG 플랫폼 비교",
-    "excerpt": "5,047페이지 코퍼스에서 테스트한 로컬 RAG 플랫폼 3종 비교. AnythingLLM, PrivateGPT, Open WebUI의 정확도, 지연 시간, 인용 품질. 2026년 최종 평가.",
+    "excerpt": "AnythingLLM·Open WebUI·PrivateGPT를 5,047페이지로 비교. 인용은 AnythingLLM(환각률 6%), 검색 속도는 PrivateGPT(240ms)가 가장 우수합니다. 2026년.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-16",
     "url": "/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
     "cluster": "power-local-llm"
   },
@@ -21709,82 +21709,82 @@
   },
   {
     "lang": "en",
-    "title": "The Complete Local AI & LLM Software Directory: 236 Apps & Tools for Running AI Locally (2026)",
-    "excerpt": "236 local AI and LLM apps and tools. Compare software by use case, platform, price, license, hardware and more for running AI on your own computer or phone.",
+    "title": "The Complete Local AI & LLM Software Directory: 252 Apps & Tools for Running AI Locally (2026)",
+    "excerpt": "Browse 252 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-17",
     "url": "/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 236 Apps und Tools, um KI lokal auszuführen (2026)",
-    "excerpt": "236 lokale KI- und LLM-Apps und -Tools. Vergleichen Sie Software nach Einsatzzweck, Plattform, Preis, Lizenz und Hardware — für KI auf Ihrem eigenen Rechner oder Smartphone.",
+    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 252 Apps und Tools, um KI lokal auszuführen (2026)",
+    "excerpt": "Entdecken Sie 252 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-17",
     "url": "/de/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 236 apps et outils pour exécuter l'IA en local (2026)",
-    "excerpt": "236 apps et outils d’IA et de LLM locaux. Comparez les logiciels par usage, plateforme, prix, licence et matériel pour exécuter l’IA sur votre ordinateur ou votre téléphone.",
+    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 252 apps et outils pour exécuter l'IA en local (2026)",
+    "excerpt": "Parcourez 252 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-17",
     "url": "/fr/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす236のアプリ＆ツール（2026年版）",
-    "excerpt": "236のローカルAI・LLMアプリとツールを掲載。用途、プラットフォーム、価格、ライセンス、ハードウェアなどで比較し、自分のパソコンやスマートフォンでAIを動かすソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす252のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを252件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-17",
     "url": "/ja/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "本地AI与LLM软件完整目录：236款应用与工具，在本地运行AI（2026）",
-    "excerpt": "236款本地AI与LLM应用和工具。按用途、平台、价格、许可证、硬件等对比软件，在自己的电脑或手机上运行AI。",
+    "title": "本地AI与LLM软件完整目录：252款应用与工具，在本地运行AI（2026）",
+    "excerpt": "收录252款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-17",
     "url": "/zh/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "El directorio completo de software de IA y LLM local: 236 apps y herramientas para ejecutar IA en local (2026)",
-    "excerpt": "236 apps y herramientas de IA y LLM local. Compara software por caso de uso, plataforma, precio, licencia y hardware para ejecutar IA en tu propio ordenador o teléfono.",
+    "title": "El directorio completo de software de IA y LLM local: 252 apps y herramientas para ejecutar IA en local (2026)",
+    "excerpt": "Explora 252 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-17",
     "url": "/es/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 236 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "236 apps e ferramentas de IA e LLM local. Compare softwares por caso de uso, plataforma, preço, licença e hardware para executar IA no seu próprio computador ou celular.",
+    "title": "O diretório completo de software de IA e LLM local: 252 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 252 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-17",
     "url": "/pt/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 236 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "236 تطبيقاً وأداة للذكاء الاصطناعي والنماذج اللغوية المحلية. قارِن البرامج حسب حالة الاستخدام والمنصة والسعر والترخيص والعتاد لتشغيل الذكاء الاصطناعي على حاسوبك أو هاتفك.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 252 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 252 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-17",
     "url": "/ar/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 236개 앱과 도구 (2026)",
-    "excerpt": "로컬 AI·LLM 앱과 도구 236개. 사용 사례, 플랫폼, 가격, 라이선스, 하드웨어 기준으로 비교해 내 컴퓨터나 스마트폰에서 AI를 실행해 보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 252개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 252개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-17",
     "url": "/ko/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
@@ -24871,7 +24871,7 @@
     "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
     "excerpt": "Self-hosted vs managed vector databases at enterprise scale: multi-tenant isolation, SLA and security posture, billions-of-vectors capacity planning, committed-use pricing, and a vendor procurement checklist.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-09",
     "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -24880,7 +24880,7 @@
     "title": "Vektordatenbank für Unternehmen: Self-Hosted vs. Managed Cloud (2026)",
     "excerpt": "Self-Hosted vs. Managed Vektordatenbanken für Unternehmen: Mandantentrennung, SLA und Sicherheitsniveau, Kapazitätsplanung bei Milliarden Vektoren, Committed-Use-Preise und eine Checkliste für die Beschaffung.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-09",
     "url": "/de/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -24889,7 +24889,7 @@
     "title": "Base de données vectorielle en entreprise : auto-hébergée ou managée (2026)",
     "excerpt": "Bases de données vectorielles auto-hébergées vs managées à l'échelle entreprise : isolation multi-tenant, SLA et posture de sécurité, planification pour des milliards de vecteurs, tarification committed-use et checklist d'achat.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-09",
     "url": "/fr/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -24898,7 +24898,7 @@
     "title": "エンタープライズRAGベクトルDB導入：セルフホスト vs マネージド(2026)",
     "excerpt": "エンタープライズ規模のセルフホスト vs マネージドベクトルDB：マルチテナント分離、SLAとセキュリティ体制、数十億ベクトルの容量計画、コミット利用型課金、ベンダー調達チェックリスト。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-09",
     "url": "/ja/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -24907,7 +24907,7 @@
     "title": "企业级RAG向量数据库部署：自托管 vs 托管云(2026)",
     "excerpt": "企业级自托管 vs 托管向量数据库对比：多租户隔离、SLA与安全态势、数十亿向量容量规划、承诺用量定价，以及供应商采购清单。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-09",
     "url": "/zh/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -24916,7 +24916,7 @@
     "title": "Base de Datos Vectorial para Empresas: ¿Autoalojada o Gestionada? (2026)",
     "excerpt": "Bases de datos vectoriales autoalojadas vs gestionadas a escala empresarial: aislamiento multiinquilino, SLA y postura de seguridad, planificación para miles de millones de vectores, precios de uso comprometido y checklist de compra.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-09",
     "url": "/es/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -24925,7 +24925,7 @@
     "title": "Banco de Dados Vetorial para Empresas: Self-Hosted ou Gerenciado? (2026)",
     "excerpt": "Bancos de dados vetoriais self-hosted vs. gerenciados em escala empresarial: isolamento multi-tenant, SLA e postura de segurança, planejamento para bilhões de vetores, preços de uso comprometido e checklist de compra.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-09",
     "url": "/pt/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -24934,7 +24934,7 @@
     "title": "نشر قاعدة بيانات المتجهات للمؤسسات: استضافة ذاتية أم مُدارة؟ (2026)",
     "excerpt": "قواعد بيانات المتجهات المُستضافة ذاتيًا مقابل المُدارة على نطاق المؤسسات: العزل متعدد المستأجرين، اتفاقيات مستوى الخدمة والوضع الأمني، تخطيط السعة لمليارات المتجهات، تسعير الاستخدام الملتزم، وقائمة تحقق لشراء الموردين.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-09",
     "url": "/ar/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -24943,7 +24943,7 @@
     "title": "기업용 RAG 벡터 데이터베이스 배포: 자체 호스팅 vs 매니지드(2026)",
     "excerpt": "기업 규모의 자체 호스팅 vs 매니지드 벡터 데이터베이스 비교: 멀티테넌트 격리, SLA와 보안 태세, 수십억 벡터 용량 계획, 약정 사용량 요금제, 벤더 조달 체크리스트.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-09",
     "url": "/ko/power-local-llm/enterprise-rag-vector-database-deployment-guide",
     "cluster": "power-local-llm"
   },
@@ -27055,82 +27055,82 @@
   },
   {
     "lang": "en",
-    "title": "Nanobot Review: A Self-Hosted AI Agent Framework in",
-    "excerpt": "nanobot is a free, open-source, self-hosted AI agent framework with persistent memory, MCP tools, and chat-app integrations. Here is how to install it and who it fits.",
+    "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+    "excerpt": "nanobot is a free, MIT-licensed self-hosted AI agent framework by HKUDS with MCP, memory and chat channels. See what its README does and does not document.",
     "publishDate": "2026-09-14",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-10",
     "url": "/power-local-llm/nanobot-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Nanobot Review: Ein selbst gehostetes KI-Agent-Framework",
-    "excerpt": "nanobot ist ein kostenloses, quelloffenes, selbst gehostetes KI-Agent-Framework mit dauerhaftem Gedächtnis, MCP-Tools und Chat-App-Integrationen. So installieren Sie es, und dafür eignet es sich.",
+    "excerpt": "nanobot: kostenloses, MIT-lizenziertes, selbst gehostetes KI-Agent-Framework von HKUDS mit MCP und Chat-Kanälen. Was die README dokumentiert – und was nicht.",
     "publishDate": "2026-09-14",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-10",
     "url": "/de/power-local-llm/nanobot-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Nanobot: un framework d'agent IA auto-hébergé en",
-    "excerpt": "nanobot est un framework d'agent IA gratuit, open source et auto-hébergé, avec mémoire persistante, outils MCP et intégrations de chat. Installation et public cible expliqués.",
+    "title": "Nanobot: un framework d'agent IA auto-hébergé en 2026",
+    "excerpt": "nanobot : framework d'agent IA auto-hébergé, gratuit (MIT), de HKUDS, avec MCP et canaux de chat. Ce que son README documente — et ce qu'il omet.",
     "publishDate": "2026-09-14",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-10",
     "url": "/fr/power-local-llm/nanobot-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "nanobotレビュー：のセルフホスト型AIエージェントフレームワーク",
-    "excerpt": "nanobotは永続メモリ、MCPツール、チャットアプリ連携を備えた無料・オープンソースのセルフホスト型AIエージェントフレームワークです。インストール方法と対象ユーザーを解説します。",
+    "title": "nanobotレビュー：2026年のセルフホスト型AIエージェントフレームワーク",
+    "excerpt": "nanobotはHKUDS製の無料・MITライセンスのセルフホスト型AIエージェントフレームワーク。MCP、記憶、チャット連携を備える。READMEが記載している内容としていない内容を整理。",
     "publishDate": "2026-09-14",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-10",
     "url": "/ja/power-local-llm/nanobot-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "nanobot评测：自托管AI智能体框架",
-    "excerpt": "nanobot是一款免费开源、自托管的AI智能体框架，具备持久记忆、MCP工具和聊天应用集成。了解安装方法及适用人群。",
+    "excerpt": "nanobot是HKUDS开发的免费、MIT许可的自托管AI智能体框架，支持MCP、记忆与聊天渠道。梳理其README已记载与未记载的功能。",
     "publishDate": "2026-09-14",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-10",
     "url": "/zh/power-local-llm/nanobot-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "Nanobot: un framework de agente de IA autoalojado en",
-    "excerpt": "nanobot es un framework de agente de IA gratuito, de código abierto y autoalojado, con memoria persistente, herramientas MCP e integraciones de chat. Instalación y público objetivo.",
+    "title": "Nanobot: un framework de agente de IA autoalojado en 2026",
+    "excerpt": "nanobot: framework de agente de IA autoalojado, gratuito (MIT), de HKUDS, con MCP y canales de chat. Qué documenta su README y qué no.",
     "publishDate": "2026-09-14",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-10",
     "url": "/es/power-local-llm/nanobot-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "Nanobot: um framework de agente de IA auto-hospedado em",
-    "excerpt": "nanobot é um framework de agente de IA gratuito, de código aberto e auto-hospedado, com memória persistente, ferramentas MCP e integrações de chat. Veja como instalar e para quem serve.",
+    "title": "Nanobot: um framework de agente de IA auto-hospedado em 2026",
+    "excerpt": "nanobot: framework de agente de IA auto-hospedado, gratuito (MIT), da HKUDS, com MCP e canais de chat. O que o README documenta e o que não.",
     "publishDate": "2026-09-14",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-10",
     "url": "/pt/power-local-llm/nanobot-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "مراجعة nanobot: إطار عمل وكيل ذكاء اصطناعي مستضاف ذاتيًا في",
-    "excerpt": "nanobot إطار عمل وكيل ذكاء اصطناعي مجاني ومفتوح المصدر ومستضاف ذاتيًا، بذاكرة دائمة وأدوات MCP وتكامل مع تطبيقات الدردشة. إليك كيفية تثبيته ومن يناسبه.",
+    "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
+    "excerpt": "nanobot إطار وكلاء ذكاء اصطناعي ذاتي الاستضافة ومجاني بترخيص MIT من HKUDS، مع MCP وذاكرة وقنوات دردشة. ما الذي يوثّقه README وما الذي لا يوثّقه.",
     "publishDate": "2026-09-14",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-10",
     "url": "/ar/power-local-llm/nanobot-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "nanobot 리뷰: 셀프호스팅 AI 에이전트 프레임워크",
-    "excerpt": "nanobot은 영구 메모리, MCP 도구, 채팅 앱 연동을 갖춘 무료 오픈소스 셀프호스팅 AI 에이전트 프레임워크입니다. 설치 방법과 적합한 사용자를 알아보세요.",
+    "excerpt": "nanobot은 HKUDS가 만든 무료 MIT 라이선스의 자체 호스팅 AI 에이전트 프레임워크로, MCP·메모리·채팅 채널을 지원합니다. README가 문서화한 것과 하지 않은 것을 정리합니다.",
     "publishDate": "2026-09-14",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-10",
     "url": "/ko/power-local-llm/nanobot-review",
     "cluster": "power-local-llm"
   },
@@ -30538,82 +30538,82 @@
   },
   {
     "lang": "en",
-    "title": "Draw Things Review: Free Offline Image AI for Mac & iOS",
-    "excerpt": "Draw Things is a free macOS/iOS app for local Stable Diffusion, SDXL, and Flux image generation with ControlNet and LoRA training. Verified pricing, downloads, and 2026 model support.",
+    "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
+    "excerpt": "Draw Things runs Stable Diffusion, SDXL, and Flux locally on Mac and iOS, with an optional Cloud Compute mode. What stays on-device, what leaves it, and what it costs.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-09",
     "url": "/power-local-llm/draw-things-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Draw Things Review: Kostenlose Offline-Bild-KI für Mac & iOS",
-    "excerpt": "Draw Things ist eine kostenlose macOS/iOS-App für lokale Stable-Diffusion-, SDXL- und Flux-Bildgenerierung mit ControlNet und LoRA-Training. Geprüfte Preise, Downloads und Modell-Support 2026.",
+    "title": "Draw Things Review: Lokale Bild-KI mit optionaler Cloud",
+    "excerpt": "Draw Things führt Stable Diffusion, SDXL und Flux lokal auf Mac und iOS aus, mit optionalem Cloud-Compute-Modus. Was auf dem Gerät bleibt, was es verlässt und was es kostet.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-09",
     "url": "/de/power-local-llm/draw-things-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Draw Things: générateur d'images IA gratuit hors ligne",
-    "excerpt": "Draw Things est une app macOS/iOS gratuite pour la génération locale Stable Diffusion, SDXL et Flux avec ControlNet et entraînement LoRA. Tarifs, téléchargements et modèles vérifiés pour 2026.",
+    "title": "Draw Things Review : IA d'images locale avec cloud optionnel",
+    "excerpt": "Draw Things exécute Stable Diffusion, SDXL et Flux en local sur Mac et iOS, avec un mode Cloud Compute optionnel. Ce qui reste sur l'appareil, ce qui en sort et ce que cela coûte.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-09",
     "url": "/fr/power-local-llm/draw-things-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "Draw Thingsレビュー：Mac・iOS向け無料オフライン画像生成AI",
-    "excerpt": "Draw ThingsはStable Diffusion、SDXL、Fluxのローカル画像生成に対応する無料のmacOS/iOSアプリ。ControlNetとLoRAトレーニング対応。2026年の料金・ダウンロード・対応モデルを検証。",
+    "title": "Draw Thingsレビュー：ローカル優先の画像AI、クラウドは任意",
+    "excerpt": "Draw ThingsはMacとiOSでStable Diffusion、SDXL、Fluxをローカル実行し、任意のCloud Computeモードも備えます。端末に残るもの、外へ出るもの、料金を解説。",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-09",
     "url": "/ja/power-local-llm/draw-things-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "Draw Things评测：Mac与iOS免费离线图像AI",
-    "excerpt": "Draw Things是一款免费的macOS/iOS应用，支持本地Stable Diffusion、SDXL和Flux图像生成，具备ControlNet和LoRA训练功能。已核实2026年定价、下载方式和模型支持范围。",
+    "title": "Draw Things评测：本地优先的图像AI，云端可选",
+    "excerpt": "Draw Things在Mac和iOS上本地运行Stable Diffusion、SDXL和Flux，并提供可选的Cloud Compute模式。哪些数据留在设备上、哪些会离开设备，以及费用。",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-09",
     "url": "/zh/power-local-llm/draw-things-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "Draw Things: IA de imágenes offline gratis para Mac e iOS",
-    "excerpt": "Draw Things es una app gratuita de macOS/iOS para generación local de imágenes con Stable Diffusion, SDXL y Flux, con ControlNet y entrenamiento de LoRA. Precios, descargas y modelos verificados en 2026.",
+    "title": "Draw Things Review: IA de imágenes local con nube opcional",
+    "excerpt": "Draw Things ejecuta Stable Diffusion, SDXL y Flux en local en Mac e iOS, con un modo opcional de Cloud Compute. Qué se queda en el dispositivo, qué sale de él y cuánto cuesta.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-09",
     "url": "/es/power-local-llm/draw-things-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "Draw Things: IA de imagens offline grátis para Mac e iOS",
-    "excerpt": "Draw Things é um app gratuito para macOS/iOS com geração local de imagens via Stable Diffusion, SDXL e Flux, com ControlNet e treinamento de LoRA. Preços, downloads e modelos verificados para 2026.",
+    "title": "Draw Things Review: IA de imagens local com nuvem opcional",
+    "excerpt": "O Draw Things executa Stable Diffusion, SDXL e Flux localmente no Mac e no iOS, com modo opcional de Cloud Compute. O que fica no dispositivo, o que sai dele e quanto custa.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-09",
     "url": "/pt/power-local-llm/draw-things-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "مراجعة Draw Things: ذكاء اصطناعي مجاني للصور دون اتصال لـ Mac وiOS",
-    "excerpt": "Draw Things تطبيق مجاني لـ macOS/iOS للتوليد المحلي بـ Stable Diffusion وSDXL وFlux، مع دعم ControlNet وتدريب LoRA. أسعار وتنزيلات ونماذج مدعومة موثقة لعام 2026.",
+    "title": "مراجعة Draw Things: ذكاء اصطناعي للصور محلي أولًا مع سحابة اختيارية",
+    "excerpt": "يشغّل Draw Things نماذج Stable Diffusion وSDXL وFlux محليًا على Mac وiOS مع وضع Cloud Compute اختياري. ما يبقى على الجهاز وما يغادره وكم يكلّف.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-09",
     "url": "/ar/power-local-llm/draw-things-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "Draw Things 리뷰: Mac·iOS용 무료 오프라인 이미지 AI",
-    "excerpt": "Draw Things는 Stable Diffusion, SDXL, Flux 로컬 이미지 생성을 지원하는 무료 macOS/iOS 앱으로 ControlNet과 LoRA 학습을 제공합니다. 2026년 가격, 다운로드, 지원 모델을 검증했습니다.",
+    "title": "Draw Things 리뷰: 로컬 우선 이미지 AI, 클라우드는 선택",
+    "excerpt": "Draw Things는 Mac과 iOS에서 Stable Diffusion, SDXL, Flux를 로컬로 실행하며 선택형 Cloud Compute 모드도 제공합니다. 기기에 남는 것, 나가는 것, 비용을 정리했습니다.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-09",
     "url": "/ko/power-local-llm/draw-things-review",
     "cluster": "power-local-llm"
   },
@@ -32564,81 +32564,81 @@
   {
     "lang": "en",
     "title": "Cognira Review: A Self-Learning AI Assistant With a Local Binary and Private Memory",
-    "excerpt": "Cognira is a solo-developer AI chat assistant with a guarded learning loop, private per-user memory, and a local Windows/macOS/Linux binary (Cognira Entity). Independently verified pricing, license, and open questions.",
+    "excerpt": "Cognira is a solo-developer AI chat assistant with a guarded learning loop, private per-user memory, and a local Windows/macOS/Linux binary (Cognira Entity). Pricing and license as the vendor states them, plus open questions.",
     "publishDate": "2026-09-26",
-    "dateModified": "2026-09-26",
+    "dateModified": "2026-10-05",
     "url": "/power-local-llm/cognira-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Cognira Review: Ein selbstlernender KI-Assistent mit lokaler Binärdatei und privatem Gedächtnis",
-    "excerpt": "Cognira ist ein KI-Chat-Assistent eines Einzelentwicklers mit geführter Lernschleife, privatem Gedächtnis pro Nutzer und lokaler Windows/macOS/Linux-Binärdatei (Cognira Entity). Unabhängig geprüfte Preise, Lizenz und offene Fragen.",
+    "excerpt": "Cognira ist ein KI-Chat-Assistent eines Einzelentwicklers mit geführter Lernschleife, privatem Gedächtnis pro Nutzer und lokaler Windows/macOS/Linux-Binärdatei (Cognira Entity). Preise und Lizenz laut Anbieter sowie offene Fragen.",
     "publishDate": "2026-09-26",
-    "dateModified": "2026-09-26",
+    "dateModified": "2026-10-05",
     "url": "/de/power-local-llm/cognira-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Avis Cognira : un assistant IA auto-apprenant avec binaire local et mémoire privée",
-    "excerpt": "Cognira est un assistant IA de chat conçu par un développeur indépendant, avec boucle d'apprentissage encadrée, mémoire privée par utilisateur et binaire local Windows/macOS/Linux (Cognira Entity). Tarifs, licence et zones d'ombre vérifiés.",
+    "excerpt": "Cognira est un assistant de chat IA d'un développeur indépendant : boucle d'apprentissage encadrée, mémoire privée par utilisateur, binaire local Windows/macOS/Linux (Cognira Entity). Tarifs, licence et points non vérifiés.",
     "publishDate": "2026-09-26",
-    "dateModified": "2026-09-26",
+    "dateModified": "2026-10-05",
     "url": "/fr/power-local-llm/cognira-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "Cogniraレビュー：ローカルバイナリとプライベート記憶を備えた自己学習型AIアシスタント",
-    "excerpt": "Cogniraは、個人開発者によるAIチャットアシスタントで、ガード付き学習ループ、ユーザーごとのプライベート記憶、ローカルのWindows/macOS/Linuxバイナリ（Cognira Entity）を備えます。独自に検証した料金・ライセンス・未解決の疑問点。",
+    "excerpt": "Cogniraは個人開発者によるAIチャットアシスタントで、ガード付き学習ループ、ユーザーごとのプライベート記憶、ローカルのWindows/macOS/Linuxバイナリ（Cognira Entity）を備えます。提供元の公表する料金・ライセンスと未解決の疑問点。",
     "publishDate": "2026-09-26",
-    "dateModified": "2026-09-26",
+    "dateModified": "2026-10-05",
     "url": "/ja/power-local-llm/cognira-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "Cognira评测：具备本地二进制程序和私人记忆的自学习AI助手",
-    "excerpt": "Cognira是一款由个人开发者打造的AI聊天助手，具备受控学习循环、按用户区分的私人记忆，以及本地Windows/macOS/Linux二进制程序（Cognira Entity）。独立核实的定价、许可与未解疑点。",
+    "excerpt": "Cognira是一款由个人开发者打造的AI聊天助手，具备受控学习循环、按用户区分的私人记忆，以及本地Windows/macOS/Linux二进制程序（Cognira Entity）。供应商公布的定价、许可与未解疑点。",
     "publishDate": "2026-09-26",
-    "dateModified": "2026-09-26",
+    "dateModified": "2026-10-05",
     "url": "/zh/power-local-llm/cognira-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Análisis de Cognira: un asistente de IA autoaprendiz con binario local y memoria privada",
-    "excerpt": "Cognira es un asistente de chat de IA de un desarrollador independiente, con bucle de aprendizaje supervisado, memoria privada por usuario y binario local para Windows/macOS/Linux (Cognira Entity). Precios, licencia y dudas verificados de forma independiente.",
+    "excerpt": "Cognira es un asistente de chat de IA de un desarrollador independiente, con bucle de aprendizaje supervisado, memoria privada por usuario y binario local para Windows/macOS/Linux (Cognira Entity). Precios y licencia según el proveedor, y dudas abiertas.",
     "publishDate": "2026-09-26",
-    "dateModified": "2026-09-26",
+    "dateModified": "2026-10-05",
     "url": "/es/power-local-llm/cognira-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Análise do Cognira: um assistente de IA autoaprendiz com binário local e memória privada",
-    "excerpt": "Cognira é um assistente de chat de IA de um desenvolvedor independente, com loop de aprendizado supervisionado, memória privada por usuário e binário local para Windows/macOS/Linux (Cognira Entity). Preços, licença e dúvidas verificados de forma independente.",
+    "excerpt": "Cognira é um assistente de chat de IA de um desenvolvedor independente, com loop de aprendizado supervisionado, memória privada por usuário e binário local para Windows/macOS/Linux (Cognira Entity). Preços e licença conforme o fornecedor, e dúvidas em aberto.",
     "publishDate": "2026-09-26",
-    "dateModified": "2026-09-26",
+    "dateModified": "2026-10-05",
     "url": "/pt/power-local-llm/cognira-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مراجعة Cognira: مساعد ذكاء اصطناعي ذاتي التعلم بملف تنفيذي محلي وذاكرة خاصة",
-    "excerpt": "Cognira مساعد دردشة ذكاء اصطناعي من مطوّر مستقل، بحلقة تعلّم محروسة وذاكرة خاصة لكل مستخدم وملف تنفيذي محلي لأنظمة Windows/macOS/Linux (Cognira Entity). أسعار وترخيص ونقاط غامضة تم التحقق منها بشكل مستقل.",
+    "excerpt": "Cognira مساعد دردشة ذكاء اصطناعي من مطوّر مستقل، بحلقة تعلّم محروسة وذاكرة خاصة لكل مستخدم وملف تنفيذي محلي لأنظمة Windows وmacOS وLinux (Cognira Entity). الأسعار والترخيص كما يعلنها المزوّد، إضافة إلى النقاط غير المحسومة.",
     "publishDate": "2026-09-26",
-    "dateModified": "2026-09-26",
+    "dateModified": "2026-10-05",
     "url": "/ar/power-local-llm/cognira-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "Cognira 리뷰: 로컬 바이너리와 개인 메모리를 갖춘 자기 학습형 AI 어시스턴트",
-    "excerpt": "Cognira는 개인 개발자가 만든 AI 채팅 어시스턴트로, 가드 학습 루프, 사용자별 비공개 메모리, 로컬 Windows/macOS/Linux 바이너리(Cognira Entity)를 갖추고 있습니다. 독립적으로 검증한 가격, 라이선스, 미해결 의문점.",
+    "excerpt": "Cognira는 개인 개발자가 만든 AI 채팅 어시스턴트로, 가드 학습 루프, 사용자별 비공개 메모리, 로컬 Windows/macOS/Linux 바이너리(Cognira Entity)를 갖추고 있습니다. 제공업체가 밝힌 가격과 라이선스, 미해결 의문점.",
     "publishDate": "2026-09-26",
-    "dateModified": "2026-09-26",
+    "dateModified": "2026-10-05",
     "url": "/ko/power-local-llm/cognira-review",
     "cluster": "power-local-llm"
   },
@@ -33293,7 +33293,7 @@
   {
     "lang": "en",
     "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-    "excerpt": "Compare 19 local image tools side by side: image and video generation (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI and more) and vision and OCR models. Licenses, platforms, inpainting, extensions, API and more, from official documentation.",
+    "excerpt": "Compare 21 local image tools side by side: image and video generation (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI and more) and vision and OCR models. Licenses, platforms, inpainting, extensions, API and more, from official documentation.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-images-video-compared",
@@ -33302,7 +33302,7 @@
   {
     "lang": "de",
     "title": "Lokale Bild-, Video- und Vision-Tools im Vergleich (2026): Generierung, Vision und OCR",
-    "excerpt": "Vergleich von 19 lokalen Bild-Tools: Bild- und Videogenerierung (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI u. a.) sowie Vision- und OCR-Modelle. Lizenzen, Plattformen, Inpainting, Erweiterungen, API laut offizieller Dokumentation.",
+    "excerpt": "Vergleich von 21 lokalen Bild-Tools: Bild- und Videogenerierung (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI u. a.) sowie Vision- und OCR-Modelle. Lizenzen, Plattformen, Inpainting, Erweiterungen, API laut offizieller Dokumentation.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-images-video-compared",
@@ -33311,7 +33311,7 @@
   {
     "lang": "fr",
     "title": "Outils locaux d'image, de vidéo et de vision : comparatif (2026) — génération, vision et OCR",
-    "excerpt": "Comparez 19 outils d'image locaux : génération d'images et de vidéos (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) et modèles de vision et OCR. Licences, plateformes, inpainting, extensions, API, d'après la documentation officielle.",
+    "excerpt": "Comparez 21 outils d'image locaux : génération d'images et de vidéos (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) et modèles de vision et OCR. Licences, plateformes, inpainting, extensions, API, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-images-video-compared",
@@ -33320,7 +33320,7 @@
   {
     "lang": "ja",
     "title": "ローカル画像・動画・ビジョンツール比較(2026):生成、ビジョン、OCR",
-    "excerpt": "ローカル画像ツール19種を比較:画像・動画生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAIなど)とビジョン・OCRモデル。ライセンス、対応OS、インペイント、拡張機能、APIなどを公式ドキュメントから整理。",
+    "excerpt": "ローカル画像ツール21種を比較:画像・動画生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAIなど)とビジョン・OCRモデル。ライセンス、対応OS、インペイント、拡張機能、APIなどを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-images-video-compared",
@@ -33329,7 +33329,7 @@
   {
     "lang": "zh",
     "title": "本地图像、视频与视觉工具对比(2026):生成、视觉与OCR",
-    "excerpt": "并排对比19款本地图像工具:图像与视频生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAI等)以及视觉与OCR模型。许可证、平台、局部重绘、扩展、API等,均来自官方文档。",
+    "excerpt": "并排对比21款本地图像工具:图像与视频生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAI等)以及视觉与OCR模型。许可证、平台、局部重绘、扩展、API等,均来自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-images-video-compared",
@@ -33338,7 +33338,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de imagen, vídeo y visión comparadas (2026): generación, visión y OCR",
-    "excerpt": "Compara 19 herramientas locales de imagen: generación de imagen y vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) y modelos de visión y OCR. Licencias, plataformas y API, según la documentación oficial.",
+    "excerpt": "Compara 21 herramientas locales de imagen: generación de imagen y vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) y modelos de visión y OCR. Licencias, plataformas y API, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-images-video-compared",
@@ -33347,7 +33347,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de imagem, vídeo e visão comparadas (2026): geração, visão e OCR",
-    "excerpt": "Compare 19 ferramentas locais de imagem: geração de imagem e vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI e outras) e modelos de visão e OCR. Licenças, plataformas, inpainting, extensões e API, segundo a documentação oficial.",
+    "excerpt": "Compare 21 ferramentas locais de imagem: geração de imagem e vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI e outras) e modelos de visão e OCR. Licenças, plataformas, inpainting, extensões e API, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-images-video-compared",
@@ -33356,7 +33356,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات الصور والفيديو والرؤية المحلية (2026): التوليد والرؤية وOCR",
-    "excerpt": "قارن 19 أداة صور محلية جنبًا إلى جنب: توليد الصور والفيديو (AUTOMATIC1111 وComfyUI وFooocus وInvokeAI وغيرها) ونماذج الرؤية وOCR. التراخيص والمنصات والطلاء الداخلي والإضافات وواجهة API، من الوثائق الرسمية.",
+    "excerpt": "قارن 21 أداة صور محلية جنبًا إلى جنب: توليد الصور والفيديو (AUTOMATIC1111 وComfyUI وFooocus وInvokeAI وغيرها) ونماذج الرؤية وOCR. التراخيص والمنصات والطلاء الداخلي والإضافات وواجهة API، من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-images-video-compared",
@@ -33365,7 +33365,7 @@
   {
     "lang": "ko",
     "title": "로컬 이미지·영상·비전 도구 비교(2026): 생성, 비전, OCR",
-    "excerpt": "로컬 이미지 도구 19개를 나란히 비교합니다: 이미지·영상 생성(AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI 등)과 비전·OCR 모델. 라이선스, 플랫폼, 인페인팅, 확장, API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 이미지 도구 21개를 나란히 비교합니다: 이미지·영상 생성(AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI 등)과 비전·OCR 모델. 라이선스, 플랫폼, 인페인팅, 확장, API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-images-video-compared",
@@ -33455,7 +33455,7 @@
   {
     "lang": "en",
     "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
-    "excerpt": "Compare 43 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
+    "excerpt": "Compare 46 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33464,7 +33464,7 @@
   {
     "lang": "de",
     "title": "Lokale Wissens- und Retrieval-Tools im Vergleich (2026): RAG, Dokumenten-Chat, Vektordatenbanken, Notizen und Suche",
-    "excerpt": "43 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
+    "excerpt": "46 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33473,7 +33473,7 @@
   {
     "lang": "fr",
     "title": "Outils locaux de connaissance et de recherche comparés (2026) : RAG, chat avec documents, bases vectorielles, notes et recherche",
-    "excerpt": "Comparez 43 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
+    "excerpt": "Comparez 46 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33482,7 +33482,7 @@
   {
     "lang": "ja",
     "title": "ローカル知識・検索ツール比較(2026):RAG、ドキュメントチャット、ベクトルデータベース、ノート、検索",
-    "excerpt": "ローカルの知識・検索ツール43種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
+    "excerpt": "ローカルの知識・検索ツール46種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33491,7 +33491,7 @@
   {
     "lang": "zh",
     "title": "本地知识与检索工具对比(2026):RAG、文档对话、向量数据库、笔记与搜索",
-    "excerpt": "并排对比43款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
+    "excerpt": "并排对比46款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33500,7 +33500,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de conocimiento y recuperación comparadas (2026): RAG, chat con documentos, bases de datos vectoriales, notas y búsqueda",
-    "excerpt": "Compara 43 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
+    "excerpt": "Compara 46 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33509,7 +33509,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de conhecimento e recuperação comparadas (2026): RAG, chat com documentos, bancos de dados vetoriais, notas e busca",
-    "excerpt": "Compare 43 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
+    "excerpt": "Compare 46 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33518,7 +33518,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات المعرفة والاسترجاع المحلية (2026): RAG ومحادثة المستندات وقواعد البيانات المتجهية والملاحظات والبحث",
-    "excerpt": "قارن 43 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
+    "excerpt": "قارن 46 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33527,7 +33527,7 @@
   {
     "lang": "ko",
     "title": "로컬 지식·검색 도구 비교(2026): RAG, 문서 채팅, 벡터 데이터베이스, 노트, 검색",
-    "excerpt": "로컬 지식·검색 도구 43개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 지식·검색 도구 46개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33536,7 +33536,7 @@
   {
     "lang": "en",
     "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-    "excerpt": "Compare 76 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
+    "excerpt": "Compare 83 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -33554,7 +33554,7 @@
   {
     "lang": "fr",
     "title": "Applications de chat IA locales et assistants : comparatif (2026) — bureau, mobile, auto-hébergé, assistants et jeu de rôle",
-    "excerpt": "Comparez 76 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
+    "excerpt": "Comparez 83 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-chat-assistants-compared",
@@ -33563,7 +33563,7 @@
   {
     "lang": "ja",
     "title": "ローカルチャットアプリとAIアシスタント比較(2026):デスクトップ、モバイル、セルフホスト、アシスタント、ロールプレイ",
-    "excerpt": "ローカルチャットアプリとAIアシスタント76種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
+    "excerpt": "ローカルチャットアプリとAIアシスタント83種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-chat-assistants-compared",
@@ -33572,7 +33572,7 @@
   {
     "lang": "zh",
     "title": "本地聊天应用与助手对比(2026):桌面、手机、自托管、助手与角色扮演",
-    "excerpt": "并排对比76款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
+    "excerpt": "并排对比83款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-chat-assistants-compared",
@@ -33581,7 +33581,7 @@
   {
     "lang": "es",
     "title": "Apps de chat y asistentes locales, comparados (2026): escritorio, móvil, autoalojados, asistentes y rol",
-    "excerpt": "Compara 76 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
+    "excerpt": "Compara 83 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-chat-assistants-compared",
@@ -33590,7 +33590,7 @@
   {
     "lang": "pt",
     "title": "Apps de chat locais e assistentes comparados (2026): desktop, celular, self-hosted, assistentes e roleplay",
-    "excerpt": "Compare 76 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
+    "excerpt": "Compare 83 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-chat-assistants-compared",
@@ -33599,7 +33599,7 @@
   {
     "lang": "ar",
     "title": "مقارنة تطبيقات الدردشة والمساعدات المحلية (2026): سطح المكتب والجوال والاستضافة الذاتية والمساعدات ولعب الأدوار",
-    "excerpt": "قارن 76 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
+    "excerpt": "قارن 83 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-chat-assistants-compared",
@@ -33608,7 +33608,7 @@
   {
     "lang": "ko",
     "title": "로컬 채팅 앱·AI 어시스턴트 비교(2026): 데스크톱, 모바일, 셀프 호스팅, 어시스턴트, 롤플레이",
-    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 76개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 83개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-chat-assistants-compared",
@@ -33617,7 +33617,7 @@
   {
     "lang": "en",
     "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-    "excerpt": "Compare 63 local coding and agent tools side by side: coding assistants (Cline, Continue, Aider, Tabby), agent frameworks (CrewAI, LangGraph, AutoGen), autonomous agents and workflow builders (n8n, Dify). Local LLMs, MCP, VS Code, from official docs.",
+    "excerpt": "Compare 64 local coding and agent tools side by side: coding assistants (Cline, Continue, Aider, Tabby), agent frameworks (CrewAI, LangGraph, AutoGen), autonomous agents and workflow builders (n8n, Dify). Local LLMs, MCP, VS Code, from official docs.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/power-local-llm/local-llm-code-development-compared",
@@ -33626,7 +33626,7 @@
   {
     "lang": "de",
     "title": "Lokale Coding-Assistenten, Agenten und Workflow-Tools im Vergleich (2026): IDE-Plugins, Agent-Frameworks und autonome Agenten",
-    "excerpt": "Vergleich von 63 lokalen Coding- und Agenten-Tools: Coding-Assistenten (Cline, Continue, Aider, Tabby), Agent-Frameworks (CrewAI, LangGraph, AutoGen), autonome Agenten und Workflow-Builder (n8n, Dify). Lokale LLMs, MCP, VS Code laut offizieller Doku.",
+    "excerpt": "Vergleich von 64 lokalen Coding- und Agenten-Tools: Coding-Assistenten (Cline, Continue, Aider, Tabby), Agent-Frameworks (CrewAI, LangGraph, AutoGen), autonome Agenten und Workflow-Builder (n8n, Dify). Lokale LLMs, MCP, VS Code laut offizieller Doku.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/de/power-local-llm/local-llm-code-development-compared",
@@ -33635,7 +33635,7 @@
   {
     "lang": "fr",
     "title": "Assistants de code, agents et outils de workflow locaux : comparatif (2026) — plugins IDE, frameworks d'agents et agents autonomes",
-    "excerpt": "Comparez 63 outils locaux de code et d'agents : assistants (Cline, Continue, Aider, Tabby), frameworks d'agents (CrewAI, LangGraph, AutoGen), agents autonomes et constructeurs de workflows (n8n, Dify). LLM locaux, MCP, VS Code, d'après les docs officielles.",
+    "excerpt": "Comparez 64 outils locaux de code et d'agents : assistants (Cline, Continue, Aider, Tabby), frameworks d'agents (CrewAI, LangGraph, AutoGen), agents autonomes et constructeurs de workflows (n8n, Dify). LLM locaux, MCP, VS Code, d'après les docs officielles.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/fr/power-local-llm/local-llm-code-development-compared",
@@ -33644,7 +33644,7 @@
   {
     "lang": "ja",
     "title": "ローカルのコーディングアシスタント・エージェント・ワークフローツール比較(2026):IDEプラグイン、エージェントフレームワーク、自律型エージェント",
-    "excerpt": "ローカルのコーディング/エージェントツール63件を比較:コーディングアシスタント(Cline、Continue、Aider、Tabby)、エージェントフレームワーク(CrewAI、LangGraph、AutoGen)、自律型エージェント、ワークフロービルダー(n8n、Dify)。公式ドキュメントに基づく。",
+    "excerpt": "ローカルのコーディング/エージェントツール64件を比較:コーディングアシスタント(Cline、Continue、Aider、Tabby)、エージェントフレームワーク(CrewAI、LangGraph、AutoGen)、自律型エージェント、ワークフロービルダー(n8n、Dify)。公式ドキュメントに基づく。",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/ja/power-local-llm/local-llm-code-development-compared",
@@ -33653,7 +33653,7 @@
   {
     "lang": "zh",
     "title": "本地编程助手、智能体与工作流工具对比(2026):IDE插件、智能体框架与自主智能体",
-    "excerpt": "并排对比63款本地编程与智能体工具:编程助手(Cline、Continue、Aider、Tabby)、智能体框架(CrewAI、LangGraph、AutoGen)、自主智能体与工作流构建器(n8n、Dify)。本地LLM、MCP、VS Code,数据来自官方文档。",
+    "excerpt": "并排对比64款本地编程与智能体工具:编程助手(Cline、Continue、Aider、Tabby)、智能体框架(CrewAI、LangGraph、AutoGen)、自主智能体与工作流构建器(n8n、Dify)。本地LLM、MCP、VS Code,数据来自官方文档。",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/zh/power-local-llm/local-llm-code-development-compared",
@@ -33662,7 +33662,7 @@
   {
     "lang": "es",
     "title": "Comparativa (2026) de asistentes de código, agentes y herramientas de flujo de trabajo locales: plugins de IDE, frameworks de agentes y agentes autónomos",
-    "excerpt": "Compara 63 herramientas locales de código y agentes: asistentes, frameworks, agentes autónomos y constructores de flujos (n8n, Dify), según la documentación oficial.",
+    "excerpt": "Compara 64 herramientas locales de código y agentes: asistentes, frameworks, agentes autónomos y constructores de flujos (n8n, Dify), según la documentación oficial.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/es/power-local-llm/local-llm-code-development-compared",
@@ -33671,7 +33671,7 @@
   {
     "lang": "pt",
     "title": "Assistentes de código, agentes e ferramentas de fluxo de trabalho locais comparados (2026): plugins de IDE, frameworks de agentes e agentes autônomos",
-    "excerpt": "Compare 63 ferramentas locais de código e agentes: assistentes de código (Cline, Continue, Aider, Tabby), frameworks de agentes (CrewAI, LangGraph, AutoGen), agentes autônomos e construtores de fluxo (n8n, Dify). LLMs locais, MCP, VS Code.",
+    "excerpt": "Compare 64 ferramentas locais de código e agentes: assistentes de código (Cline, Continue, Aider, Tabby), frameworks de agentes (CrewAI, LangGraph, AutoGen), agentes autônomos e construtores de fluxo (n8n, Dify). LLMs locais, MCP, VS Code.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/pt/power-local-llm/local-llm-code-development-compared",
@@ -33680,7 +33680,7 @@
   {
     "lang": "ar",
     "title": "مقارنة مساعدات البرمجة المحلية والوكلاء وأدوات سير العمل (2026): إضافات IDE وأطر الوكلاء والوكلاء المستقلة",
-    "excerpt": "قارن 63 أداة برمجة ووكلاء محلية جنبًا إلى جنب: مساعدات البرمجة (Cline وContinue وAider وTabby)، وأطر الوكلاء (CrewAI وLangGraph وAutoGen)، والوكلاء المستقلة وأدوات سير العمل (n8n وDify). نماذج محلية وMCP وVS Code، من الوثائق الرسمية.",
+    "excerpt": "قارن 64 أداة برمجة ووكلاء محلية جنبًا إلى جنب: مساعدات البرمجة (Cline وContinue وAider وTabby)، وأطر الوكلاء (CrewAI وLangGraph وAutoGen)، والوكلاء المستقلة وأدوات سير العمل (n8n وDify). نماذج محلية وMCP وVS Code، من الوثائق الرسمية.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/ar/power-local-llm/local-llm-code-development-compared",
@@ -33689,7 +33689,7 @@
   {
     "lang": "ko",
     "title": "로컬 코딩 어시스턴트·에이전트·워크플로 도구 비교(2026): IDE 플러그인, 에이전트 프레임워크, 자율 에이전트",
-    "excerpt": "로컬 코딩·에이전트 도구 63개를 나란히 비교: 코딩 어시스턴트(Cline, Continue, Aider, Tabby), 에이전트 프레임워크(CrewAI, LangGraph, AutoGen), 자율 에이전트, 워크플로 빌더(n8n, Dify). 로컬 LLM, MCP, VS Code, 공식 문서 기준.",
+    "excerpt": "로컬 코딩·에이전트 도구 64개를 나란히 비교: 코딩 어시스턴트(Cline, Continue, Aider, Tabby), 에이전트 프레임워크(CrewAI, LangGraph, AutoGen), 자율 에이전트, 워크플로 빌더(n8n, Dify). 로컬 LLM, MCP, VS Code, 공식 문서 기준.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/ko/power-local-llm/local-llm-code-development-compared",
@@ -35966,7 +35966,7 @@
   {
     "lang": "en",
     "title": "LM Studio Review: The GUI-First Local AI Desktop App",
-    "excerpt": "LM Studio is a free desktop app for running AI models locally with a built-in model browser and OpenAI-compatible server. Verified license, downloads, and features for 2026.",
+    "excerpt": "Is LM Studio free? Yes, for personal and work use since July 2025, but it is closed-source. Pricing, license, system requirements and downloads.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/power-local-llm/lm-studio-review",
@@ -35975,7 +35975,7 @@
   {
     "lang": "de",
     "title": "LM Studio Review: Die GUI-first lokale KI-Desktop-App",
-    "excerpt": "LM Studio ist eine kostenlose Desktop-App zum lokalen Ausführen von KI-Modellen mit integriertem Modell-Browser und OpenAI-kompatiblem Server. Geprüfte Lizenz, Downloads und Funktionen für 2026.",
+    "excerpt": "Ist LM Studio kostenlos? Ja, für private und berufliche Nutzung seit Juli 2025, aber Closed Source. Preise, Lizenz, Systemanforderungen und Downloads.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/de/power-local-llm/lm-studio-review",
@@ -35984,7 +35984,7 @@
   {
     "lang": "fr",
     "title": "LM Studio Review: l'application de bureau IA locale GUI-first",
-    "excerpt": "LM Studio est une application de bureau gratuite pour exécuter des modèles d'IA localement avec un navigateur de modèles intégré et un serveur compatible OpenAI. Licence, téléchargements et fonctionnalités vérifiés pour 2026.",
+    "excerpt": "LM Studio est-il gratuit ? Oui, en usage personnel et pro depuis juillet 2025, mais il est propriétaire. Tarifs, licence, configuration requise, liens.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/fr/power-local-llm/lm-studio-review",
@@ -35993,7 +35993,7 @@
   {
     "lang": "ja",
     "title": "LM Studio レビュー：GUIファーストのローカルAIデスクトップアプリ",
-    "excerpt": "LM Studioは、組み込みモデルブラウザとOpenAI互換サーバーを備え、AIモデルをローカル実行できる無料のデスクトップアプリです。2026年版として検証済みのライセンス、ダウンロード、機能を掲載。",
+    "excerpt": "LM Studioは無料？個人利用・業務利用ともに2025年7月から無料ですが、オープンソースではありません。料金、ライセンス、動作要件、ダウンロードを解説。",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/ja/power-local-llm/lm-studio-review",
@@ -36002,7 +36002,7 @@
   {
     "lang": "zh",
     "title": "LM Studio 评测：GUI优先的本地AI桌面应用",
-    "excerpt": "LM Studio是一款免费的桌面应用，可通过内置模型浏览器和OpenAI兼容服务器在本地运行AI模型。本文提供2026年经过核实的许可证、下载方式与功能信息。",
+    "excerpt": "LM Studio免费吗？自2025年7月起个人和工作使用均免费，但属于闭源软件。涵盖价格、许可证、系统要求与下载方式。",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/zh/power-local-llm/lm-studio-review",
@@ -36011,7 +36011,7 @@
   {
     "lang": "es",
     "title": "LM Studio Review: la aplicación de escritorio de IA local GUI-first",
-    "excerpt": "LM Studio es una aplicación de escritorio gratuita para ejecutar modelos de IA localmente con un navegador de modelos integrado y un servidor compatible con OpenAI. Licencia, descargas y funciones verificadas para 2026.",
+    "excerpt": "¿LM Studio es gratis? Sí, para uso personal y laboral desde julio de 2025, pero es de código cerrado. Precios, licencia, requisitos y descargas.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/es/power-local-llm/lm-studio-review",
@@ -36020,7 +36020,7 @@
   {
     "lang": "pt",
     "title": "LM Studio Review: o aplicativo de desktop de IA local GUI-first",
-    "excerpt": "LM Studio é um aplicativo de desktop gratuito para executar modelos de IA localmente com um navegador de modelos integrado e um servidor compatível com OpenAI. Licença, downloads e recursos verificados para 2026.",
+    "excerpt": "O LM Studio é grátis? Sim, para uso pessoal e profissional desde julho de 2025, mas é código fechado. Preços, licença, requisitos e downloads.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/pt/power-local-llm/lm-studio-review",
@@ -36029,7 +36029,7 @@
   {
     "lang": "ar",
     "title": "مراجعة LM Studio: تطبيق سطح المكتب المحلي الذي يعطي الأولوية للواجهة الرسومية",
-    "excerpt": "LM Studio تطبيق سطح مكتب مجاني لتشغيل نماذج AI محليًا مع مستعرض نماذج مدمج وخادم متوافق مع OpenAI. ترخيص وتنزيلات وميزات مُتحقَّق منها لعام 2026.",
+    "excerpt": "هل LM Studio مجاني؟ نعم للاستخدام الشخصي والمهني منذ يوليو 2025، لكنه مغلق المصدر. الأسعار والترخيص ومتطلبات النظام والتنزيل.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/ar/power-local-llm/lm-studio-review",
@@ -36038,7 +36038,7 @@
   {
     "lang": "ko",
     "title": "LM Studio 리뷰: GUI 우선 로컬 AI 데스크톱 앱",
-    "excerpt": "LM Studio는 내장 모델 브라우저와 OpenAI 호환 서버를 갖춘 무료 데스크톱 앱으로 AI 모델을 로컬에서 실행합니다. 2026년 기준으로 검증된 라이선스, 다운로드, 기능 정보를 제공합니다.",
+    "excerpt": "LM Studio는 무료일까요? 2025년 7월부터 개인 및 업무용 모두 무료이지만 오픈소스는 아닙니다. 가격, 라이선스, 시스템 요구 사항, 다운로드를 안내합니다.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/ko/power-local-llm/lm-studio-review",
@@ -36209,81 +36209,81 @@
   {
     "lang": "en",
     "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
-    "excerpt": "KoboldCpp is a free, AGPL 3.0, single-file local LLM app built on llama.cpp. See its KoboldAI Lite UI, GPU backend options, download links, and where it fits next to Ollama and LM Studio.",
+    "excerpt": "KoboldCpp is a free, AGPL 3.0 single-file local LLM app built on llama.cpp. Download it, pick CUDA, Vulkan or ROCm, and compare it with llama.cpp and Ollama.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-09",
     "url": "/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "KoboldCpp-Rezension: Eine Datei, keine Installation, für Rollenspiel gebaut",
-    "excerpt": "KoboldCpp ist eine kostenlose, AGPL-3.0-lizenzierte Single-File-App für lokale LLMs, aufgebaut auf llama.cpp. KoboldAI-Lite-Oberfläche, GPU-Backends, Downloads und Einordnung neben Ollama und LM Studio.",
+    "excerpt": "KoboldCpp: kostenlose Single-File-App für lokale LLMs auf llama.cpp-Basis (AGPL 3.0). Download, GPU-Support (CUDA, Vulkan, ROCm) und Vergleich mit llama.cpp.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-09",
     "url": "/de/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "KoboldCpp: un seul fichier, aucune installation, pensé pour le jeu de rôle",
-    "excerpt": "KoboldCpp est une application LLM locale gratuite, sous licence AGPL 3.0, monofichier, construite sur llama.cpp. Interface KoboldAI Lite, backends GPU, liens de téléchargement et comparaison avec Ollama et LM Studio.",
+    "excerpt": "KoboldCpp : appli LLM locale gratuite en un fichier (AGPL 3.0) basée sur llama.cpp. Téléchargement, GPU (CUDA, Vulkan, ROCm), comparaison avec llama.cpp.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-09",
     "url": "/fr/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "KoboldCpp レビュー：単一ファイル、インストール不要、ロールプレイ特化",
-    "excerpt": "KoboldCppはllama.cppを基盤にした無料・AGPL 3.0ライセンスの単一ファイル型ローカルLLMアプリです。KoboldAI LiteのUI、GPUバックエンド、ダウンロードリンク、Ollama・LM Studioとの比較を解説します。",
+    "excerpt": "KoboldCppはllama.cppベースの無料・AGPL 3.0の単一ファイル型ローカルLLMアプリです。インストール不要の導入手順、CUDA/Vulkan/ROCm対応、llama.cppやOllamaとの違いを解説。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-09",
     "url": "/ja/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "KoboldCpp 评测:单文件、免安装,专为角色扮演打造",
-    "excerpt": "KoboldCpp 是一款基于 llama.cpp 构建的免费、AGPL 3.0 许可的单文件本地 LLM 应用。了解其 KoboldAI Lite 界面、GPU 后端选项、下载链接,以及与 Ollama、LM Studio 的对比。",
+    "excerpt": "KoboldCpp是基于llama.cpp的免费单文件本地LLM应用(AGPL 3.0)。涵盖下载方法、CUDA/Vulkan/ROCm支持,以及与llama.cpp、Ollama的对比。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-09",
     "url": "/zh/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "KoboldCpp: un solo archivo, sin instalación, pensado para el rol",
-    "excerpt": "KoboldCpp es una app de LLM local gratuita, con licencia AGPL 3.0, de un solo archivo, construida sobre llama.cpp. Interfaz KoboldAI Lite, backends de GPU, enlaces de descarga y comparación con Ollama y LM Studio.",
+    "excerpt": "KoboldCpp es una app de LLM local gratuita de un solo archivo (AGPL 3.0) sobre llama.cpp. Descarga, GPU (CUDA, Vulkan, ROCm) y comparación con llama.cpp.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-09",
     "url": "/es/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "KoboldCpp: um arquivo só, sem instalação, feito para roleplay",
-    "excerpt": "KoboldCpp é um app de LLM local gratuito, com licença AGPL 3.0, de arquivo único, construído sobre o llama.cpp. Veja a interface KoboldAI Lite, opções de GPU, links de download e a comparação com Ollama e LM Studio.",
+    "excerpt": "KoboldCpp é um app de LLM local gratuito de arquivo único (AGPL 3.0) sobre o llama.cpp. Download, GPU (CUDA, Vulkan, ROCm) e comparação com o llama.cpp.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-09",
     "url": "/pt/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مراجعة KoboldCpp: ملف واحد، بلا تثبيت، مصمم للعب الأدوار",
-    "excerpt": "KoboldCpp تطبيق نماذج لغوية محلي مجاني برخصة AGPL 3.0 بملف واحد، مبني على llama.cpp. تعرّف على واجهة KoboldAI Lite وخيارات معالج الرسومات وروابط التحميل ومقارنته بـ Ollama وLM Studio.",
+    "excerpt": "KoboldCpp تطبيق نماذج لغوية محلي مجاني بملف واحد (AGPL 3.0) مبني على llama.cpp. التحميل ودعم CUDA وVulkan وROCm ومقارنته بـ llama.cpp وOllama.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-09",
     "url": "/ar/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "KoboldCpp 리뷰: 파일 하나, 설치 불필요, 롤플레이 특화",
-    "excerpt": "KoboldCpp는 llama.cpp를 기반으로 한 무료 AGPL 3.0 라이선스의 단일 파일 로컬 LLM 앱입니다. KoboldAI Lite UI, GPU 백엔드 옵션, 다운로드 링크, Ollama·LM Studio와의 비교를 확인하세요.",
+    "excerpt": "KoboldCpp는 llama.cpp 기반의 무료 단일 파일 로컬 LLM 앱(AGPL 3.0)입니다. 다운로드, CUDA·Vulkan·ROCm 지원, llama.cpp·Ollama와의 비교를 정리했습니다.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-20",
+    "dateModified": "2026-10-09",
     "url": "/ko/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
@@ -37181,81 +37181,81 @@
   {
     "lang": "en",
     "title": "Windsurf Review: From Codeium to a $2.4B Google Deal to Devin Desktop",
-    "excerpt": "Windsurf is now Devin Desktop, owned by Cognition AI, after a collapsed $3B OpenAI deal and a $2.4B Google licensing deal in July 2025. Full history and current status.",
+    "excerpt": "Yes. Cognition AI renamed Windsurf to Devin Desktop on June 2, 2026, after buying it in July 2025. Rebrand history, owners, downloads and pricing status.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Windsurf Review: Von Codeium zum 2,4-Mrd.-$-Google-Deal bis Devin Desktop",
-    "excerpt": "Windsurf heißt jetzt Devin Desktop, im Besitz von Cognition AI, nach einer gescheiterten 3-Mrd.-$-OpenAI-Übernahme und einem 2,4-Mrd.-$-Google-Lizenzdeal im Juli 2025. Vollständige Historie und aktueller Status.",
+    "excerpt": "Ja, Windsurf heißt jetzt Devin Desktop: Cognition AI benannte es am 2. Juni 2026 um, nachdem es im Juli 2025 übernommen wurde. Historie, Download, Preise.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/de/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Windsurf Review : de Codeium au deal Google à 2,4 Md$ jusqu'à Devin Desktop",
-    "excerpt": "Windsurf s'appelle désormais Devin Desktop, propriété de Cognition AI, après l'échec d'un deal OpenAI à 3 Md$ et un accord de licence Google à 2,4 Md$ en juillet 2025. Historique complet et statut actuel.",
+    "excerpt": "Oui, Windsurf s'appelle désormais Devin Desktop : Cognition AI l'a renommé le 2 juin 2026, après son rachat en juillet 2025. Historique, téléchargement, prix.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/fr/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "Windsurf レビュー: Codeium から24億ドルのGoogleとの契約、そしてDevin Desktopへ",
-    "excerpt": "Windsurfは現在Devin Desktopと呼ばれ、Cognition AIが所有しています。2025年7月にOpenAIとの30億ドルの買収が破談し、Googleとの24億ドルのライセンス契約がありました。全体の経緯と現状を解説します。",
+    "excerpt": "はい、WindsurfはDevin Desktopになりました。Cognition AIが2025年7月に買収し、2026年6月2日に改称。経緯、所有者、ダウンロード、料金の状況を解説します。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/ja/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "Windsurf 评测：从 Codeium 到 24 亿美元谷歌交易，再到 Devin Desktop",
-    "excerpt": "Windsurf 现已更名为 Devin Desktop，归 Cognition AI 所有。2025 年 7 月 OpenAI 30 亿美元收购告吹，谷歌以 24 亿美元达成许可协议。完整历史与当前状态。",
+    "excerpt": "是的，Windsurf 现已更名为 Devin Desktop：Cognition AI 于 2025 年 7 月收购，并在 2026 年 6 月 2 日更名。含更名经过、所有者、下载与定价现状。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/zh/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Windsurf Review: de Codeium al acuerdo de Google por 2.400 M$ hasta Devin Desktop",
-    "excerpt": "Windsurf ahora es Devin Desktop, propiedad de Cognition AI, tras el fracaso de un acuerdo de 3.000 M$ con OpenAI y un acuerdo de licencia de 2.400 M$ con Google en julio de 2025. Historia completa y estado actual.",
+    "excerpt": "Sí, Windsurf ahora es Devin Desktop: Cognition AI lo renombró el 2 de junio de 2026 tras comprarlo en julio de 2025. Historia, dueños, descarga y precios.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/es/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Windsurf Review: da Codeium ao acordo de US$ 2,4 bi com o Google até o Devin Desktop",
-    "excerpt": "O Windsurf agora se chama Devin Desktop, propriedade da Cognition AI, após o fracasso de um acordo de US$ 3 bi com a OpenAI e um acordo de licenciamento de US$ 2,4 bi com o Google em julho de 2025. Histórico completo e status atual.",
+    "excerpt": "Sim, o Windsurf agora é Devin Desktop: a Cognition AI o renomeou em 2 de junho de 2026, após comprá-lo em julho de 2025. Histórico, download e preços.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/pt/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مراجعة Windsurf: من Codeium إلى صفقة Google بقيمة 2.4 مليار دولار وصولاً إلى Devin Desktop",
-    "excerpt": "أصبح Windsurf الآن Devin Desktop، مملوكاً لـ Cognition AI، بعد فشل صفقة بقيمة 3 مليارات دولار مع OpenAI واتفاقية ترخيص بقيمة 2.4 مليار دولار مع Google في يوليو 2025. التاريخ الكامل والوضع الحالي.",
+    "excerpt": "نعم، أصبح Windsurf هو Devin Desktop: أعادت Cognition AI تسميته في 2 يونيو 2026 بعد شرائه في يوليو 2025. التاريخ والتنزيل وحالة الأسعار.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/ar/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "Windsurf 리뷰: Codeium에서 24억 달러 규모의 Google 계약을 거쳐 Devin Desktop까지",
-    "excerpt": "Windsurf는 이제 Devin Desktop이라는 이름으로, Cognition AI가 소유하고 있습니다. 2025년 7월 OpenAI와의 30억 달러 규모 거래가 무산되고 Google과 24억 달러 규모 라이선스 계약이 체결되었습니다. 전체 역사와 현재 상태를 다룹니다.",
+    "excerpt": "네, Windsurf는 이제 Devin Desktop입니다. Cognition AI가 2025년 7월 인수해 2026년 6월 2일 이름을 바꿨습니다. 개명 경위, 소유사, 다운로드, 요금 현황.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-09-05",
+    "dateModified": "2026-10-09",
     "url": "/ko/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
@@ -37910,81 +37910,81 @@
   {
     "lang": "en",
     "title": "SwarmUI Review: The Multi-GPU Stable Diffusion Web UI",
-    "excerpt": "SwarmUI review 2026: the multi-GPU, multi-user Stable Diffusion web UI built on ComfyUI. Covers the StableSwarmUI rename, MIT license, model support, and setup.",
+    "excerpt": "SwarmUI (formerly StableSwarmUI) is a free, MIT-licensed multi-GPU web UI built on ComfyUI. Setup, SwarmUI vs ComfyUI, supported models and install steps.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-09",
     "url": "/power-local-llm/stableswarmui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "SwarmUI-Rezension: Die Multi-GPU-Weboberfläche für Stable Diffusion",
-    "excerpt": "SwarmUI-Rezension 2026: die Multi-GPU-, Multi-User-Weboberfläche für Stable Diffusion auf ComfyUI-Basis. Umbenennung von StableSwarmUI, MIT-Lizenz, Modellunterstützung und Einrichtung.",
+    "excerpt": "SwarmUI (früher StableSwarmUI) ist eine kostenlose, MIT-lizenzierte Multi-GPU-Weboberfläche auf ComfyUI-Basis. Installation, SwarmUI vs. ComfyUI und Modelle.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-09",
     "url": "/de/power-local-llm/stableswarmui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Avis SwarmUI: l'interface web multi-GPU pour Stable Diffusion",
-    "excerpt": "Avis SwarmUI 2026 : l'interface web multi-GPU et multi-utilisateurs pour Stable Diffusion, construite sur ComfyUI. Changement de nom depuis StableSwarmUI, licence MIT, modèles pris en charge et installation.",
+    "excerpt": "SwarmUI (ex-StableSwarmUI) est une interface web multi-GPU gratuite sous licence MIT, basée sur ComfyUI. Installation, SwarmUI vs ComfyUI et modèles.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-09",
     "url": "/fr/power-local-llm/stableswarmui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "SwarmUIレビュー:マルチGPU対応のStable Diffusion用Web UI",
-    "excerpt": "SwarmUIレビュー2026:ComfyUIをベースにしたマルチGPU・マルチユーザー対応のStable Diffusion用Web UI。StableSwarmUIからの改名、MITライセンス、対応モデル、セットアップを解説。",
+    "excerpt": "SwarmUI(旧StableSwarmUI)は、ComfyUIをベースにした無料のMITライセンス対応マルチGPU Web UIです。インストール手順(使い方)とComfyUIとの違いを解説。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-09",
     "url": "/ja/power-local-llm/stableswarmui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "SwarmUI评测:支持多GPU的Stable Diffusion网页界面",
-    "excerpt": "SwarmUI评测2026:基于ComfyUI构建的多GPU、多用户Stable Diffusion网页界面。涵盖从StableSwarmUI改名的历程、MIT许可证、模型支持与安装设置。",
+    "excerpt": "SwarmUI(原StableSwarmUI)是基于ComfyUI的免费、MIT许可多GPU网页界面。涵盖安装方法、SwarmUI与ComfyUI的区别以及支持的模型。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-09",
     "url": "/zh/power-local-llm/stableswarmui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Reseña de SwarmUI: la interfaz web multi-GPU para Stable Diffusion",
-    "excerpt": "Reseña de SwarmUI 2026: la interfaz web multi-GPU y multiusuario para Stable Diffusion, construida sobre ComfyUI. Cambio de nombre desde StableSwarmUI, licencia MIT, soporte de modelos e instalación.",
+    "excerpt": "SwarmUI (antes StableSwarmUI) es una interfaz web multi-GPU gratuita con licencia MIT basada en ComfyUI. Instalación, SwarmUI vs. ComfyUI y modelos.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-09",
     "url": "/es/power-local-llm/stableswarmui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Análise do SwarmUI: a interface web multi-GPU para Stable Diffusion",
-    "excerpt": "Análise do SwarmUI 2026: a interface web multi-GPU e multiusuário para Stable Diffusion, construída sobre o ComfyUI. Mudança de nome de StableSwarmUI, licença MIT, suporte a modelos e configuração.",
+    "excerpt": "SwarmUI (antes StableSwarmUI) é uma interface web multi-GPU gratuita, com licença MIT, baseada no ComfyUI. Instalação, SwarmUI vs ComfyUI e modelos.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-09",
     "url": "/pt/power-local-llm/stableswarmui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مراجعة SwarmUI: واجهة الويب متعددة GPU لـ Stable Diffusion",
-    "excerpt": "مراجعة SwarmUI 2026: واجهة الويب متعددة GPU ومتعددة المستخدمين لـ Stable Diffusion، مبنية على ComfyUI. تغيير الاسم من StableSwarmUI، ترخيص MIT، دعم النماذج، والإعداد.",
+    "excerpt": "SwarmUI (سابقًا StableSwarmUI) واجهة ويب مجانية متعددة GPU بترخيص MIT مبنية على ComfyUI. التثبيت والفرق بين SwarmUI وComfyUI والنماذج المدعومة.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-09",
     "url": "/ar/power-local-llm/stableswarmui-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "SwarmUI 리뷰: 멀티 GPU를 지원하는 Stable Diffusion 웹 UI",
-    "excerpt": "SwarmUI 리뷰 2026: ComfyUI 기반으로 구축된 멀티 GPU·멀티 유저 Stable Diffusion 웹 UI. StableSwarmUI에서의 개명, MIT 라이선스, 모델 지원 및 설정을 다룹니다.",
+    "excerpt": "SwarmUI(구 StableSwarmUI)는 ComfyUI 기반의 무료 MIT 라이선스 멀티 GPU 웹 UI입니다. 설치 방법, SwarmUI와 ComfyUI의 차이, 지원 모델을 정리했습니다.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-09",
     "url": "/ko/power-local-llm/stableswarmui-review",
     "cluster": "power-local-llm"
   },
@@ -38557,10 +38557,172 @@
   },
   {
     "lang": "en",
+    "title": "LM Playground Review: Open-Source Offline LLM Chat for Android",
+    "excerpt": "LM Playground review: a free, MIT-licensed Android app that runs GGUF models offline with document Q&A and vision. Models, privacy, versions, and limits.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/power-local-llm/lm-playground-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "LM-Playground-Rezension: Quelloffene Offline-KI-Chat-App für Android",
+    "excerpt": "LM-Playground-Rezension: kostenlose Android-App (MIT), die GGUF-Modelle offline ausführt, mit Dokumenten-Q&A und Vision. Modelle, Datenschutz, Grenzen.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/de/power-local-llm/lm-playground-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Avis LM Playground : chat LLM open source hors ligne pour Android",
+    "excerpt": "Avis LM Playground : appli Android gratuite (MIT) qui exécute des modèles GGUF hors ligne, avec Q&R sur documents et vision. Modèles, vie privée, limites.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/fr/power-local-llm/lm-playground-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "LM Playgroundレビュー:Android向けオープンソースのオフラインLLMチャット",
+    "excerpt": "LM Playgroundレビュー:GGUFモデルをオフラインで動かす、無料のMITライセンスのAndroidアプリ。ドキュメントQ&Aと画像入力、モデル、プライバシー、バージョン、制約を解説します。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ja/power-local-llm/lm-playground-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "LM Playground 评测：适用于 Android 的开源离线大模型聊天应用",
+    "excerpt": "LM Playground 评测：免费、MIT 许可的 Android 应用，可离线运行 GGUF 模型，支持文档问答与视觉输入。涵盖模型、隐私、版本与局限。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/zh/power-local-llm/lm-playground-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de LM Playground: chat de LLM offline y de código abierto para Android",
+    "excerpt": "Análisis de LM Playground: app gratuita y MIT para Android que ejecuta modelos GGUF offline, con documentos y visión. Modelos, privacidad y límites.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/es/power-local-llm/lm-playground-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "LM Playground: Análise do App de Chat de IA Offline e Open Source para Android",
+    "excerpt": "Análise do LM Playground: app Android gratuito (MIT) que roda modelos GGUF offline, com perguntas sobre documentos e visão. Modelos, privacidade e limites.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/pt/power-local-llm/lm-playground-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة LM Playground: تطبيق دردشة مفتوح المصدر يعمل دون اتصال لأندرويد",
+    "excerpt": "مراجعة LM Playground: تطبيق أندرويد مجاني بترخيص MIT يشغّل نماذج GGUF دون اتصال مع أسئلة على المستندات ودعم الرؤية. النماذج والخصوصية والإصدارات والحدود.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ar/power-local-llm/lm-playground-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "LM Playground 리뷰: Android용 오픈 소스 오프라인 LLM 채팅 앱",
+    "excerpt": "LM Playground 리뷰: GGUF 모델을 오프라인으로 실행하는 무료 MIT 라이선스 Android 앱. 문서 Q&A, 비전 입력, 개인정보, 한계를 정리했습니다.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ko/power-local-llm/lm-playground-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "LocalMind Review: Free Chat App for On-Device and Self-Hosted Models",
+    "excerpt": "LocalMind review: free MIT-licensed Android and iPhone chat app for on-device models, Ollama, LM Studio and OpenRouter. Backends, privacy, limits.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/power-local-llm/localmind-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "LocalMind-Rezension: Kostenlose Chat-App für lokale und selbst gehostete Modelle",
+    "excerpt": "LocalMind-Rezension: kostenlose Chat-App (MIT) für Android und iPhone mit lokalen Modellen, Ollama, LM Studio und OpenRouter. Datenschutz, Grenzen.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/de/power-local-llm/localmind-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Avis sur LocalMind : appli de chat gratuite pour modèles locaux et auto-hébergés",
+    "excerpt": "Avis LocalMind : appli de chat gratuite (MIT) pour Android et iPhone, avec modèles sur l'appareil, Ollama, LM Studio, OpenRouter. Confidentialité.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/fr/power-local-llm/localmind-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "LocalMindレビュー:オンデバイスと自前サーバーのモデルに使える無料チャットアプリ",
+    "excerpt": "LocalMindレビュー:オンデバイスモデル、Ollama、LM Studio、OpenRouterに対応する無料のAndroid/iPhoneチャットアプリ(MIT)。バックエンド、プライバシー、制約。",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/ja/power-local-llm/localmind-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "LocalMind 评测：支持设备端与自建服务器模型的免费聊天应用",
+    "excerpt": "LocalMind 评测：免费的 MIT 许可 Android/iPhone 聊天应用，支持设备端模型、Ollama、LM Studio 和 OpenRouter。后端、隐私、局限一览。",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/zh/power-local-llm/localmind-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de LocalMind: app de chat gratuita para modelos locales y autoalojados",
+    "excerpt": "Análisis de LocalMind: app de chat gratuita (MIT) para Android e iPhone con modelos en el dispositivo, Ollama, LM Studio y OpenRouter. Privacidad.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/es/power-local-llm/localmind-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do LocalMind: app de chat gratuito para modelos locais e auto-hospedados",
+    "excerpt": "Análise do LocalMind: app de chat gratuito (MIT) para Android e iPhone com modelos no dispositivo, Ollama, LM Studio e OpenRouter. Privacidade e limites.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/pt/power-local-llm/localmind-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة LocalMind: تطبيق دردشة مجاني للنماذج على الجهاز والخوادم الخاصة",
+    "excerpt": "مراجعة LocalMind: تطبيق دردشة مجاني (MIT) لـ Android وiPhone مع نماذج على الجهاز وOllama وLM Studio وOpenRouter. الخلفيات والخصوصية والقيود.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/ar/power-local-llm/localmind-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "LocalMind 리뷰: 기기 내 모델과 자체 서버 모델용 무료 채팅 앱",
+    "excerpt": "LocalMind 리뷰: 기기 내 모델, Ollama, LM Studio, OpenRouter를 지원하는 무료 MIT 라이선스 Android·iPhone 채팅 앱. 백엔드, 개인정보, 한계.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/ko/power-local-llm/localmind-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
     "excerpt": "TokForge review: a free offline AI chat app for Android with roleplay characters, image generation, voice cloning, and a speed leaderboard. Models, privacy, limits.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-09",
     "url": "/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38569,7 +38731,7 @@
     "title": "TokForge-Rezension: Offline-KI-Chat für Android mit Rollenspiel und Bildgenerierung",
     "excerpt": "TokForge-Rezension: kostenlose Offline-KI-App für Android mit Rollenspiel, Bildgenerierung, Stimmklonen und Speed-Rangliste. Modelle, Datenschutz, Grenzen.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-09",
     "url": "/de/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38578,7 +38740,7 @@
     "title": "Avis TokForge : chat IA hors ligne sur Android avec jeu de rôle et génération d'images",
     "excerpt": "Avis TokForge : appli Android gratuite de chat IA hors ligne avec personnages de jeu de rôle, génération d'images, clonage de voix et classement de vitesse.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-09",
     "url": "/fr/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38587,7 +38749,7 @@
     "title": "TokForgeレビュー:ロールプレイと画像生成を備えたオフラインのAndroid向けAIチャット",
     "excerpt": "TokForgeレビュー:ロールプレイ、画像生成、音声クローン、速度リーダーボードを備えた、Android向けの無料オフラインAIチャットアプリ。モデル、プライバシー、制約を解説します。",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-09",
     "url": "/ja/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38596,7 +38758,7 @@
     "title": "TokForge 评测:支持角色扮演与图像生成的 Android 离线 AI 聊天应用",
     "excerpt": "TokForge 评测:一款免费的 Android 离线 AI 聊天应用,含角色扮演、图像生成、声音克隆和速度排行榜。涵盖模型、隐私与局限。",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-09",
     "url": "/zh/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38605,7 +38767,7 @@
     "title": "Análisis de TokForge: chat de IA offline para Android con juegos de rol e imágenes",
     "excerpt": "Análisis de TokForge: app gratuita de chat de IA offline para Android con personajes de rol, imágenes, voz y ranking de velocidad. Privacidad y límites.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-09",
     "url": "/es/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38614,7 +38776,7 @@
     "title": "TokForge: Análise do App de Chat de IA Offline para Android com Roleplay e Imagens",
     "excerpt": "Análise do TokForge: app gratuito de IA offline para Android com roleplay, imagens, clonagem de voz e ranking de velocidade. Privacidade, hardware e limites.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-09",
     "url": "/pt/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38623,7 +38785,7 @@
     "title": "مراجعة TokForge: دردشة ذكاء اصطناعي دون اتصال لأندرويد مع لعب الأدوار وتوليد الصور",
     "excerpt": "مراجعة TokForge: تطبيق ذكاء اصطناعي مجاني دون اتصال لأندرويد بشخصيات لعب أدوار وتوليد صور واستنساخ صوت ولوحة متصدرين للسرعة. النماذج والخصوصية والقيود.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-09",
     "url": "/ar/power-local-llm/tokforge-review",
     "cluster": "power-local-llm"
   },
@@ -38632,8 +38794,494 @@
     "title": "TokForge 리뷰: 롤플레이와 이미지 생성을 갖춘 오프라인 Android AI 채팅 앱",
     "excerpt": "TokForge 리뷰: 롤플레이 캐릭터, 이미지 생성, 음성 복제, 속도 리더보드를 갖춘 무료 오프라인 Android AI 채팅 앱입니다. 지원 엔진과 모델, 하드웨어 요구 사항, 개인정보 처리, 클로즈드 소스라는 한계, 그리고 확인하지 못한 사항까지 출처 기준으로 정리했습니다.",
     "publishDate": "2026-10-03",
-    "dateModified": "2026-10-05",
+    "dateModified": "2026-10-09",
     "url": "/ko/power-local-llm/tokforge-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Local AI: Offline Chat & Image Review: Free Android App with Stable Diffusion and Prompt Toolkits",
+    "excerpt": "Local AI: Offline Chat & Image review: a free Android app with 20+ offline models, Stable Diffusion images and 15 prompt toolkits. Ads, privacy and limits.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/power-local-llm/local-ai-geetmark-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Local AI: Offline Chat & Image im Test: kostenlose Android-App mit Stable Diffusion und Prompt-Toolkits",
+    "excerpt": "Local AI: Offline Chat & Image im Test: kostenlose Android-App mit über 20 Offline-Modellen, Stable-Diffusion-Bildern und 15 Prompt-Toolkits. Werbung, Datenschutz, Grenzen.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/de/power-local-llm/local-ai-geetmark-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Local AI: Offline Chat & Image : application Android gratuite avec Stable Diffusion et kits de prompts",
+    "excerpt": "Test de Local AI: Offline Chat & Image : application Android gratuite avec plus de 20 modèles hors ligne, images Stable Diffusion et 15 kits de prompts. Publicités, confidentialité, limites.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/fr/power-local-llm/local-ai-geetmark-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Local AI: Offline Chat & Image レビュー:Stable Diffusionとプロンプトツールキットを備えた無料Androidアプリ",
+    "excerpt": "Local AI: Offline Chat & Imageのレビュー:20以上のオフラインモデル、Stable Diffusion画像生成、15種類のプロンプトツールキットを備えた無料Androidアプリ。広告、プライバシー、制限事項。",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ja/power-local-llm/local-ai-geetmark-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Local AI: Offline Chat & Image 评测:支持 Stable Diffusion 与提示词工具包的免费 Android 应用",
+    "excerpt": "Local AI: Offline Chat & Image 评测:免费 Android 应用,含 20 多个离线模型、Stable Diffusion 图像生成和 15 个提示词工具包。广告、隐私与局限。",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/zh/power-local-llm/local-ai-geetmark-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de Local AI: Offline Chat & Image: app gratuita para Android con Stable Diffusion y kits de prompts",
+    "excerpt": "Análisis de Local AI: Offline Chat & Image: app gratuita para Android con más de 20 modelos offline, imágenes Stable Diffusion y 15 kits de prompts. Anuncios, privacidad y límites.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/es/power-local-llm/local-ai-geetmark-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Local AI: Offline Chat & Image: app gratuito para Android com Stable Diffusion e kits de prompts",
+    "excerpt": "Análise do Local AI: Offline Chat & Image: app gratuito para Android com mais de 20 modelos offline, imagens Stable Diffusion e 15 kits de prompts. Anúncios, privacidade e limites.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/pt/power-local-llm/local-ai-geetmark-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Local AI: Offline Chat & Image: تطبيق Android مجاني مع Stable Diffusion وحزم أدوات للمطالبات",
+    "excerpt": "مراجعة Local AI: Offline Chat & Image: تطبيق Android مجاني بأكثر من 20 نموذجًا دون اتصال وصور Stable Diffusion و15 حزمة مطالبات. الإعلانات والخصوصية والحدود.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ar/power-local-llm/local-ai-geetmark-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Local AI: Offline Chat & Image 리뷰: Stable Diffusion과 프롬프트 툴킷을 갖춘 무료 Android 앱",
+    "excerpt": "Local AI: Offline Chat & Image 리뷰: 오프라인 모델 20종 이상, Stable Diffusion 이미지, 프롬프트 툴킷 15종을 갖춘 무료 Android 앱. 광고, 개인정보, 한계.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ko/power-local-llm/local-ai-geetmark-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Local AI Mail Review: Brand-New Android Email Client with an On-Device AI",
+    "excerpt": "Local AI Mail review: a very early Android email client that summarizes, translates and drafts replies with on-device AI. 0+ downloads, untested.",
+    "publishDate": "2026-10-11",
+    "dateModified": "2026-10-11",
+    "url": "/power-local-llm/local-ai-mail-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Local AI Mail im Test: brandneue Android-E-Mail-App mit KI auf dem Gerät",
+    "excerpt": "Local AI Mail im Test: sehr frühe Android-E-Mail-App mit KI auf dem Gerät für Zusammenfassungen, Übersetzung und Antworten. 0+ Downloads, ungetestet.",
+    "publishDate": "2026-10-11",
+    "dateModified": "2026-10-11",
+    "url": "/de/power-local-llm/local-ai-mail-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Avis Local AI Mail : un client e-mail Android tout récent avec une IA sur l'appareil",
+    "excerpt": "Avis Local AI Mail : client e-mail Android très récent qui résume, traduit et rédige des réponses avec une IA sur l'appareil. 0+ téléchargements.",
+    "publishDate": "2026-10-11",
+    "dateModified": "2026-10-11",
+    "url": "/fr/power-local-llm/local-ai-mail-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Local AI Mail レビュー：端末内AIを搭載した公開直後のAndroidメールアプリ",
+    "excerpt": "Local AI Mail レビュー：端末内AIでメールを要約・翻訳し返信を下書きする、公開直後のAndroidメールアプリ。ダウンロード数0+、ソース非公開、未検証。",
+    "publishDate": "2026-10-11",
+    "dateModified": "2026-10-11",
+    "url": "/ja/power-local-llm/local-ai-mail-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Local AI Mail 评测：刚刚上线、内置设备端 AI 的 Android 邮件应用",
+    "excerpt": "Local AI Mail 评测：刚上线的 Android 邮件应用，用设备端 AI 总结、翻译邮件并起草回复。下载量 0+，未公开源码，未经测试。",
+    "publishDate": "2026-10-11",
+    "dateModified": "2026-10-11",
+    "url": "/zh/power-local-llm/local-ai-mail-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de Local AI Mail: un cliente de correo para Android recién salido con IA en el dispositivo",
+    "excerpt": "Análisis de Local AI Mail: cliente de correo para Android muy temprano que resume, traduce y redacta respuestas con IA en el dispositivo. 0+ descargas.",
+    "publishDate": "2026-10-11",
+    "dateModified": "2026-10-11",
+    "url": "/es/power-local-llm/local-ai-mail-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Local AI Mail: cliente de e-mail para Android recém-lançado com IA no aparelho",
+    "excerpt": "Análise do Local AI Mail: cliente de e-mail para Android muito inicial que resume, traduz e redige respostas com IA no aparelho. 0+ downloads.",
+    "publishDate": "2026-10-11",
+    "dateModified": "2026-10-11",
+    "url": "/pt/power-local-llm/local-ai-mail-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Local AI Mail: تطبيق بريد إلكتروني جديد كليًا لنظام Android بذكاء اصطناعي على الجهاز",
+    "excerpt": "مراجعة Local AI Mail: تطبيق بريد مبكر جدًا لنظام Android يلخّص الرسائل ويترجمها ويصيغ الردود بذكاء اصطناعي على الجهاز. 0+ تنزيل.",
+    "publishDate": "2026-10-11",
+    "dateModified": "2026-10-11",
+    "url": "/ar/power-local-llm/local-ai-mail-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Local AI Mail 리뷰: 기기 내 AI를 갖춘 출시 직후의 Android 메일 앱",
+    "excerpt": "Local AI Mail 리뷰: 기기 내 AI로 메일을 요약·번역하고 답장 초안을 쓰는 출시 직후의 Android 메일 앱. 다운로드 0+, 소스 미공개, 미검증.",
+    "publishDate": "2026-10-11",
+    "dateModified": "2026-10-11",
+    "url": "/ko/power-local-llm/local-ai-mail-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "pcAI Photo Retouch Review: Offline Photo Restoration and Art Styles on iPhone and Mac",
+    "excerpt": "pcAI Photo Retouch review: free-to-install iPhone and Mac app that restores old photos with on-device AI. No update since February 2026, untested.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "pcAI Photo Retouch im Test: Foto-Restaurierung und Kunststile offline auf iPhone und Mac",
+    "excerpt": "pcAI Photo Retouch im Test: kostenlose iPhone- und Mac-App, die alte Fotos mit KI auf dem Gerät restauriert. Seit Februar 2026 ohne Update, ungetestet.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/de/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de pcAI Photo Retouch : restauration de photos et styles artistiques hors ligne sur iPhone et Mac",
+    "excerpt": "Test de pcAI Photo Retouch : appli iPhone et Mac qui restaure les vieilles photos avec une IA locale. Sans mise à jour depuis février 2026, non testée.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/fr/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "pcAI Photo Retouchレビュー:iPhoneとMacでオフライン写真修復とアートスタイル",
+    "excerpt": "pcAI Photo Retouchのレビュー。端末内AIで古い写真を修復する、無料でインストールできるiPhone・Mac向けアプリ。2026年2月以降は更新なし、未検証。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ja/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "pcAI Photo Retouch评测:iPhone和Mac上的离线照片修复与艺术风格",
+    "excerpt": "pcAI Photo Retouch评测:可免费安装的iPhone和Mac应用,用设备端AI修复老照片并应用艺术风格。2026年2月起未更新,尚未经过实际测试。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/zh/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de pcAI Photo Retouch: restauración de fotos y estilos artísticos sin conexión en iPhone y Mac",
+    "excerpt": "Análisis de pcAI Photo Retouch: app para iPhone y Mac que restaura fotos antiguas con IA local. Sin actualizaciones desde febrero de 2026, sin probar.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/es/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do pcAI Photo Retouch: restauração de fotos e estilos artísticos offline no iPhone e no Mac",
+    "excerpt": "Análise do pcAI Photo Retouch: app para iPhone e Mac que restaura fotos antigas com IA no aparelho. Sem atualização desde fevereiro de 2026, não testado.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/pt/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة pcAI Photo Retouch: ترميم الصور وأنماط فنية دون اتصال على iPhone وMac",
+    "excerpt": "مراجعة pcAI Photo Retouch: تطبيق iPhone وMac مجاني التثبيت يرمّم الصور القديمة بذكاء اصطناعي على الجهاز. لا تحديث منذ فبراير 2026 وغير مُختبَر.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ar/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "pcAI Photo Retouch 리뷰: iPhone·Mac의 오프라인 사진 복원과 아트 스타일",
+    "excerpt": "pcAI Photo Retouch 리뷰. 기기 내 AI로 오래된 사진을 복원하는 무료 설치 iPhone·Mac 앱. 2026년 2월 이후 업데이트 없음, 미검증.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ko/power-local-llm/pcai-photo-retouch-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Honey LLM Review: Offline AI Chat and Document Q&A for Android",
+    "excerpt": "Honey LLM review: an Android app for offline AI chat and document Q&A with a free demo and a one-time unlock. Source not published, claims not yet tested.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/power-local-llm/honey-llm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Honey LLM im Test: Offline-KI-Chat und Dokumentenfragen für Android",
+    "excerpt": "Honey LLM im Test: Android-App für Offline-KI-Chat und Dokumentenfragen, kostenlose Demo und einmalige Freischaltung. Quellcode nicht veröffentlicht.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/de/power-local-llm/honey-llm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Honey LLM : chat IA hors ligne et questions sur vos documents sur Android",
+    "excerpt": "Test de Honey LLM : application Android de chat IA hors ligne et de questions sur documents, démo gratuite et déblocage unique. Code non publié.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/fr/power-local-llm/honey-llm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Honey LLM レビュー：Android向けオフラインAIチャットと文書Q&A",
+    "excerpt": "Honey LLM レビュー：オフラインAIチャットと文書Q&Aを備えたAndroidアプリ。無料デモと買い切りの解除方式。ソース非公開で、動作は未検証です。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ja/power-local-llm/honey-llm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Honey LLM 评测：Android 上的离线 AI 聊天与文档问答",
+    "excerpt": "Honey LLM 评测：支持离线 AI 聊天和文档问答的 Android 应用，提供免费试用和一次性解锁。源码未公开，功能尚未经过 PromptQuorum 实测。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/zh/power-local-llm/honey-llm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Honey LLM: chat de IA sin conexión y preguntas sobre documentos en Android",
+    "excerpt": "Reseña de Honey LLM: app de Android de chat de IA sin conexión y preguntas sobre documentos, con demo gratuita y desbloqueo único. Código no publicado.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/es/power-local-llm/honey-llm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Honey LLM: chat de IA offline e perguntas sobre documentos no Android",
+    "excerpt": "Análise do Honey LLM: app Android de chat de IA offline e perguntas sobre documentos, com demo grátis e desbloqueio único. Código não publicado.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/pt/power-local-llm/honey-llm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Honey LLM: دردشة ذكاء اصطناعي دون إنترنت وأسئلة عن المستندات على Android",
+    "excerpt": "مراجعة Honey LLM: تطبيق Android للدردشة بالذكاء الاصطناعي دون إنترنت والأسئلة عن المستندات، مع نسخة مجانية وفتح لمرة واحدة. شيفرته غير منشورة ولم يُختبر.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ar/power-local-llm/honey-llm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Honey LLM 리뷰: Android용 오프라인 AI 채팅과 문서 질의응답",
+    "excerpt": "Honey LLM 리뷰: 오프라인 AI 채팅과 문서 질의응답을 제공하는 Android 앱. 무료 체험과 1회 결제 해제 방식이며 소스는 비공개이고 미검증입니다.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ko/power-local-llm/honey-llm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "FriedrichAI Review: Offline Windows AI Assistant Sold on Steam",
+    "excerpt": "FriedrichAI review: a paid offline AI assistant for Windows sold on Steam, with local memory, image/video/audio packs, no account. Hardware, privacy, limits.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/power-local-llm/friedrichai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "FriedrichAI-Rezension: Offline-KI-Assistent für Windows, verkauft auf Steam",
+    "excerpt": "FriedrichAI-Rezension: ein kostenpflichtiger Offline-KI-Assistent für Windows auf Steam mit lokalem Gedächtnis, Bild-/Video-/Audiopaketen, ohne Konto. Hardware, Datenschutz, Grenzen.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/de/power-local-llm/friedrichai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Avis FriedrichAI : assistant IA hors ligne pour Windows, vendu sur Steam",
+    "excerpt": "Avis FriedrichAI : assistant IA hors ligne payant pour Windows, vendu sur Steam, avec mémoire locale, packs image/vidéo/audio, sans compte. Matériel, confidentialité, limites.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/fr/power-local-llm/friedrichai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "FriedrichAIレビュー:Steamで販売されるオフラインのWindows向けAIアシスタント",
+    "excerpt": "FriedrichAIレビュー:Steamで販売される、Windows向けの有料オフラインAIアシスタント。ローカルメモリ、画像・動画・音声パック、アカウント不要。ハードウェア、プライバシー、制約を解説します。",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ja/power-local-llm/friedrichai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "FriedrichAI 评测:在 Steam 上销售的离线 Windows AI 助手",
+    "excerpt": "FriedrichAI 评测:一款在 Steam 上销售的付费 Windows 离线 AI 助手,含本地记忆、图像/视频/音频包,无需账号。涵盖硬件、隐私与局限。",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/zh/power-local-llm/friedrichai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de FriedrichAI: asistente de IA offline para Windows que se vende en Steam",
+    "excerpt": "Análisis de FriedrichAI: asistente de IA offline de pago para Windows en Steam, con memoria local, paquetes de imagen/vídeo/audio y sin cuenta. Hardware y privacidad.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/es/power-local-llm/friedrichai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "FriedrichAI: Análise do Assistente de IA Offline para Windows Vendido na Steam",
+    "excerpt": "Análise do FriedrichAI: assistente de IA offline para Windows vendido na Steam, com memória local, pacotes de imagem/vídeo/áudio e sem conta. Hardware, privacidade e limites.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/pt/power-local-llm/friedrichai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة FriedrichAI: مساعد ذكاء اصطناعي لويندوز يعمل دون اتصال ويُباع على Steam",
+    "excerpt": "مراجعة FriedrichAI: مساعد ذكاء اصطناعي مدفوع لويندوز دون اتصال يُباع على Steam بذاكرة محلية وحزم صور وفيديو وصوت ودون حساب. العتاد والخصوصية والقيود.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ar/power-local-llm/friedrichai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "FriedrichAI 리뷰: Steam에서 판매하는 오프라인 Windows AI 어시스턴트",
+    "excerpt": "FriedrichAI 리뷰: 로컬 메모리와 이미지·영상·오디오 팩을 갖추고 계정 없이 쓰는, Steam에서 판매하는 유료 오프라인 Windows AI 어시스턴트입니다. 하드웨어, 개인정보, 한계를 정리했습니다.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ko/power-local-llm/friedrichai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "SpiritBox Ultimate Review: Windows Early Access for LM Studio Users",
+    "excerpt": "SpiritBox Ultimate review: Windows Early Access app for LM Studio users with Guides, saved chats and spoken replies. Needs Docker; testing limits shown.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/power-local-llm/spiritbox-ultimate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "SpiritBox-Ultimate-Rezension: Windows Early Access für LM-Studio-Nutzer",
+    "excerpt": "SpiritBox-Ultimate-Rezension: Early-Access-App für Windows und LM Studio mit Guides, gespeicherten Chats, Sprachausgabe. Braucht Docker; Grenzen genannt.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/de/power-local-llm/spiritbox-ultimate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Avis SpiritBox Ultimate : accès anticipé sous Windows pour les utilisateurs de LM Studio",
+    "excerpt": "Avis SpiritBox Ultimate : appli Windows en Early Access pour LM Studio, avec Guides, discussions enregistrées et voix. Exige Docker ; limites des tests.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/fr/power-local-llm/spiritbox-ultimate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "SpiritBox Ultimateレビュー：LM Studioユーザー向けWindows先行アクセス版",
+    "excerpt": "SpiritBox Ultimateレビュー：LM Studioユーザー向けWindows先行アクセスアプリ。Guide会話、保存チャット、音声返答に対応し、Docker必須。検証の限界も解説します。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ja/power-local-llm/spiritbox-ultimate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "SpiritBox Ultimate 评测：面向 LM Studio 用户的 Windows 抢先体验版",
+    "excerpt": "SpiritBox Ultimate 评测：面向 LM Studio 用户的 Windows 抢先体验应用，含 Guide 对话、已保存聊天和语音回复。需要 Docker，并说明测试局限。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/zh/power-local-llm/spiritbox-ultimate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de SpiritBox Ultimate: Early Access para Windows con LM Studio",
+    "excerpt": "Análisis de SpiritBox Ultimate: app en Early Access para Windows y LM Studio, con Guides, chats guardados y voz. Requiere Docker; límites de las pruebas.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/es/power-local-llm/spiritbox-ultimate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do SpiritBox Ultimate: Early Access para Windows com LM Studio",
+    "excerpt": "Análise do SpiritBox Ultimate: app em Early Access para Windows e LM Studio, com Guides, chats salvos e voz. Exige Docker; limites dos testes explicados.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/pt/power-local-llm/spiritbox-ultimate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة SpiritBox Ultimate: وصول مبكر لويندوز لمستخدمي LM Studio",
+    "excerpt": "مراجعة SpiritBox Ultimate: تطبيق وصول مبكر لويندوز لمستخدمي LM Studio يضم Guides ومحادثات محفوظة وردودًا منطوقة. يتطلب Docker، مع شرح حدود الاختبار.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ar/power-local-llm/spiritbox-ultimate-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "SpiritBox Ultimate 리뷰: LM Studio 사용자를 위한 Windows 얼리 액세스",
+    "excerpt": "SpiritBox Ultimate 리뷰: LM Studio 사용자용 Windows 얼리 액세스 앱. Guide 대화, 저장 채팅, 음성 답변 제공. Docker 필요, 테스트 한계 설명.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ko/power-local-llm/spiritbox-ultimate-review",
     "cluster": "power-local-llm"
   },
   {
@@ -38796,6 +39444,87 @@
     "publishDate": "2026-10-04",
     "dateModified": "2026-10-04",
     "url": "/ko/power-local-llm/tina-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Return Editor Review: Local-First AI Contract Review for Mac and Windows",
+    "excerpt": "Return Editor review: a desktop app for Mac and Windows with contract risk flags, cited answers and a free local AI. Privacy, pricing, limits.",
+    "publishDate": "2026-10-10",
+    "dateModified": "2026-10-16",
+    "url": "/power-local-llm/return-editor-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Return-Editor-Rezension: Lokale KI zur Vertragsprüfung für Mac und Windows",
+    "excerpt": "Return-Editor-Rezension: Desktop-Vertragsprüfung für Mac und Windows mit Risikomarkierungen, zitierten Antworten und kostenloser lokaler KI. Datenschutz, Preise, Grenzen.",
+    "publishDate": "2026-10-10",
+    "dateModified": "2026-10-16",
+    "url": "/de/power-local-llm/return-editor-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Avis Return Editor : revue de contrats par IA locale pour Mac et Windows",
+    "excerpt": "Avis Return Editor : revue de contrats sur Mac et Windows avec alertes de risque, réponses citées et IA locale gratuite. Confidentialité, prix, limites.",
+    "publishDate": "2026-10-10",
+    "dateModified": "2026-10-16",
+    "url": "/fr/power-local-llm/return-editor-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Return Editorレビュー：MacとWindowsで使えるローカルAI契約書レビュー",
+    "excerpt": "Return Editorレビュー：MacとWindowsの契約書レビューアプリ。リスク表示、出典付き回答、無料のローカルAI。プライバシー、料金、制約を解説。",
+    "publishDate": "2026-10-10",
+    "dateModified": "2026-10-16",
+    "url": "/ja/power-local-llm/return-editor-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Return Editor 评测：适用于 Mac 和 Windows 的本地 AI 合同审查",
+    "excerpt": "Return Editor 评测：适用于 Mac 和 Windows 的合同审查应用，含风险标记、带引用的回答和免费本地 AI。隐私、定价与局限。",
+    "publishDate": "2026-10-10",
+    "dateModified": "2026-10-16",
+    "url": "/zh/power-local-llm/return-editor-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de Return Editor: revisión de contratos con IA local para Mac y Windows",
+    "excerpt": "Análisis de Return Editor: revisión de contratos en Mac y Windows con alertas de riesgo, respuestas citadas e IA local gratuita. Privacidad, precios y límites.",
+    "publishDate": "2026-10-10",
+    "dateModified": "2026-10-16",
+    "url": "/es/power-local-llm/return-editor-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Return Editor: revisão de contratos com IA local para Mac e Windows",
+    "excerpt": "Análise do Return Editor: revisão de contratos no Mac e no Windows com alertas de risco, respostas citadas e IA local gratuita. Privacidade, preços e limites.",
+    "publishDate": "2026-10-10",
+    "dateModified": "2026-10-16",
+    "url": "/pt/power-local-llm/return-editor-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Return Editor: مراجعة العقود بالذكاء الاصطناعي المحلي لنظامي Mac وWindows",
+    "excerpt": "مراجعة Return Editor: مراجعة عقود لـ Mac وWindows مع تنبيهات مخاطر وإجابات موثّقة وذكاء اصطناعي محلي مجاني. الخصوصية والأسعار والحدود.",
+    "publishDate": "2026-10-10",
+    "dateModified": "2026-10-16",
+    "url": "/ar/power-local-llm/return-editor-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Return Editor 리뷰: Mac과 Windows용 로컬 AI 계약서 검토",
+    "excerpt": "Return Editor 리뷰: Mac과 Windows용 계약서 검토 앱. 위험 표시, 출처 인용 답변, 무료 로컬 AI. 개인정보, 가격, 한계를 정리했습니다.",
+    "publishDate": "2026-10-10",
+    "dateModified": "2026-10-16",
+    "url": "/ko/power-local-llm/return-editor-review",
     "cluster": "power-local-llm"
   },
   {
@@ -42608,81 +43337,81 @@
   {
     "lang": "en",
     "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
-    "excerpt": "oMLX is a free, open-source MLX inference server for Apple Silicon with a menu-bar app, paged SSD caching, and OpenAI/Anthropic-compatible endpoints. 2026 review.",
+    "excerpt": "What is oMLX? A free, open-source MLX server for Apple Silicon Macs with paged SSD caching. Install via Homebrew; compared with mlx-lm and mlx-serve.",
     "publishDate": "2026-09-18",
-    "dateModified": "2026-09-18",
+    "dateModified": "2026-10-09",
     "url": "/power-local-llm/omlx-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "oMLX Review: Inferenzserver für Apple Silicon mit SSD-Caching",
-    "excerpt": "oMLX ist ein kostenloser, quelloffener MLX-Inferenzserver für Apple Silicon mit Menüleisten-App, paginiertem SSD-Cache und OpenAI-/Anthropic-kompatiblen Endpunkten. Review 2026.",
+    "excerpt": "Was ist oMLX? Kostenloser, quelloffener MLX-Server für Apple-Silicon-Macs mit SSD-Cache. Installation per Homebrew; Vergleich mit mlx-lm und mlx-serve.",
     "publishDate": "2026-09-18",
-    "dateModified": "2026-09-18",
+    "dateModified": "2026-10-09",
     "url": "/de/power-local-llm/omlx-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "oMLX Review: serveur d'inférence Apple Silicon avec cache SSD",
-    "excerpt": "oMLX est un serveur d'inférence MLX gratuit et open source pour Apple Silicon, avec app barre de menus, cache SSD paginé et points de terminaison OpenAI/Anthropic. Review 2026.",
+    "excerpt": "Qu'est-ce qu'oMLX ? Serveur MLX gratuit et open source pour Mac Apple Silicon, avec cache SSD. Installation via Homebrew ; comparé à mlx-lm et mlx-serve.",
     "publishDate": "2026-09-18",
-    "dateModified": "2026-09-18",
+    "dateModified": "2026-10-09",
     "url": "/fr/power-local-llm/omlx-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "oMLXレビュー：SSDキャッシュ搭載のApple Silicon推論サーバー",
-    "excerpt": "oMLXは、メニューバーアプリ、ページ化SSDキャッシュ、OpenAI/Anthropic互換エンドポイントを備えた、Apple Silicon向けの無料・オープンソースMLX推論サーバーです。2026年レビュー。",
+    "excerpt": "oMLXとは？ページ化SSDキャッシュを備えた、Apple Silicon Mac向けの無料・オープンソースMLXサーバーです。Homebrewでの導入方法とmlx-lm・mlx-serveとの比較を解説します。",
     "publishDate": "2026-09-18",
-    "dateModified": "2026-09-18",
+    "dateModified": "2026-10-09",
     "url": "/ja/power-local-llm/omlx-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "oMLX评测：带SSD缓存的Apple Silicon推理服务器",
-    "excerpt": "oMLX是一款面向Apple Silicon的免费开源MLX推理服务器，拥有菜单栏应用、分页SSD缓存以及兼容OpenAI/Anthropic的端点。2026年评测。",
+    "excerpt": "oMLX是什么？一款面向Apple Silicon Mac的免费开源MLX服务器，带分页SSD缓存。可通过Homebrew安装，并与mlx-lm、mlx-serve对比。",
     "publishDate": "2026-09-18",
-    "dateModified": "2026-09-18",
+    "dateModified": "2026-10-09",
     "url": "/zh/power-local-llm/omlx-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "oMLX Review: servidor de inferencia para Apple Silicon con caché en SSD",
-    "excerpt": "oMLX es un servidor de inferencia MLX gratuito y de código abierto para Apple Silicon, con app en la barra de menús, caché SSD paginada y endpoints compatibles con OpenAI/Anthropic. Review 2026.",
+    "excerpt": "¿Qué es oMLX? Servidor MLX gratuito y de código abierto para Mac con Apple Silicon y caché SSD. Instalación con Homebrew; comparado con mlx-lm y mlx-serve.",
     "publishDate": "2026-09-18",
-    "dateModified": "2026-09-18",
+    "dateModified": "2026-10-09",
     "url": "/es/power-local-llm/omlx-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "oMLX Review: servidor de inferência para Apple Silicon com cache em SSD",
-    "excerpt": "O oMLX é um servidor de inferência MLX gratuito e de código aberto para Apple Silicon, com app na barra de menus, cache SSD paginado e endpoints compatíveis com OpenAI/Anthropic. Review 2026.",
+    "excerpt": "O que é o oMLX? Servidor MLX gratuito e de código aberto para Macs Apple Silicon, com cache SSD. Instalação via Homebrew; comparado com mlx-lm e mlx-serve.",
     "publishDate": "2026-09-18",
-    "dateModified": "2026-09-18",
+    "dateModified": "2026-10-09",
     "url": "/pt/power-local-llm/omlx-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "مراجعة oMLX: خادم استدلال لـ Apple Silicon مع تخزين مؤقت على SSD",
-    "excerpt": "oMLX خادم استدلال MLX مجاني ومفتوح المصدر لـ Apple Silicon، مع تطبيق شريط قوائم وذاكرة تخزين مؤقت SSD مقسّمة ونقاط نهاية متوافقة مع OpenAI/Anthropic. مراجعة 2026.",
+    "excerpt": "ما هو oMLX؟ خادم MLX مجاني ومفتوح المصدر لأجهزة Mac بمعالجات Apple Silicon مع ذاكرة SSD مؤقتة. التثبيت عبر Homebrew ومقارنة مع mlx-lm وmlx-serve.",
     "publishDate": "2026-09-18",
-    "dateModified": "2026-09-18",
+    "dateModified": "2026-10-09",
     "url": "/ar/power-local-llm/omlx-review",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "oMLX 리뷰: SSD 캐싱을 지원하는 Apple Silicon 추론 서버",
-    "excerpt": "oMLX는 메뉴 바 앱, 페이지 처리된 SSD 캐시, OpenAI/Anthropic 호환 엔드포인트를 갖춘 Apple Silicon용 무료 오픈소스 MLX 추론 서버입니다. 2026년 리뷰.",
+    "excerpt": "oMLX란? 페이지 단위 SSD 캐시를 갖춘 Apple Silicon Mac용 무료 오픈소스 MLX 서버입니다. Homebrew 설치 방법과 mlx-lm, mlx-serve 비교까지 정리했습니다.",
     "publishDate": "2026-09-18",
-    "dateModified": "2026-09-18",
+    "dateModified": "2026-10-09",
     "url": "/ko/power-local-llm/omlx-review",
     "cluster": "power-local-llm"
   },
@@ -44223,6 +44952,87 @@
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
     "url": "/ko/power-local-llm/baserow-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Firecrawl Review: Open-Source Web Data API for LLM Pipelines",
+    "excerpt": "Firecrawl turns websites into LLM-ready markdown or JSON through an AGPL-3.0 API. Self-hosting, Ollama support, pricing and limits explained.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/power-local-llm/firecrawl-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Firecrawl Review: Open-Source-Web-Daten-API für LLM-Pipelines",
+    "excerpt": "Firecrawl ist eine AGPL-3.0-Web-Daten-API, die Websites in LLM-taugliches Markdown oder JSON umwandelt. Self-Hosting, Ollama, Preise und Grenzen erklärt.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/de/power-local-llm/firecrawl-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Firecrawl : API de données web open source pour pipelines LLM",
+    "excerpt": "Firecrawl est une API web AGPL-3.0 qui convertit les sites en Markdown ou JSON prêt pour les LLM. Auto-hébergement, Ollama, tarifs et limites.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/fr/power-local-llm/firecrawl-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Firecrawlレビュー：LLMパイプライン向けオープンソースWebデータAPI",
+    "excerpt": "FirecrawlはWebサイトをLLM向けマークダウンやJSONに変換するAGPL-3.0のWebデータAPIです。セルフホスト、Ollama対応、料金、制限を解説します。",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/ja/power-local-llm/firecrawl-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Firecrawl评测：面向LLM流水线的开源网页数据API",
+    "excerpt": "Firecrawl是AGPL-3.0开源网页数据API，可把网站转换为适合LLM的Markdown或JSON。本文解析自托管、Ollama支持、价格与限制。",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/zh/power-local-llm/firecrawl-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Firecrawl: API de datos web de código abierto para pipelines de LLM",
+    "excerpt": "Firecrawl es una API de datos web AGPL-3.0 que convierte sitios en Markdown o JSON listo para LLM. Autoalojamiento, Ollama, precios y límites explicados.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/es/power-local-llm/firecrawl-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Firecrawl: API de dados da web de código aberto para pipelines de LLM",
+    "excerpt": "O Firecrawl é uma API da web AGPL-3.0 que converte sites em Markdown ou JSON pronto para LLM. Auto-hospedagem, Ollama, preços e limites explicados.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/pt/power-local-llm/firecrawl-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Firecrawl: واجهة بيانات ويب مفتوحة المصدر لمسارات LLM",
+    "excerpt": "Firecrawl واجهة بيانات ويب مفتوحة المصدر بترخيص AGPL-3.0 تحوّل المواقع إلى Markdown أو JSON جاهز لـ LLM. شرح الاستضافة الذاتية وOllama والأسعار والحدود.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/ar/power-local-llm/firecrawl-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Firecrawl 리뷰: LLM 파이프라인을 위한 오픈소스 웹 데이터 API",
+    "excerpt": "Firecrawl은 웹사이트를 LLM용 마크다운이나 JSON으로 변환하는 AGPL-3.0 웹 데이터 API입니다. 셀프호스팅, Ollama, 요금, 제한을 설명합니다.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/ko/power-local-llm/firecrawl-review",
     "cluster": "power-local-llm"
   },
   {
@@ -46086,6 +46896,87 @@
     "publishDate": "2026-09-25",
     "dateModified": "2026-09-25",
     "url": "/ko/power-local-llm/radiant-canvas",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "AI CutoutWerk Review: Offline AI Background Remover for iPhone, iPad and Mac",
+    "excerpt": "AI CutoutWerk review: free Apple app for offline AI background removal and cutout collages on iPhone, iPad and Mac, plus prices and update status.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "AI CutoutWerk Review: Offline-KI-Freisteller für iPhone, iPad und Mac",
+    "excerpt": "AI CutoutWerk Review: Apple-App für Hintergrundentfernung und Freisteller-Collagen offline auf iPhone, iPad und Mac – mit Preisen und Update-Status.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/de/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test d'AI CutoutWerk : détourage IA hors ligne pour iPhone, iPad et Mac",
+    "excerpt": "Test d'AI CutoutWerk : app Apple gratuite de détourage IA et de compositions hors ligne sur iPhone, iPad et Mac, avec prix et état des mises à jour.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/fr/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "AI CutoutWerkレビュー：iPhone・iPad・Mac向けオフラインAI切り抜きアプリ",
+    "excerpt": "AI CutoutWerkのレビュー。iPhone・iPad・Macでオフラインに背景削除と切り抜き合成ができる無料ダウンロードのAppleアプリを、価格・プライバシー・更新状況とともに解説します。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ja/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "AI CutoutWerk评测：适用于iPhone、iPad和Mac的离线AI抠图应用",
+    "excerpt": "AI CutoutWerk评测：可免费下载的苹果应用，在iPhone、iPad和Mac上离线完成AI抠图与合成，并介绍应用内购买价格、隐私情况和更新状态。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/zh/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de AI CutoutWerk: recorte de fondo con IA sin conexión para iPhone, iPad y Mac",
+    "excerpt": "Reseña de AI CutoutWerk: app de Apple gratuita para recortar fondos con IA y crear composiciones sin conexión en iPhone, iPad y Mac, con precios y estado.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/es/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do AI CutoutWerk: recorte de fundo com IA offline para iPhone, iPad e Mac",
+    "excerpt": "Análise do AI CutoutWerk: app da Apple gratuito para remover fundo com IA e criar composições offline no iPhone, iPad e Mac, com preços e status.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/pt/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة AI CutoutWerk: تطبيق إزالة الخلفية بالذكاء الاصطناعي دون اتصال لأجهزة iPhone وiPad وMac",
+    "excerpt": "مراجعة AI CutoutWerk: تطبيق Apple مجاني لإزالة خلفيات الصور وتركيب المقتطعات دون اتصال على iPhone وiPad وMac، مع الأسعار والخصوصية وحالة التحديث.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ar/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "AI CutoutWerk 리뷰: iPhone, iPad, Mac용 오프라인 AI 배경 제거 앱",
+    "excerpt": "AI CutoutWerk 리뷰: iPhone, iPad, Mac에서 오프라인으로 AI 배경 제거와 컷아웃 합성을 하는 무료 다운로드 Apple 앱의 가격, 개인정보, 업데이트 상태를 정리했습니다.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ko/power-local-llm/ai-cutoutwerk-review",
     "cluster": "power-local-llm"
   },
   {
@@ -55163,81 +56054,81 @@
   {
     "lang": "en",
     "title": "Is Balcony Solar Legal in Connecticut?",
-    "excerpt": "Signed, not yet in effect. HB 5340 takes effect October 1, 2026 as part of a broader omnibus solar bill, with a 1,200W cap. Quick answer from PromptQuorum.",
+    "excerpt": "In effect since October 1, 2026. HB 5340 is part of a broader omnibus solar bill, with a 1,200W cap. Quick answer from PromptQuorum.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "de",
     "title": "Ist Balkonsolar in Connecticut legal?",
-    "excerpt": "Unterzeichnet, aber noch nicht in Kraft. HB 5340 tritt am 1. Oktober 2026 im Rahmen eines umfassenderen Solar-Sammelgesetzes in Kraft, mit einer Obergrenze von 1.200 W. Kurzantwort von PromptQuorum.",
+    "excerpt": "In Kraft seit dem 1. Oktober 2026. HB 5340 ist Teil eines umfassenderen Solar-Sammelgesetzes, mit einer Obergrenze von 1.200 W. Kurzantwort von PromptQuorum.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/de/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "fr",
     "title": "Le solaire de balcon est-il légal dans le Connecticut ?",
-    "excerpt": "Signée, pas encore en vigueur. La loi HB 5340 entre en vigueur le 1er octobre 2026 dans le cadre d'une loi solaire omnibus, avec un plafond de 1 200 W. Réponse rapide de PromptQuorum.",
+    "excerpt": "En vigueur depuis le 1er octobre 2026. La loi HB 5340 s'inscrit dans une loi solaire omnibus, avec un plafond de 1 200 W. Réponse rapide de PromptQuorum.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/fr/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ja",
     "title": "コネチカット州でバルコニーソーラーは合法ですか？",
-    "excerpt": "署名済みですが、まだ発効していません。HB 5340は包括的なソーラー法案の一部として2026年10月1日に発効し、上限は1,200Wです。PromptQuorumによるクイックアンサー。",
+    "excerpt": "2026年10月1日から施行済みです。HB 5340は包括的なソーラー法案の一部で、上限は1,200Wです。PromptQuorumによるクイックアンサー。",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/ja/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "zh",
     "title": "康涅狄格州的阳台太阳能合法吗？",
-    "excerpt": "已签署，但尚未生效。HB 5340作为一项更广泛的综合太阳能法案的一部分，将于2026年10月1日生效，功率上限为1,200W。来自PromptQuorum的快速解答。",
+    "excerpt": "自2026年10月1日起已生效。HB 5340是更广泛的综合太阳能法案的一部分，功率上限为1,200W。来自PromptQuorum的快速解答。",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/zh/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "es",
     "title": "¿Es legal la energía solar de balcón en Connecticut?",
-    "excerpt": "Firmada, pero aún no vigente. La HB 5340 entra en vigor el 1 de octubre de 2026 como parte de una ley solar general más amplia, con un límite de 1,200W. Respuesta rápida de PromptQuorum.",
+    "excerpt": "En vigor desde el 1 de octubre de 2026. La HB 5340 forma parte de una ley solar general más amplia, con un límite de 1,200W. Respuesta rápida de PromptQuorum.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/es/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
     "title": "A energia solar de varanda é legal em Connecticut?",
-    "excerpt": "Sancionada, mas ainda não em vigor. A HB 5340 entra em vigor em 1º de outubro de 2026 como parte de uma lei solar abrangente mais ampla, com limite de 1.200W. Resposta rápida da PromptQuorum.",
+    "excerpt": "Em vigor desde 1º de outubro de 2026. A HB 5340 faz parte de uma lei solar abrangente mais ampla, com limite de 1.200W. Resposta rápida da PromptQuorum.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/pt/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ar",
     "title": "هل الطاقة الشمسية للشرفات قانونية في كونيتيكت؟",
-    "excerpt": "تم التوقيع عليه، لكنه لم يدخل حيز التنفيذ بعد. يدخل HB 5340 حيز التنفيذ في 1 أكتوبر 2026 كجزء من مشروع قانون شامل للطاقة الشمسية، بحد أقصى 1,200 واط. إجابة سريعة من PromptQuorum.",
+    "excerpt": "ساري المفعول منذ 1 أكتوبر 2026. HB 5340 جزء من مشروع قانون شامل للطاقة الشمسية، بحد أقصى 1,200 واط. إجابة سريعة من PromptQuorum.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/ar/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ko",
     "title": "코네티컷주에서 발코니 태양광은 합법입니까?",
-    "excerpt": "서명되었지만 아직 시행되지 않았습니다. HB 5340은 포괄적인 태양광 법안의 일부로 2026년 10월 1일에 시행되며, 상한선은 1,200W입니다. PromptQuorum의 빠른 답변입니다.",
+    "excerpt": "2026년 10월 1일부터 시행 중입니다. HB 5340은 포괄적인 태양광 법안의 일부이며, 상한선은 1,200W입니다. PromptQuorum의 빠른 답변입니다.",
     "publishDate": "2026-07-16",
-    "dateModified": "2026-07-16",
+    "dateModified": "2026-10-16",
     "url": "/ko/prompt-bites/is-balcony-solar-legal-connecticut",
     "cluster": "prompt-bites"
   },
@@ -55325,81 +56216,81 @@
   {
     "lang": "en",
     "title": "Is Balcony Solar Legal in California?",
-    "excerpt": "Not yet — SB 868 passed the legislature and awaits Governor Newsom's signature by September 30, 2026. Would cap devices at 1,200W. Quick answer from PromptQuorum.",
+    "excerpt": "Signed, not yet in effect. California SB 868 takes effect January 1, 2027 with a 1,200W cap per dwelling. Quick answer from PromptQuorum.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "de",
     "title": "Ist Balkonsolar in Kalifornien legal?",
-    "excerpt": "Noch nicht – SB 868 hat das Parlament passiert und wartet auf die Unterschrift von Gouverneur Newsom bis zum 30. September 2026. Obergrenze wäre 1.200 W. Schnelle Antwort von PromptQuorum.",
+    "excerpt": "Unterzeichnet, noch nicht in Kraft. Kaliforniens SB 868 tritt am 1. Januar 2027 in Kraft, mit einer Obergrenze von 1.200 W pro Wohneinheit. Schnelle Antwort von PromptQuorum.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/de/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "fr",
     "title": "Le solaire de balcon est-il légal en Californie ?",
-    "excerpt": "Pas encore — le SB 868 a été adopté par le Parlement et attend la signature du gouverneur Newsom avant le 30 septembre 2026. Plafond prévu de 1 200 W. Réponse rapide de PromptQuorum.",
+    "excerpt": "Signée, pas encore en vigueur. Le SB 868 de Californie entre en vigueur le 1er janvier 2027 avec un plafond de 1 200 W par logement. Réponse rapide de PromptQuorum.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/fr/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ja",
     "title": "カリフォルニア州でバルコニーソーラーは合法ですか？",
-    "excerpt": "まだです — SB 868は州議会を通過し、2026年9月30日までにニューサム知事の署名を待っています。上限は1,200Wになる見込みです。PromptQuorumによるクイックアンサー。",
+    "excerpt": "署名済みですが、まだ発効していません。カリフォルニア州のSB 868は2027年1月1日に発効し、上限は住戸あたり1,200Wです。PromptQuorumによるクイックアンサー。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/ja/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "zh",
     "title": "加利福尼亚州的阳台太阳能合法吗？",
-    "excerpt": "尚未合法——SB 868已通过州议会,正等待州长纽森在2026年9月30日前签署。拟定功率上限为1,200瓦。PromptQuorum为您解答。",
+    "excerpt": "已签署，但尚未生效。加利福尼亚州SB 868将于2027年1月1日生效，每套住宅功率上限为1,200瓦。PromptQuorum为您解答。",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/zh/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "es",
     "title": "¿Es legal la energía solar de balcón en California?",
-    "excerpt": "Todavía no — el SB 868 pasó la legislatura y espera la firma del gobernador Newsom antes del 30 de septiembre de 2026. Límite propuesto de 1200 W. Respuesta rápida de PromptQuorum.",
+    "excerpt": "Firmada, aún no vigente. El SB 868 de California entra en vigor el 1 de enero de 2027 con un límite de 1200 W por vivienda. Respuesta rápida de PromptQuorum.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/es/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
     "title": "A energia solar de varanda é legal na Califórnia?",
-    "excerpt": "Ainda não — o SB 868 foi aprovado pela assembleia legislativa e aguarda a assinatura do governador Newsom até 30 de setembro de 2026. Limite proposto de 1.200 W. Resposta rápida da PromptQuorum.",
+    "excerpt": "Sancionada, ainda não em vigor. O SB 868 da Califórnia entra em vigor em 1º de janeiro de 2027, com limite de 1.200 W por unidade habitacional. Resposta rápida da PromptQuorum.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/pt/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ar",
     "title": "هل الطاقة الشمسية للشرفات قانونية في كاليفورنيا؟",
-    "excerpt": "ليس بعد — أقرّ SB 868 مجلسي التشريع الأمريكي وينتظر توقيع الحاكم نيوسوم بحلول 30 سبتمبر 2026. الحد المقترح 1,200 واط. إجابة سريعة من PromptQuorum.",
+    "excerpt": "تم التوقيع عليه، لكنه لم يدخل حيز التنفيذ بعد. يبدأ سريان SB 868 في كاليفورنيا في 1 يناير 2027 بحد أقصى 1,200 واط لكل وحدة سكنية. إجابة سريعة من PromptQuorum.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/ar/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ko",
     "title": "캘리포니아주에서 발코니 태양광은 합법입니까?",
-    "excerpt": "아직 아닙니다 — SB 868은 주 의회를 통과했으며 2026년 9월 30일까지 뉴섬 주지사의 서명을 기다리고 있습니다. 상한은 1,200W가 될 예정입니다. PromptQuorum의 빠른 답변입니다.",
+    "excerpt": "서명되었지만 아직 발효되지 않았습니다. 캘리포니아주 SB 868은 2027년 1월 1일 발효되며 세대당 상한은 1,200W입니다. PromptQuorum의 빠른 답변입니다.",
     "publishDate": "2026-09-02",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-16",
     "url": "/ko/prompt-bites/is-balcony-solar-legal-california",
     "cluster": "prompt-bites"
   },
@@ -64960,5 +65851,491 @@
     "dateModified": "2026-08-25",
     "url": "/ko/smart-home/best-energy-monitoring-smart-plugs-2027",
     "cluster": "smart-home"
+  },
+  {
+    "lang": "ar",
+    "title": "⁦BoBe Alpha⁩ على جهاز ⁦Mac⁩ بذاكرة ⁦24 GB⁩: سهل التثبيت، وأعاد تشغيل نفسه عند حذفه",
+    "excerpt": "اختبار عملي على ⁦MacBook Pro⁩ بمعالج ⁦M3 Pro⁩. لم يذكر المساعد داخل التطبيق إعداد ⁦macOS⁩ الذي يحتاجه، وأعاد التطبيق تشغيل نفسه عندما حاول المختبِر حذفه.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ar/power-local-llm/bobe-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "BoBe Alpha auf einem Mac mit 24 GB: leicht zu installieren, startete beim Löschen neu",
+    "excerpt": "Praxistest auf einem MacBook Pro mit M3 Pro. Der Assistent in der App nannte die benötigte macOS-Einstellung nicht, und die App startete sich selbst neu, als der Tester versuchte, sie zu löschen.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/de/power-local-llm/bobe-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "BoBe Alpha en un Mac de 24 GB: fácil de instalar, se reinició al borrarla",
+    "excerpt": "Prueba práctica en un MacBook Pro con M3 Pro. El asistente de la app no nombró el ajuste de macOS que necesita, y la app se reinició sola cuando el evaluador intentó borrarla.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/es/power-local-llm/bobe-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "BoBe Alpha sur un Mac de 24 Go : facile à installer, relancé à la suppression",
+    "excerpt": "Test pratique sur un MacBook Pro avec puce M3 Pro. L'assistant intégré n'a pas nommé le réglage macOS dont il a besoin, et l'appli s'est relancée toute seule quand le testeur a essayé de la supprimer.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/fr/power-local-llm/bobe-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "24 GBのMacでBoBe Alpha：インストールは簡単、削除すると再起動する",
+    "excerpt": "M3 ProのMacBook Proでの実機テストです。アプリ内アシスタントは必要なmacOSの設定を示さず、テスターが削除しようとするとアプリは自動で再起動しました。",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ja/power-local-llm/bobe-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "BoBe Alpha on a 24 GB Mac: Easy to Install, Restarted When Deleted",
+    "excerpt": "Hands-on test on a MacBook Pro with M3 Pro. The in-app assistant did not name the macOS setting it needs, and the app restarted itself when the tester tried to delete it.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/power-local-llm/bobe-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "24 GB Mac에서의 BoBe Alpha: 설치는 쉽지만, 삭제하면 다시 실행됩니다",
+    "excerpt": "M3 Pro가 탑재된 MacBook Pro에서 진행한 직접 테스트입니다. 앱 내 어시스턴트는 필요한 macOS 설정을 알려 주지 못했고, 테스터가 삭제하려고 하자 앱이 스스로 다시 실행되었습니다.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ko/power-local-llm/bobe-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "BoBe Alpha em um Mac de 24 GB: fácil de instalar, reiniciou ao ser apagado",
+    "excerpt": "Teste prático em um MacBook Pro com M3 Pro. O assistente do app não citou a configuração do macOS de que precisa, e o app reiniciou sozinho quando o testador tentou apagá-lo.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/pt/power-local-llm/bobe-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "24 GB 的 Mac 上的 BoBe Alpha：安装容易，删除时会自己重启",
+    "excerpt": "在搭载 M3 Pro 的 MacBook Pro 上进行的实测。应用内助手没有说出它所需的 macOS 设置，测试者尝试删除时，应用还自行重启了。",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/zh/power-local-llm/bobe-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "⁦DiffusionBee⁩ على جهاز ⁦Mac⁩ بذاكرة ⁦24 GB⁩: التوليد نجح فورًا، والتحرير فشل في معظمه",
+    "excerpt": "اختبار عملي على جهاز ⁦Mac⁩ بمعالج ⁦M3⁩ وذاكرة ⁦24 GB⁩. ظهرت الصور خلال نحو دقيقة؛ أما التعديلات الموجّهة على صورة موجودة فقد فشلت في معظمها.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ar/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "DiffusionBee auf einem 24-GB-Mac: Bilder erzeugen klappte sofort, Bearbeiten meist nicht",
+    "excerpt": "Praxistest auf einem M3-Mac mit 24 GB. Bilder entstanden in etwa einer Minute; gezielte Änderungen an einem vorhandenen Bild scheiterten meist.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/de/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "DiffusionBee en un Mac de 24 GB: generar funcionó enseguida, editar casi nunca",
+    "excerpt": "Prueba práctica en un Mac con M3 y 24 GB. Las imágenes salían en cerca de un minuto; las ediciones dirigidas sobre una imagen existente casi siempre fallaron.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/es/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "DiffusionBee sur un Mac de 24 Go : la génération a marché tout de suite, la retouche presque jamais",
+    "excerpt": "Test pratique sur un Mac M3 avec 24 Go. Les images sortaient en une minute environ ; les retouches ciblées d'une image existante ont presque toutes échoué.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/fr/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "24 GBのMacでDiffusionBee：画像の生成はすぐ動いたが、編集はほとんど動かなかった",
+    "excerpt": "M3搭載・24 GBのMacでの実機テストです。画像は約1分で生成できましたが、既存の画像への的を絞った編集はほとんど失敗しました。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ja/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "DiffusionBee on a 24 GB Mac: Generating Worked at Once, Editing Mostly Did Not",
+    "excerpt": "Hands-on test on an M3 Mac with 24 GB. Pictures came out in about a minute; targeted edits to an existing picture mostly failed.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "24 GB Mac에서 DiffusionBee: 이미지 생성은 바로 되었지만 편집은 대부분 되지 않았습니다",
+    "excerpt": "24 GB M3 Mac에서의 직접 사용 테스트. 그림은 약 1분 만에 나왔지만, 기존 그림의 부분 편집은 대부분 실패했습니다.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ko/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "DiffusionBee em um Mac de 24 GB: gerar funcionou de imediato, editar quase nunca",
+    "excerpt": "Teste prático em um Mac M3 com 24 GB. As imagens saíam em cerca de um minuto; as edições direcionadas em uma imagem existente falharam quase sempre.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/pt/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "24 GB Mac 上的 DiffusionBee：生图立刻见效，改图基本不行",
+    "excerpt": "在 24 GB 内存的 M3 Mac 上的实测。图片约一分钟出一张；针对已有图片的局部修改基本失败。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/zh/power-local-llm/diffusionbee-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "⁦Draw Things⁩ على ⁦Mac⁩ بـ ⁦24 GB⁩: سريع إذا عمل وتخبّط قبل ذلك",
+    "excerpt": "اختبار عملي على ⁦MacBook Pro⁩ بشريحة ⁦M3 Pro⁩. أعاد أول ⁦prompt⁩ مربعًا رماديًا، وعمل النموذج الثاني.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ar/power-local-llm/draw-things-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Draw Things auf 24-GB-Mac: blind, bis es läuft – dann schnell",
+    "excerpt": "Praxistest auf einem MacBook Pro mit M3 Pro. Der erste Prompt lieferte ein graues Quadrat. Das zweite Modell funktionierte.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/de/power-local-llm/draw-things-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Draw Things en un Mac de 24 GB: rápido si funciona, a ciegas antes",
+    "excerpt": "Prueba práctica en un MacBook Pro con M3 Pro. El primer prompt devolvió un cuadrado gris. El segundo modelo funcionó.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/es/power-local-llm/draw-things-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Draw Things, Mac 24 GB : rapide ensuite, à l’aveugle avant",
+    "excerpt": "Test pratique sur un MacBook Pro M3 Pro. Le premier prompt a renvoyé un carré gris. Le deuxième modèle a fonctionné.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/fr/power-local-llm/draw-things-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "24 GB MacのDraw Things：動けば速いが、最初は手探り",
+    "excerpt": "M3 Pro搭載MacBook Proでのハンズオンテスト。最初のプロンプトで返ってきたのは灰色の四角形でした。2つ目のモデルに替えると、画像が生成されました。",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ja/power-local-llm/draw-things-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Draw Things on a 24 GB Mac: Fast When It Works, Blind Until It Does",
+    "excerpt": "Hands-on test on a MacBook Pro with M3 Pro. The first prompt returned a gray square. The second model worked.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/power-local-llm/draw-things-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "24 GB Mac의 Draw Things: 되면 빠르고, 되기 전엔 깜깜",
+    "excerpt": "M3 Pro 탑재 MacBook Pro에서 진행한 직접 사용 테스트입니다. 첫 프롬프트는 회색 정사각형을 반환했고, 두 번째 모델은 제대로 작동했습니다.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ko/power-local-llm/draw-things-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Draw Things em um Mac de 24 GB: rápido, mas às cegas no início",
+    "excerpt": "Teste prático em um MacBook Pro com M3 Pro. O primeiro prompt devolveu um quadrado cinza. O segundo modelo funcionou.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/pt/power-local-llm/draw-things-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "24 GB Mac 跑 Draw Things：能跑很快，上手靠盲猜",
+    "excerpt": "在搭载 M3 Pro 的 MacBook Pro 上进行的上手测试。第一条提示词返回了一张灰色方块，换用第二个模型后才正常出图。",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/zh/power-local-llm/draw-things-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "⁦Msty Studio⁩ على جهاز ⁦Mac⁩ بذاكرة ⁦24 GB⁩: وجد نماذج ⁦Ollama⁩ الخاصة بي فورًا، وبقي الغرض منه غير واضح لي",
+    "excerpt": "اختبار عملي على جهاز ⁦Mac⁩ بشريحة ⁦M3⁩ وذاكرة ⁦24 GB⁩. ظهرت نماذج ⁦Ollama⁩ الموجودة دون تنزيل ثانٍ. لم تُولَّد أي صورة.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ar/power-local-llm/msty-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Msty Studio auf einem 24-GB-Mac: Meine Ollama-Modelle waren sofort da, wofür die App gedacht ist, blieb mir unklar",
+    "excerpt": "Praxistest auf einem M3-Mac mit 24 GB. Vorhandene Ollama-Modelle erschienen ohne zweiten Download. Es wurde kein Bild erzeugt.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/de/power-local-llm/msty-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Msty Studio en un Mac de 24 GB: encontró mis modelos de Ollama al instante, para qué sirve me quedó poco claro",
+    "excerpt": "Prueba práctica en un Mac M3 con 24 GB. Los modelos de Ollama existentes aparecieron sin una segunda descarga. No se generó ninguna imagen.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/es/power-local-llm/msty-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Msty Studio sur un Mac de 24 GB : il a trouvé mes modèles Ollama tout de suite, à quoi il sert est resté flou pour moi",
+    "excerpt": "Test pratique sur un Mac M3 avec 24 GB. Les modèles Ollama existants sont apparus sans second téléchargement. Aucune image n'a été générée.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/fr/power-local-llm/msty-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "24 GBのMacでMsty Studio：Ollamaのモデルはすぐ見つかったが、何のためのアプリかは私には分からないままだった",
+    "excerpt": "M3搭載・24 GBのMacでのハンズオンテスト。既存のOllamaモデルが2回目のダウンロードなしで表示されました。画像は生成されませんでした。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ja/power-local-llm/msty-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Msty Studio on a 24 GB Mac: It Found My Ollama Models at Once, What It Is For Stayed Unclear to Me",
+    "excerpt": "Hands-on test on an M3 Mac with 24 GB. Existing Ollama models appeared without a second download. No image was generated.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/power-local-llm/msty-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "24 GB Mac에서 쓴 Msty Studio: Ollama 모델은 바로 찾았지만, 무엇에 쓰는 앱인지는 끝까지 불분명했습니다",
+    "excerpt": "24 GB M3 Mac에서 해 본 직접 사용 테스트. 기존 Ollama 모델이 두 번째 다운로드 없이 나타났습니다. 이미지는 생성되지 않았습니다.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ko/power-local-llm/msty-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Msty Studio em um Mac de 24 GB: encontrou meus modelos do Ollama na hora, para que serve ficou pouco claro para mim",
+    "excerpt": "Teste prático em um Mac M3 com 24 GB. Os modelos do Ollama já existentes apareceram sem um segundo download. Nenhuma imagem foi gerada.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/pt/power-local-llm/msty-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "24 GB Mac 上的 Msty Studio：它立刻找到了我的 Ollama 模型，但它是做什么用的，我始终没弄明白",
+    "excerpt": "在配备 24 GB 的 M3 Mac 上的上手测试。已有的 Ollama 模型无需再次下载就出现了。没有生成图片。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/zh/power-local-llm/msty-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "⁦Page Assist⁩ على جهاز ⁦Mac⁩ بذاكرة ⁦24 GB⁩: وُجد الشريط الجانبي، ولم تُفهم الصفحة",
+    "excerpt": "اختبار عملي لإضافة المتصفح المعتمدة على ⁦Ollama⁩، على جهاز ⁦Mac⁩ بمعالج ⁦M3 Pro⁩. فتحت أيقونة شريط الأدوات صفحة بملء الشاشة بدل شريط جانبي. وبعد العثور على الشريط الجانبي، عدّ الكلمات لكنه لم يقرأ صفحة ⁦Search Console⁩ ولم ينفّذ إجراءً على أي صفحة.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ar/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Page Assist auf einem Mac mit 24 GB: Sidebar gefunden, Seite nicht verstanden",
+    "excerpt": "Praxistest der Ollama-basierten Browser-Erweiterung auf einem Mac mit M3 Pro. Das Symbol in der Symbolleiste öffnete eine Vollbildseite statt einer Sidebar. Nachdem die Sidebar gefunden war, zählte sie Wörter, las aber keine Search-Console-Seite und handelte auch nicht auf einer Seite.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/de/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Page Assist en un Mac de 24 GB: se encontró la barra lateral, no entendió la página",
+    "excerpt": "Prueba práctica de la extensión de navegador basada en Ollama en un Mac con M3 Pro. El icono de la barra de herramientas abrió una página a pantalla completa en lugar de una barra lateral. Una vez encontrada la barra lateral, contó palabras, pero no leyó una página de Search Console ni actuó sobre una página.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/es/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Page Assist sur un Mac de 24 Go : barre latérale trouvée, page non comprise",
+    "excerpt": "Test pratique de l'extension de navigateur basée sur Ollama, sur un Mac M3 Pro. L'icône de la barre d'outils a ouvert une page plein écran au lieu d'une barre latérale. Une fois la barre latérale trouvée, elle a compté des mots, mais n'a ni lu une page de Search Console ni agi sur une page.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/fr/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "24 GBのMacでPage Assist：サイドバーは見つかったが、ページは理解されなかった",
+    "excerpt": "M3 ProのMacで行った、Ollamaベースのブラウザ拡張機能の実機テストです。ツールバーのアイコンはサイドバーではなくフルスクリーンのページを開きました。サイドバーを見つけた後、単語数は数えられたものの、Search Consoleのページは読めず、ページ上での操作もできませんでした。",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ja/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Page Assist on a 24 GB Mac: Sidebar Found, Page Not Understood",
+    "excerpt": "Hands-on test of the Ollama-based browser extension on an M3 Pro Mac. The toolbar icon opened a full-screen page instead of a sidebar. Once the sidebar was found, it counted words but did not read a Search Console page or act on a page.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "24 GB Mac에서의 Page Assist: 사이드바는 찾았지만, 페이지는 이해하지 못했습니다",
+    "excerpt": "M3 Pro Mac에서 Ollama 기반 브라우저 확장 프로그램을 직접 테스트했습니다. 툴바 아이콘은 사이드바 대신 전체 화면 페이지를 열었습니다. 사이드바를 찾은 뒤에는 단어 수는 셌지만 Search Console 페이지를 읽지 못했고 페이지에서 동작을 수행하지도 못했습니다.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ko/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Page Assist em um Mac de 24 GB: barra lateral encontrada, página não compreendida",
+    "excerpt": "Teste prático da extensão de navegador baseada no Ollama em um Mac com M3 Pro. O ícone da barra de ferramentas abriu uma página em tela cheia em vez de uma barra lateral. Depois que a barra lateral foi encontrada, ela contou palavras, mas não leu uma página do Search Console nem agiu sobre uma página.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/pt/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "24 GB Mac 上的 Page Assist：找到了侧边栏，却读不懂页面",
+    "excerpt": "在搭载 M3 Pro 的 Mac 上对这款基于 Ollama 的浏览器扩展进行的实测。点击工具栏图标打开的是全屏页面，而不是侧边栏。找到侧边栏后，它能统计字数，但读不懂 Search Console 页面，也无法对页面执行操作。",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/zh/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "⁦Unsloth⁩ على جهاز ⁦Mac⁩ بذاكرة ⁦24 GB⁩: تطبيق متقن، لكن نفدت الذاكرة قبل أول صورة",
+    "excerpt": "اختبار عملي على جهاز ⁦Mac⁩ بذاكرة ⁦24 GB⁩، هدفه توليد الصور. عملت الدردشة، لكن رُفضت نماذج الصور لقلة الذاكرة، ولم تُولَّد أي صورة.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ar/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Unsloth auf einem 24-GB-Mac: Eine ausgereifte App, aber Speicher voll, bevor das erste Bild entstand",
+    "excerpt": "Praxistest auf einem 24-GB-Mac, gedacht für die Bilderzeugung. Der Chat funktionierte; Bildmodelle wurden wegen fehlenden Speichers abgelehnt, und es entstand kein Bild.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/de/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Unsloth en un Mac de 24 GB: una app pulida, sin memoria antes de la primera imagen",
+    "excerpt": "Prueba práctica en un Mac de 24 GB, centrada en la generación de imágenes. El chat funcionó; los modelos de imagen fueron rechazados por falta de memoria y no se generó ninguna imagen.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/es/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Unsloth sur un Mac de 24 GB : une application soignée, mais mémoire saturée avant la première image",
+    "excerpt": "Test pratique sur un Mac de 24 GB, centré sur la génération d'images. Le chat a fonctionné ; les modèles d'image ont été refusés faute de mémoire, et aucune image n'a été produite.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/fr/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "24 GBのMacでUnsloth：洗練されたアプリだが、最初の画像を作る前にメモリ不足",
+    "excerpt": "24 GBのMacでのハンズオンテスト。狙いは画像生成。チャットは動作しましたが、画像モデルはメモリ不足を理由に拒否され、画像は生成されませんでした。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ja/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Unsloth on a 24 GB Mac: Polished App, Out of Memory Before the First Picture",
+    "excerpt": "Hands-on test on a 24 GB Mac, aimed at picture generation. Chat worked; picture models were refused for lack of memory, and no picture was made.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "24 GB Mac에서 쓴 Unsloth: 완성도 높은 앱이지만, 첫 이미지가 나오기 전에 메모리가 부족했습니다",
+    "excerpt": "이미지 생성을 목표로 24 GB Mac에서 해 본 직접 사용 테스트. 채팅은 동작했지만 이미지 모델은 메모리 부족으로 거부되었고, 이미지는 생성되지 않았습니다.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ko/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Unsloth em um Mac de 24 GB: app polido, sem memória antes da primeira imagem",
+    "excerpt": "Teste prático em um Mac de 24 GB, voltado à geração de imagens. O chat funcionou; os modelos de imagem foram recusados por falta de memória e nenhuma imagem foi gerada.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/pt/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "24 GB Mac 上的 Unsloth：界面精致，但在生成第一张图之前就内存不足",
+    "excerpt": "在 24 GB Mac 上的上手测试，目标是生成图片。聊天能用；图像模型因内存不足被拒绝加载，没有生成任何图片。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/zh/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
   }
 ]

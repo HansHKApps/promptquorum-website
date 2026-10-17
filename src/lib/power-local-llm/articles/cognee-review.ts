@@ -71,9 +71,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Core operations are `cognee.add()` (ingest), `cognee.cognify()` (build the graph), and `cognee.search()` (query it), with newer high-level `remember()`/`recall()` convenience functions built on top of that same pipeline',
           'Integrates with Claude Code, Cursor, LangGraph, CrewAI, OpenClaw, and Model Context Protocol (MCP) tooling',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to cognee\'s entry in the [Local LLM Software Directory](/directory) — see that page for how cognee compares at a glance to dozens of other local and self-hosted AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-cognee',
@@ -378,9 +375,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hybride Lokalität: Die Wissensgraph-Engine und der Vektorspeicher laufen selbst gehostet, doch standardmäßige LLM-/Embedding-Verarbeitungsaufrufe gehen an einen konfigurierten externen Anbieter — lokale Ollama-Modelle werden ebenfalls unterstützt',
           'Kernoperationen sind `cognee.add()` (Aufnahme), `cognee.cognify()` (Graph aufbauen) und `cognee.search()` (abfragen), mit neueren, komfortableren `remember()`/`recall()`-Funktionen, die auf derselben Pipeline aufsetzen',
           'Integriert sich mit Claude Code, Cursor, LangGraph, CrewAI, OpenClaw und Model-Context-Protocol-(MCP)-Tooling',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleiter zu cognees Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie, wie sich cognee im Vergleich zu Dutzenden anderer lokaler und selbst gehosteter KI-Tools auf einen Blick schlägt.' },
         ],
       },
       overview: {
@@ -687,9 +681,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les opérations principales sont `cognee.add()` (ingestion), `cognee.cognify()` (construction du graphe) et `cognee.search()` (interrogation), avec les fonctions pratiques plus récentes `remember()`/`recall()` construites au-dessus de ce même pipeline',
           'S\'intègre avec Claude Code, Cursor, LangGraph, CrewAI, OpenClaw et les outils Model Context Protocol (MCP)',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de cognee dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir comment cognee se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
-        ],
       },
       overview: {
         id: 'what-is-cognee',
@@ -994,9 +985,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ローカリティはハイブリッド：知識グラフエンジンとベクトルストアはセルフホストで動作するが、デフォルトのLLM/埋め込み処理呼び出しは設定済みの外部プロバイダーへ送信される——ローカルOllamaモデルもサポート',
           'コア操作は`cognee.add()`（取り込み）、`cognee.cognify()`（グラフ構築）、`cognee.search()`（検索）で、同じパイプライン上に構築されたより新しい高レベルの便利関数`remember()`/`recall()`もある',
           'Claude Code、Cursor、LangGraph、CrewAI、OpenClaw、Model Context Protocol（MCP）ツールと統合',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるcogneeのエントリーの詳細版です。cogneeが他の多数のローカル・セルフホスト型AIツールと比べてどう位置づけられるかは、そちらのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1303,9 +1291,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '核心操作是`cognee.add()`（导入）、`cognee.cognify()`（构建图谱）和`cognee.search()`（查询），此外基于同一管线之上还有更新的高级便捷函数`remember()`/`recall()`',
           '与Claude Code、Cursor、LangGraph、CrewAI、OpenClaw及Model Context Protocol（MCP）工具集成',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是cognee在[本地LLM软件目录](/zh/directory)条目的深度补充——该页面展示了cognee与数十款其他本地及自托管AI工具的一览对比。' },
-        ],
       },
       overview: {
         id: 'what-is-cognee',
@@ -1610,9 +1595,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La localidad es híbrida: el motor de grafo de conocimiento y el almacén vectorial se ejecutan autoalojados, pero las llamadas de procesamiento LLM/embeddings por defecto van a un proveedor externo configurado; también se admiten modelos locales de Ollama',
           'Las operaciones principales son `cognee.add()` (ingesta), `cognee.cognify()` (construir el grafo) y `cognee.search()` (consultarlo), con las funciones de conveniencia más recientes `remember()`/`recall()` construidas sobre ese mismo pipeline',
           'Se integra con Claude Code, Cursor, LangGraph, CrewAI, OpenClaw y herramientas del Model Context Protocol (MCP)',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de cognee en el [Directorio de software de LLM local](/es/directory) — consulta esa página para ver cómo se compara cognee de un vistazo con docenas de otras herramientas de IA locales y autoalojadas.' },
         ],
       },
       overview: {
@@ -1919,9 +1901,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'As operações principais são `cognee.add()` (ingestão), `cognee.cognify()` (construção do grafo) e `cognee.search()` (consulta), com as funções de conveniência mais recentes `remember()`/`recall()` construídas sobre esse mesmo pipeline',
           'Integra-se com Claude Code, Cursor, LangGraph, CrewAI, OpenClaw e ferramentas do Model Context Protocol (MCP)',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do cognee no [Diretório de Software de LLM Local](/pt/directory) — consulte essa página para ver como o cognee se compara, em resumo, a dezenas de outras ferramentas de IA locais e auto-hospedadas.' },
-        ],
       },
       overview: {
         id: 'what-is-cognee',
@@ -2227,9 +2206,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'العمليات الأساسية هي `cognee.add()` (الاستيعاب)، و`cognee.cognify()` (بناء المخطط)، و`cognee.search()` (الاستعلام)، مع دوال تسهيلية أحدث `remember()`/`recall()` مبنية فوق نفس خط المعالجة',
           'تتكامل مع Claude Code وCursor وLangGraph وCrewAI وOpenClaw وأدوات Model Context Protocol (MCP)',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيق المعمّق لمُدخل cognee في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارن cognee بلمحة سريعة مع عشرات الأدوات المحلية والمستضافة ذاتيًا الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-cognee',
@@ -2534,9 +2510,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '로컬리티는 하이브리드 방식입니다: 지식 그래프 엔진과 벡터 저장소는 셀프 호스팅으로 실행되지만, 기본 LLM/임베딩 처리 호출은 설정된 외부 제공업체로 전송됩니다 — 로컬 Ollama 모델도 지원됩니다',
           '핵심 작업은 `cognee.add()`(수집), `cognee.cognify()`(그래프 구축), `cognee.search()`(질의)이며, 동일한 파이프라인 위에 구축된 더 새로운 고수준 편의 함수 `remember()`/`recall()`도 있습니다',
           'Claude Code, Cursor, LangGraph, CrewAI, OpenClaw 및 Model Context Protocol(MCP) 도구와 통합됩니다',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 cognee 항목의 심층 버전입니다 — cognee가 수십 개의 다른 로컬 및 셀프 호스팅 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {

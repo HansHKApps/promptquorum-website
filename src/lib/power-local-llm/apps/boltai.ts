@@ -37,4 +37,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { ollama: true, mcp: true, fileChat: true, voice: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-12', // official changelog, read 2026-10-16
+  lastUpstreamUpdateSource: 'https://boltai.com/changelog',
 }

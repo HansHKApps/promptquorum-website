@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { buildHandsOnTestMetadata, buildHandsOnTestPageElement } from '@/lib/hands-on-tests/page'
 import {
   buildArticleMetadata,
   buildArticlePageElement,
@@ -16,10 +17,10 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
-  return buildArticleMetadata(slug, 'ja')
+  return buildHandsOnTestMetadata(slug, 'ja') ?? buildArticleMetadata(slug, 'ja')
 }
 
 export default async function PowerLocalLLMArticleJa({ params }: PageProps) {
   const { slug } = await params
-  return buildArticlePageElement(slug, 'ja')
+  return buildHandsOnTestPageElement(slug, 'ja') ?? buildArticlePageElement(slug, 'ja')
 }
