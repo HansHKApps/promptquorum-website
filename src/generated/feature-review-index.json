@@ -1199,6 +1199,11 @@
     "urlSlug": "friedrichai-review",
     "url": "/power-local-llm/friedrichai-review"
   },
+  "snug-protocol": {
+    "cluster": "power-local-llm",
+    "urlSlug": "snug-protocol-review",
+    "url": "/power-local-llm/snug-protocol-review"
+  },
   "spiritbox-ultimate": {
     "cluster": "power-local-llm",
     "urlSlug": "spiritbox-ultimate-review",
