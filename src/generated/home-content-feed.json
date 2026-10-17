@@ -7859,7 +7859,7 @@
   {
     "lang": "en",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
-    "excerpt": "Qwen3.8-27B wins coding: 61.7% SWE-bench, fits 24 GB. Llama 4 Scout: 10M context, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU on 14 GB. Which model wins per task?",
+    "excerpt": "Qwen3.8-27B wins coding: 61.7 SWE-bench Pro, fits 24 GB. Llama 4 Scout: 10M context, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU on 14 GB. Which model wins per task?",
     "publishDate": "2026-04-04",
     "dateModified": "2026-08-28",
     "url": "/local-llms/qwen-vs-llama-vs-mistral",
@@ -7868,7 +7868,7 @@
   {
     "lang": "de",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral Small 24B: 2026 Benchmark-Vergleich",
-    "excerpt": "Qwen3.8-27B gewinnt beim Coding: 61,7% SWE-bench, läuft auf 24 GB. Llama 4 Scout: 10M-Kontext, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU auf 14 GB.",
+    "excerpt": "Qwen3.8-27B gewinnt beim Coding: 61,7 SWE-bench Pro, läuft auf 24 GB. Llama 4 Scout: 10M-Kontext, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU auf 14 GB.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-08-28",
     "url": "/de/local-llms/qwen-vs-llama-vs-mistral",
@@ -7877,7 +7877,7 @@
   {
     "lang": "fr",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral Small 24B : Comparaison des benchmarks 2026",
-    "excerpt": "Qwen3.8-27B gagne au codage : 61,7 % SWE-bench, tient dans 24 Go. Llama 4 Scout : contexte 10M, ~55 Go VRAM. Mistral Small 3.1 : 79 % MMLU à 14 Go.",
+    "excerpt": "Qwen3.8-27B gagne au codage : 61,7 SWE-bench Pro, tient dans 24 Go. Llama 4 Scout : contexte 10M, ~55 Go VRAM. Mistral Small 3.1 : 79 % MMLU à 14 Go.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-08-28",
     "url": "/fr/local-llms/qwen-vs-llama-vs-mistral",
@@ -7904,7 +7904,7 @@
   {
     "lang": "es",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Comparativa de LLM Local 2026",
-    "excerpt": "Qwen3.8-27B gana en código: 61,7% SWE-bench, cabe en 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU en 14 GB. Qué modelo gana.",
+    "excerpt": "Qwen3.8-27B gana en código: 61,7 SWE-bench Pro, cabe en 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU en 14 GB. Qué modelo gana.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-08-28",
     "url": "/es/local-llms/qwen-vs-llama-vs-mistral",
@@ -7913,7 +7913,7 @@
   {
     "lang": "pt",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Comparação de LLM Local 2026",
-    "excerpt": "Qwen3.8-27B vence em código: 61,7% SWE-bench, cabe em 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU em 14 GB. Qual modelo vence.",
+    "excerpt": "Qwen3.8-27B vence em código: 61,7 SWE-bench Pro, cabe em 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU em 14 GB. Qual modelo vence.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-08-28",
     "url": "/pt/local-llms/qwen-vs-llama-vs-mistral",
@@ -7922,7 +7922,7 @@
   {
     "lang": "ar",
     "title": "⁨Qwen3.8-27B⁩ مقابل ⁨Llama 4⁩ مقابل ⁨Mistral⁩: مقارنة ⁨LLM⁩ المحلي ⁨2026⁩",
-    "excerpt": "⁨Qwen3.8-27B⁩ يتفوق برمجياً: ⁨61.7% SWE-bench⁩ على ⁨24 GB. Llama 4 Scout⁩: سياق ⁨10M. Mistral Small 3.1⁩: ⁨79% MMLU⁩ على ⁨14 GB⁩. أي نموذج يفوز؟",
+    "excerpt": "⁨Qwen3.8-27B⁩ يتفوق برمجياً: ⁨61.7 SWE-bench Pro⁩ على ⁨24 GB. Llama 4 Scout⁩: سياق ⁨10M. Mistral Small 3.1⁩: ⁨79% MMLU⁩ على ⁨14 GB⁩. أي نموذج يفوز؟",
     "publishDate": "2026-04-04",
     "dateModified": "2026-08-28",
     "url": "/ar/local-llms/qwen-vs-llama-vs-mistral",
@@ -7931,7 +7931,7 @@
   {
     "lang": "ko",
     "title": "Qwen3.8-27B vs Llama 4 vs Mistral: 로컬 LLM 비교 2026",
-    "excerpt": "Qwen3.8-27B: 61.7% SWE-bench, 24GB 최고 성능. Llama 4 Scout: MoE, 10M 컨텍스트, ~55GB VRAM. Mistral Small 3.1: 79% MMLU. 작업별 최적 모델 비교 포함.",
+    "excerpt": "Qwen3.8-27B: 61.7 SWE-bench Pro, 24GB 최고 성능. Llama 4 Scout: MoE, 10M 컨텍스트, ~55GB VRAM. Mistral Small 3.1: 79% MMLU. 작업별 최적 모델 비교 포함.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-08-28",
     "url": "/ko/local-llms/qwen-vs-llama-vs-mistral",
@@ -8020,82 +8020,82 @@
   },
   {
     "lang": "en",
-    "title": "Best Local LLMs for Coding 2026: Kimi K2.6 vs Qwen vs Devstral",
-    "excerpt": "Kimi K2.6 leads at 58.6 SWE-Bench Pro, Qwen 3.6 27B hits 77.2% SWE-bench, Devstral 24B wins agentic coding. Compare VRAM, speed and benchmarks on Ollama.",
+    "title": "Best Local LLMs for Coding 2026: Qwen3.8 27B, Devstral, Laguna",
+    "excerpt": "Qwen3.8 27B is the best local coding LLM for a 24 GB GPU (18 GB, 61.7 SWE-bench Pro). Compare Devstral Small 2, Laguna XS 2.1 and Qwen3 8B by VRAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-30",
+    "dateModified": "2026-10-17",
     "url": "/local-llms/best-local-llms-for-coding",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
-    "title": "Beste lokale LLMs für Programmierung 2026: Kimi K2.6 vs Qwen vs Devstral",
-    "excerpt": "Kimi K2.6 führt mit 58.6 SWE-Bench Pro, Qwen 3.6 27B erreicht 77,2% SWE-bench, Devstral 24B für agentic Coding. Lokal via Ollama: VRAM, Tempo, Benchmarks.",
+    "title": "Beste lokale LLMs für Programmierung 2026: Qwen3.8 27B, Devstral, Laguna",
+    "excerpt": "Qwen3.8 27B ist das beste lokale Coding-LLM für eine 24-GB-GPU (18 GB, 61,7 SWE-bench Pro). Vergleich mit Devstral Small 2, Laguna XS 2.1 und Qwen3 8B nach VRAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-30",
+    "dateModified": "2026-10-17",
     "url": "/de/local-llms/best-local-llms-for-coding",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
-    "title": "Meilleurs LLMs locaux pour la programmation 2026 : Kimi K2.6 vs Qwen vs Devstral",
-    "excerpt": "Kimi K2.6 mène avec 58.6 SWE-Bench Pro, Qwen 3.6 27B atteint 77,2% SWE-bench, Devstral 24B gagne en code agentique. VRAM, vitesse et benchmarks sur Ollama.",
+    "title": "Meilleurs LLM locaux pour coder en 2026 : Qwen3.8 27B, Devstral, Laguna",
+    "excerpt": "Qwen3.8 27B est le meilleur LLM local pour coder sur un GPU de 24 Go (18 Go, 61,7 SWE-bench Pro). Comparez Devstral Small 2, Laguna XS 2.1 et Qwen3 8B par VRAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-17",
     "url": "/fr/local-llms/best-local-llms-for-coding",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
-    "title": "2026年最高のコーディング用ローカルLLM：Kimi K2.6 vs Qwen vs Devstral",
-    "excerpt": "コーディング向けローカルLLMのおすすめはKimi K2.6（SWE-Bench Pro 58.6で首位）。Qwen 3.6 27Bは77.2% SWE-bench、Devstral 24Bはエージェント用。VRAM・速度・ベンチマークを比較。",
+    "title": "2026年コーディング向け最高のローカルLLM：Qwen3.8 27B・Devstral・Laguna",
+    "excerpt": "Qwen3.8 27Bは24GB GPU向けの最高のローカルコーディングLLM（18GB、SWE-bench Pro 61.7）。Devstral Small 2、Laguna XS 2.1、Qwen3 8BをVRAM別に比較。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-30",
+    "dateModified": "2026-10-17",
     "url": "/ja/local-llms/best-local-llms-for-coding",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
-    "title": "2026年最佳本地编码LLM：Kimi K2.6 vs Qwen vs Devstral",
-    "excerpt": "Kimi K2.6以58.6 SWE-Bench Pro领先，Qwen 3.6 27B达77.2% SWE基准，Devstral 24B最适合代理编码。在Ollama上对比VRAM、速度与基准成绩。",
+    "title": "2026年最佳本地编程LLM：Qwen3.8 27B、Devstral、Laguna",
+    "excerpt": "Qwen3.8 27B是24GB显卡上最佳的本地编程LLM（18GB，SWE-bench Pro 61.7）。按显存对比Devstral Small 2、Laguna XS 2.1与Qwen3 8B。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-17",
     "url": "/zh/local-llms/best-local-llms-for-coding",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
-    "title": "Mejores LLMs locales para programación 2026: Kimi K2.6 vs Qwen vs Devstral",
-    "excerpt": "Kimi K2.6 lidera con 58.6 SWE-Bench Pro, Qwen 3.6 27B logra 77,2% SWE-bench y Devstral 24B gana en código agéntico. VRAM, velocidad y benchmarks en Ollama.",
+    "title": "Mejores LLMs locales para programar 2026: Qwen3.8 27B, Devstral, Laguna",
+    "excerpt": "Qwen3.8 27B es el mejor LLM local para programar en una GPU de 24 GB (18 GB, 61,7 SWE-bench Pro). Compara Devstral Small 2, Laguna XS 2.1 y Qwen3 8B por VRAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-30",
+    "dateModified": "2026-10-17",
     "url": "/es/local-llms/best-local-llms-for-coding",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
-    "title": "Melhores LLMs locais para programação 2026: Kimi K2.6 vs Qwen vs Devstral",
-    "excerpt": "Kimi K2.6 lidera com 58,6 SWE-Bench Pro, Qwen 3.6 27B atinge 77,2% SWE-bench e Devstral 24B vence em código agêntico. VRAM, velocidade e benchmarks no Ollama.",
+    "title": "Melhores LLMs locais para programar em 2026: Qwen3.8 27B, Devstral, Laguna",
+    "excerpt": "O Qwen3.8 27B é o melhor LLM local para programar em uma GPU de 24 GB (18 GB, 61,7 SWE-bench Pro). Compare Devstral Small 2, Laguna XS 2.1 e Qwen3 8B por VRAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-17",
     "url": "/pt/local-llms/best-local-llms-for-coding",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
-    "title": "أفضل نماذج ⁨LLM⁩ المحلية للبرمجة ⁨2026⁩: ⁨Kimi K2.6⁩ مقابل ⁨Qwen⁩ مقابل ⁨Devstral⁩",
-    "excerpt": "⁨Kimi K2.6⁩ يتصدر بـ ⁨58.6⁩ في ⁨SWE-Bench Pro⁩، ⁨Qwen 3.6 27B⁩ يبلغ ⁨77.2%⁩ في ⁨SWE-bench⁩، ⁨Devstral 24B⁩ الأفضل للبرمجة الوكيلة. قارن ⁨VRAM⁩ عبر ⁨Ollama⁩.",
+    "title": "أفضل نماذج LLM المحلية للبرمجة 2026: Qwen3.8 27B وDevstral وLaguna",
+    "excerpt": "Qwen3.8 27B هو أفضل LLM محلي للبرمجة على GPU بسعة 24 GB (18 GB، و61.7 في SWE-bench Pro). قارن Devstral Small 2 وLaguna XS 2.1 وQwen3 8B حسب VRAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-30",
+    "dateModified": "2026-10-17",
     "url": "/ar/local-llms/best-local-llms-for-coding",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
-    "title": "2026 최고의 코딩 로컬 LLM: Kimi K2.6 vs Qwen vs Devstral",
-    "excerpt": "Qwen 3.6이 SWE-bench에서 77.2%를 기록했습니다. DeepSeek-Coder-V3 및 Llama 3.3과 VRAM, 속도, 벤치마크 점수를 비교하고 2026년 최고의 로컬 코딩 LLM을 확인하십시오.",
+    "title": "2026 코딩용 최고의 로컬 LLM: Qwen3.8 27B, Devstral, Laguna",
+    "excerpt": "Qwen3.8 27B는 24GB GPU용 최고의 로컬 코딩 LLM입니다(18GB, SWE-bench Pro 61.7). Devstral Small 2, Laguna XS 2.1, Qwen3 8B를 VRAM별로 비교하세요.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-04-04",
+    "dateModified": "2026-10-17",
     "url": "/ko/local-llms/best-local-llms-for-coding",
     "cluster": "local-llms"
   },
@@ -21709,8 +21709,8 @@
   },
   {
     "lang": "en",
-    "title": "The Complete Local AI & LLM Software Directory: 252 Apps & Tools for Running AI Locally (2026)",
-    "excerpt": "Browse 252 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
+    "title": "The Complete Local AI & LLM Software Directory: 253 Apps & Tools for Running AI Locally (2026)",
+    "excerpt": "Browse 253 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/power-local-llm/local-llm-software-directory",
@@ -21718,8 +21718,8 @@
   },
   {
     "lang": "de",
-    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 252 Apps und Tools, um KI lokal auszuführen (2026)",
-    "excerpt": "Entdecken Sie 252 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
+    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 253 Apps und Tools, um KI lokal auszuführen (2026)",
+    "excerpt": "Entdecken Sie 253 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/de/power-local-llm/local-llm-software-directory",
@@ -21727,8 +21727,8 @@
   },
   {
     "lang": "fr",
-    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 252 apps et outils pour exécuter l'IA en local (2026)",
-    "excerpt": "Parcourez 252 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
+    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 253 apps et outils pour exécuter l'IA en local (2026)",
+    "excerpt": "Parcourez 253 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/fr/power-local-llm/local-llm-software-directory",
@@ -21736,8 +21736,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす252のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを252件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす253のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを253件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/ja/power-local-llm/local-llm-software-directory",
@@ -21745,8 +21745,8 @@
   },
   {
     "lang": "zh",
-    "title": "本地AI与LLM软件完整目录：252款应用与工具，在本地运行AI（2026）",
-    "excerpt": "收录252款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI与LLM软件完整目录：253款应用与工具，在本地运行AI（2026）",
+    "excerpt": "收录253款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/zh/power-local-llm/local-llm-software-directory",
@@ -21754,8 +21754,8 @@
   },
   {
     "lang": "es",
-    "title": "El directorio completo de software de IA y LLM local: 252 apps y herramientas para ejecutar IA en local (2026)",
-    "excerpt": "Explora 252 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
+    "title": "El directorio completo de software de IA y LLM local: 253 apps y herramientas para ejecutar IA en local (2026)",
+    "excerpt": "Explora 253 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/es/power-local-llm/local-llm-software-directory",
@@ -21763,8 +21763,8 @@
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 252 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 252 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 253 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 253 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/pt/power-local-llm/local-llm-software-directory",
@@ -21772,8 +21772,8 @@
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 252 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 252 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 253 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 253 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/ar/power-local-llm/local-llm-software-directory",
@@ -21781,8 +21781,8 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 252개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 252개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 253개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 253개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-10-17",
     "url": "/ko/power-local-llm/local-llm-software-directory",
@@ -33293,7 +33293,7 @@
   {
     "lang": "en",
     "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-    "excerpt": "Compare 21 local image tools side by side: image and video generation (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI and more) and vision and OCR models. Licenses, platforms, inpainting, extensions, API and more, from official documentation.",
+    "excerpt": "Compare 22 local image tools side by side: image and video generation (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI and more) and vision and OCR models. Licenses, platforms, inpainting, extensions, API and more, from official documentation.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-images-video-compared",
@@ -33302,7 +33302,7 @@
   {
     "lang": "de",
     "title": "Lokale Bild-, Video- und Vision-Tools im Vergleich (2026): Generierung, Vision und OCR",
-    "excerpt": "Vergleich von 21 lokalen Bild-Tools: Bild- und Videogenerierung (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI u. a.) sowie Vision- und OCR-Modelle. Lizenzen, Plattformen, Inpainting, Erweiterungen, API laut offizieller Dokumentation.",
+    "excerpt": "Vergleich von 22 lokalen Bild-Tools: Bild- und Videogenerierung (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI u. a.) sowie Vision- und OCR-Modelle. Lizenzen, Plattformen, Inpainting, Erweiterungen, API laut offizieller Dokumentation.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-images-video-compared",
@@ -33311,7 +33311,7 @@
   {
     "lang": "fr",
     "title": "Outils locaux d'image, de vidéo et de vision : comparatif (2026) — génération, vision et OCR",
-    "excerpt": "Comparez 21 outils d'image locaux : génération d'images et de vidéos (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) et modèles de vision et OCR. Licences, plateformes, inpainting, extensions, API, d'après la documentation officielle.",
+    "excerpt": "Comparez 22 outils d'image locaux : génération d'images et de vidéos (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) et modèles de vision et OCR. Licences, plateformes, inpainting, extensions, API, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-images-video-compared",
@@ -33320,7 +33320,7 @@
   {
     "lang": "ja",
     "title": "ローカル画像・動画・ビジョンツール比較(2026):生成、ビジョン、OCR",
-    "excerpt": "ローカル画像ツール21種を比較:画像・動画生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAIなど)とビジョン・OCRモデル。ライセンス、対応OS、インペイント、拡張機能、APIなどを公式ドキュメントから整理。",
+    "excerpt": "ローカル画像ツール22種を比較:画像・動画生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAIなど)とビジョン・OCRモデル。ライセンス、対応OS、インペイント、拡張機能、APIなどを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-images-video-compared",
@@ -33329,7 +33329,7 @@
   {
     "lang": "zh",
     "title": "本地图像、视频与视觉工具对比(2026):生成、视觉与OCR",
-    "excerpt": "并排对比21款本地图像工具:图像与视频生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAI等)以及视觉与OCR模型。许可证、平台、局部重绘、扩展、API等,均来自官方文档。",
+    "excerpt": "并排对比22款本地图像工具:图像与视频生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAI等)以及视觉与OCR模型。许可证、平台、局部重绘、扩展、API等,均来自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-images-video-compared",
@@ -33338,7 +33338,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de imagen, vídeo y visión comparadas (2026): generación, visión y OCR",
-    "excerpt": "Compara 21 herramientas locales de imagen: generación de imagen y vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) y modelos de visión y OCR. Licencias, plataformas y API, según la documentación oficial.",
+    "excerpt": "Compara 22 herramientas locales de imagen: generación de imagen y vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) y modelos de visión y OCR. Licencias, plataformas y API, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-images-video-compared",
@@ -33347,7 +33347,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de imagem, vídeo e visão comparadas (2026): geração, visão e OCR",
-    "excerpt": "Compare 21 ferramentas locais de imagem: geração de imagem e vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI e outras) e modelos de visão e OCR. Licenças, plataformas, inpainting, extensões e API, segundo a documentação oficial.",
+    "excerpt": "Compare 22 ferramentas locais de imagem: geração de imagem e vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI e outras) e modelos de visão e OCR. Licenças, plataformas, inpainting, extensões e API, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-images-video-compared",
@@ -33356,7 +33356,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات الصور والفيديو والرؤية المحلية (2026): التوليد والرؤية وOCR",
-    "excerpt": "قارن 21 أداة صور محلية جنبًا إلى جنب: توليد الصور والفيديو (AUTOMATIC1111 وComfyUI وFooocus وInvokeAI وغيرها) ونماذج الرؤية وOCR. التراخيص والمنصات والطلاء الداخلي والإضافات وواجهة API، من الوثائق الرسمية.",
+    "excerpt": "قارن 22 أداة صور محلية جنبًا إلى جنب: توليد الصور والفيديو (AUTOMATIC1111 وComfyUI وFooocus وInvokeAI وغيرها) ونماذج الرؤية وOCR. التراخيص والمنصات والطلاء الداخلي والإضافات وواجهة API، من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-images-video-compared",
@@ -33365,7 +33365,7 @@
   {
     "lang": "ko",
     "title": "로컬 이미지·영상·비전 도구 비교(2026): 생성, 비전, OCR",
-    "excerpt": "로컬 이미지 도구 21개를 나란히 비교합니다: 이미지·영상 생성(AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI 등)과 비전·OCR 모델. 라이선스, 플랫폼, 인페인팅, 확장, API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 이미지 도구 22개를 나란히 비교합니다: 이미지·영상 생성(AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI 등)과 비전·OCR 모델. 라이선스, 플랫폼, 인페인팅, 확장, API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-images-video-compared",
@@ -33536,7 +33536,7 @@
   {
     "lang": "en",
     "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-    "excerpt": "Compare 83 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
+    "excerpt": "Compare 84 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -33554,7 +33554,7 @@
   {
     "lang": "fr",
     "title": "Applications de chat IA locales et assistants : comparatif (2026) — bureau, mobile, auto-hébergé, assistants et jeu de rôle",
-    "excerpt": "Comparez 83 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
+    "excerpt": "Comparez 84 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-chat-assistants-compared",
@@ -33563,7 +33563,7 @@
   {
     "lang": "ja",
     "title": "ローカルチャットアプリとAIアシスタント比較(2026):デスクトップ、モバイル、セルフホスト、アシスタント、ロールプレイ",
-    "excerpt": "ローカルチャットアプリとAIアシスタント83種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
+    "excerpt": "ローカルチャットアプリとAIアシスタント84種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-chat-assistants-compared",
@@ -33572,7 +33572,7 @@
   {
     "lang": "zh",
     "title": "本地聊天应用与助手对比(2026):桌面、手机、自托管、助手与角色扮演",
-    "excerpt": "并排对比83款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
+    "excerpt": "并排对比84款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-chat-assistants-compared",
@@ -33581,7 +33581,7 @@
   {
     "lang": "es",
     "title": "Apps de chat y asistentes locales, comparados (2026): escritorio, móvil, autoalojados, asistentes y rol",
-    "excerpt": "Compara 83 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
+    "excerpt": "Compara 84 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-chat-assistants-compared",
@@ -33590,7 +33590,7 @@
   {
     "lang": "pt",
     "title": "Apps de chat locais e assistentes comparados (2026): desktop, celular, self-hosted, assistentes e roleplay",
-    "excerpt": "Compare 83 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
+    "excerpt": "Compare 84 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-chat-assistants-compared",
@@ -33599,7 +33599,7 @@
   {
     "lang": "ar",
     "title": "مقارنة تطبيقات الدردشة والمساعدات المحلية (2026): سطح المكتب والجوال والاستضافة الذاتية والمساعدات ولعب الأدوار",
-    "excerpt": "قارن 83 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
+    "excerpt": "قارن 84 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-chat-assistants-compared",
@@ -33608,7 +33608,7 @@
   {
     "lang": "ko",
     "title": "로컬 채팅 앱·AI 어시스턴트 비교(2026): 데스크톱, 모바일, 셀프 호스팅, 어시스턴트, 롤플레이",
-    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 83개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 84개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-chat-assistants-compared",
@@ -36211,7 +36211,7 @@
     "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
     "excerpt": "KoboldCpp is a free, AGPL 3.0 single-file local LLM app built on llama.cpp. Download it, pick CUDA, Vulkan or ROCm, and compare it with llama.cpp and Ollama.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
@@ -36220,7 +36220,7 @@
     "title": "KoboldCpp-Rezension: Eine Datei, keine Installation, für Rollenspiel gebaut",
     "excerpt": "KoboldCpp: kostenlose Single-File-App für lokale LLMs auf llama.cpp-Basis (AGPL 3.0). Download, GPU-Support (CUDA, Vulkan, ROCm) und Vergleich mit llama.cpp.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/de/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
@@ -36229,7 +36229,7 @@
     "title": "KoboldCpp: un seul fichier, aucune installation, pensé pour le jeu de rôle",
     "excerpt": "KoboldCpp : appli LLM locale gratuite en un fichier (AGPL 3.0) basée sur llama.cpp. Téléchargement, GPU (CUDA, Vulkan, ROCm), comparaison avec llama.cpp.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/fr/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
@@ -36238,7 +36238,7 @@
     "title": "KoboldCpp レビュー：単一ファイル、インストール不要、ロールプレイ特化",
     "excerpt": "KoboldCppはllama.cppベースの無料・AGPL 3.0の単一ファイル型ローカルLLMアプリです。インストール不要の導入手順、CUDA/Vulkan/ROCm対応、llama.cppやOllamaとの違いを解説。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/ja/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
@@ -36247,7 +36247,7 @@
     "title": "KoboldCpp 评测:单文件、免安装,专为角色扮演打造",
     "excerpt": "KoboldCpp是基于llama.cpp的免费单文件本地LLM应用(AGPL 3.0)。涵盖下载方法、CUDA/Vulkan/ROCm支持,以及与llama.cpp、Ollama的对比。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/zh/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
@@ -36256,7 +36256,7 @@
     "title": "KoboldCpp: un solo archivo, sin instalación, pensado para el rol",
     "excerpt": "KoboldCpp es una app de LLM local gratuita de un solo archivo (AGPL 3.0) sobre llama.cpp. Descarga, GPU (CUDA, Vulkan, ROCm) y comparación con llama.cpp.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/es/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
@@ -36265,7 +36265,7 @@
     "title": "KoboldCpp: um arquivo só, sem instalação, feito para roleplay",
     "excerpt": "KoboldCpp é um app de LLM local gratuito de arquivo único (AGPL 3.0) sobre o llama.cpp. Download, GPU (CUDA, Vulkan, ROCm) e comparação com o llama.cpp.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/pt/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
@@ -36274,7 +36274,7 @@
     "title": "مراجعة KoboldCpp: ملف واحد، بلا تثبيت، مصمم للعب الأدوار",
     "excerpt": "KoboldCpp تطبيق نماذج لغوية محلي مجاني بملف واحد (AGPL 3.0) مبني على llama.cpp. التحميل ودعم CUDA وVulkan وROCm ومقارنته بـ llama.cpp وOllama.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/ar/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
@@ -36283,7 +36283,7 @@
     "title": "KoboldCpp 리뷰: 파일 하나, 설치 불필요, 롤플레이 특화",
     "excerpt": "KoboldCpp는 llama.cpp 기반의 무료 단일 파일 로컬 LLM 앱(AGPL 3.0)입니다. 다운로드, CUDA·Vulkan·ROCm 지원, llama.cpp·Ollama와의 비교를 정리했습니다.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/ko/power-local-llm/koboldcpp-review",
     "cluster": "power-local-llm"
   },
@@ -37183,7 +37183,7 @@
     "title": "Windsurf Review: From Codeium to a $2.4B Google Deal to Devin Desktop",
     "excerpt": "Yes. Cognition AI renamed Windsurf to Devin Desktop on June 2, 2026, after buying it in July 2025. Rebrand history, owners, downloads and pricing status.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
@@ -37192,7 +37192,7 @@
     "title": "Windsurf Review: Von Codeium zum 2,4-Mrd.-$-Google-Deal bis Devin Desktop",
     "excerpt": "Ja, Windsurf heißt jetzt Devin Desktop: Cognition AI benannte es am 2. Juni 2026 um, nachdem es im Juli 2025 übernommen wurde. Historie, Download, Preise.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/de/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
@@ -37201,7 +37201,7 @@
     "title": "Windsurf Review : de Codeium au deal Google à 2,4 Md$ jusqu'à Devin Desktop",
     "excerpt": "Oui, Windsurf s'appelle désormais Devin Desktop : Cognition AI l'a renommé le 2 juin 2026, après son rachat en juillet 2025. Historique, téléchargement, prix.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/fr/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
@@ -37210,7 +37210,7 @@
     "title": "Windsurf レビュー: Codeium から24億ドルのGoogleとの契約、そしてDevin Desktopへ",
     "excerpt": "はい、WindsurfはDevin Desktopになりました。Cognition AIが2025年7月に買収し、2026年6月2日に改称。経緯、所有者、ダウンロード、料金の状況を解説します。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/ja/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
@@ -37219,7 +37219,7 @@
     "title": "Windsurf 评测：从 Codeium 到 24 亿美元谷歌交易，再到 Devin Desktop",
     "excerpt": "是的，Windsurf 现已更名为 Devin Desktop：Cognition AI 于 2025 年 7 月收购，并在 2026 年 6 月 2 日更名。含更名经过、所有者、下载与定价现状。",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/zh/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
@@ -37228,7 +37228,7 @@
     "title": "Windsurf Review: de Codeium al acuerdo de Google por 2.400 M$ hasta Devin Desktop",
     "excerpt": "Sí, Windsurf ahora es Devin Desktop: Cognition AI lo renombró el 2 de junio de 2026 tras comprarlo en julio de 2025. Historia, dueños, descarga y precios.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/es/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
@@ -37237,7 +37237,7 @@
     "title": "Windsurf Review: da Codeium ao acordo de US$ 2,4 bi com o Google até o Devin Desktop",
     "excerpt": "Sim, o Windsurf agora é Devin Desktop: a Cognition AI o renomeou em 2 de junho de 2026, após comprá-lo em julho de 2025. Histórico, download e preços.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/pt/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
@@ -37246,7 +37246,7 @@
     "title": "مراجعة Windsurf: من Codeium إلى صفقة Google بقيمة 2.4 مليار دولار وصولاً إلى Devin Desktop",
     "excerpt": "نعم، أصبح Windsurf هو Devin Desktop: أعادت Cognition AI تسميته في 2 يونيو 2026 بعد شرائه في يوليو 2025. التاريخ والتنزيل وحالة الأسعار.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/ar/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
@@ -37255,7 +37255,7 @@
     "title": "Windsurf 리뷰: Codeium에서 24억 달러 규모의 Google 계약을 거쳐 Devin Desktop까지",
     "excerpt": "네, Windsurf는 이제 Devin Desktop입니다. Cognition AI가 2025년 7월 인수해 2026년 6월 2일 이름을 바꿨습니다. 개명 경위, 소유사, 다운로드, 요금 현황.",
     "publishDate": "2026-09-05",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-10-17",
     "url": "/ko/power-local-llm/windsurf-review",
     "cluster": "power-local-llm"
   },
@@ -39606,6 +39606,87 @@
     "publishDate": "2026-10-05",
     "dateModified": "2026-10-05",
     "url": "/ko/power-local-llm/mlxhub-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "AnyLLM Review: BYOK AI Chat Client for Android",
+    "excerpt": "AnyLLM review: Android chat client for your own OpenAI, Anthropic, Google and Groq API keys, with Ollama, MCP tools and web search. Price, privacy, limits.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/power-local-llm/anyllm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "AnyLLM-Rezension: KI-Chat-Client für Android mit eigenen API-Schlüsseln",
+    "excerpt": "AnyLLM-Rezension: Android-Chat-Client mit eigenen API-Schlüsseln für OpenAI, Anthropic, Google, Groq, plus Ollama, MCP, Websuche. Preis und Datenschutz.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/de/power-local-llm/anyllm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test d'AnyLLM : client de chat IA pour Android avec vos propres clés API",
+    "excerpt": "Test d'AnyLLM : client de chat Android avec vos clés API OpenAI, Anthropic, Google et Groq, plus Ollama, MCP et recherche web. Prix et confidentialité.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/fr/power-local-llm/anyllm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "AnyLLMレビュー:自分のAPIキーで使うAndroid向けAIチャットクライアント",
+    "excerpt": "AnyLLMレビュー。OpenAI・Anthropic・Google・Groqを自分のAPIキーで使うAndroidチャット。Ollama、MCP、Web検索に対応。料金とプライバシー、制約。",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/ja/power-local-llm/anyllm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "AnyLLM 评测：自带 API 密钥的 Android AI 聊天客户端",
+    "excerpt": "AnyLLM 评测：用自己的 API 密钥接入 OpenAI、Anthropic、Google 和 Groq 的 Android 聊天客户端，支持 Ollama、MCP 和网页搜索。价格、隐私与局限。",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/zh/power-local-llm/anyllm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de AnyLLM: cliente de chat con IA para Android con tus propias claves API",
+    "excerpt": "Reseña de AnyLLM: cliente de chat Android con tus claves API de OpenAI, Anthropic, Google y Groq, más Ollama, MCP y búsqueda web. Precio y privacidad.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/es/power-local-llm/anyllm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do AnyLLM: cliente de chat com IA para Android com suas próprias chaves de API",
+    "excerpt": "Análise do AnyLLM: cliente de chat Android com chaves de API da OpenAI, Anthropic, Google e Groq, mais Ollama, MCP e busca na web. Preço e privacidade.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/pt/power-local-llm/anyllm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة AnyLLM: عميل دردشة بالذكاء الاصطناعي لنظام Android بمفاتيح API الخاصة بك",
+    "excerpt": "مراجعة AnyLLM: عميل دردشة لـ Android بمفاتيح API لدى OpenAI وAnthropic وGoogle وGroq، مع Ollama وMCP والبحث على الويب. السعر والخصوصية والقيود.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/ar/power-local-llm/anyllm-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "AnyLLM 리뷰: 내 API 키로 쓰는 Android AI 채팅 클라이언트",
+    "excerpt": "AnyLLM 리뷰: OpenAI, Anthropic, Google, Groq를 내 API 키로 쓰는 Android 채팅 클라이언트. Ollama, MCP, 웹 검색 지원. 가격과 개인정보, 한계.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/ko/power-local-llm/anyllm-review",
     "cluster": "power-local-llm"
   },
   {
@@ -43337,7 +43418,7 @@
   {
     "lang": "en",
     "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
-    "excerpt": "What is oMLX? A free, open-source MLX server for Apple Silicon Macs with paged SSD caching. Install via Homebrew; compared with mlx-lm and mlx-serve.",
+    "excerpt": "oMLX is a free, open-source MLX server for Mac (github.com/jundot/omlx): paged SSD cache, Homebrew install, experimental cluster mode. Vs mlx-lm, mlx-serve.",
     "publishDate": "2026-09-18",
     "dateModified": "2026-10-09",
     "url": "/power-local-llm/omlx-review",
@@ -43346,7 +43427,7 @@
   {
     "lang": "de",
     "title": "oMLX Review: Inferenzserver für Apple Silicon mit SSD-Caching",
-    "excerpt": "Was ist oMLX? Kostenloser, quelloffener MLX-Server für Apple-Silicon-Macs mit SSD-Cache. Installation per Homebrew; Vergleich mit mlx-lm und mlx-serve.",
+    "excerpt": "oMLX ist ein kostenloser, quelloffener MLX-Server für Macs (github.com/jundot/omlx): SSD-Cache, Homebrew, Cluster-Modus (experimentell). Vs. mlx-lm, mlx-serve.",
     "publishDate": "2026-09-18",
     "dateModified": "2026-10-09",
     "url": "/de/power-local-llm/omlx-review",
@@ -43355,7 +43436,7 @@
   {
     "lang": "fr",
     "title": "oMLX Review: serveur d'inférence Apple Silicon avec cache SSD",
-    "excerpt": "Qu'est-ce qu'oMLX ? Serveur MLX gratuit et open source pour Mac Apple Silicon, avec cache SSD. Installation via Homebrew ; comparé à mlx-lm et mlx-serve.",
+    "excerpt": "oMLX : serveur MLX gratuit et open source pour Mac (github.com/jundot/omlx). Cache SSD, Homebrew, mode cluster expérimental. Face à mlx-lm, mlx-serve.",
     "publishDate": "2026-09-18",
     "dateModified": "2026-10-09",
     "url": "/fr/power-local-llm/omlx-review",
@@ -43364,7 +43445,7 @@
   {
     "lang": "ja",
     "title": "oMLXレビュー：SSDキャッシュ搭載のApple Silicon推論サーバー",
-    "excerpt": "oMLXとは？ページ化SSDキャッシュを備えた、Apple Silicon Mac向けの無料・オープンソースMLXサーバーです。Homebrewでの導入方法とmlx-lm・mlx-serveとの比較を解説します。",
+    "excerpt": "oMLXはMac向けの無料OSSのMLXサーバー（github.com/jundot/omlx）。SSDキャッシュ、Homebrew導入、実験的クラスタ機能を解説し、mlx-lm・mlx-serveとも比較します。",
     "publishDate": "2026-09-18",
     "dateModified": "2026-10-09",
     "url": "/ja/power-local-llm/omlx-review",
@@ -43373,7 +43454,7 @@
   {
     "lang": "zh",
     "title": "oMLX评测：带SSD缓存的Apple Silicon推理服务器",
-    "excerpt": "oMLX是什么？一款面向Apple Silicon Mac的免费开源MLX服务器，带分页SSD缓存。可通过Homebrew安装，并与mlx-lm、mlx-serve对比。",
+    "excerpt": "oMLX是面向Mac的免费开源MLX服务器（github.com/jundot/omlx）：SSD缓存、Homebrew安装、实验性集群模式，并与mlx-lm、mlx-serve对比。",
     "publishDate": "2026-09-18",
     "dateModified": "2026-10-09",
     "url": "/zh/power-local-llm/omlx-review",
@@ -43382,7 +43463,7 @@
   {
     "lang": "es",
     "title": "oMLX Review: servidor de inferencia para Apple Silicon con caché en SSD",
-    "excerpt": "¿Qué es oMLX? Servidor MLX gratuito y de código abierto para Mac con Apple Silicon y caché SSD. Instalación con Homebrew; comparado con mlx-lm y mlx-serve.",
+    "excerpt": "oMLX: servidor MLX gratuito y open source para Mac (github.com/jundot/omlx). Caché SSD, Homebrew, modo clúster experimental. Frente a mlx-lm y mlx-serve.",
     "publishDate": "2026-09-18",
     "dateModified": "2026-10-09",
     "url": "/es/power-local-llm/omlx-review",
@@ -43391,7 +43472,7 @@
   {
     "lang": "pt",
     "title": "oMLX Review: servidor de inferência para Apple Silicon com cache em SSD",
-    "excerpt": "O que é o oMLX? Servidor MLX gratuito e de código aberto para Macs Apple Silicon, com cache SSD. Instalação via Homebrew; comparado com mlx-lm e mlx-serve.",
+    "excerpt": "oMLX: servidor MLX gratuito e open source para Mac (github.com/jundot/omlx). Cache SSD, Homebrew, modo cluster experimental. Vs. mlx-lm e mlx-serve.",
     "publishDate": "2026-09-18",
     "dateModified": "2026-10-09",
     "url": "/pt/power-local-llm/omlx-review",
@@ -43400,7 +43481,7 @@
   {
     "lang": "ar",
     "title": "مراجعة oMLX: خادم استدلال لـ Apple Silicon مع تخزين مؤقت على SSD",
-    "excerpt": "ما هو oMLX؟ خادم MLX مجاني ومفتوح المصدر لأجهزة Mac بمعالجات Apple Silicon مع ذاكرة SSD مؤقتة. التثبيت عبر Homebrew ومقارنة مع mlx-lm وmlx-serve.",
+    "excerpt": "oMLX خادم MLX مجاني ومفتوح المصدر لأجهزة Mac (github.com/jundot/omlx): ذاكرة SSD مؤقتة، تثبيت عبر Homebrew، وضع عنقودي تجريبي، ومقارنة مع mlx-lm وmlx-serve.",
     "publishDate": "2026-09-18",
     "dateModified": "2026-10-09",
     "url": "/ar/power-local-llm/omlx-review",
@@ -43409,7 +43490,7 @@
   {
     "lang": "ko",
     "title": "oMLX 리뷰: SSD 캐싱을 지원하는 Apple Silicon 추론 서버",
-    "excerpt": "oMLX란? 페이지 단위 SSD 캐시를 갖춘 Apple Silicon Mac용 무료 오픈소스 MLX 서버입니다. Homebrew 설치 방법과 mlx-lm, mlx-serve 비교까지 정리했습니다.",
+    "excerpt": "oMLX는 Mac용 무료 오픈소스 MLX 서버(github.com/jundot/omlx)입니다. SSD 캐시, Homebrew 설치, 실험적 클러스터 모드, mlx-lm·mlx-serve 비교까지 다룹니다.",
     "publishDate": "2026-09-18",
     "dateModified": "2026-10-09",
     "url": "/ko/power-local-llm/omlx-review",
@@ -46977,6 +47058,87 @@
     "publishDate": "2026-10-16",
     "dateModified": "2026-10-16",
     "url": "/ko/power-local-llm/ai-cutoutwerk-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "OpenMontage Review: Open-Source Agentic Video Production With Your AI Coding Assistant",
+    "excerpt": "OpenMontage review: open-source toolkit that lets your AI coding assistant script, generate and render videos. Setup, costs and limits covered.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/power-local-llm/openmontage-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "OpenMontage Review: Open-Source-Videoproduktion mit Ihrem KI-Coding-Assistenten",
+    "excerpt": "OpenMontage Review: Open-Source-Toolkit, mit dem Ihr KI-Coding-Assistent Videos skriptet, erzeugt und rendert – mit Setup, Kosten und Grenzen.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/de/power-local-llm/openmontage-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test d’OpenMontage : production vidéo agentique open source avec votre assistant de code IA",
+    "excerpt": "Test d’OpenMontage : boîte à outils open source où votre assistant de code IA écrit, génère et rend des vidéos. Installation, coûts, limites.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/fr/power-local-llm/openmontage-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "OpenMontageレビュー：AIコーディングアシスタントで動かすオープンソースのエージェント型動画制作",
+    "excerpt": "OpenMontageレビュー：AIコーディングアシスタントが動画のリサーチから脚本、生成、レンダリングまで行うAGPL-3.0のOSS。導入手順、費用、制約を解説。",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/ja/power-local-llm/openmontage-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "OpenMontage评测：由AI编程助手驱动的开源智能体视频制作系统",
+    "excerpt": "OpenMontage评测：由AI编程助手完成视频调研、脚本、素材生成与渲染的AGPL-3.0开源工具包，含安装步骤、费用、数据流向与局限。",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/zh/power-local-llm/openmontage-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de OpenMontage: producción de vídeo agéntica de código abierto con tu asistente de programación con IA",
+    "excerpt": "Reseña de OpenMontage: kit de código abierto con el que tu asistente de IA guioniza, genera y renderiza vídeos. Instalación, costes y límites.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/es/power-local-llm/openmontage-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do OpenMontage: produção de vídeo agêntica de código aberto com seu assistente de programação com IA",
+    "excerpt": "Análise do OpenMontage: kit de código aberto em que seu assistente de IA roteiriza, gera e renderiza vídeos. Veja instalação, custos e limites.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/pt/power-local-llm/openmontage-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة OpenMontage: إنتاج فيديو بالوكلاء مفتوح المصدر مع مساعد البرمجة بالذكاء الاصطناعي",
+    "excerpt": "مراجعة OpenMontage: مجموعة أدوات مفتوحة المصدر يكتب فيها مساعد الذكاء الاصطناعي سيناريو الفيديو ويولّده ويصيّره، مع التثبيت والتكاليف والحدود.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/ar/power-local-llm/openmontage-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "OpenMontage 리뷰: AI 코딩 어시스턴트로 구동하는 오픈소스 에이전트형 영상 제작",
+    "excerpt": "OpenMontage 리뷰: AI 코딩 어시스턴트가 영상 조사부터 대본, 생성, 렌더링까지 맡는 AGPL-3.0 오픈소스. 설치, 비용, 한계를 다룹니다.",
+    "publishDate": "2026-10-17",
+    "dateModified": "2026-10-17",
+    "url": "/ko/power-local-llm/openmontage-review",
     "cluster": "power-local-llm"
   },
   {

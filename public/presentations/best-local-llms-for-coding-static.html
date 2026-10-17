@@ -374,17 +374,17 @@
           {
             type: 'title',
             h1: 'Best Local LLMs for Coding in 2026',
-            subtitle: 'Ranked by SWE-bench, RAM, and Language Support. Kimi K2.6 vs Qwen 3.6 27B vs Devstral Small 24B.',
+            subtitle: 'Qwen3.8 27B vs Devstral Small 2 vs Laguna XS 2.1 — ranked by reported SWE-bench scores, RAM and FIM support.',
             link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding'
           },
           {
             type: 'list',
             h2: 'What Makes a Good Coding LLM?',
-            intro: 'In 2026, SWE-bench has replaced HumanEval as the primary practical coding benchmark.',
+            intro: 'In 2026, SWE-bench Pro and Verified have replaced HumanEval as the primary practical coding benchmarks.',
             items: [
               '<strong>SWE-bench:</strong> Tests real GitHub issue resolution — multi-file changes, codebase understanding, test writing.',
               '<strong>Code-specific vs general:</strong> Dedicated coding models are fine-tuned on GitHub, Stack Overflow, and documentation.',
-              '<strong>5-15% advantage:</strong> Code models score 5-15% higher than general-purpose models at the same parameter count.',
+              '<strong>Vendor-reported scores:</strong> Harnesses and task sets differ between vendors, so treat scores as directional, not head-to-head.',
               '<strong>Fill-in-the-middle (FIM):</strong> Essential for IDE autocomplete. Enables code completion given context before AND after cursor.'
             ]
           },
@@ -393,29 +393,32 @@
             h2: 'The Three Models to Know',
             intro: 'Match model to your hardware.',
             items: [
-              '<strong>Kimi K2.6:</strong> 58.6 SWE-Bench Pro, MoE (32B active / 1T total) — highest quality locally available.',
-              '<strong>Qwen 3.6 27B:</strong> 77.2% SWE-bench, 22 GB RAM — best dense model.',
-              '<strong>Devstral Small 24B:</strong> Best for agentic coding, 16 GB RAM — best for 16 GB machines.'
+              '<strong>Qwen3.8 27B:</strong> Dense 27B, 18 GB, 256K context, 61.7 SWE-bench Pro (Qwen-reported) — best overall for a 24 GB GPU or 32 GB Mac.',
+              '<strong>Devstral Small 2:</strong> 24B, 15 GB, 65.8% SWE-bench Verified (Mistral-reported) — best agentic coding on 16 GB.',
+              '<strong>Laguna XS 2.1:</strong> 33B total / 3B active MoE, 20 GB, 256K context, 70.9% SWE-bench Verified — long-horizon agentic sessions.'
             ]
           },
           {
-            type: 'comparison',
-            h2: 'SWE-bench Benchmark Comparison',
-            line1: 'Qwen 3.6 27B: 77.2% SWE-bench',
-            line2: 'Kimi K2.6: 58.6 SWE-Bench Pro | Laguna XS 2.1: 70.9% SWE-bench Verified',
-            tip: '💡 Higher SWE-bench scores correlate with better real-world multi-file coding accuracy.',
-            image: '../images/best-local-llms-for-coding-humaneval-comparison-en.svg'
+            type: 'list',
+            h2: 'Reported Benchmark Scores',
+            intro: 'Pro and Verified are different SWE-bench variants — compare within one variant only.',
+            items: [
+              '<strong>SWE-bench Pro:</strong> Qwen3.8 27B 61.7 · Kimi K2.6 58.6 · Qwen 3.6 27B 53.5 (vendor-reported).',
+              '<strong>SWE-bench Verified:</strong> Laguna XS 2.1 70.9% · Devstral Small 2 65.8% · Qwen 3.6 27B 77.2% (vendor-reported).',
+              '<strong>LiveCodeBench v6:</strong> Qwen3.8 27B 90.3 (Qwen-reported).',
+              '<strong>Why it matters:</strong> Higher SWE-bench scores correlate with better multi-file coding, but test on your own code.'
+            ]
           },
           {
             type: 'table',
-            h2: 'Model Rankings by Performance',
-            columns: ['Rank', 'Model', 'SWE-bench', 'RAM (Q4_K_M)', 'FIM Support'],
+            h2: 'Model Overview',
+            columns: ['Model', 'SWE-bench', 'Size (Ollama)', 'FIM'],
             rows: [
-              { 'Rank': '1', 'Model': 'Kimi K2.6', 'SWE-bench': '58.6 (SWE-Bench Pro)', 'RAM (Q4_K_M)': 'varies (quantized)', 'FIM Support': 'No' },
-              { 'Rank': '2', 'Model': 'Qwen 3.6 27B', 'SWE-bench': '77.2%', 'RAM (Q4_K_M)': '22 GB', 'FIM Support': 'Yes' },
-              { 'Rank': '3', 'Model': 'Devstral Small 24B', 'SWE-bench': 'High (agentic)', 'RAM (Q4_K_M)': '16 GB', 'FIM Support': 'Yes' },
-              { 'Rank': '4', 'Model': 'Codestral 22B', 'SWE-bench': '—', 'RAM (Q4_K_M)': '14 GB', 'FIM Support': 'Yes' },
-              { 'Rank': '5', 'Model': 'Qwen3 8B', 'SWE-bench': '—', 'RAM (Q4_K_M)': '5 GB', 'FIM Support': 'Yes' }
+              { 'Model': 'Qwen3.8 27B', 'SWE-bench': '61.7 (Pro)', 'Size (Ollama)': '18 GB', 'FIM': '—' },
+              { 'Model': 'Devstral Small 2', 'SWE-bench': '65.8% (Verified)', 'Size (Ollama)': '15 GB', 'FIM': '—' },
+              { 'Model': 'Laguna XS 2.1', 'SWE-bench': '70.9% (Verified)', 'Size (Ollama)': '20 GB', 'FIM': '—' },
+              { 'Model': 'Codestral 22B', 'SWE-bench': '—', 'Size (Ollama)': '13 GB', 'FIM': 'Yes (primary)' },
+              { 'Model': 'Qwen3 8B', 'SWE-bench': '—', 'Size (Ollama)': '5 GB', 'FIM': 'Yes' }
             ]
           },
           {
@@ -424,52 +427,55 @@
             intro: 'Select based on your hardware first, use case second.',
             items: [
               '<strong>8 GB RAM:</strong> ollama run qwen3:8b — best quality-speed tradeoff, 5 GB VRAM.',
-              '<strong>16 GB RAM:</strong> ollama run devstral-small:24b — agentic coding, multi-file edits.',
-              '<strong>20+ GB RAM:</strong> ollama run qwen3.6:27b — 77.2% SWE-bench, best dense model.',
-              '<strong>IDE autocomplete:</strong> Codestral 22B via Continue.dev — FIM-optimized.',
-              '<strong>Maximum quality:</strong> ollama run kimi-k2.6 (quantized) — 58.6 SWE-Bench Pro.'
-            ],
-            image: '../images/best-local-llms-for-coding-hardware-selection-en.svg'
-          },
-          {
-            type: 'list',
-            h2: '#1: Kimi K2.6',
-            intro: 'The highest-performing locally-runnable coding model in 2026.',
-            items: [
-              '<strong>Performance:</strong> 58.6 SWE-Bench Pro, MoE architecture (32B active / 1T total), 128K context window.',
-              '<strong>License:</strong> Modified MIT — commercial use permitted.',
-              '<strong>RAM requirement:</strong> Varies by quantization. Needs quantization for consumer hardware.',
-              '<strong>Setup:</strong> ollama run kimi-k2.6'
+              '<strong>16 GB RAM:</strong> ollama run devstral-small-2 — agentic coding, multi-file edits, 15 GB.',
+              '<strong>24 GB GPU or 32 GB Mac:</strong> ollama run qwen3.8 — 18 GB, best overall.',
+              '<strong>IDE autocomplete:</strong> ollama run codestral:22b via Continue.dev — FIM-optimized.',
+              '<strong>64 GB machines:</strong> ollama run qwen3-coder-next — 80B MoE, 3B active, 52 GB.'
             ]
           },
           {
             type: 'list',
-            h2: '#2: Qwen 3.6 27B',
-            intro: 'Best dense coding model, no MoE overhead.',
+            h2: '#1: Qwen3.8 27B',
+            intro: 'The best local coding LLM for a 24 GB GPU or 32 GB Mac.',
             items: [
-              '<strong>Architecture:</strong> Dense — all 27B parameters active per token, more predictable long-context reasoning.',
-              '<strong>Performance:</strong> 77.2% SWE-bench, 128K context.',
-              '<strong>Best for:</strong> Multi-file reasoning and refactoring across large codebases.',
-              '<strong>RAM:</strong> ~22 GB at Q4_K_M.',
-              '<strong>Setup:</strong> ollama run qwen3.6:27b'
+              '<strong>Architecture:</strong> Dense — all 27B parameters active per token, Apache 2.0 license.',
+              '<strong>Performance:</strong> 61.7 SWE-bench Pro, 90.3 LiveCodeBench v6 (Qwen-reported), 256K context.',
+              '<strong>Best for:</strong> Multi-file reasoning, debugging and refactoring.',
+              '<strong>Size:</strong> 18 GB download on Ollama (Q4_K_M).',
+              '<strong>Setup:</strong> ollama run qwen3.8'
             ]
           },
           {
             type: 'list',
-            h2: '#3 & #4: Devstral Small 24B & Codestral 22B',
-            intro: 'Specialized for agentic coding and IDE autocomplete.',
+            h2: '#2 & #3: Devstral Small 2 and Laguna XS 2.1',
+            intro: 'Specialized for agentic coding.',
             items: [
-              '<strong>Devstral Small 24B:</strong> Best for agentic coding — multi-file edits, tool calling, debugging loops. 16 GB RAM.',
-              '<strong>Codestral 22B:</strong> Best for IDE autocomplete (FIM). ~14 GB RAM. Replaces Starcoder2 as recommended FIM model.',
-              '<strong>Use Devstral:</strong> For aider and multi-step agentic coding workflows.',
-              '<strong>Use Codestral:</strong> When integrating into VS Code or JetBrains IDEs via Continue.dev.'
+              '<strong>Devstral Small 2:</strong> 24B, 15 GB, tool calling, multi-file edits, debugging loops. Apache 2.0. Needs Ollama 0.13.3+.',
+              '<strong>Laguna XS 2.1:</strong> 33B total / 3B active MoE, 20 GB, 256K context, OpenMDW-1.1 license.',
+              '<strong>Use Devstral:</strong> For aider and multi-step agentic workflows on 16 GB.',
+              '<strong>Use Laguna:</strong> For multi-hour agentic sessions that need a large context window.'
             ]
           },
           {
             type: 'list',
-            h2: 'FIM Support & Use Case Guide',
-            image: '../images/best-local-llms-for-coding-fim-usecases-en.svg',
-            items: []
+            h2: '#4 & #5: Codestral 22B and Qwen3 8B',
+            intro: 'IDE autocomplete and the 8 GB tier.',
+            items: [
+              '<strong>Codestral 22B:</strong> FIM-optimized autocomplete via Continue.dev. 13 GB, 32K context.',
+              '<strong>Qwen3 8B:</strong> Best for 8 GB machines. 5 GB VRAM, FIM support.',
+              '<strong>Alternative:</strong> qwen3-coder:30b (19 GB, Apache 2.0) for repository-aware completion on 24 GB.'
+            ]
+          },
+          {
+            type: 'list',
+            h2: 'Kimi K2.6 and K2.7 Code: Not a Local Pick',
+            intro: 'The largest open coding models need server-class hardware.',
+            items: [
+              '<strong>Size:</strong> 1T total / 32B active MoE, 256K context.',
+              '<strong>Ollama:</strong> Only cloud tags (kimi-k2.6:cloud, kimi-k2.7-code:cloud) — prompts leave your machine.',
+              '<strong>Local runs:</strong> Community GGUF builds need about 310–470 GB of memory.',
+              '<strong>For privacy:</strong> Use Qwen3.8 27B, Devstral Small 2 or Laguna XS 2.1 instead.'
+            ]
           },
           {
             type: 'numbered',
@@ -479,17 +485,17 @@
               '<strong>Wrong context length:</strong> Ollama\'s runtime picks a VRAM-tiered default. Set num_ctx 32768 for multi-file code review.',
               '<strong>Expecting IDE replacement:</strong> Local models generate code. They do not provide IDE features like real-time error detection or type checking.',
               '<strong>Using Q3_K_S quantization:</strong> Below Q4_K_M, code generation accuracy drops significantly. Logical errors and syntax bugs increase.',
-              '<strong>Ignoring MoE models over total parameter count:</strong> Kimi K2.6 has 1T total parameters but only 32B active — runs on hardware a 70B dense model would require.'
+              '<strong>Judging MoE models by active parameters:</strong> Laguna XS 2.1 activates 3B, but all 33B must fit in memory (20 GB).'
             ]
           },
           {
             type: 'faq',
             h2: 'Quick FAQ',
             faqs: [
-              { q: 'What is SWE-bench?', a: 'SWE-bench tests a model\'s ability to resolve real GitHub issues — multi-file changes, codebase understanding, test writing. It has replaced HumanEval as the primary practical coding benchmark in 2026.' },
-              { q: 'What is FIM (fill-in-the-middle)?', a: 'Code completion given context before AND after the cursor. Required for IDE autocomplete. Codestral 22B and Qwen3 8B support it. Kimi K2.6 does not.' },
-              { q: 'Can local models replace GitHub Copilot?', a: 'Codestral 22B via Continue.dev closely matches Copilot for most autocomplete tasks. For complex multi-file reasoning, cloud models still have an edge on the hardest 20%.' },
-              { q: 'Is Kimi K2.6 safe for proprietary code?', a: 'Yes. Local Ollama inference makes zero external connections. Your code stays on your hardware regardless of the model\'s origin.' }
+              { q: 'What is SWE-bench?', a: 'SWE-bench tests a model\'s ability to resolve real GitHub issues — multi-file changes, codebase understanding, test writing. SWE-bench Pro and Verified are different variants, so their scores are not interchangeable.' },
+              { q: 'What is FIM (fill-in-the-middle)?', a: 'Code completion given context before AND after the cursor. Required for IDE autocomplete. Codestral 22B and Qwen3 8B support it.' },
+              { q: 'Can local models replace GitHub Copilot?', a: 'Codestral 22B via Continue.dev can cover most autocomplete tasks. For complex multi-file reasoning, cloud models tend to keep an edge on the hardest tasks.' },
+              { q: 'Can I run Kimi K2.6 locally?', a: 'Only on server-class hardware. Ollama lists it as a cloud tag only; community GGUF builds need 300+ GB of memory.' }
             ]
           },
           {
@@ -497,9 +503,9 @@
             h2: 'Next Steps',
             intro: 'Ready to run a coding model locally?',
             items: [
-              '<strong>Install Ollama:</strong> Download from ollama.ai. Takes 2 minutes.',
-              '<strong>Pick your model:</strong> Use the hardware selection guide above.',
-              '<strong>Run it:</strong> ollama run qwen3:8b (or kimi-k2.6, depending on RAM).',
+              '<strong>Install Ollama:</strong> Download from ollama.com. Takes 2 minutes.',
+              '<strong>Pick your model:</strong> Use the hardware guide above.',
+              '<strong>Run it:</strong> ollama run qwen3:8b, devstral-small-2 or qwen3.8, depending on RAM.',
               '<strong>Integrate with IDE:</strong> Install Continue.dev VS Code extension. Enable FIM-based code completion.',
               '<strong>Learn more:</strong> Visit the full article for regional compliance notes (GDPR, METI, China Data Security Law).'
             ]
@@ -516,29 +522,29 @@
       de: {
         title: 'Beste lokale LLMs für Coding 2026',
         slides: [
-          { type: 'title', h1: 'Beste lokale LLMs für Coding 2026', subtitle: 'Ranked by SWE-bench, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=de' },
-          { type: 'list', h2: 'Top 3 Models', items: ['Kimi K2.6: 58.6 SWE-Bench Pro (MoE)', 'Qwen 3.6 27B: 77.2% SWE-bench, 22 GB RAM', 'Devstral Small 24B: agentic coding, 16 GB RAM'] }
+          { type: 'title', h1: 'Beste lokale LLMs für Coding 2026', subtitle: 'Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1 — see the English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=de' },
+          { type: 'list', h2: 'Top 3 Models', items: ['Qwen3.8 27B: 61.7 SWE-bench Pro (Qwen), 18 GB', 'Devstral Small 2: agentic coding, 15 GB', 'Laguna XS 2.1: long-horizon agentic coding, 20 GB'] }
         ]
       },
       fr: {
         title: 'Meilleurs LLM locaux pour le codage 2026',
         slides: [
-          { type: 'title', h1: 'Meilleurs LLM locaux pour le codage 2026', subtitle: 'Ranked by SWE-bench, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=fr' },
-          { type: 'list', h2: 'Top 3 Models', items: ['Kimi K2.6: 58.6 SWE-Bench Pro (MoE)', 'Qwen 3.6 27B: 77.2% SWE-bench, 22 GB RAM', 'Devstral Small 24B: agentic coding, 16 GB RAM'] }
+          { type: 'title', h1: 'Meilleurs LLM locaux pour le codage 2026', subtitle: 'Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1 — see the English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=fr' },
+          { type: 'list', h2: 'Top 3 Models', items: ['Qwen3.8 27B: 61.7 SWE-bench Pro (Qwen), 18 GB', 'Devstral Small 2: agentic coding, 15 GB', 'Laguna XS 2.1: long-horizon agentic coding, 20 GB'] }
         ]
       },
       ja: {
         title: '2026年の最高のローカルコーディングLLM',
         slides: [
-          { type: 'title', h1: '2026年の最高のローカルコーディングLLM', subtitle: 'Ranked by SWE-bench, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=ja' },
-          { type: 'list', h2: 'Top 3 Models', items: ['Kimi K2.6: 58.6 SWE-Bench Pro (MoE)', 'Qwen 3.6 27B: 77.2% SWE-bench, 22 GB RAM', 'Devstral Small 24B: agentic coding, 16 GB RAM'] }
+          { type: 'title', h1: '2026年の最高のローカルコーディングLLM', subtitle: 'Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1 — see the English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=ja' },
+          { type: 'list', h2: 'Top 3 Models', items: ['Qwen3.8 27B: 61.7 SWE-bench Pro (Qwen), 18 GB', 'Devstral Small 2: agentic coding, 15 GB', 'Laguna XS 2.1: long-horizon agentic coding, 20 GB'] }
         ]
       },
       zh: {
         title: '2026年最佳本地编码LLM',
         slides: [
-          { type: 'title', h1: '2026年最佳本地编码LLM', subtitle: 'Ranked by SWE-bench, RAM, and Language Support. See English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=zh' },
-          { type: 'list', h2: 'Top 3 Models', items: ['Kimi K2.6: 58.6 SWE-Bench Pro (MoE)', 'Qwen 3.6 27B: 77.2% SWE-bench, 22 GB RAM', 'Devstral Small 24B: agentic coding, 16 GB RAM'] }
+          { type: 'title', h1: '2026年最佳本地编码LLM', subtitle: 'Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1 — see the English version for details.', link: 'https://www.promptquorum.com/local-llms/best-local-llms-for-coding?lang=zh' },
+          { type: 'list', h2: 'Top 3 Models', items: ['Qwen3.8 27B: 61.7 SWE-bench Pro (Qwen), 18 GB', 'Devstral Small 2: agentic coding, 15 GB', 'Laguna XS 2.1: long-horizon agentic coding, 20 GB'] }
         ]
       }
     };

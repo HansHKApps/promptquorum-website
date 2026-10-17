@@ -10,10 +10,26 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-local-llms-for-coding",
+        "title": "Best Local LLMs for Coding 2026: Qwen3.8 27B, Devstral, Laguna",
+        "url": "/local-llms/best-local-llms-for-coding",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "anyllm-review",
         "title": "AnyLLM Review: BYOK AI Chat Client for Android",
         "url": "/power-local-llm/anyllm-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "koboldcpp-review",
+        "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
+        "url": "/power-local-llm/koboldcpp-review",
         "dateModified": "2026-10-17",
         "tier": "about"
       },
@@ -59,26 +75,10 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "koboldcpp-review",
-        "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
-        "url": "/power-local-llm/koboldcpp-review",
-        "dateModified": "2026-10-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "tina-review",
         "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
         "url": "/power-local-llm/tina-review",
         "dateModified": "2026-10-04",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ollama-local-ai-review",
-        "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
-        "url": "/power-local-llm/ollama-local-ai-review",
-        "dateModified": "2026-10-02",
         "tier": "about"
       }
     ],
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "koboldcpp-review",
+        "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
+        "url": "/power-local-llm/koboldcpp-review",
+        "dateModified": "2026-10-17",
         "tier": "about"
       },
       {
@@ -116,14 +124,6 @@
         "slug": "open-webui-review",
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
         "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-10-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "koboldcpp-review",
-        "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
-        "url": "/power-local-llm/koboldcpp-review",
         "dateModified": "2026-10-09",
         "tier": "about"
       },
@@ -630,7 +630,7 @@
         "slug": "koboldcpp-review",
         "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
         "url": "/power-local-llm/koboldcpp-review",
-        "dateModified": "2026-10-09",
+        "dateModified": "2026-10-17",
         "tier": "about"
       },
       {
@@ -2646,6 +2646,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-local-llms-for-coding",
+        "title": "Best Local LLMs for Coding 2026: Qwen3.8 27B, Devstral, Laguna",
+        "url": "/local-llms/best-local-llms-for-coding",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
@@ -2690,14 +2698,6 @@
         "slug": "best-ai-coding-assistant-local-llm",
         "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
         "url": "/local-llms/best-ai-coding-assistant-local-llm",
-        "dateModified": "2026-08-30",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-for-coding",
-        "title": "Best Local LLMs for Coding 2026: Kimi K2.6 vs Qwen vs Devstral",
-        "url": "/local-llms/best-local-llms-for-coding",
         "dateModified": "2026-08-30",
         "tier": "about"
       },
@@ -2836,7 +2836,7 @@
         "slug": "windsurf-review",
         "title": "Windsurf Review: From Codeium to a $2.4B Google Deal to Devin Desktop",
         "url": "/power-local-llm/windsurf-review",
-        "dateModified": "2026-10-09",
+        "dateModified": "2026-10-17",
         "tier": "mentioned"
       }
     ],
@@ -2850,7 +2850,7 @@
         "slug": "windsurf-review",
         "title": "Windsurf Review: From Codeium to a $2.4B Google Deal to Devin Desktop",
         "url": "/power-local-llm/windsurf-review",
-        "dateModified": "2026-10-09",
+        "dateModified": "2026-10-17",
         "tier": "about"
       },
       {
@@ -3278,11 +3278,11 @@
         "tier": "about"
       },
       {
-        "cluster": "power-local-llm",
-        "slug": "friedrichai-review",
-        "title": "FriedrichAI Review: Offline Windows AI Assistant Sold on Steam",
-        "url": "/power-local-llm/friedrichai-review",
-        "dateModified": "2026-10-09",
+        "cluster": "local-llms",
+        "slug": "best-local-llms-for-coding",
+        "title": "Best Local LLMs for Coding 2026: Qwen3.8 27B, Devstral, Laguna",
+        "url": "/local-llms/best-local-llms-for-coding",
+        "dateModified": "2026-10-17",
         "tier": "mentioned"
       }
     ],
@@ -9177,22 +9177,22 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "best-local-llms-for-coding",
+        "title": "Best Local LLMs for Coding 2026: Qwen3.8 27B, Devstral, Laguna",
+        "url": "/local-llms/best-local-llms-for-coding",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
         "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
         "dateModified": "2026-09-01",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lm-studio-advanced-features",
-        "title": "LM Studio Advanced Features in 2026: GPU Settings, LoRA, and Fine-Tuning",
-        "url": "/local-llms/lm-studio-advanced-features",
-        "dateModified": "2026-08-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "LLaMA-Factory": {

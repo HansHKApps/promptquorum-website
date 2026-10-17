@@ -707,7 +707,7 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',
-      gammaDescription: 'Interactive 14-slide presentation covering: HumanEval benchmark comparison, hardware-matched model selection (8GB, 16GB, 20+GB RAM), Qwen2.5-Coder 32B (87%) vs DeepSeek-Coder V2 Lite (81%) vs Qwen3 8B (72%), and IDE integration with Continue.dev. Note: the slides reflect an earlier refresh; the current model picks (Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1) are in the text above and are not yet reflected in the deck. Download the reference card as PDF.',
+      gammaDescription: 'Interactive 14-slide presentation covering: what makes a good coding LLM, reported SWE-bench Pro and Verified scores, hardware-matched model selection (8 GB, 16 GB, 24 GB+), Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1, Codestral 22B and Qwen3 8B, why Kimi K2.6 is not a local pick, and IDE integration with Continue.dev. Download the reference card as PDF.',
     },
     es: {
       freshness_tier: 'monthly',
@@ -1345,7 +1345,7 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',
-      gammaDescription: 'Presentación interactiva de 14 diapositivas sobre: comparación del benchmark HumanEval, selección de modelo según hardware (8 GB, 16 GB, 20+ GB de RAM), Qwen2.5-Coder 32B (87 %) vs DeepSeek-Coder V2 Lite (81 %) vs Qwen3 8B (72 %) e integración con el IDE mediante Continue.dev. Nota: las diapositivas reflejan una revisión anterior; las recomendaciones actuales (Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1) están en el texto de arriba y aún no figuran en la presentación. Descarga la tarjeta de referencia en PDF.',
+      gammaDescription: 'Presentación interactiva de 14 diapositivas sobre: qué hace bueno a un LLM de código, puntuaciones SWE-bench Pro y Verified informadas, selección de modelo según hardware (8 GB, 16 GB, 24 GB+), Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1, Codestral 22B y Qwen3 8B, por qué Kimi K2.6 no es una opción local e integración con el IDE mediante Continue.dev. Descarga la tarjeta de referencia en PDF.',
     },
     ar: {
       freshness_tier: 'monthly',
@@ -1983,7 +1983,7 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',
-      gammaDescription: 'عرض تفاعلي من 14 شريحة يغطي: مقارنة معيار HumanEval، واختيار النموذج بحسب العتاد (8 GB و16 GB و20+ GB من RAM)، وQwen2.5-Coder 32B (87%) مقابل DeepSeek-Coder V2 Lite (81%) مقابل Qwen3 8B (72%)، والتكامل مع IDE عبر Continue.dev. ملاحظة: تعكس الشرائح مراجعة سابقة؛ أما التوصيات الحالية (Qwen3.8 27B وDevstral Small 2 وLaguna XS 2.1) ففي النص أعلاه ولم تُضَف بعد إلى العرض. نزّل بطاقة المرجع بصيغة PDF.',
+      gammaDescription: 'عرض تفاعلي من 14 شريحة يغطي: ما الذي يجعل LLM جيداً للبرمجة، ونتائج SWE-bench Pro وVerified المعلنة، واختيار النموذج بحسب العتاد (8 GB و16 GB و24 GB+)، وQwen3.8 27B وDevstral Small 2 وLaguna XS 2.1 وCodestral 22B وQwen3 8B، ولماذا ليس Kimi K2.6 خياراً محلياً، والتكامل مع IDE عبر Continue.dev. نزّل بطاقة المرجع بصيغة PDF.',
     },
     pt: {
       freshness_tier: 'monthly',
@@ -2429,7 +2429,7 @@ schema: {
         },
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',
-      gammaDescription: 'Apresentação interativa de 14 slides sobre: comparação do benchmark HumanEval, seleção de modelo por hardware (8 GB, 16 GB, 20+ GB de RAM), Qwen2.5-Coder 32B (87%) vs DeepSeek-Coder V2 Lite (81%) vs Qwen3 8B (72%) e integração com IDE via Continue.dev. Observação: os slides refletem uma revisão anterior; as recomendações atuais (Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1) estão no texto acima e ainda não constam na apresentação. Baixe o cartão de referência em PDF.',
+      gammaDescription: 'Apresentação interativa de 14 slides sobre: o que torna um LLM de código bom, pontuações SWE-bench Pro e Verified informadas, seleção de modelo por hardware (8 GB, 16 GB, 24 GB+), Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1, Codestral 22B e Qwen3 8B, por que o Kimi K2.6 não é uma escolha local e integração com IDE via Continue.dev. Baixe o cartão de referência em PDF.',
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -3073,7 +3073,7 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',
-      gammaDescription: 'Interaktive Präsentation mit 14 Folien zu: HumanEval-Benchmark-Vergleich, hardwareabhängiger Modellauswahl (8 GB, 16 GB, 20+ GB RAM), Qwen2.5-Coder 32B (87 %) vs. DeepSeek-Coder V2 Lite (81 %) vs. Qwen3 8B (72 %) und IDE-Integration mit Continue.dev. Hinweis: Die Folien stammen aus einer früheren Überarbeitung; die aktuellen Modellempfehlungen (Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1) stehen im Text oben und sind noch nicht im Foliensatz enthalten. Referenzkarte als PDF herunterladen.',
+      gammaDescription: 'Interaktive Präsentation mit 14 Folien zu: Kriterien für gute Coding-LLMs, gemeldeten SWE-bench-Pro- und Verified-Werten, hardwareabhängiger Modellauswahl (8 GB, 16 GB, 24 GB+), Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1, Codestral 22B und Qwen3 8B, warum Kimi K2.6 keine lokale Wahl ist, und IDE-Integration mit Continue.dev. Referenzkarte als PDF herunterladen.',
     },
     fr: {
       freshness_tier: 'monthly',
@@ -3687,7 +3687,7 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',
-      gammaDescription: 'Présentation interactive de 14 diapositives couvrant : comparaison des benchmarks HumanEval, choix du modèle selon le matériel (8 Go, 16 Go, 20+ Go de RAM), Qwen2.5-Coder 32B (87 %) vs DeepSeek-Coder V2 Lite (81 %) vs Qwen3 8B (72 %) et intégration IDE avec Continue.dev. Remarque : les diapositives reflètent une révision antérieure ; les choix de modèles actuels (Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1) figurent dans le texte ci-dessus et ne sont pas encore dans le diaporama. Téléchargez la fiche de référence en PDF.',
+      gammaDescription: 'Présentation interactive de 14 diapositives : critères d\'un bon LLM de code, scores SWE-bench Pro et Verified annoncés, choix du modèle selon le matériel (8 Go, 16 Go, 24 Go+), Qwen3.8 27B, Devstral Small 2, Laguna XS 2.1, Codestral 22B et Qwen3 8B, pourquoi Kimi K2.6 n\'est pas un choix local, et intégration IDE avec Continue.dev. Téléchargez la fiche de référence en PDF.',
     },
     ja: {
       freshness_tier: 'monthly',
@@ -4313,7 +4313,7 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',
-      gammaDescription: 'インタラクティブな14スライドのプレゼンテーション：HumanEvalベンチマーク比較、ハードウェア別モデル選択（8GB、16GB、20+GB RAM）、Qwen2.5-Coder 32B（87%）vs DeepSeek-Coder V2 Lite（81%）vs Qwen3 8B（72%）、Continue.devによるIDE統合。注：スライドは以前の改訂を反映しており、現在の推奨（Qwen3.8 27B、Devstral Small 2、Laguna XS 2.1）は上記の本文にあり、スライドにはまだ反映されていません。PDFのリファレンスカードをダウンロードできます。',
+      gammaDescription: 'インタラクティブな14スライドのプレゼンテーション：優れたコーディングLLMの条件、公表されたSWE-bench ProとVerifiedのスコア、ハードウェア別モデル選択（8GB、16GB、24GB以上）、Qwen3.8 27B、Devstral Small 2、Laguna XS 2.1、Codestral 22B、Qwen3 8B、Kimi K2.6がローカル向きでない理由、Continue.devによるIDE統合。PDFのリファレンスカードをダウンロードできます。',
     },
     zh: {
       freshness_tier: 'monthly',
@@ -4939,7 +4939,7 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/best-local-llms-for-coding-static.html',
-      gammaDescription: '交互式14张幻灯片演示：HumanEval基准对比、硬件匹配的模型选择（8GB、16GB、20+GB内存）、Qwen2.5-Coder 32B（87%）vs DeepSeek-Coder V2 Lite（81%）vs Qwen3 8B（72%），以及使用Continue.dev的IDE集成。注：幻灯片反映的是较早的一次修订；当前推荐（Qwen3.8 27B、Devstral Small 2、Laguna XS 2.1）见上方正文，尚未体现在幻灯片中。可下载PDF参考卡。',
+      gammaDescription: '交互式14张幻灯片演示：优秀编程LLM的标准、厂商公布的SWE-bench Pro与Verified分数、按硬件选择模型（8GB、16GB、24GB以上）、Qwen3.8 27B、Devstral Small 2、Laguna XS 2.1、Codestral 22B与Qwen3 8B、Kimi K2.6为何不适合本地运行，以及使用Continue.dev的IDE集成。可下载PDF参考卡。',
     },
   ko: {
       freshness_tier: 'monthly',

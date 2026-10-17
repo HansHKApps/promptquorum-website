@@ -454,7 +454,7 @@
       "images": [
         {
           "url": "/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-en.webp",
-          "title": "Benchmark comparison (June 2026): Qwen3.8-27B (61.7% SWE-bench) leads dense coding and fits 24 GB at Q4. SWE-bench (real-world multi-file coding) is now more relevant than HumanEval for evaluating coding models. Llama 4 Scout uses a 16-expert MoE architecture (17B active / 109B total) but needs ~55 GB VRAM at Q4."
+          "title": "Benchmark comparison (June 2026): Qwen3.8-27B (61.7 SWE-bench Pro) leads dense coding and fits 24 GB at Q4. SWE-bench (real-world multi-file coding) is now more relevant than HumanEval for evaluating coding models. Llama 4 Scout uses a 16-expert MoE architecture (17B active / 109B total) but needs ~55 GB VRAM at Q4."
         },
         {
           "url": "/images/qwen-vs-llama-vs-mistral-multilingual-support-en.svg",
@@ -466,7 +466,7 @@
         },
         {
           "url": "/images/qwen-vs-llama-vs-mistral-task-winners-en.svg",
-          "title": "Task winner matrix (May 2026): Qwen3.8-27B wins dense coding (61.7% SWE-bench); Devstral wins agentic; Codestral wins IDE autocomplete; Llama 4 Scout dominates long-context; Mistral Small 3.1 best quality-per-GB."
+          "title": "Task winner matrix (May 2026): Qwen3.8-27B wins dense coding (61.7 SWE-bench Pro); Devstral wins agentic; Codestral wins IDE autocomplete; Llama 4 Scout dominates long-context; Mistral Small 3.1 best quality-per-GB."
         },
         {
           "url": "/images/qwen-vs-llama-vs-mistral-size-classes-en.svg",
@@ -502,7 +502,7 @@
       ]
     },
     "best-local-llms-for-coding": {
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -520,11 +520,11 @@
       "images": [
         {
           "url": "/images/best-local-llms-for-coding-benchmark-comparison-hero-en.webp",
-          "title": "Benchmark scores by model (July 2026): Qwen2.5-Coder 32B leads at 87% HumanEval, DeepSeek V4 Flash scores 78/100 on independent real-world tests, Qwen 3.6 27B hits 77.2% SWE-bench, Laguna XS 2.1 scores 70.9% SWE-bench Verified as the newest agentic challenger, Qwen3 8B reaches ~76% HumanEval, and Kimi K2.6 scores 58.6 on the harder SWE-Bench Pro."
+          "title": "Vendor-reported benchmark scores by model: Qwen3.8 27B 61.7 SWE-bench Pro, Qwen 3.6 27B 77.2% SWE-bench Verified, Laguna XS 2.1 70.9% SWE-bench Verified, Devstral Small 2 65.8% SWE-bench Verified, Kimi K2.6 58.6 SWE-bench Pro, Qwen2.5-Coder 32B 87% HumanEval. Harnesses and task sets differ, so compare within a column only."
         },
         {
           "url": "/images/best-local-llms-for-coding-hardware-selection-hero-en.webp",
-          "title": "Hardware-matched model selection (July 2026): 8 GB RAM → Qwen3 8B (5 GB VRAM, improved coding); 16 GB RAM → Devstral Small 24B (16 GB VRAM, agentic coding) or Qwen 3.6 27B (77.2% SWE-bench); long-horizon agentic sessions → Laguna XS 2.1 (SWE-bench Verified 70.9%, 256K context); 20+ GB RAM → Kimi K2.6 quantized (58.6 SWE-Bench Pro, best local quality)."
+          "title": "Hardware-matched model selection: 8 GB RAM → Qwen3 8B (5 GB VRAM); 16 GB RAM → Devstral Small 2 (15 GB, agentic coding); 24 GB GPU or 32 GB Mac → Qwen3.8 27B (18 GB, 61.7 SWE-bench Pro, Qwen-reported); long-horizon agentic sessions → Laguna XS 2.1 (20 GB, 256K context)."
         }
       ]
     },
@@ -729,7 +729,7 @@
       "images": [
         {
           "url": "/images/top-open-source-models-ollama-use-case-picks-hero-en.webp",
-          "title": "Ollama model selection by use case: pick qwen3.8:27b (best overall, 61.7% SWE-bench) for chat and coding, kimi-k2.6 for frontier coding, gpt-oss:20b on 16 GB, deepseek-r1:7b for math."
+          "title": "Ollama model selection by use case: pick qwen3.8:27b (best overall, 61.7 SWE-bench Pro) for chat and coding, devstral-small-2 for agentic coding (kimi-k2.6 is cloud-only), gpt-oss:20b on 16 GB, deepseek-r1:7b for math."
         },
         {
           "url": "/images/ollama-deepseek-r1-reasoning-comparison-en.svg",
@@ -6655,7 +6655,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 7 categories of a local LLM stack: 252 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
+          "title": "The 7 categories of a local LLM stack: 253 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -10231,7 +10231,7 @@
       "images": []
     },
     "koboldcpp-review": {
-      "dateModified": "2026-10-09",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -10447,7 +10447,7 @@
       "images": []
     },
     "windsurf-review": {
-      "dateModified": "2026-10-09",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -12628,6 +12628,24 @@
       "dateModified": "2026-10-16",
       "lastFactChecked": null,
       "publishDate": "2026-10-16",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "openmontage-review": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-17",
       "hasSections": true,
       "langs": [
         "en",

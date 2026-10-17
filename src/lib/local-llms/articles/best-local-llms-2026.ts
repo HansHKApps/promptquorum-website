@@ -19,12 +19,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Best Models',
       title: 'Best Local LLMs in 2026: Qwen3.8-27B, Gemma 4, and Phi-4-mini Ranked',
       seoTitle: 'Best Local LLMs 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini',
-      intro: 'The best local LLMs in 2026 are Qwen3.8-27B (best overall, 89.2% GPQA Diamond, ~24 GB RAM, native vision-language), Gemma 4 E2B (best small, ~2 GB RAM), Gemma 4 26B-A4B (best reasoning, 89% AIME, ~15 GB RAM), Qwen2.5-Coder 7B (best coding, 88% HumanEval, ~5 GB RAM), and Phi-4-mini (best CPU-only, ~2.5 GB RAM). Rankings are based on official model cards, community GGUF benchmark reports, and the Hugging Face Open LLM Leaderboard. Qwen3.8-27B (released 2026-08-14) supersedes the previous Qwen3.6 27B pick — it is a native vision-language model, not text-only, and its RAM footprint grew from ~17 GB to ~24 GB. (DeepSeek released DeepSeek-V4 in 2026, but Flash/Pro variants require 142 GB+ VRAM and neither Ollama nor llama.cpp can load the architecture in a stable release yet, so it is not a locally-runnable pick.)',
+      intro: 'The best local LLMs in 2026 are Qwen3.8-27B (best overall, 89.2% GPQA Diamond, ~24 GB RAM, native vision-language), Gemma 4 E2B (best small, ~2 GB RAM), Gemma 4 26B-A4B (best reasoning, 89% AIME, ~15 GB RAM), Qwen2.5-Coder 7B (best small coding model, 88% HumanEval, ~5 GB RAM), and Phi-4-mini (best CPU-only, ~2.5 GB RAM). Rankings are based on official model cards, community GGUF benchmark reports, and the Hugging Face Open LLM Leaderboard. Qwen3.8-27B (released 2026-08-14) supersedes the previous Qwen3.6 27B pick — it is a native vision-language model, not text-only, and its RAM footprint grew from ~17 GB to ~24 GB. (DeepSeek released DeepSeek-V4 in 2026, but Flash/Pro variants require 142 GB+ VRAM and neither Ollama nor llama.cpp can load the architecture in a stable release yet, so it is not a locally-runnable pick.)',
       metaDescription: 'Best local LLMs 2026: Qwen3.8-27B wins overall (89.2% GPQA Diamond, 24 GB RAM, vision-language). Gemma 4 26B-A4B for reasoning. Qwen2.5-Coder 7B for code. Phi-4-mini for CPU-only.',
       heroImage: '/images/best-local-llms-2026-ranked-comparison-hero-en.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-09-06',
-      leadAnswerBlock: '**The best local LLMs in 2026 are Qwen3.8-27B (best overall, native vision-language, ~24 GB RAM), Gemma 4 E2B (best small, ~2 GB RAM), Gemma 4 26B-A4B (best reasoning, ~15 GB RAM), Qwen2.5-Coder 7B (best coding, ~5 GB RAM), and Phi-4-mini (best CPU-only, ~2.5 GB RAM).**',
+      leadAnswerBlock: '**The best local LLMs in 2026 are Qwen3.8-27B (best overall, native vision-language, ~24 GB RAM), Gemma 4 E2B (best small, ~2 GB RAM), Gemma 4 26B-A4B (best reasoning, ~15 GB RAM), Qwen2.5-Coder 7B (best small coding model, ~5 GB RAM), and Phi-4-mini (best CPU-only, ~2.5 GB RAM).**',
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '10 min read',
       educationalLevel: 'Beginner',
@@ -121,8 +121,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'qwen25-coder-7b',
           title: '#3 Qwen2.5-Coder 7B -- Best for Code Generation',
           content: [
-            '**Qwen2.5-Coder 7B is the best local model for coding tasks in 2026.** It scores 88% on HumanEval (84% on the harder HumanEval+ benchmark) — outperforming general-purpose 14B-27B models on code generation — while fitting in ~5 GB RAM at Q4_K_M quantization. It was trained specifically on code (80+ programming languages), not adapted from a general model, giving it superior performance on function completion, debugging, and code explanation.',
-            'For users with 24+ GB RAM, Qwen2.5-Coder 32B scores 92% on HumanEval and is the strongest locally-runnable coding model available (`ollama run qwen2.5-coder:32b`). The 7B variant is recommended for most users as a fast, low-RAM starting point. See [Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) for a full comparison.',
+            '**Qwen2.5-Coder 7B is a strong small local model for coding tasks.** It scores 88% on HumanEval (84% on the harder HumanEval+ benchmark) — outperforming general-purpose 14B-27B models on code generation — while fitting in ~5 GB RAM at Q4_K_M quantization. It was trained specifically on code (80+ programming languages), not adapted from a general model, giving it superior performance on function completion, debugging, and code explanation.',
+            'For users with 24+ GB RAM, Qwen3.8-27B (61.7 on SWE-bench Pro as reported by Qwen, 18 GB on Ollama, `ollama run qwen3.8`) is the stronger coding pick, and Devstral Small 2 (15 GB) suits 16 GB machines. The 7B variant is recommended for most users as a fast, low-RAM starting point. See [Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) for a full comparison.',
           ],
           rows: [
             { 'Spec': 'HumanEval score', 'Value': '88%' },
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'What is the best local LLM for coding in 2026?',
-              a: 'Qwen2.5-Coder 7B scores 88% on HumanEval — the highest of any locally-runnable model under 10 GB RAM. It was trained specifically on code (not adapted from a general model), making it more reliable on function completion, debugging, and code explanation. Run it with `ollama run qwen2.5-coder:7b`. For users with 24+ GB RAM, Qwen2.5-Coder 32B scores 92% HumanEval and is the strongest coding model available locally. See [Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) for a full breakdown.',
+              a: 'Qwen2.5-Coder 7B scores 88% on HumanEval and is a strong pick under 10 GB RAM. It was trained specifically on code (not adapted from a general model), making it more reliable on function completion, debugging, and code explanation. Run it with `ollama run qwen2.5-coder:7b`. For users with 24+ GB RAM, Qwen3.8-27B (61.7 SWE-bench Pro as reported by Qwen, 18 GB) is the stronger coding pick. See [Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) for a full breakdown.',
             },
             {
               q: 'Are these models free to use commercially?',
