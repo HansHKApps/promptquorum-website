@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Top Open Source Models on Ollama in 2026 | PromptQuorum</title>
-  <meta name="description" content="Top open source models on Ollama: Qwen 3.6, Kimi K2.6, DeepSeek-R1 ranked by use case. Download commands, performance data, model comparison table updated July 2026." />
+  <meta name="description" content="Top open source models on Ollama: Qwen3.8, Devstral Small 2, DeepSeek-R1 ranked by use case. Download commands, performance data, model comparison table." />
   <meta property="og:title" content="Top Open Source Models on Ollama in 2026 — PromptQuorum" />
-  <meta property="og:description" content="The top Ollama models: Qwen 3.6 27B, Kimi K2.6, gpt-oss:20b, DeepSeek-R1, Gemma 4. Compare by use case with exact pull commands." />
+  <meta property="og:description" content="The top Ollama models: Qwen3.8 27B, Devstral Small 2, gpt-oss:20b, DeepSeek-R1, Gemma 4. Compare by use case with exact pull commands." />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://www.promptquorum.com/local-llms/top-open-source-models-ollama" />
 
@@ -296,19 +296,19 @@
             h2: 'Key Facts About Ollama Models',
             items: [
               '<strong>Most downloaded:</strong> Llama 3.2 3B and the Llama family',
-              '<strong>Fastest growing:</strong> Qwen3 / Qwen 3.6 (coding and multilingual)',
+              '<strong>Fastest growing:</strong> Qwen3 / Qwen3.8 (coding and multilingual)',
               '<strong>Best reasoning:</strong> DeepSeek-R1 (52% on MATH benchmarks)',
               '<strong>Vision support:</strong> Gemma 4 (vision + tool calling), Llama 3.2 Vision',
-              '<strong>Several hundred curated models</strong> available in the Ollama library as of July 2026'
+              '<strong>Several hundred curated models</strong> available in the Ollama library'
             ]
           },
           {
             type: 'list',
             h2: 'Most Popular Models in 2026',
             items: [
-              '<strong>Qwen 3.6 27B:</strong> Best overall on consumer hardware. 77.2% SWE-bench, fits 24 GB at Q4.',
+              '<strong>Qwen3.8 27B:</strong> Best overall on consumer hardware. 61.7 SWE-bench Pro, fits 24 GB at Q4.',
               '<strong>Llama 3.2 3B:</strong> Most pulled model overall. Best for first-time users.',
-              '<strong>Kimi K2.6:</strong> Frontier coding, MoE (32B active/1T total), 58.6 SWE-Bench Pro.',
+              '<strong>Devstral Small 2:</strong> Agentic coding, 24B, 15 GB, 65.8% SWE-bench Verified (Mistral-reported). Kimi K2.6 is cloud-only on Ollama.',
               '<strong>DeepSeek-R1:</strong> Chain-of-thought reasoning. Best local math performance.',
               '<strong>gpt-oss:20b:</strong> Best small model, runs in 16 GB, ~o3-mini level.'
             ]
@@ -319,8 +319,8 @@
             columns: ['Use Case', 'Best Model', 'RAM', 'Benchmark'],
             rows: [
               { 'Use Case': 'General Chat (Beginner)', 'Best Model': 'llama3.2:3b', 'RAM': '2.5 GB', 'Benchmark': '60% HumanEval' },
-              { 'Use Case': 'Quality Chat', 'Best Model': 'qwen3.6:27b', 'RAM': '24 GB (Q4)', 'Benchmark': '77.2% SWE-bench' },
-              { 'Use Case': 'Coding', 'Best Model': 'kimi-k2.6', 'RAM': 'Quantized', 'Benchmark': '58.6 SWE-Bench Pro' },
+              { 'Use Case': 'Quality Chat', 'Best Model': 'qwen3.8:27b', 'RAM': '24 GB (Q4)', 'Benchmark': '61.7 SWE-bench Pro' },
+              { 'Use Case': 'Coding', 'Best Model': 'devstral-small-2', 'RAM': '15 GB', 'Benchmark': '65.8% SWE-bench Verified' },
               { 'Use Case': 'Reasoning & Math', 'Best Model': 'deepseek-r1:7b', 'RAM': '5 GB', 'Benchmark': '52% MATH' },
               { 'Use Case': 'Image Understanding', 'Best Model': 'llama3.2-vision:11b', 'RAM': '8 GB', 'Benchmark': 'Vision support' }
             ]
@@ -341,8 +341,8 @@
             h2: 'Top 10 Models Complete Ranking',
             columns: ['Rank', 'Model', 'Best For', 'RAM', 'Benchmark'],
             rows: [
-              { 'Rank': '1', 'Model': 'qwen3.6:27b', 'Best For': 'Best overall on consumer hardware', 'RAM': '24 GB (Q4)', 'Benchmark': '77.2% SWE-bench' },
-              { 'Rank': '2', 'Model': 'kimi-k2.6', 'Best For': 'Frontier coding, MoE (32B/1T)', 'RAM': 'Quantized', 'Benchmark': '58.6 SWE-Bench Pro' },
+              { 'Rank': '1', 'Model': 'qwen3.8:27b', 'Best For': 'Best overall on consumer hardware', 'RAM': '24 GB (Q4)', 'Benchmark': '61.7 SWE-bench Pro' },
+              { 'Rank': '2', 'Model': 'devstral-small-2', 'Best For': 'Agentic coding (Kimi K2.6 is cloud-only on Ollama)', 'RAM': '15 GB', 'Benchmark': '65.8% SWE-bench Verified' },
               { 'Rank': '3', 'Model': 'gpt-oss:20b', 'Best For': 'Best small / 16 GB', 'RAM': '16 GB', 'Benchmark': '~o3-mini' },
               { 'Rank': '4', 'Model': 'qwen3:30b', 'Best For': 'Balanced all-round', 'RAM': '~18 GB', 'Benchmark': 'strong' },
               { 'Rank': '5', 'Model': 'llama3.2:3b', 'Best For': 'First model, general chat', 'RAM': '2.5 GB', 'Benchmark': '60%' }
@@ -398,7 +398,7 @@
             faqs: [
               { q: 'How much RAM do I need?', a: '7B models: 5–6 GB. 13B: 10–14 GB. 70B: 42–48 GB with quantization. Use `ollama show [model]` to verify.' },
               { q: 'Can I run offline?', a: 'Yes. After initial download, all inference runs locally without internet.' },
-              { q: 'Which is best for coding?', a: 'Kimi K2.6 (58.6 SWE-Bench Pro, frontier MoE) or Qwen 3.6 27B (77.2% SWE-bench). Both excellent.' },
+              { q: 'Which is best for coding?', a: 'Qwen3.8 27B (61.7 SWE-bench Pro, Qwen-reported) or Devstral Small 2 (65.8% SWE-bench Verified, agentic). Kimi K2.6 is cloud-only on Ollama.' },
               { q: 'Is Ollama free?', a: 'Yes. All models are open-source with free licenses. No API fees, no subscriptions.' }
             ]
           },
@@ -408,7 +408,7 @@
             intro: 'Copy & paste these commands into your terminal:',
             items: [
               '`ollama run llama3.2:3b` — Best starting point',
-              '`ollama run kimi-k2.6` — Frontier coding',
+              '`ollama run kimi-k2.6:cloud` — Frontier coding',
               '`ollama run deepseek-r1:7b` — For reasoning & math',
               '`ollama run llama3.2-vision:11b` — For image analysis',
               '`ollama pull qwen3:7b` — Multilingual, fastest-growing'
@@ -437,7 +437,7 @@
             h2: 'Wichtige Fakten über Ollama-Modelle',
             items: [
               '<strong>Meistgeladen:</strong> Llama 3.2 3B und die Llama-Familie',
-              '<strong>Am schnellsten wachsend:</strong> Qwen3 / Qwen 3.6 (Codierung und mehrsprachig)',
+              '<strong>Am schnellsten wachsend:</strong> Qwen3 / Qwen3.8 (Codierung und mehrsprachig)',
               '<strong>Bestes Reasoning:</strong> DeepSeek-R1 (52% MATH-Benchmarks)',
               '<strong>Vision-Unterstützung:</strong> Gemma 4 (Vision + Tool Calling), Llama 3.2 Vision',
               '<strong>Mehrere hundert kuratierte Modelle</strong> in der Ollama-Bibliothek verfügbar (Juli 2026)'
@@ -447,9 +447,9 @@
             type: 'list',
             h2: 'Beliebteste Modelle 2026',
             items: [
-              '<strong>Qwen 3.6 27B:</strong> Bestes Gesamtmodell für Consumer-Hardware. 77,2% SWE-bench, passt in 24 GB bei Q4.',
+              '<strong>Qwen3.8 27B:</strong> Bestes Gesamtmodell für Consumer-Hardware. 61,7 SWE-bench Pro, passt in 24 GB bei Q4.',
               '<strong>Llama 3.2 3B:</strong> Meistgezogenes Modell insgesamt. Beste für Anfänger.',
-              '<strong>Kimi K2.6:</strong> Frontier-Coding, MoE (32B aktiv/1T gesamt), 58,6 SWE-Bench Pro.',
+              '<strong>Devstral Small 2:</strong> Agentisches Coding, 24B, 15 GB, 65,8 % SWE-bench Verified (laut Mistral). Kimi K2.6 gibt es bei Ollama nur in der Cloud.',
               '<strong>DeepSeek-R1:</strong> Chain-of-Thought-Reasoning. Beste lokale Mathe-Leistung.',
               '<strong>gpt-oss:20b:</strong> Bestes kleines Modell, läuft in 16 GB, ~o3-mini-Niveau.'
             ]
@@ -460,8 +460,8 @@
             columns: ['Anwendungsfall', 'Bestes Modell', 'RAM', 'Benchmark'],
             rows: [
               { 'Anwendungsfall': 'Allgemeines Chat', 'Bestes Modell': 'llama3.2:3b', 'RAM': '2,5 GB', 'Benchmark': '60%' },
-              { 'Anwendungsfall': 'Qualitäts-Chat', 'Bestes Modell': 'qwen3.6:27b', 'RAM': '24 GB (Q4)', 'Benchmark': '77,2% SWE-bench' },
-              { 'Anwendungsfall': 'Codierung', 'Bestes Modell': 'kimi-k2.6', 'RAM': 'Quantisiert', 'Benchmark': '58,6 SWE-Bench Pro' },
+              { 'Anwendungsfall': 'Qualitäts-Chat', 'Bestes Modell': 'qwen3.8:27b', 'RAM': '24 GB (Q4)', 'Benchmark': '61,7 SWE-bench Pro' },
+              { 'Anwendungsfall': 'Codierung', 'Bestes Modell': 'devstral-small-2', 'RAM': '15 GB', 'Benchmark': '65.8% SWE-bench Verified' },
               { 'Anwendungsfall': 'Reasoning & Mathe', 'Bestes Modell': 'deepseek-r1:7b', 'RAM': '5 GB', 'Benchmark': '52% MATH' },
               { 'Anwendungsfall': 'Bildverstehen', 'Bestes Modell': 'llama3.2-vision:11b', 'RAM': '8 GB', 'Benchmark': 'Vision' }
             ]
@@ -482,8 +482,8 @@
             h2: 'Top 10 Modelle Ranking',
             columns: ['Rang', 'Modell', 'Beste für', 'RAM', 'Benchmark'],
             rows: [
-              { 'Rang': '1', 'Modell': 'qwen3.6:27b', 'Beste für': 'Bestes Gesamtmodell, Consumer-Hardware', 'RAM': '24 GB (Q4)', 'Benchmark': '77,2% SWE-bench' },
-              { 'Rang': '2', 'Modell': 'kimi-k2.6', 'Beste für': 'Frontier-Coding, MoE (32B/1T)', 'RAM': 'Quantisiert', 'Benchmark': '58,6 SWE-Bench Pro' },
+              { 'Rang': '1', 'Modell': 'qwen3.8:27b', 'Beste für': 'Bestes Gesamtmodell, Consumer-Hardware', 'RAM': '24 GB (Q4)', 'Benchmark': '61,7 SWE-bench Pro' },
+              { 'Rang': '2', 'Modell': 'devstral-small-2', 'Beste für': 'Agentisches Coding (Kimi K2.6 nur Cloud)', 'RAM': '15 GB', 'Benchmark': '65,8 % SWE-bench Verified' },
               { 'Rang': '3', 'Modell': 'gpt-oss:20b', 'Beste für': 'Bestes kleines Modell / 16 GB', 'RAM': '16 GB', 'Benchmark': '~o3-mini' },
               { 'Rang': '4', 'Modell': 'qwen3:30b', 'Beste für': 'Ausgewogenes Allround-Modell', 'RAM': '~18 GB', 'Benchmark': 'stark' },
               { 'Rang': '5', 'Modell': 'llama3.2:3b', 'Beste für': 'Anfänger-Chat', 'RAM': '2,5 GB', 'Benchmark': '60%' }
@@ -539,7 +539,7 @@
             faqs: [
               { q: 'Wie viel RAM brauche ich?', a: '7B: 5–6 GB. 13B: 10–14 GB. 70B: 42–48 GB mit Quantisierung. `ollama show [modell]` nutzen.' },
               { q: 'Kann ich offline arbeiten?', a: 'Ja. Nach dem Download läuft alles lokal ohne Internet.' },
-              { q: 'Welches ist am besten für Codierung?', a: 'Kimi K2.6 (58,6 SWE-Bench Pro) oder Qwen 3.6 27B (77,2% SWE-bench). Beide ausgezeichnet.' },
+              { q: 'Welches ist am besten für Codierung?', a: 'Qwen3.8 27B (61,7 SWE-bench Pro laut Qwen) oder Devstral Small 2 (65,8 % SWE-bench Verified, agentisch). Kimi K2.6 gibt es bei Ollama nur in der Cloud.' },
               { q: 'Ist Ollama kostenlos?', a: 'Ja. Alle Modelle sind quelloffen mit freien Lizenzen. Keine API-Gebühren.' }
             ]
           },
@@ -549,7 +549,7 @@
             intro: 'Kopieren Sie diese Befehle in Ihr Terminal:',
             items: [
               '`ollama run llama3.2:3b` — Beste Startpunkt',
-              '`ollama run kimi-k2.6` — Frontier-Coding',
+              '`ollama run kimi-k2.6:cloud` — Frontier-Coding',
               '`ollama run deepseek-r1:7b` — Für Reasoning & Mathe',
               '`ollama run llama3.2-vision:11b` — Für Bildanalyse',
               '`ollama pull qwen3:7b` — Mehrsprachig, am schnellsten wachsend'
@@ -578,7 +578,7 @@
             h2: 'Faits clés sur les modèles Ollama',
             items: [
               '<strong>Plus téléchargés :</strong> Llama 3.2 3B et la famille Llama',
-              '<strong>La plus rapide croissance :</strong> Qwen3 / Qwen 3.6 (codage et multilingue)',
+              '<strong>La plus rapide croissance :</strong> Qwen3 / Qwen3.8 (codage et multilingue)',
               '<strong>Meilleur raisonnement :</strong> DeepSeek-R1 (52 % benchmarks MATH)',
               '<strong>Support vision :</strong> Gemma 4 (vision + tool calling), Llama 3.2 Vision',
               '<strong>Plusieurs centaines de modèles</strong> disponibles dans la bibliothèque Ollama (juillet 2026)'
@@ -588,9 +588,9 @@
             type: 'list',
             h2: 'Modèles les plus populaires 2026',
             items: [
-              '<strong>Qwen 3.6 27B :</strong> Meilleur global sur matériel grand public. 77,2 % SWE-bench, tient en 24 Go en Q4.',
+              '<strong>Qwen3.8 27B :</strong> Meilleur global sur matériel grand public. 61,7 SWE-bench Pro, tient en 24 Go en Q4.',
               '<strong>Llama 3.2 3B :</strong> Modèle le plus populaire. Meilleur pour les débutants.',
-              '<strong>Kimi K2.6 :</strong> Code de frontière, MoE (32B actif/1T total), 58,6 SWE-Bench Pro.',
+              '<strong>Devstral Small 2 :</strong> Codage agentique, 24B, 15 GB, 65,8 % SWE-bench Verified (selon Mistral). Kimi K2.6 n\'existe que dans le cloud sur Ollama.',
               '<strong>DeepSeek-R1 :</strong> Raisonnement chain-of-thought. Meilleure perf math local.',
               '<strong>gpt-oss:20b :</strong> Meilleur petit modèle, tourne en 16 Go, ~niveau o3-mini.'
             ]
@@ -601,8 +601,8 @@
             columns: ['Cas d\'utilisation', 'Meilleur modèle', 'RAM', 'Benchmark'],
             rows: [
               { 'Cas d\'utilisation': 'Chat général', 'Meilleur modèle': 'llama3.2:3b', 'RAM': '2,5 GB', 'Benchmark': '60%' },
-              { 'Cas d\'utilisation': 'Chat qualité', 'Meilleur modèle': 'qwen3.6:27b', 'RAM': '24 Go (Q4)', 'Benchmark': '77,2% SWE-bench' },
-              { 'Cas d\'utilisation': 'Codage', 'Meilleur modèle': 'kimi-k2.6', 'RAM': 'Quantifié', 'Benchmark': '58,6 SWE-Bench Pro' },
+              { 'Cas d\'utilisation': 'Chat qualité', 'Meilleur modèle': 'qwen3.8:27b', 'RAM': '24 Go (Q4)', 'Benchmark': '61,7 SWE-bench Pro' },
+              { 'Cas d\'utilisation': 'Codage', 'Meilleur modèle': 'devstral-small-2', 'RAM': '15 GB', 'Benchmark': '65.8% SWE-bench Verified' },
               { 'Cas d\'utilisation': 'Raisonnement', 'Meilleur modèle': 'deepseek-r1:7b', 'RAM': '5 GB', 'Benchmark': '52% MATH' },
               { 'Cas d\'utilisation': 'Vision', 'Meilleur modèle': 'llama3.2-vision:11b', 'RAM': '8 GB', 'Benchmark': 'Vision' }
             ]
@@ -623,8 +623,8 @@
             h2: 'Top 10 modèles classement complet',
             columns: ['Rang', 'Modèle', 'Meilleur pour', 'RAM', 'Benchmark'],
             rows: [
-              { 'Rang': '1', 'Modèle': 'qwen3.6:27b', 'Meilleur pour': 'Meilleur global, matériel grand public', 'RAM': '24 Go (Q4)', 'Benchmark': '77,2% SWE-bench' },
-              { 'Rang': '2', 'Modèle': 'kimi-k2.6', 'Meilleur pour': 'Code de frontière, MoE (32B/1T)', 'RAM': 'Quantifié', 'Benchmark': '58,6 SWE-Bench Pro' },
+              { 'Rang': '1', 'Modèle': 'qwen3.8:27b', 'Meilleur pour': 'Meilleur global, matériel grand public', 'RAM': '24 Go (Q4)', 'Benchmark': '61,7 SWE-bench Pro' },
+              { 'Rang': '2', 'Modèle': 'devstral-small-2', 'Meilleur pour': 'Codage agentique (Kimi K2.6 cloud uniquement)', 'RAM': '15 GB', 'Benchmark': '65,8 % SWE-bench Verified' },
               { 'Rang': '3', 'Modèle': 'gpt-oss:20b', 'Meilleur pour': 'Meilleur petit modèle / 16 Go', 'RAM': '16 GB', 'Benchmark': '~o3-mini' },
               { 'Rang': '4', 'Modèle': 'qwen3:30b', 'Meilleur pour': 'Modèle polyvalent équilibré', 'RAM': '~18 GB', 'Benchmark': 'solide' },
               { 'Rang': '5', 'Modèle': 'llama3.2:3b', 'Meilleur pour': 'Chat débutant', 'RAM': '2,5 GB', 'Benchmark': '60%' }
@@ -680,7 +680,7 @@
             faqs: [
               { q: 'Combien de RAM faut-il?', a: '7B: 5–6 GB. 13B: 10–14 GB. 70B: 42–48 GB quantifié. Utiliser `ollama show [modèle]`.' },
               { q: 'Puis-je exécuter hors ligne?', a: 'Oui. Après le téléchargement initial, tout s\'exécute localement sans internet.' },
-              { q: 'Quel est le meilleur pour le codage?', a: 'Kimi K2.6 (58,6 SWE-Bench Pro) ou Qwen 3.6 27B (77,2% SWE-bench). Les deux excellents.' },
+              { q: 'Quel est le meilleur pour le codage?', a: 'Qwen3.8 27B (61,7 SWE-bench Pro selon Qwen) ou Devstral Small 2 (65,8 % SWE-bench Verified, agentique). Kimi K2.6 n\'existe que dans le cloud sur Ollama.' },
               { q: 'Ollama est-il gratuit?', a: 'Oui. Tous les modèles open-source avec licences libres. Pas de frais API.' }
             ]
           },
@@ -690,7 +690,7 @@
             intro: 'Copiez-collez ces commandes dans votre terminal:',
             items: [
               '`ollama run llama3.2:3b` — Meilleur démarrage',
-              '`ollama run kimi-k2.6` — Code de frontière',
+              '`ollama run kimi-k2.6:cloud` — Code de frontière',
               '`ollama run deepseek-r1:7b` — Pour raisonnement',
               '`ollama run llama3.2-vision:11b` — Pour images',
               '`ollama pull qwen3:7b` — Multilingue, plus rapide'
@@ -719,7 +719,7 @@
             h2: 'Ollamaモデルの重要事実',
             items: [
               '<strong>最多ダウンロード:</strong> Llama 3.2 3B と Llama ファミリー',
-              '<strong>最速成長中:</strong> Qwen3 / Qwen 3.6（コーディングと多言語対応）',
+              '<strong>最速成長中:</strong> Qwen3 / Qwen3.8（コーディングと多言語対応）',
               '<strong>最高推論性能:</strong> DeepSeek-R1（52% MATH ベンチマーク）',
               '<strong>ビジョン対応:</strong> Gemma 4（ビジョン＋ツール呼び出し）、Llama 3.2 Vision',
               '<strong>数百のキュレーションモデル</strong>がOllama ライブラリで利用可能（2026年7月）'
@@ -729,9 +729,9 @@
             type: 'list',
             h2: '2026年最も人気のあるモデル',
             items: [
-              '<strong>Qwen 3.6 27B:</strong> コンシューマー向け総合最高。77.2% SWE-bench、Q4で24GBに収まる。',
+              '<strong>Qwen3.8 27B:</strong> コンシューマー向け総合最高。61.7 SWE-bench Pro、Q4で24GBに収まる。',
               '<strong>Llama 3.2 3B:</strong> 最多ダウンロードモデル。初心者向け最適。',
-              '<strong>Kimi K2.6:</strong> フロンティアコーディング、MoE（32B活性/1T合計）、58.6 SWE-Bench Pro。',
+              '<strong>Devstral Small 2:</strong> エージェントコーディング、24B、15GB、SWE-bench Verified 65.8%（Mistral公表値）。Kimi K2.6はOllamaではクラウド専用。',
               '<strong>DeepSeek-R1:</strong> Chain-of-thought 推論。ローカル数学最高性能。',
               '<strong>gpt-oss:20b:</strong> 小型最強、16GBで動作、~o3-miniレベル。'
             ]
@@ -742,8 +742,8 @@
             columns: ['ユースケース', '最高モデル', 'RAM', 'ベンチマーク'],
             rows: [
               { 'ユースケース': '一般チャット', '最高モデル': 'llama3.2:3b', 'RAM': '2.5 GB', 'ベンチマーク': '60%' },
-              { 'ユースケース': '高品質チャット', '最高モデル': 'qwen3.6:27b', 'RAM': '24 GB (Q4)', 'ベンチマーク': '77.2% SWE-bench' },
-              { 'ユースケース': 'コーディング', '最高モデル': 'kimi-k2.6', 'RAM': '量子化', 'ベンチマーク': '58.6 SWE-Bench Pro' },
+              { 'ユースケース': '高品質チャット', '最高モデル': 'qwen3.8:27b', 'RAM': '24 GB (Q4)', 'ベンチマーク': '61.7 SWE-bench Pro' },
+              { 'ユースケース': 'コーディング', '最高モデル': 'devstral-small-2', 'RAM': '15 GB', 'ベンチマーク': 'SWE-bench Verified 65.8%' },
               { 'ユースケース': '推論・数学', '最高モデル': 'deepseek-r1:7b', 'RAM': '5 GB', 'ベンチマーク': '52% MATH' },
               { 'ユースケース': '画像理解', '最高モデル': 'llama3.2-vision:11b', 'RAM': '8 GB', 'ベンチマーク': 'Vision' }
             ]
@@ -764,8 +764,8 @@
             h2: 'トップ10モデル完全ランキング',
             columns: ['順位', 'モデル', '最適用途', 'RAM', 'ベンチマーク'],
             rows: [
-              { '順位': '1', 'モデル': 'qwen3.6:27b', '最適用途': 'コンシューマー向け総合最高', 'RAM': '24 GB (Q4)', 'ベンチマーク': '77.2% SWE-bench' },
-              { '順位': '2', 'モデル': 'kimi-k2.6', '最適用途': 'フロンティアコーディング、MoE（32B/1T）', 'RAM': '量子化', 'ベンチマーク': '58.6 SWE-Bench Pro' },
+              { '順位': '1', 'モデル': 'qwen3.8:27b', '最適用途': 'コンシューマー向け総合最高', 'RAM': '24 GB (Q4)', 'ベンチマーク': '61.7 SWE-bench Pro' },
+              { '順位': '2', 'モデル': 'devstral-small-2', '最適用途': 'エージェントコーディング（Kimi K2.6はクラウドのみ）', 'RAM': '15 GB', 'ベンチマーク': 'SWE-bench Verified 65.8%' },
               { '順位': '3', 'モデル': 'gpt-oss:20b', '最適用途': '小型最強 / 16 GB', 'RAM': '16 GB', 'ベンチマーク': '~o3-mini' },
               { '順位': '4', 'モデル': 'qwen3:30b', '最適用途': 'バランス型オールラウンド', 'RAM': '~18 GB', 'ベンチマーク': '強力' },
               { '順位': '5', 'モデル': 'llama3.2:3b', '最適用途': '初心者チャット', 'RAM': '2.5 GB', 'ベンチマーク': '60%' }
@@ -821,7 +821,7 @@
             faqs: [
               { q: 'どのくらい RAM が必要?', a: '7B: 5–6 GB。13B: 10–14 GB。70B: 量子化で 42–48 GB。`ollama show [model]` で確認。' },
               { q: 'オフラインで実行できる?', a: 'はい。初回ダウンロード後、すべてがローカル実行。インターネット不要。' },
-              { q: 'コーディングに最適は?', a: 'Kimi K2.6（58.6 SWE-Bench Pro）または Qwen 3.6 27B（77.2% SWE-bench）。両者とも優秀。' },
+              { q: 'コーディングに最適は?', a: 'Qwen3.8 27B（Qwen公表のSWE-bench Pro 61.7）またはDevstral Small 2（SWE-bench Verified 65.8%、エージェント向け）。Kimi K2.6はOllamaではクラウド専用。' },
               { q: 'Ollama は無料?', a: 'はい。すべてオープンソース・自由ライセンス。API 料金なし。' }
             ]
           },
@@ -831,7 +831,7 @@
             intro: 'ターミナルにコピペ:',
             items: [
               '`ollama run llama3.2:3b` — ベストスタート',
-              '`ollama run kimi-k2.6` — フロンティアコーディング',
+              '`ollama run kimi-k2.6:cloud` — フロンティアコーディング',
               '`ollama run deepseek-r1:7b` — 推論・数学用',
               '`ollama run llama3.2-vision:11b` — 画像解析用',
               '`ollama pull qwen3:7b` — 多言語・最速成長'
@@ -860,7 +860,7 @@
             h2: 'Ollama 模型的关键事实',
             items: [
               '<strong>最常下载:</strong> Llama 3.2 3B 和 Llama 系列',
-              '<strong>增长最快:</strong> Qwen3 / Qwen 3.6（编码和多语言）',
+              '<strong>增长最快:</strong> Qwen3 / Qwen3.8（编码和多语言）',
               '<strong>最佳推理:</strong> DeepSeek-R1（52% MATH 基准）',
               '<strong>视觉支持:</strong> Gemma 4（视觉+工具调用）、Llama 3.2 Vision',
               '<strong>数百个精选模型</strong>在 Ollama 库中可用（2026 年 7 月）'
@@ -870,9 +870,9 @@
             type: 'list',
             h2: '2026 年最受欢迎的模型',
             items: [
-              '<strong>Qwen 3.6 27B:</strong> 消费级硬件综合最佳。77.2% SWE-bench，Q4下可装入24GB。',
+              '<strong>Qwen3.8 27B:</strong> 消费级硬件综合最佳。61.7 SWE-bench Pro，Q4下可装入24GB。',
               '<strong>Llama 3.2 3B:</strong> 最常下载的模型。最适合初学者。',
-              '<strong>Kimi K2.6:</strong> 前沿编程，MoE（32B活跃/1T总），58.6 SWE-Bench Pro。',
+              '<strong>Devstral Small 2:</strong> 代理编码，24B，15GB，SWE-bench Verified 65.8%（Mistral公布）。Kimi K2.6在Ollama上仅提供云端版本。',
               '<strong>DeepSeek-R1:</strong> Chain-of-thought 推理。本地数学性能最佳。',
               '<strong>gpt-oss:20b:</strong> 小型最强，16GB可运行，~o3-mini水平。'
             ]
@@ -883,8 +883,8 @@
             columns: ['用途', '最佳模型', 'RAM', '基准'],
             rows: [
               { '用途': '一般聊天', '最佳模型': 'llama3.2:3b', 'RAM': '2.5 GB', '基准': '60%' },
-              { '用途': '高质量聊天', '最佳模型': 'qwen3.6:27b', 'RAM': '24 GB (Q4)', '基准': '77.2% SWE-bench' },
-              { '用途': '编码', '最佳模型': 'kimi-k2.6', 'RAM': '量化', '基准': '58.6 SWE-Bench Pro' },
+              { '用途': '高质量聊天', '最佳模型': 'qwen3.8:27b', 'RAM': '24 GB (Q4)', '基准': '61.7 SWE-bench Pro' },
+              { '用途': '编码', '最佳模型': 'devstral-small-2', 'RAM': '15 GB', '基准': 'SWE-bench Verified 65.8%' },
               { '用途': '推理和数学', '最佳模型': 'deepseek-r1:7b', 'RAM': '5 GB', '基准': '52% MATH' },
               { '用途': '图像理解', '最佳模型': 'llama3.2-vision:11b', 'RAM': '8 GB', '基准': '视觉' }
             ]
@@ -905,8 +905,8 @@
             h2: '前 10 个模型完整排名',
             columns: ['排名', '模型', '最适合', 'RAM', '基准'],
             rows: [
-              { '排名': '1', '模型': 'qwen3.6:27b', '最适合': '消费级硬件综合最佳', 'RAM': '24 GB (Q4)', '基准': '77.2% SWE-bench' },
-              { '排名': '2', '模型': 'kimi-k2.6', '最适合': '前沿编程，MoE（32B/1T）', 'RAM': '量化', '基准': '58.6 SWE-Bench Pro' },
+              { '排名': '1', '模型': 'qwen3.8:27b', '最适合': '消费级硬件综合最佳', 'RAM': '24 GB (Q4)', '基准': '61.7 SWE-bench Pro' },
+              { '排名': '2', '模型': 'devstral-small-2', '最适合': '代理编码（Kimi K2.6仅云端）', 'RAM': '15 GB', '基准': 'SWE-bench Verified 65.8%' },
               { '排名': '3', '模型': 'gpt-oss:20b', '最适合': '小型最强 / 16 GB', 'RAM': '16 GB', '基准': '~o3-mini' },
               { '排名': '4', '模型': 'qwen3:30b', '最适合': '均衡全能模型', 'RAM': '~18 GB', '基准': '强劲' },
               { '排名': '5', '模型': 'llama3.2:3b', '最适合': '初学者聊天', 'RAM': '2.5 GB', '基准': '60%' }
@@ -962,7 +962,7 @@
             faqs: [
               { q: '需要多少内存？', a: '7B：5–6 GB。13B：10–14 GB。70B：量子化后 42–48 GB。使用 `ollama show [model]` 验证。' },
               { q: '可以离线运行吗？', a: '是的。初始下载后，所有推理在本地运行，无需互联网。' },
-              { q: '哪个最适合编码？', a: 'Kimi K2.6（58.6 SWE-Bench Pro）或 Qwen 3.6 27B（77.2% SWE-bench）。两者都很出色。' },
+              { q: '哪个最适合编码？', a: 'Qwen3.8 27B（Qwen公布的SWE-bench Pro为61.7）或Devstral Small 2（SWE-bench Verified 65.8%，适合代理编码）。Kimi K2.6在Ollama上仅提供云端版本。' },
               { q: 'Ollama 是免费的吗？', a: '是的。所有模型都是开源的，采用自由许可证。无 API 费用。' }
             ]
           },
@@ -972,7 +972,7 @@
             intro: '复制粘贴到终端:',
             items: [
               '`ollama run llama3.2:3b` — 最佳起点',
-              '`ollama run kimi-k2.6` — 前沿编程',
+              '`ollama run kimi-k2.6:cloud` — 前沿编程',
               '`ollama run deepseek-r1:7b` — 用于推理和数学',
               '`ollama run llama3.2-vision:11b` — 用于图像分析',
               '`ollama pull qwen3:7b` — 多语言、增长最快'

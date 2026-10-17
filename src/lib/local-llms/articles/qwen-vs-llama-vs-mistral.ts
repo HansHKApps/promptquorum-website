@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       gammaEmbedUrl: '/presentations/qwen-vs-llama-vs-mistral-static.html',
-      gammaDescription: 'La presentación a continuación cubre: comparativa de benchmarks Qwen3.8-27B vs Llama 4 Scout vs Mistral (junio 2026 — SWE-bench, realidades de VRAM en MoE), qué modelo gana por tarea (mejor general en 24 GB, programación, multilingüe, contexto largo, eficiencia de RAM), comparativa por tamaño incluyendo el nivel MoE, Devstral para programación agentiva, Codestral para IDE y comandos de inicio rápido con Ollama. Descarga el PDF como tarjeta de referencia para selección de modelos LLM locales.',
+      gammaDescription: 'La presentación a continuación cubre: comparativa de benchmarks Qwen3.8-27B vs Llama 4 Scout vs Mistral (SWE-bench, realidades de VRAM en MoE), qué modelo gana por tarea (mejor general en 24 GB, programación, multilingüe, contexto largo, eficiencia de RAM), comparativa por tamaño incluyendo el nivel MoE, Devstral para programación agentiva, Codestral para IDE y comandos de inicio rápido con Ollama. Descarga el PDF como tarjeta de referencia para selección de modelos LLM locales.',
     },
     ar: {
       freshness_tier: 'monthly',
