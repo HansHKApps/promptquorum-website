@@ -1016,6 +1016,7 @@ const HUB_THEMES: Array<{
       'agnai-review',
       'risuai-review',
       'swerve-ai-review',
+      'hiwaifu-review',
     ],
   },
   {
