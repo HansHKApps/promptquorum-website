@@ -341,6 +341,7 @@ https://www.promptquorum.com/power-local-llm/exllamav2-explained
 https://www.promptquorum.com/power-local-llm/exo-review
 https://www.promptquorum.com/power-local-llm/farfalle-review
 https://www.promptquorum.com/power-local-llm/faster-whisper-review
+https://www.promptquorum.com/power-local-llm/firecrawl-review
 https://www.promptquorum.com/power-local-llm/flowise-ai-visual-workflow-builder-review
 https://www.promptquorum.com/power-local-llm/fooocus-review
 https://www.promptquorum.com/power-local-llm/foundry-local-review
