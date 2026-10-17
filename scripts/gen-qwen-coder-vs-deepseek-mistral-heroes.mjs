@@ -54,8 +54,8 @@ const DISPATCH = {
   ko: ['민감 코드→로컬 Qwen3.6', '자동완성→로컬 Devstral', '대량 작업→DeepSeek'],
 }
 
-// The AR section title is too long for one poster line.
-const DISPATCH_TITLE = { ar: 'استراتيجية التوزيع' }
+// The AR and JA section titles wrap awkwardly on one poster line.
+const DISPATCH_TITLE = { ar: 'استراتيجية التوزيع', ja: 'ディスパッチ戦略' }
 
 // Satori lays text out left-to-right with no bidi reordering: pre-reverse the order of units
 // (each Arabic word, each run of Latin/number tokens) so the visual layout reads right-to-left.
@@ -77,7 +77,6 @@ for (const lang of Object.keys(TITLE)) {
   const block = article[lang]
   const dispatchTitle = DISPATCH_TITLE[lang] ?? block.sections.dispatchStrategy?.title
   const jobs = [{ name: 'swe-bench', title: TITLE[lang], highlights: SWE[lang] }]
-  // de/ja/zh blocks have no dispatch section, so they never reference a dispatch image.
   if (block.sections.dispatchStrategy) jobs.push({ name: 'dispatch', title: dispatchTitle, highlights: DISPATCH[lang] })
   for (const job of jobs) {
     const fix = (t) => (lang === 'ar' ? rtlVisual(t) : t)
