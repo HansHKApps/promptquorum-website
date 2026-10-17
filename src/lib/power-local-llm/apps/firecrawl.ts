@@ -41,6 +41,8 @@ export const app: ToolRecord = {
     ar: 'واجهة بيانات ويب مفتوحة المصدر تحوّل المواقع إلى Markdown أو JSON نظيف جاهز لنماذج اللغة، متاحة كخدمة مستضافة أو مستضافة ذاتيًا عبر Docker',
     ko: '웹사이트를 깔끔한 LLM용 마크다운 또는 JSON으로 변환하는 오픈소스 웹 데이터 API로, 호스팅 버전과 Docker 셀프호스팅을 모두 지원',
   },
+  reviewSlug: 'firecrawl-review', // dedicated PromptQuorum review - added 2026-10-17
+  pqReview: { date: '2026-10-17', version: 'v2.11.0', versionSourceUrl: 'https://github.com/firecrawl/firecrawl/releases/tag/v2.11.0' },
   mcpSupport: true, // official firecrawl-mcp-server (MIT) at github.com/firecrawl/firecrawl-mcp-server, verified 2026-10-17
   compare: { localLlm: true, ollama: true, mcp: true },
   lastVerifiedDate: '2026-10-17',

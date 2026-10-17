@@ -522,6 +522,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'mission-control-review',
   'kserve-review',
   'baserow-review',
+  'firecrawl-review',
   'shimmy-review',
   'longmemory-review',
   'lorax-review',

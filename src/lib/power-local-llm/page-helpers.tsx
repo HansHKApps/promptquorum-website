@@ -960,6 +960,7 @@ const HUB_THEMES: Array<{
       'dify-ai-workflow-builder-review',
       'flowise-ai-visual-workflow-builder-review',
       'langchain-review',
+      'firecrawl-review',
       'langflow-visual-ai-orchestration-review',
       'langgraph-review',
       'letta-review',
