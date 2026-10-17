@@ -5,12 +5,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-en.webp',
-    title: 'Ollama on WSL2 vs Native Windows: Which Should You Pick?',
-    seoTitle: 'WSL2 vs Native Windows for Ollama | Prompt Bites',
+    title: 'Ollama on Windows vs WSL2 vs Linux: Which Should You Pick?',
+    seoTitle: 'Ollama on Windows vs WSL2 vs Linux | Prompt Bites',
     metaDescription:
-      'Native Windows Ollama is simpler to set up and has direct GPU access; WSL2 mainly helps when you need a Linux-only tool alongside Ollama.',
+      'Native Windows is the simplest Ollama setup; WSL2 usually matches its GPU speed closely, and native Linux fits servers and Linux-only tools.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -19,11 +19,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>Native Windows Ollama is simpler to set up and has direct GPU access with no passthrough layer, so it is the right default for most users.</strong> WSL2 is worth the extra setup mainly when you need a Linux-only tool alongside Ollama in the same environment.',
+      '<strong>Native Windows Ollama is simpler to set up and has direct GPU access with no passthrough layer, so it is the right default for most users.</strong> WSL2 is worth the extra setup mainly when you need a Linux-only tool alongside Ollama in the same environment. Native Linux is the better fit for dedicated, always-on servers.',
     toc: [
       { label: 'Best Pick: Native Windows for Most Users', anchor: '#best-pick' },
       { label: 'How to Set Up Each Option', anchor: '#setup-steps' },
       { label: 'When to Use Each', anchor: '#when-to-use-each' },
+      { label: 'Windows vs WSL2 vs Linux Performance', anchor: '#performance' },
+      { label: 'What WSL2 Means', anchor: '#what-is-wsl2' },
       { label: 'FAQ', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -35,8 +37,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Native Windows Ollama has direct GPU access — no passthrough configuration needed.',
           'WSL2 adds a GPU passthrough layer, useful mainly for Linux-only tooling alongside Ollama.',
           'Most users get simpler setup and equal performance from the native Windows build.',
+          'On the same NVIDIA GPU, community reports put native Windows, WSL2, and native Linux close together on speed; the real differences are setup and file handling.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -48,6 +51,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'WSL2 is worth it mainly if you need a Linux-only tool alongside Ollama',
           'GPU passthrough in WSL2 introduces some overhead versus native Windows, though it is small for most GPU-bound workloads',
           'Model files are stored separately in each environment by default, so switching between native Windows and WSL2 means pulling models again on the other side',
+          'Community reports for the same NVIDIA GPU put native Windows, WSL2, and native Linux close together on generation speed; these are not PromptQuorum measurements',
+          'Native Linux is the natural choice for a dedicated or always-on server, while native Windows suits a desktop that also runs other applications',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Native Windows Ollama is simpler to set up and has direct GPU access; WSL2 mainly helps when a Linux-only tool needs to run alongside it.' },
@@ -70,6 +75,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Native Windows: pull a model from the command line and start chatting — no virtual machine or container layer sits between Ollama and the GPU.',
           'WSL2: install a Linux distribution through WSL2 and ensure GPU passthrough is enabled in your Windows GPU driver settings, since this is a separate step from a normal driver install.',
           'WSL2: install Ollama inside the Linux distribution using the Linux installation method, then verify GPU passthrough is working before pulling any large models, since a failed passthrough silently falls back to CPU-only inference.',
+          'Native Linux: run the official install script from the Ollama documentation after installing your GPU driver stack (CUDA drivers for NVIDIA, ROCm for AMD), and run Ollama as a systemd service if the machine should serve models continuously.',
+          'WSL2 with an NVIDIA GPU: install only the regular NVIDIA driver on the Windows side — NVIDIA\'s WSL guide says not to install a Linux display driver inside the distribution.',
         ],
         content: [
           'Both paths end with the same Ollama command-line interface and the same model files — the difference is entirely in the setup and the GPU access path, not in daily usage once installed.',
@@ -81,6 +88,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Native Windows Ollama installs directly and accesses the GPU without any passthrough configuration, which makes it the simpler and generally recommended path. WSL2 introduces a GPU passthrough layer between the Linux environment and the Windows host, and becomes worthwhile mainly when a specific Linux-only tool or driver stack needs to run in the same environment as Ollama.',
           'Avoid WSL2 purely for the sake of using a Linux shell if you have no other Linux-only dependency — the added passthrough layer and separate environment maintenance is not worth it for Ollama alone. Switch from WSL2 to native Windows if you find you no longer need the Linux-only tool that originally justified the setup.',
+        ],
+      },
+      performance: {
+        id: 'performance',
+        title: 'Performance Is Close; Setup and File Handling Differ',
+        content: [
+          '<strong>On the same NVIDIA GPU, native Windows, WSL2, and native Linux generate tokens at similar speeds, because all three run the same Ollama engine on the same GPU hardware.</strong> Community comparisons mostly report differences of a few percent, with isolated reports of larger gaps in favor of native Linux, sometimes attributed to an older CUDA version inside WSL2. PromptQuorum has not benchmarked these setups, so treat all figures as indicative and measure your own machine.',
+          'To compare on your hardware, run the same model with ollama run MODEL --verbose in each environment and compare the reported eval rate. Confirm the model is fully loaded on the GPU in both runs, since a silent CPU fallback is a far bigger slowdown than any difference between the three environments.',
+          'The practical differences are elsewhere. On Windows, Ollama needs an up-to-date NVIDIA driver (or, for AMD, a ROCm-capable driver or Radeon Vulkan support) and installs without administrator rights. On Linux you install the CUDA drivers or ROCm yourself, and Ollama can run as a systemd service. In WSL2, model files stored on the Windows drive load noticeably slower than files on the Linux filesystem, and WSL2 limits its memory use by default, which you can change in the .wslconfig file.',
+        ],
+      },
+      whatIsWsl2: {
+        id: 'what-is-wsl2',
+        title: 'WSL2 Is a Real Linux Environment Inside Windows',
+        content: [
+          '<strong>WSL2 stands for Windows Subsystem for Linux, version 2: a lightweight virtual machine that runs a real Linux kernel and distribution inside Windows.</strong> You use it through a Linux terminal such as Ubuntu while Windows keeps running normally, and a supported GPU is shared with the Linux side through the Windows driver.',
+          'It is not the same as a dual-boot Linux install: WSL2 shares the machine with Windows, so memory and disk are shared too. For Ollama alone that sharing is the main cost, which is why native Windows is the default recommendation here.',
         ],
       },
       faq: {
@@ -103,6 +127,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Is WSL2 required for AMD GPUs on Windows?',
             a: 'No — native Windows Ollama supports AMD GPU acceleration directly through its own driver integration, without requiring WSL2. WSL2 becomes relevant for AMD GPUs mainly if you need a specific Linux-only driver stack (such as a particular ROCm build) that isn\'t available on native Windows.',
           },
+          {
+            q: 'Is Ollama faster on Linux than on Windows?',
+            a: 'On the same NVIDIA GPU, community reports show the two close together, usually within a few percent for GPU-bound generation, with isolated reports of larger gaps. Native Linux is preferable mainly for servers, systemd service management, and Linux-only tooling rather than for raw speed. PromptQuorum has not run its own benchmark, so test your own machine.',
+          },
+          {
+            q: 'What does WSL2 mean?',
+            a: 'WSL2 stands for Windows Subsystem for Linux, version 2. It runs a real Linux kernel and distribution in a lightweight virtual machine inside Windows, so you can use Linux tools without dual-booting.',
+          },
+          {
+            q: 'Does Ollama use my GPU inside WSL2?',
+            a: 'Yes, on supported NVIDIA GPUs with an up-to-date Windows NVIDIA driver. Install only the Windows driver and do not install a Linux display driver inside WSL2. Run nvidia-smi before pulling large models, because a failed setup silently falls back to CPU.',
+          },
         ],
       },
     },
@@ -111,12 +147,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-de.webp',
-    title: 'Ollama unter WSL2 vs. natives Windows: Was sollten Sie wählen?',
-    seoTitle: 'WSL2 vs. natives Windows für Ollama | Prompt Bites',
+    title: 'Ollama: Windows, WSL2 oder Linux – was passt am besten?',
+    seoTitle: 'Ollama: Windows vs. WSL2 vs. Linux | Prompt Bites',
     metaDescription:
-      'Natives Windows-Ollama ist einfacher einzurichten und hat direkten GPU-Zugriff; WSL2 lohnt sich vor allem, wenn Sie zusätzlich ein reines Linux-Tool benötigen.',
+      'Natives Windows ist die einfachste Ollama-Einrichtung; WSL2 liegt bei der GPU-Geschwindigkeit meist nah daran, natives Linux passt zu Servern und Linux-Tools.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -125,11 +161,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>Natives Windows-Ollama ist einfacher einzurichten und hat direkten GPU-Zugriff ohne Passthrough-Schicht, weshalb es für die meisten Nutzer die richtige Standardwahl ist.</strong> WSL2 lohnt den zusätzlichen Einrichtungsaufwand vor allem dann, wenn Sie in derselben Umgebung ein reines Linux-Tool neben Ollama benötigen.',
+      '<strong>Natives Windows-Ollama ist einfacher einzurichten und hat direkten GPU-Zugriff ohne Passthrough-Schicht, weshalb es für die meisten Nutzer die richtige Standardwahl ist.</strong> WSL2 lohnt den zusätzlichen Einrichtungsaufwand vor allem dann, wenn Sie in derselben Umgebung ein reines Linux-Tool neben Ollama benötigen. Natives Linux eignet sich besser für dedizierte, dauerhaft laufende Server.',
     toc: [
       { label: 'Beste Wahl: Natives Windows für die meisten Nutzer', anchor: '#best-pick' },
       { label: 'So richten Sie jede Option ein', anchor: '#setup-steps' },
       { label: 'Wann Sie welche Option nutzen sollten', anchor: '#when-to-use-each' },
+      { label: 'Leistung: Windows vs. WSL2 vs. Linux', anchor: '#performance' },
+      { label: 'Was WSL2 bedeutet', anchor: '#what-is-wsl2' },
       { label: 'FAQ', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -141,8 +179,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Natives Windows-Ollama hat direkten GPU-Zugriff — keine Passthrough-Konfiguration erforderlich.',
           'WSL2 fügt eine GPU-Passthrough-Schicht hinzu, die vor allem für reine Linux-Tools neben Ollama nützlich ist.',
           'Die meisten Nutzer erhalten mit der nativen Windows-Version eine einfachere Einrichtung bei gleicher Leistung.',
+          'Auf derselben NVIDIA-GPU liegen natives Windows, WSL2 und natives Linux laut Community-Berichten bei der Geschwindigkeit dicht beieinander; die echten Unterschiede liegen in Einrichtung und Dateizugriff.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -154,6 +193,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'WSL2 lohnt sich vor allem, wenn Sie ein reines Linux-Tool neben Ollama benötigen',
           'GPU-Passthrough in WSL2 verursacht einen gewissen Overhead gegenüber nativem Windows, der bei den meisten GPU-lastigen Workloads jedoch gering ausfällt',
           'Modelldateien werden standardmäßig in jeder Umgebung getrennt gespeichert, sodass beim Wechsel zwischen nativem Windows und WSL2 die Modelle auf der anderen Seite erneut heruntergeladen werden müssen',
+          'Community-Berichte zur selben NVIDIA-GPU sehen natives Windows, WSL2 und natives Linux bei der Generierungsgeschwindigkeit dicht beieinander; das sind keine Messungen von PromptQuorum',
+          'Natives Linux ist die natürliche Wahl für einen dedizierten oder dauerhaft laufenden Server, natives Windows passt zu einem Desktop-Rechner, auf dem auch andere Anwendungen laufen',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Natives Windows-Ollama ist einfacher einzurichten und hat direkten GPU-Zugriff; WSL2 hilft vor allem, wenn ein reines Linux-Tool daneben laufen muss.' },
@@ -176,6 +217,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Natives Windows: Laden Sie ein Modell über die Kommandozeile herunter und beginnen Sie zu chatten — es liegt keine virtuelle Maschine oder Container-Schicht zwischen Ollama und der GPU.',
           'WSL2: Installieren Sie eine Linux-Distribution über WSL2 und stellen Sie sicher, dass GPU-Passthrough in Ihren Windows-GPU-Treibereinstellungen aktiviert ist, da dies ein separater Schritt gegenüber einer normalen Treiberinstallation ist.',
           'WSL2: Installieren Sie Ollama innerhalb der Linux-Distribution mit der Linux-Installationsmethode und prüfen Sie dann, ob der GPU-Passthrough funktioniert, bevor Sie größere Modelle herunterladen, da ein fehlgeschlagener Passthrough stillschweigend auf reine CPU-Inferenz zurückfällt.',
+          'Natives Linux: Führen Sie das offizielle Installationsskript aus der Ollama-Dokumentation aus, nachdem Sie Ihren GPU-Treiber-Stack installiert haben (CUDA-Treiber für NVIDIA, ROCm für AMD), und betreiben Sie Ollama als systemd-Dienst, wenn der Rechner dauerhaft Modelle bereitstellen soll.',
+          'WSL2 mit NVIDIA-GPU: Installieren Sie nur den normalen NVIDIA-Treiber unter Windows — laut NVIDIAs WSL-Leitfaden darf in der Distribution kein Linux-Grafiktreiber installiert werden.',
         ],
         content: [
           'Beide Wege enden mit derselben Ollama-Kommandozeilenoberfläche und denselben Modelldateien — der Unterschied liegt vollständig in der Einrichtung und dem GPU-Zugriffspfad, nicht in der täglichen Nutzung nach der Installation.',
@@ -187,6 +230,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Natives Windows-Ollama installiert sich direkt und greift ohne jegliche Passthrough-Konfiguration auf die GPU zu, was es zum einfacheren und generell empfohlenen Weg macht. WSL2 führt eine GPU-Passthrough-Schicht zwischen der Linux-Umgebung und dem Windows-Host ein und lohnt sich vor allem dann, wenn ein bestimmtes reines Linux-Tool oder ein Treiber-Stack in derselben Umgebung wie Ollama laufen muss.',
           'Vermeiden Sie WSL2 rein zum Zweck der Nutzung einer Linux-Shell, wenn Sie keine andere reine Linux-Abhängigkeit haben — die zusätzliche Passthrough-Schicht und die separate Umgebungspflege lohnen sich für Ollama allein nicht. Wechseln Sie von WSL2 zu nativem Windows, sobald Sie feststellen, dass Sie das reine Linux-Tool, das die Einrichtung ursprünglich rechtfertigte, nicht mehr benötigen.',
+        ],
+      },
+      performance: {
+        id: 'performance',
+        title: 'Die Leistung liegt nah beieinander; Einrichtung und Dateizugriff unterscheiden sich',
+        content: [
+          '<strong>Auf derselben NVIDIA-GPU erzeugen natives Windows, WSL2 und natives Linux Tokens mit ähnlicher Geschwindigkeit, weil alle drei dieselbe Ollama-Engine auf derselben GPU-Hardware nutzen.</strong> Community-Vergleiche berichten meist Unterschiede von wenigen Prozent; vereinzelt werden größere Lücken zugunsten von nativem Linux gemeldet, teils auf eine ältere CUDA-Version in WSL2 zurückgeführt. PromptQuorum hat diese Setups nicht selbst gemessen — verstehen Sie alle Zahlen als Richtwerte und messen Sie Ihren eigenen Rechner.',
+          'Für einen Vergleich auf Ihrer Hardware führen Sie dasselbe Modell mit ollama run MODEL --verbose in jeder Umgebung aus und vergleichen die gemeldete Eval-Rate. Prüfen Sie, dass das Modell in beiden Läufen vollständig auf der GPU geladen ist, denn ein unbemerkter CPU-Fallback bremst weit stärker als jeder Unterschied zwischen den drei Umgebungen.',
+          'Die praktischen Unterschiede liegen woanders. Unter Windows braucht Ollama einen aktuellen NVIDIA-Treiber (bei AMD einen ROCm-fähigen Treiber oder Radeon-Vulkan-Unterstützung) und lässt sich ohne Administratorrechte installieren. Unter Linux installieren Sie CUDA-Treiber oder ROCm selbst, und Ollama kann als systemd-Dienst laufen. In WSL2 laden Modelldateien auf dem Windows-Laufwerk spürbar langsamer als Dateien im Linux-Dateisystem, und WSL2 begrenzt seinen Speicherverbrauch standardmäßig, was sich in der Datei .wslconfig ändern lässt.',
+        ],
+      },
+      whatIsWsl2: {
+        id: 'what-is-wsl2',
+        title: 'WSL2 ist eine echte Linux-Umgebung innerhalb von Windows',
+        content: [
+          '<strong>WSL2 steht für Windows Subsystem for Linux, Version 2: eine schlanke virtuelle Maschine, die einen echten Linux-Kernel samt Distribution innerhalb von Windows ausführt.</strong> Sie nutzen es über ein Linux-Terminal wie Ubuntu, während Windows normal weiterläuft, und eine unterstützte GPU wird über den Windows-Treiber an die Linux-Seite weitergegeben.',
+          'Es ist nicht dasselbe wie eine Dual-Boot-Linux-Installation: WSL2 teilt sich den Rechner mit Windows, also auch Arbeitsspeicher und Datenträger. Für Ollama allein ist dieses Teilen der Hauptnachteil — deshalb ist natives Windows hier die Standardempfehlung.',
         ],
       },
       faq: {
@@ -209,6 +269,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Ist WSL2 für AMD-GPUs unter Windows erforderlich?',
             a: 'Nein — natives Windows-Ollama unterstützt die AMD-GPU-Beschleunigung direkt über seine eigene Treiberintegration, ohne WSL2 zu benötigen. WSL2 wird für AMD-GPUs vor allem dann relevant, wenn Sie einen bestimmten reinen Linux-Treiber-Stack (etwa einen speziellen ROCm-Build) benötigen, der unter nativem Windows nicht verfügbar ist.',
           },
+          {
+            q: 'Ist Ollama unter Linux schneller als unter Windows?',
+            a: 'Auf derselben NVIDIA-GPU liegen beide laut Community-Berichten nah beieinander, bei GPU-gebundener Generierung meist innerhalb weniger Prozent; vereinzelt gibt es größere Lücken. Natives Linux ist vor allem für Server, systemd-Dienstverwaltung und reine Linux-Tools vorzuziehen, nicht wegen der reinen Geschwindigkeit. PromptQuorum hat keinen eigenen Benchmark durchgeführt — testen Sie Ihren eigenen Rechner.',
+          },
+          {
+            q: 'Was bedeutet WSL2?',
+            a: 'WSL2 steht für Windows Subsystem for Linux, Version 2. Es führt einen echten Linux-Kernel samt Distribution in einer schlanken virtuellen Maschine innerhalb von Windows aus, sodass Sie Linux-Tools ohne Dual-Boot nutzen können.',
+          },
+          {
+            q: 'Nutzt Ollama in WSL2 meine GPU?',
+            a: 'Ja, bei unterstützten NVIDIA-GPUs mit einem aktuellen NVIDIA-Treiber unter Windows. Installieren Sie nur den Windows-Treiber und keinen Linux-Grafiktreiber in WSL2. Führen Sie nvidia-smi aus, bevor Sie große Modelle laden, denn eine fehlgeschlagene Einrichtung fällt unbemerkt auf die CPU zurück.',
+          },
         ],
       },
     },
@@ -217,12 +289,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-fr.webp',
-    title: 'Ollama sous WSL2 ou Windows natif : que choisir ?',
-    seoTitle: 'WSL2 vs Windows natif pour Ollama | Prompt Bites',
+    title: 'Ollama sous Windows, WSL2 ou Linux : que choisir ?',
+    seoTitle: 'Ollama : Windows vs WSL2 vs Linux | Prompt Bites',
     metaDescription:
-      'Ollama natif sous Windows est plus simple à installer et accède directement au GPU ; WSL2 est utile surtout si vous avez besoin d\'un outil Linux en parallèle.',
+      'Windows natif est la configuration Ollama la plus simple ; WSL2 reste proche en vitesse GPU, et Linux natif convient aux serveurs et aux outils Linux.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -231,11 +303,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>Ollama natif sous Windows est plus simple à installer et accède directement au GPU sans couche de passthrough, ce qui en fait le choix par défaut pour la plupart des utilisateurs.</strong> WSL2 vaut l\'effort d\'installation supplémentaire surtout lorsque vous avez besoin d\'un outil exclusivement Linux aux côtés d\'Ollama dans le même environnement.',
+      '<strong>Ollama natif sous Windows est plus simple à installer et accède directement au GPU sans couche de passthrough, ce qui en fait le choix par défaut pour la plupart des utilisateurs.</strong> WSL2 vaut l\'effort d\'installation supplémentaire surtout lorsque vous avez besoin d\'un outil exclusivement Linux aux côtés d\'Ollama dans le même environnement. Linux natif convient mieux aux serveurs dédiés qui tournent en continu.',
     toc: [
       { label: 'Meilleur choix : Windows natif pour la plupart des utilisateurs', anchor: '#best-pick' },
       { label: 'Comment configurer chaque option', anchor: '#setup-steps' },
       { label: 'Quand utiliser chaque option', anchor: '#when-to-use-each' },
+      { label: 'Performances : Windows vs WSL2 vs Linux', anchor: '#performance' },
+      { label: 'Ce que signifie WSL2', anchor: '#what-is-wsl2' },
       { label: 'FAQ', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -247,8 +321,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Ollama natif sous Windows accède directement au GPU — aucune configuration de passthrough nécessaire.',
           'WSL2 ajoute une couche de passthrough GPU, utile surtout pour des outils exclusivement Linux aux côtés d\'Ollama.',
           'La plupart des utilisateurs bénéficient d\'une installation plus simple et de performances égales avec la version Windows native.',
+          'Sur le même GPU NVIDIA, les retours de la communauté placent Windows natif, WSL2 et Linux natif très proches en vitesse ; les vraies différences portent sur la configuration et la gestion des fichiers.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -260,6 +335,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'WSL2 vaut la peine surtout si vous avez besoin d\'un outil exclusivement Linux aux côtés d\'Ollama',
           'Le passthrough GPU dans WSL2 introduit un certain surcoût par rapport à Windows natif, bien qu\'il reste faible pour la plupart des charges de travail limitées par le GPU',
           'Les fichiers de modèles sont stockés séparément dans chaque environnement par défaut, donc passer de Windows natif à WSL2 (ou inversement) implique de retélécharger les modèles de l\'autre côté',
+          'Les retours de la communauté sur un même GPU NVIDIA placent Windows natif, WSL2 et Linux natif très proches en vitesse de génération ; ce ne sont pas des mesures de PromptQuorum',
+          'Linux natif est le choix naturel pour un serveur dédié ou allumé en permanence, tandis que Windows natif convient à un poste de bureau qui exécute aussi d\'autres applications',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Ollama natif sous Windows est plus simple à installer et accède directement au GPU ; WSL2 aide surtout lorsqu\'un outil exclusivement Linux doit fonctionner à ses côtés.' },
@@ -282,6 +359,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Windows natif : téléchargez un modèle en ligne de commande et commencez à discuter — aucune machine virtuelle ni couche de conteneur ne se trouve entre Ollama et le GPU.',
           'WSL2 : installez une distribution Linux via WSL2 et assurez-vous que le passthrough GPU est activé dans les paramètres de votre pilote GPU Windows, car c\'est une étape distincte d\'une installation normale du pilote.',
           'WSL2 : installez Ollama à l\'intérieur de la distribution Linux en utilisant la méthode d\'installation Linux, puis vérifiez que le passthrough GPU fonctionne avant de télécharger des modèles volumineux, car un passthrough défaillant retombe silencieusement sur une inférence CPU uniquement.',
+          'Linux natif : exécutez le script d\'installation officiel de la documentation Ollama après avoir installé votre pile de pilotes GPU (pilotes CUDA pour NVIDIA, ROCm pour AMD), et lancez Ollama comme service systemd si la machine doit servir des modèles en continu.',
+          'WSL2 avec un GPU NVIDIA : installez uniquement le pilote NVIDIA classique côté Windows — le guide WSL de NVIDIA indique de ne pas installer de pilote graphique Linux dans la distribution.',
         ],
         content: [
           'Les deux chemins aboutissent à la même interface en ligne de commande Ollama et aux mêmes fichiers de modèle — la différence réside entièrement dans l\'installation et le chemin d\'accès au GPU, pas dans l\'usage quotidien une fois installé.',
@@ -293,6 +372,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Ollama natif sous Windows s\'installe directement et accède au GPU sans aucune configuration de passthrough, ce qui en fait la voie la plus simple et généralement recommandée. WSL2 introduit une couche de passthrough GPU entre l\'environnement Linux et l\'hôte Windows, et devient utile principalement lorsqu\'un outil ou une pile de pilotes exclusivement Linux doit fonctionner dans le même environnement qu\'Ollama.',
           'Évitez WSL2 uniquement pour utiliser un shell Linux si vous n\'avez aucune autre dépendance exclusivement Linux — la couche de passthrough supplémentaire et la maintenance d\'un environnement séparé n\'en valent pas la peine pour Ollama seul. Repassez de WSL2 à Windows natif si vous constatez que vous n\'avez plus besoin de l\'outil exclusivement Linux qui justifiait initialement cette configuration.',
+        ],
+      },
+      performance: {
+        id: 'performance',
+        title: 'Les performances sont proches ; la configuration et les fichiers diffèrent',
+        content: [
+          '<strong>Sur le même GPU NVIDIA, Windows natif, WSL2 et Linux natif génèrent des tokens à des vitesses similaires, car les trois exécutent le même moteur Ollama sur le même matériel GPU.</strong> Les comparaisons de la communauté font surtout état d\'écarts de quelques pour cent, avec des écarts plus importants signalés ponctuellement en faveur de Linux natif, parfois attribués à une version de CUDA plus ancienne dans WSL2. PromptQuorum n\'a pas mesuré ces configurations : considérez tous les chiffres comme indicatifs et mesurez votre propre machine.',
+          'Pour comparer sur votre matériel, exécutez le même modèle avec ollama run MODEL --verbose dans chaque environnement et comparez le débit d\'évaluation affiché. Vérifiez que le modèle est entièrement chargé sur le GPU dans les deux cas, car un repli silencieux sur le CPU ralentit bien plus que n\'importe quelle différence entre ces trois environnements.',
+          'Les différences pratiques sont ailleurs. Sous Windows, Ollama exige un pilote NVIDIA récent (ou, pour AMD, un pilote compatible ROCm ou la prise en charge Vulkan de Radeon) et s\'installe sans droits d\'administrateur. Sous Linux, vous installez vous-même les pilotes CUDA ou ROCm, et Ollama peut tourner comme service systemd. Dans WSL2, les fichiers de modèles stockés sur le disque Windows se chargent nettement plus lentement que ceux du système de fichiers Linux, et WSL2 limite par défaut sa consommation de mémoire, modifiable dans le fichier .wslconfig.',
+        ],
+      },
+      whatIsWsl2: {
+        id: 'what-is-wsl2',
+        title: 'WSL2 est un véritable environnement Linux au sein de Windows',
+        content: [
+          '<strong>WSL2 signifie Windows Subsystem for Linux, version 2 : une machine virtuelle légère qui exécute un vrai noyau Linux et une distribution au sein de Windows.</strong> Vous l\'utilisez via un terminal Linux comme Ubuntu pendant que Windows continue de fonctionner normalement, et un GPU pris en charge est partagé avec le côté Linux via le pilote Windows.',
+          'Ce n\'est pas équivalent à une installation Linux en double démarrage : WSL2 partage la machine avec Windows, donc aussi la mémoire et le disque. Pour Ollama seul, ce partage est le principal coût, d\'où la recommandation par défaut de Windows natif.',
         ],
       },
       faq: {
@@ -315,6 +411,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'WSL2 est-il requis pour les GPU AMD sous Windows ?',
             a: 'Non — Ollama natif sous Windows prend en charge l\'accélération GPU AMD directement via sa propre intégration de pilote, sans nécessiter WSL2. WSL2 devient pertinent pour les GPU AMD principalement si vous avez besoin d\'une pile de pilotes exclusivement Linux spécifique (comme une version particulière de ROCm) indisponible sous Windows natif.',
           },
+          {
+            q: 'Ollama est-il plus rapide sous Linux que sous Windows ?',
+            a: 'Sur le même GPU NVIDIA, les retours de la communauté placent les deux très proches, généralement à quelques pour cent près pour la génération limitée par le GPU, avec des écarts plus importants signalés ponctuellement. Linux natif est surtout préférable pour les serveurs, la gestion de services systemd et les outils réservés à Linux, plutôt que pour la vitesse brute. PromptQuorum n\'a pas réalisé son propre benchmark : testez votre propre machine.',
+          },
+          {
+            q: 'Que signifie WSL2 ?',
+            a: 'WSL2 signifie Windows Subsystem for Linux, version 2. Il exécute un vrai noyau Linux et une distribution dans une machine virtuelle légère au sein de Windows, ce qui permet d\'utiliser des outils Linux sans double démarrage.',
+          },
+          {
+            q: 'Ollama utilise-t-il mon GPU dans WSL2 ?',
+            a: 'Oui, sur les GPU NVIDIA pris en charge avec un pilote NVIDIA Windows récent. Installez uniquement le pilote Windows et aucun pilote graphique Linux dans WSL2. Exécutez nvidia-smi avant de télécharger de gros modèles, car une configuration défaillante bascule silencieusement sur le CPU.',
+          },
         ],
       },
     },
@@ -323,12 +431,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ja: {
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-ja.webp',
-    title: 'Ollama を WSL2 と Windows ネイティブで使う場合、どちらを選ぶべきか？',
-    seoTitle: 'Ollama：WSL2 vs Windowsネイティブ | Prompt Bites',
+    title: 'OllamaはWindows・WSL2・Linuxのどれで動かすべきか',
+    seoTitle: 'Ollama：Windows vs WSL2 vs Linux | Prompt Bites',
     metaDescription:
-      'ネイティブWindows版Ollamaはセットアップが簡単でGPUに直接アクセスできます。WSL2はLinux専用ツールを併用する必要がある場合に主に役立ちます。',
+      'ネイティブWindowsが最も簡単なOllama環境で、WSL2のGPU速度もほぼ同等です。ネイティブLinuxはサーバーやLinux専用ツール向きです。',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -337,11 +445,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>ネイティブWindows版Ollamaはセットアップが簡単で、パススルー層を介さずにGPUへ直接アクセスできるため、ほとんどのユーザーにとって適切な既定の選択肢です。</strong> WSL2は、同じ環境でOllamaと並行してLinux専用ツールが必要な場合に、追加の設定コストを払う価値があります。',
+      '<strong>ネイティブWindows版Ollamaはセットアップが簡単で、パススルー層を介さずにGPUへ直接アクセスできるため、ほとんどのユーザーにとって適切な既定の選択肢です。</strong> WSL2は、同じ環境でOllamaと並行してLinux専用ツールが必要な場合に、追加の設定コストを払う価値があります。常時稼働の専用サーバーにはネイティブLinuxのほうが向いています。',
     toc: [
       { label: 'おすすめ：ほとんどのユーザーにはネイティブWindows', anchor: '#best-pick' },
       { label: '各オプションのセットアップ方法', anchor: '#setup-steps' },
       { label: 'それぞれの使い分け', anchor: '#when-to-use-each' },
+      { label: '性能比較：Windows・WSL2・Linux', anchor: '#performance' },
+      { label: 'WSL2とは何か', anchor: '#what-is-wsl2' },
       { label: 'FAQ', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -353,8 +463,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'ネイティブWindows版Ollamaは直接GPUにアクセス — パススルー設定は不要。',
           'WSL2はGPUパススルー層を追加するもので、Ollamaと並行するLinux専用ツールに主に有用。',
           'ほとんどのユーザーはネイティブWindows版のほうがセットアップが簡単で性能も同等。',
+          '同じNVIDIA GPUなら、ネイティブWindows・WSL2・ネイティブLinuxの速度は近いという報告が多く、実際の違いはセットアップとファイルの扱いにあります。',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -366,6 +477,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'WSL2はOllamaと並行してLinux専用ツールが必要な場合に主に価値がある',
           'WSL2のGPUパススルーはネイティブWindowsと比べて多少のオーバーヘッドが生じるが、GPU負荷が中心のワークロードでは通常わずかである',
           'モデルファイルは既定では各環境ごとに個別に保存されるため、ネイティブWindowsとWSL2を切り替えると、もう一方の環境でモデルを再度取得する必要がある',
+          '同じNVIDIA GPUでは、ネイティブWindows・WSL2・ネイティブLinuxの生成速度は近いというコミュニティの報告が多い（PromptQuorumの測定値ではありません）',
+          '常時稼働の専用サーバーにはネイティブLinuxが自然な選択で、他のアプリも動かすデスクトップにはネイティブWindowsが向いています',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'ネイティブWindows版Ollamaはセットアップが簡単でGPUに直接アクセスできます。WSL2は主にLinux専用ツールを並行して実行する必要がある場合に役立ちます。' },
@@ -388,6 +501,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'ネイティブWindows：コマンドラインからモデルを取得してチャットを開始します — Ollama とGPUの間には仮想マシンやコンテナ層が存在しません。',
           'WSL2：WSL2経由でLinuxディストリビューションをインストールし、Windows のGPUドライバー設定でGPUパススルーが有効になっていることを確認します。これは通常のドライバーインストールとは別の手順です。',
           'WSL2：Linuxのインストール方法を使ってLinuxディストリビューション内にOllamaをインストールし、大きなモデルを取得する前にGPUパススルーが機能しているか確認してください。パススルーが失敗すると、気づかないうちにCPUのみの推論にフォールバックします。',
+          'ネイティブLinux：GPUドライバー一式（NVIDIAはCUDAドライバー、AMDはROCm）を先にインストールし、Ollamaドキュメントの公式インストールスクリプトを実行します。モデルを常時提供するマシンならsystemdサービスとして動かします。',
+          'NVIDIA GPUでのWSL2：Windows側には通常のNVIDIAドライバーだけをインストールします。NVIDIAのWSLガイドは、ディストリビューション内にLinux用ディスプレイドライバーを入れないよう案内しています。',
         ],
         content: [
           'どちらの方法でも、最終的には同じOllamaコマンドラインインターフェースと同じモデルファイルに行き着きます — 違いはセットアップとGPUアクセス経路にのみあり、インストール後の日常的な使い方には違いはありません。',
@@ -399,6 +514,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'ネイティブWindows版Ollamaは直接インストールされ、パススルー設定なしにGPUへアクセスするため、よりシンプルで一般的に推奨される方法です。WSL2はLinux環境とWindowsホストの間にGPUパススルー層を導入するもので、特定のLinux専用ツールやドライバースタックをOllamaと同じ環境で動かす必要がある場合に主に価値があります。',
           'Linux専用の依存関係が他になければ、単にLinuxシェルを使いたいというだけの理由でWSL2を選ぶのは避けてください — 追加のパススルー層と別環境の維持コストは、Ollama単体のためには見合いません。当初のセットアップの根拠となっていたLinux専用ツールが不要になった場合は、WSL2からネイティブWindowsへ切り替えてください。',
+        ],
+      },
+      performance: {
+        id: 'performance',
+        title: '性能は近く、違いはセットアップとファイルの扱いにある',
+        content: [
+          '<strong>同じNVIDIA GPUでは、ネイティブWindows・WSL2・ネイティブLinuxのトークン生成速度は似ています。3つとも同じOllamaエンジンを同じGPUハードウェア上で動かすためです。</strong>コミュニティの比較では差は数％程度とする報告が中心で、ネイティブLinuxのほうが大きく速いという個別の報告もあり、その一因としてWSL2側の古いCUDAが挙げられることがあります。PromptQuorumはこれらの環境を実測していないため、数値はあくまで目安とし、ご自身のマシンで測定してください。',
+          '手元のハードウェアで比べるには、各環境で同じモデルをollama run MODEL --verboseで実行し、表示される評価レートを比較します。どちらの実行でもモデルがGPUに完全に載っていることを確認してください。気付かないうちにCPUへフォールバックすると、3環境の差よりはるかに大きく遅くなります。',
+          '実際の違いは別のところにあります。Windowsでは、Ollamaに最新のNVIDIAドライバー（AMDの場合はROCm対応ドライバーまたはRadeonのVulkan対応）が必要で、管理者権限なしでインストールできます。LinuxではCUDAドライバーやROCmを自分で導入し、Ollamaをsystemdサービスとして動かせます。WSL2では、Windows側のドライブに置いたモデルファイルはLinuxファイルシステム上のものより読み込みがかなり遅く、WSL2は既定でメモリ使用量に上限があり、.wslconfigファイルで変更できます。',
+        ],
+      },
+      whatIsWsl2: {
+        id: 'what-is-wsl2',
+        title: 'WSL2はWindowsの中で動く本物のLinux環境',
+        content: [
+          '<strong>WSL2はWindows Subsystem for Linux バージョン2の略で、Windows内で本物のLinuxカーネルとディストリビューションを動かす軽量な仮想マシンです。</strong>UbuntuなどのLinuxターミナルから使い、Windowsは通常どおり動き続けます。対応GPUはWindowsのドライバー経由でLinux側と共有されます。',
+          'デュアルブートのLinux環境とは異なり、WSL2はWindowsとマシンを共有するため、メモリとディスクも共有されます。Ollamaだけを使うなら、この共有が主なコストであり、ここでネイティブWindowsを既定の推奨にしている理由です。',
         ],
       },
       faq: {
@@ -421,6 +553,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Windows上のAMD GPUにはWSL2が必要ですか？',
             a: 'いいえ — ネイティブWindows版Ollamaは、WSL2を必要とせず、独自のドライバー統合を通じて直接AMD GPUアクセラレーションをサポートします。WSL2がAMD GPUで重要になるのは主に、ネイティブWindowsでは利用できない特定のLinux専用ドライバースタック（特定のROCmビルドなど）が必要な場合です。',
           },
+          {
+            q: 'OllamaはWindowsよりLinuxのほうが速いですか？',
+            a: '同じNVIDIA GPUでは、コミュニティの報告でも両者は近く、GPU依存の生成では数％以内に収まることが多いです。より大きな差が出たという個別の報告もあります。ネイティブLinuxが向いているのは、生の速度よりもサーバー用途、systemdでのサービス管理、Linux専用ツールのためです。PromptQuorumは独自のベンチマークを実施していないため、ご自身のマシンで確認してください。',
+          },
+          {
+            q: 'WSL2とは何の略ですか？',
+            a: 'WSL2はWindows Subsystem for Linux バージョン2の略です。Windows内の軽量な仮想マシンで本物のLinuxカーネルとディストリビューションを動かすため、デュアルブートなしでLinuxツールを使えます。',
+          },
+          {
+            q: 'WSL2内のOllamaはGPUを使いますか？',
+            a: 'はい。対応するNVIDIA GPUと最新のWindows用NVIDIAドライバーがあれば使えます。Windows側のドライバーだけをインストールし、WSL2内にLinux用ディスプレイドライバーは入れないでください。大きなモデルを取得する前にnvidia-smiを実行して確認しましょう。設定に失敗していると、気付かないうちにCPUへフォールバックします。',
+          },
         ],
       },
     },
@@ -429,12 +573,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   zh: {
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-zh.webp',
-    title: 'Ollama 在 WSL2 与原生 Windows 上运行：该如何选择？',
-    seoTitle: 'WSL2 与原生 Windows 运行 Ollama对比 | Prompt Bites',
+    title: 'Ollama 该用 Windows、WSL2 还是 Linux？',
+    seoTitle: 'Ollama：Windows 与 WSL2 与 Linux | Prompt Bites',
     metaDescription:
-      '原生 Windows 版 Ollama 安装更简单,可直接访问 GPU；WSL2 主要在需要搭配仅支持 Linux 的工具时才有帮助。',
+      '原生 Windows 是最简单的 Ollama 部署方式；WSL2 的 GPU 速度通常与之接近，原生 Linux 则适合服务器和 Linux 专用工具。',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -443,11 +587,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>原生 Windows 版 Ollama 安装更简单,无需直通层即可直接访问 GPU,因此对大多数用户来说是合适的默认选择。</strong> 当你需要在同一环境中搭配 Ollama 使用仅支持 Linux 的工具时,WSL2 额外的配置成本才值得投入。',
+      '<strong>原生 Windows 版 Ollama 安装更简单,无需直通层即可直接访问 GPU,因此对大多数用户来说是合适的默认选择。</strong> 当你需要在同一环境中搭配 Ollama 使用仅支持 Linux 的工具时,WSL2 额外的配置成本才值得投入。原生 Linux 更适合需要长期运行的专用服务器。',
     toc: [
       { label: '最佳选择:大多数用户适合原生 Windows', anchor: '#best-pick' },
       { label: '如何设置每种方案', anchor: '#setup-steps' },
       { label: '各方案的适用场景', anchor: '#when-to-use-each' },
+      { label: '性能对比：Windows、WSL2 与 Linux', anchor: '#performance' },
+      { label: 'WSL2 是什么意思', anchor: '#what-is-wsl2' },
       { label: '常见问题', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -459,8 +605,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '原生 Windows 版 Ollama 可直接访问 GPU — 无需任何直通配置。',
           'WSL2 增加了一层 GPU 直通,主要在需要搭配仅支持 Linux 的工具时才有用。',
           '大多数用户使用原生 Windows 版能获得更简单的设置和同等的性能。',
+          '在同一块 NVIDIA GPU 上，社区报告显示原生 Windows、WSL2 和原生 Linux 的速度很接近；真正的差别在于安装配置和文件处理。',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -472,6 +619,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '只有在需要搭配仅支持 Linux 的工具使用 Ollama 时,WSL2 才真正值得投入',
           'WSL2 中的 GPU 直通相比原生 Windows 会带来一定开销,但对大多数受 GPU 限制的负载来说影响很小',
           '默认情况下,模型文件在每个环境中分别存储,因此在原生 Windows 与 WSL2 之间切换意味着需要在另一侧重新拉取模型',
+          '在同一块 NVIDIA GPU 上，社区报告显示原生 Windows、WSL2 和原生 Linux 的生成速度很接近（并非 PromptQuorum 的实测数据）',
+          '原生 Linux 是专用或长期运行服务器的自然选择，原生 Windows 则适合还要运行其他应用的桌面电脑',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: '原生 Windows 版 Ollama 设置更简单,可直接访问 GPU;WSL2 主要在需要搭配仅支持 Linux 的工具运行时才有帮助。' },
@@ -494,6 +643,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '原生 Windows:在命令行中拉取模型并开始对话 — Ollama 与 GPU 之间没有虚拟机或容器层。',
           'WSL2:通过 WSL2 安装一个 Linux 发行版,并确保在 Windows 的 GPU 驱动设置中启用了 GPU 直通,因为这是与常规驱动安装不同的独立步骤。',
           'WSL2:使用 Linux 安装方式在该 Linux 发行版内安装 Ollama,然后在拉取任何大型模型之前先验证 GPU 直通是否正常工作,因为直通失败时会在你不知情的情况下悄悄回退到仅 CPU 推理。',
+          '原生 Linux：先安装 GPU 驱动栈（NVIDIA 用 CUDA 驱动，AMD 用 ROCm），再运行 Ollama 文档中的官方安装脚本；如果这台机器需要持续提供模型服务，可将 Ollama 作为 systemd 服务运行。',
+          '使用 NVIDIA GPU 的 WSL2：只需在 Windows 端安装常规的 NVIDIA 驱动——NVIDIA 的 WSL 指南明确说明不要在发行版内安装 Linux 显示驱动。',
         ],
         content: [
           '两种方式最终都会得到相同的 Ollama 命令行界面和相同的模型文件 — 区别完全在于设置过程和 GPU 访问路径,而不是安装完成后的日常使用方式。',
@@ -505,6 +656,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '原生 Windows 版 Ollama 可直接安装,无需任何直通配置即可访问 GPU,因此是更简单、通常也更值得推荐的方式。WSL2 在 Linux 环境与 Windows 主机之间引入了一层 GPU 直通,主要在需要与 Ollama 在同一环境中运行特定的仅支持 Linux 的工具或驱动栈时才值得使用。',
           '如果你没有其他仅限 Linux 的依赖,请避免仅仅为了使用 Linux shell 而选择 WSL2 — 额外的直通层和独立环境的维护成本,对单独运行 Ollama 来说并不划算。如果你发现最初促使你搭建 WSL2 的那个仅支持 Linux 的工具已不再需要,就切换回原生 Windows。',
+        ],
+      },
+      performance: {
+        id: 'performance',
+        title: '性能很接近，差别在安装配置和文件处理',
+        content: [
+          '<strong>在同一块 NVIDIA GPU 上，原生 Windows、WSL2 和原生 Linux 的 token 生成速度相近，因为三者都在同样的 GPU 硬件上运行同一个 Ollama 引擎。</strong>社区对比多数报告差距在几个百分点以内，也有个别报告称原生 Linux 明显更快，原因有时被归结为 WSL2 内的 CUDA 版本较旧。PromptQuorum 没有对这些配置做过基准测试，请将所有数字仅作参考，并在自己的机器上实测。',
+          '要在自己的硬件上对比，请在每个环境中用 ollama run MODEL --verbose 运行同一个模型，并比较输出的 eval rate。务必确认两次运行中模型都完整加载到了 GPU 上，因为悄悄回退到 CPU 造成的速度下降，远大于这三种环境之间的任何差异。',
+          '实际差别在别处。在 Windows 上，Ollama 需要较新的 NVIDIA 驱动（AMD 则需要支持 ROCm 的驱动或 Radeon 的 Vulkan 支持），并且无需管理员权限即可安装。在 Linux 上需要自行安装 CUDA 驱动或 ROCm，Ollama 可作为 systemd 服务运行。在 WSL2 中，存放在 Windows 磁盘上的模型文件加载速度明显慢于 Linux 文件系统中的文件，并且 WSL2 默认会限制内存占用，可在 .wslconfig 文件中修改。',
+        ],
+      },
+      whatIsWsl2: {
+        id: 'what-is-wsl2',
+        title: 'WSL2 是 Windows 内部的真实 Linux 环境',
+        content: [
+          '<strong>WSL2 是 Windows Subsystem for Linux 第 2 版的缩写：一种轻量级虚拟机，在 Windows 内运行真实的 Linux 内核和发行版。</strong>你通过 Ubuntu 等 Linux 终端使用它，Windows 照常运行，受支持的 GPU 则通过 Windows 驱动与 Linux 端共享。',
+          '它不同于双系统 Linux 安装：WSL2 与 Windows 共用同一台机器，内存和磁盘也是共享的。仅为运行 Ollama 而言，这种共享是主要代价，因此本文默认推荐原生 Windows。',
         ],
       },
       faq: {
@@ -527,6 +695,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '在 Windows 上使用 AMD 显卡是否需要 WSL2?',
             a: '不需要 — 原生 Windows 版 Ollama 通过自身的驱动集成直接支持 AMD GPU 加速,无需 WSL2。只有当你需要某个原生 Windows 上没有的特定仅支持 Linux 的驱动栈(例如特定的 ROCm 版本)时,WSL2 对 AMD 显卡才会变得相关。',
           },
+          {
+            q: 'Ollama 在 Linux 上比在 Windows 上更快吗？',
+            a: '在同一块 NVIDIA GPU 上，社区报告显示两者很接近，GPU 受限的生成通常相差几个百分点以内，也有个别报告称差距更大。选择原生 Linux 主要是为了服务器、systemd 服务管理和 Linux 专用工具，而不是为了原始速度。PromptQuorum 没有做过自己的基准测试，请在自己的机器上测试。',
+          },
+          {
+            q: 'WSL2 是什么意思？',
+            a: 'WSL2 是 Windows Subsystem for Linux 第 2 版的缩写。它在 Windows 内的轻量级虚拟机中运行真实的 Linux 内核和发行版，让你无需双系统即可使用 Linux 工具。',
+          },
+          {
+            q: '在 WSL2 中 Ollama 会使用我的 GPU 吗？',
+            a: '会，前提是受支持的 NVIDIA GPU 并安装了较新的 Windows 版 NVIDIA 驱动。只需安装 Windows 驱动，不要在 WSL2 内安装 Linux 显示驱动。下载大模型前先运行 nvidia-smi 检查，因为配置失败时会悄悄回退到 CPU。',
+          },
         ],
       },
     },
@@ -535,12 +715,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-es.webp',
-    title: 'Ollama en WSL2 vs. Windows nativo: ¿Cuál deberías elegir?',
-    seoTitle: 'WSL2 vs Windows nativo para Ollama | Prompt Bites',
+    title: 'Ollama en Windows, WSL2 o Linux: ¿cuál elegir?',
+    seoTitle: 'Ollama: Windows vs WSL2 vs Linux | Prompt Bites',
     metaDescription:
-      'Ollama nativo en Windows es más sencillo de instalar y accede directamente a la GPU; WSL2 ayuda sobre todo cuando necesitas una herramienta exclusiva de Linux junto a Ollama.',
+      'Windows nativo es la configuración más sencilla de Ollama; WSL2 suele igualar su velocidad en GPU y Linux nativo encaja en servidores y herramientas Linux.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -549,11 +729,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>Ollama nativo en Windows es más sencillo de configurar y accede directamente a la GPU sin ninguna capa de passthrough, por lo que es la opción predeterminada adecuada para la mayoría de los usuarios.</strong> WSL2 vale la configuración adicional principalmente cuando necesitas una herramienta exclusiva de Linux junto a Ollama en el mismo entorno.',
+      '<strong>Ollama nativo en Windows es más sencillo de configurar y accede directamente a la GPU sin ninguna capa de passthrough, por lo que es la opción predeterminada adecuada para la mayoría de los usuarios.</strong> WSL2 vale la configuración adicional principalmente cuando necesitas una herramienta exclusiva de Linux junto a Ollama en el mismo entorno. Linux nativo encaja mejor en servidores dedicados que funcionan de forma continua.',
     toc: [
       { label: 'Mejor opción: Windows nativo para la mayoría', anchor: '#best-pick' },
       { label: 'Cómo configurar cada opción', anchor: '#setup-steps' },
       { label: 'Cuándo usar cada una', anchor: '#when-to-use-each' },
+      { label: 'Rendimiento: Windows vs WSL2 vs Linux', anchor: '#performance' },
+      { label: 'Qué significa WSL2', anchor: '#what-is-wsl2' },
       { label: 'FAQ', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -565,8 +747,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Ollama nativo en Windows tiene acceso directo a la GPU — no necesita configuración de passthrough.',
           'WSL2 añade una capa de passthrough de GPU, útil principalmente para herramientas exclusivas de Linux junto a Ollama.',
           'La mayoría de los usuarios obtienen una configuración más simple y el mismo rendimiento con la compilación nativa de Windows.',
+          'Con la misma GPU NVIDIA, los informes de la comunidad sitúan a Windows nativo, WSL2 y Linux nativo muy cerca en velocidad; las diferencias reales están en la configuración y el manejo de archivos.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -578,6 +761,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'WSL2 vale la pena principalmente si necesitas una herramienta exclusiva de Linux junto a Ollama',
           'El passthrough de GPU en WSL2 introduce cierta sobrecarga frente a Windows nativo, aunque es pequeña para la mayoría de las cargas de trabajo limitadas por GPU',
           'Los archivos de modelo se almacenan por separado en cada entorno de forma predeterminada, por lo que cambiar entre Windows nativo y WSL2 implica volver a descargar los modelos en el otro lado',
+          'Los informes de la comunidad con la misma GPU NVIDIA sitúan a Windows nativo, WSL2 y Linux nativo muy cerca en velocidad de generación; no son mediciones de PromptQuorum',
+          'Linux nativo es la opción natural para un servidor dedicado o siempre encendido, mientras que Windows nativo encaja en un equipo de escritorio que también ejecuta otras aplicaciones',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Ollama nativo en Windows es más sencillo de configurar y tiene acceso directo a la GPU; WSL2 ayuda sobre todo cuando necesitas ejecutar una herramienta exclusiva de Linux junto a él.' },
@@ -600,6 +785,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Windows nativo: descarga un modelo desde la línea de comandos y empieza a chatear — no hay ninguna máquina virtual ni capa de contenedor entre Ollama y la GPU.',
           'WSL2: instala una distribución de Linux mediante WSL2 y asegúrate de que el passthrough de GPU esté habilitado en la configuración del controlador de GPU de Windows, ya que es un paso separado de una instalación normal del controlador.',
           'WSL2: instala Ollama dentro de la distribución de Linux usando el método de instalación de Linux, y luego verifica que el passthrough de GPU funcione antes de descargar modelos grandes, ya que un passthrough fallido recae silenciosamente en inferencia solo de CPU.',
+          'Linux nativo: ejecute el script de instalación oficial de la documentación de Ollama tras instalar su pila de controladores de GPU (controladores CUDA para NVIDIA, ROCm para AMD) y ejecute Ollama como servicio systemd si la máquina debe servir modelos de forma continua.',
+          'WSL2 con GPU NVIDIA: instale solo el controlador NVIDIA normal en el lado de Windows; la guía de WSL de NVIDIA indica no instalar un controlador gráfico de Linux dentro de la distribución.',
         ],
         content: [
           'Ambos caminos terminan con la misma interfaz de línea de comandos de Ollama y los mismos archivos de modelo — la diferencia está completamente en la configuración y en la ruta de acceso a la GPU, no en el uso diario una vez instalado.',
@@ -611,6 +798,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Ollama nativo en Windows se instala directamente y accede a la GPU sin ninguna configuración de passthrough, lo que lo convierte en la vía más simple y generalmente recomendada. WSL2 introduce una capa de passthrough de GPU entre el entorno Linux y el host Windows, y resulta útil principalmente cuando una herramienta o pila de controladores exclusiva de Linux necesita ejecutarse en el mismo entorno que Ollama.',
           'Evita WSL2 solo por el hecho de usar una shell de Linux si no tienes ninguna otra dependencia exclusiva de Linux — la capa de passthrough adicional y el mantenimiento de un entorno separado no compensan solo por Ollama. Cambia de WSL2 a Windows nativo si descubres que ya no necesitas la herramienta exclusiva de Linux que justificó originalmente la configuración.',
+        ],
+      },
+      performance: {
+        id: 'performance',
+        title: 'El rendimiento es similar; cambian la configuración y el manejo de archivos',
+        content: [
+          '<strong>Con la misma GPU NVIDIA, Windows nativo, WSL2 y Linux nativo generan tokens a velocidades similares, porque los tres ejecutan el mismo motor de Ollama sobre el mismo hardware de GPU.</strong> Las comparaciones de la comunidad señalan sobre todo diferencias de unos pocos puntos porcentuales, con informes aislados de brechas mayores a favor de Linux nativo, atribuidas a veces a una versión antigua de CUDA en WSL2. PromptQuorum no ha medido estas configuraciones, así que tome todas las cifras como orientativas y mida su propio equipo.',
+          'Para comparar en su hardware, ejecute el mismo modelo con ollama run MODEL --verbose en cada entorno y compare la tasa de evaluación indicada. Confirme que el modelo se carga por completo en la GPU en ambas pruebas, ya que un retroceso silencioso a la CPU ralentiza mucho más que cualquier diferencia entre los tres entornos.',
+          'Las diferencias prácticas están en otro lado. En Windows, Ollama necesita un controlador NVIDIA actual (o, en AMD, un controlador compatible con ROCm o compatibilidad Vulkan de Radeon) y se instala sin permisos de administrador. En Linux instala usted mismo los controladores CUDA o ROCm, y Ollama puede ejecutarse como servicio systemd. En WSL2, los archivos de modelos guardados en la unidad de Windows cargan notablemente más despacio que los del sistema de archivos de Linux, y WSL2 limita por defecto su uso de memoria, algo que puede cambiarse en el archivo .wslconfig.',
+        ],
+      },
+      whatIsWsl2: {
+        id: 'what-is-wsl2',
+        title: 'WSL2 es un entorno Linux real dentro de Windows',
+        content: [
+          '<strong>WSL2 significa Windows Subsystem for Linux, versión 2: una máquina virtual ligera que ejecuta un kernel de Linux real y una distribución dentro de Windows.</strong> Se usa mediante un terminal de Linux como Ubuntu mientras Windows sigue funcionando con normalidad, y una GPU compatible se comparte con el lado Linux a través del controlador de Windows.',
+          'No equivale a una instalación de Linux en arranque dual: WSL2 comparte el equipo con Windows, y con ello la memoria y el disco. Solo para Ollama, ese reparto es el principal coste, por eso aquí la recomendación por defecto es Windows nativo.',
         ],
       },
       faq: {
@@ -633,6 +837,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '¿Se requiere WSL2 para las GPU AMD en Windows?',
             a: 'No — Ollama nativo en Windows admite la aceleración de GPU AMD directamente a través de su propia integración de controladores, sin necesitar WSL2. WSL2 se vuelve relevante para las GPU AMD principalmente si necesitas una pila de controladores exclusiva de Linux específica (como una compilación particular de ROCm) que no está disponible en Windows nativo.',
           },
+          {
+            q: '¿Es Ollama más rápido en Linux que en Windows?',
+            a: 'Con la misma GPU NVIDIA, los informes de la comunidad muestran ambos muy cerca, normalmente a pocos puntos porcentuales en generación limitada por la GPU, con informes aislados de brechas mayores. Linux nativo es preferible sobre todo para servidores, gestión de servicios systemd y herramientas exclusivas de Linux, más que por velocidad bruta. PromptQuorum no ha realizado su propio benchmark: pruebe su propio equipo.',
+          },
+          {
+            q: '¿Qué significa WSL2?',
+            a: 'WSL2 significa Windows Subsystem for Linux, versión 2. Ejecuta un kernel de Linux real y una distribución en una máquina virtual ligera dentro de Windows, de modo que puede usar herramientas de Linux sin arranque dual.',
+          },
+          {
+            q: '¿Usa Ollama mi GPU dentro de WSL2?',
+            a: 'Sí, en GPU NVIDIA compatibles con un controlador NVIDIA de Windows actual. Instale solo el controlador de Windows y no instale un controlador gráfico de Linux dentro de WSL2. Ejecute nvidia-smi antes de descargar modelos grandes, porque una configuración fallida recurre en silencio a la CPU.',
+          },
         ],
       },
     },
@@ -641,12 +857,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   pt: {
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-pt.webp',
-    title: 'Ollama no WSL2 vs. Windows nativo: qual escolher?',
-    seoTitle: 'WSL2 vs Windows nativo para Ollama | Prompt Bites',
+    title: 'Ollama no Windows, WSL2 ou Linux: qual escolher?',
+    seoTitle: 'Ollama: Windows vs WSL2 vs Linux | Prompt Bites',
     metaDescription:
-      'O Ollama nativo no Windows é mais simples de instalar e acessa a GPU diretamente; o WSL2 ajuda principalmente quando você precisa de uma ferramenta exclusiva do Linux junto com o Ollama.',
+      'O Windows nativo é a configuração mais simples do Ollama; o WSL2 costuma igualar a velocidade na GPU e o Linux nativo serve a servidores e ferramentas Linux.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -655,11 +871,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>O Ollama nativo no Windows é mais simples de configurar e acessa a GPU diretamente, sem nenhuma camada de passthrough, o que o torna a opção padrão certa para a maioria dos usuários.</strong> O WSL2 vale a configuração extra principalmente quando você precisa de uma ferramenta exclusiva do Linux junto com o Ollama no mesmo ambiente.',
+      '<strong>O Ollama nativo no Windows é mais simples de configurar e acessa a GPU diretamente, sem nenhuma camada de passthrough, o que o torna a opção padrão certa para a maioria dos usuários.</strong> O WSL2 vale a configuração extra principalmente quando você precisa de uma ferramenta exclusiva do Linux junto com o Ollama no mesmo ambiente. O Linux nativo é mais indicado para servidores dedicados que ficam ligados o tempo todo.',
     toc: [
       { label: 'Melhor escolha: Windows nativo para a maioria dos usuários', anchor: '#best-pick' },
       { label: 'Como configurar cada opção', anchor: '#setup-steps' },
       { label: 'Quando usar cada uma', anchor: '#when-to-use-each' },
+      { label: 'Desempenho: Windows vs WSL2 vs Linux', anchor: '#performance' },
+      { label: 'O que significa WSL2', anchor: '#what-is-wsl2' },
       { label: 'FAQ', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -671,8 +889,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'O Ollama nativo no Windows tem acesso direto à GPU — nenhuma configuração de passthrough é necessária.',
           'O WSL2 adiciona uma camada de passthrough de GPU, útil principalmente para ferramentas exclusivas do Linux junto com o Ollama.',
           'A maioria dos usuários obtém uma configuração mais simples e desempenho equivalente com a versão nativa do Windows.',
+          'Na mesma GPU NVIDIA, relatos da comunidade colocam Windows nativo, WSL2 e Linux nativo muito próximos em velocidade; as diferenças reais estão na configuração e no manuseio de arquivos.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -684,6 +903,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'O WSL2 vale a pena principalmente se você precisar de uma ferramenta exclusiva do Linux junto com o Ollama',
           'O passthrough de GPU no WSL2 introduz alguma sobrecarga em relação ao Windows nativo, embora seja pequena para a maioria das cargas de trabalho limitadas por GPU',
           'Os arquivos de modelo são armazenados separadamente em cada ambiente por padrão, então alternar entre Windows nativo e WSL2 significa baixar os modelos novamente do outro lado',
+          'Relatos da comunidade com a mesma GPU NVIDIA colocam Windows nativo, WSL2 e Linux nativo muito próximos em velocidade de geração; não são medições da PromptQuorum',
+          'O Linux nativo é a escolha natural para um servidor dedicado ou sempre ligado, enquanto o Windows nativo serve a um desktop que também executa outros aplicativos',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'O Ollama nativo no Windows é mais simples de configurar e tem acesso direto à GPU; o WSL2 ajuda principalmente quando uma ferramenta exclusiva do Linux precisa rodar junto com ele.' },
@@ -706,6 +927,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Windows nativo: baixe um modelo pela linha de comando e comece a conversar — não há máquina virtual ou camada de contêiner entre o Ollama e a GPU.',
           'WSL2: instale uma distribuição Linux pelo WSL2 e certifique-se de que o passthrough de GPU está habilitado nas configurações do driver de GPU do Windows, já que essa é uma etapa separada de uma instalação normal do driver.',
           'WSL2: instale o Ollama dentro da distribuição Linux usando o método de instalação do Linux, depois verifique se o passthrough de GPU está funcionando antes de baixar modelos grandes, já que um passthrough malsucedido recai silenciosamente para inferência somente em CPU.',
+          'Linux nativo: execute o script de instalação oficial da documentação do Ollama depois de instalar a pilha de drivers da GPU (drivers CUDA para NVIDIA, ROCm para AMD) e rode o Ollama como serviço systemd se a máquina precisar servir modelos continuamente.',
+          'WSL2 com GPU NVIDIA: instale apenas o driver NVIDIA comum no lado do Windows — o guia de WSL da NVIDIA diz para não instalar um driver gráfico Linux dentro da distribuição.',
         ],
         content: [
           'Ambos os caminhos terminam com a mesma interface de linha de comando do Ollama e os mesmos arquivos de modelo — a diferença está inteiramente na configuração e no caminho de acesso à GPU, não no uso diário depois de instalado.',
@@ -717,6 +940,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'O Ollama nativo no Windows se instala diretamente e acessa a GPU sem nenhuma configuração de passthrough, o que o torna o caminho mais simples e geralmente recomendado. O WSL2 introduz uma camada de passthrough de GPU entre o ambiente Linux e o host Windows, e vale a pena principalmente quando uma ferramenta ou pilha de drivers exclusiva do Linux precisa rodar no mesmo ambiente que o Ollama.',
           'Evite o WSL2 apenas para usar um shell Linux se você não tiver nenhuma outra dependência exclusiva do Linux — a camada extra de passthrough e a manutenção de um ambiente separado não compensam só para o Ollama. Volte do WSL2 para o Windows nativo se perceber que não precisa mais da ferramenta exclusiva do Linux que originalmente justificou essa configuração.',
+        ],
+      },
+      performance: {
+        id: 'performance',
+        title: 'O desempenho é próximo; configuração e arquivos é que diferem',
+        content: [
+          '<strong>Na mesma GPU NVIDIA, Windows nativo, WSL2 e Linux nativo geram tokens em velocidades semelhantes, porque os três executam o mesmo mecanismo do Ollama no mesmo hardware de GPU.</strong> Comparações da comunidade relatam, em geral, diferenças de poucos pontos percentuais, com relatos isolados de diferenças maiores a favor do Linux nativo, às vezes atribuídas a uma versão mais antiga do CUDA no WSL2. A PromptQuorum não mediu essas configurações, então trate todos os números como indicativos e meça a sua própria máquina.',
+          'Para comparar no seu hardware, execute o mesmo modelo com ollama run MODEL --verbose em cada ambiente e compare a taxa de avaliação informada. Confirme que o modelo foi totalmente carregado na GPU nas duas execuções, pois um recuo silencioso para a CPU deixa tudo muito mais lento do que qualquer diferença entre os três ambientes.',
+          'As diferenças práticas estão em outro lugar. No Windows, o Ollama precisa de um driver NVIDIA atual (ou, no caso da AMD, um driver compatível com ROCm ou suporte a Vulkan da Radeon) e é instalado sem direitos de administrador. No Linux, você mesmo instala os drivers CUDA ou o ROCm, e o Ollama pode rodar como serviço systemd. No WSL2, arquivos de modelo guardados na unidade do Windows carregam bem mais devagar do que os do sistema de arquivos Linux, e o WSL2 limita por padrão o uso de memória, o que pode ser alterado no arquivo .wslconfig.',
+        ],
+      },
+      whatIsWsl2: {
+        id: 'what-is-wsl2',
+        title: 'O WSL2 é um ambiente Linux de verdade dentro do Windows',
+        content: [
+          '<strong>WSL2 significa Windows Subsystem for Linux, versão 2: uma máquina virtual leve que executa um kernel Linux real e uma distribuição dentro do Windows.</strong> Você o usa por um terminal Linux como o Ubuntu enquanto o Windows continua funcionando normalmente, e uma GPU compatível é compartilhada com o lado Linux pelo driver do Windows.',
+          'Não é o mesmo que uma instalação Linux em dual boot: o WSL2 divide a máquina com o Windows, inclusive memória e disco. Só para o Ollama, essa divisão é o principal custo, e por isso o Windows nativo é a recomendação padrão aqui.',
         ],
       },
       faq: {
@@ -739,6 +979,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'O WSL2 é necessário para GPUs AMD no Windows?',
             a: 'Não — o Ollama nativo no Windows suporta a aceleração de GPU AMD diretamente por meio de sua própria integração de driver, sem exigir o WSL2. O WSL2 se torna relevante para GPUs AMD principalmente se você precisar de uma pilha de driver exclusiva do Linux específica (como uma versão específica do ROCm) que não esteja disponível no Windows nativo.',
           },
+          {
+            q: 'O Ollama é mais rápido no Linux do que no Windows?',
+            a: 'Na mesma GPU NVIDIA, relatos da comunidade mostram os dois muito próximos, geralmente a poucos pontos percentuais na geração limitada pela GPU, com relatos isolados de diferenças maiores. O Linux nativo é preferível principalmente para servidores, gerenciamento de serviços systemd e ferramentas exclusivas de Linux, não pela velocidade bruta. A PromptQuorum não fez um benchmark próprio: teste a sua própria máquina.',
+          },
+          {
+            q: 'O que significa WSL2?',
+            a: 'WSL2 significa Windows Subsystem for Linux, versão 2. Ele executa um kernel Linux real e uma distribuição em uma máquina virtual leve dentro do Windows, permitindo usar ferramentas Linux sem dual boot.',
+          },
+          {
+            q: 'O Ollama usa minha GPU dentro do WSL2?',
+            a: 'Sim, em GPUs NVIDIA compatíveis com um driver NVIDIA do Windows atual. Instale apenas o driver do Windows e nenhum driver gráfico Linux dentro do WSL2. Execute nvidia-smi antes de baixar modelos grandes, porque uma configuração com falha recua silenciosamente para a CPU.',
+          },
         ],
       },
     },
@@ -747,12 +999,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-ar.webp',
-    title: 'Ollama عبر WSL2 مقابل Windows الأصلي: أيهما تختار؟',
-    seoTitle: 'WSL2 مقابل Windows الأصلي لـ Ollama | Prompt Bites',
+    title: 'Ollama على Windows أم WSL2 أم Linux: أيّها تختار؟',
+    seoTitle: 'Ollama: ‏Windows مقابل WSL2 مقابل Linux | Prompt Bites',
     metaDescription:
-      'يُعد Ollama الأصلي على Windows أسهل في الإعداد ويصل مباشرةً إلى معالج الرسومات؛ بينما يفيد WSL2 بشكل أساسي عند الحاجة إلى أداة تعمل فقط على Linux إلى جانب Ollama.',
+      'Windows الأصلي هو أبسط إعداد لـ Ollama، وأداء GPU في WSL2 قريب منه عادةً، أما Linux الأصلي فيناسب الخوادم وأدوات Linux فقط.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -761,11 +1013,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>يُعد Ollama الأصلي على Windows أسهل في الإعداد ويصل مباشرةً إلى معالج الرسومات بدون أي طبقة تمرير (passthrough)، ما يجعله الخيار الافتراضي المناسب لمعظم المستخدمين.</strong> يستحق WSL2 عناء الإعداد الإضافي بشكل أساسي عندما تحتاج إلى أداة تعمل فقط على Linux إلى جانب Ollama في البيئة نفسها.',
+      '<strong>يُعد Ollama الأصلي على Windows أسهل في الإعداد ويصل مباشرةً إلى معالج الرسومات بدون أي طبقة تمرير (passthrough)، ما يجعله الخيار الافتراضي المناسب لمعظم المستخدمين.</strong> يستحق WSL2 عناء الإعداد الإضافي بشكل أساسي عندما تحتاج إلى أداة تعمل فقط على Linux إلى جانب Ollama في البيئة نفسها. أما Linux الأصلي فهو الأنسب للخوادم المخصصة التي تعمل باستمرار.',
     toc: [
       { label: 'الخيار الأفضل: Windows الأصلي لمعظم المستخدمين', anchor: '#best-pick' },
       { label: 'كيفية إعداد كل خيار', anchor: '#setup-steps' },
       { label: 'متى تستخدم كل خيار', anchor: '#when-to-use-each' },
+      { label: 'الأداء: Windows مقابل WSL2 مقابل Linux', anchor: '#performance' },
+      { label: 'معنى WSL2', anchor: '#what-is-wsl2' },
       { label: 'أسئلة شائعة', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -777,8 +1031,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'يتمتع Ollama الأصلي على Windows بوصول مباشر إلى معالج الرسومات — لا حاجة لأي إعداد تمرير.',
           'يضيف WSL2 طبقة تمرير لمعالج الرسومات، وهي مفيدة بشكل أساسي لأدوات تعمل فقط على Linux إلى جانب Ollama.',
           'يحصل معظم المستخدمين على إعداد أبسط وأداء مماثل من نسخة Windows الأصلية.',
+          'على بطاقة NVIDIA نفسها، تضع تقارير المجتمع Windows الأصلي وWSL2 وLinux الأصلي متقاربة في السرعة؛ والفروق الحقيقية في الإعداد والتعامل مع الملفات.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -790,6 +1045,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'يستحق WSL2 العناء بشكل أساسي إذا احتجت إلى أداة تعمل فقط على Linux إلى جانب Ollama',
           'يُدخل تمرير معالج الرسومات في WSL2 بعض العبء الإضافي مقارنةً بـ Windows الأصلي، رغم أنه صغير لمعظم أحمال العمل المعتمدة على معالج الرسومات',
           'تُخزَّن ملفات النماذج بشكل منفصل في كل بيئة افتراضياً، لذا فإن التبديل بين Windows الأصلي وWSL2 يعني سحب النماذج مجدداً في الجانب الآخر',
+          'تضع تقارير المجتمع على بطاقة NVIDIA نفسها Windows الأصلي وWSL2 وLinux الأصلي متقاربة في سرعة التوليد؛ وهذه ليست قياسات من PromptQuorum',
+          'Linux الأصلي هو الخيار الطبيعي لخادم مخصص أو يعمل باستمرار، بينما يناسب Windows الأصلي حاسوب مكتبي يشغّل تطبيقات أخرى أيضًا',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Ollama الأصلي على Windows أسهل في الإعداد ويصل مباشرةً إلى معالج الرسومات؛ ويفيد WSL2 بشكل أساسي عندما تحتاج إلى تشغيل أداة تعمل فقط على Linux إلى جانبه.' },
@@ -812,6 +1069,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Windows الأصلي: اسحب نموذجاً من سطر الأوامر وابدأ المحادثة — لا توجد آلة افتراضية أو طبقة حاوية بين Ollama ومعالج الرسومات.',
           'WSL2: ثبّت توزيعة Linux عبر WSL2 وتأكد من تفعيل تمرير معالج الرسومات في إعدادات برنامج تشغيل معالج الرسومات في Windows، لأن هذه خطوة منفصلة عن التثبيت العادي لبرنامج التشغيل.',
           'WSL2: ثبّت Ollama داخل توزيعة Linux باستخدام طريقة التثبيت الخاصة بـ Linux، ثم تحقق من عمل تمرير معالج الرسومات قبل سحب أي نماذج كبيرة، لأن فشل التمرير يتراجع بصمت إلى الاستدلال بالمعالج المركزي فقط.',
+          'Linux الأصلي: شغّل سكربت التثبيت الرسمي من وثائق Ollama بعد تثبيت حزمة تعريفات GPU (تعريفات CUDA لبطاقات NVIDIA وROCm لبطاقات AMD)، وشغّل Ollama كخدمة systemd إذا كان الجهاز سيقدّم النماذج باستمرار.',
+          'WSL2 مع بطاقة NVIDIA: ثبّت تعريف NVIDIA العادي على جانب Windows فقط — يوضح دليل NVIDIA الخاص بـ WSL ألا تثبّت تعريف عرض Linux داخل التوزيعة.',
         ],
         content: [
           'ينتهي كلا المسارين بنفس واجهة سطر أوامر Ollama ونفس ملفات النماذج — يكمن الفرق بالكامل في الإعداد ومسار الوصول إلى معالج الرسومات، وليس في الاستخدام اليومي بعد التثبيت.',
@@ -823,6 +1082,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'يُثبَّت Ollama الأصلي على Windows مباشرةً ويصل إلى معالج الرسومات بدون أي إعداد تمرير، ما يجعله المسار الأبسط والموصى به عموماً. يُدخل WSL2 طبقة تمرير لمعالج الرسومات بين بيئة Linux ومضيف Windows، ويصبح مفيداً بشكل أساسي عندما تحتاج أداة أو حزمة برامج تشغيل تعمل فقط على Linux إلى العمل في البيئة نفسها مع Ollama.',
           'تجنّب استخدام WSL2 لمجرد استخدام واجهة أوامر Linux إذا لم يكن لديك أي اعتمادية أخرى على Linux فقط — فطبقة التمرير الإضافية وصيانة بيئة منفصلة لا تستحق العناء لتشغيل Ollama وحده. انتقل من WSL2 إلى Windows الأصلي إذا وجدت أنك لم تعد بحاجة إلى أداة Linux الحصرية التي بررت الإعداد في الأصل.',
+        ],
+      },
+      performance: {
+        id: 'performance',
+        title: 'الأداء متقارب، والفرق في الإعداد والتعامل مع الملفات',
+        content: [
+          '<strong>على بطاقة NVIDIA نفسها، يولّد Windows الأصلي وWSL2 وLinux الأصلي الرموز بسرعات متشابهة، لأن الثلاثة يشغّلون محرك Ollama نفسه على عتاد GPU نفسه.</strong> تشير مقارنات المجتمع في معظمها إلى فروق بضع نقاط مئوية، مع تقارير فردية عن فروق أكبر لصالح Linux الأصلي، عُزيت أحيانًا إلى إصدار أقدم من CUDA داخل WSL2. لم تُجرِ PromptQuorum قياسات لهذه الإعدادات، فاعتبر كل الأرقام إرشادية وقِس جهازك بنفسك.',
+          'للمقارنة على عتادك، شغّل النموذج نفسه بالأمر ollama run MODEL --verbose في كل بيئة وقارن معدل التقييم المعروض. تأكد من أن النموذج محمّل بالكامل على GPU في التشغيلين، لأن التراجع الصامت إلى CPU يبطئ الأداء أكثر بكثير من أي فرق بين البيئات الثلاث.',
+          'الفروق العملية في مكان آخر. على Windows يحتاج Ollama إلى تعريف NVIDIA حديث (أو تعريف يدعم ROCm أو دعم Vulkan من Radeon لبطاقات AMD) ويُثبَّت دون صلاحيات المسؤول. على Linux تثبّت تعريفات CUDA أو ROCm بنفسك، ويمكن تشغيل Ollama كخدمة systemd. وفي WSL2 تُحمَّل ملفات النماذج المخزنة على قرص Windows أبطأ بوضوح من الملفات في نظام ملفات Linux، ويحدّ WSL2 من استهلاك الذاكرة افتراضيًا، ويمكن تغيير ذلك في ملف .wslconfig.',
+        ],
+      },
+      whatIsWsl2: {
+        id: 'what-is-wsl2',
+        title: 'WSL2 بيئة Linux حقيقية داخل Windows',
+        content: [
+          '<strong>WSL2 اختصار Windows Subsystem for Linux الإصدار 2: آلة افتراضية خفيفة تشغّل نواة Linux حقيقية وتوزيعة داخل Windows.</strong> تستخدمه عبر طرفية Linux مثل Ubuntu بينما يستمر Windows بالعمل بشكل طبيعي، وتُشارَك بطاقة GPU المدعومة مع جانب Linux عبر تعريف Windows.',
+          'وهو ليس مثل تثبيت Linux بنظام الإقلاع المزدوج: يتشارك WSL2 الجهاز مع Windows، ومن ذلك الذاكرة والقرص. وبالنسبة إلى Ollama وحده، هذه المشاركة هي التكلفة الرئيسية، ولذلك يبقى Windows الأصلي التوصية الافتراضية هنا.',
         ],
       },
       faq: {
@@ -845,6 +1121,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'هل يُعد WSL2 ضرورياً لمعالجات رسومات AMD على Windows؟',
             a: 'لا — يدعم Ollama الأصلي على Windows تسريع معالج رسومات AMD مباشرةً من خلال تكامله الخاص مع برنامج التشغيل، دون الحاجة إلى WSL2. يصبح WSL2 ذا صلة بمعالجات رسومات AMD بشكل أساسي إذا احتجت إلى حزمة برامج تشغيل محددة تعمل فقط على Linux (مثل إصدار معين من ROCm) غير متوفرة على Windows الأصلي.',
           },
+          {
+            q: 'هل Ollama أسرع على Linux منه على Windows؟',
+            a: 'على بطاقة NVIDIA نفسها، تُظهر تقارير المجتمع أن الاثنين متقاربان، وعادةً ضمن بضع نقاط مئوية في التوليد المعتمد على GPU، مع تقارير فردية عن فروق أكبر. يُفضَّل Linux الأصلي أساسًا للخوادم وإدارة خدمات systemd وأدوات Linux فقط، لا من أجل السرعة الخام. لم تُجرِ PromptQuorum اختبارًا مرجعيًا خاصًا بها، فاختبر جهازك بنفسك.',
+          },
+          {
+            q: 'ما معنى WSL2؟',
+            a: 'WSL2 اختصار Windows Subsystem for Linux الإصدار 2. يشغّل نواة Linux حقيقية وتوزيعة داخل آلة افتراضية خفيفة في Windows، فيمكنك استخدام أدوات Linux دون إقلاع مزدوج.',
+          },
+          {
+            q: 'هل يستخدم Ollama بطاقة GPU الخاصة بي داخل WSL2؟',
+            a: 'نعم، على بطاقات NVIDIA المدعومة مع تعريف NVIDIA حديث على Windows. ثبّت تعريف Windows فقط ولا تثبّت تعريف عرض Linux داخل WSL2. شغّل nvidia-smi قبل تنزيل النماذج الكبيرة، لأن الإعداد الفاشل يتراجع بصمت إلى CPU.',
+          },
         ],
       },
     },
@@ -853,12 +1141,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ko: {
     theme: 'Hardware Extension',
     heroImage: '/images/wsl2-vs-native-windows-ollama-overview-hero-ko.webp',
-    title: 'Ollama를 WSL2와 네이티브 Windows 중 어디에서 실행해야 할까요?',
-    seoTitle: 'Ollama WSL2 vs 네이티브 Windows 비교 | Prompt Bites',
+    title: 'Ollama는 Windows, WSL2, Linux 중 무엇으로 실행할까요?',
+    seoTitle: 'Ollama: Windows vs WSL2 vs Linux | Prompt Bites',
     metaDescription:
-      '네이티브 Windows용 Ollama는 설정이 더 간단하고 GPU에 직접 접근합니다. WSL2는 주로 Ollama와 함께 Linux 전용 도구가 필요할 때 유용합니다.',
+      '네이티브 Windows가 가장 간단한 Ollama 설정이며 WSL2의 GPU 속도도 대체로 비슷합니다. 네이티브 Linux는 서버와 Linux 전용 도구에 적합합니다.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -867,11 +1155,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['ollama-vs-lm-studio', 'best-frontend-for-ollama', 'best-windows-laptop-local-llm-under-1500'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>네이티브 Windows용 Ollama는 설정이 더 간단하고 패스스루 계층 없이 GPU에 직접 접근하므로 대부분의 사용자에게 적합한 기본 선택입니다.</strong> WSL2는 동일한 환경에서 Ollama와 함께 Linux 전용 도구가 필요한 경우에 추가 설정 비용을 들일 가치가 있습니다.',
+      '<strong>네이티브 Windows용 Ollama는 설정이 더 간단하고 패스스루 계층 없이 GPU에 직접 접근하므로 대부분의 사용자에게 적합한 기본 선택입니다.</strong> WSL2는 동일한 환경에서 Ollama와 함께 Linux 전용 도구가 필요한 경우에 추가 설정 비용을 들일 가치가 있습니다. 상시 가동하는 전용 서버에는 네이티브 Linux가 더 적합합니다.',
     toc: [
       { label: '추천: 대부분의 사용자에게는 네이티브 Windows', anchor: '#best-pick' },
       { label: '각 옵션 설정 방법', anchor: '#setup-steps' },
       { label: '각 옵션을 사용해야 할 때', anchor: '#when-to-use-each' },
+      { label: '성능 비교: Windows·WSL2·Linux', anchor: '#performance' },
+      { label: 'WSL2의 의미', anchor: '#what-is-wsl2' },
       { label: '자주 묻는 질문', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -883,8 +1173,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '네이티브 Windows용 Ollama는 GPU에 직접 접근합니다 — 패스스루 설정이 필요 없습니다.',
           'WSL2는 GPU 패스스루 계층을 추가하며, 주로 Ollama와 함께 Linux 전용 도구를 사용할 때 유용합니다.',
           '대부분의 사용자는 네이티브 Windows 빌드에서 더 간단한 설정과 동등한 성능을 얻습니다.',
+          '같은 NVIDIA GPU에서는 네이티브 Windows, WSL2, 네이티브 Linux의 속도가 비슷하다는 커뮤니티 보고가 많으며, 실제 차이는 설정과 파일 처리에 있습니다.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -896,6 +1187,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'WSL2는 주로 Ollama와 함께 Linux 전용 도구가 필요한 경우에 가치가 있습니다',
           'WSL2의 GPU 패스스루는 네이티브 Windows에 비해 약간의 오버헤드를 유발하지만, 대부분의 GPU 중심 워크로드에서는 그 차이가 작습니다',
           '모델 파일은 기본적으로 각 환경에서 별도로 저장되므로, 네이티브 Windows와 WSL2 사이를 전환하면 다른 쪽에서 모델을 다시 받아야 합니다',
+          '같은 NVIDIA GPU에서는 네이티브 Windows, WSL2, 네이티브 Linux의 생성 속도가 비슷하다는 커뮤니티 보고가 많습니다(PromptQuorum의 측정값이 아닙니다)',
+          '상시 가동하는 전용 서버에는 네이티브 Linux가 자연스러운 선택이고, 다른 애플리케이션도 함께 쓰는 데스크톱에는 네이티브 Windows가 적합합니다',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: '네이티브 Windows용 Ollama는 설정이 더 간단하고 GPU에 직접 접근합니다. WSL2는 주로 Linux 전용 도구를 함께 실행해야 할 때 도움이 됩니다.' },
@@ -918,6 +1211,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '네이티브 Windows: 명령줄에서 모델을 받아 바로 채팅을 시작하십시오 — Ollama와 GPU 사이에 가상 머신이나 컨테이너 계층이 존재하지 않습니다.',
           'WSL2: WSL2를 통해 Linux 배포판을 설치하고 Windows GPU 드라이버 설정에서 GPU 패스스루가 활성화되어 있는지 확인하십시오. 이는 일반적인 드라이버 설치와는 별도의 단계입니다.',
           'WSL2: Linux 설치 방법을 사용해 해당 Linux 배포판 안에 Ollama를 설치한 후, 대용량 모델을 받기 전에 GPU 패스스루가 제대로 작동하는지 확인하십시오. 패스스루가 실패하면 알아채기 어렵게 CPU 전용 추론으로 조용히 전환됩니다.',
+          '네이티브 Linux: GPU 드라이버 스택(NVIDIA는 CUDA 드라이버, AMD는 ROCm)을 먼저 설치한 뒤 Ollama 문서의 공식 설치 스크립트를 실행하고, 모델을 계속 제공해야 하는 머신이라면 Ollama를 systemd 서비스로 실행합니다.',
+          'NVIDIA GPU를 쓰는 WSL2: Windows 쪽에는 일반 NVIDIA 드라이버만 설치합니다. NVIDIA의 WSL 가이드는 배포판 안에 Linux 디스플레이 드라이버를 설치하지 말라고 안내합니다.',
         ],
         content: [
           '두 경로 모두 결국 동일한 Ollama 명령줄 인터페이스와 동일한 모델 파일로 귀결됩니다 — 차이는 오로지 설정 과정과 GPU 접근 경로에만 있으며, 설치 후 일상적인 사용에는 차이가 없습니다.',
@@ -929,6 +1224,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '네이티브 Windows용 Ollama는 직접 설치되고 패스스루 설정 없이 GPU에 접근하므로 더 간단하고 일반적으로 권장되는 방식입니다. WSL2는 Linux 환경과 Windows 호스트 사이에 GPU 패스스루 계층을 도입하며, 특정 Linux 전용 도구나 드라이버 스택이 Ollama와 동일한 환경에서 실행되어야 할 때 주로 가치가 있습니다.',
           '다른 Linux 전용 의존성이 없는데 단순히 Linux 셸을 사용하고 싶다는 이유만으로 WSL2를 선택하는 것은 피하십시오 — 추가된 패스스루 계층과 별도 환경 유지 비용은 Ollama만을 위해서는 그만한 가치가 없습니다. 처음 설정을 정당화했던 Linux 전용 도구가 더 이상 필요하지 않다면 WSL2에서 네이티브 Windows로 전환하십시오.',
+        ],
+      },
+      performance: {
+        id: 'performance',
+        title: '성능은 비슷하고, 설정과 파일 처리가 다릅니다',
+        content: [
+          '<strong>같은 NVIDIA GPU에서는 네이티브 Windows, WSL2, 네이티브 Linux의 토큰 생성 속도가 비슷합니다. 세 환경 모두 같은 GPU 하드웨어에서 같은 Ollama 엔진을 실행하기 때문입니다.</strong> 커뮤니티 비교는 대부분 몇 퍼센트 수준의 차이를 보고하며, 네이티브 Linux가 더 크게 앞선다는 개별 보고도 있는데 이는 때로 WSL2 안의 오래된 CUDA 버전 탓으로 설명됩니다. PromptQuorum은 이 구성들을 직접 벤치마크하지 않았으므로 모든 수치는 참고용으로만 보고 직접 측정해 보세요.',
+          '자신의 하드웨어에서 비교하려면 각 환경에서 같은 모델을 ollama run MODEL --verbose로 실행하고 표시되는 eval rate를 비교하세요. 두 실행 모두 모델이 GPU에 완전히 로드되었는지 확인해야 합니다. 눈에 띄지 않게 CPU로 전환되면 세 환경 간의 어떤 차이보다 훨씬 크게 느려집니다.',
+          '실제 차이는 다른 곳에 있습니다. Windows에서는 Ollama에 최신 NVIDIA 드라이버(AMD는 ROCm 지원 드라이버 또는 Radeon Vulkan 지원)가 필요하고 관리자 권한 없이 설치됩니다. Linux에서는 CUDA 드라이버나 ROCm을 직접 설치하며 Ollama를 systemd 서비스로 실행할 수 있습니다. WSL2에서는 Windows 드라이브에 저장한 모델 파일이 Linux 파일 시스템의 파일보다 눈에 띄게 느리게 로드되고, WSL2는 기본적으로 메모리 사용량을 제한하며 .wslconfig 파일에서 바꿀 수 있습니다.',
+        ],
+      },
+      whatIsWsl2: {
+        id: 'what-is-wsl2',
+        title: 'WSL2는 Windows 안에서 동작하는 진짜 Linux 환경입니다',
+        content: [
+          '<strong>WSL2는 Windows Subsystem for Linux 버전 2의 약자로, Windows 안에서 진짜 Linux 커널과 배포판을 실행하는 경량 가상 머신입니다.</strong> Ubuntu 같은 Linux 터미널로 사용하며 Windows는 평소처럼 계속 동작하고, 지원되는 GPU는 Windows 드라이버를 통해 Linux 쪽과 공유됩니다.',
+          '듀얼 부팅 Linux 설치와는 다릅니다. WSL2는 Windows와 머신을 함께 쓰므로 메모리와 디스크도 공유합니다. Ollama만 쓴다면 이 공유가 가장 큰 비용이며, 그래서 여기서는 네이티브 Windows를 기본으로 권장합니다.',
         ],
       },
       faq: {
@@ -950,6 +1262,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'Windows에서 AMD GPU를 사용하려면 WSL2가 필요합니까?',
             a: '아닙니다 — 네이티브 Windows용 Ollama는 자체 드라이버 통합을 통해 WSL2 없이도 AMD GPU 가속을 직접 지원합니다. WSL2는 네이티브 Windows에서 사용할 수 없는 특정 Linux 전용 드라이버 스택(예: 특정 ROCm 빌드)이 필요한 경우에 주로 AMD GPU와 관련해 의미가 있습니다.',
+          },
+          {
+            q: 'Ollama는 Windows보다 Linux에서 더 빠른가요?',
+            a: '같은 NVIDIA GPU에서는 커뮤니티 보고상 두 환경이 비슷하며, GPU 중심 생성에서는 보통 몇 퍼센트 이내입니다. 더 큰 차이가 있었다는 개별 보고도 있습니다. 네이티브 Linux는 순수 속도보다 서버, systemd 서비스 관리, Linux 전용 도구 때문에 선택하는 편이 좋습니다. PromptQuorum은 자체 벤치마크를 실행하지 않았으니 직접 테스트해 보세요.',
+          },
+          {
+            q: 'WSL2는 무슨 뜻인가요?',
+            a: 'WSL2는 Windows Subsystem for Linux 버전 2의 약자입니다. Windows 안의 경량 가상 머신에서 진짜 Linux 커널과 배포판을 실행하므로 듀얼 부팅 없이 Linux 도구를 쓸 수 있습니다.',
+          },
+          {
+            q: 'WSL2 안의 Ollama가 GPU를 사용하나요?',
+            a: '네, 지원되는 NVIDIA GPU와 최신 Windows용 NVIDIA 드라이버가 있으면 사용합니다. Windows 드라이버만 설치하고 WSL2 안에는 Linux 디스플레이 드라이버를 설치하지 마세요. 큰 모델을 받기 전에 nvidia-smi를 실행해 확인하세요. 설정이 실패하면 눈에 띄지 않게 CPU로 전환됩니다.',
           },
         ],
       },
