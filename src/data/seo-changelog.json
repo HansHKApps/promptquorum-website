@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -3361,6 +3361,183 @@
       "ctr": 0.011235955056179775,
       "period": "GSC top queries, pasted 2026-10-17"
     }
+  },
+  {
+    "id": "ecd27ca9-48f6-4da0-9bfc-83cf9eddf875",
+    "slug": "/prompt-bites/chinese-prompting-vs-english-prompting",
+    "date": "2026-10-17T19:13:12.809Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Chinese vs English Prompting 2026: LLM Token Efficiency",
+        "new": "Chinese Prompt (提示词) vs English: Token Efficiency 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chinese prompts use 30–50% fewer tokens on Qwen3. English produces stronger reasoning chains. Mixed-language techniques and per-model guidance.",
+        "new": "\"Prompt\" in Chinese is 提示词 (tíshìcí). Chinese prompts use 30–50% fewer tokens on Qwen3; English gives stronger reasoning. Per-model prompting guide."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B2 fix — added \"prompt in Chinese\" (提示词) section + 2 FAQs; title/meta retargeted to top GSC queries",
+    "baseline": {
+      "position": 10.4,
+      "impressions": 345,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC 2026-10 (top query \"prompt in chinese\")"
+    }
+  },
+  {
+    "id": "75f9e672-5e89-411a-9022-f603e72692eb",
+    "slug": "/de/prompt-bites/chinese-prompting-vs-english-prompting",
+    "date": "2026-10-17T19:13:12.902Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Chinesisch vs. Englisch Prompting für lokale LLMs 2026",
+        "new": "Chinesischer Prompt (提示词) vs Englisch: Tokens 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Chinesische Prompts nutzen 30–50 % weniger Tokens auf Qwen3. Englisch ist besser für Reasoning-Ketten. Gemischte Techniken und modellspezifische Tipps.",
+        "new": "„Prompt“ heißt auf Chinesisch 提示词 (tíshìcí). Chinesische Prompts brauchen auf Qwen3 30–50 % weniger Tokens; Englisch denkt stärker. Modellguide."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B2 fix (locale of EN change)",
+    "baseline": null
+  },
+  {
+    "id": "c2a37833-9620-4e42-ba3f-e5d49e20624f",
+    "slug": "/fr/prompt-bites/chinese-prompting-vs-english-prompting",
+    "date": "2026-10-17T19:13:12.993Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Prompting chinois vs anglais 2026 : efficacité des tokens",
+        "new": "Prompt chinois (提示词) vs anglais 2026 : tokens"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Les prompts chinois économisent 30–50 % de tokens sur Qwen3. L'anglais produit de meilleures chaînes logiques. Techniques mixtes et guide par modèle LLM.",
+        "new": "« Prompt » se dit 提示词 (tíshìcí) en chinois. Les prompts chinois économisent 30–50 % de tokens sur Qwen3 ; l'anglais raisonne mieux. Guide par modèle."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B2 fix (locale of EN change)",
+    "baseline": null
+  },
+  {
+    "id": "7d5670bb-e688-445d-8286-bd1183bf6fcb",
+    "slug": "/ja/prompt-bites/chinese-prompting-vs-english-prompting",
+    "date": "2026-10-17T19:13:13.085Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "中国語vs英語プロンプティング完全ガイド 2026：ローカルLLMのトークン効率と推論品質を詳解",
+        "new": "中国語プロンプト(提示词)vs英語 2026：トークン効率"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen3とDeepSeek-R1-Distillモデルでは中国語プロンプトがトークンを三十〜五十パーセント節約します。英語プロンプトはほぼ全モデルで強力な論理推論チェーンを生成します。混合言語テクニックと各モデル別の詳細ガイダンスを解説します。",
+        "new": "プロンプトは中国語で「提示词(tíshìcí)」。Qwen3では中国語プロンプトがトークンを30–50%節約、英語は推論が強い。モデル別ガイド付き。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B2 fix (locale of EN change)",
+    "baseline": null
+  },
+  {
+    "id": "f35e2cbf-f453-4a3d-bb83-0893a7bbc8e9",
+    "slug": "/zh/prompt-bites/chinese-prompting-vs-english-prompting",
+    "date": "2026-10-17T19:13:13.178Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "本地LLM提示词语言选择 2026：中文vs英文分词效率与推理质量的深度对比及各模型最佳实践指南",
+        "new": "中文提示词vs英文提示词 2026：token效率与推理质量"
+      },
+      {
+        "field": "metaDescription",
+        "old": "在Qwen3和DeepSeek-R1-Distill模型上，中文提示词比英文少用百分之三十到五十的token，中文输出更自然流畅。英文提示词在几乎所有模型上产生更强的逻辑推理链。本文提供混合语言提示技巧与各模型专项最佳实践指南。",
+        "new": "「prompt」中文叫提示词（tíshìcí）。在Qwen3上中文提示词省30–50% token，英文提示词推理更强。附各模型最佳实践与混合写法。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B2 fix (locale of EN change)",
+    "baseline": null
+  },
+  {
+    "id": "74419f9f-cc6a-4a8d-a146-83e3fa7714d8",
+    "slug": "/pt/prompt-bites/chinese-prompting-vs-english-prompting",
+    "date": "2026-10-17T19:13:13.271Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Prompts em chinês vs inglês 2026: eficiência de tokens",
+        "new": "Prompt em chinês (提示词) vs inglês 2026: tokens"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Prompts em chinês usam 30–50% menos tokens no Qwen3. O inglês produz cadeias de raciocínio mais fortes. Técnicas mistas e guia por modelo.",
+        "new": "\"Prompt\" em chinês é 提示词 (tíshìcí). Prompts em chinês usam 30–50% menos tokens no Qwen3; o inglês raciocina melhor. Guia de prompting por modelo."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B2 fix (locale of EN change)",
+    "baseline": null
+  },
+  {
+    "id": "f002e3fd-8080-4c6b-8426-4c3a0bb4d62b",
+    "slug": "/es/prompt-bites/chinese-prompting-vs-english-prompting",
+    "date": "2026-10-17T19:13:13.365Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Prompts en chino vs inglés 2026: eficiencia de tokens",
+        "new": "Prompt en chino (提示词) vs inglés 2026: tokens"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Los prompts en chino usan 30–50% menos tokens en Qwen3. El inglés produce cadenas de razonamiento más fuertes. Técnicas mixtas y guía por modelo.",
+        "new": "\"Prompt\" en chino es 提示词 (tíshìcí). Los prompts en chino usan 30–50% menos tokens en Qwen3; el inglés razona mejor. Guía de prompting por modelo."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B2 fix (locale of EN change)",
+    "baseline": null
+  },
+  {
+    "id": "86ebb38a-a5e9-463c-b304-8c1dd67064a2",
+    "slug": "/ar/prompt-bites/chinese-prompting-vs-english-prompting",
+    "date": "2026-10-17T19:13:13.458Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "الكتابة بالصينية مقابل الإنجليزية ⁨2026⁩: كفاءة الرموز",
+        "new": "البرومبت بالصينية (提示词) مقابل الإنجليزية 2026: الرموز"
+      },
+      {
+        "field": "metaDescription",
+        "old": "الأوامر الصينية توفّر ⁨30⁩–⁨50%⁩ من الرموز على ⁨Qwen3⁩ و⁨DeepSeek-R1-Distill⁩. الإنجليزية تُنتج سلاسل استدلال أقوى. تقنيات مختلطة وتوصيات لكل نموذج ⁨LLM⁩.",
+        "new": "كلمة «prompt» بالصينية هي 提示词 (tíshìcí). الأوامر الصينية توفّر 30–50% من الرموز على Qwen3، والإنجليزية أقوى استدلالًا. دليل عملي لكل نموذج LLM."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B2 fix (locale of EN change)",
+    "baseline": null
+  },
+  {
+    "id": "c2c16137-2ccb-4a6e-86fd-1be8b9cd5d8a",
+    "slug": "/ko/prompt-bites/chinese-prompting-vs-english-prompting",
+    "date": "2026-10-17T19:13:13.550Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "중국어 vs 영어 프롬프팅 2026: 토큰 효율성",
+        "new": "중국어 프롬프트(提示词) vs 영어 2026: 토큰 효율"
+      },
+      {
+        "field": "metaDescription",
+        "old": "중국어 프롬프트는 Qwen3에서 토큰을 30–50% 절약합니다. 영어는 더 강력한 추론 체인을 생성합니다. 혼합 기법 및 모델별 가이드.",
+        "new": "프롬프트는 중국어로 提示词(tíshìcí)입니다. Qwen3에서 중국어 프롬프트는 토큰을 30–50% 절약하고, 영어는 추론이 더 강합니다. 모델별 가이드."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B2 fix (locale of EN change)",
+    "baseline": null
   },
   {
     "id": "7b226920-1dee-4bbb-9bff-2688c705d925",

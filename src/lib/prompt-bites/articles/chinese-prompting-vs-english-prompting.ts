@@ -6,10 +6,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-en.webp',
     title: 'Chinese vs English Prompting: Which is Better?',
-    seoTitle: 'Chinese vs English Prompting 2026: LLM Token Efficiency',
-    metaDescription: 'Chinese prompts use 30–50% fewer tokens on Qwen3. English produces stronger reasoning chains. Mixed-language techniques and per-model guidance.',
+    seoTitle: 'Chinese Prompt (提示词) vs English: Token Efficiency 2026',
+    metaDescription: '"Prompt" in Chinese is 提示词 (tíshìcí). Chinese prompts use 30–50% fewer tokens on Qwen3; English gives stronger reasoning. Per-model prompting guide.',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-20',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
@@ -72,6 +72,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'For creative writing: Chinese-only prompting on Qwen3-72B produces the best stylistic results',
         ],
       },
+      promptMeaning: {
+        id: 'prompt-meaning-in-chinese',
+        title: 'What does "prompt" mean in Chinese?',
+        content: [
+          '**"Prompt" in Chinese is 提示词 (tíshìcí)** — the standard term for the text you give an LLM. Chinese AI tools also say 提示 (tíshì, "hint/cue"), 指令 (zhǐlìng, "instruction") and, for image generators, the colloquial 咒语 (zhòuyǔ, "spell").',
+          '**System prompt** = 系统提示词 (xìtǒng tíshìcí). **Prompt engineering** = 提示词工程 (tíshìcí gōngchéng). **Command prompt** (Windows) is a different term: 命令提示符.',
+          'Everything below answers the follow-up question: should the prompt itself be written in Chinese or in English?',
+        ],
+      },
       tokenEfficiency: {
         id: 'token-efficiency',
         title: 'Token Efficiency: Chinese vs English',
@@ -127,6 +136,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
+            { q: 'What is the Chinese word for "prompt"?', a: '提示词 (tíshìcí) is the standard Chinese term for an LLM prompt. 提示 (tíshì) and 指令 (zhǐlìng, "instruction") are also used; 咒语 (zhòuyǔ, "spell") is slang for image-generation prompts.' },
+            { q: 'Is Chinese more token efficient than English?', a: 'It depends on the tokenizer. On Qwen-family models Chinese uses roughly 30–50% fewer tokens for the same content. On Llama 3 and Mistral it is the opposite: one Chinese character costs 3–6 tokens, so English is cheaper there.' },
             { q: 'Does prompting in Chinese save money on API calls?', a: 'Yes, significantly. Chinese tokens are 30–50% fewer for the same content on Qwen-family models. This applies to both local context windows and cloud API token costs.' },
             { q: 'Can I mix English and Chinese in the same prompt?', a: 'Yes. Mixed-language prompts are well-handled by Qwen3 and DeepSeek-R1-Distill. The model understands both languages in context.' },
             { q: 'Which language should I use for system prompts?', a: 'English, even on Chinese-native models. English system prompts consistently produce better reasoning and instruction-following than Chinese system prompts.' },
@@ -156,6 +167,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
+          {
+            '@type': 'Question',
+            'name': 'What is the Chinese word for "prompt"?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词 (tíshìcí) is the standard Chinese term for an LLM prompt. 提示 (tíshì) and 指令 (zhǐlìng, "instruction") are also used; 咒语 (zhòuyǔ, "spell") is slang for image-generation prompts.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Chinese more token efficient than English?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'It depends on the tokenizer. On Qwen-family models Chinese uses roughly 30–50% fewer tokens for the same content. On Llama 3 and Mistral it is the opposite: one Chinese character costs 3–6 tokens, so English is cheaper there.',
+            },
+          },
           {
             '@type': 'Question',
             'name': 'Does prompting in Chinese save money on API calls?',
@@ -204,10 +231,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-de.webp',
     title: 'Chinesisch vs. Englisch beim Prompting: Was ist besser?',
-    seoTitle: 'Chinesisch vs. Englisch Prompting für lokale LLMs 2026',
-    metaDescription: 'Chinesische Prompts nutzen 30–50 % weniger Tokens auf Qwen3. Englisch ist besser für Reasoning-Ketten. Gemischte Techniken und modellspezifische Tipps.',
+    seoTitle: 'Chinesischer Prompt (提示词) vs Englisch: Tokens 2026',
+    metaDescription: '„Prompt“ heißt auf Chinesisch 提示词 (tíshìcí). Chinesische Prompts brauchen auf Qwen3 30–50 % weniger Tokens; Englisch denkt stärker. Modellguide.',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-20',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
@@ -235,6 +262,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Englische Prompts liefern stärkere logische Reasoning-Ketten auf fast allen Modellen',
           'Beste Praxis: "Bitte antworte auf Chinesisch. [Englische Anweisungen]" — übertrifft reines Chinesisch auf jedem getesteten Modell',
           'Kein Chinesisch-Prompting bei Llama 3 und Mistral — westliche Tokenizer fragmentieren chinesische Zeichen',
+        ],
+      },
+      promptMeaning: {
+        id: 'prompt-meaning-in-chinese',
+        title: 'Was heißt „Prompt“ auf Chinesisch?',
+        content: [
+          '**„Prompt“ heißt auf Chinesisch 提示词 (tíshìcí)** — der Standardbegriff für den Text, den man einem LLM gibt. Üblich sind auch 提示 (tíshì, „Hinweis“), 指令 (zhǐlìng, „Anweisung“) und für Bildgeneratoren umgangssprachlich 咒语 (zhòuyǔ, „Zauberspruch“).',
+          '**System-Prompt** = 系统提示词 (xìtǒng tíshìcí). **Prompt Engineering** = 提示词工程 (tíshìcí gōngchéng). Die Windows-**Eingabeaufforderung** ist ein anderer Begriff: 命令提示符.',
+          'Alles Weitere beantwortet die Folgefrage: Sollte der Prompt selbst auf Chinesisch oder auf Englisch geschrieben werden?',
         ],
       },
       tokenEfficiency: {
@@ -277,6 +313,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
+            { q: 'Was ist das chinesische Wort für „Prompt“?', a: '提示词 (tíshìcí) ist der Standardbegriff für einen LLM-Prompt. Auch 提示 (tíshì) und 指令 (zhǐlìng, „Anweisung“) sind gebräuchlich; 咒语 (zhòuyǔ, „Zauberspruch“) ist Slang für Prompts bei Bildgeneratoren.' },
+            { q: 'Ist Chinesisch token-effizienter als Englisch?', a: 'Das hängt vom Tokenizer ab. Bei Qwen-Modellen braucht Chinesisch etwa 30–50 % weniger Tokens für denselben Inhalt. Bei Llama 3 und Mistral ist es umgekehrt: Ein chinesisches Zeichen kostet 3–6 Tokens, Englisch ist dort günstiger.' },
             { q: 'Spart Chinesisch-Prompting API-Kosten?', a: 'Ja. Chinesische Tokens sind bei Qwen-Modellen 30–50 % weniger für denselben Inhalt.' },
             { q: 'Kann ich Chinesisch und Englisch mischen?', a: 'Ja. Qwen3 und DeepSeek-R1-Distill verarbeiten zweisprachige Prompts gut.' },
             { q: 'Welche Sprache für System-Prompts?', a: 'Englisch, auch bei chinesisch-nativen Modellen wie Qwen3. Liefert besseres Reasoning.' },
@@ -305,6 +343,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
+          {
+            '@type': 'Question',
+            'name': 'Was ist das chinesische Wort für „Prompt“?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词 (tíshìcí) ist der Standardbegriff für einen LLM-Prompt. Auch 提示 (tíshì) und 指令 (zhǐlìng, „Anweisung“) sind gebräuchlich; 咒语 (zhòuyǔ, „Zauberspruch“) ist Slang für Prompts bei Bildgeneratoren.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ist Chinesisch token-effizienter als Englisch?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Das hängt vom Tokenizer ab. Bei Qwen-Modellen braucht Chinesisch etwa 30–50 % weniger Tokens für denselben Inhalt. Bei Llama 3 und Mistral ist es umgekehrt: Ein chinesisches Zeichen kostet 3–6 Tokens, Englisch ist dort günstiger.',
+            },
+          },
           {
             '@type': 'Question',
             'name': 'Spart Chinesisch-Prompting API-Kosten?',
@@ -353,10 +407,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-fr.webp',
     title: 'Prompting en chinois vs anglais : lequel est meilleur ?',
-    seoTitle: 'Prompting chinois vs anglais 2026 : efficacité des tokens',
-    metaDescription: 'Les prompts chinois économisent 30–50 % de tokens sur Qwen3. L\'anglais produit de meilleures chaînes logiques. Techniques mixtes et guide par modèle LLM.',
+    seoTitle: 'Prompt chinois (提示词) vs anglais 2026 : tokens',
+    metaDescription: '« Prompt » se dit 提示词 (tíshìcí) en chinois. Les prompts chinois économisent 30–50 % de tokens sur Qwen3 ; l\'anglais raisonne mieux. Guide par modèle.',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-20',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
@@ -388,6 +442,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Les prompts anglais produisent de meilleures chaînes de raisonnement logique',
           'Meilleure pratique : "Veuillez répondre en chinois. [Instructions en anglais]"',
           'Éviter le prompting chinois sur Llama 3 et Mistral — tokeniseurs occidentaux fragmentent les caractères chinois',
+        ],
+      },
+      promptMeaning: {
+        id: 'prompt-meaning-in-chinese',
+        title: 'Que signifie « prompt » en chinois ?',
+        content: [
+          '**« Prompt » se dit 提示词 (tíshìcí) en chinois** — le terme standard pour le texte donné à un LLM. On rencontre aussi 提示 (tíshì, « indice »), 指令 (zhǐlìng, « instruction ») et, pour les générateurs d\'images, l\'argot 咒语 (zhòuyǔ, « formule magique »).',
+          '**Prompt système** = 系统提示词 (xìtǒng tíshìcí). **Ingénierie de prompt** = 提示词工程 (tíshìcí gōngchéng). L\'**invite de commandes** Windows est un autre terme : 命令提示符.',
+          'La suite répond à la question suivante : faut-il rédiger le prompt lui-même en chinois ou en anglais ?',
         ],
       },
       tokenEfficiency: {
@@ -430,6 +493,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
+            { q: 'Quel est le mot chinois pour « prompt » ?', a: '提示词 (tíshìcí) est le terme standard pour un prompt de LLM. 提示 (tíshì) et 指令 (zhǐlìng, « instruction ») sont aussi utilisés ; 咒语 (zhòuyǔ, « formule magique ») est l\'argot pour les prompts d\'images.' },
+            { q: 'Le chinois est-il plus efficace en tokens que l\'anglais ?', a: 'Cela dépend du tokenizer. Sur les modèles Qwen, le chinois utilise environ 30–50 % de tokens en moins pour le même contenu. Sur Llama 3 et Mistral, c\'est l\'inverse : un caractère chinois coûte 3 à 6 tokens, l\'anglais y est moins cher.' },
             { q: 'Le prompting en chinois économise-t-il des coûts API ?', a: 'Oui. Les tokens chinois sont 30–50 % moins nombreux pour le même contenu sur les modèles Qwen.' },
             { q: 'Peut-on mélanger chinois et anglais dans un prompt ?', a: 'Oui. Qwen3 et DeepSeek-R1-Distill gèrent bien les prompts bilingues.' },
             { q: 'Quelle langue pour les prompts système ?', a: 'Anglais, même sur des modèles à dominante chinoise comme Qwen3. Meilleure instruction-following.' },
@@ -458,6 +523,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
+          {
+            '@type': 'Question',
+            'name': 'Quel est le mot chinois pour « prompt » ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词 (tíshìcí) est le terme standard pour un prompt de LLM. 提示 (tíshì) et 指令 (zhǐlìng, « instruction ») sont aussi utilisés ; 咒语 (zhòuyǔ, « formule magique ») est l\'argot pour les prompts d\'images.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Le chinois est-il plus efficace en tokens que l\'anglais ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Cela dépend du tokenizer. Sur les modèles Qwen, le chinois utilise environ 30–50 % de tokens en moins pour le même contenu. Sur Llama 3 et Mistral, c\'est l\'inverse : un caractère chinois coûte 3 à 6 tokens, l\'anglais y est moins cher.',
+            },
+          },
           {
             '@type': 'Question',
             'name': 'Le prompting en chinois économise-t-il des coûts API ?',
@@ -506,10 +587,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-ja.webp',
     title: '中国語 vs 英語プロンプト：どちらが優れている？',
-    seoTitle: '中国語vs英語プロンプティング完全ガイド 2026：ローカルLLMのトークン効率と推論品質を詳解',
-    metaDescription: 'Qwen3とDeepSeek-R1-Distillモデルでは中国語プロンプトがトークンを三十〜五十パーセント節約します。英語プロンプトはほぼ全モデルで強力な論理推論チェーンを生成します。混合言語テクニックと各モデル別の詳細ガイダンスを解説します。',
+    seoTitle: '中国語プロンプト(提示词)vs英語 2026：トークン効率',
+    metaDescription: 'プロンプトは中国語で「提示词(tíshìcí)」。Qwen3では中国語プロンプトがトークンを30–50%節約、英語は推論が強い。モデル別ガイド付き。',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-20',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
@@ -542,6 +623,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '英語プロンプトはほぼ全てのモデルで強い論理推論チェーンを生成',
           'ベストプラクティス：「中国語で返答してください。[英語指示]」——全テストモデルで純中国語を上回る',
           'Llama 3とMistralでは中国語プロンプトを避ける——西洋系トークナイザーが漢字を断片化',
+        ],
+      },
+      promptMeaning: {
+        id: 'prompt-meaning-in-chinese',
+        title: '中国語で「プロンプト」は何と言う？',
+        content: [
+          '**「プロンプト」は中国語で「提示词(tíshìcí)」**です。LLMに与えるテキストを指す標準的な用語で、「提示(tíshì)」「指令(zhǐlìng、指示)」も使われます。画像生成AIでは俗に「咒语(zhòuyǔ、呪文)」とも呼ばれます。',
+          '**システムプロンプト**＝「系统提示词(xìtǒng tíshìcí)」、**プロンプトエンジニアリング**＝「提示词工程(tíshìcí gōngchéng)」。Windowsの**コマンドプロンプト**は別の語で「命令提示符」です。',
+          '以下では、プロンプト自体を中国語と英語のどちらで書くべきかを解説します。',
         ],
       },
       tokenEfficiency: {
@@ -584,6 +674,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
+            { q: '中国語で「プロンプト」は何と言いますか？', a: 'LLMのプロンプトを表す標準的な中国語は「提示词(tíshìcí)」です。「提示(tíshì)」「指令(zhǐlìng)」も使われ、画像生成では俗に「咒语(zhòuyǔ、呪文)」と呼ばれます。' },
+            { q: '中国語は英語よりトークン効率が良いですか？', a: 'トークナイザー次第です。Qwen系モデルでは同じ内容で中国語のトークン数が約30–50%少なくなります。Llama 3やMistralでは逆で、漢字1文字が3〜6トークンかかるため英語の方が安く済みます。' },
             { q: '中国語プロンプトはAPIコストを節約しますか？', a: 'はい。Qwenファミリーモデルでは、同じコンテンツに対して中国語トークンが30–50%少なくなります。' },
             { q: '同じプロンプトで中国語と英語を混ぜられますか？', a: 'はい。Qwen3とDeepSeek-R1-Distillはバイリンガルプロンプトをよく処理します。' },
             { q: 'システムプロンプトにはどの言語を使うべきですか？', a: 'Qwen3のような中国語ネイティブモデルでも英語が推奨。より良い指示フォローを一貫して生成します。' },
@@ -612,6 +704,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
+          {
+            '@type': 'Question',
+            'name': '中国語で「プロンプト」は何と言いますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLMのプロンプトを表す標準的な中国語は「提示词(tíshìcí)」です。「提示(tíshì)」「指令(zhǐlìng)」も使われ、画像生成では俗に「咒语(zhòuyǔ、呪文)」と呼ばれます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '中国語は英語よりトークン効率が良いですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'トークナイザー次第です。Qwen系モデルでは同じ内容で中国語のトークン数が約30–50%少なくなります。Llama 3やMistralでは逆で、漢字1文字が3〜6トークンかかるため英語の方が安く済みます。',
+            },
+          },
           {
             '@type': 'Question',
             'name': '中国語プロンプトはAPIコストを節約しますか？',
@@ -660,10 +768,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-zh.webp',
     title: '中文 vs 英文提示词：哪种更好？',
-    seoTitle: '本地LLM提示词语言选择 2026：中文vs英文分词效率与推理质量的深度对比及各模型最佳实践指南',
-    metaDescription: '在Qwen3和DeepSeek-R1-Distill模型上，中文提示词比英文少用百分之三十到五十的token，中文输出更自然流畅。英文提示词在几乎所有模型上产生更强的逻辑推理链。本文提供混合语言提示技巧与各模型专项最佳实践指南。',
+    seoTitle: '中文提示词vs英文提示词 2026：token效率与推理质量',
+    metaDescription: '「prompt」中文叫提示词（tíshìcí）。在Qwen3上中文提示词省30–50% token，英文提示词推理更强。附各模型最佳实践与混合写法。',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-20',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
@@ -698,6 +806,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '最佳实践：「请用中文回复。[英文指令]」——在每个测试模型上均优于纯中文提示',
           'Llama 3和Mistral避免使用中文提示——西方分词器将汉字切割成碎片',
           '创意写作：仅在Qwen3-72B上使用纯中文提示能获得最佳文体效果',
+        ],
+      },
+      promptMeaning: {
+        id: 'prompt-meaning-in-chinese',
+        title: '“prompt”用中文怎么说？',
+        content: [
+          '**“prompt”的中文是“提示词”（tíshìcí）**，是指给大语言模型的输入文本的通用说法。也常说“提示”（tíshì）、“指令”（zhǐlìng）；在绘图模型圈里还有俗称“咒语”（zhòuyǔ）。',
+          '**系统提示词**＝system prompt，**提示词工程**＝prompt engineering。Windows的“命令提示符”是另一个词，与LLM无关。',
+          '下文回答的是接下来的问题：提示词本身应该用中文写，还是用英文写？',
         ],
       },
       tokenEfficiency: {
@@ -755,6 +872,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
+            { q: '“prompt”的中文是什么？', a: '“提示词”（tíshìcí）是LLM提示的通用中文说法，也常用“提示”（tíshì）和“指令”（zhǐlìng）；绘图模型圈里俗称“咒语”（zhòuyǔ）。' },
+            { q: '中文比英文更省token吗？', a: '取决于分词器。在Qwen系列模型上，同样内容中文大约少用30–50%的token；在Llama 3和Mistral上则相反，一个汉字要消耗3–6个token，英文反而更省。' },
             { q: '中文提示能节省API费用吗？', a: '能，显著节省。Qwen系模型中，同等内容的中文token比英文少30–50%。' },
             { q: '同一提示中可以混用中英文吗？', a: '可以。Qwen3和DeepSeek-R1-Distill能很好地处理双语混合提示。' },
             { q: '系统提示应该使用哪种语言？', a: '英文，即使在Qwen3这样的中文原生模型上。英文系统提示始终产生更好的指令遵从。' },
@@ -791,6 +910,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
+          {
+            '@type': 'Question',
+            'name': '“prompt”的中文是什么？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '“提示词”（tíshìcí）是LLM提示的通用中文说法，也常用“提示”（tíshì）和“指令”（zhǐlìng）；绘图模型圈里俗称“咒语”（zhòuyǔ）。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '中文比英文更省token吗？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '取决于分词器。在Qwen系列模型上，同样内容中文大约少用30–50%的token；在Llama 3和Mistral上则相反，一个汉字要消耗3–6个token，英文反而更省。',
+            },
+          },
           {
             '@type': 'Question',
             'name': '中文提示能节省API费用吗？',
@@ -839,10 +974,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-pt.webp',
     title: 'Prompts em chinês vs inglês: qual é melhor para LLMs locais?',
-    seoTitle: 'Prompts em chinês vs inglês 2026: eficiência de tokens',
-    metaDescription: 'Prompts em chinês usam 30–50% menos tokens no Qwen3. O inglês produz cadeias de raciocínio mais fortes. Técnicas mistas e guia por modelo.',
+    seoTitle: 'Prompt em chinês (提示词) vs inglês 2026: tokens',
+    metaDescription: '"Prompt" em chinês é 提示词 (tíshìcí). Prompts em chinês usam 30–50% menos tokens no Qwen3; o inglês raciocina melhor. Guia de prompting por modelo.',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-20',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
@@ -875,6 +1010,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Prompts em inglês produzem cadeias de raciocínio lógico mais fortes em quase todos os modelos',
           'Melhor prática: "Por favor responda em chinês. [Instruções em inglês]" — supera o chinês puro em todos os modelos testados',
           'Evite prompts em chinês com Llama 3 e Mistral — seus tokenizadores ocidentais fragmentam os caracteres chineses',
+        ],
+      },
+      promptMeaning: {
+        id: 'prompt-meaning-in-chinese',
+        title: 'O que significa "prompt" em chinês?',
+        content: [
+          '**"Prompt" em chinês é 提示词 (tíshìcí)** — o termo padrão para o texto que você envia a um LLM. Também se usam 提示 (tíshì, "dica") e 指令 (zhǐlìng, "instrução") e, em geradores de imagem, a gíria 咒语 (zhòuyǔ, "feitiço").',
+          '**Prompt de sistema** = 系统提示词 (xìtǒng tíshìcí). **Engenharia de prompt** = 提示词工程 (tíshìcí gōngchéng). O **prompt de comando** do Windows é outro termo: 命令提示符.',
+          'O restante responde à pergunta seguinte: o prompt em si deve ser escrito em chinês ou em inglês?',
         ],
       },
       tokenEfficiency: {
@@ -918,6 +1062,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
+            { q: 'Qual é a palavra chinesa para "prompt"?', a: '提示词 (tíshìcí) é o termo padrão para um prompt de LLM. 提示 (tíshì) e 指令 (zhǐlìng, "instrução") também são usados; 咒语 (zhòuyǔ, "feitiço") é gíria para prompts de imagem.' },
+            { q: 'O chinês é mais eficiente em tokens do que o inglês?', a: 'Depende do tokenizador. Em modelos Qwen, o chinês usa cerca de 30–50% menos tokens para o mesmo conteúdo. No Llama 3 e no Mistral é o contrário: um caractere chinês custa 3 a 6 tokens, então o inglês sai mais barato.' },
             { q: 'Prompting em chinês economiza dinheiro em chamadas de API?', a: 'Sim, significativamente. Os tokens em chinês são 30–50% menos para o mesmo conteúdo em modelos da família Qwen.' },
             { q: 'Posso misturar chinês e inglês no mesmo prompt?', a: 'Sim. Prompts em dois idiomas são bem tratados pelo Qwen3 e DeepSeek-R1-Distill.' },
             { q: 'Qual idioma devo usar para os system prompts?', a: 'Inglês, mesmo em modelos nativos em chinês como o Qwen3. System prompts em inglês produzem consistentemente melhor seguimento de instruções.' },
@@ -947,6 +1093,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
+          {
+            '@type': 'Question',
+            'name': 'Qual é a palavra chinesa para "prompt"?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词 (tíshìcí) é o termo padrão para um prompt de LLM. 提示 (tíshì) e 指令 (zhǐlìng, "instrução") também são usados; 咒语 (zhòuyǔ, "feitiço") é gíria para prompts de imagem.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O chinês é mais eficiente em tokens do que o inglês?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende do tokenizador. Em modelos Qwen, o chinês usa cerca de 30–50% menos tokens para o mesmo conteúdo. No Llama 3 e no Mistral é o contrário: um caractere chinês custa 3 a 6 tokens, então o inglês sai mais barato.',
+            },
+          },
           {
             '@type': 'Question',
             'name': 'Prompting em chinês economiza dinheiro em chamadas de API?',
@@ -994,10 +1156,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-es.webp',
     title: 'Prompts en chino vs inglés: ¿cuál es mejor para LLMs locales?',
-    seoTitle: 'Prompts en chino vs inglés 2026: eficiencia de tokens',
-    metaDescription: 'Los prompts en chino usan 30–50% menos tokens en Qwen3. El inglés produce cadenas de razonamiento más fuertes. Técnicas mixtas y guía por modelo.',
+    seoTitle: 'Prompt en chino (提示词) vs inglés 2026: tokens',
+    metaDescription: '"Prompt" en chino es 提示词 (tíshìcí). Los prompts en chino usan 30–50% menos tokens en Qwen3; el inglés razona mejor. Guía de prompting por modelo.',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-20',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
@@ -1030,6 +1192,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Los prompts en inglés producen cadenas de razonamiento lógico más fuertes en casi todos los modelos',
           'Mejor práctica: "Por favor responde en chino. [Instrucciones en inglés]" — supera al chino puro en todos los modelos testeados',
           'Evita prompts en chino con Llama 3 y Mistral — sus tokenizadores occidentales fragmentan los caracteres chinos',
+        ],
+      },
+      promptMeaning: {
+        id: 'prompt-meaning-in-chinese',
+        title: '¿Qué significa "prompt" en chino?',
+        content: [
+          '**"Prompt" en chino es 提示词 (tíshìcí)**, el término estándar para el texto que se da a un LLM. También se usan 提示 (tíshì, "pista") y 指令 (zhǐlìng, "instrucción") y, en generadores de imágenes, la jerga 咒语 (zhòuyǔ, "hechizo").',
+          '**Prompt de sistema** = 系统提示词 (xìtǒng tíshìcí). **Ingeniería de prompts** = 提示词工程 (tíshìcí gōngchéng). El **símbolo del sistema** de Windows es otro término: 命令提示符.',
+          'Lo que sigue responde a la pregunta siguiente: ¿el prompt debe escribirse en chino o en inglés?',
         ],
       },
       tokenEfficiency: {
@@ -1073,6 +1244,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
+            { q: '¿Cuál es la palabra china para "prompt"?', a: '提示词 (tíshìcí) es el término estándar para un prompt de LLM. También se usan 提示 (tíshì) y 指令 (zhǐlìng, "instrucción"); 咒语 (zhòuyǔ, "hechizo") es jerga para prompts de imágenes.' },
+            { q: '¿Es el chino más eficiente en tokens que el inglés?', a: 'Depende del tokenizador. En modelos Qwen, el chino usa aproximadamente 30–50% menos tokens para el mismo contenido. En Llama 3 y Mistral ocurre lo contrario: un carácter chino cuesta 3–6 tokens, así que el inglés sale más barato.' },
             { q: '¿El prompting en chino ahorra dinero en llamadas a la API?', a: 'Sí, significativamente. Los tokens en chino son 30–50% menos para el mismo contenido en modelos de la familia Qwen.' },
             { q: '¿Puedo mezclar chino e inglés en el mismo prompt?', a: 'Sí. Los prompts en dos idiomas los maneja bien Qwen3 y DeepSeek-R1-Distill.' },
             { q: '¿Qué idioma debo usar para los system prompts?', a: 'Inglés, incluso en modelos nativos en chino como Qwen3. Los system prompts en inglés producen consistentemente mejor seguimiento de instrucciones.' },
@@ -1102,6 +1275,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es la palabra china para "prompt"?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词 (tíshìcí) es el término estándar para un prompt de LLM. También se usan 提示 (tíshì) y 指令 (zhǐlìng, "instrucción"); 咒语 (zhòuyǔ, "hechizo") es jerga para prompts de imágenes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Es el chino más eficiente en tokens que el inglés?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depende del tokenizador. En modelos Qwen, el chino usa aproximadamente 30–50% menos tokens para el mismo contenido. En Llama 3 y Mistral ocurre lo contrario: un carácter chino cuesta 3–6 tokens, así que el inglés sale más barato.',
+            },
+          },
           {
             '@type': 'Question',
             'name': '¿El prompting en chino ahorra dinero en llamadas a la API?',
@@ -1149,10 +1338,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-ar.webp',
     title: 'الكتابة بالصينية مقابل الإنجليزية: أيهما أفضل لنماذج ⁨LLM⁩ المحلية؟',
-    seoTitle: 'الكتابة بالصينية مقابل الإنجليزية ⁨2026⁩: كفاءة الرموز',
-    metaDescription: 'الأوامر الصينية توفّر ⁨30⁩–⁨50%⁩ من الرموز على ⁨Qwen3⁩ و⁨DeepSeek-R1-Distill⁩. الإنجليزية تُنتج سلاسل استدلال أقوى. تقنيات مختلطة وتوصيات لكل نموذج ⁨LLM⁩.',
+    seoTitle: 'البرومبت بالصينية (提示词) مقابل الإنجليزية 2026: الرموز',
+    metaDescription: 'كلمة «prompt» بالصينية هي 提示词 (tíshìcí). الأوامر الصينية توفّر 30–50% من الرموز على Qwen3، والإنجليزية أقوى استدلالًا. دليل عملي لكل نموذج LLM.',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-20',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
@@ -1180,6 +1369,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'الأوامر الإنجليزية تُنتج سلاسل استدلال منطقي أقوى على تقريبًا جميع النماذج',
           'أفضل ممارسة: "الرجاء الرد بالصينية. [تعليمات إنجليزية]" — يتفوّق على الصينية الخالصة في كل نموذج تم اختباره',
           'تجنّب الأوامر الصينية مع Llama 3 وMistral — محللاتها الغربية تُجزّئ الأحرف الصينية',
+        ],
+      },
+      promptMeaning: {
+        id: 'prompt-meaning-in-chinese',
+        title: 'ماذا تعني كلمة «prompt» بالصينية؟',
+        content: [
+          '**كلمة «prompt» بالصينية هي 提示词 (tíshìcí)**، وهو المصطلح القياسي للنص الذي تعطيه لنموذج لغوي. تُستخدم أيضًا 提示 (tíshì، «تلميح») و指令 (zhǐlìng، «تعليمة»)، وفي مولّدات الصور العامية 咒语 (zhòuyǔ، «تعويذة»).',
+          '**موجّه النظام** = 系统提示词 (xìtǒng tíshìcí). **هندسة البرومبت** = 提示词工程 (tíshìcí gōngchéng). أما «موجّه الأوامر» في ويندوز فهو مصطلح آخر: 命令提示符.',
+          'يجيب بقية المقال عن السؤال التالي: هل تُكتب التعليمة نفسها بالصينية أم بالإنجليزية؟',
         ],
       },
       tokenEfficiency: {
@@ -1222,6 +1420,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
+            { q: 'ما الكلمة الصينية لـ«prompt»؟', a: '提示词 (tíshìcí) هو المصطلح القياسي لموجّه النموذج اللغوي. يُستخدم أيضًا 提示 (tíshì) و指令 (zhǐlìng، «تعليمة»)، ويُقال 咒语 (zhòuyǔ، «تعويذة») عامّيًا لموجّهات الصور.' },
+            { q: 'هل الصينية أكثر كفاءة في الرموز من الإنجليزية؟', a: 'يعتمد ذلك على المُجزّئ. في نماذج Qwen تستخدم الصينية نحو 30–50% رموزًا أقل للمحتوى نفسه. أما في Llama 3 وMistral فالعكس: الحرف الصيني الواحد يكلّف 3–6 رموز، فتكون الإنجليزية أرخص.' },
             { q: 'هل الكتابة بالصينية توفّر المال في استدعاءات API؟', a: 'نعم، بشكل ملحوظ. الرموز الصينية أقل بنسبة 30–50% لنفس المحتوى على نماذج عائلة Qwen.' },
             { q: 'هل يمكنني مزج الصينية والإنجليزية في نفس الأمر؟', a: 'نعم. Qwen3 وDeepSeek-R1-Distill يتعاملان بشكل جيد مع الأوامر ثنائية اللغة.' },
             { q: 'ما اللغة التي يجب استخدامها لنصوص النظام؟', a: 'الإنجليزية، حتى على النماذج ذات الأصول الصينية كـ Qwen3. نصوص النظام الإنجليزية تُنتج باستمرار اتباعًا أفضل للتعليمات.' },
@@ -1251,6 +1451,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
+          {
+            '@type': 'Question',
+            'name': 'ما الكلمة الصينية لـ«prompt»؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '提示词 (tíshìcí) هو المصطلح القياسي لموجّه النموذج اللغوي. يُستخدم أيضًا 提示 (tíshì) و指令 (zhǐlìng، «تعليمة»)، ويُقال 咒语 (zhòuyǔ، «تعويذة») عامّيًا لموجّهات الصور.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل الصينية أكثر كفاءة في الرموز من الإنجليزية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يعتمد ذلك على المُجزّئ. في نماذج Qwen تستخدم الصينية نحو 30–50% رموزًا أقل للمحتوى نفسه. أما في Llama 3 وMistral فالعكس: الحرف الصيني الواحد يكلّف 3–6 رموز، فتكون الإنجليزية أرخص.',
+            },
+          },
           {
             '@type': 'Question',
             'name': 'هل الكتابة بالصينية توفّر المال في استدعاءات API؟',
@@ -1298,10 +1514,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     heroImage: '/images/chinese-prompting-vs-english-prompting-overview-hero-ko.webp',
     title: '중국어 vs 영어 프롬프팅: 로컬 LLM에는 어느 쪽이 더 낫습니까?',
-    seoTitle: '중국어 vs 영어 프롬프팅 2026: 토큰 효율성',
-    metaDescription: '중국어 프롬프트는 Qwen3에서 토큰을 30–50% 절약합니다. 영어는 더 강력한 추론 체인을 생성합니다. 혼합 기법 및 모델별 가이드.',
+    seoTitle: '중국어 프롬프트(提示词) vs 영어 2026: 토큰 효율',
+    metaDescription: '프롬프트는 중국어로 提示词(tíshìcí)입니다. Qwen3에서 중국어 프롬프트는 토큰을 30–50% 절약하고, 영어는 추론이 더 강합니다. 모델별 가이드.',
     publishDate: '2026-05-26',
-    dateModified: '2026-06-20',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
@@ -1329,6 +1545,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '영어 프롬프트는 거의 모든 모델에서 더 강력한 논리적 추론 체인을 생성합니다',
           '최적 방법: "중국어로 답하십시오. [영어 지시문]" — 테스트된 모든 모델에서 순수 중국어보다 우수합니다',
           'Llama 3 및 Mistral에서는 중국어 프롬프트를 피하십시오 — 서양권 토크나이저가 한자를 분절합니다',
+        ],
+      },
+      promptMeaning: {
+        id: 'prompt-meaning-in-chinese',
+        title: '중국어로 "프롬프트"는 무엇인가요?',
+        content: [
+          '**"프롬프트"는 중국어로 提示词(tíshìcí)**입니다. LLM에 입력하는 텍스트를 가리키는 표준 용어이며, 提示(tíshì, "힌트")와 指令(zhǐlìng, "지시")도 쓰이고, 이미지 생성 AI에서는 속어로 咒语(zhòuyǔ, "주문")라고도 합니다.',
+          '**시스템 프롬프트** = 系统提示词(xìtǒng tíshìcí), **프롬프트 엔지니어링** = 提示词工程(tíshìcí gōngchéng). 윈도우의 **명령 프롬프트**는 다른 용어인 命令提示符입니다.',
+          '이후 내용은 프롬프트 자체를 중국어로 쓸지 영어로 쓸지에 대한 답입니다.',
         ],
       },
       tokenEfficiency: {
@@ -1376,6 +1601,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
+            { q: '중국어로 "프롬프트"는 무엇인가요?', a: 'LLM 프롬프트의 표준 중국어는 提示词(tíshìcí)입니다. 提示(tíshì)와 指令(zhǐlìng, "지시")도 쓰이며, 이미지 생성에서는 속어로 咒语(zhòuyǔ, "주문")라고 합니다.' },
+            { q: '중국어가 영어보다 토큰 효율이 좋은가요?', a: '토크나이저에 따라 다릅니다. Qwen 계열에서는 같은 내용에 중국어가 토큰을 약 30–50% 적게 씁니다. Llama 3와 Mistral에서는 반대로 한자 1자가 3–6토큰이라 영어가 더 저렴합니다.' },
             { q: '중국어 프롬프팅은 API 호출 비용을 절약합니까?', a: '네, 상당히 절약됩니다. Qwen 계열 모델에서 동일한 내용에 대해 중국어 토큰이 30–50% 더 적습니다.' },
             { q: '같은 프롬프트에 중국어와 영어를 혼합할 수 있습니까?', a: '네. Qwen3 및 DeepSeek-R1-Distill은 이중 언어 프롬프트를 잘 처리합니다.' },
             { q: '시스템 프롬프트에는 어떤 언어를 사용해야 합니까?', a: 'Qwen3 같은 중국어 네이티브 모델에서도 영어를 사용하십시오. 영어 시스템 프롬프트는 일관되게 더 나은 지시 준수를 보여줍니다.' },
@@ -1423,6 +1650,22 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
+          {
+            '@type': 'Question',
+            'name': '중국어로 "프롬프트"는 무엇인가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LLM 프롬프트의 표준 중국어는 提示词(tíshìcí)입니다. 提示(tíshì)와 指令(zhǐlìng, "지시")도 쓰이며, 이미지 생성에서는 속어로 咒语(zhòuyǔ, "주문")라고 합니다.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '중국어가 영어보다 토큰 효율이 좋은가요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '토크나이저에 따라 다릅니다. Qwen 계열에서는 같은 내용에 중국어가 토큰을 약 30–50% 적게 씁니다. Llama 3와 Mistral에서는 반대로 한자 1자가 3–6토큰이라 영어가 더 저렴합니다.',
+            },
+          },
           {
             '@type': 'Question',
             'name': '중국어 프롬프팅은 API 호출 비용을 절약합니까?',
