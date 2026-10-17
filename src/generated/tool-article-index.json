@@ -7775,6 +7775,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "hiwaifu-review",
+        "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
+        "url": "/power-local-llm/hiwaifu-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "swerve-ai-review",
         "title": "Swerve Review: AI Story and Character Chat for iPhone",
         "url": "/power-local-llm/swerve-ai-review",
@@ -7836,17 +7844,9 @@
         "url": "/power-local-llm/agnai-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "chapper-review",
-        "title": "Chapper Review: AI & LM Studio Client for iPhone, iPad, and Mac",
-        "url": "/power-local-llm/chapper-review",
-        "dateModified": "2026-09-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "Second Me": {
@@ -10705,14 +10705,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "localmind-review",
-        "title": "LocalMind Review: Free Chat App for On-Device and Self-Hosted Models",
-        "url": "/power-local-llm/localmind-review",
+        "slug": "hiwaifu-review",
+        "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
+        "url": "/power-local-llm/hiwaifu-review",
         "dateModified": "2026-10-17",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 197,
+    "totalCount": 198,
     "capped": true
   },
   "Qdrant": {
@@ -11492,9 +11492,17 @@
         "url": "/power-local-llm/tokforge-review",
         "dateModified": "2026-10-09",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "hiwaifu-review",
+        "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
+        "url": "/power-local-llm/hiwaifu-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "FriedrichAI": {
@@ -11610,6 +11618,20 @@
         "slug": "pixlstash-review",
         "title": "PixlStash Review: Self-Hosted Image Library Manager with Local AI Tagging",
         "url": "/power-local-llm/pixlstash-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "HiWaifu": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "hiwaifu-review",
+        "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
+        "url": "/power-local-llm/hiwaifu-review",
         "dateModified": "2026-10-17",
         "tier": "about"
       }

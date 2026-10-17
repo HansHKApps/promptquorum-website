@@ -463,6 +463,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'agnai-review',
   'metagpt-review',
   'risuai-review',
+  // HiWaifu review (Creative & Roleplay) — 2026-10-17
+  'hiwaifu-review',
   // Zed review — 2026-09-12
   'zed-review',
   // GitHub Copilot CLI review — 2026-09-12

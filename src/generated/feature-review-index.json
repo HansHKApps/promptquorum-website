@@ -1239,6 +1239,11 @@
     "urlSlug": "pixlstash-review",
     "url": "/power-local-llm/pixlstash-review"
   },
+  "hiwaifu": {
+    "cluster": "power-local-llm",
+    "urlSlug": "hiwaifu-review",
+    "url": "/power-local-llm/hiwaifu-review"
+  },
   "anyllm": {
     "cluster": "power-local-llm",
     "urlSlug": "anyllm-review",

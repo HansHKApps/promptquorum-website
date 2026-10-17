@@ -529,4 +529,5 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'radiant-canvas':                           'radiant-canvas',
   'ai-cutoutwerk-review':                     'ai-cutoutwerk-review',
   'openmontage-review':                       'openmontage-review',
+  'hiwaifu-review':                           'hiwaifu-review',
 }
