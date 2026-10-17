@@ -71,7 +71,7 @@
   <text x="550" y="92" class="card-title">Llama 3 70B</text>
   <rect x="550" y="100" width="60" height="18" class="badge" rx="3"/>
   <text x="580" y="113" class="badge-text" text-anchor="middle">Q4: 43GB</text>
-  <text x="550" y="126" class="card-text">Razonamiento & análisis experto</text>
+  <text x="550" y="126" class="card-text">Razonamiento &amp; análisis experto</text>
   <text x="550" y="138" class="card-text">Resolución problemas complejos</text>
   <text x="550" y="150" class="card-text" style="fill: #1C1B1F;">ollama run llama3:70b</text>
 
