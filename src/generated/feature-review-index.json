@@ -449,6 +449,11 @@
     "urlSlug": "piper-tts-review",
     "url": "/power-local-llm/piper-tts-review"
   },
+  "parrot": {
+    "cluster": "power-local-llm",
+    "urlSlug": "parrot-review",
+    "url": "/power-local-llm/parrot-review"
+  },
   "coqui-tts": {
     "cluster": "power-local-llm",
     "urlSlug": "coqui-tts-review",
@@ -1024,6 +1029,11 @@
     "urlSlug": "meetily-review",
     "url": "/power-local-llm/meetily-review"
   },
+  "transcriptionsuite": {
+    "cluster": "power-local-llm",
+    "urlSlug": "transcriptionsuite-review",
+    "url": "/power-local-llm/transcriptionsuite-review"
+  },
   "milvus": {
     "cluster": "power-local-llm",
     "urlSlug": "milvus-review",
@@ -1248,6 +1258,11 @@
     "cluster": "power-local-llm",
     "urlSlug": "hiwaifu-review",
     "url": "/power-local-llm/hiwaifu-review"
+  },
+  "whisper-notes": {
+    "cluster": "power-local-llm",
+    "urlSlug": "whisper-notes-review",
+    "url": "/power-local-llm/whisper-notes-review"
   },
   "anyllm": {
     "cluster": "power-local-llm",

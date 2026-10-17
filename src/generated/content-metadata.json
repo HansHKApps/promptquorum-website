@@ -9088,7 +9088,7 @@
       "images": []
     },
     "enclave-ai-review-2026": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -11035,6 +11035,60 @@
       "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-10-17",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "whisper-notes-review": {
+      "dateModified": "2026-10-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "transcriptionsuite-review": {
+      "dateModified": "2026-10-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "parrot-review": {
+      "dateModified": "2026-10-18",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-18",
       "hasSections": true,
       "langs": [
         "en",

@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 147,
+    "totalCount": 148,
     "capped": true
   },
   "Atomic Chat": {
@@ -2120,7 +2120,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 54,
+    "totalCount": 55,
     "capped": true
   },
   "LibreChat": {
@@ -5005,6 +5005,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "transcriptionsuite-review",
+        "title": "TranscriptionSuite Review: Free Local Speech-to-Text with Speaker Labels",
+        "url": "/power-local-llm/transcriptionsuite-review",
+        "dateModified": "2026-10-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-multimodal-pipeline-voice-vision-text",
         "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
         "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
@@ -5066,17 +5074,9 @@
         "url": "/power-local-llm/meetily-review",
         "dateModified": "2026-09-18",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llamafile-explained",
-        "title": "llamafile Explained 2026: One File, Six Operating Systems",
-        "url": "/power-local-llm/llamafile-explained",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 23,
+    "totalCount": 24,
     "capped": true
   },
   "faster-whisper": {
@@ -5123,6 +5123,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "transcriptionsuite-review",
+        "title": "TranscriptionSuite Review: Free Local Speech-to-Text with Speaker Labels",
+        "url": "/power-local-llm/transcriptionsuite-review",
+        "dateModified": "2026-10-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-multimodal-pipeline-voice-vision-text",
         "title": "Local Multimodal AI Pipeline 2026: Combine Voice, Vision, and Text Models Offline",
         "url": "/power-local-llm/local-multimodal-pipeline-voice-vision-text",
@@ -5152,17 +5160,9 @@
         "url": "/power-local-llm/willow-inference-server-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "meetily-review",
-        "title": "Meetily Review: Local, Privacy-First AI Meeting Notes",
-        "url": "/power-local-llm/meetily-review",
-        "dateModified": "2026-09-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "Piper TTS": {
@@ -5250,6 +5250,20 @@
     ],
     "totalCount": 13,
     "capped": true
+  },
+  "Parrot": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "parrot-review",
+        "title": "Parrot Review: Free Offline Text-to-Speech That Reads Selected Text Aloud",
+        "url": "/power-local-llm/parrot-review",
+        "dateModified": "2026-10-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
   },
   "Coqui TTS": {
     "articles": [
@@ -6366,7 +6380,7 @@
         "slug": "enclave-ai-review-2026",
         "title": "Enclave AI Review: On-Device AI for iPhone, iPad, Mac",
         "url": "/power-local-llm/enclave-ai-review",
-        "dateModified": "2026-09-03",
+        "dateModified": "2026-10-17",
         "tier": "about"
       },
       {
@@ -10303,6 +10317,20 @@
     "totalCount": 3,
     "capped": false
   },
+  "TranscriptionSuite": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "transcriptionsuite-review",
+        "title": "TranscriptionSuite Review: Free Local Speech-to-Text with Speaker Labels",
+        "url": "/power-local-llm/transcriptionsuite-review",
+        "dateModified": "2026-10-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Milvus": {
     "articles": [
       {
@@ -10656,6 +10684,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "transcriptionsuite-review",
+        "title": "TranscriptionSuite Review: Free Local Speech-to-Text with Speaker Labels",
+        "url": "/power-local-llm/transcriptionsuite-review",
+        "dateModified": "2026-10-18",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-ai-coding-assistant-local-llm",
         "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
@@ -10718,17 +10754,9 @@
         "url": "/power-local-llm/firecrawl-review",
         "dateModified": "2026-10-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "hiwaifu-review",
-        "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
-        "url": "/power-local-llm/hiwaifu-review",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 199,
+    "totalCount": 200,
     "capped": true
   },
   "Qdrant": {
@@ -11663,6 +11691,20 @@
         "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
         "url": "/power-local-llm/hiwaifu-review",
         "dateModified": "2026-10-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Whisper Notes": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "whisper-notes-review",
+        "title": "Whisper Notes Review: Offline Speech-to-Text for iPhone, iPad and Mac",
+        "url": "/power-local-llm/whisper-notes-review",
+        "dateModified": "2026-10-18",
         "tier": "about"
       }
     ],

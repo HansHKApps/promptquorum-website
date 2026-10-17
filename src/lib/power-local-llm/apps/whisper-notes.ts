@@ -4,7 +4,7 @@
 // (id6447090616 — seller SmashMelon LLC, $7.99, v1.8.8, iOS 18+/macOS 14+), and whispernotes.app/changelog (Mac DMG v1.6.3, 6 Oct 2026).
 // Not taken at face value: the site names no maker, so none is asserted beyond the App Store seller; the page lists an "Android Version"
 // link that contradicts its own FAQ ("no Android version"), so Android is NOT listed; no source repository exists (closed source;
-// only the Whisper/Parakeet models it runs are open). No dedicated PromptQuorum review yet, so `reviewSlug` stays unset.
+// only the Whisper/Parakeet models it runs are open). Dedicated PromptQuorum review added 2026-10-18 (whisper-notes-review).
 
 import type { ToolRecord } from './types'
 
@@ -45,7 +45,13 @@ export const app: ToolRecord = {
   // Comparison attributes: each value taken from whispernotes.app on 2026-10-17; a missing key = not stated, never false.
   // The site claims 100+ languages while the App Store lists English + 36 others, so the conservative 36+1 is not asserted; `languages` is left unset.
   compare: { speakerLabels: true, cpuUsable: false },
-  lastVerifiedDate: '2026-10-17',
+  reviewSlug: 'whisper-notes-review', // dedicated PromptQuorum review
+  pqReview: {
+    date: '2026-10-18', // iOS/iPadOS 1.8.8 per the App Store lookup API (released 2026-09-18); Mac direct-download DMG is 1.6.3 (2026-10-06)
+    version: '1.8.8',
+    versionSourceUrl: 'https://apps.apple.com/us/app/whisper-notes-speech-to-text/id6447090616',
+  },
+  lastVerifiedDate: '2026-10-18',
   lastUpstreamUpdate: '2026-10-06', // Mac DMG v1.6.3 per whispernotes.app/changelog, read 2026-10-17 (iOS app 1.8.8 on 18 Sep)
   lastUpstreamUpdateSource: 'https://whispernotes.app/changelog',
 }
