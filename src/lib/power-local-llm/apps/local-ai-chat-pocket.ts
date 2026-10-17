@@ -45,5 +45,7 @@ export const app: ToolRecord = {
   },
   // Comparison attributes: each value taken from the App Store listing / product site on 2026-10-06; a missing key = not stated there, never false.
   compare: { offline: true },
-  lastVerifiedDate: '2026-10-06',
+  lastVerifiedDate: '2026-10-17',
+  lastUpstreamUpdate: '2026-05-27', // App Store version history: 0.5.6 released 2026-05-27, re-read via iTunes lookup 2026-10-17 (>90 days: quiet warning applies)
+  lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/local-ai-chat-pocket/id6476791661',
 }
