@@ -438,3 +438,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Deployments are on demand (owner rule 2026-10-17)
+
+Pushing/merging to `main` NEVER deploys by itself — `scripts/vercel-ignore-build-step.sh` skips every production build that lacks `[force-deploy]`. Sessions merge to main freely (`scripts/session.sh finish`) and must **never** put `[force-deploy]` in a commit message. When the owner says "ship"/"deploy"/"go live", run `scripts/deploy.sh` once — it pushes one empty `[force-deploy]` commit, which builds everything accumulated on main as a single production deployment.
