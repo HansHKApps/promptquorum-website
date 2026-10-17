@@ -449,6 +449,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'localai-apexcreator-review',
   // DiffusionBee review — 2026-09-12
   'diffusionbee-review',
+  'easy-diffusion-review',
   // MacWhisper review — 2026-09-12
   'macwhisper-review',
   // AquaVoice review — 2026-10-03

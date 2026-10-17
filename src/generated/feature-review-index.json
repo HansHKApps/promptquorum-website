@@ -819,6 +819,11 @@
     "urlSlug": "diffusionbee-review",
     "url": "/power-local-llm/diffusionbee-review"
   },
+  "easy-diffusion": {
+    "cluster": "power-local-llm",
+    "urlSlug": "easy-diffusion-review",
+    "url": "/power-local-llm/easy-diffusion-review"
+  },
   "macwhisper": {
     "cluster": "power-local-llm",
     "urlSlug": "macwhisper-review",

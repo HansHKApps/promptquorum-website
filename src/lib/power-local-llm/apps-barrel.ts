@@ -193,6 +193,7 @@ import { app as app_n8n } from './apps/n8n'
 import { app as app_off_grid_ai } from './apps/off-grid-ai'
 import { app as app_toolneuron } from './apps/toolneuron'
 import { app as app_diffusionbee } from './apps/diffusionbee'
+import { app as app_easy_diffusion } from './apps/easy-diffusion'
 import { app as app_localai_apexcreator } from './apps/localai-apexcreator'
 import { app as app_macwhisper } from './apps/macwhisper'
 import { app as app_aquavoice } from './apps/aquavoice'
@@ -433,6 +434,7 @@ export const localAiApps: ToolRecord[] = [
   app_toolneuron,
   app_localai_apexcreator,
   app_diffusionbee,
+  app_easy_diffusion,
   app_macwhisper,
   app_aquavoice,
   app_solair_ai,

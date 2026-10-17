@@ -1171,6 +1171,7 @@ const HUB_THEMES: Array<{
       'animatediff-video-generation-guide',
       'local-llm-images-video-compared',
       'diffusionbee-review',
+      'easy-diffusion-review',
       'stable-diffusion-forge-review',
       'radiant-canvas',
       'ai-cutoutwerk-review',
