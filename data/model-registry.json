@@ -935,6 +935,30 @@
       "notes": "MoE variant of Qwen3 (30B total / ~3B active params), Apache 2.0. Qwen3.6 has only shipped a 35B-A3B MoE size so far (per the Qwen3.6 registry entry) -- no exact 30B-A3B successor exists yet, so this remains current. Instruct-2507 and Thinking-2507 refreshes shipped July 2025. Added 2026-08-26 for src/lib/prompt-bites/articles/strix-halo-ollama-vulkan.ts, following the same exact-name-entry pattern as the Qwen3 8B/4B/1.7B entries."
     },
     {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3-Coder-30B-A3B",
+      "type": "open-weight",
+      "release_date": "2025-07",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ollama.com/library/qwen3-coder",
+      "verified_date": "2026-10-17",
+      "notes": "Code-specialised MoE (30B total / 3.3B active), 19 GB and 256K context as qwen3-coder:30b on Ollama (checked 2026-10-17). Exact-name entry so the Qwen3 prefix (superseded by Qwen3.6) does not flag it; Qwen3.6 ships no code-specialised 30B-A3B. Added for src/lib/prompt-bites/articles/best-moe-models-local-coding.ts."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3-Coder-Next",
+      "type": "open-weight",
+      "release_date": "2026-02",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/Qwen/Qwen3-Coder-Next",
+      "verified_date": "2026-10-17",
+      "notes": "80B total / 3B active MoE (built on Qwen3-Next-80B-A3B-Base), Apache 2.0, 256K context, SWE-bench Verified 70.6 on its model card; 52 GB (q4_K_M) on Ollama. Release month inferred from the model-card collection date (Feb 2026). Added for src/lib/prompt-bites/articles/best-moe-models-local-coding.ts."
+    },
+    {
       "company": "OpenAI",
       "family": "GPT",
       "model": "GPT-5.4",
