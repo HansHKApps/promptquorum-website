@@ -449,6 +449,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'localai-apexcreator-review',
   // DiffusionBee review — 2026-09-12
   'diffusionbee-review',
+  'easy-diffusion-review',
   // MacWhisper review — 2026-09-12
   'macwhisper-review',
   // AquaVoice review — 2026-10-03
@@ -462,6 +463,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'agnai-review',
   'metagpt-review',
   'risuai-review',
+  // HiWaifu review (Creative & Roleplay) — 2026-10-17
+  'hiwaifu-review',
   // Zed review — 2026-09-12
   'zed-review',
   // GitHub Copilot CLI review — 2026-09-12
@@ -564,6 +567,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-ai-mail-review',
   'pcai-photo-retouch-review',
   'honey-llm-review',
+  'swerve-ai-review',
   'friedrichai-review',
   'snug-protocol-review',
   'spiritbox-ultimate-review',
@@ -586,6 +590,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // AI CutoutWerk review (Image editing, iOS/macOS) — 2026-10-16
   'ai-cutoutwerk-review',
   'openmontage-review',
+
+  // PixlStash review (Image & Video Generation) — 2026-10-17
+  'pixlstash-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

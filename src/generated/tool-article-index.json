@@ -1399,6 +1399,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "swerve-ai-review",
+        "title": "Swerve Review: AI Story and Character Chat for iPhone",
+        "url": "/power-local-llm/swerve-ai-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
@@ -1438,7 +1446,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Enchanted": {
@@ -6642,6 +6650,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "easy-diffusion-review",
+        "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
+        "url": "/power-local-llm/easy-diffusion-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "cloud-gpu-rental-comparison-2026",
         "title": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026",
@@ -6704,17 +6720,9 @@
         "url": "/power-local-llm/diffusionbee-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "automatic1111-review",
-        "title": "AUTOMATIC1111 Review: Stable Diffusion WebUI Explained",
-        "url": "/power-local-llm/automatic1111-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 31,
+    "totalCount": 32,
     "capped": true
   },
   "ComfyUI": {
@@ -6800,7 +6808,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 22,
     "capped": true
   },
   "AUTOMATIC1111": {
@@ -7071,6 +7079,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "easy-diffusion-review",
+        "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
+        "url": "/power-local-llm/easy-diffusion-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "draw-things-review",
         "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
         "url": "/power-local-llm/draw-things-review",
@@ -7084,17 +7100,9 @@
         "url": "/power-local-llm/comfyui-review",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
-        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
-        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-09-01",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "Real-ESRGAN": {
@@ -7737,6 +7745,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "swerve-ai-review",
+        "title": "Swerve Review: AI Story and Character Chat for iPhone",
+        "url": "/power-local-llm/swerve-ai-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "risuai-review",
         "title": "RisuAI Review: Open-Source Roleplay Chat Client",
         "url": "/power-local-llm/risuai-review",
@@ -7750,18 +7766,10 @@
         "url": "/power-local-llm/chapper-review",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-prompts-for-fiction-writers",
-        "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
-        "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
-        "dateModified": "2026-07-13",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "RisuAI": {
     "articles": [
@@ -7771,6 +7779,22 @@
         "title": "RisuAI Review: Open-Source Roleplay Chat Client",
         "url": "/power-local-llm/risuai-review",
         "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "hiwaifu-review",
+        "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
+        "url": "/power-local-llm/hiwaifu-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "swerve-ai-review",
+        "title": "Swerve Review: AI Story and Character Chat for iPhone",
+        "url": "/power-local-llm/swerve-ai-review",
+        "dateModified": "2026-10-17",
         "tier": "about"
       },
       {
@@ -7828,25 +7852,9 @@
         "url": "/power-local-llm/agnai-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "chapper-review",
-        "title": "Chapper Review: AI & LM Studio Client for iPhone, iPad, and Mac",
-        "url": "/power-local-llm/chapper-review",
-        "dateModified": "2026-09-06",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-local-llm-creative-writing-ethics",
-        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
-        "dateModified": "2026-08-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 13,
     "capped": true
   },
   "Second Me": {
@@ -8935,6 +8943,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "Easy Diffusion": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "easy-diffusion-review",
+        "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
+        "url": "/power-local-llm/easy-diffusion-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "MacWhisper": {
@@ -10683,6 +10705,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "easy-diffusion-review",
+        "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
+        "url": "/power-local-llm/easy-diffusion-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "firecrawl-review",
         "title": "Firecrawl Review: Open-Source Web Data API for LLM Pipelines",
         "url": "/power-local-llm/firecrawl-review",
@@ -10691,22 +10721,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "localmind-review",
-        "title": "LocalMind Review: Free Chat App for On-Device and Self-Hosted Models",
-        "url": "/power-local-llm/localmind-review",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openmontage-review",
-        "title": "OpenMontage Review: Open-Source Agentic Video Production With Your AI Coding Assistant",
-        "url": "/power-local-llm/openmontage-review",
+        "slug": "hiwaifu-review",
+        "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
+        "url": "/power-local-llm/hiwaifu-review",
         "dateModified": "2026-10-17",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 196,
+    "totalCount": 199,
     "capped": true
   },
   "Qdrant": {
@@ -11486,9 +11508,17 @@
         "url": "/power-local-llm/tokforge-review",
         "dateModified": "2026-10-09",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "hiwaifu-review",
+        "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
+        "url": "/power-local-llm/hiwaifu-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "FriedrichAI": {
@@ -11605,6 +11635,34 @@
         "title": "Local AI Chat Pocket Review: Offline LLM and Image Chat for iPhone and iPad",
         "url": "/power-local-llm/local-ai-chat-pocket-review",
         "dateModified": "2026-10-06",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "PixlStash": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "pixlstash-review",
+        "title": "PixlStash Review: Self-Hosted Image Library Manager with Local AI Tagging",
+        "url": "/power-local-llm/pixlstash-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "HiWaifu": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "hiwaifu-review",
+        "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
+        "url": "/power-local-llm/hiwaifu-review",
+        "dateModified": "2026-10-17",
         "tier": "about"
       }
     ],

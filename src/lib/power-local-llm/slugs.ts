@@ -394,12 +394,14 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-ai-mail-review':                    'local-ai-mail-review',
   'pcai-photo-retouch-review':               'pcai-photo-retouch-review',
   'honey-llm-review':                        'honey-llm-review',
+  'swerve-ai-review':                        'swerve-ai-review',
   'friedrichai-review':                      'friedrichai-review',
   'snug-protocol-review':                    'snug-protocol-review',
   'spiritbox-ultimate-review':               'spiritbox-ultimate-review',
   'oscilla-review':                          'oscilla-review',
   'mlxhub-review':                           'mlxhub-review',
   'local-ai-chat-pocket-review':             'local-ai-chat-pocket-review',
+  'pixlstash-review':                        'pixlstash-review',
   'anyllm-review':                           'anyllm-review',
   'tina-review':                             'tina-review',
   'return-editor-review':                    'return-editor-review',
@@ -429,6 +431,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'localai-apexcreator-review':               'localai-apexcreator-review',
   // DiffusionBee review — 2026-09-12
   'diffusionbee-review':                     'diffusionbee-review',
+  'easy-diffusion-review':                    'easy-diffusion-review',
   // MacWhisper review — 2026-09-12
   'macwhisper-review':                       'macwhisper-review',
   // AquaVoice review — 2026-10-03
@@ -527,4 +530,5 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'radiant-canvas':                           'radiant-canvas',
   'ai-cutoutwerk-review':                     'ai-cutoutwerk-review',
   'openmontage-review':                       'openmontage-review',
+  'hiwaifu-review':                           'hiwaifu-review',
 }

@@ -128,6 +128,9 @@ import { app as app_tina } from './apps/tina'
 import { app as app_return_editor } from './apps/return-editor'
 import { app as app_mlxhub } from './apps/mlxhub'
 import { app as app_local_ai_chat_pocket } from './apps/local-ai-chat-pocket'
+import { app as app_pixlstash } from './apps/pixlstash'
+import { app as app_swerve_ai } from './apps/swerve-ai'
+import { app as app_hiwaifu } from './apps/hiwaifu'
 import { app as app_whisper_notes } from './apps/whisper-notes'
 import { app as app_anyllm } from './apps/anyllm'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
@@ -194,6 +197,7 @@ import { app as app_n8n } from './apps/n8n'
 import { app as app_off_grid_ai } from './apps/off-grid-ai'
 import { app as app_toolneuron } from './apps/toolneuron'
 import { app as app_diffusionbee } from './apps/diffusionbee'
+import { app as app_easy_diffusion } from './apps/easy-diffusion'
 import { app as app_localai_apexcreator } from './apps/localai-apexcreator'
 import { app as app_macwhisper } from './apps/macwhisper'
 import { app as app_aquavoice } from './apps/aquavoice'
@@ -214,6 +218,7 @@ import { app as app_aiclient2api } from './apps/aiclient2api'
 import { app as app_baserow } from './apps/baserow'
 import { app as app_firecrawl } from './apps/firecrawl'
 import { app as app_blinko } from './apps/blinko'
+import { app as app_surfsense } from './apps/surfsense'
 import { app as app_candle_vllm } from './apps/candle-vllm'
 import { app as app_chroma } from './apps/chroma'
 import { app as app_claude_code_local } from './apps/claude-code-local'
@@ -434,6 +439,7 @@ export const localAiApps: ToolRecord[] = [
   app_toolneuron,
   app_localai_apexcreator,
   app_diffusionbee,
+  app_easy_diffusion,
   app_macwhisper,
   app_aquavoice,
   app_solair_ai,
@@ -451,6 +457,7 @@ export const localAiApps: ToolRecord[] = [
   app_baserow,
   app_firecrawl,
   app_blinko,
+  app_surfsense,
   app_candle_vllm,
   app_chroma,
   app_claude_code_local,
@@ -518,12 +525,15 @@ export const localAiApps: ToolRecord[] = [
   app_return_editor,
   app_mlxhub,
   app_local_ai_chat_pocket,
+  app_pixlstash,
+  app_hiwaifu,
   app_whisper_notes,
   app_anyllm,
   app_local_ai_geetmark,
   app_local_ai_mail,
   app_pcai_photo_retouch,
   app_honey_llm,
+  app_swerve_ai,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length

@@ -168,6 +168,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'google-ai-edge-gallery':                  'google-ai-edge-gallery',
   'toolneuron':                              'toolneuron',
   'diffusionbee':                            'diffusionbee',
+  'easy-diffusion':                          'easy-diffusion',
   'macwhisper':                              'macwhisper',
   'aquavoice':                               'aquavoice',
   'solair-ai':                               'solair-ai',
@@ -192,9 +193,12 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'honey-llm':                               'honey-llm',
   'mlxhub':                                  'mlxhub',
   'local-ai-chat-pocket':                    'local-ai-chat-pocket',
+  'pixlstash':                               'pixlstash',
+  'swerve-ai':                               'swerve-ai',
   'openmontage':                             'openmontage',
   'whisper-notes':                           'whisper-notes',
   'anyllm':                                  'anyllm',
+  'hiwaifu':                                 'hiwaifu',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)

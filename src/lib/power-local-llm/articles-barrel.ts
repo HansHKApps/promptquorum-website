@@ -47,6 +47,7 @@ import { article as a_local_ai_geetmark_review } from './articles/local-ai-geetm
 import { article as a_local_ai_mail_review } from './articles/local-ai-mail-review'
 import { article as a_pcai_photo_retouch_review } from './articles/pcai-photo-retouch-review'
 import { article as a_honey_llm_review } from './articles/honey-llm-review'
+import { article as a_swerve_ai_review } from './articles/swerve-ai-review'
 import { article as a_friedrichai_review } from './articles/friedrichai-review'
 import { article as a_snug_protocol_review } from './articles/snug-protocol-review'
 import { article as a_spiritbox_ultimate_review } from './articles/spiritbox-ultimate-review'
@@ -55,6 +56,8 @@ import { article as a_tina_review } from './articles/tina-review'
 import { article as a_return_editor_review } from './articles/return-editor-review'
 import { article as a_mlxhub_review } from './articles/mlxhub-review'
 import { article as a_local_ai_chat_pocket_review } from './articles/local-ai-chat-pocket-review'
+import { article as a_pixlstash_review } from './articles/pixlstash-review'
+import { article as a_hiwaifu_review } from './articles/hiwaifu-review'
 import { article as a_anyllm_review } from './articles/anyllm-review'
 import { article as a_ollama_local_ai_review } from './articles/ollama-local-ai-review'
 import { article as a_comfyui_review } from './articles/comfyui-review'
@@ -284,6 +287,7 @@ import { article as a_superagi_review } from './articles/superagi-review'
 import { article as a_toolneuron_review } from './articles/toolneuron-review'
 import { article as a_localai_apexcreator_review } from './articles/localai-apexcreator-review'
 import { article as a_diffusionbee_review } from './articles/diffusionbee-review'
+import { article as a_easy_diffusion_review } from './articles/easy-diffusion-review'
 import { article as a_macwhisper_review } from './articles/macwhisper-review'
 import { article as a_aquavoice_review } from './articles/aquavoice-review'
 import { article as a_solair_ai_review } from './articles/solair-ai-review'
@@ -644,6 +648,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-ai-mail-review':                         a_local_ai_mail_review,
   'pcai-photo-retouch-review':                    a_pcai_photo_retouch_review,
   'honey-llm-review':                             a_honey_llm_review,
+  'swerve-ai-review':                             a_swerve_ai_review,
   'friedrichai-review':                            a_friedrichai_review,
   'snug-protocol-review':                          a_snug_protocol_review,
   'spiritbox-ultimate-review':                     a_spiritbox_ultimate_review,
@@ -652,6 +657,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'return-editor-review':                          a_return_editor_review,
   'mlxhub-review':                                 a_mlxhub_review,
   'local-ai-chat-pocket-review':                   a_local_ai_chat_pocket_review,
+  'pixlstash-review':                              a_pixlstash_review,
+  'hiwaifu-review':                                a_hiwaifu_review,
   'anyllm-review':                                 a_anyllm_review,
   'ollama-local-ai-review':                        a_ollama_local_ai_review,
   // ComfyUI review — 2026-09-06
@@ -679,6 +686,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'localai-apexcreator-review':                      a_localai_apexcreator_review,
   // DiffusionBee review — 2026-09-12
   'diffusionbee-review':                            a_diffusionbee_review,
+  'easy-diffusion-review':                         a_easy_diffusion_review,
   // MacWhisper review — 2026-09-12
   'macwhisper-review':                              a_macwhisper_review,
   // AquaVoice review — 2026-10-03

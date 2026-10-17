@@ -819,6 +819,11 @@
     "urlSlug": "diffusionbee-review",
     "url": "/power-local-llm/diffusionbee-review"
   },
+  "easy-diffusion": {
+    "cluster": "power-local-llm",
+    "urlSlug": "easy-diffusion-review",
+    "url": "/power-local-llm/easy-diffusion-review"
+  },
   "macwhisper": {
     "cluster": "power-local-llm",
     "urlSlug": "macwhisper-review",
@@ -1234,6 +1239,16 @@
     "urlSlug": "local-ai-chat-pocket-review",
     "url": "/power-local-llm/local-ai-chat-pocket-review"
   },
+  "pixlstash": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pixlstash-review",
+    "url": "/power-local-llm/pixlstash-review"
+  },
+  "hiwaifu": {
+    "cluster": "power-local-llm",
+    "urlSlug": "hiwaifu-review",
+    "url": "/power-local-llm/hiwaifu-review"
+  },
   "anyllm": {
     "cluster": "power-local-llm",
     "urlSlug": "anyllm-review",
@@ -1258,5 +1273,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "honey-llm-review",
     "url": "/power-local-llm/honey-llm-review"
+  },
+  "swerve-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "swerve-ai-review",
+    "url": "/power-local-llm/swerve-ai-review"
   }
 }

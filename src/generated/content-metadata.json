@@ -6646,7 +6646,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 8 categories of a local LLM stack: 255 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
+          "title": "The 8 categories of a local LLM stack: 260 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -10869,6 +10869,24 @@
       ],
       "images": []
     },
+    "swerve-ai-review": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-17",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "friedrichai-review": {
       "dateModified": "2026-10-09",
       "lastFactChecked": null,
@@ -10999,6 +11017,42 @@
       "dateModified": "2026-10-06",
       "lastFactChecked": null,
       "publishDate": "2026-10-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "pixlstash-review": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-17",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "hiwaifu-review": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-17",
       "hasSections": true,
       "langs": [
         "en",
@@ -11323,6 +11377,24 @@
       "dateModified": "2026-09-12",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "easy-diffusion-review": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-17",
       "hasSections": true,
       "langs": [
         "en",
