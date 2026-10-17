@@ -648,6 +648,28 @@ const UI = {
     'عام وللقراءة فقط ومجاني، دون تسجيل دخول. يُطبَّق حدّ للاستخدام العادل قدره 120 طلبًا في الدقيقة لكل عنوان IP. عدّادات الاستخدام إجمالية فقط؛ وللحدّ يُحفظ عنوان IP مجزَّأ (hash) لمدة دقيقة ولا يُربط أبدًا بما تسأل عنه.',
     '공개, 읽기 전용, 무료이며 로그인이 필요 없습니다. IP 주소당 분당 120건의 공정 사용 한도가 적용됩니다. 사용량 카운터는 집계 값만 저장하며, 한도 적용을 위해 해시 처리된 IP 주소를 1분간 보관하지만 질문 내용과 연결되지 않습니다.',
   ),
+  startHeading: d(
+    'New here? Start with "start"',
+    'Neu hier? Beginnen Sie mit „start“',
+    'Nouveau ici ? Commencez par « start »',
+    '初めての方は「start」から',
+    '第一次使用？从“start”开始',
+    '¿Nuevo aquí? Empieza con «start»',
+    'Novo por aqui? Comece com «start»',
+    'جديد هنا؟ ابدأ بكلمة «start»',
+    '처음이신가요? “start”로 시작하세요',
+  ),
+  startBody: d(
+    'After you have added the server, open a new chat and type start (or /start). Your assistant opens the PromptQuorum menu, asks what you want to do, and can remember your hardware and preferences if you agree. It is the quickest way to get useful answers.',
+    'Nachdem Sie den Server hinzugefügt haben, öffnen Sie einen neuen Chat und tippen Sie start (oder /start). Ihr Assistent öffnet das PromptQuorum-Menü, fragt, was Sie vorhaben, und merkt sich auf Wunsch Ihre Hardware und Vorlieben. So kommen Sie am schnellsten zu brauchbaren Antworten.',
+    'Une fois le serveur ajouté, ouvrez un nouveau chat et tapez start (ou /start). Votre assistant ouvre le menu PromptQuorum, vous demande ce que vous voulez faire et, si vous l\'acceptez, retient votre matériel et vos préférences. C\'est le moyen le plus rapide d\'obtenir des réponses utiles.',
+    'サーバーを追加したら、新しいチャットで start（または /start）と入力してください。アシスタントがPromptQuorumのメニューを開き、やりたいことを尋ね、同意すればお使いのハードウェアや好みを記憶します。役立つ回答を得る最短の方法です。',
+    '添加服务器后，打开一个新对话并输入 start（或 /start）。你的助手会打开 PromptQuorum 菜单，询问你想做什么，并在你同意后记住你的硬件和偏好。这是获得有用答案的最快方式。',
+    'Después de añadir el servidor, abre un chat nuevo y escribe start (o /start). Tu asistente abre el menú de PromptQuorum, te pregunta qué quieres hacer y, si aceptas, recuerda tu hardware y tus preferencias. Es la forma más rápida de obtener respuestas útiles.',
+    'Depois de adicionar o servidor, abra um novo chat e digite start (ou /start). Seu assistente abre o menu do PromptQuorum, pergunta o que você quer fazer e, se você concordar, lembra seu hardware e suas preferências. É a forma mais rápida de obter respostas úteis.',
+    'بعد إضافة الخادم، افتح محادثة جديدة واكتب start (أو /start). سيفتح مساعدك قائمة PromptQuorum ويسألك عمّا تريد فعله، ويتذكّر جهازك وتفضيلاتك إذا وافقت. إنها أسرع طريقة للحصول على إجابات مفيدة.',
+    '서버를 추가한 뒤 새 채팅을 열고 start(또는 /start)를 입력하세요. 어시스턴트가 PromptQuorum 메뉴를 열어 무엇을 하고 싶은지 묻고, 동의하면 하드웨어와 선호 설정을 기억합니다. 유용한 답변을 가장 빠르게 얻는 방법입니다.',
+  ),
   recentHeading: d('Tools', 'Tools', 'Outils', 'ツール', '工具', 'Herramientas', 'Ferramentas', 'الأدوات', '도구'),
 } as const satisfies Record<string, Dict>
 
