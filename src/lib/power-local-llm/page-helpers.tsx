@@ -995,6 +995,7 @@ const HUB_THEMES: Array<{
       'intentkit-review',
       'mission-control-review',
       'web-search-mcp-review',
+      'snug-protocol-review',
     ],
   },
   {

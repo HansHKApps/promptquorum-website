@@ -20,6 +20,7 @@ const CHIP_CLASS: Record<string, { idle: string; active: string }> = {
   'voice-audio': { idle: 'border-cat-voice-audio-edge bg-cat-voice-audio-tint', active: 'border-cat-voice-audio bg-cat-voice-audio' },
   'images-video': { idle: 'border-cat-images-video-edge bg-cat-images-video-tint', active: 'border-cat-images-video bg-cat-images-video' },
   'train-operate': { idle: 'border-cat-train-operate-edge bg-cat-train-operate-tint', active: 'border-cat-train-operate bg-cat-train-operate' },
+  'at-the-edge': { idle: 'border-cat-at-the-edge-edge bg-cat-at-the-edge-tint', active: 'border-cat-at-the-edge bg-cat-at-the-edge' },
 }
 
 /**

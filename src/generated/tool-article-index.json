@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 301,
+    "totalCount": 302,
     "capped": true
   },
   "llama.cpp": {
@@ -3679,22 +3679,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "snug-protocol-review",
+        "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
+        "url": "/power-local-llm/snug-protocol-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "autogpt-local-review-2026",
         "title": "AutoGPT Review: Classic Agent vs. Hosted Platform",
         "url": "/power-local-llm/autogpt-local-review",
         "dateModified": "2026-09-20",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "langfuse-review",
-        "title": "Langfuse Review: Open-Source LLM Observability and Evals",
-        "url": "/power-local-llm/langfuse-review",
-        "dateModified": "2026-09-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "Flowise": {
@@ -3757,6 +3757,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "snug-protocol-review",
+        "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
+        "url": "/power-local-llm/snug-protocol-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "n8n-review",
         "title": "n8n Review: AI Workflow Automation With Local Ollama Support",
         "url": "/power-local-llm/n8n-review",
@@ -3764,7 +3772,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "Langflow": {
@@ -9661,6 +9669,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "snug-protocol-review",
+        "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
+        "url": "/power-local-llm/snug-protocol-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -9668,7 +9684,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "ClawRouter": {
@@ -10712,7 +10728,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 198,
+    "totalCount": 199,
     "capped": true
   },
   "Qdrant": {
@@ -11525,6 +11541,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "Snug Protocol": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "snug-protocol-review",
+        "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
+        "url": "/power-local-llm/snug-protocol-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "SpiritBox Ultimate": {

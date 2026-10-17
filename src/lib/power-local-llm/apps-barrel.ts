@@ -121,6 +121,7 @@ import { app as app_lm_playground } from './apps/lm-playground'
 import { app as app_localmind } from './apps/localmind'
 import { app as app_tokforge } from './apps/tokforge'
 import { app as app_friedrichai } from './apps/friedrichai'
+import { app as app_snug_protocol } from './apps/snug-protocol'
 import { app as app_spiritbox_ultimate } from './apps/spiritbox-ultimate'
 import { app as app_oscilla } from './apps/oscilla'
 import { app as app_tina } from './apps/tina'
@@ -517,6 +518,7 @@ export const localAiApps: ToolRecord[] = [
   app_localmind,
   app_tokforge,
   app_friedrichai,
+  app_snug_protocol,
   app_spiritbox_ultimate,
   app_oscilla,
   app_tina,

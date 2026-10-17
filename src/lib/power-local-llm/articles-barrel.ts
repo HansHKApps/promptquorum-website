@@ -49,6 +49,7 @@ import { article as a_pcai_photo_retouch_review } from './articles/pcai-photo-re
 import { article as a_honey_llm_review } from './articles/honey-llm-review'
 import { article as a_swerve_ai_review } from './articles/swerve-ai-review'
 import { article as a_friedrichai_review } from './articles/friedrichai-review'
+import { article as a_snug_protocol_review } from './articles/snug-protocol-review'
 import { article as a_spiritbox_ultimate_review } from './articles/spiritbox-ultimate-review'
 import { article as a_oscilla_review } from './articles/oscilla-review'
 import { article as a_tina_review } from './articles/tina-review'
@@ -649,6 +650,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'honey-llm-review':                             a_honey_llm_review,
   'swerve-ai-review':                             a_swerve_ai_review,
   'friedrichai-review':                            a_friedrichai_review,
+  'snug-protocol-review':                          a_snug_protocol_review,
   'spiritbox-ultimate-review':                     a_spiritbox_ultimate_review,
   'oscilla-review':                                a_oscilla_review,
   'tina-review':                                   a_tina_review,
