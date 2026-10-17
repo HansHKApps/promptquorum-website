@@ -9,19 +9,19 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'monthly',
-      next_seo_review_due: '2026-09-28',
+      next_seo_review_due: '2027-01-01',
       theme: 'Best Models',
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026',
       seoTitle: 'Qwen3.8-27B vs Llama 4 vs Mistral 2026: Qwen Wins Coding',
-      intro: 'Qwen3.8-27B is the best overall on consumer hardware: 61.7% SWE-bench (best dense model), fits 24 GB at Q4. Llama 4 Scout 17B (MoE, 10M context, multimodal) is the long-context / multimodal pick but needs ~55 GB VRAM at Q4; Mistral Small 3.1 24B still delivers the best quality-per-RAM ratio at 14 GB. Qwen3 excels at coding and 29 languages; Llama 4 Scout leads on context length (10M tokens) and multimodal; Mistral maximizes quality on constrained hardware. All three run on consumer hardware via Ollama. Updated: June 2026.',
-      metaDescription: 'Qwen3.8-27B wins coding: 61.7% SWE-bench, fits 24 GB. Llama 4 Scout: 10M context, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU on 14 GB. Which model wins per task?',
+      intro: 'Qwen3.8-27B is the best overall on consumer hardware: 61.7 SWE-bench Pro (best dense model), fits 24 GB at Q4. Llama 4 Scout 17B (MoE, 10M context, multimodal) is the long-context / multimodal pick but needs ~55 GB VRAM at Q4; Mistral Small 3.1 24B still delivers the best quality-per-RAM ratio at 14 GB. Qwen3 excels at coding and 29 languages; Llama 4 Scout leads on context length (10M tokens) and multimodal; Mistral maximizes quality on constrained hardware. All three run on consumer hardware via Ollama.',
+      metaDescription: 'Qwen3.8-27B wins coding: 61.7 SWE-bench Pro, fits 24 GB. Llama 4 Scout: 10M context, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU on 14 GB. Which model wins per task?',
       heroImage: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-en.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
-      last_full_refresh: '2026-08-28',
-      current_models_mentioned: ['Qwen3.8-27B', 'Qwen3.6-35B-A3B', 'qwen3:30b', 'qwen3-coder:30b', 'Llama 4 Scout', 'Mistral Small 3.1 24B', 'Devstral Small 24B', 'Codestral 22B', 'DeepSeek-R1', 'gpt-oss:20b', 'Kimi K2.6'],
-      next_refresh_due: '2026-09-28',
-      leadAnswerBlock: '**Qwen3.8-27B is the best overall on consumer hardware: dense coding leader (61.7% SWE-bench), fits 24 GB at Q4. Llama 4 Scout is the long-context / multimodal pick (17B active, MoE, 10M context) but needs ~55 GB VRAM at Q4. Mistral Small 3.1 24B offers the best quality per VRAM at 14 GB.**',
+      dateModified: '2026-10-17',
+      last_full_refresh: '2026-10-17',
+      current_models_mentioned: ['Qwen3.8-27B', 'Qwen3.6-35B-A3B', 'qwen3:30b', 'qwen3-coder:30b', 'Llama 4 Scout', 'Mistral Small 3.1 24B', 'Devstral Small 2', 'Mistral Large 4', 'Codestral 22B', 'DeepSeek-R1', 'gpt-oss:20b', 'Kimi K2.6'],
+      next_refresh_due: '2026-11-16',
+      leadAnswerBlock: '**Qwen3.8-27B is the best overall on consumer hardware: dense coding leader (61.7 SWE-bench Pro), fits 24 GB at Q4. Llama 4 Scout is the long-context / multimodal pick (17B active, MoE, 10M context) but needs ~55 GB VRAM at Q4. Mistral Small 3.1 24B offers the best quality per VRAM at 14 GB.**',
       nextStep: {
         text: 'Decided on a model? Here\'s how to run Qwen locally, step by step.',
         label: 'Run Qwen Locally — Full Setup Guide →',
@@ -30,63 +30,63 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickAnswerTop: {
         en: {
           question: 'Qwen vs Llama vs Mistral — which local LLM should I use in 2026?',
-          answer: 'June 2026: Qwen3.8-27B is the best overall on consumer hardware (61.7% SWE-bench, fits 24 GB at Q4). Llama 4 Scout is the long-context / multimodal pick (17B active, 10M context) but needs ~55 GB VRAM at Q4. Llama 3.3 70B remains strong for English reasoning. Mistral Small 3.1 best for quality per RAM. All run via Ollama.',
+          answer: 'Qwen3.8-27B is the best overall on consumer hardware (61.7 SWE-bench Pro, fits 24 GB at Q4). Llama 4 Scout is the long-context / multimodal pick (17B active, 10M context) but needs ~55 GB VRAM at Q4. Llama 3.3 70B remains strong for English reasoning. Mistral Small 3.1 best for quality per RAM. All run via Ollama.',
           bullets: [
-            'Qwen3.8-27B — best overall on consumer hardware, best dense coding (61.7% SWE-bench), fits 24 GB at Q4',
+            'Qwen3.8-27B — best overall on consumer hardware, best dense coding (61.7 SWE-bench Pro), fits 24 GB at Q4',
             'Llama 4 Scout 17B (MoE) — long-context (10M tokens) & multimodal pick, ~55 GB VRAM at Q4',
             'Mistral Small 3.1 24B — best quality-per-RAM ratio (14 GB), 79% MMLU',
             'For coding: Qwen3.8-27B or Devstral. For long-context/multimodal: Scout. For RAM: Mistral.',
             'All via Ollama: ollama pull qwen3 / llama4 / mistral',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-10-17',
         },
         de: {
-          question: 'Qwen vs. Llama vs. Mistral — welches lokale LLM fuer Juni 2026?',
-          answer: 'Juni 2026: Qwen3.8-27B ist insgesamt am besten auf Consumer-Hardware (61,7% SWE-bench, passt in 24 GB bei Q4). Llama 4 Scout ist die Wahl fuer langen Kontext und Multimodalitaet (17B aktiv, 10M Token), benoetigt aber ~55 GB VRAM bei Q4. Mistral Small 3.1 ist am besten fuer Qualitaet pro RAM.',
+          question: 'Qwen vs. Llama vs. Mistral — welches lokale LLM fuer 2026?',
+          answer: 'Qwen3.8-27B ist insgesamt am besten auf Consumer-Hardware (61,7 SWE-bench Pro, passt in 24 GB bei Q4). Llama 4 Scout ist die Wahl fuer langen Kontext und Multimodalitaet (17B aktiv, 10M Token), benoetigt aber ~55 GB VRAM bei Q4. Mistral Small 3.1 ist am besten fuer Qualitaet pro RAM.',
           bullets: [
-            'Qwen3.8-27B — insgesamt am besten auf Consumer-Hardware, bestes dichtes Coding (61,7% SWE-bench), passt in 24 GB bei Q4',
+            'Qwen3.8-27B — insgesamt am besten auf Consumer-Hardware, bestes dichtes Coding (61,7 SWE-bench Pro), passt in 24 GB bei Q4',
             'Llama 4 Scout 17B (MoE) — Wahl fuer langen Kontext (10M Token) & multimodal, ~55 GB VRAM bei Q4',
             'Mistral Small 3.1 24B — beste Qualitaet pro GB RAM (14 GB), 79% MMLU',
             'Fuer Coding: Qwen3.8-27B oder Devstral. Fuer langen Kontext/multimodal: Scout. Fuer RAM: Mistral.',
             'Alle via Ollama: ollama pull qwen3 / llama4 / mistral',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-10-17',
         },
         fr: {
-          question: 'Qwen vs Llama vs Mistral — quel LLM local choisir en juin 2026 ?',
-          answer: 'Juin 2026: Qwen3.8-27B est le meilleur globalement sur matériel grand public (61,7% SWE-bench, tient dans 24 Go en Q4). Llama 4 Scout est le choix contexte long / multimodal (17B actif, 10M tokens) mais nécessite ~55 Go VRAM en Q4. Mistral Small 3.1 meilleur pour qualite par GB RAM.',
+          question: 'Qwen vs Llama vs Mistral — quel LLM local choisir en 2026 ?',
+          answer: 'Juin 2026: Qwen3.8-27B est le meilleur globalement sur matériel grand public (61,7 SWE-bench Pro, tient dans 24 Go en Q4). Llama 4 Scout est le choix contexte long / multimodal (17B actif, 10M tokens) mais nécessite ~55 Go VRAM en Q4. Mistral Small 3.1 meilleur pour qualite par GB RAM.',
           bullets: [
-            'Qwen3.8-27B — meilleur globalement sur matériel grand public, meilleur code dense (61,7% SWE-bench), tient dans 24 Go en Q4',
+            'Qwen3.8-27B — meilleur globalement sur matériel grand public, meilleur code dense (61,7 SWE-bench Pro), tient dans 24 Go en Q4',
             'Llama 4 Scout 17B (MoE) — choix contexte long (10M tokens) & multimodal, ~55 Go VRAM en Q4',
             'Mistral Small 3.1 24B — meilleure qualite par Go RAM (14 Go), 79% MMLU',
             'Pour coder: Qwen3.8-27B ou Devstral. Pour contexte long/multimodal: Scout. Pour RAM: Mistral.',
             'Tous sur Ollama: ollama pull qwen3 / llama4 / mistral',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-10-17',
         },
         ja: {
-          question: '2026年6月、Qwen vs Llama vs Mistral — どのローカルLLMを使うべき？',
-          answer: '2026年6月：Qwen3.8-27Bはコンシューマーハードウェアで総合的に最適です（61.7% SWE-bench、Q4で24 GBに収まります）。Llama 4 Scoutは長コンテキスト・マルチモーダル向けの選択肢です（17B有効、10Mトークン）が、Q4では~55 GB VRAMが必要です。Mistral Small 3.1はGB当たりの品質が最高です。',
+          question: '2026年、Qwen vs Llama vs Mistral — どのローカルLLMを使うべき？',
+          answer: 'Qwen3.8-27Bはコンシューマーハードウェアで総合的に最適です（61.7 SWE-bench Pro、Q4で24 GBに収まります）。Llama 4 Scoutは長コンテキスト・マルチモーダル向けの選択肢です（17B有効、10Mトークン）が、Q4では~55 GB VRAMが必要です。Mistral Small 3.1はGB当たりの品質が最高です。',
           bullets: [
-            'Qwen3.8-27B — コンシューマーハードウェアで総合的に最適、最高の密モデルコーディング（61.7% SWE-bench）、Q4で24 GBに収まる',
+            'Qwen3.8-27B — コンシューマーハードウェアで総合的に最適、最高の密モデルコーディング（61.7 SWE-bench Pro）、Q4で24 GBに収まる',
             'Llama 4 Scout 17B（MoE）— 長コンテキスト（10Mトークン）・マルチモーダル向けの選択肢、Q4で~55 GB VRAM',
             'Mistral Small 3.1 24B — GB当たりの品質が最高（14 GB）、79% MMLU',
-            'コーディング：Qwen 3.6またはDevstral。長コンテキスト/マルチモーダル：Scout。RAM：Mistral。',
+            'コーディング：Qwen3.8-27BまたはDevstral。長コンテキスト/マルチモーダル：Scout。RAM：Mistral。',
             'すべてOllama経由：ollama pull qwen3 / llama4 / mistral',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-10-17',
         },
         zh: {
-          question: '2026年6月，Qwen vs Llama vs Mistral — 应该使用哪个本地LLM？',
-          answer: '2026年6月：Qwen3.8-27B在消费级硬件上综合最佳（61.7% SWE-bench，Q4下可装入24 GB）。Llama 4 Scout是长上下文/多模态的选择（17B活跃、10M令牌），但Q4下需要~55 GB显存。Mistral Small 3.1在显存比下质量最佳。',
+          question: '2026年，Qwen vs Llama vs Mistral — 应该使用哪个本地LLM？',
+          answer: 'Qwen3.8-27B在消费级硬件上综合最佳（61.7 SWE-bench Pro，Q4下可装入24 GB）。Llama 4 Scout是长上下文/多模态的选择（17B活跃、10M令牌），但Q4下需要~55 GB显存。Mistral Small 3.1在显存比下质量最佳。',
           bullets: [
-            'Qwen3.8-27B — 消费级硬件上综合最佳，最佳密集模型编程（61.7% SWE-bench），Q4下可装入24 GB',
+            'Qwen3.8-27B — 消费级硬件上综合最佳，最佳密集模型编程（61.7 SWE-bench Pro），Q4下可装入24 GB',
             'Llama 4 Scout 17B（MoE）— 长上下文（10M令牌）与多模态的选择，Q4下~55 GB显存',
             'Mistral Small 3.1 24B — 显存比质量最佳（14 GB），79% MMLU',
-            '编程：Qwen 3.6或Devstral。长上下文/多模态：Scout。显存：Mistral。',
+            '编程：Qwen3.8-27B或Devstral。长上下文/多模态：Scout。显存：Mistral。',
             '全通过Ollama：ollama pull qwen3 / llama4 / mistral',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-10-17',
         },
       },
       audience: 'Beginners running their first local LLM on consumer hardware',
@@ -115,11 +115,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'Qwen3.8-27B wins for coding on consumer hardware (61.7% SWE-bench, fits 24 GB at Q4); Llama 4 Scout leads on long context and multimodal (10M context, MoE, ~55 GB at Q4).' },
+            { type: 'one-sentence', text: 'Qwen3.8-27B wins for coding on consumer hardware (61.7 SWE-bench Pro, fits 24 GB at Q4); Llama 4 Scout leads on long context and multimodal (10M context, MoE, ~55 GB at Q4).' },
             { type: 'plain-terms', text: 'These are three of the most popular open-source AI model families you can run locally. Qwen3 (by Alibaba) excels at coding, Llama 4 (by Meta) handles very long documents and images, and Mistral (French AI) offers efficient smaller models. All are free to download and run offline.' },
           ],
           items: [
-            '**Coding**: Qwen3.8-27B leads SWE-bench (61.7% real-world, best dense model). For agentic coding: Mistral Devstral Small 24B. For IDE autocomplete: Mistral Codestral 22B.',
+            '**Coding**: Qwen3.8-27B leads SWE-bench (61.7% real-world, best dense model). For agentic coding: Mistral Devstral Small 2. For IDE autocomplete: Mistral Codestral 22B.',
             '**General reasoning**: Llama 3.3 70B and Qwen3 72B remain nearly tied; Llama 3.x is stronger in English, Qwen in multilingual.',
             '**Efficiency (quality per GB of RAM)**: Mistral Small 3.1 24B delivers near-70B quality at 14 GB RAM -- unchanged since April.',
             '**Languages beyond English**: Qwen3 supports 29 languages natively; Llama and Mistral are primarily English-optimized.',
@@ -143,7 +143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           rows: [
             { 'Family': 'Qwen3', 'Developer': 'Alibaba', 'Current Releases': 'Qwen3 (April 2026), Qwen 3.5 (multimodal), Qwen3.8-27B (SWE-bench 61.7%)', 'Licence': 'Apache 2.0 (most sizes)' },
             { 'Family': 'Llama 4', 'Developer': 'Meta', 'Current Releases': 'Scout (17B active/109B MoE, 16 experts, 10M ctx, multimodal, ~55 GB VRAM Q4), Maverick (17B active/400B MoE), Legacy: 3.3 70B', 'Licence': 'Llama Community (custom)' },
-            { 'Family': 'Mistral', 'Developer': 'Mistral AI', 'Current Releases': 'Small 3.1 (24B), Devstral Small 24B (agentic), Codestral 22B (FIM/IDE)', 'Licence': 'Apache 2.0 (most sizes)' },
+            { 'Family': 'Mistral', 'Developer': 'Mistral AI', 'Current Releases': 'Small 3.1 (24B), Devstral Small 2 (agentic), Codestral 22B (FIM/IDE)', 'Licence': 'Apache 2.0 (most sizes)' },
           ],
           columns: ['Family', 'Developer', 'Current Releases', 'Licence'],
           content: 'Previous generation models (Qwen3, Llama 3.3) remain available on Ollama and are still widely used. This comparison focuses on current-generation models. Ready to run one? [Full Qwen local setup guide →](/local-llms/run-qwen-locally-guide-2026)',
@@ -152,25 +152,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'benchmark-comparison',
           title: 'How Do These Models Compare on Benchmarks?',
           rows: [
-            { 'Model': 'Qwen3.8-27B', 'MMLU': '—', 'SWE-bench': '61.7%', 'MATH': '—', 'RAM (Q4_K_M)': '24 GB' },
+            { 'Model': 'Qwen3.8-27B', 'MMLU': '—', 'SWE-bench': '61.7 (Pro)', 'MATH': '—', 'RAM (Q4_K_M)': '18 GB (24 GB card)' },
             { 'Model': 'Qwen3 72B', 'MMLU': '~85%', 'SWE-bench': '—', 'MATH': '~84%', 'RAM (Q4_K_M)': '43 GB' },
             { 'Model': 'Llama 4 Scout 17B (MoE)', 'MMLU': '—', 'SWE-bench': '—', 'MATH': '—', 'RAM (Q4_K_M)': '~55 GB' },
             { 'Model': 'Llama 3.3 70B (legacy)', 'MMLU': '82%', 'SWE-bench': '—', 'MATH': '77%', 'RAM (Q4_K_M)': '40 GB' },
             { 'Model': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'SWE-bench': '—', 'MATH': '65%', 'RAM (Q4_K_M)': '14 GB' },
-            { 'Model': 'Devstral Small 24B', 'MMLU': '—', 'SWE-bench': 'High (agentic)', 'MATH': '—', 'RAM (Q4_K_M)': '16 GB' },
+            { 'Model': 'Devstral Small 2', 'MMLU': '—', 'SWE-bench': '65.8% (Verified)', 'MATH': '—', 'RAM (Q4_K_M)': '15 GB' },
             { 'Model': 'Qwen3 8B', 'MMLU': '~75%', 'SWE-bench': '—', 'MATH': '~55%', 'RAM (Q4_K_M)': '5 GB' },
             { 'Model': 'Mistral Small v0.3', 'MMLU': '64%', 'SWE-bench': '—', 'MATH': '28%', 'RAM (Q4_K_M)': '4.5 GB' },
           ],
           columns: ['Model', 'MMLU', 'SWE-bench', 'MATH', 'RAM (Q4_K_M)'],
           image: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-en.webp',
-          imageCaption: 'Benchmark comparison (June 2026): Qwen3.8-27B (61.7% SWE-bench) leads dense coding and fits 24 GB at Q4. SWE-bench (real-world multi-file coding) is now more relevant than HumanEval for evaluating coding models. Llama 4 Scout uses a 16-expert MoE architecture (17B active / 109B total) but needs ~55 GB VRAM at Q4.',
+          imageCaption: 'Benchmark comparison: Qwen3.8-27B (61.7 SWE-bench Pro) leads dense coding and fits 24 GB at Q4. SWE-bench (real-world multi-file coding) is now more relevant than HumanEval for evaluating coding models. Llama 4 Scout uses a 16-expert MoE architecture (17B active / 109B total) but needs ~55 GB VRAM at Q4.',
           content: '**SWE-bench (real-world GitHub issue resolution) is the primary 2026 coding benchmark** for practical coding evaluation. It tests multi-file changes, codebase understanding, and test writing. HumanEval (single-function Python) remains useful for comparison but is secondary. MMLU and MATH evaluate general knowledge and reasoning. Llama 4 Scout benchmarks are limited due to recent release and MoE complexity. Dashes indicate benchmarks not yet published or not applicable.',
         },
         qwen: {
           id: 'qwen3',
           title: 'Which Tasks Does Qwen3 / Qwen3.8-27B Excel At?',
           content: [
-            '**Qwen3 (April 2026) and Qwen3.8-27B (August 2026) from Alibaba lead on coding benchmarks.** Qwen3.8-27B scores 61.7% SWE-bench Pro and 89.2% GPQA Diamond — the best dense coding model available, and unlike the earlier Qwen 3.6 27B it superseded, it is a native vision-language model (understands images and video, not text-only). Qwen3 72B continues to lead on MMLU at ~85%. The Qwen3 family includes both dense models and MoE variants (35B-A3B).',
+            '**Qwen3 (April 2026) and Qwen3.8-27B (August 2026) from Alibaba lead on coding benchmarks.** Qwen3.8-27B scores 61.7 SWE-bench Pro and 89.2% GPQA Diamond — the best dense coding model available, and unlike the earlier Qwen 3.6 27B it superseded, it is a native vision-language model (understands images and video, not text-only). Qwen3 72B continues to lead on MMLU at ~85%. The Qwen3 family includes both dense models and MoE variants (35B-A3B).',
             '**Strengths**: [coding](/local-llms/best-local-llms-for-coding) (Python, JavaScript, SQL, SWE-bench leading), mathematical reasoning (84% MATH at 72B), 29-language native support, JSON mode, function calling, 128K context window across all sizes.',
             '**Weaknesses**: English instruction-following style can feel less natural than Llama or Mistral; some users report less fluent creative writing in English. The Alibaba origin raises data-handling concerns for some enterprise users despite open weights.',
           ],
@@ -190,7 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'mistral',
           title: 'What\'s Mistral\'s Biggest Advantage?',
           content: [
-            '**Mistral AI produces the most parameter-efficient models in this comparison and now offers specialized variants.** Mistral Small 3.1 at 24B delivers benchmark scores close to the 70B class while requiring only 14 GB RAM -- the best quality-per-RAM ratio. Devstral Small 24B (Mistral AI, 2026) is purpose-built for agentic coding — multi-file edits, tool calling, and debugging loops. Codestral 22B is Mistral\'s FIM-optimized model for IDE autocomplete — the recommended model for Continue.dev and Cursor integrations.',
+            '**Mistral AI produces the most parameter-efficient models in this comparison and now offers specialized variants.** Mistral Small 3.1 at 24B delivers benchmark scores close to the 70B class while requiring only 14 GB RAM -- the best quality-per-RAM ratio. Devstral Small 2 (Mistral AI, 2026) is purpose-built for agentic coding — multi-file edits, tool calling, and debugging loops. Codestral 22B is Mistral\'s FIM-optimized model for IDE autocomplete — the recommended model for Continue.dev and Cursor integrations.',
             '**Strengths**: best quality-to-RAM ratio (Small 3.1), Devstral for agentic coding, Codestral for IDE/FIM, strong function calling and tool use, clean Apache 2.0 licence on key models, European provenance (France) for EU AI Act compliance.',
             '**Weaknesses**: Mistral Small v0.3 is now outperformed on benchmarks by Qwen3 8B and Llama 3.1 8B; fewer size options at the frontier than Qwen or Llama (though specialization partially offsets this).',
           ],
@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'which-family-wins-by-task',
           title: 'Which Model Family Wins by Task?',
           rows: [
-            { 'Task': 'Python / JavaScript coding (generation)', 'Winner': 'Qwen3.8-27B', 'Why': '61.7% SWE-bench — best dense coding model' },
+            { 'Task': 'Python / JavaScript coding (generation)', 'Winner': 'Qwen3.8-27B', 'Why': '61.7 SWE-bench Pro — best dense coding model' },
             { 'Task': 'Agentic coding (multi-file, debugging)', 'Winner': 'Mistral (Devstral)', 'Why': 'Purpose-built for agentic workflows' },
             { 'Task': 'IDE autocomplete (FIM)', 'Winner': 'Mistral (Codestral)', 'Why': 'FIM-optimized, Continue.dev/Cursor support' },
             { 'Task': 'General Q&A (English)', 'Winner': 'Llama 3.3 / Qwen3 (tied)', 'Why': 'Both score 82-85% MMLU at 70B' },
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Task', 'Winner', 'Why'],
           image: '/images/qwen-vs-llama-vs-mistral-task-winners-en.svg',
-          imageCaption: 'Task winner matrix (May 2026): Qwen3.8-27B wins dense coding (61.7% SWE-bench); Devstral wins agentic; Codestral wins IDE autocomplete; Llama 4 Scout dominates long-context; Mistral Small 3.1 best quality-per-GB.',
+          imageCaption: 'Task winner matrix: Qwen3.8-27B wins dense coding (61.7 SWE-bench Pro); Devstral wins agentic; Codestral wins IDE autocomplete; Llama 4 Scout dominates long-context; Mistral Small 3.1 best quality-per-GB.',
           content: [
             'Model choice is step one; prompt design is step two. The same prompt can produce vastly different results across Qwen, Llama, and Mistral. For systematic techniques to get consistent results from any model family, see the [prompt engineering guide](https://www.promptquorum.com/prompt-engineering).',
           ],
@@ -240,7 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**3B-4B class**: Qwen3 3B and Phi-4 Mini 3.8B outperform Llama 4 3B on coding and math. For general English use, Llama 4 3B is more reliable.',
             '**7B-8B class**: Qwen3 8B (~5 GB) and Llama 3.1 8B (~5.5 GB) both significantly outperform Mistral Small v0.3. Qwen3 8B leads on [coding](/local-llms/best-local-llms-for-coding); Llama 3.1 8B leads on English instruction-following.',
-            '**14B-24B class**: Qwen3 14B and Mistral Small 3.1 24B are the primary options. Mistral Small 3.1 is stronger overall despite requiring more RAM. Devstral Small 24B is the best choice for developers doing agentic coding at this tier.',
+            '**14B-24B class**: Qwen3 14B and Mistral Small 3.1 24B are the primary options. Mistral Small 3.1 is stronger overall despite requiring more RAM. Devstral Small 2 is the best choice for developers doing agentic coding at this tier.',
             '**MoE class (new in 2025-2026)**: Llama 4 Scout (17B active / 109B total, 16 experts) and Qwen3.6-35B-A3B (3B active / 35B total, 73.4 SWE-bench) use Mixture-of-Experts architecture — only a fraction of parameters activate per token. Scout needs ~55 GB VRAM at Q4 (it fits a 24 GB GPU only at 1.78-bit, ~20 tok/s), so it is a long-context / multimodal pick rather than a consumer-VRAM efficiency play; the smaller MoE variants are far more VRAM-friendly. gpt-oss:20b (21B total / 3.6B active MoE) also runs in 16 GB at ~o3-mini level with adjustable reasoning.',
             '**70B-72B class**: Llama 3.3 70B and Qwen3 72B are the best locally-runnable dense models in 2026. Choose Qwen3 72B for coding and multilingual; choose Llama 3.3 70B for English-first general tasks.',
             'Qwen, Llama, and Mistral cover the open-source landscape. For a comparison that includes commercial alternatives — GPT-5.6, Claude Opus 5, and Gemini 3.5 — and when to choose proprietary over open-source, see [how to pick the right AI model](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
@@ -262,13 +262,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Mistral Small 24B** delivers the highest absolute benchmarks of the three but requires 14 GB RAM. Best for 16 GB+ machines where quality matters more than headroom.',
             '**Qwen3 14B** is the strongest coding model in this legacy tier, scoring 71% HumanEval at 8 GB RAM. Best for developers on 12-16 GB RAM machines who prioritize code generation.',
             '**Llama 3.1 8B** has the broadest ecosystem support — most fine-tunes, most tutorials, most community help. Best for first-time users or teams that need broad community resources.',
-            '**When to upgrade Mistral Small 24B → Mistral Small 3.1 24B**: if you need agentic coding (use Devstral Small 24B), IDE autocomplete (use Codestral 22B), or incremental quality improvements at same RAM footprint.',
-            '**When to upgrade Qwen3 14B → Qwen3 14B or Qwen3.8-27B**: if you need SWE-bench performance (Qwen3.8-27B scores 61.7%, the best dense coding model in 2026), already on 16 GB RAM, or need 29-language native support (Qwen 3 expanded multilingual coverage).',
+            '**When to upgrade Mistral Small 24B → Mistral Small 3.1 24B**: if you need agentic coding (use Devstral Small 2), IDE autocomplete (use Codestral 22B), or incremental quality improvements at same RAM footprint.',
+            '**When to upgrade Qwen3 14B → Qwen3.8-27B**: if you need SWE-bench performance (Qwen3.8-27B scores 61.7%, the best dense coding model in 2026), already on 16 GB RAM, or need 29-language native support (Qwen 3 expanded multilingual coverage).',
             '**When to upgrade Llama 3.1 8B → Llama 4 Scout**: only if you have ~55 GB+ VRAM at Q4 (Scout\'s 16-expert MoE activates 17B/109B params but needs ~55 GB at Q4; it fits a 24 GB GPU only at 1.78-bit, ~20 tok/s) and you need its 10M-token context (vs Llama 3.3\'s 128K) or multimodal input. On a single 24 GB consumer GPU, Qwen3.8-27B (fits 24 GB at Q4) is the better upgrade.',
             '**Stay on legacy models if**: your fine-tunes are built on Llama 3.1 8B or Qwen 3 (migration cost > benefit), production stability matters more than benchmarks (legacy models are battle-tested), or your workload doesn\'t require the new capabilities (general chat, summarization, basic Q&A).',
             '**Quick decision matrix for legacy users**:',
             '• **Have 8 GB RAM, doing general chat**: Stay on Llama 3.1 8B or Mistral Small v0.3.',
-            '• **Have 12-16 GB RAM, doing coding**: Upgrade Qwen3 14B → Qwen3 14B or Qwen3.8-27B.',
+            '• **Have 12-16 GB RAM, doing coding**: Stay on Qwen3 14B or step up to Devstral Small 2 (15 GB); Qwen3.8-27B needs a 24 GB card.',
             '• **Have 16+ GB RAM, want best quality**: Upgrade Mistral 24B → Mistral Small 3.1 24B (general) or Devstral 24B (agentic coding).',
             '• **Have 24 GB VRAM**: Use Qwen3.8-27B (fits 24 GB at Q4) for the best overall on consumer hardware. Reserve Llama 4 Scout (MoE, 10M context, ~55 GB at Q4) for multi-GPU or workstation rigs that need its long context or multimodal input.',
           ],
@@ -277,9 +277,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'regional-context',
           title: 'Regional Context: Which Family for EU, Japan, China',
           content: [
-            '**EU and GDPR Compliance**: All three model families (Qwen3, Llama 3.x/4, Mistral) run fully locally with zero external data transmission, ensuring GDPR compliance. Mistral (French-origin, Mistral AI) has the strongest EU compliance posture. Devstral Small 24B and Codestral 22B are French-origin (Mistral AI), Apache 2.0 — the strongest EU-origin coding models available. Both Qwen3 (Apache 2.0) and Llama 3.x/4 work equally well under EU AI Act transparency and open-source auditability requirements. Qwen3 natively supports German, French, and other EU languages without quality degradation. EU AI Act August 2026 deadline impacts classification of these model tiers.',
+            '**EU and GDPR Compliance**: All three model families (Qwen3, Llama 3.x/4, Mistral) run fully locally with zero external data transmission, ensuring GDPR compliance. Mistral (French-origin, Mistral AI) has the strongest EU compliance posture. Devstral Small 2 and Codestral 22B are French-origin (Mistral AI), Apache 2.0 — the strongest EU-origin coding models available. Both Qwen3 (Apache 2.0) and Llama 3.x/4 work equally well under EU AI Act transparency and open-source auditability requirements. Qwen3 natively supports German, French, and other EU languages without quality degradation. Check the EU AI Act obligations that apply to your deployment before commercial use.',
             '**Japan and METI Compliance**: Qwen3 and Llama 3.x/4 both align with Japan\'s METI (Ministry of Economy, Trade and Industry) local AI governance guidelines. No special reporting required if deployed on private infrastructure within Japanese corporate networks. Qwen3 benefits from strong Japanese language support (native tokenization) among its 29 languages, making it preferred for Japanese-language workloads. Mistral is also compliant but less commonly documented in Japanese AI governance contexts. Llama 4 Scout\'s MoE efficiency appeals to hardware-constrained Japanese enterprises.',
-            '**China and CAC Requirements**: Qwen3 (Alibaba, domestic) is strongly preferred for CAC (Cyberspace Administration of China) compliance. Qwen3 is natively optimized for Chinese tokenization with no degradation across its 29-language support — a critical advantage for Mandarin and dialect support. Kimi K2.6 (Moonshot AI, 1T total / 32B active MoE, Modified MIT license) is also available for Chinese enterprise coding — frontier performance (58.6 SWE-Bench Pro), Modified MIT license. Llama and Mistral are acceptable if deployed on private servers within Chinese territory, but cloud API calls incur stricter CAC scrutiny and data residency requirements. For content moderation compliance, Qwen3\'s Chinese training heritage ensures alignment with local content policies.',
+            '**China and CAC Requirements**: Qwen3 (Alibaba, domestic) is strongly preferred for CAC (Cyberspace Administration of China) compliance. Qwen3 is natively optimized for Chinese tokenization with no degradation across its 29-language support — a critical advantage for Mandarin and dialect support. Kimi K2.6 (Moonshot AI, 1T total / 32B active MoE, Modified MIT license, 58.6 SWE-Bench Pro as reported by Moonshot) is also Chinese-origin, but Ollama lists it only as a cloud tag and local runs need server-class hardware (300+ GB). Llama and Mistral are acceptable if deployed on private servers within Chinese territory, but cloud API calls incur stricter CAC scrutiny and data residency requirements. For content moderation compliance, Qwen3\'s Chinese training heritage ensures alignment with local content policies.',
           ],
         },
         commonMistakes: {
@@ -288,7 +288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             'Comparing models at different parameter counts -- Qwen 32B vs Llama 70B is not an apples-to-apples test.',
             'Misreading MoE VRAM. Llama 4 Scout has 109B total parameters but only 17B active per token — yet at Q4 it still needs ~55 GB VRAM (all experts must be resident), not the ~14 GB a 17B dense model would use. It does not fit a 24 GB consumer GPU at normal quants (only at 1.78-bit, ~20 tok/s). Compare by actual VRAM footprint and benchmark, not active-parameter count.',
-            'Using Qwen3 when Qwen3 is available. Qwen3 8B improves over Qwen3 8B on coding benchmarks. Unless you have a specific fine-tune built on Qwen3, upgrade to Qwen3.',
+            'Staying on older Qwen3 sizes when your hardware can run Qwen3.8-27B. Qwen3.8 currently ships only as a 27B model (18 GB on Ollama), so Qwen3 8B and 14B remain right for smaller machines; with a 24 GB card or 32 GB Mac, move to Qwen3.8-27B unless a fine-tune ties you to Qwen3.',
             'Not considering task-specific Mistral models. Mistral now has three distinct model lines: Small 3.1 (general), Devstral (agentic coding), Codestral (IDE autocomplete). Picking "Mistral" without specifying which model for which task wastes the family\'s main advantage — specialization.',
             'Ignoring multilingual benchmarks when choosing between models if your workload is multilingual.',
             'Mistral Small 3.1 overlooked: Many users skip Small 3.1 (24B) thinking it requires 30+ GB RAM. It fits at Q5 quantization with 22 GB, outperforming Llama 3.1 8B on many tasks.',
@@ -315,16 +315,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
-            { q: 'Is Qwen or Llama better for my use case?', a: 'Best overall on consumer hardware: Qwen3.8-27B (61.7% SWE-bench, fits 24 GB at Q4). For coding and multilingual tasks: Qwen3.8-27B or Qwen3 8B. For long-context (10M tokens) or multimodal input: Llama 4 Scout (needs ~55 GB VRAM at Q4). For maximum quality per GB of RAM: Mistral Small 3.1. Test with sample prompts from your actual workload.' },
+            { q: 'Is Qwen or Llama better for my use case?', a: 'Best overall on consumer hardware: Qwen3.8-27B (61.7 SWE-bench Pro, fits 24 GB at Q4). For coding and multilingual tasks: Qwen3.8-27B or Qwen3 8B. For long-context (10M tokens) or multimodal input: Llama 4 Scout (needs ~55 GB VRAM at Q4). For maximum quality per GB of RAM: Mistral Small 3.1. Test with sample prompts from your actual workload.' },
             { q: 'What is Llama 4 Scout and how is it different from Llama 3.3?', a: 'Llama 4 Scout uses a 16-expert Mixture-of-Experts (MoE) architecture — 17B parameters are active per token out of 109B total, and it is multimodal. All experts must stay resident, so at Q4 it needs ~55 GB VRAM (not the ~14 GB a 17B dense model would use) and does not fit a 24 GB consumer GPU at normal quants — only at 1.78-bit (~20 tok/s). Its draw is the 10M token context window — the largest of any locally-runnable model. Llama 3.3 70B is a dense model requiring 40 GB VRAM. On a single 24 GB GPU, Qwen3.8-27B is the better overall pick; choose Scout when you need its long context or multimodal input and have the VRAM.' },
-            { q: 'Should I use Qwen3 or Qwen3?', a: 'Use Qwen3 for new projects. Qwen3 8B improves over Qwen3 8B on coding and reasoning benchmarks. Qwen3.8-27B (61.7% SWE-bench) is the best dense coding model available. The only reason to stay on Qwen3 is if you have an existing fine-tune or workflow that depends on its specific behavior. For fresh installations, always start with Qwen3.' },
+            { q: 'Should I stay on Qwen3 or move to Qwen3.8?', a: 'Move to Qwen3.8-27B (61.7 SWE-bench Pro as reported by Qwen) if you have a 24 GB GPU or a 32 GB Mac; it is the best dense coding model in this comparison. Qwen3.8 currently ships only as a 27B model on Ollama (18 GB), so Qwen3 8B and 14B remain the right Qwen picks for 8–16 GB machines. Stay on Qwen3 only if an existing fine-tune or workflow depends on its specific behavior.' },
             { q: 'How much faster is Mistral on consumer hardware?', a: 'Mistral Small 3.1 (24B) runs 1.5-2× faster than Llama 3.1 8B on the same hardware. For throughput-sensitive workloads, Mistral Small is fastest at 40-60 tok/sec on a single GPU. Codestral 22B is optimized for FIM (fill-in-the-middle) in IDE autocomplete workflows.' },
             { q: 'Can all three run on 8 GB VRAM?', a: 'Yes, all can run 7B models at Q4 quantization on 8 GB. Qwen3 8B uses ~5 GB, Llama 3.1 8B uses ~5.5 GB, Mistral Small uses ~4.5 GB at Q4_K_M. Llama 4 Scout (MoE) does NOT fit 8 GB — it needs ~55 GB VRAM at Q4.' },
             { q: 'Do I need an RTX 5090 to run these?', a: 'No, not for the consumer picks. RTX 5070 (12 GB) runs 7B models comfortably. A 24 GB GPU runs Qwen3.8-27B at Q4 (the best overall on consumer hardware). Llama 4 Scout needs ~55 GB at Q4 — a multi-GPU or workstation rig, not a single consumer card. RTX 5090 is overkill unless running 70B+ dense models.' },
             { q: 'What quantization should I use?', a: 'Start with Q4_K_M (4-bit) -- good balance of quality and speed on all hardware. Use Q5_K_M if you have VRAM headroom and need higher quality. Q3_K_S for constrained devices.' },
-            { q: 'Which is best for coding?', a: 'Qwen3 8B (~76% HumanEval) for 8GB tier. Qwen3.8-27B (61.7% SWE-bench) for best dense coding. Devstral Small 24B for agentic multi-file workflows. Codestral 22B for IDE autocomplete (FIM).' },
-            { q: 'Which model should I use on 16 GB RAM?', a: 'Mistral Small 3.1 24B at Q4_K_M (14 GB) -- best overall quality at 16 GB RAM (79% MMLU). Alternatively: Qwen3 14B at Q4_K_M (9 GB) for coding with headroom to spare. Qwen3.8-27B (best dense coding, 61.7% SWE-bench) needs ~24 GB and does not fit 16 GB. Avoid Llama 3.3 70B on 16 GB -- it requires 40 GB.' },
+            { q: 'Which is best for coding?', a: 'Qwen3 8B (~76% HumanEval) for 8GB tier. Qwen3.8-27B (61.7 SWE-bench Pro) for best dense coding. Devstral Small 2 for agentic multi-file workflows. Codestral 22B for IDE autocomplete (FIM).' },
+            { q: 'Which model should I use on 16 GB RAM?', a: 'Mistral Small 3.1 24B at Q4_K_M (14 GB) -- best overall quality at 16 GB RAM (79% MMLU). Alternatively: Qwen3 14B at Q4_K_M (9 GB) for coding with headroom to spare. Qwen3.8-27B (best dense coding, 61.7 SWE-bench Pro) needs ~24 GB and does not fit 16 GB. Avoid Llama 3.3 70B on 16 GB -- it requires 40 GB.' },
             { q: 'Is Qwen better than Llama for reasoning?', a: 'Qwen3 72B scores 84% on MATH vs 77% for Llama 3.3 70B -- a 7-point advantage. For MMLU: Qwen3 72B 85% vs Llama 3.3 70B 82% -- very close. Qwen wins reasoning; Llama 3.3 wins English instruction-following.' },
+            { q: 'What changed for Qwen, Llama and Mistral since September?', a: 'Qwen3.8 currently ships on Ollama only as a 27B model (18 GB at Q4_K_M, 256K context), so Qwen3 8B and 14B remain the smaller Qwen options. Devstral Small 2 (Mistral AI, 24B, 15 GB, 65.8% SWE-bench Verified as reported by Mistral, Apache 2.0) is the current Devstral tag, and Mistral Large 4 (1.05T total / 52B active parameters, per its Ollama listing) arrived as a data-centre-scale model that does not fit consumer hardware. Llama 4 Scout (about 55 GB at Q4) remains the long-context entry in this comparison. The consumer-hardware ranking above is unchanged.' },
           ],
         },
         sources: {
@@ -333,7 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[Qwen Team. (2026). Qwen3 Technical Report.](https://arxiv.org/abs/2505.09388) -- Qwen3 family benchmarks, Qwen3.8-27B SWE-bench (61.7%), MoE variants.',
             '[Meta AI. (2025). Llama 4 Model Card.](https://llama.meta.com/) -- Official benchmark and architecture for Llama 4 Scout/Maverick MoE, 10M context window.',
-            '[Mistral AI. (2026). Devstral Small 24B.](https://mistral.ai/) -- Architecture and benchmarks for agentic coding model.',
+            '[Mistral AI. (2026). Devstral Small 2.](https://mistral.ai/) -- Architecture and benchmarks for agentic coding model.',
             '[Mistral AI. (2025). Codestral.](https://mistral.ai/) -- FIM-optimized coding model for IDE autocomplete.',
             '[Meta AI. (2024). Llama 3.3 Model Card.](https://llama.meta.com/) -- Official benchmark data for Llama 3.3 70B (legacy, still widely used).',
           ],
@@ -342,6 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'update-log',
           title: 'Update Log',
           items: [
+            '**2026-10-17:** Refreshed against current Ollama listings: Devstral Small 2 size and benchmark corrected, Qwen3.8-27B size clarified (18 GB download), removed month stamps, added a FAQ on recent releases.',
             '**2026-05-17:** Added Legacy Benchmark Reference section comparing Mistral Small 24B, Qwen3 14B, and Llama 3.1 8B. Updated title to bridge legacy and current model searches.',
           ],
         },
@@ -350,7 +352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Qwen 3 vs Llama 4 vs Mistral Small 24B: 2026 Benchmark Comparison',
-        'description': 'Full benchmark comparison: Qwen3.8-27B (61.7% SWE-bench, best on 24 GB), Llama 4 Scout (MoE, 10M context, ~55 GB VRAM), Mistral Small 24B + legacy Mistral 24B/Qwen3 14B/Llama 3.1 8B.',
+        'description': 'Full benchmark comparison: Qwen3.8-27B (61.7 SWE-bench Pro, best on 24 GB), Llama 4 Scout (MoE, 10M context, ~55 GB VRAM), Mistral Small 24B + legacy Mistral 24B/Qwen3 14B/Llama 3.1 8B.',
         'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'datePublished': '2026-04-04',
@@ -390,14 +392,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'Model Family Comparison: Qwen3, Llama 4, and Mistral (June 2026)',
+        'name': 'Model Family Comparison: Qwen3, Llama 4, and Mistral',
         'numberOfItems': 10,
         'itemListElement': [
           {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Qwen3.8-27B',
-            'description': 'Best dense model for coding. 61.7% SWE-bench (real-world multi-file), 83% MMLU, 80% MATH, 29 native languages, 16 GB RAM (Q4_K_M).'
+            'description': 'Best dense model for coding. 61.7 SWE-bench Pro (Qwen-reported), 29+ languages, 18 GB download on Ollama (Q4_K_M), 24 GB card recommended.'
           },
           {
             '@type': 'ListItem',
@@ -420,8 +422,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '@type': 'ListItem',
             'position': 5,
-            'name': 'Devstral Small 24B',
-            'description': 'Best for agentic coding workflows. Purpose-built for multi-file editing, tool calling, debugging loops, 16 GB RAM.'
+            'name': 'Devstral Small 2',
+            'description': 'Best for agentic coding workflows. Purpose-built for multi-file editing, tool calling, debugging loops, 15 GB, 65.8% SWE-bench Verified (Mistral-reported).'
           },
           {
             '@type': 'ListItem',
@@ -464,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Is Qwen or Llama better for my use case?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Best overall on consumer hardware: Qwen3.8-27B (61.7% SWE-bench, fits 24 GB at Q4). For coding and multilingual tasks: Qwen3.8-27B or Qwen3 8B. For long-context (10M tokens) or multimodal input: Llama 4 Scout (needs ~55 GB VRAM at Q4). For maximum quality per GB of RAM: Mistral Small 3.1. Test with sample prompts from your actual workload.',
+              'text': 'Best overall on consumer hardware: Qwen3.8-27B (61.7 SWE-bench Pro, fits 24 GB at Q4). For coding and multilingual tasks: Qwen3.8-27B or Qwen3 8B. For long-context (10M tokens) or multimodal input: Llama 4 Scout (needs ~55 GB VRAM at Q4). For maximum quality per GB of RAM: Mistral Small 3.1. Test with sample prompts from your actual workload.',
             },
           },
           {
@@ -477,10 +479,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'Should I use Qwen3 or Qwen3?',
+            'name': 'Should I stay on Qwen3 or move to Qwen3.8?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Use Qwen3 for new projects. Qwen3 8B improves over Qwen3 8B on coding and reasoning benchmarks. Qwen3.8-27B (61.7% SWE-bench) is the best dense coding model available. The only reason to stay on Qwen3 is if you have an existing fine-tune or workflow that depends on its specific behavior. For fresh installations, always start with Qwen3.',
+              'text': 'Move to Qwen3.8-27B (61.7 SWE-bench Pro as reported by Qwen) if you have a 24 GB GPU or a 32 GB Mac; it is the best dense coding model in this comparison. Qwen3.8 currently ships only as a 27B model on Ollama (18 GB), so Qwen3 8B and 14B remain the right Qwen picks for 8–16 GB machines. Stay on Qwen3 only if an existing fine-tune or workflow depends on its specific behavior.',
             },
           },
           {
@@ -520,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Which is best for coding?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 8B (~76% HumanEval) for 8GB tier. Qwen3.8-27B (61.7% SWE-bench) for best dense coding. Devstral Small 24B for agentic multi-file workflows. Codestral 22B for IDE autocomplete (FIM).',
+              'text': 'Qwen3 8B (~76% HumanEval) for 8GB tier. Qwen3.8-27B (61.7 SWE-bench Pro) for best dense coding. Devstral Small 2 for agentic multi-file workflows. Codestral 22B for IDE autocomplete (FIM).',
             },
           },
           {
@@ -528,7 +530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Which model should I use on 16 GB RAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mistral Small 3.1 24B at Q4_K_M (14 GB) -- best overall quality at 16 GB RAM (79% MMLU). Alternatively: Qwen3 14B at Q4_K_M (9 GB) for coding with headroom to spare. Qwen3.8-27B (best dense coding, 61.7% SWE-bench) needs ~24 GB and does not fit 16 GB. Avoid Llama 3.3 70B on 16 GB -- it requires 40 GB.',
+              'text': 'Mistral Small 3.1 24B at Q4_K_M (14 GB) -- best overall quality at 16 GB RAM (79% MMLU). Alternatively: Qwen3 14B at Q4_K_M (9 GB) for coding with headroom to spare. Qwen3.8-27B (best dense coding, 61.7 SWE-bench Pro) needs ~24 GB and does not fit 16 GB. Avoid Llama 3.3 70B on 16 GB -- it requires 40 GB.',
             },
           },
           {
@@ -539,10 +541,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'text': 'Qwen3 72B scores 84% on MATH vs 77% for Llama 3.3 70B -- a 7-point advantage. For MMLU: Qwen3 72B 85% vs Llama 3.3 70B 82% -- very close. Qwen wins reasoning; Llama 3.3 wins English instruction-following.',
             },
           },
+          {
+            '@type': 'Question',
+            'name': 'What changed for Qwen, Llama and Mistral since September?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3.8 currently ships on Ollama only as a 27B model (18 GB at Q4_K_M, 256K context), so Qwen3 8B and 14B remain the smaller Qwen options. Devstral Small 2 (Mistral AI, 24B, 15 GB, 65.8% SWE-bench Verified as reported by Mistral, Apache 2.0) is the current Devstral tag, and Mistral Large 4 (1.05T total / 52B active parameters, per its Ollama listing) arrived as a data-centre-scale model that does not fit consumer hardware. Llama 4 Scout (about 55 GB at Q4) remains the long-context entry in this comparison. The consumer-hardware ranking above is unchanged.',
+            },
+          },
         ],
       },
       gammaEmbedUrl: '/presentations/qwen-vs-llama-vs-mistral-static.html',
-      gammaDescription: 'The slide deck below covers: Qwen3.8-27B vs Llama 4 Scout vs Mistral benchmark comparison (June 2026 — SWE-bench, MoE VRAM realities), which model wins by task (best overall on 24 GB, coding, multilingual, long-context, RAM efficiency), size-by-size comparison including MoE tier, Devstral for agentic coding, Codestral for IDE, and Ollama quick-start commands. Download the PDF as a local LLM model selection reference card.',
+      gammaDescription: 'The slide deck below covers: Qwen3.8-27B vs Llama 4 Scout vs Mistral benchmark comparison (SWE-bench, MoE VRAM realities), which model wins by task (best overall on 24 GB, coding, multilingual, long-context, RAM efficiency), size-by-size comparison including MoE tier, Devstral for agentic coding, Codestral for IDE, and Ollama quick-start commands. Download the PDF as a local LLM model selection reference card.',
     },
     es: {
       freshness_tier: 'monthly',
@@ -550,12 +560,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral: Comparativa de LLM Local 2026',
       seoTitle: 'Qwen3.8-27B vs Llama 4 vs Mistral 2026: Gana Qwen',
       intro: 'Qwen3.8-27B es el mejor en general en hardware de consumo: 61,7% en SWE-bench (mejor modelo denso), cabe en 24 GB a Q4. Llama 4 Scout 17B (MoE, contexto de 10M, multimodal) es la opción para contexto largo / multimodal, pero requiere ~55 GB de VRAM a Q4; Mistral Small 3.1 24B ofrece la mejor relación calidad-RAM a 14 GB. Qwen3 destaca en programación y 29 idiomas; Llama 4 Scout lidera en longitud de contexto (10M tokens) y multimodal; Mistral maximiza la calidad en hardware limitado. Los tres se ejecutan en hardware de consumo mediante Ollama. Actualizado: junio de 2026.',
-      metaDescription: 'Qwen3.8-27B gana en código: 61,7% SWE-bench, cabe en 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU en 14 GB. Qué modelo gana.',
+      metaDescription: 'Qwen3.8-27B gana en código: 61,7 SWE-bench Pro, cabe en 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU en 14 GB. Qué modelo gana.',
       heroImage: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-es.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
-      next_refresh_due: '2026-09-28',
-      leadAnswerBlock: '**Qwen3.8-27B es el mejor en general en hardware de consumo: líder en programación densa (61,7% SWE-bench), cabe en 24 GB a Q4. Llama 4 Scout es la opción para contexto largo / multimodal (17B activo, MoE, contexto 10M) pero requiere ~55 GB de VRAM a Q4. Mistral Small 3.1 24B ofrece la mejor calidad por VRAM a 14 GB.**',
+      dateModified: '2026-10-17',
+      next_refresh_due: '2026-11-16',
+      leadAnswerBlock: '**Qwen3.8-27B es el mejor en general en hardware de consumo: líder en programación densa (61,7 SWE-bench Pro), cabe en 24 GB a Q4. Llama 4 Scout es la opción para contexto largo / multimodal (17B activo, MoE, contexto 10M) pero requiere ~55 GB de VRAM a Q4. Mistral Small 3.1 24B ofrece la mejor calidad por VRAM a 14 GB.**',
       nextStep: {
         text: '¿Ya elegiste tu modelo? Aquí tienes cómo ejecutar Qwen en local, paso a paso.',
         label: 'Ejecutar Qwen en local — Guía de configuración completa →',
@@ -564,63 +574,63 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickAnswerTop: {
         es: {
           question: 'Qwen vs Llama vs Mistral — which local LLM should I use in 2026?',
-          answer: 'June 2026: Qwen3.8-27B is the best overall on consumer hardware (61.7% SWE-bench, fits 24 GB at Q4). Llama 4 Scout is the long-context / multimodal pick (17B active, 10M context) but needs ~55 GB VRAM at Q4. Llama 3.3 70B remains strong for English reasoning. Mistral Small 3.1 best for quality per RAM. All run via Ollama.',
+          answer: 'Qwen3.8-27B is the best overall on consumer hardware (61.7 SWE-bench Pro, fits 24 GB at Q4). Llama 4 Scout is the long-context / multimodal pick (17B active, 10M context) but needs ~55 GB VRAM at Q4. Llama 3.3 70B remains strong for English reasoning. Mistral Small 3.1 best for quality per RAM. All run via Ollama.',
           bullets: [
-            'Qwen3.8-27B — best overall on consumer hardware, best dense coding (61.7% SWE-bench), fits 24 GB at Q4',
+            'Qwen3.8-27B — best overall on consumer hardware, best dense coding (61.7 SWE-bench Pro), fits 24 GB at Q4',
             'Llama 4 Scout 17B (MoE) — long-context (10M tokens) & multimodal pick, ~55 GB VRAM at Q4',
             'Mistral Small 3.1 24B — best quality-per-RAM ratio (14 GB), 79% MMLU',
             'For coding: Qwen3.8-27B or Devstral. For long-context/multimodal: Scout. For RAM: Mistral.',
             'All via Ollama: ollama pull qwen3 / llama4 / mistral',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-10-17',
         },
         de: {
-          question: 'Qwen vs. Llama vs. Mistral — welches lokale LLM fuer Juni 2026?',
-          answer: 'Juni 2026: Qwen3.8-27B ist insgesamt am besten auf Consumer-Hardware (61,7% SWE-bench, passt in 24 GB bei Q4). Llama 4 Scout ist die Wahl fuer langen Kontext und Multimodalitaet (17B aktiv, 10M Token), benoetigt aber ~55 GB VRAM bei Q4. Mistral Small 3.1 ist am besten fuer Qualitaet pro RAM.',
+          question: 'Qwen vs. Llama vs. Mistral — welches lokale LLM fuer 2026?',
+          answer: 'Qwen3.8-27B ist insgesamt am besten auf Consumer-Hardware (61,7 SWE-bench Pro, passt in 24 GB bei Q4). Llama 4 Scout ist die Wahl fuer langen Kontext und Multimodalitaet (17B aktiv, 10M Token), benoetigt aber ~55 GB VRAM bei Q4. Mistral Small 3.1 ist am besten fuer Qualitaet pro RAM.',
           bullets: [
-            'Qwen3.8-27B — insgesamt am besten auf Consumer-Hardware, bestes dichtes Coding (61,7% SWE-bench), passt in 24 GB bei Q4',
+            'Qwen3.8-27B — insgesamt am besten auf Consumer-Hardware, bestes dichtes Coding (61,7 SWE-bench Pro), passt in 24 GB bei Q4',
             'Llama 4 Scout 17B (MoE) — Wahl fuer langen Kontext (10M Token) & multimodal, ~55 GB VRAM bei Q4',
             'Mistral Small 3.1 24B — beste Qualitaet pro GB RAM (14 GB), 79% MMLU',
             'Fuer Coding: Qwen3.8-27B oder Devstral. Fuer langen Kontext/multimodal: Scout. Fuer RAM: Mistral.',
             'Alle via Ollama: ollama pull qwen3 / llama4 / mistral',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-10-17',
         },
         fr: {
-          question: 'Qwen vs Llama vs Mistral — quel LLM local choisir en juin 2026 ?',
-          answer: 'Juin 2026: Qwen3.8-27B est le meilleur globalement sur matériel grand public (61,7% SWE-bench, tient dans 24 Go en Q4). Llama 4 Scout est le choix contexte long / multimodal (17B actif, 10M tokens) mais nécessite ~55 Go VRAM en Q4. Mistral Small 3.1 meilleur pour qualite par GB RAM.',
+          question: 'Qwen vs Llama vs Mistral — quel LLM local choisir en 2026 ?',
+          answer: 'Juin 2026: Qwen3.8-27B est le meilleur globalement sur matériel grand public (61,7 SWE-bench Pro, tient dans 24 Go en Q4). Llama 4 Scout est le choix contexte long / multimodal (17B actif, 10M tokens) mais nécessite ~55 Go VRAM en Q4. Mistral Small 3.1 meilleur pour qualite par GB RAM.',
           bullets: [
-            'Qwen3.8-27B — meilleur globalement sur matériel grand public, meilleur code dense (61,7% SWE-bench), tient dans 24 Go en Q4',
+            'Qwen3.8-27B — meilleur globalement sur matériel grand public, meilleur code dense (61,7 SWE-bench Pro), tient dans 24 Go en Q4',
             'Llama 4 Scout 17B (MoE) — choix contexte long (10M tokens) & multimodal, ~55 Go VRAM en Q4',
             'Mistral Small 3.1 24B — meilleure qualite par Go RAM (14 Go), 79% MMLU',
             'Pour coder: Qwen3.8-27B ou Devstral. Pour contexte long/multimodal: Scout. Pour RAM: Mistral.',
             'Tous sur Ollama: ollama pull qwen3 / llama4 / mistral',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-10-17',
         },
         ja: {
-          question: '2026年6月、Qwen vs Llama vs Mistral — どのローカルLLMを使うべき？',
-          answer: '2026年6月：Qwen3.8-27Bはコンシューマーハードウェアで総合的に最適です（61.7% SWE-bench、Q4で24 GBに収まります）。Llama 4 Scoutは長コンテキスト・マルチモーダル向けの選択肢です（17B有効、10Mトークン）が、Q4では~55 GB VRAMが必要です。Mistral Small 3.1はGB当たりの品質が最高です。',
+          question: '2026年、Qwen vs Llama vs Mistral — どのローカルLLMを使うべき？',
+          answer: 'Qwen3.8-27Bはコンシューマーハードウェアで総合的に最適です（61.7 SWE-bench Pro、Q4で24 GBに収まります）。Llama 4 Scoutは長コンテキスト・マルチモーダル向けの選択肢です（17B有効、10Mトークン）が、Q4では~55 GB VRAMが必要です。Mistral Small 3.1はGB当たりの品質が最高です。',
           bullets: [
-            'Qwen3.8-27B — コンシューマーハードウェアで総合的に最適、最高の密モデルコーディング（61.7% SWE-bench）、Q4で24 GBに収まる',
+            'Qwen3.8-27B — コンシューマーハードウェアで総合的に最適、最高の密モデルコーディング（61.7 SWE-bench Pro）、Q4で24 GBに収まる',
             'Llama 4 Scout 17B（MoE）— 長コンテキスト（10Mトークン）・マルチモーダル向けの選択肢、Q4で~55 GB VRAM',
             'Mistral Small 3.1 24B — GB当たりの品質が最高（14 GB）、79% MMLU',
-            'コーディング：Qwen 3.6またはDevstral。長コンテキスト/マルチモーダル：Scout。RAM：Mistral。',
+            'コーディング：Qwen3.8-27BまたはDevstral。長コンテキスト/マルチモーダル：Scout。RAM：Mistral。',
             'すべてOllama経由：ollama pull qwen3 / llama4 / mistral',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-10-17',
         },
         zh: {
-          question: '2026年6月，Qwen vs Llama vs Mistral — 应该使用哪个本地LLM？',
-          answer: '2026年6月：Qwen3.8-27B在消费级硬件上综合最佳（61.7% SWE-bench，Q4下可装入24 GB）。Llama 4 Scout是长上下文/多模态的选择（17B活跃、10M令牌），但Q4下需要~55 GB显存。Mistral Small 3.1在显存比下质量最佳。',
+          question: '2026年，Qwen vs Llama vs Mistral — 应该使用哪个本地LLM？',
+          answer: 'Qwen3.8-27B在消费级硬件上综合最佳（61.7 SWE-bench Pro，Q4下可装入24 GB）。Llama 4 Scout是长上下文/多模态的选择（17B活跃、10M令牌），但Q4下需要~55 GB显存。Mistral Small 3.1在显存比下质量最佳。',
           bullets: [
-            'Qwen3.8-27B — 消费级硬件上综合最佳，最佳密集模型编程（61.7% SWE-bench），Q4下可装入24 GB',
+            'Qwen3.8-27B — 消费级硬件上综合最佳，最佳密集模型编程（61.7 SWE-bench Pro），Q4下可装入24 GB',
             'Llama 4 Scout 17B（MoE）— 长上下文（10M令牌）与多模态的选择，Q4下~55 GB显存',
             'Mistral Small 3.1 24B — 显存比质量最佳（14 GB），79% MMLU',
-            '编程：Qwen 3.6或Devstral。长上下文/多模态：Scout。显存：Mistral。',
+            '编程：Qwen3.8-27B或Devstral。长上下文/多模态：Scout。显存：Mistral。',
             '全通过Ollama：ollama pull qwen3 / llama4 / mistral',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-10-17',
         },
       },
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
@@ -649,11 +659,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'Qwen3.8-27B gana en programación en hardware de consumo (61,7% SWE-bench, cabe en 24 GB en Q4); Llama 4 Scout lidera en contexto largo y multimodal (10M de contexto, MoE, ~55 GB en Q4).' },
+            { type: 'one-sentence', text: 'Qwen3.8-27B gana en programación en hardware de consumo (61,7 SWE-bench Pro, cabe en 24 GB en Q4); Llama 4 Scout lidera en contexto largo y multimodal (10M de contexto, MoE, ~55 GB en Q4).' },
             { type: 'plain-terms', text: 'Estas son tres de las familias de modelos de IA de código abierto más populares para ejecutar localmente. Qwen3 (de Alibaba) destaca en programación, Llama 4 (de Meta) maneja documentos muy largos e imágenes, y Mistral (IA francesa) ofrece modelos compactos eficientes. Todos son gratuitos y se pueden ejecutar sin conexión.' },
           ],
           items: [
-            '**Programación**: Qwen3.8-27B lidera SWE-bench (61,7% en el mundo real, mejor modelo denso). Para programación agentiva: Mistral Devstral Small 24B. Para autocompletado en IDE: Mistral Codestral 22B.',
+            '**Programación**: Qwen3.8-27B lidera SWE-bench (61,7% en el mundo real, mejor modelo denso). Para programación agentiva: Mistral Devstral Small 2. Para autocompletado en IDE: Mistral Codestral 22B.',
             '**Razonamiento general**: Llama 3.3 70B y Qwen3 72B siguen casi empatados; Llama 3.x es más fuerte en inglés, Qwen en multilingüe.',
             '**Eficiencia (calidad por GB de RAM)**: Mistral Small 3.1 24B ofrece calidad cercana a los 70B con solo 14 GB de RAM -- sin cambios desde abril.',
             '**Idiomas más allá del inglés**: Qwen3 soporta 29 idiomas de forma nativa; Llama y Mistral están principalmente optimizados para inglés.',
@@ -677,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           rows: [
             { 'Familia': 'Qwen3', 'Desarrollador': 'Alibaba', 'Versiones actuales': 'Qwen3 (abril 2026), Qwen 3.5 (multimodal), Qwen3.8-27B (SWE-bench 61,7%)', 'Licencia': 'Apache 2.0 (mayoría de tamaños)' },
             { 'Familia': 'Llama 4', 'Desarrollador': 'Meta', 'Versiones actuales': 'Scout (17B activo/109B MoE, 16 expertos, contexto 10M, multimodal, ~55 GB VRAM Q4), Maverick (17B activo/400B MoE), Legado: 3.3 70B', 'Licencia': 'Llama Community (personalizada)' },
-            { 'Familia': 'Mistral', 'Desarrollador': 'Mistral AI', 'Versiones actuales': 'Small 3.1 (24B), Devstral Small 24B (agentivo), Codestral 22B (FIM/IDE)', 'Licencia': 'Apache 2.0 (mayoría de tamaños)' },
+            { 'Familia': 'Mistral', 'Desarrollador': 'Mistral AI', 'Versiones actuales': 'Small 3.1 (24B), Devstral Small 2 (agentivo), Codestral 22B (FIM/IDE)', 'Licencia': 'Apache 2.0 (mayoría de tamaños)' },
           ],
           columns: ['Familia', 'Desarrollador', 'Versiones actuales', 'Licencia'],
           content: 'Los modelos de generación anterior (Qwen3, Llama 3.3) siguen disponibles en Ollama y se usan ampliamente. Esta comparativa se centra en los modelos de generación actual. ¿Listo para ejecutar uno? [Guía completa de configuración local de Qwen →](/es/local-llms/run-qwen-locally-guide-2026)',
@@ -686,18 +696,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'benchmark-comparison',
           title: '¿Cómo se comparan estos modelos en los benchmarks?',
           rows: [
-            { 'Modelo': 'Qwen3.8-27B', 'MMLU': '—', 'SWE-bench': '61,7%', 'MATH': '—', 'RAM (Q4_K_M)': '24 GB' },
+            { 'Modelo': 'Qwen3.8-27B', 'MMLU': '—', 'SWE-bench': '61,7 (Pro)', 'MATH': '—', 'RAM (Q4_K_M)': '24 GB' },
             { 'Modelo': 'Qwen3 72B', 'MMLU': '~85%', 'SWE-bench': '—', 'MATH': '~84%', 'RAM (Q4_K_M)': '43 GB' },
             { 'Modelo': 'Llama 4 Scout 17B (MoE)', 'MMLU': '—', 'SWE-bench': '—', 'MATH': '—', 'RAM (Q4_K_M)': '~55 GB' },
             { 'Modelo': 'Llama 3.3 70B (legado)', 'MMLU': '82%', 'SWE-bench': '—', 'MATH': '77%', 'RAM (Q4_K_M)': '40 GB' },
             { 'Modelo': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'SWE-bench': '—', 'MATH': '65%', 'RAM (Q4_K_M)': '14 GB' },
-            { 'Modelo': 'Devstral Small 24B', 'MMLU': '—', 'SWE-bench': 'Alto (agentivo)', 'MATH': '—', 'RAM (Q4_K_M)': '16 GB' },
+            { 'Modelo': 'Devstral Small 2', 'MMLU': '—', 'SWE-bench': 'Alto (agentivo)', 'MATH': '—', 'RAM (Q4_K_M)': '15 GB' },
             { 'Modelo': 'Qwen3 8B', 'MMLU': '~75%', 'SWE-bench': '—', 'MATH': '~55%', 'RAM (Q4_K_M)': '5 GB' },
             { 'Modelo': 'Mistral Small v0.3', 'MMLU': '64%', 'SWE-bench': '—', 'MATH': '28%', 'RAM (Q4_K_M)': '4,5 GB' },
           ],
           columns: ['Modelo', 'MMLU', 'SWE-bench', 'MATH', 'RAM (Q4_K_M)'],
           image: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-es.webp',
-          imageCaption: 'Comparativa de benchmarks (junio 2026): Qwen3.8-27B (61,7% SWE-bench) lidera en programación densa y cabe en 24 GB a Q4. SWE-bench (resolución real de incidencias de GitHub en múltiples archivos) es ahora más relevante que HumanEval para evaluar modelos de programación. Llama 4 Scout usa una arquitectura MoE de 16 expertos (17B activo / 109B total) pero requiere ~55 GB de VRAM a Q4.',
+          imageCaption: 'Comparativa de benchmarks (junio 2026): Qwen3.8-27B (61,7 SWE-bench Pro) lidera en programación densa y cabe en 24 GB a Q4. SWE-bench (resolución real de incidencias de GitHub en múltiples archivos) es ahora más relevante que HumanEval para evaluar modelos de programación. Llama 4 Scout usa una arquitectura MoE de 16 expertos (17B activo / 109B total) pero requiere ~55 GB de VRAM a Q4.',
           content: '**SWE-bench (resolución real de incidencias de GitHub) es el benchmark principal de programación de 2026** para evaluación práctica. Prueba cambios en múltiples archivos, comprensión del código base y escritura de tests. HumanEval (función Python de un solo archivo) sigue siendo útil para comparación, pero es secundario. MMLU y MATH evalúan conocimiento general y razonamiento. Los benchmarks de Llama 4 Scout son limitados por su lanzamiento reciente y la complejidad MoE. Los guiones indican benchmarks no publicados aún o no aplicables.',
         },
         qwen: {
@@ -724,7 +734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'mistral',
           title: '¿Cuál es la mayor ventaja de Mistral?',
           content: [
-            '**Mistral AI produce los modelos más eficientes en parámetros de esta comparativa y ahora ofrece variantes especializadas.** Mistral Small 3.1 a 24B ofrece puntuaciones de benchmark cercanas a la clase de 70B requiriendo solo 14 GB de RAM -- la mejor relación calidad-RAM. Devstral Small 24B (Mistral AI, 2026) está diseñado para programación agentiva — ediciones en múltiples archivos, llamadas a herramientas y bucles de depuración. Codestral 22B es el modelo optimizado FIM de Mistral para autocompletado en IDE — el modelo recomendado para integraciones de Continue.dev y Cursor.',
+            '**Mistral AI produce los modelos más eficientes en parámetros de esta comparativa y ahora ofrece variantes especializadas.** Mistral Small 3.1 a 24B ofrece puntuaciones de benchmark cercanas a la clase de 70B requiriendo solo 14 GB de RAM -- la mejor relación calidad-RAM. Devstral Small 2 (Mistral AI, 2026) está diseñado para programación agentiva — ediciones en múltiples archivos, llamadas a herramientas y bucles de depuración. Codestral 22B es el modelo optimizado FIM de Mistral para autocompletado en IDE — el modelo recomendado para integraciones de Continue.dev y Cursor.',
             '**Fortalezas**: mejor relación calidad-RAM (Small 3.1), Devstral para programación agentiva, Codestral para IDE/FIM, sólido soporte de llamadas a funciones y herramientas, licencia Apache 2.0 limpia en modelos clave, procedencia europea (Francia) para cumplimiento con la Ley de IA de la UE.',
             '**Debilidades**: Mistral Small v0.3 es ahora superado en benchmarks por Qwen3 8B y Llama 3.1 8B; menos opciones de tamaño en la frontera que Qwen o Llama (aunque la especialización compensa parcialmente esto).',
           ],
@@ -750,7 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'which-family-wins-by-task',
           title: '¿Qué familia de modelos gana por tarea?',
           rows: [
-            { 'Tarea': 'Programación Python / JavaScript (generación)', 'Ganador': 'Qwen3.8-27B', 'Por qué': '61,7% SWE-bench — mejor modelo de programación denso' },
+            { 'Tarea': 'Programación Python / JavaScript (generación)', 'Ganador': 'Qwen3.8-27B', 'Por qué': '61,7 SWE-bench Pro — mejor modelo de programación denso' },
             { 'Tarea': 'Programación agentiva (múltiples archivos, depuración)', 'Ganador': 'Mistral (Devstral)', 'Por qué': 'Diseñado para flujos de trabajo agentivos' },
             { 'Tarea': 'Autocompletado en IDE (FIM)', 'Ganador': 'Mistral (Codestral)', 'Por qué': 'Optimizado para FIM, soporte Continue.dev/Cursor' },
             { 'Tarea': 'Preguntas generales (inglés)', 'Ganador': 'Llama 3.3 / Qwen3 (empate)', 'Por qué': 'Ambos obtienen 82-85% MMLU a 70B' },
@@ -763,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Tarea', 'Ganador', 'Por qué'],
           image: '/images/qwen-vs-llama-vs-mistral-task-winners-en.svg',
-          imageCaption: 'Matriz de ganadores por tarea (mayo 2026): Qwen3.8-27B gana en programación densa (61,7% SWE-bench); Devstral gana en agentivo; Codestral gana en autocompletado IDE; Llama 4 Scout domina contexto largo; Mistral Small 3.1 mejor calidad por GB.',
+          imageCaption: 'Matriz de ganadores por tarea (mayo 2026): Qwen3.8-27B gana en programación densa (61,7 SWE-bench Pro); Devstral gana en agentivo; Codestral gana en autocompletado IDE; Llama 4 Scout domina contexto largo; Mistral Small 3.1 mejor calidad por GB.',
           content: [
             'La elección del modelo es el paso uno; el diseño del prompt es el paso dos. El mismo prompt puede producir resultados muy diferentes en Qwen, Llama y Mistral. Para técnicas sistemáticas que generen resultados consistentes con cualquier familia de modelos, consulta la [guía de prompt engineering](https://www.promptquorum.com/prompt-engineering).',
           ],
@@ -774,7 +784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Clase 3B-4B**: Qwen3 3B y Phi-4 Mini 3.8B superan a Llama 4 3B en programación y matemáticas. Para uso general en inglés, Llama 4 3B es más fiable.',
             '**Clase 7B-8B**: Qwen3 8B (~5 GB) y Llama 3.1 8B (~5,5 GB) superan significativamente a Mistral Small v0.3. Qwen3 8B lidera en [programación](/es/local-llms/best-local-llms-for-coding); Llama 3.1 8B lidera en seguimiento de instrucciones en inglés.',
-            '**Clase 14B-24B**: Qwen3 14B y Mistral Small 3.1 24B son las opciones principales. Mistral Small 3.1 es más fuerte en general, aunque requiere más RAM. Devstral Small 24B es la mejor opción para desarrolladores que hacen programación agentiva en este nivel.',
+            '**Clase 14B-24B**: Qwen3 14B y Mistral Small 3.1 24B son las opciones principales. Mistral Small 3.1 es más fuerte en general, aunque requiere más RAM. Devstral Small 2 es la mejor opción para desarrolladores que hacen programación agentiva en este nivel.',
             '**Clase MoE (nueva en 2025-2026)**: Llama 4 Scout (17B activo / 109B total, 16 expertos) y Qwen3.6-35B-A3B (3B activo / 35B total, 73,4 SWE-bench) usan arquitectura Mixture-of-Experts — solo una fracción de parámetros se activa por token. Scout requiere ~55 GB de VRAM a Q4 (cabe en una GPU de 24 GB solo a 1,78-bit, ~20 tok/s), por lo que es una opción de contexto largo / multimodal más que de eficiencia en VRAM de consumo; las variantes MoE más pequeñas son mucho más eficientes en VRAM. gpt-oss:20b (21B total / 3,6B activo MoE) también se ejecuta en 16 GB a nivel ~o3-mini con razonamiento ajustable.',
             '**Clase 70B-72B**: Llama 3.3 70B y Qwen3 72B son los mejores modelos densos ejecutables localmente en 2026. Elige Qwen3 72B para programación y multilingüe; elige Llama 3.3 70B para tareas generales en inglés.',
             'Qwen, Llama y Mistral cubren el panorama del código abierto. Para una comparativa que incluya alternativas comerciales — GPT-5.6, Claude Opus 5 y Gemini 3.5 — y cuándo elegir propietario frente a código abierto, consulta [cómo elegir el modelo de IA adecuado](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
@@ -796,7 +806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Mistral Small 24B** ofrece los benchmarks absolutos más altos de los tres, pero requiere 14 GB de RAM. Ideal para máquinas con 16 GB o más donde la calidad importa más que el margen.',
             '**Qwen3 14B** es el modelo de programación más potente en este nivel heredado, con un 71% en HumanEval usando 8 GB de RAM. Ideal para desarrolladores con 12-16 GB de RAM que priorizan la generación de código.',
             '**Llama 3.1 8B** cuenta con el soporte de ecosistema más amplio — más ajustes finos, más tutoriales, más ayuda de la comunidad. Ideal para usuarios principiantes o equipos que necesitan recursos comunitarios amplios.',
-            '**Cuándo actualizar Mistral Small 24B → Mistral Small 3.1 24B**: si necesitas programación agentiva (usa Devstral Small 24B), autocompletado en IDE (usa Codestral 22B) o mejoras incrementales de calidad con la misma huella de RAM.',
+            '**Cuándo actualizar Mistral Small 24B → Mistral Small 3.1 24B**: si necesitas programación agentiva (usa Devstral Small 2), autocompletado en IDE (usa Codestral 22B) o mejoras incrementales de calidad con la misma huella de RAM.',
             '**Cuándo actualizar Qwen3 14B → Qwen3 14B o Qwen3.8-27B**: si necesitas rendimiento en SWE-bench (Qwen3.8-27B obtiene 61,7%, el mejor modelo de programación denso de 2026), ya tienes 16 GB de RAM, o necesitas soporte nativo de 29 idiomas (Qwen 3 amplió la cobertura multilingüe).',
             '**Cuándo actualizar Llama 3.1 8B → Llama 4 Scout**: solo si tienes ~55 GB+ de VRAM a Q4 (el MoE de 16 expertos de Scout activa 17B/109B parámetros pero requiere ~55 GB a Q4; cabe en una GPU de 24 GB solo a 1,78-bit, ~20 tok/s) y necesitas su contexto de 10M tokens (vs 128K de Llama 3.3) o entrada multimodal. En una sola GPU de consumo de 24 GB, Qwen3.8-27B (cabe en 24 GB a Q4) es la mejor actualización.',
             '**Quédate en los modelos heredados si**: tus ajustes finos están construidos sobre Llama 3.1 8B o Qwen 3 (el coste de migración supera el beneficio), la estabilidad en producción importa más que los benchmarks (los modelos heredados están probados en batalla), o tu carga de trabajo no requiere las nuevas capacidades (chat general, resumen, Q&A básico).',
@@ -811,7 +821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'regional-context',
           title: 'Contexto regional: ¿Qué familia para UE, Japón, China?',
           content: [
-            '**Cumplimiento UE y RGPD**: Las tres familias (Qwen3, Llama 3.x/4, Mistral) se ejecutan completamente en local sin transmisión de datos externos, garantizando el cumplimiento del RGPD. Mistral (de origen francés, Mistral AI) tiene la postura de cumplimiento UE más sólida. Devstral Small 24B y Codestral 22B son de origen francés (Mistral AI), Apache 2.0 — los modelos de programación de origen europeo más fuertes disponibles. Tanto Qwen3 (Apache 2.0) como Llama 3.x/4 funcionan igualmente bien bajo los requisitos de transparencia de la Ley de IA de la UE y la auditabilidad de código abierto. Qwen3 soporta de forma nativa el alemán, el francés y otros idiomas de la UE sin degradación de calidad. La fecha límite de agosto de 2026 de la Ley de IA de la UE afecta a la clasificación de estos niveles de modelos.',
+            '**Cumplimiento UE y RGPD**: Las tres familias (Qwen3, Llama 3.x/4, Mistral) se ejecutan completamente en local sin transmisión de datos externos, garantizando el cumplimiento del RGPD. Mistral (de origen francés, Mistral AI) tiene la postura de cumplimiento UE más sólida. Devstral Small 2 y Codestral 22B son de origen francés (Mistral AI), Apache 2.0 — los modelos de programación de origen europeo más fuertes disponibles. Tanto Qwen3 (Apache 2.0) como Llama 3.x/4 funcionan igualmente bien bajo los requisitos de transparencia de la Ley de IA de la UE y la auditabilidad de código abierto. Qwen3 soporta de forma nativa el alemán, el francés y otros idiomas de la UE sin degradación de calidad. La fecha límite de agosto de 2026 de la Ley de IA de la UE afecta a la clasificación de estos niveles de modelos.',
             '**Japón y cumplimiento METI**: Qwen3 y Llama 3.x/4 se alinean con las directrices de gobernanza de IA local del METI (Ministerio de Economía, Comercio e Industria) de Japón. No se requieren informes especiales si se despliegan en infraestructura privada dentro de redes corporativas japonesas. Qwen3 se beneficia de un fuerte soporte del idioma japonés (tokenización nativa) entre sus 29 idiomas, lo que lo hace preferido para cargas de trabajo en japonés. Mistral también cumple, pero está menos documentado en contextos de gobernanza de IA japonesa. La eficiencia MoE de Llama 4 Scout resulta atractiva para empresas japonesas con hardware limitado.',
             '**China y requisitos CAC**: Qwen3 (Alibaba, doméstico) es ampliamente preferido para el cumplimiento de la CAC (Cyberspace Administration of China). Qwen3 está optimizado de forma nativa para la tokenización china sin degradación en sus 29 idiomas — una ventaja crítica para el soporte del mandarín y dialectos. Kimi K2.6 (Moonshot AI, 1T total / 32B activo MoE, licencia MIT modificada) también está disponible para programación empresarial en China — rendimiento de frontera (58,6 SWE-Bench Pro), licencia MIT modificada. Llama y Mistral son aceptables si se despliegan en servidores privados dentro del territorio chino, pero las llamadas a la API en la nube conllevan mayor escrutinio CAC y requisitos de residencia de datos. Para el cumplimiento en moderación de contenido, la herencia de entrenamiento en chino de Qwen3 garantiza la alineación con las políticas de contenido locales.',
           ],
@@ -849,16 +859,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'faq',
           title: 'Preguntas frecuentes',
           faqs: [
-            { q: '¿Qwen o Llama es mejor para mi caso de uso?', a: 'Mejor en general en hardware de consumo: Qwen3.8-27B (61,7% SWE-bench, cabe en 24 GB a Q4). Para programación y tareas multilingües: Qwen3.8-27B o Qwen3 8B. Para contexto largo (10M tokens) o entrada multimodal: Llama 4 Scout (requiere ~55 GB de VRAM a Q4). Para máxima calidad por GB de RAM: Mistral Small 3.1. Prueba con prompts de ejemplo de tu carga de trabajo real.' },
+            { q: '¿Qwen o Llama es mejor para mi caso de uso?', a: 'Mejor en general en hardware de consumo: Qwen3.8-27B (61,7 SWE-bench Pro, cabe en 24 GB a Q4). Para programación y tareas multilingües: Qwen3.8-27B o Qwen3 8B. Para contexto largo (10M tokens) o entrada multimodal: Llama 4 Scout (requiere ~55 GB de VRAM a Q4). Para máxima calidad por GB de RAM: Mistral Small 3.1. Prueba con prompts de ejemplo de tu carga de trabajo real.' },
             { q: '¿Qué es Llama 4 Scout y en qué se diferencia de Llama 3.3?', a: 'Llama 4 Scout usa una arquitectura Mixture-of-Experts (MoE) de 16 expertos — 17B parámetros activos por token de un total de 109B, y es multimodal. Todos los expertos deben residir en memoria, así que a Q4 requiere ~55 GB de VRAM (no los ~14 GB de un modelo denso de 17B) y no cabe en una GPU de consumo de 24 GB con cuantizaciones normales — solo a 1,78-bit (~20 tok/s). Su atractivo es la ventana de contexto de 10M tokens — la más amplia de cualquier modelo ejecutable localmente. Llama 3.3 70B es un modelo denso que requiere 40 GB de VRAM. En una sola GPU de 24 GB, Qwen3.8-27B es la mejor opción general; elige Scout para contexto largo o multimodal si tienes la VRAM.' },
-            { q: '¿Debo usar Qwen3 o Qwen3?', a: 'Usa Qwen3 para proyectos nuevos. Qwen3 8B mejora a Qwen3 8B en benchmarks de programación y razonamiento. Qwen3.8-27B (61,7% SWE-bench) es el mejor modelo de programación denso disponible. La única razón para quedarse en Qwen3 es si tienes un ajuste fino o flujo de trabajo existente que depende de su comportamiento específico. Para instalaciones nuevas, empieza siempre con Qwen3.' },
+            { q: '¿Debo seguir con Qwen3 o pasar a Qwen3.8?', a: 'Pasa a Qwen3.8-27B (61,7 en SWE-bench Pro según Qwen) si tienes una GPU de 24 GB o un Mac de 32 GB; es el mejor modelo denso de código de esta comparación. Qwen3.8 se ofrece ahora en Ollama solo como modelo de 27B (18 GB), así que Qwen3 8B y 14B siguen siendo las opciones Qwen adecuadas para equipos de 8–16 GB. Quédate en Qwen3 solo si un ajuste fino o flujo existente depende de su comportamiento.' },
             { q: '¿Cuánto más rápido es Mistral en hardware de consumo?', a: 'Mistral Small 3.1 (24B) se ejecuta 1,5-2× más rápido que Llama 3.1 8B en el mismo hardware. Para cargas de trabajo sensibles al rendimiento, Mistral Small es el más rápido con 40-60 tok/seg en una sola GPU. Codestral 22B está optimizado para FIM (relleno en el medio) en flujos de trabajo de autocompletado en IDE.' },
             { q: '¿Los tres pueden ejecutarse con 8 GB de VRAM?', a: 'Sí, todos pueden ejecutar modelos de 7B a cuantización Q4 con 8 GB. Qwen3 8B usa ~5 GB, Llama 3.1 8B usa ~5,5 GB, Mistral Small usa ~4,5 GB a Q4_K_M. Llama 4 Scout (MoE) NO cabe en 8 GB — requiere ~55 GB de VRAM a Q4.' },
             { q: '¿Necesito una RTX 5090 para ejecutarlos?', a: 'No, no para las opciones de consumo. La RTX 5070 (12 GB) ejecuta modelos de 7B cómodamente. Una GPU de 24 GB ejecuta Qwen3.8-27B a Q4 (el mejor en general en hardware de consumo). Llama 4 Scout requiere ~55 GB a Q4 — un equipo multi-GPU o estación de trabajo, no una sola tarjeta de consumo. La RTX 5090 es exagerada a menos que ejecutes modelos densos de 70B+.' },
             { q: '¿Qué cuantización debo usar?', a: 'Empieza con Q4_K_M (4-bit) -- buen equilibrio entre calidad y velocidad en todo el hardware. Usa Q5_K_M si tienes margen de VRAM y necesitas mayor calidad. Q3_K_S para dispositivos con recursos limitados.' },
-            { q: '¿Cuál es mejor para programación?', a: 'Qwen3 8B (~76% HumanEval) para el nivel de 8 GB. Qwen3.8-27B (61,7% SWE-bench) para la mejor programación densa. Devstral Small 24B para flujos de trabajo agentivos en múltiples archivos. Codestral 22B para autocompletado en IDE (FIM).' },
-            { q: '¿Qué modelo debo usar con 16 GB de RAM?', a: 'Mistral Small 3.1 24B a Q4_K_M (14 GB) -- mejor calidad general a 16 GB de RAM (79% MMLU). Alternativamente: Qwen3 14B a Q4_K_M (9 GB) para programación con margen de sobra. Qwen3.8-27B (mejor programación densa, 61,7% SWE-bench) necesita ~24 GB y no cabe en 16 GB. Evita Llama 3.3 70B en 16 GB -- requiere 40 GB.' },
+            { q: '¿Cuál es mejor para programación?', a: 'Qwen3 8B (~76% HumanEval) para el nivel de 8 GB. Qwen3.8-27B (61,7 SWE-bench Pro) para la mejor programación densa. Devstral Small 2 para flujos de trabajo agentivos en múltiples archivos. Codestral 22B para autocompletado en IDE (FIM).' },
+            { q: '¿Qué modelo debo usar con 16 GB de RAM?', a: 'Mistral Small 3.1 24B a Q4_K_M (14 GB) -- mejor calidad general a 16 GB de RAM (79% MMLU). Alternativamente: Qwen3 14B a Q4_K_M (9 GB) para programación con margen de sobra. Qwen3.8-27B (mejor programación densa, 61,7 SWE-bench Pro) necesita ~24 GB y no cabe en 16 GB. Evita Llama 3.3 70B en 16 GB -- requiere 40 GB.' },
             { q: '¿Es Qwen mejor que Llama para razonamiento?', a: 'Qwen3 72B obtiene 84% en MATH vs 77% para Llama 3.3 70B -- una ventaja de 7 puntos. Para MMLU: Qwen3 72B 85% vs Llama 3.3 70B 82% -- muy cerca. Qwen gana en razonamiento; Llama 3.3 gana en seguimiento de instrucciones en inglés.' },
+            { q: '¿Qué ha cambiado para Qwen, Llama y Mistral desde septiembre?', a: 'Qwen3.8 se ofrece ahora en Ollama solo como modelo de 27B (18 GB en Q4_K_M, contexto 256K), así que Qwen3 8B y 14B siguen siendo las opciones Qwen más pequeñas. Devstral Small 2 (Mistral AI, 24B, 15 GB, 65,8% en SWE-bench Verified según Mistral, Apache 2.0) es la etiqueta actual de Devstral, y Mistral Large 4 (1,05T de parámetros totales / 52B activos, según su ficha en Ollama) llegó como modelo de escala de centro de datos que no cabe en hardware doméstico. Llama 4 Scout (unos 55 GB en Q4) sigue siendo la opción de contexto largo de esta comparación. La clasificación para hardware doméstico no cambia.' },
           ],
         },
         sources: {
@@ -867,7 +878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[Qwen Team. (2026). Qwen3 Technical Report.](https://arxiv.org/abs/2505.09388) -- Benchmarks de la familia Qwen3, SWE-bench de Qwen3.8-27B (61,7%), variantes MoE.',
             '[Meta AI. (2025). Llama 4 Model Card.](https://llama.meta.com/) -- Benchmark oficial y arquitectura de Llama 4 Scout/Maverick MoE, ventana de contexto de 10M.',
-            '[Mistral AI. (2026). Devstral Small 24B.](https://mistral.ai/) -- Arquitectura y benchmarks del modelo de programación agentiva.',
+            '[Mistral AI. (2026). Devstral Small 2.](https://mistral.ai/) -- Arquitectura y benchmarks del modelo de programación agentiva.',
             '[Mistral AI. (2025). Codestral.](https://mistral.ai/) -- Modelo de programación optimizado FIM para autocompletado en IDE.',
             '[Meta AI. (2024). Llama 3.3 Model Card.](https://llama.meta.com/) -- Datos de benchmark oficiales de Llama 3.3 70B (legado, aún muy usado).',
           ],
@@ -884,7 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Qwen 3 vs Llama 4 vs Mistral Small 24B: Comparativa de benchmarks 2026',
-        'description': 'Comparativa completa de benchmarks: Qwen3.8-27B (61,7% SWE-bench, mejor en 24 GB), Llama 4 Scout (MoE, contexto 10M, ~55 GB VRAM), Mistral Small 24B + modelos heredados Mistral 24B/Qwen3 14B/Llama 3.1 8B.',
+        'description': 'Comparativa completa de benchmarks: Qwen3.8-27B (61,7 SWE-bench Pro, mejor en 24 GB), Llama 4 Scout (MoE, contexto 10M, ~55 GB VRAM), Mistral Small 24B + modelos heredados Mistral 24B/Qwen3 14B/Llama 3.1 8B.',
         'url': 'https://www.promptquorum.com/es/local-llms/qwen-vs-llama-vs-mistral',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -932,7 +943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Qwen3.8-27B',
-            'description': 'Mejor modelo denso para programación. 61,7% SWE-bench (múltiples archivos en el mundo real), 83% MMLU, 80% MATH, 29 idiomas nativos, 16 GB RAM (Q4_K_M).'
+            'description': 'Mejor modelo denso para programación. 61,7 SWE-bench Pro (múltiples archivos en el mundo real), 83% MMLU, 80% MATH, 29 idiomas nativos, 16 GB RAM (Q4_K_M).'
           },
           {
             '@type': 'ListItem',
@@ -955,7 +966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '@type': 'ListItem',
             'position': 5,
-            'name': 'Devstral Small 24B',
+            'name': 'Devstral Small 2',
             'description': 'Mejor para flujos de trabajo de programación agentiva. Diseñado para edición de múltiples archivos, tool calling, bucles de depuración, 16 GB RAM.'
           },
           {
@@ -999,7 +1010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '¿Qwen o Llama es mejor para mi caso de uso?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mejor en general en hardware de consumo: Qwen3.8-27B (61,7% SWE-bench, cabe en 24 GB a Q4). Para programación y tareas multilingües: Qwen3.8-27B o Qwen3 8B. Para contexto largo (10M tokens) o entrada multimodal: Llama 4 Scout (requiere ~55 GB de VRAM a Q4). Para máxima calidad por GB de RAM: Mistral Small 3.1. Prueba con prompts de ejemplo de tu carga de trabajo real.',
+              'text': 'Mejor en general en hardware de consumo: Qwen3.8-27B (61,7 SWE-bench Pro, cabe en 24 GB a Q4). Para programación y tareas multilingües: Qwen3.8-27B o Qwen3 8B. Para contexto largo (10M tokens) o entrada multimodal: Llama 4 Scout (requiere ~55 GB de VRAM a Q4). Para máxima calidad por GB de RAM: Mistral Small 3.1. Prueba con prompts de ejemplo de tu carga de trabajo real.',
             },
           },
           {
@@ -1012,10 +1023,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': '¿Debo usar Qwen3 o Qwen3?',
+            'name': '¿Debo seguir con Qwen3 o pasar a Qwen3.8?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Usa Qwen3 para proyectos nuevos. Qwen3 8B mejora a Qwen3 8B en benchmarks de programación y razonamiento. Qwen3.8-27B (61,7% SWE-bench) es el mejor modelo de programación denso disponible. La única razón para quedarse en Qwen3 es si tienes un ajuste fino o flujo de trabajo existente que depende de su comportamiento específico. Para instalaciones nuevas, empieza siempre con Qwen3.',
+              'text': 'Pasa a Qwen3.8-27B (61,7 en SWE-bench Pro según Qwen) si tienes una GPU de 24 GB o un Mac de 32 GB; es el mejor modelo denso de código de esta comparación. Qwen3.8 se ofrece ahora en Ollama solo como modelo de 27B (18 GB), así que Qwen3 8B y 14B siguen siendo las opciones Qwen adecuadas para equipos de 8–16 GB. Quédate en Qwen3 solo si un ajuste fino o flujo existente depende de su comportamiento.',
             },
           },
           {
@@ -1055,7 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '¿Cuál es mejor para programación?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 8B (~76% HumanEval) para el nivel de 8 GB. Qwen3.8-27B (61,7% SWE-bench) para la mejor programación densa. Devstral Small 24B para flujos de trabajo agentivos en múltiples archivos. Codestral 22B para autocompletado en IDE (FIM).',
+              'text': 'Qwen3 8B (~76% HumanEval) para el nivel de 8 GB. Qwen3.8-27B (61,7 SWE-bench Pro) para la mejor programación densa. Devstral Small 2 para flujos de trabajo agentivos en múltiples archivos. Codestral 22B para autocompletado en IDE (FIM).',
             },
           },
           {
@@ -1063,7 +1074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '¿Qué modelo debo usar con 16 GB de RAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mistral Small 3.1 24B a Q4_K_M (14 GB) -- mejor calidad general a 16 GB de RAM (79% MMLU). Alternativamente: Qwen3 14B a Q4_K_M (9 GB) para programación con margen de sobra. Qwen3.8-27B (mejor programación densa, 61,7% SWE-bench) necesita ~24 GB y no cabe en 16 GB. Evita Llama 3.3 70B en 16 GB -- requiere 40 GB.',
+              'text': 'Mistral Small 3.1 24B a Q4_K_M (14 GB) -- mejor calidad general a 16 GB de RAM (79% MMLU). Alternativamente: Qwen3 14B a Q4_K_M (9 GB) para programación con margen de sobra. Qwen3.8-27B (mejor programación densa, 61,7 SWE-bench Pro) necesita ~24 GB y no cabe en 16 GB. Evita Llama 3.3 70B en 16 GB -- requiere 40 GB.',
             },
           },
           {
@@ -1072,6 +1083,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Qwen3 72B obtiene 84% en MATH vs 77% para Llama 3.3 70B -- una ventaja de 7 puntos. Para MMLU: Qwen3 72B 85% vs Llama 3.3 70B 82% -- muy cerca. Qwen gana en razonamiento; Llama 3.3 gana en seguimiento de instrucciones en inglés.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué ha cambiado para Qwen, Llama y Mistral desde septiembre?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3.8 se ofrece ahora en Ollama solo como modelo de 27B (18 GB en Q4_K_M, contexto 256K), así que Qwen3 8B y 14B siguen siendo las opciones Qwen más pequeñas. Devstral Small 2 (Mistral AI, 24B, 15 GB, 65,8% en SWE-bench Verified según Mistral, Apache 2.0) es la etiqueta actual de Devstral, y Mistral Large 4 (1,05T de parámetros totales / 52B activos, según su ficha en Ollama) llegó como modelo de escala de centro de datos que no cabe en hardware doméstico. Llama 4 Scout (unos 55 GB en Q4) sigue siendo la opción de contexto largo de esta comparación. La clasificación para hardware doméstico no cambia.',
             },
           },
         ],
@@ -1085,12 +1104,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: '⁨Qwen3.8-27B⁩ مقابل ⁨Llama 4⁩ مقابل ⁨Mistral⁩: مقارنة ⁨LLM⁩ المحلي ⁨2026⁩',
       seoTitle: '⁨Qwen3.8-27B vs Llama 4 vs Mistral 2026⁩: ⁨Qwen⁩ يتفوق',
       intro: 'Qwen3.8-27B هو الأفضل إجمالًا على الأجهزة الاستهلاكية: 61.7% في SWE-bench (أفضل نموذج كثيف)، يتسع في 24 GB بـ Q4. Llama 4 Scout 17B (MoE، سياق 10M، متعدد الوسائط) هو الخيار للسياق الطويل/متعدد الوسائط، لكنه يتطلب ~55 GB من VRAM بـ Q4؛ يقدّم Mistral Small 3.1 24B أفضل نسبة جودة-RAM بـ 14 GB. يتميّز Qwen3 في البرمجة و29 لغة؛ يتصدر Llama 4 Scout في طول السياق (10M token) ومتعدد الوسائط؛ ويعظّم Mistral الجودة على أجهزة محدودة. الثلاثة تعمل على أجهزة استهلاكية عبر Ollama. مُحدّث: يونيو 2026.',
-      metaDescription: '⁨Qwen3.8-27B⁩ يتفوق برمجياً: ⁨61.7% SWE-bench⁩ على ⁨24 GB. Llama 4 Scout⁩: سياق ⁨10M. Mistral Small 3.1⁩: ⁨79% MMLU⁩ على ⁨14 GB⁩. أي نموذج يفوز؟',
+      metaDescription: '⁨Qwen3.8-27B⁩ يتفوق برمجياً: ⁨61.7 SWE-bench Pro⁩ على ⁨24 GB. Llama 4 Scout⁩: سياق ⁨10M. Mistral Small 3.1⁩: ⁨79% MMLU⁩ على ⁨14 GB⁩. أي نموذج يفوز؟',
       heroImage: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-ar.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
-      next_refresh_due: '2026-09-28',
-      leadAnswerBlock: '**Qwen3.8-27B هو الأفضل إجمالًا على الأجهزة الاستهلاكية: متصدر في البرمجة الكثيفة (61.7% SWE-bench)، يتسع في 24 GB بـ Q4. Llama 4 Scout هو الخيار للسياق الطويل/متعدد الوسائط (17B نشط، MoE، سياق 10M) لكنه يتطلب ~55 GB من VRAM بـ Q4. يقدّم Mistral Small 3.1 24B أفضل جودة لكل VRAM بـ 14 GB.**',
+      dateModified: '2026-10-17',
+      next_refresh_due: '2026-11-16',
+      leadAnswerBlock: '**Qwen3.8-27B هو الأفضل إجمالًا على الأجهزة الاستهلاكية: متصدر في البرمجة الكثيفة (61.7 SWE-bench Pro)، يتسع في 24 GB بـ Q4. Llama 4 Scout هو الخيار للسياق الطويل/متعدد الوسائط (17B نشط، MoE، سياق 10M) لكنه يتطلب ~55 GB من VRAM بـ Q4. يقدّم Mistral Small 3.1 24B أفضل جودة لكل VRAM بـ 14 GB.**',
       nextStep: {
         text: 'هل اخترت نموذجك بالفعل؟ إليك كيفية تشغيل Qwen محليًا، خطوة بخطوة.',
         label: 'تشغيل Qwen محليًا — دليل إعداد كامل ←',
@@ -1099,15 +1118,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickAnswerTop: {
         ar: {
           question: 'Qwen مقابل Llama مقابل Mistral — أي نموذج LLM محلي ينبغي أن أستخدم في 2026؟',
-          answer: 'يونيو 2026: Qwen3.8-27B هو الأفضل إجمالًا على الأجهزة الاستهلاكية (61.7% SWE-bench، يتسع في 24 GB بـ Q4). Llama 4 Scout هو الخيار للسياق الطويل/متعدد الوسائط (17B نشط، سياق 10M) لكنه يتطلب ~55 GB من VRAM بـ Q4. يبقى Llama 3.3 70B قويًا للاستدلال بالإنجليزية. وMistral Small 3.1 هو الأفضل للجودة لكل RAM. الجميع يعمل عبر Ollama.',
+          answer: 'Qwen3.8-27B هو الأفضل إجمالًا على الأجهزة الاستهلاكية (61.7 SWE-bench Pro، يتسع في 24 GB بـ Q4). Llama 4 Scout هو الخيار للسياق الطويل/متعدد الوسائط (17B نشط، سياق 10M) لكنه يتطلب ~55 GB من VRAM بـ Q4. يبقى Llama 3.3 70B قويًا للاستدلال بالإنجليزية. وMistral Small 3.1 هو الأفضل للجودة لكل RAM. الجميع يعمل عبر Ollama.',
           bullets: [
-            'Qwen3.8-27B — الأفضل إجمالًا على الأجهزة الاستهلاكية، أفضل برمجة كثيفة (61.7% SWE-bench)، يتسع في 24 GB بـ Q4',
+            'Qwen3.8-27B — الأفضل إجمالًا على الأجهزة الاستهلاكية، أفضل برمجة كثيفة (61.7 SWE-bench Pro)، يتسع في 24 GB بـ Q4',
             'Llama 4 Scout 17B (MoE) — الخيار للسياق الطويل (10M token) ومتعدد الوسائط، ~55 GB VRAM بـ Q4',
             'Mistral Small 3.1 24B — أفضل نسبة جودة-لكل-RAM (14 GB)، 79% MMLU',
             'للبرمجة: Qwen3.8-27B أو Devstral. للسياق الطويل/متعدد الوسائط: Scout. لـ RAM: Mistral.',
             'الجميع عبر Ollama: ollama pull qwen3 / llama4 / mistral',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-10-17',
         },
       },
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على أجهزة استهلاكية',
@@ -1136,11 +1155,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'يفوز Qwen3.8-27B في البرمجة على أجهزة المستهلكين (61.7% SWE-bench، يناسب 24 جيجابايت بضغط Q4)؛ ويتصدر Llama 4 Scout في السياق الطويل ومتعدد الوسائط (10M سياق، MoE، ~55 جيجابايت بضغط Q4).' },
+            { type: 'one-sentence', text: 'يفوز Qwen3.8-27B في البرمجة على أجهزة المستهلكين (61.7 SWE-bench Pro، يناسب 24 جيجابايت بضغط Q4)؛ ويتصدر Llama 4 Scout في السياق الطويل ومتعدد الوسائط (10M سياق، MoE، ~55 جيجابايت بضغط Q4).' },
             { type: 'plain-terms', text: 'هذه ثلاث من أشهر عائلات نماذج الذكاء الاصطناعي مفتوحة المصدر التي يمكن تشغيلها محلياً. Qwen3 (من Alibaba) يتفوق في البرمجة، وLlama 4 (من Meta) يعالج المستندات الطويلة جداً والصور، وMistral (ذكاء اصطناعي فرنسي) يوفر نماذج صغيرة فعّالة. جميعها مجانية وتعمل دون إنترنت.' },
           ],
           items: [
-            '**البرمجة**: يتصدر Qwen3.8-27B في SWE-bench (61.7% في العالم الحقيقي، أفضل نموذج كثيف). للبرمجة بالوكلاء: Mistral Devstral Small 24B. للإكمال التلقائي في IDE: Mistral Codestral 22B.',
+            '**البرمجة**: يتصدر Qwen3.8-27B في SWE-bench (61.7% في العالم الحقيقي، أفضل نموذج كثيف). للبرمجة بالوكلاء: Mistral Devstral Small 2. للإكمال التلقائي في IDE: Mistral Codestral 22B.',
             '**الاستدلال العام**: Llama 3.3 70B وQwen3 72B لا يزالان شبه متعادلين؛ Llama 3.x أقوى في الإنجليزية، وQwen في متعدد اللغات.',
             '**الكفاءة (الجودة لكل GB من RAM)**: يقدّم Mistral Small 3.1 24B جودة قريبة من 70B بـ 14 GB فقط من RAM -- بلا تغيير منذ أبريل.',
             '**اللغات غير الإنجليزية**: يدعم Qwen3 29 لغة أصليًا؛ Llama وMistral محسّنان أساسًا للإنجليزية.',
@@ -1164,7 +1183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           rows: [
             { 'Familia': 'Qwen3', 'Desarrollador': 'Alibaba', 'Versiones actuales': 'Qwen3 (أبريل 2026)، Qwen 3.5 (متعدد الوسائط)، Qwen3.8-27B (SWE-bench 61.7%)', 'Licencia': 'Apache 2.0 (معظم الأحجام)' },
             { 'Familia': 'Llama 4', 'Desarrollador': 'Meta', 'Versiones actuales': 'Scout (17B نشط/109B MoE، 16 خبيرًا، سياق 10M، متعدد الوسائط، ~55 GB VRAM Q4)، Maverick (17B نشط/400B MoE)، القديم: 3.3 70B', 'Licencia': 'Llama Community (مخصص)' },
-            { 'Familia': 'Mistral', 'Desarrollador': 'Mistral AI', 'Versiones actuales': 'Small 3.1 (24B)، Devstral Small 24B (بالوكلاء)، Codestral 22B (FIM/IDE)', 'Licencia': 'Apache 2.0 (معظم الأحجام)' },
+            { 'Familia': 'Mistral', 'Desarrollador': 'Mistral AI', 'Versiones actuales': 'Small 3.1 (24B)، Devstral Small 2 (بالوكلاء)، Codestral 22B (FIM/IDE)', 'Licencia': 'Apache 2.0 (معظم الأحجام)' },
           ],
           columns: ['Familia', 'Desarrollador', 'Versiones actuales', 'Licencia'],
           content: 'لا تزال نماذج الجيل السابق (Qwen3، Llama 3.3) متاحة في Ollama وتُستخدم على نطاق واسع. تركّز هذه المقارنة على نماذج الجيل الحالي. هل أنت مستعد لتشغيل أحدها؟ [دليل إعداد محلي كامل لـ Qwen ←](/ar/local-llms/run-qwen-locally-guide-2026)',
@@ -1173,18 +1192,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'benchmark-comparison',
           title: 'كيف تقارن هذه النماذج في المعايير؟',
           rows: [
-            { 'Modelo': 'Qwen3.8-27B', 'MMLU': '—', 'SWE-bench': '61.7%', 'MATH': '—', 'RAM (Q4_K_M)': '24 GB' },
+            { 'Modelo': 'Qwen3.8-27B', 'MMLU': '—', 'SWE-bench': '61.7 (Pro)', 'MATH': '—', 'RAM (Q4_K_M)': '24 GB' },
             { 'Modelo': 'Qwen3 72B', 'MMLU': '~85%', 'SWE-bench': '—', 'MATH': '~84%', 'RAM (Q4_K_M)': '43 GB' },
             { 'Modelo': 'Llama 4 Scout 17B (MoE)', 'MMLU': '—', 'SWE-bench': '—', 'MATH': '—', 'RAM (Q4_K_M)': '~55 GB' },
             { 'Modelo': 'Llama 3.3 70B (قديم)', 'MMLU': '82%', 'SWE-bench': '—', 'MATH': '77%', 'RAM (Q4_K_M)': '40 GB' },
             { 'Modelo': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'SWE-bench': '—', 'MATH': '65%', 'RAM (Q4_K_M)': '14 GB' },
-            { 'Modelo': 'Devstral Small 24B', 'MMLU': '—', 'SWE-bench': 'عالٍ (بالوكلاء)', 'MATH': '—', 'RAM (Q4_K_M)': '16 GB' },
+            { 'Modelo': 'Devstral Small 2', 'MMLU': '—', 'SWE-bench': 'عالٍ (بالوكلاء)', 'MATH': '—', 'RAM (Q4_K_M)': '15 GB' },
             { 'Modelo': 'Qwen3 8B', 'MMLU': '~75%', 'SWE-bench': '—', 'MATH': '~55%', 'RAM (Q4_K_M)': '5 GB' },
             { 'Modelo': 'Mistral Small v0.3', 'MMLU': '64%', 'SWE-bench': '—', 'MATH': '28%', 'RAM (Q4_K_M)': '4.5 GB' },
           ],
           columns: ['Modelo', 'MMLU', 'SWE-bench', 'MATH', 'RAM (Q4_K_M)'],
           image: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-ar.webp',
-          imageCaption: 'مقارنة المعايير (يونيو 2026): يتصدر Qwen3.8-27B (61.7% SWE-bench) في البرمجة الكثيفة ويتسع في 24 GB بـ Q4. SWE-bench (حل مشكلات GitHub الحقيقية عبر ملفات متعددة) أصبح الآن أكثر صلة من HumanEval لتقييم نماذج البرمجة. يستخدم Llama 4 Scout بنية MoE من 16 خبيرًا (17B نشط / 109B إجمالي) لكنه يتطلب ~55 GB من VRAM بـ Q4.',
+          imageCaption: 'مقارنة المعايير: يتصدر Qwen3.8-27B (61.7 SWE-bench Pro) في البرمجة الكثيفة ويتسع في 24 GB بـ Q4. SWE-bench (حل مشكلات GitHub الحقيقية عبر ملفات متعددة) أصبح الآن أكثر صلة من HumanEval لتقييم نماذج البرمجة. يستخدم Llama 4 Scout بنية MoE من 16 خبيرًا (17B نشط / 109B إجمالي) لكنه يتطلب ~55 GB من VRAM بـ Q4.',
           content: '**SWE-bench (حل مشكلات GitHub الحقيقية) هو معيار البرمجة الرئيسي لعام 2026** للتقييم العملي. يختبر التغييرات عبر ملفات متعددة وفهم قاعدة الكود وكتابة الاختبارات. يبقى HumanEval (دالة Python بملف واحد) مفيدًا للمقارنة لكنه ثانوي. يقيّم MMLU وMATH المعرفة العامة والاستدلال. معايير Llama 4 Scout محدودة بسبب إطلاقه الحديث وتعقيد MoE. الشرطات تشير إلى معايير لم تُنشر بعد أو غير قابلة للتطبيق.',
         },
         qwen: {
@@ -1211,7 +1230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'mistral',
           title: 'ما أكبر ميزة لـ Mistral؟',
           content: [
-            '**تنتج Mistral AI أكثر النماذج كفاءةً في المعاملات في هذه المقارنة وتقدّم الآن متغيرات متخصصة.** يقدّم Mistral Small 3.1 عند 24B درجات معايير قريبة من فئة 70B بـ 14 GB فقط من RAM -- أفضل نسبة جودة-RAM. Devstral Small 24B (Mistral AI، 2026) مصمم للبرمجة بالوكلاء — تعديلات عبر ملفات متعددة واستدعاء أدوات وحلقات تصحيح. Codestral 22B هو نموذج Mistral المحسّن لـ FIM للإكمال التلقائي في IDE — النموذج الموصى به لتكاملات Continue.dev وCursor.',
+            '**تنتج Mistral AI أكثر النماذج كفاءةً في المعاملات في هذه المقارنة وتقدّم الآن متغيرات متخصصة.** يقدّم Mistral Small 3.1 عند 24B درجات معايير قريبة من فئة 70B بـ 14 GB فقط من RAM -- أفضل نسبة جودة-RAM. Devstral Small 2 (Mistral AI، 2026) مصمم للبرمجة بالوكلاء — تعديلات عبر ملفات متعددة واستدعاء أدوات وحلقات تصحيح. Codestral 22B هو نموذج Mistral المحسّن لـ FIM للإكمال التلقائي في IDE — النموذج الموصى به لتكاملات Continue.dev وCursor.',
             '**نقاط القوة**: أفضل نسبة جودة-RAM (Small 3.1)، Devstral للبرمجة بالوكلاء، Codestral لـ IDE/FIM، دعم قوي لاستدعاء الدوال والأدوات، ترخيص Apache 2.0 نظيف في النماذج الرئيسية، منشأ أوروبي (فرنسا) للامتثال لقانون الذكاء الاصطناعي الأوروبي.',
             '**نقاط الضعف**: Mistral Small v0.3 صار الآن متجاوزًا في المعايير من Qwen3 8B وLlama 3.1 8B؛ خيارات أحجام أقل في الطليعة من Qwen أو Llama (رغم أن التخصص يعوّض هذا جزئيًا).',
           ],
@@ -1237,7 +1256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'which-family-wins-by-task',
           title: 'أي عائلة نماذج تفوز حسب المهمة؟',
           rows: [
-            { 'Tarea': 'برمجة Python / JavaScript (توليد)', 'Ganador': 'Qwen3.8-27B', 'Por qué': '61.7% SWE-bench — أفضل نموذج برمجة كثيف' },
+            { 'Tarea': 'برمجة Python / JavaScript (توليد)', 'Ganador': 'Qwen3.8-27B', 'Por qué': '61.7 SWE-bench Pro — أفضل نموذج برمجة كثيف' },
             { 'Tarea': 'برمجة بالوكلاء (ملفات متعددة، تصحيح)', 'Ganador': 'Mistral (Devstral)', 'Por qué': 'مصمم لسير العمل بالوكلاء' },
             { 'Tarea': 'إكمال تلقائي في IDE (FIM)', 'Ganador': 'Mistral (Codestral)', 'Por qué': 'محسّن لـ FIM، دعم Continue.dev/Cursor' },
             { 'Tarea': 'أسئلة عامة (إنجليزية)', 'Ganador': 'Llama 3.3 / Qwen3 (تعادل)', 'Por qué': 'كلاهما يحصل على 82-85% MMLU عند 70B' },
@@ -1250,7 +1269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Tarea', 'Ganador', 'Por qué'],
           image: '/images/qwen-vs-llama-vs-mistral-task-winners-en.svg',
-          imageCaption: 'مصفوفة الفائزين حسب المهمة (مايو 2026): يفوز Qwen3.8-27B في البرمجة الكثيفة (61.7% SWE-bench)؛ يفوز Devstral في البرمجة بالوكلاء؛ يفوز Codestral في الإكمال التلقائي في IDE؛ يهيمن Llama 4 Scout على السياق الطويل؛ Mistral Small 3.1 أفضل جودة لكل GB.',
+          imageCaption: 'مصفوفة الفائزين حسب المهمة: يفوز Qwen3.8-27B في البرمجة الكثيفة (61.7 SWE-bench Pro)؛ يفوز Devstral في البرمجة بالوكلاء؛ يفوز Codestral في الإكمال التلقائي في IDE؛ يهيمن Llama 4 Scout على السياق الطويل؛ Mistral Small 3.1 أفضل جودة لكل GB.',
           content: [
             'اختيار النموذج هو الخطوة الأولى؛ وتصميم الأمر هو الخطوة الثانية. قد يُنتج الأمر نفسه نتائج مختلفة جدًا على Qwen وLlama وMistral. للتقنيات المنهجية التي تولّد نتائج متسقة مع أي عائلة نماذج، راجع [دليل هندسة الأوامر](https://www.promptquorum.com/prompt-engineering).',
           ],
@@ -1261,7 +1280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**فئة 3B-4B**: يتفوق Qwen3 3B وPhi-4 Mini 3.8B على Llama 4 3B في البرمجة والرياضيات. للاستخدام العام بالإنجليزية، Llama 4 3B أكثر موثوقية.',
             '**فئة 7B-8B**: يتفوق Qwen3 8B (~5 GB) وLlama 3.1 8B (~5.5 GB) بشكل كبير على Mistral Small v0.3. يتصدر Qwen3 8B في [البرمجة](/ar/local-llms/best-local-llms-for-coding)؛ ويتصدر Llama 3.1 8B في اتباع التعليمات بالإنجليزية.',
-            '**فئة 14B-24B**: Qwen3 14B وMistral Small 3.1 24B هما الخياران الرئيسيان. Mistral Small 3.1 أقوى إجمالًا، رغم أنه يتطلب مزيدًا من RAM. Devstral Small 24B هو الخيار الأفضل للمطورين الذين يقومون بالبرمجة بالوكلاء في هذا المستوى.',
+            '**فئة 14B-24B**: Qwen3 14B وMistral Small 3.1 24B هما الخياران الرئيسيان. Mistral Small 3.1 أقوى إجمالًا، رغم أنه يتطلب مزيدًا من RAM. Devstral Small 2 هو الخيار الأفضل للمطورين الذين يقومون بالبرمجة بالوكلاء في هذا المستوى.',
             '**فئة MoE (جديدة في 2025-2026)**: يستخدم Llama 4 Scout (17B نشط / 109B إجمالي، 16 خبيرًا) وQwen3.6-35B-A3B (3B نشط / 35B إجمالي، 73.4 SWE-bench) بنية Mixture-of-Experts — تُفعَّل فقط نسبة من المعاملات لكل token. يتطلب Scout ~55 GB من VRAM بـ Q4 (يتسع في بطاقة رسوم بسعة 24 GB إلا بدقة 1.78 بت، ~20 token/ثانية)، لذا فهو خيار سياق طويل/متعدد الوسائط أكثر من كونه خيار كفاءة VRAM استهلاكية؛ متغيرات MoE الأصغر أكفأ بكثير في VRAM. كما يعمل gpt-oss:20b (21B إجمالي / 3.6B نشط MoE) في 16 GB بمستوى ~o3-mini مع استدلال قابل للضبط.',
             '**فئة 70B-72B**: Llama 3.3 70B وQwen3 72B هما أفضل النماذج الكثيفة القابلة للتشغيل محليًا في 2026. اختر Qwen3 72B للبرمجة ومتعدد اللغات؛ واختر Llama 3.3 70B للمهام العامة بالإنجليزية.',
             'تغطي Qwen وLlama وMistral مشهد المصدر المفتوح. لمقارنة تشمل البدائل التجارية — GPT-5.6 وClaude Opus 5 وGemini 3.5 — ومتى تختار المملوك مقابل المفتوح المصدر، راجع [كيفية اختيار نموذج الذكاء الاصطناعي المناسب](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
@@ -1283,7 +1302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Mistral Small 24B** يقدّم أعلى المعايير المطلقة من الثلاثة، لكنه يتطلب 14 GB من RAM. مثالي للأجهزة بسعة 16 GB أو أكثر حيث تهم الجودة أكثر من الهامش.',
             '**Qwen3 14B** هو أقوى نموذج برمجة في هذا المستوى القديم، بـ 71% في HumanEval باستخدام 8 GB من RAM. مثالي للمطورين بـ 12-16 GB من RAM الذين يُولون الأولوية لتوليد الكود.',
             '**Llama 3.1 8B** يملك أوسع دعم نظام بيئي — مزيد من الضبط الدقيق، ومزيد من الدروس، ومزيد من مساعدة المجتمع. مثالي للمستخدمين المبتدئين أو الفرق التي تحتاج إلى موارد مجتمعية واسعة.',
-            '**متى تُرقّي Mistral Small 24B ← Mistral Small 3.1 24B**: إذا كنت تحتاج إلى برمجة بالوكلاء (استخدم Devstral Small 24B)، أو إكمال تلقائي في IDE (استخدم Codestral 22B)، أو تحسينات جودة تدريجية بنفس بصمة RAM.',
+            '**متى تُرقّي Mistral Small 24B ← Mistral Small 3.1 24B**: إذا كنت تحتاج إلى برمجة بالوكلاء (استخدم Devstral Small 2)، أو إكمال تلقائي في IDE (استخدم Codestral 22B)، أو تحسينات جودة تدريجية بنفس بصمة RAM.',
             '**متى تُرقّي Qwen3 14B ← Qwen3 14B أو Qwen3.8-27B**: إذا كنت تحتاج إلى أداء في SWE-bench (يحصل Qwen3.8-27B على 61.7%، أفضل نموذج برمجة كثيف لعام 2026)، أو لديك بالفعل 16 GB من RAM، أو تحتاج إلى دعم أصلي لـ 29 لغة (وسّع Qwen 3 التغطية متعددة اللغات).',
             '**متى تُرقّي Llama 3.1 8B ← Llama 4 Scout**: فقط إذا كان لديك ~55 GB+ من VRAM بـ Q4 (يُفعّل MoE من 16 خبيرًا في Scout 17B/109B معامل لكنه يتطلب ~55 GB بـ Q4؛ يتسع في بطاقة رسوم بسعة 24 GB إلا بدقة 1.78 بت، ~20 token/ثانية) وتحتاج إلى سياق 10M token (مقابل 128K لـ Llama 3.3) أو إدخال متعدد الوسائط. على بطاقة رسوم استهلاكية واحدة بسعة 24 GB، Qwen3.8-27B (يتسع في 24 GB بـ Q4) هو الترقية الأفضل.',
             '**ابقَ على النماذج القديمة إذا**: بُني ضبطك الدقيق على Llama 3.1 8B أو Qwen 3 (تكلفة الترحيل تفوق الفائدة)، أو كان الاستقرار في الإنتاج يهم أكثر من المعايير (النماذج القديمة مختبرة في الميدان)، أو لم يتطلب عبء عملك القدرات الجديدة (دردشة عامة، تلخيص، أسئلة وأجوبة أساسية).',
@@ -1298,7 +1317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'regional-context',
           title: 'السياق الإقليمي: أي عائلة للاتحاد الأوروبي واليابان والصين؟',
           content: [
-            '**الامتثال للاتحاد الأوروبي وGDPR**: العائلات الثلاث (Qwen3، Llama 3.x/4، Mistral) تعمل بالكامل محليًا دون نقل بيانات خارجي، مما يضمن الامتثال لـ GDPR. لـ Mistral (فرنسية المنشأ، Mistral AI) أقوى موقف امتثال للاتحاد الأوروبي. Devstral Small 24B وCodestral 22B فرنسيان المنشأ (Mistral AI)، Apache 2.0 — أقوى نماذج برمجة أوروبية المنشأ متاحة. كلٌّ من Qwen3 (Apache 2.0) وLlama 3.x/4 يعملان جيدًا تحت متطلبات الشفافية لقانون الذكاء الاصطناعي الأوروبي وقابلية تدقيق المصدر المفتوح. يدعم Qwen3 أصليًا الألمانية والفرنسية ولغات الاتحاد الأوروبي الأخرى دون تدهور جودة. يؤثر الموعد النهائي لقانون الذكاء الاصطناعي الأوروبي في أغسطس 2026 في تصنيف هذه المستويات من النماذج.',
+            '**الامتثال للاتحاد الأوروبي وGDPR**: العائلات الثلاث (Qwen3، Llama 3.x/4، Mistral) تعمل بالكامل محليًا دون نقل بيانات خارجي، مما يضمن الامتثال لـ GDPR. لـ Mistral (فرنسية المنشأ، Mistral AI) أقوى موقف امتثال للاتحاد الأوروبي. Devstral Small 2 وCodestral 22B فرنسيان المنشأ (Mistral AI)، Apache 2.0 — أقوى نماذج برمجة أوروبية المنشأ متاحة. كلٌّ من Qwen3 (Apache 2.0) وLlama 3.x/4 يعملان جيدًا تحت متطلبات الشفافية لقانون الذكاء الاصطناعي الأوروبي وقابلية تدقيق المصدر المفتوح. يدعم Qwen3 أصليًا الألمانية والفرنسية ولغات الاتحاد الأوروبي الأخرى دون تدهور جودة. يؤثر الموعد النهائي لقانون الذكاء الاصطناعي الأوروبي في أغسطس 2026 في تصنيف هذه المستويات من النماذج.',
             '**اليابان والامتثال لـ METI**: يتماشى Qwen3 وLlama 3.x/4 مع إرشادات حوكمة الذكاء الاصطناعي المحلية لوزارة الاقتصاد والتجارة والصناعة (METI) في اليابان. لا تُطلب تقارير خاصة عند النشر على بنية تحتية خاصة داخل شبكات الشركات اليابانية. يستفيد Qwen3 من دعم قوي للغة اليابانية (تجزئة أصلية) ضمن لغاته الـ 29، مما يجعله مفضّلًا لأعباء العمل باليابانية. تمتثل Mistral أيضًا، لكنها أقل توثيقًا في سياقات حوكمة الذكاء الاصطناعي اليابانية. كفاءة MoE في Llama 4 Scout جذّابة للشركات اليابانية ذات الأجهزة المحدودة.',
             '**الصين ومتطلبات CAC**: يُفضَّل Qwen3 (Alibaba، محلي) على نطاق واسع للامتثال لـ CAC (إدارة الفضاء السيبراني في الصين). Qwen3 محسّن أصليًا لتجزئة الصينية دون تدهور في لغاته الـ 29 — ميزة حاسمة لدعم الماندارين واللهجات. كما يتوفر Kimi K2.6 (Moonshot AI، 1T إجمالي / 32B نشط MoE، ترخيص MIT معدّل) للبرمجة المؤسسية في الصين — أداء طليعي (58.6 SWE-Bench Pro)، ترخيص MIT معدّل. Llama وMistral مقبولان عند النشر على خوادم خاصة داخل الأراضي الصينية، لكن استدعاءات API السحابية تحمل تدقيق CAC أعلى ومتطلبات إقامة بيانات. للامتثال في الإشراف على المحتوى، يضمن إرث تدريب Qwen3 بالصينية المحاذاة مع سياسات المحتوى المحلية.',
           ],
@@ -1336,15 +1355,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'faq',
           title: 'الأسئلة الشائعة',
           faqs: [
-            { q: 'هل Qwen أم Llama أفضل لحالة استخدامي؟', a: 'الأفضل إجمالًا على الأجهزة الاستهلاكية: Qwen3.8-27B (61.7% SWE-bench، يتسع في 24 GB بـ Q4). للبرمجة والمهام متعددة اللغات: Qwen3.8-27B أو Qwen3 8B. للسياق الطويل (10M token) أو الإدخال متعدد الوسائط: Llama 4 Scout (يتطلب ~55 GB من VRAM بـ Q4). لأقصى جودة لكل GB من RAM: Mistral Small 3.1. اختبر بأوامر عينة من عبء عملك الفعلي.' },
+            { q: 'هل Qwen أم Llama أفضل لحالة استخدامي؟', a: 'الأفضل إجمالًا على الأجهزة الاستهلاكية: Qwen3.8-27B (61.7 SWE-bench Pro، يتسع في 24 GB بـ Q4). للبرمجة والمهام متعددة اللغات: Qwen3.8-27B أو Qwen3 8B. للسياق الطويل (10M token) أو الإدخال متعدد الوسائط: Llama 4 Scout (يتطلب ~55 GB من VRAM بـ Q4). لأقصى جودة لكل GB من RAM: Mistral Small 3.1. اختبر بأوامر عينة من عبء عملك الفعلي.' },
             { q: 'ما هو Llama 4 Scout وبماذا يختلف عن Llama 3.3؟', a: 'يستخدم Llama 4 Scout بنية Mixture-of-Experts (MoE) من 16 خبيرًا — 17B معامل نشط لكل token من إجمالي 109B، وهو متعدد الوسائط. يجب أن يقيم كل الخبراء في الذاكرة، لذا بـ Q4 يتطلب ~55 GB من VRAM (لا ~14 GB لنموذج كثيف بحجم 17B) ولا يتسع في بطاقة رسوم استهلاكية بسعة 24 GB بالتكميمات العادية — إلا بدقة 1.78 بت (~20 token/ثانية). جاذبيته هي نافذة سياق 10M token — الأوسع لأي نموذج قابل للتشغيل محليًا. Llama 3.3 70B نموذج كثيف يتطلب 40 GB من VRAM. على بطاقة رسوم واحدة بسعة 24 GB، Qwen3.8-27B هو الخيار العام الأفضل؛ اختر Scout للسياق الطويل أو متعدد الوسائط إذا كان لديك VRAM.' },
-            { q: 'هل أستخدم Qwen3 أم Qwen3؟', a: 'استخدم Qwen3 للمشاريع الجديدة. يحسّن Qwen3 8B على Qwen3 8B في معايير البرمجة والاستدلال. Qwen3.8-27B (61.7% SWE-bench) هو أفضل نموذج برمجة كثيف متاح. السبب الوحيد للبقاء على Qwen3 هو إذا كان لديك ضبط دقيق أو سير عمل قائم يعتمد على سلوكه المحدد. للتثبيتات الجديدة، ابدأ دائمًا بـ Qwen3.' },
+            { q: 'هل أستخدم Qwen3 أم Qwen3؟', a: 'استخدم Qwen3 للمشاريع الجديدة. يحسّن Qwen3 8B على Qwen3 8B في معايير البرمجة والاستدلال. Qwen3.8-27B (61.7 SWE-bench Pro) هو أفضل نموذج برمجة كثيف متاح. السبب الوحيد للبقاء على Qwen3 هو إذا كان لديك ضبط دقيق أو سير عمل قائم يعتمد على سلوكه المحدد. للتثبيتات الجديدة، ابدأ دائمًا بـ Qwen3.' },
             { q: 'كم Mistral أسرع على الأجهزة الاستهلاكية؟', a: 'يعمل Mistral Small 3.1 (24B) أسرع بـ 1.5-2× من Llama 3.1 8B على نفس الجهاز. لأعباء العمل الحساسة للأداء، Mistral Small هو الأسرع بـ 40-60 token/ثانية على بطاقة رسوم واحدة. Codestral 22B محسّن لـ FIM (الملء في الوسط) في سير عمل الإكمال التلقائي في IDE.' },
             { q: 'هل يمكن للثلاثة العمل بـ 8 GB من VRAM؟', a: 'نعم، يمكنها جميعًا تشغيل نماذج 7B بتكميم Q4 بـ 8 GB. يستخدم Qwen3 8B ~5 GB، وLlama 3.1 8B ~5.5 GB، وMistral Small ~4.5 GB بـ Q4_K_M. Llama 4 Scout (MoE) لا يتسع في 8 GB — يتطلب ~55 GB من VRAM بـ Q4.' },
             { q: 'هل أحتاج إلى RTX 5090 لتشغيلها؟', a: 'لا، ليس للخيارات الاستهلاكية. تشغّل RTX 5070 (12 GB) نماذج 7B بأريحية. بطاقة رسوم بسعة 24 GB تشغّل Qwen3.8-27B بـ Q4 (الأفضل إجمالًا على الأجهزة الاستهلاكية). يتطلب Llama 4 Scout ~55 GB بـ Q4 — فريق متعدد بطاقات الرسوم أو محطة عمل، لا بطاقة استهلاكية واحدة. RTX 5090 مبالغة ما لم تشغّل نماذج كثيفة بحجم 70B+.' },
             { q: 'أي تكميم ينبغي أن أستخدم؟', a: 'ابدأ بـ Q4_K_M (4 بت) -- توازن جيد بين الجودة والسرعة عبر جميع الأجهزة. استخدم Q5_K_M إذا كان لديك هامش VRAM وتحتاج إلى جودة أعلى. Q3_K_S للأجهزة محدودة الموارد.' },
-            { q: 'أيها أفضل للبرمجة؟', a: 'Qwen3 8B (~76% HumanEval) لمستوى 8 GB. Qwen3.8-27B (61.7% SWE-bench) لأفضل برمجة كثيفة. Devstral Small 24B لسير العمل بالوكلاء عبر ملفات متعددة. Codestral 22B للإكمال التلقائي في IDE (FIM).' },
-            { q: 'أي نموذج أستخدم بـ 16 GB من RAM؟', a: 'Mistral Small 3.1 24B بـ Q4_K_M (14 GB) -- أفضل جودة عامة بـ 16 GB من RAM (79% MMLU). بديلًا: Qwen3 14B بـ Q4_K_M (9 GB) للبرمجة مع هامش إضافي. يحتاج Qwen3.8-27B (أفضل برمجة كثيفة، 61.7% SWE-bench) إلى ~24 GB ولا يتسع في 16 GB. تجنّب Llama 3.3 70B في 16 GB -- يتطلب 40 GB.' },
+            { q: 'أيها أفضل للبرمجة؟', a: 'Qwen3 8B (~76% HumanEval) لمستوى 8 GB. Qwen3.8-27B (61.7 SWE-bench Pro) لأفضل برمجة كثيفة. Devstral Small 2 لسير العمل بالوكلاء عبر ملفات متعددة. Codestral 22B للإكمال التلقائي في IDE (FIM).' },
+            { q: 'أي نموذج أستخدم بـ 16 GB من RAM؟', a: 'Mistral Small 3.1 24B بـ Q4_K_M (14 GB) -- أفضل جودة عامة بـ 16 GB من RAM (79% MMLU). بديلًا: Qwen3 14B بـ Q4_K_M (9 GB) للبرمجة مع هامش إضافي. يحتاج Qwen3.8-27B (أفضل برمجة كثيفة، 61.7 SWE-bench Pro) إلى ~24 GB ولا يتسع في 16 GB. تجنّب Llama 3.3 70B في 16 GB -- يتطلب 40 GB.' },
+            { q: 'ما الذي تغيّر في Qwen وLlama وMistral منذ سبتمبر؟', a: 'يتوفر Qwen3.8 حالياً في Ollama بحجم 27B فقط (18 GB بتكميم Q4_K_M وسياق 256K)، لذا يبقى Qwen3 8B و14B أصغر خيارات Qwen. أما Devstral Small 2 (من Mistral AI، 24B، 15 GB، و65.8% في SWE-bench Verified بحسب Mistral، Apache 2.0) فهو وسم Devstral الحالي، وقد وصل Mistral Large 4 (1.05T معامل إجمالي / 52B نشط بحسب صفحته في Ollama) كنموذج بمقياس مراكز البيانات لا يتسع في العتاد الاستهلاكي. ويبقى Llama 4 Scout (نحو 55 GB بتكميم Q4) خيار السياق الطويل في هذه المقارنة. ترتيب العتاد الاستهلاكي أعلاه لم يتغير.' },
           ],
         },
         sources: {
@@ -1353,7 +1373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '[Qwen Team. (2026). Qwen3 Technical Report.](https://arxiv.org/abs/2505.09388) -- معايير عائلة Qwen3، SWE-bench لـ Qwen3.8-27B (61.7%)، متغيرات MoE.',
             '[Meta AI. (2025). Llama 4 Model Card.](https://llama.meta.com/) -- المعيار الرسمي وبنية Llama 4 Scout/Maverick MoE، نافذة سياق 10M.',
-            '[Mistral AI. (2026). Devstral Small 24B.](https://mistral.ai/) -- بنية ومعايير نموذج البرمجة بالوكلاء.',
+            '[Mistral AI. (2026). Devstral Small 2.](https://mistral.ai/) -- بنية ومعايير نموذج البرمجة بالوكلاء.',
             '[Mistral AI. (2025). Codestral.](https://mistral.ai/) -- نموذج البرمجة المحسّن لـ FIM للإكمال التلقائي في IDE.',
             '[Meta AI. (2024). Llama 3.3 Model Card.](https://llama.meta.com/) -- بيانات المعايير الرسمية لـ Llama 3.3 70B (قديم، لا يزال مستخدمًا كثيرًا).',
           ],
@@ -1370,7 +1390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Qwen 3 مقابل Llama 4 مقابل Mistral Small 24B: مقارنة المعايير 2026',
-        'description': 'مقارنة معايير كاملة: Qwen3.8-27B (61.7% SWE-bench، الأفضل بـ 24 GB)، Llama 4 Scout (MoE، سياق 10M، ~55 GB VRAM)، Mistral Small 24B + النماذج القديمة Mistral 24B/Qwen3 14B/Llama 3.1 8B.',
+        'description': 'مقارنة معايير كاملة: Qwen3.8-27B (61.7 SWE-bench Pro، الأفضل بـ 24 GB)، Llama 4 Scout (MoE، سياق 10M، ~55 GB VRAM)، Mistral Small 24B + النماذج القديمة Mistral 24B/Qwen3 14B/Llama 3.1 8B.',
         'url': 'https://www.promptquorum.com/ar/local-llms/qwen-vs-llama-vs-mistral',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -1411,14 +1431,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'مقارنة عائلات النماذج: Qwen3 وLlama 4 وMistral (يونيو 2026)',
+        'name': 'مقارنة عائلات النماذج: Qwen3 وLlama 4 وMistral',
         'numberOfItems': 10,
         'itemListElement': [
           {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Qwen3.8-27B',
-            'description': 'أفضل نموذج كثيف للبرمجة. 61.7% SWE-bench (ملفات متعددة في العالم الحقيقي)، 83% MMLU، 80% MATH، 29 لغة أصلية، 16 GB RAM (Q4_K_M).'
+            'description': 'أفضل نموذج كثيف للبرمجة. 61.7 SWE-bench Pro (ملفات متعددة في العالم الحقيقي)، 83% MMLU، 80% MATH، 29 لغة أصلية، 16 GB RAM (Q4_K_M).'
           },
           {
             '@type': 'ListItem',
@@ -1441,7 +1461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '@type': 'ListItem',
             'position': 5,
-            'name': 'Devstral Small 24B',
+            'name': 'Devstral Small 2',
             'description': 'الأفضل لسير عمل البرمجة بالوكلاء. مصمم لتحرير الملفات المتعددة واستدعاء الأدوات وحلقات التصحيح، 16 GB RAM.'
           },
           {
@@ -1485,7 +1505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'هل Qwen أم Llama أفضل لحالة استخدامي؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'الأفضل إجمالًا على الأجهزة الاستهلاكية: Qwen3.8-27B (61.7% SWE-bench، يتسع في 24 GB بـ Q4). للبرمجة والمهام متعددة اللغات: Qwen3.8-27B أو Qwen3 8B. للسياق الطويل (10M token) أو الإدخال متعدد الوسائط: Llama 4 Scout (يتطلب ~55 GB من VRAM بـ Q4). لأقصى جودة لكل GB من RAM: Mistral Small 3.1. اختبر بأوامر عينة من عبء عملك الفعلي.',
+              'text': 'الأفضل إجمالًا على الأجهزة الاستهلاكية: Qwen3.8-27B (61.7 SWE-bench Pro، يتسع في 24 GB بـ Q4). للبرمجة والمهام متعددة اللغات: Qwen3.8-27B أو Qwen3 8B. للسياق الطويل (10M token) أو الإدخال متعدد الوسائط: Llama 4 Scout (يتطلب ~55 GB من VRAM بـ Q4). لأقصى جودة لكل GB من RAM: Mistral Small 3.1. اختبر بأوامر عينة من عبء عملك الفعلي.',
             },
           },
           {
@@ -1501,7 +1521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'هل أستخدم Qwen3 أم Qwen3؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'استخدم Qwen3 للمشاريع الجديدة. يحسّن Qwen3 8B على Qwen3 8B في معايير البرمجة والاستدلال. Qwen3.8-27B (61.7% SWE-bench) هو أفضل نموذج برمجة كثيف متاح. السبب الوحيد للبقاء على Qwen3 هو إذا كان لديك ضبط دقيق أو سير عمل قائم يعتمد على سلوكه المحدد. للتثبيتات الجديدة، ابدأ دائمًا بـ Qwen3.',
+              'text': 'استخدم Qwen3 للمشاريع الجديدة. يحسّن Qwen3 8B على Qwen3 8B في معايير البرمجة والاستدلال. Qwen3.8-27B (61.7 SWE-bench Pro) هو أفضل نموذج برمجة كثيف متاح. السبب الوحيد للبقاء على Qwen3 هو إذا كان لديك ضبط دقيق أو سير عمل قائم يعتمد على سلوكه المحدد. للتثبيتات الجديدة، ابدأ دائمًا بـ Qwen3.',
             },
           },
           {
@@ -1541,7 +1561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'أيها أفضل للبرمجة؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 8B (~76% HumanEval) لمستوى 8 GB. Qwen3.8-27B (61.7% SWE-bench) لأفضل برمجة كثيفة. Devstral Small 24B لسير العمل بالوكلاء عبر ملفات متعددة. Codestral 22B للإكمال التلقائي في IDE (FIM).',
+              'text': 'Qwen3 8B (~76% HumanEval) لمستوى 8 GB. Qwen3.8-27B (61.7 SWE-bench Pro) لأفضل برمجة كثيفة. Devstral Small 2 لسير العمل بالوكلاء عبر ملفات متعددة. Codestral 22B للإكمال التلقائي في IDE (FIM).',
             },
           },
           {
@@ -1549,38 +1569,46 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'أي نموذج أستخدم بـ 16 GB من RAM؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mistral Small 3.1 24B بـ Q4_K_M (14 GB) -- أفضل جودة عامة بـ 16 GB من RAM (79% MMLU). بديلًا: Qwen3 14B بـ Q4_K_M (9 GB) للبرمجة مع هامش إضافي. يحتاج Qwen3.8-27B (أفضل برمجة كثيفة، 61.7% SWE-bench) إلى ~24 GB ولا يتسع في 16 GB. تجنّب Llama 3.3 70B في 16 GB -- يتطلب 40 GB.',
+              'text': 'Mistral Small 3.1 24B بـ Q4_K_M (14 GB) -- أفضل جودة عامة بـ 16 GB من RAM (79% MMLU). بديلًا: Qwen3 14B بـ Q4_K_M (9 GB) للبرمجة مع هامش إضافي. يحتاج Qwen3.8-27B (أفضل برمجة كثيفة، 61.7 SWE-bench Pro) إلى ~24 GB ولا يتسع في 16 GB. تجنّب Llama 3.3 70B في 16 GB -- يتطلب 40 GB.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الذي تغيّر في Qwen وLlama وMistral منذ سبتمبر؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يتوفر Qwen3.8 حالياً في Ollama بحجم 27B فقط (18 GB بتكميم Q4_K_M وسياق 256K)، لذا يبقى Qwen3 8B و14B أصغر خيارات Qwen. أما Devstral Small 2 (من Mistral AI، 24B، 15 GB، و65.8% في SWE-bench Verified بحسب Mistral، Apache 2.0) فهو وسم Devstral الحالي، وقد وصل Mistral Large 4 (1.05T معامل إجمالي / 52B نشط بحسب صفحته في Ollama) كنموذج بمقياس مراكز البيانات لا يتسع في العتاد الاستهلاكي. ويبقى Llama 4 Scout (نحو 55 GB بتكميم Q4) خيار السياق الطويل في هذه المقارنة. ترتيب العتاد الاستهلاكي أعلاه لم يتغير.',
             },
           },
         ],
       },
       gammaEmbedUrl: '/presentations/qwen-vs-llama-vs-mistral-static.html',
-      gammaDescription: 'يغطي العرض التقديمي أدناه: مقارنة معايير Qwen3.8-27B مقابل Llama 4 Scout مقابل Mistral (يونيو 2026 — SWE-bench، وقائع VRAM في MoE)، وأي نموذج يفوز حسب المهمة (الأفضل عام في 24 GB، البرمجة، متعدد اللغات، السياق الطويل، كفاءة RAM)، ومقارنة حسب الحجم تشمل مستوى MoE، وDevstral للبرمجة بالوكلاء، وCodestral لـ IDE، وأوامر البدء السريع مع Ollama. نزّل ملف PDF كبطاقة مرجعية لاختيار نماذج LLM المحلية.',
+      gammaDescription: 'يغطي العرض التقديمي أدناه: مقارنة معايير Qwen3.8-27B مقابل Llama 4 Scout مقابل Mistral (SWE-bench، وقائع VRAM في MoE)، وأي نموذج يفوز حسب المهمة (الأفضل عام في 24 GB، البرمجة، متعدد اللغات، السياق الطويل، كفاءة RAM)، ومقارنة حسب الحجم تشمل مستوى MoE، وDevstral للبرمجة بالوكلاء، وCodestral لـ IDE، وأوامر البدء السريع مع Ollama. نزّل ملف PDF كبطاقة مرجعية لاختيار نماذج LLM المحلية.',
     },
     pt: {
       freshness_tier: 'monthly',
       theme: 'Best Models',
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral: Comparação de LLM Local 2026',
       seoTitle: 'Qwen3.8-27B vs Llama 4 vs Mistral 2026: Qwen Vence',
-      intro: 'O Qwen3.8-27B é o melhor em geral em hardware de consumo: 61,7% no SWE-bench (melhor modelo denso), cabe em 24 GB a Q4. O Llama 4 Scout 17B (MoE, contexto de 10M, multimodal) é a opção para contexto longo/multimodal, mas requer ~55 GB de VRAM a Q4; o Mistral Small 3.1 24B oferece a melhor relação qualidade-RAM a 14 GB. Qwen3 se destaca em programação e 29 idiomas; Llama 4 Scout lidera em comprimento de contexto (10M tokens) e multimodal; Mistral maximiza a qualidade em hardware limitado. Os três executam em hardware de consumo via Ollama. Atualizado: junho de 2026.',
-      metaDescription: 'Qwen3.8-27B vence em código: 61,7% SWE-bench, cabe em 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU em 14 GB. Qual modelo vence.',
+      intro: 'O Qwen3.8-27B é o melhor em geral em hardware de consumo: 61,7 no SWE-bench Pro (melhor modelo denso), cabe em 24 GB a Q4. O Llama 4 Scout 17B (MoE, contexto de 10M, multimodal) é a opção para contexto longo/multimodal, mas requer ~55 GB de VRAM a Q4; o Mistral Small 3.1 24B oferece a melhor relação qualidade-RAM a 14 GB. Qwen3 se destaca em programação e 29 idiomas; Llama 4 Scout lidera em comprimento de contexto (10M tokens) e multimodal; Mistral maximiza a qualidade em hardware limitado. Os três executam em hardware de consumo via Ollama. Atualizado: junho de 2026.',
+      metaDescription: 'Qwen3.8-27B vence em código: 61,7 SWE-bench Pro, cabe em 24 GB. Llama 4 Scout: contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU em 14 GB. Qual modelo vence.',
       heroImage: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-pt.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
-      next_refresh_due: '2026-09-28',
-      leadAnswerBlock: '**O Qwen3.8-27B é o melhor em geral em hardware de consumo: líder em programação densa (61,7% SWE-bench), cabe em 24 GB a Q4. O Llama 4 Scout é a opção para contexto longo/multimodal (17B ativo, MoE, contexto 10M) mas requer ~55 GB de VRAM a Q4. O Mistral Small 3.1 24B oferece a melhor qualidade por VRAM a 14 GB.**',
+      dateModified: '2026-10-17',
+      next_refresh_due: '2026-11-16',
+      leadAnswerBlock: '**O Qwen3.8-27B é o melhor em geral em hardware de consumo: líder em programação densa (61,7 SWE-bench Pro), cabe em 24 GB a Q4. O Llama 4 Scout é a opção para contexto longo/multimodal (17B ativo, MoE, contexto 10M) mas requer ~55 GB de VRAM a Q4. O Mistral Small 3.1 24B oferece a melhor qualidade por VRAM a 14 GB.**',
       quickAnswerTop: {
         pt: {
           question: 'Qwen vs Llama vs Mistral — qual LLM local devo usar em 2026?', // VERIFY
-          answer: 'Junho de 2026: o Qwen3.8-27B é o melhor em geral em hardware de consumo (61,7% SWE-bench, cabe em 24 GB a Q4). O Llama 4 Scout é a opção para contexto longo/multimodal (17B ativo, contexto 10M) mas requer ~55 GB de VRAM a Q4. O Llama 3.3 70B continua forte para raciocínio em inglês. O Mistral Small 3.1 é o melhor para qualidade por RAM. Todos executam via Ollama.', // VERIFY
+          answer: 'O Qwen3.8-27B é o melhor em geral em hardware de consumo (61,7 SWE-bench Pro, cabe em 24 GB a Q4). O Llama 4 Scout é a opção para contexto longo/multimodal (17B ativo, contexto 10M) mas requer ~55 GB de VRAM a Q4. O Llama 3.3 70B continua forte para raciocínio em inglês. O Mistral Small 3.1 é o melhor para qualidade por RAM. Todos executam via Ollama.', // VERIFY
           bullets: [
-            'Qwen3.8-27B — melhor em geral em hardware de consumo, melhor programação densa (61,7% SWE-bench), cabe em 24 GB a Q4', // VERIFY
+            'Qwen3.8-27B — melhor em geral em hardware de consumo, melhor programação densa (61,7 SWE-bench Pro), cabe em 24 GB a Q4', // VERIFY
             'Llama 4 Scout 17B (MoE) — opção para contexto longo (10M tokens) e multimodal, ~55 GB de VRAM a Q4', // VERIFY
             'Mistral Small 3.1 24B — melhor relação qualidade-RAM (14 GB), 79% MMLU', // VERIFY
             'Para programação: Qwen3.8-27B ou Devstral. Para contexto longo/multimodal: Scout. Para RAM: Mistral.', // VERIFY
             'Todos via Ollama: ollama pull qwen3 / llama4 / mistral', // VERIFY
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-10-17',
         },
       },
       readTime: '12 min de leitura',
@@ -1588,37 +1616,252 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       primaryTerm: 'Qwen vs Llama vs Mistral 2026',
       toc: [
         { label: 'Principais conclusões', anchor: '#key-takeaways' },
+        { label: 'Visão geral das famílias', anchor: '#model-family-overview' },
+        { label: 'Comparação de benchmarks', anchor: '#benchmark-comparison' },
+        { label: 'Qwen3: pontos fortes e fracos', anchor: '#qwen3' },
+        { label: 'Llama 4: pontos fortes e fracos', anchor: '#llama-3' },
+        { label: 'Mistral: pontos fortes e fracos', anchor: '#mistral' },
+        { label: 'Chamada de ferramentas e raciocínio', anchor: '#tool-calling' },
+        { label: 'Qual família vence em cada tarefa?', anchor: '#which-family-wins-by-task' },
+        { label: 'Comparação por tamanho', anchor: '#size-for-size-comparison' },
+        { label: 'Legado: Mistral 24B vs Qwen3 14B vs Llama 8B', anchor: '#legacy-benchmark-reference' },
+        { label: 'Contexto regional', anchor: '#regional-context' },
+        { label: 'Erros comuns', anchor: '#common-mistakes' },
+        { label: 'Leituras relacionadas', anchor: '#related-reading' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
+        { label: 'Fontes', anchor: '#sources' },
       ],
       sections: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'Qwen3.8-27B vence na programação em hardware de consumidor (61,7% SWE-bench, cabe em 24 GB no Q4); Llama 4 Scout lidera em contexto longo e multimodal (10M de contexto, MoE, ~55 GB no Q4).' },
+            { type: 'one-sentence', text: 'Qwen3.8-27B vence na programação em hardware de consumidor (61,7 SWE-bench Pro, cabe em 24 GB no Q4); Llama 4 Scout lidera em contexto longo e multimodal (10M de contexto, MoE, ~55 GB no Q4).' },
             { type: 'plain-terms', text: 'Estas são três das famílias de modelos de IA open source mais populares para rodar localmente. Qwen3 (Alibaba) se destaca em programação, Llama 4 (Meta) lida com documentos muito longos e imagens, e Mistral (IA francesa) oferece modelos compactos eficientes. Todos são gratuitos e rodam offline.' },
           ],
           items: [
-            '**Qwen3.8-27B é o melhor em geral em hardware de consumo**: 61,7% SWE-bench (melhor modelo denso), cabe em 24 GB a Q4.',
+            '**Qwen3.8-27B é o melhor em geral em hardware de consumo**: 61,7 SWE-bench Pro (melhor modelo denso), cabe em 24 GB a Q4.',
             '**Llama 4 Scout 17B (MoE)**: melhor para contexto longo (10M tokens) e multimodal — mas requer ~55 GB de VRAM a Q4, não cabe em uma GPU de consumo de 24 GB com quantizações normais.',
             '**Mistral Small 3.1 24B**: melhor qualidade por GB de RAM (14 GB), 79% MMLU — ideal para hardware com pouca memória.',
-            '**Para programação**: Qwen3.8-27B (denso) ou Devstral Small 24B (agentivo, multi-arquivo).',
+            '**Para programação**: Qwen3.8-27B (denso) ou Devstral Small 2 (agentivo, multi-arquivo).',
             '**Para autocompletar em IDE**: Codestral 22B.',
             '**Todos via Ollama**: `ollama pull qwen3` / `ollama pull llama4` / `ollama pull mistral`.',
+          ],
+        },
+        legacyCallout: {
+          id: 'legacy-callout',
+          callouts: [
+            { type: 'info', text: '📌 Procurando a comparação anterior? Vá para os benchmarks legados de Mistral 24B vs Qwen3 14B vs Llama 3.1 8B mais abaixo.' },
+          ],
+        },
+        overview: {
+          itemHeadings: true,
+          id: 'model-family-overview',
+          title: 'Qual família de modelos de pesos abertos escolher?',
+          rows: [
+            { 'Família': 'Qwen3', 'Desenvolvedor': 'Alibaba', 'Versões atuais': 'Qwen3 (abril de 2026), Qwen3.8-27B (61,7 SWE-bench Pro, segundo a Qwen)', 'Licença': 'Apache 2.0 (maioria dos tamanhos)' },
+            { 'Família': 'Llama 4', 'Desenvolvedor': 'Meta', 'Versões atuais': 'Scout (17B ativos/109B MoE, 16 especialistas, contexto de 10M, multimodal, ~55 GB de VRAM em Q4), Maverick (17B ativos/400B MoE); legado: 3.3 70B', 'Licença': 'Llama Community (personalizada)' },
+            { 'Família': 'Mistral', 'Desenvolvedor': 'Mistral AI', 'Versões atuais': 'Small 3.1 (24B), Devstral Small 2 (agêntico), Codestral 22B (FIM/IDE)', 'Licença': 'Apache 2.0 (maioria dos tamanhos)' },
+          ],
+          columns: ['Família', 'Desenvolvedor', 'Versões atuais', 'Licença'],
+          content: 'Modelos da geração anterior (Qwen3, Llama 3.3) continuam disponíveis no Ollama e ainda são muito usados. Esta comparação foca nos modelos da geração atual. Pronto para rodar um? [Guia completo de instalação local do Qwen →](/pt/local-llms/run-qwen-locally-guide-2026)',
+        },
+        benchmarks: {
+          id: 'benchmark-comparison',
+          title: 'Como esses modelos se comparam nos benchmarks?',
+          rows: [
+            { 'Modelo': 'Qwen3.8-27B', 'MMLU': '—', 'SWE-bench': '61,7 (Pro)', 'MATH': '—', 'RAM (Q4_K_M)': '18 GB (placa de 24 GB)' },
+            { 'Modelo': 'Qwen3 72B', 'MMLU': '~85%', 'SWE-bench': '—', 'MATH': '~84%', 'RAM (Q4_K_M)': '43 GB' },
+            { 'Modelo': 'Llama 4 Scout 17B (MoE)', 'MMLU': '—', 'SWE-bench': '—', 'MATH': '—', 'RAM (Q4_K_M)': '~55 GB' },
+            { 'Modelo': 'Llama 3.3 70B (legado)', 'MMLU': '82%', 'SWE-bench': '—', 'MATH': '77%', 'RAM (Q4_K_M)': '40 GB' },
+            { 'Modelo': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'SWE-bench': '—', 'MATH': '65%', 'RAM (Q4_K_M)': '14 GB' },
+            { 'Modelo': 'Devstral Small 2', 'MMLU': '—', 'SWE-bench': '65,8% (Verified)', 'MATH': '—', 'RAM (Q4_K_M)': '15 GB' },
+            { 'Modelo': 'Qwen3 8B', 'MMLU': '~75%', 'SWE-bench': '—', 'MATH': '~55%', 'RAM (Q4_K_M)': '5 GB' },
+            { 'Modelo': 'Mistral Small v0.3', 'MMLU': '64%', 'SWE-bench': '—', 'MATH': '28%', 'RAM (Q4_K_M)': '4,5 GB' },
+          ],
+          columns: ['Modelo', 'MMLU', 'SWE-bench', 'MATH', 'RAM (Q4_K_M)'],
+          image: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-pt.webp',
+          imageCaption: 'Comparação de benchmarks: o Qwen3.8-27B (61,7 SWE-bench Pro, segundo a Qwen) lidera em programação com modelos densos e cabe em 24 GB a Q4. O SWE-bench (programação real em vários arquivos) é hoje mais relevante que o HumanEval para avaliar modelos de código. O Llama 4 Scout usa uma arquitetura MoE de 16 especialistas (17B ativos / 109B total), mas precisa de ~55 GB de VRAM a Q4.',
+          content: '**O SWE-bench (resolução de issues reais do GitHub) é o principal benchmark de programação em 2026** para avaliação prática. Ele testa mudanças em vários arquivos, compreensão da base de código e escrita de testes. O HumanEval (função Python única) continua útil para comparação, mas é secundário. MMLU e MATH avaliam conhecimento geral e raciocínio. Os benchmarks do Llama 4 Scout são limitados pelo lançamento recente e pela complexidade do MoE. Traços indicam benchmarks ainda não publicados ou não aplicáveis. As pontuações são divulgadas pelos fabricantes com protocolos diferentes; SWE-bench Pro e Verified são variantes distintas e não devem ser comparadas diretamente.',
+        },
+        qwen: {
+          id: 'qwen3',
+          title: 'Em quais tarefas o Qwen3 / Qwen3.8-27B se destaca?',
+          content: [
+            '**O Qwen3 (abril de 2026) e o Qwen3.8-27B (agosto de 2026), da Alibaba, lideram os benchmarks de programação.** A Qwen informa 61,7 no SWE-bench Pro e 89,2% no GPQA Diamond para o Qwen3.8-27B — o melhor modelo denso para código disponível — e, ao contrário do Qwen 3.6 27B que ele substituiu, é um modelo nativo de visão e linguagem (entende imagens e vídeo, não apenas texto). O Qwen3 72B continua liderando o MMLU, com ~85%. A família Qwen3 inclui modelos densos e variantes MoE (35B-A3B).',
+            '**Pontos fortes**: [programação](/pt/local-llms/best-local-llms-for-coding) (Python, JavaScript, SQL, líder no SWE-bench), raciocínio matemático (84% no MATH com 72B), suporte nativo a 29 idiomas, modo JSON, chamada de funções, janela de contexto de 128K em todos os tamanhos.',
+            '**Pontos fracos**: o estilo de seguimento de instruções em inglês pode soar menos natural que o do Llama ou do Mistral; alguns usuários relatam escrita criativa em inglês menos fluente. A origem na Alibaba gera preocupações com tratamento de dados para alguns usuários corporativos, apesar dos pesos abertos.',
+          ],
+          image: '/images/qwen-vs-llama-vs-mistral-multilingual-support-en.svg',
+          imageCaption: 'Suporte multilíngue do Qwen3: 29 idiomas nativos (chinês, japonês, coreano, árabe, alemão, francês e mais), enquanto Llama 3.x e Mistral são LLMs locais com foco em inglês.',
+        },
+        llama: {
+          id: 'llama-3',
+          title: 'Por que o Llama 4 Scout é a opção para contexto longo?',
+          content: [
+            '**O Llama 4 (abril de 2025) trouxe a arquitetura MoE para a família Llama.** O Scout (17B ativos / 109B total, 16 especialistas, multimodal) oferece uma janela de contexto de 10M tokens — a maior entre os modelos executáveis localmente — mas precisa de ~55 GB de VRAM a Q4 e não cabe em uma GPU de consumo de 24 GB com quantizações normais (somente a 1,78 bit, ~20 tok/s). O Maverick (17B ativos / 400B total) mira configurações com várias GPUs. O Llama 3.3 70B continua sendo o modelo denso mais testado em produção. Para o melhor desempenho geral em hardware de consumo, o Qwen3.8-27B (cabe em 24 GB a Q4) supera o Scout; escolha o Scout quando precisar do contexto de 10M ou da entrada multimodal.',
+            '**Pontos fortes**: janela de contexto de 10M (Scout), entrada multimodal, melhor seguimento de instruções e escrita criativa em inglês, o maior suporte de ecossistema entre as famílias abertas, Llama 3.3 70B ainda muito ajustado (fine-tuned).',
+            '**Pontos fracos**: a alta demanda de VRAM (~55 GB a Q4) deixa o Scout fora do alcance de uma única GPU de consumo de 24 GB com quantizações normais; sem suporte multilíngue nativo (o Qwen3 ainda lidera com ampla vantagem em idiomas não ingleses); benchmarks do Llama 4 Scout ainda surgindo. O Llama 3.3 70B e o Llama 3.1 8B continuam disponíveis e são as bases mais ajustadas.',
+          ],
+        },
+        mistral: {
+          id: 'mistral',
+          title: 'Qual é a maior vantagem da Mistral?',
+          content: [
+            '**A Mistral AI produz os modelos mais eficientes em parâmetros desta comparação e agora oferece variantes especializadas.** O Mistral Small 3.1, com 24B, entrega pontuações próximas às da classe de 70B exigindo só 14 GB de RAM — a melhor relação qualidade/RAM. O Devstral Small 2 (Mistral AI, 24B, 15 GB) foi feito para programação agêntica — edições em vários arquivos, chamada de ferramentas e ciclos de depuração. O Codestral 22B é o modelo da Mistral otimizado para FIM no autocompletar de IDE — o recomendado para integrações com Continue.dev e Cursor.',
+            '**Pontos fortes**: melhor relação qualidade/RAM (Small 3.1), Devstral para programação agêntica, Codestral para IDE/FIM, boa chamada de funções e uso de ferramentas, licença Apache 2.0 limpa nos modelos principais, origem europeia (França).',
+            '**Pontos fracos**: o Mistral Small v0.3 é hoje superado em benchmarks pelo Qwen3 8B e pelo Llama 3.1 8B; menos opções de tamanho no topo do que Qwen ou Llama (embora a especialização compense em parte).',
+          ],
+          image: '/images/qwen-vs-llama-vs-mistral-overview-hero-pt.webp',
+          imageCaption: 'Eficiência do Mistral Small 3.1: 79% no MMLU com 14 GB de RAM, contra Llama 3.3 70B (82% / 40 GB) e Qwen3 72B (85% / 43 GB) — qualidade próxima à de 70B com 33% do custo de RAM. Além disso: Devstral (agêntico) e Codestral (autocompletar em IDE).',
+        },
+        toolCalling: {
+          id: 'tool-calling',
+          title: 'Comparação de chamada de ferramentas e raciocínio',
+          content: 'A chamada de ferramentas (function calling) permite que um modelo acione APIs e ferramentas externas em fluxos agênticos. As três famílias a suportam nativamente.',
+          rows: [
+            { 'Modelo': 'Qwen3 72B', 'Chamada de ferramentas': '✅ Nativa', 'Raciocínio (MATH)': '83%', 'Ideal para': 'Agentes complexos de várias etapas' },
+            { 'Modelo': 'Llama 3.3 70B', 'Chamada de ferramentas': '✅ Nativa', 'Raciocínio (MATH)': '77%', 'Ideal para': 'Fluxos agênticos em inglês' },
+            { 'Modelo': 'Mistral Small 3.1 24B', 'Chamada de ferramentas': '✅ Nativa, bem testada', 'Raciocínio (MATH)': '65%', 'Ideal para': 'Uso de ferramentas em produção com 16 GB' },
+            { 'Modelo': 'Qwen3 14B', 'Chamada de ferramentas': '✅ Nativa', 'Raciocínio (MATH)': '70%', 'Ideal para': 'Chamada de ferramentas econômica' },
+            { 'Modelo': 'Llama 3.2 3B', 'Chamada de ferramentas': '✅ Nativa', 'Raciocínio (MATH)': '51%', 'Ideal para': 'Agentes leves' },
+            { 'Modelo': 'Mistral Small v0.3', 'Chamada de ferramentas': '⚠️ Limitada', 'Raciocínio (MATH)': '28%', 'Ideal para': 'Não recomendado para uso de ferramentas' },
+          ],
+          columns: ['Modelo', 'Chamada de ferramentas', 'Raciocínio (MATH)', 'Ideal para'],
+          note: 'Para tarefas pesadas em raciocínio (matemática, lógica, revisão de código): o DeepSeek-R1 (licença MIT, 7B-32B) supera as três famílias nos benchmarks de MATH. Considere-o junto com elas em fluxos analíticos. (A DeepSeek lançou depois o DeepSeek-V4 — Flash/Pro — como geração mais nova de pesos abertos; R1/V3 continuam válidos para rodar localmente.)',
+        },
+        byTask: {
+          id: 'which-family-wins-by-task',
+          title: 'Qual família de modelos vence em cada tarefa?',
+          rows: [
+            { 'Tarefa': 'Programação Python / JavaScript (geração)', 'Vencedor': 'Qwen3.8-27B', 'Por quê': '61,7 SWE-bench Pro — melhor modelo denso para código' },
+            { 'Tarefa': 'Programação agêntica (vários arquivos, depuração)', 'Vencedor': 'Mistral (Devstral)', 'Por quê': 'Feito para fluxos agênticos' },
+            { 'Tarefa': 'Autocompletar em IDE (FIM)', 'Vencedor': 'Mistral (Codestral)', 'Por quê': 'Otimizado para FIM, suporte a Continue.dev/Cursor' },
+            { 'Tarefa': 'Perguntas gerais (inglês)', 'Vencedor': 'Llama 3.3 / Qwen3 (empate)', 'Por quê': 'Ambos fazem 82-85% no MMLU com 70B' },
+            { 'Tarefa': 'Raciocínio matemático', 'Vencedor': 'Qwen3', 'Por quê': '84% no MATH com 72B contra 77% do Llama 3.3 70B' },
+            { 'Tarefa': 'Idiomas além do inglês', 'Vencedor': 'Qwen3', 'Por quê': '29 idiomas nativos; Llama e Mistral focam em inglês' },
+            { 'Tarefa': 'Escrita criativa (inglês)', 'Vencedor': 'Llama 3.x/4', 'Por quê': 'Estilo de geração em inglês mais natural' },
+            { 'Tarefa': 'Qualidade com 16 GB de RAM', 'Vencedor': 'Mistral Small 3.1', 'Por quê': 'Qualidade próxima à de 70B com 14 GB de RAM' },
+            { 'Tarefa': 'Tarefas de contexto longo (10M+ tokens)', 'Vencedor': 'Llama 4 Scout', 'Por quê': 'Janela de 10M tokens — nenhum concorrente iguala' },
+            { 'Tarefa': 'Primeiro modelo para iniciantes', 'Vencedor': 'Llama 3.2 3B', 'Por quê': 'Mais documentação e apoio da comunidade' },
+          ],
+          columns: ['Tarefa', 'Vencedor', 'Por quê'],
+          image: '/images/qwen-vs-llama-vs-mistral-task-winners-en.svg',
+          imageCaption: 'Matriz de vencedores por tarefa: o Qwen3.8-27B vence em programação densa (61,7 SWE-bench Pro); o Devstral vence em agêntico; o Codestral vence em autocompletar de IDE; o Llama 4 Scout domina contexto longo; o Mistral Small 3.1 tem a melhor qualidade por GB.',
+          content: [
+            'Escolher o modelo é a primeira etapa; o design do prompt é a segunda. O mesmo prompt pode gerar resultados muito diferentes em Qwen, Llama e Mistral. Para técnicas sistemáticas que dão resultados consistentes em qualquer família, veja o [guia de engenharia de prompts](https://www.promptquorum.com/pt/prompt-engineering).',
+          ],
+        },
+        sizeBySizeComparison: {
+          id: 'size-for-size-comparison',
+          title: 'Como os modelos se comparam na mesma escala?',
+          content: [
+            '**Classe 3B-4B**: Qwen3 3B e Phi-4 Mini 3.8B superam o Llama 3.2 3B em programação e matemática. Para uso geral em inglês, o Llama 3.2 3B é mais confiável.',
+            '**Classe 7B-8B**: Qwen3 8B (~5 GB) e Llama 3.1 8B (~5,5 GB) superam bastante o Mistral Small v0.3. O Qwen3 8B lidera em [programação](/pt/local-llms/best-local-llms-for-coding); o Llama 3.1 8B lidera em seguimento de instruções em inglês.',
+            '**Classe 14B-24B**: Qwen3 14B e Mistral Small 3.1 24B são as principais opções. O Mistral Small 3.1 é mais forte no geral, apesar de exigir mais RAM. O Devstral Small 2 é a melhor escolha para quem faz programação agêntica nessa faixa.',
+            '**Classe MoE**: Llama 4 Scout (17B ativos / 109B total, 16 especialistas) e Qwen3.6-35B-A3B (3B ativos / 35B total) usam Mixture-of-Experts — só uma fração dos parâmetros é ativada por token. O Scout precisa de ~55 GB de VRAM a Q4 (cabe em uma GPU de 24 GB só a 1,78 bit, ~20 tok/s), então é uma opção de contexto longo/multimodal e não de eficiência em VRAM de consumo; as variantes MoE menores são bem mais amigáveis à VRAM. O gpt-oss:20b (21B total / 3,6B ativos, MoE) também roda em 16 GB com raciocínio ajustável.',
+            '**Classe 70B-72B**: Llama 3.3 70B e Qwen3 72B são os melhores modelos densos executáveis localmente em 2026. Escolha o Qwen3 72B para programação e multilíngue; o Llama 3.3 70B para tarefas gerais em inglês.',
+            'Qwen, Llama e Mistral cobrem o cenário open source. Para uma comparação que inclua alternativas comerciais — GPT-5.6, Claude Opus 5 e Gemini 3.5 — e quando escolher proprietário em vez de aberto, veja [como escolher o modelo de IA certo](https://www.promptquorum.com/pt/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
+          ],
+          image: '/images/qwen-vs-llama-vs-mistral-size-classes-en.svg',
+          imageCaption: 'Cinco classes de LLM local: 3-4B (Llama 3.2 3B, ~2 GB), 7-8B (Qwen3 8B, ~5 GB), MoE de contexto longo (Llama 4 Scout, ~55 GB a Q4), 14-24B (Mistral Small 3.1, ~14 GB), 70-72B (Qwen3 72B, ~43 GB) — todas executáveis via Ollama.',
+        },
+        legacyBenchmark: {
+          id: 'legacy-benchmark-reference',
+          title: 'Mistral Small 24B vs Qwen3 14B vs Llama 3.1 8B: referência de benchmarks legados',
+          content: 'Muitos desenvolvedores ainda usam a geração anterior: Mistral Small 24B (2024), Qwen3 14B (2024) e Llama 3.1 8B (2024). Esses modelos continuam disponíveis no Ollama e muito usados em produção. Esta seção os compara diretamente para equipes que ainda não migraram e explica quando vale atualizar para Qwen 3, Llama 4 ou Mistral atual.',
+          columns: ['Modelo', 'Parâmetros', 'RAM (Q4_K_M)', 'MMLU', 'HumanEval', 'Ideal para'],
+          rows: [
+            { 'Modelo': 'Mistral Small 24B', 'Parâmetros': '24B denso', 'RAM (Q4_K_M)': '14 GB', 'MMLU': '79%', 'HumanEval': '73%', 'Ideal para': 'Melhor qualidade por RAM (faixa legada)' },
+            { 'Modelo': 'Qwen3 14B', 'Parâmetros': '14B denso', 'RAM (Q4_K_M)': '8 GB', 'MMLU': '73%', 'HumanEval': '71%', 'Ideal para': 'Programação em hardware intermediário' },
+            { 'Modelo': 'Llama 3.1 8B', 'Parâmetros': '8B denso', 'RAM (Q4_K_M)': '5 GB', 'MMLU': '68%', 'HumanEval': '65%', 'Ideal para': 'Mais documentado, início mais fácil' },
+          ],
+          items: [
+            '**O Mistral Small 24B** entrega os maiores benchmarks absolutos dos três, mas exige 14 GB de RAM. Ideal para máquinas de 16 GB+ em que a qualidade importa mais que a folga.',
+            '**O Qwen3 14B** é o modelo de programação mais forte desta faixa legada, com 71% no HumanEval e 8 GB de RAM. Ideal para quem desenvolve em máquinas de 12-16 GB de RAM e prioriza geração de código.',
+            '**O Llama 3.1 8B** tem o suporte de ecossistema mais amplo — mais fine-tunes, tutoriais e ajuda da comunidade. Ideal para iniciantes ou equipes que precisam de muitos recursos da comunidade.',
+            '**Quando migrar do Mistral Small 24B para o Mistral Small 3.1 24B**: se precisar de programação agêntica (use o Devstral Small 2), autocompletar em IDE (use o Codestral 22B) ou ganhos incrementais de qualidade com a mesma RAM.',
+            '**Quando migrar do Qwen3 14B para o Qwen3.8-27B**: se precisar de desempenho no SWE-bench (61,7 SWE-bench Pro segundo a Qwen), tiver uma placa de 24 GB ou um Mac de 32 GB, ou precisar de suporte nativo a 29 idiomas.',
+            '**Quando migrar do Llama 3.1 8B para o Llama 4 Scout**: só se tiver ~55 GB+ de VRAM a Q4 (o MoE de 16 especialistas ativa 17B/109B parâmetros, mas precisa de ~55 GB a Q4; cabe em uma GPU de 24 GB só a 1,78 bit, ~20 tok/s) e precisar do contexto de 10M tokens (contra 128K do Llama 3.3) ou da entrada multimodal. Em uma única GPU de consumo de 24 GB, o Qwen3.8-27B é a melhor atualização.',
+            '**Fique nos modelos legados se**: seus fine-tunes são baseados no Llama 3.1 8B ou no Qwen 3 (custo de migração > benefício), a estabilidade em produção importa mais que benchmarks, ou sua carga de trabalho não exige as novas capacidades (chat geral, resumo, perguntas e respostas básicas).',
+            '**Matriz rápida de decisão para usuários legados**:',
+            '• **Tem 8 GB de RAM, faz chat geral**: fique no Llama 3.1 8B ou no Mistral Small v0.3.',
+            '• **Tem 12-16 GB de RAM, faz programação**: fique no Qwen3 14B ou suba para o Devstral Small 2 (15 GB); o Qwen3.8-27B exige uma placa de 24 GB.',
+            '• **Tem 16+ GB de RAM e quer a melhor qualidade**: migre do Mistral 24B para o Mistral Small 3.1 24B (geral) ou o Devstral Small 2 (programação agêntica).',
+            '• **Tem 24 GB de VRAM**: use o Qwen3.8-27B para o melhor desempenho geral em hardware de consumo. Reserve o Llama 4 Scout (MoE, contexto de 10M, ~55 GB a Q4) para estações com várias GPUs que precisem de contexto longo ou entrada multimodal.',
+          ],
+        },
+        regionalContext: {
+          id: 'regional-context',
+          title: 'Contexto regional: qual família para UE, Japão, China e Brasil',
+          content: [
+            '**UE e RGPD**: as três famílias (Qwen3, Llama 3.x/4, Mistral) rodam totalmente em local, sem transmissão externa de dados, o que apoia — mas por si só não garante — a conformidade com o RGPD. A Mistral (origem francesa) tem a postura de conformidade mais favorável na UE. O Devstral Small 2 (Apache 2.0) e o Codestral 22B são de origem francesa; para o Codestral, confira os termos de licença. Qwen3 (Apache 2.0) e Llama 3.x/4 funcionam igualmente bem em auditoria e transparência de código aberto. O Qwen3 suporta alemão, francês e outros idiomas da UE sem perda de qualidade. Verifique as obrigações do AI Act da UE aplicáveis ao seu uso antes de lançar comercialmente.',
+            '**Brasil (LGPD)**: rodar o modelo localmente mantém código proprietário e dados de clientes dentro da infraestrutura da organização, o que reduz a exposição a transferências internacionais de dados sob a LGPD (Lei nº 13.709/2018). A conformidade depende da base legal, das medidas técnicas e organizacionais da empresa — não só do software. O Qwen3 funciona bem com português do Brasil; a Mistral também tem bom suporte ao português.',
+            '**Japão e METI**: Qwen3 e Llama 3.x/4 estão alinhados às diretrizes de governança de IA do METI para IA local. Nenhum relatório especial é exigido ao implantar em infraestrutura privada dentro de redes corporativas japonesas. O Qwen3 tem forte suporte ao japonês (tokenização nativa) entre seus 29 idiomas, o que o torna preferido para cargas de trabalho em japonês.',
+            '**China e CAC**: o Qwen3 (Alibaba, doméstico) é fortemente preferido para a conformidade com a CAC (Administração do Ciberespaço da China), com otimização nativa para tokenização em chinês. O Kimi K2.6 (Moonshot AI, MoE de 1T total / 32B ativos, licença MIT modificada) também é de origem chinesa, mas o Ollama o lista apenas como tag em nuvem e a execução local exige hardware de servidor (300+ GB). Llama e Mistral são aceitáveis em servidores privados em território chinês, mas chamadas de API em nuvem têm escrutínio mais rígido da CAC.',
+          ],
+        },
+        commonMistakes: {
+          id: 'common-mistakes',
+          title: 'Erros comuns ao escolher famílias de modelos',
+          items: [
+            'Comparar modelos com contagens de parâmetros diferentes — Qwen 32B vs Llama 70B não é um teste equivalente.',
+            'Ler errado a VRAM de modelos MoE. O Llama 4 Scout tem 109B de parâmetros totais mas só 17B ativos por token — ainda assim, a Q4 precisa de ~55 GB de VRAM (todos os especialistas ficam residentes), e não dos ~14 GB de um modelo denso de 17B. Não cabe em uma GPU de consumo de 24 GB com quantizações normais (só a 1,78 bit, ~20 tok/s). Compare pela VRAM real e pelo benchmark, não pelos parâmetros ativos.',
+            'Ficar nos tamanhos antigos do Qwen3 quando o hardware aguenta o Qwen3.8-27B. O Qwen3.8 hoje só existe como modelo de 27B (18 GB no Ollama), então Qwen3 8B e 14B continuam certos para máquinas menores; com uma placa de 24 GB ou um Mac de 32 GB, migre para o Qwen3.8-27B, a menos que um fine-tune prenda você ao Qwen3.',
+            'Ignorar os modelos específicos da Mistral. A Mistral tem hoje três linhas distintas: Small 3.1 (geral), Devstral (programação agêntica) e Codestral (autocompletar em IDE). Escolher "Mistral" sem dizer qual modelo para qual tarefa desperdiça a principal vantagem da família — a especialização.',
+            'Ignorar benchmarks multilíngues ao escolher entre modelos se a sua carga de trabalho é multilíngue.',
+            'Deixar de lado o Mistral Small 3.1: muitos usuários o descartam por achar que exige 30+ GB de RAM. Ele cabe com quantização Q5 em 22 GB e supera o Llama 3.1 8B em muitas tarefas.',
+          ],
+        },
+        relatedReading: {
+          id: 'related-reading',
+          title: 'Leituras relacionadas',
+          items: [
+            '[Melhores LLMs locais em 2026](/pt/local-llms/best-local-llms-2026) -- Ranking geral dos melhores modelos atuais',
+            '[Melhores modelos de LLM local para iniciantes](/pt/local-llms/best-beginner-local-llm-models) -- Modelos de base para quem está começando',
+            '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) -- Primeiros passos com qualquer modelo',
+            '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) -- Entendendo os formatos dos modelos',
+            '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) -- Escolha de GPU e VRAM para cada tamanho de modelo',
+            '[Rodar LLMs locais em um notebook](/pt/local-llms/local-llm-on-laptop) -- Guia somente com CPU para notebooks e desktops',
+            '[Melhores LLMs locais para programação](/pt/local-llms/best-local-llms-for-coding) -- Qwen3.8-27B vs Devstral vs Llama em benchmarks de código',
+            '[LLMs locais de contexto longo 2026](/pt/local-llms/long-context-local-llms) -- Modelos com 100K+ de contexto para análise de documentos',
+            '[Prompting em cadeia de pensamento](/pt/prompt-engineering/chain-of-thought-prompting) -- Melhora o raciocínio nas três famílias',
+            '[Open source vs LLMs proprietários](/pt/prompt-engineering/open-source-vs-proprietary-llms) -- Quando modelos locais igualam as APIs em nuvem',
+            '[Guia de licenciamento de LLM local para empresas (2026)](/pt/local-llms/local-llm-commercial-license-guide-business) -- Termos de licença comercial de Llama, Qwen, Mistral e Gemma antes de implantar',
           ],
         },
         faqSection: {
           id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
-            { q: 'Qwen ou Llama é melhor para meu caso de uso?', a: 'Melhor em geral em hardware de consumo: Qwen3.8-27B (61,7% SWE-bench, cabe em 24 GB a Q4). Para programação e multilíngue: Qwen3.8-27B ou Qwen3 8B. Para contexto longo (10M tokens) ou multimodal: Llama 4 Scout (requer ~55 GB de VRAM a Q4). Para máxima qualidade por GB de RAM: Mistral Small 3.1.' },
+            { q: 'Qwen ou Llama é melhor para meu caso de uso?', a: 'Melhor em geral em hardware de consumo: Qwen3.8-27B (61,7 SWE-bench Pro, cabe em 24 GB a Q4). Para programação e multilíngue: Qwen3.8-27B ou Qwen3 8B. Para contexto longo (10M tokens) ou multimodal: Llama 4 Scout (requer ~55 GB de VRAM a Q4). Para máxima qualidade por GB de RAM: Mistral Small 3.1.' },
             { q: 'O que é o Llama 4 Scout e como ele difere do Llama 3.3?', a: 'O Llama 4 Scout usa uma arquitetura Mixture-of-Experts (MoE) de 16 especialistas — 17B parâmetros ativos por token de um total de 109B, e é multimodal. Todos os especialistas devem residir na memória, então a Q4 requer ~55 GB de VRAM (não os ~14 GB de um modelo denso de 17B). Sua atração é a janela de contexto de 10M tokens. O Llama 3.3 70B é denso (40 GB).' },
-            { q: 'Devo usar Qwen3 ou Qwen3?', a: 'Use o Qwen3 para projetos novos. O Qwen3 8B melhora o Qwen3 8B em benchmarks de programação e raciocínio. O Qwen3.8-27B (61,7% SWE-bench) é o melhor modelo de programação denso disponível. Use o Qwen3 apenas se você tiver um fine-tuning ou fluxo de trabalho que depende dele.' },
+            { q: 'Devo continuar no Qwen3 ou migrar para o Qwen3.8?', a: 'Migre para o Qwen3.8-27B (61,7 no SWE-bench Pro, segundo a Qwen) se tiver uma GPU de 24 GB ou um Mac de 32 GB; é o melhor modelo denso para código desta comparação. O Qwen3.8 hoje só existe no Ollama como modelo de 27B (18 GB), então Qwen3 8B e 14B continuam sendo as escolhas Qwen certas para máquinas de 8–16 GB. Fique no Qwen3 apenas se um fine-tune ou fluxo existente depender do comportamento dele.' },
+            { q: 'O que mudou para Qwen, Llama e Mistral desde setembro?', a: 'O Qwen3.8 hoje só existe no Ollama como modelo de 27B (18 GB em Q4_K_M, contexto de 256K), então Qwen3 8B e 14B continuam sendo as opções menores do Qwen. O Devstral Small 2 (Mistral AI, 24B, 15 GB, 65,8% no SWE-bench Verified segundo a Mistral, Apache 2.0) é a tag atual do Devstral, e o Mistral Large 4 (1,05T de parâmetros totais / 52B ativos, segundo sua página no Ollama) chegou como modelo em escala de datacenter que não cabe em hardware de consumo. O Llama 4 Scout (cerca de 55 GB em Q4) continua sendo a opção de contexto longo desta comparação. O ranking para hardware de consumo acima não muda.' },
             { q: 'O Mistral é mais rápido em hardware de consumo?', a: 'O Mistral Small 3.1 (24B) executa 1,5–2× mais rápido que o Llama 3.1 8B. Para velocidade, o Mistral Small é o mais rápido com 40–60 tok/seg. O Codestral 22B é otimizado para FIM (fill-in-the-middle) em fluxos de trabalho de autocompletar em IDE.' },
             { q: 'Os três podem executar com 8 GB de VRAM?', a: 'Sim, todos podem executar modelos de 7B-8B a quantização Q4 com 8 GB. O Qwen3 8B usa ~5 GB, o Llama 3.1 8B usa ~5,5 GB, o Mistral Small usa ~4,5 GB a Q4_K_M. O Llama 4 Scout (MoE) NÃO cabe em 8 GB — requer ~55 GB de VRAM a Q4.' },
-            { q: 'Qual é melhor para programação?', a: 'Qwen3 8B (~76% HumanEval) para o nível de 8 GB. Qwen3.8-27B (61,7% SWE-bench) para a melhor programação densa. Devstral Small 24B para fluxos de trabalho agentivos em múltiplos arquivos. Codestral 22B para autocompletar em IDE (FIM).' },
+            { q: 'Qual é melhor para programação?', a: 'Qwen3 8B (~76% HumanEval) para o nível de 8 GB. Qwen3.8-27B (61,7 SWE-bench Pro) para a melhor programação densa. Devstral Small 2 para fluxos de trabalho agentivos em múltiplos arquivos. Codestral 22B para autocompletar em IDE (FIM).' },
             { q: 'Qual modelo devo usar com 24 GB de RAM?', a: 'Mistral Small 3.1 24B a Q4_K_M (14 GB) — melhor qualidade geral a 24 GB de RAM (79% MMLU). Alternativa: Qwen3.8-27B a Q4_K_M (24 GB) para a melhor programação.' },
             { q: 'O Qwen é melhor que o Llama para raciocínio?', a: 'O Qwen3 72B obtém 84% no MATH vs 77% para o Llama 3.3 70B — uma vantagem de 7 pontos. Para MMLU: Qwen3 72B 85% vs Llama 3.3 70B 82% — bem próximos. O Qwen vence em raciocínio; o Llama 3.3 vence em seguimento de instruções em inglês.' },
+          ],
+        },
+        sources: {
+          id: 'sources',
+          title: 'Fontes',
+          items: [
+            '[Equipe Qwen. (2026). Qwen3 Technical Report.](https://arxiv.org/abs/2505.09388) -- Benchmarks da família Qwen3 e variantes MoE.',
+            '[Qwen. (2026). Qwen3.8-27B (model card).](https://huggingface.co/Qwen/Qwen3.8-27B) -- 61,7 SWE-bench Pro, Apache 2.0, contexto de 256K.',
+            '[Meta AI. (2025). Llama 4 Model Card.](https://llama.meta.com/) -- Benchmarks e arquitetura oficiais do Llama 4 Scout/Maverick MoE, contexto de 10M.',
+            '[Ollama. (2026). devstral-small-2.](https://ollama.com/library/devstral-small-2) -- 15 GB, SWE-bench Verified 65,8%, requer Ollama 0.13.3 ou superior.',
+            '[Mistral AI. (2025). Codestral.](https://mistral.ai/) -- Modelo de programação otimizado para FIM no autocompletar de IDE.',
+            '[Meta AI. (2024). Llama 3.3 Model Card.](https://llama.meta.com/) -- Dados oficiais de benchmark do Llama 3.3 70B (legado, ainda muito usado).',
+          ],
+        },
+        updateLog: {
+          id: 'update-log',
+          title: 'Registro de atualizações',
+          items: [
+            '**2026-10-17:** Seções completas adicionadas em português (visão geral, benchmarks, pontos fortes e fracos, ferramentas, tarefas, tamanhos, contexto regional, erros comuns), tamanho e benchmark do Devstral Small 2 corrigidos, tamanho do Qwen3.8-27B esclarecido (18 GB) e FAQ sobre lançamentos recentes.',
           ],
         },
       },
@@ -1637,14 +1880,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'Comparação de Famílias de Modelos: Qwen3, Llama 4 e Mistral (Junho de 2026)',
+        'name': 'Comparação de Famílias de Modelos: Qwen3, Llama 4 e Mistral ',
         'numberOfItems': 10,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Qwen3.8-27B', 'description': 'Melhor modelo denso para programação. 61,7% SWE-bench (multi-arquivo do mundo real), visão-linguagem nativa, 29 idiomas nativos, 24 GB de RAM (Q4_K_M).' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Qwen3.8-27B', 'description': 'Melhor modelo denso para programação. 61,7 SWE-bench Pro (multi-arquivo do mundo real), visão-linguagem nativa, 29 idiomas nativos, 24 GB de RAM (Q4_K_M).' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Qwen3 72B', 'description': 'Melhor para multilíngue + raciocínio. 85% MMLU, 84% MATH, 29 idiomas nativos, 43 GB de RAM (Q4_K_M).' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Llama 4 Scout 17B (MoE)', 'description': 'Melhor para contexto longo e multimodal. 17B ativos / 109B total, 16 especialistas, contexto de 10M tokens, multimodal, ~55 GB de VRAM a Q4 (cabe em 24 GB apenas a 1,78-bit).' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Mistral Small 3.1 24B', 'description': 'Melhor qualidade por GB de RAM. 79% MMLU, 74% HumanEval, qualidade próxima a um 70B com 14 GB de RAM (Q4_K_M).' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Devstral Small 24B', 'description': 'Melhor para fluxos de trabalho de programação agentiva. Feito especificamente para edição multi-arquivo, chamadas de ferramentas, ciclos de depuração, 16 GB de RAM.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Devstral Small 2', 'description': 'Melhor para fluxos de trabalho de programação agentiva. Feito especificamente para edição multi-arquivo, chamadas de ferramentas, ciclos de depuração, 16 GB de RAM.' },
           { '@type': 'ListItem', 'position': 6, 'name': 'Codestral 22B', 'description': 'Melhor para autocompletar em IDE (FIM). Otimizado para fill-in-the-middle em extensões do Continue.dev, Cursor, VSCode, 14 GB de RAM.' },
           { '@type': 'ListItem', 'position': 7, 'name': 'Qwen3 8B', 'description': 'Melhor 8B para programação. ~76% HumanEval (melhorado em relação ao Qwen3 8B), multilíngue, 5 GB de RAM (Q4_K_M).' },
           { '@type': 'ListItem', 'position': 8, 'name': 'Llama 3.3 70B (legado)', 'description': 'Ainda muito utilizado. 82% MMLU, 88% HumanEval, melhor seguimento de instruções em inglês, 40 GB de RAM (Q4_K_M).' },
@@ -1656,7 +1899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Qwen 3 vs Llama 3.3 vs Mistral: Comparação de LLM Local 2026',
-        description: 'Qwen3.8-27B: 61,7% SWE-bench, melhor em 24 GB. Llama 4 Scout: MoE, contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU. Comparação completa com benchmarks.',
+        description: 'Qwen3.8-27B: 61,7 SWE-bench Pro, melhor em 24 GB. Llama 4 Scout: MoE, contexto 10M, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU. Comparação completa com benchmarks.',
         url: 'https://www.promptquorum.com/pt/local-llms/qwen-vs-llama-vs-mistral',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-04',
@@ -1665,14 +1908,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
       },
       gammaEmbedUrl: '/presentations/qwen-vs-llama-vs-mistral-static.html',
-      gammaDescription: 'A apresentação abaixo cobre: comparação de benchmarks Qwen3.8-27B vs Llama 4 Scout vs Mistral (junho 2026 — SWE-bench, realidades de VRAM em MoE), qual modelo vence por tarefa (melhor geral em 24 GB, programação, multilíngue, contexto longo, eficiência de RAM) e comandos de início rápido com Ollama. Baixe o PDF como cartão de referência para seleção de modelos LLM locais.',
+      gammaDescription: 'A apresentação abaixo cobre: comparação de benchmarks Qwen3.8-27B vs Llama 4 Scout vs Mistral (SWE-bench, realidades de VRAM em MoE), qual modelo vence por tarefa (melhor geral em 24 GB, programação, multilíngue, contexto longo, eficiência de RAM) e comandos de início rápido com Ollama. Baixe o PDF como cartão de referência para seleção de modelos LLM locais.',
     },
     de: {
       theme: 'Best Models',
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral Small 24B: 2026 Benchmark-Vergleich',
       seoTitle: 'Qwen3.8-27B vs Llama 4 vs Mistral 2026: Qwen gewinnt',
       intro: 'Qwen3, Meta Llama 3.3 und Mistral sind die drei dominantesten Open-Weight-Modellfamilien für lokale Inferenz. April 2026: Qwen3 72B führt bei Coding (87% HumanEval) und Mathematik (83% MATH). Llama 3.3 70B führt bei englischem Instruction-Following (88% HumanEval). Mistral Small 3.1 24B liefert nahezu 70B-Qualität bei nur 14 GB RAM -- das beste Qualitäts-zu-RAM-Verhältnis im Vergleich. Vollständige Benchmark-Tabelle mit MMLU, HumanEval, MATH, RAM und Tool-Calling-Unterstützung.',
-      metaDescription: 'Qwen3.8-27B gewinnt beim Coding: 61,7% SWE-bench, läuft auf 24 GB. Llama 4 Scout: 10M-Kontext, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU auf 14 GB.',
+      metaDescription: 'Qwen3.8-27B gewinnt beim Coding: 61,7 SWE-bench Pro, läuft auf 24 GB. Llama 4 Scout: 10M-Kontext, ~55 GB VRAM. Mistral Small 3.1: 79% MMLU auf 14 GB.',
       heroImage: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-de.webp',
       nextStep: {
         text: 'Modell ausgewählt? Hier erfahren Sie, wie Sie Qwen lokal ausführen, Schritt für Schritt.',
@@ -1680,7 +1923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         href: '/local-llms/run-qwen-locally-guide-2026',
       },
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-10-17',
       readTime: '9 min Lesezeit',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Qwen vs Llama vs Mistral',
@@ -1705,7 +1948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'Qwen3.8-27B gewinnt beim Coding auf Consumer-Hardware (61,7 % SWE-bench, passt in 24 GB bei Q4); Llama 4 Scout führt bei langem Kontext und Multimodal (10M Kontext, MoE, ~55 GB bei Q4).' },
+            { type: 'one-sentence', text: 'Qwen3.8-27B gewinnt beim Coding auf Consumer-Hardware (61,7 SWE-bench Pro, passt in 24 GB bei Q4); Llama 4 Scout führt bei langem Kontext und Multimodal (10M Kontext, MoE, ~55 GB bei Q4).' },
             { type: 'plain-terms', text: 'Dies sind drei der beliebtesten Open-Source-KI-Modellfamilien für lokale Ausführung. Qwen3 (von Alibaba) glänzt beim Coding, Llama 4 (von Meta) verarbeitet sehr lange Dokumente und Bilder, und Mistral (französische KI) bietet effiziente kleinere Modelle. Alle sind kostenlos herunterladbar.' },
           ],
           items: [
@@ -1898,6 +2141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Welches Modell hat die beste Tool-Calling-Unterstützung?', a: 'Alle drei Familien unterstützen Tool Calling (Function Calling) ab April 2026 nativ. Mistral Small 3.1 24B hat das beste Ansehen für Tool-Use-Zuverlässigkeit in der Produktion. Qwen3 72B und Llama 3.3 70B unterstützen Tool Calling nativ. Für Function Calling in agentic Workflows sind Mistral Small 3.1 und Qwen3 14B am meisten getestet.' },
             { q: 'Was ist das beste GGUF Chat-Modell 2026?', a: 'Bei 7B: Llama 4 3B-instruct-Q4_K_M oder Qwen3-8B-instruct-Q4_K_M -- beide 72% HumanEval. Bei 14B: Qwen3-14B-instruct-Q4_K_M (75% HumanEval, 9 GB). Bei 24B: Mistral-Small-3.1-24B-instruct-Q4_K_M (74% HumanEval, 14 GB). Beste Qualität Single-GPU: Qwen3-32B-instruct-Q4_K_M (79% HumanEval, 20 GB).' },
             { q: 'Ist Qwen besser als Llama für Reasoning?', a: 'Qwen3 72B erreicht 83% MATH vs 77% für Llama 3.3 70B -- 6 Punkte Vorteil bei mathematischem Reasoning. Bei logischem Reasoning (MMLU): Qwen3 72B 84% vs Llama 3.3 70B 82% -- sehr nah beieinander. Für Chain-of-Thought-Reasoning-Tasks übertrifft DeepSeek-R1 (MIT, 7B-32B) beide Familien. Qwen gewinnt Reasoning; Llama gewinnt englisches Instruction-Following.' },
+            { q: 'Was hat sich seit September bei Qwen, Llama und Mistral geändert?', a: 'Qwen3.8 gibt es bei Ollama derzeit nur als 27B-Modell (18 GB bei Q4_K_M, 256K Kontext), daher bleiben Qwen3 8B und 14B die kleineren Qwen-Optionen. Devstral Small 2 (Mistral AI, 24B, 15 GB, 65,8 % SWE-bench Verified laut Mistral, Apache 2.0) ist der aktuelle Devstral-Tag, und Mistral Large 4 (1,05T Parameter gesamt / 52B aktiv, laut Ollama-Eintrag) kam als Rechenzentrums-Modell, das nicht auf Consumer-Hardware passt. Llama 4 Scout (etwa 55 GB bei Q4) bleibt in diesem Vergleich die Langkontext-Option. Die Rangfolge für Consumer-Hardware oben bleibt unverändert.' },
           ],
         },
         updateLog: {
@@ -1912,7 +2156,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Qwen 3 vs Llama 4 vs Mistral Small 24B: 2026 Benchmark-Vergleich',
-        'description': 'Vollständiger Benchmark-Vergleich: Qwen3.8-27B (61,7% SWE-bench, am besten auf 24 GB), Llama 4 Scout (MoE, 10M context, ~55 GB VRAM), Mistral Small 24B + Legacy-Modelle Mistral 24B/Qwen3 14B/Llama 3.1 8B.',
+        'description': 'Vollständiger Benchmark-Vergleich: Qwen3.8-27B (61,7 SWE-bench Pro, am besten auf 24 GB), Llama 4 Scout (MoE, 10M context, ~55 GB VRAM), Mistral Small 24B + Legacy-Modelle Mistral 24B/Qwen3 14B/Llama 3.1 8B.',
         'url': 'https://www.promptquorum.com/de/local-llms/qwen-vs-llama-vs-mistral',
         'datePublished': '2026-04-04',
         'dateModified': '2026-08-28',
@@ -2055,6 +2299,14 @@ schema: {
               'text': 'Qwen3 72B erreicht 83% MATH vs 77% für Llama 3.3 70B -- 6 Punkte Vorteil bei mathematischem Reasoning. Bei logischem Reasoning (MMLU): Qwen3 72B 84% vs Llama 3.3 70B 82% -- sehr nah beieinander. Für Chain-of-Thought-Reasoning-Tasks übertrifft DeepSeek-R1 (MIT, 7B-32B) beide Familien. Qwen gewinnt Reasoning; Llama gewinnt englisches Instruction-Following.',
             },
           },
+          {
+            '@type': 'Question',
+            'name': 'Was hat sich seit September bei Qwen, Llama und Mistral geändert?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3.8 gibt es bei Ollama derzeit nur als 27B-Modell (18 GB bei Q4_K_M, 256K Kontext), daher bleiben Qwen3 8B und 14B die kleineren Qwen-Optionen. Devstral Small 2 (Mistral AI, 24B, 15 GB, 65,8 % SWE-bench Verified laut Mistral, Apache 2.0) ist der aktuelle Devstral-Tag, und Mistral Large 4 (1,05T Parameter gesamt / 52B aktiv, laut Ollama-Eintrag) kam als Rechenzentrums-Modell, das nicht auf Consumer-Hardware passt. Llama 4 Scout (etwa 55 GB bei Q4) bleibt in diesem Vergleich die Langkontext-Option. Die Rangfolge für Consumer-Hardware oben bleibt unverändert.',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -2093,12 +2345,12 @@ schema: {
       theme: 'Best Models',
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral Small 24B : Comparaison des benchmarks 2026',
       seoTitle: 'Qwen3.8-27B vs Llama 4 vs Mistral 2026 : Qwen gagne',
-      intro: 'Qwen3.8-27B est le meilleur globalement sur matériel grand public : 61.7% SWE-bench (meilleur modèle dense), tient dans 24 GB en Q4. Llama 4 Scout 17B (MoE, contexte 10M, multimodal) est le choix contexte long / multimodal mais nécessite ~55 GB VRAM en Q4 ; Mistral Small 3.1 24B offre le meilleur rapport qualité-RAM à 14 GB. Qwen3.8-27B excelle au codage et 29 langues ; Llama 4 Scout domine la longueur de contexte (10M tokens) et le multimodal ; Mistral maximise la qualité sur matériel contraint. Tous trois s\'exécutent sur matériel grand public via Ollama. Mis à jour : juin 2026.',
-      metaDescription: 'Qwen3.8-27B gagne au codage : 61,7 % SWE-bench, tient dans 24 Go. Llama 4 Scout : contexte 10M, ~55 Go VRAM. Mistral Small 3.1 : 79 % MMLU à 14 Go.',
+      intro: 'Qwen3.8-27B est le meilleur globalement sur matériel grand public : 61.7 SWE-bench Pro (meilleur modèle dense), tient dans 24 GB en Q4. Llama 4 Scout 17B (MoE, contexte 10M, multimodal) est le choix contexte long / multimodal mais nécessite ~55 GB VRAM en Q4 ; Mistral Small 3.1 24B offre le meilleur rapport qualité-RAM à 14 GB. Qwen3.8-27B excelle au codage et 29 langues ; Llama 4 Scout domine la longueur de contexte (10M tokens) et le multimodal ; Mistral maximise la qualité sur matériel contraint. Tous trois s\'exécutent sur matériel grand public via Ollama. Mis à jour : juin 2026.',
+      metaDescription: 'Qwen3.8-27B gagne au codage : 61,7 SWE-bench Pro, tient dans 24 Go. Llama 4 Scout : contexte 10M, ~55 Go VRAM. Mistral Small 3.1 : 79 % MMLU à 14 Go.',
       heroImage: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-fr.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
-      leadAnswerBlock: '**Qwen3.8-27B est le meilleur globalement sur matériel grand public : leader codage dense (61.7% SWE-bench), tient dans 24 GB en Q4. Llama 4 Scout est le choix contexte long / multimodal (17B actif, MoE, contexte 10M) mais nécessite ~55 GB VRAM en Q4. Mistral Small 3.1 24B offre le meilleur qualité par VRAM à 14 GB.**',
+      dateModified: '2026-10-17',
+      leadAnswerBlock: '**Qwen3.8-27B est le meilleur globalement sur matériel grand public : leader codage dense (61.7 SWE-bench Pro), tient dans 24 GB en Q4. Llama 4 Scout est le choix contexte long / multimodal (17B actif, MoE, contexte 10M) mais nécessite ~55 GB VRAM en Q4. Mistral Small 3.1 24B offre le meilleur qualité par VRAM à 14 GB.**',
       nextStep: {
         text: 'Vous avez choisi un modèle ? Voici comment exécuter Qwen en local, étape par étape.',
         label: 'Exécuter Qwen en local — Guide complet →',
@@ -2129,12 +2381,12 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'Qwen3.8-27B s\'impose pour le code sur hardware grand public (61,7 % SWE-bench, tient en 24 Go en Q4) ; Llama 4 Scout domine pour le contexte long et le multimodal (10M de tokens, MoE, ~55 Go en Q4).' },
+            { type: 'one-sentence', text: 'Qwen3.8-27B s\'impose pour le code sur hardware grand public (61,7 SWE-bench Pro, tient en 24 Go en Q4) ; Llama 4 Scout domine pour le contexte long et le multimodal (10M de tokens, MoE, ~55 Go en Q4).' },
             { type: 'plain-terms', text: 'Ce sont trois des familles de modèles IA open source les plus populaires à exécuter localement. Qwen3 (Alibaba) excelle en codage, Llama 4 (Meta) gère de très longs documents et des images, et Mistral (IA française) propose des modèles compacts efficaces.' },
           ],
           items: [
-            '**Codage dense** : Qwen3.8-27B gagne à 61,7 % SWE-bench (meilleur modèle dense) ; Qwen3 32B à 79% ; Qwen3 8B à 48%.',
-            '**Codage agentic multi-fichiers** : Devstral Small 24B excelle (conçu pour éditions sur plusieurs fichiers). Llama 4 Scout compétitif.',
+            '**Codage dense** : Qwen3.8-27B gagne à 61,7 SWE-bench Pro (meilleur modèle dense) ; Qwen3 32B à 79% ; Qwen3 8B à 48%.',
+            '**Codage agentic multi-fichiers** : Devstral Small 2 excelle (conçu pour éditions sur plusieurs fichiers). Llama 4 Scout compétitif.',
             '**Contexte long MoE** : Llama 4 Scout (17B actif, 109B total, 16 experts, multimodal) nécessite ~55 GB VRAM en Q4 — il ne tient pas sur un GPU grand public de 24 GB en quantification normale (seulement en 1,78-bit, ~20 tok/s).',
             '**Raisonnement général** : Qwen3.8-27B est le meilleur globalement sur matériel grand public (tient dans 24 GB). Llama 4 Scout comparable mais bien plus gourmand en VRAM.',
             '**Langues au-delà de l\'anglais** : Qwen3.8-27B supporte nativement 29 langues ; Llama et Mistral principalement optimisés pour l\'anglais.',
@@ -2155,11 +2407,11 @@ schema: {
         benchmarks: {
           id: 'benchmark-comparison',
           title: 'Comparaison des benchmarks : Qwen3.8-27B, Llama 4 Scout, Mistral 2026',
-          content: 'Juin 2026 : SWE-bench devient le benchmark primaire pour les tâches de codage multi-fichier en production. Qwen3.8-27B excelle (61.7%) et tient dans 24 GB en Q4, tandis que Devstral Small 24B mène en codage agentic. Llama 4 Scout est le choix contexte long / multimodal mais nécessite ~55 GB VRAM en Q4.',
+          content: 'Juin 2026 : SWE-bench devient le benchmark primaire pour les tâches de codage multi-fichier en production. Qwen3.8-27B excelle (61.7%) et tient dans 24 GB en Q4, tandis que Devstral Small 2 mène en codage agentic. Llama 4 Scout est le choix contexte long / multimodal mais nécessite ~55 GB VRAM en Q4.',
           rows: [
-            { 'Modèle': 'Qwen3.8-27B', 'MMLU': '—', 'HumanEval': '—', 'SWE-bench': '61.7%', 'MATH': '—', 'RAM (Q4_K_M)': '24 GB' },
+            { 'Modèle': 'Qwen3.8-27B', 'MMLU': '—', 'HumanEval': '—', 'SWE-bench': '61.7 (Pro)', 'MATH': '—', 'RAM (Q4_K_M)': '24 GB' },
             { 'Modèle': 'Llama 4 Scout 17B', 'MMLU': '82%', 'HumanEval': '85%', 'SWE-bench': '64%', 'MATH': '78%', 'RAM': '~55 GB' },
-            { 'Modèle': 'Devstral Small 24B', 'MMLU': '80%', 'HumanEval': '88%', 'SWE-bench': '72%', 'MATH': '68%', 'RAM (Q4_K_M)': '16 GB' },
+            { 'Modèle': 'Devstral Small 2', 'MMLU': '80%', 'HumanEval': '88%', 'SWE-bench': '72%', 'MATH': '68%', 'RAM (Q4_K_M)': '15 GB' },
             { 'Modèle': 'Qwen3 32B', 'MMLU': '89%', 'HumanEval': '93%', 'SWE-bench': '79%', 'MATH': '86%', 'RAM (Q4_K_M)': '20 GB' },
             { 'Modèle': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'HumanEval': '74%', 'SWE-bench': '54%', 'MATH': '65%', 'RAM (Q4_K_M)': '14 GB' },
             { 'Modèle': 'Llama 3.3 70B', 'MMLU': '86%', 'HumanEval': '88%', 'SWE-bench': '68%', 'MATH': '77%', 'RAM (Q4_K_M)': '40 GB' },
@@ -2168,7 +2420,7 @@ schema: {
           ],
           columns: ['Modèle', 'MMLU', 'HumanEval', 'SWE-bench', 'MATH', 'RAM (Q4_K_M)'],
           image: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-fr.webp',
-          imageCaption: 'Benchmarks juin 2026 : Qwen3.8-27B domine SWE-bench (61.7%, meilleur dense, tient dans 24 GB en Q4), Llama 4 Scout MoE pour contexte long (82% MMLU mais ~55 GB VRAM en Q4), Devstral Small 24B agentic (72% SWE-bench).',
+          imageCaption: 'Benchmarks : Qwen3.8-27B domine SWE-bench (61.7%, meilleur dense, tient dans 24 GB en Q4), Llama 4 Scout MoE pour contexte long (82% MMLU mais ~55 GB VRAM en Q4), Devstral Small 2 agentic (72% SWE-bench).',
         },
         qwen3Strengths: {
           id: 'qwen3-strengths',
@@ -2200,10 +2452,10 @@ schema: {
         toolCalling: {
           id: 'tool-calling',
           title: 'Appels d\'outils et capacités agentic',
-          content: 'À partir de mai 2026, Qwen3.8-27B, Llama 4 Scout et Mistral Small 3.1 supportent nativement les appels d\'outils. Devstral Small 24B est optimisé pour les workflows agentic multi-fichiers (éditions de code distribuées).',
+          content: 'Qwen3.8-27B, Llama 4 Scout et Mistral Small 3.1 supportent nativement les appels d\'outils. Devstral Small 2 est optimisé pour les workflows agentic multi-fichiers (éditions de code distribuées).',
           rows: [
             { 'Modèle': 'Qwen3.8-27B', 'Tool Calling': '✅ Natif', 'Agentic': '✅ Excellent (SWE-bench 61.7%)', 'Contexte': '128K' },
-            { 'Modèle': 'Devstral Small 24B', 'Tool Calling': '✅ Natif optimisé', 'Agentic': '✅ Meilleur multi-fichier (SWE 72%)', 'Contexte': '32K' },
+            { 'Modèle': 'Devstral Small 2', 'Tool Calling': '✅ Natif optimisé', 'Agentic': '✅ Meilleur multi-fichier (SWE 72%)', 'Contexte': '32K' },
             { 'Modèle': 'Llama 4 Scout 17B', 'Tool Calling': '✅ Natif', 'Agentic': '⚠️ Bon, pas spécialisé', 'Contexte': '10M' },
             { 'Modèle': 'Mistral Small 3.1 24B', 'Tool Calling': '✅ Natif bien testé', 'Agentic': '⚠️ Limité (SWE 54%)', 'Contexte': '32K' },
             { 'Modèle': 'Llama 3.3 70B', 'Tool Calling': '✅ Natif', 'Agentic': '⚠️ Bon, mais moins optimisé', 'Contexte': '128K' },
@@ -2216,7 +2468,7 @@ schema: {
           title: 'Quelle famille gagne par tâche ?',
           rows: [
             { 'Tâche': 'Codage dense (SWE-bench)', 'Gagnant': 'Qwen3.8-27B', 'Pourquoi': 'SWE-bench 61.7% — meilleur modèle dense' },
-            { 'Tâche': 'Codage agentic multi-fichier', 'Gagnant': 'Devstral Small 24B', 'Pourquoi': 'SWE-bench 72%, optimisé éditions distribuées' },
+            { 'Tâche': 'Codage agentic multi-fichier', 'Gagnant': 'Devstral Small 2', 'Pourquoi': 'SWE-bench 72%, optimisé éditions distribuées' },
             { 'Tâche': 'Contexte long + multimodal', 'Gagnant': 'Llama 4 Scout 17B', 'Pourquoi': 'MoE 17B actif, contexte 10M tokens, multimodal (~55 GB en Q4)' },
             { 'Tâche': 'Q&A général (anglais)', 'Gagnant': 'Llama 3.3 70B / Qwen3.8-27B', 'Pourquoi': 'Égalité à 86-87% MMLU' },
             { 'Tâche': 'Raisonnement mathématique', 'Gagnant': 'Qwen3.8-27B', 'Pourquoi': 'MATH 84% à 27B vs 78% Llama 4 Scout' },
@@ -2226,20 +2478,20 @@ schema: {
           ],
           columns: ['Tâche', 'Gagnant', 'Pourquoi'],
           image: '/images/qwen-vs-llama-vs-mistral-task-winners-fr.svg',
-          imageCaption: 'Gagnants par tâche juin 2026 : Qwen3.8-27B gagne codage dense (SWE 61.7%) et multilingue ; Devstral gagne agentic multi-fichier (SWE 72%) ; Llama 4 Scout gagne contexte long / multimodal (10M tokens, ~55 GB en Q4) ; Mistral gagne efficacité RAM (79% sur 14 GB).',
+          imageCaption: 'Gagnants par tâche : Qwen3.8-27B gagne codage dense (SWE 61.7%) et multilingue ; Devstral gagne agentic multi-fichier (SWE 72%) ; Llama 4 Scout gagne contexte long / multimodal (10M tokens, ~55 GB en Q4) ; Mistral gagne efficacité RAM (79% sur 14 GB).',
         },
         sizeComparison: {
           id: 'size-for-size-comparison',
           title: 'Comparaison taille par taille : MoE vs architecture dense',
           content: [
             '**Classes 3B-7B** : Qwen3 8B domine le codage (SWE-bench 58%, HumanEval 89%). Llama 4 3B et Qwen3 8B offrent un bon support écosystème. Pour tâches non-codage, Llama 3.1 8B égale Qwen3 8B en qualité anglaise.',
-            '**Classes 14B-24B** : Qwen3 14B (SWE-bench 69%) et Devstral Small 24B (SWE-bench 72%, agentic) sont les choix de codage. Mistral Small 3.1 24B offre le meilleur rapport qualité-VRAM (79% MMLU sur 14 GB).',
+            '**Classes 14B-24B** : Qwen3 14B (SWE-bench 69%) et Devstral Small 2 (SWE-bench 72%, agentic) sont les choix de codage. Mistral Small 3.1 24B offre le meilleur rapport qualité-VRAM (79% MMLU sur 14 GB).',
             '**Architecture MoE (Llama 4 Scout)** : 17B paramètres actifs, 109B totaux, 16 experts, multimodal. Contexte 10M tokens (record 2026). Nécessite ~55 GB VRAM en Q4 (ne tient sur un GPU de 24 GB qu\'en 1,78-bit, ~20 tok/s). Meilleur pour tâches nécessitant très long contexte ou entrée multimodale.',
             '**Classes 32B-72B** : Qwen3 32B (SWE-bench 79%) et Qwen3 72B (SWE-bench supérieur à 80%) dominent codage. Llama 3.3 70B égale Qwen3.8-27B sur MMLU (86% vs 87%) mais inférieur sur SWE-bench.',
             'Comparaison avec modèles propriétaires (GPT-5.6, Claude Opus 5, Gemini 3.5) : voir [GPT vs Claude vs Gemini : comment choisir](https://www.promptquorum.com/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model).',
           ],
           image: '/images/qwen-vs-llama-vs-mistral-size-classes-fr.svg',
-          imageCaption: 'Cinq classes de taille juin 2026 : 3-7B (Qwen3 8B codage, Llama 4 3B basique), 14-24B (Qwen 14B codage, Mistral 14 GB efficacité), MoE (Llama 4 Scout 10M contexte, ~55 GB en Q4), 32-72B (Qwen 32B/72B, Llama 3.3 70B), tout via Ollama.',
+          imageCaption: 'Cinq classes de taille : 3-7B (Qwen3 8B codage, Llama 4 3B basique), 14-24B (Qwen 14B codage, Mistral 14 GB efficacité), MoE (Llama 4 Scout 10M contexte, ~55 GB en Q4), 32-72B (Qwen 32B/72B, Llama 3.3 70B), tout via Ollama.',
         },
         howToGetStarted: {
           id: 'how-to-get-started',
@@ -2275,7 +2527,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures connexes',
           items: [
-            '[Meilleurs LLMs locaux mai 2026](/fr/local-llms/best-local-llms-2026) — Classement complet des modèles actuels',
+            '[Meilleurs LLMs locaux 2026](/fr/local-llms/best-local-llms-2026) — Classement complet des modèles actuels',
             '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) — Premiers pas sur tous les OS',
             '[Hardware guide LLM local](/fr/local-llms/local-llm-hardware-guide) — VRAM, formats, optimisations',
             '[Meilleurs LLMs pour codage 2026](/fr/local-llms/best-local-llms-for-coding) — Modèles optimisés codage',
@@ -2304,16 +2556,17 @@ schema: {
           id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
-            { q: 'Quel est le meilleur pour le codage dense : Qwen3.8-27B, Llama 4 Scout ou Mistral ?', a: 'Qwen3.8-27B domine SWE-bench (61.7%) — meilleur codage dense. Devstral Small 24B (72% SWE-bench) gagne codage agentic multi-fichier. Llama 4 Scout (64% SWE-bench) excelle contexte très long mais moins optimisé codage.' },
+            { q: 'Quel est le meilleur pour le codage dense : Qwen3.8-27B, Llama 4 Scout ou Mistral ?', a: 'Qwen3.8-27B domine SWE-bench (61.7%) — meilleur codage dense. Devstral Small 2 (72% SWE-bench) gagne codage agentic multi-fichier. Llama 4 Scout (64% SWE-bench) excelle contexte très long mais moins optimisé codage.' },
             { q: 'Llama 4 Scout vaut-il le coup comparé à Qwen3.8-27B ?', a: 'Dépend du cas. Scout : contexte 10M, multimodal, mais ~55 GB VRAM en Q4 (ne tient pas sur 24 GB en quantification normale). Qwen3.8-27B : meilleur globalement sur matériel grand public, codage meilleur (SWE-bench 61,7% vs 64%), multilingue, tient dans 24 GB. Choisissez Scout si contexte 100K+ et VRAM suffisante, Qwen sinon.' },
             { q: 'Que signifie MoE et pourquoi Llama 4 Scout l\'utilise ?', a: 'Mixture-of-Experts : 109B total paramètres, mais seuls 17B actifs par token. Tous les experts restent en mémoire, donc en Q4 Scout nécessite ~55 GB VRAM (pas les ~14 GB d\'un dense 17B), permet contexte 10M et entrée multimodale. Compromis : VRAM élevée et moins optimal en codage que les architectures denses équivalentes.' },
             { q: 'Quel LLM local supporte le plus de langues ?', a: 'Qwen3.8-27B : 29 langues natives (chinois, japonais, arabe, allemand, français, coréen + autres). Llama 4 Scout, 3.3, 3.2 : ~8 langues. Mistral Small : principalement anglais + grandes langues UE.' },
-            { q: 'SWE-bench vs HumanEval : quelle différence ?', a: 'HumanEval : 164 problèmes simples un fichier (test basique). SWE-bench : problèmes GitHub réels multi-fichier, éditions distribuées (test production). SWE-bench plus pertinent pour workflows codage sérieux. Qwen3.8-27B 61,7% SWE-bench (HumanEval non publié pour ce modèle) — l\'écart entre les deux benchmarks mesure l\'optimisation multi-fichier.' },
+            { q: 'SWE-bench vs HumanEval : quelle différence ?', a: 'HumanEval : 164 problèmes simples un fichier (test basique). SWE-bench : problèmes GitHub réels multi-fichier, éditions distribuées (test production). SWE-bench plus pertinent pour workflows codage sérieux. Qwen3.8-27B 61,7 SWE-bench Pro (HumanEval non publié pour ce modèle) — l\'écart entre les deux benchmarks mesure l\'optimisation multi-fichier.' },
             { q: 'Quel modèle avec 12 GB VRAM ?', a: 'Qwen3 14B (9 GB, SWE-bench 69%) ou Mistral Small 3.1 (14 GB, proche limite). Llama 4 Scout NE tient PAS sur 12 GB — il nécessite ~55 GB VRAM en Q4. Pour 24 GB, Qwen3.8-27B est le meilleur choix global.' },
-            { q: 'Qwen3.8-27B remplace-t-il les modèles cloud pour le codage ?', a: 'Partiellement. Qwen3 72B : 92% HumanEval, 61.7% SWE-bench. Les modèles de frontière actuels (GPT-5.6, Claude Opus 5) : ~95% HumanEval estimé, 80%+ SWE-bench. Écart 3-5%. Pour refonte simple : Qwen suffisant. Pour refonte complexe : cloud conserve avantage.' },
+            { q: 'Qwen3.8-27B remplace-t-il les modèles cloud pour le codage ?', a: 'Partiellement. Qwen3 72B : 92% HumanEval, 61.7 SWE-bench Pro. Les modèles de frontière actuels (GPT-5.6, Claude Opus 5) : ~95% HumanEval estimé, 80%+ SWE-bench. Écart 3-5%. Pour refonte simple : Qwen suffisant. Pour refonte complexe : cloud conserve avantage.' },
             { q: 'Mistral Small 3.1 vaut-il 14 GB pour 79% MMLU ?', a: 'Oui si VRAM limité. Pour tâches non-codage, Mistral Small 24B offre qualité classe 70B. Pour codage, Qwen3.8-27B surpasse (SWE-bench 61,7% vs 54%). Choisissez Mistral si efficacité priori, Qwen si codage priori.' },
             { q: 'Puis-je utiliser ces modèles complètement hors ligne ?', a: 'Oui. Qwen, Llama, Mistral s\'exécutent 100% local après téléchargement initial via Ollama. Zéro API, zéro télémétrie, zéro connexion internet pour inférence. Confidentialité complète.' },
-            { q: 'Quelle famille pour débuter en mai 2026 ?', a: 'Llama 4 3B : meilleure documentation, communauté maximal. Exécutez : ollama run llama3.2:3b (nécessite 8 GB RAM, pas GPU). Chaque outil (Ollama, LM Studio, OpenWebUI) supporte Llama par défaut.' },
+            { q: 'Quelle famille pour débuter ?', a: 'Llama 4 3B : meilleure documentation, communauté maximal. Exécutez : ollama run llama3.2:3b (nécessite 8 GB RAM, pas GPU). Chaque outil (Ollama, LM Studio, OpenWebUI) supporte Llama par défaut.' },
+            { q: 'Qu\'est-ce qui a changé pour Qwen, Llama et Mistral depuis septembre ?', a: 'Qwen3.8 n\'existe pour l\'instant sur Ollama qu\'en 27B (18 GB en Q4_K_M, contexte 256K) : Qwen3 8B et 14B restent donc les options Qwen plus petites. Devstral Small 2 (Mistral AI, 24B, 15 GB, 65,8 % SWE-bench Verified selon Mistral, Apache 2.0) est le tag Devstral actuel, et Mistral Large 4 (1,05T de paramètres au total / 52B actifs, selon sa fiche Ollama) est arrivé comme modèle d\'échelle datacenter qui ne tient pas sur du matériel grand public. Llama 4 Scout (environ 55 GB en Q4) reste l\'option contexte long de cette comparaison. Le classement pour matériel grand public ci-dessus ne change pas.' },
           ],
         },
       },
@@ -2321,7 +2574,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Qwen 3 vs Llama 4 vs Mistral Small 24B : Comparaison des benchmarks 2026',
-        'description': 'Comparaison complète : Qwen3.8-27B (61,7% SWE-bench, meilleur sur 24 Go), Llama 4 Scout (MoE, contexte 10M, ~55 Go VRAM), Mistral Small 24B + Mistral 24B/Qwen3 14B/Llama 3.1 8B legacy.',
+        'description': 'Comparaison complète : Qwen3.8-27B (61,7 SWE-bench Pro, meilleur sur 24 Go), Llama 4 Scout (MoE, contexte 10M, ~55 Go VRAM), Mistral Small 24B + Mistral 24B/Qwen3 14B/Llama 3.1 8B legacy.',
         'url': 'https://www.promptquorum.com/fr/local-llms/qwen-vs-llama-vs-mistral',
         'datePublished': '2026-04-04',
         'dateModified': '2026-08-28',
@@ -2344,7 +2597,7 @@ schema: {
             'name': 'Quel est le meilleur pour le codage dense : Qwen3.8-27B, Llama 4 Scout ou Mistral ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3.8-27B domine SWE-bench (61.7%) — meilleur codage dense. Devstral Small 24B (72% SWE-bench) gagne codage agentic multi-fichier. Llama 4 Scout (64% SWE-bench) excelle contexte très long mais moins optimisé codage.',
+              'text': 'Qwen3.8-27B domine SWE-bench (61.7%) — meilleur codage dense. Devstral Small 2 (72% SWE-bench) gagne codage agentic multi-fichier. Llama 4 Scout (64% SWE-bench) excelle contexte très long mais moins optimisé codage.',
             },
           },
           {
@@ -2376,7 +2629,7 @@ schema: {
             'name': 'SWE-bench vs HumanEval : quelle différence ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'HumanEval : 164 problèmes simples un fichier (test basique). SWE-bench : problèmes GitHub réels multi-fichier, éditions distribuées (test production). SWE-bench plus pertinent pour workflows codage sérieux. Qwen3.8-27B 61,7% SWE-bench (HumanEval non publié pour ce modèle) — l\'écart entre les deux benchmarks mesure l\'optimisation multi-fichier.',
+              'text': 'HumanEval : 164 problèmes simples un fichier (test basique). SWE-bench : problèmes GitHub réels multi-fichier, éditions distribuées (test production). SWE-bench plus pertinent pour workflows codage sérieux. Qwen3.8-27B 61,7 SWE-bench Pro (HumanEval non publié pour ce modèle) — l\'écart entre les deux benchmarks mesure l\'optimisation multi-fichier.',
             },
           },
           {
@@ -2392,7 +2645,7 @@ schema: {
             'name': 'Qwen3.8-27B remplace-t-il les modèles cloud pour le codage ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Partiellement. Qwen3 72B : 92% HumanEval, 61.7% SWE-bench. Les modèles de frontière actuels (GPT-5.6, Claude Opus 5) : ~95% HumanEval estimé, 80%+ SWE-bench. Écart 3-5%. Pour refonte simple : Qwen suffisant. Pour refonte complexe : cloud conserve avantage.',
+              'text': 'Partiellement. Qwen3 72B : 92% HumanEval, 61.7 SWE-bench Pro. Les modèles de frontière actuels (GPT-5.6, Claude Opus 5) : ~95% HumanEval estimé, 80%+ SWE-bench. Écart 3-5%. Pour refonte simple : Qwen suffisant. Pour refonte complexe : cloud conserve avantage.',
             },
           },
           {
@@ -2413,10 +2666,18 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Quelle famille pour débuter en mai 2026 ?',
+            'name': 'Quelle famille pour débuter ?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Llama 4 3B : meilleure documentation, communauté maximal. Exécutez : ollama run llama3.2:3b (nécessite 8 GB RAM, pas GPU). Chaque outil (Ollama, LM Studio, OpenWebUI) supporte Llama par défaut.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce qui a changé pour Qwen, Llama et Mistral depuis septembre ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3.8 n\'existe pour l\'instant sur Ollama qu\'en 27B (18 GB en Q4_K_M, contexte 256K) : Qwen3 8B et 14B restent donc les options Qwen plus petites. Devstral Small 2 (Mistral AI, 24B, 15 GB, 65,8 % SWE-bench Verified selon Mistral, Apache 2.0) est le tag Devstral actuel, et Mistral Large 4 (1,05T de paramètres au total / 52B actifs, selon sa fiche Ollama) est arrivé comme modèle d\'échelle datacenter qui ne tient pas sur du matériel grand public. Llama 4 Scout (environ 55 GB en Q4) reste l\'option contexte long de cette comparaison. Le classement pour matériel grand public ci-dessus ne change pas.',
             },
           },
         ],
@@ -2438,12 +2699,12 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'Qwen3.8-27B vs Llama 4 Scout vs Mistral : Benchmarks mai 2026',
+        'name': 'Qwen3.8-27B vs Llama 4 Scout vs Mistral : Benchmarks',
         'numberOfItems': 8,
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'Qwen3.8-27B', 'description': 'SWE-bench 61.7%, vision-langage native, RAM 24 GB — meilleur codage dense' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Llama 4 Scout 17B MoE', 'description': 'MMLU 82%, HumanEval 85%, SWE-bench 64%, MATH 78%, RAM ~55 GB en Q4 — meilleur contexte long (10M tokens) et multimodal' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Devstral Small 24B', 'description': 'MMLU 80%, HumanEval 88%, SWE-bench 72%, MATH 68%, RAM 16 GB — meilleur agentic multi-fichier' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Devstral Small 2', 'description': 'MMLU 80%, HumanEval 88%, SWE-bench 72%, MATH 68%, RAM 16 GB — meilleur agentic multi-fichier' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 32B', 'description': 'MMLU 89%, HumanEval 93%, SWE-bench 79%, MATH 86%, RAM 20 GB — dense puissant' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Mistral Small 3.1 24B', 'description': 'MMLU 79%, HumanEval 74%, SWE-bench 54%, MATH 65%, RAM 14 GB — meilleure efficacité RAM' },
           { '@type': 'ListItem', 'position': 6, 'name': 'Llama 3.3 70B', 'description': 'MMLU 86%, HumanEval 88%, SWE-bench 68%, MATH 77%, RAM 40 GB — large contexte 128K' },
@@ -2452,7 +2713,7 @@ schema: {
         ],
       },
       gammaEmbedUrl: '/presentations/qwen-vs-llama-vs-mistral-static.html',
-      gammaDescription: 'Présentation juin 2026 : Qwen3.8-27B vs Llama 4 Scout vs Mistral benchmarks (87% vs 82% vs 79% MMLU), quelle famille gagne par tâche (meilleur global sur 24 Go, codage dense, agentic, contexte long, efficacité), architecture MoE et réalités VRAM expliquées, commandes Ollama démarrage. Télécharger PDF référence modèles LLM locaux.',
+      gammaDescription: 'Présentation : Qwen3.8-27B vs Llama 4 Scout vs Mistral benchmarks (87% vs 82% vs 79% MMLU), quelle famille gagne par tâche (meilleur global sur 24 Go, codage dense, agentic, contexte long, efficacité), architecture MoE et réalités VRAM expliquées, commandes Ollama démarrage. Télécharger PDF référence modèles LLM locaux.',
     },
     ja: {
       theme: 'Best Models',
@@ -2467,7 +2728,7 @@ schema: {
         href: '/local-llms/run-qwen-locally-guide-2026',
       },
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-10-17',
       readTime: '9分読込',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Qwen vs Llama vs Mistral',
@@ -2665,6 +2926,7 @@ schema: {
             { q: 'どのモデルが最高のツール呼び出しサポートを持っていますか？', a: '3つのファミリーはすべて、2026年4月からツール呼び出し（関数呼び出し）をネイティブにサポート。Mistral Small 3.1 24Bは本番環境でツール使用の信頼性のための最高の評判を持つ。Qwen3 72BおよびLlama 3.3 70Bはツール呼び出しをネイティブサポート。エージェントワークフローの関数呼び出しについて、Mistral Small 3.1およびQwen3 14Bが最もテストされている。' },
             { q: '2026年の最高のGGUFチャットモデルは何ですか？', a: '7Bで：Llama 4 3B-instruct-Q4_K_Mまたはqwen2.5-7B-instruct-Q4_K_M----両者72% HumanEval。14Bで：Qwen3-14B-instruct-Q4_K_M（75% HumanEval、9GB）。24Bで：Mistral-Small-3.1-24B-instruct-Q4_K_M（74% HumanEval、14GB）。最高品質Single-GPU：Qwen3-32B-instruct-Q4_K_M（79% HumanEval、20GB）。' },
             { q: '16GB RAMで使用するモデルはどれですか？', a: 'Mistral Small 3.1 24B at Q4_K_M（14GB）----16GB RAMで最高の全体品質、79% MMLUと74% HumanEval。または：Qwen3 14B at Q4_K_M（9GB）は、より長いコンテキストのためより多くのスペースを残し、同等のスコアを達成。Llama 3.3 70Bを16GBで避ける----40GBが必要で、CPUに大幅にオフロードされます。' },
+            { q: '9月以降、Qwen・Llama・Mistralに何が変わりましたか？', a: 'Qwen3.8はOllamaでは現在27Bのみ（Q4_K_Mで18GB、256Kコンテキスト）のため、Qwen3 8Bと14Bが引き続き小型のQwen選択肢です。Devstral Small 2（Mistral AI、24B、15GB、Mistral公表のSWE-bench Verified 65.8%、Apache 2.0）が現行のDevstralタグで、Mistral Large 4（Ollamaの掲載によると総計1.05T/アクティブ52Bパラメータ）はデータセンター規模のモデルとして登場し、一般向けハードウェアには収まりません。Llama 4 Scout（Q4で約55GB）は、この比較での長コンテキストの選択肢のままです。上記の一般向けハードウェア向けランキングは変わりません。' },
           ],
         },
       },
@@ -2672,7 +2934,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Qwen 3 vs Llama 4 vs Mistral：2026ベンチマーク比較',
-        'description': '完全なベンチマーク比較：Qwen3.8-27B（61.7% SWE-bench、24 GBで最適）、Llama 4 Scout（MoE、10Mコンテキスト、~55 GB VRAM）、Mistral Small 24B + レガシーモデル。',
+        'description': '完全なベンチマーク比較：Qwen3.8-27B（61.7 SWE-bench Pro、24 GBで最適）、Llama 4 Scout（MoE、10Mコンテキスト、~55 GB VRAM）、Mistral Small 24B + レガシーモデル。',
         'url': 'https://www.promptquorum.com/ja/local-llms/qwen-vs-llama-vs-mistral',
         'datePublished': '2026-04-04',
         'dateModified': '2026-08-28',
@@ -2815,6 +3077,14 @@ schema: {
               'text': 'Mistral Small 3.1 24B at Q4_K_M（14GB）----16GB RAMで最高の全体品質、79% MMLUと74% HumanEval。または：Qwen3 14B at Q4_K_M（9GB）は、より長いコンテキストのためより多くのスペースを残し、同等のスコアを達成。Llama 3.3 70Bを16GBで避ける----40GBが必要で、CPUに大幅にオフロードされます。',
             },
           },
+          {
+            '@type': 'Question',
+            'name': '9月以降、Qwen・Llama・Mistralに何が変わりましたか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3.8はOllamaでは現在27Bのみ（Q4_K_Mで18GB、256Kコンテキスト）のため、Qwen3 8Bと14Bが引き続き小型のQwen選択肢です。Devstral Small 2（Mistral AI、24B、15GB、Mistral公表のSWE-bench Verified 65.8%、Apache 2.0）が現行のDevstralタグで、Mistral Large 4（Ollamaの掲載によると総計1.05T/アクティブ52Bパラメータ）はデータセンター規模のモデルとして登場し、一般向けハードウェアには収まりません。Llama 4 Scout（Q4で約55GB）は、この比較での長コンテキストの選択肢のままです。上記の一般向けハードウェア向けランキングは変わりません。',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -2862,7 +3132,7 @@ schema: {
         href: '/local-llms/run-qwen-locally-guide-2026',
       },
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
+      dateModified: '2026-10-17',
       readTime: '9分钟阅读',
       educationalLevel: 'Intermediate',
       primaryTerm: 'Qwen vs Llama vs Mistral',
@@ -3061,6 +3331,7 @@ schema: {
             { q: '2026年最佳GGUF聊天模型是什么？', a: '7B：Llama 4 3B-instruct-Q4_K_M或Qwen3-8B-instruct-Q4_K_M----两者72% HumanEval。14B：Qwen3-14B-instruct-Q4_K_M（75% HumanEval，9GB）。24B：Mistral-Small-3.1-24B-instruct-Q4_K_M（74% HumanEval，14GB）。最佳单GPU质量：Qwen3-32B-instruct-Q4_K_M（79% HumanEval，20GB）。' },
             { q: '我应该在16GB RAM上使用哪个模型？', a: 'Mistral Small 3.1 24B at Q4_K_M（14GB）----16GB RAM上的最佳整体质量，79% MMLU和74% HumanEval。或者：Qwen3 14B at Q4_K_M（9GB）为更长的上下文留出更多空间并达到类似的分数。避免在16GB上运行Llama 3.3 70B----需要40GB，会大量卸载到CPU。' },
             { q: 'Qwen在推理方面是否优于Llama？', a: 'Qwen3 72B达到83% MATH对Llama 3.3 70B的77%----数学推理中优势6个百分点。对于逻辑推理（MMLU）：Qwen3 72B 84%对Llama 3.3 70B 82%----非常接近。对于链式思维推理任务，DeepSeek-R1（MIT，7B-32B）超越两个系列。Qwen赢得推理；Llama赢得英文指令跟随。' },
+            { q: '9月以来，Qwen、Llama和Mistral有哪些变化？', a: 'Qwen3.8目前在Ollama上只有27B版本（Q4_K_M下18GB，256K上下文），因此Qwen3 8B和14B仍是较小的Qwen选择。Devstral Small 2（Mistral AI，24B，15GB，Mistral公布的SWE-bench Verified为65.8%，Apache 2.0）是当前的Devstral标签；Mistral Large 4（据其Ollama页面，总参数1.05T/激活52B）以数据中心规模的模型出现，无法装入消费级硬件。Llama 4 Scout（Q4下约55GB）仍是本对比中的长上下文选择。上述面向消费级硬件的排名保持不变。' },
           ],
         },
       },
@@ -3068,7 +3339,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Qwen 3 vs Llama 4 vs Mistral：2026基准对比',
-        'description': '完整基准对比：Qwen3.8-27B（61.7% SWE-bench、24 GB最佳）、Llama 4 Scout（MoE、10M上下文、~55 GB显存）、Mistral Small 24B + 遗产模型。',
+        'description': '完整基准对比：Qwen3.8-27B（61.7 SWE-bench Pro、24 GB最佳）、Llama 4 Scout（MoE、10M上下文、~55 GB显存）、Mistral Small 24B + 遗产模型。',
         'url': 'https://www.promptquorum.com/zh/local-llms/qwen-vs-llama-vs-mistral',
         'datePublished': '2026-04-04',
         'dateModified': '2026-08-28',
@@ -3219,6 +3490,14 @@ schema: {
               'text': 'Qwen3 72B达到83% MATH对Llama 3.3 70B的77%----数学推理中优势6个百分点。对于逻辑推理（MMLU）：Qwen3 72B 84%对Llama 3.3 70B 82%----非常接近。对于链式思维推理任务，DeepSeek-R1（MIT，7B-32B）超越两个系列。Qwen赢得推理；Llama赢得英文指令跟随。',
             },
           },
+          {
+            '@type': 'Question',
+            'name': '9月以来，Qwen、Llama和Mistral有哪些变化？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3.8目前在Ollama上只有27B版本（Q4_K_M下18GB，256K上下文），因此Qwen3 8B和14B仍是较小的Qwen选择。Devstral Small 2（Mistral AI，24B，15GB，Mistral公布的SWE-bench Verified为65.8%，Apache 2.0）是当前的Devstral标签；Mistral Large 4（据其Ollama页面，总参数1.05T/激活52B）以数据中心规模的模型出现，无法装入消费级硬件。Llama 4 Scout（Q4下约55GB）仍是本对比中的长上下文选择。上述面向消费级硬件的排名保持不变。',
+            },
+          },
         ],
       },
       howToSchema: {
@@ -3255,19 +3534,19 @@ schema: {
     },
   ko: {
       freshness_tier: 'monthly',
-      next_seo_review_due: '2026-09-28',
+      next_seo_review_due: '2027-01-01',
       theme: 'Best Models',
       title: 'Qwen3.8-27B vs Llama 4 vs Mistral: 로컬 LLM 비교 2026',
       seoTitle: 'Qwen3.8-27B vs Llama 4 vs Mistral 2026: 어느 LLM이 최고인가?',
-      intro: 'Qwen3.8-27B는 소비자용 하드웨어에서 전반적으로 최고의 성능을 발휘합니다. 61.7% SWE-bench(최고 밀집 모델)를 기록하며 Q4에서 24 GB에 탑재됩니다. Llama 4 Scout 17B(MoE, 10M 컨텍스트, 멀티모달)는 장문 컨텍스트/멀티모달 선택지이나 Q4에서 ~55 GB VRAM이 필요합니다. Mistral Small 3.1 24B는 14 GB로 최고의 RAM 대비 품질 비율을 제공합니다. Qwen3는 코딩과 29개 언어에 탁월하고, Llama 4 Scout는 컨텍스트 길이(10M 토큰)와 멀티모달에서 앞서며, Mistral은 제한된 하드웨어에서 품질을 극대화합니다. 세 모델 모두 Ollama를 통해 소비자용 하드웨어에서 실행됩니다. 업데이트: 2026년 6월.',
-      metaDescription: 'Qwen3.8-27B: 61.7% SWE-bench, 24GB 최고 성능. Llama 4 Scout: MoE, 10M 컨텍스트, ~55GB VRAM. Mistral Small 3.1: 79% MMLU. 작업별 최적 모델 비교 포함.',
+      intro: 'Qwen3.8-27B는 소비자용 하드웨어에서 전반적으로 최고의 성능을 발휘합니다. 61.7 SWE-bench Pro(최고 밀집 모델)를 기록하며 Q4에서 24 GB에 탑재됩니다. Llama 4 Scout 17B(MoE, 10M 컨텍스트, 멀티모달)는 장문 컨텍스트/멀티모달 선택지이나 Q4에서 ~55 GB VRAM이 필요합니다. Mistral Small 3.1 24B는 14 GB로 최고의 RAM 대비 품질 비율을 제공합니다. Qwen3는 코딩과 29개 언어에 탁월하고, Llama 4 Scout는 컨텍스트 길이(10M 토큰)와 멀티모달에서 앞서며, Mistral은 제한된 하드웨어에서 품질을 극대화합니다. 세 모델 모두 Ollama를 통해 소비자용 하드웨어에서 실행됩니다. 업데이트: 2026년 6월.',
+      metaDescription: 'Qwen3.8-27B: 61.7 SWE-bench Pro, 24GB 최고 성능. Llama 4 Scout: MoE, 10M 컨텍스트, ~55GB VRAM. Mistral Small 3.1: 79% MMLU. 작업별 최적 모델 비교 포함.',
       heroImage: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-ko.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-28',
-      last_full_refresh: '2026-08-28',
-      current_models_mentioned: ['Qwen3.8-27B', 'Qwen3.6-35B-A3B', 'qwen3:30b', 'qwen3-coder:30b', 'Llama 4 Scout', 'Mistral Small 3.1 24B', 'Devstral Small 24B', 'Codestral 22B', 'DeepSeek-R1', 'gpt-oss:20b', 'Kimi K2.6'],
-      next_refresh_due: '2026-09-28',
-      leadAnswerBlock: 'Qwen3.8-27B는 소비자용 하드웨어에서 전반적으로 최고입니다. 밀집 코딩 분야 선두(61.7% SWE-bench)이며 Q4에서 24 GB에 탑재됩니다. Llama 4 Scout는 장문 컨텍스트/멀티모달 선택지(17B 활성, MoE, 10M 컨텍스트)이나 Q4에서 ~55 GB VRAM이 필요합니다. Mistral Small 3.1 24B는 14 GB에서 VRAM 대비 최고의 품질을 제공합니다.',
+      dateModified: '2026-10-17',
+      last_full_refresh: '2026-10-17',
+      current_models_mentioned: ['Qwen3.8-27B', 'Qwen3.6-35B-A3B', 'qwen3:30b', 'qwen3-coder:30b', 'Llama 4 Scout', 'Mistral Small 3.1 24B', 'Devstral Small 2', 'Mistral Large 4', 'Codestral 22B', 'DeepSeek-R1', 'gpt-oss:20b', 'Kimi K2.6'],
+      next_refresh_due: '2026-11-16',
+      leadAnswerBlock: 'Qwen3.8-27B는 소비자용 하드웨어에서 전반적으로 최고입니다. 밀집 코딩 분야 선두(61.7 SWE-bench Pro)이며 Q4에서 24 GB에 탑재됩니다. Llama 4 Scout는 장문 컨텍스트/멀티모달 선택지(17B 활성, MoE, 10M 컨텍스트)이나 Q4에서 ~55 GB VRAM이 필요합니다. Mistral Small 3.1 24B는 14 GB에서 VRAM 대비 최고의 품질을 제공합니다.',
       nextStep: {
         text: '모델을 결정하셨나요? Qwen을 로컬에서 실행하는 방법을 단계별로 안내합니다.',
         label: 'Qwen 로컬 실행 — 전체 설치 가이드 →',
@@ -3276,15 +3555,15 @@ schema: {
       quickAnswerTop: {
         ko: {
           question: 'Qwen vs Llama vs Mistral — 2026년에 어느 로컬 LLM을 사용해야 하나요?',
-          answer: '2026년 6월 기준: Qwen3.8-27B는 소비자용 하드웨어에서 전반적으로 최고입니다(61.7% SWE-bench, Q4에서 24 GB 탑재). Llama 4 Scout는 장문 컨텍스트/멀티모달 선택지(17B 활성, 10M 컨텍스트)이나 Q4에서 ~55 GB VRAM이 필요합니다. Llama 3.3 70B는 영어 추론에서 여전히 강력합니다. Mistral Small 3.1은 RAM 대비 최고의 품질을 제공합니다. 모두 Ollama를 통해 실행 가능합니다.',
+          answer: 'Qwen3.8-27B는 소비자용 하드웨어에서 전반적으로 최고입니다(61.7 SWE-bench Pro, Q4에서 24 GB 탑재). Llama 4 Scout는 장문 컨텍스트/멀티모달 선택지(17B 활성, 10M 컨텍스트)이나 Q4에서 ~55 GB VRAM이 필요합니다. Llama 3.3 70B는 영어 추론에서 여전히 강력합니다. Mistral Small 3.1은 RAM 대비 최고의 품질을 제공합니다. 모두 Ollama를 통해 실행 가능합니다.',
           bullets: [
-            'Qwen3.8-27B — 소비자용 하드웨어 전반 최고, 최고 밀집 코딩(61.7% SWE-bench), Q4에서 24 GB 탑재',
+            'Qwen3.8-27B — 소비자용 하드웨어 전반 최고, 최고 밀집 코딩(61.7 SWE-bench Pro), Q4에서 24 GB 탑재',
             'Llama 4 Scout 17B(MoE) — 장문 컨텍스트(10M 토큰) 및 멀티모달 선택지, Q4에서 ~55 GB VRAM',
             'Mistral Small 3.1 24B — RAM 대비 최고 품질(14 GB), 79% MMLU',
             '코딩: Qwen3.8-27B 또는 Devstral. 장문 컨텍스트/멀티모달: Scout. RAM 효율: Mistral.',
             '모두 Ollama 사용: ollama pull qwen3 / llama4 / mistral',
           ],
-          updatedDate: '2026-06-01',
+          updatedDate: '2026-10-17',
         },
       },
       audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 입문자',
@@ -3317,7 +3596,7 @@ schema: {
             { type: 'plain-terms', text: '이것들은 로컬에서 실행할 수 있는 가장 인기 있는 오픈소스 AI 모델 패밀리 3개입니다. Qwen3(Alibaba)은 코딩에 탁월하고, Llama 4(Meta)는 매우 긴 문서와 이미지를 처리하며, Mistral(프랑스 AI)은 효율적인 소형 모델을 제공합니다. 모두 무료로 다운로드하여 오프라인으로 실행할 수 있습니다.' },
           ],
           items: [
-            '**코딩**: Qwen3.8-27B가 SWE-bench에서 선두(61.7% 실세계, 최고 밀집 모델). 에이전틱 코딩: Mistral Devstral Small 24B. IDE 자동완성: Mistral Codestral 22B.',
+            '**코딩**: Qwen3.8-27B가 SWE-bench에서 선두(61.7% 실세계, 최고 밀집 모델). 에이전틱 코딩: Mistral Devstral Small 2. IDE 자동완성: Mistral Codestral 22B.',
             '**일반 추론**: Llama 3.3 70B와 Qwen3 72B는 거의 동등합니다. Llama 3.x는 영어에서, Qwen은 다국어에서 강세를 보입니다.',
             '**효율성(GB당 품질)**: Mistral Small 3.1 24B는 14 GB RAM으로 70B급에 가까운 품질을 제공합니다. 4월 이후 변동 없음.',
             '**영어 이외 언어**: Qwen3는 29개 언어를 기본 지원합니다. Llama와 Mistral은 주로 영어에 최적화되어 있습니다.',
@@ -3340,7 +3619,7 @@ schema: {
           rows: [
             { 'Family': 'Qwen3', 'Developer': 'Alibaba', 'Current Releases': 'Qwen3 (2026년 4월), Qwen 3.5 (멀티모달), Qwen3.8-27B (SWE-bench 61.7%)', 'Licence': 'Apache 2.0 (대부분의 크기)' },
             { 'Family': 'Llama 4', 'Developer': 'Meta', 'Current Releases': 'Scout (17B 활성/109B MoE, 16개 전문가, 10M 컨텍스트, 멀티모달, ~55 GB VRAM Q4), Maverick (17B 활성/400B MoE), 레거시: 3.3 70B', 'Licence': 'Llama Community (맞춤형)' },
-            { 'Family': 'Mistral', 'Developer': 'Mistral AI', 'Current Releases': 'Small 3.1 (24B), Devstral Small 24B (에이전틱), Codestral 22B (FIM/IDE)', 'Licence': 'Apache 2.0 (대부분의 크기)' },
+            { 'Family': 'Mistral', 'Developer': 'Mistral AI', 'Current Releases': 'Small 3.1 (24B), Devstral Small 2 (에이전틱), Codestral 22B (FIM/IDE)', 'Licence': 'Apache 2.0 (대부분의 크기)' },
           ],
           columns: ['Family', 'Developer', 'Current Releases', 'Licence'],
           content: '이전 세대 모델(Qwen3, Llama 3.3)은 Ollama에서 계속 이용 가능하며 여전히 널리 사용됩니다. 이 비교는 현재 세대 모델에 중점을 둡니다. 실행 준비가 되셨나요? [Qwen 로컬 전체 설치 가이드 →](/ko/local-llms/run-qwen-locally-guide-2026)',
@@ -3349,23 +3628,23 @@ schema: {
           id: 'benchmark-comparison',
           title: '이 모델들은 벤치마크에서 어떻게 비교될까요?',
           rows: [
-            { 'Model': 'Qwen3.8-27B', 'MMLU': '—', 'SWE-bench': '61.7%', 'MATH': '—', 'RAM (Q4_K_M)': '24 GB' },
+            { 'Model': 'Qwen3.8-27B', 'MMLU': '—', 'SWE-bench': '61.7 (Pro)', 'MATH': '—', 'RAM (Q4_K_M)': '24 GB' },
             { 'Model': 'Qwen3 72B', 'MMLU': '~85%', 'SWE-bench': '—', 'MATH': '~84%', 'RAM (Q4_K_M)': '43 GB' },
             { 'Model': 'Llama 4 Scout 17B (MoE)', 'MMLU': '—', 'SWE-bench': '—', 'MATH': '—', 'RAM (Q4_K_M)': '~55 GB' },
             { 'Model': 'Llama 3.3 70B (레거시)', 'MMLU': '82%', 'SWE-bench': '—', 'MATH': '77%', 'RAM (Q4_K_M)': '40 GB' },
             { 'Model': 'Mistral Small 3.1 24B', 'MMLU': '79%', 'SWE-bench': '—', 'MATH': '65%', 'RAM (Q4_K_M)': '14 GB' },
-            { 'Model': 'Devstral Small 24B', 'MMLU': '—', 'SWE-bench': '높음(에이전틱)', 'MATH': '—', 'RAM (Q4_K_M)': '16 GB' },
+            { 'Model': 'Devstral Small 2', 'MMLU': '—', 'SWE-bench': '높음(에이전틱)', 'MATH': '—', 'RAM (Q4_K_M)': '15 GB' },
             { 'Model': 'Qwen3 8B', 'MMLU': '~75%', 'SWE-bench': '—', 'MATH': '~55%', 'RAM (Q4_K_M)': '5 GB' },
             { 'Model': 'Mistral Small v0.3', 'MMLU': '64%', 'SWE-bench': '—', 'MATH': '28%', 'RAM (Q4_K_M)': '4.5 GB' },
           ],
           columns: ['Model', 'MMLU', 'SWE-bench', 'MATH', 'RAM (Q4_K_M)'],
           image: '/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-ko.webp',
-          imageCaption: '벤치마크 비교(2026년 6월): Qwen3.8-27B(61.7% SWE-bench)가 밀집 코딩에서 선두이며 Q4에서 24 GB에 탑재됩니다. SWE-bench(실세계 다중 파일 코딩)는 이제 코딩 모델 평가에서 HumanEval보다 더 중요합니다. Llama 4 Scout는 16개 전문가 MoE 아키텍처(17B 활성/109B 전체)를 사용하지만 Q4에서 ~55 GB VRAM이 필요합니다.',
+          imageCaption: '벤치마크 비교: Qwen3.8-27B(61.7 SWE-bench Pro)가 밀집 코딩에서 선두이며 Q4에서 24 GB에 탑재됩니다. SWE-bench(실세계 다중 파일 코딩)는 이제 코딩 모델 평가에서 HumanEval보다 더 중요합니다. Llama 4 Scout는 16개 전문가 MoE 아키텍처(17B 활성/109B 전체)를 사용하지만 Q4에서 ~55 GB VRAM이 필요합니다.',
           content: '**SWE-bench(실세계 GitHub 이슈 해결)는 실용적인 코딩 평가를 위한 2026년 주요 코딩 벤치마크입니다.** 이는 다중 파일 변경, 코드베이스 이해, 테스트 작성을 테스트합니다. HumanEval(단일 함수 Python)은 비교에 유용하지만 부차적입니다. MMLU와 MATH는 일반 지식과 추론 능력을 평가합니다. Llama 4 Scout 벤치마크는 최근 출시와 MoE 복잡성으로 인해 제한적입니다. 대시는 아직 발표되지 않았거나 해당되지 않는 벤치마크를 나타냅니다.',
         },
         qwen: {
           id: 'qwen3',
-          title: 'Qwen3 / Qwen 3.6은 어떤 작업에서 탁월한가요?',
+          title: 'Qwen3 / Qwen3.8-27B는 어떤 작업에서 탁월한가요?',
           content: [
             '**Alibaba의 Qwen3(2026년 4월)와 Qwen3.8-27B(2026년 8월)은 코딩 벤치마크에서 선두를 달리고 있습니다.** Qwen3.8-27B는 SWE-bench Pro에서 61.7%, GPQA Diamond에서 89.2%를 기록하며, 이용 가능한 최고의 밀집 코딩 모델입니다. 이전의 Qwen 3.6 27B와 달리 네이티브 비전-언어 모델로, 이미지와 동영상을 텍스트뿐 아니라 직접 이해합니다. Qwen3 72B는 MMLU에서 ~85%로 계속 선두를 유지합니다. Qwen3 패밀리에는 밀집 모델과 MoE 변형(35B-A3B)이 모두 포함됩니다.',
             '**강점**: [코딩](/ko/local-llms/best-local-llms-for-coding)(Python, JavaScript, SQL, SWE-bench 선두), 수학적 추론(72B에서 84% MATH), 29개 언어 기본 지원, JSON 모드, 함수 호출, 모든 크기에서 128K 컨텍스트 윈도우.',
@@ -3387,7 +3666,7 @@ schema: {
           id: 'mistral',
           title: 'Mistral의 가장 큰 장점은 무엇인가요?',
           content: [
-            '**Mistral AI는 이 비교에서 가장 파라미터 효율적인 모델을 생산하며 이제 전문화된 변형을 제공합니다.** Mistral Small 3.1 24B는 14 GB RAM만 필요하면서 70B급에 가까운 벤치마크 점수를 달성합니다. 최고의 RAM 대비 품질 비율입니다. Devstral Small 24B(Mistral AI, 2026)는 에이전틱 코딩(다중 파일 편집, 툴 호출, 디버깅 루프)을 위해 특별히 제작되었습니다. Codestral 22B는 IDE 자동완성을 위해 FIM에 최적화된 Mistral의 모델로, Continue.dev 및 Cursor 통합에 권장됩니다.',
+            '**Mistral AI는 이 비교에서 가장 파라미터 효율적인 모델을 생산하며 이제 전문화된 변형을 제공합니다.** Mistral Small 3.1 24B는 14 GB RAM만 필요하면서 70B급에 가까운 벤치마크 점수를 달성합니다. 최고의 RAM 대비 품질 비율입니다. Devstral Small 2(Mistral AI, 2026)는 에이전틱 코딩(다중 파일 편집, 툴 호출, 디버깅 루프)을 위해 특별히 제작되었습니다. Codestral 22B는 IDE 자동완성을 위해 FIM에 최적화된 Mistral의 모델로, Continue.dev 및 Cursor 통합에 권장됩니다.',
             '**강점**: 최고 RAM 대비 품질 비율(Small 3.1), 에이전틱 코딩용 Devstral, IDE/FIM용 Codestral, 강력한 함수 호출 및 툴 사용, 주요 모델에 깔끔한 Apache 2.0 라이선스, EU AI Act 준수를 위한 유럽 출처(프랑스).',
             '**약점**: Mistral Small v0.3는 이제 Qwen3 8B 및 Llama 3.1 8B에 벤치마크에서 밀립니다. Qwen이나 Llama보다 프런티어에서 크기 옵션이 적습니다(단, 전문화가 부분적으로 이를 보완).',
           ],
@@ -3413,7 +3692,7 @@ schema: {
           id: 'which-family-wins-by-task',
           title: '작업별로 어느 모델 패밀리가 이기나요?',
           rows: [
-            { 'Task': 'Python/JavaScript 코딩(생성)', 'Winner': 'Qwen3.8-27B', 'Why': '61.7% SWE-bench — 최고 밀집 코딩 모델' },
+            { 'Task': 'Python/JavaScript 코딩(생성)', 'Winner': 'Qwen3.8-27B', 'Why': '61.7 SWE-bench Pro — 최고 밀집 코딩 모델' },
             { 'Task': '에이전틱 코딩(다중 파일, 디버깅)', 'Winner': 'Mistral (Devstral)', 'Why': '에이전틱 워크플로우를 위해 특별 제작됨' },
             { 'Task': 'IDE 자동완성(FIM)', 'Winner': 'Mistral (Codestral)', 'Why': 'FIM 최적화, Continue.dev/Cursor 지원' },
             { 'Task': '일반 Q&A(영어)', 'Winner': 'Llama 3.3 / Qwen3(동률)', 'Why': '70B에서 82-85% MMLU 동점' },
@@ -3426,7 +3705,7 @@ schema: {
           ],
           columns: ['Task', 'Winner', 'Why'],
           image: '/images/qwen-vs-llama-vs-mistral-task-winners-en.svg',
-          imageCaption: '작업별 우승자 매트릭스(2026년 5월): Qwen 3.6이 밀집 코딩에서 우승(61.7% SWE-bench); Devstral가 에이전틱에서 우승; Codestral이 IDE 자동완성에서 우승; Llama 4 Scout가 장문 컨텍스트 지배; Mistral Small 3.1이 최고 GB당 품질.',
+          imageCaption: '작업별 우승자 매트릭스: Qwen3.8-27B가 밀집 코딩에서 우승(61.7 SWE-bench Pro); Devstral가 에이전틱에서 우승; Codestral이 IDE 자동완성에서 우승; Llama 4 Scout가 장문 컨텍스트 지배; Mistral Small 3.1이 최고 GB당 품질.',
           content: [
             '모델 선택은 첫 번째 단계이고, 프롬프트 설계가 두 번째 단계입니다. 동일한 프롬프트도 Qwen, Llama, Mistral에서 크게 다른 결과를 낼 수 있습니다. 어느 모델 패밀리에서든 일관된 결과를 얻기 위한 체계적인 기법은 [프롬프트 엔지니어링 가이드](https://www.promptquorum.com/prompt-engineering)를 참조하십시오.',
           ],
@@ -3437,7 +3716,7 @@ schema: {
           content: [
             '**3B-4B급**: Qwen3 3B와 Phi-4 Mini 3.8B는 코딩과 수학에서 Llama 4 3B를 능가합니다. 일반 영어 사용에는 Llama 4 3B가 더 신뢰할 수 있습니다.',
             '**7B-8B급**: Qwen3 8B(~5 GB)와 Llama 3.1 8B(~5.5 GB) 모두 Mistral Small v0.3를 크게 능가합니다. Qwen3 8B는 [코딩](/ko/local-llms/best-local-llms-for-coding)에서 선두이고, Llama 3.1 8B는 영어 지시 따르기에서 선두입니다.',
-            '**14B-24B급**: Qwen3 14B와 Mistral Small 3.1 24B가 주요 옵션입니다. Mistral Small 3.1이 더 많은 RAM을 요구하지만 전반적으로 더 강력합니다. Devstral Small 24B는 이 티어에서 에이전틱 코딩을 하는 개발자에게 최선의 선택입니다.',
+            '**14B-24B급**: Qwen3 14B와 Mistral Small 3.1 24B가 주요 옵션입니다. Mistral Small 3.1이 더 많은 RAM을 요구하지만 전반적으로 더 강력합니다. Devstral Small 2는 이 티어에서 에이전틱 코딩을 하는 개발자에게 최선의 선택입니다.',
             '**MoE급(2025-2026년 신규)**: Llama 4 Scout(17B 활성/109B 전체, 16개 전문가)와 Qwen3.6-35B-A3B(3B 활성/35B 전체, 73.4 SWE-bench)는 Mixture-of-Experts 아키텍처를 사용합니다. 토큰당 파라미터의 일부만 활성화됩니다. Scout는 Q4에서 ~55 GB VRAM이 필요합니다(24 GB GPU에는 1.78비트에서만 맞고, ~20 tok/s). 따라서 소비자 VRAM 효율보다는 장문 컨텍스트/멀티모달 선택지입니다. 더 작은 MoE 변형은 훨씬 VRAM 친화적입니다. gpt-oss:20b(21B 전체/3.6B 활성 MoE)도 조정 가능한 추론으로 ~o3-mini 수준에서 16 GB에서 실행됩니다.',
             '**70B-72B급**: Llama 3.3 70B와 Qwen3 72B는 2026년 로컬에서 실행 가능한 최고의 밀집 모델입니다. 코딩과 다국어는 Qwen3 72B를, 영어 위주 일반 작업은 Llama 3.3 70B를 선택하십시오.',
             'Qwen, Llama, Mistral은 오픈소스 환경을 아우릅니다. 상업적 대안(GPT-5.6, Claude Opus 5, Gemini 3.5)을 포함한 비교와 오픈소스 대비 독점 선택 기준은 [올바른 AI 모델 선택 방법](https://www.promptquorum.com/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)을 참조하십시오.',
@@ -3459,7 +3738,7 @@ schema: {
             '**Mistral Small 24B**는 세 모델 중 가장 높은 절대 벤치마크를 달성하지만 14 GB RAM이 필요합니다. 품질이 여유 공간보다 중요한 16 GB+ 머신에 최적입니다.',
             '**Qwen3 14B**는 이 레거시 티어에서 가장 강력한 코딩 모델로, 8 GB RAM에서 71% HumanEval을 기록합니다. 코드 생성을 우선시하는 12-16 GB RAM 개발자에게 최적입니다.',
             '**Llama 3.1 8B**는 가장 넓은 생태계 지원을 갖추고 있습니다. 가장 많은 파인튜닝, 가장 많은 튜토리얼, 가장 많은 커뮤니티 도움. 처음 사용자나 광범위한 커뮤니티 자원이 필요한 팀에 최적입니다.',
-            '**Mistral Small 24B → Mistral Small 3.1 24B 업그레이드 시기**: 에이전틱 코딩이 필요한 경우(Devstral Small 24B 사용), IDE 자동완성(Codestral 22B 사용), 또는 동일한 RAM 발자국에서 점진적인 품질 개선이 필요한 경우.',
+            '**Mistral Small 24B → Mistral Small 3.1 24B 업그레이드 시기**: 에이전틱 코딩이 필요한 경우(Devstral Small 2 사용), IDE 자동완성(Codestral 22B 사용), 또는 동일한 RAM 발자국에서 점진적인 품질 개선이 필요한 경우.',
             '**Qwen3 14B → Qwen3 14B 또는 Qwen3.8-27B 업그레이드 시기**: SWE-bench 성능이 필요한 경우(Qwen3.8-27B는 61.7%로 2026년 최고 밀집 코딩 모델), 이미 16 GB RAM에 있거나, 29개 언어 기본 지원이 필요한 경우(Qwen 3 확장 다국어 커버리지).',
             '**Llama 3.1 8B → Llama 4 Scout 업그레이드 시기**: Q4에서 ~55 GB+ VRAM이 있는 경우에만(Scout의 16개 전문가 MoE는 17B/109B 파라미터를 활성화하지만 Q4에서 ~55 GB가 필요하고, 1.78비트에서만 24 GB GPU에 맞음, ~20 tok/s) 그리고 10M 토큰 컨텍스트(Llama 3.3의 128K 대비) 또는 멀티모달 입력이 필요한 경우. 단일 24 GB 소비자용 GPU에서는 Qwen3.8-27B(Q4에서 24 GB 탑재)가 더 나은 업그레이드입니다.',
             '**레거시 모델 유지 시기**: 파인튜닝이 Llama 3.1 8B 또는 Qwen 3에 구축된 경우(마이그레이션 비용 > 이익), 프로덕션 안정성이 벤치마크보다 중요한 경우(레거시 모델은 검증됨), 또는 워크로드에 새로운 기능이 필요하지 않은 경우(일반 채팅, 요약, 기본 Q&A).',
@@ -3474,7 +3753,7 @@ schema: {
           id: 'regional-context',
           title: '지역별 맥락: EU, 일본, 중국에 맞는 패밀리',
           content: [
-            '**EU 및 GDPR 준수**: 세 모델 패밀리(Qwen3, Llama 3.x/4, Mistral) 모두 외부 데이터 전송 없이 완전히 로컬에서 실행되어 GDPR 준수를 보장합니다. Mistral(프랑스 출처, Mistral AI)은 가장 강력한 EU 준수 태세를 갖추고 있습니다. Devstral Small 24B와 Codestral 22B는 프랑스 출처(Mistral AI), Apache 2.0 — 이용 가능한 가장 강력한 EU 출처 코딩 모델입니다. Qwen3(Apache 2.0)와 Llama 3.x/4 모두 EU AI Act 투명성 및 오픈소스 감사 가능성 요구 사항에서 동등하게 작동합니다. Qwen3는 독일어, 프랑스어 등 EU 언어를 품질 저하 없이 기본 지원합니다. 2026년 8월 EU AI Act 기한은 이 모델 티어의 분류에 영향을 미칩니다.',
+            '**EU 및 GDPR 준수**: 세 모델 패밀리(Qwen3, Llama 3.x/4, Mistral) 모두 외부 데이터 전송 없이 완전히 로컬에서 실행되어 GDPR 준수를 보장합니다. Mistral(프랑스 출처, Mistral AI)은 가장 강력한 EU 준수 태세를 갖추고 있습니다. Devstral Small 2와 Codestral 22B는 프랑스 출처(Mistral AI), Apache 2.0 — 이용 가능한 가장 강력한 EU 출처 코딩 모델입니다. Qwen3(Apache 2.0)와 Llama 3.x/4 모두 EU AI Act 투명성 및 오픈소스 감사 가능성 요구 사항에서 동등하게 작동합니다. Qwen3는 독일어, 프랑스어 등 EU 언어를 품질 저하 없이 기본 지원합니다. 2026년 8월 EU AI Act 기한은 이 모델 티어의 분류에 영향을 미칩니다.',
             '**일본 및 METI 준수**: Qwen3와 Llama 3.x/4 모두 일본 경제산업성(METI) 로컬 AI 거버넌스 지침에 부합합니다. 일본 기업 네트워크 내 비공개 인프라에서 배포하면 특별 보고가 필요 없습니다. Qwen3는 29개 언어 중 일본어를 강력하게 지원하여(기본 토큰화) 일본어 워크로드에서 선호됩니다. Mistral도 준수하지만 일본 AI 거버넌스 맥락에서 덜 문서화되어 있습니다. Llama 4 Scout의 MoE 효율성은 하드웨어 제약이 있는 일본 기업에게 매력적입니다.',
             '**중국 및 CAC 요구 사항**: Qwen3(Alibaba, 국내)는 인터넷정보판공실(CAC) 준수에 강력하게 선호됩니다. Qwen3는 29개 언어 지원에서 품질 저하 없이 중국어 토큰화에 기본 최적화되어 있습니다. 표준어 및 방언 지원에 중요한 장점입니다. Kimi K2.6(Moonshot AI, 1T 전체/32B 활성 MoE, Modified MIT 라이선스)도 중국 기업 코딩에 이용 가능합니다. 프런티어 성능(58.6 SWE-Bench Pro), Modified MIT 라이선스. Llama와 Mistral은 중국 영토 내 비공개 서버에서 배포하면 허용되지만, 클라우드 API 호출은 더 엄격한 CAC 심사와 데이터 거주지 요구 사항이 발생합니다. 콘텐츠 모더레이션 준수를 위해 Qwen3의 중국어 훈련 유산은 현지 콘텐츠 정책과의 일치를 보장합니다.',
           ],
@@ -3512,16 +3791,17 @@ schema: {
           id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
-            { q: 'Qwen과 Llama 중 제 사용 사례에 어느 것이 더 좋나요?', a: '소비자용 하드웨어 전반 최고: Qwen3.8-27B(61.7% SWE-bench, Q4에서 24 GB 탑재). 코딩과 다국어 작업: Qwen3.8-27B 또는 Qwen3 8B. 장문 컨텍스트(10M 토큰) 또는 멀티모달 입력: Llama 4 Scout(Q4에서 ~55 GB VRAM 필요). GB당 최대 품질: Mistral Small 3.1. 실제 워크로드의 샘플 프롬프트로 테스트하십시오.' },
+            { q: 'Qwen과 Llama 중 제 사용 사례에 어느 것이 더 좋나요?', a: '소비자용 하드웨어 전반 최고: Qwen3.8-27B(61.7 SWE-bench Pro, Q4에서 24 GB 탑재). 코딩과 다국어 작업: Qwen3.8-27B 또는 Qwen3 8B. 장문 컨텍스트(10M 토큰) 또는 멀티모달 입력: Llama 4 Scout(Q4에서 ~55 GB VRAM 필요). GB당 최대 품질: Mistral Small 3.1. 실제 워크로드의 샘플 프롬프트로 테스트하십시오.' },
             { q: 'Llama 4 Scout가 무엇이고 Llama 3.3과 어떻게 다른가요?', a: 'Llama 4 Scout는 16개 전문가 Mixture-of-Experts(MoE) 아키텍처를 사용합니다. 109B 전체 파라미터 중 토큰당 17B가 활성화되며 멀티모달입니다. 모든 전문가가 상주해야 하므로 Q4에서 ~55 GB VRAM이 필요합니다(17B 밀집 모델이 사용할 ~14 GB가 아님). 일반 양자화에서는 24 GB 소비자용 GPU에 맞지 않습니다. 1.78비트에서만 가능(~20 tok/s). 장점은 10M 토큰 컨텍스트 윈도우로, 로컬에서 실행 가능한 모델 중 가장 큽니다. Llama 3.3 70B는 밀집 모델(40 GB). 단일 24 GB GPU에서는 Qwen3.8-27B가 더 나은 전반적 선택이고, VRAM이 있으면서 장문 컨텍스트나 멀티모달 입력이 필요할 때 Scout를 선택하십시오.' },
-            { q: 'Qwen3와 Qwen3 중 어느 것을 사용해야 하나요?', a: '새 프로젝트에는 Qwen3를 사용하십시오. Qwen3 8B는 코딩 및 추론 벤치마크에서 Qwen3 8B를 개선합니다. Qwen3.8-27B(61.7% SWE-bench)는 이용 가능한 최고의 밀집 코딩 모델입니다. Qwen3에 의존하는 기존 파인튜닝이나 워크플로우가 있는 경우에만 유지하십시오. 새 설치에는 항상 Qwen3로 시작하십시오.' },
+            { q: 'Qwen3와 Qwen3 중 어느 것을 사용해야 하나요?', a: '새 프로젝트에는 Qwen3를 사용하십시오. Qwen3 8B는 코딩 및 추론 벤치마크에서 Qwen3 8B를 개선합니다. Qwen3.8-27B(61.7 SWE-bench Pro)는 이용 가능한 최고의 밀집 코딩 모델입니다. Qwen3에 의존하는 기존 파인튜닝이나 워크플로우가 있는 경우에만 유지하십시오. 새 설치에는 항상 Qwen3로 시작하십시오.' },
             { q: 'Mistral은 소비자용 하드웨어에서 얼마나 빠른가요?', a: 'Mistral Small 3.1(24B)은 같은 하드웨어에서 Llama 3.1 8B보다 1.5-2배 빠릅니다. 처리량이 중요한 워크로드에서 Mistral Small은 단일 GPU에서 40-60 tok/s로 가장 빠릅니다. Codestral 22B는 IDE 자동완성 워크플로우에서 FIM(fill-in-the-middle)에 최적화되어 있습니다.' },
             { q: '세 모델 모두 8 GB VRAM에서 실행되나요?', a: '네, 모두 8 GB에서 Q4 양자화로 7B 모델을 실행할 수 있습니다. Qwen3 8B는 ~5 GB, Llama 3.1 8B는 ~5.5 GB, Mistral Small은 Q4_K_M에서 ~4.5 GB를 사용합니다. Llama 4 Scout(MoE)는 8 GB에 맞지 않습니다. Q4에서 ~55 GB VRAM이 필요합니다.' },
             { q: 'RTX 5090이 필요한가요?', a: '소비자용 선택에는 필요하지 않습니다. RTX 5070(12 GB)으로 7B 모델을 편안하게 실행합니다. 24 GB GPU로 Q4에서 Qwen3.8-27B를 실행할 수 있습니다(소비자용 하드웨어 전반 최고). Llama 4 Scout는 Q4에서 ~55 GB가 필요하며, 단일 소비자용 카드가 아닌 멀티 GPU 또는 워크스테이션 리그입니다. RTX 5090은 70B+ 밀집 모델을 실행하지 않는 한 과도합니다.' },
             { q: '어떤 양자화를 사용해야 하나요?', a: 'Q4_K_M(4비트)로 시작하십시오. 모든 하드웨어에서 품질과 속도의 좋은 균형입니다. VRAM 여유가 있고 더 높은 품질이 필요하면 Q5_K_M을 사용하십시오. 제한된 장치에는 Q3_K_S.' },
-            { q: '코딩에 어느 것이 최고인가요?', a: '8GB 티어: Qwen3 8B(~76% HumanEval). 최고 밀집 코딩: Qwen3.8-27B(61.7% SWE-bench). 에이전틱 다중 파일 워크플로우: Devstral Small 24B. IDE 자동완성(FIM): Codestral 22B.' },
-            { q: '16 GB RAM에서 어느 모델을 사용해야 하나요?', a: 'Mistral Small 3.1 24B(Q4_K_M에서 14 GB) — 16 GB RAM에서 전반적으로 최고 품질(79% MMLU). 대안: 여유 있는 코딩을 위해 Q4_K_M(9 GB)에서 Qwen3 14B. Qwen3.8-27B(최고의 밀집 코딩, 61.7% SWE-bench)는 ~24 GB가 필요해 16 GB에는 맞지 않습니다. 16 GB에서 Llama 3.3 70B는 피하십시오 — 40 GB가 필요합니다.' },
+            { q: '코딩에 어느 것이 최고인가요?', a: '8GB 티어: Qwen3 8B(~76% HumanEval). 최고 밀집 코딩: Qwen3.8-27B(61.7 SWE-bench Pro). 에이전틱 다중 파일 워크플로우: Devstral Small 2. IDE 자동완성(FIM): Codestral 22B.' },
+            { q: '16 GB RAM에서 어느 모델을 사용해야 하나요?', a: 'Mistral Small 3.1 24B(Q4_K_M에서 14 GB) — 16 GB RAM에서 전반적으로 최고 품질(79% MMLU). 대안: 여유 있는 코딩을 위해 Q4_K_M(9 GB)에서 Qwen3 14B. Qwen3.8-27B(최고의 밀집 코딩, 61.7 SWE-bench Pro)는 ~24 GB가 필요해 16 GB에는 맞지 않습니다. 16 GB에서 Llama 3.3 70B는 피하십시오 — 40 GB가 필요합니다.' },
             { q: 'Qwen이 추론에서 Llama보다 나은가요?', a: 'Qwen3 72B는 MATH에서 84%로 Llama 3.3 70B의 77%보다 7점 앞섭니다. MMLU: Qwen3 72B 85% vs Llama 3.3 70B 82% — 매우 근접. Qwen이 추론에서 승리하고, Llama 3.3이 영어 지시 따르기에서 승리합니다.' },
+            { q: '9월 이후 Qwen, Llama, Mistral에는 어떤 변화가 있었나요?', a: 'Qwen3.8은 현재 Ollama에서 27B로만 제공되므로(Q4_K_M 18GB, 256K 컨텍스트), Qwen3 8B와 14B가 여전히 더 작은 Qwen 선택지입니다. Devstral Small 2(Mistral AI, 24B, 15GB, Mistral 발표 SWE-bench Verified 65.8%, Apache 2.0)가 현재 Devstral 태그이며, Mistral Large 4(Ollama 목록 기준 총 1.05T/활성 52B 파라미터)는 데이터센터 규모 모델로 등장해 일반 소비자 하드웨어에는 맞지 않습니다. Llama 4 Scout(Q4 약 55GB)는 이 비교에서 장문 컨텍스트 선택지로 남아 있습니다. 위의 소비자 하드웨어 순위는 바뀌지 않습니다.' },
           ],
         },
         sources: {
@@ -3530,7 +3810,7 @@ schema: {
           items: [
             '[Qwen 팀. (2026). Qwen3 기술 보고서.](https://arxiv.org/abs/2505.09388) — Qwen3 패밀리 벤치마크, Qwen3.8-27B SWE-bench(61.7%), MoE 변형.',
             '[Meta AI. (2025). Llama 4 모델 카드.](https://llama.meta.com/) — Llama 4 Scout/Maverick MoE, 10M 컨텍스트 윈도우의 공식 벤치마크 및 아키텍처.',
-            '[Mistral AI. (2026). Devstral Small 24B.](https://mistral.ai/) — 에이전틱 코딩 모델의 아키텍처 및 벤치마크.',
+            '[Mistral AI. (2026). Devstral Small 2.](https://mistral.ai/) — 에이전틱 코딩 모델의 아키텍처 및 벤치마크.',
             '[Mistral AI. (2025). Codestral.](https://mistral.ai/) — IDE 자동완성을 위한 FIM 최적화 코딩 모델.',
             '[Meta AI. (2024). Llama 3.3 모델 카드.](https://llama.meta.com/) — Llama 3.3 70B의 공식 벤치마크 데이터(레거시, 여전히 널리 사용됨).',
           ],
@@ -3547,7 +3827,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Qwen 3 vs Llama 4 vs Mistral Small 24B: 2026 벤치마크 비교',
-        'description': '전체 벤치마크 비교: Qwen3.8-27B(61.7% SWE-bench, 24 GB 최고), Llama 4 Scout(MoE, 10M 컨텍스트, ~55 GB VRAM), Mistral Small 24B + 레거시 Mistral 24B/Qwen3 14B/Llama 3.1 8B.',
+        'description': '전체 벤치마크 비교: Qwen3.8-27B(61.7 SWE-bench Pro, 24 GB 최고), Llama 4 Scout(MoE, 10M 컨텍스트, ~55 GB VRAM), Mistral Small 24B + 레거시 Mistral 24B/Qwen3 14B/Llama 3.1 8B.',
         'url': 'https://www.promptquorum.com/local-llms/qwen-vs-llama-vs-mistral',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'datePublished': '2026-04-04',
@@ -3579,7 +3859,7 @@ schema: {
         'step': [
           { '@type': 'HowToStep', 'position': 1, 'name': '주요 작업 파악', 'text': '코딩(SWE-bench), 다국어, 영어 추론, 장문 컨텍스트, 최대 효율 중 무엇이 필요한지 파악하십시오.' },
           { '@type': 'HowToStep', 'position': 2, 'name': '하드웨어 제약 확인', 'text': '이용 가능한 VRAM을 확인하십시오: 5 GB(8B 모델), 24 GB(gpt-oss:20b/중급), 24 GB(Q4에서 Qwen3.8-27B), 40+ GB(70B+), 또는 ~55 GB+(Q4에서 Llama 4 Scout).' },
-          { '@type': 'HowToStep', 'position': 3, 'name': '벤치마크 점수 검토', 'text': 'Qwen 3.6이 SWE-bench에서 선두(27B에서 61.7%, 24 GB 전반 최고), Qwen3 72B가 MATH 선두(84%), Llama 4 Scout가 컨텍스트 지배(10M 토큰, Q4에서 ~55 GB 필요), Mistral이 GB당 품질 극대화(Small 3.1, 14 GB).' },
+          { '@type': 'HowToStep', 'position': 3, 'name': '벤치마크 점수 검토', 'text': 'Qwen3.8-27B가 SWE-bench에서 선두(27B에서 61.7%, 24 GB 전반 최고), Qwen3 72B가 MATH 선두(84%), Llama 4 Scout가 컨텍스트 지배(10M 토큰, Q4에서 ~55 GB 필요), Mistral이 GB당 품질 극대화(Small 3.1, 14 GB).' },
           { '@type': 'HowToStep', 'position': 4, 'name': '모델 및 변형 선택', 'text': '코딩/다국어/전반 최고: Qwen3. 장문 컨텍스트/멀티모달(~55 GB 필요): Llama 4 Scout. 영어 추론: Llama 3.3. RAM 제한: Mistral Small 3.1. 에이전틱 코딩: Devstral. IDE: Codestral.' },
           { '@type': 'HowToStep', 'position': 5, 'name': '로컬 설치 및 테스트', 'text': 'Ollama 사용: `ollama run qwen3:8b`, `ollama run llama4:scout`, `ollama run mistral:small`, 또는 `ollama run devstral:small`로 다운로드하여 실행하십시오.' },
         ],
@@ -3587,14 +3867,14 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': '모델 패밀리 비교: Qwen3, Llama 4, Mistral(2026년 6월)',
+        'name': '모델 패밀리 비교: Qwen3, Llama 4, Mistral',
         'numberOfItems': 10,
         'itemListElement': [
           {
             '@type': 'ListItem',
             'position': 1,
             'name': 'Qwen3.8-27B',
-            'description': '코딩용 최고 밀집 모델. 61.7% SWE-bench(실세계 다중 파일), 83% MMLU, 80% MATH, 29개 기본 언어, 16 GB RAM(Q4_K_M).'
+            'description': '코딩용 최고 밀집 모델. 61.7 SWE-bench Pro(실세계 다중 파일), 83% MMLU, 80% MATH, 29개 기본 언어, 16 GB RAM(Q4_K_M).'
           },
           {
             '@type': 'ListItem',
@@ -3617,7 +3897,7 @@ schema: {
           {
             '@type': 'ListItem',
             'position': 5,
-            'name': 'Devstral Small 24B',
+            'name': 'Devstral Small 2',
             'description': '에이전틱 코딩 워크플로우 최고. 다중 파일 편집, 툴 호출, 디버깅 루프를 위해 특별 제작됨, 16 GB RAM.'
           },
           {
@@ -3661,7 +3941,7 @@ schema: {
             'name': 'Qwen과 Llama 중 제 사용 사례에 어느 것이 더 좋나요?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '소비자용 하드웨어 전반 최고: Qwen3.8-27B(61.7% SWE-bench, Q4에서 24 GB 탑재). 코딩과 다국어 작업: Qwen3.8-27B 또는 Qwen3 8B. 장문 컨텍스트(10M 토큰) 또는 멀티모달 입력: Llama 4 Scout(Q4에서 ~55 GB VRAM 필요). GB당 최대 품질: Mistral Small 3.1. 실제 워크로드의 샘플 프롬프트로 테스트하십시오.',
+              'text': '소비자용 하드웨어 전반 최고: Qwen3.8-27B(61.7 SWE-bench Pro, Q4에서 24 GB 탑재). 코딩과 다국어 작업: Qwen3.8-27B 또는 Qwen3 8B. 장문 컨텍스트(10M 토큰) 또는 멀티모달 입력: Llama 4 Scout(Q4에서 ~55 GB VRAM 필요). GB당 최대 품질: Mistral Small 3.1. 실제 워크로드의 샘플 프롬프트로 테스트하십시오.',
             },
           },
           {
@@ -3677,7 +3957,7 @@ schema: {
             'name': 'Qwen3와 Qwen3 중 어느 것을 사용해야 하나요?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '새 프로젝트에는 Qwen3를 사용하십시오. Qwen3 8B는 코딩 및 추론 벤치마크에서 Qwen3 8B를 개선합니다. Qwen3.8-27B(61.7% SWE-bench)는 이용 가능한 최고의 밀집 코딩 모델입니다. Qwen3에 의존하는 기존 파인튜닝이나 워크플로우가 있는 경우에만 유지하십시오. 새 설치에는 항상 Qwen3로 시작하십시오.',
+              'text': '새 프로젝트에는 Qwen3를 사용하십시오. Qwen3 8B는 코딩 및 추론 벤치마크에서 Qwen3 8B를 개선합니다. Qwen3.8-27B(61.7 SWE-bench Pro)는 이용 가능한 최고의 밀집 코딩 모델입니다. Qwen3에 의존하는 기존 파인튜닝이나 워크플로우가 있는 경우에만 유지하십시오. 새 설치에는 항상 Qwen3로 시작하십시오.',
             },
           },
           {
@@ -3717,7 +3997,7 @@ schema: {
             'name': '코딩에 어느 것이 최고인가요?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '8GB 티어: Qwen3 8B(~76% HumanEval). 최고 밀집 코딩: Qwen3.8-27B(61.7% SWE-bench). 에이전틱 다중 파일 워크플로우: Devstral Small 24B. IDE 자동완성(FIM): Codestral 22B.',
+              'text': '8GB 티어: Qwen3 8B(~76% HumanEval). 최고 밀집 코딩: Qwen3.8-27B(61.7 SWE-bench Pro). 에이전틱 다중 파일 워크플로우: Devstral Small 2. IDE 자동완성(FIM): Codestral 22B.',
             },
           },
           {
@@ -3725,7 +4005,7 @@ schema: {
             'name': '16 GB RAM에서 어느 모델을 사용해야 하나요?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Mistral Small 3.1 24B(Q4_K_M에서 14 GB) — 16 GB RAM에서 전반적으로 최고 품질(79% MMLU). 대안: 여유 있는 코딩을 위해 Q4_K_M(9 GB)에서 Qwen3 14B. Qwen3.8-27B(최고의 밀집 코딩, 61.7% SWE-bench)는 ~24 GB가 필요해 16 GB에는 맞지 않습니다. 16 GB에서 Llama 3.3 70B는 피하십시오 — 40 GB가 필요합니다.',
+              'text': 'Mistral Small 3.1 24B(Q4_K_M에서 14 GB) — 16 GB RAM에서 전반적으로 최고 품질(79% MMLU). 대안: 여유 있는 코딩을 위해 Q4_K_M(9 GB)에서 Qwen3 14B. Qwen3.8-27B(최고의 밀집 코딩, 61.7 SWE-bench Pro)는 ~24 GB가 필요해 16 GB에는 맞지 않습니다. 16 GB에서 Llama 3.3 70B는 피하십시오 — 40 GB가 필요합니다.',
             },
           },
           {
@@ -3736,9 +4016,17 @@ schema: {
               'text': 'Qwen3 72B는 MATH에서 84%로 Llama 3.3 70B의 77%보다 7점 앞섭니다. MMLU: Qwen3 72B 85% vs Llama 3.3 70B 82% — 매우 근접. Qwen이 추론에서 승리하고, Llama 3.3이 영어 지시 따르기에서 승리합니다.',
             },
           },
+          {
+            '@type': 'Question',
+            'name': '9월 이후 Qwen, Llama, Mistral에는 어떤 변화가 있었나요?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3.8은 현재 Ollama에서 27B로만 제공되므로(Q4_K_M 18GB, 256K 컨텍스트), Qwen3 8B와 14B가 여전히 더 작은 Qwen 선택지입니다. Devstral Small 2(Mistral AI, 24B, 15GB, Mistral 발표 SWE-bench Verified 65.8%, Apache 2.0)가 현재 Devstral 태그이며, Mistral Large 4(Ollama 목록 기준 총 1.05T/활성 52B 파라미터)는 데이터센터 규모 모델로 등장해 일반 소비자 하드웨어에는 맞지 않습니다. Llama 4 Scout(Q4 약 55GB)는 이 비교에서 장문 컨텍스트 선택지로 남아 있습니다. 위의 소비자 하드웨어 순위는 바뀌지 않습니다.',
+            },
+          },
         ],
       },
       gammaEmbedUrl: '/presentations/qwen-vs-llama-vs-mistral-static.html',
-      gammaDescription: '아래 슬라이드 덱에서 다루는 내용: Qwen3.8-27B vs Llama 4 Scout vs Mistral 벤치마크 비교(2026년 6월 — SWE-bench, MoE VRAM 현실), 작업별 최적 모델(24 GB 전반 최고, 코딩, 다국어, 장문 컨텍스트, RAM 효율), MoE 티어를 포함한 규모별 비교, 에이전틱 코딩용 Devstral, IDE용 Codestral, Ollama 빠른 시작 명령어. 로컬 LLM 모델 선택 참조 카드로 PDF를 다운로드하십시오.',
+      gammaDescription: '아래 슬라이드 덱에서 다루는 내용: Qwen3.8-27B vs Llama 4 Scout vs Mistral 벤치마크 비교(SWE-bench, MoE VRAM 현실), 작업별 최적 모델(24 GB 전반 최고, 코딩, 다국어, 장문 컨텍스트, RAM 효율), MoE 티어를 포함한 규모별 비교, 에이전틱 코딩용 Devstral, IDE용 Codestral, Ollama 빠른 시작 명령어. 로컬 LLM 모델 선택 참조 카드로 PDF를 다운로드하십시오.',
     },
   };
