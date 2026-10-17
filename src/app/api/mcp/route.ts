@@ -41,6 +41,7 @@ import {
 } from '@/lib/mcp/directory-tools'
 import { STACK_RECIPES } from '@/lib/power-local-llm/stacks'
 import { recordMcpCall, type McpToolName } from '@/lib/mcp/usage'
+import { tagSiteUrls } from '@/lib/mcp/utm'
 import { TOTAL_TOOL_COUNT } from '@/lib/power-local-llm/apps-barrel'
 import { SUPPORTED_LANGS } from '@/components/search/search-utils'
 import { START_LANGS } from '@/lib/mcp/start/copy'
@@ -57,8 +58,8 @@ import {
 
 export const runtime = 'nodejs'
 
-function jsonResult(data: unknown) {
-  return { content: [{ type: 'text' as const, text: JSON.stringify(data, null, 2) }] }
+function jsonResult(data: unknown, toolName: McpToolName) {
+  return { content: [{ type: 'text' as const, text: JSON.stringify(tagSiteUrls(data, toolName), null, 2) }] }
 }
 
 function errorResult(message: string) {
@@ -75,7 +76,7 @@ async function withUsageTracking<T>(toolName: McpToolName, fn: () => T): Promise
 function run(toolName: McpToolName, fn: () => unknown) {
   return withUsageTracking(toolName, () => {
     try {
-      return jsonResult(fn())
+      return jsonResult(fn(), toolName)
     } catch (err) {
       if (err instanceof AppNotFoundError || err instanceof ArticleNotFoundError) return errorResult(err.message)
       throw err
@@ -133,7 +134,7 @@ const handler = createMcpHandler(
           limit: z.number().int().min(1).max(25).optional().describe('Max results, default 10'),
         }),
       },
-      async (args) => withUsageTracking('search_promptquorum', () => jsonResult(searchPromptquorum(args)))
+      async (args) => withUsageTracking('search_promptquorum', () => jsonResult(searchPromptquorum(args), 'search_promptquorum'))
     )
 
     server.registerTool(
@@ -150,7 +151,7 @@ const handler = createMcpHandler(
       async (args) =>
         withUsageTracking('get_article', () => {
           try {
-            return jsonResult(getArticle(args))
+            return jsonResult(getArticle(args), 'get_article')
           } catch (err) {
             if (err instanceof ArticleNotFoundError) return errorResult(err.message)
             throw err
@@ -165,7 +166,7 @@ const handler = createMcpHandler(
         description: 'List every content section on PromptQuorum (local-llms, prompt-engineering, power-local-llm, etc.) with a short description of each.',
         inputSchema: z.object({}),
       },
-      async () => withUsageTracking('list_clusters', () => jsonResult(listClusters()))
+      async () => withUsageTracking('list_clusters', () => jsonResult(listClusters(), 'list_clusters'))
     )
 
     server.registerTool(
@@ -181,7 +182,7 @@ const handler = createMcpHandler(
       async (args) =>
         withUsageTracking('get_app_details', () => {
           try {
-            return jsonResult(getAppDetails(args))
+            return jsonResult(getAppDetails(args), 'get_app_details')
           } catch (err) {
             if (err instanceof AppNotFoundError) return errorResult(err.message)
             throw err
@@ -197,7 +198,7 @@ const handler = createMcpHandler(
           'List the valid category, use-case and OS values that search_apps accepts, each with a "count" of listed apps and up to 3 "exampleApps" — use these to pick a plausible category instead of guessing one blind, and to check a category actually has listings before recommending it. Call this first when helping a user pick a local-AI app, so follow-up questions use real filter values.',
         inputSchema: z.object({}),
       },
-      async () => withUsageTracking('list_categories', () => jsonResult(listCategories()))
+      async () => withUsageTracking('list_categories', () => jsonResult(listCategories(), 'list_categories'))
     )
 
     server.registerTool(
@@ -224,7 +225,7 @@ const handler = createMcpHandler(
           offset: z.number().int().min(0).optional().describe('Results to skip, for paging past "limit" through "totalMatches". Default 0.'),
         }),
       },
-      async (args) => withUsageTracking('search_apps', () => jsonResult(searchApps(args)))
+      async (args) => withUsageTracking('search_apps', () => jsonResult(searchApps(args), 'search_apps'))
     )
 
     server.registerTool(
@@ -252,7 +253,7 @@ const handler = createMcpHandler(
           useCase: z.enum(['commercial-use', 'modify', 'redistribute-modified', 'host-as-service', 'embed-in-product']).optional().describe('Scenario to evaluate the license against'),
         }),
       },
-      async (args) => withUsageTracking('explain_license', () => jsonResult(explainLicense(args)))
+      async (args) => withUsageTracking('explain_license', () => jsonResult(explainLicense(args), 'explain_license'))
     )
 
     server.registerTool(
@@ -373,7 +374,7 @@ const handler = createMcpHandler(
           cluster: z.string().optional().describe('Restrict articles to one cluster, e.g. "power-local-llm"'),
         }),
       },
-      async (args) => withUsageTracking('get_latest', () => jsonResult(getLatest(args)))
+      async (args) => withUsageTracking('get_latest', () => jsonResult(getLatest(args), 'get_latest'))
     )
 
     server.registerTool(

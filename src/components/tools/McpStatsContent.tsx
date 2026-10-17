@@ -56,6 +56,39 @@ function toolCopy(name: McpToolName, lang: Language): { title: string; desc: str
   return fresh ? { title: fresh.title[lang] ?? fresh.title.en, desc: fresh.desc[lang] ?? fresh.desc.en } : { title: name, desc: '' }
 }
 
+function median(values: number[]): number {
+  const sorted = [...values].sort((a, b) => a - b)
+  const mid = Math.floor(sorted.length / 2)
+  return sorted.length % 2 ? sorted[mid] : Math.round((sorted[mid - 1] + sorted[mid]) / 2)
+}
+
+// Plain SVG bars, no chart library: this page is a server component.
+function DailyBars({ days, label }: { days: UsageSnapshot['days']; label: string }) {
+  const max = Math.max(1, ...days.map((d) => d.calls))
+  const barW = 10
+  const gap = 4
+  const height = 64
+  const width = days.length * (barW + gap) - gap
+  return (
+    <svg
+      role="img"
+      aria-label={label}
+      viewBox={`0 0 ${width} ${height}`}
+      preserveAspectRatio="none"
+      className="h-16 w-full text-primary"
+    >
+      {days.map((d, i) => {
+        const h = d.calls === 0 ? 1 : Math.max(2, (d.calls / max) * height)
+        return (
+          <rect key={d.date} x={i * (barW + gap)} y={height - h} width={barW} height={h} rx={1} fill="currentColor" opacity={d.calls === 0 ? 0.25 : 0.85}>
+            <title>{`${d.date}: ${d.calls.toLocaleString()}`}</title>
+          </rect>
+        )
+      })}
+    </svg>
+  )
+}
+
 function localizedPath(lang: Language, path: string): string {
   return lang === 'en' ? path : `/${lang}${path}`
 }
@@ -67,6 +100,10 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
     dateStyle: 'medium',
     timeStyle: 'short',
   })
+
+  const last7Total = Object.values(snapshot.last7).reduce((a, b) => a + b, 0)
+  const last30Total = Object.values(snapshot.last30).reduce((a, b) => a + b, 0)
+  const medianDay = median(snapshot.days.map((d) => d.calls))
 
   return (
     <main dir={dir} className="mx-auto max-w-3xl px-6 py-16">
@@ -123,6 +160,29 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
         </section>
       ))}
 
+      <h2 className="mt-10 text-lg font-bold text-text-primary">{t('exampleHeading', lang)}</h2>
+      <p className="mt-2 text-sm text-text-secondary">{t('exampleIntro', lang)}</p>
+      <div className="mt-3 space-y-3 rounded-xl border border-border bg-surface p-4">
+        <div>
+          <div className="text-xs font-bold uppercase tracking-wide text-text-muted">{t('exampleYouLabel', lang)}</div>
+          <p className="mt-1 text-sm text-text-primary">{t('exampleQuestion', lang)}</p>
+        </div>
+        <p className="text-xs text-text-muted">
+          {t('exampleToolsLabel', lang)}: <code dir="ltr" className="font-mono font-semibold text-primary">recommend_stack</code>
+        </p>
+        <div>
+          <div className="text-xs font-bold uppercase tracking-wide text-text-muted">{t('exampleAssistantLabel', lang)}</div>
+          <p className="mt-1 text-sm text-text-primary">{t('exampleAnswer', lang)}</p>
+          <p className="mt-3 text-xs font-bold uppercase tracking-wide text-text-muted">{t('exampleLinksLabel', lang)}</p>
+          <ul className="mt-1 list-disc space-y-1 ps-5 text-sm">
+            <li><Link href={localizedPath(lang, '/power-local-llm/anythingllm-review')} className="text-primary underline">{t('exampleLinkReview', lang)}</Link></li>
+            <li><Link href={localizedPath(lang, '/directory?category=document-pdf-chat')} className="text-primary underline">{t('exampleLinkDirectory', lang)}</Link></li>
+            <li><Link href={localizedPath(lang, '/power-local-llm/local-llm-knowledge-retrieval-compared')} className="text-primary underline">{t('exampleLinkCompared', lang)}</Link></li>
+          </ul>
+        </div>
+      </div>
+      <p className="mt-2 text-xs text-text-muted">{t('exampleNote', lang)}</p>
+
       <h2 className="mt-10 text-lg font-bold text-text-primary">{tDocs('resourcesHeading', lang)}</h2>
       <p className="mt-2 text-sm text-text-secondary">{tDocs('resourcesIntro', lang)}</p>
       <ul className="mt-3 divide-y divide-border rounded-xl border border-border">
@@ -163,11 +223,39 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
         <div className="mt-1 text-3xl font-semibold text-text-primary">{snapshot.total.toLocaleString()}</div>
       </div>
 
-      <table className="mt-6 w-full border-collapse text-sm">
+
+      <h3 className="mt-8 text-base font-bold text-text-primary">{t('trendHeading', lang)}</h3>
+      <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
+        <div className="rounded-xl border border-border bg-surface p-4">
+          <div className="text-sm text-text-secondary">{t('trendLast7', lang)}</div>
+          <div className="mt-1 text-2xl font-semibold text-text-primary">{last7Total.toLocaleString()}</div>
+        </div>
+        <div className="rounded-xl border border-border bg-surface p-4">
+          <div className="text-sm text-text-secondary">{t('trendLast30', lang)}</div>
+          <div className="mt-1 text-2xl font-semibold text-text-primary">{last30Total.toLocaleString()}</div>
+        </div>
+        <div className="rounded-xl border border-border bg-surface p-4">
+          <div className="text-sm text-text-secondary">{t('trendMedianDay', lang)}</div>
+          <div className="mt-1 text-2xl font-semibold text-text-primary">{medianDay.toLocaleString()}</div>
+        </div>
+      </div>
+      <div className="mt-3 rounded-xl border border-border bg-surface p-4">
+        <DailyBars days={snapshot.days} label={t('trendChartLabel', lang)} />
+        <div dir="ltr" className="mt-1 flex justify-between text-xs text-text-muted">
+          <span>{snapshot.days[0]?.date}</span>
+          <span>{snapshot.days[snapshot.days.length - 1]?.date}</span>
+        </div>
+      </div>
+      <p className="mt-3 text-xs text-text-muted">{t('trendNote', lang)}</p>
+
+      <div className="mt-6 overflow-x-auto">
+      <table className="w-full border-collapse text-sm">
         <thead>
           <tr className="border-b border-border text-left text-text-secondary">
             <th className="py-2 font-medium">{t('tableTool', lang)}</th>
             <th className="py-2 font-medium">{t('tableTotalCalls', lang)}</th>
+            <th className="py-2 font-medium">{t('tableLast30', lang)}</th>
+            <th className="py-2 font-medium">{t('tableLast7', lang)}</th>
             <th className="py-2 font-medium">{t('tableCallsToday', lang)}</th>
           </tr>
         </thead>
@@ -175,12 +263,17 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
           {TOOLS.map((name) => (
             <tr key={name} className="border-b border-border/60">
               <td dir="ltr" className="py-2 text-left font-mono text-text-primary">{name}</td>
-              <td className="py-2 text-text-primary">{snapshot.byTool[name].toLocaleString()}</td>
+              <td className="py-2 text-text-primary">
+                {snapshot.byTool[name] === 0 ? <span className="text-text-muted">{t('noCallsYet', lang)}</span> : snapshot.byTool[name].toLocaleString()}
+              </td>
+              <td className="py-2 text-text-primary">{snapshot.last30[name].toLocaleString()}</td>
+              <td className="py-2 text-text-primary">{snapshot.last7[name].toLocaleString()}</td>
               <td className="py-2 text-text-primary">{snapshot.today[name].toLocaleString()}</td>
             </tr>
           ))}
         </tbody>
       </table>
+      </div>
 
       <p className="mt-8 text-xs text-text-muted">{t('rawJsonNote', lang)}</p>
     </main>
