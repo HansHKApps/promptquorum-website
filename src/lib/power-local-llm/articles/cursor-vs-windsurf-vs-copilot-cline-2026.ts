@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Cursor vs Windsurf vs GitHub Copilot vs Cline compared for agent mode, pricing, and model access. Pricing verified on each vendor site.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-03',
+    dateModified: '2026-10-17',
     readTime: '13 min read',
     educationalLevel: 'Intermediate',
     audience: 'Developers choosing an AI coding assistant with agent mode who want to compare Cursor, Windsurf, GitHub Copilot, and Cline on price, model access, and workflow fit.',
@@ -45,15 +45,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursor is the best all-around agentic AI coding assistant for 2026 for most professional developers, GitHub Copilot is the safer default for teams standardized on GitHub or Azure, and Cline is the best free option if you bring your own API key or run a local model.** Windsurf now costs the same as Cursor Pro ($20/month, up from $15 earlier in the year) and no longer wins on price — pick it only if you specifically prefer its Cascade agent flow. Bodega One Code is worth watching if you want one integrated local-first IDE with agent mode built in rather than an extension bolted onto an existing editor, but it is still in open beta with unfinalized Pro pricing. No single tool wins every category; pick based on workflow, not marketing claims.',
+      '**Cursor is the best all-around agentic AI coding assistant for 2026 for most professional developers, GitHub Copilot is the safer default for teams standardized on GitHub or Azure, and Cline is the best free option if you bring your own API key or run a local model.** Windsurf Pro ($20/month, up from $15 earlier in the year) now sits between Cursor Plus ($8/month, Grok models only) and Cursor Premium ($30/month, adds Claude and GPT at API list price), so price no longer decides it — pick Windsurf only if you specifically prefer its Cascade agent flow. Bodega One Code is worth watching if you want one integrated local-first IDE with agent mode built in rather than an extension bolted onto an existing editor, but it is still in open beta with unfinalized Pro pricing. No single tool wins every category; pick based on workflow, not marketing claims.',
     quickAnswerTop: {
       en: {
         question: 'Which AI coding assistant has the best agent mode in 2026?',
         answer:
-          'Cursor has the most mature agent mode (Composer plus Cloud Agents) and supports GPT, Claude, and Gemini models inside a VS Code fork, but its usage-based credit system on top of the $20/month base makes monthly cost variable. Windsurf\'s Cascade agent is comparably capable and now costs the same $20/month Pro tier as Cursor. GitHub Copilot\'s coding agent works best inside GitHub-native workflows (issues, PRs, Actions). Cline has no agent-mode ceiling because you bring your own model and API key — including a local model at $0 — but you assemble the workflow yourself.',
+          'Cursor has the most mature agent mode (Composer plus Cloud Agents) and supports GPT, Claude, and Gemini models inside a VS Code fork, but since October 12, 2026 its plans run Plus $8, Premium $30, Super $100 and Ultra $200 per month, and Claude and GPT usage is billed at API list price on top, which makes monthly cost variable. The Windsurf Cascade agent is comparably capable at $20/month Pro. GitHub Copilot\'s coding agent works best inside GitHub-native workflows (issues, PRs, Actions). Cline has no agent-mode ceiling because you bring your own model and API key — including a local model at $0 — but you assemble the workflow yourself.',
         bullets: [
-          'Cursor: Composer + Cloud Agents, $20/month Pro base plus usage-based credits',
-          'Windsurf: Cascade agent, $20/month Pro (raised from $15 in March 2026) — price parity with Cursor',
+          'Cursor: Composer + Cloud Agents, plans from $8/month (Plus, Grok only); Premium $30/month adds Claude and GPT at API list price',
+          'Windsurf: Cascade agent, $20/month Pro (raised from $15 in March 2026)',
           'GitHub Copilot: coding agent tied to GitHub Issues/PRs, $10/month Pro, $39/month Pro+, $100/month Max',
           'Cline: open-source extension, $0 itself — cost is whatever LLM API you connect, or $0 with a local model via Ollama/LM Studio',
           'Bodega One Code: local-first desktop IDE with a built-in agent, open beta — Personal free forever, Pro is a one-time purchase with an unannounced price',
@@ -82,7 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
     affiliateLinks: [
-      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Free–$20+/mo', label: 'Start free with Cursor' },
+      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Free–$200/mo', label: 'Start free with Cursor' },
       { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Free–$100/mo', label: 'Start free with GitHub Copilot' },
       { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '$0 (open source)', label: 'Get Cline free' },
     ],
@@ -95,8 +95,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'All four tools can edit multiple files and run commands for you (agent mode). The real differences are price, which AI models you can use, and whether your code has to leave your machine.' },
         ],
         items: [
-          '**Cursor has the most mature agent mode and multi-model flexibility** (GPT, Claude, Gemini) inside a VS Code fork, but usage-based credits on top of the $20/month Pro base make monthly cost variable.',
-          '**Windsurf lost its price advantage in 2026.** Its Pro tier rose from $15/month to $20/month in March 2026 — the same price as Cursor Pro. Its Cascade agent flow remains a genuine differentiator if you prefer its UX.',
+          '**Cursor has the most mature agent mode and multi-model flexibility** (GPT, Claude, Gemini) inside a VS Code fork, but Claude and GPT usage is billed at API list price on top of the plan (Premium from $30/month), which makes monthly cost variable.',
+          '**Windsurf lost its price advantage in 2026.** Its Pro tier rose from $15/month to $20/month in March 2026 — it now sits between Cursor Plus ($8/month) and Premium ($30/month). Its Cascade agent flow remains a genuine differentiator if you prefer its UX.',
           '**GitHub Copilot moved to usage-based AI-credit billing on June 1, 2026.** Pro is $10/month with $15 of included AI credits; Pro+ is $39/month; a new Max tier is $100/month. It is the default choice for teams already inside GitHub or Azure DevOps.',
           '**Cline costs $0 itself** — it is an open-source VS Code/JetBrains extension. You pay only for the LLM API tokens you use (OpenAI, Anthropic, OpenRouter, and others), or nothing at all if you point it at a local model via Ollama or LM Studio.',
           '**None of the four vendors has a standard, checkable public affiliate program** — see the Affiliate Program Status section for what each vendor actually offers (referral credits, technology partnerships, or nothing).',
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '⚡ **Windsurf — best alternative.** If you specifically prefer the Cascade agent flow.',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Free–$20+/mo', label: 'Try Cursor' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Free–$200/mo', label: 'Try Cursor' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Free–$100/mo', label: 'Try GitHub Copilot' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '$0 (open source)', label: 'Install Cline' },
           { url: 'https://windsurf.com', productName: 'Windsurf', productCategory: 'dev-tool', priceRange: 'Free–$200/mo', label: 'Try Windsurf' },
@@ -125,8 +125,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quick Facts',
         content: 'Verified directly against cursor.com/pricing, windsurf.com (redirects to devin.ai/pricing following the Cognition acquisition), github.com/features/copilot/plans, cline.bot/pricing, and bodegaone.ai/pricing, cross-checked against independent pricing trackers. Subscription pricing for developer tools changes with plan revisions — confirm the current rate on the vendor site before subscribing.',
         items: [
-          '**Cursor:** free Hobby tier; Pro, Pro+, and Ultra all share a $20/month base with escalating included-usage multipliers (Pro+ ≈3x, Ultra ≈20x), plus usage-based billing once included usage runs out; Teams from $40/user/month.',
-          '**Windsurf:** free tier with a light daily/weekly quota; Pro $20/month (raised from $15 in March 2026, matching Cursor); Max $200/month; Teams $40/user/month; Enterprise custom. The credit-pool system was replaced by daily/weekly quotas in March 2026.',
+          '**Cursor:** free tier with limited usage; since October 12, 2026: Plus $8/month (Grok models only), Premium $30 (4x Plus usage, adds Claude, GPT and Gemini at API list price), Super $100 (15x), Ultra $200 (50x); Teams $30, $100 or $200 per seat/month. The $20/month Pro plan is legacy and closed to new customers.',
+          '**Windsurf:** free tier with a light daily/weekly quota; Pro $20/month (raised from $15 in March 2026); Max $200/month; Teams $40/user/month; Enterprise custom. The credit-pool system was replaced by daily/weekly quotas in March 2026.',
           '**GitHub Copilot:** Free tier (2,000 completions/month); Pro $10/month ($15 included AI credits); Pro+ $39/month ($70 included AI credits); Max $100/month ($200 included AI credits); Business $19/user/month (1,900 AI credits); Enterprise $39/user/month (3,900 AI credits). Moved to usage-based AI-credit billing on June 1, 2026.',
           '**Cline:** the extension itself is $0, open source, MIT-licensed. Real cost is whatever LLM API you connect (OpenAI, Anthropic, Google, OpenRouter, AWS Bedrock, GCP Vertex, Groq, Cerebras, DeepSeek, and more), or $0 if you point it at a local model via Ollama or LM Studio — both work with no API key required.',
           '**Bodega One Code:** Personal tier is free forever (one machine, non-commercial, one workspace); Pro is a one-time purchase — not a subscription — that adds commercial-use rights, a second machine, and unlimited workspaces, but the vendor lists its price as "TBD" ahead of full release; Enterprise is custom-priced. The whole app, including commercial use, is free during the open beta.',
@@ -138,13 +138,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Editor\'s Choice: Cursor',
         sponsoredSlot: true,
         content:
-          '**Cursor is the pick for most professional developers who want the most mature agent mode and the widest model choice.** Composer and Cloud Agents handle multi-file, multi-step changes with less hand-holding than the alternatives, and you can switch between GPT, Claude, and Gemini models inside the same editor. The trade-off is cost predictability: the $20/month Pro base covers a set amount of usage, and heavy agentic sessions can trigger additional usage-based billing. If GitHub-native workflow integration matters more than raw agent capability, choose GitHub Copilot instead; if $0 is a hard requirement, choose Cline with a local model.',
+          '**Cursor is the pick for most professional developers who want the most mature agent mode and the widest model choice.** Composer and Cloud Agents handle multi-file, multi-step changes with less hand-holding than the alternatives, and you can switch between GPT, Claude, and Gemini models inside the same editor. The trade-off is cost predictability: paid plans share a weekly usage pool, and Claude and GPT usage is billed at API list price from prepaid credit on top. If GitHub-native workflow integration matters more than raw agent capability, choose GitHub Copilot instead; if $0 is a hard requirement, choose Cline with a local model.',
         callouts: [
-          { type: 'warning', text: 'Watch Cursor\'s usage costs. The $20/month Pro price is the subscription cost, not necessarily your maximum monthly spend — heavy agentic sessions can trigger additional usage-based billing once included usage runs out. Light users typically stay within $20/month; heavy agentic users and teams should budget for overage.' },
+          { type: 'warning', text: 'Watch Cursor usage costs. The plan price is not your maximum monthly spend — on Premium and above, Claude and GPT usage is billed at API list price from prepaid credit, so heavy agentic sessions can cost well beyond $30/month. Plus ($8/month) avoids this because it covers Grok models only.' },
           { type: 'note', text: 'PromptQuorum is not enrolled in any affiliate program for Cursor, Windsurf, GitHub Copilot, or Cline. The links on this page are plain product links with no affiliate relationship and earn no commission — see the Affiliate Program Status section below for what each vendor actually offers.' },
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Free–$20+/mo', label: 'Start free with Cursor' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Free–$200/mo', label: 'Start free with Cursor' },
         ],
       },
       comparisonTable: {
@@ -157,7 +157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': '[Cursor](https://cursor.com)',
             'Best For': 'Agentic multi-file edits / polish',
-            'Pricing (Aug 2026)': 'Free Hobby / $20+/mo Pro–Ultra',
+            'Pricing (Aug 2026)': 'Free / $8 Plus / $30 Premium / up to $200 Ultra',
             'Model Access': 'GPT / Claude / Gemini (multi-model)',
             'Agent Mode': 'Composer + Cloud Agents',
             'IDE': 'Cursor (VS Code fork)',
@@ -239,7 +239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor: Best for Agentic Multi-File Work',
         content: [
           '**Cursor is a VS Code fork built around agent mode, with Composer and Cloud Agents as its flagship features for multi-file, multi-step changes.** It supports GPT, Claude, and Gemini models inside the same editor, so you are not locked to one vendor\'s model.',
-          'Cursor\'s Hobby tier is free with limited agent requests. Pro, Pro+, and Ultra all share a $20/month base subscription, differentiated by included-usage multipliers (Pro+ gives roughly 3x the Pro agent limit, Ultra roughly 20x) — once included usage is consumed, additional usage is billed on-demand. Teams pricing starts at $40/user/month for the Standard tier, with a Premium tier at 5x the Standard agent limit. Enterprise is custom-priced.',
+          'Cursor has a free tier with limited usage. Since October 12, 2026, paid plans are Plus ($8/month, Grok models only), Premium ($30, 4x Plus usage), Super ($100, 15x) and Ultra ($200, 50x), sharing one weekly usage pool between Cursor and Grok models. Claude, GPT and Gemini are billed at API list price from prepaid credit on Premium and above. Teams seats cost $30, $100 or $200 per month. The $20/month Pro plan is legacy and closed to new customers. Enterprise is custom-priced.',
           'Cursor has a limited-rollout referral program (not a general-purpose affiliate program): eligible referrers get $25 in usage credit per referred paying customer (up to 10 per cycle), and the referred user gets 50% off their first month. This is not a public, universally available commission program — see the Affiliate Program Status section.',
         ],
       },
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'windsurf',
         title: 'Windsurf: Cascade Agent, Now Under Cognition',
         content: [
-          '**Windsurf runs the Cascade agent flow and, costs the same as Cursor Pro** — its Pro tier rose from $15/month to $20/month in March 2026, ending what was previously its clearest differentiator (lower price).',
+          '**Windsurf runs the Cascade agent flow and its Pro tier ($20/month) now sits between Cursor Plus ($8) and Cursor Premium ($30)** — it rose from $15/month to $20/month in March 2026.',
           'Windsurf\'s free tier includes unlimited Tab autocomplete plus a light daily/weekly quota for Cascade agent use — enough for roughly two to three days of active agentic coding before you hit the limit. In March 2026, Windsurf replaced its old monthly credit-pool system (500 credits/month on Pro) with daily and weekly usage quotas that refresh automatically. Max is $200/month; Teams is $40/user/month; Enterprise is custom.',
           'Windsurf is now owned by Cognition, the company behind the autonomous coding agent Devin, following Cognition\'s acquisition of Windsurf\'s team, product, and brand. windsurf.com currently redirects to devin.ai\'s pricing page, and Devin is being integrated directly into the Windsurf editor rather than replacing it outright.',
           'Windsurf\'s referral program gives new signups 250 free flex credits via a referral link — a referral incentive, not a commission-based affiliate program.',
@@ -308,7 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Still not sure? Try Cursor and Cline first — together they cover the paid-agentic and free-local extremes, and most developers land on one of the two.',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Free–$20+/mo', label: 'Try Cursor free' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Free–$200/mo', label: 'Try Cursor free' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Free–$100/mo', label: 'Try GitHub Copilot' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '$0 (open source)', label: 'Install Cline' },
         ],
@@ -337,15 +337,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is there a free AI coding assistant with agent mode?',
-            a: 'Yes. Cline is completely free and open source with no subscription tier — you pay only for the LLM API tokens you use, or nothing at all if you connect a local model via Ollama or LM Studio. Cursor and GitHub Copilot both have limited free tiers (Cursor\'s Hobby tier and Copilot\'s Free tier with 2,000 completions/month), but agent-mode usage is capped on both.',
+            a: 'Yes. Cline is completely free and open source with no subscription tier — you pay only for the LLM API tokens you use, or nothing at all if you connect a local model via Ollama or LM Studio. Cursor and GitHub Copilot both have limited free tiers (Cursor\'s free tier and Copilot\'s Free tier with 2,000 completions/month), but agent-mode usage is capped on both.',
           },
           {
             q: 'What is the actual difference between Windsurf and Cursor in 2026?',
-            a: 'The two are priced identically at $20/month for their Pro tiers — Windsurf raised its price from $15 to $20 in March 2026, closing what used to be its main advantage. The remaining difference is workflow: Windsurf uses the Cascade agent flow, Cursor uses Composer and Cloud Agents. Pick based on which agent UX you prefer after trying both, not on price.',
+            a: 'Windsurf Pro costs $20/month (raised from $15 in March 2026). Cursor now has Plus at $8/month (Grok models only), Premium at $30, Super at $100 and Ultra at $200, with Claude and GPT billed at API list price on Premium and above. The remaining difference is workflow: Windsurf uses the Cascade agent flow, Cursor uses Composer and Cloud Agents. Pick based on which agent UX you prefer after trying both, not on price.',
           },
           {
             q: 'Does GitHub Copilot support Claude or Gemini models?',
-            a: 'GitHub Copilot Pro+ ($39/month) and Max ($100/month) include access to premium models such as Claude Opus. The base Free and Pro ($10/month) tiers are more limited in model choice. This is narrower than Cursor, which lets Pro-tier users switch between GPT, Claude, and Gemini models directly.',
+            a: 'GitHub Copilot Pro+ ($39/month) and Max ($100/month) include access to premium models such as Claude Opus. The base Free and Pro ($10/month) tiers are more limited in model choice. This is narrower than Cursor, which lets Premium-and-above users switch between GPT, Claude, and Gemini models directly (billed at API list price).',
           },
           {
             q: 'How do I set up Cline with a local model?',
@@ -381,7 +381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://cursor.com/pricing', title: 'Cursor Pricing', description: 'Official Cursor pricing page — Hobby, Pro, Pro+, Ultra, Teams, and Enterprise tiers.' },
+          { url: 'https://cursor.com/pricing', title: 'Cursor Pricing', description: 'Official Cursor pricing page — free, Plus, Premium, Super, Ultra, Teams, and Enterprise plans.' },
           { url: 'https://cursor.com/help/account-and-billing/referral-program', title: 'Cursor Referral Program', description: 'Official documentation of Cursor\'s limited-rollout referral program.' },
           { url: 'https://devin.ai/pricing', title: 'Windsurf / Devin Pricing (windsurf.com redirect)', description: 'Windsurf pricing page, now hosted under devin.ai following the Cognition acquisition.' },
           { url: 'https://github.com/features/copilot/plans', title: 'GitHub Copilot Plans', description: 'Official GitHub Copilot pricing — Free, Pro, Pro+, Max, Business, and Enterprise tiers.' },
@@ -434,7 +434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mainEntity': [
         { '@type': 'Question', 'name': 'Is Cursor better than GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For agentic multi-file work and model flexibility, Cursor is generally the stronger pick — it supports GPT, Claude, and Gemini and its Composer/Cloud Agents handle larger refactors with less manual steering. GitHub Copilot is the better choice specifically for teams already standardized on GitHub Issues, pull requests, and Azure DevOps, since its coding agent works directly against that workflow rather than as a separate editor.' } },
         { '@type': 'Question', 'name': 'Is there a free AI coding assistant with agent mode?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Cline is completely free and open source with no subscription tier — you pay only for the LLM API tokens you use, or nothing at all if you connect a local model via Ollama or LM Studio.' } },
-        { '@type': 'Question', 'name': 'What is the actual difference between Windsurf and Cursor in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'The two are priced identically at $20/month for their Pro tiers. The remaining difference is workflow: Windsurf uses the Cascade agent flow, Cursor uses Composer and Cloud Agents.' } },
+        { '@type': 'Question', 'name': 'What is the actual difference between Windsurf and Cursor in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Windsurf Pro costs $20/month; Cursor plans run from $8/month (Plus) to $200/month (Ultra), with Claude and GPT billed at API list price on Premium and above. The remaining difference is workflow: Windsurf uses Cascade, Cursor uses Composer and Cloud Agents.' } },
         { '@type': 'Question', 'name': 'What is Bodega One Code and how does it compare to Cursor or Cline?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code is a local-first AI IDE, currently in open beta, that bundles a Monaco-based editor, AI chat, and an autonomous coding agent in one app rather than as an extension added to an existing editor. Its Personal tier is free forever for non-commercial use on one machine; Pro is a one-time purchase whose exact price has not been announced.' } },
       ],
     },
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Cursor vs. Windsurf vs. GitHub Copilot vs. Cline im Vergleich: Agentenmodus, Preise und Modellzugriff. Preise direkt bei jedem Anbieter verifiziert.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-03',
+    dateModified: '2026-10-17',
     readTime: '13 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die einen KI-Coding-Assistenten mit Agentenmodus wählen und Cursor, Windsurf, GitHub Copilot und Cline nach Preis, Modellzugriff und Workflow-Eignung vergleichen möchten.',
@@ -467,15 +467,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursor ist 2026 der beste Allround-KI-Coding-Assistent mit Agentenmodus für die meisten professionellen Entwickler, GitHub Copilot ist die sicherere Standardwahl für Teams, die auf GitHub oder Azure standardisiert sind, und Cline ist die beste kostenlose Option, wenn Sie Ihren eigenen API-Schlüssel mitbringen oder ein lokales Modell nutzen.** Windsurf kostet inzwischen genauso viel wie Cursor Pro (20 $/Monat seit August 2026, zuvor 15 $/Monat) und gewinnt preislich nicht mehr — wählen Sie es nur, wenn Sie den Cascade-Agentenablauf gezielt bevorzugen. Bodega One Code ist einen Blick wert, wenn Sie eine einzige integrierte local-first IDE mit eingebautem Agentenmodus wollen, statt einer Erweiterung, die einem bestehenden Editor aufgesetzt ist — allerdings befindet es sich noch in offener Beta mit unklarer Pro-Preisgestaltung. Kein einzelnes Tool gewinnt in jeder Kategorie; entscheiden Sie nach Workflow, nicht nach Marketingaussagen.',
+      '**Cursor ist 2026 der beste Allround-KI-Coding-Assistent mit Agentenmodus für die meisten professionellen Entwickler, GitHub Copilot ist die sicherere Standardwahl für Teams, die auf GitHub oder Azure standardisiert sind, und Cline ist die beste kostenlose Option, wenn Sie Ihren eigenen API-Schlüssel mitbringen oder ein lokales Modell nutzen.** Windsurf Pro (20 $/Monat, zuvor 15 $/Monat) liegt inzwischen zwischen Cursor Plus (8 $/Monat, nur Grok-Modelle) und Cursor Premium (30 $/Monat, zusätzlich Claude und GPT zum API-Listenpreis), sodass der Preis nicht mehr entscheidet — wählen Sie es nur, wenn Sie den Cascade-Agentenablauf gezielt bevorzugen. Bodega One Code ist einen Blick wert, wenn Sie eine einzige integrierte local-first IDE mit eingebautem Agentenmodus wollen, statt einer Erweiterung, die einem bestehenden Editor aufgesetzt ist — allerdings befindet es sich noch in offener Beta mit unklarer Pro-Preisgestaltung. Kein einzelnes Tool gewinnt in jeder Kategorie; entscheiden Sie nach Workflow, nicht nach Marketingaussagen.',
     quickAnswerTop: {
       de: {
         question: 'Welcher KI-Coding-Assistent hat 2026 den besten Agentenmodus?',
         answer:
-          'Cursor hat den ausgereiftesten Agentenmodus (Composer plus Cloud Agents) und unterstützt GPT-, Claude- und Gemini-Modelle in einem VS-Code-Fork, doch das nutzungsbasierte Guthabensystem oberhalb der 20-$/Monat-Basis macht die monatlichen Kosten variabel. Windsurfs Cascade-Agent ist vergleichbar leistungsfähig und kostet inzwischen denselben 20-$/Monat-Pro-Tarif wie Cursor. GitHub Copilots Coding-Agent funktioniert am besten innerhalb GitHub-nativer Workflows (Issues, PRs, Actions). Cline hat keine Agentenmodus-Obergrenze, da Sie Ihr eigenes Modell und Ihren eigenen API-Schlüssel mitbringen — einschließlich eines lokalen Modells für 0 $ — Sie stellen den Workflow jedoch selbst zusammen.',
+          'Cursor hat den ausgereiftesten Agentenmodus (Composer plus Cloud Agents) und unterstützt GPT-, Claude- und Gemini-Modelle in einem VS-Code-Fork, doch seit dem 12. Oktober 2026 kosten die Pläne Plus 8 $, Premium 30 $, Super 100 $ und Ultra 200 $ pro Monat, und die Nutzung von Claude und GPT wird zusätzlich zum API-Listenpreis abgerechnet, was die monatlichen Kosten variabel macht. Der Cascade-Agent von Windsurf ist vergleichbar leistungsfähig und kostet 20 $/Monat im Pro-Tarif. GitHub Copilots Coding-Agent funktioniert am besten innerhalb GitHub-nativer Workflows (Issues, PRs, Actions). Cline hat keine Agentenmodus-Obergrenze, da Sie Ihr eigenes Modell und Ihren eigenen API-Schlüssel mitbringen — einschließlich eines lokalen Modells für 0 $ — Sie stellen den Workflow jedoch selbst zusammen.',
         bullets: [
-          'Cursor: Composer + Cloud Agents, 20 $/Monat Pro-Basis plus nutzungsbasierte Guthaben',
-          'Windsurf: Cascade-Agent, 20 $/Monat Pro (im März 2026 von 15 $ erhöht) — Preisgleichstand mit Cursor',
+          'Cursor: Composer + Cloud Agents, Pläne ab 8 $/Monat (Plus, nur Grok); Premium für 30 $/Monat ergänzt Claude und GPT zum API-Listenpreis',
+          'Windsurf: Cascade-Agent, 20 $/Monat Pro (im März 2026 von 15 $ erhöht)',
           'GitHub Copilot: Coding-Agent an GitHub Issues/PRs gekoppelt, 10 $/Monat Pro, 39 $/Monat Pro+, 100 $/Monat Max',
           'Cline: Open-Source-Erweiterung, 0 $ selbst — Kosten entstehen nur durch die verbundene LLM-API, oder 0 $ bei einem lokalen Modell über Ollama/LM Studio',
           'Bodega One Code: local-first Desktop-IDE mit eingebautem Agenten, offene Beta — Personal für immer kostenlos, Pro ist ein Einmalkauf mit noch nicht bekanntgegebenem Preis',
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     affiliateLinks: [
-      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Kostenlos–20+ $/Monat', label: 'Kostenlos mit Cursor starten' },
+      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Kostenlos–200 $/Monat', label: 'Kostenlos mit Cursor starten' },
       { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Kostenlos–100 $/Monat', label: 'Kostenlos mit GitHub Copilot starten' },
       { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 $ (Open Source)', label: 'Cline kostenlos holen' },
     ],
@@ -517,8 +517,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Alle vier Tools können mehrere Dateien für Sie bearbeiten und Befehle ausführen (Agentenmodus). Die echten Unterschiede liegen bei Preis, welche KI-Modelle Sie nutzen können und ob Ihr Code Ihren Rechner verlassen muss.' },
         ],
         items: [
-          '**Cursor hat den ausgereiftesten Agentenmodus und die größte Modellflexibilität** (GPT, Claude, Gemini) in einem VS-Code-Fork, doch nutzungsbasierte Guthaben oberhalb der 20-$/Monat-Pro-Basis machen die monatlichen Kosten variabel.',
-          '**Windsurf hat 2026 seinen Preisvorteil verloren.** Der Pro-Tarif stieg im März 2026 von 15 $/Monat auf 20 $/Monat — genauso viel wie Cursor Pro. Der Cascade-Agentenablauf bleibt ein echtes Unterscheidungsmerkmal, wenn Sie dessen UX bevorzugen.',
+          '**Cursor hat den ausgereiftesten Agentenmodus und die größte Modellflexibilität** (GPT, Claude, Gemini) in einem VS-Code-Fork, doch die Nutzung von Claude und GPT wird zusätzlich zum Plan zum API-Listenpreis abgerechnet (Premium ab 30 $/Monat), was die monatlichen Kosten variabel macht.',
+          '**Windsurf hat 2026 seinen Preisvorteil verloren.** Der Pro-Tarif stieg im März 2026 von 15 $/Monat auf 20 $/Monat — er liegt jetzt zwischen Cursor Plus (8 $/Monat) und Premium (30 $/Monat). Der Cascade-Agentenablauf bleibt ein echtes Unterscheidungsmerkmal, wenn Sie dessen UX bevorzugen.',
           '**GitHub Copilot wechselte am 1. Juni 2026 zur nutzungsbasierten KI-Guthabenabrechnung.** Pro kostet 10 $/Monat mit 15 $ enthaltenem KI-Guthaben; Pro+ kostet 39 $/Monat; ein neuer Max-Tarif kostet 100 $/Monat. Es ist die Standardwahl für Teams, die bereits in GitHub oder Azure DevOps arbeiten.',
           '**Cline kostet selbst 0 $** — es ist eine Open-Source-Erweiterung für VS Code/JetBrains. Sie zahlen nur für die genutzten LLM-API-Token (OpenAI, Anthropic, OpenRouter und andere) oder gar nichts, wenn Sie ein lokales Modell über Ollama oder LM Studio anbinden.',
           '**Keiner der vier Anbieter hat Stand August 2026 ein reguläres, öffentlich zugängliches Affiliate-Programm** — siehe Abschnitt "Status der Affiliate-Programme" für das, was jeder Anbieter tatsächlich bietet (Empfehlungsguthaben, Technologiepartnerschaften oder gar nichts).',
@@ -536,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '⚡ **Windsurf — beste Alternative.** Wenn Sie speziell den Cascade-Agentenablauf bevorzugen.',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Kostenlos–20+ $/Monat', label: 'Cursor testen' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Kostenlos–200 $/Monat', label: 'Cursor testen' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Kostenlos–100 $/Monat', label: 'GitHub Copilot testen' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 $ (Open Source)', label: 'Cline installieren' },
           { url: 'https://windsurf.com', productName: 'Windsurf', productCategory: 'dev-tool', priceRange: 'Kostenlos–200 $/Monat', label: 'Windsurf testen' },
@@ -547,8 +547,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Kurzfakten (verifiziert im)',
         content: 'Direkt verifiziert anhand von cursor.com/pricing, windsurf.com (leitet nach der Cognition-Übernahme auf devin.ai/pricing weiter), github.com/features/copilot/plans, cline.bot/pricing und bodegaone.ai/pricing, abgeglichen mit unabhängigen Preis-Trackern. Die Abo-Preise für Entwickler-Tools ändern sich mit Tarifüberarbeitungen — prüfen Sie den aktuellen Preis vor dem Abschluss auf der Anbieterseite. Preise sind USD-Preise; die Anbieter zeigen keine gesondert recherchierbaren EUR-Listenpreise für diese Abos — beim Checkout kann eine lokale Zahlungswährung angeboten werden, die aktuellen USD-Preise gelten aber global.',
         items: [
-          '**Cursor:** kostenloser Hobby-Tarif; Pro, Pro+ und Ultra teilen sich eine 20-$/Monat-Basis mit steigenden Nutzungs-Multiplikatoren (Pro+ ca. 3x, Ultra ca. 20x), zzgl. nutzungsbasierter Abrechnung nach Verbrauch des enthaltenen Kontingents; Teams ab 40 $/Nutzer/Monat.',
-          '**Windsurf:** kostenloser Tarif mit geringem Tages-/Wochenkontingent; Pro 20 $/Monat (im März 2026 von 15 $ erhöht, jetzt gleich mit Cursor); Max 200 $/Monat; Teams 40 $/Nutzer/Monat; Enterprise individuell. Das Guthaben-Pool-System wurde im März 2026 durch Tages-/Wochenkontingente ersetzt.',
+          '**Cursor:** kostenlose Stufe mit begrenzter Nutzung; seit dem 12. Oktober 2026: Plus 8 $/Monat (nur Grok-Modelle), Premium 30 $ (4-faches Plus-Kontingent, zusätzlich Claude, GPT und Gemini zum API-Listenpreis), Super 100 $ (15-fach), Ultra 200 $ (50-fach); Teams 30 $, 100 $ oder 200 $ pro Platz/Monat. Der Pro-Plan für 20 $/Monat ist ein Legacy-Plan, geschlossen für Neukunden.',
+          '**Windsurf:** kostenloser Tarif mit geringem Tages-/Wochenkontingent; Pro 20 $/Monat (im März 2026 von 15 $ erhöht); Max 200 $/Monat; Teams 40 $/Nutzer/Monat; Enterprise individuell. Das Guthaben-Pool-System wurde im März 2026 durch Tages-/Wochenkontingente ersetzt.',
           '**GitHub Copilot:** kostenloser Tarif (2.000 Vervollständigungen/Monat); Pro 10 $/Monat (15 $ enthaltenes KI-Guthaben); Pro+ 39 $/Monat (70 $ enthalten); Max 100 $/Monat (200 $ enthalten); Business 19 $/Nutzer/Monat (1.900 KI-Guthaben); Enterprise 39 $/Nutzer/Monat (3.900 KI-Guthaben). Wechsel zur nutzungsbasierten KI-Guthabenabrechnung am 1. Juni 2026.',
           '**Cline:** die Erweiterung selbst ist kostenlos, Open Source, MIT-lizenziert. Reale Kosten entstehen durch die verbundene LLM-API (OpenAI, Anthropic, Google, OpenRouter, AWS Bedrock, GCP Vertex, Groq, Cerebras, DeepSeek u. a.), oder 0 $ bei einem lokalen Modell über Ollama oder LM Studio — beide funktionieren ohne API-Schlüssel.',
           '**Bodega One Code:** Der Personal-Tarif ist für immer kostenlos (ein Gerät, nicht-kommerziell, ein Workspace); Pro ist ein Einmalkauf — kein Abo —, der kommerzielle Nutzungsrechte, ein zweites Gerät und unbegrenzte Workspaces hinzufügt, doch der Anbieter nennt den Preis vor dem vollständigen Release als „TBD"; Enterprise wird individuell bepreist. Die gesamte App, einschließlich kommerzieller Nutzung, ist während der offenen Beta kostenlos.',
@@ -560,13 +560,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Redaktionsempfehlung: Cursor',
         sponsoredSlot: true,
         content:
-          '**Cursor ist die Wahl für die meisten professionellen Entwickler, die den ausgereiftesten Agentenmodus und die größte Modellauswahl wollen.** Composer und Cloud Agents bewältigen mehrstufige Änderungen über mehrere Dateien mit weniger manueller Steuerung als die Alternativen, und Sie können innerhalb desselben Editors zwischen GPT-, Claude- und Gemini-Modellen wechseln. Der Kompromiss liegt bei der Kostenvorhersagbarkeit: Die 20-$/Monat-Pro-Basis deckt ein festgelegtes Nutzungskontingent ab, und intensive agentische Sitzungen können zusätzliche nutzungsbasierte Abrechnung auslösen. Wenn GitHub-native Workflow-Integration wichtiger ist als reine Agentenfähigkeit, wählen Sie stattdessen GitHub Copilot; wenn 0 $ zwingend erforderlich sind, wählen Sie Cline mit einem lokalen Modell.',
+          '**Cursor ist die Wahl für die meisten professionellen Entwickler, die den ausgereiftesten Agentenmodus und die größte Modellauswahl wollen.** Composer und Cloud Agents bewältigen mehrstufige Änderungen über mehrere Dateien mit weniger manueller Steuerung als die Alternativen, und Sie können innerhalb desselben Editors zwischen GPT-, Claude- und Gemini-Modellen wechseln. Der Kompromiss liegt bei der Kostenvorhersagbarkeit: Bezahlte Pläne teilen sich ein wöchentliches Nutzungskontingent, und die Nutzung von Claude und GPT wird zusätzlich zum API-Listenpreis über Guthaben im Voraus abgerechnet. Wenn GitHub-native Workflow-Integration wichtiger ist als reine Agentenfähigkeit, wählen Sie stattdessen GitHub Copilot; wenn 0 $ zwingend erforderlich sind, wählen Sie Cline mit einem lokalen Modell.',
         callouts: [
-          { type: 'warning', text: 'Achten Sie auf Cursors Nutzungskosten. Die 20-$/Monat-Pro-Preis ist nur der Abo-Preis, nicht zwangsläufig Ihre monatliche Obergrenze — intensive agentische Sitzungen können nach Verbrauch des enthaltenen Kontingents zusätzliche nutzungsbasierte Abrechnung auslösen. Leichte Nutzung bleibt in der Regel innerhalb der 20 $/Monat; intensive Agenten-Nutzer und Teams sollten mit Mehrkosten kalkulieren.' },
+          { type: 'warning', text: 'Achten Sie auf Cursors Nutzungskosten. Der Planpreis ist nicht Ihre monatliche Obergrenze — ab Premium wird die Nutzung von Claude und GPT zum API-Listenpreis über Guthaben im Voraus abgerechnet, sodass intensive agentische Sitzungen weit über 30 $/Monat kosten können. Plus (8 $/Monat) vermeidet das, da es nur Grok-Modelle umfasst.' },
           { type: 'note', text: 'PromptQuorum ist bei keinem Affiliate-Programm für Cursor, Windsurf, GitHub Copilot oder Cline registriert. Die Links auf dieser Seite sind einfache Produktlinks ohne Affiliate-Beziehung und ohne Provision — siehe Abschnitt "Status der Affiliate-Programme" unten für das, was jeder Anbieter tatsächlich anbietet.' },
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Kostenlos–20+ $/Monat', label: 'Kostenlos mit Cursor starten' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Kostenlos–200 $/Monat', label: 'Kostenlos mit Cursor starten' },
         ],
       },
       comparisonTable: {
@@ -579,7 +579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': '[Cursor](https://cursor.com)',
             'Am besten für': 'Agentische Mehrdatei-Änderungen',
-            'Preis (Aug. 2026)': 'Kostenlos Hobby / 20+ $/Mo. Pro–Ultra',
+            'Preis (Aug. 2026)': 'Kostenlos / 8 $ Plus / 30 $ Premium / bis 200 $ Ultra',
             'Modellzugriff': 'GPT / Claude / Gemini (Multi-Modell)',
             'Agentenmodus': 'Composer + Cloud Agents',
             'IDE': 'Cursor (VS-Code-Fork)',
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor: Am besten für agentische Mehrdatei-Arbeit',
         content: [
           '**Cursor ist ein VS-Code-Fork, der um den Agentenmodus herum aufgebaut ist, mit Composer und Cloud Agents als Flaggschiff-Funktionen für mehrstufige Änderungen über mehrere Dateien.** Es unterstützt GPT-, Claude- und Gemini-Modelle im selben Editor, sodass Sie nicht an das Modell eines einzelnen Anbieters gebunden sind.',
-          'Stand August 2026 ist Cursors Hobby-Tarif kostenlos mit begrenzten Agenten-Anfragen. Pro, Pro+ und Ultra teilen sich alle eine 20-$/Monat-Basis, unterschieden durch enthaltene Nutzungs-Multiplikatoren (Pro+ gibt etwa das 3-Fache des Pro-Agentenkontingents, Ultra etwa das 20-Fache) — nach Verbrauch des enthaltenen Kontingents wird zusätzliche Nutzung nach Bedarf abgerechnet. Die Teams-Preise beginnen bei 40 $/Nutzer/Monat für den Standard-Tarif, mit einem Premium-Tarif beim 5-Fachen des Standard-Agentenkontingents. Enterprise wird individuell bepreist.',
+          'Cursor hat eine kostenlose Stufe mit begrenzter Nutzung. Seit dem 12. Oktober 2026 gibt es die bezahlten Pläne Plus (8 $/Monat, nur Grok-Modelle), Premium (30 $, 4-faches Plus-Kontingent), Super (100 $, 15-fach) und Ultra (200 $, 50-fach), die sich ein wöchentliches Nutzungskontingent für Cursor- und Grok-Modelle teilen. Claude, GPT und Gemini werden ab Premium zum API-Listenpreis über Guthaben im Voraus abgerechnet. Teams-Plätze kosten 30 $, 100 $ oder 200 $ pro Monat. Der Pro-Plan für 20 $/Monat ist ein Legacy-Plan, geschlossen für Neukunden. Enterprise wird individuell bepreist.',
           'Cursor hat ein Empfehlungsprogramm mit eingeschränktem Rollout (kein allgemein zugängliches Affiliate-Programm): berechtigte Empfehlende erhalten 25 $ Nutzungsguthaben pro geworbenem zahlendem Kunden (bis zu 10 pro Zyklus), und der geworbene Nutzer erhält 50 % Rabatt auf den ersten Monat. Dies ist kein öffentliches, allgemein verfügbares Provisionsprogramm — siehe Abschnitt "Status der Affiliate-Programme".',
         ],
       },
@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'windsurf',
         title: 'Windsurf: Cascade-Agent, jetzt unter Cognition',
         content: [
-          '**Windsurf nutzt den Cascade-Agentenablauf und kostet Stand August 2026 genauso viel wie Cursor Pro** — der Pro-Tarif stieg im März 2026 von 15 $/Monat auf 20 $/Monat und beendete damit das zuvor klarste Unterscheidungsmerkmal (niedrigerer Preis).',
+          '**Windsurf nutzt den Cascade-Agentenablauf, und sein Pro-Tarif (20 $/Monat) liegt jetzt zwischen Cursor Plus (8 $) und Cursor Premium (30 $)** — er stieg im März 2026 von 15 $/Monat auf 20 $/Monat.',
           'Windsurfs kostenloser Tarif umfasst unbegrenzte Tab-Autovervollständigung plus ein geringes Tages-/Wochenkontingent für die Nutzung des Cascade-Agenten — genug für etwa zwei bis drei Tage aktives agentisches Coden, bevor das Limit erreicht ist. Im März 2026 ersetzte Windsurf das alte monatliche Guthaben-Pool-System (500 Guthaben/Monat bei Pro) durch automatisch aktualisierende Tages- und Wochenkontingente. Max kostet 200 $/Monat; Teams 40 $/Nutzer/Monat; Enterprise individuell.',
           'Windsurf gehört inzwischen zu Cognition, dem Unternehmen hinter dem autonomen Coding-Agenten Devin, nach Cognitions Übernahme von Windsurfs Team, Produkt und Marke. windsurf.com leitet derzeit auf die Preisseite von devin.ai weiter, und Devin wird direkt in den Windsurf-Editor integriert statt ihn vollständig zu ersetzen.',
           'Windsurfs Empfehlungsprogramm gibt Neuanmeldungen über einen Empfehlungslink 250 kostenlose Flex-Guthaben — ein Empfehlungsanreiz, kein provisionsbasiertes Affiliate-Programm.',
@@ -730,7 +730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Noch unsicher? Testen Sie zuerst Cursor und Cline — zusammen decken sie die bezahlt-agentische und die kostenlos-lokale Extremposition ab, und die meisten Entwickler landen bei einem der beiden.',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Kostenlos–20+ $/Monat', label: 'Cursor kostenlos testen' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Kostenlos–200 $/Monat', label: 'Cursor kostenlos testen' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Kostenlos–100 $/Monat', label: 'GitHub Copilot testen' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 $ (Open Source)', label: 'Cline installieren' },
         ],
@@ -754,9 +754,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Ist Cursor besser als GitHub Copilot?', a: 'Für agentische Mehrdatei-Arbeit und Modellflexibilität ist Cursor in der Regel die stärkere Wahl — es unterstützt GPT, Claude und Gemini, und Composer/Cloud Agents bewältigen größere Refactorings mit weniger manueller Steuerung. GitHub Copilot ist speziell für Teams die bessere Wahl, die bereits auf GitHub Issues, Pull Requests und Azure DevOps standardisiert sind, da der Coding-Agent direkt gegen diesen Workflow arbeitet statt als separater Editor.' },
-          { q: 'Gibt es einen kostenlosen KI-Coding-Assistenten mit Agentenmodus?', a: 'Ja. Cline ist vollständig kostenlos und Open Source ohne Abo-Tarif — Sie zahlen nur für die genutzten LLM-API-Token, oder gar nichts, wenn Sie ein lokales Modell über Ollama oder LM Studio anbinden. Cursor und GitHub Copilot haben beide begrenzte kostenlose Tarife (Cursors Hobby-Tarif und Copilots kostenloser Tarif mit 2.000 Vervollständigungen/Monat), doch die Agentenmodus-Nutzung ist bei beiden gedeckelt.' },
-          { q: 'Was ist der tatsächliche Unterschied zwischen Windsurf und Cursor 2026?', a: 'Stand August 2026 sind beide bei ihren Pro-Tarifen preislich identisch bei 20 $/Monat — Windsurf erhöhte im März 2026 von 15 $ auf 20 $ und schloss damit den früheren Hauptvorteil. Der verbleibende Unterschied ist der Workflow: Windsurf nutzt den Cascade-Agentenablauf, Cursor nutzt Composer und Cloud Agents. Entscheiden Sie nach der bevorzugten Agenten-UX, nicht nach Preis.' },
-          { q: 'Unterstützt GitHub Copilot Claude- oder Gemini-Modelle?', a: 'GitHub Copilot Pro+ (39 $/Monat) und Max (100 $/Monat) umfassen Zugriff auf Premium-Modelle wie Claude Opus. Die Basis-Tarife Free und Pro (10 $/Monat) sind bei der Modellauswahl eingeschränkter. Das ist enger als bei Cursor, wo Pro-Nutzer direkt zwischen GPT-, Claude- und Gemini-Modellen wechseln können.' },
+          { q: 'Gibt es einen kostenlosen KI-Coding-Assistenten mit Agentenmodus?', a: 'Ja. Cline ist vollständig kostenlos und Open Source ohne Abo-Tarif — Sie zahlen nur für die genutzten LLM-API-Token, oder gar nichts, wenn Sie ein lokales Modell über Ollama oder LM Studio anbinden. Cursor und GitHub Copilot haben beide begrenzte kostenlose Tarife (Cursors kostenloser Tarif und Copilots kostenloser Tarif mit 2.000 Vervollständigungen/Monat), doch die Agentenmodus-Nutzung ist bei beiden gedeckelt.' },
+          { q: 'Was ist der tatsächliche Unterschied zwischen Windsurf und Cursor 2026?', a: 'Windsurf Pro kostet 20 $/Monat (im März 2026 von 15 $ erhöht). Cursor hat jetzt Plus für 8 $/Monat (nur Grok-Modelle), Premium für 30 $, Super für 100 $ und Ultra für 200 $, wobei Claude und GPT ab Premium zum API-Listenpreis abgerechnet werden. Der verbleibende Unterschied ist der Workflow: Windsurf nutzt den Cascade-Agentenablauf, Cursor nutzt Composer und Cloud Agents. Entscheiden Sie nach der bevorzugten Agenten-UX, nicht nach Preis.' },
+          { q: 'Unterstützt GitHub Copilot Claude- oder Gemini-Modelle?', a: 'GitHub Copilot Pro+ (39 $/Monat) und Max (100 $/Monat) umfassen Zugriff auf Premium-Modelle wie Claude Opus. Die Basis-Tarife Free und Pro (10 $/Monat) sind bei der Modellauswahl eingeschränkter. Das ist enger als bei Cursor, wo Nutzer ab Premium direkt zwischen GPT-, Claude- und Gemini-Modellen wechseln können (abgerechnet zum API-Listenpreis).' },
           { q: 'Wie richte ich Cline mit einem lokalen Modell ein?', a: 'Installieren Sie Ollama oder LM Studio, laden Sie ein Coding-Modell herunter (Clines Dokumentation empfiehlt Qwen2.5 Coder, Llama 3.3, DeepSeek Coder V3 oder Codestral), und wählen Sie in Cline Ollama oder LM Studio als API-Provider — Ollamas Standard-Endpunkt ist http://localhost:11434, LM Studio stellt eine OpenAI-kompatible API auf Port 1234 bereit. Beide benötigen keinen API-Schlüssel. Nutzen Sie mindestens ein 32K-Token-Kontextfenster; intensivere agentische Sitzungen brauchen oft 64K.' },
           { q: 'Kann ich mehrere dieser Tools gleichzeitig nutzen?', a: 'Ja, viele Entwickler tun das — zum Beispiel Cline mit einem lokalen Modell für routinemäßige, wenig sensible Änderungen, und Wechsel zu Cursor oder GitHub Copilot für schwierigere Probleme, bei denen ein stärkeres Cloud-Modell hilft. Es gibt keinen technischen Konflikt beim gleichzeitigen Betrieb mehrerer Erweiterungen in derselben VS-Code-Installation, üblicherweise ist jedoch nur ein Tool pro Sitzung als primärer Agent aktiv.' },
           { q: 'Was ist der beste KI-Coding-Assistent für Einzelentwickler mit knappem Budget?', a: 'Cline in Kombination mit einem lokalen Modell (Ollama oder LM Studio) kostet insgesamt 0 $. Wenn Sie gelegentlich ein stärkeres Cloud-Modell ohne Abo nutzen möchten, hält Cline mit einem API-Schlüssel auf Token-Basis (OpenAI, Anthropic oder OpenRouter) die Kosten proportional zur tatsächlichen Nutzung statt einer festen monatlichen Gebühr.' },
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         links: [
-          { url: 'https://cursor.com/pricing', title: 'Cursor-Preise', description: 'Offizielle Cursor-Preisseite — Hobby-, Pro-, Pro+-, Ultra-, Teams- und Enterprise-Tarife.' },
+          { url: 'https://cursor.com/pricing', title: 'Cursor-Preise', description: 'Offizielle Cursor-Preisseite — kostenlose, Plus-, Premium-, Super-, Ultra-, Teams- und Enterprise-Pläne.' },
           { url: 'https://cursor.com/help/account-and-billing/referral-program', title: 'Cursor-Empfehlungsprogramm', description: 'Offizielle Dokumentation von Cursors Empfehlungsprogramm mit eingeschränktem Rollout.' },
           { url: 'https://devin.ai/pricing', title: 'Windsurf-/Devin-Preise (Weiterleitung von windsurf.com)', description: 'Windsurf-Preisseite, seit der Cognition-Übernahme unter devin.ai gehostet.' },
           { url: 'https://github.com/features/copilot/plans', title: 'GitHub-Copilot-Tarife', description: 'Offizielle GitHub-Copilot-Preise — Free-, Pro-, Pro+-, Max-, Business- und Enterprise-Tarife.' },
@@ -823,7 +823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mainEntity': [
         { '@type': 'Question', 'name': 'Ist Cursor besser als GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Für agentische Mehrdatei-Arbeit und Modellflexibilität ist Cursor in der Regel die stärkere Wahl. GitHub Copilot ist speziell für Teams die bessere Wahl, die bereits auf GitHub Issues, Pull Requests und Azure DevOps standardisiert sind.' } },
         { '@type': 'Question', 'name': 'Gibt es einen kostenlosen KI-Coding-Assistenten mit Agentenmodus?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. Cline ist vollständig kostenlos und Open Source ohne Abo-Tarif — Sie zahlen nur für die genutzten LLM-API-Token, oder gar nichts bei einem lokalen Modell über Ollama oder LM Studio.' } },
-        { '@type': 'Question', 'name': 'Was ist der tatsächliche Unterschied zwischen Windsurf und Cursor 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Stand August 2026 sind beide bei ihren Pro-Tarifen preislich identisch bei 20 $/Monat. Der verbleibende Unterschied ist der Workflow: Windsurf nutzt Cascade, Cursor nutzt Composer und Cloud Agents.' } },
+        { '@type': 'Question', 'name': 'Was ist der tatsächliche Unterschied zwischen Windsurf und Cursor 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Windsurf Pro kostet 20 $/Monat; Cursor-Pläne reichen von 8 $/Monat (Plus) bis 200 $/Monat (Ultra), wobei Claude und GPT ab Premium zum API-Listenpreis abgerechnet werden. Der verbleibende Unterschied ist der Workflow: Windsurf nutzt Cascade, Cursor nutzt Composer und Cloud Agents.' } },
         { '@type': 'Question', 'name': 'Was ist Bodega One Code, und wie schneidet es im Vergleich zu Cursor oder Cline ab?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code ist eine local-first KI-IDE, derzeit in offener Beta, die einen Monaco-basierten Editor, KI-Chat und einen autonomen Coding-Agenten in einer Anwendung bündelt, statt als Erweiterung zu einem bestehenden Editor hinzugefügt zu werden. Der Personal-Tarif ist für nicht-kommerzielle Nutzung auf einem Gerät für immer kostenlos; Pro ist ein Einmalkauf, dessen genauer Preis noch nicht bekanntgegeben wurde.' } },
       ],
     },
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Cursor vs Windsurf vs GitHub Copilot vs Cline comparés sur le mode agent, les tarifs et l\'accès aux modèles. Prix d\'août 2026 vérifiés sur chaque site éditeur.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-03',
+    dateModified: '2026-10-17',
     readTime: '13 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs qui choisissent un assistant de code IA avec mode agent et veulent comparer Cursor, Windsurf, GitHub Copilot et Cline sur le prix, l\'accès aux modèles et l\'adéquation au workflow.',
@@ -856,15 +856,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursor est le meilleur assistant de code IA agentique généraliste en 2026 pour la plupart des développeurs professionnels, GitHub Copilot est le choix le plus sûr pour les équipes déjà standardisées sur GitHub ou Azure, et Cline est la meilleure option gratuite si vous apportez votre propre clé API ou utilisez un modèle local.** Windsurf coûte désormais le même prix que Cursor Pro (20 $/mois depuis août 2026, contre 15 $ plus tôt dans l\'année) et ne gagne plus sur le prix — choisissez-le uniquement si vous préférez spécifiquement son flux d\'agent Cascade. Bodega One Code mérite d\'être surveillé si vous voulez un IDE local-first intégré avec un mode agent natif plutôt qu\'une extension greffée sur un éditeur existant, mais il reste en bêta ouverte avec une tarification Pro non finalisée. Aucun outil ne gagne dans toutes les catégories ; choisissez selon votre workflow, pas selon le marketing.',
+      '**Cursor est le meilleur assistant de code IA agentique généraliste en 2026 pour la plupart des développeurs professionnels, GitHub Copilot est le choix le plus sûr pour les équipes déjà standardisées sur GitHub ou Azure, et Cline est la meilleure option gratuite si vous apportez votre propre clé API ou utilisez un modèle local.** Windsurf Pro (20 $/mois, contre 15 $ plus tôt dans l\'année) se situe désormais entre Cursor Plus (8 $/mois, modèles Grok uniquement) et Cursor Premium (30 $/mois, ajoute Claude et GPT au tarif API public), le prix ne tranche donc plus — choisissez-le uniquement si vous préférez spécifiquement son flux d\'agent Cascade. Bodega One Code mérite d\'être surveillé si vous voulez un IDE local-first intégré avec un mode agent natif plutôt qu\'une extension greffée sur un éditeur existant, mais il reste en bêta ouverte avec une tarification Pro non finalisée. Aucun outil ne gagne dans toutes les catégories ; choisissez selon votre workflow, pas selon le marketing.',
     quickAnswerTop: {
       fr: {
         question: 'Quel assistant de code IA a le meilleur mode agent en 2026 ?',
         answer:
-          'Cursor a le mode agent le plus mature (Composer plus Cloud Agents) et prend en charge les modèles GPT, Claude et Gemini dans un fork de VS Code, mais son système de crédits à l\'usage au-dessus de la base à 20 $/mois rend le coût mensuel variable. L\'agent Cascade de Windsurf est comparable et coûte désormais le même palier Pro à 20 $/mois que Cursor. L\'agent de codage de GitHub Copilot fonctionne mieux dans les workflows natifs GitHub (issues, PR, Actions). Cline n\'a pas de plafond de mode agent puisque vous apportez votre propre modèle et votre propre clé API — y compris un modèle local à 0 $ — mais vous assemblez le workflow vous-même.',
+          'Cursor a le mode agent le plus mature (Composer plus Cloud Agents) et prend en charge les modèles GPT, Claude et Gemini dans un fork de VS Code, mais depuis le 12 octobre 2026 ses forfaits sont Plus 8 $, Premium 30 $, Super 100 $ et Ultra 200 $ par mois, et l\'usage de Claude et GPT est facturé en plus au tarif API public, ce qui rend le coût mensuel variable. L\'agent Cascade de Windsurf est comparable, à 20 $/mois en Pro. L\'agent de codage de GitHub Copilot fonctionne mieux dans les workflows natifs GitHub (issues, PR, Actions). Cline n\'a pas de plafond de mode agent puisque vous apportez votre propre modèle et votre propre clé API — y compris un modèle local à 0 $ — mais vous assemblez le workflow vous-même.',
         bullets: [
-          'Cursor : Composer + Cloud Agents, base Pro à 20 $/mois plus crédits à l\'usage',
-          'Windsurf : agent Cascade, Pro à 20 $/mois (augmenté depuis 15 $ en mars 2026) — parité de prix avec Cursor',
+          'Cursor : Composer + Cloud Agents, forfaits dès 8 $/mois (Plus, Grok uniquement) ; Premium à 30 $/mois ajoute Claude et GPT au tarif API public',
+          'Windsurf : agent Cascade, Pro à 20 $/mois (augmenté depuis 15 $ en mars 2026)',
           'GitHub Copilot : agent de codage lié aux issues/PR GitHub, Pro à 10 $/mois, Pro+ à 39 $/mois, Max à 100 $/mois',
           'Cline : extension open source, 0 $ en soi — le coût dépend uniquement de l\'API LLM connectée, ou 0 $ avec un modèle local via Ollama/LM Studio',
           'Bodega One Code : IDE de bureau local-first avec agent intégré, bêta ouverte — Personal gratuit à vie, Pro est un achat unique avec un prix encore non annoncé',
@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     affiliateLinks: [
-      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratuit–20+ $/mois', label: 'Commencer gratuitement avec Cursor' },
+      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratuit–200 $/mois', label: 'Commencer gratuitement avec Cursor' },
       { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Gratuit–100 $/mois', label: 'Commencer gratuitement avec GitHub Copilot' },
       { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 $ (open source)', label: 'Obtenir Cline gratuitement' },
     ],
@@ -906,8 +906,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Les quatre outils peuvent modifier plusieurs fichiers et exécuter des commandes pour vous (mode agent). Les vraies différences sont le prix, les modèles IA utilisables, et si votre code doit quitter votre machine.' },
         ],
         items: [
-          '**Cursor a le mode agent le plus mature et la plus grande flexibilité de modèles** (GPT, Claude, Gemini) dans un fork de VS Code, mais les crédits à l\'usage au-dessus de la base Pro à 20 $/mois rendent le coût mensuel variable.',
-          '**Windsurf a perdu son avantage tarifaire en 2026.** Son palier Pro est passé de 15 $/mois à 20 $/mois en mars 2026 — le même prix que Cursor Pro. Son flux d\'agent Cascade reste un vrai différenciateur si vous préférez son ergonomie.',
+          '**Cursor a le mode agent le plus mature et la plus grande flexibilité de modèles** (GPT, Claude, Gemini) dans un fork de VS Code, mais l\'usage de Claude et GPT est facturé en plus du forfait au tarif API public (Premium dès 30 $/mois), ce qui rend le coût mensuel variable.',
+          '**Windsurf a perdu son avantage tarifaire en 2026.** Son palier Pro est passé de 15 $/mois à 20 $/mois en mars 2026 — il se situe désormais entre Cursor Plus (8 $/mois) et Premium (30 $/mois). Son flux d\'agent Cascade reste un vrai différenciateur si vous préférez son ergonomie.',
           '**GitHub Copilot est passé à une facturation par crédits IA à l\'usage le 1er juin 2026.** Pro coûte 10 $/mois avec 15 $ de crédits IA inclus ; Pro+ coûte 39 $/mois ; un nouveau palier Max coûte 100 $/mois. C\'est le choix par défaut pour les équipes déjà dans GitHub ou Azure DevOps.',
           '**Cline coûte 0 $ en soi** — c\'est une extension open source pour VS Code/JetBrains. Vous payez uniquement les jetons d\'API LLM utilisés (OpenAI, Anthropic, OpenRouter et autres), ou rien du tout avec un modèle local via Ollama ou LM Studio.',
           '**Aucun des quatre éditeurs n\'a de programme d\'affiliation public standard et vérifiable en août 2026** — voir la section Statut des programmes d\'affiliation pour ce que chaque éditeur propose réellement (crédits de parrainage, partenariats technologiques, ou rien).',
@@ -925,7 +925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '⚡ **Windsurf — la meilleure alternative.** Si vous préférez spécifiquement le flux d\'agent Cascade.',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratuit–20+ $/mois', label: 'Essayer Cursor' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratuit–200 $/mois', label: 'Essayer Cursor' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Gratuit–100 $/mois', label: 'Essayer GitHub Copilot' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 $ (open source)', label: 'Installer Cline' },
           { url: 'https://windsurf.com', productName: 'Windsurf', productCategory: 'dev-tool', priceRange: 'Gratuit–200 $/mois', label: 'Essayer Windsurf' },
@@ -936,8 +936,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Faits rapides (vérifiés en)',
         content: 'Vérifiés directement sur cursor.com/pricing, windsurf.com (redirige vers devin.ai/pricing après le rachat par Cognition), github.com/features/copilot/plans, cline.bot/pricing et bodegaone.ai/pricing, recoupés avec des trackers de prix indépendants. Les tarifs des outils de développement changent avec les révisions de plans — confirmez le tarif actuel sur le site de l\'éditeur avant de vous abonner. Les prix sont en USD ; ces abonnements ne disposent pas de tarifs EUR distincts publiés — le paiement peut proposer une devise locale au moment du règlement, mais le tarif USD affiché est global.',
         items: [
-          '**Cursor :** palier Hobby gratuit ; Pro, Pro+ et Ultra partagent tous une base à 20 $/mois avec des multiplicateurs d\'usage inclus croissants (Pro+ environ 3x, Ultra environ 20x), plus une facturation à l\'usage une fois l\'usage inclus épuisé ; Teams à partir de 40 $/utilisateur/mois.',
-          '**Windsurf :** palier gratuit avec un quota quotidien/hebdomadaire léger ; Pro à 20 $/mois (augmenté depuis 15 $ en mars 2026, au niveau de Cursor) ; Max à 200 $/mois ; Teams à 40 $/utilisateur/mois ; Enterprise sur devis. Le système de pool de crédits a été remplacé par des quotas quotidiens/hebdomadaires en mars 2026.',
+          '**Cursor :** offre gratuite à usage limité ; depuis le 12 octobre 2026 : Plus 8 $/mois (modèles Grok uniquement), Premium 30 $ (usage 4x Plus, ajoute Claude, GPT et Gemini au tarif API public), Super 100 $ (15x), Ultra 200 $ (50x) ; Teams 30 $, 100 $ ou 200 $ par siège/mois. Le forfait Pro à 20 $/mois est un forfait hérité, fermé aux nouveaux clients.',
+          '**Windsurf :** palier gratuit avec un quota quotidien/hebdomadaire léger ; Pro à 20 $/mois (augmenté depuis 15 $ en mars 2026) ; Max à 200 $/mois ; Teams à 40 $/utilisateur/mois ; Enterprise sur devis. Le système de pool de crédits a été remplacé par des quotas quotidiens/hebdomadaires en mars 2026.',
           '**GitHub Copilot :** palier gratuit (2 000 complétions/mois) ; Pro à 10 $/mois (15 $ de crédits IA inclus) ; Pro+ à 39 $/mois (70 $ inclus) ; Max à 100 $/mois (200 $ inclus) ; Business à 19 $/utilisateur/mois (1 900 crédits IA) ; Enterprise à 39 $/utilisateur/mois (3 900 crédits IA). Passage à la facturation par crédits IA à l\'usage le 1er juin 2026.',
           '**Cline :** l\'extension elle-même est gratuite, open source, sous licence MIT. Le coût réel dépend de l\'API LLM connectée (OpenAI, Anthropic, Google, OpenRouter, AWS Bedrock, GCP Vertex, Groq, Cerebras, DeepSeek, etc.), ou 0 $ avec un modèle local via Ollama ou LM Studio — les deux fonctionnent sans clé API.',
           '**Bodega One Code :** le palier Personal est gratuit à vie (un poste, usage non commercial, un espace de travail) ; Pro est un achat unique — pas un abonnement — qui ajoute les droits d\'usage commercial, un second poste et des espaces de travail illimités, mais l\'éditeur affiche son prix comme « à définir » avant la sortie complète ; Enterprise est tarifé sur devis. L\'application entière, y compris l\'usage commercial, est gratuite pendant la bêta ouverte.',
@@ -949,13 +949,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Choix de la rédaction : Cursor',
         sponsoredSlot: true,
         content:
-          '**Cursor est le choix pour la plupart des développeurs professionnels qui veulent le mode agent le plus mature et le plus large choix de modèles.** Composer et Cloud Agents gèrent les changements multi-fichiers et multi-étapes avec moins de pilotage manuel que les alternatives, et vous pouvez basculer entre les modèles GPT, Claude et Gemini dans le même éditeur. Le compromis porte sur la prévisibilité du coût : la base Pro à 20 $/mois couvre un usage défini, et des sessions agentiques intensives peuvent déclencher une facturation supplémentaire à l\'usage. Si l\'intégration native GitHub compte plus que la capacité agentique brute, choisissez plutôt GitHub Copilot ; si 0 $ est une exigence stricte, choisissez Cline avec un modèle local.',
+          '**Cursor est le choix pour la plupart des développeurs professionnels qui veulent le mode agent le plus mature et le plus large choix de modèles.** Composer et Cloud Agents gèrent les changements multi-fichiers et multi-étapes avec moins de pilotage manuel que les alternatives, et vous pouvez basculer entre les modèles GPT, Claude et Gemini dans le même éditeur. Le compromis porte sur la prévisibilité du coût : les forfaits payants partagent un quota hebdomadaire, et l\'usage de Claude et GPT est facturé en plus au tarif API public via un crédit prépayé. Si l\'intégration native GitHub compte plus que la capacité agentique brute, choisissez plutôt GitHub Copilot ; si 0 $ est une exigence stricte, choisissez Cline avec un modèle local.',
         callouts: [
-          { type: 'warning', text: 'Surveillez les coûts d\'usage de Cursor. Les 20 $/mois du palier Pro sont le prix de l\'abonnement, pas forcément votre dépense mensuelle maximale — des sessions agentiques intensives peuvent déclencher une facturation supplémentaire à l\'usage une fois l\'usage inclus épuisé. Les utilisateurs légers restent généralement dans les 20 $/mois ; les gros utilisateurs d\'agent et les équipes doivent prévoir un dépassement.' },
+          { type: 'warning', text: 'Surveillez les coûts d\'usage de Cursor. Le prix du forfait n\'est pas votre dépense mensuelle maximale — à partir de Premium, l\'usage de Claude et GPT est facturé au tarif API public via un crédit prépayé, de sorte que des sessions agentiques intensives peuvent coûter bien plus de 30 $/mois. Plus (8 $/mois) évite cela car il ne couvre que les modèles Grok.' },
           { type: 'note', text: 'PromptQuorum n\'est inscrit à aucun programme d\'affiliation pour Cursor, Windsurf, GitHub Copilot ou Cline. Les liens de cette page sont de simples liens produit sans relation d\'affiliation et ne génèrent aucune commission — voir la section Statut des programmes d\'affiliation ci-dessous pour ce que chaque éditeur propose réellement.' },
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratuit–20+ $/mois', label: 'Commencer gratuitement avec Cursor' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratuit–200 $/mois', label: 'Commencer gratuitement avec Cursor' },
         ],
       },
       comparisonTable: {
@@ -968,7 +968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Outil': '[Cursor](https://cursor.com)',
             'Idéal pour': 'Édition agentique multi-fichiers',
-            'Tarif (août 2026)': 'Hobby gratuit / 20+ $/mois Pro–Ultra',
+            'Tarif (août 2026)': 'Gratuit / 8 $ Plus / 30 $ Premium / jusqu\'à 200 $ Ultra',
             'Accès modèles': 'GPT / Claude / Gemini (multi-modèle)',
             'Mode agent': 'Composer + Cloud Agents',
             'IDE': 'Cursor (fork VS Code)',
@@ -1050,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor : idéal pour le travail agentique multi-fichiers',
         content: [
           '**Cursor est un fork de VS Code construit autour du mode agent, avec Composer et Cloud Agents comme fonctionnalités phares pour les changements multi-fichiers et multi-étapes.** Il prend en charge les modèles GPT, Claude et Gemini dans le même éditeur, vous n\'êtes donc pas enfermé sur le modèle d\'un seul éditeur.',
-          'En août 2026, le palier Hobby de Cursor est gratuit avec des requêtes d\'agent limitées. Pro, Pro+ et Ultra partagent tous un abonnement de base à 20 $/mois, différenciés par des multiplicateurs d\'usage inclus (Pro+ donne environ 3x la limite d\'agent Pro, Ultra environ 20x) — une fois l\'usage inclus consommé, l\'usage supplémentaire est facturé à la demande. Les tarifs Teams commencent à 40 $/utilisateur/mois pour le palier Standard, avec un palier Premium à 5x la limite d\'agent Standard. Enterprise est tarifé sur devis.',
+          'Cursor propose une offre gratuite à usage limité. Depuis le 12 octobre 2026, les forfaits payants sont Plus (8 $/mois, modèles Grok uniquement), Premium (30 $, usage 4x Plus), Super (100 $, 15x) et Ultra (200 $, 50x), qui partagent un quota hebdomadaire entre les modèles Cursor et Grok. Claude, GPT et Gemini sont facturés au tarif API public via un crédit prépayé à partir de Premium. Les sièges Teams coûtent 30 $, 100 $ ou 200 $ par mois. Le forfait Pro à 20 $/mois est un forfait hérité, fermé aux nouveaux clients. Enterprise est tarifé sur devis.',
           'Cursor propose un programme de parrainage à déploiement limité (pas un programme d\'affiliation public généraliste) : les parrains éligibles reçoivent 25 $ de crédit d\'usage par client payant parrainé (jusqu\'à 10 par cycle), et l\'utilisateur parrainé obtient 50 % de réduction sur son premier mois. Ce n\'est pas un programme de commission public et universellement accessible — voir la section Statut des programmes d\'affiliation.',
         ],
       },
@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'windsurf',
         title: 'Windsurf : agent Cascade, désormais chez Cognition',
         content: [
-          '**Windsurf utilise le flux d\'agent Cascade et coûte, en août 2026, le même prix que Cursor Pro** — son palier Pro est passé de 15 $/mois à 20 $/mois en mars 2026, mettant fin à ce qui était auparavant son différenciateur le plus clair (prix inférieur).',
+          '**Windsurf utilise le flux d\'agent Cascade, et son palier Pro (20 $/mois) se situe désormais entre Cursor Plus (8 $) et Cursor Premium (30 $)** — il est passé de 15 $/mois à 20 $/mois en mars 2026.',
           'Le palier gratuit de Windsurf inclut l\'auto-complétion Tab illimitée plus un quota quotidien/hebdomadaire léger pour l\'usage de l\'agent Cascade — suffisant pour environ deux à trois jours de codage agentique actif avant d\'atteindre la limite. En mars 2026, Windsurf a remplacé son ancien système de pool de crédits mensuel (500 crédits/mois en Pro) par des quotas quotidiens et hebdomadaires à renouvellement automatique. Max coûte 200 $/mois ; Teams 40 $/utilisateur/mois ; Enterprise sur devis.',
           'Windsurf appartient désormais à Cognition, l\'entreprise derrière l\'agent de codage autonome Devin, après le rachat par Cognition de l\'équipe, du produit et de la marque Windsurf. windsurf.com redirige actuellement vers la page de tarifs de devin.ai, et Devin est intégré directement dans l\'éditeur Windsurf plutôt que de le remplacer entièrement.',
           'Le programme de parrainage de Windsurf offre aux nouvelles inscriptions 250 crédits flex gratuits via un lien de parrainage — une incitation au parrainage, pas un programme d\'affiliation à commission.',
@@ -1119,7 +1119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Encore hésitant ? Essayez d\'abord Cursor et Cline — ensemble, ils couvrent les deux extrêmes payant-agentique et gratuit-local, et la plupart des développeurs se fixent sur l\'un des deux.',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratuit–20+ $/mois', label: 'Essayer Cursor gratuitement' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratuit–200 $/mois', label: 'Essayer Cursor gratuitement' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Gratuit–100 $/mois', label: 'Essayer GitHub Copilot' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 $ (open source)', label: 'Installer Cline' },
         ],
@@ -1143,9 +1143,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Cursor est-il meilleur que GitHub Copilot ?', a: 'Pour le travail agentique multi-fichiers et la flexibilité de modèles, Cursor est généralement le choix le plus solide — il prend en charge GPT, Claude et Gemini, et Composer/Cloud Agents gèrent les grandes refontes avec moins de pilotage manuel. GitHub Copilot est le meilleur choix spécifiquement pour les équipes déjà standardisées sur les issues GitHub, les pull requests et Azure DevOps, puisque son agent de codage travaille directement sur ce workflow plutôt que comme un éditeur séparé.' },
-          { q: 'Existe-t-il un assistant de code IA gratuit avec mode agent ?', a: 'Oui. Cline est totalement gratuit et open source sans aucun palier d\'abonnement — vous ne payez que les jetons d\'API LLM utilisés, ou rien du tout si vous connectez un modèle local via Ollama ou LM Studio. Cursor et GitHub Copilot ont tous deux des paliers gratuits limités (le palier Hobby de Cursor et le palier gratuit de Copilot avec 2 000 complétions/mois), mais l\'usage du mode agent est plafonné sur les deux.' },
-          { q: 'Quelle est la différence réelle entre Windsurf et Cursor en 2026 ?', a: 'En août 2026, les deux sont tarifés de façon identique à 20 $/mois pour leurs paliers Pro — Windsurf est passé de 15 $ à 20 $ en mars 2026, effaçant ce qui était son principal avantage. La différence restante est le workflow : Windsurf utilise le flux d\'agent Cascade, Cursor utilise Composer et Cloud Agents. Choisissez selon l\'ergonomie d\'agent préférée après avoir testé les deux, pas selon le prix.' },
-          { q: 'GitHub Copilot prend-il en charge les modèles Claude ou Gemini ?', a: 'GitHub Copilot Pro+ (39 $/mois) et Max (100 $/mois) incluent l\'accès à des modèles premium comme Claude Opus. Les paliers de base Free et Pro (10 $/mois) sont plus limités en choix de modèles. C\'est plus restreint que Cursor, qui permet aux utilisateurs Pro de basculer directement entre les modèles GPT, Claude et Gemini.' },
+          { q: 'Existe-t-il un assistant de code IA gratuit avec mode agent ?', a: 'Oui. Cline est totalement gratuit et open source sans aucun palier d\'abonnement — vous ne payez que les jetons d\'API LLM utilisés, ou rien du tout si vous connectez un modèle local via Ollama ou LM Studio. Cursor et GitHub Copilot ont tous deux des paliers gratuits limités (le palier gratuit de Cursor et le palier gratuit de Copilot avec 2 000 complétions/mois), mais l\'usage du mode agent est plafonné sur les deux.' },
+          { q: 'Quelle est la différence réelle entre Windsurf et Cursor en 2026 ?', a: 'Windsurf Pro coûte 20 $/mois (augmenté depuis 15 $ en mars 2026). Cursor propose désormais Plus à 8 $/mois (modèles Grok uniquement), Premium à 30 $, Super à 100 $ et Ultra à 200 $, Claude et GPT étant facturés au tarif API public à partir de Premium. La différence restante est le workflow : Windsurf utilise le flux d\'agent Cascade, Cursor utilise Composer et Cloud Agents. Choisissez selon l\'ergonomie d\'agent préférée après avoir testé les deux, pas selon le prix.' },
+          { q: 'GitHub Copilot prend-il en charge les modèles Claude ou Gemini ?', a: 'GitHub Copilot Pro+ (39 $/mois) et Max (100 $/mois) incluent l\'accès à des modèles premium comme Claude Opus. Les paliers de base Free et Pro (10 $/mois) sont plus limités en choix de modèles. C\'est plus restreint que Cursor, qui permet aux utilisateurs Premium et au-dessus de basculer directement entre les modèles GPT, Claude et Gemini (facturés au tarif API public).' },
           { q: 'Comment configurer Cline avec un modèle local ?', a: 'Installez Ollama ou LM Studio, téléchargez un modèle de codage (la documentation de Cline recommande Qwen2.5 Coder, Llama 3.3, DeepSeek Coder V3 ou Codestral), puis dans Cline choisissez Ollama ou LM Studio comme fournisseur d\'API — le point de terminaison par défaut d\'Ollama est http://localhost:11434, LM Studio expose une API compatible OpenAI sur le port 1234. Aucun des deux ne nécessite de clé API. Utilisez au moins une fenêtre de contexte de 32K jetons ; les sessions agentiques plus intensives nécessitent souvent 64K.' },
           { q: 'Puis-je utiliser plusieurs de ces outils en même temps ?', a: 'Oui, et beaucoup de développeurs le font — par exemple en utilisant Cline avec un modèle local pour les modifications routinières et peu sensibles, et en basculant vers Cursor ou GitHub Copilot pour les problèmes plus difficiles où un modèle cloud plus puissant aide. Il n\'y a pas de conflit technique à exécuter plusieurs extensions dans la même installation de VS Code, bien qu\'une seule soit généralement active comme agent principal par session.' },
           { q: 'Quel est le meilleur assistant de code IA pour un développeur solo avec un budget limité ?', a: 'Cline associé à un modèle local (Ollama ou LM Studio) coûte 0 $ au total. Si vous voulez un accès occasionnel à un modèle cloud plus puissant sans abonnement, Cline avec une clé API payée au jeton (OpenAI, Anthropic ou OpenRouter) garde un coût proportionnel à l\'usage réel plutôt qu\'un forfait mensuel fixe.' },
@@ -1159,7 +1159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Sources',
         links: [
-          { url: 'https://cursor.com/pricing', title: 'Tarifs Cursor', description: 'Page officielle des tarifs Cursor — paliers Hobby, Pro, Pro+, Ultra, Teams et Enterprise.' },
+          { url: 'https://cursor.com/pricing', title: 'Tarifs Cursor', description: 'Page officielle des tarifs Cursor — forfaits gratuit, Plus, Premium, Super, Ultra, Teams et Enterprise.' },
           { url: 'https://cursor.com/help/account-and-billing/referral-program', title: 'Programme de parrainage Cursor', description: 'Documentation officielle du programme de parrainage à déploiement limité de Cursor.' },
           { url: 'https://devin.ai/pricing', title: 'Tarifs Windsurf/Devin (redirection depuis windsurf.com)', description: 'Page de tarifs Windsurf, désormais hébergée sous devin.ai après le rachat par Cognition.' },
           { url: 'https://github.com/features/copilot/plans', title: 'Paliers GitHub Copilot', description: 'Tarifs officiels GitHub Copilot — paliers Free, Pro, Pro+, Max, Business et Enterprise.' },
@@ -1212,7 +1212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mainEntity': [
         { '@type': 'Question', 'name': 'Cursor est-il meilleur que GitHub Copilot ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour le travail agentique multi-fichiers et la flexibilité de modèles, Cursor est généralement le choix le plus solide. GitHub Copilot est le meilleur choix pour les équipes déjà standardisées sur GitHub et Azure DevOps.' } },
         { '@type': 'Question', 'name': 'Existe-t-il un assistant de code IA gratuit avec mode agent ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Cline est totalement gratuit et open source sans aucun palier d\'abonnement — vous ne payez que les jetons d\'API LLM utilisés, ou rien avec un modèle local via Ollama ou LM Studio.' } },
-        { '@type': 'Question', 'name': 'Quelle est la différence réelle entre Windsurf et Cursor en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En août 2026, les deux sont tarifés de façon identique à 20 $/mois pour leurs paliers Pro. La différence restante est le workflow : Windsurf utilise Cascade, Cursor utilise Composer et Cloud Agents.' } },
+        { '@type': 'Question', 'name': 'Quelle est la différence réelle entre Windsurf et Cursor en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Windsurf Pro coûte 20 $/mois ; les forfaits Cursor vont de 8 $/mois (Plus) à 200 $/mois (Ultra), Claude et GPT étant facturés au tarif API public à partir de Premium. La différence restante est le workflow : Windsurf utilise Cascade, Cursor utilise Composer et Cloud Agents.' } },
         { '@type': 'Question', 'name': 'Qu\'est-ce que Bodega One Code et comment se compare-t-il à Cursor ou Cline ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code est un IDE IA local-first, actuellement en bêta ouverte, qui regroupe un éditeur basé sur Monaco, un chat IA et un agent de codage autonome en une seule application plutôt que comme une extension ajoutée à un éditeur existant. Son palier Personal est gratuit à vie pour un usage non commercial sur un poste ; Pro est un achat unique dont le prix exact n\'a pas été annoncé.' } },
       ],
     },
@@ -1229,7 +1229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Cursor vs Windsurf vs GitHub Copilot vs Cline comparados en modo agente, precios y acceso a modelos. Precios de agosto de 2026 verificados en cada sitio oficial.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-03',
+    dateModified: '2026-10-17',
     readTime: '13 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que eligen un asistente de código IA con modo agente y quieren comparar Cursor, Windsurf, GitHub Copilot y Cline por precio, acceso a modelos y ajuste al flujo de trabajo.',
@@ -1245,15 +1245,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursor es el mejor asistente de código IA agéntico general en 2026 para la mayoría de desarrolladores profesionales, GitHub Copilot es la opción más segura para equipos ya estandarizados en GitHub o Azure, y Cline es la mejor opción gratuita si aportas tu propia clave API o usas un modelo local.** Windsurf ahora cuesta lo mismo que Cursor Pro (20 $/mes desde agosto de 2026, antes 15 $) y ya no gana en precio — elígelo solo si prefieres específicamente su flujo de agente Cascade. Bodega One Code vale la pena vigilarlo si quieres un único IDE local-first integrado con modo agente incorporado en lugar de una extensión añadida a un editor existente, pero todavía está en beta abierta con precios Pro sin definir. Ninguna herramienta gana en todas las categorías; elige según tu flujo de trabajo, no según el marketing.',
+      '**Cursor es el mejor asistente de código IA agéntico general en 2026 para la mayoría de desarrolladores profesionales, GitHub Copilot es la opción más segura para equipos ya estandarizados en GitHub o Azure, y Cline es la mejor opción gratuita si aportas tu propia clave API o usas un modelo local.** Windsurf Pro (20 $/mes, antes 15 $) ahora se sitúa entre Cursor Plus (8 $/mes, solo modelos Grok) y Cursor Premium (30 $/mes, añade Claude y GPT al precio de lista de la API), así que el precio ya no decide — elígelo solo si prefieres específicamente su flujo de agente Cascade. Bodega One Code vale la pena vigilarlo si quieres un único IDE local-first integrado con modo agente incorporado en lugar de una extensión añadida a un editor existente, pero todavía está en beta abierta con precios Pro sin definir. Ninguna herramienta gana en todas las categorías; elige según tu flujo de trabajo, no según el marketing.',
     quickAnswerTop: {
       es: {
         question: '¿Qué asistente de código IA tiene el mejor modo agente en 2026?',
         answer:
-          'Cursor tiene el modo agente más maduro (Composer más Cloud Agents) y admite modelos GPT, Claude y Gemini dentro de un fork de VS Code, pero su sistema de créditos por uso sobre la base de 20 $/mes hace que el costo mensual sea variable. El agente Cascade de Windsurf es comparable y ahora cuesta el mismo plan Pro de 20 $/mes que Cursor. El agente de código de GitHub Copilot funciona mejor dentro de flujos nativos de GitHub (issues, PR, Actions). Cline no tiene techo de modo agente porque aportas tu propio modelo y clave API — incluido un modelo local por 0 $ — pero armas el flujo tú mismo.',
+          'Cursor tiene el modo agente más maduro (Composer más Cloud Agents) y admite modelos GPT, Claude y Gemini dentro de un fork de VS Code, pero su sistema de créditos por uso sobre la base de 20 $/mes hace que el costo mensual sea variable. El agente Cascade de Windsurf es comparable, a 20 $/mes en Pro. El agente de código de GitHub Copilot funciona mejor dentro de flujos nativos de GitHub (issues, PR, Actions). Cline no tiene techo de modo agente porque aportas tu propio modelo y clave API — incluido un modelo local por 0 $ — pero armas el flujo tú mismo.',
         bullets: [
-          'Cursor: Composer + Cloud Agents, base Pro de 20 $/mes más créditos por uso',
-          'Windsurf: agente Cascade, Pro 20 $/mes (subió desde 15 $ en marzo de 2026) — paridad de precio con Cursor',
+          'Cursor: Composer + Cloud Agents, planes desde 8 $/mes (Plus, solo Grok); Premium a 30 $/mes añade Claude y GPT al precio de lista de la API',
+          'Windsurf: agente Cascade, Pro 20 $/mes (subió desde 15 $ en marzo de 2026)',
           'GitHub Copilot: agente de código ligado a issues/PR de GitHub, Pro 10 $/mes, Pro+ 39 $/mes, Max 100 $/mes',
           'Cline: extensión de código abierto, 0 $ en sí misma — el costo depende solo de la API LLM conectada, o 0 $ con un modelo local vía Ollama/LM Studio',
           'Bodega One Code: IDE de escritorio local-first con agente integrado, beta abierta — Personal gratis para siempre, Pro es una compra única con un precio aún no anunciado',
@@ -1282,7 +1282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     affiliateLinks: [
-      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratis–20+ $/mes', label: 'Empezar gratis con Cursor' },
+      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratis–200 $/mes', label: 'Empezar gratis con Cursor' },
       { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Gratis–100 $/mes', label: 'Empezar gratis con GitHub Copilot' },
       { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 $ (código abierto)', label: 'Obtener Cline gratis' },
     ],
@@ -1295,8 +1295,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Las cuatro herramientas pueden editar varios archivos y ejecutar comandos por ti (modo agente). Las diferencias reales son el precio, qué modelos de IA puedes usar y si tu código tiene que salir de tu máquina.' },
         ],
         items: [
-          '**Cursor tiene el modo agente más maduro y la mayor flexibilidad de modelos** (GPT, Claude, Gemini) dentro de un fork de VS Code, pero los créditos por uso sobre la base Pro de 20 $/mes hacen variable el costo mensual.',
-          '**Windsurf perdió su ventaja de precio en 2026.** Su plan Pro subió de 15 $/mes a 20 $/mes en marzo de 2026 — el mismo precio que Cursor Pro. Su flujo de agente Cascade sigue siendo un diferenciador real si prefieres su experiencia.',
+          '**Cursor tiene el modo agente más maduro y la mayor flexibilidad de modelos** (GPT, Claude, Gemini) dentro de un fork de VS Code, pero el uso de Claude y GPT se factura aparte al precio de lista de la API sobre el plan (Premium desde 30 $/mes), lo que hace variable el costo mensual.',
+          '**Windsurf perdió su ventaja de precio en 2026.** Su plan Pro subió de 15 $/mes a 20 $/mes en marzo de 2026 — ahora se sitúa entre Cursor Plus (8 $/mes) y Premium (30 $/mes). Su flujo de agente Cascade sigue siendo un diferenciador real si prefieres su experiencia.',
           '**GitHub Copilot pasó a facturación por créditos de IA basada en uso el 1 de junio de 2026.** Pro cuesta 10 $/mes con 15 $ de créditos IA incluidos; Pro+ cuesta 39 $/mes; un nuevo plan Max cuesta 100 $/mes. Es la opción por defecto para equipos ya dentro de GitHub o Azure DevOps.',
           '**Cline cuesta 0 $ en sí misma** — es una extensión de código abierto para VS Code/JetBrains. Solo pagas los tokens de API LLM que uses (OpenAI, Anthropic, OpenRouter y otros), o nada si conectas un modelo local vía Ollama o LM Studio.',
           '**Ninguno de los cuatro proveedores tiene un programa de afiliados público y verificable estándar en agosto de 2026** — ver la sección Estado de los programas de afiliados para lo que cada proveedor ofrece realmente (créditos de referido, alianzas tecnológicas, o nada).',
@@ -1314,7 +1314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '⚡ **Windsurf — la mejor alternativa.** Si prefieres específicamente el flujo de agente Cascade.',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratis–20+ $/mes', label: 'Probar Cursor' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratis–200 $/mes', label: 'Probar Cursor' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Gratis–100 $/mes', label: 'Probar GitHub Copilot' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 $ (código abierto)', label: 'Instalar Cline' },
           { url: 'https://windsurf.com', productName: 'Windsurf', productCategory: 'dev-tool', priceRange: 'Gratis–200 $/mes', label: 'Probar Windsurf' },
@@ -1325,8 +1325,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datos rápidos (verificados en)',
         content: 'Verificados directamente en cursor.com/pricing, windsurf.com (redirige a devin.ai/pricing tras la adquisición por Cognition), github.com/features/copilot/plans, cline.bot/pricing y bodegaone.ai/pricing, contrastados con rastreadores de precios independientes. Los precios de las suscripciones de herramientas de desarrollo cambian con revisiones de planes — confirma el precio actual en el sitio del proveedor antes de suscribirte. Los precios están en USD; estas suscripciones no publican tarifas separadas en EUR — el pago puede ofrecer moneda local al finalizar la compra, pero la tarifa en USD mostrada es global.',
         items: [
-          '**Cursor:** plan Hobby gratis; Pro, Pro+ y Ultra comparten una base de 20 $/mes con multiplicadores de uso incluido crecientes (Pro+ ≈3x, Ultra ≈20x), más facturación por uso una vez agotado el uso incluido; Teams desde 40 $/usuario/mes.',
-          '**Windsurf:** plan gratis con una cuota diaria/semanal ligera; Pro 20 $/mes (subió desde 15 $ en marzo de 2026, igualando a Cursor); Max 200 $/mes; Teams 40 $/usuario/mes; Enterprise a medida. El sistema de pool de créditos fue reemplazado por cuotas diarias/semanales en marzo de 2026.',
+          '**Cursor:** plan gratis con uso limitado; desde el 12 de octubre de 2026: Plus 8 $/mes (solo modelos Grok), Premium 30 $ (4x el uso de Plus, añade Claude, GPT y Gemini al precio de lista de la API), Super 100 $ (15x), Ultra 200 $ (50x); Teams 30 $, 100 $ o 200 $ por puesto/mes. El plan Pro de 20 $/mes es un plan heredado, cerrado a nuevos clientes.',
+          '**Windsurf:** plan gratis con una cuota diaria/semanal ligera; Pro 20 $/mes (subió desde 15 $ en marzo de 2026); Max 200 $/mes; Teams 40 $/usuario/mes; Enterprise a medida. El sistema de pool de créditos fue reemplazado por cuotas diarias/semanales en marzo de 2026.',
           '**GitHub Copilot:** plan gratis (2.000 completados/mes); Pro 10 $/mes (15 $ de créditos IA incluidos); Pro+ 39 $/mes (70 $ incluidos); Max 100 $/mes (200 $ incluidos); Business 19 $/usuario/mes (1.900 créditos IA); Enterprise 39 $/usuario/mes (3.900 créditos IA). Pasó a facturación por créditos IA basada en uso el 1 de junio de 2026.',
           '**Cline:** la extensión en sí es gratis, código abierto, licencia MIT. El costo real depende de la API LLM conectada (OpenAI, Anthropic, Google, OpenRouter, AWS Bedrock, GCP Vertex, Groq, Cerebras, DeepSeek y más), o 0 $ con un modelo local vía Ollama o LM Studio — ambos funcionan sin clave API.',
           '**Bodega One Code:** el plan Personal es gratis para siempre (un equipo, uso no comercial, un espacio de trabajo); Pro es una compra única — no una suscripción — que añade derechos de uso comercial, un segundo equipo y espacios de trabajo ilimitados, pero el proveedor indica su precio como "TBD" antes del lanzamiento completo; Enterprise tiene precio a medida. La aplicación completa, incluido el uso comercial, es gratis durante la beta abierta.',
@@ -1338,13 +1338,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Elección del editor: Cursor',
         sponsoredSlot: true,
         content:
-          '**Cursor es la elección para la mayoría de desarrolladores profesionales que quieren el modo agente más maduro y la mayor variedad de modelos.** Composer y Cloud Agents manejan cambios multiarchivo y multipaso con menos guía manual que las alternativas, y puedes cambiar entre modelos GPT, Claude y Gemini dentro del mismo editor. El compromiso es la previsibilidad del costo: la base Pro de 20 $/mes cubre una cantidad fija de uso, y sesiones agénticas intensas pueden desencadenar facturación adicional por uso. Si la integración nativa con GitHub importa más que la capacidad agéntica bruta, elige GitHub Copilot; si 0 $ es un requisito estricto, elige Cline con un modelo local.',
+          '**Cursor es la elección para la mayoría de desarrolladores profesionales que quieren el modo agente más maduro y la mayor variedad de modelos.** Composer y Cloud Agents manejan cambios multiarchivo y multipaso con menos guía manual que las alternativas, y puedes cambiar entre modelos GPT, Claude y Gemini dentro del mismo editor. El compromiso es la previsibilidad del costo: los planes de pago comparten un cupo de uso semanal, y el uso de Claude y GPT se factura aparte al precio de lista de la API con crédito prepago. Si la integración nativa con GitHub importa más que la capacidad agéntica bruta, elige GitHub Copilot; si 0 $ es un requisito estricto, elige Cline con un modelo local.',
         callouts: [
-          { type: 'warning', text: 'Vigila los costos de uso de Cursor. Los 20 $/mes del plan Pro son el precio de la suscripción, no necesariamente tu gasto mensual máximo — sesiones agénticas intensas pueden generar facturación adicional por uso una vez agotado el uso incluido. Los usuarios ligeros suelen quedarse dentro de los 20 $/mes; usuarios intensivos y equipos deben presupuestar un excedente.' },
+          { type: 'warning', text: 'Vigila los costos de uso de Cursor. El precio del plan no es tu gasto mensual máximo — desde Premium, el uso de Claude y GPT se factura al precio de lista de la API con crédito prepago, así que sesiones agénticas intensas pueden costar mucho más de 30 $/mes. Plus (8 $/mes) lo evita porque solo cubre modelos Grok.' },
           { type: 'note', text: 'PromptQuorum no está inscrito en ningún programa de afiliados de Cursor, Windsurf, GitHub Copilot o Cline. Los enlaces de esta página son enlaces de producto simples sin relación de afiliación y no generan comisión — ver la sección Estado de los programas de afiliados más abajo para lo que cada proveedor ofrece realmente.' },
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratis–20+ $/mes', label: 'Empezar gratis con Cursor' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratis–200 $/mes', label: 'Empezar gratis con Cursor' },
         ],
       },
       comparisonTable: {
@@ -1357,7 +1357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Herramienta': '[Cursor](https://cursor.com)',
             'Ideal para': 'Ediciones agénticas multiarchivo',
-            'Precio (ago. 2026)': 'Hobby gratis / 20+ $/mes Pro–Ultra',
+            'Precio (ago. 2026)': 'Gratis / 8 $ Plus / 30 $ Premium / hasta 200 $ Ultra',
             'Acceso a modelos': 'GPT / Claude / Gemini (multimodelo)',
             'Modo agente': 'Composer + Cloud Agents',
             'IDE': 'Cursor (fork de VS Code)',
@@ -1439,7 +1439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor: ideal para trabajo agéntico multiarchivo',
         content: [
           '**Cursor es un fork de VS Code construido alrededor del modo agente, con Composer y Cloud Agents como funciones estrella para cambios multiarchivo y multipaso.** Admite modelos GPT, Claude y Gemini dentro del mismo editor, así que no estás atado al modelo de un solo proveedor.',
-          'En agosto de 2026, el plan Hobby de Cursor es gratis con solicitudes de agente limitadas. Pro, Pro+ y Ultra comparten una suscripción base de 20 $/mes, diferenciados por multiplicadores de uso incluido (Pro+ da aproximadamente 3x el límite de agente de Pro, Ultra aproximadamente 20x) — una vez consumido el uso incluido, el uso adicional se factura bajo demanda. Los precios de Teams empiezan en 40 $/usuario/mes para el plan Standard, con un plan Premium a 5x el límite de agente Standard. Enterprise tiene precio a medida.',
+          'Cursor tiene un plan gratis con uso limitado. Desde el 12 de octubre de 2026, los planes de pago son Plus (8 $/mes, solo modelos Grok), Premium (30 $, 4x el uso de Plus), Super (100 $, 15x) y Ultra (200 $, 50x), que comparten un cupo de uso semanal entre los modelos de Cursor y Grok. Claude, GPT y Gemini se facturan al precio de lista de la API con crédito prepago desde Premium. Los puestos de Teams cuestan 30 $, 100 $ o 200 $ al mes. El plan Pro de 20 $/mes es un plan heredado, cerrado a nuevos clientes. Enterprise tiene precio a medida.',
           'Cursor tiene un programa de referidos de despliegue limitado (no un programa de afiliados público general): los referidores elegibles reciben 25 $ de crédito de uso por cada cliente pagador referido (hasta 10 por ciclo), y el usuario referido obtiene 50 % de descuento en su primer mes. No es un programa de comisión público y universalmente disponible — ver la sección Estado de los programas de afiliados.',
         ],
       },
@@ -1447,7 +1447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'windsurf',
         title: 'Windsurf: agente Cascade, ahora bajo Cognition',
         content: [
-          '**Windsurf ejecuta el flujo de agente Cascade y, en agosto de 2026, cuesta lo mismo que Cursor Pro** — su plan Pro subió de 15 $/mes a 20 $/mes en marzo de 2026, terminando lo que antes era su diferenciador más claro (precio más bajo).',
+          '**Windsurf ejecuta el flujo de agente Cascade y su plan Pro (20 $/mes) ahora se sitúa entre Cursor Plus (8 $) y Cursor Premium (30 $)** — subió de 15 $/mes a 20 $/mes en marzo de 2026.',
           'El plan gratis de Windsurf incluye autocompletado Tab ilimitado más una cuota diaria/semanal ligera para el uso del agente Cascade — suficiente para aproximadamente dos o tres días de codificación agéntica activa antes de llegar al límite. En marzo de 2026, Windsurf reemplazó su antiguo sistema de pool de créditos mensual (500 créditos/mes en Pro) por cuotas diarias y semanales que se renuevan automáticamente. Max cuesta 200 $/mes; Teams 40 $/usuario/mes; Enterprise a medida.',
           'Windsurf ahora pertenece a Cognition, la empresa detrás del agente de código autónomo Devin, tras la adquisición por Cognition del equipo, producto y marca de Windsurf. windsurf.com actualmente redirige a la página de precios de devin.ai, y Devin se está integrando directamente en el editor Windsurf en lugar de reemplazarlo por completo.',
           'El programa de referidos de Windsurf da a las nuevas inscripciones 250 créditos flex gratis mediante un enlace de referido — un incentivo de referidos, no un programa de afiliados con comisión.',
@@ -1508,7 +1508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '¿Aún no estás seguro? Prueba primero Cursor y Cline — juntas cubren los extremos de pago-agéntico y gratis-local, y la mayoría de desarrolladores se decide por una de las dos.',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratis–20+ $/mes', label: 'Probar Cursor gratis' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Gratis–200 $/mes', label: 'Probar Cursor gratis' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Gratis–100 $/mes', label: 'Probar GitHub Copilot' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 $ (código abierto)', label: 'Instalar Cline' },
         ],
@@ -1532,9 +1532,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Es Cursor mejor que GitHub Copilot?', a: 'Para trabajo agéntico multiarchivo y flexibilidad de modelos, Cursor suele ser la opción más sólida — admite GPT, Claude y Gemini, y Composer/Cloud Agents manejan refactorizaciones grandes con menos guía manual. GitHub Copilot es la mejor opción específicamente para equipos ya estandarizados en issues de GitHub, pull requests y Azure DevOps, ya que su agente de código trabaja directamente sobre ese flujo en lugar de como un editor separado.' },
-          { q: '¿Existe un asistente de código IA gratuito con modo agente?', a: 'Sí. Cline es completamente gratis y de código abierto sin ningún plan de suscripción — solo pagas los tokens de API LLM que uses, o nada si conectas un modelo local vía Ollama o LM Studio. Cursor y GitHub Copilot tienen planes gratis limitados (el plan Hobby de Cursor y el plan gratis de Copilot con 2.000 completados/mes), pero el uso del modo agente está limitado en ambos.' },
-          { q: '¿Cuál es la diferencia real entre Windsurf y Cursor en 2026?', a: 'En agosto de 2026 ambos tienen el mismo precio de 20 $/mes en sus planes Pro — Windsurf subió de 15 $ a 20 $ en marzo de 2026, cerrando lo que antes era su principal ventaja. La diferencia restante es el flujo de trabajo: Windsurf usa el flujo de agente Cascade, Cursor usa Composer y Cloud Agents. Elige según la experiencia de agente que prefieras tras probar ambas, no por precio.' },
-          { q: '¿GitHub Copilot admite modelos Claude o Gemini?', a: 'GitHub Copilot Pro+ (39 $/mes) y Max (100 $/mes) incluyen acceso a modelos premium como Claude Opus. Los planes base Free y Pro (10 $/mes) tienen elección de modelo más limitada. Esto es más restringido que Cursor, que permite a los usuarios Pro cambiar directamente entre modelos GPT, Claude y Gemini.' },
+          { q: '¿Existe un asistente de código IA gratuito con modo agente?', a: 'Sí. Cline es completamente gratis y de código abierto sin ningún plan de suscripción — solo pagas los tokens de API LLM que uses, o nada si conectas un modelo local vía Ollama o LM Studio. Cursor y GitHub Copilot tienen planes gratis limitados (el plan gratis de Cursor y el plan gratis de Copilot con 2.000 completados/mes), pero el uso del modo agente está limitado en ambos.' },
+          { q: '¿Cuál es la diferencia real entre Windsurf y Cursor en 2026?', a: 'Windsurf Pro cuesta 20 $/mes (subió de 15 $ en marzo de 2026). Cursor ahora tiene Plus a 8 $/mes (solo modelos Grok), Premium a 30 $, Super a 100 $ y Ultra a 200 $, con Claude y GPT facturados al precio de lista de la API desde Premium. La diferencia restante es el flujo de trabajo: Windsurf usa el flujo de agente Cascade, Cursor usa Composer y Cloud Agents. Elige según la experiencia de agente que prefieras tras probar ambas, no por precio.' },
+          { q: '¿GitHub Copilot admite modelos Claude o Gemini?', a: 'GitHub Copilot Pro+ (39 $/mes) y Max (100 $/mes) incluyen acceso a modelos premium como Claude Opus. Los planes base Free y Pro (10 $/mes) tienen elección de modelo más limitada. Esto es más restringido que Cursor, que permite a los usuarios de Premium en adelante cambiar directamente entre modelos GPT, Claude y Gemini (facturados al precio de lista de la API).' },
           { q: '¿Cómo configuro Cline con un modelo local?', a: 'Instala Ollama o LM Studio, descarga un modelo de código (la documentación de Cline recomienda Qwen2.5 Coder, Llama 3.3, DeepSeek Coder V3 o Codestral), y en Cline elige Ollama o LM Studio como proveedor de API — el endpoint por defecto de Ollama es http://localhost:11434, LM Studio expone una API compatible con OpenAI en el puerto 1234. Ninguno requiere clave API. Usa al menos una ventana de contexto de 32K tokens; sesiones agénticas más intensas suelen necesitar 64K.' },
           { q: '¿Puedo usar más de una de estas herramientas a la vez?', a: 'Sí, y muchos desarrolladores lo hacen — por ejemplo, usando Cline con un modelo local para ediciones rutinarias y poco sensibles, y cambiando a Cursor o GitHub Copilot para problemas más difíciles donde ayuda un modelo en la nube más potente. No hay conflicto técnico en ejecutar varias extensiones en la misma instalación de VS Code, aunque normalmente solo una está activa como agente principal por sesión.' },
           { q: '¿Cuál es el mejor asistente de código IA para un desarrollador solo con presupuesto limitado?', a: 'Cline junto con un modelo local (Ollama o LM Studio) cuesta 0 $ en total. Si quieres acceso ocasional a un modelo en la nube más potente sin suscripción, Cline con una clave API de pago por token (OpenAI, Anthropic u OpenRouter) mantiene el costo proporcional al uso real en lugar de una tarifa mensual fija.' },
@@ -1548,7 +1548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         links: [
-          { url: 'https://cursor.com/pricing', title: 'Precios de Cursor', description: 'Página oficial de precios de Cursor — planes Hobby, Pro, Pro+, Ultra, Teams y Enterprise.' },
+          { url: 'https://cursor.com/pricing', title: 'Precios de Cursor', description: 'Página oficial de precios de Cursor — planes gratis, Plus, Premium, Super, Ultra, Teams y Enterprise.' },
           { url: 'https://cursor.com/help/account-and-billing/referral-program', title: 'Programa de referidos de Cursor', description: 'Documentación oficial del programa de referidos de despliegue limitado de Cursor.' },
           { url: 'https://devin.ai/pricing', title: 'Precios de Windsurf/Devin (redirección desde windsurf.com)', description: 'Página de precios de Windsurf, ahora alojada bajo devin.ai tras la adquisición por Cognition.' },
           { url: 'https://github.com/features/copilot/plans', title: 'Planes de GitHub Copilot', description: 'Precios oficiales de GitHub Copilot — planes Free, Pro, Pro+, Max, Business y Enterprise.' },
@@ -1601,7 +1601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mainEntity': [
         { '@type': 'Question', 'name': '¿Es Cursor mejor que GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para trabajo agéntico multiarchivo y flexibilidad de modelos, Cursor suele ser la opción más sólida. GitHub Copilot es mejor para equipos ya estandarizados en GitHub y Azure DevOps.' } },
         { '@type': 'Question', 'name': '¿Existe un asistente de código IA gratuito con modo agente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí. Cline es completamente gratis y de código abierto sin plan de suscripción — solo pagas los tokens de API LLM que uses, o nada con un modelo local vía Ollama o LM Studio.' } },
-        { '@type': 'Question', 'name': '¿Cuál es la diferencia real entre Windsurf y Cursor en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En agosto de 2026 ambos cuestan lo mismo, 20 $/mes, en sus planes Pro. La diferencia restante es el flujo de trabajo: Windsurf usa Cascade, Cursor usa Composer y Cloud Agents.' } },
+        { '@type': 'Question', 'name': '¿Cuál es la diferencia real entre Windsurf y Cursor en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Windsurf Pro cuesta 20 $/mes; los planes de Cursor van de 8 $/mes (Plus) a 200 $/mes (Ultra), con Claude y GPT facturados al precio de lista de la API desde Premium. La diferencia restante es el flujo de trabajo: Windsurf usa Cascade, Cursor usa Composer y Cloud Agents.' } },
         { '@type': 'Question', 'name': '¿Qué es Bodega One Code y cómo se compara con Cursor o Cline?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code es un IDE de IA local-first, actualmente en beta abierta, que combina un editor basado en Monaco, chat de IA y un agente de código autónomo en una sola aplicación en lugar de como una extensión añadida a un editor existente. Su plan Personal es gratis para siempre para uso no comercial en un equipo; Pro es una compra única cuyo precio exacto no se ha anunciado.' } },
       ],
     },
@@ -1618,7 +1618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Cursor対Windsurf対GitHub Copilot対Clineをエージェントモード・価格・モデルアクセスで比較。価格は各社公式サイトで検証済み。',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-03',
+    dateModified: '2026-10-17',
     readTime: '13分で読める',
     educationalLevel: 'Intermediate',
     audience: 'エージェントモード搭載のAIコーディングアシスタントを選ぶ開発者で、Cursor、Windsurf、GitHub Copilot、Clineを価格・モデルアクセス・ワークフロー適合性で比較したい方。',
@@ -1634,15 +1634,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursorは2026年、多くのプロ開発者にとって最も優れた総合型エージェントAIコーディングアシスタントであり、GitHub Copilotは既にGitHubやAzureに標準化しているチームにとって無難な既定選択肢、Clineは自前のAPIキーを使うかローカルモデルを動かせるなら最良の無料選択肢です。** Windsurfは2026年8月時点でCursor Proと同額（月20ドル、年初の月15ドルから値上げ）となり、価格面での優位性を失いました——特にCascadeエージェントの操作感を好む場合のみ選びましょう。既存エディタに追加したエクステンションではなく、エージェントモードを内蔵した一体型のローカルファーストIDEを求めるなら、Bodega One Codeは注目に値します。ただし依然としてオープンベータ段階で、Pro料金も未確定です。すべてのカテゴリで勝つツールはなく、宣伝文句ではなくワークフローに基づいて選んでください。',
+      '**Cursorは2026年、多くのプロ開発者にとって最も優れた総合型エージェントAIコーディングアシスタントであり、GitHub Copilotは既にGitHubやAzureに標準化しているチームにとって無難な既定選択肢、Clineは自前のAPIキーを使うかローカルモデルを動かせるなら最良の無料選択肢です。** WindsurfのPro（月20ドル、年初の月15ドルから値上げ）は現在、Cursor Plus（月8ドル、Grokモデルのみ）とCursor Premium（月30ドル、ClaudeとGPTをAPI定価で追加）の中間に位置するため、価格では決まらなくなりました——特にCascadeエージェントの操作感を好む場合のみ選びましょう。既存エディタに追加したエクステンションではなく、エージェントモードを内蔵した一体型のローカルファーストIDEを求めるなら、Bodega One Codeは注目に値します。ただし依然としてオープンベータ段階で、Pro料金も未確定です。すべてのカテゴリで勝つツールはなく、宣伝文句ではなくワークフローに基づいて選んでください。',
     quickAnswerTop: {
       ja: {
         question: '2026年、最もエージェントモードが優れたAIコーディングアシスタントはどれですか？',
         answer:
-          'Cursorは最も成熟したエージェントモード（Composer + Cloud Agents）を持ち、VS Codeフォーク内でGPT・Claude・Geminiモデルに対応していますが、月20ドルの基本料金に加えて使用量ベースのクレジット制のため月額費用が変動します。Windsurfの Cascade エージェントは同等の能力を持ち、現在はCursorと同じ月20ドルのProプランです。GitHub CopilotのコーディングエージェントはGitHubネイティブなワークフロー（Issue、PR、Actions）内で最も機能します。Clineは自前のモデルとAPIキー——0ドルのローカルモデルを含む——を使うためエージェントモードに上限がありませんが、ワークフローは自分で組み立てる必要があります。',
+          'Cursorは最も成熟したエージェントモード（Composer + Cloud Agents）を持ち、VS Codeフォーク内でGPT・Claude・Geminiモデルに対応していますが、2026年10月12日以降はPlus月8ドル、Premium月30ドル、Super月100ドル、Ultra月200ドルのプランとなり、ClaudeとGPTの利用はAPI定価で別途課金されるため月額費用が変動します。WindsurfのCascadeエージェントは同等の能力を持ち、Proプランは月20ドルです。GitHub CopilotのコーディングエージェントはGitHubネイティブなワークフロー（Issue、PR、Actions）内で最も機能します。Clineは自前のモデルとAPIキー——0ドルのローカルモデルを含む——を使うためエージェントモードに上限がありませんが、ワークフローは自分で組み立てる必要があります。',
         bullets: [
-          'Cursor：Composer + Cloud Agents、月20ドルProベース＋使用量ベースクレジット',
-          'Windsurf：Cascadeエージェント、Pro月20ドル（2026年3月に15ドルから値上げ）——Cursorと価格が同等',
+          'Cursor：Composer + Cloud Agents、月8ドルから（Plus、Grokのみ）。月30ドルのPremiumでClaudeとGPTをAPI定価で追加',
+          'Windsurf：Cascadeエージェント、Pro月20ドル（2026年3月に15ドルから値上げ）',
           'GitHub Copilot：GitHub Issue/PRに連動するコーディングエージェント、Pro月10ドル、Pro+月39ドル、Max月100ドル',
           'Cline：オープンソース拡張機能、それ自体は0ドル——コストは接続したLLM APIのみ、Ollama/LM Studioでローカルモデルなら0ドル',
           'Bodega One Code：エージェント内蔵のローカルファースト・デスクトップIDE、オープンベータ——Personalは永久無料、Proは未発表価格の買い切り',
@@ -1684,8 +1684,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '4製品とも複数ファイルの編集とコマンド実行を代行できます（エージェントモード）。本当の違いは価格、使えるAIモデル、コードが端末外に出るかどうかです。' },
         ],
         items: [
-          '**Cursorは最も成熟したエージェントモードと最大のモデル柔軟性を持つ**（GPT、Claude、Gemini）VS Codeフォークですが、月20ドルProベースに上乗せされる使用量ベースクレジットで月額費用が変動します。',
-          '**Windsurfは2026年に価格優位性を失いました。** Proプランは2026年3月に月15ドルから月20ドルへ値上げされ、Cursor Proと同額になりました。Cascadeエージェントの操作感を好むなら依然として本物の差別化要因です。',
+          '**Cursorは最も成熟したエージェントモードと最大のモデル柔軟性を持つ**（GPT、Claude、Gemini）VS Codeフォークですが、ClaudeとGPTの利用がプラン料金に上乗せしてAPI定価で課金される（Premiumは月30ドルから）ため、月額費用が変動します。',
+          '**Windsurfは2026年に価格優位性を失いました。** Proプランは2026年3月に月15ドルから月20ドルへ値上げされ、Cursor Plus（月8ドル）とPremium（月30ドル）の中間に位置することになりました。Cascadeエージェントの操作感を好むなら依然として本物の差別化要因です。',
           '**GitHub Copilotは2026年6月1日に使用量ベースのAIクレジット課金へ移行しました。** Proは月10ドル（AIクレジット15ドル分込み）、Pro+は月39ドル、新設のMaxは月100ドルです。既にGitHubまたはAzure DevOps内にいるチームの既定選択肢です。',
           '**Clineはそれ自体0ドルです**——VS Code/JetBrains向けオープンソース拡張機能です。使用したLLM APIトークン分（OpenAI、Anthropic、OpenRouterほか）のみ支払い、OllamaやLM Studio経由でローカルモデルを使えば費用ゼロです。',
           '**4社とも2026年8月時点で標準的な公開アフィリエイトプログラムはありません**——各社が実際に提供しているもの（紹介クレジット、テクノロジーパートナーシップ、あるいは何もない）は「アフィリエイトプログラムの状況」セクションを参照してください。',
@@ -1714,8 +1714,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'クイックファクト （検証済み）',
         content: 'cursor.com/pricing、windsurf.com（Cognitionによる買収後devin.ai/pricingへリダイレクト）、github.com/features/copilot/plans、cline.bot/pricing、bodegaone.ai/pricingで直接検証し、独立した価格追跡サイトと照合しました。開発ツールのサブスクリプション価格はプラン改定により変動します——契約前に各社サイトで最新料金を確認してください。価格はすべて米ドル建てで、これらのサブスクリプションに個別のJPY定価は公開されていません——決済時にローカル通貨が提示される場合がありますが、表示されているUSD料金がグローバル基準です。',
         items: [
-          '**Cursor：** 無料Hobbyプラン。Pro、Pro+、Ultraはすべて月20ドルの共通ベースで、含まれる使用量の倍率が異なります（Pro+は約3倍、Ultraは約20倍）。含まれる使用量を超えると従量課金が発生します。Teamsは1ユーザー月40ドルから。',
-          '**Windsurf：** 軽い日次/週次クォータ付き無料プラン。Pro月20ドル（2026年3月に15ドルから値上げ、Cursorと同額）。Max月200ドル。Teams 1ユーザー月40ドル。Enterpriseは個別見積もり。クレジットプール制は2026年3月に日次/週次クォータへ置き換えられました。',
+          '**Cursor：** 利用量が限定された無料プラン。2026年10月12日以降はPlus月8ドル（Grokモデルのみ）、Premium月30ドル（Plusの4倍の利用量。ClaudeとGPTとGeminiをAPI定価で追加）、Super月100ドル（15倍）、Ultra月200ドル（50倍）。Teamsは1席あたり月30ドル、100ドル、または200ドル。月20ドルのProプランはレガシープランで、新規顧客には閉じられています。',
+          '**Windsurf：** 軽い日次/週次クォータ付き無料プラン。Pro月20ドル（2026年3月に15ドルから値上げ）。Max月200ドル。Teams 1ユーザー月40ドル。Enterpriseは個別見積もり。クレジットプール制は2026年3月に日次/週次クォータへ置き換えられました。',
           '**GitHub Copilot：** 無料プラン（月2,000補完）。Pro月10ドル（AIクレジット15ドル分込み）。Pro+月39ドル（70ドル分込み）。Max月100ドル（200ドル分込み）。Business 1ユーザー月19ドル（AIクレジット1,900分）。Enterprise 1ユーザー月39ドル（AIクレジット3,900分）。2026年6月1日に使用量ベースAIクレジット課金へ移行。',
           '**Cline：** 拡張機能自体は無料、オープンソース、MITライセンス。実際のコストは接続したLLM API次第（OpenAI、Anthropic、Google、OpenRouter、AWS Bedrock、GCP Vertex、Groq、Cerebras、DeepSeekほか）、またはOllamaやLM Studio経由のローカルモデルなら0ドル——どちらもAPIキー不要です。',
           '**Bodega One Code：** Personalプランは永久無料（1台のマシン、非商用、ワークスペース1つ）。Proはサブスクリプションではなく買い切りで、商用利用権・2台目のマシン・無制限のワークスペースが追加されますが、正式リリース前の現時点で価格は「TBD（未定）」とされています。Enterpriseは個別見積もりです。オープンベータ期間中は、商用利用を含めアプリ全体が無料です。',
@@ -1727,9 +1727,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '編集部のおすすめ：Cursor',
         sponsoredSlot: true,
         content:
-          '**Cursorは、最も成熟したエージェントモードと最も幅広いモデル選択肢を求める大多数のプロ開発者にとっての選択肢です。** ComposerとCloud Agentsは、他の選択肢より手動での誘導を少なくして複数ファイル・複数ステップの変更を処理し、同じエディタ内でGPT、Claude、Geminiモデルを切り替えられます。トレードオフはコストの予測可能性です——月20ドルProベースは一定量の使用をカバーしますが、負荷の高いエージェントセッションは追加の従量課金を発生させます。GitHubネイティブなワークフロー統合が純粋なエージェント能力より重要ならGitHub Copilotを、0ドルが絶対条件ならローカルモデル付きのClineを選んでください。',
+          '**Cursorは、最も成熟したエージェントモードと最も幅広いモデル選択肢を求める大多数のプロ開発者にとっての選択肢です。** ComposerとCloud Agentsは、他の選択肢より手動での誘導を少なくして複数ファイル・複数ステップの変更を処理し、同じエディタ内でGPT、Claude、Geminiモデルを切り替えられます。トレードオフはコストの予測可能性です——有料プランは週ごとの利用枠を共有し、ClaudeとGPTの利用は前払いクレジットからAPI定価で別途課金されます。GitHubネイティブなワークフロー統合が純粋なエージェント能力より重要ならGitHub Copilotを、0ドルが絶対条件ならローカルモデル付きのClineを選んでください。',
         callouts: [
-          { type: 'warning', text: 'Cursorの利用コストにご注意ください。月20ドルのPro料金はあくまでサブスクリプション価格であり、必ずしも月間の上限支出ではありません——含まれる使用量を消費すると、負荷の高いエージェントセッションは追加の従量課金を発生させる可能性があります。軽い利用であれば月20ドル以内に収まることが多い一方、負荷の高いエージェント利用者やチームは超過分を見込んでおくべきです。' },
+          { type: 'warning', text: 'Cursorの利用コストにご注意ください。プラン料金は月間の上限支出ではありません——Premium以上ではClaudeとGPTの利用が前払いクレジットからAPI定価で課金されるため、負荷の高いエージェントセッションでは月30ドルを大きく超える可能性があります。Plus（月8ドル）はGrokモデルのみのため、この心配はありません。' },
           { type: 'note', text: 'PromptQuorumはCursor、Windsurf、GitHub Copilot、Clineのいずれのアフィリエイトプログラムにも登録していません。本ページのリンクはアフィリエイト関係のない単純な製品リンクであり、報酬は発生しません——各社が実際に提供しているものについては下記「アフィリエイトプログラムの状況」セクションを参照してください。' },
         ],
         affiliateLinks: [
@@ -1746,7 +1746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'ツール': '[Cursor](https://cursor.com)',
             '最適な用途': 'エージェント型の複数ファイル編集',
-            '価格': '無料Hobby / 月20ドル+ Pro〜Ultra',
+            '価格': '無料 / Plus 月8ドル / Premium 月30ドル / Ultra 月200ドルまで',
             'モデルアクセス': 'GPT／Claude／Gemini（複数モデル）',
             'エージェントモード': 'Composer + Cloud Agents',
             'IDE': 'Cursor（VS Codeフォーク）',
@@ -1828,7 +1828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor：エージェント型の複数ファイル作業に最適',
         content: [
           '**Cursorはエージェントモードを中心に構築されたVS Codeフォークで、複数ファイル・複数ステップの変更向けの目玉機能としてComposerとCloud Agentsを備えています。** 同じエディタ内でGPT、Claude、Geminiモデルに対応しており、単一ベンダーのモデルに縛られません。',
-          '2026年8月時点で、CursorのHobbyプランは無料ですがエージェントリクエストに制限があります。Pro、Pro+、Ultraはすべて月20ドルの基本サブスクリプションを共有し、含まれる使用量の倍率で差別化されています（Pro+はProのエージェント上限の約3倍、Ultraは約20倍）——含まれる使用量を消費すると、追加分は都度課金されます。Teams料金は標準プランで1ユーザー月40ドルからで、Premiumプランは標準のエージェント上限の5倍です。Enterpriseは個別見積もりです。',
+          'Cursorには利用量が限定された無料プランがあります。2026年10月12日以降の有料プランは、Plus（月8ドル、Grokモデルのみ）、Premium（30ドル、Plusの4倍の利用量）、Super（100ドル、15倍）、Ultra（200ドル、50倍）で、CursorモデルとGrokモデルで週ごとの利用枠を共有します。Claude、GPT、GeminiはPremium以上で前払いクレジットからAPI定価で課金されます。Teamsは1席あたり月30ドル、100ドル、または200ドルです。月20ドルのProプランはレガシープランで、新規顧客には閉じられています。Enterpriseは個別見積もりです。',
           'Cursorには限定展開の紹介プログラムがあります（一般向け公開アフィリエイトプログラムではありません）：対象となる紹介者は、有料顧客を紹介するごとに25ドルの利用クレジットを受け取り（1サイクルあたり最大10件）、紹介された利用者は初月50%割引を得ます。これは公開かつ誰でも利用できる成果報酬プログラムではありません——「アフィリエイトプログラムの状況」セクションを参照してください。',
         ],
       },
@@ -1836,7 +1836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'windsurf',
         title: 'Windsurf：Cascadeエージェント、現在はCognition傘下',
         content: [
-          '**WindsurfはCascadeエージェントの操作フローを採用しており、2026年8月時点でCursor Proと同じ価格です**——Proプランは2026年3月に月15ドルから月20ドルへ値上げされ、以前は明確だった差別化要因（低価格）を失いました。',
+          '**WindsurfはCascadeエージェントの操作フローを採用しており、Proプラン（月20ドル）はCursor Plus（8ドル）とCursor Premium（30ドル）の中間に位置します**——2026年3月に月15ドルから月20ドルへ値上げされました。',
           'Windsurfの無料プランには無制限のTab自動補完に加え、Cascadeエージェント利用のための軽い日次/週次クォータが含まれます——上限に達するまで、活発なエージェント型コーディングでおおよそ2〜3日分をカバーします。2026年3月、Windsurfは旧来の月次クレジットプール制（Proで月500クレジット）を、自動更新の日次・週次クォータに置き換えました。Maxは月200ドル、Teamsは1ユーザー月40ドル、Enterpriseは個別見積もりです。',
           'Windsurfは現在、自律型コーディングエージェントDevinを手がけるCognitionの傘下にあり、同社がWindsurfのチーム・製品・ブランドを買収しました。windsurf.comは現在devin.aiの価格ページへリダイレクトされており、Devinは完全にWindsurfエディタを置き換えるのではなく、直接統合される形になっています。',
           'Windsurfの紹介プログラムは、紹介リンク経由の新規登録者に250の無料フレックスクレジットを付与します——これは紹介インセンティブであり、成果報酬型のアフィリエイトプログラムではありません。',
@@ -1921,9 +1921,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'CursorはGitHub Copilotより優れていますか？', a: 'エージェント型の複数ファイル作業とモデルの柔軟性では、一般にCursorの方が優れた選択肢です——GPT、Claude、Geminiに対応し、Composer/Cloud Agentsは手動誘導を少なくして大規模なリファクタリングを処理します。GitHub Copilotは、既にGitHub Issue、プルリクエスト、Azure DevOpsに標準化しているチームには特に良い選択肢です。コーディングエージェントが独立したエディタではなくそのワークフローに対して直接動作するためです。' },
-          { q: 'エージェントモード搭載の無料AIコーディングアシスタントはありますか？', a: 'あります。Clineは完全無料・オープンソースでサブスクリプション階層は一切なく、使用したLLM APIトークン分のみを支払うか、OllamaやLM Studio経由でローカルモデルを接続すれば費用ゼロです。CursorとGitHub Copilotにはどちらも限定的な無料プラン（CursorのHobbyプランと、月2,000補完のCopilot無料プラン）がありますが、どちらもエージェントモードの利用には上限があります。' },
-          { q: '2026年のWindsurfとCursorの実質的な違いは何ですか？', a: '2026年8月時点で、両者のProプランは月20ドルで同額です——Windsurfは2026年3月に15ドルから20ドルへ値上げし、以前の主な優位性を失いました。残る違いはワークフローです：WindsurfはCascadeエージェントの操作フロー、CursorはComposerとCloud Agentsを使います。価格ではなく、両方を試した上で好みのエージェント操作感で選んでください。' },
-          { q: 'GitHub CopilotはClaudeやGeminiモデルに対応していますか？', a: 'GitHub Copilot Pro+（月39ドル）とMax（月100ドル）はClaude Opusを含むプレミアムモデルへのアクセスを含みます。基本のFreeとPro（月10ドル）はモデル選択がより限定的です。これは、Proユーザーが直接GPT、Claude、Geminiモデルを切り替えられるCursorより限定的です。' },
+          { q: 'エージェントモード搭載の無料AIコーディングアシスタントはありますか？', a: 'あります。Clineは完全無料・オープンソースでサブスクリプション階層は一切なく、使用したLLM APIトークン分のみを支払うか、OllamaやLM Studio経由でローカルモデルを接続すれば費用ゼロです。CursorとGitHub Copilotにはどちらも限定的な無料プラン（Cursorの無料プランと、月2,000補完のCopilot無料プラン）がありますが、どちらもエージェントモードの利用には上限があります。' },
+          { q: '2026年のWindsurfとCursorの実質的な違いは何ですか？', a: 'Windsurf Proは月20ドルです（2026年3月に15ドルから値上げ）。Cursorは現在、Plusが月8ドル（Grokモデルのみ）、Premiumが30ドル、Superが100ドル、Ultraが200ドルで、ClaudeとGPTはPremium以上でAPI定価で課金されます。残る違いはワークフローです：WindsurfはCascadeエージェントの操作フロー、CursorはComposerとCloud Agentsを使います。価格ではなく、両方を試した上で好みのエージェント操作感で選んでください。' },
+          { q: 'GitHub CopilotはClaudeやGeminiモデルに対応していますか？', a: 'GitHub Copilot Pro+（月39ドル）とMax（月100ドル）はClaude Opusを含むプレミアムモデルへのアクセスを含みます。基本のFreeとPro（月10ドル）はモデル選択がより限定的です。これは、Premium以上のユーザーが直接GPT、Claude、Geminiモデルを切り替えられる（API定価で課金）Cursorより限定的です。' },
           { q: 'Clineをローカルモデルで設定するにはどうすればよいですか？', a: 'OllamaまたはLM Studioをインストールし、コーディングモデルを取得します（Clineの公式ドキュメントはQwen2.5 Coder、Llama 3.3、DeepSeek Coder V3、Codestralを推奨）。次にCline側でOllamaまたはLM StudioをAPIプロバイダーとして選択します——Ollamaの既定エンドポイントは http://localhost:11434、LM StudioはポートNo.1234でOpenAI互換APIを提供します。どちらもAPIキーは不要です。最低32Kトークンのコンテキストウィンドウを使用してください。負荷の高いエージェントセッションでは64Kが必要になることがよくあります。' },
           { q: 'これらのツールを複数同時に使えますか？', a: 'はい、多くの開発者がそうしています——例えば、日常的で機密度の低い編集にはローカルモデル付きのClineを使い、より強力なクラウドモデルが役立つ難しい問題にはCursorやGitHub Copilotへ切り替える、といった具合です。同じVS Codeインストール内で複数の拡張機能を実行すること自体に技術的な競合はありませんが、通常セッションごとにメインエージェントとして稼働するのは1つだけです。' },
           { q: '予算が限られた個人開発者に最適なAIコーディングアシスタントは何ですか？', a: 'ローカルモデル（OllamaまたはLM Studio）と組み合わせたClineなら総コストは0ドルです。サブスクリプションなしでより強力なクラウドモデルにたまにアクセスしたい場合、トークン従量課金のAPIキー（OpenAI、Anthropic、OpenRouter）を使ったClineなら、固定月額料金ではなく実際の使用量に比例したコストに保てます。' },
@@ -1937,7 +1937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '出典',
         links: [
-          { url: 'https://cursor.com/pricing', title: 'Cursor料金', description: 'Hobby、Pro、Pro+、Ultra、Teams、Enterprise各プランを掲載するCursor公式価格ページ。' },
+          { url: 'https://cursor.com/pricing', title: 'Cursor料金', description: '無料、Plus、Premium、Super、Ultra、Teams、Enterprise各プランを掲載するCursor公式価格ページ。' },
           { url: 'https://cursor.com/help/account-and-billing/referral-program', title: 'Cursor紹介プログラム', description: 'Cursorの限定展開紹介プログラムに関する公式ドキュメント。' },
           { url: 'https://devin.ai/pricing', title: 'Windsurf/Devin料金（windsurf.comからのリダイレクト先）', description: 'Cognitionによる買収後、devin.ai配下でホストされているWindsurfの価格ページ。' },
           { url: 'https://github.com/features/copilot/plans', title: 'GitHub Copilotプラン', description: 'Free、Pro、Pro+、Max、Business、Enterprise各プランを掲載するGitHub Copilot公式料金。' },
@@ -1990,7 +1990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mainEntity': [
         { '@type': 'Question', 'name': 'CursorはGitHub Copilotより優れていますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'エージェント型の複数ファイル作業とモデルの柔軟性では、一般にCursorの方が優れています。GitHub Copilotは、既にGitHubとAzure DevOpsに標準化しているチームに特に適しています。' } },
         { '@type': 'Question', 'name': 'エージェントモード搭載の無料AIコーディングアシスタントはありますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'あります。Clineは完全無料・オープンソースでサブスクリプションはなく、使用したLLM APIトークン分のみ支払うか、Ollama/LM Studio経由のローカルモデルなら費用ゼロです。' } },
-        { '@type': 'Question', 'name': '2026年のWindsurfとCursorの実質的な違いは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '2026年8月時点で両者のProプランは月20ドルで同額です。残る違いはワークフローで、WindsurfはCascade、CursorはComposerとCloud Agentsを使います。' } },
+        { '@type': 'Question', 'name': '2026年のWindsurfとCursorの実質的な違いは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Windsurf Proは月20ドルで、Cursorのプランは月8ドル（Plus）から月200ドル（Ultra）まであり、ClaudeとGPTはPremium以上でAPI定価で課金されます。残る違いはワークフローで、WindsurfはCascade、CursorはComposerとCloud Agentsを使います。' } },
         { '@type': 'Question', 'name': 'Bodega One Codeとは何で、CursorやClineとどう比較されますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Codeは、現在オープンベータ提供中のローカルファーストAI IDEで、Monacoベースのエディタ、AIチャット、自律型コーディングエージェントを、拡張機能としてではなく1つのアプリに統合しています。Personalプランは1台のマシンでの非商用利用なら永久無料で、Proは正確な価格がまだ発表されていない買い切りです。' } },
       ],
     },
@@ -2007,7 +2007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Cursor对比Windsurf对比GitHub Copilot对比Cline：智能体模式、定价与模型访问权限比较。2026年8月定价已在各官网核实。',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-03',
+    dateModified: '2026-10-17',
     readTime: '阅读约13分钟',
     educationalLevel: 'Intermediate',
     audience: '正在选择带智能体模式的AI编程助手、希望比较Cursor、Windsurf、GitHub Copilot和Cline在价格、模型访问权限和工作流适配性上差异的开发者。',
@@ -2023,15 +2023,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**对大多数专业开发者而言，Cursor是2026年综合最佳的智能体式AI编程助手；对已在GitHub或Azure上标准化的团队，GitHub Copilot是更稳妥的默认选择；如果你自带API密钥或运行本地模型，Cline是最佳免费选项。**Windsurf目前定价与Cursor Pro相同（自2026年8月起为20美元/月，此前为15美元），已不再具备价格优势——只有在你特别偏好其Cascade智能体流程时才选它。如果你想要一款内置智能体模式的一体化本地优先IDE，而不是叠加在现有编辑器上的扩展，Bodega One Code值得关注，但它仍处于公开测试阶段，Pro定价尚未确定。没有一款工具能在所有类别都胜出；请根据工作流而非营销说辞来选择。',
+      '**对大多数专业开发者而言，Cursor是2026年综合最佳的智能体式AI编程助手；对已在GitHub或Azure上标准化的团队，GitHub Copilot是更稳妥的默认选择；如果你自带API密钥或运行本地模型，Cline是最佳免费选项。**Windsurf Pro（20美元/月，此前为15美元）目前介于Cursor Plus（8美元/月，仅限Grok模型）和Cursor Premium（30美元/月，按API标价加入Claude和GPT）之间，价格已不再是决定因素——只有在你特别偏好其Cascade智能体流程时才选它。如果你想要一款内置智能体模式的一体化本地优先IDE，而不是叠加在现有编辑器上的扩展，Bodega One Code值得关注，但它仍处于公开测试阶段，Pro定价尚未确定。没有一款工具能在所有类别都胜出；请根据工作流而非营销说辞来选择。',
     quickAnswerTop: {
       zh: {
         question: '2026年哪款AI编程助手的智能体模式最佳？',
         answer:
-          'Cursor拥有最成熟的智能体模式（Composer加Cloud Agents），并在一个VS Code分支内支持GPT、Claude和Gemini模型，但在20美元/月基础费用之上的按量计费信用点系统使月度费用具有波动性。Windsurf的Cascade智能体能力相当，目前定价与Cursor相同的20美元/月Pro档位。GitHub Copilot的编程智能体在GitHub原生工作流（Issue、PR、Actions）内表现最佳。Cline的智能体模式没有上限，因为你自带模型和API密钥——包括0美元的本地模型——但工作流需要你自行搭建。',
+          'Cursor拥有最成熟的智能体模式（Composer加Cloud Agents），并在一个VS Code分支内支持GPT、Claude和Gemini模型，但自2026年10月12日起其套餐为每月Plus 8美元、Premium 30美元、Super 100美元和Ultra 200美元，Claude和GPT的用量另按API标价计费，使月度费用具有波动性。Windsurf的Cascade智能体能力相当，Pro为20美元/月。GitHub Copilot的编程智能体在GitHub原生工作流（Issue、PR、Actions）内表现最佳。Cline的智能体模式没有上限，因为你自带模型和API密钥——包括0美元的本地模型——但工作流需要你自行搭建。',
         bullets: [
-          'Cursor：Composer + Cloud Agents，20美元/月Pro基础费加按量计费信用点',
-          'Windsurf：Cascade智能体，Pro 20美元/月（2026年3月从15美元上调）——与Cursor价格持平',
+          'Cursor：Composer + Cloud Agents，套餐8美元/月起（Plus，仅限Grok）；Premium 30美元/月按API标价加入Claude和GPT',
+          'Windsurf：Cascade智能体，Pro 20美元/月（2026年3月从15美元上调）',
           'GitHub Copilot：编程智能体与GitHub Issue/PR绑定，Pro 10美元/月，Pro+ 39美元/月，Max 100美元/月',
           'Cline：开源扩展，本身0美元——成本仅取决于所连接的LLM API，或通过Ollama/LM Studio使用本地模型时为0美元',
           'Bodega One Code：内置智能体的本地优先桌面IDE，公开测试阶段——Personal永久免费，Pro为一次性购买且价格尚未公布',
@@ -2060,7 +2060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '相关阅读', anchor: '#related-reading' },
     ],
     affiliateLinks: [
-      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: '免费–20+美元/月', label: '免费开始使用Cursor' },
+      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: '免费–200美元/月', label: '免费开始使用Cursor' },
       { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: '免费–100美元/月', label: '免费开始使用GitHub Copilot' },
       { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0美元（开源）', label: '免费获取Cline' },
     ],
@@ -2073,8 +2073,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '这四款工具都能代替你编辑多个文件并执行命令（智能体模式）。真正的差异在于价格、可使用的AI模型，以及你的代码是否必须离开你的电脑。' },
         ],
         items: [
-          '**Cursor拥有最成熟的智能体模式和最大的模型灵活性**（GPT、Claude、Gemini），运行于一个VS Code分支内，但20美元/月Pro基础费之上的按量计费信用点使月度成本具有波动性。',
-          '**Windsurf在2026年失去了价格优势。**其Pro档位于2026年3月从15美元/月上调至20美元/月——与Cursor Pro同价。如果你偏好其Cascade智能体流程的操作体验，它仍是真正的差异化因素。',
+          '**Cursor拥有最成熟的智能体模式和最大的模型灵活性**（GPT、Claude、Gemini），运行于一个VS Code分支内，但Claude和GPT的用量在套餐之外另按API标价计费（Premium起价30美元/月），使月度成本具有波动性。',
+          '**Windsurf在2026年失去了价格优势。**其Pro档位于2026年3月从15美元/月上调至20美元/月——现介于Cursor Plus（8美元/月）和Premium（30美元/月）之间。如果你偏好其Cascade智能体流程的操作体验，它仍是真正的差异化因素。',
           '**GitHub Copilot于2026年6月1日转为按量计费的AI信用点计费模式。**Pro为10美元/月（含15美元AI信用点）；Pro+为39美元/月；新增的Max档位为100美元/月。对已在GitHub或Azure DevOps内的团队而言，它是默认选择。',
           '**Cline本身成本为0美元**——它是VS Code/JetBrains的开源扩展。你只需为实际使用的LLM API令牌付费（OpenAI、Anthropic、OpenRouter等），如果通过Ollama或LM Studio连接本地模型则完全免费。',
           '**截至2026年8月，四家厂商均无标准的、可公开核实的联盟计划**——请参阅"联盟计划现状"部分，了解各厂商实际提供的内容（推荐信用点、技术合作伙伴关系，或什么都没有）。',
@@ -2092,7 +2092,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '⚡ **Windsurf——最佳替代方案。**如果你特别偏好Cascade智能体流程。',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: '免费–20+美元/月', label: '试用Cursor' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: '免费–200美元/月', label: '试用Cursor' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: '免费–100美元/月', label: '试用GitHub Copilot' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0美元（开源）', label: '安装Cline' },
           { url: 'https://windsurf.com', productName: 'Windsurf', productCategory: 'dev-tool', priceRange: '免费–200美元/月', label: '试用Windsurf' },
@@ -2103,8 +2103,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '快速事实',
         content: '直接在cursor.com/pricing、windsurf.com（Cognition收购后重定向至devin.ai/pricing）、github.com/features/copilot/plans、cline.bot/pricing和bodegaone.ai/pricing上核实，并与独立价格追踪网站交叉核对。开发工具的订阅定价会随套餐调整而变化——订阅前请在厂商官网确认当前价格。以上均为美元定价；这些订阅未公布单独的人民币零售价——结账时可能显示本地货币选项，但所示美元价格为全球统一标准。',
         items: [
-          '**Cursor：**免费Hobby档位；Pro、Pro+和Ultra共享20美元/月基础费，包含使用量倍数递增（Pro+约3倍，Ultra约20倍），超出包含用量后按需计费；Teams起价40美元/用户/月。',
-          '**Windsurf：**免费档位含较少的每日/每周额度；Pro 20美元/月（2026年3月从15美元上调，与Cursor持平）；Max 200美元/月；Teams 40美元/用户/月；Enterprise定制报价。信用点池系统已于2026年3月替换为每日/每周额度制。',
+          '**Cursor：**用量有限的免费档位；自2026年10月12日起：Plus 8美元/月（仅限Grok模型），Premium 30美元（Plus的4倍用量，按API标价加入Claude、GPT和Gemini），Super 100美元（15倍），Ultra 200美元（50倍）；Teams每席位每月30美元、100美元或200美元。每月20美元的Pro套餐为遗留套餐，不再向新用户开放。',
+          '**Windsurf：**免费档位含较少的每日/每周额度；Pro 20美元/月（2026年3月从15美元上调）；Max 200美元/月；Teams 40美元/用户/月；Enterprise定制报价。信用点池系统已于2026年3月替换为每日/每周额度制。',
           '**GitHub Copilot：**免费档位（每月2,000次补全）；Pro 10美元/月（含15美元AI信用点）；Pro+ 39美元/月（含70美元）；Max 100美元/月（含200美元）；Business 19美元/用户/月（1,900 AI信用点）；Enterprise 39美元/用户/月（3,900 AI信用点）。已于2026年6月1日转为按量计费的AI信用点模式。',
           '**Cline：**扩展本身免费、开源，MIT许可。实际成本取决于所连接的LLM API（OpenAI、Anthropic、Google、OpenRouter、AWS Bedrock、GCP Vertex、Groq、Cerebras、DeepSeek等），若通过Ollama或LM Studio使用本地模型则为0美元——两者均无需API密钥。',
           '**Bodega One Code：**Personal档位永久免费（一台设备、非商业用途、单一工作区）；Pro为一次性购买——而非订阅——增加商业使用权、第二台设备及无限工作区，但厂商在正式发布前将其定价列为"待定"；Enterprise为定制报价。在公开测试期间，包括商业用途在内，整个应用均免费。',
@@ -2116,13 +2116,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '编辑精选：Cursor',
         sponsoredSlot: true,
         content:
-          '**对大多数希望获得最成熟智能体模式和最广泛模型选择的专业开发者而言，Cursor是首选。**Composer和Cloud Agents处理多文件、多步骤的更改所需的手动干预比其他选项更少，你还可以在同一编辑器内切换GPT、Claude和Gemini模型。代价在于成本可预测性：20美元/月Pro基础费涵盖一定用量，高强度的智能体会话可能触发额外的按量计费。如果GitHub原生工作流集成比纯智能体能力更重要，请改选GitHub Copilot；如果0美元是硬性要求，请选择搭配本地模型的Cline。',
+          '**对大多数希望获得最成熟智能体模式和最广泛模型选择的专业开发者而言，Cursor是首选。**Composer和Cloud Agents处理多文件、多步骤的更改所需的手动干预比其他选项更少，你还可以在同一编辑器内切换GPT、Claude和Gemini模型。代价在于成本可预测性：付费套餐共享每周用量额度，Claude和GPT的用量另从预付额度中按API标价计费。如果GitHub原生工作流集成比纯智能体能力更重要，请改选GitHub Copilot；如果0美元是硬性要求，请选择搭配本地模型的Cline。',
         callouts: [
-          { type: 'warning', text: '请留意Cursor的使用成本。20美元/月的Pro价格只是订阅费用，不一定是你的月度支出上限——包含用量耗尽后，高强度的智能体会话可能触发额外的按量计费。轻度用户通常能控制在20美元/月以内；高强度智能体用户和团队应预留超额预算。' },
+          { type: 'warning', text: '请留意Cursor的使用成本。套餐价格并非你的月度支出上限——Premium及以上的Claude和GPT用量从预付额度中按API标价计费，因此高强度的智能体会话花费可能远超30美元/月。Plus（8美元/月）仅限Grok模型，可避免这种情况。' },
           { type: 'note', text: 'PromptQuorum未加入Cursor、Windsurf、GitHub Copilot或Cline的任何联盟计划。本页链接均为无联盟关系、不产生佣金的普通产品链接——各厂商实际提供的内容请参阅下方"联盟计划现状"部分。' },
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: '免费–20+美元/月', label: '免费开始使用Cursor' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: '免费–200美元/月', label: '免费开始使用Cursor' },
         ],
       },
       comparisonTable: {
@@ -2135,7 +2135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '工具': '[Cursor](https://cursor.com)',
             '最适合': '智能体式多文件编辑/打磨',
-            '定价（2026年8月）': '免费Hobby / 20+美元/月 Pro–Ultra',
+            '定价（2026年8月）': '免费 / Plus 8美元 / Premium 30美元 / Ultra 最高200美元',
             '模型访问权限': 'GPT / Claude / Gemini（多模型）',
             '智能体模式': 'Composer + Cloud Agents',
             'IDE': 'Cursor（VS Code分支）',
@@ -2217,7 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor：最适合智能体式多文件工作',
         content: [
           '**Cursor是一个围绕智能体模式构建的VS Code分支，其Composer和Cloud Agents是面向多文件、多步骤更改的旗舰功能。**它在同一编辑器内支持GPT、Claude和Gemini模型，因此你不会被锁定在单一厂商的模型上。',
-          '截至2026年8月，Cursor的Hobby档位免费，但智能体请求次数有限。Pro、Pro+和Ultra均共享20美元/月的基础订阅，通过包含用量倍数区分（Pro+约为Pro智能体额度的3倍，Ultra约为20倍）——包含用量耗尽后，额外用量按需计费。Teams定价从Standard档位40美元/用户/月起，Premium档位为Standard智能体额度的5倍。Enterprise为定制报价。',
+          'Cursor提供用量有限的免费档位。自2026年10月12日起，付费套餐为Plus（8美元/月，仅限Grok模型）、Premium（30美元，Plus的4倍用量）、Super（100美元，15倍）和Ultra（200美元，50倍），在Cursor和Grok模型之间共享每周用量额度。Premium及以上的Claude、GPT和Gemini从预付额度中按API标价计费。Teams席位每月30美元、100美元或200美元。每月20美元的Pro套餐为遗留套餐，不再向新用户开放。Enterprise为定制报价。',
           'Cursor有一个有限推广的推荐计划（并非面向公众的一般联盟计划）：符合条件的推荐人每推荐一名付费客户可获得25美元使用信用点（每个周期最多10次奖励），被推荐用户首月可获50%折扣。这并非公开、普遍可用的佣金计划——请参阅"联盟计划现状"部分。',
         ],
       },
@@ -2225,7 +2225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'windsurf',
         title: 'Windsurf：Cascade智能体，现隶属于Cognition',
         content: [
-          '**Windsurf运行Cascade智能体流程，截至2026年8月，其定价与Cursor Pro相同**——其Pro档位于2026年3月从15美元/月上调至20美元/月，结束了此前最明显的差异化优势（更低价格）。',
+          '**Windsurf运行Cascade智能体流程，其Pro档位（20美元/月）现介于Cursor Plus（8美元）和Cursor Premium（30美元）之间**——于2026年3月从15美元/月上调至20美元/月。',
           'Windsurf的免费档位包含无限量Tab自动补全，外加用于Cascade智能体的较少每日/每周额度——足以支撑大约两到三天的活跃智能体式编码，之后即达上限。2026年3月，Windsurf以自动刷新的每日和每周额度取代了旧的月度信用点池系统（Pro档位原为每月500信用点）。Max为200美元/月；Teams为40美元/用户/月；Enterprise为定制报价。',
           'Windsurf目前隶属于Cognition——自主编程智能体Devin背后的公司，此前Cognition收购了Windsurf的团队、产品和品牌。windsurf.com目前重定向至devin.ai的定价页面，Devin正被直接整合进Windsurf编辑器，而非完全取代它。',
           'Windsurf的推荐计划通过推荐链接为新注册用户提供250个免费flex信用点——这是一种推荐奖励，而非佣金制联盟计划。',
@@ -2286,7 +2286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '仍拿不定主意？先试试Cursor和Cline——两者分别覆盖了付费智能体和免费本地这两个极端，大多数开发者最终会定在其中一款。',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: '免费–20+美元/月', label: '免费试用Cursor' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: '免费–200美元/月', label: '免费试用Cursor' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: '免费–100美元/月', label: '试用GitHub Copilot' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0美元（开源）', label: '安装Cline' },
         ],
@@ -2310,9 +2310,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: 'Cursor比GitHub Copilot更好吗？', a: '在智能体式多文件工作和模型灵活性方面，Cursor通常是更有力的选择——它支持GPT、Claude和Gemini，其Composer/Cloud Agents以更少的手动干预处理更大规模的重构。对于已在GitHub Issue、拉取请求和Azure DevOps上标准化的团队，GitHub Copilot是更合适的选择，因为其编程智能体直接对接该工作流，而非作为独立编辑器运行。' },
-          { q: '有带智能体模式的免费AI编程助手吗？', a: '有。Cline完全免费且开源，没有任何订阅档位——你只需为实际使用的LLM API令牌付费，或通过Ollama或LM Studio连接本地模型即可完全免费。Cursor和GitHub Copilot都有有限的免费档位（Cursor的Hobby档位和Copilot每月2,000次补全的免费档位），但两者的智能体模式用量均设有上限。' },
-          { q: '2026年Windsurf和Cursor之间的实际差异是什么？', a: '截至2026年8月，两者的Pro档位定价相同，均为20美元/月——Windsurf于2026年3月从15美元上调至20美元，抹平了此前的主要优势。剩下的差异在于工作流：Windsurf使用Cascade智能体流程，Cursor使用Composer和Cloud Agents。请在两者都试用后根据你偏好的智能体操作体验来选择，而非价格。' },
-          { q: 'GitHub Copilot支持Claude或Gemini模型吗？', a: 'GitHub Copilot Pro+（39美元/月）和Max（100美元/月）包含对Claude Opus等高级模型的访问权限。基础的Free和Pro档位（10美元/月）在模型选择上更为有限。这比Cursor更受限，Cursor的Pro档位用户可以直接在GPT、Claude和Gemini模型之间切换。' },
+          { q: '有带智能体模式的免费AI编程助手吗？', a: '有。Cline完全免费且开源，没有任何订阅档位——你只需为实际使用的LLM API令牌付费，或通过Ollama或LM Studio连接本地模型即可完全免费。Cursor和GitHub Copilot都有有限的免费档位（Cursor的免费档位和Copilot每月2,000次补全的免费档位），但两者的智能体模式用量均设有上限。' },
+          { q: '2026年Windsurf和Cursor之间的实际差异是什么？', a: 'Windsurf Pro为20美元/月（2026年3月从15美元上调）。Cursor现有Plus 8美元/月（仅限Grok模型）、Premium 30美元、Super 100美元和Ultra 200美元，Premium及以上的Claude和GPT按API标价计费。剩下的差异在于工作流：Windsurf使用Cascade智能体流程，Cursor使用Composer和Cloud Agents。请在两者都试用后根据你偏好的智能体操作体验来选择，而非价格。' },
+          { q: 'GitHub Copilot支持Claude或Gemini模型吗？', a: 'GitHub Copilot Pro+（39美元/月）和Max（100美元/月）包含对Claude Opus等高级模型的访问权限。基础的Free和Pro档位（10美元/月）在模型选择上更为有限。这比Cursor更受限，Cursor的Premium及以上用户可以直接在GPT、Claude和Gemini模型之间切换（按API标价计费）。' },
           { q: '如何为Cline配置本地模型？', a: '安装Ollama或LM Studio，拉取一个编程模型（Cline文档推荐Qwen2.5 Coder、Llama 3.3、DeepSeek Coder V3或Codestral），然后在Cline中选择Ollama或LM Studio作为API服务商——Ollama的默认端点是http://localhost:11434，LM Studio在1234端口提供OpenAI兼容API。两者均无需API密钥。请使用至少32K令牌的上下文窗口；强度更高的智能体会话通常需要64K。' },
           { q: '我可以同时使用多款这类工具吗？', a: '可以，许多开发者都这样做——例如，对于日常、低敏感度的编辑使用搭配本地模型的Cline，而对于需要更强云端模型帮助的难题则切换到Cursor或GitHub Copilot。在同一VS Code安装中运行多个扩展没有技术冲突，不过通常每个会话中只有一款作为主智能体处于激活状态。' },
           { q: '预算有限的独立开发者最适合哪款AI编程助手？', a: 'Cline搭配本地模型（Ollama或LM Studio）总成本为0美元。如果你希望在没有订阅的情况下偶尔访问更强的云端模型，使用按令牌付费的API密钥（OpenAI、Anthropic或OpenRouter）的Cline能让成本与实际用量成正比，而非固定月费。' },
@@ -2326,7 +2326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '资料来源',
         links: [
-          { url: 'https://cursor.com/pricing', title: 'Cursor定价', description: 'Cursor官方定价页面——Hobby、Pro、Pro+、Ultra、Teams和Enterprise档位。' },
+          { url: 'https://cursor.com/pricing', title: 'Cursor定价', description: 'Cursor官方定价页面——免费、Plus、Premium、Super、Ultra、Teams和Enterprise套餐。' },
           { url: 'https://cursor.com/help/account-and-billing/referral-program', title: 'Cursor推荐计划', description: 'Cursor有限推广推荐计划的官方文档。' },
           { url: 'https://devin.ai/pricing', title: 'Windsurf/Devin定价（windsurf.com重定向）', description: 'Cognition收购后，Windsurf定价页面现托管于devin.ai。' },
           { url: 'https://github.com/features/copilot/plans', title: 'GitHub Copilot档位', description: 'GitHub Copilot官方定价——Free、Pro、Pro+、Max、Business和Enterprise档位。' },
@@ -2379,7 +2379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mainEntity': [
         { '@type': 'Question', 'name': 'Cursor比GitHub Copilot更好吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在智能体式多文件工作和模型灵活性方面，Cursor通常更有力。对已在GitHub和Azure DevOps上标准化的团队，GitHub Copilot是更合适的选择。' } },
         { '@type': 'Question', 'name': '有带智能体模式的免费AI编程助手吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '有。Cline完全免费且开源，没有订阅档位——只需为使用的LLM API令牌付费，或通过Ollama/LM Studio连接本地模型即可免费。' } },
-        { '@type': 'Question', 'name': '2026年Windsurf和Cursor之间的实际差异是什么？', 'acceptedAnswer': { '@type': 'Answer', 'text': '截至2026年8月，两者的Pro档位均为20美元/月，价格相同。剩下的差异在于工作流：Windsurf使用Cascade，Cursor使用Composer和Cloud Agents。' } },
+        { '@type': 'Question', 'name': '2026年Windsurf和Cursor之间的实际差异是什么？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Windsurf Pro为20美元/月；Cursor套餐从8美元/月（Plus）到200美元/月（Ultra），Premium及以上的Claude和GPT按API标价计费。剩下的差异在于工作流：Windsurf使用Cascade，Cursor使用Composer和Cloud Agents。' } },
         { '@type': 'Question', 'name': 'Bodega One Code是什么？它与Cursor或Cline相比如何？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code是一款目前处于公开测试阶段的本地优先AI IDE，将基于Monaco的编辑器、AI聊天和自主编程智能体整合进一个应用中，而不是作为添加到现有编辑器上的扩展。其Personal档位在一台设备上用于非商业用途时永久免费；Pro为一次性购买，其确切价格尚未公布。' } },
       ],
     },
@@ -2396,7 +2396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Cursor vs Windsurf vs GitHub Copilot vs Cline comparados em modo agente, preços e acesso a modelos. Preços de agosto de 2026 verificados em cada site oficial.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-03',
+    dateModified: '2026-10-17',
     readTime: '13 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores que escolhem um assistente de código IA com modo agente e querem comparar Cursor, Windsurf, GitHub Copilot e Cline em preço, acesso a modelos e adequação ao fluxo de trabalho.',
@@ -2412,15 +2412,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**O Cursor é o melhor assistente de código IA agêntico geral em 2026 para a maioria dos desenvolvedores profissionais, o GitHub Copilot é a opção mais segura para equipes já padronizadas em GitHub ou Azure, e o Cline é a melhor opção gratuita se você usar sua própria chave de API ou rodar um modelo local.** O Windsurf agora custa o mesmo que o Cursor Pro (20 $/mês desde agosto de 2026, ante 15 $ no início do ano) e não vence mais em preço — escolha-o apenas se preferir especificamente o fluxo de agente Cascade. O Bodega One Code vale a pena acompanhar se você quer uma única IDE local-first integrada com modo agente embutido em vez de uma extensão colada a um editor existente, mas ele ainda está em beta aberto com preço do Pro não finalizado. Nenhuma ferramenta vence em todas as categorias; escolha com base no fluxo de trabalho, não no marketing.',
+      '**O Cursor é o melhor assistente de código IA agêntico geral em 2026 para a maioria dos desenvolvedores profissionais, o GitHub Copilot é a opção mais segura para equipes já padronizadas em GitHub ou Azure, e o Cline é a melhor opção gratuita se você usar sua própria chave de API ou rodar um modelo local.** O Windsurf Pro (20 $/mês, ante 15 $ no início do ano) agora fica entre o Cursor Plus (8 $/mês, somente modelos Grok) e o Cursor Premium (30 $/mês, inclui Claude e GPT ao preço de tabela da API), então o preço não decide mais — escolha-o apenas se preferir especificamente o fluxo de agente Cascade. O Bodega One Code vale a pena acompanhar se você quer uma única IDE local-first integrada com modo agente embutido em vez de uma extensão colada a um editor existente, mas ele ainda está em beta aberto com preço do Pro não finalizado. Nenhuma ferramenta vence em todas as categorias; escolha com base no fluxo de trabalho, não no marketing.',
     quickAnswerTop: {
       pt: {
         question: 'Qual assistente de código IA tem o melhor modo agente em 2026?',
         answer:
-          'O Cursor tem o modo agente mais maduro (Composer mais Cloud Agents) e suporta modelos GPT, Claude e Gemini dentro de um fork do VS Code, mas seu sistema de créditos por uso acima da base de 20 $/mês torna o custo mensal variável. O agente Cascade do Windsurf é comparável e agora custa o mesmo plano Pro de 20 $/mês do Cursor. O agente de código do GitHub Copilot funciona melhor dentro de fluxos nativos do GitHub (issues, PRs, Actions). O Cline não tem teto de modo agente porque você usa seu próprio modelo e chave de API — incluindo um modelo local por 0 $ — mas você mesmo monta o fluxo de trabalho.',
+          'O Cursor tem o modo agente mais maduro (Composer mais Cloud Agents) e suporta modelos GPT, Claude e Gemini dentro de um fork do VS Code, mas seu sistema de créditos por uso acima da base de 20 $/mês torna o custo mensal variável. O agente Cascade do Windsurf é comparável, a 20 $/mês no Pro. O agente de código do GitHub Copilot funciona melhor dentro de fluxos nativos do GitHub (issues, PRs, Actions). O Cline não tem teto de modo agente porque você usa seu próprio modelo e chave de API — incluindo um modelo local por 0 $ — mas você mesmo monta o fluxo de trabalho.',
         bullets: [
-          'Cursor: Composer + Cloud Agents, base Pro de 20 $/mês mais créditos por uso',
-          'Windsurf: agente Cascade, Pro 20 $/mês (subiu de 15 $ em março de 2026) — preço igual ao Cursor',
+          'Cursor: Composer + Cloud Agents, planos a partir de 8 $/mês (Plus, somente Grok); o Premium a 30 $/mês inclui Claude e GPT ao preço de tabela da API',
+          'Windsurf: agente Cascade, Pro 20 $/mês (subiu de 15 $ em março de 2026)',
           'GitHub Copilot: agente de código vinculado a issues/PRs do GitHub, Pro 10 $/mês, Pro+ 39 $/mês, Max 100 $/mês',
           'Cline: extensão de código aberto, 0 $ em si — o custo depende apenas da API LLM conectada, ou 0 $ com um modelo local via Ollama/LM Studio',
           'Bodega One Code: IDE de desktop local-first com agente integrado, beta aberto — Personal grátis para sempre, Pro é uma compra única com preço ainda não anunciado',
@@ -2449,7 +2449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Leituras Relacionadas', anchor: '#related-reading' },
     ],
     affiliateLinks: [
-      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Grátis–20+ $/mês', label: 'Começar grátis com o Cursor' },
+      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Grátis–200 $/mês', label: 'Começar grátis com o Cursor' },
       { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Grátis–100 $/mês', label: 'Começar grátis com o GitHub Copilot' },
       { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 $ (código aberto)', label: 'Obter o Cline grátis' },
     ],
@@ -2462,8 +2462,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'As quatro ferramentas conseguem editar vários arquivos e executar comandos por você (modo agente). As diferenças reais são preço, quais modelos de IA você pode usar e se o seu código precisa sair da sua máquina.' },
         ],
         items: [
-          '**O Cursor tem o modo agente mais maduro e a maior flexibilidade de modelos** (GPT, Claude, Gemini) dentro de um fork do VS Code, mas créditos por uso acima da base Pro de 20 $/mês tornam o custo mensal variável.',
-          '**O Windsurf perdeu sua vantagem de preço em 2026.** Seu plano Pro subiu de 15 $/mês para 20 $/mês em março de 2026 — o mesmo preço do Cursor Pro. Seu fluxo de agente Cascade continua sendo um diferencial real se você preferir sua experiência.',
+          '**O Cursor tem o modo agente mais maduro e a maior flexibilidade de modelos** (GPT, Claude, Gemini) dentro de um fork do VS Code, mas o uso de Claude e GPT é cobrado à parte ao preço de tabela da API sobre o plano (Premium a partir de 30 $/mês), o que torna o custo mensal variável.',
+          '**O Windsurf perdeu sua vantagem de preço em 2026.** Seu plano Pro subiu de 15 $/mês para 20 $/mês em março de 2026 — agora fica entre o Cursor Plus (8 $/mês) e o Premium (30 $/mês). Seu fluxo de agente Cascade continua sendo um diferencial real se você preferir sua experiência.',
           '**O GitHub Copilot migrou para cobrança por créditos de IA baseada em uso em 1º de junho de 2026.** O Pro custa 10 $/mês com 15 $ de créditos de IA incluídos; o Pro+ custa 39 $/mês; um novo plano Max custa 100 $/mês. É a escolha padrão para equipes já dentro do GitHub ou Azure DevOps.',
           '**O Cline custa 0 $ em si** — é uma extensão de código aberto para VS Code/JetBrains. Você paga apenas pelos tokens de API LLM usados (OpenAI, Anthropic, OpenRouter e outros), ou nada se conectar um modelo local via Ollama ou LM Studio.',
           '**Nenhum dos quatro fornecedores tem um programa de afiliados público e verificável padrão em agosto de 2026** — veja a seção Status dos Programas de Afiliados para o que cada fornecedor realmente oferece (créditos de indicação, parcerias tecnológicas ou nada).',
@@ -2481,7 +2481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '⚡ **Windsurf — a melhor alternativa.** Se você prefere especificamente o fluxo de agente Cascade.',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Grátis–20+ $/mês', label: 'Testar o Cursor' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Grátis–200 $/mês', label: 'Testar o Cursor' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Grátis–100 $/mês', label: 'Testar o GitHub Copilot' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 $ (código aberto)', label: 'Instalar o Cline' },
           { url: 'https://windsurf.com', productName: 'Windsurf', productCategory: 'dev-tool', priceRange: 'Grátis–200 $/mês', label: 'Testar o Windsurf' },
@@ -2492,8 +2492,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fatos Rápidos (verificados em)',
         content: 'Verificados diretamente em cursor.com/pricing, windsurf.com (redireciona para devin.ai/pricing após a aquisição pela Cognition), github.com/features/copilot/plans, cline.bot/pricing e bodegaone.ai/pricing, cruzados com rastreadores de preços independentes. Os preços de assinatura de ferramentas de desenvolvimento mudam com revisões de planos — confirme o valor atual no site do fornecedor antes de assinar. Os preços são em dólares (USD); essas assinaturas não publicam tabelas de preço separadas em reais — o checkout pode oferecer moeda local, mas o valor em USD exibido é global.',
         items: [
-          '**Cursor:** plano Hobby grátis; Pro, Pro+ e Ultra compartilham uma base de 20 $/mês com multiplicadores de uso incluído crescentes (Pro+ cerca de 3x, Ultra cerca de 20x), mais cobrança por uso após esgotar o uso incluído; Teams a partir de 40 $/usuário/mês.',
-          '**Windsurf:** plano grátis com uma cota diária/semanal leve; Pro 20 $/mês (subiu de 15 $ em março de 2026, igualando o Cursor); Max 200 $/mês; Teams 40 $/usuário/mês; Enterprise sob consulta. O sistema de pool de créditos foi substituído por cotas diárias/semanais em março de 2026.',
+          '**Cursor:** plano grátis com uso limitado; desde 12 de outubro de 2026: Plus 8 $/mês (somente modelos Grok), Premium 30 $ (4x o uso do Plus, inclui Claude, GPT e Gemini ao preço de tabela da API), Super 100 $ (15x), Ultra 200 $ (50x); Teams 30 $, 100 $ ou 200 $ por assento/mês. O plano Pro de 20 $/mês é um plano legado, fechado para novos clientes.',
+          '**Windsurf:** plano grátis com uma cota diária/semanal leve; Pro 20 $/mês (subiu de 15 $ em março de 2026); Max 200 $/mês; Teams 40 $/usuário/mês; Enterprise sob consulta. O sistema de pool de créditos foi substituído por cotas diárias/semanais em março de 2026.',
           '**GitHub Copilot:** plano grátis (2.000 completions/mês); Pro 10 $/mês (15 $ de créditos de IA incluídos); Pro+ 39 $/mês (70 $ incluídos); Max 100 $/mês (200 $ incluídos); Business 19 $/usuário/mês (1.900 créditos de IA); Enterprise 39 $/usuário/mês (3.900 créditos de IA). Migrou para cobrança por créditos de IA baseada em uso em 1º de junho de 2026.',
           '**Cline:** a extensão em si é grátis, código aberto, licença MIT. O custo real depende da API LLM conectada (OpenAI, Anthropic, Google, OpenRouter, AWS Bedrock, GCP Vertex, Groq, Cerebras, DeepSeek e outras), ou 0 $ com um modelo local via Ollama ou LM Studio — ambos funcionam sem chave de API.',
           '**Bodega One Code:** o plano Personal é grátis para sempre (uma máquina, uso não comercial, um workspace); o Pro é uma compra única — não uma assinatura — que adiciona direitos de uso comercial, uma segunda máquina e workspaces ilimitados, mas o fornecedor lista o preço como "TBD" antes do lançamento completo; o Enterprise tem preço sob consulta. O aplicativo inteiro, incluindo uso comercial, é gratuito durante o beta aberto.',
@@ -2505,13 +2505,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Escolha do Editor: Cursor',
         sponsoredSlot: true,
         content:
-          '**O Cursor é a escolha para a maioria dos desenvolvedores profissionais que querem o modo agente mais maduro e a maior variedade de modelos.** Composer e Cloud Agents lidam com mudanças multi-arquivo e multi-etapa com menos condução manual que as alternativas, e você pode alternar entre modelos GPT, Claude e Gemini no mesmo editor. O trade-off é a previsibilidade de custo: a base Pro de 20 $/mês cobre uma quantidade definida de uso, e sessões agênticas intensas podem gerar cobrança adicional por uso. Se a integração nativa com o GitHub importa mais que a capacidade agêntica bruta, escolha o GitHub Copilot; se 0 $ é um requisito rígido, escolha o Cline com um modelo local.',
+          '**O Cursor é a escolha para a maioria dos desenvolvedores profissionais que querem o modo agente mais maduro e a maior variedade de modelos.** Composer e Cloud Agents lidam com mudanças multi-arquivo e multi-etapa com menos condução manual que as alternativas, e você pode alternar entre modelos GPT, Claude e Gemini no mesmo editor. O trade-off é a previsibilidade de custo: os planos pagos compartilham uma cota de uso semanal, e o uso de Claude e GPT é cobrado à parte ao preço de tabela da API com crédito pré-pago. Se a integração nativa com o GitHub importa mais que a capacidade agêntica bruta, escolha o GitHub Copilot; se 0 $ é um requisito rígido, escolha o Cline com um modelo local.',
         callouts: [
-          { type: 'warning', text: 'Fique de olho nos custos de uso do Cursor. Os 20 $/mês do plano Pro são o preço da assinatura, não necessariamente seu gasto mensal máximo — sessões agênticas intensas podem gerar cobrança adicional por uso depois que o uso incluído se esgota. Usuários leves normalmente ficam dentro dos 20 $/mês; usuários intensos de agente e equipes devem prever um excedente.' },
+          { type: 'warning', text: 'Fique de olho nos custos de uso do Cursor. O preço do plano não é seu gasto mensal máximo — a partir do Premium, o uso de Claude e GPT é cobrado ao preço de tabela da API com crédito pré-pago, então sessões agênticas intensas podem custar bem mais de 30 $/mês. O Plus (8 $/mês) evita isso porque cobre apenas modelos Grok.' },
           { type: 'note', text: 'A PromptQuorum não está inscrita em nenhum programa de afiliados do Cursor, Windsurf, GitHub Copilot ou Cline. Os links nesta página são links de produto simples sem relação de afiliação e não geram comissão — veja a seção Status dos Programas de Afiliados abaixo para o que cada fornecedor realmente oferece.' },
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Grátis–20+ $/mês', label: 'Começar grátis com o Cursor' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Grátis–200 $/mês', label: 'Começar grátis com o Cursor' },
         ],
       },
       comparisonTable: {
@@ -2524,7 +2524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Ferramenta': '[Cursor](https://cursor.com)',
             'Melhor Para': 'Edições agênticas multi-arquivo',
-            'Preço (ago. 2026)': 'Hobby grátis / 20+ $/mês Pro–Ultra',
+            'Preço (ago. 2026)': 'Grátis / 8 $ Plus / 30 $ Premium / até 200 $ Ultra',
             'Acesso a Modelos': 'GPT / Claude / Gemini (multi-modelo)',
             'Modo Agente': 'Composer + Cloud Agents',
             'IDE': 'Cursor (fork do VS Code)',
@@ -2606,7 +2606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor: Melhor para Trabalho Agêntico Multi-Arquivo',
         content: [
           '**O Cursor é um fork do VS Code construído em torno do modo agente, com Composer e Cloud Agents como recursos principais para mudanças multi-arquivo e multi-etapa.** Suporta modelos GPT, Claude e Gemini no mesmo editor, então você não fica preso ao modelo de um único fornecedor.',
-          'Em agosto de 2026, o plano Hobby do Cursor é grátis com solicitações de agente limitadas. Pro, Pro+ e Ultra compartilham uma assinatura base de 20 $/mês, diferenciados por multiplicadores de uso incluído (Pro+ dá aproximadamente 3x o limite de agente do Pro, Ultra aproximadamente 20x) — depois de consumir o uso incluído, o uso adicional é cobrado sob demanda. Os preços de Teams começam em 40 $/usuário/mês para o plano Standard, com um plano Premium em 5x o limite de agente do Standard. O Enterprise tem preço sob consulta.',
+          'O Cursor tem um plano grátis com uso limitado. Desde 12 de outubro de 2026, os planos pagos são Plus (8 $/mês, somente modelos Grok), Premium (30 $, 4x o uso do Plus), Super (100 $, 15x) e Ultra (200 $, 50x), que compartilham uma cota de uso semanal entre os modelos do Cursor e do Grok. Claude, GPT e Gemini são cobrados ao preço de tabela da API com crédito pré-pago a partir do Premium. Os assentos Teams custam 30 $, 100 $ ou 200 $ por mês. O plano Pro de 20 $/mês é um plano legado, fechado para novos clientes. O Enterprise tem preço sob consulta.',
           'O Cursor tem um programa de indicação de lançamento limitado (não um programa de afiliados público geral): indicadores elegíveis recebem 25 $ de crédito de uso por cliente pagante indicado (até 10 por ciclo), e o usuário indicado recebe 50% de desconto no primeiro mês. Isso não é um programa de comissão público e universalmente disponível — veja a seção Status dos Programas de Afiliados.',
         ],
       },
@@ -2614,7 +2614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'windsurf',
         title: 'Windsurf: Agente Cascade, Agora Sob a Cognition',
         content: [
-          '**O Windsurf roda o fluxo de agente Cascade e, em agosto de 2026, custa o mesmo que o Cursor Pro** — seu plano Pro subiu de 15 $/mês para 20 $/mês em março de 2026, encerrando o que antes era seu diferencial mais claro (preço mais baixo).',
+          '**O Windsurf roda o fluxo de agente Cascade e seu plano Pro (20 $/mês) agora fica entre o Cursor Plus (8 $) e o Cursor Premium (30 $)** — subiu de 15 $/mês para 20 $/mês em março de 2026.',
           'O plano grátis do Windsurf inclui autocompletar Tab ilimitado mais uma cota diária/semanal leve para uso do agente Cascade — suficiente para cerca de dois a três dias de codificação agêntica ativa antes de atingir o limite. Em março de 2026, o Windsurf substituiu seu antigo sistema de pool de créditos mensal (500 créditos/mês no Pro) por cotas diárias e semanais que se renovam automaticamente. O Max custa 200 $/mês; Teams 40 $/usuário/mês; Enterprise sob consulta.',
           'O Windsurf agora pertence à Cognition, empresa por trás do agente de código autônomo Devin, após a aquisição pela Cognition da equipe, produto e marca do Windsurf. O windsurf.com atualmente redireciona para a página de preços do devin.ai, e o Devin está sendo integrado diretamente ao editor Windsurf em vez de substituí-lo por completo.',
           'O programa de indicação do Windsurf dá a novos cadastros 250 créditos flex gratuitos via link de indicação — um incentivo de indicação, não um programa de afiliados baseado em comissão.',
@@ -2675,7 +2675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ainda em dúvida? Teste primeiro o Cursor e o Cline — juntos eles cobrem os extremos pago-agêntico e grátis-local, e a maioria dos desenvolvedores se decide por um dos dois.',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Grátis–20+ $/mês', label: 'Testar o Cursor grátis' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'Grátis–200 $/mês', label: 'Testar o Cursor grátis' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'Grátis–100 $/mês', label: 'Testar o GitHub Copilot' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 $ (código aberto)', label: 'Instalar o Cline' },
         ],
@@ -2699,9 +2699,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas Frequentes',
         faqs: [
           { q: 'O Cursor é melhor que o GitHub Copilot?', a: 'Para trabalho agêntico multi-arquivo e flexibilidade de modelos, o Cursor geralmente é a escolha mais forte — suporta GPT, Claude e Gemini, e Composer/Cloud Agents lidam com refatorações maiores com menos condução manual. O GitHub Copilot é a melhor escolha especificamente para equipes já padronizadas em issues do GitHub, pull requests e Azure DevOps, já que seu agente de código trabalha diretamente com esse fluxo em vez de como um editor separado.' },
-          { q: 'Existe um assistente de código IA gratuito com modo agente?', a: 'Sim. O Cline é totalmente gratuito e de código aberto sem nenhum plano de assinatura — você paga apenas pelos tokens de API LLM usados, ou nada se conectar um modelo local via Ollama ou LM Studio. Cursor e GitHub Copilot têm planos gratuitos limitados (o plano Hobby do Cursor e o plano grátis do Copilot com 2.000 completions/mês), mas o uso do modo agente é limitado em ambos.' },
-          { q: 'Qual é a diferença real entre Windsurf e Cursor em 2026?', a: 'Em agosto de 2026, ambos têm preço idêntico de 20 $/mês em seus planos Pro — o Windsurf subiu de 15 $ para 20 $ em março de 2026, encerrando o que era sua principal vantagem. A diferença restante é o fluxo de trabalho: o Windsurf usa o fluxo de agente Cascade, o Cursor usa Composer e Cloud Agents. Escolha com base na UX de agente preferida depois de testar ambos, não pelo preço.' },
-          { q: 'O GitHub Copilot suporta modelos Claude ou Gemini?', a: 'O GitHub Copilot Pro+ (39 $/mês) e Max (100 $/mês) incluem acesso a modelos premium como o Claude Opus. Os planos base Free e Pro (10 $/mês) são mais limitados na escolha de modelos. Isso é mais restrito que o Cursor, que permite que usuários Pro alternem diretamente entre modelos GPT, Claude e Gemini.' },
+          { q: 'Existe um assistente de código IA gratuito com modo agente?', a: 'Sim. O Cline é totalmente gratuito e de código aberto sem nenhum plano de assinatura — você paga apenas pelos tokens de API LLM usados, ou nada se conectar um modelo local via Ollama ou LM Studio. Cursor e GitHub Copilot têm planos gratuitos limitados (o plano grátis do Cursor e o plano grátis do Copilot com 2.000 completions/mês), mas o uso do modo agente é limitado em ambos.' },
+          { q: 'Qual é a diferença real entre Windsurf e Cursor em 2026?', a: 'O Windsurf Pro custa 20 $/mês (subiu de 15 $ em março de 2026). O Cursor agora tem Plus a 8 $/mês (somente modelos Grok), Premium a 30 $, Super a 100 $ e Ultra a 200 $, com Claude e GPT cobrados ao preço de tabela da API a partir do Premium. A diferença restante é o fluxo de trabalho: o Windsurf usa o fluxo de agente Cascade, o Cursor usa Composer e Cloud Agents. Escolha com base na UX de agente preferida depois de testar ambos, não pelo preço.' },
+          { q: 'O GitHub Copilot suporta modelos Claude ou Gemini?', a: 'O GitHub Copilot Pro+ (39 $/mês) e Max (100 $/mês) incluem acesso a modelos premium como o Claude Opus. Os planos base Free e Pro (10 $/mês) são mais limitados na escolha de modelos. Isso é mais restrito que o Cursor, que permite que usuários do Premium em diante alternem diretamente entre modelos GPT, Claude e Gemini (cobrados ao preço de tabela da API).' },
           { q: 'Como configuro o Cline com um modelo local?', a: 'Instale o Ollama ou LM Studio, baixe um modelo de código (a documentação do Cline recomenda Qwen2.5 Coder, Llama 3.3, DeepSeek Coder V3 ou Codestral), depois no Cline escolha Ollama ou LM Studio como provedor de API — o endpoint padrão do Ollama é http://localhost:11434, o LM Studio expõe uma API compatível com OpenAI na porta 1234. Nenhum dos dois exige chave de API. Use pelo menos uma janela de contexto de 32K tokens; sessões agênticas mais intensas costumam precisar de 64K.' },
           { q: 'Posso usar mais de uma dessas ferramentas ao mesmo tempo?', a: 'Sim, e muitos desenvolvedores fazem isso — por exemplo, usando o Cline com um modelo local para edições rotineiras e pouco sensíveis, e alternando para o Cursor ou GitHub Copilot em problemas mais difíceis onde um modelo em nuvem mais forte ajuda. Não há conflito técnico em rodar várias extensões na mesma instalação do VS Code, embora normalmente apenas uma esteja ativa como agente principal por sessão.' },
           { q: 'Qual é o melhor assistente de código IA para um desenvolvedor solo com orçamento limitado?', a: 'O Cline combinado com um modelo local (Ollama ou LM Studio) custa 0 $ no total. Se você quiser acesso ocasional a um modelo em nuvem mais forte sem assinatura, o Cline com uma chave de API paga por token (OpenAI, Anthropic ou OpenRouter) mantém o custo proporcional ao uso real em vez de uma taxa mensal fixa.' },
@@ -2715,7 +2715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Fontes',
         links: [
-          { url: 'https://cursor.com/pricing', title: 'Preços do Cursor', description: 'Página oficial de preços do Cursor — planos Hobby, Pro, Pro+, Ultra, Teams e Enterprise.' },
+          { url: 'https://cursor.com/pricing', title: 'Preços do Cursor', description: 'Página oficial de preços do Cursor — planos grátis, Plus, Premium, Super, Ultra, Teams e Enterprise.' },
           { url: 'https://cursor.com/help/account-and-billing/referral-program', title: 'Programa de Indicação do Cursor', description: 'Documentação oficial do programa de indicação de lançamento limitado do Cursor.' },
           { url: 'https://devin.ai/pricing', title: 'Preços do Windsurf/Devin (redirecionamento do windsurf.com)', description: 'Página de preços do Windsurf, agora hospedada em devin.ai após a aquisição pela Cognition.' },
           { url: 'https://github.com/features/copilot/plans', title: 'Planos do GitHub Copilot', description: 'Preços oficiais do GitHub Copilot — planos Free, Pro, Pro+, Max, Business e Enterprise.' },
@@ -2768,7 +2768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mainEntity': [
         { '@type': 'Question', 'name': 'O Cursor é melhor que o GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Para trabalho agêntico multi-arquivo e flexibilidade de modelos, o Cursor geralmente é a escolha mais forte. O GitHub Copilot é melhor para equipes já padronizadas em GitHub e Azure DevOps.' } },
         { '@type': 'Question', 'name': 'Existe um assistente de código IA gratuito com modo agente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim. O Cline é totalmente gratuito e de código aberto sem plano de assinatura — você paga apenas pelos tokens de API LLM usados, ou nada com um modelo local via Ollama ou LM Studio.' } },
-        { '@type': 'Question', 'name': 'Qual é a diferença real entre Windsurf e Cursor em 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Em agosto de 2026, ambos custam o mesmo, 20 $/mês, em seus planos Pro. A diferença restante é o fluxo de trabalho: o Windsurf usa Cascade, o Cursor usa Composer e Cloud Agents.' } },
+        { '@type': 'Question', 'name': 'Qual é a diferença real entre Windsurf e Cursor em 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O Windsurf Pro custa 20 $/mês; os planos do Cursor vão de 8 $/mês (Plus) a 200 $/mês (Ultra), com Claude e GPT cobrados ao preço de tabela da API a partir do Premium. A diferença restante é o fluxo de trabalho: o Windsurf usa Cascade, o Cursor usa Composer e Cloud Agents.' } },
         { '@type': 'Question', 'name': 'O que é o Bodega One Code e como ele se compara ao Cursor ou ao Cline?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O Bodega One Code é uma IDE de IA local-first, atualmente em beta aberto, que reúne um editor baseado em Monaco, chat de IA e um agente de código autônomo em um único aplicativo em vez de como uma extensão adicionada a um editor existente. Seu plano Personal é grátis para sempre para uso não comercial em uma máquina; o Pro é uma compra única cujo preço exato não foi anunciado.' } },
       ],
     },
@@ -2785,7 +2785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'مقارنة Cursor وWindsurf وGitHub Copilot وCline من حيث وضع الوكيل والتسعير والوصول إلى النماذج. أسعار أغسطس 2026 موثقة من موقع كل مزود.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-03',
+    dateModified: '2026-10-17',
     readTime: '13 دقيقة للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'مطورون يختارون مساعد برمجة بالذكاء الاصطناعي بوضع وكيل ويريدون مقارنة Cursor وWindsurf وGitHub Copilot وCline من حيث السعر والوصول إلى النماذج وملاءمة سير العمل.',
@@ -2801,15 +2801,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursor هو أفضل مساعد برمجة بالذكاء الاصطناعي الوكيلي الشامل لعام 2026 لمعظم المطورين المحترفين، وGitHub Copilot هو الخيار الأكثر أماناً للفرق التي توحّدت بالفعل على GitHub أو Azure، وCline هو أفضل خيار مجاني إذا أحضرت مفتاح API الخاص بك أو شغّلت نموذجاً محلياً.** أصبح Windsurf الآن بنفس سعر Cursor Pro (20 دولاراً/الشهر منذ أغسطس 2026، بعد أن كان 15 دولاراً في وقت سابق من العام) ولم يعد يتفوق في السعر — اختره فقط إذا كنت تفضل تحديداً تدفق وكيل Cascade. تستحق Bodega One Code المتابعة إذا كنت تريد بيئة تطوير محلية أولاً متكاملة بوضع وكيل مدمج بدلاً من إضافة مُلحقة بمحرر موجود، لكنها لا تزال في مرحلة تجريبية عامة بتسعير Pro غير نهائي. لا توجد أداة واحدة تتفوق في كل فئة؛ اختر بناءً على سير العمل، لا على ادعاءات التسويق.',
+      '**Cursor هو أفضل مساعد برمجة بالذكاء الاصطناعي الوكيلي الشامل لعام 2026 لمعظم المطورين المحترفين، وGitHub Copilot هو الخيار الأكثر أماناً للفرق التي توحّدت بالفعل على GitHub أو Azure، وCline هو أفضل خيار مجاني إذا أحضرت مفتاح API الخاص بك أو شغّلت نموذجاً محلياً.** أصبحت خطة Windsurf Pro (20 دولاراً/الشهر، بعد أن كانت 15 دولاراً في وقت سابق من العام) تقع الآن بين Cursor Plus (8 دولارات/الشهر، نماذج Grok فقط) وCursor Premium (30 دولاراً/الشهر، تضيف Claude وGPT بسعر القائمة لواجهة API)، فلم يعد السعر هو الحاسم — اختره فقط إذا كنت تفضل تحديداً تدفق وكيل Cascade. تستحق Bodega One Code المتابعة إذا كنت تريد بيئة تطوير محلية أولاً متكاملة بوضع وكيل مدمج بدلاً من إضافة مُلحقة بمحرر موجود، لكنها لا تزال في مرحلة تجريبية عامة بتسعير Pro غير نهائي. لا توجد أداة واحدة تتفوق في كل فئة؛ اختر بناءً على سير العمل، لا على ادعاءات التسويق.',
     quickAnswerTop: {
       ar: {
         question: 'أي مساعد برمجة بالذكاء الاصطناعي يملك أفضل وضع وكيل في 2026؟',
         answer:
-          'يملك Cursor أنضج وضع وكيل (Composer إضافة إلى Cloud Agents) ويدعم نماذج GPT وClaude وGemini داخل نسخة معدّلة من VS Code، لكن نظام الرصيد القائم على الاستخدام فوق القاعدة البالغة 20 دولاراً/الشهر يجعل التكلفة الشهرية متغيرة. وكيل Cascade في Windsurf قادر بشكل مماثل ويكلّف الآن نفس فئة Pro البالغة 20 دولاراً/الشهر مثل Cursor. يعمل وكيل البرمجة في GitHub Copilot بأفضل شكل ضمن سير عمل GitHub الأصلي (المشكلات، طلبات السحب، Actions). لا يملك Cline سقفاً لوضع الوكيل لأنك تُحضر نموذجك ومفتاح API الخاص بك — بما في ذلك نموذج محلي مقابل 0 دولار — لكنك تُجمّع سير العمل بنفسك.',
+          'يملك Cursor أنضج وضع وكيل (Composer إضافة إلى Cloud Agents) ويدعم نماذج GPT وClaude وGemini داخل نسخة معدّلة من VS Code، لكن خططه منذ 12 أكتوبر 2026 هي Plus بـ8 دولارات وPremium بـ30 وSuper بـ100 وUltra بـ200 دولار شهرياً، ويُحاسَب استخدام Claude وGPT إضافةً بسعر القائمة لواجهة API، ما يجعل التكلفة الشهرية متغيرة. وكيل Cascade في Windsurf قادر بشكل مماثل بسعر 20 دولاراً/الشهر لخطة Pro. يعمل وكيل البرمجة في GitHub Copilot بأفضل شكل ضمن سير عمل GitHub الأصلي (المشكلات، طلبات السحب، Actions). لا يملك Cline سقفاً لوضع الوكيل لأنك تُحضر نموذجك ومفتاح API الخاص بك — بما في ذلك نموذج محلي مقابل 0 دولار — لكنك تُجمّع سير العمل بنفسك.',
         bullets: [
-          'Cursor: Composer + Cloud Agents، قاعدة Pro بـ20 دولاراً/الشهر إضافة إلى رصيد قائم على الاستخدام',
-          'Windsurf: وكيل Cascade، Pro بـ20 دولاراً/الشهر (ارتفع من 15 دولاراً في مارس 2026) — تعادل سعري مع Cursor',
+          'Cursor: Composer + Cloud Agents، خطط من 8 دولارات/الشهر (Plus، Grok فقط)؛ وPremium بـ30 دولاراً/الشهر تضيف Claude وGPT بسعر القائمة لواجهة API',
+          'Windsurf: وكيل Cascade، Pro بـ20 دولاراً/الشهر (ارتفع من 15 دولاراً في مارس 2026)',
           'GitHub Copilot: وكيل برمجة مرتبط بمشكلات/طلبات سحب GitHub، Pro بـ10 دولارات/الشهر، Pro+ بـ39 دولاراً/الشهر، Max بـ100 دولار/الشهر',
           'Cline: إضافة مفتوحة المصدر، 0 دولار بحد ذاتها — التكلفة تعتمد فقط على واجهة LLM المتصلة، أو 0 دولار مع نموذج محلي عبر Ollama/LM Studio',
           'Bodega One Code: بيئة تطوير محلية أولاً بوكيل مدمج، مرحلة تجريبية عامة — فئة Personal مجانية دائماً، وPro شراء لمرة واحدة بسعر لم يُعلن بعد',
@@ -2838,7 +2838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     affiliateLinks: [
-      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'مجاني–20+ دولار/الشهر', label: 'ابدأ مجاناً مع Cursor' },
+      { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'مجاني–200 دولار/شهر', label: 'ابدأ مجاناً مع Cursor' },
       { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'مجاني–100 دولار/الشهر', label: 'ابدأ مجاناً مع GitHub Copilot' },
       { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 دولار (مفتوح المصدر)', label: 'احصل على Cline مجاناً' },
     ],
@@ -2851,8 +2851,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'تستطيع الأدوات الأربع تعديل عدة ملفات وتنفيذ أوامر نيابة عنك (وضع الوكيل). الفروقات الحقيقية هي السعر، ونماذج الذكاء الاصطناعي التي يمكنك استخدامها، وما إذا كان يجب أن يغادر كودك جهازك.' },
         ],
         items: [
-          '**يملك Cursor أنضج وضع وكيل وأكبر مرونة في النماذج** (GPT، Claude، Gemini) داخل نسخة معدّلة من VS Code، لكن الرصيد القائم على الاستخدام فوق قاعدة Pro البالغة 20 دولاراً/الشهر يجعل التكلفة الشهرية متغيرة.',
-          '**فقد Windsurf ميزته السعرية في 2026.** ارتفعت فئة Pro من 15 دولاراً/الشهر إلى 20 دولاراً/الشهر في مارس 2026 — نفس سعر Cursor Pro. يبقى تدفق وكيل Cascade عامل تمييز حقيقي إذا كنت تفضل تجربته.',
+          '**يملك Cursor أنضج وضع وكيل وأكبر مرونة في النماذج** (GPT، Claude، Gemini) داخل نسخة معدّلة من VS Code، لكن استخدام Claude وGPT يُحاسَب إضافةً إلى الخطة بسعر القائمة لواجهة API (Premium من 30 دولاراً/الشهر)، ما يجعل التكلفة الشهرية متغيرة.',
+          '**فقد Windsurf ميزته السعرية في 2026.** ارتفعت فئة Pro من 15 دولاراً/الشهر إلى 20 دولاراً/الشهر في مارس 2026 — وهي الآن تقع بين Cursor Plus (8 دولارات/الشهر) وPremium (30 دولاراً/الشهر). يبقى تدفق وكيل Cascade عامل تمييز حقيقي إذا كنت تفضل تجربته.',
           '**انتقل GitHub Copilot إلى الفوترة برصيد ذكاء اصطناعي قائم على الاستخدام في 1 يونيو 2026.** تكلفة Pro هي 10 دولارات/الشهر مع 15 دولاراً من رصيد الذكاء الاصطناعي المُضمّن؛ Pro+ بـ39 دولاراً/الشهر؛ وفئة Max الجديدة بـ100 دولار/الشهر. إنه الخيار الافتراضي للفرق الموجودة بالفعل في GitHub أو Azure DevOps.',
           '**يكلّف Cline 0 دولار بحد ذاته** — إنه إضافة مفتوحة المصدر لـVS Code/JetBrains. تدفع فقط مقابل رموز واجهة LLM المستخدمة (OpenAI، Anthropic، OpenRouter وغيرها)، أو لا شيء إذا وصّلت نموذجاً محلياً عبر Ollama أو LM Studio.',
           '**لا يملك أي من المزودين الأربعة برنامج شراكة عام قياسي وقابل للتحقق حتى أغسطس 2026** — راجع قسم حالة برامج الشراكة لمعرفة ما يقدّمه كل مزود فعلياً (رصيد إحالة، شراكات تقنية، أو لا شيء).',
@@ -2870,7 +2870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '⚡ **Windsurf — أفضل بديل.** إذا كنت تفضل تحديداً تدفق وكيل Cascade.',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'مجاني–20+ دولار/الشهر', label: 'جرّب Cursor' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'مجاني–200 دولار/شهر', label: 'جرّب Cursor' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'مجاني–100 دولار/الشهر', label: 'جرّب GitHub Copilot' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 دولار (مفتوح المصدر)', label: 'ثبّت Cline' },
           { url: 'https://windsurf.com', productName: 'Windsurf', productCategory: 'dev-tool', priceRange: 'مجاني–200 دولار/الشهر', label: 'جرّب Windsurf' },
@@ -2881,8 +2881,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'حقائق سريعة (تم التحقق منها في)',
         content: 'تم التحقق مباشرة على cursor.com/pricing وwindsurf.com (يُعاد توجيهه إلى devin.ai/pricing بعد استحواذ Cognition) وgithub.com/features/copilot/plans وcline.bot/pricing وbodegaone.ai/pricing، مع مقارنة مع متتبعات أسعار مستقلة. تتغير أسعار اشتراكات أدوات التطوير مع مراجعات الخطط — تأكد من السعر الحالي على موقع المزود قبل الاشتراك. الأسعار كلها بالدولار الأمريكي؛ لا تنشر هذه الاشتراكات أسعاراً محلية منفصلة — قد يعرض الدفع عملة محلية عند الدفع، لكن السعر بالدولار المعروض هو السعر العالمي.',
         items: [
-          '**Cursor:** فئة Hobby مجانية؛ تشترك Pro وPro+ وUltra جميعاً في قاعدة 20 دولاراً/الشهر مع مضاعفات استخدام مضمّنة متصاعدة (Pro+ نحو 3 أضعاف، Ultra نحو 20 ضعفاً)، إضافة إلى فوترة قائمة على الاستخدام بعد استنفاد الاستخدام المضمّن؛ تبدأ Teams من 40 دولاراً/المستخدم/الشهر.',
-          '**Windsurf:** فئة مجانية بحصة يومية/أسبوعية خفيفة؛ Pro بـ20 دولاراً/الشهر (ارتفعت من 15 دولاراً في مارس 2026، لتصبح مساوية لـCursor)؛ Max بـ200 دولار/الشهر؛ Teams بـ40 دولاراً/المستخدم/الشهر؛ Enterprise حسب الطلب. استُبدل نظام مجمّع الرصيد بحصص يومية/أسبوعية في مارس 2026.',
+          '**Cursor:** فئة مجانية باستخدام محدود؛ منذ 12 أكتوبر 2026: Plus بـ8 دولارات/الشهر (نماذج Grok فقط)، وPremium بـ30 دولاراً (أربعة أضعاف استخدام Plus، وتضيف Claude وGPT وGemini بسعر القائمة لواجهة API)، وSuper بـ100 دولار (15 ضعفاً)، وUltra بـ200 دولار (50 ضعفاً)؛ وTeams بـ30 أو 100 أو 200 دولار لكل مقعد/الشهر. خطة Pro بـ20 دولاراً/الشهر خطة قديمة مغلقة أمام العملاء الجدد.',
+          '**Windsurf:** فئة مجانية بحصة يومية/أسبوعية خفيفة؛ Pro بـ20 دولاراً/الشهر (ارتفعت من 15 دولاراً في مارس 2026)؛ Max بـ200 دولار/الشهر؛ Teams بـ40 دولاراً/المستخدم/الشهر؛ Enterprise حسب الطلب. استُبدل نظام مجمّع الرصيد بحصص يومية/أسبوعية في مارس 2026.',
           '**GitHub Copilot:** فئة مجانية (2000 إكمال/الشهر)؛ Pro بـ10 دولارات/الشهر (15 دولاراً من رصيد الذكاء الاصطناعي مُضمّنة)؛ Pro+ بـ39 دولاراً/الشهر (70 دولاراً مُضمّنة)؛ Max بـ100 دولار/الشهر (200 دولار مُضمّنة)؛ Business بـ19 دولاراً/المستخدم/الشهر (1900 رصيد ذكاء اصطناعي)؛ Enterprise بـ39 دولاراً/المستخدم/الشهر (3900 رصيد ذكاء اصطناعي). انتقلت إلى الفوترة برصيد ذكاء اصطناعي قائم على الاستخدام في 1 يونيو 2026.',
           '**Cline:** الإضافة نفسها مجانية، مفتوحة المصدر، برخصة MIT. تعتمد التكلفة الفعلية على واجهة LLM المتصلة (OpenAI، Anthropic، Google، OpenRouter، AWS Bedrock، GCP Vertex، Groq، Cerebras، DeepSeek وغيرها)، أو 0 دولار مع نموذج محلي عبر Ollama أو LM Studio — يعمل كلاهما دون مفتاح API.',
           '**Bodega One Code:** فئة Personal مجانية دائماً (جهاز واحد، استخدام غير تجاري، مساحة عمل واحدة)؛ وPro شراء لمرة واحدة — وليس اشتراكاً — يضيف حقوق الاستخدام التجاري وجهازاً ثانياً ومساحات عمل غير محدودة، لكن المزود يدرج سعره كـ"غير محدد بعد" قبل الإصدار الكامل؛ Enterprise بسعر حسب الطلب. التطبيق بأكمله، بما في ذلك الاستخدام التجاري، مجاني خلال المرحلة التجريبية العامة.',
@@ -2894,13 +2894,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'اختيار المحرر: Cursor',
         sponsoredSlot: true,
         content:
-          '**Cursor هو الخيار لمعظم المطورين المحترفين الذين يريدون أنضج وضع وكيل وأوسع تشكيلة نماذج.** يتعامل Composer وCloud Agents مع التغييرات متعددة الملفات والخطوات بتوجيه يدوي أقل من البدائل، ويمكنك التبديل بين نماذج GPT وClaude وGemini داخل المحرر نفسه. المقايضة هي إمكانية التنبؤ بالتكلفة: تغطي قاعدة Pro البالغة 20 دولاراً/الشهر كمية استخدام محددة، وقد تُطلق جلسات الوكيل المكثفة فوترة إضافية قائمة على الاستخدام. إذا كان التكامل الأصلي مع GitHub أهم من القدرة الوكيلية الخام، اختر GitHub Copilot بدلاً من ذلك؛ وإذا كان 0 دولار متطلباً صارماً، اختر Cline مع نموذج محلي.',
+          '**Cursor هو الخيار لمعظم المطورين المحترفين الذين يريدون أنضج وضع وكيل وأوسع تشكيلة نماذج.** يتعامل Composer وCloud Agents مع التغييرات متعددة الملفات والخطوات بتوجيه يدوي أقل من البدائل، ويمكنك التبديل بين نماذج GPT وClaude وGemini داخل المحرر نفسه. المقايضة هي إمكانية التنبؤ بالتكلفة: تتشارك الخطط المدفوعة حصة استخدام أسبوعية، ويُحاسَب استخدام Claude وGPT إضافةً بسعر القائمة لواجهة API من رصيد مدفوع مسبقاً. إذا كان التكامل الأصلي مع GitHub أهم من القدرة الوكيلية الخام، اختر GitHub Copilot بدلاً من ذلك؛ وإذا كان 0 دولار متطلباً صارماً، اختر Cline مع نموذج محلي.',
         callouts: [
-          { type: 'warning', text: 'انتبه لتكاليف استخدام Cursor. مبلغ 20 دولاراً/الشهر لفئة Pro هو سعر الاشتراك فقط، وليس بالضرورة الحد الأقصى لإنفاقك الشهري — قد تُطلق جلسات الوكيل المكثفة فوترة إضافية قائمة على الاستخدام بعد استنفاد الاستخدام المضمّن. عادةً ما يبقى المستخدمون الخفيفون ضمن حد 20 دولاراً/الشهر؛ أما المستخدمون المكثفون للوكيل والفرق فعليهم توقّع تجاوز هذا الحد.' },
+          { type: 'warning', text: 'انتبه لتكاليف استخدام Cursor. سعر الخطة ليس الحد الأقصى لإنفاقك الشهري — ففي Premium وما فوق يُحاسَب استخدام Claude وGPT بسعر القائمة لواجهة API من رصيد مدفوع مسبقاً، لذا قد تتجاوز جلسات الوكيل المكثفة 30 دولاراً/الشهر بكثير. تتجنب Plus (8 دولارات/الشهر) ذلك لأنها تشمل نماذج Grok فقط.' },
           { type: 'note', text: 'PromptQuorum غير مسجّل في أي برنامج شراكة لـCursor أو Windsurf أو GitHub Copilot أو Cline. الروابط في هذه الصفحة هي روابط منتج بسيطة دون علاقة شراكة ولا تحقق أي عمولة — راجع قسم حالة برامج الشراكة أدناه لمعرفة ما يقدّمه كل مزود فعلياً.' },
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'مجاني–20+ دولار/الشهر', label: 'ابدأ مجاناً مع Cursor' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'مجاني–200 دولار/شهر', label: 'ابدأ مجاناً مع Cursor' },
         ],
       },
       comparisonTable: {
@@ -2913,7 +2913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الأداة': '[Cursor](https://cursor.com)',
             'الأفضل لـ': 'تعديلات وكيلية متعددة الملفات',
-            'السعر (أغسطس 2026)': 'Hobby مجاني / 20+ دولار/الشهر Pro–Ultra',
+            'السعر (أغسطس 2026)': 'مجاني / Plus بـ8 دولارات / Premium بـ30 / حتى 200 دولار Ultra',
             'الوصول للنماذج': 'GPT / Claude / Gemini (متعدد النماذج)',
             'وضع الوكيل': 'Composer + Cloud Agents',
             'بيئة التطوير': 'Cursor (نسخة من VS Code)',
@@ -2995,7 +2995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor: الأفضل للعمل الوكيلي متعدد الملفات',
         content: [
           '**Cursor هو نسخة معدّلة من VS Code مبنية حول وضع الوكيل، مع Composer وCloud Agents كميزتين رئيسيتين للتغييرات متعددة الملفات والخطوات.** يدعم نماذج GPT وClaude وGemini داخل المحرر نفسه، لذا لست مقيداً بنموذج مزود واحد.',
-          'حتى أغسطس 2026، فئة Hobby في Cursor مجانية مع طلبات وكيل محدودة. تشترك Pro وPro+ وUltra جميعاً في اشتراك أساسي بـ20 دولاراً/الشهر، تتمايز بمضاعفات استخدام مضمّنة (يمنح Pro+ نحو 3 أضعاف حد وكيل Pro، وUltra نحو 20 ضعفاً) — وبعد استهلاك الاستخدام المضمّن، يُفوتَر الاستخدام الإضافي عند الطلب. تبدأ أسعار Teams من 40 دولاراً/المستخدم/الشهر لفئة Standard، مع فئة Premium بـ5 أضعاف حد وكيل Standard. تسعير Enterprise حسب الطلب.',
+          'لدى Cursor فئة مجانية باستخدام محدود. منذ 12 أكتوبر 2026 الخطط المدفوعة هي Plus (8 دولارات/الشهر، نماذج Grok فقط) وPremium (30 دولاراً، أربعة أضعاف استخدام Plus) وSuper (100 دولار، 15 ضعفاً) وUltra (200 دولار، 50 ضعفاً)، وتتشارك حصة استخدام أسبوعية بين نماذج Cursor وGrok. يُحاسَب Claude وGPT وGemini بسعر القائمة لواجهة API من رصيد مدفوع مسبقاً في Premium وما فوق. تبلغ تكلفة مقاعد Teams 30 أو 100 أو 200 دولار شهرياً. خطة Pro بـ20 دولاراً/الشهر خطة قديمة مغلقة أمام العملاء الجدد. تسعير Enterprise حسب الطلب.',
           'يملك Cursor برنامج إحالة محدود الطرح (وليس برنامج شراكة عاماً متاحاً للجميع): يحصل المُحيلون المؤهلون على 25 دولاراً رصيد استخدام لكل عميل مدفوع تمت إحالته (حتى 10 مرات لكل دورة)، ويحصل المستخدم المُحال على خصم 50٪ على الشهر الأول. هذا ليس برنامج عمولة عاماً متاحاً للجميع — راجع قسم حالة برامج الشراكة.',
         ],
       },
@@ -3003,7 +3003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'windsurf',
         title: 'Windsurf: وكيل Cascade، الآن تحت مظلة Cognition',
         content: [
-          '**يشغّل Windsurf تدفق وكيل Cascade، وحتى أغسطس 2026، يكلّف نفس سعر Cursor Pro** — ارتفعت فئة Pro من 15 دولاراً/الشهر إلى 20 دولاراً/الشهر في مارس 2026، منهية ما كان سابقاً عامل تمييزها الأوضح (سعر أقل).',
+          '**يشغّل Windsurf تدفق وكيل Cascade، وتقع فئة Pro فيه (20 دولاراً/الشهر) الآن بين Cursor Plus (8 دولارات) وCursor Premium (30 دولاراً)** — فقد ارتفعت من 15 دولاراً/الشهر إلى 20 دولاراً/الشهر في مارس 2026.',
           'تشمل فئة Windsurf المجانية إكمالاً تلقائياً غير محدود عبر Tab إضافة إلى حصة يومية/أسبوعية خفيفة لاستخدام وكيل Cascade — كافية لنحو يومين إلى ثلاثة أيام من البرمجة الوكيلية النشطة قبل بلوغ الحد. في مارس 2026، استبدلت Windsurf نظام مجمّع الرصيد الشهري القديم (500 رصيد/الشهر في Pro) بحصص يومية وأسبوعية تتجدد تلقائياً. تكلفة Max هي 200 دولار/الشهر؛ Teams بـ40 دولاراً/المستخدم/الشهر؛ Enterprise حسب الطلب.',
           'تنتمي Windsurf الآن إلى Cognition، الشركة صاحبة وكيل البرمجة المستقل Devin، بعد استحواذ Cognition على فريق Windsurf ومنتجها وعلامتها التجارية. يُعاد توجيه windsurf.com حالياً إلى صفحة تسعير devin.ai، ويجري دمج Devin مباشرة في محرر Windsurf بدلاً من استبداله بالكامل.',
           'يمنح برنامج إحالة Windsurf المسجّلين الجدد 250 رصيد مرن مجاني عبر رابط إحالة — هذا حافز إحالة، وليس برنامج شراكة قائماً على العمولة.',
@@ -3064,7 +3064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ما زلت غير متأكد؟ جرّب Cursor وCline أولاً — فهما معاً يغطيان الطرفين المدفوع-الوكيلي والمجاني-المحلي، ويستقر معظم المطورين على أحدهما.',
         ],
         affiliateLinks: [
-          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'مجاني–20+ دولار/الشهر', label: 'جرّب Cursor مجاناً' },
+          { url: 'https://cursor.com', productName: 'Cursor', productCategory: 'dev-tool', priceRange: 'مجاني–200 دولار/شهر', label: 'جرّب Cursor مجاناً' },
           { url: 'https://github.com/features/copilot', productName: 'GitHub Copilot', productCategory: 'dev-tool', priceRange: 'مجاني–100 دولار/الشهر', label: 'جرّب GitHub Copilot' },
           { url: 'https://cline.bot', productName: 'Cline', productCategory: 'dev-tool', priceRange: '0 دولار (مفتوح المصدر)', label: 'ثبّت Cline' },
         ],
@@ -3088,9 +3088,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'هل Cursor أفضل من GitHub Copilot؟', a: 'بالنسبة للعمل الوكيلي متعدد الملفات ومرونة النماذج، يعد Cursor عموماً الخيار الأقوى — فهو يدعم GPT وClaude وGemini، ويتعامل Composer/Cloud Agents مع عمليات إعادة الهيكلة الكبيرة بتوجيه يدوي أقل. GitHub Copilot هو الخيار الأفضل تحديداً للفرق الموحّدة بالفعل على مشكلات GitHub وطلبات السحب وAzure DevOps، لأن وكيل البرمجة فيه يعمل مباشرة على ذلك السير بدلاً من كونه محرراً منفصلاً.' },
-          { q: 'هل يوجد مساعد برمجة بالذكاء الاصطناعي مجاني بوضع وكيل؟', a: 'نعم. Cline مجاني بالكامل ومفتوح المصدر دون أي فئة اشتراك — تدفع فقط مقابل رموز واجهة LLM المستخدمة، أو لا شيء إذا وصّلت نموذجاً محلياً عبر Ollama أو LM Studio. يملك كل من Cursor وGitHub Copilot فئات مجانية محدودة (فئة Hobby في Cursor وفئة Copilot المجانية بـ2000 إكمال/الشهر)، لكن استخدام وضع الوكيل مقيّد في كليهما.' },
-          { q: 'ما الفرق الفعلي بين Windsurf وCursor في 2026؟', a: 'حتى أغسطس 2026، يتماثل سعر الأداتين عند 20 دولاراً/الشهر لفئتي Pro — ارتفع Windsurf من 15 دولاراً إلى 20 دولاراً في مارس 2026، منهياً ما كان ميزته الرئيسية سابقاً. الفرق المتبقي هو سير العمل: يستخدم Windsurf تدفق وكيل Cascade، ويستخدم Cursor Composer وCloud Agents. اختر بناءً على تجربة الوكيل المفضلة بعد تجربة الاثنين، لا بناءً على السعر.' },
-          { q: 'هل يدعم GitHub Copilot نماذج Claude أو Gemini؟', a: 'يشمل GitHub Copilot Pro+ (39 دولاراً/الشهر) وMax (100 دولار/الشهر) الوصول إلى نماذج متميزة مثل Claude Opus. فئتا Free وPro الأساسيتان (10 دولارات/الشهر) أكثر محدودية في اختيار النموذج. هذا أضيق من Cursor، الذي يسمح لمستخدمي Pro بالتبديل مباشرة بين نماذج GPT وClaude وGemini.' },
+          { q: 'هل يوجد مساعد برمجة بالذكاء الاصطناعي مجاني بوضع وكيل؟', a: 'نعم. Cline مجاني بالكامل ومفتوح المصدر دون أي فئة اشتراك — تدفع فقط مقابل رموز واجهة LLM المستخدمة، أو لا شيء إذا وصّلت نموذجاً محلياً عبر Ollama أو LM Studio. يملك كل من Cursor وGitHub Copilot فئات مجانية محدودة (الفئة المجانية في Cursor وفئة Copilot المجانية بـ2000 إكمال/الشهر)، لكن استخدام وضع الوكيل مقيّد في كليهما.' },
+          { q: 'ما الفرق الفعلي بين Windsurf وCursor في 2026؟', a: 'تبلغ تكلفة Windsurf Pro 20 دولاراً/الشهر (ارتفعت من 15 دولاراً في مارس 2026). لدى Cursor الآن Plus بـ8 دولارات/الشهر (نماذج Grok فقط) وPremium بـ30 دولاراً وSuper بـ100 دولار وUltra بـ200 دولار، مع محاسبة Claude وGPT بسعر القائمة لواجهة API في Premium وما فوق. الفرق المتبقي هو سير العمل: يستخدم Windsurf تدفق وكيل Cascade، ويستخدم Cursor Composer وCloud Agents. اختر بناءً على تجربة الوكيل المفضلة بعد تجربة الاثنين، لا بناءً على السعر.' },
+          { q: 'هل يدعم GitHub Copilot نماذج Claude أو Gemini؟', a: 'يشمل GitHub Copilot Pro+ (39 دولاراً/الشهر) وMax (100 دولار/الشهر) الوصول إلى نماذج متميزة مثل Claude Opus. فئتا Free وPro الأساسيتان (10 دولارات/الشهر) أكثر محدودية في اختيار النموذج. هذا أضيق من Cursor، الذي يسمح لمستخدمي Premium وما فوق بالتبديل مباشرة بين نماذج GPT وClaude وGemini (بسعر القائمة لواجهة API).' },
           { q: 'كيف أُعِدّ Cline مع نموذج محلي؟', a: 'ثبّت Ollama أو LM Studio، واسحب نموذج برمجة (توصي وثائق Cline بـQwen2.5 Coder أو Llama 3.3 أو DeepSeek Coder V3 أو Codestral)، ثم اختر في Cline إما Ollama أو LM Studio كمزود API — نقطة النهاية الافتراضية لـOllama هي http://localhost:11434، ويقدّم LM Studio واجهة متوافقة مع OpenAI على المنفذ 1234. لا يتطلب أي منهما مفتاح API. استخدم نافذة سياق لا تقل عن 32 ألف رمز؛ غالباً ما تحتاج الجلسات الوكيلية الأكثر كثافة إلى 64 ألف رمز.' },
           { q: 'هل يمكنني استخدام أكثر من أداة من هذه الأدوات في وقت واحد؟', a: 'نعم، ويفعل ذلك كثير من المطورين — على سبيل المثال تشغيل Cline مع نموذج محلي للتعديلات الروتينية منخفضة الحساسية، والتبديل إلى Cursor أو GitHub Copilot للمشكلات الأصعب حيث يساعد نموذج سحابي أقوى. لا يوجد تعارض تقني في تشغيل عدة إضافات في نفس تثبيت VS Code، رغم أن واحدة فقط عادة ما تكون نشطة كوكيل رئيسي لكل جلسة.' },
           { q: 'ما أفضل مساعد برمجة بالذكاء الاصطناعي لمطور فردي بميزانية محدودة؟', a: 'يكلّف Cline مع نموذج محلي (Ollama أو LM Studio) 0 دولار إجمالاً. إذا كنت تريد وصولاً عرضياً إلى نموذج سحابي أقوى دون اشتراك، فإن Cline مع مفتاح API بدفع لكل رمز (OpenAI أو Anthropic أو OpenRouter) يبقي التكلفة متناسبة مع الاستخدام الفعلي بدلاً من رسوم شهرية ثابتة.' },
@@ -3104,7 +3104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'المصادر',
         links: [
-          { url: 'https://cursor.com/pricing', title: 'تسعير Cursor', description: 'صفحة تسعير Cursor الرسمية — فئات Hobby وPro وPro+ وUltra وTeams وEnterprise.' },
+          { url: 'https://cursor.com/pricing', title: 'تسعير Cursor', description: 'صفحة تسعير Cursor الرسمية — الخطط المجانية وPlus وPremium وSuper وUltra وTeams وEnterprise.' },
           { url: 'https://cursor.com/help/account-and-billing/referral-program', title: 'برنامج إحالة Cursor', description: 'الوثائق الرسمية لبرنامج إحالة Cursor محدود الطرح.' },
           { url: 'https://devin.ai/pricing', title: 'تسعير Windsurf/Devin (إعادة توجيه من windsurf.com)', description: 'صفحة تسعير Windsurf، مستضافة الآن تحت devin.ai بعد استحواذ Cognition.' },
           { url: 'https://github.com/features/copilot/plans', title: 'خطط GitHub Copilot', description: 'التسعير الرسمي لـGitHub Copilot — فئات Free وPro وPro+ وMax وBusiness وEnterprise.' },
@@ -3157,7 +3157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mainEntity': [
         { '@type': 'Question', 'name': 'هل Cursor أفضل من GitHub Copilot؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'بالنسبة للعمل الوكيلي متعدد الملفات ومرونة النماذج، يعد Cursor عموماً الخيار الأقوى. GitHub Copilot هو الخيار الأفضل للفرق الموحّدة بالفعل على GitHub وAzure DevOps.' } },
         { '@type': 'Question', 'name': 'هل يوجد مساعد برمجة بالذكاء الاصطناعي مجاني بوضع وكيل؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم. Cline مجاني بالكامل ومفتوح المصدر دون اشتراك — تدفع فقط مقابل رموز واجهة LLM المستخدمة، أو لا شيء مع نموذج محلي عبر Ollama أو LM Studio.' } },
-        { '@type': 'Question', 'name': 'ما الفرق الفعلي بين Windsurf وCursor في 2026؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'حتى أغسطس 2026 يتماثل سعر الأداتين عند 20 دولاراً/الشهر لفئتي Pro. الفرق المتبقي هو سير العمل: يستخدم Windsurf تدفق Cascade، ويستخدم Cursor Composer وCloud Agents.' } },
+        { '@type': 'Question', 'name': 'ما الفرق الفعلي بين Windsurf وCursor في 2026؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تبلغ تكلفة Windsurf Pro 20 دولاراً/الشهر؛ وتتراوح خطط Cursor من 8 دولارات/الشهر (Plus) إلى 200 دولار/الشهر (Ultra)، مع محاسبة Claude وGPT بسعر القائمة لواجهة API في Premium وما فوق. الفرق المتبقي هو سير العمل: يستخدم Windsurf تدفق Cascade، ويستخدم Cursor Composer وCloud Agents.' } },
         { '@type': 'Question', 'name': 'ما هي Bodega One Code وكيف تقارن بـCursor أو Cline؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code هي بيئة تطوير محلية أولاً بالذكاء الاصطناعي، حالياً في مرحلة تجريبية عامة، تجمع محرراً مبنياً على Monaco ودردشة ذكاء اصطناعي ووكيل برمجة مستقل في تطبيق واحد بدلاً من كونها إضافة. فئة Personal فيها مجانية دائماً للاستخدام غير التجاري على جهاز واحد؛ وPro شراء لمرة واحدة لم يُعلن سعره الدقيق بعد.' } },
       ],
     },
@@ -3174,7 +3174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription:
       'Cursor vs Windsurf vs GitHub Copilot vs Cline을 에이전트 모드, 가격, 모델 접근성 기준으로 비교. 가격은 각 공식 사이트에서 확인했습니다.',
     publishDate: '2026-08-27',
-    dateModified: '2026-09-03',
+    dateModified: '2026-10-17',
     readTime: '13분 읽기',
     educationalLevel: 'Intermediate',
     audience: '에이전트 모드가 있는 AI 코딩 어시스턴트를 선택하려는 개발자로, Cursor, Windsurf, GitHub Copilot, Cline을 가격, 모델 접근성, 워크플로 적합성 기준으로 비교하고자 하는 분.',
@@ -3190,15 +3190,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     current_hardware_mentioned: ['NVIDIA RTX GPUs', 'Apple Silicon'],
     leadAnswerBlock:
-      '**Cursor는 2026년 대부분의 전문 개발자에게 가장 우수한 종합형 에이전틱 AI 코딩 어시스턴트이며, GitHub Copilot은 이미 GitHub 또는 Azure로 표준화된 팀에 더 안전한 기본 선택지이고, Cline은 자체 API 키를 사용하거나 로컬 모델을 실행할 의향이 있다면 최고의 무료 옵션입니다.** Windsurf는 이제 Cursor Pro와 동일한 가격(2026년 8월 기준 월 20달러, 연초의 15달러에서 인상)이 되어 더 이상 가격으로 우위를 점하지 못합니다 — Cascade 에이전트 흐름을 특별히 선호하는 경우에만 선택하세요. 기존 에디터에 덧붙인 확장 프로그램이 아니라 에이전트 모드가 내장된 통합형 로컬 퍼스트 IDE를 원한다면 Bodega One Code를 주목할 만하지만, 아직 오픈 베타 단계이며 Pro 가격이 확정되지 않았습니다. 모든 항목에서 승리하는 단일 도구는 없습니다. 마케팅이 아닌 워크플로를 기준으로 선택하십시오.',
+      '**Cursor는 2026년 대부분의 전문 개발자에게 가장 우수한 종합형 에이전틱 AI 코딩 어시스턴트이며, GitHub Copilot은 이미 GitHub 또는 Azure로 표준화된 팀에 더 안전한 기본 선택지이고, Cline은 자체 API 키를 사용하거나 로컬 모델을 실행할 의향이 있다면 최고의 무료 옵션입니다.** Windsurf Pro(월 20달러, 연초의 15달러에서 인상)는 이제 Cursor Plus(월 8달러, Grok 모델 전용)와 Cursor Premium(월 30달러, Claude와 GPT를 API 정가로 추가) 사이에 있어 가격이 더 이상 결정 요인이 아닙니다 — Cascade 에이전트 흐름을 특별히 선호하는 경우에만 선택하세요. 기존 에디터에 덧붙인 확장 프로그램이 아니라 에이전트 모드가 내장된 통합형 로컬 퍼스트 IDE를 원한다면 Bodega One Code를 주목할 만하지만, 아직 오픈 베타 단계이며 Pro 가격이 확정되지 않았습니다. 모든 항목에서 승리하는 단일 도구는 없습니다. 마케팅이 아닌 워크플로를 기준으로 선택하십시오.',
     quickAnswerTop: {
       ko: {
         question: '2026년 최고의 에이전트 모드를 갖춘 AI 코딩 어시스턴트는 무엇입니까?',
         answer:
-          'Cursor는 가장 성숙한 에이전트 모드(Composer 및 Cloud Agents)를 갖추고 있으며 VS Code 포크 내에서 GPT, Claude, Gemini 모델을 지원하지만, 월 20달러 기본 요금 위에 사용량 기반 크레딧 시스템이 있어 월 비용이 변동됩니다. Windsurf의 Cascade 에이전트는 비슷한 수준의 성능을 보이며 이제 Cursor와 동일한 월 20달러 Pro 요금제입니다. GitHub Copilot의 코딩 에이전트는 GitHub 네이티브 워크플로(이슈, PR, Actions) 안에서 가장 잘 작동합니다. Cline은 자체 모델과 API 키를 사용하므로 에이전트 모드에 상한이 없으며 — 0달러의 로컬 모델도 포함 — 다만 워크플로는 직접 구성해야 합니다.',
+          'Cursor는 가장 성숙한 에이전트 모드(Composer 및 Cloud Agents)를 갖추고 있으며 VS Code 포크 내에서 GPT, Claude, Gemini 모델을 지원하지만, 2026년 10월 12일부터 요금제가 월 Plus 8달러, Premium 30달러, Super 100달러, Ultra 200달러이며 Claude와 GPT 사용량은 API 정가로 별도 청구되어 월 비용이 변동됩니다. Windsurf의 Cascade 에이전트는 비슷한 수준의 성능을 보이며 Pro는 월 20달러입니다. GitHub Copilot의 코딩 에이전트는 GitHub 네이티브 워크플로(이슈, PR, Actions) 안에서 가장 잘 작동합니다. Cline은 자체 모델과 API 키를 사용하므로 에이전트 모드에 상한이 없으며 — 0달러의 로컬 모델도 포함 — 다만 워크플로는 직접 구성해야 합니다.',
         bullets: [
-          'Cursor: Composer + Cloud Agents, 월 20달러 Pro 기본 요금 + 사용량 기반 크레딧',
-          'Windsurf: Cascade 에이전트, Pro 월 20달러(2026년 3월 15달러에서 인상) — Cursor와 가격 동일',
+          'Cursor: Composer + Cloud Agents, 월 8달러부터(Plus, Grok 전용); 월 30달러 Premium은 Claude와 GPT를 API 정가로 추가',
+          'Windsurf: Cascade 에이전트, Pro 월 20달러(2026년 3월 15달러에서 인상)',
           'GitHub Copilot: GitHub 이슈/PR과 연동된 코딩 에이전트, Pro 월 10달러, Pro+ 월 39달러, Max 월 100달러',
           'Cline: 오픈소스 확장 프로그램, 그 자체는 0달러 — 비용은 연결한 LLM API에만 좌우되며, Ollama/LM Studio로 로컬 모델을 쓰면 0달러',
           'Bodega One Code: 에이전트가 내장된 로컬 퍼스트 데스크톱 IDE, 오픈 베타 — Personal은 영구 무료, Pro는 가격 미정의 일회성 구매',
@@ -3240,8 +3240,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '네 도구 모두 여러 파일을 수정하고 명령을 대신 실행할 수 있습니다(에이전트 모드). 실제 차이는 가격, 사용할 수 있는 AI 모델, 코드가 내 컴퓨터를 벗어나야 하는지 여부입니다.' },
         ],
         items: [
-          '**Cursor는 가장 성숙한 에이전트 모드와 최대의 모델 유연성**(GPT, Claude, Gemini)을 VS Code 포크 안에서 제공하지만, 월 20달러 Pro 기본 요금 위의 사용량 기반 크레딧으로 월 비용이 변동됩니다.',
-          '**Windsurf는 2026년에 가격 우위를 잃었습니다.** Pro 요금제는 2026년 3월 월 15달러에서 월 20달러로 인상되어 Cursor Pro와 동일한 가격이 되었습니다. Cascade 에이전트 흐름을 선호한다면 여전히 실질적인 차별화 요소입니다.',
+          '**Cursor는 가장 성숙한 에이전트 모드와 최대의 모델 유연성**(GPT, Claude, Gemini)을 VS Code 포크 안에서 제공하지만, Claude와 GPT 사용량이 요금제 외에 API 정가로 별도 청구되어(Premium은 월 30달러부터) 월 비용이 변동됩니다.',
+          '**Windsurf는 2026년에 가격 우위를 잃었습니다.** Pro 요금제는 2026년 3월 월 15달러에서 월 20달러로 인상되어 이제 Cursor Plus(월 8달러)와 Premium(월 30달러) 사이에 있습니다. Cascade 에이전트 흐름을 선호한다면 여전히 실질적인 차별화 요소입니다.',
           '**GitHub Copilot은 2026년 6월 1일 사용량 기반 AI 크레딧 과금으로 전환했습니다.** Pro는 월 10달러(AI 크레딧 15달러 포함)이고, Pro+는 월 39달러, 새로 생긴 Max는 월 100달러입니다. 이미 GitHub나 Azure DevOps 안에 있는 팀에게 기본 선택지입니다.',
           '**Cline 자체는 0달러**입니다 — VS Code/JetBrains용 오픈소스 확장 프로그램입니다. 사용한 LLM API 토큰(OpenAI, Anthropic, OpenRouter 등)에 대해서만 비용을 지불하며, Ollama나 LM Studio로 로컬 모델을 연결하면 아예 비용이 들지 않습니다.',
           '**네 공급업체 모두 2026년 8월 기준 표준적이고 확인 가능한 공개 제휴 프로그램이 없습니다** — 각 업체가 실제로 제공하는 것(추천 크레딧, 기술 파트너십, 또는 아무것도 없음)은 "제휴 프로그램 현황" 섹션을 참고하십시오.',
@@ -3270,8 +3270,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '빠른 사실',
         content: 'cursor.com/pricing, windsurf.com(Cognition 인수 후 devin.ai/pricing으로 리디렉션), github.com/features/copilot/plans, cline.bot/pricing, bodegaone.ai/pricing에서 직접 확인했으며 독립적인 가격 추적 사이트와 교차 확인했습니다. 개발 도구 구독 가격은 요금제 개편에 따라 변경됩니다 — 구독 전 공급업체 사이트에서 현재 요금을 확인하십시오. 모든 가격은 미국 달러 기준이며, 이들 구독 서비스는 별도의 원화 정가를 공시하지 않습니다 — 결제 시 현지 통화가 표시될 수 있지만 표시된 USD 요금이 전 세계 공통 기준입니다.',
         items: [
-          '**Cursor:** 무료 Hobby 요금제; Pro, Pro+, Ultra는 모두 월 20달러 기본 요금을 공유하며 포함 사용량 배수가 다릅니다(Pro+는 약 3배, Ultra는 약 20배). 포함 사용량 소진 후에는 사용량 기반 과금이 적용됩니다. Teams는 사용자당 월 40달러부터.',
-          '**Windsurf:** 가벼운 일일/주간 한도가 있는 무료 요금제; Pro 월 20달러(2026년 3월 15달러에서 인상, Cursor와 동일); Max 월 200달러; Teams 사용자당 월 40달러; Enterprise는 별도 견적. 크레딧 풀 시스템은 2026년 3월 일일/주간 한도제로 대체되었습니다.',
+          '**Cursor:** 사용량이 제한된 무료 요금제; 2026년 10월 12일부터 Plus 월 8달러(Grok 모델 전용), Premium 30달러(Plus의 4배 사용량, Claude·GPT·Gemini를 API 정가로 추가), Super 100달러(15배), Ultra 200달러(50배); Teams는 좌석당 월 30달러, 100달러 또는 200달러. 월 20달러 Pro 요금제는 신규 고객에게 닫힌 레거시 요금제입니다.',
+          '**Windsurf:** 가벼운 일일/주간 한도가 있는 무료 요금제; Pro 월 20달러(2026년 3월 15달러에서 인상); Max 월 200달러; Teams 사용자당 월 40달러; Enterprise는 별도 견적. 크레딧 풀 시스템은 2026년 3월 일일/주간 한도제로 대체되었습니다.',
           '**GitHub Copilot:** 무료 요금제(월 2,000회 완성); Pro 월 10달러(AI 크레딧 15달러 포함); Pro+ 월 39달러(70달러 포함); Max 월 100달러(200달러 포함); Business 사용자당 월 19달러(AI 크레딧 1,900); Enterprise 사용자당 월 39달러(AI 크레딧 3,900). 2026년 6월 1일 사용량 기반 AI 크레딧 과금으로 전환.',
           '**Cline:** 확장 프로그램 자체는 무료, 오픈소스, MIT 라이선스. 실제 비용은 연결한 LLM API에 따라 달라지며(OpenAI, Anthropic, Google, OpenRouter, AWS Bedrock, GCP Vertex, Groq, Cerebras, DeepSeek 등), Ollama나 LM Studio로 로컬 모델을 쓰면 0달러 — 둘 다 API 키 없이 작동합니다.',
           '**Bodega One Code:** Personal 요금제는 영구 무료입니다(기기 1대, 비상업적 용도, 워크스페이스 1개). Pro는 구독이 아닌 일회성 구매로, 상업적 사용 권한, 두 번째 기기, 무제한 워크스페이스를 추가하지만 공급업체는 정식 출시 전까지 가격을 "TBD"로 표시하고 있습니다. Enterprise는 별도 견적입니다. 상업적 사용을 포함해 앱 전체가 오픈 베타 기간 동안 무료입니다.',
@@ -3283,9 +3283,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '편집자 선택: Cursor',
         sponsoredSlot: true,
         content:
-          '**Cursor는 가장 성숙한 에이전트 모드와 가장 폭넓은 모델 선택지를 원하는 대다수 전문 개발자에게 적합한 선택입니다.** Composer와 Cloud Agents는 다른 대안보다 적은 수동 개입으로 여러 파일에 걸친 다단계 변경을 처리하며, 동일한 에디터 안에서 GPT, Claude, Gemini 모델을 전환할 수 있습니다. 다만 비용 예측 가능성이 트레이드오프입니다 — 월 20달러 Pro 기본 요금은 정해진 사용량만 포함하며, 강도 높은 에이전트 세션은 추가 사용량 기반 과금을 유발할 수 있습니다. 원시 에이전트 능력보다 GitHub 네이티브 워크플로 통합이 더 중요하다면 대신 GitHub Copilot을, 0달러가 절대 조건이라면 로컬 모델을 사용하는 Cline을 선택하세요.',
+          '**Cursor는 가장 성숙한 에이전트 모드와 가장 폭넓은 모델 선택지를 원하는 대다수 전문 개발자에게 적합한 선택입니다.** Composer와 Cloud Agents는 다른 대안보다 적은 수동 개입으로 여러 파일에 걸친 다단계 변경을 처리하며, 동일한 에디터 안에서 GPT, Claude, Gemini 모델을 전환할 수 있습니다. 다만 비용 예측 가능성이 트레이드오프입니다 — 유료 요금제는 주간 사용량 풀을 공유하며, Claude와 GPT 사용량은 선불 크레딧에서 API 정가로 별도 청구됩니다. 원시 에이전트 능력보다 GitHub 네이티브 워크플로 통합이 더 중요하다면 대신 GitHub Copilot을, 0달러가 절대 조건이라면 로컬 모델을 사용하는 Cline을 선택하세요.',
         callouts: [
-          { type: 'warning', text: 'Cursor의 사용 비용에 유의하십시오. 월 20달러라는 Pro 가격은 구독료일 뿐, 반드시 월 최대 지출액을 의미하지는 않습니다 — 포함 사용량을 소진하면 강도 높은 에이전트 세션이 추가 사용량 기반 과금을 유발할 수 있습니다. 가볍게 사용하는 경우 대개 월 20달러 이내에 머무르지만, 에이전트를 집중적으로 사용하는 사용자와 팀은 초과 비용을 예산에 반영해야 합니다.' },
+          { type: 'warning', text: 'Cursor의 사용 비용에 유의하십시오. 요금제 가격은 월 최대 지출액이 아닙니다 — Premium 이상에서는 Claude와 GPT 사용량이 선불 크레딧에서 API 정가로 청구되므로 강도 높은 에이전트 세션은 월 30달러를 크게 넘을 수 있습니다. Plus(월 8달러)는 Grok 모델만 포함하므로 이런 부담이 없습니다.' },
           { type: 'note', text: 'PromptQuorum은 Cursor, Windsurf, GitHub Copilot, Cline의 어떤 제휴 프로그램에도 가입되어 있지 않습니다. 이 페이지의 링크는 제휴 관계가 없는 단순 제품 링크이며 어떠한 수수료도 발생시키지 않습니다 — 각 업체가 실제로 제공하는 내용은 아래 "제휴 프로그램 현황" 섹션을 참고하십시오.' },
         ],
         affiliateLinks: [
@@ -3302,7 +3302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '도구': '[Cursor](https://cursor.com)',
             '최적 용도': '에이전틱 다중 파일 편집',
-            '가격': '무료 Hobby / 월 20달러+ Pro–Ultra',
+            '가격': '무료 / Plus 월 8달러 / Premium 월 30달러 / Ultra 최대 월 200달러',
             '모델 접근성': 'GPT / Claude / Gemini(다중 모델)',
             '에이전트 모드': 'Composer + Cloud Agents',
             'IDE': 'Cursor(VS Code 포크)',
@@ -3384,7 +3384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor: 에이전틱 다중 파일 작업에 최적',
         content: [
           '**Cursor는 에이전트 모드를 중심으로 만들어진 VS Code 포크로, 여러 파일·다단계 변경을 위한 대표 기능으로 Composer와 Cloud Agents를 제공합니다.** 동일한 에디터 안에서 GPT, Claude, Gemini 모델을 지원하므로 단일 공급업체의 모델에 묶이지 않습니다.',
-          '2026년 8월 기준, Cursor의 Hobby 요금제는 무료이며 에이전트 요청에 제한이 있습니다. Pro, Pro+, Ultra는 모두 월 20달러의 기본 구독을 공유하며 포함 사용량 배수로 구분됩니다(Pro+는 Pro 에이전트 한도의 약 3배, Ultra는 약 20배). 포함 사용량을 소진하면 추가 사용량은 필요에 따라 과금됩니다. Teams 가격은 Standard 요금제 기준 사용자당 월 40달러부터 시작하며, Premium 요금제는 Standard 에이전트 한도의 5배입니다. Enterprise는 별도 견적입니다.',
+          'Cursor에는 사용량이 제한된 무료 요금제가 있습니다. 2026년 10월 12일부터 유료 요금제는 Plus(월 8달러, Grok 모델 전용), Premium(30달러, Plus의 4배 사용량), Super(100달러, 15배), Ultra(200달러, 50배)이며 Cursor와 Grok 모델이 주간 사용량 풀을 공유합니다. Claude, GPT, Gemini는 Premium 이상에서 선불 크레딧에서 API 정가로 청구됩니다. Teams 좌석은 월 30달러, 100달러 또는 200달러입니다. 월 20달러 Pro 요금제는 신규 고객에게 닫힌 레거시 요금제입니다. Enterprise는 별도 견적입니다.',
           'Cursor는 제한적으로 배포되는 추천 프로그램을 운영하고 있습니다(일반적으로 공개된 제휴 프로그램이 아닙니다): 자격을 갖춘 추천인은 유료 고객을 추천할 때마다 25달러의 사용 크레딧을 받으며(주기당 최대 10건), 추천받은 이용자는 첫 달 50% 할인을 받습니다. 이는 공개적이고 누구나 이용할 수 있는 수수료 프로그램이 아닙니다 — "제휴 프로그램 현황" 섹션을 참고하십시오.',
         ],
       },
@@ -3392,7 +3392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'windsurf',
         title: 'Windsurf: Cascade 에이전트, 이제는 Cognition 소속',
         content: [
-          '**Windsurf는 Cascade 에이전트 흐름을 실행하며, 2026년 8월 기준 Cursor Pro와 동일한 가격입니다** — Pro 요금제는 2026년 3월 월 15달러에서 월 20달러로 인상되어, 이전까지 가장 명확했던 차별화 요소(더 낮은 가격)를 잃었습니다.',
+          '**Windsurf는 Cascade 에이전트 흐름을 실행하며, Pro 요금제(월 20달러)는 이제 Cursor Plus(8달러)와 Cursor Premium(30달러) 사이에 있습니다** — 2026년 3월 월 15달러에서 월 20달러로 인상되었습니다.',
           'Windsurf의 무료 요금제에는 무제한 Tab 자동 완성과 Cascade 에이전트 사용을 위한 가벼운 일일/주간 한도가 포함됩니다 — 한도에 도달하기 전까지 약 2~3일간의 활발한 에이전틱 코딩을 지원합니다. 2026년 3월, Windsurf는 기존의 월간 크레딧 풀 시스템(Pro 기준 월 500크레딧)을 자동 갱신되는 일일·주간 한도로 대체했습니다. Max는 월 200달러; Teams는 사용자당 월 40달러; Enterprise는 별도 견적입니다.',
           'Windsurf는 현재 자율 코딩 에이전트 Devin을 만든 Cognition 소속으로, Cognition이 Windsurf의 팀, 제품, 브랜드를 인수했습니다. windsurf.com은 현재 devin.ai의 가격 페이지로 리디렉션되며, Devin은 Windsurf 에디터를 완전히 대체하기보다 직접 통합되고 있습니다.',
           'Windsurf의 추천 프로그램은 추천 링크를 통해 신규 가입자에게 250개의 무료 flex 크레딧을 제공합니다 — 이는 수수료 기반 제휴 프로그램이 아니라 추천 인센티브입니다.',
@@ -3477,9 +3477,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: 'Cursor가 GitHub Copilot보다 좋습니까?', a: '에이전틱 다중 파일 작업과 모델 유연성 측면에서는 일반적으로 Cursor가 더 강력한 선택입니다 — GPT, Claude, Gemini를 지원하며 Composer/Cloud Agents가 더 적은 수동 개입으로 대규모 리팩터링을 처리합니다. GitHub Copilot은 이미 GitHub 이슈, 풀 리퀘스트, Azure DevOps로 표준화된 팀에게 특히 더 나은 선택입니다. 코딩 에이전트가 별도의 에디터가 아니라 그 워크플로에 직접 작동하기 때문입니다.' },
-          { q: '에이전트 모드가 있는 무료 AI 코딩 어시스턴트가 있습니까?', a: '있습니다. Cline은 구독 요금제가 전혀 없는 완전 무료 오픈소스입니다 — 사용한 LLM API 토큰 비용만 지불하거나, Ollama나 LM Studio로 로컬 모델을 연결하면 비용이 전혀 들지 않습니다. Cursor와 GitHub Copilot 모두 제한적인 무료 요금제(Cursor의 Hobby 요금제와 월 2,000회 완성이 포함된 Copilot 무료 요금제)가 있지만, 두 곳 모두 에이전트 모드 사용에는 상한이 있습니다.' },
-          { q: '2026년 Windsurf와 Cursor의 실질적인 차이는 무엇입니까?', a: '2026년 8월 기준 두 회사의 Pro 요금제는 월 20달러로 가격이 동일합니다 — Windsurf는 2026년 3월 15달러에서 20달러로 인상되며 예전의 주요 우위를 상실했습니다. 남은 차이는 워크플로입니다: Windsurf는 Cascade 에이전트 흐름을, Cursor는 Composer와 Cloud Agents를 사용합니다. 가격이 아니라 둘 다 사용해본 뒤 선호하는 에이전트 사용 경험을 기준으로 선택하십시오.' },
-          { q: 'GitHub Copilot은 Claude나 Gemini 모델을 지원합니까?', a: 'GitHub Copilot Pro+(월 39달러)와 Max(월 100달러)는 Claude Opus를 포함한 프리미엄 모델 접근을 포함합니다. 기본 Free와 Pro(월 10달러) 요금제는 모델 선택이 더 제한적입니다. 이는 Pro 사용자가 GPT, Claude, Gemini 모델을 직접 전환할 수 있는 Cursor보다 좁은 범위입니다.' },
+          { q: '에이전트 모드가 있는 무료 AI 코딩 어시스턴트가 있습니까?', a: '있습니다. Cline은 구독 요금제가 전혀 없는 완전 무료 오픈소스입니다 — 사용한 LLM API 토큰 비용만 지불하거나, Ollama나 LM Studio로 로컬 모델을 연결하면 비용이 전혀 들지 않습니다. Cursor와 GitHub Copilot 모두 제한적인 무료 요금제(Cursor의 무료 요금제와 월 2,000회 완성이 포함된 Copilot 무료 요금제)가 있지만, 두 곳 모두 에이전트 모드 사용에는 상한이 있습니다.' },
+          { q: '2026년 Windsurf와 Cursor의 실질적인 차이는 무엇입니까?', a: 'Windsurf Pro는 월 20달러입니다(2026년 3월 15달러에서 인상). Cursor는 이제 Plus 월 8달러(Grok 모델 전용), Premium 30달러, Super 100달러, Ultra 200달러이며 Premium 이상에서 Claude와 GPT는 API 정가로 청구됩니다. 남은 차이는 워크플로입니다: Windsurf는 Cascade 에이전트 흐름을, Cursor는 Composer와 Cloud Agents를 사용합니다. 가격이 아니라 둘 다 사용해본 뒤 선호하는 에이전트 사용 경험을 기준으로 선택하십시오.' },
+          { q: 'GitHub Copilot은 Claude나 Gemini 모델을 지원합니까?', a: 'GitHub Copilot Pro+(월 39달러)와 Max(월 100달러)는 Claude Opus를 포함한 프리미엄 모델 접근을 포함합니다. 기본 Free와 Pro(월 10달러) 요금제는 모델 선택이 더 제한적입니다. 이는 Premium 이상 사용자가 GPT, Claude, Gemini 모델을 직접 전환할 수 있는(API 정가로 청구) Cursor보다 좁은 범위입니다.' },
           { q: 'Cline을 로컬 모델로 설정하려면 어떻게 해야 합니까?', a: 'Ollama나 LM Studio를 설치하고 코딩 모델을 내려받으세요(Cline 문서는 Qwen2.5 Coder, Llama 3.3, DeepSeek Coder V3, Codestral을 권장합니다). 그런 다음 Cline에서 API 공급자로 Ollama나 LM Studio를 선택하세요 — Ollama의 기본 엔드포인트는 http://localhost:11434이며, LM Studio는 포트 1234에서 OpenAI 호환 API를 제공합니다. 둘 다 API 키가 필요 없습니다. 최소 32K 토큰 컨텍스트 윈도를 사용하십시오. 더 강도 높은 에이전틱 세션은 보통 64K가 필요합니다.' },
           { q: '이 도구들을 여러 개 동시에 사용할 수 있습니까?', a: '가능하며 많은 개발자가 그렇게 하고 있습니다 — 예를 들어 일상적이고 민감도가 낮은 수정에는 로컬 모델을 사용하는 Cline을 쓰고, 더 강력한 클라우드 모델이 도움이 되는 어려운 문제에는 Cursor나 GitHub Copilot으로 전환하는 식입니다. 같은 VS Code 설치에서 여러 확장 프로그램을 실행하는 데 기술적 충돌은 없지만, 보통 세션당 주 에이전트로 활성화되는 것은 하나뿐입니다.' },
           { q: '예산이 제한된 1인 개발자에게 가장 좋은 AI 코딩 어시스턴트는 무엇입니까?', a: '로컬 모델(Ollama 또는 LM Studio)과 짝지은 Cline은 총비용이 0달러입니다. 구독 없이 가끔 더 강력한 클라우드 모델에 접근하고 싶다면, 토큰당 과금되는 API 키(OpenAI, Anthropic, OpenRouter)를 사용하는 Cline은 고정 월 요금이 아니라 실제 사용량에 비례한 비용을 유지해줍니다.' },
@@ -3493,7 +3493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: '출처',
         links: [
-          { url: 'https://cursor.com/pricing', title: 'Cursor 가격', description: 'Hobby, Pro, Pro+, Ultra, Teams, Enterprise 요금제를 다루는 Cursor 공식 가격 페이지.' },
+          { url: 'https://cursor.com/pricing', title: 'Cursor 가격', description: '무료, Plus, Premium, Super, Ultra, Teams, Enterprise 요금제를 다루는 Cursor 공식 가격 페이지.' },
           { url: 'https://cursor.com/help/account-and-billing/referral-program', title: 'Cursor 추천 프로그램', description: 'Cursor의 제한적으로 배포되는 추천 프로그램에 관한 공식 문서.' },
           { url: 'https://devin.ai/pricing', title: 'Windsurf/Devin 가격(windsurf.com 리디렉션)', description: 'Cognition 인수 이후 devin.ai 아래 호스팅되고 있는 Windsurf 가격 페이지.' },
           { url: 'https://github.com/features/copilot/plans', title: 'GitHub Copilot 요금제', description: 'Free, Pro, Pro+, Max, Business, Enterprise 요금제를 다루는 GitHub Copilot 공식 가격.' },
@@ -3546,7 +3546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mainEntity': [
         { '@type': 'Question', 'name': 'Cursor가 GitHub Copilot보다 좋습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '에이전틱 다중 파일 작업과 모델 유연성 측면에서는 일반적으로 Cursor가 더 강력합니다. GitHub Copilot은 이미 GitHub와 Azure DevOps로 표준화된 팀에 더 적합합니다.' } },
         { '@type': 'Question', 'name': '에이전트 모드가 있는 무료 AI 코딩 어시스턴트가 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '있습니다. Cline은 구독 없이 완전 무료 오픈소스입니다 — 사용한 LLM API 토큰 비용만 지불하거나, Ollama나 LM Studio로 로컬 모델을 쓰면 무료입니다.' } },
-        { '@type': 'Question', 'name': '2026년 Windsurf와 Cursor의 실질적인 차이는 무엇입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '2026년 8월 기준 두 Pro 요금제 모두 월 20달러로 동일합니다. 남은 차이는 워크플로로, Windsurf는 Cascade를, Cursor는 Composer와 Cloud Agents를 사용합니다.' } },
+        { '@type': 'Question', 'name': '2026년 Windsurf와 Cursor의 실질적인 차이는 무엇입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Windsurf Pro는 월 20달러이며, Cursor 요금제는 월 8달러(Plus)부터 월 200달러(Ultra)까지이고 Premium 이상에서 Claude와 GPT는 API 정가로 청구됩니다. 남은 차이는 워크플로로, Windsurf는 Cascade를, Cursor는 Composer와 Cloud Agents를 사용합니다.' } },
         { '@type': 'Question', 'name': 'Bodega One Code는 무엇이며 Cursor나 Cline과 어떻게 비교됩니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bodega One Code는 현재 오픈 베타 중인 로컬 퍼스트 AI IDE로, Monaco 기반 에디터, AI 채팅, 자율 코딩 에이전트를 기존 에디터에 추가하는 확장 프로그램이 아니라 하나의 애플리케이션에 결합했습니다. Personal 요금제는 기기 1대에서 비상업적 용도로 영구 무료이며, Pro는 정확한 가격이 아직 발표되지 않은 일회성 구매입니다.' } },
       ],
     },
