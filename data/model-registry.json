@@ -673,6 +673,42 @@
     {
       "company": "Alibaba / Qwen",
       "family": "Qwen",
+      "model": "Qwen3.5 4B",
+      "type": "open-weight",
+      "release_date": "2026-03",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ollama.com/library/qwen3.5",
+      "verified_date": "2026-10-17",
+      "notes": "Small-class variant (qwen3.5:4b, 3.3-4.0 GB on Ollama). Ollama's Qwen3.6 listing shows only 27b/35b tags, so no phone-class Qwen3.6 successor exists yet."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3.5 9B",
+      "type": "open-weight",
+      "release_date": "2026-03",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ollama.com/library/qwen3.5",
+      "verified_date": "2026-10-17",
+      "notes": "Small-class variant (qwen3.5:9b, 6.6-7.6 GB on Ollama). Ollama's Qwen3.6 listing shows only 27b/35b tags, so no 9B-class Qwen3.6 successor exists yet."
+    },
+    {
+      "company": "ELYZA, Inc.",
+      "family": "ELYZA",
+      "model": "Llama-3-ELYZA-JP-8B",
+      "type": "open-weight",
+      "release_date": "2024-06",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/elyza/Llama-3-ELYZA-JP-8B-GGUF",
+      "verified_date": "2026-10-17",
+      "notes": "Japanese-adapted Llama 3 8B, Meta Llama 3 Community License. Q4_K_M GGUF is 4.92 GB."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
       "model": "Qwen3 1.7B",
       "type": "open-weight",
       "release_date": "2025-04",
