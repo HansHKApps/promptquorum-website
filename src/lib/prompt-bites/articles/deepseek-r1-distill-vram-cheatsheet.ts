@@ -4,15 +4,15 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2027-04-17',
     theme: 'Quantization & VRAM',
     heroImage: '/images/deepseek-r1-distill-vram-cheatsheet-overview-hero-en.webp',
     type: 'reference',
     title: 'DeepSeek-R1 Distill VRAM Cheatsheet (2026)',
     seoTitle: 'DeepSeek-R1 Distill VRAM Cheatsheet 2026: Every Quant',
-    metaDescription: 'Every DeepSeek-R1 distill (1.5B–70B) by quantization — exact VRAM, model file size, and minimum GPU. The bookmark-it reference table. Q4_K_M, Q8, FP16.',
+    metaDescription: 'DeepSeek-R1 14B needs ~9.5 GB VRAM at Q4_K_M and fits a 16 GB card. Every distill (1.5B–70B) by quant: Q8_0, FP16, file size and minimum GPU.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-17',
     educationalLevel: 'Intermediate',
     audience: 'Local LLM users sizing a GPU for a DeepSeek-R1 distill across quantization levels',
     affiliateDisclosure: true,
@@ -20,28 +20,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-deepseek-distill-for-your-gpu'],
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
-    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB'],
+    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
     leadAnswerBlock: '**Every DeepSeek-R1 distill, by quantization: 1.5B fits 4 GB, 7B/8B fit 8 GB, 14B fits 16 GB, 32B fits 24 GB, and 70B needs dual-GPU — all at the Ollama default Q4_K_M.** Q8_0 roughly doubles the VRAM; FP16 roughly quadruples the Q4_K_M file size. This is the bookmark-it table for matching a distill to a card.',
     quickAnswerTop: {
       en: {
         question: 'How much VRAM does each DeepSeek-R1 distill need?',
-        answer: 'At Q4_K_M (Ollama default): 1.5B ≈ 4 GB, 7B ≈ 5.5 GB, 8B ≈ 6 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 42 GB. Q8_0 is about 2× the Q4_K_M size and FP16 about 4×, so the 32B at FP16 needs a 64 GB-class setup.',
+        answer: 'At Q4_K_M (Ollama default): 1.5B ≈ 1.6 GB, 7B ≈ 5.5 GB, 8B ≈ 6 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 44 GB. Q8_0 is about 2× the Q4_K_M size and FP16 about 4×, so the 32B at FP16 needs a 80 GB-class setup.',
         bullets: [
-          '1.5B: ~1.1 GB file, ~4 GB VRAM (or CPU) at Q4_K_M',
+          '1.5B: ~1.1 GB file, ~1.6 GB VRAM (or CPU) at Q4_K_M',
           '7B: ~4.7 GB file, ~5.5 GB VRAM — RTX 3060 12GB',
           '14B: ~9 GB file, ~9.5 GB VRAM — RTX 4060 Ti 16GB',
-          '32B: ~19 GB file, ~20.5 GB VRAM — RTX 4090 24GB (tight)',
-          '70B: ~40 GB file, ~42 GB VRAM — dual-GPU or 48 GB',
+          '32B: ~20 GB file, ~20.5 GB VRAM — RTX 4090 24GB (tight)',
+          '70B: ~43 GB file, ~44 GB VRAM — dual-GPU or 48 GB',
           'Rule: Q8_0 ≈ 2× Q4_K_M; FP16 ≈ 4× Q4_K_M',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Q4_K_M (Ollama default) VRAM: 1.5B ~4 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~42 GB.',
+          'Q4_K_M (Ollama default) VRAM: 1.5B ~1.6 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~44 GB.',
           'Q8_0 is roughly 2× the Q4_K_M size; FP16 is roughly 4× the Q4_K_M file size.',
           'The 14B at Q4_K_M (~9.5 GB) is the sweet spot — fits a 16 GB card with context headroom.',
           'The 32B at Q4_K_M (~20.5 GB) is tight on a 24 GB RTX 4090; drop to a smaller quant for longer context.',
@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'DeepSeek-R1 distills need roughly 0.6 GB VRAM per billion parameters at Q4_K_M — 7B ≈ 5.5 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 42 GB.',
+            text: 'DeepSeek-R1 distills need roughly 0.6 GB VRAM per billion parameters at Q4_K_M — 7B ≈ 5.5 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 44 GB.',
           },
           {
             type: 'plain-terms',
@@ -66,12 +66,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', 'Min GPU (Q4_K_M)'],
         rows: [
-          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~4 GB', 'Q8_0 (VRAM)': '~5 GB', 'FP16 (VRAM)': '~6 GB', 'Min GPU (Q4_K_M)': 'Any 4 GB GPU / CPU' },
-          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~9.5 GB', 'FP16 (VRAM)': '~16 GB', 'Min GPU (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~10 GB', 'FP16 (VRAM)': '~17 GB', 'Min GPU (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~16 GB', 'FP16 (VRAM)': '~29 GB', 'Min GPU (Q4_K_M)': 'RTX 4060 Ti 16GB' },
-          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~35 GB', 'FP16 (VRAM)': '~64 GB', 'Min GPU (Q4_K_M)': 'RTX 4090 24GB (tight)' },
-          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~42 GB', 'Q8_0 (VRAM)': '~74 GB', 'FP16 (VRAM)': '~140 GB', 'Min GPU (Q4_K_M)': 'Dual-GPU / 48 GB' },
+          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~1.6 GB', 'Q8_0 (VRAM)': '~2.5 GB', 'FP16 (VRAM)': '~4.2 GB', 'Min GPU (Q4_K_M)': 'Any 4 GB GPU / CPU' },
+          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~8.7 GB', 'FP16 (VRAM)': '~15.6 GB', 'Min GPU (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~9 GB', 'FP16 (VRAM)': '~16.6 GB', 'Min GPU (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~17 GB', 'FP16 (VRAM)': '~31 GB', 'Min GPU (Q4_K_M)': 'RTX 4060 Ti 16GB' },
+          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~36 GB', 'FP16 (VRAM)': '~67 GB', 'Min GPU (Q4_K_M)': 'RTX 4090 24GB (tight)' },
+          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~44 GB', 'Q8_0 (VRAM)': '~76 GB', 'FP16 (VRAM)': '~142 GB', 'Min GPU (Q4_K_M)': 'Dual-GPU / 48 GB' },
         ],
         note: 'Files install at Q4_K_M by default: `ollama run deepseek-r1:14b`. The full 671B R1 is excluded — it requires ~376–404 GB at Q4 and is datacenter-only.',
         affiliateLinks: [
@@ -86,7 +86,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**Use Q4_K_M for almost everything** — it is the Ollama default and keeps reasoning quality high while fitting the most models per GB. Pick it unless you have a specific reason not to.',
           '**Use Q8_0 only with spare VRAM** — it roughly doubles the footprint for a marginal quality gain that rarely changes a reasoning answer. Worth it on a 24 GB card running the 14B, not much else.',
-          '**Skip FP16 locally** — at roughly 4× the Q4_K_M size it pushes the 32B to 64 GB-class hardware for no practical reasoning benefit over Q8_0.',
+          '**Skip FP16 locally** — at roughly 4× the Q4_K_M size it pushes the 32B to 80 GB-class hardware for no practical reasoning benefit over Q8_0.',
+        ],
+      },
+      fourteenB: {
+        id: '14b-16gb',
+        title: '14B on a 16 GB Card: Which Quant Fits',
+        content: [
+          '**On a 16 GB GPU, run the 14B at Q4_K_M, Q5_K_M or Q6_K — not Q8_0.** The Ollama Q4_K_M file is 9.0 GB, leaving ~6 GB for context; Q5_K_M (~10.5 GB) and Q6_K (~12.1 GB) still fit with a moderate context window.',
+          '**Q8_0 does not fit comfortably.** The Ollama Q8_0 file is 16 GB — the whole card before any KV cache — so part of the model spills into slower system RAM.',
+          '**Ollama ships only Q4_K_M, Q8_0 and FP16 tags for the distills.** For Q5_K_M or Q6_K, pull a GGUF file from Hugging Face: `ollama run hf.co/<user>/<repo>:Q6_K`.',
+          '**An RTX 4070 Laptop has 8 GB of VRAM, not 16 GB.** Use the 7B or 8B distill at Q4_K_M (4.7–4.9 GB files). The 14B (9 GB) partly offloads to system RAM and slows down sharply.',
+          '**The `deepseek-r1:8b` tag is not the Llama distill.** Its 5.2 GB size in the Ollama tag list matches the Qwen3-8B-based R1-0528 build, not the 4.9 GB Llama distill; the Llama 3 distill in the table is `deepseek-r1:8b-llama-distill-q4_K_M`.',
         ],
       },
       v3Clarifier: {
@@ -101,10 +112,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What is the VRAM for DeepSeek-R1-Distill-Qwen-32B?', a: 'About 20.5 GB at Q4_K_M, which fits a 24 GB RTX 4090 but leaves little room for long context. At Q8_0 it needs ~35 GB and at FP16 ~64 GB.' },
+          { q: 'What is the VRAM for DeepSeek-R1-Distill-Qwen-32B?', a: 'About 20.5 GB at Q4_K_M, which fits a 24 GB RTX 4090 but leaves little room for long context. At Q8_0 it needs ~36 GB and at FP16 ~67 GB.' },
           { q: 'How much does Q8_0 add over Q4_K_M?', a: 'Roughly 2× the VRAM. For most reasoning tasks the quality gain is marginal, so Q4_K_M is the better default unless you have spare VRAM.' },
-          { q: 'Can I run the 70B distill on one GPU?', a: 'No. At ~42 GB (Q4_K_M) it exceeds any single consumer card. Use two 24 GB GPUs or a 48 GB workstation card.' },
+          { q: 'Can I run the 70B distill on one GPU?', a: 'No. At ~44 GB (Q4_K_M) it exceeds any single consumer card. Use two 24 GB GPUs or a 48 GB workstation card.' },
           { q: 'Is the full DeepSeek-R1 on this table?', a: 'No. The full 671B R1 needs ~376–404 GB at Q4 and is datacenter-only. This cheatsheet covers the consumer-runnable distills (1.5B–70B).' },
+          { q: 'How much VRAM does DeepSeek-R1 14B need when quantized?', a: 'About 9.5 GB at Q4_K_M (9.0 GB Ollama file), ~11.5 GB at Q5_K_M, ~13 GB at Q6_K and ~17 GB at Q8_0, each with a modest KV cache. Q8_0 is the first quant that overflows a 16 GB card.' },
+          { q: 'Can I run DeepSeek-R1 14B on 16 GB of VRAM?', a: 'Yes. Q4_K_M uses about 9.5 GB and leaves roughly 6 GB for a longer context. Q6_K (~13 GB) is the highest quality that still leaves headroom; Q8_0 (~17 GB) does not fit.' },
+          { q: 'Which DeepSeek-R1 distill fits an RTX 4070 Laptop (8 GB)?', a: 'The 7B or 8B at Q4_K_M (4.7–4.9 GB files, ~5.5–6 GB VRAM). The 14B needs ~9.5 GB, so it would partly run from system RAM and slow down.' },
         ],
       },
       relatedBites: {
@@ -120,15 +134,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2027-04-17',
     theme: 'Quantization & VRAM',
     heroImage: '/images/deepseek-r1-distill-vram-cheatsheet-overview-hero-de.webp',
     type: 'reference',
     title: 'DeepSeek-R1 Distill VRAM-Spickzettel (2026)',
     seoTitle: 'DeepSeek-R1 Distill VRAM-Tabelle 2026: Jede Quant',
-    metaDescription: 'Jeder DeepSeek-R1 Distill (1.5B–70B) nach Quantisierung — exakter VRAM, Modell-Dateigröße und Mindest-GPU. Die Referenztabelle zum Merken. Q4_K_M, Q8, FP16.',
+    metaDescription: 'DeepSeek-R1 14B braucht ~9.5 GB VRAM bei Q4_K_M und passt auf eine 16-GB-Karte. Jeder Distill (1.5B–70B) je Quant: Q8_0, FP16, Dateigröße, Mindest-GPU.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-17',
     educationalLevel: 'Intermediate',
     audience: 'Lokale-LLM-Nutzer, die eine GPU für einen DeepSeek-R1 Distill über mehrere Quantisierungsstufen hinweg dimensionieren',
     affiliateDisclosure: true,
@@ -136,28 +150,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-deepseek-distill-for-your-gpu'],
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
-    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB'],
+    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
     leadAnswerBlock: '**Jeder DeepSeek-R1 Distill nach Quantisierung: 1.5B passt in 4 GB, 7B/8B in 8 GB, 14B in 16 GB, 32B in 24 GB, und 70B benötigt zwei GPUs — alles beim Ollama-Standard Q4_K_M.** Q8_0 verdoppelt den VRAM ungefähr; FP16 vervierfacht die Q4_K_M-Dateigröße ungefähr. Dies ist die Tabelle zum Merken, um einen Distill auf eine Grafikkarte abzustimmen.',
     quickAnswerTop: {
       de: {
         question: 'Wie viel VRAM benötigt jeder DeepSeek-R1 Distill?',
-        answer: 'Bei Q4_K_M (Ollama-Standard): 1.5B ≈ 4 GB, 7B ≈ 5.5 GB, 8B ≈ 6 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 42 GB. Q8_0 ist etwa das 2-Fache der Q4_K_M-Größe und FP16 etwa das 4-Fache, sodass der 32B bei FP16 ein 64-GB-Setup benötigt.',
+        answer: 'Bei Q4_K_M (Ollama-Standard): 1.5B ≈ 1.6 GB, 7B ≈ 5.5 GB, 8B ≈ 6 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 44 GB. Q8_0 ist etwa das 2-Fache der Q4_K_M-Größe und FP16 etwa das 4-Fache, sodass der 32B bei FP16 ein 80-GB-Setup benötigt.',
         bullets: [
           '1.5B: ~1.1 GB Datei, ~4 GB VRAM (oder CPU) bei Q4_K_M',
           '7B: ~4.7 GB Datei, ~5.5 GB VRAM — RTX 3060 12GB',
           '14B: ~9 GB Datei, ~9.5 GB VRAM — RTX 4060 Ti 16GB',
-          '32B: ~19 GB Datei, ~20.5 GB VRAM — RTX 4090 24GB (knapp)',
-          '70B: ~40 GB Datei, ~42 GB VRAM — zwei GPUs oder 48 GB',
+          '32B: ~20 GB Datei, ~20.5 GB VRAM — RTX 4090 24GB (knapp)',
+          '70B: ~43 GB Datei, ~44 GB VRAM — zwei GPUs oder 48 GB',
           'Faustregel: Q8_0 ≈ 2× Q4_K_M; FP16 ≈ 4× Q4_K_M',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Q4_K_M (Ollama-Standard) VRAM: 1.5B ~4 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~42 GB.',
+          'Q4_K_M (Ollama-Standard) VRAM: 1.5B ~1.6 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~44 GB.',
           'Q8_0 ist etwa das 2-Fache der Q4_K_M-Größe; FP16 etwa das 4-Fache der Q4_K_M-Dateigröße.',
           'Der 14B bei Q4_K_M (~9.5 GB) ist der Sweet Spot — passt mit Kontextreserve auf eine 16-GB-Karte.',
           'Der 32B bei Q4_K_M (~20.5 GB) ist auf einer 24-GB-RTX-4090 knapp; für längeren Kontext auf eine kleinere Quant wechseln.',
@@ -167,7 +181,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'DeepSeek-R1-Distills benötigen bei Q4_K_M etwa 0,6 GB VRAM pro Milliarde Parameter — 7B ≈ 5,5 GB, 14B ≈ 9,5 GB, 32B ≈ 20,5 GB, 70B ≈ 42 GB.',
+            text: 'DeepSeek-R1-Distills benötigen bei Q4_K_M etwa 0,6 GB VRAM pro Milliarde Parameter — 7B ≈ 5,5 GB, 14B ≈ 9,5 GB, 32B ≈ 20,5 GB, 70B ≈ 44 GB.',
           },
           {
             type: 'plain-terms',
@@ -182,12 +196,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', 'Mindest-GPU (Q4_K_M)'],
         rows: [
-          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~4 GB', 'Q8_0 (VRAM)': '~5 GB', 'FP16 (VRAM)': '~6 GB', 'Mindest-GPU (Q4_K_M)': 'Beliebige 4-GB-GPU / CPU' },
-          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~9.5 GB', 'FP16 (VRAM)': '~16 GB', 'Mindest-GPU (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~10 GB', 'FP16 (VRAM)': '~17 GB', 'Mindest-GPU (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~16 GB', 'FP16 (VRAM)': '~29 GB', 'Mindest-GPU (Q4_K_M)': 'RTX 4060 Ti 16GB' },
-          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~35 GB', 'FP16 (VRAM)': '~64 GB', 'Mindest-GPU (Q4_K_M)': 'RTX 4090 24GB (knapp)' },
-          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~42 GB', 'Q8_0 (VRAM)': '~74 GB', 'FP16 (VRAM)': '~140 GB', 'Mindest-GPU (Q4_K_M)': 'Zwei GPUs / 48 GB' },
+          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~1.6 GB', 'Q8_0 (VRAM)': '~2.5 GB', 'FP16 (VRAM)': '~4.2 GB', 'Mindest-GPU (Q4_K_M)': 'Beliebige 4-GB-GPU / CPU' },
+          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~8.7 GB', 'FP16 (VRAM)': '~15.6 GB', 'Mindest-GPU (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~9 GB', 'FP16 (VRAM)': '~16.6 GB', 'Mindest-GPU (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~17 GB', 'FP16 (VRAM)': '~31 GB', 'Mindest-GPU (Q4_K_M)': 'RTX 4060 Ti 16GB' },
+          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~36 GB', 'FP16 (VRAM)': '~67 GB', 'Mindest-GPU (Q4_K_M)': 'RTX 4090 24GB (knapp)' },
+          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~44 GB', 'Q8_0 (VRAM)': '~76 GB', 'FP16 (VRAM)': '~142 GB', 'Mindest-GPU (Q4_K_M)': 'Zwei GPUs / 48 GB' },
         ],
         note: 'Dateien installieren standardmäßig mit Q4_K_M: `ollama run deepseek-r1:14b`. Der volle 671B R1 ist ausgenommen — er benötigt ~376–404 GB bei Q4 und ist nur für Rechenzentren geeignet.',
         affiliateLinks: [
@@ -202,7 +216,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**Nutzen Sie Q4_K_M für fast alles** — es ist der Ollama-Standard und hält die Reasoning-Qualität hoch, während es die meisten Modelle pro GB unterbringt. Wählen Sie es, sofern Sie keinen konkreten Grund dagegen haben.',
           '**Nutzen Sie Q8_0 nur mit freiem VRAM** — es verdoppelt den Speicherbedarf ungefähr für einen geringfügigen Qualitätsgewinn, der eine Reasoning-Antwort selten verändert. Auf einer 24-GB-Karte mit dem 14B lohnenswert, sonst kaum.',
-          '**Überspringen Sie FP16 lokal** — bei etwa dem 4-Fachen der Q4_K_M-Größe treibt es den 32B auf 64-GB-Hardware, ohne praktischen Reasoning-Vorteil gegenüber Q8_0.',
+          '**Überspringen Sie FP16 lokal** — bei etwa dem 4-Fachen der Q4_K_M-Größe treibt es den 32B auf 80-GB-Hardware, ohne praktischen Reasoning-Vorteil gegenüber Q8_0.',
+        ],
+      },
+      fourteenB: {
+        id: '14b-16gb',
+        title: 'Der 14B auf einer 16-GB-Karte: Welche Quant passt',
+        content: [
+          '**Auf einer 16-GB-GPU läuft der 14B mit Q4_K_M, Q5_K_M oder Q6_K — nicht mit Q8_0.** Die Ollama-Datei für Q4_K_M ist 9.0 GB groß und lässt ~6 GB für Kontext; Q5_K_M (~10.5 GB) und Q6_K (~12.1 GB) passen mit moderatem Kontextfenster ebenfalls.',
+          '**Q8_0 passt nicht komfortabel.** Die Ollama-Datei für Q8_0 ist 16 GB groß — das ist die ganze Karte, noch vor dem KV-Cache; ein Teil des Modells wandert dann in den langsameren System-RAM.',
+          '**Ollama liefert für die Distills nur die Tags Q4_K_M, Q8_0 und FP16.** Für Q5_K_M oder Q6_K laden Sie eine GGUF-Datei von Hugging Face: `ollama run hf.co/<user>/<repo>:Q6_K`.',
+          '**Eine RTX 4070 Laptop hat 8 GB VRAM, nicht 16 GB.** Nutzen Sie den 7B- oder 8B-Distill mit Q4_K_M (Dateien von 4.7–4.9 GB). Der 14B (9 GB) wird teilweise in den System-RAM ausgelagert und deutlich langsamer.',
+          '**Das Tag `deepseek-r1:8b` ist nicht der Llama-Distill.** Seine Größe von 5.2 GB in der Ollama-Tag-Liste entspricht dem auf Qwen3-8B basierenden R1-0528-Build, nicht dem 4.9-GB-Llama-Distill; den Llama-3-Distill aus der Tabelle erhalten Sie mit `deepseek-r1:8b-llama-distill-q4_K_M`.',
         ],
       },
       v3Clarifier: {
@@ -217,10 +242,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Wie viel VRAM braucht DeepSeek-R1-Distill-Qwen-32B?', a: 'Etwa 20.5 GB bei Q4_K_M, was auf eine 24-GB-RTX-4090 passt, aber wenig Platz für langen Kontext lässt. Bei Q8_0 benötigt er ~35 GB und bei FP16 ~64 GB.' },
+          { q: 'Wie viel VRAM braucht DeepSeek-R1-Distill-Qwen-32B?', a: 'Etwa 20.5 GB bei Q4_K_M, was auf eine 24-GB-RTX-4090 passt, aber wenig Platz für langen Kontext lässt. Bei Q8_0 benötigt er ~36 GB und bei FP16 ~67 GB.' },
           { q: 'Wie viel fügt Q8_0 gegenüber Q4_K_M hinzu?', a: 'Etwa das 2-Fache des VRAM. Für die meisten Reasoning-Aufgaben ist der Qualitätsgewinn geringfügig, daher ist Q4_K_M der bessere Standard, sofern Sie keinen VRAM übrig haben.' },
-          { q: 'Kann ich den 70B Distill auf einer GPU ausführen?', a: 'Nein. Mit ~42 GB (Q4_K_M) übersteigt er jede einzelne Consumer-Karte. Nutzen Sie zwei 24-GB-GPUs oder eine 48-GB-Workstation-Karte.' },
+          { q: 'Kann ich den 70B Distill auf einer GPU ausführen?', a: 'Nein. Mit ~44 GB (Q4_K_M) übersteigt er jede einzelne Consumer-Karte. Nutzen Sie zwei 24-GB-GPUs oder eine 48-GB-Workstation-Karte.' },
           { q: 'Steht der volle DeepSeek-R1 in dieser Tabelle?', a: 'Nein. Der volle 671B R1 benötigt ~376–404 GB bei Q4 und ist nur für Rechenzentren geeignet. Dieser Spickzettel deckt die consumer-tauglichen Distills (1.5B–70B) ab.' },
+          { q: 'Wie viel VRAM braucht DeepSeek-R1 14B quantisiert?', a: 'Etwa 9.5 GB bei Q4_K_M (9.0 GB Ollama-Datei), ~11.5 GB bei Q5_K_M, ~13 GB bei Q6_K und ~17 GB bei Q8_0, jeweils mit einem kleinen KV-Cache. Q8_0 ist die erste Quant, die eine 16-GB-Karte überläuft.' },
+          { q: 'Kann ich DeepSeek-R1 14B mit 16 GB VRAM ausführen?', a: 'Ja. Q4_K_M belegt etwa 9.5 GB und lässt rund 6 GB für längeren Kontext. Q6_K (~13 GB) ist die höchste Qualität, die noch Spielraum lässt; Q8_0 (~17 GB) passt nicht.' },
+          { q: 'Welcher DeepSeek-R1 Distill passt auf eine RTX 4070 Laptop (8 GB)?', a: 'Der 7B oder 8B mit Q4_K_M (Dateien von 4.7–4.9 GB, ~5.5–6 GB VRAM). Der 14B braucht ~9.5 GB, läuft also teilweise aus dem System-RAM und wird langsamer.' },
         ],
       },
       relatedBites: {
@@ -236,15 +264,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2027-04-17',
     theme: 'Quantization & VRAM',
     heroImage: '/images/deepseek-r1-distill-vram-cheatsheet-overview-hero-fr.webp',
     type: 'reference',
     title: 'Aide-mémoire VRAM DeepSeek-R1 Distill (2026)',
     seoTitle: 'VRAM DeepSeek-R1 Distill 2026 : chaque quant',
-    metaDescription: 'Chaque distillation DeepSeek-R1 (1.5B–70B) par quantification — VRAM exacte, taille du fichier modèle et GPU minimum. Le tableau de référence à garder. Q4_K_M, Q8, FP16.',
+    metaDescription: 'DeepSeek-R1 14B demande ~9.5 GB de VRAM en Q4_K_M et tient sur une carte 16 GB. Chaque distillation (1.5B–70B) par quant : Q8_0, FP16, fichier, GPU minimum.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-17',
     educationalLevel: 'Intermediate',
     audience: 'Utilisateurs de LLM locaux dimensionnant un GPU pour une distillation DeepSeek-R1 selon les niveaux de quantification',
     affiliateDisclosure: true,
@@ -252,28 +280,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-deepseek-distill-for-your-gpu'],
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
-    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB'],
+    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
     leadAnswerBlock: '**Chaque distillation DeepSeek-R1, par quantification : 1.5B tient dans 4 GB, 7B/8B dans 8 GB, 14B dans 16 GB, 32B dans 24 GB, et 70B nécessite deux GPU — le tout au format Q4_K_M par défaut d\'Ollama.** Q8_0 double environ la VRAM ; FP16 quadruple environ la taille du fichier Q4_K_M. C\'est le tableau à garder pour associer une distillation à une carte.',
     quickAnswerTop: {
       fr: {
         question: 'Combien de VRAM nécessite chaque distillation DeepSeek-R1 ?',
-        answer: 'En Q4_K_M (par défaut Ollama) : 1.5B ≈ 4 GB, 7B ≈ 5.5 GB, 8B ≈ 6 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 42 GB. Q8_0 représente environ 2× la taille Q4_K_M et FP16 environ 4×, donc le 32B en FP16 nécessite une configuration de classe 64 GB.',
+        answer: 'En Q4_K_M (par défaut Ollama) : 1.5B ≈ 1.6 GB, 7B ≈ 5.5 GB, 8B ≈ 6 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 44 GB. Q8_0 représente environ 2× la taille Q4_K_M et FP16 environ 4×, donc le 32B en FP16 nécessite une configuration de classe 80 GB.',
         bullets: [
           '1.5B : fichier ~1.1 GB, ~4 GB VRAM (ou CPU) en Q4_K_M',
           '7B : fichier ~4.7 GB, ~5.5 GB VRAM — RTX 3060 12GB',
           '14B : fichier ~9 GB, ~9.5 GB VRAM — RTX 4060 Ti 16GB',
-          '32B : fichier ~19 GB, ~20.5 GB VRAM — RTX 4090 24GB (juste)',
-          '70B : fichier ~40 GB, ~42 GB VRAM — deux GPU ou 48 GB',
+          '32B : fichier ~20 GB, ~20.5 GB VRAM — RTX 4090 24GB (juste)',
+          '70B : fichier ~43 GB, ~44 GB VRAM — deux GPU ou 48 GB',
           'Règle : Q8_0 ≈ 2× Q4_K_M ; FP16 ≈ 4× Q4_K_M',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'VRAM Q4_K_M (par défaut Ollama) : 1.5B ~4 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~42 GB.',
+          'VRAM Q4_K_M (par défaut Ollama) : 1.5B ~1.6 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~44 GB.',
           'Q8_0 représente environ 2× la taille Q4_K_M ; FP16 environ 4× la taille du fichier Q4_K_M.',
           'Le 14B en Q4_K_M (~9.5 GB) est le meilleur compromis — il tient sur une carte 16 GB avec une marge de contexte.',
           'Le 32B en Q4_K_M (~20.5 GB) est juste sur une RTX 4090 24 GB ; passez à une quantification plus petite pour un contexte plus long.',
@@ -298,12 +326,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         tableFormat: true,
         columns: ['Distillation', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', 'GPU minimum (Q4_K_M)'],
         rows: [
-          { 'Distillation': '1.5B', 'Q4_K_M (VRAM)': '~4 GB', 'Q8_0 (VRAM)': '~5 GB', 'FP16 (VRAM)': '~6 GB', 'GPU minimum (Q4_K_M)': 'Tout GPU 4 GB / CPU' },
-          { 'Distillation': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~9.5 GB', 'FP16 (VRAM)': '~16 GB', 'GPU minimum (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distillation': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~10 GB', 'FP16 (VRAM)': '~17 GB', 'GPU minimum (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distillation': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~16 GB', 'FP16 (VRAM)': '~29 GB', 'GPU minimum (Q4_K_M)': 'RTX 4060 Ti 16GB' },
-          { 'Distillation': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~35 GB', 'FP16 (VRAM)': '~64 GB', 'GPU minimum (Q4_K_M)': 'RTX 4090 24GB (juste)' },
-          { 'Distillation': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~42 GB', 'Q8_0 (VRAM)': '~74 GB', 'FP16 (VRAM)': '~140 GB', 'GPU minimum (Q4_K_M)': 'Deux GPU / 48 GB' },
+          { 'Distillation': '1.5B', 'Q4_K_M (VRAM)': '~1.6 GB', 'Q8_0 (VRAM)': '~2.5 GB', 'FP16 (VRAM)': '~4.2 GB', 'GPU minimum (Q4_K_M)': 'Tout GPU 4 GB / CPU' },
+          { 'Distillation': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~8.7 GB', 'FP16 (VRAM)': '~15.6 GB', 'GPU minimum (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distillation': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~9 GB', 'FP16 (VRAM)': '~16.6 GB', 'GPU minimum (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distillation': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~17 GB', 'FP16 (VRAM)': '~31 GB', 'GPU minimum (Q4_K_M)': 'RTX 4060 Ti 16GB' },
+          { 'Distillation': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~36 GB', 'FP16 (VRAM)': '~67 GB', 'GPU minimum (Q4_K_M)': 'RTX 4090 24GB (juste)' },
+          { 'Distillation': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~44 GB', 'Q8_0 (VRAM)': '~76 GB', 'FP16 (VRAM)': '~142 GB', 'GPU minimum (Q4_K_M)': 'Deux GPU / 48 GB' },
         ],
         note: 'Les fichiers s\'installent en Q4_K_M par défaut : `ollama run deepseek-r1:14b`. Le R1 complet 671B est exclu — il requiert ~376–404 GB en Q4 et est réservé aux centres de données.',
         affiliateLinks: [
@@ -318,7 +346,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**Utilisez Q4_K_M pour presque tout** — c\'est le format par défaut d\'Ollama et il maintient une qualité de raisonnement élevée tout en logeant le plus de modèles par GB. Choisissez-le sauf raison précise contraire.',
           '**Utilisez Q8_0 uniquement avec de la VRAM disponible** — il double environ l\'empreinte pour un gain de qualité marginal qui change rarement une réponse de raisonnement. Pertinent sur une carte 24 GB avec le 14B, guère ailleurs.',
-          '**Évitez FP16 en local** — à environ 4× la taille Q4_K_M, il pousse le 32B vers du matériel de classe 64 GB sans avantage pratique de raisonnement par rapport à Q8_0.',
+          '**Évitez FP16 en local** — à environ 4× la taille Q4_K_M, il pousse le 32B vers du matériel de classe 80 GB sans avantage pratique de raisonnement par rapport à Q8_0.',
+        ],
+      },
+      fourteenB: {
+        id: '14b-16gb',
+        title: 'Le 14B sur une carte de 16 GB : quelle quant convient',
+        content: [
+          '**Sur un GPU de 16 GB, utilisez le 14B en Q4_K_M, Q5_K_M ou Q6_K — pas en Q8_0.** Le fichier Ollama Q4_K_M fait 9.0 GB et laisse ~6 GB pour le contexte ; Q5_K_M (~10.5 GB) et Q6_K (~12.1 GB) tiennent aussi avec une fenêtre de contexte modérée.',
+          '**Q8_0 ne tient pas confortablement.** Le fichier Ollama Q8_0 fait 16 GB — toute la carte avant même le cache KV — donc une partie du modèle déborde dans la RAM système, plus lente.',
+          '**Ollama ne propose que les tags Q4_K_M, Q8_0 et FP16 pour les distillations.** Pour Q5_K_M ou Q6_K, récupérez un fichier GGUF depuis Hugging Face : `ollama run hf.co/<user>/<repo>:Q6_K`.',
+          '**Une RTX 4070 Laptop a 8 GB de VRAM, pas 16 GB.** Utilisez la distillation 7B ou 8B en Q4_K_M (fichiers de 4.7–4.9 GB). Le 14B (9 GB) déborde en partie dans la RAM système et ralentit fortement.',
+          '**Le tag `deepseek-r1:8b` n\'est pas la distillation Llama.** Sa taille de 5.2 GB dans la liste des tags Ollama correspond à la version R1-0528 basée sur Qwen3-8B, et non à la distillation Llama de 4.9 GB ; la distillation Llama 3 du tableau s\'obtient avec `deepseek-r1:8b-llama-distill-q4_K_M`.',
         ],
       },
       v3Clarifier: {
@@ -333,10 +372,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Quelle est la VRAM pour DeepSeek-R1-Distill-Qwen-32B ?', a: 'Environ 20.5 GB en Q4_K_M, ce qui tient sur une RTX 4090 24 GB mais laisse peu de place pour un contexte long. En Q8_0 il nécessite ~35 GB et en FP16 ~64 GB.' },
+          { q: 'Quelle est la VRAM pour DeepSeek-R1-Distill-Qwen-32B ?', a: 'Environ 20.5 GB en Q4_K_M, ce qui tient sur une RTX 4090 24 GB mais laisse peu de place pour un contexte long. En Q8_0 il nécessite ~36 GB et en FP16 ~67 GB.' },
           { q: 'Combien Q8_0 ajoute-t-il par rapport à Q4_K_M ?', a: 'Environ 2× la VRAM. Pour la plupart des tâches de raisonnement, le gain de qualité est marginal, donc Q4_K_M est le meilleur choix par défaut sauf si vous avez de la VRAM disponible.' },
-          { q: 'Puis-je exécuter la distillation 70B sur un seul GPU ?', a: 'Non. À ~42 GB (Q4_K_M), elle dépasse toute carte grand public unique. Utilisez deux GPU de 24 GB ou une carte station de travail de 48 GB.' },
+          { q: 'Puis-je exécuter la distillation 70B sur un seul GPU ?', a: 'Non. À ~44 GB (Q4_K_M), elle dépasse toute carte grand public unique. Utilisez deux GPU de 24 GB ou une carte station de travail de 48 GB.' },
           { q: 'Le DeepSeek-R1 complet figure-t-il dans ce tableau ?', a: 'Non. Le R1 complet 671B nécessite ~376–404 GB en Q4 et est réservé aux centres de données. Cet aide-mémoire couvre les distillations exécutables par le grand public (1.5B–70B).' },
+          { q: 'Combien de VRAM faut-il pour DeepSeek-R1 14B quantifié ?', a: 'Environ 9.5 GB en Q4_K_M (fichier Ollama de 9.0 GB), ~11.5 GB en Q5_K_M, ~13 GB en Q6_K et ~17 GB en Q8_0, avec un petit cache KV. Q8_0 est la première quant qui dépasse une carte de 16 GB.' },
+          { q: 'Puis-je exécuter DeepSeek-R1 14B avec 16 GB de VRAM ?', a: 'Oui. Q4_K_M utilise environ 9.5 GB et laisse à peu près 6 GB pour un contexte plus long. Q6_K (~13 GB) est la meilleure qualité qui laisse encore de la marge ; Q8_0 (~17 GB) ne tient pas.' },
+          { q: 'Quelle distillation DeepSeek-R1 convient à une RTX 4070 Laptop (8 GB) ?', a: 'Le 7B ou le 8B en Q4_K_M (fichiers de 4.7–4.9 GB, ~5.5–6 GB de VRAM). Le 14B demande ~9.5 GB : il tournerait en partie depuis la RAM système et ralentirait.' },
         ],
       },
       relatedBites: {
@@ -352,15 +394,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2027-04-17',
     theme: 'Quantization & VRAM',
     heroImage: '/images/deepseek-r1-distill-vram-cheatsheet-overview-hero-ja.webp',
     type: 'reference',
     title: 'DeepSeek-R1 Distill VRAM 早見表（2026年版）',
     seoTitle: 'DeepSeek-R1 Distill VRAM早見表 2026：全量子化',
-    metaDescription: 'DeepSeek-R1の全Distill（1.5B〜70B）を量子化別に — 正確なVRAM、モデルファイルサイズ、最小GPUを掲載。ブックマーク必須の参照表。Q4_K_M、Q8、FP16。',
+    metaDescription: 'DeepSeek-R1 14BはQ4_K_Mで約9.5 GBのVRAMを使い、16 GBカードに収まります。全Distill（1.5B〜70B）の量子化別VRAM・ファイルサイズ・最小GPUを掲載。',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-17',
     educationalLevel: 'Intermediate',
     audience: '量子化レベルを横断してDeepSeek-R1 Distill向けにGPUをサイジングするローカルLLMユーザー',
     affiliateDisclosure: true,
@@ -368,28 +410,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-deepseek-distill-for-your-gpu'],
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
-    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB'],
+    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
     leadAnswerBlock: '**DeepSeek-R1の各Distillを量子化別に：1.5Bは4 GB、7B/8Bは8 GB、14Bは16 GB、32Bは24 GB、70BはデュアルGPUが必要 — すべてOllamaデフォルトのQ4_K_Mでの数値です。** Q8_0はVRAMを約2倍にし、FP16はQ4_K_Mのファイルサイズを約4倍にします。これはDistillをカードに合わせるためのブックマーク用の表です。',
     quickAnswerTop: {
       ja: {
         question: 'DeepSeek-R1の各Distillに必要なVRAMはどれくらいですか？',
-        answer: 'Q4_K_M（Ollamaデフォルト）の場合：1.5B ≈ 4 GB、7B ≈ 5.5 GB、8B ≈ 6 GB、14B ≈ 9.5 GB、32B ≈ 20.5 GB、70B ≈ 42 GB。Q8_0はQ4_K_Mサイズの約2倍、FP16は約4倍なので、FP16の32Bには64 GBクラスの構成が必要です。',
+        answer: 'Q4_K_M（Ollamaデフォルト）の場合：1.5B ≈ 1.6 GB、7B ≈ 5.5 GB、8B ≈ 6 GB、14B ≈ 9.5 GB、32B ≈ 20.5 GB、70B ≈ 44 GB。Q8_0はQ4_K_Mサイズの約2倍、FP16は約4倍なので、FP16の32Bには80 GBクラスの構成が必要です。',
         bullets: [
           '1.5B：ファイル~1.1 GB、Q4_K_Mで~4 GB VRAM（またはCPU）',
           '7B：ファイル~4.7 GB、~5.5 GB VRAM — RTX 3060 12GB',
           '14B：ファイル~9 GB、~9.5 GB VRAM — RTX 4060 Ti 16GB',
-          '32B：ファイル~19 GB、~20.5 GB VRAM — RTX 4090 24GB（ギリギリ）',
-          '70B：ファイル~40 GB、~42 GB VRAM — デュアルGPUまたは48 GB',
+          '32B：ファイル~20 GB、~20.5 GB VRAM — RTX 4090 24GB（ギリギリ）',
+          '70B：ファイル~43 GB、~44 GB VRAM — デュアルGPUまたは48 GB',
           'ルール：Q8_0 ≈ 2× Q4_K_M、FP16 ≈ 4× Q4_K_M',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Q4_K_M（Ollamaデフォルト）VRAM：1.5B ~4 GB、7B ~5.5 GB、8B ~6 GB、14B ~9.5 GB、32B ~20.5 GB、70B ~42 GB。',
+          'Q4_K_M（Ollamaデフォルト）VRAM：1.5B ~1.6 GB、7B ~5.5 GB、8B ~6 GB、14B ~9.5 GB、32B ~20.5 GB、70B ~44 GB。',
           'Q8_0はQ4_K_Mサイズの約2倍、FP16はQ4_K_Mファイルサイズの約4倍です。',
           'Q4_K_Mの14B（~9.5 GB）が最適解です — コンテキストの余裕を持って16 GBカードに収まります。',
           'Q4_K_Mの32B（~20.5 GB）は24 GBのRTX 4090ではギリギリです。長いコンテキストには小さい量子化に下げてください。',
@@ -399,7 +441,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'DeepSeek-R1 distillはQ4_K_MでGPUの显存（VRAM）を10億パラメータあたり約0.6 GB使用します — 7B ≈ 5.5 GB、14B ≈ 9.5 GB、32B ≈ 20.5 GB、70B ≈ 42 GB。',
+            text: 'DeepSeek-R1 distillはQ4_K_MでGPUの显存（VRAM）を10億パラメータあたり約0.6 GB使用します — 7B ≈ 5.5 GB、14B ≈ 9.5 GB、32B ≈ 20.5 GB、70B ≈ 44 GB。',
           },
           {
             type: 'plain-terms',
@@ -414,12 +456,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', '最小GPU (Q4_K_M)'],
         rows: [
-          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~4 GB', 'Q8_0 (VRAM)': '~5 GB', 'FP16 (VRAM)': '~6 GB', '最小GPU (Q4_K_M)': '任意の4 GB GPU / CPU' },
-          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~9.5 GB', 'FP16 (VRAM)': '~16 GB', '最小GPU (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~10 GB', 'FP16 (VRAM)': '~17 GB', '最小GPU (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~16 GB', 'FP16 (VRAM)': '~29 GB', '最小GPU (Q4_K_M)': 'RTX 4060 Ti 16GB' },
-          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~35 GB', 'FP16 (VRAM)': '~64 GB', '最小GPU (Q4_K_M)': 'RTX 4090 24GB（ギリギリ）' },
-          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~42 GB', 'Q8_0 (VRAM)': '~74 GB', 'FP16 (VRAM)': '~140 GB', '最小GPU (Q4_K_M)': 'デュアルGPU / 48 GB' },
+          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~1.6 GB', 'Q8_0 (VRAM)': '~2.5 GB', 'FP16 (VRAM)': '~4.2 GB', '最小GPU (Q4_K_M)': '任意の4 GB GPU / CPU' },
+          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~8.7 GB', 'FP16 (VRAM)': '~15.6 GB', '最小GPU (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~9 GB', 'FP16 (VRAM)': '~16.6 GB', '最小GPU (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~17 GB', 'FP16 (VRAM)': '~31 GB', '最小GPU (Q4_K_M)': 'RTX 4060 Ti 16GB' },
+          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~36 GB', 'FP16 (VRAM)': '~67 GB', '最小GPU (Q4_K_M)': 'RTX 4090 24GB（ギリギリ）' },
+          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~44 GB', 'Q8_0 (VRAM)': '~76 GB', 'FP16 (VRAM)': '~142 GB', '最小GPU (Q4_K_M)': 'デュアルGPU / 48 GB' },
         ],
         note: 'ファイルはデフォルトでQ4_K_Mでインストールされます：`ollama run deepseek-r1:14b`。フルの671B R1は除外されています — Q4で~376–404 GBが必要で、データセンター専用です。',
         affiliateLinks: [
@@ -434,7 +476,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**ほぼすべてにQ4_K_Mを使用してください** — Ollamaのデフォルトで、GBあたり最も多くのモデルを収めながら推論品質を高く保ちます。特別な理由がない限りこれを選んでください。',
           '**Q8_0はVRAMに余裕がある場合のみ使用してください** — フットプリントを約2倍にしますが、品質向上はわずかで、推論の回答を変えることはほとんどありません。24 GBカードで14Bを動かす場合には価値がありますが、それ以外ではほぼ不要です。',
-          '**ローカルではFP16を避けてください** — Q4_K_Mサイズの約4倍で、32Bを64 GBクラスのハードウェアに押し上げますが、Q8_0に対する実用的な推論上の利点はありません。',
+          '**ローカルではFP16を避けてください** — Q4_K_Mサイズの約4倍で、32Bを80 GBクラスのハードウェアに押し上げますが、Q8_0に対する実用的な推論上の利点はありません。',
+        ],
+      },
+      fourteenB: {
+        id: '14b-16gb',
+        title: '16 GBカードで14B：収まる量子化はどれか',
+        content: [
+          '**16 GBのGPUでは、14BはQ8_0ではなくQ4_K_M、Q5_K_M、Q6_Kで実行してください。** OllamaのQ4_K_Mファイルは9.0 GBで、コンテキスト用に約6 GBが残ります。Q5_K_M（~10.5 GB）とQ6_K（~12.1 GB）も、中程度のコンテキスト長なら収まります。',
+          '**Q8_0は余裕を持って収まりません。** OllamaのQ8_0ファイルは16 GBで、KVキャッシュを加える前にカード全体を使い切るため、モデルの一部が低速なシステムRAMに溢れます。',
+          '**OllamaがDistillに提供するタグはQ4_K_M、Q8_0、FP16のみです。** Q5_K_MやQ6_Kが必要な場合は、Hugging FaceからGGUFファイルを取得します：`ollama run hf.co/<user>/<repo>:Q6_K`。',
+          '**RTX 4070 LaptopのVRAMは16 GBではなく8 GBです。** 7Bまたは8B DistillをQ4_K_M（ファイル4.7〜4.9 GB）で使ってください。14B（9 GB）は一部がシステムRAMにオフロードされ、大幅に遅くなります。',
+          '**`deepseek-r1:8b`タグはLlama Distillではありません。** Ollamaのタグ一覧での5.2 GBというサイズは、4.9 GBのLlama DistillではなくQwen3-8Bベースのr1-0528ビルドに一致します。表のLlama 3 Distillは`deepseek-r1:8b-llama-distill-q4_K_M`です。',
         ],
       },
       v3Clarifier: {
@@ -449,10 +502,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'DeepSeek-R1-Distill-Qwen-32BのVRAMはどれくらいですか？', a: 'Q4_K_Mで約20.5 GBで、24 GBのRTX 4090に収まりますが、長いコンテキスト用の余裕はほとんどありません。Q8_0では~35 GB、FP16では~64 GBが必要です。' },
+          { q: 'DeepSeek-R1-Distill-Qwen-32BのVRAMはどれくらいですか？', a: 'Q4_K_Mで約20.5 GBで、24 GBのRTX 4090に収まりますが、長いコンテキスト用の余裕はほとんどありません。Q8_0では~36 GB、FP16では~67 GBが必要です。' },
           { q: 'Q8_0はQ4_K_Mに対してどれくらい増えますか？', a: 'VRAMで約2倍です。ほとんどの推論タスクでは品質向上はわずかなので、VRAMに余裕がない限りQ4_K_Mがより良いデフォルトです。' },
-          { q: '70B Distillを1台のGPUで実行できますか？', a: 'いいえ。~42 GB（Q4_K_M）で、いかなる単一の消費者向けカードも超えます。24 GBのGPUを2台、または48 GBのワークステーションカードを使用してください。' },
+          { q: '70B Distillを1台のGPUで実行できますか？', a: 'いいえ。~44 GB（Q4_K_M）で、いかなる単一の消費者向けカードも超えます。24 GBのGPUを2台、または48 GBのワークステーションカードを使用してください。' },
           { q: 'フルのDeepSeek-R1はこの表にありますか？', a: 'いいえ。フルの671B R1はQ4で~376–404 GBが必要で、データセンター専用です。この早見表は一般消費者向けに実行可能なDistill（1.5B〜70B）をカバーしています。' },
+          { q: '量子化したDeepSeek-R1 14BのVRAMはどれくらい必要ですか？', a: 'Q4_K_Mで約9.5 GB（Ollamaファイル9.0 GB）、Q5_K_Mで~11.5 GB、Q6_Kで~13 GB、Q8_0で~17 GBです（いずれも小さめのKVキャッシュを含む）。16 GBカードを最初に超えるのがQ8_0です。' },
+          { q: '16 GBのVRAMでDeepSeek-R1 14Bを実行できますか？', a: 'はい。Q4_K_Mは約9.5 GBで、長めのコンテキスト用に約6 GBが残ります。余裕を残せる最高品質はQ6_K（~13 GB）で、Q8_0（~17 GB）は収まりません。' },
+          { q: 'RTX 4070 Laptop（8 GB）で動くDeepSeek-R1 Distillはどれですか？', a: 'Q4_K_Mの7Bまたは8B（ファイル4.7〜4.9 GB、VRAM ~5.5〜6 GB）です。14Bは~9.5 GB必要なため、一部がシステムRAMで動作し、遅くなります。' },
         ],
       },
       relatedBites: {
@@ -468,15 +524,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2027-04-17',
     theme: 'Quantization & VRAM',
     heroImage: '/images/deepseek-r1-distill-vram-cheatsheet-overview-hero-zh.webp',
     type: 'reference',
     title: 'DeepSeek-R1 Distill 显存速查表（2026）',
     seoTitle: 'DeepSeek-R1 Distill 显存速查表 2026：全量化',
-    metaDescription: '按量化等级列出每个 DeepSeek-R1 distill（1.5B–70B）——精确显存、模型文件大小和最低 GPU。值得收藏的参考表。Q4_K_M、Q8、FP16。',
+    metaDescription: 'DeepSeek-R1 14B 在 Q4_K_M 下约需 9.5 GB 显存，可装入 16 GB 显卡。按量化等级列出全部 distill（1.5B–70B）的显存、文件大小和最低 GPU。',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-17',
     educationalLevel: 'Intermediate',
     audience: '需要为跨量化等级的 DeepSeek-R1 distill 选配 GPU 的本地 LLM 用户',
     affiliateDisclosure: true,
@@ -484,28 +540,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-deepseek-distill-for-your-gpu'],
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
-    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB'],
+    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
     leadAnswerBlock: '**按量化等级列出每个 DeepSeek-R1 distill：1.5B 需 4 GB，7B/8B 需 8 GB，14B 需 16 GB，32B 需 24 GB，70B 需双 GPU——均为 Ollama 默认的 Q4_K_M。** Q8_0 大约使显存翻倍；FP16 大约使 Q4_K_M 文件大小翻四倍。这是用来为 distill 匹配显卡、值得收藏的表格。',
     quickAnswerTop: {
       zh: {
         question: '每个 DeepSeek-R1 distill 需要多少显存？',
-        answer: '在 Q4_K_M（Ollama 默认）下：1.5B ≈ 4 GB，7B ≈ 5.5 GB，8B ≈ 6 GB，14B ≈ 9.5 GB，32B ≈ 20.5 GB，70B ≈ 42 GB。Q8_0 约为 Q4_K_M 大小的 2 倍，FP16 约为 4 倍，因此 FP16 的 32B 需要 64 GB 级别的配置。',
+        answer: '在 Q4_K_M（Ollama 默认）下：1.5B ≈ 1.6 GB，7B ≈ 5.5 GB，8B ≈ 6 GB，14B ≈ 9.5 GB，32B ≈ 20.5 GB，70B ≈ 44 GB。Q8_0 约为 Q4_K_M 大小的 2 倍，FP16 约为 4 倍，因此 FP16 的 32B 需要 80 GB 级别的配置。',
         bullets: [
           '1.5B：文件 ~1.1 GB，Q4_K_M 下 ~4 GB 显存（或 CPU）',
           '7B：文件 ~4.7 GB，~5.5 GB 显存 — RTX 3060 12GB',
           '14B：文件 ~9 GB，~9.5 GB 显存 — RTX 4060 Ti 16GB',
-          '32B：文件 ~19 GB，~20.5 GB 显存 — RTX 4090 24GB（紧张）',
-          '70B：文件 ~40 GB，~42 GB 显存 — 双 GPU 或 48 GB',
+          '32B：文件 ~20 GB，~20.5 GB 显存 — RTX 4090 24GB（紧张）',
+          '70B：文件 ~43 GB，~44 GB 显存 — 双 GPU 或 48 GB',
           '规则：Q8_0 ≈ 2× Q4_K_M；FP16 ≈ 4× Q4_K_M',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Q4_K_M（Ollama 默认）显存：1.5B ~4 GB，7B ~5.5 GB，8B ~6 GB，14B ~9.5 GB，32B ~20.5 GB，70B ~42 GB。',
+          'Q4_K_M（Ollama 默认）显存：1.5B ~1.6 GB，7B ~5.5 GB，8B ~6 GB，14B ~9.5 GB，32B ~20.5 GB，70B ~44 GB。',
           'Q8_0 约为 Q4_K_M 大小的 2 倍；FP16 约为 Q4_K_M 文件大小的 4 倍。',
           'Q4_K_M 下的 14B（~9.5 GB）是最佳选择——可装入 16 GB 显卡并留有上下文余量。',
           'Q4_K_M 下的 32B（~20.5 GB）在 24 GB 的 RTX 4090 上较为紧张；如需更长上下文请降到更小的量化。',
@@ -515,7 +571,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'DeepSeek-R1 distill 在 Q4_K_M 格式下每十亿参数约需 0.6 GB 显存——7B ≈ 5.5 GB，14B ≈ 9.5 GB，32B ≈ 20.5 GB，70B ≈ 42 GB。',
+            text: 'DeepSeek-R1 distill 在 Q4_K_M 格式下每十亿参数约需 0.6 GB 显存——7B ≈ 5.5 GB，14B ≈ 9.5 GB，32B ≈ 20.5 GB，70B ≈ 44 GB。',
           },
           {
             type: 'plain-terms',
@@ -530,12 +586,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (显存)', 'Q8_0 (显存)', 'FP16 (显存)', '最低 GPU (Q4_K_M)'],
         rows: [
-          { 'Distill': '1.5B', 'Q4_K_M (显存)': '~4 GB', 'Q8_0 (显存)': '~5 GB', 'FP16 (显存)': '~6 GB', '最低 GPU (Q4_K_M)': '任意 4 GB GPU / CPU' },
-          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (显存)': '~5.5 GB', 'Q8_0 (显存)': '~9.5 GB', 'FP16 (显存)': '~16 GB', '最低 GPU (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '8B (Llama 3)', 'Q4_K_M (显存)': '~6 GB', 'Q8_0 (显存)': '~10 GB', 'FP16 (显存)': '~17 GB', '最低 GPU (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (显存)': '~9.5 GB', 'Q8_0 (显存)': '~16 GB', 'FP16 (显存)': '~29 GB', '最低 GPU (Q4_K_M)': 'RTX 4060 Ti 16GB' },
-          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (显存)': '~20.5 GB', 'Q8_0 (显存)': '~35 GB', 'FP16 (显存)': '~64 GB', '最低 GPU (Q4_K_M)': 'RTX 4090 24GB（紧张）' },
-          { 'Distill': '70B (Llama 3)', 'Q4_K_M (显存)': '~42 GB', 'Q8_0 (显存)': '~74 GB', 'FP16 (显存)': '~140 GB', '最低 GPU (Q4_K_M)': '双 GPU / 48 GB' },
+          { 'Distill': '1.5B', 'Q4_K_M (显存)': '~1.6 GB', 'Q8_0 (显存)': '~2.5 GB', 'FP16 (显存)': '~4.2 GB', '最低 GPU (Q4_K_M)': '任意 4 GB GPU / CPU' },
+          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (显存)': '~5.5 GB', 'Q8_0 (显存)': '~8.7 GB', 'FP16 (显存)': '~15.6 GB', '最低 GPU (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '8B (Llama 3)', 'Q4_K_M (显存)': '~6 GB', 'Q8_0 (显存)': '~9 GB', 'FP16 (显存)': '~16.6 GB', '最低 GPU (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (显存)': '~9.5 GB', 'Q8_0 (显存)': '~17 GB', 'FP16 (显存)': '~31 GB', '最低 GPU (Q4_K_M)': 'RTX 4060 Ti 16GB' },
+          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (显存)': '~20.5 GB', 'Q8_0 (显存)': '~36 GB', 'FP16 (显存)': '~67 GB', '最低 GPU (Q4_K_M)': 'RTX 4090 24GB（紧张）' },
+          { 'Distill': '70B (Llama 3)', 'Q4_K_M (显存)': '~44 GB', 'Q8_0 (显存)': '~76 GB', 'FP16 (显存)': '~142 GB', '最低 GPU (Q4_K_M)': '双 GPU / 48 GB' },
         ],
         note: '文件默认以 Q4_K_M 安装：`ollama run deepseek-r1:14b`。完整的 671B R1 不在此列——它在 Q4 下需要 ~376–404 GB，仅限数据中心。',
         affiliateLinks: [
@@ -550,7 +606,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**几乎所有情况都用 Q4_K_M**——它是 Ollama 默认值，在保持高推理质量的同时让每 GB 容纳最多的模型。除非有特定理由，否则就选它。',
           '**仅在有富余显存时使用 Q8_0**——它使占用大约翻倍，换来的质量提升微乎其微，几乎不会改变推理答案。在 24 GB 显卡上运行 14B 时值得，其他情况意义不大。',
-          '**本地请跳过 FP16**——它约为 Q4_K_M 大小的 4 倍，会把 32B 推到 64 GB 级别的硬件上，相比 Q8_0 却没有实际的推理收益。',
+          '**本地请跳过 FP16**——它约为 Q4_K_M 大小的 4 倍，会把 32B 推到 80 GB 级别的硬件上，相比 Q8_0 却没有实际的推理收益。',
+        ],
+      },
+      fourteenB: {
+        id: '14b-16gb',
+        title: '16 GB 显卡上的 14B：哪种量化装得下',
+        content: [
+          '**在 16 GB GPU 上，请用 Q4_K_M、Q5_K_M 或 Q6_K 运行 14B，而不是 Q8_0。** Ollama 的 Q4_K_M 文件为 9.0 GB，可为上下文留出约 6 GB；Q5_K_M（~10.5 GB）和 Q6_K（~12.1 GB）在中等上下文窗口下同样装得下。',
+          '**Q8_0 装不下得很宽裕。** Ollama 的 Q8_0 文件为 16 GB，在加上 KV 缓存之前就占满整张显卡，因此部分模型会溢出到速度较慢的系统内存。',
+          '**Ollama 只为 distill 提供 Q4_K_M、Q8_0 和 FP16 标签。** 如需 Q5_K_M 或 Q6_K，请从 Hugging Face 获取 GGUF 文件：`ollama run hf.co/<user>/<repo>:Q6_K`。',
+          '**RTX 4070 Laptop 的显存是 8 GB，而不是 16 GB。** 请用 Q4_K_M 运行 7B 或 8B distill（文件 4.7–4.9 GB）。14B（9 GB）会部分卸载到系统内存，速度明显变慢。',
+          '**`deepseek-r1:8b` 标签并不是 Llama distill。** 它在 Ollama 标签列表中的 5.2 GB 大小对应基于 Qwen3-8B 的 R1-0528 版本，而不是 4.9 GB 的 Llama distill；表中的 Llama 3 distill 是 `deepseek-r1:8b-llama-distill-q4_K_M`。',
         ],
       },
       v3Clarifier: {
@@ -565,10 +632,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: 'DeepSeek-R1-Distill-Qwen-32B 的显存是多少？', a: '在 Q4_K_M 下约为 20.5 GB，可装入 24 GB 的 RTX 4090，但留给长上下文的空间很小。Q8_0 下需要 ~35 GB，FP16 下需要 ~64 GB。' },
+          { q: 'DeepSeek-R1-Distill-Qwen-32B 的显存是多少？', a: '在 Q4_K_M 下约为 20.5 GB，可装入 24 GB 的 RTX 4090，但留给长上下文的空间很小。Q8_0 下需要 ~36 GB，FP16 下需要 ~67 GB。' },
           { q: 'Q8_0 相比 Q4_K_M 增加多少？', a: '大约 2 倍显存。对于大多数推理任务，质量提升微乎其微，因此除非有富余显存，否则 Q4_K_M 是更好的默认选择。' },
-          { q: '我能在单块 GPU 上运行 70B distill 吗？', a: '不能。约 42 GB（Q4_K_M）超过了任何单块消费级显卡。请使用两块 24 GB GPU 或一块 48 GB 工作站显卡。' },
+          { q: '我能在单块 GPU 上运行 70B distill 吗？', a: '不能。约 44 GB（Q4_K_M）超过了任何单块消费级显卡。请使用两块 24 GB GPU 或一块 48 GB 工作站显卡。' },
           { q: '完整的 DeepSeek-R1 在此表中吗？', a: '不在。完整的 671B R1 在 Q4 下需要 ~376–404 GB，仅限数据中心。此速查表涵盖可在消费级硬件上运行的 distill（1.5B–70B）。' },
+          { q: '量化后的 DeepSeek-R1 14B 需要多少显存？', a: 'Q4_K_M 约 9.5 GB（Ollama 文件 9.0 GB），Q5_K_M 约 11.5 GB，Q6_K 约 13 GB，Q8_0 约 17 GB，均含少量 KV 缓存。Q8_0 是第一个超出 16 GB 显卡的量化等级。' },
+          { q: '我能用 16 GB 显存运行 DeepSeek-R1 14B 吗？', a: '可以。Q4_K_M 约占用 9.5 GB，可为更长的上下文留出约 6 GB。Q6_K（~13 GB）是仍留有余量的最高画质；Q8_0（~17 GB）装不下。' },
+          { q: '哪个 DeepSeek-R1 distill 适合 RTX 4070 Laptop（8 GB）？', a: 'Q4_K_M 的 7B 或 8B（文件 4.7–4.9 GB，显存约 5.5–6 GB）。14B 需要约 9.5 GB，因此会部分依赖系统内存运行并变慢。' },
         ],
       },
       relatedBites: {
@@ -584,15 +654,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2027-04-17',
     theme: 'Quantization & VRAM',
     heroImage: '/images/deepseek-r1-distill-vram-cheatsheet-overview-hero-es.webp',
     type: 'reference',
     title: 'Tabla de VRAM de DeepSeek-R1 Distill (2026)',
     seoTitle: 'VRAM de DeepSeek-R1 Distill 2026: cada cuant.',
-    metaDescription: 'Cada distill de DeepSeek-R1 (1.5B–70B) por cuantización: VRAM exacta, tamaño del archivo del modelo y GPU mínima. La tabla de referencia para guardar. Q4_K_M, Q8, FP16.',
+    metaDescription: 'DeepSeek-R1 14B necesita ~9.5 GB de VRAM en Q4_K_M y cabe en una tarjeta de 16 GB. Cada distill (1.5B–70B) por cuantización: Q8_0, FP16, archivo y GPU mínima.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-17',
     educationalLevel: 'Intermediate',
     audience: 'Usuarios de LLM locales que dimensionan una GPU para un distill de DeepSeek-R1 según los niveles de cuantización',
     affiliateDisclosure: true,
@@ -600,28 +670,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-deepseek-distill-for-your-gpu'],
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
-    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB'],
+    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
     leadAnswerBlock: '**Cada distill de DeepSeek-R1, por cuantización: 1.5B cabe en 4 GB, 7B/8B en 8 GB, 14B en 16 GB, 32B en 24 GB y 70B necesita doble GPU, todo con el Q4_K_M predeterminado de Ollama.** Q8_0 duplica aproximadamente la VRAM; FP16 cuadruplica aproximadamente el tamaño del archivo Q4_K_M. Esta es la tabla para guardar y emparejar un distill con una tarjeta.',
     quickAnswerTop: {
       es: {
         question: '¿Cuánta VRAM necesita cada distill de DeepSeek-R1?',
-        answer: 'En Q4_K_M (predeterminado de Ollama): 1.5B ≈ 4 GB, 7B ≈ 5.5 GB, 8B ≈ 6 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 42 GB. Q8_0 es unas 2× el tamaño de Q4_K_M y FP16 unas 4×, por lo que el 32B en FP16 necesita una configuración de clase 64 GB.',
+        answer: 'En Q4_K_M (predeterminado de Ollama): 1.5B ≈ 1.6 GB, 7B ≈ 5.5 GB, 8B ≈ 6 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 44 GB. Q8_0 es unas 2× el tamaño de Q4_K_M y FP16 unas 4×, por lo que el 32B en FP16 necesita una configuración de clase 80 GB.',
         bullets: [
           '1.5B: archivo ~1.1 GB, ~4 GB de VRAM (o CPU) en Q4_K_M',
           '7B: archivo ~4.7 GB, ~5.5 GB de VRAM — RTX 3060 12GB',
           '14B: archivo ~9 GB, ~9.5 GB de VRAM — RTX 4060 Ti 16GB',
-          '32B: archivo ~19 GB, ~20.5 GB de VRAM — RTX 4090 24GB (ajustado)',
-          '70B: archivo ~40 GB, ~42 GB de VRAM — doble GPU o 48 GB',
+          '32B: archivo ~20 GB, ~20.5 GB de VRAM — RTX 4090 24GB (ajustado)',
+          '70B: archivo ~43 GB, ~44 GB de VRAM — doble GPU o 48 GB',
           'Regla: Q8_0 ≈ 2× Q4_K_M; FP16 ≈ 4× Q4_K_M',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'VRAM en Q4_K_M (predeterminado de Ollama): 1.5B ~4 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~42 GB.',
+          'VRAM en Q4_K_M (predeterminado de Ollama): 1.5B ~1.6 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~44 GB.',
           'Q8_0 es unas 2× el tamaño de Q4_K_M; FP16 unas 4× el tamaño del archivo Q4_K_M.',
           'El 14B en Q4_K_M (~9.5 GB) es el punto óptimo: cabe en una tarjeta de 16 GB con margen para el contexto.',
           'El 32B en Q4_K_M (~20.5 GB) va ajustado en una RTX 4090 de 24 GB; baja a una cuantización menor para un contexto más largo.',
@@ -631,7 +701,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Los distills de DeepSeek-R1 necesitan aproximadamente 0,6 GB de VRAM por cada mil millones de parámetros en Q4_K_M: 7B ≈ 5,5 GB, 14B ≈ 9,5 GB, 32B ≈ 20,5 GB, 70B ≈ 42 GB.',
+            text: 'Los distills de DeepSeek-R1 necesitan aproximadamente 0,6 GB de VRAM por cada mil millones de parámetros en Q4_K_M: 7B ≈ 5,5 GB, 14B ≈ 9,5 GB, 32B ≈ 20,5 GB, 70B ≈ 44 GB.',
           },
           {
             type: 'plain-terms',
@@ -646,12 +716,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', 'GPU mínima (Q4_K_M)'],
         rows: [
-          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~4 GB', 'Q8_0 (VRAM)': '~5 GB', 'FP16 (VRAM)': '~6 GB', 'GPU mínima (Q4_K_M)': 'Cualquier GPU de 4 GB / CPU' },
-          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~9.5 GB', 'FP16 (VRAM)': '~16 GB', 'GPU mínima (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~10 GB', 'FP16 (VRAM)': '~17 GB', 'GPU mínima (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~16 GB', 'FP16 (VRAM)': '~29 GB', 'GPU mínima (Q4_K_M)': 'RTX 4060 Ti 16GB' },
-          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~35 GB', 'FP16 (VRAM)': '~64 GB', 'GPU mínima (Q4_K_M)': 'RTX 4090 24GB (ajustado)' },
-          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~42 GB', 'Q8_0 (VRAM)': '~74 GB', 'FP16 (VRAM)': '~140 GB', 'GPU mínima (Q4_K_M)': 'Doble GPU / 48 GB' },
+          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~1.6 GB', 'Q8_0 (VRAM)': '~2.5 GB', 'FP16 (VRAM)': '~4.2 GB', 'GPU mínima (Q4_K_M)': 'Cualquier GPU de 4 GB / CPU' },
+          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~8.7 GB', 'FP16 (VRAM)': '~15.6 GB', 'GPU mínima (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~9 GB', 'FP16 (VRAM)': '~16.6 GB', 'GPU mínima (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~17 GB', 'FP16 (VRAM)': '~31 GB', 'GPU mínima (Q4_K_M)': 'RTX 4060 Ti 16GB' },
+          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~36 GB', 'FP16 (VRAM)': '~67 GB', 'GPU mínima (Q4_K_M)': 'RTX 4090 24GB (ajustado)' },
+          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~44 GB', 'Q8_0 (VRAM)': '~76 GB', 'FP16 (VRAM)': '~142 GB', 'GPU mínima (Q4_K_M)': 'Doble GPU / 48 GB' },
         ],
         note: 'Los archivos se instalan en Q4_K_M de forma predeterminada: `ollama run deepseek-r1:14b`. El R1 completo de 671B queda excluido: requiere ~376–404 GB en Q4 y es solo para centros de datos.',
         affiliateLinks: [
@@ -666,7 +736,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**Usa Q4_K_M para casi todo**: es el predeterminado de Ollama y mantiene alta la calidad de razonamiento mientras alberga la mayor cantidad de modelos por GB. Elígelo a menos que tengas una razón concreta para no hacerlo.',
           '**Usa Q8_0 solo con VRAM de sobra**: duplica aproximadamente el consumo a cambio de una mejora de calidad marginal que rara vez cambia una respuesta de razonamiento. Vale la pena en una tarjeta de 24 GB con el 14B, poco más.',
-          '**Evita FP16 en local**: con unas 4× el tamaño de Q4_K_M, empuja el 32B a hardware de clase 64 GB sin beneficio práctico de razonamiento frente a Q8_0.',
+          '**Evita FP16 en local**: con unas 4× el tamaño de Q4_K_M, empuja el 32B a hardware de clase 80 GB sin beneficio práctico de razonamiento frente a Q8_0.',
+        ],
+      },
+      fourteenB: {
+        id: '14b-16gb',
+        title: 'El 14B en una tarjeta de 16 GB: qué cuantización cabe',
+        content: [
+          '**En una GPU de 16 GB, ejecuta el 14B en Q4_K_M, Q5_K_M o Q6_K, no en Q8_0.** El archivo Q4_K_M de Ollama pesa 9.0 GB y deja ~6 GB para el contexto; Q5_K_M (~10.5 GB) y Q6_K (~12.1 GB) también caben con una ventana de contexto moderada.',
+          '**Q8_0 no cabe con comodidad.** El archivo Q8_0 de Ollama pesa 16 GB, es decir, toda la tarjeta antes de la caché KV, así que parte del modelo se desborda a la RAM del sistema, más lenta.',
+          '**Ollama solo ofrece las etiquetas Q4_K_M, Q8_0 y FP16 para los distills.** Para Q5_K_M o Q6_K, descarga un archivo GGUF de Hugging Face: `ollama run hf.co/<user>/<repo>:Q6_K`.',
+          '**Una RTX 4070 Laptop tiene 8 GB de VRAM, no 16 GB.** Usa el distill de 7B u 8B en Q4_K_M (archivos de 4.7–4.9 GB). El 14B (9 GB) se descarga en parte a la RAM del sistema y se vuelve mucho más lento.',
+          '**La etiqueta `deepseek-r1:8b` no es el distill de Llama.** Su tamaño de 5.2 GB en la lista de etiquetas de Ollama coincide con la versión R1-0528 basada en Qwen3-8B, no con el distill de Llama de 4.9 GB; el distill de Llama 3 de la tabla es `deepseek-r1:8b-llama-distill-q4_K_M`.',
         ],
       },
       v3Clarifier: {
@@ -681,10 +762,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Cuánta VRAM necesita DeepSeek-R1-Distill-Qwen-32B?', a: 'Unos 20.5 GB en Q4_K_M, lo que cabe en una RTX 4090 de 24 GB pero deja poco espacio para un contexto largo. En Q8_0 necesita ~35 GB y en FP16 ~64 GB.' },
+          { q: '¿Cuánta VRAM necesita DeepSeek-R1-Distill-Qwen-32B?', a: 'Unos 20.5 GB en Q4_K_M, lo que cabe en una RTX 4090 de 24 GB pero deja poco espacio para un contexto largo. En Q8_0 necesita ~36 GB y en FP16 ~67 GB.' },
           { q: '¿Cuánto añade Q8_0 sobre Q4_K_M?', a: 'Aproximadamente 2× la VRAM. Para la mayoría de las tareas de razonamiento la mejora de calidad es marginal, así que Q4_K_M es la mejor opción predeterminada salvo que tengas VRAM de sobra.' },
-          { q: '¿Puedo ejecutar el distill de 70B en una sola GPU?', a: 'No. Con ~42 GB (Q4_K_M) supera cualquier tarjeta de consumo individual. Usa dos GPU de 24 GB o una tarjeta de estación de trabajo de 48 GB.' },
+          { q: '¿Puedo ejecutar el distill de 70B en una sola GPU?', a: 'No. Con ~44 GB (Q4_K_M) supera cualquier tarjeta de consumo individual. Usa dos GPU de 24 GB o una tarjeta de estación de trabajo de 48 GB.' },
           { q: '¿Está el DeepSeek-R1 completo en esta tabla?', a: 'No. El R1 completo de 671B necesita ~376–404 GB en Q4 y es solo para centros de datos. Esta tabla cubre los distills ejecutables en hardware de consumo (1.5B–70B).' },
+          { q: '¿Cuánta VRAM necesita DeepSeek-R1 14B cuantizado?', a: 'Unos 9.5 GB en Q4_K_M (archivo de Ollama de 9.0 GB), ~11.5 GB en Q5_K_M, ~13 GB en Q6_K y ~17 GB en Q8_0, cada uno con una caché KV modesta. Q8_0 es la primera cuantización que desborda una tarjeta de 16 GB.' },
+          { q: '¿Puedo ejecutar DeepSeek-R1 14B con 16 GB de VRAM?', a: 'Sí. Q4_K_M usa unos 9.5 GB y deja aproximadamente 6 GB para un contexto más largo. Q6_K (~13 GB) es la mayor calidad que aún deja margen; Q8_0 (~17 GB) no cabe.' },
+          { q: '¿Qué distill de DeepSeek-R1 cabe en una RTX 4070 Laptop (8 GB)?', a: 'El de 7B o el de 8B en Q4_K_M (archivos de 4.7–4.9 GB, ~5.5–6 GB de VRAM). El 14B necesita ~9.5 GB, así que se ejecutaría en parte desde la RAM del sistema y iría más lento.' },
         ],
       },
       relatedBites: {
@@ -700,15 +784,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2027-04-17',
     theme: 'Quantization & VRAM',
     heroImage: '/images/deepseek-r1-distill-vram-cheatsheet-overview-hero-pt.webp',
     type: 'reference',
     title: 'Tabela de VRAM do DeepSeek-R1 Distill (2026)',
     seoTitle: 'VRAM do DeepSeek-R1 Distill 2026: cada quant.',
-    metaDescription: 'Cada distill do DeepSeek-R1 (1.5B–70B) por quantização: VRAM exata, tamanho do arquivo do modelo e GPU mínima. A tabela de referência para salvar. Q4_K_M, Q8, FP16.',
+    metaDescription: 'DeepSeek-R1 14B precisa de ~9.5 GB de VRAM no Q4_K_M e cabe em uma placa de 16 GB. Cada distill (1.5B–70B) por quant: Q8_0, FP16, arquivo e GPU mínima.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-17',
     educationalLevel: 'Intermediate',
     audience: 'Usuários de LLMs locais dimensionando uma GPU para um distill do DeepSeek-R1 entre níveis de quantização',
     affiliateDisclosure: true,
@@ -716,28 +800,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-deepseek-distill-for-your-gpu'],
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
-    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB'],
+    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
     leadAnswerBlock: '**Cada distill do DeepSeek-R1, por quantização: 1.5B cabe em 4 GB, 7B/8B em 8 GB, 14B em 16 GB, 32B em 24 GB e 70B precisa de duas GPUs — tudo no Q4_K_M padrão do Ollama.** O Q8_0 praticamente dobra a VRAM; o FP16 praticamente quadruplica o tamanho do arquivo Q4_K_M. Esta é a tabela para salvar e combinar um distill com uma placa de vídeo.',
     quickAnswerTop: {
       pt: {
         question: 'Quanta VRAM cada distill do DeepSeek-R1 precisa?',
-        answer: 'No Q4_K_M (padrão do Ollama): 1.5B ≈ 4 GB, 7B ≈ 5.5 GB, 8B ≈ 6 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 42 GB. O Q8_0 é cerca de 2× o tamanho do Q4_K_M e o FP16 cerca de 4×, então o 32B em FP16 precisa de uma configuração da classe de 64 GB.',
+        answer: 'No Q4_K_M (padrão do Ollama): 1.5B ≈ 1.6 GB, 7B ≈ 5.5 GB, 8B ≈ 6 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 44 GB. O Q8_0 é cerca de 2× o tamanho do Q4_K_M e o FP16 cerca de 4×, então o 32B em FP16 precisa de uma configuração da classe de 80 GB.',
         bullets: [
           '1.5B: arquivo ~1.1 GB, ~4 GB de VRAM (ou CPU) no Q4_K_M',
           '7B: arquivo ~4.7 GB, ~5.5 GB de VRAM — RTX 3060 12GB',
           '14B: arquivo ~9 GB, ~9.5 GB de VRAM — RTX 4060 Ti 16GB',
-          '32B: arquivo ~19 GB, ~20.5 GB de VRAM — RTX 4090 24GB (apertado)',
-          '70B: arquivo ~40 GB, ~42 GB de VRAM — duas GPUs ou 48 GB',
+          '32B: arquivo ~20 GB, ~20.5 GB de VRAM — RTX 4090 24GB (apertado)',
+          '70B: arquivo ~43 GB, ~44 GB de VRAM — duas GPUs ou 48 GB',
           'Regra: Q8_0 ≈ 2× Q4_K_M; FP16 ≈ 4× Q4_K_M',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'VRAM no Q4_K_M (padrão do Ollama): 1.5B ~4 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~42 GB.',
+          'VRAM no Q4_K_M (padrão do Ollama): 1.5B ~1.6 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~44 GB.',
           'O Q8_0 é cerca de 2× o tamanho do Q4_K_M; o FP16 cerca de 4× o tamanho do arquivo Q4_K_M.',
           'O 14B no Q4_K_M (~9.5 GB) é o ponto ideal — cabe em uma placa de 16 GB com folga de contexto.',
           'O 32B no Q4_K_M (~20.5 GB) fica apertado em uma RTX 4090 de 24 GB; reduza para uma quantização menor para contexto mais longo.',
@@ -747,7 +831,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Os distills do DeepSeek-R1 precisam de aproximadamente 0,6 GB de VRAM por bilhão de parâmetros em Q4_K_M — 7B ≈ 5,5 GB, 14B ≈ 9,5 GB, 32B ≈ 20,5 GB, 70B ≈ 42 GB.',
+            text: 'Os distills do DeepSeek-R1 precisam de aproximadamente 0,6 GB de VRAM por bilhão de parâmetros em Q4_K_M — 7B ≈ 5,5 GB, 14B ≈ 9,5 GB, 32B ≈ 20,5 GB, 70B ≈ 44 GB.',
           },
           {
             type: 'plain-terms',
@@ -762,12 +846,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', 'GPU mínima (Q4_K_M)'],
         rows: [
-          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~4 GB', 'Q8_0 (VRAM)': '~5 GB', 'FP16 (VRAM)': '~6 GB', 'GPU mínima (Q4_K_M)': 'Qualquer GPU de 4 GB / CPU' },
-          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~9.5 GB', 'FP16 (VRAM)': '~16 GB', 'GPU mínima (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~10 GB', 'FP16 (VRAM)': '~17 GB', 'GPU mínima (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~16 GB', 'FP16 (VRAM)': '~29 GB', 'GPU mínima (Q4_K_M)': 'RTX 4060 Ti 16GB' },
-          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~35 GB', 'FP16 (VRAM)': '~64 GB', 'GPU mínima (Q4_K_M)': 'RTX 4090 24GB (apertado)' },
-          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~42 GB', 'Q8_0 (VRAM)': '~74 GB', 'FP16 (VRAM)': '~140 GB', 'GPU mínima (Q4_K_M)': 'Duas GPUs / 48 GB' },
+          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~1.6 GB', 'Q8_0 (VRAM)': '~2.5 GB', 'FP16 (VRAM)': '~4.2 GB', 'GPU mínima (Q4_K_M)': 'Qualquer GPU de 4 GB / CPU' },
+          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~8.7 GB', 'FP16 (VRAM)': '~15.6 GB', 'GPU mínima (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~9 GB', 'FP16 (VRAM)': '~16.6 GB', 'GPU mínima (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~17 GB', 'FP16 (VRAM)': '~31 GB', 'GPU mínima (Q4_K_M)': 'RTX 4060 Ti 16GB' },
+          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~36 GB', 'FP16 (VRAM)': '~67 GB', 'GPU mínima (Q4_K_M)': 'RTX 4090 24GB (apertado)' },
+          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~44 GB', 'Q8_0 (VRAM)': '~76 GB', 'FP16 (VRAM)': '~142 GB', 'GPU mínima (Q4_K_M)': 'Duas GPUs / 48 GB' },
         ],
         note: 'Os arquivos são instalados em Q4_K_M por padrão: `ollama run deepseek-r1:14b`. O R1 completo de 671B está excluído — ele exige ~376–404 GB no Q4 e é apenas para data center.',
         affiliateLinks: [
@@ -782,7 +866,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**Use o Q4_K_M para quase tudo** — é o padrão do Ollama e mantém alta a qualidade de raciocínio enquanto acomoda o maior número de modelos por GB. Escolha-o a menos que tenha um motivo específico para não fazê-lo.',
           '**Use o Q8_0 apenas com VRAM sobrando** — ele praticamente dobra o consumo em troca de um ganho marginal de qualidade que raramente muda uma resposta de raciocínio. Vale a pena em uma placa de 24 GB rodando o 14B, e pouco mais.',
-          '**Pule o FP16 localmente** — com cerca de 4× o tamanho do Q4_K_M, ele empurra o 32B para hardware da classe de 64 GB sem benefício prático de raciocínio em relação ao Q8_0.',
+          '**Pule o FP16 localmente** — com cerca de 4× o tamanho do Q4_K_M, ele empurra o 32B para hardware da classe de 80 GB sem benefício prático de raciocínio em relação ao Q8_0.',
+        ],
+      },
+      fourteenB: {
+        id: '14b-16gb',
+        title: 'O 14B em uma placa de 16 GB: qual quantização cabe',
+        content: [
+          '**Em uma GPU de 16 GB, rode o 14B em Q4_K_M, Q5_K_M ou Q6_K — não em Q8_0.** O arquivo Q4_K_M do Ollama tem 9.0 GB e deixa ~6 GB para o contexto; Q5_K_M (~10.5 GB) e Q6_K (~12.1 GB) também cabem com uma janela de contexto moderada.',
+          '**O Q8_0 não cabe com folga.** O arquivo Q8_0 do Ollama tem 16 GB — a placa inteira antes do cache KV — então parte do modelo vai para a RAM do sistema, mais lenta.',
+          '**O Ollama só oferece as tags Q4_K_M, Q8_0 e FP16 para os distills.** Para Q5_K_M ou Q6_K, baixe um arquivo GGUF do Hugging Face: `ollama run hf.co/<user>/<repo>:Q6_K`.',
+          '**Uma RTX 4070 Laptop tem 8 GB de VRAM, não 16 GB.** Use o distill de 7B ou 8B em Q4_K_M (arquivos de 4.7–4.9 GB). O 14B (9 GB) é parcialmente descarregado para a RAM do sistema e fica bem mais lento.',
+          '**A tag `deepseek-r1:8b` não é o distill do Llama.** Seu tamanho de 5.2 GB na lista de tags do Ollama corresponde à versão R1-0528 baseada no Qwen3-8B, não ao distill Llama de 4.9 GB; o distill Llama 3 da tabela é `deepseek-r1:8b-llama-distill-q4_K_M`.',
         ],
       },
       v3Clarifier: {
@@ -797,10 +892,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Qual é a VRAM do DeepSeek-R1-Distill-Qwen-32B?', a: 'Cerca de 20.5 GB no Q4_K_M, o que cabe em uma RTX 4090 de 24 GB, mas deixa pouco espaço para contexto longo. No Q8_0 ele precisa de ~35 GB e no FP16 de ~64 GB.' },
+          { q: 'Qual é a VRAM do DeepSeek-R1-Distill-Qwen-32B?', a: 'Cerca de 20.5 GB no Q4_K_M, o que cabe em uma RTX 4090 de 24 GB, mas deixa pouco espaço para contexto longo. No Q8_0 ele precisa de ~36 GB e no FP16 de ~67 GB.' },
           { q: 'Quanto o Q8_0 adiciona em relação ao Q4_K_M?', a: 'Cerca de 2× a VRAM. Para a maioria das tarefas de raciocínio o ganho de qualidade é marginal, então o Q4_K_M é o melhor padrão, a menos que você tenha VRAM sobrando.' },
-          { q: 'Posso rodar o distill de 70B em uma única GPU?', a: 'Não. Com ~42 GB (Q4_K_M), ele ultrapassa qualquer placa de consumo individual. Use duas GPUs de 24 GB ou uma placa de estação de trabalho de 48 GB.' },
+          { q: 'Posso rodar o distill de 70B em uma única GPU?', a: 'Não. Com ~44 GB (Q4_K_M), ele ultrapassa qualquer placa de consumo individual. Use duas GPUs de 24 GB ou uma placa de estação de trabalho de 48 GB.' },
           { q: 'O DeepSeek-R1 completo está nesta tabela?', a: 'Não. O R1 completo de 671B precisa de ~376–404 GB no Q4 e é apenas para data center. Esta tabela cobre os distills que rodam em hardware de consumo (1.5B–70B).' },
+          { q: 'Quanta VRAM o DeepSeek-R1 14B quantizado precisa?', a: 'Cerca de 9.5 GB no Q4_K_M (arquivo do Ollama de 9.0 GB), ~11.5 GB no Q5_K_M, ~13 GB no Q6_K e ~17 GB no Q8_0, cada um com um cache KV modesto. O Q8_0 é a primeira quantização que estoura uma placa de 16 GB.' },
+          { q: 'Posso rodar o DeepSeek-R1 14B com 16 GB de VRAM?', a: 'Sim. O Q4_K_M usa cerca de 9.5 GB e deixa aproximadamente 6 GB para um contexto maior. O Q6_K (~13 GB) é a maior qualidade que ainda deixa folga; o Q8_0 (~17 GB) não cabe.' },
+          { q: 'Qual distill do DeepSeek-R1 cabe em uma RTX 4070 Laptop (8 GB)?', a: 'O de 7B ou o de 8B em Q4_K_M (arquivos de 4.7–4.9 GB, ~5.5–6 GB de VRAM). O 14B precisa de ~9.5 GB, então rodaria em parte a partir da RAM do sistema e ficaria mais lento.' },
         ],
       },
       relatedBites: {
@@ -816,15 +914,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2027-04-17',
     theme: 'Quantization & VRAM',
     heroImage: '/images/deepseek-r1-distill-vram-cheatsheet-overview-hero-ar.webp',
     type: 'reference',
     title: 'جدول ⁨VRAM⁩ لنماذج ⁨DeepSeek-R1 Distill⁩ (⁨2026⁩)',
     seoTitle: 'جدول ⁨VRAM⁩ لـ ⁨DeepSeek-R1 Distill 2026⁩',
-    metaDescription: 'كل نموذج ⁨DeepSeek-R1 distill⁩ (من ⁨1.5B⁩ إلى ⁨70B⁩) حسب التكميم — ⁨VRAM⁩ الدقيق وحجم ملف النموذج وأدنى ⁨GPU⁩. جدول مرجعي يستحق الحفظ. ⁨Q4⁩_⁨K⁩_⁨M⁩ و⁨Q8⁩ و⁨FP16⁩.',
+    metaDescription: 'يحتاج ⁨DeepSeek-R1 14B⁩ إلى نحو ⁨9.5 GB⁩ من ⁨VRAM⁩ عند ⁨Q4_K_M⁩ ويتسع في بطاقة ⁨16 GB⁩. كل نماذج ⁨distill⁩ (من ⁨1.5B⁩ إلى ⁨70B⁩) حسب التكميم: ⁨VRAM⁩ وحجم الملف وأدنى ⁨GPU⁩.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-17',
     educationalLevel: 'Intermediate',
     audience: 'مستخدمو نماذج LLM المحلية الذين يحددون حجم GPU لنموذج DeepSeek-R1 distill عبر مستويات التكميم',
     affiliateDisclosure: true,
@@ -832,28 +930,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-deepseek-distill-for-your-gpu'],
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
-    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB'],
+    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
     leadAnswerBlock: '**كل نموذج DeepSeek-R1 distill حسب التكميم: 1.5B يتسع في 4 GB، و7B/8B في 8 GB، و14B في 16 GB، و32B في 24 GB، ويحتاج 70B إلى GPU مزدوج — كل ذلك عند Q4_K_M الافتراضي في Ollama.** يضاعف Q8_0 الـ VRAM تقريبًا؛ ويضاعف FP16 حجم ملف Q4_K_M أربع مرات تقريبًا. هذا هو الجدول الذي تحفظه لمطابقة نموذج distill ببطاقة معينة.',
     quickAnswerTop: {
       ar: {
         question: 'كم VRAM يحتاج كل نموذج DeepSeek-R1 distill؟',
-        answer: 'عند Q4_K_M (الافتراضي في Ollama): 1.5B ≈ 4 GB، و7B ≈ 5.5 GB، و8B ≈ 6 GB، و14B ≈ 9.5 GB، و32B ≈ 20.5 GB، و70B ≈ 42 GB. يبلغ Q8_0 نحو ضعف حجم Q4_K_M، وFP16 نحو 4 أضعاف، لذا يحتاج 32B عند FP16 إلى إعداد من فئة 64 GB.',
+        answer: 'عند Q4_K_M (الافتراضي في Ollama): 1.5B ≈ 1.6 GB، و7B ≈ 5.5 GB، و8B ≈ 6 GB، و14B ≈ 9.5 GB، و32B ≈ 20.5 GB، و70B ≈ 44 GB. يبلغ Q8_0 نحو ضعف حجم Q4_K_M، وFP16 نحو 4 أضعاف، لذا يحتاج 32B عند FP16 إلى إعداد من فئة 80 GB.',
         bullets: [
           '1.5B: ملف ~1.1 GB، و~4 GB من VRAM (أو CPU) عند Q4_K_M',
           '7B: ملف ~4.7 GB، و~5.5 GB من VRAM — RTX 3060 12GB',
           '14B: ملف ~9 GB، و~9.5 GB من VRAM — RTX 4060 Ti 16GB',
-          '32B: ملف ~19 GB، و~20.5 GB من VRAM — RTX 4090 24GB (على الحد)',
-          '70B: ملف ~40 GB، و~42 GB من VRAM — GPU مزدوج أو 48 GB',
+          '32B: ملف ~20 GB، و~20.5 GB من VRAM — RTX 4090 24GB (على الحد)',
+          '70B: ملف ~43 GB، و~44 GB من VRAM — GPU مزدوج أو 48 GB',
           'القاعدة: Q8_0 ≈ 2× Q4_K_M؛ FP16 ≈ 4× Q4_K_M',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'VRAM عند Q4_K_M (الافتراضي في Ollama): 1.5B ~4 GB، و7B ~5.5 GB، و8B ~6 GB، و14B ~9.5 GB، و32B ~20.5 GB، و70B ~42 GB.',
+          'VRAM عند Q4_K_M (الافتراضي في Ollama): 1.5B ~1.6 GB، و7B ~5.5 GB، و8B ~6 GB، و14B ~9.5 GB، و32B ~20.5 GB، و70B ~44 GB.',
           'يبلغ Q8_0 نحو ضعف حجم Q4_K_M؛ وFP16 نحو 4 أضعاف حجم ملف Q4_K_M.',
           'نموذج 14B عند Q4_K_M (~9.5 GB) هو الخيار الأمثل — يتسع في بطاقة 16 GB مع هامش للسياق.',
           'نموذج 32B عند Q4_K_M (~20.5 GB) على الحد في بطاقة RTX 4090 سعة 24 GB؛ انتقل إلى تكميم أصغر لسياق أطول.',
@@ -878,12 +976,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', 'أدنى GPU (Q4_K_M)'],
         rows: [
-          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~4 GB', 'Q8_0 (VRAM)': '~5 GB', 'FP16 (VRAM)': '~6 GB', 'أدنى GPU (Q4_K_M)': 'أي GPU بسعة 4 GB / CPU' },
-          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~9.5 GB', 'FP16 (VRAM)': '~16 GB', 'أدنى GPU (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~10 GB', 'FP16 (VRAM)': '~17 GB', 'أدنى GPU (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~16 GB', 'FP16 (VRAM)': '~29 GB', 'أدنى GPU (Q4_K_M)': 'RTX 4060 Ti 16GB' },
-          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~35 GB', 'FP16 (VRAM)': '~64 GB', 'أدنى GPU (Q4_K_M)': 'RTX 4090 24GB (على الحد)' },
-          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~42 GB', 'Q8_0 (VRAM)': '~74 GB', 'FP16 (VRAM)': '~140 GB', 'أدنى GPU (Q4_K_M)': 'GPU مزدوج / 48 GB' },
+          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~1.6 GB', 'Q8_0 (VRAM)': '~2.5 GB', 'FP16 (VRAM)': '~4.2 GB', 'أدنى GPU (Q4_K_M)': 'أي GPU بسعة 4 GB / CPU' },
+          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~8.7 GB', 'FP16 (VRAM)': '~15.6 GB', 'أدنى GPU (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~9 GB', 'FP16 (VRAM)': '~16.6 GB', 'أدنى GPU (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~17 GB', 'FP16 (VRAM)': '~31 GB', 'أدنى GPU (Q4_K_M)': 'RTX 4060 Ti 16GB' },
+          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~36 GB', 'FP16 (VRAM)': '~67 GB', 'أدنى GPU (Q4_K_M)': 'RTX 4090 24GB (على الحد)' },
+          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~44 GB', 'Q8_0 (VRAM)': '~76 GB', 'FP16 (VRAM)': '~142 GB', 'أدنى GPU (Q4_K_M)': 'GPU مزدوج / 48 GB' },
         ],
         note: 'تُثبّت الملفات بصيغة Q4_K_M افتراضيًا: `ollama run deepseek-r1:14b`. نموذج R1 الكامل بحجم 671B مستبعد — فهو يتطلب ~376–404 GB عند Q4 وهو مخصص لمراكز البيانات فقط.',
         affiliateLinks: [
@@ -898,7 +996,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**استخدم Q4_K_M لكل شيء تقريبًا** — فهو الافتراضي في Ollama ويحافظ على جودة استدلال عالية مع استيعاب أكبر عدد من النماذج لكل GB. اخترْه ما لم يكن لديك سبب محدد لغير ذلك.',
           '**استخدم Q8_0 فقط مع VRAM فائض** — فهو يضاعف البصمة تقريبًا مقابل تحسين هامشي في الجودة نادرًا ما يغيّر إجابة استدلالية. يستحق العناء على بطاقة 24 GB تشغّل نموذج 14B، وليس أكثر من ذلك بكثير.',
-          '**تجنّب FP16 محليًا** — فبحجم نحو 4 أضعاف Q4_K_M، يدفع نموذج 32B إلى عتاد من فئة 64 GB دون فائدة استدلالية عملية مقارنة بـ Q8_0.',
+          '**تجنّب FP16 محليًا** — فبحجم نحو 4 أضعاف Q4_K_M، يدفع نموذج 32B إلى عتاد من فئة 80 GB دون فائدة استدلالية عملية مقارنة بـ Q8_0.',
+        ],
+      },
+      fourteenB: {
+        id: '14b-16gb',
+        title: 'نموذج ⁨14B⁩ على بطاقة ⁨16 GB⁩: أي تكميم يتسع',
+        content: [
+          '**على ⁨GPU⁩ بسعة ⁨16 GB⁩، شغّل نموذج ⁨14B⁩ عند ⁨Q4_K_M⁩ أو ⁨Q5_K_M⁩ أو ⁨Q6_K⁩ — وليس ⁨Q8_0⁩.** يبلغ ملف ⁨Q4_K_M⁩ في ⁨Ollama⁩ حجمه ⁨9.0 GB⁩ ويترك نحو ⁨6 GB⁩ للسياق؛ ويتسع ⁨Q5_K_M⁩ (⁨~10.5 GB⁩) و⁨Q6_K⁩ (⁨~12.1 GB⁩) أيضًا مع نافذة سياق متوسطة.',
+          '**لا يتسع ⁨Q8_0⁩ بارتياح.** ملف ⁨Q8_0⁩ في ⁨Ollama⁩ حجمه ⁨16 GB⁩ — أي البطاقة كاملة قبل إضافة ذاكرة ⁨KV⁩ — فيتجاوز جزء من النموذج إلى ذاكرة النظام الأبطأ.',
+          '**يوفّر ⁨Ollama⁩ وسوم ⁨Q4_K_M⁩ و⁨Q8_0⁩ و⁨FP16⁩ فقط لنماذج ⁨distill⁩.** وللحصول على ⁨Q5_K_M⁩ أو ⁨Q6_K⁩، نزّل ملف ⁨GGUF⁩ من ⁨Hugging Face⁩: ⁨`ollama run hf.co/<user>/<repo>:Q6_K`⁩.',
+          '**تمتلك ⁨RTX 4070 Laptop⁩ ذاكرة ⁨VRAM⁩ بسعة ⁨8 GB⁩ وليس ⁨16 GB⁩.** استخدم ⁨distill⁩ بحجم ⁨7B⁩ أو ⁨8B⁩ عند ⁨Q4_K_M⁩ (ملفات ⁨4.7–4.9 GB⁩). أما ⁨14B⁩ (⁨9 GB⁩) فيُحمَّل جزء منه إلى ذاكرة النظام ويصبح أبطأ بكثير.',
+          '**الوسم ⁨`deepseek-r1:8b`⁩ ليس ⁨distill⁩ الخاص بـ ⁨Llama⁩.** حجمه ⁨5.2 GB⁩ في قائمة وسوم ⁨Ollama⁩ يطابق إصدار ⁨R1-0528⁩ المبني على ⁨Qwen3-8B⁩، وليس ⁨distill⁩ الخاص بـ ⁨Llama⁩ بحجم ⁨4.9 GB⁩؛ و⁨distill⁩ الخاص بـ ⁨Llama 3⁩ في الجدول هو ⁨`deepseek-r1:8b-llama-distill-q4_K_M`⁩.',
         ],
       },
       v3Clarifier: {
@@ -913,10 +1022,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'كم VRAM يحتاج DeepSeek-R1-Distill-Qwen-32B؟', a: 'نحو 20.5 GB عند Q4_K_M، وهو ما يتسع في بطاقة RTX 4090 سعة 24 GB لكنه يترك مساحة ضئيلة للسياق الطويل. عند Q8_0 يحتاج إلى ~35 GB، وعند FP16 إلى ~64 GB.' },
+          { q: 'كم VRAM يحتاج DeepSeek-R1-Distill-Qwen-32B؟', a: 'نحو 20.5 GB عند Q4_K_M، وهو ما يتسع في بطاقة RTX 4090 سعة 24 GB لكنه يترك مساحة ضئيلة للسياق الطويل. عند Q8_0 يحتاج إلى ~36 GB، وعند FP16 إلى ~67 GB.' },
           { q: 'كم يضيف Q8_0 مقارنة بـ Q4_K_M؟', a: 'نحو ضعف الـ VRAM. بالنسبة لمعظم مهام الاستدلال يكون التحسين في الجودة هامشيًا، لذا يظل Q4_K_M الخيار الافتراضي الأفضل ما لم يكن لديك VRAM فائض.' },
-          { q: 'هل يمكنني تشغيل نموذج 70B distill على GPU واحد؟', a: 'لا. بحجم ~42 GB (Q4_K_M) فهو يتجاوز أي بطاقة استهلاكية مفردة. استخدم بطاقتي GPU بسعة 24 GB أو بطاقة محطة عمل بسعة 48 GB.' },
+          { q: 'هل يمكنني تشغيل نموذج 70B distill على GPU واحد؟', a: 'لا. بحجم ~44 GB (Q4_K_M) فهو يتجاوز أي بطاقة استهلاكية مفردة. استخدم بطاقتي GPU بسعة 24 GB أو بطاقة محطة عمل بسعة 48 GB.' },
           { q: 'هل DeepSeek-R1 الكامل مدرج في هذا الجدول؟', a: 'لا. نموذج R1 الكامل بحجم 671B يحتاج إلى ~376–404 GB عند Q4 وهو مخصص لمراكز البيانات فقط. يغطي هذا الجدول النماذج المقطّرة القابلة للتشغيل على عتاد المستهلك (من 1.5B إلى 70B).' },
+          { q: 'كم ⁨VRAM⁩ يحتاج ⁨DeepSeek-R1 14B⁩ بعد التكميم؟', a: 'نحو ⁨9.5 GB⁩ عند ⁨Q4_K_M⁩ (ملف ⁨Ollama⁩ بحجم ⁨9.0 GB⁩)، و⁨~11.5 GB⁩ عند ⁨Q5_K_M⁩، و⁨~13 GB⁩ عند ⁨Q6_K⁩، و⁨~17 GB⁩ عند ⁨Q8_0⁩، وكلها مع ذاكرة ⁨KV⁩ صغيرة. يُعد ⁨Q8_0⁩ أول تكميم يتجاوز بطاقة ⁨16 GB⁩.' },
+          { q: 'هل يمكنني تشغيل ⁨DeepSeek-R1 14B⁩ على ⁨16 GB⁩ من ⁨VRAM⁩؟', a: 'نعم. يستخدم ⁨Q4_K_M⁩ نحو ⁨9.5 GB⁩ ويترك قرابة ⁨6 GB⁩ لسياق أطول. ويُعد ⁨Q6_K⁩ (⁨~13 GB⁩) أعلى جودة لا تزال تترك هامشًا؛ أما ⁨Q8_0⁩ (⁨~17 GB⁩) فلا يتسع.' },
+          { q: 'أي ⁨distill⁩ من ⁨DeepSeek-R1⁩ يناسب ⁨RTX 4070 Laptop⁩ (⁨8 GB⁩)؟', a: 'نموذج ⁨7B⁩ أو ⁨8B⁩ عند ⁨Q4_K_M⁩ (ملفات ⁨4.7–4.9 GB⁩، و⁨VRAM⁩ بنحو ⁨5.5–6 GB⁩). يحتاج ⁨14B⁩ إلى ⁨~9.5 GB⁩، لذا سيعمل جزء منه من ذاكرة النظام ويصبح أبطأ.' },
         ],
       },
       relatedBites: {
@@ -932,15 +1044,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-19',
+    next_refresh_due: '2027-04-17',
     theme: 'Quantization & VRAM',
     heroImage: '/images/deepseek-r1-distill-vram-cheatsheet-overview-hero-ko.webp',
     type: 'reference',
     title: 'DeepSeek-R1 Distill VRAM 치트시트 (2026)',
     seoTitle: 'DeepSeek-R1 Distill VRAM 치트시트 2026',
-    metaDescription: '모든 DeepSeek-R1 distill(1.5B–70B)을 양자화별로 정리 — 정확한 VRAM, 모델 파일 크기, 최소 GPU. 북마크할 참조 표입니다. Q4_K_M, Q8, FP16.',
+    metaDescription: 'DeepSeek-R1 14B는 Q4_K_M에서 약 9.5 GB VRAM이 필요해 16 GB 카드에 들어갑니다. 모든 distill(1.5B–70B)의 양자화별 VRAM, 파일 크기, 최소 GPU를 정리했습니다.',
     publishDate: '2026-06-19',
-    dateModified: '2026-07-13',
+    dateModified: '2026-10-17',
     educationalLevel: 'Intermediate',
     audience: '양자화 수준 전반에 걸쳐 DeepSeek-R1 distill용 GPU를 산정하는 로컬 LLM 사용자',
     affiliateDisclosure: true,
@@ -948,28 +1060,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-deepseek-distill-for-your-gpu'],
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
-    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB'],
+    current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
     leadAnswerBlock: '**모든 DeepSeek-R1 distill을 양자화별로 보면: 1.5B는 4 GB, 7B/8B는 8 GB, 14B는 16 GB, 32B는 24 GB에 들어가고, 70B는 듀얼 GPU가 필요합니다 — 모두 Ollama 기본값 Q4_K_M 기준입니다.** Q8_0은 VRAM을 약 2배로, FP16은 Q4_K_M 파일 크기를 약 4배로 늘립니다. distill을 그래픽카드에 맞추기 위해 북마크해 두는 표입니다.',
     quickAnswerTop: {
       ko: {
         question: '각 DeepSeek-R1 distill은 VRAM이 얼마나 필요합니까?',
-        answer: 'Q4_K_M(Ollama 기본값) 기준: 1.5B ≈ 4 GB, 7B ≈ 5.5 GB, 8B ≈ 6 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 42 GB입니다. Q8_0은 Q4_K_M 크기의 약 2배, FP16은 약 4배이므로 FP16의 32B에는 64 GB급 구성이 필요합니다.',
+        answer: 'Q4_K_M(Ollama 기본값) 기준: 1.5B ≈ 1.6 GB, 7B ≈ 5.5 GB, 8B ≈ 6 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 44 GB입니다. Q8_0은 Q4_K_M 크기의 약 2배, FP16은 약 4배이므로 FP16의 32B에는 80 GB급 구성이 필요합니다.',
         bullets: [
           '1.5B: 파일 ~1.1 GB, Q4_K_M에서 ~4 GB VRAM(또는 CPU)',
           '7B: 파일 ~4.7 GB, ~5.5 GB VRAM — RTX 3060 12GB',
           '14B: 파일 ~9 GB, ~9.5 GB VRAM — RTX 4060 Ti 16GB',
-          '32B: 파일 ~19 GB, ~20.5 GB VRAM — RTX 4090 24GB(빠듯함)',
-          '70B: 파일 ~40 GB, ~42 GB VRAM — 듀얼 GPU 또는 48 GB',
+          '32B: 파일 ~20 GB, ~20.5 GB VRAM — RTX 4090 24GB(빠듯함)',
+          '70B: 파일 ~43 GB, ~44 GB VRAM — 듀얼 GPU 또는 48 GB',
           '규칙: Q8_0 ≈ 2× Q4_K_M; FP16 ≈ 4× Q4_K_M',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Q4_K_M(Ollama 기본값) VRAM: 1.5B ~4 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~42 GB.',
+          'Q4_K_M(Ollama 기본값) VRAM: 1.5B ~1.6 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~44 GB.',
           'Q8_0은 Q4_K_M 크기의 약 2배, FP16은 Q4_K_M 파일 크기의 약 4배입니다.',
           'Q4_K_M의 14B(~9.5 GB)가 최적점입니다 — 컨텍스트 여유를 두고 16 GB 카드에 들어갑니다.',
           'Q4_K_M의 32B(~20.5 GB)는 24 GB RTX 4090에서 빠듯합니다. 더 긴 컨텍스트가 필요하면 더 작은 양자화로 낮추십시오.',
@@ -979,7 +1091,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'DeepSeek-R1 distill은 Q4_K_M 기준 10억 파라미터당 약 0.6 GB의 VRAM이 필요합니다 — 7B ≈ 5.5 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 42 GB.',
+            text: 'DeepSeek-R1 distill은 Q4_K_M 기준 10억 파라미터당 약 0.6 GB의 VRAM이 필요합니다 — 7B ≈ 5.5 GB, 14B ≈ 9.5 GB, 32B ≈ 20.5 GB, 70B ≈ 44 GB.',
           },
           {
             type: 'plain-terms',
@@ -994,12 +1106,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', '최소 GPU (Q4_K_M)'],
         rows: [
-          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~4 GB', 'Q8_0 (VRAM)': '~5 GB', 'FP16 (VRAM)': '~6 GB', '최소 GPU (Q4_K_M)': '4 GB GPU 아무거나 / CPU' },
-          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~9.5 GB', 'FP16 (VRAM)': '~16 GB', '최소 GPU (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~10 GB', 'FP16 (VRAM)': '~17 GB', '최소 GPU (Q4_K_M)': 'RTX 3060 12GB' },
-          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~16 GB', 'FP16 (VRAM)': '~29 GB', '최소 GPU (Q4_K_M)': 'RTX 4060 Ti 16GB' },
-          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~35 GB', 'FP16 (VRAM)': '~64 GB', '최소 GPU (Q4_K_M)': 'RTX 4090 24GB(빠듯함)' },
-          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~42 GB', 'Q8_0 (VRAM)': '~74 GB', 'FP16 (VRAM)': '~140 GB', '최소 GPU (Q4_K_M)': '듀얼 GPU / 48 GB' },
+          { 'Distill': '1.5B', 'Q4_K_M (VRAM)': '~1.6 GB', 'Q8_0 (VRAM)': '~2.5 GB', 'FP16 (VRAM)': '~4.2 GB', '최소 GPU (Q4_K_M)': '4 GB GPU 아무거나 / CPU' },
+          { 'Distill': '7B (Qwen2.5)', 'Q4_K_M (VRAM)': '~5.5 GB', 'Q8_0 (VRAM)': '~8.7 GB', 'FP16 (VRAM)': '~15.6 GB', '최소 GPU (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '8B (Llama 3)', 'Q4_K_M (VRAM)': '~6 GB', 'Q8_0 (VRAM)': '~9 GB', 'FP16 (VRAM)': '~16.6 GB', '최소 GPU (Q4_K_M)': 'RTX 3060 12GB' },
+          { 'Distill': '14B (Qwen2.5)', 'Q4_K_M (VRAM)': '~9.5 GB', 'Q8_0 (VRAM)': '~17 GB', 'FP16 (VRAM)': '~31 GB', '최소 GPU (Q4_K_M)': 'RTX 4060 Ti 16GB' },
+          { 'Distill': '32B (Qwen2.5)', 'Q4_K_M (VRAM)': '~20.5 GB', 'Q8_0 (VRAM)': '~36 GB', 'FP16 (VRAM)': '~67 GB', '최소 GPU (Q4_K_M)': 'RTX 4090 24GB(빠듯함)' },
+          { 'Distill': '70B (Llama 3)', 'Q4_K_M (VRAM)': '~44 GB', 'Q8_0 (VRAM)': '~76 GB', 'FP16 (VRAM)': '~142 GB', '최소 GPU (Q4_K_M)': '듀얼 GPU / 48 GB' },
         ],
         note: '파일은 기본적으로 Q4_K_M으로 설치됩니다: `ollama run deepseek-r1:14b`. 전체 671B R1은 제외됩니다 — Q4에서 ~376–404 GB가 필요하며 데이터센터 전용입니다.',
         affiliateLinks: [
@@ -1014,7 +1126,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**거의 모든 경우에 Q4_K_M을 사용하십시오** — Ollama 기본값이며 GB당 가장 많은 모델을 담으면서도 추론 품질을 높게 유지합니다. 특별한 이유가 없다면 이것을 선택하십시오.',
           '**Q8_0은 VRAM이 남을 때만 사용하십시오** — 사용량을 약 2배로 늘리는 대신 추론 답변을 거의 바꾸지 않는 미미한 품질 향상만 제공합니다. 24 GB 카드에서 14B를 구동할 때는 가치가 있지만 그 외에는 거의 없습니다.',
-          '**로컬에서는 FP16을 건너뛰십시오** — Q4_K_M 크기의 약 4배로, 32B를 64 GB급 하드웨어로 밀어 올리지만 Q8_0 대비 실질적인 추론 이점은 없습니다.',
+          '**로컬에서는 FP16을 건너뛰십시오** — Q4_K_M 크기의 약 4배로, 32B를 80 GB급 하드웨어로 밀어 올리지만 Q8_0 대비 실질적인 추론 이점은 없습니다.',
+        ],
+      },
+      fourteenB: {
+        id: '14b-16gb',
+        title: '16 GB 카드에서 14B: 어떤 양자화가 들어갈까',
+        content: [
+          '**16 GB GPU에서는 14B를 Q8_0이 아니라 Q4_K_M, Q5_K_M 또는 Q6_K로 실행하십시오.** Ollama의 Q4_K_M 파일은 9.0 GB로 컨텍스트용으로 약 6 GB가 남으며, Q5_K_M(~10.5 GB)과 Q6_K(~12.1 GB)도 보통 크기의 컨텍스트 창에서는 들어갑니다.',
+          '**Q8_0은 여유 있게 들어가지 않습니다.** Ollama의 Q8_0 파일은 16 GB로, KV 캐시를 더하기 전에 카드 전체를 차지하므로 모델 일부가 느린 시스템 RAM으로 넘어갑니다.',
+          '**Ollama는 distill에 대해 Q4_K_M, Q8_0, FP16 태그만 제공합니다.** Q5_K_M이나 Q6_K가 필요하면 Hugging Face에서 GGUF 파일을 받으십시오: `ollama run hf.co/<user>/<repo>:Q6_K`.',
+          '**RTX 4070 Laptop의 VRAM은 16 GB가 아니라 8 GB입니다.** 7B 또는 8B distill을 Q4_K_M(파일 4.7–4.9 GB)으로 사용하십시오. 14B(9 GB)는 일부가 시스템 RAM으로 오프로드되어 크게 느려집니다.',
+          '**`deepseek-r1:8b` 태그는 Llama distill이 아닙니다.** Ollama 태그 목록의 5.2 GB 크기는 4.9 GB Llama distill이 아니라 Qwen3-8B 기반 R1-0528 빌드와 일치하며, 표의 Llama 3 distill은 `deepseek-r1:8b-llama-distill-q4_K_M`입니다.',
         ],
       },
       v3Clarifier: {
@@ -1029,10 +1152,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: 'DeepSeek-R1-Distill-Qwen-32B의 VRAM은 얼마입니까?', a: 'Q4_K_M에서 약 20.5 GB로, 24 GB RTX 4090에 들어가지만 긴 컨텍스트를 위한 여유는 거의 없습니다. Q8_0에서는 ~35 GB, FP16에서는 ~64 GB가 필요합니다.' },
+          { q: 'DeepSeek-R1-Distill-Qwen-32B의 VRAM은 얼마입니까?', a: 'Q4_K_M에서 약 20.5 GB로, 24 GB RTX 4090에 들어가지만 긴 컨텍스트를 위한 여유는 거의 없습니다. Q8_0에서는 ~36 GB, FP16에서는 ~67 GB가 필요합니다.' },
           { q: 'Q8_0은 Q4_K_M보다 얼마나 더 필요합니까?', a: '약 2배의 VRAM입니다. 대부분의 추론 작업에서 품질 향상은 미미하므로, VRAM이 남지 않는 한 Q4_K_M이 더 나은 기본값입니다.' },
-          { q: '70B distill을 GPU 한 개로 구동할 수 있습니까?', a: '아니요. ~42 GB(Q4_K_M)로 단일 소비자용 카드를 모두 초과합니다. 24 GB GPU 두 개 또는 48 GB 워크스테이션 카드를 사용하십시오.' },
+          { q: '70B distill을 GPU 한 개로 구동할 수 있습니까?', a: '아니요. ~44 GB(Q4_K_M)로 단일 소비자용 카드를 모두 초과합니다. 24 GB GPU 두 개 또는 48 GB 워크스테이션 카드를 사용하십시오.' },
           { q: '전체 DeepSeek-R1이 이 표에 있습니까?', a: '아니요. 전체 671B R1은 Q4에서 ~376–404 GB가 필요하며 데이터센터 전용입니다. 이 치트시트는 소비자용 하드웨어에서 구동 가능한 distill(1.5B–70B)을 다룹니다.' },
+          { q: '양자화된 DeepSeek-R1 14B에는 VRAM이 얼마나 필요합니까?', a: 'Q4_K_M에서 약 9.5 GB(Ollama 파일 9.0 GB), Q5_K_M에서 ~11.5 GB, Q6_K에서 ~13 GB, Q8_0에서 ~17 GB이며 모두 작은 KV 캐시를 포함합니다. 16 GB 카드를 처음 넘는 양자화는 Q8_0입니다.' },
+          { q: '16 GB VRAM으로 DeepSeek-R1 14B를 실행할 수 있습니까?', a: '예. Q4_K_M은 약 9.5 GB를 사용하며 더 긴 컨텍스트를 위해 약 6 GB가 남습니다. 여유를 남기는 최고 품질은 Q6_K(~13 GB)이고, Q8_0(~17 GB)은 들어가지 않습니다.' },
+          { q: 'RTX 4070 Laptop(8 GB)에는 어떤 DeepSeek-R1 distill이 맞습니까?', a: 'Q4_K_M의 7B 또는 8B(파일 4.7–4.9 GB, VRAM ~5.5–6 GB)입니다. 14B는 ~9.5 GB가 필요하므로 일부가 시스템 RAM에서 실행되어 느려집니다.' },
         ],
       },
       relatedBites: {
