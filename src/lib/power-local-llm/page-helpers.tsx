@@ -1044,6 +1044,7 @@ const HUB_THEMES: Array<{
       'private-mind-review',
       'llm-hub-review',
       'lm-playground-review',
+      'localmind-review',
       'tokforge-review',
       'local-ai-geetmark-review',
       'local-ai-mail-review',

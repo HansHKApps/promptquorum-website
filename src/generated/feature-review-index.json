@@ -1184,6 +1184,11 @@
     "urlSlug": "lm-playground-review",
     "url": "/power-local-llm/lm-playground-review"
   },
+  "localmind": {
+    "cluster": "power-local-llm",
+    "urlSlug": "localmind-review",
+    "url": "/power-local-llm/localmind-review"
+  },
   "tokforge": {
     "cluster": "power-local-llm",
     "urlSlug": "tokforge-review",
