@@ -6,7 +6,8 @@
 #   1. Docs-only skip (existing behavior, unchanged): commits touching only
 #      *.md files or docs/ can't affect the deployed app — skip.
 #
-#   2. Production build throttle (token-free): the live production site
+#   2. (OBSOLETE, replaced by on-demand deploys — see bottom of file.)
+#      Former throttle: the live production site
 #      serves /build-info.json, written at build time by
 #      scripts/write-build-info.mjs (npm "prebuild"). If the live build is
 #      younger than THROTTLE_HOURS, skip this build. Commits keep landing on
@@ -84,37 +85,9 @@ case "${VERCEL_GIT_COMMIT_MESSAGE:-}" in
     ;;
 esac
 
-# Age (ms) of the live production build; prints -1 on any problem.
-AGE_MS=$(
-  BUILD_INFO_URL="$BUILD_INFO_URL" node --input-type=module -e '
-    try {
-      const url = `${process.env.BUILD_INFO_URL}?cb=${Date.now()}`;
-      const res = await fetch(url, {
-        cache: "no-store",
-        signal: AbortSignal.timeout(10_000),
-      });
-      if (!res.ok) { console.log(-1); process.exit(0); }
-      const body = await res.json();
-      const ts = body?.buildStartedAt;
-      console.log(typeof ts === "number" ? Date.now() - ts : -1);
-    } catch {
-      console.log(-1);
-    }
-  ' 2>/dev/null
-)
-
-if ! [[ "$AGE_MS" =~ ^[0-9]+$ ]]; then
-  echo "Could not read ${BUILD_INFO_URL} (got: '${AGE_MS:-empty}'); fail-open. Proceeding with build."
-  exit 1
-fi
-
-THROTTLE_MS=$(( THROTTLE_HOURS * 3600 * 1000 ))
-AGE_MIN=$(( AGE_MS / 60000 ))
-
-if [ "$AGE_MS" -lt "$THROTTLE_MS" ]; then
-  echo "Live production build is ${AGE_MIN} min old (< ${THROTTLE_HOURS}h throttle); skipping build. Commits accumulate until the window expires."
-  exit 0
-fi
-
-echo "Live production build is ${AGE_MIN} min old (>= ${THROTTLE_HOURS}h); proceeding with build."
-exit 1
+# Production builds are ON DEMAND ONLY. Pushes to main just collect work;
+# nothing deploys until someone ships with scripts/deploy.sh (which pushes an
+# empty commit carrying [force-deploy], handled above). This replaces the old
+# 3-hour throttle so a batch of merged work always becomes ONE build.
+echo "Production build skipped: deploys are on demand. Run scripts/deploy.sh (or put [force-deploy] in the commit message) to ship everything on main."
+exit 0
