@@ -52,11 +52,23 @@ export async function recordMcpCall(toolName: McpToolName): Promise<void> {
   }
 }
 
+export const TREND_DAYS = 30
+
 export interface UsageSnapshot {
   total: number
   byTool: Record<McpToolName, number>
   today: Record<McpToolName, number>
+  /** Calls per tool over the last 7 / 30 UTC days, today included. */
+  last7: Record<McpToolName, number>
+  last30: Record<McpToolName, number>
+  /** Total calls per UTC day, oldest first, ending today (TREND_DAYS entries). */
+  days: { date: string; calls: number }[]
   generatedAt: string
+}
+
+function lastNDaysUtc(n: number): string[] {
+  const now = Date.now()
+  return Array.from({ length: n }, (_, i) => new Date(now - (n - 1 - i) * 86_400_000).toISOString().slice(0, 10))
 }
 
 /**
@@ -68,26 +80,60 @@ export interface UsageSnapshot {
  */
 export async function getMcpUsageSnapshot(): Promise<UsageSnapshot> {
   const zeroed = Object.fromEntries(MCP_TOOL_NAMES.map((t) => [t, 0])) as Record<McpToolName, number>
-  const fallback: UsageSnapshot = { total: 0, byTool: { ...zeroed }, today: { ...zeroed }, generatedAt: new Date().toISOString() }
+  const fallback: UsageSnapshot = {
+    total: 0,
+    byTool: { ...zeroed },
+    today: { ...zeroed },
+    last7: { ...zeroed },
+    last30: { ...zeroed },
+    days: lastNDaysUtc(TREND_DAYS).map((date) => ({ date, calls: 0 })),
+    generatedAt: new Date().toISOString(),
+  }
 
   try {
-    const today = todayUtc()
+    const dates = lastNDaysUtc(TREND_DAYS)
+    const today = dates[dates.length - 1]
+    // One MGET: the lifetime keys, then one daily key per tool per day. The
+    // daily keys are the same ones recordMcpCall has always written, so the
+    // trend needs no new recording and no new data about anyone.
     const keys = [
       'mcp:calls:total',
       ...MCP_TOOL_NAMES.map((t) => `mcp:calls:${t}:total`),
-      ...MCP_TOOL_NAMES.map((t) => `mcp:calls:${t}:${today}`),
+      ...MCP_TOOL_NAMES.flatMap((t) => dates.map((d) => `mcp:calls:${t}:${d}`)),
     ]
     const values = await redis.mget<(number | null)[]>(...keys)
 
     const total = Number(values[0] ?? 0)
     const byTool = {} as Record<McpToolName, number>
     const todayByTool = {} as Record<McpToolName, number>
+    const last7 = {} as Record<McpToolName, number>
+    const last30 = {} as Record<McpToolName, number>
+    const dayTotals = dates.map(() => 0)
+    const dailyBase = 1 + MCP_TOOL_NAMES.length
     MCP_TOOL_NAMES.forEach((t, i) => {
       byTool[t] = Number(values[1 + i] ?? 0)
-      todayByTool[t] = Number(values[1 + MCP_TOOL_NAMES.length + i] ?? 0)
+      let w7 = 0
+      let w30 = 0
+      dates.forEach((_, d) => {
+        const n = Number(values[dailyBase + i * dates.length + d] ?? 0)
+        dayTotals[d] += n
+        w30 += n
+        if (d >= dates.length - 7) w7 += n
+        if (dates[d] === today) todayByTool[t] = n
+      })
+      last7[t] = w7
+      last30[t] = w30
     })
 
-    return { total, byTool, today: todayByTool, generatedAt: fallback.generatedAt }
+    return {
+      total,
+      byTool,
+      today: todayByTool,
+      last7,
+      last30,
+      days: dates.map((date, i) => ({ date, calls: dayTotals[i] })),
+      generatedAt: fallback.generatedAt,
+    }
   } catch (err) {
     console.error('[mcp usage] failed to read snapshot', err)
     return fallback
