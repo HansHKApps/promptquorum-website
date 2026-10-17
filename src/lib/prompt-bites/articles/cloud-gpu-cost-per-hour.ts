@@ -7,13 +7,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-en.webp',
     title: 'How Much Does a Cloud GPU Cost Per Hour in 2026?',
     seoTitle: 'Cloud GPU Cost Per Hour 2026 | Prompt Bites',
-    metaDescription: 'Cloud GPU cost per hour (July 2026): RTX 4090 ~$0.30-0.80, A100 80 GB ~$0.90-2.00, H100 ~$2.50-4.00. Approximate ranges across major providers.',
+    metaDescription: 'Cloud GPU cost per hour: RTX 4090 from $0.34, A100 80 GB $1.19-2.79, H100 $1.99-4.29. The cheapest cloud GPUs by the hour, with RunPod and Lambda rates.',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-22',
+    next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090', 'A100 80 GB', 'H100'],
+    current_hardware_mentioned: ['RTX 4090', 'RTX 5090', 'RTX 3090', 'RTX A5000', 'A100 80 GB', 'H100'],
     educationalLevel: 'Intermediate',
     audience: 'Developers comparing cloud GPU pricing for LLM workloads',
     affiliateDisclosure: true,
@@ -21,10 +21,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['runpod-vs-vastai-pricing', 'best-gpu-under-600-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      'In July 2026, cloud GPUs typically cost: RTX 4090 24 GB at $0.30-0.80/hr, A100 80 GB at $0.90-2.00/hr, H100 80 GB at $2.50-4.00/hr. Rates vary widely by provider, region, and whether the instance is interruptible. Re-check the live dashboards before booking.',
+      'Cloud GPUs cost $0.34-0.89/hr for an RTX 4090 24 GB, $1.19-2.79/hr for an A100 80 GB and $1.99-4.29/hr for an H100 80 GB across RunPod and Lambda. The cheapest hourly options are older 24 GB cards: RunPod lists the RTX A5000 from $0.16/hr and the RTX 3090 from $0.22/hr on Community Cloud. Vast.ai marketplace prices move with supply, so read its live grid before booking.',
     toc: [
       { label: 'Best Pick by Workload', anchor: '#best-pick' },
       { label: 'Cloud GPU Hourly Rates by Card', anchor: '#comparison' },
+      { label: 'Cheapest Cloud GPUs by the Hour', anchor: '#cheapest' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related' },
     ],
@@ -33,13 +34,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'How much does a cloud GPU cost per hour in 2026?',
-        answer: 'RTX 4090: $0.15-0.44/hr. A100 80GB: $1.10-2.00/hr. H100: $2.89-4.00/hr. Cheapest for inference: Vast.ai spot.',
+        answer: 'RTX 4090: $0.34-0.89/hr. A100 80 GB: $1.19-2.79/hr. H100 80 GB: $1.99-4.29/hr. Cheapest by the hour: RTX A5000 from $0.16/hr.',
         bullets: [
-          'Vast.ai spot RTX 4090 is cheapest at ~$0.15/hr but can be preempted mid-job.',
-          'RunPod secure cloud charges ~$0.44/hr for RTX 4090 with guaranteed availability.',
-          'H100 80 GB on Lambda Labs: ~$3.29/hr — use only for 70B+ models or large batch jobs.',
+          'RunPod lists the RTX 4090 at $0.34/hr on Community Cloud and $0.89/hr on Secure Cloud.',
+          'Lambda charges $3.29/hr for an H100 PCIe and $3.99-4.29/hr for an H100 SXM; RunPod lists an H100 PCIe from $1.99/hr.',
+          'Vast.ai is a marketplace: prices differ by host and interruptible rentals cost less, so read the live grid.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -47,19 +48,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'RTX 4090 24 GB is the cheapest viable option — $0.30-0.80/hr on marketplaces, ideal for 13B-30B inference',
-          'A100 80 GB at $0.90-2.00/hr is the workhorse for 70B inference and most training jobs',
-          'H100 80 GB at $2.50-4.00/hr is the fastest option but only worth it for large-scale training or production serving',
-          'All ranges are July 2026 approximate — check live provider dashboards before booking',
+          'RTX 4090 24 GB costs $0.34-0.89/hr on RunPod — a low-cost option for 13B-30B inference',
+          'A100 80 GB costs $1.19-2.79/hr across RunPod and Lambda and is the workhorse for 70B inference and most fine-tuning',
+          'H100 80 GB costs $1.99-4.29/hr and is only worth it for large-scale training or latency-critical serving',
+          'The cheapest cloud GPUs per hour are older 24 GB cards from $0.16/hr — rates change often, so check the provider page before booking',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: 'Best Pick: Match the Card to the Workload',
         content: [
-          '<strong>The cheapest viable cloud GPU is the one that fits your model with the smallest VRAM headroom.</strong> Renting a $4/hr H100 to run a 13B model wastes 60+ GB of VRAM you are paying for.',
-          'For 7B-13B inference: an RTX 4090 24 GB on a marketplace (Vast.ai, RunPod community pool) at $0.30-0.80/hr. The 24 GB of VRAM is plenty, and consumer-card marketplaces undercut managed clouds.',
-          'For 70B inference or mid-scale fine-tuning: an A100 80 GB at $0.90-2.00/hr. The 80 GB of VRAM fits a 70B model at Q4 with context room. For frontier-model training or production serving with strict latency targets: an H100 80 GB at $2.50-4.00/hr — only worth it when sustained throughput is the constraint.',
+          '<strong>The cheapest viable cloud GPU is the one that fits your model with the smallest VRAM headroom.</strong> Renting an H100 at up to $4.29/hr to run a 13B model wastes 60+ GB of VRAM you are paying for.',
+          'For 7B-13B inference: an RTX 4090 24 GB at $0.34-0.89/hr on RunPod, or a marketplace host on Vast.ai. The 24 GB of VRAM is plenty, and consumer-card pools undercut managed clouds.',
+          'For 70B inference or mid-scale fine-tuning: an A100 80 GB at $1.19-2.79/hr. The 80 GB of VRAM fits a 70B model at Q4 with context room. For frontier-model training or production serving with strict latency targets: an H100 80 GB at $1.99-4.29/hr — only worth it when sustained throughput is the constraint.',
         ],
         affiliateLinks: [
           {
@@ -86,28 +87,76 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'Cloud GPU Hourly Rates by Card',
         content: [
-          '<strong>Ranges below are approximate July 2026 figures across major providers (RunPod, Vast.ai, Lambda Labs, and others).</strong> The low end is typically interruptible or marketplace pricing; the high end is on-demand managed cloud.',
+          '<strong>Ranges below combine RunPod (Community and Secure Cloud) and Lambda on-demand list prices.</strong> The low end is RunPod Community Cloud; the high end is the highest on-demand list price from either provider. Vast.ai marketplace rates vary by host and are not included.',
         ],
-        columns: ['GPU', 'VRAM', 'Hourly rate (approx)', 'Best for'],
+        columns: ['GPU', 'VRAM', 'Hourly rate', 'Best for'],
         rows: [
           {
             'GPU': 'RTX 4090',
             'VRAM': '24 GB',
-            'Hourly rate (approx)': '$0.30-0.80/hr',
+            'Hourly rate': '$0.34-0.89/hr',
             'Best for': '7B-30B inference, light fine-tuning',
+          },
+          {
+            'GPU': 'RTX 5090',
+            'VRAM': '32 GB',
+            'Hourly rate': '$0.69-1.19/hr',
+            'Best for': '30B-class inference, faster fine-tuning',
           },
           {
             'GPU': 'A100 80 GB',
             'VRAM': '80 GB',
-            'Hourly rate (approx)': '$0.90-2.00/hr',
+            'Hourly rate': '$1.19-2.79/hr',
             'Best for': '70B inference, most fine-tuning',
           },
           {
             'GPU': 'H100 80 GB',
             'VRAM': '80 GB',
-            'Hourly rate (approx)': '$2.50-4.00/hr',
+            'Hourly rate': '$1.99-4.29/hr',
             'Best for': 'Large-scale training, latency-critical serving',
           },
+        ],
+      },
+      cheapest: {
+        id: 'cheapest',
+        title: 'Cheapest Cloud GPUs by the Hour',
+        content: [
+          '<strong>Among the RunPod and Lambda listings checked, the cheapest cloud GPUs per hour are older 24 GB and 48 GB cards, starting at $0.16/hr.</strong> RunPod lists these Community and Secure Cloud rates; they suit small-model inference and testing, not large training runs.',
+        ],
+        columns: ['GPU', 'VRAM', 'Hourly rate', 'Best for'],
+        rows: [
+          {
+            'GPU': 'RTX A5000',
+            'VRAM': '24 GB',
+            'Hourly rate': '$0.16-0.27/hr',
+            'Best for': '7B-13B inference, testing',
+          },
+          {
+            'GPU': 'RTX 3090',
+            'VRAM': '24 GB',
+            'Hourly rate': '$0.22-0.50/hr',
+            'Best for': '13B-30B inference',
+          },
+          {
+            'GPU': 'RTX A6000',
+            'VRAM': '48 GB',
+            'Hourly rate': '$0.33-0.59/hr',
+            'Best for': 'Models that need 48 GB',
+          },
+          {
+            'GPU': 'L4',
+            'VRAM': '24 GB',
+            'Hourly rate': '$0.44-0.59/hr',
+            'Best for': 'Low-power inference',
+          },
+        ],
+      },
+      snippets: {
+        id: 'snippets',
+        title: 'Summary',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Cloud GPUs cost about $0.34-0.89/hr for an RTX 4090, $1.19-2.79/hr for an A100 80 GB and $1.99-4.29/hr for an H100 80 GB.' },
+          { type: 'plain-terms', text: 'Renting a GPU in the cloud is billed by the hour, and the price depends on the card, the provider and whether the rental can be interrupted. Smaller 24 GB cards are cheapest and handle small and mid-size models; A100 and H100 cards cost more and suit large models and training.' },
         ],
       },
       faq: {
@@ -115,12 +164,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Quick Answers About Cloud GPU Pricing',
         faqs: [
           {
+            q: 'How much does hourly GPU rental cost?',
+            a: 'Hourly GPU rental costs $0.16-0.89/hr for 24 GB consumer cards, $1.19-2.79/hr for an A100 80 GB and $1.99-4.29/hr for an H100 80 GB across RunPod and Lambda. Marketplace rates on Vast.ai vary by host.',
+          },
+          {
+            q: 'What is the cheapest GPU to rent by the hour?',
+            a: 'Among the RunPod listings checked, the RTX A5000 is cheapest at $0.16/hr on Community Cloud, followed by the RTX 3090 at $0.22/hr. Both have 24 GB of VRAM and suit small-model inference rather than training.',
+          },
+          {
             q: 'When is renting a cloud GPU cheaper than buying one?',
-            a: 'Renting wins for short, bursty workloads — a few hours per week. Buying wins for sustained daily use. A used RTX 4090 at ~$2,500 pays for itself in roughly 3,000-8,000 cloud-rental hours at $0.30-0.80/hr.',
+            a: 'Renting wins for short, bursty workloads — a few hours per week. Buying wins for sustained daily use. At an assumed used price of ~$2,500, an RTX 4090 breaks even after roughly 2,800-7,400 rental hours at $0.34-0.89/hr.',
           },
           {
             q: 'Why does the same GPU cost so differently across providers?',
-            a: 'Managed clouds (Lambda, AWS, GCP) include support, SLAs, and dedicated hardware — they cost more. Marketplaces ([Vast.ai](https://Vast.ai)) source from individual hosts, which can be interruptible. Region and demand also shift prices.',
+            a: 'Managed clouds (Lambda, AWS, GCP) include support, SLAs, and dedicated hardware — they cost more. Marketplaces ([Vast.ai](https://vast.ai)) source from individual hosts, which can be interruptible. Region and demand also shift prices.',
           },
           {
             q: 'Are quoted rates inclusive of storage and bandwidth?',
@@ -148,13 +205,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-de.webp',
     title: 'Wie viel kostet eine Cloud-GPU pro Stunde 2026?',
     seoTitle: 'Cloud-GPU-Kosten pro Stunde 2026 | Prompt Bites',
-    metaDescription: 'Cloud-GPU-Kosten pro Stunde (Juli 2026): RTX 4090 ~0,30-0,80 $, A100 80 GB ~0,90-2,00 $, H100 ~2,50-4,00 $. Ungefähre Bereiche über große Anbieter.',
+    metaDescription: 'Cloud-GPU-Kosten pro Stunde: RTX 4090 ab 0,34 $, A100 80 GB 1,19-2,79 $, H100 1,99-4,29 $. Die günstigsten Cloud-GPUs pro Stunde mit RunPod- und Lambda-Tarifen.',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-22',
+    next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090', 'A100 80 GB', 'H100'],
+    current_hardware_mentioned: ['RTX 4090', 'RTX 5090', 'RTX 3090', 'RTX A5000', 'A100 80 GB', 'H100'],
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die Cloud-GPU-Preise für LLM-Workloads vergleichen',
     affiliateDisclosure: true,
@@ -163,10 +220,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 Min. Lesezeit',
     leadAnswerBlock:
-      'Im Mai 2026 kosten Cloud-GPUs typischerweise: RTX 4090 24 GB 0,30-0,80 $/h, A100 80 GB 0,90-1,90 $/h, H100 80 GB 2,20-4,00 $/h. Tarife variieren stark nach Anbieter, Region und Unterbrechbarkeit. Vor der Buchung Live-Dashboards prüfen.',
+      'Cloud-GPUs kosten bei RunPod und Lambda 0,34-0,89 $/h für eine RTX 4090 24 GB, 1,19-2,79 $/h für eine A100 80 GB und 1,99-4,29 $/h für eine H100 80 GB. Pro Stunde am günstigsten sind ältere 24-GB-Karten: RunPod listet die RTX A5000 ab 0,16 $/h und die RTX 3090 ab 0,22 $/h in der Community Cloud. Marktplatzpreise bei Vast.ai schwanken mit dem Angebot — vor der Buchung das Live-Raster prüfen.',
     toc: [
       { label: 'Beste Wahl nach Workload', anchor: '#best-pick' },
       { label: 'Stundentarife je Karte', anchor: '#comparison' },
+      { label: 'Günstigste Cloud-GPUs pro Stunde', anchor: '#cheapest' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Weiterführende Artikel', anchor: '#related' },
     ],
@@ -175,13 +233,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Wie viel kostet eine Cloud-GPU pro Stunde 2026?',
-        answer: 'RTX 4090: $0,30-0,80/h. A100 80 GB: $0,90-1,90/h. H100: $2,20-4,00/h. Am günstigsten für Inferenz: Vast.ai Spot.',
+        answer: 'RTX 4090: 0,34-0,89 $/h. A100 80 GB: 1,19-2,79 $/h. H100 80 GB: 1,99-4,29 $/h. Am günstigsten pro Stunde: RTX A5000 ab 0,16 $/h.',
         bullets: [
-          'Vast.ai Spot RTX 4090 ist am günstigsten bei ~$0,30/h, kann aber mitten im Job unterbrochen werden.',
-          'RunPod Secure Cloud berechnet ~$0,80/h für RTX 4090 mit garantierter Verfügbarkeit.',
-          'H100 80 GB bei Lambda Labs: ~$2,49/h — nur für Modelle ab 70B oder große Batch-Jobs nutzen.',
+          'RunPod listet die RTX 4090 mit 0,34 $/h in der Community Cloud und 0,89 $/h in der Secure Cloud.',
+          'Lambda berechnet 3,29 $/h für eine H100 PCIe und 3,99-4,29 $/h für eine H100 SXM; RunPod listet eine H100 PCIe ab 1,99 $/h.',
+          'Vast.ai ist ein Marktplatz: Preise unterscheiden sich je Host, unterbrechbare Mieten sind günstiger — das Live-Raster prüfen.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -189,19 +247,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'RTX 4090 24 GB ist die günstigste brauchbare Option — 0,30-0,80 $/h auf Marktplätzen, ideal für 13B-30B-Inferenz',
-          'A100 80 GB bei 0,90-1,90 $/h ist das Arbeitstier für 70B-Inferenz und die meisten Trainingsjobs',
-          'H100 80 GB bei 2,20-4,00 $/h ist die schnellste Option, aber nur für große Trainings oder Produktions-Serving lohnenswert',
-          'Alle Bereiche sind Näherungen per Mai 2026 — vor der Buchung Live-Dashboards prüfen',
+          'RTX 4090 24 GB kostet bei RunPod 0,34-0,89 $/h — eine preiswerte Option für 13B-30B-Inferenz',
+          'A100 80 GB kostet 1,19-2,79 $/h bei RunPod und Lambda und ist das Arbeitstier für 70B-Inferenz und die meisten Fine-Tuning-Jobs',
+          'H100 80 GB kostet 1,99-4,29 $/h und lohnt sich nur für große Trainings oder latenzkritisches Serving',
+          'Die günstigsten Cloud-GPUs pro Stunde sind ältere 24-GB-Karten ab 0,16 $/h — Tarife ändern sich oft, vor der Buchung die Anbieterseite prüfen',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: 'Beste Wahl: die Karte zum Workload passen',
         content: [
-          '<strong>Die günstigste brauchbare Cloud-GPU ist die, die zum Modell mit dem kleinsten VRAM-Spielraum passt.</strong> Eine 4 $/h teure H100 zu mieten, um ein 13B-Modell auszuführen, verschwendet 60+ GB VRAM, für die Sie zahlen.',
-          'Für 7B-13B-Inferenz: eine RTX 4090 24 GB auf einem Marktplatz (Vast.ai, RunPod Community Pool) bei 0,30-0,80 $/h. 24 GB VRAM reichen aus, und Consumer-Karten-Marktplätze unterbieten Managed-Clouds.',
-          'Für 70B-Inferenz oder mittleres Fine-Tuning: eine A100 80 GB bei 0,90-1,90 $/h. Die 80 GB VRAM passen ein 70B-Modell bei Q4 mit Kontext-Reserve. Für Frontier-Modell-Training oder Produktions-Serving mit harten Latenzzielen: eine H100 80 GB bei 2,20-4,00 $/h — nur dann sinnvoll, wenn nachhaltiger Durchsatz der Engpass ist.',
+          '<strong>Die günstigste brauchbare Cloud-GPU ist die, die zum Modell mit dem kleinsten VRAM-Spielraum passt.</strong> Eine H100 für bis zu 4,29 $/h zu mieten, um ein 13B-Modell auszuführen, verschwendet 60+ GB VRAM, für die Sie zahlen.',
+          'Für 7B-13B-Inferenz: eine RTX 4090 24 GB für 0,34-0,89 $/h bei RunPod oder ein Marktplatz-Host bei Vast.ai. 24 GB VRAM reichen aus, und Consumer-Karten-Pools unterbieten Managed-Clouds.',
+          'Für 70B-Inferenz oder mittleres Fine-Tuning: eine A100 80 GB für 1,19-2,79 $/h. Die 80 GB VRAM passen ein 70B-Modell bei Q4 mit Kontext-Reserve. Für Frontier-Modell-Training oder Produktions-Serving mit harten Latenzzielen: eine H100 80 GB für 1,99-4,29 $/h — nur dann sinnvoll, wenn nachhaltiger Durchsatz der Engpass ist.',
         ],
         affiliateLinks: [
           {
@@ -228,28 +286,76 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'Cloud-GPU-Stundentarife je Karte',
         content: [
-          '<strong>Die Bereiche unten sind ungefähre Mai-2026-Werte über große Anbieter (RunPod, Vast.ai, Lambda Labs und andere).</strong> Das untere Ende ist typischerweise unterbrechbares oder Marktplatz-Pricing; das obere Ende ist On-Demand-Managed-Cloud.',
+          '<strong>Die Bereiche unten kombinieren die On-Demand-Listenpreise von RunPod (Community und Secure Cloud) und Lambda.</strong> Das untere Ende ist RunPod Community Cloud; das obere Ende ist der höchste On-Demand-Listenpreis beider Anbieter. Vast.ai-Marktplatzpreise variieren je Host und sind nicht enthalten.',
         ],
-        columns: ['GPU', 'VRAM', 'Stundenpreis (ungefähr)', 'Geeignet für'],
+        columns: ['GPU', 'VRAM', 'Stundenpreis', 'Geeignet für'],
         rows: [
           {
             'GPU': 'RTX 4090',
             'VRAM': '24 GB',
-            'Stundenpreis (ungefähr)': '0,30-0,80 $/h',
+            'Stundenpreis': '0,34-0,89 $/h',
             'Geeignet für': '7B-30B-Inferenz, leichtes Fine-Tuning',
+          },
+          {
+            'GPU': 'RTX 5090',
+            'VRAM': '32 GB',
+            'Stundenpreis': '0,69-1,19 $/h',
+            'Geeignet für': '30B-Inferenz, schnelleres Fine-Tuning',
           },
           {
             'GPU': 'A100 80 GB',
             'VRAM': '80 GB',
-            'Stundenpreis (ungefähr)': '0,90-1,90 $/h',
+            'Stundenpreis': '1,19-2,79 $/h',
             'Geeignet für': '70B-Inferenz, meistes Fine-Tuning',
           },
           {
             'GPU': 'H100 80 GB',
             'VRAM': '80 GB',
-            'Stundenpreis (ungefähr)': '2,20-4,00 $/h',
+            'Stundenpreis': '1,99-4,29 $/h',
             'Geeignet für': 'Große Trainings, latenzkritisches Serving',
           },
+        ],
+      },
+      cheapest: {
+        id: 'cheapest',
+        title: 'Günstigste Cloud-GPUs pro Stunde',
+        content: [
+          '<strong>Unter den geprüften RunPod- und Lambda-Angeboten sind ältere 24-GB- und 48-GB-Karten pro Stunde am günstigsten, ab 0,16 $/h.</strong> RunPod listet diese Tarife für Community und Secure Cloud; sie eignen sich für Inferenz mit kleinen Modellen und Tests, nicht für große Trainingsläufe.',
+        ],
+        columns: ['GPU', 'VRAM', 'Stundenpreis', 'Geeignet für'],
+        rows: [
+          {
+            'GPU': 'RTX A5000',
+            'VRAM': '24 GB',
+            'Stundenpreis': '0,16-0,27 $/h',
+            'Geeignet für': '7B-13B-Inferenz, Tests',
+          },
+          {
+            'GPU': 'RTX 3090',
+            'VRAM': '24 GB',
+            'Stundenpreis': '0,22-0,50 $/h',
+            'Geeignet für': '13B-30B-Inferenz',
+          },
+          {
+            'GPU': 'RTX A6000',
+            'VRAM': '48 GB',
+            'Stundenpreis': '0,33-0,59 $/h',
+            'Geeignet für': 'Modelle, die 48 GB brauchen',
+          },
+          {
+            'GPU': 'L4',
+            'VRAM': '24 GB',
+            'Stundenpreis': '0,44-0,59 $/h',
+            'Geeignet für': 'Stromsparende Inferenz',
+          },
+        ],
+      },
+      snippets: {
+        id: 'snippets',
+        title: 'Zusammenfassung',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Cloud-GPUs kosten etwa 0,34-0,89 $/h für eine RTX 4090, 1,19-2,79 $/h für eine A100 80 GB und 1,99-4,29 $/h für eine H100 80 GB.' },
+          { type: 'plain-terms', text: 'Eine GPU in der Cloud zu mieten wird pro Stunde abgerechnet; der Preis hängt von Karte, Anbieter und Unterbrechbarkeit ab. Kleinere 24-GB-Karten sind am günstigsten und bewältigen kleine bis mittlere Modelle; A100- und H100-Karten kosten mehr und eignen sich für große Modelle und Training.' },
         ],
       },
       faq: {
@@ -257,12 +363,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Kurze Antworten zu Cloud-GPU-Preisen',
         faqs: [
           {
+            q: 'Wie viel kostet die GPU-Miete pro Stunde?',
+            a: 'Die GPU-Miete kostet bei RunPod und Lambda 0,16-0,89 $/h für 24-GB-Consumer-Karten, 1,19-2,79 $/h für eine A100 80 GB und 1,99-4,29 $/h für eine H100 80 GB. Marktplatzpreise bei Vast.ai variieren je Host.',
+          },
+          {
+            q: 'Welche GPU ist pro Stunde am günstigsten zu mieten?',
+            a: 'Unter den geprüften RunPod-Angeboten ist die RTX A5000 mit 0,16 $/h in der Community Cloud am günstigsten, gefolgt von der RTX 3090 mit 0,22 $/h. Beide haben 24 GB VRAM und eignen sich für Inferenz mit kleinen Modellen, nicht für Training.',
+          },
+          {
             q: 'Wann ist Miete günstiger als Kauf einer GPU?',
-            a: 'Miete gewinnt bei kurzen, sporadischen Workloads — wenige Stunden pro Woche. Kauf gewinnt bei nachhaltiger täglicher Nutzung. Eine gebrauchte RTX 4090 für rund 2.500 $ amortisiert sich nach rund 3.000-8.000 Cloud-Mietstunden bei 0,30-0,80 $/h.',
+            a: 'Miete gewinnt bei kurzen, sporadischen Workloads — wenige Stunden pro Woche. Kauf gewinnt bei nachhaltiger täglicher Nutzung. Bei einem angenommenen Gebrauchtpreis von ~2.500 $ amortisiert sich eine RTX 4090 nach rund 2.800-7.400 Mietstunden bei 0,34-0,89 $/h.',
           },
           {
             q: 'Warum kostet dieselbe GPU bei verschiedenen Anbietern so unterschiedlich?',
-            a: 'Managed-Clouds (Lambda, AWS, GCP) beinhalten Support, SLAs und dedizierte Hardware — sie kosten mehr. Marktplätze ([Vast.ai](https://Vast.ai)) beziehen von Einzel-Hosts, was unterbrechbar sein kann. Region und Nachfrage verschieben Preise ebenfalls.',
+            a: 'Managed-Clouds (Lambda, AWS, GCP) beinhalten Support, SLAs und dedizierte Hardware — sie kosten mehr. Marktplätze ([Vast.ai](https://vast.ai)) beziehen von Einzel-Hosts, was unterbrechbar sein kann. Region und Nachfrage verschieben Preise ebenfalls.',
           },
           {
             q: 'Beinhalten genannte Tarife Speicher und Bandbreite?',
@@ -290,13 +404,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-fr.webp',
     title: 'Combien coûte un GPU cloud par heure en 2026 ?',
     seoTitle: 'Coût horaire GPU cloud 2026 | Prompt Bites',
-    metaDescription: 'Coût horaire GPU cloud (juillet 2026) : RTX 4090 ~0,30-0,80 $, A100 80 GB ~0,90-2,00 $, H100 ~2,50-4,00 $. Plages approximatives sur les grands fournisseurs.',
+    metaDescription: 'Coût horaire d\'un GPU cloud : RTX 4090 dès 0,34 $, A100 80 GB 1,19-2,79 $, H100 1,99-4,29 $. Les GPU cloud les moins chers à l\'heure, avec les tarifs RunPod et Lambda.',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-22',
+    next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090', 'A100 80 GB', 'H100'],
+    current_hardware_mentioned: ['RTX 4090', 'RTX 5090', 'RTX 3090', 'RTX A5000', 'A100 80 GB', 'H100'],
     educationalLevel: 'Intermediate',
     audience: 'Développeurs comparant les prix GPU cloud pour des charges LLM',
     affiliateDisclosure: true,
@@ -305,10 +419,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 min de lecture',
     leadAnswerBlock:
-      'En mai 2026, les GPU cloud coûtent généralement : RTX 4090 24 GB de 0,30 à 0,80 $/h, A100 80 GB de 0,90 à 1,90 $/h, H100 80 GB de 2,20 à 4,00 $/h. Les tarifs varient selon le fournisseur, la région et l\'interruptibilité. Vérifier les tableaux de bord avant réservation.',
+      'Chez RunPod et Lambda, un GPU cloud coûte 0,34-0,89 $/h pour une RTX 4090 24 GB, 1,19-2,79 $/h pour une A100 80 GB et 1,99-4,29 $/h pour une H100 80 GB. Les options les moins chères à l\'heure sont d\'anciennes cartes de 24 GB : RunPod affiche la RTX A5000 dès 0,16 $/h et la RTX 3090 dès 0,22 $/h en Community Cloud. Les prix de la place de marché Vast.ai varient selon l\'offre ; consultez sa grille en direct avant de réserver.',
     toc: [
       { label: 'Meilleur choix selon la charge', anchor: '#best-pick' },
       { label: 'Tarifs horaires par carte', anchor: '#comparison' },
+      { label: 'GPU cloud les moins chers à l\'heure', anchor: '#cheapest' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related' },
     ],
@@ -317,13 +432,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Combien coûte un GPU cloud par heure en 2026 ?',
-        answer: 'RTX 4090 : 0,30-0,80 $/h. A100 80 GB : 0,90-1,90 $/h. H100 : 2,20-4,00 $/h. Moins cher pour l\'inférence : Vast.ai spot.',
+        answer: 'RTX 4090 : 0,34-0,89 $/h. A100 80 GB : 1,19-2,79 $/h. H100 80 GB : 1,99-4,29 $/h. Moins cher à l\'heure : RTX A5000 dès 0,16 $/h.',
         bullets: [
-          'Vast.ai spot RTX 4090 est le moins cher à ~0,30 $/h mais peut être préempté en cours de job.',
-          'RunPod Secure Cloud facture ~0,80 $/h pour RTX 4090 avec disponibilité garantie.',
-          'H100 80 GB sur Lambda Labs : ~2,49 $/h — à réserver aux modèles 70B+ ou aux gros jobs batch.',
+          'RunPod affiche la RTX 4090 à 0,34 $/h en Community Cloud et 0,89 $/h en Secure Cloud.',
+          'Lambda facture 3,29 $/h pour une H100 PCIe et 3,99-4,29 $/h pour une H100 SXM ; RunPod affiche une H100 PCIe dès 1,99 $/h.',
+          'Vast.ai est une place de marché : les prix varient selon l\'hôte et les locations interruptibles coûtent moins ; consultez la grille en direct.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -331,19 +446,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'RTX 4090 24 GB est l\'option viable la moins chère — 0,30-0,80 $/h sur les places de marché, idéale pour l\'inférence 13B-30B',
-          'A100 80 GB à 0,90-1,90 $/h est la bête de somme pour l\'inférence 70B et la plupart des entraînements',
-          'H100 80 GB à 2,20-4,00 $/h est l\'option la plus rapide mais utile uniquement pour grands entraînements ou serving production',
-          'Toutes les plages sont des approximations mai 2026 — vérifier les tableaux de bord live avant de réserver',
+          'La RTX 4090 24 GB coûte 0,34-0,89 $/h chez RunPod — une option économique pour l\'inférence 13B-30B',
+          'L\'A100 80 GB coûte 1,19-2,79 $/h chez RunPod et Lambda et reste la valeur sûre pour l\'inférence 70B et la plupart des fine-tunings',
+          'La H100 80 GB coûte 1,99-4,29 $/h et ne vaut la peine que pour les gros entraînements ou le service à latence critique',
+          'Les GPU cloud les moins chers à l\'heure sont d\'anciennes cartes de 24 GB dès 0,16 $/h — les tarifs changent souvent, vérifiez la page du fournisseur avant de réserver',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: 'Meilleur choix : adapter la carte à la charge',
         content: [
-          '<strong>Le GPU cloud le moins cher viable est celui qui correspond à votre modèle avec la plus petite marge VRAM.</strong> Louer une H100 à 4 $/h pour un modèle 13B gaspille 60+ GB de VRAM payés.',
-          'Pour l\'inférence 7B-13B : une RTX 4090 24 GB sur une place de marché (Vast.ai, RunPod community pool) à 0,30-0,80 $/h. 24 GB de VRAM suffisent, et les places de marché grand public écrasent les clouds managés.',
-          'Pour l\'inférence 70B ou un fine-tuning de taille moyenne : une A100 80 GB à 0,90-1,90 $/h. 80 GB de VRAM logent un 70B en Q4 avec marge pour le contexte. Pour l\'entraînement de modèles frontier ou un serving production exigeant en latence : une H100 80 GB à 2,20-4,00 $/h — utile uniquement quand le débit soutenu est le facteur limitant.',
+          '<strong>Le GPU cloud le moins cher est celui qui accueille votre modèle avec le moins de VRAM excédentaire.</strong> Louer une H100 jusqu\'à 4,29 $/h pour un modèle 13B gaspille plus de 60 GB de VRAM que vous payez.',
+          'Pour l\'inférence 7B-13B : une RTX 4090 24 GB à 0,34-0,89 $/h chez RunPod, ou un hôte de la place de marché Vast.ai. 24 GB de VRAM suffisent, et les parcs de cartes grand public sont moins chers que les clouds gérés.',
+          'Pour l\'inférence 70B ou le fine-tuning de taille moyenne : une A100 80 GB à 1,19-2,79 $/h. Les 80 GB de VRAM accueillent un modèle 70B en Q4 avec de la marge de contexte. Pour l\'entraînement de modèles de pointe ou le service de production à latence stricte : une H100 80 GB à 1,99-4,29 $/h — utile seulement quand le débit soutenu est la contrainte.',
         ],
         affiliateLinks: [
           {
@@ -370,28 +485,76 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'Tarifs horaires GPU cloud par carte',
         content: [
-          '<strong>Les plages ci-dessous sont des approximations de mai 2026 sur les grands fournisseurs (RunPod, Vast.ai, Lambda Labs, autres).</strong> Le bas correspond à du spot ou des places de marché ; le haut au cloud managé on-demand.',
+          '<strong>Les plages ci-dessous combinent les prix catalogue à la demande de RunPod (Community et Secure Cloud) et de Lambda.</strong> La borne basse correspond à RunPod Community Cloud ; la borne haute au prix catalogue à la demande le plus élevé des deux fournisseurs. Les tarifs de la place de marché Vast.ai varient selon l\'hôte et ne sont pas inclus.',
         ],
-        columns: ['GPU', 'VRAM', 'Tarif horaire (approx.)', 'Idéal pour'],
+        columns: ['GPU', 'VRAM', 'Tarif horaire', 'Idéal pour'],
         rows: [
           {
             'GPU': 'RTX 4090',
             'VRAM': '24 GB',
-            'Tarif horaire (approx.)': '0,30-0,80 $/h',
+            'Tarif horaire': '0,34-0,89 $/h',
             'Idéal pour': 'Inférence 7B-30B, fine-tuning léger',
+          },
+          {
+            'GPU': 'RTX 5090',
+            'VRAM': '32 GB',
+            'Tarif horaire': '0,69-1,19 $/h',
+            'Idéal pour': 'Inférence classe 30B, fine-tuning rapide',
           },
           {
             'GPU': 'A100 80 GB',
             'VRAM': '80 GB',
-            'Tarif horaire (approx.)': '0,90-1,90 $/h',
-            'Idéal pour': 'Inférence 70B, plupart des fine-tunings',
+            'Tarif horaire': '1,19-2,79 $/h',
+            'Idéal pour': 'Inférence 70B, la plupart des fine-tunings',
           },
           {
             'GPU': 'H100 80 GB',
             'VRAM': '80 GB',
-            'Tarif horaire (approx.)': '2,20-4,00 $/h',
-            'Idéal pour': 'Entraînement à grande échelle, serving critique en latence',
+            'Tarif horaire': '1,99-4,29 $/h',
+            'Idéal pour': 'Gros entraînements, service à latence critique',
           },
+        ],
+      },
+      cheapest: {
+        id: 'cheapest',
+        title: 'GPU cloud les moins chers à l\'heure',
+        content: [
+          '<strong>Parmi les offres RunPod et Lambda examinées, les GPU cloud les moins chers à l\'heure sont d\'anciennes cartes de 24 GB et 48 GB, dès 0,16 $/h.</strong> RunPod affiche ces tarifs Community et Secure Cloud ; ils conviennent à l\'inférence de petits modèles et aux tests, pas aux gros entraînements.',
+        ],
+        columns: ['GPU', 'VRAM', 'Tarif horaire', 'Idéal pour'],
+        rows: [
+          {
+            'GPU': 'RTX A5000',
+            'VRAM': '24 GB',
+            'Tarif horaire': '0,16-0,27 $/h',
+            'Idéal pour': 'Inférence 7B-13B, tests',
+          },
+          {
+            'GPU': 'RTX 3090',
+            'VRAM': '24 GB',
+            'Tarif horaire': '0,22-0,50 $/h',
+            'Idéal pour': 'Inférence 13B-30B',
+          },
+          {
+            'GPU': 'RTX A6000',
+            'VRAM': '48 GB',
+            'Tarif horaire': '0,33-0,59 $/h',
+            'Idéal pour': 'Modèles nécessitant 48 GB',
+          },
+          {
+            'GPU': 'L4',
+            'VRAM': '24 GB',
+            'Tarif horaire': '0,44-0,59 $/h',
+            'Idéal pour': 'Inférence basse consommation',
+          },
+        ],
+      },
+      snippets: {
+        id: 'snippets',
+        title: 'Résumé',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Un GPU cloud coûte environ 0,34-0,89 $/h pour une RTX 4090, 1,19-2,79 $/h pour une A100 80 GB et 1,99-4,29 $/h pour une H100 80 GB.' },
+          { type: 'plain-terms', text: 'La location d\'un GPU dans le cloud est facturée à l\'heure ; le prix dépend de la carte, du fournisseur et de l\'interruptibilité. Les cartes de 24 GB sont les moins chères et gèrent les modèles petits et moyens ; les A100 et H100 coûtent plus cher et conviennent aux grands modèles et à l\'entraînement.' },
         ],
       },
       faq: {
@@ -399,20 +562,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Réponses rapides sur les prix GPU cloud',
         faqs: [
           {
-            q: 'Quand louer un GPU cloud est-il moins cher que d\'en acheter un ?',
-            a: 'La location gagne sur les charges courtes et sporadiques — quelques heures par semaine. L\'achat gagne sur l\'usage quotidien soutenu. Une RTX 4090 d\'occasion à ~2 500 $ s\'amortit après 3 000-8 000 heures de location à 0,30-0,80 $/h.',
+            q: 'Combien coûte la location d\'un GPU à l\'heure ?',
+            a: 'La location d\'un GPU coûte 0,16-0,89 $/h pour les cartes grand public de 24 GB, 1,19-2,79 $/h pour une A100 80 GB et 1,99-4,29 $/h pour une H100 80 GB chez RunPod et Lambda. Les tarifs de la place de marché Vast.ai varient selon l\'hôte.',
           },
           {
-            q: 'Pourquoi le même GPU coûte-t-il si différemment selon le fournisseur ?',
-            a: 'Les clouds managés (Lambda, AWS, GCP) incluent support, SLA et matériel dédié — plus cher. Les places de marché ([Vast.ai](https://Vast.ai)) s\'appuient sur des hôtes individuels, parfois interruptibles. Région et demande font aussi varier les prix.',
+            q: 'Quel est le GPU le moins cher à louer à l\'heure ?',
+            a: 'Parmi les offres RunPod examinées, la RTX A5000 est la moins chère à 0,16 $/h en Community Cloud, suivie de la RTX 3090 à 0,22 $/h. Toutes deux ont 24 GB de VRAM et conviennent à l\'inférence de petits modèles, pas à l\'entraînement.',
           },
           {
-            q: 'Les tarifs incluent-ils stockage et bande passante ?',
-            a: 'Généralement non. Le stockage persistant coûte typiquement 0,05-0,20 $/GB-mois. La bande passante sortante peut ajouter quelques centimes/Go. À intégrer au total pour les gros poids ou jeux de données.',
+            q: 'Quand louer un GPU cloud revient-il moins cher qu\'en acheter un ?',
+            a: 'La location l\'emporte pour les charges courtes et ponctuelles — quelques heures par semaine. L\'achat l\'emporte pour un usage quotidien soutenu. À un prix d\'occasion supposé de ~2 500 $, une RTX 4090 est amortie après environ 2 800-7 400 heures de location à 0,34-0,89 $/h.',
           },
           {
-            q: 'Comment trouver le GPU le moins cher pour ma charge maintenant ?',
-            a: 'Vérifier au moins deux fournisseurs avant réservation — RunPod (managé) et Vast.ai (marketplace) couvrent les deux extrêmes. Filtrer par VRAM requise puis trier par prix.',
+            q: 'Pourquoi le même GPU coûte-t-il si différemment selon les fournisseurs ?',
+            a: 'Les clouds gérés (Lambda, AWS, GCP) incluent support, SLA et matériel dédié — ils coûtent plus cher. Les places de marché ([Vast.ai](https://vast.ai)) s\'approvisionnent auprès d\'hôtes individuels, parfois interruptibles. La région et la demande font aussi varier les prix.',
+          },
+          {
+            q: 'Les tarifs affichés incluent-ils le stockage et la bande passante ?',
+            a: 'Généralement non. Le stockage persistant coûte typiquement 0,05-0,20 $/GB par mois. La bande passante sortante peut ajouter quelques centimes par GB. Pour de gros poids de modèles ou jeux de données, intégrez-les au coût total.',
+          },
+          {
+            q: 'Comment trouver le GPU le moins cher pour ma charge de travail ?',
+            a: 'Comparez au moins deux fournisseurs avant de réserver — RunPod (géré) et Vast.ai (place de marché) couvrent les deux extrémités du spectre. Filtrez par VRAM requise, puis triez par prix.',
           },
         ],
       },
@@ -432,13 +603,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-ja.webp',
     title: '2026年、クラウドGPUの時間料金はいくら？',
     seoTitle: 'クラウドGPU 時間料金 2026 | Prompt Bites',
-    metaDescription: 'クラウドGPUの時間料金(2026年7月):RTX 4090 ~$0.30-0.80、A100 80 GB ~$0.90-2.00、H100 ~$2.50-4.00。主要プロバイダーでの概算。',
+    metaDescription: 'クラウドGPUの時間料金:RTX 4090は$0.34から、A100 80 GBは$1.19-2.79、H100は$1.99-4.29。RunPodとLambdaの料金で見る時間あたり最安のクラウドGPU。',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-22',
+    next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090', 'A100 80 GB', 'H100'],
+    current_hardware_mentioned: ['RTX 4090', 'RTX 5090', 'RTX 3090', 'RTX A5000', 'A100 80 GB', 'H100'],
     educationalLevel: 'Intermediate',
     audience: 'LLMワークロード用にクラウドGPU価格を比較する開発者',
     affiliateDisclosure: true,
@@ -447,10 +618,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4分で読める',
     leadAnswerBlock:
-      '2026年5月時点、クラウドGPUの典型的な時間料金:RTX 4090 24 GB $0.30-0.80/h、A100 80 GB $0.90-1.90/h、H100 80 GB $2.20-4.00/h。料金はプロバイダー、リージョン、中断可能かで大きく変動します。予約前にライブダッシュボードを確認してください。',
+      'RunPodとLambdaでのクラウドGPUの時間料金は、RTX 4090 24 GBが$0.34-0.89/h、A100 80 GBが$1.19-2.79/h、H100 80 GBが$1.99-4.29/hです。時間あたりで最も安いのは旧世代の24 GBカードで、RunPodはCommunity CloudでRTX A5000を$0.16/hから、RTX 3090を$0.22/hから掲載しています。Vast.aiのマーケットプレイス価格は需給で変動するため、予約前にライブ一覧を確認してください。',
     toc: [
       { label: 'ワークロード別ベストピック', anchor: '#best-pick' },
       { label: 'カード別クラウドGPU時間料金', anchor: '#comparison' },
+      { label: '時間あたり最安のクラウドGPU', anchor: '#cheapest' },
       { label: 'FAQ', anchor: '#faq' },
       { label: '関連記事', anchor: '#related' },
     ],
@@ -459,13 +631,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: '2026年、クラウドGPUの時間料金はいくら？',
-        answer: 'RTX 4090: $0.30-0.80/h。A100 80 GB: $0.90-1.90/h。H100: $2.20-4.00/h。推論に最安: Vast.aiスポット。',
+        answer: 'RTX 4090: $0.34-0.89/h。A100 80 GB: $1.19-2.79/h。H100 80 GB: $1.99-4.29/h。時間あたり最安: RTX A5000が$0.16/hから。',
         bullets: [
-          'Vast.aiスポットRTX 4090は~$0.30/hで最安だが、ジョブ途中で中断される可能性がある。',
-          'RunPodセキュアクラウドはRTX 4090に稼働保証付きで~$0.80/h。',
-          'Lambda LabsのH100 80 GB: ~$2.49/h — 70B以上のモデルか大規模バッチジョブのみで使用を。',
+          'RunPodはRTX 4090をCommunity Cloudで$0.34/h、Secure Cloudで$0.89/hと掲載しています。',
+          'LambdaはH100 PCIeを$3.29/h、H100 SXMを$3.99-4.29/hで提供。RunPodのH100 PCIeは$1.99/hからです。',
+          'Vast.aiはマーケットプレイスで、価格はホストごとに異なり、中断可能なレンタルは安くなります。ライブ一覧を確認してください。',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -473,19 +645,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'RTX 4090 24 GBが最安の実用的選択肢 — マーケットで$0.30-0.80/h、13B-30B推論に最適',
-          'A100 80 GBは$0.90-1.90/hで70B推論と多くのトレーニングジョブの主役',
-          'H100 80 GBは$2.20-4.00/hで最速だが、大規模トレーニングや本番サービングでのみ価値がある',
-          '全レンジは2026年5月の概算 — 予約前にライブダッシュボードを確認',
+          'RTX 4090 24 GBはRunPodで$0.34-0.89/h — 13B-30B推論向けの低コストな選択肢',
+          'A100 80 GBはRunPodとLambdaで$1.19-2.79/hで、70B推論とほとんどのファインチューニングの主力',
+          'H100 80 GBは$1.99-4.29/hで、大規模トレーニングやレイテンシ重視のサービングでのみ価値がある',
+          '時間あたり最安のクラウドGPUは$0.16/hからの旧世代24 GBカード — 料金は頻繁に変わるため、予約前に各社ページを確認',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: 'ベストピック：ワークロードに合うカードを選ぶ',
         content: [
-          '<strong>最も安く済む実用的クラウドGPUは、モデルに対しVRAM余裕が最小で済むカードです。</strong>$4/hのH100を13Bモデルのためにレンタルすると、支払っている60+ GBのVRAMを無駄にします。',
-          '7B-13B推論用：マーケット上(Vast.ai、RunPodコミュニティプール)のRTX 4090 24 GBを$0.30-0.80/hで。24 GBのVRAMで十分、コンシューマカードのマーケットはマネージドクラウドを下回ります。',
-          '70B推論または中規模ファインチューニング:A100 80 GBを$0.90-1.90/hで。80 GBのVRAMで70BモデルをQ4にコンテキスト余裕付きで搭載。フロンティアモデルのトレーニングや厳しいレイテンシ目標の本番サービングには、H100 80 GBを$2.20-4.00/hで — 持続的スループットが制約になる場合のみ価値があります。',
+          '<strong>最も安く使えるクラウドGPUとは、モデルが収まる最小限のVRAMを持つGPUです。</strong>13Bモデルのために最大$4.29/hのH100を借りると、支払っているVRAMの60 GB以上が無駄になります。',
+          '7B-13B推論には、RunPodで$0.34-0.89/hのRTX 4090 24 GB、またはVast.aiのマーケットプレイスホスト。24 GBのVRAMで十分で、コンシューマーカードのプールはマネージドクラウドより安価です。',
+          '70B推論や中規模ファインチューニングには、$1.19-2.79/hのA100 80 GB。80 GBのVRAMなら70BモデルをQ4でコンテキストの余裕を持って載せられます。最先端モデルのトレーニングや厳しいレイテンシ目標の本番サービングには、$1.99-4.29/hのH100 80 GB — 持続スループットが制約になる場合のみ価値があります。',
         ],
         affiliateLinks: [
           {
@@ -512,28 +684,76 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'カード別クラウドGPU時間料金',
         content: [
-          '<strong>下記は主要プロバイダ(RunPod、Vast.ai、Lambda Labs他)を横断した2026年5月の概算範囲です。</strong>低い方は通常中断可能またはマーケット価格、高い方はオンデマンドのマネージドクラウドです。',
+          '<strong>以下の範囲は、RunPod(Community CloudとSecure Cloud)とLambdaのオンデマンド定価を合わせたものです。</strong>下限はRunPod Community Cloud、上限は両社のオンデマンド定価の最高値です。Vast.aiのマーケットプレイス価格はホストごとに異なるため含めていません。',
         ],
-        columns: ['GPU', 'VRAM', '時間料金 (概算)', '最適な用途'],
+        columns: ['GPU', 'VRAM', '時間料金', '適した用途'],
         rows: [
           {
             'GPU': 'RTX 4090',
             'VRAM': '24 GB',
-            '時間料金 (概算)': '$0.30-0.80/h',
-            '最適な用途': '7B-30B推論、軽いファインチューニング',
+            '時間料金': '$0.34-0.89/h',
+            '適した用途': '7B-30B推論、軽量ファインチューニング',
+          },
+          {
+            'GPU': 'RTX 5090',
+            'VRAM': '32 GB',
+            '時間料金': '$0.69-1.19/h',
+            '適した用途': '30Bクラス推論、高速ファインチューニング',
           },
           {
             'GPU': 'A100 80 GB',
             'VRAM': '80 GB',
-            '時間料金 (概算)': '$0.90-1.90/h',
-            '最適な用途': '70B推論、多くのファインチューニング',
+            '時間料金': '$1.19-2.79/h',
+            '適した用途': '70B推論、ほとんどのファインチューニング',
           },
           {
             'GPU': 'H100 80 GB',
             'VRAM': '80 GB',
-            '時間料金 (概算)': '$2.20-4.00/h',
-            '最適な用途': '大規模トレーニング、レイテンシ重視のサービング',
+            '時間料金': '$1.99-4.29/h',
+            '適した用途': '大規模トレーニング、低遅延サービング',
           },
+        ],
+      },
+      cheapest: {
+        id: 'cheapest',
+        title: '時間あたり最安のクラウドGPU',
+        content: [
+          '<strong>確認したRunPodとLambdaの掲載の中で、時間あたり最も安いクラウドGPUは$0.16/hからの旧世代24 GB・48 GBカードです。</strong>RunPodがCommunity CloudとSecure Cloudの料金を掲載しており、小型モデルの推論やテスト向きで、大規模トレーニングには向きません。',
+        ],
+        columns: ['GPU', 'VRAM', '時間料金', '適した用途'],
+        rows: [
+          {
+            'GPU': 'RTX A5000',
+            'VRAM': '24 GB',
+            '時間料金': '$0.16-0.27/h',
+            '適した用途': '7B-13B推論、テスト',
+          },
+          {
+            'GPU': 'RTX 3090',
+            'VRAM': '24 GB',
+            '時間料金': '$0.22-0.50/h',
+            '適した用途': '13B-30B推論',
+          },
+          {
+            'GPU': 'RTX A6000',
+            'VRAM': '48 GB',
+            '時間料金': '$0.33-0.59/h',
+            '適した用途': '48 GBが必要なモデル',
+          },
+          {
+            'GPU': 'L4',
+            'VRAM': '24 GB',
+            '時間料金': '$0.44-0.59/h',
+            '適した用途': '低消費電力の推論',
+          },
+        ],
+      },
+      snippets: {
+        id: 'snippets',
+        title: '要約',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'クラウドGPUの料金は、RTX 4090が約$0.34-0.89/h、A100 80 GBが$1.19-2.79/h、H100 80 GBが$1.99-4.29/hです。' },
+          { type: 'plain-terms', text: 'クラウドでGPUを借りる料金は時間単位で課金され、カードの種類、プロバイダー、中断可能かどうかで決まります。24 GBクラスの小型カードが最も安く、小〜中規模モデルに対応します。A100とH100は高価で、大規模モデルやトレーニング向きです。' },
         ],
       },
       faq: {
@@ -541,20 +761,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'クラウドGPU価格のFAQ',
         faqs: [
           {
-            q: 'クラウドGPUのレンタルが購入より安くなるのは？',
-            a: '週数時間程度の短くスポラディックなワークロードはレンタルが有利。日々持続的に使うなら購入が有利。中古RTX 4090を約$2,500で買うと、$0.30-0.80/hのクラウドレンタル3,000-8,000時間分で元が取れます。',
+            q: 'GPUレンタルの時間料金はいくらですか？',
+            a: 'RunPodとLambdaでは、24 GBのコンシューマーカードが$0.16-0.89/h、A100 80 GBが$1.19-2.79/h、H100 80 GBが$1.99-4.29/hです。Vast.aiのマーケットプレイス料金はホストごとに異なります。',
           },
           {
-            q: '同じGPUがプロバイダごとに料金が違うのはなぜ？',
-            a: 'マネージドクラウド(Lambda、AWS、GCP)はサポート、SLA、専用ハードを含むため高くなります。マーケット([Vast.ai](https://Vast.ai))は個人ホストが提供し、中断可能なこともあります。リージョンと需要も価格に影響します。',
+            q: '時間単位で借りられる最も安いGPUは？',
+            a: '確認したRunPodの掲載では、Community CloudのRTX A5000が$0.16/hで最安、次いでRTX 3090が$0.22/hです。どちらも24 GBのVRAMで、トレーニングではなく小型モデルの推論向きです。',
           },
           {
-            q: '提示の料金にストレージと帯域は含まれますか？',
-            a: '通常含まれません。永続ストレージは$0.05-0.20/GB-月が典型。送信帯域は1 GBあたり数セント加算され得ます。大きなモデル重みやデータセットは総コストに織り込んでください。',
+            q: 'クラウドGPUを借りる方が購入より安いのはいつですか？',
+            a: '週に数時間といった短く断続的なワークロードならレンタルが有利で、毎日継続的に使うなら購入が有利です。中古価格を約$2,500と仮定すると、RTX 4090は$0.34-0.89/hで約2,800-7,400時間のレンタルで元が取れます。',
           },
           {
-            q: '自分のワークロードで今いちばん安いGPUを見つけるには？',
-            a: '予約前に少なくとも2社をチェック — RunPod(マネージド)とVast.ai(マーケット)で両端をカバー。必要なVRAMでフィルタしてから価格でソートしてください。',
+            q: '同じGPUでもプロバイダーによって価格が大きく違うのはなぜですか？',
+            a: 'マネージドクラウド(Lambda、AWS、GCP)にはサポート、SLA、専用ハードウェアが含まれるため高くなります。マーケットプレイス([Vast.ai](https://vast.ai))は個人ホストから調達するため、中断される可能性があります。地域や需要でも価格は変わります。',
+          },
+          {
+            q: '提示されている料金にストレージと帯域は含まれますか？',
+            a: '通常は含まれません。永続ストレージは一般に月額$0.05-0.20/GB、送信帯域はGBあたり数セント加算されることがあります。大きなモデルの重みやデータセットでは総額に含めてください。',
+          },
+          {
+            q: '今の自分のワークロードに最も安いGPUを見つけるには？',
+            a: '予約前に少なくとも2社を確認してください。RunPod(マネージド)とVast.ai(マーケットプレイス)で両極をカバーできます。必要なVRAMで絞り込み、価格順に並べ替えます。',
           },
         ],
       },
@@ -574,13 +802,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-zh.webp',
     title: '2026年云GPU每小时多少钱？',
     seoTitle: '云GPU每小时价格 2026 | Prompt Bites',
-    metaDescription: '云GPU每小时价格:RTX 4090 ~$0.30-0.80,A100 80 GB ~$0.90-2.00,H100 ~$2.50-4.00。主要提供商概算区间。',
+    metaDescription: '云GPU每小时价格:RTX 4090 起价$0.34,A100 80 GB $1.19-2.79,H100 $1.99-4.29。附RunPod和Lambda报价的最便宜按小时计费云GPU。',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-22',
+    next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090', 'A100 80 GB', 'H100'],
+    current_hardware_mentioned: ['RTX 4090', 'RTX 5090', 'RTX 3090', 'RTX A5000', 'A100 80 GB', 'H100'],
     educationalLevel: 'Intermediate',
     audience: '为LLM负载对比云GPU价格的开发者',
     affiliateDisclosure: true,
@@ -589,10 +817,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '阅读约4分钟',
     leadAnswerBlock:
-      '2026年5月,云GPU典型小时价:RTX 4090 24 GB $0.30-0.80/h、A100 80 GB $0.90-1.90/h、H100 80 GB $2.20-4.00/h。价格因提供商、区域、可否中断而大幅波动。预订前请查实时仪表盘。',
+      '在RunPod和Lambda,云GPU每小时的价格为:RTX 4090 24 GB $0.34-0.89,A100 80 GB $1.19-2.79,H100 80 GB $1.99-4.29。按小时计最便宜的是旧款24 GB显卡:RunPod在Community Cloud中列出RTX A5000起价$0.16/小时,RTX 3090起价$0.22/小时。Vast.ai市场价格随供需波动,预订前请查看其实时列表。',
     toc: [
       { label: '按负载的最佳选择', anchor: '#best-pick' },
       { label: '按卡型的云GPU小时价', anchor: '#comparison' },
+      { label: '按小时计最便宜的云GPU', anchor: '#cheapest' },
       { label: '常见问题', anchor: '#faq' },
       { label: '延伸阅读', anchor: '#related' },
     ],
@@ -601,13 +830,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '2026年云GPU每小时多少钱？',
-        answer: 'RTX 4090: $0.30-0.80/h。A100 80 GB: $0.90-1.90/h。H100: $2.20-4.00/h。推理最便宜: Vast.ai竞价实例。',
+        answer: 'RTX 4090: $0.34-0.89/h。A100 80 GB: $1.19-2.79/h。H100 80 GB: $1.99-4.29/h。按小时最便宜: RTX A5000起价$0.16/h。',
         bullets: [
-          'Vast.ai竞价RTX 4090最便宜约$0.30/h,但可能在任务中途被抢占。',
-          'RunPod安全云RTX 4090约$0.80/h,保证可用性。',
-          'Lambda Labs H100 80 GB: 约$2.49/h — 仅在70B+模型或大批量任务时使用。',
+          'RunPod列出的RTX 4090价格为:Community Cloud $0.34/h,Secure Cloud $0.89/h。',
+          'Lambda的H100 PCIe为$3.29/h,H100 SXM为$3.99-4.29/h;RunPod的H100 PCIe起价$1.99/h。',
+          'Vast.ai是市场模式:价格因主机而异,可中断租用更便宜,请查看实时列表。',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -615,19 +844,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'RTX 4090 24 GB是最便宜可用选项 — 市场$0.30-0.80/h,适合13B-30B推理',
-          'A100 80 GB $0.90-1.90/h是70B推理与多数训练任务的主力',
-          'H100 80 GB $2.20-4.00/h最快,仅大规模训练或生产serving值得',
-          '所有区间为2026年5月概算 — 预订前查实时仪表盘',
+          'RTX 4090 24 GB在RunPod上为$0.34-0.89/h——13B-30B推理的低成本选择',
+          'A100 80 GB在RunPod和Lambda为$1.19-2.79/h,是70B推理和大多数微调任务的主力',
+          'H100 80 GB为$1.99-4.29/h,只有大规模训练或对延迟要求严格的服务才值得',
+          '按小时计最便宜的云GPU是起价$0.16/h的旧款24 GB显卡——价格经常变动,预订前请查看服务商页面',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: '最佳选择:让卡匹配负载',
         content: [
-          '<strong>最便宜可用的云GPU是相对你模型VRAM余量最小的那张。</strong>用$4/h的H100跑13B模型,白白浪费你付费的60+ GB VRAM。',
-          '7B-13B推理:市场上(Vast.ai、RunPod community pool)RTX 4090 24 GB,$0.30-0.80/h。24 GB VRAM足够,消费卡市场低于托管云。',
-          '70B推理或中等微调:A100 80 GB,$0.90-1.90/h。80 GB VRAM足够装下70B Q4并留上下文余量。前沿模型训练或低延迟生产serving:H100 80 GB,$2.20-4.00/h — 只有持续吞吐成为瓶颈时才值。',
+          '<strong>最便宜的可行云GPU,是刚好能装下模型、VRAM余量最小的那一款。</strong>为运行13B模型而租用最高$4.29/h的H100,会浪费你所付费的60 GB以上VRAM。',
+          '7B-13B推理:RunPod上$0.34-0.89/h的RTX 4090 24 GB,或Vast.ai市场上的主机。24 GB VRAM已足够,消费级显卡池比托管云更便宜。',
+          '70B推理或中等规模微调:$1.19-2.79/h的A100 80 GB。80 GB VRAM可在Q4下容纳70B模型并保留上下文余量。前沿模型训练或有严格延迟目标的生产服务:$1.99-4.29/h的H100 80 GB——仅当持续吞吐量是瓶颈时才值得。',
         ],
         affiliateLinks: [
           {
@@ -654,28 +883,76 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: '按卡型云GPU小时价',
         content: [
-          '<strong>下表为跨主要提供商(RunPod、Vast.ai、Lambda Labs等)的2026年5月概算区间。</strong>下端通常是可中断或市场价,上端是按需托管云。',
+          '<strong>下列区间综合了RunPod(Community Cloud和Secure Cloud)与Lambda的按需标价。</strong>下限为RunPod Community Cloud;上限为两家服务商中最高的按需标价。Vast.ai市场价格因主机而异,未计入。',
         ],
-        columns: ['GPU', 'VRAM', '小时价 (约)', '适合'],
+        columns: ['GPU', 'VRAM', '每小时价格', '适用场景'],
         rows: [
           {
             'GPU': 'RTX 4090',
             'VRAM': '24 GB',
-            '小时价 (约)': '$0.30-0.80/h',
-            '适合': '7B-30B推理,轻量微调',
+            '每小时价格': '$0.34-0.89/h',
+            '适用场景': '7B-30B推理,轻量微调',
+          },
+          {
+            'GPU': 'RTX 5090',
+            'VRAM': '32 GB',
+            '每小时价格': '$0.69-1.19/h',
+            '适用场景': '30B级推理,更快的微调',
           },
           {
             'GPU': 'A100 80 GB',
             'VRAM': '80 GB',
-            '小时价 (约)': '$0.90-1.90/h',
-            '适合': '70B推理,多数微调',
+            '每小时价格': '$1.19-2.79/h',
+            '适用场景': '70B推理,大多数微调',
           },
           {
             'GPU': 'H100 80 GB',
             'VRAM': '80 GB',
-            '小时价 (约)': '$2.20-4.00/h',
-            '适合': '大规模训练,低延迟serving',
+            '每小时价格': '$1.99-4.29/h',
+            '适用场景': '大规模训练,低延迟服务',
           },
+        ],
+      },
+      cheapest: {
+        id: 'cheapest',
+        title: '按小时计最便宜的云GPU',
+        content: [
+          '<strong>在已核对的RunPod和Lambda报价中,按小时计最便宜的云GPU是旧款24 GB和48 GB显卡,起价$0.16/h。</strong>RunPod列出了这些Community Cloud和Secure Cloud价格;适合小模型推理和测试,不适合大型训练。',
+        ],
+        columns: ['GPU', 'VRAM', '每小时价格', '适用场景'],
+        rows: [
+          {
+            'GPU': 'RTX A5000',
+            'VRAM': '24 GB',
+            '每小时价格': '$0.16-0.27/h',
+            '适用场景': '7B-13B推理,测试',
+          },
+          {
+            'GPU': 'RTX 3090',
+            'VRAM': '24 GB',
+            '每小时价格': '$0.22-0.50/h',
+            '适用场景': '13B-30B推理',
+          },
+          {
+            'GPU': 'RTX A6000',
+            'VRAM': '48 GB',
+            '每小时价格': '$0.33-0.59/h',
+            '适用场景': '需要48 GB的模型',
+          },
+          {
+            'GPU': 'L4',
+            'VRAM': '24 GB',
+            '每小时价格': '$0.44-0.59/h',
+            '适用场景': '低功耗推理',
+          },
+        ],
+      },
+      snippets: {
+        id: 'snippets',
+        title: '摘要',
+        snippetBlocks: [
+          { type: 'one-sentence', text: '云GPU价格约为:RTX 4090 $0.34-0.89/h,A100 80 GB $1.19-2.79/h,H100 80 GB $1.99-4.29/h。' },
+          { type: 'plain-terms', text: '在云端租用GPU按小时计费,价格取决于显卡型号、服务商以及租用是否可中断。24 GB级的小型显卡最便宜,可运行中小型模型;A100和H100价格更高,适合大模型和训练。' },
         ],
       },
       faq: {
@@ -683,20 +960,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '云GPU价格问答',
         faqs: [
           {
-            q: '云GPU什么时候比买卡更便宜？',
-            a: '租用胜在短期、爆发性负载(每周几小时)。买卡胜在持续每日使用。二手RTX 4090约$2,500,大约3,000-8,000小时($0.30-0.80/h)的云租用即可回本。',
+            q: '按小时租用GPU要多少钱？',
+            a: '在RunPod和Lambda,24 GB消费级显卡每小时$0.16-0.89,A100 80 GB为$1.19-2.79,H100 80 GB为$1.99-4.29。Vast.ai市场价格因主机而异。',
           },
           {
-            q: '同一GPU不同提供商价格差异为何这么大？',
-            a: '托管云(Lambda、AWS、GCP)含支持、SLA与专属硬件 — 更贵。市场([Vast.ai](https://Vast.ai))来自个人主机,可中断。区域与需求也左右价格。',
+            q: '按小时租用,最便宜的GPU是哪款？',
+            a: '在已核对的RunPod报价中,Community Cloud的RTX A5000最便宜,为$0.16/h,其次是RTX 3090,为$0.22/h。两者都有24 GB VRAM,适合小模型推理而非训练。',
           },
           {
-            q: '报价是否包含存储与带宽？',
-            a: '通常不包含。持久存储典型$0.05-0.20/GB-月。出站带宽每GB可能数美分。大模型权重或数据集请算入总价。',
+            q: '租用云GPU什么时候比购买更划算？',
+            a: '短时、间歇性任务(每周几小时)租用更划算;每天持续使用则购买更划算。按假设的二手价约$2,500计算,RTX 4090在$0.34-0.89/h下,约租用2,800-7,400小时后回本。',
           },
           {
-            q: '如何当下找到我负载最便宜的GPU？',
-            a: '预订前至少查两家 — RunPod(托管)与Vast.ai(市场)覆盖两端。按所需VRAM过滤,再按价格排序。',
+            q: '同一款GPU在不同服务商价格为何差异这么大？',
+            a: '托管云(Lambda、AWS、GCP)包含支持、SLA和专用硬件,价格更高。市场平台([Vast.ai](https://vast.ai))从个人主机获取资源,可能被中断。地区和需求也会影响价格。',
+          },
+          {
+            q: '报价是否包含存储和带宽？',
+            a: '通常不包含。持久存储一般为$0.05-0.20/GB每月,出站带宽可能每GB增加几美分。对于大型模型权重或数据集,请计入总成本。',
+          },
+          {
+            q: '如何找到当前最适合我任务的最便宜GPU？',
+            a: '预订前至少比较两家服务商——RunPod(托管)和Vast.ai(市场)覆盖了两个极端。先按所需VRAM筛选,再按价格排序。',
           },
         ],
       },
@@ -716,13 +1001,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-pt.webp',
     title: 'Quanto custa uma GPU na nuvem por hora em 2026?',
     seoTitle: 'Preço de GPU na nuvem por hora 2026 | Prompt Bites',
-    metaDescription: 'Preço de GPU na nuvem por hora (julho de 2026): RTX 4090 ~$0,30–0,80, A100 80 GB ~$0,90–2,00, H100 ~$2,50–4,00. Faixas aproximadas entre os principais provedores.',
+    metaDescription: 'Custo de GPU na nuvem por hora: RTX 4090 a partir de $0,34, A100 80 GB $1,19–2,79, H100 $1,99–4,29. As GPUs na nuvem mais baratas por hora, com preços da RunPod e da Lambda.',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-22',
+    next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090', 'A100 80 GB', 'H100'],
+    current_hardware_mentioned: ['RTX 4090', 'RTX 5090', 'RTX 3090', 'RTX A5000', 'A100 80 GB', 'H100'],
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores comparando preços de GPU na nuvem para cargas de trabalho LLM',
     affiliateDisclosure: true,
@@ -731,10 +1016,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 min de leitura',
     leadAnswerBlock:
-      'Em maio de 2026, as GPUs na nuvem geralmente custam: RTX 4090 24 GB a $0,30–0,80/h, A100 80 GB a $0,90–1,90/h, H100 80 GB a $2,20–4,00/h. As tarifas variam muito por provedor, região e se a instância é interrompível. Verifique os painéis em tempo real antes de reservar.',
+      'Na RunPod e na Lambda, as GPUs na nuvem custam $0,34–0,89/h para uma RTX 4090 24 GB, $1,19–2,79/h para uma A100 80 GB e $1,99–4,29/h para uma H100 80 GB. As opções mais baratas por hora são placas antigas de 24 GB: a RunPod lista a RTX A5000 a partir de $0,16/h e a RTX 3090 a partir de $0,22/h na Community Cloud. Os preços do marketplace da Vast.ai variam com a oferta; consulte a grade ao vivo antes de reservar.',
     toc: [
       { label: 'Melhor opção por carga de trabalho', anchor: '#best-pick' },
       { label: 'Tarifas horárias de GPU por placa', anchor: '#comparison' },
+      { label: 'GPUs na nuvem mais baratas por hora', anchor: '#cheapest' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Leituras relacionadas', anchor: '#related' },
     ],
@@ -743,13 +1029,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'Quanto custa uma GPU na nuvem por hora em 2026?',
-        answer: 'RTX 4090: $0,15–0,44/h. A100 80 GB: $1,10–2,00/h. H100: $2,50–4,00/h. Mais barata para inferência: Vast.ai spot.',
+        answer: 'RTX 4090: $0,34–0,89/h. A100 80 GB: $1,19–2,79/h. H100 80 GB: $1,99–4,29/h. Mais barata por hora: RTX A5000 a partir de $0,16/h.',
         bullets: [
-          'Vast.ai spot RTX 4090 é a mais barata a ~$0,15/h, mas pode ser interrompida no meio do trabalho.',
-          'RunPod Secure Cloud cobra ~$0,44/h por RTX 4090 com disponibilidade garantida.',
-          'H100 80 GB na Lambda Labs: ~$2,49/h — use apenas para modelos de 70B+ ou jobs batch de grande escala.',
+          'A RunPod lista a RTX 4090 a $0,34/h na Community Cloud e $0,89/h na Secure Cloud.',
+          'A Lambda cobra $3,29/h por uma H100 PCIe e $3,99–4,29/h por uma H100 SXM; a RunPod lista uma H100 PCIe a partir de $1,99/h.',
+          'A Vast.ai é um marketplace: os preços variam por host e aluguéis interrompíveis custam menos; consulte a grade ao vivo.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -757,19 +1043,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'RTX 4090 24 GB é a opção viável mais barata — $0,30–0,80/h em marketplaces, ideal para inferência de 13B–30B',
-          'A100 80 GB a $0,90–1,90/h é o cavalo de batalha para inferência de 70B e a maioria dos jobs de treinamento',
-          'H100 80 GB a $2,20–4,00/h é a opção mais rápida, mas vale a pena apenas para treinamento em larga escala ou serving em produção',
-          'Todas as faixas são aproximações de maio de 2026 — verifique os painéis dos provedores em tempo real antes de reservar',
+          'A RTX 4090 24 GB custa $0,34–0,89/h na RunPod — uma opção de baixo custo para inferência de 13B–30B',
+          'A A100 80 GB custa $1,19–2,79/h na RunPod e na Lambda e é a base para inferência de 70B e a maioria dos fine-tunings',
+          'A H100 80 GB custa $1,99–4,29/h e só vale a pena para treinamento em grande escala ou serviço com latência crítica',
+          'As GPUs na nuvem mais baratas por hora são placas antigas de 24 GB a partir de $0,16/h — os preços mudam com frequência; confira a página do provedor antes de reservar',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: 'Melhor opção: ajuste a placa à carga de trabalho',
         content: [
-          '<strong>A GPU na nuvem mais barata viável é aquela que cabe no seu modelo com a menor margem de VRAM.</strong> Alugar uma H100 a $4/h para executar um modelo de 13B desperdiça mais de 60 GB de VRAM pelo qual você está pagando.',
-          'Para inferência de 7B–13B: uma RTX 4090 24 GB em um marketplace (Vast.ai, RunPod community pool) a $0,30–0,80/h. Os 24 GB de VRAM são suficientes e os marketplaces de placas de consumidor são mais baratos do que nuvens gerenciadas.',
-          'Para inferência de 70B ou fine-tuning de escala média: uma A100 80 GB a $0,90–1,90/h. Os 80 GB de VRAM acomodam um modelo de 70B em Q4 com espaço para contexto. Para treinamento de modelos frontier ou serving em produção com objetivos rígidos de latência: uma H100 80 GB a $2,20–4,00/h — vale apenas quando o desempenho sustentado é o gargalo.',
+          '<strong>A GPU na nuvem mais barata é a que comporta o seu modelo com a menor sobra de VRAM.</strong> Alugar uma H100 por até $4,29/h para rodar um modelo de 13B desperdiça mais de 60 GB de VRAM pelos quais você paga.',
+          'Para inferência de 7B–13B: uma RTX 4090 24 GB a $0,34–0,89/h na RunPod, ou um host do marketplace da Vast.ai. 24 GB de VRAM são suficientes, e os pools de placas de consumo custam menos que as nuvens gerenciadas.',
+          'Para inferência de 70B ou fine-tuning de porte médio: uma A100 80 GB a $1,19–2,79/h. Os 80 GB de VRAM comportam um modelo de 70B em Q4 com folga de contexto. Para treinamento de modelos de ponta ou serviço de produção com metas de latência rígidas: uma H100 80 GB a $1,99–4,29/h — só vale quando a vazão sustentada é a restrição.',
         ],
         affiliateLinks: [
           {
@@ -796,28 +1082,76 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'Tarifas horárias de GPU na nuvem por placa',
         content: [
-          '<strong>As faixas abaixo são cifras aproximadas de maio de 2026 entre os principais provedores (RunPod, Vast.ai, Lambda Labs e outros).</strong> O extremo inferior corresponde tipicamente a preços interrompíveis ou de marketplace; o extremo superior é nuvem gerenciada sob demanda.',
+          '<strong>As faixas abaixo combinam os preços de tabela sob demanda da RunPod (Community e Secure Cloud) e da Lambda.</strong> O limite inferior é a RunPod Community Cloud; o superior é o maior preço de tabela sob demanda entre os dois provedores. Os preços do marketplace da Vast.ai variam por host e não estão incluídos.',
         ],
-        columns: ['GPU', 'VRAM', 'Tarifa horária (aprox.)', 'Ideal para'],
+        columns: ['GPU', 'VRAM', 'Preço por hora', 'Ideal para'],
         rows: [
           {
             'GPU': 'RTX 4090',
             'VRAM': '24 GB',
-            'Tarifa horária (aprox.)': '$0,30–0,80/h',
+            'Preço por hora': '$0,34–0,89/h',
             'Ideal para': 'Inferência 7B–30B, fine-tuning leve',
+          },
+          {
+            'GPU': 'RTX 5090',
+            'VRAM': '32 GB',
+            'Preço por hora': '$0,69–1,19/h',
+            'Ideal para': 'Inferência classe 30B, fine-tuning rápido',
           },
           {
             'GPU': 'A100 80 GB',
             'VRAM': '80 GB',
-            'Tarifa horária (aprox.)': '$0,90–1,90/h',
+            'Preço por hora': '$1,19–2,79/h',
             'Ideal para': 'Inferência 70B, maioria dos fine-tunings',
           },
           {
             'GPU': 'H100 80 GB',
             'VRAM': '80 GB',
-            'Tarifa horária (aprox.)': '$2,20–4,00/h',
-            'Ideal para': 'Treinamento em larga escala, serving crítico em latência',
+            'Preço por hora': '$1,99–4,29/h',
+            'Ideal para': 'Treino em larga escala, latência crítica',
           },
+        ],
+      },
+      cheapest: {
+        id: 'cheapest',
+        title: 'GPUs na nuvem mais baratas por hora',
+        content: [
+          '<strong>Entre as ofertas da RunPod e da Lambda verificadas, as GPUs na nuvem mais baratas por hora são placas antigas de 24 GB e 48 GB, a partir de $0,16/h.</strong> A RunPod lista essas tarifas da Community e da Secure Cloud; servem para inferência de modelos pequenos e testes, não para grandes treinamentos.',
+        ],
+        columns: ['GPU', 'VRAM', 'Preço por hora', 'Ideal para'],
+        rows: [
+          {
+            'GPU': 'RTX A5000',
+            'VRAM': '24 GB',
+            'Preço por hora': '$0,16–0,27/h',
+            'Ideal para': 'Inferência 7B–13B, testes',
+          },
+          {
+            'GPU': 'RTX 3090',
+            'VRAM': '24 GB',
+            'Preço por hora': '$0,22–0,50/h',
+            'Ideal para': 'Inferência 13B–30B',
+          },
+          {
+            'GPU': 'RTX A6000',
+            'VRAM': '48 GB',
+            'Preço por hora': '$0,33–0,59/h',
+            'Ideal para': 'Modelos que exigem 48 GB',
+          },
+          {
+            'GPU': 'L4',
+            'VRAM': '24 GB',
+            'Preço por hora': '$0,44–0,59/h',
+            'Ideal para': 'Inferência de baixo consumo',
+          },
+        ],
+      },
+      snippets: {
+        id: 'snippets',
+        title: 'Resumo',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'GPUs na nuvem custam cerca de $0,34–0,89/h para uma RTX 4090, $1,19–2,79/h para uma A100 80 GB e $1,99–4,29/h para uma H100 80 GB.' },
+          { type: 'plain-terms', text: 'Alugar uma GPU na nuvem é cobrado por hora, e o preço depende da placa, do provedor e de o aluguel poder ser interrompido. Placas menores de 24 GB são as mais baratas e atendem modelos pequenos e médios; A100 e H100 custam mais e servem para modelos grandes e treinamento.' },
         ],
       },
       faq: {
@@ -825,20 +1159,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Respostas rápidas sobre preços de GPU na nuvem',
         faqs: [
           {
-            q: 'Quando é mais barato alugar uma GPU na nuvem do que comprá-la?',
-            a: 'Alugar vence em cargas de trabalho curtas e esporádicas — algumas horas por semana. Comprar vence com uso diário sustentado. Uma RTX 4090 usada a ~$2.500 se amortiza em aproximadamente 3.000–8.000 horas de aluguel na nuvem a $0,30–0,80/h.',
+            q: 'Quanto custa alugar uma GPU por hora?',
+            a: 'Na RunPod e na Lambda, o aluguel custa $0,16–0,89/h para placas de consumo de 24 GB, $1,19–2,79/h para uma A100 80 GB e $1,99–4,29/h para uma H100 80 GB. Os preços do marketplace da Vast.ai variam por host.',
           },
           {
-            q: 'Por que a mesma GPU custa tão diferente por provedor?',
-            a: 'Nuvens gerenciadas (Lambda, AWS, GCP) incluem suporte, SLA e hardware dedicado — são mais caras. Marketplaces ([Vast.ai](https://Vast.ai)) são de hosts individuais, que podem ser interrompíveis. Região e demanda também deslocam os preços.',
+            q: 'Qual é a GPU mais barata para alugar por hora?',
+            a: 'Entre as ofertas da RunPod verificadas, a RTX A5000 é a mais barata, a $0,16/h na Community Cloud, seguida pela RTX 3090 a $0,22/h. Ambas têm 24 GB de VRAM e servem para inferência de modelos pequenos, não para treinamento.',
           },
           {
-            q: 'As tarifas incluem armazenamento e largura de banda?',
-            a: 'Geralmente não. O armazenamento persistente custa tipicamente $0,05–0,20/GB-mês. A largura de banda de saída pode adicionar centavos por GB. Para pesos de modelos grandes ou datasets, inclua-os no custo total.',
+            q: 'Quando alugar uma GPU na nuvem compensa mais do que comprar?',
+            a: 'Alugar vence em cargas curtas e esporádicas — poucas horas por semana. Comprar vence no uso diário contínuo. Com um preço usado presumido de ~$2.500, uma RTX 4090 se paga após cerca de 2.800–7.400 horas de aluguel a $0,34–0,89/h.',
           },
           {
-            q: 'Como encontro a GPU mais barata para minha carga de trabalho agora?',
-            a: 'Compare pelo menos dois provedores antes de reservar — RunPod (gerenciado) e Vast.ai (marketplace) cobrem ambos os extremos do espectro. Filtre pela VRAM necessária e depois ordene por preço.',
+            q: 'Por que a mesma GPU custa tão diferente entre provedores?',
+            a: 'Nuvens gerenciadas (Lambda, AWS, GCP) incluem suporte, SLAs e hardware dedicado — custam mais. Marketplaces ([Vast.ai](https://vast.ai)) obtêm recursos de hosts individuais, que podem ser interrompíveis. Região e demanda também mudam os preços.',
+          },
+          {
+            q: 'Os preços informados incluem armazenamento e banda?',
+            a: 'Em geral, não. O armazenamento persistente costuma custar $0,05–0,20/GB por mês. A banda de saída pode somar centavos por GB. Para pesos de modelos ou datasets grandes, inclua esses custos no total.',
+          },
+          {
+            q: 'Como encontro a GPU mais barata para minha carga agora?',
+            a: 'Compare ao menos dois provedores antes de reservar — RunPod (gerenciado) e Vast.ai (marketplace) cobrem os dois extremos. Filtre pela VRAM necessária e ordene por preço.',
           },
         ],
       },
@@ -858,13 +1200,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-es.webp',
     title: '¿Cuánto cuesta un GPU en la nube por hora en 2026?',
     seoTitle: 'Precio GPU en la nube por hora 2026 | Prompt Bites',
-    metaDescription: 'Precio de GPU cloud por hora (julio 2026): RTX 4090 ~$0,30–0,80, A100 80 GB ~$0,90–2,00, H100 ~$2,50–4,00. Rangos aproximados entre los principales proveedores.',
+    metaDescription: 'Costo de GPU en la nube por hora: RTX 4090 desde $0,34, A100 80 GB $1,19–2,79, H100 $1,99–4,29. Las GPU en la nube más baratas por hora, con tarifas de RunPod y Lambda.',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-22',
+    next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090', 'A100 80 GB', 'H100'],
+    current_hardware_mentioned: ['RTX 4090', 'RTX 5090', 'RTX 3090', 'RTX A5000', 'A100 80 GB', 'H100'],
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que comparan precios de GPU en la nube para cargas de trabajo LLM',
     affiliateDisclosure: true,
@@ -873,10 +1215,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 min de lectura',
     leadAnswerBlock:
-      'En mayo de 2026, los GPU en la nube cuestan típicamente: RTX 4090 24 GB a $0.30-0.80/h, A100 80 GB a $0.90-1.90/h, H100 80 GB a $2.20-4.00/h. Las tarifas varían según proveedor, región y si la instancia es interrumpible. Verifica los paneles en vivo antes de reservar.',
+      'En RunPod y Lambda, las GPU en la nube cuestan $0,34–0,89/h para una RTX 4090 24 GB, $1,19–2,79/h para una A100 80 GB y $1,99–4,29/h para una H100 80 GB. Las opciones más baratas por hora son tarjetas antiguas de 24 GB: RunPod lista la RTX A5000 desde $0,16/h y la RTX 3090 desde $0,22/h en Community Cloud. Los precios del marketplace de Vast.ai varían con la oferta; consulte su cuadrícula en vivo antes de reservar.',
     toc: [
       { label: 'Mejor opción según la carga de trabajo', anchor: '#best-pick' },
       { label: 'Tarifas horarias de GPU por tarjeta', anchor: '#comparison' },
+      { label: 'GPU en la nube más baratas por hora', anchor: '#cheapest' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lecturas relacionadas', anchor: '#related' },
     ],
@@ -885,13 +1228,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Cuánto cuesta un GPU en la nube por hora en 2026?',
-        answer: 'RTX 4090: $0.15-0.44/h. A100 80 GB: $1.10-2.00/h. H100: $2.50-4.00/h. Más barato para inferencia: Vast.ai spot.',
+        answer: 'RTX 4090: $0,34–0,89/h. A100 80 GB: $1,19–2,79/h. H100 80 GB: $1,99–4,29/h. Más barata por hora: RTX A5000 desde $0,16/h.',
         bullets: [
-          'Vast.ai spot RTX 4090 es el más barato a ~$0.15/h, pero puede ser interrumpido en medio del trabajo.',
-          'RunPod Secure Cloud cobra ~$0.44/h por RTX 4090 con disponibilidad garantizada.',
-          'H100 80 GB en Lambda Labs: ~$2.49/h — úsalo solo para modelos de 70B+ o trabajos batch de gran escala.',
+          'RunPod lista la RTX 4090 a $0,34/h en Community Cloud y $0,89/h en Secure Cloud.',
+          'Lambda cobra $3,29/h por una H100 PCIe y $3,99–4,29/h por una H100 SXM; RunPod lista una H100 PCIe desde $1,99/h.',
+          'Vast.ai es un marketplace: los precios varían según el host y los alquileres interrumpibles cuestan menos; consulte la cuadrícula en vivo.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -899,19 +1242,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'RTX 4090 24 GB es la opción viable más barata — $0.30-0.80/h en marketplaces, ideal para inferencia de 13B-30B',
-          'A100 80 GB a $0.90-1.90/h es el caballo de batalla para inferencia de 70B y la mayoría de trabajos de entrenamiento',
-          'H100 80 GB a $2.20-4.00/h es la opción más rápida, pero solo vale la pena para entrenamiento a gran escala o serving en producción',
-          'Todos los rangos son aproximaciones de mayo 2026 — verifica los paneles de proveedores en vivo antes de reservar',
+          'La RTX 4090 24 GB cuesta $0,34–0,89/h en RunPod — una opción de bajo costo para inferencia de 13B–30B',
+          'La A100 80 GB cuesta $1,19–2,79/h en RunPod y Lambda y es la base para inferencia de 70B y la mayoría del fine-tuning',
+          'La H100 80 GB cuesta $1,99–4,29/h y solo vale la pena para entrenamiento a gran escala o servicio con latencia crítica',
+          'Las GPU en la nube más baratas por hora son tarjetas antiguas de 24 GB desde $0,16/h — las tarifas cambian a menudo; revise la página del proveedor antes de reservar',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: 'Mejor opción: ajusta la tarjeta a la carga de trabajo',
         content: [
-          '<strong>El GPU en la nube más barato viable es el que se ajusta a tu modelo con el menor margen de VRAM.</strong> Alquilar una H100 a $4/h para ejecutar un modelo de 13B desperdicia más de 60 GB de VRAM por los que estás pagando.',
-          'Para inferencia de 7B-13B: una RTX 4090 24 GB en un marketplace (Vast.ai, RunPod community pool) a $0.30-0.80/h. Los 24 GB de VRAM son suficientes, y los marketplaces de tarjetas de consumo son más baratos que las nubes gestionadas.',
-          'Para inferencia de 70B o fine-tuning de escala media: una A100 80 GB a $0.90-1.90/h. Los 80 GB de VRAM acomodan un modelo de 70B en Q4 con espacio para contexto. Para entrenamiento de modelos frontier o serving en producción con objetivos de latencia estrictos: una H100 80 GB a $2.20-4.00/h — solo vale cuando el rendimiento sostenido es el cuello de botella.',
+          '<strong>La GPU en la nube más barata es la que aloja su modelo con el menor excedente de VRAM.</strong> Alquilar una H100 por hasta $4,29/h para ejecutar un modelo de 13B desperdicia más de 60 GB de VRAM que usted paga.',
+          'Para inferencia de 7B–13B: una RTX 4090 24 GB a $0,34–0,89/h en RunPod, o un host del marketplace de Vast.ai. 24 GB de VRAM son suficientes, y los pools de tarjetas de consumo cuestan menos que las nubes gestionadas.',
+          'Para inferencia de 70B o fine-tuning de escala media: una A100 80 GB a $1,19–2,79/h. Los 80 GB de VRAM alojan un modelo de 70B en Q4 con margen de contexto. Para entrenar modelos de frontera o servir en producción con objetivos de latencia estrictos: una H100 80 GB a $1,99–4,29/h — solo vale cuando el rendimiento sostenido es la restricción.',
         ],
         affiliateLinks: [
           {
@@ -938,28 +1281,76 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'Tarifas horarias de GPU en la nube por tarjeta',
         content: [
-          '<strong>Los rangos a continuación son cifras aproximadas de mayo 2026 entre los principales proveedores (RunPod, Vast.ai, Lambda Labs y otros).</strong> El extremo inferior corresponde típicamente a precios interrumpibles o de marketplace; el extremo superior es nube gestionada bajo demanda.',
+          '<strong>Los rangos siguientes combinan los precios de lista bajo demanda de RunPod (Community y Secure Cloud) y Lambda.</strong> El extremo bajo es RunPod Community Cloud; el alto es el precio de lista bajo demanda más alto de ambos proveedores. Los precios del marketplace de Vast.ai varían según el host y no se incluyen.',
         ],
-        columns: ['GPU', 'VRAM', 'Tarifa horaria (aprox.)', 'Ideal para'],
+        columns: ['GPU', 'VRAM', 'Tarifa por hora', 'Ideal para'],
         rows: [
           {
             'GPU': 'RTX 4090',
             'VRAM': '24 GB',
-            'Tarifa horaria (aprox.)': '$0.30-0.80/h',
-            'Ideal para': 'Inferencia 7B-30B, fine-tuning ligero',
+            'Tarifa por hora': '$0,34–0,89/h',
+            'Ideal para': 'Inferencia 7B–30B, fine-tuning ligero',
+          },
+          {
+            'GPU': 'RTX 5090',
+            'VRAM': '32 GB',
+            'Tarifa por hora': '$0,69–1,19/h',
+            'Ideal para': 'Inferencia clase 30B, fine-tuning rápido',
           },
           {
             'GPU': 'A100 80 GB',
             'VRAM': '80 GB',
-            'Tarifa horaria (aprox.)': '$0.90-1.90/h',
-            'Ideal para': 'Inferencia 70B, la mayoría de fine-tunings',
+            'Tarifa por hora': '$1,19–2,79/h',
+            'Ideal para': 'Inferencia 70B, la mayoría del fine-tuning',
           },
           {
             'GPU': 'H100 80 GB',
             'VRAM': '80 GB',
-            'Tarifa horaria (aprox.)': '$2.20-4.00/h',
-            'Ideal para': 'Entrenamiento a gran escala, serving crítico en latencia',
+            'Tarifa por hora': '$1,99–4,29/h',
+            'Ideal para': 'Entrenamiento a gran escala, latencia crítica',
           },
+        ],
+      },
+      cheapest: {
+        id: 'cheapest',
+        title: 'GPU en la nube más baratas por hora',
+        content: [
+          '<strong>Entre las ofertas de RunPod y Lambda revisadas, las GPU en la nube más baratas por hora son tarjetas antiguas de 24 GB y 48 GB, desde $0,16/h.</strong> RunPod lista estas tarifas de Community y Secure Cloud; sirven para inferencia con modelos pequeños y pruebas, no para grandes entrenamientos.',
+        ],
+        columns: ['GPU', 'VRAM', 'Tarifa por hora', 'Ideal para'],
+        rows: [
+          {
+            'GPU': 'RTX A5000',
+            'VRAM': '24 GB',
+            'Tarifa por hora': '$0,16–0,27/h',
+            'Ideal para': 'Inferencia 7B–13B, pruebas',
+          },
+          {
+            'GPU': 'RTX 3090',
+            'VRAM': '24 GB',
+            'Tarifa por hora': '$0,22–0,50/h',
+            'Ideal para': 'Inferencia 13B–30B',
+          },
+          {
+            'GPU': 'RTX A6000',
+            'VRAM': '48 GB',
+            'Tarifa por hora': '$0,33–0,59/h',
+            'Ideal para': 'Modelos que necesitan 48 GB',
+          },
+          {
+            'GPU': 'L4',
+            'VRAM': '24 GB',
+            'Tarifa por hora': '$0,44–0,59/h',
+            'Ideal para': 'Inferencia de bajo consumo',
+          },
+        ],
+      },
+      snippets: {
+        id: 'snippets',
+        title: 'Resumen',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Las GPU en la nube cuestan unos $0,34–0,89/h para una RTX 4090, $1,19–2,79/h para una A100 80 GB y $1,99–4,29/h para una H100 80 GB.' },
+          { type: 'plain-terms', text: 'Alquilar una GPU en la nube se factura por hora, y el precio depende de la tarjeta, el proveedor y si el alquiler puede interrumpirse. Las tarjetas pequeñas de 24 GB son las más baratas y manejan modelos pequeños y medianos; las A100 y H100 cuestan más y sirven para modelos grandes y entrenamiento.' },
         ],
       },
       faq: {
@@ -967,20 +1358,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Respuestas rápidas sobre precios de GPU en la nube',
         faqs: [
           {
-            q: '¿Cuándo es más barato alquilar un GPU en la nube que comprarlo?',
-            a: 'Alquilar gana en cargas de trabajo cortas y esporádicas — unas pocas horas por semana. Comprar gana con uso diario sostenido. Una RTX 4090 usada a ~$2,500 se amortiza en aproximadamente 3,000-8,000 horas de alquiler en la nube a $0.30-0.80/h.',
+            q: '¿Cuánto cuesta alquilar una GPU por hora?',
+            a: 'En RunPod y Lambda, alquilar una GPU cuesta $0,16–0,89/h para tarjetas de consumo de 24 GB, $1,19–2,79/h para una A100 80 GB y $1,99–4,29/h para una H100 80 GB. Los precios del marketplace de Vast.ai varían según el host.',
           },
           {
-            q: '¿Por qué el mismo GPU cuesta tan diferente según el proveedor?',
-            a: 'Las nubes gestionadas (Lambda, AWS, GCP) incluyen soporte, SLA y hardware dedicado — son más caras. Los marketplaces ([Vast.ai](https://Vast.ai)) provienen de hosts individuales, que pueden ser interrumpibles. La región y la demanda también desplazan los precios.',
+            q: '¿Cuál es la GPU más barata para alquilar por hora?',
+            a: 'Entre las ofertas de RunPod revisadas, la RTX A5000 es la más barata, a $0,16/h en Community Cloud, seguida de la RTX 3090 a $0,22/h. Ambas tienen 24 GB de VRAM y sirven para inferencia con modelos pequeños, no para entrenamiento.',
           },
           {
-            q: '¿Las tarifas incluyen almacenamiento y ancho de banda?',
-            a: 'Generalmente no. El almacenamiento persistente cuesta típicamente $0.05-0.20/GB-mes. El ancho de banda saliente puede añadir centavos por GB. Para pesos de modelos grandes o datasets, inclúyelos en el costo total.',
+            q: '¿Cuándo es más barato alquilar una GPU en la nube que comprarla?',
+            a: 'Alquilar gana en cargas cortas y esporádicas — pocas horas por semana. Comprar gana con uso diario sostenido. Con un precio usado supuesto de ~$2.500, una RTX 4090 se amortiza tras unas 2.800–7.400 horas de alquiler a $0,34–0,89/h.',
           },
           {
-            q: '¿Cómo encuentro el GPU más barato para mi carga de trabajo ahora mismo?',
-            a: 'Compara al menos dos proveedores antes de reservar — RunPod (gestionado) y Vast.ai (marketplace) cubren ambos extremos del espectro. Filtra por VRAM requerida y luego ordena por precio.',
+            q: '¿Por qué la misma GPU cuesta tan distinto entre proveedores?',
+            a: 'Las nubes gestionadas (Lambda, AWS, GCP) incluyen soporte, SLA y hardware dedicado — cuestan más. Los marketplaces ([Vast.ai](https://vast.ai)) obtienen recursos de hosts individuales, que pueden ser interrumpibles. La región y la demanda también mueven los precios.',
+          },
+          {
+            q: '¿Las tarifas indicadas incluyen almacenamiento y ancho de banda?',
+            a: 'Normalmente no. El almacenamiento persistente suele costar $0,05–0,20/GB al mes. El ancho de banda de salida puede sumar centavos por GB. Para pesos de modelos o datasets grandes, inclúyalos en el total.',
+          },
+          {
+            q: '¿Cómo encuentro la GPU más barata para mi carga ahora mismo?',
+            a: 'Compare al menos dos proveedores antes de reservar — RunPod (gestionado) y Vast.ai (marketplace) cubren ambos extremos. Filtre por la VRAM necesaria y ordene por precio.',
           },
         ],
       },
@@ -1000,13 +1399,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-ar.webp',
     title: 'كم تكلّف وحدة ⁨GPU⁩ السحابية في الساعة عام ⁨2026⁩؟',
     seoTitle: 'تكلفة ⁨GPU⁩ السحابية في الساعة ⁨2026⁩ | ⁨Prompt Bites⁩',
-    metaDescription: 'تكلفة ⁨GPU⁩ السحابية في الساعة (يوليو ⁨2026⁩): ⁨RTX 4090⁩ ~$⁨0.30⁩–⁨0.80⁩، ⁨A100 80 GB⁩ ~$⁨0.90⁩–⁨2.00⁩، ⁨H100⁩ ~$⁨2.50⁩–⁨4.00⁩. نطاقات تقريبية عبر كبار مزودي الخدمة.',
+    metaDescription: 'تكلفة ⁨GPU⁩ السحابية في الساعة: ⁨RTX 4090⁩ من ⁨$0.34⁩، و⁨A100 80 GB⁩ من ⁨$1.19⁩ إلى ⁨$2.79⁩، و⁨H100⁩ من ⁨$1.99⁩ إلى ⁨$4.29⁩. أرخص وحدات ⁨GPU⁩ السحابية بالساعة مع أسعار ⁨RunPod⁩ و⁨Lambda⁩.',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-22',
+    next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090', 'A100 80 GB', 'H100'],
+    current_hardware_mentioned: ['RTX 4090', 'RTX 5090', 'RTX 3090', 'RTX A5000', 'A100 80 GB', 'H100'],
     educationalLevel: 'Intermediate',
     audience: 'مطورون يقارنون أسعار GPU السحابية لأحمال عمل نماذج LLM',
     affiliateDisclosure: true,
@@ -1015,10 +1414,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4 دقائق للقراءة',
     leadAnswerBlock:
-      'في مايو 2026، تتراوح تكاليف وحدات GPU السحابية عادةً: RTX 4090 24 GB بـ $0.30–0.80/ساعة، A100 80 GB بـ $0.90–1.90/ساعة، H100 80 GB بـ $2.20–4.00/ساعة. تتفاوت الأسعار تفاوتًا كبيرًا بحسب المزوّد والمنطقة وقابلية المقاطعة. تحقق من لوحات المعلومات الحية قبل الحجز.',
+      'تتراوح تكلفة وحدات ⁨GPU⁩ السحابية لدى ⁨RunPod⁩ و⁨Lambda⁩ بين ⁨$0.34⁩ و⁨$0.89⁩ في الساعة لبطاقة ⁨RTX 4090 24 GB⁩، وبين ⁨$1.19⁩ و⁨$2.79⁩ لبطاقة ⁨A100 80 GB⁩، وبين ⁨$1.99⁩ و⁨$4.29⁩ لبطاقة ⁨H100 80 GB⁩. أرخص الخيارات بالساعة هي بطاقات ⁨24 GB⁩ الأقدم: تُدرج ⁨RunPod⁩ بطاقة ⁨RTX A5000⁩ من ⁨$0.16⁩ في الساعة وبطاقة ⁨RTX 3090⁩ من ⁨$0.22⁩ في ⁨Community Cloud⁩. تتغير أسعار سوق ⁨Vast.ai⁩ مع العرض، فراجع القائمة المباشرة قبل الحجز.',
     toc: [
       { label: 'أفضل اختيار حسب حمل العمل', anchor: '#best-pick' },
       { label: 'أسعار GPU السحابية بالساعة حسب الكرت', anchor: '#comparison' },
+      { label: 'أرخص وحدات ⁨GPU⁩ السحابية بالساعة', anchor: '#cheapest' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
       { label: 'قراءات ذات صلة', anchor: '#related' },
     ],
@@ -1027,13 +1427,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'كم تكلّف وحدة GPU السحابية في الساعة عام 2026؟',
-        answer: 'RTX 4090: $0.15–0.44/ساعة. A100 80 GB: $1.10–2.00/ساعة. H100: $2.50–4.00/ساعة. الأرخص للاستنتاج: Vast.ai السعر الفوري.',
+        answer: '⁨RTX 4090⁩: ⁨$0.34–0.89⁩/ساعة. ⁨A100 80 GB⁩: ⁨$1.19–2.79⁩/ساعة. ⁨H100 80 GB⁩: ⁨$1.99–4.29⁩/ساعة. الأرخص بالساعة: ⁨RTX A5000⁩ من ⁨$0.16⁩/ساعة.',
         bullets: [
-          'Vast.ai سعر فوري RTX 4090 هو الأرخص بحوالي $0.15/ساعة، لكنه قد يُقاطَع في منتصف المهمة.',
-          'RunPod Secure Cloud يتقاضى ~$0.44/ساعة مقابل RTX 4090 مع ضمان التوفّر.',
-          'H100 80 GB على Lambda Labs: ~$2.49/ساعة — استخدمه فقط لنماذج 70B+ أو مهام الدُفعات الكبيرة.',
+          'تُدرج ⁨RunPod⁩ بطاقة ⁨RTX 4090⁩ بسعر ⁨$0.34⁩/ساعة في ⁨Community Cloud⁩ و⁨$0.89⁩/ساعة في ⁨Secure Cloud⁩.',
+          'تتقاضى ⁨Lambda⁩ مبلغ ⁨$3.29⁩/ساعة لبطاقة ⁨H100 PCIe⁩ و⁨$3.99–4.29⁩/ساعة لبطاقة ⁨H100 SXM⁩؛ وتُدرج ⁨RunPod⁩ بطاقة ⁨H100 PCIe⁩ من ⁨$1.99⁩/ساعة.',
+          '⁨Vast.ai⁩ سوق مفتوح: تختلف الأسعار حسب المضيف، والإيجارات القابلة للمقاطعة أرخص، فراجع القائمة المباشرة.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -1041,19 +1441,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'RTX 4090 24 GB هو الخيار الصالح الأرخص — $0.30–0.80/ساعة في الأسواق، مثالي للاستنتاج 13B–30B',
-          'A100 80 GB بـ $0.90–1.90/ساعة هو الحصان الأقوى لاستنتاج 70B ومعظم مهام التدريب',
-          'H100 80 GB بـ $2.20–4.00/ساعة هو الأسرع لكن لا يستحق إلا للتدريب واسع النطاق أو الخدمة الإنتاجية',
-          'جميع النطاقات تقديرية لمايو 2026 — تحقق من لوحات مزودي الخدمة الحية قبل الحجز',
+          'تكلف ⁨RTX 4090 24 GB⁩ ما بين ⁨$0.34⁩ و⁨$0.89⁩ في الساعة لدى ⁨RunPod⁩ — بطاقة منخفضة التكلفة لاستنتاج نماذج ⁨13B–30B⁩',
+          'تكلف ⁨A100 80 GB⁩ ما بين ⁨$1.19⁩ و⁨$2.79⁩ في الساعة لدى ⁨RunPod⁩ و⁨Lambda⁩ وهي الخيار الأساسي لاستنتاج ⁨70B⁩ ومعظم الضبط الدقيق',
+          'تكلف ⁨H100 80 GB⁩ ما بين ⁨$1.99⁩ و⁨$4.29⁩ في الساعة ولا تستحق ذلك إلا للتدريب الواسع أو الخدمة الحساسة للتأخير',
+          'أرخص وحدات ⁨GPU⁩ السحابية بالساعة هي بطاقات ⁨24 GB⁩ الأقدم من ⁨$0.16⁩ في الساعة — تتغير الأسعار كثيرًا، فتحقق من صفحة المزوّد قبل الحجز',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: 'أفضل اختيار: طابق الكرت مع حمل العمل',
         content: [
-          '<strong>أرخص وحدة GPU سحابية صالحة هي التي تناسب نموذجك مع أدنى هامش VRAM.</strong> تأجير H100 بـ $4/ساعة لتشغيل نموذج 13B يُهدر أكثر من 60 GB من VRAM التي تدفع مقابلها.',
-          'للاستنتاج 7B–13B: RTX 4090 24 GB في أحد الأسواق (Vast.ai، RunPod community pool) بـ $0.30–0.80/ساعة. 24 GB VRAM كافية، وأسواق بطاقات المستهلك تتفوق سعريًا على السحابات المُدارة.',
-          'لاستنتاج 70B أو الضبط الدقيق متوسط الحجم: A100 80 GB بـ $0.90–1.90/ساعة. 80 GB VRAM تستوعب نموذج 70B بصيغة Q4 مع مساحة للسياق. لتدريب النماذج الحدّية أو الخدمة الإنتاجية بأهداف زمن استجابة صارمة: H100 80 GB بـ $2.20–4.00/ساعة — لا يستحق إلا عندما يكون الإنتاجية المستدامة هي القيد.',
+          '<strong>أرخص وحدة ⁨GPU⁩ سحابية عملية هي التي تتسع لنموذجك بأقل فائض من ⁨VRAM⁩.</strong> استئجار ⁨H100⁩ بسعر يصل إلى ⁨$4.29⁩ في الساعة لتشغيل نموذج ⁨13B⁩ يهدر أكثر من ⁨60 GB⁩ من ⁨VRAM⁩ تدفع ثمنها.',
+          'لاستنتاج ⁨7B–13B⁩: بطاقة ⁨RTX 4090 24 GB⁩ بسعر ⁨$0.34–0.89⁩ في الساعة لدى ⁨RunPod⁩، أو مضيف من سوق ⁨Vast.ai⁩. تكفي ⁨24 GB⁩ من ⁨VRAM⁩، وتبيع مجمّعات بطاقات المستهلك بأقل من السحابات المُدارة.',
+          'لاستنتاج ⁨70B⁩ أو الضبط الدقيق متوسط الحجم: بطاقة ⁨A100 80 GB⁩ بسعر ⁨$1.19–2.79⁩ في الساعة. تتسع ⁨80 GB⁩ من ⁨VRAM⁩ لنموذج ⁨70B⁩ بتكميم ⁨Q4⁩ مع هامش للسياق. لتدريب النماذج الرائدة أو الخدمة الإنتاجية ذات أهداف التأخير الصارمة: بطاقة ⁨H100 80 GB⁩ بسعر ⁨$1.99–4.29⁩ في الساعة — لا تستحق ذلك إلا حين يكون الإنتاجية المستمرة هي القيد.',
         ],
         affiliateLinks: [
           {
@@ -1080,28 +1480,76 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'أسعار GPU السحابية بالساعة حسب الكرت',
         content: [
-          '<strong>النطاقات أدناه أرقام تقريبية لمايو 2026 عبر كبار مزودي الخدمة (RunPod وVast.ai وLambda Labs وغيرهم).</strong> الحد الأدنى عادةً للأسعار القابلة للمقاطعة أو أسواق الاستضافة؛ والحد الأعلى للسحابة المُدارة حسب الطلب.',
+          '<strong>تجمع النطاقات أدناه أسعار القائمة عند الطلب من ⁨RunPod⁩ (⁨Community⁩ و⁨Secure Cloud⁩) و⁨Lambda⁩.</strong> الحد الأدنى هو ⁨RunPod Community Cloud⁩، والحد الأعلى هو أعلى سعر قائمة عند الطلب لدى أي من المزوّدين. أسعار سوق ⁨Vast.ai⁩ تختلف حسب المضيف ولذلك لم تُدرج.',
         ],
-        columns: ['GPU', 'VRAM', 'السعر بالساعة (تقريبي)', 'الأنسب لـ'],
+        columns: ['⁨GPU⁩', '⁨VRAM⁩', 'السعر بالساعة', 'الأنسب لـ'],
         rows: [
           {
-            'GPU': 'RTX 4090',
-            'VRAM': '24 GB',
-            'السعر بالساعة (تقريبي)': '$0.30–0.80/ساعة',
-            'الأنسب لـ': 'استنتاج 7B–30B، ضبط دقيق خفيف',
+            'GPU': '⁨RTX 4090⁩',
+            'VRAM': '⁨24 GB⁩',
+            'السعر بالساعة': '⁨$0.34–0.89⁩/ساعة',
+            'الأنسب لـ': 'استنتاج ⁨7B–30B⁩ وضبط خفيف',
           },
           {
-            'GPU': 'A100 80 GB',
-            'VRAM': '80 GB',
-            'السعر بالساعة (تقريبي)': '$0.90–1.90/ساعة',
-            'الأنسب لـ': 'استنتاج 70B، معظم مهام الضبط الدقيق',
+            'GPU': '⁨RTX 5090⁩',
+            'VRAM': '⁨32 GB⁩',
+            'السعر بالساعة': '⁨$0.69–1.19⁩/ساعة',
+            'الأنسب لـ': 'استنتاج فئة ⁨30B⁩ وضبط أسرع',
           },
           {
-            'GPU': 'H100 80 GB',
-            'VRAM': '80 GB',
-            'السعر بالساعة (تقريبي)': '$2.20–4.00/ساعة',
-            'الأنسب لـ': 'التدريب واسع النطاق، الخدمة الحرجة من حيث زمن الاستجابة',
+            'GPU': '⁨A100 80 GB⁩',
+            'VRAM': '⁨80 GB⁩',
+            'السعر بالساعة': '⁨$1.19–2.79⁩/ساعة',
+            'الأنسب لـ': 'استنتاج ⁨70B⁩ ومعظم الضبط',
           },
+          {
+            'GPU': '⁨H100 80 GB⁩',
+            'VRAM': '⁨80 GB⁩',
+            'السعر بالساعة': '⁨$1.99–4.29⁩/ساعة',
+            'الأنسب لـ': 'تدريب واسع وخدمة حساسة للتأخير',
+          },
+        ],
+      },
+      cheapest: {
+        id: 'cheapest',
+        title: 'أرخص وحدات ⁨GPU⁩ السحابية بالساعة',
+        content: [
+          '<strong>من بين عروض ⁨RunPod⁩ و⁨Lambda⁩ التي جرى فحصها، أرخص وحدات ⁨GPU⁩ السحابية بالساعة هي بطاقات ⁨24 GB⁩ و⁨48 GB⁩ الأقدم، بدءًا من ⁨$0.16⁩ في الساعة.</strong> تُدرج ⁨RunPod⁩ هذه الأسعار في ⁨Community⁩ و⁨Secure Cloud⁩؛ وهي مناسبة لاستنتاج النماذج الصغيرة والاختبار، لا لعمليات التدريب الكبيرة.',
+        ],
+        columns: ['⁨GPU⁩', '⁨VRAM⁩', 'السعر بالساعة', 'الأنسب لـ'],
+        rows: [
+          {
+            'GPU': '⁨RTX A5000⁩',
+            'VRAM': '⁨24 GB⁩',
+            'السعر بالساعة': '⁨$0.16–0.27⁩/ساعة',
+            'الأنسب لـ': 'استنتاج ⁨7B–13B⁩ واختبار',
+          },
+          {
+            'GPU': '⁨RTX 3090⁩',
+            'VRAM': '⁨24 GB⁩',
+            'السعر بالساعة': '⁨$0.22–0.50⁩/ساعة',
+            'الأنسب لـ': 'استنتاج ⁨13B–30B⁩',
+          },
+          {
+            'GPU': '⁨RTX A6000⁩',
+            'VRAM': '⁨48 GB⁩',
+            'السعر بالساعة': '⁨$0.33–0.59⁩/ساعة',
+            'الأنسب لـ': 'نماذج تحتاج ⁨48 GB⁩',
+          },
+          {
+            'GPU': '⁨L4⁩',
+            'VRAM': '⁨24 GB⁩',
+            'السعر بالساعة': '⁨$0.44–0.59⁩/ساعة',
+            'الأنسب لـ': 'استنتاج منخفض الاستهلاك',
+          },
+        ],
+      },
+      snippets: {
+        id: 'snippets',
+        title: 'ملخص',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'تكلف وحدات ⁨GPU⁩ السحابية نحو ⁨$0.34–0.89⁩ في الساعة لبطاقة ⁨RTX 4090⁩، و⁨$1.19–2.79⁩ لبطاقة ⁨A100 80 GB⁩، و⁨$1.99–4.29⁩ لبطاقة ⁨H100 80 GB⁩.' },
+          { type: 'plain-terms', text: 'يُحاسَب استئجار ⁨GPU⁩ في السحابة بالساعة، ويعتمد السعر على البطاقة والمزوّد وإمكانية مقاطعة الإيجار. البطاقات الصغيرة ذات ⁨24 GB⁩ هي الأرخص وتتعامل مع النماذج الصغيرة والمتوسطة؛ أما ⁨A100⁩ و⁨H100⁩ فأغلى وتناسب النماذج الكبيرة والتدريب.' },
         ],
       },
       faq: {
@@ -1109,20 +1557,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'إجابات سريعة حول أسعار GPU السحابية',
         faqs: [
           {
-            q: 'متى يكون تأجير GPU السحابية أرخص من شرائه؟',
-            a: 'التأجير يتفوق في أحمال العمل القصيرة والمتقطعة — بضع ساعات أسبوعيًا. الشراء يتفوق في الاستخدام اليومي المستمر. RTX 4090 مستعمل بـ ~$2,500 يسترد تكلفته بعد نحو 3,000–8,000 ساعة إيجار سحابي بـ $0.30–0.80/ساعة.',
+            q: 'كم تبلغ تكلفة استئجار ⁨GPU⁩ بالساعة؟',
+            a: 'لدى ⁨RunPod⁩ و⁨Lambda⁩، يكلف استئجار ⁨GPU⁩ بين ⁨$0.16⁩ و⁨$0.89⁩ في الساعة لبطاقات المستهلك ذات ⁨24 GB⁩، وبين ⁨$1.19⁩ و⁨$2.79⁩ لبطاقة ⁨A100 80 GB⁩، وبين ⁨$1.99⁩ و⁨$4.29⁩ لبطاقة ⁨H100 80 GB⁩. تختلف أسعار سوق ⁨Vast.ai⁩ حسب المضيف.',
           },
           {
-            q: 'لماذا يتفاوت سعر نفس GPU بين المزودين تفاوتًا كبيرًا؟',
-            a: 'السحابات المُدارة (Lambda وAWS وGCP) تشمل الدعم واتفاقيات مستوى الخدمة والأجهزة المخصصة — وهذا يرفع السعر. الأسواق ([Vast.ai](https://Vast.ai)) تعمل عبر مضيفين أفراد وقد تكون قابلة للمقاطعة. المنطقة الجغرافية والطلب يؤثران أيضًا على الأسعار.',
+            q: 'ما أرخص ⁨GPU⁩ للاستئجار بالساعة؟',
+            a: 'من بين عروض ⁨RunPod⁩ التي جرى فحصها، أرخصها بطاقة ⁨RTX A5000⁩ بسعر ⁨$0.16⁩ في الساعة في ⁨Community Cloud⁩، تليها ⁨RTX 3090⁩ بسعر ⁨$0.22⁩. كلتاهما بذاكرة ⁨VRAM⁩ تبلغ ⁨24 GB⁩ وتناسبان استنتاج النماذج الصغيرة لا التدريب.',
           },
           {
-            q: 'هل الأسعار المذكورة تشمل التخزين وعرض النطاق الترددي؟',
-            a: 'عادةً لا. التخزين الدائم يتراوح نموذجيًا بين $0.05–0.20/GB-شهر. عرض النطاق الصادر قد يضيف سنتات لكل GB. لأوزان النماذج الكبيرة أو مجموعات البيانات، احتسب هذا في التكلفة الإجمالية.',
+            q: 'متى يكون استئجار ⁨GPU⁩ سحابية أرخص من شرائها؟',
+            a: 'يفوز الاستئجار في الأحمال القصيرة المتقطعة — بضع ساعات أسبوعيًا. ويفوز الشراء في الاستخدام اليومي المستمر. بسعر مستعمل مفترض يبلغ نحو ⁨$2,500⁩، تسترد ⁨RTX 4090⁩ ثمنها بعد نحو ⁨2,800–7,400⁩ ساعة إيجار بسعر ⁨$0.34–0.89⁩ في الساعة.',
           },
           {
-            q: 'كيف أجد أرخص GPU لحمل عملي الآن؟',
-            a: 'قارن مزوّدَين على الأقل قبل الحجز — RunPod (مُدار) وVast.ai (سوق) يغطّيان طرفَي الطيف. صفِّن حسب VRAM المطلوبة ثم رتّب بحسب السعر.',
+            q: 'لماذا تختلف تكلفة نفس ⁨GPU⁩ كثيرًا بين المزوّدين؟',
+            a: 'تشمل السحابات المُدارة (⁨Lambda⁩ و⁨AWS⁩ و⁨GCP⁩) الدعم واتفاقيات مستوى الخدمة وعتادًا مخصصًا، لذا تكلف أكثر. وتحصل الأسواق ([⁨Vast.ai⁩](https://vast.ai)) على الموارد من مضيفين أفراد قد تكون مقاطعتهم ممكنة. كما تغيّر المنطقة والطلب الأسعار.',
+          },
+          {
+            q: 'هل تشمل الأسعار المذكورة التخزين وعرض النطاق؟',
+            a: 'عادةً لا. يكلف التخزين الدائم عادةً ⁨$0.05–0.20⁩ لكل ⁨GB⁩ شهريًا، وقد يضيف عرض النطاق الصادر بضعة سنتات لكل ⁨GB⁩. أدرجها في التكلفة الإجمالية عند التعامل مع أوزان نماذج كبيرة أو مجموعات بيانات.',
+          },
+          {
+            q: 'كيف أجد أرخص ⁨GPU⁩ لحمل عملي الآن؟',
+            a: 'قارن بين مزوّدين اثنين على الأقل قبل الحجز — ⁨RunPod⁩ (مُدار) و⁨Vast.ai⁩ (سوق) يغطيان طرفي الطيف. صفِّ حسب ⁨VRAM⁩ المطلوبة ثم رتّب حسب السعر.',
           },
         ],
       },
@@ -1142,13 +1598,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-ko.webp',
     title: '2026년 클라우드 GPU 시간당 비용은 얼마입니까?',
     seoTitle: '클라우드 GPU 시간당 가격 2026 | Prompt Bites',
-    metaDescription: '클라우드 GPU 시간당 비용 (2026년 7월): RTX 4090 ~$0.30–0.80, A100 80 GB ~$0.90–2.00, H100 ~$2.50–4.00. 주요 공급업체 간 대략적인 범위입니다.',
+    metaDescription: '클라우드 GPU 시간당 비용: RTX 4090 $0.34부터, A100 80 GB $1.19–2.79, H100 $1.99–4.29. RunPod와 Lambda 요금으로 보는 시간당 가장 저렴한 클라우드 GPU.',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-22',
+    next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
-    current_hardware_mentioned: ['RTX 4090', 'A100 80 GB', 'H100'],
+    current_hardware_mentioned: ['RTX 4090', 'RTX 5090', 'RTX 3090', 'RTX A5000', 'A100 80 GB', 'H100'],
     educationalLevel: 'Intermediate',
     audience: 'LLM 워크로드를 위한 클라우드 GPU 가격을 비교하는 개발자',
     affiliateDisclosure: true,
@@ -1157,10 +1613,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     readTime: '4분 분량',
     leadAnswerBlock:
-      '2026년 5월 기준 클라우드 GPU 비용은 일반적으로 다음과 같습니다: RTX 4090 24 GB는 시간당 $0.30–0.80, A100 80 GB는 시간당 $0.90–1.90, H100 80 GB는 시간당 $2.20–4.00입니다. 요금은 공급업체, 지역, 인터럽트 가능 여부에 따라 크게 달라집니다. 예약 전에 실시간 대시보드를 확인하십시오.',
+      'RunPod와 Lambda에서 클라우드 GPU 시간당 비용은 RTX 4090 24 GB가 $0.34–0.89, A100 80 GB가 $1.19–2.79, H100 80 GB가 $1.99–4.29입니다. 시간당 가장 저렴한 선택지는 구형 24 GB 카드로, RunPod는 Community Cloud에서 RTX A5000를 $0.16/시간부터, RTX 3090을 $0.22/시간부터 게시합니다. Vast.ai 마켓플레이스 가격은 수급에 따라 변하므로 예약 전에 실시간 목록을 확인하세요.',
     toc: [
       { label: '워크로드별 최적 선택', anchor: '#best-pick' },
       { label: 'GPU 카드별 시간당 요금 비교', anchor: '#comparison' },
+      { label: '시간당 가장 저렴한 클라우드 GPU', anchor: '#cheapest' },
       { label: '자주 묻는 질문', anchor: '#faq' },
       { label: '관련 읽을거리', anchor: '#related' },
     ],
@@ -1169,13 +1626,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '2026년 클라우드 GPU 시간당 비용은 얼마입니까?',
-        answer: 'RTX 4090: $0.15–0.44/시간. A100 80 GB: $1.10–2.00/시간. H100: $2.50–4.00/시간. 추론에 가장 저렴한 옵션: Vast.ai 스팟 인스턴스.',
+        answer: 'RTX 4090: $0.34–0.89/시간. A100 80 GB: $1.19–2.79/시간. H100 80 GB: $1.99–4.29/시간. 시간당 최저가: RTX A5000 $0.16/시간부터.',
         bullets: [
-          'Vast.ai 스팟 RTX 4090는 약 $0.15/시간으로 가장 저렴하지만, 작업 중간에 인터럽트될 수 있습니다.',
-          'RunPod Secure Cloud는 RTX 4090에 대해 ~$0.44/시간을 청구하며 가용성을 보장합니다.',
-          'Lambda Labs의 H100 80 GB: ~$2.49/시간 — 70B+ 모델이나 대규모 배치 작업에만 사용하십시오.',
+          'RunPod는 RTX 4090을 Community Cloud에서 $0.34/시간, Secure Cloud에서 $0.89/시간으로 게시합니다.',
+          'Lambda는 H100 PCIe를 $3.29/시간, H100 SXM을 $3.99–4.29/시간에 제공하며, RunPod의 H100 PCIe는 $1.99/시간부터입니다.',
+          'Vast.ai는 마켓플레이스로, 가격은 호스트마다 다르고 중단 가능한 대여는 더 저렴합니다. 실시간 목록을 확인하세요.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -1183,19 +1640,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'RTX 4090 24 GB는 가장 저렴하게 활용 가능한 옵션입니다 — 마켓플레이스에서 시간당 $0.30–0.80, 13B–30B 추론에 이상적입니다',
-          'A100 80 GB는 시간당 $0.90–1.90으로 70B 추론과 대부분의 파인튜닝 작업에 적합한 핵심 선택지입니다',
-          'H100 80 GB는 시간당 $2.20–4.00으로 가장 빠르지만 대규모 훈련 또는 프로덕션 서빙에만 가치가 있습니다',
-          '모든 범위는 2026년 5월 기준 대략적인 수치입니다 — 예약 전에 공급업체 실시간 대시보드를 확인하십시오',
+          'RTX 4090 24 GB는 RunPod에서 $0.34–0.89/시간 — 13B–30B 추론을 위한 저비용 선택지',
+          'A100 80 GB는 RunPod와 Lambda에서 $1.19–2.79/시간으로, 70B 추론과 대부분의 파인튜닝의 주력',
+          'H100 80 GB는 $1.99–4.29/시간이며, 대규모 학습이나 지연 시간이 중요한 서빙에서만 가치가 있음',
+          '시간당 가장 저렴한 클라우드 GPU는 $0.16/시간부터 시작하는 구형 24 GB 카드 — 요금은 자주 바뀌므로 예약 전 제공업체 페이지를 확인',
         ],
       },
       bestPick: {
         id: 'best-pick',
         title: '최적 선택: 워크로드에 맞는 카드를 고르십시오',
         content: [
-          '<strong>활용 가능한 가장 저렴한 클라우드 GPU는 VRAM 여유가 가장 적은 모델에 맞는 것입니다.</strong> 13B 모델을 실행하기 위해 H100을 시간당 $4에 임대하면 지불하는 VRAM 60 GB 이상을 낭비하는 것입니다.',
-          '7B–13B 추론의 경우: 마켓플레이스(Vast.ai, RunPod community pool)에서 RTX 4090 24 GB를 시간당 $0.30–0.80에 이용하십시오. 24 GB VRAM으로 충분하며, 소비자용 카드 마켓플레이스는 관리형 클라우드보다 저렴합니다.',
-          '70B 추론 또는 중간 규모 파인튜닝의 경우: A100 80 GB를 시간당 $0.90–1.90에 이용하십시오. 80 GB VRAM은 Q4 양자화된 70B 모델을 컨텍스트 공간과 함께 수용합니다. 프론티어 모델 훈련 또는 엄격한 레이턴시 목표가 있는 프로덕션 서빙의 경우: H100 80 GB를 시간당 $2.20–4.00에 이용하십시오 — 지속적인 처리량이 병목일 때만 가치가 있습니다.',
+          '<strong>가장 저렴하게 쓸 수 있는 클라우드 GPU는 모델이 들어가는 가장 작은 VRAM의 GPU입니다.</strong> 13B 모델을 돌리려고 최대 $4.29/시간의 H100을 빌리면 비용을 내는 VRAM 60 GB 이상이 낭비됩니다.',
+          '7B–13B 추론: RunPod의 $0.34–0.89/시간 RTX 4090 24 GB 또는 Vast.ai 마켓플레이스 호스트. 24 GB VRAM이면 충분하고, 소비자용 카드 풀은 관리형 클라우드보다 저렴합니다.',
+          '70B 추론이나 중간 규모 파인튜닝: $1.19–2.79/시간의 A100 80 GB. 80 GB VRAM이면 70B 모델을 Q4로 컨텍스트 여유를 두고 올릴 수 있습니다. 최첨단 모델 학습이나 엄격한 지연 시간 목표의 프로덕션 서빙: $1.99–4.29/시간의 H100 80 GB — 지속 처리량이 제약일 때만 가치가 있습니다.',
         ],
         affiliateLinks: [
           {
@@ -1222,27 +1679,67 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'comparison',
         title: 'GPU 카드별 클라우드 시간당 요금',
         content: [
-          '<strong>아래 범위는 주요 공급업체(RunPod, Vast.ai, Lambda Labs 등) 기준 2026년 5월 대략적인 수치입니다.</strong> 하한선은 일반적으로 인터럽트 가능 또는 마켓플레이스 가격이며, 상한선은 온디맨드 관리형 클라우드 가격입니다.',
+          '<strong>아래 범위는 RunPod(Community Cloud와 Secure Cloud)와 Lambda의 온디맨드 정가를 합친 것입니다.</strong> 하한은 RunPod Community Cloud, 상한은 두 업체 중 가장 높은 온디맨드 정가입니다. Vast.ai 마켓플레이스 가격은 호스트마다 달라 포함하지 않았습니다.',
         ],
-        columns: ['GPU', 'VRAM', '시간당 요금 (대략)', '적합한 용도'],
+        columns: ['GPU', 'VRAM', '시간당 가격', '적합한 용도'],
         rows: [
           {
             'GPU': 'RTX 4090',
             'VRAM': '24 GB',
-            '시간당 요금 (대략)': '$0.30–0.80/시간',
-            '적합한 용도': '7B–30B 추론, 경량 파인튜닝',
+            '시간당 가격': '$0.34–0.89/시간',
+            '적합한 용도': '7B–30B 추론, 가벼운 파인튜닝',
+          },
+          {
+            'GPU': 'RTX 5090',
+            'VRAM': '32 GB',
+            '시간당 가격': '$0.69–1.19/시간',
+            '적합한 용도': '30B급 추론, 빠른 파인튜닝',
           },
           {
             'GPU': 'A100 80 GB',
             'VRAM': '80 GB',
-            '시간당 요금 (대략)': '$0.90–1.90/시간',
+            '시간당 가격': '$1.19–2.79/시간',
             '적합한 용도': '70B 추론, 대부분의 파인튜닝',
           },
           {
             'GPU': 'H100 80 GB',
             'VRAM': '80 GB',
-            '시간당 요금 (대략)': '$2.20–4.00/시간',
-            '적합한 용도': '대규모 훈련, 레이턴시 중요 프로덕션 서빙',
+            '시간당 가격': '$1.99–4.29/시간',
+            '적합한 용도': '대규모 학습, 저지연 서빙',
+          },
+        ],
+      },
+      cheapest: {
+        id: 'cheapest',
+        title: '시간당 가장 저렴한 클라우드 GPU',
+        content: [
+          '<strong>확인한 RunPod와 Lambda 목록 중 시간당 가장 저렴한 클라우드 GPU는 $0.16/시간부터 시작하는 구형 24 GB 및 48 GB 카드입니다.</strong> RunPod가 Community Cloud와 Secure Cloud 요금을 게시하며, 소형 모델 추론과 테스트에 적합하고 대규모 학습에는 맞지 않습니다.',
+        ],
+        columns: ['GPU', 'VRAM', '시간당 가격', '적합한 용도'],
+        rows: [
+          {
+            'GPU': 'RTX A5000',
+            'VRAM': '24 GB',
+            '시간당 가격': '$0.16–0.27/시간',
+            '적합한 용도': '7B–13B 추론, 테스트',
+          },
+          {
+            'GPU': 'RTX 3090',
+            'VRAM': '24 GB',
+            '시간당 가격': '$0.22–0.50/시간',
+            '적합한 용도': '13B–30B 추론',
+          },
+          {
+            'GPU': 'RTX A6000',
+            'VRAM': '48 GB',
+            '시간당 가격': '$0.33–0.59/시간',
+            '적합한 용도': '48 GB가 필요한 모델',
+          },
+          {
+            'GPU': 'L4',
+            'VRAM': '24 GB',
+            '시간당 가격': '$0.44–0.59/시간',
+            '적합한 용도': '저전력 추론',
           },
         ],
       },
@@ -1250,8 +1747,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'snippets',
         title: '요약 정보',
         snippetBlocks: [
-          { type: 'one-sentence', text: '2026년 클라우드 GPU 비용은 RTX 4090의 경우 시간당 $0.30–0.80, A100 80 GB는 $0.90–1.90, H100 80 GB는 $2.20–4.00입니다.' },
-          { type: 'plain-terms', text: '클라우드에서 GPU를 빌리는 비용은 카드 종류에 따라 크게 다릅니다. 소비자용 RTX 4090은 저렴하고 중소형 모델 실행에 적합하며, 고성능 A100과 H100은 더 큰 모델과 훈련 작업에 사용됩니다.' },
+          { type: 'one-sentence', text: '클라우드 GPU 비용은 RTX 4090이 시간당 약 $0.34–0.89, A100 80 GB가 $1.19–2.79, H100 80 GB가 $1.99–4.29입니다.' },
+          { type: 'plain-terms', text: '클라우드에서 GPU를 빌리는 비용은 시간 단위로 청구되며, 카드 종류, 제공업체, 대여 중단 가능 여부에 따라 달라집니다. 24 GB급 소형 카드가 가장 저렴하고 소형·중형 모델에 적합하며, A100과 H100은 더 비싸고 대형 모델과 학습에 쓰입니다.' },
         ],
       },
       faq: {
@@ -1259,20 +1756,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '클라우드 GPU 가격에 대한 자주 묻는 질문',
         faqs: [
           {
-            q: '클라우드 GPU 임대가 구매보다 저렴한 경우는 언제입니까?',
-            a: '임대는 짧고 산발적인 워크로드에서 유리합니다 — 주당 몇 시간 정도. 구매는 지속적인 일일 사용에서 유리합니다. 약 $2,500의 중고 RTX 4090은 시간당 $0.30–0.80 클라우드 임대 기준으로 약 3,000–8,000시간이면 비용을 회수합니다.',
+            q: 'GPU를 시간 단위로 빌리면 얼마입니까?',
+            a: 'RunPod와 Lambda에서 24 GB 소비자용 카드는 시간당 $0.16–0.89, A100 80 GB는 $1.19–2.79, H100 80 GB는 $1.99–4.29입니다. Vast.ai 마켓플레이스 요금은 호스트마다 다릅니다.',
           },
           {
-            q: '같은 GPU가 공급업체마다 가격이 크게 다른 이유는 무엇입니까?',
-            a: '관리형 클라우드(Lambda, AWS, GCP)는 지원, SLA, 전용 하드웨어를 포함하므로 더 비쌉니다. 마켓플레이스([Vast.ai](https://Vast.ai))는 개인 호스트로부터 제공되며 인터럽트 가능할 수 있습니다. 지역과 수요도 가격에 영향을 줍니다.',
+            q: '시간 단위로 빌릴 수 있는 가장 저렴한 GPU는 무엇입니까?',
+            a: '확인한 RunPod 목록 중에서는 Community Cloud의 RTX A5000가 $0.16/시간으로 가장 저렴하고, 그다음이 $0.22/시간의 RTX 3090입니다. 둘 다 VRAM 24 GB이며 학습이 아닌 소형 모델 추론에 적합합니다.',
+          },
+          {
+            q: '클라우드 GPU를 빌리는 것이 구매보다 저렴한 때는 언제입니까?',
+            a: '짧고 간헐적인 작업(주당 몇 시간)은 대여가 유리하고, 매일 꾸준히 쓴다면 구매가 유리합니다. 중고 가격을 약 $2,500로 가정하면 RTX 4090은 $0.34–0.89/시간 기준 약 2,800–7,400시간 대여 후 본전입니다.',
+          },
+          {
+            q: '같은 GPU인데 제공업체마다 가격이 크게 다른 이유는 무엇입니까?',
+            a: '관리형 클라우드(Lambda, AWS, GCP)는 지원, SLA, 전용 하드웨어를 포함하므로 더 비쌉니다. 마켓플레이스([Vast.ai](https://vast.ai))는 개인 호스트에서 자원을 조달하므로 중단될 수 있습니다. 지역과 수요도 가격을 바꿉니다.',
           },
           {
             q: '표시된 요금에 스토리지와 대역폭이 포함됩니까?',
-            a: '일반적으로 포함되지 않습니다. 영구 스토리지는 일반적으로 GB당 월 $0.05–0.20입니다. 아웃바운드 대역폭은 GB당 몇 센트가 추가될 수 있습니다. 대형 모델 가중치나 데이터셋의 경우 총 비용에 이를 포함시키십시오.',
+            a: '보통 포함되지 않습니다. 영구 스토리지는 보통 월 $0.05–0.20/GB이고, 송신 대역폭은 GB당 몇 센트가 추가될 수 있습니다. 큰 모델 가중치나 데이터셋은 총비용에 반영하세요.',
           },
           {
-            q: '지금 내 워크로드에 가장 저렴한 GPU를 어떻게 찾습니까?',
-            a: '예약 전에 최소 두 개의 공급업체를 비교하십시오 — RunPod(관리형)와 Vast.ai(마켓플레이스)는 스펙트럼의 양쪽 끝을 커버합니다. 필요한 VRAM으로 필터링한 다음 가격순으로 정렬하십시오.',
+            q: '지금 내 작업에 가장 저렴한 GPU를 찾으려면 어떻게 합니까?',
+            a: '예약 전에 최소 두 곳을 확인하세요. RunPod(관리형)와 Vast.ai(마켓플레이스)가 양 끝을 모두 다룹니다. 필요한 VRAM으로 필터링한 뒤 가격순으로 정렬하세요.',
           },
         ],
       },
