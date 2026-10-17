@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**Local AI Chat - pocket is a freemium, closed-source iOS and iPadOS app that downloads open models such as Llama, Gemma, Qwen and Mistral to the device, generates images, and chats offline.** Per its App Store listing it needs iOS or iPadOS 18.6 or later and is free to download, with weekly, monthly and yearly in-app purchases. This review covers version 0.5.6 and is based on the public listing, product site and privacy policy, not hands-on testing.',
+      '**Warning: Local AI Chat - pocket has had no update since 27 May 2026 (version 0.5.6), so it may be unmaintained — check that it works on your device before relying on it.** **Local AI Chat - pocket is a freemium, closed-source iOS and iPadOS app that downloads open models such as Llama, Gemma, Qwen and Mistral to the device, generates images, and chats offline.** Per its App Store listing it needs iOS or iPadOS 18.6 or later and is free to download, with weekly, monthly and yearly in-app purchases. This review covers version 0.5.6 and is based on the public listing, product site and privacy policy, not hands-on testing.',
     quickAnswerTop: {
       en: {
         question: 'Is Local AI Chat Pocket worth installing for offline AI on an iPhone or iPad?',
@@ -394,7 +394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**Local AI Chat - pocket ist eine nicht quelloffene Freemium-App für iOS und iPadOS, die offene Modelle wie Llama, Gemma, Qwen und Mistral auf das Gerät lädt, Bilder erzeugt und offline chattet.** Laut App-Store-Eintrag setzt sie iOS oder iPadOS 18.6 oder neuer voraus und lässt sich kostenlos herunterladen; es gibt wöchentliche, monatliche und jährliche In-App-Käufe. Diese Rezension behandelt Version 0.5.6 und beruht auf dem öffentlichen Eintrag, der Produktwebsite und der Datenschutzerklärung, nicht auf praktischen Tests.',
+      '**Warnung: Local AI Chat - pocket wurde seit dem 27. Mai 2026 (Version 0.5.6) nicht aktualisiert und wird möglicherweise nicht mehr gepflegt — prüfen Sie vor dem Einsatz, ob die App auf Ihrem Gerät funktioniert.** **Local AI Chat - pocket ist eine nicht quelloffene Freemium-App für iOS und iPadOS, die offene Modelle wie Llama, Gemma, Qwen und Mistral auf das Gerät lädt, Bilder erzeugt und offline chattet.** Laut App-Store-Eintrag setzt sie iOS oder iPadOS 18.6 oder neuer voraus und lässt sich kostenlos herunterladen; es gibt wöchentliche, monatliche und jährliche In-App-Käufe. Diese Rezension behandelt Version 0.5.6 und beruht auf dem öffentlichen Eintrag, der Produktwebsite und der Datenschutzerklärung, nicht auf praktischen Tests.',
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich Local AI Chat Pocket für Offline-KI auf dem iPhone oder iPad?',
@@ -749,7 +749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**Local AI Chat - pocket est une application iOS et iPadOS freemium, à code source fermé, qui télécharge sur l\'appareil des modèles ouverts comme Llama, Gemma, Qwen et Mistral, génère des images et permet de discuter hors ligne.** Selon sa fiche App Store, elle exige iOS ou iPadOS 18.6 ou ultérieur et se télécharge gratuitement, avec des achats intégrés hebdomadaires, mensuels et annuels. Cet avis porte sur la version 0.5.6 et s\'appuie sur la fiche publique, le site officiel et la politique de confidentialité, pas sur des tests pratiques.',
+      '**Avertissement : Local AI Chat - pocket n\'a reçu aucune mise à jour depuis le 27 mai 2026 (version 0.5.6) et n\'est peut-être plus maintenue — vérifiez qu\'elle fonctionne sur votre appareil avant de vous y fier.** **Local AI Chat - pocket est une application iOS et iPadOS freemium, à code source fermé, qui télécharge sur l\'appareil des modèles ouverts comme Llama, Gemma, Qwen et Mistral, génère des images et permet de discuter hors ligne.** Selon sa fiche App Store, elle exige iOS ou iPadOS 18.6 ou ultérieur et se télécharge gratuitement, avec des achats intégrés hebdomadaires, mensuels et annuels. Cet avis porte sur la version 0.5.6 et s\'appuie sur la fiche publique, le site officiel et la politique de confidentialité, pas sur des tests pratiques.',
     quickAnswerTop: {
       fr: {
         question: 'Local AI Chat Pocket vaut-elle d\'être installée pour l\'IA hors ligne sur iPhone ou iPad ?',
@@ -1104,7 +1104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**Local AI Chat - pocketは、Llama、Gemma、Qwen、Mistralなどのオープンモデルを端末にダウンロードし、画像を生成し、オフラインでチャットできる、フリーミアムでクローズドソースのiOS/iPadOSアプリです。** App Storeの掲載情報によれば、iOSまたはiPadOS 18.6以降が必要で、ダウンロードは無料、週額・月額・年額のアプリ内課金が用意されています。本レビューはバージョン0.5.6が対象で、公開されている掲載情報、公式サイト、プライバシーポリシーに基づいており、実機テストは含みません。',
+      '**警告：Local AI Chat - pocketは2026年5月27日（バージョン0.5.6）以降更新されておらず、メンテナンスが終了している可能性があります。利用前にお使いの端末で動作するか確認してください。** **Local AI Chat - pocketは、Llama、Gemma、Qwen、Mistralなどのオープンモデルを端末にダウンロードし、画像を生成し、オフラインでチャットできる、フリーミアムでクローズドソースのiOS/iPadOSアプリです。** App Storeの掲載情報によれば、iOSまたはiPadOS 18.6以降が必要で、ダウンロードは無料、週額・月額・年額のアプリ内課金が用意されています。本レビューはバージョン0.5.6が対象で、公開されている掲載情報、公式サイト、プライバシーポリシーに基づいており、実機テストは含みません。',
     quickAnswerTop: {
       ja: {
         question: 'iPhoneやiPadでオフラインAIを使うために、Local AI Chat Pocketをインストールする価値はありますか?',
@@ -1459,7 +1459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**Local AI Chat - pocket是一款免费增值、闭源的iOS和iPadOS应用，可把Llama、Gemma、Qwen和Mistral等开源模型下载到设备上，生成图像，并支持离线聊天。** 据其App Store页面，它需要iOS或iPadOS 18.6或更高版本，下载免费，提供每周、每月和每年的应用内购买。本评测对应版本0.5.6，依据公开的应用页面、官方网站和隐私政策撰写，并未实际测试。',
+      '**警告：Local AI Chat - pocket自2026年5月27日（版本0.5.6）以来未再更新，可能已无人维护——使用前请先确认它能在你的设备上正常运行。** **Local AI Chat - pocket是一款免费增值、闭源的iOS和iPadOS应用，可把Llama、Gemma、Qwen和Mistral等开源模型下载到设备上，生成图像，并支持离线聊天。** 据其App Store页面，它需要iOS或iPadOS 18.6或更高版本，下载免费，提供每周、每月和每年的应用内购买。本评测对应版本0.5.6，依据公开的应用页面、官方网站和隐私政策撰写，并未实际测试。',
     quickAnswerTop: {
       zh: {
         question: '想在iPhone或iPad上使用离线AI，Local AI Chat Pocket值得安装吗？',
@@ -1814,7 +1814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**Local AI Chat - pocket es una app freemium y de código cerrado para iOS y iPadOS que descarga en el dispositivo modelos abiertos como Llama, Gemma, Qwen y Mistral, genera imágenes y chatea sin conexión.** Según su ficha de la App Store, requiere iOS o iPadOS 18.6 o posterior y se descarga gratis, con compras dentro de la app semanales, mensuales y anuales. Esta reseña cubre la versión 0.5.6 y se basa en la ficha pública, el sitio oficial y la política de privacidad, no en pruebas prácticas.',
+      '**Advertencia: Local AI Chat - pocket no recibe actualizaciones desde el 27 de mayo de 2026 (versión 0.5.6), por lo que podría estar sin mantenimiento; comprueba que funciona en tu dispositivo antes de depender de ella.** **Local AI Chat - pocket es una app freemium y de código cerrado para iOS y iPadOS que descarga en el dispositivo modelos abiertos como Llama, Gemma, Qwen y Mistral, genera imágenes y chatea sin conexión.** Según su ficha de la App Store, requiere iOS o iPadOS 18.6 o posterior y se descarga gratis, con compras dentro de la app semanales, mensuales y anuales. Esta reseña cubre la versión 0.5.6 y se basa en la ficha pública, el sitio oficial y la política de privacidad, no en pruebas prácticas.',
     quickAnswerTop: {
       es: {
         question: '¿Vale la pena instalar Local AI Chat Pocket para IA sin conexión en un iPhone o iPad?',
@@ -2169,7 +2169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**O Local AI Chat - pocket é um aplicativo freemium e de código fechado para iOS e iPadOS que baixa modelos abertos, como Llama, Gemma, Qwen e Mistral, para o aparelho, gera imagens e conversa offline.** Segundo a ficha dele na App Store, exige iOS ou iPadOS 18.6 ou posterior e é gratuito para baixar, com compras no aplicativo semanais, mensais e anuais. Esta análise cobre a versão 0.5.6 e se baseia na ficha pública, no site oficial e na política de privacidade, não em testes práticos.',
+      '**Aviso: o Local AI Chat - pocket não recebe atualização desde 27 de maio de 2026 (versão 0.5.6) e pode estar sem manutenção — confirme se funciona no seu dispositivo antes de depender dele.** **O Local AI Chat - pocket é um aplicativo freemium e de código fechado para iOS e iPadOS que baixa modelos abertos, como Llama, Gemma, Qwen e Mistral, para o aparelho, gera imagens e conversa offline.** Segundo a ficha dele na App Store, exige iOS ou iPadOS 18.6 ou posterior e é gratuito para baixar, com compras no aplicativo semanais, mensais e anuais. Esta análise cobre a versão 0.5.6 e se baseia na ficha pública, no site oficial e na política de privacidade, não em testes práticos.',
     quickAnswerTop: {
       pt: {
         question: 'Vale a pena instalar o Local AI Chat Pocket para IA offline em um iPhone ou iPad?',
@@ -2524,7 +2524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**Local AI Chat - pocket تطبيق مجاني مغلق المصدر مع مشتريات داخل التطبيق لنظامي iOS وiPadOS، ينزّل نماذج مفتوحة مثل Llama وGemma وQwen وMistral إلى الجهاز، ويولّد الصور، ويتيح الدردشة دون إنترنت.** بحسب صفحته على App Store يتطلب iOS أو iPadOS بالإصدار 18.6 أو أحدث، وتنزيله مجاني مع مشتريات داخل التطبيق أسبوعية وشهرية وسنوية. تغطي هذه المراجعة الإصدار 0.5.6 وتستند إلى الصفحة العلنية والموقع الرسمي وسياسة الخصوصية، لا إلى اختبار عملي.',
+      '**تحذير: لم يتلقَّ Local AI Chat - pocket أي تحديث منذ 27 مايو 2026 (الإصدار 0.5.6)، وقد يكون غير مدعوم — تأكد من عمله على جهازك قبل الاعتماد عليه.** **Local AI Chat - pocket تطبيق مجاني مغلق المصدر مع مشتريات داخل التطبيق لنظامي iOS وiPadOS، ينزّل نماذج مفتوحة مثل Llama وGemma وQwen وMistral إلى الجهاز، ويولّد الصور، ويتيح الدردشة دون إنترنت.** بحسب صفحته على App Store يتطلب iOS أو iPadOS بالإصدار 18.6 أو أحدث، وتنزيله مجاني مع مشتريات داخل التطبيق أسبوعية وشهرية وسنوية. تغطي هذه المراجعة الإصدار 0.5.6 وتستند إلى الصفحة العلنية والموقع الرسمي وسياسة الخصوصية، لا إلى اختبار عملي.',
     quickAnswerTop: {
       ar: {
         question: 'هل يستحق Local AI Chat Pocket التثبيت لتشغيل الذكاء الاصطناعي دون إنترنت على الآيفون أو الآيباد؟',
@@ -2879,7 +2879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'Apple Vision Pro'],
     leadAnswerBlock:
-      '**Local AI Chat - pocket은 Llama, Gemma, Qwen, Mistral 같은 오픈 모델을 기기에 내려받아 이미지를 생성하고 오프라인으로 채팅하는 프리미엄 방식의 비공개 소스 iOS 및 iPadOS 앱입니다.** App Store 목록에 따르면 iOS 또는 iPadOS 18.6 이상이 필요하고, 내려받기는 무료이며, 앱 내 구매로 주간, 월간, 연간 플랜을 판매합니다. 이 리뷰는 버전 0.5.6을 다루며, 직접 테스트한 결과가 아니라 공개 목록, 공식 사이트, 개인정보 처리방침에 근거합니다.',
+      '**경고: Local AI Chat - pocket은 2026년 5월 27일(버전 0.5.6) 이후 업데이트가 없어 유지보수가 중단되었을 수 있습니다. 사용 전에 기기에서 정상 작동하는지 확인하십시오.** **Local AI Chat - pocket은 Llama, Gemma, Qwen, Mistral 같은 오픈 모델을 기기에 내려받아 이미지를 생성하고 오프라인으로 채팅하는 프리미엄 방식의 비공개 소스 iOS 및 iPadOS 앱입니다.** App Store 목록에 따르면 iOS 또는 iPadOS 18.6 이상이 필요하고, 내려받기는 무료이며, 앱 내 구매로 주간, 월간, 연간 플랜을 판매합니다. 이 리뷰는 버전 0.5.6을 다루며, 직접 테스트한 결과가 아니라 공개 목록, 공식 사이트, 개인정보 처리방침에 근거합니다.',
     quickAnswerTop: {
       ko: {
         question: '아이폰이나 아이패드에서 오프라인 AI를 쓰려면 Local AI Chat Pocket을 설치할 가치가 있나요?',
