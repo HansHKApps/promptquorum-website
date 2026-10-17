@@ -96,6 +96,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'whisper-cpp':                             'whisper-cpp',
   'faster-whisper':                          'faster-whisper',
   'piper-tts':                               'piper-tts',
+  'parrot':                                  'parrot',
   'coqui-tts':                               'coqui-tts',
   'xtts-v2':                                 'xtts-v2',
   'bark':                                    'bark',

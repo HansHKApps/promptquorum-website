@@ -100,6 +100,7 @@ import { app as app_msty_go } from './apps/msty-go'
 import { app as app_whisper_cpp } from './apps/whisper-cpp'
 import { app as app_faster_whisper } from './apps/faster-whisper'
 import { app as app_piper_tts } from './apps/piper-tts'
+import { app as app_parrot } from './apps/parrot'
 import { app as app_coqui_tts } from './apps/coqui-tts'
 import { app as app_xtts_v2 } from './apps/xtts-v2'
 import { app as app_bark } from './apps/bark'
@@ -350,6 +351,7 @@ export const localAiApps: ToolRecord[] = [
   app_whisper_cpp,
   app_faster_whisper,
   app_piper_tts,
+  app_parrot,
   app_coqui_tts,
   app_xtts_v2,
   app_bark,
