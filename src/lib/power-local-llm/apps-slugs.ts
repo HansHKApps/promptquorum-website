@@ -188,6 +188,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'pcai-photo-retouch':                      'pcai-photo-retouch',
   'honey-llm':                               'honey-llm',
   'mlxhub':                                  'mlxhub',
+  'openmontage':                             'openmontage',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)
