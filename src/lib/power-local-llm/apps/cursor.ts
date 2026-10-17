@@ -37,6 +37,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { mcp: true, agentMode: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-13', // official changelog, read 2026-10-16
+  lastUpstreamUpdate: '2026-10-16', // official changelog, read 2026-10-17
   lastUpstreamUpdateSource: 'https://cursor.com/changelog',
 }

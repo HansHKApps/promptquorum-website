@@ -45,6 +45,6 @@ export const app: ToolRecord = {
   // README: 'no longer actively maintained and is read-only for all users'; GitHub archived flag is false, checked 2026-09-21
   upstreamStatus: { state: 'unmaintained' },
   lastVerifiedDate: null, // TODO: not derivable from source article
-  lastUpstreamUpdate: '2026-10-14', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
-  lastUpstreamUpdateSource: 'https://github.com/continuedev/continue',
+  lastUpstreamUpdate: '2026-06-19', // final v2.0.0 release; later default-branch commits (2026-07-21) are docs-only, repo read-only. GitHub API, read 2026-10-17
+  lastUpstreamUpdateSource: 'https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode',
 }
