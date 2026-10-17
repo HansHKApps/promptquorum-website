@@ -40039,35 +40039,50 @@
     "width": 800,
     "height": 400
   },
+  "/images/prompt-bites-tool-comparison-matrix-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 476
+  },
   "/images/prompt-bites-tool-comparison-matrix-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 476
   },
   "/images/prompt-bites-tool-comparison-matrix-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 476
   },
   "/images/prompt-bites-tool-comparison-matrix-es.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 476
   },
   "/images/prompt-bites-tool-comparison-matrix-fr.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 476
   },
   "/images/prompt-bites-tool-comparison-matrix-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 476
+  },
+  "/images/prompt-bites-tool-comparison-matrix-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 476
+  },
+  "/images/prompt-bites-tool-comparison-matrix-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 476
   },
   "/images/prompt-bites-tool-comparison-matrix-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 476
   },
   "/images/prompt-bites-vram-reference-table-de.svg": {
     "encodingFormat": "image/svg+xml",

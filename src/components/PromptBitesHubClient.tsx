@@ -277,7 +277,10 @@ function promptBitesArticleHref(lang: Language, slug: string): string {
 
 // Languages with hand-authored category SVGs. Others (pt, ar) fall back to the English asset.
 const SVG_LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es'] as const
-function svgLang(lang: Language): string {
+// Graphics that also exist in pt, ar and ko (the tool comparison matrix).
+const ALL_LANG_SVGS = new Set(['prompt-bites-tool-comparison-matrix'])
+function svgLang(lang: Language, base: string): string {
+  if (ALL_LANG_SVGS.has(base)) return lang
   return (SVG_LANGS as readonly string[]).includes(lang) ? lang : 'en'
 }
 
@@ -317,15 +320,15 @@ const CATEGORY_SVG_ALT: Record<string, Partial<Record<Language, string>>> = {
     ko: '로컬 LLM 선택을 위한 Ollama 모델 선택 가이드',
   },
   'tool-comparisons': {
-    en: 'Local LLM tool comparison matrix: Ollama, LM Studio, Jan',
-    de: 'Lokale LLM-Tool-Vergleichsmatrix: Ollama, LM Studio, Jan',
-    fr: 'Matrice de comparaison des outils LLM locaux : Ollama, LM Studio, Jan',
-    ja: 'ローカルLLMツール比較マトリクス：Ollama、LM Studio、Jan',
-    zh: '本地LLM工具对比矩阵：Ollama、LM Studio、Jan',
-    es: 'Matriz comparativa de herramientas LLM locales: Ollama, LM Studio, Jan',
-    pt: 'Matriz de comparação de ferramentas de LLM local: Ollama, LM Studio, Jan',
-    ar: 'مصفوفة مقارنة أدوات النماذج اللغوية المحلية: Ollama, LM Studio, Jan',
-    ko: '로컬 LLM 도구 비교 매트릭스: Ollama, LM Studio, Jan',
+    en: 'Local LLM tool comparison matrix: Ollama, LM Studio, Jan, llama.cpp, KoboldCpp, GPT4All',
+    de: 'Lokale LLM-Tool-Vergleichsmatrix: Ollama, LM Studio, Jan, llama.cpp, KoboldCpp, GPT4All',
+    fr: 'Matrice de comparaison des outils LLM locaux : Ollama, LM Studio, Jan, llama.cpp, KoboldCpp, GPT4All',
+    ja: 'ローカルLLMツール比較マトリクス：Ollama、LM Studio、Jan、llama.cpp、KoboldCpp、GPT4All',
+    zh: '本地LLM工具对比矩阵：Ollama、LM Studio、Jan、llama.cpp、KoboldCpp、GPT4All',
+    es: 'Matriz comparativa de herramientas LLM locales: Ollama, LM Studio, Jan, llama.cpp, KoboldCpp, GPT4All',
+    pt: 'Matriz de comparação de ferramentas de LLM local: Ollama, LM Studio, Jan, llama.cpp, KoboldCpp, GPT4All',
+    ar: 'مصفوفة مقارنة أدوات النماذج اللغوية المحلية: Ollama, LM Studio, Jan, llama.cpp, KoboldCpp, GPT4All',
+    ko: '로컬 LLM 도구 비교 매트릭스: Ollama, LM Studio, Jan, llama.cpp, KoboldCpp, GPT4All',
   },
   'model-comparisons': {
     en: 'Local LLM model size comparison chart',
@@ -492,7 +495,7 @@ export function PromptBitesHubClient({ lang, articles, latestDateModified }: Pro
               <section key={cat.id}>
                 {CATEGORY_SVG[cat.id] && (
                   <img
-                    src={`/images/${CATEGORY_SVG[cat.id]}-${svgLang(lang)}.svg`}
+                    src={`/images/${CATEGORY_SVG[cat.id]}-${svgLang(lang, CATEGORY_SVG[cat.id]!)}.svg`}
                     alt={CATEGORY_SVG_ALT[cat.id]?.[lang] ?? ''}
                     className="w-full rounded-lg border border-primary/20 shadow-sm mb-4"
                     loading="lazy"

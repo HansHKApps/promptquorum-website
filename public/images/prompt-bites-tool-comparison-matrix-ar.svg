@@ -1,0 +1,136 @@
+<svg viewBox="0 0 800 476" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="مقارنة أدوات النماذج اللغوية المحلية"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<defs><style>
+.bg{fill:#FFFFFF}.title{fill:#1C1B1F;font-family:system-ui,sans-serif;font-size:18px;font-weight:600}
+.header{fill:#6750A4}.htext{fill:#FFFFFF;font-family:system-ui,sans-serif;font-size:12px;font-weight:600}
+.feature{fill:#1C1B1F;font-family:system-ui,sans-serif;font-size:11px;font-weight:500}
+.cell-yes{fill:#E8F5E9;stroke:#4CAF50;stroke-width:1}.cell-no{fill:#FFEBEE;stroke:#F44336;stroke-width:1}
+.cell-partial{fill:#FFF3E0;stroke:#FF9800;stroke-width:1}
+.cell-text{fill:#1C1B1F;font-family:system-ui,sans-serif;font-size:11px}
+.check{fill:#4CAF50;font-weight:600;font-size:12px}.x{fill:#F44336;font-weight:600;font-size:12px}.partial{fill:#FF9800;font-weight:600;font-size:12px}
+.border{stroke:#E0E0E0;stroke-width:1;fill:#FFFFFF}
+</style></defs>
+<rect class="bg" width="800" height="476"/>
+<text x="400" y="28" class="title" text-anchor="middle">مقارنة أدوات النماذج اللغوية المحلية</text>
+<rect x="20" y="40" width="140" height="30" class="border"/>
+<text x="90.0" y="59" class="feature" text-anchor="middle">الميزة</text>
+<rect x="160" y="40" width="106" height="30" class="header" rx="4" stroke="#FFFFFF" stroke-width="1"/>
+<text x="213.0" y="59" class="htext" text-anchor="middle">Ollama</text>
+<rect x="266" y="40" width="106" height="30" class="header" rx="4" stroke="#FFFFFF" stroke-width="1"/>
+<text x="319.0" y="59" class="htext" text-anchor="middle">LM Studio</text>
+<rect x="372" y="40" width="106" height="30" class="header" rx="4" stroke="#FFFFFF" stroke-width="1"/>
+<text x="425.0" y="59" class="htext" text-anchor="middle">Jan</text>
+<rect x="478" y="40" width="106" height="30" class="header" rx="4" stroke="#FFFFFF" stroke-width="1"/>
+<text x="531.0" y="59" class="htext" text-anchor="middle">llama.cpp</text>
+<rect x="584" y="40" width="106" height="30" class="header" rx="4" stroke="#FFFFFF" stroke-width="1"/>
+<text x="637.0" y="59" class="htext" text-anchor="middle">KoboldCpp</text>
+<rect x="690" y="40" width="106" height="30" class="header" rx="4" stroke="#FFFFFF" stroke-width="1"/>
+<text x="743.0" y="59" class="htext" text-anchor="middle">GPT4All</text>
+<rect x="20" y="70" width="140" height="25" class="border"/>
+<text x="90.0" y="87" class="feature" text-anchor="middle">واجهة CLI</text>
+<rect x="160" y="70" width="106" height="25" class="cell-yes"/>
+<text x="213.0" y="87" class="check" text-anchor="middle">✓</text>
+<rect x="266" y="70" width="106" height="25" class="cell-yes"/>
+<text x="319.0" y="87" class="check" text-anchor="middle">✓</text>
+<rect x="372" y="70" width="106" height="25" class="cell-yes"/>
+<text x="425.0" y="87" class="check" text-anchor="middle">✓</text>
+<rect x="478" y="70" width="106" height="25" class="cell-yes"/>
+<text x="531.0" y="87" class="check" text-anchor="middle">✓</text>
+<rect x="584" y="70" width="106" height="25" class="cell-yes"/>
+<text x="637.0" y="87" class="check" text-anchor="middle">✓</text>
+<rect x="690" y="70" width="106" height="25" class="cell-no"/>
+<text x="743.0" y="87" class="x" text-anchor="middle">✗</text>
+<rect x="20" y="95" width="140" height="25" class="border"/>
+<text x="90.0" y="112" class="feature" text-anchor="middle">واجهة GUI</text>
+<rect x="160" y="95" width="106" height="25" class="cell-yes"/>
+<text x="213.0" y="112" class="check" text-anchor="middle">✓</text>
+<rect x="266" y="95" width="106" height="25" class="cell-yes"/>
+<text x="319.0" y="112" class="check" text-anchor="middle">✓</text>
+<rect x="372" y="95" width="106" height="25" class="cell-yes"/>
+<text x="425.0" y="112" class="check" text-anchor="middle">✓</text>
+<rect x="478" y="95" width="106" height="25" class="cell-partial"/>
+<text x="531.0" y="112" class="partial" text-anchor="middle">~</text>
+<rect x="584" y="95" width="106" height="25" class="cell-yes"/>
+<text x="637.0" y="112" class="check" text-anchor="middle">✓</text>
+<rect x="690" y="95" width="106" height="25" class="cell-yes"/>
+<text x="743.0" y="112" class="check" text-anchor="middle">✓</text>
+<rect x="20" y="120" width="140" height="25" class="border"/>
+<text x="90.0" y="137" class="feature" text-anchor="middle">متصفح النماذج</text>
+<rect x="160" y="120" width="106" height="25" class="cell-yes"/>
+<text x="213.0" y="137" class="check" text-anchor="middle">✓</text>
+<rect x="266" y="120" width="106" height="25" class="cell-yes"/>
+<text x="319.0" y="137" class="check" text-anchor="middle">✓</text>
+<rect x="372" y="120" width="106" height="25" class="cell-yes"/>
+<text x="425.0" y="137" class="check" text-anchor="middle">✓</text>
+<rect x="478" y="120" width="106" height="25" class="cell-partial"/>
+<text x="531.0" y="137" class="partial" text-anchor="middle">~</text>
+<rect x="584" y="120" width="106" height="25" class="cell-partial"/>
+<text x="637.0" y="137" class="partial" text-anchor="middle">~</text>
+<rect x="690" y="120" width="106" height="25" class="cell-yes"/>
+<text x="743.0" y="137" class="check" text-anchor="middle">✓</text>
+<rect x="20" y="145" width="140" height="25" class="border"/>
+<text x="90.0" y="162" class="feature" text-anchor="middle">خادم API</text>
+<rect x="160" y="145" width="106" height="25" class="cell-yes"/>
+<text x="213.0" y="162" class="check" text-anchor="middle">✓</text>
+<rect x="266" y="145" width="106" height="25" class="cell-yes"/>
+<text x="319.0" y="162" class="check" text-anchor="middle">✓</text>
+<rect x="372" y="145" width="106" height="25" class="cell-yes"/>
+<text x="425.0" y="162" class="check" text-anchor="middle">✓</text>
+<rect x="478" y="145" width="106" height="25" class="cell-yes"/>
+<text x="531.0" y="162" class="check" text-anchor="middle">✓</text>
+<rect x="584" y="145" width="106" height="25" class="cell-yes"/>
+<text x="637.0" y="162" class="check" text-anchor="middle">✓</text>
+<rect x="690" y="145" width="106" height="25" class="cell-partial"/>
+<text x="743.0" y="162" class="partial" text-anchor="middle">~</text>
+<rect x="20" y="170" width="140" height="25" class="border"/>
+<text x="90.0" y="187" class="feature" text-anchor="middle">تعدد وحدات GPU</text>
+<rect x="160" y="170" width="106" height="25" class="cell-partial"/>
+<text x="213.0" y="187" class="partial" text-anchor="middle">~</text>
+<rect x="266" y="170" width="106" height="25" class="cell-partial"/>
+<text x="319.0" y="187" class="partial" text-anchor="middle">~</text>
+<rect x="372" y="170" width="106" height="25" class="cell-partial"/>
+<text x="425.0" y="187" class="partial" text-anchor="middle">~</text>
+<rect x="478" y="170" width="106" height="25" class="cell-yes"/>
+<text x="531.0" y="187" class="check" text-anchor="middle">✓</text>
+<rect x="584" y="170" width="106" height="25" class="cell-yes"/>
+<text x="637.0" y="187" class="check" text-anchor="middle">✓</text>
+<rect x="690" y="170" width="106" height="25" class="cell-no"/>
+<text x="743.0" y="187" class="x" text-anchor="middle">✗</text>
+<rect x="20" y="195" width="140" height="25" class="border"/>
+<text x="90.0" y="212" class="feature" text-anchor="middle">سهولة الإعداد</text>
+<rect x="160" y="195" width="106" height="25" class="cell-yes"/>
+<text x="213.0" y="212" class="check" text-anchor="middle">✓✓</text>
+<rect x="266" y="195" width="106" height="25" class="cell-yes"/>
+<text x="319.0" y="212" class="check" text-anchor="middle">✓</text>
+<rect x="372" y="195" width="106" height="25" class="cell-yes"/>
+<text x="425.0" y="212" class="check" text-anchor="middle">✓</text>
+<rect x="478" y="195" width="106" height="25" class="cell-partial"/>
+<text x="531.0" y="212" class="partial" text-anchor="middle">~</text>
+<rect x="584" y="195" width="106" height="25" class="cell-yes"/>
+<text x="637.0" y="212" class="check" text-anchor="middle">✓</text>
+<rect x="690" y="195" width="106" height="25" class="cell-yes"/>
+<text x="743.0" y="212" class="check" text-anchor="middle">✓</text>
+<rect x="20" y="220" width="140" height="25" class="border"/>
+<text x="90.0" y="237" class="feature" text-anchor="middle">حجم المجتمع</text>
+<rect x="160" y="220" width="106" height="25" class="cell-yes"/>
+<text x="213.0" y="237" class="check" text-anchor="middle">✓✓</text>
+<rect x="266" y="220" width="106" height="25" class="cell-yes"/>
+<text x="319.0" y="237" class="check" text-anchor="middle">✓</text>
+<rect x="372" y="220" width="106" height="25" class="cell-partial"/>
+<text x="425.0" y="237" class="partial" text-anchor="middle">~</text>
+<rect x="478" y="220" width="106" height="25" class="cell-yes"/>
+<text x="531.0" y="237" class="check" text-anchor="middle">✓✓</text>
+<rect x="584" y="220" width="106" height="25" class="cell-partial"/>
+<text x="637.0" y="237" class="partial" text-anchor="middle">~</text>
+<rect x="690" y="220" width="106" height="25" class="cell-partial"/>
+<text x="743.0" y="237" class="partial" text-anchor="middle">~</text>
+<rect x="20" y="260" width="776" height="198" style="fill:#F7F2FA;stroke:#E8DEF8;stroke-width:1" rx="4"/>
+<text x="788" y="278" class="feature" text-anchor="start" direction="rtl">الأنسب لـ:</text>
+<text x="788" y="298" class="cell-text" text-anchor="start" direction="rtl">• Ollama: المطورون والأتمتة والخوادم بلا شاشة (CLI أولاً، API بسيطة)</text>
+<text x="788" y="318" class="cell-text" text-anchor="start" direction="rtl">• LM Studio: مستخدمو سطح المكتب الباحثون عن واجهة GUI متقنة، والمبتدئون</text>
+<text x="788" y="338" class="cell-text" text-anchor="start" direction="rtl">• Jan: تطبيق سطح مكتب مفتوح المصدر يوفر CLI أيضاً، متعدد المنصات</text>
+<text x="788" y="358" class="cell-text" text-anchor="start" direction="rtl">• llama.cpp: أقصى تحكم وأداء، المحرك الذي تعتمد عليه أدوات كثيرة</text>
+<text x="788" y="378" class="cell-text" text-anchor="start" direction="rtl">• KoboldCpp: تطبيق بملف واحد للعب الأدوار والكتابة الإبداعية</text>
+<text x="788" y="398" class="cell-text" text-anchor="start" direction="rtl">• GPT4All: دردشة بسيطة دون اتصال على أجهزة عادية، وأسئلة عن المستندات</text>
+<text x="788" y="420" class="cell-text" font-weight="600" text-anchor="start" direction="rtl">التوصية: ابدأ بـ Ollama (مستخدم متقدم) أو LM Studio / Jan (واجهة GUI). وllama.cpp للتحكم الكامل.</text>
+<text x="788" y="440" class="cell-text" style="fill:#79747E" text-anchor="start" direction="rtl">✓✓ ممتاز · ✓ نعم · ~ جزئي · ✗ لا</text>
+<text x="792" y="471" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
