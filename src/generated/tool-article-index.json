@@ -11,9 +11,33 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "best-local-llms-2026",
+        "title": "Best Local LLMs in 2026: Qwen3.8-27B, Gemma 4, and Phi-4-mini Ranked",
+        "url": "/local-llms/best-local-llms-2026",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "best-local-llms-for-coding",
         "title": "Best Local LLMs for Coding 2026: Qwen3.8 27B, Devstral, Laguna",
         "url": "/local-llms/best-local-llms-for-coding",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "qwen-vs-llama-vs-mistral",
+        "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
+        "url": "/local-llms/qwen-vs-llama-vs-mistral",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "top-open-source-models-ollama",
+        "title": "Ollama Latest Version 2026: v0.40.5 + Best Models by Use Case",
+        "url": "/local-llms/top-open-source-models-ollama",
         "dateModified": "2026-10-17",
         "tier": "about"
       },
@@ -55,30 +79,6 @@
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
         "url": "/local-llms/apple-silicon-m5-local-llm",
         "dateModified": "2026-10-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-10-10",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-10-09",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tina-review",
-        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
-        "url": "/power-local-llm/tina-review",
-        "dateModified": "2026-10-04",
         "tier": "about"
       }
     ],
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 161,
+    "totalCount": 162,
     "capped": true
   },
   "vLLM": {
@@ -10618,6 +10618,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "top-open-source-models-ollama",
+        "title": "Ollama Latest Version 2026: v0.40.5 + Best Models by Use Case",
+        "url": "/local-llms/top-open-source-models-ollama",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "firecrawl-review",
         "title": "Firecrawl Review: Open-Source Web Data API for LLM Pipelines",
@@ -10680,17 +10688,9 @@
         "url": "/power-local-llm/nanobot-review",
         "dateModified": "2026-10-10",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-10-09",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 193,
+    "totalCount": 194,
     "capped": true
   },
   "Qdrant": {

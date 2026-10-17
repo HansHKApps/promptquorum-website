@@ -409,7 +409,7 @@
       ]
     },
     "best-local-llms-2026": {
-      "dateModified": "2026-09-06",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -436,7 +436,7 @@
       ]
     },
     "qwen-vs-llama-vs-mistral": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -454,7 +454,7 @@
       "images": [
         {
           "url": "/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-en.webp",
-          "title": "Benchmark comparison (June 2026): Qwen3.8-27B (61.7 SWE-bench Pro) leads dense coding and fits 24 GB at Q4. SWE-bench (real-world multi-file coding) is now more relevant than HumanEval for evaluating coding models. Llama 4 Scout uses a 16-expert MoE architecture (17B active / 109B total) but needs ~55 GB VRAM at Q4."
+          "title": "Benchmark comparison: Qwen3.8-27B (61.7 SWE-bench Pro) leads dense coding and fits 24 GB at Q4. SWE-bench (real-world multi-file coding) is now more relevant than HumanEval for evaluating coding models. Llama 4 Scout uses a 16-expert MoE architecture (17B active / 109B total) but needs ~55 GB VRAM at Q4."
         },
         {
           "url": "/images/qwen-vs-llama-vs-mistral-multilingual-support-en.svg",
@@ -466,7 +466,7 @@
         },
         {
           "url": "/images/qwen-vs-llama-vs-mistral-task-winners-en.svg",
-          "title": "Task winner matrix (May 2026): Qwen3.8-27B wins dense coding (61.7 SWE-bench Pro); Devstral wins agentic; Codestral wins IDE autocomplete; Llama 4 Scout dominates long-context; Mistral Small 3.1 best quality-per-GB."
+          "title": "Task winner matrix: Qwen3.8-27B wins dense coding (61.7 SWE-bench Pro); Devstral wins agentic; Codestral wins IDE autocomplete; Llama 4 Scout dominates long-context; Mistral Small 3.1 best quality-per-GB."
         },
         {
           "url": "/images/qwen-vs-llama-vs-mistral-size-classes-en.svg",
@@ -711,7 +711,7 @@
       ]
     },
     "top-open-source-models-ollama": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,

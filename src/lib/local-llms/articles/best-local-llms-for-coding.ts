@@ -310,7 +310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-en.webp',
           imageCaption: 'Vendor-reported benchmark scores by model: Qwen3.8 27B 61.7 SWE-bench Pro, Qwen 3.6 27B 77.2% SWE-bench Verified, Laguna XS 2.1 70.9% SWE-bench Verified, Devstral Small 2 65.8% SWE-bench Verified, Kimi K2.6 58.6 SWE-bench Pro, Qwen2.5-Coder 32B 87% HumanEval. Harnesses and task sets differ, so compare within a column only.',
           callouts: [
-            { type: 'note', text: 'HumanEval measures single-function Python generation. SWE-bench measures real-world multi-file code changes. "Pro" and "Verified" are different SWE-bench variants and are not interchangeable: a 77.2% Verified score and a 61.7 Pro score cannot be compared directly. All scores are vendor-reported.' },
+            { type: 'note', text: 'HumanEval measures single-function Python generation. SWE-bench measures real-world multi-file code changes. "Pro" and "Verified" are different SWE-bench variants and are not interchangeable: a 77.2% Verified score and a 61.7 Pro score cannot be compared directly. All scores are vendor-reported. HumanEval figures for older models (Qwen2.5-Coder 32B, Qwen3 8B) are carried over from earlier versions of this page and have not been re-verified.' },
           ],
         },
         codingExamples: {
@@ -396,7 +396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Advanced developer (debugging, refactoring, complex reasoning, 24 GB+):** Ollama + Qwen3.8 27B (dense model, 18 GB) -- handles multi-file context and algorithm design.',
             '**Long-horizon agentic sessions (plan → code → test → iterate):** Ollama + Laguna XS 2.1 (256K context, SWE-bench Verified 70.9%) or Devstral Small 2 -- built for tool calling and multi-step runs.',
             '**IDE-first workflow (VS Code, Cursor, JetBrains):** Continue.dev + Codestral 22B -- FIM-optimized for in-editor code completion at cursor position, best local Copilot alternative.',
-            '**Privacy-critical environments (GDPR, HIPAA, proprietary code):** Any local model above via Ollama (not a `:cloud` tag) -- zero external API calls, 100% on-premises, code never leaves your machine.',
+            '**Privacy-critical environments (GDPR, HIPAA, proprietary code):** Any local model above via Ollama (not a `:cloud` tag) -- no external API calls for inference, so your code stays on your machine as long as your editor plugins and other tools also make no network calls.',
           ],
           callouts: [
             { type: 'warning', text: '❌ **Avoid:** Running Qwen3.8 27B (18 GB) on machines with less than about 24 GB of GPU or unified memory. Once the model spills into system RAM, speed falls sharply. Use Qwen3 8B or Devstral Small 2 on smaller machines.' },
@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Japan (METI)**',
             'METI cybersecurity guidelines increasingly cover AI tool usage in software development. Qwen3-Coder handles Japanese code comments and variable naming conventions natively -- useful for Japanese-developed codebases with Japanese inline documentation. For compliance records, the Ollama tag (e.g., qwen2.5-coder:32b) provides the exact version identifier required by METI AI governance documentation.',
             '**China**',
-            "Under China's Data Security Law (数据安全法), source code for critical information infrastructure may not be processed by foreign cloud services. Qwen3.8 27B and Qwen3-Coder (Alibaba, Apache 2.0) are the natural choices for Chinese enterprise coding workflows -- Chinese developer, Apache 2.0 licence, full on-premises deployment via Ollama. Kimi K2.6 (Moonshot AI) is also Chinese-origin but needs server-class hardware for local use.",
+            "Under China's Data Security Law (数据安全法), source code for critical information infrastructure may not be processed by foreign cloud services. Qwen3.8 27B and Qwen3-Coder (Alibaba, Apache 2.0) are the natural choices for Chinese enterprise coding workflows -- Chinese developer, Apache 2.0 licence, full on-premises deployment via Ollama. Kimi K2.6 (Moonshot AI) is also Chinese-origin but needs server-class hardware for local use. This is not legal advice; check the requirements that apply to your case.",
           ],
         },
         commonMistakes: {
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Are local coding models fast enough for development?', a: 'Yes for iterative workflows. Speed depends on your GPU, quantization and context length. Smaller models such as Qwen3 8B respond quickly on laptops; larger models are slower per token. Waiting several seconds per response is acceptable for request-and-review use, but not for keystroke-level autocomplete, where you should use a small FIM model.' },
             { q: 'Can local LLMs replace GPT-5.6 for coding?', a: 'Not entirely. Local models (Qwen3.8 27B, Devstral Small 2) lag frontier cloud models on latest framework knowledge (APIs after the training cutoff), very long multi-file reasoning (100k+ tokens), and debugging accuracy. They have narrowed the gap on everyday multi-file coding tasks and keep your code private.' },
             { q: 'Which language does Qwen3-Coder support best?', a: 'Python is the primary training language. JavaScript, TypeScript, Java, C++, Go, Rust, and SQL are all well-supported. The model also handles PHP, Ruby, Swift, and Kotlin. For non-Python languages, HumanEval scores are lower but still competitive.' },
-            { q: 'Is DeepSeek-Coder safe to use for proprietary code?', a: 'When running locally via Ollama, DeepSeek-Coder makes no external connections. Your code stays on your hardware. The data concern with DeepSeek applies to their cloud API ([api.deepseek.com](https://api.deepseek.com)), not to local Ollama inference. Local inference is completely private.' },
+            { q: 'Is DeepSeek-Coder safe to use for proprietary code?', a: 'When running locally via Ollama, DeepSeek-Coder makes no external connections. Your code stays on your hardware. The data concern with DeepSeek applies to their cloud API ([api.deepseek.com](https://api.deepseek.com)), not to local Ollama inference. Local inference sends no code to DeepSeek\'s servers.' },
             { q: 'Can I use local coding models for SQL generation?', a: 'Yes -- Qwen3.8 27B and Devstral Small 2 both handle SQL generation. Provide the table schema in the prompt context. For complex multi-join queries, use 32K context to include the full schema. Set a system prompt: "You are an expert SQL developer. Generate only valid SQL."' },
             { q: 'What is SWE-bench and why is it replacing HumanEval?', a: 'SWE-bench tests a model\'s ability to resolve real GitHub issues — reading codebases, making multi-file changes, and writing tests. Unlike HumanEval (which tests single Python functions), SWE-bench predicts how a model performs in actual development workflows. SWE-bench Verified and SWE-bench Pro are different variants, so their scores are not interchangeable. In 2026, SWE-bench is the primary benchmark for evaluating coding models for real-world use.' },
             { q: 'How do I connect a local coding model to VS Code?', a: 'Install the Continue.dev extension from the VS Code marketplace. In Continue settings, select Ollama as the provider and specify your model (e.g., `qwen3:8b`, `qwen3.8`, `codestral:22b`). The extension connects to Ollama at localhost:11434 automatically. Use Cmd+I (macOS) or Ctrl+I (Windows) to trigger inline code generation.' },
@@ -662,7 +662,7 @@ schema: {
             'name': 'Is DeepSeek-Coder safe to use for proprietary code?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'When running locally via Ollama, DeepSeek-Coder makes no external connections. Your code stays on your hardware. The data concern with DeepSeek applies to their cloud API ([api.deepseek.com](https://api.deepseek.com)), not to local Ollama inference. Local inference is completely private.',
+              'text': 'When running locally via Ollama, DeepSeek-Coder makes no external connections. Your code stays on your hardware. The data concern with DeepSeek applies to their cloud API ([api.deepseek.com](https://api.deepseek.com)), not to local Ollama inference. Local inference sends no code to DeepSeek\'s servers.',
             },
           },
           {
@@ -951,7 +951,7 @@ schema: {
           image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-es.webp',
           imageCaption: 'Puntuaciones informadas por los fabricantes, por modelo: Qwen3.8 27B 61,7 SWE-bench Pro, Qwen 3.6 27B 77,2 % SWE-bench Verified, Laguna XS 2.1 70,9 % SWE-bench Verified, Devstral Small 2 65,8 % SWE-bench Verified, Kimi K2.6 58,6 SWE-bench Pro, Qwen2.5-Coder 32B 87 % HumanEval. Los arneses y conjuntos de tareas difieren, así que compara solo dentro de una misma columna.',
           callouts: [
-            { type: 'note', text: 'HumanEval mide la generación de funciones Python aisladas. SWE-bench mide cambios de código reales en varios archivos. «Pro» y «Verified» son variantes distintas de SWE-bench y no son intercambiables: un 77,2 % Verified y un 61,7 Pro no se pueden comparar directamente. Todas las puntuaciones las informan los fabricantes.' },
+            { type: 'note', text: 'HumanEval mide la generación de funciones Python aisladas. SWE-bench mide cambios de código reales en varios archivos. «Pro» y «Verified» son variantes distintas de SWE-bench y no son intercambiables: un 77,2 % Verified y un 61,7 Pro no se pueden comparar directamente. Todas las puntuaciones las informan los fabricantes. Las cifras de HumanEval de modelos anteriores (Qwen2.5-Coder 32B, Qwen3 8B) proceden de versiones previas de esta página y no se han vuelto a verificar.' },
           ],
         },
         codingExamples: {
@@ -1037,7 +1037,7 @@ schema: {
             '**Desarrollador avanzado (depuración, refactorización, razonamiento complejo, 24 GB o más):** Ollama + Qwen3.8 27B (modelo denso, 18 GB) -- maneja contexto multiarchivo y diseño de algoritmos.',
             '**Sesiones agénticas largas (planificar → programar → probar → iterar):** Ollama + Laguna XS 2.1 (contexto 256K, SWE-bench Verified 70,9 %) o Devstral Small 2 -- creados para llamadas a herramientas y ejecuciones de varios pasos.',
             '**Flujo centrado en el IDE (VS Code, Cursor, JetBrains):** Continue.dev + Codestral 22B -- optimizado para FIM en la posición del cursor, la mejor alternativa local a Copilot.',
-            '**Entornos críticos para la privacidad (RGPD, HIPAA, código propietario):** cualquier modelo local anterior con Ollama (no una etiqueta `:cloud`) -- sin llamadas externas a API, 100 % en local, el código nunca sale de tu equipo.',
+            '**Entornos críticos para la privacidad (RGPD, HIPAA, código propietario):** cualquier modelo local anterior con Ollama (no una etiqueta `:cloud`) -- sin llamadas externas a API para la inferencia, así que tu código permanece en tu equipo siempre que tus plugins de editor y otras herramientas tampoco usen la red.',
           ],
           callouts: [
             { type: 'warning', text: '❌ **Evita:** ejecutar Qwen3.8 27B (18 GB) en equipos con menos de unos 24 GB de memoria de GPU o unificada. En cuanto el modelo desborda a la RAM del sistema, la velocidad cae mucho. Usa Qwen3 8B o Devstral Small 2 en equipos más pequeños.' },
@@ -1088,7 +1088,7 @@ schema: {
             '**Japón (METI)**',
             'Las directrices de ciberseguridad de METI cubren cada vez más el uso de herramientas de IA en el desarrollo de software. Qwen3-Coder maneja comentarios de código en japonés y convenciones de nomenclatura de variables de forma nativa -- útil para bases de código desarrolladas en Japón con documentación en línea en japonés. Para registros de cumplimiento, el tag de Ollama (p.ej., qwen2.5-coder:32b) proporciona el identificador de versión exacto requerido por la documentación de gobernanza de IA de METI.',
             '**China**',
-            'Según la Ley de Seguridad de Datos de China (数据安全法), el código fuente de infraestructuras críticas de información no puede ser procesado por servicios en la nube extranjeros. Qwen3.8 27B y Qwen3-Coder (Alibaba, Apache 2.0) son la opción natural para los flujos de programación de empresas chinas -- desarrollador chino, licencia Apache 2.0, despliegue local completo con Ollama. Kimi K2.6 (Moonshot AI) también es de origen chino, pero requiere hardware de clase servidor para ejecutarse en local.',
+            'Según la Ley de Seguridad de Datos de China (数据安全法), el código fuente de infraestructuras críticas de información no puede ser procesado por servicios en la nube extranjeros. Qwen3.8 27B y Qwen3-Coder (Alibaba, Apache 2.0) son la opción natural para los flujos de programación de empresas chinas -- desarrollador chino, licencia Apache 2.0, despliegue local completo con Ollama. Kimi K2.6 (Moonshot AI) también es de origen chino, pero requiere hardware de clase servidor para ejecutarse en local. Esto no es asesoramiento jurídico; comprueba los requisitos que se aplican a tu caso.',
           ],
         },
         commonMistakes: {
@@ -1143,7 +1143,7 @@ schema: {
             { q: '¿Son los modelos de código locales lo bastante rápidos para desarrollar?', a: 'Sí para flujos iterativos. La velocidad depende de tu GPU, la cuantización y la longitud de contexto. Los modelos pequeños como Qwen3 8B responden rápido en portátiles; los grandes son más lentos por token. Esperar unos segundos por respuesta es aceptable para pedir y revisar, pero no para autocompletado a cada pulsación, donde conviene un modelo FIM pequeño.' },
             { q: '¿Pueden los LLMs locales sustituir a GPT-5.6 para programar?', a: 'No del todo. Los modelos locales (Qwen3.8 27B, Devstral Small 2) van por detrás de los modelos en la nube de vanguardia en conocimiento reciente de frameworks (APIs posteriores al corte de entrenamiento), razonamiento multiarchivo muy largo (100k+ tokens) y precisión de depuración. Han reducido la brecha en tareas multiarchivo cotidianas y mantienen tu código privado.' },
             { q: '¿Qué lenguaje admite mejor Qwen3-Coder?', a: 'Python es el lenguaje principal de entrenamiento. JavaScript, TypeScript, Java, C++, Go, Rust y SQL están bien soportados. El modelo también maneja PHP, Ruby, Swift y Kotlin. En lenguajes distintos de Python las puntuaciones de HumanEval son más bajas, pero siguen siendo competitivas.' },
-            { q: '¿Es seguro DeepSeek-Coder para código propietario?', a: 'Al ejecutarse en local con Ollama, DeepSeek-Coder no establece conexiones externas. Tu código permanece en tu hardware. La preocupación por los datos de DeepSeek se refiere a su API en la nube ([api.deepseek.com](https://api.deepseek.com)), no a la inferencia local con Ollama. La inferencia local es totalmente privada.' },
+            { q: '¿Es seguro DeepSeek-Coder para código propietario?', a: 'Al ejecutarse en local con Ollama, DeepSeek-Coder no establece conexiones externas. Tu código permanece en tu hardware. La preocupación por los datos de DeepSeek se refiere a su API en la nube ([api.deepseek.com](https://api.deepseek.com)), no a la inferencia local con Ollama. La inferencia local no envía código a los servidores de DeepSeek.' },
             { q: '¿Puedo usar modelos de código locales para generar SQL?', a: 'Sí -- Qwen3.8 27B y Devstral Small 2 manejan la generación de SQL. Proporciona el esquema de las tablas en el contexto del prompt. Para consultas complejas con varios JOIN, usa 32K de contexto para incluir el esquema completo. Define un prompt de sistema: «Eres un experto en SQL. Genera solo SQL válido.»' },
             { q: '¿Qué es SWE-bench y por qué sustituye a HumanEval?', a: 'SWE-bench evalúa si un modelo resuelve incidencias reales de GitHub — leer bases de código, hacer cambios en varios archivos y escribir pruebas. A diferencia de HumanEval (funciones Python aisladas), SWE-bench predice el rendimiento en flujos de desarrollo reales. SWE-bench Verified y SWE-bench Pro son variantes distintas y sus puntuaciones no son intercambiables. En 2026, SWE-bench es el benchmark principal para evaluar modelos de código en uso real.' },
             { q: '¿Cómo conecto un modelo de código local con VS Code?', a: 'Instala la extensión Continue.dev desde el marketplace de VS Code. En los ajustes de Continue, elige Ollama como proveedor e indica tu modelo (p. ej., `qwen3:8b`, `qwen3.8`, `codestral:22b`). La extensión se conecta a Ollama en localhost:11434 automáticamente. Usa Cmd+I (macOS) o Ctrl+I (Windows) para activar la generación de código en línea.' },
@@ -1300,7 +1300,7 @@ schema: {
             'name': '¿Es seguro DeepSeek-Coder para código propietario?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Al ejecutarse en local con Ollama, DeepSeek-Coder no establece conexiones externas. Tu código permanece en tu hardware. La preocupación por los datos de DeepSeek se refiere a su API en la nube ([api.deepseek.com](https://api.deepseek.com)), no a la inferencia local con Ollama. La inferencia local es totalmente privada.',
+              'text': 'Al ejecutarse en local con Ollama, DeepSeek-Coder no establece conexiones externas. Tu código permanece en tu hardware. La preocupación por los datos de DeepSeek se refiere a su API en la nube ([api.deepseek.com](https://api.deepseek.com)), no a la inferencia local con Ollama. La inferencia local no envía código a los servidores de DeepSeek.',
             },
           },
           {
@@ -1589,7 +1589,7 @@ schema: {
           image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ar.webp',
           imageCaption: 'نتائج معلنة من الشركات حسب النموذج: Qwen3.8 27B بنتيجة 61.7 في SWE-bench Pro، وQwen 3.6 27B بنتيجة 77.2% في SWE-bench Verified، وLaguna XS 2.1 بنتيجة 70.9% في SWE-bench Verified، وDevstral Small 2 بنتيجة 65.8% في SWE-bench Verified، وKimi K2.6 بنتيجة 58.6 في SWE-bench Pro، وQwen2.5-Coder 32B بنتيجة 87% في HumanEval. تختلف أطر الاختبار ومجموعات المهام، لذا قارن داخل العمود نفسه فقط.',
           callouts: [
-            { type: 'note', text: 'يقيس HumanEval توليد دوال Python منفردة، بينما يقيس SWE-bench تعديلات كود حقيقية على ملفات متعددة. «Pro» و«Verified» نسختان مختلفتان من SWE-bench وغير قابلتين للتبادل: لا يمكن مقارنة نتيجة 77.2% في Verified بنتيجة 61.7 في Pro مباشرة. جميع النتائج معلنة من الشركات.' },
+            { type: 'note', text: 'يقيس HumanEval توليد دوال Python منفردة، بينما يقيس SWE-bench تعديلات كود حقيقية على ملفات متعددة. «Pro» و«Verified» نسختان مختلفتان من SWE-bench وغير قابلتين للتبادل: لا يمكن مقارنة نتيجة 77.2% في Verified بنتيجة 61.7 في Pro مباشرة. جميع النتائج معلنة من الشركات. أرقام HumanEval للنماذج الأقدم (Qwen2.5-Coder 32B وQwen3 8B) منقولة من إصدارات سابقة لهذه الصفحة ولم يُعاد التحقق منها.' },
           ],
         },
         codingExamples: {
@@ -1675,7 +1675,7 @@ schema: {
             '**المطور المتقدم (تصحيح وإعادة هيكلة واستدلال معقد، 24 GB فأكثر):** Ollama + Qwen3.8 27B (نموذج كثيف، 18 GB) -- يتعامل مع سياق الملفات المتعددة وتصميم الخوارزميات.',
             '**الجلسات الوكيلية الطويلة (تخطيط ← برمجة ← اختبار ← تكرار):** Ollama + Laguna XS 2.1 (سياق 256K، و70.9% في SWE-bench Verified) أو Devstral Small 2 -- مصممان لاستدعاء الأدوات والتشغيل متعدد الخطوات.',
             '**سير عمل يتمحور حول IDE (VS Code وCursor وJetBrains):** Continue.dev + Codestral 22B -- محسّن لـ FIM للإكمال عند موضع المؤشر، وأفضل بديل محلي لـ Copilot.',
-            '**البيئات الحساسة للخصوصية (GDPR وHIPAA والكود المملوك):** أي نموذج محلي أعلاه عبر Ollama (وليس وسم `:cloud`) -- بلا استدعاءات API خارجية، وبالكامل داخل المنشأة، ولا يغادر الكود جهازك.',
+            '**البيئات الحساسة للخصوصية (GDPR وHIPAA والكود المملوك):** أي نموذج محلي أعلاه عبر Ollama (وليس وسم `:cloud`) -- بلا استدعاءات API خارجية للاستدلال، فيبقى الكود على جهازك ما دامت إضافات المحرر والأدوات الأخرى لا تستخدم الشبكة أيضاً.',
           ],
           callouts: [
             { type: 'warning', text: '❌ **تجنّب:** تشغيل Qwen3.8 27B (18 GB) على أجهزة تقل ذاكرة GPU أو الذاكرة الموحّدة فيها عن نحو 24 GB. فعندما يتجاوز النموذج إلى ذاكرة النظام تنخفض السرعة بشدة. استخدم Qwen3 8B أو Devstral Small 2 على الأجهزة الأصغر.' },
@@ -1726,7 +1726,7 @@ schema: {
             '**اليابان (METI)**',
             'تغطي إرشادات الأمن السيبراني من METI بشكل متزايد استخدام أدوات الذكاء الاصطناعي في تطوير البرمجيات. يتعامل Qwen3-Coder مع تعليقات الكود اليابانية وأعراف تسمية المتغيرات بشكل أصلي -- مفيد لقواعد الكود المطوّرة في اليابان ذات التوثيق المضمّن باليابانية. لسجلات الامتثال، يوفر وسم Ollama (مثلاً qwen2.5-coder:32b) معرّف الإصدار الدقيق الذي تتطلبه وثائق حوكمة الذكاء الاصطناعي من METI.',
             '**الصين**',
-            'بموجب قانون أمن البيانات الصيني (数据安全法)، لا يمكن معالجة الشيفرة المصدرية للبنية التحتية المعلوماتية الحرجة بواسطة خدمات سحابية أجنبية. يُعدّ Qwen3.8 27B وQwen3-Coder (Alibaba، Apache 2.0) الخيار الطبيعي لسير عمل البرمجة في الشركات الصينية -- مطوّر صيني وترخيص Apache 2.0 ونشر محلي كامل عبر Ollama. Kimi K2.6 (من Moonshot AI) صيني المنشأ أيضاً لكنه يحتاج عتاداً بمستوى الخوادم للتشغيل المحلي.',
+            'بموجب قانون أمن البيانات الصيني (数据安全法)، لا يمكن معالجة الشيفرة المصدرية للبنية التحتية المعلوماتية الحرجة بواسطة خدمات سحابية أجنبية. يُعدّ Qwen3.8 27B وQwen3-Coder (Alibaba، Apache 2.0) الخيار الطبيعي لسير عمل البرمجة في الشركات الصينية -- مطوّر صيني وترخيص Apache 2.0 ونشر محلي كامل عبر Ollama. Kimi K2.6 (من Moonshot AI) صيني المنشأ أيضاً لكنه يحتاج عتاداً بمستوى الخوادم للتشغيل المحلي. هذا ليس استشارة قانونية؛ تحقق من المتطلبات المنطبقة على حالتك.',
           ],
         },
         commonMistakes: {
@@ -1781,7 +1781,7 @@ schema: {
             { q: 'هل نماذج البرمجة المحلية سريعة بما يكفي للتطوير؟', a: 'نعم لسير العمل التكراري. تعتمد السرعة على GPU والتكميم وطول السياق. النماذج الصغيرة مثل Qwen3 8B تستجيب بسرعة على الحواسيب المحمولة؛ والنماذج الكبيرة أبطأ لكل رمز. انتظار بضع ثوانٍ لكل استجابة مقبول في نمط الطلب والمراجعة، لكنه غير مقبول للإكمال عند كل ضغطة مفتاح حيث ينبغي استخدام نموذج FIM صغير.' },
             { q: 'هل يمكن لنماذج LLM المحلية استبدال GPT-5.6 في البرمجة؟', a: 'ليس بالكامل. تتأخر النماذج المحلية (Qwen3.8 27B وDevstral Small 2) عن النماذج السحابية الرائدة في المعرفة الحديثة بالأطر (واجهات API الصادرة بعد تاريخ قطع التدريب)، والاستدلال متعدد الملفات الطويل جداً (100k+ رمز)، ودقة التصحيح. وقد ضيّقت الفجوة في مهام الملفات المتعددة اليومية وتُبقي كودك خاصاً.' },
             { q: 'أي لغة يدعمها Qwen3-Coder بشكل أفضل؟', a: 'Python هي لغة التدريب الأساسية. وتُدعم JavaScript وTypeScript وJava وC++ وGo وRust وSQL جيداً. ويتعامل النموذج أيضاً مع PHP وRuby وSwift وKotlin. في اللغات غير Python تكون نتائج HumanEval أقل لكنها تبقى تنافسية.' },
-            { q: 'هل DeepSeek-Coder آمن للكود المملوك؟', a: 'عند التشغيل محلياً عبر Ollama لا يُجري DeepSeek-Coder أي اتصالات خارجية. يبقى الكود على عتادك. ينطبق القلق بشأن بيانات DeepSeek على واجهته السحابية ([api.deepseek.com](https://api.deepseek.com)) لا على الاستدلال المحلي عبر Ollama. الاستدلال المحلي خاص تماماً.' },
+            { q: 'هل DeepSeek-Coder آمن للكود المملوك؟', a: 'عند التشغيل محلياً عبر Ollama لا يُجري DeepSeek-Coder أي اتصالات خارجية. يبقى الكود على عتادك. ينطبق القلق بشأن بيانات DeepSeek على واجهته السحابية ([api.deepseek.com](https://api.deepseek.com)) لا على الاستدلال المحلي عبر Ollama. لا يرسل الاستدلال المحلي أي كود إلى خوادم DeepSeek.' },
             { q: 'هل يمكنني استخدام نماذج البرمجة المحلية لتوليد SQL؟', a: 'نعم -- يتعامل Qwen3.8 27B وDevstral Small 2 مع توليد SQL. قدّم مخطط الجداول في سياق الأمر. وللاستعلامات المعقدة متعددة JOIN استخدم سياق 32K لتضمين المخطط كاملاً. اضبط أمر النظام: «أنت خبير SQL. ولّد SQL صالحاً فقط.»' },
             { q: 'ما هو SWE-bench ولماذا يحل محل HumanEval؟', a: 'يختبر SWE-bench قدرة النموذج على حل مشكلات GitHub الحقيقية — قراءة قواعد الكود وإجراء تعديلات على ملفات متعددة وكتابة الاختبارات. وعلى عكس HumanEval (دوال Python منفردة) يتنبأ SWE-bench بأداء النموذج في سير عمل التطوير الفعلي. SWE-bench Verified وSWE-bench Pro نسختان مختلفتان ونتائجهما غير قابلة للتبادل. في 2026 أصبح SWE-bench المعيار الرئيسي لتقييم نماذج البرمجة في الاستخدام الفعلي.' },
             { q: 'كيف أربط نموذج برمجة محلياً بـ VS Code؟', a: 'ثبّت إضافة Continue.dev من سوق VS Code. في إعدادات Continue اختر Ollama كمزوّد وحدّد نموذجك (مثل `qwen3:8b` أو `qwen3.8` أو `codestral:22b`). تتصل الإضافة بـ Ollama تلقائياً على localhost:11434. استخدم Cmd+I (macOS) أو Ctrl+I (Windows) لتشغيل توليد الكود المضمّن.' },
@@ -1938,7 +1938,7 @@ schema: {
             'name': 'هل DeepSeek-Coder آمن للكود المملوك؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'عند التشغيل محلياً عبر Ollama لا يُجري DeepSeek-Coder أي اتصالات خارجية. يبقى الكود على عتادك. ينطبق القلق بشأن بيانات DeepSeek على واجهته السحابية ([api.deepseek.com](https://api.deepseek.com)) لا على الاستدلال المحلي عبر Ollama. الاستدلال المحلي خاص تماماً.',
+              'text': 'عند التشغيل محلياً عبر Ollama لا يُجري DeepSeek-Coder أي اتصالات خارجية. يبقى الكود على عتادك. ينطبق القلق بشأن بيانات DeepSeek على واجهته السحابية ([api.deepseek.com](https://api.deepseek.com)) لا على الاستدلال المحلي عبر Ollama. لا يرسل الاستدلال المحلي أي كود إلى خوادم DeepSeek.',
             },
           },
           {
@@ -2232,7 +2232,7 @@ schema: {
           image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-pt.webp',
           imageCaption: 'Pontuações informadas pelos fabricantes, por modelo: Qwen3.8 27B 61,7 SWE-bench Pro, Qwen 3.6 27B 77,2% SWE-bench Verified, Laguna XS 2.1 70,9% SWE-bench Verified, Devstral Small 2 65,8% SWE-bench Verified, Kimi K2.6 58,6 SWE-bench Pro, Qwen2.5-Coder 32B 87% HumanEval. Arneses e conjuntos de tarefas diferem; compare apenas dentro de uma mesma coluna.',
           callouts: [
-            { type: 'note', text: 'O HumanEval mede a geração de funções Python isoladas. O SWE-bench mede mudanças reais de código em vários arquivos. "Pro" e "Verified" são variantes diferentes do SWE-bench e não são intercambiáveis: 77,2% Verified e 61,7 Pro não podem ser comparados diretamente. Todas as pontuações são informadas pelos fabricantes.' },
+            { type: 'note', text: 'O HumanEval mede a geração de funções Python isoladas. O SWE-bench mede mudanças reais de código em vários arquivos. "Pro" e "Verified" são variantes diferentes do SWE-bench e não são intercambiáveis: 77,2% Verified e 61,7 Pro não podem ser comparados diretamente. Todas as pontuações são informadas pelos fabricantes. Os números de HumanEval de modelos mais antigos (Qwen2.5-Coder 32B, Qwen3 8B) vêm de versões anteriores desta página e não foram reverificados.' },
           ],
         },
         codingExamples: {
@@ -2318,7 +2318,7 @@ schema: {
             '**Desenvolvedor avançado (depuração, refatoração, raciocínio complexo, 24 GB ou mais):** Ollama + Qwen3.8 27B (modelo denso, 18 GB) -- lida com contexto de vários arquivos e design de algoritmos.',
             '**Sessões agênticas longas (planejar → programar → testar → iterar):** Ollama + Laguna XS 2.1 (contexto 256K, SWE-bench Verified 70,9%) ou Devstral Small 2 -- criados para chamadas de ferramentas e execuções em várias etapas.',
             '**Fluxo centrado no IDE (VS Code, Cursor, JetBrains):** Continue.dev + Codestral 22B -- otimizado para FIM na posição do cursor, melhor alternativa local ao Copilot.',
-            '**Ambientes críticos para privacidade (LGPD, HIPAA, código proprietário):** qualquer modelo local acima via Ollama (não uma tag `:cloud`) -- sem chamadas externas de API, 100% local, o código nunca sai da sua máquina.',
+            '**Ambientes críticos para privacidade (LGPD, HIPAA, código proprietário):** qualquer modelo local acima via Ollama (não uma tag `:cloud`) -- sem chamadas externas de API na inferência, então seu código fica na sua máquina enquanto plugins do editor e outras ferramentas também não usarem a rede.',
           ],
           callouts: [
             { type: 'warning', text: '❌ **Evite:** rodar o Qwen3.8 27B (18 GB) em máquinas com menos de cerca de 24 GB de memória de GPU ou unificada. Quando o modelo transborda para a RAM do sistema, a velocidade cai muito. Use o Qwen3 8B ou o Devstral Small 2 em máquinas menores.' },
@@ -2404,7 +2404,7 @@ schema: {
             { q: 'Modelos de código locais são rápidos o bastante para desenvolvimento?', a: 'Sim, para fluxos iterativos. A velocidade depende da GPU, da quantização e do tamanho do contexto. Modelos pequenos como o Qwen3 8B respondem rápido em notebooks; modelos grandes são mais lentos por token. Esperar alguns segundos por resposta é aceitável para pedir e revisar, mas não para autocompletar a cada tecla, em que convém um modelo FIM pequeno.' },
             { q: 'LLMs locais podem substituir o GPT-5.6 para programar?', a: 'Não totalmente. Modelos locais (Qwen3.8 27B, Devstral Small 2) ficam atrás dos modelos de nuvem de ponta em conhecimento recente de frameworks (APIs posteriores ao corte de treinamento), raciocínio muito longo em vários arquivos (100 mil+ tokens) e precisão de depuração. Eles reduziram a distância em tarefas cotidianas com vários arquivos e mantêm seu código privado.' },
             { q: 'Qual linguagem o Qwen3-Coder suporta melhor?', a: 'Python é a linguagem principal de treinamento. JavaScript, TypeScript, Java, C++, Go, Rust e SQL são bem suportados. O modelo também lida com PHP, Ruby, Swift e Kotlin. Em linguagens que não são Python, as pontuações do HumanEval são menores, mas ainda competitivas.' },
-            { q: 'O DeepSeek-Coder é seguro para código proprietário?', a: 'Ao rodar localmente via Ollama, o DeepSeek-Coder não faz conexões externas. Seu código permanece no seu hardware. A preocupação com dados do DeepSeek se aplica à API na nuvem ([api.deepseek.com](https://api.deepseek.com)), não à inferência local com Ollama. A inferência local é totalmente privada.' },
+            { q: 'O DeepSeek-Coder é seguro para código proprietário?', a: 'Ao rodar localmente via Ollama, o DeepSeek-Coder não faz conexões externas. Seu código permanece no seu hardware. A preocupação com dados do DeepSeek se aplica à API na nuvem ([api.deepseek.com](https://api.deepseek.com)), não à inferência local com Ollama. A inferência local não envia código aos servidores da DeepSeek.' },
             { q: 'Posso usar modelos de código locais para gerar SQL?', a: 'Sim -- o Qwen3.8 27B e o Devstral Small 2 lidam com geração de SQL. Forneça o esquema das tabelas no contexto do prompt. Para consultas complexas com vários JOINs, use 32K de contexto para incluir o esquema completo. Defina um prompt de sistema: "Você é um especialista em SQL. Gere apenas SQL válido."' },
             { q: 'O que é o SWE-bench e por que ele substitui o HumanEval?', a: 'O SWE-bench testa se um modelo resolve issues reais do GitHub — ler bases de código, fazer mudanças em vários arquivos e escrever testes. Ao contrário do HumanEval (funções Python isoladas), o SWE-bench prevê o desempenho em fluxos de desenvolvimento reais. SWE-bench Verified e SWE-bench Pro são variantes diferentes e suas pontuações não são intercambiáveis. Em 2026, o SWE-bench é o benchmark principal para avaliar modelos de código em uso real.' },
             { q: 'Como conecto um modelo de código local ao VS Code?', a: 'Instale a extensão Continue.dev pelo marketplace do VS Code. Nas configurações do Continue, escolha o Ollama como provedor e informe seu modelo (por exemplo, `qwen3:8b`, `qwen3.8`, `codestral:22b`). A extensão se conecta ao Ollama em localhost:11434 automaticamente. Use Cmd+I (macOS) ou Ctrl+I (Windows) para acionar a geração de código em linha.' },
@@ -2680,7 +2680,7 @@ schema: {
           image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-de.webp',
           imageCaption: 'Herstellerangaben zu Benchmarks nach Modell: Qwen3.8 27B 61,7 SWE-bench Pro, Qwen 3.6 27B 77,2 % SWE-bench Verified, Laguna XS 2.1 70,9 % SWE-bench Verified, Devstral Small 2 65,8 % SWE-bench Verified, Kimi K2.6 58,6 SWE-bench Pro, Qwen2.5-Coder 32B 87 % HumanEval. Testumgebungen und Aufgabensätze unterscheiden sich, vergleiche daher nur innerhalb einer Spalte.',
           callouts: [
-            { type: 'note', text: 'HumanEval misst die Generierung einzelner Python-Funktionen. SWE-bench misst reale Code-Änderungen über mehrere Dateien. „Pro" und „Verified" sind verschiedene SWE-bench-Varianten und nicht austauschbar: ein Wert von 77,2 % Verified und ein Wert von 61,7 Pro lassen sich nicht direkt vergleichen. Alle Werte stammen von den Herstellern.' },
+            { type: 'note', text: 'HumanEval misst die Generierung einzelner Python-Funktionen. SWE-bench misst reale Code-Änderungen über mehrere Dateien. „Pro" und „Verified" sind verschiedene SWE-bench-Varianten und nicht austauschbar: ein Wert von 77,2 % Verified und ein Wert von 61,7 Pro lassen sich nicht direkt vergleichen. Alle Werte stammen von den Herstellern. Die HumanEval-Werte älterer Modelle (Qwen2.5-Coder 32B, Qwen3 8B) stammen aus früheren Versionen dieser Seite und wurden nicht erneut geprüft.' },
           ],
         },
         codingExamples: {
@@ -2766,7 +2766,7 @@ schema: {
             '**Fortgeschrittene Entwickler (Debugging, Refactoring, komplexes Reasoning, ab 24 GB):** Ollama + Qwen3.8 27B (dichtes Modell, 18 GB) -- bewältigt Multi-Datei-Kontext und Algorithmus-Design.',
             '**Lange agentische Sitzungen (planen → coden → testen → iterieren):** Ollama + Laguna XS 2.1 (256K Kontext, SWE-bench Verified 70,9 %) oder Devstral Small 2 -- für Tool-Aufrufe und mehrstufige Läufe gebaut.',
             '**IDE-orientierter Workflow (VS Code, Cursor, JetBrains):** Continue.dev + Codestral 22B -- FIM-optimiert für Vervollständigung an der Cursor-Position, beste lokale Copilot-Alternative.',
-            '**Datenschutzkritische Umgebungen (DSGVO, HIPAA, proprietärer Code):** Jedes lokale Modell oben über Ollama (kein `:cloud`-Tag) -- keine externen API-Aufrufe, 100 % On-Premises, der Code verlässt nie deinen Rechner.',
+            '**Datenschutzkritische Umgebungen (DSGVO, HIPAA, proprietärer Code):** Jedes lokale Modell oben über Ollama (kein `:cloud`-Tag) -- keine externen API-Aufrufe bei der Inferenz, der Code bleibt also auf deinem Rechner, solange auch Editor-Plugins und andere Tools keine Netzwerkverbindungen aufbauen.',
           ],
           callouts: [
             { type: 'warning', text: '❌ **Vermeiden:** Qwen3.8 27B (18 GB) auf Rechnern mit weniger als etwa 24 GB GPU- oder Unified Memory ausführen. Sobald das Modell in den Arbeitsspeicher ausweicht, bricht die Geschwindigkeit stark ein. Nutze auf kleineren Rechnern Qwen3 8B oder Devstral Small 2.' },
@@ -2819,7 +2819,7 @@ schema: {
             '**Japan (METI)**',
             'METI-Cybersecurity-Richtlinien behandeln zunehmend die Verwendung von AI-Tools in der Softwareentwicklung. Qwen3-Coder verarbeitet japanische Code-Kommentare und Variablennamen-Konventionen nativ -- nützlich für japanisch entwickelte Codebases mit japanischer Inline-Dokumentation. Für Compliance-Aufzeichnungen bietet das Ollama-Tag (z.B. qwen2.5-coder:32b) die exakte Versions-ID, die METI-AI-Governance-Dokumentation verlangt.',
             '**China**',
-            'Unter Chinas Data Security Law (数据安全法) dürfen Quellcodes für kritische Informationsinfrastruktur nicht von ausländischen Cloud-Services verarbeitet werden. Qwen3.8 27B und Qwen3-Coder (Alibaba, Apache 2.0) sind die natürliche Wahl für chinesische Unternehmens-Programmier-Workflows -- chinesischer Entwickler, Apache-2.0-Lizenz, vollständig lokale Bereitstellung über Ollama. Kimi K2.6 (Moonshot AI) stammt ebenfalls aus China, braucht für den lokalen Betrieb aber Server-Hardware.',
+            'Unter Chinas Data Security Law (数据安全法) dürfen Quellcodes für kritische Informationsinfrastruktur nicht von ausländischen Cloud-Services verarbeitet werden. Qwen3.8 27B und Qwen3-Coder (Alibaba, Apache 2.0) sind die natürliche Wahl für chinesische Unternehmens-Programmier-Workflows -- chinesischer Entwickler, Apache-2.0-Lizenz, vollständig lokale Bereitstellung über Ollama. Kimi K2.6 (Moonshot AI) stammt ebenfalls aus China, braucht für den lokalen Betrieb aber Server-Hardware. Das ist keine Rechtsberatung; prüfe die für deinen Fall geltenden Anforderungen.',
           ],
         },
         commonMistakes: {
@@ -2871,7 +2871,7 @@ schema: {
             { q: 'Sind lokale Coding-Modelle schnell genug für die Entwicklung?', a: 'Ja für iterative Workflows. Die Geschwindigkeit hängt von GPU, Quantisierung und Kontextlänge ab. Kleinere Modelle wie Qwen3 8B antworten auf Laptops zügig; größere Modelle sind pro Token langsamer. Mehrere Sekunden Wartezeit pro Antwort sind für Anfrage-und-Review-Nutzung akzeptabel, nicht aber für Autovervollständigung auf Tastendruck-Ebene, wofür du ein kleines FIM-Modell nutzen solltest.' },
             { q: 'Können lokale LLMs GPT-5.6 für Programmierung ersetzen?', a: 'Nicht vollständig. Lokale Modelle (Qwen3.8 27B, Devstral Small 2) liegen bei aktuellem Framework-Wissen (APIs nach dem Trainings-Cutoff), sehr langem Multi-Datei-Reasoning (100k+ Tokens) und Debugging-Genauigkeit hinter Frontier-Cloud-Modellen zurück. Bei alltäglichen Multi-Datei-Aufgaben haben sie aufgeholt und halten deinen Code privat.' },
             { q: 'Welche Sprache unterstützt Qwen3-Coder am besten?', a: 'Python ist die primäre Trainingssprache. JavaScript, TypeScript, Java, C++, Go, Rust und SQL werden alle gut unterstützt. Das Modell beherrscht auch PHP, Ruby, Swift und Kotlin. Bei Nicht-Python-Sprachen sind die HumanEval-Werte niedriger, aber weiterhin konkurrenzfähig.' },
-            { q: 'Ist DeepSeek-Coder sicher für proprietären Code?', a: 'Bei lokaler Ausführung über Ollama baut DeepSeek-Coder keine externen Verbindungen auf. Dein Code bleibt auf deiner Hardware. Die Datenschutzbedenken bei DeepSeek betreffen die Cloud-API ([api.deepseek.com](https://api.deepseek.com)), nicht die lokale Ollama-Inferenz. Lokale Inferenz ist vollständig privat.' },
+            { q: 'Ist DeepSeek-Coder sicher für proprietären Code?', a: 'Bei lokaler Ausführung über Ollama baut DeepSeek-Coder keine externen Verbindungen auf. Dein Code bleibt auf deiner Hardware. Die Datenschutzbedenken bei DeepSeek betreffen die Cloud-API ([api.deepseek.com](https://api.deepseek.com)), nicht die lokale Ollama-Inferenz. Lokale Inferenz sendet keinen Code an DeepSeek-Server.' },
             { q: 'Kann ich lokale Coding-Modelle für SQL-Generierung nutzen?', a: 'Ja -- Qwen3.8 27B und Devstral Small 2 beherrschen SQL-Generierung. Gib das Tabellenschema im Prompt-Kontext an. Für komplexe Multi-Join-Abfragen nutze 32K Kontext, um das vollständige Schema einzubinden. Setze einen System-Prompt: „Du bist ein SQL-Experte. Erzeuge ausschließlich gültiges SQL."' },
             { q: 'Was ist SWE-bench und warum ersetzt es HumanEval?', a: 'SWE-bench testet, ob ein Modell echte GitHub-Issues lösen kann — Codebasen lesen, Änderungen über mehrere Dateien vornehmen und Tests schreiben. Anders als HumanEval (einzelne Python-Funktionen) sagt SWE-bench voraus, wie sich ein Modell in echten Entwicklungs-Workflows schlägt. SWE-bench Verified und SWE-bench Pro sind verschiedene Varianten, ihre Werte sind nicht austauschbar. 2026 ist SWE-bench der wichtigste Benchmark zur Bewertung von Coding-Modellen für den praktischen Einsatz.' },
             { q: 'Wie verbinde ich ein lokales Coding-Modell mit VS Code?', a: 'Installiere die Continue.dev-Erweiterung aus dem VS-Code-Marketplace. Wähle in den Continue-Einstellungen Ollama als Anbieter und gib dein Modell an (z. B. `qwen3:8b`, `qwen3.8`, `codestral:22b`). Die Erweiterung verbindet sich automatisch mit Ollama unter localhost:11434. Mit Cmd+I (macOS) oder Strg+I (Windows) löst du die Inline-Codegenerierung aus.' },
@@ -3028,7 +3028,7 @@ schema: {
             'name': 'Ist DeepSeek-Coder sicher für proprietären Code?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Bei lokaler Ausführung über Ollama baut DeepSeek-Coder keine externen Verbindungen auf. Dein Code bleibt auf deiner Hardware. Die Datenschutzbedenken bei DeepSeek betreffen die Cloud-API ([api.deepseek.com](https://api.deepseek.com)), nicht die lokale Ollama-Inferenz. Lokale Inferenz ist vollständig privat.',
+              'text': 'Bei lokaler Ausführung über Ollama baut DeepSeek-Coder keine externen Verbindungen auf. Dein Code bleibt auf deiner Hardware. Die Datenschutzbedenken bei DeepSeek betreffen die Cloud-API ([api.deepseek.com](https://api.deepseek.com)), nicht die lokale Ollama-Inferenz. Lokale Inferenz sendet keinen Code an DeepSeek-Server.',
             },
           },
           {
@@ -3298,7 +3298,7 @@ schema: {
           image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-fr.webp',
           imageCaption: 'Scores annoncés par les éditeurs, par modèle : Qwen3.8 27B 61,7 SWE-bench Pro, Qwen 3.6 27B 77,2 % SWE-bench Verified, Laguna XS 2.1 70,9 % SWE-bench Verified, Devstral Small 2 65,8 % SWE-bench Verified, Kimi K2.6 58,6 SWE-bench Pro, Qwen2.5-Coder 32B 87 % HumanEval. Les harnais et jeux de tâches diffèrent : comparez uniquement au sein d\'une même colonne.',
           callouts: [
-            { type: 'note', text: 'HumanEval mesure la génération de fonctions Python isolées. SWE-bench mesure des modifications de code réelles sur plusieurs fichiers. « Pro » et « Verified » sont des variantes différentes de SWE-bench et ne sont pas interchangeables : un score de 77,2 % Verified et un score de 61,7 Pro ne se comparent pas directement. Tous les scores sont annoncés par les éditeurs.' },
+            { type: 'note', text: 'HumanEval mesure la génération de fonctions Python isolées. SWE-bench mesure des modifications de code réelles sur plusieurs fichiers. « Pro » et « Verified » sont des variantes différentes de SWE-bench et ne sont pas interchangeables : un score de 77,2 % Verified et un score de 61,7 Pro ne se comparent pas directement. Tous les scores sont annoncés par les éditeurs. Les chiffres HumanEval des modèles plus anciens (Qwen2.5-Coder 32B, Qwen3 8B) proviennent de versions antérieures de cette page et n\'ont pas été revérifiés.' },
           ],
         },
         codingExamples: {
@@ -3384,7 +3384,7 @@ schema: {
             '**Développeur avancé (débogage, refactoring, raisonnement complexe, 24 Go et plus) :** Ollama + Qwen3.8 27B (modèle dense, 18 Go) -- gère le contexte multi-fichiers et la conception d\'algorithmes.',
             '**Longues sessions agentiques (planifier → coder → tester → itérer) :** Ollama + Laguna XS 2.1 (contexte 256K, SWE-bench Verified 70,9 %) ou Devstral Small 2 -- conçus pour l\'appel d\'outils et les exécutions en plusieurs étapes.',
             '**Workflow centré IDE (VS Code, Cursor, JetBrains) :** Continue.dev + Codestral 22B -- optimisé FIM pour la complétion à la position du curseur, meilleure alternative locale à Copilot.',
-            '**Environnements sensibles à la confidentialité (RGPD, HIPAA, code propriétaire) :** n\'importe quel modèle local ci-dessus via Ollama (pas un tag `:cloud`) -- aucun appel d\'API externe, 100 % sur site, le code ne quitte jamais votre machine.',
+            '**Environnements sensibles à la confidentialité (RGPD, HIPAA, code propriétaire) :** n\'importe quel modèle local ci-dessus via Ollama (pas un tag `:cloud`) -- aucun appel d\'API externe pour l\'inférence, donc votre code reste sur votre machine tant que vos plugins d\'éditeur et autres outils n\'utilisent pas non plus le réseau.',
           ],
           callouts: [
             { type: 'warning', text: '❌ **À éviter :** exécuter Qwen3.8 27B (18 Go) sur des machines avec moins d\'environ 24 Go de mémoire GPU ou unifiée. Dès que le modèle déborde en RAM système, la vitesse chute fortement. Utilisez Qwen3 8B ou Devstral Small 2 sur les machines plus petites.' },
@@ -3433,7 +3433,7 @@ schema: {
             'Pour les équipes de développement logiciel de l\'UE travaillant sur des codebases propriétaires, la génération de code local signifie que le code source ne quitte jamais l\'infrastructure de l\'organisation. Le RGPD Article 32 exige des mesures de sécurité techniques appropriées — transmettre le code source aux APIs IA cloud crée une relation de responsable de traitement supplémentaire en vertu de l\'Article 28. L\'inférence locale l\'élimine.',
             'Qwen3.8 27B (Alibaba, Apache 2.0) et DeepSeek-Coder V2 (DeepSeek, MIT) tournent tous deux entièrement sur site. Pour les organisations de l\'UE qui préfèrent un modèle d\'origine européenne : les modèles de code de Mistral (Mistral Small 3.1, Codestral, Devstral Small 2) viennent de Mistral AI (France) ; Devstral Small 2 est sous Apache 2.0, tandis que les conditions de licence de Codestral diffèrent et doivent être vérifiées. Laguna XS 2.1 utilise OpenMDW-1.1 (permissive, usage commercial autorisé, non approuvée par l\'OSI) -- confirmez toujours les conditions de licence avant un déploiement commercial. Le règlement européen sur l\'IA classe potentiellement la génération de code assistée par IA pour les infrastructures critiques comme à haut risque -- l\'inférence sur site garde le pipeline dans votre périmètre de sécurité existant.',
             '**Japon, Chine, régions à conformité élevée**',
-            'Selon la loi chinoise sur la sécurité des données (数据安全法), le code source des infrastructures d\'information critiques ne peut pas être traité par des services cloud étrangers. Qwen3.8 27B et Qwen3-Coder (Alibaba, Apache 2.0) sont le choix naturel pour les workflows de développement des entreprises chinoises -- développeur chinois, licence Apache 2.0, déploiement local complet via Ollama. Kimi K2.6 (Moonshot AI) est aussi d\'origine chinoise mais demande du matériel de classe serveur en local.',
+            'Selon la loi chinoise sur la sécurité des données (数据安全法), le code source des infrastructures d\'information critiques ne peut pas être traité par des services cloud étrangers. Qwen3.8 27B et Qwen3-Coder (Alibaba, Apache 2.0) sont le choix naturel pour les workflows de développement des entreprises chinoises -- développeur chinois, licence Apache 2.0, déploiement local complet via Ollama. Kimi K2.6 (Moonshot AI) est aussi d\'origine chinoise mais demande du matériel de classe serveur en local. Ceci ne constitue pas un avis juridique ; vérifiez les exigences applicables à votre cas.',
           ],
         },
         commonMistakes: {
@@ -3485,7 +3485,7 @@ schema: {
             { q: 'Les modèles de code locaux sont-ils assez rapides pour le développement ?', a: 'Oui pour les workflows itératifs. La vitesse dépend du GPU, de la quantification et de la longueur du contexte. Les petits modèles comme Qwen3 8B répondent vite sur portable ; les grands modèles sont plus lents par token. Attendre quelques secondes par réponse est acceptable pour demander puis relire, mais pas pour l\'autocomplétion à chaque frappe, où il faut un petit modèle FIM.' },
             { q: 'Les LLM locaux peuvent-ils remplacer GPT-5.6 pour coder ?', a: 'Pas entièrement. Les modèles locaux (Qwen3.8 27B, Devstral Small 2) restent derrière les modèles cloud de pointe sur les connaissances récentes des frameworks (API postérieures à la date limite d\'entraînement), le raisonnement multi-fichiers très long (100k+ tokens) et la précision du débogage. Ils ont réduit l\'écart sur les tâches multi-fichiers courantes et gardent votre code privé.' },
             { q: 'Quel langage Qwen3-Coder prend-il le mieux en charge ?', a: 'Python est le langage d\'entraînement principal. JavaScript, TypeScript, Java, C++, Go, Rust et SQL sont tous bien pris en charge. Le modèle gère aussi PHP, Ruby, Swift et Kotlin. Pour les langages non Python, les scores HumanEval sont plus bas mais restent compétitifs.' },
-            { q: 'DeepSeek-Coder est-il sûr pour du code propriétaire ?', a: 'En exécution locale via Ollama, DeepSeek-Coder n\'établit aucune connexion externe. Votre code reste sur votre matériel. Le problème de données lié à DeepSeek concerne son API cloud ([api.deepseek.com](https://api.deepseek.com)), pas l\'inférence locale avec Ollama. L\'inférence locale est entièrement privée.' },
+            { q: 'DeepSeek-Coder est-il sûr pour du code propriétaire ?', a: 'En exécution locale via Ollama, DeepSeek-Coder n\'établit aucune connexion externe. Votre code reste sur votre matériel. Le problème de données lié à DeepSeek concerne son API cloud ([api.deepseek.com](https://api.deepseek.com)), pas l\'inférence locale avec Ollama. L\'inférence locale n\'envoie aucun code aux serveurs de DeepSeek.' },
             { q: 'Puis-je utiliser des modèles de code locaux pour générer du SQL ?', a: 'Oui -- Qwen3.8 27B et Devstral Small 2 gèrent la génération de SQL. Fournissez le schéma des tables dans le contexte du prompt. Pour les requêtes complexes avec plusieurs jointures, utilisez 32K de contexte pour inclure le schéma complet. Définissez un prompt système : « Vous êtes un expert SQL. Générez uniquement du SQL valide. »' },
             { q: 'Qu\'est-ce que SWE-bench et pourquoi remplace-t-il HumanEval ?', a: 'SWE-bench teste la capacité d\'un modèle à résoudre de vrais tickets GitHub — lire des bases de code, faire des modifications multi-fichiers et écrire des tests. Contrairement à HumanEval (fonctions Python isolées), SWE-bench prédit les performances d\'un modèle dans de vrais workflows de développement. SWE-bench Verified et SWE-bench Pro sont des variantes différentes dont les scores ne sont pas interchangeables. En 2026, SWE-bench est le benchmark principal pour évaluer les modèles de code en usage réel.' },
             { q: 'Comment connecter un modèle de code local à VS Code ?', a: 'Installez l\'extension Continue.dev depuis le marketplace de VS Code. Dans les paramètres de Continue, choisissez Ollama comme fournisseur et indiquez votre modèle (par ex. `qwen3:8b`, `qwen3.8`, `codestral:22b`). L\'extension se connecte automatiquement à Ollama sur localhost:11434. Utilisez Cmd+I (macOS) ou Ctrl+I (Windows) pour lancer la génération de code en ligne.' },
@@ -3642,7 +3642,7 @@ schema: {
             'name': 'DeepSeek-Coder est-il sûr pour du code propriétaire ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'En exécution locale via Ollama, DeepSeek-Coder n\'établit aucune connexion externe. Votre code reste sur votre matériel. Le problème de données lié à DeepSeek concerne son API cloud ([api.deepseek.com](https://api.deepseek.com)), pas l\'inférence locale avec Ollama. L\'inférence locale est entièrement privée.',
+              'text': 'En exécution locale via Ollama, DeepSeek-Coder n\'établit aucune connexion externe. Votre code reste sur votre matériel. Le problème de données lié à DeepSeek concerne son API cloud ([api.deepseek.com](https://api.deepseek.com)), pas l\'inférence locale avec Ollama. L\'inférence locale n\'envoie aucun code aux serveurs de DeepSeek.',
             },
           },
           {
@@ -3931,7 +3931,7 @@ schema: {
           image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ja.webp',
           imageCaption: '各社公表のベンチマークスコア：Qwen3.8 27B SWE-bench Pro 61.7、Qwen 3.6 27B SWE-bench Verified 77.2%、Laguna XS 2.1 SWE-bench Verified 70.9%、Devstral Small 2 SWE-bench Verified 65.8%、Kimi K2.6 SWE-bench Pro 58.6、Qwen2.5-Coder 32B HumanEval 87%。ハーネスとタスクセットが異なるため、比較は同じ列の中だけで行ってください。',
           callouts: [
-            { type: 'note', text: 'HumanEvalは単一のPython関数の生成を測定し、SWE-benchは複数ファイルにまたがる実際のコード変更を測定します。「Pro」と「Verified」はSWE-benchの別バリアントで互換性がありません。Verified 77.2%とPro 61.7を直接比較することはできません。スコアはすべて各社の公表値です。' },
+            { type: 'note', text: 'HumanEvalは単一のPython関数の生成を測定し、SWE-benchは複数ファイルにまたがる実際のコード変更を測定します。「Pro」と「Verified」はSWE-benchの別バリアントで互換性がありません。Verified 77.2%とPro 61.7を直接比較することはできません。スコアはすべて各社の公表値です。旧モデル（Qwen2.5-Coder 32B、Qwen3 8B）のHumanEval数値は本ページの以前の版から引き継いだもので、再検証していません。' },
           ],
         },
         codingExamples: {
@@ -4017,7 +4017,7 @@ schema: {
             '**上級開発者（デバッグ、リファクタリング、複雑な推論、24GB以上）：** Ollama＋Qwen3.8 27B（密集モデル、18GB）-- マルチファイルのコンテキストとアルゴリズム設計に対応。',
             '**長時間のエージェントセッション（計画→コーディング→テスト→反復）：** Ollama＋Laguna XS 2.1（256Kコンテキスト、SWE-bench Verified 70.9%）またはDevstral Small 2 -- ツール呼び出しと複数ステップ実行向け。',
             '**IDE中心のワークフロー（VS Code、Cursor、JetBrains）：** Continue.dev＋Codestral 22B -- カーソル位置での補完向けにFIM最適化、最良のローカルCopilot代替。',
-            '**プライバシー重視の環境（GDPR、HIPAA、独自コード）：** 上記のいずれかのローカルモデルをOllama経由で（`:cloud`タグは不可）-- 外部APIコールなし、完全オンプレミス、コードがマシンの外に出ない。',
+            '**プライバシー重視の環境（GDPR、HIPAA、独自コード）：** 上記のいずれかのローカルモデルをOllama経由で（`:cloud`タグは不可）-- 推論に外部APIコールはないため、エディタのプラグインなど他のツールもネットワークを使わない限り、コードはマシンの外に出ません。',
           ],
           callouts: [
             { type: 'warning', text: '❌ **避けるべき：** GPUまたはユニファイドメモリが約24GB未満のマシンでQwen3.8 27B（18GB）を動かすこと。モデルがシステムRAMにあふれると速度が大きく低下します。小型マシンではQwen3 8BまたはDevstral Small 2を使ってください。' },
@@ -4108,7 +4108,7 @@ schema: {
             { q: 'ローカルのコーディングモデルは開発に十分な速度ですか？', a: '反復的なワークフローには十分です。速度はGPU、量子化、コンテキスト長に依存します。Qwen3 8Bのような小型モデルはノートPCでも素早く応答し、大型モデルはトークンあたりが遅くなります。依頼して確認する使い方なら数秒の待ち時間は許容できますが、キー入力ごとのオートコンプリートには小型のFIMモデルを使うべきです。' },
             { q: 'ローカルLLMはGPT-5.6の代わりになりますか？', a: '完全にはなりません。ローカルモデル（Qwen3.8 27B、Devstral Small 2）は、最新フレームワークの知識（訓練カットオフ以降のAPI）、非常に長いマルチファイル推論（100k+トークン）、デバッグ精度でフロンティアのクラウドモデルに及びません。日常的なマルチファイルのタスクでは差を縮め、コードを外部に出さずに済みます。' },
             { q: 'Qwen3-Coderが最もよくサポートする言語は？', a: 'Pythonが主要な訓練言語です。JavaScript、TypeScript、Java、C++、Go、Rust、SQLもよくサポートされ、PHP、Ruby、Swift、Kotlinも扱えます。Python以外の言語ではHumanEvalスコアは下がりますが、依然として競争力があります。' },
-            { q: 'DeepSeek-Coderは独自コードに使っても安全ですか？', a: 'Ollama経由でローカル実行する場合、DeepSeek-Coderは外部接続を行いません。コードはあなたのハードウェア上にとどまります。DeepSeekに関するデータ上の懸念はクラウドAPI（[api.deepseek.com](https://api.deepseek.com)）に関するもので、ローカルのOllama推論には当てはまりません。ローカル推論は完全にプライベートです。' },
+            { q: 'DeepSeek-Coderは独自コードに使っても安全ですか？', a: 'Ollama経由でローカル実行する場合、DeepSeek-Coderは外部接続を行いません。コードはあなたのハードウェア上にとどまります。DeepSeekに関するデータ上の懸念はクラウドAPI（[api.deepseek.com](https://api.deepseek.com)）に関するもので、ローカルのOllama推論には当てはまりません。ローカル推論ではコードはDeepSeekのサーバーに送信されません。' },
             { q: 'ローカルのコーディングモデルでSQL生成はできますか？', a: 'はい。Qwen3.8 27BとDevstral Small 2はSQL生成に対応します。プロンプトのコンテキストにテーブルスキーマを含めてください。複数JOINを含む複雑なクエリでは、32Kコンテキストで完全なスキーマを含めます。システムプロンプトは「あなたはSQLの専門家です。有効なSQLのみを生成してください。」のように設定します。' },
             { q: 'SWE-benchとは何で、なぜHumanEvalに代わるのですか？', a: 'SWE-benchは、実際のGitHub issueを解決できるか — コードベースを読み、複数ファイルを変更し、テストを書く — を測定します。単一のPython関数を測るHumanEvalと違い、SWE-benchは実際の開発ワークフローでの性能を予測します。SWE-bench VerifiedとSWE-bench Proは別バリアントで、スコアは互換性がありません。2026年には、実用面でコーディングモデルを評価する主要ベンチマークになっています。' },
             { q: 'ローカルのコーディングモデルをVS Codeに接続するには？', a: 'VS CodeマーケットプレイスからContinue.dev拡張機能をインストールします。Continueの設定でプロバイダーにOllamaを選び、モデル（例：`qwen3:8b`、`qwen3.8`、`codestral:22b`）を指定します。拡張機能はlocalhost:11434のOllamaに自動接続します。Cmd+I（macOS）またはCtrl+I（Windows）でインラインのコード生成を起動します。' },
@@ -4268,7 +4268,7 @@ schema: {
             'name': 'DeepSeek-Coderは独自コードに使っても安全ですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ollama経由でローカル実行する場合、DeepSeek-Coderは外部接続を行いません。コードはあなたのハードウェア上にとどまります。DeepSeekに関するデータ上の懸念はクラウドAPI（[api.deepseek.com](https://api.deepseek.com)）に関するもので、ローカルのOllama推論には当てはまりません。ローカル推論は完全にプライベートです。',
+              'text': 'Ollama経由でローカル実行する場合、DeepSeek-Coderは外部接続を行いません。コードはあなたのハードウェア上にとどまります。DeepSeekに関するデータ上の懸念はクラウドAPI（[api.deepseek.com](https://api.deepseek.com)）に関するもので、ローカルのOllama推論には当てはまりません。ローカル推論ではコードはDeepSeekのサーバーに送信されません。',
             },
           },
           {
@@ -4557,7 +4557,7 @@ schema: {
           image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-zh.webp',
           imageCaption: '厂商公布的各模型基准分数：Qwen3.8 27B SWE-bench Pro 61.7，Qwen 3.6 27B SWE-bench Verified 77.2%，Laguna XS 2.1 SWE-bench Verified 70.9%，Devstral Small 2 SWE-bench Verified 65.8%，Kimi K2.6 SWE-bench Pro 58.6，Qwen2.5-Coder 32B HumanEval 87%。评测框架和任务集不同，请仅在同一列内比较。',
           callouts: [
-            { type: 'note', text: 'HumanEval衡量单个Python函数的生成。SWE-bench衡量跨多个文件的真实代码修改。“Pro”和“Verified”是SWE-bench的不同变体，不可互换：77.2%的Verified分数与61.7的Pro分数无法直接比较。所有分数均由厂商公布。' },
+            { type: 'note', text: 'HumanEval衡量单个Python函数的生成。SWE-bench衡量跨多个文件的真实代码修改。“Pro”和“Verified”是SWE-bench的不同变体，不可互换：77.2%的Verified分数与61.7的Pro分数无法直接比较。所有分数均由厂商公布。旧模型（Qwen2.5-Coder 32B、Qwen3 8B）的HumanEval数据沿用自本页早期版本，未重新核实。' },
           ],
         },
         codingExamples: {
@@ -4643,7 +4643,7 @@ schema: {
             '**高级开发者（调试、重构、复杂推理，24GB以上）：** Ollama + Qwen3.8 27B（密集模型，18GB）-- 可处理多文件上下文和算法设计。',
             '**长时间代理会话（规划 → 编码 → 测试 → 迭代）：** Ollama + Laguna XS 2.1（256K上下文，SWE-bench Verified 70.9%）或Devstral Small 2 -- 为工具调用和多步骤运行而生。',
             '**以IDE为中心的工作流（VS Code、Cursor、JetBrains）：** Continue.dev + Codestral 22B -- 针对光标位置补全做了FIM优化，最佳本地Copilot替代。',
-            '**隐私敏感环境（GDPR、HIPAA、专有代码）：** 通过Ollama使用上述任一本地模型（不要用`:cloud`标签）-- 无外部API调用，100%本地部署，代码不会离开你的机器。',
+            '**隐私敏感环境（GDPR、HIPAA、专有代码）：** 通过Ollama使用上述任一本地模型（不要用`:cloud`标签）-- 推理不产生外部API调用，因此只要编辑器插件等其他工具也不联网，代码就不会离开你的机器。',
           ],
           callouts: [
             { type: 'warning', text: '❌ **避免：** 在显存或统一内存不足约24GB的设备上运行Qwen3.8 27B（18GB）。一旦模型溢出到系统内存，速度会大幅下降。较小的设备请使用Qwen3 8B或Devstral Small 2。' },
@@ -4734,7 +4734,7 @@ schema: {
             { q: '本地编程模型的速度够开发使用吗？', a: '对迭代式工作流够用。速度取决于GPU、量化和上下文长度。Qwen3 8B这样的小模型在笔记本上响应很快；大模型每个token更慢。对于提问后审阅的用法，等待几秒可以接受，但逐键自动补全不行，那种场景应使用小型FIM模型。' },
             { q: '本地LLM能替代GPT-5.6用于编程吗？', a: '不能完全替代。本地模型（Qwen3.8 27B、Devstral Small 2）在最新框架知识（训练截止之后的API）、超长多文件推理（100k+ token）和调试准确度上落后于前沿云端模型。它们在日常多文件任务上已缩小差距，并让代码保持私密。' },
             { q: 'Qwen3-Coder对哪种语言支持最好？', a: 'Python是主要训练语言。JavaScript、TypeScript、Java、C++、Go、Rust和SQL都支持良好，也能处理PHP、Ruby、Swift和Kotlin。非Python语言的HumanEval分数较低，但仍有竞争力。' },
-            { q: 'DeepSeek-Coder用于专有代码安全吗？', a: '通过Ollama本地运行时，DeepSeek-Coder不会建立任何外部连接，你的代码保留在自己的硬件上。关于DeepSeek的数据顾虑针对的是其云端API（[api.deepseek.com](https://api.deepseek.com)），而不是本地Ollama推理。本地推理是完全私密的。' },
+            { q: 'DeepSeek-Coder用于专有代码安全吗？', a: '通过Ollama本地运行时，DeepSeek-Coder不会建立任何外部连接，你的代码保留在自己的硬件上。关于DeepSeek的数据顾虑针对的是其云端API（[api.deepseek.com](https://api.deepseek.com)），而不是本地Ollama推理。本地推理不会把代码发送到DeepSeek的服务器。' },
             { q: '可以用本地编程模型生成SQL吗？', a: '可以 -- Qwen3.8 27B和Devstral Small 2都能处理SQL生成。请在提示上下文中提供表结构。对于复杂的多表连接查询，使用32K上下文以包含完整结构。设置系统提示：“你是SQL专家。只生成有效的SQL。”' },
             { q: '什么是SWE-bench，为什么它取代HumanEval？', a: 'SWE-bench测试模型解决真实GitHub问题的能力——阅读代码库、跨文件修改并编写测试。与HumanEval（单个Python函数）不同，SWE-bench能预测模型在真实开发工作流中的表现。SWE-bench Verified和SWE-bench Pro是不同变体，分数不可互换。2026年，SWE-bench是评估实际编程模型的主要基准。' },
             { q: '如何把本地编程模型连接到VS Code？', a: '从VS Code市场安装Continue.dev扩展。在Continue设置中选择Ollama作为提供方并指定模型（例如`qwen3:8b`、`qwen3.8`、`codestral:22b`）。扩展会自动连接到localhost:11434上的Ollama。使用Cmd+I（macOS）或Ctrl+I（Windows）触发行内代码生成。' },
@@ -4894,7 +4894,7 @@ schema: {
             'name': 'DeepSeek-Coder用于专有代码安全吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '通过Ollama本地运行时，DeepSeek-Coder不会建立任何外部连接，你的代码保留在自己的硬件上。关于DeepSeek的数据顾虑针对的是其云端API（[api.deepseek.com](https://api.deepseek.com)），而不是本地Ollama推理。本地推理是完全私密的。',
+              'text': '通过Ollama本地运行时，DeepSeek-Coder不会建立任何外部连接，你的代码保留在自己的硬件上。关于DeepSeek的数据顾虑针对的是其云端API（[api.deepseek.com](https://api.deepseek.com)），而不是本地Ollama推理。本地推理不会把代码发送到DeepSeek的服务器。',
             },
           },
           {
@@ -5187,7 +5187,7 @@ schema: {
           image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ko.webp',
           imageCaption: '개발사가 발표한 모델별 벤치마크 점수: Qwen3.8 27B SWE-bench Pro 61.7, Qwen 3.6 27B SWE-bench Verified 77.2%, Laguna XS 2.1 SWE-bench Verified 70.9%, Devstral Small 2 SWE-bench Verified 65.8%, Kimi K2.6 SWE-bench Pro 58.6, Qwen2.5-Coder 32B HumanEval 87%. 하네스와 작업 집합이 다르므로 같은 열 안에서만 비교하세요.',
           callouts: [
-            { type: 'note', text: 'HumanEval은 단일 Python 함수 생성을 측정합니다. SWE-bench는 여러 파일에 걸친 실제 코드 변경을 측정합니다. "Pro"와 "Verified"는 SWE-bench의 서로 다른 변형이라 호환되지 않습니다. Verified 77.2%와 Pro 61.7은 직접 비교할 수 없습니다. 모든 점수는 개발사가 발표한 값입니다.' },
+            { type: 'note', text: 'HumanEval은 단일 Python 함수 생성을 측정합니다. SWE-bench는 여러 파일에 걸친 실제 코드 변경을 측정합니다. "Pro"와 "Verified"는 SWE-bench의 서로 다른 변형이라 호환되지 않습니다. Verified 77.2%와 Pro 61.7은 직접 비교할 수 없습니다. 모든 점수는 개발사가 발표한 값입니다. 이전 모델(Qwen2.5-Coder 32B, Qwen3 8B)의 HumanEval 수치는 이 페이지의 이전 버전에서 가져온 것으로 다시 검증하지 않았습니다.' },
           ],
         },
         codingExamples: {
@@ -5273,7 +5273,7 @@ schema: {
             '**고급 개발자(디버깅, 리팩터링, 복잡한 추론, 24GB 이상):** Ollama + Qwen3.8 27B(밀집 모델, 18GB) -- 다중 파일 컨텍스트와 알고리즘 설계를 처리.',
             '**장시간 에이전트 세션(계획 → 코딩 → 테스트 → 반복):** Ollama + Laguna XS 2.1(256K 컨텍스트, SWE-bench Verified 70.9%) 또는 Devstral Small 2 -- 도구 호출과 다단계 실행용.',
             '**IDE 중심 워크플로(VS Code, Cursor, JetBrains):** Continue.dev + Codestral 22B -- 커서 위치 완성에 맞춘 FIM 최적화, 최고의 로컬 Copilot 대안.',
-            '**프라이버시가 중요한 환경(GDPR, HIPAA, 자체 코드):** 위의 로컬 모델 중 하나를 Ollama로 실행(`:cloud` 태그는 제외) -- 외부 API 호출 없음, 100% 온프레미스, 코드가 기기를 떠나지 않음.',
+            '**프라이버시가 중요한 환경(GDPR, HIPAA, 자체 코드):** 위의 로컬 모델 중 하나를 Ollama로 실행(`:cloud` 태그는 제외) -- 추론에 외부 API 호출이 없으므로, 에디터 플러그인 등 다른 도구도 네트워크를 사용하지 않는 한 코드가 기기를 떠나지 않습니다.',
           ],
           callouts: [
             { type: 'warning', text: '❌ **피할 것:** GPU 또는 통합 메모리가 약 24GB 미만인 기기에서 Qwen3.8 27B(18GB)를 실행하는 것. 모델이 시스템 RAM으로 넘치면 속도가 크게 떨어집니다. 작은 기기에서는 Qwen3 8B 또는 Devstral Small 2를 사용하세요.' },
@@ -5324,7 +5324,7 @@ schema: {
             '**일본 (METI)**',
             'METI 사이버보안 지침은 소프트웨어 개발에서의 AI 도구 사용을 점점 더 다루고 있습니다. Qwen3-Coder는 일본어 코드 주석과 변수 명명 규칙을 기본적으로 처리합니다 — 일본어 인라인 문서가 있는 일본 개발 코드베이스에 유용합니다. 규정 준수 기록을 위해 Ollama 태그(예: qwen2.5-coder:32b)는 METI AI 거버넌스 문서에 필요한 정확한 버전 식별자를 제공합니다.',
             '**중국**',
-            '중국 데이터보안법(数据安全法)에 따라 핵심 정보 인프라의 소스 코드는 외국 클라우드 서비스에서 처리할 수 없습니다. Qwen3.8 27B와 Qwen3-Coder(Alibaba, Apache 2.0)는 중국 기업 코딩 워크플로의 자연스러운 선택입니다 -- 중국 개발사, Apache 2.0 라이선스, Ollama를 통한 완전한 로컬 배포. Kimi K2.6(Moonshot AI)도 중국 출신이지만 로컬 실행에는 서버급 하드웨어가 필요합니다.',
+            '중국 데이터보안법(数据安全法)에 따라 핵심 정보 인프라의 소스 코드는 외국 클라우드 서비스에서 처리할 수 없습니다. Qwen3.8 27B와 Qwen3-Coder(Alibaba, Apache 2.0)는 중국 기업 코딩 워크플로의 자연스러운 선택입니다 -- 중국 개발사, Apache 2.0 라이선스, Ollama를 통한 완전한 로컬 배포. Kimi K2.6(Moonshot AI)도 중국 출신이지만 로컬 실행에는 서버급 하드웨어가 필요합니다. 이는 법률 자문이 아니므로 해당 사례에 적용되는 요건을 확인하세요.',
           ],
         },
         commonMistakes: {
@@ -5380,7 +5380,7 @@ schema: {
             { q: '로컬 코딩 모델은 개발에 충분히 빠른가요?', a: '반복적인 워크플로에는 충분합니다. 속도는 GPU, 양자화, 컨텍스트 길이에 따라 달라집니다. Qwen3 8B 같은 소형 모델은 노트북에서도 빠르게 응답하고, 큰 모델은 토큰당 더 느립니다. 요청하고 검토하는 방식이라면 응답당 몇 초 대기는 괜찮지만, 키 입력마다 완성하는 자동 완성에는 소형 FIM 모델을 써야 합니다.' },
             { q: '로컬 LLM이 코딩에서 GPT-5.6을 대체할 수 있나요?', a: '완전히는 아닙니다. 로컬 모델(Qwen3.8 27B, Devstral Small 2)은 최신 프레임워크 지식(학습 시점 이후 API), 매우 긴 다중 파일 추론(100k+ 토큰), 디버깅 정확도에서 최상위 클라우드 모델에 뒤처집니다. 일상적인 다중 파일 작업에서는 격차를 좁혔고 코드를 비공개로 유지할 수 있습니다.' },
             { q: 'Qwen3-Coder는 어떤 언어를 가장 잘 지원하나요?', a: 'Python이 주된 학습 언어입니다. JavaScript, TypeScript, Java, C++, Go, Rust, SQL도 잘 지원하며 PHP, Ruby, Swift, Kotlin도 처리합니다. Python이 아닌 언어는 HumanEval 점수가 더 낮지만 여전히 경쟁력이 있습니다.' },
-            { q: 'DeepSeek-Coder를 자체 코드에 써도 안전한가요?', a: 'Ollama로 로컬 실행하면 DeepSeek-Coder는 외부 연결을 만들지 않으며 코드는 내 하드웨어에 남습니다. DeepSeek의 데이터 우려는 클라우드 API([api.deepseek.com](https://api.deepseek.com))에 해당하며 로컬 Ollama 추론에는 해당하지 않습니다. 로컬 추론은 완전히 비공개입니다.' },
+            { q: 'DeepSeek-Coder를 자체 코드에 써도 안전한가요?', a: 'Ollama로 로컬 실행하면 DeepSeek-Coder는 외부 연결을 만들지 않으며 코드는 내 하드웨어에 남습니다. DeepSeek의 데이터 우려는 클라우드 API([api.deepseek.com](https://api.deepseek.com))에 해당하며 로컬 Ollama 추론에는 해당하지 않습니다. 로컬 추론은 코드를 DeepSeek 서버로 보내지 않습니다.' },
             { q: '로컬 코딩 모델로 SQL을 생성할 수 있나요?', a: '네 -- Qwen3.8 27B와 Devstral Small 2는 SQL 생성을 처리합니다. 프롬프트 컨텍스트에 테이블 스키마를 제공하세요. 조인이 많은 복잡한 쿼리는 32K 컨텍스트로 전체 스키마를 포함합니다. 시스템 프롬프트는 "당신은 SQL 전문가입니다. 유효한 SQL만 생성하세요."처럼 설정하세요.' },
             { q: 'SWE-bench란 무엇이고 왜 HumanEval을 대체하나요?', a: 'SWE-bench는 모델이 실제 GitHub 이슈를 해결하는 능력 — 코드베이스 읽기, 여러 파일 수정, 테스트 작성 — 을 평가합니다. 단일 Python 함수를 평가하는 HumanEval과 달리, SWE-bench는 실제 개발 워크플로에서의 성능을 예측합니다. SWE-bench Verified와 SWE-bench Pro는 서로 다른 변형이라 점수가 호환되지 않습니다. 2026년에는 실제 사용을 위한 코딩 모델 평가의 주요 벤치마크입니다.' },
             { q: '로컬 코딩 모델을 VS Code에 연결하려면 어떻게 하나요?', a: 'VS Code 마켓플레이스에서 Continue.dev 확장을 설치하세요. Continue 설정에서 제공자로 Ollama를 선택하고 모델(예: `qwen3:8b`, `qwen3.8`, `codestral:22b`)을 지정합니다. 확장은 localhost:11434의 Ollama에 자동으로 연결됩니다. Cmd+I(macOS) 또는 Ctrl+I(Windows)로 인라인 코드 생성을 실행하세요.' },
