@@ -1,90 +1,80 @@
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <defs>
     <style>
-      .bg { fill: #FFFFFF; }
-      .title { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 18px; font-weight: 600; }
-      .category { fill: #6750A4; font-family: system-ui, sans-serif; font-size: 13px; font-weight: 600; color: #FFFFFF; }
+      .title { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 20px; font-weight: 700; }
+      .tier { fill: #FFFFFF; font-family: system-ui, sans-serif; font-size: 13px; font-weight: 700; }
       .card-bg { fill: #F7F2FA; stroke: #6750A4; stroke-width: 1.5; }
-      .card-title { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 13px; font-weight: 600; }
-      .card-text { fill: #79747E; font-family: system-ui, sans-serif; font-size: 11px; }
+      .name { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 14px; font-weight: 700; }
+      .desc { fill: #49454F; font-family: system-ui, sans-serif; font-size: 11.5px; }
       .badge { fill: #EAE1FF; stroke: #6750A4; stroke-width: 1; }
-      .badge-text { fill: #6750A4; font-family: system-ui, sans-serif; font-size: 10px; font-weight: 600; }
+      .badge-text { fill: #4F378B; font-family: system-ui, sans-serif; font-size: 10.5px; font-weight: 700; }
+      .cmd-bg { fill: #FFFFFF; stroke: #CAC4D0; stroke-width: 1; }
+      .cmd { fill: #1C1B1F; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 11px; }
+      .tip { fill: #1C1B1F; font-family: system-ui, sans-serif; font-size: 12.5px; font-weight: 600; }
+      .foot { fill: #79747E; font-family: system-ui, sans-serif; font-size: 11px; }
     </style>
   </defs>
+  <rect width="800" height="400" fill="#FFFFFF"/>
+  <text x="400" y="30" class="title" text-anchor="middle">Ollama Top Models by Tier</text>
 
-  <!-- Background -->
-  <rect class="bg" width="800" height="400"/>
+  <rect x="20" y="46" width="240" height="26" rx="4" fill="#5B3A9B"/>
+  <text x="140" y="64" class="tier" text-anchor="middle">SMALL (2-4 GB)</text>
+  <rect x="20" y="82" width="240" height="100" rx="6" class="card-bg"/>
+  <text x="34" y="108" class="name">Gemma 2B</text>
+  <rect x="196" y="93" width="50" height="20" rx="4" class="badge"/>
+  <text x="221.0" y="107" class="badge-text" text-anchor="middle">2 GB</text>
+  <text x="34" y="130" class="desc">Lightweight, fast inference</text>
+  <text x="34" y="145" class="desc">Good for chatbots, summaries</text>
+  <rect x="34" y="154" width="212" height="20" rx="4" class="cmd-bg"/>
+  <text x="42" y="168" class="cmd">ollama run gemma2:2b</text>
+  <rect x="20" y="192" width="240" height="100" rx="6" class="card-bg"/>
+  <text x="34" y="218" class="name">Phi-4 Mini</text>
+  <rect x="196" y="203" width="50" height="20" rx="4" class="badge"/>
+  <text x="221.0" y="217" class="badge-text" text-anchor="middle">3 GB</text>
+  <text x="34" y="240" class="desc">CPU-friendly, reasoning tasks</text>
+  <text x="34" y="255" class="desc">Prompt engineering</text>
+  <rect x="34" y="264" width="212" height="20" rx="4" class="cmd-bg"/>
+  <text x="42" y="278" class="cmd">ollama run phi4-mini</text>
 
-  <!-- Title -->
-  <text x="400" y="30" class="title" text-anchor="middle">Ollama Top Models by Tier — July 2026</text>
+  <rect x="280" y="46" width="240" height="26" rx="4" fill="#5B3A9B"/>
+  <text x="400" y="64" class="tier" text-anchor="middle">MEDIUM (4-8 GB)</text>
+  <rect x="280" y="82" width="240" height="100" rx="6" class="card-bg"/>
+  <text x="294" y="108" class="name">Llama 3 8B</text>
+  <rect x="456" y="93" width="50" height="20" rx="4" class="badge"/>
+  <text x="481.0" y="107" class="badge-text" text-anchor="middle">6 GB</text>
+  <text x="294" y="130" class="desc">General purpose workhorse</text>
+  <text x="294" y="145" class="desc">Code + language understanding</text>
+  <rect x="294" y="154" width="212" height="20" rx="4" class="cmd-bg"/>
+  <text x="302" y="168" class="cmd">ollama run llama3</text>
+  <rect x="280" y="192" width="240" height="100" rx="6" class="card-bg"/>
+  <text x="294" y="218" class="name">Mistral 7B</text>
+  <rect x="456" y="203" width="50" height="20" rx="4" class="badge"/>
+  <text x="481.0" y="217" class="badge-text" text-anchor="middle">5 GB</text>
+  <text x="294" y="240" class="desc">Fast, high quality output</text>
+  <text x="294" y="255" class="desc">RAG, document processing</text>
+  <rect x="294" y="264" width="212" height="20" rx="4" class="cmd-bg"/>
+  <text x="302" y="278" class="cmd">ollama run mistral</text>
 
-  <!-- SMALL TIER (2-4GB) -->
-  <rect x="20" y="45" width="240" height="22" class="category" rx="3"/>
-  <text x="140" y="60" style="fill: #FFFFFF;" class="category" text-anchor="middle">SMALL (2-4 GB)</text>
+  <rect x="540" y="46" width="240" height="26" rx="4" fill="#5B3A9B"/>
+  <text x="660" y="64" class="tier" text-anchor="middle">LARGE (12+ GB)</text>
+  <rect x="540" y="82" width="240" height="100" rx="6" class="card-bg"/>
+  <text x="554" y="108" class="name">Llama 3 70B</text>
+  <rect x="702" y="93" width="64" height="20" rx="4" class="badge"/>
+  <text x="734.0" y="107" class="badge-text" text-anchor="middle">Q4: 43 GB</text>
+  <text x="554" y="130" class="desc">Expert reasoning &amp; analysis</text>
+  <text x="554" y="145" class="desc">Complex problem solving</text>
+  <rect x="554" y="154" width="212" height="20" rx="4" class="cmd-bg"/>
+  <text x="562" y="168" class="cmd">ollama run llama3:70b</text>
+  <rect x="540" y="192" width="240" height="100" rx="6" class="card-bg"/>
+  <text x="554" y="218" class="name">Qwen2.5 72B</text>
+  <rect x="702" y="203" width="64" height="20" rx="4" class="badge"/>
+  <text x="734.0" y="217" class="badge-text" text-anchor="middle">Q4: 45 GB</text>
+  <text x="554" y="240" class="desc">Multilingual, code + math</text>
+  <text x="554" y="255" class="desc">Enterprise applications</text>
+  <rect x="554" y="264" width="212" height="20" rx="4" class="cmd-bg"/>
+  <text x="562" y="278" class="cmd">ollama run qwen2.5:72b</text>
 
-  <!-- Gemma 2B -->
-  <rect x="20" y="75" width="240" height="75" class="card-bg" rx="4"/>
-  <text x="30" y="92" class="card-title">Gemma 2B</text>
-  <rect x="30" y="100" width="50" height="18" class="badge" rx="3"/>
-  <text x="55" y="113" class="badge-text" text-anchor="middle">2 GB</text>
-  <text x="30" y="126" class="card-text">Lightweight, fast inference</text>
-  <text x="30" y="138" class="card-text">Good for chatbots, summaries</text>
-  <text x="30" y="150" class="card-text" style="fill: #1C1B1F;">ollama run gemma:2b</text>
-
-  <!-- Phi-4 Mini -->
-  <rect x="20" y="160" width="240" height="75" class="card-bg" rx="4"/>
-  <text x="30" y="177" class="card-title">Phi-4 Mini</text>
-  <rect x="30" y="185" width="50" height="18" class="badge" rx="3"/>
-  <text x="55" y="198" class="badge-text" text-anchor="middle">3 GB</text>
-  <text x="30" y="211" class="card-text">CPU-friendly, reasoning tasks</text>
-  <text x="30" y="223" class="card-text">Prompt engineering</text>
-  <text x="30" y="235" class="card-text" style="fill: #1C1B1F;">ollama run phi-mini</text>
-
-  <!-- MEDIUM TIER (4-8GB) -->
-  <rect x="280" y="45" width="240" height="22" class="category" rx="3"/>
-  <text x="400" y="60" style="fill: #FFFFFF;" class="category" text-anchor="middle">MEDIUM (4-8 GB)</text>
-
-  <!-- Llama 3 8B -->
-  <rect x="280" y="75" width="240" height="75" class="card-bg" rx="4"/>
-  <text x="290" y="92" class="card-title">Llama 3 8B</text>
-  <rect x="290" y="100" width="50" height="18" class="badge" rx="3"/>
-  <text x="315" y="113" class="badge-text" text-anchor="middle">6 GB</text>
-  <text x="290" y="126" class="card-text">General purpose workhorse</text>
-  <text x="290" y="138" class="card-text">Code + language understanding</text>
-  <text x="290" y="150" class="card-text" style="fill: #1C1B1F;">ollama run llama3</text>
-
-  <!-- Mistral 7B -->
-  <rect x="280" y="160" width="240" height="75" class="card-bg" rx="4"/>
-  <text x="290" y="177" class="card-title">Mistral 7B</text>
-  <rect x="290" y="185" width="50" height="18" class="badge" rx="3"/>
-  <text x="315" y="198" class="badge-text" text-anchor="middle">5 GB</text>
-  <text x="290" y="211" class="card-text">Fast, high quality output</text>
-  <text x="290" y="223" class="card-text">RAG, document processing</text>
-  <text x="290" y="235" class="card-text" style="fill: #1C1B1F;">ollama run mistral</text>
-
-  <!-- LARGE TIER (12GB+) -->
-  <rect x="540" y="45" width="240" height="22" class="category" rx="3"/>
-  <text x="660" y="60" style="fill: #FFFFFF;" class="category" text-anchor="middle">LARGE (12+ GB)</text>
-
-  <!-- Llama 3 70B -->
-  <rect x="540" y="75" width="240" height="75" class="card-bg" rx="4"/>
-  <text x="550" y="92" class="card-title">Llama 3 70B</text>
-  <rect x="550" y="100" width="60" height="18" class="badge" rx="3"/>
-  <text x="580" y="113" class="badge-text" text-anchor="middle">Q4: 43GB</text>
-  <text x="550" y="126" class="card-text">Expert reasoning &amp; analysis</text>
-  <text x="550" y="138" class="card-text">Complex problem solving</text>
-  <text x="550" y="150" class="card-text" style="fill: #1C1B1F;">ollama run llama3:70b</text>
-
-  <!-- Qwen 72B -->
-  <rect x="540" y="160" width="240" height="75" class="card-bg" rx="4"/>
-  <text x="550" y="177" class="card-title">Qwen 72B</text>
-  <rect x="550" y="185" width="60" height="18" class="badge" rx="3"/>
-  <text x="580" y="198" class="badge-text" text-anchor="middle">Q4: 45GB</text>
-  <text x="550" y="211" class="card-text">Multilingual, code + math</text>
-  <text x="550" y="223" class="card-text">Enterprise applications</text>
-  <text x="550" y="235" class="card-text" style="fill: #1C1B1F;">ollama run qwen:72b</text>
-
-  <!-- Footer -->
-  <text x="20" y="360" class="card-text" style="fill: #1C1B1F; font-weight: 500;">Pro tip: Start with Mistral 7B or Llama 3 8B — best balance for most use cases</text>
-  <text x="20" y="375" class="card-text" style="fill: #79747E;">Pull models: ollama pull gemma:2b | View library: ollama list</text>
-<text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
+  <text x="20" y="328" class="tip">Pro tip: Start with Mistral 7B or Llama 3 8B — best balance for most use cases</text>
+  <text x="20" y="348" class="foot">Pull models: ollama pull gemma2:2b | View library: ollama list</text>
+  <text x="792" y="392" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text>
+</svg>
