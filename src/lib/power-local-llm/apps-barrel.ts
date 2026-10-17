@@ -207,6 +207,7 @@ import { app as app_vane } from './apps/vane'
 import { app as app_agentic_inbox } from './apps/agentic-inbox'
 import { app as app_aiclient2api } from './apps/aiclient2api'
 import { app as app_baserow } from './apps/baserow'
+import { app as app_firecrawl } from './apps/firecrawl'
 import { app as app_blinko } from './apps/blinko'
 import { app as app_candle_vllm } from './apps/candle-vllm'
 import { app as app_chroma } from './apps/chroma'
@@ -442,6 +443,7 @@ export const localAiApps: ToolRecord[] = [
   app_agentic_inbox,
   app_aiclient2api,
   app_baserow,
+  app_firecrawl,
   app_blinko,
   app_candle_vllm,
   app_chroma,
