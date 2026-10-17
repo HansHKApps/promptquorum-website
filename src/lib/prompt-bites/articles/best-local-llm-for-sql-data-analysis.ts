@@ -6,11 +6,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-en.webp',
     title: 'Best Local LLM for SQL and Data Analysis?',
-    seoTitle: 'Best Local LLM for SQL & Data Analysis | Prompt Bites',
+    seoTitle: 'Best Local LLM for Data Analysis & SQL | Prompt Bites',
     metaDescription:
-      'A guide to what makes a local LLM good at SQL generation and data analysis tasks, and what to check before picking one for your database.',
+      'Which local LLM is best for data analysis and SQL? Choose a coding-tuned model with long context and let it write SQL or pandas code you run locally.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -19,10 +19,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>A local LLM suited to SQL and data analysis needs strong code-generation training and a large enough context window to hold a full schema alongside the question.</strong> Coding-tuned models generally outperform general-purpose chat models on SQL correctness.',
+      '<strong>A local LLM suited to SQL and data analysis needs strong code-generation training and a large enough context window to hold a full schema alongside the question.</strong> Coding-tuned models generally outperform general-purpose chat models on SQL correctness. For broader data analysis, the same models can write the SQL or pandas code that you run locally, instead of reading raw tables themselves.',
     toc: [
       { label: 'Best Pick: Coding-Tuned Models', anchor: '#best-pick' },
       { label: 'What Matters for SQL Tasks', anchor: '#what-matters' },
+      { label: 'Data Analysis Beyond SQL', anchor: '#data-analysis' },
       { label: 'Who Should Use This', anchor: '#who-should-use' },
       { label: 'FAQ', anchor: '#faq' },
     ],
@@ -36,7 +37,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'A larger context window matters more here than for short chat tasks — full schemas take space.',
           'Test against your own schema, since SQL dialect quirks vary by database engine.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -70,6 +71,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'SQL dialect differences (PostgreSQL, MySQL, SQLite, and others each have their own syntax quirks for things like date functions and window functions) are not consistently handled the same way across models — the model\'s training data determines which dialects it produces correct syntax for. Always specify your database engine explicitly in the prompt rather than assuming the model will infer it correctly.',
         ],
       },
+      dataAnalysis: {
+        id: 'data-analysis',
+        title: 'Data Analysis Beyond SQL: Let the Model Write the Code',
+        content: [
+          '<strong>For data analysis, have the local model write SQL or pandas code that you run yourself, rather than pasting whole tables into the prompt.</strong> Language models handle row-by-row arithmetic and large tables poorly, but they write the query or script that does the aggregation reliably, and the code stays reviewable and repeatable.',
+          'Send the model only the schema, the column types and a few sample rows. Run the generated code in a sandbox or over a read-only connection, and check the result on a small sample before trusting a full run. This is why the same coding-tuned model suits both jobs: SQL and data analysis are both code-generation tasks.',
+        ],
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Who Should Use This',
@@ -98,6 +107,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Are general-purpose local chat models unusable for SQL?',
             a: 'No, they can handle simple single-table queries reasonably well. The gap with coding-tuned models widens noticeably on multi-table joins, subqueries, and window functions, where syntax precision matters more.',
           },
+          {
+            q: 'Can a local LLM analyze a CSV file directly?',
+            a: 'Only small ones. A full table quickly exceeds the context window, and models miscalculate sums and averages when they read raw rows. Give the model the column names and a few sample rows instead, and have it write pandas or SQL (for example over SQLite or DuckDB) that computes the answer.',
+          },
+          {
+            q: 'Is the best local LLM for data analysis different from the best one for SQL?',
+            a: 'Mostly no. Both are code-generation tasks, so a coding-tuned model with a long context window is the right starting point. Add a check that compares the generated code\'s output with a result you computed by hand on a small sample.',
+          },
+          {
+            q: 'Is analyzing data with a local LLM more private than using a cloud model?',
+            a: 'The data stays on your machine as long as both the model and the generated code run locally, which helps with confidential tables. It does not replace your own data-protection duties for what you do with the results.',
+          },
         ],
       },
     },
@@ -106,11 +127,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-de.webp',
     title: 'Das beste lokale LLM für SQL und Datenanalyse?',
-    seoTitle: 'Bestes lokales LLM für SQL & Datenanalyse | Prompt Bites',
+    seoTitle: 'Bestes lokales LLM für Datenanalyse & SQL | Prompt Bites',
     metaDescription:
-      'Ein Leitfaden dazu, was ein lokales LLM gut für SQL-Generierung und Datenanalyse macht, und worauf Sie vor der Auswahl für Ihre Datenbank achten sollten.',
+      'Welches lokale LLM passt zu Datenanalyse und SQL? Wählen Sie ein Coding-Modell mit langem Kontext und lassen Sie es SQL- oder pandas-Code schreiben.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -119,10 +140,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>Ein lokales LLM, das für SQL und Datenanalyse geeignet ist, braucht ein starkes Code-Generierungs-Training und ein ausreichend großes Kontextfenster, um ein vollständiges Schema neben der Frage zu halten.</strong> Coding-optimierte Modelle übertreffen general-purpose Chat-Modelle in der Regel bei der SQL-Korrektheit.',
+      '<strong>Ein lokales LLM, das für SQL und Datenanalyse geeignet ist, braucht ein starkes Code-Generierungs-Training und ein ausreichend großes Kontextfenster, um ein vollständiges Schema neben der Frage zu halten.</strong> Coding-optimierte Modelle übertreffen general-purpose Chat-Modelle in der Regel bei der SQL-Korrektheit. Für die allgemeine Datenanalyse können dieselben Modelle SQL- oder pandas-Code schreiben, den Sie lokal ausführen, statt rohe Tabellen selbst zu lesen.',
     toc: [
       { label: 'Beste Wahl: Coding-optimierte Modelle', anchor: '#best-pick' },
       { label: 'Worauf es bei SQL-Aufgaben ankommt', anchor: '#what-matters' },
+      { label: 'Datenanalyse über SQL hinaus', anchor: '#data-analysis' },
       { label: 'Für wen sich das eignet', anchor: '#who-should-use' },
       { label: 'FAQ', anchor: '#faq' },
     ],
@@ -136,7 +158,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Ein größeres Kontextfenster ist hier wichtiger als bei kurzen Chat-Aufgaben — vollständige Schemata benötigen Platz.',
           'Testen Sie gegen Ihr eigenes Schema, da SQL-Dialekt-Eigenheiten je nach Datenbank-Engine variieren.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -170,6 +192,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'SQL-Dialektunterschiede (PostgreSQL, MySQL, SQLite und andere haben jeweils eigene Syntax-Eigenheiten bei Dingen wie Datumsfunktionen und Window-Funktionen) werden nicht über alle Modelle hinweg konsistent gehandhabt — die Trainingsdaten des Modells bestimmen, für welche Dialekte es korrekte Syntax erzeugt. Geben Sie Ihre Datenbank-Engine im Prompt immer explizit an, statt darauf zu vertrauen, dass das Modell sie korrekt erschließt.',
         ],
       },
+      dataAnalysis: {
+        id: 'data-analysis',
+        title: 'Datenanalyse über SQL hinaus: Das Modell schreibt den Code',
+        content: [
+          '<strong>Für die Datenanalyse sollte das lokale Modell SQL- oder pandas-Code schreiben, den Sie selbst ausführen, statt ganze Tabellen in den Prompt zu kopieren.</strong> Sprachmodelle rechnen zeilenweise und mit großen Tabellen schlecht, schreiben aber die Abfrage oder das Skript für die Aggregation zuverlässig, und der Code bleibt prüfbar und wiederholbar.',
+          'Übergeben Sie dem Modell nur das Schema, die Spaltentypen und einige Beispielzeilen. Führen Sie den erzeugten Code in einer Sandbox oder über eine schreibgeschützte Verbindung aus und prüfen Sie das Ergebnis an einer kleinen Stichprobe, bevor Sie einem vollständigen Lauf vertrauen. Deshalb eignet sich dasselbe Coding-Modell für beides: SQL und Datenanalyse sind Code-Generierungsaufgaben.',
+        ],
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Für wen sich das eignet',
@@ -198,6 +228,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Sind general-purpose lokale Chat-Modelle für SQL unbrauchbar?',
             a: 'Nein, sie können einfache Einzeltabellen-Abfragen recht gut bewältigen. Die Lücke zu coding-optimierten Modellen wird bei mehrtabelligen Joins, Subqueries und Window-Funktionen deutlich spürbar, wo Syntaxpräzision stärker ins Gewicht fällt.',
           },
+          {
+            q: 'Kann ein lokales LLM eine CSV-Datei direkt analysieren?',
+            a: 'Nur kleine Dateien. Eine vollständige Tabelle sprengt schnell das Kontextfenster, und Modelle verrechnen sich bei Summen und Durchschnitten, wenn sie rohe Zeilen lesen. Geben Sie dem Modell stattdessen die Spaltennamen und einige Beispielzeilen und lassen Sie es pandas- oder SQL-Code (zum Beispiel über SQLite oder DuckDB) schreiben, der die Antwort berechnet.',
+          },
+          {
+            q: 'Unterscheidet sich das beste lokale LLM für Datenanalyse vom besten für SQL?',
+            a: 'Meistens nicht. Beides sind Code-Generierungsaufgaben, daher ist ein Coding-Modell mit langem Kontextfenster der richtige Ausgangspunkt. Ergänzen Sie eine Prüfung, die die Ausgabe des erzeugten Codes mit einem von Hand berechneten Ergebnis an einer kleinen Stichprobe vergleicht.',
+          },
+          {
+            q: 'Ist Datenanalyse mit einem lokalen LLM privater als mit einem Cloud-Modell?',
+            a: 'Die Daten bleiben auf Ihrem Rechner, solange Modell und erzeugter Code lokal laufen, was bei vertraulichen Tabellen hilft. Ihre eigenen Datenschutzpflichten für den Umgang mit den Ergebnissen ersetzt das nicht.',
+          },
         ],
       },
     },
@@ -206,11 +248,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-fr.webp',
     title: 'Meilleur LLM local pour le SQL et l\'analyse de données ?',
-    seoTitle: 'Meilleur LLM local pour SQL & analyse de données | Prompt Bites',
+    seoTitle: 'Meilleur LLM local pour analyse de données | Prompt Bites',
     metaDescription:
-      'Un guide sur ce qui rend un LLM local performant pour la génération SQL et l\'analyse de données, et les points à vérifier avant d\'en choisir un pour votre base de données.',
+      'Quel LLM local pour l\'analyse de données et le SQL ? Choisissez un modèle de code à long contexte et faites-lui écrire du SQL ou du pandas.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -219,10 +261,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>Un LLM local adapté au SQL et à l\'analyse de données nécessite un entraînement solide à la génération de code et une fenêtre de contexte suffisamment grande pour contenir un schéma complet en plus de la question.</strong> Les modèles spécialisés en code surpassent généralement les modèles de chat généralistes sur la justesse SQL.',
+      '<strong>Un LLM local adapté au SQL et à l\'analyse de données nécessite un entraînement solide à la génération de code et une fenêtre de contexte suffisamment grande pour contenir un schéma complet en plus de la question.</strong> Les modèles spécialisés en code surpassent généralement les modèles de chat généralistes sur la justesse SQL. Pour l\'analyse de données au sens large, ces mêmes modèles peuvent écrire le code SQL ou pandas que vous exécutez en local, au lieu de lire eux-mêmes des tables brutes.',
     toc: [
       { label: 'Meilleur choix : les modèles spécialisés en code', anchor: '#best-pick' },
       { label: 'Ce qui compte pour les tâches SQL', anchor: '#what-matters' },
+      { label: 'L\'analyse de données au-delà du SQL', anchor: '#data-analysis' },
       { label: 'Pour qui c\'est fait', anchor: '#who-should-use' },
       { label: 'FAQ', anchor: '#faq' },
     ],
@@ -236,7 +279,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Une fenêtre de contexte plus large compte davantage ici que pour les tâches de chat courtes — les schémas complets prennent de la place.',
           'Testez avec votre propre schéma, car les particularités des dialectes SQL varient selon le moteur de base de données.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -270,6 +313,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Les différences de dialecte SQL (PostgreSQL, MySQL, SQLite et autres ont chacun leurs particularités de syntaxe pour des éléments comme les fonctions de date et les fonctions de fenêtrage) ne sont pas gérées de façon homogène selon les modèles — les données d\'entraînement du modèle déterminent pour quels dialectes il produit une syntaxe correcte. Précisez toujours explicitement votre moteur de base de données dans le prompt plutôt que de supposer que le modèle l\'inférera correctement.',
         ],
       },
+      dataAnalysis: {
+        id: 'data-analysis',
+        title: 'L\'analyse de données au-delà du SQL : laissez le modèle écrire le code',
+        content: [
+          '<strong>Pour l\'analyse de données, faites écrire au modèle local du code SQL ou pandas que vous exécutez vous-même, plutôt que de coller des tables entières dans le prompt.</strong> Les modèles de langage gèrent mal le calcul ligne par ligne et les grandes tables, mais ils écrivent de façon fiable la requête ou le script qui fait l\'agrégation, et le code reste vérifiable et reproductible.',
+          'Ne transmettez au modèle que le schéma, les types de colonnes et quelques lignes d\'exemple. Exécutez le code généré dans un bac à sable ou via une connexion en lecture seule, et vérifiez le résultat sur un petit échantillon avant de vous fier à une exécution complète. C\'est pourquoi un même modèle spécialisé en code convient aux deux usages : le SQL et l\'analyse de données relèvent tous deux de la génération de code.',
+        ],
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Pour qui c\'est fait',
@@ -298,6 +349,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Les modèles de chat locaux généralistes sont-ils inutilisables pour le SQL ?',
             a: 'Non, ils peuvent gérer raisonnablement bien des requêtes simples sur une seule table. L\'écart avec les modèles spécialisés en code se creuse nettement sur les jointures multi-tables, les sous-requêtes et les fonctions de fenêtrage, où la précision syntaxique compte davantage.',
           },
+          {
+            q: 'Un LLM local peut-il analyser directement un fichier CSV ?',
+            a: 'Seulement les petits. Une table complète dépasse vite la fenêtre de contexte, et les modèles se trompent dans les sommes et les moyennes quand ils lisent des lignes brutes. Donnez plutôt au modèle les noms de colonnes et quelques lignes d\'exemple, et demandez-lui d\'écrire du code pandas ou SQL (par exemple sur SQLite ou DuckDB) qui calcule la réponse.',
+          },
+          {
+            q: 'Le meilleur LLM local pour l\'analyse de données diffère-t-il de celui pour le SQL ?',
+            a: 'En général non. Les deux relèvent de la génération de code : un modèle spécialisé en code avec une longue fenêtre de contexte est le bon point de départ. Ajoutez un contrôle qui compare la sortie du code généré à un résultat calculé à la main sur un petit échantillon.',
+          },
+          {
+            q: 'Analyser des données avec un LLM local est-il plus confidentiel qu\'avec un modèle cloud ?',
+            a: 'Les données restent sur votre machine tant que le modèle et le code généré s\'exécutent en local, ce qui aide pour les tables confidentielles. Cela ne remplace pas vos propres obligations de protection des données pour l\'usage des résultats.',
+          },
         ],
       },
     },
@@ -306,11 +369,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-ja.webp',
     title: 'SQLとデータ分析に最適なローカルLLMは？',
-    seoTitle: 'SQL・データ分析に最適なローカルLLM | Prompt Bites',
+    seoTitle: 'データ分析・SQLのローカルLLM | Prompt Bites',
     metaDescription:
-      'ローカルLLMがSQL生成とデータ分析タスクで優れているための条件と、データベース用に選ぶ前に確認すべきポイントを解説します。',
+      'データ分析とSQLに最適なローカルLLMは？長いコンテキストを持つコード特化モデルを選び、SQLやpandasのコードを書かせてローカルで実行する方法を解説します。',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -319,10 +382,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>SQLとデータ分析に適したローカルLLMには、強力なコード生成トレーニングと、質問と一緒に完全なスキーマを保持できる十分に大きなコンテキストウィンドウが必要です。</strong>コーディング特化モデルは一般的にSQLの正確性で汎用チャットモデルを上回ります。',
+      '<strong>SQLとデータ分析に適したローカルLLMには、強力なコード生成トレーニングと、質問と一緒に完全なスキーマを保持できる十分に大きなコンテキストウィンドウが必要です。</strong>コーディング特化モデルは一般的にSQLの正確性で汎用チャットモデルを上回ります。より広いデータ分析でも、同じモデルに生のテーブルを読ませるのではなく、ローカルで実行するSQLやpandasのコードを書かせるのが有効です。',
     toc: [
       { label: 'ベストピック：コーディング特化モデル', anchor: '#best-pick' },
       { label: 'SQLタスクで重要なポイント', anchor: '#what-matters' },
+      { label: 'SQLを超えたデータ分析', anchor: '#data-analysis' },
       { label: 'こんな人におすすめ', anchor: '#who-should-use' },
       { label: 'FAQ', anchor: '#faq' },
     ],
@@ -336,7 +400,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '短いチャットタスクよりもここではコンテキストウィンドウの大きさが重要です — 完全なスキーマはスペースを消費します。',
           'SQLの方言の癖はデータベースエンジンごとに異なるため、自分のスキーマでテストしてください。',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -370,6 +434,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'SQLの方言の違い（PostgreSQL、MySQL、SQLiteなどはそれぞれ日付関数やウィンドウ関数などで独自の構文の癖を持っています）はモデルによって一貫して同じように扱われるわけではなく、どの方言で正しい構文を生成するかはモデルのトレーニングデータによって決まります。モデルが正しく推測することを前提にせず、プロンプトで常にデータベースエンジンを明示的に指定してください。',
         ],
       },
+      dataAnalysis: {
+        id: 'data-analysis',
+        title: 'SQLを超えたデータ分析：モデルにコードを書かせる',
+        content: [
+          '<strong>データ分析では、テーブル全体をプロンプトに貼り付けるのではなく、ローカルモデルにSQLやpandasのコードを書かせ、自分で実行しましょう。</strong>言語モデルは行ごとの計算や大きなテーブルが苦手ですが、集計を行うクエリやスクリプトは安定して書けます。コードなので確認も再実行もできます。',
+          'モデルに渡すのはスキーマ、列の型、数行のサンプルだけにします。生成されたコードはサンドボックスまたは読み取り専用接続で実行し、全件を実行する前に小さなサンプルで結果を確認してください。SQLもデータ分析もコード生成タスクなので、同じコード特化モデルが両方に向いています。',
+        ],
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'こんな人におすすめ',
@@ -398,6 +470,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '汎用のローカルチャットモデルはSQLには使えないのでしょうか？',
             a: 'いいえ、単純な単一テーブルのクエリであれば十分に対応できます。コーディング特化モデルとの差は、マルチテーブルJOIN、サブクエリ、ウィンドウ関数において顕著に広がります。これらは構文の精度がより重要になる場面です。',
           },
+          {
+            q: 'ローカルLLMはCSVファイルを直接分析できますか？',
+            a: '小さなファイルに限られます。テーブル全体はすぐにコンテキストウィンドウを超え、生の行を読ませると合計や平均の計算を間違えがちです。代わりに列名と数行のサンプルを渡し、答えを計算するpandasやSQL（SQLiteやDuckDBなど）のコードを書かせてください。',
+          },
+          {
+            q: 'データ分析に最適なローカルLLMはSQL向けと違いますか？',
+            a: 'ほとんど同じです。どちらもコード生成タスクなので、長いコンテキストを持つコード特化モデルが出発点になります。生成コードの出力を、小さなサンプルで手計算した結果と照合する確認を加えてください。',
+          },
+          {
+            q: 'ローカルLLMでのデータ分析はクラウドモデルより安全ですか？',
+            a: 'モデルと生成コードの両方がローカルで動く限りデータは手元のマシンに留まるため、機密性の高いテーブルに役立ちます。ただし、結果の扱いに関する自身のデータ保護上の義務がなくなるわけではありません。',
+          },
         ],
       },
     },
@@ -406,11 +490,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-zh.webp',
     title: '哪种本地LLM最适合SQL和数据分析？',
-    seoTitle: '最适合SQL和数据分析的本地LLM | Prompt Bites',
+    seoTitle: '数据分析与SQL的最佳本地LLM | Prompt Bites',
     metaDescription:
-      '了解本地LLM在SQL生成和数据分析任务中表现出色的关键因素，以及为数据库选型前需要检查的要点。',
+      '数据分析和SQL用哪种本地LLM最好？选择支持长上下文的代码专精模型，让它编写SQL或pandas代码，再在本地运行，并先用小样本核对结果，避免直接信任输出。',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -419,10 +503,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>适合SQL和数据分析的本地LLM需要强大的代码生成训练，以及足够大的上下文窗口来容纳完整的表结构和问题。</strong>代码专精模型的SQL正确率通常高于通用聊天模型。',
+      '<strong>适合SQL和数据分析的本地LLM需要强大的代码生成训练，以及足够大的上下文窗口来容纳完整的表结构和问题。</strong>代码专精模型的SQL正确率通常高于通用聊天模型。对于更广泛的数据分析，同样的模型可以编写SQL或pandas代码供您在本地运行，而不是自己读取原始表格。',
     toc: [
       { label: '最佳选择：代码专精模型', anchor: '#best-pick' },
       { label: 'SQL任务的关键要点', anchor: '#what-matters' },
+      { label: 'SQL之外的数据分析', anchor: '#data-analysis' },
       { label: '适用人群', anchor: '#who-should-use' },
       { label: '常见问题', anchor: '#faq' },
     ],
@@ -436,7 +521,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '这里的上下文窗口大小比短对话任务更重要——完整的表结构会占用大量空间。',
           '务必用自己的表结构测试，因为不同数据库引擎的SQL方言差异较大。',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -470,6 +555,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'SQL方言差异（PostgreSQL、MySQL、SQLite等在日期函数、窗口函数等方面各有语法特点）在不同模型间的处理方式并不一致——模型的训练数据决定了它能为哪些方言生成正确语法。始终在提示中明确指定数据库引擎，不要假设模型能自行正确推断。',
         ],
       },
+      dataAnalysis: {
+        id: 'data-analysis',
+        title: 'SQL之外的数据分析：让模型编写代码',
+        content: [
+          '<strong>做数据分析时，应让本地模型编写SQL或pandas代码并由您自己运行，而不是把整张表粘贴进提示词。</strong>语言模型不擅长逐行运算和处理大表，但能可靠地写出完成聚合的查询或脚本，而且代码可以审查、可以重复运行。',
+          '只向模型提供表结构、列类型和少量示例行。在沙箱或只读连接中运行生成的代码，并先用小样本核对结果，再信任完整运行。这也是同一个代码专精模型同时适合两项工作的原因：SQL和数据分析都属于代码生成任务。',
+        ],
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: '适用人群',
@@ -498,6 +591,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '通用本地聊天模型完全无法用于SQL吗？',
             a: '不是。它们能相当好地处理简单的单表查询。在多表连接、子查询和窗口函数方面，与代码专精模型的差距会明显扩大，这些场景下语法精确性更为重要。',
           },
+          {
+            q: '本地LLM可以直接分析CSV文件吗？',
+            a: '只能处理很小的文件。完整的表很快会超出上下文窗口，而且模型在读取原始行时容易算错总和与平均值。更好的做法是只提供列名和少量示例行，让模型编写pandas或SQL代码（例如基于SQLite或DuckDB）来计算答案。',
+          },
+          {
+            q: '数据分析的最佳本地LLM和SQL的最佳本地LLM不同吗？',
+            a: '大体相同。两者都是代码生成任务，因此长上下文的代码专精模型是合适的起点。再增加一步检查：把生成代码的输出与小样本上手工计算的结果进行比对。',
+          },
+          {
+            q: '用本地LLM分析数据比用云端模型更私密吗？',
+            a: '只要模型和生成的代码都在本地运行，数据就留在您的设备上，这对机密表格有帮助。但这并不能取代您在处理分析结果时自身的数据保护义务。',
+          },
         ],
       },
     },
@@ -506,11 +611,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-es.webp',
     title: '¿Cuál es el mejor LLM local para SQL y análisis de datos?',
-    seoTitle: 'Mejor LLM local para SQL y análisis de datos | Prompt Bites',
+    seoTitle: 'Mejor LLM local: análisis de datos y SQL | Prompt Bites',
     metaDescription:
-      'Una guía sobre qué hace que un LLM local sea bueno para la generación de SQL y el análisis de datos, y qué revisar antes de elegir uno para tu base de datos.',
+      '¿Qué LLM local elegir para análisis de datos y SQL? Usa un modelo de código con contexto largo y deja que escriba el SQL o el código pandas que ejecutas en local.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -519,10 +624,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>Un LLM local adecuado para SQL y análisis de datos necesita un entrenamiento sólido en generación de código y una ventana de contexto lo bastante grande para contener un esquema completo junto con la pregunta.</strong> Los modelos especializados en código suelen superar a los modelos de chat de propósito general en la corrección del SQL.',
+      '<strong>Un LLM local adecuado para SQL y análisis de datos necesita un entrenamiento sólido en generación de código y una ventana de contexto lo bastante grande para contener un esquema completo junto con la pregunta.</strong> Los modelos especializados en código suelen superar a los modelos de chat de propósito general en la corrección del SQL. Para el análisis de datos en general, los mismos modelos pueden escribir el código SQL o pandas que ejecutas en local, en lugar de leer tablas en bruto.',
     toc: [
       { label: 'Mejor opción: modelos especializados en código', anchor: '#best-pick' },
       { label: 'Qué importa para tareas de SQL', anchor: '#what-matters' },
+      { label: 'Análisis de datos más allá del SQL', anchor: '#data-analysis' },
       { label: 'Para quién es esto', anchor: '#who-should-use' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
     ],
@@ -536,7 +642,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Una ventana de contexto más grande importa más aquí que en tareas de chat cortas — los esquemas completos ocupan espacio.',
           'Prueba con tu propio esquema, ya que las particularidades del dialecto SQL varían según el motor de base de datos.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -570,6 +676,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Las diferencias de dialecto SQL (PostgreSQL, MySQL, SQLite y otros tienen sus propias particularidades de sintaxis para cosas como funciones de fecha y funciones de ventana) no se manejan de forma consistente entre modelos — los datos de entrenamiento del modelo determinan para qué dialectos produce sintaxis correcta. Especifica siempre explícitamente tu motor de base de datos en el prompt en lugar de asumir que el modelo lo inferirá correctamente.',
         ],
       },
+      dataAnalysis: {
+        id: 'data-analysis',
+        title: 'Análisis de datos más allá del SQL: deja que el modelo escriba el código',
+        content: [
+          '<strong>Para el análisis de datos, haz que el modelo local escriba código SQL o pandas que ejecutes tú mismo, en lugar de pegar tablas enteras en el prompt.</strong> Los modelos de lenguaje manejan mal la aritmética fila por fila y las tablas grandes, pero escriben con fiabilidad la consulta o el script que hace la agregación, y el código sigue siendo revisable y repetible.',
+          'Envía al modelo solo el esquema, los tipos de columna y unas pocas filas de ejemplo. Ejecuta el código generado en un entorno aislado o con una conexión de solo lectura, y comprueba el resultado con una muestra pequeña antes de confiar en una ejecución completa. Por eso el mismo modelo especializado en código sirve para ambas tareas: SQL y análisis de datos son tareas de generación de código.',
+        ],
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Para quién es esto',
@@ -598,6 +712,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '¿Son inútiles los modelos de chat locales generales para SQL?',
             a: 'No, pueden manejar razonablemente bien consultas simples de una sola tabla. La brecha con los modelos especializados en código se amplía notablemente en joins de múltiples tablas, subconsultas y funciones de ventana, donde la precisión sintáctica importa más.',
           },
+          {
+            q: '¿Puede un LLM local analizar un archivo CSV directamente?',
+            a: 'Solo los pequeños. Una tabla completa supera enseguida la ventana de contexto, y los modelos calculan mal sumas y promedios cuando leen filas en bruto. Dale en su lugar los nombres de columna y unas filas de ejemplo, y pídele que escriba código pandas o SQL (por ejemplo sobre SQLite o DuckDB) que calcule la respuesta.',
+          },
+          {
+            q: '¿El mejor LLM local para análisis de datos es distinto del mejor para SQL?',
+            a: 'En su mayoría no. Ambas son tareas de generación de código, así que un modelo especializado en código con ventana de contexto larga es el punto de partida. Añade una comprobación que compare la salida del código generado con un resultado calculado a mano sobre una muestra pequeña.',
+          },
+          {
+            q: '¿Analizar datos con un LLM local es más privado que usar un modelo en la nube?',
+            a: 'Los datos permanecen en tu equipo mientras el modelo y el código generado se ejecuten en local, lo que ayuda con tablas confidenciales. No sustituye tus propias obligaciones de protección de datos sobre el uso de los resultados.',
+          },
         ],
       },
     },
@@ -606,11 +732,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-pt.webp',
     title: 'Qual o melhor LLM local para SQL e análise de dados?',
-    seoTitle: 'Melhor LLM local para SQL e análise de dados | Prompt Bites',
+    seoTitle: 'Melhor LLM local: análise de dados e SQL | Prompt Bites',
     metaDescription:
-      'Um guia sobre o que torna um LLM local bom em geração de SQL e análise de dados, e o que verificar antes de escolher um para o seu banco de dados.',
+      'Qual LLM local escolher para análise de dados e SQL? Use um modelo ajustado para código, com contexto longo, para escrever o SQL ou o código pandas que você executa localmente.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -619,10 +745,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>Um LLM local adequado para SQL e análise de dados precisa de um treinamento sólido em geração de código e uma janela de contexto grande o suficiente para conter um schema completo junto com a pergunta.</strong> Modelos ajustados para código geralmente superam modelos de chat de propósito geral na corretude do SQL.',
+      '<strong>Um LLM local adequado para SQL e análise de dados precisa de um treinamento sólido em geração de código e uma janela de contexto grande o suficiente para conter um schema completo junto com a pergunta.</strong> Modelos ajustados para código geralmente superam modelos de chat de propósito geral na corretude do SQL. Para análise de dados em geral, os mesmos modelos podem escrever o código SQL ou pandas que você executa localmente, em vez de ler tabelas brutas.',
     toc: [
       { label: 'Melhor escolha: modelos ajustados para código', anchor: '#best-pick' },
       { label: 'O que importa em tarefas de SQL', anchor: '#what-matters' },
+      { label: 'Análise de dados além do SQL', anchor: '#data-analysis' },
       { label: 'Para quem isso serve', anchor: '#who-should-use' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
     ],
@@ -636,7 +763,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Uma janela de contexto maior importa mais aqui do que em tarefas curtas de chat — schemas completos ocupam espaço.',
           'Teste com o seu próprio schema, já que peculiaridades de dialeto SQL variam conforme o motor de banco de dados.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -670,6 +797,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Diferenças de dialeto SQL (PostgreSQL, MySQL, SQLite e outros têm suas próprias peculiaridades de sintaxe para coisas como funções de data e funções de janela) não são tratadas de forma consistente entre modelos — os dados de treinamento do modelo determinam para quais dialetos ele produz sintaxe correta. Sempre especifique explicitamente o seu motor de banco de dados no prompt, em vez de assumir que o modelo vai inferir corretamente.',
         ],
       },
+      dataAnalysis: {
+        id: 'data-analysis',
+        title: 'Análise de dados além do SQL: deixe o modelo escrever o código',
+        content: [
+          '<strong>Para análise de dados, faça o modelo local escrever código SQL ou pandas que você mesmo executa, em vez de colar tabelas inteiras no prompt.</strong> Modelos de linguagem lidam mal com aritmética linha a linha e com tabelas grandes, mas escrevem com confiabilidade a consulta ou o script que faz a agregação, e o código continua revisável e repetível.',
+          'Envie ao modelo apenas o esquema, os tipos das colunas e algumas linhas de exemplo. Execute o código gerado em um ambiente isolado ou com uma conexão somente leitura, e confira o resultado em uma amostra pequena antes de confiar em uma execução completa. Por isso o mesmo modelo ajustado para código serve para as duas tarefas: SQL e análise de dados são tarefas de geração de código.',
+        ],
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'Para quem isso serve',
@@ -698,6 +833,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Modelos de chat locais de propósito geral são inutilizáveis para SQL?',
             a: 'Não, eles conseguem lidar razoavelmente bem com consultas simples de uma única tabela. A diferença em relação a modelos ajustados para código aumenta visivelmente em joins de múltiplas tabelas, subconsultas e funções de janela, onde a precisão sintática importa mais.',
           },
+          {
+            q: 'Um LLM local consegue analisar um arquivo CSV diretamente?',
+            a: 'Só os pequenos. Uma tabela completa logo excede a janela de contexto, e os modelos erram somas e médias quando leem linhas brutas. Em vez disso, forneça os nomes das colunas e algumas linhas de exemplo e peça que o modelo escreva código pandas ou SQL (por exemplo com SQLite ou DuckDB) que calcule a resposta.',
+          },
+          {
+            q: 'O melhor LLM local para análise de dados é diferente do melhor para SQL?',
+            a: 'Na maior parte, não. As duas são tarefas de geração de código, então um modelo ajustado para código com janela de contexto longa é o ponto de partida. Adicione uma verificação que compare a saída do código gerado com um resultado calculado à mão em uma amostra pequena.',
+          },
+          {
+            q: 'Analisar dados com um LLM local é mais privado do que usar um modelo na nuvem?',
+            a: 'Os dados ficam na sua máquina enquanto o modelo e o código gerado rodarem localmente, o que ajuda com tabelas confidenciais. Isso não substitui suas próprias obrigações de proteção de dados (como a LGPD) sobre o uso dos resultados.',
+          },
         ],
       },
     },
@@ -706,11 +853,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-ar.webp',
     title: 'ما هو أفضل نموذج لغوي محلي لـ SQL وتحليل البيانات؟',
-    seoTitle: 'أفضل نموذج لغوي محلي لـ SQL وتحليل البيانات | Prompt Bites',
+    seoTitle: 'أفضل LLM محلي لتحليل البيانات و SQL | Prompt Bites',
     metaDescription:
-      'دليل حول ما الذي يجعل نموذج LLM محلي جيدًا في توليد SQL ومهام تحليل البيانات، وما الذي يجب التحقق منه قبل اختيار نموذج لقاعدة بياناتك.',
+      'ما أفضل نموذج LLM محلي لتحليل البيانات وSQL؟ اختر نموذجًا متخصصًا في الأكواد بنافذة سياق طويلة ودعه يكتب كود SQL أو pandas الذي تشغّله محليًا.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -719,10 +866,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>يحتاج نموذج LLM محلي مناسب لـ SQL وتحليل البيانات إلى تدريب قوي على توليد الأكواد ونافذة سياق (context window) كبيرة بما يكفي لاستيعاب المخطط (schema) الكامل إلى جانب السؤال.</strong> عادةً ما تتفوق النماذج المتخصصة في الأكواد على نماذج المحادثة العامة في دقة SQL.',
+      '<strong>يحتاج نموذج LLM محلي مناسب لـ SQL وتحليل البيانات إلى تدريب قوي على توليد الأكواد ونافذة سياق (context window) كبيرة بما يكفي لاستيعاب المخطط (schema) الكامل إلى جانب السؤال.</strong> عادةً ما تتفوق النماذج المتخصصة في الأكواد على نماذج المحادثة العامة في دقة SQL. أما في تحليل البيانات عمومًا، فيمكن للنماذج نفسها كتابة كود SQL أو pandas الذي تشغّله محليًا بدلًا من قراءة الجداول الخام بنفسها.',
     toc: [
       { label: 'الخيار الأفضل: النماذج المتخصصة في الأكواد', anchor: '#best-pick' },
       { label: 'ما يهم في مهام SQL', anchor: '#what-matters' },
+      { label: 'تحليل البيانات إلى ما بعد SQL', anchor: '#data-analysis' },
       { label: 'لمن يناسب هذا', anchor: '#who-should-use' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
     ],
@@ -736,7 +884,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'حجم نافذة السياق الأكبر يهم هنا أكثر من مهام المحادثة القصيرة — المخططات الكاملة تشغل مساحة كبيرة.',
           'اختبر النموذج مقابل مخططك الخاص، لأن خصائص لهجات SQL تختلف حسب محرك قاعدة البيانات.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -770,6 +918,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'اختلافات لهجات SQL (تمتلك PostgreSQL وMySQL وSQLite وغيرها خصائص صياغة خاصة بها لأمور مثل دوال التاريخ ودوال النوافذ) لا تُعالج بشكل متسق عبر النماذج — بيانات تدريب النموذج تحدد اللهجات التي ينتج لها صياغة صحيحة. حدد دائمًا محرك قاعدة البيانات الخاص بك بوضوح في الـ prompt بدلًا من افتراض أن النموذج سيستنتجه بشكل صحيح.',
         ],
       },
+      dataAnalysis: {
+        id: 'data-analysis',
+        title: 'تحليل البيانات إلى ما بعد SQL: دع النموذج يكتب الكود',
+        content: [
+          '<strong>في تحليل البيانات، دع النموذج المحلي يكتب كود SQL أو pandas الذي تشغّله بنفسك بدلًا من لصق جداول كاملة في الموجّه.</strong> تتعامل النماذج اللغوية بشكل ضعيف مع الحسابات صفًا بصف ومع الجداول الكبيرة، لكنها تكتب بموثوقية الاستعلام أو السكربت الذي ينفّذ التجميع، ويبقى الكود قابلًا للمراجعة والإعادة.',
+          'أرسل إلى النموذج المخطط وأنواع الأعمدة وبضعة صفوف نموذجية فقط. شغّل الكود المُولَّد في بيئة معزولة أو عبر اتصال للقراءة فقط، وتحقق من النتيجة على عينة صغيرة قبل الوثوق بتشغيل كامل. لهذا يناسب النموذج المتخصص في الأكواد نفسه المهمتين معًا: SQL وتحليل البيانات كلاهما من مهام توليد الأكواد.',
+        ],
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: 'لمن يناسب هذا',
@@ -798,6 +954,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'هل نماذج المحادثة المحلية العامة غير قابلة للاستخدام في SQL؟',
             a: 'لا، يمكنها التعامل بشكل جيد نسبيًا مع استعلامات الجدول الواحد البسيطة. تتسع الفجوة مع النماذج المتخصصة في الأكواد بشكل ملحوظ في عمليات الربط متعددة الجداول والاستعلامات الفرعية ودوال النوافذ، حيث تهم دقة الصياغة أكثر.',
           },
+          {
+            q: 'هل يستطيع نموذج LLM محلي تحليل ملف CSV مباشرة؟',
+            a: 'الملفات الصغيرة فقط. فالجدول الكامل يتجاوز نافذة السياق بسرعة، وتخطئ النماذج في المجاميع والمتوسطات عند قراءة الصفوف الخام. الأفضل أن تعطيه أسماء الأعمدة وبضعة صفوف نموذجية وتطلب منه كتابة كود pandas أو SQL (مثلًا فوق SQLite أو DuckDB) يحسب الإجابة.',
+          },
+          {
+            q: 'هل يختلف أفضل نموذج محلي لتحليل البيانات عن الأفضل لـ SQL؟',
+            a: 'في الغالب لا. كلاهما مهمة توليد أكواد، لذا فإن نموذجًا متخصصًا في الأكواد بنافذة سياق طويلة هو نقطة البداية الصحيحة. أضف فحصًا يقارن مخرجات الكود المُولَّد بنتيجة حسبتها يدويًا على عينة صغيرة.',
+          },
+          {
+            q: 'هل تحليل البيانات بنموذج محلي أكثر خصوصية من النموذج السحابي؟',
+            a: 'تبقى البيانات على جهازك ما دام النموذج والكود المُولَّد يعملان محليًا، وهذا يفيد مع الجداول السرية. لكنه لا يعفيك من التزاماتك الخاصة بحماية البيانات عند استخدام النتائج.',
+          },
         ],
       },
     },
@@ -806,11 +974,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Capability Picks',
     heroImage: '/images/best-local-llm-for-sql-data-analysis-overview-hero-ko.webp',
     title: 'SQL 및 데이터 분석에 가장 적합한 로컬 LLM은 무엇입니까?',
-    seoTitle: 'SQL 및 데이터 분석에 최적인 로컬 LLM | Prompt Bites',
+    seoTitle: '데이터 분석·SQL에 최적인 로컬 LLM | Prompt Bites',
     metaDescription:
-      '로컬 LLM이 SQL 생성 및 데이터 분석 작업에서 우수한 이유와, 데이터베이스용 모델을 선택하기 전에 확인해야 할 사항을 안내합니다.',
+      '데이터 분석과 SQL에 가장 좋은 로컬 LLM은? 긴 컨텍스트의 코딩 특화 모델을 고르고, SQL이나 pandas 코드를 쓰게 한 뒤 로컬에서 실행하세요.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -819,10 +987,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['best-14b-models-coding', 'qwen-coder-vs-deepseek-coder', 'best-local-llm-for-translation', 'best-structured-json-output-local-llm'],
     is_living_page: false,
     leadAnswerBlock:
-      '<strong>SQL 및 데이터 분석에 적합한 로컬 LLM은 강력한 코드 생성 학습과, 질문과 함께 전체 스키마를 담을 수 있을 만큼 충분히 큰 컨텍스트 윈도우가 필요합니다.</strong> 코딩에 특화된 모델은 일반적으로 SQL 정확도 면에서 범용 채팅 모델을 능가합니다.',
+      '<strong>SQL 및 데이터 분석에 적합한 로컬 LLM은 강력한 코드 생성 학습과, 질문과 함께 전체 스키마를 담을 수 있을 만큼 충분히 큰 컨텍스트 윈도우가 필요합니다.</strong> 코딩에 특화된 모델은 일반적으로 SQL 정확도 면에서 범용 채팅 모델을 능가합니다. 더 넓은 데이터 분석에서도 같은 모델이 원본 테이블을 직접 읽는 대신, 로컬에서 실행할 SQL이나 pandas 코드를 작성할 수 있습니다.',
     toc: [
       { label: '최선의 선택: 코딩 특화 모델', anchor: '#best-pick' },
       { label: 'SQL 작업에서 중요한 요소', anchor: '#what-matters' },
+      { label: 'SQL을 넘어선 데이터 분석', anchor: '#data-analysis' },
       { label: '적합한 사용자', anchor: '#who-should-use' },
       { label: '자주 묻는 질문', anchor: '#faq' },
     ],
@@ -836,7 +1005,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '짧은 채팅 작업보다 여기서는 큰 컨텍스트 윈도우가 더 중요합니다 — 전체 스키마는 공간을 많이 차지합니다.',
           'SQL 방언의 특성은 데이터베이스 엔진마다 다르므로 반드시 자신의 스키마로 테스트하세요.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -870,6 +1039,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'SQL 방언 차이(PostgreSQL, MySQL, SQLite 등은 날짜 함수와 윈도우 함수 같은 요소에서 각각 고유한 구문 특성을 가짐)는 모델마다 일관되게 처리되지 않습니다 — 모델이 어떤 방언에 대해 올바른 구문을 생성하는지는 학습 데이터에 따라 결정됩니다. 모델이 알아서 올바르게 추론할 것이라고 가정하지 말고, 프롬프트에서 항상 데이터베이스 엔진을 명시적으로 지정하세요.',
         ],
       },
+      dataAnalysis: {
+        id: 'data-analysis',
+        title: 'SQL을 넘어선 데이터 분석: 모델이 코드를 작성하게 하세요',
+        content: [
+          '<strong>데이터 분석에서는 테이블 전체를 프롬프트에 붙여 넣는 대신, 로컬 모델이 SQL이나 pandas 코드를 작성하고 사용자가 직접 실행하게 하세요.</strong> 언어 모델은 행 단위 계산과 큰 테이블을 잘 다루지 못하지만, 집계를 수행하는 쿼리나 스크립트는 안정적으로 작성하며, 코드는 검토와 재실행이 가능합니다.',
+          '모델에는 스키마, 열 유형, 몇 개의 샘플 행만 전달하세요. 생성된 코드는 샌드박스나 읽기 전용 연결에서 실행하고, 전체 실행을 신뢰하기 전에 작은 샘플로 결과를 확인하세요. SQL과 데이터 분석은 모두 코드 생성 작업이므로 같은 코딩 특화 모델이 두 작업에 적합합니다.',
+        ],
+      },
       whoShouldUse: {
         id: 'who-should-use',
         title: '적합한 사용자',
@@ -897,6 +1074,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '범용 로컬 채팅 모델은 SQL에 전혀 쓸 수 없습니까?',
             a: '아닙니다. 단순한 단일 테이블 쿼리는 상당히 잘 처리할 수 있습니다. 다중 테이블 조인, 서브쿼리, 윈도우 함수처럼 구문 정확성이 더 중요한 영역에서 코딩 특화 모델과의 격차가 눈에 띄게 벌어집니다.',
+          },
+          {
+            q: '로컬 LLM이 CSV 파일을 직접 분석할 수 있습니까?',
+            a: '작은 파일만 가능합니다. 전체 테이블은 컨텍스트 창을 금방 넘어서고, 원본 행을 읽을 때 모델이 합계와 평균을 잘못 계산하기도 합니다. 대신 열 이름과 몇 개의 샘플 행을 주고, 답을 계산하는 pandas나 SQL 코드(예: SQLite 또는 DuckDB 기반)를 작성하게 하세요.',
+          },
+          {
+            q: '데이터 분석에 가장 좋은 로컬 LLM은 SQL용과 다릅니까?',
+            a: '대체로 같습니다. 둘 다 코드 생성 작업이므로 긴 컨텍스트 창을 가진 코딩 특화 모델이 출발점입니다. 생성된 코드의 출력을 작은 샘플에서 직접 계산한 결과와 비교하는 확인 단계를 추가하세요.',
+          },
+          {
+            q: '로컬 LLM으로 데이터를 분석하면 클라우드 모델보다 더 안전합니까?',
+            a: '모델과 생성된 코드가 모두 로컬에서 실행되는 한 데이터가 내 기기에 남아 있어 기밀 테이블에 도움이 됩니다. 다만 결과를 다루는 데 따르는 본인의 데이터 보호 의무가 사라지는 것은 아닙니다.',
           },
         ],
       },
