@@ -1015,6 +1015,7 @@ const HUB_THEMES: Array<{
       'backyard-ai-review-local-roleplay',
       'agnai-review',
       'risuai-review',
+      'swerve-ai-review',
     ],
   },
   {
