@@ -6,12 +6,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-en.webp',
     title: 'What Is the CO-STAR Prompt Framework?',
-    dateModified: '2026-06-21',
-    seoTitle: 'CO-STAR Framework 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'CO-STAR is a six-part prompt framework: Context, Objective, Style, Tone, Audience, Response. Structures prompts for consistent output in 60–120 words.',
+    dateModified: '2026-10-17',
+    seoTitle: 'CO-STAR Letters Explained 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'CO-STAR stands for Context, Objective, Style, Tone, Audience, Response. The C is Context. Credited to GovTech Singapore; fits in 60–120 words.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-04-17',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
@@ -93,6 +93,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>CO-STAR is a six-part prompt structure: Context, Objective, Style, Tone, Audience, Response format. It is one of the most-cited frameworks for structuring complex LLM prompts because it forces the writer to specify each dimension that affects output quality.</strong>',
           'The framework was developed to solve a recurring problem in prompt engineering: prompts that are technically clear but miss implicit constraints. When you write "Summarize this document," the model makes assumptions about length, formality, audience, and format. CO-STAR replaces those assumptions with explicit instructions.',
           'Each component targets a different dimension of the output. Context anchors the model in the relevant situation. Objective pins the exact deliverable. Style and Tone control the writing register. Audience calibrates vocabulary and complexity. Response specifies the structural format.',
+          'CO-STAR is credited to the Data Science and AI team at GovTech Singapore, the Singapore government technology agency, and appears in its Prompt Engineering Playbook (<a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">GovTech overview</a>). It became widely known when Sheila Teo, winner of the first GovTech GPT-4 prompt engineering competition in Singapore (2023), described the framework in a Towards Data Science article.',
         ],
         columns: ['Letter', 'Element', 'Purpose'],
         rows: [
@@ -117,6 +118,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Quick Answers About the CO-STAR Framework',
         faqs: [
           {
+            q: 'What does the C in CO-STAR stand for?',
+            a: 'The C stands for Context: the background the model needs to understand the situation, such as the project, the history or the constraints. The full acronym is Context, Objective, Style, Tone, Audience, Response. The O is Objective, not "Output".',
+          },
+          {
+            q: 'Which CO-STAR element sets format, structure and delivery constraints?',
+            a: 'Response. It specifies the output format and structure, for example a bulleted list, a table, JSON, a 150-word email or a code block. Style and Tone control how the text reads; Response controls how it is delivered.',
+          },
+          {
+            q: 'What does the Tone element define in CO-STAR?',
+            a: 'Tone defines the emotional register of the response, such as empathetic, neutral, encouraging or firm. It differs from Style, which covers the writing approach (formal, technical, conversational). Setting both prevents an answer that is correct but wrongly pitched.',
+          },
+          {
+            q: 'Which of these is not part of CO-STAR: Role, Objective, Audience or Tone?',
+            a: 'Role. CO-STAR has six components: Context, Objective, Style, Tone, Audience and Response. It has no Role, Examples or Steps element; frameworks such as TRACE and RISEN include those. You can add a role line to a CO-STAR prompt, but it is not part of the acronym.',
+          },
+          {
+            q: 'Who developed the CO-STAR framework?',
+            a: 'CO-STAR is credited to the Data Science and AI team at GovTech Singapore, which features it in its Prompt Engineering Playbook. Sheila Teo, who won the first GovTech GPT-4 prompt engineering competition in 2023, later described it publicly. See the <a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">GovTech overview</a>.',
+          },
+          {
             q: 'How does CO-STAR differ from other prompt frameworks like RISEN or TRACE?',
             a: 'CO-STAR focuses specifically on output characteristics — style, tone, audience, and format. RISEN (Role, Instructions, Steps, End Goal, Narrowing) emphasizes process and constraints. TRACE (Task, Role, Audience, Context, Examples) overlaps heavily with CO-STAR. The key advantage of CO-STAR is its explicit separation of Style and Tone, which most other frameworks merge into a single "voice" parameter.',
           },
@@ -140,12 +161,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-de.webp',
     title: 'Was ist das CO-STAR-Prompt-Framework?',
-    seoTitle: 'CO-STAR: 6-Teil-Framework 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'CO-STAR-Framework mit sechs Komponenten: Context, Objective, Style, Tone, Audience, Response. Strukturiert Prompts für konsistente Ausgaben in 60–120 Wörtern.',
+    seoTitle: 'CO-STAR Buchstaben erklärt 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'CO-STAR steht für Context, Objective, Style, Tone, Audience, Response. Das C steht für Context. GovTech Singapur zugeschrieben; Prompts in 60–120 Wörtern.',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-19',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       de: {
         question: 'Was ist das CO-STAR-Prompt-Framework?',
@@ -176,6 +197,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>CO-STAR ist eine sechskomponentige Prompt-Struktur, die jede Variable abdeckt, die ein Sprachmodell benötigt, um zielgerichtete, konsistente Ausgaben zu erzeugen: die Hintergrundsituation, die Aufgabe, den gewünschten Schreibstil, den emotionalen Ton, den beabsichtigten Leser und das erforderliche Ausgabeformat.</strong> Die Verwendung aller sechs Komponenten eliminiert die häufigste Ursache für fehlerhafte Antworten — fehlenden Kontext.',
           'Das Framework wurde entwickelt, um ein wiederkehrendes Problem im Prompt Engineering zu lösen: Prompts, die technisch klar sind, aber implizite Einschränkungen verfehlen. Wenn Sie "Fasse dieses Dokument zusammen" schreiben, trifft das Modell Annahmen über Länge, Formalität, Leserschaft und Format. CO-STAR ersetzt diese Annahmen durch explizite Anweisungen.',
           'Jede Komponente zielt auf eine andere Dimension der Ausgabe ab. Context verankert das Modell in der relevanten Situation. Objective legt das genaue Ergebnis fest. Style und Tone steuern das Schreibregister. Audience kalibriert Vokabular und Komplexität. Response gibt das strukturelle Format an.',
+          'CO-STAR wird dem Data-Science-und-KI-Team von GovTech Singapur, der Technologiebehörde der Regierung Singapurs, zugeschrieben und steht in dessen Prompt Engineering Playbook (<a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">GovTech-Überblick</a>). Bekannt wurde es, als Sheila Teo, Siegerin des ersten GovTech-GPT-4-Prompt-Engineering-Wettbewerbs in Singapur (2023), das Framework in einem Artikel auf Towards Data Science beschrieb.',
         ],
         columns: ['Komponente', 'Beantwortet die Frage', 'Beispiel'],
         rows: [
@@ -200,6 +222,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Schnelle Antworten zum CO-STAR-Framework',
         faqs: [
           {
+            q: 'Wofür steht das C in CO-STAR?',
+            a: 'Das C steht für Context: den Hintergrund, den das Modell braucht, um die Situation zu verstehen, etwa Projekt, Vorgeschichte oder Rahmenbedingungen. Das vollständige Akronym lautet Context, Objective, Style, Tone, Audience, Response. Das O steht für Objective, nicht für „Output“.',
+          },
+          {
+            q: 'Welches CO-STAR-Element legt Format, Struktur und Ausgabevorgaben fest?',
+            a: 'Response. Es bestimmt Format und Struktur der Ausgabe, zum Beispiel Aufzählung, Tabelle, JSON, eine E-Mail mit 150 Wörtern oder einen Codeblock. Style und Tone steuern, wie der Text klingt; Response steuert, wie er geliefert wird.',
+          },
+          {
+            q: 'Was legt das Element Tone in CO-STAR fest?',
+            a: 'Tone legt das emotionale Register der Antwort fest, etwa einfühlsam, neutral, ermutigend oder bestimmt. Es unterscheidet sich von Style, der den Schreibansatz beschreibt (formell, technisch, locker). Beide zusammen verhindern eine korrekte, aber im Ton verfehlte Antwort.',
+          },
+          {
+            q: 'Welches gehört nicht zu CO-STAR: Role, Objective, Audience oder Tone?',
+            a: 'Role. CO-STAR hat sechs Komponenten: Context, Objective, Style, Tone, Audience und Response. Es gibt kein Role-, Examples- oder Steps-Element; Frameworks wie TRACE und RISEN enthalten diese. Eine Rollenzeile lässt sich ergänzen, gehört aber nicht zum Akronym.',
+          },
+          {
+            q: 'Wer hat das CO-STAR-Framework entwickelt?',
+            a: 'CO-STAR wird dem Data-Science-und-KI-Team von GovTech Singapur zugeschrieben, das es in seinem Prompt Engineering Playbook führt. Sheila Teo, Siegerin des ersten GovTech-GPT-4-Prompt-Engineering-Wettbewerbs 2023, beschrieb es später öffentlich. Siehe den <a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">GovTech-Überblick</a>.',
+          },
+          {
             q: 'Wie unterscheidet sich CO-STAR von anderen Prompt-Frameworks wie RISEN oder TRACE?',
             a: 'CO-STAR konzentriert sich speziell auf Ausgabemerkmale — Stil, Ton, Leserschaft und Format. RISEN (Role, Instructions, Steps, End Goal, Narrowing) betont Prozess und Einschränkungen. TRACE (Task, Role, Audience, Context, Examples) überschneidet sich stark mit CO-STAR. Der wesentliche Vorteil von CO-STAR ist die explizite Trennung von Style und Tone, die die meisten anderen Frameworks in einen einzelnen "Voice"-Parameter zusammenführen.',
           },
@@ -223,12 +265,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-fr.webp',
     title: 'Qu\'est-ce que le framework de prompt CO-STAR ?',
-    seoTitle: 'Framework CO-STAR 2026 expliqué | Prompt Bites | PromptQuorum',
-    metaDescription: 'CO-STAR structure les prompts en six composants : Context, Objective, Style, Tone, Audience, Response. Produit des sorties LLM cohérentes en 60–120 mots.',
+    seoTitle: 'CO-STAR : sens des lettres 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'CO-STAR signifie Context, Objective, Style, Tone, Audience, Response. Le C désigne Context. Attribué à GovTech Singapour ; prompts structurés en 60–120 mots.',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-19',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que le framework de prompt CO-STAR ?',
@@ -259,6 +301,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>CO-STAR est une structure de prompt à six composants qui couvre toutes les variables dont un modèle de langage a besoin pour produire une sortie ciblée et cohérente : la situation de fond, la tâche, le style d\'écriture souhaité, le ton émotionnel, le lecteur visé et le format de sortie requis.</strong> L\'utilisation des six composants élimine la cause la plus fréquente de réponses mal alignées — le contexte manquant.',
           'Le framework a été développé pour résoudre un problème récurrent dans l\'ingénierie des prompts : des prompts techniquement clairs mais manquant de contraintes implicites. Quand vous écrivez "Résume ce document", le modèle fait des hypothèses sur la longueur, la formalité, l\'audience et le format. CO-STAR remplace ces hypothèses par des instructions explicites.',
           'Chaque composant cible une dimension différente de la sortie. Context ancre le modèle dans la situation pertinente. Objective fixe le livrable exact. Style et Tone contrôlent le registre d\'écriture. Audience calibre le vocabulaire et la complexité. Response spécifie le format structurel.',
+          'CO-STAR est attribué à l’équipe Data Science et IA de GovTech Singapour, l’agence technologique du gouvernement singapourien, et figure dans son Prompt Engineering Playbook (<a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">présentation GovTech</a>). Il s’est fait connaître quand Sheila Teo, lauréate du premier concours de prompt engineering GPT-4 de GovTech à Singapour (2023), a décrit le framework dans un article de Towards Data Science.',
         ],
         columns: ['Composant', 'Question à laquelle il répond', 'Exemple'],
         rows: [
@@ -283,6 +326,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Réponses rapides sur le framework CO-STAR',
         faqs: [
           {
+            q: 'Que signifie le C dans CO-STAR ?',
+            a: 'Le C signifie Context : le contexte dont le modèle a besoin pour comprendre la situation, comme le projet, l’historique ou les contraintes. L’acronyme complet est Context, Objective, Style, Tone, Audience, Response. Le O est Objective, pas « Output ».',
+          },
+          {
+            q: 'Quel élément de CO-STAR fixe le format, la structure et les contraintes de livraison ?',
+            a: 'Response. Il précise le format et la structure de la sortie, par exemple une liste à puces, un tableau, du JSON, un e-mail de 150 mots ou un bloc de code. Style et Tone contrôlent le rendu du texte ; Response contrôle sa livraison.',
+          },
+          {
+            q: 'Que définit l’élément Tone dans CO-STAR ?',
+            a: 'Tone définit le registre émotionnel de la réponse, par exemple empathique, neutre, encourageant ou ferme. Il se distingue de Style, qui couvre l’approche d’écriture (formel, technique, conversationnel). Définir les deux évite une réponse juste mais mal calibrée.',
+          },
+          {
+            q: 'Lequel ne fait pas partie de CO-STAR : Role, Objective, Audience ou Tone ?',
+            a: 'Role. CO-STAR compte six composants : Context, Objective, Style, Tone, Audience et Response. Il n’a ni élément Role, ni Examples, ni Steps ; des frameworks comme TRACE et RISEN les incluent. Une ligne de rôle peut être ajoutée, mais ne fait pas partie de l’acronyme.',
+          },
+          {
+            q: 'Qui a développé le framework CO-STAR ?',
+            a: 'CO-STAR est attribué à l’équipe Data Science et IA de GovTech Singapour, qui le présente dans son Prompt Engineering Playbook. Sheila Teo, lauréate du premier concours de prompt engineering GPT-4 de GovTech en 2023, l’a ensuite décrit publiquement. Voir la <a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">présentation GovTech</a>.',
+          },
+          {
             q: 'En quoi CO-STAR diffère-t-il d\'autres frameworks de prompt comme RISEN ou TRACE ?',
             a: 'CO-STAR se concentre spécifiquement sur les caractéristiques de sortie — style, ton, audience et format. RISEN (Role, Instructions, Steps, End Goal, Narrowing) met l\'accent sur le processus et les contraintes. TRACE (Task, Role, Audience, Context, Examples) se superpose largement à CO-STAR. L\'avantage clé de CO-STAR est sa séparation explicite du Style et du Tone, que la plupart des autres frameworks fusionnent en un seul paramètre de "voix".',
           },
@@ -306,12 +369,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-ja.webp',
     title: 'CO-STARプロンプトフレームワークとは？',
-    seoTitle: 'CO-STAR：6部構成フレームワーク 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'CO-STARは6部構成のプロンプトフレームワーク。Context、Objective、Style、Tone、Audience、Responseで一貫した目的に合ったLLM出力を生成。60～120語で構造化。',
+    seoTitle: 'CO-STAR：各文字の意味 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'CO-STARはContext、Objective、Style、Tone、Audience、Responseの略。CはContext。GovTechシンガポール発とされ、60～120語でプロンプトを構造化。',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-19',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       ja: {
         question: 'CO-STARプロンプトフレームワークとは何ですか？',
@@ -342,6 +405,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>CO-STARは、言語モデルが目的に合った一貫した出力を生み出すために必要なすべての変数をカバーする6コンポーネントのプロンプト構造です：背景状況、タスク、望ましい文体、感情的な調子、意図した読者、必要な出力形式。</strong> 6つのコンポーネントすべてを使用することで、不整合な応答の最も一般的な原因である「コンテキストの欠如」を排除します。',
           'このフレームワークは、プロンプトエンジニアリングの繰り返し発生する問題を解決するために開発されました：技術的には明確だが暗黙の制約を見逃すプロンプト。「このドキュメントを要約してください」と書くと、モデルは長さ、形式、読者、フォーマットについて仮定を行います。CO-STARはそれらの仮定を明示的な指示に置き換えます。',
           'それぞれのコンポーネントは出力の異なる次元を対象にしています。Contextはモデルを関連する状況に固定します。Objectiveは正確な成果物を決定します。StyleとToneは文章のレジスターを制御します。Audienceは語彙と複雑さを調整します。Responseは構造的なフォーマットを指定します。',
+          'CO-STARは、シンガポール政府のテクノロジー機関GovTech Singaporeのデータサイエンス・AIチームによるものとされ、同機関のPrompt Engineering Playbookにも掲載されています（<a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">GovTechの概要</a>）。シンガポールで開催された初のGovTech GPT-4プロンプトエンジニアリングコンペ（2023年）の優勝者Sheila Teo氏が、Towards Data Scienceの記事でこのフレームワークを紹介して広く知られるようになりました。',
         ],
         columns: ['コンポーネント', '答える質問', '例'],
         rows: [
@@ -366,6 +430,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'CO-STARフレームワークに関するよくある質問',
         faqs: [
           {
+            q: 'CO-STARのCは何の略ですか？',
+            a: 'CはContext（背景）の略です。プロジェクト、経緯、制約など、モデルが状況を理解するために必要な情報を指します。正式な略称はContext、Objective、Style、Tone、Audience、Responseです。OはObjectiveであり、「Output」ではありません。',
+          },
+          {
+            q: 'CO-STARで形式・構造・出力条件を定める要素はどれですか？',
+            a: 'Responseです。箇条書き、表、JSON、150語のメール、コードブロックなど、出力の形式と構造を指定します。StyleとToneは文章の読み味を、Responseは出力の形を決めます。',
+          },
+          {
+            q: 'CO-STARのToneは何を定めますか？',
+            a: 'Toneは回答の感情的な調子（共感的、中立、励ます、毅然としたなど）を定めます。文章の書き方（フォーマル、技術的、会話調）を表すStyleとは別物です。両方を指定すると、内容は正しくても調子が合わない回答を防げます。',
+          },
+          {
+            q: 'Role、Objective、Audience、Toneのうち、CO-STARに含まれないものはどれですか？',
+            a: 'Roleです。CO-STARの構成要素はContext、Objective、Style、Tone、Audience、Responseの6つで、Role、Examples、Stepsはありません。TRACEやRISENなどのフレームワークにはこれらが含まれます。役割の一文を足すことはできますが、略称には含まれません。',
+          },
+          {
+            q: 'CO-STARフレームワークは誰が開発しましたか？',
+            a: 'CO-STARはGovTech Singaporeのデータサイエンス・AIチームによるものとされ、同チームのPrompt Engineering Playbookで紹介されています。Sheila Teo氏は、GovTech初のGPT-4プロンプトエンジニアリングコンペ（2023年）で優勝した後、これを公に紹介しました。<a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">GovTechの概要</a>もご覧ください。',
+          },
+          {
             q: 'CO-STARはRISENやTRACEなどの他のプロンプトフレームワークとどう違いますか？',
             a: 'CO-STARは出力特性 — スタイル、トーン、読者、フォーマット — に特化しています。RISEN（Role、Instructions、Steps、End Goal、Narrowing）はプロセスと制約を重視します。TRACE（Task、Role、Audience、Context、Examples）はCO-STARと大幅に重複しています。CO-STARの重要な利点は、ほとんどの他のフレームワークが単一の「声」パラメータにまとめているStyleとToneを明示的に分離していることです。',
           },
@@ -389,12 +473,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-pt.webp',
     title: 'O que é o framework CO-STAR para prompts?',
-    seoTitle: 'Framework CO-STAR 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'CO-STAR é um framework de 6 partes: Context, Objective, Style, Tone, Audience, Response. Estrutura prompts para outputs consistentes em 60–120 palavras.',
+    seoTitle: 'CO-STAR letra por letra 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'CO-STAR significa Context, Objective, Style, Tone, Audience, Response. O C é Context. Atribuído à GovTech Singapura; estrutura prompts em 60–120 palavras.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-02',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       pt: {
         question: 'O que é o framework CO-STAR?',
@@ -425,6 +509,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>CO-STAR é uma estrutura de prompt de 6 partes: Context, Objective, Style, Tone, Audience, Response format. É um dos frameworks mais citados para estruturar prompts complexos de LLM porque obriga o escritor a especificar cada dimensão que afeta a qualidade do output.</strong>',
           'O framework foi desenvolvido para resolver um problema recorrente em prompt engineering: prompts que são tecnicamente claros, mas perdem restrições implícitas. Quando você escreve "Resuma este documento", o modelo faz suposições sobre comprimento, formalidade, audiência e formato. CO-STAR substitui essas suposições por instruções explícitas.',
           'Cada componente foca em uma dimensão diferente do output. Context ancora o modelo na situação relevante. Objective define o entregável exato. Style e Tone controlam o registro de escrita. Audience calibra vocabulário e complexidade. Response especifica o formato estrutural.',
+          'O CO-STAR é atribuído à equipe de Ciência de Dados e IA da GovTech Singapura, a agência de tecnologia do governo singapuriano, e consta em seu Prompt Engineering Playbook (<a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">visão geral da GovTech</a>). Tornou-se conhecido quando Sheila Teo, vencedora do primeiro concurso de prompt engineering com GPT-4 da GovTech em Singapura (2023), descreveu o framework em um artigo do Towards Data Science.',
         ],
         columns: ['Letra', 'Elemento', 'Propósito'],
         rows: [
@@ -449,6 +534,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Respostas rápidas sobre o framework CO-STAR',
         faqs: [
           {
+            q: 'O que significa o C em CO-STAR?',
+            a: 'O C significa Context: o contexto de que o modelo precisa para entender a situação, como o projeto, o histórico ou as restrições. O acrônimo completo é Context, Objective, Style, Tone, Audience, Response. O O é Objective, não «Output».',
+          },
+          {
+            q: 'Qual elemento do CO-STAR define formato, estrutura e restrições de entrega?',
+            a: 'Response. Ele define o formato e a estrutura da saída, por exemplo uma lista com marcadores, uma tabela, JSON, um e-mail de 150 palavras ou um bloco de código. Style e Tone controlam como o texto soa; Response controla como ele é entregue.',
+          },
+          {
+            q: 'O que o elemento Tone define no CO-STAR?',
+            a: 'Tone define o registro emocional da resposta, como empático, neutro, motivador ou firme. Difere de Style, que cobre a abordagem de escrita (formal, técnica, conversacional). Definir os dois evita uma resposta correta, mas com o tom errado.',
+          },
+          {
+            q: 'Qual destes não faz parte do CO-STAR: Role, Objective, Audience ou Tone?',
+            a: 'Role. O CO-STAR tem seis componentes: Context, Objective, Style, Tone, Audience e Response. Não há elemento Role, Examples ou Steps; frameworks como TRACE e RISEN os incluem. Dá para acrescentar uma linha de papel, mas ela não faz parte do acrônimo.',
+          },
+          {
+            q: 'Quem desenvolveu o framework CO-STAR?',
+            a: 'O CO-STAR é atribuído à equipe de Ciência de Dados e IA da GovTech Singapura, que o apresenta em seu Prompt Engineering Playbook. Sheila Teo, vencedora do primeiro concurso de prompt engineering com GPT-4 da GovTech em 2023, o descreveu publicamente depois. Veja a <a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">visão geral da GovTech</a>.',
+          },
+          {
             q: 'Como CO-STAR se diferencia de outros frameworks como RISEN ou TRACE?',
             a: 'CO-STAR foca especificamente em características do output — estilo, tom, audiência e formato. RISEN (Role, Instructions, Steps, End Goal, Narrowing) enfatiza processo e restrições. TRACE (Task, Role, Audience, Context, Examples) se sobrepõe amplamente ao CO-STAR. A principal vantagem do CO-STAR é sua separação explícita de Style e Tone, que a maioria dos outros frameworks combina em um único parâmetro de "voz".',
           },
@@ -472,12 +577,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-es.webp',
     title: '¿Qué es el framework CO-STAR para prompts?',
-    seoTitle: 'Framework CO-STAR 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'CO-STAR es un framework de 6 partes: Context, Objective, Style, Tone, Audience, Response. Estructura prompts para outputs consistentes en 60–120 palabras.',
+    seoTitle: 'CO-STAR letra por letra 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'CO-STAR significa Context, Objective, Style, Tone, Audience, Response. La C es Context. Atribuido a GovTech Singapur; estructura prompts en 60–120 palabras.',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-29',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       es: {
         question: '¿Qué es el framework CO-STAR?',
@@ -508,6 +613,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>CO-STAR es una estructura de prompt de 6 partes: Context, Objective, Style, Tone, Audience, Response format. Es uno de los frameworks más citados para estructurar prompts complejos de LLM porque obliga al escritor a especificar cada dimensión que afecta la calidad del output.</strong>',
           'El framework fue desarrollado para resolver un problema recurrente en prompt engineering: prompts que son técnicamente claros pero pierden restricciones implícitas. Cuando escribes "Resume este documento", el modelo hace suposiciones sobre largo, formalidad, audiencia y formato. CO-STAR reemplaza esas suposiciones con instrucciones explícitas.',
           'Cada componente enfoca una dimensión diferente del output. Context ancla el modelo en la situación relevante. Objective fija el entregable exacto. Style y Tone controlan el registro de escritura. Audience calibra vocabulario y complejidad. Response especifica el formato estructural.',
+          'CO-STAR se atribuye al equipo de Ciencia de Datos e IA de GovTech Singapur, la agencia tecnológica del gobierno singapurense, y aparece en su Prompt Engineering Playbook (<a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">resumen de GovTech</a>). Se hizo conocido cuando Sheila Teo, ganadora del primer concurso de prompt engineering con GPT-4 de GovTech en Singapur (2023), describió el framework en un artículo de Towards Data Science.',
         ],
         columns: ['Letra', 'Elemento', 'Propósito'],
         rows: [
@@ -532,6 +638,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Respuestas rápidas sobre el framework CO-STAR',
         faqs: [
           {
+            q: '¿Qué significa la C en CO-STAR?',
+            a: 'La C significa Context: el contexto que el modelo necesita para entender la situación, como el proyecto, los antecedentes o las restricciones. El acrónimo completo es Context, Objective, Style, Tone, Audience, Response. La O es Objective, no «Output».',
+          },
+          {
+            q: '¿Qué elemento de CO-STAR fija el formato, la estructura y las restricciones de entrega?',
+            a: 'Response. Define el formato y la estructura de la salida, por ejemplo una lista con viñetas, una tabla, JSON, un correo de 150 palabras o un bloque de código. Style y Tone controlan cómo se lee el texto; Response controla cómo se entrega.',
+          },
+          {
+            q: '¿Qué define el elemento Tone en CO-STAR?',
+            a: 'Tone define el registro emocional de la respuesta, como empático, neutral, motivador o firme. Se diferencia de Style, que cubre el enfoque de escritura (formal, técnico, conversacional). Definir ambos evita una respuesta correcta pero con el tono equivocado.',
+          },
+          {
+            q: '¿Cuál no forma parte de CO-STAR: Role, Objective, Audience o Tone?',
+            a: 'Role. CO-STAR tiene seis componentes: Context, Objective, Style, Tone, Audience y Response. No incluye Role, Examples ni Steps; frameworks como TRACE y RISEN sí los incluyen. Se puede añadir una línea de rol, pero no forma parte del acrónimo.',
+          },
+          {
+            q: '¿Quién desarrolló el framework CO-STAR?',
+            a: 'CO-STAR se atribuye al equipo de Ciencia de Datos e IA de GovTech Singapur, que lo incluye en su Prompt Engineering Playbook. Sheila Teo, ganadora del primer concurso de prompt engineering con GPT-4 de GovTech en 2023, lo describió después públicamente. Consulta el <a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">resumen de GovTech</a>.',
+          },
+          {
             q: '¿Cómo se diferencia CO-STAR de otros frameworks como RISEN o TRACE?',
             a: 'CO-STAR se enfoca específicamente en características de output — estilo, tono, audiencia y formato. RISEN (Role, Instructions, Steps, End Goal, Narrowing) enfatiza proceso y restricciones. TRACE (Task, Role, Audience, Context, Examples) se superpone ampliamente con CO-STAR. La ventaja clave de CO-STAR es su separación explícita de Style y Tone, que la mayoría de otros frameworks combinan en un único parámetro de "voz".',
           },
@@ -555,12 +681,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-zh.webp',
     title: 'CO-STAR 提示框架是什么？',
-    seoTitle: 'CO-STAR 提示框架：6部分结构 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'CO-STAR提示框架，六个部分：Context、Objective、Style、Tone、Audience、Response。结构化提示以实现一致、有针对性的LLM输出。60-120词编写。',
+    seoTitle: 'CO-STAR：每个字母的含义 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'CO-STAR 即 Context、Objective、Style、Tone、Audience、Response。C 代表 Context。相传出自新加坡 GovTech，用 60-120 词结构化提示。',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-19',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       zh: {
         question: 'CO-STAR 提示框架是什么？',
@@ -591,6 +717,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>CO-STAR 是一个六组件提示结构，涵盖了语言模型产生有针对性、一致输出所需的每个变量：背景情况、任务、期望的写作风格、情感基调、目标读者和所需的输出格式。</strong> 使用全部六个组件可以消除不对齐响应的最常见来源——缺少上下文。',
           '该框架是为了解决提示工程中反复出现的问题而开发的：技术上清晰但遗漏了隐含约束的提示。当您写"总结这份文档"时，模型会对长度、正式程度、受众和格式做出假设。CO-STAR 用明确的指令替换了这些假设。',
           '每个组件针对输出的不同维度。Context 将模型锚定在相关情境中。Objective 确定精确的交付物。Style 和 Tone 控制写作语气。Audience 校准词汇和复杂度。Response 指定结构格式。',
+          'CO-STAR 被认为出自新加坡政府科技机构 GovTech Singapore 的数据科学与人工智能团队，并收录于其 Prompt Engineering Playbook（<a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">GovTech 介绍</a>）。首届 GovTech GPT-4 提示工程比赛（2023 年，新加坡）的冠军 Sheila Teo 在 Towards Data Science 文章中介绍了该框架，使其广为人知。',
         ],
         columns: ['组件', '回答的问题', '示例'],
         rows: [
@@ -615,6 +742,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '关于 CO-STAR 框架的快速解答',
         faqs: [
           {
+            q: 'CO-STAR 中的 C 代表什么？',
+            a: 'C 代表 Context（背景）：模型理解情境所需的背景信息，如项目、过往经过或限制条件。完整缩写为 Context、Objective、Style、Tone、Audience、Response。O 是 Objective，而不是“Output”。',
+          },
+          {
+            q: 'CO-STAR 中哪个要素规定格式、结构和交付约束？',
+            a: 'Response。它规定输出的格式与结构，例如项目符号列表、表格、JSON、150 词邮件或代码块。Style 和 Tone 决定文字读起来如何，Response 决定如何交付。',
+          },
+          {
+            q: 'CO-STAR 中的 Tone 定义什么？',
+            a: 'Tone 定义回答的情感基调，如共情、中立、鼓励或坚定。它不同于 Style（写作方式：正式、技术、口语化）。两者都设定，可避免内容正确但语气不当的回答。',
+          },
+          {
+            q: 'Role、Objective、Audience、Tone 中哪个不属于 CO-STAR？',
+            a: 'Role。CO-STAR 有六个组成部分：Context、Objective、Style、Tone、Audience 和 Response，没有 Role、Examples 或 Steps 要素；TRACE 和 RISEN 等框架包含这些。可以额外加一行角色设定，但它不属于该缩写。',
+          },
+          {
+            q: 'CO-STAR 框架由谁开发？',
+            a: 'CO-STAR 被认为出自新加坡 GovTech 的数据科学与人工智能团队，并收录于其 Prompt Engineering Playbook。Sheila Teo 在赢得首届 GovTech GPT-4 提示工程比赛（2023 年）后公开介绍了它。参见<a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">GovTech 介绍</a>。',
+          },
+          {
             q: 'CO-STAR 与 RISEN 或 TRACE 等其他提示框架有何不同？',
             a: 'CO-STAR 专注于输出特征——风格、基调、受众和格式。RISEN（Role、Instructions、Steps、End Goal、Narrowing）强调过程和约束。TRACE（Task、Role、Audience、Context、Examples）与 CO-STAR 大量重叠。CO-STAR 的关键优势在于明确区分了 Style 和 Tone，而大多数其他框架将它们合并为单一的"语气"参数。',
           },
@@ -638,12 +785,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-ar.webp',
     title: 'ما هو إطار عمل ⁨CO-STAR⁩ للأوامر؟',
-    seoTitle: 'إطار ⁨CO-STAR 2026⁩ | ⁨Prompt Bites⁩ | ⁨PromptQuorum⁩',
-    metaDescription: '⁨CO-STAR⁩ إطار أوامر من ⁨6⁩ أجزاء: ⁨Context⁩ و⁨Objective⁩ و⁨Style⁩ و⁨Tone⁩ و⁨Audience⁩ و⁨Response⁩. يُهيكل الأوامر لمخرجات متسقة في ⁨60⁩–⁨120⁩ كلمة.',
+    seoTitle: '⁨CO-STAR⁩: معنى كل حرف ⁨2026⁩ | ⁨Prompt Bites⁩ | ⁨PromptQuorum⁩',
+    metaDescription: '⁨CO-STAR⁩ تعني ⁨Context⁩ و⁨Objective⁩ و⁨Style⁩ و⁨Tone⁩ و⁨Audience⁩ و⁨Response⁩. الحرف ⁨C⁩ هو ⁨Context⁩. يُنسب إلى ⁨GovTech⁩ سنغافورة ويُهيكل الأوامر في ⁨60⁩–⁨120⁩ كلمة.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-20',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       ar: {
         question: 'ما هو إطار عمل CO-STAR؟',
@@ -674,6 +821,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>CO-STAR هو بنية أوامر من 6 أجزاء: Context وObjective وStyle وTone وAudience وResponse. يُعدّ من أكثر أطر هيكلة أوامر LLM المعقدة استشهادًا لأنه يُلزم الكاتب بتحديد كل بُعد يؤثر على جودة المخرجات.</strong>',
           'طُوِّر الإطار لحل مشكلة متكررة في هندسة الأوامر: أوامر واضحة تقنيًا لكنها تفتقر إلى القيود الضمنية. عندما تكتب "لخّص هذه الوثيقة"، يضع النموذج افتراضات حول الطول والرسمية والجمهور والتنسيق. يستبدل CO-STAR تلك الافتراضات بتعليمات صريحة.',
           'يستهدف كل مكوّن بُعدًا مختلفًا من المخرجات. Context يُرسّخ النموذج في الموقف ذي الصلة. Objective يُحدد المخرج الدقيق. Style وTone يتحكمان في مستوى الكتابة. Audience يُعايِر المفردات والتعقيد. Response يُحدد التنسيق الهيكلي.',
+          'يُنسب ⁨CO-STAR⁩ إلى فريق علوم البيانات والذكاء الاصطناعي في ⁨GovTech Singapore⁩، الوكالة التقنية للحكومة السنغافورية، ويرد في دليلها ⁨Prompt Engineering Playbook⁩ (<a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">نظرة عامة من GovTech</a>). وانتشر عندما وصفته ⁨Sheila Teo⁩، الفائزة بأول مسابقة هندسة أوامر ⁨GPT-4⁩ نظمتها ⁨GovTech⁩ في سنغافورة (⁨2023⁩)، في مقال على ⁨Towards Data Science⁩.',
         ],
         columns: ['الحرف', 'العنصر', 'الغرض'],
         rows: [
@@ -698,6 +846,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'إجابات سريعة حول إطار CO-STAR',
         faqs: [
           {
+            q: 'ماذا يعني الحرف ⁨C⁩ في ⁨CO-STAR⁩؟',
+            a: 'يعني الحرف ⁨C⁩ كلمة ⁨Context⁩ (السياق): المعلومات الخلفية التي يحتاجها النموذج لفهم الموقف، مثل المشروع والخلفية والقيود. الاختصار الكامل هو ⁨Context⁩ و⁨Objective⁩ و⁨Style⁩ و⁨Tone⁩ و⁨Audience⁩ و⁨Response⁩. والحرف ⁨O⁩ يعني ⁨Objective⁩ وليس ⁨Output⁩.',
+          },
+          {
+            q: 'أي عنصر في ⁨CO-STAR⁩ يحدد الصيغة والبنية وقيود التسليم؟',
+            a: '⁨Response⁩. يحدد صيغة المخرجات وبنيتها، مثل قائمة نقطية أو جدول أو ⁨JSON⁩ أو رسالة من ⁨150⁩ كلمة أو كتلة شيفرة. يتحكم ⁨Style⁩ و⁨Tone⁩ في أسلوب قراءة النص، ويتحكم ⁨Response⁩ في طريقة تسليمه.',
+          },
+          {
+            q: 'ماذا يحدد عنصر ⁨Tone⁩ في ⁨CO-STAR⁩؟',
+            a: 'يحدد ⁨Tone⁩ النبرة العاطفية للإجابة، كأن تكون متعاطفة أو محايدة أو مشجعة أو حازمة. وهو يختلف عن ⁨Style⁩ الذي يغطي أسلوب الكتابة (رسمي أو تقني أو حواري). تحديد الاثنين معًا يمنع إجابة صحيحة لكن بنبرة غير مناسبة.',
+          },
+          {
+            q: 'أي مما يلي ليس جزءًا من ⁨CO-STAR⁩: ⁨Role⁩ أو ⁨Objective⁩ أو ⁨Audience⁩ أو ⁨Tone⁩؟',
+            a: '⁨Role⁩. يتكون ⁨CO-STAR⁩ من ستة عناصر: ⁨Context⁩ و⁨Objective⁩ و⁨Style⁩ و⁨Tone⁩ و⁨Audience⁩ و⁨Response⁩. لا يتضمن عناصر ⁨Role⁩ أو ⁨Examples⁩ أو ⁨Steps⁩، بينما تتضمنها أطر مثل ⁨TRACE⁩ و⁨RISEN⁩. يمكن إضافة سطر للدور، لكنه ليس جزءًا من الاختصار.',
+          },
+          {
+            q: 'من طوّر إطار ⁨CO-STAR⁩؟',
+            a: 'يُنسب ⁨CO-STAR⁩ إلى فريق علوم البيانات والذكاء الاصطناعي في ⁨GovTech Singapore⁩، الذي يعرضه في دليل ⁨Prompt Engineering Playbook⁩. وصفته ⁨Sheila Teo⁩ علنًا بعد فوزها بأول مسابقة هندسة أوامر ⁨GPT-4⁩ نظمتها ⁨GovTech⁩ عام ⁨2023⁩. راجع <a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">النظرة العامة من GovTech</a>.',
+          },
+          {
             q: 'كيف يختلف CO-STAR عن أطر أخرى كـ RISEN أو TRACE؟',
             a: 'CO-STAR يُركّز تحديدًا على خصائص المخرجات — الأسلوب والنبرة والجمهور والتنسيق. RISEN (Role وInstructions وSteps وEnd Goal وNarrowing) يُركّز على العملية والقيود. TRACE (Task وRole وAudience وContext وExamples) يتداخل كثيرًا مع CO-STAR. الميزة الرئيسية لـ CO-STAR هي فصله الصريح بين Style وTone، وهو ما تدمجه معظم الأطر الأخرى في معامل "صوت" واحد.',
           },
@@ -721,12 +889,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Prompt Engineering',
     heroImage: '/images/co-star-prompt-framework-overview-hero-ko.webp',
     title: 'CO-STAR 프롬프트 프레임워크란 무엇입니까?',
-    seoTitle: 'CO-STAR 프레임워크 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'CO-STAR는 6개 구성 요소로 이루어진 프롬프트 프레임워크입니다: Context, Objective, Style, Tone, Audience, Response. 60~120 단어로 일관된 LLM 출력을 위한 프롬프트를 구조화합니다.',
+    seoTitle: 'CO-STAR: 각 글자의 의미 2026 | Prompt Bites | PromptQuorum',
+    metaDescription: 'CO-STAR는 Context, Objective, Style, Tone, Audience, Response의 약자입니다. C는 Context입니다. GovTech 싱가포르에서 유래한 것으로 알려지며 60~120 단어로 프롬프트를 구조화합니다.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-12',
+    dateModified: '2026-10-17',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-18',
+    next_refresh_due: '2027-04-17',
     readTime: '4분 분량',
     targetKeywords: [
       'CO-STAR 프롬프트 프레임워크',
@@ -764,6 +932,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '<strong>CO-STAR는 6개 구성 요소 프롬프트 구조입니다: Context, Objective, Style, Tone, Audience, Response format. 언어 모델이 목표 지향적이고 일관된 출력을 생성하는 데 필요한 모든 변수를 포괄하므로 복잡한 LLM 프롬프트 구조화를 위한 가장 많이 인용되는 프레임워크 중 하나입니다.</strong>',
           '이 프레임워크는 프롬프트 엔지니어링에서 반복적으로 발생하는 문제를 해결하기 위해 개발되었습니다. 바로 기술적으로는 명확하지만 암묵적 제약 조건이 빠진 프롬프트입니다. "이 문서를 요약하십시오"라고 작성하면 모델은 길이, 형식성, 독자, 형식에 대한 가정을 합니다. CO-STAR는 이러한 가정을 명시적 지시로 대체합니다.',
           '각 구성 요소는 출력의 다른 차원을 다룹니다. Context는 관련 상황에 모델을 고정시킵니다. Objective는 정확한 결과물을 설정합니다. Style과 Tone은 글쓰기 수준을 제어합니다. Audience는 어휘와 복잡성을 조정합니다. Response는 구조적 형식을 지정합니다.',
+          'CO-STAR는 싱가포르 정부 기술 기관 GovTech Singapore의 데이터 사이언스·AI 팀에서 나온 것으로 알려져 있으며, 해당 기관의 Prompt Engineering Playbook에도 수록되어 있습니다(<a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">GovTech 개요</a>). 싱가포르에서 열린 첫 GovTech GPT-4 프롬프트 엔지니어링 대회(2023년)의 우승자 Sheila Teo가 Towards Data Science 기사에서 이 프레임워크를 소개하면서 널리 알려졌습니다.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'CO-STAR는 Context, Objective, Style, Tone, Audience, Response의 6개 요소로 구성된 프롬프트 프레임워크로, 일관된 LLM 출력을 위해 모든 제약 조건을 명시화합니다.' },
@@ -791,6 +960,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'CO-STAR 프레임워크에 관한 빠른 답변',
         faqs: [
+          {
+            q: 'CO-STAR의 C는 무엇의 약자입니까?',
+            a: 'C는 Context(맥락)의 약자입니다. 프로젝트, 경위, 제약 조건 등 모델이 상황을 이해하는 데 필요한 배경 정보를 뜻합니다. 전체 약어는 Context, Objective, Style, Tone, Audience, Response입니다. O는 Objective이며 "Output"이 아닙니다.',
+          },
+          {
+            q: 'CO-STAR에서 형식, 구조, 전달 조건을 정하는 요소는 무엇입니까?',
+            a: 'Response입니다. 글머리 기호 목록, 표, JSON, 150단어 이메일, 코드 블록 등 출력의 형식과 구조를 지정합니다. Style과 Tone은 글이 읽히는 방식을, Response는 결과물이 전달되는 방식을 정합니다.',
+          },
+          {
+            q: 'CO-STAR의 Tone 요소는 무엇을 정의합니까?',
+            a: 'Tone은 응답의 감정적 어조(공감적, 중립적, 격려하는, 단호한 등)를 정의합니다. 글쓰기 방식(격식, 기술적, 구어체)을 다루는 Style과는 다릅니다. 둘 다 지정하면 내용은 맞지만 어조가 어긋난 응답을 막을 수 있습니다.',
+          },
+          {
+            q: 'Role, Objective, Audience, Tone 중 CO-STAR에 포함되지 않는 것은 무엇입니까?',
+            a: 'Role입니다. CO-STAR는 Context, Objective, Style, Tone, Audience, Response의 6개 구성 요소로 이루어지며 Role, Examples, Steps 요소는 없습니다. TRACE나 RISEN 같은 프레임워크에는 포함됩니다. 역할 문장을 추가할 수는 있지만 약어에는 포함되지 않습니다.',
+          },
+          {
+            q: 'CO-STAR 프레임워크는 누가 개발했습니까?',
+            a: 'CO-STAR는 GovTech Singapore의 데이터 사이언스·AI 팀에서 나온 것으로 알려져 있으며 Prompt Engineering Playbook에 소개되어 있습니다. Sheila Teo는 첫 GovTech GPT-4 프롬프트 엔지니어링 대회(2023년)에서 우승한 뒤 이를 공개적으로 소개했습니다. <a href="https://www.tech.gov.sg/technews/mastering-the-art-of-prompt-engineering-with-empower/" class="text-primary hover:underline" target="_blank" rel="noopener noreferrer">GovTech 개요</a>를 참고하십시오.',
+          },
           {
             q: 'CO-STAR는 RISEN이나 TRACE 같은 다른 프롬프트 프레임워크와 어떻게 다릅니까?',
             a: 'CO-STAR는 특히 출력 특성인 스타일, 어조, 독자, 형식에 집중합니다. RISEN(Role, Instructions, Steps, End Goal, Narrowing)은 프로세스와 제약 조건을 강조합니다. TRACE(Task, Role, Audience, Context, Examples)는 CO-STAR와 크게 겹칩니다. CO-STAR의 핵심 장점은 Style과 Tone을 명시적으로 분리한다는 점으로, 대부분의 다른 프레임워크는 이 둘을 단일 "어조" 매개변수로 합칩니다.',
@@ -825,7 +1014,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       description: 'CO-STAR는 6개 구성 요소로 이루어진 프롬프트 프레임워크입니다: Context, Objective, Style, Tone, Audience, Response. 일관된 LLM 출력을 위한 프롬프트를 구조화합니다.',
       inLanguage: 'ko',
       datePublished: '2026-05-18',
-      dateModified: '2026-05-18',
+      dateModified: '2026-10-17',
       url: 'https://www.promptquorum.com/ko/prompt-bites/co-star-prompt-framework',
       publisher: {
         '@type': 'Organization',
