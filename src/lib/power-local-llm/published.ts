@@ -565,6 +565,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'pcai-photo-retouch-review',
   'honey-llm-review',
   'friedrichai-review',
+  'snug-protocol-review',
   'spiritbox-ultimate-review',
 
   // Oscilla review (Mobile & Edge LLMs) — 2026-10-04

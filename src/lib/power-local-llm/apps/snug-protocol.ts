@@ -28,7 +28,6 @@ export const app: ToolRecord = {
   url: 'snugprotocol.org',
   storeLinks: {
     github: 'https://github.com/snugprotocol/snug',
-    web: 'https://playground.snugprotocol.org',
   },
   tagline: {
     en: 'Early-stage open protocol for AI-built personal apps that live in a portable, user-owned .snug file and run on any compatible host',
@@ -45,5 +44,14 @@ export const app: ToolRecord = {
   lastVerifiedDate: '2026-10-17',
   lastUpstreamUpdate: '2026-10-15', // newer of latest GitHub release (2026-09-05) and last push (2026-10-15)
   lastUpstreamUpdateSource: 'https://github.com/snugprotocol/snug',
+  reviewSlug: 'snug-protocol-review',
+  pqReview: {
+    date: '2026-10-17',
+    version: '0.1.3',
+    versionSourceUrl: 'https://github.com/snugprotocol/snug/releases/tag/v0.1.3',
+  },
+  installEffort: 'installer',
+  installOn: ['mac'],
+  installEvidence: 'snugprotocol.org/download/ offers "Download for macOS" (Snug.dmg, universal binary); GitHub release v0.1.3 (2026-09-05) ships Snug.dmg and Snug.app.tar.gz; checked 2026-10-17. Signing/notarization not stated.',
   verdict: 'An idea worth watching rather than a proven standard: the specification, reference implementation, Playground and macOS app are published, but independent hosts, third-party adoption and an independent security review are not established, and the implementation is pre-1.0.',
 }
