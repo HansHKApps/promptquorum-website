@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Related Guides',
         items: [
           '[Best MoE Models for Local Coding](/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
-          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.dev Acquired by Cursor: Shutdown and Alternatives](/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },

@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Related Guides',
         items: [
           '[Best MoE Models for Local Coding](/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
-          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.dev Acquired by Cursor: Shutdown and Alternatives](/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -227,7 +227,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Verwandte Leitfäden',
         items: [
           '[Best MoE Models for Local Coding](/de/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
-          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/de/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.dev von Cursor übernommen: Einstellung und Alternativen](/de/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -317,7 +317,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Guides associés',
         items: [
           '[Best MoE Models for Local Coding](/fr/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
-          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/fr/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.dev racheté par Cursor : arrêt et alternatives](/fr/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -407,7 +407,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '関連ガイド',
         items: [
           '[Best MoE Models for Local Coding](/ja/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
-          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/ja/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.devがCursorに買収：終了と代替ツール](/ja/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '相关指南',
         items: [
           '[Best MoE Models for Local Coding](/zh/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
-          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/zh/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.dev被Cursor收购：停运与替代方案](/zh/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -587,7 +587,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Guías relacionadas',
         items: [
           '[Best MoE Models for Local Coding](/es/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
-          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/es/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Cursor adquiere Continue.dev: cierre y alternativas](/es/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -677,7 +677,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Guias relacionados',
         items: [
           '[Best MoE Models for Local Coding](/pt/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
-          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/pt/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.dev adquirido pela Cursor: encerramento e alternativas](/pt/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -767,7 +767,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'أدلة ذات صلة',
         items: [
           '[Best MoE Models for Local Coding](/ar/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
-          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/ar/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[استحواذ Cursor على Continue.dev: الإغلاق والبدائل](/ar/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
@@ -883,7 +883,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[Qwen Coder vs DeepSeek Coder](/ko/prompt-bites/qwen-coder-vs-deepseek-coder)',
           '[코딩을 위한 최고의 로컬 LLM 가이드](/ko/local-llms/best-local-llms-for-coding)',
           '[Best MoE Models for Local Coding](/ko/prompt-bites/best-moe-models-local-coding) -- MoE coding models',
-          '[Cursor Pro vs Continue.dev: Which AI Coding Tool?](/ko/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
+          '[Continue.dev, Cursor에 인수: 종료와 대안](/ko/prompt-bites/cursor-pro-vs-continue-dev) -- coding tool comparison',
         ],
       },
     },
