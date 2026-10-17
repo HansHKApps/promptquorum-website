@@ -12753,7 +12753,7 @@
       "images": []
     },
     "bestOllamaModels4gbVram": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -12879,7 +12879,7 @@
       ]
     },
     "bestOllamaModelsCpuOnly": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -13536,7 +13536,7 @@
       "images": []
     },
     "convertOllamaModelToMlx": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -13968,7 +13968,7 @@
       "images": []
     },
     "bestDeepseekDistillForYourGpu": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-06-19",
       "hasSections": true,
@@ -14166,7 +14166,7 @@
       "images": []
     },
     "bestLocalLlmUnder8bRealtimeChat": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -14184,7 +14184,7 @@
       "images": []
     },
     "ggufVsGptqVsAwq": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -14544,7 +14544,7 @@
       "images": []
     },
     "llamaCppGgufConversionGuide": {
-      "dateModified": "2026-07-15",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-15",
       "hasSections": true,

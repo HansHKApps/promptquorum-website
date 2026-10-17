@@ -51,6 +51,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "qwen-coder-vs-deepseek-mistral-local-2026",
+        "title": "Qwen3.6 vs DeepSeek vs Devstral: Local Coding Model Comparison 2026",
+        "url": "/local-llms/qwen-coder-vs-deepseek-mistral-local-2026",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "qwen-vs-llama-vs-mistral",
         "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
         "url": "/local-llms/qwen-vs-llama-vs-mistral",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/anyllm-review",
         "dateModified": "2026-10-17",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-creative-writing",
-        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
-        "url": "/power-local-llm/best-local-llm-creative-writing",
-        "dateModified": "2026-10-17",
-        "tier": "about"
       }
     ],
-    "totalCount": 300,
+    "totalCount": 301,
     "capped": true
   },
   "llama.cpp": {
