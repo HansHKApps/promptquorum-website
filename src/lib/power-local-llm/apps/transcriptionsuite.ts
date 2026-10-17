@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   license: 'GPL-3.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // NVIDIA CUDA, AMD/Intel via Vulkan, Apple Silicon M1+; requirement depends on the model backend chosen, verified 2026-10-17
-  stars: 774, // github.com/homelab-00/TranscriptionSuite, GitHub API read 2026-10-17
+  stars: 775, // github.com/homelab-00/TranscriptionSuite, GitHub API read 2026-10-18
   addedDate: '2026-10-17',
   status: 'listed',
   uses: ['audio', 'docs'],
@@ -23,7 +23,7 @@ export const app: ToolRecord = {
   storeLinks: { github: 'https://github.com/homelab-00/TranscriptionSuite/releases/latest', web: 'https://transcriptionsuite.app' },
   installEffort: 'installer',
   installOn: ['mac'], // macOS: .dmg runs the engine natively (Metal). Windows/Linux installers also exist (.exe/.AppImage) but the engine runs in Docker, which must be installed separately
-  installEvidence: 'GitHub Releases v1.3.10 (2026-09-24) ships TranscriptionSuite-1.3.10-arm64-mac.dmg, Setup .exe and .AppImage; site says the engine runs in Docker on Linux/Windows and natively with Metal on Apple Silicon — checked 2026-10-17',
+  installEvidence: 'GitHub Releases v1.3.10 (2026-09-24) ships TranscriptionSuite-1.3.10-arm64-mac-metal.dmg (bundled server), arm64-mac.dmg (thin), Setup .exe and .AppImage — no Intel x64 dmg in 1.3.10 although the README lists one; site says the engine runs in Docker on Linux/Windows and natively with Metal on Apple Silicon — checked 2026-10-17',
   tagline: {
     en: 'Free, open-source, fully local speech-to-text with live transcription, speaker diarization, a searchable audio notebook and multiple model backends',
     de: 'Kostenlose, quelloffene, vollständig lokale Spracherkennung mit Live-Transkription, Sprechererkennung, durchsuchbarem Audio-Notizbuch und mehreren Modell-Backends',
@@ -36,8 +36,14 @@ export const app: ToolRecord = {
     ko: '실시간 전사, 화자 분리, 검색 가능한 오디오 노트북, 다양한 모델 백엔드를 지원하는 무료 오픈소스 완전 로컬 음성 인식 앱',
   },
   // Comparison attributes: each value verified against the official site on 2026-10-17; a missing key = not stated there, never false.
-  compare: { realtime: true, speakerLabels: true, apiServer: true },
-  lastVerifiedDate: '2026-10-17',
+  compare: { realtime: true, speakerLabels: true, apiServer: true, cpuUsable: true }, // cpuUsable: README compatibility matrix lists a CPU Only runtime (NeMo models unavailable on it), read 2026-10-18
+  reviewSlug: 'transcriptionsuite-review', // dedicated PromptQuorum review
+  pqReview: {
+    date: '2026-10-18', // v1.3.10 = latest stable GitHub release on that date (published 2026-09-24); no newer tag
+    version: '1.3.10',
+    versionSourceUrl: 'https://github.com/homelab-00/TranscriptionSuite/releases/latest',
+  },
+  lastVerifiedDate: '2026-10-18',
   lastUpstreamUpdate: '2026-10-04', // GitHub API: newer of latest release (v1.3.10, 2026-09-24) and last push (2026-10-04), read 2026-10-17
   lastUpstreamUpdateSource: 'https://github.com/homelab-00/TranscriptionSuite',
 }

@@ -31108,7 +31108,7 @@
     "title": "Enclave AI Review: On-Device AI for iPhone, iPad, Mac",
     "excerpt": "Enclave AI runs open-source models on-device on iPhone, iPad, and Mac — no account, no internet needed once a model is downloaded. Here is what it actually offers.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-17",
     "url": "/power-local-llm/enclave-ai-review",
     "cluster": "power-local-llm"
   },
@@ -31117,7 +31117,7 @@
     "title": "Enclave AI Review: KI auf dem Gerät für iPhone, iPad, Mac",
     "excerpt": "Enclave AI führt Open-Source-Modelle direkt auf iPhone, iPad und Mac aus — kein Konto nötig, kein Internet nach dem Download eines Modells. Hier die Fakten zur App.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-17",
     "url": "/de/power-local-llm/enclave-ai-review",
     "cluster": "power-local-llm"
   },
@@ -31126,7 +31126,7 @@
     "title": "Enclave AI Review: IA sur l'appareil pour iPhone, iPad, Mac",
     "excerpt": "Enclave AI exécute des modèles open source sur l'appareil, sur iPhone, iPad et Mac — sans compte, sans internet après le téléchargement d'un modèle. Voici ce que propose vraiment l'app.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-17",
     "url": "/fr/power-local-llm/enclave-ai-review",
     "cluster": "power-local-llm"
   },
@@ -31135,7 +31135,7 @@
     "title": "Enclave AIレビュー：iPhone・iPad・Mac向けオンデバイスAI",
     "excerpt": "Enclave AIはiPhone・iPad・Macでオープンソースモデルをオンデバイス実行。アカウント不要、モデルダウンロード後はネット接続不要。実際の機能を解説。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-17",
     "url": "/ja/power-local-llm/enclave-ai-review",
     "cluster": "power-local-llm"
   },
@@ -31144,7 +31144,7 @@
     "title": "Enclave AI评测：iPhone、iPad、Mac设备端AI",
     "excerpt": "Enclave AI在iPhone、iPad和Mac上设备端运行开源模型——无需账号，模型下载后无需联网。这里是它实际提供的功能。",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-17",
     "url": "/zh/power-local-llm/enclave-ai-review",
     "cluster": "power-local-llm"
   },
@@ -31153,7 +31153,7 @@
     "title": "Enclave AI Review: IA en el dispositivo para iPhone, iPad, Mac",
     "excerpt": "Enclave AI ejecuta modelos de código abierto en el dispositivo, en iPhone, iPad y Mac — sin cuenta, sin internet tras descargar un modelo. Esto es lo que ofrece realmente.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-17",
     "url": "/es/power-local-llm/enclave-ai-review",
     "cluster": "power-local-llm"
   },
@@ -31162,7 +31162,7 @@
     "title": "Enclave AI Review: IA no dispositivo para iPhone, iPad, Mac",
     "excerpt": "Enclave AI executa modelos de código aberto no dispositivo, em iPhone, iPad e Mac — sem conta, sem internet após baixar um modelo. Veja o que o app realmente oferece.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-17",
     "url": "/pt/power-local-llm/enclave-ai-review",
     "cluster": "power-local-llm"
   },
@@ -31171,7 +31171,7 @@
     "title": "مراجعة Enclave AI: ذكاء اصطناعي على الجهاز لـ iPhone وiPad وMac",
     "excerpt": "يشغّل Enclave AI نماذج مفتوحة المصدر على الجهاز في iPhone وiPad وMac — دون حساب، ودون إنترنت بعد تنزيل النموذج. إليك ما يقدّمه التطبيق فعليًا.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-17",
     "url": "/ar/power-local-llm/enclave-ai-review",
     "cluster": "power-local-llm"
   },
@@ -31180,7 +31180,7 @@
     "title": "Enclave AI 리뷰: iPhone·iPad·Mac용 온디바이스 AI",
     "excerpt": "Enclave AI는 iPhone, iPad, Mac에서 오픈소스 모델을 온디바이스로 실행합니다 — 계정 불필요, 모델 다운로드 후 인터넷 불필요. 이 앱이 실제로 제공하는 기능을 소개합니다.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-10-17",
     "url": "/ko/power-local-llm/enclave-ai-review",
     "cluster": "power-local-llm"
   },
@@ -33212,7 +33212,7 @@
   {
     "lang": "en",
     "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
-    "excerpt": "Compare 19 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.",
+    "excerpt": "Compare 22 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-voice-audio-compared",
@@ -33221,7 +33221,7 @@
   {
     "lang": "de",
     "title": "Lokale Sprach- und Audio-Werkzeuge im Vergleich (2026): Text-zu-Sprache, Sprache-zu-Text und Sprachagenten",
-    "excerpt": "Vergleich von 19 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.",
+    "excerpt": "Vergleich von 22 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-voice-audio-compared",
@@ -33230,7 +33230,7 @@
   {
     "lang": "fr",
     "title": "Outils vocaux locaux comparés (2026) : synthèse vocale, transcription et agents vocaux",
-    "excerpt": "Comparez 19 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.",
+    "excerpt": "Comparez 22 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-voice-audio-compared",
@@ -33239,7 +33239,7 @@
   {
     "lang": "ja",
     "title": "ローカル音声・スピーチツール比較(2026):音声合成・音声認識・ボイスエージェント",
-    "excerpt": "ローカル音声ツール19種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。",
+    "excerpt": "ローカル音声ツール22種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-voice-audio-compared",
@@ -33248,7 +33248,7 @@
   {
     "lang": "zh",
     "title": "本地语音工具对比(2026):语音合成、语音转文字与语音助手",
-    "excerpt": "并排对比19款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。",
+    "excerpt": "并排对比22款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-voice-audio-compared",
@@ -33257,7 +33257,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de voz y habla comparadas (2026): texto a voz, voz a texto y agentes de voz",
-    "excerpt": "Compara 19 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.",
+    "excerpt": "Compara 22 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-voice-audio-compared",
@@ -33266,7 +33266,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de voz e fala comparadas (2026): síntese de voz, transcrição e agentes de voz",
-    "excerpt": "Compare 19 ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.",
+    "excerpt": "Compare 22 ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-voice-audio-compared",
@@ -33275,7 +33275,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات الصوت والكلام المحلية (2026): تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون",
-    "excerpt": "قارن 19 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.",
+    "excerpt": "قارن 22 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-voice-audio-compared",
@@ -33284,7 +33284,7 @@
   {
     "lang": "ko",
     "title": "로컬 음성·음성 인식 도구 비교(2026): 음성 합성, 음성 인식, 음성 에이전트",
-    "excerpt": "로컬 음성 도구 19개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 음성 도구 22개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-voice-audio-compared",
@@ -39930,6 +39930,249 @@
     "publishDate": "2026-10-17",
     "dateModified": "2026-10-17",
     "url": "/ko/power-local-llm/pixlstash-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Whisper Notes Review: Offline Speech-to-Text for iPhone, iPad and Mac",
+    "excerpt": "Whisper Notes review: $7.99 one-time offline speech-to-text app for iPhone, iPad and Apple silicon Mac with speaker labels. Not hands-on tested.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/power-local-llm/whisper-notes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Whisper Notes Rezension: Offline-Spracherkennung für iPhone, iPad und Mac",
+    "excerpt": "Whisper Notes Rezension: Offline-Spracherkennung für iPhone, iPad und Mac für einmalig 8,99 € im deutschen App Store, mit Sprecherzuordnung.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/de/power-local-llm/whisper-notes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Whisper Notes : reconnaissance vocale hors ligne pour iPhone, iPad et Mac",
+    "excerpt": "Test de Whisper Notes : reconnaissance vocale hors ligne pour iPhone, iPad et Mac à 8,99 € une fois sur l’App Store français. Sans essai pratique.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/fr/power-local-llm/whisper-notes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Whisper Notesレビュー：iPhone・iPad・Mac向けのオフライン音声認識アプリ",
+    "excerpt": "Whisper Notesレビュー：日本のApp Storeで800円の買い切り、話者ラベル対応のiPhone・iPad・Apple silicon Mac向けオフライン音声認識アプリ。実機テストなし。",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ja/power-local-llm/whisper-notes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Whisper Notes评测：适用于iPhone、iPad和Mac的离线语音转文字应用",
+    "excerpt": "Whisper Notes评测：一次性买断7.99美元的离线语音转文字应用，支持iPhone、iPad和Apple芯片Mac，带说话人标注，无需云端。未做实际测试。",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/zh/power-local-llm/whisper-notes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Whisper Notes: voz a texto sin conexión para iPhone, iPad y Mac",
+    "excerpt": "Reseña de Whisper Notes: voz a texto sin conexión para iPhone, iPad y Mac por 8,99 € una vez en la App Store de España. Sin prueba práctica.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/es/power-local-llm/whisper-notes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Whisper Notes: voz para texto offline para iPhone, iPad e Mac",
+    "excerpt": "Análise do Whisper Notes: voz para texto offline para iPhone, iPad e Mac por R$ 19,90 uma única vez na App Store brasileira. Sem teste prático.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/pt/power-local-llm/whisper-notes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Whisper Notes: تحويل الكلام إلى نص دون اتصال لأجهزة iPhone وiPad وMac",
+    "excerpt": "مراجعة Whisper Notes: تطبيق نسخ دون اتصال بسعر 7.99 دولار لمرة واحدة لأجهزة iPhone وiPad وMac بمعالج Apple silicon مع تمييز المتحدثين. دون اختبار عملي.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ar/power-local-llm/whisper-notes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Whisper Notes 리뷰: iPhone, iPad, Mac용 오프라인 음성 인식 앱",
+    "excerpt": "Whisper Notes 리뷰: 한국 App Store에서 6,000원에 한 번 결제하는 화자 구분 지원 오프라인 음성 인식 앱입니다. 직접 테스트는 하지 않았습니다.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ko/power-local-llm/whisper-notes-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "TranscriptionSuite Review: Free Local Speech-to-Text with Speaker Labels",
+    "excerpt": "TranscriptionSuite review: free GPL-3.0 speech-to-text app for Windows, macOS and Linux with speaker labels, live mode and an API. Not hands-on tested.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/power-local-llm/transcriptionsuite-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "TranscriptionSuite Rezension: Kostenlose lokale Spracherkennung mit Sprecherzuordnung",
+    "excerpt": "TranscriptionSuite Rezension: kostenlose GPL-3.0-App für Windows, macOS und Linux mit Sprecherzuordnung, Live-Modus und API. Ohne Praxistest.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/de/power-local-llm/transcriptionsuite-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de TranscriptionSuite : reconnaissance vocale locale gratuite avec étiquettes de locuteurs",
+    "excerpt": "Test de TranscriptionSuite : application gratuite (GPL-3.0) pour Windows, macOS et Linux avec étiquettes de locuteurs, mode direct et API. Non testée.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/fr/power-local-llm/transcriptionsuite-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "TranscriptionSuiteレビュー：話者ラベル付きの無料ローカル音声認識アプリ",
+    "excerpt": "TranscriptionSuiteレビュー：ライブモード、話者ラベル、オーディオノート、OpenAI互換APIを備えた、Windows・macOS・Linux対応の無料GPL-3.0音声認識アプリ。実機テストなし。",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ja/power-local-llm/transcriptionsuite-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "TranscriptionSuite评测：支持说话人标注的免费本地语音转文字应用",
+    "excerpt": "TranscriptionSuite评测：免费的GPL-3.0语音转文字应用，支持Windows、macOS和Linux，含实时模式、说话人标注、音频笔记本和OpenAI兼容API。未做实际测试。",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/zh/power-local-llm/transcriptionsuite-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de TranscriptionSuite: voz a texto local y gratuito con etiquetas de hablante",
+    "excerpt": "Reseña de TranscriptionSuite: app gratuita (GPL-3.0) para Windows, macOS y Linux con etiquetas de hablante, modo en vivo y API. Sin prueba práctica.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/es/power-local-llm/transcriptionsuite-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do TranscriptionSuite: voz para texto local e gratuito com rótulos de falante",
+    "excerpt": "Análise do TranscriptionSuite: app gratuito (GPL-3.0) para Windows, macOS e Linux com rótulos de falante, modo ao vivo e API. Sem teste prático.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/pt/power-local-llm/transcriptionsuite-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة TranscriptionSuite: تحويل الكلام إلى نص محليًا ومجانًا مع تمييز المتحدثين",
+    "excerpt": "مراجعة TranscriptionSuite: تطبيق مجاني بترخيص GPL-3.0 لأنظمة Windows وmacOS وLinux مع تمييز المتحدثين ووضع مباشر وAPI متوافق. دون اختبار عملي.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ar/power-local-llm/transcriptionsuite-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "TranscriptionSuite 리뷰: 화자 구분을 지원하는 무료 로컬 음성 인식 앱",
+    "excerpt": "TranscriptionSuite 리뷰: 화자 구분, 라이브 모드, API를 갖춘 Windows·macOS·Linux용 무료 GPL-3.0 음성 인식 앱입니다. 직접 테스트는 하지 않았습니다.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ko/power-local-llm/transcriptionsuite-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Parrot Review: Free Offline Text-to-Speech That Reads Selected Text Aloud",
+    "excerpt": "Parrot review: free MIT desktop app for Windows, macOS and Linux that reads selected text aloud offline with the Kokoro-82M model. Not hands-on tested.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/power-local-llm/parrot-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Parrot Rezension: Kostenlose Offline-Sprachausgabe für markierten Text",
+    "excerpt": "Parrot Rezension: kostenlose MIT-Desktop-App für Windows, macOS und Linux, die markierten Text offline mit dem Modell Kokoro-82M vorliest. Ohne Praxistest.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/de/power-local-llm/parrot-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Parrot : synthèse vocale gratuite et hors ligne pour le texte sélectionné",
+    "excerpt": "Test de Parrot : application de bureau gratuite (MIT) pour Windows, macOS et Linux qui lit le texte sélectionné hors ligne avec Kokoro-82M. Non testée.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/fr/power-local-llm/parrot-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Parrotレビュー：選択したテキストを読み上げる無料のオフライン音声合成アプリ",
+    "excerpt": "Parrotレビュー：Kokoro-82Mモデルで選択テキストをオフラインで読み上げる、Windows・macOS・Linux対応の無料MITライセンスアプリ。実機テストはしていません。",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ja/power-local-llm/parrot-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Parrot评测：免费离线朗读选中文本的文字转语音应用",
+    "excerpt": "Parrot评测：免费的MIT许可桌面应用，支持Windows、macOS和Linux，用Kokoro-82M模型离线朗读选中文本。未做实际测试。",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/zh/power-local-llm/parrot-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Parrot: texto a voz gratuito y sin conexión para el texto seleccionado",
+    "excerpt": "Reseña de Parrot: app de escritorio gratis (MIT) para Windows, macOS y Linux que lee el texto seleccionado sin conexión con Kokoro-82M. Sin probar.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/es/power-local-llm/parrot-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Parrot: texto para voz gratuito e offline para o texto selecionado",
+    "excerpt": "Análise do Parrot: app de desktop gratuito (MIT) para Windows, macOS e Linux que lê o texto selecionado offline com o Kokoro-82M. Sem teste prático.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/pt/power-local-llm/parrot-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Parrot: تحويل نص إلى كلام مجاني ودون اتصال للنص المحدد",
+    "excerpt": "مراجعة Parrot: تطبيق مكتبي مجاني بترخيص MIT لأنظمة Windows وmacOS وLinux يقرأ النص المحدد بصوت عالٍ دون اتصال بنموذج Kokoro-82M. دون اختبار عملي.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ar/power-local-llm/parrot-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Parrot 리뷰: 선택한 텍스트를 읽어 주는 무료 오프라인 음성 합성 앱",
+    "excerpt": "Parrot 리뷰: Kokoro-82M 모델로 선택한 텍스트를 오프라인에서 읽어 주는 Windows·macOS·Linux용 무료 MIT 라이선스 앱입니다. 직접 테스트는 하지 않았습니다.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ko/power-local-llm/parrot-review",
     "cluster": "power-local-llm"
   },
   {
