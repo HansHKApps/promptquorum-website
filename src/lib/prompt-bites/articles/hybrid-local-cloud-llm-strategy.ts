@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Hybrid Local + Cloud LLM Strategy | Prompt Bites',
     metaDescription: 'When a hybrid local-cloud LLM strategy beats running everything locally or everything in the cloud, and how to architect the routing logic between the two.',
     publishDate: '2026-07-15',
-    dateModified: '2026-07-15',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Developers deciding when to route inference to a cloud GPU instead of running everything locally',
     siblingBites: ['cloud-gpu-cost-per-hour', 'runpod-vs-vastai-pricing', 'local-ai-trend-2027-hybrid-local-cloud-routing'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>A hybrid local-cloud strategy makes sense when your workload has spiky demand: run a default model locally for everyday use, and burst to a rented cloud GPU only for occasional larger models or batch jobs that exceed your local hardware.</strong> Pure local-only setups waste money on idle cloud capacity you never provisioned; pure cloud-only setups pay for every single request even during long low-traffic periods. Hybrid setups avoid both failure modes, at the cost of extra routing complexity.',
+    leadAnswerBlock: '<strong>A hybrid local-cloud strategy makes sense when your workload has spiky demand: run a default model locally for everyday use, and burst to a rented cloud GPU only for occasional larger models or batch jobs that exceed your local hardware.</strong> Pure local-only setups force you to buy hardware sized for your peak load, which then sits idle most of the time; pure cloud-only setups pay for every single request even during long low-traffic periods. Hybrid setups avoid both failure modes, at the cost of extra routing complexity.',
     quickAnswerTop: {
       en: {
         question: 'When does a hybrid local-cloud LLM strategy make sense?',
@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Route by queue depth — burst only when the local queue backs up beyond a threshold',
           'Skip hybrid entirely if demand is steady and predictable — one environment is simpler',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Hybrid local-cloud makes sense when demand is spiky: everyday traffic stays local, only overflow bursts to a rented cloud GPU',
-          'A pure local-only setup wastes money on cloud capacity you never use; a pure cloud-only setup pays per-request even during quiet periods — hybrid avoids both',
+          'A pure local-only setup means buying hardware for the peak, which sits idle most of the time; a pure cloud-only setup pays per-request even during quiet periods — hybrid avoids both',
           'The simplest routing pattern is request-size-based: send only requests that need a bigger model or longer context than your local hardware supports to the cloud',
           'A more advanced pattern routes on local queue depth, only bursting when the local queue backs up past a set threshold',
           'Skip hybrid if traffic is steady and predictable — a single environment is simpler to operate and debug',
@@ -68,6 +68,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**Local-first with cloud fallback:** attempt every request locally first, and only fall back to the cloud on a timeout or explicit local failure (e.g., out-of-memory on a large request). Simple to implement on top of an existing local-only setup, but adds latency for the requests that do end up falling back, since they wait out the local attempt first.',
           'In all three patterns, an API-compatibility layer between your application and both inference backends keeps the routing decision invisible to the rest of your app — the application code just calls one endpoint, and the routing logic decides behind that endpoint which backend actually serves the request.',
           'For the cost side of this decision — what a cloud GPU actually costs per hour, and how that compares to your local hardware\'s amortized cost — see [Cloud GPU Cost Per Hour](/prompt-bites/cloud-gpu-cost-per-hour) and [RunPod vs. Vast.ai Pricing](/prompt-bites/runpod-vs-vastai-pricing) for provider-specific numbers to plug into the threshold decisions above.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Common Mistakes in Hybrid Routing',
+        content: [
+          '<strong>Most hybrid failures come from the routing layer, not the models.</strong> Four mistakes recur in real setups.',
+        ],
+        items: [
+          '**Silent fallback for sensitive data:** if local inference fails and the router quietly sends a sensitivity-tagged request to the cloud, your data policy is broken without anyone noticing. Make sensitive requests fail closed: return an error instead of falling back.',
+          '**No cap on cloud spend:** a burst rule with no budget ceiling turns a traffic spike or a retry loop into an open-ended bill. Set a spending limit and a maximum number of fallback attempts; one cloud fallback is usually enough.',
+          '**Assuming local and cloud models behave identically:** different models format output, follow instructions and handle long context differently. Test your prompts against both backends and validate the output structure before returning it.',
+          '**Not logging routing decisions:** without a record of which backend served each request and why, you cannot tell whether your threshold is right or whether quality is degrading. Log the backend, the routing reason, latency and cost for every request.',
         ],
       },
       faq: {
@@ -101,7 +114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Hybride Lokal-Cloud-LLM-Strategie | Prompt Bites',
     metaDescription: 'Wann eine hybride Lokal-Cloud-LLM-Strategie besser funktioniert als ein reiner Lokal- oder Cloud-Betrieb, und wie Sie die Routing-Logik zwischen beiden Umgebungen aufbauen.',
     publishDate: '2026-07-15',
-    dateModified: '2026-07-15',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -109,7 +122,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Entwickler, die entscheiden müssen, wann Anfragen an eine gemietete Cloud-GPU weitergeleitet werden, statt alles lokal auszuführen',
     siblingBites: ['cloud-gpu-cost-per-hour', 'runpod-vs-vastai-pricing', 'local-ai-trend-2027-hybrid-local-cloud-routing'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Eine hybride Lokal-Cloud-Strategie ist sinnvoll, wenn Ihre Auslastung stoßweise auftritt: Betreiben Sie ein Standardmodell lokal für den Alltag und weichen Sie nur bei gelegentlich größeren Modellen oder Batch-Jobs, die Ihre lokale Hardware übersteigen, auf eine gemietete Cloud-GPU aus.</strong> Reine Lokal-Setups verschwenden Geld an ungenutzte Cloud-Kapazität, die Sie nie bereitgestellt haben; reine Cloud-Setups zahlen für jede einzelne Anfrage, selbst während langer Phasen geringer Auslastung. Hybride Setups vermeiden beide Fehlerarten, auf Kosten zusätzlicher Routing-Komplexität.',
+    leadAnswerBlock: '<strong>Eine hybride Lokal-Cloud-Strategie ist sinnvoll, wenn Ihre Auslastung stoßweise auftritt: Betreiben Sie ein Standardmodell lokal für den Alltag und weichen Sie nur bei gelegentlich größeren Modellen oder Batch-Jobs, die Ihre lokale Hardware übersteigen, auf eine gemietete Cloud-GPU aus.</strong> Reine Lokal-Setups zwingen Sie, Hardware für die Spitzenlast zu kaufen, die dann meist ungenutzt bleibt; reine Cloud-Setups zahlen für jede einzelne Anfrage, selbst während langer Phasen geringer Auslastung. Hybride Setups vermeiden beide Fehlerarten, auf Kosten zusätzlicher Routing-Komplexität.',
     quickAnswerTop: {
       de: {
         question: 'Wann ist eine hybride Lokal-Cloud-LLM-Strategie sinnvoll?',
@@ -120,7 +133,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Routing nach Warteschlangentiefe — nur ausweichen, wenn sich die lokale Warteschlange über einen Schwellenwert hinaus staut',
           'Verzichten Sie ganz auf Hybrid, wenn die Auslastung gleichmäßig und vorhersehbar ist — eine Umgebung ist einfacher',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -129,7 +142,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Hybride Lokal-Cloud-Setups sind sinnvoll bei stoßweiser Auslastung: der Alltagsverkehr bleibt lokal, nur der Überlauf weicht auf eine gemietete Cloud-GPU aus',
-          'Ein reines Lokal-Setup verschwendet Geld an nie genutzte Cloud-Kapazität; ein reines Cloud-Setup zahlt pro Anfrage selbst in ruhigen Phasen — Hybrid vermeidet beides',
+          'Ein reines Lokal-Setup bedeutet Hardware für die Spitzenlast, die meist ungenutzt bleibt; ein reines Cloud-Setup zahlt pro Anfrage selbst in ruhigen Phasen — Hybrid vermeidet beides',
           'Das einfachste Routing-Muster orientiert sich an der Anfragegröße: nur Anfragen, die ein größeres Modell oder einen längeren Kontext benötigen, als die lokale Hardware bietet, gehen an die Cloud',
           'Ein fortgeschritteneres Muster routet nach lokaler Warteschlangentiefe und weicht erst aus, wenn sich die Warteschlange über einen festgelegten Schwellenwert hinaus staut',
           'Verzichten Sie auf Hybrid, wenn der Traffic gleichmäßig und vorhersehbar ist — eine einzelne Umgebung ist einfacher zu betreiben und zu debuggen',
@@ -160,6 +173,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**Lokal zuerst mit Cloud-Fallback:** Jede Anfrage wird zunächst lokal versucht, und nur bei Timeout oder explizitem lokalem Fehler (z. B. Speicherüberlauf bei einer großen Anfrage) weicht sie auf die Cloud aus. Einfach auf einem bestehenden reinen Lokal-Setup umzusetzen, erhöht aber die Latenz für die Anfragen, die tatsächlich ausweichen, da sie zunächst den lokalen Versuch abwarten.',
           'In allen drei Mustern hält eine API-kompatible Schicht zwischen Ihrer Anwendung und beiden Inferenz-Backends die Routing-Entscheidung für den Rest Ihrer Anwendung unsichtbar — der Anwendungscode ruft nur einen Endpunkt auf, und die Routing-Logik entscheidet dahinter, welches Backend die Anfrage tatsächlich bedient.',
           'Für die Kostenseite dieser Entscheidung — was eine Cloud-GPU pro Stunde tatsächlich kostet und wie sich das zu den amortisierten Kosten Ihrer lokalen Hardware verhält — siehe [Cloud-GPU-Kosten pro Stunde](/de/prompt-bites/cloud-gpu-cost-per-hour) und [RunPod vs. Vast.ai Preise](/de/prompt-bites/runpod-vs-vastai-pricing) für anbieterspezifische Zahlen, die Sie in die obigen Schwellenwert-Entscheidungen einsetzen können.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Häufige Fehler beim Hybrid-Routing',
+        content: [
+          '<strong>Die meisten Hybrid-Probleme entstehen in der Routing-Schicht, nicht in den Modellen.</strong> Vier Fehler treten in der Praxis immer wieder auf.',
+        ],
+        items: [
+          '**Stilles Ausweichen bei sensiblen Daten:** Fällt die lokale Inferenz aus und der Router schickt eine als sensibel markierte Anfrage stillschweigend an die Cloud, ist Ihre Datenrichtlinie verletzt, ohne dass es jemand merkt. Lassen Sie sensible Anfragen „fail closed“ scheitern: Fehler zurückgeben statt auszuweichen.',
+          '**Keine Obergrenze für Cloud-Kosten:** Eine Ausweichregel ohne Budgetgrenze macht aus einer Lastspitze oder einer Wiederholungsschleife eine unbegrenzte Rechnung. Legen Sie ein Ausgabenlimit und eine maximale Zahl an Ausweichversuchen fest; ein Cloud-Fallback genügt meist.',
+          '**Annahme, lokale und Cloud-Modelle verhielten sich gleich:** Unterschiedliche Modelle formatieren Ausgaben, befolgen Anweisungen und verarbeiten langen Kontext unterschiedlich. Testen Sie Ihre Prompts gegen beide Backends und prüfen Sie die Ausgabestruktur, bevor Sie sie zurückgeben.',
+          '**Routing-Entscheidungen nicht protokollieren:** Ohne Aufzeichnung, welches Backend welche Anfrage warum bedient hat, erkennen Sie weder, ob der Schwellenwert stimmt, noch ob die Qualität sinkt. Protokollieren Sie Backend, Routing-Grund, Latenz und Kosten jeder Anfrage.',
         ],
       },
       faq: {
@@ -193,7 +219,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Stratégie hybride LLM locale + cloud | Prompt Bites',
     metaDescription: 'Quand une stratégie hybride locale-cloud pour les LLM surpasse un fonctionnement entièrement local ou entièrement cloud, et comment architecturer la logique de routage entre les deux.',
     publishDate: '2026-07-15',
-    dateModified: '2026-07-15',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -201,7 +227,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Développeurs qui décident quand acheminer l\'inférence vers un GPU cloud plutôt que de tout exécuter localement',
     siblingBites: ['cloud-gpu-cost-per-hour', 'runpod-vs-vastai-pricing', 'local-ai-trend-2027-hybrid-local-cloud-routing'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Une stratégie hybride locale-cloud est pertinente lorsque votre charge est irrégulière : exécutez un modèle par défaut en local pour l\'usage quotidien, et basculez vers un GPU cloud loué uniquement pour les modèles occasionnellement plus grands ou les tâches par lots qui dépassent votre matériel local.</strong> Les configurations purement locales gaspillent de l\'argent en capacité cloud inactive jamais provisionnée ; les configurations purement cloud paient pour chaque requête, même pendant de longues périodes de faible trafic. Les configurations hybrides évitent ces deux écueils, au prix d\'une complexité de routage supplémentaire.',
+    leadAnswerBlock: '<strong>Une stratégie hybride locale-cloud est pertinente lorsque votre charge est irrégulière : exécutez un modèle par défaut en local pour l\'usage quotidien, et basculez vers un GPU cloud loué uniquement pour les modèles occasionnellement plus grands ou les tâches par lots qui dépassent votre matériel local.</strong> Les configurations purement locales vous obligent à acheter du matériel dimensionné pour le pic de charge, qui reste inutilisé la plupart du temps ; les configurations purement cloud paient pour chaque requête, même pendant de longues périodes de faible trafic. Les configurations hybrides évitent ces deux écueils, au prix d\'une complexité de routage supplémentaire.',
     quickAnswerTop: {
       fr: {
         question: 'Quand une stratégie hybride locale-cloud pour les LLM est-elle pertinente ?',
@@ -212,7 +238,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Routage selon la profondeur de file d\'attente — ne basculer que lorsque la file locale dépasse un seuil donné',
           'Évitez complètement l\'hybride si la demande est stable et prévisible — un seul environnement est plus simple',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -221,7 +247,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'L\'hybride locale-cloud est pertinent en cas de demande irrégulière : le trafic quotidien reste local, seul le surplus bascule vers un GPU cloud loué',
-          'Une configuration purement locale gaspille de l\'argent en capacité cloud jamais utilisée ; une configuration purement cloud paie par requête même en période calme — l\'hybride évite les deux',
+          'Une configuration purement locale impose d\'acheter du matériel pour le pic, inutilisé la plupart du temps ; une configuration purement cloud paie par requête même en période calme — l\'hybride évite les deux',
           'Le schéma de routage le plus simple se base sur la taille de la requête : seules les requêtes nécessitant un modèle plus grand ou un contexte plus long que ce que gère le matériel local partent vers le cloud',
           'Un schéma plus avancé route selon la profondeur de la file d\'attente locale, et ne bascule que lorsque la file dépasse un seuil défini',
           'Évitez l\'hybride si le trafic est stable et prévisible — un seul environnement est plus simple à exploiter et à déboguer',
@@ -252,6 +278,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**Local d\'abord avec repli cloud :** tentez chaque requête d\'abord en local, et ne basculez vers le cloud qu\'en cas de délai dépassé ou d\'échec local explicite (par exemple, dépassement de mémoire sur une requête volumineuse). Simple à mettre en œuvre sur une configuration purement locale existante, mais ajoute de la latence pour les requêtes qui finissent par basculer, puisqu\'elles attendent d\'abord l\'échec de la tentative locale.',
           'Dans les trois schémas, une couche de compatibilité API entre votre application et les deux backends d\'inférence rend la décision de routage invisible pour le reste de votre application — le code applicatif appelle un seul point d\'accès, et la logique de routage décide en coulisses quel backend traite réellement la requête.',
           'Pour le volet coût de cette décision — ce que coûte réellement un GPU cloud à l\'heure, et comment cela se compare au coût amorti de votre matériel local — voir [Coût d\'un GPU Cloud par Heure](/fr/prompt-bites/cloud-gpu-cost-per-hour) et [Tarifs RunPod vs. Vast.ai](/fr/prompt-bites/runpod-vs-vastai-pricing) pour des chiffres spécifiques aux fournisseurs à intégrer dans les décisions de seuil ci-dessus.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erreurs courantes du routage hybride',
+        content: [
+          '<strong>La plupart des échecs hybrides viennent de la couche de routage, pas des modèles.</strong> Quatre erreurs reviennent dans les configurations réelles.',
+        ],
+        items: [
+          '**Repli silencieux pour les données sensibles :** si l\'inférence locale échoue et que le routeur envoie discrètement au cloud une requête marquée comme sensible, votre politique de données est enfreinte sans que personne ne le remarque. Faites échouer les requêtes sensibles en mode « fail closed » : renvoyez une erreur plutôt que de basculer.',
+          '**Aucun plafond de dépenses cloud :** une règle de bascule sans budget maximal transforme un pic de trafic ou une boucle de nouvelles tentatives en facture illimitée. Fixez une limite de dépenses et un nombre maximal de tentatives de repli ; un seul repli cloud suffit en général.',
+          '**Supposer que les modèles locaux et cloud se comportent à l\'identique :** des modèles différents formatent les sorties, suivent les instructions et gèrent le contexte long différemment. Testez vos prompts sur les deux backends et validez la structure de la sortie avant de la renvoyer.',
+          '**Ne pas journaliser les décisions de routage :** sans trace du backend ayant servi chaque requête et de la raison, impossible de savoir si le seuil est bon ou si la qualité se dégrade. Journalisez le backend, le motif de routage, la latence et le coût de chaque requête.',
         ],
       },
       faq: {
@@ -285,7 +324,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'ハイブリッド ローカル+クラウド LLM戦略 | Prompt Bites',
     metaDescription: 'ハイブリッドなローカル・クラウドLLM戦略が、すべてローカルまたはすべてクラウドで運用するより優れているケースと、両者間のルーティングロジックの設計方法を解説します。',
     publishDate: '2026-07-15',
-    dateModified: '2026-07-15',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -293,7 +332,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'すべてをローカルで実行する代わりに、クラウドGPUへ推論をルーティングするタイミングを判断する開発者',
     siblingBites: ['cloud-gpu-cost-per-hour', 'runpod-vs-vastai-pricing', 'local-ai-trend-2027-hybrid-local-cloud-routing'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>ハイブリッドなローカル・クラウド戦略が有効なのは、負荷が突発的な場合です。日常的な用途にはデフォルトモデルをローカルで実行し、ローカルのハードウェアを超える大きめのモデルやバッチ処理が発生したときだけ、レンタルのクラウドGPUにバーストします。</strong> 純粋にローカルのみの構成では、実際には使わないクラウド容量を確保するコストが無駄になります。純粋にクラウドのみの構成では、トラフィックが少ない長い期間でもリクエストごとに料金が発生します。ハイブリッド構成はどちらの失敗パターンも回避できますが、その分ルーティングの複雑さというコストが伴います。',
+    leadAnswerBlock: '<strong>ハイブリッドなローカル・クラウド戦略が有効なのは、負荷が突発的な場合です。日常的な用途にはデフォルトモデルをローカルで実行し、ローカルのハードウェアを超える大きめのモデルやバッチ処理が発生したときだけ、レンタルのクラウドGPUにバーストします。</strong> 純粋にローカルのみの構成では、ピーク負荷に合わせたハードウェアを購入する必要があり、それが普段はほとんど使われません。純粋にクラウドのみの構成では、トラフィックが少ない長い期間でもリクエストごとに料金が発生します。ハイブリッド構成はどちらの失敗パターンも回避できますが、その分ルーティングの複雑さというコストが伴います。',
     quickAnswerTop: {
       ja: {
         question: 'ハイブリッドなローカル・クラウドLLM戦略が有効なのはどんな場合ですか？',
@@ -304,7 +343,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'キュー深度でルーティング — ローカルキューがしきい値を超えて滞留したときだけバーストする',
           '需要が安定して予測可能な場合はハイブリッドを避ける — 単一環境のほうがシンプルです',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -313,7 +352,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'ハイブリッドなローカル・クラウド構成は突発的な需要に適しています。日常のトラフィックはローカルにとどまり、あふれた分だけがレンタルのクラウドGPUにバーストします',
-          '純粋にローカルのみの構成は使われないクラウド容量にコストを浪費し、純粋にクラウドのみの構成は静かな期間でもリクエストごとに料金が発生します。ハイブリッドはその両方を回避します',
+          '純粋にローカルのみの構成はピーク向けのハードウェアが普段は遊休となり、純粋にクラウドのみの構成は静かな期間でもリクエストごとに料金が発生します。ハイブリッドはその両方を回避します',
           '最もシンプルなルーティング方式はリクエストサイズに基づくもので、ローカルハードウェアが対応できるより大きなモデルや長いコンテキストが必要なリクエストだけをクラウドに送ります',
           'より高度な方式はローカルのキュー深度に基づいてルーティングし、キューが設定したしきい値を超えて滞留したときだけバーストします',
           'トラフィックが安定して予測可能な場合はハイブリッドを避けてください。単一環境のほうが運用やデバッグがシンプルです',
@@ -344,6 +383,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**ローカル優先＋クラウドフォールバック：** まずすべてのリクエストをローカルで試行し、タイムアウトや明示的なローカル失敗（例：大きなリクエストでのメモリ不足）が発生した場合にのみクラウドにフォールバックします。既存のローカル専用構成の上に実装しやすい一方、実際にフォールバックするリクエストは先にローカルの試行を待つ分、レイテンシが増加します。',
           'これら3つの方式すべてにおいて、アプリケーションと両方の推論バックエンドの間にあるAPI互換レイヤーが、ルーティングの判断をアプリケーションの他の部分から見えなくします。アプリケーションのコードは1つのエンドポイントを呼び出すだけで、その裏側でルーティングロジックがどちらのバックエンドが実際にリクエストを処理するかを決定します。',
           'この判断のコスト面 — クラウドGPUが1時間あたり実際にいくらかかり、ローカルハードウェアの償却コストとどう比較されるか — については、[クラウドGPUの時間あたりコスト](/ja/prompt-bites/cloud-gpu-cost-per-hour)と[RunPod対Vast.aiの料金比較](/ja/prompt-bites/runpod-vs-vastai-pricing)で、上記のしきい値判断に使えるプロバイダー別の具体的な数値を確認できます。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'ハイブリッドルーティングのよくある間違い',
+        content: [
+          '<strong>ハイブリッド構成の失敗の多くは、モデルではなくルーティング層が原因です。</strong>実際の構成では次の4つの間違いが繰り返されます。',
+        ],
+        items: [
+          '**機密データのサイレントなフォールバック:** ローカル推論が失敗した際、ルーターが機密タグ付きのリクエストを黙ってクラウドに送ると、誰も気づかないままデータポリシーが破られます。機密リクエストは「フェイルクローズ」にし、フォールバックせずエラーを返してください。',
+          '**クラウド費用の上限がない:** 予算の上限がないバースト規則では、トラフィックの急増やリトライのループが際限のない請求につながります。支出上限とフォールバック試行の最大回数を設定してください。クラウドへのフォールバックは通常1回で十分です。',
+          '**ローカルとクラウドのモデルが同じ挙動をすると思い込む:** モデルが違えば、出力の整形、指示への従い方、長いコンテキストの扱いも異なります。両方のバックエンドでプロンプトをテストし、返す前に出力の構造を検証してください。',
+          '**ルーティングの判断を記録しない:** どのバックエンドがなぜ各リクエストを処理したかの記録がないと、しきい値が適切か、品質が低下していないかを判断できません。リクエストごとにバックエンド、ルーティング理由、レイテンシ、コストを記録してください。',
         ],
       },
       faq: {
@@ -377,7 +429,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '混合本地+云端LLM策略 | Prompt Bites',
     metaDescription: '混合本地-云端LLM策略在什么情况下优于完全本地或完全云端运行,以及如何设计两者之间的路由逻辑。',
     publishDate: '2026-07-15',
-    dateModified: '2026-07-15',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -385,7 +437,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: '需要决定何时将推理请求路由到云端GPU、而不是全部在本地运行的开发者',
     siblingBites: ['cloud-gpu-cost-per-hour', 'runpod-vs-vastai-pricing', 'local-ai-trend-2027-hybrid-local-cloud-routing'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>当工作负载呈突发性时,混合本地-云端策略最有意义:日常使用默认在本地运行模型,只有在偶尔需要更大模型或批处理任务超出本地硬件能力时,才突发到租用的云端GPU。</strong> 纯本地方案会为从未配置使用的闲置云端容量浪费资金;纯云端方案即使在长期低流量期间也要为每一次请求付费。混合方案能避免这两种失败模式,但代价是增加了路由复杂度。',
+    leadAnswerBlock: '<strong>当工作负载呈突发性时,混合本地-云端策略最有意义:日常使用默认在本地运行模型,只有在偶尔需要更大模型或批处理任务超出本地硬件能力时,才突发到租用的云端GPU。</strong> 纯本地方案要求按峰值负载购置硬件,而这些硬件大部分时间处于闲置状态;纯云端方案即使在长期低流量期间也要为每一次请求付费。混合方案能避免这两种失败模式,但代价是增加了路由复杂度。',
     quickAnswerTop: {
       zh: {
         question: '什么时候混合本地-云端LLM策略才有意义？',
@@ -396,7 +448,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '按队列深度路由——只有当本地队列积压超过阈值时才突发',
           '如果需求稳定且可预测,完全跳过混合方案——单一环境更简单',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -405,7 +457,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           '混合本地-云端方案适合突发性需求:日常流量保留在本地,只有溢出部分突发到租用的云端GPU',
-          '纯本地方案会为从未使用的云端容量浪费资金;纯云端方案即使在低谷期也要为每次请求付费——混合方案能避免两者',
+          '纯本地方案需按峰值购置硬件,大部分时间闲置;纯云端方案即使在低谷期也要为每次请求付费——混合方案能避免两者',
           '最简单的路由方式是按请求大小:只有需要比本地硬件更大模型或更长上下文的请求才发送到云端',
           '更进阶的方式按本地队列深度路由,只有当队列积压超过设定阈值时才突发',
           '如果流量稳定且可预测,跳过混合方案——单一环境更易于运维和调试',
@@ -436,6 +488,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**本地优先、云端回退:** 每个请求先在本地尝试,只有在超时或明确的本地失败(例如处理大请求时内存不足)时才回退到云端。在现有的纯本地方案上实现起来很简单,但会给最终回退的请求增加延迟,因为它们要先等待本地尝试失败。',
           '在这三种模式中,应用与两个推理后端之间的API兼容层能让路由决策对应用其余部分保持透明——应用代码只调用一个端点,路由逻辑在幕后决定实际由哪个后端处理请求。',
           '关于这个决策的成本方面——云端GPU每小时的实际费用,以及与本地硬件摊销成本的比较——请参见[云端GPU每小时成本](/zh/prompt-bites/cloud-gpu-cost-per-hour)和[RunPod与Vast.ai价格对比](/zh/prompt-bites/runpod-vs-vastai-pricing),获取可代入上述阈值决策的具体供应商数据。',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '混合路由的常见错误',
+        content: [
+          '<strong>大多数混合方案的问题出在路由层,而不是模型本身。</strong>实际部署中反复出现四种错误。',
+        ],
+        items: [
+          '**对敏感数据静默回退:** 如果本地推理失败,而路由器悄悄把带敏感标记的请求发送到云端,你的数据政策就在无人察觉的情况下被破坏。应让敏感请求“失败即关闭”:返回错误,而不是回退。',
+          '**云端支出没有上限:** 没有预算上限的突发规则会把流量高峰或重试循环变成没有尽头的账单。请设置支出上限和最大回退次数;通常一次云端回退就足够。',
+          '**假设本地和云端模型行为一致:** 不同模型在输出格式、指令遵循和长上下文处理上都有差异。请针对两个后端测试提示词,并在返回前验证输出结构。',
+          '**不记录路由决策:** 如果没有记录每个请求由哪个后端处理及原因,就无法判断阈值是否合适,也无法发现质量是否在下降。请记录每个请求的后端、路由原因、延迟和成本。',
         ],
       },
       faq: {
@@ -469,7 +534,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Estrategia híbrida de LLM local + nube | Prompt Bites',
     metaDescription: 'Cuándo una estrategia híbrida local-nube para LLM supera a ejecutar todo local o todo en la nube, y cómo diseñar la lógica de enrutamiento entre ambos.',
     publishDate: '2026-07-15',
-    dateModified: '2026-07-15',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -477,7 +542,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Desarrolladores que deciden cuándo enrutar la inferencia a una GPU en la nube en lugar de ejecutar todo localmente',
     siblingBites: ['cloud-gpu-cost-per-hour', 'runpod-vs-vastai-pricing', 'local-ai-trend-2027-hybrid-local-cloud-routing'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Una estrategia híbrida local-nube tiene sentido cuando tu carga de trabajo es irregular: ejecuta un modelo por defecto localmente para el uso diario, y recurre a una GPU en la nube alquilada solo para modelos ocasionalmente más grandes o tareas por lotes que superen tu hardware local.</strong> Las configuraciones puramente locales desperdician dinero en capacidad de nube inactiva que nunca aprovisionaste; las configuraciones puramente en la nube pagan por cada solicitud incluso durante largos períodos de baja actividad. Las configuraciones híbridas evitan ambos problemas, a costa de una complejidad de enrutamiento adicional.',
+    leadAnswerBlock: '<strong>Una estrategia híbrida local-nube tiene sentido cuando tu carga de trabajo es irregular: ejecuta un modelo por defecto localmente para el uso diario, y recurre a una GPU en la nube alquilada solo para modelos ocasionalmente más grandes o tareas por lotes que superen tu hardware local.</strong> Las configuraciones puramente locales te obligan a comprar hardware dimensionado para el pico de carga, que luego permanece inactivo la mayor parte del tiempo; las configuraciones puramente en la nube pagan por cada solicitud incluso durante largos períodos de baja actividad. Las configuraciones híbridas evitan ambos problemas, a costa de una complejidad de enrutamiento adicional.',
     quickAnswerTop: {
       es: {
         question: '¿Cuándo tiene sentido una estrategia híbrida local-nube para LLM?',
@@ -488,7 +553,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Enrutar según la profundidad de la cola — recurrir a la nube solo cuando la cola local se acumule más allá de un umbral',
           'Evita el híbrido por completo si la demanda es constante y predecible — un solo entorno es más simple',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -497,7 +562,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'El híbrido local-nube tiene sentido cuando la demanda es irregular: el tráfico diario se queda en local, solo el exceso recurre a una GPU en la nube alquilada',
-          'Una configuración puramente local desperdicia dinero en capacidad de nube que nunca usas; una puramente en la nube paga por solicitud incluso en períodos tranquilos — el híbrido evita ambos casos',
+          'Una configuración puramente local implica comprar hardware para el pico, que queda inactivo la mayor parte del tiempo; una puramente en la nube paga por solicitud incluso en períodos tranquilos — el híbrido evita ambos casos',
           'El patrón de enrutamiento más simple se basa en el tamaño de la solicitud: solo las que necesitan un modelo más grande o un contexto más largo del que soporta tu hardware local van a la nube',
           'Un patrón más avanzado enruta según la profundidad de la cola local, y solo recurre a la nube cuando la cola se acumula más allá de un umbral definido',
           'Evita el híbrido si el tráfico es constante y predecible — un solo entorno es más simple de operar y depurar',
@@ -528,6 +593,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**Local primero con respaldo en la nube:** intenta cada solicitud localmente primero, y solo recurre a la nube ante un tiempo de espera agotado o un fallo local explícito (por ejemplo, falta de memoria en una solicitud grande). Fácil de implementar sobre una configuración puramente local existente, pero añade latencia a las solicitudes que terminan recurriendo a la nube, ya que primero esperan el intento local fallido.',
           'En los tres patrones, una capa de compatibilidad de API entre tu aplicación y ambos backends de inferencia mantiene la decisión de enrutamiento invisible para el resto de tu aplicación — el código de la aplicación solo llama a un endpoint, y la lógica de enrutamiento decide detrás de escena qué backend atiende realmente la solicitud.',
           'Para el lado del costo de esta decisión — cuánto cuesta realmente una GPU en la nube por hora, y cómo se compara con el costo amortizado de tu hardware local — consulta [Costo de GPU en la Nube por Hora](/es/prompt-bites/cloud-gpu-cost-per-hour) y [Precios de RunPod vs. Vast.ai](/es/prompt-bites/runpod-vs-vastai-pricing) para cifras específicas de proveedores que puedes usar en las decisiones de umbral anteriores.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores comunes en el enrutamiento híbrido',
+        content: [
+          '<strong>La mayoría de los fallos híbridos provienen de la capa de enrutamiento, no de los modelos.</strong> En configuraciones reales se repiten cuatro errores.',
+        ],
+        items: [
+          '**Recurso silencioso con datos sensibles:** si la inferencia local falla y el enrutador envía discretamente a la nube una solicitud marcada como sensible, tu política de datos se rompe sin que nadie lo note. Haz que las solicitudes sensibles fallen en modo «fail closed»: devuelve un error en lugar de recurrir a la nube.',
+          '**Sin tope de gasto en la nube:** una regla de desborde sin techo presupuestario convierte un pico de tráfico o un bucle de reintentos en una factura sin límite. Define un límite de gasto y un número máximo de intentos de respaldo; un solo respaldo en la nube suele bastar.',
+          '**Suponer que los modelos locales y en la nube se comportan igual:** modelos distintos formatean la salida, siguen instrucciones y manejan el contexto largo de forma diferente. Prueba tus prompts en ambos backends y valida la estructura de la salida antes de devolverla.',
+          '**No registrar las decisiones de enrutamiento:** sin un registro de qué backend atendió cada solicitud y por qué, no puedes saber si el umbral es correcto ni si la calidad se está degradando. Registra el backend, el motivo del enrutamiento, la latencia y el costo de cada solicitud.',
         ],
       },
       faq: {
@@ -561,7 +639,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Estratégia híbrida de LLM local + nuvem | Prompt Bites',
     metaDescription: 'Quando uma estratégia híbrida local-nuvem para LLM supera rodar tudo localmente ou tudo na nuvem, e como arquitetar a lógica de roteamento entre os dois.',
     publishDate: '2026-07-15',
-    dateModified: '2026-07-15',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -569,7 +647,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'Desenvolvedores que decidem quando rotear a inferência para uma GPU na nuvem em vez de rodar tudo localmente',
     siblingBites: ['cloud-gpu-cost-per-hour', 'runpod-vs-vastai-pricing', 'local-ai-trend-2027-hybrid-local-cloud-routing'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Uma estratégia híbrida local-nuvem faz sentido quando sua carga de trabalho tem demanda instável: rode um modelo padrão localmente para o uso do dia a dia, e recorra a uma GPU na nuvem alugada apenas para modelos ocasionalmente maiores ou tarefas em lote que excedam seu hardware local.</strong> Configurações puramente locais desperdiçam dinheiro com capacidade de nuvem ociosa que você nunca provisionou; configurações puramente na nuvem pagam por cada requisição mesmo durante longos períodos de baixo tráfego. Configurações híbridas evitam os dois problemas, ao custo de complexidade extra de roteamento.',
+    leadAnswerBlock: '<strong>Uma estratégia híbrida local-nuvem faz sentido quando sua carga de trabalho tem demanda instável: rode um modelo padrão localmente para o uso do dia a dia, e recorra a uma GPU na nuvem alugada apenas para modelos ocasionalmente maiores ou tarefas em lote que excedam seu hardware local.</strong> Configurações puramente locais obrigam você a comprar hardware dimensionado para o pico de carga, que fica ocioso na maior parte do tempo; configurações puramente na nuvem pagam por cada requisição mesmo durante longos períodos de baixo tráfego. Configurações híbridas evitam os dois problemas, ao custo de complexidade extra de roteamento.',
     quickAnswerTop: {
       pt: {
         question: 'Quando uma estratégia híbrida local-nuvem para LLM faz sentido?',
@@ -580,7 +658,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Roteamento por profundidade da fila — recorra à nuvem apenas quando a fila local acumular além de um limite',
           'Evite o híbrido por completo se a demanda for constante e previsível — um único ambiente é mais simples',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -589,7 +667,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'O híbrido local-nuvem faz sentido quando a demanda é instável: o tráfego do dia a dia fica local, apenas o excedente recorre a uma GPU na nuvem alugada',
-          'Uma configuração puramente local desperdiça dinheiro com capacidade de nuvem nunca usada; uma puramente na nuvem paga por requisição mesmo em períodos calmos — o híbrido evita os dois',
+          'Uma configuração puramente local significa comprar hardware para o pico, que fica ocioso na maior parte do tempo; uma puramente na nuvem paga por requisição mesmo em períodos calmos — o híbrido evita os dois',
           'O padrão de roteamento mais simples é baseado no tamanho da requisição: apenas as que precisam de um modelo maior ou contexto mais longo do que o hardware local suporta vão para a nuvem',
           'Um padrão mais avançado roteia pela profundidade da fila local, recorrendo à nuvem apenas quando a fila acumula além de um limite definido',
           'Evite o híbrido se o tráfego for constante e previsível — um único ambiente é mais simples de operar e depurar',
@@ -620,6 +698,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**Local primeiro com fallback para a nuvem:** tente cada requisição localmente primeiro, e só recorra à nuvem em caso de timeout ou falha local explícita (por exemplo, falta de memória em uma requisição grande). Simples de implementar sobre uma configuração puramente local existente, mas adiciona latência às requisições que acabam recorrendo à nuvem, já que elas esperam a tentativa local falhar primeiro.',
           'Em todos os três padrões, uma camada de compatibilidade de API entre sua aplicação e os dois backends de inferência mantém a decisão de roteamento invisível para o resto da aplicação — o código da aplicação apenas chama um endpoint, e a lógica de roteamento decide nos bastidores qual backend realmente atende a requisição.',
           'Para o lado do custo dessa decisão — quanto uma GPU na nuvem realmente custa por hora, e como isso se compara ao custo amortizado do seu hardware local — veja [Custo de GPU na Nuvem por Hora](/pt/prompt-bites/cloud-gpu-cost-per-hour) e [Preços RunPod vs. Vast.ai](/pt/prompt-bites/runpod-vs-vastai-pricing) para números específicos de provedores para usar nas decisões de limite acima.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erros comuns no roteamento híbrido',
+        content: [
+          '<strong>A maioria das falhas híbridas vem da camada de roteamento, não dos modelos.</strong> Quatro erros se repetem em configurações reais.',
+        ],
+        items: [
+          '**Fallback silencioso com dados sensíveis:** se a inferência local falha e o roteador envia discretamente à nuvem uma requisição marcada como sensível, sua política de dados é violada sem que ninguém perceba. Faça as requisições sensíveis falharem em modo «fail closed»: retorne um erro em vez de recorrer à nuvem.',
+          '**Sem teto para o gasto na nuvem:** uma regra de burst sem limite de orçamento transforma um pico de tráfego ou um loop de novas tentativas em uma conta sem fim. Defina um limite de gastos e um número máximo de tentativas de fallback; um único fallback para a nuvem costuma bastar.',
+          '**Presumir que modelos locais e de nuvem se comportam igual:** modelos diferentes formatam a saída, seguem instruções e lidam com contexto longo de maneiras diferentes. Teste seus prompts nos dois backends e valide a estrutura da saída antes de retorná-la.',
+          '**Não registrar as decisões de roteamento:** sem um registro de qual backend atendeu cada requisição e por quê, você não sabe se o limite está certo nem se a qualidade está caindo. Registre o backend, o motivo do roteamento, a latência e o custo de cada requisição.',
         ],
       },
       faq: {
@@ -653,7 +744,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'استراتيجية LLM هجينة محلية + سحابية | Prompt Bites',
     metaDescription: 'متى تتفوق الاستراتيجية الهجينة المحلية-السحابية لنماذج LLM على التشغيل المحلي الكامل أو السحابي الكامل، وكيفية تصميم منطق التوجيه بينهما.',
     publishDate: '2026-07-15',
-    dateModified: '2026-07-15',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -661,7 +752,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: 'المطورون الذين يقررون متى يوجّهون الاستدلال إلى GPU سحابي بدلاً من تشغيل كل شيء محليًا',
     siblingBites: ['cloud-gpu-cost-per-hour', 'runpod-vs-vastai-pricing', 'local-ai-trend-2027-hybrid-local-cloud-routing'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>تكون الاستراتيجية الهجينة المحلية-السحابية منطقية عندما يكون الطلب متقطعًا: شغّل نموذجًا افتراضيًا محليًا للاستخدام اليومي، وانتقل إلى GPU سحابي مستأجر فقط عند الحاجة العرضية لنماذج أكبر أو مهام دفعية تتجاوز قدرة أجهزتك المحلية.</strong> الإعدادات المحلية الخالصة تهدر المال على سعة سحابية خاملة لم توفرها أصلًا؛ الإعدادات السحابية الخالصة تدفع مقابل كل طلب حتى خلال فترات طويلة من انخفاض الحركة. الإعدادات الهجينة تتجنب كلا النمطين من الفشل، لكن بتكلفة تعقيد إضافي في التوجيه.',
+    leadAnswerBlock: '<strong>تكون الاستراتيجية الهجينة المحلية-السحابية منطقية عندما يكون الطلب متقطعًا: شغّل نموذجًا افتراضيًا محليًا للاستخدام اليومي، وانتقل إلى GPU سحابي مستأجر فقط عند الحاجة العرضية لنماذج أكبر أو مهام دفعية تتجاوز قدرة أجهزتك المحلية.</strong> الإعدادات المحلية الخالصة تجبرك على شراء أجهزة مصممة لذروة الحمل، وتبقى خاملة معظم الوقت؛ الإعدادات السحابية الخالصة تدفع مقابل كل طلب حتى خلال فترات طويلة من انخفاض الحركة. الإعدادات الهجينة تتجنب كلا النمطين من الفشل، لكن بتكلفة تعقيد إضافي في التوجيه.',
     quickAnswerTop: {
       ar: {
         question: 'متى تكون الاستراتيجية الهجينة المحلية-السحابية لنماذج LLM منطقية؟',
@@ -672,7 +763,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'التوجيه حسب عمق قائمة الانتظار — انتقل إلى السحابة فقط عندما تتراكم القائمة المحلية فوق حد معيّن',
           'تجنّب النهج الهجين تمامًا إذا كان الطلب ثابتًا وقابلًا للتنبؤ — بيئة واحدة أبسط',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -681,7 +772,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'النهج الهجين المحلي-السحابي منطقي عند الطلب المتقطع: تبقى الحركة اليومية محلية، وينتقل الفائض فقط إلى GPU سحابي مستأجر',
-          'الإعداد المحلي الخالص يهدر المال على سعة سحابية لا تُستخدم أبدًا؛ الإعداد السحابي الخالص يدفع لكل طلب حتى في الفترات الهادئة — النهج الهجين يتجنب الاثنين',
+          'الإعداد المحلي الخالص يعني شراء أجهزة للذروة تبقى خاملة معظم الوقت؛ الإعداد السحابي الخالص يدفع لكل طلب حتى في الفترات الهادئة — النهج الهجين يتجنب الاثنين',
           'أبسط نمط توجيه يعتمد على حجم الطلب: فقط الطلبات التي تحتاج نموذجًا أكبر أو سياقًا أطول مما تدعمه أجهزتك المحلية تذهب إلى السحابة',
           'يوجد نمط أكثر تقدمًا يوجّه حسب عمق قائمة الانتظار المحلية، وينتقل إلى السحابة فقط عندما تتراكم القائمة فوق حد محدد',
           'تجنّب النهج الهجين إذا كانت الحركة ثابتة وقابلة للتنبؤ — بيئة واحدة أبسط للتشغيل واستكشاف الأخطاء',
@@ -712,6 +803,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**المحلي أولاً مع الرجوع إلى السحابة:** جرّب كل طلب محليًا أولاً، وانتقل إلى السحابة فقط عند انتهاء المهلة أو فشل محلي صريح (مثل نفاد الذاكرة في طلب كبير). سهل التنفيذ فوق إعداد محلي خالص قائم، لكنه يضيف زمن استجابة للطلبات التي تنتهي بالانتقال إلى السحابة، لأنها تنتظر أولًا فشل المحاولة المحلية.',
           'في الأنماط الثلاثة جميعها، تحافظ طبقة توافق API بين تطبيقك وواجهتي الاستدلال الخلفيتين على إخفاء قرار التوجيه عن بقية تطبيقك — يستدعي كود التطبيق نقطة نهاية واحدة فقط، ويقرر منطق التوجيه خلف تلك النقطة أي واجهة خلفية تخدم الطلب فعليًا.',
           'بخصوص الجانب المتعلق بالتكلفة من هذا القرار — التكلفة الفعلية لـ GPU سحابي في الساعة، وكيف تقارن بالتكلفة المستهلكة لأجهزتك المحلية — راجع [تكلفة GPU السحابي في الساعة](/ar/prompt-bites/cloud-gpu-cost-per-hour) و[أسعار RunPod مقابل Vast.ai](/ar/prompt-bites/runpod-vs-vastai-pricing) للحصول على أرقام خاصة بكل مزود يمكن استخدامها في قرارات الحدود أعلاه.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'أخطاء شائعة في التوجيه الهجين',
+        content: [
+          '<strong>معظم إخفاقات الأنظمة الهجينة تأتي من طبقة التوجيه، لا من النماذج.</strong> تتكرر أربعة أخطاء في الإعدادات الواقعية.',
+        ],
+        items: [
+          '**التحويل الصامت للبيانات الحساسة:** إذا فشل الاستدلال المحلي وأرسل الموجّه بصمت طلبًا موسومًا بأنه حساس إلى السحابة، فقد انتُهكت سياسة بياناتك دون أن يلاحظ أحد. اجعل الطلبات الحساسة تفشل بنمط «fail closed»: أعد خطأً بدلًا من التحويل إلى السحابة.',
+          '**لا سقف لإنفاق السحابة:** قاعدة التوسّع دون حد للميزانية تحوّل ذروة الحركة أو حلقة إعادة المحاولة إلى فاتورة مفتوحة. حدّد سقفًا للإنفاق وحدًا أقصى لمحاولات التحويل الاحتياطي؛ يكفي عادةً تحويل احتياطي واحد إلى السحابة.',
+          '**افتراض أن النماذج المحلية والسحابية تتصرف بالطريقة نفسها:** تختلف النماذج في تنسيق المخرجات واتباع التعليمات والتعامل مع السياق الطويل. اختبر موجّهاتك على كلا الخلفيتين وتحقق من بنية المخرجات قبل إعادتها.',
+          '**عدم تسجيل قرارات التوجيه:** بدون سجل يوضح أي خلفية خدمت كل طلب ولماذا، لا يمكنك معرفة ما إذا كان الحد مناسبًا أو ما إذا كانت الجودة تتراجع. سجّل الخلفية وسبب التوجيه وزمن الاستجابة والتكلفة لكل طلب.',
         ],
       },
       faq: {
@@ -745,7 +849,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '하이브리드 로컬+클라우드 LLM 전략 | Prompt Bites',
     metaDescription: '하이브리드 로컬-클라우드 LLM 전략이 완전한 로컬 운영이나 완전한 클라우드 운영보다 나은 경우와, 두 환경 간 라우팅 로직을 설계하는 방법을 설명합니다.',
     publishDate: '2026-07-15',
-    dateModified: '2026-07-15',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -753,7 +857,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     audience: '모든 것을 로컬에서 실행하는 대신 언제 클라우드 GPU로 추론을 라우팅할지 결정하는 개발자',
     siblingBites: ['cloud-gpu-cost-per-hour', 'runpod-vs-vastai-pricing', 'local-ai-trend-2027-hybrid-local-cloud-routing'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>하이브리드 로컬-클라우드 전략은 워크로드가 불규칙한 수요를 보일 때 의미가 있습니다. 일상적인 용도로는 기본 모델을 로컬에서 실행하고, 로컬 하드웨어를 초과하는 더 큰 모델이나 배치 작업이 가끔 필요할 때만 임대한 클라우드 GPU로 확장합니다.</strong> 순수 로컬 방식은 프로비저닝조차 하지 않은 유휴 클라우드 용량에 비용을 낭비하며, 순수 클라우드 방식은 트래픽이 적은 긴 기간에도 요청마다 비용을 지불합니다. 하이브리드 구성은 두 가지 실패 패턴을 모두 피할 수 있지만, 그 대가로 라우팅 복잡도가 추가됩니다.',
+    leadAnswerBlock: '<strong>하이브리드 로컬-클라우드 전략은 워크로드가 불규칙한 수요를 보일 때 의미가 있습니다. 일상적인 용도로는 기본 모델을 로컬에서 실행하고, 로컬 하드웨어를 초과하는 더 큰 모델이나 배치 작업이 가끔 필요할 때만 임대한 클라우드 GPU로 확장합니다.</strong> 순수 로컬 방식은 피크 부하에 맞춘 하드웨어를 구매해야 하며 그 하드웨어는 대부분 유휴 상태로 남고, 순수 클라우드 방식은 트래픽이 적은 긴 기간에도 요청마다 비용을 지불합니다. 하이브리드 구성은 두 가지 실패 패턴을 모두 피할 수 있지만, 그 대가로 라우팅 복잡도가 추가됩니다.',
     quickAnswerTop: {
       ko: {
         question: '하이브리드 로컬-클라우드 LLM 전략은 언제 의미가 있습니까?',
@@ -764,7 +868,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '큐 깊이에 따라 라우팅 — 로컬 큐가 임계값을 초과해 쌓였을 때만 확장',
           '수요가 일정하고 예측 가능하다면 하이브리드를 완전히 건너뛰십시오 — 단일 환경이 더 단순합니다',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -773,7 +877,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           '하이브리드 로컬-클라우드는 불규칙한 수요에 적합합니다. 일상적인 트래픽은 로컬에 머물고, 초과분만 임대한 클라우드 GPU로 확장됩니다',
-          '순수 로컬 구성은 전혀 사용하지 않는 클라우드 용량에 비용을 낭비하고, 순수 클라우드 구성은 한산한 시기에도 요청마다 비용을 지불합니다 — 하이브리드는 이 두 가지를 모두 피합니다',
+          '순수 로컬 구성은 피크용 하드웨어를 사야 하고 대부분 유휴 상태이며, 순수 클라우드 구성은 한산한 시기에도 요청마다 비용을 지불합니다 — 하이브리드는 이 두 가지를 모두 피합니다',
           '가장 단순한 라우팅 방식은 요청 크기 기반입니다. 로컬 하드웨어가 지원하는 것보다 더 큰 모델이나 더 긴 컨텍스트가 필요한 요청만 클라우드로 전송됩니다',
           '더 발전된 방식은 로컬 큐 깊이에 따라 라우팅하며, 큐가 설정한 임계값을 초과해 쌓였을 때만 확장합니다',
           '트래픽이 일정하고 예측 가능하다면 하이브리드를 피하십시오 — 단일 환경이 운영과 디버깅에 더 단순합니다',
@@ -804,6 +908,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '**로컬 우선, 클라우드 폴백:** 모든 요청을 먼저 로컬에서 시도하고, 타임아웃이나 명시적인 로컬 실패(예: 큰 요청에서의 메모리 부족)가 발생할 때만 클라우드로 폴백합니다. 기존의 순수 로컬 구성 위에 구현하기 쉽지만, 결국 폴백되는 요청은 먼저 로컬 시도의 실패를 기다려야 하므로 지연 시간이 추가됩니다.',
           '세 가지 패턴 모두에서, 애플리케이션과 두 추론 백엔드 사이의 API 호환 계층이 라우팅 결정을 애플리케이션의 나머지 부분에는 보이지 않게 유지합니다 — 애플리케이션 코드는 단일 엔드포인트만 호출하고, 그 뒤에서 라우팅 로직이 실제로 어느 백엔드가 요청을 처리할지 결정합니다.',
           '이 결정의 비용 측면 — 클라우드 GPU가 시간당 실제로 얼마나 드는지, 그리고 로컬 하드웨어의 상각 비용과 어떻게 비교되는지 — 에 대해서는 위의 임계값 결정에 활용할 수 있는 공급자별 구체적인 수치를 담은 [클라우드 GPU 시간당 비용](/ko/prompt-bites/cloud-gpu-cost-per-hour)과 [RunPod 대 Vast.ai 가격 비교](/ko/prompt-bites/runpod-vs-vastai-pricing)를 참고하십시오.',
+        ],
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '하이브리드 라우팅의 흔한 실수',
+        content: [
+          '<strong>하이브리드 구성의 실패는 대부분 모델이 아니라 라우팅 계층에서 발생합니다.</strong> 실제 구성에서는 네 가지 실수가 반복됩니다.',
+        ],
+        items: [
+          '**민감한 데이터의 조용한 폴백:** 로컬 추론이 실패했을 때 라우터가 민감도 태그가 붙은 요청을 조용히 클라우드로 보내면, 아무도 모르는 사이에 데이터 정책이 깨집니다. 민감한 요청은 「fail closed」로 처리하여 폴백 대신 오류를 반환하세요.',
+          '**클라우드 지출 상한이 없음:** 예산 상한이 없는 버스트 규칙은 트래픽 급증이나 재시도 루프를 끝없는 청구서로 바꿉니다. 지출 한도와 폴백 시도 최대 횟수를 설정하세요. 클라우드 폴백은 보통 한 번이면 충분합니다.',
+          '**로컬 모델과 클라우드 모델이 똑같이 동작한다고 가정함:** 모델마다 출력 형식, 지시 이행, 긴 컨텍스트 처리 방식이 다릅니다. 두 백엔드 모두에서 프롬프트를 테스트하고, 반환하기 전에 출력 구조를 검증하세요.',
+          '**라우팅 결정을 기록하지 않음:** 어떤 백엔드가 각 요청을 왜 처리했는지 기록이 없으면 임계값이 적절한지, 품질이 떨어지고 있는지 알 수 없습니다. 요청마다 백엔드, 라우팅 사유, 지연 시간, 비용을 기록하세요.',
         ],
       },
       faq: {
