@@ -24,7 +24,7 @@
   <text x="570" y="63" style="fill: #FFFFFF;" class="header">Anwendungsfall</text>
 
   <!-- Row 1: 4GB -->
-  <rect x="20" y="73" width="760" height="26" class="row-alt" class="border"/>
+  <rect x="20" y="73" width="760" height="26" class="row-alt border"/>
   <text x="30" y="91" class="text-primary" style="font-weight: 600;">4 GB</text>
   <text x="140" y="91" class="text-code">Phi-4 Mini, Gemma 2B</text>
   <text x="380" y="91" class="text-code">Q4_K_M</text>
@@ -38,7 +38,7 @@
   <text x="570" y="117" class="text-primary">Allgemeine Zwecke, RAG-Pipelines</text>
 
   <!-- Row 3: 8GB -->
-  <rect x="20" y="125" width="760" height="26" class="row-alt" class="border"/>
+  <rect x="20" y="125" width="760" height="26" class="row-alt border"/>
   <text x="30" y="143" class="text-primary" style="font-weight: 600;">8 GB</text>
   <text x="140" y="143" class="text-code">Llama 3 8B, Qwen 7B</text>
   <text x="380" y="143" class="text-code">Q5_K_M, Q8_0</text>
@@ -52,7 +52,7 @@
   <text x="570" y="169" class="text-primary">Größere Modelle, Batch-Verarbeitung</text>
 
   <!-- Row 5: 16GB -->
-  <rect x="20" y="177" width="760" height="26" class="row-alt" class="border"/>
+  <rect x="20" y="177" width="760" height="26" class="row-alt border"/>
   <text x="30" y="195" class="text-primary" style="font-weight: 600;">16 GB</text>
   <text x="140" y="195" class="text-code">Llama 3 70B (Q5), Claude</text>
   <text x="380" y="195" class="text-code">Q5_K_M, Q8_0</text>
@@ -66,7 +66,7 @@
   <text x="570" y="221" class="text-primary">Produktionsbereitstellung</text>
 
   <!-- Row 7: 48GB+ -->
-  <rect x="20" y="229" width="760" height="26" class="row-alt" class="border"/>
+  <rect x="20" y="229" width="760" height="26" class="row-alt border"/>
   <text x="30" y="247" class="text-primary" style="font-weight: 600;">48 GB+</text>
   <text x="140" y="247" class="text-code">Beliebige Modelle, mehrere Instanzen</text>
   <text x="380" y="247" class="text-code">FP32, Multi-GPU</text>
