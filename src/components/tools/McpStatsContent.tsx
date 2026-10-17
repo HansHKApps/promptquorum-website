@@ -87,6 +87,14 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
         <CopyEndpointButton text="https://www.promptquorum.com/api/mcp" lang={lang} />
       </div>
 
+      <aside className="mt-6 rounded-xl border-2 border-primary bg-primary/5 p-4">
+        <p className="text-base font-bold text-text-primary">
+          <span aria-hidden="true">👉 </span>{tDocs('startHeading', lang)}
+        </p>
+        <p className="mt-1 text-sm text-text-secondary">{tDocs('startBody', lang)}</p>
+        <code dir="ltr" className="mt-3 inline-block rounded-lg bg-primary px-3 py-1.5 text-sm font-semibold text-white">start</code>
+      </aside>
+
       <h2 className="mt-10 text-lg font-bold text-text-primary">{tDocs('howHeading', lang)}</h2>
       <p className="mt-2 text-sm text-text-secondary">{tDocs('howBody', lang)}</p>
 
