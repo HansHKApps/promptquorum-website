@@ -13610,81 +13610,81 @@
   {
     "lang": "en",
     "title": "Jan AI vs LM Studio: Which Is Better for Local LLMs?",
-    "excerpt": "Jan AI vs LM Studio: Feature comparison, privacy, UI, API support. LM Studio 0.4.16 vs Jan AI 0.8.2. Which local LLM desktop app is better?",
+    "excerpt": "Jan AI vs LM Studio: license, Linux and AMD support, MCP, models and API compared. LM Studio 0.4.26 vs Jan 0.8.6 — which local LLM desktop app fits you?",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-17",
     "url": "/local-llms/lm-studio-vs-jan-ai",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Jan AI vs LM Studio: Welches ist besser für lokale LLMs?",
-    "excerpt": "Jan AI: Open-Source, datenschutzorientiert, Plugins. LM Studio: einfaches Setup, HuggingFace-Suche, stabil. Welches passt für Sie?",
+    "excerpt": "Jan AI vs LM Studio: Lizenz, Linux- und AMD-Support, MCP, Modelle und API im Vergleich. LM Studio 0.4.26 vs Jan 0.8.6 — welche Desktop-App passt zu Ihnen?",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-17",
     "url": "/de/local-llms/lm-studio-vs-jan-ai",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Jan AI vs LM Studio : Lequel choisir pour les LLM locaux ?",
-    "excerpt": "Jan AI : open-source, confidentialité, plugins. LM Studio : installation rapide, HuggingFace intégrée, fiable. Lequel choisir ? Comparaison 2026.",
+    "excerpt": "Jan AI vs LM Studio : licence, support Linux et AMD, MCP, modèles et API comparés. LM Studio 0.4.26 vs Jan 0.8.6 — quelle application de bureau choisir ?",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-17",
     "url": "/fr/local-llms/lm-studio-vs-jan-ai",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "Jan AI vs LM Studio：ローカルLLMにはどちらが優れているか？",
-    "excerpt": "Jan AIはオープンソース、プライバシー重視、プラグイン対応。LM Studioは初心者向けで高速セットアップ。比較ガイド2026。",
+    "excerpt": "Jan AIとLM Studioを比較：ライセンス、Linux・AMD対応、MCP、モデル、API。LM Studio 0.4.26とJan 0.8.6、どちらのデスクトップアプリが合う？",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-17",
     "url": "/ja/local-llms/lm-studio-vs-jan-ai",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "Jan AI vs LM Studio：哪款本地LLM应用更好用？",
-    "excerpt": "Jan AI开源隐私优先，插件丰富。LM Studio简洁易用，初学者首选。性能、功能、隐私全面对比。2026年决策指南。",
+    "excerpt": "Jan AI 与 LM Studio 对比：许可证、Linux 与 AMD 支持、MCP、模型和 API。LM Studio 0.4.26 vs Jan 0.8.6，哪款本地 LLM 桌面应用更适合你？",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-17",
     "url": "/zh/local-llms/lm-studio-vs-jan-ai",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "Jan AI vs LM Studio: ¿Cuál es mejor para LLMs locales?",
-    "excerpt": "Jan AI vs LM Studio: compara funciones, privacidad, interfaz y soporte API. ¿Qué app LLM de escritorio es mejor? Jan es open-source con extensiones.",
+    "excerpt": "Jan AI vs LM Studio: licencia, soporte de Linux y AMD, MCP, modelos y API comparados. LM Studio 0.4.26 vs Jan 0.8.6: ¿qué app de escritorio te conviene?",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-17",
     "url": "/es/local-llms/lm-studio-vs-jan-ai",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Jan AI vs LM Studio: Qual é melhor para LLMs locais?",
-    "excerpt": "Jan AI vs LM Studio: compare recursos, privacidade, interface e suporte a API. Qual app LLM desktop é melhor? Jan é open-source com extensões.",
+    "excerpt": "Jan AI vs LM Studio: licença, suporte a Linux e AMD, MCP, modelos e API comparados. LM Studio 0.4.26 vs Jan 0.8.6 — qual app desktop combina com você?",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-04-05",
+    "dateModified": "2026-10-17",
     "url": "/pt/local-llms/lm-studio-vs-jan-ai",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "⁨Jan AI⁩ مقابل ⁨LM Studio⁩: أيهما أفضل لنماذج ⁨LLM⁩ المحلية؟",
-    "excerpt": "⁨LM Studio⁩ أفضل للمبتدئين: واجهة أبسط وبحث ⁨HuggingFace⁩ مدمج. ⁨Jan AI⁩ للمطورين: مفتوح المصدر وبلا قياس عن بُعد. كلاهما يستخدم ⁨llama.cpp⁩.",
+    "excerpt": "Jan AI مقابل LM Studio: الترخيص، دعم Linux وAMD، وMCP، والنماذج وواجهة API. LM Studio 0.4.26 مقابل Jan 0.8.6 — أي تطبيق مكتبي يناسبك؟",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-17",
     "url": "/ar/local-llms/lm-studio-vs-jan-ai",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "Jan AI vs LM Studio: 로컬 LLM에 어느 것이 더 적합합니까?",
-    "excerpt": "Jan AI vs LM Studio: 기능 비교, 프라이버시, UI, API 지원. 어느 로컬 LLM 데스크톱 앱이 더 낫습니까? 2026년 4월 리뷰.",
+    "excerpt": "Jan AI와 LM Studio 비교: 라이선스, Linux·AMD 지원, MCP, 모델, API. LM Studio 0.4.26 vs Jan 0.8.6, 어떤 로컬 LLM 데스크톱 앱이 맞을까요?",
     "publishDate": "2026-04-05",
-    "dateModified": "2026-04-05",
+    "dateModified": "2026-10-17",
     "url": "/ko/local-llms/lm-studio-vs-jan-ai",
     "cluster": "local-llms"
   },
@@ -48845,7 +48845,7 @@
   {
     "lang": "en",
     "title": "Best 14B Model for Coding?",
-    "excerpt": "Qwen2.5-Coder 14B Instruct: 89.6% HumanEval, ~10 GB VRAM. DeepSeek-Coder-V2-Lite: 81.1%. StarCoder2 15B: 67.7% (Qwen-reported). Quick answer.",
+    "excerpt": "Best 14B model for coding: Qwen2.5-Coder 14B, 89.6% HumanEval (Qwen-reported) in ~10 GB VRAM. For general use: Qwen3 14B or Phi-4. Compared on Ollama.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-10-17",
     "url": "/prompt-bites/best-14b-models-coding",
@@ -48854,7 +48854,7 @@
   {
     "lang": "de",
     "title": "Bestes 14B-Modell für Coding?",
-    "excerpt": "Qwen2.5-Coder 14B Instruct: 89,6 % HumanEval, ~10 GB VRAM. DeepSeek-Coder-V2-Lite: 81,1 %. StarCoder2 15B: 67,7 % (Qwen-Angaben). Schnelle Antwort.",
+    "excerpt": "Bestes 14B-Modell fürs Coding: Qwen2.5-Coder 14B, 89,6 % HumanEval (Qwen-Angabe) bei ~10 GB VRAM. Allgemein: Qwen3 14B oder Phi-4. Vergleich auf Ollama.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-10-17",
     "url": "/de/prompt-bites/best-14b-models-coding",
@@ -48863,7 +48863,7 @@
   {
     "lang": "fr",
     "title": "Meilleur modèle 14B pour le coding ?",
-    "excerpt": "Qwen2.5-Coder 14B Instruct : 89,6 % HumanEval, ~10 Go de VRAM. DeepSeek-Coder-V2-Lite : 81,1 %. StarCoder2 15B : 67,7 % (chiffres Qwen). Réponse rapide.",
+    "excerpt": "Meilleur modèle 14B pour coder : Qwen2.5-Coder 14B, 89,6 % HumanEval (chiffre Qwen) pour ~10 Go de VRAM. Usage général : Qwen3 14B ou Phi-4. Comparatif Ollama.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-10-17",
     "url": "/fr/prompt-bites/best-14b-models-coding",
@@ -48872,7 +48872,7 @@
   {
     "lang": "ja",
     "title": "コーディングに最適な14Bモデルは？",
-    "excerpt": "Qwen2.5-Coder 14B Instruct：HumanEval 89.6%、約10 GB VRAM。DeepSeek-Coder-V2-Lite：81.1%。StarCoder2 15B：67.7%（Qwen公表値）。簡潔な回答。",
+    "excerpt": "コーディング向け最適14BはQwen2.5-Coder 14B（HumanEval 89.6%・Qwen公表値、約10 GB VRAM）。汎用ならQwen3 14BかPhi-4。Ollamaで比較します。",
     "publishDate": "2026-05-18",
     "dateModified": "2026-10-17",
     "url": "/ja/prompt-bites/best-14b-models-coding",
@@ -48881,7 +48881,7 @@
   {
     "lang": "zh",
     "title": "编程最佳14B模型是哪款？",
-    "excerpt": "Qwen2.5-Coder 14B Instruct：HumanEval 89.6%，约10 GB 显存。DeepSeek-Coder-V2-Lite：81.1%。StarCoder2 15B：67.7%（Qwen 公布）。快速解答。",
+    "excerpt": "编程首选14B模型是Qwen2.5-Coder 14B：HumanEval 89.6%（Qwen公布），约10 GB显存。通用场景可选Qwen3 14B或Phi-4。基于Ollama的对比。",
     "publishDate": "2026-05-18",
     "dateModified": "2026-10-17",
     "url": "/zh/prompt-bites/best-14b-models-coding",
@@ -48890,7 +48890,7 @@
   {
     "lang": "es",
     "title": "¿El mejor modelo 14B para coding?",
-    "excerpt": "Qwen2.5-Coder 14B Instruct: 89,6 % HumanEval, ~10 GB de VRAM. DeepSeek-Coder-V2-Lite: 81,1 %. StarCoder2 15B: 67,7 % (cifras de Qwen). Respuesta rápida.",
+    "excerpt": "Mejor modelo 14B para coding: Qwen2.5-Coder 14B, 89,6 % en HumanEval (cifra de Qwen) con ~10 GB de VRAM. Uso general: Qwen3 14B o Phi-4. Comparativa en Ollama.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-10-17",
     "url": "/es/prompt-bites/best-14b-models-coding",
@@ -48899,7 +48899,7 @@
   {
     "lang": "pt",
     "title": "¿El mejor modelo 14B para coding?",
-    "excerpt": "Qwen2.5-Coder 14B Instruct: 89,6% HumanEval, ~10 GB de VRAM. DeepSeek-Coder-V2-Lite: 81,1%. StarCoder2 15B: 67,7% (números da Qwen). Resposta rápida.",
+    "excerpt": "Melhor modelo 14B para programar: Qwen2.5-Coder 14B, 89,6% no HumanEval (número da Qwen) com ~10 GB de VRAM. Uso geral: Qwen3 14B ou Phi-4. Comparativo no Ollama.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-10-17",
     "url": "/pt/prompt-bites/best-14b-models-coding",
@@ -48908,7 +48908,7 @@
   {
     "lang": "ar",
     "title": "أفضل نموذج ⁨14B⁩ للبرمجة؟",
-    "excerpt": "Qwen2.5-Coder 14B Instruct: ‏89.6% في HumanEval، نحو 10 GB VRAM. DeepSeek-Coder-V2-Lite: ‏81.1%. StarCoder2 15B: ‏67.7% (أرقام Qwen). إجابة سريعة.",
+    "excerpt": "أفضل نموذج ⁨14B⁩ للبرمجة هو ⁨Qwen2.5-Coder 14B⁩: ‏⁨89.6%⁩ على ⁨HumanEval⁩ بنحو ⁨10 GB VRAM⁩. للاستخدام العام: ⁨Qwen3 14B⁩ أو ⁨Phi-4⁩. مقارنة على ⁨Ollama⁩.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-10-17",
     "url": "/ar/prompt-bites/best-14b-models-coding",
@@ -48917,7 +48917,7 @@
   {
     "lang": "ko",
     "title": "코딩에 최적인 14B 모델은 무엇입니까?",
-    "excerpt": "Qwen2.5-Coder 14B Instruct: HumanEval 89.6%, 약 10 GB VRAM. DeepSeek-Coder-V2-Lite: 81.1%. StarCoder2 15B: 67.7%(Qwen 발표). 간단 답변.",
+    "excerpt": "코딩용 최고의 14B 모델은 Qwen2.5-Coder 14B: HumanEval 89.6%(Qwen 발표), VRAM 약 10 GB. 범용은 Qwen3 14B 또는 Phi-4. Ollama 기준 비교.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-10-17",
     "url": "/ko/prompt-bites/best-14b-models-coding",
@@ -55649,81 +55649,81 @@
   {
     "lang": "en",
     "title": "Best Local LLM for a Customer Support Chatbot?",
-    "excerpt": "A quick guide to picking a local LLM for a customer support chatbot: instruction-following reliability, response consistency, and what matters more than raw parameter count.",
+    "excerpt": "Pick a local LLM for a customer support chatbot: why consistent instruction-following beats parameter count, how to test candidates, and common mistakes.",
     "publishDate": "2026-07-15",
-    "dateModified": "2026-07-15",
+    "dateModified": "2026-10-17",
     "url": "/prompt-bites/best-local-llm-customer-support-chatbot",
     "cluster": "prompt-bites"
   },
   {
     "lang": "de",
     "title": "Das beste lokale LLM für einen Kundensupport-Chatbot?",
-    "excerpt": "Ein kurzer Leitfaden zur Auswahl eines lokalen LLM für einen Kundensupport-Chatbot: Zuverlässigkeit beim Befolgen von Anweisungen, Antwortkonsistenz und warum das wichtiger ist als die reine Parameterzahl.",
+    "excerpt": "Lokales LLM für den Support-Chatbot wählen: warum konsequentes Befolgen von Anweisungen mehr zählt als die Parameterzahl, wie Sie testen, typische Fehler.",
     "publishDate": "2026-07-15",
-    "dateModified": "2026-07-15",
+    "dateModified": "2026-10-17",
     "url": "/de/prompt-bites/best-local-llm-customer-support-chatbot",
     "cluster": "prompt-bites"
   },
   {
     "lang": "fr",
     "title": "Quel est le meilleur LLM local pour un chatbot de support client ?",
-    "excerpt": "Un guide rapide pour choisir un LLM local pour un chatbot de support client : fiabilité du suivi des instructions, cohérence des réponses, et ce qui compte plus que le nombre brut de paramètres.",
+    "excerpt": "Choisir un LLM local pour un chatbot de support : pourquoi le suivi des instructions prime sur le nombre de paramètres, comment tester, erreurs courantes.",
     "publishDate": "2026-07-15",
-    "dateModified": "2026-07-15",
+    "dateModified": "2026-10-17",
     "url": "/fr/prompt-bites/best-local-llm-customer-support-chatbot",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ja",
     "title": "カスタマーサポートチャットボットに最適なローカルLLMとは？",
-    "excerpt": "カスタマーサポートチャットボット向けにローカルLLMを選ぶための簡潔なガイド。指示追従の信頼性、応答の一貫性、そして単純なパラメータ数よりも重要なポイントを解説します。",
+    "excerpt": "カスタマーサポートチャットボット向けにローカルLLMを選ぶための簡潔なガイド。指示追従の信頼性、応答の一貫性、テスト方法、よくある失敗を解説します。",
     "publishDate": "2026-07-15",
-    "dateModified": "2026-07-15",
+    "dateModified": "2026-10-17",
     "url": "/ja/prompt-bites/best-local-llm-customer-support-chatbot",
     "cluster": "prompt-bites"
   },
   {
     "lang": "zh",
     "title": "客户支持聊天机器人的最佳本地LLM是什么？",
-    "excerpt": "一份关于为客户支持聊天机器人选择本地LLM的简明指南：指令遵循的可靠性、回复一致性，以及比参数量更重要的因素。",
+    "excerpt": "一份关于为客户支持聊天机器人选择本地LLM的简明指南：指令遵循的可靠性、回复一致性、测试方法，以及常见错误。",
     "publishDate": "2026-07-15",
-    "dateModified": "2026-07-15",
+    "dateModified": "2026-10-17",
     "url": "/zh/prompt-bites/best-local-llm-customer-support-chatbot",
     "cluster": "prompt-bites"
   },
   {
     "lang": "es",
     "title": "¿Cuál es el mejor LLM local para un chatbot de atención al cliente?",
-    "excerpt": "Una guía rápida para elegir un LLM local para un chatbot de atención al cliente: fiabilidad al seguir instrucciones, consistencia de las respuestas, y qué importa más que el número de parámetros.",
+    "excerpt": "Elige un LLM local para un chatbot de soporte: por qué seguir instrucciones de forma constante pesa más que los parámetros, cómo probar y errores comunes.",
     "publishDate": "2026-07-15",
-    "dateModified": "2026-07-15",
+    "dateModified": "2026-10-17",
     "url": "/es/prompt-bites/best-local-llm-customer-support-chatbot",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
     "title": "Qual é o melhor LLM local para um chatbot de atendimento ao cliente?",
-    "excerpt": "Um guia rápido para escolher um LLM local para um chatbot de atendimento ao cliente: confiabilidade ao seguir instruções, consistência das respostas e o que importa mais do que o número bruto de parâmetros.",
+    "excerpt": "Escolha um LLM local para chatbot de atendimento: por que seguir instruções de forma consistente pesa mais que parâmetros, como testar e erros comuns.",
     "publishDate": "2026-07-15",
-    "dateModified": "2026-07-15",
+    "dateModified": "2026-10-17",
     "url": "/pt/prompt-bites/best-local-llm-customer-support-chatbot",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ar",
     "title": "ما هو أفضل نموذج لغوي محلي لروبوت دردشة دعم العملاء؟",
-    "excerpt": "دليل سريع لاختيار نموذج لغوي محلي (LLM) لروبوت دردشة دعم العملاء: موثوقية اتباع التعليمات، اتساق الردود، وما هو أهم من مجرد عدد المعاملات.",
+    "excerpt": "دليل سريع لاختيار نموذج لغوي محلي (LLM) لروبوت دعم العملاء: موثوقية اتباع التعليمات، اتساق الردود، طريقة الاختبار، والأخطاء الشائعة.",
     "publishDate": "2026-07-15",
-    "dateModified": "2026-07-15",
+    "dateModified": "2026-10-17",
     "url": "/ar/prompt-bites/best-local-llm-customer-support-chatbot",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ko",
     "title": "고객 지원 챗봇에 가장 적합한 로컬 LLM은 무엇입니까?",
-    "excerpt": "고객 지원 챗봇에 사용할 로컬 LLM을 선택하기 위한 간단한 가이드입니다. 지시 따르기의 신뢰성, 응답 일관성, 그리고 단순한 파라미터 수보다 중요한 요소를 다룹니다.",
+    "excerpt": "고객 지원 챗봇에 사용할 로컬 LLM을 선택하기 위한 간단한 가이드입니다. 지시 따르기의 신뢰성, 응답 일관성, 테스트 방법, 흔한 실수를 다룹니다.",
     "publishDate": "2026-07-15",
-    "dateModified": "2026-07-15",
+    "dateModified": "2026-10-17",
     "url": "/ko/prompt-bites/best-local-llm-customer-support-chatbot",
     "cluster": "prompt-bites"
   },
