@@ -11,6 +11,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anyllm-review",
+        "title": "AnyLLM Review: BYOK AI Chat Client for Android",
+        "url": "/power-local-llm/anyllm-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
         "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
         "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
         "dateModified": "2026-09-25",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atlarix-review",
-        "title": "Atlarix Review: A Free, Local-First AI Coding Agent",
-        "url": "/power-local-llm/atlarix-review",
-        "dateModified": "2026-09-25",
-        "tier": "about"
       }
     ],
-    "totalCount": 298,
+    "totalCount": 299,
     "capped": true
   },
   "llama.cpp": {
@@ -1236,7 +1236,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 34,
+    "totalCount": 35,
     "capped": true
   },
   "Msty": {
@@ -5870,7 +5870,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 31,
+    "totalCount": 32,
     "capped": true
   },
   "Pocket AI": {
@@ -6255,6 +6255,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anyllm-review",
+        "title": "AnyLLM Review: BYOK AI Chat Client for Android",
+        "url": "/power-local-llm/anyllm-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -6294,7 +6302,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "AnythingLLM Mobile": {
@@ -9017,6 +9025,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anyllm-review",
+        "title": "AnyLLM Review: BYOK AI Chat Client for Android",
+        "url": "/power-local-llm/anyllm-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "on-device-ai-review",
         "title": "On Device AI Review: 200+ Local Models for iPhone, iPad, Mac",
         "url": "/power-local-llm/on-device-ai-review",
@@ -9024,7 +9040,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Aori": {
@@ -11299,6 +11315,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "anyllm-review",
+        "title": "AnyLLM Review: BYOK AI Chat Client for Android",
+        "url": "/power-local-llm/anyllm-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "honey-llm-review",
         "title": "Honey LLM Review: Offline AI Chat and Document Q&A for Android",
         "url": "/power-local-llm/honey-llm-review",
@@ -11338,7 +11362,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "LLM Hub": {
@@ -11501,6 +11525,20 @@
         "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
         "url": "/power-local-llm/mlxhub-review",
         "dateModified": "2026-10-05",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "AnyLLM": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "anyllm-review",
+        "title": "AnyLLM Review: BYOK AI Chat Client for Android",
+        "url": "/power-local-llm/anyllm-review",
+        "dateModified": "2026-10-17",
         "tier": "about"
       }
     ],

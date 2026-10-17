@@ -1052,6 +1052,7 @@ const HUB_THEMES: Array<{
       'oscilla-review',
       'tina-review',
       'mlxhub-review',
+      'anyllm-review',
       'ollama-local-ai-review',
       'mlc-chat-review',
       'pocket-ai-review',

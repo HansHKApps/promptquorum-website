@@ -397,6 +397,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'spiritbox-ultimate-review':               'spiritbox-ultimate-review',
   'oscilla-review':                          'oscilla-review',
   'mlxhub-review':                           'mlxhub-review',
+  'anyllm-review':                           'anyllm-review',
   'tina-review':                             'tina-review',
   'return-editor-review':                    'return-editor-review',
   // Ollama Local AI review — 2026-10-02
