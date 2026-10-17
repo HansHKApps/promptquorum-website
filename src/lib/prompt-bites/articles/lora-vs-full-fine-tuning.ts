@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription:
       'LoRA trains a small set of added weights and needs far less VRAM than full fine-tuning, which updates every parameter in the model.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -24,6 +24,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'Best Pick: LoRA for Most Local Setups', anchor: '#best-pick' },
       { label: 'Key Differences', anchor: '#key-differences' },
       { label: 'When to Use Each', anchor: '#when-to-use' },
+      { label: 'Learns Less, Forgets Less', anchor: '#learns-less-forgets-less' },
       { label: 'FAQ', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -36,7 +37,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Full fine-tuning updates every parameter and can edge out LoRA in quality with enough clean data.',
           'LoRA adapters are small files that can be swapped in and out of the same base model.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -85,6 +86,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'If unsure, start with LoRA and evaluate quality on your own held-out test set before considering full fine-tuning — the iteration speed of LoRA (faster training, smaller checkpoints) makes it cheaper to experiment with different data mixes and hyperparameters first.',
         ],
       },
+      tradeoffs: {
+        id: 'learns-less-forgets-less',
+        title: 'LoRA Learns Less and Forgets Less',
+        content: [
+          'A controlled study of LoRA and full fine-tuning on code and math tasks (Biderman et al., published in TMLR) found that standard low-rank LoRA settings substantially underperform full fine-tuning when a task requires learning a large amount of new knowledge, while LoRA preserves more of the base model\'s original abilities on unrelated tasks. The authors link the gap to rank: full fine-tuning updates weights with a rank 10 to 100 times higher than typical LoRA configurations.',
+          'In practice, LoRA is the safer choice when you want to adjust behavior without damaging general ability, and full fine-tuning is the better choice when you must teach the model a large new body of domain knowledge. Raising the LoRA rank and applying it to more weight matrices can narrow the gap, at the cost of more memory.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Frequently Asked Questions',
@@ -105,6 +114,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'How much VRAM does LoRA fine-tuning actually save compared to full fine-tuning?',
             a: 'The exact figure depends on model size, LoRA rank, and optimizer choice, but LoRA commonly cuts required training VRAM by roughly an order of magnitude compared to full fine-tuning of the same base model, since gradients and optimizer state are only tracked for the small added matrices.',
           },
+          {
+            q: 'What is QLoRA and how does it relate to LoRA?',
+            a: 'QLoRA is LoRA applied on top of a base model loaded in 4-bit quantized form. The frozen base weights take far less memory while the small LoRA matrices are still trained in higher precision, so larger models fit on a single GPU than with standard LoRA.',
+          },
+          {
+            q: 'Which models can be fine-tuned with LoRA?',
+            a: 'LoRA works with essentially any transformer-based model, including language and image-generation models, because it adds low-rank matrices to existing weight layers. Libraries such as Hugging Face PEFT let you choose which layers to adapt and which rank to use.',
+          },
         ],
       },
     },
@@ -117,7 +134,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription:
       'LoRA trainiert eine kleine Menge zusätzlicher Gewichte und benötigt deutlich weniger VRAM als vollständiges Fine-Tuning, bei dem jeder Parameter des Modells aktualisiert wird.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -131,6 +148,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'Beste Wahl: LoRA für die meisten lokalen Setups', anchor: '#best-pick' },
       { label: 'Wesentliche Unterschiede', anchor: '#key-differences' },
       { label: 'Wann Sie welches Verfahren einsetzen sollten', anchor: '#when-to-use' },
+      { label: 'Lernt weniger, vergisst weniger', anchor: '#learns-less-forgets-less' },
       { label: 'FAQ', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -143,7 +161,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Vollständiges Fine-Tuning aktualisiert jeden Parameter und kann bei ausreichend sauberen Daten LoRA in der Qualität leicht übertreffen.',
           'LoRA-Adapter sind kleine Dateien, die sich bei demselben Basismodell austauschen lassen.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -192,6 +210,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Im Zweifel beginnen Sie mit LoRA und bewerten die Qualität anhand eines eigenen zurückgehaltenen Testdatensatzes, bevor Sie vollständiges Fine-Tuning in Betracht ziehen — die Iterationsgeschwindigkeit von LoRA (schnelleres Training, kleinere Checkpoints) macht es günstiger, zunächst mit unterschiedlichen Datenmischungen und Hyperparametern zu experimentieren.',
         ],
       },
+      tradeoffs: {
+        id: 'learns-less-forgets-less',
+        title: 'LoRA lernt weniger und vergisst weniger',
+        content: [
+          'Eine kontrollierte Studie zu LoRA und vollständigem Fine-Tuning bei Code- und Mathematikaufgaben (Biderman et al., veröffentlicht in TMLR) ergab, dass Standard-LoRA-Einstellungen mit niedrigem Rang deutlich schlechter abschneiden als vollständiges Fine-Tuning, wenn eine Aufgabe viel neues Wissen erfordert, während LoRA bei nicht verwandten Aufgaben mehr der ursprünglichen Fähigkeiten des Basismodells bewahrt. Die Autoren führen den Unterschied auf den Rang zurück: Vollständiges Fine-Tuning aktualisiert Gewichte mit einem 10- bis 100-fach höheren Rang als typische LoRA-Konfigurationen.',
+          'In der Praxis ist LoRA die sicherere Wahl, wenn Sie das Verhalten anpassen möchten, ohne die allgemeinen Fähigkeiten zu beeinträchtigen. Vollständiges Fine-Tuning ist besser, wenn Sie dem Modell einen großen neuen Bestand an Fachwissen beibringen müssen. Ein höherer LoRA-Rang und der Einsatz auf mehr Gewichtsmatrizen können die Lücke verkleinern, kosten aber mehr Speicher.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
@@ -212,6 +238,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Wie viel VRAM spart LoRA-Fine-Tuning tatsächlich im Vergleich zu vollständigem Fine-Tuning?',
             a: 'Die genaue Zahl hängt von Modellgröße, LoRA-Rang und Optimizer-Wahl ab, aber LoRA senkt den benötigten VRAM für das Training im Vergleich zu vollständigem Fine-Tuning desselben Basismodells häufig um etwa eine Größenordnung, da Gradienten und Optimizer-Zustand nur für die kleinen zusätzlichen Matrizen verfolgt werden.',
           },
+          {
+            q: 'Was ist QLoRA und wie hängt es mit LoRA zusammen?',
+            a: 'QLoRA ist LoRA, angewendet auf ein Basismodell, das in 4-Bit-quantisierter Form geladen wird. Die eingefrorenen Basisgewichte benötigen deutlich weniger Speicher, während die kleinen LoRA-Matrizen weiterhin in höherer Präzision trainiert werden. So passen größere Modelle auf eine einzelne GPU als mit Standard-LoRA.',
+          },
+          {
+            q: 'Welche Modelle lassen sich mit LoRA feintunen?',
+            a: 'LoRA funktioniert mit praktisch jedem Transformer-basierten Modell, darunter Sprach- und Bildgenerierungsmodelle, da es bestehenden Gewichtsschichten Low-Rank-Matrizen hinzufügt. Bibliotheken wie Hugging Face PEFT erlauben es, die anzupassenden Schichten und den Rang zu wählen.',
+          },
         ],
       },
     },
@@ -224,7 +258,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription:
       'LoRA entraîne un petit ensemble de poids ajoutés et nécessite beaucoup moins de VRAM que le fine-tuning complet, qui met à jour chaque paramètre du modèle.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -238,6 +272,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'Meilleur choix : LoRA pour la plupart des configurations locales', anchor: '#best-pick' },
       { label: 'Différences clés', anchor: '#key-differences' },
       { label: 'Quand utiliser chaque méthode', anchor: '#when-to-use' },
+      { label: 'Apprend moins, oublie moins', anchor: '#learns-less-forgets-less' },
       { label: 'FAQ', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -250,7 +285,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Le fine-tuning complet met à jour chaque paramètre et peut légèrement surpasser LoRA en qualité avec suffisamment de données propres.',
           'Les adaptateurs LoRA sont de petits fichiers interchangeables sur un même modèle de base.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -299,6 +334,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'En cas de doute, commencez par LoRA et évaluez la qualité sur votre propre jeu de test réservé avant d\'envisager un fine-tuning complet — la vitesse d\'itération de LoRA (entraînement plus rapide, checkpoints plus petits) rend moins coûteux d\'expérimenter d\'abord différents mélanges de données et hyperparamètres.',
         ],
       },
+      tradeoffs: {
+        id: 'learns-less-forgets-less',
+        title: 'LoRA apprend moins et oublie moins',
+        content: [
+          'Une étude contrôlée de LoRA et du fine-tuning complet sur des tâches de code et de mathématiques (Biderman et al., publiée dans TMLR) a montré que les réglages LoRA standard à faible rang sont nettement moins performants que le fine-tuning complet lorsqu\'une tâche exige d\'apprendre beaucoup de connaissances nouvelles, tandis que LoRA préserve davantage les capacités d\'origine du modèle de base sur des tâches sans rapport. Les auteurs relient cet écart au rang : le fine-tuning complet met à jour les poids avec un rang 10 à 100 fois supérieur à celui des configurations LoRA habituelles.',
+          'En pratique, LoRA est le choix le plus sûr pour ajuster le comportement sans dégrader les capacités générales, et le fine-tuning complet est préférable lorsqu\'il faut transmettre au modèle un vaste corpus de connaissances métier. Augmenter le rang LoRA et l\'appliquer à davantage de matrices de poids peut réduire l\'écart, au prix de plus de mémoire.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Questions fréquentes',
@@ -319,6 +362,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Combien de VRAM le fine-tuning LoRA permet-il réellement d\'économiser par rapport au fine-tuning complet ?',
             a: "Le chiffre exact dépend de la taille du modèle, du rang LoRA et du choix de l'optimiseur, mais LoRA réduit généralement la VRAM d'entraînement nécessaire d'environ un ordre de grandeur par rapport à un fine-tuning complet du même modèle de base, car les gradients et l'état de l'optimiseur ne sont suivis que pour les petites matrices ajoutées.",
           },
+          {
+            q: 'Qu\'est-ce que QLoRA et quel lien avec LoRA ?',
+            a: 'QLoRA est LoRA appliqué à un modèle de base chargé en quantification 4 bits. Les poids de base figés occupent beaucoup moins de mémoire, tandis que les petites matrices LoRA restent entraînées en plus haute précision : des modèles plus grands tiennent ainsi sur un seul GPU qu\'avec LoRA standard.',
+          },
+          {
+            q: 'Quels modèles peut-on fine-tuner avec LoRA ?',
+            a: 'LoRA fonctionne avec pratiquement tout modèle basé sur des transformers, y compris les modèles de langage et de génération d\'images, car il ajoute des matrices de bas rang aux couches de poids existantes. Des bibliothèques comme Hugging Face PEFT permettent de choisir les couches à adapter et le rang.',
+          },
         ],
       },
     },
@@ -331,7 +382,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription:
       'LoRAは追加された少数の重みだけを学習するため、モデルのすべてのパラメータを更新する完全なFine-Tuningよりも必要なVRAMがはるかに少なくて済みます。',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -345,6 +396,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'ベストな選択:ほとんどのローカル環境ではLoRA', anchor: '#best-pick' },
       { label: '主な違い', anchor: '#key-differences' },
       { label: 'それぞれをいつ使うべきか', anchor: '#when-to-use' },
+      { label: '学習量は少なく、忘却も少ない', anchor: '#learns-less-forgets-less' },
       { label: 'FAQ', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -357,7 +409,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '完全なFine-Tuningはすべてのパラメータを更新し、十分なクリーンなデータがあれば品質でLoRAをわずかに上回ることがあります。',
           'LoRAアダプターは小さなファイルで、同じベースモデルに対して入れ替えて使用できます。',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -406,6 +458,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '迷った場合は、完全なFine-Tuningを検討する前に、まずLoRAから始めて自分の保留テストセットで品質を評価してください——LoRAの反復速度(学習の速さ、チェックポイントの小ささ)により、まず異なるデータの組み合わせやハイパーパラメータで実験するコストを低く抑えられます。',
         ],
       },
+      tradeoffs: {
+        id: 'learns-less-forgets-less',
+        title: 'LoRAは学習量が少なく、忘却も少ない',
+        content: [
+          'コードと数学のタスクでLoRAとフルファインチューニングを比較した統制研究(Biderman氏ら、TMLR掲載)では、タスクが大量の新しい知識の習得を必要とする場合、標準的な低ランクのLoRA設定はフルファインチューニングを大きく下回る一方、無関係なタスクではベースモデル本来の能力をより多く保持することが示されました。著者らはこの差をランクに結びつけています。フルファインチューニングは、一般的なLoRA設定の10〜100倍高いランクで重みを更新します。',
+          '実際には、一般的な能力を損なわずに振る舞いを調整したい場合はLoRAが安全な選択であり、モデルに大量の新しい専門知識を教え込む必要がある場合はフルファインチューニングが適しています。LoRAのランクを上げ、より多くの重み行列に適用することで差を縮められることがありますが、その分メモリを多く消費します。',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'よくある質問',
@@ -426,6 +486,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'LoRAのFine-Tuningは、完全なFine-Tuningと比べて実際にどれくらいVRAMを節約できますか?',
             a: '正確な数値はモデルサイズ、LoRAのランク、オプティマイザーの選択によって異なりますが、LoRAは同じベースモデルの完全なFine-Tuningと比べて、必要な学習用VRAMをおおよそ一桁分削減することが一般的です。これは勾配とオプティマイザー状態が追加された小さな行列に対してのみ追跡されるためです。',
           },
+          {
+            q: 'QLoRAとは何で、LoRAとどう関係しますか?',
+            a: 'QLoRAは、4ビット量子化で読み込んだベースモデルにLoRAを適用する手法です。固定されたベースの重みは使用メモリが大幅に減り、小さなLoRA行列はより高い精度で学習されるため、標準のLoRAよりも大きなモデルを1枚のGPUに載せられます。',
+          },
+          {
+            q: 'どのモデルをLoRAでファインチューニングできますか?',
+            a: 'LoRAは既存の重み層に低ランク行列を追加するため、言語モデルや画像生成モデルを含む、ほぼすべてのTransformerベースのモデルで利用できます。Hugging Face PEFTなどのライブラリでは、適応する層とランクを選択できます。',
+          },
         ],
       },
     },
@@ -438,7 +506,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription:
       'LoRA 只训练少量新增权重,所需 VRAM 远低于会更新模型每个参数的全量微调。',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -452,6 +520,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: '最佳选择:多数本地环境首选 LoRA', anchor: '#best-pick' },
       { label: '主要区别', anchor: '#key-differences' },
       { label: '各自的适用场景', anchor: '#when-to-use' },
+      { label: '学得更少,忘得也更少', anchor: '#learns-less-forgets-less' },
       { label: '常见问题', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -464,7 +533,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '全量微调更新每个参数,在数据充足且干净的情况下,质量可能略优于 LoRA。',
           'LoRA 适配器是可在同一基础模型上替换使用的小文件。',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -513,6 +582,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '如果拿不准,先从 LoRA 开始,在自己的保留测试集上评估质量,再考虑全量微调——LoRA 的迭代速度(训练更快、检查点更小)让你可以更低成本地先尝试不同的数据组合和超参数。',
         ],
       },
+      tradeoffs: {
+        id: 'learns-less-forgets-less',
+        title: 'LoRA学得更少,也忘得更少',
+        content: [
+          '一项针对代码和数学任务、对比LoRA与全量微调的对照研究(Biderman等人,发表于TMLR)发现:当任务需要学习大量新知识时,标准的低秩LoRA设置明显不如全量微调;而在无关任务上,LoRA能更好地保留基础模型的原有能力。作者将这一差距归因于秩:全量微调更新权重时的秩比典型LoRA配置高10到100倍。',
+          '实际上,如果想调整模型行为又不损害其通用能力,LoRA是更稳妥的选择;如果必须让模型掌握大量新的领域知识,全量微调更合适。提高LoRA的秩并将其应用于更多权重矩阵可以缩小差距,但会占用更多内存。',
+        ],
+      },
       faq: {
         id: 'faq',
         title: '常见问题',
@@ -533,6 +610,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '与全量微调相比,LoRA 微调实际能节省多少 VRAM?',
             a: '具体数字取决于模型大小、LoRA 秩和优化器选择,但相比对同一基础模型进行全量微调,LoRA 通常能将所需训练 VRAM 降低约一个数量级,因为梯度和优化器状态只需针对新增的小矩阵进行跟踪。',
           },
+          {
+            q: 'QLoRA是什么,与LoRA有何关系?',
+            a: 'QLoRA是在以4位量化方式加载的基础模型上应用LoRA。冻结的基础权重占用的内存大幅减少,而小的LoRA矩阵仍以较高精度训练,因此单张GPU能容纳比标准LoRA更大的模型。',
+          },
+          {
+            q: '哪些模型可以用LoRA微调?',
+            a: 'LoRA通过向现有权重层添加低秩矩阵来工作,因此几乎适用于所有基于Transformer的模型,包括语言模型和图像生成模型。Hugging Face PEFT等库允许选择要适配的层和秩。',
+          },
         ],
       },
     },
@@ -545,7 +630,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription:
       'LoRA entrena un pequeño conjunto de pesos añadidos y necesita mucha menos VRAM que el fine-tuning completo, que actualiza todos los parámetros del modelo.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -559,6 +644,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'Mejor opción: LoRA para la mayoría de configuraciones locales', anchor: '#best-pick' },
       { label: 'Diferencias clave', anchor: '#key-differences' },
       { label: 'Cuándo usar cada una', anchor: '#when-to-use' },
+      { label: 'Aprende menos, olvida menos', anchor: '#learns-less-forgets-less' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -571,7 +657,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'El fine-tuning completo actualiza cada parámetro y puede superar ligeramente a LoRA en calidad con suficientes datos limpios.',
           'Los adaptadores LoRA son archivos pequeños que se pueden intercambiar en el mismo modelo base.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -620,6 +706,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Si tienes dudas, empieza con LoRA y evalúa la calidad en tu propio conjunto de prueba reservado antes de considerar el fine-tuning completo — la velocidad de iteración de LoRA (entrenamiento más rápido, checkpoints más pequeños) hace que sea más barato experimentar primero con distintas combinaciones de datos e hiperparámetros.',
         ],
       },
+      tradeoffs: {
+        id: 'learns-less-forgets-less',
+        title: 'LoRA aprende menos y olvida menos',
+        content: [
+          'Un estudio controlado de LoRA y el fine-tuning completo en tareas de código y matemáticas (Biderman et al., publicado en TMLR) concluyó que los ajustes estándar de LoRA de rango bajo rinden bastante peor que el fine-tuning completo cuando la tarea exige aprender mucho conocimiento nuevo, mientras que LoRA conserva más de las capacidades originales del modelo base en tareas no relacionadas. Los autores atribuyen la brecha al rango: el fine-tuning completo actualiza los pesos con un rango entre 10 y 100 veces mayor que el de las configuraciones típicas de LoRA.',
+          'En la práctica, LoRA es la opción más segura cuando quieres ajustar el comportamiento sin dañar la capacidad general, y el fine-tuning completo es mejor cuando debes enseñar al modelo un gran cuerpo de conocimiento especializado. Aumentar el rango de LoRA y aplicarlo a más matrices de pesos puede reducir la brecha, a costa de más memoria.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Preguntas frecuentes',
@@ -640,6 +734,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: '¿Cuánta VRAM ahorra realmente el fine-tuning con LoRA en comparación con el fine-tuning completo?',
             a: 'La cifra exacta depende del tamaño del modelo, el rango de LoRA y la elección del optimizador, pero LoRA suele reducir la VRAM de entrenamiento necesaria en aproximadamente un orden de magnitud en comparación con el fine-tuning completo del mismo modelo base, ya que los gradientes y el estado del optimizador solo se siguen para las pequeñas matrices añadidas.',
           },
+          {
+            q: '¿Qué es QLoRA y cómo se relaciona con LoRA?',
+            a: 'QLoRA es LoRA aplicado sobre un modelo base cargado en cuantización de 4 bits. Los pesos base congelados ocupan mucha menos memoria, mientras que las pequeñas matrices LoRA se entrenan con mayor precisión, de modo que caben en una sola GPU modelos más grandes que con LoRA estándar.',
+          },
+          {
+            q: '¿Qué modelos se pueden ajustar con LoRA?',
+            a: 'LoRA funciona con prácticamente cualquier modelo basado en transformers, incluidos los modelos de lenguaje y de generación de imágenes, porque añade matrices de rango bajo a las capas de pesos existentes. Bibliotecas como Hugging Face PEFT permiten elegir qué capas adaptar y qué rango usar.',
+          },
         ],
       },
     },
@@ -652,7 +754,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription:
       'O LoRA treina um pequeno conjunto de pesos adicionados e precisa de muito menos VRAM do que o fine-tuning completo, que atualiza todos os parâmetros do modelo.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -666,6 +768,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'Melhor escolha: LoRA para a maioria das configurações locais', anchor: '#best-pick' },
       { label: 'Principais diferenças', anchor: '#key-differences' },
       { label: 'Quando usar cada um', anchor: '#when-to-use' },
+      { label: 'Aprende menos, esquece menos', anchor: '#learns-less-forgets-less' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -678,7 +781,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'O fine-tuning completo atualiza todos os parâmetros e pode superar ligeiramente o LoRA em qualidade com dados limpos suficientes.',
           'Os adaptadores LoRA são arquivos pequenos que podem ser trocados no mesmo modelo base.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -727,6 +830,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Na dúvida, comece com LoRA e avalie a qualidade no seu próprio conjunto de teste reservado antes de considerar o fine-tuning completo — a velocidade de iteração do LoRA (treinamento mais rápido, checkpoints menores) torna mais barato experimentar diferentes combinações de dados e hiperparâmetros primeiro.',
         ],
       },
+      tradeoffs: {
+        id: 'learns-less-forgets-less',
+        title: 'LoRA aprende menos e esquece menos',
+        content: [
+          'Um estudo controlado de LoRA e fine-tuning completo em tarefas de código e matemática (Biderman et al., publicado na TMLR) concluiu que as configurações padrão de LoRA de baixo rank têm desempenho bem inferior ao do fine-tuning completo quando a tarefa exige aprender muito conhecimento novo, enquanto o LoRA preserva mais as capacidades originais do modelo base em tarefas não relacionadas. Os autores ligam a diferença ao rank: o fine-tuning completo atualiza os pesos com um rank de 10 a 100 vezes maior que o das configurações típicas de LoRA.',
+          'Na prática, o LoRA é a escolha mais segura quando você quer ajustar o comportamento sem prejudicar a capacidade geral, e o fine-tuning completo é melhor quando é preciso ensinar ao modelo um grande volume de conhecimento especializado. Aumentar o rank do LoRA e aplicá-lo a mais matrizes de pesos pode reduzir a diferença, ao custo de mais memória.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'Perguntas frequentes',
@@ -747,6 +858,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'Quanta VRAM o fine-tuning com LoRA realmente economiza em comparação com o fine-tuning completo?',
             a: 'O valor exato depende do tamanho do modelo, do posto do LoRA e da escolha do otimizador, mas o LoRA costuma reduzir a VRAM de treinamento necessária em cerca de uma ordem de grandeza em comparação com o fine-tuning completo do mesmo modelo base, já que os gradientes e o estado do otimizador só são rastreados para as pequenas matrizes adicionadas.',
           },
+          {
+            q: 'O que é QLoRA e como se relaciona com o LoRA?',
+            a: 'QLoRA é o LoRA aplicado sobre um modelo base carregado em quantização de 4 bits. Os pesos base congelados ocupam muito menos memória, enquanto as pequenas matrizes LoRA continuam sendo treinadas com maior precisão, de modo que cabem em uma única GPU modelos maiores do que com o LoRA padrão.',
+          },
+          {
+            q: 'Quais modelos podem ser ajustados com LoRA?',
+            a: 'O LoRA funciona com praticamente qualquer modelo baseado em transformers, incluindo modelos de linguagem e de geração de imagens, pois adiciona matrizes de baixo rank às camadas de pesos existentes. Bibliotecas como Hugging Face PEFT permitem escolher quais camadas adaptar e qual rank usar.',
+          },
         ],
       },
     },
@@ -759,7 +878,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription:
       'يدرّب LoRA مجموعة صغيرة من الأوزان المضافة ويحتاج إلى ذاكرة VRAM أقل بكثير من الضبط الدقيق الكامل، الذي يحدّث كل معامل في النموذج.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -773,6 +892,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: 'الخيار الأفضل: LoRA لمعظم الإعدادات المحلية', anchor: '#best-pick' },
       { label: 'الفروق الرئيسية', anchor: '#key-differences' },
       { label: 'متى تستخدم كلًا منهما', anchor: '#when-to-use' },
+      { label: 'يتعلم أقل وينسى أقل', anchor: '#learns-less-forgets-less' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -785,7 +905,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'يحدّث الضبط الدقيق الكامل كل معامل، ويمكن أن يتفوق قليلًا على LoRA في الجودة مع بيانات نظيفة كافية.',
           'محولات LoRA ملفات صغيرة يمكن استبدالها على نفس النموذج الأساسي.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -834,6 +954,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'عند الشك، ابدأ بـLoRA وقيّم الجودة على مجموعة اختبار محتجزة خاصة بك قبل النظر في الضبط الدقيق الكامل — تجعل سرعة تكرار LoRA (تدريب أسرع، نقاط تحقق أصغر) التجربة بمزيج بيانات ومعاملات فائقة مختلفة أرخص أولًا.',
         ],
       },
+      tradeoffs: {
+        id: 'learns-less-forgets-less',
+        title: 'LoRA يتعلم أقل وينسى أقل',
+        content: [
+          'وجدت دراسة محكومة قارنت بين LoRA والضبط الدقيق الكامل في مهام البرمجة والرياضيات (Biderman وآخرون، منشورة في TMLR) أن إعدادات LoRA القياسية منخفضة الرتبة تؤدي أسوأ بكثير من الضبط الدقيق الكامل عندما تتطلب المهمة تعلم قدر كبير من المعرفة الجديدة، بينما يحافظ LoRA على قدر أكبر من قدرات النموذج الأساسي الأصلية في المهام غير المرتبطة. ويربط المؤلفون هذه الفجوة بالرتبة: إذ يحدّث الضبط الدقيق الكامل الأوزان برتبة أعلى بما بين 10 و100 مرة من إعدادات LoRA المعتادة.',
+          'عمليًا، يُعد LoRA الخيار الأكثر أمانًا عندما تريد تعديل السلوك دون الإضرار بالقدرة العامة، ويكون الضبط الدقيق الكامل أفضل عندما يجب تعليم النموذج كمًّا كبيرًا من المعرفة المتخصصة الجديدة. ويمكن لرفع رتبة LoRA وتطبيقه على مصفوفات أوزان أكثر أن يقلص الفجوة، لكن على حساب ذاكرة أكبر.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
@@ -854,6 +982,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             q: 'كم من VRAM يوفّره الضبط الدقيق باستخدام LoRA فعليًا مقارنة بالضبط الدقيق الكامل؟',
             a: 'يعتمد الرقم الدقيق على حجم النموذج ورتبة LoRA واختيار المُحسِّن، لكن LoRA يقلل عادةً من VRAM التدريب المطلوب بمقدار رتبة حجم واحدة تقريبًا مقارنةً بالضبط الدقيق الكامل لنفس النموذج الأساسي، لأن التدرجات وحالة المُحسِّن تُتبع فقط للمصفوفات الصغيرة المضافة.',
           },
+          {
+            q: 'ما هو QLoRA وما علاقته بـ LoRA؟',
+            a: 'QLoRA هو تطبيق LoRA فوق نموذج أساسي محمَّل بتكميم 4 بت. تشغل الأوزان الأساسية المجمّدة ذاكرة أقل بكثير، بينما تُدرَّب مصفوفات LoRA الصغيرة بدقة أعلى، فيتسع نموذج أكبر على وحدة معالجة رسومية واحدة مقارنة بـ LoRA القياسي.',
+          },
+          {
+            q: 'ما النماذج التي يمكن ضبطها بدقة باستخدام LoRA؟',
+            a: 'يعمل LoRA مع أي نموذج قائم على المحوّلات (Transformers) تقريبًا، بما في ذلك نماذج اللغة وتوليد الصور، لأنه يضيف مصفوفات منخفضة الرتبة إلى طبقات الأوزان الموجودة. وتتيح مكتبات مثل Hugging Face PEFT اختيار الطبقات المراد تكييفها والرتبة المستخدمة.',
+          },
         ],
       },
     },
@@ -866,7 +1002,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription:
       'LoRA는 소수의 추가된 가중치만 학습하므로, 모델의 모든 파라미터를 업데이트하는 전체 파인튜닝보다 필요한 VRAM이 훨씬 적습니다.',
     publishDate: '2026-07-14',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-17',
     freshness_tier: 'evergreen',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
@@ -880,6 +1016,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       { label: '최선의 선택: 대부분의 로컬 환경에는 LoRA', anchor: '#best-pick' },
       { label: '주요 차이점', anchor: '#key-differences' },
       { label: '각각을 언제 사용할지', anchor: '#when-to-use' },
+      { label: '덜 배우고, 덜 잊는다', anchor: '#learns-less-forgets-less' },
       { label: '자주 묻는 질문', anchor: '#faq' },
     ],
     quickAnswerTop: {
@@ -892,7 +1029,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '전체 파인튜닝은 모든 파라미터를 업데이트하며, 충분히 깨끗한 데이터가 있으면 품질에서 LoRA를 약간 능가할 수 있습니다.',
           'LoRA 어댑터는 같은 기본 모델에서 교체하여 사용할 수 있는 작은 파일입니다.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -941,6 +1078,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '확신이 서지 않는다면 먼저 LoRA로 시작해 자체 보류 테스트 세트에서 품질을 평가한 뒤 전체 파인튜닝을 고려하십시오 — LoRA의 반복 속도(더 빠른 학습, 더 작은 체크포인트)는 다양한 데이터 조합과 하이퍼파라미터를 먼저 실험하는 비용을 낮춰줍니다.',
         ],
       },
+      tradeoffs: {
+        id: 'learns-less-forgets-less',
+        title: 'LoRA는 덜 배우고 덜 잊는다',
+        content: [
+          '코드와 수학 과제에서 LoRA와 전체 파인튜닝을 비교한 통제 연구(Biderman 외, TMLR 게재)에 따르면, 과제가 많은 새로운 지식의 학습을 요구할 때 표준적인 낮은 랭크의 LoRA 설정은 전체 파인튜닝보다 크게 뒤처지는 반면, 관련 없는 과제에서는 LoRA가 기본 모델의 원래 능력을 더 많이 보존했습니다. 저자들은 이 차이를 랭크와 연결합니다. 전체 파인튜닝은 일반적인 LoRA 구성보다 10~100배 높은 랭크로 가중치를 업데이트합니다.',
+          '실제로는 일반 능력을 해치지 않으면서 동작을 조정하고 싶다면 LoRA가 더 안전한 선택이고, 모델에 방대한 새 전문 지식을 가르쳐야 한다면 전체 파인튜닝이 더 적합합니다. LoRA 랭크를 높이고 더 많은 가중치 행렬에 적용하면 격차를 줄일 수 있지만 메모리를 더 사용합니다.',
+        ],
+      },
       faq: {
         id: 'faq',
         title: '자주 묻는 질문',
@@ -960,6 +1105,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'LoRA 파인튜닝은 전체 파인튜닝에 비해 실제로 VRAM을 얼마나 절약합니까?',
             a: '정확한 수치는 모델 크기, LoRA 랭크, 옵티마이저 선택에 따라 다르지만, LoRA는 그레이디언트와 옵티마이저 상태를 추가된 작은 행렬에 대해서만 추적하므로, 동일한 기본 모델의 전체 파인튜닝과 비교했을 때 필요한 학습 VRAM을 대략 한 자릿수 정도 줄이는 경우가 많습니다.',
+          },
+          {
+            q: 'QLoRA란 무엇이며 LoRA와 어떤 관계인가요?',
+            a: 'QLoRA는 4비트 양자화로 불러온 기본 모델 위에 LoRA를 적용하는 방식입니다. 고정된 기본 가중치는 메모리를 훨씬 적게 쓰고 작은 LoRA 행렬은 더 높은 정밀도로 학습되므로, 표준 LoRA보다 더 큰 모델을 GPU 한 장에 올릴 수 있습니다.',
+          },
+          {
+            q: '어떤 모델을 LoRA로 파인튜닝할 수 있나요?',
+            a: 'LoRA는 기존 가중치 층에 낮은 랭크의 행렬을 추가하므로 언어 모델과 이미지 생성 모델을 포함해 거의 모든 트랜스포머 기반 모델에서 작동합니다. Hugging Face PEFT 같은 라이브러리에서 적응할 층과 랭크를 선택할 수 있습니다.',
           },
         ],
       },
