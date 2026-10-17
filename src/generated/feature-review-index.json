@@ -1229,6 +1229,11 @@
     "urlSlug": "local-ai-chat-pocket-review",
     "url": "/power-local-llm/local-ai-chat-pocket-review"
   },
+  "pixlstash": {
+    "cluster": "power-local-llm",
+    "urlSlug": "pixlstash-review",
+    "url": "/power-local-llm/pixlstash-review"
+  },
   "anyllm": {
     "cluster": "power-local-llm",
     "urlSlug": "anyllm-review",

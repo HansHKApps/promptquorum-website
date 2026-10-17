@@ -127,6 +127,7 @@ import { app as app_tina } from './apps/tina'
 import { app as app_return_editor } from './apps/return-editor'
 import { app as app_mlxhub } from './apps/mlxhub'
 import { app as app_local_ai_chat_pocket } from './apps/local-ai-chat-pocket'
+import { app as app_pixlstash } from './apps/pixlstash'
 import { app as app_whisper_notes } from './apps/whisper-notes'
 import { app as app_anyllm } from './apps/anyllm'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
@@ -516,6 +517,7 @@ export const localAiApps: ToolRecord[] = [
   app_return_editor,
   app_mlxhub,
   app_local_ai_chat_pocket,
+  app_pixlstash,
   app_whisper_notes,
   app_anyllm,
   app_local_ai_geetmark,
