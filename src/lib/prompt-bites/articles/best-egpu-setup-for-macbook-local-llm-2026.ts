@@ -4,42 +4,42 @@ import type { PromptBiteArticle } from '../types'
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-egpu-setup-for-macbook-local-llm-2026-overview-hero-en.webp',
     type: 'how-to',
     title: 'Best eGPU Setup for MacBook Local LLM Inference (2026)',
     seoTitle: 'Best eGPU for MacBook Local LLM 2026',
-    metaDescription: 'Run RTX 3090 or RTX 4090 inference on a MacBook via eGPU enclosure. What works in 2026: Sonnet Breakaway Box, OCuLink adapters, Ollama config, and speed results.',
+    metaDescription: 'No eGPU works natively on Apple Silicon MacBooks. Options in 2026: TinyGPU (tinygrad only), a Mac mini M5 Pro, or an OCuLink mini PC over LAN.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
-    leadAnswerBlock: '**MacBooks with Apple Silicon (M2–M5) cannot use eGPUs via Thunderbolt for GPU compute through native macOS — Apple removed Thunderbolt eGPU support in macOS Ventura. However, Tiny Corp\'s Apple-notarized TinyGPU driver adds NVIDIA/AMD eGPU compute support on Apple Silicon for AI workloads (not Metal, not display). For a fully supported path: use a Mac Mini M4 Pro (48 GB) or an AMD/Intel mini PC with OCuLink instead.**',
+    leadAnswerBlock: '**No eGPU works natively on Apple Silicon MacBooks (M1–M5): macOS has no driver for external GPUs, and Razer states its Core X V2 is "not supported by M1 & later Mac devices". The only route is Tiny Corp\'s TinyGPU driver, which Tiny Corp says Apple approved: it runs AI compute on AMD RDNA 3+ or NVIDIA Ampere+ eGPUs over Thunderbolt or USB4, but its documentation covers only tinygrad — not Ollama, llama.cpp or MLX. For a supported setup, use a Mac mini M5 Pro or an OCuLink mini PC served over your LAN.**',
     quickAnswerTop: {
       question: 'Can I use an eGPU with a MacBook for local LLM inference?',
-      answer: 'Native macOS eGPU compute is not supported on Apple Silicon (M2–M5) — Apple dropped Thunderbolt eGPU in macOS Ventura. Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon via Thunderbolt 3/4 or USB4 — Ollama and llama.cpp auto-detect it. For a simpler, fully supported path: Mac Mini M4 Pro (48 GB unified memory) or an AMD mini PC (UM890 Pro) with OCuLink.',
+      answer: 'Not natively. Apple Silicon Macs (M1–M5) have no macOS driver for external GPUs. Since April 2026, Tiny Corp\'s TinyGPU driver (compute only, no display output) lets AMD RDNA 3+ and NVIDIA Ampere+ GPUs run AI workloads over Thunderbolt or USB4, but its documentation covers only tinygrad, and NVIDIA cards also need Docker Desktop. For a stable setup, run Ollama on a Mac mini M5 Pro or an OCuLink mini PC and connect over your LAN.',
       bullets: [
-        'Apple Silicon MacBooks: native eGPU compute NOT supported (macOS Ventura+)',
-        'TinyGPU driver (April 2026, Apple-notarized): enables NVIDIA/AMD CUDA compute on Apple Silicon via TB3/4 or USB4',
-        'Intel MacBooks (2015–2020): eGPU works via Thunderbolt 3 — but Apple discontinued them',
-        'Best supported alternative: Mac Mini M4 Pro (48 GB unified memory) for macOS users',
-        'Best GPU + portable setup: AMD mini PC (UM890 Pro) + OCuLink + RTX 3090 enclosure',
-        'OCuLink delivers ~80% PCIe x16 bandwidth — no bottleneck for LLM inference',
+        'Apple Silicon MacBooks (M1–M5): no native eGPU support; Razer lists its Core X V2 as unsupported on M1 and later Macs',
+        'TinyGPU (announced April 1, 2026): compute only, AMD RDNA 3+ or NVIDIA Ampere+, macOS 13+, no display output',
+        'TinyGPU is documented for tinygrad only; Ollama, llama.cpp and MLX are not documented as supported',
+        'NVIDIA cards need Docker Desktop on the Mac; AMD cards run without it',
+        'Tiny Corp self-reported 18.5 tok/s on Qwen 3.5 27B (Mac mini + RX 7900 XTX); Plugable saw little gain over baseline on an M2 MacBook Pro',
+        'Supported alternative: Mac mini M5 Pro (from $1,699, up to 64 GB, 307 GB/s) or an OCuLink mini PC + RTX 3090 over LAN',
       ],
-      updatedDate: '2026-07',
+      updatedDate: '2026-10',
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Native macOS eGPU compute is not supported on Apple Silicon — Apple removed the feature in macOS Ventura',
-          'TinyGPU driver (April 2026, Apple-notarized): NVIDIA/AMD eGPU CUDA compute now works on Apple Silicon via Thunderbolt 3/4 or USB4 — Ollama auto-detects it',
-          'Intel MacBooks (2018–2020) still support eGPU via Thunderbolt 3, but the Mac line-up is discontinued',
-          'For macOS without TinyGPU: buy Mac Mini M4 Pro (48 GB) — runs 32B+ models at 20–30 tok/s',
-          'For portable + GPU: AMD mini PC (UM890 Pro) + RTX 3090 via OCuLink — runs Ollama at 60–80 tok/s',
-          'Thunderbolt 4 eGPUs on x86 laptops (Windows/Linux) do work — 35–45% bandwidth penalty vs native PCIe',
+          'No Apple Silicon Mac (M1–M5) supports an eGPU natively; a connected card is detected but cannot run work',
+          'TinyGPU (Tiny Corp, April 2026) adds AMD and NVIDIA eGPU compute on macOS 13+ over Thunderbolt or USB4 — compute only, no display, documented for tinygrad only',
+          'NVIDIA cards need Docker Desktop for TinyGPU setup; AMD cards do not',
+          'For a supported Mac setup: Mac mini M5 Pro (from $1,699, up to 64 GB unified memory)',
+          'For GPU speed: an OCuLink mini PC + RTX 3090, served to the MacBook over LAN with Ollama',
+          'OCuLink is PCIe 4.0 x4 (about 63 Gbps) — a quarter of an x16 slot, which is enough once the model sits in VRAM; no Mac has an OCuLink port',
         ],
       },
       mainContent: {
@@ -47,50 +47,82 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Native macOS eGPU compute support was removed in macOS Ventura (2022) and remains absent — but, Tiny Corp\'s Apple-notarized TinyGPU driver enables NVIDIA and AMD eGPU CUDA compute on Apple Silicon via Thunderbolt or USB4 for AI workloads including Ollama.',
+            text: 'Apple Silicon Macs have no native external-GPU support, but since April 2026 Tiny Corp\'s TinyGPU driver can run AI compute on AMD and NVIDIA eGPUs over Thunderbolt or USB4 — documented only for tinygrad.',
           },
           {
             type: 'plain-terms',
-            text: 'An eGPU is an external graphics card in a box connected via Thunderbolt or OCuLink. Apple\'s own drivers (Metal) never supported external GPUs for compute on M-series chips. However, Tiny Corp released TinyGPU in early 2026 — a third-party driver signed by Apple — that exposes CUDA (NVIDIA) and ROCm (AMD) compute via Thunderbolt 3/4 or USB4. It does not use Metal and does not provide display output; it is purpose-built for AI and ML compute tasks.',
+            text: 'An eGPU is an external graphics card in an enclosure connected via Thunderbolt, USB4 or OCuLink. macOS on M-series chips has no driver for it, so a connected card is detected but cannot run work. TinyGPU is a macOS app from Tiny Corp that installs a DriverKit extension (which Tiny Corp says Apple approved) to enable compute on the card. It does not drive displays and does not use Metal.',
           },
         ],
-        content: 'Apple removed Thunderbolt eGPU support in macOS Ventura (released October 2022). All Apple Silicon MacBooks (M1, M2, M3, M4, M5) run on this or later macOS versions. Native macOS (Metal) will not use an external GPU for GPU compute — only the internal GPU is active. However, on April 4, 2026, Apple officially signed and notarized Tiny Corp\'s TinyGPU driver — the first sanctioned path for NVIDIA and AMD eGPUs to run CUDA/ROCm compute on Apple Silicon. Ollama and llama.cpp auto-detect the TinyGPU CUDA backend. An RTX 4090 eGPU connected via Thunderbolt 4 delivers approximately 45–50 tok/s on 8B Q4 models. Supported GPUs: NVIDIA Ampere (RTX 3000) or newer; AMD RDNA3 or newer. Requires macOS 12.1 or later.',
+        content: 'Without a third-party driver, an Apple Silicon Mac detects an external GPU but cannot use it, according to Plugable. Razer\'s Core X V2 page states "eGPUs not supported by M1 & later Mac devices". On April 1, 2026, Tiny Corp announced that Apple had approved its TinyGPU driver for AMD and NVIDIA. Per the tinygrad documentation, TinyGPU needs macOS 13.0 or later, an AMD RDNA 3+ or NVIDIA Ampere+ GPU and a USB4 or Thunderbolt port; NVIDIA setup also requires Docker Desktop. The documented workload is tinygrad\'s LLM runner, and heise reports it does not work with Apple\'s MLX. Tiny Corp reported 18.5 tok/s for Qwen 3.5 27B on a Mac mini with a Radeon RX 7900 XTX — a vendor-reported data point, not an independent benchmark. Plugable tested a Radeon 9070 and a GeForce RTX 5070 in a Thunderbolt 5 enclosure on an M2 MacBook Pro and saw little improvement over baseline.',
         items: [
-          '**macOS 13 Ventura (2022)**: Native eGPU compute support dropped. All Apple Silicon Macs affected.',
-          '**macOS 14 Sonoma, 15 Sequoia**: Still no native (Metal) eGPU compute support.',
-          '**TinyGPU driver (April 2026)**: Apple-notarized third-party driver adds CUDA/ROCm eGPU compute on Apple Silicon via TB3/4 or USB4. Not Metal; not display output. Ollama auto-detects it.',
-          '**Intel MacBooks (2018–2020)**: eGPU worked via Thunderbolt 3 on older macOS. These Macs are discontinued and will not receive macOS updates past macOS Tahoe.',
-          '**External display via eGPU**: Still works on older Intel Macs as an output-only device.',
+          '**Apple Silicon (M1–M5)**: no native eGPU support — a connected card is detected but cannot run work.',
+          '**TinyGPU (announced April 1, 2026)**: third-party driver app from Tiny Corp; AMD RDNA 3+ and NVIDIA Ampere+ over Thunderbolt or USB4; macOS 13.0+.',
+          '**Scope**: compute only — no display output, no Metal, no gaming; software support documented for tinygrad only.',
+          '**NVIDIA cards**: the compiler setup needs Docker Desktop; AMD cards run natively.',
+          '**Intel MacBooks (2018–2020)**: eGPU worked via Thunderbolt 3 on older macOS; these Macs are discontinued.',
+        ],
+      },
+      connections: {
+        id: 'connections',
+        title: 'OCuLink vs Thunderbolt vs USB4 for an External GPU',
+        content: '**OCuLink gives an external GPU the most bandwidth per dollar, but only on PCs — no Mac has an OCuLink port.** Thunderbolt 4 and USB4 are hot-pluggable and work on laptops at a lower link speed. Token generation is limited mostly by the GPU\'s own memory bandwidth once the model sits in VRAM, so the link mainly affects model loading. Choose a mini PC with an OCuLink port (for example the Minisforum UM890 Pro or AOOSTAR GEM12+ Pro) if the GPU stays on a desk; choose a Thunderbolt enclosure only for a laptop you carry.',
+        columns: ['Link', 'Nominal bandwidth', 'Hot-plug', 'Typical use'],
+        rows: [
+          {
+            'Link': 'OCuLink 4i (PCIe 4.0 x4)',
+            'Nominal bandwidth': '~63 Gbps',
+            'Hot-plug': 'No (power off first)',
+            'Typical use': 'Mini PC + GPU dock',
+          },
+          {
+            'Link': 'Thunderbolt 4 / USB4 40G',
+            'Nominal bandwidth': '40 Gbps',
+            'Hot-plug': 'Yes',
+            'Typical use': 'Laptop + enclosure',
+          },
+          {
+            'Link': 'Thunderbolt 5',
+            'Nominal bandwidth': '80 Gbps (120 Gbps boost)',
+            'Hot-plug': 'Yes',
+            'Typical use': 'Newer PCs and Macs',
+          },
+          {
+            'Link': 'USB4 20G',
+            'Nominal bandwidth': '20 Gbps',
+            'Hot-plug': 'Yes',
+            'Typical use': 'Lowest-bandwidth option',
+          },
         ],
       },
       alternatives: {
         title: 'What to Do Instead: Real Alternatives',
         productItems: [
           {
-            title: 'Mac Mini M4 Pro (48 GB) — Best macOS Option',
-            content: 'The Mac Mini M4 Pro with 48 GB of unified memory runs Qwen3 32B Q4 at 20–30 tok/s via Ollama Metal backend. The 24-core GPU handles larger models than a MacBook M4 Pro (which maxes at 64 GB). Price: ~$1399. If you want to stay in the macOS ecosystem and need 32B+ model capability, this is the upgrade path — not an eGPU.',
+            title: 'Mac mini M5 Pro (up to 64 GB) — Best macOS Option',
+            content: 'Apple\'s Mac mini with M5 Pro (available since September 22, 2026) starts at $1,699 and offers up to 64 GB of unified memory at 307 GB/s. Token generation is limited by memory bandwidth, so a 32B Q4 model of roughly 19–20 GB has a theoretical ceiling near 15 tok/s at that bandwidth; real speeds are lower. Choose it for 32B-class models that must fit in memory without a separate GPU machine. The base Mac mini M6 (from $899, up to 32 GB, 170 GB/s) suits 7B–14B models.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro on Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
+              { label: 'Apple Mac Mini M5 Pro on Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro' },
             ],
           },
           {
-            title: 'AMD Mini PC + OCuLink eGPU (Best GPU/Portable Combo)',
-            content: 'The AOOSTAR GEM12 Pro OCuLink (AMD Ryzen 9 8945HS, ~$480) connects to an RTX 3090 or RTX 4090 via OCuLink (PCIe 4.0 x4, 64 Gbps — ~80% of x16 slot bandwidth). Ollama on Linux or Windows with CUDA runs 7B Q4 at 65–85 tok/s with an RTX 3090. The mini PC is small enough to put on a desk next to a MacBook and serve Ollama over LAN. You keep your MacBook for everything else; the mini PC handles inference.',
+            title: 'OCuLink Mini PC + RTX 3090 (Best GPU/Portable Combo)',
+            content: 'A mini PC with an OCuLink port — such as the Minisforum UM890 Pro (Ryzen 9 8945HS, barebones from $479 at its 2024 launch) or the AOOSTAR GEM12+ Pro (barebones listed around $359) — connects to a desktop GPU in an OCuLink dock. OCuLink is not hot-swappable: power the PC off before connecting. Community llama.cpp benchmarks report roughly 90–95 tok/s for an 8B Q4_K_M model on an RTX 3090; sources disagree and results depend on context length and build. Run Ollama on the mini PC and serve it over LAN; the MacBook stays the client.',
             affiliateLinks: [
               { label: 'AOOSTAR GEM12 Pro OCuLink on Amazon', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
-              { label: 'Razer Core X eGPU Enclosure (for x86 laptops)', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
+              { label: 'Minisforum UM890 Pro on Amazon', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro' },
             ],
           },
           {
-            title: 'TinyGPU Driver + eGPU on Apple Silicon Mac (New in 2026)',
-            content: 'Tiny Corp\'s TinyGPU driver (Apple-signed) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon Macs via Thunderbolt 3/4 or USB4. Ollama and llama.cpp auto-detect the CUDA backend. Supported: NVIDIA Ampere (RTX 3000) or newer; AMD RDNA3 or newer. With an RTX 4090 eGPU, expect ~45–50 tok/s on 8B Q4. This is a third-party driver — not Apple-native Metal support — so expect occasional compatibility updates as macOS evolves.',
+            title: 'TinyGPU Driver + eGPU on Apple Silicon Mac (Experimental)',
+            content: 'Tiny Corp\'s TinyGPU driver enables compute on AMD RDNA 3+ and NVIDIA Ampere+ eGPUs over Thunderbolt or USB4 on macOS 13+. It is documented for tinygrad only (run with DEV=AMD or DEV=NV python3 -m tinygrad.llm), NVIDIA cards need Docker Desktop, and Plugable reported little improvement over baseline on an M2 MacBook Pro. It is a third-party driver, not Apple-native Metal support, so expect compatibility changes as macOS evolves. Treat it as an experiment, not a daily setup.',
             affiliateLinks: [
               { label: 'RTX 4090 eGPU on Amazon (for TinyGPU setup)', url: 'https://www.amazon.com/s?k=RTX+4090+eGPU+enclosure' },
             ],
           },
           {
             title: 'Thunderbolt eGPU on Windows/Linux Laptop (If Not on Mac)',
-            content: 'On an x86 Windows or Linux laptop with Thunderbolt 4 or 5, eGPU does work for Ollama. The bandwidth penalty is ~35–45% vs a native PCIe x16 slot, but Ollama\'s inference is memory-bandwidth-limited (not PCIe-limited), so real-world speed drops are 10–20%. Current recommended enclosure: Razer Core X V2 ($349.99, Thunderbolt 5, Windows/USB4 only — macOS support dropped) or the original Razer Core X (still available, ~$249, Thunderbolt 3, includes PSU). Expect 50–65 tok/s on 7B Q4 vs 65–80 tok/s for a native slot.',
+            content: 'On an x86 Windows or Linux laptop with Thunderbolt 4 or 5, an eGPU works with Ollama. The link is slower than a native PCIe slot, but once the model sits in VRAM, token generation depends mostly on the GPU\'s own memory bandwidth, so real-world losses are smaller than the link gap suggests. The Razer Core X V2 ($349.99, Thunderbolt 5, no power supply included) is built for Windows; Razer\'s page states eGPUs are not supported on M1 and later Macs.',
             affiliateLinks: [
               { label: 'Razer Core X V2 eGPU Enclosure on Amazon', url: 'https://www.amazon.com/dp/B0FFQFDZWX' },
               { label: 'Razer Core X (original) on Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
@@ -101,11 +133,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-            { q: 'Is there any way to make an eGPU work with an M4 MacBook Pro for AI?', a: 'Yes —, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon Macs via Thunderbolt 3/4 or USB4. Ollama and llama.cpp auto-detect the CUDA backend. Supported GPUs: NVIDIA Ampere (RTX 3000+) or AMD RDNA3+. An RTX 4090 eGPU delivers ~45–50 tok/s on 8B Q4. Note: this is a third-party driver, not native Metal — it does not provide display output. The simpler path if you prefer stability: connect the MacBook to an Ollama server on a separate GPU machine over LAN (set OLLAMA_HOST=0.0.0.0 on the server).' },
-            { q: 'Will Apple bring back eGPU support for Apple Silicon?', a: 'Unlikely. Apple\'s M-series architecture integrates the GPU, CPU, and memory on a single chip — the design philosophy is unified memory, not expandability. Apple has not indicated any plans to restore eGPU compute support. The Mac Pro (2023) with expansion slots is the only Apple product that supports GPU expansion.' },
-            { q: 'Can I use an NVIDIA GPU for inference and pipe the output to my MacBook?', a: 'Yes — this is the recommended approach. Run Ollama on a Windows or Linux machine with an NVIDIA GPU, expose it on your LAN (OLLAMA_HOST=0.0.0.0), and connect from your MacBook via Open WebUI, Cursor, Continue, or any OpenAI-compatible client. The MacBook handles the UI; the NVIDIA machine handles the computation.' },
-            { q: 'Can I use an eGPU with a MacBook for local LLM inference?', a: 'Not via native macOS. Apple removed Thunderbolt eGPU compute support in macOS Ventura (2022). However, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA compute on Apple Silicon via Thunderbolt 3/4 or USB4 — Ollama auto-detects it. For a fully supported path: use a Mac Mini M4 Pro (48 GB unified memory) or an AMD mini PC with OCuLink eGPU.' },
-          ],
+          { q: 'Is there any way to make an eGPU work with an M4 MacBook Pro for AI?', a: 'Yes, with limits. Tiny Corp\'s TinyGPU driver runs compute on AMD RDNA 3+ and NVIDIA Ampere+ GPUs over Thunderbolt or USB4 on macOS 13+. It is documented for tinygrad only (not Ollama, llama.cpp or MLX), gives no display output, and NVIDIA cards need Docker Desktop. Plugable reported little improvement over baseline on an M2 MacBook Pro. For a stable setup, run Ollama on a separate GPU machine and connect over LAN (OLLAMA_HOST=0.0.0.0 on the server).' },
+          { q: 'What is the best eGPU for a base-model MacBook Pro 16?', a: 'No eGPU is officially supported on any Apple Silicon MacBook Pro. To experiment with TinyGPU, the documented minimum is an AMD RDNA 3+ card (Radeon RX 7000 or newer) or an NVIDIA Ampere+ card (RTX 30 or newer) in a Thunderbolt or USB4 enclosure; AMD avoids the Docker step. For daily use, a Mac with more unified memory or an RTX GPU in a LAN-connected mini PC is the more reliable choice.' },
+          { q: 'Does the Razer Core work with a MacBook Pro?', a: 'Not on Apple Silicon. Razer\'s Core X V2 page states "eGPUs not supported by M1 & later Mac devices". The original Razer Core X launched in 2018 for Intel Macs with Thunderbolt 3. A Razer enclosure on an Apple Silicon Mac would depend on the unofficial TinyGPU driver, which Razer does not list.' },
+          { q: 'Can I add an external GPU to an iMac?', a: 'Not natively on Apple Silicon iMacs — the limits are the same as for MacBooks. Intel iMacs with Thunderbolt 3 supported eGPUs on older macOS versions. For local LLMs, run Ollama on a separate GPU machine and connect over LAN.' },
+          { q: 'Can I use an OCuLink eGPU with a Mac?', a: 'No. No Mac has an OCuLink port. OCuLink is designed for PCs and mini PCs; for a Mac, the options are a Thunderbolt or USB4 eGPU with the experimental TinyGPU driver, or an OCuLink mini PC served over LAN.' },
+          { q: 'Will Apple bring back eGPU support for Apple Silicon?', a: 'Unlikely. Apple\'s M-series chips integrate the GPU, CPU and memory in one package — the design is unified memory, not expandability — and Apple has not announced plans to restore eGPU compute support.' },
+          { q: 'Can I use an NVIDIA GPU for inference and pipe the output to my MacBook?', a: 'Yes — this is the recommended approach. Run Ollama on a Windows or Linux machine with an NVIDIA GPU, expose it on your LAN (OLLAMA_HOST=0.0.0.0), and connect from your MacBook via Open WebUI, Cursor, Continue, or any OpenAI-compatible client. The MacBook handles the UI; the NVIDIA machine handles the computation.' },
+        ],
       },
       relatedReading: {
         title: 'Related Guides',
@@ -114,6 +149,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[MLX vs Ollama vs llama.cpp: Which Backend?](/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
           '[How to Convert an Ollama Model to MLX](/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
           '[Best Local LLM for 16 GB RAM Laptop](/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+          '[Mac mini M5 as a Local AI Server](/local-llms/mac-mini-m5-local-ai-server) -- Mac mini M5 local AI server guide',
+          '[Apple Silicon M5 for Local LLMs](/local-llms/apple-silicon-m5-local-llm) -- M5 Pro vs Max local LLM guide',
         ],
       },
     },
@@ -121,116 +158,191 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-          {
-            '@type': 'Question',
-            'name': 'Is there any way to make an eGPU work with an M4 MacBook Pro for AI?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Yes —, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA/ROCm compute on Apple Silicon Macs via Thunderbolt 3/4 or USB4. Ollama and llama.cpp auto-detect the CUDA backend. Supported GPUs: NVIDIA Ampere (RTX 3000+) or AMD RDNA3+. An RTX 4090 eGPU delivers ~45–50 tok/s on 8B Q4. Note: this is a third-party driver, not native Metal — it does not provide display output. The simpler path if you prefer stability: connect the MacBook to an Ollama server on a separate GPU machine over LAN (set OLLAMA_HOST=0.0.0.0 on the server).',
-            },
+        {
+          '@type': 'Question',
+          'name': 'Is there any way to make an eGPU work with an M4 MacBook Pro for AI?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, with limits. Tiny Corp\'s TinyGPU driver runs compute on AMD RDNA 3+ and NVIDIA Ampere+ GPUs over Thunderbolt or USB4 on macOS 13+. It is documented for tinygrad only (not Ollama, llama.cpp or MLX), gives no display output, and NVIDIA cards need Docker Desktop. Plugable reported little improvement over baseline on an M2 MacBook Pro. For a stable setup, run Ollama on a separate GPU machine and connect over LAN (OLLAMA_HOST=0.0.0.0 on the server).',
           },
-          {
-            '@type': 'Question',
-            'name': 'Will Apple bring back eGPU support for Apple Silicon?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Unlikely. Apple\'s M-series architecture integrates the GPU, CPU, and memory on a single chip — the design philosophy is unified memory, not expandability. Apple has not indicated any plans to restore eGPU compute support. The Mac Pro (2023) with expansion slots is the only Apple product that supports GPU expansion.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the best eGPU for a base-model MacBook Pro 16?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No eGPU is officially supported on any Apple Silicon MacBook Pro. To experiment with TinyGPU, the documented minimum is an AMD RDNA 3+ card (Radeon RX 7000 or newer) or an NVIDIA Ampere+ card (RTX 30 or newer) in a Thunderbolt or USB4 enclosure; AMD avoids the Docker step. For daily use, a Mac with more unified memory or an RTX GPU in a LAN-connected mini PC is the more reliable choice.',
           },
-          {
-            '@type': 'Question',
-            'name': 'Can I use an NVIDIA GPU for inference and pipe the output to my MacBook?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Yes — this is the recommended approach. Run Ollama on a Windows or Linux machine with an NVIDIA GPU, expose it on your LAN (OLLAMA_HOST=0.0.0.0), and connect from your MacBook via Open WebUI, Cursor, Continue, or any OpenAI-compatible client. The MacBook handles the UI; the NVIDIA machine handles the computation.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does the Razer Core work with a MacBook Pro?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Not on Apple Silicon. Razer\'s Core X V2 page states "eGPUs not supported by M1 & later Mac devices". The original Razer Core X launched in 2018 for Intel Macs with Thunderbolt 3. A Razer enclosure on an Apple Silicon Mac would depend on the unofficial TinyGPU driver, which Razer does not list.',
           },
-          {
-            '@type': 'Question',
-            'name': 'Can I use an eGPU with a MacBook for local LLM inference?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Not via native macOS. Apple removed Thunderbolt eGPU compute support in macOS Ventura (2022). However, Tiny Corp\'s TinyGPU driver (Apple-notarized) enables NVIDIA and AMD eGPU CUDA compute on Apple Silicon via Thunderbolt 3/4 or USB4 — Ollama auto-detects it. For a fully supported path: use a Mac Mini M4 Pro (48 GB unified memory) or an AMD mini PC with OCuLink eGPU.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I add an external GPU to an iMac?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Not natively on Apple Silicon iMacs — the limits are the same as for MacBooks. Intel iMacs with Thunderbolt 3 supported eGPUs on older macOS versions. For local LLMs, run Ollama on a separate GPU machine and connect over LAN.',
           },
-        ],
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I use an OCuLink eGPU with a Mac?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. No Mac has an OCuLink port. OCuLink is designed for PCs and mini PCs; for a Mac, the options are a Thunderbolt or USB4 eGPU with the experimental TinyGPU driver, or an OCuLink mini PC served over LAN.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Will Apple bring back eGPU support for Apple Silicon?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Unlikely. Apple\'s M-series chips integrate the GPU, CPU and memory in one package — the design is unified memory, not expandability — and Apple has not announced plans to restore eGPU compute support.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I use an NVIDIA GPU for inference and pipe the output to my MacBook?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes — this is the recommended approach. Run Ollama on a Windows or Linux machine with an NVIDIA GPU, expose it on your LAN (OLLAMA_HOST=0.0.0.0), and connect from your MacBook via Open WebUI, Cursor, Continue, or any OpenAI-compatible client. The MacBook handles the UI; the NVIDIA machine handles the computation.',
+          },
+        },
+      ],
     },
-    schema: { '@type': 'TechArticle', headline: 'Best eGPU Setup for MacBook Local LLM Inference (2026)', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'en' },
+    schema: { '@type': 'TechArticle', headline: 'Best eGPU Setup for MacBook Local LLM Inference (2026)', datePublished: '2026-05-26', dateModified: '2026-10-17', url: 'https://www.promptquorum.com/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'en' },
   },
 
   de: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-egpu-setup-for-macbook-local-llm-2026-overview-hero-de.webp',
     type: 'how-to',
     title: 'eGPU für MacBook und lokale KI: Was 2026 funktioniert (und was nicht)',
     seoTitle: 'eGPU für MacBook Local LLM 2026 — Alternativen',
-    metaDescription: 'MacBooks mit Apple Silicon unterstützen keine eGPUs für GPU-Compute. Was 2026 stattdessen funktioniert: Mac Mini M4 Pro, OCuLink-Mini-PC, LAN-Server.',
+    metaDescription: 'Keine eGPU läuft nativ am Apple-Silicon-MacBook. Optionen 2026: TinyGPU (nur tinygrad), Mac mini M5 Pro oder ein OCuLink-Mini-PC im LAN.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
-    leadAnswerBlock: '**MacBooks mit Apple Silicon (M2–M5) können eGPUs 2026 nicht für GPU-Compute nutzen — Apple entfernte Thunderbolt-eGPU-Unterstützung in macOS Ventura. Die Alternative: Mac Mini M4 Pro (48 GB Unified Memory) oder AMD Mini-PC (UM890 Pro) mit OCuLink-eGPU.**',
+    leadAnswerBlock: '**Keine eGPU läuft nativ an einem Apple-Silicon-MacBook (M1–M5): macOS hat keinen Treiber für externe GPUs, und Razer gibt für das Core X V2 an: „not supported by M1 & later Mac devices“. Der einzige Weg ist Tiny Corps TinyGPU-Treiber, den laut Tiny Corp Apple freigegeben hat: Er ermöglicht KI-Compute auf AMD-RDNA-3+- oder NVIDIA-Ampere+-eGPUs über Thunderbolt oder USB4, ist aber nur für tinygrad dokumentiert — nicht für Ollama, llama.cpp oder MLX. Für ein unterstütztes Setup: Mac mini M5 Pro oder ein OCuLink-Mini-PC, der im LAN bereitgestellt wird.**',
     quickAnswerTop: {
       question: 'Kann ich eine eGPU mit einem MacBook für lokale KI-Inferenz nutzen?',
-      answer: 'Nein. Apple Silicon MacBooks (M2/M3/M4/M5) unterstützen keine eGPUs für GPU-Compute. macOS Ventura und später haben Thunderbolt-eGPU-Unterstützung vollständig entfernt. Alternative: Mac Mini M4 Pro (48 GB Unified Memory) oder AMD Mini-PC mit OCuLink-eGPU.',
+      answer: 'Nicht nativ. Apple-Silicon-Macs (M1–M5) haben keinen macOS-Treiber für externe GPUs. Seit April 2026 ermöglicht Tiny Corps TinyGPU-Treiber (nur Compute, keine Bildausgabe), dass AMD-RDNA-3+- und NVIDIA-Ampere+-GPUs über Thunderbolt oder USB4 KI-Workloads ausführen. Er ist aber nur für tinygrad dokumentiert, und NVIDIA-Karten brauchen zusätzlich Docker Desktop. Für ein stabiles Setup: Ollama auf einem Mac mini M5 Pro oder einem OCuLink-Mini-PC betreiben und per LAN verbinden.',
       bullets: [
-        'Apple Silicon MacBooks: eGPU für GPU-Compute NICHT unterstützt (macOS Ventura+)',
-        'Intel MacBooks (2015–2020): eGPU über Thunderbolt 3 funktionierte — aber eingestellt',
-        'Beste Alternative für macOS: Mac Mini M4 Pro (48 GB Unified Memory)',
-        'Beste GPU + portable Lösung: AMD Mini-PC (UM890 Pro) + OCuLink + RTX 3090',
-        'OCuLink liefert ~80% PCIe-x16-Bandbreite — kein Flaschenhals für LLM-Inferenz',
+        'Apple-Silicon-MacBooks (M1–M5): keine native eGPU-Unterstützung; Razer führt das Core X V2 für M1 und neuere Macs als nicht unterstützt',
+        'TinyGPU (angekündigt am 1. April 2026): nur Compute, AMD RDNA 3+ oder NVIDIA Ampere+, macOS 13+, keine Bildausgabe',
+        'TinyGPU ist nur für tinygrad dokumentiert; Ollama, llama.cpp und MLX sind nicht als unterstützt dokumentiert',
+        'NVIDIA-Karten brauchen Docker Desktop auf dem Mac; AMD-Karten laufen ohne',
+        'Tiny Corp meldet selbst 18,5 Tok/s mit Qwen 3.5 27B (Mac mini + RX 7900 XTX); Plugable sah auf einem M2 MacBook Pro kaum Gewinn gegenüber der Basis',
+        'Unterstützte Alternative: Mac mini M5 Pro (ab 1.699 $ US-Preis, bis 64 GB, 307 GB/s) oder OCuLink-Mini-PC + RTX 3090 im LAN',
       ],
-      updatedDate: '2026-07',
+      updatedDate: '2026-10',
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Apple Silicon MacBooks können keine eGPUs für Compute nutzen — Apple entfernte das Feature in macOS Ventura',
-          'Intel MacBooks (2018–2020) unterstützten eGPU über Thunderbolt 3 — diese Linie ist eingestellt',
-          'Für macOS: Mac Mini M4 Pro (48 GB) statt eGPU-MacBook-Erweiterung kaufen',
-          'Für portabel + GPU: AMD Mini-PC (UM890 Pro) + RTX 3090 über OCuLink — Ollama mit 60–80 Tok/s',
-          'Thunderbolt-4-eGPUs auf x86-Laptops (Windows/Linux) funktionieren — mit ~35–45% Bandbreitenverlust',
+          'Kein Apple-Silicon-Mac (M1–M5) unterstützt eine eGPU nativ; eine angeschlossene Karte wird erkannt, kann aber keine Arbeit ausführen',
+          'TinyGPU (Tiny Corp, April 2026) ergänzt AMD- und NVIDIA-eGPU-Compute ab macOS 13 über Thunderbolt oder USB4 — nur Compute, keine Bildausgabe, nur für tinygrad dokumentiert',
+          'NVIDIA-Karten brauchen für das TinyGPU-Setup Docker Desktop; AMD-Karten nicht',
+          'Für ein unterstütztes Mac-Setup: Mac mini M5 Pro (ab 1.699 $ US-Preis, bis 64 GB Unified Memory)',
+          'Für GPU-Tempo: OCuLink-Mini-PC + RTX 3090, per LAN mit Ollama für das MacBook bereitgestellt',
+          'OCuLink ist PCIe 4.0 x4 (rund 63 Gbit/s) — ein Viertel eines x16-Slots, genug, sobald das Modell im VRAM liegt; kein Mac hat einen OCuLink-Anschluss',
         ],
       },
       mainContent: {
-        title: 'Warum eGPU für MacBooks 2026 nicht funktioniert',
+        title: 'eGPU an Apple-Silicon-Macs 2026: Was sich geändert hat',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'eGPUs funktionieren 2026 nicht für GPU-beschleunigte LLM-Inferenz auf Apple-Silicon-MacBooks, weil Apple die Thunderbolt-eGPU-Compute-Unterstützung in macOS Ventura (2022) entfernt hat.',
+            text: 'Apple-Silicon-Macs haben keine native Unterstützung für externe GPUs, doch seit April 2026 kann Tiny Corps TinyGPU-Treiber KI-Compute auf AMD- und NVIDIA-eGPUs über Thunderbolt oder USB4 ausführen — nur für tinygrad dokumentiert.',
           },
           {
             type: 'plain-terms',
-            text: 'Eine eGPU ist eine externe Grafikkarte in einem Gehäuse, angeschlossen über Thunderbolt oder OCuLink. Auf einem MacBook mit Apples M-Chip ist die GPU in den Chip integriert — externe GPUs können nicht für Compute-Aufgaben genutzt werden. Metal (Apples GPU-API) unterstützt keine externen GPUs auf M-Series-Hardware.',
+            text: 'Eine eGPU ist eine externe Grafikkarte in einem Gehäuse, angeschlossen über Thunderbolt, USB4 oder OCuLink. macOS auf M-Chips hat dafür keinen Treiber, eine angeschlossene Karte wird also erkannt, kann aber keine Arbeit ausführen. TinyGPU ist eine macOS-App von Tiny Corp, die eine DriverKit-Erweiterung installiert (laut Tiny Corp von Apple freigegeben), um Compute auf der Karte zu ermöglichen. Sie steuert keine Displays und nutzt kein Metal.',
           },
         ],
-        content: 'Apple entfernte Thunderbolt-eGPU-Unterstützung in macOS Ventura (Oktober 2022). Alle Apple-Silicon-MacBooks (M1–M5) laufen auf dieser oder neueren macOS-Versionen. Selbst wenn eine eGPU physisch verbunden ist, nutzt macOS die externe GPU nicht für GPU-Compute — nur die interne GPU ist aktiv.',
+        content: 'Ohne Treiber eines Drittanbieters erkennt ein Apple-Silicon-Mac eine externe GPU, kann sie laut Plugable aber nicht nutzen. Razers Seite zum Core X V2 nennt: „eGPUs not supported by M1 & later Mac devices“. Am 1. April 2026 kündigte Tiny Corp an, Apple habe den TinyGPU-Treiber für AMD und NVIDIA freigegeben. Laut tinygrad-Dokumentation braucht TinyGPU macOS 13.0 oder neuer, eine AMD-RDNA-3+- oder NVIDIA-Ampere+-GPU und einen USB4- oder Thunderbolt-Anschluss; das NVIDIA-Setup erfordert zusätzlich Docker Desktop. Dokumentiert ist der LLM-Runner von tinygrad; laut heise funktioniert der Treiber nicht mit Apples MLX. Tiny Corp meldete 18,5 Tok/s für Qwen 3.5 27B auf einem Mac mini mit Radeon RX 7900 XTX — eine Herstellerangabe, kein unabhängiger Benchmark. Plugable testete eine Radeon 9070 und eine GeForce RTX 5070 in einem Thunderbolt-5-Gehäuse an einem M2 MacBook Pro und sah kaum Verbesserung gegenüber der Basis.',
         items: [
-          '**macOS 13 Ventura (2022)**: eGPU-Unterstützung entfernt. Alle Apple-Silicon-Macs betroffen.',
-          '**macOS 14 Sonoma, 15 Sequoia**: Weiterhin keine eGPU-Compute-Unterstützung.',
-          '**Intel MacBooks (2018–2020)**: eGPU über Thunderbolt 3 funktionierte auf älteren macOS-Versionen.',
-          '**Externer Bildschirm über eGPU**: Funktioniert weiterhin als reine Ausgabe.',
+          '**Apple Silicon (M1–M5)**: keine native eGPU-Unterstützung — eine angeschlossene Karte wird erkannt, kann aber keine Arbeit ausführen.',
+          '**TinyGPU (angekündigt am 1. April 2026)**: Treiber-App von Tiny Corp; AMD RDNA 3+ und NVIDIA Ampere+ über Thunderbolt oder USB4; macOS 13.0+.',
+          '**Umfang**: nur Compute — keine Bildausgabe, kein Metal, kein Gaming; Software-Unterstützung nur für tinygrad dokumentiert.',
+          '**NVIDIA-Karten**: Das Compiler-Setup braucht Docker Desktop; AMD-Karten laufen nativ.',
+          '**Intel-MacBooks (2018–2020)**: eGPU funktionierte über Thunderbolt 3 unter älterem macOS; diese Macs sind eingestellt.',
+        ],
+      },
+      connections: {
+        id: 'connections',
+        title: 'OCuLink, Thunderbolt und USB4 für eine externe GPU im Vergleich',
+        content: '**OCuLink bietet einer externen GPU die meiste Bandbreite pro Euro, aber nur an PCs — kein Mac hat einen OCuLink-Anschluss.** Thunderbolt 4 und USB4 sind hot-pluggable und funktionieren an Laptops bei geringerer Linkgeschwindigkeit. Die Token-Generierung hängt, sobald das Modell im VRAM liegt, vor allem von der Speicherbandbreite der GPU ab; der Link beeinflusst hauptsächlich das Laden des Modells. Einen Mini-PC mit OCuLink-Anschluss (etwa Minisforum UM890 Pro oder AOOSTAR GEM12+ Pro) wählen, wenn die GPU am Schreibtisch bleibt; ein Thunderbolt-Gehäuse nur für einen Laptop, den man mitnimmt.',
+        columns: ['Anbindung', 'Nominelle Bandbreite', 'Hot-Plug', 'Typischer Einsatz'],
+        rows: [
+          {
+            'Anbindung': 'OCuLink 4i (PCIe 4.0 x4)',
+            'Nominelle Bandbreite': '~63 Gbit/s',
+            'Hot-Plug': 'Nein (vorher ausschalten)',
+            'Typischer Einsatz': 'Mini-PC + GPU-Dock',
+          },
+          {
+            'Anbindung': 'Thunderbolt 4 / USB4 40G',
+            'Nominelle Bandbreite': '40 Gbit/s',
+            'Hot-Plug': 'Ja',
+            'Typischer Einsatz': 'Laptop + Gehäuse',
+          },
+          {
+            'Anbindung': 'Thunderbolt 5',
+            'Nominelle Bandbreite': '80 Gbit/s (120 Gbit/s Boost)',
+            'Hot-Plug': 'Ja',
+            'Typischer Einsatz': 'Neuere PCs und Macs',
+          },
+          {
+            'Anbindung': 'USB4 20G',
+            'Nominelle Bandbreite': '20 Gbit/s',
+            'Hot-Plug': 'Ja',
+            'Typischer Einsatz': 'Geringste Bandbreite',
+          },
         ],
       },
       alternatives: {
-        title: 'Echte Alternativen für GPU-beschleunigtes LLM auf Mac',
+        title: 'Echte Alternativen für GPU-beschleunigtes LLM am Mac',
         productItems: [
           {
-            title: 'Mac Mini M4 Pro (48 GB) — Beste macOS-Option',
-            content: 'Der Mac Mini M4 Pro mit 48 GB Unified Memory läuft Qwen3 32B Q4 mit 20–30 Tok/s über Ollamas Metal-Backend. Preis: ~1399 €. Wenn macOS Voraussetzung ist und 32B+-Modelle benötigt werden, ist dies der Upgrade-Pfad — nicht eine eGPU.',
+            title: 'Mac mini M5 Pro (bis 64 GB) — Beste macOS-Option',
+            content: 'Apples Mac mini mit M5 Pro (seit 22. September 2026 erhältlich) startet bei 1.699 $ (US-Preis) und bietet bis zu 64 GB Unified Memory mit 307 GB/s. Die Token-Generierung ist durch die Speicherbandbreite begrenzt: Ein 32B-Q4-Modell von etwa 19–20 GB hat bei dieser Bandbreite eine theoretische Obergrenze von rund 15 Tok/s; reale Werte liegen darunter. Geeignet für 32B-Modelle, die ohne separaten GPU-Rechner in den Speicher passen sollen. Der Basis-Mac-mini M6 (ab 899 $, bis 32 GB, 170 GB/s) passt zu 7B–14B-Modellen.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro bei Amazon.de', url: 'https://www.amazon.de/s?k=Mac+Mini+M4+Pro' },
+              { label: 'Apple Mac Mini M5 Pro bei Amazon.de', url: 'https://www.amazon.de/s?k=Mac+Mini+M5+Pro' },
             ],
           },
           {
-            title: 'AMD Mini-PC + OCuLink-eGPU (Beste GPU/Portable-Kombination)',
-            content: 'Der AOOSTAR GEM12 Pro OCuLink (AMD Ryzen 9 8945HS, ~480 €) verbindet sich mit einer RTX 3090 oder RTX 4090 über OCuLink (PCIe 4.0 x4, 64 Gbps — ~80% x16-Slot-Bandbreite). Ollama auf Linux oder Windows mit CUDA läuft 7B Q4 mit 65–85 Tok/s mit einer RTX 3090. Der Mini-PC ist klein genug für den Schreibtisch neben einem MacBook und bedient Ollama über LAN.',
+            title: 'OCuLink-Mini-PC + RTX 3090 (Beste GPU/Portable-Kombination)',
+            content: 'Ein Mini-PC mit OCuLink-Anschluss — etwa Minisforum UM890 Pro (Ryzen 9 8945HS, Barebone zum Marktstart 2024 ab 479 $) oder AOOSTAR GEM12+ Pro (Barebone um 359 $ gelistet) — verbindet sich über ein OCuLink-Dock mit einer Desktop-GPU. OCuLink ist nicht hot-swap-fähig: PC vor dem Anschließen ausschalten. Community-Benchmarks mit llama.cpp nennen grob 90–95 Tok/s für ein 8B-Q4_K_M-Modell auf einer RTX 3090; die Quellen weichen ab, Ergebnisse hängen von Kontextlänge und Build ab. Ollama auf dem Mini-PC betreiben und per LAN bereitstellen; das MacBook bleibt Client.',
             affiliateLinks: [
               { label: 'AOOSTAR GEM12 Pro OCuLink bei Amazon.de', url: 'https://www.amazon.de/s?k=AOOSTAR+GEM12+Pro' },
+              { label: 'Minisforum UM890 Pro bei Amazon.de', url: 'https://www.amazon.de/s?k=Minisforum+UM890+Pro' },
+            ],
+          },
+          {
+            title: 'TinyGPU-Treiber + eGPU am Apple-Silicon-Mac (experimentell)',
+            content: 'Tiny Corps TinyGPU-Treiber ermöglicht Compute auf AMD-RDNA-3+- und NVIDIA-Ampere+-eGPUs über Thunderbolt oder USB4 ab macOS 13. Er ist nur für tinygrad dokumentiert (Start mit DEV=AMD oder DEV=NV python3 -m tinygrad.llm), NVIDIA-Karten brauchen Docker Desktop, und Plugable sah an einem M2 MacBook Pro kaum Verbesserung gegenüber der Basis. Es ist ein Treiber eines Drittanbieters, keine native Metal-Unterstützung; Kompatibilitätsänderungen mit neuen macOS-Versionen sind zu erwarten. Als Experiment betrachten, nicht als Alltags-Setup.',
+            affiliateLinks: [
+              { label: 'RTX 4090 eGPU bei Amazon.de (für TinyGPU-Setup)', url: 'https://www.amazon.de/s?k=RTX+4090+eGPU+enclosure' },
+            ],
+          },
+          {
+            title: 'Thunderbolt-eGPU an Windows-/Linux-Laptop (falls kein Mac)',
+            content: 'An einem x86-Laptop mit Windows oder Linux und Thunderbolt 4 oder 5 funktioniert eine eGPU mit Ollama. Der Link ist langsamer als ein nativer PCIe-Slot, doch sobald das Modell im VRAM liegt, hängt die Token-Generierung vor allem von der Speicherbandbreite der GPU ab; reale Einbußen sind kleiner, als die Linklücke vermuten lässt. Das Razer Core X V2 (349,99 $, Thunderbolt 5, ohne Netzteil) ist für Windows gebaut; Razers Seite nennt eGPUs an M1 und neueren Macs als nicht unterstützt.',
+            affiliateLinks: [
+              { label: 'Razer Core X V2 eGPU-Gehäuse bei Amazon.de', url: 'https://www.amazon.de/s?k=Razer+Core+X+V2' },
+              { label: 'Razer Core X (Original) bei Amazon.de', url: 'https://www.amazon.de/s?k=Razer+Core+X+eGPU' },
             ],
           },
         ],
@@ -238,10 +350,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-            { q: 'Gibt es eine Möglichkeit, eine eGPU mit einem M4 MacBook Pro für KI zu nutzen?', a: 'Nicht für GPU-Compute. macOS bietet keine API für externe GPUs für Metal-Compute-Aufgaben auf M-Series-Hardware. Die Alternative: MacBook über LAN mit einem Ollama-Server auf einem anderen Gerät (Mini-PC oder Desktop) verbinden. OLLAMA_HOST=0.0.0.0 auf dem Server setzen.' },
-            { q: 'Wird Apple eGPU-Unterstützung für Apple Silicon zurückbringen?', a: 'Unwahrscheinlich. Apples M-Series-Architektur integriert GPU, CPU und Speicher auf einem Chip — das Design-Prinzip ist Unified Memory, nicht Erweiterbarkeit. Nur der Mac Pro (2023) unterstützt GPU-Erweiterung über PCIe-Slots.' },
-            { q: 'Kann ich eine eGPU mit einem MacBook für lokale KI-Inferenz nutzen?', a: 'Nein. Apple entfernte eGPU-Compute-Unterstützung in macOS Ventura (2022). Alternative: Mac Mini M4 Pro (48 GB) oder AMD Mini-PC mit OCuLink.' },
-          ],
+          { q: 'Gibt es eine Möglichkeit, eine eGPU mit einem M4 MacBook Pro für KI zu nutzen?', a: 'Ja, mit Einschränkungen. Tiny Corps TinyGPU-Treiber führt Compute auf AMD-RDNA-3+- und NVIDIA-Ampere+-GPUs über Thunderbolt oder USB4 ab macOS 13 aus. Er ist nur für tinygrad dokumentiert (nicht für Ollama, llama.cpp oder MLX), liefert keine Bildausgabe, und NVIDIA-Karten brauchen Docker Desktop. Plugable sah an einem M2 MacBook Pro kaum Verbesserung gegenüber der Basis. Für ein stabiles Setup: Ollama auf einem separaten GPU-Rechner betreiben und per LAN verbinden (OLLAMA_HOST=0.0.0.0 auf dem Server).' },
+          { q: 'Welche eGPU ist die beste für ein MacBook Pro 16 in der Basisversion?', a: 'Für kein Apple-Silicon-MacBook-Pro ist eine eGPU offiziell unterstützt. Zum Experimentieren mit TinyGPU gilt als dokumentiertes Minimum eine AMD-RDNA-3+-Karte (Radeon RX 7000 oder neuer) oder eine NVIDIA-Ampere+-Karte (RTX 30 oder neuer) in einem Thunderbolt- oder USB4-Gehäuse; mit AMD entfällt der Docker-Schritt. Für den Alltag sind ein Mac mit mehr Unified Memory oder eine RTX-GPU in einem per LAN angebundenen Mini-PC die verlässlichere Wahl.' },
+          { q: 'Funktioniert das Razer Core mit einem MacBook Pro?', a: 'Nicht mit Apple Silicon. Razers Seite zum Core X V2 nennt: „eGPUs not supported by M1 & later Mac devices“. Das ursprüngliche Razer Core X erschien 2018 für Intel-Macs mit Thunderbolt 3. Ein Razer-Gehäuse an einem Apple-Silicon-Mac wäre auf den inoffiziellen TinyGPU-Treiber angewiesen, den Razer nicht aufführt.' },
+          { q: 'Kann ich dem iMac eine externe GPU hinzufügen?', a: 'Nativ nicht bei Apple-Silicon-iMacs — es gelten dieselben Grenzen wie bei MacBooks. Intel-iMacs mit Thunderbolt 3 unterstützten eGPUs unter älteren macOS-Versionen. Für lokale LLMs: Ollama auf einem separaten GPU-Rechner betreiben und per LAN verbinden.' },
+          { q: 'Kann ich eine OCuLink-eGPU an einem Mac verwenden?', a: 'Nein. Kein Mac hat einen OCuLink-Anschluss. OCuLink ist für PCs und Mini-PCs gedacht; für einen Mac bleiben eine Thunderbolt- oder USB4-eGPU mit dem experimentellen TinyGPU-Treiber oder ein OCuLink-Mini-PC im LAN.' },
+          { q: 'Wird Apple eGPU-Unterstützung für Apple Silicon zurückbringen?', a: 'Unwahrscheinlich. Apples M-Chips integrieren GPU, CPU und Speicher in einem Package — das Designprinzip ist Unified Memory, nicht Erweiterbarkeit —, und Apple hat keine Pläne angekündigt, eGPU-Compute wieder zu unterstützen.' },
+          { q: 'Kann ich eine NVIDIA-GPU für Inferenz nutzen und die Ausgabe an mein MacBook senden?', a: 'Ja — das ist der empfohlene Weg. Ollama auf einem Windows- oder Linux-Rechner mit NVIDIA-GPU betreiben, im LAN freigeben (OLLAMA_HOST=0.0.0.0) und vom MacBook über Open WebUI, Cursor, Continue oder einen anderen OpenAI-kompatiblen Client verbinden. Das MacBook übernimmt die Oberfläche, der NVIDIA-Rechner die Berechnung.' },
+        ],
       },
       relatedReading: {
         title: 'Verwandte Leitfäden',
@@ -250,6 +366,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[MLX vs Ollama vs llama.cpp: Which Backend?](/de/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
           '[How to Convert an Ollama Model to MLX](/de/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
           '[Best Local LLM for 16 GB RAM Laptop](/de/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+          '[Mac mini M5 as a Local AI Server](/de/local-llms/mac-mini-m5-local-ai-server) -- Mac mini M5 local AI server guide',
+          '[Apple Silicon M5 for Local LLMs](/de/local-llms/apple-silicon-m5-local-llm) -- M5 Pro vs Max local LLM guide',
         ],
       },
     },
@@ -257,107 +375,191 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-          {
-            '@type': 'Question',
-            'name': 'Gibt es eine Möglichkeit, eine eGPU mit einem M4 MacBook Pro für KI zu nutzen?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Nicht für GPU-Compute. macOS bietet keine API für externe GPUs für Metal-Compute-Aufgaben auf M-Series-Hardware. Die Alternative: MacBook über LAN mit einem Ollama-Server auf einem anderen Gerät (Mini-PC oder Desktop) verbinden. OLLAMA_HOST=0.0.0.0 auf dem Server setzen.',
-            },
+        {
+          '@type': 'Question',
+          'name': 'Gibt es eine Möglichkeit, eine eGPU mit einem M4 MacBook Pro für KI zu nutzen?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Ja, mit Einschränkungen. Tiny Corps TinyGPU-Treiber führt Compute auf AMD-RDNA-3+- und NVIDIA-Ampere+-GPUs über Thunderbolt oder USB4 ab macOS 13 aus. Er ist nur für tinygrad dokumentiert (nicht für Ollama, llama.cpp oder MLX), liefert keine Bildausgabe, und NVIDIA-Karten brauchen Docker Desktop. Plugable sah an einem M2 MacBook Pro kaum Verbesserung gegenüber der Basis. Für ein stabiles Setup: Ollama auf einem separaten GPU-Rechner betreiben und per LAN verbinden (OLLAMA_HOST=0.0.0.0 auf dem Server).',
           },
-          {
-            '@type': 'Question',
-            'name': 'Wird Apple eGPU-Unterstützung für Apple Silicon zurückbringen?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Unwahrscheinlich. Apples M-Series-Architektur integriert GPU, CPU und Speicher auf einem Chip — das Design-Prinzip ist Unified Memory, nicht Erweiterbarkeit. Nur der Mac Pro (2023) unterstützt GPU-Erweiterung über PCIe-Slots.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Welche eGPU ist die beste für ein MacBook Pro 16 in der Basisversion?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Für kein Apple-Silicon-MacBook-Pro ist eine eGPU offiziell unterstützt. Zum Experimentieren mit TinyGPU gilt als dokumentiertes Minimum eine AMD-RDNA-3+-Karte (Radeon RX 7000 oder neuer) oder eine NVIDIA-Ampere+-Karte (RTX 30 oder neuer) in einem Thunderbolt- oder USB4-Gehäuse; mit AMD entfällt der Docker-Schritt. Für den Alltag sind ein Mac mit mehr Unified Memory oder eine RTX-GPU in einem per LAN angebundenen Mini-PC die verlässlichere Wahl.',
           },
-          {
-            '@type': 'Question',
-            'name': 'Kann ich eine eGPU mit einem MacBook für lokale KI-Inferenz nutzen?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Nein. Apple entfernte eGPU-Compute-Unterstützung in macOS Ventura (2022). Alternative: Mac Mini M4 Pro (48 GB) oder AMD Mini-PC mit OCuLink.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Funktioniert das Razer Core mit einem MacBook Pro?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Nicht mit Apple Silicon. Razers Seite zum Core X V2 nennt: „eGPUs not supported by M1 & later Mac devices“. Das ursprüngliche Razer Core X erschien 2018 für Intel-Macs mit Thunderbolt 3. Ein Razer-Gehäuse an einem Apple-Silicon-Mac wäre auf den inoffiziellen TinyGPU-Treiber angewiesen, den Razer nicht aufführt.',
           },
-        ],
+        },
+        {
+          '@type': 'Question',
+          'name': 'Kann ich dem iMac eine externe GPU hinzufügen?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Nativ nicht bei Apple-Silicon-iMacs — es gelten dieselben Grenzen wie bei MacBooks. Intel-iMacs mit Thunderbolt 3 unterstützten eGPUs unter älteren macOS-Versionen. Für lokale LLMs: Ollama auf einem separaten GPU-Rechner betreiben und per LAN verbinden.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Kann ich eine OCuLink-eGPU an einem Mac verwenden?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Nein. Kein Mac hat einen OCuLink-Anschluss. OCuLink ist für PCs und Mini-PCs gedacht; für einen Mac bleiben eine Thunderbolt- oder USB4-eGPU mit dem experimentellen TinyGPU-Treiber oder ein OCuLink-Mini-PC im LAN.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Wird Apple eGPU-Unterstützung für Apple Silicon zurückbringen?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Unwahrscheinlich. Apples M-Chips integrieren GPU, CPU und Speicher in einem Package — das Designprinzip ist Unified Memory, nicht Erweiterbarkeit —, und Apple hat keine Pläne angekündigt, eGPU-Compute wieder zu unterstützen.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Kann ich eine NVIDIA-GPU für Inferenz nutzen und die Ausgabe an mein MacBook senden?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Ja — das ist der empfohlene Weg. Ollama auf einem Windows- oder Linux-Rechner mit NVIDIA-GPU betreiben, im LAN freigeben (OLLAMA_HOST=0.0.0.0) und vom MacBook über Open WebUI, Cursor, Continue oder einen anderen OpenAI-kompatiblen Client verbinden. Das MacBook übernimmt die Oberfläche, der NVIDIA-Rechner die Berechnung.',
+          },
+        },
+      ],
     },
-    schema: { '@type': 'TechArticle', headline: 'eGPU für MacBook und lokale KI: Was 2026 funktioniert', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/de/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'de' },
+    schema: { '@type': 'TechArticle', headline: 'eGPU für MacBook und lokale KI: Was 2026 funktioniert', datePublished: '2026-05-26', dateModified: '2026-10-17', url: 'https://www.promptquorum.com/de/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'de' },
   },
 
   fr: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-egpu-setup-for-macbook-local-llm-2026-overview-hero-fr.webp',
     type: 'how-to',
     title: 'eGPU pour MacBook et IA locale : ce qui marche en 2026',
     seoTitle: 'eGPU MacBook IA locale 2026 — Ce qui fonctionne',
-    metaDescription: 'Les MacBooks Apple Silicon ne supportent pas les eGPU pour le calcul GPU. Alternatives 2026 : Mac Mini M4 Pro, mini PC OCuLink, serveur LAN Ollama.',
+    metaDescription: 'Aucune eGPU ne fonctionne nativement sur un MacBook Apple Silicon. Options 2026 : TinyGPU (tinygrad seul), Mac mini M5 Pro ou mini PC OCuLink en LAN.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
-    leadAnswerBlock: '**Les MacBooks Apple Silicon (M2–M5) ne peuvent pas utiliser d\'eGPU pour le calcul GPU en 2026 — Apple a supprimé le support eGPU Thunderbolt dans macOS Ventura. Alternative : Mac Mini M4 Pro (48 Go de mémoire unifiée) ou mini PC AMD (UM890 Pro) avec eGPU OCuLink.**',
+    leadAnswerBlock: '**Aucune eGPU ne fonctionne nativement sur un MacBook Apple Silicon (M1–M5) : macOS n\'a pas de pilote pour les GPU externes, et Razer indique que son Core X V2 est « not supported by M1 & later Mac devices ». La seule voie est le pilote TinyGPU de Tiny Corp, que Tiny Corp dit approuvé par Apple : il exécute du calcul IA sur des eGPU AMD RDNA 3+ ou NVIDIA Ampere+ via Thunderbolt ou USB4, mais sa documentation ne couvre que tinygrad — pas Ollama, llama.cpp ni MLX. Pour une configuration prise en charge : un Mac mini M5 Pro ou un mini PC OCuLink servi sur votre réseau local.**',
     quickAnswerTop: {
-      question: 'Peut-on utiliser une eGPU avec un MacBook pour l\'inférence LLM locale ?',
-      answer: 'Non. Les MacBooks Apple Silicon (M2/M3/M4/M5) ne supportent pas les eGPU pour le calcul GPU. macOS Ventura et suivants ont supprimé ce support. Alternative : Mac Mini M4 Pro (48 Go de mémoire unifiée) ou mini PC AMD avec eGPU OCuLink.',
+      question: 'Puis-je utiliser une eGPU avec un MacBook pour l\'inférence LLM locale ?',
+      answer: 'Pas nativement. Les Mac Apple Silicon (M1–M5) n\'ont aucun pilote macOS pour les GPU externes. Depuis avril 2026, le pilote TinyGPU de Tiny Corp (calcul uniquement, sans sortie d\'affichage) permet à des GPU AMD RDNA 3+ et NVIDIA Ampere+ d\'exécuter des charges IA via Thunderbolt ou USB4, mais sa documentation ne couvre que tinygrad, et les cartes NVIDIA exigent aussi Docker Desktop. Pour une configuration stable : exécuter Ollama sur un Mac mini M5 Pro ou un mini PC OCuLink et s\'y connecter via le réseau local.',
       bullets: [
-        'MacBooks Apple Silicon : eGPU NON supporté pour le calcul GPU (macOS Ventura+)',
-        'MacBooks Intel (2015–2020) : eGPU via Thunderbolt 3 fonctionnait — mais ligne abandonnée',
-        'Meilleure alternative macOS : Mac Mini M4 Pro (48 Go de mémoire unifiée)',
-        'Meilleure combo GPU + portable : mini PC AMD (UM890 Pro) + OCuLink + RTX 3090',
-        'OCuLink offre ~80% de la bande passante PCIe x16 — pas de goulot d\'étranglement pour l\'inférence LLM',
+        'MacBook Apple Silicon (M1–M5) : pas de prise en charge native des eGPU ; Razer classe son Core X V2 comme non pris en charge sur les Mac M1 et suivants',
+        'TinyGPU (annoncé le 1er avril 2026) : calcul uniquement, AMD RDNA 3+ ou NVIDIA Ampere+, macOS 13+, pas de sortie d\'affichage',
+        'TinyGPU n\'est documenté que pour tinygrad ; Ollama, llama.cpp et MLX ne sont pas documentés comme pris en charge',
+        'Les cartes NVIDIA exigent Docker Desktop sur le Mac ; les cartes AMD fonctionnent sans',
+        'Tiny Corp annonce lui-même 18,5 tok/s sur Qwen 3.5 27B (Mac mini + RX 7900 XTX) ; Plugable a constaté peu de gain sur un MacBook Pro M2',
+        'Alternative prise en charge : Mac mini M5 Pro (dès 1 699 $, prix US, jusqu\'à 64 Go, 307 Go/s) ou mini PC OCuLink + RTX 3090 en LAN',
       ],
-      updatedDate: '2026-07',
+      updatedDate: '2026-10',
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Les MacBooks Apple Silicon ne peuvent pas utiliser les eGPU pour le calcul — Apple a supprimé la fonctionnalité dans macOS Ventura',
-          'MacBooks Intel (2018–2020) supportaient l\'eGPU via Thunderbolt 3 — ligne abandonnée',
-          'Pour macOS : acheter Mac Mini M4 Pro (48 Go) plutôt que d\'essayer une eGPU MacBook',
-          'Pour portable + GPU : mini PC AMD (UM890 Pro) + RTX 3090 via OCuLink — 60–80 tok/s avec Ollama',
-          'Les eGPU Thunderbolt 4 fonctionnent sur laptops x86 (Windows/Linux) avec ~35–45% de perte de bande passante',
+          'Aucun Mac Apple Silicon (M1–M5) ne prend en charge une eGPU nativement ; une carte branchée est détectée mais ne peut exécuter aucun calcul',
+          'TinyGPU (Tiny Corp, avril 2026) ajoute le calcul eGPU AMD et NVIDIA dès macOS 13 via Thunderbolt ou USB4 — calcul uniquement, sans affichage, documenté pour tinygrad seul',
+          'Les cartes NVIDIA exigent Docker Desktop pour l\'installation de TinyGPU ; les cartes AMD non',
+          'Pour une configuration Mac prise en charge : Mac mini M5 Pro (dès 1 699 $, prix US, jusqu\'à 64 Go de mémoire unifiée)',
+          'Pour la vitesse GPU : mini PC OCuLink + RTX 3090, servi au MacBook via le réseau local avec Ollama',
+          'OCuLink est du PCIe 4.0 x4 (environ 63 Gb/s) — un quart d\'un slot x16, suffisant une fois le modèle en VRAM ; aucun Mac n\'a de port OCuLink',
         ],
       },
       mainContent: {
-        title: 'Pourquoi l\'eGPU ne fonctionne pas sur MacBook en 2026',
+        title: 'eGPU sur les Mac Apple Silicon en 2026 : ce qui a changé',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Les eGPU ne fonctionnent pas pour l\'inférence LLM accélérée GPU sur les MacBooks Apple Silicon en 2026 car Apple a supprimé le support eGPU Thunderbolt dans macOS Ventura (2022).',
+            text: 'Les Mac Apple Silicon n\'ont aucune prise en charge native des GPU externes, mais depuis avril 2026 le pilote TinyGPU de Tiny Corp peut exécuter du calcul IA sur des eGPU AMD et NVIDIA via Thunderbolt ou USB4 — documenté uniquement pour tinygrad.',
           },
           {
             type: 'plain-terms',
-            text: 'Une eGPU est une carte graphique externe connectée via Thunderbolt ou OCuLink. Sur un MacBook avec puce M d\'Apple, le GPU est intégré dans la puce — on ne peut pas ajouter de GPU externe pour des tâches de calcul. Metal (l\'API GPU d\'Apple) ne s\'étend pas aux GPU externes sur le matériel M-series.',
+            text: 'Une eGPU est une carte graphique externe dans un boîtier relié en Thunderbolt, USB4 ou OCuLink. macOS sur puces M n\'a pas de pilote pour elle : une carte branchée est détectée mais ne peut exécuter aucun calcul. TinyGPU est une app macOS de Tiny Corp qui installe une extension DriverKit (que Tiny Corp dit approuvée par Apple) pour activer le calcul sur la carte. Elle ne pilote aucun écran et n\'utilise pas Metal.',
           },
         ],
-        content: 'Apple a supprimé le support eGPU Thunderbolt dans macOS Ventura (octobre 2022). Tous les MacBooks Apple Silicon (M1–M5) tournent sur cette version ou ultérieure. Même si une eGPU est connectée physiquement, macOS n\'utilisera pas le GPU externe pour le calcul.',
+        content: 'Sans pilote tiers, un Mac Apple Silicon détecte un GPU externe mais ne peut pas l\'utiliser, selon Plugable. La page du Core X V2 de Razer indique « eGPUs not supported by M1 & later Mac devices ». Le 1er avril 2026, Tiny Corp a annoncé qu\'Apple avait approuvé son pilote TinyGPU pour AMD et NVIDIA. Selon la documentation de tinygrad, TinyGPU exige macOS 13.0 ou plus, un GPU AMD RDNA 3+ ou NVIDIA Ampere+ et un port USB4 ou Thunderbolt ; l\'installation NVIDIA exige en plus Docker Desktop. La charge documentée est le lanceur LLM de tinygrad, et selon heise le pilote ne fonctionne pas avec MLX d\'Apple. Tiny Corp a annoncé 18,5 tok/s pour Qwen 3.5 27B sur un Mac mini avec une Radeon RX 7900 XTX — une donnée du fabricant, pas un benchmark indépendant. Plugable a testé une Radeon 9070 et une GeForce RTX 5070 dans un boîtier Thunderbolt 5 sur un MacBook Pro M2 et a constaté peu d\'amélioration par rapport à la base.',
         items: [
-          '**macOS 13 Ventura (2022)** : Support eGPU supprimé. Tous les Macs Apple Silicon concernés.',
-          '**macOS 14 Sonoma, 15 Sequoia** : Toujours pas de support eGPU pour le calcul.',
-          '**MacBooks Intel (2018–2020)** : eGPU fonctionnait via Thunderbolt 3 sur les anciens macOS.',
+          '**Apple Silicon (M1–M5)** : pas de prise en charge native des eGPU — une carte branchée est détectée mais ne peut exécuter aucun calcul.',
+          '**TinyGPU (annoncé le 1er avril 2026)** : app de pilote tierce de Tiny Corp ; AMD RDNA 3+ et NVIDIA Ampere+ via Thunderbolt ou USB4 ; macOS 13.0+.',
+          '**Périmètre** : calcul uniquement — pas de sortie d\'affichage, pas de Metal, pas de jeu ; prise en charge logicielle documentée pour tinygrad seul.',
+          '**Cartes NVIDIA** : la configuration du compilateur exige Docker Desktop ; les cartes AMD fonctionnent nativement.',
+          '**MacBook Intel (2018–2020)** : l\'eGPU fonctionnait via Thunderbolt 3 sous d\'anciennes versions de macOS ; ces Mac sont abandonnés.',
+        ],
+      },
+      connections: {
+        id: 'connections',
+        title: 'OCuLink, Thunderbolt et USB4 pour un GPU externe : comparatif',
+        content: '**OCuLink offre à un GPU externe le plus de bande passante par euro, mais uniquement sur PC — aucun Mac n\'a de port OCuLink.** Thunderbolt 4 et USB4 se branchent à chaud et fonctionnent sur portable, avec un débit de liaison plus faible. Une fois le modèle en VRAM, la génération de tokens dépend surtout de la bande passante mémoire du GPU ; la liaison influe surtout sur le chargement du modèle. Choisissez un mini PC avec port OCuLink (par exemple Minisforum UM890 Pro ou AOOSTAR GEM12+ Pro) si le GPU reste sur un bureau ; un boîtier Thunderbolt seulement pour un portable que l\'on emporte.',
+        columns: ['Liaison', 'Débit nominal', 'Branchement à chaud', 'Usage typique'],
+        rows: [
+          {
+            'Liaison': 'OCuLink 4i (PCIe 4.0 x4)',
+            'Débit nominal': '~63 Gb/s',
+            'Branchement à chaud': 'Non (éteindre avant)',
+            'Usage typique': 'Mini PC + dock GPU',
+          },
+          {
+            'Liaison': 'Thunderbolt 4 / USB4 40G',
+            'Débit nominal': '40 Gb/s',
+            'Branchement à chaud': 'Oui',
+            'Usage typique': 'Portable + boîtier',
+          },
+          {
+            'Liaison': 'Thunderbolt 5',
+            'Débit nominal': '80 Gb/s (120 Gb/s en boost)',
+            'Branchement à chaud': 'Oui',
+            'Usage typique': 'PC et Mac récents',
+          },
+          {
+            'Liaison': 'USB4 20G',
+            'Débit nominal': '20 Gb/s',
+            'Branchement à chaud': 'Oui',
+            'Usage typique': 'Débit le plus faible',
+          },
         ],
       },
       alternatives: {
         title: 'Vraies alternatives pour l\'inférence GPU sur Mac',
         productItems: [
           {
-            title: 'Mac Mini M4 Pro (48 Go) — Meilleure option macOS',
-            content: 'Le Mac Mini M4 Pro avec 48 Go de mémoire unifiée fait tourner Qwen3 32B Q4 à 20–30 tok/s via le backend Metal d\'Ollama. Prix : ~1399 €. Si macOS est requis et que vous avez besoin de modèles 32B+, c\'est la bonne mise à niveau — pas une eGPU.',
+            title: 'Mac mini M5 Pro (jusqu\'à 64 Go) — Meilleure option macOS',
+            content: 'Le Mac mini M5 Pro d\'Apple (disponible depuis le 22 septembre 2026) démarre à 1 699 $ (prix US) et offre jusqu\'à 64 Go de mémoire unifiée à 307 Go/s. La génération de tokens est limitée par la bande passante mémoire : un modèle 32B Q4 d\'environ 19–20 Go a un plafond théorique proche de 15 tok/s à cette bande passante ; les vitesses réelles sont inférieures. À choisir pour des modèles de classe 32B qui doivent tenir en mémoire sans machine GPU séparée. Le Mac mini M6 de base (dès 899 $, jusqu\'à 32 Go, 170 Go/s) convient aux modèles 7B–14B.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Mac+Mini+M4+Pro' },
+              { label: 'Apple Mac Mini M5 Pro sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Mac+Mini+M5+Pro' },
             ],
           },
           {
-            title: 'Mini PC AMD + eGPU OCuLink (Meilleure combo GPU/portable)',
-            content: 'L\'AOOSTAR GEM12 Pro OCuLink (AMD Ryzen 9 8945HS, ~480 €) se connecte à une RTX 3090 via OCuLink (PCIe 4.0 x4, 64 Gbps — ~80% de la bande passante x16). Ollama sur Linux ou Windows avec CUDA tourne à 65–85 tok/s sur 7B Q4 avec une RTX 3090. Le mini PC est assez petit pour tenir sur un bureau à côté d\'un MacBook et sert Ollama via LAN.',
+            title: 'Mini PC OCuLink + RTX 3090 (Meilleure combo GPU/portable)',
+            content: 'Un mini PC avec port OCuLink — comme le Minisforum UM890 Pro (Ryzen 9 8945HS, barebone dès 479 $ à son lancement en 2024) ou l\'AOOSTAR GEM12+ Pro (barebone listé autour de 359 $) — se relie à un GPU de bureau via un dock OCuLink. OCuLink ne se branche pas à chaud : éteignez le PC avant de connecter. Des benchmarks communautaires llama.cpp indiquent environ 90–95 tok/s pour un modèle 8B Q4_K_M sur une RTX 3090 ; les sources divergent et les résultats dépendent de la longueur de contexte et de la version. Exécutez Ollama sur le mini PC et servez-le en LAN ; le MacBook reste le client.',
             affiliateLinks: [
               { label: 'AOOSTAR GEM12 Pro OCuLink sur Amazon.fr', url: 'https://www.amazon.fr/s?k=AOOSTAR+GEM12+Pro' },
+              { label: 'Minisforum UM890 Pro sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Minisforum+UM890+Pro' },
+            ],
+          },
+          {
+            title: 'Pilote TinyGPU + eGPU sur Mac Apple Silicon (expérimental)',
+            content: 'Le pilote TinyGPU de Tiny Corp active le calcul sur des eGPU AMD RDNA 3+ et NVIDIA Ampere+ via Thunderbolt ou USB4 sous macOS 13+. Il n\'est documenté que pour tinygrad (lancement avec DEV=AMD ou DEV=NV python3 -m tinygrad.llm), les cartes NVIDIA exigent Docker Desktop, et Plugable a constaté peu d\'amélioration par rapport à la base sur un MacBook Pro M2. C\'est un pilote tiers, pas une prise en charge Metal native ; attendez-vous à des changements de compatibilité au fil de macOS. À traiter comme une expérience, pas comme une configuration quotidienne.',
+            affiliateLinks: [
+              { label: 'eGPU RTX 4090 sur Amazon.fr (pour TinyGPU)', url: 'https://www.amazon.fr/s?k=RTX+4090+eGPU+enclosure' },
+            ],
+          },
+          {
+            title: 'eGPU Thunderbolt sur portable Windows/Linux (hors Mac)',
+            content: 'Sur un portable x86 Windows ou Linux avec Thunderbolt 4 ou 5, une eGPU fonctionne avec Ollama. La liaison est plus lente qu\'un slot PCIe natif, mais une fois le modèle en VRAM, la génération de tokens dépend surtout de la bande passante mémoire du GPU ; les pertes réelles sont plus faibles que l\'écart de liaison ne le laisse penser. Le Razer Core X V2 (349,99 $, Thunderbolt 5, alimentation non incluse) est conçu pour Windows ; la page de Razer indique que les eGPU ne sont pas pris en charge sur les Mac M1 et suivants.',
+            affiliateLinks: [
+              { label: 'Boîtier eGPU Razer Core X V2 sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Razer+Core+X+V2' },
+              { label: 'Razer Core X (original) sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Razer+Core+X+eGPU' },
             ],
           },
         ],
@@ -365,10 +567,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-            { q: 'Y a-t-il un moyen de faire fonctionner une eGPU avec un M4 MacBook Pro pour l\'IA ?', a: 'Pas pour le calcul GPU. macOS ne fournit pas d\'API pour les GPU externes pour les tâches Metal sur le matériel M-series. L\'alternative : connecter le MacBook à un serveur Ollama sur une autre machine via LAN. Définissez OLLAMA_HOST=0.0.0.0 sur le serveur.' },
-            { q: 'Apple réintroduira-t-il le support eGPU pour Apple Silicon ?', a: 'Peu probable. L\'architecture M-series d\'Apple intègre GPU, CPU et mémoire sur une seule puce — la philosophie de conception est la mémoire unifiée, pas l\'extensibilité. Seul le Mac Pro (2023) supporte l\'expansion GPU.' },
-            { q: 'Peut-on utiliser une eGPU avec un MacBook pour l\'inférence LLM locale ?', a: 'Non. Apple a supprimé le support eGPU dans macOS Ventura (2022). Alternatives : Mac Mini M4 Pro (48 Go) ou mini PC AMD avec OCuLink.' },
-          ],
+          { q: 'Existe-t-il un moyen de faire fonctionner une eGPU avec un MacBook Pro M4 pour l\'IA ?', a: 'Oui, avec des limites. Le pilote TinyGPU de Tiny Corp exécute du calcul sur des GPU AMD RDNA 3+ et NVIDIA Ampere+ via Thunderbolt ou USB4 sous macOS 13+. Il n\'est documenté que pour tinygrad (pas pour Ollama, llama.cpp ni MLX), n\'offre aucune sortie d\'affichage, et les cartes NVIDIA exigent Docker Desktop. Plugable a constaté peu d\'amélioration par rapport à la base sur un MacBook Pro M2. Pour une configuration stable : exécuter Ollama sur une machine GPU séparée et s\'y connecter via le réseau local (OLLAMA_HOST=0.0.0.0 sur le serveur).' },
+          { q: 'Quelle est la meilleure eGPU pour un MacBook Pro 16 de base ?', a: 'Aucune eGPU n\'est officiellement prise en charge sur un MacBook Pro Apple Silicon. Pour expérimenter TinyGPU, le minimum documenté est une carte AMD RDNA 3+ (Radeon RX 7000 ou plus récente) ou NVIDIA Ampere+ (RTX 30 ou plus récente) dans un boîtier Thunderbolt ou USB4 ; AMD évite l\'étape Docker. Au quotidien, un Mac avec plus de mémoire unifiée ou un GPU RTX dans un mini PC relié en LAN est le choix le plus fiable.' },
+          { q: 'Le Razer Core fonctionne-t-il avec un MacBook Pro ?', a: 'Pas sur Apple Silicon. La page du Core X V2 de Razer indique « eGPUs not supported by M1 & later Mac devices ». Le Razer Core X d\'origine est sorti en 2018 pour les Mac Intel avec Thunderbolt 3. Un boîtier Razer sur un Mac Apple Silicon dépendrait du pilote non officiel TinyGPU, que Razer ne mentionne pas.' },
+          { q: 'Puis-je ajouter une GPU externe à un iMac ?', a: 'Pas nativement sur les iMac Apple Silicon — mêmes limites que pour les MacBook. Les iMac Intel avec Thunderbolt 3 géraient les eGPU sous d\'anciennes versions de macOS. Pour les LLM locaux : exécuter Ollama sur une machine GPU séparée et s\'y connecter via le réseau local.' },
+          { q: 'Puis-je utiliser une eGPU OCuLink avec un Mac ?', a: 'Non. Aucun Mac n\'a de port OCuLink. OCuLink est conçu pour les PC et mini PC ; pour un Mac, les options sont une eGPU Thunderbolt ou USB4 avec le pilote expérimental TinyGPU, ou un mini PC OCuLink servi en LAN.' },
+          { q: 'Apple rétablira-t-il la prise en charge eGPU pour Apple Silicon ?', a: 'Peu probable. Les puces M d\'Apple intègrent GPU, CPU et mémoire dans un seul boîtier — le principe est la mémoire unifiée, pas l\'extensibilité — et Apple n\'a annoncé aucun projet de rétablir le calcul eGPU.' },
+          { q: 'Puis-je utiliser un GPU NVIDIA pour l\'inférence et envoyer le résultat à mon MacBook ?', a: 'Oui — c\'est l\'approche recommandée. Exécutez Ollama sur une machine Windows ou Linux avec GPU NVIDIA, exposez-le sur votre réseau local (OLLAMA_HOST=0.0.0.0) et connectez-vous depuis le MacBook via Open WebUI, Cursor, Continue ou tout client compatible OpenAI. Le MacBook gère l\'interface ; la machine NVIDIA fait le calcul.' },
+        ],
       },
       relatedReading: {
         title: 'Guides associés',
@@ -377,6 +583,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[MLX vs Ollama vs llama.cpp: Which Backend?](/fr/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
           '[How to Convert an Ollama Model to MLX](/fr/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
           '[Best Local LLM for 16 GB RAM Laptop](/fr/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+          '[Mac mini M5 as a Local AI Server](/fr/local-llms/mac-mini-m5-local-ai-server) -- Mac mini M5 local AI server guide',
+          '[Apple Silicon M5 for Local LLMs](/fr/local-llms/apple-silicon-m5-local-llm) -- M5 Pro vs Max local LLM guide',
         ],
       },
     },
@@ -384,107 +592,191 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-          {
-            '@type': 'Question',
-            'name': 'Y a-t-il un moyen de faire fonctionner une eGPU avec un M4 MacBook Pro pour l\'IA ?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Pas pour le calcul GPU. macOS ne fournit pas d\'API pour les GPU externes pour les tâches Metal sur le matériel M-series. L\'alternative : connecter le MacBook à un serveur Ollama sur une autre machine via LAN. Définissez OLLAMA_HOST=0.0.0.0 sur le serveur.',
-            },
+        {
+          '@type': 'Question',
+          'name': 'Existe-t-il un moyen de faire fonctionner une eGPU avec un MacBook Pro M4 pour l\'IA ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Oui, avec des limites. Le pilote TinyGPU de Tiny Corp exécute du calcul sur des GPU AMD RDNA 3+ et NVIDIA Ampere+ via Thunderbolt ou USB4 sous macOS 13+. Il n\'est documenté que pour tinygrad (pas pour Ollama, llama.cpp ni MLX), n\'offre aucune sortie d\'affichage, et les cartes NVIDIA exigent Docker Desktop. Plugable a constaté peu d\'amélioration par rapport à la base sur un MacBook Pro M2. Pour une configuration stable : exécuter Ollama sur une machine GPU séparée et s\'y connecter via le réseau local (OLLAMA_HOST=0.0.0.0 sur le serveur).',
           },
-          {
-            '@type': 'Question',
-            'name': 'Apple réintroduira-t-il le support eGPU pour Apple Silicon ?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Peu probable. L\'architecture M-series d\'Apple intègre GPU, CPU et mémoire sur une seule puce — la philosophie de conception est la mémoire unifiée, pas l\'extensibilité. Seul le Mac Pro (2023) supporte l\'expansion GPU.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Quelle est la meilleure eGPU pour un MacBook Pro 16 de base ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Aucune eGPU n\'est officiellement prise en charge sur un MacBook Pro Apple Silicon. Pour expérimenter TinyGPU, le minimum documenté est une carte AMD RDNA 3+ (Radeon RX 7000 ou plus récente) ou NVIDIA Ampere+ (RTX 30 ou plus récente) dans un boîtier Thunderbolt ou USB4 ; AMD évite l\'étape Docker. Au quotidien, un Mac avec plus de mémoire unifiée ou un GPU RTX dans un mini PC relié en LAN est le choix le plus fiable.',
           },
-          {
-            '@type': 'Question',
-            'name': 'Peut-on utiliser une eGPU avec un MacBook pour l\'inférence LLM locale ?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Non. Apple a supprimé le support eGPU dans macOS Ventura (2022). Alternatives : Mac Mini M4 Pro (48 Go) ou mini PC AMD avec OCuLink.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Le Razer Core fonctionne-t-il avec un MacBook Pro ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Pas sur Apple Silicon. La page du Core X V2 de Razer indique « eGPUs not supported by M1 & later Mac devices ». Le Razer Core X d\'origine est sorti en 2018 pour les Mac Intel avec Thunderbolt 3. Un boîtier Razer sur un Mac Apple Silicon dépendrait du pilote non officiel TinyGPU, que Razer ne mentionne pas.',
           },
-        ],
+        },
+        {
+          '@type': 'Question',
+          'name': 'Puis-je ajouter une GPU externe à un iMac ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Pas nativement sur les iMac Apple Silicon — mêmes limites que pour les MacBook. Les iMac Intel avec Thunderbolt 3 géraient les eGPU sous d\'anciennes versions de macOS. Pour les LLM locaux : exécuter Ollama sur une machine GPU séparée et s\'y connecter via le réseau local.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Puis-je utiliser une eGPU OCuLink avec un Mac ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Non. Aucun Mac n\'a de port OCuLink. OCuLink est conçu pour les PC et mini PC ; pour un Mac, les options sont une eGPU Thunderbolt ou USB4 avec le pilote expérimental TinyGPU, ou un mini PC OCuLink servi en LAN.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Apple rétablira-t-il la prise en charge eGPU pour Apple Silicon ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Peu probable. Les puces M d\'Apple intègrent GPU, CPU et mémoire dans un seul boîtier — le principe est la mémoire unifiée, pas l\'extensibilité — et Apple n\'a annoncé aucun projet de rétablir le calcul eGPU.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Puis-je utiliser un GPU NVIDIA pour l\'inférence et envoyer le résultat à mon MacBook ?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Oui — c\'est l\'approche recommandée. Exécutez Ollama sur une machine Windows ou Linux avec GPU NVIDIA, exposez-le sur votre réseau local (OLLAMA_HOST=0.0.0.0) et connectez-vous depuis le MacBook via Open WebUI, Cursor, Continue ou tout client compatible OpenAI. Le MacBook gère l\'interface ; la machine NVIDIA fait le calcul.',
+          },
+        },
+      ],
     },
-    schema: { '@type': 'TechArticle', headline: 'eGPU pour MacBook et IA locale : ce qui marche en 2026', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/fr/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'fr' },
+    schema: { '@type': 'TechArticle', headline: 'eGPU pour MacBook et IA locale : ce qui marche en 2026', datePublished: '2026-05-26', dateModified: '2026-10-17', url: 'https://www.promptquorum.com/fr/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'fr' },
   },
 
   ja: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-egpu-setup-for-macbook-local-llm-2026-overview-hero-ja.webp',
     type: 'how-to',
     title: 'MacBook eGPUとローカルAI：2026年に動作するもの',
     seoTitle: 'MacBook eGPU ローカルLLM 2026—代替案と解説',
-    metaDescription: 'Apple SiliconのMacBookはeGPUでのGPUコンピュートに対応していません。2026年の代替案：Mac Mini M4 Pro、OCuLink対応AMDミニPC、LAN経由Ollamaサーバー。',
+    metaDescription: 'Apple Silicon搭載MacBookでeGPUはネイティブ動作しません。2026年の選択肢：TinyGPU（tinygradのみ）、Mac mini M5 Pro、LAN経由のOCuLinkミニPC。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
-    leadAnswerBlock: '**Apple Silicon搭載MacBook（M2〜M5）は2026年現在eGPUをGPUコンピュートに使用できません——AppleはmacOS VenturaでThunderbolt eGPUサポートを廃止しました。代替案：Mac Mini M4 Pro（48GB統合メモリ）またはOCuLink対応AMDミニPC（UM890 Pro）。**',
+    leadAnswerBlock: '**Apple Silicon搭載MacBook（M1〜M5）では、eGPUはネイティブに動作しません。macOSには外部GPU用ドライバがなく、RazerもCore X V2を「not supported by M1 & later Mac devices」としています。唯一の経路はTiny CorpのTinyGPUドライバ（Tiny Corpによれば、Appleが承認済み）で、ThunderboltまたはUSB4経由でAMD RDNA 3以降／NVIDIA Ampere以降のeGPUでAI計算を実行できますが、ドキュメントがあるのはtinygradのみで、Ollama・llama.cpp・MLXは対象外です。サポートされる構成としては、Mac mini M5 Proか、LAN経由で提供するOCuLinkミニPCを使います。**',
     quickAnswerTop: {
-      question: 'MacBookのeGPUをローカルLLM推論に使えますか？',
-      answer: 'いいえ。Apple Silicon MacBook（M2/M3/M4/M5）はGPUコンピュートにeGPUを使用できません。macOS Ventura以降でThunderbolt eGPUサポートが完全廃止されました。代替案：Mac Mini M4 Pro（48GB統合メモリ）またはOCuLink eGPU対応AMDミニPC。',
+      question: 'MacBookでローカルLLM推論にeGPUを使えますか？',
+      answer: 'ネイティブでは使えません。Apple SiliconのMac（M1〜M5）には外部GPU用のmacOSドライバがありません。2026年4月以降、Tiny CorpのTinyGPUドライバ（計算専用、映像出力なし）により、AMD RDNA 3以降とNVIDIA Ampere以降のGPUでThunderboltまたはUSB4経由のAIワークロードが可能になりましたが、ドキュメントがあるのはtinygradのみで、NVIDIAカードにはDocker Desktopも必要です。安定した構成にするなら、Mac mini M5 ProまたはOCuLinkミニPCでOllamaを動かし、LAN経由で接続してください。',
       bullets: [
-        'Apple Silicon MacBook：GPUコンピュートへのeGPU使用不可（macOS Ventura以降）',
-        'Intel MacBook（2015〜2020）：Thunderbolt 3経由のeGPUは動作していた——ただし廃止済み',
-        'macOS最良代替案：Mac Mini M4 Pro（48GB統合メモリ）',
-        '最良GPU+携帯性：AMDミニPC（UM890 Pro）+ OCuLink + RTX 3090',
-        'OCuLinkはPCIe x16帯域幅の約80%を提供——LLM推論でのボトルネックなし',
+        'Apple Silicon搭載MacBook（M1〜M5）：eGPUのネイティブ対応なし。RazerはCore X V2をM1以降のMacで非対応と記載',
+        'TinyGPU（2026年4月1日発表）：計算専用、AMD RDNA 3以降またはNVIDIA Ampere以降、macOS 13以降、映像出力なし',
+        'TinyGPUのドキュメントはtinygradのみ。Ollama・llama.cpp・MLXは対応として記載されていません',
+        'NVIDIAカードはMacにDocker Desktopが必要。AMDカードは不要',
+        'Tiny Corp自己申告でQwen 3.5 27Bが18.5 tok/s（Mac mini + RX 7900 XTX）。PlugableはM2 MacBook Proでベースラインからの改善は小さいと報告',
+        'サポートされる代替：Mac mini M5 Pro（米国価格1,699ドルから、最大64GB、307GB/s）またはOCuLinkミニPC + RTX 3090（LAN経由）',
       ],
-      updatedDate: '2026-07',
+      updatedDate: '2026-10',
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Apple Silicon MacBookはeGPUコンピュートに対応していない——AppleがmacOS Venturaで廃止',
-          'Intel MacBook（2018〜2020）はThunderbolt 3 eGPUをサポートしていたが機種は廃止',
-          'macOS向け：eGPUのMacBook拡張を試みるよりMac Mini M4 Pro（48GB）を購入する',
-          'ポータブル+GPU向け：AMDミニPC（UM890 Pro）+ RTX 3090 via OCuLink——Ollamaで60〜80 tok/s',
-          'x86ラップトップ（Windows/Linux）のThunderbolt 4 eGPUは動作——帯域幅ペナルティ約35〜45%',
+          'Apple SiliconのMac（M1〜M5）はeGPUをネイティブにサポートしません。接続したカードは認識されますが、処理は実行できません',
+          'TinyGPU（Tiny Corp、2026年4月）はmacOS 13以降でThunderboltまたはUSB4経由のAMD／NVIDIA eGPU計算を追加します。計算専用で映像出力なし、ドキュメントはtinygradのみ',
+          'TinyGPUのセットアップでNVIDIAカードにはDocker Desktopが必要。AMDカードは不要',
+          'サポートされるMac構成：Mac mini M5 Pro（米国価格1,699ドルから、最大64GBユニファイドメモリ）',
+          'GPU速度が必要なら：OCuLinkミニPC + RTX 3090をOllamaでLAN経由でMacBookに提供',
+          'OCuLinkはPCIe 4.0 x4（約63Gbps）でx16スロットの4分の1ですが、モデルがVRAMに載れば十分です。OCuLinkポートを持つMacはありません',
         ],
       },
       mainContent: {
-        title: '2026年にMacBookでeGPUが動作しない理由',
+        title: 'Apple Silicon MacのeGPU 2026年：何が変わったか',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'eGPUは2026年のApple Silicon MacBookでGPU加速ローカルLLM推論に使用できません。AppleがmacOS Ventura（2022年）でThunderbolt eGPUコンピュートサポートを廃止したためです。',
+            text: 'Apple SiliconのMacに外部GPUのネイティブ対応はありませんが、2026年4月以降、Tiny CorpのTinyGPUドライバによりThunderboltまたはUSB4経由でAMD・NVIDIAのeGPUでAI計算が可能になりました（ドキュメントはtinygradのみ）。',
           },
           {
             type: 'plain-terms',
-            text: 'eGPUはThunderboltまたはOCuLink経由で接続する外付けグラフィックカードです。AppleのMシリーズチップ搭載MacBookではGPUがチップに統合されており、外付けGPUをコンピュートタスクに追加使用できません。AppleのGPU API「Metal」はMシリーズハードウェアで外付けGPUに対応していません。',
+            text: 'eGPUとは、Thunderbolt、USB4、OCuLinkで接続する筐体入りの外付けグラフィックスカードです。MシリーズチップのmacOSには対応ドライバがないため、接続したカードは認識されても処理は実行できません。TinyGPUはTiny CorpのmacOSアプリで、DriverKit拡張（Tiny CorpによればAppleが承認）をインストールしてカードでの計算を可能にします。ディスプレイ出力はなく、Metalも使いません。',
           },
         ],
-        content: 'AppleはmacOS Ventura（2022年10月リリース）でThunderbolt eGPUサポートを廃止しました。すべてのApple Silicon MacBook（M1〜M5）はこれ以降のmacOSで動作します。eGPUを物理接続しても、macOSは外付けGPUをGPUコンピュートに使用しません。',
+        content: 'Plugableによれば、サードパーティ製ドライバがない場合、Apple SiliconのMacは外部GPUを認識しても使用できません。RazerのCore X V2のページには「eGPUs not supported by M1 & later Mac devices」とあります。2026年4月1日、Tiny CorpはAppleがAMDおよびNVIDIA向けTinyGPUドライバを承認したと発表しました。tinygradのドキュメントによると、TinyGPUにはmacOS 13.0以降、AMD RDNA 3以降またはNVIDIA Ampere以降のGPU、USB4またはThunderboltポートが必要で、NVIDIAのセットアップにはDocker Desktopも必要です。ドキュメントにあるのはtinygradのLLMランナーで、heiseによればAppleのMLXでは動作しません。Tiny CorpはMac miniとRadeon RX 7900 XTXでQwen 3.5 27Bが18.5 tok/sと報告していますが、これはメーカー報告の数値であり独立したベンチマークではありません。PlugableはM2 MacBook ProでRadeon 9070とGeForce RTX 5070をThunderbolt 5筐体でテストし、ベースラインからの改善は小さいとしています。',
         items: [
-          '**macOS 13 Ventura（2022年）**：eGPUサポート廃止。すべてのApple Silicon Macに影響。',
-          '**macOS 14 Sonoma、15 Sequoia**：引き続きeGPUコンピュートサポートなし。',
-          '**Intel MacBook（2018〜2020年）**：旧macOSでThunderbolt 3 eGPUが動作していた。',
+          '**Apple Silicon（M1〜M5）**：eGPUのネイティブ対応なし。接続したカードは認識されるが処理は実行できない。',
+          '**TinyGPU（2026年4月1日発表）**：Tiny Corp製のサードパーティ製ドライバアプリ。ThunderboltまたはUSB4経由でAMD RDNA 3以降とNVIDIA Ampere以降に対応、macOS 13.0以降。',
+          '**対象範囲**：計算専用。映像出力なし、Metalなし、ゲーム不可。ソフトウェア対応はtinygradのみ記載。',
+          '**NVIDIAカード**：コンパイラのセットアップにDocker Desktopが必要。AMDカードはネイティブ動作。',
+          '**Intel MacBook（2018〜2020年）**：古いmacOSではThunderbolt 3経由でeGPUが動作。これらのMacは販売終了。',
+        ],
+      },
+      connections: {
+        id: 'connections',
+        title: '外部GPUの接続方式：OCuLink・Thunderbolt・USB4の比較',
+        content: '**OCuLinkは外部GPUにコストあたり最も広い帯域を与えますが、PC限定です。OCuLinkポートを持つMacはありません。** Thunderbolt 4とUSB4はホットプラグ対応でノートPCでも使えますが、リンク速度は低めです。モデルがVRAMに載った後のトークン生成は主にGPU自身のメモリ帯域で決まり、リンクが影響するのは主にモデルの読み込みです。GPUを机に置いたままにするならOCuLinkポート付きミニPC（Minisforum UM890 ProやAOOSTAR GEM12+ Proなど）を、持ち歩くノートPCにだけThunderbolt筐体を選んでください。',
+        columns: ['接続方式', '公称帯域', 'ホットプラグ', '主な用途'],
+        rows: [
+          {
+            '接続方式': 'OCuLink 4i（PCIe 4.0 x4）',
+            '公称帯域': '約63Gbps',
+            'ホットプラグ': '不可（電源OFF）',
+            '主な用途': 'ミニPC + GPUドック',
+          },
+          {
+            '接続方式': 'Thunderbolt 4 / USB4 40G',
+            '公称帯域': '40Gbps',
+            'ホットプラグ': '可',
+            '主な用途': 'ノートPC + 筐体',
+          },
+          {
+            '接続方式': 'Thunderbolt 5',
+            '公称帯域': '80Gbps（ブースト120Gbps）',
+            'ホットプラグ': '可',
+            '主な用途': '新しいPC・Mac',
+          },
+          {
+            '接続方式': 'USB4 20G',
+            '公称帯域': '20Gbps',
+            'ホットプラグ': '可',
+            '主な用途': '最も低い帯域',
+          },
         ],
       },
       alternatives: {
         title: 'Mac上のGPU推論のための実際の代替案',
         productItems: [
           {
-            title: 'Mac Mini M4 Pro（48GB）——最良macOS選択肢',
-            content: 'Mac Mini M4 Pro（48GB統合メモリ、約18万円）はOllamaのMetalバックエンドを通じてQwen3 32B Q4を20〜30 tok/sで実行できます。macOS環境が必要で32B以上のモデル能力が求められる場合、eGPUではなくこれがアップグレードパスです。',
+            title: 'Mac mini M5 Pro（最大64GB）——最良のmacOS選択肢',
+            content: 'AppleのMac mini M5 Pro（2026年9月22日発売）は米国価格1,699ドルからで、最大64GBのユニファイドメモリ（307GB/s）を搭載します。トークン生成はメモリ帯域に制約され、約19〜20GBの32B Q4モデルは、この帯域での理論上限が約15 tok/sです。実測はこれより低くなります。別のGPUマシンなしで32Bクラスのモデルをメモリに載せたい場合に適します。ベースのMac mini M6（899ドルから、最大32GB、170GB/s）は7B〜14Bモデル向けです。',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Mac+Mini+M4+Pro' },
+              { label: 'Apple Mac Mini M5 Pro（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=Mac+Mini+M5+Pro' },
             ],
           },
           {
-            title: 'AMDミニPC + OCuLink eGPU（最良GPU/ポータブルコンボ）',
-            content: 'AOOSTAR GEM12 Pro OCuLink（AMD Ryzen 9 8945HS、約4万8000円）はOCuLink（PCIe 4.0 x4、64Gbps——x16スロット帯域幅の約80%）経由でRTX 3090またはRTX 4090と接続できます。Linux/WindowsのOllamaはCUDAでRTX 3090使用時に7B Q4で65〜85 tok/sを実現。このミニPCはMacBookの隣に置けるサイズで、LAN越しにOllamaを提供します。',
+            title: 'OCuLinkミニPC + RTX 3090（最良のGPU／ポータブル構成）',
+            content: 'OCuLinkポート付きミニPC（例：Minisforum UM890 Pro＝Ryzen 9 8945HS、2024年発売時のベアボーンは479ドルから。AOOSTAR GEM12+ Pro＝ベアボーン約359ドルで掲載）を、OCuLinkドック経由でデスクトップ用GPUに接続します。OCuLinkはホットスワップ不可なので、接続前にPCの電源を切ってください。コミュニティのllama.cppベンチマークでは、RTX 3090で8B Q4_K_Mモデルがおおよそ90〜95 tok/sと報告されていますが、情報源により差があり、コンテキスト長やビルドに依存します。ミニPCでOllamaを動かしLANで提供し、MacBookはクライアントのままにします。',
             affiliateLinks: [
-              { label: 'AOOSTAR GEM12 Pro OCuLink をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=AOOSTAR+GEM12+Pro' },
+              { label: 'AOOSTAR GEM12 Pro OCuLink（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=AOOSTAR+GEM12+Pro' },
+              { label: 'Minisforum UM890 Pro（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=Minisforum+UM890+Pro' },
+            ],
+          },
+          {
+            title: 'TinyGPUドライバ + Apple Silicon MacのeGPU（実験的）',
+            content: 'Tiny CorpのTinyGPUドライバは、macOS 13以降でThunderboltまたはUSB4経由のAMD RDNA 3以降／NVIDIA Ampere以降のeGPUでの計算を可能にします。ドキュメントがあるのはtinygradのみ（DEV=AMDまたはDEV=NV python3 -m tinygrad.llmで実行）で、NVIDIAカードにはDocker Desktopが必要です。PlugableはM2 MacBook Proでベースラインからの改善は小さいと報告しています。サードパーティ製ドライバでありAppleネイティブのMetal対応ではないため、macOSの更新に伴う互換性の変化が起こり得ます。日常用ではなく実験として扱ってください。',
+            affiliateLinks: [
+              { label: 'RTX 4090 eGPU（Amazon.co.jp、TinyGPU用）', url: 'https://www.amazon.co.jp/s?k=RTX+4090+eGPU+enclosure' },
+            ],
+          },
+          {
+            title: 'Windows／LinuxノートPCのThunderbolt eGPU（Macを使わない場合）',
+            content: 'ThunderboltのあるWindowsまたはLinuxのx86ノートPCでは、eGPUはOllamaで動作します。リンクはネイティブのPCIeスロットより遅いものの、モデルがVRAMに載れば、トークン生成は主にGPUのメモリ帯域に依存するため、実際の低下はリンク差から想像するより小さくなります。Razer Core X V2（349.99ドル、Thunderbolt 5、電源別売）はWindows向けで、RazerのページにはM1以降のMacではeGPU非対応とあります。',
+            affiliateLinks: [
+              { label: 'Razer Core X V2 eGPU筐体（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=Razer+Core+X+V2' },
+              { label: 'Razer Core X（初代）（Amazon.co.jp）', url: 'https://www.amazon.co.jp/s?k=Razer+Core+X+eGPU' },
             ],
           },
         ],
@@ -492,10 +784,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-            { q: 'M4 MacBook ProにeGPUをAIで使う方法はありますか？', a: 'GPUコンピュートでは不可能です。macOSはMシリーズハードウェアのMetalコンピュートタスクに外付けGPUのAPIを提供していません。代替案：専用GPUを持つ別のマシン（ミニPCやデスクトップ）でOllamaサーバーを立ち上げ、LAN越しにMacBookから接続します（サーバー側でOLLAMA_HOST=0.0.0.0を設定）。' },
-            { q: 'AppleはApple SiliconのeGPUサポートを復活させますか？', a: '可能性は低いです。AppleのMシリーズアーキテクチャはGPU、CPU、メモリを1チップに統合しており、設計思想は統合メモリであって拡張性ではありません。GPU拡張をサポートするApple製品はMac Pro（2023年）のみです。' },
-            { q: 'MacBookのeGPUをローカルLLM推論に使えますか？', a: 'いいえ。AppleはmacOS Ventura（2022年）でeGPUコンピュートサポートを廃止しました。代替案：Mac Mini M4 Pro（48GB）またはOCuLink対応AMDミニPC。' },
-          ],
+          { q: 'M4 MacBook ProでeGPUをAIに使う方法はありますか？', a: '制限付きで可能です。Tiny CorpのTinyGPUドライバは、macOS 13以降でThunderboltまたはUSB4経由のAMD RDNA 3以降／NVIDIA Ampere以降のGPUで計算を実行します。ドキュメントがあるのはtinygradのみ（Ollama・llama.cpp・MLXは対象外）で、映像出力はなく、NVIDIAカードにはDocker Desktopが必要です。PlugableはM2 MacBook Proでベースラインからの改善は小さいと報告しています。安定した構成にするなら、別のGPUマシンでOllamaを動かしLAN経由で接続してください（サーバー側でOLLAMA_HOST=0.0.0.0）。' },
+          { q: 'ベースモデルのMacBook Pro 16に最適なeGPUは？', a: 'Apple SiliconのMacBook ProでeGPUが公式サポートされるものはありません。TinyGPUを試す場合、ドキュメント上の最低条件は、ThunderboltまたはUSB4筐体に入れたAMD RDNA 3以降（Radeon RX 7000以降）またはNVIDIA Ampere以降（RTX 30以降）のカードです。AMDならDockerの手順が不要です。日常用途には、ユニファイドメモリの多いMacか、LAN接続したミニPCのRTX GPUのほうが確実です。' },
+          { q: 'Razer CoreはMacBook Proで動きますか？', a: 'Apple Siliconでは動きません。RazerのCore X V2のページには「eGPUs not supported by M1 & later Mac devices」とあります。初代Razer Core Xは2018年にThunderbolt 3搭載のIntel Mac向けに発売されました。Apple SiliconのMacでRazer筐体を使うには、Razerが記載していない非公式のTinyGPUドライバに頼ることになります。' },
+          { q: 'iMacに外付けGPUを追加できますか？', a: 'Apple SiliconのiMacではネイティブには追加できません。制限はMacBookと同じです。Thunderbolt 3搭載のIntel iMacは古いmacOSでeGPUをサポートしていました。ローカルLLMなら、別のGPUマシンでOllamaを動かしLAN経由で接続してください。' },
+          { q: 'MacでOCuLink eGPUを使えますか？', a: '使えません。OCuLinkポートを持つMacはありません。OCuLinkはPCやミニPC向けです。Macでは、実験的なTinyGPUドライバを使うThunderboltまたはUSB4のeGPUか、LANで提供するOCuLinkミニPCが選択肢になります。' },
+          { q: 'AppleはApple SiliconにeGPUサポートを復活させますか？', a: '可能性は低いです。AppleのMシリーズチップはGPU・CPU・メモリを1つのパッケージに統合しており、設計思想は拡張性ではなくユニファイドメモリです。AppleはeGPU計算サポートを復活させる計画を発表していません。' },
+          { q: 'NVIDIA GPUで推論し、出力をMacBookに渡せますか？', a: 'はい。これが推奨の方法です。NVIDIA GPU搭載のWindowsまたはLinuxマシンでOllamaを動かし、LANに公開（OLLAMA_HOST=0.0.0.0）して、MacBookからOpen WebUI、Cursor、Continue、またはOpenAI互換クライアント経由で接続します。MacBookがUIを担当し、NVIDIAマシンが計算を担当します。' },
+        ],
       },
       relatedReading: {
         title: '関連ガイド',
@@ -504,6 +800,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[MLX vs Ollama vs llama.cpp: Which Backend?](/ja/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
           '[How to Convert an Ollama Model to MLX](/ja/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
           '[Best Local LLM for 16 GB RAM Laptop](/ja/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+          '[Mac mini M5 as a Local AI Server](/ja/local-llms/mac-mini-m5-local-ai-server) -- Mac mini M5 local AI server guide',
+          '[Apple Silicon M5 for Local LLMs](/ja/local-llms/apple-silicon-m5-local-llm) -- M5 Pro vs Max local LLM guide',
         ],
       },
     },
@@ -511,107 +809,191 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-          {
-            '@type': 'Question',
-            'name': 'M4 MacBook ProにeGPUをAIで使う方法はありますか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'GPUコンピュートでは不可能です。macOSはMシリーズハードウェアのMetalコンピュートタスクに外付けGPUのAPIを提供していません。代替案：専用GPUを持つ別のマシン（ミニPCやデスクトップ）でOllamaサーバーを立ち上げ、LAN越しにMacBookから接続します（サーバー側でOLLAMA_HOST=0.0.0.0を設定）。',
-            },
+        {
+          '@type': 'Question',
+          'name': 'M4 MacBook ProでeGPUをAIに使う方法はありますか？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '制限付きで可能です。Tiny CorpのTinyGPUドライバは、macOS 13以降でThunderboltまたはUSB4経由のAMD RDNA 3以降／NVIDIA Ampere以降のGPUで計算を実行します。ドキュメントがあるのはtinygradのみ（Ollama・llama.cpp・MLXは対象外）で、映像出力はなく、NVIDIAカードにはDocker Desktopが必要です。PlugableはM2 MacBook Proでベースラインからの改善は小さいと報告しています。安定した構成にするなら、別のGPUマシンでOllamaを動かしLAN経由で接続してください（サーバー側でOLLAMA_HOST=0.0.0.0）。',
           },
-          {
-            '@type': 'Question',
-            'name': 'AppleはApple SiliconのeGPUサポートを復活させますか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '可能性は低いです。AppleのMシリーズアーキテクチャはGPU、CPU、メモリを1チップに統合しており、設計思想は統合メモリであって拡張性ではありません。GPU拡張をサポートするApple製品はMac Pro（2023年）のみです。',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'ベースモデルのMacBook Pro 16に最適なeGPUは？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Apple SiliconのMacBook ProでeGPUが公式サポートされるものはありません。TinyGPUを試す場合、ドキュメント上の最低条件は、ThunderboltまたはUSB4筐体に入れたAMD RDNA 3以降（Radeon RX 7000以降）またはNVIDIA Ampere以降（RTX 30以降）のカードです。AMDならDockerの手順が不要です。日常用途には、ユニファイドメモリの多いMacか、LAN接続したミニPCのRTX GPUのほうが確実です。',
           },
-          {
-            '@type': 'Question',
-            'name': 'MacBookのeGPUをローカルLLM推論に使えますか？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'いいえ。AppleはmacOS Ventura（2022年）でeGPUコンピュートサポートを廃止しました。代替案：Mac Mini M4 Pro（48GB）またはOCuLink対応AMDミニPC。',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Razer CoreはMacBook Proで動きますか？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Apple Siliconでは動きません。RazerのCore X V2のページには「eGPUs not supported by M1 & later Mac devices」とあります。初代Razer Core Xは2018年にThunderbolt 3搭載のIntel Mac向けに発売されました。Apple SiliconのMacでRazer筐体を使うには、Razerが記載していない非公式のTinyGPUドライバに頼ることになります。',
           },
-        ],
+        },
+        {
+          '@type': 'Question',
+          'name': 'iMacに外付けGPUを追加できますか？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Apple SiliconのiMacではネイティブには追加できません。制限はMacBookと同じです。Thunderbolt 3搭載のIntel iMacは古いmacOSでeGPUをサポートしていました。ローカルLLMなら、別のGPUマシンでOllamaを動かしLAN経由で接続してください。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'MacでOCuLink eGPUを使えますか？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '使えません。OCuLinkポートを持つMacはありません。OCuLinkはPCやミニPC向けです。Macでは、実験的なTinyGPUドライバを使うThunderboltまたはUSB4のeGPUか、LANで提供するOCuLinkミニPCが選択肢になります。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'AppleはApple SiliconにeGPUサポートを復活させますか？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '可能性は低いです。AppleのMシリーズチップはGPU・CPU・メモリを1つのパッケージに統合しており、設計思想は拡張性ではなくユニファイドメモリです。AppleはeGPU計算サポートを復活させる計画を発表していません。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'NVIDIA GPUで推論し、出力をMacBookに渡せますか？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'はい。これが推奨の方法です。NVIDIA GPU搭載のWindowsまたはLinuxマシンでOllamaを動かし、LANに公開（OLLAMA_HOST=0.0.0.0）して、MacBookからOpen WebUI、Cursor、Continue、またはOpenAI互換クライアント経由で接続します。MacBookがUIを担当し、NVIDIAマシンが計算を担当します。',
+          },
+        },
+      ],
     },
-    schema: { '@type': 'TechArticle', headline: 'MacBook eGPUとローカルAI：2026年に動作するもの', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ja/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ja' },
+    schema: { '@type': 'TechArticle', headline: 'MacBook eGPUとローカルAI：2026年に動作するもの', datePublished: '2026-05-26', dateModified: '2026-10-17', url: 'https://www.promptquorum.com/ja/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ja' },
   },
 
   zh: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-egpu-setup-for-macbook-local-llm-2026-overview-hero-zh.webp',
     type: 'how-to',
     title: 'MacBook eGPU与本地AI：2026年什么有效',
     seoTitle: 'MacBook eGPU本地LLM 2026——替代方案详解',
-    metaDescription: 'Apple Silicon MacBook（M2/M3/M4系列）不支持eGPU进行GPU计算推理。2026年最优替代方案：Mac Mini M4 Pro（48GB统一内存）、OCuLink接口AMD迷你PC、或通过局域网连接外部Ollama服务器，三方案详细对比。',
+    metaDescription: 'Apple Silicon MacBook不能原生使用eGPU。2026年可选：TinyGPU（仅tinygrad）、Mac mini M5 Pro，或通过局域网使用OCuLink迷你PC。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
-    leadAnswerBlock: '**搭载Apple Silicon（M2–M5）的MacBook在2026年无法将eGPU用于GPU计算——Apple在macOS Ventura中移除了Thunderbolt eGPU支持。替代方案：Mac Mini M4 Pro（48GB统一内存）或配OCuLink的AMD迷你PC（UM890 Pro）。**',
+    leadAnswerBlock: '**搭载Apple Silicon的MacBook（M1–M5）无法原生使用eGPU：macOS没有外置GPU驱动，Razer也注明Core X V2“not supported by M1 & later Mac devices”。唯一途径是Tiny Corp的TinyGPU驱动（Tiny Corp称已获Apple批准），可通过Thunderbolt或USB4让AMD RDNA 3+或NVIDIA Ampere+ eGPU运行AI计算，但其文档仅涵盖tinygrad，不包括Ollama、llama.cpp或MLX。要获得受支持的方案，请使用Mac mini M5 Pro，或通过局域网提供服务的OCuLink迷你PC。**',
     quickAnswerTop: {
-      question: 'MacBook可以用eGPU做本地LLM推理吗？',
-      answer: '不可以。Apple Silicon MacBook（M2/M3/M4/M5）无法将eGPU用于GPU计算。macOS Ventura及后续版本完全移除了Thunderbolt eGPU支持。替代方案：Mac Mini M4 Pro（48GB统一内存）或配OCuLink eGPU的AMD迷你PC。',
+      question: '我可以在MacBook上用eGPU做本地LLM推理吗？',
+      answer: '不能原生使用。Apple Silicon Mac（M1–M5）没有适用于外置GPU的macOS驱动。自2026年4月起，Tiny Corp的TinyGPU驱动（仅计算，无显示输出）让AMD RDNA 3+和NVIDIA Ampere+ GPU可通过Thunderbolt或USB4运行AI负载，但其文档仅涵盖tinygrad，NVIDIA显卡还需要Docker Desktop。想要稳定方案，请在Mac mini M5 Pro或OCuLink迷你PC上运行Ollama，再通过局域网连接。',
       bullets: [
-        'Apple Silicon MacBook：不支持eGPU用于GPU计算（macOS Ventura以上）',
-        'Intel MacBook（2015–2020）：通过Thunderbolt 3支持eGPU——但已停产',
-        'macOS最佳替代：Mac Mini M4 Pro（48GB统一内存）',
-        '最佳GPU+便携方案：AMD迷你PC（UM890 Pro）+ OCuLink + RTX 3090',
-        'OCuLink提供约80%的PCIe x16带宽——LLM推理无瓶颈',
+        'Apple Silicon MacBook（M1–M5）：无原生eGPU支持；Razer注明Core X V2不支持M1及更新的Mac',
+        'TinyGPU（2026年4月1日发布）：仅计算，AMD RDNA 3+或NVIDIA Ampere+，macOS 13+，无显示输出',
+        'TinyGPU仅有tinygrad文档；Ollama、llama.cpp和MLX未被列为受支持',
+        'NVIDIA显卡需要在Mac上安装Docker Desktop；AMD显卡不需要',
+        'Tiny Corp自行报告Qwen 3.5 27B为18.5 tok/s（Mac mini + RX 7900 XTX）；Plugable在M2 MacBook Pro上发现相比基线提升很小',
+        '受支持的替代方案：Mac mini M5 Pro（美国售价1,699美元起，最高64GB，307GB/s）或通过局域网使用的OCuLink迷你PC + RTX 3090',
       ],
-      updatedDate: '2026-07',
+      updatedDate: '2026-10',
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Apple Silicon MacBook无法将eGPU用于计算——Apple在macOS Ventura中移除了该功能',
-          'Intel MacBook（2018–2020）曾通过Thunderbolt 3支持eGPU——但该产品线已停产',
-          'macOS用户：购买Mac Mini M4 Pro（48GB）而非尝试MacBook eGPU扩展',
-          '便携+GPU方案：AMD迷你PC（UM890 Pro）+ OCuLink RTX 3090——Ollama运行60–80 tok/s',
-          'x86笔记本（Windows/Linux）的Thunderbolt 4 eGPU可用——带宽损失约35–45%',
+          '没有任何Apple Silicon Mac（M1–M5）原生支持eGPU；接入的显卡能被识别，但无法执行任务',
+          'TinyGPU（Tiny Corp，2026年4月）在macOS 13+上通过Thunderbolt或USB4增加了AMD和NVIDIA eGPU计算——仅计算、无显示输出、仅有tinygrad文档',
+          '设置TinyGPU时NVIDIA显卡需要Docker Desktop；AMD显卡不需要',
+          '受支持的Mac方案：Mac mini M5 Pro（美国售价1,699美元起，最高64GB统一内存）',
+          '追求GPU速度：OCuLink迷你PC + RTX 3090，用Ollama通过局域网提供给MacBook',
+          'OCuLink是PCIe 4.0 x4（约63 Gbps）——约为x16插槽的四分之一，模型装入显存后已足够；没有任何Mac带OCuLink接口',
         ],
       },
       mainContent: {
-        title: '2026年MacBook为何无法使用eGPU',
+        title: '2026年Apple Silicon Mac上的eGPU：发生了什么变化',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '2026年eGPU无法用于Apple Silicon MacBook的GPU加速本地LLM推理，因为Apple在macOS Ventura（2022年）中移除了Thunderbolt eGPU计算支持。',
+            text: 'Apple Silicon Mac没有原生外置GPU支持，但自2026年4月起，Tiny Corp的TinyGPU驱动可通过Thunderbolt或USB4在AMD和NVIDIA eGPU上运行AI计算——仅有tinygrad文档。',
           },
           {
             type: 'plain-terms',
-            text: 'eGPU是通过Thunderbolt或OCuLink连接的外置显卡盒。在搭载Apple M系列芯片的MacBook上，GPU集成在芯片中——无法为计算任务添加外置GPU。Apple的GPU API（Metal）在M系列硬件上不支持外置GPU。',
+            text: 'eGPU是装在外壳中、通过Thunderbolt、USB4或OCuLink连接的外置显卡。M系列芯片上的macOS没有对应驱动，因此接入的显卡能被识别，却无法执行任务。TinyGPU是Tiny Corp的macOS应用，会安装一个DriverKit扩展（Tiny Corp称已获Apple批准）以启用显卡计算。它不驱动显示器，也不使用Metal。',
           },
         ],
-        content: 'Apple在macOS Ventura（2022年10月发布）中移除了Thunderbolt eGPU支持。所有Apple Silicon MacBook（M1–M5）运行此版本或更新版本。即使物理连接eGPU，macOS也不会将外置GPU用于GPU计算。',
+        content: '据Plugable称，没有第三方驱动时，Apple Silicon Mac能检测到外置GPU，但无法使用。Razer的Core X V2页面注明“eGPUs not supported by M1 & later Mac devices”。2026年4月1日，Tiny Corp宣布Apple已批准其面向AMD和NVIDIA的TinyGPU驱动。根据tinygrad文档，TinyGPU需要macOS 13.0或更高版本、AMD RDNA 3+或NVIDIA Ampere+ GPU以及USB4或Thunderbolt接口；NVIDIA的设置还需要Docker Desktop。文档记录的负载是tinygrad的LLM运行器，heise报道其不适用于Apple的MLX。Tiny Corp报告在配备Radeon RX 7900 XTX的Mac mini上Qwen 3.5 27B达到18.5 tok/s——这是厂商自报数据，不是独立基准测试。Plugable在M2 MacBook Pro上用Thunderbolt 5外壳测试了Radeon 9070和GeForce RTX 5070，发现相比基线提升很小。',
         items: [
-          '**macOS 13 Ventura（2022年）**：eGPU支持被移除，所有Apple Silicon Mac受影响。',
-          '**macOS 14 Sonoma、15 Sequoia**：仍无eGPU计算支持。',
-          '**Intel MacBook（2018–2020年）**：曾在旧版macOS上通过Thunderbolt 3支持eGPU。',
+          '**Apple Silicon（M1–M5）**：无原生eGPU支持——接入的显卡能被识别，但无法执行任务。',
+          '**TinyGPU（2026年4月1日发布）**：Tiny Corp的第三方驱动应用；通过Thunderbolt或USB4支持AMD RDNA 3+和NVIDIA Ampere+；macOS 13.0+。',
+          '**适用范围**：仅计算——无显示输出、无Metal、不能玩游戏；软件支持仅有tinygrad文档。',
+          '**NVIDIA显卡**：编译器设置需要Docker Desktop；AMD显卡可原生运行。',
+          '**Intel MacBook（2018–2020）**：在较旧的macOS上，eGPU可通过Thunderbolt 3工作；这些Mac已停产。',
+        ],
+      },
+      connections: {
+        id: 'connections',
+        title: '外置GPU的连接方式：OCuLink、Thunderbolt与USB4对比',
+        content: '**OCuLink能让外置GPU获得单位成本下最高的带宽，但仅限PC——没有任何Mac带OCuLink接口。** Thunderbolt 4和USB4支持热插拔，可用于笔记本，但链路速度较低。模型装入显存后，生成token主要取决于GPU自身的显存带宽，链路主要影响模型加载。如果GPU常驻桌面，选带OCuLink接口的迷你PC（例如Minisforum UM890 Pro或AOOSTAR GEM12+ Pro）；只有随身携带的笔记本才选Thunderbolt外壳。',
+        columns: ['连接方式', '标称带宽', '热插拔', '典型用途'],
+        rows: [
+          {
+            '连接方式': 'OCuLink 4i（PCIe 4.0 x4）',
+            '标称带宽': '约63 Gbps',
+            '热插拔': '否（先关机）',
+            '典型用途': '迷你PC + GPU扩展坞',
+          },
+          {
+            '连接方式': 'Thunderbolt 4 / USB4 40G',
+            '标称带宽': '40 Gbps',
+            '热插拔': '是',
+            '典型用途': '笔记本 + 外壳',
+          },
+          {
+            '连接方式': 'Thunderbolt 5',
+            '标称带宽': '80 Gbps（增强120 Gbps）',
+            '热插拔': '是',
+            '典型用途': '较新的PC和Mac',
+          },
+          {
+            '连接方式': 'USB4 20G',
+            '标称带宽': '20 Gbps',
+            '热插拔': '是',
+            '典型用途': '带宽最低的选项',
+          },
         ],
       },
       alternatives: {
         title: 'Mac上GPU推理的真实替代方案',
         productItems: [
           {
-            title: 'Mac Mini M4 Pro（48GB）——最佳macOS选择',
-            content: 'Mac Mini M4 Pro（48GB统一内存，约9800元）通过Ollama的Metal后端以20–30 tok/s运行Qwen3 32B Q4。如果需要在macOS环境中运行32B以上模型，这是正确的升级路径——而非eGPU。',
+            title: 'Mac mini M5 Pro（最高64GB）——最佳macOS选择',
+            content: 'Apple的Mac mini M5 Pro（2026年9月22日起发售）美国售价1,699美元起，最高提供64GB统一内存，带宽307GB/s。token生成受内存带宽限制：约19–20GB的32B Q4模型在该带宽下理论上限约为15 tok/s，实际速度更低。适合需要在不借助独立GPU机器的情况下把32B级模型装进内存的场景。基础款Mac mini M6（899美元起，最高32GB，170GB/s）适合7B–14B模型。',
             affiliateLinks: [
-              { label: '在京东查看Apple Mac Mini M4 Pro', url: 'https://search.jd.com/Search?keyword=Mac+Mini+M4+Pro' },
+              { label: 'Apple Mac Mini M5 Pro（亚马逊）', url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro' },
             ],
           },
           {
-            title: 'AMD迷你PC + OCuLink eGPU（最佳GPU/便携组合）',
-            content: 'AOOSTAR GEM12 Pro OCuLink（AMD Ryzen 9 8945HS，约3300元）通过OCuLink（PCIe 4.0 x4，64Gbps——约80%的x16插槽带宽）连接RTX 3090或RTX 4090。Linux/Windows上的Ollama通过CUDA在RTX 3090上运行7B Q4达65–85 tok/s。迷你PC体积小，可放在MacBook旁边的桌面上，通过局域网提供Ollama服务。',
+            title: 'OCuLink迷你PC + RTX 3090（最佳GPU/便携组合）',
+            content: '带OCuLink接口的迷你PC——例如Minisforum UM890 Pro（Ryzen 9 8945HS，2024年上市时准系统479美元起）或AOOSTAR GEM12+ Pro（准系统标价约359美元）——通过OCuLink扩展坞连接台式GPU。OCuLink不支持热插拔：连接前请先关机。社区llama.cpp基准测试报告RTX 3090上8B Q4_K_M模型约为90–95 tok/s；不同来源之间有出入，结果取决于上下文长度和构建版本。在迷你PC上运行Ollama并通过局域网提供服务；MacBook继续作为客户端。',
             affiliateLinks: [
-              { label: '在京东查看AOOSTAR GEM12 Pro OCuLink', url: 'https://search.jd.com/Search?keyword=AOOSTAR+GEM12+Pro' },
+              { label: 'AOOSTAR GEM12 Pro OCuLink（亚马逊）', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
+              { label: 'Minisforum UM890 Pro（亚马逊）', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro' },
+            ],
+          },
+          {
+            title: 'TinyGPU驱动 + Apple Silicon Mac上的eGPU（实验性）',
+            content: 'Tiny Corp的TinyGPU驱动可在macOS 13+上通过Thunderbolt或USB4启用AMD RDNA 3+和NVIDIA Ampere+ eGPU的计算。它仅有tinygrad文档（运行DEV=AMD或DEV=NV python3 -m tinygrad.llm），NVIDIA显卡需要Docker Desktop，Plugable在M2 MacBook Pro上发现相比基线提升很小。这是第三方驱动，不是Apple原生Metal支持；随着macOS演进，预计会出现兼容性变化。请把它当作实验，而不是日常方案。',
+            affiliateLinks: [
+              { label: 'RTX 4090 eGPU（亚马逊，用于TinyGPU）', url: 'https://www.amazon.com/s?k=RTX+4090+eGPU+enclosure' },
+            ],
+          },
+          {
+            title: 'Windows/Linux笔记本上的Thunderbolt eGPU（不用Mac时）',
+            content: '在带Thunderbolt 4或5的x86 Windows或Linux笔记本上，eGPU可配合Ollama使用。链路比原生PCIe插槽慢，但模型装入显存后，token生成主要取决于GPU自身的显存带宽，因此实际损失比链路差距所暗示的要小。Razer Core X V2（349.99美元，Thunderbolt 5，不含电源）为Windows设计；Razer页面注明M1及更新的Mac不支持eGPU。',
+            affiliateLinks: [
+              { label: 'Razer Core X V2 eGPU外壳（亚马逊）', url: 'https://www.amazon.com/s?k=Razer+Core+X+V2' },
+              { label: 'Razer Core X（初代）（亚马逊）', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
             ],
           },
         ],
@@ -619,11 +1001,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-            { q: '有没有办法让eGPU在M4 MacBook Pro上用于AI？', a: '无法用于GPU计算。macOS不为M系列硬件上的Metal计算任务提供外置GPU的API。替代方案：在另一台有独立GPU的设备（迷你PC或台式机）上运行Ollama服务器，通过局域网从MacBook连接（服务器设置OLLAMA_HOST=0.0.0.0）。' },
-            { q: 'Apple会为Apple Silicon重新加入eGPU支持吗？', a: '可能性不大。Apple的M系列架构将GPU、CPU和内存集成在单一芯片上——设计理念是统一内存而非可扩展性。唯一支持GPU扩展的Apple产品是Mac Pro（2023年）。' },
-            { q: '能否用NVIDIA GPU做推理并将输出传给MacBook？', a: '可以——这是推荐方案。在配有NVIDIA GPU的Windows或Linux机器上运行Ollama，通过局域网暴露（OLLAMA_HOST=0.0.0.0），从MacBook通过Open WebUI、Cursor、Continue或任何OpenAI兼容客户端连接。MacBook负责界面，NVIDIA机器负责计算。' },
-            { q: 'MacBook可以用eGPU做本地LLM推理吗？', a: '不可以。Apple在macOS Ventura（2022年）中移除了eGPU计算支持。替代方案：Mac Mini M4 Pro（48GB统一内存）或配OCuLink的AMD迷你PC。' },
-          ],
+          { q: '有没有办法让eGPU在M4 MacBook Pro上用于AI？', a: '有，但有限制。Tiny Corp的TinyGPU驱动可在macOS 13+上通过Thunderbolt或USB4在AMD RDNA 3+和NVIDIA Ampere+ GPU上运行计算。它仅有tinygrad文档（不含Ollama、llama.cpp或MLX），无显示输出，NVIDIA显卡需要Docker Desktop。Plugable在M2 MacBook Pro上发现相比基线提升很小。想要稳定方案：在独立的GPU机器上运行Ollama，通过局域网连接（服务器端设置OLLAMA_HOST=0.0.0.0）。' },
+          { q: '基础款MacBook Pro 16最适合哪款eGPU？', a: '任何Apple Silicon MacBook Pro都没有官方支持的eGPU。若要试用TinyGPU，文档给出的最低要求是装在Thunderbolt或USB4外壳中的AMD RDNA 3+（Radeon RX 7000或更新）或NVIDIA Ampere+（RTX 30或更新）显卡；用AMD可省去Docker步骤。日常使用的话，统一内存更大的Mac，或局域网连接的迷你PC中的RTX GPU更可靠。' },
+          { q: 'Razer Core能用于MacBook Pro吗？', a: '在Apple Silicon上不能。Razer的Core X V2页面注明“eGPUs not supported by M1 & later Mac devices”。初代Razer Core X于2018年面向配备Thunderbolt 3的Intel Mac发布。在Apple Silicon Mac上使用Razer外壳需要依赖非官方的TinyGPU驱动，而Razer并未列出该驱动。' },
+          { q: '我能给iMac添加外置GPU吗？', a: 'Apple Silicon iMac上无法原生添加——限制与MacBook相同。配备Thunderbolt 3的Intel iMac在较旧的macOS版本上支持eGPU。对本地LLM而言：在独立的GPU机器上运行Ollama，再通过局域网连接。' },
+          { q: 'OCuLink eGPU能用在Mac上吗？', a: '不能。没有任何Mac带OCuLink接口。OCuLink是为PC和迷你PC设计的；对Mac来说，可选方案是搭配实验性TinyGPU驱动的Thunderbolt或USB4 eGPU，或通过局域网提供服务的OCuLink迷你PC。' },
+          { q: 'Apple会为Apple Silicon恢复eGPU支持吗？', a: '不太可能。Apple的M系列芯片把GPU、CPU和内存集成在一个封装中——设计理念是统一内存，而不是可扩展性——Apple也没有宣布恢复eGPU计算支持的计划。' },
+          { q: '我能用NVIDIA GPU做推理，再把输出传给MacBook吗？', a: '可以——这是推荐做法。在带NVIDIA GPU的Windows或Linux机器上运行Ollama，在局域网中开放（OLLAMA_HOST=0.0.0.0），然后从MacBook通过Open WebUI、Cursor、Continue或任何兼容OpenAI的客户端连接。MacBook负责界面，NVIDIA机器负责计算。' },
+        ],
       },
       relatedReading: {
         title: '相关指南',
@@ -632,6 +1017,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[MLX vs Ollama vs llama.cpp: Which Backend?](/zh/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
           '[How to Convert an Ollama Model to MLX](/zh/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
           '[Best Local LLM for 16 GB RAM Laptop](/zh/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+          '[Mac mini M5 as a Local AI Server](/zh/local-llms/mac-mini-m5-local-ai-server) -- Mac mini M5 local AI server guide',
+          '[Apple Silicon M5 for Local LLMs](/zh/local-llms/apple-silicon-m5-local-llm) -- M5 Pro vs Max local LLM guide',
         ],
       },
     },
@@ -639,123 +1026,190 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-          {
-            '@type': 'Question',
-            'name': '有没有办法让eGPU在M4 MacBook Pro上用于AI？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '无法用于GPU计算。macOS不为M系列硬件上的Metal计算任务提供外置GPU的API。替代方案：在另一台有独立GPU的设备（迷你PC或台式机）上运行Ollama服务器，通过局域网从MacBook连接（服务器设置OLLAMA_HOST=0.0.0.0）。',
-            },
+        {
+          '@type': 'Question',
+          'name': '有没有办法让eGPU在M4 MacBook Pro上用于AI？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '有，但有限制。Tiny Corp的TinyGPU驱动可在macOS 13+上通过Thunderbolt或USB4在AMD RDNA 3+和NVIDIA Ampere+ GPU上运行计算。它仅有tinygrad文档（不含Ollama、llama.cpp或MLX），无显示输出，NVIDIA显卡需要Docker Desktop。Plugable在M2 MacBook Pro上发现相比基线提升很小。想要稳定方案：在独立的GPU机器上运行Ollama，通过局域网连接（服务器端设置OLLAMA_HOST=0.0.0.0）。',
           },
-          {
-            '@type': 'Question',
-            'name': 'Apple会为Apple Silicon重新加入eGPU支持吗？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '可能性不大。Apple的M系列架构将GPU、CPU和内存集成在单一芯片上——设计理念是统一内存而非可扩展性。唯一支持GPU扩展的Apple产品是Mac Pro（2023年）。',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': '基础款MacBook Pro 16最适合哪款eGPU？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '任何Apple Silicon MacBook Pro都没有官方支持的eGPU。若要试用TinyGPU，文档给出的最低要求是装在Thunderbolt或USB4外壳中的AMD RDNA 3+（Radeon RX 7000或更新）或NVIDIA Ampere+（RTX 30或更新）显卡；用AMD可省去Docker步骤。日常使用的话，统一内存更大的Mac，或局域网连接的迷你PC中的RTX GPU更可靠。',
           },
-          {
-            '@type': 'Question',
-            'name': '能否用NVIDIA GPU做推理并将输出传给MacBook？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '可以——这是推荐方案。在配有NVIDIA GPU的Windows或Linux机器上运行Ollama，通过局域网暴露（OLLAMA_HOST=0.0.0.0），从MacBook通过Open WebUI、Cursor、Continue或任何OpenAI兼容客户端连接。MacBook负责界面，NVIDIA机器负责计算。',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Razer Core能用于MacBook Pro吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '在Apple Silicon上不能。Razer的Core X V2页面注明“eGPUs not supported by M1 & later Mac devices”。初代Razer Core X于2018年面向配备Thunderbolt 3的Intel Mac发布。在Apple Silicon Mac上使用Razer外壳需要依赖非官方的TinyGPU驱动，而Razer并未列出该驱动。',
           },
-          {
-            '@type': 'Question',
-            'name': 'MacBook可以用eGPU做本地LLM推理吗？',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '不可以。Apple在macOS Ventura（2022年）中移除了eGPU计算支持。替代方案：Mac Mini M4 Pro（48GB统一内存）或配OCuLink的AMD迷你PC。',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': '我能给iMac添加外置GPU吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Apple Silicon iMac上无法原生添加——限制与MacBook相同。配备Thunderbolt 3的Intel iMac在较旧的macOS版本上支持eGPU。对本地LLM而言：在独立的GPU机器上运行Ollama，再通过局域网连接。',
           },
-        ],
+        },
+        {
+          '@type': 'Question',
+          'name': 'OCuLink eGPU能用在Mac上吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '不能。没有任何Mac带OCuLink接口。OCuLink是为PC和迷你PC设计的；对Mac来说，可选方案是搭配实验性TinyGPU驱动的Thunderbolt或USB4 eGPU，或通过局域网提供服务的OCuLink迷你PC。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Apple会为Apple Silicon恢复eGPU支持吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '不太可能。Apple的M系列芯片把GPU、CPU和内存集成在一个封装中——设计理念是统一内存，而不是可扩展性——Apple也没有宣布恢复eGPU计算支持的计划。',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '我能用NVIDIA GPU做推理，再把输出传给MacBook吗？',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '可以——这是推荐做法。在带NVIDIA GPU的Windows或Linux机器上运行Ollama，在局域网中开放（OLLAMA_HOST=0.0.0.0），然后从MacBook通过Open WebUI、Cursor、Continue或任何兼容OpenAI的客户端连接。MacBook负责界面，NVIDIA机器负责计算。',
+          },
+        },
+      ],
     },
-    schema: { '@type': 'TechArticle', headline: 'MacBook eGPU与本地AI：2026年什么有效', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/zh/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'zh' },
+    schema: { '@type': 'TechArticle', headline: 'MacBook eGPU与本地AI：2026年什么有效', datePublished: '2026-05-26', dateModified: '2026-10-17', url: 'https://www.promptquorum.com/zh/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'zh' },
   },
 
   es: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-egpu-setup-for-macbook-local-llm-2026-overview-hero-es.webp',
     type: 'how-to',
     title: 'eGPU para MacBook e IA local: qué funciona en 2026',
     seoTitle: 'eGPU MacBook IA local 2026 — Alternativas',
-    metaDescription: 'Los MacBooks Apple Silicon no admiten eGPUs para cómputo GPU. Alternativas en 2026: Mac Mini M4 Pro, mini PC AMD con OCuLink, servidor Ollama por LAN.',
+    metaDescription: 'Ninguna eGPU funciona de forma nativa en un MacBook Apple Silicon. Opciones 2026: TinyGPU (solo tinygrad), Mac mini M5 Pro o mini PC OCuLink por LAN.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
-    leadAnswerBlock: '**Los MacBooks con Apple Silicon (M2–M5) no pueden usar eGPUs para cómputo GPU en 2026 — Apple eliminó el soporte de eGPU por Thunderbolt en macOS Ventura. La alternativa: Mac Mini M4 Pro (48 GB de memoria unificada) o mini PC AMD (UM890 Pro) con eGPU OCuLink.**',
+    leadAnswerBlock: '**Ninguna eGPU funciona de forma nativa en un MacBook Apple Silicon (M1–M5): macOS no tiene controlador para GPU externas, y Razer indica que su Core X V2 es «not supported by M1 & later Mac devices». La única vía es el controlador TinyGPU de Tiny Corp, que según Tiny Corp Apple aprobó: ejecuta cómputo de IA en eGPU AMD RDNA 3+ o NVIDIA Ampere+ por Thunderbolt o USB4, pero su documentación solo cubre tinygrad — no Ollama, llama.cpp ni MLX. Para una configuración compatible: un Mac mini M5 Pro o un mini PC OCuLink servido por tu red local.**',
     quickAnswerTop: {
-      question: '¿Puedo usar una eGPU con un MacBook para inferencia local con LLMs?',
-      answer: 'No. Los MacBooks Apple Silicon (M2/M3/M4/M5) no pueden usar eGPUs para cómputo GPU. macOS Ventura y versiones posteriores eliminaron completamente el soporte de eGPU por Thunderbolt. Alternativa: Mac Mini M4 Pro (48 GB de memoria unificada) o mini PC AMD con eGPU OCuLink.',
+      question: '¿Puedo usar una eGPU con un MacBook para inferencia local de LLM?',
+      answer: 'No de forma nativa. Los Mac Apple Silicon (M1–M5) no tienen controlador de macOS para GPU externas. Desde abril de 2026, el controlador TinyGPU de Tiny Corp (solo cómputo, sin salida de vídeo) permite que GPU AMD RDNA 3+ y NVIDIA Ampere+ ejecuten cargas de IA por Thunderbolt o USB4, pero su documentación solo cubre tinygrad, y las tarjetas NVIDIA además requieren Docker Desktop. Para una configuración estable: ejecuta Ollama en un Mac mini M5 Pro o un mini PC OCuLink y conéctate por LAN.',
       bullets: [
-        'MacBooks Apple Silicon: eGPU NO compatible para cómputo GPU (macOS Ventura+)',
-        'MacBooks Intel (2015–2020): eGPU funcionaba vía Thunderbolt 3 — pero descontinuados',
-        'Mejor alternativa para macOS: Mac Mini M4 Pro (48 GB de memoria unificada)',
-        'Mejor combinación GPU + portabilidad: mini PC AMD (UM890 Pro) + OCuLink + RTX 3090',
-        'OCuLink ofrece ~80% del ancho de banda PCIe x16 — sin cuello de botella para inferencia LLM',
+        'MacBook Apple Silicon (M1–M5): sin compatibilidad nativa con eGPU; Razer indica que su Core X V2 no es compatible con Mac M1 y posteriores',
+        'TinyGPU (anunciado el 1 de abril de 2026): solo cómputo, AMD RDNA 3+ o NVIDIA Ampere+, macOS 13+, sin salida de vídeo',
+        'TinyGPU solo está documentado para tinygrad; Ollama, llama.cpp y MLX no figuran como compatibles',
+        'Las tarjetas NVIDIA necesitan Docker Desktop en el Mac; las AMD funcionan sin él',
+        'Tiny Corp informa por su cuenta de 18,5 tok/s con Qwen 3.5 27B (Mac mini + RX 7900 XTX); Plugable vio poca mejora sobre la base en un MacBook Pro M2',
+        'Alternativa compatible: Mac mini M5 Pro (desde 1699 $, precio EE. UU., hasta 64 GB, 307 GB/s) o mini PC OCuLink + RTX 3090 por LAN',
       ],
-      updatedDate: '2026-07',
+      updatedDate: '2026-10',
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'Los MacBooks Apple Silicon no pueden usar eGPUs para cómputo — Apple eliminó la función en macOS Ventura',
-          'MacBooks Intel (2018–2020) admitían eGPU vía Thunderbolt 3 — esa línea está descontinuada',
-          'Para macOS: compra Mac Mini M4 Pro (48 GB) en lugar de intentar ampliar un MacBook con eGPU',
-          'Para portátil + GPU: mini PC AMD (UM890 Pro) + RTX 3090 vía OCuLink — Ollama a 60–80 tok/s',
-          'Las eGPUs Thunderbolt 4 en laptops x86 (Windows/Linux) sí funcionan — con ~35–45% de penalización de ancho de banda',
+          'Ningún Mac Apple Silicon (M1–M5) admite una eGPU de forma nativa; una tarjeta conectada se detecta pero no puede ejecutar trabajo',
+          'TinyGPU (Tiny Corp, abril de 2026) añade cómputo eGPU AMD y NVIDIA desde macOS 13 por Thunderbolt o USB4 — solo cómputo, sin vídeo, documentado solo para tinygrad',
+          'Las tarjetas NVIDIA necesitan Docker Desktop para configurar TinyGPU; las AMD no',
+          'Para una configuración Mac compatible: Mac mini M5 Pro (desde 1699 $, precio EE. UU., hasta 64 GB de memoria unificada)',
+          'Para velocidad de GPU: mini PC OCuLink + RTX 3090, servido al MacBook por LAN con Ollama',
+          'OCuLink es PCIe 4.0 x4 (unos 63 Gbps) — un cuarto de una ranura x16, suficiente cuando el modelo cabe en VRAM; ningún Mac tiene puerto OCuLink',
         ],
       },
       mainContent: {
-        title: 'Por qué las eGPUs no funcionan en MacBooks en 2026',
+        title: 'eGPU en Mac Apple Silicon en 2026: qué ha cambiado',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Las eGPUs no funcionan para inferencia local con LLM acelerada por GPU en MacBooks Apple Silicon en 2026 porque Apple eliminó el soporte de cómputo eGPU por Thunderbolt en macOS Ventura (2022).',
+            text: 'Los Mac Apple Silicon no tienen compatibilidad nativa con GPU externas, pero desde abril de 2026 el controlador TinyGPU de Tiny Corp puede ejecutar cómputo de IA en eGPU AMD y NVIDIA por Thunderbolt o USB4 — documentado solo para tinygrad.',
           },
           {
             type: 'plain-terms',
-            text: 'Una eGPU es una tarjeta gráfica externa en una carcasa conectada vía Thunderbolt u OCuLink. En un MacBook con el chip M de Apple, la GPU está integrada en el chip — no se pueden añadir GPUs externas para tareas de cómputo. Metal (la API GPU de Apple) no se extiende a GPUs externas en hardware M-series.',
+            text: 'Una eGPU es una tarjeta gráfica externa en una carcasa conectada por Thunderbolt, USB4 u OCuLink. macOS en chips M no tiene controlador para ella, así que una tarjeta conectada se detecta pero no puede ejecutar trabajo. TinyGPU es una app de macOS de Tiny Corp que instala una extensión DriverKit (que Tiny Corp dice aprobada por Apple) para habilitar el cómputo en la tarjeta. No controla pantallas ni usa Metal.',
           },
         ],
-        content: 'Apple eliminó el soporte de eGPU por Thunderbolt en macOS Ventura (lanzado en octubre de 2022). Todos los MacBooks Apple Silicon (M1, M2, M3, M4, M5) ejecutan esta versión o versiones posteriores de macOS. Incluso si conectas físicamente una eGPU, macOS no la usará para tareas de cómputo GPU.',
+        content: 'Sin un controlador de terceros, un Mac Apple Silicon detecta una GPU externa pero no puede usarla, según Plugable. La página del Core X V2 de Razer indica «eGPUs not supported by M1 & later Mac devices». El 1 de abril de 2026, Tiny Corp anunció que Apple había aprobado su controlador TinyGPU para AMD y NVIDIA. Según la documentación de tinygrad, TinyGPU requiere macOS 13.0 o posterior, una GPU AMD RDNA 3+ o NVIDIA Ampere+ y un puerto USB4 o Thunderbolt; la configuración NVIDIA requiere además Docker Desktop. La carga documentada es el ejecutor de LLM de tinygrad, y según heise no funciona con MLX de Apple. Tiny Corp informó de 18,5 tok/s para Qwen 3.5 27B en un Mac mini con una Radeon RX 7900 XTX — un dato del fabricante, no un benchmark independiente. Plugable probó una Radeon 9070 y una GeForce RTX 5070 en una carcasa Thunderbolt 5 con un MacBook Pro M2 y vio poca mejora sobre la base.',
         items: [
-          '**macOS 13 Ventura (2022)**: soporte eGPU eliminado. Todos los Macs Apple Silicon afectados.',
-          '**macOS 14 Sonoma, 15 Sequoia**: sin soporte de cómputo eGPU.',
-          '**MacBooks Intel (2018–2020)**: eGPU funcionaba vía Thunderbolt 3 en macOS antiguo.',
-          '**Monitor externo vía eGPU**: sigue funcionando en Macs más antiguos como dispositivo de salida.',
+          '**Apple Silicon (M1–M5)**: sin compatibilidad nativa con eGPU — una tarjeta conectada se detecta pero no puede ejecutar trabajo.',
+          '**TinyGPU (anunciado el 1 de abril de 2026)**: app de controlador de terceros de Tiny Corp; AMD RDNA 3+ y NVIDIA Ampere+ por Thunderbolt o USB4; macOS 13.0+.',
+          '**Alcance**: solo cómputo — sin salida de vídeo, sin Metal, sin juegos; compatibilidad de software documentada solo para tinygrad.',
+          '**Tarjetas NVIDIA**: la configuración del compilador requiere Docker Desktop; las AMD funcionan de forma nativa.',
+          '**MacBook Intel (2018–2020)**: la eGPU funcionaba por Thunderbolt 3 en versiones antiguas de macOS; estos Mac están descontinuados.',
+        ],
+      },
+      connections: {
+        id: 'connections',
+        title: 'OCuLink, Thunderbolt y USB4 para una GPU externa: comparación',
+        content: '**OCuLink da a una GPU externa el mayor ancho de banda por euro, pero solo en PC — ningún Mac tiene puerto OCuLink.** Thunderbolt 4 y USB4 se conectan en caliente y funcionan en portátiles, con menor velocidad de enlace. Cuando el modelo está en VRAM, la generación de tokens depende sobre todo del ancho de banda de memoria de la GPU; el enlace afecta sobre todo a la carga del modelo. Elige un mini PC con puerto OCuLink (por ejemplo Minisforum UM890 Pro o AOOSTAR GEM12+ Pro) si la GPU se queda en el escritorio; una carcasa Thunderbolt solo para un portátil que se lleva encima.',
+        columns: ['Enlace', 'Ancho de banda nominal', 'Conexión en caliente', 'Uso típico'],
+        rows: [
+          {
+            'Enlace': 'OCuLink 4i (PCIe 4.0 x4)',
+            'Ancho de banda nominal': '~63 Gbps',
+            'Conexión en caliente': 'No (apagar antes)',
+            'Uso típico': 'Mini PC + dock de GPU',
+          },
+          {
+            'Enlace': 'Thunderbolt 4 / USB4 40G',
+            'Ancho de banda nominal': '40 Gbps',
+            'Conexión en caliente': 'Sí',
+            'Uso típico': 'Portátil + carcasa',
+          },
+          {
+            'Enlace': 'Thunderbolt 5',
+            'Ancho de banda nominal': '80 Gbps (120 Gbps en boost)',
+            'Conexión en caliente': 'Sí',
+            'Uso típico': 'PC y Mac recientes',
+          },
+          {
+            'Enlace': 'USB4 20G',
+            'Ancho de banda nominal': '20 Gbps',
+            'Conexión en caliente': 'Sí',
+            'Uso típico': 'Menor ancho de banda',
+          },
         ],
       },
       alternatives: {
         title: 'Alternativas reales: qué hacer en su lugar',
         productItems: [
           {
-            title: 'Mac Mini M4 Pro (48 GB) — Mejor opción macOS',
-            content: 'El Mac Mini M4 Pro con 48 GB de memoria unificada ejecuta Qwen3 32B Q4 a 20–30 tok/s vía el backend Metal de Ollama. Precio: ~$1399. Si necesitas quedarte en el ecosistema macOS y necesitas capacidad de modelos 32B+, esta es la ruta de actualización — no una eGPU.',
+            title: 'Mac mini M5 Pro (hasta 64 GB) — Mejor opción macOS',
+            content: 'El Mac mini con M5 Pro de Apple (disponible desde el 22 de septiembre de 2026) parte de 1699 $ (precio EE. UU.) y ofrece hasta 64 GB de memoria unificada a 307 GB/s. La generación de tokens está limitada por el ancho de banda de memoria: un modelo 32B Q4 de unos 19–20 GB tiene un techo teórico cercano a 15 tok/s con ese ancho de banda; las velocidades reales son menores. Elígelo para modelos de clase 32B que deban caber en memoria sin una máquina GPU aparte. El Mac mini M6 base (desde 899 $, hasta 32 GB, 170 GB/s) sirve para modelos 7B–14B.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro en Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
+              { label: 'Apple Mac Mini M5 Pro en Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro' },
             ],
           },
           {
-            title: 'Mini PC AMD + eGPU OCuLink (Mejor combo GPU/portátil)',
-            content: 'El AOOSTAR GEM12 Pro OCuLink (AMD Ryzen 9 8945HS, ~$480) se conecta a una RTX 3090 o RTX 4090 vía OCuLink (PCIe 4.0 x4, 64 Gbps — ~80% del ancho de banda del slot x16). Ollama en Linux o Windows con CUDA ejecuta 7B Q4 a 65–85 tok/s con una RTX 3090. El mini PC es lo suficientemente pequeño para ponerlo en el escritorio junto a un MacBook y servir Ollama por LAN.',
+            title: 'Mini PC OCuLink + RTX 3090 (Mejor combo GPU/portátil)',
+            content: 'Un mini PC con puerto OCuLink — como el Minisforum UM890 Pro (Ryzen 9 8945HS, barebone desde 479 $ en su lanzamiento de 2024) o el AOOSTAR GEM12+ Pro (barebone listado en torno a 359 $) — se conecta a una GPU de sobremesa mediante un dock OCuLink. OCuLink no admite conexión en caliente: apaga el PC antes de conectar. Benchmarks de la comunidad con llama.cpp indican aproximadamente 90–95 tok/s para un modelo 8B Q4_K_M en una RTX 3090; las fuentes discrepan y los resultados dependen de la longitud de contexto y la compilación. Ejecuta Ollama en el mini PC y sírvelo por LAN; el MacBook sigue siendo el cliente.',
             affiliateLinks: [
               { label: 'AOOSTAR GEM12 Pro OCuLink en Amazon', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
+              { label: 'Minisforum UM890 Pro en Amazon', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro' },
             ],
           },
           {
-            title: 'eGPU Thunderbolt en laptop Windows/Linux (si no estás en Mac)',
-            content: 'En un laptop x86 con Windows o Linux con Thunderbolt 4 o 5, la eGPU sí funciona para Ollama. La penalización de ancho de banda es ~35–45% vs un slot PCIe x16 nativo, pero la inferencia de Ollama está limitada por el ancho de banda de memoria (no por PCIe). Carcasa actual recomendada: Razer Core X V2 ($349,99, Thunderbolt 5, solo Windows/USB4) o el Razer Core X original (~$249, Thunderbolt 3, con fuente de alimentación incluida).',
+            title: 'Controlador TinyGPU + eGPU en Mac Apple Silicon (experimental)',
+            content: 'El controlador TinyGPU de Tiny Corp habilita cómputo en eGPU AMD RDNA 3+ y NVIDIA Ampere+ por Thunderbolt o USB4 en macOS 13+. Solo está documentado para tinygrad (se ejecuta con DEV=AMD o DEV=NV python3 -m tinygrad.llm), las tarjetas NVIDIA necesitan Docker Desktop y Plugable vio poca mejora sobre la base en un MacBook Pro M2. Es un controlador de terceros, no compatibilidad nativa con Metal; espera cambios de compatibilidad según evolucione macOS. Trátalo como un experimento, no como una configuración diaria.',
             affiliateLinks: [
-              { label: 'Razer Core X V2 eGPU Enclosure en Amazon', url: 'https://www.amazon.com/dp/B0FFQFDZWX' },
+              { label: 'eGPU RTX 4090 en Amazon (para TinyGPU)', url: 'https://www.amazon.com/s?k=RTX+4090+eGPU+enclosure' },
+            ],
+          },
+          {
+            title: 'eGPU Thunderbolt en portátil Windows/Linux (si no usas Mac)',
+            content: 'En un portátil x86 con Windows o Linux y Thunderbolt 4 o 5, una eGPU funciona con Ollama. El enlace es más lento que una ranura PCIe nativa, pero cuando el modelo está en VRAM, la generación de tokens depende sobre todo del ancho de banda de memoria de la GPU; las pérdidas reales son menores de lo que sugiere la diferencia del enlace. El Razer Core X V2 (349,99 $, Thunderbolt 5, sin fuente de alimentación) está pensado para Windows; la página de Razer indica que las eGPU no son compatibles con Mac M1 y posteriores.',
+            affiliateLinks: [
+              { label: 'Carcasa eGPU Razer Core X V2 en Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+V2' },
               { label: 'Razer Core X (original) en Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
             ],
           },
@@ -764,11 +1218,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-            { q: '¿Hay alguna forma de hacer funcionar una eGPU con un M4 MacBook Pro para IA?', a: 'No para cómputo GPU. macOS no expone una API para que GPUs externas ejecuten tareas Metal compute en hardware M-series. La única opción es conectar el MacBook a un servidor Ollama en una máquina separada (un mini PC o escritorio con GPU dedicada) a través de la red local. Establece OLLAMA_HOST=0.0.0.0 en el servidor y apunta las apps del MacBook a esa dirección IP.' },
-            { q: '¿Traerá Apple de vuelta el soporte eGPU para Apple Silicon?', a: 'Poco probable. La arquitectura M-series de Apple integra GPU, CPU y memoria en un solo chip — la filosofía de diseño es memoria unificada, no expansibilidad. Solo el Mac Pro (2023) admite expansión de GPU.' },
-            { q: '¿Puedo usar una GPU NVIDIA para inferencia y canalizar la salida a mi MacBook?', a: 'Sí — este es el enfoque recomendado. Ejecuta Ollama en una máquina Windows o Linux con GPU NVIDIA, exponla en tu LAN (OLLAMA_HOST=0.0.0.0), y conéctate desde tu MacBook vía Open WebUI, Cursor, Continue o cualquier cliente compatible con OpenAI.' },
-            { q: '¿Puedo usar una eGPU con un MacBook para inferencia local con LLMs?', a: 'No. Apple eliminó el soporte de cómputo eGPU en macOS Ventura (2022). Alternativas: Mac Mini M4 Pro (48 GB) o mini PC AMD con OCuLink.' },
-          ],
+          { q: '¿Hay alguna forma de hacer funcionar una eGPU con un MacBook Pro M4 para IA?', a: 'Sí, con límites. El controlador TinyGPU de Tiny Corp ejecuta cómputo en GPU AMD RDNA 3+ y NVIDIA Ampere+ por Thunderbolt o USB4 en macOS 13+. Solo está documentado para tinygrad (no para Ollama, llama.cpp ni MLX), no da salida de vídeo y las tarjetas NVIDIA necesitan Docker Desktop. Plugable vio poca mejora sobre la base en un MacBook Pro M2. Para una configuración estable: ejecuta Ollama en una máquina GPU aparte y conéctate por LAN (OLLAMA_HOST=0.0.0.0 en el servidor).' },
+          { q: '¿Cuál es la mejor eGPU para un MacBook Pro 16 básico?', a: 'Ninguna eGPU es oficialmente compatible con un MacBook Pro Apple Silicon. Para experimentar con TinyGPU, el mínimo documentado es una tarjeta AMD RDNA 3+ (Radeon RX 7000 o posterior) o NVIDIA Ampere+ (RTX 30 o posterior) en una carcasa Thunderbolt o USB4; AMD evita el paso de Docker. Para uso diario, un Mac con más memoria unificada o una GPU RTX en un mini PC conectado por LAN es la opción más fiable.' },
+          { q: '¿Funciona el Razer Core con un MacBook Pro?', a: 'No en Apple Silicon. La página del Core X V2 de Razer indica «eGPUs not supported by M1 & later Mac devices». El Razer Core X original salió en 2018 para Mac Intel con Thunderbolt 3. Una carcasa Razer en un Mac Apple Silicon dependería del controlador no oficial TinyGPU, que Razer no menciona.' },
+          { q: '¿Puedo añadir una GPU externa a un iMac?', a: 'No de forma nativa en los iMac Apple Silicon — los límites son los mismos que en los MacBook. Los iMac Intel con Thunderbolt 3 admitían eGPU en versiones antiguas de macOS. Para LLM locales: ejecuta Ollama en una máquina GPU aparte y conéctate por LAN.' },
+          { q: '¿Puedo usar una eGPU OCuLink con un Mac?', a: 'No. Ningún Mac tiene puerto OCuLink. OCuLink está pensado para PC y mini PC; para un Mac, las opciones son una eGPU Thunderbolt o USB4 con el controlador experimental TinyGPU, o un mini PC OCuLink servido por LAN.' },
+          { q: '¿Volverá Apple a admitir eGPU en Apple Silicon?', a: 'Poco probable. Los chips M de Apple integran GPU, CPU y memoria en un solo paquete — el diseño es memoria unificada, no ampliabilidad — y Apple no ha anunciado planes para restaurar el cómputo eGPU.' },
+          { q: '¿Puedo usar una GPU NVIDIA para la inferencia y enviar el resultado a mi MacBook?', a: 'Sí — es el enfoque recomendado. Ejecuta Ollama en una máquina Windows o Linux con GPU NVIDIA, expónlo en tu LAN (OLLAMA_HOST=0.0.0.0) y conéctate desde el MacBook con Open WebUI, Cursor, Continue o cualquier cliente compatible con OpenAI. El MacBook gestiona la interfaz; la máquina NVIDIA hace el cálculo.' },
+        ],
       },
       relatedReading: {
         title: 'Guías relacionadas',
@@ -777,6 +1234,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[MLX vs Ollama vs llama.cpp: Which Backend?](/es/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
           '[How to Convert an Ollama Model to MLX](/es/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
           '[Best Local LLM for 16 GB RAM Laptop](/es/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+          '[Mac mini M5 as a Local AI Server](/es/local-llms/mac-mini-m5-local-ai-server) -- Mac mini M5 local AI server guide',
+          '[Apple Silicon M5 for Local LLMs](/es/local-llms/apple-silicon-m5-local-llm) -- M5 Pro vs Max local LLM guide',
         ],
       },
     },
@@ -784,122 +1243,189 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-          {
-            '@type': 'Question',
-            'name': '¿Hay alguna forma de hacer funcionar una eGPU con un M4 MacBook Pro para IA?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'No para cómputo GPU. macOS no expone una API para que GPUs externas ejecuten tareas Metal compute en hardware M-series. La única opción es conectar el MacBook a un servidor Ollama en una máquina separada (un mini PC o escritorio con GPU dedicada) a través de la red local. Establece OLLAMA_HOST=0.0.0.0 en el servidor y apunta las apps del MacBook a esa dirección IP.',
-            },
+        {
+          '@type': 'Question',
+          'name': '¿Hay alguna forma de hacer funcionar una eGPU con un MacBook Pro M4 para IA?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Sí, con límites. El controlador TinyGPU de Tiny Corp ejecuta cómputo en GPU AMD RDNA 3+ y NVIDIA Ampere+ por Thunderbolt o USB4 en macOS 13+. Solo está documentado para tinygrad (no para Ollama, llama.cpp ni MLX), no da salida de vídeo y las tarjetas NVIDIA necesitan Docker Desktop. Plugable vio poca mejora sobre la base en un MacBook Pro M2. Para una configuración estable: ejecuta Ollama en una máquina GPU aparte y conéctate por LAN (OLLAMA_HOST=0.0.0.0 en el servidor).',
           },
-          {
-            '@type': 'Question',
-            'name': '¿Traerá Apple de vuelta el soporte eGPU para Apple Silicon?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Poco probable. La arquitectura M-series de Apple integra GPU, CPU y memoria en un solo chip — la filosofía de diseño es memoria unificada, no expansibilidad. Solo el Mac Pro (2023) admite expansión de GPU.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Cuál es la mejor eGPU para un MacBook Pro 16 básico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Ninguna eGPU es oficialmente compatible con un MacBook Pro Apple Silicon. Para experimentar con TinyGPU, el mínimo documentado es una tarjeta AMD RDNA 3+ (Radeon RX 7000 o posterior) o NVIDIA Ampere+ (RTX 30 o posterior) en una carcasa Thunderbolt o USB4; AMD evita el paso de Docker. Para uso diario, un Mac con más memoria unificada o una GPU RTX en un mini PC conectado por LAN es la opción más fiable.',
           },
-          {
-            '@type': 'Question',
-            'name': '¿Puedo usar una GPU NVIDIA para inferencia y canalizar la salida a mi MacBook?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Sí — este es el enfoque recomendado. Ejecuta Ollama en una máquina Windows o Linux con GPU NVIDIA, exponla en tu LAN (OLLAMA_HOST=0.0.0.0), y conéctate desde tu MacBook vía Open WebUI, Cursor, Continue o cualquier cliente compatible con OpenAI.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Funciona el Razer Core con un MacBook Pro?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No en Apple Silicon. La página del Core X V2 de Razer indica «eGPUs not supported by M1 & later Mac devices». El Razer Core X original salió en 2018 para Mac Intel con Thunderbolt 3. Una carcasa Razer en un Mac Apple Silicon dependería del controlador no oficial TinyGPU, que Razer no menciona.',
           },
-          {
-            '@type': 'Question',
-            'name': '¿Puedo usar una eGPU con un MacBook para inferencia local con LLMs?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'No. Apple eliminó el soporte de cómputo eGPU en macOS Ventura (2022). Alternativas: Mac Mini M4 Pro (48 GB) o mini PC AMD con OCuLink.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Puedo añadir una GPU externa a un iMac?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No de forma nativa en los iMac Apple Silicon — los límites son los mismos que en los MacBook. Los iMac Intel con Thunderbolt 3 admitían eGPU en versiones antiguas de macOS. Para LLM locales: ejecuta Ollama en una máquina GPU aparte y conéctate por LAN.',
           },
-        ],
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Puedo usar una eGPU OCuLink con un Mac?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Ningún Mac tiene puerto OCuLink. OCuLink está pensado para PC y mini PC; para un Mac, las opciones son una eGPU Thunderbolt o USB4 con el controlador experimental TinyGPU, o un mini PC OCuLink servido por LAN.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Volverá Apple a admitir eGPU en Apple Silicon?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Poco probable. Los chips M de Apple integran GPU, CPU y memoria en un solo paquete — el diseño es memoria unificada, no ampliabilidad — y Apple no ha anunciado planes para restaurar el cómputo eGPU.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Puedo usar una GPU NVIDIA para la inferencia y enviar el resultado a mi MacBook?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Sí — es el enfoque recomendado. Ejecuta Ollama en una máquina Windows o Linux con GPU NVIDIA, expónlo en tu LAN (OLLAMA_HOST=0.0.0.0) y conéctate desde el MacBook con Open WebUI, Cursor, Continue o cualquier cliente compatible con OpenAI. El MacBook gestiona la interfaz; la máquina NVIDIA hace el cálculo.',
+          },
+        },
+      ],
     },
-    schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: qué funciona en 2026', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/es/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'es' },
+    schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: qué funciona en 2026', datePublished: '2026-05-26', dateModified: '2026-10-17', url: 'https://www.promptquorum.com/es/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'es' },
   },
   pt: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-egpu-setup-for-macbook-local-llm-2026-overview-hero-pt.webp',
     type: 'how-to',
     title: 'eGPU para MacBook e IA local: o que funciona em 2026',
     seoTitle: 'eGPU MacBook IA local 2026 — Alternativas',
-    metaDescription: 'MacBooks Apple Silicon não suportam eGPUs para computação GPU. Alternativas em 2026: Mac Mini M4 Pro, mini PC AMD com OCuLink, servidor Ollama via LAN.',
+    metaDescription: 'Nenhuma eGPU funciona nativamente em um MacBook Apple Silicon. Opções 2026: TinyGPU (só tinygrad), Mac mini M5 Pro ou mini PC OCuLink via LAN.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
-    leadAnswerBlock: '**MacBooks com Apple Silicon (M2–M5) não podem usar eGPUs para computação GPU em 2026 — a Apple removeu o suporte a eGPU Thunderbolt no macOS Ventura. A alternativa: Mac Mini M4 Pro (48 GB de memória unificada) ou mini PC AMD (UM890 Pro) com eGPU OCuLink.**',
+    leadAnswerBlock: '**Nenhuma eGPU funciona nativamente em um MacBook Apple Silicon (M1–M5): o macOS não tem driver para GPUs externas, e a Razer informa que o Core X V2 é «not supported by M1 & later Mac devices». O único caminho é o driver TinyGPU da Tiny Corp, que segundo a Tiny Corp a Apple aprovou: ele executa computação de IA em eGPUs AMD RDNA 3+ ou NVIDIA Ampere+ via Thunderbolt ou USB4, mas sua documentação cobre apenas o tinygrad — não Ollama, llama.cpp nem MLX. Para uma configuração com suporte: um Mac mini M5 Pro ou um mini PC OCuLink servido pela sua rede local.**',
     quickAnswerTop: {
-      question: 'Posso usar uma eGPU com um MacBook para inferência local com LLMs?',
-      answer: 'Não. MacBooks Apple Silicon (M2/M3/M4/M5) não podem usar eGPUs para computação GPU. macOS Ventura e versões posteriores removeram completamente o suporte a eGPU Thunderbolt. Alternativa: Mac Mini M4 Pro (48 GB de memória unificada) ou mini PC AMD com eGPU OCuLink.',
+      question: 'Posso usar uma eGPU com um MacBook para inferência local de LLM?',
+      answer: 'Não nativamente. Macs Apple Silicon (M1–M5) não têm driver do macOS para GPUs externas. Desde abril de 2026, o driver TinyGPU da Tiny Corp (somente computação, sem saída de vídeo) permite que GPUs AMD RDNA 3+ e NVIDIA Ampere+ executem cargas de IA via Thunderbolt ou USB4, mas sua documentação cobre apenas o tinygrad, e placas NVIDIA também exigem o Docker Desktop. Para uma configuração estável: execute o Ollama em um Mac mini M5 Pro ou em um mini PC OCuLink e conecte-se pela LAN.',
       bullets: [
-        'MacBooks Apple Silicon: eGPU NÃO suportada para computação GPU (macOS Ventura+)',
-        'MacBooks Intel (2015–2020): eGPU funcionava via Thunderbolt 3 — mas linha descontinuada',
-        'Melhor alternativa para macOS: Mac Mini M4 Pro (48 GB de memória unificada)',
-        'Melhor combinação GPU + portabilidade: mini PC AMD (UM890 Pro) + OCuLink + RTX 3090',
-        'OCuLink oferece ~80% da largura de banda PCIe x16 — sem gargalo para inferência LLM',
+        'MacBooks Apple Silicon (M1–M5): sem suporte nativo a eGPU; a Razer lista o Core X V2 como sem suporte em Macs M1 e posteriores',
+        'TinyGPU (anunciado em 1 de abril de 2026): somente computação, AMD RDNA 3+ ou NVIDIA Ampere+, macOS 13+, sem saída de vídeo',
+        'O TinyGPU está documentado apenas para o tinygrad; Ollama, llama.cpp e MLX não constam como compatíveis',
+        'Placas NVIDIA exigem o Docker Desktop no Mac; placas AMD funcionam sem ele',
+        'A própria Tiny Corp relata 18,5 tok/s com Qwen 3.5 27B (Mac mini + RX 7900 XTX); a Plugable viu pouco ganho sobre a base em um MacBook Pro M2',
+        'Alternativa com suporte: Mac mini M5 Pro (a partir de US$ 1.699, preço nos EUA, até 64 GB, 307 GB/s) ou mini PC OCuLink + RTX 3090 pela LAN',
       ],
-      updatedDate: '2026-07',
+      updatedDate: '2026-10',
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'MacBooks Apple Silicon não podem usar eGPUs para computação — a Apple removeu o recurso no macOS Ventura',
-          'MacBooks Intel (2018–2020) suportavam eGPU via Thunderbolt 3 — essa linha está descontinuada',
-          'Para macOS: compre Mac Mini M4 Pro (48 GB) em vez de tentar expandir um MacBook com eGPU',
-          'Para portátil + GPU: mini PC AMD (UM890 Pro) + RTX 3090 via OCuLink — Ollama a 60–80 tok/s',
-          'eGPUs Thunderbolt 4 em notebooks x86 (Windows/Linux) funcionam — com ~35–45% de penalidade de largura de banda',
+          'Nenhum Mac Apple Silicon (M1–M5) suporta eGPU nativamente; uma placa conectada é detectada, mas não consegue executar trabalho',
+          'O TinyGPU (Tiny Corp, abril de 2026) adiciona computação em eGPU AMD e NVIDIA a partir do macOS 13 via Thunderbolt ou USB4 — somente computação, sem vídeo, documentado apenas para o tinygrad',
+          'Placas NVIDIA exigem o Docker Desktop na configuração do TinyGPU; placas AMD não',
+          'Para uma configuração de Mac com suporte: Mac mini M5 Pro (a partir de US$ 1.699, preço nos EUA, até 64 GB de memória unificada)',
+          'Para velocidade de GPU: mini PC OCuLink + RTX 3090, servido ao MacBook pela LAN com Ollama',
+          'OCuLink é PCIe 4.0 x4 (cerca de 63 Gbps) — um quarto de um slot x16, suficiente quando o modelo cabe na VRAM; nenhum Mac tem porta OCuLink',
         ],
       },
       mainContent: {
-        title: 'Por que a eGPU não funciona para MacBooks em 2026',
+        title: 'eGPU em Macs Apple Silicon em 2026: o que mudou',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'eGPUs não funcionam para inferência LLM local acelerada por GPU em MacBooks Apple Silicon em 2026 porque a Apple removeu o suporte a computação eGPU Thunderbolt no macOS Ventura (2022).',
+            text: 'Macs Apple Silicon não têm suporte nativo a GPUs externas, mas desde abril de 2026 o driver TinyGPU da Tiny Corp pode executar computação de IA em eGPUs AMD e NVIDIA via Thunderbolt ou USB4 — documentado apenas para o tinygrad.',
           },
           {
             type: 'plain-terms',
-            text: 'Uma eGPU é uma placa de vídeo externa em um gabinete conectado via Thunderbolt ou OCuLink. Em um MacBook com o chip M da Apple, a GPU está integrada ao chip — você não pode adicionar GPUs externas para tarefas de computação. A API GPU da Apple (Metal) não se estende a GPUs externas no hardware M-series.',
+            text: 'Uma eGPU é uma placa gráfica externa em um gabinete conectado por Thunderbolt, USB4 ou OCuLink. O macOS em chips M não tem driver para ela, então uma placa conectada é detectada, mas não executa trabalho. O TinyGPU é um app de macOS da Tiny Corp que instala uma extensão DriverKit (que a Tiny Corp diz ter sido aprovada pela Apple) para habilitar computação na placa. Ele não controla telas e não usa Metal.',
           },
         ],
-        content: 'A Apple removeu o suporte a eGPU Thunderbolt no macOS Ventura (lançado em outubro de 2022). Todos os MacBooks Apple Silicon (M1, M2, M3, M4, M5) rodam nessa versão ou posterior. Mesmo que você conecte fisicamente uma eGPU, o macOS não usará a GPU externa para tarefas de computação GPU — apenas a GPU interna é ativa.',
+        content: 'Sem um driver de terceiros, um Mac Apple Silicon detecta uma GPU externa, mas não consegue usá-la, segundo a Plugable. A página do Core X V2 da Razer informa «eGPUs not supported by M1 & later Mac devices». Em 1 de abril de 2026, a Tiny Corp anunciou que a Apple aprovou seu driver TinyGPU para AMD e NVIDIA. Segundo a documentação do tinygrad, o TinyGPU exige macOS 13.0 ou posterior, uma GPU AMD RDNA 3+ ou NVIDIA Ampere+ e uma porta USB4 ou Thunderbolt; a configuração NVIDIA exige também o Docker Desktop. A carga documentada é o executor de LLM do tinygrad, e segundo o heise ele não funciona com o MLX da Apple. A Tiny Corp relatou 18,5 tok/s para Qwen 3.5 27B em um Mac mini com Radeon RX 7900 XTX — um dado do fabricante, não um benchmark independente. A Plugable testou uma Radeon 9070 e uma GeForce RTX 5070 em um gabinete Thunderbolt 5 com um MacBook Pro M2 e viu pouca melhora sobre a base.',
         items: [
-          '**macOS 13 Ventura (2022)**: suporte a eGPU removido. Todos os Macs Apple Silicon afetados.',
-          '**macOS 14 Sonoma, 15 Sequoia**: ainda sem suporte a computação eGPU.',
-          '**MacBooks Intel (2018–2020)**: eGPU funcionava via Thunderbolt 3 em macOS antigo. Esses Macs estão descontinuados.',
-          '**Monitor externo via eGPU**: ainda funciona em Macs mais antigos como dispositivo de saída.',
+          '**Apple Silicon (M1–M5)**: sem suporte nativo a eGPU — uma placa conectada é detectada, mas não executa trabalho.',
+          '**TinyGPU (anunciado em 1 de abril de 2026)**: app de driver de terceiros da Tiny Corp; AMD RDNA 3+ e NVIDIA Ampere+ via Thunderbolt ou USB4; macOS 13.0+.',
+          '**Escopo**: somente computação — sem saída de vídeo, sem Metal, sem jogos; suporte de software documentado apenas para o tinygrad.',
+          '**Placas NVIDIA**: a configuração do compilador exige o Docker Desktop; placas AMD funcionam nativamente.',
+          '**MacBooks Intel (2018–2020)**: a eGPU funcionava via Thunderbolt 3 em versões antigas do macOS; esses Macs foram descontinuados.',
+        ],
+      },
+      connections: {
+        id: 'connections',
+        title: 'OCuLink, Thunderbolt e USB4 para uma GPU externa: comparação',
+        content: '**OCuLink dá à GPU externa a maior largura de banda por real investido, mas só em PCs — nenhum Mac tem porta OCuLink.** Thunderbolt 4 e USB4 permitem conexão a quente e funcionam em notebooks, com velocidade de enlace menor. Com o modelo na VRAM, a geração de tokens depende principalmente da largura de banda de memória da própria GPU; o enlace afeta sobretudo o carregamento do modelo. Escolha um mini PC com porta OCuLink (por exemplo Minisforum UM890 Pro ou AOOSTAR GEM12+ Pro) se a GPU ficar na mesa; um gabinete Thunderbolt só para um notebook que você carrega.',
+        columns: ['Enlace', 'Largura de banda nominal', 'Conexão a quente', 'Uso típico'],
+        rows: [
+          {
+            'Enlace': 'OCuLink 4i (PCIe 4.0 x4)',
+            'Largura de banda nominal': '~63 Gbps',
+            'Conexão a quente': 'Não (desligar antes)',
+            'Uso típico': 'Mini PC + dock de GPU',
+          },
+          {
+            'Enlace': 'Thunderbolt 4 / USB4 40G',
+            'Largura de banda nominal': '40 Gbps',
+            'Conexão a quente': 'Sim',
+            'Uso típico': 'Notebook + gabinete',
+          },
+          {
+            'Enlace': 'Thunderbolt 5',
+            'Largura de banda nominal': '80 Gbps (120 Gbps em boost)',
+            'Conexão a quente': 'Sim',
+            'Uso típico': 'PCs e Macs recentes',
+          },
+          {
+            'Enlace': 'USB4 20G',
+            'Largura de banda nominal': '20 Gbps',
+            'Conexão a quente': 'Sim',
+            'Uso típico': 'Menor largura de banda',
+          },
         ],
       },
       alternatives: {
         title: 'Alternativas reais: o que fazer em vez disso',
         productItems: [
           {
-            title: 'Mac Mini M4 Pro (48 GB) — Melhor opção macOS',
-            content: 'O Mac Mini M4 Pro com 48 GB de memória unificada executa Qwen3 32B Q4 a 20–30 tok/s via backend Metal do Ollama. Preço: ~$1.399. Se você precisa permanecer no ecossistema macOS e precisa de capacidade para modelos 32B+, este é o caminho de upgrade — não uma eGPU.',
+            title: 'Mac mini M5 Pro (até 64 GB) — Melhor opção macOS',
+            content: 'O Mac mini com M5 Pro da Apple (disponível desde 22 de setembro de 2026) começa em US$ 1.699 (preço nos EUA) e oferece até 64 GB de memória unificada a 307 GB/s. A geração de tokens é limitada pela largura de banda de memória: um modelo 32B Q4 de cerca de 19–20 GB tem teto teórico próximo de 15 tok/s nessa largura de banda; as velocidades reais são menores. Escolha-o para modelos da classe 32B que precisam caber na memória sem uma máquina de GPU separada. O Mac mini M6 básico (a partir de US$ 899, até 32 GB, 170 GB/s) atende modelos 7B–14B.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro na Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
+              { label: 'Apple Mac Mini M5 Pro na Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro' },
             ],
           },
           {
-            title: 'Mini PC AMD + eGPU OCuLink (Melhor combinação GPU/portátil)',
-            content: 'O AOOSTAR GEM12 Pro OCuLink (AMD Ryzen 9 8945HS, ~$480) conecta-se a uma RTX 3090 ou RTX 4090 via OCuLink (PCIe 4.0 x4, 64 Gbps — ~80% da largura de banda do slot x16). O Ollama no Linux ou Windows com CUDA roda 7B Q4 a 65–85 tok/s com uma RTX 3090. O mini PC é pequeno o suficiente para colocar na mesa ao lado de um MacBook e servir o Ollama via LAN.',
+            title: 'Mini PC OCuLink + RTX 3090 (Melhor combo GPU/portátil)',
+            content: 'Um mini PC com porta OCuLink — como o Minisforum UM890 Pro (Ryzen 9 8945HS, barebone a partir de US$ 479 no lançamento em 2024) ou o AOOSTAR GEM12+ Pro (barebone listado em torno de US$ 359) — conecta-se a uma GPU de desktop por um dock OCuLink. OCuLink não permite conexão a quente: desligue o PC antes de conectar. Benchmarks da comunidade com llama.cpp relatam cerca de 90–95 tok/s para um modelo 8B Q4_K_M em uma RTX 3090; as fontes divergem e os resultados dependem do tamanho de contexto e da versão. Execute o Ollama no mini PC e sirva pela LAN; o MacBook continua sendo o cliente.',
             affiliateLinks: [
               { label: 'AOOSTAR GEM12 Pro OCuLink na Amazon', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
+              { label: 'Minisforum UM890 Pro na Amazon', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro' },
             ],
           },
           {
-            title: 'eGPU Thunderbolt em notebook Windows/Linux (se não estiver no Mac)',
-            content: 'Em um notebook x86 com Windows ou Linux com Thunderbolt 4 ou 5, a eGPU funciona para o Ollama. A penalidade de largura de banda é ~35–45% vs um slot PCIe x16 nativo, mas a inferência do Ollama é limitada pela largura de banda de memória (não pelo PCIe). Gabinete atual recomendado: Razer Core X V2 ($349,99, Thunderbolt 5, somente Windows/USB4) ou o Razer Core X original (~$249, Thunderbolt 3, com fonte de alimentação incluída).',
+            title: 'Driver TinyGPU + eGPU em Mac Apple Silicon (experimental)',
+            content: 'O driver TinyGPU da Tiny Corp habilita computação em eGPUs AMD RDNA 3+ e NVIDIA Ampere+ via Thunderbolt ou USB4 no macOS 13+. Está documentado apenas para o tinygrad (execute com DEV=AMD ou DEV=NV python3 -m tinygrad.llm), placas NVIDIA exigem o Docker Desktop e a Plugable viu pouca melhora sobre a base em um MacBook Pro M2. É um driver de terceiros, não suporte nativo a Metal; espere mudanças de compatibilidade conforme o macOS evolui. Trate como experimento, não como configuração diária.',
             affiliateLinks: [
-              { label: 'Razer Core X V2 eGPU Enclosure na Amazon', url: 'https://www.amazon.com/dp/B0FFQFDZWX' },
+              { label: 'eGPU RTX 4090 na Amazon (para TinyGPU)', url: 'https://www.amazon.com/s?k=RTX+4090+eGPU+enclosure' },
+            ],
+          },
+          {
+            title: 'eGPU Thunderbolt em notebook Windows/Linux (se não usar Mac)',
+            content: 'Em um notebook x86 com Windows ou Linux e Thunderbolt 4 ou 5, uma eGPU funciona com o Ollama. O enlace é mais lento que um slot PCIe nativo, mas com o modelo na VRAM a geração de tokens depende principalmente da largura de banda de memória da GPU; as perdas reais são menores do que a diferença do enlace sugere. O Razer Core X V2 (US$ 349,99, Thunderbolt 5, fonte não incluída) foi feito para Windows; a página da Razer informa que eGPUs não têm suporte em Macs M1 e posteriores.',
+            affiliateLinks: [
+              { label: 'Gabinete eGPU Razer Core X V2 na Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+V2' },
               { label: 'Razer Core X (original) na Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
             ],
           },
@@ -908,11 +1434,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-            { q: 'Existe alguma forma de fazer uma eGPU funcionar com um M4 MacBook Pro para IA?', a: 'Não para computação GPU. O macOS não expõe uma API para GPUs externas executarem tarefas Metal compute no hardware M-series. A única opção é conectar o MacBook a um servidor Ollama em uma máquina separada (um mini PC ou desktop com GPU dedicada) via rede local. Defina OLLAMA_HOST=0.0.0.0 no servidor e aponte os apps do MacBook para esse endereço IP.' },
-            { q: 'A Apple vai reintroduzir o suporte a eGPU para Apple Silicon?', a: 'É improvável. A arquitetura M-series da Apple integra GPU, CPU e memória em um único chip — a filosofia de design é memória unificada, não expansibilidade. Somente o Mac Pro (2023) suporta expansão de GPU.' },
-            { q: 'Posso usar uma GPU NVIDIA para inferência e canalizar a saída para meu MacBook?', a: 'Sim — essa é a abordagem recomendada. Execute o Ollama em uma máquina Windows ou Linux com GPU NVIDIA, exponha-o na sua LAN (OLLAMA_HOST=0.0.0.0), e conecte-se do seu MacBook via Open WebUI, Cursor, Continue ou qualquer cliente compatível com OpenAI.' },
-            { q: 'Posso usar uma eGPU com um MacBook para inferência local com LLMs?', a: 'Não. A Apple removeu o suporte a computação eGPU no macOS Ventura (2022). Alternativas: Mac Mini M4 Pro (48 GB de memória unificada) ou mini PC AMD com OCuLink.' },
-          ],
+          { q: 'Existe alguma forma de fazer uma eGPU funcionar com um MacBook Pro M4 para IA?', a: 'Sim, com limites. O driver TinyGPU da Tiny Corp executa computação em GPUs AMD RDNA 3+ e NVIDIA Ampere+ via Thunderbolt ou USB4 no macOS 13+. Está documentado apenas para o tinygrad (não para Ollama, llama.cpp nem MLX), não dá saída de vídeo e placas NVIDIA exigem o Docker Desktop. A Plugable viu pouca melhora sobre a base em um MacBook Pro M2. Para uma configuração estável: execute o Ollama em uma máquina de GPU separada e conecte pela LAN (OLLAMA_HOST=0.0.0.0 no servidor).' },
+          { q: 'Qual é a melhor eGPU para um MacBook Pro 16 básico?', a: 'Nenhuma eGPU tem suporte oficial em MacBooks Pro Apple Silicon. Para experimentar o TinyGPU, o mínimo documentado é uma placa AMD RDNA 3+ (Radeon RX 7000 ou mais nova) ou NVIDIA Ampere+ (RTX 30 ou mais nova) em um gabinete Thunderbolt ou USB4; a AMD evita a etapa do Docker. No uso diário, um Mac com mais memória unificada ou uma GPU RTX em um mini PC conectado pela LAN é a escolha mais confiável.' },
+          { q: 'O Razer Core funciona com um MacBook Pro?', a: 'Não em Apple Silicon. A página do Core X V2 da Razer informa «eGPUs not supported by M1 & later Mac devices». O Razer Core X original foi lançado em 2018 para Macs Intel com Thunderbolt 3. Um gabinete Razer em um Mac Apple Silicon dependeria do driver não oficial TinyGPU, que a Razer não lista.' },
+          { q: 'Posso adicionar uma GPU externa a um iMac?', a: 'Não nativamente em iMacs Apple Silicon — os limites são os mesmos dos MacBooks. iMacs Intel com Thunderbolt 3 suportavam eGPUs em versões antigas do macOS. Para LLMs locais: execute o Ollama em uma máquina de GPU separada e conecte pela LAN.' },
+          { q: 'Posso usar uma eGPU OCuLink com um Mac?', a: 'Não. Nenhum Mac tem porta OCuLink. OCuLink foi feito para PCs e mini PCs; para um Mac, as opções são uma eGPU Thunderbolt ou USB4 com o driver experimental TinyGPU, ou um mini PC OCuLink servido pela LAN.' },
+          { q: 'A Apple vai trazer de volta o suporte a eGPU no Apple Silicon?', a: 'É improvável. Os chips M da Apple integram GPU, CPU e memória em um único pacote — o projeto é memória unificada, não expansibilidade — e a Apple não anunciou planos de restaurar a computação em eGPU.' },
+          { q: 'Posso usar uma GPU NVIDIA para inferência e enviar o resultado ao meu MacBook?', a: 'Sim — é a abordagem recomendada. Execute o Ollama em uma máquina Windows ou Linux com GPU NVIDIA, exponha-o na sua LAN (OLLAMA_HOST=0.0.0.0) e conecte-se do MacBook via Open WebUI, Cursor, Continue ou qualquer cliente compatível com OpenAI. O MacBook cuida da interface; a máquina NVIDIA faz o cálculo.' },
+        ],
       },
       relatedReading: {
         title: 'Guias relacionados',
@@ -921,6 +1450,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[MLX vs Ollama vs llama.cpp: Which Backend?](/pt/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
           '[How to Convert an Ollama Model to MLX](/pt/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
           '[Best Local LLM for 16 GB RAM Laptop](/pt/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+          '[Mac mini M5 as a Local AI Server](/pt/local-llms/mac-mini-m5-local-ai-server) -- Mac mini M5 local AI server guide',
+          '[Apple Silicon M5 for Local LLMs](/pt/local-llms/apple-silicon-m5-local-llm) -- M5 Pro vs Max local LLM guide',
         ],
       },
     },
@@ -928,123 +1459,190 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-          {
-            '@type': 'Question',
-            'name': 'Existe alguma forma de fazer uma eGPU funcionar com um M4 MacBook Pro para IA?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Não para computação GPU. O macOS não expõe uma API para GPUs externas executarem tarefas Metal compute no hardware M-series. A única opção é conectar o MacBook a um servidor Ollama em uma máquina separada (um mini PC ou desktop com GPU dedicada) via rede local. Defina OLLAMA_HOST=0.0.0.0 no servidor e aponte os apps do MacBook para esse endereço IP.',
-            },
+        {
+          '@type': 'Question',
+          'name': 'Existe alguma forma de fazer uma eGPU funcionar com um MacBook Pro M4 para IA?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Sim, com limites. O driver TinyGPU da Tiny Corp executa computação em GPUs AMD RDNA 3+ e NVIDIA Ampere+ via Thunderbolt ou USB4 no macOS 13+. Está documentado apenas para o tinygrad (não para Ollama, llama.cpp nem MLX), não dá saída de vídeo e placas NVIDIA exigem o Docker Desktop. A Plugable viu pouca melhora sobre a base em um MacBook Pro M2. Para uma configuração estável: execute o Ollama em uma máquina de GPU separada e conecte pela LAN (OLLAMA_HOST=0.0.0.0 no servidor).',
           },
-          {
-            '@type': 'Question',
-            'name': 'A Apple vai reintroduzir o suporte a eGPU para Apple Silicon?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'É improvável. A arquitetura M-series da Apple integra GPU, CPU e memória em um único chip — a filosofia de design é memória unificada, não expansibilidade. Somente o Mac Pro (2023) suporta expansão de GPU.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Qual é a melhor eGPU para um MacBook Pro 16 básico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Nenhuma eGPU tem suporte oficial em MacBooks Pro Apple Silicon. Para experimentar o TinyGPU, o mínimo documentado é uma placa AMD RDNA 3+ (Radeon RX 7000 ou mais nova) ou NVIDIA Ampere+ (RTX 30 ou mais nova) em um gabinete Thunderbolt ou USB4; a AMD evita a etapa do Docker. No uso diário, um Mac com mais memória unificada ou uma GPU RTX em um mini PC conectado pela LAN é a escolha mais confiável.',
           },
-          {
-            '@type': 'Question',
-            'name': 'Posso usar uma GPU NVIDIA para inferência e canalizar a saída para meu MacBook?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Sim — essa é a abordagem recomendada. Execute o Ollama em uma máquina Windows ou Linux com GPU NVIDIA, exponha-o na sua LAN (OLLAMA_HOST=0.0.0.0), e conecte-se do seu MacBook via Open WebUI, Cursor, Continue ou qualquer cliente compatível com OpenAI.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'O Razer Core funciona com um MacBook Pro?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Não em Apple Silicon. A página do Core X V2 da Razer informa «eGPUs not supported by M1 & later Mac devices». O Razer Core X original foi lançado em 2018 para Macs Intel com Thunderbolt 3. Um gabinete Razer em um Mac Apple Silicon dependeria do driver não oficial TinyGPU, que a Razer não lista.',
           },
-          {
-            '@type': 'Question',
-            'name': 'Posso usar uma eGPU com um MacBook para inferência local com LLMs?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Não. A Apple removeu o suporte a computação eGPU no macOS Ventura (2022). Alternativas: Mac Mini M4 Pro (48 GB de memória unificada) ou mini PC AMD com OCuLink.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Posso adicionar uma GPU externa a um iMac?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Não nativamente em iMacs Apple Silicon — os limites são os mesmos dos MacBooks. iMacs Intel com Thunderbolt 3 suportavam eGPUs em versões antigas do macOS. Para LLMs locais: execute o Ollama em uma máquina de GPU separada e conecte pela LAN.',
           },
-        ],
+        },
+        {
+          '@type': 'Question',
+          'name': 'Posso usar uma eGPU OCuLink com um Mac?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Não. Nenhum Mac tem porta OCuLink. OCuLink foi feito para PCs e mini PCs; para um Mac, as opções são uma eGPU Thunderbolt ou USB4 com o driver experimental TinyGPU, ou um mini PC OCuLink servido pela LAN.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'A Apple vai trazer de volta o suporte a eGPU no Apple Silicon?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'É improvável. Os chips M da Apple integram GPU, CPU e memória em um único pacote — o projeto é memória unificada, não expansibilidade — e a Apple não anunciou planos de restaurar a computação em eGPU.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Posso usar uma GPU NVIDIA para inferência e enviar o resultado ao meu MacBook?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Sim — é a abordagem recomendada. Execute o Ollama em uma máquina Windows ou Linux com GPU NVIDIA, exponha-o na sua LAN (OLLAMA_HOST=0.0.0.0) e conecte-se do MacBook via Open WebUI, Cursor, Continue ou qualquer cliente compatível com OpenAI. O MacBook cuida da interface; a máquina NVIDIA faz o cálculo.',
+          },
+        },
+      ],
     },
-    schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: o que funciona em 2026', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/pt/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'pt-BR' },
+    schema: { '@type': 'TechArticle', headline: 'eGPU para MacBook e IA local: o que funciona em 2026', datePublished: '2026-05-26', dateModified: '2026-10-17', url: 'https://www.promptquorum.com/pt/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'pt-BR' },
   },
   ar: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-egpu-setup-for-macbook-local-llm-2026-overview-hero-ar.webp',
     type: 'how-to',
     title: '⁨eGPU⁩ مع ⁨MacBook⁩ والذكاء الاصطناعي المحلي: ما الذي يعمل في ⁨2026⁩؟',
     seoTitle: '⁨eGPU⁩ مع ⁨MacBook⁩ للاستدلال المحلي بـ ⁨LLM 2026⁩',
-    metaDescription: '⁨Apple Silicon MacBooks⁩ لا تدعم ⁨eGPU⁩ منذ ⁨macOS Ventura 2022⁩. البديل الأفضل: ⁨Mac Mini M4 Pro⁩ بـ ⁨48 GB⁩ أو ⁨AMD⁩ مع ⁨OCuLink⁩ و⁨Ollama⁩.',
+    metaDescription: 'لا تعمل أي eGPU أصليًا على MacBook بمعالج Apple Silicon. الخيارات في 2026: TinyGPU (tinygrad فقط) أو Mac mini M5 Pro أو حاسب OCuLink مصغر عبر LAN.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     parentArticle: '/ar/local-llms/gpu-vs-cpu-vs-apple-silicon',
-    leadAnswerBlock: '**لا يمكن لأجهزة MacBook بمعالج Apple Silicon (M2–M5) استخدام eGPU لحوسبة معالج الرسومات في 2026 — فقد أزالت Apple دعم eGPU عبر Thunderbolt في macOS Ventura. البديل: Mac Mini M4 Pro (48 جيجابايت ذاكرة موحدة) أو حاسب AMD مصغر (UM890 Pro) مع eGPU عبر OCuLink.**',
+    leadAnswerBlock: '**لا تعمل أي eGPU أصليًا على أجهزة MacBook بمعالج Apple Silicon (M1–M5): فنظام macOS لا يملك مشغّلًا لمعالجات الرسومات الخارجية، وتذكر Razer أن Core X V2 "not supported by M1 & later Mac devices". الطريق الوحيد هو مشغّل TinyGPU من Tiny Corp (الذي تقول Tiny Corp إن Apple وافقت عليه)، وهو ينفّذ حوسبة الذكاء الاصطناعي على eGPU من AMD RDNA 3+ أو NVIDIA Ampere+ عبر Thunderbolt أو USB4، لكن وثائقه تغطي tinygrad فقط — لا Ollama ولا llama.cpp ولا MLX. للحصول على إعداد مدعوم، استخدم Mac mini M5 Pro أو حاسب OCuLink مصغرًا تتم خدمته عبر شبكتك المحلية.**',
     quickAnswerTop: {
       question: 'هل يمكنني استخدام eGPU مع MacBook للاستدلال المحلي بالنماذج اللغوية الكبيرة؟',
-      answer: 'لا. لا يمكن لأجهزة MacBook بمعالج Apple Silicon (M2/M3/M4/M5) استخدام eGPU لحوسبة معالج الرسومات. أزالت إصدارات macOS Ventura وما بعدها دعم eGPU عبر Thunderbolt بالكامل. البديل: Mac Mini M4 Pro (48 جيجابايت ذاكرة موحدة) أو حاسب AMD مصغر مع eGPU عبر OCuLink.',
+      answer: 'ليس بشكل أصلي. لا تملك أجهزة Mac بمعالج Apple Silicon (M1–M5) مشغّلًا في macOS لمعالجات الرسومات الخارجية. منذ أبريل 2026 يتيح مشغّل TinyGPU من Tiny Corp (حوسبة فقط دون إخراج شاشة) تشغيل أحمال الذكاء الاصطناعي على معالجات AMD RDNA 3+ وNVIDIA Ampere+ عبر Thunderbolt أو USB4، لكن وثائقه تغطي tinygrad فقط، وتحتاج بطاقات NVIDIA أيضًا إلى Docker Desktop. للحصول على إعداد مستقر: شغّل Ollama على Mac mini M5 Pro أو حاسب OCuLink مصغر واتصل به عبر LAN.',
       bullets: [
-        'أجهزة MacBook بمعالج Apple Silicon: eGPU غير مدعومة لحوسبة معالج الرسومات (macOS Ventura+)',
-        'أجهزة MacBook بمعالج Intel (2015–2020): كانت eGPU تعمل عبر Thunderbolt 3 — لكن تلك السلسلة أوقف إنتاجها',
-        'أفضل بديل لـ macOS: Mac Mini M4 Pro (48 جيجابايت ذاكرة موحدة)',
-        'أفضل مزيج من معالج الرسومات والحمولية: حاسب AMD مصغر (UM890 Pro) + OCuLink + RTX 3090',
-        'يوفر OCuLink ~80% من نطاق PCIe x16 الترددي — بدون اختناق لاستدلال النماذج اللغوية الكبيرة',
+        'أجهزة MacBook بمعالج Apple Silicon (M1–M5): لا دعم أصلي لـ eGPU؛ وتدرج Razer جهاز Core X V2 غير مدعوم على أجهزة Mac من M1 فما بعد',
+        'TinyGPU (أُعلن في 1 أبريل 2026): حوسبة فقط، AMD RDNA 3+ أو NVIDIA Ampere+، macOS 13+، دون إخراج شاشة',
+        'TinyGPU موثّق لـ tinygrad فقط؛ ولم تُذكر Ollama وllama.cpp وMLX ضمن المدعومة',
+        'تحتاج بطاقات NVIDIA إلى Docker Desktop على الـ Mac؛ وتعمل بطاقات AMD بدونه',
+        'أبلغت Tiny Corp ذاتيًا عن 18.5 رمز/ثانية مع Qwen 3.5 27B (Mac mini + RX 7900 XTX)؛ ولاحظت Plugable تحسنًا ضئيلًا عن الأساس على MacBook Pro M2',
+        'البديل المدعوم: Mac mini M5 Pro (من 1,699 دولارًا بسعر الولايات المتحدة، حتى 64 جيجابايت، 307 جيجابايت/ث) أو حاسب OCuLink مصغر + RTX 3090 عبر LAN',
       ],
-      updatedDate: '2026-07',
+      updatedDate: '2026-10',
     },
     sections: {
       tldr: {
         isTldr: true,
         items: [
-          'لا يمكن لأجهزة MacBook بمعالج Apple Silicon استخدام eGPU للحوسبة — أزالت Apple هذه الميزة في macOS Ventura',
-          'دعمت أجهزة MacBook بمعالج Intel (2018–2020) eGPU عبر Thunderbolt 3 — تلك السلسلة أوقف إنتاجها',
-          'لـ macOS: اشترِ Mac Mini M4 Pro (48 جيجابايت) بدلاً من محاولة توسيع MacBook بـ eGPU',
-          'لحاسب محمول + معالج رسومات: حاسب AMD مصغر (UM890 Pro) + RTX 3090 عبر OCuLink — Ollama بـ60–80 رمز/ثانية',
-          'تعمل eGPU عبر Thunderbolt 4 في الحاسبات المحمولة x86 (Windows/Linux) — مع عقوبة نطاق ترددي ~35–45%',
+          'لا يدعم أي جهاز Mac بمعالج Apple Silicon (M1–M5) أي eGPU أصليًا؛ تُكتشف البطاقة الموصولة لكنها لا تستطيع تنفيذ أي عمل',
+          'يضيف TinyGPU (Tiny Corp، أبريل 2026) حوسبة eGPU من AMD وNVIDIA بدءًا من macOS 13 عبر Thunderbolt أو USB4 — حوسبة فقط، دون شاشة، وموثّق لـ tinygrad فقط',
+          'تحتاج بطاقات NVIDIA إلى Docker Desktop لإعداد TinyGPU؛ أما بطاقات AMD فلا',
+          'لإعداد Mac مدعوم: Mac mini M5 Pro (من 1,699 دولارًا بسعر الولايات المتحدة، حتى 64 جيجابايت ذاكرة موحدة)',
+          'لسرعة معالج الرسومات: حاسب OCuLink مصغر + RTX 3090 تتم خدمته للـ MacBook عبر LAN باستخدام Ollama',
+          'OCuLink هو PCIe 4.0 x4 (نحو 63 جيجابت/ث) — ربع منفذ x16، وهو كافٍ متى اتسع النموذج في VRAM؛ ولا يملك أي Mac منفذ OCuLink',
         ],
       },
       mainContent: {
-        title: 'لماذا لا تعمل eGPU مع أجهزة MacBook في 2026؟',
+        title: 'eGPU على أجهزة Mac بمعالج Apple Silicon في 2026: ما الذي تغيّر',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'لا تعمل eGPU للاستدلال المحلي بالنماذج اللغوية الكبيرة المُسرَّع بمعالج الرسومات على أجهزة MacBook بمعالج Apple Silicon في 2026 لأن Apple أزالت دعم حوسبة eGPU عبر Thunderbolt في macOS Ventura (2022).',
+            text: 'لا تملك أجهزة Mac بمعالج Apple Silicon دعمًا أصليًا لمعالجات الرسومات الخارجية، لكن منذ أبريل 2026 يمكن لمشغّل TinyGPU من Tiny Corp تنفيذ حوسبة الذكاء الاصطناعي على eGPU من AMD وNVIDIA عبر Thunderbolt أو USB4 — وهو موثّق لـ tinygrad فقط.',
           },
           {
             type: 'plain-terms',
-            text: 'eGPU هي بطاقة رسومات خارجية في حاوية متصلة عبر Thunderbolt أو OCuLink. في MacBook بمعالج Apple M، تكون وحدة معالجة الرسومات مدمجة في المعالج — لا يمكن إضافة معالجات رسومات خارجية لمهام الحوسبة. لا تمتد واجهة برمجة تطبيقات Metal (واجهة GPU من Apple) إلى معالجات الرسومات الخارجية في أجهزة سلسلة M.',
+            text: 'الـ eGPU هي بطاقة رسومات خارجية داخل علبة تتصل عبر Thunderbolt أو USB4 أو OCuLink. لا يملك macOS على شرائح M مشغّلًا لها، لذا تُكتشف البطاقة الموصولة لكنها لا تستطيع تنفيذ أي عمل. TinyGPU تطبيق macOS من Tiny Corp يثبّت امتداد DriverKit (تقول Tiny Corp إن Apple وافقت عليه) لتمكين الحوسبة على البطاقة. وهو لا يشغّل الشاشات ولا يستخدم Metal.',
           },
         ],
-        content: 'أزالت Apple دعم eGPU عبر Thunderbolt في macOS Ventura (الصادر في أكتوبر 2022). تعمل جميع أجهزة MacBook بمعالج Apple Silicon (M1 وM2 وM3 وM4 وM5) على هذا الإصدار أو إصدارات أحدث. حتى لو وصّلت eGPU فيزيائياً، لن يستخدم macOS معالج الرسومات الخارجي لمهام حوسبة GPU — معالج الرسومات الداخلي فقط هو النشط.',
+        content: 'بحسب Plugable، من دون مشغّل من جهة خارجية يكتشف Mac بمعالج Apple Silicon معالج الرسومات الخارجي لكنه لا يستطيع استخدامه. تذكر صفحة Razer Core X V2 عبارة "eGPUs not supported by M1 & later Mac devices". في 1 أبريل 2026 أعلنت Tiny Corp أن Apple وافقت على مشغّل TinyGPU لكل من AMD وNVIDIA. وفق وثائق tinygrad يتطلب TinyGPU نظام macOS 13.0 أو أحدث ومعالج رسومات AMD RDNA 3+ أو NVIDIA Ampere+ ومنفذ USB4 أو Thunderbolt؛ ويتطلب إعداد NVIDIA أيضًا Docker Desktop. الحمل الموثّق هو مشغّل LLM في tinygrad، وتفيد heise بأنه لا يعمل مع MLX من Apple. أبلغت Tiny Corp عن 18.5 رمز/ثانية لنموذج Qwen 3.5 27B على Mac mini مع Radeon RX 7900 XTX — وهي قيمة من الشركة المصنّعة وليست اختبار أداء مستقلًا. اختبرت Plugable بطاقتي Radeon 9070 وGeForce RTX 5070 في علبة Thunderbolt 5 على MacBook Pro M2 ولاحظت تحسنًا ضئيلًا عن الأساس.',
         items: [
-          '**macOS 13 Ventura (2022)**: إزالة دعم eGPU. جميع أجهزة Mac بمعالج Apple Silicon متأثرة.',
-          '**macOS 14 Sonoma وmacOS 15 Sequoia**: لا تزال بدون دعم حوسبة eGPU.',
-          '**أجهزة MacBook بمعالج Intel (2018–2020)**: كانت eGPU تعمل عبر Thunderbolt 3 في macOS القديم. تلك الأجهزة أوقف إنتاجها.',
-          '**شاشة خارجية عبر eGPU**: لا تزال تعمل في أجهزة Mac الأقدم كجهاز عرض.',
+          '**Apple Silicon (M1–M5)**: لا دعم أصلي لـ eGPU — تُكتشف البطاقة الموصولة لكنها لا تستطيع تنفيذ أي عمل.',
+          '**TinyGPU (أُعلن في 1 أبريل 2026)**: تطبيق مشغّل من جهة خارجية من Tiny Corp؛ يدعم AMD RDNA 3+ وNVIDIA Ampere+ عبر Thunderbolt أو USB4؛ macOS 13.0+.',
+          '**النطاق**: حوسبة فقط — دون إخراج شاشة ودون Metal ودون ألعاب؛ ودعم البرمجيات موثّق لـ tinygrad فقط.',
+          '**بطاقات NVIDIA**: يتطلب إعداد المترجم Docker Desktop؛ وتعمل بطاقات AMD أصليًا.',
+          '**أجهزة MacBook بمعالج Intel (2018–2020)**: عملت eGPU عبر Thunderbolt 3 على إصدارات macOS الأقدم؛ وقد توقف إنتاج هذه الأجهزة.',
+        ],
+      },
+      connections: {
+        id: 'connections',
+        title: 'OCuLink مقابل Thunderbolt وUSB4 لمعالج رسومات خارجي',
+        content: '**يمنح OCuLink معالج الرسومات الخارجي أكبر نطاق ترددي مقابل التكلفة، لكن على الحواسيب الشخصية فقط — فلا يملك أي Mac منفذ OCuLink.** يدعم Thunderbolt 4 وUSB4 التوصيل أثناء التشغيل ويعملان على الحواسيب المحمولة بسرعة وصلة أقل. وبعد اتساع النموذج في VRAM يعتمد توليد الرموز أساسًا على النطاق الترددي لذاكرة معالج الرسومات نفسه، ويؤثر الاتصال أساسًا في تحميل النموذج. اختر حاسبًا مصغرًا بمنفذ OCuLink (مثل Minisforum UM890 Pro أو AOOSTAR GEM12+ Pro) إذا بقي معالج الرسومات على المكتب؛ واختر علبة Thunderbolt فقط لحاسب محمول تحمله معك.',
+        columns: ['الاتصال', 'النطاق الاسمي', 'التوصيل أثناء التشغيل', 'الاستخدام النموذجي'],
+        rows: [
+          {
+            'الاتصال': 'OCuLink 4i (PCIe 4.0 x4)',
+            'النطاق الاسمي': '~63 جيجابت/ث',
+            'التوصيل أثناء التشغيل': 'لا (أطفئ الجهاز أولًا)',
+            'الاستخدام النموذجي': 'حاسب مصغر + قاعدة GPU',
+          },
+          {
+            'الاتصال': 'Thunderbolt 4 / USB4 40G',
+            'النطاق الاسمي': '40 جيجابت/ث',
+            'التوصيل أثناء التشغيل': 'نعم',
+            'الاستخدام النموذجي': 'محمول + علبة',
+          },
+          {
+            'الاتصال': 'Thunderbolt 5',
+            'النطاق الاسمي': '80 جيجابت/ث (120 معزَّز)',
+            'التوصيل أثناء التشغيل': 'نعم',
+            'الاستخدام النموذجي': 'حواسيب وأجهزة Mac أحدث',
+          },
+          {
+            'الاتصال': 'USB4 20G',
+            'النطاق الاسمي': '20 جيجابت/ث',
+            'التوصيل أثناء التشغيل': 'نعم',
+            'الاستخدام النموذجي': 'أقل نطاق ترددي',
+          },
         ],
       },
       alternatives: {
         title: 'البدائل الحقيقية: ماذا تفعل بدلاً من ذلك',
         productItems: [
           {
-            title: 'Mac Mini M4 Pro (48 جيجابايت) — أفضل خيار لـ macOS',
-            content: 'يشغّل Mac Mini M4 Pro بـ48 جيجابايت من الذاكرة الموحدة Qwen3 32B Q4 بـ20–30 رمز/ثانية عبر خلفية Metal في Ollama. السعر: ~1,399 دولار. إذا احتجت للبقاء في نظام macOS البيئي وتحتاج قدرة لنماذج 32B فأكبر، هذا هو مسار الترقية — لا eGPU.',
+            title: 'Mac mini M5 Pro (حتى 64 جيجابايت) — أفضل خيار لـ macOS',
+            content: 'يبدأ Mac mini بمعالج M5 Pro من Apple (متاح منذ 22 سبتمبر 2026) من 1,699 دولارًا بسعر الولايات المتحدة، ويوفر حتى 64 جيجابايت من الذاكرة الموحدة بنطاق 307 جيجابايت/ث. يقيّد النطاق الترددي للذاكرة توليد الرموز، لذا فإن نموذج 32B بصيغة Q4 بحجم 19–20 جيجابايت تقريبًا له سقف نظري قرب 15 رمزًا/ثانية عند هذا النطاق؛ والسرعات الفعلية أقل. اخترها لنماذج فئة 32B التي يجب أن تتسع في الذاكرة دون جهاز GPU منفصل. أما Mac mini M6 الأساسي (من 899 دولارًا، حتى 32 جيجابايت، 170 جيجابايت/ث) فيناسب نماذج 7B–14B.',
             affiliateLinks: [
-              { label: 'Apple Mac Mini M4 Pro على Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
+              { label: 'Apple Mac Mini M5 Pro على Amazon', url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro' },
             ],
           },
           {
-            title: 'حاسب AMD مصغر + eGPU عبر OCuLink (أفضل مزيج من معالج الرسومات والحمولية)',
-            content: 'يتصل AOOSTAR GEM12 Pro OCuLink (AMD Ryzen 9 8945HS، ~480 دولار) بـ RTX 3090 أو RTX 4090 عبر OCuLink (PCIe 4.0 x4، 64 جيجابت/ثانية — ~80% من نطاق فتحة x16 الترددي). يشغّل Ollama على Linux أو Windows مع CUDA النماذج 7B Q4 بـ65–85 رمز/ثانية مع RTX 3090. الحاسب المصغر صغير بما يكفي لوضعه على المكتب بجانب MacBook وتقديم Ollama عبر الشبكة المحلية.',
+            title: 'حاسب OCuLink مصغر + RTX 3090 (أفضل مزيج GPU/محمول)',
+            content: 'يتصل حاسب مصغر بمنفذ OCuLink — مثل Minisforum UM890 Pro (Ryzen 9 8945HS، وهيكل بلا مكونات من 479 دولارًا عند إطلاقه في 2024) أو AOOSTAR GEM12+ Pro (هيكل بلا مكونات مدرج بنحو 359 دولارًا) — بمعالج رسومات مكتبي عبر قاعدة OCuLink. لا يدعم OCuLink التوصيل أثناء التشغيل: أطفئ الحاسب قبل التوصيل. تفيد اختبارات المجتمع مع llama.cpp بنحو 90–95 رمزًا/ثانية لنموذج 8B Q4_K_M على RTX 3090؛ وتتباين المصادر وتعتمد النتائج على طول السياق وإصدار البناء. شغّل Ollama على الحاسب المصغر وقدّمه عبر LAN؛ ويبقى الـ MacBook هو العميل.',
             affiliateLinks: [
               { label: 'AOOSTAR GEM12 Pro OCuLink على Amazon', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
+              { label: 'Minisforum UM890 Pro على Amazon', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro' },
             ],
           },
           {
-            title: 'eGPU عبر Thunderbolt في حاسب محمول Windows/Linux (إذا لم تكن على Mac)',
-            content: 'في حاسب محمول x86 يعمل بنظام Windows أو Linux مع Thunderbolt 4 أو 5، تعمل eGPU مع Ollama. عقوبة النطاق الترددي ~35–45% مقارنةً بفتحة PCIe x16 الأصلية، لكن استدلال Ollama محدود بنطاق ترددي الذاكرة (لا بـ PCIe). الحاوية الموصى بها حالياً: Razer Core X V2 (349,99 دولار، Thunderbolt 5، لنظام Windows/USB4 فقط) أو Razer Core X الأصلية (~249 دولار، Thunderbolt 3، تشمل وحدة إمداد الطاقة).',
+            title: 'مشغّل TinyGPU + eGPU على Mac بمعالج Apple Silicon (تجريبي)',
+            content: 'يتيح مشغّل TinyGPU من Tiny Corp الحوسبة على eGPU من AMD RDNA 3+ وNVIDIA Ampere+ عبر Thunderbolt أو USB4 على macOS 13+. وهو موثّق لـ tinygrad فقط (يُشغَّل بـ DEV=AMD أو DEV=NV python3 -m tinygrad.llm)، وتحتاج بطاقات NVIDIA إلى Docker Desktop، ولاحظت Plugable تحسنًا ضئيلًا عن الأساس على MacBook Pro M2. إنه مشغّل من جهة خارجية وليس دعمًا أصليًا لـ Metal، فتوقّع تغيّرات في التوافق مع تطور macOS. تعامل معه كتجربة لا كإعداد يومي.',
             affiliateLinks: [
-              { label: 'Razer Core X V2 eGPU Enclosure على Amazon', url: 'https://www.amazon.com/dp/B0FFQFDZWX' },
-              { label: 'Razer Core X (الأصلية) على Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
+              { label: 'eGPU RTX 4090 على Amazon (لإعداد TinyGPU)', url: 'https://www.amazon.com/s?k=RTX+4090+eGPU+enclosure' },
+            ],
+          },
+          {
+            title: 'eGPU عبر Thunderbolt على محمول Windows/Linux (إن لم تكن على Mac)',
+            content: 'على محمول x86 بنظام Windows أو Linux مع Thunderbolt 4 أو 5 تعمل eGPU مع Ollama. الوصلة أبطأ من منفذ PCIe أصلي، لكن بعد اتساع النموذج في VRAM يعتمد توليد الرموز أساسًا على النطاق الترددي لذاكرة معالج الرسومات نفسه، فالخسائر الفعلية أقل مما توحي به فجوة الوصلة. صُمّم Razer Core X V2 (349.99 دولارًا، Thunderbolt 5، دون مصدر طاقة) لنظام Windows؛ وتذكر صفحة Razer أن eGPU غير مدعومة على أجهزة Mac من M1 فما بعد.',
+            affiliateLinks: [
+              { label: 'علبة eGPU طراز Razer Core X V2 على Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+V2' },
+              { label: 'Razer Core X (الأصلي) على Amazon', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
             ],
           },
         ],
@@ -1052,11 +1650,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-            { q: 'هل توجد طريقة لتشغيل eGPU مع MacBook Pro M4 للذكاء الاصطناعي؟', a: 'لا لحوسبة معالج الرسومات. لا يكشف macOS واجهة برمجة تطبيقات لمعالجات الرسومات الخارجية لتنفيذ مهام Metal compute على أجهزة سلسلة M. الخيار الوحيد هو توصيل MacBook بخادم Ollama على جهاز منفصل (حاسب مصغر أو مكتبي بمعالج رسومات مخصص) عبر الشبكة المحلية. عيّن OLLAMA_HOST=0.0.0.0 على الخادم ووجّه تطبيقات MacBook إلى عنوان IP ذلك الجهاز.' },
-            { q: 'هل ستُعيد Apple دعم eGPU لمعالج Apple Silicon؟', a: 'مستبعد. تدمج بنية سلسلة M من Apple معالج الرسومات ووحدة المعالجة المركزية والذاكرة في شريحة واحدة — فلسفة التصميم هي الذاكرة الموحدة لا قابلية التوسع. فقط Mac Pro (2023) يدعم توسيع معالج الرسومات.' },
-            { q: 'هل يمكنني استخدام معالج رسومات NVIDIA للاستدلال وتوجيه المخرجات إلى MacBook الخاص بي؟', a: 'نعم — هذا هو النهج الموصى به. شغّل Ollama على جهاز Windows أو Linux بمعالج رسومات NVIDIA، اكشفه على شبكتك المحلية (OLLAMA_HOST=0.0.0.0)، واتصل من MacBook عبر Open WebUI أو Cursor أو Continue أو أي عميل متوافق مع OpenAI.' },
-            { q: 'هل يمكنني استخدام eGPU مع MacBook للاستدلال المحلي بالنماذج اللغوية الكبيرة؟', a: 'لا. أزالت Apple دعم حوسبة eGPU في macOS Ventura (2022). البدائل: Mac Mini M4 Pro (48 جيجابايت ذاكرة موحدة) أو حاسب AMD مصغر مع OCuLink.' },
-          ],
+          { q: 'هل توجد طريقة لتشغيل eGPU مع MacBook Pro M4 للذكاء الاصطناعي؟', a: 'نعم، مع قيود. ينفّذ مشغّل TinyGPU من Tiny Corp الحوسبة على معالجات AMD RDNA 3+ وNVIDIA Ampere+ عبر Thunderbolt أو USB4 على macOS 13+. وهو موثّق لـ tinygrad فقط (لا Ollama ولا llama.cpp ولا MLX)، ولا يوفر إخراج شاشة، وتحتاج بطاقات NVIDIA إلى Docker Desktop. لاحظت Plugable تحسنًا ضئيلًا عن الأساس على MacBook Pro M2. للحصول على إعداد مستقر: شغّل Ollama على جهاز GPU منفصل واتصل به عبر LAN (OLLAMA_HOST=0.0.0.0 على الخادم).' },
+          { q: 'ما أفضل eGPU لجهاز MacBook Pro 16 بالطراز الأساسي؟', a: 'لا توجد eGPU مدعومة رسميًا على أي MacBook Pro بمعالج Apple Silicon. لتجربة TinyGPU، الحد الأدنى الموثّق هو بطاقة AMD RDNA 3+ (Radeon RX 7000 أو أحدث) أو NVIDIA Ampere+ (RTX 30 أو أحدث) في علبة Thunderbolt أو USB4؛ وتتجنب AMD خطوة Docker. للاستخدام اليومي، يُعدّ Mac بذاكرة موحدة أكبر أو معالج رسومات RTX في حاسب مصغر متصل عبر LAN خيارًا أكثر موثوقية.' },
+          { q: 'هل يعمل Razer Core مع MacBook Pro؟', a: 'ليس على Apple Silicon. تذكر صفحة Razer Core X V2 عبارة "eGPUs not supported by M1 & later Mac devices". صدر Razer Core X الأصلي في 2018 لأجهزة Mac بمعالج Intel مع Thunderbolt 3. وسيعتمد استخدام علبة Razer على Mac بمعالج Apple Silicon على مشغّل TinyGPU غير الرسمي الذي لا تدرجه Razer.' },
+          { q: 'هل يمكنني إضافة معالج رسومات خارجي إلى iMac؟', a: 'ليس بشكل أصلي على أجهزة iMac بمعالج Apple Silicon — القيود نفسها كما في MacBook. دعمت أجهزة iMac بمعالج Intel مع Thunderbolt 3 معالجات eGPU على إصدارات macOS الأقدم. للنماذج اللغوية المحلية: شغّل Ollama على جهاز GPU منفصل واتصل به عبر LAN.' },
+          { q: 'هل يمكنني استخدام eGPU عبر OCuLink مع Mac؟', a: 'لا. لا يملك أي Mac منفذ OCuLink. صُمّم OCuLink للحواسيب الشخصية والمصغرة؛ أما مع Mac فالخيارات هي eGPU عبر Thunderbolt أو USB4 مع مشغّل TinyGPU التجريبي، أو حاسب OCuLink مصغر تتم خدمته عبر LAN.' },
+          { q: 'هل ستعيد Apple دعم eGPU لمعالجات Apple Silicon؟', a: 'غير مرجح. تدمج شرائح M من Apple معالج الرسومات والمعالج المركزي والذاكرة في حزمة واحدة — فالتصميم قائم على الذاكرة الموحدة لا على قابلية التوسعة — ولم تعلن Apple عن خطط لاستعادة دعم حوسبة eGPU.' },
+          { q: 'هل يمكنني استخدام معالج رسومات NVIDIA للاستدلال ثم تمرير الناتج إلى MacBook؟', a: 'نعم — هذا هو النهج الموصى به. شغّل Ollama على جهاز Windows أو Linux مزوّد بمعالج رسومات NVIDIA، وأتحه على شبكتك المحلية (OLLAMA_HOST=0.0.0.0)، ثم اتصل من الـ MacBook عبر Open WebUI أو Cursor أو Continue أو أي عميل متوافق مع OpenAI. يتولى الـ MacBook الواجهة، ويتولى جهاز NVIDIA الحساب.' },
+        ],
       },
       relatedReading: {
         title: 'أدلة ذات صلة',
@@ -1065,6 +1666,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[MLX vs Ollama vs llama.cpp: Which Backend?](/ar/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
           '[How to Convert an Ollama Model to MLX](/ar/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
           '[Best Local LLM for 16 GB RAM Laptop](/ar/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+          '[Mac mini M5 as a Local AI Server](/ar/local-llms/mac-mini-m5-local-ai-server) -- Mac mini M5 local AI server guide',
+          '[Apple Silicon M5 for Local LLMs](/ar/local-llms/apple-silicon-m5-local-llm) -- M5 Pro vs Max local LLM guide',
         ],
       },
     },
@@ -1072,69 +1675,94 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-          {
-            '@type': 'Question',
-            'name': 'هل توجد طريقة لتشغيل eGPU مع MacBook Pro M4 للذكاء الاصطناعي؟',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'لا لحوسبة معالج الرسومات. لا يكشف macOS واجهة برمجة تطبيقات لمعالجات الرسومات الخارجية لتنفيذ مهام Metal compute على أجهزة سلسلة M. الخيار الوحيد هو توصيل MacBook بخادم Ollama على جهاز منفصل (حاسب مصغر أو مكتبي بمعالج رسومات مخصص) عبر الشبكة المحلية. عيّن OLLAMA_HOST=0.0.0.0 على الخادم ووجّه تطبيقات MacBook إلى عنوان IP ذلك الجهاز.',
-            },
+        {
+          '@type': 'Question',
+          'name': 'هل توجد طريقة لتشغيل eGPU مع MacBook Pro M4 للذكاء الاصطناعي؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'نعم، مع قيود. ينفّذ مشغّل TinyGPU من Tiny Corp الحوسبة على معالجات AMD RDNA 3+ وNVIDIA Ampere+ عبر Thunderbolt أو USB4 على macOS 13+. وهو موثّق لـ tinygrad فقط (لا Ollama ولا llama.cpp ولا MLX)، ولا يوفر إخراج شاشة، وتحتاج بطاقات NVIDIA إلى Docker Desktop. لاحظت Plugable تحسنًا ضئيلًا عن الأساس على MacBook Pro M2. للحصول على إعداد مستقر: شغّل Ollama على جهاز GPU منفصل واتصل به عبر LAN (OLLAMA_HOST=0.0.0.0 على الخادم).',
           },
-          {
-            '@type': 'Question',
-            'name': 'هل ستُعيد Apple دعم eGPU لمعالج Apple Silicon؟',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'مستبعد. تدمج بنية سلسلة M من Apple معالج الرسومات ووحدة المعالجة المركزية والذاكرة في شريحة واحدة — فلسفة التصميم هي الذاكرة الموحدة لا قابلية التوسع. فقط Mac Pro (2023) يدعم توسيع معالج الرسومات.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'ما أفضل eGPU لجهاز MacBook Pro 16 بالطراز الأساسي؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'لا توجد eGPU مدعومة رسميًا على أي MacBook Pro بمعالج Apple Silicon. لتجربة TinyGPU، الحد الأدنى الموثّق هو بطاقة AMD RDNA 3+ (Radeon RX 7000 أو أحدث) أو NVIDIA Ampere+ (RTX 30 أو أحدث) في علبة Thunderbolt أو USB4؛ وتتجنب AMD خطوة Docker. للاستخدام اليومي، يُعدّ Mac بذاكرة موحدة أكبر أو معالج رسومات RTX في حاسب مصغر متصل عبر LAN خيارًا أكثر موثوقية.',
           },
-          {
-            '@type': 'Question',
-            'name': 'هل يمكنني استخدام معالج رسومات NVIDIA للاستدلال وتوجيه المخرجات إلى MacBook الخاص بي؟',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'نعم — هذا هو النهج الموصى به. شغّل Ollama على جهاز Windows أو Linux بمعالج رسومات NVIDIA، اكشفه على شبكتك المحلية (OLLAMA_HOST=0.0.0.0)، واتصل من MacBook عبر Open WebUI أو Cursor أو Continue أو أي عميل متوافق مع OpenAI.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل يعمل Razer Core مع MacBook Pro؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'ليس على Apple Silicon. تذكر صفحة Razer Core X V2 عبارة "eGPUs not supported by M1 & later Mac devices". صدر Razer Core X الأصلي في 2018 لأجهزة Mac بمعالج Intel مع Thunderbolt 3. وسيعتمد استخدام علبة Razer على Mac بمعالج Apple Silicon على مشغّل TinyGPU غير الرسمي الذي لا تدرجه Razer.',
           },
-          {
-            '@type': 'Question',
-            'name': 'هل يمكنني استخدام eGPU مع MacBook للاستدلال المحلي بالنماذج اللغوية الكبيرة؟',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'لا. أزالت Apple دعم حوسبة eGPU في macOS Ventura (2022). البدائل: Mac Mini M4 Pro (48 جيجابايت ذاكرة موحدة) أو حاسب AMD مصغر مع OCuLink.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل يمكنني إضافة معالج رسومات خارجي إلى iMac؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'ليس بشكل أصلي على أجهزة iMac بمعالج Apple Silicon — القيود نفسها كما في MacBook. دعمت أجهزة iMac بمعالج Intel مع Thunderbolt 3 معالجات eGPU على إصدارات macOS الأقدم. للنماذج اللغوية المحلية: شغّل Ollama على جهاز GPU منفصل واتصل به عبر LAN.',
           },
-        ],
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل يمكنني استخدام eGPU عبر OCuLink مع Mac؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'لا. لا يملك أي Mac منفذ OCuLink. صُمّم OCuLink للحواسيب الشخصية والمصغرة؛ أما مع Mac فالخيارات هي eGPU عبر Thunderbolt أو USB4 مع مشغّل TinyGPU التجريبي، أو حاسب OCuLink مصغر تتم خدمته عبر LAN.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل ستعيد Apple دعم eGPU لمعالجات Apple Silicon؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'غير مرجح. تدمج شرائح M من Apple معالج الرسومات والمعالج المركزي والذاكرة في حزمة واحدة — فالتصميم قائم على الذاكرة الموحدة لا على قابلية التوسعة — ولم تعلن Apple عن خطط لاستعادة دعم حوسبة eGPU.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'هل يمكنني استخدام معالج رسومات NVIDIA للاستدلال ثم تمرير الناتج إلى MacBook؟',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'نعم — هذا هو النهج الموصى به. شغّل Ollama على جهاز Windows أو Linux مزوّد بمعالج رسومات NVIDIA، وأتحه على شبكتك المحلية (OLLAMA_HOST=0.0.0.0)، ثم اتصل من الـ MacBook عبر Open WebUI أو Cursor أو Continue أو أي عميل متوافق مع OpenAI. يتولى الـ MacBook الواجهة، ويتولى جهاز NVIDIA الحساب.',
+          },
+        },
+      ],
     },
-    schema: { '@type': 'TechArticle', headline: 'eGPU مع MacBook والذكاء الاصطناعي المحلي: ما الذي يعمل في 2026؟', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ar/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ar' },
+    schema: { '@type': 'TechArticle', headline: 'eGPU مع MacBook والذكاء الاصطناعي المحلي: ما الذي يعمل في 2026؟', datePublished: '2026-05-26', dateModified: '2026-10-17', url: 'https://www.promptquorum.com/ar/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ar' },
   },
   ko: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-11-26',
+    next_refresh_due: '2027-04-17',
     theme: 'Hardware & Performance',
     heroImage: '/images/best-egpu-setup-for-macbook-local-llm-2026-overview-hero-ko.webp',
     type: 'how-to',
     title: 'MacBook eGPU와 로컬 AI: 2026년에 무엇이 작동하는가',
     seoTitle: 'MacBook eGPU 로컬 LLM 2026 — 대안 가이드',
-    metaDescription: 'Apple Silicon MacBook은 macOS Ventura 이후 eGPU GPU 컴퓨팅을 지원하지 않습니다. 2026년 대안: Mac Mini M4 Pro, OCuLink AMD 미니 PC, LAN Ollama 서버.',
+    metaDescription: 'Apple Silicon MacBook은 eGPU를 기본 지원하지 않습니다. 2026년 대안: TinyGPU(tinygrad 전용), Mac mini M5 Pro, LAN 연결 OCuLink 미니 PC.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
-    dateModified: '2026-07-02',
+    dateModified: '2026-10-17',
     parentArticle: '/local-llms/gpu-vs-cpu-vs-apple-silicon',
-    leadAnswerBlock: '**Apple Silicon MacBook(M2–M5)은 2026년에 GPU 컴퓨팅을 위한 eGPU를 사용할 수 없습니다 — Apple이 macOS Ventura에서 Thunderbolt eGPU 지원을 제거했습니다. 대안: Mac Mini M4 Pro(48GB 통합 메모리) 또는 OCuLink eGPU를 탑재한 AMD 미니 PC(UM890 Pro).**',
+    leadAnswerBlock: '**Apple Silicon MacBook(M1–M5)은 eGPU를 기본 지원하지 않습니다. macOS에는 외장 GPU 드라이버가 없으며 Razer도 Core X V2를 "not supported by M1 & later Mac devices"라고 명시합니다. 유일한 경로는 Tiny Corp의 TinyGPU 드라이버(Tiny Corp에 따르면 Apple이 승인)로, Thunderbolt 또는 USB4를 통해 AMD RDNA 3+ 또는 NVIDIA Ampere+ eGPU에서 AI 연산을 실행하지만 문서화된 것은 tinygrad뿐이며 Ollama, llama.cpp, MLX는 해당되지 않습니다. 지원되는 구성으로는 Mac mini M5 Pro 또는 LAN으로 제공하는 OCuLink 미니 PC를 사용하십시오.**',
     quickAnswerTop: {
       ko: {
         question: 'MacBook에서 로컬 LLM 추론에 eGPU를 사용할 수 있습니까?',
-        answer: '아닙니다. Apple Silicon MacBook(M2/M3/M4/M5)은 GPU 컴퓨팅을 위한 eGPU를 사용할 수 없습니다. macOS Ventura 이후 버전에서는 Thunderbolt eGPU 지원이 완전히 제거되었습니다. 대안: Mac Mini M4 Pro(48GB 통합 메모리) 또는 OCuLink eGPU를 탑재한 AMD 미니 PC.',
+        answer: '기본 방식으로는 불가능합니다. Apple Silicon Mac(M1–M5)에는 외장 GPU용 macOS 드라이버가 없습니다. 2026년 4월부터 Tiny Corp의 TinyGPU 드라이버(연산 전용, 화면 출력 없음)로 AMD RDNA 3+ 및 NVIDIA Ampere+ GPU가 Thunderbolt 또는 USB4를 통해 AI 워크로드를 실행할 수 있지만, 문서화된 것은 tinygrad뿐이며 NVIDIA 카드는 Docker Desktop도 필요합니다. 안정적인 구성은 Mac mini M5 Pro 또는 OCuLink 미니 PC에서 Ollama를 실행하고 LAN으로 연결하는 것입니다.',
         bullets: [
-          'Apple Silicon MacBook: GPU 컴퓨팅에 eGPU 미지원(macOS Ventura 이상)',
-          'Intel MacBook(2015–2020): Thunderbolt 3 경유 eGPU 작동 — 단, 해당 라인 단종됨',
-          'macOS 최적 대안: Mac Mini M4 Pro(48GB 통합 메모리)',
-          '최적 GPU + 휴대성 조합: AMD 미니 PC(UM890 Pro) + OCuLink + RTX 3090',
-          'OCuLink은 PCIe x16 대역폭의 ~80% 제공 — LLM 추론 병목 없음',
+          'Apple Silicon MacBook(M1–M5): eGPU 기본 지원 없음. Razer는 Core X V2를 M1 이후 Mac에서 미지원으로 표기',
+          'TinyGPU(2026년 4월 1일 발표): 연산 전용, AMD RDNA 3+ 또는 NVIDIA Ampere+, macOS 13+, 화면 출력 없음',
+          'TinyGPU는 tinygrad만 문서화되어 있으며 Ollama, llama.cpp, MLX는 지원으로 기재되지 않음',
+          'NVIDIA 카드는 Mac에 Docker Desktop 필요, AMD 카드는 불필요',
+          'Tiny Corp 자체 보고: Qwen 3.5 27B에서 18.5 tok/s(Mac mini + RX 7900 XTX). Plugable은 M2 MacBook Pro에서 기준 대비 향상이 작다고 보고',
+          '지원되는 대안: Mac mini M5 Pro(미국 가격 1,699달러부터, 최대 64GB, 307GB/s) 또는 LAN 연결 OCuLink 미니 PC + RTX 3090',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     targetKeywords: [
@@ -1149,56 +1777,98 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'Apple Silicon MacBook은 컴퓨팅에 eGPU를 사용할 수 없습니다 — Apple이 macOS Ventura에서 해당 기능을 제거했습니다',
-          'Intel MacBook(2018–2020)은 구형 macOS에서 Thunderbolt 3 경유 eGPU를 지원했으나 해당 라인은 단종되었습니다',
-          'macOS 사용 시: eGPU로 MacBook을 확장하려 하지 말고 Mac Mini M4 Pro(48GB)를 구매하십시오',
-          '노트북 + GPU 조합: AMD 미니 PC(UM890 Pro) + OCuLink 경유 RTX 3090 — Ollama 60–80 tok/s',
-          'x86 노트북(Windows/Linux)의 Thunderbolt 4 eGPU는 작동 — 단, 대역폭 ~35–45% 손실 있음',
+          '어떤 Apple Silicon Mac(M1–M5)도 eGPU를 기본 지원하지 않으며, 연결한 카드는 인식되지만 작업을 실행하지 못합니다',
+          'TinyGPU(Tiny Corp, 2026년 4월)는 macOS 13+에서 Thunderbolt 또는 USB4를 통한 AMD·NVIDIA eGPU 연산을 추가합니다 — 연산 전용, 화면 출력 없음, tinygrad만 문서화',
+          'TinyGPU 설정에서 NVIDIA 카드는 Docker Desktop이 필요하고 AMD 카드는 필요하지 않습니다',
+          '지원되는 Mac 구성: Mac mini M5 Pro(미국 가격 1,699달러부터, 최대 64GB 통합 메모리)',
+          'GPU 속도가 필요하면: OCuLink 미니 PC + RTX 3090을 Ollama로 LAN을 통해 MacBook에 제공',
+          'OCuLink는 PCIe 4.0 x4(약 63Gbps)로 x16 슬롯의 4분의 1이지만 모델이 VRAM에 올라가면 충분합니다. OCuLink 포트가 있는 Mac은 없습니다',
         ],
       },
       mainContent: {
-        title: '2026년에 eGPU가 MacBook에서 작동하지 않는 이유',
+        title: '2026년 Apple Silicon Mac의 eGPU: 무엇이 달라졌나',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '2026년 Apple Silicon MacBook에서 eGPU는 GPU 가속 로컬 LLM 추론에 작동하지 않습니다. Apple이 macOS Ventura(2022)에서 Thunderbolt eGPU 컴퓨팅 지원을 제거했기 때문입니다.',
+            text: 'Apple Silicon Mac에는 외장 GPU 기본 지원이 없지만, 2026년 4월부터 Tiny Corp의 TinyGPU 드라이버로 Thunderbolt 또는 USB4를 통해 AMD·NVIDIA eGPU에서 AI 연산을 실행할 수 있습니다(문서화는 tinygrad뿐).',
           },
           {
             type: 'plain-terms',
-            text: 'eGPU는 Thunderbolt 또는 OCuLink로 연결된 케이스에 들어있는 외장 그래픽 카드입니다. Apple M 칩이 탑재된 MacBook은 GPU가 칩에 통합되어 있어 컴퓨팅 작업에 외장 GPU를 추가할 수 없습니다. Apple의 GPU API인 Metal은 M 시리즈 하드웨어에서 외장 GPU로 확장되지 않습니다.',
+            text: 'eGPU는 Thunderbolt, USB4 또는 OCuLink로 연결하는 인클로저 속 외장 그래픽 카드입니다. M 시리즈 칩의 macOS에는 이를 위한 드라이버가 없어 연결한 카드는 인식되지만 작업을 실행하지 못합니다. TinyGPU는 Tiny Corp의 macOS 앱으로, DriverKit 확장(Tiny Corp에 따르면 Apple 승인)을 설치해 카드의 연산을 활성화합니다. 디스플레이를 구동하지 않으며 Metal도 사용하지 않습니다.',
           },
         ],
-        content: 'Apple은 macOS Ventura(2022년 10월 출시)에서 Thunderbolt eGPU 지원을 제거했습니다. 모든 Apple Silicon MacBook(M1, M2, M3, M4, M5)은 이 버전 이상에서 실행됩니다. eGPU를 물리적으로 연결해도 macOS는 외장 GPU를 GPU 컴퓨팅 작업에 사용하지 않으며, 내부 GPU만 활성화됩니다.',
+        content: 'Plugable에 따르면 서드파티 드라이버가 없으면 Apple Silicon Mac은 외장 GPU를 인식하지만 사용하지 못합니다. Razer의 Core X V2 페이지에는 "eGPUs not supported by M1 & later Mac devices"라고 적혀 있습니다. 2026년 4월 1일 Tiny Corp는 Apple이 AMD와 NVIDIA용 TinyGPU 드라이버를 승인했다고 발표했습니다. tinygrad 문서에 따르면 TinyGPU에는 macOS 13.0 이상, AMD RDNA 3+ 또는 NVIDIA Ampere+ GPU, USB4 또는 Thunderbolt 포트가 필요하며 NVIDIA 설정에는 Docker Desktop도 필요합니다. 문서화된 워크로드는 tinygrad의 LLM 러너이며 heise는 Apple의 MLX와는 작동하지 않는다고 보도했습니다. Tiny Corp는 Radeon RX 7900 XTX를 연결한 Mac mini에서 Qwen 3.5 27B가 18.5 tok/s라고 보고했는데, 이는 제조사 보고 수치이며 독립 벤치마크가 아닙니다. Plugable은 M2 MacBook Pro에서 Thunderbolt 5 인클로저에 Radeon 9070과 GeForce RTX 5070을 테스트해 기준 대비 향상이 작다고 밝혔습니다.',
         items: [
-          '**macOS 13 Ventura(2022)**: eGPU 지원 제거. 모든 Apple Silicon Mac 영향.',
-          '**macOS 14 Sonoma, 15 Sequoia**: eGPU 컴퓨팅 지원 없음.',
-          '**Intel MacBook(2018–2020)**: 구형 macOS에서 Thunderbolt 3 경유 eGPU 작동. 해당 Mac은 단종됨.',
-          '**eGPU 경유 외부 모니터**: 구형 Mac에서 출력 장치로는 여전히 작동.',
+          '**Apple Silicon(M1–M5)**: eGPU 기본 지원 없음 — 연결한 카드는 인식되지만 작업을 실행하지 못합니다.',
+          '**TinyGPU(2026년 4월 1일 발표)**: Tiny Corp의 서드파티 드라이버 앱, Thunderbolt 또는 USB4로 AMD RDNA 3+ 및 NVIDIA Ampere+ 지원, macOS 13.0+.',
+          '**범위**: 연산 전용 — 화면 출력 없음, Metal 없음, 게임 불가. 소프트웨어 지원은 tinygrad만 문서화.',
+          '**NVIDIA 카드**: 컴파일러 설정에 Docker Desktop 필요. AMD 카드는 기본으로 실행.',
+          '**Intel MacBook(2018–2020)**: 구형 macOS에서 Thunderbolt 3로 eGPU 작동. 해당 Mac은 단종.',
+        ],
+      },
+      connections: {
+        id: 'connections',
+        title: '외장 GPU 연결 방식: OCuLink, Thunderbolt, USB4 비교',
+        content: '**OCuLink는 외장 GPU에 비용 대비 가장 넓은 대역폭을 주지만 PC에서만 쓸 수 있습니다. OCuLink 포트가 있는 Mac은 없습니다.** Thunderbolt 4와 USB4는 핫플러그가 가능하고 노트북에서 작동하지만 링크 속도는 낮습니다. 모델이 VRAM에 올라간 뒤의 토큰 생성은 주로 GPU 자체의 메모리 대역폭에 좌우되며, 링크는 주로 모델 로딩에 영향을 줍니다. GPU를 책상에 두려면 OCuLink 포트가 있는 미니 PC(예: Minisforum UM890 Pro 또는 AOOSTAR GEM12+ Pro)를, 들고 다니는 노트북에만 Thunderbolt 인클로저를 선택하십시오.',
+        columns: ['연결 방식', '공칭 대역폭', '핫플러그', '일반적 용도'],
+        rows: [
+          {
+            '연결 방식': 'OCuLink 4i(PCIe 4.0 x4)',
+            '공칭 대역폭': '약 63Gbps',
+            '핫플러그': '불가(전원 끄기)',
+            '일반적 용도': '미니 PC + GPU 독',
+          },
+          {
+            '연결 방식': 'Thunderbolt 4 / USB4 40G',
+            '공칭 대역폭': '40Gbps',
+            '핫플러그': '가능',
+            '일반적 용도': '노트북 + 인클로저',
+          },
+          {
+            '연결 방식': 'Thunderbolt 5',
+            '공칭 대역폭': '80Gbps(부스트 120Gbps)',
+            '핫플러그': '가능',
+            '일반적 용도': '최신 PC와 Mac',
+          },
+          {
+            '연결 방식': 'USB4 20G',
+            '공칭 대역폭': '20Gbps',
+            '핫플러그': '가능',
+            '일반적 용도': '대역폭 가장 낮음',
+          },
         ],
       },
       alternatives: {
-        title: '실질적 대안: 대신 할 수 있는 것',
+        title: 'Mac에서 GPU 추론을 위한 실제 대안',
         productItems: [
           {
-            title: 'Mac Mini M4 Pro(48GB) — 최적의 macOS 선택',
-            content: 'Mac Mini M4 Pro(48GB 통합 메모리)는 Ollama의 Metal 백엔드를 통해 Qwen3 32B Q4를 20–30 tok/s로 실행합니다. 가격: ~$1,399. macOS 생태계에 머물러야 하고 32B 이상 모델 용량이 필요하다면, 이것이 업그레이드 경로입니다 — eGPU가 아닙니다.',
+            title: 'Mac mini M5 Pro(최대 64GB) — 최적의 macOS 선택',
+            content: 'Apple의 Mac mini M5 Pro(2026년 9월 22일부터 판매)는 미국 가격 1,699달러부터 시작하며 최대 64GB 통합 메모리(307GB/s)를 제공합니다. 토큰 생성은 메모리 대역폭에 제한되므로, 약 19–20GB의 32B Q4 모델은 이 대역폭에서 이론상 상한이 약 15 tok/s이며 실제 속도는 이보다 낮습니다. 별도의 GPU 머신 없이 32B급 모델을 메모리에 올려야 할 때 적합합니다. 기본형 Mac mini M6(899달러부터, 최대 32GB, 170GB/s)는 7B–14B 모델에 맞습니다.',
             affiliateLinks: [
-              { label: 'Amazon에서 Apple Mac Mini M4 Pro 보기', url: 'https://www.amazon.com/s?k=Mac+Mini+M4+Pro' },
+              { label: 'Apple Mac Mini M5 Pro (Amazon)', url: 'https://www.amazon.com/s?k=Mac+Mini+M5+Pro' },
             ],
           },
           {
-            title: 'AMD 미니 PC + OCuLink eGPU(최적의 GPU/휴대성 조합)',
-            content: 'AOOSTAR GEM12 Pro OCuLink(AMD Ryzen 9 8945HS, ~$480)는 OCuLink(PCIe 4.0 x4, 64 Gbps — x16 슬롯 대역폭의 ~80%)를 통해 RTX 3090 또는 RTX 4090에 연결됩니다. Linux 또는 Windows에서 CUDA로 Ollama를 실행하면 RTX 3090으로 7B Q4 모델이 65–85 tok/s로 실행됩니다. 미니 PC는 MacBook 옆 책상에 올려두고 LAN을 통해 Ollama를 제공하기에 충분히 작습니다.',
+            title: 'OCuLink 미니 PC + RTX 3090(최적의 GPU/휴대 조합)',
+            content: 'OCuLink 포트가 있는 미니 PC(예: Minisforum UM890 Pro — Ryzen 9 8945HS, 2024년 출시 당시 베어본 479달러부터, AOOSTAR GEM12+ Pro — 베어본 약 359달러로 게재)를 OCuLink 독으로 데스크톱 GPU에 연결합니다. OCuLink는 핫스왑이 안 되므로 연결 전에 PC 전원을 끄십시오. 커뮤니티 llama.cpp 벤치마크는 RTX 3090에서 8B Q4_K_M 모델이 대략 90–95 tok/s라고 보고하지만 출처마다 차이가 있고 컨텍스트 길이와 빌드에 따라 달라집니다. 미니 PC에서 Ollama를 실행해 LAN으로 제공하고 MacBook은 클라이언트로 유지합니다.',
             affiliateLinks: [
-              { label: 'Amazon에서 AOOSTAR GEM12 Pro OCuLink 보기', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
+              { label: 'AOOSTAR GEM12 Pro OCuLink (Amazon)', url: 'https://www.amazon.com/s?k=AOOSTAR+GEM12+Pro' },
+              { label: 'Minisforum UM890 Pro (Amazon)', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro' },
             ],
           },
           {
-            title: 'Thunderbolt eGPU(Windows/Linux 노트북 사용 시)',
-            content: 'Thunderbolt 4 또는 5가 탑재된 Windows 또는 Linux x86 노트북에서는 Ollama에 eGPU가 작동합니다. 네이티브 PCIe x16 슬롯 대비 대역폭 손실은 ~35–45%이지만, Ollama 추론은 메모리 대역폭으로 제한됩니다(PCIe가 아님). 현재 권장 케이스: Razer Core X V2($349.99, Thunderbolt 5, Windows/USB4 전용) 또는 기존 Razer Core X(~$249, Thunderbolt 3, PSU 포함).',
+            title: 'TinyGPU 드라이버 + Apple Silicon Mac의 eGPU(실험적)',
+            content: 'Tiny Corp의 TinyGPU 드라이버는 macOS 13+에서 Thunderbolt 또는 USB4를 통해 AMD RDNA 3+ 및 NVIDIA Ampere+ eGPU의 연산을 활성화합니다. tinygrad만 문서화되어 있고(DEV=AMD 또는 DEV=NV python3 -m tinygrad.llm으로 실행), NVIDIA 카드는 Docker Desktop이 필요하며, Plugable은 M2 MacBook Pro에서 기준 대비 향상이 작다고 보고했습니다. 서드파티 드라이버이며 Apple 기본 Metal 지원이 아니므로 macOS가 바뀔 때 호환성 변화가 있을 수 있습니다. 일상 구성이 아닌 실험으로 취급하십시오.',
             affiliateLinks: [
-              { label: 'Amazon에서 Razer Core X V2 eGPU Enclosure 보기', url: 'https://www.amazon.com/dp/B0FFQFDZWX' },
-              { label: 'Amazon에서 Razer Core X(구형) 보기', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
+              { label: 'RTX 4090 eGPU (Amazon, TinyGPU용)', url: 'https://www.amazon.com/s?k=RTX+4090+eGPU+enclosure' },
+            ],
+          },
+          {
+            title: 'Windows/Linux 노트북의 Thunderbolt eGPU(Mac이 아닌 경우)',
+            content: 'Thunderbolt 4 또는 5가 있는 x86 Windows·Linux 노트북에서는 eGPU가 Ollama와 함께 작동합니다. 링크는 기본 PCIe 슬롯보다 느리지만 모델이 VRAM에 올라가면 토큰 생성은 주로 GPU 자체의 메모리 대역폭에 좌우되므로 실제 손실은 링크 격차가 시사하는 것보다 작습니다. Razer Core X V2(349.99달러, Thunderbolt 5, 전원 공급 장치 미포함)는 Windows용이며 Razer 페이지는 M1 이후 Mac에서 eGPU가 지원되지 않는다고 명시합니다.',
+            affiliateLinks: [
+              { label: 'Razer Core X V2 eGPU 인클로저 (Amazon)', url: 'https://www.amazon.com/s?k=Razer+Core+X+V2' },
+              { label: 'Razer Core X(초기형) (Amazon)', url: 'https://www.amazon.com/s?k=Razer+Core+X+eGPU' },
             ],
           },
         ],
@@ -1206,11 +1876,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
-            { q: 'M4 MacBook Pro에서 AI를 위해 eGPU를 작동시킬 방법이 있습니까?', a: 'GPU 컴퓨팅에는 불가합니다. macOS는 M 시리즈 하드웨어에서 Metal compute 작업을 실행하기 위한 외장 GPU API를 노출하지 않습니다. 유일한 방법은 MacBook을 로컬 네트워크를 통해 별도 기기(전용 GPU를 탑재한 미니 PC 또는 데스크톱)의 Ollama 서버에 연결하는 것입니다. 서버에서 OLLAMA_HOST=0.0.0.0으로 설정하고 MacBook 앱이 해당 IP 주소를 가리키도록 하십시오.' },
-            { q: 'Apple이 Apple Silicon에 eGPU 지원을 다시 도입할 가능성이 있습니까?', a: '가능성이 낮습니다. Apple의 M 시리즈 아키텍처는 GPU, CPU, 메모리를 하나의 칩에 통합합니다 — 설계 철학은 통합 메모리이지 확장성이 아닙니다. GPU 확장을 지원하는 것은 Mac Pro(2023)뿐입니다.' },
-            { q: 'NVIDIA GPU를 추론에 사용하고 출력을 MacBook으로 전달할 수 있습니까?', a: '예 — 이것이 권장 방식입니다. NVIDIA GPU가 탑재된 Windows 또는 Linux 기기에서 Ollama를 실행하고 LAN에 노출(OLLAMA_HOST=0.0.0.0)한 다음, Open WebUI, Cursor, Continue 또는 OpenAI 호환 클라이언트를 통해 MacBook에서 연결하십시오.' },
-            { q: 'MacBook에서 로컬 LLM 추론에 eGPU를 사용할 수 있습니까?', a: '아닙니다. Apple이 macOS Ventura(2022)에서 eGPU 컴퓨팅 지원을 제거했습니다. 대안: Mac Mini M4 Pro(48GB 통합 메모리) 또는 OCuLink를 탑재한 AMD 미니 PC.' },
-          ],
+          { q: 'M4 MacBook Pro에서 AI용으로 eGPU를 작동시킬 방법이 있습니까?', a: '제한적으로 가능합니다. Tiny Corp의 TinyGPU 드라이버는 macOS 13+에서 Thunderbolt 또는 USB4를 통해 AMD RDNA 3+ 및 NVIDIA Ampere+ GPU의 연산을 실행합니다. tinygrad만 문서화되어 있고(Ollama, llama.cpp, MLX 제외), 화면 출력이 없으며, NVIDIA 카드는 Docker Desktop이 필요합니다. Plugable은 M2 MacBook Pro에서 기준 대비 향상이 작다고 보고했습니다. 안정적인 구성은 별도 GPU 머신에서 Ollama를 실행하고 LAN으로 연결하는 것입니다(서버에서 OLLAMA_HOST=0.0.0.0).' },
+          { q: '기본형 MacBook Pro 16에 가장 좋은 eGPU는 무엇입니까?', a: '어떤 Apple Silicon MacBook Pro에도 공식 지원되는 eGPU는 없습니다. TinyGPU를 시험한다면 문서상 최소 요건은 Thunderbolt 또는 USB4 인클로저의 AMD RDNA 3+(Radeon RX 7000 이상) 또는 NVIDIA Ampere+(RTX 30 이상) 카드이며, AMD는 Docker 단계를 피할 수 있습니다. 일상 사용에는 통합 메모리가 더 큰 Mac이나 LAN으로 연결한 미니 PC의 RTX GPU가 더 안정적입니다.' },
+          { q: 'Razer Core가 MacBook Pro에서 작동합니까?', a: 'Apple Silicon에서는 작동하지 않습니다. Razer의 Core X V2 페이지에는 "eGPUs not supported by M1 & later Mac devices"라고 적혀 있습니다. 초기형 Razer Core X는 2018년 Thunderbolt 3를 탑재한 Intel Mac용으로 출시되었습니다. Apple Silicon Mac에서 Razer 인클로저를 쓰려면 Razer가 명시하지 않은 비공식 TinyGPU 드라이버에 의존해야 합니다.' },
+          { q: 'iMac에 외장 GPU를 추가할 수 있습니까?', a: 'Apple Silicon iMac에서는 기본 방식으로 불가능하며 한계는 MacBook과 같습니다. Thunderbolt 3를 탑재한 Intel iMac은 구형 macOS에서 eGPU를 지원했습니다. 로컬 LLM이라면 별도 GPU 머신에서 Ollama를 실행하고 LAN으로 연결하십시오.' },
+          { q: 'Mac에서 OCuLink eGPU를 사용할 수 있습니까?', a: '아니요. OCuLink 포트가 있는 Mac은 없습니다. OCuLink는 PC와 미니 PC용입니다. Mac에서는 실험적인 TinyGPU 드라이버를 쓰는 Thunderbolt 또는 USB4 eGPU, 또는 LAN으로 제공하는 OCuLink 미니 PC가 선택지입니다.' },
+          { q: 'Apple이 Apple Silicon의 eGPU 지원을 되살릴까요?', a: '가능성이 낮습니다. Apple의 M 시리즈 칩은 GPU, CPU, 메모리를 하나의 패키지에 통합하며, 설계 방향은 확장성이 아니라 통합 메모리입니다. Apple은 eGPU 연산 지원을 복원할 계획을 발표하지 않았습니다.' },
+          { q: 'NVIDIA GPU로 추론하고 그 출력을 MacBook으로 전달할 수 있습니까?', a: '예, 권장되는 방법입니다. NVIDIA GPU가 있는 Windows 또는 Linux 머신에서 Ollama를 실행하고 LAN에 노출(OLLAMA_HOST=0.0.0.0)한 뒤, MacBook에서 Open WebUI, Cursor, Continue 또는 OpenAI 호환 클라이언트로 연결하십시오. MacBook은 UI를, NVIDIA 머신은 연산을 담당합니다.' },
+        ],
       },
       relatedReading: {
         title: '관련 가이드',
@@ -1222,6 +1895,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '[MLX vs Ollama vs llama.cpp: Which Backend?](/ko/prompt-bites/mlx-vs-ollama-vs-llamacpp) -- backend comparison',
           '[How to Convert an Ollama Model to MLX](/ko/prompt-bites/convert-ollama-model-to-mlx) -- MLX conversion guide',
           '[Best Local LLM for 16 GB RAM Laptop](/ko/prompt-bites/best-local-llm-16gb-ram-laptop) -- 16GB RAM guide',
+          '[Mac mini M5 as a Local AI Server](/ko/local-llms/mac-mini-m5-local-ai-server) -- Mac mini M5 local AI server guide',
+          '[Apple Silicon M5 for Local LLMs](/ko/local-llms/apple-silicon-m5-local-llm) -- M5 Pro vs Max local LLM guide',
         ],
       },
     },
@@ -1229,39 +1904,63 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-          {
-            '@type': 'Question',
-            'name': 'M4 MacBook Pro에서 AI를 위해 eGPU를 작동시킬 방법이 있습니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'GPU 컴퓨팅에는 불가합니다. macOS는 M 시리즈 하드웨어에서 Metal compute 작업을 실행하기 위한 외장 GPU API를 노출하지 않습니다. 유일한 방법은 MacBook을 로컬 네트워크를 통해 별도 기기(전용 GPU를 탑재한 미니 PC 또는 데스크톱)의 Ollama 서버에 연결하는 것입니다. 서버에서 OLLAMA_HOST=0.0.0.0으로 설정하고 MacBook 앱이 해당 IP 주소를 가리키도록 하십시오.',
-            },
+        {
+          '@type': 'Question',
+          'name': 'M4 MacBook Pro에서 AI용으로 eGPU를 작동시킬 방법이 있습니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '제한적으로 가능합니다. Tiny Corp의 TinyGPU 드라이버는 macOS 13+에서 Thunderbolt 또는 USB4를 통해 AMD RDNA 3+ 및 NVIDIA Ampere+ GPU의 연산을 실행합니다. tinygrad만 문서화되어 있고(Ollama, llama.cpp, MLX 제외), 화면 출력이 없으며, NVIDIA 카드는 Docker Desktop이 필요합니다. Plugable은 M2 MacBook Pro에서 기준 대비 향상이 작다고 보고했습니다. 안정적인 구성은 별도 GPU 머신에서 Ollama를 실행하고 LAN으로 연결하는 것입니다(서버에서 OLLAMA_HOST=0.0.0.0).',
           },
-          {
-            '@type': 'Question',
-            'name': 'Apple이 Apple Silicon에 eGPU 지원을 다시 도입할 가능성이 있습니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '가능성이 낮습니다. Apple의 M 시리즈 아키텍처는 GPU, CPU, 메모리를 하나의 칩에 통합합니다 — 설계 철학은 통합 메모리이지 확장성이 아닙니다. GPU 확장을 지원하는 것은 Mac Pro(2023)뿐입니다.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': '기본형 MacBook Pro 16에 가장 좋은 eGPU는 무엇입니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '어떤 Apple Silicon MacBook Pro에도 공식 지원되는 eGPU는 없습니다. TinyGPU를 시험한다면 문서상 최소 요건은 Thunderbolt 또는 USB4 인클로저의 AMD RDNA 3+(Radeon RX 7000 이상) 또는 NVIDIA Ampere+(RTX 30 이상) 카드이며, AMD는 Docker 단계를 피할 수 있습니다. 일상 사용에는 통합 메모리가 더 큰 Mac이나 LAN으로 연결한 미니 PC의 RTX GPU가 더 안정적입니다.',
           },
-          {
-            '@type': 'Question',
-            'name': 'NVIDIA GPU를 추론에 사용하고 출력을 MacBook으로 전달할 수 있습니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '예 — 이것이 권장 방식입니다. NVIDIA GPU가 탑재된 Windows 또는 Linux 기기에서 Ollama를 실행하고 LAN에 노출(OLLAMA_HOST=0.0.0.0)한 다음, Open WebUI, Cursor, Continue 또는 OpenAI 호환 클라이언트를 통해 MacBook에서 연결하십시오.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Razer Core가 MacBook Pro에서 작동합니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Apple Silicon에서는 작동하지 않습니다. Razer의 Core X V2 페이지에는 "eGPUs not supported by M1 & later Mac devices"라고 적혀 있습니다. 초기형 Razer Core X는 2018년 Thunderbolt 3를 탑재한 Intel Mac용으로 출시되었습니다. Apple Silicon Mac에서 Razer 인클로저를 쓰려면 Razer가 명시하지 않은 비공식 TinyGPU 드라이버에 의존해야 합니다.',
           },
-          {
-            '@type': 'Question',
-            'name': 'MacBook에서 로컬 LLM 추론에 eGPU를 사용할 수 있습니까?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': '아닙니다. Apple이 macOS Ventura(2022)에서 eGPU 컴퓨팅 지원을 제거했습니다. 대안: Mac Mini M4 Pro(48GB 통합 메모리) 또는 OCuLink를 탑재한 AMD 미니 PC.',
-            },
+        },
+        {
+          '@type': 'Question',
+          'name': 'iMac에 외장 GPU를 추가할 수 있습니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Apple Silicon iMac에서는 기본 방식으로 불가능하며 한계는 MacBook과 같습니다. Thunderbolt 3를 탑재한 Intel iMac은 구형 macOS에서 eGPU를 지원했습니다. 로컬 LLM이라면 별도 GPU 머신에서 Ollama를 실행하고 LAN으로 연결하십시오.',
           },
-        ],
+        },
+        {
+          '@type': 'Question',
+          'name': 'Mac에서 OCuLink eGPU를 사용할 수 있습니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '아니요. OCuLink 포트가 있는 Mac은 없습니다. OCuLink는 PC와 미니 PC용입니다. Mac에서는 실험적인 TinyGPU 드라이버를 쓰는 Thunderbolt 또는 USB4 eGPU, 또는 LAN으로 제공하는 OCuLink 미니 PC가 선택지입니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'Apple이 Apple Silicon의 eGPU 지원을 되살릴까요?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '가능성이 낮습니다. Apple의 M 시리즈 칩은 GPU, CPU, 메모리를 하나의 패키지에 통합하며, 설계 방향은 확장성이 아니라 통합 메모리입니다. Apple은 eGPU 연산 지원을 복원할 계획을 발표하지 않았습니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          'name': 'NVIDIA GPU로 추론하고 그 출력을 MacBook으로 전달할 수 있습니까?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': '예, 권장되는 방법입니다. NVIDIA GPU가 있는 Windows 또는 Linux 머신에서 Ollama를 실행하고 LAN에 노출(OLLAMA_HOST=0.0.0.0)한 뒤, MacBook에서 Open WebUI, Cursor, Continue 또는 OpenAI 호환 클라이언트로 연결하십시오. MacBook은 UI를, NVIDIA 머신은 연산을 담당합니다.',
+          },
+        },
+      ],
     },
     breadcrumbSchema: {
       '@context': 'https://schema.org',
@@ -1287,6 +1986,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         },
       ],
     },
-    schema: { '@type': 'TechArticle', headline: 'MacBook eGPU와 로컬 AI: 2026년에 무엇이 작동하는가', datePublished: '2026-05-26', dateModified: '2026-07-02', url: 'https://www.promptquorum.com/ko/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ko' },
+    schema: { '@type': 'TechArticle', headline: 'MacBook eGPU와 로컬 AI: 2026년에 무엇이 작동하는가', datePublished: '2026-05-26', dateModified: '2026-10-17', url: 'https://www.promptquorum.com/ko/prompt-bites/best-egpu-setup-for-macbook-local-llm-2026', inLanguage: 'ko' },
   },
 }
