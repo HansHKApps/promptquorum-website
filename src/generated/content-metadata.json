@@ -3321,7 +3321,7 @@
       ]
     },
     "qwen-coder-vs-deepseek-mistral-local-2026": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-16",
       "hasSections": true,
@@ -3339,11 +3339,11 @@
       "images": [
         {
           "url": "/images/qwen-coder-deepseek-mistral-swe-bench-hero-en.webp",
-          "title": "SWE-bench scores for local coding models: Qwen 3.6 27B 77.2%, DeepSeek Coder ~75%, Mistral Devstral 24B ~73%, all runnable on consumer GPUs with 14-16 GB VRAM."
+          "title": "SWE-bench Verified as reported by each vendor: Qwen3.6 27B 77.2%, DeepSeek V4 Flash 78.6% (High mode), Devstral Small 2 65.8%."
         },
         {
           "url": "/images/qwen-coder-deepseek-mistral-dispatch-hero-en.webp",
-          "title": "Coding task dispatch decision tree: GDPR-relevant code routes to local Qwen 3.6 27B, interactive autocomplete to local Devstral 24B (40 tok/sec), non-sensitive batch tasks to the DeepSeek Coder API ($0.14/1M tokens)."
+          "title": "Coding task dispatch decision tree: sensitive code routes to local Qwen3.6 27B, interactive autocomplete to local Devstral Small 2, non-sensitive batch tasks to the DeepSeek API ($0.15/1M input tokens off-peak)."
         }
       ]
     },
@@ -12960,7 +12960,7 @@
       "images": []
     },
     "qwenCoderVsDeepseekCoder": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
