@@ -894,6 +894,11 @@
     "urlSlug": "baserow-review",
     "url": "/power-local-llm/baserow-review"
   },
+  "firecrawl": {
+    "cluster": "power-local-llm",
+    "urlSlug": "firecrawl-review",
+    "url": "/power-local-llm/firecrawl-review"
+  },
   "blinko": {
     "cluster": "power-local-llm",
     "urlSlug": "blinko-review",

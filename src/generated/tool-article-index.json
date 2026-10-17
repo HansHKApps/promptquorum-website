@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 297,
+    "totalCount": 298,
     "capped": true
   },
   "llama.cpp": {
@@ -9455,6 +9455,14 @@
     "articles": [
       {
         "cluster": "power-local-llm",
+        "slug": "firecrawl-review",
+        "title": "Firecrawl Review: Open-Source Web Data API for LLM Pipelines",
+        "url": "/power-local-llm/firecrawl-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "tina-review",
         "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
         "url": "/power-local-llm/tina-review",
@@ -9462,7 +9470,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Blinko": {
@@ -10595,6 +10603,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "firecrawl-review",
+        "title": "Firecrawl Review: Open-Source Web Data API for LLM Pipelines",
+        "url": "/power-local-llm/firecrawl-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
         "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
         "url": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
@@ -10656,17 +10672,9 @@
         "url": "/power-local-llm/omlx-review",
         "dateModified": "2026-10-09",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "stableswarmui-review",
-        "title": "SwarmUI Review: The Multi-GPU Stable Diffusion Web UI",
-        "url": "/power-local-llm/stableswarmui-review",
-        "dateModified": "2026-10-09",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 190,
+    "totalCount": 191,
     "capped": true
   },
   "Qdrant": {
