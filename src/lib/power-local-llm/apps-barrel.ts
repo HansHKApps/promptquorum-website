@@ -230,6 +230,7 @@ import { app as app_longmemory } from './apps/longmemory'
 import { app as app_lorax } from './apps/lorax'
 import { app as app_lucebox } from './apps/lucebox'
 import { app as app_meetily } from './apps/meetily'
+import { app as app_transcriptionsuite } from './apps/transcriptionsuite'
 import { app as app_milvus } from './apps/milvus'
 import { app as app_mission_control } from './apps/mission-control'
 import { app as app_mlx_serve } from './apps/mlx-serve'
@@ -463,6 +464,7 @@ export const localAiApps: ToolRecord[] = [
   app_lorax,
   app_lucebox,
   app_meetily,
+  app_transcriptionsuite,
   app_milvus,
   app_mission_control,
   app_mlx_serve,
