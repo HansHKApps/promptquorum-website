@@ -39,6 +39,9 @@ export const app: ToolRecord = {
     ar: 'إنتاج فيديو بالوكلاء مفتوح المصدر: يتولى مساعد البرمجة بالذكاء الاصطناعي البحث وكتابة السيناريو وتوليد المواد وإخراج الفيديو النهائي',
     ko: '오픈소스 에이전트형 영상 제작: AI 코딩 어시스턴트가 리서치, 대본, 소재 생성, 최종 렌더링까지 수행',
   },
+  reviewSlug: 'openmontage-review', // dedicated PromptQuorum review — added 2026-10-17
+  // Comparison attributes: verified against the project's README on 2026-10-17; a missing key = not stated there, never false.
+  compare: { videoGeneration: true },
   lastVerifiedDate: '2026-10-17',
   lastUpstreamUpdate: '2026-10-16', // GitHub API: last push 2026-10-16 (no releases published), read 2026-10-17
   lastUpstreamUpdateSource: 'https://github.com/calesthio/OpenMontage',
