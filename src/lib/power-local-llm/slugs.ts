@@ -60,7 +60,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'hilbertraum-review':                      'hilbertraum-review',
 
   // Category 5 — Creative & Roleplay
-  'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',
+  'best-local-llm-creative-writing':        'best-local-llm-creative-writing',
   'sillytavern-vs-agnai-vs-risuai-roleplay':     'sillytavern-vs-agnai-vs-risuai-roleplay',
   // Clarifies MetaGPT (multi-agent dev framework) vs Agnai/RisuAI (roleplay chat) — 2026-09-05
   'metagpt-agnai-risuai-explained':              'metagpt-agnai-risuai-explained',
@@ -123,7 +123,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Category 9 — Voice, Speech & Multimodal
   'elevenlabs-vs-local-tts-piper-xtts':          'elevenlabs-vs-local-tts-piper-xtts',
   'voice-ai-writers-cloud-vs-local': 'voice-ai-writers-cloud-vs-local',
-  'local-whisper-stt-comparison-2026':           'local-whisper-stt-comparison-2026',
+  'local-whisper-stt-comparison':           'local-whisper-stt-comparison',
   'local-vision-models-llava-ollama-2026':        'local-vision-models-llava-ollama-2026',
   'local-tts-voice-cloning-piper-coqui-xtts':    'local-tts-voice-cloning-piper-coqui-xtts',
   'build-local-voice-assistant-2026':             'build-local-voice-assistant-2026',
@@ -398,6 +398,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'spiritbox-ultimate-review':               'spiritbox-ultimate-review',
   'oscilla-review':                          'oscilla-review',
   'mlxhub-review':                           'mlxhub-review',
+  'local-ai-chat-pocket-review':             'local-ai-chat-pocket-review',
   'anyllm-review':                           'anyllm-review',
   'tina-review':                             'tina-review',
   'return-editor-review':                    'return-editor-review',

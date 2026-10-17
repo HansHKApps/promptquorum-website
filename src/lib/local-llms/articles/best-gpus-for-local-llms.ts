@@ -211,7 +211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Related Reading',
           items: [
             '[VRAM Calculator for Local LLMs](/local-llms/vram-calculator-local-llm) -- Check VRAM fit for any model on your GPU.',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- Complete hardware setup guide.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- Complete hardware setup guide.',
             '[Multi-GPU Local LLMs](/local-llms/multi-gpu-local-llms) -- Scaling with multiple GPUs.',
             '[Local LLM Power Consumption](/local-llms/local-llm-power-consumption) -- Power and cooling.',
             '[Cloud GPU Rental Comparison: RunPod vs Vast.ai vs Lambda Labs](/local-llms/cloud-gpu-rental-comparison-2026) -- Rent GPUs instead of buying: pricing, uptime, decision matrix.',
@@ -495,7 +495,7 @@ schema: {
           title: 'Lecturas relacionadas',
           items: [
             '[Calculadora de VRAM para LLMs locales](/es/local-llms/vram-calculator-local-llm) -- Comprueba la compatibilidad de VRAM para cualquier modelo en tu GPU.',
-            '[Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026) -- Guía completa de configuración de hardware.',
+            '[Guía de hardware para LLMs locales](/es/local-llms/local-llm-hardware-guide) -- Guía completa de configuración de hardware.',
             '[LLMs locales con múltiples GPUs](/es/local-llms/multi-gpu-local-llms) -- Escalado con varias GPUs.',
             '[Consumo energético de LLMs locales](/es/local-llms/local-llm-power-consumption) -- Consumo y refrigeración.',
             '[Comparativa de alquiler de GPUs en la nube: RunPod vs Vast.ai vs Lambda Labs](/es/local-llms/cloud-gpu-rental-comparison-2026) -- Alquila GPUs en lugar de comprarlas: precios, disponibilidad y matriz de decisión.',
@@ -793,7 +793,7 @@ schema: {
           title: 'قراءات ذات صلة',
           items: [
             '[حاسبة VRAM لنماذج LLM المحلية](/ar/local-llms/vram-calculator-local-llm) -- تحقق من توافق VRAM لأي نموذج على بطاقة GPU لديك.',
-            '[دليل العتاد لنماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- دليل شامل لتهيئة العتاد.',
+            '[دليل العتاد لنماذج LLM المحلية](/ar/local-llms/local-llm-hardware-guide) -- دليل شامل لتهيئة العتاد.',
             '[نماذج LLM المحلية مع عدة بطاقات GPU](/ar/local-llms/multi-gpu-local-llms) -- التوسّع بعدة بطاقات GPU.',
             '[استهلاك الطاقة لنماذج LLM المحلية](/ar/local-llms/local-llm-power-consumption) -- الاستهلاك والتبريد.',
             '[مقارنة تأجير بطاقات GPU السحابية: RunPod مقابل Vast.ai مقابل Lambda Labs](/ar/local-llms/cloud-gpu-rental-comparison-2026) -- استأجر بطاقات GPU بدلاً من شرائها: الأسعار، والتوفّر، ومصفوفة القرار.',
@@ -1068,7 +1068,7 @@ schema: {
           title: 'Leituras relacionadas',
           items: [
             '[Calculadora de VRAM para LLMs locais](/pt/local-llms/vram-calculator-local-llm) -- Verifique a compatibilidade de VRAM para qualquer modelo na sua GPU.',
-            '[Guia de hardware para LLMs locais 2026](/pt/local-llms/local-llm-hardware-guide-2026) -- Guia completo de configuração de hardware.',
+            '[Guia de hardware para LLMs locais](/pt/local-llms/local-llm-hardware-guide) -- Guia completo de configuração de hardware.',
             '[LLMs locais com múltiplas GPUs](/pt/local-llms/multi-gpu-local-llms) -- Escalando com várias GPUs.',
             '[Consumo de energia de LLMs locais](/pt/local-llms/local-llm-power-consumption) -- Consumo e refrigeração.',
             '[Comparativo de aluguel de GPU na nuvem: RunPod vs Vast.ai vs Lambda Labs](/pt/local-llms/cloud-gpu-rental-comparison-2026) -- Alugue GPUs em vez de comprar: preços, disponibilidade e matriz de decisão.',
@@ -1343,7 +1343,7 @@ schema: {
           title: 'Weiterführende Lektüre',
           items: [
             '[VRAM-Rechner für lokale LLMs](/de/local-llms/vram-calculator-local-llm) -- Prüfen Sie die VRAM-Kompatibilität für jedes Modell auf Ihrer GPU.',
-            '[Leitfaden zur lokalen LLM-Hardware 2026](/de/local-llms/local-llm-hardware-guide-2026) -- Kompletter Hardware-Einrichtungsleitfaden.',
+            '[Leitfaden zur lokalen LLM-Hardware](/de/local-llms/local-llm-hardware-guide) -- Kompletter Hardware-Einrichtungsleitfaden.',
             '[Multi-GPU lokale LLMs](/de/local-llms/multi-gpu-local-llms) -- Skalierung mit mehreren GPUs.',
             '[Stromverbrauch lokaler LLMs](/de/local-llms/local-llm-power-consumption) -- Stromverbrauch und Kühlung.',
             '[Cloud-GPU-Vermietung im Vergleich: RunPod vs Vast.ai vs Lambda Labs](/de/local-llms/cloud-gpu-rental-comparison-2026) -- GPUs mieten statt kaufen: Preise, Verfügbarkeit und Entscheidungsmatrix.',
@@ -1629,7 +1629,7 @@ schema: {
           title: 'Lectures connexes',
           items: [
             '[Calculateur VRAM pour LLMs locaux](/fr/local-llms/vram-calculator-local-llm) -- Vérifiez la compatibilité VRAM pour n\'importe quel modèle sur votre GPU.',
-            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Guide complet de configuration matérielle.',
+            '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) -- Guide complet de configuration matérielle.',
             '[LLMs locaux multi-GPU](/fr/local-llms/multi-gpu-local-llms) -- Mise à l\'échelle avec plusieurs GPU.',
             '[Consommation énergétique des LLMs locaux](/fr/local-llms/local-llm-power-consumption) -- Puissance et refroidissement.',
             '[Comparatif de location de GPU cloud : RunPod vs Vast.ai vs Lambda Labs](/fr/local-llms/cloud-gpu-rental-comparison-2026) -- Louer des GPU plutôt qu\'acheter : tarifs, disponibilité et matrice de décision.',
@@ -1915,7 +1915,7 @@ schema: {
           title: '関連記事',
           items: [
             '[ローカルLLM向けVRAM計算ツール](/ja/local-llms/vram-calculator-local-llm) -- あなたのGPU上で任意のモデルのVRAM適合性を確認。',
-            '[ローカルLLMハードウェアガイド 2026](/ja/local-llms/local-llm-hardware-guide-2026) -- 完全なハードウェア・セットアップガイド。',
+            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) -- 完全なハードウェア・セットアップガイド。',
             '[マルチGPUローカルLLM](/ja/local-llms/multi-gpu-local-llms) -- 複数GPUでのスケーリング。',
             '[ローカルLLM消費電力](/ja/local-llms/local-llm-power-consumption) -- 電力と冷却。',
             '[クラウドGPUレンタル比較：RunPod vs Vast.ai vs Lambda Labs](/ja/local-llms/cloud-gpu-rental-comparison-2026) -- 購入の代わりにGPUをレンタル：料金、稼働率、意思決定マトリクス。',
@@ -2211,7 +2211,7 @@ schema: {
           title: '相关阅读',
           items: [
             '[本地LLM VRAM计算器](/zh/local-llms/vram-calculator-local-llm) -- 检查任何模型在你的GPU上的VRAM容量。',
-            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) -- 完整硬件设置指南。',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) -- 完整硬件设置指南。',
             '[多GPU本地LLM](/zh/local-llms/multi-gpu-local-llms) -- 多GPU扩展。',
             '[本地LLM功耗](/zh/local-llms/local-llm-power-consumption) -- 功率和散热。',
             '[云GPU租赁对比：RunPod vs Vast.ai vs Lambda Labs](/zh/local-llms/cloud-gpu-rental-comparison-2026) -- 租用GPU而非购买：价格、可用性和决策矩阵。',
@@ -2507,7 +2507,7 @@ schema: {
         title: '관련 읽을거리',
         items: [
           '[로컬 LLM VRAM 계산기](/ko/local-llms/vram-calculator-local-llm) -- 내 GPU에서 모든 모델의 VRAM 적합 여부를 확인하십시오.',
-          '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 완전한 하드웨어 설정 가이드.',
+          '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) -- 완전한 하드웨어 설정 가이드.',
           '[멀티 GPU 로컬 LLM](/ko/local-llms/multi-gpu-local-llms) -- 여러 GPU로 확장하기.',
           '[로컬 LLM 전력 소비](/ko/local-llms/local-llm-power-consumption) -- 전력 및 냉각.',
           '[클라우드 GPU 임대 비교: RunPod vs Vast.ai vs Lambda Labs](/ko/local-llms/cloud-gpu-rental-comparison-2026) -- GPU 구매 대신 임대: 가격, 가동 시간, 결정 매트릭스.',

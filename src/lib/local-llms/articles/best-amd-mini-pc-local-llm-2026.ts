@@ -528,7 +528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Explore related local LLM hardware and software guides.',
         items: [
           '[Best Mini PCs for Local LLMs](/local-llms/best-mini-pcs-local-llm)',
-          '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026)',
+          '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide)',
           '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon)',
           '[How Much VRAM Do You Need?](/local-llms/how-much-vram-local-llm)',
           '[Best Local LLMs 2026](/local-llms/best-local-llms-2026)',
@@ -1076,7 +1076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Explora guías relacionadas de hardware y software para LLM local.',
         items: [
           '[Mejores Mini PCs para LLMs Locales](/es/local-llms/best-mini-pcs-local-llm)',
-          '[Guía de Hardware para LLM Local 2026](/es/local-llms/local-llm-hardware-guide-2026)',
+          '[Guía de Hardware para LLM Local](/es/local-llms/local-llm-hardware-guide)',
           '[GPU vs CPU vs Apple Silicon](/es/local-llms/gpu-vs-cpu-vs-apple-silicon)',
           '[¿Cuánta VRAM necesitas?](/es/local-llms/how-much-vram-local-llm)',
           '[Mejores LLMs Locales 2026](/es/local-llms/best-local-llms-2026)',
@@ -1654,7 +1654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'استكشف أدلة عتاد وبرمجيات ذات صلة بتشغيل LLM محلياً.',
         items: [
           '[أفضل أجهزة الحاسوب المصغرة لتشغيل LLM محلياً](/ar/local-llms/best-mini-pcs-local-llm)',
-          '[دليل عتاد تشغيل LLM محلياً 2026](/ar/local-llms/local-llm-hardware-guide-2026)',
+          '[دليل عتاد تشغيل LLM محلياً](/ar/local-llms/local-llm-hardware-guide)',
           '[GPU مقابل CPU مقابل Apple Silicon](/ar/local-llms/gpu-vs-cpu-vs-apple-silicon)',
           '[كم تحتاج من VRAM؟](/ar/local-llms/how-much-vram-local-llm)',
           '[أفضل نماذج LLM المحلية 2026](/ar/local-llms/best-local-llms-2026)',
@@ -2387,7 +2387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Entdecken Sie verwandte Local LLM-Hardware- und Software-Anleitungen.',
         items: [
           '[Beste Mini-PCs für Local LLMs](/de/local-llms/best-mini-pcs-local-llm)',
-          '[Local LLM Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026)',
+          '[Local LLM Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide)',
           '[GPU vs CPU vs Apple Silicon](/de/local-llms/gpu-vs-cpu-vs-apple-silicon)',
           '[Wie viel VRAM benötigen Sie?](/de/local-llms/how-much-vram-local-llm)',
           '[Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026)',
@@ -2904,7 +2904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Découvrez guides connexes Local LLM matériel et logiciel.',
         items: [
           '[Meilleurs mini PC Local LLMs](/fr/local-llms/best-mini-pcs-local-llm)',
-          '[Guide matériel Local LLM 2026](/fr/local-llms/local-llm-hardware-guide-2026)',
+          '[Guide matériel Local LLM](/fr/local-llms/local-llm-hardware-guide)',
           '[GPU vs CPU vs Apple Silicon](/fr/local-llms/gpu-vs-cpu-vs-apple-silicon)',
           '[Combien VRAM besoin?](/fr/local-llms/how-much-vram-local-llm)',
           '[Meilleurs LLMs locaux 2026](/fr/local-llms/best-local-llms-2026)',
@@ -3396,7 +3396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'ローカルLLM ハードウェア・ソフトウェア関連ガイド。',
         items: [
           '[最良ミニPCローカルLLM](/ja/local-llms/best-mini-pcs-local-llm)',
-          '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026)',
+          '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)',
           '[GPU vs CPU vs Appleシリコン](/ja/local-llms/gpu-vs-cpu-vs-apple-silicon)',
           '[VRAMは何GB必要?](/ja/local-llms/how-much-vram-local-llm)',
           '[最良ローカルLLM 2026](/ja/local-llms/best-local-llms-2026)',
@@ -3888,7 +3888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '本地LLM硬件和软件相关指南。',
         items: [
           '[最佳本地LLM迷你PC](/zh/local-llms/best-mini-pcs-local-llm)',
-          '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026)',
+          '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)',
           '[GPU vs CPU vs Apple芯片](/zh/local-llms/gpu-vs-cpu-vs-apple-silicon)',
           '[需要多少VRAM?](/zh/local-llms/how-much-vram-local-llm)',
           '[最佳本地LLM 2026](/zh/local-llms/best-local-llms-2026)',
@@ -4404,7 +4404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '관련 로컬 LLM 하드웨어 및 소프트웨어 가이드를 탐색하십시오.',
         items: [
           '[로컬 LLM용 최고의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm)',
-          '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026)',
+          '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)',
           '[GPU vs CPU vs Apple Silicon](/ko/local-llms/gpu-vs-cpu-vs-apple-silicon)',
           '[VRAM은 얼마나 필요합니까?](/ko/local-llms/how-much-vram-local-llm)',
           '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026)',

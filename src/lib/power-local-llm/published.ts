@@ -71,7 +71,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'babyagi-review-autonomous-agent',
 
   // Cat 5 — Creative Writing
-  'best-local-llm-creative-writing-2026',
+  'best-local-llm-creative-writing',
   'local-llm-prompts-for-fiction-writers',
   'local-llm-screenwriting-and-novel-drafting',
   'sillytavern-vs-agnai-vs-risuai-roleplay',
@@ -108,7 +108,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Cat 9 — Voice, Speech & Multimodal
   'elevenlabs-vs-local-tts-piper-xtts',
   'voice-ai-writers-cloud-vs-local',
-  'local-whisper-stt-comparison-2026',
+  'local-whisper-stt-comparison',
   'local-vision-models-llava-ollama-2026',
   'local-tts-voice-cloning-piper-coqui-xtts',
   'build-local-voice-assistant-2026',
@@ -577,6 +577,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // MLXHub review (Mobile & Edge LLMs) — 2026-10-05
   'mlxhub-review',
 
+  // Local AI Chat Pocket review (Mobile & Edge LLMs) — 2026-10-06
+  'local-ai-chat-pocket-review',
   // AnyLLM review (Mobile & Edge LLMs) — 2026-10-17
   'anyllm-review',
 

@@ -751,7 +751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Complete guide to combining local speech recognition, an LLM, and TTS for a private voice assistant.'
           },
           {
-            url: '/power-local-llm/local-whisper-stt-comparison-2026',
+            url: '/power-local-llm/local-whisper-stt-comparison',
             title: 'Whisper.cpp vs faster-whisper: Local STT Benchmarks, Setup and GPU Acceleration',
             description: 'Benchmark and setup guide for local speech-to-text engines.'
           },
@@ -1714,7 +1714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Kompletter Leitfaden zur Kombination lokaler Spracherkennung, eines LLM und TTS für einen privaten Sprachassistenten.'
           },
           {
-            url: '/power-local-llm/local-whisper-stt-comparison-2026',
+            url: '/power-local-llm/local-whisper-stt-comparison',
             title: 'Whisper.cpp vs. faster-whisper: Lokale STT-Benchmarks, Einrichtung und GPU-Beschleunigung',
             description: 'Benchmark- und Einrichtungsleitfaden für lokale Speech-to-Text-Engines.'
           },
@@ -2672,7 +2672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Guide complet pour combiner reconnaissance vocale locale, LLM et TTS pour un assistant vocal privé.'
           },
           {
-            url: '/power-local-llm/local-whisper-stt-comparison-2026',
+            url: '/power-local-llm/local-whisper-stt-comparison',
             title: 'Whisper.cpp vs faster-whisper : benchmarks STT locaux, configuration et accélération GPU',
             description: 'Guide de benchmark et de configuration pour les moteurs speech-to-text locaux.'
           },
@@ -3627,7 +3627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: '结合本地语音识别、LLM和TTS打造私有语音助手的完整指南。'
           },
           {
-            url: '/power-local-llm/local-whisper-stt-comparison-2026',
+            url: '/power-local-llm/local-whisper-stt-comparison',
             title: 'Whisper.cpp对比faster-whisper：本地STT基准测试、搭建与GPU加速',
             description: '本地语音转文本引擎的基准测试和搭建指南。'
           },
@@ -4582,7 +4582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'プライベートな音声アシスタントのために、ローカル音声認識、LLM、TTSを組み合わせる完全ガイド。'
           },
           {
-            url: '/power-local-llm/local-whisper-stt-comparison-2026',
+            url: '/power-local-llm/local-whisper-stt-comparison',
             title: 'Whisper.cpp対faster-whisper:ローカルSTTのベンチマーク、セットアップ、GPUアクセラレーション',
             description: 'ローカル音声認識エンジンのベンチマークとセットアップガイド。'
           },
@@ -5540,7 +5540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Guía completa para combinar reconocimiento de voz local, un LLM y TTS para un asistente de voz privado.'
           },
           {
-            url: '/power-local-llm/local-whisper-stt-comparison-2026',
+            url: '/power-local-llm/local-whisper-stt-comparison',
             title: 'Whisper.cpp vs faster-whisper: benchmarks de STT local, configuración y aceleración por GPU',
             description: 'Guía de benchmarks y configuración para motores locales de voz a texto.'
           },
@@ -6497,7 +6497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'Guia completo para combinar reconhecimento de fala local, um LLM e TTS para um assistente de voz privado.'
           },
           {
-            url: '/power-local-llm/local-whisper-stt-comparison-2026',
+            url: '/power-local-llm/local-whisper-stt-comparison',
             title: 'Whisper.cpp vs faster-whisper: Local STT Benchmarks, Setup and GPU Acceleration',
             description: 'Guia de benchmark e configuração para engines locais de conversão de fala em texto.'
           },
@@ -7452,7 +7452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: '개인용 음성 비서를 위해 로컬 음성 인식, LLM, TTS를 결합하는 완전한 가이드.'
           },
           {
-            url: '/power-local-llm/local-whisper-stt-comparison-2026',
+            url: '/power-local-llm/local-whisper-stt-comparison',
             title: 'Whisper.cpp vs faster-whisper: 로컬 STT 벤치마크, 설정, GPU 가속',
             description: '로컬 음성 인식 엔진을 위한 벤치마크 및 설정 가이드.'
           },
@@ -8405,7 +8405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             description: 'دليل كامل للجمع بين التعرف على الكلام المحلي ونموذج لغوي و TTS لمساعد صوتي خاص.'
           },
           {
-            url: '/power-local-llm/local-whisper-stt-comparison-2026',
+            url: '/power-local-llm/local-whisper-stt-comparison',
             title: 'Whisper.cpp مقابل faster-whisper: معايير قياسية لتحويل الكلام إلى نص المحلي، الإعداد، وتسريع وحدة المعالجة الرسومية',
             description: 'دليل معايير قياسية وإعداد لمحركات تحويل الكلام إلى نص المحلية.'
           },

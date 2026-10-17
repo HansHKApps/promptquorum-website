@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'There is no NPU, so nothing offloads the model; the CPU does the work, and the Intel UHD graphics offer little LLM acceleration.',
           'Unlike the G3 Plus, there is no RAM upgrade path here — 16 GB is a hard hardware ceiling on this platform.',
           'For camera object detection, pair Home Assistant with a more capable box — see [local AI security cameras](/smart-home/local-ai-security-camera).',
-          'See [how to install Ollama](/local-llms/how-to-install-ollama) to try a small model, and the [local LLM hardware guide](/local-llms/local-llm-hardware-guide-2026) for context.',
+          'See [how to install Ollama](/local-llms/how-to-install-ollama) to try a small model, and the [local LLM hardware guide](/local-llms/local-llm-hardware-guide) for context.',
         ],
         affiliateLinks: [
           { label: 'Check current price — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
@@ -663,7 +663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Es gibt kein NPU, also lagert nichts das Modell aus; die CPU erledigt die Arbeit, und die Intel-UHD-Grafik bietet kaum LLM-Beschleunigung.',
           'Anders als beim G3 Plus gibt es hier keinen RAM-Aufrüstpfad — 16 GB sind eine harte Hardware-Grenze auf dieser Plattform.',
           'Für Kamera-Objekterkennung koppeln Sie Home Assistant mit einer leistungsfähigeren Box — siehe [lokale KI-Überwachungskameras](/de/smart-home/local-ai-security-camera).',
-          'Siehe [Ollama installieren](/de/local-llms/how-to-install-ollama), um ein kleines Modell zu testen, und den [Hardware-Guide für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026) für den Kontext.',
+          'Siehe [Ollama installieren](/de/local-llms/how-to-install-ollama), um ein kleines Modell zu testen, und den [Hardware-Guide für lokale LLMs](/de/local-llms/local-llm-hardware-guide) für den Kontext.',
         ],
         affiliateLinks: [
           { label: 'Aktuellen Preis prüfen — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
@@ -1084,7 +1084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Contrairement au G3 Plus, il n\'existe aucune évolution RAM ici — 16 Go est un plafond matériel dur sur cette plateforme.',
           'En France, la CNIL recommande l\'IA locale pour le traitement de données professionnelles sensibles (financières, médicales, juridiques) — un modèle local sur l\'EQ14 s\'inscrit dans cette logique, même si sa capacité reste limitée aux petits modèles.',
           'Pour la détection d\'objets par caméra, associez Home Assistant à une box plus capable — voir [caméras de sécurité à IA locale](/fr/smart-home/local-ai-security-camera).',
-          'Voir [comment installer Ollama](/fr/local-llms/how-to-install-ollama) pour tester un petit modèle, et le [guide matériel pour LLM locaux](/fr/local-llms/local-llm-hardware-guide-2026) pour le contexte.',
+          'Voir [comment installer Ollama](/fr/local-llms/how-to-install-ollama) pour tester un petit modèle, et le [guide matériel pour LLM locaux](/fr/local-llms/local-llm-hardware-guide) pour le contexte.',
         ],
         affiliateLinks: [
           { label: 'Vérifier le prix actuel — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
@@ -1502,7 +1502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No hay NPU, así que nada descarga el trabajo del modelo; la CPU hace todo el trabajo, y los gráficos Intel UHD ofrecen poca aceleración para LLM.',
           'A diferencia del G3 Plus, aquí no hay vía de ampliación de RAM — 16 GB es un techo de hardware fijo en esta plataforma.',
           'Para detección de objetos por cámara, combina Home Assistant con un equipo más capaz — consulta [cámaras de seguridad con IA local](/es/smart-home/local-ai-security-camera).',
-          'Consulta [cómo instalar Ollama](/es/local-llms/how-to-install-ollama) para probar un modelo pequeño, y la [guía de hardware para LLM locales](/es/local-llms/local-llm-hardware-guide-2026) para más contexto.',
+          'Consulta [cómo instalar Ollama](/es/local-llms/how-to-install-ollama) para probar un modelo pequeño, y la [guía de hardware para LLM locales](/es/local-llms/local-llm-hardware-guide) para más contexto.',
         ],
         affiliateLinks: [
           { label: 'Consultar precio actual — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
@@ -1920,7 +1920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NPUがないため、モデルをオフロードするものはなく、処理はCPUが担い、Intel UHDグラフィックスによるLLM向けの加速はほとんど期待できません。',
           'G3 Plusと異なり、ここにはRAM増設経路がありません — 16GBはこのプラットフォームのハードウェア上の上限です。',
           'カメラの物体検出には、Home Assistantをより高性能な機体と組み合わせてください — [ローカルAI防犯カメラ](/ja/smart-home/local-ai-security-camera)を参照。',
-          '小型モデルを試すには[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama)を、背景には[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026)を参照してください。',
+          '小型モデルを試すには[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama)を、背景には[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)を参照してください。',
         ],
         affiliateLinks: [
           { label: '現在の価格を確認 — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
@@ -2337,7 +2337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '没有 NPU，因此没有任何组件为模型分担；CPU 承担全部工作，Intel UHD 核显对 LLM 的加速作用很小。',
           '与 G3 Plus 不同，这里没有内存升级路径——16GB 是该平台的硬性硬件上限。',
           '对于摄像头目标检测，请将 Home Assistant 搭配更强的主机——见[本地 AI 安防摄像头](/zh/smart-home/local-ai-security-camera)。',
-          '参见[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) 试用小型模型，以及[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide-2026) 了解背景。',
+          '参见[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) 试用小型模型，以及[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide) 了解背景。',
         ],
         affiliateLinks: [
           { label: '查看当前价格 — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
@@ -2754,7 +2754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NPU가 없으므로 모델을 오프로드할 곳이 없습니다. CPU가 작업을 처리하며, Intel UHD 그래픽은 LLM 가속에 거의 도움이 되지 않습니다.',
           'G3 Plus와 달리 여기에는 RAM 업그레이드 경로가 없습니다 — 이 플랫폼에서 16GB는 하드웨어 상한입니다.',
           '카메라 객체 인식에는 Home Assistant를 더 강력한 장비와 함께 사용하십시오 — [로컬 AI 보안 카메라](/ko/smart-home/local-ai-security-camera)를 참조하십시오.',
-          '소형 모델을 시험해 보려면 [Ollama 설치 방법](/ko/local-llms/how-to-install-ollama)을, 배경 지식은 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참조하십시오.',
+          '소형 모델을 시험해 보려면 [Ollama 설치 방법](/ko/local-llms/how-to-install-ollama)을, 배경 지식은 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)를 참조하십시오.',
         ],
         affiliateLinks: [
           { label: '현재 가격 확인 — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
@@ -3171,7 +3171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Não há NPU, então nada descarrega o modelo; a CPU faz o trabalho, e os gráficos Intel UHD oferecem pouca aceleração para LLM.',
           'Diferente do G3 Plus, não há caminho de upgrade de RAM aqui — 16 GB é um teto rígido de hardware nessa plataforma.',
           'Para detecção de objetos por câmera, combine o Home Assistant com uma caixa mais capaz — veja [câmeras de segurança com IA local](/pt/smart-home/local-ai-security-camera).',
-          'Veja [como instalar o Ollama](/pt/local-llms/how-to-install-ollama) para testar um modelo pequeno, e o [guia de hardware para LLM locais](/pt/local-llms/local-llm-hardware-guide-2026) para o contexto.',
+          'Veja [como instalar o Ollama](/pt/local-llms/how-to-install-ollama) para testar um modelo pequeno, e o [guia de hardware para LLM locais](/pt/local-llms/local-llm-hardware-guide) para o contexto.',
         ],
         affiliateLinks: [
           { label: 'Conferir preço atual — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },
@@ -3589,7 +3589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لا توجد وحدة NPU، فلا شيء يُفرِّغ حمل النموذج؛ يقوم المعالج بالعمل، وتقدِّم رسوميات Intel UHD تسريعًا ضئيلًا للنماذج اللغوية.',
           'بخلاف G3 Plus، لا يوجد هنا مسار ترقية للذاكرة — إذ يُعَدّ سقف 16 GB حدًّا صارمًا في عتاد هذه المنصة.',
           'للكشف عن الأجسام عبر الكاميرا، اقرن Home Assistant بجهاز أقدر — انظر [كاميرات أمن بذكاء اصطناعي محلي](/ar/smart-home/local-ai-security-camera).',
-          'انظر [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) لتجربة نموذج صغير، و[دليل عتاد النماذج اللغوية المحلية](/ar/local-llms/local-llm-hardware-guide-2026) للسياق.',
+          'انظر [كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) لتجربة نموذج صغير، و[دليل عتاد النماذج اللغوية المحلية](/ar/local-llms/local-llm-hardware-guide) للسياق.',
         ],
         affiliateLinks: [
           { label: 'تحقَّق من السعر الحالي — Beelink EQ14', url: 'https://www.bee-link.com/products/beelink-eq14-n150', productName: 'Beelink EQ14', productCategory: 'Mini PC' },

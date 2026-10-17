@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Loci AI Review: Offline AI for iPhone, Android, iPad, Mac and Windows](/power-local-llm/loci-ai-review-offline-local-ai) — a cross-platform on-device AI app comparison.',
           '[Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper](/power-local-llm/build-local-voice-assistant-2026) — a from-scratch guide for readers who want to choose their own STT/LLM/TTS stack.',
-          '[Local Whisper STT Comparison 2026](/power-local-llm/local-whisper-stt-comparison-2026) — a closer look at the speech-to-text layer used in pipelines like this one.',
+          '[Local Whisper STT Comparison 2026](/power-local-llm/local-whisper-stt-comparison) — a closer look at the speech-to-text layer used in pipelines like this one.',
           '[Local TTS and Voice Cloning 2026: Piper vs Coqui vs XTTS v2](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — comparison of text-to-speech options beyond Kokoro.',
           '[Apple Silicon Local LLM Guide 2026](/local-llms/apple-silicon-local-llm-guide-2026) — background on running local models via Apple\'s Metal GPU framework.',
           '[Ollama on Mac (Apple Silicon) Setup 2026](/local-llms/ollama-on-mac-apple-silicon-setup-2026) — for readers who want to run local models on a Mac outside of a packaged app like Jarvis.',
@@ -533,7 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Loci AI Review: Offline-KI für iPhone, Android, iPad, Mac und Windows](/de/power-local-llm/loci-ai-review-offline-local-ai) — ein Vergleich plattformübergreifender lokaler KI-Apps.',
           '[Einen vollständig offline Sprachassistenten bauen 2026: Whisper + LLM + Piper](/de/power-local-llm/build-local-voice-assistant-2026) — eine Anleitung von Grund auf für Leser, die ihren eigenen STT-/LLM-/TTS-Stack wählen möchten.',
-          '[Lokaler Whisper-STT-Vergleich 2026](/de/power-local-llm/local-whisper-stt-comparison-2026) — ein genauerer Blick auf die Speech-to-Text-Schicht solcher Pipelines.',
+          '[Lokaler Whisper-STT-Vergleich 2026](/de/power-local-llm/local-whisper-stt-comparison) — ein genauerer Blick auf die Speech-to-Text-Schicht solcher Pipelines.',
           '[Lokales TTS und Voice Cloning 2026: Piper vs. Coqui vs. XTTS v2](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Vergleich von Text-to-Speech-Optionen jenseits von Kokoro.',
           '[Apple-Silicon-Leitfaden für lokale LLMs 2026](/de/local-llms/apple-silicon-local-llm-guide-2026) — Hintergrund zum Ausführen lokaler Modelle über Apples Metal-GPU-Framework.',
           '[Ollama auf dem Mac (Apple Silicon) einrichten 2026](/de/local-llms/ollama-on-mac-apple-silicon-setup-2026) — für Leser, die lokale Modelle auf einem Mac außerhalb einer fertigen App wie Jarvis ausführen möchten.',
@@ -796,7 +796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Loci AI Review: IA offline para iPhone, Android, iPad, Mac y Windows](/es/power-local-llm/loci-ai-review-offline-local-ai) — una comparación de apps de IA local multiplataforma.',
           '[Construye un asistente de voz totalmente offline en 2026: Whisper + LLM + Piper](/es/power-local-llm/build-local-voice-assistant-2026) — una guía desde cero para quienes quieran elegir su propio stack STT/LLM/TTS.',
-          '[Comparativa de Whisper STT local 2026](/es/power-local-llm/local-whisper-stt-comparison-2026) — una mirada más de cerca a la capa de speech-to-text usada en pipelines como este.',
+          '[Comparativa de Whisper STT local 2026](/es/power-local-llm/local-whisper-stt-comparison) — una mirada más de cerca a la capa de speech-to-text usada en pipelines como este.',
           '[TTS local y clonación de voz 2026: Piper vs Coqui vs XTTS v2](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — comparación de opciones de text-to-speech más allá de Kokoro.',
           '[Guía de LLM local en Apple Silicon 2026](/es/local-llms/apple-silicon-local-llm-guide-2026) — contexto sobre cómo ejecutar modelos locales vía el framework Metal GPU de Apple.',
           '[Configurar Ollama en Mac (Apple Silicon) 2026](/es/local-llms/ollama-on-mac-apple-silicon-setup-2026) — para quienes quieran ejecutar modelos locales en un Mac fuera de una app empaquetada como Jarvis.',
@@ -1059,7 +1059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Avis Loci AI : IA hors ligne pour iPhone, Android, iPad, Mac et Windows](/fr/power-local-llm/loci-ai-review-offline-local-ai) — une comparaison d\'apps d\'IA locale multiplateformes.',
           '[Construire un assistant vocal entièrement hors ligne en 2026 : Whisper + LLM + Piper](/fr/power-local-llm/build-local-voice-assistant-2026) — un guide de A à Z pour choisir sa propre pile STT/LLM/TTS.',
-          '[Comparatif Whisper STT local 2026](/fr/power-local-llm/local-whisper-stt-comparison-2026) — un examen approfondi de la couche de transcription utilisée dans des pipelines comme celui-ci.',
+          '[Comparatif Whisper STT local 2026](/fr/power-local-llm/local-whisper-stt-comparison) — un examen approfondi de la couche de transcription utilisée dans des pipelines comme celui-ci.',
           '[TTS local et clonage vocal 2026 : Piper vs Coqui vs XTTS v2](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — comparaison d\'options de synthèse vocale au-delà de Kokoro.',
           '[Guide des LLM locaux sur Apple Silicon 2026](/fr/local-llms/apple-silicon-local-llm-guide-2026) — contexte sur l\'exécution de modèles locaux via le framework GPU Metal d\'Apple.',
           '[Configurer Ollama sur Mac (Apple Silicon) 2026](/fr/local-llms/ollama-on-mac-apple-silicon-setup-2026) — pour exécuter des modèles locaux sur un Mac en dehors d\'une app packagée comme Jarvis.',
@@ -1322,7 +1322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Loci AIレビュー：iPhone、Android、iPad、Mac、Windows向けオフラインAI](/ja/power-local-llm/loci-ai-review-offline-local-ai) — クロスプラットフォームのオンデバイスAIアプリの比較。',
           '[2026年版 完全オフライン音声アシスタントの構築：Whisper + LLM + Piper](/ja/power-local-llm/build-local-voice-assistant-2026) — 自分でSTT/LLM/TTSスタックを選びたい読者向けのゼロからのガイド。',
-          '[2026年版 ローカルWhisper STT比較](/ja/power-local-llm/local-whisper-stt-comparison-2026) — このようなパイプラインで使われる音声認識レイヤーを詳しく解説。',
+          '[2026年版 ローカルWhisper STT比較](/ja/power-local-llm/local-whisper-stt-comparison) — このようなパイプラインで使われる音声認識レイヤーを詳しく解説。',
           '[2026年版 ローカルTTSと音声クローニング：Piper vs Coqui vs XTTS v2](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Kokoro以外の音声合成の選択肢を比較。',
           '[2026年版 Apple Silicon ローカルLLMガイド](/ja/local-llms/apple-silicon-local-llm-guide-2026) — Apple社のMetal GPUフレームワーク経由でローカルモデルを実行する背景知識。',
           '[2026年版 Mac（Apple Silicon）でのOllamaセットアップ](/ja/local-llms/ollama-on-mac-apple-silicon-setup-2026) — Jarvisのようなパッケージ化されたアプリを使わずにMac上でローカルモデルを実行したい読者向け。',
@@ -1585,7 +1585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Loci AI评测：面向iPhone、Android、iPad、Mac和Windows的离线AI](/zh/power-local-llm/loci-ai-review-offline-local-ai)——一款跨平台设备端AI应用的对比评测。',
           '[2026年搭建完全离线的语音助手：Whisper + LLM + Piper](/zh/power-local-llm/build-local-voice-assistant-2026)——面向想自行选择STT/LLM/TTS技术栈读者的从零开始指南。',
-          '[2026年本地Whisper STT对比](/zh/power-local-llm/local-whisper-stt-comparison-2026)——深入了解此类管线中使用的语音转文本层。',
+          '[2026年本地Whisper STT对比](/zh/power-local-llm/local-whisper-stt-comparison)——深入了解此类管线中使用的语音转文本层。',
           '[2026年本地TTS与语音克隆：Piper vs Coqui vs XTTS v2](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)——Kokoro之外的文本转语音选项对比。',
           '[2026年Apple Silicon本地LLM指南](/zh/local-llms/apple-silicon-local-llm-guide-2026)——关于通过Apple Metal GPU框架运行本地模型的背景知识。',
           '[2026年在Mac（Apple Silicon）上设置Ollama](/zh/local-llms/ollama-on-mac-apple-silicon-setup-2026)——面向想在Mac上不使用Jarvis这类打包应用而运行本地模型的读者。',
@@ -1848,7 +1848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Review do Loci AI: IA offline para iPhone, Android, iPad, Mac e Windows](/pt/power-local-llm/loci-ai-review-offline-local-ai) — uma comparação de apps de IA local multiplataforma.',
           '[Construa um assistente de voz totalmente offline em 2026: Whisper + LLM + Piper](/pt/power-local-llm/build-local-voice-assistant-2026) — um guia do zero para quem quiser escolher seu próprio stack de STT/LLM/TTS.',
-          '[Comparativo de Whisper STT local 2026](/pt/power-local-llm/local-whisper-stt-comparison-2026) — um olhar mais de perto sobre a camada de speech-to-text usada em pipelines como este.',
+          '[Comparativo de Whisper STT local 2026](/pt/power-local-llm/local-whisper-stt-comparison) — um olhar mais de perto sobre a camada de speech-to-text usada em pipelines como este.',
           '[TTS local e clonagem de voz 2026: Piper vs Coqui vs XTTS v2](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — comparação de opções de text-to-speech além do Kokoro.',
           '[Guia de LLM local em Apple Silicon 2026](/pt/local-llms/apple-silicon-local-llm-guide-2026) — contexto sobre como rodar modelos locais via o framework de GPU Metal da Apple.',
           '[Configurar o Ollama no Mac (Apple Silicon) 2026](/pt/local-llms/ollama-on-mac-apple-silicon-setup-2026) — para quem quiser rodar modelos locais em um Mac fora de um app empacotado como o Jarvis.',
@@ -2111,7 +2111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Loci AI: ذكاء اصطناعي يعمل دون إنترنت لأجهزة iPhone وAndroid وiPad وMac وWindows](/ar/power-local-llm/loci-ai-review-offline-local-ai) — مقارنة تطبيقات ذكاء اصطناعي محلية تعمل على منصات متعددة.',
           '[بناء مساعد صوتي يعمل بالكامل دون إنترنت في 2026: Whisper + LLM + Piper](/ar/power-local-llm/build-local-voice-assistant-2026) — دليل من الصفر للقراء الراغبين في اختيار حزمة STT/LLM/TTS الخاصة بهم.',
-          '[مقارنة Whisper STT المحلي 2026](/ar/power-local-llm/local-whisper-stt-comparison-2026) — نظرة أقرب على طبقة تحويل الكلام إلى نص المستخدمة في خطوط معالجة كهذه.',
+          '[مقارنة Whisper STT المحلي 2026](/ar/power-local-llm/local-whisper-stt-comparison) — نظرة أقرب على طبقة تحويل الكلام إلى نص المستخدمة في خطوط معالجة كهذه.',
           '[تحويل النص إلى كلام المحلي واستنساخ الصوت 2026: Piper مقابل Coqui مقابل XTTS v2](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — مقارنة خيارات تحويل النص إلى كلام إلى جانب Kokoro.',
           '[دليل النماذج اللغوية المحلية على Apple Silicon 2026](/ar/local-llms/apple-silicon-local-llm-guide-2026) — خلفية عن تشغيل النماذج المحلية عبر إطار عمل معالج Metal الرسومي من Apple.',
           '[إعداد Ollama على جهاز Mac (Apple Silicon) 2026](/ar/local-llms/ollama-on-mac-apple-silicon-setup-2026) — للقراء الراغبين في تشغيل نماذج محلية على جهاز Mac خارج تطبيق جاهز مثل Jarvis.',
@@ -2374,7 +2374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Loci AI 리뷰: iPhone, Android, iPad, Mac, Windows용 오프라인 AI](/ko/power-local-llm/loci-ai-review-offline-local-ai) — 크로스플랫폼 온디바이스 AI 앱 비교.',
           '[2026년 완전 오프라인 음성 어시스턴트 만들기: Whisper + LLM + Piper](/ko/power-local-llm/build-local-voice-assistant-2026) — 직접 STT/LLM/TTS 스택을 선택하고 싶은 독자를 위한 처음부터 만드는 가이드.',
-          '[2026년 로컬 Whisper STT 비교](/ko/power-local-llm/local-whisper-stt-comparison-2026) — 이런 파이프라인에서 사용되는 Speech-to-Text 레이어를 자세히 살펴봅니다.',
+          '[2026년 로컬 Whisper STT 비교](/ko/power-local-llm/local-whisper-stt-comparison) — 이런 파이프라인에서 사용되는 Speech-to-Text 레이어를 자세히 살펴봅니다.',
           '[2026년 로컬 TTS 및 음성 복제: Piper vs Coqui vs XTTS v2](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Kokoro 이외의 Text-to-Speech 옵션 비교.',
           '[2026년 Apple Silicon 로컬 LLM 가이드](/ko/local-llms/apple-silicon-local-llm-guide-2026) — Apple의 Metal GPU 프레임워크를 통해 로컬 모델을 실행하는 배경 지식.',
           '[2026년 Mac(Apple Silicon)에서 Ollama 설정](/ko/local-llms/ollama-on-mac-apple-silicon-setup-2026) — Jarvis 같은 패키지 앱 없이 Mac에서 로컬 모델을 실행하고 싶은 독자를 위한 가이드.',

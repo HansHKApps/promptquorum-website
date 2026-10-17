@@ -134,7 +134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm)',
             '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[Best GPUs for Local LLMs](/local-llms/best-gpus-for-local-llms)',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026)',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide)',
           ],
         },
         'sources': {
@@ -370,7 +370,7 @@ schema: {
             '[Mejores GPUs económicas para LLMs locales](/es/local-llms/best-budget-gpus-local-llm)',
             '[RTX 5090 vs RTX 4090](/es/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[Mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms)',
-            '[Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026)',
+            '[Guía de hardware para LLMs locales](/es/local-llms/local-llm-hardware-guide)',
           ],
         },
         'sources': {
@@ -585,7 +585,7 @@ schema: {
             '[أفضل وحدات GPU الاقتصادية لنماذج LLM المحلية](/ar/local-llms/best-budget-gpus-local-llm)',
             '[RTX 5090 مقابل RTX 4090](/ar/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[أفضل وحدات GPU لنماذج LLM المحلية](/ar/local-llms/best-gpus-for-local-llms)',
-            '[دليل عتاد LLM المحلي 2026](/ar/local-llms/local-llm-hardware-guide-2026)',
+            '[دليل عتاد LLM المحلي](/ar/local-llms/local-llm-hardware-guide)',
           ],
         },
         'sources': {
@@ -802,7 +802,7 @@ schema: {
             '[Melhores GPUs econômicas para LLMs locais](/pt/local-llms/best-budget-gpus-local-llm)',
             '[RTX 5090 vs RTX 4090](/pt/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[Melhores GPUs para LLMs locais](/pt/local-llms/best-gpus-for-local-llms)',
-            '[Guia de hardware para LLMs locais 2026](/pt/local-llms/local-llm-hardware-guide-2026)',
+            '[Guia de hardware para LLMs locais](/pt/local-llms/local-llm-hardware-guide)',
           ],
         },
         'sources': {
@@ -1016,7 +1016,7 @@ schema: {
             '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm)',
             '[RTX 5090 vs RTX 4090](/de/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms)',
-            '[Leitfaden zur lokalen LLM-Hardware 2026](/de/local-llms/local-llm-hardware-guide-2026)',
+            '[Leitfaden zur lokalen LLM-Hardware](/de/local-llms/local-llm-hardware-guide)',
           ],
         },
         'sources': {
@@ -1241,7 +1241,7 @@ schema: {
             '[Meilleures GPU budget pour LLMs locaux](/fr/local-llms/best-budget-gpus-local-llm)',
             '[RTX 5090 vs RTX 4090](/fr/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[Meilleures GPU pour LLMs locaux](/fr/local-llms/best-gpus-for-local-llms)',
-            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026)',
+            '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide)',
           ],
         },
         'sources': {
@@ -1456,7 +1456,7 @@ schema: {
             '[ローカルLLM向けベストバジェットGPU](/ja/local-llms/best-budget-gpus-local-llm)',
             '[RTX 5090 vs RTX 4090](/ja/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[ローカルLLM向けベストGPU](/ja/local-llms/best-gpus-for-local-llms)',
-            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026)',
+            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide)',
           ],
         },
         'sources': {
@@ -1671,7 +1671,7 @@ schema: {
             '[本地LLM最佳预算GPU](/zh/local-llms/best-budget-gpus-local-llm)',
             '[RTX 5090 vs RTX 4090](/zh/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[本地LLM最佳GPU](/zh/local-llms/best-gpus-for-local-llms)',
-            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026)',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)',
           ],
         },
         'sources': {
@@ -1886,7 +1886,7 @@ schema: {
             '[로컬 LLM용 최고의 저예산 GPU](/ko/local-llms/best-budget-gpus-local-llm)',
             '[RTX 5090 vs RTX 4090](/ko/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
             '[로컬 LLM용 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms)',
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026)',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)',
           ],
         },
         'sources': {

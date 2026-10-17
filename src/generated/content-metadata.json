@@ -126,7 +126,7 @@
       ]
     },
     "how-to-install-ollama": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -622,7 +622,7 @@
       ]
     },
     "llm-quantization-explained": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-10-17",
       "lastFactChecked": "2026-08-27",
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -729,7 +729,7 @@
       "images": [
         {
           "url": "/images/top-open-source-models-ollama-use-case-picks-hero-en.webp",
-          "title": "Ollama model selection by use case: pick qwen3.8:27b (best overall, 61.7 SWE-bench Pro) for chat and coding, devstral-small-2 for agentic coding (kimi-k2.6 is cloud-only), gpt-oss:20b on 16 GB, deepseek-r1:7b for math."
+          "title": "Ollama model selection by use case: pick qwen3.8:27b (best overall, 61.7 SWE-bench Pro) for chat and coding, kimi-k2.6 for frontier coding, gpt-oss:20b on 16 GB, deepseek-r1:7b for math."
         },
         {
           "url": "/images/ollama-deepseek-r1-reasoning-comparison-en.svg",
@@ -1328,8 +1328,8 @@
       ],
       "images": []
     },
-    "local-llm-hardware-guide-2026": {
-      "dateModified": "2026-09-16",
+    "local-llm-hardware-guide": {
+      "dateModified": "2026-10-17",
       "lastFactChecked": "2026-09-01",
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -5868,7 +5868,7 @@
       ]
     },
     "best-mac-for-local-ai-2026": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -5886,7 +5886,7 @@
       "images": [
         {
           "url": "/images/best-mac-for-local-ai-2026-comparison-table-hero-en.webp",
-          "title": "Mac Mini M6 32 GB (~$899) and M5 Pro 64 GB (~$1,699) versus MacBook Pro 16\" M5 Pro/M5 Max (~$3,499-$4,499) versus Mac Studio M5 Max 128 GB (from ~$2,499) and M5 Ultra up to 512 GB (from ~$5,499); Aug 25, 2026 Apple refresh, most configurations ship Sept 22, 2026."
+          "title": "Mac Mini M6 32 GB (~$1,300) and M5 Pro 64 GB (~$2,700) versus MacBook Pro 16\" M5 Pro/M5 Max versus Mac Studio M5 Max 64-128 GB (~$3,500-$5,100) and M5 Ultra (from $5,499, 256 GB ~$9,500, up to 512 GB)."
         },
         {
           "url": "/images/best-mac-for-local-ai-2026-memory-by-model-hero-en.webp",
@@ -6281,7 +6281,7 @@
         }
       ]
     },
-    "best-local-llm-creative-writing-2026": {
+    "best-local-llm-creative-writing": {
       "dateModified": "2026-07-16",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
@@ -6655,7 +6655,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 7 categories of a local LLM stack: 253 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
+          "title": "The 7 categories of a local LLM stack: 254 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -7291,9 +7291,9 @@
         }
       ]
     },
-    "local-whisper-stt-comparison-2026": {
-      "dateModified": "2026-08-28",
-      "lastFactChecked": "2026-08-28",
+    "local-whisper-stt-comparison": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": "2026-10-17",
       "publishDate": "2026-05-14",
       "hasSections": true,
       "langs": [
@@ -7400,7 +7400,7 @@
       ]
     },
     "local-multimodal-pipeline-voice-vision-text": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-14",
       "hasSections": true,
@@ -8912,7 +8912,7 @@
       "images": []
     },
     "locally-uncensored-review": {
-      "dateModified": "2026-09-22",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -10972,6 +10972,24 @@
       "dateModified": "2026-10-05",
       "lastFactChecked": null,
       "publishDate": "2026-10-05",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "local-ai-chat-pocket-review": {
+      "dateModified": "2026-10-06",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-06",
       "hasSections": true,
       "langs": [
         "en",

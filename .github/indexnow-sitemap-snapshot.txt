@@ -147,7 +147,7 @@ https://www.promptquorum.com/local-llms/local-ai-code-review-vs-coderabbit
 https://www.promptquorum.com/local-llms/local-llm-commercial-license-guide-business
 https://www.promptquorum.com/local-llms/local-llm-cost-calculator-build-vs-rent-2026
 https://www.promptquorum.com/local-llms/local-llm-developer-stack
-https://www.promptquorum.com/local-llms/local-llm-hardware-guide-2026
+https://www.promptquorum.com/local-llms/local-llm-hardware-guide
 https://www.promptquorum.com/local-llms/local-llm-lgpd-compliance-brazil-2026
 https://www.promptquorum.com/local-llms/local-llm-limitations
 https://www.promptquorum.com/local-llms/local-llm-model-updates-2026
@@ -236,6 +236,7 @@ https://www.promptquorum.com/power-local-llm/aiclient2api-review
 https://www.promptquorum.com/power-local-llm/aider-review
 https://www.promptquorum.com/power-local-llm/amd-gaia-review
 https://www.promptquorum.com/power-local-llm/animatediff-video-generation-guide
+https://www.promptquorum.com/power-local-llm/anyllm-review
 https://www.promptquorum.com/power-local-llm/anythingllm-mobile-review
 https://www.promptquorum.com/power-local-llm/anythingllm-review
 https://www.promptquorum.com/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag
@@ -268,7 +269,7 @@ https://www.promptquorum.com/power-local-llm/best-local-ai-app-low-end-pc
 https://www.promptquorum.com/power-local-llm/best-local-coding-models-2026
 https://www.promptquorum.com/power-local-llm/best-local-llm-apps-android-2026
 https://www.promptquorum.com/power-local-llm/best-local-llm-apps-iphone-2026
-https://www.promptquorum.com/power-local-llm/best-local-llm-creative-writing-2026
+https://www.promptquorum.com/power-local-llm/best-local-llm-creative-writing
 https://www.promptquorum.com/power-local-llm/best-local-llm-ide-plugins-2026
 https://www.promptquorum.com/power-local-llm/best-local-llms-customer-support-call-centers-enterprise
 https://www.promptquorum.com/power-local-llm/best-local-models-tool-calling-2026
@@ -402,6 +403,7 @@ https://www.promptquorum.com/power-local-llm/local-ai-agents-with-mcp-2026
 https://www.promptquorum.com/power-local-llm/local-ai-app-non-technical-users
 https://www.promptquorum.com/power-local-llm/local-ai-app-with-built-in-rag
 https://www.promptquorum.com/power-local-llm/local-ai-behind-firewall-offline-2026
+https://www.promptquorum.com/power-local-llm/local-ai-chat-pocket-review
 https://www.promptquorum.com/power-local-llm/local-ai-geetmark-review
 https://www.promptquorum.com/power-local-llm/local-ai-image-generation-vs-cloud
 https://www.promptquorum.com/power-local-llm/local-ai-mail-review
@@ -429,11 +431,12 @@ https://www.promptquorum.com/power-local-llm/local-rag-for-private-business-data
 https://www.promptquorum.com/power-local-llm/local-rag-on-your-pdfs-step-by-step
 https://www.promptquorum.com/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts
 https://www.promptquorum.com/power-local-llm/local-vision-models-llava-ollama-2026
-https://www.promptquorum.com/power-local-llm/local-whisper-stt-comparison-2026
+https://www.promptquorum.com/power-local-llm/local-whisper-stt-comparison
 https://www.promptquorum.com/power-local-llm/localai-apexcreator-review
 https://www.promptquorum.com/power-local-llm/localai-explained
 https://www.promptquorum.com/power-local-llm/locally-ai-review
 https://www.promptquorum.com/power-local-llm/locally-uncensored-review
+https://www.promptquorum.com/power-local-llm/localmind-review
 https://www.promptquorum.com/power-local-llm/loci-ai-review-offline-local-ai
 https://www.promptquorum.com/power-local-llm/logseq-copilot-review
 https://www.promptquorum.com/power-local-llm/longmemory-review
@@ -480,6 +483,7 @@ https://www.promptquorum.com/power-local-llm/openclaw-review
 https://www.promptquorum.com/power-local-llm/opencode-review
 https://www.promptquorum.com/power-local-llm/openhands-review
 https://www.promptquorum.com/power-local-llm/openllm-review
+https://www.promptquorum.com/power-local-llm/openmontage-review
 https://www.promptquorum.com/power-local-llm/osaurus-ai-review
 https://www.promptquorum.com/power-local-llm/oscilla-review
 https://www.promptquorum.com/power-local-llm/page-assist-hands-on-test

@@ -283,7 +283,7 @@ schema: {
             '[How Much VRAM Do You Need?](/local-llms/how-much-vram-local-llm) — VRAM requirements by model size and quantization level',
             '[Best Budget GPUs for Local LLMs](/local-llms/best-budget-gpus-local-llm) — RTX 3060 vs RTX 4060 vs AMD RX 7600',
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — Q4 vs Q5 vs Q8: when to use each level',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Complete hardware selection guide',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — Complete hardware selection guide',
           ],
         },
         'sources': {
@@ -565,7 +565,7 @@ schema: {
             '[¿Cuánta VRAM necesitas?](/es/local-llms/how-much-vram-local-llm) — Requisitos de VRAM por tamaño de modelo y nivel de cuantización',
             '[Mejores GPUs económicas para LLMs locales](/es/local-llms/best-budget-gpus-local-llm) — RTX 3060 vs RTX 4060 vs AMD RX 7600',
             '[Cuantización de LLMs explicada](/es/local-llms/llm-quantization-explained) — Q4 vs Q5 vs Q8: cuándo usar cada nivel',
-            '[Guía de hardware para LLMs locales 2026](/es/local-llms/local-llm-hardware-guide-2026) — Guía completa de selección de hardware',
+            '[Guía de hardware para LLMs locales](/es/local-llms/local-llm-hardware-guide) — Guía completa de selección de hardware',
           ],
         },
         'sources': {
@@ -850,7 +850,7 @@ schema: {
             '[كم من VRAM تحتاج؟](/ar/local-llms/how-much-vram-local-llm) — متطلبات VRAM حسب حجم النموذج ومستوى التكميم',
             '[أفضل كروت الرسوميات الاقتصادية لنماذج LLM المحلية](/ar/local-llms/best-budget-gpus-local-llm) — RTX 3060 مقابل RTX 4060 مقابل AMD RX 7600',
             '[تكميم نماذج LLM موضَّحًا](/ar/local-llms/llm-quantization-explained) — Q4 مقابل Q5 مقابل Q8: متى تستخدم كل مستوى',
-            '[دليل العتاد لنماذج LLM المحلية 2026](/ar/local-llms/local-llm-hardware-guide-2026) — دليل كامل لاختيار العتاد',
+            '[دليل العتاد لنماذج LLM المحلية](/ar/local-llms/local-llm-hardware-guide) — دليل كامل لاختيار العتاد',
           ],
         },
         'sources': {
@@ -1359,7 +1359,7 @@ schema: {
             '[Wie viel VRAM benötigen Sie?](/de/local-llms/how-much-vram-local-llm) — VRAM-Anforderungen nach Modellgröße und Quantisierungsstufe',
             '[Beste Budget-GPUs für lokale LLMs](/de/local-llms/best-budget-gpus-local-llm) — RTX 3060 vs. RTX 4060 vs. AMD RX 7600',
             '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — Q4 vs. Q5 vs. Q8: Wann welche Stufe verwenden',
-            '[Lokaler LLM-Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026) — Vollständiger Hardware-Auswahlführer',
+            '[Lokaler LLM-Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide) — Vollständiger Hardware-Auswahlführer',
           ],
         },
         'sources': {
@@ -1649,7 +1649,7 @@ schema: {
             '[De combien de VRAM avez-vous besoin ?](/fr/local-llms/how-much-vram-local-llm) — Exigences VRAM par taille de modèle et niveau de quantification',
             '[Meilleurs GPU budget pour LLM locaux](/fr/local-llms/best-budget-gpus-local-llm) — RTX 3060 vs RTX 4060 vs AMD RX 7600',
             '[Quantification LLM expliquée](/fr/local-llms/llm-quantization-explained) — Q4 vs Q5 vs Q8 : quand utiliser chaque niveau',
-            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Guide complet de sélection matérielle',
+            '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) — Guide complet de sélection matérielle',
           ],
         },
         'sources': {
@@ -1939,7 +1939,7 @@ schema: {
             '[必要なVRAM容量は？](/ja/local-llms/how-much-vram-local-llm) — モデルサイズと量子化レベル別VRAM要件',
             '[ローカルLLM向けバジェットGPUベスト](/ja/local-llms/best-budget-gpus-local-llm) — RTX 3060 vs RTX 4060 vs AMD RX 7600',
             '[LLM量子化解説](/ja/local-llms/llm-quantization-explained) — Q4 vs Q5 vs Q8：各レベルの使い分け',
-            '[ローカルLLMハードウェアガイド2026](/ja/local-llms/local-llm-hardware-guide-2026) — 完全なハードウェア選択ガイド',
+            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) — 完全なハードウェア選択ガイド',
           ],
         },
         'sources': {
@@ -2220,7 +2220,7 @@ schema: {
             '[需要多少显存？](/zh/local-llms/how-much-vram-local-llm) — 按模型大小和量化级别划分的显存需求',
             '[本地LLM最佳预算GPU](/zh/local-llms/best-budget-gpus-local-llm) — RTX 3060 vs RTX 4060 vs AMD RX 7600',
             '[LLM量化详解](/zh/local-llms/llm-quantization-explained) — Q4 vs Q5 vs Q8：何时使用各级别',
-            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — 完整硬件选型指南',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) — 完整硬件选型指南',
           ],
         },
         'sources': {
@@ -2510,7 +2510,7 @@ schema: {
           '[필요한 VRAM 용량은?](/ko/local-llms/how-much-vram-local-llm) — 모델 크기 및 양자화 수준별 VRAM 요건',
           '[로컬 LLM을 위한 최고의 보급형 GPU](/ko/local-llms/best-budget-gpus-local-llm) — RTX 3060 vs RTX 4060 vs AMD RX 7600',
           '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — Q4 vs Q5 vs Q8: 각 수준의 활용 시점',
-          '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 완전한 하드웨어 선택 가이드',
+          '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 완전한 하드웨어 선택 가이드',
         ],
       },
       sources: {

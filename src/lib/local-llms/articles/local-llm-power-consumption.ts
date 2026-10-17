@@ -217,7 +217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Related Reading',
           items: [
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — Complete hardware setup and component selection.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — Complete hardware setup and component selection.',
             '[Best GPUs For Local LLMs](/local-llms/best-gpus-for-local-llms) — GPU selection guide for all tiers.',
             '[Laptop Vs Desktop Local LLM](/local-llms/laptop-vs-desktop-local-llm) — Power and thermal trade-offs for mobile inference.',
             '[How Much VRAM Do You Need For Local LLMs?](/local-llms/how-much-vram-local-llm) — Memory requirements by model.',
@@ -542,7 +542,7 @@ schema: {
           id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
-            '[Guía de hardware LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — Configuración completa de hardware y selección de componentes.',
+            '[Guía de hardware LLM local](/es/local-llms/local-llm-hardware-guide) — Configuración completa de hardware y selección de componentes.',
             '[Mejores GPUs para LLMs locales](/es/local-llms/best-gpus-for-local-llms) — Guía de selección de GPU para todos los niveles.',
             '[Laptop vs escritorio para LLM local](/es/local-llms/laptop-vs-desktop-local-llm) — Compromisos de potencia y térmica para inferencia móvil.',
             '[¿Cuánta VRAM necesitas para LLMs locales?](/es/local-llms/how-much-vram-local-llm) — Requisitos de memoria por modelo.',
@@ -869,7 +869,7 @@ schema: {
           id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
-            '[دليل عتاد LLM المحلي 2026](/ar/local-llms/local-llm-hardware-guide-2026) — إعداد كامل للعتاد واختيار المكونات.',
+            '[دليل عتاد LLM المحلي](/ar/local-llms/local-llm-hardware-guide) — إعداد كامل للعتاد واختيار المكونات.',
             '[أفضل بطاقات GPU لنماذج LLM المحلية](/ar/local-llms/best-gpus-for-local-llms) — دليل اختيار GPU لجميع الفئات.',
             '[الحاسوب المحمول مقابل المكتبي لـLLM محلي](/ar/local-llms/laptop-vs-desktop-local-llm) — مقايضات الطاقة والحرارة للاستدلال المتنقل.',
             '[كم تحتاج من ذاكرة VRAM لنماذج LLM المحلية؟](/ar/local-llms/how-much-vram-local-llm) — متطلبات الذاكرة لكل نموذج.',
@@ -1299,7 +1299,7 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Artikel',
           items: [
-            '[Leitfaden zur Hardware für lokale LLMs 2026](/de/local-llms/local-llm-hardware-guide-2026) — Komplette Hardware-Einrichtung und Komponentenauswahl.',
+            '[Leitfaden zur Hardware für lokale LLMs](/de/local-llms/local-llm-hardware-guide) — Komplette Hardware-Einrichtung und Komponentenauswahl.',
             '[Beste GPUs für lokale LLMs](/de/local-llms/best-gpus-for-local-llms) — GPU-Auswahlhilfe für alle Preisstufen.',
             '[Laptop vs Desktop für lokale LLM](/de/local-llms/laptop-vs-desktop-local-llm) — Strom- und Thermik-Kompromisse für mobile Inferenz.',
             '[Wie viel VRAM benötigen Sie für lokale LLMs?](/de/local-llms/how-much-vram-local-llm) — Speicheranforderungen nach Modell.',
@@ -1625,7 +1625,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures connexes',
           items: [
-            '[Guide complet du matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) — Configuration matérielle complète et sélection de composants.',
+            '[Guide complet du matériel LLM local](/fr/local-llms/local-llm-hardware-guide) — Configuration matérielle complète et sélection de composants.',
             '[Meilleures GPUs pour LLMs locaux](/fr/local-llms/best-gpus-for-local-llms) — Guide de sélection GPU pour tous les niveaux.',
             '[Ordinateur portable vs Bureau pour LLM local](/fr/local-llms/laptop-vs-desktop-local-llm) — Compromis énergétiques et thermiques pour l\'inférence mobile.',
             '[Combien de VRAM avez-vous besoin pour les LLMs locaux ?](/fr/local-llms/how-much-vram-local-llm) — Exigences de mémoire par modèle.',
@@ -1886,7 +1886,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[本地LLM硬件指南2026](/zh/local-llms/local-llm-hardware-guide-2026) — 完整硬件设置',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) — 完整硬件设置',
             '[本地LLM最佳GPU选择](/zh/local-llms/best-gpus-for-local-llms) — GPU选型指南',
             '[笔记本 vs 台式机 本地LLM](/zh/local-llms/laptop-vs-desktop-local-llm) — 移动功耗考量',
             '[本地LLM所需VRAM](/zh/local-llms/how-much-vram-local-llm) — VRAM选择',
@@ -2464,7 +2464,7 @@ schema: {
           id: 'related-reading',
           title: '관련 읽을거리',
           items: [
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 완전한 하드웨어 설정 및 부품 선택.',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 완전한 하드웨어 설정 및 부품 선택.',
             '[로컬 LLM을 위한 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms) — 전 등급 GPU 선택 가이드.',
             '[노트북 vs 데스크톱 로컬 LLM](/ko/local-llms/laptop-vs-desktop-local-llm) — 모바일 추론의 전력 및 열 트레이드오프.',
             '[로컬 LLM에 필요한 VRAM 용량은?](/ko/local-llms/how-much-vram-local-llm) — 모델별 메모리 요구 사항.',

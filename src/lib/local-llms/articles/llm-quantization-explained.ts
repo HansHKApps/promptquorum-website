@@ -12,15 +12,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2027-02-26',
       last_full_refresh: '2026-08-27',
-      last_seo_review: '2026-08-27',
+      last_seo_review: '2026-10-17',
       theme: 'Best Models',
       title: 'LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
-      seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0: LLM Quantization Explained (2026)',
+      seoTitle: 'Q4_K_M Explained: 5 GGUF Quants Compared by VRAM (2026)',
       intro: '**Choose quantization by VRAM: 6–8 GB → Q4_K_M (~4.5 GB for 7B, <1% quality loss), 16 GB → Q5_K_M, 24+ GB → Q8_0.** Head-to-head comparisons of Q4_0 vs Q4_K_M, Q8_0 vs Q8_K_XL, and advanced techniques including CPU offloading and multi-GPU layer splitting are covered below.',
-      metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, and Q8_K_XL compared. VRAM per 7B model, quality loss, and which GGUF quant to pick for your hardware in 2026.',
+      metaDescription: 'Q4_K_M is the default 4-bit GGUF quant: ~4.5 GB per 7B model, 1–3% quality loss. Compare Q4_K_S, Q5_K_M, Q6_K and Q8_0 by VRAM to pick yours in 2026.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-en.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-10-17',
       lastFactChecked: '2026-08-27',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M5 Max', 'Mac Studio M5 Ultra'],
@@ -427,7 +427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Related Reading',
           items: [
             '[VRAM Calculator for Local LLMs](/local-llms/vram-calculator-local-llm) -- Interactive calculator: compute exact VRAM for Q4/Q5/Q8 quantized models.',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- GPU, CPU, and RAM requirements for quantized models at every size.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- GPU, CPU, and RAM requirements for quantized models at every size.',
             '[Best Local LLMs 2026](/local-llms/best-local-llms-2026) -- Top-ranked GGUF models by task with Q4_K_M download links.',
             '[How to Install Ollama](/local-llms/how-to-install-ollama) -- Step-by-step setup to run Q4_K_M models with Ollama.',
             '[Long Context Local LLMs](/local-llms/long-context-local-llms) -- Models with 32K-128K context and their quantized RAM requirements.',
@@ -467,6 +467,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             {
               q: 'Are Q4_0 and Q4_1 still relevant?',
               a: 'No — both are older formats without the K-quant improvements. Q4_0 quantizes all weights uniformly at 4 bits; Q4_1 adds an offset but is equally superseded. Q4_K_M reaches noticeably better quality at practically the same memory footprint. If you see both in a repository, take Q4_K_M — Q4_0 and Q4_1 now appear only on older model uploads.',
+            },
+            {
+              q: 'What is the difference between Q4_K_M and Q5_K_M?',
+              a: 'Q5_K_M uses 5-bit K-quants and Q4_K_M uses 4-bit. For a 7B model, Q5_K_M is about 5.7 GB versus about 4.5 GB, with quality loss under 1% versus 1–3%. Take Q5_K_M when you have 16 GB or more of VRAM; stay on Q4_K_M when VRAM is tight (6–8 GB).',
+            },
+            {
+              q: 'Is Q6_K worth it over Q4_K_M?',
+              a: 'Q6_K is a 6-bit quant at about 6.6 GB for a 7B model with near-lossless quality, versus about 4.5 GB and 1–3% loss for Q4_K_M. It is worth the extra VRAM for coding and math tasks when you have 12–24 GB; for general chat, Q4_K_M or Q5_K_M is usually enough.',
+            },
+            {
+              q: 'What is the difference between BF16 and Q8_0?',
+              a: 'BF16 is a 16-bit floating-point format that needs about 14 GB for a 7B model, the same as FP16. Q8_0 stores weights as 8-bit integers at about 7.7 GB for a 7B model, with under 0.5% quality loss against FP16. For local inference Q8_0 is the practical choice; BF16 is mainly used for training and as the source for quantizing.',
             },
             {
               q: 'Does Ollama automatically use the best quantization?',
@@ -548,6 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'update-log',
           title: 'Update Log',
           items: [
+            '**2026-10-17:** Added FAQ entries for Q4_K_M vs Q5_K_M, Q6_K and BF16 vs Q8_0; rewrote SEO title and meta description.',
             '**2026-08-26:** Semi-annual refresh. Updated "as of" references to August 2026, closed a gap between the visible FAQ list and the FAQPage schema (3 questions were missing from the schema), and re-verified facts.',
             '**2026-06-15:** Added head-to-head comparison sections (Q4_0 vs Q4_K_M, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, Q8_0 vs Q8_K_XL) and a dedicated "What is Q8_0?" answer; added Q8_K_XL coverage; facts re-verified June 2026.',
             '**2026-05-17:** Updated title to reflect decision-focused intent; content unchanged.',
@@ -560,7 +573,7 @@ schema: {
         'headline': 'LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
         'description': 'Practical guide to choosing LLM quantization levels by VRAM. Q4_K_M, Q5_K_M, Q6_K, Q8_0 compared with RAM tables, quality loss, and use cases.',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-27',
+        'dateModified': '2026-10-17',
         'url': 'https://www.promptquorum.com/local-llms/llm-quantization-explained',
         'proficiencyLevel': 'Advanced',
         'inLanguage': 'en',
@@ -658,6 +671,21 @@ schema: {
             '@type': 'Question',
             'name': 'Are Q4_0 and Q4_1 still relevant?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'No — both are older formats without the K-quant improvements. Q4_0 quantizes all weights uniformly at 4 bits; Q4_1 adds an offset but is equally superseded. Q4_K_M reaches noticeably better quality at practically the same memory footprint. If you see both in a repository, take Q4_K_M — Q4_0 and Q4_1 now appear only on older model uploads.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the difference between Q4_K_M and Q5_K_M?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q5_K_M uses 5-bit K-quants and Q4_K_M uses 4-bit. For a 7B model, Q5_K_M is about 5.7 GB versus about 4.5 GB, with quality loss under 1% versus 1–3%. Take Q5_K_M when you have 16 GB or more of VRAM; stay on Q4_K_M when VRAM is tight (6–8 GB).' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Q6_K worth it over Q4_K_M?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q6_K is a 6-bit quant at about 6.6 GB for a 7B model with near-lossless quality, versus about 4.5 GB and 1–3% loss for Q4_K_M. It is worth the extra VRAM for coding and math tasks when you have 12–24 GB; for general chat, Q4_K_M or Q5_K_M is usually enough.' }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the difference between BF16 and Q8_0?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'BF16 is a 16-bit floating-point format that needs about 14 GB for a 7B model, the same as FP16. Q8_0 stores weights as 8-bit integers at about 7.7 GB for a 7B model, with under 0.5% quality loss against FP16. For local inference Q8_0 is the practical choice; BF16 is mainly used for training and as the source for quantizing.' }
           },
           {
             '@type': 'Question',
@@ -1104,7 +1132,7 @@ schema: {
           title: 'Lecturas relacionadas',
           items: [
             '[Calculadora de VRAM para LLMs locales](/es/local-llms/vram-calculator-local-llm) — Calculadora interactiva: calcula la VRAM exacta para modelos cuantizados Q4/Q5/Q8.',
-            '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) — Requisitos de GPU, CPU y RAM para modelos cuantizados de todos los tamaños.',
+            '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) — Requisitos de GPU, CPU y RAM para modelos cuantizados de todos los tamaños.',
             '[Mejores LLMs locales 2026](/es/local-llms/best-local-llms-2026) — Modelos GGUF mejor valorados por tarea con enlaces de descarga Q4_K_M.',
             '[Cómo instalar Ollama](/es/local-llms/how-to-install-ollama) — Configuración paso a paso para ejecutar modelos Q4_K_M con Ollama.',
             '[LLMs locales de contexto largo](/es/local-llms/long-context-local-llms) — Modelos con contexto de 32K-128K y sus requisitos de RAM cuantizada.',
@@ -1746,7 +1774,7 @@ schema: {
           title: 'قراءات ذات صلة',
           items: [
             '[حاسبة VRAM لنماذج LLM المحلية](/ar/local-llms/vram-calculator-local-llm) — حاسبة تفاعلية: احسب VRAM الدقيقة للنماذج المكمَّمة Q4/Q5/Q8.',
-            '[دليل عتاد تشغيل LLM محلياً 2026](/ar/local-llms/local-llm-hardware-guide-2026) — متطلبات GPU وCPU وRAM للنماذج المكمَّمة بجميع الأحجام.',
+            '[دليل عتاد تشغيل LLM محلياً](/ar/local-llms/local-llm-hardware-guide) — متطلبات GPU وCPU وRAM للنماذج المكمَّمة بجميع الأحجام.',
             '[أفضل نماذج LLM المحلية 2026](/ar/local-llms/best-local-llms-2026) — أعلى نماذج GGUF تقييماً حسب المهمة مع روابط تنزيل Q4_K_M.',
             '[كيفية تثبيت Ollama](/ar/local-llms/how-to-install-ollama) — إعداد خطوة بخطوة لتشغيل نماذج Q4_K_M مع Ollama.',
             '[نماذج LLM المحلية ذات السياق الطويل](/ar/local-llms/long-context-local-llms) — نماذج بسياق 32K-128K ومتطلبات RAM المكمَّمة لها.',
@@ -2550,7 +2578,7 @@ schema: {
           title: 'Leitura relacionada',
           items: [
             '[Calculadora de VRAM para LLMs locais](/pt/local-llms/vram-calculator-local-llm) — Calculadora interativa para VRAM exata com modelos Q4/Q5/Q8.',
-            '[Guia de hardware para LLM local 2026](/pt/local-llms/local-llm-hardware-guide-2026) — Requisitos de GPU, CPU e RAM para modelos quantizados em cada tamanho.',
+            '[Guia de hardware para LLM local](/pt/local-llms/local-llm-hardware-guide) — Requisitos de GPU, CPU e RAM para modelos quantizados em cada tamanho.',
             '[Melhores LLMs locais 2026](/pt/local-llms/best-local-llms-2026) — Modelos GGUF mais bem avaliados por tarefa com links de download Q4_K_M.',
             '[Como instalar o Ollama](/pt/local-llms/how-to-install-ollama) — Configuração passo a passo para executar modelos Q4_K_M com Ollama.',
             '[LLMs locais de contexto longo](/pt/local-llms/long-context-local-llms) — Modelos com contexto de 32K-128K e seus requisitos de RAM quantizada.',
@@ -2971,7 +2999,7 @@ schema: {
           id: 'related-reading',
           title: 'Weiterführende Literatur',
           items: [
-            '[Leitfaden zur Hardware für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026) -- GPU-, CPU- und RAM-Anforderungen für quantisierte Modelle.',
+            '[Leitfaden zur Hardware für lokale LLMs](/de/local-llms/local-llm-hardware-guide) -- GPU-, CPU- und RAM-Anforderungen für quantisierte Modelle.',
             '[Beste lokale LLM-Modelle für Anfänger](/de/local-llms/best-beginner-local-llm-models) -- Wählen Sie Ihr erstes Modell mit Quantisierungsempfehlungen.',
             '[Kleine LLM-Modelle für Consumer-Hardware](/de/local-llms/small-local-llm-models) -- 3B und 7B Modelle, die auf Quantisierung laufen.',
             '[Ollama installieren](/de/local-llms/how-to-install-ollama) -- GGUF-quantisierte Modelle herunterladen und ausführen.',
@@ -3640,7 +3668,7 @@ schema: {
           id: 'related-reading',
           title: 'Lectures complémentaires',
           items: [
-            '[Guide du matériel LLM local](/fr/local-llms/local-llm-hardware-guide-2026) -- Exigences GPU, CPU et RAM pour les modèles quantifiés.',
+            '[Guide du matériel LLM local](/fr/local-llms/local-llm-hardware-guide) -- Exigences GPU, CPU et RAM pour les modèles quantifiés.',
             '[Meilleurs modèles LLM locaux pour débutants](/fr/local-llms/best-beginner-local-llm-models) -- Choisissez votre premier modèle avec recommandations de quantification.',
             '[Petits modèles LLM pour matériel grand public](/fr/local-llms/small-local-llm-models) -- Modèles 3B et 7B qui s\'exécutent sur quantification.',
             '[Installer Ollama](/fr/local-llms/how-to-install-ollama) -- Télécharger et exécuter les modèles quantifiés GGUF.',
@@ -4300,7 +4328,7 @@ schema: {
           id: 'related-reading',
           title: '関連記事',
           items: [
-            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide-2026) -- 量子化モデル実行のためのGPU、CPU、RAM要件。',
+            '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) -- 量子化モデル実行のためのGPU、CPU、RAM要件。',
             '[初心者向けベストローカルLLMモデル](/ja/local-llms/best-beginner-local-llm-models) -- 量子化推奨事項付きで最初のモデルを選択。',
             '[コンシューマーハードウェア向け小規模LLMモデル](/ja/local-llms/small-local-llm-models) -- 量子化で実行される3Bおよび7Bモデル。',
             '[Ollamaのインストール方法](/ja/local-llms/how-to-install-ollama) -- GGUF量子化モデルのダウンロードと実行。',
@@ -4978,7 +5006,7 @@ schema: {
           id: 'related-reading',
           title: '相关阅读',
           items: [
-            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide-2026)----运行量化模型的GPU、CPU和RAM要求。',
+            '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide)----运行量化模型的GPU、CPU和RAM要求。',
             '[初学者最佳本地LLM模型](/zh/local-llms/best-beginner-local-llm-models)----选择您的第一个模型附带量化建议。',
             '[消费级硬件小型LLM模型](/zh/local-llms/small-local-llm-models)----在量化上运行的3B和7B模型。',
             '[如何安装Ollama](/zh/local-llms/how-to-install-ollama)----下载并运行GGUF量化模型。',
@@ -5890,7 +5918,7 @@ schema: {
           title: '관련 자료',
           items: [
             '[로컬 LLM용 VRAM 계산기](/ko/local-llms/vram-calculator-local-llm) — Q4/Q5/Q8 양자화 모델의 정확한 VRAM을 계산하는 인터랙티브 계산기.',
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 모든 크기에서 양자화 모델을 위한 GPU, CPU, RAM 요구 사항.',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 모든 크기에서 양자화 모델을 위한 GPU, CPU, RAM 요구 사항.',
             '[최고의 로컬 LLM 2026](/ko/local-llms/best-local-llms-2026) — Q4_K_M 다운로드 링크를 포함한 작업별 상위 GGUF 모델.',
             '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — Ollama로 Q4_K_M 모델을 실행하기 위한 단계별 설정.',
             '[긴 컨텍스트 로컬 LLM](/ko/local-llms/long-context-local-llms) — 32K–128K 컨텍스트를 가진 모델과 양자화된 RAM 요구 사항.',

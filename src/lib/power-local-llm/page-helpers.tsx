@@ -1005,7 +1005,7 @@ const HUB_THEMES: Array<{
     colorBadge: 'bg-rose-50 text-rose-700 border-rose-200',
     colorDot: 'bg-rose-400',
     slugs: [
-      'best-local-llm-creative-writing-2026',
+      'best-local-llm-creative-writing',
       'sillytavern-vs-agnai-vs-risuai-roleplay',
       'local-llm-prompts-for-fiction-writers',
       'uncensored-local-llm-creative-writing-ethics',
@@ -1053,6 +1053,7 @@ const HUB_THEMES: Array<{
       'oscilla-review',
       'tina-review',
       'mlxhub-review',
+      'local-ai-chat-pocket-review',
       'anyllm-review',
       'ollama-local-ai-review',
       'mlc-chat-review',
@@ -1111,7 +1112,7 @@ const HUB_THEMES: Array<{
     colorBadge: 'bg-violet-50 text-violet-700 border-violet-200',
     colorDot: 'bg-violet-400',
     slugs: [
-      'local-whisper-stt-comparison-2026',
+      'local-whisper-stt-comparison',
       'local-vision-models-llava-ollama-2026',
       'local-tts-voice-cloning-piper-coqui-xtts',
       'build-local-voice-assistant-2026',
@@ -1804,7 +1805,7 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     directoryCta: 'Open the {count}-tool directory →',
     relatedReadingHeading: 'Related Reading',
     relatedReadingLinks: [
-      { href: '/local-llms/local-llm-hardware-guide-2026', label: 'Local LLM Hardware Guide 2026' },
+      { href: '/local-llms/local-llm-hardware-guide', label: 'Local LLM Hardware Guide 2026' },
       { href: '/local-llms/best-local-llms-2026', label: 'Best Local LLMs in 2026' },
       { href: '/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp vs Ollama vs vLLM' },
       { href: '/prompt-engineering/rag-explained', label: 'RAG Explained' },
@@ -1819,7 +1820,7 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     directoryCta: 'Zum Verzeichnis mit {count} Tools →',
     relatedReadingHeading: 'Weiterführende Literatur',
     relatedReadingLinks: [
-      { href: '/de/local-llms/local-llm-hardware-guide-2026', label: 'Lokale LLM-Hardware-Guide 2026' },
+      { href: '/de/local-llms/local-llm-hardware-guide', label: 'Lokale LLM-Hardware-Guide 2026' },
       { href: '/de/local-llms/best-local-llms-2026', label: 'Die besten lokalen LLMs 2026' },
       { href: '/de/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp vs. Ollama vs. vLLM' },
       { href: '/de/prompt-engineering/rag-explained', label: 'RAG erklärt' },
@@ -1834,7 +1835,7 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     directoryCta: 'Voir l\'annuaire de {count} outils →',
     relatedReadingHeading: 'Lectures Complémentaires',
     relatedReadingLinks: [
-      { href: '/fr/local-llms/local-llm-hardware-guide-2026', label: 'Guide Matériel LLM Local 2026' },
+      { href: '/fr/local-llms/local-llm-hardware-guide', label: 'Guide Matériel LLM Local 2026' },
       { href: '/fr/local-llms/best-local-llms-2026', label: 'Meilleurs LLMs Locaux en 2026' },
       { href: '/fr/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp vs Ollama vs vLLM' },
       { href: '/fr/prompt-engineering/rag-explained', label: 'RAG Expliqué' },
@@ -1849,7 +1850,7 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     directoryCta: '{count}件のツールのディレクトリを開く →',
     relatedReadingHeading: '関連リソース',
     relatedReadingLinks: [
-      { href: '/ja/local-llms/local-llm-hardware-guide-2026', label: 'ローカルLLMハードウェアガイド2026' },
+      { href: '/ja/local-llms/local-llm-hardware-guide', label: 'ローカルLLMハードウェアガイド2026' },
       { href: '/ja/local-llms/best-local-llms-2026', label: '2026年最高のローカルLLM' },
       { href: '/ja/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp vs Ollama vs vLLM' },
       { href: '/ja/prompt-engineering/rag-explained', label: 'RAG解説' },
@@ -1864,7 +1865,7 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     directoryCta: '打开 {count} 款工具目录 →',
     relatedReadingHeading: '相关阅读',
     relatedReadingLinks: [
-      { href: '/zh/local-llms/local-llm-hardware-guide-2026', label: '本地LLM硬件指南2026' },
+      { href: '/zh/local-llms/local-llm-hardware-guide', label: '本地LLM硬件指南2026' },
       { href: '/zh/local-llms/best-local-llms-2026', label: '2026年最佳本地LLM' },
       { href: '/zh/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp vs Ollama vs vLLM' },
       { href: '/zh/prompt-engineering/rag-explained', label: 'RAG详解' },
@@ -1879,7 +1880,7 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     directoryCta: 'Abrir el directorio de {count} herramientas →',
     relatedReadingHeading: 'Lecturas Relacionadas',
     relatedReadingLinks: [
-      { href: '/es/local-llms/local-llm-hardware-guide-2026', label: 'Guía de Hardware para LLM Local 2026' },
+      { href: '/es/local-llms/local-llm-hardware-guide', label: 'Guía de Hardware para LLM Local 2026' },
       { href: '/es/local-llms/best-local-llms-2026', label: 'Mejores LLMs Locales en 2026' },
       { href: '/es/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp vs Ollama vs vLLM' },
       { href: '/es/prompt-engineering/rag-explained', label: 'RAG Explicado' },
@@ -1894,7 +1895,7 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     directoryCta: 'Abrir o diretório de {count} ferramentas →',
     relatedReadingHeading: 'Leituras Relacionadas',
     relatedReadingLinks: [
-      { href: '/pt/local-llms/local-llm-hardware-guide-2026', label: 'Guia de Hardware para LLM Local 2026' },
+      { href: '/pt/local-llms/local-llm-hardware-guide', label: 'Guia de Hardware para LLM Local 2026' },
       { href: '/pt/local-llms/best-local-llms-2026', label: 'Melhores LLMs Locais em 2026' },
       { href: '/pt/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp vs Ollama vs vLLM' },
       { href: '/pt/prompt-engineering/rag-explained', label: 'RAG Explicado' },
@@ -1909,7 +1910,7 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     directoryCta: 'افتح دليل الـ {count} أداة ←',
     relatedReadingHeading: 'قراءات ذات صلة',
     relatedReadingLinks: [
-      { href: '/ar/local-llms/local-llm-hardware-guide-2026', label: 'دليل أجهزة LLM المحلي 2026' },
+      { href: '/ar/local-llms/local-llm-hardware-guide', label: 'دليل أجهزة LLM المحلي 2026' },
       { href: '/ar/local-llms/best-local-llms-2026', label: 'أفضل نماذج LLM المحلية 2026' },
       { href: '/ar/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp مقابل Ollama مقابل vLLM' },
       { href: '/ar/prompt-engineering/rag-explained', label: 'شرح RAG' },
@@ -1924,7 +1925,7 @@ const HUB_LABELS_L10N: Record<'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | '
     directoryCta: '{count}개 도구 디렉터리 열기 →',
     relatedReadingHeading: '관련 자료',
     relatedReadingLinks: [
-      { href: '/ko/local-llms/local-llm-hardware-guide-2026', label: '로컬 LLM 하드웨어 가이드 2026' },
+      { href: '/ko/local-llms/local-llm-hardware-guide', label: '로컬 LLM 하드웨어 가이드 2026' },
       { href: '/ko/local-llms/best-local-llms-2026', label: '2026년 최고의 로컬 LLM' },
       { href: '/ko/local-llms/llamacpp-vs-ollama-vs-vllm', label: 'llama.cpp vs Ollama vs vLLM' },
       { href: '/ko/prompt-engineering/rag-explained', label: 'RAG 설명' },

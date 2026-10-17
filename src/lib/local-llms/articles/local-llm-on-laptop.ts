@@ -1929,7 +1929,7 @@ schema: {
         },
         quantization: {
           title: 'Welche Quantisierungsstufe sollten Sie auf einem Laptop verwenden?',
-          content: '[Quantisierung](/local-llms/local-llm-hardware-guide-2026) reduziert die Modellgenauigkeit, um RAM- und Berechnungsanforderungen zu senken. Für Laptops ist Q4_K_M der empfohlene Standard:',
+          content: '[Quantisierung](/local-llms/local-llm-hardware-guide) reduziert die Modellgenauigkeit, um RAM- und Berechnungsanforderungen zu senken. Für Laptops ist Q4_K_M der empfohlene Standard:',
           rows: [
             { 'Quantisierung': 'Q2_K', 'RAM vs. Vollversion': '~25%', 'Qualitätsverlust': 'Hoch -- merkliche Verschlechterung', 'Anwendungsfall': 'Nur bei extrem wenig RAM' },
             { 'Quantisierung': 'Q3_K_S', 'RAM vs. Vollversion': '~35%', 'Qualitätsverlust': 'Moderat', 'Anwendungsfall': 'Unter 4 GB RAM' },
@@ -1966,7 +1966,7 @@ schema: {
             '[Beste Anfänger Local LLM-Modelle](/local-llms/best-beginner-local-llm-models) -- Modellempfehlungen nach RAM-Tier einschließlich 3B- und 7B-Modellen, die für Laptop-Nutzung optimiert sind',
             '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) -- Detaillierter Vergleich von Inferenz-Architekturen, die für die Auswahl von Laptop-Hardware relevant sind',
             '[Lokale LLMs vs Cloud-APIs](/local-llms/local-llms-vs-cloud-apis) -- Kosten- und Geschwindigkeitsvergleich, um zu entscheiden, wann Laptop-Inferenz die richtige Wahl ist',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- Vollständiger Leitfaden zu Q4/Q5/Q8-Quantisierungs-Kompromissen für speicherbegrenzte Laptop-Umgebungen',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- Vollständiger Leitfaden zu Q4/Q5/Q8-Quantisierungs-Kompromissen für speicherbegrenzte Laptop-Umgebungen',
             '[MLX vs Ollama vs llama.cpp auf Mac 2026](/de/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Framework-Vergleich für Apple Silicon: Geschwindigkeit, Setup-Zeit und Ökosystem-Überlegungen.',
             '[Günstigste Methode zum lokalen Ausführen eines 70B-Modells](/de/prompt-bites/cheapest-way-to-run-70b-model-locally) -- Wann ein Laptop 70B verarbeiten kann: Q3_K_S auf M3 Max vs CPU-Offloading.',
             '[Beste GPU für LLM-Inferenz unter 500 $ (2026)](/de/local-llms/best-gpu-for-llm-inference-under-500-2026) -- eGPU-Upgrade-Pfad für MacBook und Windows-Laptops.',
@@ -2680,7 +2680,7 @@ schema: {
         },
         quantization: {
           title: 'Quel niveau de quantification devez-vous utiliser sur un ordinateur portable?',
-          content: '[Quantification](/local-llms/local-llm-hardware-guide-2026) réduit la précision du modèle pour réduire les exigences en RAM et en calcul. Pour les ordinateurs portables, Q4_K_M est le standard recommandé:',
+          content: '[Quantification](/local-llms/local-llm-hardware-guide) réduit la précision du modèle pour réduire les exigences en RAM et en calcul. Pour les ordinateurs portables, Q4_K_M est le standard recommandé:',
           rows: [
             { 'Quantification': 'Q2_K', 'RAM vs Complète': '~25%', 'Perte de qualité': 'Élevée -- dégradation notable', 'Cas d\'usage': 'Seulement RAM extrêmement faible' },
             { 'Quantification': 'Q3_K_S', 'RAM vs Complète': '~35%', 'Perte de qualité': 'Modérée', 'Cas d\'usage': 'Sous 4 GB RAM' },
@@ -2718,7 +2718,7 @@ schema: {
             '[Meilleurs modèles Local LLM pour débutants](/local-llms/best-beginner-local-llm-models) -- recommandations de modèles par tier RAM incluant les modèles 3B et 7B optimisés pour l\'utilisation d\'ordinateur portable',
             '[GPU vs CPU vs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) -- comparaison détaillée des architectures d\'inférence pertinentes pour la sélection du matériel d\'ordinateur portable',
             '[Local LLMs vs API cloud](/local-llms/local-llms-vs-cloud-apis) -- comparaison des coûts et de la vitesse pour vous aider à décider quand l\'inférence d\'ordinateur portable est le bon choix',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- guide complet des compromis de quantification Q4/Q5/Q8 pour les environnements d\'ordinateur portable à mémoire limitée',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- guide complet des compromis de quantification Q4/Q5/Q8 pour les environnements d\'ordinateur portable à mémoire limitée',
             '[MLX vs Ollama vs llama.cpp sur Mac 2026](/fr/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Comparaison des frameworks pour Apple Silicon: vitesse, temps de configuration et compromis d\'écosystème.',
             '[Moyen le moins cher d\'exécuter un modèle 70B localement](/fr/prompt-bites/cheapest-way-to-run-70b-model-locally) -- Quand un ordinateur portable peut gérer 70B : Q3_K_S sur M3 Max vs déchargement CPU.',
             '[Meilleur GPU pour l\'inférence LLM sous 500 $ (2026)](/fr/local-llms/best-gpu-for-llm-inference-under-500-2026) -- Chemin de mise à niveau eGPU pour MacBook et ordinateurs portables Windows.',
@@ -3334,7 +3334,7 @@ schema: {
         },
         quantization: {
           title: 'ノートパソコンでどの量子化レベルを使用する必要がありますか？',
-          content: '[量子化](/local-llms/local-llm-hardware-guide-2026)はモデル精度を削減して、RAMと計算要件を削減します。ノートパソコンの場合、Q4_K_Mは推奨デフォルトです：',
+          content: '[量子化](/local-llms/local-llm-hardware-guide)はモデル精度を削減して、RAMと計算要件を削減します。ノートパソコンの場合、Q4_K_Mは推奨デフォルトです：',
           rows: [
             { '量子化': 'Q2_K', 'RAM vs Full': '~25%', '品質損失': '高い--顕著な低下', '用途': '極めて低いRAMのみ' },
             { '量子化': 'Q3_K_S', 'RAM vs Full': '~35%', '品質損失': '中程度', '用途': 'RAM 4GB未満' },
@@ -3372,7 +3372,7 @@ schema: {
             '[初心者向けのベストローカルLLMモデル](/local-llms/best-beginner-local-llm-models)--RAMティア別のモデルの推奨事項（ノートパソコン使用用に最適化された3B および7Bモデルを含む）',
             '[GPUvs CPUvs Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon)--ノートパソコンハードウェア選択に関連する推論アーキテクチャの詳細な比較',
             '[ローカルLLMs vs クラウドAPI](/local-llms/local-llms-vs-cloud-apis)--ノートパソコン推論がいつ正しい選択であるかを決定するのに役立つコストと速度の比較',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026)--メモリ制約のあるノートパソコン環境向けのQ4/Q5/Q8量子化トレードオフの完全なガイド',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide)--メモリ制約のあるノートパソコン環境向けのQ4/Q5/Q8量子化トレードオフの完全なガイド',
             '[MLX vs Ollama vs llama.cpp on Mac 2026](/ja/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Apple Silicon フレームワーク比較: スピード、セットアップ時間、エコシステムトレードオフ',
             '[70Bモデルをローカルで実行する最安値の方法](/ja/prompt-bites/cheapest-way-to-run-70b-model-locally) -- ノートパソコンが70Bを処理できるとき：M3 MaxでのQ3_K_S vs CPUオフローディング。',
             '[500ドル以下のローカルLLM推論向けベストGPU (2026)](/ja/local-llms/best-gpu-for-llm-inference-under-500-2026) -- MacBookとWindowsラップトップ向けeGPUアップグレードパス。',
@@ -3696,7 +3696,7 @@ schema: {
         },
         quantization: {
           title: '在笔记本电脑上应该使用哪个量化级别？',
-          content: '[量化](/local-llms/local-llm-hardware-guide-2026)降低模型精度以降低RAM和计算要求。对于笔记本电脑，Q4_K_M是推荐的默认值：',
+          content: '[量化](/local-llms/local-llm-hardware-guide)降低模型精度以降低RAM和计算要求。对于笔记本电脑，Q4_K_M是推荐的默认值：',
           rows: [
             { '量化': 'Q2_K', '与全精度相比的RAM': '~25%', '质量损失': '高 -- 明显降级', '用例': '仅极低的RAM' },
             { '量化': 'Q3_K_S', '与全精度相比的RAM': '~35%', '质量损失': '适中', '用例': 'RAM低于4GB' },
@@ -3734,7 +3734,7 @@ schema: {
             '[初学者最佳本地LLM模型](/local-llms/best-beginner-local-llm-models) -- 按RAM层级的模型建议，包括为笔记本电脑使用优化的3B和7B模型',
             '[GPU与CPU与Apple Silicon](/local-llms/gpu-vs-cpu-vs-apple-silicon) -- 与笔记本电脑硬件选择相关的推理架构的详细比较',
             '[本地LLM与云API](/local-llms/local-llms-vs-cloud-apis) -- 成本和速度比较，可帮助您决定何时笔记本电脑推理是正确的选择',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- 关于内存受限笔记本电脑环境的Q4/Q5/Q8量化权衡的完整指南',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- 关于内存受限笔记本电脑环境的Q4/Q5/Q8量化权衡的完整指南',
             '[MLX vs Ollama vs llama.cpp on Mac 2026](/zh/local-llms/mlx-vs-ollama-vs-llama-cpp-mac) -- Apple Silicon 框架对比：速度、设置时间和生态系统权衡',
             '[本地运行70B模型的最低成本方案](/zh/prompt-bites/cheapest-way-to-run-70b-model-locally) -- 笔记本电脑处理70B的时机：M3 Max上的Q3_K_S vs CPU卸载。',
             '[500美元以下本地LLM推理最佳GPU (2026)](/zh/local-llms/best-gpu-for-llm-inference-under-500-2026) -- MacBook和Windows笔记本的eGPU升级路径。',

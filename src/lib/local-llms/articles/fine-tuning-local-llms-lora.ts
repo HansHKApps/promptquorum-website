@@ -189,7 +189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Create Custom Local Models](/local-llms/create-custom-local-models) -- Build models from scratch.',
             '[LLM Quantization Explained](/local-llms/llm-quantization-explained) -- how Q4_K_M and GGUF formats work with fine-tuned models.',
             '[Prompt Engineering for Local Models](/local-llms/prompt-engineering-for-local-models) -- optimize prompts before fine-tuning to establish your accuracy baseline.',
-            '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) -- GPU VRAM requirements for LoRA training at every model size.',
+            '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) -- GPU VRAM requirements for LoRA training at every model size.',
           ],
         },
         sources: {
@@ -549,7 +549,7 @@ schema: {
             '[Crear modelos locales personalizados](/es/local-llms/create-custom-local-models) -- Construye modelos desde cero.',
             '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) -- cómo funcionan los formatos Q4_K_M y GGUF con modelos con fine-tuning.',
             '[Ingeniería de prompts para modelos locales](/es/local-llms/prompt-engineering-for-local-models) -- optimiza prompts antes del fine-tuning para establecer tu línea de base de precisión.',
-            '[Guía de hardware para LLM local 2026](/es/local-llms/local-llm-hardware-guide-2026) -- requisitos de VRAM de GPU para entrenamiento LoRA en cada tamaño de modelo.',
+            '[Guía de hardware para LLM local](/es/local-llms/local-llm-hardware-guide) -- requisitos de VRAM de GPU para entrenamiento LoRA en cada tamaño de modelo.',
           ],
         },
         sources: {
@@ -894,7 +894,7 @@ schema: {
             '[إنشاء نماذج محلية مخصصة](/ar/local-llms/create-custom-local-models) -- ابنِ نماذج من الصفر.',
             '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) -- كيف تعمل صيغتا Q4_K_M وGGUF مع النماذج المضبوطة بدقة.',
             '[هندسة الموجّهات للنماذج المحلية](/ar/local-llms/prompt-engineering-for-local-models) -- حسّن الموجّهات قبل الضبط الدقيق لتحديد خط أساس الدقة.',
-            '[دليل عتاد تشغيل LLM محلياً 2026](/ar/local-llms/local-llm-hardware-guide-2026) -- متطلبات VRAM في GPU لتدريب LoRA في كل حجم نموذج.',
+            '[دليل عتاد تشغيل LLM محلياً](/ar/local-llms/local-llm-hardware-guide) -- متطلبات VRAM في GPU لتدريب LoRA في كل حجم نموذج.',
           ],
         },
         sources: {
@@ -1387,7 +1387,7 @@ schema: {
             '[Benutzerdefinierte lokale Modelle erstellen](/de/local-llms/create-custom-local-models) -- Erstellen Sie Modelle von Grund auf.',
             '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) -- Wie Q4_K_M und GGUF-Formate mit fine-getuneeten Modellen funktionieren.',
             '[Prompt Engineering für lokale Modelle](/de/local-llms/prompt-engineering-for-local-models) -- Optimieren Sie Prompts vor Fine-Tuning, um Ihre Accuracy-Baseline zu ermitteln.',
-            '[Lokaler LLM Hardware-Leitfaden 2026](/de/local-llms/local-llm-hardware-guide-2026) -- GPU VRAM-Anforderungen für LoRA-Training bei jeder Modellgröße.',
+            '[Lokaler LLM Hardware-Leitfaden](/de/local-llms/local-llm-hardware-guide) -- GPU VRAM-Anforderungen für LoRA-Training bei jeder Modellgröße.',
           ],
         },
         sources: {
@@ -1747,7 +1747,7 @@ schema: {
             '[Créer des modèles locaux personnalisés](/fr/local-llms/create-custom-local-models) -- Construisez des modèles à partir de zéro.',
             '[Quantisation LLM expliquée](/fr/local-llms/llm-quantization-explained) -- Comment Q4_K_M et GGUF fonctionnent avec modèles fine-tunés.',
             '[Prompt engineering pour modèles locaux](/fr/local-llms/prompt-engineering-for-local-models) -- Optimisez avant fine-tuning pour établir une baseline.',
-            '[Guide matériel LLM local 2026](/fr/local-llms/local-llm-hardware-guide-2026) -- Besoins VRAM GPU pour LoRA à toute taille.',
+            '[Guide matériel LLM local](/fr/local-llms/local-llm-hardware-guide) -- Besoins VRAM GPU pour LoRA à toute taille.',
           ],
         },
         sources: {
@@ -2106,7 +2106,7 @@ schema: {
             '[カスタム ローカル モデルの作成](/ja/local-llms/create-custom-local-models) -- ゼロからモデルを構築します。',
             '[LLM 量子化の説明](/ja/local-llms/llm-quantization-explained) -- Q4_K_M と GGUF フォーマットがファインチューニングされたモデルでどのように機能するか。',
             '[ローカルモデルのプロンプト エンジニアリング](/ja/local-llms/prompt-engineering-for-local-models) -- ファインチューニング前にプロンプトを最適化してベースラインを確立します。',
-            '[ローカル LLM ハードウェア ガイド 2026](/ja/local-llms/local-llm-hardware-guide-2026) -- すべてのモデル サイズの LoRA トレーニング GPU VRAM 要件。',
+            '[ローカル LLM ハードウェア ガイド](/ja/local-llms/local-llm-hardware-guide) -- すべてのモデル サイズの LoRA トレーニング GPU VRAM 要件。',
           ],
         },
         sources: {
@@ -2458,7 +2458,7 @@ schema: {
             '[创建自定义本地模型](/zh/local-llms/create-custom-local-models) -- 从零开始构建模型。',
             '[LLM 量化解释](/zh/local-llms/llm-quantization-explained) -- Q4_K_M 和 GGUF 格式如何与微调模型配合。',
             '[本地模型的提示工程](/zh/local-llms/prompt-engineering-for-local-models) -- 在微调前优化提示以建立准确性基线。',
-            '[本地 LLM 硬件指南 2026](/zh/local-llms/local-llm-hardware-guide-2026) -- 每个模型大小的 LoRA 训练 GPU VRAM 要求。',
+            '[本地 LLM 硬件指南](/zh/local-llms/local-llm-hardware-guide) -- 每个模型大小的 LoRA 训练 GPU VRAM 要求。',
           ],
         },
         sources: {
@@ -2836,7 +2836,7 @@ schema: {
             '[커스텀 로컬 모델 만들기](/ko/local-llms/create-custom-local-models) -- 모델을 처음부터 구축하십시오.',
             '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) -- Q4_K_M 및 GGUF 형식이 파인튜닝된 모델과 어떻게 작동하는지 알아보십시오.',
             '[로컬 모델을 위한 프롬프트 엔지니어링](/ko/local-llms/prompt-engineering-for-local-models) -- 정확도 기준선을 확립하기 위해 파인튜닝 전에 프롬프트를 최적화하십시오.',
-            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 모든 모델 크기에서 LoRA 학습을 위한 GPU VRAM 요구 사항.',
+            '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) -- 모든 모델 크기에서 LoRA 학습을 위한 GPU VRAM 요구 사항.',
           ],
         },
         sources: {

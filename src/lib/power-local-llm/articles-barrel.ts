@@ -53,6 +53,7 @@ import { article as a_oscilla_review } from './articles/oscilla-review'
 import { article as a_tina_review } from './articles/tina-review'
 import { article as a_return_editor_review } from './articles/return-editor-review'
 import { article as a_mlxhub_review } from './articles/mlxhub-review'
+import { article as a_local_ai_chat_pocket_review } from './articles/local-ai-chat-pocket-review'
 import { article as a_anyllm_review } from './articles/anyllm-review'
 import { article as a_ollama_local_ai_review } from './articles/ollama-local-ai-review'
 import { article as a_comfyui_review } from './articles/comfyui-review'
@@ -136,7 +137,7 @@ import { article as a_liquid_apollo_review } from './articles/liquid-apollo-revi
 import { article as a_noema_review } from './articles/noema-review'
 import { article as a_ai_on_device_review } from './articles/ai-on-device-review'
 import { article as a_on_device_ai_review } from './articles/on-device-ai-review'
-import { article as a_best_local_llm_creative_writing_2026 } from './articles/best-local-llm-creative-writing-2026'
+import { article as a_best_local_llm_creative_writing } from './articles/best-local-llm-creative-writing'
 import { article as a_best_local_models_tool_calling_2026 } from './articles/best-local-models-tool-calling-2026'
 import { article as a_chat_with_1000_pdfs_locally } from './articles/chat-with-1000-pdfs-locally'
 import { article as a_continue_dev_vs_cline_vs_aider_local } from './articles/continue-dev-vs-cline-vs-aider-local'
@@ -173,7 +174,7 @@ import { article as a_sillytavern_vs_agnai_vs_risuai_roleplay } from './articles
 import { article as a_metagpt_agnai_risuai_explained } from './articles/metagpt-agnai-risuai-explained'
 import { article as a_uncensored_local_llm_creative_writing_ethics } from './articles/uncensored-local-llm-creative-writing-ethics'
 import { article as a_voice_assistant_local_mobile_offline } from './articles/voice-assistant-local-mobile-offline'
-import { article as a_local_whisper_stt_comparison_2026 } from './articles/local-whisper-stt-comparison-2026'
+import { article as a_local_whisper_stt_comparison_2026 } from './articles/local-whisper-stt-comparison'
 import { article as a_local_vision_models_llava_ollama_2026 } from './articles/local-vision-models-llava-ollama-2026'
 import { article as a_local_tts_voice_cloning_piper_coqui_xtts } from './articles/local-tts-voice-cloning-piper-coqui-xtts'
 import { article as a_build_local_voice_assistant_2026 } from './articles/build-local-voice-assistant-2026'
@@ -381,7 +382,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-local-coding-models-2026':          a_best_local_coding_models_2026,
   'best-local-llm-apps-android-2026':       a_best_local_llm_apps_android_2026,
   'best-local-llm-apps-iphone-2026':        a_best_local_llm_apps_iphone_2026,
-  'best-local-llm-creative-writing-2026':   a_best_local_llm_creative_writing_2026,
+  'best-local-llm-creative-writing':   a_best_local_llm_creative_writing,
   'best-local-models-tool-calling-2026':    a_best_local_models_tool_calling_2026,
   'chat-with-1000-pdfs-locally':            a_chat_with_1000_pdfs_locally,
   'continue-dev-vs-cline-vs-aider-local':   a_continue_dev_vs_cline_vs_aider_local,
@@ -416,7 +417,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'metagpt-agnai-risuai-explained':              a_metagpt_agnai_risuai_explained,
   'uncensored-local-llm-creative-writing-ethics': a_uncensored_local_llm_creative_writing_ethics,
   'voice-assistant-local-mobile-offline':              a_voice_assistant_local_mobile_offline,
-  'local-whisper-stt-comparison-2026':                 a_local_whisper_stt_comparison_2026,
+  'local-whisper-stt-comparison':                 a_local_whisper_stt_comparison_2026,
   'local-vision-models-llava-ollama-2026':             a_local_vision_models_llava_ollama_2026,
   'local-tts-voice-cloning-piper-coqui-xtts':          a_local_tts_voice_cloning_piper_coqui_xtts,
   'build-local-voice-assistant-2026':                  a_build_local_voice_assistant_2026,
@@ -648,6 +649,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'tina-review':                                   a_tina_review,
   'return-editor-review':                          a_return_editor_review,
   'mlxhub-review':                                 a_mlxhub_review,
+  'local-ai-chat-pocket-review':                   a_local_ai_chat_pocket_review,
   'anyllm-review':                                 a_anyllm_review,
   'ollama-local-ai-review':                        a_ollama_local_ai_review,
   // ComfyUI review — 2026-09-06

@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The trade-off is latency and verbosity. A reasoning model spends extra tokens working through the problem, so a single answer can take several seconds and hundreds of tokens of visible reasoning. For a math proof or a logic puzzle that is exactly what you want; for a quick factual lookup it is wasted time.',
           'The distinction that trips people up: DeepSeek-V3 is a chat model, DeepSeek-R1 is the reasoning model. They share architecture lineage but are tuned for different jobs. If you want conversational answers, use V3; if you want step-by-step problem solving, use R1 or one of its distills. We explain exactly what the distillation keeps and loses in [DeepSeek-R1 vs the Distills](/power-local-llm/deepseek-r1-vs-distills-explained-2026).',
           '**Update:** DeepSeek\'s flagship line has since moved to DeepSeek-V4 (Flash and Pro), which reached general availability in August 2026 and ships as open weights under an MIT license — V4-Flash released July 31, 2026, V4-Pro on August 12–13, 2026. The R1 distills covered here are not being discontinued and remain the practical local-reasoning pick: V4-Pro is a 1.6T-total / 49B-active-parameter model that needs roughly 48–80 GB of VRAM even at Q4 quantization — multi-GPU territory, not a single consumer card. If you have that hardware and want the newest general-purpose architecture, V4 is worth evaluating; for reasoning on one GPU, the distills below remain the answer.',
-          'For a deeper primer on running these models, start with the [Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) and [LLM Quantization Explained](/local-llms/llm-quantization-explained), which cover the VRAM math this guide relies on.',
+          'For a deeper primer on running these models, start with the [Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) and [LLM Quantization Explained](/local-llms/llm-quantization-explained), which cover the VRAM math this guide relies on.',
         ],
         snippetBlocks: [
           {
@@ -281,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Does Local DeepSeek Solve the China Data Problem?](/local-llms/deepseek-local-china-data-privacy-2026) — hosted vs self-hosted data flow, evenhanded',
           '[Run DeepSeek Offline 2026: Self-Hosted Setup](/power-local-llm/deepseek-offline-china-self-hosted-2026) — fully offline reasoning with model selection',
           '[DeepSeek vs Qwen for Coding Locally](/power-local-llm/deepseek-vs-qwen-coding-local-2026) — the coding comparison this reasoning guide deliberately excludes',
-          '[Local LLM Hardware Guide 2026](/local-llms/local-llm-hardware-guide-2026) — GPU, VRAM, and build guidance for every tier',
+          '[Local LLM Hardware Guide](/local-llms/local-llm-hardware-guide) — GPU, VRAM, and build guidance for every tier',
           '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — why Q4_K_M, Q8, and FP16 change your VRAM math',
         ],
       },
@@ -370,7 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Der Kompromiss sind Latenz und Wortfülle. Ein Reasoning-Modell verbraucht zusätzliche Tokens, um das Problem durchzuarbeiten, sodass eine einzelne Antwort mehrere Sekunden und Hunderte Tokens sichtbares Reasoning dauern kann. Für einen mathematischen Beweis oder ein Logikrätsel ist genau das gewünscht; für eine schnelle Faktenabfrage ist es verschwendete Zeit.',
           'Die Unterscheidung, über die Menschen stolpern: DeepSeek-V3 ist ein Chat-Modell, DeepSeek-R1 ist das Reasoning-Modell. Sie teilen sich eine Architektur-Abstammung, sind aber für unterschiedliche Aufgaben abgestimmt. Wenn Sie konversationelle Antworten möchten, nutzen Sie V3; wenn Sie schrittweises Problemlösen möchten, nutzen Sie R1 oder einen seiner Distills. Wir erklären genau, was die Distillation behält und verliert, in [DeepSeek-R1 vs. die Distills](/power-local-llm/deepseek-r1-vs-distills-explained-2026).',
           '**Update:** Die Flaggschiff-Linie von DeepSeek ist inzwischen zu DeepSeek-V4 (Flash und Pro) übergegangen, das im August 2026 allgemein verfügbar wurde und als offene Gewichte unter MIT-Lizenz erscheint – V4-Flash am 31. Juli 2026, V4-Pro am 12.–13. August 2026. Die hier behandelten R1-Distillate werden nicht eingestellt und bleiben die praktische Wahl für lokales Reasoning: V4-Pro ist ein Modell mit 1,6 Billionen Gesamtparametern / 49 Milliarden aktiven Parametern und benötigt selbst bei Q4-Quantisierung etwa 48–80 GB VRAM – Multi-GPU-Terrain, keine einzelne Consumer-Karte. Wer über diese Hardware verfügt und die neueste Allzweck-Architektur möchte, sollte V4 evaluieren; für Reasoning auf einer einzelnen GPU bleiben die unten beschriebenen Distills die Antwort.',
-          'Für eine tiefergehende Einführung in den Betrieb dieser Modelle beginnen Sie mit dem [Hardware-Leitfaden für lokale LLMs 2026](/local-llms/local-llm-hardware-guide-2026) und [LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained), die die VRAM-Rechnung abdecken, auf die sich dieser Leitfaden stützt.',
+          'Für eine tiefergehende Einführung in den Betrieb dieser Modelle beginnen Sie mit dem [Hardware-Leitfaden für lokale LLMs](/local-llms/local-llm-hardware-guide) und [LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained), die die VRAM-Rechnung abdecken, auf die sich dieser Leitfaden stützt.',
         ],
         snippetBlocks: [
           {
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Löst lokales DeepSeek das China-Datenproblem?](/local-llms/deepseek-local-china-data-privacy-2026) — gehosteter vs. selbst gehosteter Datenfluss, ausgewogen',
           '[DeepSeek offline ausführen 2026: Selbst gehostetes Setup](/power-local-llm/deepseek-offline-china-self-hosted-2026) — vollständig offline Reasoning mit Modellauswahl',
           '[DeepSeek vs. Qwen für Coding lokal](/power-local-llm/deepseek-vs-qwen-coding-local-2026) — der Coding-Vergleich, den dieser Reasoning-Leitfaden bewusst ausklammert',
-          '[Hardware-Leitfaden für lokale LLMs 2026](/local-llms/local-llm-hardware-guide-2026) — GPU-, VRAM- und Build-Hinweise für jede Stufe',
+          '[Hardware-Leitfaden für lokale LLMs](/local-llms/local-llm-hardware-guide) — GPU-, VRAM- und Build-Hinweise für jede Stufe',
           '[LLM-Quantisierung erklärt](/local-llms/llm-quantization-explained) — warum Q4_K_M, Q8 und FP16 Ihre VRAM-Rechnung verändern',
         ],
       },
@@ -663,7 +663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Le compromis, c'est la latence et la verbosité. Un modèle de raisonnement dépense des tokens supplémentaires pour travailler le problème, donc une seule réponse peut prendre plusieurs secondes et des centaines de tokens de raisonnement visible. Pour une preuve mathématique ou une énigme logique, c'est exactement ce que vous voulez ; pour une simple recherche factuelle, c'est du temps perdu.",
           "La distinction qui prête à confusion : DeepSeek-V3 est un modèle de chat, DeepSeek-R1 est le modèle de raisonnement. Ils partagent une lignée d'architecture mais sont réglés pour des tâches différentes. Si vous voulez des réponses conversationnelles, utilisez V3 ; si vous voulez une résolution de problèmes pas à pas, utilisez R1 ou l'un de ses distillés. Nous expliquons précisément ce que la distillation conserve et perd dans [DeepSeek-R1 face aux distillés](/power-local-llm/deepseek-r1-vs-distills-explained-2026).",
           "**Mise à jour :** La gamme phare de DeepSeek est depuis passée à DeepSeek-V4 (Flash et Pro), qui a atteint la disponibilité générale en août 2026 et est distribué en poids ouverts sous licence MIT — V4-Flash publié le 31 juillet 2026, V4-Pro le 12-13 août 2026. Les distillations R1 présentées ici ne sont pas abandonnées et restent le choix pratique pour le raisonnement local : V4-Pro est un modèle de 1,6 billion de paramètres au total / 49 milliards actifs qui nécessite environ 48 à 80 Go de VRAM même quantifié — un territoire multi-GPU, pas une seule carte grand public. Si vous disposez de ce matériel et voulez l'architecture généraliste la plus récente, V4 mérite d'être évalué ; pour le raisonnement sur un seul GPU, les distillés ci-dessous restent la réponse.",
-          "Pour une introduction plus approfondie à l'exécution de ces modèles, commencez par le [Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026) et [La quantification des LLM expliquée](/local-llms/llm-quantization-explained), qui couvrent les calculs de VRAM sur lesquels repose ce guide.",
+          "Pour une introduction plus approfondie à l'exécution de ces modèles, commencez par le [Guide matériel LLM local](/local-llms/local-llm-hardware-guide) et [La quantification des LLM expliquée](/local-llms/llm-quantization-explained), qui couvrent les calculs de VRAM sur lesquels repose ce guide.",
         ],
         snippetBlocks: [
           {
@@ -867,7 +867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[DeepSeek local résout-il le problème des données chinoises ?](/local-llms/deepseek-local-china-data-privacy-2026) — flux de données hébergé vs auto-hébergé, sans parti pris',
           '[Exécuter DeepSeek hors ligne 2026 : configuration auto-hébergée](/power-local-llm/deepseek-offline-china-self-hosted-2026) — raisonnement entièrement hors ligne avec sélection de modèle',
           '[DeepSeek vs Qwen pour le code en local](/power-local-llm/deepseek-vs-qwen-coding-local-2026) — la comparaison de code que ce guide de raisonnement exclut délibérément',
-          '[Guide matériel LLM local 2026](/local-llms/local-llm-hardware-guide-2026) — conseils GPU, VRAM et configuration pour chaque palier',
+          '[Guide matériel LLM local](/local-llms/local-llm-hardware-guide) — conseils GPU, VRAM et configuration pour chaque palier',
           '[La quantification des LLM expliquée](/local-llms/llm-quantization-explained) — pourquoi Q4_K_M, Q8 et FP16 changent vos calculs de VRAM',
         ],
       },
@@ -956,7 +956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'トレードオフはレイテンシと冗長さです。推論モデルは問題を解くために余分なトークンを費やすため、1つの回答に数秒と数百トークンの可視的な推論がかかることがあります。数学の証明や論理パズルにはまさに求めるものですが、手早い事実検索には無駄な時間です。',
           '人が混乱しがちな区別: DeepSeek-V3はチャットモデルで、DeepSeek-R1は推論モデルです。両者はアーキテクチャの系譜を共有しますが、異なる仕事向けにチューニングされています。会話的な回答が欲しいならV3を、ステップバイステップの問題解決が欲しいならR1かそのディスティルを使ってください。ディスティレーションが何を残し何を失うかは[DeepSeek-R1とディスティルの違い](/power-local-llm/deepseek-r1-vs-distills-explained-2026)で正確に解説します。',
           '**更新:** DeepSeekのフラッグシップ系統はその後DeepSeek-V4(FlashおよびPro)へ移行し、2026年8月に一般提供が開始され、MITライセンスのオープンウェイトとして提供されています(V4-Flashは2026年7月31日、V4-Proは2026年8月12〜13日にリリース)。本記事で扱うR1の蒸留モデルは廃止されるものではなく、ローカル推論の実用的な選択肢であり続けます。V4-Proは総パラメータ1.6兆・アクティブパラメータ490億のモデルで、Q4量子化でも約48〜80GBのVRAMが必要です — これは単一のコンシューマーカードではなくマルチGPU領域です。そのハードウェアがあり、最新の汎用アーキテクチャを求める場合はV4を検討する価値があります。単一GPUでの推論には、以下の蒸留モデルが引き続き答えとなります。',
-          'これらのモデルを動かすためのより深い入門としては、[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026)と[LLM量子化の解説](/local-llms/llm-quantization-explained)から始めてください。本ガイドが依拠するVRAMの計算を扱っています。',
+          'これらのモデルを動かすためのより深い入門としては、[ローカルLLMハードウェアガイド](/local-llms/local-llm-hardware-guide)と[LLM量子化の解説](/local-llms/llm-quantization-explained)から始めてください。本ガイドが依拠するVRAMの計算を扱っています。',
         ],
         snippetBlocks: [
           {
@@ -1160,7 +1160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ローカルDeepSeekは中国データ問題を解決するか?](/local-llms/deepseek-local-china-data-privacy-2026) — ホスト型と自己ホスト型のデータフローを公平に比較',
           '[DeepSeekをオフラインで動かす2026: 自己ホスト型セットアップ](/power-local-llm/deepseek-offline-china-self-hosted-2026) — モデル選択を含む完全オフライン推論',
           '[ローカルでのコーディング向けDeepSeek vs Qwen](/power-local-llm/deepseek-vs-qwen-coding-local-2026) — この推論ガイドが意図的に除外したコーディング比較',
-          '[ローカルLLMハードウェアガイド2026](/local-llms/local-llm-hardware-guide-2026) — 全ティアのGPU・VRAM・ビルドガイダンス',
+          '[ローカルLLMハードウェアガイド](/local-llms/local-llm-hardware-guide) — 全ティアのGPU・VRAM・ビルドガイダンス',
           '[LLM量子化の解説](/local-llms/llm-quantization-explained) — なぜQ4_K_M、Q8、FP16がVRAMの計算を変えるのか',
         ],
       },
@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '代价是延迟与冗长。推理模型会花费额外的 token 来推演问题，因此单个答案可能耗时数秒、并产生数百个可见的推理 token。对于一道数学证明题或逻辑谜题，这正是你想要的；但对于一次快速的事实查询，这就是浪费时间。',
           '让人混淆的区别在于：DeepSeek-V3 是聊天模型，DeepSeek-R1 才是推理模型。它们共享架构血缘，但针对不同任务进行了调优。如果你想要对话式回答，用 V3；如果你想要逐步的问题求解，用 R1 或它的某个蒸馏版。我们在 [DeepSeek-R1 与各蒸馏版对比](/power-local-llm/deepseek-r1-vs-distills-explained-2026) 中详细说明了蒸馏究竟保留了什么、又损失了什么。',
           '**更新:** DeepSeek 的旗舰系列此后转向了 DeepSeek-V4(Flash 和 Pro),已于 2026 年 8 月全面发布,并以 MIT 许可的开放权重形式提供——V4-Flash 于 2026 年 7 月 31 日发布,V4-Pro 于 2026 年 8 月 12–13 日发布。本文介绍的 R1 蒸馏模型并未停用,依然是本地推理的实用选择:V4-Pro 是一个总参数 1.6 万亿、激活参数 490 亿的模型,即使量化后也大约需要 48–80 GB 显存——属于多 GPU 范畴,而非单张消费级显卡。如果你拥有这样的硬件并想使用最新的通用架构,V4 值得评估;而在单张 GPU 上进行推理,下文的蒸馏模型仍然是答案。',
-          '若想更深入了解如何运行这些模型，可从 [2026 本地 LLM 硬件指南](/local-llms/local-llm-hardware-guide-2026) 和 [LLM 量化详解](/local-llms/llm-quantization-explained) 入手，它们涵盖了本指南所依赖的 VRAM 计算。',
+          '若想更深入了解如何运行这些模型，可从 [本地 LLM 硬件指南](/local-llms/local-llm-hardware-guide) 和 [LLM 量化详解](/local-llms/llm-quantization-explained) 入手，它们涵盖了本指南所依赖的 VRAM 计算。',
         ],
         snippetBlocks: [
           {
@@ -1453,7 +1453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[本地 DeepSeek 能解决中国数据问题吗？](/local-llms/deepseek-local-china-data-privacy-2026) — 托管与自托管的数据流向，客观持平',
           '[2026 离线运行 DeepSeek：自托管搭建](/power-local-llm/deepseek-offline-china-self-hosted-2026) — 含模型选择的完全离线推理',
           '[本地用 DeepSeek vs Qwen 编程](/power-local-llm/deepseek-vs-qwen-coding-local-2026) — 这份推理指南刻意排除的编程对比',
-          '[2026 本地 LLM 硬件指南](/local-llms/local-llm-hardware-guide-2026) — 面向各档位的 GPU、VRAM 与装机指导',
+          '[本地 LLM 硬件指南](/local-llms/local-llm-hardware-guide) — 面向各档位的 GPU、VRAM 与装机指导',
           '[LLM 量化详解](/local-llms/llm-quantization-explained) — 为什么 Q4_K_M、Q8 和 FP16 会改变你的 VRAM 计算',
         ],
       },
@@ -1542,7 +1542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La contrapartida es la latencia y la verbosidad. Un modelo de razonamiento gasta tokens adicionales trabajando el problema, así que una sola respuesta puede tardar varios segundos y cientos de tokens de razonamiento visible. Para una demostración matemática o un acertijo lógico eso es exactamente lo que quieres; para una consulta factual rápida es tiempo perdido.',
           'La distinción que confunde a la gente: DeepSeek-V3 es un modelo de chat, DeepSeek-R1 es el modelo de razonamiento. Comparten linaje de arquitectura pero están ajustados para trabajos diferentes. Si quieres respuestas conversacionales, usa V3; si quieres resolución de problemas paso a paso, usa R1 o uno de sus destilados. Explicamos exactamente qué conserva y qué pierde la destilación en [DeepSeek-R1 frente a los destilados](/power-local-llm/deepseek-r1-vs-distills-explained-2026).',
           '**Actualización:** La línea insignia de DeepSeek ha pasado desde entonces a DeepSeek-V4 (Flash y Pro), que alcanzó disponibilidad general en agosto de 2026 y se distribuye en pesos abiertos bajo licencia MIT — V4-Flash se lanzó el 31 de julio de 2026, V4-Pro el 12-13 de agosto de 2026. Las destilaciones de R1 tratadas aquí no se están descontinuando y siguen siendo la opción práctica para razonamiento local: V4-Pro es un modelo de 1,6 billones de parámetros totales / 49 mil millones activos que necesita aproximadamente 48–80 GB de VRAM incluso cuantizado — territorio multi-GPU, no una sola tarjeta de consumo. Si tienes ese hardware y quieres la arquitectura de propósito general más reciente, vale la pena evaluar V4; para razonamiento en una sola GPU, las destilaciones de abajo siguen siendo la respuesta.',
-          'Para una introducción más a fondo sobre ejecutar estos modelos, empieza con la [Guía de hardware para LLM local 2026](/local-llms/local-llm-hardware-guide-2026) y [La cuantización de LLM explicada](/local-llms/llm-quantization-explained), que cubren las cuentas de VRAM en las que se basa esta guía.',
+          'Para una introducción más a fondo sobre ejecutar estos modelos, empieza con la [Guía de hardware para LLM local](/local-llms/local-llm-hardware-guide) y [La cuantización de LLM explicada](/local-llms/llm-quantization-explained), que cubren las cuentas de VRAM en las que se basa esta guía.',
         ],
         snippetBlocks: [
           {
@@ -1746,7 +1746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[¿Resuelve el DeepSeek local el problema de los datos de China?](/local-llms/deepseek-local-china-data-privacy-2026) — flujo de datos alojado vs autoalojado, imparcial',
           '[Ejecuta DeepSeek sin conexión 2026: configuración autoalojada](/power-local-llm/deepseek-offline-china-self-hosted-2026) — razonamiento totalmente sin conexión con selección de modelo',
           '[DeepSeek vs Qwen para programar en local](/power-local-llm/deepseek-vs-qwen-coding-local-2026) — la comparativa de programación que esta guía de razonamiento excluye deliberadamente',
-          '[Guía de hardware para LLM local 2026](/local-llms/local-llm-hardware-guide-2026) — orientación de GPU, VRAM y montaje para cada nivel',
+          '[Guía de hardware para LLM local](/local-llms/local-llm-hardware-guide) — orientación de GPU, VRAM y montaje para cada nivel',
           '[La cuantización de LLM explicada](/local-llms/llm-quantization-explained) — por qué Q4_K_M, Q8 y FP16 cambian tus cuentas de VRAM',
         ],
       },
@@ -1835,7 +1835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O custo é latência e verbosidade. Um modelo de raciocínio gasta tokens extras trabalhando no problema, então uma única resposta pode levar vários segundos e centenas de tokens de raciocínio visível. Para uma prova matemática ou um quebra-cabeça de lógica, é exatamente isso que você quer; para uma consulta factual rápida, é tempo desperdiçado.',
           'A distinção que confunde as pessoas: o DeepSeek-V3 é um modelo de chat, o DeepSeek-R1 é o modelo de raciocínio. Eles compartilham linhagem de arquitetura, mas são ajustados para trabalhos diferentes. Se você quer respostas conversacionais, use o V3; se você quer resolução de problemas passo a passo, use o R1 ou um de seus destilados. Explicamos exatamente o que a destilação mantém e perde em [DeepSeek-R1 vs os Destilados](/power-local-llm/deepseek-r1-vs-distills-explained-2026).',
           '**Atualização:** A linha principal da DeepSeek migrou desde então para o DeepSeek-V4 (Flash e Pro), que atingiu disponibilidade geral em agosto de 2026 e é distribuído como pesos abertos sob licença MIT — o V4-Flash foi lançado em 31 de julho de 2026, o V4-Pro em 12–13 de agosto de 2026. As destilações do R1 abordadas aqui não estão sendo descontinuadas e continuam sendo a escolha prática para raciocínio local: o V4-Pro é um modelo com 1,6 trilhão de parâmetros totais / 49 bilhões ativos, que precisa de aproximadamente 48–80 GB de VRAM mesmo quantizado — território multi-GPU, não uma única placa de consumo. Se você tem esse hardware e quer a arquitetura de propósito geral mais recente, vale a pena avaliar o V4; para raciocínio em uma única GPU, as destilações abaixo continuam sendo a resposta.',
-          'Para uma introdução mais aprofundada sobre como rodar esses modelos, comece com o [Guia de Hardware para LLM Local 2026](/local-llms/local-llm-hardware-guide-2026) e o [Quantização de LLM Explicada](/local-llms/llm-quantization-explained), que cobrem a matemática de VRAM em que este guia se baseia.',
+          'Para uma introdução mais aprofundada sobre como rodar esses modelos, comece com o [Guia de Hardware para LLM Local](/local-llms/local-llm-hardware-guide) e o [Quantização de LLM Explicada](/local-llms/llm-quantization-explained), que cobrem a matemática de VRAM em que este guia se baseia.',
         ],
         snippetBlocks: [
           {
@@ -2039,7 +2039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[O DeepSeek Local Resolve o Problema dos Dados na China?](/local-llms/deepseek-local-china-data-privacy-2026) — fluxo de dados hospedado vs auto-hospedado, imparcial',
           '[Rode o DeepSeek Offline 2026: Configuração Auto-Hospedada](/power-local-llm/deepseek-offline-china-self-hosted-2026) — raciocínio totalmente offline com seleção de modelo',
           '[DeepSeek vs Qwen para Programação Localmente](/power-local-llm/deepseek-vs-qwen-coding-local-2026) — a comparação de programação que este guia de raciocínio deliberadamente exclui',
-          '[Guia de Hardware para LLM Local 2026](/local-llms/local-llm-hardware-guide-2026) — orientação de GPU, VRAM e build para cada nível',
+          '[Guia de Hardware para LLM Local](/local-llms/local-llm-hardware-guide) — orientação de GPU, VRAM e build para cada nível',
           '[Quantização de LLM Explicada](/local-llms/llm-quantization-explained) — por que Q4_K_M, Q8 e FP16 mudam a sua matemática de VRAM',
         ],
       },
@@ -2128,7 +2128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'المقايضة هي زمن الاستجابة والإسهاب. ينفق نموذج الاستدلال tokens إضافية في معالجة المشكلة، لذا قد تستغرق إجابة واحدة عدة ثوانٍ ومئات من tokens الاستدلال المرئي. لإثبات رياضي أو لغز منطقي هذا بالضبط ما تريده؛ أما للبحث السريع عن معلومة فهو وقت مهدور.',
           'الفرق الذي يربك الناس: DeepSeek-V3 نموذج محادثة، وDeepSeek-R1 هو نموذج الاستدلال. يتشاركان أصل المعمارية لكنهما مُضبَطان لمهام مختلفة. إن أردت إجابات حوارية فاستخدم V3؛ وإن أردت حل المشكلات خطوةً بخطوة فاستخدم R1 أو أحد نماذجه المُقطّرة. نشرح بالضبط ما يحتفظ به التقطير وما يفقده في [DeepSeek-R1 مقابل النماذج المُقطّرة](/power-local-llm/deepseek-r1-vs-distills-explained-2026).',
           '**تحديث:** انتقل خط DeepSeek الرئيسي منذ ذلك الحين إلى DeepSeek-V4 (Flash وPro)، الذي بلغ التوفر العام في أغسطس 2026 ويُقدَّم كأوزان مفتوحة بموجب ترخيص MIT — صدر V4-Flash في 31 يوليو 2026، وV4-Pro في 12–13 أغسطس 2026. لم يتم إيقاف نسخ R1 المقطّرة المتناولة هنا، وتظل الخيار العملي للاستدلال المحلي: V4-Pro نموذج بإجمالي 1.6 تريليون معلمة و49 مليار معلمة نشطة، ويحتاج إلى نحو 48–80 جيجابايت من VRAM حتى بعد التكميم — وهذا نطاق يتطلب وحدات معالجة رسومات متعددة، لا بطاقة استهلاكية واحدة. إذا كان لديك هذا العتاد وتريد أحدث بنية عامة الغرض، يستحق V4 التقييم؛ أما للاستدلال على وحدة معالجة رسومات واحدة، فتظل النماذج المقطّرة أدناه هي الإجابة.',
-          'للحصول على مقدمة أعمق حول تشغيل هذه النماذج، ابدأ بـ [دليل عتاد LLM المحلي 2026](/local-llms/local-llm-hardware-guide-2026) و[شرح تكميم LLM](/local-llms/llm-quantization-explained)، اللذين يغطيان حسابات VRAM التي يعتمد عليها هذا الدليل.',
+          'للحصول على مقدمة أعمق حول تشغيل هذه النماذج، ابدأ بـ [دليل عتاد LLM المحلي](/local-llms/local-llm-hardware-guide) و[شرح تكميم LLM](/local-llms/llm-quantization-explained)، اللذين يغطيان حسابات VRAM التي يعتمد عليها هذا الدليل.',
         ],
         snippetBlocks: [
           {
@@ -2332,7 +2332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[هل يحلّ DeepSeek المحلي مشكلة بيانات الصين؟](/local-llms/deepseek-local-china-data-privacy-2026) — تدفّق البيانات المُستضاف مقابل المُستضاف ذاتيًا، بطرح متوازن',
           '[شغّل DeepSeek دون اتصال 2026: إعداد مُستضاف ذاتيًا](/power-local-llm/deepseek-offline-china-self-hosted-2026) — استدلال دون اتصال بالكامل مع اختيار النموذج',
           '[DeepSeek مقابل Qwen للبرمجة محليًا](/power-local-llm/deepseek-vs-qwen-coding-local-2026) — مقارنة البرمجة التي يستبعدها دليل الاستدلال هذا عمدًا',
-          '[دليل عتاد LLM المحلي 2026](/local-llms/local-llm-hardware-guide-2026) — إرشادات GPU وVRAM والتجميع لكل فئة',
+          '[دليل عتاد LLM المحلي](/local-llms/local-llm-hardware-guide) — إرشادات GPU وVRAM والتجميع لكل فئة',
           '[شرح تكميم LLM](/local-llms/llm-quantization-explained) — لماذا يغيّر Q4_K_M وQ8 وFP16 حسابات VRAM لديك',
         ],
       },
@@ -2421,7 +2421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '대가는 지연 시간과 장황함입니다. 추론 모델은 문제를 풀어 나가는 데 추가 token을 소비하므로, 답변 하나에 수 초와 수백 개의 가시적 추론 token이 걸릴 수 있습니다. 수학 증명이나 논리 퍼즐에는 바로 그것이 필요하지만, 빠른 사실 조회에는 시간 낭비입니다.',
           '사람들이 혼동하는 구분: DeepSeek-V3는 채팅 모델이고, DeepSeek-R1은 추론 모델입니다. 아키텍처 계보는 공유하지만 서로 다른 작업에 맞춰 튜닝되어 있습니다. 대화형 답변을 원하면 V3를, 단계별 문제 해결을 원하면 R1 또는 그 증류 모델 중 하나를 사용하십시오. 증류가 무엇을 유지하고 무엇을 잃는지는 [DeepSeek-R1 대 증류 모델](/ko/power-local-llm/deepseek-r1-vs-distills-explained-2026)에서 정확히 설명합니다.',
           '**업데이트:** DeepSeek의 플래그십 라인은 이후 DeepSeek-V4(Flash 및 Pro)로 이동했으며, 2026년 8월 정식 출시되어 MIT 라이선스의 오픈 웨이트로 제공됩니다 — V4-Flash는 2026년 7월 31일, V4-Pro는 2026년 8월 12~13일에 출시되었습니다. 여기서 다루는 R1 증류 모델은 단종되지 않았으며 여전히 로컬 추론의 실용적 선택지입니다. V4-Pro는 총 1.6조 파라미터 / 활성 490억 파라미터 모델로, 양자화하더라도 약 48~80GB의 VRAM이 필요합니다 — 단일 소비자용 카드가 아니라 멀티 GPU 영역입니다. 그런 하드웨어를 보유하고 있고 최신 범용 아키텍처를 원한다면 V4를 검토할 가치가 있습니다. 단일 GPU에서의 추론에는 아래의 증류 모델이 여전히 정답입니다.',
-          '이 모델들을 실행하는 더 깊은 입문을 위해서는 [로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026)과 [LLM 양자화 설명](/ko/local-llms/llm-quantization-explained)부터 시작하십시오. 이 가이드가 의존하는 VRAM 계산을 다룹니다.',
+          '이 모델들을 실행하는 더 깊은 입문을 위해서는 [로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide)과 [LLM 양자화 설명](/ko/local-llms/llm-quantization-explained)부터 시작하십시오. 이 가이드가 의존하는 VRAM 계산을 다룹니다.',
         ],
         snippetBlocks: [
           {
@@ -2625,7 +2625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[로컬 DeepSeek은 중국 데이터 문제를 해결하는가?](/ko/local-llms/deepseek-local-china-data-privacy-2026) — 호스팅 대 자체 호스팅 데이터 흐름, 균형 잡힌 시각',
           '[DeepSeek 오프라인 실행 2026: 자체 호스팅 설정](/ko/power-local-llm/deepseek-offline-china-self-hosted-2026) — 모델 선택을 포함한 완전 오프라인 추론',
           '[로컬에서 코딩을 위한 DeepSeek vs Qwen](/ko/power-local-llm/deepseek-vs-qwen-coding-local-2026) — 이 추론 가이드가 의도적으로 제외한 코딩 비교',
-          '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 모든 등급의 GPU, VRAM, 빌드 가이드',
+          '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) — 모든 등급의 GPU, VRAM, 빌드 가이드',
           '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — Q4_K_M, Q8, FP16이 VRAM 계산을 바꾸는 이유',
         ],
       },

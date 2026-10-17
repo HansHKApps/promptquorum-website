@@ -1,5 +1,5 @@
 // Power Local LLM — Best Local LLMs for Creative Writing 2026: Fiction, Dialogue & Worldbuilding
-// Slug: best-local-llm-creative-writing-2026
+// Slug: best-local-llm-creative-writing
 // EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -2365,7 +2365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Mejores LLM locales para escritura creativa 2026: ficción, diálogo y construcción de mundos',
       description: 'Comparativa de 6 modelos locales para escritura creativa: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 y variantes sin censura. Probados en más de 50 prompts creativos.',
-      url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-creative-writing-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/best-local-llm-creative-writing',
       inLanguage: 'es',
       datePublished: '2026-05-24',
       dateModified: '2026-07-13',
@@ -2765,7 +2765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Melhores LLMs locais para escrita criativa 2026: ficção, diálogo e construção de mundos',
       description: 'Comparação de 6 modelos locais para escrita criativa: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 e variantes sem censura. Testados em mais de 50 prompts criativos.',
-      url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-llm-creative-writing-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/best-local-llm-creative-writing',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
       dateModified: '2026-07-13',
@@ -3165,7 +3165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'أفضل نماذج LLM المحلية للكتابة الإبداعية 2026: الخيال والحوار وبناء العوالم',
       description: 'مقارنة 6 نماذج محلية للكتابة الإبداعية: Llama 3.3 وQwen3 وMistral Large وCommand A+ وYi-1.5 والمتغيرات غير المقيدة. اختُبرت على أكثر من 50 طلباً إبداعياً.',
-      url: 'https://www.promptquorum.com/ar/power-local-llm/best-local-llm-creative-writing-2026',
+      url: 'https://www.promptquorum.com/ar/power-local-llm/best-local-llm-creative-writing',
       inLanguage: 'ar',
       datePublished: '2026-05-24',
       dateModified: '2026-07-13',
@@ -3565,7 +3565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '2026년 창작 글쓰기를 위한 최고의 로컬 LLM: 소설, 대화, 세계관 구축',
       description: '창작 글쓰기를 위한 로컬 모델 6가지 비교: Llama 3.3, Qwen3, Mistral Large, Command A+, Yi-1.5 및 비검열 변형. 50개 이상의 창작 프롬프트에서 테스트 완료.',
-      url: 'https://www.promptquorum.com/ko/power-local-llm/best-local-llm-creative-writing-2026',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/best-local-llm-creative-writing',
       inLanguage: 'ko',
       datePublished: '2026-05-07',
       dateModified: '2026-07-13',
@@ -3579,7 +3579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
-        { '@type': 'ListItem', position: 3, name: '2026년 창작 글쓰기를 위한 최고의 로컬 LLM', item: '[www.promptquorum.com/ko/power-local-llm/best-local-llm-creative-writing-2026](https://www.promptquorum.com/ko/power-local-llm/best-local-llm-creative-writing-2026)' },
+        { '@type': 'ListItem', position: 3, name: '2026년 창작 글쓰기를 위한 최고의 로컬 LLM', item: '[www.promptquorum.com/ko/power-local-llm/best-local-llm-creative-writing](https://www.promptquorum.com/ko/power-local-llm/best-local-llm-creative-writing)' },
       ],
     },
   },
