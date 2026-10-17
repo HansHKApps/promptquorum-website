@@ -651,7 +651,7 @@ schema: {
         ]
       },
       gammaEmbedUrl: '/presentations/top-open-source-models-ollama-static.html',
-      gammaDescription: 'The slide deck below covers: top Ollama models by download count, performance comparison (60-77% HumanEval/SWE-bench), best models by use case (chat, coding, agentic coding, reasoning, vision), DeepSeek-R1 chain-of-thought reasoning, and exact pull commands. Note: slides reflect an earlier refresh; the current update above (Ollama v0.40.5, Laguna XS 2.1, Kimi K2.7 Code) is not yet reflected in the deck. Download the PDF as your Ollama model selection reference card.',
+      gammaDescription: 'The slide deck below covers: top Ollama models by download count, performance comparison, best models by use case (chat, coding, agentic coding, reasoning, vision), DeepSeek-R1 chain-of-thought reasoning, and exact pull commands. Download the PDF as your Ollama model selection reference card.',
     },
     es: {
       freshness_tier: 'monthly',

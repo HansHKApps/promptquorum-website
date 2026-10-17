@@ -126,11 +126,11 @@ export async function POST(request: Request) {
         <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center', gap: '34px' }}>
           <div
             style={{
-              display: 'flex',
+              display: isRtl ? 'block' : 'flex',
               fontSize: `${fontSize}px`,
               fontWeight: 800,
               lineHeight: 1.08,
-              letterSpacing: '-0.02em',
+              letterSpacing: isRtl ? 'normal' : '-0.02em',
               textAlign,
               textShadow: '0 4px 24px rgba(0,0,0,0.35)',
             }}
@@ -165,7 +165,7 @@ export async function POST(request: Request) {
                   >
                     {i + 1}
                   </div>
-                  <div style={{ display: 'flex', fontSize: '44px', fontWeight: 700, lineHeight: 1.15, textAlign, textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>{line}</div>
+                  <div style={{ display: isRtl ? 'block' : 'flex', fontSize: '44px', fontWeight: 700, lineHeight: 1.15, textAlign, textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>{line}</div>
                 </div>
               ))}
             </div>

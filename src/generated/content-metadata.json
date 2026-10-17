@@ -520,7 +520,7 @@
       "images": [
         {
           "url": "/images/best-local-llms-for-coding-benchmark-comparison-hero-en.webp",
-          "title": "Vendor-reported benchmark scores by model: Qwen3.8 27B 61.7 SWE-bench Pro, Qwen 3.6 27B 77.2% SWE-bench Verified, Laguna XS 2.1 70.9% SWE-bench Verified, Devstral Small 2 65.8% SWE-bench Verified, Kimi K2.6 58.6 SWE-bench Pro, Qwen2.5-Coder 32B 87% HumanEval. Harnesses and task sets differ, so compare within a column only."
+          "title": "Vendor-reported benchmark scores by model: Qwen3.8 27B 61.7 SWE-bench Pro, Qwen 3.6 27B 77.2% SWE-bench Verified, Laguna XS 2.1 70.9% SWE-bench Verified, Devstral Small 2 65.8% SWE-bench Verified, Kimi K2.6 58.6 SWE-bench Pro. Harnesses and task sets differ, so compare within a column only."
         },
         {
           "url": "/images/best-local-llms-for-coding-hardware-selection-hero-en.webp",
