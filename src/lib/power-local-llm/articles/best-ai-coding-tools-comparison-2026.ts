@@ -2859,7 +2859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'A maioria das comparações de ferramentas de programação com IA avalia a qualidade do autocompletar e ignora a pergunta que realmente decide a compra para muitos desenvolvedores: a ferramenta roda sobre um LLM local, ou ela envia o seu código para um servidor de terceiros? Para código proprietário, trabalho sob NDA ou setores regulados, essa única resposta reordena todo o ranking. Este guia compara quatro ferramentas — Cursor, Continue.dev, GitHub Copilot e Sourcegraph Cody — nos critérios que determinam uma decisão real: compatibilidade com LLM local, preço, cobertura de IDE e para onde vai o seu código. Uma ressalva sobre preços: as assinaturas de ferramentas para desenvolvedores mudam com as revisões de planos, então cada valor aqui é um retrato de julho de 2026 — confirme a tarifa atual no site do fornecedor antes de assinar.',
     metaDescription:
-      'O Continue.dev foi descontinuado e o Cody Free/Pro terminou. Compare Cursor (a partir de US$ 8/mês), GitHub Copilot e Cline para LLMs locais, com dicas de Ollama.',
+      'O Continue.dev foi descontinuado e o Cody Free/Pro terminou. Compare Cursor (desde US$ 8/mês), GitHub Copilot e Cline para LLMs locais, com dicas de Ollama.',
     heroImage: '/images/best-ai-coding-tools-comparison-2026-comparison-table-hero-pt.webp',
     twitterDescription:
       'Cursor, Continue.dev, GitHub Copilot, Sourcegraph Cody — quatro ferramentas de programação com IA comparadas. A regra de decisão que a maioria dos rankings ignora: ela funciona com um LLM local?',

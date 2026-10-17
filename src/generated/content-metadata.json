@@ -1284,7 +1284,7 @@
       ]
     },
     "local-llms-with-vscode-cursor": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -2508,7 +2508,7 @@
       "images": []
     },
     "best-ai-coding-assistant-local-llm": {
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-17",
       "hasSections": true,
@@ -2526,7 +2526,7 @@
       "images": [
         {
           "url": "/images/best-ai-coding-assistant-local-llm-comparison-hero-en.webp",
-          "title": "AI coding assistants comparison: Continue.dev (best overall, free), Cursor ($20/mo, best UX), Sourcegraph Cody ($59/user/mo, best teams), Tabnine ($39/mo, best privacy), Windsurf (free/$15/mo, rising alternative). All support local LLMs with varying setup complexity. June 2026."
+          "title": "AI coding assistants comparison: Continue.dev (best overall, free), Cursor (from $8/mo, best UX), Sourcegraph Cody ($59/user/mo, best teams), Tabnine ($39/mo, best privacy), Windsurf (free/$15/mo, rising alternative). All support local LLMs with varying setup complexity. June 2026."
         },
         {
           "url": "/images/best-ai-coding-assistant-local-llm-integration-en.svg",
@@ -5321,7 +5321,7 @@
       "images": []
     },
     "best-prompt-engineering-ides": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-04-10",
       "hasSections": true,
@@ -6016,7 +6016,7 @@
       ]
     },
     "best-ai-coding-tools-comparison-2026": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -7485,7 +7485,7 @@
       ]
     },
     "cursor-vs-windsurf-vs-copilot-cline-2026": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-08-27",
       "hasSections": true,
@@ -7602,7 +7602,7 @@
       ]
     },
     "best-local-llm-ide-plugins-2026": {
-      "dateModified": "2026-08-25",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -10528,7 +10528,7 @@
       "images": []
     },
     "cursor-local-mode-review": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -12753,7 +12753,7 @@
       "images": []
     },
     "bestOllamaModels4gbVram": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -12879,7 +12879,7 @@
       ]
     },
     "bestOllamaModelsCpuOnly": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -13428,7 +13428,7 @@
       "images": []
     },
     "cursorProVsContinueDev": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -13968,7 +13968,7 @@
       "images": []
     },
     "bestDeepseekDistillForYourGpu": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-06-19",
       "hasSections": true,
@@ -14184,7 +14184,7 @@
       "images": []
     },
     "ggufVsGptqVsAwq": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -14544,7 +14544,7 @@
       "images": []
     },
     "llamaCppGgufConversionGuide": {
-      "dateModified": "2026-07-15",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-15",
       "hasSections": true,
