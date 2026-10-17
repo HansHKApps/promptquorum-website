@@ -9451,6 +9451,20 @@
     "totalCount": 2,
     "capped": false
   },
+  "Firecrawl": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "tina-review",
+        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
+        "url": "/power-local-llm/tina-review",
+        "dateModified": "2026-10-04",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Blinko": {
     "articles": [
       {
