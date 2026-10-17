@@ -604,7 +604,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'What is the best local LLM for writing dark or mature fiction?',
-            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, or any model fine-tuned to reduce content refusals. When running locally, there are no cloud terms-of-service restrictions — the model\'s base fine-tune determines what it will and won\'t generate. See [Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing-2026) for a full breakdown of uncensored model options and ethical framing.',
+            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, or any model fine-tuned to reduce content refusals. When running locally, there are no cloud terms-of-service restrictions — the model\'s base fine-tune determines what it will and won\'t generate. See [Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing) for a full breakdown of uncensored model options and ethical framing.',
           },
           {
             q: 'Can I use these templates in SillyTavern or Agnai?',
@@ -624,7 +624,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing-2026) — model comparison for narrative generation, sampling settings, and uncensored options.',
+          '[Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing) — model comparison for narrative generation, sampling settings, and uncensored options.',
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — frontend comparison for character-card roleplay and collaborative fiction.',
           '[How to Run a Local LLM for Screenwriting and Novel Drafting](/power-local-llm/local-llm-screenwriting-and-novel-drafting) — longer-form drafting workflows, chapter management, and context-window strategies.',
           '[Uncensored Local LLMs for Creative Writing: Ethics and Setup](/power-local-llm/uncensored-local-llm-creative-writing-ethics) — which models to use for mature content, privacy implications, and responsible use framing.',
@@ -1231,7 +1231,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Was ist das beste lokale LLM für das Schreiben von dunkler oder reifer Belletristik?',
-            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral oder jedes Modell, das für weniger Inhaltsablehnungen feinabgestimmt ist. Bei lokalem Betrieb gibt es keine Cloud-Nutzungsbedingungen — das Basis-Fine-tune des Modells bestimmt, was es schreiben will und was nicht. Siehe [Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing-2026) für eine vollständige Übersicht über Uncensored-Modell-Optionen.',
+            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral oder jedes Modell, das für weniger Inhaltsablehnungen feinabgestimmt ist. Bei lokalem Betrieb gibt es keine Cloud-Nutzungsbedingungen — das Basis-Fine-tune des Modells bestimmt, was es schreiben will und was nicht. Siehe [Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing) für eine vollständige Übersicht über Uncensored-Modell-Optionen.',
           },
           {
             q: 'Kann ich diese Vorlagen in SillyTavern oder Agnai verwenden?',
@@ -1259,7 +1259,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'related-reading',
         title: 'Weiterführende Literatur',
         items: [
-          '[Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing-2026) — Modellvergleich für narrative Generierung, Sampling-Einstellungen und Uncensored-Optionen.',
+          '[Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing) — Modellvergleich für narrative Generierung, Sampling-Einstellungen und Uncensored-Optionen.',
           '[SillyTavern vs Agnai vs RisuAI: Bestes lokales Roleplay-Frontend](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — Frontend-Vergleich für Charakterkarten-Roleplay und kollaborative Belletristik.',
           '[Lokales LLM für Drehbuch- und Roman-Entwurf](/de/power-local-llm/local-llm-screenwriting-and-novel-drafting) — Langform-Entwurfs-Workflows, Kapitel-Management und Kontextfenster-Strategien.',
           '[Uncensored Local LLMs für kreatives Schreiben: Ethik und Einrichtung](/de/power-local-llm/uncensored-local-llm-creative-writing-ethics) — welche Modelle für reife Inhalte, Datenschutz-Implikationen und verantwortungsvoller Nutzungsrahmen.',
@@ -1867,7 +1867,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Quel est le meilleur LLM local pour écrire de la fiction sombre ou mature ?',
-            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, ou tout modèle fine-tuné pour réduire les refus de contenu. Lors de l\'exécution en local, il n\'y a pas de restrictions des conditions d\'utilisation cloud — le fine-tune de base du modèle détermine ce qu\'il produira ou ne produira pas. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing-2026) pour une analyse complète des options de modèles non censurés et du cadrage éthique.',
+            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, ou tout modèle fine-tuné pour réduire les refus de contenu. Lors de l\'exécution en local, il n\'y a pas de restrictions des conditions d\'utilisation cloud — le fine-tune de base du modèle détermine ce qu\'il produira ou ne produira pas. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing) pour une analyse complète des options de modèles non censurés et du cadrage éthique.',
           },
           {
             q: 'Puis-je utiliser ces modèles dans SillyTavern ou Agnai ?',
@@ -1895,7 +1895,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'related-reading',
         title: 'Lecture complémentaire',
         items: [
-          '[Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing-2026) — comparatif de modèles pour la génération narrative, les paramètres de sampling et les options non censurées.',
+          '[Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing) — comparatif de modèles pour la génération narrative, les paramètres de sampling et les options non censurées.',
           '[SillyTavern vs Agnai vs RisuAI : meilleure interface locale de roleplay](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparatif d\'interfaces pour le roleplay avec fiches de personnages et la fiction collaborative.',
           '[Comment utiliser un LLM local pour le scénario et la rédaction de roman](/fr/power-local-llm/local-llm-screenwriting-and-novel-drafting) — workflows de rédaction long format, gestion des chapitres et stratégies de fenêtre de contexte.',
           '[LLM locaux non censurés pour l\'écriture créative : éthique et configuration](/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics) — quels modèles utiliser pour le contenu mature, implications de confidentialité et cadre d\'utilisation responsable.',
@@ -2503,7 +2503,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'ダークまたは成熟したフィクションを書くための最良のローカルLLMは何ですか？',
-            a: 'Hermes 3 Llama 3.1・Dolphin 3.0 Mistral、またはコンテンツ拒否を減らすためにファインチューニングされたモデル。ローカルで実行する場合、クラウドの利用規約制限はありません——モデルのベースファインチューンが何を生成するかを決定します。無検閲モデルオプションと倫理的フレームの完全な内訳については[クリエイティブライティングのためのベストローカルLLMs 2026](/ja/power-local-llm/best-local-llm-creative-writing-2026)をご覧ください。',
+            a: 'Hermes 3 Llama 3.1・Dolphin 3.0 Mistral、またはコンテンツ拒否を減らすためにファインチューニングされたモデル。ローカルで実行する場合、クラウドの利用規約制限はありません——モデルのベースファインチューンが何を生成するかを決定します。無検閲モデルオプションと倫理的フレームの完全な内訳については[クリエイティブライティングのためのベストローカルLLMs 2026](/ja/power-local-llm/best-local-llm-creative-writing)をご覧ください。',
           },
           {
             q: 'これらのテンプレートはSillyTavernやAgnaiで使用できますか？',
@@ -2543,7 +2543,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[クリエイティブライティングのためのベストローカルLLMs 2026](/ja/power-local-llm/best-local-llm-creative-writing-2026) — 物語生成・サンプリング設定・無検閲オプションのためのモデル比較。',
+          '[クリエイティブライティングのためのベストローカルLLMs 2026](/ja/power-local-llm/best-local-llm-creative-writing) — 物語生成・サンプリング設定・無検閲オプションのためのモデル比較。',
           '[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — キャラクターカードロールプレイと協力的なフィクションのためのフロントエンド比較。',
           '[脚本・小説起草のためのローカルLLMの使い方](/ja/power-local-llm/local-llm-screenwriting-and-novel-drafting) — 長編起草ワークフロー・章管理・コンテキストウィンドウ戦略。',
           '[クリエイティブライティングのための無検閲ローカルLLM：倫理と設定](/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 成熟したコンテンツに使用するモデル・プライバシーへの影響・責任ある使用フレーム。',
@@ -3151,7 +3151,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '写黑暗或成熟小说最好的本地LLM是什么？',
-            a: 'Hermes 3 Llama 3.1、Dolphin 3.0 Mistral，或任何针对减少内容拒绝进行微调的模型。在本地运行时，没有云端服务条款限制——模型的基础微调决定了它会和不会生成什么。关于无审查模型选项和伦理框架的完整细分，请参阅[2026年创意写作最佳本地LLMs](/zh/power-local-llm/best-local-llm-creative-writing-2026)。',
+            a: 'Hermes 3 Llama 3.1、Dolphin 3.0 Mistral，或任何针对减少内容拒绝进行微调的模型。在本地运行时，没有云端服务条款限制——模型的基础微调决定了它会和不会生成什么。关于无审查模型选项和伦理框架的完整细分，请参阅[2026年创意写作最佳本地LLMs](/zh/power-local-llm/best-local-llm-creative-writing)。',
           },
           {
             q: '我可以在SillyTavern或Agnai中使用这些模板吗？',
@@ -3179,7 +3179,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[2026年创意写作最佳本地LLMs](/zh/power-local-llm/best-local-llm-creative-writing-2026) — 叙事生成、采样设置和无审查选项的模型对比。',
+          '[2026年创意写作最佳本地LLMs](/zh/power-local-llm/best-local-llm-creative-writing) — 叙事生成、采样设置和无审查选项的模型对比。',
           '[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 用于角色卡角色扮演和协作小说的前端对比。',
           '[如何使用本地LLM进行剧本写作和长篇小说起草](/zh/power-local-llm/local-llm-screenwriting-and-novel-drafting) — 长篇起草工作流、章节管理和上下文窗口策略。',
           '[创意写作的无审查本地LLM：伦理与设置](/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 成熟内容使用哪些模型、隐私影响和负责任的使用框架。',
@@ -3787,7 +3787,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '¿Cuál es el mejor LLM local para escribir ficción oscura o madura?',
-            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, o cualquier modelo ajustado para reducir los rechazos de contenido. Cuando se ejecuta localmente, no hay restricciones de términos de servicio en la nube — el ajuste fino base del modelo determina lo que generará y lo que no. Ver [Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing-2026) para un desglose completo de las opciones de modelos sin censura y el marco ético.',
+            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, o cualquier modelo ajustado para reducir los rechazos de contenido. Cuando se ejecuta localmente, no hay restricciones de términos de servicio en la nube — el ajuste fino base del modelo determina lo que generará y lo que no. Ver [Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing) para un desglose completo de las opciones de modelos sin censura y el marco ético.',
           },
           {
             q: '¿Puedo usar estas plantillas en SillyTavern o Agnai?',
@@ -3807,7 +3807,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing-2026) — comparación de modelos para generación narrativa, configuraciones de muestreo y opciones sin censura.',
+          '[Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing) — comparación de modelos para generación narrativa, configuraciones de muestreo y opciones sin censura.',
           '[SillyTavern vs Agnai vs RisuAI: Mejor interfaz de roleplay local](/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparación de interfaces para roleplay con tarjetas de personaje y ficción colaborativa.',
           '[Cómo ejecutar un LLM local para guiones y borradores de novelas](/es/power-local-llm/local-llm-screenwriting-and-novel-drafting) — flujos de trabajo de redacción de formato largo, gestión de capítulos y estrategias de ventana de contexto.',
           '[LLM locales sin censura para la escritura creativa: ética y configuración](/es/power-local-llm/uncensored-local-llm-creative-writing-ethics) — qué modelos usar para contenido maduro, implicaciones de privacidad y marco de uso responsable.',
@@ -4429,7 +4429,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Qual é o melhor LLM local para escrever ficção sombria ou madura?',
-            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, ou qualquer modelo ajustado para reduzir as recusas de conteúdo. Quando rodado localmente, não há restrições de termos de serviço na nuvem — o fine-tuning base do modelo determina o que ele gerará e o que não gerará. Veja [Melhores LLMs locais para escrita criativa 2026](/pt/power-local-llm/best-local-llm-creative-writing-2026) para um detalhamento completo das opções de modelos sem censura e o enquadramento ético.',
+            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, ou qualquer modelo ajustado para reduzir as recusas de conteúdo. Quando rodado localmente, não há restrições de termos de serviço na nuvem — o fine-tuning base do modelo determina o que ele gerará e o que não gerará. Veja [Melhores LLMs locais para escrita criativa 2026](/pt/power-local-llm/best-local-llm-creative-writing) para um detalhamento completo das opções de modelos sem censura e o enquadramento ético.',
           },
           {
             q: 'Posso usar esses modelos no SillyTavern ou no Agnai?',
@@ -4449,7 +4449,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Melhores LLMs locais para escrita criativa 2026](/pt/power-local-llm/best-local-llm-creative-writing-2026) — comparação de modelos para geração narrativa, configurações de amostragem e opções sem censura.',
+          '[Melhores LLMs locais para escrita criativa 2026](/pt/power-local-llm/best-local-llm-creative-writing) — comparação de modelos para geração narrativa, configurações de amostragem e opções sem censura.',
           '[SillyTavern vs Agnai vs RisuAI: Melhor interface de roleplay local](/pt/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparação de interfaces para roleplay com cartões de personagem e ficção colaborativa.',
           '[Como rodar um LLM local para roteiros e rascunhos de romances](/pt/power-local-llm/local-llm-screenwriting-and-novel-drafting) — fluxos de trabalho de redação de formato longo, gestão de capítulos e estratégias de janela de contexto.',
           '[LLMs locais sem censura para a escrita criativa: ética e configuração](/pt/power-local-llm/uncensored-local-llm-creative-writing-ethics) — quais modelos usar para conteúdo maduro, implicações de privacidade e enquadramento de uso responsável.',
@@ -5070,7 +5070,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'ما أفضل نموذج لغوي محلي لكتابة الخيال الداكن أو الناضج؟',
-            a: 'Hermes 3 Llama 3.1 وDolphin 3.0 Mistral، أو أي نموذج مضبوط لتقليل رفض المحتوى. عند التشغيل محلياً، لا توجد قيود شروط خدمة سحابية — الضبط الدقيق الأساسي للنموذج يحدد ما سيولّده وما لن يولّده. انظر [أفضل النماذج اللغوية المحلية للكتابة الإبداعية 2026](/ar/power-local-llm/best-local-llm-creative-writing-2026) للاطلاع على تفصيل كامل لخيارات النماذج غير المقيَّدة والإطار الأخلاقي.',
+            a: 'Hermes 3 Llama 3.1 وDolphin 3.0 Mistral، أو أي نموذج مضبوط لتقليل رفض المحتوى. عند التشغيل محلياً، لا توجد قيود شروط خدمة سحابية — الضبط الدقيق الأساسي للنموذج يحدد ما سيولّده وما لن يولّده. انظر [أفضل النماذج اللغوية المحلية للكتابة الإبداعية 2026](/ar/power-local-llm/best-local-llm-creative-writing) للاطلاع على تفصيل كامل لخيارات النماذج غير المقيَّدة والإطار الأخلاقي.',
           },
           {
             q: 'هل يمكنني استخدام هذه القوالب في SillyTavern أو Agnai؟',
@@ -5090,7 +5090,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[أفضل النماذج اللغوية المحلية للكتابة الإبداعية 2026](/ar/power-local-llm/best-local-llm-creative-writing-2026) — مقارنة النماذج لتوليد السرد وإعدادات أخذ العينات وخيارات غير المقيَّدة.',
+          '[أفضل النماذج اللغوية المحلية للكتابة الإبداعية 2026](/ar/power-local-llm/best-local-llm-creative-writing) — مقارنة النماذج لتوليد السرد وإعدادات أخذ العينات وخيارات غير المقيَّدة.',
           '[SillyTavern مقابل Agnai مقابل RisuAI: أفضل واجهة لعب أدوار محلية](/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — مقارنة الواجهات للعب الأدوار ببطاقات الشخصيات والخيال التعاوني.',
           '[كيفية تشغيل نموذج لغوي محلي لكتابة السيناريوهات ومسودات الروايات](/ar/power-local-llm/local-llm-screenwriting-and-novel-drafting) — سير عمل الكتابة طويلة الشكل وإدارة الفصول واستراتيجيات نافذة السياق.',
           '[النماذج اللغوية المحلية غير المقيَّدة للكتابة الإبداعية: الأخلاقيات والإعداد](/ar/power-local-llm/uncensored-local-llm-creative-writing-ethics) — أي النماذج تستخدم للمحتوى الناضج وانعكاسات الخصوصية وإطار الاستخدام المسؤول.',
@@ -5711,7 +5711,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '다크 또는 성인 소설을 쓰기에 가장 좋은 로컬 LLM은 무엇입니까?',
-            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, 또는 콘텐츠 거부를 줄이도록 조정된 모든 모델. 로컬에서 실행할 때 클라우드 서비스 약관 제한이 없습니다 — 모델의 기본 파인튜닝이 무엇을 생성할지와 생성하지 않을지를 결정합니다. 무검열 모델 옵션 및 윤리적 프레임워크에 대한 전체 내용은 [소설 쓰기를 위한 최고의 로컬 LLM 2026](/ko/power-local-llm/best-local-llm-creative-writing-2026)을 참조하십시오.',
+            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, 또는 콘텐츠 거부를 줄이도록 조정된 모든 모델. 로컬에서 실행할 때 클라우드 서비스 약관 제한이 없습니다 — 모델의 기본 파인튜닝이 무엇을 생성할지와 생성하지 않을지를 결정합니다. 무검열 모델 옵션 및 윤리적 프레임워크에 대한 전체 내용은 [소설 쓰기를 위한 최고의 로컬 LLM 2026](/ko/power-local-llm/best-local-llm-creative-writing)을 참조하십시오.',
           },
           {
             q: 'SillyTavern이나 Agnai에서 이 템플릿을 사용할 수 있습니까?',
@@ -5731,7 +5731,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[소설 쓰기를 위한 최고의 로컬 LLM 2026](/ko/power-local-llm/best-local-llm-creative-writing-2026) — 서사 생성, 샘플링 설정, 무검열 옵션을 위한 모델 비교.',
+          '[소설 쓰기를 위한 최고의 로컬 LLM 2026](/ko/power-local-llm/best-local-llm-creative-writing) — 서사 생성, 샘플링 설정, 무검열 옵션을 위한 모델 비교.',
           '[SillyTavern vs Agnai vs RisuAI: 최고의 로컬 롤플레이 인터페이스](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 인물 카드와 협업 소설을 위한 인터페이스 비교.',
           '[소설 초고와 시나리오를 위한 로컬 LLM 사용법](/ko/power-local-llm/local-llm-screenwriting-and-novel-drafting) — 장편 초안 작업 흐름, 챕터 관리, 컨텍스트 창 전략.',
           '[소설 쓰기를 위한 무검열 로컬 LLM: 윤리와 설정](/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 성인 콘텐츠에 사용할 모델, 개인 정보 보호 영향, 책임감 있는 사용 프레임워크.',

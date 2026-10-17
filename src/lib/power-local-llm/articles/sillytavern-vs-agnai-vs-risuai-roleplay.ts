@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**All three speak the Tavern v2 character-card spec.** A card built in SillyTavern works in Agnai and RisuAI without conversion. Migration between frontends is trivial.',
           '**All three pair with Ollama, llama.cpp, LM Studio, and any OpenAI-compatible endpoint.** None lock you into a specific model backend; switching backends is a config change.',
           '**Privacy: all three run fully local with no telemetry by default.** Optional cloud features in each (translation, image generation) phone home only when explicitly enabled. Verify with network monitoring if you need formal audit-grade evidence.',
-          '**Model pick is more important than frontend pick.** A great frontend on a small general-purpose model produces flat dialogue; a basic frontend on Llama 3.3 70B produces lively scenes. See [Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing-2026) for the model side.',
+          '**Model pick is more important than frontend pick.** A great frontend on a small general-purpose model produces flat dialogue; a basic frontend on Llama 3.3 70B produces lively scenes. See [Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing) for the model side.',
         ],
       },
       quickFacts: {
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hermes 3 (Llama 3.3 base)** — the uncensored derivative. Same architecture as Llama 3.3 70B; the RLHF safety layer is removed; the model follows the prompt instead of refusing mature scenes. Two installs (instruct + Hermes) on the same Ollama is the common pattern.',
           '**Mistral Large** — the long-context pick. 128K context out of the box; useful when a roleplay session is long enough to push smaller-context models out of the window.',
           '**Avoid for serious roleplay work:** anything below 13B without a creative-writing fine-tune. Small general-purpose models lose voice consistency within 5–10 exchanges; the character "drifts" into the model\'s default voice.',
-          'For the head-to-head data on these picks, see [Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing-2026).',
+          'For the head-to-head data on these picks, see [Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing).',
           'For ready-to-use system-prompt templates that work across all three frontends, see [Local LLM Prompts for Fiction Writers](/power-local-llm/local-llm-prompts-for-fiction-writers).',
         ],
         callouts: [
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Common Mistakes Picking and Using Roleplay Frontends',
         items: [
-          '**Mistake 1: chasing features when the model is the bottleneck.** A great frontend on a 7B general-purpose model produces flat dialogue regardless of how good the lore-book system is. Pick a competent frontend and spend the rest of the budget on a 32B+ creative-writing-friendly model. See [Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing-2026) for the model side.',
+          '**Mistake 1: chasing features when the model is the bottleneck.** A great frontend on a 7B general-purpose model produces flat dialogue regardless of how good the lore-book system is. Pick a competent frontend and spend the rest of the budget on a 32B+ creative-writing-friendly model. See [Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing) for the model side.',
           '**Mistake 2: using default sampling settings on a creative model.** SillyTavern, Agnai, and RisuAI all ship with question-answering-tuned defaults (temperature ~0.7, top-p ~0.9). Creative roleplay wants 0.85–1.05, top-p 0.9–0.95, repeat penalty 1.1. Save presets per-character.',
           '**Mistake 3: importing community cards without reading them.** A card from chub.ai may include a 2,000-token system prompt with jailbreak language, sampling overrides that conflict with your defaults, or personality fields that contradict the description. Open the card in the editor before using it; sanitise the system prompt.',
           '**Mistake 4: skipping the persona / user profile.** A blank "user" persona means the model has no anchor for who is speaking. Even a one-paragraph persona with name, age, and basic situation produces a dramatically more engaged scene than the default empty user.',
@@ -407,7 +407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Backyard AI Review: Local AI Character Chat and Roleplay](/power-local-llm/backyard-ai-review-local-roleplay) — free desktop app with a built-in Character Hub and Fimbulvetr 10.7B; the low-friction alternative to the frontends covered in this article.',
-          '[Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing-2026) — the model side; head-to-head comparison of the picks recommended in this guide.',
+          '[Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing) — the model side; head-to-head comparison of the picks recommended in this guide.',
           '[Uncensored Local LLMs for Creative Writing: Ethics, Legality & Best Practices](/power-local-llm/uncensored-local-llm-creative-writing-ethics) — when uncensored derivatives (Hermes 3, Dolphin 3.0) are the right pick and where the legal lines are.',
           '[Best Local LLMs in 2026](/local-llms/best-local-llms-2026) — broader model landscape; useful when picking which models to install behind these frontends.',
           '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — the two most common backends paired with these frontends; which to install first.',
@@ -508,7 +508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Alle drei unterstützen die Tavern-v2-Character-Card-Spezifikation.** Eine in SillyTavern erstellte Karte funktioniert in Agnai und RisuAI ohne Konvertierung. Die Migration zwischen Oberflächen ist unkompliziert.',
           '**Alle drei lassen sich mit Ollama, llama.cpp, LM Studio und jedem OpenAI-kompatiblen Endpunkt verbinden.** Keine der drei Oberflächen sperrt Sie auf ein bestimmtes Modell-Backend ein; der Wechsel ist eine Konfigurationsänderung.',
           '**Datenschutz: Alle drei laufen standardmäßig vollständig lokal ohne Telemetrie.** Optionale Cloud-Funktionen in jeder Oberfläche (Übersetzung, Bildgenerierung) kommunizieren nur bei expliziter Aktivierung nach außen. Überprüfen Sie dies mit Netzwerküberwachung, wenn Sie formale Audit-taugliche Nachweise benötigen.',
-          '**Die Modellwahl ist wichtiger als die Oberflächenwahl.** Eine gute Oberfläche mit einem kleinen Allzweck-Modell erzeugt flache Dialoge; eine einfache Oberfläche mit Llama 3.3 70B erzeugt lebendige Szenen. Die Modellseite finden Sie unter [Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing-2026).',
+          '**Die Modellwahl ist wichtiger als die Oberflächenwahl.** Eine gute Oberfläche mit einem kleinen Allzweck-Modell erzeugt flache Dialoge; eine einfache Oberfläche mit Llama 3.3 70B erzeugt lebendige Szenen. Die Modellseite finden Sie unter [Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing).',
         ],
       },
       quickFacts: {
@@ -670,7 +670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hermes 3 (Llama 3.3 Base)** — das unzensierte Derivat. Gleiche Architektur wie Llama 3.3 70B; die RLHF-Sicherheitsschicht ist entfernt; das Modell folgt dem Prompt, anstatt reife Szenen abzulehnen. Zwei Installationen (Instruct + Hermes) auf demselben Ollama ist das übliche Muster.',
           '**Mistral Large** — die Langkontext-Wahl. 128K Kontext out-of-the-box; nützlich, wenn eine Roleplay-Sitzung lang genug ist, um kleinere Kontextmodelle aus dem Fenster zu drängen.',
           '**Für ernstes Roleplay nicht empfohlen:** alles unter 13B ohne kreatives Schreib-Fine-Tuning. Kleine Allzweck-Modelle verlieren innerhalb von 5–10 Austauschen die Stimmenkonsistenz; der Charakter „driftet" in die Standardstimme des Modells.',
-          'Für die Kopf-an-Kopf-Daten zu diesen Empfehlungen, siehe [Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing-2026).',
+          'Für die Kopf-an-Kopf-Daten zu diesen Empfehlungen, siehe [Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing).',
           'Für sofort einsetzbare System-Prompt-Templates, die mit allen drei Oberflächen funktionieren, siehe [Lokale LLM-Prompts für Fiktionautorinnen und -autoren](/de/power-local-llm/local-llm-prompts-for-fiction-writers).',
         ],
         callouts: [
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Häufige Fehler bei der Wahl und Verwendung von Roleplay-Oberflächen',
         items: [
-          '**Fehler 1: Feature-Jagd, wenn das Modell der Engpass ist.** Eine großartige Oberfläche auf einem 7B-Allzweck-Modell produziert flache Dialoge, egal wie gut das Lore-Buch-System ist. Wählen Sie eine kompetente Oberfläche und investieren Sie das restliche Budget in ein kreativschreibfreundliches 32B+-Modell. Die Modellseite finden Sie unter [Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing-2026).',
+          '**Fehler 1: Feature-Jagd, wenn das Modell der Engpass ist.** Eine großartige Oberfläche auf einem 7B-Allzweck-Modell produziert flache Dialoge, egal wie gut das Lore-Buch-System ist. Wählen Sie eine kompetente Oberfläche und investieren Sie das restliche Budget in ein kreativschreibfreundliches 32B+-Modell. Die Modellseite finden Sie unter [Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing).',
           '**Fehler 2: Standard-Sampling-Einstellungen bei einem kreativen Modell verwenden.** SillyTavern, Agnai und RisuAI werden mit für Frage-Antwort abgestimmten Standardeinstellungen geliefert (Temperatur ~0,7, Top-p ~0,9). Kreatives Roleplay möchte 0,85–1,05, Top-p 0,9–0,95, Wiederholungsstrafe 1,1. Presets pro Charakter speichern.',
           '**Fehler 3: Community-Karten importieren ohne sie zu lesen.** Eine Karte von chub.ai kann einen 2.000-Token-System-Prompt mit Jailbreak-Sprache, Sampling-Überschreibungen, die mit Ihren Standardeinstellungen kollidieren, oder Persönlichkeitsfelder enthalten, die der Beschreibung widersprechen. Öffnen Sie die Karte im Editor vor der Verwendung; bereinigen Sie den System-Prompt.',
           '**Fehler 4: Persona / Nutzerprofil überspringen.** Eine leere „Nutzer"-Persona bedeutet, dass das Modell keinen Anker hat, wer spricht. Selbst eine einzeilige Persona mit Name, Alter und grundlegender Situation erzeugt eine deutlich engagiertere Szene als der Standard-Leernutzer.',
@@ -821,7 +821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Lektüre',
         items: [
           '[Backyard AI im Test: Lokaler KI-Charakter-Chat und Rollenspiel](/de/power-local-llm/backyard-ai-review-local-roleplay) — kostenlose Desktop-App mit integriertem Character Hub und Fimbulvetr 10.7B; die unkomplizierte Alternative zu den in diesem Artikel behandelten Frontends.',
-          '[Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing-2026) — die Modellseite; Kopf-an-Kopf-Vergleich der in diesem Leitfaden empfohlenen Modelle.',
+          '[Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing) — die Modellseite; Kopf-an-Kopf-Vergleich der in diesem Leitfaden empfohlenen Modelle.',
           '[Unzensierte lokale LLMs für kreatives Schreiben: Ethik, Legalität & Best Practices](/de/power-local-llm/uncensored-local-llm-creative-writing-ethics) — wann unzensierte Derivate (Hermes 3, Dolphin 3,0) die richtige Wahl sind und wo die rechtlichen Grenzen liegen.',
           '[Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026) — breitere Modelllandschaft; nützlich bei der Auswahl der zu installierenden Modelle hinter diesen Oberflächen.',
           '[Ollama vs LM Studio](/de/local-llms/ollama-vs-lm-studio) — die zwei häufigsten Backends, die mit diesen Oberflächen verwendet werden; welches zuerst installiert werden sollte.',
@@ -921,7 +921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Las tres hablan la especificación de tarjetas de personaje Tavern v2.** Una tarjeta creada en SillyTavern funciona en Agnai y RisuAI sin conversión. La migración entre interfaces es trivial.',
           '**Las tres se conectan con Ollama, llama.cpp, LM Studio y cualquier endpoint compatible con OpenAI.** Ninguna te ata a un backend de modelo específico; cambiar de backend es un cambio de configuración.',
           '**Privacidad: las tres se ejecutan completamente en local sin telemetría por defecto.** Las funciones de nube opcionales en cada una (traducción, generación de imágenes) solo se comunican al exterior cuando se activan explícitamente. Verifica con monitorización de red si necesitas evidencia de auditoría formal.',
-          '**La elección del modelo es más importante que la elección de la interfaz.** Una gran interfaz con un modelo de propósito general pequeño produce diálogos planos; una interfaz básica con Llama 3.3 70B produce escenas animadas. Consulta [Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing-2026) para la parte del modelo.',
+          '**La elección del modelo es más importante que la elección de la interfaz.** Una gran interfaz con un modelo de propósito general pequeño produce diálogos planos; una interfaz básica con Llama 3.3 70B produce escenas animadas. Consulta [Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing) para la parte del modelo.',
         ],
       },
       quickFacts: {
@@ -1091,7 +1091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hermes 3 (base Llama 3.3)** — el derivado sin censura. Misma arquitectura que Llama 3.3 70B; la capa de seguridad RLHF está eliminada; el modelo sigue el prompt en lugar de rechazar escenas maduras. Dos instalaciones (instruct + Hermes) en el mismo Ollama es el patrón habitual.',
           '**Mistral Large** — la opción de contexto largo. 128K de contexto de fábrica; útil cuando una sesión de roleplay es lo suficientemente larga como para sacar a los modelos de contexto más pequeños de la ventana.',
           '**Evitar para trabajo de roleplay serio:** cualquier cosa por debajo de 13B sin un ajuste fino de escritura creativa. Los modelos pequeños de propósito general pierden la consistencia de voz en 5 a 10 intercambios; el personaje "deriva" hacia la voz predeterminada del modelo.',
-          'Para los datos comparativos de estas opciones, consulta [Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing-2026).',
+          'Para los datos comparativos de estas opciones, consulta [Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing).',
           'Para plantillas de prompts del sistema listas para usar que funcionan en las tres interfaces, consulta [Prompts de LLM local para escritores de ficción](/es/power-local-llm/local-llm-prompts-for-fiction-writers).',
         ],
         callouts: [
@@ -1159,7 +1159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Errores comunes al elegir y usar interfaces de roleplay',
         items: [
-          '**Error 1: perseguir funciones cuando el modelo es el cuello de botella.** Una gran interfaz con un modelo de propósito general de 7B produce diálogos planos independientemente de lo bueno que sea el sistema de libros de lore. Elige una interfaz competente y gasta el resto del presupuesto en un modelo de 32B+ amigable con la escritura creativa. Consulta [Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing-2026) para la parte del modelo.',
+          '**Error 1: perseguir funciones cuando el modelo es el cuello de botella.** Una gran interfaz con un modelo de propósito general de 7B produce diálogos planos independientemente de lo bueno que sea el sistema de libros de lore. Elige una interfaz competente y gasta el resto del presupuesto en un modelo de 32B+ amigable con la escritura creativa. Consulta [Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing) para la parte del modelo.',
           '**Error 2: usar los ajustes de muestreo predeterminados con un modelo creativo.** SillyTavern, Agnai y RisuAI vienen con valores predeterminados ajustados para preguntas y respuestas (temperatura ~0,7, top-p ~0,9). El roleplay creativo quiere 0,85–1,05, top-p 0,9–0,95, penalización de repetición 1,1. Guarda presets por personaje.',
           '**Error 3: importar tarjetas comunitarias sin leerlas.** Una tarjeta de chub.ai puede incluir un prompt del sistema de 2.000 tokens con lenguaje de jailbreak, anulaciones de muestreo que entran en conflicto con tus valores predeterminados, o campos de personalidad que contradicen la descripción. Abre la tarjeta en el editor antes de usarla; sanea el prompt del sistema.',
           '**Error 4: saltarse la persona / perfil de usuario.** Una persona de "usuario" en blanco significa que el modelo no tiene ancla para saber quién habla. Incluso una persona de un párrafo con nombre, edad y situación básica produce una escena dramáticamente más comprometida que el usuario vacío predeterminado.',
@@ -1236,7 +1236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectura relacionada',
         items: [
           '[Análisis de Backyard AI: chat de personajes IA y roleplay local](/es/power-local-llm/backyard-ai-review-local-roleplay) — app de escritorio gratuita con Character Hub integrado y Fimbulvetr 10.7B; la alternativa de baja fricción a los frontends cubiertos en este artículo.',
-          '[Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing-2026) — la parte del modelo; comparativa directa de las opciones recomendadas en esta guía.',
+          '[Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing) — la parte del modelo; comparativa directa de las opciones recomendadas en esta guía.',
           '[LLM locales sin censura para escritura creativa: ética, legalidad y mejores prácticas](/es/power-local-llm/uncensored-local-llm-creative-writing-ethics) — cuándo los derivados sin censura (Hermes 3, Dolphin 3.0) son la opción correcta y dónde están los límites legales.',
           '[Mejores LLM locales en 2026](/es/local-llms/best-local-llms-2026) — panorama más amplio de modelos; útil al elegir qué modelos instalar detrás de estas interfaces.',
           '[Ollama vs LM Studio](/es/local-llms/ollama-vs-lm-studio) — los dos backends más comunes usados con estas interfaces; cuál instalar primero.',
@@ -1349,7 +1349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**세 가지 모두 Tavern v2 캐릭터 카드 사양을 지원합니다.** SillyTavern에서 만든 카드는 변환 없이 Agnai·RisuAI에서 작동합니다. 인터페이스 간 마이그레이션이 쉽습니다.',
           '**세 가지 모두 Ollama, llama.cpp, LM Studio, OpenAI 호환 엔드포인트에 연결됩니다.** 특정 모델 백엔드에 묶이지 않으며, 백엔드 변경은 설정 변경입니다.',
           '**프라이버시: 세 가지 모두 기본적으로 텔레메트리 없이 완전히 로컬로 실행됩니다.** 각각의 선택적 클라우드 기능(번역, 이미지 생성)은 명시적으로 활성화될 때만 외부와 통신합니다. 공식 감사 증거가 필요하면 네트워크 모니터링으로 확인하십시오.',
-          '**모델 선택이 인터페이스 선택보다 더 중요합니다.** 훌륭한 인터페이스에 소형 범용 모델을 결합하면 로어북 시스템이 아무리 좋아도 평범한 대화를 생성합니다; 기본 인터페이스에 Llama 3.3 70B를 결합하면 생동감 있는 장면을 만듭니다. 모델 측면은 [2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing-2026)을 참조하십시오.',
+          '**모델 선택이 인터페이스 선택보다 더 중요합니다.** 훌륭한 인터페이스에 소형 범용 모델을 결합하면 로어북 시스템이 아무리 좋아도 평범한 대화를 생성합니다; 기본 인터페이스에 Llama 3.3 70B를 결합하면 생동감 있는 장면을 만듭니다. 모델 측면은 [2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing)을 참조하십시오.',
         ],
       },
       quickFacts: {
@@ -1519,7 +1519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hermes 3(Llama 3.3 기반)** — 무검열 파생 모델. Llama 3.3 70B와 동일한 아키텍처; RLHF 안전 레이어 제거됨; 모델이 성숙한 장면을 거부하는 대신 프롬프트를 따릅니다. 동일한 Ollama에서 두 가지 설치(instruct + Hermes)가 일반적인 패턴.',
           '**Mistral Large** — 장문 컨텍스트 옵션. 기본 128K 컨텍스트; 롤플레이 세션이 더 작은 컨텍스트 모델을 컨텍스트 밖으로 밀어낼 만큼 길 때 유용.',
           '**심각한 롤플레이 작업에서 피해야 할 것:** 창의적 글쓰기 파인튜닝 없이 13B 이하 모든 것. 소형 범용 모델은 5~10번 교환 후 목소리 일관성을 잃습니다; 캐릭터가 모델의 기본 목소리로 "표류"합니다.',
-          '이 옵션들의 비교 데이터는 [2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing-2026)을 참조하십시오.',
+          '이 옵션들의 비교 데이터는 [2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing)을 참조하십시오.',
           '세 인터페이스 모두에서 작동하는 즉시 사용 가능한 시스템 프롬프트 템플릿은 [픽션 작가를 위한 로컬 LLM 프롬프트](/ko/power-local-llm/local-llm-prompts-for-fiction-writers)를 참조하십시오.',
         ],
         callouts: [
@@ -1586,7 +1586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: '롤플레이 인터페이스 선택·사용 시 흔한 실수',
         items: [
-          '**실수 1: 모델이 병목일 때 기능을 쫓는 것.** 훌륭한 인터페이스에 7B 범용 모델을 결합하면 로어북 시스템이 아무리 좋아도 평범한 대화를 생성합니다. 유능한 인터페이스를 선택하고 나머지 예산을 창의적 글쓰기 친화적인 32B+ 모델에 투자하십시오. 모델 측면은 [2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing-2026)을 참조하십시오.',
+          '**실수 1: 모델이 병목일 때 기능을 쫓는 것.** 훌륭한 인터페이스에 7B 범용 모델을 결합하면 로어북 시스템이 아무리 좋아도 평범한 대화를 생성합니다. 유능한 인터페이스를 선택하고 나머지 예산을 창의적 글쓰기 친화적인 32B+ 모델에 투자하십시오. 모델 측면은 [2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing)을 참조하십시오.',
           '**실수 2: 창의적 모델에 기본 샘플링 설정 사용.** SillyTavern, Agnai, RisuAI 모두 Q&A용으로 조정된 기본값(온도 ~0.7, top-p ~0.9)으로 제공됩니다. 창의적 롤플레이는 0.85~1.05, top-p 0.9~0.95, 반복 패널티 1.1이 필요합니다. 캐릭터별 프리셋을 저장하십시오.',
           '**실수 3: 읽지 않고 커뮤니티 카드 가져오기.** chub.ai의 카드에는 기본값과 충돌하는 샘플링 재정의가 있는 2,000 토큰 jailbreak 시스템 프롬프트나 설명과 모순되는 성격 필드가 포함될 수 있습니다. 사용 전에 편집기에서 카드를 열고 시스템 프롬프트를 정제하십시오.',
           '**실수 4: 페르소나/사용자 프로필 건너뛰기.** 빈 "사용자" 페르소나는 모델이 누가 말하는지 알 닻이 없다는 것을 의미합니다. 이름, 나이, 기본 상황이 있는 단락 하나의 페르소나조차 기본 빈 사용자보다 극적으로 더 몰입감 있는 장면을 생성합니다.',
@@ -1663,7 +1663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[Backyard AI 리뷰: 로컬 AI 캐릭터 채팅과 롤플레이](/ko/power-local-llm/backyard-ai-review-local-roleplay) — 내장 Character Hub와 Fimbulvetr 10.7B를 갖춘 무료 데스크톱 앱으로, 이 글에서 다루는 프런트엔드에 대한 손쉬운 대안입니다.',
-          '[2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing-2026) — 모델 측면; 이 가이드에서 권장된 옵션들의 직접 비교.',
+          '[2026년 창의적 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing) — 모델 측면; 이 가이드에서 권장된 옵션들의 직접 비교.',
           '[창의적 글쓰기를 위한 무검열 로컬 LLM: 윤리·법적 측면·모범 사례](/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 무검열 파생 모델(Hermes 3, Dolphin 3.0)이 올바른 선택인 경우와 법적 경계.',
           '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 더 넓은 모델 개요; 이 인터페이스들 뒤에 설치할 모델 선택 시 유용.',
           '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio) — 이 인터페이스들과 함께 가장 많이 사용되는 두 백엔드; 무엇을 먼저 설치할지.',
@@ -2087,7 +2087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leitura relacionada',
         items: [
           '[Análise do Backyard AI: chat de personagens IA e roleplay local](/pt/power-local-llm/backyard-ai-review-local-roleplay) — app de desktop gratuito com Character Hub integrado e Fimbulvetr 10.7B; a alternativa sem fricção aos frontends abordados neste artigo.',
-          '[Melhores LLMs locais para escrita criativa 2026](/pt/power-local-llm/best-local-llm-creative-writing-2026) — a parte do modelo; comparativo direto das opções recomendadas neste guia.',
+          '[Melhores LLMs locais para escrita criativa 2026](/pt/power-local-llm/best-local-llm-creative-writing) — a parte do modelo; comparativo direto das opções recomendadas neste guia.',
           '[LLMs locais sem censura para escrita criativa: ética, legalidade e melhores práticas](/pt/power-local-llm/uncensored-local-llm-creative-writing-ethics) — quando os derivados sem censura (Hermes 3, Dolphin 3.0) são a escolha certa e onde estão os limites legais.',
           '[Melhores LLMs locais em 2026](/pt/local-llms/best-local-llms-2026) — panorama mais amplo de modelos; útil ao escolher quais modelos instalar atrás dessas interfaces.',
           '[Ollama vs LM Studio](/pt/local-llms/ollama-vs-lm-studio) — os dois backends mais comuns usados com essas interfaces; qual instalar primeiro.',
@@ -2199,7 +2199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Les trois supportent la spécification de cartes Tavern v2.** Une carte créée dans SillyTavern fonctionne dans Agnai et RisuAI sans conversion. La migration entre interfaces est triviale.',
           '**Les trois s\'associent à Ollama, llama.cpp, LM Studio et tout endpoint compatible OpenAI.** Aucune des trois ne vous enferme dans un backend de modèle spécifique ; changer de backend est une modification de configuration.',
           '**Confidentialité : les trois fonctionnent entièrement en local sans télémétrie par défaut.** Les fonctionnalités cloud optionnelles (traduction, génération d\'images) ne communiquent à l\'extérieur que si explicitement activées. Vérifiez avec une surveillance réseau si vous avez besoin de preuves formelles.',
-          '**Le choix du modèle est plus important que le choix de l\'interface.** Une bonne interface avec un petit modèle généraliste produit des dialogues plats ; une interface basique avec Llama 3.3 70B produit des scènes vivantes. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing-2026) pour le volet modèles.',
+          '**Le choix du modèle est plus important que le choix de l\'interface.** Une bonne interface avec un petit modèle généraliste produit des dialogues plats ; une interface basique avec Llama 3.3 70B produit des scènes vivantes. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing) pour le volet modèles.',
         ],
       },
       quickFacts: {
@@ -2361,7 +2361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hermes 3 (base Llama 3.3)** — le dérivé non censuré. Même architecture que Llama 3.3 70B ; la couche de sécurité RLHF est retirée ; le modèle suit le prompt au lieu de refuser les scènes matures. Deux installations (instruct + Hermes) sur le même Ollama est le pattern courant.',
           '**Mistral Large** — le choix grand contexte. 128K de contexte out-of-the-box ; utile quand une session de roleplay est assez longue pour pousser les modèles à contexte plus court hors de la fenêtre.',
           '**À éviter pour le roleplay sérieux :** tout ce qui est en dessous de 13B sans fine-tuning d\'écriture créative. Les petits modèles généralistes perdent la cohérence de voix en 5 à 10 échanges ; le personnage « dérive » vers la voix par défaut du modèle.',
-          'Pour les données comparatives sur ces choix, voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing-2026).',
+          'Pour les données comparatives sur ces choix, voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing).',
           'Pour des templates de prompt système prêts à l\'emploi fonctionnant avec les trois interfaces, voir [Prompts LLM locaux pour les auteurs de fiction](/fr/power-local-llm/local-llm-prompts-for-fiction-writers).',
         ],
         callouts: [
@@ -2427,7 +2427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Erreurs fréquentes dans le choix et l\'utilisation des interfaces roleplay',
         items: [
-          '**Erreur 1 : chasser les fonctionnalités quand le modèle est le goulot d\'étranglement.** Une excellente interface sur un modèle généraliste 7B produit des dialogues plats peu importe la qualité du système de livre de lore. Choisissez une interface compétente et investissez le reste du budget dans un modèle créatif de 32B+. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing-2026) pour le volet modèles.',
+          '**Erreur 1 : chasser les fonctionnalités quand le modèle est le goulot d\'étranglement.** Une excellente interface sur un modèle généraliste 7B produit des dialogues plats peu importe la qualité du système de livre de lore. Choisissez une interface compétente et investissez le reste du budget dans un modèle créatif de 32B+. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing) pour le volet modèles.',
           '**Erreur 2 : utiliser les paramètres d\'échantillonnage par défaut sur un modèle créatif.** SillyTavern, Agnai et RisuAI sont livrés avec des paramètres par défaut calibrés pour les questions-réponses (température ~0.7, top-p ~0.9). Le roleplay créatif veut 0.85–1.05, top-p 0.9–0.95, pénalité de répétition 1.1. Sauvegardez des presets par personnage.',
           '**Erreur 3 : importer des cartes communautaires sans les lire.** Une carte de chub.ai peut inclure un prompt système de 2 000 tokens avec du jailbreak, des remplacements d\'échantillonnage en conflit avec vos paramètres, ou des champs de personnalité contredisant la description. Ouvrez la carte dans l\'éditeur avant de l\'utiliser ; assainissez le prompt système.',
           '**Erreur 4 : ignorer le persona / profil utilisateur.** Un persona « utilisateur » vide signifie que le modèle n\'a aucun ancrage sur qui parle. Même un persona d\'un paragraphe avec nom, âge et situation basique produit une scène dramatiquement plus engagée que l\'utilisateur vide par défaut.',
@@ -2504,7 +2504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pour aller plus loin',
         items: [
           '[Avis sur Backyard AI : chat de personnages IA et roleplay local](/fr/power-local-llm/backyard-ai-review-local-roleplay) — application de bureau gratuite avec Character Hub intégré et Fimbulvetr 10.7B ; l\'alternative sans friction aux frontends traités dans cet article.',
-          '[Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing-2026) — le volet modèles ; comparaison directe des choix recommandés dans ce guide.',
+          '[Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing) — le volet modèles ; comparaison directe des choix recommandés dans ce guide.',
           '[LLM locaux non censurés pour l\'écriture créative : éthique, légalité & bonnes pratiques](/fr/power-local-llm/uncensored-local-llm-creative-writing-ethics) — quand les dérivés non censurés (Hermes 3, Dolphin 3.0) sont le bon choix et où se situent les lignes légales.',
           '[Meilleurs LLM locaux en 2026](/fr/local-llms/best-local-llms-2026) — panorama plus large des modèles ; utile pour choisir quels modèles installer derrière ces interfaces.',
           '[Ollama vs LM Studio](/fr/local-llms/ollama-vs-lm-studio) — les deux backends les plus courants associés à ces interfaces ; lequel installer en premier.',
@@ -2604,7 +2604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**三者ともTavern v2キャラクターカード仕様に対応しています。** SillyTavernで作成したカードはAgnaiとRisuAIで変換なしに機能します。フロントエンド間の移行は容易です。',
           '**三者ともOllama、llama.cpp、LM Studio、OpenAI互換エンドポイントと連携できます。** 特定のモデルバックエンドにロックインされることはなく、バックエンドの切り替えは設定変更で完了します。',
           '**プライバシー：三者ともデフォルトでテレメトリーなしの完全ローカル動作です。** 各フロントエンドのオプションクラウド機能（翻訳、画像生成）は明示的に有効化した場合のみ外部通信します。正式な監査レベルの証拠が必要な場合はネットワーク監視で確認してください。',
-          '**モデルの選択はフロントエンドの選択より重要です。** 優れたフロントエンドでも小規模な汎用モデルを使えば平坦な対話しか生まれませんが、基本的なフロントエンドでもLlama 3.3 70Bと組み合わせれば生き生きとしたシーンが生まれます。モデルについては[2026年クリエイティブライティング向けベストローカルLLM](/ja/power-local-llm/best-local-llm-creative-writing-2026)をご覧ください。',
+          '**モデルの選択はフロントエンドの選択より重要です。** 優れたフロントエンドでも小規模な汎用モデルを使えば平坦な対話しか生まれませんが、基本的なフロントエンドでもLlama 3.3 70Bと組み合わせれば生き生きとしたシーンが生まれます。モデルについては[2026年クリエイティブライティング向けベストローカルLLM](/ja/power-local-llm/best-local-llm-creative-writing)をご覧ください。',
         ],
       },
       quickFacts: {
@@ -2766,7 +2766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hermes 3（Llama 3.3ベース）** — 無検閲の派生モデル。Llama 3.3 70Bと同じアーキテクチャ；RLHFセーフティレイヤーが除去されており、成熟したシーンを拒否するのではなくプロンプトに従います。同じOllama上に二つのインストール（インストラクト＋Hermes）を用意するパターンが一般的です。',
           '**Mistral Large** — 長コンテキスト選択肢。128Kコンテキストがデフォルトで利用可能；ロールプレイセッションが長くなり、より短いコンテキストモデルがウィンドウから押し出されるほどになる場合に有用です。',
           '**真剣なロールプレイ作業に避けるべきもの：** クリエイティブライティングのファインチューニングなしに13B未満のもの。小さな汎用モデルは5〜10回のやり取りで声の一貫性を失い、キャラクターがモデルのデフォルト音声に「ドリフト」します。',
-          'これらの選択についてのデータ比較は[2026年クリエイティブライティング向けベストローカルLLM](/ja/power-local-llm/best-local-llm-creative-writing-2026)をご覧ください。',
+          'これらの選択についてのデータ比較は[2026年クリエイティブライティング向けベストローカルLLM](/ja/power-local-llm/best-local-llm-creative-writing)をご覧ください。',
           '三つのフロントエンドすべてで使用できるシステムプロンプトテンプレートは[フィクションライター向けローカルLLMプロンプト](/ja/power-local-llm/local-llm-prompts-for-fiction-writers)をご覧ください。',
         ],
         callouts: [
@@ -2831,7 +2831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'ロールプレイフロントエンドの選択と使用でよくある失敗',
         items: [
-          '**失敗1：モデルがボトルネックなのに機能を追い求める。** 7Bの汎用モデル上の優れたフロントエンドは、ロアブックシステムがどれほど優れていても平坦な対話しか生みません。有能なフロントエンドを選び、残りの予算を32B以上のクリエイティブライティング向けモデルに費やしてください。モデルについては[2026年クリエイティブライティング向けベストローカルLLM](/ja/power-local-llm/best-local-llm-creative-writing-2026)をご覧ください。',
+          '**失敗1：モデルがボトルネックなのに機能を追い求める。** 7Bの汎用モデル上の優れたフロントエンドは、ロアブックシステムがどれほど優れていても平坦な対話しか生みません。有能なフロントエンドを選び、残りの予算を32B以上のクリエイティブライティング向けモデルに費やしてください。モデルについては[2026年クリエイティブライティング向けベストローカルLLM](/ja/power-local-llm/best-local-llm-creative-writing)をご覧ください。',
           '**失敗2：クリエイティブモデルにデフォルトのサンプリング設定を使用する。** SillyTavern、Agnai、RisuAIはいずれも質問応答向けにチューニングされたデフォルト設定（温度約0.7、top-p約0.9）で提供されます。クリエイティブロールプレイには0.85〜1.05、top-p 0.9〜0.95、繰り返しペナルティ1.1が求められます。キャラクター別にプリセットを保存してください。',
           '**失敗3：コミュニティカードを読まずにインポートする。** chub.aiのカードには2,000トークンのジェイルブレイク言語のシステムプロンプト、デフォルト設定と競合するサンプリングオーバーライド、または説明に矛盾する性格フィールドが含まれている場合があります。使用前にエディターでカードを開き、システムプロンプトをサニタイズしてください。',
           '**失敗4：ペルソナ／ユーザープロファイルをスキップする。** 空の「ユーザー」ペルソナはモデルが誰が話しているかのアンカーを持たないことを意味します。名前、年齢、基本的な状況を持つ1段落のペルソナでさえ、デフォルトの空ユーザーよりも劇的に没入感のあるシーンを生み出します。',
@@ -2923,7 +2923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連情報',
         items: [
           '[Backyard AIレビュー:ローカルAIキャラクターチャットとロールプレイ](/ja/power-local-llm/backyard-ai-review-local-roleplay) — Character HubとFimbulvetr 10.7Bを内蔵した無料デスクトップアプリ。本記事で扱うフロントエンドに対する手軽な代替アプリ。',
-          '[2026年クリエイティブライティング向けベストローカルLLM](/ja/power-local-llm/best-local-llm-creative-writing-2026) — モデル側；このガイドで推奨された選択肢の直接比較。',
+          '[2026年クリエイティブライティング向けベストローカルLLM](/ja/power-local-llm/best-local-llm-creative-writing) — モデル側；このガイドで推奨された選択肢の直接比較。',
           '[クリエイティブライティング向け無検閲ローカルLLM：倫理、法律、ベストプラクティス](/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 無検閲派生モデル（Hermes 3、Dolphin 3.0）が適切な選択肢となる場合と法律上の境界線。',
           '[2026年ベストローカルLLM](/ja/local-llms/best-local-llms-2026) — より広いモデル全景；これらのフロントエンドの背後にどのモデルをインストールするかを選ぶ際に有用。',
           '[Ollama vs LM Studio](/ja/local-llms/ollama-vs-lm-studio) — これらのフロントエンドと組み合わせる最も一般的な二つのバックエンド；どちらを先にインストールするか。',
@@ -3023,7 +3023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**三者均支持Tavern v2角色卡片规格。** 在SillyTavern中构建的卡片在Agnai和RisuAI中无需转换即可使用。前端之间的迁移非常简单。',
           '**三者均可与Ollama、llama.cpp、LM Studio和任何OpenAI兼容端点配合。** 三者均不会将您锁定在特定的模型后端；切换后端只需修改配置。',
           '**隐私：三者默认情况下均完全本地运行，无遥测数据。** 每个前端中的可选云端功能（翻译、图像生成）仅在明确启用后才会向外通信。如需正式审计级别的证据，请通过网络监控进行验证。',
-          '**模型选择比前端选择更重要。** 出色的前端配合小型通用模型产生平淡的对话；基础前端配合Llama 3.3 70B产生生动的场景。模型选择请参见[2026年创意写作最佳本地LLM](/zh/power-local-llm/best-local-llm-creative-writing-2026)。',
+          '**模型选择比前端选择更重要。** 出色的前端配合小型通用模型产生平淡的对话；基础前端配合Llama 3.3 70B产生生动的场景。模型选择请参见[2026年创意写作最佳本地LLM](/zh/power-local-llm/best-local-llm-creative-writing)。',
         ],
       },
       quickFacts: {
@@ -3185,7 +3185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hermes 3（Llama 3.3基础版）** — 无审查派生版本。与Llama 3.3 70B相同架构；RLHF安全层已移除；模型遵循提示而非拒绝成熟场景。在同一Ollama上安装两个版本（指令版+Hermes）是常见模式。',
           '**Mistral Large** — 长上下文选择。开箱即用128K上下文；当角色扮演会话足够长以至于将较短上下文模型推出窗口时非常有用。',
           '**严肃角色扮演工作应避免：** 任何没有创意写作微调的13B以下模型。小型通用模型在5到10次交流内失去声音一致性；角色会"漂移"到模型的默认声音。',
-          '关于这些选择的直接对比数据，请参见[2026年创意写作最佳本地LLM](/zh/power-local-llm/best-local-llm-creative-writing-2026)。',
+          '关于这些选择的直接对比数据，请参见[2026年创意写作最佳本地LLM](/zh/power-local-llm/best-local-llm-creative-writing)。',
           '适用于所有三个前端的即用型系统提示模板，请参见[小说写作者的本地LLM提示词](/zh/power-local-llm/local-llm-prompts-for-fiction-writers)。',
         ],
         callouts: [
@@ -3250,7 +3250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: '选择和使用角色扮演前端的常见错误',
         items: [
-          '**错误1：当模型是瓶颈时追求功能。** 出色的前端配合7B通用模型产生平淡的对话，无论知识库系统有多好。选择一个合适的前端，将剩余预算花在32B以上的创意写作友好型模型上。模型方面请参见[2026年创意写作最佳本地LLM](/zh/power-local-llm/best-local-llm-creative-writing-2026)。',
+          '**错误1：当模型是瓶颈时追求功能。** 出色的前端配合7B通用模型产生平淡的对话，无论知识库系统有多好。选择一个合适的前端，将剩余预算花在32B以上的创意写作友好型模型上。模型方面请参见[2026年创意写作最佳本地LLM](/zh/power-local-llm/best-local-llm-creative-writing)。',
           '**错误2：在创意模型上使用默认采样设置。** SillyTavern、Agnai和RisuAI都以针对问答调优的默认设置发布（温度约0.7，top-p约0.9）。创意角色扮演需要0.85-1.05，top-p 0.9-0.95，重复惩罚1.1。按角色保存预设。',
           '**错误3：不阅读就导入社区卡片。** 来自chub.ai的卡片可能包含2,000个token的越狱语言系统提示、与您的默认设置冲突的采样覆盖，或与描述矛盾的性格字段。使用前在编辑器中打开卡片；清理系统提示。',
           '**错误4：跳过人格/用户档案。** 空白的"用户"人格意味着模型没有谁在说话的锚点。即使是包含姓名、年龄和基本情况的一段话人格，也会比默认空用户产生明显更有沉浸感的场景。',
@@ -3342,7 +3342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '延伸阅读',
         items: [
           '[Backyard AI评测:本地AI角色聊天与角色扮演](/zh/power-local-llm/backyard-ai-review-local-roleplay) ——内置Character Hub和Fimbulvetr 10.7B的免费桌面应用;是本文所述前端之外低门槛的替代方案。',
-          '[2026年创意写作最佳本地LLM](/zh/power-local-llm/best-local-llm-creative-writing-2026) — 模型侧；本指南推荐选择的直接对比。',
+          '[2026年创意写作最佳本地LLM](/zh/power-local-llm/best-local-llm-creative-writing) — 模型侧；本指南推荐选择的直接对比。',
           '[创意写作无审查本地LLM：伦理、合法性与最佳实践](/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics) — 无审查派生版本（Hermes 3、Dolphin 3.0）何时是正确选择以及法律边界在哪里。',
           '[2026年最佳本地LLM](/zh/local-llms/best-local-llms-2026) — 更广泛的模型全景；在这些前端背后选择安装哪些模型时有用。',
           '[Ollama vs LM Studio](/zh/local-llms/ollama-vs-lm-studio) — 与这些前端配合最常见的两个后端；先安装哪个。',
@@ -3618,7 +3618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءة ذات صلة',
         items: [
           '[مراجعة Backyard AI: محادثة الشخصيات بالذكاء الاصطناعي ولعب الأدوار محلياً](/ar/power-local-llm/backyard-ai-review-local-roleplay) — تطبيق سطح مكتب مجاني مع Character Hub مدمج وFimbulvetr 10.7B؛ البديل السلس للواجهات التي يغطيها هذا المقال.',
-          '[أفضل LLM محلية للكتابة الإبداعية 2026](/ar/power-local-llm/best-local-llm-creative-writing-2026) — الجانب النموذجي؛ مقارنة مباشرة للاختيارات الموصى بها في هذا الدليل.',
+          '[أفضل LLM محلية للكتابة الإبداعية 2026](/ar/power-local-llm/best-local-llm-creative-writing) — الجانب النموذجي؛ مقارنة مباشرة للاختيارات الموصى بها في هذا الدليل.',
           '[نماذج LLM المحلية بدون قيود للكتابة الإبداعية: الأخلاق والقانونية وأفضل الممارسات](/ar/power-local-llm/uncensored-local-llm-creative-writing-ethics) — متى تكون النسخ المشتقة (Hermes 3 وDolphin 3.0) الخيار الصحيح والحدود القانونية.',
           '[أفضل نماذج LLM المحلية في 2026](/ar/local-llms/best-local-llms-2026) — نظرة أوسع على النماذج؛ مفيدة عند اختيار النماذج للتثبيت خلف هذه الواجهات.',
           '[Ollama مقابل LM Studio](/ar/local-llms/ollama-vs-lm-studio) — أكثر خلفيتي استدلال شيوعًا مع هذه الواجهات؛ أيهما تثبت أولًا.',

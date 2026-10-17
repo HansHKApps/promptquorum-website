@@ -137,7 +137,7 @@ import { article as a_liquid_apollo_review } from './articles/liquid-apollo-revi
 import { article as a_noema_review } from './articles/noema-review'
 import { article as a_ai_on_device_review } from './articles/ai-on-device-review'
 import { article as a_on_device_ai_review } from './articles/on-device-ai-review'
-import { article as a_best_local_llm_creative_writing_2026 } from './articles/best-local-llm-creative-writing-2026'
+import { article as a_best_local_llm_creative_writing } from './articles/best-local-llm-creative-writing'
 import { article as a_best_local_models_tool_calling_2026 } from './articles/best-local-models-tool-calling-2026'
 import { article as a_chat_with_1000_pdfs_locally } from './articles/chat-with-1000-pdfs-locally'
 import { article as a_continue_dev_vs_cline_vs_aider_local } from './articles/continue-dev-vs-cline-vs-aider-local'
@@ -382,7 +382,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-local-coding-models-2026':          a_best_local_coding_models_2026,
   'best-local-llm-apps-android-2026':       a_best_local_llm_apps_android_2026,
   'best-local-llm-apps-iphone-2026':        a_best_local_llm_apps_iphone_2026,
-  'best-local-llm-creative-writing-2026':   a_best_local_llm_creative_writing_2026,
+  'best-local-llm-creative-writing':   a_best_local_llm_creative_writing,
   'best-local-models-tool-calling-2026':    a_best_local_models_tool_calling_2026,
   'chat-with-1000-pdfs-locally':            a_chat_with_1000_pdfs_locally,
   'continue-dev-vs-cline-vs-aider-local':   a_continue_dev_vs_cline_vs_aider_local,

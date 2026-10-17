@@ -71,7 +71,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'babyagi-review-autonomous-agent',
 
   // Cat 5 — Creative Writing
-  'best-local-llm-creative-writing-2026',
+  'best-local-llm-creative-writing',
   'local-llm-prompts-for-fiction-writers',
   'local-llm-screenwriting-and-novel-drafting',
   'sillytavern-vs-agnai-vs-risuai-roleplay',

@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LM Studio vs Jan vs GPT4All: Which Local AI App Wins in 2026](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — when you are ready to compare the top three on speed, model library, and privacy.',
           '[Easiest Local AI App for Each OS: Windows, Mac, Linux Picks](/power-local-llm/easiest-local-ai-app-windows-mac-linux) — for users who only want the per-OS recommendation.',
-          '[Best Local LLM for Creative Writing in 2026](/power-local-llm/best-local-llm-creative-writing-2026) — common non-technical use case.',
+          '[Best Local LLM for Creative Writing in 2026](/power-local-llm/best-local-llm-creative-writing) — common non-technical use case.',
           '[Best Local LLMs in 2026](/local-llms/best-local-llms-2026) — model recommendations to load into any of these six apps.',
           '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — for users whose laptop is too old.',
           '[Best Local LLM Apps for Android in 2026](/power-local-llm/best-local-llm-apps-android-2026) — for users on a Chromebook or low-spec Windows laptop.',
@@ -732,7 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LM Studio vs Jan vs GPT4All: Welche lokale KI-App gewinnt 2026](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — wenn Sie bereit sind, die Top-Drei auf Geschwindigkeit, Modellbibliothek und Datenschutz zu vergleichen.',
           '[Einfachste lokale KI-App für jedes Betriebssystem: Windows, Mac, Linux Picks](/de/power-local-llm/easiest-local-ai-app-windows-mac-linux) — für Nutzer, die nur die Pro-Betriebssystem-Empfehlung möchten.',
-          '[Beste lokales LLM für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing-2026) — häufiger nicht-technischer Anwendungsfall.',
+          '[Beste lokales LLM für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing) — häufiger nicht-technischer Anwendungsfall.',
           '[Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026) — Modellempfehlungen zum Laden in eine dieser sechs Apps.',
           '[Beste lokale KI-Apps für iPhone 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — für Nutzer, deren Laptop zu alt ist.',
           '[Beste lokale KI-Apps für Android 2026](/de/power-local-llm/best-local-llm-apps-android-2026) — für Nutzer auf einem Chromebook oder Low-Spec Windows Laptop.',
@@ -1126,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LM Studio vs Jan vs GPT4All : Quelle app d\'IA locale gagne en 2026](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — quand vous êtes prêt à comparer les trois meilleurs sur vitesse, médiathèque, et confidentialité.',
           '[App d\'IA locale la plus simple pour chaque OS : Windows, Mac, Linux Picks](/fr/power-local-llm/easiest-local-ai-app-windows-mac-linux) — pour les utilisateurs qui veulent seulement la recommandation par-OS.',
-          '[Meilleur LLM local pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing-2026) — cas d\'usage courant non-technique.',
+          '[Meilleur LLM local pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing) — cas d\'usage courant non-technique.',
           '[Meilleurs LLMs locaux 2026](/fr/local-llms/best-local-llms-2026) — recommandations de modèles à charger dans l\'une de ces six apps.',
           '[Meilleures apps d\'IA locale pour iPhone 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026) — pour les utilisateurs dont le portable est trop vieux.',
           '[Meilleures apps d\'IA locale pour Android 2026](/fr/power-local-llm/best-local-llm-apps-android-2026) — pour les utilisateurs sur Chromebook ou portable Windows bas de gamme.',
@@ -1520,7 +1520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LM Studio vs Jan vs GPT4All : 2026年どのローカルAIアプリが勝つ？](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — トップ3を速さ、モデルライブラリ、プライバシーで比較する準備ができたら。',
           '[OSごと最も簡単なローカルAIアプリ：Windows、Mac、Linux選択](/ja/power-local-llm/easiest-local-ai-app-windows-mac-linux) — OS別推奨だけが欲しいユーザー向け。',
-          '[2026年のクリエイティブライティング最高ローカルLLM](/ja/power-local-llm/best-local-llm-creative-writing-2026) — 一般的な非技術的使用例。',
+          '[2026年のクリエイティブライティング最高ローカルLLM](/ja/power-local-llm/best-local-llm-creative-writing) — 一般的な非技術的使用例。',
           '[2026年最高ローカルLLM](/ja/local-llms/best-local-llms-2026) — これら6つのアプリのいずれかに読み込むモデル推奨。',
           '[2026年iPhone向け最高ローカルAIアプリ](/ja/power-local-llm/best-local-llm-apps-iphone-2026) — ノートパソコンが古すぎるユーザー向け。',
           '[2026年Android向け最高ローカルAIアプリ](/ja/power-local-llm/best-local-llm-apps-android-2026) — ChromebookやLow-Spec Windowsノートパソコンユーザー向け。',
@@ -1914,7 +1914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LM Studio vs Jan vs GPT4All：2026年哪个本地AI应用最佳](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 当您准备好在速度、模型库和隐私上比较前三名时。',
           '[每个OS最简单的本地AI应用：Windows、Mac、Linux选择](/zh/power-local-llm/easiest-local-ai-app-windows-mac-linux) — 仅需要按OS推荐的用户。',
-          '[2026年创意写作最佳本地LLM](/zh/power-local-llm/best-local-llm-creative-writing-2026) — 常见的非技术使用案例。',
+          '[2026年创意写作最佳本地LLM](/zh/power-local-llm/best-local-llm-creative-writing) — 常见的非技术使用案例。',
           '[2026年最佳本地LLM](/zh/local-llms/best-local-llms-2026) — 要加载到这六个应用中任何一个的模型推荐。',
           '[2026年iPhone最佳本地AI应用](/zh/power-local-llm/best-local-llm-apps-iphone-2026) — 笔记本电脑太旧的用户。',
           '[2026年Android最佳本地AI应用](/zh/power-local-llm/best-local-llm-apps-android-2026) — Chromebook或低配Windows笔记本电脑上的用户。',
@@ -2308,7 +2308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LM Studio vs Jan vs GPT4All: ¿Qué app de IA local gana en 2026?](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — cuando estés listo para comparar las tres mejores en velocidad, biblioteca de modelos y privacidad.',
           '[La app de IA local más sencilla para cada sistema operativo: selecciones para Windows, Mac y Linux](/es/power-local-llm/easiest-local-ai-app-windows-mac-linux) — para usuarios que solo quieren la recomendación por sistema operativo.',
-          '[Mejor LLM local para escritura creativa en 2026](/es/power-local-llm/best-local-llm-creative-writing-2026) — caso de uso no técnico frecuente.',
+          '[Mejor LLM local para escritura creativa en 2026](/es/power-local-llm/best-local-llm-creative-writing) — caso de uso no técnico frecuente.',
           '[Mejores LLMs locales en 2026](/es/local-llms/best-local-llms-2026) — recomendaciones de modelos para cargar en cualquiera de estas seis apps.',
           '[Mejores apps de IA local para iPhone en 2026](/es/power-local-llm/best-local-llm-apps-iphone-2026) — para usuarios cuyo portátil es demasiado antiguo.',
           '[Mejores apps de IA local para Android en 2026](/es/power-local-llm/best-local-llm-apps-android-2026) — para usuarios con un Chromebook o portátil Windows de baja gama.',
@@ -2703,7 +2703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LM Studio vs Jan vs GPT4All: qual app de IA local vence em 2026](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — quando você estiver pronto para comparar os três melhores em velocidade, biblioteca de modelos e privacidade.',
           '[App de IA local mais fácil para cada SO: escolhas para Windows, Mac e Linux](/pt/power-local-llm/easiest-local-ai-app-windows-mac-linux) — para usuários que só querem a recomendação por SO.',
-          '[Melhor LLM local para escrita criativa em 2026](/pt/power-local-llm/best-local-llm-creative-writing-2026) — caso de uso não técnico frequente.',
+          '[Melhor LLM local para escrita criativa em 2026](/pt/power-local-llm/best-local-llm-creative-writing) — caso de uso não técnico frequente.',
           '[Melhores LLMs locais em 2026](/pt/local-llms/best-local-llms-2026) — recomendações de modelos para carregar em qualquer um destes seis apps.',
           '[Melhores apps de IA local para iPhone em 2026](/pt/power-local-llm/best-local-llm-apps-iphone-2026) — para usuários cujo notebook é muito antigo.',
           '[Melhores apps de IA local para Android em 2026](/pt/power-local-llm/best-local-llm-apps-android-2026) — para usuários com Chromebook ou notebook Windows de baixo desempenho.',
@@ -3116,7 +3116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LM Studio مقابل Jan مقابل GPT4All: أيّ تطبيق ذكاء اصطناعي محلي يفوز في 2026](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — عندما تكون جاهزاً لمقارنة الثلاثة الأوائل في السرعة ومكتبة النماذج والخصوصية.',
           '[أسهل تطبيق ذكاء اصطناعي محلي لكل نظام تشغيل: اختيارات لـWindows وMac وLinux](/ar/power-local-llm/easiest-local-ai-app-windows-mac-linux) — للمستخدمين الذين يريدون فقط التوصية حسب نظام التشغيل.',
-          '[أفضل نموذج لغوي محلي للكتابة الإبداعية في 2026](/ar/power-local-llm/best-local-llm-creative-writing-2026) — حالة استخدام شائعة غير تقنية.',
+          '[أفضل نموذج لغوي محلي للكتابة الإبداعية في 2026](/ar/power-local-llm/best-local-llm-creative-writing) — حالة استخدام شائعة غير تقنية.',
           '[أفضل النماذج اللغوية المحلية في 2026](/ar/local-llms/best-local-llms-2026) — توصيات نماذج للتحميل في أي من هذه التطبيقات الستة.',
           '[أفضل تطبيقات ذكاء اصطناعي محلي للـiPhone في 2026](/ar/power-local-llm/best-local-llm-apps-iphone-2026) — للمستخدمين الذين حاسوبهم المحمول قديم جداً.',
           '[أفضل تطبيقات ذكاء اصطناعي محلي للـAndroid في 2026](/ar/power-local-llm/best-local-llm-apps-android-2026) — للمستخدمين بـChromebook أو حاسوب محمول Windows منخفض المستوى.',
@@ -3519,7 +3519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[LM Studio vs Jan vs GPT4All: 2026년 어떤 로컬 AI 앱이 최고입니까?](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 속도, 모델 라이브러리, 프라이버시 측면에서 상위 3가지를 비교할 준비가 되었을 때.',
           '[각 운영 체제에서 가장 쉬운 로컬 AI 앱: Windows, Mac, Linux 선택](/ko/power-local-llm/easiest-local-ai-app-windows-mac-linux) — 운영 체제별 추천만 원하는 사용자를 위한 것입니다.',
-          '[2026년 창작 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing-2026) — 자주 있는 비전문가 사용 사례.',
+          '[2026년 창작 글쓰기를 위한 최고의 로컬 LLM](/ko/power-local-llm/best-local-llm-creative-writing) — 자주 있는 비전문가 사용 사례.',
           '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 이 여섯 가지 앱 중 하나에 로드할 모델 추천.',
           '[2026년 iPhone용 최고의 로컬 AI 앱](/ko/power-local-llm/best-local-llm-apps-iphone-2026) — 노트북 사양이 너무 낮은 사용자를 위한 것입니다.',
           '[2026년 Android용 최고의 로컬 AI 앱](/ko/power-local-llm/best-local-llm-apps-android-2026) — Chromebook 또는 저사양 Windows 노트북 사용자를 위한 것입니다.',

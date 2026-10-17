@@ -28,7 +28,7 @@
     "src/lib/power-local-llm/articles/best-vpn-ai-privacy-local-llm-2026.ts",
     "src/lib/power-local-llm/articles/local-ai-workstation-build-guide-2026.ts",
     "src/lib/power-local-llm/articles/autonomous-local-agents-actually-work.ts",
-    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing.ts",
     "src/lib/power-local-llm/articles/best-mac-for-local-ai-2026.ts",
     "src/lib/power-local-llm/articles/uncensored-local-llm-creative-writing-ethics.ts",
     "src/lib/power-local-llm/articles/best-local-models-tool-calling-2026.ts",
@@ -411,7 +411,7 @@
     "src/lib/prompt-bites/articles/can-you-run-qwen3-on-ollama.ts",
     "src/lib/power-local-llm/articles/best-local-llms-customer-support-call-centers-enterprise.ts",
     "src/lib/power-local-llm/articles/autonomous-local-agents-actually-work.ts",
-    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing.ts",
     "src/lib/power-local-llm/articles/uncensored-local-llm-creative-writing-ethics.ts",
     "src/lib/power-local-llm/articles/best-local-models-tool-calling-2026.ts",
     "src/lib/power-local-llm/articles/sillytavern-vs-agnai-vs-risuai-roleplay.ts",
@@ -727,7 +727,7 @@
   ],
   "Mistral Large": [
     "src/lib/power-local-llm/articles/best-local-llms-customer-support-call-centers-enterprise.ts",
-    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing.ts",
     "src/lib/power-local-llm/articles/uncensored-local-llm-creative-writing-ethics.ts",
     "src/lib/power-local-llm/articles/sillytavern-vs-agnai-vs-risuai-roleplay.ts",
     "src/lib/power-local-llm/articles/enterprise-llm-inference-servers-vllm-tgi-nim-2026.ts",
@@ -1061,23 +1061,23 @@
     "src/lib/power-local-llm/articles/build-local-voice-assistant-2026.ts"
   ],
   "Command A+": [
-    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing.ts",
     "src/lib/power-local-llm/articles/sillytavern-vs-agnai-vs-risuai-roleplay.ts",
     "src/lib/power-local-llm/articles/local-llm-prompts-for-fiction-writers.ts",
     "src/lib/power-local-llm/articles/local-llm-screenwriting-and-novel-drafting.ts"
   ],
   "Dolphin 3.0 Llama": [
-    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts"
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing.ts"
   ],
   "Hermes 3 Llama 3.3": [
-    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts",
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing.ts",
     "src/lib/power-local-llm/articles/uncensored-local-llm-creative-writing-ethics.ts",
     "src/lib/power-local-llm/articles/sillytavern-vs-agnai-vs-risuai-roleplay.ts",
     "src/lib/power-local-llm/articles/local-llm-prompts-for-fiction-writers.ts",
     "src/lib/power-local-llm/articles/local-llm-screenwriting-and-novel-drafting.ts"
   ],
   "Yi-1.5 34B": [
-    "src/lib/power-local-llm/articles/best-local-llm-creative-writing-2026.ts"
+    "src/lib/power-local-llm/articles/best-local-llm-creative-writing.ts"
   ],
   "Llama 3.3 34B": [
     "src/lib/power-local-llm/articles/best-mac-for-local-ai-2026.ts"

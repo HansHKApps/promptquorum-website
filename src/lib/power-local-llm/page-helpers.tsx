@@ -1005,7 +1005,7 @@ const HUB_THEMES: Array<{
     colorBadge: 'bg-rose-50 text-rose-700 border-rose-200',
     colorDot: 'bg-rose-400',
     slugs: [
-      'best-local-llm-creative-writing-2026',
+      'best-local-llm-creative-writing',
       'sillytavern-vs-agnai-vs-risuai-roleplay',
       'local-llm-prompts-for-fiction-writers',
       'uncensored-local-llm-creative-writing-ethics',
