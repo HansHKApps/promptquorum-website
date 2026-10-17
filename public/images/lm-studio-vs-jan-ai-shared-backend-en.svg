@@ -5,20 +5,20 @@
   <!-- LM Studio app box -->
   <rect x="60" y="60" width="300" height="120" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
   <rect x="60" y="60" width="300" height="4" rx="0" fill="#7D5260"/>
-  <text x="210" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#7D5260" text-anchor="middle">LM Studio 0.4.16</text>
-  <text x="80" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">Minimal Electron UI</text>
-  <text x="80" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">One active model at a time</text>
-  <text x="80" y="144" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#1C1B1F">Base RAM: 500MB–1GB</text>
-  <text x="80" y="164" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">API: localhost:1234</text>
+  <text x="210" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#7D5260" text-anchor="middle">LM Studio 0.4.26</text>
+  <text x="80" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">Polished UI, built-in model store</text>
+  <text x="80" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">Closed source, free for work</text>
+  <text x="80" y="144" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#1C1B1F">Windows / macOS / Linux</text>
+  <text x="80" y="164" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">Local OpenAI-compatible API</text>
 
   <!-- Jan AI app box -->
   <rect x="440" y="60" width="300" height="120" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
   <rect x="440" y="60" width="300" height="4" rx="0" fill="#6750A4"/>
-  <text x="590" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Jan AI 0.8.2</text>
-  <text x="460" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">Electron UI + plugin runtime</text>
-  <text x="460" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">Multiple models, multiple ports</text>
-  <text x="460" y="144" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#1C1B1F">Base RAM: ~1GB+ (heavier)</text>
-  <text x="460" y="164" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">API: localhost:1337</text>
+  <text x="590" y="86" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Jan AI 0.8.6</text>
+  <text x="460" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">Open source (Apache 2.0)</text>
+  <text x="460" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">MCP servers and extensions</text>
+  <text x="460" y="144" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#1C1B1F">Windows / macOS / Linux</text>
+  <text x="460" y="164" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F">Local OpenAI-compatible API</text>
 
   <!-- Arrows down -->
   <line x1="210" y1="180" x2="210" y2="228" stroke="#6750A4" stroke-width="2"/>
@@ -35,5 +35,5 @@
   <circle cx="400" cy="340" r="24" fill="#34A853"/>
   <text x="400" y="345" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">TIE</text>
 
-  <text x="400" y="382" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">Inference speed is backend-bound, not app-bound — need 50+ tok/s? Use vLLM or Ollama instead</text>
+  <text x="400" y="382" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#49454F" text-anchor="middle">Speed is set by GPU, model size and quantization — not by the app</text>
 <text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

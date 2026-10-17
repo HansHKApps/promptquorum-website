@@ -18,14 +18,14 @@
   <rect x="60" y="150" width="240" height="90" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
   <rect x="60" y="150" width="240" height="4" rx="0" fill="#7D5260"/>
   <text x="180" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#7D5260" text-anchor="middle">LM Studio</text>
-  <text x="180" y="196" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Built-in HuggingFace search</text>
-  <text x="180" y="212" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">3-pane UI, 2-min first model</text>
-  <text x="180" y="228" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">3-year stability track record</text>
+  <text x="180" y="196" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Built-in model store</text>
+  <text x="180" y="212" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Polished, guided UI</text>
+  <text x="180" y="228" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Free at home and at work</text>
 
   <!-- Right sub-question -->
   <rect x="460" y="150" width="240" height="46" rx="6" fill="#F7F2FA" stroke="#6750A4" stroke-width="2"/>
-  <text x="580" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Need plugins, multi-port API,</text>
-  <text x="580" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">or zero telemetry proof?</text>
+  <text x="580" y="170" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">Want open source, MCP,</text>
+  <text x="580" y="186" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">or extensions?</text>
 
   <!-- Sub-branch lines -->
   <line x1="520" y1="196" x2="440" y2="260" stroke="#6750A4" stroke-width="2"/>
@@ -38,10 +38,10 @@
   <rect x="320" y="260" width="240" height="106" rx="6" fill="#FFFFFF" stroke="#6750A4" stroke-width="2"/>
   <rect x="320" y="260" width="240" height="4" rx="0" fill="#6750A4"/>
   <text x="440" y="285" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#6750A4" text-anchor="middle">Jan AI</text>
-  <text x="440" y="306" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">MIT open-source, no telemetry</text>
-  <text x="440" y="322" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Plugin extensions + RAG</text>
-  <text x="440" y="338" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Multiple model servers</text>
-  <text x="440" y="354" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">(one port per model)</text>
+  <text x="440" y="306" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Apache 2.0 open source</text>
+  <text x="440" y="322" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">MCP servers + extensions</text>
+  <text x="440" y="338" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Agents preview</text>
+  <text x="440" y="354" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">(Cowork)</text>
 
   <!-- Sub-leaf: LM Studio (default) -->
   <rect x="600" y="260" width="180" height="90" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
