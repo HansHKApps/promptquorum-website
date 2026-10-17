@@ -3287,5 +3287,29 @@
     ],
     "reason": "geo-meta-optimizer: locale sync with EN GSC-backed optimization (no locale GSC data)",
     "baseline": null
+  },
+  {
+    "id": "b54bd724-8d75-433e-b2ac-c7190fd6638d",
+    "slug": "/local-llms/llm-quantization-explained",
+    "date": "2026-10-17T08:02:03.423Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Q4_K_M vs Q4_0 vs Q8_0: LLM Quantization Explained (2026)",
+        "new": "Q4_K_M Explained: 5 GGUF Quants Compared by VRAM (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M, and Q8_K_XL compared. VRAM per 7B model, quality loss, and which GGUF quant to pick for your hardware in 2026.",
+        "new": "Q4_K_M is the default 4-bit GGUF quant: ~4.5 GB per 7B model, 1–3% quality loss. Compare Q4_K_S, Q5_K_M, Q6_K and Q8_0 by VRAM to pick yours in 2026."
+      }
+    ],
+    "reason": "geo-meta-optimizer: q4_k_m 1,390 imps at 0.6% CTR pos 3.9 - answer-first definition angle; old meta 160 chars; added FAQs for q5_k_m/q6_k/bf16 queries (coherence A/B1)",
+    "baseline": {
+      "position": 3.9,
+      "impressions": 1390,
+      "clicks": 9,
+      "ctr": 0.006474820143884892
+    }
   }
 ]
