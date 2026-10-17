@@ -2933,5 +2933,359 @@
     ],
     "reason": "geo-meta-optimizer (GSC, EN): \"anythingllm vs open webui\" variants ~386 impr / 7 clicks @ pos ~7; title now leads with the AnythingLLM-vs-Open WebUI pair, month removed from meta, AR meta contradiction fixed, 2 FAQs added",
     "baseline": null
+  },
+  {
+    "id": "9092663b-daf7-4210-9221-54c5ea1b39ed",
+    "slug": "/power-local-llm/omlx-review",
+    "date": "2026-10-17T07:32:13.665Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX Review (2026): Free Open-Source MLX Server for Mac",
+        "new": "oMLX Review: Free Open-Source MLX Server for Mac"
+      },
+      {
+        "field": "metaDescription",
+        "old": "What is oMLX? A free, open-source MLX server for Apple Silicon Macs with paged SSD caching. Install via Homebrew; compared with mlx-lm and mlx-serve.",
+        "new": "oMLX is a free, open-source MLX server for Mac (github.com/jundot/omlx): paged SSD cache, Homebrew install, experimental cluster mode. Vs mlx-lm, mlx-serve."
+      }
+    ],
+    "reason": "geo-meta-optimizer: drop year from FeatureAppPost seoTitle (no-year rule); meta adds github + cluster per GSC queries (omlx github, omlx cluster)",
+    "baseline": {
+      "position": 8.4,
+      "impressions": 2120,
+      "clicks": 2,
+      "ctr": 0.0009433962264150943,
+      "period": "GSC top queries 2026-10-17"
+    }
+  },
+  {
+    "id": "830b7d86-df24-413c-b3c7-735090202c87",
+    "slug": "/de/power-local-llm/omlx-review",
+    "date": "2026-10-17T07:32:13.762Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX Review (2026): Kostenloser MLX-Server für Mac",
+        "new": "oMLX Review: Kostenloser MLX-Server für Mac"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Was ist oMLX? Kostenloser, quelloffener MLX-Server für Apple-Silicon-Macs mit SSD-Cache. Installation per Homebrew; Vergleich mit mlx-lm und mlx-serve.",
+        "new": "oMLX ist ein kostenloser, quelloffener MLX-Server für Macs (github.com/jundot/omlx): SSD-Cache, Homebrew, Cluster-Modus (experimentell). Vs. mlx-lm, mlx-serve."
+      }
+    ],
+    "reason": "geo-meta-optimizer: drop year from FeatureAppPost seoTitle (no-year rule); meta adds github + cluster per GSC queries (omlx github, omlx cluster)",
+    "baseline": null
+  },
+  {
+    "id": "cb6e1287-29ed-4f95-856b-7605d1f44b37",
+    "slug": "/fr/power-local-llm/omlx-review",
+    "date": "2026-10-17T07:32:13.859Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX Review (2026) : serveur MLX gratuit et open source",
+        "new": "oMLX Review : serveur MLX gratuit et open source"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qu'est-ce qu'oMLX ? Serveur MLX gratuit et open source pour Mac Apple Silicon, avec cache SSD. Installation via Homebrew ; comparé à mlx-lm et mlx-serve.",
+        "new": "oMLX : serveur MLX gratuit et open source pour Mac (github.com/jundot/omlx). Cache SSD, Homebrew, mode cluster expérimental. Face à mlx-lm, mlx-serve."
+      }
+    ],
+    "reason": "geo-meta-optimizer: drop year from FeatureAppPost seoTitle (no-year rule); meta adds github + cluster per GSC queries (omlx github, omlx cluster)",
+    "baseline": null
+  },
+  {
+    "id": "96aecd78-3d2a-4a4c-a65a-35812c51fbf7",
+    "slug": "/ja/power-local-llm/omlx-review",
+    "date": "2026-10-17T07:32:13.957Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLXレビュー（2026）：無料OSSのMLXサーバー",
+        "new": "oMLXレビュー：無料OSSのMLXサーバー"
+      },
+      {
+        "field": "metaDescription",
+        "old": "oMLXとは？ページ化SSDキャッシュを備えた、Apple Silicon Mac向けの無料・オープンソースMLXサーバーです。Homebrewでの導入方法とmlx-lm・mlx-serveとの比較を解説します。",
+        "new": "oMLXはMac向けの無料OSSのMLXサーバー（github.com/jundot/omlx）。SSDキャッシュ、Homebrew導入、実験的クラスタ機能を解説し、mlx-lm・mlx-serveとも比較します。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: drop year from FeatureAppPost seoTitle (no-year rule); meta adds github + cluster per GSC queries (omlx github, omlx cluster)",
+    "baseline": null
+  },
+  {
+    "id": "edad0da7-d48a-4bcf-84eb-336b8a07d4fe",
+    "slug": "/zh/power-local-llm/omlx-review",
+    "date": "2026-10-17T07:32:14.051Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX评测（2026）：Mac免费开源MLX推理服务器",
+        "new": "oMLX评测：Mac免费开源MLX推理服务器"
+      },
+      {
+        "field": "metaDescription",
+        "old": "oMLX是什么？一款面向Apple Silicon Mac的免费开源MLX服务器，带分页SSD缓存。可通过Homebrew安装，并与mlx-lm、mlx-serve对比。",
+        "new": "oMLX是面向Mac的免费开源MLX服务器（github.com/jundot/omlx）：SSD缓存、Homebrew安装、实验性集群模式，并与mlx-lm、mlx-serve对比。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: drop year from FeatureAppPost seoTitle (no-year rule); meta adds github + cluster per GSC queries (omlx github, omlx cluster)",
+    "baseline": null
+  },
+  {
+    "id": "f73f94c4-ad2b-4f68-ab1a-e5aa8ed64056",
+    "slug": "/es/power-local-llm/omlx-review",
+    "date": "2026-10-17T07:32:14.147Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX Review (2026): servidor MLX gratis y open source",
+        "new": "oMLX Review: servidor MLX gratis y open source"
+      },
+      {
+        "field": "metaDescription",
+        "old": "¿Qué es oMLX? Servidor MLX gratuito y de código abierto para Mac con Apple Silicon y caché SSD. Instalación con Homebrew; comparado con mlx-lm y mlx-serve.",
+        "new": "oMLX: servidor MLX gratuito y open source para Mac (github.com/jundot/omlx). Caché SSD, Homebrew, modo clúster experimental. Frente a mlx-lm y mlx-serve."
+      }
+    ],
+    "reason": "geo-meta-optimizer: drop year from FeatureAppPost seoTitle (no-year rule); meta adds github + cluster per GSC queries (omlx github, omlx cluster)",
+    "baseline": null
+  },
+  {
+    "id": "9ce9cca3-a1ca-486b-99b3-f3793c0ebd82",
+    "slug": "/pt/power-local-llm/omlx-review",
+    "date": "2026-10-17T07:32:14.244Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX Review (2026): servidor MLX grátis e open source",
+        "new": "oMLX Review: servidor MLX grátis e open source"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O que é o oMLX? Servidor MLX gratuito e de código aberto para Macs Apple Silicon, com cache SSD. Instalação via Homebrew; comparado com mlx-lm e mlx-serve.",
+        "new": "oMLX: servidor MLX gratuito e open source para Mac (github.com/jundot/omlx). Cache SSD, Homebrew, modo cluster experimental. Vs. mlx-lm e mlx-serve."
+      }
+    ],
+    "reason": "geo-meta-optimizer: drop year from FeatureAppPost seoTitle (no-year rule); meta adds github + cluster per GSC queries (omlx github, omlx cluster)",
+    "baseline": null
+  },
+  {
+    "id": "e4e3b26c-87ba-4b09-b646-8a346a62ec1d",
+    "slug": "/ar/power-local-llm/omlx-review",
+    "date": "2026-10-17T07:32:14.344Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة oMLX (2026): خادم MLX مجاني ومفتوح المصدر لـ Mac",
+        "new": "مراجعة oMLX: خادم MLX مجاني ومفتوح المصدر لـ Mac"
+      },
+      {
+        "field": "metaDescription",
+        "old": "ما هو oMLX؟ خادم MLX مجاني ومفتوح المصدر لأجهزة Mac بمعالجات Apple Silicon مع ذاكرة SSD مؤقتة. التثبيت عبر Homebrew ومقارنة مع mlx-lm وmlx-serve.",
+        "new": "oMLX خادم MLX مجاني ومفتوح المصدر لأجهزة Mac (github.com/jundot/omlx): ذاكرة SSD مؤقتة، تثبيت عبر Homebrew، وضع عنقودي تجريبي، ومقارنة مع mlx-lm وmlx-serve."
+      }
+    ],
+    "reason": "geo-meta-optimizer: drop year from FeatureAppPost seoTitle (no-year rule); meta adds github + cluster per GSC queries (omlx github, omlx cluster)",
+    "baseline": null
+  },
+  {
+    "id": "d7df9268-9a6a-45bc-b203-1b65d6f32ad5",
+    "slug": "/ko/power-local-llm/omlx-review",
+    "date": "2026-10-17T07:32:14.462Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX 리뷰(2026): 무료 오픈소스 MLX 서버",
+        "new": "oMLX 리뷰: 무료 오픈소스 MLX 서버"
+      },
+      {
+        "field": "metaDescription",
+        "old": "oMLX란? 페이지 단위 SSD 캐시를 갖춘 Apple Silicon Mac용 무료 오픈소스 MLX 서버입니다. Homebrew 설치 방법과 mlx-lm, mlx-serve 비교까지 정리했습니다.",
+        "new": "oMLX는 Mac용 무료 오픈소스 MLX 서버(github.com/jundot/omlx)입니다. SSD 캐시, Homebrew 설치, 실험적 클러스터 모드, mlx-lm·mlx-serve 비교까지 다룹니다."
+      }
+    ],
+    "reason": "geo-meta-optimizer: drop year from FeatureAppPost seoTitle (no-year rule); meta adds github + cluster per GSC queries (omlx github, omlx cluster)",
+    "baseline": null
+  },
+  {
+    "id": "d3cf0a67-de46-40f5-8cbb-c39e05e24a64",
+    "slug": "/power-local-llm/locally-uncensored-review",
+    "date": "2026-10-17T07:33:00.155Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Locally Uncensored Review: One-Installer Local AI App",
+        "new": "Locally Uncensored Review 2026: Safety, Price, Download"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Locally Uncensored is a free, open-source (AGPL-3.0) desktop app for local chat, a coding agent, image and video generation, and LoRA training on Windows and Linux, with QR-code phone pairing. Verified 2026 review.",
+        "new": "Locally Uncensored is a free, open-source (AGPL-3.0) local AI app for Windows and Linux. Safety, download, GPU needs, Mac and phone access reviewed."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-backed (brand query 14.8k impr, 0.9% CTR); safety/price/download in title, meta trimmed to <=158, safety section + 4 FAQs added (coherence-B1)",
+    "baseline": {
+      "position": 5.2,
+      "impressions": 14836,
+      "clicks": 132,
+      "ctr": 0.00889727689404152,
+      "period": "GSC last period (user paste 2026-10-17)"
+    }
+  },
+  {
+    "id": "ab81afbd-dd2a-4ae4-8c2b-4e3954a473bd",
+    "slug": "/de/power-local-llm/locally-uncensored-review",
+    "date": "2026-10-17T07:33:00.251Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Locally Uncensored Review: Lokale KI-App mit einem Installer",
+        "new": "Locally Uncensored Review 2026: Sicherheit, Preis, Download"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Locally Uncensored ist eine kostenlose, quelloffene (AGPL-3.0) Desktop-App für lokalen Chat, Code und Bildgenerierung unter Windows und Linux, mit QR-Code-Smartphone-Kopplung. Geprüfte Review 2026.",
+        "new": "Locally Uncensored: kostenlose Open-Source-App (AGPL-3.0) für lokale KI unter Windows und Linux. Sicherheit, Download, GPU-Bedarf, Mac und Handy geprüft."
+      }
+    ],
+    "reason": "geo-meta-optimizer: locale sync with EN GSC-backed optimization (no locale GSC data)",
+    "baseline": null
+  },
+  {
+    "id": "54e1ede8-e8c6-4cb0-8b45-78b347ea5354",
+    "slug": "/fr/power-local-llm/locally-uncensored-review",
+    "date": "2026-10-17T07:33:00.348Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Locally Uncensored avis: app IA locale tout-en-un",
+        "new": "Locally Uncensored avis 2026 : sécurité et téléchargement"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Locally Uncensored est une application de bureau gratuite et open source (AGPL-3.0) pour le chat, le code et la génération d'images en local sous Windows et Linux, avec couplage par QR code. Avis vérifié 2026.",
+        "new": "Locally Uncensored est une appli d'IA locale gratuite et open source (AGPL-3.0) pour Windows et Linux. Sécurité, téléchargement, GPU, Mac et mobile analysés."
+      }
+    ],
+    "reason": "geo-meta-optimizer: locale sync with EN GSC-backed optimization (no locale GSC data)",
+    "baseline": null
+  },
+  {
+    "id": "1e1dc0de-4184-48f7-ad99-33fe3d603464",
+    "slug": "/es/power-local-llm/locally-uncensored-review",
+    "date": "2026-10-17T07:33:00.444Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Locally Uncensored reseña: app de IA local todo en uno",
+        "new": "Locally Uncensored reseña 2026: seguridad, precio, descarga"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Locally Uncensored es una app de escritorio gratuita y de código abierto (AGPL-3.0) para chat, código e imágenes en local en Windows y Linux, con emparejamiento por código QR. Reseña verificada 2026.",
+        "new": "Locally Uncensored es una app de IA local gratuita y de código abierto (AGPL-3.0) para Windows y Linux. Seguridad, descarga, GPU, Mac y móvil revisados."
+      }
+    ],
+    "reason": "geo-meta-optimizer: locale sync with EN GSC-backed optimization (no locale GSC data)",
+    "baseline": null
+  },
+  {
+    "id": "74492723-fdc2-4669-9343-83b5beb268f2",
+    "slug": "/pt/power-local-llm/locally-uncensored-review",
+    "date": "2026-10-17T07:33:00.539Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Locally Uncensored análise: app de IA local tudo em um",
+        "new": "Locally Uncensored análise 2026: segurança, preço, download"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Locally Uncensored é um app de desktop gratuito e de código aberto (AGPL-3.0) para chat, código e geração de imagens local no Windows e Linux, com pareamento por QR code. Análise verificada 2026.",
+        "new": "Locally Uncensored é um app de IA local gratuito e de código aberto (AGPL-3.0) para Windows e Linux. Segurança, download, GPU, Mac e celular analisados."
+      }
+    ],
+    "reason": "geo-meta-optimizer: locale sync with EN GSC-backed optimization (no locale GSC data)",
+    "baseline": null
+  },
+  {
+    "id": "472d90c3-5b9d-4137-857f-40c5216ca7c3",
+    "slug": "/ja/power-local-llm/locally-uncensored-review",
+    "date": "2026-10-17T07:33:00.632Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Locally Uncensored レビュー：インストーラー1つのローカルAIアプリ",
+        "new": "Locally Uncensored レビュー：安全性と料金"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Locally UncensoredはWindows・Linux向けの無料・オープンソース（AGPL-3.0）デスクトップアプリ。QRコードでスマホ連携も可能なローカルチャット・コード・画像生成ツール。2026年検証済みレビュー。",
+        "new": "Locally UncensoredはWindows・Linux向けの無料オープンソース（AGPL-3.0）ローカルAIアプリ。安全性、ダウンロード、必要GPU、Mac対応、スマホ連携を検証。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: locale sync with EN GSC-backed optimization (no locale GSC data)",
+    "baseline": null
+  },
+  {
+    "id": "73ccf8cc-2588-4fc4-9489-e70861b9d98c",
+    "slug": "/zh/power-local-llm/locally-uncensored-review",
+    "date": "2026-10-17T07:33:00.727Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Locally Uncensored 评测：单一安装包的本地AI应用",
+        "new": "Locally Uncensored 评测：安全性与价格"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Locally Uncensored是一款面向Windows和Linux的免费开源（AGPL-3.0）桌面应用，支持本地聊天、代码与图像生成，并可通过二维码与手机配对。2026年经核实评测。",
+        "new": "Locally Uncensored是面向Windows和Linux的免费开源（AGPL-3.0）本地AI应用。评测安全性、下载方式、GPU需求、Mac支持和手机连接。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: locale sync with EN GSC-backed optimization (no locale GSC data)",
+    "baseline": null
+  },
+  {
+    "id": "4ad1515c-7aca-4db7-a050-9df83e8684ab",
+    "slug": "/ar/power-local-llm/locally-uncensored-review",
+    "date": "2026-10-17T07:33:00.824Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Locally Uncensored: تطبيق ذكاء اصطناعي محلي بمُثبِّت واحد",
+        "new": "مراجعة Locally Uncensored 2026: الأمان والسعر والتنزيل"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Locally Uncensored تطبيق سطح مكتب مجاني ومفتوح المصدر (AGPL-3.0) للدردشة والبرمجة وتوليد الصور محليًا على Windows وLinux، مع اقتران عبر رمز QR بالهاتف. مراجعة موثّقة لعام 2026.",
+        "new": "Locally Uncensored تطبيق ذكاء اصطناعي محلي مجاني ومفتوح المصدر (AGPL-3.0) لنظامي Windows وLinux. مراجعة الأمان والتنزيل ومتطلبات GPU ودعم Mac والهاتف."
+      }
+    ],
+    "reason": "geo-meta-optimizer: locale sync with EN GSC-backed optimization (no locale GSC data)",
+    "baseline": null
+  },
+  {
+    "id": "059ff3ab-6a60-498e-adff-9fefa17d375c",
+    "slug": "/ko/power-local-llm/locally-uncensored-review",
+    "date": "2026-10-17T07:33:00.921Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Locally Uncensored 리뷰: 설치 파일 하나의 로컬 AI 앱",
+        "new": "Locally Uncensored 리뷰: 안전성·가격"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Locally Uncensored는 Windows와 Linux용 무료 오픈소스(AGPL-3.0) 데스크톱 앱으로, QR 코드로 스마트폰과 연동하며 로컬 채팅·코드·이미지 생성을 지원합니다. 2026년 검증된 리뷰.",
+        "new": "Locally Uncensored는 Windows·Linux용 무료 오픈소스(AGPL-3.0) 로컬 AI 앱입니다. 안전성, 다운로드, GPU 요구사항, Mac 지원, 스마트폰 연동을 검증했습니다."
+      }
+    ],
+    "reason": "geo-meta-optimizer: locale sync with EN GSC-backed optimization (no locale GSC data)",
+    "baseline": null
   }
 ]
