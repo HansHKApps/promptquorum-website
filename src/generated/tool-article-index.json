@@ -1399,6 +1399,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "swerve-ai-review",
+        "title": "Swerve Review: AI Story and Character Chat for iPhone",
+        "url": "/power-local-llm/swerve-ai-review",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
@@ -1438,7 +1446,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Enchanted": {
@@ -7729,6 +7737,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "swerve-ai-review",
+        "title": "Swerve Review: AI Story and Character Chat for iPhone",
+        "url": "/power-local-llm/swerve-ai-review",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "risuai-review",
         "title": "RisuAI Review: Open-Source Roleplay Chat Client",
         "url": "/power-local-llm/risuai-review",
@@ -7742,18 +7758,10 @@
         "url": "/power-local-llm/chapper-review",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-prompts-for-fiction-writers",
-        "title": "Local LLM Prompts for Fiction Writers: 15 Templates & Techniques (2026)",
-        "url": "/power-local-llm/local-llm-prompts-for-fiction-writers",
-        "dateModified": "2026-07-13",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "RisuAI": {
     "articles": [
@@ -7763,6 +7771,14 @@
         "title": "RisuAI Review: Open-Source Roleplay Chat Client",
         "url": "/power-local-llm/risuai-review",
         "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "swerve-ai-review",
+        "title": "Swerve Review: AI Story and Character Chat for iPhone",
+        "url": "/power-local-llm/swerve-ai-review",
+        "dateModified": "2026-10-17",
         "tier": "about"
       },
       {
@@ -7828,17 +7844,9 @@
         "url": "/power-local-llm/chapper-review",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-local-llm-creative-writing-ethics",
-        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
-        "dateModified": "2026-08-24",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "Second Me": {
@@ -10704,7 +10712,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 196,
+    "totalCount": 197,
     "capped": true
   },
   "Qdrant": {

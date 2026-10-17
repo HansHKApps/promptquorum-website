@@ -6646,7 +6646,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 7 categories of a local LLM stack: 254 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
+          "title": "The 7 categories of a local LLM stack: 258 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -10869,6 +10869,24 @@
       ],
       "images": []
     },
+    "swerve-ai-review": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-17",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "friedrichai-review": {
       "dateModified": "2026-10-09",
       "lastFactChecked": null,
@@ -10981,6 +10999,24 @@
       "dateModified": "2026-10-06",
       "lastFactChecked": null,
       "publishDate": "2026-10-06",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "pixlstash-review": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-17",
       "hasSections": true,
       "langs": [
         "en",
@@ -11305,6 +11341,24 @@
       "dateModified": "2026-09-12",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "easy-diffusion-review": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-17",
       "hasSections": true,
       "langs": [
         "en",
@@ -13140,7 +13194,7 @@
       "images": []
     },
     "bestLocalLlmCoding12gbVram": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -13158,7 +13212,7 @@
       "images": [
         {
           "url": "/images/best-local-llm-coding-12gb-vram-model-vram-comparison-hero-en.webp",
-          "title": "Best Coding Models for 12 GB VRAM -- Q4_K_M quantization"
+          "title": "Best Coding Models for 12 GB VRAM -- download sizes in Ollama"
         },
         {
           "url": "/images/best-local-llm-coding-12gb-vram-coding-settings-hero-en.webp",
@@ -13167,7 +13221,7 @@
       ]
     },
     "bestModelsAmd5700x3070ti": {
-      "dateModified": "2026-07-26",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -13185,7 +13239,7 @@
       "images": []
     },
     "radeon6800mLocalLlm": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -13203,7 +13257,7 @@
       "images": []
     },
     "canYouRunRagOn2gbRam": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -13221,7 +13275,7 @@
       "images": []
     },
     "bestLocalLlm16gbRamLaptop": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -13239,7 +13293,7 @@
       "images": []
     },
     "coStarPromptFramework": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -13293,7 +13347,7 @@
       "images": []
     },
     "isDeepseekGdprSafe": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -13437,7 +13491,7 @@
       "images": []
     },
     "cloudGpuCostPerHour": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -13617,7 +13671,7 @@
       "images": []
     },
     "bestQwenModelForCoding": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -13635,7 +13689,7 @@
       "images": []
     },
     "deepseekV3LocalHardwareRequirements": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -13653,7 +13707,7 @@
       "images": []
     },
     "chinesePromptingVsEnglishPrompting": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -13734,7 +13788,7 @@
       "images": []
     },
     "bestEgpuSetupForMacbookLocalLlm2026": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -13752,7 +13806,7 @@
       "images": []
     },
     "bestCloudGpuForFineTuningUnder1PerHour": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -13788,7 +13842,7 @@
       "images": []
     },
     "bestOpenSourceAlternativesToChatgptPlus": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -13824,7 +13878,7 @@
       "images": []
     },
     "bestLocalLlmAppsJapanAndroid": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-27",
       "hasSections": true,
@@ -14031,7 +14085,7 @@
       "images": []
     },
     "bestRtx4090Setup70bModels": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -14121,7 +14175,7 @@
       "images": []
     },
     "fineTuning7bModelLocallyHardware": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -14211,7 +14265,7 @@
       "images": []
     },
     "bestEmbeddingModelLocalRag": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -14229,7 +14283,7 @@
       "images": []
     },
     "bestLocalLlmDocumentSummarization": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -14373,7 +14427,7 @@
       "images": []
     },
     "speculativeDecodingExplained": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -14391,7 +14445,7 @@
       "images": []
     },
     "loraVsFullFineTuning": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -14409,7 +14463,7 @@
       "images": []
     },
     "bestLocalLlmLicenseComparison": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -14481,7 +14535,7 @@
       "images": []
     },
     "bestGpuLocalLlmUaePrice": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -14499,7 +14553,7 @@
       "images": []
     },
     "hybridLocalCloudLlmStrategy": {
-      "dateModified": "2026-07-15",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-15",
       "hasSections": true,
@@ -14553,7 +14607,7 @@
       "images": []
     },
     "promptCachingForLocalLlmExplained": {
-      "dateModified": "2026-07-15",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-15",
       "hasSections": true,
@@ -14571,7 +14625,7 @@
       "images": []
     },
     "bestPiiRedactionToolLocalLlm": {
-      "dateModified": "2026-07-15",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-07-15",
       "hasSections": true,

@@ -128,6 +128,7 @@ import { app as app_return_editor } from './apps/return-editor'
 import { app as app_mlxhub } from './apps/mlxhub'
 import { app as app_local_ai_chat_pocket } from './apps/local-ai-chat-pocket'
 import { app as app_pixlstash } from './apps/pixlstash'
+import { app as app_swerve_ai } from './apps/swerve-ai'
 import { app as app_whisper_notes } from './apps/whisper-notes'
 import { app as app_anyllm } from './apps/anyllm'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
@@ -528,6 +529,7 @@ export const localAiApps: ToolRecord[] = [
   app_local_ai_mail,
   app_pcai_photo_retouch,
   app_honey_llm,
+  app_swerve_ai,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length

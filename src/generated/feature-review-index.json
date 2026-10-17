@@ -1263,5 +1263,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "honey-llm-review",
     "url": "/power-local-llm/honey-llm-review"
+  },
+  "swerve-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "swerve-ai-review",
+    "url": "/power-local-llm/swerve-ai-review"
   }
 }
