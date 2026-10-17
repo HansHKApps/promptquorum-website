@@ -31,7 +31,7 @@ const T = {
     tldrTitle: 'Key Features at a Glance',
     tldrItems: [
       '9 prompt engineering frameworks (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
-      'Dispatch to 25+ cloud models simultaneously (GPT-4o, Claude, Gemini, DeepSeek, and more)',
+      'Dispatch to 25+ cloud models simultaneously (GPT, Claude, Gemini, DeepSeek, and more)',
       '13 Quorum consensus analysis types across 4 categories (synthesis, comparison, quality, selection)',
       'Hallucination detection flags claims that appear in only one model or contradict consensus',
       'Local LLM support: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM, and any OpenAI-compatible endpoint',
@@ -72,7 +72,7 @@ const T = {
     tldrTitle: 'Wichtigste Funktionen auf einen Blick',
     tldrItems: [
       '9 Prompt-Engineering-Frameworks (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
-      'Versand an 25+ Cloud-Modelle gleichzeitig (GPT-4o, Claude, Gemini, DeepSeek und mehr)',
+      'Versand an 25+ Cloud-Modelle gleichzeitig (GPT, Claude, Gemini, DeepSeek und mehr)',
       '13 Quorum-Konsenstypen in 4 Kategorien (Synthese, Vergleich, Qualität, Auswahl)',
       'Halluzinationserkennung markiert Aussagen, die nur in einem Modell oder nicht im Konsens vorkommen',
       'Local LLM-Unterstützung: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM und mehr',
@@ -113,7 +113,7 @@ const T = {
     tldrTitle: 'Fonctionnalités clés en un coup d\'œil',
     tldrItems: [
       '9 frameworks de prompt engineering (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
-      'Envoyez à 25+ modèles cloud simultanément (GPT-4o, Claude, Gemini, DeepSeek, et plus)',
+      'Envoyez à 25+ modèles cloud simultanément (GPT, Claude, Gemini, DeepSeek, et plus)',
       '13 types d\'analyse de consensus Quorum dans 4 catégories (synthèse, comparaison, qualité, sélection)',
       'Détection des hallucinations signale les affirmations qui n\'apparaissent que dans un modèle',
       'Support des LLM locaux : Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM, et compatibles OpenAI',
@@ -154,7 +154,7 @@ const T = {
     tldrTitle: '主要機能の概要',
     tldrItems: [
       '9つのプロンプトエンジニアリングフレームワーク（CO-STAR、CRAFT、RISEN、TRACE、APE、SPECS、Google、RTF）',
-      '25以上のクラウドモデルへの同時ディスパッチ（GPT-4o、Claude、Gemini、DeepSeek など）',
+      '25以上のクラウドモデルへの同時ディスパッチ（GPT、Claude、Gemini、DeepSeek など）',
       '4つのカテゴリ（統合、比較、品質、選択）にわたる13のクォーラムコンセンサス分析タイプ',
       '1つのモデルのみ、またはコンセンサスと矛盾する主張にフラグを立てるハルシネーション検出',
       'ローカルLLMサポート：Ollama、LM Studio、Jan AI、GPT4All、Open WebUI、vLLM、OpenAI互換エンドポイント',
@@ -195,7 +195,7 @@ const T = {
     tldrTitle: '核心功能一览',
     tldrItems: [
       '9 种提示词工程框架（CO-STAR、CRAFT、RISEN、TRACE、APE、SPECS、Google、RTF）',
-      '同时分发到 25+ 个云模型（GPT-4o、Claude、Gemini、DeepSeek 等）',
+      '同时分发到 25+ 个云模型（GPT、Claude、Gemini、DeepSeek 等）',
       '4 个类别的 13 种 Quorum 共识分析类型（合成、比较、质量、选择）',
       '幻觉检测标记仅在一个模型中出现或与共识相矛盾的声明',
       '本地 LLM 支持：Ollama、LM Studio、Jan AI、GPT4All、Open WebUI、vLLM 及 OpenAI 兼容端点',
@@ -236,7 +236,7 @@ const T = {
     tldrTitle: 'Características principales de un vistazo',
     tldrItems: [
       '9 frameworks de prompt engineering (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
-      'Envío a 25+ modelos en la nube simultáneamente (GPT-4o, Claude, Gemini, DeepSeek y más)',
+      'Envío a 25+ modelos en la nube simultáneamente (GPT, Claude, Gemini, DeepSeek y más)',
       '13 tipos de análisis de consenso Quorum en 4 categorías (síntesis, comparación, calidad, selección)',
       'La detección de alucinaciones marca afirmaciones que aparecen en un solo modelo o contradicen el consenso',
       'Soporte de LLM local: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM y cualquier endpoint compatible con OpenAI',
@@ -277,7 +277,7 @@ const T = {
     tldrTitle: 'Principais recursos em resumo',
     tldrItems: [
       '9 frameworks de prompt engineering (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
-      'Envio para 25+ modelos na nuvem simultaneamente (GPT-4o, Claude, Gemini, DeepSeek e mais)',
+      'Envio para 25+ modelos na nuvem simultaneamente (GPT, Claude, Gemini, DeepSeek e mais)',
       '13 tipos de análise de consenso Quorum em 4 categorias (síntese, comparação, qualidade, seleção)',
       'A detecção de alucinação sinaliza afirmações que aparecem em apenas um modelo ou que contradizem o consenso',
       'Suporte a LLM local: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM e qualquer endpoint compatível com OpenAI',
@@ -318,7 +318,7 @@ const T = {
     tldrTitle: 'الميزات الرئيسية في لمحة',
     tldrItems: [
       '9 أطر عمل لهندسة الموجهات (CO-STAR، CRAFT، RISEN، TRACE، APE، SPECS، Google، RTF)',
-      'إرسال إلى 25+ نموذج سحابي في آنٍ واحد (GPT-4o، Claude، Gemini، DeepSeek والمزيد)',
+      'إرسال إلى 25+ نموذج سحابي في آنٍ واحد (GPT، Claude، Gemini، DeepSeek والمزيد)',
       '13 نوع تحليل توافق Quorum عبر 4 فئات (التوليف، المقارنة، الجودة، الاختيار)',
       'كشف الهلوسة يُعلّم الادعاءات التي تظهر في نموذج واحد فقط أو تتعارض مع التوافق',
       'دعم النماذج المحلية: Ollama، LM Studio، Jan AI، GPT4All، Open WebUI، vLLM، وأي نقطة نهاية متوافقة مع OpenAI',
@@ -359,7 +359,7 @@ const T = {
     tldrTitle: '주요 기능 한눈에 보기',
     tldrItems: [
       '9가지 프롬프트 엔지니어링 프레임워크 (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
-      '25개 이상의 클라우드 모델에 동시 전송 (GPT-4o, Claude, Gemini, DeepSeek 등)',
+      '25개 이상의 클라우드 모델에 동시 전송 (GPT, Claude, Gemini, DeepSeek 등)',
       '4가지 카테고리에 걸친 13가지 Quorum 합의 분석 유형 (합성, 비교, 품질, 선택)',
       '환각 감지: 단일 모델에만 나타나거나 합의와 상충되는 주장을 표시',
       '로컬 LLM 지원: Ollama, LM Studio, Jan AI, GPT4All, Open WebUI, vLLM, OpenAI 호환 엔드포인트',

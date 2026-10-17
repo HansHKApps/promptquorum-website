@@ -555,7 +555,7 @@ export default function PtPQAppsPage() {
                     <span className="text-primary text-lg">✓</span>
                   </div>
                   <h3 className="font-semibold text-text-primary mb-2">Funciona offline</h3>
-                  <p className="text-text-secondary text-sm">O app de desktop (Electron) e o app móvel (Capacitor) suportam operação totalmente offline com modelos locais via Ollama, LM Studio, Jan AI ou endpoints compatíveis.</p>
+                  <p className="text-text-secondary text-sm">O app de desktop (Electron) suporta operação totalmente offline com modelos locais via Ollama, LM Studio, Jan AI ou endpoints compatíveis. O app móvel (Capacitor) está planejado.</p>
                 </div>
             </div>
 

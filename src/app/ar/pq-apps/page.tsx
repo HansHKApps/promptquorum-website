@@ -555,7 +555,7 @@ export default function ArPQAppsPage() {
                     <span className="text-primary text-lg">✓</span>
                   </div>
                   <h3 className="font-semibold text-text-primary mb-2">يعمل بلا اتصال</h3>
-                  <p className="text-text-secondary text-sm">تطبيق سطح المكتب (Electron) والتطبيق المحمول (Capacitor) يدعمان التشغيل الكامل دون اتصال مع النماذج المحلية عبر Ollama وLM Studio وJan AI أو أي نقطة نهاية متوافقة.</p>
+                  <p className="text-text-secondary text-sm">يدعم تطبيق سطح المكتب (Electron) التشغيل الكامل دون اتصال مع النماذج المحلية عبر Ollama وLM Studio وJan AI أو أي نقطة نهاية متوافقة. التطبيق المحمول (Capacitor) مخطط له لاحقاً.</p>
                 </div>
             </div>
 

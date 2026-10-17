@@ -551,7 +551,7 @@ export default function FrPQAppsPage() {
                     <span className="text-primary text-lg">✓</span>
                   </div>
                   <h3 className="font-semibold text-text-primary mb-2">Fonctionne localement</h3>
-                  <p className="text-text-secondary text-sm">App desktop via Electron, mobile via Capacitor. Fonctionne entièrement hors ligne avec un LLM local.</p>
+                  <p className="text-text-secondary text-sm">App desktop via Electron ; app mobile (Capacitor) prévue. L'app desktop fonctionne entièrement hors ligne avec un LLM local.</p>
                 </div>
             </div>
 

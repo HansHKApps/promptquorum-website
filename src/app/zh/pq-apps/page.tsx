@@ -551,7 +551,7 @@ export default function ZhPQAppsPage() {
                     <span className="text-primary text-lg">✓</span>
                   </div>
                   <h3 className="font-semibold text-text-primary mb-2">本地运行</h3>
-                  <p className="text-text-secondary text-sm">通过 Electron 的桌面应用，通过 Capacitor 的移动应用。使用本地 LLM 完全离线运行。</p>
+                  <p className="text-text-secondary text-sm">通过 Electron 的桌面应用（移动应用将通过 Capacitor 推出）。桌面应用使用本地 LLM 可完全离线运行。</p>
                 </div>
             </div>
 
