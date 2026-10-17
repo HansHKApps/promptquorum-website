@@ -1001,7 +1001,7 @@ const HUB_THEMES: Array<{
     id: 'creative-roleplay',
     badge: 'Creative & Roleplay',
     question: 'Creative & Roleplay: Which Local Models Write Like a Human?',
-    description: 'Fiction, dialogue, worldbuilding, screenplays — tested on 50+ creative prompts. SillyTavern vs Agnai vs RisuAI for character work. The honest take on uncensored models for legitimate creative writing.',
+    description: 'Fiction, dialogue, worldbuilding, screenplays — model picks by VRAM tier. SillyTavern vs Agnai vs RisuAI for character work. The honest take on uncensored models for legitimate creative writing.',
     colorBadge: 'bg-rose-50 text-rose-700 border-rose-200',
     colorDot: 'bg-rose-400',
     slugs: [

@@ -6282,7 +6282,7 @@
       ]
     },
     "best-local-llm-creative-writing": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6297,16 +6297,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/best-local-llm-creative-writing-2026-model-comparison-hero-en.webp",
-          "title": "Llama 3.3 70B wins broadest; specialists win one category each — pick by task, not overall rank."
-        },
-        {
-          "url": "/images/best-local-llm-creative-writing-2026-decision-tree-hero-en.webp",
-          "title": "Start with Qwen3 32B if unsure — it covers most workflows on consumer hardware."
-        }
-      ]
+      "images": []
     },
     "best-local-models-tool-calling-2026": {
       "dateModified": "2026-09-01",
@@ -12780,7 +12771,7 @@
       "images": []
     },
     "howMuchRamFor7bModel": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-10-17",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,

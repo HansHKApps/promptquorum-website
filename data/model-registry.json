@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-28",
+  "last_updated": "2026-10-17",
   "models": [
     {
       "company": "Supersonic Labs",
@@ -3057,6 +3057,30 @@
       "source_url": "https://apps.apple.com/",
       "verified_date": "2026-09-25",
       "notes": "The app's bundled 3B, 2-bit-quantized model — the app does not publicly disclose its exact base model/architecture, and this site's review accurately describes it only in those generic terms rather than inventing a specific name."
+    },
+    {
+      "company": "Mistral AI",
+      "family": "Mistral",
+      "model": "Mistral Small 3 24B",
+      "type": "open-weight",
+      "release_date": "2025",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ollama.com/library/mistral-small",
+      "verified_date": "2026-10-17",
+      "notes": "Exact-name entry (2026-10-17). Ollama's mistral-small page (fetched 2026-10-17) still lists the 24B tag (14 GB, 32K context, Apache 2.0). Mistral Small 4 (March 2026) is a 119B MoE and does not fit 16 GB, so for 16 GB local-creative-writing content Small 3 24B remains the correct pick -- do not treat as stale in that context."
+    },
+    {
+      "company": "Nous Research",
+      "family": "Hermes",
+      "model": "Hermes 4.3 36B",
+      "type": "open-weight",
+      "release_date": "2025-12",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/NousResearch/Hermes-4.3-36B",
+      "verified_date": "2026-10-17",
+      "notes": "Built on ByteDance Seed-OSS-36B, Apache 2.0, GGUF quantizations on Hugging Face (NousResearch/Hermes-4.3-36B-GGUF). Not in the Ollama library as hermes4 (hermes3 only, checked 2026-10-17). Release month from third-party sources; the HF card gives no date."
     }
   ],
   "sources": [
