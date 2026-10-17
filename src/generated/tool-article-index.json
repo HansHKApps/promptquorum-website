@@ -3911,6 +3911,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-whisper-stt-comparison",
+        "title": "Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration",
+        "url": "/power-local-llm/local-whisper-stt-comparison",
+        "dateModified": "2026-10-17",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "self-hosted-ai-starter-kit-review",
         "title": "Self-Hosted AI Starter Kit Review: n8n + Ollama + Qdrant in One Compose File",
         "url": "/power-local-llm/self-hosted-ai-starter-kit-review",
@@ -3962,14 +3970,6 @@
         "slug": "mram-in-memory-computing-local-ai-2026",
         "title": "MRAM and In-Memory Computing: The Next Leap for On-Device AI?",
         "url": "/local-llms/mram-in-memory-computing-local-ai-2026",
-        "dateModified": "2026-08-28",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-whisper-stt-comparison-2026",
-        "title": "Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration",
-        "url": "/power-local-llm/local-whisper-stt-comparison-2026",
         "dateModified": "2026-08-28",
         "tier": "mentioned"
       }
@@ -4989,6 +4989,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-whisper-stt-comparison",
+        "title": "Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration",
+        "url": "/power-local-llm/local-whisper-stt-comparison",
+        "dateModified": "2026-10-17",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "hilbertraum-review",
         "title": "HilbertRaum Review: A Portable, Offline AI Workspace for Chat and Your Own Documents",
         "url": "/power-local-llm/hilbertraum-review",
@@ -5050,14 +5058,6 @@
         "url": "/power-local-llm/localai-explained",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "faster-whisper-review",
-        "title": "faster-whisper Review: CTranslate2-Accelerated Local Speech-to-Text",
-        "url": "/power-local-llm/faster-whisper-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
     "totalCount": 23,
@@ -5071,6 +5071,14 @@
         "title": "faster-whisper Review: CTranslate2-Accelerated Local Speech-to-Text",
         "url": "/power-local-llm/faster-whisper-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-whisper-stt-comparison",
+        "title": "Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration",
+        "url": "/power-local-llm/local-whisper-stt-comparison",
+        "dateModified": "2026-10-17",
         "tier": "about"
       },
       {
@@ -5095,22 +5103,6 @@
         "title": "Whisper.cpp Review: Local Speech-to-Text in Pure C/C++",
         "url": "/power-local-llm/whisper-cpp-review",
         "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-whisper-stt-comparison-2026",
-        "title": "Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration",
-        "url": "/power-local-llm/local-whisper-stt-comparison-2026",
-        "dateModified": "2026-08-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-whisper-metal-benchmark",
-        "title": "Whisper on Apple Silicon 2026: Metal Benchmarks, Core ML Setup, M1–M5 Speed Guide",
-        "url": "/local-llms/apple-silicon-whisper-metal-benchmark",
-        "dateModified": "2026-08-26",
         "tier": "about"
       },
       {
@@ -5143,6 +5135,14 @@
         "title": "Meetily Review: Local, Privacy-First AI Meeting Notes",
         "url": "/power-local-llm/meetily-review",
         "dateModified": "2026-09-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mlc-chat-review",
+        "title": "MLC Chat Review: The Mobile App Built on MLC LLM, Assessed Honestly",
+        "url": "/power-local-llm/mlc-chat-review",
+        "dateModified": "2026-09-07",
         "tier": "mentioned"
       }
     ],

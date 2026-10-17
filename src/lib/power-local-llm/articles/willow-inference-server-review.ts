@@ -271,7 +271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Willow Inference Server\'s directory entry alongside other speech tools covered above.',
           '[whisper.cpp Review](/power-local-llm/whisper-cpp-review) — a lightweight, CPU-friendly Whisper transcription library, compared directly to Willow Inference Server above.',
-          '[Local Whisper STT Comparison 2026](/power-local-llm/local-whisper-stt-comparison-2026) — a broader look at self-hosted Whisper-based transcription options beyond Willow Inference Server.',
+          '[Local Whisper STT Comparison 2026](/power-local-llm/local-whisper-stt-comparison) — a broader look at self-hosted Whisper-based transcription options beyond Willow Inference Server.',
           '[Local TTS Voice Cloning: Piper, Coqui, XTTS](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — a deeper look at the voice-cloning TTS approach Willow Inference Server\'s bundled XTTS pipeline also uses.',
         ],
       },
@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Lokales KI-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Willow Inference Server neben anderen oben behandelten Sprach-Tools.',
           '[whisper.cpp Review](/de/power-local-llm/whisper-cpp-review) — eine leichtgewichtige, CPU-freundliche Whisper-Transkriptionsbibliothek, oben direkt mit Willow Inference Server verglichen.',
-          '[Lokaler Whisper-STT-Vergleich 2026](/de/power-local-llm/local-whisper-stt-comparison-2026) — ein breiterer Blick auf selbst gehostete Whisper-basierte Transkriptionsoptionen über Willow Inference Server hinaus.',
+          '[Lokaler Whisper-STT-Vergleich 2026](/de/power-local-llm/local-whisper-stt-comparison) — ein breiterer Blick auf selbst gehostete Whisper-basierte Transkriptionsoptionen über Willow Inference Server hinaus.',
           '[Lokales TTS-Stimmklonen: Piper, Coqui, XTTS](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — ein tieferer Blick auf den Stimmklon-Ansatz, den auch die gebündelte XTTS-Pipeline von Willow Inference Server verwendet.',
         ],
       },
@@ -821,7 +821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Répertoire des logiciels d\'IA locale 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de Willow Inference Server aux côtés des autres outils vocaux évoqués ci-dessus.',
           '[Avis whisper.cpp](/fr/power-local-llm/whisper-cpp-review) — une bibliothèque de transcription Whisper légère et adaptée au CPU, comparée directement à Willow Inference Server ci-dessus.',
-          '[Comparaison Whisper local STT 2026](/fr/power-local-llm/local-whisper-stt-comparison-2026) — un panorama plus large des options de transcription basées sur Whisper auto-hébergées au-delà de Willow Inference Server.',
+          '[Comparaison Whisper local STT 2026](/fr/power-local-llm/local-whisper-stt-comparison) — un panorama plus large des options de transcription basées sur Whisper auto-hébergées au-delà de Willow Inference Server.',
           '[Clonage de voix TTS local : Piper, Coqui, XTTS](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — un regard plus approfondi sur l\'approche de clonage vocal que le pipeline XTTS intégré de Willow Inference Server utilise aussi.',
         ],
       },
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[ローカルAIソフトウェアディレクトリ2026](/ja/directory) — 本記事が属するローカルAIツールの完全カタログ。上記で取り上げた他の音声ツールと並んでWillow Inference Serverのディレクトリエントリーも含む。',
           '[whisper.cppレビュー](/ja/power-local-llm/whisper-cpp-review) — 軽量でCPUに優しいWhisper文字起こしライブラリ。上記でWillow Inference Serverと直接比較。',
-          '[ローカルWhisper STT比較2026](/ja/power-local-llm/local-whisper-stt-comparison-2026) — Willow Inference Server以外のセルフホスト型Whisperベース文字起こしの選択肢をより広く紹介。',
+          '[ローカルWhisper STT比較2026](/ja/power-local-llm/local-whisper-stt-comparison) — Willow Inference Server以外のセルフホスト型Whisperベース文字起こしの選択肢をより広く紹介。',
           '[ローカルTTS音声クローン: Piper、Coqui、XTTS](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Willow Inference Serverがバンドルするxttsパイプラインも使用する音声クローンの手法をより深く解説。',
         ],
       },
@@ -1371,7 +1371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[本地AI软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录，包含Willow Inference Server的目录条目及上文提到的其他语音工具。',
           '[whisper.cpp评测](/zh/power-local-llm/whisper-cpp-review) — 一个轻量、适合CPU的Whisper转录库，上文已与Willow Inference Server直接比较。',
-          '[本地Whisper STT对比2026](/zh/power-local-llm/local-whisper-stt-comparison-2026) — 除Willow Inference Server之外，更广泛地介绍自托管的基于Whisper的转录选择。',
+          '[本地Whisper STT对比2026](/zh/power-local-llm/local-whisper-stt-comparison) — 除Willow Inference Server之外，更广泛地介绍自托管的基于Whisper的转录选择。',
           '[本地TTS语音克隆：Piper、Coqui、XTTS](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 深入探讨Willow Inference Server内置的XTTS流水线同样使用的语音克隆方法。',
         ],
       },
@@ -1646,7 +1646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Directorio de Software de IA Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de Willow Inference Server junto a otras herramientas de voz mencionadas arriba.',
           '[Reseña de whisper.cpp](/es/power-local-llm/whisper-cpp-review) — una librería de transcripción Whisper ligera y apta para CPU, comparada directamente con Willow Inference Server arriba.',
-          '[Comparación de Whisper local STT 2026](/es/power-local-llm/local-whisper-stt-comparison-2026) — una visión más amplia de las opciones de transcripción autoalojadas basadas en Whisper más allá de Willow Inference Server.',
+          '[Comparación de Whisper local STT 2026](/es/power-local-llm/local-whisper-stt-comparison) — una visión más amplia de las opciones de transcripción autoalojadas basadas en Whisper más allá de Willow Inference Server.',
           '[Clonación de voz TTS local: Piper, Coqui, XTTS](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — un vistazo más profundo al enfoque de clonación de voz que también usa la canalización XTTS integrada de Willow Inference Server.',
         ],
       },
@@ -1921,7 +1921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Diretório de Software de IA Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Willow Inference Server ao lado de outras ferramentas de voz abordadas acima.',
           '[Análise do whisper.cpp](/pt/power-local-llm/whisper-cpp-review) — uma biblioteca de transcrição Whisper leve e amigável à CPU, comparada diretamente com o Willow Inference Server acima.',
-          '[Comparação de Whisper local STT 2026](/pt/power-local-llm/local-whisper-stt-comparison-2026) — um panorama mais amplo das opções de transcrição auto-hospedadas baseadas em Whisper além do Willow Inference Server.',
+          '[Comparação de Whisper local STT 2026](/pt/power-local-llm/local-whisper-stt-comparison) — um panorama mais amplo das opções de transcrição auto-hospedadas baseadas em Whisper além do Willow Inference Server.',
           '[Clonagem de voz TTS local: Piper, Coqui, XTTS](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — um olhar mais aprofundado sobre a abordagem de clonagem de voz que o pipeline XTTS empacotado pelo Willow Inference Server também usa.',
         ],
       },
@@ -2196,7 +2196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[دليل برمجيات الذكاء الاصطناعي المحلي 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك مدخل Willow Inference Server إلى جانب أدوات صوتية أخرى تناولناها أعلاه.',
           '[مراجعة whisper.cpp](/ar/power-local-llm/whisper-cpp-review) — مكتبة تفريغ Whisper خفيفة الوزن ومناسبة للمعالج، قُورنت مباشرة بـWillow Inference Server أعلاه.',
-          '[مقارنة Whisper المحلي لتحويل الكلام إلى نص 2026](/ar/power-local-llm/local-whisper-stt-comparison-2026) — نظرة أوسع على خيارات التفريغ المستضافة ذاتيًا القائمة على Whisper بخلاف Willow Inference Server.',
+          '[مقارنة Whisper المحلي لتحويل الكلام إلى نص 2026](/ar/power-local-llm/local-whisper-stt-comparison) — نظرة أوسع على خيارات التفريغ المستضافة ذاتيًا القائمة على Whisper بخلاف Willow Inference Server.',
           '[استنساخ صوت TTS محلي: Piper وCoqui وXTTS](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — نظرة أعمق على أسلوب استنساخ الصوت الذي يستخدمه أيضًا خط أنابيب XTTS المدمج في Willow Inference Server.',
         ],
       },
@@ -2471,7 +2471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[로컬 AI 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 음성 도구와 함께 Willow Inference Server의 디렉터리 항목도 포함합니다.',
           '[whisper.cpp 리뷰](/ko/power-local-llm/whisper-cpp-review) — 가볍고 CPU 친화적인 Whisper 전사 라이브러리로, 위에서 Willow Inference Server와 직접 비교했습니다.',
-          '[로컬 Whisper STT 비교 2026](/ko/power-local-llm/local-whisper-stt-comparison-2026) — Willow Inference Server 외의 셀프호스팅 Whisper 기반 전사 옵션을 더 폭넓게 살펴봅니다.',
+          '[로컬 Whisper STT 비교 2026](/ko/power-local-llm/local-whisper-stt-comparison) — Willow Inference Server 외의 셀프호스팅 Whisper 기반 전사 옵션을 더 폭넓게 살펴봅니다.',
           '[로컬 TTS 음성 클로닝: Piper, Coqui, XTTS](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Willow Inference Server가 번들한 XTTS 파이프라인도 사용하는 음성 클로닝 방식을 더 깊이 다룹니다.',
         ],
       },

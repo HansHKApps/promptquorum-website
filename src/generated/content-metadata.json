@@ -7291,9 +7291,9 @@
         }
       ]
     },
-    "local-whisper-stt-comparison-2026": {
-      "dateModified": "2026-08-28",
-      "lastFactChecked": "2026-08-28",
+    "local-whisper-stt-comparison": {
+      "dateModified": "2026-10-17",
+      "lastFactChecked": "2026-10-17",
       "publishDate": "2026-05-14",
       "hasSections": true,
       "langs": [

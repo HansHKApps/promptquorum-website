@@ -640,6 +640,17 @@ const nextConfig: NextConfig = {
         destination: '/:lang/power-local-llm/locally-ai-review',
         permanent: true,
       },
+      // Year removed from slug (2026-10-17): no year or month in URLs.
+      {
+        source: '/power-local-llm/local-whisper-stt-comparison-2026',
+        destination: '/power-local-llm/local-whisper-stt-comparison',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/local-whisper-stt-comparison-2026',
+        destination: '/:lang/power-local-llm/local-whisper-stt-comparison',
+        permanent: true,
+      },
       {
         source: '/power-local-llm/msty-go-review-2026',
         destination: '/power-local-llm/msty-go-review',

@@ -23654,64 +23654,64 @@
   {
     "lang": "en",
     "title": "Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration",
-    "excerpt": "whisper.cpp runs on CPU and Apple Metal; faster-whisper is 4x faster on GPU with int8. WER benchmarks, v1.8.6 setup, and real-time transcription steps.",
+    "excerpt": "whisper.cpp runs on CPU and Apple Metal; faster-whisper is 4x faster on GPU with int8. WER benchmarks, model sizes, and real-time transcription steps.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
-    "url": "/power-local-llm/local-whisper-stt-comparison-2026",
+    "dateModified": "2026-10-17",
+    "url": "/power-local-llm/local-whisper-stt-comparison",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Whisper.cpp vs faster-whisper 2026: Lokale STT-Benchmarks, Setup & GPU-Beschleunigung",
-    "excerpt": "whisper.cpp läuft auf CPU und Apple Metal; faster-whisper ist mit int8 4x schneller auf GPU. WER-Benchmarks, v1.8.6-Setup und Echtzeit-Transkription.",
+    "excerpt": "whisper.cpp läuft auf CPU und Apple Metal; faster-whisper ist mit int8 4x schneller auf GPU. WER-Benchmarks, Modellgrößen und Echtzeit-Transkription.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
-    "url": "/de/power-local-llm/local-whisper-stt-comparison-2026",
+    "dateModified": "2026-10-17",
+    "url": "/de/power-local-llm/local-whisper-stt-comparison",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Whisper.cpp vs faster-whisper 2026 : Benchmarks STT local, configuration & accélération GPU",
-    "excerpt": "whisper.cpp tourne sur CPU et Apple Metal ; faster-whisper est 4x plus rapide sur GPU avec int8. Benchmarks WER, installation v1.8.6, transcription temps réel.",
+    "excerpt": "whisper.cpp tourne sur CPU et Apple Metal ; faster-whisper est 4x plus rapide sur GPU avec int8. Benchmarks WER, tailles de modèles, transcription temps réel.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
-    "url": "/fr/power-local-llm/local-whisper-stt-comparison-2026",
+    "dateModified": "2026-10-17",
+    "url": "/fr/power-local-llm/local-whisper-stt-comparison",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "ローカル音声認識2026：Whisper.cpp vs faster-whisper — ベンチマーク・セットアップ・GPU高速化",
-    "excerpt": "whisper.cppはCPUとApple Metalで動作、faster-whisperはint8使用時GPUで4倍高速。WERベンチマーク、v1.8.6セットアップ、リアルタイム文字起こし手順を掲載。",
+    "excerpt": "whisper.cppはCPUとApple Metalで動作、faster-whisperはint8使用時GPUで4倍高速。WERベンチマーク、モデルサイズ、リアルタイム文字起こし手順を掲載。",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
-    "url": "/ja/power-local-llm/local-whisper-stt-comparison-2026",
+    "dateModified": "2026-10-17",
+    "url": "/ja/power-local-llm/local-whisper-stt-comparison",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "本地语音识别2026：Whisper.cpp vs faster-whisper — 基准测试、安装配置、GPU加速",
-    "excerpt": "whisper.cpp运行于CPU和Apple Metal；faster-whisper在GPU上使用int8可提速4倍。含WER基准、v1.8.6安装步骤与实时转录配置。",
+    "excerpt": "whisper.cpp运行于CPU和Apple Metal；faster-whisper在GPU上使用int8可提速4倍。含WER基准、模型大小与实时转录配置。",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
-    "url": "/zh/power-local-llm/local-whisper-stt-comparison-2026",
+    "dateModified": "2026-10-17",
+    "url": "/zh/power-local-llm/local-whisper-stt-comparison",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Whisper.cpp vs faster-whisper 2026: Benchmarks STT local, configuración y aceleración GPU",
-    "excerpt": "whisper.cpp corre en CPU y Apple Metal; faster-whisper es 4x más rápido en GPU con int8. Benchmarks WER, instalación v1.8.6 y transcripción en tiempo real.",
+    "excerpt": "whisper.cpp corre en CPU y Apple Metal; faster-whisper es 4x más rápido en GPU con int8. Benchmarks WER, tamaños de modelo y transcripción en tiempo real.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
-    "url": "/es/power-local-llm/local-whisper-stt-comparison-2026",
+    "dateModified": "2026-10-17",
+    "url": "/es/power-local-llm/local-whisper-stt-comparison",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Whisper.cpp vs faster-whisper 2026: Benchmarks de STT local, configuração e aceleração de GPU",
-    "excerpt": "whisper.cpp roda em CPU e Apple Metal; faster-whisper é 4x mais rápido em GPU com int8. Benchmarks de WER, instalação v1.8.6 e transcrição em tempo real.",
+    "excerpt": "whisper.cpp roda em CPU e Apple Metal; faster-whisper é 4x mais rápido em GPU com int8. Benchmarks de WER, tamanhos de modelo e transcrição em tempo real.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
-    "url": "/pt/power-local-llm/local-whisper-stt-comparison-2026",
+    "dateModified": "2026-10-17",
+    "url": "/pt/power-local-llm/local-whisper-stt-comparison",
     "cluster": "power-local-llm"
   },
   {
@@ -23719,8 +23719,8 @@
     "title": "⁨Whisper.cpp⁩ مقابل ⁨faster-whisper 2026⁩: معايير ⁨STT⁩ المحلية والإعداد وتسريع ⁨GPU⁩",
     "excerpt": "Whisper.cpp يعمل على CPU وApple Metal؛ faster-whisper أسرع 4× على GPU بـint8. مقارنة معايير WER وسرعة النسخ الفوري وخطوات الإعداد 2026.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
-    "url": "/ar/power-local-llm/local-whisper-stt-comparison-2026",
+    "dateModified": "2026-10-17",
+    "url": "/ar/power-local-llm/local-whisper-stt-comparison",
     "cluster": "power-local-llm"
   },
   {
@@ -23728,8 +23728,8 @@
     "title": "Whisper.cpp vs faster-whisper 2026: 로컬 STT 벤치마크, 설정 및 GPU 가속",
     "excerpt": "2026년 로컬 음성 인식을 위한 whisper.cpp와 faster-whisper 비교: WER, GPU vs CPU 속도, Apple Silicon Metal, 실시간 전사. 완전 오프라인 동작.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-08-28",
-    "url": "/ko/power-local-llm/local-whisper-stt-comparison-2026",
+    "dateModified": "2026-10-17",
+    "url": "/ko/power-local-llm/local-whisper-stt-comparison",
     "cluster": "power-local-llm"
   },
   {
