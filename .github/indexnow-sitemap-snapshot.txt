@@ -330,6 +330,7 @@ https://www.promptquorum.com/power-local-llm/dreamserver-review
 https://www.promptquorum.com/power-local-llm/dspy-review
 https://www.promptquorum.com/power-local-llm/dynamo-review
 https://www.promptquorum.com/power-local-llm/easiest-local-ai-app-windows-mac-linux
+https://www.promptquorum.com/power-local-llm/easy-diffusion-review
 https://www.promptquorum.com/power-local-llm/edge-ai-hardware-for-local-llms
 https://www.promptquorum.com/power-local-llm/ekorbia-review
 https://www.promptquorum.com/power-local-llm/elevenlabs-vs-local-tts-piper-xtts
@@ -359,6 +360,7 @@ https://www.promptquorum.com/power-local-llm/hanoki-review
 https://www.promptquorum.com/power-local-llm/haystack-deepset-rag-framework-review
 https://www.promptquorum.com/power-local-llm/hermes-agent-review
 https://www.promptquorum.com/power-local-llm/hilbertraum-review
+https://www.promptquorum.com/power-local-llm/hiwaifu-review
 https://www.promptquorum.com/power-local-llm/honey-llm-review
 https://www.promptquorum.com/power-local-llm/hyperlink-nexa-review
 https://www.promptquorum.com/power-local-llm/idefics-review
@@ -496,6 +498,7 @@ https://www.promptquorum.com/power-local-llm/pinecone-vs-weaviate-vs-qdrant-vs-c
 https://www.promptquorum.com/power-local-llm/piper-tts-review
 https://www.promptquorum.com/power-local-llm/piper-vs-chatterbox-tts
 https://www.promptquorum.com/power-local-llm/piper-vs-kokoro-tts
+https://www.promptquorum.com/power-local-llm/pixlstash-review
 https://www.promptquorum.com/power-local-llm/plano-review
 https://www.promptquorum.com/power-local-llm/pocket-ai-review
 https://www.promptquorum.com/power-local-llm/pocketpal-ai-review
@@ -531,6 +534,7 @@ https://www.promptquorum.com/power-local-llm/sidekick-review
 https://www.promptquorum.com/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay
 https://www.promptquorum.com/power-local-llm/siyuan-review
 https://www.promptquorum.com/power-local-llm/smart-connections-review
+https://www.promptquorum.com/power-local-llm/snug-protocol-review
 https://www.promptquorum.com/power-local-llm/solair-ai-review
 https://www.promptquorum.com/power-local-llm/sourcegraph-cody-review
 https://www.promptquorum.com/power-local-llm/spiritbox-ultimate-review
@@ -540,6 +544,7 @@ https://www.promptquorum.com/power-local-llm/stableswarmui-review
 https://www.promptquorum.com/power-local-llm/styletts-2-review
 https://www.promptquorum.com/power-local-llm/superagi-review
 https://www.promptquorum.com/power-local-llm/surf-review
+https://www.promptquorum.com/power-local-llm/swerve-ai-review
 https://www.promptquorum.com/power-local-llm/swiftlm-review
 https://www.promptquorum.com/power-local-llm/tabby-review
 https://www.promptquorum.com/power-local-llm/taskweaver-review
