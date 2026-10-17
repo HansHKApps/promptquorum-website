@@ -3538,5 +3538,230 @@
     ],
     "reason": "geo-meta-optimizer: coherence-B2 fix (locale of EN change)",
     "baseline": null
+  },
+  {
+    "id": "7b226920-1dee-4bbb-9bff-2688c705d925",
+    "slug": "/prompt-bites/best-local-llm-coding-12gb-vram",
+    "date": "2026-10-17T19:22:09.662Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best Coding LLM for 12 GB 2026 | Prompt Bites | PromptQuorum",
+        "new": "Best Coding Model for 12 GB VRAM: Gemma 4 12B (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen2.5-Coder 14B Q4_K_M: top coding model for 12 GB VRAM at ~10 GB, highest HumanEval. DeepSeek 14B Q4 alternative. Both fit RTX 3060/3080 Ti 12 GB.",
+        "new": "Gemma 4 12B is the best coding model for 12 GB VRAM: 7.7–8.0 GB download, 72.0% LiveCodeBench v6 (Google). Qwen2.5-Coder 14B and Ornith 9B as alternatives."
+      }
+    ],
+    "reason": "updater: top pick changed Qwen2.5-Coder 14B -> Gemma 4 12B; GSC 28d: top query \"best coding model for 12gb vram\" pos 2.1",
+    "baseline": {
+      "position": 2.1,
+      "impressions": 177,
+      "clicks": 16,
+      "ctr": 0.0903954802259887,
+      "period": "last 28 days to 2026-10-17"
+    }
+  },
+  {
+    "id": "feecabf8-171c-4def-bdf9-e369882a28b8",
+    "slug": "/de/prompt-bites/best-local-llm-coding-12gb-vram",
+    "date": "2026-10-17T19:22:09.769Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Bestes Coding-LLM für 12 GB VRAM 2026",
+        "new": "Bestes Coding-Modell für 12 GB VRAM: Gemma 4 12B (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen2.5-Coder 14B Q4_K_M: bestes Coding-Modell für 12 GB bei ~10 GB, höchster HumanEval-Score. DeepSeek 14B Q4 Alternative. Beide auf RTX 3060/3080 Ti.",
+        "new": "Gemma 4 12B ist das beste Coding-Modell für 12 GB VRAM: 7,7–8,0 GB Download, 72,0 % LiveCodeBench v6 (Google). Alternativen: Qwen2.5-Coder 14B, Ornith 9B."
+      }
+    ],
+    "reason": "updater: top pick changed Qwen2.5-Coder 14B -> Gemma 4 12B; GSC 28d: top query \"best coding model for 12gb vram\" pos 2.1",
+    "baseline": {
+      "position": 2.1,
+      "impressions": 177,
+      "clicks": 16,
+      "ctr": 0.0903954802259887,
+      "period": "last 28 days to 2026-10-17"
+    }
+  },
+  {
+    "id": "1b5d19b6-fcdf-479b-90fb-3f029e8f3e73",
+    "slug": "/fr/prompt-bites/best-local-llm-coding-12gb-vram",
+    "date": "2026-10-17T19:22:09.876Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Meilleur Coding LLM pour 12 Go 2026 | Prompt Bites | PromptQuorum",
+        "new": "Meilleur modèle de code 12 Go VRAM : Gemma 4 12B (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen2.5-Coder 14B Q4_K_M: meilleur LLM coding pour 12 Go (~10 Go), meilleur HumanEval. DeepSeek 14B Q4 alternative. RTX 3060/3080 Ti 12 Go.",
+        "new": "Gemma 4 12B, meilleur modèle de code pour 12 Go de VRAM : 7,7–8,0 Go, 72,0 % LiveCodeBench v6 (Google). Alternatives : Qwen2.5-Coder 14B, Ornith 9B."
+      }
+    ],
+    "reason": "updater: top pick changed Qwen2.5-Coder 14B -> Gemma 4 12B; GSC 28d: top query \"best coding model for 12gb vram\" pos 2.1",
+    "baseline": {
+      "position": 2.1,
+      "impressions": 177,
+      "clicks": 16,
+      "ctr": 0.0903954802259887,
+      "period": "last 28 days to 2026-10-17"
+    }
+  },
+  {
+    "id": "9f0555d0-9550-43cd-92e5-d47d27d8f1f4",
+    "slug": "/ja/prompt-bites/best-local-llm-coding-12gb-vram",
+    "date": "2026-10-17T19:22:09.995Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "12 GB向けベストコーディング LLM 2026 | Prompt Bites | PromptQuorum",
+        "new": "12GB VRAM最適コーディングLLM：Gemma 4 12B（2026）"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen2.5-Coder 14B Q4_K_M：12 GB VRAM最高のコーディングLLM、約10 GB使用、HumanEval最高スコア。DeepSeek 14B Q4代替。RTX 3060/3080 Ti対応。",
+        "new": "12GB VRAMのコーディングにはGemma 4 12Bが最適：ダウンロード7.7〜8.0GB、LiveCodeBench v6で72.0%（Google公表）。代替はQwen2.5-Coder 14BとOrnith 9B。"
+      }
+    ],
+    "reason": "updater: top pick changed Qwen2.5-Coder 14B -> Gemma 4 12B; GSC 28d: top query \"best coding model for 12gb vram\" pos 2.1",
+    "baseline": {
+      "position": 2.1,
+      "impressions": 177,
+      "clicks": 16,
+      "ctr": 0.0903954802259887,
+      "period": "last 28 days to 2026-10-17"
+    }
+  },
+  {
+    "id": "b127925e-30e9-4349-b742-7606ef504a94",
+    "slug": "/zh/prompt-bites/best-local-llm-coding-12gb-vram",
+    "date": "2026-10-17T19:22:10.100Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "12 GB最佳编程LLM 2026 | Prompt Bites | PromptQuorum",
+        "new": "12GB显存最佳编程模型：Gemma 4 12B（2026）"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen2.5-Coder 14B Q4_K_M：12 GB VRAM最优编程LLM，约10 GB占用，HumanEval最高分。DeepSeek 14B Q4备选。RTX 3060/3080 Ti 12 GB适配。",
+        "new": "12GB显存最佳编程模型是Gemma 4 12B：下载7.7–8.0GB，LiveCodeBench v6得分72.0%（Google公布）。备选：Qwen2.5-Coder 14B与Ornith 9B。"
+      }
+    ],
+    "reason": "updater: top pick changed Qwen2.5-Coder 14B -> Gemma 4 12B; GSC 28d: top query \"best coding model for 12gb vram\" pos 2.1",
+    "baseline": {
+      "position": 2.1,
+      "impressions": 177,
+      "clicks": 16,
+      "ctr": 0.0903954802259887,
+      "period": "last 28 days to 2026-10-17"
+    }
+  },
+  {
+    "id": "e88ec91f-f217-49ed-a2d0-ef1c34c231f4",
+    "slug": "/es/prompt-bites/best-local-llm-coding-12gb-vram",
+    "date": "2026-10-17T19:22:10.206Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mejor LLM de programación para 12 GB 2026 | PromptQuorum",
+        "new": "Mejor modelo de código para 12 GB VRAM: Gemma 4 12B (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen2.5-Coder 14B Q4_K_M: mejor LLM de programación para 12 GB con ~10 GB y mayor HumanEval. DeepSeek 14B Q4 como alternativa. Para RTX 3060/3080 Ti.",
+        "new": "Gemma 4 12B es el mejor modelo de código para 12 GB de VRAM: 7,7–8,0 GB, 72,0 % en LiveCodeBench v6 (Google). Alternativas: Qwen2.5-Coder 14B, Ornith 9B."
+      }
+    ],
+    "reason": "updater: top pick changed Qwen2.5-Coder 14B -> Gemma 4 12B; GSC 28d: top query \"best coding model for 12gb vram\" pos 2.1",
+    "baseline": {
+      "position": 2.1,
+      "impressions": 177,
+      "clicks": 16,
+      "ctr": 0.0903954802259887,
+      "period": "last 28 days to 2026-10-17"
+    }
+  },
+  {
+    "id": "31d55192-ca16-4122-ba6b-cfc8f2727637",
+    "slug": "/pt/prompt-bites/best-local-llm-coding-12gb-vram",
+    "date": "2026-10-17T19:22:10.313Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Melhor LLM de programação para 12 GB 2026 | PromptQuorum",
+        "new": "Melhor modelo de código para 12 GB VRAM: Gemma 4 12B (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen2.5-Coder 14B Q4_K_M: melhor LLM de programação para 12 GB com ~10 GB e maior HumanEval. DeepSeek 14B Q4 como alternativa. Para RTX 3060/3080 Ti.",
+        "new": "Gemma 4 12B é o melhor modelo de código para 12 GB de VRAM: 7,7–8,0 GB, 72,0% no LiveCodeBench v6 (Google). Alternativas: Qwen2.5-Coder 14B e Ornith 9B."
+      }
+    ],
+    "reason": "updater: top pick changed Qwen2.5-Coder 14B -> Gemma 4 12B; GSC 28d: top query \"best coding model for 12gb vram\" pos 2.1",
+    "baseline": {
+      "position": 2.1,
+      "impressions": 177,
+      "clicks": 16,
+      "ctr": 0.0903954802259887,
+      "period": "last 28 days to 2026-10-17"
+    }
+  },
+  {
+    "id": "8b8dd6e8-dd2a-4a2b-b80d-d93a055cbec0",
+    "slug": "/ar/prompt-bites/best-local-llm-coding-12gb-vram",
+    "date": "2026-10-17T19:22:10.417Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "أفضل ⁨LLM⁩ برمجة لـ⁨12 GB VRAM 2026⁩ | ⁨PromptQuorum⁩",
+        "new": "أفضل نموذج برمجة لـ12 GB VRAM: Gemma 4 12B (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "⁨Qwen2.5-Coder 14B Q4⁩_⁨K⁩_⁨M⁩ أفضل نموذج برمجة لـ⁨12 GB VRAM⁩ بـ~⁨10 GB⁩، أعلى ⁨HumanEval. DeepSeek 14B Q4⁩ بديل قوي. كلاهما على ⁨RTX 3060⁩ و⁨RTX 3080 Ti⁩.",
+        "new": "Gemma 4 12B أفضل نموذج برمجة لـ12 GB VRAM: تنزيل 7.7–8.0 GB و72.0% في LiveCodeBench v6 (حسب Google). البدائل: Qwen2.5-Coder 14B وOrnith 9B."
+      }
+    ],
+    "reason": "updater: top pick changed Qwen2.5-Coder 14B -> Gemma 4 12B; GSC 28d: top query \"best coding model for 12gb vram\" pos 2.1",
+    "baseline": {
+      "position": 2.1,
+      "impressions": 177,
+      "clicks": 16,
+      "ctr": 0.0903954802259887,
+      "period": "last 28 days to 2026-10-17"
+    }
+  },
+  {
+    "id": "ee5420a3-f6d9-4713-b08a-f829980926c0",
+    "slug": "/ko/prompt-bites/best-local-llm-coding-12gb-vram",
+    "date": "2026-10-17T19:22:10.522Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "12 GB VRAM 코딩 최적 LLM 2026 | PromptQuorum",
+        "new": "12GB VRAM 코딩 최적 모델: Gemma 4 12B (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen2.5-Coder 14B Q4_K_M: 12 GB VRAM 코딩 최고 모델, ~10 GB 사용, HumanEval 최고점. DeepSeek 14B Q4 대안. RTX 3060/3080 Ti 모두 지원.",
+        "new": "12GB VRAM 코딩에는 Gemma 4 12B가 최적: 다운로드 7.7–8.0GB, LiveCodeBench v6 72.0%(Google 발표). 대안은 Qwen2.5-Coder 14B와 Ornith 9B."
+      }
+    ],
+    "reason": "updater: top pick changed Qwen2.5-Coder 14B -> Gemma 4 12B; GSC 28d: top query \"best coding model for 12gb vram\" pos 2.1",
+    "baseline": {
+      "position": 2.1,
+      "impressions": 177,
+      "clicks": 16,
+      "ctr": 0.0903954802259887,
+      "period": "last 28 days to 2026-10-17"
+    }
   }
 ]
