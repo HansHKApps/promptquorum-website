@@ -135,7 +135,7 @@ export function HubTemplate(props: HubTemplateProps) {
             {props.reviewed && (
               <time
                 dateTime={props.reviewed.dateTime}
-                className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-hub-new-edge bg-hub-new-tint px-2.5 py-0.5 text-xs font-semibold text-hub-new-ink"
+                className="mt-5 inline-flex items-center gap-1.5 rounded-full border border-indigo-300 bg-indigo-50 px-2.5 py-0.5 text-xs font-semibold text-indigo-800"
               >
                 <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <circle cx="12" cy="12" r="10" />
