@@ -5,8 +5,13 @@
 // (snugprotocol/snug: MIT, created 2026-07-31, 2 stars, 0 forks, 11 open issues, one human contributor, last push 2026-10-15;
 // release v0.1.3 of 2026-09-05 with Snug.dmg; snugprotocol/spec pushed 2026-10-13). See apps/snug-protocol.ts for the tile.
 //
-// Deliberately NOT in this article: figures from the maker's private email, any maker quote, the "13 frame types" and
-// "about 1 KB saved per runtime turn" claims (neither was found in a primary source this session), "industry standard"
+// 2026-10-18 update (EN): added spec-parts, example (frames + code), runtime-contracts, vs-vibe-coding and switch-or-stay
+// sections, 3 FAQs and 4 sources. Facts from snugprotocol.org/docs: concepts/envelopes-and-frames (13 frame types),
+// concepts/runtime-contracts, spec/part-4-..., get-started/first-app (code fragments) and spec/schemas (app-message and
+// app-response field names). The docs publish NO sample JSON message, so the wire example is labelled illustrative.
+// The "13 frame types" and "about 1 KB per turn" claims are now sourced (the 1 KB figure stays labelled project-reported, untested).
+//
+// Deliberately NOT in this article: figures from the maker's private email, any maker quote, "industry standard"
 // wording, and any hands-on result (PromptQuorum has not run the app; the owner decides when to test).
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -19,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     educationalLevel: 'Intermediate',
     audience: 'Readers who want to understand what the Snug Protocol proposes for AI-built personal apps, how its design works, and how much of it can be confirmed today',
     primaryTerm: 'Snug Protocol',
@@ -28,7 +33,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Snug Protocol ([snugprotocol.org](https://snugprotocol.org)) is an open specification for small apps that an AI agent builds from a description, that borrow the host\'s AI model at runtime, and that keep their data in one file the user owns. This feature explains the design, then separates what the project documents from what is still unproven.',
     metaDescription: 'Snug Protocol is an early open protocol for AI-built apps kept in a portable .snug file: how it works, local models, security design and what is unproven.',
     twitterDescription: 'Snug Protocol: an early open protocol for AI-built personal apps kept in a portable .snug file. How it works, its security design, and what is still unproven.',
-    readTime: '9 min read',
+    readTime: '13 min read',
     targetKeywords: [
       'Snug Protocol',
       'Snug Protocol explained',
@@ -54,6 +59,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Key Takeaways', anchor: 'tldr' },
       { label: 'What Is Snug Protocol?', anchor: 'what-is-snug' },
       { label: 'How the Pieces Fit Together', anchor: 'how-it-works' },
+      { label: 'The Six Parts of the Specification', anchor: 'spec-parts' },
+      { label: 'What an App and a Message Look Like', anchor: 'example' },
+      { label: 'Runtime Contracts and the App Chat Surface', anchor: 'runtime-contracts' },
+      { label: 'Snug vs Vibe Coding Plus Tauri or Electron', anchor: 'vs-vibe-coding' },
+      { label: 'Should a Vibe-Coding Developer Switch?', anchor: 'switch-or-stay' },
       { label: 'Local and Hosted Models', anchor: 'local-and-hosted' },
       { label: 'Security Design and Its Limits', anchor: 'security' },
       { label: 'Get It', anchor: 'get-it' },
@@ -78,6 +88,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The specification is at 1.0; the maker describes the implementation as pre-1.0',
           'No second host, independent audit or outside user base has been found',
           'The desktop app runs on macOS only; Windows and Linux are planned after 1.0',
+          'For developers who ship vibe-coded apps with Tauri or Electron, it fits small AI-driven personal tools, not products sold to the public',
         ],
       },
       overview: {
@@ -97,8 +108,134 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Runtime AI:** the host supplies the model while the app runs, so switching models does not mean rebuilding the app, according to the project',
           '**Isolated storage:** each app gets its own database namespace inside the user file',
-          '**The specification:** six parts, covering the wire protocol, the portable user database, connected apps, runtime contracts and the app chat surface, linked-device connections, and conformance. This review did not examine the runtime contracts in detail',
+          '**The specification:** six parts, summarized one by one in the next section',
           '**For developers:** the documentation has guides for building a host and for embedding Snug in another product; neither was tested here',
+        ],
+      },
+      specParts: {
+        id: 'spec-parts',
+        title: 'The Six Parts of the Specification',
+        content: '**The specification has six parts, and each one fixes a different layer of how apps, hosts and the user file interact.** Part IV and the concept pages were read in full for this feature; for the other parts only the [specification overview](https://snugprotocol.org/docs/spec/) was read, which gives titles and stability notes.',
+        items: [
+          '**Part I, the wire protocol:** the core frames, the chat envelope and rules R1 to R7. The network and open-URL frame pairs were added with specification v0.3 and are normative at 1.0',
+          '**Part II, the portable user database:** the storage schema (version 6), the `.snug` file naming and `SNUGENC1`',
+          '**Part III, connected apps:** requirements, grants, credential custody and the executor',
+          '**Part IV, runtime contracts and the app chat surface:** how an installed app talks to the AI without carrying its build history, covered in its own section below',
+          '**Part V, linked-device connections:** the specification calls this the sidecar surface',
+          '**Part VI, conformance:** what a compatible implementation must do; the overview gives only the title',
+        ],
+        note: 'Per the overview, Parts I to V are normative at 1.0, and the section on standing approvals is marked provisional.',
+      },
+      example: {
+        id: 'example',
+        title: 'What an App and a Message Look Like',
+        content: '**An app is one HTML file that talks to its host through 13 typed frames, published as JSON Schemas.** The frames fall into six families, and the app never touches the network or the model provider directly.',
+        items: [
+          '**Handshake:** `snug:host-ready` (the host advertises its instance ID, protocol versions and capabilities) and `snug:app-announce` (the app identifies itself)',
+          '**Agent bridge:** `snug:app-message`, `snug:app-response` and `snug:app-cancel`, which carry requests to the host\'s AI agent',
+          '**Storage:** `snug:db-request` and `snug:db-response`, which run host-brokered SQL on the app\'s own tables',
+          '**Network:** `snug:net-request` and `snug:net-response`, the only path out, limited to hosts the user approved',
+          '**Navigation:** `snug:open-url-request` and `snug:open-url-result`, where the host opens the browser after its own confirmation',
+          '**Events:** `snug:host-event` and `snug:app-event`, an open channel for theme, visibility and resize signals; unknown events are ignored',
+        ],
+        codeLanguage: 'typescript',
+        codeBlock: `// 1. App side. Fragments from the project's "Build your first app" guide.
+const { isReady, sendMessage } = useSnugApp({
+  appId: 'pocket-chess-coach',
+  displayName: 'Pocket Chess Coach',
+})
+const reply = await sendMessage('opponent-move', { lastMove: 'e7e5' })
+if (reply.ok) applyMove(reply.data.move)
+
+const db = useAppDB()
+await db.exec('INSERT INTO games (pgn, played_at) VALUES (?, ?)', [pgn, Date.now()])
+
+// 2. On the wire. ILLUSTRATIVE: the field names follow the published
+// JSON Schema; every value is invented. The docs show no sample message.
+const request = {
+  v: 1,
+  type: 'snug:app-message',
+  requestId: 'req-001',
+  instanceId: 'host-instance-id',
+  appId: 'pocket-chess-coach',
+  action: 'opponent-move',
+  payload: { lastMove: 'e7e5' },
+}
+const response = {
+  v: 1,
+  type: 'snug:app-response',
+  requestId: 'req-001',
+  ok: true,
+  streaming: false,
+  data: { move: 'g1f3' },
+}`,
+        note: 'According to the schema reference, a request also accepts optional responseSchema and state fields. A response comes in three forms: streamed text, a final data object, or a typed error with a code, a message and a retryable flag.',
+      },
+      runtimeContracts: {
+        id: 'runtime-contracts',
+        title: 'Runtime Contracts and the App Chat Surface',
+        content: '**A runtime contract is a small JSON description, held by the host, of what an app is and what a good answer looks like, and it replaces the long build instructions on every runtime turn.** The [Part IV specification](https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/) defines it, together with an optional chat beside each installed app.',
+        items: [
+          '**Shape:** a strict JSON object with a required `overview` of 1 to 600 characters; optional fields for tone, per-turn state and reply format; up to 16 settings; and an optional output ceiling of 256 to 8,192 tokens that can only narrow output. The whole contract may not exceed 2,560 bytes',
+          '**Custody:** the host assigns contracts and an app cannot supply one. Contracts are stored per app version and move with edits and reverts. An imported contract is dropped unless the hub already holds an identical one, so a foreign file cannot inject instructions',
+          '**Why it matters:** a turn carries the contract and the action payload, not the build conversation, so the same app can run on a large hosted model or a small local one. The project says the reference implementation saves roughly a kilobyte per turn; that figure was not tested',
+          '**Chat surface:** each message is classified into one of eight intents across four lanes: data, feature, provider and answer. If classification fails, the host asks a clarifying question rather than defaulting to a lane, and never to the code-writing lane',
+          '**Data lane:** reads run on a disposable copy of the app\'s own database with capped results. Writes follow propose, preview, approve and re-validate, and the host halts if affected-row counts change between preview and execution',
+          '**Feature lane:** changes to the app itself happen without a confirmation step. The safeguards are versioning, a visible reload and revert, and the specification requires hosts to disclose that this differs from the data lane',
+          '**Untrusted data:** prompts that include stored data must mark it as untrusted and defang any delimiter text inside it',
+        ],
+        note: 'Read from the Part IV page and the runtime-contracts concept page. Behavior was not tested, and the spec itself discloses that comparing row counts rather than rows is a known limitation of this revision.',
+      },
+      vsVibeCoding: {
+        id: 'vs-vibe-coding',
+        title: 'Snug vs Vibe Coding Plus Tauri or Electron',
+        content: '**For a developer who builds apps with Claude or Codex and ships them with Tauri or Electron, Snug trades distribution reach and control for a much lighter way to deliver small AI-driven tools.** It does not replace that workflow today, and it competes with it only for a narrow class of apps.',
+        columns: ['Area', 'Own app (Tauri/Electron)', 'Snug app'],
+        rows: [
+          { 'Area': 'Output', 'Own app (Tauri/Electron)': 'Native binary per app', 'Snug app': 'One HTML file in a host' },
+          { 'Area': 'Shipping', 'Own app (Tauri/Electron)': 'Build, sign, update each app', 'Snug app': 'Host mounts the file' },
+          { 'Area': 'AI access', 'Own app (Tauri/Electron)': 'Your keys, proxy or user keys', 'Snug app': 'Host supplies model, no keys' },
+          { 'Area': 'Data', 'Own app (Tauri/Electron)': 'Storage you design', 'Snug app': 'Isolated tables in .snug' },
+          { 'Area': 'Network', 'Own app (Tauri/Electron)': 'Whatever your code does', 'Snug app': 'Approved hosts via host only' },
+          { 'Area': 'Native APIs', 'Own app (Tauri/Electron)': 'Full access', 'Snug app': 'Only what the host exposes' },
+          { 'Area': 'Platforms', 'Own app (Tauri/Electron)': 'macOS, Windows, Linux', 'Snug app': 'macOS app, browser demo' },
+          { 'Area': 'Audience', 'Own app (Tauri/Electron)': 'Anyone can install it', 'Snug app': 'Needs a Snug host' },
+          { 'Area': 'Maturity', 'Own app (Tauri/Electron)': 'Established tooling', 'Snug app': 'Pre-1.0, one maintainer' },
+        ],
+        note: 'The Snug column reflects the project\'s own documents; PromptQuorum has not built an app in Snug. The Tauri and Electron column describes the general approach, not one specific app.',
+      },
+      switchOrStay: {
+        id: 'switch-or-stay',
+        title: 'Should a Vibe-Coding Developer Switch?',
+        content: '**Move only the apps that fit: small personal or team tools that mainly call an AI model and keep their own data.** Keep Tauri or Electron for anything you sell, ship to the general public or need on Windows or Linux.',
+        subsections: [
+          {
+            title: 'Where Snug is better',
+            list: [
+              '**AI without key handling:** the app never sees the model provider, its keys or which model answered, so you do not decide how keys reach the model',
+              '**Nothing to ship per app:** no installer, signing or update channel for each small tool; the host mounts the HTML file',
+              '**User-owned data:** one exportable SQLite file, instead of a storage and export design in every app',
+              '**Default-deny sandbox:** no direct network access and no credentials inside the app, according to the project\'s own threat model, which is not independently audited',
+              '**Model swap without a rebuild:** the runtime contract lets the user pick a frontier or a small local model, per app',
+            ],
+          },
+          {
+            title: 'Where it is worse',
+            list: [
+              '**Reach:** only a macOS app and a browser demo exist, your users need a host, and no store or payment mechanism was found in the documents read',
+              '**Control:** no arbitrary network calls, no native APIs and no custom backend; you work inside what the host exposes',
+              '**Your own toolchain:** in the first-app guide the host\'s builder agent writes the file from your description, so your own Claude or Codex setup, tests and CI do not carry over directly',
+              '**Maturity:** version 0.1.3, one maintainer, no second host and no independent audit, so portability between hosts is unproven',
+            ],
+          },
+          {
+            title: 'A reasonable way to decide',
+            list: [
+              'Pick one small personal tool you would otherwise package, and compare the effort of rebuilding it in Snug',
+              'Stay on Tauri or Electron if the audience is the public, the app needs native features, or you need Windows or Linux today',
+              'PromptQuorum has not run this comparison, so treat the table above as a reading of the documentation',
+            ],
+          },
         ],
       },
       localAndHosted: {
@@ -167,7 +304,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hands-on behavior:** PromptQuorum has not installed or run the macOS app or the Playground',
           '**Adoption:** no second host implementation and no third-party users were found',
           '**Security:** no independent audit or penetration test, and the long threat model was read only in part',
-          '**Project-reported claims:** figures on savings or speed from the project\'s own material were not tested',
+          '**Project-reported claims:** figures on savings or speed from the project\'s own material, such as the roughly 1 KB saved per runtime turn, were not tested',
+          '**Specification depth:** Part IV and the concept pages were read in full; the other parts were read as titles and stability notes, and only the schemas for two frames were checked',
           '**Portability in practice:** the format is specified for moving between hosts, but no move between two independent hosts could be checked',
         ],
       },
@@ -193,6 +331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Want AI-built personal tools that you keep as a file you control',
               'Build AI products and want to study an embeddable design',
               'Run a Mac and are comfortable with pre-1.0 software',
+              'Already vibe-code small AI tools and want to skip packaging them (see the switching section above)',
             ],
           },
           {
@@ -223,6 +362,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Can I move a .snug file to another host?', a: 'The format is specified for that purpose, but the only hosts found so far are the project\'s own, so a move between independent implementations has not been shown.' },
           { q: 'Is Snug an industry standard?', a: 'No evidence supports that yet. It is better described as an emerging open protocol with one maintainer and a published 1.0 specification.' },
           { q: 'Can developers embed Snug in their own product?', a: 'The documentation includes guides for building a host and embedding Snug, and the repository publishes TypeScript packages; this review did not test them.' },
+          { q: 'What does a Snug message look like?', a: 'Each message is a versioned JSON frame with a type such as snug:app-message, a request ID, the app ID and an action. The specification publishes a JSON Schema for all 13 frame types, but its docs show no sample message, so the example in this article uses invented values.' },
+          { q: 'What is a Snug runtime contract?', a: 'It is a small JSON description, held by the host and capped at 2,560 bytes, of what an app is and what a good answer looks like. Each runtime turn is built from it instead of from the build conversation.' },
+          { q: 'Should I move my Tauri or Electron apps to Snug?', a: 'Not wholesale. Snug fits small AI-driven personal tools where you want to skip packaging, key handling and storage design. Keep Tauri or Electron for apps you sell, ship to the public or need on Windows, Linux or with native APIs.' },
         ],
       },
       sources: {
@@ -233,6 +375,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://snugprotocol.org/download/', title: 'Snug Download', description: 'The macOS download page, with the model and API-key requirements.' },
           { url: 'https://snugprotocol.org/docs/', title: 'Snug Documentation', description: 'Concepts, the six-part specification and the implementor guides.' },
           { url: 'https://github.com/snugprotocol/snug', title: 'Snug on GitHub', description: 'The MIT-licensed repository, release history and threat model.' },
+          { url: 'https://snugprotocol.org/docs/concepts/envelopes-and-frames/', title: 'Envelopes and Frames', description: 'The 13 frame types and their families.' },
+          { url: 'https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/', title: 'Specification Part IV', description: 'Runtime contracts and the app chat surface.' },
+          { url: 'https://snugprotocol.org/docs/get-started/first-app/', title: 'Build Your First App', description: 'The minimal app structure and code fragments quoted above.' },
+          { url: 'https://snugprotocol.org/docs/spec/schemas/', title: 'Schema Reference', description: 'JSON Schemas for the frames, including app-message and app-response.' },
         ],
       },
       relatedReading: {
@@ -252,7 +398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://promptquorum.com/power-local-llm/snug-protocol-review',
       inLanguage: 'en',
       datePublished: '2026-10-17',
-      dateModified: '2026-10-17',
+      dateModified: '2026-10-18',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
