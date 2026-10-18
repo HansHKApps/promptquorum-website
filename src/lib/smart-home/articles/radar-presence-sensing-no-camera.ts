@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-en.webp',
     title: 'Radar Presence Sensing: Room Occupancy Without a Camera (2026)',
@@ -17,9 +17,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     // DIY chips. Exact retail price fluctuates by retailer/promo — the range below is a checked snapshot, not
     // a fixed figure.
     intro:
-      'mmWave radar sensors detect room occupancy and even micro-movements like breathing without capturing any image, making them a privacy-friendlier alternative to a camera for presence-based automations. The Aqara FP2 (around $80–85 at major US retailers) is a ready-to-use option, while Hi-Link\'s LD2410/LD2410C/LD2450 chips (around $15–25 as a DIY ESPHome build with an ESP32 board) are the common lower-cost path. This article covers how radar presence sensing works, where it beats a camera or motion sensor, and how to wire it into Home Assistant.',
+      'mmWave radar sensors detect room occupancy and even micro-movements like breathing without capturing any image, making them a privacy-friendlier alternative to a camera for presence-based automations. The Aqara FP2 (around $55–85 at major US retailers) is a ready-to-use option, while Hi-Link\'s LD2410/LD2410C/LD2450 chips (around $10–20 as a DIY ESPHome build with an ESP32 board) are the common lower-cost path. This article covers how radar presence sensing works, where it beats a camera or motion sensor, and how to wire it into Home Assistant.',
     metaDescription:
-      'Radar presence sensors for room occupancy detection without a camera: how mmWave sensing works and where it beats motion sensors or cameras in a smart home.',
+      'Radar presence sensors detect room occupancy and overstay without a camera: how mmWave sensing works, what it costs, and where it beats PIR or cameras.',
     twitterDescription:
       'mmWave radar sensors detect room occupancy without a camera — more accurate than PIR motion sensors, more private than a camera.',
     readTime: '6 min read',
@@ -34,19 +34,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'privacy occupancy sensor',
     ],
     leadAnswerBlock:
-      '**A radar (mmWave) presence sensor detects whether a room is occupied — including a stationary person, not just motion — without capturing any image, making it more accurate than a passive-infrared motion sensor and more private than a camera for presence-based automations.** The Aqara FP2 (~$80–85, ready-to-use) and Hi-Link\'s LD2410/LD2410C/LD2450 chips (~$15–25, DIY ESPHome build) are the two common paths — check current retailer pricing before buying, since promos shift the exact figure.',
+      '**A radar (mmWave) presence sensor detects whether a room is occupied — including a stationary person, not just motion — without capturing any image, making it more accurate than a passive-infrared motion sensor and more private than a camera for presence-based automations.** The Aqara FP2 (~$55–85, ready-to-use) and Hi-Link\'s LD2410/LD2410C/LD2450 chips (~$10–20, DIY ESPHome build) are the two common paths — check current retailer pricing before buying, since promos shift the exact figure.',
     quickAnswerTop: {
       en: {
         question: 'Can I detect room occupancy without a camera?',
         answer:
-          'Yes — mmWave radar presence sensors detect whether someone is in a room, including when they\'re sitting still, by sensing motion and micro-movement (like breathing) via radio waves, without capturing any image. This solves the main limitation of passive-infrared (PIR) motion sensors, which stop detecting a stationary person after a short timeout. The Aqara FP2 (~$80–85 at major US retailers, wired, Wi-Fi + Bluetooth, no hub required) is a ready-to-use option that pairs with Home Assistant locally via the HomeKit Controller integration; Hi-Link\'s LD2410/LD2410C/LD2450 chips (~$15–25 as a DIY ESPHome build with an ESP32 board) are the cheaper, more hands-on path with native ESPHome support.',
+          'Yes — mmWave radar presence sensors detect whether someone is in a room, including when they\'re sitting still, by sensing motion and micro-movement (like breathing) via radio waves, without capturing any image. This solves the main limitation of passive-infrared (PIR) motion sensors, which stop detecting a stationary person after a short timeout. The Aqara FP2 (~$55–85 at major US retailers, wired, Wi-Fi + Bluetooth, no hub required) is a ready-to-use option that pairs with Home Assistant locally via the HomeKit Controller integration; Hi-Link\'s LD2410/LD2410C/LD2450 chips (~$10–20 as a DIY ESPHome build with an ESP32 board) are the cheaper, more hands-on path with native ESPHome support.',
         bullets: [
           'Radar sensors detect stationary occupancy, not just motion — solves PIR\'s "stops detecting when still" problem',
           'No image is captured — more private than a camera for presence detection',
-          'Aqara FP2: ~$80–85, ready-to-use, pairs with Home Assistant locally via HomeKit Controller',
-          'Hi-Link LD2410/LD2410C/LD2450: ~$15–25 as a DIY ESPHome build, native ESPHome component support',
+          'Aqara FP2: ~$55–85, ready-to-use, pairs with Home Assistant locally via HomeKit Controller',
+          'Hi-Link LD2410/LD2410C/LD2450: ~$10–20 as a DIY ESPHome build, native ESPHome component support',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -54,6 +54,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'How Radar Presence Sensing Works', anchor: 'how-it-works' },
       { label: 'Radar vs PIR Motion vs Camera', anchor: 'radar-vs-alternatives' },
       { label: 'Home Assistant Integration', anchor: 'ha-integration' },
+      { label: 'Camera-Free Monitoring', anchor: 'camera-free-security' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -68,7 +69,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'mmWave radar sensors detect occupancy including a stationary person, unlike PIR motion sensors which need movement to trigger',
           'No image is captured — presence data only, which is more private than a camera for this use case',
-          'Ready-to-use option: Aqara FP2 (~$80–85, wired, no hub required, pairs locally via HomeKit Controller). DIY option: Hi-Link LD2410/LD2410C/LD2450 (~$15–25 with an ESP32 board, native ESPHome support)',
+          'Ready-to-use option: Aqara FP2 (~$55–85, wired, no hub required, pairs locally via HomeKit Controller). DIY option: Hi-Link LD2410/LD2410C/LD2450 (~$10–20 with an ESP32 board, native ESPHome support)',
           'Integrates into Home Assistant as a standard presence/occupancy entity, usable in any automation the same way a motion sensor would be',
           'See the sensor fusion guide for combining radar with other sensor types to reduce false positives further',
         ],
@@ -104,6 +105,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The Aqara FP2 connects over Wi-Fi (2.4GHz) plus Bluetooth, and pairs with Home Assistant through the local HomeKit Controller integration — no Aqara hub or cloud account required. Hi-Link LD2410/LD2410C/LD2450-based DIY builds run on an ESP32 with ESPHome, which is local by design. Check the specific product\'s integration method before buying if local control matters to you — not every radar sensor on the market avoids a cloud dependency.',
           'Because the entity behaves like a standard presence sensor, existing automations built around motion sensors can often be adapted to a radar sensor with minimal changes — replace the trigger entity, keep the automation logic.',
           'Combining radar with other sensor types (contact sensors, a camera, audio) via sensor fusion can reduce false positives further — see the sensor fusion in the smart home guide.',
+          'Battery-powered option: the Aqara FP300 combines PIR and 60 GHz mmWave radar, runs on two CR2450 cells (Aqara claims about 3 years on Zigbee, about 2 years on Thread) and launched at about $50, with a claimed range of up to 6 m. It pairs through a Zigbee coordinator or Thread border router instead of Wi-Fi, which suits rooms without a nearby power outlet.',
+        ],
+      },
+      cameraFreeSecurity: {
+        id: 'camera-free-security',
+        title: 'Camera-Free Monitoring: Loitering and Sensitive Areas',
+        content:
+          '**Radar can raise an alert when a room has been occupied longer than expected, or when movement appears in a room that should be empty, without any image ever being captured — but it reports that someone is there, never who or what they are.**',
+        items: [
+          'Loitering and overstay alerts are timer logic on top of a presence sensor: in Home Assistant, trigger when the presence entity stays on longer than a set time, for example a bathroom occupied for 30 minutes. Commercial restroom products use the same pattern with vendor-set timers, typically 15–45 minutes, and market it as camera-free; those privacy and accuracy claims come from vendors, not independent testing.',
+          'For an empty-room alert, arm the automation only in away or night mode and notify when a radar entity in that room or zone turns on. Radar can mistake pets or moving objects for people unless you tune zones and sensitivity, so test for false alarms before relying on it as an alarm.',
+          'Radar sensors such as the Aqara FP2 reach Home Assistant and HomeKit, which can send the notifications. Whether a professionally monitored alarm provider accepts third-party presence sensors depends on the provider, so ask before buying.',
+          'Presence data can still be personal data when it is tied to a person or used to monitor employees or residents. In the EU, monitoring in a workplace or care facility can require a legal basis, notice and works-council involvement even without a camera; get legal advice before deploying it outside your own home.',
         ],
       },
       faqSection: {
@@ -112,11 +126,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Does a radar sensor capture any images?', a: 'No — radar presence sensors detect occupancy via radio wave reflection, not image capture. This is the core privacy advantage over a camera for presence detection.' },
           { q: 'Can radar sensors detect a person who is sitting completely still?', a: 'Yes — this is the main advantage over PIR motion sensors, which rely on movement and typically time out when someone stops moving. Radar can detect micro-movements like breathing to register continued occupancy.' },
-          { q: 'How much do radar presence sensors cost?', a: 'A ready-to-use option like the Aqara FP2 runs around $80–85 at major US retailers; a DIY build using a Hi-Link LD2410, LD2410C, or LD2450 chip with an ESP32 board runs around $15–25. Check current retailer listings before buying, since promos shift the exact figure.' },
+          { q: 'How much do radar presence sensors cost?', a: 'A ready-to-use option like the Aqara FP2 runs around $55–85 at major US retailers; a DIY build using a Hi-Link LD2410, LD2410C, or LD2450 chip with an ESP32 board runs around $10–20. Check current retailer listings before buying, since promos shift the exact figure.' },
           { q: 'Do radar sensors work through walls or doors?', a: 'To a limited, unreliable degree — community testing with Hi-Link LD2410-class sensors shows they can pick up motion through glass and thin plywood, but are often oversensitive through thin walls or doors in ways that cause false positives rather than useful detection. Don\'t design an automation around deliberate through-wall sensing; tune the detection range and sensitivity down if you\'re seeing triggers from an adjacent room.' },
           { q: 'Is a radar sensor better than a PIR motion sensor for every use case?', a: 'No — PIR sensors are cheaper and perfectly adequate for simple trigger-on-movement automations. Radar is worth the added cost specifically when you need accurate stationary-occupancy detection.' },
           { q: 'Can I use a radar sensor for security instead of a camera?', a: 'Radar can detect presence/intrusion but cannot identify who or what triggered it the way a camera can — for security applications requiring identification, a camera (or radar plus camera together via sensor fusion) is the more complete solution.' },
           { q: 'Does a radar sensor need internet access to work?', a: 'This depends on the specific product\'s integration — check whether it uses a local integration (Zigbee, ESPHome) versus a cloud-dependent app before buying if offline reliability matters to you.' },
+          { q: 'Can radar detect loitering without a camera?', a: 'Yes, in the sense of detecting that a space has been continuously occupied for longer than a set time: a presence sensor plus a timer. It cannot tell who is there or what they are doing, so it suits overstay alerts in bathrooms or storage rooms, not identification.' },
+          { q: 'Can a home security provider monitor indoor movement without a camera?', a: 'Radar and PIR sensors can supply indoor presence alerts through Home Assistant or HomeKit notifications. Whether a professionally monitored alarm service accepts third-party presence sensors depends on the provider, so ask before buying.' },
         ],
       },
       relatedReading: {
@@ -139,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Radar presence sensor' }, { '@type': 'Thing', name: 'mmWave sensing' }, { '@type': 'Thing', name: 'Occupancy detection' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -153,6 +169,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Can radar sensors detect a person who is sitting completely still?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — radar can detect micro-movements like breathing to register continued occupancy, unlike PIR motion sensors which time out.' } },
         { '@type': 'Question', name: 'Is a radar sensor better than a PIR motion sensor for every use case?', acceptedAnswer: { '@type': 'Answer', text: 'No — PIR sensors are cheaper and adequate for simple trigger-on-movement automations. Radar is worth it for accurate stationary-occupancy detection specifically.' } },
         { '@type': 'Question', name: 'Can I use a radar sensor for security instead of a camera?', acceptedAnswer: { '@type': 'Answer', text: 'Radar can detect presence/intrusion but cannot identify who or what triggered it the way a camera can.' } },
+        { '@type': 'Question', name: 'Can radar detect loitering without a camera?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — a presence sensor plus a timer can flag a space that has been occupied longer than a set time, but it cannot identify who is there.' } },
+        { '@type': 'Question', name: 'Can a home security provider monitor indoor movement without a camera?', acceptedAnswer: { '@type': 'Answer', text: 'Radar and PIR sensors can send indoor presence alerts through Home Assistant or HomeKit; whether a monitored alarm provider accepts them depends on the provider.' } },
       ],
     },
   },
@@ -160,16 +178,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-de.webp',
     title: 'Radarpräsenzsensorik: Raumbelegung ohne Kamera (2026)',
     seoTitle: 'Radarpräsenzsensorik ohne Kamera (2026)',
     intro:
-      'mmWave-Radarsensoren erkennen Raumbelegung und sogar Mikrobewegungen wie Atmung, ohne dabei ein Bild aufzunehmen — das macht sie zu einer datenschutzfreundlicheren Alternative zu einer Kamera für präsenzbasierte Automatisierungen. Der Aqara FP2 (etwa 80–85 $ bei großen US-Händlern) ist eine gebrauchsfertige Option, während Hi-Links LD2410/LD2410C/LD2450-Chips (etwa 15–25 $ als DIY-ESPHome-Build mit einem ESP32-Board) der übliche kostengünstigere Weg sind. Dieser Artikel erklärt, wie Radarpräsenzsensorik funktioniert, wo sie eine Kamera oder einen Bewegungsmelder übertrifft, und wie man sie in Home Assistant einbindet.',
+      'mmWave-Radarsensoren erkennen Raumbelegung und sogar Mikrobewegungen wie Atmung, ohne dabei ein Bild aufzunehmen — das macht sie zu einer datenschutzfreundlicheren Alternative zu einer Kamera für präsenzbasierte Automatisierungen. Der Aqara FP2 (etwa 55–85 $ bei großen US-Händlern) ist eine gebrauchsfertige Option, während Hi-Links LD2410/LD2410C/LD2450-Chips (etwa 10–20 $ als DIY-ESPHome-Build mit einem ESP32-Board) der übliche kostengünstigere Weg sind. Dieser Artikel erklärt, wie Radarpräsenzsensorik funktioniert, wo sie eine Kamera oder einen Bewegungsmelder übertrifft, und wie man sie in Home Assistant einbindet.',
     metaDescription:
-      'Radarpräsenzsensoren zur Raumbelegungserkennung ohne Kamera: wie mmWave-Sensorik funktioniert und wo sie Bewegungsmelder oder Kameras im Smart Home übertrifft.',
+      'Radarpräsenzsensoren erkennen Raumbelegung und Verweildauer ohne Kamera: wie mmWave funktioniert, was es kostet und wo es PIR-Melder oder Kameras übertrifft.',
     twitterDescription:
       'mmWave-Radarsensoren erkennen Raumbelegung ohne Kamera — genauer als PIR-Bewegungsmelder, datenschutzfreundlicher als eine Kamera.',
     readTime: '6 Min. Lesezeit',
@@ -184,19 +202,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datenschutzfreundlicher belegungssensor',
     ],
     leadAnswerBlock:
-      '**Ein Radar-(mmWave-)Präsenzsensor erkennt, ob ein Raum belegt ist — einschließlich einer regungslos sitzenden Person, nicht nur Bewegung — ohne dabei ein Bild aufzunehmen, was ihn genauer macht als einen passiven Infrarot-Bewegungsmelder und datenschutzfreundlicher als eine Kamera für präsenzbasierte Automatisierungen.** Der Aqara FP2 (~80–85 $, gebrauchsfertig) und Hi-Links LD2410/LD2410C/LD2450-Chips (~15–25 $, DIY-ESPHome-Build) sind die beiden üblichen Wege — prüfe vor dem Kauf die aktuellen Händlerpreise, da Aktionen die genaue Zahl verschieben.',
+      '**Ein Radar-(mmWave-)Präsenzsensor erkennt, ob ein Raum belegt ist — einschließlich einer regungslos sitzenden Person, nicht nur Bewegung — ohne dabei ein Bild aufzunehmen, was ihn genauer macht als einen passiven Infrarot-Bewegungsmelder und datenschutzfreundlicher als eine Kamera für präsenzbasierte Automatisierungen.** Der Aqara FP2 (~55–85 $, gebrauchsfertig) und Hi-Links LD2410/LD2410C/LD2450-Chips (~10–20 $, DIY-ESPHome-Build) sind die beiden üblichen Wege — prüfe vor dem Kauf die aktuellen Händlerpreise, da Aktionen die genaue Zahl verschieben.',
     quickAnswerTop: {
       de: {
         question: 'Kann ich Raumbelegung ohne Kamera erkennen?',
         answer:
-          'Ja — mmWave-Radar-Präsenzsensoren erkennen, ob sich jemand in einem Raum befindet, auch wenn die Person still sitzt, indem sie Bewegung und Mikrobewegungen (wie Atmung) über Radiowellen erfassen, ohne dabei ein Bild aufzunehmen. Das löst die Hauptschwäche passiver Infrarot-(PIR-)Bewegungsmelder, die eine regungslose Person nach einem kurzen Timeout nicht mehr erkennen. Der Aqara FP2 (~80–85 $ bei großen US-Händlern, kabelgebunden, Wi-Fi + Bluetooth, ohne Hub) ist eine gebrauchsfertige Option, die sich lokal über die HomeKit-Controller-Integration mit Home Assistant koppeln lässt; Hi-Links LD2410/LD2410C/LD2450-Chips (~15–25 $ als DIY-ESPHome-Build mit einem ESP32-Board) sind der günstigere, arbeitsintensivere Weg mit nativer ESPHome-Unterstützung.',
+          'Ja — mmWave-Radar-Präsenzsensoren erkennen, ob sich jemand in einem Raum befindet, auch wenn die Person still sitzt, indem sie Bewegung und Mikrobewegungen (wie Atmung) über Radiowellen erfassen, ohne dabei ein Bild aufzunehmen. Das löst die Hauptschwäche passiver Infrarot-(PIR-)Bewegungsmelder, die eine regungslose Person nach einem kurzen Timeout nicht mehr erkennen. Der Aqara FP2 (~55–85 $ bei großen US-Händlern, kabelgebunden, Wi-Fi + Bluetooth, ohne Hub) ist eine gebrauchsfertige Option, die sich lokal über die HomeKit-Controller-Integration mit Home Assistant koppeln lässt; Hi-Links LD2410/LD2410C/LD2450-Chips (~10–20 $ als DIY-ESPHome-Build mit einem ESP32-Board) sind der günstigere, arbeitsintensivere Weg mit nativer ESPHome-Unterstützung.',
         bullets: [
           'Radarsensoren erkennen regungslose Belegung, nicht nur Bewegung — löst das Problem von PIR, dass die Erkennung bei Stillstand aufhört',
           'Es wird kein Bild aufgenommen — datenschutzfreundlicher als eine Kamera zur Präsenzerkennung',
-          'Aqara FP2: ~80–85 $, gebrauchsfertig, koppelt sich lokal über HomeKit Controller mit Home Assistant',
-          'Hi-Link LD2410/LD2410C/LD2450: ~15–25 $ als DIY-ESPHome-Build, native ESPHome-Komponentenunterstützung',
+          'Aqara FP2: ~55–85 $, gebrauchsfertig, koppelt sich lokal über HomeKit Controller mit Home Assistant',
+          'Hi-Link LD2410/LD2410C/LD2450: ~10–20 $ als DIY-ESPHome-Build, native ESPHome-Komponentenunterstützung',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -204,6 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Wie Radarpräsenzsensorik funktioniert', anchor: 'how-it-works' },
       { label: 'Radar vs. PIR-Bewegungsmelder vs. Kamera', anchor: 'radar-vs-alternatives' },
       { label: 'Home-Assistant-Integration', anchor: 'ha-integration' },
+      { label: 'Überwachung ohne Kamera', anchor: 'camera-free-security' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -218,7 +237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'mmWave-Radarsensoren erkennen Belegung einschließlich einer regungslosen Person, im Gegensatz zu PIR-Bewegungsmeldern, die Bewegung zum Auslösen benötigen',
           'Es wird kein Bild aufgenommen — nur Präsenzdaten, was für diesen Einsatzzweck datenschutzfreundlicher ist als eine Kamera',
-          'Gebrauchsfertige Option: Aqara FP2 (~80–85 $, kabelgebunden, ohne Hub, koppelt lokal über HomeKit Controller). DIY-Option: Hi-Link LD2410/LD2410C/LD2450 (~15–25 $ mit einem ESP32-Board, native ESPHome-Unterstützung)',
+          'Gebrauchsfertige Option: Aqara FP2 (~55–85 $, kabelgebunden, ohne Hub, koppelt lokal über HomeKit Controller). DIY-Option: Hi-Link LD2410/LD2410C/LD2450 (~10–20 $ mit einem ESP32-Board, native ESPHome-Unterstützung)',
           'Lässt sich in Home Assistant als Standard-Präsenz-/Belegungsentität einbinden, nutzbar in jeder Automatisierung genau wie ein Bewegungsmelder',
           'Siehe den Sensor-Fusion-Leitfaden zum Kombinieren von Radar mit anderen Sensortypen, um Fehlalarme weiter zu reduzieren',
         ],
@@ -254,6 +273,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Der Aqara FP2 verbindet sich über Wi-Fi (2,4 GHz) plus Bluetooth und koppelt sich über die lokale HomeKit-Controller-Integration mit Home Assistant — ohne Aqara-Hub oder Cloud-Konto. DIY-Builds auf Basis von Hi-Link LD2410/LD2410C/LD2450 laufen auf einem ESP32 mit ESPHome, das von Haus aus lokal ist. Prüfe vor dem Kauf die Integrationsmethode des konkreten Produkts, falls dir lokale Steuerung wichtig ist — nicht jeder Radarsensor auf dem Markt vermeidet eine Cloud-Abhängigkeit.',
           'Da sich die Entität wie ein Standard-Präsenzsensor verhält, lassen sich bestehende, um Bewegungsmelder herum gebaute Automatisierungen oft mit minimalen Änderungen an einen Radarsensor anpassen — die Auslöser-Entität ersetzen, die Automatisierungslogik beibehalten.',
           'Das Kombinieren von Radar mit anderen Sensortypen (Kontaktsensoren, einer Kamera, Audio) per Sensor-Fusion kann Fehlalarme weiter reduzieren — siehe die Sensor-Fusion im Smart-Home-Leitfaden.',
+          'Batteriebetriebene Option: Der Aqara FP300 kombiniert PIR und 60-GHz-mmWave-Radar, läuft mit zwei CR2450-Zellen (laut Aqara etwa 3 Jahre mit Zigbee, etwa 2 Jahre mit Thread) und kam für etwa 50 $ auf den Markt; die angegebene Reichweite beträgt bis zu 6 m. Er koppelt über einen Zigbee-Koordinator oder Thread-Border-Router statt über WLAN — passend für Räume ohne Steckdose in der Nähe.',
+        ],
+      },
+      cameraFreeSecurity: {
+        id: 'camera-free-security',
+        title: 'Überwachung ohne Kamera: Verweildauer und sensible Bereiche',
+        content:
+          '**Radar kann einen Alarm auslösen, wenn ein Raum länger als erwartet belegt ist oder wenn sich in einem Raum, der leer sein sollte, etwas bewegt — ohne dass je ein Bild entsteht. Es meldet aber nur, dass jemand da ist, nie wer oder was.**',
+        items: [
+          'Warnungen bei zu langer Verweildauer sind Timer-Logik auf einem Präsenzsensor: In Home Assistant löst die Automatisierung aus, wenn die Präsenz-Entität länger als eine festgelegte Zeit aktiv bleibt, etwa ein Badezimmer, das 30 Minuten belegt ist. Kommerzielle Toilettenprodukte nutzen dasselbe Muster mit herstellerseitig eingestellten Timern, meist 15–45 Minuten, und bewerben es als kamerafrei; diese Datenschutz- und Genauigkeitsangaben stammen von den Herstellern, nicht aus unabhängigen Tests.',
+          'Für einen Alarm in einem leeren Raum aktivieren Sie die Automatisierung nur im Abwesenheits- oder Nachtmodus und benachrichtigen, sobald eine Radar-Entität in diesem Raum oder dieser Zone auf „an“ springt. Radar kann Haustiere oder bewegte Gegenstände mit Personen verwechseln, wenn Zonen und Empfindlichkeit nicht abgestimmt sind; testen Sie daher auf Fehlalarme, bevor Sie sich als Alarmanlage darauf verlassen.',
+          'Radarsensoren wie der Aqara FP2 lassen sich in Home Assistant und HomeKit einbinden, die die Benachrichtigungen senden können. Ob ein professionell überwachter Alarmdienst Präsenzsensoren von Drittanbietern akzeptiert, hängt vom Anbieter ab — fragen Sie vor dem Kauf nach.',
+          'Präsenzdaten können personenbezogene Daten sein, wenn sie einer Person zugeordnet werden oder Beschäftigte oder Bewohner überwachen. In der EU kann eine Überwachung am Arbeitsplatz oder in Pflegeeinrichtungen auch ohne Kamera eine Rechtsgrundlage, Information und die Beteiligung des Betriebsrats erfordern; holen Sie rechtlichen Rat ein, bevor Sie sie außerhalb Ihres eigenen Zuhauses einsetzen.',
         ],
       },
       faqSection: {
@@ -262,11 +294,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Nimmt ein Radarsensor Bilder auf?', a: 'Nein — Radar-Präsenzsensoren erkennen Belegung über Funkwellenreflexion, nicht über Bildaufnahme. Das ist der wesentliche Datenschutzvorteil gegenüber einer Kamera zur Präsenzerkennung.' },
           { q: 'Können Radarsensoren eine völlig regungslos sitzende Person erkennen?', a: 'Ja — das ist der Hauptvorteil gegenüber PIR-Bewegungsmeldern, die auf Bewegung angewiesen sind und typischerweise nach einem Timeout abschalten, sobald sich jemand nicht mehr bewegt. Radar kann Mikrobewegungen wie Atmung erkennen, um fortbestehende Belegung zu registrieren.' },
-          { q: 'Wie viel kosten Radar-Präsenzsensoren?', a: 'Eine gebrauchsfertige Option wie der Aqara FP2 kostet bei großen US-Händlern etwa 80–85 $; ein DIY-Build mit einem Hi-Link-LD2410-, LD2410C- oder LD2450-Chip und einem ESP32-Board kostet etwa 15–25 $. Prüfe vor dem Kauf aktuelle Händlerangebote, da Aktionen die genaue Zahl verschieben.' },
+          { q: 'Wie viel kosten Radar-Präsenzsensoren?', a: 'Eine gebrauchsfertige Option wie der Aqara FP2 kostet bei großen US-Händlern etwa 55–85 $; ein DIY-Build mit einem Hi-Link-LD2410-, LD2410C- oder LD2450-Chip und einem ESP32-Board kostet etwa 10–20 $. Prüfe vor dem Kauf aktuelle Händlerangebote, da Aktionen die genaue Zahl verschieben.' },
           { q: 'Funktionieren Radarsensoren durch Wände oder Türen hindurch?', a: 'In begrenztem, unzuverlässigem Maß — Community-Tests mit Sensoren der Hi-Link-LD2410-Klasse zeigen, dass sie Bewegung durch Glas und dünnes Sperrholz erfassen können, sind aber durch dünne Wände oder Türen oft überempfindlich, was eher zu Fehlalarmen als zu nützlicher Erkennung führt. Baue keine Automatisierung auf gezielter Durch-Wand-Erkennung auf; reduziere Erkennungsreichweite und Empfindlichkeit, wenn du Auslöser aus einem Nachbarraum bemerkst.' },
           { q: 'Ist ein Radarsensor für jeden Einsatzzweck besser als ein PIR-Bewegungsmelder?', a: 'Nein — PIR-Sensoren sind günstiger und für einfache Bewegungsauslöser-Automatisierungen völlig ausreichend. Radar lohnt die Mehrkosten speziell dann, wenn du genaue Erkennung regungsloser Belegung brauchst.' },
           { q: 'Kann ich einen Radarsensor statt einer Kamera für Sicherheit nutzen?', a: 'Radar kann Präsenz/Eindringen erkennen, aber nicht identifizieren, wer oder was es ausgelöst hat, so wie es eine Kamera kann — für Sicherheitsanwendungen, die Identifikation erfordern, ist eine Kamera (oder Radar plus Kamera zusammen per Sensor-Fusion) die vollständigere Lösung.' },
           { q: 'Braucht ein Radarsensor Internetzugang, um zu funktionieren?', a: 'Das hängt von der Integration des konkreten Produkts ab — prüfe vor dem Kauf, ob es eine lokale Integration (Zigbee, ESPHome) oder eine cloudabhängige App nutzt, falls dir Offline-Zuverlässigkeit wichtig ist.' },
+          { q: 'Kann Radar Herumlungern ohne Kamera erkennen?', a: 'Ja, im Sinne von „ein Raum ist länger als eine festgelegte Zeit durchgehend belegt“: ein Präsenzsensor plus ein Timer. Radar kann nicht erkennen, wer da ist oder was die Person tut — es eignet sich also für Warnungen bei zu langer Verweildauer in Bädern oder Abstellräumen, nicht zur Identifikation.' },
+          { q: 'Kann ein Sicherheitsanbieter Bewegungen im Innenraum ohne Kamera überwachen?', a: 'Radar- und PIR-Sensoren können Präsenzmeldungen im Innenraum über Home Assistant oder HomeKit-Benachrichtigungen liefern. Ob ein professionell überwachter Alarmdienst Präsenzsensoren von Drittanbietern akzeptiert, hängt vom Anbieter ab — fragen Sie vor dem Kauf nach.' },
         ],
       },
       relatedReading: {
@@ -289,7 +323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Radar-Präsenzsensor' }, { '@type': 'Thing', name: 'mmWave-Sensorik' }, { '@type': 'Thing', name: 'Belegungserkennung' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -303,6 +337,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Können Radarsensoren eine völlig regungslos sitzende Person erkennen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Radar kann Mikrobewegungen wie Atmung erkennen, um fortbestehende Belegung zu registrieren, im Gegensatz zu PIR-Bewegungsmeldern, die nach einem Timeout abschalten.' } },
         { '@type': 'Question', name: 'Ist ein Radarsensor für jeden Einsatzzweck besser als ein PIR-Bewegungsmelder?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — PIR-Sensoren sind günstiger und für einfache Bewegungsauslöser-Automatisierungen ausreichend. Radar lohnt sich speziell für genaue Erkennung regungsloser Belegung.' } },
         { '@type': 'Question', name: 'Kann ich einen Radarsensor statt einer Kamera für Sicherheit nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Radar kann Präsenz/Eindringen erkennen, aber nicht identifizieren, wer oder was es ausgelöst hat, so wie es eine Kamera kann.' } },
+        { '@type': 'Question', name: 'Kann Radar Herumlungern ohne Kamera erkennen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — ein Präsenzsensor plus Timer kann einen Raum melden, der länger als eine festgelegte Zeit belegt ist, aber nicht identifizieren, wer da ist.' } },
+        { '@type': 'Question', name: 'Kann ein Sicherheitsanbieter Bewegungen im Innenraum ohne Kamera überwachen?', acceptedAnswer: { '@type': 'Answer', text: 'Radar- und PIR-Sensoren können Präsenzmeldungen über Home Assistant oder HomeKit senden; ob ein überwachter Alarmdienst sie akzeptiert, hängt vom Anbieter ab.' } },
       ],
     },
   },
@@ -310,16 +346,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-fr.webp',
     title: "Détection de présence radar : occupation d'une pièce sans caméra (2026)",
     seoTitle: 'Détection de présence radar sans caméra (2026)',
     intro:
-      "Les capteurs radar mmWave détectent l'occupation d'une pièce et même des micro-mouvements comme la respiration, sans capturer aucune image, ce qui en fait une alternative plus respectueuse de la vie privée qu'une caméra pour les automatisations basées sur la présence. L'Aqara FP2 (environ 80–85 $ chez les grands revendeurs américains) est une option prête à l'emploi, tandis que les puces LD2410/LD2410C/LD2450 de Hi-Link (environ 15–25 $ en montage DIY ESPHome avec une carte ESP32) constituent la voie courante à moindre coût. Cet article explique comment fonctionne la détection de présence radar, où elle surpasse une caméra ou un capteur de mouvement, et comment l'intégrer à Home Assistant.",
+      "Les capteurs radar mmWave détectent l'occupation d'une pièce et même des micro-mouvements comme la respiration, sans capturer aucune image, ce qui en fait une alternative plus respectueuse de la vie privée qu'une caméra pour les automatisations basées sur la présence. L'Aqara FP2 (environ 55–85 $ chez les grands revendeurs américains) est une option prête à l'emploi, tandis que les puces LD2410/LD2410C/LD2450 de Hi-Link (environ 10–20 $ en montage DIY ESPHome avec une carte ESP32) constituent la voie courante à moindre coût. Cet article explique comment fonctionne la détection de présence radar, où elle surpasse une caméra ou un capteur de mouvement, et comment l'intégrer à Home Assistant.",
     metaDescription:
-      "Capteurs de présence radar pour détecter l'occupation d'une pièce sans caméra : comment fonctionne la détection mmWave et où elle surpasse les capteurs de mouvement ou les caméras dans une maison connectée.",
+      'Les capteurs de présence radar détectent l\'occupation d\'une pièce et la durée de présence sans caméra : fonctionnement du mmWave, coût et avantages face au PIR ou aux caméras.',
     twitterDescription:
       "Les capteurs radar mmWave détectent l'occupation d'une pièce sans caméra — plus précis que les capteurs de mouvement PIR, plus respectueux de la vie privée qu'une caméra.",
     readTime: '6 min de lecture',
@@ -334,19 +370,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'capteur occupation respect vie privee',
     ],
     leadAnswerBlock:
-      "**Un capteur de présence radar (mmWave) détecte si une pièce est occupée — y compris par une personne immobile, pas seulement en mouvement — sans capturer aucune image, ce qui le rend plus précis qu'un capteur de mouvement infrarouge passif et plus respectueux de la vie privée qu'une caméra pour les automatisations basées sur la présence.** L'Aqara FP2 (~80–85 $, prêt à l'emploi) et les puces LD2410/LD2410C/LD2450 de Hi-Link (~15–25 $, montage DIY ESPHome) sont les deux voies courantes — vérifiez les prix actuels des revendeurs avant d'acheter, car les promotions font varier le chiffre exact.",
+      "**Un capteur de présence radar (mmWave) détecte si une pièce est occupée — y compris par une personne immobile, pas seulement en mouvement — sans capturer aucune image, ce qui le rend plus précis qu'un capteur de mouvement infrarouge passif et plus respectueux de la vie privée qu'une caméra pour les automatisations basées sur la présence.** L'Aqara FP2 (~55–85 $, prêt à l'emploi) et les puces LD2410/LD2410C/LD2450 de Hi-Link (~10–20 $, montage DIY ESPHome) sont les deux voies courantes — vérifiez les prix actuels des revendeurs avant d'acheter, car les promotions font varier le chiffre exact.",
     quickAnswerTop: {
       fr: {
         question: "Puis-je détecter l'occupation d'une pièce sans caméra ?",
         answer:
-          "Oui — les capteurs de présence radar mmWave détectent si quelqu'un se trouve dans une pièce, y compris lorsqu'il est assis immobile, en détectant le mouvement et les micro-mouvements (comme la respiration) via des ondes radio, sans capturer aucune image. Cela résout la principale limite des capteurs de mouvement infrarouges passifs (PIR), qui cessent de détecter une personne immobile après un court délai. L'Aqara FP2 (~80–85 $ chez les grands revendeurs américains, filaire, Wi-Fi + Bluetooth, sans hub requis) est une option prête à l'emploi qui s'associe localement à Home Assistant via l'intégration HomeKit Controller ; les puces LD2410/LD2410C/LD2450 de Hi-Link (~15–25 $ en montage DIY ESPHome avec une carte ESP32) constituent la voie moins chère et plus pratique, avec prise en charge native ESPHome.",
+          "Oui — les capteurs de présence radar mmWave détectent si quelqu'un se trouve dans une pièce, y compris lorsqu'il est assis immobile, en détectant le mouvement et les micro-mouvements (comme la respiration) via des ondes radio, sans capturer aucune image. Cela résout la principale limite des capteurs de mouvement infrarouges passifs (PIR), qui cessent de détecter une personne immobile après un court délai. L'Aqara FP2 (~55–85 $ chez les grands revendeurs américains, filaire, Wi-Fi + Bluetooth, sans hub requis) est une option prête à l'emploi qui s'associe localement à Home Assistant via l'intégration HomeKit Controller ; les puces LD2410/LD2410C/LD2450 de Hi-Link (~10–20 $ en montage DIY ESPHome avec une carte ESP32) constituent la voie moins chère et plus pratique, avec prise en charge native ESPHome.",
         bullets: [
           "Les capteurs radar détectent l'occupation immobile, pas seulement le mouvement — résout le problème du PIR qui « cesse de détecter à l'arrêt »",
           "Aucune image n'est capturée — plus respectueux de la vie privée qu'une caméra pour la détection de présence",
-          "Aqara FP2 : ~80–85 $, prêt à l'emploi, s'associe localement à Home Assistant via HomeKit Controller",
-          "Hi-Link LD2410/LD2410C/LD2450 : ~15–25 $ en montage DIY ESPHome, prise en charge native des composants ESPHome",
+          "Aqara FP2 : ~55–85 $, prêt à l'emploi, s'associe localement à Home Assistant via HomeKit Controller",
+          "Hi-Link LD2410/LD2410C/LD2450 : ~10–20 $ en montage DIY ESPHome, prise en charge native des composants ESPHome",
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -354,6 +390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Comment fonctionne la détection de présence radar', anchor: 'how-it-works' },
       { label: 'Radar vs mouvement PIR vs caméra', anchor: 'radar-vs-alternatives' },
       { label: 'Intégration Home Assistant', anchor: 'ha-integration' },
+      { label: 'Surveillance sans caméra', anchor: 'camera-free-security' },
       { label: 'Questions fréquentes', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -368,7 +405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "Les capteurs radar mmWave détectent l'occupation, y compris une personne immobile, contrairement aux capteurs de mouvement PIR qui nécessitent un mouvement pour se déclencher",
           "Aucune image n'est capturée — seulement des données de présence, ce qui est plus respectueux de la vie privée qu'une caméra pour cet usage",
-          "Option prête à l'emploi : Aqara FP2 (~80–85 $, filaire, sans hub requis, s'associe localement via HomeKit Controller). Option DIY : Hi-Link LD2410/LD2410C/LD2450 (~15–25 $ avec une carte ESP32, prise en charge native ESPHome)",
+          "Option prête à l'emploi : Aqara FP2 (~55–85 $, filaire, sans hub requis, s'associe localement via HomeKit Controller). Option DIY : Hi-Link LD2410/LD2410C/LD2450 (~10–20 $ avec une carte ESP32, prise en charge native ESPHome)",
           "S'intègre à Home Assistant comme une entité de présence/occupation standard, utilisable dans n'importe quelle automatisation comme le serait un capteur de mouvement",
           "Voir le guide de fusion de capteurs pour combiner le radar avec d'autres types de capteurs afin de réduire davantage les faux positifs",
         ],
@@ -404,6 +441,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "L'Aqara FP2 se connecte en Wi-Fi (2,4 GHz) plus Bluetooth, et s'associe à Home Assistant via l'intégration locale HomeKit Controller — sans hub Aqara ni compte cloud requis. Les montages DIY basés sur Hi-Link LD2410/LD2410C/LD2450 tournent sur un ESP32 avec ESPHome, qui est local par conception. Vérifiez la méthode d'intégration du produit spécifique avant l'achat si le contrôle local compte pour vous — tous les capteurs radar du marché n'évitent pas une dépendance cloud.",
           "Comme l'entité se comporte comme un capteur de présence standard, les automatisations existantes construites autour de capteurs de mouvement peuvent souvent être adaptées à un capteur radar avec des changements minimes — remplacez l'entité déclencheuse, conservez la logique d'automatisation.",
           "Combiner le radar avec d'autres types de capteurs (capteurs de contact, une caméra, l'audio) via la fusion de capteurs peut réduire davantage les faux positifs — voir la fusion de capteurs dans le guide de la maison connectée.",
+          'Option sur batterie : l\'Aqara FP300 associe PIR et radar mmWave 60 GHz, fonctionne avec deux piles CR2450 (Aqara annonce environ 3 ans en Zigbee, environ 2 ans en Thread) et est sorti à environ 50 $, pour une portée annoncée jusqu\'à 6 m. Il s\'appaire via un coordinateur Zigbee ou un routeur de bordure Thread plutôt qu\'en Wi-Fi, ce qui convient aux pièces sans prise à proximité.',
+        ],
+      },
+      cameraFreeSecurity: {
+        id: 'camera-free-security',
+        title: 'Surveillance sans caméra : stationnement prolongé et zones sensibles',
+        content:
+          '**Un radar peut déclencher une alerte lorsqu\'une pièce est occupée plus longtemps que prévu, ou lorsqu\'un mouvement apparaît dans une pièce censée être vide, sans qu\'aucune image ne soit jamais capturée — mais il signale qu\'une personne est là, jamais qui ou quoi.**',
+        items: [
+          'Les alertes de stationnement prolongé reposent sur une logique de minuterie ajoutée à un capteur de présence : dans Home Assistant, l\'automatisation se déclenche quand l\'entité de présence reste active au-delà d\'une durée définie, par exemple une salle de bain occupée pendant 30 minutes. Les produits commerciaux pour toilettes utilisent le même schéma avec des minuteries réglées par le fabricant, généralement de 15 à 45 minutes, et les présentent comme sans caméra ; ces affirmations sur la confidentialité et la précision viennent des fabricants, pas de tests indépendants.',
+          'Pour une alerte dans une pièce vide, n\'activez l\'automatisation qu\'en mode absence ou nuit et notifiez quand une entité radar de cette pièce ou zone passe à « actif ». Un radar peut confondre animaux ou objets en mouvement avec des personnes si vous ne réglez pas les zones et la sensibilité ; testez les fausses alarmes avant de vous y fier comme alarme.',
+          'Des capteurs radar comme l\'Aqara FP2 se connectent à Home Assistant et HomeKit, qui peuvent envoyer les notifications. Qu\'un service d\'alarme télésurveillé accepte des capteurs de présence tiers dépend du prestataire : demandez avant d\'acheter.',
+          'Les données de présence peuvent rester des données personnelles lorsqu\'elles sont liées à une personne ou servent à surveiller des salariés ou des résidents. Dans l\'UE, une surveillance sur un lieu de travail ou en établissement de soins peut exiger une base légale, une information et l\'implication des représentants du personnel, même sans caméra ; demandez un avis juridique avant un déploiement hors de votre domicile.',
         ],
       },
       faqSection: {
@@ -412,11 +462,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Un capteur radar capture-t-il des images ?', a: "Non — les capteurs de présence radar détectent l'occupation par réflexion d'ondes radio, pas par capture d'image. C'est l'avantage clé en matière de confidentialité par rapport à une caméra pour la détection de présence." },
           { q: 'Les capteurs radar peuvent-ils détecter une personne complètement immobile ?', a: "Oui — c'est le principal avantage par rapport aux capteurs de mouvement PIR, qui dépendent du mouvement et s'arrêtent généralement après un délai lorsque quelqu'un cesse de bouger. Le radar peut détecter des micro-mouvements comme la respiration pour enregistrer une occupation continue." },
-          { q: 'Combien coûtent les capteurs de présence radar ?', a: "Une option prête à l'emploi comme l'Aqara FP2 coûte environ 80–85 $ chez les grands revendeurs américains ; un montage DIY utilisant une puce Hi-Link LD2410, LD2410C ou LD2450 avec une carte ESP32 coûte environ 15–25 $. Vérifiez les offres actuelles des revendeurs avant d'acheter, car les promotions font varier le chiffre exact." },
+          { q: 'Combien coûtent les capteurs de présence radar ?', a: "Une option prête à l'emploi comme l'Aqara FP2 coûte environ 55–85 $ chez les grands revendeurs américains ; un montage DIY utilisant une puce Hi-Link LD2410, LD2410C ou LD2450 avec une carte ESP32 coûte environ 10–20 $. Vérifiez les offres actuelles des revendeurs avant d'acheter, car les promotions font varier le chiffre exact." },
           { q: 'Les capteurs radar fonctionnent-ils à travers les murs ou les portes ?', a: "Dans une mesure limitée et peu fiable — des tests communautaires avec des capteurs de la classe Hi-Link LD2410 montrent qu'ils peuvent détecter du mouvement à travers du verre et du contreplaqué fin, mais sont souvent trop sensibles à travers des murs ou portes fins, ce qui cause des faux positifs plutôt qu'une détection utile. Ne concevez pas une automatisation autour d'une détection délibérée à travers les murs ; réduisez la portée et la sensibilité de détection si vous observez des déclenchements depuis une pièce adjacente." },
           { q: 'Un capteur radar est-il meilleur qu\'un capteur de mouvement PIR pour tous les usages ?', a: "Non — les capteurs PIR sont moins chers et parfaitement adéquats pour les automatisations simples déclenchées par le mouvement. Le radar vaut le coût supplémentaire spécifiquement quand vous avez besoin d'une détection précise de l'occupation immobile." },
           { q: 'Puis-je utiliser un capteur radar pour la sécurité à la place d\'une caméra ?', a: "Le radar peut détecter une présence/intrusion mais ne peut pas identifier qui ou quoi l'a déclenchée comme le ferait une caméra — pour les applications de sécurité nécessitant l'identification, une caméra (ou le radar combiné à une caméra via la fusion de capteurs) est la solution la plus complète." },
           { q: 'Un capteur radar a-t-il besoin d\'un accès internet pour fonctionner ?', a: "Cela dépend de l'intégration du produit spécifique — vérifiez s'il utilise une intégration locale (Zigbee, ESPHome) ou une application dépendante du cloud avant l'achat si la fiabilité hors ligne compte pour vous." },
+          { q: 'Un radar peut-il détecter le stationnement prolongé sans caméra ?', a: 'Oui, au sens où il détecte qu\'un espace est occupé en continu au-delà d\'une durée définie : un capteur de présence plus une minuterie. Il ne peut pas dire qui est là ni ce que la personne fait ; il convient donc aux alertes de durée excessive dans des salles de bain ou des réserves, pas à l\'identification.' },
+          { q: 'Un prestataire de sécurité peut-il surveiller les mouvements intérieurs sans caméra ?', a: 'Les capteurs radar et PIR peuvent fournir des alertes de présence intérieure via les notifications de Home Assistant ou HomeKit. Qu\'un service d\'alarme télésurveillé accepte des capteurs de présence tiers dépend du prestataire : demandez avant d\'acheter.' },
         ],
       },
       relatedReading: {
@@ -439,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Capteur de présence radar' }, { '@type': 'Thing', name: 'Détection mmWave' }, { '@type': 'Thing', name: "Détection d'occupation" }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -453,6 +505,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Les capteurs radar peuvent-ils détecter une personne complètement immobile ?', acceptedAnswer: { '@type': 'Answer', text: "Oui — le radar peut détecter des micro-mouvements comme la respiration pour enregistrer une occupation continue, contrairement aux capteurs de mouvement PIR qui s'arrêtent après un délai." } },
         { '@type': 'Question', name: 'Un capteur radar est-il meilleur qu\'un capteur de mouvement PIR pour tous les usages ?', acceptedAnswer: { '@type': 'Answer', text: "Non — les capteurs PIR sont moins chers et adéquats pour les automatisations simples déclenchées par le mouvement. Le radar vaut la peine spécifiquement pour la détection précise de l'occupation immobile." } },
         { '@type': 'Question', name: 'Puis-je utiliser un capteur radar pour la sécurité à la place d\'une caméra ?', acceptedAnswer: { '@type': 'Answer', text: "Le radar peut détecter une présence/intrusion mais ne peut pas identifier qui ou quoi l'a déclenchée comme le ferait une caméra." } },
+        { '@type': 'Question', name: 'Un radar peut-il détecter le stationnement prolongé sans caméra ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — un capteur de présence plus une minuterie peut signaler un espace occupé au-delà d\'une durée définie, mais sans identifier qui est présent.' } },
+        { '@type': 'Question', name: 'Un prestataire de sécurité peut-il surveiller les mouvements intérieurs sans caméra ?', acceptedAnswer: { '@type': 'Answer', text: 'Les capteurs radar et PIR peuvent envoyer des alertes de présence via Home Assistant ou HomeKit ; l\'acceptation par un service d\'alarme télésurveillé dépend du prestataire.' } },
       ],
     },
   },
@@ -460,16 +514,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-ja.webp',
     title: 'レーダー式人感センサー：カメラなしの部屋の在室検知（2026年）',
     seoTitle: 'カメラ不要のレーダー人感センサー（2026年）',
     intro:
-      'mmWaveレーダーセンサーは、画像を一切撮影することなく部屋の在室状況や呼吸のような微小な動きまで検知できるため、プレゼンスベースの自動化においてカメラよりプライバシーに配慮した代替手段となります。Aqara FP2（米国の主要小売店で約80〜85ドル）はすぐに使えるオプションであり、Hi-LinkのLD2410/LD2410C/LD2450チップ（ESP32ボードを使ったDIY ESPHomeビルドで約15〜25ドル）は一般的な低コストの選択肢です。この記事では、レーダー式人感検知の仕組み、カメラや人感センサーより優れている点、そしてHome Assistantへの組み込み方を解説します。',
+      'mmWaveレーダーセンサーは、画像を一切撮影することなく部屋の在室状況や呼吸のような微小な動きまで検知できるため、プレゼンスベースの自動化においてカメラよりプライバシーに配慮した代替手段となります。Aqara FP2（米国の主要小売店で約55〜85ドル）はすぐに使えるオプションであり、Hi-LinkのLD2410/LD2410C/LD2450チップ（ESP32ボードを使ったDIY ESPHomeビルドで約10〜20ドル）は一般的な低コストの選択肢です。この記事では、レーダー式人感検知の仕組み、カメラや人感センサーより優れている点、そしてHome Assistantへの組み込み方を解説します。',
     metaDescription:
-      'カメラなしで部屋の在室を検知するレーダー人感センサー：mmWaveセンシングの仕組みと、スマートホームにおいて人感センサーやカメラより優れている点。',
+      'レーダー式人感センサーはカメラなしで部屋の在室と滞在時間を検知します。mmWaveの仕組み、費用、PIRセンサーやカメラより優れる場面を解説します。',
     twitterDescription:
       'mmWaveレーダーセンサーはカメラなしで部屋の在室を検知します — PIR人感センサーより正確で、カメラよりプライバシーに配慮しています。',
     readTime: '読了時間6分',
@@ -484,19 +538,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'プライバシー配慮 在室センサー',
     ],
     leadAnswerBlock:
-      '**レーダー（mmWave）人感センサーは、静止している人も含めて部屋が在室状態かどうかを、画像を一切撮影せずに検知します。これにより、パッシブ赤外線人感センサーより正確で、プレゼンスベースの自動化においてカメラよりプライバシーに配慮したものになります。** Aqara FP2（すぐに使える、約80〜85ドル）とHi-LinkのLD2410/LD2410C/LD2450チップ（DIY ESPHomeビルド、約15〜25ドル）が一般的な2つの選択肢です — プロモーションで実際の価格は変動するため、購入前に現在の小売価格を確認してください。',
+      '**レーダー（mmWave）人感センサーは、静止している人も含めて部屋が在室状態かどうかを、画像を一切撮影せずに検知します。これにより、パッシブ赤外線人感センサーより正確で、プレゼンスベースの自動化においてカメラよりプライバシーに配慮したものになります。** Aqara FP2（すぐに使える、約55〜85ドル）とHi-LinkのLD2410/LD2410C/LD2450チップ（DIY ESPHomeビルド、約10〜20ドル）が一般的な2つの選択肢です — プロモーションで実際の価格は変動するため、購入前に現在の小売価格を確認してください。',
     quickAnswerTop: {
       ja: {
         question: 'カメラなしで部屋の在室を検知できますか？',
         answer:
-          'はい — mmWaveレーダー人感センサーは、電波を使って動きや呼吸のような微小な動きを感知することで、じっと座っている場合を含め、誰かが部屋にいるかどうかを検知でき、画像は一切撮影しません。これは、静止している人を短いタイムアウト後に検知しなくなるパッシブ赤外線（PIR）人感センサーの主な弱点を解決します。Aqara FP2（米国の主要小売店で約80〜85ドル、有線、Wi-Fi + Bluetooth、ハブ不要）はすぐに使えるオプションで、HomeKitコントローラー連携を通じてHome Assistantとローカルでペアリングできます。Hi-LinkのLD2410/LD2410C/LD2450チップ（ESP32ボードを使ったDIY ESPHomeビルドで約15〜25ドル）は、より安価で手間のかかる選択肢で、ESPHomeをネイティブにサポートしています。',
+          'はい — mmWaveレーダー人感センサーは、電波を使って動きや呼吸のような微小な動きを感知することで、じっと座っている場合を含め、誰かが部屋にいるかどうかを検知でき、画像は一切撮影しません。これは、静止している人を短いタイムアウト後に検知しなくなるパッシブ赤外線（PIR）人感センサーの主な弱点を解決します。Aqara FP2（米国の主要小売店で約55〜85ドル、有線、Wi-Fi + Bluetooth、ハブ不要）はすぐに使えるオプションで、HomeKitコントローラー連携を通じてHome Assistantとローカルでペアリングできます。Hi-LinkのLD2410/LD2410C/LD2450チップ（ESP32ボードを使ったDIY ESPHomeビルドで約10〜20ドル）は、より安価で手間のかかる選択肢で、ESPHomeをネイティブにサポートしています。',
         bullets: [
           'レーダーセンサーは単なる動きではなく静止時の在室も検知 — PIRの「静止すると検知しなくなる」問題を解決',
           '画像は一切撮影されない — 在室検知においてカメラよりプライバシーに配慮',
-          'Aqara FP2：約80〜85ドル、すぐに使える、HomeKitコントローラー経由でHome Assistantとローカルにペアリング',
-          'Hi-Link LD2410/LD2410C/LD2450：DIY ESPHomeビルドで約15〜25ドル、ESPHomeコンポーネントをネイティブサポート',
+          'Aqara FP2：約55〜85ドル、すぐに使える、HomeKitコントローラー経由でHome Assistantとローカルにペアリング',
+          'Hi-Link LD2410/LD2410C/LD2450：DIY ESPHomeビルドで約10〜20ドル、ESPHomeコンポーネントをネイティブサポート',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -504,6 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'レーダー式人感検知の仕組み', anchor: 'how-it-works' },
       { label: 'レーダー vs PIR人感センサー vs カメラ', anchor: 'radar-vs-alternatives' },
       { label: 'Home Assistant連携', anchor: 'ha-integration' },
+      { label: 'カメラなしの見守り', anchor: 'camera-free-security' },
       { label: 'よくある質問', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -518,7 +573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'mmWaveレーダーセンサーは、動きが必要なPIR人感センサーとは異なり、静止している人を含めて在室を検知する',
           '画像は撮影されない — 在室データのみで、この用途ではカメラよりプライバシーに配慮している',
-          'すぐに使えるオプション：Aqara FP2（約80〜85ドル、有線、ハブ不要、HomeKitコントローラー経由でローカルにペアリング）。DIYオプション：Hi-Link LD2410/LD2410C/LD2450（ESP32ボードで約15〜25ドル、ESPHomeをネイティブサポート）',
+          'すぐに使えるオプション：Aqara FP2（約55〜85ドル、有線、ハブ不要、HomeKitコントローラー経由でローカルにペアリング）。DIYオプション：Hi-Link LD2410/LD2410C/LD2450（ESP32ボードで約10〜20ドル、ESPHomeをネイティブサポート）',
           'Home Assistantに標準的な在室/占有エンティティとして組み込まれ、人感センサーと同じようにあらゆる自動化で利用可能',
           'レーダーを他のセンサータイプと組み合わせて誤検知をさらに減らす方法はセンサーフュージョンガイドを参照',
         ],
@@ -554,6 +609,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aqara FP2はWi-Fi（2.4GHz）とBluetoothで接続し、ローカルのHomeKitコントローラー連携を通じてHome Assistantとペアリングします — Aqaraハブやクラウドアカウントは不要です。Hi-Link LD2410/LD2410C/LD2450ベースのDIYビルドは、本来ローカルであるESPHomeを使ってESP32上で動作します。ローカル制御が重要な場合は、購入前に具体的な製品の連携方法を確認してください — 市場のすべてのレーダーセンサーがクラウド依存を回避しているわけではありません。',
           'エンティティは標準的な人感センサーのように振る舞うため、人感センサーを中心に構築された既存の自動化は、多くの場合、最小限の変更でレーダーセンサーに適応できます — トリガーエンティティを置き換え、自動化ロジックはそのまま維持します。',
           'センサーフュージョンによりレーダーを他のセンサータイプ（接点センサー、カメラ、音声）と組み合わせることで、誤検知をさらに減らせます — スマートホームガイドのセンサーフュージョンを参照してください。',
+          '電池式の選択肢：Aqara FP300はPIRと60GHz mmWaveレーダーを組み合わせ、CR2450電池2個で動作します（Aqara公表値でZigbeeなら約3年、Threadなら約2年）。発売時の価格は約50ドルで、公称検知距離は最大6mです。Wi-FiではなくZigbeeコーディネーターまたはThreadボーダールーター経由でペアリングするため、近くにコンセントがない部屋に向いています。',
+        ],
+      },
+      cameraFreeSecurity: {
+        id: 'camera-free-security',
+        title: 'カメラなしの見守り：長時間滞在とセンシティブな場所',
+        content:
+          '**レーダーは、部屋が想定より長く使用されている場合や、無人のはずの部屋で動きがある場合に、画像を一切撮影せずにアラートを出せます。ただし分かるのは「誰かがいる」ことだけで、誰か・何かは分かりません。**',
+        items: [
+          '長時間滞在のアラートは、在室センサーにタイマーを組み合わせた仕組みです。Home Assistantでは、在室エンティティが設定時間（例：バスルームが30分間使用中）を超えてオンのままのときに動作させます。業務用トイレ向け製品も同様の仕組みで、メーカー設定のタイマー（通常15〜45分）を使い、カメラなしと謳っています。ただしプライバシーや精度に関する主張はメーカーによるもので、独立した検証ではありません。',
+          '無人の部屋の警報にするには、外出モードや夜間モードのときだけオートメーションを有効にし、その部屋やゾーンのレーダーエンティティがオンになったら通知します。ゾーンや感度を調整しないと、ペットや動く物を人と誤検知することがあるため、警報として頼る前に誤報をテストしてください。',
+          'Aqara FP2のようなレーダーセンサーはHome AssistantやHomeKitに接続でき、通知を送れます。有人監視の警備サービスがサードパーティ製の在室センサーを受け付けるかは事業者によるため、購入前に確認してください。',
+          '在室データも、特定の人に結び付けたり、従業員や入居者の監視に使ったりすれば個人データになり得ます。EUでは、カメラがなくても職場や介護施設での監視には法的根拠、通知、従業員代表の関与が必要になる場合があります。自宅以外で導入する前に法的助言を受けてください。',
         ],
       },
       faqSection: {
@@ -562,11 +630,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'レーダーセンサーは画像を撮影しますか？', a: 'いいえ — レーダー人感センサーは電波の反射によって在室を検知し、画像は撮影しません。これが、在室検知においてカメラに対する中核的なプライバシー上の利点です。' },
           { q: 'レーダーセンサーは完全に静止して座っている人を検知できますか？', a: 'はい — これがPIR人感センサーに対する主な利点です。PIRは動きに依存し、通常は誰かが動かなくなるとタイムアウトします。レーダーは呼吸のような微小な動きを検知して、在室が続いていることを登録できます。' },
-          { q: 'レーダー人感センサーの価格はどのくらいですか？', a: 'Aqara FP2のようなすぐに使えるオプションは、米国の主要小売店で約80〜85ドルです。Hi-LinkのLD2410、LD2410C、またはLD2450チップとESP32ボードを使ったDIYビルドは約15〜25ドルです。プロモーションで実際の価格は変動するため、購入前に現在の小売価格を確認してください。' },
+          { q: 'レーダー人感センサーの価格はどのくらいですか？', a: 'Aqara FP2のようなすぐに使えるオプションは、米国の主要小売店で約55〜85ドルです。Hi-LinkのLD2410、LD2410C、またはLD2450チップとESP32ボードを使ったDIYビルドは約10〜20ドルです。プロモーションで実際の価格は変動するため、購入前に現在の小売価格を確認してください。' },
           { q: 'レーダーセンサーは壁やドア越しに機能しますか？', a: '限定的で不確実な範囲でのみです — Hi-Link LD2410クラスのセンサーを使ったコミュニティテストでは、ガラスや薄い合板越しの動きを拾えることが示されていますが、薄い壁やドア越しでは過敏になり、有用な検知ではなくむしろ誤検知を引き起こすことがよくあります。壁越しの意図的な検知を前提に自動化を設計しないでください。隣室からのトリガーが見られる場合は、検知範囲と感度を下げてください。' },
           { q: 'レーダーセンサーはあらゆる用途でPIR人感センサーより優れていますか？', a: 'いいえ — PIRセンサーは安価で、シンプルな動作トリガー自動化には十分です。レーダーは、正確な静止時在室検知が特に必要な場合に、追加コストに見合う価値があります。' },
           { q: 'カメラの代わりにレーダーセンサーをセキュリティ用途に使えますか？', a: 'レーダーは在室/侵入を検知できますが、カメラのように誰が、あるいは何がそれを引き起こしたのかを識別することはできません — 識別が必要なセキュリティ用途には、カメラ（またはセンサーフュージョンによるレーダーとカメラの併用）がより完全なソリューションです。' },
           { q: 'レーダーセンサーが動作するのにインターネットアクセスは必要ですか？', a: 'これは具体的な製品の連携方法によります — オフラインでの信頼性が重要な場合は、購入前にローカル連携（Zigbee、ESPHome）を使うか、クラウド依存のアプリを使うかを確認してください。' },
+          { q: 'カメラなしでレーダーは長時間の居座りを検知できますか？', a: 'はい。空間が設定時間を超えて継続的に使われていることを、在室センサーとタイマーの組み合わせで検知できます。誰がいるか、何をしているかは分からないため、バスルームや倉庫での長時間滞在アラートには向きますが、人物の特定には向きません。' },
+          { q: '警備会社はカメラなしで屋内の動きを監視できますか？', a: 'レーダーやPIRセンサーは、Home AssistantやHomeKitの通知を通じて屋内の在室アラートを送れます。有人監視の警備サービスがサードパーティ製の在室センサーを受け付けるかは事業者によるため、購入前に確認してください。' },
         ],
       },
       relatedReading: {
@@ -589,7 +659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'レーダー人感センサー' }, { '@type': 'Thing', name: 'mmWaveセンシング' }, { '@type': 'Thing', name: '在室検知' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -603,6 +673,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'レーダーセンサーは完全に静止して座っている人を検知できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい — レーダーは呼吸のような微小な動きを検知して在室の継続を登録できます。タイムアウトするPIR人感センサーとは異なります。' } },
         { '@type': 'Question', name: 'レーダーセンサーはあらゆる用途でPIR人感センサーより優れていますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ — PIRセンサーは安価でシンプルな動作トリガー自動化には十分です。レーダーは特に正確な静止時在室検知に価値があります。' } },
         { '@type': 'Question', name: 'カメラの代わりにレーダーセンサーをセキュリティ用途に使えますか？', acceptedAnswer: { '@type': 'Answer', text: 'レーダーは在室/侵入を検知できますが、カメラのように誰が、あるいは何がそれを引き起こしたのかを識別することはできません。' } },
+        { '@type': 'Question', name: 'カメラなしでレーダーは長時間の居座りを検知できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。在室センサーとタイマーで、設定時間を超えて使用中の空間を通知できますが、誰がいるかは特定できません。' } },
+        { '@type': 'Question', name: '警備会社はカメラなしで屋内の動きを監視できますか？', acceptedAnswer: { '@type': 'Answer', text: 'レーダーやPIRセンサーはHome AssistantやHomeKit経由で在室アラートを送れます。有人監視サービスが受け付けるかは事業者によります。' } },
       ],
     },
   },
@@ -610,16 +682,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-zh.webp',
     title: '雷达人体存在感应：无需摄像头的房间占用检测（2026年）',
     seoTitle: '无摄像头雷达存在感应（2026年）',
     intro:
-      '毫米波（mmWave）雷达传感器可以检测房间的占用情况，甚至呼吸等微小动作，而无需捕获任何图像，这使其成为基于存在感应自动化时比摄像头更注重隐私的替代方案。Aqara FP2（美国主要零售商售价约80–85美元）是一款即插即用的选择，而Hi-Link的LD2410/LD2410C/LD2450芯片（配合ESP32开发板进行DIY ESPHome构建，约15–25美元）是常见的低成本方案。本文介绍雷达存在感应的工作原理、它在哪些方面优于摄像头或运动传感器，以及如何将其接入Home Assistant。',
+      '毫米波（mmWave）雷达传感器可以检测房间的占用情况，甚至呼吸等微小动作，而无需捕获任何图像，这使其成为基于存在感应自动化时比摄像头更注重隐私的替代方案。Aqara FP2（美国主要零售商售价约55–85美元）是一款即插即用的选择，而Hi-Link的LD2410/LD2410C/LD2450芯片（配合ESP32开发板进行DIY ESPHome构建，约10–20美元）是常见的低成本方案。本文介绍雷达存在感应的工作原理、它在哪些方面优于摄像头或运动传感器，以及如何将其接入Home Assistant。',
     metaDescription:
-      '无需摄像头即可检测房间占用的雷达存在传感器：毫米波感应的工作原理，以及它在智能家居中优于运动传感器或摄像头的地方。',
+      '雷达存在传感器无需摄像头即可检测房间占用和滞留时长：mmWave的工作原理、成本，以及何时优于PIR传感器或摄像头。',
     twitterDescription:
       '毫米波雷达传感器无需摄像头即可检测房间占用——比PIR运动传感器更准确，比摄像头更注重隐私。',
     readTime: '阅读时间6分钟',
@@ -634,19 +706,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '隐私友好 占用传感器',
     ],
     leadAnswerBlock:
-      '**雷达（毫米波）存在传感器可以检测房间是否有人——包括静止不动的人，而不仅仅是运动——且无需捕获任何图像，因此在基于存在感应的自动化中，它比被动红外运动传感器更准确，也比摄像头更注重隐私。** Aqara FP2（约80–85美元，即插即用）和Hi-Link的LD2410/LD2410C/LD2450芯片（约15–25美元，DIY ESPHome构建）是两种常见方案——购买前请核实当前零售价格，因为促销活动会使实际价格有所波动。',
+      '**雷达（毫米波）存在传感器可以检测房间是否有人——包括静止不动的人，而不仅仅是运动——且无需捕获任何图像，因此在基于存在感应的自动化中，它比被动红外运动传感器更准确，也比摄像头更注重隐私。** Aqara FP2（约55–85美元，即插即用）和Hi-Link的LD2410/LD2410C/LD2450芯片（约10–20美元，DIY ESPHome构建）是两种常见方案——购买前请核实当前零售价格，因为促销活动会使实际价格有所波动。',
     quickAnswerTop: {
       zh: {
         question: '我可以在不使用摄像头的情况下检测房间占用吗？',
         answer:
-          '可以——毫米波雷达存在传感器通过无线电波感应运动和呼吸等微小动作，即使有人一动不动地坐着，也能检测出房间是否有人，且不捕获任何图像。这解决了被动红外（PIR）运动传感器的主要局限：在短暂超时后就无法再检测静止不动的人。Aqara FP2（美国主要零售商售价约80–85美元，有线连接，Wi-Fi + 蓝牙，无需网关）是一款即插即用的产品，可通过HomeKit Controller集成在本地与Home Assistant配对；Hi-Link的LD2410/LD2410C/LD2450芯片（配合ESP32开发板DIY ESPHome构建，约15–25美元）则是更便宜、需要更多动手操作的方案，原生支持ESPHome。',
+          '可以——毫米波雷达存在传感器通过无线电波感应运动和呼吸等微小动作，即使有人一动不动地坐着，也能检测出房间是否有人，且不捕获任何图像。这解决了被动红外（PIR）运动传感器的主要局限：在短暂超时后就无法再检测静止不动的人。Aqara FP2（美国主要零售商售价约55–85美元，有线连接，Wi-Fi + 蓝牙，无需网关）是一款即插即用的产品，可通过HomeKit Controller集成在本地与Home Assistant配对；Hi-Link的LD2410/LD2410C/LD2450芯片（配合ESP32开发板DIY ESPHome构建，约10–20美元）则是更便宜、需要更多动手操作的方案，原生支持ESPHome。',
         bullets: [
           '雷达传感器可检测静止占用，而不仅仅是运动——解决了PIR传感器"静止后无法检测"的问题',
           '不捕获任何图像——在存在检测方面比摄像头更注重隐私',
-          'Aqara FP2：约80–85美元，即插即用，通过HomeKit Controller在本地与Home Assistant配对',
-          'Hi-Link LD2410/LD2410C/LD2450：DIY ESPHome构建约15–25美元，原生支持ESPHome组件',
+          'Aqara FP2：约55–85美元，即插即用，通过HomeKit Controller在本地与Home Assistant配对',
+          'Hi-Link LD2410/LD2410C/LD2450：DIY ESPHome构建约10–20美元，原生支持ESPHome组件',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -654,6 +726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '雷达存在感应的工作原理', anchor: 'how-it-works' },
       { label: '雷达 vs PIR运动传感器 vs 摄像头', anchor: 'radar-vs-alternatives' },
       { label: 'Home Assistant集成', anchor: 'ha-integration' },
+      { label: '无摄像头监测', anchor: 'camera-free-security' },
       { label: '常见问题', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -668,7 +741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '毫米波雷达传感器可以检测包括静止不动的人在内的占用情况，而PIR运动传感器则需要运动才能触发',
           '不捕获任何图像——仅有存在数据，在此用途上比摄像头更注重隐私',
-          '即插即用方案：Aqara FP2（约80–85美元，有线，无需网关，通过HomeKit Controller在本地配对）。DIY方案：Hi-Link LD2410/LD2410C/LD2450（配合ESP32开发板约15–25美元，原生支持ESPHome）',
+          '即插即用方案：Aqara FP2（约55–85美元，有线，无需网关，通过HomeKit Controller在本地配对）。DIY方案：Hi-Link LD2410/LD2410C/LD2450（配合ESP32开发板约10–20美元，原生支持ESPHome）',
           '可作为标准的存在/占用实体接入Home Assistant，可像运动传感器一样用于任何自动化',
           '有关将雷达与其他传感器类型结合以进一步减少误报，请参阅传感器融合指南',
         ],
@@ -704,6 +777,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aqara FP2通过Wi-Fi（2.4GHz）加蓝牙连接，并通过本地HomeKit Controller集成与Home Assistant配对——无需Aqara网关或云账户。基于Hi-Link LD2410/LD2410C/LD2450的DIY构建运行在ESP32上，使用天生本地化的ESPHome。如果本地控制对你很重要，购买前请确认具体产品的集成方式——并非市场上所有雷达传感器都能避免云依赖。',
           '由于该实体的行为与标准存在传感器相同，围绕运动传感器构建的现有自动化通常只需极少改动即可适配雷达传感器——替换触发实体，保留自动化逻辑不变。',
           '通过传感器融合将雷达与其他类型的传感器（接触传感器、摄像头、音频）结合，可进一步减少误报——请参阅智能家居指南中的传感器融合部分。',
+          '电池供电选项：Aqara FP300结合PIR与60 GHz mmWave雷达，使用两节CR2450电池（Aqara称Zigbee模式约3年、Thread模式约2年），发售价约50美元，标称探测距离最远6米。它通过Zigbee协调器或Thread边界路由器配对，而非Wi-Fi，适合附近没有插座的房间。',
+        ],
+      },
+      cameraFreeSecurity: {
+        id: 'camera-free-security',
+        title: '无摄像头监测：滞留检测与敏感区域',
+        content:
+          '**雷达可以在房间被占用时间超出预期，或本应无人的房间出现移动时发出提醒，全程不采集任何图像——但它只能报告“有人在”，无法判断是谁或是什么。**',
+        items: [
+          '滞留提醒是在存在传感器之上叠加计时逻辑：在Home Assistant中，当存在实体持续为开启状态超过设定时间（例如卫生间被占用30分钟）时触发。商用厕所产品采用相同模式，由厂商设定计时（通常为15–45分钟）并宣传“无摄像头”；这些隐私和准确性说法来自厂商，而非独立测试。',
+          '对于空房间提醒，仅在离家或夜间模式下启用自动化，并在该房间或区域的雷达实体变为开启时发送通知。如果不调整区域和灵敏度，雷达可能把宠物或移动物体误判为人，因此在将其作为警报依赖之前，请先测试误报。',
+          'Aqara FP2等雷达传感器可接入Home Assistant和HomeKit，由它们发送通知。有专业监控的报警服务商是否接受第三方存在传感器取决于服务商，购买前请先询问。',
+          '当存在数据与具体个人关联，或用于监控员工或住户时，仍可能属于个人数据。在欧盟，即使没有摄像头，工作场所或护理机构的监控也可能需要法律依据、告知以及劳资委员会的参与；在自己家之外部署前，请先获取法律意见。',
         ],
       },
       faqSection: {
@@ -712,11 +798,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '雷达传感器会捕获图像吗？', a: '不会——雷达存在传感器通过无线电波反射检测占用情况，而非图像捕获。这是它相较于摄像头在存在检测方面的核心隐私优势。' },
           { q: '雷达传感器能检测完全静止不动的人吗？', a: '能——这是它相较于PIR运动传感器的主要优势，PIR依赖运动，通常在有人停止移动后会超时失效。雷达可以检测呼吸等微小动作，以确认持续占用。' },
-          { q: '雷达存在传感器的价格是多少？', a: 'Aqara FP2这类即插即用产品在美国主要零售商处售价约80–85美元；使用Hi-Link LD2410、LD2410C或LD2450芯片搭配ESP32开发板的DIY构建约15–25美元。购买前请核实当前零售价格，因为促销活动会使实际价格有所波动。' },
+          { q: '雷达存在传感器的价格是多少？', a: 'Aqara FP2这类即插即用产品在美国主要零售商处售价约55–85美元；使用Hi-Link LD2410、LD2410C或LD2450芯片搭配ESP32开发板的DIY构建约10–20美元。购买前请核实当前零售价格，因为促销活动会使实际价格有所波动。' },
           { q: '雷达传感器能穿透墙壁或门检测吗？', a: '只能在有限且不太可靠的程度上——社区对Hi-Link LD2410级传感器的测试显示，它们可以穿透玻璃和薄胶合板检测到运动，但穿透薄墙壁或门时往往过于敏感，导致误报而非有用的检测。不要围绕刻意的隔墙检测来设计自动化；如果发现来自相邻房间的触发，请降低检测范围和灵敏度。' },
           { q: '雷达传感器在所有用例中都比PIR运动传感器更好吗？', a: '不是——PIR传感器更便宜，对于简单的运动触发自动化来说完全够用。只有当你确实需要精准的静止占用检测时，雷达的额外成本才值得。' },
           { q: '我可以用雷达传感器代替摄像头来实现安防吗？', a: '雷达可以检测存在/入侵，但无法像摄像头那样识别触发的是谁或是什么——对于需要识别功能的安防应用，摄像头（或通过传感器融合将雷达与摄像头结合）是更完整的解决方案。' },
           { q: '雷达传感器工作需要联网吗？', a: '这取决于具体产品的集成方式——如果离线可靠性对你很重要，购买前请确认它使用的是本地集成（Zigbee、ESPHome）还是依赖云端的应用程序。' },
+          { q: '雷达能在没有摄像头的情况下检测滞留吗？', a: '可以，即检测某个空间被持续占用超过设定时间：存在传感器加计时器。它无法判断是谁在场或在做什么，因此适合卫生间或储物间的超时提醒，不适合身份识别。' },
+          { q: '家庭安防服务商能在没有摄像头的情况下监测室内移动吗？', a: '雷达和PIR传感器可通过Home Assistant或HomeKit通知提供室内存在提醒。有专业监控的报警服务商是否接受第三方存在传感器取决于服务商，购买前请先询问。' },
         ],
       },
       relatedReading: {
@@ -739,7 +827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: '雷达存在传感器' }, { '@type': 'Thing', name: '毫米波感应' }, { '@type': 'Thing', name: '占用检测' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -753,6 +841,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '雷达传感器能检测完全静止不动的人吗？', acceptedAnswer: { '@type': 'Answer', text: '能——雷达可以检测呼吸等微小动作以确认持续占用，这与会超时失效的PIR运动传感器不同。' } },
         { '@type': 'Question', name: '雷达传感器在所有用例中都比PIR运动传感器更好吗？', acceptedAnswer: { '@type': 'Answer', text: '不是——PIR传感器更便宜，足以应对简单的运动触发自动化。雷达的价值主要体现在精准的静止占用检测上。' } },
         { '@type': 'Question', name: '我可以用雷达传感器代替摄像头来实现安防吗？', acceptedAnswer: { '@type': 'Answer', text: '雷达可以检测存在/入侵，但无法像摄像头那样识别触发的是谁或是什么。' } },
+        { '@type': 'Question', name: '雷达能在没有摄像头的情况下检测滞留吗？', acceptedAnswer: { '@type': 'Answer', text: '可以——存在传感器加计时器可以标记被占用超过设定时间的空间，但无法识别是谁。' } },
+        { '@type': 'Question', name: '家庭安防服务商能在没有摄像头的情况下监测室内移动吗？', acceptedAnswer: { '@type': 'Answer', text: '雷达和PIR传感器可通过Home Assistant或HomeKit发送室内存在提醒；监控报警服务商是否接受取决于服务商。' } },
       ],
     },
   },
@@ -760,16 +850,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-es.webp',
     title: 'Detección de presencia por radar: ocupación de habitaciones sin cámara (2026)',
     seoTitle: 'Detección de presencia por radar sin cámara (2026)',
     intro:
-      'Los sensores de radar mmWave detectan la ocupación de una habitación e incluso micromovimientos como la respiración sin capturar ninguna imagen, lo que los convierte en una alternativa más respetuosa con la privacidad que una cámara para automatizaciones basadas en presencia. El Aqara FP2 (alrededor de 80-85 $ en los principales minoristas de EE. UU.) es una opción lista para usar, mientras que los chips LD2410/LD2410C/LD2450 de Hi-Link (alrededor de 15-25 $ como montaje DIY con ESPHome y una placa ESP32) son la vía habitual de menor coste. Este artículo explica cómo funciona la detección de presencia por radar, en qué casos supera a una cámara o a un sensor de movimiento, y cómo integrarla en Home Assistant.',
+      'Los sensores de radar mmWave detectan la ocupación de una habitación e incluso micromovimientos como la respiración sin capturar ninguna imagen, lo que los convierte en una alternativa más respetuosa con la privacidad que una cámara para automatizaciones basadas en presencia. El Aqara FP2 (alrededor de 55-85 $ en los principales minoristas de EE. UU.) es una opción lista para usar, mientras que los chips LD2410/LD2410C/LD2450 de Hi-Link (alrededor de 10-20 $ como montaje DIY con ESPHome y una placa ESP32) son la vía habitual de menor coste. Este artículo explica cómo funciona la detección de presencia por radar, en qué casos supera a una cámara o a un sensor de movimiento, y cómo integrarla en Home Assistant.',
     metaDescription:
-      'Sensores de presencia por radar para detectar la ocupación de una habitación sin cámara: cómo funciona la detección mmWave y en qué supera a los sensores de movimiento o a las cámaras en una casa inteligente.',
+      'Los sensores de presencia por radar detectan la ocupación de una sala y la permanencia sin cámara: cómo funciona el mmWave, cuánto cuesta y cuándo supera al PIR o a las cámaras.',
     twitterDescription:
       'Los sensores de radar mmWave detectan la ocupación de una habitación sin cámara: más precisos que los sensores de movimiento PIR y más respetuosos con la privacidad que una cámara.',
     readTime: '6 min de lectura',
@@ -784,19 +874,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'sensor ocupacion respetuoso privacidad',
     ],
     leadAnswerBlock:
-      '**Un sensor de presencia por radar (mmWave) detecta si una habitación está ocupada, incluyendo a una persona inmóvil y no solo el movimiento, sin capturar ninguna imagen, lo que lo hace más preciso que un sensor de movimiento infrarrojo pasivo y más respetuoso con la privacidad que una cámara para automatizaciones basadas en presencia.** El Aqara FP2 (~80-85 $, listo para usar) y los chips LD2410/LD2410C/LD2450 de Hi-Link (~15-25 $, montaje DIY con ESPHome) son las dos vías habituales: verifica los precios actuales de los minoristas antes de comprar, ya que las promociones hacen variar la cifra exacta.',
+      '**Un sensor de presencia por radar (mmWave) detecta si una habitación está ocupada, incluyendo a una persona inmóvil y no solo el movimiento, sin capturar ninguna imagen, lo que lo hace más preciso que un sensor de movimiento infrarrojo pasivo y más respetuoso con la privacidad que una cámara para automatizaciones basadas en presencia.** El Aqara FP2 (~55-85 $, listo para usar) y los chips LD2410/LD2410C/LD2450 de Hi-Link (~10-20 $, montaje DIY con ESPHome) son las dos vías habituales: verifica los precios actuales de los minoristas antes de comprar, ya que las promociones hacen variar la cifra exacta.',
     quickAnswerTop: {
       es: {
         question: '¿Puedo detectar la ocupación de una habitación sin cámara?',
         answer:
-          'Sí: los sensores de presencia por radar mmWave detectan si hay alguien en una habitación, incluso cuando está sentado sin moverse, mediante la detección de movimiento y micromovimientos (como la respiración) a través de ondas de radio, sin capturar ninguna imagen. Esto resuelve la principal limitación de los sensores de movimiento por infrarrojos pasivos (PIR), que dejan de detectar a una persona inmóvil tras un breve período de espera. El Aqara FP2 (~80-85 $ en los principales minoristas de EE. UU., con cable, Wi-Fi + Bluetooth, sin necesidad de hub) es una opción lista para usar que se empareja localmente con Home Assistant a través de la integración HomeKit Controller; los chips LD2410/LD2410C/LD2450 de Hi-Link (~15-25 $ como montaje DIY con ESPHome y una placa ESP32) son la vía más económica y práctica, con soporte nativo de ESPHome.',
+          'Sí: los sensores de presencia por radar mmWave detectan si hay alguien en una habitación, incluso cuando está sentado sin moverse, mediante la detección de movimiento y micromovimientos (como la respiración) a través de ondas de radio, sin capturar ninguna imagen. Esto resuelve la principal limitación de los sensores de movimiento por infrarrojos pasivos (PIR), que dejan de detectar a una persona inmóvil tras un breve período de espera. El Aqara FP2 (~55-85 $ en los principales minoristas de EE. UU., con cable, Wi-Fi + Bluetooth, sin necesidad de hub) es una opción lista para usar que se empareja localmente con Home Assistant a través de la integración HomeKit Controller; los chips LD2410/LD2410C/LD2450 de Hi-Link (~10-20 $ como montaje DIY con ESPHome y una placa ESP32) son la vía más económica y práctica, con soporte nativo de ESPHome.',
         bullets: [
           'Los sensores de radar detectan la ocupación estática, no solo el movimiento: resuelven el problema del PIR de "dejar de detectar al quedarse quieto"',
           'No se captura ninguna imagen: más respetuoso con la privacidad que una cámara para la detección de presencia',
-          'Aqara FP2: ~80-85 $, listo para usar, se empareja localmente con Home Assistant a través de HomeKit Controller',
-          'Hi-Link LD2410/LD2410C/LD2450: ~15-25 $ como montaje DIY con ESPHome, soporte nativo de componentes ESPHome',
+          'Aqara FP2: ~55-85 $, listo para usar, se empareja localmente con Home Assistant a través de HomeKit Controller',
+          'Hi-Link LD2410/LD2410C/LD2450: ~10-20 $ como montaje DIY con ESPHome, soporte nativo de componentes ESPHome',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -804,6 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Cómo funciona la detección de presencia por radar', anchor: 'how-it-works' },
       { label: 'Radar vs. movimiento PIR vs. cámara', anchor: 'radar-vs-alternatives' },
       { label: 'Integración con Home Assistant', anchor: 'ha-integration' },
+      { label: 'Vigilancia sin cámara', anchor: 'camera-free-security' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -818,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Los sensores de radar mmWave detectan la ocupación, incluida una persona inmóvil, a diferencia de los sensores de movimiento PIR, que necesitan movimiento para activarse',
           'No se captura ninguna imagen: solo datos de presencia, lo que resulta más respetuoso con la privacidad que una cámara para este uso',
-          'Opción lista para usar: Aqara FP2 (~80-85 $, con cable, sin necesidad de hub, se empareja localmente a través de HomeKit Controller). Opción DIY: Hi-Link LD2410/LD2410C/LD2450 (~15-25 $ con una placa ESP32, soporte nativo de ESPHome)',
+          'Opción lista para usar: Aqara FP2 (~55-85 $, con cable, sin necesidad de hub, se empareja localmente a través de HomeKit Controller). Opción DIY: Hi-Link LD2410/LD2410C/LD2450 (~10-20 $ con una placa ESP32, soporte nativo de ESPHome)',
           'Se integra en Home Assistant como una entidad estándar de presencia/ocupación, utilizable en cualquier automatización igual que un sensor de movimiento',
           'Consulta la guía de fusión de sensores para combinar el radar con otros tipos de sensores y reducir aún más los falsos positivos',
         ],
@@ -854,6 +945,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El Aqara FP2 se conecta por Wi-Fi (2,4 GHz) además de Bluetooth, y se empareja con Home Assistant mediante la integración local de HomeKit Controller, sin necesidad de un hub Aqara ni una cuenta en la nube. Los montajes DIY basados en Hi-Link LD2410/LD2410C/LD2450 funcionan en un ESP32 con ESPHome, que es local por diseño. Comprueba el método de integración del producto concreto antes de comprarlo si el control local te importa: no todos los sensores de radar del mercado evitan una dependencia de la nube.',
           'Como la entidad se comporta como un sensor de presencia estándar, las automatizaciones existentes creadas en torno a sensores de movimiento a menudo pueden adaptarse a un sensor de radar con cambios mínimos: sustituye la entidad activadora y mantén la lógica de la automatización.',
           'Combinar el radar con otros tipos de sensores (sensores de contacto, una cámara, audio) mediante fusión de sensores puede reducir aún más los falsos positivos: consulta la fusión de sensores en la guía de la casa inteligente.',
+          'Opción con batería: el Aqara FP300 combina PIR y radar mmWave de 60 GHz, funciona con dos pilas CR2450 (Aqara indica unos 3 años con Zigbee y unos 2 con Thread) y salió a la venta por unos 50 $, con un alcance declarado de hasta 6 m. Se empareja mediante un coordinador Zigbee o un border router Thread en lugar de Wi-Fi, lo que encaja en estancias sin enchufe cerca.',
+        ],
+      },
+      cameraFreeSecurity: {
+        id: 'camera-free-security',
+        title: 'Vigilancia sin cámara: permanencia prolongada y zonas sensibles',
+        content:
+          '**Un radar puede lanzar una alerta cuando una sala lleva ocupada más tiempo del esperado, o cuando aparece movimiento en una sala que debería estar vacía, sin capturar nunca ninguna imagen; pero solo informa de que hay alguien, nunca de quién o qué es.**',
+        items: [
+          'Las alertas de permanencia prolongada son lógica de temporizador sobre un sensor de presencia: en Home Assistant, la automatización se dispara cuando la entidad de presencia permanece activa más de un tiempo definido, por ejemplo un baño ocupado durante 30 minutos. Los productos comerciales para aseos usan el mismo esquema con temporizadores fijados por el fabricante, normalmente de 15 a 45 minutos, y lo presentan como libre de cámaras; esas afirmaciones sobre privacidad y precisión proceden de los fabricantes, no de pruebas independientes.',
+          'Para una alerta en una sala vacía, activa la automatización solo en modo ausente o nocturno y notifica cuando una entidad de radar de esa sala o zona pase a activa. El radar puede confundir mascotas u objetos en movimiento con personas si no ajustas zonas y sensibilidad; prueba las falsas alarmas antes de confiar en él como alarma.',
+          'Sensores de radar como el Aqara FP2 se conectan a Home Assistant y HomeKit, que pueden enviar las notificaciones. Que un servicio de alarma con monitorización profesional acepte sensores de presencia de terceros depende del proveedor, así que pregunta antes de comprar.',
+          'Los datos de presencia pueden seguir siendo datos personales cuando se vinculan a una persona o se usan para vigilar a empleados o residentes. En la UE, la vigilancia en un lugar de trabajo o un centro asistencial puede requerir base jurídica, información y participación de los representantes de los trabajadores aunque no haya cámara; consulta a un asesor jurídico antes de desplegarlo fuera de tu propia casa.',
         ],
       },
       faqSection: {
@@ -862,11 +966,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '¿Un sensor de radar captura imágenes?', a: 'No: los sensores de presencia por radar detectan la ocupación mediante la reflexión de ondas de radio, no mediante captura de imágenes. Esta es la principal ventaja de privacidad frente a una cámara para la detección de presencia.' },
           { q: '¿Los sensores de radar pueden detectar a una persona completamente inmóvil?', a: 'Sí: esta es la principal ventaja frente a los sensores de movimiento PIR, que dependen del movimiento y suelen dejar de detectar tras un tiempo de espera cuando alguien deja de moverse. El radar puede detectar micromovimientos como la respiración para registrar la ocupación continuada.' },
-          { q: '¿Cuánto cuestan los sensores de presencia por radar?', a: 'Una opción lista para usar como el Aqara FP2 cuesta entre 80-85 $ en los principales minoristas de EE. UU.; un montaje DIY con un chip Hi-Link LD2410, LD2410C o LD2450 y una placa ESP32 cuesta entre 15-25 $. Comprueba los precios actuales de los minoristas antes de comprar, ya que las promociones hacen variar la cifra exacta.' },
+          { q: '¿Cuánto cuestan los sensores de presencia por radar?', a: 'Una opción lista para usar como el Aqara FP2 cuesta entre 55-85 $ en los principales minoristas de EE. UU.; un montaje DIY con un chip Hi-Link LD2410, LD2410C o LD2450 y una placa ESP32 cuesta entre 10-20 $. Comprueba los precios actuales de los minoristas antes de comprar, ya que las promociones hacen variar la cifra exacta.' },
           { q: '¿Los sensores de radar funcionan a través de paredes o puertas?', a: 'En un grado limitado y poco fiable: las pruebas de la comunidad con sensores de la clase Hi-Link LD2410 muestran que pueden detectar movimiento a través de vidrio y contrachapado fino, pero suelen ser demasiado sensibles a través de paredes o puertas delgadas, lo que provoca falsos positivos en lugar de una detección útil. No diseñes una automatización basándote en la detección deliberada a través de paredes; reduce el alcance de detección y la sensibilidad si observas activaciones desde una habitación contigua.' },
           { q: '¿Es un sensor de radar mejor que un sensor de movimiento PIR para todos los casos de uso?', a: 'No: los sensores PIR son más baratos y perfectamente adecuados para automatizaciones sencillas activadas por movimiento. El radar merece el coste adicional específicamente cuando necesitas una detección precisa de ocupación estática.' },
           { q: '¿Puedo usar un sensor de radar para seguridad en lugar de una cámara?', a: 'El radar puede detectar presencia/intrusión, pero no puede identificar quién o qué lo activó como sí puede hacer una cámara: para aplicaciones de seguridad que requieren identificación, una cámara (o el radar junto con una cámara mediante fusión de sensores) es la solución más completa.' },
           { q: '¿Un sensor de radar necesita acceso a internet para funcionar?', a: 'Esto depende de la integración del producto concreto: comprueba si utiliza una integración local (Zigbee, ESPHome) o una aplicación dependiente de la nube antes de comprar, si la fiabilidad sin conexión te importa.' },
+          { q: '¿Puede un radar detectar permanencia prolongada sin cámara?', a: 'Sí, en el sentido de detectar que un espacio lleva ocupado de forma continua más de un tiempo definido: un sensor de presencia más un temporizador. No puede decir quién está ni qué hace, así que sirve para alertas de exceso de tiempo en baños o trasteros, no para identificar.' },
+          { q: '¿Puede un proveedor de seguridad vigilar el movimiento interior sin cámara?', a: 'Los sensores de radar y PIR pueden aportar alertas de presencia interior mediante las notificaciones de Home Assistant o HomeKit. Que un servicio de alarma con monitorización profesional acepte sensores de presencia de terceros depende del proveedor, así que pregunta antes de comprar.' },
         ],
       },
       relatedReading: {
@@ -889,7 +995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Sensor de presencia por radar' }, { '@type': 'Thing', name: 'Detección mmWave' }, { '@type': 'Thing', name: 'Detección de ocupación' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -903,6 +1009,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '¿Los sensores de radar pueden detectar a una persona completamente inmóvil?', acceptedAnswer: { '@type': 'Answer', text: 'Sí: el radar puede detectar micromovimientos como la respiración para registrar la ocupación continuada, a diferencia de los sensores de movimiento PIR, que dejan de detectar tras un tiempo de espera.' } },
         { '@type': 'Question', name: '¿Es un sensor de radar mejor que un sensor de movimiento PIR para todos los casos de uso?', acceptedAnswer: { '@type': 'Answer', text: 'No: los sensores PIR son más baratos y adecuados para automatizaciones sencillas activadas por movimiento. El radar merece la pena específicamente para la detección precisa de ocupación estática.' } },
         { '@type': 'Question', name: '¿Puedo usar un sensor de radar para seguridad en lugar de una cámara?', acceptedAnswer: { '@type': 'Answer', text: 'El radar puede detectar presencia/intrusión, pero no puede identificar quién o qué lo activó como sí puede hacer una cámara.' } },
+        { '@type': 'Question', name: '¿Puede un radar detectar permanencia prolongada sin cámara?', acceptedAnswer: { '@type': 'Answer', text: 'Sí: un sensor de presencia más un temporizador puede señalar un espacio ocupado más de un tiempo definido, pero no identifica quién está.' } },
+        { '@type': 'Question', name: '¿Puede un proveedor de seguridad vigilar el movimiento interior sin cámara?', acceptedAnswer: { '@type': 'Answer', text: 'Los sensores de radar y PIR pueden enviar alertas de presencia mediante Home Assistant o HomeKit; que un servicio de alarma monitorizado los acepte depende del proveedor.' } },
       ],
     },
   },
@@ -910,16 +1018,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-pt.webp',
     title: 'Detecção de presença por radar: ocupação de ambientes sem câmera (2026)',
     seoTitle: 'Detecção de presença por radar sem câmera (2026)',
     intro:
-      'Sensores de radar mmWave detectam a ocupação de um ambiente e até micromovimentos como a respiração sem captar nenhuma imagem, tornando-os uma alternativa mais respeitosa com a privacidade do que uma câmera para automações baseadas em presença. O Aqara FP2 (cerca de US$ 80-85 nos principais varejistas dos EUA) é uma opção pronta para uso, enquanto os chips LD2410/LD2410C/LD2450 da Hi-Link (cerca de US$ 15-25 em uma montagem DIY com ESPHome e uma placa ESP32) são o caminho comum de menor custo. Este artigo explica como funciona a detecção de presença por radar, em quais situações ela supera uma câmera ou um sensor de movimento, e como integrá-la ao Home Assistant.',
+      'Sensores de radar mmWave detectam a ocupação de um ambiente e até micromovimentos como a respiração sem captar nenhuma imagem, tornando-os uma alternativa mais respeitosa com a privacidade do que uma câmera para automações baseadas em presença. O Aqara FP2 (cerca de US$ 55-85 nos principais varejistas dos EUA) é uma opção pronta para uso, enquanto os chips LD2410/LD2410C/LD2450 da Hi-Link (cerca de US$ 10-20 em uma montagem DIY com ESPHome e uma placa ESP32) são o caminho comum de menor custo. Este artigo explica como funciona a detecção de presença por radar, em quais situações ela supera uma câmera ou um sensor de movimento, e como integrá-la ao Home Assistant.',
     metaDescription:
-      'Sensores de presença por radar para detecção de ocupação de ambientes sem câmera: como funciona a detecção mmWave e onde ela supera sensores de movimento ou câmeras em uma casa inteligente.',
+      'Sensores de presença por radar detectam a ocupação de um cômodo e o tempo de permanência sem câmera: como o mmWave funciona, quanto custa e quando supera PIR ou câmeras.',
     twitterDescription:
       'Sensores de radar mmWave detectam a ocupação de um ambiente sem câmera — mais precisos que sensores de movimento PIR, mais respeitosos com a privacidade que uma câmera.',
     readTime: '6 min de leitura',
@@ -934,19 +1042,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'sensor ocupacao respeita privacidade',
     ],
     leadAnswerBlock:
-      '**Um sensor de presença por radar (mmWave) detecta se um ambiente está ocupado — incluindo uma pessoa parada, não apenas em movimento — sem captar nenhuma imagem, tornando-o mais preciso que um sensor de movimento infravermelho passivo e mais respeitoso com a privacidade que uma câmera para automações baseadas em presença.** O Aqara FP2 (~US$ 80-85, pronto para uso) e os chips LD2410/LD2410C/LD2450 da Hi-Link (~US$ 15-25, montagem DIY com ESPHome) são os dois caminhos comuns — confira os preços atuais dos varejistas antes de comprar, já que promoções alteram o valor exato.',
+      '**Um sensor de presença por radar (mmWave) detecta se um ambiente está ocupado — incluindo uma pessoa parada, não apenas em movimento — sem captar nenhuma imagem, tornando-o mais preciso que um sensor de movimento infravermelho passivo e mais respeitoso com a privacidade que uma câmera para automações baseadas em presença.** O Aqara FP2 (~US$ 55-85, pronto para uso) e os chips LD2410/LD2410C/LD2450 da Hi-Link (~US$ 10-20, montagem DIY com ESPHome) são os dois caminhos comuns — confira os preços atuais dos varejistas antes de comprar, já que promoções alteram o valor exato.',
     quickAnswerTop: {
       pt: {
         question: 'Posso detectar a ocupação de um ambiente sem câmera?',
         answer:
-          'Sim — sensores de presença por radar mmWave detectam se há alguém em um ambiente, mesmo quando essa pessoa está sentada e parada, sensoriando movimento e micromovimentos (como a respiração) via ondas de rádio, sem captar nenhuma imagem. Isso resolve a principal limitação dos sensores de movimento por infravermelho passivo (PIR), que param de detectar uma pessoa parada após um curto período. O Aqara FP2 (~US$ 80-85 nos principais varejistas dos EUA, com fio, Wi-Fi + Bluetooth, sem necessidade de hub) é uma opção pronta para uso que se conecta localmente ao Home Assistant via integração HomeKit Controller; os chips LD2410/LD2410C/LD2450 da Hi-Link (~US$ 15-25 em uma montagem DIY com ESPHome e uma placa ESP32) são o caminho mais barato e mais prático, com suporte nativo ao ESPHome.',
+          'Sim — sensores de presença por radar mmWave detectam se há alguém em um ambiente, mesmo quando essa pessoa está sentada e parada, sensoriando movimento e micromovimentos (como a respiração) via ondas de rádio, sem captar nenhuma imagem. Isso resolve a principal limitação dos sensores de movimento por infravermelho passivo (PIR), que param de detectar uma pessoa parada após um curto período. O Aqara FP2 (~US$ 55-85 nos principais varejistas dos EUA, com fio, Wi-Fi + Bluetooth, sem necessidade de hub) é uma opção pronta para uso que se conecta localmente ao Home Assistant via integração HomeKit Controller; os chips LD2410/LD2410C/LD2450 da Hi-Link (~US$ 10-20 em uma montagem DIY com ESPHome e uma placa ESP32) são o caminho mais barato e mais prático, com suporte nativo ao ESPHome.',
         bullets: [
           'Sensores de radar detectam ocupação parada, não apenas movimento — resolve o problema do PIR de "parar de detectar quando a pessoa fica imóvel"',
           'Nenhuma imagem é captada — mais respeitoso com a privacidade que uma câmera para detecção de presença',
-          'Aqara FP2: ~US$ 80-85, pronto para uso, conecta-se localmente ao Home Assistant via HomeKit Controller',
-          'Hi-Link LD2410/LD2410C/LD2450: ~US$ 15-25 em montagem DIY com ESPHome, suporte nativo a componentes ESPHome',
+          'Aqara FP2: ~US$ 55-85, pronto para uso, conecta-se localmente ao Home Assistant via HomeKit Controller',
+          'Hi-Link LD2410/LD2410C/LD2450: ~US$ 10-20 em montagem DIY com ESPHome, suporte nativo a componentes ESPHome',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -954,6 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Como funciona a detecção de presença por radar', anchor: 'how-it-works' },
       { label: 'Radar vs. movimento PIR vs. câmera', anchor: 'radar-vs-alternatives' },
       { label: 'Integração com o Home Assistant', anchor: 'ha-integration' },
+      { label: 'Monitoramento sem câmera', anchor: 'camera-free-security' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -968,7 +1077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Sensores de radar mmWave detectam ocupação incluindo uma pessoa parada, diferentemente de sensores de movimento PIR, que precisam de movimento para acionar',
           'Nenhuma imagem é captada — apenas dados de presença, o que é mais respeitoso com a privacidade que uma câmera para esse uso',
-          'Opção pronta para uso: Aqara FP2 (~US$ 80-85, com fio, sem necessidade de hub, conecta-se localmente via HomeKit Controller). Opção DIY: Hi-Link LD2410/LD2410C/LD2450 (~US$ 15-25 com uma placa ESP32, suporte nativo ao ESPHome)',
+          'Opção pronta para uso: Aqara FP2 (~US$ 55-85, com fio, sem necessidade de hub, conecta-se localmente via HomeKit Controller). Opção DIY: Hi-Link LD2410/LD2410C/LD2450 (~US$ 10-20 com uma placa ESP32, suporte nativo ao ESPHome)',
           'Integra-se ao Home Assistant como uma entidade padrão de presença/ocupação, utilizável em qualquer automação da mesma forma que um sensor de movimento',
           'Veja o guia de fusão de sensores para combinar radar com outros tipos de sensores e reduzir ainda mais os falsos positivos',
         ],
@@ -1004,6 +1113,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O Aqara FP2 se conecta via Wi-Fi (2,4 GHz) mais Bluetooth, e se conecta ao Home Assistant através da integração local HomeKit Controller — sem necessidade de hub Aqara ou conta na nuvem. Montagens DIY baseadas em Hi-Link LD2410/LD2410C/LD2450 rodam em um ESP32 com ESPHome, que é local por design. Verifique o método de integração do produto específico antes de comprar se o controle local for importante para você — nem todo sensor de radar do mercado evita uma dependência de nuvem.',
           'Como a entidade se comporta como um sensor de presença padrão, automações existentes construídas em torno de sensores de movimento muitas vezes podem ser adaptadas para um sensor de radar com mudanças mínimas — substitua a entidade de gatilho, mantenha a lógica da automação.',
           'Combinar radar com outros tipos de sensores (sensores de contato, uma câmera, áudio) via fusão de sensores pode reduzir ainda mais os falsos positivos — veja a fusão de sensores no guia de casa inteligente.',
+          'Opção a bateria: o Aqara FP300 combina PIR e radar mmWave de 60 GHz, funciona com duas pilhas CR2450 (a Aqara informa cerca de 3 anos com Zigbee e cerca de 2 anos com Thread) e foi lançado por cerca de US$ 50, com alcance declarado de até 6 m. Ele é pareado por um coordenador Zigbee ou um border router Thread, em vez de Wi-Fi, o que combina com cômodos sem tomada por perto.',
+        ],
+      },
+      cameraFreeSecurity: {
+        id: 'camera-free-security',
+        title: 'Monitoramento sem câmera: permanência prolongada e áreas sensíveis',
+        content:
+          '**Um radar pode disparar um alerta quando um cômodo fica ocupado por mais tempo que o esperado, ou quando surge movimento em um cômodo que deveria estar vazio, sem que nenhuma imagem seja capturada — mas ele informa apenas que há alguém, nunca quem ou o quê.**',
+        items: [
+          'Alertas de permanência prolongada são lógica de temporizador sobre um sensor de presença: no Home Assistant, a automação dispara quando a entidade de presença permanece ativa por mais que um tempo definido, por exemplo um banheiro ocupado por 30 minutos. Produtos comerciais para banheiros públicos usam o mesmo padrão com temporizadores definidos pelo fabricante, em geral de 15 a 45 minutos, e o divulgam como livre de câmeras; essas alegações de privacidade e precisão vêm dos fabricantes, não de testes independentes.',
+          'Para um alerta em um cômodo vazio, ative a automação apenas nos modos ausente ou noturno e notifique quando uma entidade de radar daquele cômodo ou zona ficar ativa. O radar pode confundir animais de estimação ou objetos em movimento com pessoas se você não ajustar zonas e sensibilidade; teste falsos alarmes antes de depender dele como alarme.',
+          'Sensores de radar como o Aqara FP2 se conectam ao Home Assistant e ao HomeKit, que podem enviar as notificações. Se um serviço de alarme com monitoramento profissional aceita sensores de presença de terceiros depende do fornecedor, então pergunte antes de comprar.',
+          'Dados de presença ainda podem ser dados pessoais quando vinculados a uma pessoa ou usados para monitorar funcionários ou moradores. Na UE, o monitoramento em local de trabalho ou instituição de cuidados pode exigir base legal, informação e participação dos representantes dos trabalhadores mesmo sem câmera; busque orientação jurídica antes de usar fora da sua própria casa.',
         ],
       },
       faqSection: {
@@ -1012,11 +1134,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Um sensor de radar captura imagens?', a: 'Não — sensores de presença por radar detectam a ocupação por reflexão de ondas de rádio, não por captura de imagem. Essa é a principal vantagem de privacidade em relação a uma câmera para detecção de presença.' },
           { q: 'Sensores de radar conseguem detectar uma pessoa completamente parada?', a: 'Sim — essa é a principal vantagem em relação aos sensores de movimento PIR, que dependem de movimento e normalmente param após um período quando alguém para de se mover. O radar pode detectar micromovimentos como a respiração para registrar ocupação contínua.' },
-          { q: 'Quanto custam os sensores de presença por radar?', a: 'Uma opção pronta para uso como o Aqara FP2 custa cerca de US$ 80-85 nos principais varejistas dos EUA; uma montagem DIY usando um chip Hi-Link LD2410, LD2410C ou LD2450 com uma placa ESP32 custa cerca de US$ 15-25. Confira os preços atuais dos varejistas antes de comprar, já que promoções alteram o valor exato.' },
+          { q: 'Quanto custam os sensores de presença por radar?', a: 'Uma opção pronta para uso como o Aqara FP2 custa cerca de US$ 55-85 nos principais varejistas dos EUA; uma montagem DIY usando um chip Hi-Link LD2410, LD2410C ou LD2450 com uma placa ESP32 custa cerca de US$ 10-20. Confira os preços atuais dos varejistas antes de comprar, já que promoções alteram o valor exato.' },
           { q: 'Sensores de radar funcionam através de paredes ou portas?', a: 'Em um grau limitado e pouco confiável — testes da comunidade com sensores da classe Hi-Link LD2410 mostram que eles conseguem captar movimento através de vidro e compensado fino, mas costumam ser excessivamente sensíveis através de paredes ou portas finas, o que causa falsos positivos em vez de detecção útil. Não projete uma automação em torno de detecção proposital através de paredes; reduza o alcance de detecção e a sensibilidade se você estiver notando acionamentos vindos de um ambiente adjacente.' },
           { q: 'Um sensor de radar é melhor que um sensor de movimento PIR para todos os casos de uso?', a: 'Não — sensores PIR são mais baratos e perfeitamente adequados para automações simples acionadas por movimento. O radar vale o custo adicional especificamente quando você precisa de detecção precisa de ocupação parada.' },
           { q: 'Posso usar um sensor de radar para segurança em vez de uma câmera?', a: 'O radar pode detectar presença/intrusão, mas não consegue identificar quem ou o que acionou como uma câmera consegue — para aplicações de segurança que exigem identificação, uma câmera (ou radar mais câmera juntos via fusão de sensores) é a solução mais completa.' },
           { q: 'Um sensor de radar precisa de acesso à internet para funcionar?', a: 'Isso depende da integração do produto específico — verifique se ele usa uma integração local (Zigbee, ESPHome) ou um aplicativo dependente de nuvem antes de comprar, se a confiabilidade offline for importante para você.' },
+          { q: 'Um radar consegue detectar permanência prolongada sem câmera?', a: 'Sim, no sentido de detectar que um espaço está ocupado continuamente por mais que um tempo definido: um sensor de presença mais um temporizador. Ele não diz quem está lá nem o que a pessoa faz, então serve para alertas de tempo excessivo em banheiros ou depósitos, não para identificação.' },
+          { q: 'Um provedor de segurança consegue monitorar movimento interno sem câmera?', a: 'Sensores de radar e PIR podem fornecer alertas de presença interna pelas notificações do Home Assistant ou do HomeKit. Se um serviço de alarme com monitoramento profissional aceita sensores de presença de terceiros depende do provedor, então pergunte antes de comprar.' },
         ],
       },
       relatedReading: {
@@ -1039,7 +1163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Sensor de presença por radar' }, { '@type': 'Thing', name: 'Detecção mmWave' }, { '@type': 'Thing', name: 'Detecção de ocupação' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1053,6 +1177,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Sensores de radar conseguem detectar uma pessoa completamente parada?', acceptedAnswer: { '@type': 'Answer', text: 'Sim — o radar pode detectar micromovimentos como a respiração para registrar ocupação contínua, diferentemente dos sensores de movimento PIR, que param após um período.' } },
         { '@type': 'Question', name: 'Um sensor de radar é melhor que um sensor de movimento PIR para todos os casos de uso?', acceptedAnswer: { '@type': 'Answer', text: 'Não — sensores PIR são mais baratos e adequados para automações simples acionadas por movimento. O radar vale a pena especificamente para detecção precisa de ocupação parada.' } },
         { '@type': 'Question', name: 'Posso usar um sensor de radar para segurança em vez de uma câmera?', acceptedAnswer: { '@type': 'Answer', text: 'O radar pode detectar presença/intrusão, mas não consegue identificar quem ou o que acionou como uma câmera consegue.' } },
+        { '@type': 'Question', name: 'Um radar consegue detectar permanência prolongada sem câmera?', acceptedAnswer: { '@type': 'Answer', text: 'Sim — um sensor de presença mais um temporizador pode sinalizar um espaço ocupado por mais que um tempo definido, mas não identifica quem está lá.' } },
+        { '@type': 'Question', name: 'Um provedor de segurança consegue monitorar movimento interno sem câmera?', acceptedAnswer: { '@type': 'Answer', text: 'Sensores de radar e PIR podem enviar alertas de presença pelo Home Assistant ou HomeKit; se um serviço de alarme monitorado os aceita depende do provedor.' } },
       ],
     },
   },
@@ -1060,8 +1186,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-ar.webp',
     title: 'استشعار الحضور بالرادار: اكتشاف إشغال الغرفة دون كاميرا (2026)',
@@ -1069,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'تكتشف مستشعرات الرادار بموجات المليمتر (mmWave) إشغال الغرفة، بل وحتى الحركات الدقيقة مثل التنفس، دون التقاط أي صورة، مما يجعلها بديلاً أكثر مراعاة للخصوصية من الكاميرا في أتمتة قائمة على الحضور. يُعد Aqara FP2 (بسعر يتراوح بين 80 و85 دولارًا تقريبًا لدى كبرى المتاجر الأمريكية) خيارًا جاهزًا للاستخدام، بينما تُعد شرائح Hi-Link من طراز LD2410/LD2410C/LD2450 (بسعر يتراوح بين 15 و25 دولارًا تقريبًا كمشروع تركيب ذاتي باستخدام ESPHome مع لوحة ESP32) الطريق الشائع الأقل تكلفة. يتناول هذا المقال كيفية عمل استشعار الحضور بالرادار، والحالات التي يتفوق فيها على الكاميرا أو مستشعر الحركة، وكيفية ربطه بـ Home Assistant.',
     metaDescription:
-      'مستشعرات حضور بالرادار لاكتشاف إشغال الغرفة دون كاميرا: كيف يعمل الاستشعار بموجات المليمتر (mmWave) وأين يتفوق على مستشعرات الحركة أو الكاميرات في المنزل الذكي.',
+      'تكشف حساسات التواجد بالرادار إشغال الغرفة ومدة البقاء دون كاميرا: كيف يعمل mmWave وكم يكلّف ومتى يتفوق على حساسات PIR أو الكاميرات.',
     twitterDescription:
       'تكتشف مستشعرات الرادار بموجات المليمتر إشغال الغرفة دون كاميرا — أدق من مستشعرات الحركة PIR، وأكثر مراعاة للخصوصية من الكاميرا.',
     readTime: 'وقت القراءة 6 دقائق',
@@ -1084,19 +1210,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'مستشعر إشغال يراعي الخصوصية',
     ],
     leadAnswerBlock:
-      '**يكتشف مستشعر الحضور بالرادار (mmWave) ما إذا كانت الغرفة مشغولة — بما في ذلك وجود شخص ثابت لا يتحرك، وليس مجرد الحركة — دون التقاط أي صورة، مما يجعله أدق من مستشعر الحركة بالأشعة تحت الحمراء السلبي، وأكثر مراعاة للخصوصية من الكاميرا في أتمتة قائمة على الحضور.** يُعد Aqara FP2 (~80-85 دولارًا، جاهز للاستخدام) وشرائح Hi-Link من طراز LD2410/LD2410C/LD2450 (~15-25 دولارًا، مشروع تركيب ذاتي باستخدام ESPHome) الطريقين الشائعين — تحقق من أسعار المتاجر الحالية قبل الشراء، إذ تتسبب العروض الترويجية في تغيير الرقم الدقيق.',
+      '**يكتشف مستشعر الحضور بالرادار (mmWave) ما إذا كانت الغرفة مشغولة — بما في ذلك وجود شخص ثابت لا يتحرك، وليس مجرد الحركة — دون التقاط أي صورة، مما يجعله أدق من مستشعر الحركة بالأشعة تحت الحمراء السلبي، وأكثر مراعاة للخصوصية من الكاميرا في أتمتة قائمة على الحضور.** يُعد Aqara FP2 (~55-85 دولارًا، جاهز للاستخدام) وشرائح Hi-Link من طراز LD2410/LD2410C/LD2450 (~10-20 دولارًا، مشروع تركيب ذاتي باستخدام ESPHome) الطريقين الشائعين — تحقق من أسعار المتاجر الحالية قبل الشراء، إذ تتسبب العروض الترويجية في تغيير الرقم الدقيق.',
     quickAnswerTop: {
       ar: {
         question: 'هل يمكنني اكتشاف إشغال الغرفة دون كاميرا؟',
         answer:
-          'نعم — تكتشف مستشعرات الحضور بالرادار mmWave ما إذا كان هناك شخص في الغرفة، حتى عندما يكون جالسًا بلا حراك، من خلال استشعار الحركة والحركات الدقيقة (مثل التنفس) عبر موجات الراديو، دون التقاط أي صورة. يحل هذا القيد الرئيسي لمستشعرات الحركة بالأشعة تحت الحمراء السلبية (PIR)، التي تتوقف عن اكتشاف الشخص الثابت بعد مهلة قصيرة. يُعد Aqara FP2 (~80-85 دولارًا لدى كبرى المتاجر الأمريكية، سلكي، واي فاي + بلوتوث، دون الحاجة إلى محور) خيارًا جاهزًا للاستخدام يقترن محليًا بـ Home Assistant عبر تكامل HomeKit Controller؛ أما شرائح Hi-Link من طراز LD2410/LD2410C/LD2450 (~15-25 دولارًا كمشروع تركيب ذاتي باستخدام ESPHome مع لوحة ESP32) فهي الطريق الأرخص والأكثر عملية يدويًا، مع دعم أصلي لـ ESPHome.',
+          'نعم — تكتشف مستشعرات الحضور بالرادار mmWave ما إذا كان هناك شخص في الغرفة، حتى عندما يكون جالسًا بلا حراك، من خلال استشعار الحركة والحركات الدقيقة (مثل التنفس) عبر موجات الراديو، دون التقاط أي صورة. يحل هذا القيد الرئيسي لمستشعرات الحركة بالأشعة تحت الحمراء السلبية (PIR)، التي تتوقف عن اكتشاف الشخص الثابت بعد مهلة قصيرة. يُعد Aqara FP2 (~55-85 دولارًا لدى كبرى المتاجر الأمريكية، سلكي، واي فاي + بلوتوث، دون الحاجة إلى محور) خيارًا جاهزًا للاستخدام يقترن محليًا بـ Home Assistant عبر تكامل HomeKit Controller؛ أما شرائح Hi-Link من طراز LD2410/LD2410C/LD2450 (~10-20 دولارًا كمشروع تركيب ذاتي باستخدام ESPHome مع لوحة ESP32) فهي الطريق الأرخص والأكثر عملية يدويًا، مع دعم أصلي لـ ESPHome.',
         bullets: [
           'تكتشف مستشعرات الرادار الإشغال الثابت، وليس مجرد الحركة — تحل مشكلة PIR المتمثلة في "التوقف عن الاكتشاف عند الثبات"',
           'لا تُلتقط أي صورة — أكثر مراعاة للخصوصية من الكاميرا في اكتشاف الحضور',
-          'Aqara FP2: ~80-85 دولارًا، جاهز للاستخدام، يقترن محليًا بـ Home Assistant عبر HomeKit Controller',
-          'Hi-Link LD2410/LD2410C/LD2450: ~15-25 دولارًا كمشروع تركيب ذاتي باستخدام ESPHome، مع دعم أصلي لمكونات ESPHome',
+          'Aqara FP2: ~55-85 دولارًا، جاهز للاستخدام، يقترن محليًا بـ Home Assistant عبر HomeKit Controller',
+          'Hi-Link LD2410/LD2410C/LD2450: ~10-20 دولارًا كمشروع تركيب ذاتي باستخدام ESPHome، مع دعم أصلي لمكونات ESPHome',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1104,6 +1230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'كيف يعمل استشعار الحضور بالرادار', anchor: 'how-it-works' },
       { label: 'الرادار مقابل حركة PIR مقابل الكاميرا', anchor: 'radar-vs-alternatives' },
       { label: 'التكامل مع Home Assistant', anchor: 'ha-integration' },
+      { label: 'المراقبة دون كاميرا', anchor: 'camera-free-security' },
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -1118,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'تكتشف مستشعرات الرادار mmWave الإشغال بما في ذلك وجود شخص ثابت، على عكس مستشعرات الحركة PIR التي تحتاج إلى حركة لتُفعَّل',
           'لا تُلتقط أي صورة — بيانات الحضور فقط، وهذا أكثر مراعاة للخصوصية من الكاميرا لهذا الاستخدام',
-          'خيار جاهز للاستخدام: Aqara FP2 (~80-85 دولارًا، سلكي، دون الحاجة إلى محور، يقترن محليًا عبر HomeKit Controller). خيار تركيب ذاتي: Hi-Link LD2410/LD2410C/LD2450 (~15-25 دولارًا مع لوحة ESP32، مع دعم أصلي لـ ESPHome)',
+          'خيار جاهز للاستخدام: Aqara FP2 (~55-85 دولارًا، سلكي، دون الحاجة إلى محور، يقترن محليًا عبر HomeKit Controller). خيار تركيب ذاتي: Hi-Link LD2410/LD2410C/LD2450 (~10-20 دولارًا مع لوحة ESP32، مع دعم أصلي لـ ESPHome)',
           'يندمج في Home Assistant ككيان حضور/إشغال قياسي، يمكن استخدامه في أي أتمتة بنفس طريقة مستشعر الحركة',
           'راجع دليل دمج المستشعرات لمعرفة كيفية الجمع بين الرادار وأنواع مستشعرات أخرى لتقليل الإيجابيات الكاذبة أكثر',
         ],
@@ -1154,6 +1281,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يتصل Aqara FP2 عبر واي فاي (2.4 جيجاهرتز) بالإضافة إلى بلوتوث، ويقترن بـ Home Assistant من خلال تكامل HomeKit Controller المحلي — دون الحاجة إلى محور Aqara أو حساب سحابي. تعمل مشاريع التركيب الذاتي المعتمدة على Hi-Link LD2410/LD2410C/LD2450 على لوحة ESP32 باستخدام ESPHome، وهو محلي بطبيعته. تحقق من طريقة تكامل المنتج المحدد قبل الشراء إذا كان التحكم المحلي مهمًا بالنسبة لك — فليست كل مستشعرات الرادار في السوق تتجنب الاعتماد على السحابة.',
           'نظرًا لأن الكيان يتصرف مثل مستشعر حضور قياسي، يمكن غالبًا تكييف الأتمتة الحالية المبنية حول مستشعرات الحركة لتعمل مع مستشعر الرادار بتغييرات طفيفة — استبدل كيان التفعيل، واحتفظ بمنطق الأتمتة.',
           'يمكن أن يؤدي الجمع بين الرادار وأنواع مستشعرات أخرى (مستشعرات التلامس، كاميرا، الصوت) عبر دمج المستشعرات إلى تقليل الإيجابيات الكاذبة أكثر — راجع دمج المستشعرات في دليل المنزل الذكي.',
+          'خيار يعمل بالبطارية: يجمع Aqara FP300 بين PIR ورادار mmWave بتردد 60 GHz، ويعمل ببطاريتي CR2450 (تذكر Aqara نحو 3 سنوات مع Zigbee ونحو سنتين مع Thread)، وطُرح بسعر نحو 50 دولارًا بمدى معلن يصل إلى 6 م. يُقرن عبر منسّق Zigbee أو موجّه حدودي Thread بدل Wi-Fi، وهذا يناسب الغرف التي لا يوجد بقربها مأخذ كهرباء.',
+        ],
+      },
+      cameraFreeSecurity: {
+        id: 'camera-free-security',
+        title: 'المراقبة دون كاميرا: البقاء المطوّل والمناطق الحساسة',
+        content:
+          '**يمكن للرادار إطلاق تنبيه عندما تبقى غرفة مشغولة أطول من المتوقع، أو عندما تظهر حركة في غرفة يُفترض أن تكون فارغة، دون التقاط أي صورة — لكنه يخبرك بوجود شخص فقط، ولا يخبرك من هو أو ما هو.**',
+        items: [
+          'تنبيهات البقاء المطوّل هي منطق مؤقّت فوق حساس تواجد: في Home Assistant تُشغَّل الأتمتة عندما يبقى كيان التواجد قيد التشغيل أطول من مدة محددة، مثل حمّام مشغول لمدة 30 دقيقة. وتستخدم منتجات دورات المياه التجارية النمط نفسه بمؤقّتات يضبطها المصنّع، عادةً بين 15 و45 دقيقة، وتسوّقه على أنه بلا كاميرا؛ ومزاعم الخصوصية والدقة هذه صادرة عن المصنّعين وليست من اختبارات مستقلة.',
+          'لتنبيه غرفة فارغة، فعّل الأتمتة فقط في وضع الغياب أو الليل وأرسل إشعارًا عندما يتحول كيان الرادار في تلك الغرفة أو المنطقة إلى التشغيل. قد يخلط الرادار بين الحيوانات الأليفة أو الأجسام المتحركة والأشخاص ما لم تضبط المناطق والحساسية، لذا اختبر الإنذارات الكاذبة قبل الاعتماد عليه كجهاز إنذار.',
+          'تتصل حساسات الرادار مثل Aqara FP2 مع Home Assistant وHomeKit اللذين يمكنهما إرسال الإشعارات. أما قبول خدمة إنذار بمراقبة احترافية لحساسات تواجد من جهات خارجية فيعتمد على المزوّد، لذا اسأل قبل الشراء.',
+          'قد تبقى بيانات التواجد بيانات شخصية عندما تُربط بشخص أو تُستخدم لمراقبة الموظفين أو المقيمين. في الاتحاد الأوروبي قد تتطلب المراقبة في مكان العمل أو دور الرعاية أساسًا قانونيًا وإخطارًا ومشاركة ممثلي العاملين حتى دون كاميرا؛ احصل على استشارة قانونية قبل استخدامها خارج منزلك.',
         ],
       },
       faqSection: {
@@ -1162,11 +1302,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'هل يلتقط مستشعر الرادار أي صور؟', a: 'لا — تكتشف مستشعرات الحضور بالرادار الإشغال عبر انعكاس موجات الراديو، وليس عبر التقاط الصور. هذه هي الميزة الأساسية للخصوصية مقارنة بالكاميرا في اكتشاف الحضور.' },
           { q: 'هل يمكن لمستشعرات الرادار اكتشاف شخص جالس بلا حراك تمامًا؟', a: 'نعم — هذه هي الميزة الرئيسية مقارنة بمستشعرات الحركة PIR، التي تعتمد على الحركة وعادةً ما تنتهي مهلتها عندما يتوقف شخص ما عن الحركة. يمكن للرادار اكتشاف الحركات الدقيقة مثل التنفس لتسجيل استمرار الإشغال.' },
-          { q: 'كم تكلف مستشعرات الحضور بالرادار؟', a: 'يبلغ سعر الخيار الجاهز للاستخدام مثل Aqara FP2 حوالي 80-85 دولارًا لدى كبرى المتاجر الأمريكية؛ ويبلغ سعر مشروع التركيب الذاتي باستخدام شريحة Hi-Link من طراز LD2410 أو LD2410C أو LD2450 مع لوحة ESP32 حوالي 15-25 دولارًا. تحقق من أسعار المتاجر الحالية قبل الشراء، إذ تتسبب العروض الترويجية في تغيير الرقم الدقيق.' },
+          { q: 'كم تكلف مستشعرات الحضور بالرادار؟', a: 'يبلغ سعر الخيار الجاهز للاستخدام مثل Aqara FP2 حوالي 55-85 دولارًا لدى كبرى المتاجر الأمريكية؛ ويبلغ سعر مشروع التركيب الذاتي باستخدام شريحة Hi-Link من طراز LD2410 أو LD2410C أو LD2450 مع لوحة ESP32 حوالي 10-20 دولارًا. تحقق من أسعار المتاجر الحالية قبل الشراء، إذ تتسبب العروض الترويجية في تغيير الرقم الدقيق.' },
           { q: 'هل تعمل مستشعرات الرادار عبر الجدران أو الأبواب؟', a: 'بدرجة محدودة وغير موثوقة — تُظهر اختبارات المجتمع باستخدام مستشعرات من فئة Hi-Link LD2410 أنها قادرة على رصد الحركة عبر الزجاج والخشب الرقائقي الرقيق، لكنها غالبًا ما تكون شديدة الحساسية عبر الجدران أو الأبواب الرقيقة بطرق تتسبب في إيجابيات كاذبة بدلًا من اكتشاف مفيد. لا تصمم أتمتة تعتمد على الاكتشاف المتعمد عبر الجدران؛ قلل نطاق الاكتشاف والحساسية إذا كنت تلاحظ تفعيلات من غرفة مجاورة.' },
           { q: 'هل مستشعر الرادار أفضل من مستشعر الحركة PIR في جميع حالات الاستخدام؟', a: 'لا — مستشعرات PIR أرخص وكافية تمامًا للأتمتة البسيطة القائمة على تفعيل الحركة. يستحق الرادار التكلفة الإضافية تحديدًا عندما تحتاج إلى اكتشاف دقيق للإشغال الثابت.' },
           { q: 'هل يمكنني استخدام مستشعر رادار للأمان بدلًا من الكاميرا؟', a: 'يمكن للرادار اكتشاف الحضور/التسلل لكنه لا يستطيع تحديد من أو ما الذي فعّله كما تستطيع الكاميرا — بالنسبة لتطبيقات الأمان التي تتطلب التحديد، تُعد الكاميرا (أو الرادار مع الكاميرا معًا عبر دمج المستشعرات) الحل الأكثر اكتمالًا.' },
           { q: 'هل يحتاج مستشعر الرادار إلى الوصول إلى الإنترنت للعمل؟', a: 'يعتمد ذلك على تكامل المنتج المحدد — تحقق مما إذا كان يستخدم تكاملًا محليًا (Zigbee، ESPHome) مقابل تطبيق يعتمد على السحابة قبل الشراء إذا كانت الموثوقية دون اتصال بالإنترنت مهمة بالنسبة لك.' },
+          { q: 'هل يستطيع الرادار كشف البقاء المطوّل دون كاميرا؟', a: 'نعم، بمعنى كشف أن مساحة ما مشغولة باستمرار لأكثر من مدة محددة: حساس تواجد مع مؤقّت. لكنه لا يعرف من الموجود ولا ماذا يفعل، لذا يناسب تنبيهات تجاوز المدة في الحمّامات أو المخازن، لا تحديد الهوية.' },
+          { q: 'هل يمكن لمزوّد أمن منزلي مراقبة الحركة الداخلية دون كاميرا؟', a: 'يمكن لحساسات الرادار وPIR توفير تنبيهات تواجد داخلية عبر إشعارات Home Assistant أو HomeKit. أما قبول خدمة إنذار بمراقبة احترافية لحساسات تواجد من جهات خارجية فيعتمد على المزوّد، لذا اسأل قبل الشراء.' },
         ],
       },
       relatedReading: {
@@ -1189,7 +1331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'مستشعر حضور بالرادار' }, { '@type': 'Thing', name: 'الاستشعار بموجات المليمتر' }, { '@type': 'Thing', name: 'اكتشاف الإشغال' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1203,6 +1345,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'هل يمكن لمستشعرات الرادار اكتشاف شخص جالس بلا حراك تمامًا؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم — يمكن للرادار اكتشاف الحركات الدقيقة مثل التنفس لتسجيل استمرار الإشغال، على عكس مستشعرات الحركة PIR التي تنتهي مهلتها.' } },
         { '@type': 'Question', name: 'هل مستشعر الرادار أفضل من مستشعر الحركة PIR في جميع حالات الاستخدام؟', acceptedAnswer: { '@type': 'Answer', text: 'لا — مستشعرات PIR أرخص وكافية للأتمتة البسيطة القائمة على تفعيل الحركة. يستحق الرادار التكلفة تحديدًا لاكتشاف دقيق للإشغال الثابت.' } },
         { '@type': 'Question', name: 'هل يمكنني استخدام مستشعر رادار للأمان بدلًا من الكاميرا؟', acceptedAnswer: { '@type': 'Answer', text: 'يمكن للرادار اكتشاف الحضور/التسلل لكنه لا يستطيع تحديد من أو ما الذي فعّله كما تستطيع الكاميرا.' } },
+        { '@type': 'Question', name: 'هل يستطيع الرادار كشف البقاء المطوّل دون كاميرا؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم — حساس تواجد مع مؤقّت يمكنه الإبلاغ عن مساحة مشغولة لأكثر من مدة محددة، لكنه لا يحدد من الموجود.' } },
+        { '@type': 'Question', name: 'هل يمكن لمزوّد أمن منزلي مراقبة الحركة الداخلية دون كاميرا؟', acceptedAnswer: { '@type': 'Answer', text: 'يمكن لحساسات الرادار وPIR إرسال تنبيهات تواجد عبر Home Assistant أو HomeKit؛ وقبول خدمة إنذار مراقبة لها يعتمد على المزوّد.' } },
       ],
     },
   },
@@ -1210,16 +1354,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/radar-presence-sensing-no-camera-overview-hero-ko.webp',
     title: '레이더 존재 감지: 카메라 없이 방 재실 여부 파악하기 (2026년)',
     seoTitle: '카메라 없는 레이더 존재 감지 (2026년)',
     intro:
-      'mmWave 레이더 센서는 이미지를 전혀 촬영하지 않고도 방의 재실 여부는 물론 호흡과 같은 미세한 움직임까지 감지할 수 있어, 존재 감지 기반 자동화에서 카메라보다 프라이버시 친화적인 대안이 됩니다. Aqara FP2(미국 주요 소매업체 기준 약 80~85달러)는 바로 사용 가능한 옵션이며, Hi-Link의 LD2410/LD2410C/LD2450 칩(ESP32 보드를 사용한 DIY ESPHome 빌드로 약 15~25달러)은 일반적인 저비용 대안입니다. 이 글에서는 레이더 존재 감지의 작동 방식, 카메라나 동작 센서보다 뛰어난 부분, 그리고 Home Assistant에 연동하는 방법을 다룹니다.',
+      'mmWave 레이더 센서는 이미지를 전혀 촬영하지 않고도 방의 재실 여부는 물론 호흡과 같은 미세한 움직임까지 감지할 수 있어, 존재 감지 기반 자동화에서 카메라보다 프라이버시 친화적인 대안이 됩니다. Aqara FP2(미국 주요 소매업체 기준 약 55~85달러)는 바로 사용 가능한 옵션이며, Hi-Link의 LD2410/LD2410C/LD2450 칩(ESP32 보드를 사용한 DIY ESPHome 빌드로 약 10~20달러)은 일반적인 저비용 대안입니다. 이 글에서는 레이더 존재 감지의 작동 방식, 카메라나 동작 센서보다 뛰어난 부분, 그리고 Home Assistant에 연동하는 방법을 다룹니다.',
     metaDescription:
-      '카메라 없이 방 재실 여부를 감지하는 레이더 존재 센서: mmWave 감지 방식과 스마트홈에서 동작 센서나 카메라보다 뛰어난 부분.',
+      '레이더 재실 센서는 카메라 없이 방의 재실과 체류 시간을 감지합니다. mmWave 원리, 비용, PIR 센서나 카메라보다 나은 경우를 설명합니다.',
     twitterDescription:
       'mmWave 레이더 센서는 카메라 없이 방의 재실 여부를 감지합니다 — PIR 동작 센서보다 정확하고, 카메라보다 프라이버시 친화적입니다.',
     readTime: '읽는 데 6분',
@@ -1234,19 +1378,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '프라이버시 친화적 재실 센서',
     ],
     leadAnswerBlock:
-      '**레이더(mmWave) 존재 센서는 가만히 앉아 있는 사람을 포함해 방이 재실 상태인지를 이미지를 전혀 촬영하지 않고 감지할 수 있어, 수동 적외선 동작 센서보다 정확하고 존재 감지 기반 자동화에서 카메라보다 프라이버시 친화적입니다.** Aqara FP2(~80~85달러, 바로 사용 가능)와 Hi-Link의 LD2410/LD2410C/LD2450 칩(~15~25달러, DIY ESPHome 빌드)이 두 가지 일반적인 방법입니다 — 프로모션에 따라 정확한 가격이 달라지므로 구매 전 현재 소매 가격을 확인하세요.',
+      '**레이더(mmWave) 존재 센서는 가만히 앉아 있는 사람을 포함해 방이 재실 상태인지를 이미지를 전혀 촬영하지 않고 감지할 수 있어, 수동 적외선 동작 센서보다 정확하고 존재 감지 기반 자동화에서 카메라보다 프라이버시 친화적입니다.** Aqara FP2(~55~85달러, 바로 사용 가능)와 Hi-Link의 LD2410/LD2410C/LD2450 칩(~10~20달러, DIY ESPHome 빌드)이 두 가지 일반적인 방법입니다 — 프로모션에 따라 정확한 가격이 달라지므로 구매 전 현재 소매 가격을 확인하세요.',
     quickAnswerTop: {
       ko: {
         question: '카메라 없이 방의 재실 여부를 감지할 수 있나요?',
         answer:
-          '네 — mmWave 레이더 존재 센서는 전파를 통해 동작과 호흡 같은 미세한 움직임을 감지함으로써, 사람이 가만히 앉아 있을 때도 방에 사람이 있는지 감지할 수 있으며 이미지는 전혀 촬영하지 않습니다. 이는 짧은 시간이 지나면 가만히 있는 사람을 더 이상 감지하지 못하는 수동 적외선(PIR) 동작 센서의 주요 한계를 해결합니다. Aqara FP2(미국 주요 소매업체 기준 약 80~85달러, 유선, Wi-Fi + 블루투스, 허브 불필요)는 HomeKit Controller 연동을 통해 Home Assistant와 로컬로 페어링되는 바로 사용 가능한 옵션이며, Hi-Link의 LD2410/LD2410C/LD2450 칩(ESP32 보드를 사용한 DIY ESPHome 빌드로 약 15~25달러)은 ESPHome을 기본 지원하는 더 저렴하고 손이 많이 가는 대안입니다.',
+          '네 — mmWave 레이더 존재 센서는 전파를 통해 동작과 호흡 같은 미세한 움직임을 감지함으로써, 사람이 가만히 앉아 있을 때도 방에 사람이 있는지 감지할 수 있으며 이미지는 전혀 촬영하지 않습니다. 이는 짧은 시간이 지나면 가만히 있는 사람을 더 이상 감지하지 못하는 수동 적외선(PIR) 동작 센서의 주요 한계를 해결합니다. Aqara FP2(미국 주요 소매업체 기준 약 55~85달러, 유선, Wi-Fi + 블루투스, 허브 불필요)는 HomeKit Controller 연동을 통해 Home Assistant와 로컬로 페어링되는 바로 사용 가능한 옵션이며, Hi-Link의 LD2410/LD2410C/LD2450 칩(ESP32 보드를 사용한 DIY ESPHome 빌드로 약 10~20달러)은 ESPHome을 기본 지원하는 더 저렴하고 손이 많이 가는 대안입니다.',
         bullets: [
           '레이더 센서는 단순 동작이 아니라 정지 상태의 재실도 감지 — PIR의 "정지하면 감지 중단" 문제를 해결',
           '이미지가 전혀 촬영되지 않음 — 존재 감지에서 카메라보다 프라이버시 친화적',
-          'Aqara FP2: ~80~85달러, 바로 사용 가능, HomeKit Controller를 통해 Home Assistant와 로컬 페어링',
-          'Hi-Link LD2410/LD2410C/LD2450: DIY ESPHome 빌드로 ~15~25달러, ESPHome 구성 요소 기본 지원',
+          'Aqara FP2: ~55~85달러, 바로 사용 가능, HomeKit Controller를 통해 Home Assistant와 로컬 페어링',
+          'Hi-Link LD2410/LD2410C/LD2450: DIY ESPHome 빌드로 ~10~20달러, ESPHome 구성 요소 기본 지원',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1254,6 +1398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '레이더 존재 감지 작동 방식', anchor: 'how-it-works' },
       { label: '레이더 vs PIR 동작 센서 vs 카메라', anchor: 'radar-vs-alternatives' },
       { label: 'Home Assistant 연동', anchor: 'ha-integration' },
+      { label: '카메라 없는 모니터링', anchor: 'camera-free-security' },
       { label: '자주 묻는 질문', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -1268,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'mmWave 레이더 센서는 동작이 있어야 작동하는 PIR 동작 센서와 달리, 가만히 있는 사람을 포함한 재실을 감지함',
           '이미지가 전혀 촬영되지 않음 — 재실 데이터만 사용하며, 이 용도에서는 카메라보다 프라이버시 친화적',
-          '바로 사용 가능한 옵션: Aqara FP2(~80~85달러, 유선, 허브 불필요, HomeKit Controller를 통해 로컬 페어링). DIY 옵션: Hi-Link LD2410/LD2410C/LD2450(ESP32 보드 포함 ~15~25달러, ESPHome 기본 지원)',
+          '바로 사용 가능한 옵션: Aqara FP2(~55~85달러, 유선, 허브 불필요, HomeKit Controller를 통해 로컬 페어링). DIY 옵션: Hi-Link LD2410/LD2410C/LD2450(ESP32 보드 포함 ~10~20달러, ESPHome 기본 지원)',
           'Home Assistant에 표준 재실/존재 엔티티로 연동되며, 동작 센서와 동일한 방식으로 모든 자동화에 사용 가능',
           '레이더를 다른 센서 유형과 결합해 오탐을 더 줄이는 방법은 센서 퓨전 가이드를 참고',
         ],
@@ -1304,6 +1449,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aqara FP2는 Wi-Fi(2.4GHz)와 블루투스로 연결되며, 로컬 HomeKit Controller 연동을 통해 Home Assistant와 페어링됩니다 — Aqara 허브나 클라우드 계정이 필요하지 않습니다. Hi-Link LD2410/LD2410C/LD2450 기반 DIY 빌드는 본질적으로 로컬인 ESPHome을 사용해 ESP32에서 구동됩니다. 로컬 제어가 중요하다면 구매 전 해당 제품의 구체적인 연동 방식을 확인하세요 — 시장의 모든 레이더 센서가 클라우드 의존성을 피하는 것은 아닙니다.',
           '이 엔티티는 표준 존재 센서처럼 동작하므로, 동작 센서를 중심으로 구축된 기존 자동화는 대개 최소한의 변경만으로 레이더 센서에 맞게 조정할 수 있습니다 — 트리거 엔티티만 교체하고 자동화 로직은 그대로 유지하세요.',
           '센서 퓨전을 통해 레이더를 다른 유형의 센서(접촉 센서, 카메라, 오디오)와 결합하면 오탐을 더 줄일 수 있습니다 — 스마트홈 가이드의 센서 퓨전 부분을 참고하세요.',
+          '배터리 옵션: Aqara FP300은 PIR과 60GHz mmWave 레이더를 결합하고 CR2450 배터리 2개로 작동합니다(Aqara 발표 기준 Zigbee에서 약 3년, Thread에서 약 2년). 출시가는 약 50달러, 공칭 감지 거리는 최대 6m입니다. Wi-Fi 대신 Zigbee 코디네이터 또는 Thread 보더 라우터로 페어링하므로 근처에 콘센트가 없는 방에 적합합니다.',
+        ],
+      },
+      cameraFreeSecurity: {
+        id: 'camera-free-security',
+        title: '카메라 없는 모니터링: 장시간 체류와 민감한 공간',
+        content:
+          '**레이더는 방이 예상보다 오래 사용 중이거나 비어 있어야 할 방에서 움직임이 나타나면 이미지를 전혀 촬영하지 않고도 알림을 보낼 수 있습니다. 다만 "누군가 있다"는 사실만 알려줄 뿐, 누구인지 무엇인지는 알려주지 않습니다.**',
+        items: [
+          '장시간 체류 알림은 재실 센서 위에 타이머 로직을 얹은 것입니다. Home Assistant에서는 재실 엔티티가 정해진 시간(예: 욕실 30분 사용 중) 이상 켜져 있을 때 자동화가 동작합니다. 상업용 화장실 제품도 제조사가 설정한 타이머(보통 15–45분)로 같은 방식을 쓰며 카메라가 없다고 홍보합니다. 다만 개인정보 보호와 정확도에 관한 주장은 제조사 측 설명이며 독립 검증이 아닙니다.',
+          '빈 방 알림은 외출 또는 야간 모드에서만 자동화를 활성화하고, 해당 방이나 구역의 레이더 엔티티가 켜지면 알림을 보내도록 설정하세요. 구역과 감도를 조정하지 않으면 레이더가 반려동물이나 움직이는 물체를 사람으로 오인할 수 있으므로, 경보로 의존하기 전에 오경보를 테스트하세요.',
+          'Aqara FP2 같은 레이더 센서는 Home Assistant와 HomeKit에 연결되며, 이 플랫폼이 알림을 보낼 수 있습니다. 전문 관제 경보 서비스가 서드파티 재실 센서를 받아주는지는 업체에 따라 다르므로 구매 전에 문의하세요.',
+          '재실 데이터도 특정인과 연결되거나 직원·거주자 감시에 쓰이면 개인정보가 될 수 있습니다. EU에서는 카메라가 없어도 직장이나 돌봄 시설의 모니터링에 법적 근거, 고지, 근로자 대표의 참여가 필요할 수 있습니다. 자택 밖에 설치하기 전에 법률 자문을 받으세요.',
         ],
       },
       faqSection: {
@@ -1312,11 +1470,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '레이더 센서가 이미지를 촬영하나요?', a: '아니요 — 레이더 존재 센서는 전파 반사를 통해 재실 여부를 감지하며, 이미지를 촬영하지 않습니다. 이것이 존재 감지에서 카메라 대비 핵심적인 프라이버시 장점입니다.' },
           { q: '레이더 센서가 완전히 가만히 앉아 있는 사람을 감지할 수 있나요?', a: '네 — 이는 동작에 의존하며 사람이 움직임을 멈추면 보통 시간 초과로 감지를 중단하는 PIR 동작 센서 대비 주요 장점입니다. 레이더는 호흡 같은 미세한 움직임을 감지해 지속적인 재실을 등록할 수 있습니다.' },
-          { q: '레이더 존재 센서의 가격은 얼마인가요?', a: 'Aqara FP2 같은 바로 사용 가능한 옵션은 미국 주요 소매업체 기준 약 80~85달러입니다. Hi-Link LD2410, LD2410C, LD2450 칩과 ESP32 보드를 사용한 DIY 빌드는 약 15~25달러입니다. 프로모션에 따라 정확한 가격이 달라지므로 구매 전 현재 소매 가격을 확인하세요.' },
+          { q: '레이더 존재 센서의 가격은 얼마인가요?', a: 'Aqara FP2 같은 바로 사용 가능한 옵션은 미국 주요 소매업체 기준 약 55~85달러입니다. Hi-Link LD2410, LD2410C, LD2450 칩과 ESP32 보드를 사용한 DIY 빌드는 약 10~20달러입니다. 프로모션에 따라 정확한 가격이 달라지므로 구매 전 현재 소매 가격을 확인하세요.' },
           { q: '레이더 센서가 벽이나 문을 통과해서도 작동하나요?', a: '제한적이고 신뢰할 수 없는 수준입니다 — Hi-Link LD2410급 센서를 사용한 커뮤니티 테스트에 따르면 유리와 얇은 합판을 통해 동작을 감지할 수 있지만, 얇은 벽이나 문을 통해서는 지나치게 민감하게 반응해 유용한 감지가 아닌 오탐을 일으키는 경우가 많습니다. 의도적인 벽 통과 감지를 전제로 자동화를 설계하지 마세요. 인접한 방에서 오는 트리거가 감지된다면 감지 범위와 민감도를 낮추세요.' },
           { q: '레이더 센서가 모든 용도에서 PIR 동작 센서보다 나은가요?', a: '아니요 — PIR 센서는 더 저렴하며 간단한 동작 트리거 자동화에는 충분히 적합합니다. 레이더는 정확한 정지 재실 감지가 필요한 경우에 한해 추가 비용을 지불할 가치가 있습니다.' },
           { q: '카메라 대신 레이더 센서를 보안용으로 사용할 수 있나요?', a: '레이더는 존재/침입을 감지할 수 있지만, 카메라처럼 누가 또는 무엇이 이를 유발했는지 식별할 수는 없습니다 — 식별이 필요한 보안 용도에는 카메라(또는 센서 퓨전을 통한 레이더와 카메라의 조합)가 더 완전한 해결책입니다.' },
           { q: '레이더 센서가 작동하려면 인터넷 접속이 필요한가요?', a: '이는 해당 제품의 연동 방식에 따라 다릅니다 — 오프라인 신뢰성이 중요하다면 구매 전 로컬 연동(Zigbee, ESPHome)을 사용하는지 클라우드 의존형 앱을 사용하는지 확인하세요.' },
+          { q: '카메라 없이 레이더로 장시간 배회를 감지할 수 있나요?', a: '네, 공간이 정해진 시간보다 오래 계속 사용 중인 것을 감지한다는 의미에서 가능합니다. 재실 센서와 타이머의 조합입니다. 누가 있는지, 무엇을 하는지는 알 수 없으므로 욕실이나 창고의 체류 시간 초과 알림에는 적합하지만 신원 확인에는 맞지 않습니다.' },
+          { q: '보안 업체가 카메라 없이 실내 움직임을 모니터링할 수 있나요?', a: '레이더와 PIR 센서는 Home Assistant나 HomeKit 알림을 통해 실내 재실 알림을 제공할 수 있습니다. 전문 관제 경보 서비스가 서드파티 재실 센서를 받아주는지는 업체에 따라 다르므로 구매 전에 문의하세요.' },
         ],
       },
       relatedReading: {
@@ -1339,7 +1499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: '레이더 존재 센서' }, { '@type': 'Thing', name: 'mmWave 감지' }, { '@type': 'Thing', name: '재실 감지' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1353,6 +1513,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '레이더 센서가 완전히 가만히 앉아 있는 사람을 감지할 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '네 — 레이더는 호흡 같은 미세한 움직임을 감지해 지속적인 재실을 등록할 수 있으며, 이는 시간 초과되는 PIR 동작 센서와 다릅니다.' } },
         { '@type': 'Question', name: '레이더 센서가 모든 용도에서 PIR 동작 센서보다 나은가요?', acceptedAnswer: { '@type': 'Answer', text: '아니요 — PIR 센서는 더 저렴하며 간단한 동작 트리거 자동화에 적합합니다. 레이더는 정확한 정지 재실 감지에 특히 가치가 있습니다.' } },
         { '@type': 'Question', name: '카메라 대신 레이더 센서를 보안용으로 사용할 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '레이더는 존재/침입을 감지할 수 있지만, 카메라처럼 누가 또는 무엇이 이를 유발했는지 식별할 수는 없습니다.' } },
+        { '@type': 'Question', name: '카메라 없이 레이더로 장시간 배회를 감지할 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '네 — 재실 센서와 타이머로 정해진 시간보다 오래 사용 중인 공간을 알릴 수 있지만, 누가 있는지는 식별하지 못합니다.' } },
+        { '@type': 'Question', name: '보안 업체가 카메라 없이 실내 움직임을 모니터링할 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '레이더와 PIR 센서는 Home Assistant나 HomeKit으로 재실 알림을 보낼 수 있으며, 관제 경보 서비스의 수용 여부는 업체에 따라 다릅니다.' } },
       ],
     },
   },
