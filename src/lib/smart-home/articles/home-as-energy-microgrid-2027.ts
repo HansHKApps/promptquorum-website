@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-en.webp',
     // Verified 2026-07-16: battery capacity figures below are cited directly from manufacturer
@@ -49,13 +49,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Home Assistant can automate which circuits get priority when running on battery',
           'Scope the project to your actual outage-backup needs, not a whole-home-independence assumption',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'TL;DR', anchor: 'tldr' },
       { label: 'What "Home Microgrid" Actually Means', anchor: 'what-it-means' },
       { label: 'Sizing a Backup System', anchor: 'sizing' },
+      { label: "Choosing an Installer", anchor: 'choosing-installer' },
       { label: 'Automating Circuit Priority', anchor: 'automating-priority' },
       { label: 'What This Doesn\'t Do', anchor: 'limits' },
       { label: 'FAQ', anchor: 'faq' },
@@ -99,6 +100,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'An inverter with automatic transfer-switch capability is required to isolate backup circuits from the grid safely during an outage — this is different from a grid-tied-only inverter, which shuts off during an outage for safety and provides no backup power at all.',
         ],
       },
+      choosingInstaller: {
+        id: 'choosing-installer',
+        title: "Choosing a Home Battery Installer",
+        content:
+          "**A home battery backup system that ties into your electrical panel should be installed by a licensed electrician or licensed solar-and-storage contractor — before signing, verify the licence, the manufacturer training for your battery brand, and who handles permits and utility approval.**",
+        items: [
+          "Check the licence first: ask for a copy of the electrical or contractor licence your state, province or country requires, and confirm it with the licensing body rather than relying on the installer's website.",
+          "Look at credentials as a secondary signal: in the US, NABCEP is a voluntary industry certification rather than a legal requirement, and manufacturer-trained installers (for example for Tesla, Enphase or SolarEdge products) can matter for warranty coverage — confirm the exact terms with the manufacturer.",
+          "Ask who does the work and the paperwork: whether subcontractors do the electrical work, who pulls the permit and books the inspection, and who files the utility interconnection application — requirements and lead times vary by region, so check your local building department and utility.",
+          "Get a written scope: the list of backed-up circuits, battery and inverter models, the load calculation behind the sizing, the workmanship warranty, and proof of liability and workers' compensation insurance — then compare at least two quotes built on the same essential-circuit list.",
+        ],
+      },
       automatingPriority: {
         id: 'automating-priority',
         title: 'Automating Circuit Priority',
@@ -125,6 +138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
+          { q: "How do I find a qualified home battery installer?", a: "Start with installers who hold the electrical or contractor licence your region requires, then check manufacturer training for your battery brand, insurance, workmanship warranty, and who handles permits and utility interconnection. Get at least two written quotes based on the same list of essential circuits." },
           { q: 'Is a home microgrid the same as being off-grid?', a: 'No. A home battery backup setup still connects to the grid normally and only isolates during an outage or on-demand — it\'s backup power, not permanent off-grid operation.' },
           { q: 'How long can a home battery back up my house?', a: 'This depends entirely on battery capacity versus your essential-circuit load, and capacity varies widely by product — Enphase\'s IQ Battery 5P is rated at 5.0 kWh usable, Tesla\'s Powerwall 3 at 13.5 kWh usable (scalable higher with expansion packs), per each manufacturer\'s own datasheet. Consult an installer\'s sizing calculation for your specific circuits rather than assuming a fixed duration.' },
           { q: 'Do I need solar panels for battery backup to work?', a: 'No — a battery can be charged from the grid and used purely for outage backup without solar, though pairing with solar lets the battery recharge during a multi-day outage if there\'s daylight.' },
@@ -156,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home battery backup' }, { '@type': 'Thing', name: 'Solar microgrid' }, { '@type': 'Thing', name: 'Outage automation' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -166,6 +180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'en',
       mainEntity: [
+        { '@type': 'Question', name: "How do I find a qualified home battery installer?", acceptedAnswer: { '@type': 'Answer', text: "Start with installers who hold the electrical or contractor licence your region requires, then check manufacturer training for your battery brand, insurance, workmanship warranty, and who handles permits and utility interconnection. Get at least two written quotes based on the same list of essential circuits." } },
         { '@type': 'Question', name: 'Is a home microgrid the same as being off-grid?', acceptedAnswer: { '@type': 'Answer', text: 'No. A home battery backup setup still connects to the grid normally and only isolates during an outage — it\'s backup power, not permanent off-grid operation.' } },
         { '@type': 'Question', name: 'Do I need solar panels for battery backup to work?', acceptedAnswer: { '@type': 'Answer', text: 'No — a battery can be charged from the grid and used purely for outage backup without solar.' } },
         { '@type': 'Question', name: 'Is this legal to install myself?', acceptedAnswer: { '@type': 'Answer', text: 'Backup power systems that tie into your home\'s electrical panel typically require a licensed electrician and utility notification or permitting in many regions.' } },
@@ -178,8 +193,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-de.webp',
     title: 'Ihr Zuhause zum Energie-Microgrid machen (2026)',
@@ -215,13 +230,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Home Assistant kann automatisieren, welche Stromkreise beim Batteriebetrieb priorisiert werden',
           'Begrenzen Sie das Projekt auf Ihren tatsächlichen Notstrombedarf, nicht auf eine Annahme der Unabhängigkeit des ganzen Hauses',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'Kurzfassung', anchor: 'tldr' },
       { label: 'Was „häusliches Microgrid" wirklich bedeutet', anchor: 'what-it-means' },
       { label: 'Ein Sicherungssystem dimensionieren', anchor: 'sizing' },
+      { label: "Einen Installateur auswählen", anchor: 'choosing-installer' },
       { label: 'Stromkreispriorität automatisieren', anchor: 'automating-priority' },
       { label: 'Was dies nicht leistet', anchor: 'limits' },
       { label: 'FAQ', anchor: 'faq' },
@@ -265,6 +281,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ein Wechselrichter mit automatischer Umschaltfähigkeit ist erforderlich, um Sicherungsstromkreise während eines Ausfalls sicher vom Netz zu isolieren — dies unterscheidet sich von einem reinen netzgekoppelten Wechselrichter, der sich während eines Ausfalls aus Sicherheitsgründen abschaltet und überhaupt keinen Notstrom liefert.',
         ],
       },
+      choosingInstaller: {
+        id: 'choosing-installer',
+        title: "Einen Installateur für Heimspeicher auswählen",
+        content:
+          "**Ein Heimspeicher-Notstromsystem, das an Ihre Elektroverteilung angeschlossen wird, sollte von einer Elektrofachkraft bzw. einem zugelassenen Solar- und Speicherbetrieb installiert werden — prüfen Sie vor der Unterschrift die Zulassung, die Herstellerschulung für Ihre Speichermarke und wer Genehmigungen und die Abstimmung mit dem Netzbetreiber übernimmt.**",
+        items: [
+          "Zuerst die Zulassung prüfen: Lassen Sie sich die in Ihrem Land bzw. Bundesland geforderte Elektro- oder Handwerksberechtigung zeigen und bestätigen Sie sie bei der zuständigen Stelle, statt sich auf die Website des Installateurs zu verlassen.",
+          "Qualifikationen als zweites Signal werten: In den USA ist NABCEP eine freiwillige Branchenzertifizierung und keine gesetzliche Pflicht; herstellergeschulte Installateure (z. B. für Tesla-, Enphase- oder SolarEdge-Produkte) können für den Garantieanspruch relevant sein — klären Sie die genauen Bedingungen mit dem Hersteller.",
+          "Fragen Sie, wer die Arbeit und den Papierkram erledigt: ob Subunternehmer die Elektroarbeiten ausführen, wer die Genehmigung einholt und die Abnahme organisiert und wer die Anmeldung beim Netzbetreiber übernimmt — Anforderungen und Fristen unterscheiden sich je nach Region; fragen Sie bei Ihrer Baubehörde und Ihrem Netzbetreiber nach.",
+          "Verlangen Sie einen schriftlichen Leistungsumfang: Liste der abgesicherten Stromkreise, Speicher- und Wechselrichtermodelle, die Lastberechnung hinter der Dimensionierung, Gewährleistung auf die Ausführung sowie Nachweis von Haftpflicht- und Unfallversicherung — und vergleichen Sie mindestens zwei Angebote auf Basis derselben Liste wesentlicher Stromkreise.",
+        ],
+      },
       automatingPriority: {
         id: 'automating-priority',
         title: 'Stromkreispriorität automatisieren',
@@ -291,6 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
+          { q: "Wie finde ich einen qualifizierten Installateur für einen Heimspeicher?", a: "Beginnen Sie mit Betrieben, die die in Ihrer Region geforderte Elektro- bzw. Handwerksberechtigung besitzen, und prüfen Sie dann Herstellerschulung für Ihre Speichermarke, Versicherung, Gewährleistung und wer Genehmigungen sowie die Netzbetreiber-Anmeldung übernimmt. Holen Sie mindestens zwei schriftliche Angebote auf Basis derselben Liste wesentlicher Stromkreise ein." },
           { q: 'Ist ein häusliches Microgrid dasselbe wie netzunabhängig zu sein?', a: 'Nein. Ein häusliches Batteriesicherungs-Setup bleibt normal mit dem Netz verbunden und isoliert sich nur während eines Ausfalls oder bei Bedarf — es ist Notstrom, kein dauerhafter Inselbetrieb.' },
           { q: 'Wie lange kann eine Hausbatterie mein Haus sichern?', a: 'Das hängt vollständig von der Batteriekapazität im Verhältnis zu Ihrer wesentlichen Stromkreislast ab, und die Kapazität variiert je nach Produkt stark — Enphases IQ Battery 5P ist mit 5,0 kWh nutzbar spezifiziert, Teslas Powerwall 3 mit 13,5 kWh nutzbar (mit Erweiterungspaketen höher skalierbar), laut dem jeweiligen Herstellerdatenblatt. Konsultieren Sie die Dimensionierungsberechnung eines Installateurs für Ihre konkreten Stromkreise, statt eine feste Dauer anzunehmen.' },
           { q: 'Brauche ich Solarpanels, damit die Batteriesicherung funktioniert?', a: 'Nein — eine Batterie kann vom Netz geladen und rein zur Ausfallsicherung ohne Solar genutzt werden, obwohl die Kombination mit Solar der Batterie erlaubt, sich während eines mehrtägigen Ausfalls bei Tageslicht wieder aufzuladen.' },
@@ -322,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Hausbatteriesicherung' }, { '@type': 'Thing', name: 'Solar-Microgrid' }, { '@type': 'Thing', name: 'Ausfall-Automatisierung' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -332,6 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
+        { '@type': 'Question', name: "Wie finde ich einen qualifizierten Installateur für einen Heimspeicher?", acceptedAnswer: { '@type': 'Answer', text: "Beginnen Sie mit Betrieben, die die in Ihrer Region geforderte Elektro- bzw. Handwerksberechtigung besitzen, und prüfen Sie dann Herstellerschulung für Ihre Speichermarke, Versicherung, Gewährleistung und wer Genehmigungen sowie die Netzbetreiber-Anmeldung übernimmt. Holen Sie mindestens zwei schriftliche Angebote auf Basis derselben Liste wesentlicher Stromkreise ein." } },
         { '@type': 'Question', name: 'Ist ein häusliches Microgrid dasselbe wie netzunabhängig zu sein?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Ein häusliches Batteriesicherungs-Setup bleibt normal mit dem Netz verbunden und isoliert sich nur während eines Ausfalls — es ist Notstrom, kein dauerhafter Inselbetrieb.' } },
         { '@type': 'Question', name: 'Brauche ich Solarpanels, damit die Batteriesicherung funktioniert?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — eine Batterie kann vom Netz geladen und rein zur Ausfallsicherung ohne Solar genutzt werden.' } },
         { '@type': 'Question', name: 'Ist es legal, das selbst zu installieren?', acceptedAnswer: { '@type': 'Answer', text: 'Notstromsysteme, die an den Sicherungskasten Ihres Hauses angeschlossen werden, erfordern typischerweise eine Elektrofachkraft und in vielen Regionen eine Genehmigung.' } },
@@ -344,8 +374,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-fr.webp',
     title: 'Transformer votre maison en microgrid énergétique (2026)',
@@ -381,13 +411,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Home Assistant peut automatiser quels circuits sont prioritaires en fonctionnement sur batterie',
           'Délimitez le projet à vos besoins réels de sauvegarde en cas de coupure, pas à une hypothèse d\'indépendance de toute la maison',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'Résumé', anchor: 'tldr' },
       { label: 'Ce que « microgrid domestique » signifie réellement', anchor: 'what-it-means' },
       { label: 'Dimensionner un système de sauvegarde', anchor: 'sizing' },
+      { label: "Choisir un installateur", anchor: 'choosing-installer' },
       { label: 'Automatiser la priorité des circuits', anchor: 'automating-priority' },
       { label: 'Ce que cela ne fait pas', anchor: 'limits' },
       { label: 'FAQ', anchor: 'faq' },
@@ -431,6 +462,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Un onduleur avec capacité de commutation de transfert automatique est requis pour isoler en toute sécurité les circuits de sauvegarde du réseau pendant une coupure — cela diffère d\'un onduleur uniquement raccordé au réseau, qui s\'arrête pendant une coupure pour des raisons de sécurité et ne fournit aucune alimentation de secours.',
         ],
       },
+      choosingInstaller: {
+        id: 'choosing-installer',
+        title: "Choisir un installateur de batterie domestique",
+        content:
+          "**Un système de secours par batterie raccordé à votre tableau électrique doit être installé par un électricien agréé ou une entreprise solaire et stockage qualifiée — avant de signer, vérifiez la qualification, la formation du fabricant pour votre marque de batterie, et qui s'occupe des autorisations et de l'accord du gestionnaire de réseau.**",
+        items: [
+          "Vérifiez d'abord la qualification : demandez une copie de la licence ou de l'habilitation électrique exigée dans votre pays ou région, et confirmez-la auprès de l'organisme compétent plutôt que de vous fier au site de l'installateur.",
+          "Considérez les certifications comme un signal secondaire : aux États-Unis, NABCEP est une certification sectorielle volontaire et non une obligation légale, et un installateur formé par le fabricant (par exemple pour les produits Tesla, Enphase ou SolarEdge) peut compter pour la garantie — confirmez les conditions exactes auprès du fabricant.",
+          "Demandez qui réalise les travaux et les démarches : si des sous-traitants font les travaux électriques, qui dépose la demande d'autorisation et organise l'inspection, et qui effectue la demande de raccordement auprès du gestionnaire de réseau — les exigences et délais varient selon la région ; renseignez-vous auprès de votre mairie et de votre gestionnaire de réseau.",
+          "Exigez un périmètre écrit : liste des circuits secourus, modèles de batterie et d'onduleur, calcul de charge à l'origine du dimensionnement, garantie de mise en œuvre et justificatifs d'assurance responsabilité civile et accidents du travail — puis comparez au moins deux devis établis sur la même liste de circuits essentiels.",
+        ],
+      },
       automatingPriority: {
         id: 'automating-priority',
         title: 'Automatiser la priorité des circuits',
@@ -457,6 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquemment posées',
         faqs: [
+          { q: "Comment trouver un installateur de batterie domestique qualifié ?", a: "Commencez par les installateurs titulaires de la qualification électrique exigée dans votre région, puis vérifiez la formation du fabricant pour votre marque de batterie, l'assurance, la garantie de mise en œuvre et qui gère les autorisations et le raccordement au réseau. Obtenez au moins deux devis écrits fondés sur la même liste de circuits essentiels." },
           { q: 'Un microgrid domestique est-il la même chose qu\'être hors réseau ?', a: 'Non. Une installation de sauvegarde par batterie domestique reste connectée au réseau normalement et s\'isole seulement pendant une coupure ou à la demande — c\'est de l\'alimentation de secours, pas un fonctionnement hors réseau permanent.' },
           { q: 'Combien de temps une batterie domestique peut-elle sauvegarder ma maison ?', a: 'Cela dépend entièrement de la capacité de la batterie par rapport à votre charge de circuits essentiels, et la capacité varie fortement selon le produit — l\'IQ Battery 5P d\'Enphase est évaluée à 5,0 kWh utilisables, la Powerwall 3 de Tesla à 13,5 kWh utilisables (extensible avec des packs d\'extension), selon la fiche technique propre de chaque fabricant. Consultez le calcul de dimensionnement d\'un installateur pour vos circuits spécifiques plutôt que de supposer une durée fixe.' },
           { q: 'Ai-je besoin de panneaux solaires pour que la sauvegarde par batterie fonctionne ?', a: 'Non — une batterie peut être chargée depuis le réseau et utilisée purement pour la sauvegarde en cas de coupure sans solaire, bien que l\'association avec le solaire permette à la batterie de se recharger pendant une coupure de plusieurs jours s\'il y a de la lumière du jour.' },
@@ -488,7 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Sauvegarde par batterie domestique' }, { '@type': 'Thing', name: 'Microgrid solaire' }, { '@type': 'Thing', name: 'Automatisation de coupure' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -498,6 +542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
+        { '@type': 'Question', name: "Comment trouver un installateur de batterie domestique qualifié ?", acceptedAnswer: { '@type': 'Answer', text: "Commencez par les installateurs titulaires de la qualification électrique exigée dans votre région, puis vérifiez la formation du fabricant pour votre marque de batterie, l'assurance, la garantie de mise en œuvre et qui gère les autorisations et le raccordement au réseau. Obtenez au moins deux devis écrits fondés sur la même liste de circuits essentiels." } },
         { '@type': 'Question', name: 'Un microgrid domestique est-il la même chose qu\'être hors réseau ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Une installation de sauvegarde par batterie domestique reste connectée au réseau normalement et s\'isole seulement pendant une coupure — c\'est de l\'alimentation de secours, pas un fonctionnement hors réseau permanent.' } },
         { '@type': 'Question', name: 'Ai-je besoin de panneaux solaires pour que la sauvegarde par batterie fonctionne ?', acceptedAnswer: { '@type': 'Answer', text: 'Non — une batterie peut être chargée depuis le réseau et utilisée purement pour la sauvegarde en cas de coupure sans solaire.' } },
         { '@type': 'Question', name: 'Est-ce légal de l\'installer moi-même ?', acceptedAnswer: { '@type': 'Answer', text: 'Les systèmes d\'alimentation de secours qui se connectent au tableau électrique nécessitent généralement un électricien agréé et une notification ou un permis dans de nombreuses régions.' } },
@@ -510,8 +555,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-ja.webp',
     title: '家をエネルギーマイクログリッドに変える（2026年）',
@@ -547,13 +592,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Home Assistantはバッテリー運転時にどの回路を優先するか自動化できる',
           'プロジェクトの範囲は実際の停電バックアップのニーズに限定し、家全体の独立性という想定にしない',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: '要約', anchor: 'tldr' },
       { label: '「家庭用マイクログリッド」が実際に意味するもの', anchor: 'what-it-means' },
       { label: 'バックアップシステムの規模決定', anchor: 'sizing' },
+      { label: "施工業者の選び方", anchor: 'choosing-installer' },
       { label: '回路優先順位の自動化', anchor: 'automating-priority' },
       { label: 'これができないこと', anchor: 'limits' },
       { label: 'よくある質問', anchor: 'faq' },
@@ -597,6 +643,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '停電時にバックアップ回路を系統から安全に切り離すには、自動切替機能を備えたインバーターが必要です — これは、安全のため停電時にシャットダウンし、バックアップ電力を一切提供しない、系統連系専用インバーターとは異なります。',
         ],
       },
+      choosingInstaller: {
+        id: 'choosing-installer',
+        title: "家庭用蓄電池の施工業者の選び方",
+        content:
+          "**分電盤に接続する家庭用蓄電池のバックアップシステムは、資格を持つ電気工事士または認可を受けた太陽光・蓄電池施工業者が施工すべきです。契約前に、資格、お使いの蓄電池ブランドに関するメーカー研修、許可申請や電力会社との手続きを誰が担当するかを確認してください。**",
+        items: [
+          "まず資格を確認する：お住まいの国・地域で必要な電気工事や建設業の資格証の写しを求め、施工業者のウェブサイトの記載に頼らず、管轄機関で照会してください。",
+          "認定は二次的な判断材料として見る：米国では NABCEP は任意の業界認定であり法的義務ではありません。Tesla、Enphase、SolarEdge などの製品については、メーカー研修を受けた施工業者であることが保証条件に関わる場合があるため、正確な条件はメーカーに確認してください。",
+          "作業と書類手続きの担当者を尋ねる：電気工事を下請けが行うか、許可申請と検査の手配は誰が行うか、電力会社への系統連系申請は誰が行うか。要件や所要期間は地域によって異なるため、地元の建築担当部署と電力会社に確認してください。",
+          "書面で作業範囲を取り交わす：バックアップ回路の一覧、蓄電池とインバーターの型番、容量選定の根拠となる負荷計算、施工保証、賠償責任保険と労災保険の証明を確認し、同じ重要回路リストに基づく見積もりを少なくとも2社から取って比較してください。",
+        ],
+      },
       automatingPriority: {
         id: 'automating-priority',
         title: '回路優先順位の自動化',
@@ -623,6 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
+          { q: "家庭用蓄電池の信頼できる施工業者はどう探せばよいですか？", a: "まずお住まいの地域で必要な電気工事の資格を持つ業者から探し、次にお使いの蓄電池ブランドのメーカー研修、保険、施工保証、許可申請と系統連系の担当者を確認します。同じ重要回路リストに基づく書面の見積もりを少なくとも2社から取ってください。" },
           { q: '家庭用マイクログリッドはオフグリッドと同じことですか？', a: 'いいえ。家庭用バッテリーバックアップ構成は通常どおり系統に接続されたままで、停電時またはオンデマンドでのみ切り離されます — これはバックアップ電力であり、恒久的なオフグリッド運転ではありません。' },
           { q: '家庭用バッテリーは自宅をどれくらいの時間バックアップできますか？', a: 'これは完全にバッテリー容量と重要回路の負荷次第であり、容量は製品によって大きく異なります — Enphase社のIQ Battery 5Pは実使用容量5.0kWh、Tesla社のPowerwall 3は実使用容量13.5kWh（拡張パックでさらに増設可能）と、各メーカー自身のデータシートで定格されています。固定の時間を想定するのではなく、あなたの特定の回路について施工業者の規模計算を確認してください。' },
           { q: 'バッテリーバックアップが機能するには太陽光パネルが必要ですか？', a: 'いいえ — バッテリーは系統から充電でき、太陽光なしで純粋に停電バックアップ用に使用できますが、太陽光と組み合わせることで、日中に複数日の停電中にバッテリーを再充電できます。' },
@@ -654,7 +713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: '家庭用バッテリーバックアップ' }, { '@type': 'Thing', name: '太陽光マイクログリッド' }, { '@type': 'Thing', name: '停電自動化' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -664,6 +723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ja',
       mainEntity: [
+        { '@type': 'Question', name: "家庭用蓄電池の信頼できる施工業者はどう探せばよいですか？", acceptedAnswer: { '@type': 'Answer', text: "まずお住まいの地域で必要な電気工事の資格を持つ業者から探し、次にお使いの蓄電池ブランドのメーカー研修、保険、施工保証、許可申請と系統連系の担当者を確認します。同じ重要回路リストに基づく書面の見積もりを少なくとも2社から取ってください。" } },
         { '@type': 'Question', name: '家庭用マイクログリッドはオフグリッドと同じことですか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。家庭用バッテリーバックアップ構成は通常どおり系統に接続されたままで、停電時のみ切り離されます — これはバックアップ電力であり、恒久的なオフグリッド運転ではありません。' } },
         { '@type': 'Question', name: 'バッテリーバックアップが機能するには太陽光パネルが必要ですか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ — バッテリーは系統から充電でき、太陽光なしで純粋に停電バックアップ用に使用できます。' } },
         { '@type': 'Question', name: 'これは自分で設置しても合法ですか？', acceptedAnswer: { '@type': 'Answer', text: '自宅の分電盤に接続するバックアップ電源システムは通常、有資格の電気工事士と多くの地域で許可を必要とします。' } },
@@ -676,8 +736,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-zh.webp',
     title: '把你家变成能源微电网（2026年）',
@@ -713,13 +773,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Home Assistant可以自动化设置在电池供电时哪些回路优先',
           '把项目范围限定在你实际的停电备用需求上，而不是假设整个房屋要实现独立供电',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: '摘要', anchor: 'tldr' },
       { label: '"家庭微电网"到底意味着什么', anchor: 'what-it-means' },
       { label: '为备用系统确定规模', anchor: 'sizing' },
+      { label: "如何选择安装商", anchor: 'choosing-installer' },
       { label: '自动化回路优先级', anchor: 'automating-priority' },
       { label: '这做不到什么', anchor: 'limits' },
       { label: '常见问题', anchor: 'faq' },
@@ -763,6 +824,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '需要一台具备自动切换功能的逆变器，才能在停电期间安全地把备用回路与电网隔离——这不同于纯并网型逆变器，后者出于安全考虑会在停电时关闭，完全不提供备用电力。',
         ],
       },
+      choosingInstaller: {
+        id: 'choosing-installer',
+        title: "如何选择家用电池安装商",
+        content:
+          "**接入家庭配电箱的家用电池备用电源系统，应由持证电工或有资质的光伏与储能承包商安装。签约前，请核实资质、对应电池品牌的厂商培训情况，以及由谁负责办理许可和电网公司的审批手续。**",
+        items: [
+          "先查资质：要求对方提供所在国家或地区规定的电工或承包商资质证明副本，并向发证机构核实，而不是只相信安装商的网站。",
+          "把认证作为次要参考：在美国，NABCEP 是自愿性的行业认证而非法律要求；经厂商培训的安装商（例如 Tesla、Enphase 或 SolarEdge 产品）可能影响保修，具体条款请向厂商确认。",
+          "问清谁施工、谁办手续：电气工程是否分包、谁申请许可并安排验收、谁向电网公司提交并网申请——各地要求和周期不同，请向当地建设主管部门和电网公司咨询。",
+          "要求书面的工作范围：备用回路清单、电池与逆变器型号、容量配置所依据的负载计算、施工质保，以及责任险和工伤保险证明，并基于同一份关键回路清单至少比较两份报价。",
+        ],
+      },
       automatingPriority: {
         id: 'automating-priority',
         title: '自动化回路优先级',
@@ -789,6 +862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
+          { q: "如何找到合格的家用电池安装商？", a: "先找持有所在地区要求的电工或承包商资质的安装商，再核实电池品牌的厂商培训、保险、施工质保，以及由谁办理许可和并网手续。请基于同一份关键回路清单获取至少两份书面报价。" },
           { q: '家庭微电网和完全离网是一回事吗？', a: '不是。家用电池备用系统仍然正常连接电网，只在停电或按需时才隔离——这是备用电力，不是永久的离网运行。' },
           { q: '家用电池能为我家提供多长时间的备用电力？', a: '这完全取决于电池容量相对于你关键回路负荷的比例，而容量因产品而异、差异很大——根据各厂商自己的数据表，Enphase的IQ Battery 5P额定可用容量为5.0 kWh，特斯拉Powerwall 3为13.5 kWh（可通过扩展包进一步提升）。请让安装人员针对你的具体回路进行规模计算，而不要假设一个固定时长。' },
           { q: '电池备用要起作用，需要太阳能板吗？', a: '不需要——电池可以从电网充电，仅用于停电备用而无需太阳能，不过配合太阳能可以让电池在有日照的多日停电期间重新充电。' },
@@ -820,7 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: '家用电池备用' }, { '@type': 'Thing', name: '太阳能微电网' }, { '@type': 'Thing', name: '停电自动化' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -830,6 +904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'zh',
       mainEntity: [
+        { '@type': 'Question', name: "如何找到合格的家用电池安装商？", acceptedAnswer: { '@type': 'Answer', text: "先找持有所在地区要求的电工或承包商资质的安装商，再核实电池品牌的厂商培训、保险、施工质保，以及由谁办理许可和并网手续。请基于同一份关键回路清单获取至少两份书面报价。" } },
         { '@type': 'Question', name: '家庭微电网和完全离网是一回事吗？', acceptedAnswer: { '@type': 'Answer', text: '不是。家用电池备用系统仍然正常连接电网，只在停电时才隔离——这是备用电力，不是永久的离网运行。' } },
         { '@type': 'Question', name: '电池备用要起作用，需要太阳能板吗？', acceptedAnswer: { '@type': 'Answer', text: '不需要——电池可以从电网充电，仅用于停电备用而无需太阳能。' } },
         { '@type': 'Question', name: '我自己安装这个合法吗？', acceptedAnswer: { '@type': 'Answer', text: '接入配电盘的备用电源系统通常需要持证电工操作，在许多地区还需要申请许可。' } },
@@ -842,8 +917,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-es.webp',
     title: 'Convertir tu hogar en una microrred de energía (2026)',
@@ -879,13 +954,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Home Assistant puede automatizar qué circuitos tienen prioridad al funcionar con batería',
           'Delimita el proyecto a tus necesidades reales de respaldo en cortes, no a una suposición de independencia de toda la casa',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'Resumen', anchor: 'tldr' },
       { label: 'Qué significa realmente "microrred doméstica"', anchor: 'what-it-means' },
       { label: 'Dimensionar un sistema de respaldo', anchor: 'sizing' },
+      { label: "Elegir un instalador", anchor: 'choosing-installer' },
       { label: 'Automatizar la prioridad de circuitos', anchor: 'automating-priority' },
       { label: 'Lo que esto no hace', anchor: 'limits' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
@@ -929,6 +1005,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se requiere un inversor con capacidad de conmutación de transferencia automática para aislar de forma segura los circuitos de respaldo de la red durante un corte — esto difiere de un inversor solo conectado a la red, que se apaga durante un corte por seguridad y no proporciona ninguna energía de respaldo.',
         ],
       },
+      choosingInstaller: {
+        id: 'choosing-installer',
+        title: "Cómo elegir un instalador de baterías domésticas",
+        content:
+          "**Un sistema de respaldo con batería conectado a su cuadro eléctrico debe instalarlo un electricista autorizado o una empresa solar y de almacenamiento con licencia; antes de firmar, verifique la habilitación, la formación del fabricante para su marca de batería y quién gestiona los permisos y la aprobación de la compañía eléctrica.**",
+        items: [
+          "Compruebe primero la habilitación: pida copia de la licencia eléctrica o de contratista que exige su país o región y confírmela con el organismo emisor en lugar de fiarse de la web del instalador.",
+          "Trate las certificaciones como señal secundaria: en EE. UU., NABCEP es una certificación voluntaria del sector y no un requisito legal, y un instalador formado por el fabricante (por ejemplo, para productos Tesla, Enphase o SolarEdge) puede importar para la garantía; confirme las condiciones exactas con el fabricante.",
+          "Pregunte quién hace el trabajo y los trámites: si subcontratan la parte eléctrica, quién tramita el permiso y reserva la inspección, y quién presenta la solicitud de conexión a la compañía; los requisitos y plazos varían según la región, así que consulte a su ayuntamiento y a su distribuidora.",
+          "Exija un alcance por escrito: lista de circuitos respaldados, modelos de batería e inversor, el cálculo de carga que sustenta el dimensionamiento, garantía de la mano de obra y prueba de seguros de responsabilidad civil y de accidentes laborales; luego compare al menos dos presupuestos basados en la misma lista de circuitos esenciales.",
+        ],
+      },
       automatingPriority: {
         id: 'automating-priority',
         title: 'Automatizar la prioridad de circuitos',
@@ -955,6 +1043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
+          { q: "¿Cómo encuentro un instalador cualificado de baterías domésticas?", a: "Empiece por instaladores con la habilitación eléctrica o de contratista que exige su región y después verifique la formación del fabricante para su marca de batería, el seguro, la garantía de la mano de obra y quién gestiona los permisos y la conexión a la red. Obtenga al menos dos presupuestos por escrito basados en la misma lista de circuitos esenciales." },
           { q: '¿Una microrred doméstica es lo mismo que estar fuera de la red?', a: 'No. Una instalación de respaldo por batería doméstica sigue conectada a la red normalmente y solo se aísla durante un corte o bajo demanda — es energía de respaldo, no operación permanente fuera de la red.' },
           { q: '¿Cuánto tiempo puede una batería doméstica respaldar mi casa?', a: 'Esto depende enteramente de la capacidad de la batería frente a tu carga de circuitos esenciales, y la capacidad varía ampliamente según el producto — el IQ Battery 5P de Enphase está clasificado en 5.0 kWh utilizables, el Powerwall 3 de Tesla en 13.5 kWh utilizables (escalable más con paquetes de expansión), según la propia ficha técnica de cada fabricante. Consulta el cálculo de dimensionamiento de un instalador para tus circuitos específicos en lugar de suponer una duración fija.' },
           { q: '¿Necesito paneles solares para que funcione el respaldo por batería?', a: 'No — una batería puede cargarse desde la red y usarse puramente para respaldo en cortes sin solar, aunque combinarla con solar permite que la batería se recargue durante un corte de varios días si hay luz diurna.' },
@@ -986,7 +1075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Respaldo por batería doméstica' }, { '@type': 'Thing', name: 'Microrred solar' }, { '@type': 'Thing', name: 'Automatización de cortes' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -996,6 +1085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
+        { '@type': 'Question', name: "¿Cómo encuentro un instalador cualificado de baterías domésticas?", acceptedAnswer: { '@type': 'Answer', text: "Empiece por instaladores con la habilitación eléctrica o de contratista que exige su región y después verifique la formación del fabricante para su marca de batería, el seguro, la garantía de la mano de obra y quién gestiona los permisos y la conexión a la red. Obtenga al menos dos presupuestos por escrito basados en la misma lista de circuitos esenciales." } },
         { '@type': 'Question', name: '¿Una microrred doméstica es lo mismo que estar fuera de la red?', acceptedAnswer: { '@type': 'Answer', text: 'No. Una instalación de respaldo por batería doméstica sigue conectada a la red normalmente y solo se aísla durante un corte — es energía de respaldo, no operación permanente fuera de la red.' } },
         { '@type': 'Question', name: '¿Necesito paneles solares para que funcione el respaldo por batería?', acceptedAnswer: { '@type': 'Answer', text: 'No — una batería puede cargarse desde la red y usarse puramente para respaldo en cortes sin solar.' } },
         { '@type': 'Question', name: '¿Es legal instalarlo yo mismo?', acceptedAnswer: { '@type': 'Answer', text: 'Los sistemas de energía de respaldo que se conectan al panel eléctrico típicamente requieren un electricista certificado y permiso en muchas regiones.' } },
@@ -1008,8 +1098,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-pt.webp',
     title: 'Transformando sua casa em uma microrrede de energia (2026)',
@@ -1045,13 +1135,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O Home Assistant pode automatizar quais circuitos têm prioridade ao funcionar com bateria',
           'Delimite o projeto às suas necessidades reais de backup em quedas, não a uma suposição de independência da casa toda',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'Resumo', anchor: 'tldr' },
       { label: 'O que "microrrede doméstica" realmente significa', anchor: 'what-it-means' },
       { label: 'Dimensionando um sistema de backup', anchor: 'sizing' },
+      { label: "Escolher um instalador", anchor: 'choosing-installer' },
       { label: 'Automatizando a prioridade de circuitos', anchor: 'automating-priority' },
       { label: 'O que isso não faz', anchor: 'limits' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
@@ -1095,6 +1186,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Um inversor com capacidade de comutação de transferência automática é necessário para isolar com segurança os circuitos de backup da rede durante uma queda — isso difere de um inversor apenas conectado à rede, que desliga durante uma queda por segurança e não fornece nenhuma energia de backup.',
         ],
       },
+      choosingInstaller: {
+        id: 'choosing-installer',
+        title: "Como escolher um instalador de baterias residenciais",
+        content:
+          "**Um sistema de backup com bateria ligado ao seu quadro elétrico deve ser instalado por um eletricista habilitado ou por uma empresa de energia solar e armazenamento licenciada; antes de assinar, verifique a habilitação, o treinamento do fabricante para a sua marca de bateria e quem cuida das licenças e da aprovação da concessionária.**",
+        items: [
+          "Verifique primeiro a habilitação: peça cópia da licença elétrica ou de empreiteiro exigida no seu país ou região e confirme-a com o órgão emissor, em vez de confiar no site do instalador.",
+          "Trate as certificações como sinal secundário: nos EUA, a NABCEP é uma certificação voluntária do setor, e não uma exigência legal, e um instalador treinado pelo fabricante (por exemplo, para produtos Tesla, Enphase ou SolarEdge) pode pesar na garantia; confirme as condições exatas com o fabricante.",
+          "Pergunte quem faz o trabalho e a papelada: se a parte elétrica é subcontratada, quem solicita a licença e agenda a vistoria e quem protocola o pedido de conexão junto à concessionária; os requisitos e prazos variam por região, então consulte a prefeitura e a concessionária.",
+          "Exija um escopo por escrito: lista de circuitos atendidos pelo backup, modelos de bateria e inversor, o cálculo de carga que embasa o dimensionamento, garantia do serviço e comprovação de seguro de responsabilidade civil e de acidentes de trabalho; depois compare pelo menos dois orçamentos baseados na mesma lista de circuitos essenciais.",
+        ],
+      },
       automatingPriority: {
         id: 'automating-priority',
         title: 'Automatizando a prioridade de circuitos',
@@ -1121,6 +1224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
+          { q: "Como encontro um instalador qualificado de baterias residenciais?", a: "Comece por instaladores com a habilitação elétrica ou de empreiteiro exigida na sua região e depois verifique o treinamento do fabricante para a sua marca de bateria, o seguro, a garantia do serviço e quem cuida das licenças e da conexão à rede. Obtenha pelo menos dois orçamentos por escrito baseados na mesma lista de circuitos essenciais." },
           { q: 'Uma microrrede doméstica é o mesmo que estar fora da rede?', a: 'Não. Uma instalação de backup por bateria doméstica continua conectada à rede normalmente e só se isola durante uma queda ou sob demanda — é energia de backup, não operação permanente fora da rede.' },
           { q: 'Por quanto tempo uma bateria doméstica pode fazer backup da minha casa?', a: 'Isso depende inteiramente da capacidade da bateria versus sua carga de circuitos essenciais, e a capacidade varia amplamente por produto — a IQ Battery 5P da Enphase é classificada em 5,0 kWh utilizáveis, a Powerwall 3 da Tesla em 13,5 kWh utilizáveis (escalável ainda mais com pacotes de expansão), segundo a própria ficha técnica de cada fabricante. Consulte o cálculo de dimensionamento de um instalador para seus circuitos específicos em vez de supor uma duração fixa.' },
           { q: 'Preciso de painéis solares para o backup por bateria funcionar?', a: 'Não — uma bateria pode ser carregada da rede e usada puramente para backup em quedas sem solar, embora combinar com solar permita que a bateria recarregue durante uma queda de vários dias se houver luz do dia.' },
@@ -1152,7 +1256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Backup por bateria doméstica' }, { '@type': 'Thing', name: 'Microrrede solar' }, { '@type': 'Thing', name: 'Automação de queda de energia' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1162,6 +1266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'pt-BR',
       mainEntity: [
+        { '@type': 'Question', name: "Como encontro um instalador qualificado de baterias residenciais?", acceptedAnswer: { '@type': 'Answer', text: "Comece por instaladores com a habilitação elétrica ou de empreiteiro exigida na sua região e depois verifique o treinamento do fabricante para a sua marca de bateria, o seguro, a garantia do serviço e quem cuida das licenças e da conexão à rede. Obtenha pelo menos dois orçamentos por escrito baseados na mesma lista de circuitos essenciais." } },
         { '@type': 'Question', name: 'Uma microrrede doméstica é o mesmo que estar fora da rede?', acceptedAnswer: { '@type': 'Answer', text: 'Não. Uma instalação de backup por bateria doméstica continua conectada à rede normalmente e só se isola durante uma queda — é energia de backup, não operação permanente fora da rede.' } },
         { '@type': 'Question', name: 'Preciso de painéis solares para o backup por bateria funcionar?', acceptedAnswer: { '@type': 'Answer', text: 'Não — uma bateria pode ser carregada da rede e usada puramente para backup em quedas sem solar.' } },
         { '@type': 'Question', name: 'É legal instalar isso eu mesmo?', acceptedAnswer: { '@type': 'Answer', text: 'Sistemas de energia de backup que se conectam ao quadro elétrico tipicamente exigem um eletricista licenciado e licença em muitas regiões.' } },
@@ -1174,8 +1279,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-ar.webp',
     title: 'تحويل منزلك إلى شبكة طاقة صغيرة (⁨2026⁩)',
@@ -1211,13 +1316,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يمكن لـ Home Assistant أتمتة الدوائر التي تحظى بالأولوية عند التشغيل على البطارية',
           'حدّد نطاق المشروع وفق احتياجاتك الفعلية للنسخ الاحتياطي عند الانقطاع، وليس افتراض استقلالية المنزل بالكامل',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'ملخص سريع', anchor: 'tldr' },
       { label: 'ما تعنيه "الشبكة الصغيرة المنزلية" فعليًا', anchor: 'what-it-means' },
       { label: 'تحديد حجم نظام النسخ الاحتياطي', anchor: 'sizing' },
+      { label: "اختيار الفني المُركِّب", anchor: 'choosing-installer' },
       { label: 'أتمتة أولوية الدوائر', anchor: 'automating-priority' },
       { label: 'ما لا يفعله هذا', anchor: 'limits' },
       { label: 'أسئلة شائعة', anchor: 'faq' },
@@ -1261,6 +1367,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يلزم عاكس بقدرة تبديل نقل تلقائي لعزل دوائر النسخ الاحتياطي بأمان عن الشبكة أثناء الانقطاع — يختلف هذا عن عاكس متصل بالشبكة فقط، والذي يُغلق أثناء الانقطاع لأسباب أمنية ولا يوفر أي طاقة احتياطية على الإطلاق.',
         ],
       },
+      choosingInstaller: {
+        id: 'choosing-installer',
+        title: "كيفية اختيار فني تركيب بطارية منزلية",
+        content:
+          "**يجب أن يقوم بتركيب نظام البطارية الاحتياطي المتصل بلوحة الكهرباء في منزلك كهربائي مرخّص أو مقاول مرخّص للطاقة الشمسية والتخزين. قبل التوقيع، تحقق من الترخيص، ومن تدريب الشركة المصنِّعة على علامة البطارية التي تستخدمها، ومن الجهة المسؤولة عن التصاريح وموافقة شركة الكهرباء.**",
+        items: [
+          "تحقق من الترخيص أولًا: اطلب نسخة من ترخيص الكهرباء أو المقاولات المطلوب في بلدك أو منطقتك، وأكِّده لدى الجهة المانحة بدلًا من الاعتماد على موقع المُركِّب.",
+          "اعتبر الشهادات إشارة ثانوية: في الولايات المتحدة، NABCEP شهادة صناعية طوعية وليست شرطًا قانونيًا، وقد يؤثر كون المُركِّب مدرَّبًا من الشركة المصنِّعة (مثل منتجات Tesla أو Enphase أو SolarEdge) في الضمان؛ أكِّد الشروط الدقيقة مع المصنِّع.",
+          "اسأل عمّن ينفّذ العمل ويتولى الأوراق: هل يُسند العمل الكهربائي لمقاولين من الباطن، ومن يستخرج التصريح ويحجز الفحص، ومن يقدّم طلب الربط بشركة الكهرباء. تختلف المتطلبات والمهل حسب المنطقة، فراجع البلدية المحلية وشركة الكهرباء.",
+          "احصل على نطاق عمل مكتوب: قائمة الدوائر المشمولة بالنسخ الاحتياطي، وطرازا البطارية والمحوِّل، وحساب الأحمال الذي بُني عليه التحجيم، وضمان التنفيذ، وإثبات التأمين ضد المسؤولية وإصابات العمل، ثم قارن عرضين على الأقل مبنيين على قائمة الدوائر الأساسية نفسها.",
+        ],
+      },
       automatingPriority: {
         id: 'automating-priority',
         title: 'أتمتة أولوية الدوائر',
@@ -1287,6 +1405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
+          { q: "كيف أجد فني تركيب مؤهلًا للبطاريات المنزلية؟", a: "ابدأ بالمُركِّبين الذين يحملون ترخيص الكهرباء أو المقاولات المطلوب في منطقتك، ثم تحقق من تدريب الشركة المصنِّعة لعلامة البطارية، والتأمين، وضمان التنفيذ، ومن يتولى التصاريح والربط بالشبكة. احصل على عرضين مكتوبين على الأقل مبنيين على قائمة الدوائر الأساسية نفسها." },
           { q: 'هل الشبكة الصغيرة المنزلية هي نفسها الانفصال عن الشبكة؟', a: 'لا. يظل إعداد النسخ الاحتياطي بالبطارية المنزلية متصلًا بالشبكة بشكل طبيعي ولا يُعزل إلا أثناء الانقطاع أو عند الطلب — إنها طاقة احتياطية، وليست تشغيلًا دائمًا خارج الشبكة.' },
           { q: 'كم من الوقت يمكن لبطارية منزلية أن تدعم منزلي احتياطيًا؟', a: 'يعتمد هذا كليًا على سعة البطارية مقابل حمل دوائرك الأساسية، وتتفاوت السعة بشكل كبير حسب المنتج — بطارية IQ Battery 5P من Enphase مصنّفة بسعة قابلة للاستخدام قدرها 5.0 كيلوواط ساعة، وبطارية Powerwall 3 من Tesla بسعة قابلة للاستخدام قدرها 13.5 كيلوواط ساعة (قابلة للتوسع أكثر مع حزم التوسعة)، وفقًا لورقة بيانات كل شركة مصنّعة. استشر حساب التحجيم لدى مثبِّت للدوائر المحددة لديك بدلًا من افتراض مدة ثابتة.' },
           { q: 'هل أحتاج ألواحًا شمسية حتى يعمل النسخ الاحتياطي بالبطارية؟', a: 'لا — يمكن شحن البطارية من الشبكة واستخدامها فقط للنسخ الاحتياطي عند الانقطاع دون طاقة شمسية، رغم أن اقترانها بالطاقة الشمسية يتيح للبطارية إعادة الشحن أثناء انقطاع يستمر لعدة أيام إذا توفر ضوء النهار.' },
@@ -1318,7 +1437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'النسخ الاحتياطي بالبطارية المنزلية' }, { '@type': 'Thing', name: 'الشبكة الصغيرة الشمسية' }, { '@type': 'Thing', name: 'أتمتة الانقطاع' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1328,6 +1447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
+        { '@type': 'Question', name: "كيف أجد فني تركيب مؤهلًا للبطاريات المنزلية؟", acceptedAnswer: { '@type': 'Answer', text: "ابدأ بالمُركِّبين الذين يحملون ترخيص الكهرباء أو المقاولات المطلوب في منطقتك، ثم تحقق من تدريب الشركة المصنِّعة لعلامة البطارية، والتأمين، وضمان التنفيذ، ومن يتولى التصاريح والربط بالشبكة. احصل على عرضين مكتوبين على الأقل مبنيين على قائمة الدوائر الأساسية نفسها." } },
         { '@type': 'Question', name: 'هل الشبكة الصغيرة المنزلية هي نفسها الانفصال عن الشبكة؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. يظل إعداد النسخ الاحتياطي بالبطارية المنزلية متصلًا بالشبكة بشكل طبيعي ولا يُعزل إلا أثناء الانقطاع — إنها طاقة احتياطية، وليست تشغيلًا دائمًا خارج الشبكة.' } },
         { '@type': 'Question', name: 'هل أحتاج ألواحًا شمسية حتى يعمل النسخ الاحتياطي بالبطارية؟', acceptedAnswer: { '@type': 'Answer', text: 'لا — يمكن شحن البطارية من الشبكة واستخدامها فقط للنسخ الاحتياطي عند الانقطاع دون طاقة شمسية.' } },
         { '@type': 'Question', name: 'هل تركيب هذا بنفسي أمر قانوني؟', acceptedAnswer: { '@type': 'Answer', text: 'تتطلب أنظمة الطاقة الاحتياطية المتصلة بلوحة الكهرباء عادةً كهربائيًا مرخصًا وتصريحًا في العديد من المناطق.' } },
@@ -1340,8 +1460,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/home-as-energy-microgrid-2027-overview-hero-ko.webp',
     title: '집을 에너지 마이크로그리드로 만들기 (2026년)',
@@ -1377,13 +1497,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Home Assistant는 배터리로 작동할 때 어떤 회로가 우선순위를 갖는지 자동화할 수 있음',
           '프로젝트 범위를 실제 정전 백업 필요성으로 한정하고, 전체 가정 독립이라는 가정을 두지 말 것',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: '요약', anchor: 'tldr' },
       { label: '"가정용 마이크로그리드"가 실제로 의미하는 것', anchor: 'what-it-means' },
       { label: '백업 시스템 규모 정하기', anchor: 'sizing' },
+      { label: "설치업체 고르기", anchor: 'choosing-installer' },
       { label: '회로 우선순위 자동화하기', anchor: 'automating-priority' },
       { label: '이것이 할 수 없는 것', anchor: 'limits' },
       { label: '자주 묻는 질문', anchor: 'faq' },
@@ -1427,6 +1548,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '정전 시 백업 회로를 계통에서 안전하게 분리하려면 자동 전환 스위치 기능을 갖춘 인버터가 필요합니다 — 이는 안전을 위해 정전 시 꺼지고 백업 전력을 전혀 제공하지 않는 계통 연계 전용 인버터와는 다릅니다.',
         ],
       },
+      choosingInstaller: {
+        id: 'choosing-installer',
+        title: "가정용 배터리 설치업체 고르는 법",
+        content:
+          "**분전반에 연결되는 가정용 배터리 백업 시스템은 면허를 가진 전기 기술자 또는 인가받은 태양광·저장장치 시공업체가 설치해야 합니다. 계약 전에 면허, 사용하려는 배터리 브랜드에 대한 제조사 교육 이수 여부, 그리고 허가와 전력회사 승인을 누가 처리하는지 확인하세요.**",
+        items: [
+          "먼저 면허를 확인하세요: 거주 국가나 지역에서 요구하는 전기 또는 시공 면허 사본을 요청하고, 설치업체 웹사이트의 설명에 의존하지 말고 발급 기관에서 직접 확인하세요.",
+          "인증은 보조 지표로 보세요: 미국에서 NABCEP는 법적 의무가 아닌 자율적인 업계 인증이며, Tesla·Enphase·SolarEdge 같은 제품은 제조사 교육을 받은 설치업체인지가 보증에 영향을 줄 수 있으므로 정확한 조건은 제조사에 확인하세요.",
+          "누가 시공하고 서류를 처리하는지 물어보세요: 전기 공사를 하도급하는지, 누가 허가를 신청하고 검사를 예약하는지, 누가 전력회사에 계통 연계 신청을 제출하는지 확인하세요. 요건과 소요 기간은 지역마다 다르므로 지자체 건축 부서와 전력회사에 문의하세요.",
+          "서면으로 작업 범위를 받으세요: 백업 회로 목록, 배터리와 인버터 모델, 용량 산정의 근거가 된 부하 계산, 시공 보증, 배상책임보험과 산재보험 증빙을 확인하고, 동일한 필수 회로 목록을 기준으로 한 견적을 최소 두 곳에서 받아 비교하세요.",
+        ],
+      },
       automatingPriority: {
         id: 'automating-priority',
         title: '회로 우선순위 자동화하기',
@@ -1453,6 +1586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
+          { q: "자격을 갖춘 가정용 배터리 설치업체는 어떻게 찾나요?", a: "먼저 거주 지역에서 요구하는 전기 또는 시공 면허를 가진 업체를 찾고, 그다음 배터리 브랜드에 대한 제조사 교육, 보험, 시공 보증, 허가 및 계통 연계 담당자를 확인하세요. 동일한 필수 회로 목록을 기준으로 한 서면 견적을 최소 두 곳에서 받으세요." },
           { q: '가정용 마이크로그리드는 오프그리드와 같은 것인가요?', a: '아닙니다. 가정용 배터리 백업 설정은 평소에는 계통에 정상적으로 연결되어 있으며 정전 시나 필요시에만 분리됩니다 — 이는 백업 전력이지, 영구적인 오프그리드 운영이 아닙니다.' },
           { q: '가정용 배터리는 우리 집을 얼마나 오래 백업할 수 있나요?', a: '이는 전적으로 배터리 용량 대 필수 회로 부하에 달려 있으며, 용량은 제품에 따라 크게 다릅니다 — 각 제조사 자체 데이터시트에 따르면 Enphase의 IQ Battery 5P는 실사용 용량 5.0kWh, Tesla의 Powerwall 3는 실사용 용량 13.5kWh(확장 팩으로 더 확장 가능)로 정격되어 있습니다. 고정된 지속 시간을 가정하지 말고 특정 회로에 대한 설치업체의 규모 계산을 확인하세요.' },
           { q: '배터리 백업이 작동하려면 태양광 패널이 필요한가요?', a: '아니요 — 배터리는 계통에서 충전되어 태양광 없이 순전히 정전 백업용으로 사용할 수 있지만, 태양광과 결합하면 며칠에 걸친 정전 시 낮 동안 배터리를 재충전할 수 있습니다.' },
@@ -1484,7 +1618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: '가정용 배터리 백업' }, { '@type': 'Thing', name: '태양광 마이크로그리드' }, { '@type': 'Thing', name: '정전 자동화' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1494,6 +1628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ko',
       mainEntity: [
+        { '@type': 'Question', name: "자격을 갖춘 가정용 배터리 설치업체는 어떻게 찾나요?", acceptedAnswer: { '@type': 'Answer', text: "먼저 거주 지역에서 요구하는 전기 또는 시공 면허를 가진 업체를 찾고, 그다음 배터리 브랜드에 대한 제조사 교육, 보험, 시공 보증, 허가 및 계통 연계 담당자를 확인하세요. 동일한 필수 회로 목록을 기준으로 한 서면 견적을 최소 두 곳에서 받으세요." } },
         { '@type': 'Question', name: '가정용 마이크로그리드는 오프그리드와 같은 것인가요?', acceptedAnswer: { '@type': 'Answer', text: '아닙니다. 가정용 배터리 백업 설정은 평소에는 계통에 정상적으로 연결되어 있으며 정전 시에만 분리됩니다 — 이는 백업 전력이지, 영구적인 오프그리드 운영이 아닙니다.' } },
         { '@type': 'Question', name: '배터리 백업이 작동하려면 태양광 패널이 필요한가요?', acceptedAnswer: { '@type': 'Answer', text: '아니요 — 배터리는 계통에서 충전되어 태양광 없이 순전히 정전 백업용으로 사용할 수 있습니다.' } },
         { '@type': 'Question', name: '이것을 직접 설치해도 합법인가요?', acceptedAnswer: { '@type': 'Answer', text: '배전반에 연결되는 백업 전원 시스템은 일반적으로 유자격 전기 기술자와 많은 지역에서 허가가 필요합니다.' } },
