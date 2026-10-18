@@ -3914,5 +3914,230 @@
     ],
     "reason": "Added faster-whisper vs whisper.cpp, Piper TTS, MacWhisper sections (9 locales)",
     "baseline": null
+  },
+  {
+    "id": "1f0ef331-d340-4dd2-8b04-b6933f650a35",
+    "slug": "/power-local-llm/hiwaifu-review",
+    "date": "2026-10-18T18:14:37.637Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "HiWaifu Review: AI Character Chat App for iPhone",
+        "new": "HiWaifu App Review 2026: iPhone, Pricing, Privacy"
+      },
+      {
+        "field": "metaDescription",
+        "old": "HiWaifu review: iPhone AI character chat with long-term memory and lorebooks. Version 3.10.1, pricing, 18+ rating, privacy and local alternatives.",
+        "new": "HiWaifu (hi waifu) is a freemium 18+ AI character chat app for iPhone and iPad. Version 3.10.1: login, web access, pricing, privacy, local alternatives."
+      }
+    ],
+    "reason": "geo-meta-optimizer: brand/navigational queries (hiwaifu, hi waifu, app, login, website) 0 CTR; year + app/login/web intent + FAQ coverage",
+    "baseline": {
+      "position": 6.2,
+      "impressions": 2300,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC 2026-10 (hiwaifu brand queries)"
+    }
+  },
+  {
+    "id": "23413e4d-a004-46c8-b6a5-fcd0dac90bc0",
+    "slug": "/de/power-local-llm/hiwaifu-review",
+    "date": "2026-10-18T18:14:37.740Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "HiWaifu Rezension: KI-Charakter-Chat-App fürs iPhone",
+        "new": "HiWaifu App Rezension 2026: iPhone, Preise, Datenschutz"
+      },
+      {
+        "field": "metaDescription",
+        "old": "HiWaifu Rezension: KI-Charakter-Chat fürs iPhone mit Langzeitgedächtnis und Lorebooks. Version 3.10.1, Preise, 18+, Datenschutz, Alternativen.",
+        "new": "HiWaifu (Hi Waifu) ist eine Freemium-KI-Charakter-Chat-App ab 18 für iPhone und iPad. Version 3.10.1: Login, Web-Zugang, Preise, Datenschutz, Alternativen."
+      }
+    ],
+    "reason": "geo-meta-optimizer: brand/navigational queries (hiwaifu, hi waifu, app, login, website) 0 CTR; year + app/login/web intent + FAQ coverage",
+    "baseline": {
+      "position": 6.2,
+      "impressions": 2300,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC 2026-10 (hiwaifu brand queries)"
+    }
+  },
+  {
+    "id": "eef87c53-87fb-4f98-8c20-2c3e77bc7e78",
+    "slug": "/fr/power-local-llm/hiwaifu-review",
+    "date": "2026-10-18T18:14:37.842Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Avis HiWaifu : appli de chat avec personnages IA iPhone",
+        "new": "Avis HiWaifu 2026 : appli iPhone, prix, confidentialité"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Avis HiWaifu : chat de personnages IA sur iPhone, mémoire longue, lorebooks. Version 3.10.1, prix, âge 18+, confidentialité et alternatives locales.",
+        "new": "HiWaifu (Hi Waifu) : appli freemium 18+ de chat avec personnages IA sur iPhone. Version 3.10.1 : connexion, accès web, prix, confidentialité, alternatives."
+      }
+    ],
+    "reason": "geo-meta-optimizer: brand/navigational queries (hiwaifu, hi waifu, app, login, website) 0 CTR; year + app/login/web intent + FAQ coverage",
+    "baseline": {
+      "position": 6.2,
+      "impressions": 2300,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC 2026-10 (hiwaifu brand queries)"
+    }
+  },
+  {
+    "id": "358fc45b-7989-4db7-8d15-fbfc9a7e7347",
+    "slug": "/ja/power-local-llm/hiwaifu-review",
+    "date": "2026-10-18T18:14:37.941Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "HiWaifuレビュー:iPhone向けAIキャラチャットアプリ",
+        "new": "HiWaifuレビュー2026:iPhone版の料金と個人情報"
+      },
+      {
+        "field": "metaDescription",
+        "old": "HiWaifuレビュー:長期記憶・ロアブック・グループチャット対応のiPhone/iPad向けAIキャラチャット。バージョン3.10.1、料金、18歳以上、プライバシー、制約、ローカル代替を解説。",
+        "new": "HiWaifu(Hi Waifu)はiPhone/iPad向け18歳以上のフリーミアムAIキャラチャットアプリ。バージョン3.10.1のログイン、ウェブ版、料金、プライバシー、ローカル代替を解説。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: brand/navigational queries (hiwaifu, hi waifu, app, login, website) 0 CTR; year + app/login/web intent + FAQ coverage",
+    "baseline": {
+      "position": 6.2,
+      "impressions": 2300,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC 2026-10 (hiwaifu brand queries)"
+    }
+  },
+  {
+    "id": "86d7af87-cade-4f6e-b562-652d85a7c47f",
+    "slug": "/zh/power-local-llm/hiwaifu-review",
+    "date": "2026-10-18T18:14:38.040Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "HiWaifu评测：iPhone和iPad上的AI角色聊天应用",
+        "new": "HiWaifu评测2026：iPhone应用、定价与隐私"
+      },
+      {
+        "field": "metaDescription",
+        "old": "HiWaifu评测：支持长期记忆、Lorebook和群聊的iPhone/iPad AI角色聊天应用。版本3.10.1、定价、18+分级、隐私声明、局限与本地替代方案。",
+        "new": "HiWaifu（Hi Waifu）是面向iPhone/iPad的18+免费增值AI角色聊天应用。版本3.10.1：登录与网页版、定价、隐私声明、本地替代方案。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: brand/navigational queries (hiwaifu, hi waifu, app, login, website) 0 CTR; year + app/login/web intent + FAQ coverage",
+    "baseline": {
+      "position": 6.2,
+      "impressions": 2300,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC 2026-10 (hiwaifu brand queries)"
+    }
+  },
+  {
+    "id": "293e2274-79e2-4d1c-82a1-c40b470343b7",
+    "slug": "/es/power-local-llm/hiwaifu-review",
+    "date": "2026-10-18T18:14:38.139Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Reseña de HiWaifu: app de chat con personajes IA",
+        "new": "Reseña de HiWaifu 2026: app iPhone, precios, privacidad"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Reseña de HiWaifu: chat de personajes con IA en iPhone, memoria a largo plazo y lorebooks. Versión 3.10.1, precios, 18+, privacidad y alternativas locales.",
+        "new": "HiWaifu (Hi Waifu) es una app freemium 18+ de chat con personajes de IA para iPhone. Versión 3.10.1: acceso, versión web, precios, privacidad y alternativas."
+      }
+    ],
+    "reason": "geo-meta-optimizer: brand/navigational queries (hiwaifu, hi waifu, app, login, website) 0 CTR; year + app/login/web intent + FAQ coverage",
+    "baseline": {
+      "position": 6.2,
+      "impressions": 2300,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC 2026-10 (hiwaifu brand queries)"
+    }
+  },
+  {
+    "id": "e3d360f0-7471-4d8b-b9d2-a1a04293dd95",
+    "slug": "/pt/power-local-llm/hiwaifu-review",
+    "date": "2026-10-18T18:14:38.237Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Análise do HiWaifu: app de chat com personagens IA",
+        "new": "Análise do HiWaifu 2026: app iPhone, preços, privacidade"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Análise do HiWaifu: chat de personagens com IA no iPhone, memória de longo prazo e lorebooks. Versão 3.10.1, preços, 18+, privacidade, alternativas locais.",
+        "new": "HiWaifu (Hi Waifu) é um app freemium 18+ de chat com personagens de IA para iPhone. Versão 3.10.1: login, versão web, preços, privacidade, alternativas."
+      }
+    ],
+    "reason": "geo-meta-optimizer: brand/navigational queries (hiwaifu, hi waifu, app, login, website) 0 CTR; year + app/login/web intent + FAQ coverage",
+    "baseline": {
+      "position": 6.2,
+      "impressions": 2300,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC 2026-10 (hiwaifu brand queries)"
+    }
+  },
+  {
+    "id": "6c7e15e8-9b98-468c-85c7-edc995ce789d",
+    "slug": "/ar/power-local-llm/hiwaifu-review",
+    "date": "2026-10-18T18:14:38.335Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة HiWaifu: دردشة شخصيات بالذكاء الاصطناعي للآيفون",
+        "new": "مراجعة HiWaifu 2026: تطبيق آيفون والأسعار والخصوصية"
+      },
+      {
+        "field": "metaDescription",
+        "old": "مراجعة HiWaifu: دردشة شخصيات بالذكاء الاصطناعي للآيفون مع ذاكرة طويلة المدى وLorebook. الإصدار 3.10.1 والأسعار وتصنيف +18 والخصوصية والبدائل المحلية.",
+        "new": "HiWaifu (Hi Waifu) تطبيق مجاني مع مشتريات +18 لدردشة الشخصيات بالذكاء الاصطناعي للآيفون. الإصدار 3.10.1: الدخول والنسخة الويب والأسعار والخصوصية والبدائل."
+      }
+    ],
+    "reason": "geo-meta-optimizer: brand/navigational queries (hiwaifu, hi waifu, app, login, website) 0 CTR; year + app/login/web intent + FAQ coverage",
+    "baseline": {
+      "position": 6.2,
+      "impressions": 2300,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC 2026-10 (hiwaifu brand queries)"
+    }
+  },
+  {
+    "id": "1d418c8f-e6a1-4128-9167-0d39718b3d9a",
+    "slug": "/ko/power-local-llm/hiwaifu-review",
+    "date": "2026-10-18T18:14:38.432Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "HiWaifu 리뷰: 아이폰·아이패드 AI 캐릭터 채팅 앱",
+        "new": "HiWaifu 리뷰 2026: 아이폰 앱 가격·개인정보"
+      },
+      {
+        "field": "metaDescription",
+        "old": "HiWaifu 리뷰: 장기 기억·로어북·그룹 채팅을 지원하는 아이폰/아이패드 AI 캐릭터 채팅 앱. 버전 3.10.1, 가격, 18세 이상 등급, 개인정보, 한계, 로컬 대안을 다룹니다.",
+        "new": "HiWaifu(Hi Waifu)는 아이폰/아이패드용 18세 이상 부분 유료 AI 캐릭터 채팅 앱. 버전 3.10.1의 로그인, 웹 버전, 가격, 개인정보, 로컬 대안을 다룹니다."
+      }
+    ],
+    "reason": "geo-meta-optimizer: brand/navigational queries (hiwaifu, hi waifu, app, login, website) 0 CTR; year + app/login/web intent + FAQ coverage",
+    "baseline": {
+      "position": 6.2,
+      "impressions": 2300,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC 2026-10 (hiwaifu brand queries)"
+    }
   }
 ]

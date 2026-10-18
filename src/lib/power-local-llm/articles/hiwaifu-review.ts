@@ -9,16 +9,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-en.webp',
     title: 'HiWaifu Review: Cloud AI Character Chat for iPhone and iPad',
-    seoTitle: 'HiWaifu Review: AI Character Chat App for iPhone',
+    seoTitle: 'HiWaifu App Review 2026: iPhone, Pricing, Privacy',
     intro:
       'HiWaifu is a roleplay and chat app for iPhone and iPad, built around a community library of about 10 million AI characters. This review covers what its App Store listing and privacy notice document, what stays unclear, and how it compares with local and self-hosted roleplay tools.',
     metaDescription:
-      'HiWaifu review: iPhone AI character chat with long-term memory and lorebooks. Version 3.10.1, pricing, 18+ rating, privacy and local alternatives.',
+      'HiWaifu (hi waifu) is a freemium 18+ AI character chat app for iPhone and iPad. Version 3.10.1: login, web access, pricing, privacy, local alternatives.',
     twitterDescription:
       'HiWaifu review: a freemium iOS AI character chat app. Version 3.10.1, features, pricing, age rating, privacy notice, unverified points and local roleplay alternatives.',
     audience:
@@ -30,6 +30,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     targetKeywords: [
       'hiwaifu review',
       'hiwaifu app',
+      'hi waifu',
+      'hiwaifu login',
+      'hiwaifu website',
       'hiwaifu ai character chat',
       'hiwaifu ios',
       'ai character chat iphone',
@@ -212,6 +215,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           {
+            q: 'Is there a HiWaifu login, website or web version?',
+            a: 'The App Store listing covers iPhone, iPad, Apple-silicon Macs and visionOS only, and links [hiwaifu.com](https://www.hiwaifu.com) as the developer website. Our request to that site hit a bot check, so we could not confirm a browser version or a login page. The privacy notice mentions account data and social-login data, so the app apparently works with an account.',
+          },
+          {
+            q: 'Is "Hi Waifu" the same app as HiWaifu?',
+            a: 'The App Store listing spells the name as one word, "HiWaifu: AI Character Chat", with the ID 6447806780. If you searched for "Hi Waifu" as two words, check that the ID in this review\'s link matches.',
+          },
+          {
             q: 'Does HiWaifu run on Mac, Apple Vision or Android?',
             a: 'The listing shows Apple-silicon Macs and visionOS 1.0 or later, with a note that the Mac version is not verified for macOS. We did not verify an Android app.',
           },
@@ -256,16 +267,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-de.webp',
     title: 'HiWaifu Rezension: KI-Charakter-Chat aus der Cloud für iPhone und iPad',
-    seoTitle: 'HiWaifu Rezension: KI-Charakter-Chat-App fürs iPhone',
+    seoTitle: 'HiWaifu App Rezension 2026: iPhone, Preise, Datenschutz',
     intro:
       'HiWaifu ist eine iPhone- und iPad-App für Rollenspiele und Chats mit KI-Charakteren, aufgebaut um eine Community-Bibliothek mit rund 10 Millionen Charakteren. Diese Rezension zeigt, was App-Store-Eintrag und Datenschutzerklärung belegen, was offen bleibt und wie die App im Vergleich zu lokalen und selbst gehosteten Rollenspiel-Tools abschneidet.',
     metaDescription:
-      'HiWaifu Rezension: KI-Charakter-Chat fürs iPhone mit Langzeitgedächtnis und Lorebooks. Version 3.10.1, Preise, 18+, Datenschutz, Alternativen.',
+      'HiWaifu (Hi Waifu) ist eine Freemium-KI-Charakter-Chat-App ab 18 für iPhone und iPad. Version 3.10.1: Login, Web-Zugang, Preise, Datenschutz, Alternativen.',
     twitterDescription:
       'HiWaifu Rezension: eine Freemium-KI-Charakter-Chat-App für iOS. Version 3.10.1, Funktionen, Preise, Altersfreigabe, Datenschutz, ungeprüfte Punkte und lokale Rollenspiel-Alternativen.',
     audience:
@@ -459,6 +470,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           {
+            q: 'Gibt es ein HiWaifu-Login, eine Website oder eine Web-Version?',
+            a: 'Der App-Store-Eintrag nennt nur iPhone, iPad, Macs mit Apple-Chip und visionOS und verlinkt [hiwaifu.com](https://www.hiwaifu.com) als Entwickler-Website. Unsere Anfrage an diese Seite landete bei einer Bot-Prüfung, daher konnten wir weder eine Browser-Version noch eine Login-Seite bestätigen. Die Datenschutzerklärung erwähnt Kontodaten und Daten aus Social-Logins, die App arbeitet also offenbar mit einem Konto.',
+          },
+          {
+            q: 'Ist „Hi Waifu“ dieselbe App wie HiWaifu?',
+            a: 'Der App-Store-Eintrag schreibt den Namen zusammen, „HiWaifu: AI Character Chat“, mit der ID 6447806780. Wer „Hi Waifu“ getrennt gesucht hat, sollte prüfen, ob die ID im Link dieser Rezension übereinstimmt.',
+          },
+          {
             q: 'Läuft HiWaifu auf Mac, Apple Vision oder Android?',
             a: 'Der Eintrag nennt Macs mit Apple-Chip und visionOS 1.0 oder neuer, mit dem Hinweis, dass die Mac-Version nicht für macOS geprüft ist. Eine Android-App haben wir nicht verifiziert.',
           },
@@ -503,16 +522,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-fr.webp',
     title: 'Avis HiWaifu : chat avec personnages IA dans le cloud pour iPhone et iPad',
-    seoTitle: 'Avis HiWaifu : appli de chat avec personnages IA iPhone',
+    seoTitle: 'Avis HiWaifu 2026 : appli iPhone, prix, confidentialité',
     intro:
       'HiWaifu est une application iPhone et iPad de jeu de rôle et de discussion avec des personnages IA, construite autour d\'une bibliothèque communautaire d\'environ 10 millions de personnages. Cet avis couvre ce que la fiche App Store et la politique de confidentialité documentent, ce qui reste flou et comment l\'appli se compare aux outils de jeu de rôle locaux et auto-hébergés.',
     metaDescription:
-      'Avis HiWaifu : chat de personnages IA sur iPhone, mémoire longue, lorebooks. Version 3.10.1, prix, âge 18+, confidentialité et alternatives locales.',
+      'HiWaifu (Hi Waifu) : appli freemium 18+ de chat avec personnages IA sur iPhone. Version 3.10.1 : connexion, accès web, prix, confidentialité, alternatives.',
     twitterDescription:
       'Avis HiWaifu : une appli iOS freemium de chat avec personnages IA. Version 3.10.1, fonctions, prix, âge minimal, confidentialité, points non vérifiés et alternatives locales de jeu de rôle.',
     audience:
@@ -706,6 +725,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           {
+            q: 'Existe-t-il une connexion, un site web ou une version web de HiWaifu ?',
+            a: 'La fiche App Store ne couvre que l\'iPhone, l\'iPad, les Mac Apple silicon et visionOS, et renvoie vers [hiwaifu.com](https://www.hiwaifu.com) comme site du développeur. Notre requête vers ce site a rencontré une vérification anti-bot : nous n\'avons donc pu confirmer ni version navigateur ni page de connexion. La politique de confidentialité mentionne des données de compte et de connexion sociale, l\'appli fonctionne donc apparemment avec un compte.',
+          },
+          {
+            q: '« Hi Waifu » est-il la même appli que HiWaifu ?',
+            a: 'La fiche App Store écrit le nom en un mot, « HiWaifu : AI Character Chat », avec l\'identifiant 6447806780. Si vous avez cherché « Hi Waifu » en deux mots, vérifiez que l\'identifiant du lien de cet avis correspond.',
+          },
+          {
             q: 'HiWaifu fonctionne-t-elle sur Mac, Apple Vision ou Android ?',
             a: 'La fiche mentionne les Mac à puce Apple et visionOS 1.0 ou ultérieur, avec une note indiquant que la version Mac n\'est pas vérifiée pour macOS. Nous n\'avons pas vérifié d\'appli Android.',
           },
@@ -750,16 +777,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-ja.webp',
     title: 'HiWaifuレビュー:iPhoneとiPad向けクラウド型AIキャラクターチャット',
-    seoTitle: 'HiWaifuレビュー:iPhone向けAIキャラチャットアプリ',
+    seoTitle: 'HiWaifuレビュー2026:iPhone版の料金と個人情報',
     intro:
       'HiWaifuは、約1,000万体のコミュニティ製キャラクターを軸にしたiPhone・iPad向けのAIキャラクターチャット／ロールプレイアプリです。このレビューでは、App Storeの掲載情報とプライバシー通知から確認できること、不明な点、ローカル／セルフホスト型ロールプレイツールとの違いを整理します。',
     metaDescription:
-      'HiWaifuレビュー:長期記憶・ロアブック・グループチャット対応のiPhone/iPad向けAIキャラチャット。バージョン3.10.1、料金、18歳以上、プライバシー、制約、ローカル代替を解説。',
+      'HiWaifu(Hi Waifu)はiPhone/iPad向け18歳以上のフリーミアムAIキャラチャットアプリ。バージョン3.10.1のログイン、ウェブ版、料金、プライバシー、ローカル代替を解説。',
     twitterDescription:
       'HiWaifuレビュー:フリーミアムのiOS向けAIキャラクターチャットアプリ。バージョン3.10.1、機能、料金、年齢区分、プライバシー、未確認点、ローカル代替を紹介。',
     audience:
@@ -953,6 +980,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           {
+            q: 'HiWaifuにログインやウェブサイト、ブラウザ版はありますか?',
+            a: 'App Storeの掲載情報はiPhone、iPad、Apple silicon搭載Mac、visionOSのみで、開発元サイトとして[hiwaifu.com](https://www.hiwaifu.com)がリンクされています。このサイトへのリクエストはボット確認で止まったため、ブラウザ版やログインページは確認できていません。プライバシー通知にはアカウント情報とソーシャルログイン情報が記載されており、アカウントでサインインするアプリと考えられます。',
+          },
+          {
+            q: '「Hi Waifu」とHiWaifuは同じアプリですか?',
+            a: 'App Storeの掲載名はスペースなしの「HiWaifu: AI Character Chat」で、IDは6447806780です。「Hi Waifu」と分けて検索した場合は、本レビューのリンク先のIDが一致するか確認してください。',
+          },
+          {
             q: 'HiWaifuはMac、Apple Vision、Androidで動きますか?',
             a: '掲載情報にはAppleシリコン搭載MacとvisionOS 1.0以降が記載され、Mac版はmacOS向けに検証されていないという注記があります。Androidアプリは確認できていません。',
           },
@@ -997,16 +1032,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-zh.webp',
     title: 'HiWaifu评测：适用于iPhone和iPad的云端AI角色聊天',
-    seoTitle: 'HiWaifu评测：iPhone和iPad上的AI角色聊天应用',
+    seoTitle: 'HiWaifu评测2026：iPhone应用、定价与隐私',
     intro:
       'HiWaifu是一款面向iPhone和iPad的AI角色聊天与角色扮演应用，围绕约1000万个社区创建的角色构建。本评测说明其App Store页面和隐私声明能证实什么、哪些仍不清楚，以及它与本地和自托管角色扮演工具的区别。',
     metaDescription:
-      'HiWaifu评测：支持长期记忆、Lorebook和群聊的iPhone/iPad AI角色聊天应用。版本3.10.1、定价、18+分级、隐私声明、局限与本地替代方案。',
+      'HiWaifu（Hi Waifu）是面向iPhone/iPad的18+免费增值AI角色聊天应用。版本3.10.1：登录与网页版、定价、隐私声明、本地替代方案。',
     twitterDescription:
       'HiWaifu评测：免费增值的iOS AI角色聊天应用。版本3.10.1、功能、定价、年龄分级、隐私声明、未核实事项与本地角色扮演替代方案。',
     audience:
@@ -1200,6 +1235,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           {
+            q: 'HiWaifu有登录页面、网站或网页版吗？',
+            a: 'App Store页面仅列出iPhone、iPad、Apple silicon Mac和visionOS，并把[hiwaifu.com](https://www.hiwaifu.com)作为开发者网站链接。我们对该网站的请求遇到了机器人验证，因此无法确认是否有浏览器版或登录页面。隐私声明提到账号数据和社交登录数据，所以该应用似乎使用账号登录。',
+          },
+          {
+            q: '“Hi Waifu”和HiWaifu是同一个应用吗？',
+            a: 'App Store页面把名称写作一个词“HiWaifu: AI Character Chat”，ID为6447806780。如果你把“Hi Waifu”分开搜索，请确认本评测链接中的ID与之一致。',
+          },
+          {
             q: 'HiWaifu能在Mac、Apple Vision或Android上运行吗？',
             a: '页面列出搭载Apple芯片的Mac和visionOS 1.0或更高版本，并注明Mac版本未针对macOS验证。我们未核实Android应用。',
           },
@@ -1244,16 +1287,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-es.webp',
     title: 'Reseña de HiWaifu: chat de personajes con IA en la nube para iPhone y iPad',
-    seoTitle: 'Reseña de HiWaifu: app de chat con personajes IA',
+    seoTitle: 'Reseña de HiWaifu 2026: app iPhone, precios, privacidad',
     intro:
       'HiWaifu es una app para iPhone y iPad de rol y chat con personajes de IA, construida en torno a una biblioteca comunitaria de unos 10 millones de personajes. Esta reseña recoge lo que documentan su ficha de la App Store y su aviso de privacidad, lo que sigue sin estar claro y cómo se compara con las herramientas de rol locales y autoalojadas.',
     metaDescription:
-      'Reseña de HiWaifu: chat de personajes con IA en iPhone, memoria a largo plazo y lorebooks. Versión 3.10.1, precios, 18+, privacidad y alternativas locales.',
+      'HiWaifu (Hi Waifu) es una app freemium 18+ de chat con personajes de IA para iPhone. Versión 3.10.1: acceso, versión web, precios, privacidad y alternativas.',
     twitterDescription:
       'Reseña de HiWaifu: app iOS freemium de chat con personajes de IA. Versión 3.10.1, funciones, precios, edad mínima, privacidad, puntos sin verificar y alternativas locales de rol.',
     audience:
@@ -1447,6 +1490,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           {
+            q: '¿Hay inicio de sesión, sitio web o versión web de HiWaifu?',
+            a: 'La ficha de App Store solo cubre iPhone, iPad, Mac con Apple silicon y visionOS, y enlaza [hiwaifu.com](https://www.hiwaifu.com) como sitio del desarrollador. Nuestra solicitud a ese sitio se topó con una verificación antibots, así que no pudimos confirmar una versión de navegador ni una página de acceso. El aviso de privacidad menciona datos de cuenta y de inicio de sesión social, por lo que la app parece funcionar con una cuenta.',
+          },
+          {
+            q: '¿«Hi Waifu» es la misma app que HiWaifu?',
+            a: 'La ficha de App Store escribe el nombre en una palabra, «HiWaifu: AI Character Chat», con el ID 6447806780. Si buscaste «Hi Waifu» por separado, comprueba que el ID del enlace de esta reseña coincida.',
+          },
+          {
             q: '¿Funciona HiWaifu en Mac, Apple Vision o Android?',
             a: 'La ficha muestra Mac con chip Apple y visionOS 1.0 o posterior, con una nota de que la versión para Mac no está verificada para macOS. No verificamos ninguna app para Android.',
           },
@@ -1491,16 +1542,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-pt.webp',
     title: 'Análise do HiWaifu: chat de personagens com IA na nuvem para iPhone e iPad',
-    seoTitle: 'Análise do HiWaifu: app de chat com personagens IA',
+    seoTitle: 'Análise do HiWaifu 2026: app iPhone, preços, privacidade',
     intro:
       'O HiWaifu é um app para iPhone e iPad de roleplay e chat com personagens de IA, construído em torno de uma biblioteca da comunidade com cerca de 10 milhões de personagens. Esta análise mostra o que a página da App Store e o aviso de privacidade documentam, o que continua incerto e como o app se compara a ferramentas de roleplay locais e auto-hospedadas.',
     metaDescription:
-      'Análise do HiWaifu: chat de personagens com IA no iPhone, memória de longo prazo e lorebooks. Versão 3.10.1, preços, 18+, privacidade, alternativas locais.',
+      'HiWaifu (Hi Waifu) é um app freemium 18+ de chat com personagens de IA para iPhone. Versão 3.10.1: login, versão web, preços, privacidade, alternativas.',
     twitterDescription:
       'Análise do HiWaifu: app iOS freemium de chat com personagens de IA. Versão 3.10.1, recursos, preços, faixa etária, privacidade, pontos não verificados e alternativas locais de roleplay.',
     audience:
@@ -1694,6 +1745,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           {
+            q: 'Existe login, site ou versão web do HiWaifu?',
+            a: 'A página da App Store cobre apenas iPhone, iPad, Macs com Apple silicon e visionOS, e liga [hiwaifu.com](https://www.hiwaifu.com) como site do desenvolvedor. Nossa requisição a esse site caiu numa verificação antibot, então não foi possível confirmar uma versão de navegador nem uma página de login. O aviso de privacidade menciona dados de conta e de login social, e o app parece funcionar com uma conta.',
+          },
+          {
+            q: '«Hi Waifu» é o mesmo app que HiWaifu?',
+            a: 'A página da App Store escreve o nome numa só palavra, «HiWaifu: AI Character Chat», com o ID 6447806780. Se você pesquisou «Hi Waifu» separado, confira se o ID do link desta análise é o mesmo.',
+          },
+          {
             q: 'O HiWaifu funciona em Mac, Apple Vision ou Android?',
             a: 'A página mostra Macs com chip Apple e visionOS 1.0 ou posterior, com a observação de que a versão para Mac não foi verificada para macOS. Não verificamos um app para Android.',
           },
@@ -1738,16 +1797,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-ar.webp',
     title: 'مراجعة HiWaifu: دردشة شخصيات بالذكاء الاصطناعي سحابية للآيفون والآيباد',
-    seoTitle: 'مراجعة HiWaifu: دردشة شخصيات بالذكاء الاصطناعي للآيفون',
+    seoTitle: 'مراجعة HiWaifu 2026: تطبيق آيفون والأسعار والخصوصية',
     intro:
       'HiWaifu تطبيق للآيفون والآيباد للعب الأدوار والدردشة مع شخصيات الذكاء الاصطناعي، مبني حول مكتبة مجتمعية تضم نحو 10 ملايين شخصية. تعرض هذه المراجعة ما توثقه صفحة App Store وإشعار الخصوصية، وما يبقى غير واضح، وكيف يقارن التطبيق بأدوات لعب الأدوار المحلية والمستضافة ذاتيًا.',
     metaDescription:
-      'مراجعة HiWaifu: دردشة شخصيات بالذكاء الاصطناعي للآيفون مع ذاكرة طويلة المدى وLorebook. الإصدار 3.10.1 والأسعار وتصنيف +18 والخصوصية والبدائل المحلية.',
+      'HiWaifu (Hi Waifu) تطبيق مجاني مع مشتريات +18 لدردشة الشخصيات بالذكاء الاصطناعي للآيفون. الإصدار 3.10.1: الدخول والنسخة الويب والأسعار والخصوصية والبدائل.',
     twitterDescription:
       'مراجعة HiWaifu: تطبيق iOS مجاني مع مشتريات لدردشة الشخصيات بالذكاء الاصطناعي. الإصدار 3.10.1 والميزات والأسعار والفئة العمرية والخصوصية والنقاط غير المؤكدة وبدائل محلية.',
     audience:
@@ -1941,6 +2000,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           {
+            q: 'هل يوجد تسجيل دخول أو موقع أو نسخة ويب لتطبيق HiWaifu؟',
+            a: 'تغطي صفحة التطبيق في App Store الآيفون والآيباد وأجهزة ماك بمعالج Apple silicon وvisionOS فقط، وتربط بـ [hiwaifu.com](https://www.hiwaifu.com) كموقع للمطوّر. اصطدم طلبنا لهذا الموقع بفحص ضد الروبوتات، لذلك لم نتمكن من تأكيد وجود نسخة متصفح أو صفحة تسجيل دخول. يذكر إشعار الخصوصية بيانات الحساب وبيانات تسجيل الدخول عبر وسائل التواصل، لذا يبدو أن التطبيق يعمل بحساب.',
+          },
+          {
+            q: 'هل «Hi Waifu» هو نفسه تطبيق HiWaifu؟',
+            a: 'تكتب صفحة App Store الاسم ككلمة واحدة «HiWaifu: AI Character Chat» بالمعرّف 6447806780. إذا بحثت عن «Hi Waifu» بكلمتين، فتأكد من تطابق المعرّف في رابط هذه المراجعة.',
+          },
+          {
             q: 'هل يعمل HiWaifu على Mac أو Apple Vision أو Android؟',
             a: 'تعرض الصفحة أجهزة Mac بمعالج Apple وvisionOS 1.0 أو أحدث، مع ملاحظة أن نسخة Mac لم يُتحقق منها لنظام macOS. لم نتحقق من وجود تطبيق Android.',
           },
@@ -1985,16 +2052,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     next_refresh_due: '2027-04-17',
     theme: 'Creative & Roleplay',
     heroImage: '/images/hiwaifu-review-hero-ko.webp',
     title: 'HiWaifu 리뷰: 아이폰·아이패드용 클라우드 AI 캐릭터 채팅',
-    seoTitle: 'HiWaifu 리뷰: 아이폰·아이패드 AI 캐릭터 채팅 앱',
+    seoTitle: 'HiWaifu 리뷰 2026: 아이폰 앱 가격·개인정보',
     intro:
       'HiWaifu는 약 1,000만 개의 커뮤니티 제작 캐릭터를 중심으로 만든 아이폰·아이패드용 AI 캐릭터 채팅 및 롤플레이 앱입니다. 이 리뷰는 App Store 정보와 개인정보 처리 안내가 입증하는 내용, 불분명한 부분, 로컬 및 자체 호스팅 롤플레이 도구와의 차이를 정리합니다.',
     metaDescription:
-      'HiWaifu 리뷰: 장기 기억·로어북·그룹 채팅을 지원하는 아이폰/아이패드 AI 캐릭터 채팅 앱. 버전 3.10.1, 가격, 18세 이상 등급, 개인정보, 한계, 로컬 대안을 다룹니다.',
+      'HiWaifu(Hi Waifu)는 아이폰/아이패드용 18세 이상 부분 유료 AI 캐릭터 채팅 앱. 버전 3.10.1의 로그인, 웹 버전, 가격, 개인정보, 로컬 대안을 다룹니다.',
     twitterDescription:
       'HiWaifu 리뷰: 부분 유료 iOS AI 캐릭터 채팅 앱. 버전 3.10.1, 기능, 가격, 연령 등급, 개인정보, 미확인 사항, 로컬 롤플레이 대안.',
     audience:
@@ -2187,6 +2254,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
+          {
+            q: 'HiWaifu 로그인, 웹사이트, 웹 버전이 있나요?',
+            a: 'App Store 페이지는 아이폰, 아이패드, Apple silicon 맥, visionOS만 다루며 개발자 웹사이트로 [hiwaifu.com](https://www.hiwaifu.com)을 링크합니다. 이 사이트에 보낸 요청은 봇 확인에 막혀 브라우저 버전이나 로그인 페이지는 확인하지 못했습니다. 개인정보 처리방침에 계정 정보와 소셜 로그인 정보가 언급되어 있어 계정으로 로그인하는 앱으로 보입니다.',
+          },
+          {
+            q: '"Hi Waifu"와 HiWaifu는 같은 앱인가요?',
+            a: 'App Store 페이지는 이름을 붙여 쓴 "HiWaifu: AI Character Chat"이며 ID는 6447806780입니다. "Hi Waifu"로 띄어 검색했다면 이 리뷰 링크의 ID가 일치하는지 확인하세요.',
+          },
           {
             q: 'HiWaifu는 Mac, Apple Vision, Android에서 실행되나요?',
             a: '정보에는 Apple 실리콘 Mac과 visionOS 1.0 이상이 표시되어 있으며, Mac 버전은 macOS용으로 검증되지 않았다는 안내가 있습니다. Android 앱은 확인하지 못했습니다.',
