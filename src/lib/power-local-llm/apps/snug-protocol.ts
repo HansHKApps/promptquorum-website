@@ -12,7 +12,7 @@ import type { ToolRecord } from './types'
 export const app: ToolRecord = {
   slug: 'snug-protocol',
   name: 'Snug Protocol',
-  categories: ['emerging-protocols', 'personal-assistants'],
+  categories: ['emerging-protocols'],
   interfaces: ['desktop', 'web', 'library'],
   locality: 'hybrid', // host can use local inference (Ollama / OpenAI-compatible endpoints) or hosted models, which see what the app sends them
   platforms: ['mac', 'web'], // macOS desktop reference app + browser Playground
