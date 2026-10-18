@@ -89,7 +89,7 @@ export const translations = {
     promptEngineeringHubOgDescription: "80 prompt engineering articles for all skill levels — chain-of-thought, RAG, few-shot prompting, team governance, and evaluation for GPT-4o, Claude 4.8 Sonnet, and Gemini 2.5 Pro.",
     promptEngineeringHubTwitterDescription: "80 prompt engineering guides across 9 topics. Start with Fundamentals, master Evaluation & Reliability — for GPT-4o, Claude, and Gemini.",
     localLlmsHubTitle: "Best Local LLMs by VRAM Tier 2026: 12GB, 24GB, 48GB Guide",
-    localLlmsHubDescription: "Best local LLM models ranked by VRAM tier (4GB–48GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials.",
+    localLlmsHubDescription: "Best local AI models (LLMs) ranked by VRAM tier (4GB–48GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials.",
     enterpriseAiHubTitle: "Enterprise AI: Build, Buy, Govern",
     enterpriseAiHubDescription: "Practical guidance for enterprises deploying AI at scale — building in-house capability, buying vendor tools, and governing AI use across the organization, including shadow AI risk and controls.",
     compareMetaTitle: "PromptQuorum vs. Competitors: Feature Comparison (2026)",

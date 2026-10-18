@@ -27,15 +27,15 @@ const HOME_UI = {
   },
   /** Short punchy tagline under the H1 — carries the directory/guides/comparison identity that used to lead the H1 itself. */
   heroTagline: {
-    en: 'Directory, Guides & Comparison Tools for Local LLMs',
-    de: 'Verzeichnis, Guides & Vergleichstools für lokale LLMs',
+    en: 'Directory, Guides & Comparison Tools for Local AI & LLMs',
+    de: 'Verzeichnis, Guides & Vergleichstools für lokale KI & LLMs',
     fr: 'Annuaire, guides et outils de comparaison pour LLM locaux',
-    ja: 'ローカルLLMのディレクトリ・ガイド・比較ツール',
+    ja: 'ローカルAI・LLMのディレクトリ・ガイド・比較ツール',
     zh: '本地 LLM 目录、指南与比较工具',
     es: 'Directorio, guías y herramientas de comparación de LLM locales',
     pt: 'Diretório, guias e ferramentas de comparação de LLM locais',
     ar: 'دليل وأدلة وأدوات مقارنة لنماذج اللغة المحلية',
-    ko: '로컬 LLM 디렉터리, 가이드 및 비교 도구',
+    ko: '로컬 AI·LLM 디렉터리, 가이드 및 비교 도구',
   },
   /** Small-print aside under the tagline for non-technical readers, added 2026-09-23 alongside the About page's h1PlainExplainer (same idea, worded to fit the homepage's shorter hero). */
   heroPlainExplainer: {
@@ -462,7 +462,7 @@ const HOME_UI = {
   pqBannerChip5: { en: 'Local LLM support', de: "Unterstützung für lokale LLMs", fr: "Prise en charge des LLM locaux", ja: "ローカルLLM対応", zh: "支持本地 LLM", es: "Compatibilidad con LLM locales", pt: "Suporte a LLMs locais", ar: "دعم النماذج المحلية", ko: "로컬 LLM 지원" },
 
   // --- Directory CTA (inside the "Find What You Need" card) ---
-  directoryCtaTitle: { en: 'Largest local LLM app directory outside GitHub with real reviews and hands-on tests', de: "Größtes Verzeichnis für lokale LLM-Apps außerhalb von GitHub mit echten Tests und Praxistests", fr: "Le plus grand annuaire d'applications LLM locales hors GitHub avec de vrais tests et des essais pratiques", ja: "GitHub 以外で最大のローカルLLMアプリディレクトリ（実際のレビューと実機テスト付き）", zh: "GitHub 之外最大的本地 LLM 应用目录，附真实评测和实测", es: "El mayor directorio de apps de LLM locales fuera de GitHub, con reseñas reales y pruebas prácticas", pt: "Maior diretório de apps de LLM locais fora do GitHub, com análises reais e testes práticos", ar: "أكبر دليل لتطبيقات النماذج المحلية خارج GitHub مع مراجعات حقيقية واختبارات عملية", ko: "GitHub 밖에서 가장 큰 로컬 LLM 앱 디렉터리, 실제 리뷰와 직접 사용 테스트 포함" },
+  directoryCtaTitle: { en: 'Largest local AI & LLM app directory outside GitHub with real reviews and hands-on tests', de: "Größtes Verzeichnis für lokale KI- und LLM-Apps außerhalb von GitHub mit echten Tests und Praxistests", fr: "Le plus grand annuaire d'applications LLM locales hors GitHub avec de vrais tests et des essais pratiques", ja: "GitHub 以外で最大のローカルAI・LLMアプリディレクトリ（実際のレビューと実機テスト付き）", zh: "GitHub 之外最大的本地 LLM 应用目录，附真实评测和实测", es: "El mayor directorio de apps de LLM locales fuera de GitHub, con reseñas reales y pruebas prácticas", pt: "Maior diretório de apps de LLM locais fora do GitHub, com análises reais e testes práticos", ar: "أكبر دليل لتطبيقات النماذج المحلية خارج GitHub مع مراجعات حقيقية واختبارات عملية", ko: "GitHub 밖에서 가장 큰 로컬 LLM 앱 디렉터리, 실제 리뷰와 직접 사용 테스트 포함" },
   directoryCtaCount: { en: 'Browse {count} apps →', de: "{count} Apps durchsuchen →", fr: "Parcourir {count} applications →", ja: "{count} 個のアプリを見る →", zh: "浏览 {count} 个应用 →", es: "Explorar {count} apps →", pt: "Explorar {count} apps →", ar: "تصفّح {count} تطبيقًا ←", ko: "앱 {count}개 둘러보기 →" },
 } satisfies Record<string, Dict>
 
