@@ -221,7 +221,7 @@ export default function RootLayout({
                     "9 prompt engineering frameworks: CO-STAR, CRAFT, RISEN, APE, SPECS, TRACE, RTF, Google Prompt, Single Prompt Line",
                     "AI-powered iterative prompt optimization with 8 one-click refinements and full version history",
                     "13 Quorum analysis types: Consensus Summary, Best Answer Selection, Atomic Facts Extraction, Overlap Mapping, and more",
-                    "Local LLM support — fully offline with Ollama, LM Studio, Jan AI, GPT4All",
+                    "Local AI & LLM support — fully offline with Ollama, LM Studio, Jan AI, GPT4All",
                     "BYOM: API keys stored only in browser localStorage, never transmitted to PromptQuorum servers",
                     "Framework Wizard for automatic framework recommendation",
                     "Teaching Mode: explains every optimization change and which principles were applied",

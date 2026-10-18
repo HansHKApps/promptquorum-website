@@ -29,12 +29,12 @@ const HOME_UI = {
   heroTagline: {
     en: 'Directory, Guides & Comparison Tools for Local AI & LLMs',
     de: 'Verzeichnis, Guides & Vergleichstools für lokale KI & LLMs',
-    fr: 'Annuaire, guides et outils de comparaison pour LLM locaux',
+    fr: 'Annuaire, guides et outils de comparaison pour IA locale et LLM',
     ja: 'ローカルAI・LLMのディレクトリ・ガイド・比較ツール',
-    zh: '本地 LLM 目录、指南与比较工具',
-    es: 'Directorio, guías y herramientas de comparación de LLM locales',
-    pt: 'Diretório, guias e ferramentas de comparação de LLM locais',
-    ar: 'دليل وأدلة وأدوات مقارنة لنماذج اللغة المحلية',
+    zh: '本地 AI 与 LLM 目录、指南与比较工具',
+    es: 'Directorio, guías y herramientas de comparación de IA local y LLM',
+    pt: 'Diretório, guias e ferramentas de comparação de IA local e LLMs',
+    ar: 'دليل وأدلة وأدوات مقارنة للذكاء الاصطناعي المحلي ونماذج اللغة',
     ko: '로컬 AI·LLM 디렉터리, 가이드 및 비교 도구',
   },
   /** Small-print aside under the tagline for non-technical readers, added 2026-09-23 alongside the About page's h1PlainExplainer (same idea, worded to fit the homepage's shorter hero). */
@@ -459,10 +459,10 @@ const HOME_UI = {
   pqBannerChip2: { en: 'One prompt to 25+ AI models', de: "Ein Prompt an 25+ KI-Modelle", fr: "Un prompt vers 25+ modèles d’IA", ja: "1つのプロンプトを25以上のAIモデルへ", zh: "一条提示词发送至 25+ 个 AI 模型", es: "Un prompt a más de 25 modelos de IA", pt: "Um prompt para mais de 25 modelos de IA", ar: "موجّه واحد إلى أكثر من 25 نموذج ذكاء اصطناعي", ko: "프롬프트 하나를 25개 이상의 AI 모델로" },
   pqBannerChip3: { en: 'Side-by-side comparison', de: "Direkter Vergleich", fr: "Comparaison côte à côte", ja: "並べて比較", zh: "并排对比", es: "Comparación lado a lado", pt: "Comparação lado a lado", ar: "مقارنة جنبًا إلى جنب", ko: "나란히 비교" },
   pqBannerChip4: { en: 'Consensus scoring', de: "Konsens-Bewertung", fr: "Score de consensus", ja: "コンセンサススコア", zh: "共识评分", es: "Puntuación de consenso", pt: "Pontuação de consenso", ar: "تقييم الإجماع", ko: "합의 점수" },
-  pqBannerChip5: { en: 'Local LLM support', de: "Unterstützung für lokale LLMs", fr: "Prise en charge des LLM locaux", ja: "ローカルLLM対応", zh: "支持本地 LLM", es: "Compatibilidad con LLM locales", pt: "Suporte a LLMs locais", ar: "دعم النماذج المحلية", ko: "로컬 LLM 지원" },
+  pqBannerChip5: { en: 'Local AI & LLM support', de: "Unterstützung für lokale KI & LLMs", fr: "Prise en charge de l'IA locale et des LLM", ja: "ローカルAI・LLM対応", zh: "支持本地 AI 与 LLM", es: "Compatibilidad con IA local y LLM", pt: "Suporte a IA local e LLMs", ar: "دعم الذكاء الاصطناعي المحلي ونماذج LLM", ko: "로컬 AI·LLM 지원" },
 
   // --- Directory CTA (inside the "Find What You Need" card) ---
-  directoryCtaTitle: { en: 'Largest local AI & LLM app directory outside GitHub with real reviews and hands-on tests', de: "Größtes Verzeichnis für lokale KI- und LLM-Apps außerhalb von GitHub mit echten Tests und Praxistests", fr: "Le plus grand annuaire d'applications LLM locales hors GitHub avec de vrais tests et des essais pratiques", ja: "GitHub 以外で最大のローカルAI・LLMアプリディレクトリ（実際のレビューと実機テスト付き）", zh: "GitHub 之外最大的本地 LLM 应用目录，附真实评测和实测", es: "El mayor directorio de apps de LLM locales fuera de GitHub, con reseñas reales y pruebas prácticas", pt: "Maior diretório de apps de LLM locais fora do GitHub, com análises reais e testes práticos", ar: "أكبر دليل لتطبيقات النماذج المحلية خارج GitHub مع مراجعات حقيقية واختبارات عملية", ko: "GitHub 밖에서 가장 큰 로컬 LLM 앱 디렉터리, 실제 리뷰와 직접 사용 테스트 포함" },
+  directoryCtaTitle: { en: 'Largest local AI & LLM app directory outside GitHub with real reviews and hands-on tests', de: "Größtes Verzeichnis für lokale KI- und LLM-Apps außerhalb von GitHub mit echten Tests und Praxistests", fr: "Le plus grand annuaire d'applications d'IA locale et de LLM hors GitHub avec de vrais tests et des essais pratiques", ja: "GitHub 以外で最大のローカルAI・LLMアプリディレクトリ（実際のレビューと実機テスト付き）", zh: "GitHub 之外最大的本地 AI 与 LLM 应用目录，附真实评测和实测", es: "El mayor directorio de apps de IA local y LLM fuera de GitHub, con reseñas reales y pruebas prácticas", pt: "Maior diretório de apps de IA local e LLMs fora do GitHub, com análises reais e testes práticos", ar: "أكبر دليل لتطبيقات الذكاء الاصطناعي المحلي ونماذج LLM خارج GitHub مع مراجعات حقيقية واختبارات عملية", ko: "GitHub 밖에서 가장 큰 로컬 AI·LLM 앱 디렉터리, 실제 리뷰와 직접 사용 테스트 포함" },
   directoryCtaCount: { en: 'Browse {count} apps →', de: "{count} Apps durchsuchen →", fr: "Parcourir {count} applications →", ja: "{count} 個のアプリを見る →", zh: "浏览 {count} 个应用 →", es: "Explorar {count} apps →", pt: "Explorar {count} apps →", ar: "تصفّح {count} تطبيقًا ←", ko: "앱 {count}개 둘러보기 →" },
 } satisfies Record<string, Dict>
 
