@@ -64,6 +64,55 @@
     --cat-at-the-edge: 24 70% 42%;
     --cat-at-the-edge-tint: 24 85% 96%;
     --cat-at-the-edge-edge: 24 60% 78%;
+
+    /* Hub template palette (src/components/hub-template). Solid = tile fill, tint = card fill,
+       ink = text on tint, edge = border on tint. Hex on purpose: values are the approved
+       design colors; keep them as variables so a dark theme can override them later. */
+    --hub-violet: #6750a4;
+    --hub-violet-tint: #eee9f8;
+    --hub-violet-ink: #4f3c8f;
+    --hub-violet-edge: #d9cff0;
+    --hub-azure: #2f6fc4;
+    --hub-azure-tint: #e4eefb;
+    --hub-azure-ink: #1b4f8f;
+    --hub-azure-edge: #c5dbf5;
+    --hub-indigo: #4a5bc4;
+    --hub-indigo-tint: #e8eafb;
+    --hub-indigo-ink: #33408f;
+    --hub-indigo-edge: #cbd0f3;
+    --hub-orchid: #a24bb0;
+    --hub-orchid-tint: #f4e6f7;
+    --hub-orchid-ink: #7a2c85;
+    --hub-orchid-edge: #e8c9ee;
+    --hub-rose: #c13a7a;
+    --hub-rose-tint: #fbe6ef;
+    --hub-rose-ink: #8c1f55;
+    --hub-rose-edge: #f3c7da;
+    /* Per-hub accents (one per content hub) */
+    --hub-orange: #b8431b;
+    --hub-orange-tint: #fbeae4;
+    --hub-orange-ink: #8a2f12;
+    --hub-orange-edge: #eac0b2;
+    --hub-blue: #1f6fbf;
+    --hub-blue-tint: #e6f0fa;
+    --hub-blue-ink: #124a82;
+    --hub-blue-edge: #b4d0eb;
+    --hub-olive: #3f7a12;
+    --hub-olive-tint: #edf3e4;
+    --hub-olive-ink: #2d5a0a;
+    --hub-olive-edge: #c2d5b0;
+    --hub-amber: #9a5b00;
+    --hub-amber-tint: #fbf0dc;
+    --hub-amber-ink: #6b3f00;
+    --hub-amber-edge: #e3cba5;
+    --hub-cyan: #0e7490;
+    --hub-cyan-tint: #e0f2f6;
+    --hub-cyan-ink: #0b5666;
+    --hub-cyan-edge: #acd3dd;
+    /* Status badges */
+    --hub-new-tint: #e3f1d6;
+    --hub-new-ink: #2d5a0a;
+    --hub-new-edge: #b6cba3;
   }
 }
 

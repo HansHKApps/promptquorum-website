@@ -30,6 +30,20 @@ module.exports = {
 					'images-video': { DEFAULT: 'hsl(var(--cat-images-video))', tint: 'hsl(var(--cat-images-video-tint))', edge: 'hsl(var(--cat-images-video-edge))' },
 					'train-operate': { DEFAULT: 'hsl(var(--cat-train-operate))', tint: 'hsl(var(--cat-train-operate-tint))', edge: 'hsl(var(--cat-train-operate-edge))' },
 				},
+				// Hub template palette — tokens live in src/app/globals.css (--hub-*).
+				hub: {
+					violet: { DEFAULT: 'var(--hub-violet)', tint: 'var(--hub-violet-tint)', ink: 'var(--hub-violet-ink)', edge: 'var(--hub-violet-edge)' },
+					azure: { DEFAULT: 'var(--hub-azure)', tint: 'var(--hub-azure-tint)', ink: 'var(--hub-azure-ink)', edge: 'var(--hub-azure-edge)' },
+					indigo: { DEFAULT: 'var(--hub-indigo)', tint: 'var(--hub-indigo-tint)', ink: 'var(--hub-indigo-ink)', edge: 'var(--hub-indigo-edge)' },
+					orchid: { DEFAULT: 'var(--hub-orchid)', tint: 'var(--hub-orchid-tint)', ink: 'var(--hub-orchid-ink)', edge: 'var(--hub-orchid-edge)' },
+					rose: { DEFAULT: 'var(--hub-rose)', tint: 'var(--hub-rose-tint)', ink: 'var(--hub-rose-ink)', edge: 'var(--hub-rose-edge)' },
+					orange: { DEFAULT: 'var(--hub-orange)', tint: 'var(--hub-orange-tint)', ink: 'var(--hub-orange-ink)', edge: 'var(--hub-orange-edge)' },
+					blue: { DEFAULT: 'var(--hub-blue)', tint: 'var(--hub-blue-tint)', ink: 'var(--hub-blue-ink)', edge: 'var(--hub-blue-edge)' },
+					olive: { DEFAULT: 'var(--hub-olive)', tint: 'var(--hub-olive-tint)', ink: 'var(--hub-olive-ink)', edge: 'var(--hub-olive-edge)' },
+					amber: { DEFAULT: 'var(--hub-amber)', tint: 'var(--hub-amber-tint)', ink: 'var(--hub-amber-ink)', edge: 'var(--hub-amber-edge)' },
+					cyan: { DEFAULT: 'var(--hub-cyan)', tint: 'var(--hub-cyan-tint)', ink: 'var(--hub-cyan-ink)', edge: 'var(--hub-cyan-edge)' },
+					new: { tint: 'var(--hub-new-tint)', ink: 'var(--hub-new-ink)', edge: 'var(--hub-new-edge)' },
+				},
 				hero: {
 					from: 'hsl(var(--hero-from))',
 					to: 'hsl(var(--hero-to))',
