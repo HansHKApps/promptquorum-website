@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-en.webp',
     title: 'How to Migrate from a Cloud Smart Home to Local Control (2026)',
@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Add local voice to replace Alexa/Google',
           'Migrate room by room to avoid downtime',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -53,6 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Move to Home Assistant', anchor: 'move-ha' },
       { label: 'Retire Alexa/Google', anchor: 'retire' },
       { label: 'Add Local Voice', anchor: 'local-voice' },
+      { label: 'New Phone', anchor: 'new-phone' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -143,6 +144,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'For the full destination state, see [the complete local smart home guide](/smart-home/local-smart-home-complete-guide).',
         ],
       },
+      newPhone: {
+        id: 'new-phone',
+        title: 'Upgrading the Phone That Runs Your Smart Home',
+        content:
+          '**Your devices pair to your hub, not to your phone, so a new phone does not mean re-pairing everything — you sign the new phone in again and re-grant a few permissions.** The exception is any ecosystem that ties the home to a phone-platform account.',
+        items: [
+          'Zigbee, Z-Wave and Thread devices stay paired to the coordinator or border router on your hub; the phone is only a remote control.',
+          'Home Assistant: install the Companion app on the new phone, sign in with your Home Assistant credentials, choose a device name, and re-grant location and notification permissions — see [Companion app setup](https://companion.home-assistant.io/docs/getting_started/).',
+          'Remove the old phone\'s entry under the Mobile App integration and from your Person entity, otherwise duplicate sensors and location glitches can appear — see [Companion app troubleshooting](https://companion.home-assistant.io/docs/troubleshooting/faqs).',
+          'Apple Home: Matter pairings sync through iCloud Keychain, so sign in with the same Apple Account; Thread accessories still need a home hub such as a HomePod mini or Apple TV — see [Apple: pair and manage Matter accessories](https://support.apple.com/en-us/HT213441).',
+          'Vendor cloud apps: sign in with the same vendor account; the devices belong to the account, not the phone.',
+          'Switching from iPhone to Android is different: the Apple Home app is not available on Android, and moving a Matter device between ecosystems means generating a new pairing code in the current app or removing and re-commissioning it. A hub-based setup like Home Assistant avoids this.',
+          'Keep the old phone until the new one controls everything, and do not factory-reset it before then.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Frequently Asked Questions',
@@ -151,6 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'What can\'t go local?', a: 'Cloud-only devices that depend entirely on a vendor cloud — often some cameras, doorbells, and proprietary ecosystems — generally cannot go local and need replacing with local-capable alternatives such as RTSP cameras paired with Frigate.' },
           { q: 'How long does migration take?', a: 'It varies with the size of your setup, but migrating room by room spreads the work and avoids downtime. Many people move the core hub and a few rooms in a weekend, then replace cloud-only devices gradually over weeks.' },
           { q: 'Do I lose voice control when I migrate?', a: 'No, if you add a local voice assistant before retiring the cloud one. A local stack of Assist, Whisper, and Piper, optionally with a local LLM, replaces Alexa or Google for hands-free control without the cloud.' },
+          { q: 'Do I need to re-pair my smart home devices when I get a new phone?', a: 'Usually not. Devices are paired to your hub or home account, not to the phone, so you install the app on the new phone and sign in again. With Home Assistant you also re-grant location and notification permissions and remove the old phone\'s device entry; switching between iPhone and Android is the case that can require re-commissioning.' },
         ],
       },
       relatedReading: {
@@ -174,7 +191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Smart home migration' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Local control' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -188,6 +205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'What can\'t go local?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud-only devices that depend entirely on a vendor cloud — often some cameras and doorbells — generally need replacing with local-capable alternatives like RTSP cameras with Frigate.' } },
         { '@type': 'Question', name: 'How long does migration take?', acceptedAnswer: { '@type': 'Answer', text: 'It varies with setup size, but migrating room by room avoids downtime. Many move the core hub and a few rooms in a weekend, then replace cloud-only devices over weeks.' } },
         { '@type': 'Question', name: 'Do I lose voice control when I migrate?', acceptedAnswer: { '@type': 'Answer', text: 'No, if you add a local voice assistant before retiring the cloud one. Assist, Whisper, and Piper, optionally with a local LLM, replace Alexa or Google without the cloud.' } },
+        { '@type': 'Question', name: 'Do I need to re-pair my smart home devices when I get a new phone?', acceptedAnswer: { '@type': 'Answer', text: 'Usually not. Devices pair to your hub or home account, not the phone. Install the app, sign in again, re-grant permissions and remove the old phone entry; switching between iPhone and Android can require re-commissioning.' } },
       ],
     },
   },
@@ -195,8 +213,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-ar.webp',
     title: 'كيفية الانتقال من منزل ذكي سحابي إلى التحكم المحلي (⁨2026⁩)',
@@ -232,7 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أضف صوتًا محليًا لاستبدال Alexa/Google',
           'انتقل غرفةً تلو الأخرى لتجنب الانقطاع',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -243,6 +261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'الانتقال إلى Home Assistant', anchor: 'move-ha' },
       { label: 'إيقاف Alexa/Google', anchor: 'retire' },
       { label: 'إضافة صوت محلي', anchor: 'local-voice' },
+      { label: 'هاتف جديد', anchor: 'new-phone' },
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -333,6 +352,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'للحالة النهائية الكاملة، راجع [الدليل الشامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide).',
         ],
       },
+      newPhone: {
+        id: 'new-phone',
+        title: 'ترقية الهاتف الذي يدير منزلك الذكي',
+        content:
+          '**أجهزتك مقترنة بالمحور (Hub) وليس بهاتفك، لذا لا يعني الهاتف الجديد إعادة اقتران كل شيء — تسجّل الدخول من جديد على الهاتف الجديد وتمنح بعض الأذونات مرة أخرى.** الاستثناء هو أي منظومة تربط المنزل بحساب منصة الهاتف.',
+        items: [
+          'تبقى أجهزة Zigbee وZ-Wave وThread مقترنة بالمنسّق (coordinator) أو موجّه الحدود (border router) في المحور؛ والهاتف مجرد جهاز تحكم عن بعد.',
+          'Home Assistant: ثبّت تطبيق Companion على الهاتف الجديد، وسجّل الدخول ببيانات اعتماد Home Assistant، واختر اسمًا للجهاز، وامنح أذونات الموقع والإشعارات من جديد — راجع [إعداد تطبيق Companion](https://companion.home-assistant.io/docs/getting_started/).',
+          'احذف إدخال الهاتف القديم من تكامل Mobile App ومن كيان Person الخاص بك، وإلا فقد تظهر حساسات مكررة وأخطاء في الموقع — راجع [استكشاف أخطاء تطبيق Companion](https://companion.home-assistant.io/docs/troubleshooting/faqs).',
+          'Apple Home: تتم مزامنة اقترانات Matter عبر سلسلة مفاتيح iCloud، لذا سجّل الدخول بحساب Apple نفسه؛ وما زالت ملحقات Thread تحتاج إلى محور منزلي مثل HomePod mini أو Apple TV — راجع [Apple: اقتران ملحقات Matter وإدارتها](https://support.apple.com/en-us/HT213441).',
+          'تطبيقات سحابة الشركات المصنّعة: سجّل الدخول بحساب الشركة نفسه؛ فالأجهزة تتبع الحساب وليس الهاتف.',
+          'الانتقال من iPhone إلى Android مختلف: تطبيق Apple Home غير متاح على Android، ونقل جهاز Matter إلى منظومة أخرى يعني إنشاء رمز اقتران جديد من التطبيق الحالي أو حذف الجهاز وإعادة تشغيله. ويتجنب إعداد قائم على محور مثل Home Assistant هذه المشكلة.',
+          'احتفظ بالهاتف القديم حتى يتحكم الجديد في كل شيء، ولا تعد ضبط المصنع عليه قبل ذلك.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
@@ -341,6 +375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما الذي لا يمكن أن يصبح محليًا؟', a: 'الأجهزة السحابية فقط التي تعتمد كليًا على سحابة مورِّد — كثيرًا بعض الكاميرات وأجراس الباب والمنظومات المملوكة — عمومًا لا يمكن أن تصبح محلية وتحتاج الاستبدال ببدائل قادرة على العمل محليًا مثل كاميرات RTSP مع Frigate.' },
           { q: 'كم يستغرق الانتقال؟', a: 'يتفاوت بحسب حجم إعدادك، لكن الانتقال غرفةً تلو الأخرى يوزع العمل ويتجنب الانقطاع. كثير من الناس ينقلون المركز الأساسي وبضع غرف في عطلة نهاية أسبوع، ثم يستبدلون الأجهزة السحابية فقط تدريجيًا على مدى أسابيع.' },
           { q: 'هل أفقد التحكم الصوتي عند الانتقال؟', a: 'لا، إذا أضفت مساعدًا صوتيًا محليًا قبل إيقاف السحابي. Assist وWhisper وPiper، اختياريًا مع نموذج لغوي محلي، يحلون محل Alexa أو Google للتحكم دون اليدين بدون السحابة.' },
+          { q: 'هل أحتاج إلى إعادة اقتران أجهزة المنزل الذكي عند تغيير هاتفي؟', a: 'عادةً لا. الأجهزة مقترنة بالمحور أو بحساب المنزل وليس بالهاتف: تثبّت التطبيق على الهاتف الجديد وتسجّل الدخول من جديد. مع Home Assistant تمنح أيضًا أذونات الموقع والإشعارات مرة أخرى وتحذف إدخال الهاتف القديم؛ أما الانتقال بين iPhone وAndroid فقد يتطلب إعادة تشغيل الأجهزة.' },
         ],
       },
       relatedReading: {
@@ -364,7 +399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'الانتقال للمنزل الذكي المحلي' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'التحكم المحلي' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -378,6 +413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'ما الذي لا يمكن أن يصبح محليًا؟', acceptedAnswer: { '@type': 'Answer', text: 'الأجهزة السحابية فقط التي تعتمد كليًا على سحابة مورِّد — كثيرًا بعض الكاميرات وأجراس الباب — عمومًا تحتاج الاستبدال ببدائل محلية مثل كاميرات RTSP مع Frigate.' } },
         { '@type': 'Question', name: 'كم يستغرق الانتقال؟', acceptedAnswer: { '@type': 'Answer', text: 'يتفاوت بحسب حجم الإعداد، لكن الانتقال غرفةً تلو الأخرى يتجنب الانقطاع. كثير ينقلون المركز الأساسي وبضع غرف في عطلة نهاية أسبوع ثم يستبدلون الأجهزة السحابية تدريجيًا.' } },
         { '@type': 'Question', name: 'هل أفقد التحكم الصوتي عند الانتقال؟', acceptedAnswer: { '@type': 'Answer', text: 'لا، إذا أضفت مساعدًا صوتيًا محليًا قبل إيقاف السحابي. Assist وWhisper وPiper، اختياريًا مع نموذج لغوي محلي، يحلون محل Alexa أو Google بدون السحابة.' } },
+        { '@type': 'Question', name: 'هل أحتاج إلى إعادة اقتران أجهزة المنزل الذكي عند تغيير هاتفي؟', acceptedAnswer: { '@type': 'Answer', text: 'عادةً لا. الأجهزة مقترنة بالمحور أو بحساب المنزل وليس بالهاتف. ثبّت التطبيق وسجّل الدخول وامنح الأذونات واحذف الإدخال القديم؛ والانتقال بين iPhone وAndroid قد يتطلب إعادة التشغيل.' } },
       ],
     },
   },
@@ -385,8 +421,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-de.webp',
     title: 'Von einem Cloud-Smart-Home zu lokaler Steuerung migrieren (2026)',
@@ -422,7 +458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Lokale Sprache als Ersatz für Alexa/Google hinzufügen',
           'Raum für Raum migrieren, um Ausfälle zu vermeiden',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -433,6 +469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Zu Home Assistant wechseln', anchor: 'move-ha' },
       { label: 'Alexa/Google außer Dienst stellen', anchor: 'retire' },
       { label: 'Lokale Sprache hinzufügen', anchor: 'local-voice' },
+      { label: 'Neues Smartphone', anchor: 'new-phone' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -523,6 +560,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Für den vollständigen Zielzustand siehe [der komplette Leitfaden zum lokalen Smart Home](/de/smart-home/local-smart-home-complete-guide).',
         ],
       },
+      newPhone: {
+        id: 'new-phone',
+        title: 'Das Smartphone wechseln, das Ihr Smart Home steuert',
+        content:
+          '**Ihre Geräte sind mit Ihrem Hub gekoppelt, nicht mit Ihrem Smartphone – ein neues Smartphone bedeutet also nicht, alles neu zu koppeln: Sie melden sich auf dem neuen Gerät erneut an und erteilen einige Berechtigungen neu.** Die Ausnahme sind Ökosysteme, die das Zuhause an ein Konto der Smartphone-Plattform binden.',
+        items: [
+          'Zigbee-, Z-Wave- und Thread-Geräte bleiben mit dem Koordinator oder Border Router Ihres Hubs gekoppelt; das Smartphone ist nur eine Fernbedienung.',
+          'Home Assistant: Companion-App auf dem neuen Smartphone installieren, mit Ihren Home-Assistant-Zugangsdaten anmelden, einen Gerätenamen wählen und Standort- und Benachrichtigungsberechtigungen neu erteilen – siehe [Einrichtung der Companion-App](https://companion.home-assistant.io/docs/getting_started/).',
+          'Entfernen Sie den Eintrag des alten Smartphones in der Mobile-App-Integration und aus Ihrer Person-Entität, sonst können doppelte Sensoren und Standortfehler auftreten – siehe [Fehlerbehebung der Companion-App](https://companion.home-assistant.io/docs/troubleshooting/faqs).',
+          'Apple Home: Matter-Kopplungen werden über den iCloud-Schlüsselbund synchronisiert, melden Sie sich daher mit demselben Apple-Account an; Thread-Zubehör benötigt weiterhin einen Home-Hub wie HomePod mini oder Apple TV – siehe [Apple: Matter-Zubehör koppeln und verwalten](https://support.apple.com/en-us/HT213441).',
+          'Cloud-Apps der Hersteller: mit demselben Herstellerkonto anmelden; die Geräte gehören zum Konto, nicht zum Smartphone.',
+          'Der Wechsel von iPhone zu Android ist anders: Die Apple-Home-App gibt es nicht für Android, und um ein Matter-Gerät in ein anderes Ökosystem zu verschieben, erzeugen Sie in der aktuellen App einen neuen Kopplungscode oder entfernen das Gerät und nehmen es neu in Betrieb. Ein Hub-basiertes Setup wie Home Assistant vermeidet das.',
+          'Behalten Sie das alte Smartphone, bis das neue alles steuert, und setzen Sie es vorher nicht auf Werkseinstellungen zurück.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
@@ -531,6 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Was kann nicht lokal werden?', a: 'Nur-Cloud-Geräte, die vollständig von einer Hersteller-Cloud abhängen – oft manche Kameras, Türklingeln und proprietäre Ökosysteme – können in der Regel nicht lokal werden und müssen durch lokal-fähige Alternativen ersetzt werden, etwa RTSP-Kameras mit Frigate.' },
           { q: 'Wie lange dauert die Migration?', a: 'Das hängt von der Größe Ihres Setups ab, aber Raum für Raum zu migrieren verteilt die Arbeit und vermeidet Ausfälle. Viele verschieben den Kern-Hub und ein paar Räume an einem Wochenende und ersetzen nur-Cloud-Geräte dann über Wochen schrittweise.' },
           { q: 'Verliere ich die Sprachsteuerung bei der Migration?', a: 'Nein, wenn Sie einen lokalen Sprachassistenten hinzufügen, bevor Sie den Cloud-Assistenten außer Dienst stellen. Ein lokaler Stack aus Assist, Whisper und Piper, optional mit einem lokalen LLM, ersetzt Alexa oder Google für freihändige Steuerung ohne die Cloud.' },
+          { q: 'Muss ich meine Smart-Home-Geräte bei einem neuen Smartphone neu koppeln?', a: 'In der Regel nicht. Die Geräte sind mit Ihrem Hub oder Heimkonto gekoppelt, nicht mit dem Smartphone: Sie installieren die App auf dem neuen Gerät und melden sich erneut an. Bei Home Assistant erteilen Sie außerdem Standort- und Benachrichtigungsberechtigungen neu und entfernen den Geräteeintrag des alten Smartphones; ein Wechsel zwischen iPhone und Android kann eine Neuinbetriebnahme erfordern.' },
         ],
       },
       relatedReading: {
@@ -554,7 +607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Smart-Home-Migration' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Lokale Steuerung' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -568,6 +621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Was kann nicht lokal werden?', acceptedAnswer: { '@type': 'Answer', text: 'Nur-Cloud-Geräte, die vollständig von einer Hersteller-Cloud abhängen – oft manche Kameras und Türklingeln – müssen in der Regel durch lokal-fähige Alternativen wie RTSP-Kameras mit Frigate ersetzt werden.' } },
         { '@type': 'Question', name: 'Wie lange dauert die Migration?', acceptedAnswer: { '@type': 'Answer', text: 'Das hängt von der Setup-Größe ab, aber Raum für Raum zu migrieren vermeidet Ausfälle. Viele verschieben den Kern-Hub und ein paar Räume an einem Wochenende und ersetzen nur-Cloud-Geräte über Wochen.' } },
         { '@type': 'Question', name: 'Verliere ich die Sprachsteuerung bei der Migration?', acceptedAnswer: { '@type': 'Answer', text: 'Nein, wenn Sie einen lokalen Sprachassistenten hinzufügen, bevor Sie den Cloud-Assistenten außer Dienst stellen. Assist, Whisper und Piper, optional mit einem lokalen LLM, ersetzen Alexa oder Google ohne die Cloud.' } },
+        { '@type': 'Question', name: 'Muss ich meine Smart-Home-Geräte bei einem neuen Smartphone neu koppeln?', acceptedAnswer: { '@type': 'Answer', text: 'In der Regel nicht. Geräte sind mit Hub oder Heimkonto gekoppelt, nicht mit dem Smartphone. App installieren, erneut anmelden, Berechtigungen neu erteilen und den alten Geräteeintrag entfernen; ein Wechsel zwischen iPhone und Android kann eine Neuinbetriebnahme erfordern.' } },
       ],
     },
   },
@@ -575,8 +629,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-es.webp',
     title: 'Cómo Migrar de un Smart Home en la Nube al Control Local (2026)',
@@ -612,7 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Añade voz local para reemplazar Alexa/Google',
           'Migra habitación por habitación para evitar caídas',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -623,6 +677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Pasar a Home Assistant', anchor: 'move-ha' },
       { label: 'Retirar Alexa/Google', anchor: 'retire' },
       { label: 'Añadir voz local', anchor: 'local-voice' },
+      { label: 'Móvil nuevo', anchor: 'new-phone' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -713,6 +768,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para el estado de destino completo, consulta [la guía completa del smart home local](/es/smart-home/local-smart-home-complete-guide).',
         ],
       },
+      newPhone: {
+        id: 'new-phone',
+        title: 'Cambiar el móvil que controla tu casa inteligente',
+        content:
+          '**Tus dispositivos están emparejados con tu hub, no con tu móvil, así que un móvil nuevo no obliga a emparejarlo todo de nuevo: solo vuelves a iniciar sesión y concedes de nuevo algunos permisos.** La excepción son los ecosistemas que vinculan la casa a una cuenta de la plataforma del móvil.',
+        items: [
+          'Los dispositivos Zigbee, Z-Wave y Thread siguen emparejados con el coordinador o el border router de tu hub; el móvil es solo un mando a distancia.',
+          'Home Assistant: instala la app Companion en el móvil nuevo, inicia sesión con tus credenciales de Home Assistant, elige un nombre de dispositivo y concede de nuevo los permisos de ubicación y notificaciones; consulta la [configuración de la app Companion](https://companion.home-assistant.io/docs/getting_started/).',
+          'Elimina la entrada del móvil antiguo en la integración Mobile App y de tu entidad Person; de lo contrario pueden aparecer sensores duplicados y errores de ubicación; consulta la [solución de problemas de la app Companion](https://companion.home-assistant.io/docs/troubleshooting/faqs).',
+          'Apple Home: los emparejamientos Matter se sincronizan mediante el llavero de iCloud, así que inicia sesión con la misma cuenta de Apple; los accesorios Thread siguen necesitando un hub doméstico como un HomePod mini o Apple TV; consulta [Apple: emparejar y gestionar accesorios Matter](https://support.apple.com/en-us/HT213441).',
+          'Apps en la nube de los fabricantes: inicia sesión con la misma cuenta; los dispositivos pertenecen a la cuenta, no al móvil.',
+          'Pasar de iPhone a Android es distinto: la app Apple Home no está disponible en Android, y mover un dispositivo Matter a otro ecosistema implica generar un código de emparejamiento nuevo en la app actual o eliminarlo y volver a ponerlo en servicio. Una configuración basada en un hub, como Home Assistant, lo evita.',
+          'Conserva el móvil antiguo hasta que el nuevo controle todo y no lo restablezcas de fábrica antes.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Preguntas frecuentes',
@@ -721,6 +791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Qué no puede ir a local?', a: 'Los dispositivos solo-nube que dependen por completo de una nube del fabricante —a menudo algunas cámaras, timbres y ecosistemas propietarios— en general no pueden ir a local y necesitan reemplazarse por alternativas con capacidad local, como cámaras RTSP emparejadas con Frigate.' },
           { q: '¿Cuánto tarda la migración?', a: 'Varía con el tamaño de tu configuración, pero migrar habitación por habitación reparte el trabajo y evita caídas. Mucha gente mueve el hub principal y unas pocas habitaciones en un fin de semana, y luego reemplaza los dispositivos solo-nube de forma gradual durante semanas.' },
           { q: '¿Pierdo el control por voz al migrar?', a: 'No, si añades un asistente de voz local antes de retirar el de la nube. Un stack local de Assist, Whisper y Piper, opcionalmente con un LLM local, reemplaza a Alexa o Google para el control manos libres sin la nube.' },
+          { q: '¿Tengo que volver a emparejar mis dispositivos domóticos al cambiar de móvil?', a: 'Normalmente no. Los dispositivos están emparejados con tu hub o cuenta del hogar, no con el móvil: instalas la app en el móvil nuevo y vuelves a iniciar sesión. Con Home Assistant también concedes de nuevo los permisos de ubicación y notificaciones y eliminas la entrada del móvil antiguo; el cambio entre iPhone y Android es el caso que puede requerir volver a poner en servicio los dispositivos.' },
         ],
       },
       relatedReading: {
@@ -744,7 +815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Migración de smart home' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Control local' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -758,6 +829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '¿Qué no puede ir a local?', acceptedAnswer: { '@type': 'Answer', text: 'Los dispositivos solo-nube que dependen por completo de una nube del fabricante —a menudo algunas cámaras y timbres— en general necesitan reemplazarse por alternativas con capacidad local como cámaras RTSP con Frigate.' } },
         { '@type': 'Question', name: '¿Cuánto tarda la migración?', acceptedAnswer: { '@type': 'Answer', text: 'Varía con el tamaño, pero migrar habitación por habitación evita caídas. Mucha gente mueve el hub principal y unas pocas habitaciones en un fin de semana, y reemplaza los solo-nube durante semanas.' } },
         { '@type': 'Question', name: '¿Pierdo el control por voz al migrar?', acceptedAnswer: { '@type': 'Answer', text: 'No, si añades un asistente de voz local antes de retirar el de la nube. Assist, Whisper y Piper, opcionalmente con un LLM local, reemplazan a Alexa o Google sin la nube.' } },
+        { '@type': 'Question', name: '¿Tengo que volver a emparejar mis dispositivos domóticos al cambiar de móvil?', acceptedAnswer: { '@type': 'Answer', text: 'Normalmente no. Los dispositivos se emparejan con tu hub o cuenta del hogar, no con el móvil. Instala la app, inicia sesión, concede los permisos y elimina la entrada del móvil antiguo; cambiar entre iPhone y Android puede requerir volver a ponerlos en servicio.' } },
       ],
     },
   },
@@ -765,8 +837,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-ko.webp',
     title: '클라우드 스마트홈에서 로컬 제어로 이전하는 방법 (2026)',
@@ -802,7 +874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Alexa/Google을 대체할 로컬 음성을 추가하십시오',
           '다운타임을 피하기 위해 방 단위로 이전하십시오',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -813,6 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Home Assistant로 전환', anchor: 'move-ha' },
       { label: 'Alexa/Google 종료', anchor: 'retire' },
       { label: '로컬 음성 추가', anchor: 'local-voice' },
+      { label: '새 휴대폰', anchor: 'new-phone' },
       { label: '자주 묻는 질문', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -903,6 +976,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '전체적인 최종 상태는 [로컬 스마트홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide)를 참조하십시오.',
         ],
       },
+      newPhone: {
+        id: 'new-phone',
+        title: '스마트홈을 제어하는 휴대폰 교체하기',
+        content:
+          '**기기는 휴대폰이 아니라 허브와 페어링되어 있으므로, 새 휴대폰으로 바꿔도 모든 기기를 다시 페어링할 필요는 없습니다. 새 휴대폰에서 다시 로그인하고 몇 가지 권한만 다시 허용하면 됩니다.** 예외는 집을 휴대폰 플랫폼 계정에 묶어 두는 생태계입니다.',
+        items: [
+          'Zigbee, Z-Wave, Thread 기기는 허브의 코디네이터 또는 보더 라우터와 계속 페어링된 상태로 남습니다. 휴대폰은 리모컨일 뿐입니다.',
+          'Home Assistant: 새 휴대폰에 Companion 앱을 설치하고 Home Assistant 자격 증명으로 로그인한 다음, 기기 이름을 정하고 위치 및 알림 권한을 다시 허용합니다. [Companion 앱 설정](https://companion.home-assistant.io/docs/getting_started/)을 참고하세요.',
+          'Mobile App 통합과 Person 엔티티에서 이전 휴대폰 항목을 삭제하세요. 그렇지 않으면 센서가 중복되거나 위치 오류가 생길 수 있습니다. [Companion 앱 문제 해결](https://companion.home-assistant.io/docs/troubleshooting/faqs)을 참고하세요.',
+          'Apple 홈: Matter 페어링은 iCloud 키체인으로 동기화되므로 같은 Apple 계정으로 로그인하세요. Thread 액세서리에는 여전히 HomePod mini나 Apple TV 같은 홈 허브가 필요합니다. [Apple: Matter 액세서리 페어링 및 관리](https://support.apple.com/en-us/HT213441)를 참고하세요.',
+          '제조사 클라우드 앱: 같은 제조사 계정으로 로그인하세요. 기기는 휴대폰이 아니라 계정에 속해 있습니다.',
+          'iPhone에서 Android로 바꾸는 경우는 다릅니다. Apple 홈 앱은 Android에서 사용할 수 없으며, Matter 기기를 다른 생태계로 옮기려면 현재 앱에서 새 페어링 코드를 생성하거나 기기를 삭제한 뒤 다시 등록해야 합니다. Home Assistant처럼 허브 중심으로 구성하면 이 문제를 피할 수 있습니다.',
+          '새 휴대폰이 모든 것을 제어할 때까지 이전 휴대폰을 보관하고, 그 전에는 초기화하지 마세요.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: '자주 묻는 질문',
@@ -911,6 +999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '로컬로 전환할 수 없는 기기는 무엇입니까?', a: '제조사 클라우드에 완전히 의존하는 클라우드 전용 기기(일부 카메라, 초인종, 독점 에코시스템)는 일반적으로 로컬 전환이 불가능하며, Frigate와 함께 사용하는 RTSP 카메라와 같은 로컬 지원 대안으로 교체해야 합니다.' },
           { q: '이전에 얼마나 걸립니까?', a: '설정 규모에 따라 다르지만, 방 단위로 이전하면 작업이 분산되어 다운타임을 피할 수 있습니다. 많은 사용자가 메인 허브와 몇 개의 방을 주말에 이전하고, 이후 몇 주에 걸쳐 클라우드 전용 기기를 점진적으로 교체합니다.' },
           { q: '이전 후 음성 제어를 잃게 됩니까?', a: '아닙니다. 클라우드 음성 어시스턴트를 종료하기 전에 로컬 음성 어시스턴트를 추가하면 됩니다. Assist, Whisper, Piper 스택(선택적으로 로컬 LLM 포함)은 클라우드 없이 Alexa나 Google을 대체하여 핸즈프리 제어를 제공합니다.' },
+          { q: '휴대폰을 바꾸면 스마트홈 기기를 다시 페어링해야 하나요?', a: '보통은 필요 없습니다. 기기는 휴대폰이 아니라 허브나 홈 계정과 페어링되어 있으므로, 새 휴대폰에 앱을 설치하고 다시 로그인하면 됩니다. Home Assistant에서는 위치 및 알림 권한을 다시 허용하고 이전 휴대폰의 기기 항목을 삭제해야 합니다. iPhone과 Android 사이를 오가는 경우에는 기기를 다시 등록해야 할 수 있습니다.' },
         ],
       },
       relatedReading: {
@@ -934,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: '스마트홈 이전' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '로컬 제어' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -948,6 +1037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '로컬로 전환할 수 없는 기기는 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '제조사 클라우드에 완전히 의존하는 클라우드 전용 기기(일부 카메라, 초인종)는 RTSP + Frigate 카메라 등 로컬 지원 대안으로 교체해야 합니다.' } },
         { '@type': 'Question', name: '이전에 얼마나 걸립니까?', acceptedAnswer: { '@type': 'Answer', text: '설정 규모에 따라 다르지만 방 단위 이전이 다운타임을 피하게 합니다. 많은 사용자가 주말에 메인 허브와 몇 개 방을 이전하고 이후 몇 주간 클라우드 전용 기기를 교체합니다.' } },
         { '@type': 'Question', name: '이전 후 음성 제어를 잃게 됩니까?', acceptedAnswer: { '@type': 'Answer', text: '아닙니다. 클라우드 어시스턴트를 종료하기 전에 로컬 음성 어시스턴트를 추가하십시오. Assist, Whisper, Piper는 클라우드 없이 Alexa나 Google을 대체합니다.' } },
+        { '@type': 'Question', name: '휴대폰을 바꾸면 스마트홈 기기를 다시 페어링해야 하나요?', acceptedAnswer: { '@type': 'Answer', text: '보통은 필요 없습니다. 기기는 허브나 홈 계정과 페어링되어 있습니다. 앱을 설치하고 다시 로그인하고 권한을 허용한 뒤 이전 항목을 삭제하세요. iPhone과 Android 사이를 오가면 다시 등록해야 할 수 있습니다.' } },
       ],
     },
   },
@@ -955,8 +1045,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-fr.webp',
     title: 'Comment Migrer d\'une Maison Connectée Cloud vers le Contrôle Local (2026)',
@@ -992,7 +1082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ajoutez la voix locale pour remplacer Alexa/Google',
           'Migrez pièce par pièce pour éviter les coupures',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1003,6 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Passer à Home Assistant', anchor: 'move-ha' },
       { label: 'Mettre Alexa/Google hors service', anchor: 'retire' },
       { label: 'Ajouter la voix locale', anchor: 'local-voice' },
+      { label: 'Nouveau téléphone', anchor: 'new-phone' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -1093,6 +1184,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pour l\'état de destination complet, voir [le guide complet de la maison connectée locale](/fr/smart-home/local-smart-home-complete-guide).',
         ],
       },
+      newPhone: {
+        id: 'new-phone',
+        title: 'Changer le téléphone qui pilote votre maison connectée',
+        content:
+          '**Vos appareils sont appairés à votre hub, pas à votre téléphone : un nouveau téléphone n\'oblige donc pas à tout réappairer — vous vous reconnectez et accordez de nouveau quelques autorisations.** L\'exception concerne les écosystèmes qui lient la maison à un compte de la plateforme du téléphone.',
+        items: [
+          'Les appareils Zigbee, Z-Wave et Thread restent appairés au coordinateur ou au routeur de bordure de votre hub ; le téléphone n\'est qu\'une télécommande.',
+          'Home Assistant : installez l\'application Companion sur le nouveau téléphone, connectez-vous avec vos identifiants Home Assistant, choisissez un nom d\'appareil et accordez de nouveau les autorisations de localisation et de notification — voir la [configuration de l\'application Companion](https://companion.home-assistant.io/docs/getting_started/).',
+          'Supprimez l\'entrée de l\'ancien téléphone dans l\'intégration Mobile App et dans votre entité Person, sinon des capteurs en double et des erreurs de localisation peuvent apparaître — voir le [dépannage de l\'application Companion](https://companion.home-assistant.io/docs/troubleshooting/faqs).',
+          'Apple Maison : les appairages Matter se synchronisent via le Trousseau iCloud ; connectez-vous donc avec le même compte Apple ; les accessoires Thread nécessitent toujours un hub domestique comme un HomePod mini ou une Apple TV — voir [Apple : appairer et gérer les accessoires Matter](https://support.apple.com/en-us/HT213441).',
+          'Applications cloud des fabricants : connectez-vous avec le même compte ; les appareils appartiennent au compte, pas au téléphone.',
+          'Passer d\'un iPhone à un Android est différent : l\'app Apple Maison n\'existe pas sur Android, et déplacer un appareil Matter vers un autre écosystème suppose de générer un nouveau code d\'appairage dans l\'application actuelle ou de le supprimer puis de le remettre en service. Une installation centrée sur un hub, comme Home Assistant, évite ce problème.',
+          'Gardez l\'ancien téléphone jusqu\'à ce que le nouveau pilote tout, et ne le réinitialisez pas avant.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Questions fréquemment posées',
@@ -1101,6 +1207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qu\'est-ce qui ne peut pas passer en local ?', a: 'Les appareils tout-cloud qui dépendent entièrement d\'un cloud du fabricant — souvent certaines caméras, sonnettes et écosystèmes propriétaires — ne peuvent généralement pas passer en local et doivent être remplacés par des alternatives à capacité locale, comme des caméras RTSP appairées avec Frigate.' },
           { q: 'Combien de temps prend la migration ?', a: 'Cela varie avec la taille de votre installation, mais migrer pièce par pièce répartit le travail et évite les coupures. Beaucoup déplacent le hub principal et quelques pièces en un week-end, puis remplacent les appareils tout-cloud progressivement sur des semaines.' },
           { q: 'Est-ce que je perds le contrôle vocal en migrant ?', a: 'Non, si vous ajoutez un assistant vocal local avant de mettre celui du cloud hors service. Un stack local d\'Assist, Whisper et Piper, optionnellement avec un LLM local, remplace Alexa ou Google pour le contrôle mains libres sans le cloud.' },
+          { q: 'Dois-je réappairer mes appareils connectés en changeant de téléphone ?', a: 'En général non. Les appareils sont appairés à votre hub ou à votre compte domestique, pas au téléphone : vous installez l\'application sur le nouveau téléphone et vous vous reconnectez. Avec Home Assistant, vous accordez aussi de nouveau les autorisations de localisation et de notification et supprimez l\'entrée de l\'ancien téléphone ; le passage d\'un iPhone à un Android est le cas qui peut exiger une remise en service.' },
         ],
       },
       relatedReading: {
@@ -1124,7 +1231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Migration de maison connectée' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Contrôle local' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1138,6 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Qu\'est-ce qui ne peut pas passer en local ?', acceptedAnswer: { '@type': 'Answer', text: 'Les appareils tout-cloud qui dépendent entièrement d\'un cloud du fabricant — souvent certaines caméras et sonnettes — doivent généralement être remplacés par des alternatives à capacité locale comme des caméras RTSP avec Frigate.' } },
         { '@type': 'Question', name: 'Combien de temps prend la migration ?', acceptedAnswer: { '@type': 'Answer', text: 'Cela varie avec la taille, mais migrer pièce par pièce évite les coupures. Beaucoup déplacent le hub principal et quelques pièces en un week-end, puis remplacent les tout-cloud sur des semaines.' } },
         { '@type': 'Question', name: 'Est-ce que je perds le contrôle vocal en migrant ?', acceptedAnswer: { '@type': 'Answer', text: 'Non, si vous ajoutez un assistant vocal local avant de retirer celui du cloud. Assist, Whisper et Piper, optionnellement avec un LLM local, remplacent Alexa ou Google sans le cloud.' } },
+        { '@type': 'Question', name: 'Dois-je réappairer mes appareils connectés en changeant de téléphone ?', acceptedAnswer: { '@type': 'Answer', text: 'En général non. Les appareils sont appairés au hub ou au compte domestique, pas au téléphone. Installez l\'application, reconnectez-vous, accordez les autorisations et supprimez l\'ancienne entrée ; passer d\'un iPhone à un Android peut exiger une remise en service.' } },
       ],
     },
   },
@@ -1145,8 +1253,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-ja.webp',
     title: 'クラウドのスマートホームからローカル制御へ移行する方法（2026）',
@@ -1182,7 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Alexa/Google を置き換えるローカル音声を追加する',
           'ダウンタイムを避けるため部屋ごとに移行する',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1193,6 +1301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Home Assistant へ移行', anchor: 'move-ha' },
       { label: 'Alexa/Google を退役', anchor: 'retire' },
       { label: 'ローカル音声を追加', anchor: 'local-voice' },
+      { label: '新しいスマートフォン', anchor: 'new-phone' },
       { label: 'よくある質問', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -1283,6 +1392,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '到達すべき最終形は[ローカルスマートホーム完全ガイド](/ja/smart-home/local-smart-home-complete-guide)を参照。',
         ],
       },
+      newPhone: {
+        id: 'new-phone',
+        title: 'スマートホームを操作するスマートフォンを買い替える',
+        content:
+          '**デバイスはスマートフォンではなくハブとペアリングされているため、スマートフォンを買い替えても全デバイスの再ペアリングは不要です。新しい端末で再度サインインし、いくつかの権限を許可し直すだけです。** 例外は、住まいをスマートフォンのプラットフォームのアカウントに紐づけるエコシステムです。',
+        items: [
+          'Zigbee、Z-Wave、Thread のデバイスは、ハブ上のコーディネーターまたはボーダールーターとペアリングされたままです。スマートフォンはリモコンにすぎません。',
+          'Home Assistant：新しい端末に Companion アプリをインストールし、Home Assistant の認証情報でサインインして、デバイス名を選び、位置情報と通知の権限を許可し直します。[Companion アプリのセットアップ](https://companion.home-assistant.io/docs/getting_started/)を参照してください。',
+          'Mobile App 連携と Person エンティティから古い端末のエントリを削除してください。残すとセンサーの重複や位置情報の不具合が起きることがあります。[Companion アプリのトラブルシューティング](https://companion.home-assistant.io/docs/troubleshooting/faqs)を参照してください。',
+          'Apple ホーム：Matter のペアリングは iCloud キーチェーンで同期されるため、同じ Apple アカウントでサインインします。Thread アクセサリには引き続き HomePod mini や Apple TV などのホームハブが必要です。[Apple：Matter アクセサリのペアリングと管理](https://support.apple.com/en-us/HT213441)を参照してください。',
+          'メーカーのクラウドアプリ：同じメーカーアカウントでサインインします。デバイスはスマートフォンではなくアカウントに属しています。',
+          'iPhone から Android への乗り換えは事情が異なります。Apple ホームアプリは Android では利用できず、Matter デバイスを別のエコシステムへ移すには、現在のアプリで新しいペアリングコードを生成するか、デバイスを削除して再度セットアップする必要があります。Home Assistant のようなハブ中心の構成なら、この問題を避けられます。',
+          '新しい端末ですべてを操作できるようになるまで古い端末を手元に残し、それまでは初期化しないでください。',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'よくある質問',
@@ -1291,6 +1415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ローカル化できないものは何ですか？', a: 'メーカーのクラウドに完全に依存するクラウド専用機器——しばしば一部のカメラ、ドアベル、独自エコシステム——は概してローカル化できず、Frigate と組み合わせる RTSP カメラのようなローカル対応の代替品への交換が必要です。' },
           { q: '移行にはどれくらいかかりますか？', a: '構成の規模によりますが、部屋ごとに移行すれば作業が分散し、ダウンタイムを避けられます。多くの人は中心となるハブと数部屋を週末に移し、その後クラウド専用機器を数週間かけて段階的に交換します。' },
           { q: '移行すると音声制御を失いますか？', a: 'いいえ、クラウドのものを退役させる前にローカル音声アシスタントを追加すれば失いません。Assist、Whisper、Piper のローカルスタック（任意でローカル LLM を加える）が、クラウドなしのハンズフリー制御で Alexa や Google を置き換えます。' },
+          { q: 'スマートフォンを買い替えたら、スマートホームのデバイスを再ペアリングする必要がありますか？', a: '通常は不要です。デバイスはスマートフォンではなくハブまたはホームのアカウントとペアリングされているため、新しい端末でアプリをインストールして再度サインインします。Home Assistant では位置情報と通知の権限を許可し直し、古い端末のデバイスエントリを削除します。iPhone と Android の間で乗り換える場合は、再セットアップが必要になることがあります。' },
         ],
       },
       relatedReading: {
@@ -1314,7 +1439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'スマートホームの移行' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'ローカル制御' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1328,6 +1453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'ローカル化できないものは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'メーカーのクラウドに完全に依存するクラウド専用機器——しばしば一部のカメラやドアベル——は概して、Frigate と組み合わせる RTSP カメラのようなローカル対応品への交換が必要です。' } },
         { '@type': 'Question', name: '移行にはどれくらいかかりますか？', acceptedAnswer: { '@type': 'Answer', text: '構成の規模によりますが、部屋ごとに移行すればダウンタイムを避けられます。多くは中心のハブと数部屋を週末に移し、その後クラウド専用機器を数週間かけて交換します。' } },
         { '@type': 'Question', name: '移行すると音声制御を失いますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ、クラウドのものを退役させる前にローカル音声アシスタントを追加すれば失いません。Assist、Whisper、Piper（任意でローカル LLM）が Alexa や Google をクラウドなしで置き換えます。' } },
+        { '@type': 'Question', name: 'スマートフォンを買い替えたら、スマートホームのデバイスを再ペアリングする必要がありますか？', acceptedAnswer: { '@type': 'Answer', text: '通常は不要です。デバイスはハブまたはホームのアカウントとペアリングされています。アプリをインストールして再サインインし、権限を許可し直して古いエントリを削除します。iPhone と Android の乗り換えでは再セットアップが必要な場合があります。' } },
       ],
     },
   },
@@ -1335,8 +1461,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-pt.webp',
     title: 'Como Migrar de uma Casa Inteligente na Nuvem para o Controle Local (2026)',
@@ -1372,7 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Adicione voz local para substituir Alexa/Google',
           'Migre cômodo por cômodo para evitar interrupções',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1383,6 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Passar para o Home Assistant', anchor: 'move-ha' },
       { label: 'Aposentar Alexa/Google', anchor: 'retire' },
       { label: 'Adicionar voz local', anchor: 'local-voice' },
+      { label: 'Celular novo', anchor: 'new-phone' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -1473,6 +1600,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para o estado de destino completo, veja [o guia completo da casa inteligente local](/pt/smart-home/local-smart-home-complete-guide).',
         ],
       },
+      newPhone: {
+        id: 'new-phone',
+        title: 'Trocar o celular que controla sua casa inteligente',
+        content:
+          '**Seus dispositivos estão pareados com o hub, não com o celular; por isso, um celular novo não exige parear tudo de novo — você entra novamente na conta e concede algumas permissões outra vez.** A exceção são os ecossistemas que prendem a casa a uma conta da plataforma do celular.',
+        items: [
+          'Dispositivos Zigbee, Z-Wave e Thread continuam pareados com o coordenador ou o border router do seu hub; o celular é apenas um controle remoto.',
+          'Home Assistant: instale o app Companion no celular novo, entre com suas credenciais do Home Assistant, escolha um nome de dispositivo e conceda novamente as permissões de localização e notificação — veja a [configuração do app Companion](https://companion.home-assistant.io/docs/getting_started/).',
+          'Remova a entrada do celular antigo na integração Mobile App e da sua entidade Person; caso contrário, podem surgir sensores duplicados e erros de localização — veja a [solução de problemas do app Companion](https://companion.home-assistant.io/docs/troubleshooting/faqs).',
+          'Apple Casa: os pareamentos Matter são sincronizados pelo Chaveiro do iCloud, então entre com a mesma conta Apple; acessórios Thread ainda precisam de um hub residencial, como um HomePod mini ou Apple TV — veja [Apple: parear e gerenciar acessórios Matter](https://support.apple.com/en-us/HT213441).',
+          'Apps em nuvem dos fabricantes: entre com a mesma conta; os dispositivos pertencem à conta, não ao celular.',
+          'Trocar de iPhone para Android é diferente: o app Apple Casa não está disponível no Android, e mover um dispositivo Matter para outro ecossistema significa gerar um novo código de pareamento no app atual ou removê-lo e recolocá-lo em operação. Uma configuração baseada em hub, como o Home Assistant, evita isso.',
+          'Mantenha o celular antigo até o novo controlar tudo e não o restaure para a configuração de fábrica antes disso.',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Perguntas frequentes',
@@ -1481,6 +1623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O que não pode ir para o local?', a: 'Dispositivos só-nuvem que dependem inteiramente de uma nuvem do fabricante — muitas vezes algumas câmeras, campainhas e ecossistemas proprietários — geralmente não podem ir para o local e precisam ser substituídos por alternativas com capacidade local, como câmeras RTSP emparelhadas com o Frigate.' },
           { q: 'Quanto tempo leva a migração?', a: 'Varia com o tamanho da sua configuração, mas migrar cômodo por cômodo distribui o trabalho e evita interrupções. Muitas pessoas movem o hub principal e alguns cômodos em um fim de semana e depois substituem os dispositivos só-nuvem gradualmente ao longo de semanas.' },
           { q: 'Perco o controle por voz ao migrar?', a: 'Não, se você adicionar um assistente de voz local antes de aposentar o da nuvem. Um stack local de Assist, Whisper e Piper, opcionalmente com um LLM local, substitui a Alexa ou o Google para o controle mãos-livres sem a nuvem.' },
+          { q: 'Preciso parear meus dispositivos de casa inteligente de novo ao trocar de celular?', a: 'Normalmente não. Os dispositivos estão pareados com o hub ou a conta da casa, não com o celular: você instala o app no celular novo e entra novamente. Com o Home Assistant, você também concede de novo as permissões de localização e notificação e remove a entrada do celular antigo; a troca entre iPhone e Android é o caso que pode exigir recolocar os dispositivos em operação.' },
         ],
       },
       relatedReading: {
@@ -1504,7 +1647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Migração de casa inteligente' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Controle local' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1518,6 +1661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'O que não pode ir para o local?', acceptedAnswer: { '@type': 'Answer', text: 'Dispositivos só-nuvem que dependem inteiramente de uma nuvem do fabricante — muitas vezes algumas câmeras e campainhas — geralmente precisam ser substituídos por alternativas com capacidade local como câmeras RTSP com Frigate.' } },
         { '@type': 'Question', name: 'Quanto tempo leva a migração?', acceptedAnswer: { '@type': 'Answer', text: 'Varia com o tamanho, mas migrar cômodo por cômodo evita interrupções. Muitos movem o hub principal e alguns cômodos em um fim de semana e substituem os só-nuvem ao longo de semanas.' } },
         { '@type': 'Question', name: 'Perco o controle por voz ao migrar?', acceptedAnswer: { '@type': 'Answer', text: 'Não, se você adicionar um assistente de voz local antes de aposentar o da nuvem. Assist, Whisper e Piper, opcionalmente com um LLM local, substituem a Alexa ou o Google sem a nuvem.' } },
+        { '@type': 'Question', name: 'Preciso parear meus dispositivos de casa inteligente de novo ao trocar de celular?', acceptedAnswer: { '@type': 'Answer', text: 'Normalmente não. Os dispositivos são pareados com o hub ou a conta da casa, não com o celular. Instale o app, entre novamente, conceda as permissões e remova a entrada antiga; trocar entre iPhone e Android pode exigir recolocar os dispositivos em operação.' } },
       ],
     },
   },
@@ -1525,8 +1669,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/migrating-from-cloud-to-local-smart-home-overview-hero-zh.webp',
     title: '如何从云端智能家居迁移到本地控制（2026）',
@@ -1562,7 +1706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '添加本地语音以取代 Alexa/Google',
           '按房间迁移以避免停摆',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1573,6 +1717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '迁移到 Home Assistant', anchor: 'move-ha' },
       { label: '退役 Alexa/Google', anchor: 'retire' },
       { label: '添加本地语音', anchor: 'local-voice' },
+      { label: '更换手机', anchor: 'new-phone' },
       { label: '常见问题', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -1663,6 +1808,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '完整的最终形态参见[本地智能家居完整指南](/zh/smart-home/local-smart-home-complete-guide)。',
         ],
       },
+      newPhone: {
+        id: 'new-phone',
+        title: '更换控制智能家居的手机',
+        content:
+          '**设备是与中枢配对的，而不是与手机配对，因此更换手机不需要重新配对所有设备——只需在新手机上重新登录，并重新授予几项权限。** 例外是那些把家庭绑定到手机平台账号的生态系统。',
+        items: [
+          'Zigbee、Z-Wave 和 Thread 设备仍与中枢上的协调器或边界路由器保持配对；手机只是遥控器。',
+          'Home Assistant：在新手机上安装 Companion 应用，用 Home Assistant 凭据登录，选择设备名称，并重新授予位置和通知权限——参见[Companion 应用设置](https://companion.home-assistant.io/docs/getting_started/)。',
+          '请在 Mobile App 集成和 Person 实体中删除旧手机的条目，否则可能出现传感器重复和定位异常——参见[Companion 应用故障排除](https://companion.home-assistant.io/docs/troubleshooting/faqs)。',
+          'Apple 家庭：Matter 配对通过 iCloud 钥匙串同步，因此请使用同一个 Apple 账户登录；Thread 配件仍需要 HomePod mini 或 Apple TV 等家庭中枢——参见[Apple：配对和管理 Matter 配件](https://support.apple.com/en-us/HT213441)。',
+          '厂商云应用：使用同一个厂商账号登录；设备属于账号，而不是手机。',
+          '从 iPhone 换到 Android 则不同：Apple 家庭应用不支持 Android，把 Matter 设备迁移到另一个生态系统，需要在当前应用中生成新的配对码，或将其删除后重新配置。像 Home Assistant 这样以中枢为核心的方案可以避免这一问题。',
+          '在新手机能控制所有设备之前，请保留旧手机，并且不要提前将其恢复出厂设置。',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: '常见问题',
@@ -1671,6 +1831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '哪些无法本地化？', a: '完全依赖厂商云端的仅限云端设备——常见的有部分摄像头、门铃和专有生态——通常无法本地化，需要替换为支持本地的替代品，例如搭配 Frigate 的 RTSP 摄像头。' },
           { q: '迁移需要多久？', a: '这取决于你配置的规模，但按房间迁移能分摊工作并避免停摆。许多人在一个周末迁移核心中枢和几个房间，然后在数周内逐步替换仅限云端的设备。' },
           { q: '迁移时会失去语音控制吗？', a: '不会，只要你在退役云端助手之前先添加本地语音助手。由 Assist、Whisper 和 Piper 组成的本地堆栈（可选搭配本地 LLM）可在无云端的情况下取代 Alexa 或 Google 实现免手控制。' },
+          { q: '换新手机后，需要重新配对智能家居设备吗？', a: '通常不需要。设备是与中枢或家庭账号配对的，而不是与手机配对：在新手机上安装应用并重新登录即可。使用 Home Assistant 时，还需要重新授予位置和通知权限，并删除旧手机的设备条目；在 iPhone 和 Android 之间换机则可能需要重新配置设备。' },
         ],
       },
       relatedReading: {
@@ -1694,7 +1855,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: '智能家居迁移' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '本地控制' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1708,6 +1869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '哪些无法本地化？', acceptedAnswer: { '@type': 'Answer', text: '完全依赖厂商云端的仅限云端设备——常见的有部分摄像头和门铃——通常需替换为支持本地的替代品，例如搭配 Frigate 的 RTSP 摄像头。' } },
         { '@type': 'Question', name: '迁移需要多久？', acceptedAnswer: { '@type': 'Answer', text: '取决于规模，但按房间迁移能避免停摆。许多人在一个周末迁移核心中枢和几个房间，然后在数周内替换仅限云端的设备。' } },
         { '@type': 'Question', name: '迁移时会失去语音控制吗？', acceptedAnswer: { '@type': 'Answer', text: '不会，只要在退役云端助手前先添加本地语音助手。由 Assist、Whisper 和 Piper 组成的本地堆栈（可选本地 LLM）可在无云端下取代 Alexa 或 Google。' } },
+        { '@type': 'Question', name: '换新手机后，需要重新配对智能家居设备吗？', acceptedAnswer: { '@type': 'Answer', text: '通常不需要。设备与中枢或家庭账号配对，而不是与手机配对。安装应用、重新登录、重新授权并删除旧条目即可；在 iPhone 和 Android 之间换机可能需要重新配置设备。' } },
       ],
     },
   },
