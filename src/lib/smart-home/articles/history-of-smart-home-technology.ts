@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Before X10 (1966–1969): one-off prototypes such as ECHO IV and the Kitchen Computer',
           'X10 (1975): first mainstream home automation, over powerlines',
-          'Z-Wave (2001) and Zigbee (mid-2000s): wireless mesh',
+          'Z-Wave (2004) and Zigbee (mid-2000s): wireless mesh',
           'Cloud era: Nest (2011), Amazon Echo (2014), Apple HomeKit (2014)',
           'Matter (2022): a unifying interoperability standard',
           '2026: a swing back to local control plus on-device AI',
@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'One-off prototypes such as ECHO IV (1966) came first; X10 (1975) made home automation a product',
           'X10 (1975) was the first mainstream home-automation system, sending signals over powerlines',
-          'Z-Wave (2001) and Zigbee (mid-2000s) brought low-power wireless mesh networking',
+          'Z-Wave (2004) and Zigbee (mid-2000s) brought low-power wireless mesh networking',
           'The cloud era arrived with Nest (2011) and Amazon Echo and Apple HomeKit (2014)',
           'Matter (2022) added a cross-vendor interoperability standard',
           'In 2026 the trend is swinging back to local control with on-device AI',
@@ -106,9 +106,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wireless',
         title: 'Wireless Protocols: Z-Wave and Zigbee',
         content:
-          '**Z-Wave (2001) and Zigbee (mid-2000s) introduced low-power wireless mesh networks built for battery devices and sensors.** These remain core local protocols today.',
+          '**Z-Wave (2004) and Zigbee (mid-2000s) introduced low-power wireless mesh networks built for battery devices and sensors.** These remain core local protocols today.',
         items: [
-          '**Z-Wave (2001):** a low-power mesh protocol designed for reliable home-control devices.',
+          '**Z-Wave (2004):** a low-power mesh protocol designed for reliable home-control devices. Zensys began developing it in 1999; the first certified products appeared around 2004.',
           '**Zigbee (mid-2000s):** an open low-power mesh standard widely used for bulbs and sensors.',
           '**Still relevant:** both are local-by-default and underpin modern hubs — see [smart home protocols explained](/smart-home/smart-home-protocols-explained).',
         ],
@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Era': 'Prototypes', 'Approx. years': '1966–1974', 'Defining tech': 'ECHO IV, Kitchen Computer', 'Cloud or local': 'Local' },
           { 'Era': 'Wired', 'Approx. years': '1975–2000', 'Defining tech': 'X10, Insteon', 'Cloud or local': 'Local' },
-          { 'Era': 'Wireless mesh', 'Approx. years': '2001–2010', 'Defining tech': 'Z-Wave, Zigbee', 'Cloud or local': 'Local' },
+          { 'Era': 'Wireless mesh', 'Approx. years': '2004–2010', 'Defining tech': 'Z-Wave, Zigbee', 'Cloud or local': 'Local' },
           { 'Era': 'Cloud', 'Approx. years': '2011–2021', 'Defining tech': 'Nest, Echo, HomeKit', 'Cloud or local': 'Cloud' },
           { 'Era': 'Interoperability', 'Approx. years': '2022–2025', 'Defining tech': 'Matter, Thread', 'Cloud or local': 'Both' },
           { 'Era': 'Local AI', 'Approx. years': '2026+', 'Defining tech': 'Local LLMs, Home Assistant', 'Cloud or local': 'Local' },
@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'قبل X10 (1966–1969): نماذج أولية فردية مثل ECHO IV وKitchen Computer',
           'X10 (1975): أول أتمتة منزلية واسعة الانتشار، عبر الأسلاك الكهربائية',
-          'Z-Wave (2001) وZigbee (منتصف العقد الأول): شبكة لاسلكية متشابكة',
+          'Z-Wave (2004) وZigbee (منتصف العقد الأول): شبكة لاسلكية متشابكة',
           'حقبة السحابة: Nest (2011)، Amazon Echo (2014)، Apple HomeKit (2014)',
           'Matter (2022): معيار تشغيل بيني موحّد',
           '2026: تأرجح نحو التحكم المحلي مع الذكاء الاصطناعي على الجهاز',
@@ -290,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'جاءت نماذج أولية فردية مثل ECHO IV (1966) أولًا، ثم جعل X10 (1975) أتمتة المنزل منتجًا',
           'X10 (1975) كان أول نظام أتمتة منزلية واسع الانتشار، يرسل الإشارات عبر الأسلاك الكهربائية',
-          'Z-Wave (2001) وZigbee (منتصف العقد الأول) جلبا شبكة لاسلكية منخفضة الطاقة',
+          'Z-Wave (2004) وZigbee (منتصف العقد الأول) جلبا شبكة لاسلكية منخفضة الطاقة',
           'حقبة السحابة بدأت مع Nest (2011) وAmazon Echo وApple HomeKit (2014)',
           'Matter (2022) أضاف معيار تشغيل بيني بين الشركات',
           'في 2026 الاتجاه يتأرجح نحو التحكم المحلي مع الذكاء الاصطناعي على الجهاز',
@@ -325,9 +325,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wireless',
         title: 'البروتوكولات اللاسلكية: Z-Wave وZigbee',
         content:
-          '**قدّم Z-Wave (2001) وZigbee (منتصف العقد الأول) شبكات لاسلكية متشابكة منخفضة الطاقة مبنية للأجهزة التي تعمل بالبطاريات والمستشعرات.** يبقى كلاهما بروتوكولات محلية أساسية حتى اليوم.',
+          '**قدّم Z-Wave (2004) وZigbee (منتصف العقد الأول) شبكات لاسلكية متشابكة منخفضة الطاقة مبنية للأجهزة التي تعمل بالبطاريات والمستشعرات.** يبقى كلاهما بروتوكولات محلية أساسية حتى اليوم.',
         items: [
-          '**Z-Wave (2001):** بروتوكول شبكة منخفض الطاقة مصمم لأجهزة تحكم منزلية موثوقة.',
+          '**Z-Wave (2004):** بروتوكول شبكة منخفض الطاقة مصمم لأجهزة تحكم منزلية موثوقة. بدأت Zensys تطويره عام 1999، وظهرت أولى المنتجات المعتمدة نحو عام 2004.',
           '**Zigbee (منتصف العقد الأول):** معيار شبكة مفتوح منخفض الطاقة يُستخدم على نطاق واسع للمصابيح والمستشعرات.',
           '**لا يزالان ذوَي صلة:** كلاهما محلي افتراضيًا ويشكّلان أساس المراكز الحديثة — راجع [بروتوكولات المنزل الذكي شرح](/ar/smart-home/smart-home-protocols-explained).',
         ],
@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الحقبة': 'نماذج أولية', 'السنوات التقريبية': '1966–1974', 'التقنية المحورية': 'ECHO IV وKitchen Computer', 'سحابة أم محلي': 'محلي' },
           { 'الحقبة': 'سلكي', 'السنوات التقريبية': '1975–2000', 'التقنية المحورية': 'X10, Insteon', 'سحابة أم محلي': 'محلي' },
-          { 'الحقبة': 'شبكة لاسلكية', 'السنوات التقريبية': '2001–2010', 'التقنية المحورية': 'Z-Wave, Zigbee', 'سحابة أم محلي': 'محلي' },
+          { 'الحقبة': 'شبكة لاسلكية', 'السنوات التقريبية': '2004–2010', 'التقنية المحورية': 'Z-Wave, Zigbee', 'سحابة أم محلي': 'محلي' },
           { 'الحقبة': 'سحابة', 'السنوات التقريبية': '2011–2021', 'التقنية المحورية': 'Nest, Echo, HomeKit', 'سحابة أم محلي': 'سحابة' },
           { 'الحقبة': 'تشغيل بيني', 'السنوات التقريبية': '2022–2025', 'التقنية المحورية': 'Matter, Thread', 'سحابة أم محلي': 'كلاهما' },
           { 'الحقبة': 'ذكاء اصطناعي محلي', 'السنوات التقريبية': '2026+', 'التقنية المحورية': 'نماذج LLM محلية، Home Assistant', 'سحابة أم محلي': 'محلي' },
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Vor X10 (1966–1969): einzelne Prototypen wie ECHO IV und der Kitchen Computer',
           'X10 (1975): erste verbreitete Heimautomatisierung über Stromleitungen',
-          'Z-Wave (2001) und Zigbee (Mitte der 2000er): drahtloses Mesh',
+          'Z-Wave (2004) und Zigbee (Mitte der 2000er): drahtloses Mesh',
           'Cloud-Ära: Nest (2011), Amazon Echo (2014), Apple HomeKit (2014)',
           'Matter (2022): ein vereinheitlichender Interoperabilitätsstandard',
           '2026: Rückkehr zur lokalen Steuerung plus On-Device-KI',
@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Einzelne Prototypen wie ECHO IV (1966) kamen zuerst; X10 (1975) machte Hausautomation zum Produkt',
           'X10 (1975) war das erste verbreitete Heimautomatisierungssystem und sendete Signale über Stromleitungen',
-          'Z-Wave (2001) und Zigbee (Mitte der 2000er) brachten stromsparende drahtlose Mesh-Netze',
+          'Z-Wave (2004) und Zigbee (Mitte der 2000er) brachten stromsparende drahtlose Mesh-Netze',
           'Die Cloud-Ära kam mit Nest (2011) sowie Amazon Echo und Apple HomeKit (2014)',
           'Matter (2022) fügte einen herstellerübergreifenden Interoperabilitätsstandard hinzu',
           '2026 schwingt der Trend zurück zur lokalen Steuerung mit On-Device-KI',
@@ -544,9 +544,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wireless',
         title: 'Drahtlose Protokolle: Z-Wave und Zigbee',
         content:
-          '**Z-Wave (2001) und Zigbee (Mitte der 2000er) führten stromsparende drahtlose Mesh-Netze ein, gebaut für Batteriegeräte und Sensoren.** Beide bleiben bis heute zentrale lokale Protokolle.',
+          '**Z-Wave (2004) und Zigbee (Mitte der 2000er) führten stromsparende drahtlose Mesh-Netze ein, gebaut für Batteriegeräte und Sensoren.** Beide bleiben bis heute zentrale lokale Protokolle.',
         items: [
-          '**Z-Wave (2001):** ein stromsparendes Mesh-Protokoll für zuverlässige Steuergeräte.',
+          '**Z-Wave (2004):** ein stromsparendes Mesh-Protokoll für zuverlässige Steuergeräte. Zensys begann 1999 mit der Entwicklung; die ersten zertifizierten Produkte erschienen um 2004.',
           '**Zigbee (Mitte der 2000er):** ein offener stromsparender Mesh-Standard, weit verbreitet für Leuchtmittel und Sensoren.',
           '**Weiterhin relevant:** beide sind lokal-standardmäßig und bilden die Basis moderner Hubs – siehe [Smart-Home-Protokolle erklärt](/de/smart-home/smart-home-protocols-explained).',
         ],
@@ -598,7 +598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Ära': 'Prototypen', 'Ungefähre Jahre': '1966–1974', 'Prägende Technik': 'ECHO IV, Kitchen Computer', 'Cloud oder lokal': 'Lokal' },
           { 'Ära': 'Kabelgebunden', 'Ungefähre Jahre': '1975–2000', 'Prägende Technik': 'X10, Insteon', 'Cloud oder lokal': 'Lokal' },
-          { 'Ära': 'Drahtloses Mesh', 'Ungefähre Jahre': '2001–2010', 'Prägende Technik': 'Z-Wave, Zigbee', 'Cloud oder lokal': 'Lokal' },
+          { 'Ära': 'Drahtloses Mesh', 'Ungefähre Jahre': '2004–2010', 'Prägende Technik': 'Z-Wave, Zigbee', 'Cloud oder lokal': 'Lokal' },
           { 'Ära': 'Cloud', 'Ungefähre Jahre': '2011–2021', 'Prägende Technik': 'Nest, Echo, HomeKit', 'Cloud oder lokal': 'Cloud' },
           { 'Ära': 'Interoperabilität', 'Ungefähre Jahre': '2022–2025', 'Prägende Technik': 'Matter, Thread', 'Cloud oder lokal': 'Beides' },
           { 'Ära': 'Lokale KI', 'Ungefähre Jahre': '2026+', 'Prägende Technik': 'Lokale LLMs, Home Assistant', 'Cloud oder lokal': 'Lokal' },
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Antes de X10 (1966-1969): prototipos únicos como ECHO IV y el Kitchen Computer',
           'X10 (1975): primera domótica masiva, por líneas eléctricas',
-          'Z-Wave (2001) y Zigbee (mediados de los 2000): mesh inalámbrico',
+          'Z-Wave (2004) y Zigbee (mediados de los 2000): mesh inalámbrico',
           'Era de la nube: Nest (2011), Amazon Echo (2014), Apple HomeKit (2014)',
           'Matter (2022): un estándar de interoperabilidad unificador',
           '2026: giro de vuelta al control local más IA en el dispositivo',
@@ -728,7 +728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Prototipos únicos como ECHO IV (1966) llegaron primero; X10 (1975) convirtió la domótica en producto',
           'X10 (1975) fue el primer sistema de domótica masivo, enviando señales por líneas eléctricas',
-          'Z-Wave (2001) y Zigbee (mediados de los 2000) trajeron redes mesh inalámbricas de bajo consumo',
+          'Z-Wave (2004) y Zigbee (mediados de los 2000) trajeron redes mesh inalámbricas de bajo consumo',
           'La era de la nube llegó con Nest (2011) y Amazon Echo y Apple HomeKit (2014)',
           'Matter (2022) añadió un estándar de interoperabilidad entre fabricantes',
           'En 2026 la tendencia gira de vuelta al control local con IA en el dispositivo',
@@ -763,9 +763,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wireless',
         title: 'Protocolos inalámbricos: Z-Wave y Zigbee',
         content:
-          '**Z-Wave (2001) y Zigbee (mediados de los 2000) introdujeron redes mesh inalámbricas de bajo consumo pensadas para dispositivos a batería y sensores.** Ambos siguen siendo protocolos locales clave hoy.',
+          '**Z-Wave (2004) y Zigbee (mediados de los 2000) introdujeron redes mesh inalámbricas de bajo consumo pensadas para dispositivos a batería y sensores.** Ambos siguen siendo protocolos locales clave hoy.',
         items: [
-          '**Z-Wave (2001):** un protocolo mesh de bajo consumo diseñado para dispositivos de control fiables.',
+          '**Z-Wave (2004):** un protocolo mesh de bajo consumo diseñado para dispositivos de control fiables. Zensys empezó a desarrollarlo en 1999; los primeros productos certificados llegaron hacia 2004.',
           '**Zigbee (mediados de los 2000):** un estándar mesh abierto de bajo consumo, muy usado para bombillas y sensores.',
           '**Aún relevante:** ambos son locales por defecto y sustentan los hubs modernos: consulta [protocolos del smart home explicados](/es/smart-home/smart-home-protocols-explained).',
         ],
@@ -817,7 +817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Era': 'Prototipos', 'Años aprox.': '1966–1974', 'Tecnología definitoria': 'ECHO IV, Kitchen Computer', 'Nube o local': 'Local' },
           { 'Era': 'Cableada', 'Años aprox.': '1975–2000', 'Tecnología definitoria': 'X10, Insteon', 'Nube o local': 'Local' },
-          { 'Era': 'Mesh inalámbrico', 'Años aprox.': '2001–2010', 'Tecnología definitoria': 'Z-Wave, Zigbee', 'Nube o local': 'Local' },
+          { 'Era': 'Mesh inalámbrico', 'Años aprox.': '2004–2010', 'Tecnología definitoria': 'Z-Wave, Zigbee', 'Nube o local': 'Local' },
           { 'Era': 'Nube', 'Años aprox.': '2011–2021', 'Tecnología definitoria': 'Nest, Echo, HomeKit', 'Nube o local': 'Nube' },
           { 'Era': 'Interoperabilidad', 'Años aprox.': '2022–2025', 'Tecnología definitoria': 'Matter, Thread', 'Nube o local': 'Ambos' },
           { 'Era': 'IA local', 'Años aprox.': '2026+', 'Tecnología definitoria': 'LLMs locales, Home Assistant', 'Nube o local': 'Local' },
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'X10 이전(1966–1969): ECHO IV와 Kitchen Computer 같은 단품 시제품',
           'X10(1975): 전력선을 통한 최초의 대중적 홈 자동화',
-          'Z-Wave(2001)와 Zigbee(2000년대 중반): 무선 메시',
+          'Z-Wave(2004)와 Zigbee(2000년대 중반): 무선 메시',
           '클라우드 시대: Nest(2011), Amazon Echo(2014), Apple HomeKit(2014)',
           'Matter(2022): 통합 상호운용성 표준',
           '2026년: 온디바이스 AI와 함께 로컬 제어로 회귀',
@@ -947,7 +947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'ECHO IV(1966) 같은 시제품이 먼저 나왔고, X10(1975)이 홈 오토메이션을 제품으로 만들었습니다',
           'X10(1975)는 전력선을 통해 신호를 전송하는 최초의 대중적 홈 자동화 시스템이었습니다',
-          'Z-Wave(2001)와 Zigbee(2000년대 중반)는 저전력 무선 메시 네트워크를 도입하였습니다',
+          'Z-Wave(2004)와 Zigbee(2000년대 중반)는 저전력 무선 메시 네트워크를 도입하였습니다',
           '클라우드 시대는 Nest(2011)와 Amazon Echo, Apple HomeKit(2014)과 함께 시작되었습니다',
           'Matter(2022)는 제조사 간 상호운용성 표준을 추가하였습니다',
           '2026년에는 온디바이스 AI를 통한 로컬 제어로의 회귀 추세가 뚜렷합니다',
@@ -982,9 +982,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wireless',
         title: '무선 프로토콜: Z-Wave와 Zigbee',
         content:
-          '**Z-Wave(2001)와 Zigbee(2000년대 중반)는 배터리 기기와 센서를 위해 구축된 저전력 무선 메시 네트워크를 도입하였습니다.** 두 프로토콜은 오늘날에도 핵심적인 로컬 프로토콜로 남아 있습니다.',
+          '**Z-Wave(2004)와 Zigbee(2000년대 중반)는 배터리 기기와 센서를 위해 구축된 저전력 무선 메시 네트워크를 도입하였습니다.** 두 프로토콜은 오늘날에도 핵심적인 로컬 프로토콜로 남아 있습니다.',
         items: [
-          '**Z-Wave(2001):** 신뢰할 수 있는 홈 제어 기기를 위해 설계된 저전력 메시 프로토콜입니다.',
+          '**Z-Wave(2004):** 신뢰할 수 있는 홈 제어 기기를 위해 설계된 저전력 메시 프로토콜입니다. Zensys가 1999년부터 개발했으며, 인증을 받은 첫 제품은 2004년경 등장했습니다.',
           '**Zigbee(2000년대 중반):** 전구와 센서에 널리 사용되는 개방형 저전력 메시 표준입니다.',
           '**여전히 유효합니다:** 두 프로토콜 모두 기본적으로 로컬이며 현대 허브의 기반이 됩니다 — [스마트 홈 프로토콜 설명](/ko/smart-home/smart-home-protocols-explained)을 참조하십시오.',
         ],
@@ -1036,7 +1036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '시대': '시제품', '대략적 연도': '1966–1974년', '핵심 기술': 'ECHO IV, Kitchen Computer', '클라우드 또는 로컬': '로컬' },
           { '시대': '유선', '대략적 연도': '1975–2000', '핵심 기술': 'X10, Insteon', '클라우드 또는 로컬': '로컬' },
-          { '시대': '무선 메시', '대략적 연도': '2001–2010', '핵심 기술': 'Z-Wave, Zigbee', '클라우드 또는 로컬': '로컬' },
+          { '시대': '무선 메시', '대략적 연도': '2004–2010', '핵심 기술': 'Z-Wave, Zigbee', '클라우드 또는 로컬': '로컬' },
           { '시대': '클라우드', '대략적 연도': '2011–2021', '핵심 기술': 'Nest, Echo, HomeKit', '클라우드 또는 로컬': '클라우드' },
           { '시대': '상호운용성', '대략적 연도': '2022–2025', '핵심 기술': 'Matter, Thread', '클라우드 또는 로컬': '양쪽 모두' },
           { '시대': '로컬 AI', '대략적 연도': '2026+', '핵심 기술': '로컬 LLM, Home Assistant', '클라우드 또는 로컬': '로컬' },
@@ -1135,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Avant X10 (1966-1969) : prototypes uniques comme ECHO IV et le Kitchen Computer',
           'X10 (1975) : première domotique grand public, par courant porteur',
-          'Z-Wave (2001) et Zigbee (milieu des années 2000) : mesh sans fil',
+          'Z-Wave (2004) et Zigbee (milieu des années 2000) : mesh sans fil',
           'Ère du cloud : Nest (2011), Amazon Echo (2014), Apple HomeKit (2014)',
           'Matter (2022) : un standard d\'interopérabilité unificateur',
           '2026 : retour au contrôle local plus l\'IA embarquée',
@@ -1166,7 +1166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Des prototypes uniques comme ECHO IV (1966) ont précédé X10 (1975), qui a fait de la domotique un produit',
           'X10 (1975) fut le premier système de domotique grand public, envoyant des signaux par courant porteur',
-          'Z-Wave (2001) et Zigbee (milieu des années 2000) ont apporté des réseaux mesh sans fil basse consommation',
+          'Z-Wave (2004) et Zigbee (milieu des années 2000) ont apporté des réseaux mesh sans fil basse consommation',
           'L\'ère du cloud est arrivée avec Nest (2011) puis Amazon Echo et Apple HomeKit (2014)',
           'Matter (2022) a ajouté un standard d\'interopérabilité entre fabricants',
           'En 2026 la tendance revient au contrôle local avec l\'IA embarquée',
@@ -1201,9 +1201,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wireless',
         title: 'Protocoles sans fil : Z-Wave et Zigbee',
         content:
-          '**Z-Wave (2001) et Zigbee (milieu des années 2000) ont introduit des réseaux mesh sans fil basse consommation conçus pour les appareils à pile et les capteurs.** Les deux restent des protocoles locaux essentiels aujourd\'hui.',
+          '**Z-Wave (2004) et Zigbee (milieu des années 2000) ont introduit des réseaux mesh sans fil basse consommation conçus pour les appareils à pile et les capteurs.** Les deux restent des protocoles locaux essentiels aujourd\'hui.',
         items: [
-          '**Z-Wave (2001) :** un protocole mesh basse consommation conçu pour des appareils de commande fiables.',
+          '**Z-Wave (2004) :** un protocole mesh basse consommation conçu pour des appareils de commande fiables. Zensys a commencé à le développer en 1999 ; les premiers produits certifiés sont apparus vers 2004.',
           '**Zigbee (milieu des années 2000) :** un standard mesh ouvert basse consommation, largement utilisé pour les ampoules et capteurs.',
           '**Toujours pertinents :** les deux sont locaux par défaut et sous-tendent les hubs modernes — voir [les protocoles de la maison connectée expliqués](/fr/smart-home/smart-home-protocols-explained).',
         ],
@@ -1255,7 +1255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Ère': 'Prototypes', 'Années approx.': '1966–1974', 'Technologie déterminante': 'ECHO IV, Kitchen Computer', 'Cloud ou local': 'Local' },
           { 'Ère': 'Filaire', 'Années approx.': '1975–2000', 'Technologie déterminante': 'X10, Insteon', 'Cloud ou local': 'Local' },
-          { 'Ère': 'Mesh sans fil', 'Années approx.': '2001–2010', 'Technologie déterminante': 'Z-Wave, Zigbee', 'Cloud ou local': 'Local' },
+          { 'Ère': 'Mesh sans fil', 'Années approx.': '2004–2010', 'Technologie déterminante': 'Z-Wave, Zigbee', 'Cloud ou local': 'Local' },
           { 'Ère': 'Cloud', 'Années approx.': '2011–2021', 'Technologie déterminante': 'Nest, Echo, HomeKit', 'Cloud ou local': 'Cloud' },
           { 'Ère': 'Interopérabilité', 'Années approx.': '2022–2025', 'Technologie déterminante': 'Matter, Thread', 'Cloud ou local': 'Les deux' },
           { 'Ère': 'IA locale', 'Années approx.': '2026+', 'Technologie déterminante': 'LLMs locaux, Home Assistant', 'Cloud ou local': 'Local' },
@@ -1354,7 +1354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'X10以前（1966〜1969年）：ECHO IVやKitchen Computerなどの一点物の試作機',
           'X10（1975）：電力線による初の普及型ホームオートメーション',
-          'Z-Wave（2001）と Zigbee（2000年代半ば）：無線メッシュ',
+          'Z-Wave（2004）と Zigbee（2000年代半ば）：無線メッシュ',
           'クラウド時代：Nest（2011）、Amazon Echo（2014）、Apple HomeKit（2014）',
           'Matter（2022）：統一的な相互運用規格',
           '2026：ローカル制御＋オンデバイスAIへの回帰',
@@ -1385,7 +1385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'ECHO IV（1966年）などの試作機が先にあり、X10（1975年）がホームオートメーションを製品にした',
           'X10（1975）は電力線で信号を送る初の普及型ホームオートメーションだった',
-          'Z-Wave（2001）と Zigbee（2000年代半ば）は低消費電力の無線メッシュをもたらした',
+          'Z-Wave（2004）と Zigbee（2000年代半ば）は低消費電力の無線メッシュをもたらした',
           'クラウド時代は Nest（2011）、Amazon Echo・Apple HomeKit（2014）で到来した',
           'Matter（2022）はメーカー横断の相互運用規格を加えた',
           '2026年、流れはオンデバイスAIによるローカル制御へ戻っている',
@@ -1420,9 +1420,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wireless',
         title: '無線プロトコル：Z-Wave と Zigbee',
         content:
-          '**Z-Wave（2001）と Zigbee（2000年代半ば）は、電池機器やセンサー向けに作られた低消費電力の無線メッシュネットワークを導入しました。** 両者は今日も中核的なローカルプロトコルです。',
+          '**Z-Wave（2004）と Zigbee（2000年代半ば）は、電池機器やセンサー向けに作られた低消費電力の無線メッシュネットワークを導入しました。** 両者は今日も中核的なローカルプロトコルです。',
         items: [
-          '**Z-Wave（2001）：** 信頼性の高い制御機器向けに設計された低消費電力のメッシュプロトコル。',
+          '**Z-Wave（2004）：** 信頼性の高い制御機器向けに設計された低消費電力のメッシュプロトコル。 Zensysが1999年に開発を始め、認証済みの最初の製品は2004年頃に登場しました。',
           '**Zigbee（2000年代半ば）：** 電球やセンサーに広く使われる、低消費電力のオープンなメッシュ規格。',
           '**今も重要：** どちらも標準でローカルであり、現代のハブの基盤——[スマートホームのプロトコル解説](/ja/smart-home/smart-home-protocols-explained)を参照。',
         ],
@@ -1474,7 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '時代': '試作機', 'おおよその年': '1966〜1974年', '象徴的な技術': 'ECHO IV、Kitchen Computer', 'クラウドかローカルか': 'ローカル' },
           { '時代': '有線', 'おおよその年': '1975–2000', '象徴的な技術': 'X10, Insteon', 'クラウドかローカルか': 'ローカル' },
-          { '時代': '無線メッシュ', 'おおよその年': '2001–2010', '象徴的な技術': 'Z-Wave, Zigbee', 'クラウドかローカルか': 'ローカル' },
+          { '時代': '無線メッシュ', 'おおよその年': '2004–2010', '象徴的な技術': 'Z-Wave, Zigbee', 'クラウドかローカルか': 'ローカル' },
           { '時代': 'クラウド', 'おおよその年': '2011–2021', '象徴的な技術': 'Nest, Echo, HomeKit', 'クラウドかローカルか': 'クラウド' },
           { '時代': '相互運用', 'おおよその年': '2022–2025', '象徴的な技術': 'Matter, Thread', 'クラウドかローカルか': '両方' },
           { '時代': 'ローカルAI', 'おおよその年': '2026+', '象徴的な技術': 'ローカルLLM, Home Assistant', 'クラウドかローカルか': 'ローカル' },
@@ -1573,7 +1573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Antes do X10 (1966–1969): protótipos únicos como o ECHO IV e o Kitchen Computer',
           'X10 (1975): primeira automação residencial em massa, por linhas elétricas',
-          'Z-Wave (2001) e Zigbee (meados dos anos 2000): mesh sem fio',
+          'Z-Wave (2004) e Zigbee (meados dos anos 2000): mesh sem fio',
           'Era da nuvem: Nest (2011), Amazon Echo (2014), Apple HomeKit (2014)',
           'Matter (2022): um padrão de interoperabilidade unificador',
           '2026: virada de volta ao controle local mais IA no dispositivo',
@@ -1604,7 +1604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Protótipos únicos como o ECHO IV (1966) vieram primeiro; o X10 (1975) transformou a automação residencial em produto',
           'O X10 (1975) foi o primeiro sistema de automação residencial em massa, enviando sinais por linhas elétricas',
-          'Z-Wave (2001) e Zigbee (meados dos anos 2000) trouxeram redes mesh sem fio de baixo consumo',
+          'Z-Wave (2004) e Zigbee (meados dos anos 2000) trouxeram redes mesh sem fio de baixo consumo',
           'A era da nuvem chegou com o Nest (2011) e o Amazon Echo e o Apple HomeKit (2014)',
           'O Matter (2022) adicionou um padrão de interoperabilidade entre fabricantes',
           'Em 2026 a tendência volta ao controle local com IA no dispositivo',
@@ -1639,9 +1639,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wireless',
         title: 'Protocolos sem fio: Z-Wave e Zigbee',
         content:
-          '**Z-Wave (2001) e Zigbee (meados dos anos 2000) introduziram redes mesh sem fio de baixo consumo feitas para dispositivos a bateria e sensores.** Ambos continuam sendo protocolos locais essenciais hoje.',
+          '**Z-Wave (2004) e Zigbee (meados dos anos 2000) introduziram redes mesh sem fio de baixo consumo feitas para dispositivos a bateria e sensores.** Ambos continuam sendo protocolos locais essenciais hoje.',
         items: [
-          '**Z-Wave (2001):** um protocolo mesh de baixo consumo projetado para dispositivos de controle confiáveis.',
+          '**Z-Wave (2004):** um protocolo mesh de baixo consumo projetado para dispositivos de controle confiáveis. A Zensys começou a desenvolvê-lo em 1999; os primeiros produtos certificados surgiram por volta de 2004.',
           '**Zigbee (meados dos anos 2000):** um padrão mesh aberto de baixo consumo, muito usado para lâmpadas e sensores.',
           '**Ainda relevantes:** ambos são locais por padrão e sustentam os hubs modernos — veja [protocolos da casa inteligente explicados](/pt/smart-home/smart-home-protocols-explained).',
         ],
@@ -1693,7 +1693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Era': 'Protótipos', 'Anos aprox.': '1966–1974', 'Tecnologia definidora': 'ECHO IV, Kitchen Computer', 'Nuvem ou local': 'Local' },
           { 'Era': 'Com fio', 'Anos aprox.': '1975–2000', 'Tecnologia definidora': 'X10, Insteon', 'Nuvem ou local': 'Local' },
-          { 'Era': 'Mesh sem fio', 'Anos aprox.': '2001–2010', 'Tecnologia definidora': 'Z-Wave, Zigbee', 'Nuvem ou local': 'Local' },
+          { 'Era': 'Mesh sem fio', 'Anos aprox.': '2004–2010', 'Tecnologia definidora': 'Z-Wave, Zigbee', 'Nuvem ou local': 'Local' },
           { 'Era': 'Nuvem', 'Anos aprox.': '2011–2021', 'Tecnologia definidora': 'Nest, Echo, HomeKit', 'Nuvem ou local': 'Nuvem' },
           { 'Era': 'Interoperabilidade', 'Anos aprox.': '2022–2025', 'Tecnologia definidora': 'Matter, Thread', 'Nuvem ou local': 'Ambos' },
           { 'Era': 'IA local', 'Anos aprox.': '2026+', 'Tecnologia definidora': 'LLMs locais, Home Assistant', 'Nuvem ou local': 'Local' },
@@ -1792,7 +1792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'X10 之前（1966–1969年）：ECHO IV 和 Kitchen Computer 等单件原型机',
           'X10（1975）：首个大众化家庭自动化，经电力线',
-          'Z-Wave（2001）与 Zigbee（2000年代中期）：无线网状',
+          'Z-Wave（2004）与 Zigbee（2000年代中期）：无线网状',
           '云端时代：Nest（2011）、Amazon Echo（2014）、Apple HomeKit（2014）',
           'Matter（2022）：统一的互操作标准',
           '2026：回归本地控制并加上设备端AI',
@@ -1823,7 +1823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'ECHO IV（1966年）等原型机在先，X10（1975年）使家庭自动化成为产品',
           'X10（1975）是首个大众化的家庭自动化系统，通过电力线传送信号',
-          'Z-Wave（2001）与 Zigbee（2000年代中期）带来低功耗无线网状网络',
+          'Z-Wave（2004）与 Zigbee（2000年代中期）带来低功耗无线网状网络',
           '云端时代随 Nest（2011）以及 Amazon Echo、Apple HomeKit（2014）到来',
           'Matter（2022）增加了跨厂商的互操作标准',
           '2026年趋势摆回到借助设备端AI的本地控制',
@@ -1858,9 +1858,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'wireless',
         title: '无线协议：Z-Wave 与 Zigbee',
         content:
-          '**Z-Wave（2001）与 Zigbee（2000年代中期）引入了为电池设备和传感器打造的低功耗无线网状网络。** 两者至今仍是核心的本地协议。',
+          '**Z-Wave（2004）与 Zigbee（2000年代中期）引入了为电池设备和传感器打造的低功耗无线网状网络。** 两者至今仍是核心的本地协议。',
         items: [
-          '**Z-Wave（2001）：** 为可靠控制设备设计的低功耗网状协议。',
+          '**Z-Wave（2004）：** 为可靠控制设备设计的低功耗网状协议。 Zensys 自1999年起开发，首批认证产品约在2004年出现。',
           '**Zigbee（2000年代中期）：** 一种开放的低功耗网状标准，广泛用于灯泡和传感器。',
           '**仍然重要：** 二者默认本地，是现代中枢的基础——参见[智能家居协议详解](/zh/smart-home/smart-home-protocols-explained)。',
         ],
@@ -1912,7 +1912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '时代': '原型机', '大致年份': '1966–1974年', '标志性技术': 'ECHO IV、Kitchen Computer', '云端还是本地': '本地' },
           { '时代': '有线', '大致年份': '1975–2000', '标志性技术': 'X10、Insteon', '云端还是本地': '本地' },
-          { '时代': '无线网状', '大致年份': '2001–2010', '标志性技术': 'Z-Wave、Zigbee', '云端还是本地': '本地' },
+          { '时代': '无线网状', '大致年份': '2004–2010', '标志性技术': 'Z-Wave、Zigbee', '云端还是本地': '本地' },
           { '时代': '云端', '大致年份': '2011–2021', '标志性技术': 'Nest、Echo、HomeKit', '云端还是本地': '云端' },
           { '时代': '互操作', '大致年份': '2022–2025', '标志性技术': 'Matter、Thread', '云端还是本地': '两者' },
           { '时代': '本地AI', '大致年份': '2026+', '标志性技术': '本地LLM、Home Assistant', '云端还是本地': '本地' },
