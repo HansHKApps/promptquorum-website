@@ -427,7 +427,7 @@ const response = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     educationalLevel: 'Intermediate',
     audience: 'Leserinnen und Leser, die verstehen möchten, was das Snug Protocol für KI-erstellte persönliche Apps vorschlägt, wie die Architektur funktioniert und was sich heute davon bestätigen lässt',
     primaryTerm: 'Snug Protocol',
@@ -436,7 +436,7 @@ const response = {
     intro: 'Das Snug Protocol ([snugprotocol.org](https://snugprotocol.org)) ist eine offene Spezifikation für kleine Apps, die ein KI-Agent aus einer Beschreibung erstellt, die zur Laufzeit das KI-Modell des Hosts mitnutzen und deren Daten in einer einzigen Datei liegen, die dem Nutzer gehört. Dieser Beitrag erklärt die Architektur und trennt dann, was das Projekt dokumentiert, von dem, was noch unbelegt ist.',
     metaDescription: 'Snug Protocol: frühes offenes Protokoll für KI-erstellte Apps in einer portablen .snug-Datei. Funktionsweise, lokale Modelle, Sicherheit, offene Fragen.',
     twitterDescription: 'Snug Protocol: ein frühes offenes Protokoll für KI-erstellte persönliche Apps in einer portablen .snug-Datei. Funktionsweise, Sicherheitsdesign und was noch unbelegt ist.',
-    readTime: '9 Min. Lesezeit',
+    readTime: '13 Min. Lesezeit',
     targetKeywords: [
       'Snug Protocol',
       'Snug Protocol erklärt',
@@ -462,6 +462,11 @@ const response = {
       { label: 'Zusammenfassung', anchor: 'tldr' },
       { label: 'Was ist das Snug Protocol?', anchor: 'what-is-snug' },
       { label: 'Wie die Teile zusammenspielen', anchor: 'how-it-works' },
+      { label: 'Die sechs Teile der Spezifikation', anchor: 'spec-parts' },
+      { label: 'So sehen eine App und eine Nachricht aus', anchor: 'example' },
+      { label: 'Laufzeitverträge und die App-Chat-Oberfläche', anchor: 'runtime-contracts' },
+      { label: 'Snug im Vergleich zu Vibe Coding mit Tauri oder Electron', anchor: 'vs-vibe-coding' },
+      { label: 'Sollten Vibe-Coding-Entwickler wechseln?', anchor: 'switch-or-stay' },
       { label: 'Lokale und gehostete Modelle', anchor: 'local-and-hosted' },
       { label: 'Sicherheitsdesign und seine Grenzen', anchor: 'security' },
       { label: 'Bezugsquellen', anchor: 'get-it' },
@@ -486,6 +491,7 @@ const response = {
           'Die Spezifikation liegt in Version 1.0 vor; der Entwickler beschreibt die Implementierung als Pre-1.0',
           'Ein zweiter Host, ein unabhängiges Audit oder eine externe Nutzerbasis wurden nicht gefunden',
           'Die Desktop-App läuft nur unter macOS; Windows und Linux sind nach 1.0 geplant',
+          'Für Entwickler, die Vibe-Coding-Apps mit Tauri oder Electron ausliefern, passt es zu kleinen KI-gestützten persönlichen Werkzeugen, nicht zu Produkten für die Öffentlichkeit',
         ],
       },
       overview: {
@@ -505,8 +511,134 @@ const response = {
         items: [
           '**KI zur Laufzeit:** Der Host stellt das Modell bereit, während die App läuft; ein Modellwechsel erfordert laut Projekt daher keinen Neubau der App',
           '**Isolierter Speicher:** Jede App erhält innerhalb der Nutzerdatei einen eigenen Datenbank-Namensraum',
-          '**Die Spezifikation:** sechs Teile, die das Wire-Protokoll, die portable Nutzerdatenbank, verbundene Apps, Laufzeitverträge und die App-Chat-Oberfläche, Verbindungen verknüpfter Geräte sowie die Konformität abdecken. Diese Rezension hat die Laufzeitverträge nicht im Detail geprüft',
+          '**Die Spezifikation:** sechs Teile, die im nächsten Abschnitt einzeln zusammengefasst werden',
           '**Für Entwickler:** Die Dokumentation enthält Anleitungen zum Bau eines Hosts und zum Einbetten von Snug in ein anderes Produkt; keine davon wurde hier getestet',
+        ],
+      },
+      specParts: {
+        id: 'spec-parts',
+        title: 'Die sechs Teile der Spezifikation',
+        content: '**Die Spezifikation besteht aus sechs Teilen, und jeder legt eine andere Ebene fest, auf der Apps, Hosts und die Nutzerdatei zusammenspielen.** Für diesen Beitrag wurden Teil IV und die Konzeptseiten vollständig gelesen; von den übrigen Teilen wurde nur die [Spezifikationsübersicht](https://snugprotocol.org/docs/spec/) gelesen, die Titel und Hinweise zur Stabilität enthält.',
+        items: [
+          '**Teil I, das Wire-Protokoll:** die Kern-Frames, der Chat-Envelope und die Regeln R1 bis R7. Die Frame-Paare für Netzwerk und URL-Öffnen kamen mit Spezifikation v0.3 hinzu und sind in 1.0 normativ',
+          '**Teil II, die portable Nutzerdatenbank:** das Speicherschema (Version 6), die Benennung der `.snug`-Datei und `SNUGENC1`',
+          '**Teil III, verbundene Apps:** Anforderungen, Berechtigungen, Verwahrung von Zugangsdaten und der Executor',
+          '**Teil IV, Laufzeitverträge und die App-Chat-Oberfläche:** wie eine installierte App mit der KI spricht, ohne ihren Bauverlauf mitzuführen; dazu ein eigener Abschnitt weiter unten',
+          '**Teil V, Verbindungen verknüpfter Geräte:** Die Spezifikation nennt dies die Sidecar-Oberfläche',
+          '**Teil VI, Konformität:** was eine kompatible Implementierung leisten muss; die Übersicht nennt nur den Titel',
+        ],
+        note: 'Laut Übersicht sind die Teile I bis V in 1.0 normativ, und der Abschnitt zu dauerhaften Freigaben ist als vorläufig gekennzeichnet.',
+      },
+      example: {
+        id: 'example',
+        title: 'So sehen eine App und eine Nachricht aus',
+        content: '**Eine App ist eine einzelne HTML-Datei, die über 13 typisierte Frames mit ihrem Host spricht, veröffentlicht als JSON-Schemas.** Die Frames gehören zu sechs Familien, und die App greift weder auf das Netzwerk noch direkt auf den Modellanbieter zu.',
+        items: [
+          '**Handshake:** `snug:host-ready` (der Host meldet seine Instanz-ID, Protokollversionen und Fähigkeiten) und `snug:app-announce` (die App stellt sich vor)',
+          '**Agent-Brücke:** `snug:app-message`, `snug:app-response` und `snug:app-cancel`, die Anfragen an den KI-Agenten des Hosts übertragen',
+          '**Speicher:** `snug:db-request` und `snug:db-response`, die vom Host vermitteltes SQL auf den eigenen Tabellen der App ausführen',
+          '**Netzwerk:** `snug:net-request` und `snug:net-response`, der einzige Weg nach außen, beschränkt auf vom Nutzer freigegebene Hosts',
+          '**Navigation:** `snug:open-url-request` und `snug:open-url-result`, wobei der Host den Browser erst nach eigener Bestätigung öffnet',
+          '**Ereignisse:** `snug:host-event` und `snug:app-event`, ein offener Kanal für Signale zu Design, Sichtbarkeit und Größenänderung; unbekannte Ereignisse werden ignoriert',
+        ],
+        codeLanguage: 'typescript',
+        codeBlock: `// 1. Seite der App. Fragmente aus der Anleitung „Build your first app“ des Projekts.
+const { isReady, sendMessage } = useSnugApp({
+  appId: 'pocket-chess-coach',
+  displayName: 'Pocket Chess Coach',
+})
+const reply = await sendMessage('opponent-move', { lastMove: 'e7e5' })
+if (reply.ok) applyMove(reply.data.move)
+
+const db = useAppDB()
+await db.exec('INSERT INTO games (pgn, played_at) VALUES (?, ?)', [pgn, Date.now()])
+
+// 2. Auf der Leitung. ILLUSTRATIV: Die Feldnamen folgen dem veröffentlichten
+// JSON-Schema; jeder Wert ist erfunden. Die Dokumentation zeigt keine Beispielnachricht.
+const request = {
+  v: 1,
+  type: 'snug:app-message',
+  requestId: 'req-001',
+  instanceId: 'host-instance-id',
+  appId: 'pocket-chess-coach',
+  action: 'opponent-move',
+  payload: { lastMove: 'e7e5' },
+}
+const response = {
+  v: 1,
+  type: 'snug:app-response',
+  requestId: 'req-001',
+  ok: true,
+  streaming: false,
+  data: { move: 'g1f3' },
+}`,
+        note: 'Laut Schema-Referenz akzeptiert eine Anfrage außerdem die optionalen Felder responseSchema und state. Eine Antwort gibt es in drei Formen: gestreamter Text, ein abschließendes Datenobjekt oder ein typisierter Fehler mit Code, Meldung und einem Retryable-Flag.',
+      },
+      runtimeContracts: {
+        id: 'runtime-contracts',
+        title: 'Laufzeitverträge und die App-Chat-Oberfläche',
+        content: '**Ein Laufzeitvertrag ist eine kleine, vom Host gehaltene JSON-Beschreibung dessen, was eine App ist und wie eine gute Antwort aussieht, und er ersetzt bei jedem Laufzeit-Turn die langen Bauanweisungen.** Die [Spezifikation von Teil IV](https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/) definiert ihn zusammen mit einem optionalen Chat neben jeder installierten App.',
+        items: [
+          '**Aufbau:** ein striktes JSON-Objekt mit einem Pflichtfeld `overview` von 1 bis 600 Zeichen; optionale Felder für Tonfall, Zustand pro Turn und Antwortformat; bis zu 16 Einstellungen; und eine optionale Ausgabeobergrenze von 256 bis 8.192 Token, die die Ausgabe nur verkleinern kann. Der gesamte Vertrag darf 2.560 Byte nicht überschreiten',
+          '**Verwahrung:** Der Host weist Verträge zu, eine App kann keinen mitliefern. Verträge werden pro App-Version gespeichert und folgen Änderungen und Rücksetzungen. Ein importierter Vertrag wird verworfen, sofern der Hub nicht bereits einen identischen hält, sodass eine fremde Datei keine Anweisungen einschleusen kann',
+          '**Warum das wichtig ist:** Ein Turn enthält den Vertrag und die Nutzlast der Aktion, nicht das Bau-Gespräch; dieselbe App kann daher auf einem großen gehosteten oder einem kleinen lokalen Modell laufen. Laut Projekt spart die Referenzimplementierung etwa ein Kilobyte pro Turn; diese Zahl wurde nicht getestet',
+          '**Chat-Oberfläche:** Jede Nachricht wird einer von acht Absichten in vier Bahnen zugeordnet: Daten, Funktion, Anbieter und Antwort. Schlägt die Klassifizierung fehl, stellt der Host eine Rückfrage, statt eine Bahn als Vorgabe zu wählen, und wählt nie die Bahn, die Code schreibt',
+          '**Datenbahn:** Lesezugriffe laufen auf einer Wegwerfkopie der eigenen Datenbank der App mit begrenzten Ergebnissen. Schreibzugriffe folgen dem Ablauf Vorschlagen, Vorschau, Freigabe und erneute Validierung, und der Host bricht ab, wenn sich die Zahl der betroffenen Zeilen zwischen Vorschau und Ausführung ändert',
+          '**Funktionsbahn:** Änderungen an der App selbst erfolgen ohne Bestätigungsschritt. Die Schutzmaßnahmen sind Versionierung, ein sichtbares Neuladen und Zurücksetzen, und die Spezifikation verlangt von Hosts den Hinweis, dass dies von der Datenbahn abweicht',
+          '**Nicht vertrauenswürdige Daten:** Prompts, die gespeicherte Daten enthalten, müssen diese als nicht vertrauenswürdig kennzeichnen und darin enthaltenen Trennzeichen-Text entschärfen',
+        ],
+        note: 'Gelesen auf der Seite zu Teil IV und der Konzeptseite zu Laufzeitverträgen. Das Verhalten wurde nicht getestet, und die Spezifikation räumt selbst ein, dass der Vergleich von Zeilenzahlen statt von Zeilen eine bekannte Einschränkung dieser Revision ist.',
+      },
+      vsVibeCoding: {
+        id: 'vs-vibe-coding',
+        title: 'Snug im Vergleich zu Vibe Coding mit Tauri oder Electron',
+        content: '**Für Entwickler, die Apps mit Claude oder Codex bauen und mit Tauri oder Electron ausliefern, tauscht Snug Verbreitung und Kontrolle gegen einen deutlich leichteren Weg, kleine KI-gestützte Werkzeuge bereitzustellen.** Es ersetzt diesen Arbeitsablauf heute nicht und konkurriert nur bei einer schmalen Klasse von Apps mit ihm.',
+        columns: ['Bereich', 'Tauri/Electron-App', 'Snug-App'],
+        rows: [
+          { 'Bereich': 'Ergebnis', 'Tauri/Electron-App': 'Native Binärdatei pro App', 'Snug-App': 'Eine HTML-Datei in einem Host' },
+          { 'Bereich': 'Auslieferung', 'Tauri/Electron-App': 'Jede App bauen, signieren, aktualisieren', 'Snug-App': 'Host bindet die Datei ein' },
+          { 'Bereich': 'KI-Zugang', 'Tauri/Electron-App': 'Eigene Schlüssel, Proxy oder Nutzerschlüssel', 'Snug-App': 'Host stellt Modell, keine Schlüssel' },
+          { 'Bereich': 'Daten', 'Tauri/Electron-App': 'Speicher nach eigenem Entwurf', 'Snug-App': 'Isolierte Tabellen in .snug' },
+          { 'Bereich': 'Netzwerk', 'Tauri/Electron-App': 'Was Ihr Code eben tut', 'Snug-App': 'Freigegebene Hosts, nur über Host' },
+          { 'Bereich': 'Native APIs', 'Tauri/Electron-App': 'Voller Zugriff', 'Snug-App': 'Nur, was der Host bereitstellt' },
+          { 'Bereich': 'Plattformen', 'Tauri/Electron-App': 'macOS, Windows, Linux', 'Snug-App': 'macOS-App, Browser-Demo' },
+          { 'Bereich': 'Zielgruppe', 'Tauri/Electron-App': 'Jeder kann sie installieren', 'Snug-App': 'Braucht einen Snug-Host' },
+          { 'Bereich': 'Reife', 'Tauri/Electron-App': 'Etablierte Werkzeuge', 'Snug-App': 'Pre-1.0, ein Maintainer' },
+        ],
+        note: 'Die Snug-Spalte gibt die eigenen Dokumente des Projekts wieder; PromptQuorum hat in Snug keine App gebaut. Die Spalte zu Tauri und Electron beschreibt den allgemeinen Ansatz, nicht eine bestimmte App.',
+      },
+      switchOrStay: {
+        id: 'switch-or-stay',
+        title: 'Sollten Vibe-Coding-Entwickler wechseln?',
+        content: '**Verschieben Sie nur die Apps, die passen: kleine persönliche oder Team-Werkzeuge, die vor allem ein KI-Modell aufrufen und ihre eigenen Daten halten.** Bleiben Sie bei Tauri oder Electron für alles, was Sie verkaufen, an die breite Öffentlichkeit ausliefern oder unter Windows oder Linux brauchen.',
+        subsections: [
+          {
+            title: 'Wo Snug besser ist',
+            list: [
+              '**KI ohne Schlüsselverwaltung:** Die App sieht weder den Modellanbieter noch dessen Schlüssel noch, welches Modell geantwortet hat; Sie müssen also nicht entscheiden, wie Schlüssel zum Modell gelangen',
+              '**Nichts pro App auszuliefern:** kein Installer, keine Signierung und kein Update-Kanal für jedes kleine Werkzeug; der Host bindet die HTML-Datei ein',
+              '**Daten in Nutzerhand:** eine exportierbare SQLite-Datei statt eines Speicher- und Exportkonzepts in jeder App',
+              '**Sandbox mit Verbot als Standard:** laut dem eigenen Threat Model des Projekts, das nicht unabhängig geprüft ist, kein direkter Netzwerkzugriff und keine Zugangsdaten in der App',
+              '**Modellwechsel ohne Neubau:** Der Laufzeitvertrag lässt den Nutzer pro App ein Spitzenmodell oder ein kleines lokales Modell wählen',
+            ],
+          },
+          {
+            title: 'Wo es schlechter ist',
+            list: [
+              '**Reichweite:** Es gibt nur eine macOS-App und eine Browser-Demo, Ihre Nutzer brauchen einen Host, und in den gelesenen Dokumenten wurde weder ein Store noch ein Bezahlmechanismus gefunden',
+              '**Kontrolle:** keine beliebigen Netzwerkaufrufe, keine nativen APIs und kein eigenes Backend; Sie arbeiten innerhalb dessen, was der Host bereitstellt',
+              '**Ihre eigene Toolchain:** In der Anleitung zur ersten App schreibt der Builder-Agent des Hosts die Datei aus Ihrer Beschreibung, sodass Ihr eigenes Claude- oder Codex-Setup, Ihre Tests und Ihre CI nicht direkt übertragbar sind',
+              '**Reife:** Version 0.1.3, ein Maintainer, kein zweiter Host und kein unabhängiges Audit, sodass die Portabilität zwischen Hosts unbelegt ist',
+            ],
+          },
+          {
+            title: 'Eine vernünftige Entscheidungshilfe',
+            list: [
+              'Wählen Sie ein kleines persönliches Werkzeug, das Sie sonst verpacken würden, und vergleichen Sie den Aufwand, es in Snug neu zu bauen',
+              'Bleiben Sie bei Tauri oder Electron, wenn das Publikum die Öffentlichkeit ist, die App native Funktionen braucht oder Sie heute Windows oder Linux benötigen',
+              'PromptQuorum hat diesen Vergleich nicht durchgeführt; verstehen Sie die Tabelle oben daher als Lektüre der Dokumentation',
+            ],
+          },
         ],
       },
       localAndHosted: {
@@ -575,7 +707,8 @@ const response = {
           '**Verhalten im Praxistest:** PromptQuorum hat weder die macOS-App noch den Playground installiert oder ausgeführt',
           '**Verbreitung:** Weder eine zweite Host-Implementierung noch Drittnutzer wurden gefunden',
           '**Sicherheit:** kein unabhängiges Audit und kein Penetrationstest, und das lange Threat Model wurde nur teilweise gelesen',
-          '**Vom Projekt berichtete Angaben:** Zahlen zu Einsparungen oder Geschwindigkeit aus dem eigenen Material des Projekts wurden nicht getestet',
+          '**Vom Projekt berichtete Angaben:** Zahlen zu Einsparungen oder Geschwindigkeit aus dem eigenen Material des Projekts, etwa die rund 1 KB Ersparnis pro Laufzeit-Turn, wurden nicht getestet',
+          '**Tiefe der Spezifikation:** Teil IV und die Konzeptseiten wurden vollständig gelesen; die übrigen Teile nur als Titel und Hinweise zur Stabilität, und es wurden nur die Schemas für zwei Frames geprüft',
           '**Portabilität in der Praxis:** Das Format ist für den Wechsel zwischen Hosts spezifiziert, doch ein Wechsel zwischen zwei unabhängigen Hosts ließ sich nicht prüfen',
         ],
       },
@@ -601,6 +734,7 @@ const response = {
               'KI-erstellte persönliche Werkzeuge als Datei unter Ihrer Kontrolle behalten möchten',
               'KI-Produkte entwickeln und ein einbettbares Design studieren wollen',
               'einen Mac nutzen und mit Pre-1.0-Software zurechtkommen',
+              'bereits kleine KI-Werkzeuge per Vibe Coding bauen und sich das Verpacken sparen möchten (siehe den Abschnitt zum Wechsel oben)',
             ],
           },
           {
@@ -631,6 +765,9 @@ const response = {
           { q: 'Kann ich eine .snug-Datei auf einen anderen Host übertragen?', a: 'Das Format ist genau dafür spezifiziert, doch bislang wurden nur die eigenen Hosts des Projekts gefunden; ein Wechsel zwischen unabhängigen Implementierungen ist daher nicht belegt.' },
           { q: 'Ist Snug ein Industriestandard?', a: 'Dafür gibt es bislang keine Belege. Treffender ist die Beschreibung als entstehendes offenes Protokoll mit einem Maintainer und einer veröffentlichten 1.0-Spezifikation.' },
           { q: 'Können Entwickler Snug in ihr eigenes Produkt einbetten?', a: 'Die Dokumentation enthält Anleitungen zum Bau eines Hosts und zum Einbetten von Snug, und das Repository veröffentlicht TypeScript-Pakete; diese Rezension hat sie nicht getestet.' },
+          { q: 'Wie sieht eine Snug-Nachricht aus?', a: 'Jede Nachricht ist ein versionierter JSON-Frame mit einem Typ wie snug:app-message, einer Anfrage-ID, der App-ID und einer Aktion. Die Spezifikation veröffentlicht ein JSON-Schema für alle 13 Frame-Typen, zeigt in ihrer Dokumentation aber keine Beispielnachricht; das Beispiel in diesem Beitrag verwendet daher erfundene Werte.' },
+          { q: 'Was ist ein Snug-Laufzeitvertrag?', a: 'Er ist eine kleine, vom Host gehaltene JSON-Beschreibung, begrenzt auf 2.560 Byte, dessen, was eine App ist und wie eine gute Antwort aussieht. Jeder Laufzeit-Turn wird daraus aufgebaut statt aus dem Bau-Gespräch.' },
+          { q: 'Sollte ich meine Tauri- oder Electron-Apps auf Snug umstellen?', a: 'Nicht pauschal. Snug passt zu kleinen KI-gestützten persönlichen Werkzeugen, bei denen Sie Verpackung, Schlüsselverwaltung und Speicherkonzept sparen möchten. Bleiben Sie bei Tauri oder Electron für Apps, die Sie verkaufen, an die Öffentlichkeit ausliefern oder unter Windows, Linux oder mit nativen APIs benötigen.' },
         ],
       },
       sources: {
@@ -641,6 +778,10 @@ const response = {
           { url: 'https://snugprotocol.org/download/', title: 'Snug Download', description: 'Die macOS-Download-Seite mit den Anforderungen an Modell und API-Schlüssel.' },
           { url: 'https://snugprotocol.org/docs/', title: 'Snug-Dokumentation', description: 'Konzepte, die sechsteilige Spezifikation und die Leitfäden für Implementierer.' },
           { url: 'https://github.com/snugprotocol/snug', title: 'Snug auf GitHub', description: 'Das MIT-lizenzierte Repository, die Release-Historie und das Threat Model.' },
+          { url: 'https://snugprotocol.org/docs/concepts/envelopes-and-frames/', title: 'Envelopes und Frames', description: 'Die 13 Frame-Typen und ihre Familien.' },
+          { url: 'https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/', title: 'Spezifikation Teil IV', description: 'Laufzeitverträge und die App-Chat-Oberfläche.' },
+          { url: 'https://snugprotocol.org/docs/get-started/first-app/', title: 'Die erste App bauen', description: 'Der minimale App-Aufbau und die oben zitierten Code-Fragmente.' },
+          { url: 'https://snugprotocol.org/docs/spec/schemas/', title: 'Schema-Referenz', description: 'JSON-Schemas für die Frames, darunter app-message und app-response.' },
         ],
       },
       relatedReading: {
@@ -659,7 +800,7 @@ const response = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     educationalLevel: 'Intermediate',
     audience: 'Lecteurs qui veulent comprendre ce que Snug Protocol propose pour les applications personnelles créées par IA, comment sa conception fonctionne et ce qui peut en être confirmé aujourd\'hui',
     primaryTerm: 'Snug Protocol',
@@ -668,7 +809,7 @@ const response = {
     intro: 'Snug Protocol ([snugprotocol.org](https://snugprotocol.org)) est une spécification ouverte pour de petites applications qu\'un agent IA construit à partir d\'une description, qui empruntent le modèle d\'IA de l\'hôte pendant leur exécution et qui conservent leurs données dans un seul fichier appartenant à l\'utilisateur. Cet article explique la conception, puis sépare ce que le projet documente de ce qui reste à prouver.',
     metaDescription: 'Snug Protocol est un protocole ouvert récent pour des applications créées par IA, stockées dans un fichier .snug portable : fonctionnement, limites.',
     twitterDescription: 'Snug Protocol : un protocole ouvert récent pour des applications personnelles créées par IA, stockées dans un fichier .snug portable. Fonctionnement, sécurité et points non prouvés.',
-    readTime: '9 min de lecture',
+    readTime: '13 min de lecture',
     targetKeywords: [
       'Snug Protocol',
       'Snug Protocol expliqué',
@@ -694,6 +835,11 @@ const response = {
       { label: 'Points clés', anchor: 'tldr' },
       { label: 'Qu\'est-ce que Snug Protocol ?', anchor: 'what-is-snug' },
       { label: 'Comment les éléments s\'articulent', anchor: 'how-it-works' },
+      { label: 'Les six parties de la spécification', anchor: 'spec-parts' },
+      { label: 'À quoi ressemblent une application et un message', anchor: 'example' },
+      { label: 'Contrats d\'exécution et interface de conversation', anchor: 'runtime-contracts' },
+      { label: 'Snug face au vibe coding avec Tauri ou Electron', anchor: 'vs-vibe-coding' },
+      { label: 'Un développeur de vibe coding doit-il changer ?', anchor: 'switch-or-stay' },
       { label: 'Modèles locaux et hébergés', anchor: 'local-and-hosted' },
       { label: 'Conception de la sécurité et ses limites', anchor: 'security' },
       { label: 'Où le trouver', anchor: 'get-it' },
@@ -718,6 +864,7 @@ const response = {
           'La spécification est à la version 1.0 ; le créateur décrit l\'implémentation comme antérieure à la 1.0',
           'Aucun second hôte, audit indépendant ou base d\'utilisateurs externe n\'a été trouvé',
           'L\'application de bureau ne fonctionne que sous macOS ; Windows et Linux sont prévus après la 1.0',
+          'Pour les développeurs qui livrent des applications issues du vibe coding avec Tauri ou Electron, il convient aux petits outils personnels pilotés par l\'IA, pas aux produits vendus au grand public',
         ],
       },
       overview: {
@@ -737,8 +884,134 @@ const response = {
         items: [
           '**IA à l\'exécution :** l\'hôte fournit le modèle pendant que l\'application tourne ; changer de modèle n\'oblige donc pas à reconstruire l\'application, selon le projet',
           '**Stockage isolé :** chaque application dispose de son propre espace de base de données dans le fichier utilisateur',
-          '**La spécification :** six parties, couvrant le protocole de transmission, la base de données utilisateur portable, les applications connectées, les contrats d\'exécution et l\'interface de conversation de l\'application, les connexions entre appareils liés, et la conformité. Cet article n\'a pas examiné les contrats d\'exécution en détail',
+          '**La spécification :** six parties, résumées une à une dans la section suivante',
           '**Pour les développeurs :** la documentation propose des guides pour construire un hôte et pour intégrer Snug dans un autre produit ; aucun des deux n\'a été testé ici',
+        ],
+      },
+      specParts: {
+        id: 'spec-parts',
+        title: 'Les six parties de la spécification',
+        content: '**La spécification comprend six parties, et chacune fixe une couche différente de l\'interaction entre applications, hôtes et fichier utilisateur.** La partie IV et les pages de concepts ont été lues en entier pour cet article ; pour les autres parties, seule la [présentation de la spécification](https://snugprotocol.org/docs/spec/) a été lue, qui donne les titres et des notes de stabilité.',
+        items: [
+          '**Partie I, le protocole de transmission :** les trames de base, l\'enveloppe de conversation et les règles R1 à R7. Les paires de trames réseau et d\'ouverture d\'URL ont été ajoutées avec la version 0.3 de la spécification et sont normatives à partir de la 1.0',
+          '**Partie II, la base de données utilisateur portable :** le schéma de stockage (version 6), le nommage des fichiers `.snug` et `SNUGENC1`',
+          '**Partie III, les applications connectées :** exigences, autorisations, garde des identifiants et exécuteur',
+          '**Partie IV, les contrats d\'exécution et l\'interface de conversation de l\'application :** comment une application installée dialogue avec l\'IA sans transporter l\'historique de sa construction, détaillé dans sa propre section ci-dessous',
+          '**Partie V, les connexions entre appareils liés :** la spécification parle de surface « sidecar »',
+          '**Partie VI, la conformité :** ce qu\'une implémentation compatible doit faire ; la présentation n\'en donne que le titre',
+        ],
+        note: 'Selon la présentation, les parties I à V sont normatives à partir de la 1.0, et la section sur les approbations permanentes est marquée comme provisoire.',
+      },
+      example: {
+        id: 'example',
+        title: 'À quoi ressemblent une application et un message',
+        content: '**Une application est un seul fichier HTML qui dialogue avec son hôte par 13 trames typées, publiées sous forme de schémas JSON.** Les trames se répartissent en six familles, et l\'application ne touche jamais directement ni le réseau ni le fournisseur du modèle.',
+        items: [
+          '**Prise de contact :** `snug:host-ready` (l\'hôte annonce l\'identifiant de son instance, les versions du protocole et ses capacités) et `snug:app-announce` (l\'application se présente)',
+          '**Pont vers l\'agent :** `snug:app-message`, `snug:app-response` et `snug:app-cancel`, qui transportent les requêtes vers l\'agent IA de l\'hôte',
+          '**Stockage :** `snug:db-request` et `snug:db-response`, qui exécutent du SQL, par l\'intermédiaire de l\'hôte, sur les tables propres à l\'application',
+          '**Réseau :** `snug:net-request` et `snug:net-response`, la seule voie de sortie, limitée aux hôtes approuvés par l\'utilisateur',
+          '**Navigation :** `snug:open-url-request` et `snug:open-url-result`, par lesquelles l\'hôte ouvre le navigateur après sa propre confirmation',
+          '**Événements :** `snug:host-event` et `snug:app-event`, un canal ouvert pour les signaux de thème, de visibilité et de redimensionnement ; les événements inconnus sont ignorés',
+        ],
+        codeLanguage: 'typescript',
+        codeBlock: `// 1. Côté application. Fragments du guide « Build your first app » du projet.
+const { isReady, sendMessage } = useSnugApp({
+  appId: 'pocket-chess-coach',
+  displayName: 'Pocket Chess Coach',
+})
+const reply = await sendMessage('opponent-move', { lastMove: 'e7e5' })
+if (reply.ok) applyMove(reply.data.move)
+
+const db = useAppDB()
+await db.exec('INSERT INTO games (pgn, played_at) VALUES (?, ?)', [pgn, Date.now()])
+
+// 2. Sur le canal de transmission. ILLUSTRATIF : les noms de champs suivent le
+// schéma JSON publié ; toutes les valeurs sont inventées. La documentation ne montre aucun exemple de message.
+const request = {
+  v: 1,
+  type: 'snug:app-message',
+  requestId: 'req-001',
+  instanceId: 'host-instance-id',
+  appId: 'pocket-chess-coach',
+  action: 'opponent-move',
+  payload: { lastMove: 'e7e5' },
+}
+const response = {
+  v: 1,
+  type: 'snug:app-response',
+  requestId: 'req-001',
+  ok: true,
+  streaming: false,
+  data: { move: 'g1f3' },
+}`,
+        note: 'D\'après la référence des schémas, une requête accepte aussi des champs facultatifs responseSchema et state. Une réponse prend trois formes : du texte diffusé en continu, un objet de données final, ou une erreur typée avec un code, un message et un indicateur retryable.',
+      },
+      runtimeContracts: {
+        id: 'runtime-contracts',
+        title: 'Contrats d\'exécution et interface de conversation',
+        content: '**Un contrat d\'exécution est une petite description JSON, détenue par l\'hôte, de ce qu\'est une application et de ce à quoi ressemble une bonne réponse ; il remplace les longues instructions de construction à chaque tour d\'exécution.** La [spécification de la partie IV](https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/) le définit, avec une conversation facultative à côté de chaque application installée.',
+        items: [
+          '**Forme :** un objet JSON strict avec un champ `overview` obligatoire de 1 à 600 caractères ; des champs facultatifs pour le ton, l\'état par tour et le format de réponse ; jusqu\'à 16 réglages ; et un plafond de sortie facultatif de 256 à 8 192 jetons, qui ne peut que réduire la sortie. Le contrat entier ne peut pas dépasser 2 560 octets',
+          '**Garde :** l\'hôte attribue les contrats et une application ne peut pas en fournir. Les contrats sont stockés par version d\'application et suivent les modifications et les retours en arrière. Un contrat importé est écarté, sauf si le hub en détient déjà un identique ; un fichier étranger ne peut donc pas injecter d\'instructions',
+          '**Pourquoi c\'est important :** un tour transporte le contrat et la charge utile de l\'action, pas la conversation de construction ; la même application peut donc tourner sur un grand modèle hébergé comme sur un petit modèle local. Le projet affirme que l\'implémentation de référence économise environ un kilo-octet par tour ; ce chiffre n\'a pas été testé',
+          '**Interface de conversation :** chaque message est classé dans l\'une de huit intentions réparties en quatre voies : données, fonctionnalité, fournisseur et réponse. Si la classification échoue, l\'hôte pose une question de clarification au lieu de choisir une voie par défaut, et jamais la voie d\'écriture de code',
+          '**Voie des données :** les lectures s\'exécutent sur une copie jetable de la base de l\'application, avec des résultats plafonnés. Les écritures suivent les étapes proposer, prévisualiser, approuver et revalider, et l\'hôte s\'arrête si le nombre de lignes concernées change entre l\'aperçu et l\'exécution',
+          '**Voie des fonctionnalités :** les modifications de l\'application elle-même se font sans étape de confirmation. Les garde-fous sont le versionnage, un rechargement visible avec retour en arrière, et la spécification exige que les hôtes précisent que cela diffère de la voie des données',
+          '**Données non fiables :** les invites qui incluent des données stockées doivent les signaler comme non fiables et neutraliser tout texte de délimiteur qu\'elles contiennent',
+        ],
+        note: 'Lu d\'après la page de la partie IV et la page de concepts sur les contrats d\'exécution. Le comportement n\'a pas été testé, et la spécification reconnaît elle-même que comparer des nombres de lignes plutôt que les lignes est une limite connue de cette révision.',
+      },
+      vsVibeCoding: {
+        id: 'vs-vibe-coding',
+        title: 'Snug face au vibe coding avec Tauri ou Electron',
+        content: '**Pour un développeur qui crée des applications avec Claude ou Codex et les livre avec Tauri ou Electron, Snug échange de la portée de diffusion et du contrôle contre une façon beaucoup plus légère de livrer de petits outils pilotés par l\'IA.** Il ne remplace pas ce flux de travail aujourd\'hui et ne le concurrence que pour une classe étroite d\'applications.',
+        columns: ['Aspect', 'App Tauri/Electron', 'App Snug'],
+        rows: [
+          { 'Aspect': 'Livrable', 'App Tauri/Electron': 'Un binaire natif par application', 'App Snug': 'Un fichier HTML dans un hôte' },
+          { 'Aspect': 'Distribution', 'App Tauri/Electron': 'Compiler, signer, mettre à jour chaque app', 'App Snug': 'L\'hôte monte le fichier' },
+          { 'Aspect': 'Accès à l\'IA', 'App Tauri/Electron': 'Vos clés, un proxy ou celles des utilisateurs', 'App Snug': 'L\'hôte fournit le modèle, sans clés' },
+          { 'Aspect': 'Données', 'App Tauri/Electron': 'Stockage que vous concevez', 'App Snug': 'Tables isolées dans .snug' },
+          { 'Aspect': 'Réseau', 'App Tauri/Electron': 'Tout ce que fait votre code', 'App Snug': 'Hôtes approuvés, via l\'hôte seulement' },
+          { 'Aspect': 'API natives', 'App Tauri/Electron': 'Accès complet', 'App Snug': 'Seulement ce que l\'hôte expose' },
+          { 'Aspect': 'Plateformes', 'App Tauri/Electron': 'macOS, Windows, Linux', 'App Snug': 'App macOS, démo navigateur' },
+          { 'Aspect': 'Public', 'App Tauri/Electron': 'Tout le monde peut l\'installer', 'App Snug': 'Exige un hôte Snug' },
+          { 'Aspect': 'Maturité', 'App Tauri/Electron': 'Outils éprouvés', 'App Snug': 'Pré-1.0, un seul mainteneur' },
+        ],
+        note: 'La colonne Snug reflète les documents du projet ; PromptQuorum n\'a pas construit d\'application dans Snug. La colonne Tauri/Electron décrit l\'approche générale, pas une application précise.',
+      },
+      switchOrStay: {
+        id: 'switch-or-stay',
+        title: 'Un développeur de vibe coding doit-il changer ?',
+        content: '**Ne déplacez que les applications qui s\'y prêtent : de petits outils personnels ou d\'équipe qui appellent surtout un modèle d\'IA et gardent leurs propres données.** Gardez Tauri ou Electron pour tout ce que vous vendez, livrez au grand public ou qu\'il vous faut sous Windows ou Linux.',
+        subsections: [
+          {
+            title: 'Là où Snug est meilleur',
+            list: [
+              '**L\'IA sans gestion de clés :** l\'application ne voit ni le fournisseur du modèle, ni ses clés, ni quel modèle a répondu ; vous n\'avez donc pas à décider comment les clés parviennent au modèle',
+              '**Rien à livrer par application :** ni installeur, ni signature, ni canal de mise à jour pour chaque petit outil ; l\'hôte monte le fichier HTML',
+              '**Des données qui appartiennent à l\'utilisateur :** un seul fichier SQLite exportable, au lieu d\'une conception de stockage et d\'export dans chaque application',
+              '**Un bac à sable qui refuse par défaut :** aucun accès réseau direct et aucun identifiant dans l\'application, d\'après le propre modèle de menaces du projet, qui n\'a pas fait l\'objet d\'un audit indépendant',
+              '**Changer de modèle sans reconstruire :** le contrat d\'exécution permet à l\'utilisateur de choisir, application par application, un modèle de pointe ou un petit modèle local',
+            ],
+          },
+          {
+            title: 'Là où il est moins bon',
+            list: [
+              '**Portée :** il n\'existe qu\'une application macOS et une démo dans le navigateur, vos utilisateurs ont besoin d\'un hôte, et aucun mécanisme de boutique ou de paiement n\'a été trouvé dans les documents lus',
+              '**Contrôle :** pas d\'appels réseau arbitraires, pas d\'API natives, pas de backend sur mesure ; vous travaillez dans ce que l\'hôte expose',
+              '**Votre propre chaîne d\'outils :** dans le guide de première application, c\'est l\'agent constructeur de l\'hôte qui écrit le fichier à partir de votre description ; votre configuration Claude ou Codex, vos tests et votre CI ne se transposent donc pas directement',
+              '**Maturité :** version 0.1.3, un seul mainteneur, aucun second hôte et aucun audit indépendant ; la portabilité entre hôtes n\'est donc pas prouvée',
+            ],
+          },
+          {
+            title: 'Une façon raisonnable de décider',
+            list: [
+              'Choisissez un petit outil personnel que vous empaqueteriez autrement, et comparez l\'effort nécessaire pour le reconstruire dans Snug',
+              'Restez sur Tauri ou Electron si le public est le grand public, si l\'application a besoin de fonctions natives, ou s\'il vous faut Windows ou Linux dès maintenant',
+              'PromptQuorum n\'a pas mené cette comparaison ; considérez donc le tableau ci-dessus comme une lecture de la documentation',
+            ],
+          },
         ],
       },
       localAndHosted: {
@@ -807,7 +1080,8 @@ const response = {
           '**Comportement en pratique :** PromptQuorum n\'a installé ni exécuté l\'application macOS ni le Playground',
           '**Adoption :** aucune seconde implémentation d\'hôte ni aucun utilisateur tiers n\'a été trouvé',
           '**Sécurité :** aucun audit indépendant ni test d\'intrusion, et le long modèle de menaces n\'a été lu que partiellement',
-          '**Affirmations du projet :** les chiffres d\'économies ou de vitesse issus des propres documents du projet n\'ont pas été testés',
+          '**Affirmations du projet :** les chiffres d\'économies ou de vitesse issus des propres documents du projet, comme le kilo-octet environ économisé par tour d\'exécution, n\'ont pas été testés',
+          '**Profondeur de la spécification :** la partie IV et les pages de concepts ont été lues en entier ; les autres parties l\'ont été sous forme de titres et de notes de stabilité, et seuls les schémas de deux trames ont été vérifiés',
           '**Portabilité en pratique :** le format est conçu pour passer d\'un hôte à l\'autre, mais aucun passage entre deux hôtes indépendants n\'a pu être vérifié',
         ],
       },
@@ -833,6 +1107,7 @@ const response = {
               'Voulez des outils personnels créés par IA que vous conservez sous forme de fichier que vous contrôlez',
               'Développez des produits d\'IA et souhaitez étudier une conception intégrable',
               'Utilisez un Mac et êtes à l\'aise avec un logiciel antérieur à la 1.0',
+              'Faites déjà du vibe coding de petits outils d\'IA et voulez éviter de les empaqueter (voir la section sur le choix de changer, plus haut)',
             ],
           },
           {
@@ -863,6 +1138,9 @@ const response = {
           { q: 'Puis-je déplacer un fichier .snug vers un autre hôte ?', a: 'Le format est spécifié dans ce but, mais les seuls hôtes trouvés jusqu\'ici sont ceux du projet lui-même ; un passage entre implémentations indépendantes n\'a donc pas été démontré.' },
           { q: 'Snug est-il un standard de l\'industrie ?', a: 'Aucun élément ne l\'atteste pour l\'instant. Il vaut mieux le décrire comme un protocole ouvert émergent, avec un seul mainteneur et une spécification 1.0 publiée.' },
           { q: 'Les développeurs peuvent-ils intégrer Snug dans leur propre produit ?', a: 'La documentation comprend des guides pour construire un hôte et intégrer Snug, et le dépôt publie des paquets TypeScript ; cet article ne les a pas testés.' },
+          { q: 'À quoi ressemble un message Snug ?', a: 'Chaque message est une trame JSON versionnée, avec un type comme snug:app-message, un identifiant de requête, l\'identifiant de l\'application et une action. La spécification publie un schéma JSON pour les 13 types de trames, mais sa documentation ne montre aucun exemple de message ; l\'exemple de cet article utilise donc des valeurs inventées.' },
+          { q: 'Qu\'est-ce qu\'un contrat d\'exécution Snug ?', a: 'C\'est une petite description JSON, détenue par l\'hôte et limitée à 2 560 octets, de ce qu\'est une application et de ce à quoi ressemble une bonne réponse. Chaque tour d\'exécution est construit à partir d\'elle plutôt qu\'à partir de la conversation de construction.' },
+          { q: 'Dois-je faire passer mes applications Tauri ou Electron sous Snug ?', a: 'Pas en bloc. Snug convient aux petits outils personnels pilotés par l\'IA, quand on veut éviter l\'empaquetage, la gestion des clés et la conception du stockage. Gardez Tauri ou Electron pour les applications que vous vendez, que vous livrez au grand public ou qu\'il vous faut sous Windows, sous Linux ou avec des API natives.' },
         ],
       },
       sources: {
@@ -873,6 +1151,10 @@ const response = {
           { url: 'https://snugprotocol.org/download/', title: 'Téléchargement de Snug', description: 'La page de téléchargement macOS, avec les exigences sur le modèle et la clé d\'API.' },
           { url: 'https://snugprotocol.org/docs/', title: 'Documentation de Snug', description: 'Les concepts, la spécification en six parties et les guides pour les implémenteurs.' },
           { url: 'https://github.com/snugprotocol/snug', title: 'Snug sur GitHub', description: 'Le dépôt sous licence MIT, l\'historique des versions et le modèle de menaces.' },
+          { url: 'https://snugprotocol.org/docs/concepts/envelopes-and-frames/', title: 'Enveloppes et trames', description: 'Les 13 types de trames et leurs familles.' },
+          { url: 'https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/', title: 'Spécification, partie IV', description: 'Les contrats d\'exécution et l\'interface de conversation de l\'application.' },
+          { url: 'https://snugprotocol.org/docs/get-started/first-app/', title: 'Créer sa première application', description: 'La structure minimale d\'une application et les fragments de code cités plus haut.' },
+          { url: 'https://snugprotocol.org/docs/spec/schemas/', title: 'Référence des schémas', description: 'Les schémas JSON des trames, dont app-message et app-response.' },
         ],
       },
       relatedReading: {
@@ -891,7 +1173,7 @@ const response = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     educationalLevel: 'Intermediate',
     audience: 'Lectores que quieren entender qué propone Snug Protocol para las apps personales creadas con IA, cómo funciona su diseño y cuánto de todo ello se puede confirmar hoy',
     primaryTerm: 'Snug Protocol',
@@ -900,7 +1182,7 @@ const response = {
     intro: 'Snug Protocol ([snugprotocol.org](https://snugprotocol.org)) es una especificación abierta para apps pequeñas que un agente de IA crea a partir de una descripción, que toman prestado el modelo de IA del host mientras se ejecutan y que guardan sus datos en un único archivo propiedad del usuario. Este análisis explica el diseño y después separa lo que el proyecto documenta de lo que sigue sin demostrarse.',
     metaDescription: 'Snug Protocol es un protocolo abierto y temprano para apps creadas con IA en un archivo .snug portátil: cómo funciona, modelos locales, seguridad y dudas.',
     twitterDescription: 'Snug Protocol: un protocolo abierto y temprano para apps personales creadas con IA y guardadas en un archivo .snug portátil. Cómo funciona, su diseño de seguridad y qué sigue sin demostrarse.',
-    readTime: '9 min de lectura',
+    readTime: '13 min de lectura',
     targetKeywords: [
       'Snug Protocol',
       'Snug Protocol explicado',
@@ -926,6 +1208,11 @@ const response = {
       { label: 'Puntos clave', anchor: 'tldr' },
       { label: '¿Qué es Snug Protocol?', anchor: 'what-is-snug' },
       { label: 'Cómo encajan las piezas', anchor: 'how-it-works' },
+      { label: 'Las seis partes de la especificación', anchor: 'spec-parts' },
+      { label: 'Cómo son una app y un mensaje', anchor: 'example' },
+      { label: 'Contratos de ejecución y superficie de chat', anchor: 'runtime-contracts' },
+      { label: 'Snug frente a vibe coding con Tauri o Electron', anchor: 'vs-vibe-coding' },
+      { label: '¿Debería cambiar un desarrollador de vibe coding?', anchor: 'switch-or-stay' },
       { label: 'Modelos locales y alojados', anchor: 'local-and-hosted' },
       { label: 'Diseño de seguridad y sus límites', anchor: 'security' },
       { label: 'Cómo conseguirlo', anchor: 'get-it' },
@@ -950,6 +1237,7 @@ const response = {
           'La especificación está en la versión 1.0; el creador describe la implementación como anterior a la 1.0',
           'No se ha encontrado un segundo host, una auditoría independiente ni una base de usuarios externa',
           'La app de escritorio solo funciona en macOS; Windows y Linux están previstos después de la 1.0',
+          'Para desarrolladores que publican apps de vibe coding con Tauri o Electron, encaja con herramientas personales pequeñas impulsadas por IA, no con productos que se venden al público',
         ],
       },
       overview: {
@@ -969,8 +1257,134 @@ const response = {
         items: [
           '**IA en tiempo de ejecución:** el host aporta el modelo mientras la app funciona, de modo que cambiar de modelo no obliga a reconstruir la app, según el proyecto',
           '**Almacenamiento aislado:** cada app recibe su propio espacio de nombres de base de datos dentro del archivo del usuario',
-          '**La especificación:** seis partes, que abarcan el protocolo de transmisión, la base de datos portátil del usuario, las apps conectadas, los contratos de ejecución y la superficie de chat de la app, las conexiones entre dispositivos vinculados y la conformidad. Este análisis no examinó los contratos de ejecución en detalle',
+          '**La especificación:** seis partes, resumidas una por una en la sección siguiente',
           '**Para desarrolladores:** la documentación incluye guías para crear un host y para integrar Snug en otro producto; no se probó ninguna de las dos',
+        ],
+      },
+      specParts: {
+        id: 'spec-parts',
+        title: 'Las seis partes de la especificación',
+        content: '**La especificación tiene seis partes, y cada una fija una capa distinta de cómo interactúan las apps, los hosts y el archivo del usuario.** Para este análisis se leyeron completas la Parte IV y las páginas de conceptos; de las demás partes solo se leyó la [visión general de la especificación](https://snugprotocol.org/docs/spec/), que da los títulos y las notas de estabilidad.',
+        items: [
+          '**Parte I, el protocolo de transmisión:** los frames básicos, el envelope de chat y las reglas R1 a R7. Los pares de frames de red y de apertura de URL se añadieron con la versión 0.3 de la especificación y son normativos en la 1.0',
+          '**Parte II, la base de datos portátil del usuario:** el esquema de almacenamiento (versión 6), el nombre de archivo `.snug` y `SNUGENC1`',
+          '**Parte III, apps conectadas:** requisitos, permisos, custodia de credenciales y el ejecutor',
+          '**Parte IV, contratos de ejecución y superficie de chat de la app:** cómo habla con la IA una app instalada sin arrastrar su historial de creación; se trata en su propia sección más abajo',
+          '**Parte V, conexiones entre dispositivos vinculados:** la especificación lo llama la superficie sidecar',
+          '**Parte VI, conformidad:** lo que debe cumplir una implementación compatible; la visión general solo da el título',
+        ],
+        note: 'Según la visión general, las Partes I a V son normativas en la 1.0, y la sección sobre aprobaciones permanentes está marcada como provisional.',
+      },
+      example: {
+        id: 'example',
+        title: 'Cómo son una app y un mensaje',
+        content: '**Una app es un único archivo HTML que habla con su host mediante 13 tipos de frames, publicados como JSON Schemas.** Los frames se reparten en seis familias, y la app nunca toca directamente la red ni al proveedor del modelo.',
+        items: [
+          '**Handshake:** `snug:host-ready` (el host anuncia el ID de su instancia, las versiones del protocolo y sus capacidades) y `snug:app-announce` (la app se identifica)',
+          '**Puente con el agente:** `snug:app-message`, `snug:app-response` y `snug:app-cancel`, que llevan las peticiones al agente de IA del host',
+          '**Almacenamiento:** `snug:db-request` y `snug:db-response`, que ejecutan SQL intermediado por el host sobre las tablas propias de la app',
+          '**Red:** `snug:net-request` y `snug:net-response`, la única salida, limitada a los hosts que el usuario aprobó',
+          '**Navegación:** `snug:open-url-request` y `snug:open-url-result`, con los que el host abre el navegador tras su propia confirmación',
+          '**Eventos:** `snug:host-event` y `snug:app-event`, un canal abierto para señales de tema, visibilidad y cambio de tamaño; los eventos desconocidos se ignoran',
+        ],
+        codeLanguage: 'typescript',
+        codeBlock: `// 1. Lado de la app. Fragmentos de la guía «Build your first app» del proyecto.
+const { isReady, sendMessage } = useSnugApp({
+  appId: 'pocket-chess-coach',
+  displayName: 'Pocket Chess Coach',
+})
+const reply = await sendMessage('opponent-move', { lastMove: 'e7e5' })
+if (reply.ok) applyMove(reply.data.move)
+
+const db = useAppDB()
+await db.exec('INSERT INTO games (pgn, played_at) VALUES (?, ?)', [pgn, Date.now()])
+
+// 2. En la transmisión. ILUSTRATIVO: los nombres de los campos siguen el
+// JSON Schema publicado; todos los valores son inventados. La documentación no muestra ningún mensaje de ejemplo.
+const request = {
+  v: 1,
+  type: 'snug:app-message',
+  requestId: 'req-001',
+  instanceId: 'host-instance-id',
+  appId: 'pocket-chess-coach',
+  action: 'opponent-move',
+  payload: { lastMove: 'e7e5' },
+}
+const response = {
+  v: 1,
+  type: 'snug:app-response',
+  requestId: 'req-001',
+  ok: true,
+  streaming: false,
+  data: { move: 'g1f3' },
+}`,
+        note: 'Según la referencia de esquemas, una petición también admite los campos opcionales responseSchema y state. Una respuesta adopta una de tres formas: texto en streaming, un objeto data final o un error tipado con un código, un mensaje y un indicador retryable.',
+      },
+      runtimeContracts: {
+        id: 'runtime-contracts',
+        title: 'Contratos de ejecución y superficie de chat',
+        content: '**Un contrato de ejecución es una pequeña descripción JSON, guardada por el host, de qué es una app y cómo es una buena respuesta, y sustituye a las largas instrucciones de creación en cada turno de ejecución.** La [especificación de la Parte IV](https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/) lo define, junto con un chat opcional al lado de cada app instalada.',
+        items: [
+          '**Forma:** un objeto JSON estricto con un `overview` obligatorio de 1 a 600 caracteres; campos opcionales para el tono, el estado por turno y el formato de respuesta; hasta 16 ajustes; y un tope opcional de salida de 256 a 8.192 tokens que solo puede reducir la salida. El contrato completo no puede superar los 2.560 bytes',
+          '**Custodia:** el host asigna los contratos y una app no puede aportar el suyo. Los contratos se guardan por versión de la app y acompañan a las ediciones y a las reversiones. Un contrato importado se descarta salvo que el hub ya tenga uno idéntico, de modo que un archivo ajeno no puede inyectar instrucciones',
+          '**Por qué importa:** un turno lleva el contrato y la carga de la acción, no la conversación de creación, así que la misma app puede funcionar con un modelo alojado grande o con uno local pequeño. El proyecto afirma que la implementación de referencia ahorra aproximadamente un kilobyte por turno; esa cifra no se probó',
+          '**Superficie de chat:** cada mensaje se clasifica en una de ocho intenciones repartidas en cuatro vías: datos, función, proveedor y respuesta. Si la clasificación falla, el host hace una pregunta aclaratoria en lugar de elegir una vía por defecto, y nunca la vía que escribe código',
+          '**Vía de datos:** las lecturas se ejecutan sobre una copia desechable de la base de datos propia de la app, con resultados limitados. Las escrituras siguen el orden proponer, previsualizar, aprobar y revalidar, y el host se detiene si el número de filas afectadas cambia entre la vista previa y la ejecución',
+          '**Vía de función:** los cambios en la propia app se hacen sin paso de confirmación. Las salvaguardas son el control de versiones, una recarga visible y la posibilidad de revertir, y la especificación exige que los hosts informen de que esto difiere de la vía de datos',
+          '**Datos no fiables:** los prompts que incluyen datos almacenados deben marcarlos como no fiables y neutralizar cualquier texto delimitador que contengan',
+        ],
+        note: 'Leído en la página de la Parte IV y en la página de conceptos de contratos de ejecución. El comportamiento no se probó, y la propia especificación reconoce que comparar el número de filas en lugar de las filas es una limitación conocida de esta revisión.',
+      },
+      vsVibeCoding: {
+        id: 'vs-vibe-coding',
+        title: 'Snug frente a vibe coding con Tauri o Electron',
+        content: '**Para un desarrollador que crea apps con Claude o Codex y las publica con Tauri o Electron, Snug cambia alcance de distribución y control por una forma mucho más ligera de entregar herramientas pequeñas impulsadas por IA.** Hoy no sustituye a ese flujo de trabajo y solo compite con él en una clase reducida de apps.',
+        columns: ['Área', 'Tu app (Tauri/Electron)', 'App Snug'],
+        rows: [
+          { 'Área': 'Resultado', 'Tu app (Tauri/Electron)': 'Un binario nativo por app', 'App Snug': 'Un archivo HTML en un host' },
+          { 'Área': 'Distribución', 'Tu app (Tauri/Electron)': 'Compilar, firmar y actualizar cada app', 'App Snug': 'El host monta el archivo' },
+          { 'Área': 'Acceso a la IA', 'Tu app (Tauri/Electron)': 'Tus claves, un proxy o claves del usuario', 'App Snug': 'El host aporta el modelo, sin claves' },
+          { 'Área': 'Datos', 'Tu app (Tauri/Electron)': 'Almacenamiento que diseñas tú', 'App Snug': 'Tablas aisladas en .snug' },
+          { 'Área': 'Red', 'Tu app (Tauri/Electron)': 'Lo que haga tu código', 'App Snug': 'Hosts aprobados, solo vía host' },
+          { 'Área': 'APIs nativas', 'Tu app (Tauri/Electron)': 'Acceso completo', 'App Snug': 'Solo lo que expone el host' },
+          { 'Área': 'Plataformas', 'Tu app (Tauri/Electron)': 'macOS, Windows, Linux', 'App Snug': 'App de macOS, demo en navegador' },
+          { 'Área': 'Público', 'Tu app (Tauri/Electron)': 'Cualquiera puede instalarla', 'App Snug': 'Requiere un host Snug' },
+          { 'Área': 'Madurez', 'Tu app (Tauri/Electron)': 'Herramientas consolidadas', 'App Snug': 'Pre-1.0, un solo responsable' },
+        ],
+        note: 'La columna de Snug refleja los documentos del propio proyecto; PromptQuorum no ha creado ninguna app en Snug. La columna de Tauri y Electron describe el enfoque general, no una app concreta.',
+      },
+      switchOrStay: {
+        id: 'switch-or-stay',
+        title: '¿Debería cambiar un desarrollador de vibe coding?',
+        content: '**Pasa solo las apps que encajan: herramientas personales o de equipo pequeñas que sobre todo llaman a un modelo de IA y guardan sus propios datos.** Conserva Tauri o Electron para todo lo que vendas, distribuyas al público general o necesites en Windows o Linux.',
+        subsections: [
+          {
+            title: 'Dónde Snug es mejor',
+            list: [
+              '**IA sin gestionar claves:** la app nunca ve al proveedor del modelo, sus claves ni qué modelo respondió, así que no decides cómo llegan las claves al modelo',
+              '**Nada que distribuir por app:** sin instalador, firma ni canal de actualizaciones para cada herramienta pequeña; el host monta el archivo HTML',
+              '**Datos del usuario:** un único archivo SQLite exportable, en lugar de diseñar almacenamiento y exportación en cada app',
+              '**Sandbox con denegación por defecto:** sin acceso directo a la red ni credenciales dentro de la app, según el propio modelo de amenazas del proyecto, que no ha sido auditado de forma independiente',
+              '**Cambio de modelo sin reconstruir:** el contrato de ejecución permite al usuario elegir un modelo de frontera o uno local pequeño, app por app',
+            ],
+          },
+          {
+            title: 'Dónde es peor',
+            list: [
+              '**Alcance:** solo existen una app de macOS y una demo en navegador, tus usuarios necesitan un host y en los documentos leídos no se encontró ninguna tienda ni mecanismo de pago',
+              '**Control:** sin llamadas de red arbitrarias, sin APIs nativas y sin backend propio; trabajas dentro de lo que expone el host',
+              '**Tu propia cadena de herramientas:** en la guía de la primera app, el agente creador del host escribe el archivo a partir de tu descripción, así que tu configuración de Claude o Codex, tus pruebas y tu CI no se trasladan directamente',
+              '**Madurez:** versión 0.1.3, un solo responsable, ningún segundo host y ninguna auditoría independiente, así que la portabilidad entre hosts no está demostrada',
+            ],
+          },
+          {
+            title: 'Una forma razonable de decidir',
+            list: [
+              'Elige una herramienta personal pequeña que de otro modo empaquetarías y compara el esfuerzo de reconstruirla en Snug',
+              'Quédate con Tauri o Electron si el público es el público general, si la app necesita funciones nativas o si necesitas Windows o Linux hoy',
+              'PromptQuorum no ha realizado esta comparación, así que trata la tabla anterior como una lectura de la documentación',
+            ],
+          },
         ],
       },
       localAndHosted: {
@@ -1039,7 +1453,8 @@ const response = {
           '**Comportamiento en la práctica:** PromptQuorum no ha instalado ni ejecutado la app de macOS ni el Playground',
           '**Adopción:** no se encontró ninguna segunda implementación de host ni usuarios externos',
           '**Seguridad:** ninguna auditoría independiente ni prueba de penetración, y el extenso modelo de amenazas solo se leyó en parte',
-          '**Afirmaciones del propio proyecto:** las cifras de ahorro o velocidad del material del propio proyecto no se comprobaron',
+          '**Afirmaciones del propio proyecto:** las cifras de ahorro o velocidad del material del propio proyecto, como el ahorro de aproximadamente 1 KB por turno de ejecución, no se comprobaron',
+          '**Profundidad de la especificación:** la Parte IV y las páginas de conceptos se leyeron completas; las demás partes se leyeron como títulos y notas de estabilidad, y solo se comprobaron los esquemas de dos frames',
           '**Portabilidad real:** el formato está especificado para pasar de un host a otro, pero no se pudo comprobar ningún traslado entre dos hosts independientes',
         ],
       },
@@ -1065,6 +1480,7 @@ const response = {
               'Quieres herramientas personales creadas con IA que conservas como un archivo bajo tu control',
               'Desarrollas productos de IA y quieres estudiar un diseño integrable',
               'Usas un Mac y te sientes cómodo con software anterior a la 1.0',
+              'Ya haces vibe coding de herramientas pequeñas de IA y quieres evitar empaquetarlas (consulta la sección sobre el cambio más arriba)',
             ],
           },
           {
@@ -1095,6 +1511,9 @@ const response = {
           { q: '¿Puedo llevar un archivo .snug a otro host?', a: 'El formato está especificado con ese fin, pero los únicos hosts encontrados hasta ahora son los del propio proyecto, así que no se ha demostrado un traslado entre implementaciones independientes.' },
           { q: '¿Es Snug un estándar de la industria?', a: 'Todavía no hay pruebas que lo respalden. Se describe mejor como un protocolo abierto emergente con un solo responsable y una especificación 1.0 publicada.' },
           { q: '¿Pueden los desarrolladores integrar Snug en su propio producto?', a: 'La documentación incluye guías para crear un host e integrar Snug, y el repositorio publica paquetes de TypeScript; este análisis no los probó.' },
+          { q: '¿Cómo es un mensaje de Snug?', a: 'Cada mensaje es un frame JSON versionado con un tipo como snug:app-message, un ID de petición, el ID de la app y una acción. La especificación publica un JSON Schema para los 13 tipos de frame, pero su documentación no muestra ningún mensaje de ejemplo, así que el ejemplo de este artículo usa valores inventados.' },
+          { q: '¿Qué es un contrato de ejecución de Snug?', a: 'Es una pequeña descripción JSON, guardada por el host y limitada a 2.560 bytes, de qué es una app y cómo es una buena respuesta. Cada turno de ejecución se construye a partir de ella en lugar de a partir de la conversación de creación.' },
+          { q: '¿Debería pasar mis apps de Tauri o Electron a Snug?', a: 'No en bloque. Snug encaja con herramientas personales pequeñas impulsadas por IA en las que quieres evitar el empaquetado, la gestión de claves y el diseño del almacenamiento. Conserva Tauri o Electron para las apps que vendas, distribuyas al público o necesites en Windows, Linux o con APIs nativas.' },
         ],
       },
       sources: {
@@ -1105,6 +1524,10 @@ const response = {
           { url: 'https://snugprotocol.org/download/', title: 'Descarga de Snug', description: 'La página de descarga para macOS, con los requisitos de modelo y clave de API.' },
           { url: 'https://snugprotocol.org/docs/', title: 'Documentación de Snug', description: 'Conceptos, la especificación de seis partes y las guías para implementadores.' },
           { url: 'https://github.com/snugprotocol/snug', title: 'Snug en GitHub', description: 'El repositorio con licencia MIT, el historial de versiones y el modelo de amenazas.' },
+          { url: 'https://snugprotocol.org/docs/concepts/envelopes-and-frames/', title: 'Envelopes y frames', description: 'Los 13 tipos de frame y sus familias.' },
+          { url: 'https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/', title: 'Especificación, Parte IV', description: 'Contratos de ejecución y superficie de chat de la app.' },
+          { url: 'https://snugprotocol.org/docs/get-started/first-app/', title: 'Crea tu primera app', description: 'La estructura mínima de una app y los fragmentos de código citados arriba.' },
+          { url: 'https://snugprotocol.org/docs/spec/schemas/', title: 'Referencia de esquemas', description: 'JSON Schemas de los frames, incluidos app-message y app-response.' },
         ],
       },
       relatedReading: {
@@ -1123,7 +1546,7 @@ const response = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     educationalLevel: 'Intermediate',
     audience: 'Leitores que querem entender o que o Snug Protocol propõe para apps pessoais criados por IA, como funciona o seu design e o quanto disso já pode ser confirmado hoje',
     primaryTerm: 'Snug Protocol',
@@ -1132,7 +1555,7 @@ const response = {
     intro: 'O Snug Protocol ([snugprotocol.org](https://snugprotocol.org)) é uma especificação aberta para pequenos apps que um agente de IA cria a partir de uma descrição, que usam o modelo de IA do host em tempo de execução e que guardam seus dados em um único arquivo pertencente ao usuário. Este artigo explica o design e depois separa o que o projeto documenta do que ainda não foi comprovado.',
     metaDescription: 'Snug Protocol: protocolo aberto e recente para apps criados por IA em um arquivo .snug portátil. Como funciona, segurança e o que não está provado.',
     twitterDescription: 'Snug Protocol: um protocolo aberto e recente para apps pessoais criados por IA em um arquivo .snug portátil. Como funciona, seu design de segurança e o que ainda não está comprovado.',
-    readTime: '9 min de leitura',
+    readTime: '13 min de leitura',
     targetKeywords: [
       'Snug Protocol',
       'Snug Protocol explicado',
@@ -1158,6 +1581,11 @@ const response = {
       { label: 'Pontos principais', anchor: 'tldr' },
       { label: 'O que é o Snug Protocol?', anchor: 'what-is-snug' },
       { label: 'Como as peças se encaixam', anchor: 'how-it-works' },
+      { label: 'As seis partes da especificação', anchor: 'spec-parts' },
+      { label: 'Como são um app e uma mensagem', anchor: 'example' },
+      { label: 'Contratos de execução e a superfície de chat do app', anchor: 'runtime-contracts' },
+      { label: 'Snug versus vibe coding com Tauri ou Electron', anchor: 'vs-vibe-coding' },
+      { label: 'Vale a pena um desenvolvedor de vibe coding migrar?', anchor: 'switch-or-stay' },
       { label: 'Modelos locais e hospedados', anchor: 'local-and-hosted' },
       { label: 'Design de segurança e seus limites', anchor: 'security' },
       { label: 'Como obter', anchor: 'get-it' },
@@ -1182,6 +1610,7 @@ const response = {
           'A especificação está na versão 1.0; o criador descreve a implementação como anterior à 1.0',
           'Não foi encontrado um segundo host, nenhuma auditoria independente nem base de usuários externos',
           'O app de desktop roda apenas no macOS; Windows e Linux estão planejados para depois da 1.0',
+          'Para desenvolvedores que publicam apps de vibe coding com Tauri ou Electron, serve para pequenas ferramentas pessoais movidas a IA, não para produtos vendidos ao público',
         ],
       },
       overview: {
@@ -1201,8 +1630,134 @@ const response = {
         items: [
           '**IA em tempo de execução:** o host fornece o modelo enquanto o app roda, então trocar de modelo não exige refazer o app, segundo o projeto',
           '**Armazenamento isolado:** cada app recebe seu próprio namespace de banco de dados dentro do arquivo do usuário',
-          '**A especificação:** seis partes, que cobrem o protocolo de comunicação, o banco de dados portátil do usuário, os apps conectados, os contratos de execução e a superfície de chat do app, as conexões entre dispositivos vinculados e a conformidade. Esta análise não examinou os contratos de execução em detalhe',
+          '**A especificação:** seis partes, resumidas uma a uma na próxima seção',
           '**Para desenvolvedores:** a documentação traz guias para criar um host e para incorporar o Snug em outro produto; nenhum dos dois foi testado aqui',
+        ],
+      },
+      specParts: {
+        id: 'spec-parts',
+        title: 'As seis partes da especificação',
+        content: '**A especificação tem seis partes, e cada uma define uma camada diferente da interação entre apps, hosts e o arquivo do usuário.** A Parte IV e as páginas de conceitos foram lidas na íntegra para este artigo; das demais partes, só foi lida a [visão geral da especificação](https://snugprotocol.org/docs/spec/), que traz os títulos e as notas de estabilidade.',
+        items: [
+          '**Parte I, o protocolo de comunicação:** os frames principais, o envelope de chat e as regras R1 a R7. Os pares de frames de rede e de abertura de URL foram adicionados com a versão 0.3 da especificação e são normativos na 1.0',
+          '**Parte II, o banco de dados portátil do usuário:** o esquema de armazenamento (versão 6), a nomenclatura de arquivos `.snug` e o `SNUGENC1`',
+          '**Parte III, apps conectados:** requisitos, concessões, custódia de credenciais e o executor',
+          '**Parte IV, contratos de execução e a superfície de chat do app:** como um app instalado conversa com a IA sem carregar o histórico de sua criação, tratada em uma seção própria mais adiante',
+          '**Parte V, conexões entre dispositivos vinculados:** a especificação chama isso de superfície sidecar',
+          '**Parte VI, conformidade:** o que uma implementação compatível precisa fazer; a visão geral traz apenas o título',
+        ],
+        note: 'Segundo a visão geral, as Partes I a V são normativas na 1.0, e a seção sobre aprovações permanentes está marcada como provisória.',
+      },
+      example: {
+        id: 'example',
+        title: 'Como são um app e uma mensagem',
+        content: '**Um app é um único arquivo HTML que conversa com o host por meio de 13 frames tipados, publicados como JSON Schemas.** Os frames se dividem em seis famílias, e o app nunca acessa diretamente a rede nem o provedor do modelo.',
+        items: [
+          '**Handshake:** `snug:host-ready` (o host informa o ID da instância, as versões do protocolo e os recursos) e `snug:app-announce` (o app se identifica)',
+          '**Ponte com o agente:** `snug:app-message`, `snug:app-response` e `snug:app-cancel`, que levam as requisições ao agente de IA do host',
+          '**Armazenamento:** `snug:db-request` e `snug:db-response`, que executam SQL intermediado pelo host nas tabelas do próprio app',
+          '**Rede:** `snug:net-request` e `snug:net-response`, o único caminho para fora, limitado aos hosts que o usuário aprovou',
+          '**Navegação:** `snug:open-url-request` e `snug:open-url-result`, em que o host abre o navegador depois de sua própria confirmação',
+          '**Eventos:** `snug:host-event` e `snug:app-event`, um canal aberto para sinais de tema, visibilidade e redimensionamento; eventos desconhecidos são ignorados',
+        ],
+        codeLanguage: 'typescript',
+        codeBlock: `// 1. Lado do app. Trechos do guia "Build your first app" do projeto.
+const { isReady, sendMessage } = useSnugApp({
+  appId: 'pocket-chess-coach',
+  displayName: 'Pocket Chess Coach',
+})
+const reply = await sendMessage('opponent-move', { lastMove: 'e7e5' })
+if (reply.ok) applyMove(reply.data.move)
+
+const db = useAppDB()
+await db.exec('INSERT INTO games (pgn, played_at) VALUES (?, ?)', [pgn, Date.now()])
+
+// 2. Na comunicação. ILUSTRATIVO: os nomes dos campos seguem o
+// JSON Schema publicado; todos os valores são inventados. A documentação não mostra nenhuma mensagem de exemplo.
+const request = {
+  v: 1,
+  type: 'snug:app-message',
+  requestId: 'req-001',
+  instanceId: 'host-instance-id',
+  appId: 'pocket-chess-coach',
+  action: 'opponent-move',
+  payload: { lastMove: 'e7e5' },
+}
+const response = {
+  v: 1,
+  type: 'snug:app-response',
+  requestId: 'req-001',
+  ok: true,
+  streaming: false,
+  data: { move: 'g1f3' },
+}`,
+        note: 'Segundo a referência de schemas, uma requisição também aceita os campos opcionais responseSchema e state. Uma resposta vem em três formas: texto em streaming, um objeto de dados final ou um erro tipado com código, mensagem e um indicador de nova tentativa (retryable).',
+      },
+      runtimeContracts: {
+        id: 'runtime-contracts',
+        title: 'Contratos de execução e a superfície de chat do app',
+        content: '**Um contrato de execução é uma pequena descrição em JSON, mantida pelo host, do que um app é e de como é uma boa resposta, e ele substitui as longas instruções de criação a cada turno de execução.** A [especificação da Parte IV](https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/) o define, junto com um chat opcional ao lado de cada app instalado.',
+        items: [
+          '**Formato:** um objeto JSON estrito com um `overview` obrigatório de 1 a 600 caracteres; campos opcionais para tom, estado por turno e formato de resposta; até 16 configurações; e um limite opcional de saída de 256 a 8,192 tokens, que só pode restringir a saída. O contrato inteiro não pode passar de 2,560 bytes',
+          '**Custódia:** o host atribui os contratos e um app não pode fornecer o seu. Os contratos são guardados por versão do app e acompanham edições e reversões. Um contrato importado é descartado, a menos que o hub já tenha um idêntico, de modo que um arquivo externo não consegue injetar instruções',
+          '**Por que importa:** um turno leva o contrato e o payload da ação, não a conversa de criação, então o mesmo app pode rodar em um grande modelo hospedado ou em um pequeno modelo local. O projeto diz que a implementação de referência economiza cerca de um kilobyte por turno; esse número não foi testado',
+          '**Superfície de chat:** cada mensagem é classificada em uma de oito intenções, distribuídas em quatro faixas: dados, recurso, provedor e resposta. Se a classificação falha, o host faz uma pergunta de esclarecimento em vez de adotar uma faixa por padrão, e nunca a faixa que escreve código',
+          '**Faixa de dados:** as leituras rodam em uma cópia descartável do banco de dados do próprio app, com resultados limitados. As gravações seguem propor, visualizar, aprovar e revalidar, e o host interrompe a operação se a contagem de linhas afetadas mudar entre a visualização e a execução',
+          '**Faixa de recursos:** as mudanças no próprio app acontecem sem etapa de confirmação. As salvaguardas são o versionamento, um recarregamento visível e a reversão, e a especificação exige que os hosts informem que isso difere da faixa de dados',
+          '**Dados não confiáveis:** prompts que incluem dados armazenados devem marcá-los como não confiáveis e neutralizar qualquer texto delimitador dentro deles',
+        ],
+        note: 'Lido na página da Parte IV e na página de conceitos sobre contratos de execução. O comportamento não foi testado, e a própria especificação reconhece que comparar contagens de linhas em vez das linhas em si é uma limitação conhecida desta revisão.',
+      },
+      vsVibeCoding: {
+        id: 'vs-vibe-coding',
+        title: 'Snug versus vibe coding com Tauri ou Electron',
+        content: '**Para um desenvolvedor que cria apps com Claude ou Codex e os distribui com Tauri ou Electron, o Snug troca alcance de distribuição e controle por uma forma muito mais leve de entregar pequenas ferramentas movidas a IA.** Hoje ele não substitui esse fluxo de trabalho e só concorre com ele em uma classe restrita de apps.',
+        columns: ['Área', 'Tauri/Electron', 'App Snug'],
+        rows: [
+          { 'Área': 'Resultado', 'Tauri/Electron': 'Um binário nativo por app', 'App Snug': 'Um arquivo HTML dentro de um host' },
+          { 'Área': 'Distribuição', 'Tauri/Electron': 'Compilar, assinar e atualizar cada app', 'App Snug': 'O host monta o arquivo' },
+          { 'Área': 'Acesso à IA', 'Tauri/Electron': 'Suas chaves, proxy ou chaves do usuário', 'App Snug': 'O host fornece o modelo, sem chaves' },
+          { 'Área': 'Dados', 'Tauri/Electron': 'Armazenamento que você projeta', 'App Snug': 'Tabelas isoladas no .snug' },
+          { 'Área': 'Rede', 'Tauri/Electron': 'O que o seu código fizer', 'App Snug': 'Hosts aprovados, só via host' },
+          { 'Área': 'APIs nativas', 'Tauri/Electron': 'Acesso total', 'App Snug': 'Só o que o host expõe' },
+          { 'Área': 'Plataformas', 'Tauri/Electron': 'macOS, Windows, Linux', 'App Snug': 'App para macOS, demo no navegador' },
+          { 'Área': 'Público', 'Tauri/Electron': 'Qualquer pessoa pode instalar', 'App Snug': 'Exige um host Snug' },
+          { 'Área': 'Maturidade', 'Tauri/Electron': 'Ferramentas consolidadas', 'App Snug': 'Pré-1.0, um mantenedor' },
+        ],
+        note: 'A coluna do Snug reflete os próprios documentos do projeto; a PromptQuorum não criou nenhum app no Snug. A coluna de Tauri e Electron descreve a abordagem geral, não um app específico.',
+      },
+      switchOrStay: {
+        id: 'switch-or-stay',
+        title: 'Vale a pena um desenvolvedor de vibe coding migrar?',
+        content: '**Migre apenas os apps que se encaixam: pequenas ferramentas pessoais ou de equipe que chamam principalmente um modelo de IA e guardam seus próprios dados.** Mantenha Tauri ou Electron para tudo o que você vende, distribui ao público em geral ou precisa ter no Windows ou no Linux.',
+        subsections: [
+          {
+            title: 'Onde o Snug leva vantagem',
+            list: [
+              '**IA sem manuseio de chaves:** o app nunca vê o provedor do modelo, suas chaves nem qual modelo respondeu, então você não decide como as chaves chegam ao modelo',
+              '**Nada para distribuir por app:** sem instalador, assinatura nem canal de atualização para cada ferramenta pequena; o host monta o arquivo HTML',
+              '**Dados do usuário:** um único arquivo SQLite exportável, em vez de um projeto de armazenamento e exportação em cada app',
+              '**Sandbox com negação por padrão:** sem acesso direto à rede e sem credenciais dentro do app, segundo o modelo de ameaças do próprio projeto, que não foi auditado de forma independente',
+              '**Troca de modelo sem refazer o app:** o contrato de execução permite ao usuário escolher, por app, um modelo de ponta ou um modelo local pequeno',
+            ],
+          },
+          {
+            title: 'Onde ele leva desvantagem',
+            list: [
+              '**Alcance:** só existem um app para macOS e uma demo no navegador, seus usuários precisam de um host, e nenhuma loja ou mecanismo de pagamento foi encontrado nos documentos lidos',
+              '**Controle:** sem chamadas de rede arbitrárias, sem APIs nativas e sem back-end próprio; você trabalha dentro do que o host expõe',
+              '**Sua própria cadeia de ferramentas:** no guia do primeiro app, o agente construtor do host escreve o arquivo a partir da sua descrição, então sua configuração própria de Claude ou Codex, seus testes e seu CI não se transferem diretamente',
+              '**Maturidade:** versão 0.1.3, um mantenedor, nenhum segundo host e nenhuma auditoria independente, então a portabilidade entre hosts não está comprovada',
+            ],
+          },
+          {
+            title: 'Uma forma razoável de decidir',
+            list: [
+              'Escolha uma pequena ferramenta pessoal que você empacotaria de outra forma e compare o esforço de refazê-la no Snug',
+              'Fique com Tauri ou Electron se o público for o público em geral, se o app precisar de recursos nativos ou se você precisar de Windows ou Linux hoje',
+              'A PromptQuorum não fez essa comparação, então trate a tabela acima como uma leitura da documentação',
+            ],
+          },
         ],
       },
       localAndHosted: {
@@ -1271,7 +1826,8 @@ const response = {
           '**Comportamento na prática:** a PromptQuorum não instalou nem executou o app para macOS ou o Playground',
           '**Adoção:** não foi encontrada uma segunda implementação de host nem usuários externos',
           '**Segurança:** nenhuma auditoria independente ou teste de intrusão, e o longo modelo de ameaças foi lido apenas em parte',
-          '**Afirmações do próprio projeto:** números sobre economia ou velocidade vindos do material do projeto não foram testados',
+          '**Afirmações do próprio projeto:** números sobre economia ou velocidade vindos do material do projeto, como a economia de cerca de 1 KB por turno de execução, não foram testados',
+          '**Profundidade da especificação:** a Parte IV e as páginas de conceitos foram lidas na íntegra; as outras partes foram lidas apenas como títulos e notas de estabilidade, e só os schemas de dois frames foram conferidos',
           '**Portabilidade na prática:** o formato é especificado para circular entre hosts, mas não foi possível verificar nenhuma migração entre dois hosts independentes',
         ],
       },
@@ -1297,6 +1853,7 @@ const response = {
               'Quer ferramentas pessoais criadas por IA que você guarda como um arquivo sob o seu controle',
               'Cria produtos de IA e quer estudar um design incorporável',
               'Usa um Mac e se sente à vontade com software anterior à 1.0',
+              'Já faz vibe coding de pequenas ferramentas de IA e quer dispensar o trabalho de empacotá-las (veja a seção sobre migração acima)',
             ],
           },
           {
@@ -1327,6 +1884,9 @@ const response = {
           { q: 'Posso levar um arquivo .snug para outro host?', a: 'O formato é especificado para esse fim, mas os únicos hosts encontrados até agora são os do próprio projeto, então uma migração entre implementações independentes ainda não foi demonstrada.' },
           { q: 'O Snug é um padrão da indústria?', a: 'Ainda não há evidências que sustentem isso. É mais correto descrevê-lo como um protocolo aberto emergente, com um único mantenedor e uma especificação 1.0 publicada.' },
           { q: 'Desenvolvedores podem incorporar o Snug em seu próprio produto?', a: 'A documentação inclui guias para criar um host e incorporar o Snug, e o repositório publica pacotes TypeScript; esta análise não os testou.' },
+          { q: 'Como é uma mensagem do Snug?', a: 'Cada mensagem é um frame JSON versionado, com um tipo como snug:app-message, um ID de requisição, o ID do app e uma ação. A especificação publica um JSON Schema para os 13 tipos de frame, mas sua documentação não mostra nenhuma mensagem de exemplo, então o exemplo deste artigo usa valores inventados.' },
+          { q: 'O que é um contrato de execução do Snug?', a: 'É uma pequena descrição em JSON, mantida pelo host e limitada a 2,560 bytes, do que um app é e de como é uma boa resposta. Cada turno de execução é montado a partir dela, e não a partir da conversa de criação.' },
+          { q: 'Devo migrar meus apps de Tauri ou Electron para o Snug?', a: 'Não em bloco. O Snug serve para pequenas ferramentas pessoais movidas a IA em que você quer dispensar o empacotamento, o manuseio de chaves e o projeto de armazenamento. Mantenha Tauri ou Electron para apps que você vende, distribui ao público ou precisa ter no Windows, no Linux ou com APIs nativas.' },
         ],
       },
       sources: {
@@ -1337,6 +1897,10 @@ const response = {
           { url: 'https://snugprotocol.org/download/', title: 'Download do Snug', description: 'A página de download do macOS, com os requisitos de modelo e de chave de API.' },
           { url: 'https://snugprotocol.org/docs/', title: 'Documentação do Snug', description: 'Conceitos, a especificação em seis partes e os guias para implementadores.' },
           { url: 'https://github.com/snugprotocol/snug', title: 'Snug no GitHub', description: 'O repositório com licença MIT, o histórico de versões e o modelo de ameaças.' },
+          { url: 'https://snugprotocol.org/docs/concepts/envelopes-and-frames/', title: 'Envelopes e frames', description: 'Os 13 tipos de frame e suas famílias.' },
+          { url: 'https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/', title: 'Especificação, Parte IV', description: 'Contratos de execução e a superfície de chat do app.' },
+          { url: 'https://snugprotocol.org/docs/get-started/first-app/', title: 'Crie seu primeiro app', description: 'A estrutura mínima de um app e os trechos de código citados acima.' },
+          { url: 'https://snugprotocol.org/docs/spec/schemas/', title: 'Referência de schemas', description: 'JSON Schemas dos frames, incluindo app-message e app-response.' },
         ],
       },
       relatedReading: {
@@ -1355,7 +1919,7 @@ const response = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     educationalLevel: 'Intermediate',
     audience: 'AIが作る個人用アプリについてSnug Protocolが何を提案しているのか、その設計がどう動くのか、現時点でどこまで確認できるのかを知りたい方向け',
     primaryTerm: 'Snug Protocol',
@@ -1364,7 +1928,7 @@ const response = {
     intro: 'Snug Protocol([snugprotocol.org](https://snugprotocol.org))は、小さなアプリのためのオープンな仕様です。このアプリはAIエージェントが説明文から作り、実行時にはホストのAIモデルを借り、データはユーザーが所有する1つのファイルに保存します。この特集では設計を解説したうえで、プロジェクトが文書化している内容と、まだ裏付けのない内容を切り分けます。',
     metaDescription: 'Snug Protocolは、AI製アプリを持ち運べる.snugファイルに保存する初期のオープンプロトコルです。仕組み、ローカルモデル、セキュリティ設計、未検証の点を解説します。',
     twitterDescription: 'Snug Protocol:AI製の個人用アプリを持ち運べる.snugファイルに保存する、初期のオープンプロトコル。仕組み、セキュリティ設計、まだ裏付けのない点を解説します。',
-    readTime: '9分で読める',
+    readTime: '13分で読める',
     targetKeywords: [
       'Snug Protocol',
       'Snug Protocol 解説',
@@ -1390,6 +1954,11 @@ const response = {
       { label: '重要ポイント', anchor: 'tldr' },
       { label: 'Snug Protocolとは?', anchor: 'what-is-snug' },
       { label: '各パーツの連携の仕組み', anchor: 'how-it-works' },
+      { label: '仕様を構成する6つのパート', anchor: 'spec-parts' },
+      { label: 'アプリとメッセージの実例', anchor: 'example' },
+      { label: 'ランタイム契約とアプリのチャット画面', anchor: 'runtime-contracts' },
+      { label: 'Snugとバイブコーディング+Tauri/Electronの比較', anchor: 'vs-vibe-coding' },
+      { label: 'バイブコーディング開発者は乗り換えるべきか?', anchor: 'switch-or-stay' },
       { label: 'ローカルモデルとホスト型モデル', anchor: 'local-and-hosted' },
       { label: 'セキュリティ設計とその限界', anchor: 'security' },
       { label: '入手方法', anchor: 'get-it' },
@@ -1414,6 +1983,7 @@ const response = {
           '仕様はバージョン1.0。作者は実装を1.0より前の段階と説明しています',
           '2つ目のホスト、独立した監査、外部のユーザー基盤は見つかっていません',
           'デスクトップアプリはmacOS専用で、WindowsとLinuxは1.0以降に対応予定です',
+          'TauriやElectronでバイブコーディングのアプリを配布している開発者にとって、Snugは小さなAI駆動の個人用ツールに向き、一般向けに販売する製品には向きません',
         ],
       },
       overview: {
@@ -1433,8 +2003,134 @@ const response = {
         items: [
           '**実行時のAI:** アプリの実行中はホストがモデルを提供するため、プロジェクトによれば、モデルを切り替えてもアプリを作り直す必要はありません',
           '**分離されたストレージ:** 各アプリは、ユーザーファイル内に専用のデータベース名前空間を持ちます',
-          '**仕様:** 6つのパートで構成され、ワイヤプロトコル、持ち運び可能なユーザーデータベース、接続されたアプリ、ランタイム契約とアプリのチャット画面、リンクされたデバイスの接続、適合性を扱います。本レビューでは、ランタイム契約の詳細は検討していません',
+          '**仕様:** 6つのパートで構成されています。次のセクションで、パートごとに順に要約します',
           '**開発者向け:** ホストの構築や、Snugを別の製品に組み込むためのガイドがドキュメントにあります。いずれもここでは試していません',
+        ],
+      },
+      specParts: {
+        id: 'spec-parts',
+        title: '仕様を構成する6つのパート',
+        content: '**仕様は6つのパートからなり、それぞれがアプリ、ホスト、ユーザーファイルのやり取りの異なる層を定めています。** この特集では、パートIVと概念ページを全文読みました。ほかのパートについては、タイトルと安定性に関する注記が載っている[仕様の概要](https://snugprotocol.org/docs/spec/)だけを読んでいます。',
+        items: [
+          '**パートI、ワイヤプロトコル:** コアとなるフレーム、チャットのエンベロープ、ルールR1〜R7。ネットワークとURLを開くフレームの組は仕様v0.3で追加され、1.0では規範(normative)とされています',
+          '**パートII、持ち運び可能なユーザーデータベース:** ストレージスキーマ(バージョン6)、`.snug`ファイルの命名、`SNUGENC1`',
+          '**パートIII、接続されたアプリ:** 要件、権限の付与、認証情報の保管、エグゼキューター',
+          '**パートIV、ランタイム契約とアプリのチャット画面:** インストール済みのアプリが、ビルドの履歴を持ち歩かずにAIとやり取りする仕組み。次のセクションで解説します',
+          '**パートV、リンクされたデバイスの接続:** 仕様ではサイドカーサーフェスと呼ばれています',
+          '**パートVI、適合性:** 互換性のある実装が満たすべきこと。概要にはタイトルしか載っていません',
+        ],
+        note: '概要によると、パートIからVは1.0で規範とされ、常時承認(standing approvals)に関する節は暫定扱いです。',
+      },
+      example: {
+        id: 'example',
+        title: 'アプリとメッセージの実例',
+        content: '**アプリは1つのHTMLファイルで、JSON Schemaとして公開されている13種類の型付きフレームを通じてホストとやり取りします。** フレームは6つのファミリーに分かれ、アプリがネットワークやモデルプロバイダーに直接触れることはありません。',
+        items: [
+          '**ハンドシェイク:** `snug:host-ready`(ホストがインスタンスID、プロトコルのバージョン、対応機能を通知)と`snug:app-announce`(アプリが自己紹介)',
+          '**エージェントブリッジ:** `snug:app-message`、`snug:app-response`、`snug:app-cancel`。ホストのAIエージェントへのリクエストを運びます',
+          '**ストレージ:** `snug:db-request`と`snug:db-response`。ホストが仲介して、アプリ自身のテーブルに対するSQLを実行します',
+          '**ネットワーク:** `snug:net-request`と`snug:net-response`。外に出る唯一の経路で、ユーザーが承認したホストに限られます',
+          '**ナビゲーション:** `snug:open-url-request`と`snug:open-url-result`。ホストが独自の確認を行ったうえでブラウザを開きます',
+          '**イベント:** `snug:host-event`と`snug:app-event`。テーマ、表示状態、リサイズなどの通知に使う開かれたチャネルで、未知のイベントは無視されます',
+        ],
+        codeLanguage: 'typescript',
+        codeBlock: `// 1. アプリ側。プロジェクトの「Build your first app」ガイドにあるコード断片。
+const { isReady, sendMessage } = useSnugApp({
+  appId: 'pocket-chess-coach',
+  displayName: 'Pocket Chess Coach',
+})
+const reply = await sendMessage('opponent-move', { lastMove: 'e7e5' })
+if (reply.ok) applyMove(reply.data.move)
+
+const db = useAppDB()
+await db.exec('INSERT INTO games (pgn, played_at) VALUES (?, ?)', [pgn, Date.now()])
+
+// 2. ワイヤ上のメッセージ。ILLUSTRATIVE(説明用の例):フィールド名は公開されている
+// JSON Schemaに従っていますが、値はすべて架空です。ドキュメントにメッセージの実例はありません。
+const request = {
+  v: 1,
+  type: 'snug:app-message',
+  requestId: 'req-001',
+  instanceId: 'host-instance-id',
+  appId: 'pocket-chess-coach',
+  action: 'opponent-move',
+  payload: { lastMove: 'e7e5' },
+}
+const response = {
+  v: 1,
+  type: 'snug:app-response',
+  requestId: 'req-001',
+  ok: true,
+  streaming: false,
+  data: { move: 'g1f3' },
+}`,
+        note: 'スキーマリファレンスによると、リクエストにはresponseSchemaとstateというフィールドも任意で指定できます。レスポンスは3つの形式のいずれかです。ストリーミングされるテキスト、最終的なdataオブジェクト、またはコード、メッセージ、retryableフラグを持つ型付きエラーです。',
+      },
+      runtimeContracts: {
+        id: 'runtime-contracts',
+        title: 'ランタイム契約とアプリのチャット画面',
+        content: '**ランタイム契約とは、ホストが保持する小さなJSONの記述で、アプリが何であり、良い回答とはどういうものかを定めます。実行時の各ターンで長いビルド指示を送る代わりに、これを使います。** [パートIVの仕様](https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/)がこれを定義しており、インストール済みの各アプリの横に置けるオプションのチャットも併せて定めています。',
+        items: [
+          '**構造:** 厳密なJSONオブジェクトで、1〜600文字の`overview`が必須です。ほかに、トーン、ターンごとの状態、返信形式を指定する任意のフィールド、最大16個の設定、出力を絞る方向にしか働かない256〜8,192トークンの任意の出力上限があります。契約全体は2,560バイトを超えられません',
+          '**管理:** 契約を割り当てるのはホストで、アプリが自分で用意することはできません。契約はアプリのバージョンごとに保存され、編集や元に戻す操作に合わせて移動します。インポートされた契約は、ハブがまったく同じものを保持していない限り破棄されるため、外部のファイルから指示を紛れ込ませることはできません',
+          '**重要な理由:** 1ターンが運ぶのは契約とアクションのペイロードであり、ビルド時の会話ではありません。そのため、同じアプリを大きなホスト型モデルでも小さなローカルモデルでも動かせます。プロジェクトによれば、リファレンス実装ではターンごとに約1キロバイトを節約できるとのことですが、この数値は検証していません',
+          '**チャット画面:** 各メッセージは、データ、機能、プロバイダー、回答の4つのレーンにまたがる8つのインテントのいずれかに分類されます。分類に失敗した場合、ホストはどれかのレーンを既定にせず、確認の質問を返し、コードを書くレーンが既定になることはありません',
+          '**データレーン:** 読み取りは、アプリ自身のデータベースの使い捨てコピーに対して、結果の件数に上限を設けて実行されます。書き込みは「提案、プレビュー、承認、再検証」の順で進み、プレビューから実行までの間に影響を受ける行数が変わるとホストは処理を停止します',
+          '**機能レーン:** アプリ自体の変更は、確認のステップなしで行われます。安全策はバージョン管理、目に見える形でのリロードと元に戻す操作で、仕様はホストに対し、これがデータレーンとは異なることを開示するよう求めています',
+          '**信頼できないデータ:** 保存されたデータを含むプロンプトは、それを信頼できないものと明示し、その中の区切り文字を無害化しなければなりません',
+        ],
+        note: 'パートIVのページと、ランタイム契約の概念ページから読み取った内容です。動作は検証していません。また、行そのものではなく行数を比較する点は、このリビジョンの既知の制約であると仕様自身が開示しています。',
+      },
+      vsVibeCoding: {
+        id: 'vs-vibe-coding',
+        title: 'Snugとバイブコーディング+Tauri/Electronの比較',
+        content: '**ClaudeやCodexでアプリを作り、TauriやElectronで配布している開発者にとって、Snugは配布の広がりと制御を手放す代わりに、小さなAI駆動ツールをずっと軽く届けられる方法です。** 現時点でそのワークフローに置き換わるものではなく、競合するのはごく限られた種類のアプリだけです。',
+        columns: ['項目', 'Tauri/Electron', 'Snugアプリ'],
+        rows: [
+          { '項目': '成果物', 'Tauri/Electron': 'アプリごとのネイティブバイナリ', 'Snugアプリ': 'ホスト内で動く1つのHTMLファイル' },
+          { '項目': '配布', 'Tauri/Electron': 'アプリごとにビルド、署名、更新', 'Snugアプリ': 'ホストがファイルをマウント' },
+          { '項目': 'AIの利用', 'Tauri/Electron': '自前のキー、プロキシ、ユーザーのキー', 'Snugアプリ': 'ホストがモデルを提供、キー不要' },
+          { '項目': 'データ', 'Tauri/Electron': '自分で設計するストレージ', 'Snugアプリ': '.snug内の分離されたテーブル' },
+          { '項目': 'ネットワーク', 'Tauri/Electron': 'コードが行うことは何でも可', 'Snugアプリ': '承認済みホストのみ、ホスト経由' },
+          { '項目': 'ネイティブAPI', 'Tauri/Electron': 'フルアクセス', 'Snugアプリ': 'ホストが公開するものだけ' },
+          { '項目': '対応OS', 'Tauri/Electron': 'macOS、Windows、Linux', 'Snugアプリ': 'macOSアプリ、ブラウザ版デモ' },
+          { '項目': '利用者', 'Tauri/Electron': '誰でもインストール可能', 'Snugアプリ': 'Snugホストが必要' },
+          { '項目': '成熟度', 'Tauri/Electron': '確立したツール群', 'Snugアプリ': '1.0より前、メンテナー1人' },
+        ],
+        note: 'Snugの列はプロジェクト自身の文書に基づいています。PromptQuorumはSnugでアプリを作ったことはありません。TauriとElectronの列は、特定のアプリではなく、一般的なアプローチを説明したものです。',
+      },
+      switchOrStay: {
+        id: 'switch-or-stay',
+        title: 'バイブコーディング開発者は乗り換えるべきか?',
+        content: '**移すのは、条件に合うアプリだけにしましょう。主にAIモデルを呼び出し、データを自分で持つ、小さな個人用やチーム向けのツールです。** 販売するもの、一般向けに配布するもの、WindowsやLinuxで必要なものには、TauriやElectronを使い続けてください。',
+        subsections: [
+          {
+            title: 'Snugが優れている点',
+            list: [
+              '**キー管理なしのAI:** アプリはモデルプロバイダーも、そのキーも、どのモデルが答えたかも見ないため、キーをどうモデルに渡すかを自分で決める必要がありません',
+              '**アプリごとの配布が不要:** 小さなツールごとにインストーラー、署名、更新チャネルを用意する必要はなく、ホストがHTMLファイルをマウントします',
+              '**ユーザーが所有するデータ:** エクスポート可能なSQLiteファイル1つ。アプリごとにストレージとエクスポートの設計をする必要がありません',
+              '**既定で拒否するサンドボックス:** プロジェクト自身の脅威モデルによれば、アプリ内に直接のネットワークアクセスも認証情報もありません。ただし、この脅威モデルは独立した監査を受けていません',
+              '**再ビルドなしのモデル切り替え:** ランタイム契約により、ユーザーはアプリごとに、フロンティアモデルか小さなローカルモデルかを選べます',
+            ],
+          },
+          {
+            title: '劣っている点',
+            list: [
+              '**到達範囲:** 存在するのはmacOSアプリとブラウザ版デモだけで、利用者にはホストが必要です。読んだ文書の中には、ストアや決済の仕組みは見当たりませんでした',
+              '**制御:** 任意のネットワーク呼び出し、ネイティブAPI、独自のバックエンドは使えず、ホストが公開する範囲の中で作ることになります',
+              '**自分のツールチェーン:** 最初のアプリのガイドでは、ホストのビルダーエージェントが説明文からファイルを書くため、自分のClaudeやCodexの環境、テスト、CIはそのままでは引き継げません',
+              '**成熟度:** バージョン0.1.3、メンテナーは1人、2つ目のホストも独立した監査もないため、ホスト間の可搬性は裏付けがありません',
+            ],
+          },
+          {
+            title: '判断のしかたの一例',
+            list: [
+              '本来ならパッケージ化するはずの小さな個人用ツールを1つ選び、Snugで作り直す手間を比べてみる',
+              '対象が一般ユーザーである、ネイティブ機能が必要、または今すぐWindowsやLinuxが必要なら、TauriかElectronのままにする',
+              'PromptQuorumはこの比較を実際には行っていないため、上の表はドキュメントを読んだ結果として受け取ってください',
+            ],
+          },
         ],
       },
       localAndHosted: {
@@ -1503,7 +2199,8 @@ const response = {
           '**実際の動作:** PromptQuorumは、macOSアプリもPlaygroundもインストールや実行をしていません',
           '**採用状況:** 2つ目のホスト実装も、第三者のユーザーも見つかっていません',
           '**セキュリティ:** 独立した監査もペネトレーションテストも見つからず、長大な脅威モデルも一部しか読んでいません',
-          '**プロジェクト側が報告する主張:** プロジェクト自身の資料にある節約量や速度の数値は検証していません',
+          '**プロジェクト側が報告する主張:** プロジェクト自身の資料にある節約量や速度の数値(実行ターンごとに約1 KB節約できるという数値など)は検証していません',
+          '**仕様の読み込みの深さ:** パートIVと概念ページは全文を読みました。ほかのパートはタイトルと安定性に関する注記を読んだだけで、スキーマを確認したのは2つのフレームだけです',
           '**実運用での可搬性:** ホスト間の移動を想定した形式ですが、独立した2つのホスト間での移動は確認できませんでした',
         ],
       },
@@ -1529,6 +2226,7 @@ const response = {
               'AI製の個人用ツールを、自分で管理できるファイルとして持ちたい',
               'AIプロダクトを開発していて、組み込み可能な設計を研究したい',
               'Macを使っていて、1.0より前のソフトウェアにも抵抗がない',
+              'すでに小さなAIツールをバイブコーディングで作っていて、パッケージ化の手間を省きたい(上のバイブコーディング開発者向けのセクションを参照)',
             ],
           },
           {
@@ -1559,6 +2257,9 @@ const response = {
           { q: '.snugファイルを別のホストに移せますか?', a: '形式はその目的で仕様化されていますが、これまでに見つかったホストはプロジェクト自身のものだけなので、独立した実装の間での移動は示されていません。' },
           { q: 'Snugは業界標準ですか?', a: 'まだそれを裏付ける証拠はありません。メンテナーが1人で、1.0の仕様を公開している、新興のオープンプロトコルと呼ぶのが適切です。' },
           { q: '開発者はSnugを自社製品に組み込めますか?', a: 'ドキュメントにはホストの構築とSnugの組み込みのガイドがあり、リポジトリはTypeScriptパッケージを公開しています。本レビューでは試していません。' },
+          { q: 'Snugのメッセージはどのような形をしていますか?', a: '各メッセージは、snug:app-messageなどのtype、リクエストID、アプリID、actionを持つ、バージョン付きのJSONフレームです。仕様は13種類のフレームすべてについてJSON Schemaを公開していますが、ドキュメントにはメッセージの実例が載っていないため、本記事の例は架空の値を使っています。' },
+          { q: 'Snugのランタイム契約とは何ですか?', a: 'アプリが何であり、良い回答とはどういうものかを記した、ホストが保持する小さなJSONの記述で、上限は2,560バイトです。実行時の各ターンは、ビルド時の会話ではなく、この契約をもとに組み立てられます。' },
+          { q: 'TauriやElectronのアプリをSnugに移すべきですか?', a: '全面的な移行はおすすめしません。Snugが向いているのは、パッケージ化、キーの扱い、ストレージ設計を省きたい、小さなAI駆動の個人用ツールです。販売するアプリ、一般向けに配布するアプリ、WindowsやLinuxで使いたいアプリ、ネイティブAPIが必要なアプリには、TauriやElectronを使い続けてください。' },
         ],
       },
       sources: {
@@ -1569,6 +2270,10 @@ const response = {
           { url: 'https://snugprotocol.org/download/', title: 'Snugのダウンロード', description: 'macOS向けのダウンロードページ。モデルとAPIキーの要件が記載されています。' },
           { url: 'https://snugprotocol.org/docs/', title: 'Snugのドキュメント', description: '基本概念、6パートの仕様、実装者向けガイド。' },
           { url: 'https://github.com/snugprotocol/snug', title: 'GitHub上のSnug', description: 'MITライセンスのリポジトリ、リリース履歴、脅威モデル。' },
+          { url: 'https://snugprotocol.org/docs/concepts/envelopes-and-frames/', title: 'エンベロープとフレーム', description: '13種類のフレームとそのファミリー。' },
+          { url: 'https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/', title: '仕様 パートIV', description: 'ランタイム契約とアプリのチャット画面。' },
+          { url: 'https://snugprotocol.org/docs/get-started/first-app/', title: '最初のアプリを作る', description: '最小限のアプリ構成と、上で引用したコード断片。' },
+          { url: 'https://snugprotocol.org/docs/spec/schemas/', title: 'スキーマリファレンス', description: 'app-messageとapp-responseを含む、各フレームのJSON Schema。' },
         ],
       },
       relatedReading: {
@@ -1587,7 +2292,7 @@ const response = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     educationalLevel: 'Intermediate',
     audience: '希望了解 Snug Protocol 为 AI 构建的个人应用提出了什么方案、其设计如何运作,以及目前有多少内容可以得到确认的读者',
     primaryTerm: 'Snug Protocol',
@@ -1596,7 +2301,7 @@ const response = {
     intro: 'Snug Protocol([snugprotocol.org](https://snugprotocol.org))是一项开放规范,面向由 AI 智能体根据描述构建的小型应用:这些应用在运行时借用宿主程序的 AI 模型,并把数据保存在用户自己拥有的单个文件中。本文先解释其设计,再区分哪些内容有项目文档记载,哪些仍未得到证实。',
     metaDescription: 'Snug Protocol 是早期开放协议,让 AI 构建的应用保存在可移植的 .snug 文件中。本文介绍其工作方式、本地模型、安全设计及未经证实之处。',
     twitterDescription: 'Snug Protocol:一项早期开放协议,让 AI 构建的个人应用保存在可移植的 .snug 文件中。介绍其工作方式、安全设计,以及仍未经证实的部分。',
-    readTime: '阅读约9分钟',
+    readTime: '阅读约13分钟',
     targetKeywords: [
       'Snug Protocol',
       'Snug Protocol 详解',
@@ -1622,6 +2327,11 @@ const response = {
       { label: '核心要点', anchor: 'tldr' },
       { label: '什么是 Snug Protocol?', anchor: 'what-is-snug' },
       { label: '各部分如何协同', anchor: 'how-it-works' },
+      { label: '规范的六个部分', anchor: 'spec-parts' },
+      { label: '应用与消息长什么样', anchor: 'example' },
+      { label: '运行时契约与应用聊天界面', anchor: 'runtime-contracts' },
+      { label: 'Snug 与 Vibe Coding 加 Tauri 或 Electron', anchor: 'vs-vibe-coding' },
+      { label: '写 Vibe Coding 的开发者该转向吗?', anchor: 'switch-or-stay' },
       { label: '本地与托管模型', anchor: 'local-and-hosted' },
       { label: '安全设计及其局限', anchor: 'security' },
       { label: '获取方式', anchor: 'get-it' },
@@ -1646,6 +2356,7 @@ const response = {
           '规范已是 1.0 版;开发者称其实现仍属 1.0 之前的版本',
           '尚未发现第二个宿主、独立审计或外部用户群',
           '桌面应用仅支持 macOS;Windows 和 Linux 计划在 1.0 之后支持',
+          '对于用 Tauri 或 Electron 发布 vibe coding 应用的开发者,它适合由 AI 驱动的小型个人工具,而不适合面向公众销售的产品',
         ],
       },
       overview: {
@@ -1665,8 +2376,134 @@ const response = {
         items: [
           '**运行时 AI:** 据项目所述,应用运行时由宿主提供模型,因此更换模型无需重新构建应用',
           '**隔离存储:** 每个应用在用户文件内拥有自己的数据库命名空间',
-          '**规范:** 共六个部分,涵盖线路协议、可移植的用户数据库、关联应用、运行时契约与应用聊天界面、关联设备连接以及一致性。本评测未详细研究运行时契约',
+          '**规范:** 共六个部分,下一节将逐一概述',
           '**面向开发者:** 文档中有构建宿主和将 Snug 嵌入其他产品的指南;这两项均未在本次测试',
+        ],
+      },
+      specParts: {
+        id: 'spec-parts',
+        title: '规范的六个部分',
+        content: '**规范共有六个部分,每个部分规定应用、宿主与用户文件交互的不同层面。** 本文通读了第四部分和各概念页面;其他部分只读了[规范概览](https://snugprotocol.org/docs/spec/),其中仅给出标题和稳定性说明。',
+        items: [
+          '**第一部分,线路协议:** 核心帧、聊天信封以及规则 R1 至 R7。网络帧对和打开 URL 帧对随规范 v0.3 加入,在 1.0 中为规范性内容',
+          '**第二部分,可移植的用户数据库:** 存储模式(版本 6)、`.snug` 文件命名以及 `SNUGENC1`',
+          '**第三部分,关联应用:** 要求、授权、凭据保管和执行器',
+          '**第四部分,运行时契约与应用聊天界面:** 已安装的应用如何在不携带构建历史的情况下与 AI 通信,下文单独成节介绍',
+          '**第五部分,关联设备连接:** 规范称之为 sidecar 界面',
+          '**第六部分,一致性:** 兼容的实现必须做到什么;概览只给出了标题',
+        ],
+        note: '据概览所述,第一至第五部分在 1.0 中为规范性内容,其中关于常驻批准的章节标注为暂定。',
+      },
+      example: {
+        id: 'example',
+        title: '应用与消息长什么样',
+        content: '**一个应用就是一个 HTML 文件,通过 13 种带类型的帧与宿主通信,这些帧以 JSON Schema 形式发布。** 这些帧分为六个系列,应用从不直接接触网络或模型提供商。',
+        items: [
+          '**握手:** `snug:host-ready`(宿主通告其实例 ID、协议版本和能力)与 `snug:app-announce`(应用表明自身身份)',
+          '**智能体桥接:** `snug:app-message`、`snug:app-response` 和 `snug:app-cancel`,负责把请求传给宿主的 AI 智能体',
+          '**存储:** `snug:db-request` 与 `snug:db-response`,由宿主代理,对应用自己的数据表执行 SQL',
+          '**网络:** `snug:net-request` 与 `snug:net-response`,是唯一的对外通道,仅限用户已批准的主机',
+          '**导航:** `snug:open-url-request` 与 `snug:open-url-result`,由宿主在自行确认后打开浏览器',
+          '**事件:** `snug:host-event` 与 `snug:app-event`,用于传递主题、可见性和尺寸变化信号的开放通道;未知事件会被忽略',
+        ],
+        codeLanguage: 'typescript',
+        codeBlock: `// 1. 应用端。以下片段取自项目的"Build your first app"指南。
+const { isReady, sendMessage } = useSnugApp({
+  appId: 'pocket-chess-coach',
+  displayName: 'Pocket Chess Coach',
+})
+const reply = await sendMessage('opponent-move', { lastMove: 'e7e5' })
+if (reply.ok) applyMove(reply.data.move)
+
+const db = useAppDB()
+await db.exec('INSERT INTO games (pgn, played_at) VALUES (?, ?)', [pgn, Date.now()])
+
+// 2. 线路上的消息。仅为示意:字段名遵循已发布的
+// JSON Schema,所有取值均为虚构。文档中没有示例消息。
+const request = {
+  v: 1,
+  type: 'snug:app-message',
+  requestId: 'req-001',
+  instanceId: 'host-instance-id',
+  appId: 'pocket-chess-coach',
+  action: 'opponent-move',
+  payload: { lastMove: 'e7e5' },
+}
+const response = {
+  v: 1,
+  type: 'snug:app-response',
+  requestId: 'req-001',
+  ok: true,
+  streaming: false,
+  data: { move: 'g1f3' },
+}`,
+        note: '据模式参考文档,请求还可接受可选的 responseSchema 和 state 字段。响应有三种形式:流式文本、最终的 data 对象,或带有代码、消息和 retryable 标志的类型化错误。',
+      },
+      runtimeContracts: {
+        id: 'runtime-contracts',
+        title: '运行时契约与应用聊天界面',
+        content: '**运行时契约是由宿主持有的一小段 JSON 描述,说明应用是什么、好的回答应是什么样,它取代了每个运行时回合中冗长的构建指令。** [第四部分规范](https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/)对其作了定义,并规定了每个已安装应用旁可选的聊天界面。',
+        items: [
+          '**结构:** 严格的 JSON 对象,必须有长度为 1 至 600 个字符的 `overview`;可选字段包括语气、每回合状态和回复格式;最多 16 项设置;以及可选的 256 至 8,192 个 token 的输出上限,该上限只能收紧输出。整个契约不得超过 2,560 字节',
+          '**保管:** 契约由宿主分配,应用无法自行提供。契约按应用版本存储,随修改和回退而变化。导入的契约会被丢弃,除非中枢已持有完全相同的契约,因此外来文件无法注入指令',
+          '**意义:** 每个回合携带的是契约和操作载荷,而不是构建对话,因此同一个应用既可以运行在大型托管模型上,也可以运行在小型本地模型上。项目称参考实现每回合约节省 1 KB;该数字未经测试',
+          '**聊天界面:** 每条消息被归入四条通道(数据、功能、提供商和回答)下的八种意图之一。分类失败时,宿主会提出澄清问题,而不是默认选择某条通道,更不会默认进入编写代码的通道',
+          '**数据通道:** 读取在应用自有数据库的一次性副本上执行,结果数量有上限。写入遵循提议、预览、批准和重新验证的流程,若受影响行数在预览与执行之间发生变化,宿主会中止',
+          '**功能通道:** 对应用本身的修改无需确认步骤。保障措施是版本管理、可见的重新加载与回退,规范还要求宿主披露这与数据通道不同',
+          '**不可信数据:** 包含已存储数据的提示词必须将其标记为不可信,并使其中的任何分隔符文本失效',
+        ],
+        note: '内容取自第四部分页面和运行时契约概念页面。其行为未经测试,而且规范自身披露,比较行数而不是比较行内容,是当前修订版已知的局限。',
+      },
+      vsVibeCoding: {
+        id: 'vs-vibe-coding',
+        title: 'Snug 与 Vibe Coding 加 Tauri 或 Electron',
+        content: '**对于用 Claude 或 Codex 构建应用、再用 Tauri 或 Electron 发布的开发者,Snug 以牺牲分发范围和控制力为代价,换来一种轻得多的小型 AI 驱动工具交付方式。** 它目前并不能取代这一工作流,只在一小类应用上与之竞争。',
+        columns: ['方面', 'Tauri/Electron', 'Snug 应用'],
+        rows: [
+          { '方面': '产物', 'Tauri/Electron': '每个应用一个原生二进制文件', 'Snug 应用': '宿主中的一个 HTML 文件' },
+          { '方面': '发布', 'Tauri/Electron': '每个应用都要构建、签名、更新', 'Snug 应用': '由宿主挂载该文件' },
+          { '方面': 'AI 接入', 'Tauri/Electron': '自有密钥、代理或用户密钥', 'Snug 应用': '宿主提供模型,无需密钥' },
+          { '方面': '数据', 'Tauri/Electron': '存储方案自行设计', 'Snug 应用': '.snug 中相互隔离的数据表' },
+          { '方面': '网络', 'Tauri/Electron': '代码想做什么就做什么', 'Snug 应用': '仅经宿主访问已批准主机' },
+          { '方面': '原生 API', 'Tauri/Electron': '完全访问', 'Snug 应用': '仅限宿主开放的接口' },
+          { '方面': '平台', 'Tauri/Electron': 'macOS、Windows、Linux', 'Snug 应用': 'macOS 应用、浏览器演示' },
+          { '方面': '受众', 'Tauri/Electron': '任何人都能安装', 'Snug 应用': '需要 Snug 宿主' },
+          { '方面': '成熟度', 'Tauri/Electron': '成熟的工具链', 'Snug 应用': '1.0 之前,仅一位维护者' },
+        ],
+        note: 'Snug 一列反映的是项目自己的文档;PromptQuorum 并未在 Snug 中构建过应用。Tauri/Electron 一列描述的是通用做法,而非某个具体应用。',
+      },
+      switchOrStay: {
+        id: 'switch-or-stay',
+        title: '写 Vibe Coding 的开发者该转向吗?',
+        content: '**只迁移适合的应用:主要调用 AI 模型并保管自己数据的小型个人或团队工具。** 凡是要出售、面向大众发布,或需要在 Windows 或 Linux 上运行的应用,仍应使用 Tauri 或 Electron。',
+        subsections: [
+          {
+            title: 'Snug 更好的地方',
+            list: [
+              '**无需处理密钥的 AI:** 应用看不到模型提供商、其密钥,也不知道由哪个模型作答,因此你不必决定密钥如何送达模型',
+              '**无需逐个应用发布:** 每个小工具都不需要安装包、签名或更新渠道;由宿主挂载 HTML 文件',
+              '**用户拥有的数据:** 一个可导出的 SQLite 文件,而不必在每个应用里设计存储和导出方案',
+              '**默认拒绝的沙箱:** 据项目自己的威胁模型(未经独立审计),应用内没有直接的网络访问,也没有凭据',
+              '**换模型无需重新构建:** 运行时契约让用户可以按应用选择前沿模型或小型本地模型',
+            ],
+          },
+          {
+            title: '较差的地方',
+            list: [
+              '**覆盖范围:** 目前只有 macOS 应用和浏览器演示,你的用户需要一个宿主,而且在已阅读的文档中没有找到应用商店或支付机制',
+              '**控制力:** 不能随意发起网络调用,没有原生 API,也没有自定义后端;你只能在宿主开放的范围内工作',
+              '**你自己的工具链:** 在第一个应用的指南中,由宿主的构建智能体根据你的描述编写文件,因此你自己的 Claude 或 Codex 配置、测试和 CI 无法直接沿用',
+              '**成熟度:** 0.1.3 版,仅一位维护者,没有第二个宿主,也没有独立审计,因此宿主之间的可移植性尚未得到证实',
+            ],
+          },
+          {
+            title: '一种合理的判断方式',
+            list: [
+              '挑一个你原本要打包的小型个人工具,比较在 Snug 中重新构建它的工作量',
+              '如果受众是公众、应用需要原生功能,或你现在就需要 Windows 或 Linux,就继续使用 Tauri 或 Electron',
+              'PromptQuorum 没有做过这一对比,因此请把上表视为对文档的解读',
+            ],
+          },
         ],
       },
       localAndHosted: {
@@ -1735,7 +2572,8 @@ const response = {
           '**实际使用表现:** PromptQuorum 未安装或运行过 macOS 应用或 Playground',
           '**采用情况:** 未发现第二个宿主实现,也未发现第三方用户',
           '**安全性:** 没有独立审计或渗透测试,而且篇幅很长的威胁模型只读了一部分',
-          '**项目自述的说法:** 项目自己的材料中关于节省量或速度的数字未经测试',
+          '**项目自述的说法:** 项目自己的材料中关于节省量或速度的数字,例如每个运行时回合约节省 1 KB,未经测试',
+          '**规范深度:** 第四部分和各概念页面通读了全文;其他部分只读了标题和稳定性说明,并且只核对了两种帧的模式',
           '**实际可移植性:** 该格式的设计目的是在宿主之间迁移,但无法核实在两个独立宿主之间的实际迁移',
         ],
       },
@@ -1761,6 +2599,7 @@ const response = {
               '希望 AI 构建的个人工具以你掌控的文件形式保存',
               '开发 AI 产品,想研究一种可嵌入的设计',
               '使用 Mac,并能接受 1.0 之前的软件',
+              '已经在用 vibe coding 开发小型 AI 工具,并希望省去打包环节(见上文关于是否转向的一节)',
             ],
           },
           {
@@ -1791,6 +2630,9 @@ const response = {
           { q: '我可以把 .snug 文件迁移到另一个宿主吗?', a: '该格式的设计目的正是如此,但目前找到的宿主只有项目自己的,因此尚未见到在独立实现之间迁移的实例。' },
           { q: 'Snug 是行业标准吗?', a: '目前没有证据支持这一说法。更准确的描述是:这是一项新兴的开放协议,只有一位维护者,并已发布 1.0 版规范。' },
           { q: '开发者可以把 Snug 嵌入自己的产品吗?', a: '文档包含构建宿主和嵌入 Snug 的指南,仓库也发布了 TypeScript 软件包;本评测未对其进行测试。' },
+          { q: 'Snug 消息长什么样?', a: '每条消息是一个带版本的 JSON 帧,包含 snug:app-message 之类的类型、请求 ID、应用 ID 和一个操作。规范为全部 13 种帧类型发布了 JSON Schema,但文档中没有示例消息,因此本文的示例使用的是虚构的取值。' },
+          { q: 'Snug 的运行时契约是什么?', a: '它是由宿主持有的一小段 JSON 描述,上限为 2,560 字节,说明应用是什么、好的回答应是什么样。每个运行时回合都根据它构建,而不是根据构建对话。' },
+          { q: '我应该把 Tauri 或 Electron 应用迁移到 Snug 吗?', a: '不要整体迁移。Snug 适合由 AI 驱动的小型个人工具,在这类场景中你可以省去打包、密钥处理和存储设计。需要出售、面向公众发布、在 Windows 或 Linux 上运行或使用原生 API 的应用,请继续使用 Tauri 或 Electron。' },
         ],
       },
       sources: {
@@ -1801,6 +2643,10 @@ const response = {
           { url: 'https://snugprotocol.org/download/', title: 'Snug 下载', description: 'macOS 下载页面,含模型和 API 密钥要求。' },
           { url: 'https://snugprotocol.org/docs/', title: 'Snug 文档', description: '概念介绍、六部分规范以及实现者指南。' },
           { url: 'https://github.com/snugprotocol/snug', title: 'GitHub 上的 Snug', description: '采用 MIT 许可的仓库、发布历史和威胁模型。' },
+          { url: 'https://snugprotocol.org/docs/concepts/envelopes-and-frames/', title: '信封与帧', description: '13 种帧类型及其系列。' },
+          { url: 'https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/', title: '规范第四部分', description: '运行时契约与应用聊天界面。' },
+          { url: 'https://snugprotocol.org/docs/get-started/first-app/', title: '构建你的第一个应用', description: '最小应用结构以及上文引用的代码片段。' },
+          { url: 'https://snugprotocol.org/docs/spec/schemas/', title: '模式参考', description: '各帧的 JSON Schema,包括 app-message 和 app-response。' },
         ],
       },
       relatedReading: {
@@ -1819,7 +2665,7 @@ const response = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     educationalLevel: 'Intermediate',
     audience: 'قرّاء يريدون فهم ما يقترحه Snug Protocol للتطبيقات الشخصية التي يبنيها الذكاء الاصطناعي، وكيف يعمل تصميمه، وما يمكن تأكيده منه اليوم',
     primaryTerm: 'Snug Protocol',
@@ -1828,7 +2674,7 @@ const response = {
     intro: 'Snug Protocol ([snugprotocol.org](https://snugprotocol.org)) مواصفة مفتوحة لتطبيقات صغيرة يبنيها وكيل ذكاء اصطناعي انطلاقاً من وصف نصي، وتستعير نموذج الذكاء الاصطناعي الخاص بالمضيف أثناء التشغيل، وتحفظ بياناتها في ملف واحد يملكه المستخدم. يشرح هذا الموضوع التصميم، ثم يفصل بين ما يوثّقه المشروع وما لم يثبت بعد.',
     metaDescription: 'Snug Protocol بروتوكول مفتوح ناشئ لتطبيقات يبنيها الذكاء الاصطناعي في ملف .snug محمول: طريقة عمله والنماذج المحلية وتصميم الأمان وما لم يثبت.',
     twitterDescription: 'Snug Protocol: بروتوكول مفتوح ناشئ لتطبيقات شخصية يبنيها الذكاء الاصطناعي في ملف .snug محمول. طريقة عمله وتصميم الأمان وما لم يثبت بعد.',
-    readTime: '9 دقائق للقراءة',
+    readTime: '13 دقيقة للقراءة',
     targetKeywords: [
       'Snug Protocol',
       'شرح Snug Protocol',
@@ -1854,6 +2700,11 @@ const response = {
       { label: 'النقاط الرئيسية', anchor: 'tldr' },
       { label: 'ما هو Snug Protocol؟', anchor: 'what-is-snug' },
       { label: 'كيف تتكامل الأجزاء', anchor: 'how-it-works' },
+      { label: 'الأجزاء الستة للمواصفة', anchor: 'spec-parts' },
+      { label: 'شكل التطبيق والرسالة', anchor: 'example' },
+      { label: 'عقود وقت التشغيل وواجهة محادثة التطبيق', anchor: 'runtime-contracts' },
+      { label: 'Snug مقابل vibe coding مع Tauri أو Electron', anchor: 'vs-vibe-coding' },
+      { label: 'هل يجدر بمطوّر vibe coding الانتقال؟', anchor: 'switch-or-stay' },
       { label: 'النماذج المحلية والمستضافة', anchor: 'local-and-hosted' },
       { label: 'تصميم الأمان وحدوده', anchor: 'security' },
       { label: 'كيف تحصل عليه', anchor: 'get-it' },
@@ -1878,6 +2729,7 @@ const response = {
           'المواصفة بلغت الإصدار 1.0؛ ويصف المطوّر التنفيذ بأنه ما قبل 1.0',
           'لم يُعثر على مضيف ثانٍ ولا تدقيق مستقل ولا قاعدة مستخدمين خارجية',
           'يعمل تطبيق سطح المكتب على macOS فقط؛ ويُخطَّط لـ Windows وLinux بعد الإصدار 1.0',
+          'للمطوّرين الذين يشحنون تطبيقات vibe coding عبر Tauri أو Electron: يناسب أدوات شخصية صغيرة يقودها الذكاء الاصطناعي، لا منتجات تُباع للجمهور',
         ],
       },
       overview: {
@@ -1897,8 +2749,134 @@ const response = {
         items: [
           '**ذكاء اصطناعي وقت التشغيل:** يوفّر المضيف النموذج أثناء تشغيل التطبيق، فلا يعني تغيير النموذج إعادة بناء التطبيق، بحسب المشروع',
           '**تخزين معزول:** يحصل كل تطبيق على فضاء أسماء خاص به لقاعدة البيانات داخل ملف المستخدم',
-          '**المواصفة:** ستة أجزاء تغطي بروتوكول الاتصال، وقاعدة بيانات المستخدم المحمولة، والتطبيقات المتصلة، وعقود وقت التشغيل وواجهة محادثة التطبيق، واتصالات الأجهزة المرتبطة، والمطابقة. لم تفحص هذه المراجعة عقود وقت التشغيل بالتفصيل',
+          '**المواصفة:** ستة أجزاء، تُلخَّص واحداً واحداً في القسم التالي',
           '**للمطوّرين:** تتضمن الوثائق أدلة لبناء مضيف ولتضمين Snug في منتج آخر؛ ولم يُختبر أيٌّ منها هنا',
+        ],
+      },
+      specParts: {
+        id: 'spec-parts',
+        title: 'الأجزاء الستة للمواصفة',
+        content: '**للمواصفة ستة أجزاء، يحدد كل منها طبقة مختلفة من تفاعل التطبيقات والمضيفات وملف المستخدم.** قُرئ الجزء الرابع وصفحات المفاهيم كاملةً لإعداد هذا الموضوع؛ أما الأجزاء الأخرى فلم يُقرأ منها سوى [نظرة المواصفة العامة](https://snugprotocol.org/docs/spec/)، وهي تعطي العناوين وملاحظات الاستقرار فقط.',
+        items: [
+          '**الجزء الأول، بروتوكول الاتصال:** الإطارات الأساسية وظرف المحادثة والقواعد من R1 إلى R7. أُضيف زوجا إطارَي الشبكة وفتح الروابط مع الإصدار 0.3 من المواصفة، وهما إلزاميان عند 1.0',
+          '**الجزء الثاني، قاعدة بيانات المستخدم المحمولة:** مخطط التخزين (الإصدار 6) وتسمية ملف `.snug` والصيغة `SNUGENC1`',
+          '**الجزء الثالث، التطبيقات المتصلة:** المتطلبات والأذونات وحفظ بيانات الاعتماد والمنفِّذ',
+          '**الجزء الرابع، عقود وقت التشغيل وواجهة محادثة التطبيق:** كيف يخاطب التطبيق المثبَّت الذكاء الاصطناعي دون أن يحمل سجل بنائه، ويُشرح في قسمه الخاص أدناه',
+          '**الجزء الخامس، اتصالات الأجهزة المرتبطة:** تسمّيها المواصفة واجهة sidecar',
+          '**الجزء السادس، المطابقة:** ما يجب أن يفعله أي تنفيذ متوافق؛ ولا تعطي النظرة العامة سوى العنوان',
+        ],
+        note: 'بحسب النظرة العامة، الأجزاء من الأول إلى الخامس إلزامية عند 1.0، ويُوسَم القسم الخاص بالموافقات الدائمة بأنه مؤقت.',
+      },
+      example: {
+        id: 'example',
+        title: 'شكل التطبيق والرسالة',
+        content: '**التطبيق ملف HTML واحد يخاطب مضيفه عبر 13 إطاراً مصنّفاً، تُنشر مخططات JSON Schema الخاصة بها.** تنقسم الإطارات إلى ست عائلات، ولا يلمس التطبيق الشبكة ولا مزوّد النموذج مباشرة.',
+        items: [
+          '**المصافحة:** `snug:host-ready` (يعلن فيه المضيف معرّف نسخته وإصدارات البروتوكول وقدراته) و`snug:app-announce` (يعرّف فيه التطبيق بنفسه)',
+          '**جسر الوكيل:** `snug:app-message` و`snug:app-response` و`snug:app-cancel`، وتحمل الطلبات إلى وكيل الذكاء الاصطناعي لدى المضيف',
+          '**التخزين:** `snug:db-request` و`snug:db-response`، وينفّذان استعلامات SQL يتوسط فيها المضيف على جداول التطبيق الخاصة به',
+          '**الشبكة:** `snug:net-request` و`snug:net-response`، وهما المسار الوحيد إلى الخارج، ومقصوران على المضيفات التي وافق عليها المستخدم',
+          '**التنقل:** `snug:open-url-request` و`snug:open-url-result`، حيث يفتح المضيف المتصفح بعد تأكيده الخاص',
+          '**الأحداث:** `snug:host-event` و`snug:app-event`، وهي قناة مفتوحة لإشارات السمة والظهور وتغيير الحجم؛ وتُتجاهل الأحداث غير المعروفة',
+        ],
+        codeLanguage: 'typescript',
+        codeBlock: `// 1. App side. Fragments from the project's "Build your first app" guide.
+const { isReady, sendMessage } = useSnugApp({
+  appId: 'pocket-chess-coach',
+  displayName: 'Pocket Chess Coach',
+})
+const reply = await sendMessage('opponent-move', { lastMove: 'e7e5' })
+if (reply.ok) applyMove(reply.data.move)
+
+const db = useAppDB()
+await db.exec('INSERT INTO games (pgn, played_at) VALUES (?, ?)', [pgn, Date.now()])
+
+// 2. On the wire. ILLUSTRATIVE: the field names follow the published
+// JSON Schema; every value is invented. The docs show no sample message.
+const request = {
+  v: 1,
+  type: 'snug:app-message',
+  requestId: 'req-001',
+  instanceId: 'host-instance-id',
+  appId: 'pocket-chess-coach',
+  action: 'opponent-move',
+  payload: { lastMove: 'e7e5' },
+}
+const response = {
+  v: 1,
+  type: 'snug:app-response',
+  requestId: 'req-001',
+  ok: true,
+  streaming: false,
+  data: { move: 'g1f3' },
+}`,
+        note: 'بحسب مرجع المخططات، يقبل الطلب أيضاً حقلين اختياريين هما responseSchema وstate. وللاستجابة ثلاثة أشكال: نص متدفق، أو كائن data نهائي، أو خطأ مصنَّف يضم رمزاً ورسالة وعلم retryable.',
+      },
+      runtimeContracts: {
+        id: 'runtime-contracts',
+        title: 'عقود وقت التشغيل وواجهة محادثة التطبيق',
+        content: '**عقد وقت التشغيل وصف JSON صغير يحتفظ به المضيف، يبيّن ماهية التطبيق وما يُعدّ إجابة جيدة، ويحلّ محل تعليمات البناء الطويلة في كل دورة تشغيل.** يحدده [الجزء الرابع من المواصفة](https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/) مع محادثة اختيارية بجوار كل تطبيق مثبَّت.',
+        items: [
+          '**الشكل:** كائن JSON صارم له حقل `overview` إلزامي من 1 إلى 600 حرف؛ وحقول اختيارية للنبرة والحالة لكل دورة وصيغة الرد؛ وحتى 16 إعداداً؛ وسقف اختياري للمخرجات من 256 إلى 8,192 رمزاً (token) لا يمكنه إلا تضييق المخرجات. ولا يجوز أن يتجاوز العقد كله 2,560 بايت',
+          '**الحفظ:** المضيف هو من يسند العقود، ولا يستطيع التطبيق تقديم عقد. تُخزَّن العقود لكل إصدار من التطبيق وتنتقل مع التعديلات والتراجعات. ويُسقَط العقد المستورَد ما لم يكن المضيف يملك عقداً مطابقاً له تماماً، فلا يستطيع ملف غريب حقن تعليمات',
+          '**أهميته:** تحمل كل دورة العقد وحمولة الإجراء لا محادثة البناء، ولذلك يمكن للتطبيق نفسه أن يعمل على نموذج مستضاف كبير أو نموذج محلي صغير. ويذكر المشروع أن التنفيذ المرجعي يوفّر نحو كيلوبايت لكل دورة؛ ولم يُختبر هذا الرقم',
+          '**واجهة المحادثة:** تُصنَّف كل رسالة ضمن واحدة من ثماني نوايا موزعة على أربعة مسارات: البيانات والميزات والمزوّد والإجابة. وإذا فشل التصنيف يطرح المضيف سؤالاً توضيحياً بدلاً من الافتراض الآلي لمسار ما، ولا يفترض أبداً مسار كتابة الشيفرة',
+          '**مسار البيانات:** تعمل القراءات على نسخة مؤقتة من قاعدة بيانات التطبيق الخاصة به بنتائج محدودة السقف. أما الكتابات فتمرّ بالاقتراح فالمعاينة فالموافقة فإعادة التحقق، ويتوقف المضيف إذا تغيّرت أعداد الصفوف المتأثرة بين المعاينة والتنفيذ',
+          '**مسار الميزات:** تتم التغييرات على التطبيق نفسه دون خطوة تأكيد. وضمانات الأمان هي إدارة الإصدارات وإعادة تحميل ظاهرة وتراجع، وتشترط المواصفة أن تفصح المضيفات عن أن هذا يختلف عن مسار البيانات',
+          '**البيانات غير الموثوقة:** يجب أن تضع المطالبات التي تتضمن بيانات مخزَّنة وسماً عليها بأنها غير موثوقة، وأن تُبطل مفعول أي نص فاصل داخلها',
+        ],
+        note: 'قُرئ هذا من صفحة الجزء الرابع وصفحة مفهوم عقود وقت التشغيل. لم يُختبر السلوك، وتفصح المواصفة نفسها بأن مقارنة أعداد الصفوف بدلاً من الصفوف ذاتها قيد معروف في هذه النسخة من المواصفة.',
+      },
+      vsVibeCoding: {
+        id: 'vs-vibe-coding',
+        title: 'Snug مقابل vibe coding مع Tauri أو Electron',
+        content: '**بالنسبة إلى مطوّر يبني تطبيقاته بـ Claude أو Codex ويشحنها عبر Tauri أو Electron، يقايض Snug سعة التوزيع والتحكم بطريقة أخف بكثير لتسليم أدوات صغيرة يقودها الذكاء الاصطناعي.** وهو لا يحل محل هذا الأسلوب اليوم، ولا ينافسه إلا في فئة ضيقة من التطبيقات.',
+        columns: ['المجال', 'تطبيقك (Tauri/Electron)', 'تطبيق Snug'],
+        rows: [
+          { 'المجال': 'المخرجات', 'تطبيقك (Tauri/Electron)': 'ملف تنفيذي أصلي لكل تطبيق', 'تطبيق Snug': 'ملف HTML واحد داخل مضيف' },
+          { 'المجال': 'الشحن', 'تطبيقك (Tauri/Electron)': 'بناء وتوقيع وتحديث كل تطبيق', 'تطبيق Snug': 'المضيف يحمّل الملف' },
+          { 'المجال': 'الوصول إلى الذكاء الاصطناعي', 'تطبيقك (Tauri/Electron)': 'مفاتيحك أو وسيط أو مفاتيح المستخدم', 'تطبيق Snug': 'المضيف يوفّر النموذج، بلا مفاتيح' },
+          { 'المجال': 'البيانات', 'تطبيقك (Tauri/Electron)': 'تخزين تصممه بنفسك', 'تطبيق Snug': 'جداول معزولة في ملف .snug' },
+          { 'المجال': 'الشبكة', 'تطبيقك (Tauri/Electron)': 'ما تفعله شيفرتك', 'تطبيق Snug': 'مضيفات موافَق عليها عبر المضيف فقط' },
+          { 'المجال': 'واجهات النظام الأصلية', 'تطبيقك (Tauri/Electron)': 'وصول كامل', 'تطبيق Snug': 'ما يتيحه المضيف فقط' },
+          { 'المجال': 'المنصات', 'تطبيقك (Tauri/Electron)': 'macOS وWindows وLinux', 'تطبيق Snug': 'تطبيق macOS ونسخة تجريبية في المتصفح' },
+          { 'المجال': 'الجمهور', 'تطبيقك (Tauri/Electron)': 'يستطيع أي شخص تثبيته', 'تطبيق Snug': 'يحتاج إلى مضيف Snug' },
+          { 'المجال': 'النضج', 'تطبيقك (Tauri/Electron)': 'أدوات راسخة', 'تطبيق Snug': 'ما قبل 1.0، مشرف واحد' },
+        ],
+        note: 'يعكس عمود Snug وثائق المشروع نفسه؛ ولم تبنِ PromptQuorum تطبيقاً في Snug. ويصف عمود Tauri وElectron المقاربة العامة لا تطبيقاً بعينه.',
+      },
+      switchOrStay: {
+        id: 'switch-or-stay',
+        title: 'هل يجدر بمطوّر vibe coding الانتقال؟',
+        content: '**انقل التطبيقات المناسبة فقط: الأدوات الشخصية أو الجماعية الصغيرة التي تستدعي نموذج ذكاء اصطناعي في الأساس وتحتفظ ببياناتها.** وأبقِ Tauri أو Electron لكل ما تبيعه أو تشحنه للجمهور العام أو تحتاجه على Windows أو Linux.',
+        subsections: [
+          {
+            title: 'أين يتفوق Snug',
+            list: [
+              '**ذكاء اصطناعي دون معالجة مفاتيح:** لا يرى التطبيق مزوّد النموذج ولا مفاتيحه ولا أي نموذج أجاب، فلا تقرر أنت كيف تصل المفاتيح إلى النموذج',
+              '**لا شيء يُشحَن لكل تطبيق:** لا مثبّت ولا توقيع ولا قناة تحديث لكل أداة صغيرة؛ فالمضيف يحمّل ملف HTML',
+              '**بيانات يملكها المستخدم:** ملف SQLite واحد قابل للتصدير، بدلاً من تصميم للتخزين والتصدير في كل تطبيق',
+              '**صندوق عزل يمنع كل شيء افتراضياً:** لا وصول شبكياً مباشراً ولا بيانات اعتماد داخل التطبيق، بحسب نموذج التهديدات الخاص بالمشروع، وهو غير مدقَّق بصورة مستقلة',
+              '**تبديل النموذج دون إعادة بناء:** يتيح عقد وقت التشغيل للمستخدم اختيار نموذج متقدم أو نموذج محلي صغير لكل تطبيق',
+            ],
+          },
+          {
+            title: 'أين يتأخر',
+            list: [
+              '**الانتشار:** لا يوجد سوى تطبيق macOS ونسخة تجريبية في المتصفح، ويحتاج مستخدموك إلى مضيف، ولم يُعثر في الوثائق المقروءة على متجر أو آلية دفع',
+              '**التحكم:** لا استدعاءات شبكية عشوائية ولا واجهات نظام أصلية ولا خادم خلفي مخصص؛ فأنت تعمل ضمن ما يتيحه المضيف',
+              '**سلسلة أدواتك الخاصة:** في دليل التطبيق الأول يكتب وكيل البناء لدى المضيف الملف من وصفك، فلا تنتقل إعدادات Claude أو Codex الخاصة بك واختباراتك وCI إليه مباشرة',
+              '**النضج:** الإصدار 0.1.3 ومشرف واحد ولا مضيف ثانٍ ولا تدقيق مستقل، فالنقل بين المضيفات لم يثبت',
+            ],
+          },
+          {
+            title: 'طريقة معقولة للقرار',
+            list: [
+              'اختر أداة شخصية صغيرة كنت ستغلّفها، وقارن جهد إعادة بنائها في Snug',
+              'ابقَ على Tauri أو Electron إذا كان الجمهور عاماً، أو احتاج التطبيق إلى ميزات أصلية، أو كنت تحتاج Windows أو Linux اليوم',
+              'لم تجرِ PromptQuorum هذه المقارنة، فعامِل الجدول أعلاه على أنه قراءة للوثائق',
+            ],
+          },
         ],
       },
       localAndHosted: {
@@ -1967,7 +2945,8 @@ const response = {
           '**السلوك العملي:** لم تثبّت PromptQuorum تطبيق macOS أو Playground ولم تشغّلهما',
           '**الاعتماد:** لم يُعثر على تنفيذ لمضيف ثانٍ ولا على مستخدمين من أطراف ثالثة',
           '**الأمان:** لا يوجد تدقيق مستقل ولا اختبار اختراق، ولم يُقرأ نموذج التهديدات الطويل إلا جزئياً',
-          '**ما يعلنه المشروع:** لم تُختبر الأرقام المتعلقة بالتوفير أو السرعة الواردة في مواد المشروع نفسه',
+          '**ما يعلنه المشروع:** لم تُختبر الأرقام المتعلقة بالتوفير أو السرعة الواردة في مواد المشروع نفسه، ومنها توفير نحو 1 KB لكل دورة تشغيل',
+          '**عمق المواصفة:** قُرئ الجزء الرابع وصفحات المفاهيم كاملةً؛ أما الأجزاء الأخرى فقُرئت عناوينها وملاحظات الاستقرار فقط، ولم يُفحص سوى مخطط إطارين اثنين',
           '**قابلية النقل عملياً:** صيغة الملف محددة للانتقال بين المضيفات، لكن تعذّر فحص أي انتقال بين مضيفين مستقلين',
         ],
       },
@@ -1993,6 +2972,7 @@ const response = {
               'تريد أدوات شخصية يبنيها الذكاء الاصطناعي وتحتفظ بها كملف تتحكم فيه',
               'تبني منتجات ذكاء اصطناعي وتريد دراسة تصميم قابل للتضمين',
               'تستخدم جهاز Mac وتتقبّل البرمجيات التي لم تبلغ الإصدار 1.0',
+              'تبرمج أدوات ذكاء اصطناعي صغيرة بأسلوب vibe coding وتريد تجنّب تغليفها (انظر قسم الانتقال أعلاه)',
             ],
           },
           {
@@ -2023,6 +3003,9 @@ const response = {
           { q: 'هل يمكنني نقل ملف .snug إلى مضيف آخر؟', a: 'صيغة الملف محددة لهذا الغرض، لكن المضيفات الوحيدة التي عُثر عليها حتى الآن هي مضيفات المشروع نفسه، لذلك لم يثبت الانتقال بين تنفيذين مستقلين.' },
           { q: 'هل Snug معيار صناعي؟', a: 'لا يوجد دليل على ذلك حتى الآن. الأدق وصفه ببروتوكول مفتوح ناشئ له مشرف واحد ومواصفة 1.0 منشورة.' },
           { q: 'هل يمكن للمطوّرين تضمين Snug في منتجهم؟', a: 'تتضمن الوثائق أدلة لبناء مضيف ولتضمين Snug، ويصدر المستودع حزم TypeScript؛ ولم تختبر هذه المراجعة ذلك.' },
+          { q: 'كيف تبدو رسالة Snug؟', a: 'كل رسالة إطار JSON ذو إصدار، له نوع مثل snug:app-message ومعرّف طلب ومعرّف التطبيق وإجراء. تنشر المواصفة مخطط JSON Schema لأنواع الإطارات الثلاثة عشر كلها، لكن وثائقها لا تعرض رسالة نموذجية، ولذلك يستخدم المثال في هذا الموضوع قيماً مختلقة.' },
+          { q: 'ما عقد وقت التشغيل في Snug؟', a: 'وصف JSON صغير يحتفظ به المضيف ولا يتجاوز 2,560 بايت، يبيّن ماهية التطبيق وما يُعدّ إجابة جيدة. وتُبنى كل دورة تشغيل منه بدلاً من محادثة البناء.' },
+          { q: 'هل أنقل تطبيقاتي المبنية بـ Tauri أو Electron إلى Snug؟', a: 'ليس دفعة واحدة. يناسب Snug أدوات شخصية صغيرة يقودها الذكاء الاصطناعي حين تريد تجنّب التغليف ومعالجة المفاتيح وتصميم التخزين. أبقِ Tauri أو Electron للتطبيقات التي تبيعها أو تشحنها للجمهور أو تحتاجها على Windows وLinux أو مع واجهات برمجة أصلية.' },
         ],
       },
       sources: {
@@ -2033,6 +3016,10 @@ const response = {
           { url: 'https://snugprotocol.org/download/', title: 'تنزيل Snug', description: 'صفحة تنزيل macOS، مع متطلبات النموذج ومفتاح API.' },
           { url: 'https://snugprotocol.org/docs/', title: 'وثائق Snug', description: 'المفاهيم والمواصفة المؤلفة من ستة أجزاء وأدلة المنفِّذين.' },
           { url: 'https://github.com/snugprotocol/snug', title: 'Snug على GitHub', description: 'المستودع بترخيص MIT وسجل الإصدارات ونموذج التهديدات.' },
+          { url: 'https://snugprotocol.org/docs/concepts/envelopes-and-frames/', title: 'الأظرف والإطارات', description: 'أنواع الإطارات الثلاثة عشر وعائلاتها.' },
+          { url: 'https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/', title: 'المواصفة: الجزء الرابع', description: 'عقود وقت التشغيل وواجهة محادثة التطبيق.' },
+          { url: 'https://snugprotocol.org/docs/get-started/first-app/', title: 'ابنِ تطبيقك الأول', description: 'البنية الدنيا للتطبيق ومقتطفات الشيفرة المقتبسة أعلاه.' },
+          { url: 'https://snugprotocol.org/docs/spec/schemas/', title: 'مرجع المخططات', description: 'مخططات JSON Schema للإطارات، ومنها app-message وapp-response.' },
         ],
       },
       relatedReading: {
@@ -2051,7 +3038,7 @@ const response = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     publishDate: '2026-10-17',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-18',
     educationalLevel: 'Intermediate',
     audience: 'AI로 만드는 개인용 앱에 대해 Snug Protocol이 무엇을 제안하는지, 설계가 어떻게 작동하는지, 그리고 현재 그중 얼마만큼 확인할 수 있는지 알고 싶은 독자',
     primaryTerm: 'Snug Protocol',
@@ -2060,7 +3047,7 @@ const response = {
     intro: 'Snug Protocol([snugprotocol.org](https://snugprotocol.org))은 AI 에이전트가 설명을 바탕으로 만들고, 실행 중에는 호스트의 AI 모델을 빌려 쓰며, 데이터를 사용자가 소유한 하나의 파일에 보관하는 소형 앱을 위한 개방형 사양입니다. 이 글은 설계를 설명한 다음, 프로젝트가 문서로 밝힌 내용과 아직 입증되지 않은 내용을 구분합니다.',
     metaDescription: 'Snug Protocol은 이식 가능한 .snug 파일에 담는 AI 제작 앱을 위한 초기 개방형 프로토콜입니다. 작동 방식, 로컬 모델, 보안 설계, 미검증 사항을 정리했습니다.',
     twitterDescription: 'Snug Protocol: 이식 가능한 .snug 파일에 담는 AI 제작 개인 앱을 위한 초기 개방형 프로토콜. 작동 방식, 보안 설계, 아직 입증되지 않은 부분을 정리했습니다.',
-    readTime: '9분 읽기',
+    readTime: '13분 읽기',
     targetKeywords: [
       'Snug Protocol',
       'Snug Protocol 해설',
@@ -2086,6 +3073,11 @@ const response = {
       { label: '핵심 내용', anchor: 'tldr' },
       { label: 'Snug Protocol이란 무엇인가?', anchor: 'what-is-snug' },
       { label: '구성 요소가 맞물리는 방식', anchor: 'how-it-works' },
+      { label: '사양의 여섯 부분', anchor: 'spec-parts' },
+      { label: '앱과 메시지는 어떤 모습인가', anchor: 'example' },
+      { label: '런타임 계약과 앱 채팅 화면', anchor: 'runtime-contracts' },
+      { label: 'Snug와 바이브 코딩 + Tauri/Electron 비교', anchor: 'vs-vibe-coding' },
+      { label: '바이브 코딩 개발자는 갈아타야 할까?', anchor: 'switch-or-stay' },
       { label: '로컬 모델과 호스팅 모델', anchor: 'local-and-hosted' },
       { label: '보안 설계와 그 한계', anchor: 'security' },
       { label: '받는 방법', anchor: 'get-it' },
@@ -2110,6 +3102,7 @@ const response = {
           '사양은 1.0이며, 제작자는 구현을 1.0 이전 단계로 설명함',
           '두 번째 호스트, 독립적인 감사, 외부 사용자층은 확인되지 않음',
           '데스크톱 앱은 macOS 전용이며, Windows와 Linux는 1.0 이후에 계획되어 있음',
+          'Tauri나 Electron으로 바이브 코딩 앱을 배포하는 개발자에게는 AI 중심의 소형 개인용 도구에 맞으며, 일반 대중에게 판매하는 제품에는 맞지 않음',
         ],
       },
       overview: {
@@ -2129,8 +3122,134 @@ const response = {
         items: [
           '**런타임 AI:** 프로젝트에 따르면 앱이 실행되는 동안 호스트가 모델을 제공하므로, 모델을 바꿔도 앱을 다시 만들 필요가 없습니다',
           '**격리된 저장소:** 각 앱은 사용자 파일 안에서 자신만의 데이터베이스 네임스페이스를 가집니다',
-          '**사양:** 와이어 프로토콜, 이식 가능한 사용자 데이터베이스, 연결된 앱, 런타임 계약과 앱 채팅 화면, 연결된 기기 간 연결, 적합성을 다루는 여섯 부분으로 이루어져 있습니다. 이 리뷰는 런타임 계약을 자세히 검토하지 않았습니다',
+          '**사양:** 여섯 부분으로 이루어져 있으며, 다음 섹션에서 하나씩 요약합니다',
           '**개발자용:** 문서에 호스트 구축 안내서와 Snug를 다른 제품에 내장하는 안내서가 있으나, 둘 다 여기서 테스트하지 않았습니다',
+        ],
+      },
+      specParts: {
+        id: 'spec-parts',
+        title: '사양의 여섯 부분',
+        content: '**사양은 여섯 부분으로 이루어지며, 각 부분은 앱, 호스트, 사용자 파일이 상호작용하는 방식의 서로 다른 계층을 규정합니다.** 이 글을 쓰면서 Part IV와 개념 페이지는 전체를 읽었고, 나머지 부분은 제목과 안정성 표기를 제공하는 [사양 개요](https://snugprotocol.org/docs/spec/)만 읽었습니다.',
+        items: [
+          '**Part I, 와이어 프로토콜:** 핵심 프레임, 채팅 엔벨로프, 규칙 R1~R7입니다. 네트워크 및 URL 열기 프레임 쌍은 사양 v0.3에서 추가되었으며 1.0에서 규범으로 적용됩니다',
+          '**Part II, 이식 가능한 사용자 데이터베이스:** 저장소 스키마(버전 6), `.snug` 파일 명명 규칙, `SNUGENC1`입니다',
+          '**Part III, 연결된 앱:** 요구 사항, 권한 부여, 자격 증명 보관, 실행기(executor)입니다',
+          '**Part IV, 런타임 계약과 앱 채팅 화면:** 설치된 앱이 빌드 이력을 지니지 않고 AI와 대화하는 방식으로, 아래에서 별도 섹션으로 다룹니다',
+          '**Part V, 연결된 기기 간 연결:** 사양은 이를 사이드카 화면이라고 부릅니다',
+          '**Part VI, 적합성:** 호환되는 구현이 해야 할 일을 다루며, 개요는 제목만 제공합니다',
+        ],
+        note: '개요에 따르면 Part I~V는 1.0에서 규범이며, 상시 승인(standing approvals)에 관한 절은 잠정(provisional)으로 표시되어 있습니다.',
+      },
+      example: {
+        id: 'example',
+        title: '앱과 메시지는 어떤 모습인가',
+        content: '**앱은 JSON Schema로 공개된 13가지 유형의 프레임을 통해 호스트와 통신하는 하나의 HTML 파일입니다.** 프레임은 여섯 계열로 나뉘며, 앱은 네트워크나 모델 제공자에 직접 접근하지 않습니다.',
+        items: [
+          '**핸드셰이크:** `snug:host-ready`(호스트가 인스턴스 ID, 프로토콜 버전, 기능을 알림)와 `snug:app-announce`(앱이 자신을 알림)',
+          '**에이전트 브리지:** `snug:app-message`, `snug:app-response`, `snug:app-cancel`로, 호스트의 AI 에이전트에 요청을 전달합니다',
+          '**저장소:** `snug:db-request`와 `snug:db-response`로, 앱 자신의 테이블에서 호스트가 중개하는 SQL을 실행합니다',
+          '**네트워크:** `snug:net-request`와 `snug:net-response`로, 유일한 외부 경로이며 사용자가 승인한 호스트로 제한됩니다',
+          '**내비게이션:** `snug:open-url-request`와 `snug:open-url-result`로, 호스트가 자체 확인을 거친 뒤 브라우저를 엽니다',
+          '**이벤트:** `snug:host-event`와 `snug:app-event`로, 테마, 표시 여부, 크기 조정 신호를 위한 열린 채널이며 알 수 없는 이벤트는 무시됩니다',
+        ],
+        codeLanguage: 'typescript',
+        codeBlock: `// 1. 앱 측. 프로젝트의 "Build your first app" 안내서에서 가져온 코드 조각입니다.
+const { isReady, sendMessage } = useSnugApp({
+  appId: 'pocket-chess-coach',
+  displayName: 'Pocket Chess Coach',
+})
+const reply = await sendMessage('opponent-move', { lastMove: 'e7e5' })
+if (reply.ok) applyMove(reply.data.move)
+
+const db = useAppDB()
+await db.exec('INSERT INTO games (pgn, played_at) VALUES (?, ?)', [pgn, Date.now()])
+
+// 2. 와이어 상. 설명용 예시입니다. 필드 이름은 공개된 JSON Schema를 따르지만
+// 모든 값은 임의로 만든 것입니다. 문서에는 샘플 메시지가 없습니다.
+const request = {
+  v: 1,
+  type: 'snug:app-message',
+  requestId: 'req-001',
+  instanceId: 'host-instance-id',
+  appId: 'pocket-chess-coach',
+  action: 'opponent-move',
+  payload: { lastMove: 'e7e5' },
+}
+const response = {
+  v: 1,
+  type: 'snug:app-response',
+  requestId: 'req-001',
+  ok: true,
+  streaming: false,
+  data: { move: 'g1f3' },
+}`,
+        note: '스키마 참조에 따르면 요청은 선택 필드인 responseSchema와 state도 받을 수 있습니다. 응답은 스트리밍 텍스트, 최종 data 객체, 코드·메시지·재시도 가능 여부 플래그를 담은 유형별 오류의 세 가지 형태로 제공됩니다.',
+      },
+      runtimeContracts: {
+        id: 'runtime-contracts',
+        title: '런타임 계약과 앱 채팅 화면',
+        content: '**런타임 계약은 호스트가 보관하는 작은 JSON 설명으로, 앱이 무엇이고 좋은 답변이 어떤 모습인지를 담아 매 런타임 턴마다 들어가던 긴 빌드 지침을 대체합니다.** [Part IV 사양](https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/)이 이를 정의하며, 설치된 각 앱 옆에 붙는 선택적 채팅도 함께 규정합니다.',
+        items: [
+          '**형태:** 1~600자의 필수 `overview`가 있는 엄격한 JSON 객체입니다. 어조, 턴별 상태, 답변 형식에 대한 선택 필드, 최대 16개의 설정, 256~8,192 토큰의 선택적 출력 상한(출력을 줄이는 방향으로만 작동)이 있으며, 계약 전체는 2,560바이트를 넘을 수 없습니다',
+          '**보관:** 계약은 호스트가 지정하며 앱이 직접 제공할 수 없습니다. 계약은 앱 버전별로 저장되고 수정 및 되돌리기와 함께 이동합니다. 가져온 계약은 허브에 동일한 계약이 이미 있는 경우가 아니면 폐기되므로, 외부 파일이 지시문을 주입할 수 없습니다',
+          '**중요한 이유:** 한 턴에는 빌드 대화가 아니라 계약과 액션 페이로드가 실립니다. 그래서 같은 앱을 대형 호스팅 모델에서도 소형 로컬 모델에서도 실행할 수 있습니다. 프로젝트는 참조 구현이 턴마다 대략 1킬로바이트를 절약한다고 밝히지만, 이 수치는 테스트하지 않았습니다',
+          '**채팅 화면:** 각 메시지는 데이터, 기능, 제공자, 답변의 네 레인에 걸친 여덟 가지 의도 중 하나로 분류됩니다. 분류에 실패하면 호스트는 레인을 임의로 고르지 않고 확인 질문을 하며, 코드를 작성하는 레인으로는 절대 기본 지정하지 않습니다',
+          '**데이터 레인:** 읽기는 앱 자신의 데이터베이스를 임시로 복사한 사본에서 결과를 제한하여 실행됩니다. 쓰기는 제안, 미리보기, 승인, 재검증 순서를 따르며, 미리보기와 실행 사이에 영향받는 행 수가 달라지면 호스트가 중단합니다',
+          '**기능 레인:** 앱 자체에 대한 변경은 확인 단계 없이 이루어집니다. 안전장치는 버전 관리, 눈에 보이는 새로고침과 되돌리기이며, 사양은 호스트가 이것이 데이터 레인과 다르다는 점을 공개하도록 요구합니다',
+          '**신뢰할 수 없는 데이터:** 저장된 데이터를 포함하는 프롬프트는 그 데이터를 신뢰할 수 없는 것으로 표시하고 그 안의 구분자 텍스트를 무력화해야 합니다',
+        ],
+        note: 'Part IV 페이지와 런타임 계약 개념 페이지를 읽은 내용입니다. 동작은 테스트하지 않았으며, 행 자체가 아니라 행 수를 비교하는 방식이 이번 개정판의 알려진 한계라고 사양 스스로 밝히고 있습니다.',
+      },
+      vsVibeCoding: {
+        id: 'vs-vibe-coding',
+        title: 'Snug와 바이브 코딩 + Tauri/Electron 비교',
+        content: '**Claude나 Codex로 앱을 만들고 Tauri나 Electron으로 배포하는 개발자에게 Snug는 배포 범위와 통제권을 내주는 대신, 소형 AI 중심 도구를 훨씬 가볍게 전달하는 방법을 제공합니다.** 지금은 그 작업 방식을 대체하지 못하며, 좁은 범위의 앱에서만 경쟁 관계에 놓입니다.',
+        columns: ['영역', 'Tauri/Electron 앱', 'Snug 앱'],
+        rows: [
+          { '영역': '결과물', 'Tauri/Electron 앱': '앱마다 네이티브 바이너리', 'Snug 앱': '호스트 안의 HTML 파일 하나' },
+          { '영역': '배포', 'Tauri/Electron 앱': '앱마다 빌드, 서명, 업데이트', 'Snug 앱': '호스트가 파일을 마운트' },
+          { '영역': 'AI 접근', 'Tauri/Electron 앱': '자체 키, 프록시, 사용자 키', 'Snug 앱': '호스트가 모델 제공, 키 불필요' },
+          { '영역': '데이터', 'Tauri/Electron 앱': '직접 설계하는 저장소', 'Snug 앱': '.snug 안의 격리된 테이블' },
+          { '영역': '네트워크', 'Tauri/Electron 앱': '코드가 하는 모든 것', 'Snug 앱': '승인된 호스트, 호스트 경유만' },
+          { '영역': '네이티브 API', 'Tauri/Electron 앱': '전체 접근', 'Snug 앱': '호스트가 노출하는 것만' },
+          { '영역': '플랫폼', 'Tauri/Electron 앱': 'macOS, Windows, Linux', 'Snug 앱': 'macOS 앱, 브라우저 데모' },
+          { '영역': '대상 사용자', 'Tauri/Electron 앱': '누구나 설치 가능', 'Snug 앱': 'Snug 호스트 필요' },
+          { '영역': '성숙도', 'Tauri/Electron 앱': '검증된 도구', 'Snug 앱': '1.0 이전, 유지 관리자 한 명' },
+        ],
+        note: 'Snug 열은 프로젝트 자체 문서를 반영한 것이며, PromptQuorum은 Snug에서 앱을 만들어 보지 않았습니다. Tauri와 Electron 열은 특정 앱이 아니라 일반적인 접근 방식을 설명합니다.',
+      },
+      switchOrStay: {
+        id: 'switch-or-stay',
+        title: '바이브 코딩 개발자는 갈아타야 할까?',
+        content: '**맞는 앱만 옮기십시오. 주로 AI 모델을 호출하고 자체 데이터를 보관하는 소규모 개인용 또는 팀용 도구가 그 대상입니다.** 판매하는 앱, 일반 대중에게 배포하는 앱, Windows나 Linux에서 필요한 앱은 Tauri나 Electron을 계속 사용하십시오.',
+        subsections: [
+          {
+            title: 'Snug가 더 나은 점',
+            list: [
+              '**키 관리 없는 AI:** 앱은 모델 제공자, 키, 어떤 모델이 답했는지 볼 수 없으므로, 키가 모델에 전달되는 방식을 직접 정할 필요가 없습니다',
+              '**앱마다 배포할 것이 없음:** 작은 도구마다 설치 프로그램, 서명, 업데이트 채널이 필요하지 않으며, 호스트가 HTML 파일을 마운트합니다',
+              '**사용자 소유 데이터:** 내보낼 수 있는 SQLite 파일 하나로, 앱마다 저장소와 내보내기 설계를 따로 만들 필요가 없습니다',
+              '**기본 차단 샌드박스:** 프로젝트 자체 위협 모델에 따르면 앱 안에 직접 네트워크 접근과 자격 증명이 없으며, 이 위협 모델은 독립적으로 감사받지 않았습니다',
+              '**다시 만들지 않고 모델 교체:** 런타임 계약 덕분에 사용자가 앱별로 최첨단 모델이나 소형 로컬 모델을 고를 수 있습니다',
+            ],
+          },
+          {
+            title: 'Snug가 더 못한 점',
+            list: [
+              '**도달 범위:** macOS 앱과 브라우저 데모만 있고, 사용자에게 호스트가 필요하며, 읽은 문서에서는 스토어나 결제 방식을 찾지 못했습니다',
+              '**통제권:** 임의의 네트워크 호출, 네이티브 API, 맞춤 백엔드가 없으며, 호스트가 노출하는 범위 안에서 작업해야 합니다',
+              '**기존 툴체인:** 첫 앱 안내서에서는 호스트의 빌더 에이전트가 설명을 바탕으로 파일을 작성하므로, 직접 구성한 Claude나 Codex 환경, 테스트, CI가 그대로 이어지지 않습니다',
+              '**성숙도:** 버전 0.1.3, 유지 관리자 한 명, 두 번째 호스트와 독립적인 감사가 없으므로 호스트 간 이식성은 입증되지 않았습니다',
+            ],
+          },
+          {
+            title: '합리적인 판단 방법',
+            list: [
+              '그대로라면 패키징했을 소형 개인용 도구를 하나 골라 Snug로 다시 만드는 데 드는 노력을 비교해 보십시오',
+              '대상이 일반 대중이거나, 앱에 네이티브 기능이 필요하거나, 지금 Windows나 Linux가 필요하다면 Tauri나 Electron을 유지하십시오',
+              'PromptQuorum은 이 비교를 실행해 보지 않았으므로, 위 표는 문서를 읽고 정리한 것으로 받아들이십시오',
+            ],
+          },
         ],
       },
       localAndHosted: {
@@ -2199,7 +3318,8 @@ const response = {
           '**직접 사용 시 동작:** PromptQuorum은 macOS 앱이나 Playground를 설치하거나 실행하지 않았습니다',
           '**채택 현황:** 두 번째 호스트 구현과 제3자 사용자는 확인되지 않았습니다',
           '**보안:** 독립적인 감사나 침투 테스트는 없었으며, 긴 위협 모델 문서도 일부만 읽었습니다',
-          '**프로젝트가 보고한 주장:** 프로젝트 자체 자료에 나온 절감이나 속도 수치는 테스트하지 않았습니다',
+          '**프로젝트가 보고한 주장:** 프로젝트 자체 자료에 나온 절감이나 속도 수치, 예를 들어 런타임 턴마다 약 1KB를 절약한다는 주장은 테스트하지 않았습니다',
+          '**사양 검토 깊이:** Part IV와 개념 페이지는 전체를 읽었고, 나머지 부분은 제목과 안정성 표기만 읽었으며, 프레임 두 개의 스키마만 확인했습니다',
           '**실제 이식성:** 이 형식은 호스트 사이의 이동을 위해 규정되었지만, 서로 독립적인 두 호스트 사이의 이동은 확인할 수 없었습니다',
         ],
       },
@@ -2225,6 +3345,7 @@ const response = {
               'AI로 만든 개인용 도구를 직접 관리하는 파일로 보관하고 싶은 경우',
               'AI 제품을 만들며 내장 가능한 설계를 살펴보고 싶은 경우',
               'Mac을 사용하며 1.0 이전 소프트웨어가 불편하지 않은 경우',
+              '이미 소형 AI 도구를 바이브 코딩으로 만들고 있으며 패키징을 건너뛰고 싶은 경우(위의 갈아타기 섹션 참조)',
             ],
           },
           {
@@ -2255,6 +3376,9 @@ const response = {
           { q: '.snug 파일을 다른 호스트로 옮길 수 있습니까?', a: '이 형식은 그 용도로 규정되어 있지만, 지금까지 확인된 호스트는 프로젝트 자체 호스트뿐이므로 독립적인 구현 사이의 이동은 확인되지 않았습니다.' },
           { q: 'Snug는 업계 표준입니까?', a: '아직 그렇게 볼 근거가 없습니다. 유지 관리자가 한 명이고 1.0 사양이 공개된 신생 개방형 프로토콜이라고 설명하는 편이 더 적절합니다.' },
           { q: '개발자가 Snug를 자신의 제품에 내장할 수 있습니까?', a: '문서에 호스트 구축과 Snug 내장을 위한 안내서가 있고 저장소가 TypeScript 패키지를 공개하지만, 이 리뷰는 이를 테스트하지 않았습니다.' },
+          { q: 'Snug 메시지는 어떤 모습입니까?', a: '각 메시지는 snug:app-message 같은 유형, 요청 ID, 앱 ID, 액션을 담은 버전이 지정된 JSON 프레임입니다. 사양은 13가지 프레임 유형 모두에 대한 JSON Schema를 공개하지만 문서에는 샘플 메시지가 없으므로, 이 글의 예시는 임의로 만든 값을 사용합니다.' },
+          { q: 'Snug 런타임 계약이란 무엇입니까?', a: '호스트가 보관하며 2,560바이트로 제한되는 작은 JSON 설명으로, 앱이 무엇이고 좋은 답변이 어떤 모습인지를 담습니다. 각 런타임 턴은 빌드 대화 대신 이 계약을 바탕으로 구성됩니다.' },
+          { q: 'Tauri나 Electron 앱을 Snug로 옮겨야 합니까?', a: '통째로 옮길 필요는 없습니다. Snug는 패키징, 키 관리, 저장소 설계를 건너뛰고 싶은 소형 AI 중심 개인용 도구에 맞습니다. 판매하거나 일반 대중에게 배포하는 앱, Windows나 Linux 또는 네이티브 API가 필요한 앱은 Tauri나 Electron을 유지하십시오.' },
         ],
       },
       sources: {
@@ -2265,6 +3389,10 @@ const response = {
           { url: 'https://snugprotocol.org/download/', title: 'Snug 다운로드', description: '모델과 API 키 요구 사항을 담은 macOS 다운로드 페이지.' },
           { url: 'https://snugprotocol.org/docs/', title: 'Snug 문서', description: '개념, 여섯 부분으로 된 사양, 구현자 안내서.' },
           { url: 'https://github.com/snugprotocol/snug', title: 'GitHub의 Snug', description: 'MIT 라이선스 저장소, 릴리스 이력, 위협 모델.' },
+          { url: 'https://snugprotocol.org/docs/concepts/envelopes-and-frames/', title: '엔벨로프와 프레임', description: '13가지 프레임 유형과 그 계열.' },
+          { url: 'https://snugprotocol.org/docs/spec/part-4-runtime-contracts-and-the-app-chat-surface/', title: '사양 Part IV', description: '런타임 계약과 앱 채팅 화면.' },
+          { url: 'https://snugprotocol.org/docs/get-started/first-app/', title: '첫 앱 만들기', description: '위에서 인용한 최소 앱 구조와 코드 조각.' },
+          { url: 'https://snugprotocol.org/docs/spec/schemas/', title: '스키마 참조', description: 'app-message와 app-response를 포함한 프레임용 JSON Schema.' },
         ],
       },
       relatedReading: {
