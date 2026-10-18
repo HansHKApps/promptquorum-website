@@ -56,6 +56,8 @@ export const BALCONY_SOLAR_CATEGORIES: BalconySolarCategory[] = [
       'balcony-solar-portugal-brazil',
       'balcony-solar-gulf-mena',
       'plug-in-balcony-solar-uk-rules',
+      'balcony-solar-france',
+      'balcony-solar-south-korea',
     ],
   },
   {

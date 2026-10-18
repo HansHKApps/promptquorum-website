@@ -560,7 +560,7 @@
       ]
     },
     "small-local-llm-models": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -577,16 +577,8 @@
       ],
       "images": [
         {
-          "url": "/images/small-llm-decision-tree-mockup.svg",
-          "title": "Decision tree: choose by priority (reasoning, speed, or coding). Default to Llama 3.2 3B if unsure."
-        },
-        {
-          "url": "/images/small-local-llm-models-performance-tier-hero-en.webp",
-          "title": "Performance tiers: Phi-4 Mini leads on reasoning and coding, Gemma 4 E2B leads on context length (128K) at the smallest RAM footprint, Qwen2.5 excels at coding."
-        },
-        {
           "url": "/images/small-local-llm-models-quantization-tradeoff-hero-en.webp",
-          "title": "Quantization trade-off: Q4_K_M (2.5 GB, -0.5% quality) is the recommended default. Q8_0 uses 3.8 GB with no quality gain. Q3_K_M (1.8 GB, -1.8% loss) for extreme RAM constraints."
+          "title": "Quantization trade-off, illustrated for a 3B-class model: Q4_K_M (2.5 GB, -0.5% quality) is the recommended default. Q8_0 uses 3.8 GB with no meaningful quality gain. Q3_K_M (1.8 GB, -1.8% loss) is for extreme RAM constraints."
         }
       ]
     },
@@ -16541,6 +16533,42 @@
       "dateModified": "2026-07-02",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "balcony-solar-france": {
+      "dateModified": "2026-10-18",
+      "lastFactChecked": "2026-10-18",
+      "publishDate": "2026-10-18",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "balcony-solar-south-korea": {
+      "dateModified": "2026-10-18",
+      "lastFactChecked": "2026-10-18",
+      "publishDate": "2026-10-18",
       "hasSections": true,
       "langs": [
         "en",

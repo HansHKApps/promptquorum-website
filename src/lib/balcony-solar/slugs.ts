@@ -28,6 +28,8 @@ export const BALCONY_SOLAR_SLUG_TO_KEY: Record<string, string> = {
   'balcony-solar-spain-latam':                    'balcony-solar-spain-latam',                    // BSOL-14
   'balcony-solar-portugal-brazil':                'balcony-solar-portugal-brazil',                // BSOL-15
   'balcony-solar-gulf-mena':                      'balcony-solar-gulf-mena',                      // BSOL-16
+  'balcony-solar-france':                         'balcony-solar-france',                         // BSOL-57
+  'balcony-solar-south-korea':                    'balcony-solar-south-korea',                    // BSOL-58
 
   // TIER 4 — Long-tail / conversion support
   'ecoflow-vs-anker-vs-zendure-balcony-solar':    'ecoflow-vs-anker-vs-zendure-balcony-solar',    // BSOL-17
