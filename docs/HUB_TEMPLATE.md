@@ -1,8 +1,9 @@
 # Hub Template (new hub-page design)
 
-Shared layout for content hub pages. Currently used ONLY by the Balcony Solar hub, now in all 9 languages
-(`BALCONY_SOLAR_HUB_TEMPLATE_LANGS` in `src/lib/balcony-solar/hub-template.tsx`; strings in `HUB_TEMPLATE_COPY` there and
-`HUB_EXPLORE_LABELS` in `src/components/hub-template/labels.ts`). The other 5 clusters still use their old hub components.
+Shared layout for content hub pages. Used by the Balcony Solar hub (`src/lib/balcony-solar/hub-template.tsx`) and the Smart Home hub
+(`src/lib/smart-home/hub-template.tsx`), both in all 9 languages (`*_HUB_TEMPLATE_LANGS`; per-language strings in `HUB_TEMPLATE_COPY` in each
+adapter and `HUB_EXPLORE_LABELS` in `src/components/hub-template/labels.ts`). The other 4 clusters still use their old hub components.
+Smart Home has no company profiles, so all 8 category tiles are plain guide tiles and the intro count is simply the number of listed pages.
 RTL: use logical Tailwind classes (`ps-`, `ms-`, `text-start`), never `pl-`/`ml-`/`text-left`.
 
 ## Where it lives
