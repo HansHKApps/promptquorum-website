@@ -19,6 +19,7 @@ import { POWER_LLM_BRIEFS, type ArticleBrief } from './briefs'
 import { isPowerLLMArticlePublished, isPowerLLMHubPublished } from './published'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 import { formatDisplayMonthYear } from '@/lib/formatDisplayDate'
+import { PowerLocalLlmHubTemplate, usesPowerLocalLlmHubTemplate } from './hub-template'
 
 const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد', ko: '새글' }
 const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث', ko: '업데이트' }
@@ -2199,6 +2200,37 @@ function renderLocalizedHub(lang: 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt'
         name: powerLLMContent[POWER_LLM_SLUG_TO_KEY[slug] ?? slug]?.[lang]?.title ?? powerLLMContent[POWER_LLM_SLUG_TO_KEY[slug] ?? slug]?.['en']?.title ?? slugToTitle(slug),
       })),
     },
+  }
+
+  // Languages listed in POWER_LOCAL_LLM_HUB_TEMPLATE_LANGS (hub-template.tsx) get the shared hub template.
+  // Same data, same JSON-LD; only the page body differs. The original body below is the fallback.
+  if (usesPowerLocalLlmHubTemplate(lang)) {
+    const themeTextByLang = { de: HUB_THEME_TEXT_DE, fr: HUB_THEME_TEXT_FR, ja: HUB_THEME_TEXT_JA, zh: HUB_THEME_TEXT_ZH, es: HUB_THEME_TEXT_ES, pt: HUB_THEME_TEXT_PT, ko: HUB_THEME_TEXT_KO, ar: HUB_THEME_TEXT_AR } as const
+    const localizedThemeText = lang === 'en' ? undefined : themeTextByLang[lang]
+    return (
+      <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubFaqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubBreadcrumbSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubCollectionSchema) }} />
+        <PowerLocalLlmHubTemplate
+          lang={lang}
+          hero={hero}
+          themes={HUB_THEMES.map((theme, idx) => {
+            const text = localizedThemeText?.[idx] ?? theme
+            return { id: theme.id, badge: text.badge, description: text.description, slugs: theme.slugs }
+          })}
+          faqs={faqs}
+          faqHeading={labels.faqHeading}
+          relatedReadingHeading={labels.relatedReadingHeading}
+          relatedReadingLinks={labels.relatedReadingLinks}
+          toolCount={localAiApps.length}
+          lastUpdated={lastUpdated}
+          lastUpdatedLabel={labels.lastUpdatedLabel}
+          homeLabel={HOME_LABEL[lang] ?? HOME_LABEL['en']!}
+          fallbackTitle={slugToTitle}
+        />
+      </>
+    )
   }
 
   return (
