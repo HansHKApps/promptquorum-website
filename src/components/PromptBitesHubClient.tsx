@@ -9,6 +9,7 @@ import type { PromptBitesHubArticleData } from '@/lib/prompt-bites/hub-data'
 import type { Language } from '@/lib/blog/blogContent'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 import { HubReviewedBadge } from '@/components/hub/HubReviewedBadge'
+import { DEEPDIVE_LINKS } from '@/lib/prompt-bites/hub-deepdive'
 
 const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد', ko: '새글' }
 const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث', ko: '업데이트' }
@@ -170,99 +171,6 @@ const VRAM_TABLE_ROWS: Partial<Record<Language, Array<{ vram: string; model: str
   ],
 }
 
-const DEEPDIVE_LINKS: Partial<Record<Language, Record<string, { text: string; href: string }>>> = {
-  en: {
-    'Quantization & VRAM': { text: 'Deep dive: Quantization Explained', href: '/local-llms/llm-quantization-explained' },
-    'Ollama': { text: 'Deep dive: Top Open-Source Models with Ollama', href: '/local-llms/top-open-source-models-ollama' },
-    'Tool Comparisons': { text: 'Deep dive: Ollama vs LM Studio', href: '/local-llms/ollama-vs-lm-studio' },
-    'Model Comparisons': { text: 'Deep dive: Qwen vs Llama vs Mistral', href: '/local-llms/qwen-vs-llama-vs-mistral' },
-    'Hardware-Specific': { text: 'Deep dive: Best Budget GPUs for Local LLM', href: '/local-llms/best-budget-gpus-local-llm' },
-    'Quick Answers': { text: 'Deep dive: How Much VRAM for Local LLM', href: '/local-llms/how-much-vram-local-llm' },
-    'Prompt Engineering': { text: 'Deep dive: CO-STAR Prompt Framework', href: '/prompt-engineering/co-star-framework' },
-    'Privacy & Compliance': { text: 'Deep dive: GDPR & Privacy Manifesto', href: '/local-llms/qwen-gdpr-privacy-manifesto-2026' },
-  },
-  de: {
-    'Quantization & VRAM': { text: 'Vertiefung: Quantisierung erklärt', href: '/de/local-llms/llm-quantization-explained' },
-    'Ollama': { text: 'Vertiefung: Top Open-Source-Modelle mit Ollama', href: '/de/local-llms/top-open-source-models-ollama' },
-    'Tool Comparisons': { text: 'Vertiefung: Ollama vs LM Studio', href: '/de/local-llms/ollama-vs-lm-studio' },
-    'Model Comparisons': { text: 'Vertiefung: Qwen vs Llama vs Mistral', href: '/de/local-llms/qwen-vs-llama-vs-mistral' },
-    'Hardware-Specific': { text: 'Vertiefung: Beste Budget-GPUs für lokale LLM', href: '/de/local-llms/best-budget-gpus-local-llm' },
-    'Quick Answers': { text: 'Vertiefung: Wie viel VRAM für lokale LLM', href: '/de/local-llms/how-much-vram-local-llm' },
-    'Prompt Engineering': { text: 'Vertiefung: CO-STAR-Prompt-Framework', href: '/de/prompt-engineering/co-star-framework' },
-    'Privacy & Compliance': { text: 'Vertiefung: DSGVO & Datenschutz-Manifest', href: '/de/local-llms/qwen-gdpr-privacy-manifesto-2026' },
-  },
-  fr: {
-    'Quantization & VRAM': { text: 'Approfondissement : Quantisation expliquée', href: '/fr/local-llms/llm-quantization-explained' },
-    'Ollama': { text: 'Approfondissement : Top modèles open-source avec Ollama', href: '/fr/local-llms/top-open-source-models-ollama' },
-    'Tool Comparisons': { text: 'Approfondissement : Ollama vs LM Studio', href: '/fr/local-llms/ollama-vs-lm-studio' },
-    'Model Comparisons': { text: 'Approfondissement : Qwen vs Llama vs Mistral', href: '/fr/local-llms/qwen-vs-llama-vs-mistral' },
-    'Hardware-Specific': { text: 'Approfondissement : Meilleures GPU budget pour LLM local', href: '/fr/local-llms/best-budget-gpus-local-llm' },
-    'Quick Answers': { text: 'Approfondissement : Combien de VRAM pour LLM local', href: '/fr/local-llms/how-much-vram-local-llm' },
-    'Prompt Engineering': { text: 'Approfondissement : Framework de prompts CO-STAR', href: '/fr/prompt-engineering/co-star-framework' },
-    'Privacy & Compliance': { text: 'Approfondissement : Manifeste RGPD et confidentialité', href: '/fr/local-llms/qwen-gdpr-privacy-manifesto-2026' },
-  },
-  ja: {
-    'Quantization & VRAM': { text: '深掘り：量化の説明', href: '/ja/local-llms/llm-quantization-explained' },
-    'Ollama': { text: '深掘り：Ollamaでトップのオープンソースモデル', href: '/ja/local-llms/top-open-source-models-ollama' },
-    'Tool Comparisons': { text: '深掘り：OllamaとLM Studio', href: '/ja/local-llms/ollama-vs-lm-studio' },
-    'Model Comparisons': { text: '深掘り：QwenとLlamaとMistral', href: '/ja/local-llms/qwen-vs-llama-vs-mistral' },
-    'Hardware-Specific': { text: '深掘り：ローカルLLM向けベストバジェットGPU', href: '/ja/local-llms/best-budget-gpus-local-llm' },
-    'Quick Answers': { text: '深掘り：ローカルLLMに必要なVRAM', href: '/ja/local-llms/how-much-vram-local-llm' },
-    'Prompt Engineering': { text: '深掘り：CO-STARプロンプトフレームワーク', href: '/ja/prompt-engineering/co-star-framework' },
-    'Privacy & Compliance': { text: '深掘り：GDPR・プライバシーマニフェスト', href: '/ja/local-llms/qwen-gdpr-privacy-manifesto-2026' },
-  },
-  zh: {
-    'Quantization & VRAM': { text: '深入：量化解释', href: '/zh/local-llms/llm-quantization-explained' },
-    'Ollama': { text: '深入：Ollama顶级开源模型', href: '/zh/local-llms/top-open-source-models-ollama' },
-    'Tool Comparisons': { text: '深入：Ollama对比LM Studio', href: '/zh/local-llms/ollama-vs-lm-studio' },
-    'Model Comparisons': { text: '深入：Qwen对比Llama对比Mistral', href: '/zh/local-llms/qwen-vs-llama-vs-mistral' },
-    'Hardware-Specific': { text: '深入：本地LLM最佳预算GPU', href: '/zh/local-llms/best-budget-gpus-local-llm' },
-    'Quick Answers': { text: '深入：本地LLM需要多少显存', href: '/zh/local-llms/how-much-vram-local-llm' },
-    'Prompt Engineering': { text: '深入：CO-STAR提示框架', href: '/zh/prompt-engineering/co-star-framework' },
-    'Privacy & Compliance': { text: '深入：GDPR 与隐私宣言', href: '/zh/local-llms/qwen-gdpr-privacy-manifesto-2026' },
-  },
-  es: {
-    'Quantization & VRAM': { text: 'Análisis a fondo: La cuantización explicada', href: '/es/local-llms/llm-quantization-explained' },
-    'Ollama': { text: 'Análisis a fondo: Mejores modelos open source con Ollama', href: '/es/local-llms/top-open-source-models-ollama' },
-    'Tool Comparisons': { text: 'Análisis a fondo: Ollama vs LM Studio', href: '/es/local-llms/ollama-vs-lm-studio' },
-    'Model Comparisons': { text: 'Análisis a fondo: Qwen vs Llama vs Mistral', href: '/es/local-llms/qwen-vs-llama-vs-mistral' },
-    'Hardware-Specific': { text: 'Análisis a fondo: Mejores GPU económicas para LLM local', href: '/es/local-llms/best-budget-gpus-local-llm' },
-    'Quick Answers': { text: 'Análisis a fondo: Cuánta VRAM para un LLM local', href: '/es/local-llms/how-much-vram-local-llm' },
-    'Prompt Engineering': { text: 'Análisis a fondo: Framework de prompts CO-STAR', href: '/es/prompt-engineering/co-star-framework' },
-    'Privacy & Compliance': { text: 'Análisis a fondo: Manifiesto de RGPD y privacidad', href: '/es/local-llms/qwen-gdpr-privacy-manifesto-2026' },
-  },
-  pt: {
-    'Quantization & VRAM': { text: 'Aprofundamento: Quantização explicada', href: '/pt/local-llms/llm-quantization-explained' },
-    'Ollama': { text: 'Aprofundamento: Melhores modelos open source com Ollama', href: '/pt/local-llms/top-open-source-models-ollama' },
-    'Tool Comparisons': { text: 'Aprofundamento: Ollama vs LM Studio', href: '/pt/local-llms/ollama-vs-lm-studio' },
-    'Model Comparisons': { text: 'Aprofundamento: Qwen vs Llama vs Mistral', href: '/pt/local-llms/qwen-vs-llama-vs-mistral' },
-    'Hardware-Specific': { text: 'Aprofundamento: Melhores GPUs econômicas para LLM local', href: '/pt/local-llms/best-budget-gpus-local-llm' },
-    'Quick Answers': { text: 'Aprofundamento: Quanta VRAM para um LLM local', href: '/pt/local-llms/how-much-vram-local-llm' },
-    'Prompt Engineering': { text: 'Aprofundamento: Framework de prompts CO-STAR', href: '/pt/prompt-engineering/co-star-framework' },
-    'Privacy & Compliance': { text: 'Aprofundamento: Manifesto de GDPR e privacidade', href: '/pt/local-llms/qwen-gdpr-privacy-manifesto-2026' },
-  },
-  // TODO(ar-review): native MSA check — Wave 4, not yet go-live
-  ar: {
-    'Quantization & VRAM': { text: 'تعمق: شرح التكميم', href: '/ar/local-llms/llm-quantization-explained' },
-    'Ollama': { text: 'تعمق: أفضل نماذج مفتوحة المصدر مع Ollama', href: '/ar/local-llms/top-open-source-models-ollama' },
-    'Tool Comparisons': { text: 'تعمق: Ollama مقابل LM Studio', href: '/ar/local-llms/ollama-vs-lm-studio' },
-    'Model Comparisons': { text: 'تعمق: Qwen مقابل Llama مقابل Mistral', href: '/ar/local-llms/qwen-vs-llama-vs-mistral' },
-    'Hardware-Specific': { text: 'تعمق: أفضل بطاقات GPU الاقتصادية للنماذج المحلية', href: '/ar/local-llms/best-budget-gpus-local-llm' },
-    'Quick Answers': { text: 'تعمق: كم VRAM تحتاج للنماذج المحلية', href: '/ar/local-llms/how-much-vram-local-llm' },
-    'Prompt Engineering': { text: 'تعمق: إطار عمل CO-STAR للأوامر', href: '/ar/prompt-engineering/co-star-framework' },
-    'Privacy & Compliance': { text: 'تعمق: GDPR ومانيفستو الخصوصية', href: '/ar/local-llms/qwen-gdpr-privacy-manifesto-2026' },
-  },
-  ko: {
-    'Quantization & VRAM': { text: '심층 분석: 양자화 설명', href: '/local-llms/llm-quantization-explained' },
-    'Ollama': { text: '심층 분석: Ollama 최고 오픈소스 모델', href: '/local-llms/top-open-source-models-ollama' },
-    'Tool Comparisons': { text: '심층 분석: Ollama 대 LM Studio', href: '/local-llms/ollama-vs-lm-studio' },
-    'Model Comparisons': { text: '심층 분석: Qwen 대 Llama 대 Mistral', href: '/local-llms/qwen-vs-llama-vs-mistral' },
-    'Hardware-Specific': { text: '심층 분석: 로컬 LLM 최고 저예산 GPU', href: '/local-llms/best-budget-gpus-local-llm' },
-    'Quick Answers': { text: '심층 분석: 로컬 LLM에 필요한 VRAM', href: '/local-llms/how-much-vram-local-llm' },
-    'Prompt Engineering': { text: '심층 분석: CO-STAR 프롬프트 프레임워크', href: '/prompt-engineering/co-star-framework' },
-    'Privacy & Compliance': { text: '심층 분석: GDPR 및 개인정보 선언', href: '/local-llms/qwen-gdpr-privacy-manifesto-2026' },
-  },
-}
 
 const EDUCATIONAL_LEVEL: Record<string, Partial<Record<Language, string>>> = {
   // TODO(ar-review): native MSA check — Wave 4, not yet go-live

@@ -13,6 +13,7 @@ import { PROMPT_BITES_SLUG_TO_KEY } from './slugs'
 import { isPromptBitePublished, isPromptBitesHubPublished, PROMPT_BITES_PUBLISHED_SLUGS } from './published'
 import { promptBitesAlternates, promptBitesHubPath, promptBitesArticlePath } from './metadata-helpers'
 import { getHubMetadata } from './hub-metadata'
+import { PromptBitesHubTemplate, usesPromptBitesHubTemplate } from './hub-template'
 import { toOutputLocale } from '@/lib/i18n/constants'
 import { buildArticleImageObject } from '@/lib/imageObjectSchema'
 import { narrowArticleData } from '@/lib/narrowArticleData'
@@ -300,7 +301,11 @@ export async function buildHubPageElement(lang: Lang) {
       {faqSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       )}
-      <PromptBitesHubClient lang={lang} {...buildPromptBitesHubData(lang)} />
+      {usesPromptBitesHubTemplate(lang) ? (
+        <PromptBitesHubTemplate lang={lang} data={buildPromptBitesHubData(lang)} homeLabel={HOME_LABEL[lang] ?? HOME_LABEL.en!} />
+      ) : (
+        <PromptBitesHubClient lang={lang} {...buildPromptBitesHubData(lang)} />
+      )}
     </>
   )
 }
