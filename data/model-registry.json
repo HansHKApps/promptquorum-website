@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-17",
+  "last_updated": "2026-10-18",
   "models": [
     {
       "company": "Supersonic Labs",
@@ -76,11 +76,11 @@
       "model": "Claude Sonnet 5",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Claude Sonnet 5.5",
       "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
-      "verified_date": "2026-07-13",
-      "notes": "Best combination of speed and intelligence per Anthropic's own guidance. Introductory pricing through 2026-08-31."
+      "verified_date": "2026-10-18",
+      "notes": "Superseded by Claude Sonnet 5.5 per Anthropic's own models overview page (2026-10-18 fetch). Still listed in the legacy table."
     },
     {
       "company": "Anthropic",
@@ -88,11 +88,11 @@
       "model": "Claude Haiku 4.5",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Claude Haiku 5.5",
       "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
-      "verified_date": "2026-07-13",
-      "notes": "Fastest current Claude model, near-frontier intelligence."
+      "verified_date": "2026-10-18",
+      "notes": "Superseded by Claude Haiku 5.5 per Anthropic's own models overview page (2026-10-18 fetch). Still listed in the legacy table."
     },
     {
       "company": "Anthropic",
@@ -148,11 +148,11 @@
       "model": "GPT-5.6",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "GPT-6 Astra",
       "source_url": "https://developers.openai.com/api/docs/models",
-      "verified_date": "2026-09-14",
-      "notes": "Still listed as current on OpenAI's own models docs (2026-09-14 fetch), three variants: Sol (flagship), Terra (balanced), Luna (cost-optimized), plus a GPT-5.6 Cyber (cybersecurity) specialist. GPT-6 Astra now also appears as a newer, more capable model (see that entry) -- relationship between GPT-6 Astra and GPT-5.6 Sol specifically (full supersession vs. GPT-6 as an added top tier alongside continuing 5.6 tiers) is NOT confirmed; OpenAI's release-notes page (help.openai.com) returned 403 this cycle and could not be checked. Do not treat GPT-5.6 as superseded until that relationship is confirmed from an official source next cycle."
+      "verified_date": "2026-10-18",
+      "notes": "CONFIRMED SUPERSEDED (2026-10-18 fetch): OpenAI's own models docs now list GPT-6 Astra (most capable, $10/$50/MTok), GPT-6.1 Sol (balanced, $2/$10/MTok), and GPT-6 Luna (cost-optimized, $0.10/$0.50/MTok) as the current lineup, replacing the GPT-5.6 Sol/Terra/Luna tier. GPT-5.6 Cyber (cybersecurity specialist) still listed separately. GPT-5.6 as the general-purpose tier is fully superseded."
     },
     {
       "company": "OpenAI",
@@ -163,8 +163,8 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://developers.openai.com/api/docs/models",
-      "verified_date": "2026-09-14",
-      "notes": "New top-tier model per OpenAI's own models docs (2026-09-14 fetch): 'our most capable model, built for the hardest end-to-end work.' Release date and exact relationship to the GPT-5.6 Sol/Terra/Luna tier (full supersession vs. an added tier above them) not confirmed from an official source this cycle -- help.openai.com/release-notes returned HTTP 403. Do not guess the release date; re-verify next cycle."
+      "verified_date": "2026-10-18",
+      "notes": "CONFIRMED CURRENT (2026-10-18 fetch): OpenAI's own models docs list GPT-6 Astra as the most capable model ($10/$50/MTok, 1.05M context, knowledge cutoff Apr 2026). The previously-unresolved relationship to GPT-5.6 is now resolved: GPT-5.6 is fully superseded. GPT-6 Astra, GPT-6.1 Sol, and GPT-6 Luna are the three current tiers."
     },
     {
       "company": "OpenAI",
@@ -220,11 +220,11 @@
       "model": "Gemini 3.1 Pro",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Gemini 4 Argon",
       "source_url": "https://deepmind.google/models/gemini/",
-      "verified_date": "2026-07-13",
-      "notes": "GA. 'Best for complex tasks and bringing creative concepts to life' per Google's own copy. Site's most-mentioned Gemini model (4x)."
+      "verified_date": "2026-10-18",
+      "notes": "Superseded by Gemini 4 Argon as the general-purpose flagship per Google's own model page (2026-10-18 fetch). Was the site's most-mentioned Gemini model (4x)."
     },
     {
       "company": "Google DeepMind",
@@ -328,11 +328,11 @@
       "model": "Mistral Large 3",
       "type": "open-weight",
       "release_date": "2025-12",
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Mistral Large 4",
       "source_url": "https://docs.mistral.ai/models/overview",
-      "verified_date": "2026-09-14",
-      "notes": "Mistral's most capable model per their own docs, version tag v25.12."
+      "verified_date": "2026-10-18",
+      "notes": "Superseded by Mistral Large 4 (v26.10, released 2026-10-06 per mistral.ai/news). Was version tag v25.12."
     },
     {
       "company": "Mistral AI",
@@ -391,8 +391,8 @@
       "status": "current",
       "superseded_by": null,
       "source_url": "https://api-docs.deepseek.com/quick_start/pricing",
-      "verified_date": "2026-09-14",
-      "notes": "DeepSeek's own pricing docs list deepseek-v4-flash and deepseek-v4-pro as current API models. The older deepseek-chat/deepseek-reasoner aliases (non-thinking/thinking modes of V3-era models) are explicitly scheduled for deprecation 2026-07-24 per DeepSeek's own page. RE-CHECKED 2026-09-14: DeepSeek's pricing docs now show the Flash alias as 'deepseek-flash (DeepSeek-V4.1-Flash)' -- a minor point-release of the Flash variant specifically, not a full V4 generation change. Legacy alias names 'deepseek-v4-flash' and 'deepseek-v4-flash-vision-exp' are noted as retired but still accepted, served at Flash pricing. DeepSeek V4 Pro continues unchanged beyond 2026-09-14 per the same page. Family entry (DeepSeek-V4) still accurately covers both."
+      "verified_date": "2026-10-18",
+      "notes": "RE-CHECKED 2026-10-18: DeepSeek's pricing docs now show `deepseek-flash (DeepSeek-V4.1-Flash-1017)` — the '-1017' suffix indicates an October 17, 2026 model refresh of the Flash variant, essentially yesterday relative to this cycle. `deepseek-v4-pro` (DeepSeek-V4-Pro-0813) continues unchanged. Legacy aliases `deepseek-v4-flash` and `deepseek-v4-flash-vision-exp` remain retired but still accepted. 1M-token context, 384K max output, vision + thinking on Flash. Family entry (DeepSeek-V4) still accurately covers both current variants."
     },
     {
       "company": "DeepSeek",
@@ -1012,11 +1012,11 @@
       "model": "Claude Opus 5",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Claude Opus 5.5",
       "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
-      "verified_date": "2026-08-27",
-      "notes": "Recommended by Anthropic's own docs to start with for complex agentic coding and enterprise work, superseding Claude Opus 4.8 (now legacy). Retirement not sooner than 2027-07-24. Corroborated via AWS Bedrock model catalog."
+      "verified_date": "2026-10-18",
+      "notes": "Superseded by Claude Opus 5.5 per Anthropic's own models overview page (2026-10-18 fetch). Still listed in the legacy table. Previously recommended for complex agentic coding/enterprise work."
     },
     {
       "company": "Google DeepMind",
@@ -1072,11 +1072,11 @@
       "model": "Grok 4.6",
       "type": "closed",
       "release_date": null,
-      "status": "current",
-      "superseded_by": null,
+      "status": "superseded",
+      "superseded_by": "Grok 4.7",
       "source_url": "https://docs.x.ai/developers/models",
-      "verified_date": "2026-09-14",
-      "notes": "xAI's own docs recommend Grok 4.6 as 'the most intelligent and fastest model' for general purposes including code and chat, superseding Grok 4.5. Knowledge cutoff Feb 1, 2026. Corroborated via AWS Bedrock model catalog."
+      "verified_date": "2026-10-18",
+      "notes": "Superseded by Grok 4.7 per xAI's own models docs (2026-10-18 fetch). Knowledge cutoff Feb 1, 2026."
     },
     {
       "company": "Zhipu AI / Z.ai",
@@ -2264,7 +2264,7 @@
       "superseded_by": null,
       "source_url": "https://mistral.ai/news/mistral-nemo/",
       "verified_date": "2026-09-25",
-      "notes": "Co-developed with NVIDIA, 128K context, Apache 2.0. Deprecated by Mistral effective 2026-10-22 in favor of Qwen3.5-9B per their own deprecation notice — still marked current here as that date is in the future relative to this verification."
+      "notes": "Co-developed with NVIDIA, 128K context, Apache 2.0. Deprecated by Mistral effective 2026-10-22 in favor of Qwen3.5-9B per their own deprecation notice — deprecation is in 4 days as of 2026-10-18, still marked current until that date passes."
     },
     {
       "company": "Microsoft",
@@ -3165,6 +3165,162 @@
       "source_url": "https://ollama.com/library/qwen3.5",
       "verified_date": "2026-10-17",
       "notes": "Small-class member of the Qwen3.5 generation (4B); Ollama lists qwen3.5:4b at 3.3-4.0 GB, 256K context, text+image input; Qwen/Qwen3.5-9B Hugging Face card states Apache-2.0. Qwen3.6 ships only 27B and 35B-A3B (verified on Ollama 2026-10-17), so Qwen3.5 remains the newest generation with a model that fits 8-16GB RAM. Exact-name entry so the validator does not flag it via the family-level Qwen3.5 superseded entry."
+    },
+    {
+      "company": "Anthropic",
+      "family": "Claude",
+      "model": "Claude Opus 5.5",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "verified_date": "2026-10-18",
+      "notes": "Confirmed current per Anthropic's own models overview page (2026-10-18 fetch). Pricing: $4/MTok input, $20/MTok output. 1M-token context, 128K max output, knowledge cutoff June 2026, retirement no sooner than 2027-09-22. Supersedes Claude Opus 5."
+    },
+    {
+      "company": "Anthropic",
+      "family": "Claude",
+      "model": "Claude Sonnet 5.5",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "verified_date": "2026-10-18",
+      "notes": "Confirmed current per Anthropic's own models overview page (2026-10-18 fetch). Pricing: $2/MTok input, $10/MTok output. 1M-token context, 128K max output, knowledge cutoff June 2026, retirement no sooner than 2027-09-28. Supersedes Claude Sonnet 5."
+    },
+    {
+      "company": "Anthropic",
+      "family": "Claude",
+      "model": "Claude Haiku 5.5",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "verified_date": "2026-10-18",
+      "notes": "Confirmed current per Anthropic's own models overview page (2026-10-18 fetch). Pricing: from $0.10/MTok input, from $0.50/MTok output. 1M-token context, 128K max output, knowledge cutoff June 2026, retirement no sooner than 2027-10-07. Supersedes Claude Haiku 4.5 as the fastest/cheapest current Claude tier."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "GPT-6.1 Sol",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://developers.openai.com/api/docs/models",
+      "verified_date": "2026-10-18",
+      "notes": "Confirmed current per OpenAI's own models docs (2026-10-18 fetch). Balanced tier of the GPT-6 family, $2/MTok input, $10/MTok output. 1.05M-token context, knowledge cutoff Apr 2026. Part of the three-tier GPT-6 lineup: Astra (most capable) / Sol (balanced) / Luna (cost-optimized)."
+    },
+    {
+      "company": "OpenAI",
+      "family": "GPT",
+      "model": "GPT-6 Luna",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://developers.openai.com/api/docs/models",
+      "verified_date": "2026-10-18",
+      "notes": "Confirmed current per OpenAI's own models docs (2026-10-18 fetch). Cost-optimized tier of the GPT-6 family, $0.10/MTok input, $0.50/MTok output. 1.05M-token context, knowledge cutoff May 2026. Part of the three-tier GPT-6 lineup: Astra (most capable) / Sol (balanced) / Luna (cost-optimized)."
+    },
+    {
+      "company": "Mistral AI",
+      "family": "Mistral",
+      "model": "Mistral Large 4",
+      "type": "open-weight",
+      "release_date": "2026-10-06",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://mistral.ai/news/introducing-mistral-large-4",
+      "verified_date": "2026-10-18",
+      "notes": "Released 2026-10-06 per mistral.ai/news (top item in Research section, 2026-10-18 fetch). Version tag v26.10. Listed as current on docs.mistral.ai/models/overview alongside Mistral Medium 3.5, Mistral Small 4, and the Ministral 3 family. Supersedes Mistral Large 3."
+    },
+    {
+      "company": "xAI",
+      "family": "Grok",
+      "model": "Grok 4.7",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://docs.x.ai/developers/models",
+      "verified_date": "2026-10-18",
+      "notes": "xAI's own docs describe it as 'most capable model we've built', knowledge cutoff May 2026 (2026-10-18 fetch). Supersedes Grok 4.6. grok-voice-2.0 (speech-to-speech) was explicitly deprecated this cycle; grok-voice-3.0 is the current voice model."
+    },
+    {
+      "company": "Google DeepMind",
+      "family": "Gemini",
+      "model": "Gemini 4 Argon",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://deepmind.google/models/gemini/",
+      "verified_date": "2026-10-18",
+      "notes": "Confirmed as new flagship per Google's own Gemini model page (2026-10-18 fetch): described as 'next era of frontier intelligence, built to solve your hardest problems', rolling out to Google AI Pro and Ultra subscribers. No release date given on the page. Supersedes Gemini 3.1 Pro as the general-purpose flagship. Flash/Flash-Lite/Deep Think tiers were not explicitly listed as superseded by this page — keep them as current until a dedicated API docs page confirms otherwise."
+    },
+    {
+      "company": "Meta",
+      "family": "Muse",
+      "model": "Muse Wonder 1.0",
+      "type": "closed",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://dev.meta.ai",
+      "verified_date": "2026-10-18",
+      "notes": "Meta's most capable model per their own dev.meta.ai page (2026-10-18 fetch). Closed/API-only. Meta's API-facing product has been rebranded from Llama to the Muse family; Llama weights remain available on GitHub/Hugging Face under the original Llama branding. Release date unverified from this page."
+    },
+    {
+      "company": "Meta",
+      "family": "Muse",
+      "model": "Muse Spark Open",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://dev.meta.ai",
+      "verified_date": "2026-10-18",
+      "notes": "Open-weight release in the Muse family per Meta's own dev.meta.ai page (2026-10-18 fetch). 816B total / 42B active params (MoE). Standard and Contributor modes. Significantly larger than Llama 4 Scout/Maverick (17B active) — do not treat as equivalent for VRAM/local-deployment guidance. Release date not on page; verify against ai.meta.com/llama or Hugging Face next cycle before citing specs in site content."
+    },
+    {
+      "company": "Microsoft",
+      "family": "Phi",
+      "model": "Phi-4-mini",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://azure.microsoft.com/en-us/products/phi",
+      "verified_date": "2026-10-18",
+      "notes": "Confirmed current on Microsoft's own Phi product page (2026-10-18 fetch): highlighted as 'newest' alongside Phi-4-multimodal. 200K-word vocabulary, grouped-query attention, built-in function calling. MIT license. Available on Azure AI Foundry, Hugging Face, Ollama. Training data cutoff June 2024."
+    },
+    {
+      "company": "Microsoft",
+      "family": "Phi",
+      "model": "Phi-4-multimodal",
+      "type": "open-weight",
+      "release_date": null,
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://azure.microsoft.com/en-us/products/phi",
+      "verified_date": "2026-10-18",
+      "notes": "Confirmed current on Microsoft's own Phi product page (2026-10-18 fetch): highlighted as 'newest' alongside Phi-4-mini. Accepts text, audio, and vision inputs. 200K-word vocabulary, 20+ languages. MIT license. Available on Azure AI Foundry, Hugging Face, Ollama."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen-Image-2.1",
+      "type": "open-weight",
+      "release_date": "2026-10-12",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+      "verified_date": "2026-10-18",
+      "notes": "7B text-to-image generation model. Qwen HF org page (2026-10-18 fetch) shows 'updated 6 days ago'. Also a Qwen-Image-2.1-Turbo (7B, same age) and Qwen-Image-2.1-PE-I2I / PE-T2I (9B, ~28 days old) variants. Distinct from the existing 'Qwen-Image' registry entry (20B, Apache 2.0, Aug 2025) — this is a newer but smaller generation. License and exact benchmarks not verified from the marketing page alone; re-check HF model card before citing performance specs."
     }
   ],
   "sources": [
