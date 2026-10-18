@@ -26,6 +26,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "small-local-llm-models",
+        "title": "Best Small Local LLMs 2026: Top 4B Models and the Smallest to Run Locally",
+        "url": "/local-llms/small-local-llm-models",
+        "dateModified": "2026-10-18",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "snug-protocol-review",
         "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
@@ -70,14 +78,6 @@
         "slug": "how-to-install-ollama",
         "title": "Download & Install Ollama on macOS, Windows & Linux",
         "url": "/local-llms/how-to-install-ollama",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "llm-quantization-explained",
-        "title": "LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)",
-        "url": "/local-llms/llm-quantization-explained",
         "dateModified": "2026-10-17",
         "tier": "about"
       }
