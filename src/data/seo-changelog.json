@@ -3788,5 +3788,131 @@
       "ctr": 0,
       "period": "2026-09-19/2026-10-16"
     }
+  },
+  {
+    "id": "fc1d20f9-517a-48f7-a231-4cbc57eceb93",
+    "slug": "/smart-home/home-assistant-vs-alexa-vs-google",
+    "date": "2026-10-18T09:16:18.883Z",
+    "fields": [
+      {
+        "field": "dateModified",
+        "old": "2026-06-04",
+        "new": "2026-10-18"
+      }
+    ],
+    "reason": "Content refresh 2026-10-18 (9 locales)",
+    "baseline": null
+  },
+  {
+    "id": "8d7bb138-8e68-48de-9b27-3c9e3f081e17",
+    "slug": "/smart-home/home-assistant-getting-started",
+    "date": "2026-10-18T09:16:18.915Z",
+    "fields": [
+      {
+        "field": "dateModified",
+        "old": "2026-06-04",
+        "new": "2026-10-18"
+      }
+    ],
+    "reason": "Content refresh 2026-10-18 (9 locales)",
+    "baseline": null
+  },
+  {
+    "id": "53fbf155-a44a-4f38-8009-d9162809850b",
+    "slug": "/smart-home/smart-home-privacy-risks",
+    "date": "2026-10-18T09:16:18.938Z",
+    "fields": [
+      {
+        "field": "dateModified",
+        "old": "2026-06-04",
+        "new": "2026-10-18"
+      }
+    ],
+    "reason": "Content refresh 2026-10-18 (9 locales)",
+    "baseline": null
+  },
+  {
+    "id": "8dd45acb-63fd-4971-87a4-a56223326e37",
+    "slug": "/smart-home/smart-home-protocols-explained",
+    "date": "2026-10-18T09:16:18.963Z",
+    "fields": [
+      {
+        "field": "dateModified",
+        "old": "2026-06-04",
+        "new": "2026-10-18"
+      }
+    ],
+    "reason": "Content refresh 2026-10-18 (9 locales)",
+    "baseline": null
+  },
+  {
+    "id": "22bae096-ed5e-4b2d-82de-cacb745f7821",
+    "slug": "/smart-home/migrating-from-cloud-to-local-smart-home",
+    "date": "2026-10-18T09:16:18.987Z",
+    "fields": [
+      {
+        "field": "dateModified",
+        "old": "2026-06-04",
+        "new": "2026-10-18"
+      }
+    ],
+    "reason": "Content refresh 2026-10-18 (9 locales)",
+    "baseline": null
+  },
+  {
+    "id": "8376e246-fa03-4999-a498-73526890d276",
+    "slug": "/smart-home/private-smart-home-gdpr",
+    "date": "2026-10-18T09:16:19.011Z",
+    "fields": [
+      {
+        "field": "dateModified",
+        "old": "2026-06-04",
+        "new": "2026-10-18"
+      }
+    ],
+    "reason": "Content refresh 2026-10-18 (9 locales)",
+    "baseline": null
+  },
+  {
+    "id": "036ffb75-b5b9-4856-a249-591dce36b3be",
+    "slug": "/smart-home/local-smart-home-complete-guide",
+    "date": "2026-10-18T09:16:19.045Z",
+    "fields": [
+      {
+        "field": "dateModified",
+        "old": "2026-06-04",
+        "new": "2026-10-18"
+      }
+    ],
+    "reason": "Content refresh 2026-10-18 (9 locales)",
+    "baseline": null
+  },
+  {
+    "id": "b162e6fa-2b43-40ab-9d1d-2256483df29c",
+    "slug": "/smart-home/smart-home-for-beginners-where-to-start",
+    "date": "2026-10-18T09:16:19.070Z",
+    "fields": [
+      {
+        "field": "dateModified",
+        "old": "2026-06-04",
+        "new": "2026-10-18"
+      }
+    ],
+    "reason": "Content refresh 2026-10-18 (9 locales)",
+    "baseline": null
+  },
+  {
+    "id": "7a6a32fd-1ae2-4c85-ab9a-4171ace2a050",
+    "slug": "/smart-home/local-whisper-home-assistant",
+    "date": "2026-10-18T09:16:19.095Z",
+    "fields": [
+      {
+        "field": "dateModified",
+        "old": "2026-08-29",
+        "new": "2026-10-18"
+      }
+    ],
+    "reason": "Added faster-whisper vs whisper.cpp, Piper TTS, MacWhisper sections (9 locales)",
+    "baseline": null
   }
 ]
