@@ -18,6 +18,7 @@ import { AppLink as Link } from '@/components/AppLink'
 import { truncateTitle } from '@/lib/utils'
 import { SmartHomePostClient } from '@/components/SmartHomePostClient'
 import { smartHomeContent } from './content'
+import { SmartHomeHubTemplate, usesSmartHomeHubTemplate, withComputedGuideCount } from './hub-template'
 import { SMART_HOME_SLUG_TO_KEY } from './slugs'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 
@@ -778,6 +779,27 @@ function renderHub(lang: Lang) {
   const faq = HUB_FAQ[lang] ?? HUB_FAQ['en']!
   const relatedLinks = HUB_RELATED_LINKS[lang] ?? HUB_RELATED_LINKS['en']!
 
+  // Languages listed in SMART_HOME_HUB_TEMPLATE_LANGS (hub-template.tsx) get the shared hub template.
+  // Same data, same JSON-LD (buildHubPageElement); only the page body differs.
+  if (usesSmartHomeHubTemplate(lang)) {
+    return (
+      <SmartHomeHubTemplate
+        lang={lang}
+        copy={copy}
+        categoryCopy={CATEGORY_COPY[lang]}
+        faq={faq}
+        faqHeading={HUB_FAQ_HEADING[lang] ?? HUB_FAQ_HEADING['en']!}
+        relatedLinks={relatedLinks}
+        reviewedDate={reviewedDate}
+        reviewedLabel={HUB_REVIEWED_LABEL[lang] ?? HUB_REVIEWED_LABEL['en']!}
+        homeLabel={HOME_LABEL[lang] ?? HOME_LABEL['en']!}
+        presentationDescription={HUB_PRESENTATION_DESCRIPTION[lang] ?? HUB_PRESENTATION_DESCRIPTION['en']!}
+        presentationUrl={HUB_PRESENTATION_URL}
+        fallbackTitle={slugToTitle}
+      />
+    )
+  }
+
   return (
     <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
@@ -921,7 +943,9 @@ export async function buildHubPageElement(lang: Lang) {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: HUB_COPY[lang]?.title ?? HUB_COPY['en']!.title,
-    description: (HUB_COPY[lang] ?? HUB_COPY['en']!).intro,
+    description: usesSmartHomeHubTemplate(lang)
+      ? withComputedGuideCount(lang, (HUB_COPY[lang] ?? HUB_COPY['en']!).intro)
+      : (HUB_COPY[lang] ?? HUB_COPY['en']!).intro,
     url: canonicalUrl,
     inLanguage: lang,
   }
