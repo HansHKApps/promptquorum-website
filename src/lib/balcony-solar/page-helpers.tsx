@@ -26,6 +26,7 @@ import { isBalconySolarArticlePublished, isBalconySolarHubPublished } from './pu
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { narrowArticleData } from '@/lib/narrowArticleData'
+import { BalconySolarHubTemplate, usesBalconySolarHubTemplate, withComputedGuideCount } from './hub-template'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -787,6 +788,28 @@ function renderHub(lang: Lang) {
   const faq = HUB_FAQ[lang] ?? HUB_FAQ['en']!
   const relatedLinks = HUB_RELATED_LINKS[lang] ?? HUB_RELATED_LINKS['en']!
 
+  // Pilot: languages listed in BALCONY_SOLAR_HUB_TEMPLATE_LANGS (hub-template.tsx) get the shared
+  // hub template. Same data, same JSON-LD (buildHubPageElement); only the page body differs.
+  if (usesBalconySolarHubTemplate(lang)) {
+    return (
+      <BalconySolarHubTemplate
+        lang={lang}
+        copy={copy}
+        categoryCopy={CATEGORY_COPY[lang]}
+        faq={faq}
+        faqHeading={HUB_FAQ_HEADING[lang] ?? HUB_FAQ_HEADING['en']!}
+        relatedLinks={relatedLinks}
+        reviewedDate={reviewedDate}
+        reviewedLabel={HUB_REVIEWED_LABEL[lang] ?? HUB_REVIEWED_LABEL['en']!}
+        homeLabel={HOME_LABEL[lang] ?? HOME_LABEL['en']!}
+        presentationDescription={HUB_PRESENTATION_DESCRIPTION[lang] ?? HUB_PRESENTATION_DESCRIPTION['en']!}
+        presentationUrl={HUB_PRESENTATION_URL}
+        fallbackTitle={slugToTitle}
+        footer={<BalconySolarWaitlistCTA label={HUB_WAITLIST_CTA_LABEL[lang] ?? HUB_WAITLIST_CTA_LABEL['en']!} />}
+      />
+    )
+  }
+
   return (
     <div className="min-h-screen bg-surface pt-32 pb-20 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
@@ -932,7 +955,9 @@ export async function buildHubPageElement(lang: Lang) {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: HUB_COPY[lang]?.title ?? HUB_COPY['en']!.title,
-    description: (HUB_COPY[lang] ?? HUB_COPY['en']!).intro,
+    description: usesBalconySolarHubTemplate(lang)
+      ? withComputedGuideCount(lang, (HUB_COPY[lang] ?? HUB_COPY['en']!).intro)
+      : (HUB_COPY[lang] ?? HUB_COPY['en']!).intro,
     url: canonicalUrl,
     inLanguage: lang,
   }
