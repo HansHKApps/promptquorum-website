@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-en.webp',
     title: "IKEA's Matter Ecosystem: Complete Guide (2026)",
@@ -14,11 +14,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     // Verified 2026-07-16 against IKEA's own US product listing ([ikea.com/us/en/cat/smart-home-products-36812/](https://ikea.com/us/en/cat/smart-home-products-36812/))
     // and Home Assistant's own product page ([home-assistant.io/green/](https://home-assistant.io/green/)) for the price comparison.
     intro:
-      "IKEA sells a Matter-compatible smart home lineup — the DIRIGERA hub ($119.99), plus sensors and lighting — positioned as a lower-cost entry point to local-first smart home control compared to dedicated hub appliances. This guide explains what the ecosystem is for and how it compares to other hub options already covered on this site.",
+      "IKEA sells a Matter-compatible smart home lineup — the DIRIGERA hub ($139.99), plus sensors and lighting — positioned as a lower-cost entry point to local-first smart home control compared to dedicated hub appliances. This guide explains what the ecosystem is for and how it compares to other hub options already covered on this site.",
     metaDescription:
-      "IKEA's Matter smart home lineup in 2026: the DIRIGERA hub, sensors, and lighting as a budget entry point to local control.",
+      "IKEA's 2026 Matter-over-Thread range: the DIRIGERA hub ($139.99), which sensors need a Thread border router, and what IKEA doesn't sell (cameras, thermostats).",
     twitterDescription:
-      "IKEA's Matter-compatible smart home products as a budget entry point to local control, compared to Home Assistant Green and other hub options.",
+      "IKEA's 2026 Matter-over-Thread range: the DIRIGERA hub ($139.99), which sensors need a Thread border router, and what IKEA doesn't sell (cameras, thermostats).",
     readTime: '6 min read',
     educationalLevel: 'Beginner',
     audience: 'Smart home beginners considering IKEA hardware as an entry point',
@@ -31,24 +31,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ikea vs home assistant',
     ],
     leadAnswerBlock:
-      "**IKEA's Matter-compatible smart home lineup — the DIRIGERA hub ($119.99) plus sensors and lighting — is positioned as a lower-cost, off-the-shelf entry point to local device control, an alternative to dedicated hub appliances like Home Assistant Green ($199) for buyers who want retail-available hardware.**",
+      "**IKEA's Matter-compatible smart home lineup — the DIRIGERA hub ($139.99) plus sensors and lighting — is positioned as a lower-cost, off-the-shelf entry point to local device control, an alternative to dedicated hub appliances like Home Assistant Green ($199) for buyers who want retail-available hardware.**",
     quickAnswerTop: {
       en: {
         question: 'Is IKEA a good starting point for a Matter smart home?',
         answer:
-          "Yes, via the DIRIGERA hub ($119.99) — a lower-cost, widely available entry point compared to dedicated hub appliances, useful if you want retail-store hardware and basic lighting/sensor automation without researching individual component compatibility. DIRIGERA became a full Matter controller and Thread Border Router through a 2025 firmware update, so it can also onboard some third-party Matter devices, not just IKEA's own.",
+          "Yes, via the DIRIGERA hub ($139.99) — a lower-cost, widely available entry point compared to dedicated hub appliances, useful if you want retail-store hardware and basic lighting/sensor automation without researching individual component compatibility. DIRIGERA became a full Matter controller and Thread Border Router through a 2025 firmware update, so it can also onboard some third-party Matter devices, not just IKEA's own.",
         bullets: [
           "IKEA's positioning: budget, retail-available entry point to Matter/local control",
           'Best fit: buyers wanting basic lighting/sensor automation without researching individual components',
-          'DIRIGERA hub: $119.99, Matter controller + Thread Border Router (2025 firmware update)',
+          'DIRIGERA hub: $139.99, Matter controller + Thread Border Router (2025 firmware update)',
           "Compare against Home Assistant Green ($199, see the hub buyer's guide) for a fuller-featured alternative",
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'TL;DR', anchor: 'tldr' },
       { label: 'What the Ecosystem Covers', anchor: 'what-it-covers' },
+      { label: "The Current Lineup", anchor: 'lineup' },
       { label: 'Who This Fits', anchor: 'who-it-fits' },
       { label: 'How It Compares to Other Hubs', anchor: 'how-it-compares' },
       { label: 'FAQ', anchor: 'faq' },
@@ -64,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           "IKEA's smart home lineup is positioned as a budget, widely available entry point to Matter-based local control",
-          'DIRIGERA (model E2315) hub is Matter-certified and a Thread Border Router, priced at $119.99 as of write-time',
+          'DIRIGERA (model E2315) hub is Matter-certified and a Thread Border Router, priced at $139.99 as of write-time',
           "Best fit for buyers wanting basic lighting/sensor automation without researching individual component compatibility",
           "Compare against Home Assistant Green and other dedicated hubs (see the hub buyer's guide) for more advanced automation needs",
         ],
@@ -78,6 +79,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "The hub acts as the local controller and, in many configurations, a Matter bridge for the ecosystem's own devices and some third-party Matter devices.",
           'Lighting and sensors are the core of the lineup — this is not a full-featured hub for complex multi-brand automation the way Home Assistant is.',
           "DIRIGERA is certified for Ethernet and Thread connectivity in the Border Router (FTD) role, and gained Matter-controller functionality via a 2025 firmware update, letting it onboard third-party Matter devices through the IKEA Home Smart app rather than only its own product line.",
+        ],
+      },
+      lineup: {
+        id: 'lineup',
+        title: "IKEA's 2026 Matter Range Is Built on Thread, Not Zigbee",
+        content:
+          "**IKEA's newer range uses Matter over Thread: bulbs, plugs, remotes and sensors join through the Matter app of Apple Home, Google Home, Alexa, SmartThings or Home Assistant, while DIRIGERA is needed for IKEA's own app features and older Zigbee products.**",
+        items: [
+          "Lighting: KAJPLATS smart bulbs (from $5.99 per pack on IKEA's US listing) and the VARMBLIXT smart lamp ($79.99).",
+          "Plugs and remotes: the GRILLPLATS smart plug ($7.99) and BILRESA remotes (dual button $6.99, scroll wheel $9.99).",
+          "Sensors: MYGGSPRAY (motion), MYGGBETT (door/window), KLIPPBOK (water leak) and TIMMERFLOTTE (temperature/humidity) at $11.99 each, plus ALPSTUGA (air quality) at $34.99. Every Matter-over-Thread device needs a Thread border router and a Matter controller — DIRIGERA can be both, and so can some Apple, Google, Alexa, SmartThings or Home Assistant hardware.",
+          "Older Zigbee products (for example TRÅDFRI bulbs, STARKVIND and VINDSTYRKA) still need DIRIGERA, which exposes them to Matter as a bridge; IKEA no longer adds Zigbee to new products.",
+          "Not in the range: IKEA's US listing shows no thermostat, camera, doorbell, robot vacuum or Wi-Fi extender at write-time.",
         ],
       },
       whoItFits: {
@@ -99,7 +113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant Green offers broader device-type support and deeper automation logic, at a different price point and without the retail-store convenience.',
           "IKEA's devices being Matter-certified means they aren't locked into the ecosystem's own hub — this reduces the switching cost if you later move to a more capable hub.",
-          "IKEA's DIRIGERA hub ($119.99) is about $80 cheaper than Home Assistant Green ($199) as of write-time — HA Green's price rose twice in 2026 (from an original $99 at 2023 launch) citing higher component costs, while IKEA's hub has stayed at retail pricing.",
+          "IKEA's DIRIGERA hub ($139.99 on IKEA's US listing) is about $60 cheaper than Home Assistant Green ($199) at write-time — but both prices have risen: DIRIGERA launched at $69 in 2022, while HA Green launched at $99 in 2023 and rose twice in 2026, citing higher component costs.",
         ],
       },
       faqSection: {
@@ -111,6 +125,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Is IKEA a good long-term smart home platform?', a: 'It works well as a low-cost entry point for lighting and basic sensors. For more advanced automation, many buyers migrate their Matter devices to a more capable hub like Home Assistant later.' },
           { q: 'Does IKEA support cameras or energy monitoring?', a: "No, as of write-time. IKEA's current US smart home lineup covers lighting, motion/contact/temperature/water-leak/air-quality sensors, remotes, and smart plugs — no cameras or dedicated energy-monitoring hardware." },
           { q: "How does this compare to the general hub buyer's guide on this site?", a: "The hub buyer's guide compares dedicated hub appliances (Home Assistant Green, Hubitat, Homey). This article focuses specifically on IKEA's retail ecosystem as a budget alternative." },
+          { q: "How much does the IKEA DIRIGERA hub cost?", a: "$139.99 on IKEA's US listing at write-time, up from a $69 launch price in 2022. UK and EU prices also rose in 2026, so check the price in your own IKEA market." },
+          { q: "Do the new IKEA sensors work without the DIRIGERA hub?", a: "Yes, but only with some other Thread border router and Matter controller, such as an Apple HomePod mini, Apple TV 4K or compatible Google Nest device. Without a Thread border router the sensors do not work." },
+          { q: "Does IKEA sell a smart thermostat or robot vacuum?", a: "No. IKEA's US listing covers lighting, plugs, remotes, sensors and air-quality products; thermostats, cameras, doorbells, robot vacuums and Wi-Fi extenders do not appear at write-time." },
+          { q: "Are older IKEA Zigbee devices still supported?", a: "Yes, through DIRIGERA, which bridges them to Matter platforms. New IKEA products use Matter over Thread instead of Zigbee." },
         ],
       },
       relatedReading: {
@@ -134,7 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'IKEA smart home' }, { '@type': 'Thing', name: 'Matter ecosystem' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -147,6 +165,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Can I use IKEA Matter devices with Home Assistant instead of the IKEA hub?', acceptedAnswer: { '@type': 'Answer', text: "Generally yes — Matter-certified devices aren't locked to one hub, so they can typically be re-paired to Home Assistant or another Matter controller." } },
         { '@type': 'Question', name: 'Is IKEA a good long-term smart home platform?', acceptedAnswer: { '@type': 'Answer', text: 'It works well as a low-cost entry point for lighting and basic sensors; many buyers migrate to a more capable hub later for advanced automation.' } },
         { '@type': 'Question', name: "How does this compare to the general hub buyer's guide on this site?", acceptedAnswer: { '@type': 'Answer', text: "The hub buyer's guide compares dedicated hub appliances. This article focuses specifically on IKEA's retail ecosystem as a budget alternative." } },
+        { '@type': 'Question', name: "How much does the IKEA DIRIGERA hub cost?", acceptedAnswer: { '@type': 'Answer', text: "$139.99 on IKEA's US listing at write-time, up from a $69 launch price in 2022. UK and EU prices also rose in 2026, so check the price in your own IKEA market." } },
+        { '@type': 'Question', name: "Do the new IKEA sensors work without the DIRIGERA hub?", acceptedAnswer: { '@type': 'Answer', text: "Yes, but only with some other Thread border router and Matter controller, such as an Apple HomePod mini, Apple TV 4K or compatible Google Nest device. Without a Thread border router the sensors do not work." } },
+        { '@type': 'Question', name: "Does IKEA sell a smart thermostat or robot vacuum?", acceptedAnswer: { '@type': 'Answer', text: "No. IKEA's US listing covers lighting, plugs, remotes, sensors and air-quality products; thermostats, cameras, doorbells, robot vacuums and Wi-Fi extenders do not appear at write-time." } },
+        { '@type': 'Question', name: "Are older IKEA Zigbee devices still supported?", acceptedAnswer: { '@type': 'Answer', text: "Yes, through DIRIGERA, which bridges them to Matter platforms. New IKEA products use Matter over Thread instead of Zigbee." } },
       ],
     },
   },
@@ -154,18 +176,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-de.webp',
     title: 'Das Matter-Ökosystem von IKEA: Kompletter Leitfaden (2026)',
     seoTitle: 'IKEA-Matter-Ökosystem-Leitfaden (2026)',
     intro:
-      'IKEA verkauft eine Matter-kompatible Smart-Home-Produktreihe — den DIRIGERA-Hub ($119.99), plus Sensoren und Beleuchtung — positioniert als kostengünstigerer Einstiegspunkt in lokal-first Smart-Home-Steuerung im Vergleich zu dedizierten Hub-Geräten. Dieser Leitfaden erklärt, wofür das Ökosystem gedacht ist und wie es im Vergleich zu anderen bereits auf dieser Website behandelten Hub-Optionen abschneidet.',
+      'IKEA verkauft eine Matter-kompatible Smart-Home-Produktreihe — den DIRIGERA-Hub ($139.99), plus Sensoren und Beleuchtung — positioniert als kostengünstigerer Einstiegspunkt in lokal-first Smart-Home-Steuerung im Vergleich zu dedizierten Hub-Geräten. Dieser Leitfaden erklärt, wofür das Ökosystem gedacht ist und wie es im Vergleich zu anderen bereits auf dieser Website behandelten Hub-Optionen abschneidet.',
     metaDescription:
-      'Die Matter-Smart-Home-Produktreihe von IKEA in 2026: der DIRIGERA-Hub, Sensoren und Beleuchtung als preisgünstiger Einstieg in die lokale Steuerung.',
+      "IKEAs Matter-über-Thread-Sortiment 2026: der DIRIGERA-Hub ($139.99), welche Sensoren einen Thread Border Router brauchen und was IKEA nicht verkauft (Kameras, Thermostate).",
     twitterDescription:
-      'Die Matter-kompatiblen Smart-Home-Produkte von IKEA als preisgünstiger Einstieg in die lokale Steuerung, im Vergleich zu Home Assistant Green und anderen Hub-Optionen.',
+      "IKEAs Matter-über-Thread-Sortiment 2026: der DIRIGERA-Hub ($139.99), welche Sensoren einen Thread Border Router brauchen und was IKEA nicht verkauft (Kameras, Thermostate).",
     readTime: '6 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Smart-Home-Einsteiger, die IKEA-Hardware als Einstiegspunkt in Betracht ziehen',
@@ -178,24 +200,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ikea vs home assistant',
     ],
     leadAnswerBlock:
-      'Die Matter-kompatible Smart-Home-Produktreihe von IKEA — der DIRIGERA-Hub ($119.99) plus Sensoren und Beleuchtung — ist als kostengünstiger, im Handel erhältlicher Einstiegspunkt in die lokale Gerätesteuerung positioniert, eine Alternative zu dedizierten Hub-Geräten wie Home Assistant Green ($199) für Käufer, die im Einzelhandel verfügbare Hardware wollen.',
+      'Die Matter-kompatible Smart-Home-Produktreihe von IKEA — der DIRIGERA-Hub ($139.99) plus Sensoren und Beleuchtung — ist als kostengünstiger, im Handel erhältlicher Einstiegspunkt in die lokale Gerätesteuerung positioniert, eine Alternative zu dedizierten Hub-Geräten wie Home Assistant Green ($199) für Käufer, die im Einzelhandel verfügbare Hardware wollen.',
     quickAnswerTop: {
       de: {
         question: 'Ist IKEA ein guter Ausgangspunkt für ein Matter-Smart-Home?',
         answer:
-          'Ja, über den DIRIGERA-Hub ($119.99) — ein kostengünstigerer, weit verbreiteter Einstiegspunkt im Vergleich zu dedizierten Hub-Geräten, nützlich, wenn du Hardware aus dem Einzelhandel und grundlegende Beleuchtungs-/Sensorautomatisierung willst, ohne die Kompatibilität einzelner Komponenten zu recherchieren. DIRIGERA wurde durch ein Firmware-Update 2025 zu einem vollständigen Matter-Controller und Thread-Border-Router, kann also auch einige Matter-Geräte von Drittanbietern einbinden, nicht nur die eigenen von IKEA.',
+          'Ja, über den DIRIGERA-Hub ($139.99) — ein kostengünstigerer, weit verbreiteter Einstiegspunkt im Vergleich zu dedizierten Hub-Geräten, nützlich, wenn du Hardware aus dem Einzelhandel und grundlegende Beleuchtungs-/Sensorautomatisierung willst, ohne die Kompatibilität einzelner Komponenten zu recherchieren. DIRIGERA wurde durch ein Firmware-Update 2025 zu einem vollständigen Matter-Controller und Thread-Border-Router, kann also auch einige Matter-Geräte von Drittanbietern einbinden, nicht nur die eigenen von IKEA.',
         bullets: [
           'IKEAs Positionierung: günstiger, im Einzelhandel erhältlicher Einstiegspunkt in Matter/lokale Steuerung',
           'Bestens geeignet für: Käufer, die grundlegende Beleuchtungs-/Sensorautomatisierung ohne Recherche zu einzelnen Komponenten wollen',
-          'DIRIGERA-Hub: $119.99, Matter-Controller + Thread-Border-Router (Firmware-Update 2025)',
+          'DIRIGERA-Hub: $139.99, Matter-Controller + Thread-Border-Router (Firmware-Update 2025)',
           'Vergleiche mit Home Assistant Green ($199, siehe den Hub-Kaufratgeber) für eine funktionsreichere Alternative',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'Kurzfassung', anchor: 'tldr' },
       { label: 'Was das Ökosystem abdeckt', anchor: 'what-it-covers' },
+      { label: "Das aktuelle Sortiment", anchor: 'lineup' },
       { label: 'Für wen das passt', anchor: 'who-it-fits' },
       { label: 'Wie es im Vergleich zu anderen Hubs abschneidet', anchor: 'how-it-compares' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
@@ -211,7 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Die Smart-Home-Produktreihe von IKEA ist als günstiger, weit verbreiteter Einstiegspunkt in Matter-basierte lokale Steuerung positioniert',
-          'Der DIRIGERA-Hub (Modell E2315) ist Matter-zertifiziert und ein Thread-Border-Router, zum Schreibzeitpunkt zum Preis von $119.99',
+          'Der DIRIGERA-Hub (Modell E2315) ist Matter-zertifiziert und ein Thread-Border-Router, zum Schreibzeitpunkt zum Preis von $139.99',
           'Am besten geeignet für Käufer, die grundlegende Beleuchtungs-/Sensorautomatisierung ohne Recherche zur Kompatibilität einzelner Komponenten wollen',
           'Vergleiche mit Home Assistant Green und anderen dedizierten Hubs (siehe den Hub-Kaufratgeber) für fortgeschrittenere Automatisierungsbedürfnisse',
         ],
@@ -225,6 +248,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Der Hub fungiert als lokaler Controller und in vielen Konfigurationen als Matter-Bridge für die eigenen Geräte des Ökosystems sowie einige Matter-Geräte von Drittanbietern.',
           'Beleuchtung und Sensoren bilden den Kern der Produktreihe — dies ist kein funktionsreicher Hub für komplexe Multi-Marken-Automatisierung wie Home Assistant.',
           'DIRIGERA ist für Ethernet- und Thread-Konnektivität in der Border-Router-Rolle (FTD) zertifiziert und erhielt durch ein Firmware-Update 2025 Matter-Controller-Funktionalität, wodurch es Matter-Geräte von Drittanbietern über die IKEA-Home-Smart-App einbinden kann, nicht nur die eigene Produktlinie.',
+        ],
+      },
+      lineup: {
+        id: 'lineup',
+        title: "IKEAs Matter-Sortiment 2026 setzt auf Thread statt Zigbee",
+        content:
+          "**IKEAs neueres Sortiment nutzt Matter über Thread: Leuchtmittel, Steckdosen, Fernbedienungen und Sensoren werden über die Matter-App von Apple Home, Google Home, Alexa, SmartThings oder Home Assistant eingebunden; DIRIGERA wird nur für IKEAs eigene App-Funktionen und ältere Zigbee-Produkte benötigt.**",
+        items: [
+          "Beleuchtung: smarte KAJPLATS-Leuchtmittel (ab $5.99 pro Packung laut IKEAs US-Listing) und die smarte Leuchte VARMBLIXT ($79.99).",
+          "Steckdosen und Fernbedienungen: die smarte Steckdose GRILLPLATS ($7.99) und BILRESA-Fernbedienungen (zwei Tasten $6.99, Scrollrad $9.99).",
+          "Sensoren: MYGGSPRAY (Bewegung), MYGGBETT (Tür/Fenster), KLIPPBOK (Wasserleck) und TIMMERFLOTTE (Temperatur/Luftfeuchtigkeit) für je $11.99, dazu ALPSTUGA (Luftqualität) für $34.99. Jedes Matter-über-Thread-Gerät braucht einen Thread Border Router und einen Matter-Controller — DIRIGERA kann beides sein, ebenso manche Hardware von Apple, Google, Alexa, SmartThings oder Home Assistant.",
+          "Ältere Zigbee-Produkte (zum Beispiel TRÅDFRI-Leuchtmittel, STARKVIND und VINDSTYRKA) benötigen weiterhin DIRIGERA, der sie als Bridge für Matter bereitstellt; neue IKEA-Produkte erhalten kein Zigbee mehr.",
+          "Nicht im Sortiment: IKEAs US-Listing zeigt zum Schreibzeitpunkt kein Thermostat, keine Kamera, keine Türklingel, keinen Saugroboter und keinen WLAN-Repeater.",
         ],
       },
       whoItFits: {
@@ -246,7 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant Green bietet breitere Gerätetyp-Unterstützung und tiefere Automatisierungslogik, zu einem anderen Preispunkt und ohne die Einzelhandels-Bequemlichkeit.',
           'Die Matter-Zertifizierung der Geräte von IKEA bedeutet, dass sie nicht an den eigenen Hub des Ökosystems gebunden sind — das reduziert die Wechselkosten, falls du später zu einem leistungsfähigeren Hub wechselst.',
-          'Der DIRIGERA-Hub von IKEA ($119.99) ist zum Schreibzeitpunkt etwa $80 günstiger als Home Assistant Green ($199) — der Preis von HA Green stieg 2026 zweimal (vom ursprünglichen $99 beim Start 2023) unter Verweis auf höhere Komponentenkosten, während der Hub von IKEA beim Einzelhandelspreis geblieben ist.',
+          "Der DIRIGERA-Hub von IKEA ($139.99 laut US-Listing) ist zum Schreibzeitpunkt etwa $60 günstiger als Home Assistant Green ($199) — beide Preise sind jedoch gestiegen: DIRIGERA startete 2022 bei $69, HA Green 2023 bei $99 und wurde 2026 zweimal teurer, mit Verweis auf höhere Komponentenkosten.",
         ],
       },
       faqSection: {
@@ -258,6 +294,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ist IKEA eine gute langfristige Smart-Home-Plattform?', a: 'Es funktioniert gut als kostengünstiger Einstiegspunkt für Beleuchtung und grundlegende Sensoren. Für fortgeschrittenere Automatisierung migrieren viele Käufer ihre Matter-Geräte später zu einem leistungsfähigeren Hub wie Home Assistant.' },
           { q: 'Unterstützt IKEA Kameras oder Energieüberwachung?', a: 'Nein, zum Schreibzeitpunkt. Die aktuelle US-Smart-Home-Produktreihe von IKEA umfasst Beleuchtung, Bewegungs-/Kontakt-/Temperatur-/Wasserleck-/Luftqualitätssensoren, Fernbedienungen und smarte Steckdosen — keine Kameras oder dedizierte Energieüberwachungs-Hardware.' },
           { q: 'Wie schneidet das im Vergleich zum allgemeinen Hub-Kaufratgeber auf dieser Website ab?', a: 'Der Hub-Kaufratgeber vergleicht dedizierte Hub-Geräte (Home Assistant Green, Hubitat, Homey). Dieser Artikel konzentriert sich speziell auf das Einzelhandels-Ökosystem von IKEA als günstige Alternative.' },
+          { q: "Was kostet der IKEA-DIRIGERA-Hub?", a: "$139.99 laut IKEAs US-Listing zum Schreibzeitpunkt, nach $69 beim Start 2022. Auch in Großbritannien und der EU wurde der Hub 2026 teurer — prüfe den Preis in deinem IKEA-Markt." },
+          { q: "Funktionieren die neuen IKEA-Sensoren ohne DIRIGERA-Hub?", a: "Ja, aber nur mit einem anderen Thread Border Router und Matter-Controller, etwa einem Apple HomePod mini, Apple TV 4K oder kompatiblen Google-Nest-Gerät. Ohne Thread Border Router funktionieren die Sensoren nicht." },
+          { q: "Verkauft IKEA ein smartes Thermostat oder einen Saugroboter?", a: "Nein. IKEAs US-Listing umfasst Beleuchtung, Steckdosen, Fernbedienungen, Sensoren und Luftqualitätsprodukte; Thermostate, Kameras, Türklingeln, Saugroboter und WLAN-Repeater tauchen zum Schreibzeitpunkt nicht auf." },
+          { q: "Werden ältere IKEA-Zigbee-Geräte weiter unterstützt?", a: "Ja, über DIRIGERA, der sie als Bridge für Matter-Plattformen bereitstellt. Neue IKEA-Produkte nutzen Matter über Thread statt Zigbee." },
         ],
       },
       relatedReading: {
@@ -281,7 +321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'IKEA Smart Home' }, { '@type': 'Thing', name: 'Matter-Ökosystem' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -294,6 +334,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Kann ich IKEA-Matter-Geräte mit Home Assistant statt dem IKEA-Hub nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Im Allgemeinen ja — Matter-zertifizierte Geräte sind nicht an einen Hub gebunden, sodass sie typischerweise mit Home Assistant oder einem anderen Matter-Controller neu gekoppelt werden können.' } },
         { '@type': 'Question', name: 'Ist IKEA eine gute langfristige Smart-Home-Plattform?', acceptedAnswer: { '@type': 'Answer', text: 'Es funktioniert gut als kostengünstiger Einstiegspunkt für Beleuchtung und grundlegende Sensoren; viele Käufer migrieren später für fortgeschrittene Automatisierung zu einem leistungsfähigeren Hub.' } },
         { '@type': 'Question', name: 'Wie schneidet das im Vergleich zum allgemeinen Hub-Kaufratgeber auf dieser Website ab?', acceptedAnswer: { '@type': 'Answer', text: 'Der Hub-Kaufratgeber vergleicht dedizierte Hub-Geräte. Dieser Artikel konzentriert sich speziell auf das Einzelhandels-Ökosystem von IKEA als günstige Alternative.' } },
+        { '@type': 'Question', name: "Was kostet der IKEA-DIRIGERA-Hub?", acceptedAnswer: { '@type': 'Answer', text: "$139.99 laut IKEAs US-Listing zum Schreibzeitpunkt, nach $69 beim Start 2022. Auch in Großbritannien und der EU wurde der Hub 2026 teurer — prüfe den Preis in deinem IKEA-Markt." } },
+        { '@type': 'Question', name: "Funktionieren die neuen IKEA-Sensoren ohne DIRIGERA-Hub?", acceptedAnswer: { '@type': 'Answer', text: "Ja, aber nur mit einem anderen Thread Border Router und Matter-Controller, etwa einem Apple HomePod mini, Apple TV 4K oder kompatiblen Google-Nest-Gerät. Ohne Thread Border Router funktionieren die Sensoren nicht." } },
+        { '@type': 'Question', name: "Verkauft IKEA ein smartes Thermostat oder einen Saugroboter?", acceptedAnswer: { '@type': 'Answer', text: "Nein. IKEAs US-Listing umfasst Beleuchtung, Steckdosen, Fernbedienungen, Sensoren und Luftqualitätsprodukte; Thermostate, Kameras, Türklingeln, Saugroboter und WLAN-Repeater tauchen zum Schreibzeitpunkt nicht auf." } },
+        { '@type': 'Question', name: "Werden ältere IKEA-Zigbee-Geräte weiter unterstützt?", acceptedAnswer: { '@type': 'Answer', text: "Ja, über DIRIGERA, der sie als Bridge für Matter-Plattformen bereitstellt. Neue IKEA-Produkte nutzen Matter über Thread statt Zigbee." } },
       ],
     },
   },
@@ -301,18 +345,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-fr.webp',
     title: "L'écosystème Matter d'IKEA : guide complet (2026)",
     seoTitle: "Guide de l'écosystème Matter IKEA (2026)",
     intro:
-      "IKEA vend une gamme de produits de maison connectée compatibles Matter — le hub DIRIGERA (119,99 $), plus des capteurs et de l'éclairage — positionnée comme un point d'entrée moins coûteux vers le contrôle local que les appareils hub dédiés. Ce guide explique à quoi sert cet écosystème et comment il se compare aux autres options de hub déjà couvertes sur ce site.",
+      "IKEA vend une gamme de produits de maison connectée compatibles Matter — le hub DIRIGERA (139,99 $), plus des capteurs et de l'éclairage — positionnée comme un point d'entrée moins coûteux vers le contrôle local que les appareils hub dédiés. Ce guide explique à quoi sert cet écosystème et comment il se compare aux autres options de hub déjà couvertes sur ce site.",
     metaDescription:
-      "La gamme Matter de maison connectée d'IKEA en 2026 : le hub DIRIGERA, les capteurs et l'éclairage comme point d'entrée économique vers le contrôle local.",
+      "La gamme Matter over Thread d'IKEA en 2026 : le hub DIRIGERA (139,99 $), quels capteurs exigent un routeur frontière Thread et ce qu'IKEA ne vend pas (caméras, thermostats).",
     twitterDescription:
-      "Les produits de maison connectée compatibles Matter d'IKEA comme point d'entrée économique vers le contrôle local, comparés à Home Assistant Green et d'autres options de hub.",
+      "La gamme Matter over Thread d'IKEA en 2026 : le hub DIRIGERA (139,99 $), quels capteurs exigent un routeur frontière Thread et ce qu'IKEA ne vend pas (caméras, thermostats).",
     readTime: '6 min de lecture',
     educationalLevel: 'Beginner',
     audience: 'Débutants en maison connectée envisageant le matériel IKEA comme point d\'entrée',
@@ -325,24 +369,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ikea vs home assistant',
     ],
     leadAnswerBlock:
-      "La gamme de produits de maison connectée compatibles Matter d'IKEA — le hub DIRIGERA (119,99 $) plus des capteurs et de l'éclairage — est positionnée comme un point d'entrée économique et disponible en magasin vers le contrôle local des appareils, une alternative aux appareils hub dédiés comme Home Assistant Green (199 $) pour les acheteurs qui veulent du matériel disponible en vente au détail.",
+      "La gamme de produits de maison connectée compatibles Matter d'IKEA — le hub DIRIGERA (139,99 $) plus des capteurs et de l'éclairage — est positionnée comme un point d'entrée économique et disponible en magasin vers le contrôle local des appareils, une alternative aux appareils hub dédiés comme Home Assistant Green (199 $) pour les acheteurs qui veulent du matériel disponible en vente au détail.",
     quickAnswerTop: {
       fr: {
         question: "IKEA est-il un bon point de départ pour une maison connectée Matter ?",
         answer:
-          "Oui, via le hub DIRIGERA (119,99 $) — un point d'entrée moins coûteux et largement disponible comparé aux appareils hub dédiés, utile si vous voulez du matériel de magasin et une automatisation basique de l'éclairage/des capteurs sans rechercher la compatibilité de composants individuels. DIRIGERA est devenu un contrôleur Matter complet et un routeur frontalier Thread grâce à une mise à jour du firmware en 2025, il peut donc aussi intégrer certains appareils Matter tiers, pas seulement ceux d'IKEA.",
+          "Oui, via le hub DIRIGERA (139,99 $) — un point d'entrée moins coûteux et largement disponible comparé aux appareils hub dédiés, utile si vous voulez du matériel de magasin et une automatisation basique de l'éclairage/des capteurs sans rechercher la compatibilité de composants individuels. DIRIGERA est devenu un contrôleur Matter complet et un routeur frontalier Thread grâce à une mise à jour du firmware en 2025, il peut donc aussi intégrer certains appareils Matter tiers, pas seulement ceux d'IKEA.",
         bullets: [
           "Positionnement d'IKEA : point d'entrée économique et disponible en magasin vers Matter/le contrôle local",
           "Convient le mieux à : les acheteurs voulant une automatisation basique de l'éclairage/des capteurs sans rechercher les composants individuels",
-          'Hub DIRIGERA : 119,99 $, contrôleur Matter + routeur frontalier Thread (mise à jour du firmware 2025)',
+          'Hub DIRIGERA : 139,99 $, contrôleur Matter + routeur frontalier Thread (mise à jour du firmware 2025)',
           "Comparez avec Home Assistant Green (199 $, voir le guide d'achat de hub) pour une alternative plus complète",
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'Résumé', anchor: 'tldr' },
       { label: "Ce que couvre l'écosystème", anchor: 'what-it-covers' },
+      { label: "La gamme actuelle", anchor: 'lineup' },
       { label: 'À qui cela convient', anchor: 'who-it-fits' },
       { label: 'Comparaison avec d\'autres hubs', anchor: 'how-it-compares' },
       { label: 'Questions fréquentes', anchor: 'faq' },
@@ -358,7 +403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           "La gamme de maison connectée d'IKEA est positionnée comme un point d'entrée économique et largement disponible vers le contrôle local basé sur Matter",
-          'Le hub DIRIGERA (modèle E2315) est certifié Matter et routeur frontalier Thread, au prix de 119,99 $ au moment de l\'écriture',
+          'Le hub DIRIGERA (modèle E2315) est certifié Matter et routeur frontalier Thread, au prix de 139,99 $ au moment de l\'écriture',
           "Convient le mieux aux acheteurs voulant une automatisation basique de l'éclairage/des capteurs sans rechercher la compatibilité de composants individuels",
           "Comparez avec Home Assistant Green et d'autres hubs dédiés (voir le guide d'achat de hub) pour des besoins d'automatisation plus avancés",
         ],
@@ -372,6 +417,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Le hub agit comme contrôleur local et, dans de nombreuses configurations, comme pont Matter pour les propres appareils de l'écosystème et certains appareils Matter tiers.",
           "L'éclairage et les capteurs constituent le cœur de la gamme — ce n'est pas un hub complet pour une automatisation multi-marques complexe comme Home Assistant.",
           "DIRIGERA est certifié pour la connectivité Ethernet et Thread dans le rôle de routeur frontalier (FTD), et a gagné la fonctionnalité de contrôleur Matter via une mise à jour du firmware en 2025, lui permettant d'intégrer des appareils Matter tiers via l'application IKEA Home Smart plutôt que seulement sa propre gamme de produits.",
+        ],
+      },
+      lineup: {
+        id: 'lineup',
+        title: "La gamme Matter d'IKEA en 2026 repose sur Thread, pas sur Zigbee",
+        content:
+          "**La gamme récente d'IKEA utilise Matter over Thread : ampoules, prises, télécommandes et capteurs s'ajoutent via l'application Matter d'Apple Home, Google Home, Alexa, SmartThings ou Home Assistant, tandis que DIRIGERA n'est nécessaire que pour les fonctions de l'application IKEA et les anciens produits Zigbee.**",
+        items: [
+          "Éclairage : ampoules connectées KAJPLATS (à partir de 5,99 $ le lot sur la fiche américaine d'IKEA) et lampe connectée VARMBLIXT (79,99 $).",
+          "Prises et télécommandes : prise connectée GRILLPLATS (7,99 $) et télécommandes BILRESA (deux boutons 6,99 $, molette 9,99 $).",
+          "Capteurs : MYGGSPRAY (mouvement), MYGGBETT (porte/fenêtre), KLIPPBOK (fuite d'eau) et TIMMERFLOTTE (température/humidité) à 11,99 $ chacun, plus ALPSTUGA (qualité de l'air) à 34,99 $. Tout appareil Matter over Thread exige un routeur frontière Thread et un contrôleur Matter — DIRIGERA peut remplir les deux rôles, tout comme certains appareils Apple, Google, Alexa, SmartThings ou Home Assistant.",
+          "Les anciens produits Zigbee (par exemple les ampoules TRÅDFRI, STARKVIND et VINDSTYRKA) nécessitent toujours DIRIGERA, qui les expose à Matter comme pont ; IKEA n'ajoute plus Zigbee à ses nouveaux produits.",
+          "Absent de la gamme : la fiche américaine d'IKEA ne montre, au moment de l'écriture, ni thermostat, ni caméra, ni sonnette, ni robot aspirateur, ni répéteur Wi-Fi.",
         ],
       },
       whoItFits: {
@@ -393,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "Home Assistant Green offre une prise en charge plus large des types d'appareils et une logique d'automatisation plus approfondie, à un prix différent et sans la commodité du magasin de détail.",
           "Le fait que les appareils d'IKEA soient certifiés Matter signifie qu'ils ne sont pas verrouillés au propre hub de l'écosystème — cela réduit le coût de changement si vous passez plus tard à un hub plus performant.",
-          "Le hub DIRIGERA d'IKEA (119,99 $) est environ 80 $ moins cher que Home Assistant Green (199 $) au moment de l'écriture — le prix de HA Green a augmenté deux fois en 2026 (par rapport aux 99 $ d'origine au lancement en 2023) en citant des coûts de composants plus élevés, tandis que le hub d'IKEA est resté au prix de détail.",
+          "Le hub DIRIGERA d'IKEA (139,99 $ sur la fiche américaine d'IKEA) est environ 60 $ moins cher que Home Assistant Green (199 $) au moment de l'écriture — mais les deux prix ont augmenté : DIRIGERA a été lancé à 69 $ en 2022, tandis que HA Green a été lancé à 99 $ en 2023 et a augmenté deux fois en 2026, en citant des coûts de composants plus élevés.",
         ],
       },
       faqSection: {
@@ -405,6 +463,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'IKEA est-il une bonne plateforme de maison connectée à long terme ?', a: "Cela fonctionne bien comme point d'entrée économique pour l'éclairage et les capteurs basiques. Pour une automatisation plus avancée, de nombreux acheteurs migrent leurs appareils Matter vers un hub plus performant comme Home Assistant plus tard." },
           { q: "IKEA prend-il en charge les caméras ou la surveillance énergétique ?", a: "Non, au moment de l'écriture. La gamme actuelle de maison connectée américaine d'IKEA couvre l'éclairage, les capteurs de mouvement/contact/température/fuite d'eau/qualité de l'air, les télécommandes et les prises connectées — pas de caméras ni de matériel dédié de surveillance énergétique." },
           { q: "Comment cela se compare-t-il au guide d'achat de hub général sur ce site ?", a: "Le guide d'achat de hub compare les appareils hub dédiés (Home Assistant Green, Hubitat, Homey). Cet article se concentre spécifiquement sur l'écosystème de vente au détail d'IKEA comme alternative économique." },
+          { q: "Combien coûte le hub IKEA DIRIGERA ?", a: "139,99 $ sur la fiche américaine d'IKEA au moment de l'écriture, contre 69 $ au lancement en 2022. Les prix au Royaume-Uni et dans l'UE ont aussi augmenté en 2026 : vérifiez le prix dans votre marché IKEA." },
+          { q: "Les nouveaux capteurs IKEA fonctionnent-ils sans le hub DIRIGERA ?", a: "Oui, mais seulement avec un autre routeur frontière Thread et contrôleur Matter, comme un Apple HomePod mini, une Apple TV 4K ou un appareil Google Nest compatible. Sans routeur frontière Thread, les capteurs ne fonctionnent pas." },
+          { q: "IKEA vend-il un thermostat connecté ou un robot aspirateur ?", a: "Non. La fiche américaine d'IKEA couvre l'éclairage, les prises, les télécommandes, les capteurs et les produits de qualité de l'air ; thermostats, caméras, sonnettes, robots aspirateurs et répéteurs Wi-Fi n'y figurent pas au moment de l'écriture." },
+          { q: "Les anciens appareils Zigbee d'IKEA sont-ils toujours pris en charge ?", a: "Oui, via DIRIGERA, qui les relie aux plateformes Matter comme pont. Les nouveaux produits IKEA utilisent Matter over Thread au lieu de Zigbee." },
         ],
       },
       relatedReading: {
@@ -428,7 +490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Maison connectée IKEA' }, { '@type': 'Thing', name: 'Écosystème Matter' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -441,6 +503,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Puis-je utiliser des appareils Matter IKEA avec Home Assistant au lieu du hub IKEA ?', acceptedAnswer: { '@type': 'Answer', text: "Généralement oui — les appareils certifiés Matter ne sont pas verrouillés à un seul hub, donc ils peuvent généralement être réappairés à Home Assistant ou un autre contrôleur Matter." } },
         { '@type': 'Question', name: 'IKEA est-il une bonne plateforme de maison connectée à long terme ?', acceptedAnswer: { '@type': 'Answer', text: "Cela fonctionne bien comme point d'entrée économique pour l'éclairage et les capteurs basiques ; de nombreux acheteurs migrent plus tard vers un hub plus performant pour une automatisation avancée." } },
         { '@type': 'Question', name: "Comment cela se compare-t-il au guide d'achat de hub général sur ce site ?", acceptedAnswer: { '@type': 'Answer', text: "Le guide d'achat de hub compare les appareils hub dédiés. Cet article se concentre spécifiquement sur l'écosystème de vente au détail d'IKEA comme alternative économique." } },
+        { '@type': 'Question', name: "Combien coûte le hub IKEA DIRIGERA ?", acceptedAnswer: { '@type': 'Answer', text: "139,99 $ sur la fiche américaine d'IKEA au moment de l'écriture, contre 69 $ au lancement en 2022. Les prix au Royaume-Uni et dans l'UE ont aussi augmenté en 2026 : vérifiez le prix dans votre marché IKEA." } },
+        { '@type': 'Question', name: "Les nouveaux capteurs IKEA fonctionnent-ils sans le hub DIRIGERA ?", acceptedAnswer: { '@type': 'Answer', text: "Oui, mais seulement avec un autre routeur frontière Thread et contrôleur Matter, comme un Apple HomePod mini, une Apple TV 4K ou un appareil Google Nest compatible. Sans routeur frontière Thread, les capteurs ne fonctionnent pas." } },
+        { '@type': 'Question', name: "IKEA vend-il un thermostat connecté ou un robot aspirateur ?", acceptedAnswer: { '@type': 'Answer', text: "Non. La fiche américaine d'IKEA couvre l'éclairage, les prises, les télécommandes, les capteurs et les produits de qualité de l'air ; thermostats, caméras, sonnettes, robots aspirateurs et répéteurs Wi-Fi n'y figurent pas au moment de l'écriture." } },
+        { '@type': 'Question', name: "Les anciens appareils Zigbee d'IKEA sont-ils toujours pris en charge ?", acceptedAnswer: { '@type': 'Answer', text: "Oui, via DIRIGERA, qui les relie aux plateformes Matter comme pont. Les nouveaux produits IKEA utilisent Matter over Thread au lieu de Zigbee." } },
       ],
     },
   },
@@ -448,18 +514,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-ja.webp',
     title: 'IKEAのMatterエコシステム：完全ガイド（2026年）',
     seoTitle: 'IKEA Matterエコシステムガイド（2026年）',
     intro:
-      'IKEAはMatter互換のスマートホーム製品ライン — DIRIGERAハブ（$119.99）に加え、センサーと照明 — を、専用ハブ機器と比較してより低コストなローカルファーストのスマートホーム制御への入り口として位置づけて販売しています。このガイドでは、このエコシステムが何のためのものか、そしてこのサイトですでに扱っている他のハブの選択肢とどう比較されるかを説明します。',
+      'IKEAはMatter互換のスマートホーム製品ライン — DIRIGERAハブ（$139.99）に加え、センサーと照明 — を、専用ハブ機器と比較してより低コストなローカルファーストのスマートホーム制御への入り口として位置づけて販売しています。このガイドでは、このエコシステムが何のためのものか、そしてこのサイトですでに扱っている他のハブの選択肢とどう比較されるかを説明します。',
     metaDescription:
-      '2026年のIKEAのMatterスマートホーム製品ライン：DIRIGERAハブ、センサー、照明を、ローカル制御への低予算な入り口として。',
+      "IKEAの2026年Matter over Threadラインナップ：DIRIGERAハブ（$139.99）、Threadボーダールーターが必要なセンサー、IKEAが販売していない製品（カメラ、サーモスタット）。",
     twitterDescription:
-      'IKEAのMatter互換スマートホーム製品を、ローカル制御への低予算な入り口として、Home Assistant Greenや他のハブの選択肢と比較。',
+      "IKEAの2026年Matter over Threadラインナップ：DIRIGERAハブ（$139.99）、Threadボーダールーターが必要なセンサー、IKEAが販売していない製品（カメラ、サーモスタット）。",
     readTime: '読了時間6分',
     educationalLevel: 'Beginner',
     audience: 'IKEAのハードウェアを入り口として検討しているスマートホーム初心者',
@@ -472,24 +538,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ikea vs home assistant',
     ],
     leadAnswerBlock:
-      'IKEAのMatter互換スマートホーム製品ライン — DIRIGERAハブ（$119.99）に加え、センサーと照明 — は、市販で入手可能なハードウェアを求める購入者にとって、Home Assistant Green（$199）のような専用ハブ機器の代替として、ローカルデバイス制御への低コストで既製の入り口として位置づけられています。',
+      'IKEAのMatter互換スマートホーム製品ライン — DIRIGERAハブ（$139.99）に加え、センサーと照明 — は、市販で入手可能なハードウェアを求める購入者にとって、Home Assistant Green（$199）のような専用ハブ機器の代替として、ローカルデバイス制御への低コストで既製の入り口として位置づけられています。',
     quickAnswerTop: {
       ja: {
         question: 'IKEAはMatterスマートホームの良い出発点ですか？',
         answer:
-          'はい、DIRIGERAハブ（$119.99）経由で — 専用ハブ機器と比較して低コストで広く入手可能な入り口であり、個々のコンポーネントの互換性を調べることなく、店舗販売のハードウェアと基本的な照明/センサーの自動化を求める場合に有用です。DIRIGERAは2025年のファームウェアアップデートにより完全なMatterコントローラーおよびThreadボーダールーターになったため、IKEA自身の製品だけでなく、一部のサードパーティ製Matterデバイスも導入できます。',
+          'はい、DIRIGERAハブ（$139.99）経由で — 専用ハブ機器と比較して低コストで広く入手可能な入り口であり、個々のコンポーネントの互換性を調べることなく、店舗販売のハードウェアと基本的な照明/センサーの自動化を求める場合に有用です。DIRIGERAは2025年のファームウェアアップデートにより完全なMatterコントローラーおよびThreadボーダールーターになったため、IKEA自身の製品だけでなく、一部のサードパーティ製Matterデバイスも導入できます。',
         bullets: [
           'IKEAのポジショニング：Matter/ローカル制御への低予算で市販入手可能な入り口',
           '最適な対象：個々のコンポーネントを調べることなく基本的な照明/センサーの自動化を求める購入者',
-          'DIRIGERAハブ：$119.99、Matterコントローラー＋Threadボーダールーター（2025年ファームウェアアップデート）',
+          'DIRIGERAハブ：$139.99、Matterコントローラー＋Threadボーダールーター（2025年ファームウェアアップデート）',
           'より機能豊富な代替として、Home Assistant Green（$199、ハブ購入ガイドを参照）と比較すること',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: '要約', anchor: 'tldr' },
       { label: 'エコシステムがカバーするもの', anchor: 'what-it-covers' },
+      { label: "現在のラインナップ", anchor: 'lineup' },
       { label: 'これが誰に適しているか', anchor: 'who-it-fits' },
       { label: '他のハブとの比較', anchor: 'how-it-compares' },
       { label: 'よくある質問', anchor: 'faq' },
@@ -505,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'IKEAのスマートホーム製品ラインは、Matterベースのローカル制御への低予算で広く入手可能な入り口として位置づけられています',
-          'DIRIGERA（モデルE2315）ハブはMatter認証済みでThreadボーダールーターであり、執筆時点で$119.99の価格です',
+          'DIRIGERA（モデルE2315）ハブはMatter認証済みでThreadボーダールーターであり、執筆時点で$139.99の価格です',
           '個々のコンポーネントの互換性を調べることなく基本的な照明/センサーの自動化を求める購入者に最適です',
           'より高度な自動化ニーズには、Home Assistant Greenや他の専用ハブ（ハブ購入ガイドを参照）と比較してください',
         ],
@@ -519,6 +586,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ハブはローカルコントローラーとして機能し、多くの構成でエコシステム自身のデバイスや一部のサードパーティ製Matterデバイスに対するMatterブリッジとしても機能します。',
           '照明とセンサーが製品ラインの中核です — これはHome Assistantのような複雑なマルチブランド自動化のための機能豊富なハブではありません。',
           'DIRIGERAはボーダールーター（FTD）役割でのイーサネットおよびThread接続について認証されており、2025年のファームウェアアップデートでMatterコントローラー機能を獲得し、自社の製品ラインだけでなくIKEA Home Smartアプリを通じてサードパーティ製Matterデバイスを導入できるようになりました。',
+        ],
+      },
+      lineup: {
+        id: 'lineup',
+        title: "IKEAの2026年Matterラインナップは、ZigbeeではなくThreadが基盤",
+        content:
+          "**IKEAの新しいラインナップはMatter over Threadを採用しており、電球・プラグ・リモコン・センサーはApple Home、Google Home、Alexa、SmartThings、Home AssistantのMatterアプリから追加できます。DIRIGERAが必要なのは、IKEA独自のアプリ機能と旧Zigbee製品のためです。**",
+        items: [
+          "照明：KAJPLATSスマート電球（IKEA米国サイトで1パック$5.99から）とVARMBLIXTスマートランプ（$79.99）。",
+          "プラグとリモコン：GRILLPLATSスマートプラグ（$7.99）とBILRESAリモコン（2ボタン$6.99、スクロールホイール$9.99）。",
+          "センサー：MYGGSPRAY（人感）、MYGGBETT（ドア/窓）、KLIPPBOK（水漏れ）、TIMMERFLOTTE（温湿度）が各$11.99、ALPSTUGA（空気質）が$34.99。Matter over Threadの機器はすべて、ThreadボーダールーターとMatterコントローラーが必要です — DIRIGERAは両方を兼ねられ、Apple・Google・Alexa・SmartThings・Home Assistantの一部のハードウェアも同様です。",
+          "旧Zigbee製品（例：TRÅDFRI電球、STARKVIND、VINDSTYRKA）は引き続きDIRIGERAが必要で、ブリッジとしてMatterに公開されます。IKEAは新製品にZigbeeを追加しなくなりました。",
+          "ラインナップにないもの：IKEA米国サイトには、執筆時点でサーモスタット、カメラ、ドアベル、ロボット掃除機、Wi-Fi中継器は掲載されていません。",
         ],
       },
       whoItFits: {
@@ -540,7 +620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant Greenは、より幅広いデバイスタイプのサポートとより深い自動化ロジックを、異なる価格帯で、小売店の利便性なしに提供します。',
           'IKEAのデバイスがMatter認証を受けているということは、エコシステム自身のハブにロックされていないことを意味します — これにより、後でより高機能なハブに移行する際の切り替えコストが下がります。',
-          'IKEAのDIRIGERAハブ（$119.99）は、執筆時点でHome Assistant Green（$199）より約$80安いです — HA Greenの価格は2026年に2回上昇しました（2023年の発売時の当初$99から）、より高いコンポーネントコストを理由に挙げていますが、IKEAのハブは小売価格を維持しています。',
+          "IKEAのDIRIGERAハブ（IKEA米国サイトの掲載価格$139.99）は、執筆時点でHome Assistant Green（$199）より約$60安いです — ただし両方とも値上がりしています。DIRIGERAは2022年の発売時$69、HA Greenは2023年の発売時$99で、2026年に部品コストの上昇を理由に2回値上げされました。",
         ],
       },
       faqSection: {
@@ -552,6 +632,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'IKEAは長期的な良いスマートホームプラットフォームですか？', a: '照明と基本的なセンサーの低コストな入り口としてはうまく機能します。より高度な自動化には、多くの購入者が後でMatterデバイスをHome Assistantのようなより高機能なハブに移行します。' },
           { q: 'IKEAはカメラやエネルギー監視をサポートしていますか？', a: '執筆時点ではいいえ。IKEAの現在の米国のスマートホーム製品ラインは、照明、動き/接触/温度/水漏れ/空気質センサー、リモコン、スマートプラグをカバーしていますが、カメラや専用のエネルギー監視ハードウェアはありません。' },
           { q: 'これはこのサイトの一般的なハブ購入ガイドとどう比較されますか？', a: 'ハブ購入ガイドは専用ハブ機器（Home Assistant Green、Hubitat、Homey）を比較しています。この記事は、低予算の代替としてのIKEAの小売エコシステムに特に焦点を当てています。' },
+          { q: "IKEAのDIRIGERAハブはいくらですか？", a: "執筆時点でIKEA米国サイトの掲載価格は$139.99で、2022年の発売時は$69でした。英国とEUの価格も2026年に上がっているため、お住まいのIKEA市場の価格を確認してください。" },
+          { q: "新しいIKEAセンサーはDIRIGERAハブなしで動きますか？", a: "はい、ただし別のThreadボーダールーターとMatterコントローラー（Apple HomePod mini、Apple TV 4K、対応するGoogle Nestデバイスなど）が必要です。Threadボーダールーターがないとセンサーは動作しません。" },
+          { q: "IKEAはスマートサーモスタットやロボット掃除機を販売していますか？", a: "いいえ。IKEA米国サイトの掲載は照明、プラグ、リモコン、センサー、空気質製品で、サーモスタット、カメラ、ドアベル、ロボット掃除機、Wi-Fi中継器は執筆時点で掲載されていません。" },
+          { q: "旧IKEA Zigbee機器は引き続きサポートされますか？", a: "はい、DIRIGERAがブリッジとしてMatterプラットフォームに公開します。新しいIKEA製品はZigbeeではなくMatter over Threadを使用します。" },
         ],
       },
       relatedReading: {
@@ -575,7 +659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'IKEAスマートホーム' }, { '@type': 'Thing', name: 'Matterエコシステム' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -588,6 +672,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'IKEAハブの代わりに、IKEAのMatterデバイスをHome Assistantで使用できますか？', acceptedAnswer: { '@type': 'Answer', text: '一般的には可能です — Matter認証済みデバイスは1つのハブにロックされていないため、通常はHome Assistantや他のMatterコントローラーに再ペアリングできます。' } },
         { '@type': 'Question', name: 'IKEAは長期的な良いスマートホームプラットフォームですか？', acceptedAnswer: { '@type': 'Answer', text: '照明と基本的なセンサーの低コストな入り口としてはうまく機能します。多くの購入者は後で高度な自動化のためにより高機能なハブに移行します。' } },
         { '@type': 'Question', name: 'これはこのサイトの一般的なハブ購入ガイドとどう比較されますか？', acceptedAnswer: { '@type': 'Answer', text: 'ハブ購入ガイドは専用ハブ機器を比較しています。この記事は、低予算の代替としてのIKEAの小売エコシステムに特に焦点を当てています。' } },
+        { '@type': 'Question', name: "IKEAのDIRIGERAハブはいくらですか？", acceptedAnswer: { '@type': 'Answer', text: "執筆時点でIKEA米国サイトの掲載価格は$139.99で、2022年の発売時は$69でした。英国とEUの価格も2026年に上がっているため、お住まいのIKEA市場の価格を確認してください。" } },
+        { '@type': 'Question', name: "新しいIKEAセンサーはDIRIGERAハブなしで動きますか？", acceptedAnswer: { '@type': 'Answer', text: "はい、ただし別のThreadボーダールーターとMatterコントローラー（Apple HomePod mini、Apple TV 4K、対応するGoogle Nestデバイスなど）が必要です。Threadボーダールーターがないとセンサーは動作しません。" } },
+        { '@type': 'Question', name: "IKEAはスマートサーモスタットやロボット掃除機を販売していますか？", acceptedAnswer: { '@type': 'Answer', text: "いいえ。IKEA米国サイトの掲載は照明、プラグ、リモコン、センサー、空気質製品で、サーモスタット、カメラ、ドアベル、ロボット掃除機、Wi-Fi中継器は執筆時点で掲載されていません。" } },
+        { '@type': 'Question', name: "旧IKEA Zigbee機器は引き続きサポートされますか？", acceptedAnswer: { '@type': 'Answer', text: "はい、DIRIGERAがブリッジとしてMatterプラットフォームに公開します。新しいIKEA製品はZigbeeではなくMatter over Threadを使用します。" } },
       ],
     },
   },
@@ -595,18 +683,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-zh.webp',
     title: '宜家的Matter生态系统：完整指南（2026年）',
     seoTitle: '宜家Matter生态系统指南（2026年）',
     intro:
-      '宜家销售一系列兼容Matter的智能家居产品——DIRIGERA中枢（$119.99），以及传感器和照明——相较于专用中枢设备，将其定位为进入本地优先智能家居控制的一个更低成本入门选择。本指南解释该生态系统的用途，以及它与本站已介绍的其他中枢选择相比如何。',
+      '宜家销售一系列兼容Matter的智能家居产品——DIRIGERA中枢（$139.99），以及传感器和照明——相较于专用中枢设备，将其定位为进入本地优先智能家居控制的一个更低成本入门选择。本指南解释该生态系统的用途，以及它与本站已介绍的其他中枢选择相比如何。',
     metaDescription:
-      '2026年宜家的Matter智能家居产品线：DIRIGERA中枢、传感器和照明，作为进入本地控制的经济实惠入门选择。',
+      "宜家2026年Matter over Thread产品线：DIRIGERA中枢（$139.99）、哪些传感器需要Thread边界路由器，以及宜家不销售的产品（摄像头、温控器）。",
     twitterDescription:
-      '宜家兼容Matter的智能家居产品作为进入本地控制的经济实惠入门选择，与Home Assistant Green及其他中枢选项对比。',
+      "宜家2026年Matter over Thread产品线：DIRIGERA中枢（$139.99）、哪些传感器需要Thread边界路由器，以及宜家不销售的产品（摄像头、温控器）。",
     readTime: '阅读需6分钟',
     educationalLevel: 'Beginner',
     audience: '正在考虑将宜家硬件作为入门选择的智能家居初学者',
@@ -619,24 +707,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ikea vs home assistant',
     ],
     leadAnswerBlock:
-      '宜家兼容Matter的智能家居产品线——DIRIGERA中枢（$119.99）加上传感器和照明——被定位为进入本地设备控制的低成本、现成入门选择，对于想要在零售渠道购买硬件的买家而言，是Home Assistant Green（$199）等专用中枢设备的替代方案。',
+      '宜家兼容Matter的智能家居产品线——DIRIGERA中枢（$139.99）加上传感器和照明——被定位为进入本地设备控制的低成本、现成入门选择，对于想要在零售渠道购买硬件的买家而言，是Home Assistant Green（$199）等专用中枢设备的替代方案。',
     quickAnswerTop: {
       zh: {
         question: '宜家是Matter智能家居的良好起点吗？',
         answer:
-          '是的，通过DIRIGERA中枢（$119.99）——相较于专用中枢设备，这是一个成本更低、广泛可得的入门选择，如果你想要零售店硬件和基本的照明/传感器自动化而不需要研究各个组件的兼容性，这会很有用。DIRIGERA通过2025年的固件更新成为了完整的Matter控制器和Thread边界路由器，因此它也可以接入一些第三方Matter设备，而不仅限于宜家自家的产品。',
+          '是的，通过DIRIGERA中枢（$139.99）——相较于专用中枢设备，这是一个成本更低、广泛可得的入门选择，如果你想要零售店硬件和基本的照明/传感器自动化而不需要研究各个组件的兼容性，这会很有用。DIRIGERA通过2025年的固件更新成为了完整的Matter控制器和Thread边界路由器，因此它也可以接入一些第三方Matter设备，而不仅限于宜家自家的产品。',
         bullets: [
           '宜家的定位：进入Matter/本地控制的经济型、零售可得入门选择',
           '最适合：希望获得基本照明/传感器自动化而无需研究各个组件的买家',
-          'DIRIGERA中枢：$119.99，Matter控制器+Thread边界路由器（2025年固件更新）',
+          'DIRIGERA中枢：$139.99，Matter控制器+Thread边界路由器（2025年固件更新）',
           '与Home Assistant Green（$199，参见中枢购买指南）对比，作为功能更全面的替代方案',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: '摘要', anchor: 'tldr' },
       { label: '该生态系统涵盖的内容', anchor: 'what-it-covers' },
+      { label: "当前产品线", anchor: 'lineup' },
       { label: '适合什么样的人', anchor: 'who-it-fits' },
       { label: '与其他中枢的比较', anchor: 'how-it-compares' },
       { label: '常见问题', anchor: 'faq' },
@@ -652,7 +741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '宜家的智能家居产品线被定位为进入基于Matter的本地控制的经济型、广泛可得的入门选择',
-          'DIRIGERA（型号E2315）中枢已通过Matter认证，是Thread边界路由器，撰写本文时定价为$119.99',
+          'DIRIGERA（型号E2315）中枢已通过Matter认证，是Thread边界路由器，撰写本文时定价为$139.99',
           '最适合希望获得基本照明/传感器自动化而无需研究各个组件兼容性的买家',
           '对于更高级的自动化需求，请与Home Assistant Green及其他专用中枢（参见中枢购买指南）进行对比',
         ],
@@ -666,6 +755,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '该中枢充当本地控制器，在许多配置中，也作为该生态系统自家设备以及部分第三方Matter设备的Matter桥接器。',
           '照明和传感器是该产品线的核心——这不是像Home Assistant那样能实现复杂多品牌自动化的全功能中枢。',
           'DIRIGERA已就边界路由器（FTD）角色的以太网和Thread连接获得认证，并通过2025年的固件更新获得了Matter控制器功能，使其能够通过宜家Home Smart应用接入第三方Matter设备，而不仅限于自家产品线。',
+        ],
+      },
+      lineup: {
+        id: 'lineup',
+        title: "宜家2026年的Matter产品线建立在Thread而非Zigbee之上",
+        content:
+          "**宜家较新的产品线采用Matter over Thread：灯泡、插座、遥控器和传感器可通过Apple Home、Google Home、Alexa、SmartThings或Home Assistant的Matter应用添加，而DIRIGERA仅在使用宜家自有应用功能和旧款Zigbee产品时才需要。**",
+        items: [
+          "照明：KAJPLATS智能灯泡（宜家美国网站每包$5.99起）和VARMBLIXT智能灯（$79.99）。",
+          "插座和遥控器：GRILLPLATS智能插座（$7.99）和BILRESA遥控器（双按钮$6.99，滚轮$9.99）。",
+          "传感器：MYGGSPRAY（运动）、MYGGBETT（门窗）、KLIPPBOK（漏水）和TIMMERFLOTTE（温湿度）各$11.99，ALPSTUGA（空气质量）$34.99。所有Matter over Thread设备都需要Thread边界路由器和Matter控制器——DIRIGERA可兼任两者，苹果、谷歌、Alexa、SmartThings或Home Assistant的部分硬件也可以。",
+          "旧款Zigbee产品（例如TRÅDFRI灯泡、STARKVIND和VINDSTYRKA）仍需DIRIGERA，它以桥接方式将这些设备开放给Matter；宜家不再为新产品加入Zigbee。",
+          "不在产品线中：撰写本文时，宜家美国网站上没有温控器、摄像头、门铃、扫地机器人或Wi-Fi扩展器。",
         ],
       },
       whoItFits: {
@@ -687,7 +789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant Green提供更广泛的设备类型支持和更深入的自动化逻辑，价格不同，也不具备零售店的便利性。',
           '宜家设备通过Matter认证，意味着它们不会被锁定在该生态系统自家的中枢上——如果你之后转向更强大的中枢，这会降低切换成本。',
-          '截至撰写本文时，宜家的DIRIGERA中枢（$119.99）比Home Assistant Green（$199）便宜约$80——HA Green的价格在2026年上涨了两次（相较于2023年推出时最初的$99），理由是零部件成本上升，而宜家的中枢一直维持在零售价格。',
+          "宜家的DIRIGERA中枢（宜家美国网站标价$139.99）截至撰写本文时比Home Assistant Green（$199）便宜约$60——但两者的价格都已上涨：DIRIGERA 2022年发布时为$69，HA Green 2023年发布时为$99，并在2026年因零部件成本上升而上调了两次。",
         ],
       },
       faqSection: {
@@ -699,6 +801,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '宜家是一个良好的长期智能家居平台吗？', a: '作为照明和基本传感器的低成本入门选择，它运作良好。对于更高级的自动化，许多买家后来会将其Matter设备迁移到像Home Assistant这样更强大的中枢。' },
           { q: '宜家支持摄像头或能源监测吗？', a: '截至撰写本文时不支持。宜家目前在美国的智能家居产品线涵盖照明、动作/接触/温度/漏水/空气质量传感器、遥控器和智能插座——没有摄像头或专用的能源监测硬件。' },
           { q: '这与本站的通用中枢购买指南相比如何？', a: '中枢购买指南比较的是专用中枢设备（Home Assistant Green、Hubitat、Homey）。本文则专门聚焦于宜家的零售生态系统，将其作为经济型替代方案。' },
+          { q: "宜家DIRIGERA中枢多少钱？", a: "撰写本文时宜家美国网站标价$139.99，2022年发布时为$69。英国和欧盟的价格在2026年也有上涨，请查看你所在宜家市场的价格。" },
+          { q: "新的宜家传感器没有DIRIGERA中枢能用吗？", a: "可以，但需要另一台Thread边界路由器和Matter控制器，例如Apple HomePod mini、Apple TV 4K或兼容的Google Nest设备。没有Thread边界路由器，传感器无法工作。" },
+          { q: "宜家销售智能温控器或扫地机器人吗？", a: "不销售。宜家美国网站涵盖照明、插座、遥控器、传感器和空气质量产品；撰写本文时没有温控器、摄像头、门铃、扫地机器人或Wi-Fi扩展器。" },
+          { q: "宜家旧款Zigbee设备还受支持吗？", a: "受支持，通过DIRIGERA以桥接方式接入Matter平台。宜家新产品使用Matter over Thread，而不是Zigbee。" },
         ],
       },
       relatedReading: {
@@ -722,7 +828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: '宜家智能家居' }, { '@type': 'Thing', name: 'Matter生态系统' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -735,6 +841,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '我可以用Home Assistant而不是宜家中枢来使用宜家的Matter设备吗？', acceptedAnswer: { '@type': 'Answer', text: '一般来说可以——经过Matter认证的设备不会被锁定在单一中枢上，因此通常可以重新配对到Home Assistant或其他Matter控制器。' } },
         { '@type': 'Question', name: '宜家是一个良好的长期智能家居平台吗？', acceptedAnswer: { '@type': 'Answer', text: '作为照明和基本传感器的低成本入门选择，它运作良好；许多买家后来会为了高级自动化迁移到更强大的中枢。' } },
         { '@type': 'Question', name: '这与本站的通用中枢购买指南相比如何？', acceptedAnswer: { '@type': 'Answer', text: '中枢购买指南比较的是专用中枢设备。本文则专门聚焦于宜家的零售生态系统，将其作为经济型替代方案。' } },
+        { '@type': 'Question', name: "宜家DIRIGERA中枢多少钱？", acceptedAnswer: { '@type': 'Answer', text: "撰写本文时宜家美国网站标价$139.99，2022年发布时为$69。英国和欧盟的价格在2026年也有上涨，请查看你所在宜家市场的价格。" } },
+        { '@type': 'Question', name: "新的宜家传感器没有DIRIGERA中枢能用吗？", acceptedAnswer: { '@type': 'Answer', text: "可以，但需要另一台Thread边界路由器和Matter控制器，例如Apple HomePod mini、Apple TV 4K或兼容的Google Nest设备。没有Thread边界路由器，传感器无法工作。" } },
+        { '@type': 'Question', name: "宜家销售智能温控器或扫地机器人吗？", acceptedAnswer: { '@type': 'Answer', text: "不销售。宜家美国网站涵盖照明、插座、遥控器、传感器和空气质量产品；撰写本文时没有温控器、摄像头、门铃、扫地机器人或Wi-Fi扩展器。" } },
+        { '@type': 'Question', name: "宜家旧款Zigbee设备还受支持吗？", acceptedAnswer: { '@type': 'Answer', text: "受支持，通过DIRIGERA以桥接方式接入Matter平台。宜家新产品使用Matter over Thread，而不是Zigbee。" } },
       ],
     },
   },
@@ -742,18 +852,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-es.webp',
     title: 'El ecosistema Matter de IKEA: guía completa (2026)',
     seoTitle: 'Guía del ecosistema Matter de IKEA (2026)',
     intro:
-      'IKEA vende una línea de productos de hogar inteligente compatibles con Matter — el hub DIRIGERA ($119.99), además de sensores e iluminación — posicionada como un punto de entrada de menor costo al control local del hogar inteligente en comparación con los electrodomésticos hub dedicados. Esta guía explica para qué sirve el ecosistema y cómo se compara con otras opciones de hub ya cubiertas en este sitio.',
+      'IKEA vende una línea de productos de hogar inteligente compatibles con Matter — el hub DIRIGERA ($139.99), además de sensores e iluminación — posicionada como un punto de entrada de menor costo al control local del hogar inteligente en comparación con los electrodomésticos hub dedicados. Esta guía explica para qué sirve el ecosistema y cómo se compara con otras opciones de hub ya cubiertas en este sitio.',
     metaDescription:
-      'La línea de hogar inteligente Matter de IKEA en 2026: el hub DIRIGERA, sensores e iluminación como punto de entrada económico al control local.',
+      "La gama Matter sobre Thread de IKEA en 2026: el hub DIRIGERA ($139.99), qué sensores necesitan un border router Thread y qué no vende IKEA (cámaras, termostatos).",
     twitterDescription:
-      'Los productos de hogar inteligente compatibles con Matter de IKEA como punto de entrada económico al control local, comparados con Home Assistant Green y otras opciones de hub.',
+      "La gama Matter sobre Thread de IKEA en 2026: el hub DIRIGERA ($139.99), qué sensores necesitan un border router Thread y qué no vende IKEA (cámaras, termostatos).",
     readTime: '6 min de lectura',
     educationalLevel: 'Beginner',
     audience: 'Principiantes en hogar inteligente que consideran el hardware de IKEA como punto de entrada',
@@ -766,24 +876,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ikea vs home assistant',
     ],
     leadAnswerBlock:
-      'La línea de productos de hogar inteligente compatibles con Matter de IKEA — el hub DIRIGERA ($119.99) más sensores e iluminación — está posicionada como un punto de entrada de menor costo y disponible en tiendas al control de dispositivos locales, una alternativa a los electrodomésticos hub dedicados como Home Assistant Green ($199) para compradores que quieren hardware disponible en tiendas minoristas.',
+      'La línea de productos de hogar inteligente compatibles con Matter de IKEA — el hub DIRIGERA ($139.99) más sensores e iluminación — está posicionada como un punto de entrada de menor costo y disponible en tiendas al control de dispositivos locales, una alternativa a los electrodomésticos hub dedicados como Home Assistant Green ($199) para compradores que quieren hardware disponible en tiendas minoristas.',
     quickAnswerTop: {
       es: {
         question: '¿Es IKEA un buen punto de partida para un hogar inteligente Matter?',
         answer:
-          'Sí, a través del hub DIRIGERA ($119.99) — un punto de entrada de menor costo y ampliamente disponible en comparación con los electrodomésticos hub dedicados, útil si quieres hardware de tienda minorista y automatización básica de iluminación/sensores sin investigar la compatibilidad de componentes individuales. DIRIGERA se convirtió en un controlador Matter completo y un router frontera Thread mediante una actualización de firmware en 2025, por lo que también puede incorporar algunos dispositivos Matter de terceros, no solo los propios de IKEA.',
+          'Sí, a través del hub DIRIGERA ($139.99) — un punto de entrada de menor costo y ampliamente disponible en comparación con los electrodomésticos hub dedicados, útil si quieres hardware de tienda minorista y automatización básica de iluminación/sensores sin investigar la compatibilidad de componentes individuales. DIRIGERA se convirtió en un controlador Matter completo y un router frontera Thread mediante una actualización de firmware en 2025, por lo que también puede incorporar algunos dispositivos Matter de terceros, no solo los propios de IKEA.',
         bullets: [
           'Posicionamiento de IKEA: punto de entrada económico y disponible en tiendas a Matter/control local',
           'Mejor opción para: compradores que quieren automatización básica de iluminación/sensores sin investigar componentes individuales',
-          'Hub DIRIGERA: $119.99, controlador Matter + router frontera Thread (actualización de firmware 2025)',
+          'Hub DIRIGERA: $139.99, controlador Matter + router frontera Thread (actualización de firmware 2025)',
           'Compara con Home Assistant Green ($199, ver la guía de compra de hubs) para una alternativa más completa',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'Resumen', anchor: 'tldr' },
       { label: 'Qué cubre el ecosistema', anchor: 'what-it-covers' },
+      { label: "La gama actual", anchor: 'lineup' },
       { label: 'A quién le conviene', anchor: 'who-it-fits' },
       { label: 'Cómo se compara con otros hubs', anchor: 'how-it-compares' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
@@ -799,7 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'La línea de hogar inteligente de IKEA está posicionada como un punto de entrada económico y ampliamente disponible al control local basado en Matter',
-          'El hub DIRIGERA (modelo E2315) tiene certificación Matter y es un router frontera Thread, con un precio de $119.99 al momento de escribir esto',
+          'El hub DIRIGERA (modelo E2315) tiene certificación Matter y es un router frontera Thread, con un precio de $139.99 al momento de escribir esto',
           'Mejor opción para compradores que quieren automatización básica de iluminación/sensores sin investigar la compatibilidad de componentes individuales',
           'Compara con Home Assistant Green y otros hubs dedicados (ver la guía de compra de hubs) para necesidades de automatización más avanzadas',
         ],
@@ -813,6 +924,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El hub actúa como controlador local y, en muchas configuraciones, como puente Matter para los propios dispositivos del ecosistema y algunos dispositivos Matter de terceros.',
           'La iluminación y los sensores son el núcleo de la línea de productos — esto no es un hub completo para automatización compleja multi-marca como Home Assistant.',
           'DIRIGERA está certificado para conectividad Ethernet y Thread en el rol de router frontera (FTD), y obtuvo funcionalidad de controlador Matter mediante una actualización de firmware en 2025, permitiéndole incorporar dispositivos Matter de terceros a través de la aplicación IKEA Home Smart en lugar de solo su propia línea de productos.',
+        ],
+      },
+      lineup: {
+        id: 'lineup',
+        title: "La gama Matter de IKEA en 2026 se basa en Thread, no en Zigbee",
+        content:
+          "**La gama más reciente de IKEA usa Matter sobre Thread: bombillas, enchufes, mandos y sensores se añaden desde la app Matter de Apple Home, Google Home, Alexa, SmartThings o Home Assistant, mientras que DIRIGERA solo hace falta para las funciones de la app de IKEA y los productos Zigbee antiguos.**",
+        items: [
+          "Iluminación: bombillas inteligentes KAJPLATS (desde $5.99 por paquete en el listado de IKEA en EE. UU.) y la lámpara inteligente VARMBLIXT ($79.99).",
+          "Enchufes y mandos: el enchufe inteligente GRILLPLATS ($7.99) y los mandos BILRESA (dos botones $6.99, rueda $9.99).",
+          "Sensores: MYGGSPRAY (movimiento), MYGGBETT (puerta/ventana), KLIPPBOK (fuga de agua) y TIMMERFLOTTE (temperatura/humedad) a $11.99 cada uno, más ALPSTUGA (calidad del aire) a $34.99. Todo dispositivo Matter sobre Thread necesita un border router Thread y un controlador Matter: DIRIGERA puede ser ambos, igual que algunos equipos de Apple, Google, Alexa, SmartThings o Home Assistant.",
+          "Los productos Zigbee antiguos (por ejemplo, bombillas TRÅDFRI, STARKVIND y VINDSTYRKA) siguen necesitando DIRIGERA, que los expone a Matter como puente; IKEA ya no añade Zigbee a sus productos nuevos.",
+          "No está en la gama: el listado de IKEA en EE. UU. no muestra, al momento de escribir esto, ningún termostato, cámara, timbre, robot aspirador ni repetidor Wi-Fi.",
         ],
       },
       whoItFits: {
@@ -834,7 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant Green ofrece soporte más amplio de tipos de dispositivos y lógica de automatización más profunda, a un precio diferente y sin la conveniencia de la tienda minorista.',
           'Que los dispositivos de IKEA tengan certificación Matter significa que no están bloqueados al propio hub del ecosistema — esto reduce el costo de cambio si más adelante te mudas a un hub más capaz.',
-          'El hub DIRIGERA de IKEA ($119.99) es aproximadamente $80 más barato que Home Assistant Green ($199) al momento de escribir esto — el precio de HA Green subió dos veces en 2026 (desde los $99 originales en el lanzamiento de 2023) citando mayores costos de componentes, mientras que el hub de IKEA se ha mantenido en el precio minorista.',
+          "El hub DIRIGERA de IKEA ($139.99 en el listado de IKEA en EE. UU.) es aproximadamente $60 más barato que Home Assistant Green ($199) al momento de escribir esto, pero ambos precios han subido: DIRIGERA se lanzó en 2022 a $69, mientras que HA Green se lanzó en 2023 a $99 y subió dos veces en 2026 citando mayores costos de componentes.",
         ],
       },
       faqSection: {
@@ -846,6 +970,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Es IKEA una buena plataforma de hogar inteligente a largo plazo?', a: 'Funciona bien como punto de entrada económico para iluminación y sensores básicos. Para automatización más avanzada, muchos compradores migran sus dispositivos Matter a un hub más capaz como Home Assistant más adelante.' },
           { q: '¿IKEA soporta cámaras o monitoreo energético?', a: 'No, al momento de escribir esto. La línea actual de hogar inteligente de IKEA en EE. UU. cubre iluminación, sensores de movimiento/contacto/temperatura/fuga de agua/calidad del aire, controles remotos y enchufes inteligentes — sin cámaras ni hardware dedicado de monitoreo energético.' },
           { q: '¿Cómo se compara esto con la guía de compra de hubs general de este sitio?', a: 'La guía de compra de hubs compara electrodomésticos hub dedicados (Home Assistant Green, Hubitat, Homey). Este artículo se enfoca específicamente en el ecosistema minorista de IKEA como alternativa económica.' },
+          { q: "¿Cuánto cuesta el hub IKEA DIRIGERA?", a: "$139.99 en el listado de IKEA en EE. UU. al momento de escribir esto, frente a $69 en su lanzamiento de 2022. Los precios en Reino Unido y la UE también subieron en 2026, así que revisa el precio en tu mercado de IKEA." },
+          { q: "¿Funcionan los nuevos sensores de IKEA sin el hub DIRIGERA?", a: "Sí, pero solo con otro border router Thread y controlador Matter, como un Apple HomePod mini, un Apple TV 4K o un dispositivo Google Nest compatible. Sin un border router Thread, los sensores no funcionan." },
+          { q: "¿Vende IKEA un termostato inteligente o un robot aspirador?", a: "No. El listado de IKEA en EE. UU. abarca iluminación, enchufes, mandos, sensores y productos de calidad del aire; termostatos, cámaras, timbres, robots aspiradores y repetidores Wi-Fi no aparecen al momento de escribir esto." },
+          { q: "¿Siguen siendo compatibles los dispositivos Zigbee antiguos de IKEA?", a: "Sí, a través de DIRIGERA, que los conecta a plataformas Matter como puente. Los productos nuevos de IKEA usan Matter sobre Thread en lugar de Zigbee." },
         ],
       },
       relatedReading: {
@@ -869,7 +997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Hogar inteligente IKEA' }, { '@type': 'Thing', name: 'Ecosistema Matter' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -882,6 +1010,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '¿Puedo usar dispositivos Matter de IKEA con Home Assistant en lugar del hub de IKEA?', acceptedAnswer: { '@type': 'Answer', text: 'Generalmente sí — los dispositivos con certificación Matter no están bloqueados a un solo hub, así que típicamente pueden volver a emparejarse con Home Assistant u otro controlador Matter.' } },
         { '@type': 'Question', name: '¿Es IKEA una buena plataforma de hogar inteligente a largo plazo?', acceptedAnswer: { '@type': 'Answer', text: 'Funciona bien como punto de entrada económico para iluminación y sensores básicos; muchos compradores migran más adelante a un hub más capaz para automatización avanzada.' } },
         { '@type': 'Question', name: '¿Cómo se compara esto con la guía de compra de hubs general de este sitio?', acceptedAnswer: { '@type': 'Answer', text: 'La guía de compra de hubs compara electrodomésticos hub dedicados. Este artículo se enfoca específicamente en el ecosistema minorista de IKEA como alternativa económica.' } },
+        { '@type': 'Question', name: "¿Cuánto cuesta el hub IKEA DIRIGERA?", acceptedAnswer: { '@type': 'Answer', text: "$139.99 en el listado de IKEA en EE. UU. al momento de escribir esto, frente a $69 en su lanzamiento de 2022. Los precios en Reino Unido y la UE también subieron en 2026, así que revisa el precio en tu mercado de IKEA." } },
+        { '@type': 'Question', name: "¿Funcionan los nuevos sensores de IKEA sin el hub DIRIGERA?", acceptedAnswer: { '@type': 'Answer', text: "Sí, pero solo con otro border router Thread y controlador Matter, como un Apple HomePod mini, un Apple TV 4K o un dispositivo Google Nest compatible. Sin un border router Thread, los sensores no funcionan." } },
+        { '@type': 'Question', name: "¿Vende IKEA un termostato inteligente o un robot aspirador?", acceptedAnswer: { '@type': 'Answer', text: "No. El listado de IKEA en EE. UU. abarca iluminación, enchufes, mandos, sensores y productos de calidad del aire; termostatos, cámaras, timbres, robots aspiradores y repetidores Wi-Fi no aparecen al momento de escribir esto." } },
+        { '@type': 'Question', name: "¿Siguen siendo compatibles los dispositivos Zigbee antiguos de IKEA?", acceptedAnswer: { '@type': 'Answer', text: "Sí, a través de DIRIGERA, que los conecta a plataformas Matter como puente. Los productos nuevos de IKEA usan Matter sobre Thread en lugar de Zigbee." } },
       ],
     },
   },
@@ -889,18 +1021,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-pt.webp',
     title: 'O ecossistema Matter da IKEA: guia completo (2026)',
     seoTitle: 'Guia do ecossistema Matter da IKEA (2026)',
     intro:
-      'A IKEA vende uma linha de produtos de casa inteligente compatíveis com Matter — o hub DIRIGERA ($119.99), além de sensores e iluminação — posicionada como um ponto de entrada de menor custo para o controle local de casa inteligente em comparação com eletrodomésticos hub dedicados. Este guia explica para que serve o ecossistema e como ele se compara a outras opções de hub já abordadas neste site.',
+      'A IKEA vende uma linha de produtos de casa inteligente compatíveis com Matter — o hub DIRIGERA ($139.99), além de sensores e iluminação — posicionada como um ponto de entrada de menor custo para o controle local de casa inteligente em comparação com eletrodomésticos hub dedicados. Este guia explica para que serve o ecossistema e como ele se compara a outras opções de hub já abordadas neste site.',
     metaDescription:
-      'A linha de casa inteligente Matter da IKEA em 2026: o hub DIRIGERA, sensores e iluminação como ponto de entrada econômico para o controle local.',
+      "A linha Matter sobre Thread da IKEA em 2026: o hub DIRIGERA ($139.99), quais sensores exigem um border router Thread e o que a IKEA não vende (câmeras, termostatos).",
     twitterDescription:
-      'Os produtos de casa inteligente compatíveis com Matter da IKEA como ponto de entrada econômico para o controle local, comparados ao Home Assistant Green e outras opções de hub.',
+      "A linha Matter sobre Thread da IKEA em 2026: o hub DIRIGERA ($139.99), quais sensores exigem um border router Thread e o que a IKEA não vende (câmeras, termostatos).",
     readTime: '6 min de leitura',
     educationalLevel: 'Beginner',
     audience: 'Iniciantes em casa inteligente considerando o hardware da IKEA como ponto de entrada',
@@ -913,24 +1045,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ikea vs home assistant',
     ],
     leadAnswerBlock:
-      'A linha de produtos de casa inteligente compatíveis com Matter da IKEA — o hub DIRIGERA ($119.99) mais sensores e iluminação — está posicionada como um ponto de entrada de menor custo e disponível em lojas para o controle local de dispositivos, uma alternativa a eletrodomésticos hub dedicados como o Home Assistant Green ($199) para compradores que querem hardware disponível no varejo.',
+      'A linha de produtos de casa inteligente compatíveis com Matter da IKEA — o hub DIRIGERA ($139.99) mais sensores e iluminação — está posicionada como um ponto de entrada de menor custo e disponível em lojas para o controle local de dispositivos, uma alternativa a eletrodomésticos hub dedicados como o Home Assistant Green ($199) para compradores que querem hardware disponível no varejo.',
     quickAnswerTop: {
       pt: {
         question: 'A IKEA é um bom ponto de partida para uma casa inteligente Matter?',
         answer:
-          'Sim, através do hub DIRIGERA ($119.99) — um ponto de entrada de menor custo e amplamente disponível em comparação com eletrodomésticos hub dedicados, útil se você quer hardware de loja de varejo e automação básica de iluminação/sensores sem pesquisar a compatibilidade de componentes individuais. O DIRIGERA se tornou um controlador Matter completo e um roteador de fronteira Thread por meio de uma atualização de firmware em 2025, então também pode integrar alguns dispositivos Matter de terceiros, não apenas os próprios da IKEA.',
+          'Sim, através do hub DIRIGERA ($139.99) — um ponto de entrada de menor custo e amplamente disponível em comparação com eletrodomésticos hub dedicados, útil se você quer hardware de loja de varejo e automação básica de iluminação/sensores sem pesquisar a compatibilidade de componentes individuais. O DIRIGERA se tornou um controlador Matter completo e um roteador de fronteira Thread por meio de uma atualização de firmware em 2025, então também pode integrar alguns dispositivos Matter de terceiros, não apenas os próprios da IKEA.',
         bullets: [
           'Posicionamento da IKEA: ponto de entrada econômico e disponível no varejo para Matter/controle local',
           'Melhor opção para: compradores que querem automação básica de iluminação/sensores sem pesquisar componentes individuais',
-          'Hub DIRIGERA: $119.99, controlador Matter + roteador de fronteira Thread (atualização de firmware 2025)',
+          'Hub DIRIGERA: $139.99, controlador Matter + roteador de fronteira Thread (atualização de firmware 2025)',
           'Compare com o Home Assistant Green ($199, veja o guia de compra de hubs) para uma alternativa mais completa',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'Resumo', anchor: 'tldr' },
       { label: 'O que o ecossistema abrange', anchor: 'what-it-covers' },
+      { label: "A linha atual", anchor: 'lineup' },
       { label: 'Para quem isso é adequado', anchor: 'who-it-fits' },
       { label: 'Como se compara a outros hubs', anchor: 'how-it-compares' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
@@ -946,7 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'A linha de casa inteligente da IKEA está posicionada como um ponto de entrada econômico e amplamente disponível para o controle local baseado em Matter',
-          'O hub DIRIGERA (modelo E2315) tem certificação Matter e é um roteador de fronteira Thread, com preço de $119.99 no momento em que este texto foi escrito',
+          'O hub DIRIGERA (modelo E2315) tem certificação Matter e é um roteador de fronteira Thread, com preço de $139.99 no momento em que este texto foi escrito',
           'Melhor opção para compradores que querem automação básica de iluminação/sensores sem pesquisar a compatibilidade de componentes individuais',
           'Compare com o Home Assistant Green e outros hubs dedicados (veja o guia de compra de hubs) para necessidades de automação mais avançadas',
         ],
@@ -960,6 +1093,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O hub atua como controlador local e, em muitas configurações, como ponte Matter para os próprios dispositivos do ecossistema e alguns dispositivos Matter de terceiros.',
           'Iluminação e sensores são o núcleo da linha — este não é um hub completo para automação multimarca complexa como o Home Assistant.',
           'O DIRIGERA tem certificação para conectividade Ethernet e Thread no papel de roteador de fronteira (FTD), e ganhou funcionalidade de controlador Matter por meio de uma atualização de firmware em 2025, permitindo integrar dispositivos Matter de terceiros através do aplicativo IKEA Home Smart, não apenas sua própria linha de produtos.',
+        ],
+      },
+      lineup: {
+        id: 'lineup',
+        title: "A linha Matter da IKEA em 2026 é baseada em Thread, não em Zigbee",
+        content:
+          "**A linha mais recente da IKEA usa Matter sobre Thread: lâmpadas, tomadas, controles e sensores são adicionados pelo app Matter do Apple Home, Google Home, Alexa, SmartThings ou Home Assistant, e o DIRIGERA só é necessário para os recursos do app da IKEA e para produtos Zigbee antigos.**",
+        items: [
+          "Iluminação: lâmpadas inteligentes KAJPLATS (a partir de $5.99 por pacote na listagem da IKEA nos EUA) e a luminária inteligente VARMBLIXT ($79.99).",
+          "Tomadas e controles: a tomada inteligente GRILLPLATS ($7.99) e os controles BILRESA (dois botões $6.99, roda de rolagem $9.99).",
+          "Sensores: MYGGSPRAY (movimento), MYGGBETT (porta/janela), KLIPPBOK (vazamento de água) e TIMMERFLOTTE (temperatura/umidade) a $11.99 cada, mais ALPSTUGA (qualidade do ar) a $34.99. Todo dispositivo Matter sobre Thread precisa de um border router Thread e de um controlador Matter — o DIRIGERA pode ser os dois, assim como alguns equipamentos da Apple, Google, Alexa, SmartThings ou Home Assistant.",
+          "Produtos Zigbee antigos (por exemplo, lâmpadas TRÅDFRI, STARKVIND e VINDSTYRKA) ainda precisam do DIRIGERA, que os expõe ao Matter como ponte; a IKEA não adiciona mais Zigbee a produtos novos.",
+          "Fora da linha: a listagem da IKEA nos EUA não mostra, no momento em que este texto foi escrito, termostato, câmera, campainha, robô aspirador nem repetidor Wi-Fi.",
         ],
       },
       whoItFits: {
@@ -981,7 +1127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'O Home Assistant Green oferece suporte mais amplo a tipos de dispositivos e lógica de automação mais profunda, a um preço diferente e sem a conveniência da loja de varejo.',
           'O fato de os dispositivos da IKEA terem certificação Matter significa que eles não ficam presos ao próprio hub do ecossistema — isso reduz o custo de troca se você mudar mais tarde para um hub mais capaz.',
-          'O hub DIRIGERA da IKEA ($119.99) é cerca de $80 mais barato que o Home Assistant Green ($199) no momento em que este texto foi escrito — o preço do HA Green subiu duas vezes em 2026 (a partir dos $99 originais no lançamento de 2023), citando custos de componentes mais altos, enquanto o hub da IKEA se manteve no preço de varejo.',
+          "O hub DIRIGERA da IKEA ($139.99 na listagem da IKEA nos EUA) é cerca de $60 mais barato que o Home Assistant Green ($199) no momento em que este texto foi escrito — mas os dois preços subiram: o DIRIGERA foi lançado em 2022 a $69, enquanto o HA Green foi lançado em 2023 a $99 e subiu duas vezes em 2026, citando custos de componentes mais altos.",
         ],
       },
       faqSection: {
@@ -993,6 +1139,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'A IKEA é uma boa plataforma de casa inteligente a longo prazo?', a: 'Funciona bem como ponto de entrada econômico para iluminação e sensores básicos. Para automação mais avançada, muitos compradores migram seus dispositivos Matter para um hub mais capaz como o Home Assistant mais tarde.' },
           { q: 'A IKEA suporta câmeras ou monitoramento de energia?', a: 'Não, no momento em que este texto foi escrito. A linha atual de casa inteligente da IKEA nos EUA abrange iluminação, sensores de movimento/contato/temperatura/vazamento de água/qualidade do ar, controles remotos e tomadas inteligentes — sem câmeras ou hardware dedicado de monitoramento de energia.' },
           { q: 'Como isso se compara ao guia de compra de hubs geral deste site?', a: 'O guia de compra de hubs compara eletrodomésticos hub dedicados (Home Assistant Green, Hubitat, Homey). Este artigo foca especificamente no ecossistema de varejo da IKEA como alternativa econômica.' },
+          { q: "Quanto custa o hub IKEA DIRIGERA?", a: "$139.99 na listagem da IKEA nos EUA no momento em que este texto foi escrito, contra $69 no lançamento em 2022. Os preços no Reino Unido e na UE também subiram em 2026, então confira o preço no seu mercado da IKEA." },
+          { q: "Os novos sensores da IKEA funcionam sem o hub DIRIGERA?", a: "Sim, mas apenas com outro border router Thread e controlador Matter, como um Apple HomePod mini, uma Apple TV 4K ou um dispositivo Google Nest compatível. Sem um border router Thread, os sensores não funcionam." },
+          { q: "A IKEA vende um termostato inteligente ou um robô aspirador?", a: "Não. A listagem da IKEA nos EUA cobre iluminação, tomadas, controles, sensores e produtos de qualidade do ar; termostatos, câmeras, campainhas, robôs aspiradores e repetidores Wi-Fi não aparecem no momento em que este texto foi escrito." },
+          { q: "Os dispositivos Zigbee antigos da IKEA continuam compatíveis?", a: "Sim, por meio do DIRIGERA, que os conecta às plataformas Matter como ponte. Os produtos novos da IKEA usam Matter sobre Thread em vez de Zigbee." },
         ],
       },
       relatedReading: {
@@ -1016,7 +1166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Casa inteligente IKEA' }, { '@type': 'Thing', name: 'Ecossistema Matter' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1029,6 +1179,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Posso usar dispositivos Matter da IKEA com o Home Assistant em vez do hub da IKEA?', acceptedAnswer: { '@type': 'Answer', text: 'Geralmente sim — dispositivos com certificação Matter não ficam presos a um único hub, então normalmente podem ser reemparelhados com o Home Assistant ou outro controlador Matter.' } },
         { '@type': 'Question', name: 'A IKEA é uma boa plataforma de casa inteligente a longo prazo?', acceptedAnswer: { '@type': 'Answer', text: 'Funciona bem como ponto de entrada econômico para iluminação e sensores básicos; muitos compradores migram mais tarde para um hub mais capaz para automação avançada.' } },
         { '@type': 'Question', name: 'Como isso se compara ao guia de compra de hubs geral deste site?', acceptedAnswer: { '@type': 'Answer', text: 'O guia de compra de hubs compara eletrodomésticos hub dedicados. Este artigo foca especificamente no ecossistema de varejo da IKEA como alternativa econômica.' } },
+        { '@type': 'Question', name: "Quanto custa o hub IKEA DIRIGERA?", acceptedAnswer: { '@type': 'Answer', text: "$139.99 na listagem da IKEA nos EUA no momento em que este texto foi escrito, contra $69 no lançamento em 2022. Os preços no Reino Unido e na UE também subiram em 2026, então confira o preço no seu mercado da IKEA." } },
+        { '@type': 'Question', name: "Os novos sensores da IKEA funcionam sem o hub DIRIGERA?", acceptedAnswer: { '@type': 'Answer', text: "Sim, mas apenas com outro border router Thread e controlador Matter, como um Apple HomePod mini, uma Apple TV 4K ou um dispositivo Google Nest compatível. Sem um border router Thread, os sensores não funcionam." } },
+        { '@type': 'Question', name: "A IKEA vende um termostato inteligente ou um robô aspirador?", acceptedAnswer: { '@type': 'Answer', text: "Não. A listagem da IKEA nos EUA cobre iluminação, tomadas, controles, sensores e produtos de qualidade do ar; termostatos, câmeras, campainhas, robôs aspiradores e repetidores Wi-Fi não aparecem no momento em que este texto foi escrito." } },
+        { '@type': 'Question', name: "Os dispositivos Zigbee antigos da IKEA continuam compatíveis?", acceptedAnswer: { '@type': 'Answer', text: "Sim, por meio do DIRIGERA, que os conecta às plataformas Matter como ponte. Os produtos novos da IKEA usam Matter sobre Thread em vez de Zigbee." } },
       ],
     },
   },
@@ -1036,18 +1190,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-ar.webp',
     title: 'نظام IKEA البيئي لـ Matter: دليل شامل (⁨2026⁩)',
     seoTitle: 'دليل نظام IKEA البيئي لـ Matter (⁨2026⁩)',
     intro:
-      'تبيع IKEA مجموعة منتجات منزل ذكي متوافقة مع Matter — محور DIRIGERA (119.99 دولارًا)، بالإضافة إلى أجهزة استشعار وإضاءة — يتم تسويقها كنقطة دخول أقل تكلفة للتحكم المحلي في المنزل الذكي مقارنة بأجهزة المحاور المخصصة. يشرح هذا الدليل الغرض من هذا النظام البيئي وكيف يقارَن بخيارات المحاور الأخرى التي سبق تناولها على هذا الموقع.',
+      'تبيع IKEA مجموعة منتجات منزل ذكي متوافقة مع Matter — محور DIRIGERA (139.99 دولارًا)، بالإضافة إلى أجهزة استشعار وإضاءة — يتم تسويقها كنقطة دخول أقل تكلفة للتحكم المحلي في المنزل الذكي مقارنة بأجهزة المحاور المخصصة. يشرح هذا الدليل الغرض من هذا النظام البيئي وكيف يقارَن بخيارات المحاور الأخرى التي سبق تناولها على هذا الموقع.',
     metaDescription:
-      'مجموعة منتجات المنزل الذكي Matter من IKEA في 2026: محور DIRIGERA، وأجهزة الاستشعار، والإضاءة كنقطة دخول اقتصادية للتحكم المحلي.',
+      "تشكيلة IKEA من Matter عبر Thread في 2026: محور DIRIGERA (139.99 دولارًا)، والحساسات التي تحتاج إلى Thread Border Router، وما لا تبيعه IKEA (الكاميرات، منظمات الحرارة).",
     twitterDescription:
-      'منتجات المنزل الذكي المتوافقة مع Matter من IKEA كنقطة دخول اقتصادية للتحكم المحلي، مقارنة بـ Home Assistant Green وخيارات المحاور الأخرى.',
+      "تشكيلة IKEA من Matter عبر Thread في 2026: محور DIRIGERA (139.99 دولارًا)، والحساسات التي تحتاج إلى Thread Border Router، وما لا تبيعه IKEA (الكاميرات، منظمات الحرارة).",
     readTime: '6 دقائق للقراءة',
     educationalLevel: 'Beginner',
     audience: 'مبتدئو المنزل الذكي الذين يفكرون في أجهزة IKEA كنقطة دخول',
@@ -1060,24 +1214,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ikea مقابل home assistant',
     ],
     leadAnswerBlock:
-      'تُسوَّق مجموعة منتجات المنزل الذكي المتوافقة مع Matter من IKEA — محور DIRIGERA (119.99 دولارًا) بالإضافة إلى أجهزة الاستشعار والإضاءة — كنقطة دخول منخفضة التكلفة وجاهزة للتحكم المحلي في الأجهزة، كبديل لأجهزة المحاور المخصصة مثل Home Assistant Green (199 دولارًا) للمشترين الذين يريدون أجهزة متاحة في المتاجر.',
+      'تُسوَّق مجموعة منتجات المنزل الذكي المتوافقة مع Matter من IKEA — محور DIRIGERA (139.99 دولارًا) بالإضافة إلى أجهزة الاستشعار والإضاءة — كنقطة دخول منخفضة التكلفة وجاهزة للتحكم المحلي في الأجهزة، كبديل لأجهزة المحاور المخصصة مثل Home Assistant Green (199 دولارًا) للمشترين الذين يريدون أجهزة متاحة في المتاجر.',
     quickAnswerTop: {
       ar: {
         question: 'هل IKEA نقطة انطلاق جيدة لمنزل ذكي يعتمد على Matter؟',
         answer:
-          'نعم، عبر محور DIRIGERA (119.99 دولارًا) — نقطة دخول أقل تكلفة ومتاحة على نطاق واسع مقارنة بأجهزة المحاور المخصصة، مفيدة إذا كنت تريد أجهزة من متجر بيع بالتجزئة وأتمتة أساسية للإضاءة/أجهزة الاستشعار دون البحث في توافق المكونات الفردية. أصبح DIRIGERA وحدة تحكم Matter كاملة وموجّهًا حدوديًا Thread من خلال تحديث للبرنامج الثابت في عام 2025، لذا يمكنه أيضًا إعداد بعض أجهزة Matter من جهات خارجية، وليس فقط أجهزة IKEA الخاصة.',
+          'نعم، عبر محور DIRIGERA (139.99 دولارًا) — نقطة دخول أقل تكلفة ومتاحة على نطاق واسع مقارنة بأجهزة المحاور المخصصة، مفيدة إذا كنت تريد أجهزة من متجر بيع بالتجزئة وأتمتة أساسية للإضاءة/أجهزة الاستشعار دون البحث في توافق المكونات الفردية. أصبح DIRIGERA وحدة تحكم Matter كاملة وموجّهًا حدوديًا Thread من خلال تحديث للبرنامج الثابت في عام 2025، لذا يمكنه أيضًا إعداد بعض أجهزة Matter من جهات خارجية، وليس فقط أجهزة IKEA الخاصة.',
         bullets: [
           'موقع IKEA: نقطة دخول اقتصادية ومتاحة في المتاجر إلى Matter/التحكم المحلي',
           'الأنسب لـ: المشترين الراغبين في أتمتة أساسية للإضاءة/أجهزة الاستشعار دون البحث في المكونات الفردية',
-          'محور DIRIGERA: 119.99 دولارًا، وحدة تحكم Matter + موجّه حدودي Thread (تحديث البرنامج الثابت 2025)',
+          'محور DIRIGERA: 139.99 دولارًا، وحدة تحكم Matter + موجّه حدودي Thread (تحديث البرنامج الثابت 2025)',
           'قارن بـ Home Assistant Green (199 دولارًا، راجع دليل شراء المحاور) للحصول على بديل أكثر اكتمالًا في الميزات',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'ملخص سريع', anchor: 'tldr' },
       { label: 'ما الذي يغطيه النظام البيئي', anchor: 'what-it-covers' },
+      { label: "التشكيلة الحالية", anchor: 'lineup' },
       { label: 'لمن يناسب هذا', anchor: 'who-it-fits' },
       { label: 'كيف يقارَن بالمحاور الأخرى', anchor: 'how-it-compares' },
       { label: 'أسئلة شائعة', anchor: 'faq' },
@@ -1093,7 +1248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'تُسوَّق مجموعة منتجات المنزل الذكي من IKEA كنقطة دخول اقتصادية ومتاحة على نطاق واسع للتحكم المحلي القائم على Matter',
-          'محور DIRIGERA (الطراز E2315) معتمد وفق Matter وهو موجّه حدودي Thread، بسعر 119.99 دولارًا وقت كتابة هذا',
+          'محور DIRIGERA (الطراز E2315) معتمد وفق Matter وهو موجّه حدودي Thread، بسعر 139.99 دولارًا وقت كتابة هذا',
           'الأنسب للمشترين الراغبين في أتمتة أساسية للإضاءة/أجهزة الاستشعار دون البحث في توافق المكونات الفردية',
           'قارن بـ Home Assistant Green والمحاور المخصصة الأخرى (راجع دليل شراء المحاور) لاحتياجات الأتمتة الأكثر تقدمًا',
         ],
@@ -1107,6 +1262,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يعمل المحور كوحدة تحكم محلية، وفي العديد من الإعدادات، كجسر Matter لأجهزة النظام البيئي الخاصة وبعض أجهزة Matter من جهات خارجية.',
           'الإضاءة وأجهزة الاستشعار هي جوهر المجموعة — هذا ليس محورًا كامل الميزات لأتمتة معقدة متعددة العلامات التجارية بالطريقة التي يوفرها Home Assistant.',
           'DIRIGERA معتمد للاتصال عبر Ethernet وThread بدور الموجّه الحدودي (FTD)، واكتسب وظيفة وحدة تحكم Matter من خلال تحديث للبرنامج الثابت في عام 2025، مما يتيح له إعداد أجهزة Matter من جهات خارجية عبر تطبيق IKEA Home Smart وليس فقط خط منتجاته الخاص.',
+        ],
+      },
+      lineup: {
+        id: 'lineup',
+        title: "تشكيلة IKEA من Matter في 2026 مبنية على Thread لا Zigbee",
+        content:
+          "**تستخدم تشكيلة IKEA الأحدث Matter عبر Thread: تُضاف المصابيح والمقابس وأجهزة التحكم والحساسات من تطبيق Matter في Apple Home أو Google Home أو Alexa أو SmartThings أو Home Assistant، بينما لا يلزم DIRIGERA إلا لميزات تطبيق IKEA ومنتجات Zigbee الأقدم.**",
+        items: [
+          "الإضاءة: مصابيح KAJPLATS الذكية (ابتداءً من 5.99 دولارًا للعبوة في قائمة IKEA الأمريكية) ومصباح VARMBLIXT الذكي (79.99 دولارًا).",
+          "المقابس وأجهزة التحكم: مقبس GRILLPLATS الذكي (7.99 دولارًا) وأجهزة التحكم BILRESA (زران 6.99 دولارًا، عجلة تمرير 9.99 دولارًا).",
+          "الحساسات: MYGGSPRAY (الحركة) وMYGGBETT (الباب/النافذة) وKLIPPBOK (تسرب المياه) وTIMMERFLOTTE (الحرارة/الرطوبة) بسعر 11.99 دولارًا لكل منها، وALPSTUGA (جودة الهواء) بسعر 34.99 دولارًا. يحتاج كل جهاز Matter عبر Thread إلى Thread Border Router ووحدة تحكم Matter — يمكن لـ DIRIGERA أن يكون الاثنين، وكذلك بعض أجهزة Apple وGoogle وAlexa وSmartThings وHome Assistant.",
+          "ما زالت منتجات Zigbee الأقدم (مثل مصابيح TRÅDFRI وSTARKVIND وVINDSTYRKA) تحتاج إلى DIRIGERA الذي يعرضها على Matter كجسر؛ ولم تعد IKEA تضيف Zigbee إلى المنتجات الجديدة.",
+          "غير متوفر في التشكيلة: لا تعرض قائمة IKEA الأمريكية وقت كتابة هذا أي منظم حرارة أو كاميرا أو جرس باب أو مكنسة روبوتية أو مقوٍّ لشبكة Wi-Fi.",
         ],
       },
       whoItFits: {
@@ -1128,7 +1296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'يقدم Home Assistant Green دعمًا أوسع لأنواع الأجهزة ومنطق أتمتة أعمق، بسعر مختلف ودون راحة متجر البيع بالتجزئة.',
           'يعني اعتماد أجهزة IKEA وفق Matter أنها ليست مقفلة بمحور النظام البيئي الخاص — هذا يقلل تكلفة التبديل إذا انتقلت لاحقًا إلى محور أكثر قدرة.',
-          'محور DIRIGERA من IKEA (119.99 دولارًا) أرخص بنحو 80 دولارًا من Home Assistant Green (199 دولارًا) وقت كتابة هذا — ارتفع سعر HA Green مرتين في عام 2026 (من 99 دولارًا أصليًا عند الإطلاق في 2023) مستشهدًا بارتفاع تكاليف المكونات، بينما ظل محور IKEA عند سعر البيع بالتجزئة.',
+          "محور DIRIGERA من IKEA (139.99 دولارًا في قائمة IKEA الأمريكية) أرخص بنحو 60 دولارًا من Home Assistant Green (199 دولارًا) وقت كتابة هذا — لكن السعرين ارتفعا: أُطلق DIRIGERA عام 2022 بسعر 69 دولارًا، بينما أُطلق HA Green عام 2023 بسعر 99 دولارًا وارتفع سعره مرتين في 2026 مستشهدًا بارتفاع تكاليف المكونات.",
         ],
       },
       faqSection: {
@@ -1140,6 +1308,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل IKEA منصة منزل ذكي جيدة على المدى الطويل؟', a: 'تعمل بشكل جيد كنقطة دخول منخفضة التكلفة للإضاءة وأجهزة الاستشعار الأساسية. للأتمتة الأكثر تقدمًا، ينقل العديد من المشترين أجهزة Matter الخاصة بهم لاحقًا إلى محور أكثر قدرة مثل Home Assistant.' },
           { q: 'هل تدعم IKEA الكاميرات أو مراقبة الطاقة؟', a: 'لا، وقت كتابة هذا. تغطي مجموعة منتجات المنزل الذكي الحالية من IKEA في الولايات المتحدة الإضاءة، وأجهزة استشعار الحركة/التلامس/الحرارة/تسرب المياه/جودة الهواء، وأجهزة التحكم عن بُعد، والمقابس الذكية — لا كاميرات أو أجهزة مخصصة لمراقبة الطاقة.' },
           { q: 'كيف يقارَن هذا بدليل شراء المحاور العام على هذا الموقع؟', a: 'يقارن دليل شراء المحاور بين أجهزة المحاور المخصصة (Home Assistant Green، Hubitat، Homey). يركز هذا المقال تحديدًا على نظام IKEA البيئي للبيع بالتجزئة كبديل اقتصادي.' },
+          { q: "كم يكلف محور IKEA DIRIGERA؟", a: "139.99 دولارًا في قائمة IKEA الأمريكية وقت كتابة هذا، مقابل 69 دولارًا عند إطلاقه في 2022. ارتفعت الأسعار في المملكة المتحدة والاتحاد الأوروبي أيضًا في 2026، لذا تحقق من السعر في سوق IKEA الخاص بك." },
+          { q: "هل تعمل حساسات IKEA الجديدة بدون محور DIRIGERA؟", a: "نعم، لكن فقط مع Thread Border Router ووحدة تحكم Matter أخرى، مثل Apple HomePod mini أو Apple TV 4K أو جهاز Google Nest متوافق. بدون Thread Border Router لا تعمل الحساسات." },
+          { q: "هل تبيع IKEA منظم حرارة ذكيًا أو مكنسة روبوتية؟", a: "لا. تغطي قائمة IKEA الأمريكية الإضاءة والمقابس وأجهزة التحكم والحساسات ومنتجات جودة الهواء؛ ولا تظهر منظمات الحرارة والكاميرات وأجراس الأبواب والمكانس الروبوتية ومقويات Wi-Fi وقت كتابة هذا." },
+          { q: "هل ما زالت أجهزة IKEA القديمة على Zigbee مدعومة؟", a: "نعم، عبر DIRIGERA الذي يربطها بمنصات Matter كجسر. تستخدم منتجات IKEA الجديدة Matter عبر Thread بدلًا من Zigbee." },
         ],
       },
       relatedReading: {
@@ -1163,7 +1335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'المنزل الذكي من IKEA' }, { '@type': 'Thing', name: 'نظام Matter البيئي' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1176,6 +1348,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'هل يمكنني استخدام أجهزة Matter من IKEA مع Home Assistant بدلًا من محور IKEA؟', acceptedAnswer: { '@type': 'Answer', text: 'بشكل عام نعم — الأجهزة المعتمدة وفق Matter ليست مقفلة بمحور واحد، لذا يمكن عادة إعادة إقرانها بـ Home Assistant أو وحدة تحكم Matter أخرى.' } },
         { '@type': 'Question', name: 'هل IKEA منصة منزل ذكي جيدة على المدى الطويل؟', acceptedAnswer: { '@type': 'Answer', text: 'تعمل بشكل جيد كنقطة دخول منخفضة التكلفة للإضاءة وأجهزة الاستشعار الأساسية؛ ينتقل العديد من المشترين لاحقًا إلى محور أكثر قدرة للأتمتة المتقدمة.' } },
         { '@type': 'Question', name: 'كيف يقارَن هذا بدليل شراء المحاور العام على هذا الموقع؟', acceptedAnswer: { '@type': 'Answer', text: 'يقارن دليل شراء المحاور بين أجهزة المحاور المخصصة. يركز هذا المقال تحديدًا على نظام IKEA البيئي للبيع بالتجزئة كبديل اقتصادي.' } },
+        { '@type': 'Question', name: "كم يكلف محور IKEA DIRIGERA؟", acceptedAnswer: { '@type': 'Answer', text: "139.99 دولارًا في قائمة IKEA الأمريكية وقت كتابة هذا، مقابل 69 دولارًا عند إطلاقه في 2022. ارتفعت الأسعار في المملكة المتحدة والاتحاد الأوروبي أيضًا في 2026، لذا تحقق من السعر في سوق IKEA الخاص بك." } },
+        { '@type': 'Question', name: "هل تعمل حساسات IKEA الجديدة بدون محور DIRIGERA؟", acceptedAnswer: { '@type': 'Answer', text: "نعم، لكن فقط مع Thread Border Router ووحدة تحكم Matter أخرى، مثل Apple HomePod mini أو Apple TV 4K أو جهاز Google Nest متوافق. بدون Thread Border Router لا تعمل الحساسات." } },
+        { '@type': 'Question', name: "هل تبيع IKEA منظم حرارة ذكيًا أو مكنسة روبوتية؟", acceptedAnswer: { '@type': 'Answer', text: "لا. تغطي قائمة IKEA الأمريكية الإضاءة والمقابس وأجهزة التحكم والحساسات ومنتجات جودة الهواء؛ ولا تظهر منظمات الحرارة والكاميرات وأجراس الأبواب والمكانس الروبوتية ومقويات Wi-Fi وقت كتابة هذا." } },
+        { '@type': 'Question', name: "هل ما زالت أجهزة IKEA القديمة على Zigbee مدعومة؟", acceptedAnswer: { '@type': 'Answer', text: "نعم، عبر DIRIGERA الذي يربطها بمنصات Matter كجسر. تستخدم منتجات IKEA الجديدة Matter عبر Thread بدلًا من Zigbee." } },
       ],
     },
   },
@@ -1183,18 +1359,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: '2026 Protocols & Regulation',
     heroImage: '/images/ikea-matter-ecosystem-guide-2027-overview-hero-ko.webp',
     title: 'IKEA의 Matter 생태계: 완전 가이드 (2026년)',
     seoTitle: 'IKEA Matter 생태계 가이드 (2026년)',
     intro:
-      'IKEA는 Matter 호환 스마트홈 제품군 — DIRIGERA 허브($119.99)와 센서 및 조명 — 을 전용 허브 기기에 비해 더 저렴한 로컬 우선 스마트홈 제어 진입점으로 포지셔닝하여 판매합니다. 이 가이드는 이 생태계가 무엇을 위한 것인지, 그리고 이 사이트에서 이미 다룬 다른 허브 옵션들과 어떻게 비교되는지 설명합니다.',
+      'IKEA는 Matter 호환 스마트홈 제품군 — DIRIGERA 허브($139.99)와 센서 및 조명 — 을 전용 허브 기기에 비해 더 저렴한 로컬 우선 스마트홈 제어 진입점으로 포지셔닝하여 판매합니다. 이 가이드는 이 생태계가 무엇을 위한 것인지, 그리고 이 사이트에서 이미 다룬 다른 허브 옵션들과 어떻게 비교되는지 설명합니다.',
     metaDescription:
-      '2026년 IKEA의 Matter 스마트홈 제품군: DIRIGERA 허브, 센서, 조명을 로컬 제어로의 예산 진입점으로.',
+      "IKEA의 2026년 Matter over Thread 라인업: DIRIGERA 허브($139.99), Thread 보더 라우터가 필요한 센서, IKEA가 판매하지 않는 제품(카메라, 온도조절기).",
     twitterDescription:
-      'IKEA의 Matter 호환 스마트홈 제품을 로컬 제어로의 예산 진입점으로, Home Assistant Green 및 기타 허브 옵션과 비교.',
+      "IKEA의 2026년 Matter over Thread 라인업: DIRIGERA 허브($139.99), Thread 보더 라우터가 필요한 센서, IKEA가 판매하지 않는 제품(카메라, 온도조절기).",
     readTime: '6분 소요',
     educationalLevel: 'Beginner',
     audience: 'IKEA 하드웨어를 진입점으로 고려 중인 스마트홈 초보자',
@@ -1207,24 +1383,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ikea vs home assistant',
     ],
     leadAnswerBlock:
-      'IKEA의 Matter 호환 스마트홈 제품군 — DIRIGERA 허브($119.99)와 센서 및 조명 — 은 소매점에서 구매 가능한 하드웨어를 원하는 구매자를 위해 Home Assistant Green($199)과 같은 전용 허브 기기의 대안으로, 로컬 기기 제어로의 더 저렴한 기성 진입점으로 포지셔닝되어 있습니다.',
+      'IKEA의 Matter 호환 스마트홈 제품군 — DIRIGERA 허브($139.99)와 센서 및 조명 — 은 소매점에서 구매 가능한 하드웨어를 원하는 구매자를 위해 Home Assistant Green($199)과 같은 전용 허브 기기의 대안으로, 로컬 기기 제어로의 더 저렴한 기성 진입점으로 포지셔닝되어 있습니다.',
     quickAnswerTop: {
       ko: {
         question: 'IKEA는 Matter 스마트홈의 좋은 출발점인가요?',
         answer:
-          '네, DIRIGERA 허브($119.99)를 통해서요 — 전용 허브 기기에 비해 더 저렴하고 널리 이용 가능한 진입점으로, 개별 구성 요소의 호환성을 조사하지 않고도 소매점 하드웨어와 기본적인 조명/센서 자동화를 원하는 경우 유용합니다. DIRIGERA는 2025년 펌웨어 업데이트를 통해 완전한 Matter 컨트롤러이자 Thread 경계 라우터가 되었으므로, IKEA 자체 제품뿐 아니라 일부 타사 Matter 기기도 온보딩할 수 있습니다.',
+          '네, DIRIGERA 허브($139.99)를 통해서요 — 전용 허브 기기에 비해 더 저렴하고 널리 이용 가능한 진입점으로, 개별 구성 요소의 호환성을 조사하지 않고도 소매점 하드웨어와 기본적인 조명/센서 자동화를 원하는 경우 유용합니다. DIRIGERA는 2025년 펌웨어 업데이트를 통해 완전한 Matter 컨트롤러이자 Thread 경계 라우터가 되었으므로, IKEA 자체 제품뿐 아니라 일부 타사 Matter 기기도 온보딩할 수 있습니다.',
         bullets: [
           'IKEA의 포지셔닝: Matter/로컬 제어로의 저예산, 소매점 구매 가능 진입점',
           '가장 적합한 대상: 개별 구성 요소를 조사하지 않고 기본적인 조명/센서 자동화를 원하는 구매자',
-          'DIRIGERA 허브: $119.99, Matter 컨트롤러 + Thread 경계 라우터(2025년 펌웨어 업데이트)',
+          'DIRIGERA 허브: $139.99, Matter 컨트롤러 + Thread 경계 라우터(2025년 펌웨어 업데이트)',
           '더 완전한 기능의 대안을 위해 Home Assistant Green($199, 허브 구매 가이드 참고)과 비교할 것',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: '요약', anchor: 'tldr' },
       { label: '생태계가 다루는 것', anchor: 'what-it-covers' },
+      { label: "현재 제품 라인업", anchor: 'lineup' },
       { label: '누구에게 적합한가', anchor: 'who-it-fits' },
       { label: '다른 허브와의 비교', anchor: 'how-it-compares' },
       { label: '자주 묻는 질문', anchor: 'faq' },
@@ -1240,7 +1417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'IKEA의 스마트홈 제품군은 Matter 기반 로컬 제어로의 저예산, 널리 이용 가능한 진입점으로 포지셔닝되어 있습니다',
-          'DIRIGERA(모델 E2315) 허브는 Matter 인증을 받았으며 Thread 경계 라우터로, 작성 시점 기준 $119.99에 판매됩니다',
+          'DIRIGERA(모델 E2315) 허브는 Matter 인증을 받았으며 Thread 경계 라우터로, 작성 시점 기준 $139.99에 판매됩니다',
           '개별 구성 요소의 호환성을 조사하지 않고 기본적인 조명/센서 자동화를 원하는 구매자에게 가장 적합합니다',
           '더 고급 자동화 요구사항에는 Home Assistant Green 및 기타 전용 허브(허브 구매 가이드 참고)와 비교하세요',
         ],
@@ -1254,6 +1431,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '허브는 로컬 컨트롤러 역할을 하며, 많은 구성에서 생태계 자체 기기와 일부 타사 Matter 기기를 위한 Matter 브리지 역할도 합니다.',
           '조명과 센서가 제품군의 핵심입니다 — 이는 Home Assistant처럼 복잡한 다중 브랜드 자동화를 위한 완전한 기능의 허브가 아닙니다.',
           'DIRIGERA는 경계 라우터(FTD) 역할에서 이더넷 및 Thread 연결에 대해 인증을 받았으며, 2025년 펌웨어 업데이트를 통해 Matter 컨트롤러 기능을 얻어, 자체 제품 라인뿐 아니라 IKEA Home Smart 앱을 통해 타사 Matter 기기를 온보딩할 수 있게 되었습니다.',
+        ],
+      },
+      lineup: {
+        id: 'lineup',
+        title: "IKEA의 2026년 Matter 라인업은 Zigbee가 아닌 Thread 기반",
+        content:
+          "**IKEA의 최신 라인업은 Matter over Thread를 사용합니다. 전구, 플러그, 리모컨, 센서는 Apple Home, Google Home, Alexa, SmartThings, Home Assistant의 Matter 앱으로 추가하며, DIRIGERA는 IKEA 자체 앱 기능과 기존 Zigbee 제품에만 필요합니다.**",
+        items: [
+          "조명: KAJPLATS 스마트 전구(IKEA 미국 사이트 기준 팩당 $5.99부터)와 VARMBLIXT 스마트 램프($79.99).",
+          "플러그와 리모컨: GRILLPLATS 스마트 플러그($7.99)와 BILRESA 리모컨(2버튼 $6.99, 스크롤 휠 $9.99).",
+          "센서: MYGGSPRAY(모션), MYGGBETT(문/창문), KLIPPBOK(누수), TIMMERFLOTTE(온습도)는 각 $11.99, ALPSTUGA(공기질)는 $34.99. 모든 Matter over Thread 기기에는 Thread 보더 라우터와 Matter 컨트롤러가 필요합니다 — DIRIGERA는 둘 다 될 수 있고, Apple, Google, Alexa, SmartThings, Home Assistant의 일부 하드웨어도 가능합니다.",
+          "기존 Zigbee 제품(예: TRÅDFRI 전구, STARKVIND, VINDSTYRKA)은 여전히 DIRIGERA가 필요하며, 브리지로서 Matter에 노출합니다. IKEA는 신제품에 더 이상 Zigbee를 추가하지 않습니다.",
+          "라인업에 없는 것: IKEA 미국 사이트에는 작성 시점에 온도조절기, 카메라, 초인종, 로봇청소기, Wi-Fi 확장기가 없습니다.",
         ],
       },
       whoItFits: {
@@ -1275,7 +1465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home Assistant Green은 더 넓은 기기 유형 지원과 더 깊은 자동화 로직을 제공하지만, 가격대가 다르고 소매점 구매의 편리함은 없습니다.',
           'IKEA의 기기가 Matter 인증을 받았다는 것은 생태계 자체 허브에 종속되지 않는다는 것을 의미합니다 — 나중에 더 강력한 허브로 이전할 경우 전환 비용이 줄어듭니다.',
-          'IKEA의 DIRIGERA 허브($119.99)는 작성 시점 기준 Home Assistant Green($199)보다 약 $80 저렴합니다 — HA Green의 가격은 2026년에 두 차례 인상되었으며(2023년 출시 당시 원래 $99에서), 더 높은 부품 비용을 이유로 들었지만, IKEA의 허브는 소매 가격을 유지해 왔습니다.',
+          "IKEA의 DIRIGERA 허브(IKEA 미국 사이트 표기 $139.99)는 작성 시점 기준 Home Assistant Green($199)보다 약 $60 저렴합니다 — 다만 두 가격 모두 올랐습니다. DIRIGERA는 2022년 출시 당시 $69였고, HA Green은 2023년 출시 당시 $99였으며 2026년에 부품 비용 상승을 이유로 두 차례 인상되었습니다.",
         ],
       },
       faqSection: {
@@ -1287,6 +1477,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'IKEA는 장기적으로 좋은 스마트홈 플랫폼인가요?', a: '조명과 기본 센서를 위한 저비용 진입점으로는 잘 작동합니다. 더 고급 자동화를 위해 많은 구매자는 나중에 Matter 기기를 Home Assistant 같은 더 강력한 허브로 이전합니다.' },
           { q: 'IKEA는 카메라나 에너지 모니터링을 지원하나요?', a: '작성 시점 기준 아니요. IKEA의 현재 미국 스마트홈 제품군은 조명, 동작/접촉/온도/누수/공기질 센서, 리모컨, 스마트 플러그를 포함하지만 — 카메라나 전용 에너지 모니터링 하드웨어는 없습니다.' },
           { q: '이것이 이 사이트의 일반 허브 구매 가이드와 어떻게 비교되나요?', a: '허브 구매 가이드는 전용 허브 기기(Home Assistant Green, Hubitat, Homey)를 비교합니다. 이 글은 저예산 대안으로서의 IKEA의 소매 생태계에 특별히 초점을 맞춥니다.' },
+          { q: "IKEA DIRIGERA 허브는 얼마인가요?", a: "작성 시점 IKEA 미국 사이트 표기는 $139.99이며, 2022년 출시 당시에는 $69였습니다. 영국과 EU 가격도 2026년에 올랐으니 거주 지역 IKEA 시장의 가격을 확인하세요." },
+          { q: "새 IKEA 센서는 DIRIGERA 허브 없이 작동하나요?", a: "네, 하지만 Apple HomePod mini, Apple TV 4K, 호환되는 Google Nest 기기 같은 다른 Thread 보더 라우터와 Matter 컨트롤러가 필요합니다. Thread 보더 라우터가 없으면 센서가 작동하지 않습니다." },
+          { q: "IKEA는 스마트 온도조절기나 로봇청소기를 판매하나요?", a: "아니요. IKEA 미국 사이트는 조명, 플러그, 리모컨, 센서, 공기질 제품을 다루며, 온도조절기, 카메라, 초인종, 로봇청소기, Wi-Fi 확장기는 작성 시점에 나타나지 않습니다." },
+          { q: "기존 IKEA Zigbee 기기도 계속 지원되나요?", a: "네, DIRIGERA가 브리지로서 Matter 플랫폼에 연결합니다. IKEA 신제품은 Zigbee 대신 Matter over Thread를 사용합니다." },
         ],
       },
       relatedReading: {
@@ -1310,7 +1504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'IKEA 스마트홈' }, { '@type': 'Thing', name: 'Matter 생태계' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1323,6 +1517,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'IKEA 허브 대신 Home Assistant로 IKEA Matter 기기를 사용할 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '일반적으로 가능합니다 — Matter 인증을 받은 기기는 하나의 허브에 종속되지 않으므로 일반적으로 Home Assistant나 다른 Matter 컨트롤러로 재페어링할 수 있습니다.' } },
         { '@type': 'Question', name: 'IKEA는 장기적으로 좋은 스마트홈 플랫폼인가요?', acceptedAnswer: { '@type': 'Answer', text: '조명과 기본 센서를 위한 저비용 진입점으로는 잘 작동합니다; 많은 구매자가 나중에 고급 자동화를 위해 더 강력한 허브로 이전합니다.' } },
         { '@type': 'Question', name: '이것이 이 사이트의 일반 허브 구매 가이드와 어떻게 비교되나요?', acceptedAnswer: { '@type': 'Answer', text: '허브 구매 가이드는 전용 허브 기기를 비교합니다. 이 글은 저예산 대안으로서의 IKEA의 소매 생태계에 특별히 초점을 맞춥니다.' } },
+        { '@type': 'Question', name: "IKEA DIRIGERA 허브는 얼마인가요?", acceptedAnswer: { '@type': 'Answer', text: "작성 시점 IKEA 미국 사이트 표기는 $139.99이며, 2022년 출시 당시에는 $69였습니다. 영국과 EU 가격도 2026년에 올랐으니 거주 지역 IKEA 시장의 가격을 확인하세요." } },
+        { '@type': 'Question', name: "새 IKEA 센서는 DIRIGERA 허브 없이 작동하나요?", acceptedAnswer: { '@type': 'Answer', text: "네, 하지만 Apple HomePod mini, Apple TV 4K, 호환되는 Google Nest 기기 같은 다른 Thread 보더 라우터와 Matter 컨트롤러가 필요합니다. Thread 보더 라우터가 없으면 센서가 작동하지 않습니다." } },
+        { '@type': 'Question', name: "IKEA는 스마트 온도조절기나 로봇청소기를 판매하나요?", acceptedAnswer: { '@type': 'Answer', text: "아니요. IKEA 미국 사이트는 조명, 플러그, 리모컨, 센서, 공기질 제품을 다루며, 온도조절기, 카메라, 초인종, 로봇청소기, Wi-Fi 확장기는 작성 시점에 나타나지 않습니다." } },
+        { '@type': 'Question', name: "기존 IKEA Zigbee 기기도 계속 지원되나요?", acceptedAnswer: { '@type': 'Answer', text: "네, DIRIGERA가 브리지로서 Matter 플랫폼에 연결합니다. IKEA 신제품은 Zigbee 대신 Matter over Thread를 사용합니다." } },
       ],
     },
   },
