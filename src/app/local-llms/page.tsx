@@ -2,10 +2,11 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { LocalLLMsHub } from '@/components/LocalLLMsHub'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, type Lang } from '@/lib/i18n/constants'
 import { truncateTitle } from '@/lib/utils'
 import { generateLocalLlmsJsonLd } from '@/lib/local-llms/schema'
 import { buildLLMHubData } from '@/lib/local-llms/hub-data'
+import { LocalLlmsHubTemplate, usesLocalLlmsHubTemplate } from '@/lib/local-llms/hub-template'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -53,7 +54,11 @@ export default async function LocalLLMsPage({ searchParams }: PageProps) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <LocalLLMsHub initialLang={selectedLang as any} {...hubData} />
+      {usesLocalLlmsHubTemplate(selectedLang) ? (
+        <LocalLlmsHubTemplate lang={selectedLang as Lang} {...hubData} />
+      ) : (
+        <LocalLLMsHub initialLang={selectedLang as any} {...hubData} />
+      )}
     </>
   )
 }

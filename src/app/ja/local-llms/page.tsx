@@ -4,6 +4,7 @@ import { LocalLLMsHub } from '@/components/LocalLLMsHub'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { buildLLMHubData } from '@/lib/local-llms/hub-data'
+import { LocalLlmsHubTemplate, usesLocalLlmsHubTemplate } from '@/lib/local-llms/hub-template'
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = 'ja'
@@ -29,5 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function JaLocalLLMsPage() {
-  return <LocalLLMsHub initialLang="ja" {...buildLLMHubData('ja')} />
+  const hubData = buildLLMHubData('ja')
+  if (usesLocalLlmsHubTemplate('ja')) return <LocalLlmsHubTemplate lang="ja" {...hubData} />
+  return <LocalLLMsHub initialLang="ja" {...hubData} />
 }
