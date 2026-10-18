@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/home-assistant-getting-started-overview-hero-en.webp',
     title: 'Home Assistant: Complete Getting-Started Guide (2026)',
@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant is the leading local-first smart home hub: install it on a Raspberry Pi or mini PC, add integrations, and control everything locally with no cloud. This getting-started guide covers why Home Assistant, the install options, first integrations, the dashboard, your first automation, and where to add local AI later — without re-explaining the LLM mechanics.',
     metaDescription:
-      'Get started with Home Assistant in 2026: install options (HAOS, container, Pi vs mini PC), first integrations, dashboards, and your first local automation.',
+      'Home Assistant 2026 beginner tutorial: install on a Pi, mini PC, or Windows/macOS/Linux VM, add integrations, and build your first local automation.',
     twitterDescription:
       'Home Assistant getting-started guide: install on a Pi or mini PC, add integrations, build your first local automation. The local-first hub.',
     readTime: '10 min read',
@@ -42,13 +42,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Add a Zigbee/Z-Wave coordinator for local protocols',
           'Build a dashboard and a first automation — all local',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'TL;DR', anchor: 'tldr' },
       { label: 'Why Home Assistant', anchor: 'why-ha' },
       { label: 'Install Options', anchor: 'install' },
+      { label: 'Windows, macOS & Linux', anchor: 'install-desktop' },
       { label: 'First Integrations', anchor: 'integrations' },
       { label: 'The Dashboard', anchor: 'dashboard' },
       { label: 'Your First Automation', anchor: 'automation' },
@@ -100,6 +101,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'Raspberry Pi vs mini PC for Home Assistant: a Pi handles dashboards, automations, and Zigbee/Z-Wave at low power; a mini PC adds headroom for a local LLM via Ollama, larger Whisper voice models, and Frigate camera detection on the same box.',
         items: [
           'For hardware sizing including a local LLM, see [best hardware for a local smart home](/smart-home/best-hardware-for-local-smart-home).',
+        ],
+      },
+      installDesktop: {
+        id: 'install-desktop',
+        title: 'Installing Home Assistant on Windows, macOS, or Linux',
+        content:
+          '**Windows and macOS can run Home Assistant only as Home Assistant OS inside a virtual machine; Linux can run HAOS or the Container install directly.** Home Assistant OS is a purpose-built operating system for home automation, and a desktop PC works for testing but is a poor 24/7 host.',
+        items: [
+          'Windows: create a UEFI virtual machine in VirtualBox, VMware Workstation, or Hyper-V with at least 2 GB RAM and 2 vCPUs, attach the HAOS disk image, and set the network to bridged. Hyper-V cannot pass USB Zigbee or Z-Wave sticks through to the VM.',
+          'macOS: use a hypervisor such as VirtualBox (Apple silicon uses the ARM 64-bit option) with the same bridged-network setup.',
+          'Linux: run HAOS in a VM (for example KVM) or use the Container install with Docker Compose. Container has no apps (formerly add-ons), so Thread and Z-Wave need separate setup.',
+          'Once the VM boots, open the Home Assistant web interface on port 8123 of the VM in any browser; because you control it through a browser, it works from any desktop operating system.',
+          'For always-on use, choose a dedicated device — Home Assistant Green (recommended price $199 / €179, 4 GB RAM, 32 GB storage) or a Raspberry Pi 4 or 5 with at least 2 GB RAM — so the hub keeps running when your PC sleeps. See [the official installation guide](https://www.home-assistant.io/installation/).',
         ],
       },
       integrations: {
@@ -158,6 +172,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Is Home Assistant free?', a: 'Yes. Home Assistant is free and open-source. You only pay for the hardware it runs on and any optional extras (for example, a cloud relay for easy remote access). Core local control needs no subscription.' },
           { q: 'Do I need to code to use Home Assistant?', a: 'No. Common setups, dashboards, and automations are built through a graphical interface. YAML configuration is available for advanced automations but is optional for getting started.' },
           { q: 'Can Home Assistant run AI?', a: 'Yes. Home Assistant integrates with Ollama so a local model can act as a conversation agent, and it supports local voice with Whisper and Piper. Running these on a mini PC keeps everything local. See the Ollama integration guide for setup.' },
+          { q: 'Can I install Home Assistant on Windows or macOS?', a: 'Yes, but only as Home Assistant OS inside a virtual machine (VirtualBox, VMware, or Hyper-V on Windows). Give the VM at least 2 GB RAM and 2 vCPUs, UEFI boot, and a bridged network. Linux can also run the Container install directly.' },
+          { q: 'What is Home Assistant OS?', a: 'Home Assistant OS (HAOS) is a minimal operating system built only to run Home Assistant. It includes apps, backups, and one-click updates, and it is the installation type Home Assistant recommends for most users.' },
         ],
       },
       relatedReading: {
@@ -177,13 +193,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant: Complete Getting-Started Guide (2026)',
-      description: 'Get started with Home Assistant in 2026: install options (HAOS, container, Pi vs mini PC), first integrations, dashboards, and your first local automation.',
+      description: 'Home Assistant 2026 beginner tutorial: install on a Pi, mini PC, or Windows/macOS/Linux VM, add integrations, and build your first local automation.',
       url: 'https://www.promptquorum.com/smart-home/home-assistant-getting-started',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Home automation' }, { '@type': 'Thing', name: 'Local control' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -197,6 +213,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Is Home Assistant free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. It is free and open-source. You pay only for hardware and optional extras like a cloud relay for remote access. Core local control needs no subscription.' } },
         { '@type': 'Question', name: 'Do I need to code to use Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'No. Common setups, dashboards, and automations are built through a graphical interface. YAML is optional for advanced automations.' } },
         { '@type': 'Question', name: 'Can Home Assistant run AI?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. It integrates with Ollama for a local conversation agent and supports local voice with Whisper and Piper. Running these on a mini PC keeps everything local.' } },
+        { '@type': 'Question', name: 'Can I install Home Assistant on Windows or macOS?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, but only as Home Assistant OS inside a virtual machine (VirtualBox, VMware, or Hyper-V on Windows). Give the VM at least 2 GB RAM and 2 vCPUs, UEFI boot, and a bridged network. Linux can also run the Container install directly.' } },
+        { '@type': 'Question', name: 'What is Home Assistant OS?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant OS (HAOS) is a minimal operating system built only to run Home Assistant. It includes apps, backups, and one-click updates, and it is the installation type Home Assistant recommends for most users.' } },
       ],
     },
   },
@@ -204,8 +222,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/home-assistant-getting-started-overview-hero-ar.webp',
     title: '⁨Home Assistant⁩: دليل البدء الشامل (⁨2026⁩)',
@@ -213,7 +231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant هو المركز الرائد للمنزل الذكي المحلي أولًا: ثبّته على Raspberry Pi أو mini PC، أضف التكاملات، وتحكم في كل شيء محليًا بدون سحابة. يغطي هذا الدليل للمبتدئين سبب اختيار Home Assistant وخيارات التثبيت والتكاملات الأولى ولوحة التحكم وأول أتمتة وكيفية إضافة الذكاء الاصطناعي المحلي لاحقًا — دون إعادة شرح ميكانيكا النموذج اللغوي.',
     metaDescription:
-      'Home Assistant مجاني ومفتوح المصدر: تثبيته على Raspberry Pi أو mini PC، خيارات HAOS والحاوية، أول تكاملات Zigbee، لوحة تحكم، وأول أتمتة محلية.',
+      'دليل Home Assistant 2026 للمبتدئين: ثبّته على Pi أو mini PC أو جهاز افتراضي Windows/macOS/Linux، وأضف التكاملات، وابنِ أول أتمتة محلية.',
     twitterDescription:
       'دليل البدء مع Home Assistant: ثبّته على Pi أو mini PC، أضف التكاملات، وابنِ أول أتمتة محلية. المركز المحلي أولًا.',
     readTime: '10 دقائق للقراءة',
@@ -241,13 +259,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أضف منسّق Zigbee/Z-Wave للبروتوكولات المحلية',
           'ابنِ لوحة تحكم وأول أتمتة — كل ذلك محليًا',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'ملخص سريع', anchor: 'tldr' },
       { label: 'لماذا Home Assistant', anchor: 'why-ha' },
       { label: 'خيارات التثبيت', anchor: 'install' },
+      { label: 'Windows وmacOS وLinux', anchor: 'install-desktop' },
       { label: 'التكاملات الأولى', anchor: 'integrations' },
       { label: 'لوحة التحكم', anchor: 'dashboard' },
       { label: 'أول أتمتة', anchor: 'automation' },
@@ -299,6 +318,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'Raspberry Pi مقابل mini PC لـ Home Assistant: يتولى الـ Pi لوحات التحكم والأتمتة وZigbee/Z-Wave بطاقة منخفضة؛ يضيف mini PC القدرة على تشغيل نموذج LLM محلي عبر Ollama، ونماذج Whisper صوتية أكبر، وكشف كاميرا Frigate على نفس الجهاز.',
         items: [
           'لتحديد حجم الأجهزة بما في ذلك نموذج LLM محلي، راجع [أفضل أجهزة المنزل الذكي المحلي](/ar/smart-home/best-hardware-for-local-smart-home).',
+        ],
+      },
+      installDesktop: {
+        id: 'install-desktop',
+        title: 'تثبيت Home Assistant على Windows أو macOS أو Linux',
+        content:
+          '**على Windows وmacOS يعمل Home Assistant فقط بصيغة Home Assistant OS داخل جهاز افتراضي، بينما يستطيع Linux تشغيل HAOS أو تثبيت Container مباشرة.** Home Assistant OS نظام تشغيل مصمم خصيصًا لأتمتة المنزل، والحاسوب المكتبي مناسب للتجربة لكنه مضيف ضعيف للتشغيل المستمر على مدار الساعة.',
+        items: [
+          'Windows: أنشئ جهازًا افتراضيًا بنظام UEFI في VirtualBox أو VMware Workstation أو Hyper-V بذاكرة لا تقل عن 2 GB ومعالجين افتراضيين، وأرفق صورة قرص HAOS واضبط الشبكة على وضع الجسر (Bridged). لا يستطيع Hyper-V تمرير أعواد USB الخاصة بـ Zigbee أو Z-Wave إلى الجهاز الافتراضي.',
+          'macOS: استخدم مدير أجهزة افتراضية مثل VirtualBox (يستخدم Apple silicon خيار ARM بنظام 64 بت) مع إعداد شبكة الجسر نفسه.',
+          'Linux: شغّل HAOS في جهاز افتراضي (مثل KVM) أو استخدم تثبيت Container مع Docker Compose. لا يتضمن Container التطبيقات (الإضافات سابقًا)، لذا يحتاج Thread وZ-Wave إلى إعداد منفصل.',
+          'بعد إقلاع الجهاز الافتراضي، افتح واجهة الويب الخاصة بـ Home Assistant على المنفذ 8123 للجهاز الافتراضي في أي متصفح؛ ولأن التحكم يتم عبر المتصفح فهو يعمل على أي نظام تشغيل مكتبي.',
+          'للتشغيل المستمر اختر جهازًا مخصصًا — Home Assistant Green (السعر الموصى به 199 دولارًا / 179 يورو، ذاكرة 4 GB وتخزين 32 GB) أو Raspberry Pi 4 أو 5 بذاكرة لا تقل عن 2 GB — ليستمر المركز في العمل عندما يدخل حاسوبك في وضع السكون. راجع [دليل التثبيت الرسمي](https://www.home-assistant.io/installation/).',
         ],
       },
       integrations: {
@@ -357,6 +389,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل Home Assistant مجاني؟', a: 'نعم. Home Assistant مجاني ومفتوح المصدر. تدفع فقط للجهاز الذي يعمل عليه وأي إضافات اختيارية (مثل مرحّل سحابي للوصول عن بُعد السهل). التحكم المحلي الأساسي لا يحتاج اشتراكًا.' },
           { q: 'هل أحتاج إلى البرمجة لاستخدام Home Assistant؟', a: 'لا. الإعدادات الشائعة ولوحات التحكم والأتمتة تُبنى عبر واجهة رسومية. تكوين YAML متاح للأتمتة المتقدمة لكنه اختياري للبداية.' },
           { q: 'هل يمكن لـ Home Assistant تشغيل الذكاء الاصطناعي؟', a: 'نعم. Home Assistant يتكامل مع Ollama ليتصرف نموذج محلي كعامل محادثة، ويدعم الصوت المحلي مع Whisper وPiper. تشغيل هذه على mini PC يبقي كل شيء محليًا. راجع دليل تكامل Ollama للإعداد.' },
+          { q: 'هل يمكنني تثبيت Home Assistant على Windows أو macOS؟', a: 'نعم، لكن فقط بصيغة Home Assistant OS داخل جهاز افتراضي (VirtualBox أو VMware أو Hyper-V على Windows). امنح الجهاز الافتراضي ذاكرة لا تقل عن 2 GB ومعالجين افتراضيين وإقلاع UEFI وشبكة جسر. ويستطيع Linux أيضًا تشغيل تثبيت Container مباشرة.' },
+          { q: 'ما هو Home Assistant OS؟', a: 'Home Assistant OS (HAOS) نظام تشغيل مصغّر مصمم فقط لتشغيل Home Assistant. يتضمن التطبيقات والنسخ الاحتياطية والتحديثات بنقرة واحدة، وهو نوع التثبيت الذي يوصي به Home Assistant لمعظم المستخدمين.' },
         ],
       },
       relatedReading: {
@@ -382,7 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'أتمتة المنزل' }, { '@type': 'Thing', name: 'التحكم المحلي' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -396,6 +430,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'هل Home Assistant مجاني؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. مجاني ومفتوح المصدر. تدفع فقط للجهاز وإضافات اختيارية كمرحّل سحابي للوصول عن بُعد. التحكم المحلي الأساسي لا يحتاج اشتراكًا.' } },
         { '@type': 'Question', name: 'هل أحتاج إلى البرمجة لاستخدام Home Assistant؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. الإعدادات الشائعة ولوحات التحكم والأتمتة تُبنى عبر واجهة رسومية. YAML اختياري للأتمتة المتقدمة.' } },
         { '@type': 'Question', name: 'هل يمكن لـ Home Assistant تشغيل الذكاء الاصطناعي؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يتكامل مع Ollama لعامل محادثة محلي ويدعم الصوت المحلي مع Whisper وPiper. تشغيل هذه على mini PC يبقي كل شيء محليًا.' } },
+        { '@type': 'Question', name: 'هل يمكنني تثبيت Home Assistant على Windows أو macOS؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم، لكن فقط بصيغة Home Assistant OS داخل جهاز افتراضي (VirtualBox أو VMware أو Hyper-V على Windows). امنح الجهاز الافتراضي ذاكرة لا تقل عن 2 GB ومعالجين افتراضيين وإقلاع UEFI وشبكة جسر. ويستطيع Linux أيضًا تشغيل تثبيت Container مباشرة.' } },
+        { '@type': 'Question', name: 'ما هو Home Assistant OS؟', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant OS (HAOS) نظام تشغيل مصغّر مصمم فقط لتشغيل Home Assistant. يتضمن التطبيقات والنسخ الاحتياطية والتحديثات بنقرة واحدة، وهو نوع التثبيت الذي يوصي به Home Assistant لمعظم المستخدمين.' } },
       ],
     },
   },
@@ -403,8 +439,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/home-assistant-getting-started-overview-hero-de.webp',
     title: 'Home Assistant: Vollständiger Einsteiger-Leitfaden (2026)',
@@ -412,7 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant ist der führende Local-First-Smart-Home-Hub: Installieren Sie ihn auf einem Raspberry Pi oder Mini-PC, fügen Sie Integrationen hinzu und steuern Sie alles lokal ohne Cloud. Dieser Einsteiger-Leitfaden behandelt Warum Home Assistant, die Installationsoptionen, erste Integrationen, das Dashboard, Ihre erste Automatisierung und wo Sie später lokale KI hinzufügen – ohne die LLM-Mechanik erneut zu erklären.',
     metaDescription:
-      'Erste Schritte mit Home Assistant 2026: HAOS oder Container, Pi vs Mini-PC, erste Integrationen, Dashboards und lokale Automatisierung.',
+      'Home-Assistant-Tutorial 2026 für Einsteiger: auf Pi, Mini-PC oder Windows/macOS/Linux-VM installieren, Integrationen hinzufügen, erste lokale Automatisierung.',
     twitterDescription:
       'Home Assistant Einsteiger-Leitfaden: auf einem Pi oder Mini-PC installieren, Integrationen hinzufügen, Ihre erste lokale Automatisierung bauen. Der Local-First-Hub.',
     readTime: '10 Min. Lesezeit',
@@ -440,13 +476,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Einen Zigbee/Z-Wave-Koordinator für lokale Protokolle hinzufügen',
           'Ein Dashboard und eine erste Automatisierung bauen – alles lokal',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'Kurzfassung', anchor: 'tldr' },
       { label: 'Warum Home Assistant', anchor: 'why-ha' },
       { label: 'Installationsoptionen', anchor: 'install' },
+      { label: 'Windows, macOS & Linux', anchor: 'install-desktop' },
       { label: 'Erste Integrationen', anchor: 'integrations' },
       { label: 'Das Dashboard', anchor: 'dashboard' },
       { label: 'Ihre erste Automatisierung', anchor: 'automation' },
@@ -498,6 +535,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'Raspberry Pi vs. Mini-PC für Home Assistant: Ein Pi bewältigt Dashboards, Automatisierungen und Zigbee/Z-Wave bei niedrigem Stromverbrauch; ein Mini-PC bietet zusätzlich Reserven für ein lokales LLM über Ollama, größere Whisper-Sprachmodelle und Frigate-Kameraerkennung auf demselben Gerät.',
         items: [
           'Für die Hardware-Dimensionierung inklusive eines lokalen LLM siehe [beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home).',
+        ],
+      },
+      installDesktop: {
+        id: 'install-desktop',
+        title: 'Home Assistant unter Windows, macOS oder Linux installieren',
+        content:
+          '**Unter Windows und macOS läuft Home Assistant nur als Home Assistant OS in einer virtuellen Maschine; Linux kann HAOS oder die Container-Installation direkt ausführen.** Home Assistant OS ist ein eigens für die Heimautomatisierung gebautes Betriebssystem; ein Desktop-PC eignet sich zum Testen, aber schlecht für den 24/7-Betrieb.',
+        items: [
+          'Windows: Erstellen Sie in VirtualBox, VMware Workstation oder Hyper-V eine UEFI-VM mit mindestens 2 GB RAM und 2 vCPUs, binden Sie das HAOS-Datenträgerabbild ein und stellen Sie das Netzwerk auf Bridge. Hyper-V kann USB-Zigbee- oder Z-Wave-Sticks nicht an die VM durchreichen.',
+          'macOS: Nutzen Sie einen Hypervisor wie VirtualBox (Apple Silicon verwendet die ARM-64-Bit-Option) mit derselben Bridge-Netzwerk-Einrichtung.',
+          'Linux: Betreiben Sie HAOS in einer VM (zum Beispiel KVM) oder nutzen Sie die Container-Installation mit Docker Compose. Container enthält keine Apps (früher Add-ons), daher brauchen Thread und Z-Wave eine separate Einrichtung.',
+          'Sobald die VM gestartet ist, öffnen Sie die Home-Assistant-Weboberfläche auf Port 8123 der VM in einem beliebigen Browser; da die Steuerung über den Browser läuft, funktioniert es mit jedem Desktop-Betriebssystem.',
+          'Für den Dauerbetrieb wählen Sie ein dediziertes Gerät – Home Assistant Green (empfohlener Preis 199 $ / 179 €, 4 GB RAM, 32 GB Speicher) oder einen Raspberry Pi 4 oder 5 mit mindestens 2 GB RAM –, damit der Hub weiterläuft, wenn Ihr PC schläft. Siehe [die offizielle Installationsanleitung](https://www.home-assistant.io/installation/).',
         ],
       },
       integrations: {
@@ -556,6 +606,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ist Home Assistant kostenlos?', a: 'Ja. Home Assistant ist kostenlos und quelloffen. Sie zahlen nur für die Hardware, auf der es läuft, und optionale Extras (etwa ein Cloud-Relay für einfachen Fernzugriff). Die lokale Kernsteuerung benötigt kein Abonnement.' },
           { q: 'Muss ich programmieren, um Home Assistant zu nutzen?', a: 'Nein. Übliche Setups, Dashboards und Automatisierungen werden über eine grafische Oberfläche gebaut. YAML-Konfiguration ist für fortgeschrittene Automatisierungen verfügbar, aber für den Start optional.' },
           { q: 'Kann Home Assistant KI ausführen?', a: 'Ja. Home Assistant lässt sich mit Ollama verbinden, sodass ein lokales Modell als Konversations-Agent dienen kann, und es unterstützt lokale Sprache mit Whisper und Piper. Diese auf einem Mini-PC zu betreiben hält alles lokal. Siehe den Leitfaden zur Ollama-Anbindung für die Einrichtung.' },
+          { q: 'Kann ich Home Assistant unter Windows oder macOS installieren?', a: 'Ja, aber nur als Home Assistant OS in einer virtuellen Maschine (unter Windows VirtualBox, VMware oder Hyper-V). Geben Sie der VM mindestens 2 GB RAM und 2 vCPUs, UEFI-Start und ein Bridge-Netzwerk. Linux kann außerdem die Container-Installation direkt ausführen.' },
+          { q: 'Was ist Home Assistant OS?', a: 'Home Assistant OS (HAOS) ist ein minimales Betriebssystem, das nur dafür gebaut wurde, Home Assistant auszuführen. Es enthält Apps, Backups und Updates per Klick und ist die Installationsart, die Home Assistant den meisten Nutzern empfiehlt.' },
         ],
       },
       relatedReading: {
@@ -575,13 +627,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant: Vollständiger Einsteiger-Leitfaden (2026)',
-      description: 'Erste Schritte mit Home Assistant 2026: HAOS oder Container, Pi vs Mini-PC, erste Integrationen, Dashboards und lokale Automatisierung.',
+      description: 'Home-Assistant-Tutorial 2026 für Einsteiger: auf Pi, Mini-PC oder Windows/macOS/Linux-VM installieren, Integrationen hinzufügen, erste lokale Automatisierung.',
       url: 'https://www.promptquorum.com/de/smart-home/home-assistant-getting-started',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Heimautomatisierung' }, { '@type': 'Thing', name: 'Lokale Steuerung' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -595,6 +647,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Ist Home Assistant kostenlos?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Es ist kostenlos und quelloffen. Sie zahlen nur für Hardware und optionale Extras wie ein Cloud-Relay für Fernzugriff. Die lokale Kernsteuerung benötigt kein Abonnement.' } },
         { '@type': 'Question', name: 'Muss ich programmieren, um Home Assistant zu nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Übliche Setups, Dashboards und Automatisierungen werden über eine grafische Oberfläche gebaut. YAML ist für fortgeschrittene Automatisierungen optional.' } },
         { '@type': 'Question', name: 'Kann Home Assistant KI ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Es lässt sich mit Ollama für einen lokalen Konversations-Agenten verbinden und unterstützt lokale Sprache mit Whisper und Piper. Auf einem Mini-PC bleibt alles lokal.' } },
+        { '@type': 'Question', name: 'Kann ich Home Assistant unter Windows oder macOS installieren?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, aber nur als Home Assistant OS in einer virtuellen Maschine (unter Windows VirtualBox, VMware oder Hyper-V). Geben Sie der VM mindestens 2 GB RAM und 2 vCPUs, UEFI-Start und ein Bridge-Netzwerk. Linux kann außerdem die Container-Installation direkt ausführen.' } },
+        { '@type': 'Question', name: 'Was ist Home Assistant OS?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant OS (HAOS) ist ein minimales Betriebssystem, das nur dafür gebaut wurde, Home Assistant auszuführen. Es enthält Apps, Backups und Updates per Klick und ist die Installationsart, die Home Assistant den meisten Nutzern empfiehlt.' } },
       ],
     },
   },
@@ -602,8 +656,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/home-assistant-getting-started-overview-hero-es.webp',
     title: 'Home Assistant: Guía Completa para Empezar (2026)',
@@ -611,7 +665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant es el hub de smart home local-first líder: instálalo en una Raspberry Pi o un mini PC, añade integraciones y controla todo localmente sin nube. Esta guía para empezar cubre por qué Home Assistant, las opciones de instalación, las primeras integraciones, el panel, tu primera automatización y dónde añadir IA local más adelante, sin reexplicar la mecánica del LLM.',
     metaDescription:
-      'Empieza con Home Assistant 2026: HAOS o contenedor, Pi vs mini-PC, primeras integraciones, paneles y primera automatización local.',
+      'Tutorial de Home Assistant 2026 para principiantes: instálalo en Pi, mini PC o VM de Windows/macOS/Linux, añade integraciones y crea tu primera automatización.',
     twitterDescription:
       'Guía para empezar con Home Assistant: instala en una Pi o mini PC, añade integraciones, crea tu primera automatización local. El hub local-first.',
     readTime: '10 min de lectura',
@@ -639,13 +693,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Añade un coordinador Zigbee/Z-Wave para protocolos locales',
           'Crea un panel y una primera automatización, todo local',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'Resumen', anchor: 'tldr' },
       { label: 'Por qué Home Assistant', anchor: 'why-ha' },
       { label: 'Opciones de instalación', anchor: 'install' },
+      { label: 'Windows, macOS y Linux', anchor: 'install-desktop' },
       { label: 'Primeras integraciones', anchor: 'integrations' },
       { label: 'El panel', anchor: 'dashboard' },
       { label: 'Tu primera automatización', anchor: 'automation' },
@@ -697,6 +752,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'Raspberry Pi frente a mini PC para Home Assistant: una Pi maneja paneles, automatizaciones y Zigbee/Z-Wave con bajo consumo; un mini PC añade margen para un LLM local vía Ollama, modelos de voz Whisper más grandes y detección de cámara Frigate en el mismo equipo.',
         items: [
           'Para el dimensionado de hardware incluyendo un LLM local, consulta [mejor hardware para un smart home local](/es/smart-home/best-hardware-for-local-smart-home).',
+        ],
+      },
+      installDesktop: {
+        id: 'install-desktop',
+        title: 'Instalar Home Assistant en Windows, macOS o Linux',
+        content:
+          '**En Windows y macOS, Home Assistant solo se ejecuta como Home Assistant OS dentro de una máquina virtual; Linux puede ejecutar HAOS o la instalación Container directamente.** Home Assistant OS es un sistema operativo creado para la domótica; un PC de escritorio sirve para probar, pero es un mal anfitrión 24/7.',
+        items: [
+          'Windows: crea una máquina virtual UEFI en VirtualBox, VMware Workstation o Hyper-V con al menos 2 GB de RAM y 2 vCPU, adjunta la imagen de disco de HAOS y configura la red en modo puente. Hyper-V no puede pasar memorias USB Zigbee o Z-Wave a la VM.',
+          'macOS: usa un hipervisor como VirtualBox (Apple silicon usa la opción ARM de 64 bits) con la misma configuración de red en modo puente.',
+          'Linux: ejecuta HAOS en una VM (por ejemplo KVM) o usa la instalación Container con Docker Compose. Container no incluye apps (antes add-ons), así que Thread y Z-Wave requieren una configuración aparte.',
+          'Cuando la VM arranque, abre la interfaz web de Home Assistant en el puerto 8123 de la VM desde cualquier navegador; como se controla desde el navegador, funciona en cualquier sistema operativo de escritorio.',
+          'Para uso continuo, elige un dispositivo dedicado — Home Assistant Green (precio recomendado 199 $ / 179 €, 4 GB de RAM, 32 GB de almacenamiento) o una Raspberry Pi 4 o 5 con al menos 2 GB de RAM — para que el hub siga funcionando cuando tu PC se suspende. Consulta [la guía oficial de instalación](https://www.home-assistant.io/installation/).',
         ],
       },
       integrations: {
@@ -755,6 +823,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Home Assistant es gratuito?', a: 'Sí. Home Assistant es gratuito y de código abierto. Solo pagas por el hardware donde corre y extras opcionales (por ejemplo, un relay en la nube para acceso remoto fácil). El control local básico no necesita suscripción.' },
           { q: '¿Necesito programar para usar Home Assistant?', a: 'No. Las configuraciones, paneles y automatizaciones comunes se crean mediante una interfaz gráfica. La configuración YAML está disponible para automatizaciones avanzadas, pero es opcional para empezar.' },
           { q: '¿Puede Home Assistant ejecutar IA?', a: 'Sí. Home Assistant se integra con Ollama para que un modelo local actúe como agente de conversación, y admite voz local con Whisper y Piper. Ejecutar esto en un mini PC mantiene todo local. Consulta la guía de la integración de Ollama para configurarlo.' },
+          { q: '¿Puedo instalar Home Assistant en Windows o macOS?', a: 'Sí, pero solo como Home Assistant OS dentro de una máquina virtual (VirtualBox, VMware o Hyper-V en Windows). Dale a la VM al menos 2 GB de RAM y 2 vCPU, arranque UEFI y red en modo puente. Linux también puede ejecutar directamente la instalación Container.' },
+          { q: '¿Qué es Home Assistant OS?', a: 'Home Assistant OS (HAOS) es un sistema operativo mínimo creado solo para ejecutar Home Assistant. Incluye apps, copias de seguridad y actualizaciones con un clic, y es el tipo de instalación que Home Assistant recomienda a la mayoría de usuarios.' },
         ],
       },
       relatedReading: {
@@ -774,13 +844,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant: Guía Completa para Empezar (2026)',
-      description: 'Empieza con Home Assistant 2026: HAOS o contenedor, Pi vs mini-PC, primeras integraciones, paneles y primera automatización local.',
+      description: 'Tutorial de Home Assistant 2026 para principiantes: instálalo en Pi, mini PC o VM de Windows/macOS/Linux, añade integraciones y crea tu primera automatización.',
       url: 'https://www.promptquorum.com/es/smart-home/home-assistant-getting-started',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Domótica' }, { '@type': 'Thing', name: 'Control local' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -794,6 +864,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '¿Home Assistant es gratuito?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Es gratuito y de código abierto. Solo pagas por hardware y extras opcionales como un relay en la nube para acceso remoto. El control local básico no necesita suscripción.' } },
         { '@type': 'Question', name: '¿Necesito programar para usar Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'No. Las configuraciones, paneles y automatizaciones comunes se crean mediante una interfaz gráfica. El YAML es opcional para automatizaciones avanzadas.' } },
         { '@type': 'Question', name: '¿Puede Home Assistant ejecutar IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Se integra con Ollama para un agente de conversación local y admite voz local con Whisper y Piper. Ejecutarlo en un mini PC mantiene todo local.' } },
+        { '@type': 'Question', name: '¿Puedo instalar Home Assistant en Windows o macOS?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, pero solo como Home Assistant OS dentro de una máquina virtual (VirtualBox, VMware o Hyper-V en Windows). Dale a la VM al menos 2 GB de RAM y 2 vCPU, arranque UEFI y red en modo puente. Linux también puede ejecutar directamente la instalación Container.' } },
+        { '@type': 'Question', name: '¿Qué es Home Assistant OS?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant OS (HAOS) es un sistema operativo mínimo creado solo para ejecutar Home Assistant. Incluye apps, copias de seguridad y actualizaciones con un clic, y es el tipo de instalación que Home Assistant recomienda a la mayoría de usuarios.' } },
       ],
     },
   },
@@ -801,8 +873,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/home-assistant-getting-started-overview-hero-ko.webp',
     title: 'Home Assistant: 완전한 시작 가이드 (2026)',
@@ -810,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant는 선도적인 로컬 우선 스마트 홈 허브입니다. Raspberry Pi나 미니 PC에 설치하고 통합을 추가하면 클라우드 없이 모든 것을 로컬로 제어할 수 있습니다. 이 시작 가이드는 Home Assistant를 선택하는 이유, 설치 옵션, 첫 번째 통합, 대시보드, 첫 번째 자동화, 나중에 로컬 AI를 추가하는 방법을 다룹니다.',
     metaDescription:
-      '2026년 Home Assistant 시작하기: 설치 옵션(HAOS, 컨테이너, Pi 대 미니 PC), 첫 번째 통합, 대시보드, 첫 번째 로컬 자동화.',
+      'Home Assistant 2026 입문 튜토리얼: Pi, 미니 PC, Windows/macOS/Linux VM에 설치하고 통합을 추가해 첫 로컬 자동화를 만드세요.',
     twitterDescription:
       'Home Assistant 시작 가이드: Pi 또는 미니 PC에 설치하고, 통합을 추가하며, 첫 번째 로컬 자동화를 구축합니다. 로컬 우선 허브.',
     readTime: '10분 분량',
@@ -838,13 +910,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '로컬 프로토콜을 위한 Zigbee/Z-Wave 코디네이터를 추가하십시오',
           '대시보드와 첫 번째 자동화를 구축하십시오 — 모두 로컬',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'TL;DR', anchor: 'tldr' },
       { label: 'Home Assistant를 선택하는 이유', anchor: 'why-ha' },
       { label: '설치 옵션', anchor: 'install' },
+      { label: 'Windows, macOS, Linux', anchor: 'install-desktop' },
       { label: '첫 번째 통합', anchor: 'integrations' },
       { label: '대시보드', anchor: 'dashboard' },
       { label: '첫 번째 자동화', anchor: 'automation' },
@@ -896,6 +969,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'Home Assistant용 Raspberry Pi와 미니 PC 비교: Pi는 저전력으로 대시보드, 자동화, Zigbee/Z-Wave를 처리하고, 미니 PC는 같은 기기에서 Ollama를 통한 로컬 LLM, 더 큰 Whisper 음성 모델, Frigate 카메라 감지까지 여유롭게 처리합니다.',
         items: [
           '로컬 LLM을 포함한 하드웨어 규모 산정은 [로컬 스마트 홈을 위한 최고의 하드웨어](/ko/smart-home/best-hardware-for-local-smart-home)를 참조하십시오.',
+        ],
+      },
+      installDesktop: {
+        id: 'install-desktop',
+        title: 'Windows, macOS, Linux에 Home Assistant 설치하기',
+        content:
+          '**Windows와 macOS에서는 Home Assistant가 가상 머신 안의 Home Assistant OS로만 실행되며, Linux에서는 HAOS 또는 Container 설치를 직접 실행할 수 있습니다.** Home Assistant OS는 홈 오토메이션 전용으로 만든 운영체제이며, 데스크톱 PC는 테스트에는 쓸 수 있지만 24시간 운영 호스트로는 적합하지 않습니다.',
+        items: [
+          'Windows: VirtualBox, VMware Workstation, Hyper-V에서 RAM 2 GB 이상, 2 vCPU 이상의 UEFI 가상 머신을 만들고 HAOS 디스크 이미지를 연결한 뒤 네트워크를 브리지로 설정합니다. Hyper-V는 USB Zigbee/Z-Wave 스틱을 가상 머신에 전달할 수 없습니다.',
+          'macOS: VirtualBox 같은 하이퍼바이저를 사용하고(Apple 실리콘은 ARM 64비트 옵션 선택) 같은 브리지 네트워크 설정을 합니다.',
+          'Linux: VM(예: KVM)에서 HAOS를 실행하거나 Docker Compose로 Container 설치를 사용합니다. Container에는 앱(구 애드온)이 없으므로 Thread와 Z-Wave는 별도 설정이 필요합니다.',
+          'VM이 부팅되면 아무 브라우저에서 VM의 8123 포트로 Home Assistant 웹 인터페이스를 엽니다. 브라우저로 제어하므로 어떤 데스크톱 운영체제에서도 사용할 수 있습니다.',
+          '상시 운영에는 전용 기기를 고르세요. Home Assistant Green(권장 가격 199달러 / 179유로, RAM 4 GB, 저장공간 32 GB) 또는 RAM 2 GB 이상의 Raspberry Pi 4/5라면 PC가 절전 모드가 되어도 허브가 계속 동작합니다. [공식 설치 가이드](https://www.home-assistant.io/installation/)를 참고하세요.',
         ],
       },
       integrations: {
@@ -954,6 +1040,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Home Assistant는 무료입니까?', a: '네. Home Assistant는 무료 오픈 소스입니다. 실행되는 하드웨어와 원격 접근을 위한 클라우드 릴레이 같은 선택적 추가 기능에만 비용이 듭니다. 핵심 로컬 제어에는 구독이 필요 없습니다.' },
           { q: 'Home Assistant를 사용하려면 코딩이 필요합니까?', a: '아니오. 일반적인 설정, 대시보드, 자동화는 그래픽 인터페이스를 통해 구축됩니다. YAML 설정은 고급 자동화에 사용 가능하지만 시작할 때는 선택 사항입니다.' },
           { q: 'Home Assistant로 AI를 실행할 수 있습니까?', a: '네. Home Assistant는 로컬 모델이 대화 에이전트로 작동할 수 있도록 Ollama와 통합되며, Whisper와 Piper로 로컬 음성을 지원합니다. 미니 PC에서 이것들을 실행하면 모든 것이 로컬로 유지됩니다. 설정은 Ollama 통합 가이드를 참조하십시오.' },
+          { q: 'Windows나 macOS에 Home Assistant를 설치할 수 있나요?', a: '네, 다만 가상 머신 안의 Home Assistant OS로만 가능합니다(Windows에서는 VirtualBox, VMware, Hyper-V). VM에 RAM 2 GB 이상, 2 vCPU 이상, UEFI 부팅, 브리지 네트워크를 할당하세요. Linux에서는 Container 설치도 직접 실행할 수 있습니다.' },
+          { q: 'Home Assistant OS란 무엇인가요?', a: 'Home Assistant OS(HAOS)는 Home Assistant를 실행하기 위해서만 만든 최소 구성의 운영체제입니다. 앱, 백업, 원클릭 업데이트를 포함하며 Home Assistant가 대부분의 사용자에게 권장하는 설치 방식입니다.' },
         ],
       },
       relatedReading: {
@@ -973,13 +1061,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant: 완전한 시작 가이드 (2026)',
-      description: '2026년 Home Assistant 시작하기: 설치 옵션(HAOS, 컨테이너, Pi 대 미니 PC), 첫 번째 통합, 대시보드, 첫 번째 로컬 자동화.',
+      description: 'Home Assistant 2026 입문 튜토리얼: Pi, 미니 PC, Windows/macOS/Linux VM에 설치하고 통합을 추가해 첫 로컬 자동화를 만드세요.',
       url: 'https://www.promptquorum.com/ko/smart-home/home-assistant-getting-started',
       inLanguage: 'ko',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '홈 자동화' }, { '@type': 'Thing', name: '로컬 제어' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -993,6 +1081,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Home Assistant는 무료입니까?', acceptedAnswer: { '@type': 'Answer', text: '네. 무료 오픈 소스입니다. 하드웨어와 원격 접근을 위한 클라우드 릴레이 같은 선택적 추가 기능에만 비용이 듭니다. 핵심 로컬 제어에는 구독이 필요 없습니다.' } },
         { '@type': 'Question', name: 'Home Assistant를 사용하려면 코딩이 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '아니오. 일반적인 설정, 대시보드, 자동화는 그래픽 인터페이스를 통해 구축됩니다. YAML은 고급 자동화에 선택 사항입니다.' } },
         { '@type': 'Question', name: 'Home Assistant로 AI를 실행할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '네. 로컬 대화 에이전트를 위해 Ollama와 통합되며 Whisper와 Piper로 로컬 음성을 지원합니다. 미니 PC에서 실행하면 모든 것이 로컬로 유지됩니다.' } },
+        { '@type': 'Question', name: 'Windows나 macOS에 Home Assistant를 설치할 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '네, 다만 가상 머신 안의 Home Assistant OS로만 가능합니다(Windows에서는 VirtualBox, VMware, Hyper-V). VM에 RAM 2 GB 이상, 2 vCPU 이상, UEFI 부팅, 브리지 네트워크를 할당하세요. Linux에서는 Container 설치도 직접 실행할 수 있습니다.' } },
+        { '@type': 'Question', name: 'Home Assistant OS란 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant OS(HAOS)는 Home Assistant를 실행하기 위해서만 만든 최소 구성의 운영체제입니다. 앱, 백업, 원클릭 업데이트를 포함하며 Home Assistant가 대부분의 사용자에게 권장하는 설치 방식입니다.' } },
       ],
     },
   },
@@ -1000,8 +1090,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/home-assistant-getting-started-overview-hero-fr.webp',
     title: 'Home Assistant : Guide Complet pour Débuter (2026)',
@@ -1009,7 +1099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant est le hub de maison connectée local-first de référence : installez-le sur une Raspberry Pi ou un mini-PC, ajoutez des intégrations et contrôlez tout localement sans cloud. Ce guide de démarrage couvre pourquoi Home Assistant, les options d\'installation, les premières intégrations, le tableau de bord, votre première automatisation et où ajouter de l\'IA locale plus tard, sans réexpliquer la mécanique du LLM.',
     metaDescription:
-      'Débutez avec Home Assistant en 2026 : HAOS ou conteneur, Pi vs mini-PC, premières intégrations, tableaux de bord et première automatisation locale.',
+      'Tutoriel Home Assistant 2026 pour débutants : installation sur Pi, mini PC ou VM Windows/macOS/Linux, intégrations et première automatisation locale.',
     twitterDescription:
       'Guide de démarrage Home Assistant : installez sur une Pi ou un mini-PC, ajoutez des intégrations, créez votre première automatisation locale. Le hub local-first.',
     readTime: '10 min de lecture',
@@ -1037,13 +1127,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ajoutez un coordinateur Zigbee/Z-Wave pour les protocoles locaux',
           'Créez un tableau de bord et une première automatisation, tout en local',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'En bref', anchor: 'tldr' },
       { label: 'Pourquoi Home Assistant', anchor: 'why-ha' },
       { label: 'Options d\'installation', anchor: 'install' },
+      { label: 'Windows, macOS et Linux', anchor: 'install-desktop' },
       { label: 'Premières intégrations', anchor: 'integrations' },
       { label: 'Le tableau de bord', anchor: 'dashboard' },
       { label: 'Votre première automatisation', anchor: 'automation' },
@@ -1095,6 +1186,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'Raspberry Pi contre mini-PC pour Home Assistant : un Pi gère les tableaux de bord, les automatisations et Zigbee/Z-Wave à faible consommation ; un mini-PC ajoute la marge nécessaire pour un LLM local via Ollama, des modèles vocaux Whisper plus grands et la détection caméra Frigate sur le même appareil.',
         items: [
           'Pour le dimensionnement matériel incluant un LLM local, voir [meilleur matériel pour une maison connectée locale](/fr/smart-home/best-hardware-for-local-smart-home).',
+        ],
+      },
+      installDesktop: {
+        id: 'install-desktop',
+        title: 'Installer Home Assistant sous Windows, macOS ou Linux',
+        content:
+          '**Sous Windows et macOS, Home Assistant ne fonctionne que sous forme de Home Assistant OS dans une machine virtuelle ; Linux peut exécuter HAOS ou l\'installation Container directement.** Home Assistant OS est un système d\'exploitation conçu pour la domotique ; un PC de bureau convient pour tester, mais mal pour un fonctionnement 24 h/24.',
+        items: [
+          'Windows : créez une machine virtuelle UEFI dans VirtualBox, VMware Workstation ou Hyper-V avec au moins 2 Go de RAM et 2 vCPU, attachez l\'image disque HAOS et configurez le réseau en mode ponté. Hyper-V ne peut pas transmettre de clés USB Zigbee ou Z-Wave à la VM.',
+          'macOS : utilisez un hyperviseur comme VirtualBox (Apple silicon utilise l\'option ARM 64 bits) avec la même configuration réseau en mode ponté.',
+          'Linux : exécutez HAOS dans une VM (par exemple KVM) ou utilisez l\'installation Container avec Docker Compose. Container n\'inclut pas les applications (anciennement add-ons), donc Thread et Z-Wave demandent une configuration séparée.',
+          'Une fois la VM démarrée, ouvrez l\'interface web de Home Assistant sur le port 8123 de la VM dans n\'importe quel navigateur ; comme le pilotage passe par le navigateur, cela fonctionne depuis tout système de bureau.',
+          'Pour un usage permanent, choisissez un appareil dédié — Home Assistant Green (prix recommandé 199 $ / 179 €, 4 Go de RAM, 32 Go de stockage) ou un Raspberry Pi 4 ou 5 avec au moins 2 Go de RAM — afin que le hub reste actif quand votre PC est en veille. Voir [le guide d\'installation officiel](https://www.home-assistant.io/installation/).',
         ],
       },
       integrations: {
@@ -1153,6 +1257,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Home Assistant est-il gratuit ?', a: 'Oui. Home Assistant est gratuit et open source. Vous payez seulement le matériel sur lequel il tourne et des extras optionnels (par exemple un relais cloud pour un accès à distance facile). Le contrôle local de base ne nécessite aucun abonnement.' },
           { q: 'Dois-je programmer pour utiliser Home Assistant ?', a: 'Non. Les configurations, tableaux de bord et automatisations courants se créent via une interface graphique. La configuration YAML est disponible pour les automatisations avancées, mais optionnelle pour démarrer.' },
           { q: 'Home Assistant peut-il exécuter de l\'IA ?', a: 'Oui. Home Assistant s\'intègre à Ollama pour qu\'un modèle local serve d\'agent de conversation, et prend en charge la voix locale avec Whisper et Piper. Exécuter cela sur un mini-PC garde tout local. Voir le guide de l\'intégration Ollama pour la configuration.' },
+          { q: 'Puis-je installer Home Assistant sous Windows ou macOS ?', a: 'Oui, mais uniquement sous forme de Home Assistant OS dans une machine virtuelle (VirtualBox, VMware ou Hyper-V sous Windows). Donnez à la VM au moins 2 Go de RAM et 2 vCPU, un démarrage UEFI et un réseau ponté. Linux peut aussi exécuter directement l\'installation Container.' },
+          { q: 'Qu\'est-ce que Home Assistant OS ?', a: 'Home Assistant OS (HAOS) est un système d\'exploitation minimal conçu uniquement pour exécuter Home Assistant. Il inclut les applications, les sauvegardes et les mises à jour en un clic, et c\'est le type d\'installation que Home Assistant recommande à la plupart des utilisateurs.' },
         ],
       },
       relatedReading: {
@@ -1172,13 +1278,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant : Guide Complet pour Débuter (2026)',
-      description: 'Débutez avec Home Assistant en 2026 : HAOS ou conteneur, Pi vs mini-PC, premières intégrations, tableaux de bord et première automatisation locale.',
+      description: 'Tutoriel Home Assistant 2026 pour débutants : installation sur Pi, mini PC ou VM Windows/macOS/Linux, intégrations et première automatisation locale.',
       url: 'https://www.promptquorum.com/fr/smart-home/home-assistant-getting-started',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Domotique' }, { '@type': 'Thing', name: 'Contrôle local' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1192,6 +1298,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Home Assistant est-il gratuit ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Il est gratuit et open source. Vous payez seulement le matériel et des extras optionnels comme un relais cloud pour l\'accès à distance. Le contrôle local de base ne nécessite aucun abonnement.' } },
         { '@type': 'Question', name: 'Dois-je programmer pour utiliser Home Assistant ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Les configurations, tableaux de bord et automatisations courants se créent via une interface graphique. Le YAML est optionnel pour les automatisations avancées.' } },
         { '@type': 'Question', name: 'Home Assistant peut-il exécuter de l\'IA ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Il s\'intègre à Ollama pour un agent de conversation local et prend en charge la voix locale avec Whisper et Piper. L\'exécuter sur un mini-PC garde tout local.' } },
+        { '@type': 'Question', name: 'Puis-je installer Home Assistant sous Windows ou macOS ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, mais uniquement sous forme de Home Assistant OS dans une machine virtuelle (VirtualBox, VMware ou Hyper-V sous Windows). Donnez à la VM au moins 2 Go de RAM et 2 vCPU, un démarrage UEFI et un réseau ponté. Linux peut aussi exécuter directement l\'installation Container.' } },
+        { '@type': 'Question', name: 'Qu\'est-ce que Home Assistant OS ?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant OS (HAOS) est un système d\'exploitation minimal conçu uniquement pour exécuter Home Assistant. Il inclut les applications, les sauvegardes et les mises à jour en un clic, et c\'est le type d\'installation que Home Assistant recommande à la plupart des utilisateurs.' } },
       ],
     },
   },
@@ -1199,8 +1307,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/home-assistant-getting-started-overview-hero-ja.webp',
     title: 'Home Assistant：完全入門ガイド（2026）',
@@ -1208,7 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant は主要なローカルファーストのスマートホームハブです：Raspberry Pi やミニPCにインストールし、統合を追加し、すべてをクラウドなしでローカル制御します。本入門ガイドは、なぜ Home Assistant か、インストール方法、最初の統合、ダッシュボード、最初の自動化、そして後でローカルAIをどこに追加するかを扱います——LLMの仕組みは再説明しません。',
     metaDescription:
-      'Home Assistantを2026年に始める完全ガイド：HAOSとコンテナによるインストール手順、Raspberry PiとミニPCの選び方、はじめての統合設定、ダッシュボードの構築方法、最初のローカル自動化の作成まで初心者向けに詳しく解説。',
+      'Home Assistant 2026年入門：Pi・ミニPC・Windows/macOS/LinuxのVMへのインストール、連携の追加、最初のローカル自動化まで。',
     twitterDescription:
       'Home Assistant 入門ガイド：Pi かミニPCにインストールし、統合を追加し、最初のローカル自動化を作る。ローカルファーストのハブ。',
     readTime: '10分で読める',
@@ -1236,13 +1344,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ローカルプロトコルのために Zigbee/Z-Wave コーディネーターを追加',
           'ダッシュボードと最初の自動化を作る——すべてローカル',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: '要点まとめ', anchor: 'tldr' },
       { label: 'なぜ Home Assistant', anchor: 'why-ha' },
       { label: 'インストール方法', anchor: 'install' },
+      { label: 'Windows・macOS・Linux', anchor: 'install-desktop' },
       { label: '最初の統合', anchor: 'integrations' },
       { label: 'ダッシュボード', anchor: 'dashboard' },
       { label: '最初の自動化', anchor: 'automation' },
@@ -1294,6 +1403,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'Home Assistant 向け Raspberry Pi とミニPC の比較：Pi は低消費電力でダッシュボード、自動化、Zigbee/Z-Wave を処理し、ミニPC は同じ機器上で Ollama によるローカルLLM、より大きな Whisper 音声モデル、Frigate カメラ検出まで余裕を持って扱えます。',
         items: [
           'ローカルLLMを含むハードウェアのサイズ選びは[ローカルスマートホームに最適なハードウェア](/ja/smart-home/best-hardware-for-local-smart-home)を参照。',
+        ],
+      },
+      installDesktop: {
+        id: 'install-desktop',
+        title: 'Windows・macOS・LinuxにHome Assistantをインストールする',
+        content:
+          '**WindowsとmacOSでは、Home Assistantは仮想マシン内のHome Assistant OSとしてのみ動作し、LinuxではHAOSまたはContainerインストールを直接実行できます。** Home Assistant OSはホームオートメーション専用に作られたOSです。デスクトップPCはテストには使えますが、24時間365日の運用には向きません。',
+        items: [
+          'Windows：VirtualBox、VMware Workstation、Hyper-VでRAM 2 GB以上・2 vCPU以上のUEFI仮想マシンを作成し、HAOSのディスクイメージを接続して、ネットワークをブリッジに設定します。Hyper-VはUSB接続のZigbee/Z-Waveスティックを仮想マシンに渡せません。',
+          'macOS：VirtualBoxなどのハイパーバイザーを使い（Apple siliconではARM 64ビットを選択）、同じブリッジネットワーク設定にします。',
+          'Linux：VM（例：KVM）でHAOSを実行するか、Docker ComposeでContainerインストールを使います。Containerにはアプリ（旧アドオン）が含まれないため、ThreadやZ-Waveは別途セットアップが必要です。',
+          'VMが起動したら、任意のブラウザでVMのポート8123にあるHome Assistantのウェブインターフェースを開きます。操作はブラウザ経由のため、どのデスクトップOSからでも使えます。',
+          '常時稼働には専用デバイスを選びましょう。Home Assistant Green（推奨価格199ドル／179ユーロ、RAM 4 GB、ストレージ32 GB）または2 GB以上のRaspberry Pi 4/5なら、PCがスリープしてもハブが動き続けます。[公式インストールガイド](https://www.home-assistant.io/installation/)を参照してください。',
         ],
       },
       integrations: {
@@ -1352,6 +1474,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Home Assistant は無料ですか？', a: 'はい。Home Assistant は無料・オープンソースです。費用は動かすハードウェアと、簡単なリモートアクセス用のクラウドリレーなど任意の追加分だけです。ローカルの基本制御にサブスクは不要です。' },
           { q: 'Home Assistant を使うのにプログラミングは必要ですか？', a: 'いいえ。一般的な設定、ダッシュボード、自動化はグラフィカルな画面で作れます。高度な自動化に YAML 設定が使えますが、始めるには任意です。' },
           { q: 'Home Assistant は AI を動かせますか？', a: 'はい。Home Assistant は Ollama と連携してローカルモデルを会話エージェントにでき、Whisper と Piper でローカル音声に対応します。これらをミニPCで動かせばすべてローカルに保てます。設定は Ollama 統合のガイドを参照してください。' },
+          { q: 'WindowsやmacOSにHome Assistantをインストールできますか？', a: 'はい。ただし仮想マシン内のHome Assistant OSとしてのみ可能です（WindowsではVirtualBox、VMware、Hyper-V）。VMにはRAM 2 GB以上、2 vCPU以上、UEFIブート、ブリッジネットワークを割り当ててください。LinuxではContainerインストールも直接実行できます。' },
+          { q: 'Home Assistant OSとは何ですか？', a: 'Home Assistant OS（HAOS）は、Home Assistantを動かすためだけに作られた最小構成のOSです。アプリ、バックアップ、ワンクリック更新を備え、Home Assistantがほとんどのユーザーに推奨するインストール方式です。' },
         ],
       },
       relatedReading: {
@@ -1371,13 +1495,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant：完全入門ガイド（2026）',
-      description: 'Home Assistantを2026年に始める完全ガイド：HAOSとコンテナによるインストール手順、Raspberry PiとミニPCの選び方、はじめての統合設定、ダッシュボードの構築方法、最初のローカル自動化の作成まで初心者向けに詳しく解説。',
+      description: 'Home Assistant 2026年入門：Pi・ミニPC・Windows/macOS/LinuxのVMへのインストール、連携の追加、最初のローカル自動化まで。',
       url: 'https://www.promptquorum.com/ja/smart-home/home-assistant-getting-started',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'ホームオートメーション' }, { '@type': 'Thing', name: 'ローカル制御' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1391,6 +1515,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Home Assistant は無料ですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。無料・オープンソースです。費用はハードウェアと、リモートアクセス用クラウドリレーなど任意の追加分だけ。ローカルの基本制御にサブスクは不要です。' } },
         { '@type': 'Question', name: 'Home Assistant を使うのにプログラミングは必要ですか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。一般的な設定・ダッシュボード・自動化はグラフィカルな画面で作れます。高度な自動化に YAML は任意です。' } },
         { '@type': 'Question', name: 'Home Assistant は AI を動かせますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。Ollama と連携してローカルモデルを会話エージェントにでき、Whisper と Piper でローカル音声に対応します。ミニPCで動かせばすべてローカルに保てます。' } },
+        { '@type': 'Question', name: 'WindowsやmacOSにHome Assistantをインストールできますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。ただし仮想マシン内のHome Assistant OSとしてのみ可能です（WindowsではVirtualBox、VMware、Hyper-V）。VMにはRAM 2 GB以上、2 vCPU以上、UEFIブート、ブリッジネットワークを割り当ててください。LinuxではContainerインストールも直接実行できます。' } },
+        { '@type': 'Question', name: 'Home Assistant OSとは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant OS（HAOS）は、Home Assistantを動かすためだけに作られた最小構成のOSです。アプリ、バックアップ、ワンクリック更新を備え、Home Assistantがほとんどのユーザーに推奨するインストール方式です。' } },
       ],
     },
   },
@@ -1398,8 +1524,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/home-assistant-getting-started-overview-hero-pt.webp',
     title: 'Home Assistant: Guia Completo para Começar (2026)',
@@ -1407,7 +1533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O Home Assistant é o hub de casa inteligente local-first líder: instale-o em uma Raspberry Pi ou mini PC, adicione integrações e controle tudo localmente sem nuvem. Este guia para começar cobre por que o Home Assistant, as opções de instalação, as primeiras integrações, o painel, sua primeira automação e onde adicionar IA local depois, sem reexplicar a mecânica do LLM.',
     metaDescription:
-      'Comece com o Home Assistant em 2026: opções de instalação (HAOS, contêiner, Pi vs mini PC), primeiras integrações, painéis e sua primeira automação local.',
+      'Tutorial de Home Assistant 2026 para iniciantes: instale em Pi, mini PC ou VM Windows/macOS/Linux, adicione integrações e crie sua primeira automação local.',
     twitterDescription:
       'Guia para começar com o Home Assistant: instale em uma Pi ou mini PC, adicione integrações, crie sua primeira automação local. O hub local-first.',
     readTime: '10 min de leitura',
@@ -1435,13 +1561,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Adicione um coordenador Zigbee/Z-Wave para protocolos locais',
           'Crie um painel e uma primeira automação — tudo local',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: 'Resumo', anchor: 'tldr' },
       { label: 'Por que o Home Assistant', anchor: 'why-ha' },
       { label: 'Opções de instalação', anchor: 'install' },
+      { label: 'Windows, macOS e Linux', anchor: 'install-desktop' },
       { label: 'Primeiras integrações', anchor: 'integrations' },
       { label: 'O painel', anchor: 'dashboard' },
       { label: 'Sua primeira automação', anchor: 'automation' },
@@ -1493,6 +1620,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'Raspberry Pi vs. mini PC para o Home Assistant: um Pi cuida de painéis, automações e Zigbee/Z-Wave com baixo consumo; um mini PC acrescenta folga para um LLM local via Ollama, modelos de voz Whisper maiores e detecção de câmera Frigate na mesma máquina.',
         items: [
           'Para o dimensionamento de hardware incluindo um LLM local, veja [melhor hardware para uma casa inteligente local](/pt/smart-home/best-hardware-for-local-smart-home).',
+        ],
+      },
+      installDesktop: {
+        id: 'install-desktop',
+        title: 'Instalando o Home Assistant no Windows, macOS ou Linux',
+        content:
+          '**No Windows e no macOS, o Home Assistant roda apenas como Home Assistant OS dentro de uma máquina virtual; o Linux pode rodar o HAOS ou a instalação Container diretamente.** O Home Assistant OS é um sistema operacional feito para automação residencial; um PC de mesa serve para testar, mas é um mau host 24/7.',
+        items: [
+          'Windows: crie uma máquina virtual UEFI no VirtualBox, VMware Workstation ou Hyper-V com pelo menos 2 GB de RAM e 2 vCPUs, anexe a imagem de disco do HAOS e configure a rede em modo bridge. O Hyper-V não repassa pendrives USB Zigbee ou Z-Wave para a VM.',
+          'macOS: use um hipervisor como o VirtualBox (Apple silicon usa a opção ARM de 64 bits) com a mesma configuração de rede em modo bridge.',
+          'Linux: rode o HAOS em uma VM (por exemplo, KVM) ou use a instalação Container com Docker Compose. O Container não inclui apps (antes add-ons), então Thread e Z-Wave exigem configuração separada.',
+          'Quando a VM iniciar, abra a interface web do Home Assistant na porta 8123 da VM em qualquer navegador; como o controle é feito pelo navegador, funciona em qualquer sistema operacional de desktop.',
+          'Para uso contínuo, escolha um dispositivo dedicado — Home Assistant Green (preço recomendado US$ 199 / € 179, 4 GB de RAM, 32 GB de armazenamento) ou um Raspberry Pi 4 ou 5 com pelo menos 2 GB de RAM — para que o hub continue funcionando quando seu PC entrar em suspensão. Veja [o guia oficial de instalação](https://www.home-assistant.io/installation/).',
         ],
       },
       integrations: {
@@ -1551,6 +1691,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O Home Assistant é gratuito?', a: 'Sim. O Home Assistant é gratuito e de código aberto. Você paga apenas pelo hardware em que roda e por extras opcionais (por exemplo, um relay na nuvem para acesso remoto fácil). O controle local básico não precisa de assinatura.' },
           { q: 'Preciso programar para usar o Home Assistant?', a: 'Não. As configurações, painéis e automações comuns são criados por uma interface gráfica. A configuração YAML está disponível para automações avançadas, mas é opcional para começar.' },
           { q: 'O Home Assistant pode rodar IA?', a: 'Sim. O Home Assistant se integra ao Ollama para que um modelo local atue como agente de conversa, e suporta voz local com Whisper e Piper. Rodar isso em um mini PC mantém tudo local. Veja o guia da integração do Ollama para configurar.' },
+          { q: 'Posso instalar o Home Assistant no Windows ou no macOS?', a: 'Sim, mas apenas como Home Assistant OS dentro de uma máquina virtual (VirtualBox, VMware ou Hyper-V no Windows). Dê à VM pelo menos 2 GB de RAM e 2 vCPUs, inicialização UEFI e rede em modo bridge. O Linux também pode rodar a instalação Container diretamente.' },
+          { q: 'O que é o Home Assistant OS?', a: 'O Home Assistant OS (HAOS) é um sistema operacional mínimo criado apenas para rodar o Home Assistant. Inclui apps, backups e atualizações com um clique, e é o tipo de instalação que o Home Assistant recomenda para a maioria dos usuários.' },
         ],
       },
       relatedReading: {
@@ -1570,13 +1712,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant: Guia Completo para Começar (2026)',
-      description: 'Comece com o Home Assistant em 2026: opções de instalação (HAOS, contêiner, Pi vs mini PC), primeiras integrações, painéis e sua primeira automação local.',
+      description: 'Tutorial de Home Assistant 2026 para iniciantes: instale em Pi, mini PC ou VM Windows/macOS/Linux, adicione integrações e crie sua primeira automação local.',
       url: 'https://www.promptquorum.com/pt/smart-home/home-assistant-getting-started',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Automação residencial' }, { '@type': 'Thing', name: 'Controle local' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1590,6 +1732,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'O Home Assistant é gratuito?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. É gratuito e de código aberto. Você paga apenas pelo hardware e extras opcionais como um relay na nuvem para acesso remoto. O controle local básico não precisa de assinatura.' } },
         { '@type': 'Question', name: 'Preciso programar para usar o Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Não. As configurações, painéis e automações comuns são criados por uma interface gráfica. O YAML é opcional para automações avançadas.' } },
         { '@type': 'Question', name: 'O Home Assistant pode rodar IA?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Integra-se ao Ollama para um agente de conversa local e suporta voz local com Whisper e Piper. Rodar isso em um mini PC mantém tudo local.' } },
+        { '@type': 'Question', name: 'Posso instalar o Home Assistant no Windows ou no macOS?', acceptedAnswer: { '@type': 'Answer', text: 'Sim, mas apenas como Home Assistant OS dentro de uma máquina virtual (VirtualBox, VMware ou Hyper-V no Windows). Dê à VM pelo menos 2 GB de RAM e 2 vCPUs, inicialização UEFI e rede em modo bridge. O Linux também pode rodar a instalação Container diretamente.' } },
+        { '@type': 'Question', name: 'O que é o Home Assistant OS?', acceptedAnswer: { '@type': 'Answer', text: 'O Home Assistant OS (HAOS) é um sistema operacional mínimo criado apenas para rodar o Home Assistant. Inclui apps, backups e atualizações com um clique, e é o tipo de instalação que o Home Assistant recomenda para a maioria dos usuários.' } },
       ],
     },
   },
@@ -1597,8 +1741,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-04',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Local-First Smart Home',
     heroImage: '/images/home-assistant-getting-started-overview-hero-zh.webp',
     title: 'Home Assistant：完整入门指南（2026）',
@@ -1606,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant 是领先的本地优先智能家居中枢：把它装在 Raspberry Pi 或迷你 PC 上，添加集成，并在无云端的情况下本地控制一切。本入门指南讲解为何选 Home Assistant、安装方式、首批集成、仪表盘、你的第一条自动化，以及以后在哪里添加本地 AI——不再赘述 LLM 机制。',
     metaDescription:
-      '2026年Home Assistant完整入门教程：全面介绍HAOS、容器部署、Raspberry Pi和迷你PC的安装方式，详细指导完成首批设备集成、自定义仪表盘搭建，以及创建第一条完全本地运行的自动化规则，全程无需云端服务。',
+      'Home Assistant 2026 入门教程：安装到树莓派、迷你主机或 Windows/macOS/Linux 虚拟机，添加集成并创建第一个本地自动化。',
     twitterDescription:
       'Home Assistant 入门指南：装在 Pi 或迷你 PC 上，添加集成，创建你的第一条本地自动化。本地优先中枢。',
     readTime: '阅读约10分钟',
@@ -1634,13 +1778,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '为本地协议添加 Zigbee/Z-Wave 协调器',
           '创建仪表盘和第一条自动化——全部本地',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
       { label: '要点速览', anchor: 'tldr' },
       { label: '为何选 Home Assistant', anchor: 'why-ha' },
       { label: '安装方式', anchor: 'install' },
+      { label: 'Windows、macOS 和 Linux', anchor: 'install-desktop' },
       { label: '首批集成', anchor: 'integrations' },
       { label: '仪表盘', anchor: 'dashboard' },
       { label: '你的第一条自动化', anchor: 'automation' },
@@ -1692,6 +1837,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         imageCaption: 'Home Assistant 的 Raspberry Pi 与迷你 PC 对比：Pi 以低功耗处理仪表盘、自动化和 Zigbee/Z-Wave；迷你 PC 则为通过 Ollama 运行本地 LLM、更大的 Whisper 语音模型以及 Frigate 摄像头检测预留了余量，且可在同一台设备上运行。',
         items: [
           '关于含本地 LLM 的硬件规模选择，参见[本地智能家居的最佳硬件](/zh/smart-home/best-hardware-for-local-smart-home)。',
+        ],
+      },
+      installDesktop: {
+        id: 'install-desktop',
+        title: '在 Windows、macOS 或 Linux 上安装 Home Assistant',
+        content:
+          '**在 Windows 和 macOS 上，Home Assistant 只能以 Home Assistant OS 的形式运行在虚拟机中；Linux 可以直接运行 HAOS 或 Container 安装。** Home Assistant OS 是专为家庭自动化打造的操作系统；台式机适合测试，但不适合作为 24/7 运行的主机。',
+        items: [
+          'Windows：在 VirtualBox、VMware Workstation 或 Hyper-V 中创建至少 2 GB 内存、2 个 vCPU 的 UEFI 虚拟机，挂载 HAOS 磁盘镜像，并将网络设置为桥接。Hyper-V 无法把 USB 的 Zigbee 或 Z-Wave 适配器直通给虚拟机。',
+          'macOS：使用 VirtualBox 等虚拟化软件（Apple 芯片选择 ARM 64 位选项），网络同样设置为桥接。',
+          'Linux：在虚拟机（例如 KVM）中运行 HAOS，或使用 Docker Compose 的 Container 安装。Container 不含应用（原称加载项），因此 Thread 和 Z-Wave 需要另行配置。',
+          '虚拟机启动后，在任意浏览器中打开该虚拟机 8123 端口上的 Home Assistant 网页界面；由于通过浏览器控制，它可在任何桌面操作系统上使用。',
+          '若要长期运行，请选择专用设备——Home Assistant Green（建议售价 199 美元 / 179 欧元，4 GB 内存，32 GB 存储）或至少 2 GB 内存的 Raspberry Pi 4 或 5——这样即使电脑休眠，中枢也能持续运行。参见[官方安装指南](https://www.home-assistant.io/installation/)。',
         ],
       },
       integrations: {
@@ -1750,6 +1908,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Home Assistant 免费吗？', a: '是的。Home Assistant 免费且开源。你只为运行它的硬件以及可选附加项（例如便于远程访问的云中继）付费。本地核心控制无需订阅。' },
           { q: '使用 Home Assistant 需要编程吗？', a: '不需要。常见的配置、仪表盘和自动化都通过图形界面创建。高级自动化可用 YAML 配置，但入门时是可选的。' },
           { q: 'Home Assistant 能运行 AI 吗？', a: '能。Home Assistant 与 Ollama 集成，可让本地模型充当对话代理，并通过 Whisper 和 Piper 支持本地语音。在迷你 PC 上运行这些可保持一切本地。配置参见 Ollama 集成指南。' },
+          { q: '可以在 Windows 或 macOS 上安装 Home Assistant 吗？', a: '可以，但只能以 Home Assistant OS 的形式运行在虚拟机中（Windows 上可用 VirtualBox、VMware 或 Hyper-V）。请给虚拟机分配至少 2 GB 内存、2 个 vCPU、UEFI 启动和桥接网络。Linux 也可以直接运行 Container 安装。' },
+          { q: '什么是 Home Assistant OS？', a: 'Home Assistant OS（HAOS）是专为运行 Home Assistant 而打造的精简操作系统。它包含应用、备份和一键更新，是 Home Assistant 向大多数用户推荐的安装方式。' },
         ],
       },
       relatedReading: {
@@ -1769,13 +1929,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant：完整入门指南（2026）',
-      description: '2026年Home Assistant完整入门教程：全面介绍HAOS、容器部署、Raspberry Pi和迷你PC的安装方式，详细指导完成首批设备集成、自定义仪表盘搭建，以及创建第一条完全本地运行的自动化规则，全程无需云端服务。',
+      description: 'Home Assistant 2026 入门教程：安装到树莓派、迷你主机或 Windows/macOS/Linux 虚拟机，添加集成并创建第一个本地自动化。',
       url: 'https://www.promptquorum.com/zh/smart-home/home-assistant-getting-started',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-04',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '家庭自动化' }, { '@type': 'Thing', name: '本地控制' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1789,6 +1949,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Home Assistant 免费吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。免费且开源。你只为硬件和可选附加项（如远程访问的云中继）付费。本地核心控制无需订阅。' } },
         { '@type': 'Question', name: '使用 Home Assistant 需要编程吗？', acceptedAnswer: { '@type': 'Answer', text: '不需要。常见的配置、仪表盘和自动化都通过图形界面创建。高级自动化可用 YAML，但属可选。' } },
         { '@type': 'Question', name: 'Home Assistant 能运行 AI 吗？', acceptedAnswer: { '@type': 'Answer', text: '能。它与 Ollama 集成可让本地模型充当对话代理，并通过 Whisper 和 Piper 支持本地语音。在迷你 PC 上运行可保持一切本地。' } },
+        { '@type': 'Question', name: '可以在 Windows 或 macOS 上安装 Home Assistant 吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，但只能以 Home Assistant OS 的形式运行在虚拟机中（Windows 上可用 VirtualBox、VMware 或 Hyper-V）。请给虚拟机分配至少 2 GB 内存、2 个 vCPU、UEFI 启动和桥接网络。Linux 也可以直接运行 Container 安装。' } },
+        { '@type': 'Question', name: '什么是 Home Assistant OS？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant OS（HAOS）是专为运行 Home Assistant 而打造的精简操作系统。它包含应用、备份和一键更新，是 Home Assistant 向大多数用户推荐的安装方式。' } },
       ],
     },
   },
