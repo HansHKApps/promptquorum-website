@@ -11,11 +11,11 @@
   <text x="100" y="130" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">1975</text>
   <text x="100" y="148" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">X10</text>
 
-  <!-- Point 2: Wireless Mesh / 2001 — label below -->
+  <!-- Point 2: Wireless Mesh / 2004 — label below -->
   <line x1="250" y1="216" x2="250" y2="236" stroke="#79747E" stroke-width="1"/>
   <circle cx="250" cy="200" r="16" fill="#6750A4"/>
   <text x="250" y="255" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Wireless Mesh</text>
-  <text x="250" y="273" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">2001–2000s</text>
+  <text x="250" y="273" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#6750A4" text-anchor="middle">2004–2010</text>
   <text x="250" y="291" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Z-Wave, Zigbee</text>
 
   <!-- Point 3: Cloud / 2011 — label above -->
@@ -39,5 +39,5 @@
   <text x="700" y="130" font-family="'SF Mono', Monaco, monospace" font-size="11" font-weight="700" fill="#34A853" text-anchor="middle">2026+</text>
   <text x="700" y="148" font-family="system-ui, sans-serif" font-size="11" fill="#49454F" text-anchor="middle">Local LLMs</text>
 
-  <text x="400" y="345" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">A 50-year arc: X10 (1975) to wireless mesh (2001) to cloud (2011) to Matter (2022) to local AI (2026).</text>
+  <text x="400" y="345" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">A 50-year arc: X10 (1975) to wireless mesh (2004) to cloud (2011) to Matter (2022) to local AI (2026).</text>
 <text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
