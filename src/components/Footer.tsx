@@ -40,7 +40,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     copyright: '© 2026 PromptQuorum. All rights reserved.',
     worldwide: '🌍 Available worldwide',
     about: 'About',
-    frameworks: 'Frameworks',
     privacy: 'Privacy Policy',
     impressum: 'Impressum',
     contact: 'hello@promptquorum.com',
@@ -50,7 +49,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     copyright: '© 2026 PromptQuorum. Alle Rechte vorbehalten.',
     worldwide: '🌍 Weltweit verfügbar',
     about: 'Über uns',
-    frameworks: 'Frameworks',
     privacy: 'Datenschutzerklärung',
     impressum: 'Impressum',
     contact: 'hello@promptquorum.com',
@@ -60,7 +58,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     copyright: '© 2026 PromptQuorum. Tous droits réservés.',
     worldwide: '🌍 Disponible mondialement',
     about: 'À propos',
-    frameworks: 'Frameworks',
     privacy: 'Politique de confidentialité',
     impressum: 'Mentions légales',
     contact: 'hello@promptquorum.com',
@@ -70,7 +67,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     copyright: '© 2026 PromptQuorum. すべての権利を保有しています。',
     worldwide: '🌍 世界中で利用可能',
     about: 'について',
-    frameworks: 'Frameworks',
     privacy: 'プライバシーポリシー',
     impressum: '法務',
     contact: 'hello@promptquorum.com',
@@ -80,7 +76,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     copyright: '© 2026 PromptQuorum. 版权所有。',
     worldwide: '🌍 全球可用',
     about: '关于',
-    frameworks: 'Frameworks',
     privacy: '隐私政策',
     impressum: '法律声明',
     contact: 'hello@promptquorum.com',
@@ -90,7 +85,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     copyright: '© 2026 PromptQuorum. Todos los derechos reservados.',
     worldwide: '🌍 Disponible en todo el mundo',
     about: 'Acerca de',
-    frameworks: 'Frameworks',
     privacy: 'Política de privacidad',
     impressum: 'Aviso legal',
     contact: 'hello@promptquorum.com',
@@ -100,7 +94,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     copyright: '© 2026 PromptQuorum. Todos os direitos reservados.',
     worldwide: '🌍 Disponível em todo o mundo',
     about: 'Sobre',
-    frameworks: 'Frameworks',
     privacy: 'Política de Privacidade',
     impressum: 'Aviso Legal',
     contact: 'hello@promptquorum.com',
@@ -110,7 +103,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     copyright: '© 2026 PromptQuorum. جميع الحقوق محفوظة.',
     worldwide: '🌍 متاح في جميع أنحاء العالم',
     about: 'حول',
-    frameworks: 'Frameworks',
     privacy: 'سياسة الخصوصية',
     impressum: 'الإشعار القانوني',
     contact: 'hello@promptquorum.com',
@@ -120,7 +112,6 @@ const FOOTER_COPY: Record<Language, Record<string, string>> = {
     copyright: '© 2026 PromptQuorum. 모든 권리 보유.',
     worldwide: '🌍 전 세계 이용 가능',
     about: '소개',
-    frameworks: '프레임워크',
     privacy: '개인 정보 처리 방침',
     impressum: '법적 고지',
     contact: 'hello@promptquorum.com',
@@ -224,8 +215,6 @@ export function Footer({ lang = 'en' }: { lang?: Language }) {
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs">
             <a href={`${langPrefix}/about`} className="hover:text-primary transition-colors">{t.about}</a>
-            <span aria-hidden="true">•</span>
-            <a href={`${langPrefix}/frameworks`} className="hover:text-primary transition-colors">{t.frameworks}</a>
             <span aria-hidden="true">•</span>
             <a href={`${langPrefix}/privacy`} className="hover:text-primary transition-colors">{t.privacy}</a>
             <span aria-hidden="true">•</span>

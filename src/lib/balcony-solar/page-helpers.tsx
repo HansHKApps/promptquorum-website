@@ -438,14 +438,14 @@ const HUB_COPY: Partial<Record<Lang, HubCopy>> = {
     ],
   },
   de: {
-    title: 'Balcony Solar: Sets, Regeln und Setups ohne Cloud',
-    intro: 'Ein Steckersolargerät (Balkonkraftwerk) erzeugt eigenen Strom vom Balkongeländer, der Wand oder dem Garten — ganz ohne Dachinstallateur. Diese 33 Guides decken den gesamten Stack ab: die besten Sets, Speicher und Mikrowechselrichter, die Rechtslage je Land, Installation und Anmeldung sowie den Betrieb über Home Assistant statt einer Hersteller-Cloud.',
-    intro2: 'Die meisten Hersteller von Balkonkraftwerken drängen zur eigenen App und Cloud-Anbindung — Hoymiles, Deye, APsystems, EcoFlow, Anker und Zendure leiten Erzeugungsdaten standardmäßig über einen Hersteller-Server. Ein lokales Setup liest dieselben Daten direkt vom Wechselrichter oder Speicher aus und behält sie auf eigener Hardware — die Überwachung funktioniert also auch dann noch, wenn die Hersteller-App verschwindet.',
+    title: 'Balkonkraftwerke: Sets, Regeln und Setups ohne Cloud',
+    intro: 'Ein Steckersolargerät (Balkonkraftwerk) erzeugt eigenen Strom vom Balkongeländer, der Wand oder dem Garten — **ganz ohne Dachinstallateur**. Diese 33 Anleitungen decken den gesamten Stack ab: die besten Sets, Speicher und Mikrowechselrichter, die Rechtslage je Land, Installation und Anmeldung sowie **den Betrieb über Home Assistant statt einer Hersteller-Cloud**.',
+    intro2: 'Die meisten Hersteller von Balkonkraftwerken drängen zur eigenen App und Cloud-Anbindung — Hoymiles, Deye, APsystems, EcoFlow, Anker und Zendure leiten Erzeugungsdaten standardmäßig über einen Hersteller-Server. **Ein lokales Setup liest dieselben Daten direkt vom Wechselrichter oder Speicher aus und behält sie auf eigener Hardware** — die Überwachung funktioniert also auch dann noch, **wenn die Hersteller-App verschwindet**.',
     benefits: [
-      { label: 'Kein Installateur nötig', detail: 'Einfach in eine Steckdose oder den Anschluss des Wechselrichters stecken — kein Elektriker, keine Dacharbeiten, in den meisten meldepflichtigen Märkten keine Genehmigung.' },
-      { label: 'Schnelle Amortisation', detail: 'Ein einfaches 600–800-Watt-Set kostet meist ein paar Hundert Euro und kann sich je nach lokalem Strompreis innerhalb weniger Jahre amortisieren.' },
-      { label: 'Keine Hersteller-Cloud', detail: 'Home Assistant liest die meisten gängigen Wechselrichter und Speicher direkt über Modbus, MQTT oder eine lokale API aus — die Erzeugungsdaten bleiben im eigenen Netzwerk.' },
-      { label: 'Zunehmend legal', detail: 'Frankreich, Österreich, Belgien, die Niederlande, Deutschland und Portugal erlauben alle eine reine Meldepflicht; acht US-Bundesstaaten haben seit 2025 eigene Gesetze verabschiedet.' },
+      { label: 'Kein Installateur nötig', detail: 'Einfach in eine Steckdose oder den Anschluss des Wechselrichters stecken — **kein Elektriker, keine Dacharbeiten**, in den meisten meldepflichtigen Märkten **keine Genehmigung**.' },
+      { label: 'Schnelle Amortisation', detail: 'Ein einfaches 600–800-Watt-Set kostet meist **ein paar Hundert Euro** und kann sich je nach lokalem Strompreis **innerhalb weniger Jahre** amortisieren.' },
+      { label: 'Keine Hersteller-Cloud', detail: 'Home Assistant liest die meisten gängigen Wechselrichter und Speicher direkt über Modbus, MQTT oder eine lokale API aus — **die Erzeugungsdaten bleiben im eigenen Netzwerk**.' },
+      { label: 'Zunehmend legal', detail: 'Frankreich, Österreich, Belgien, die Niederlande, Deutschland und Portugal erlauben alle **eine reine Meldepflicht**; **acht US-Bundesstaaten** haben seit 2025 eigene Gesetze verabschiedet.' },
     ],
   },
   fr: {
@@ -536,11 +536,11 @@ const CATEGORY_COPY: Partial<Record<Lang, Record<string, { badge: string; descri
     'trends-2027':    { badge: '2027 Trends', description: 'What changes in 2027: EU battery/wattage standards, B2B housing-association adoption, the end of net metering in the Netherlands, and country-by-country status reports for Japan, China, Brazil, Greece, and the Gulf/MENA gap.' },
   },
   de: {
-    'hub-money':      { badge: 'Hier starten',          description: 'Die Grundlagen und die wichtigsten Kaufberatungen: was ein Balkonkraftwerk ist, die besten Sets, Speicher und Mikrowechselrichter, und der Betrieb ohne Cloud.' },
+    'hub-money':      { badge: 'Hier starten',          description: 'Die Grundlagen und die wichtigsten Kaufberatungen: was ein Balkonkraftwerk ist, die besten Sets, Speicher und Mikrowechselrichter, und **der Betrieb ohne Cloud**.' },
     'decision-howto': { badge: 'Entscheidung & Anleitung',        description: 'Praxis-Ratgeber: Balkon vs. Dach, Installation, Anmeldung, Dimensionierung und Amortisation, Montage.' },
-    'legislation':    { badge: 'Rechtslage nach Land',             description: 'Rechtlicher Status je Land: der globale Tracker sowie eigene Seiten für die USA, Deutschland, Spanien/LatAm, Portugal/Brasilien und die Golfregion/MENA.' },
-    'long-tail':      { badge: 'Kaufberatung & Fehlerbehebung',   description: 'Markenvergleiche, ob Sie einen Speicher benötigen, ob sich die Amortisation lohnt, und Lösungen, wenn die Anlage nichts mehr liefert.' },
-    'trends-2027':    { badge: 'Trends 2027', description: 'Was sich 2027 ändert: EU-Speicher-/Leistungsstandards, B2B-Adoption durch Wohnungsgenossenschaften, das Ende des Net-Metering in den Niederlanden sowie länderspezifische Statusberichte für Japan, China, Brasilien, Griechenland und die Golfregion/MENA-Lücke.' },
+    'legislation':    { badge: 'Rechtslage nach Land',             description: 'Rechtlicher Status je Land: der globale Tracker sowie eigene Seiten für **die USA, Deutschland, Spanien/LatAm, Portugal/Brasilien und die Golfregion/MENA**.' },
+    'long-tail':      { badge: 'Kaufberatung & Fehlerbehebung',   description: 'Markenvergleiche, ob Sie einen Speicher benötigen, ob sich die Amortisation lohnt, und **Lösungen, wenn die Anlage nichts mehr liefert**.' },
+    'trends-2027':    { badge: 'Trends 2027', description: 'Was sich 2027 ändert: EU-Speicher-/Leistungsstandards, B2B-Adoption durch Wohnungsgenossenschaften, **das Ende des Net-Metering in den Niederlanden** sowie länderspezifische Statusberichte für Japan, China, Brasilien, Griechenland und die Golfregion/MENA-Lücke.' },
   },
   fr: {
     'hub-money':      { badge: 'Commencer ici', description: 'Les bases et les principaux guides d\'achat : qu\'est-ce que le solaire de balcon, les meilleurs kits, batteries et micro-onduleurs, et le pilotage sans cloud.' },
@@ -593,7 +593,7 @@ const CATEGORY_COPY: Partial<Record<Lang, Record<string, { badge: string; descri
   },
 }
 
-interface HubFaqEntry { q: string; a: string }
+interface HubFaqEntry { q: string; a: string; bullets?: string[] }
 
 const HUB_FAQ: Partial<Record<Lang, HubFaqEntry[]>> = {
   en: [
@@ -604,11 +604,28 @@ const HUB_FAQ: Partial<Record<Lang, HubFaqEntry[]>> = {
     { q: 'Is balcony solar legal where I live?', a: 'Check the country-by-country guide in this cluster — legal status ranges from fully codified (Germany, Portugal, France) to notification-only (Austria, Belgium, Netherlands) to nascent or unaddressed (the UAE, Saudi Arabia, Brazil, Japan, Bahrain, Taiwan) to state-by-state (the US).' },
   ],
   de: [
-    { q: 'Was ist ein Balkonkraftwerk?', a: 'Ein steckerfertiges Solargerät — meist ein oder zwei Module mit einem kleinen Mikrowechselrichter —, das direkt an eine Haushaltssteckdose oder einen eigenen Anschluss angeschlossen wird und Strom für den Eigenverbrauch erzeugt, ohne Dachinstallation oder Elektriker in den meisten Märkten.' },
-    { q: 'Brauche ich eine Genehmigung für ein Balkonkraftwerk?', a: 'Das hängt vom Land ab. Frankreich, Österreich, Belgien, die Niederlande, Deutschland und Portugal verlangen für kleine Anlagen nur eine einfache Meldung; die USA haben inzwischen 8 Bundesstaaten mit eigenen Gesetzen; mehrere andere Märkte — die VAE, Saudi-Arabien, Brasilien, Japan — haben noch keinen eigenen Rahmen, die Anforderungen variieren also.' },
-    { q: 'Was kostet ein Balkonkraftwerk-Set, und wie schnell amortisiert es sich?', a: 'Typische Sets kosten je nach Modulanzahl, Wechselrichter-Marke und Speicheroption zwischen ein paar Hundert und rund tausend Euro — die Amortisation liegt meist zwischen 2 und 5 Jahren, abhängig vom lokalen Strompreis und dem tatsächlichen Eigenverbrauchsanteil.' },
-    { q: 'Kann ich mein Balkonkraftwerk ohne die Hersteller-Cloud überwachen?', a: 'Ja, bei den meisten großen Marken — Wechselrichter und Speicher von Hoymiles, Deye, APsystems, EcoFlow, Anker und Zendure lassen sich lokal über Modbus, MQTT oder eine lokale API auslesen und in Home Assistant einbinden, sodass die Erzeugungsdaten nicht auf den Servern des Herstellers landen.' },
-    { q: 'Ist ein Balkonkraftwerk an meinem Wohnort legal?', a: 'Siehe den Länder-Guide in diesem Cluster — der rechtliche Status reicht von vollständig kodifiziert (Deutschland, Portugal, Frankreich) über reine Meldepflicht (Österreich, Belgien, Niederlande) bis zu unklar oder ungeregelt (VAE, Saudi-Arabien, Brasilien, Japan, Bahrain, Taiwan) und bundesstaatenweise geregelt (USA).' },
+    { q: 'Was ist ein Balkonkraftwerk?', a: 'Ein steckerfertiges Solargerät — meist ein oder zwei Module mit einem kleinen Mikrowechselrichter —, das direkt an eine Haushaltssteckdose oder einen eigenen Anschluss angeschlossen wird und Strom für den Eigenverbrauch erzeugt, **ohne Dachinstallation oder Elektriker in den meisten Märkten**.' },
+    {
+      q: 'Brauche ich eine Genehmigung für ein Balkonkraftwerk?',
+      a: 'Das hängt vom Land ab — die Anforderungen reichen von einer einfachen Meldung bis zu fehlenden Regeln.',
+      bullets: [
+        '**Frankreich, Österreich, Belgien, die Niederlande, Deutschland und Portugal**: nur eine einfache Meldung für kleine Anlagen.',
+        '**USA**: inzwischen 8 Bundesstaaten mit eigenen Gesetzen.',
+        '**VAE, Saudi-Arabien, Brasilien, Japan**: noch kein eigener Rahmen — die Anforderungen variieren.',
+      ],
+    },
+    { q: 'Was kostet ein Balkonkraftwerk-Set, und wie schnell amortisiert es sich?', a: 'Typische Sets kosten je nach Modulanzahl, Wechselrichter-Marke und Speicheroption **zwischen ein paar Hundert und rund tausend Euro** — die Amortisation liegt meist **zwischen 2 und 5 Jahren**, abhängig vom lokalen Strompreis und dem tatsächlichen Eigenverbrauchsanteil.' },
+    { q: 'Kann ich mein Balkonkraftwerk ohne die Hersteller-Cloud überwachen?', a: '**Ja, bei den meisten großen Marken** — Wechselrichter und Speicher von Hoymiles, Deye, APsystems, EcoFlow, Anker und Zendure lassen sich lokal über Modbus, MQTT oder eine lokale API auslesen und in Home Assistant einbinden, **sodass die Erzeugungsdaten nicht auf den Servern des Herstellers landen**.' },
+    {
+      q: 'Ist ein Balkonkraftwerk an meinem Wohnort legal?',
+      a: 'Das hängt vom Land ab — der rechtliche Status reicht von vollständig kodifiziert bis ungeregelt. Den vollständigen Länder-Guide gibt es in diesem Cluster.',
+      bullets: [
+        '**Vollständig kodifiziert**: Deutschland, Portugal, Frankreich.',
+        '**Reine Meldepflicht**: Österreich, Belgien, Niederlande.',
+        '**Unklar oder ungeregelt**: VAE, Saudi-Arabien, Brasilien, Japan, Bahrain, Taiwan.',
+        '**Bundesstaatenweise geregelt**: USA.',
+      ],
+    },
   ],
   fr: [
     { q: 'Qu\'est-ce que le solaire de balcon (Balkonkraftwerk) ?', a: 'Un système solaire enfichable — généralement un ou deux panneaux alimentant un petit micro-onduleur — qui se branche directement sur une prise domestique ou un connecteur dédié, produisant de l\'électricité pour l\'autoconsommation sans installation sur toiture ni électricien dans la plupart des marchés.' },
@@ -696,7 +713,7 @@ function latestBalconySolarDateModified(): string | undefined {
 
 const HUB_RELATED_LABEL: Partial<Record<Lang, string>> = {
   en: 'Related guides',
-  de: 'Weitere Guides',
+  de: 'Weitere Anleitungen',
   fr: 'Guides associés',
   ja: '関連ガイド',
   zh: '相关指南',
@@ -714,8 +731,8 @@ const HUB_RELATED_LINKS: Partial<Record<Lang, { label: string; path: string }[]>
   ],
   de: [
     { label: 'Smart Home', path: '/de/smart-home' },
-    { label: 'Lokale LLMs', path: '/de/local-llms' },
-    { label: 'Power Local LLM', path: '/de/power-local-llm' },
+    { label: 'Hardware', path: '/de/local-llms' },
+    { label: 'Software', path: '/de/power-local-llm' },
   ],
   fr: [
     { label: 'Smart Home', path: '/fr/smart-home' },

@@ -8,7 +8,7 @@ export function BalconySolarWaitlistCTA({ label }: { label: string }) {
   return (
     <button
       onClick={openWaitlist}
-      className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
+      className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-[10px] font-semibold hover:bg-primary/90 transition-colors"
     >
       {label}
     </button>
