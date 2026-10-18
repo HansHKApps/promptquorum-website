@@ -1,8 +1,9 @@
 'use client'
 
 import { Fragment, useId, useRef, useState } from 'react'
-import type { CSSProperties } from 'react'
+import type { CSSProperties, MouseEvent } from 'react'
 import { AppLink as Link } from '@/components/AppLink'
+import { renderEmphasis } from './emphasis'
 import { HUB_TONES, cycleTone } from './palette'
 import type { HubExploreLabels, HubItem, HubTile } from './types'
 
@@ -45,17 +46,31 @@ interface ItemCardProps {
 }
 
 function ItemCard({ item, tileIndex, labels, collapsed }: ItemCardProps) {
-  const tone = HUB_TONES[cycleTone(tileIndex)]
+  // Profile items (Herstellerprofile) carry their own category tone, verified per manufacturer
+  // from their company-profile article; every other item still cycles by tile, as before.
+  const toneKey = item.categoryTone ?? cycleTone(tileIndex)
+  const tone = HUB_TONES[toneKey]
+  const isProfile = item.kind === 'profile'
+  const avatarLetter = isProfile ? item.title.trim().charAt(0).toUpperCase() : null
   return (
     <Link
       href={item.href}
       hidden={collapsed}
-      className={`block rounded-xl border p-4 transition-shadow hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${tone.tint} ${tone.edge}`}
+      style={{ '--tile-tone': `var(--hub-${toneKey})` } as CSSProperties}
+      className={`group block rounded-xl border p-4 transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_12px_22px_-10px_var(--tile-tone)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary ${tone.tint} ${tone.edge}`}
     >
       <span className="mb-2 flex flex-wrap items-center gap-2">
+        {avatarLetter ? (
+          <span aria-hidden="true" className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white ${tone.solid}`}>
+            {avatarLetter}
+          </span>
+        ) : (
+          <span className={tone.ink}>
+            <GuideIcon />
+          </span>
+        )}
         <span className={`inline-flex items-center gap-1 rounded-full bg-white/80 px-2.5 py-0.5 text-xs font-bold ${tone.ink}`}>
-          <GuideIcon />
-          {item.kind === 'profile' ? labels.kindProfile : labels.kindGuide}
+          {isProfile ? item.category ?? labels.kindProfile : labels.kindGuide}
         </span>
         {item.badge === 'new' && (
           <span className="rounded-full border border-hub-new-edge bg-hub-new-tint px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide text-hub-new-ink">
@@ -71,6 +86,9 @@ function ItemCard({ item, tileIndex, labels, collapsed }: ItemCardProps) {
       <span className={`block text-[15px] font-bold leading-snug ${tone.ink}`}>{item.title}</span>
       {item.summary && (
         <span className="mt-1 line-clamp-2 text-[13px] leading-relaxed text-text-secondary">{item.summary}</span>
+      )}
+      {item.fact && (
+        <span className={`mt-2 inline-block rounded-md bg-white/70 px-2 py-1 text-[12px] font-semibold ${tone.ink}`}>{item.fact}</span>
       )}
     </Link>
   )
@@ -100,10 +118,19 @@ export function HubExplore({ tiles, labels, sortLocale }: HubExploreProps) {
     tileRefs.current[id]?.focus()
   }
 
+  // Cursor-tracking glow on the solid tiles: written straight to the DOM node, not React state,
+  // so moving the mouse never triggers a re-render.
+  const trackSpotlight = (event: MouseEvent<HTMLButtonElement>) => {
+    const rect = event.currentTarget.getBoundingClientRect()
+    event.currentTarget.style.setProperty('--mx', `${event.clientX - rect.left}px`)
+    event.currentTarget.style.setProperty('--my', `${event.clientY - rect.top}px`)
+  }
+
   return (
     <div role="group" aria-label={labels.groupLabel} className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {tiles.map((tile, index) => {
-        const tone = HUB_TONES[cycleTone(index)]
+        const toneKey = cycleTone(index)
+        const tone = HUB_TONES[toneKey]
         const isOpen = openId === tile.id
         const panelId = `${baseId}-panel-${tile.id}`
         const headingId = `${baseId}-title-${tile.id}`
@@ -134,14 +161,19 @@ export function HubExplore({ tiles, labels, sortLocale }: HubExploreProps) {
                 tileRefs.current[tile.id] = node
               }}
               onClick={() => toggle(tile.id)}
+              onMouseMove={trackSpotlight}
               aria-expanded={isOpen}
               aria-controls={panelId}
-              style={{ order: index * 2 }}
-              className={`group relative block w-full cursor-pointer rounded-[18px] p-0 text-left text-white shadow-[0_6px_16px_-6px_rgba(23,20,43,0.35)] transition duration-150 hover:-translate-y-0.5 hover:shadow-[0_12px_22px_-8px_rgba(23,20,43,0.4)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-primary ${tone.solid}`}
+              style={{ order: index * 2, '--tile-tone': `var(--hub-${toneKey})` } as CSSProperties}
+              className={`group relative block w-full cursor-pointer rounded-[18px] p-0 text-left text-white shadow-[0_6px_16px_-6px_rgba(23,20,43,0.35)] transition-[transform,box-shadow,filter] duration-150 hover:-translate-y-0.5 hover:shadow-[0_16px_30px_-10px_var(--tile-tone)] hover:brightness-[0.94] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-primary ${tone.solid}`}
             >
               <span aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden rounded-[18px]">
                 <span className="absolute -right-9 -top-9 h-36 w-36 rounded-full bg-white/10" />
                 <span className="absolute -bottom-12 -left-8 h-28 w-28 rounded-full bg-white/10" />
+                <span
+                  className="absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+                  style={{ background: 'radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,0.22), transparent 55%)' }}
+                />
               </span>
               <span className="relative flex min-h-[188px] flex-col p-5">
                 <span className="mb-3.5 flex items-baseline gap-2">
@@ -151,8 +183,13 @@ export function HubExplore({ tiles, labels, sortLocale }: HubExploreProps) {
                 <span className="mb-1 block text-lg font-bold leading-snug">{tile.title}</span>
                 <span className="block text-sm leading-relaxed text-white/90">{tile.summary}</span>
                 <span className="mt-auto flex items-center justify-between pt-3">
-                  <span className="text-[13px] font-bold">{isOpen ? labels.close : labels.open}</span>
-                  <span aria-hidden="true" className={`flex h-8 w-8 items-center justify-center rounded-full bg-white text-xl font-bold leading-none ${tone.ink}`}>
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-3 py-1 text-[13px] font-bold transition-colors duration-150 group-hover:bg-white/30">
+                    {isOpen ? labels.close : labels.open}
+                    {!isOpen && (
+                      <span aria-hidden="true" className="inline-block transition-transform duration-150 group-hover:translate-x-0.5">&rarr;</span>
+                    )}
+                  </span>
+                  <span aria-hidden="true" className={`flex h-8 w-8 items-center justify-center rounded-full bg-white text-xl font-bold leading-none transition-transform duration-150 group-hover:scale-110 ${tone.ink}`}>
                     {isOpen ? '−' : '+'}
                   </span>
                 </span>
@@ -191,7 +228,7 @@ export function HubExplore({ tiles, labels, sortLocale }: HubExploreProps) {
                   {labels.closePanel}
                 </button>
               </div>
-              <p className="mb-5 text-sm leading-relaxed text-text-secondary">{tile.intro}</p>
+              <p className="mb-5 text-sm leading-relaxed text-text-secondary">{renderEmphasis(tile.intro)}</p>
 
               {canExpand && !showAll && (
                 <div className="mb-2.5 text-xs font-bold uppercase tracking-wider text-text-secondary">
