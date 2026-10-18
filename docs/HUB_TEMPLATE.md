@@ -1,8 +1,9 @@
 # Hub Template (new hub-page design)
 
-Shared layout for content hub pages. Currently used ONLY by the Balcony Solar hub, and only for `de`
-(`BALCONY_SOLAR_HUB_TEMPLATE_LANGS` in `src/lib/balcony-solar/hub-template.tsx`). The other 8 languages and the
-other 5 clusters still use their old hub components. Rollout to them is not done.
+Shared layout for content hub pages. Currently used ONLY by the Balcony Solar hub, now in all 9 languages
+(`BALCONY_SOLAR_HUB_TEMPLATE_LANGS` in `src/lib/balcony-solar/hub-template.tsx`; strings in `HUB_TEMPLATE_COPY` there and
+`HUB_EXPLORE_LABELS` in `src/components/hub-template/labels.ts`). The other 5 clusters still use their old hub components.
+RTL: use logical Tailwind classes (`ps-`, `ms-`, `text-start`), never `pl-`/`ml-`/`text-left`.
 
 ## Where it lives
 - `src/components/hub-template/` — the generic design. Server component `HubTemplate.tsx`; only `HubExplore.tsx` hydrates.
