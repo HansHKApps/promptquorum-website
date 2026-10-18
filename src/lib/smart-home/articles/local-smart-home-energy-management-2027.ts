@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-en.webp',
     title: 'Local Smart Home Energy Management (2026)',
@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Avoid: vendor cloud apps that only expose usage data through their own dashboard',
           'Next steps: inverter/heat-pump integration, then the dashboard setup guide',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -50,6 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Why Local Energy Management', anchor: 'why-local' },
       { label: 'What to Monitor', anchor: 'what-to-monitor' },
       { label: 'Load-Shifting Automations', anchor: 'automations' },
+      { label: 'Recent Energy Dashboard Changes', anchor: 'dashboard-updates' },
       { label: 'Where This Fits in the Stack', anchor: 'stack-fit' },
       { label: 'FAQ', anchor: 'faq' },
     ],
@@ -105,6 +106,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'All of this runs as standard Home Assistant automations — no cloud service needs to be reachable for the logic to execute.',
         ],
       },
+      dashboardUpdates: {
+        id: 'dashboard-updates',
+        title: 'Recent Home Assistant Energy Dashboard Changes',
+        content:
+          '**Home Assistant\'s Energy dashboard gained a live Now view and water tracking in 2026.3, and per-battery discharge graphs in 2026.10 — all rendered from data on your own hub.**',
+        items: [
+          'Home Assistant 2026.3 added a Now view with badges for real-time power, gas flow and water flow, a water Sankey chart, and split the energy settings into Electricity, Gas and Water tabs ([2026.3 release notes](https://www.home-assistant.io/blog/2026/03/04/release-20263/)).',
+          'Home Assistant 2026.10 shows the discharge of each battery separately in the energy usage graph, which helps when you run battery-aware automations with more than one battery ([2026.10 release notes](https://www.home-assistant.io/blog/2026/10/07/release-202610/)).',
+          'The 2026.10 release also lists new energy integrations, including SolarEdge Modbus, Sunsynk, Homevolt, KACO Modbus, my-PV (surplus solar to hot water) and Zonneplan dynamic contracts; check each integration\'s documentation to see whether it reads data locally or through the vendor\'s cloud.',
+          'The dashboard accepts power sensors in W or kW as well as energy sensors, and power-only sensors can be converted to kWh with the Riemann sum integral integration ([Energy docs](https://www.home-assistant.io/docs/energy/)).',
+        ],
+      },
       stackFit: {
         id: 'stack-fit',
         title: 'Where This Fits in the Stack',
@@ -129,6 +142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'How is this different from a smart thermostat\'s built-in energy reports?', a: 'A thermostat\'s own app only reports on itself and usually requires its cloud service. The Energy dashboard aggregates every monitored device — thermostat, EV charger, appliances, solar, battery — into one local view and lets automations act across all of them together.' },
           { q: 'Do smart plugs need to be locally controlled to work with this?', a: 'For the monitoring and automation described here, the plug needs to report its data into Home Assistant, ideally over a local integration (Zigbee, Z-Wave, or a locally-polled Wi-Fi integration) rather than only through the vendor\'s cloud API, so the automation keeps working offline.' },
           { q: 'What if I only have a few smart plugs and no solar?', a: 'Start there. A handful of energy-monitoring plugs on your highest-draw appliances, feeding the Energy dashboard, already enables time-of-use load shifting — solar and battery integration are additions you can make later without starting over.' },
+          { q: 'What changed in Home Assistant\'s Energy dashboard in 2026?', a: 'Home Assistant 2026.3 added a Now view with real-time power, gas and water badges and a water Sankey chart, and 2026.10 added separate discharge graphs for each battery. See the [2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/) and [2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/) release notes for details.' },
         ],
       },
       relatedReading: {
@@ -154,7 +168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant Energy dashboard' }, { '@type': 'Thing', name: 'Local energy monitoring' }, { '@type': 'Thing', name: 'Load-shifting automation' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -176,8 +190,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-de.webp',
     title: 'Lokales Energiemanagement im Smart Home (2026)',
@@ -213,7 +227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Vermeiden: Hersteller-Cloud-Apps, die Nutzungsdaten nur über ihr eigenes Dashboard zeigen',
           'Nächste Schritte: Wechselrichter-/Wärmepumpen-Integration, dann der Dashboard-Setup-Leitfaden',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -221,6 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Warum lokales Energiemanagement', anchor: 'why-local' },
       { label: 'Was überwacht werden sollte', anchor: 'what-to-monitor' },
       { label: 'Lastverschiebungs-Automatisierungen', anchor: 'automations' },
+      { label: 'Aktuelle Änderungen am Energy-Dashboard', anchor: 'dashboard-updates' },
       { label: 'Wo dies in den Stack passt', anchor: 'stack-fit' },
       { label: 'FAQ', anchor: 'faq' },
     ],
@@ -276,6 +291,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'All dies läuft als Standard-Home-Assistant-Automatisierung — kein Cloud-Dienst muss erreichbar sein, damit die Logik ausgeführt wird.',
         ],
       },
+      dashboardUpdates: {
+        id: 'dashboard-updates',
+        title: 'Aktuelle Änderungen am Home-Assistant-Energy-Dashboard',
+        content:
+          '**Das Energy-Dashboard von Home Assistant erhielt in 2026.3 eine Live-Ansicht „Jetzt“ und Wasserverfolgung und in 2026.10 getrennte Entladegraphen pro Batterie — alles aus Daten auf Ihrem eigenen Hub.**',
+        items: [
+          'Home Assistant 2026.3 brachte eine Ansicht „Jetzt“ mit Badges für Echtzeit-Leistung, Gasdurchfluss und Wasserdurchfluss, ein Wasser-Sankey-Diagramm und teilte die Energie-Einstellungen in die Tabs Strom, Gas und Wasser ([Release Notes 2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/)).',
+          'Home Assistant 2026.10 zeigt die Entladung jeder Batterie getrennt im Energieverbrauchsgraphen — hilfreich für batteriegesteuerte Automatisierungen mit mehr als einer Batterie ([Release Notes 2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/)).',
+          'Die Version 2026.10 listet außerdem neue Energie-Integrationen, darunter SolarEdge Modbus, Sunsynk, Homevolt, KACO Modbus, my-PV (Solarüberschuss für Warmwasser) und dynamische Zonneplan-Verträge; prüfen Sie in der Dokumentation der jeweiligen Integration, ob die Daten lokal oder über die Cloud des Herstellers gelesen werden.',
+          'Das Dashboard akzeptiert Leistungssensoren in W oder kW sowie Energiesensoren; reine Leistungssensoren lassen sich mit der Integration „Riemann-Summe“ in kWh umrechnen ([Energy-Dokumentation](https://www.home-assistant.io/docs/energy/)).',
+        ],
+      },
       stackFit: {
         id: 'stack-fit',
         title: 'Wo dies in den Stack passt',
@@ -300,6 +327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Wie unterscheidet sich das von den eingebauten Energieberichten eines Smart-Thermostats?', a: 'Die App eines Thermostats berichtet nur über sich selbst und braucht meist dessen Cloud-Dienst. Das Energie-Dashboard fasst jedes überwachte Gerät — Thermostat, E-Auto-Ladegerät, Geräte, Solar, Batterie — in einer lokalen Ansicht zusammen und lässt Automatisierungen über alle gemeinsam wirken.' },
           { q: 'Müssen Smart Plugs lokal steuerbar sein, damit das funktioniert?', a: 'Für die hier beschriebene Überwachung und Automatisierung muss der Plug seine Daten an Home Assistant melden, idealerweise über eine lokale Integration (Zigbee, Z-Wave oder eine lokal abgefragte WLAN-Integration) statt nur über die Cloud-API des Herstellers, damit die Automatisierung auch offline funktioniert.' },
           { q: 'Was, wenn ich nur ein paar Smart Plugs und keine Solaranlage habe?', a: 'Fangen Sie dort an. Ein paar energiemessende Plugs an Ihren stromhungrigsten Geräten, die das Energie-Dashboard speisen, ermöglichen bereits Zeittarif-Lastverschiebung — Solar- und Batterieintegration sind Ergänzungen, die Sie später ohne Neustart hinzufügen können.' },
+          { q: 'Was hat sich 2026 am Energy-Dashboard von Home Assistant geändert?', a: 'Home Assistant 2026.3 brachte eine Ansicht „Jetzt“ mit Echtzeit-Badges für Strom, Gas und Wasser sowie ein Wasser-Sankey-Diagramm; 2026.10 ergänzte getrennte Entladegraphen pro Batterie. Details in den Release Notes [2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/) und [2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/).' },
         ],
       },
       relatedReading: {
@@ -325,7 +353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant Energie-Dashboard' }, { '@type': 'Thing', name: 'Lokales Energiemonitoring' }, { '@type': 'Thing', name: 'Lastverschiebungs-Automatisierung' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -347,8 +375,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-fr.webp',
     title: 'Gestion locale de l\'énergie dans la maison connectée (2026)',
@@ -384,7 +412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'À éviter : les applis cloud des fabricants qui n\'exposent les données d\'usage que via leur propre tableau de bord',
           'Prochaines étapes : intégration onduleur/pompe à chaleur, puis le guide de configuration du tableau de bord',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -392,6 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Pourquoi une gestion locale de l\'énergie', anchor: 'why-local' },
       { label: 'Que surveiller', anchor: 'what-to-monitor' },
       { label: 'Automatisations de décalage de charge', anchor: 'automations' },
+      { label: 'Changements récents du tableau de bord Énergie', anchor: 'dashboard-updates' },
       { label: 'Où cela s\'intègre dans la pile', anchor: 'stack-fit' },
       { label: 'FAQ', anchor: 'faq' },
     ],
@@ -447,6 +476,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Tout ceci tourne comme des automatisations Home Assistant standard — aucun service cloud n\'a besoin d\'être joignable pour que la logique s\'exécute.',
         ],
       },
+      dashboardUpdates: {
+        id: 'dashboard-updates',
+        title: 'Changements récents du tableau de bord Énergie de Home Assistant',
+        content:
+          '**Le tableau de bord Énergie de Home Assistant a gagné une vue « Maintenant » et le suivi de l\'eau en 2026.3, puis des graphiques de décharge par batterie en 2026.10 — le tout à partir des données de votre propre hub.**',
+        items: [
+          'Home Assistant 2026.3 a ajouté une vue « Maintenant » avec des badges de puissance, de débit de gaz et de débit d\'eau en temps réel, un diagramme de Sankey pour l\'eau, et séparé les réglages d\'énergie en onglets Électricité, Gaz et Eau ([notes de version 2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/)).',
+          'Home Assistant 2026.10 affiche séparément la décharge de chaque batterie dans le graphique de consommation d\'énergie, utile pour des automatisations tenant compte de plusieurs batteries ([notes de version 2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/)).',
+          'La version 2026.10 liste aussi de nouvelles intégrations énergie, dont SolarEdge Modbus, Sunsynk, Homevolt, KACO Modbus, my-PV (surplus solaire vers l\'eau chaude) et les contrats dynamiques Zonneplan ; vérifiez dans la documentation de chaque intégration si les données sont lues en local ou via le cloud du fabricant.',
+          'Le tableau de bord accepte des capteurs de puissance en W ou kW en plus des capteurs d\'énergie ; les capteurs de puissance seule peuvent être convertis en kWh avec l\'intégration de somme de Riemann ([documentation Énergie](https://www.home-assistant.io/docs/energy/)).',
+        ],
+      },
       stackFit: {
         id: 'stack-fit',
         title: 'Où cela s\'intègre dans la pile',
@@ -471,6 +512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'En quoi est-ce différent des rapports énergétiques intégrés d\'un thermostat connecté ?', a: 'L\'appli propre d\'un thermostat ne rapporte que sur lui-même et nécessite généralement son service cloud. Le tableau de bord Énergie agrège chaque appareil surveillé — thermostat, chargeur de VE, appareils, solaire, batterie — dans une vue locale unique et permet aux automatisations d\'agir sur tous ensemble.' },
           { q: 'Les prises connectées doivent-elles être contrôlables localement pour que cela fonctionne ?', a: 'Pour la surveillance et l\'automatisation décrites ici, la prise doit remonter ses données vers Home Assistant, idéalement via une intégration locale (Zigbee, Z-Wave, ou une intégration Wi-Fi interrogée localement) plutôt que uniquement via l\'API cloud du fabricant, afin que l\'automatisation continue de fonctionner hors ligne.' },
           { q: 'Que faire si je n\'ai que quelques prises connectées et pas de solaire ?', a: 'Commencez par là. Quelques prises mesurant l\'énergie sur vos appareils les plus gourmands, alimentant le tableau de bord Énergie, permettent déjà le décalage de charge tarifaire horaire — l\'intégration solaire et batterie sont des ajouts que vous pouvez faire plus tard sans tout recommencer.' },
+          { q: 'Qu\'est-ce qui a changé dans le tableau de bord Énergie de Home Assistant en 2026 ?', a: 'Home Assistant 2026.3 a ajouté une vue « Maintenant » avec badges temps réel pour l\'électricité, le gaz et l\'eau et un diagramme de Sankey pour l\'eau ; 2026.10 a ajouté des graphiques de décharge séparés par batterie. Détails dans les notes de version [2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/) et [2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/).' },
         ],
       },
       relatedReading: {
@@ -496,7 +538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Tableau de bord Énergie Home Assistant' }, { '@type': 'Thing', name: 'Surveillance énergétique locale' }, { '@type': 'Thing', name: 'Automatisation de décalage de charge' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -518,8 +560,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-ja.webp',
     title: 'ローカルなスマートホームのエネルギー管理（2026年）',
@@ -555,7 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '避けるべきもの：使用データを自社ダッシュボードでしか表示しないベンダーのクラウドアプリ',
           '次のステップ：インバーター・ヒートポンプ連携、その後ダッシュボード設定ガイドへ',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -563,6 +605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'なぜローカルエネルギー管理か', anchor: 'why-local' },
       { label: '何を監視すべきか', anchor: 'what-to-monitor' },
       { label: '負荷シフト自動化', anchor: 'automations' },
+      { label: 'Energyダッシュボードの最近の変更', anchor: 'dashboard-updates' },
       { label: 'このスタックでの位置づけ', anchor: 'stack-fit' },
       { label: 'よくある質問', anchor: 'faq' },
     ],
@@ -618,6 +661,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'これらはすべて標準のHome Assistant自動化として実行されます — ロジックの実行にクラウドサービスへの到達性は不要です。',
         ],
       },
+      dashboardUpdates: {
+        id: 'dashboard-updates',
+        title: 'Home Assistant Energyダッシュボードの最近の変更',
+        content:
+          '**Home AssistantのEnergyダッシュボードは、2026.3でライブの「Now」ビューと水使用量の追跡、2026.10でバッテリーごとの放電グラフが追加されました。すべて自宅のハブ上のデータから描画されます。**',
+        items: [
+          'Home Assistant 2026.3では、リアルタイムの電力・ガス流量・水流量のバッジを備えた「Now」ビュー、水のサンキー図が追加され、エネルギー設定が電気・ガス・水のタブに分割されました（[2026.3リリースノート](https://www.home-assistant.io/blog/2026/03/04/release-20263/)）。',
+          'Home Assistant 2026.10では、エネルギー使用量グラフに各バッテリーの放電が個別に表示されます。複数のバッテリーでバッテリー連動の自動化を行う場合に役立ちます（[2026.10リリースノート](https://www.home-assistant.io/blog/2026/10/07/release-202610/)）。',
+          '2026.10では、SolarEdge Modbus、Sunsynk、Homevolt、KACO Modbus、my-PV（余剰太陽光を温水に利用）、Zonneplanのダイナミック契約など、新しいエネルギー連携も追加されています。データをローカルで読み取るかメーカーのクラウド経由かは、各連携のドキュメントで確認してください。',
+          'ダッシュボードはエネルギーセンサーに加え、W・kW単位の電力センサーも使用できます。電力のみのセンサーはRiemann sum integral連携でkWhに変換できます（[Energyドキュメント](https://www.home-assistant.io/docs/energy/)）。',
+        ],
+      },
       stackFit: {
         id: 'stack-fit',
         title: 'このスタックでの位置づけ',
@@ -642,6 +697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'これはスマートサーモスタット内蔵のエネルギーレポートとどう違いますか？', a: 'サーモスタット独自のアプリは自分自身についてしか報告せず、通常はそのクラウドサービスが必要です。Energyダッシュボードは、サーモスタット、EV充電器、家電、太陽光、バッテリーなど監視対象のすべての機器を1つのローカルビューに集約し、自動化がそれらすべてに横断的に作用できるようにします。' },
           { q: 'これを機能させるにはスマートプラグをローカルで制御できる必要がありますか？', a: 'ここで説明した監視と自動化のためには、プラグがベンダーのクラウドAPI経由だけでなく、理想的にはローカル連携（Zigbee、Z-Wave、またはローカルでポーリングされるWi-Fi連携）経由でHome Assistantにデータを報告する必要があります。そうすればオフラインでも自動化が機能し続けます。' },
           { q: 'スマートプラグが数個しかなく太陽光もない場合はどうすればいいですか？', a: 'そこから始めてください。消費電力の大きい家電に数個のエネルギー監視プラグを取り付けEnergyダッシュボードに供給するだけで、すでに時間帯別料金の負荷シフトが可能になります。太陽光とバッテリー連携は、最初からやり直すことなく後から追加できます。' },
+          { q: '2026年にHome AssistantのEnergyダッシュボードで何が変わりましたか？', a: '2026.3で電力・ガス・水のリアルタイムバッジを備えた「Now」ビューと水のサンキー図が追加され、2026.10でバッテリーごとの放電グラフが追加されました。詳細は[2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/)と[2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/)のリリースノートをご覧ください。' },
         ],
       },
       relatedReading: {
@@ -667,7 +723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant Energyダッシュボード' }, { '@type': 'Thing', name: 'ローカルエネルギー監視' }, { '@type': 'Thing', name: '負荷シフト自動化' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -689,8 +745,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-zh.webp',
     title: '本地智能家居能源管理（2026年）',
@@ -726,7 +782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '应避免：仅通过自家仪表盘展示用电数据的厂商云端应用',
           '后续步骤：逆变器/热泵集成，然后是仪表盘设置指南',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -734,6 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '为什么要本地能源管理', anchor: 'why-local' },
       { label: '应监测什么', anchor: 'what-to-monitor' },
       { label: '负荷转移自动化', anchor: 'automations' },
+      { label: 'Energy 仪表板的近期变化', anchor: 'dashboard-updates' },
       { label: '在整体架构中的位置', anchor: 'stack-fit' },
       { label: '常见问题', anchor: 'faq' },
     ],
@@ -789,6 +846,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '这一切都以标准的Home Assistant自动化形式运行——执行逻辑无需任何云端服务可达。',
         ],
       },
+      dashboardUpdates: {
+        id: 'dashboard-updates',
+        title: 'Home Assistant Energy 仪表板的近期变化',
+        content:
+          '**Home Assistant 的 Energy 仪表板在 2026.3 中新增了实时“Now”视图和用水追踪，在 2026.10 中新增了按电池分别显示的放电图表——全部基于您自己主机上的数据。**',
+        items: [
+          'Home Assistant 2026.3 新增了“Now”视图，带有实时功率、燃气流量和水流量徽章，新增用水桑基图，并将能源设置拆分为电力、燃气和用水三个选项卡（[2026.3 发布说明](https://www.home-assistant.io/blog/2026/03/04/release-20263/)）。',
+          'Home Assistant 2026.10 在能耗图表中分别显示每块电池的放电情况，对多电池的电池感知自动化很有帮助（[2026.10 发布说明](https://www.home-assistant.io/blog/2026/10/07/release-202610/)）。',
+          '2026.10 还列出了新的能源集成，包括 SolarEdge Modbus、Sunsynk、Homevolt、KACO Modbus、my-PV（将多余太阳能用于热水）以及 Zonneplan 动态合同；请在各集成的文档中确认数据是本地读取还是经由厂商云端。',
+          '仪表板除能量传感器外也接受以 W 或 kW 为单位的功率传感器；仅有功率的传感器可通过黎曼和积分（Riemann sum integral）集成转换为 kWh（[Energy 文档](https://www.home-assistant.io/docs/energy/)）。',
+        ],
+      },
       stackFit: {
         id: 'stack-fit',
         title: '在整体架构中的位置',
@@ -813,6 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '这与智能温控器内置的能源报告有何不同？', a: '温控器自带的应用只报告自身情况，通常还需要其云端服务。能源仪表盘会将每一个被监测的设备——温控器、电动车充电器、家电、太阳能、电池——汇总到一个本地视图中，让自动化能够统一作用于所有设备。' },
           { q: '智能插座需要能本地控制才能配合使用吗？', a: '对于本文所述的监测和自动化，插座需要把数据上报给Home Assistant，理想情况下通过本地集成（Zigbee、Z-Wave，或本地轮询的Wi-Fi集成），而不仅仅通过厂商的云端API，这样自动化在离线时也能继续工作。' },
           { q: '如果我只有几个智能插座、没有太阳能怎么办？', a: '就从这里开始。在耗电量最大的几台家电上安装能源监测插座并接入能源仪表盘，就已经能实现分时电价的负荷转移——太阳能和电池集成是以后可以再添加的部分，无需从头再来。' },
+          { q: '2026 年 Home Assistant 的 Energy 仪表板有哪些变化？', a: 'Home Assistant 2026.3 新增了带有电力、燃气和用水实时徽章的“Now”视图以及用水桑基图；2026.10 新增了按电池分别显示的放电图表。详情见 [2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/) 和 [2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/) 发布说明。' },
         ],
       },
       relatedReading: {
@@ -838,7 +908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant能源仪表盘' }, { '@type': 'Thing', name: '本地能源监测' }, { '@type': 'Thing', name: '负荷转移自动化' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -860,8 +930,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-es.webp',
     title: 'Gestión local de energía en el hogar inteligente (2026)',
@@ -897,7 +967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Evitar: apps en la nube de fabricantes que solo muestran datos de uso a través de su propio panel',
           'Próximos pasos: integración de inversor/bomba de calor, luego la guía de configuración del panel',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -905,6 +975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Por qué gestionar la energía localmente', anchor: 'why-local' },
       { label: 'Qué monitorear', anchor: 'what-to-monitor' },
       { label: 'Automatizaciones de desplazamiento de carga', anchor: 'automations' },
+      { label: 'Cambios recientes del panel Energía', anchor: 'dashboard-updates' },
       { label: 'Dónde encaja esto en la pila', anchor: 'stack-fit' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
     ],
@@ -960,6 +1031,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Todo esto corre como automatizaciones estándar de Home Assistant — ningún servicio en la nube necesita ser alcanzable para que la lógica se ejecute.',
         ],
       },
+      dashboardUpdates: {
+        id: 'dashboard-updates',
+        title: 'Cambios recientes del panel Energía de Home Assistant',
+        content:
+          '**El panel Energía de Home Assistant incorporó una vista «Ahora» y el seguimiento del agua en 2026.3, y gráficos de descarga por batería en 2026.10 — todo a partir de datos de su propio hub.**',
+        items: [
+          'Home Assistant 2026.3 añadió una vista «Ahora» con insignias de potencia, caudal de gas y caudal de agua en tiempo real, un diagrama de Sankey del agua, y dividió los ajustes de energía en pestañas de Electricidad, Gas y Agua ([notas de la versión 2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/)).',
+          'Home Assistant 2026.10 muestra la descarga de cada batería por separado en el gráfico de uso de energía, útil para automatizaciones con varias baterías ([notas de la versión 2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/)).',
+          'La versión 2026.10 también lista nuevas integraciones de energía, entre ellas SolarEdge Modbus, Sunsynk, Homevolt, KACO Modbus, my-PV (excedente solar para agua caliente) y los contratos dinámicos de Zonneplan; compruebe en la documentación de cada integración si los datos se leen en local o a través de la nube del fabricante.',
+          'El panel acepta sensores de potencia en W o kW además de sensores de energía; los sensores solo de potencia pueden convertirse a kWh con la integración de suma de Riemann ([documentación de Energía](https://www.home-assistant.io/docs/energy/)).',
+        ],
+      },
       stackFit: {
         id: 'stack-fit',
         title: 'Dónde encaja esto en la pila',
@@ -984,6 +1067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿En qué se diferencia esto de los informes energéticos integrados de un termostato inteligente?', a: 'La app propia de un termostato solo reporta sobre sí mismo y generalmente requiere su servicio en la nube. El panel de Energía agrega cada dispositivo monitoreado — termostato, cargador de VE, electrodomésticos, solar, batería — en una vista local única y permite que las automatizaciones actúen sobre todos ellos en conjunto.' },
           { q: '¿Los enchufes inteligentes necesitan ser controlables localmente para que esto funcione?', a: 'Para el monitoreo y la automatización descritos aquí, el enchufe necesita reportar sus datos a Home Assistant, idealmente mediante una integración local (Zigbee, Z-Wave, o una integración Wi-Fi consultada localmente) en lugar de solo a través de la API en la nube del fabricante, para que la automatización siga funcionando sin conexión.' },
           { q: '¿Qué pasa si solo tengo unos pocos enchufes inteligentes y nada de solar?', a: 'Empieza por ahí. Unos cuantos enchufes que miden energía en tus electrodomésticos de mayor consumo, alimentando el panel de Energía, ya habilitan el desplazamiento de carga por tarifa horaria — la integración solar y de batería son adiciones que puedes hacer más tarde sin empezar de cero.' },
+          { q: '¿Qué cambió en el panel Energía de Home Assistant en 2026?', a: 'Home Assistant 2026.3 añadió una vista «Ahora» con insignias en tiempo real de electricidad, gas y agua y un diagrama de Sankey del agua; 2026.10 añadió gráficos de descarga separados por batería. Detalles en las notas de la versión [2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/) y [2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/).' },
         ],
       },
       relatedReading: {
@@ -1009,7 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Panel de Energía de Home Assistant' }, { '@type': 'Thing', name: 'Monitoreo energético local' }, { '@type': 'Thing', name: 'Automatización de desplazamiento de carga' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1031,8 +1115,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-pt.webp',
     title: 'Gestão local de energia na casa inteligente (2026)',
@@ -1068,7 +1152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Evitar: apps na nuvem de fabricantes que só mostram dados de uso pelo próprio painel',
           'Próximos passos: integração de inversor/bomba de calor, depois o guia de configuração do painel',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1076,6 +1160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Por que gerenciar energia localmente', anchor: 'why-local' },
       { label: 'O que monitorar', anchor: 'what-to-monitor' },
       { label: 'Automações de deslocamento de carga', anchor: 'automations' },
+      { label: 'Mudanças recentes no painel Energia', anchor: 'dashboard-updates' },
       { label: 'Onde isso se encaixa na pilha', anchor: 'stack-fit' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
     ],
@@ -1131,6 +1216,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Tudo isso roda como automações padrão do Home Assistant — nenhum serviço na nuvem precisa estar acessível para a lógica ser executada.',
         ],
       },
+      dashboardUpdates: {
+        id: 'dashboard-updates',
+        title: 'Mudanças recentes no painel Energia do Home Assistant',
+        content:
+          '**O painel Energia do Home Assistant ganhou uma visão «Agora» e o acompanhamento de água no 2026.3, e gráficos de descarga por bateria no 2026.10 — tudo a partir de dados do seu próprio hub.**',
+        items: [
+          'O Home Assistant 2026.3 adicionou uma visão «Agora» com selos de potência, vazão de gás e vazão de água em tempo real, um diagrama de Sankey da água, e dividiu as configurações de energia em abas de Eletricidade, Gás e Água ([notas da versão 2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/)).',
+          'O Home Assistant 2026.10 mostra a descarga de cada bateria separadamente no gráfico de uso de energia, útil para automações com mais de uma bateria ([notas da versão 2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/)).',
+          'A versão 2026.10 também lista novas integrações de energia, incluindo SolarEdge Modbus, Sunsynk, Homevolt, KACO Modbus, my-PV (excedente solar para água quente) e contratos dinâmicos da Zonneplan; confira na documentação de cada integração se os dados são lidos localmente ou pela nuvem do fabricante.',
+          'O painel aceita sensores de potência em W ou kW além de sensores de energia; sensores apenas de potência podem ser convertidos em kWh com a integração de soma de Riemann ([documentação de Energia](https://www.home-assistant.io/docs/energy/)).',
+        ],
+      },
       stackFit: {
         id: 'stack-fit',
         title: 'Onde isso se encaixa na pilha',
@@ -1155,6 +1252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Como isso difere dos relatórios de energia embutidos de um termostato inteligente?', a: 'O app próprio de um termostato só reporta sobre si mesmo e geralmente exige seu serviço na nuvem. O painel de Energia agrega cada dispositivo monitorado — termostato, carregador de VE, eletrodomésticos, solar, bateria — em uma visão local única e permite que automações atuem sobre todos eles juntos.' },
           { q: 'As tomadas inteligentes precisam ser controláveis localmente para funcionar com isso?', a: 'Para o monitoramento e a automação descritos aqui, a tomada precisa reportar seus dados ao Home Assistant, idealmente por uma integração local (Zigbee, Z-Wave, ou uma integração Wi-Fi consultada localmente) em vez de só pela API na nuvem do fabricante, para que a automação continue funcionando offline.' },
           { q: 'E se eu tiver só algumas tomadas inteligentes e nenhum solar?', a: 'Comece por aí. Algumas tomadas medindo energia nos seus eletrodomésticos de maior consumo, alimentando o painel de Energia, já habilitam o deslocamento de carga por tarifa horária — a integração solar e de bateria são adições que você pode fazer depois sem recomeçar do zero.' },
+          { q: 'O que mudou no painel Energia do Home Assistant em 2026?', a: 'O Home Assistant 2026.3 adicionou uma visão «Agora» com selos em tempo real de eletricidade, gás e água e um diagrama de Sankey da água; o 2026.10 adicionou gráficos de descarga separados por bateria. Detalhes nas notas da versão [2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/) e [2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/).' },
         ],
       },
       relatedReading: {
@@ -1180,7 +1278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Painel de Energia do Home Assistant' }, { '@type': 'Thing', name: 'Monitoramento energético local' }, { '@type': 'Thing', name: 'Automação de deslocamento de carga' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1202,8 +1300,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-ar.webp',
     title: 'إدارة الطاقة المحلية في المنزل الذكي (⁨2026⁩)',
@@ -1239,7 +1337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تجنّب: تطبيقات السحابة من الشركات المصنّعة التي تعرض بيانات الاستخدام فقط عبر لوحتها الخاصة',
           'الخطوات التالية: دمج العاكس/مضخة الحرارة، ثم دليل إعداد اللوحة',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1247,6 +1345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'لماذا إدارة الطاقة محليًا', anchor: 'why-local' },
       { label: 'ما الذي يجب مراقبته', anchor: 'what-to-monitor' },
       { label: 'أتمتة تحويل الحمل', anchor: 'automations' },
+      { label: 'تغييرات حديثة في لوحة Energy', anchor: 'dashboard-updates' },
       { label: 'أين يقع هذا في المجموعة', anchor: 'stack-fit' },
       { label: 'أسئلة شائعة', anchor: 'faq' },
     ],
@@ -1302,6 +1401,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يعمل كل هذا كأتمتة قياسية في Home Assistant — لا تحتاج أي خدمة سحابية أن تكون قابلة للوصول لتنفيذ المنطق.',
         ],
       },
+      dashboardUpdates: {
+        id: 'dashboard-updates',
+        title: 'تغييرات حديثة في لوحة Energy في Home Assistant',
+        content:
+          '**أضافت لوحة Energy في Home Assistant عرض «Now» المباشر وتتبّع المياه في الإصدار 2026.3، ورسوم تفريغ منفصلة لكل بطارية في 2026.10 — وكل ذلك من بيانات على المركز المنزلي الخاص بك.**',
+        items: [
+          'أضاف Home Assistant 2026.3 عرض «Now» بشارات للقدرة وتدفق الغاز وتدفق المياه في الوقت الفعلي، ومخطط Sankey للمياه، وقسّم إعدادات الطاقة إلى تبويبات الكهرباء والغاز والمياه ([ملاحظات إصدار 2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/)).',
+          'يعرض Home Assistant 2026.10 تفريغ كل بطارية على حدة في رسم استهلاك الطاقة، وهو مفيد للأتمتة المعتمدة على البطاريات عند استخدام أكثر من بطارية ([ملاحظات إصدار 2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/)).',
+          'يُدرج إصدار 2026.10 أيضًا تكاملات طاقة جديدة، منها SolarEdge Modbus وSunsynk وHomevolt وKACO Modbus وmy-PV (توجيه فائض الطاقة الشمسية إلى تسخين المياه) وعقود Zonneplan الديناميكية؛ راجع وثائق كل تكامل لمعرفة ما إذا كانت البيانات تُقرأ محليًا أم عبر سحابة الشركة المصنّعة.',
+          'تقبل اللوحة مستشعرات القدرة بوحدة W أو kW إضافة إلى مستشعرات الطاقة، ويمكن تحويل مستشعرات القدرة فقط إلى kWh عبر تكامل Riemann sum integral ([وثائق Energy](https://www.home-assistant.io/docs/energy/)).',
+        ],
+      },
       stackFit: {
         id: 'stack-fit',
         title: 'أين يقع هذا في المجموعة',
@@ -1326,6 +1437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'كيف يختلف هذا عن تقارير الطاقة المدمجة في منظم حرارة ذكي؟', a: 'يبلّغ تطبيق منظم الحرارة الخاص عن نفسه فقط وعادةً ما يتطلب خدمته السحابية. تجمّع لوحة Energy كل جهاز مراقَب — منظم الحرارة، شاحن السيارة الكهربائية، الأجهزة، الطاقة الشمسية، البطارية — في عرض محلي واحد وتتيح للأتمتة العمل عبرها جميعًا معًا.' },
           { q: 'هل تحتاج المقابس الذكية أن تكون متحكَّمًا فيها محليًا حتى تعمل مع هذا؟', a: 'بالنسبة للمراقبة والأتمتة الموصوفة هنا، يحتاج المقبس إلى رفع بياناته إلى Home Assistant، ويُفضَّل عبر دمج محلي (Zigbee أو Z-Wave أو دمج Wi-Fi يُستطلَع محليًا) بدلًا من واجهة برمجة تطبيقات سحابية للشركة المصنّعة فقط، حتى تستمر الأتمتة في العمل دون اتصال.' },
           { q: 'ماذا لو كان لدي بضعة مقابس ذكية فقط ولا طاقة شمسية؟', a: 'ابدأ من هناك. عدد قليل من المقابس التي تقيس الطاقة على أكثر أجهزتك استهلاكًا، تغذّي لوحة Energy، تتيح بالفعل تحويل الحمل حسب التعرفة الزمنية — دمج الطاقة الشمسية والبطارية إضافات يمكنك القيام بها لاحقًا دون البدء من جديد.' },
+          { q: 'ما الذي تغيّر في لوحة Energy في Home Assistant خلال 2026؟', a: 'أضاف Home Assistant 2026.3 عرض «Now» بشارات فورية للكهرباء والغاز والمياه ومخطط Sankey للمياه، وأضاف 2026.10 رسوم تفريغ منفصلة لكل بطارية. التفاصيل في ملاحظات إصدار [2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/) و[2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/).' },
         ],
       },
       relatedReading: {
@@ -1351,7 +1463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'لوحة Energy في Home Assistant' }, { '@type': 'Thing', name: 'مراقبة الطاقة المحلية' }, { '@type': 'Thing', name: 'أتمتة تحويل الحمل' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1373,8 +1485,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Energy & Solar Integration',
     heroImage: '/images/local-smart-home-energy-management-2027-overview-hero-ko.webp',
     title: '로컬 스마트홈 에너지 관리 (2026년)',
@@ -1410,7 +1522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '피해야 할 것: 사용 데이터를 자체 대시보드로만 보여주는 벤더 클라우드 앱',
           '다음 단계: 인버터/히트펌프 연동, 그다음 대시보드 설정 가이드',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1418,6 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '왜 로컬 에너지 관리인가', anchor: 'why-local' },
       { label: '무엇을 모니터링할지', anchor: 'what-to-monitor' },
       { label: '부하 이동 자동화', anchor: 'automations' },
+      { label: 'Energy 대시보드의 최근 변경 사항', anchor: 'dashboard-updates' },
       { label: '이 스택에서의 위치', anchor: 'stack-fit' },
       { label: '자주 묻는 질문', anchor: 'faq' },
     ],
@@ -1473,6 +1586,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 모든 것은 표준 Home Assistant 자동화로 실행됩니다 — 로직이 실행되는 데 클라우드 서비스에 접근할 필요가 없습니다.',
         ],
       },
+      dashboardUpdates: {
+        id: 'dashboard-updates',
+        title: 'Home Assistant Energy 대시보드의 최근 변경 사항',
+        content:
+          '**Home Assistant의 Energy 대시보드는 2026.3에서 실시간 "Now" 보기와 수도 추적을, 2026.10에서 배터리별 방전 그래프를 추가했습니다 — 모두 내 허브의 데이터로 표시됩니다.**',
+        items: [
+          'Home Assistant 2026.3은 실시간 전력·가스 유량·수도 유량 배지가 있는 "Now" 보기와 수도 생키 차트를 추가하고, 에너지 설정을 전기·가스·수도 탭으로 나눴습니다([2026.3 릴리스 노트](https://www.home-assistant.io/blog/2026/03/04/release-20263/)).',
+          'Home Assistant 2026.10은 에너지 사용 그래프에 각 배터리의 방전을 따로 표시하므로, 배터리가 여러 개인 배터리 연동 자동화에 유용합니다([2026.10 릴리스 노트](https://www.home-assistant.io/blog/2026/10/07/release-202610/)).',
+          '2026.10에는 SolarEdge Modbus, Sunsynk, Homevolt, KACO Modbus, my-PV(남는 태양광으로 온수 가열), Zonneplan 다이내믹 계약 등 새로운 에너지 연동도 포함되어 있습니다. 데이터를 로컬로 읽는지 제조사 클라우드를 거치는지는 각 연동의 문서에서 확인하세요.',
+          '대시보드는 에너지 센서 외에 W 또는 kW 단위의 전력 센서도 받으며, 전력만 있는 센서는 Riemann sum integral 연동으로 kWh로 변환할 수 있습니다([Energy 문서](https://www.home-assistant.io/docs/energy/)).',
+        ],
+      },
       stackFit: {
         id: 'stack-fit',
         title: '이 스택에서의 위치',
@@ -1497,6 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '이것이 스마트 온도조절기의 내장 에너지 보고서와 어떻게 다른가요?', a: '온도조절기 자체 앱은 자기 자신에 대해서만 보고하며 보통 클라우드 서비스가 필요합니다. Energy 대시보드는 온도조절기, 전기차 충전기, 가전제품, 태양광, 배터리 등 모니터링되는 모든 기기를 하나의 로컬 뷰로 집계하고, 자동화가 이들 모두에 걸쳐 함께 작동하도록 합니다.' },
           { q: '이 기능이 작동하려면 스마트 플러그가 로컬로 제어 가능해야 하나요?', a: '여기서 설명한 모니터링과 자동화를 위해서는, 플러그가 벤더의 클라우드 API만이 아니라 이상적으로는 로컬 연동(Zigbee, Z-Wave, 또는 로컬에서 폴링되는 Wi-Fi 연동)을 통해 데이터를 Home Assistant로 보고해야 자동화가 오프라인에서도 계속 작동합니다.' },
           { q: '스마트 플러그가 몇 개뿐이고 태양광이 없다면 어떻게 하나요?', a: '거기서부터 시작하세요. 전력 소모가 가장 큰 가전제품 몇 개에 에너지 모니터링 플러그를 설치해 Energy 대시보드에 공급하는 것만으로도 이미 시간대별 요금에 따른 부하 이동이 가능합니다 — 태양광과 배터리 연동은 나중에 처음부터 다시 시작할 필요 없이 추가할 수 있는 요소입니다.' },
+          { q: '2026년에 Home Assistant Energy 대시보드에서 무엇이 바뀌었나요?', a: 'Home Assistant 2026.3은 전기·가스·수도 실시간 배지가 있는 "Now" 보기와 수도 생키 차트를 추가했고, 2026.10은 배터리별 방전 그래프를 추가했습니다. 자세한 내용은 [2026.3](https://www.home-assistant.io/blog/2026/03/04/release-20263/) 및 [2026.10](https://www.home-assistant.io/blog/2026/10/07/release-202610/) 릴리스 노트를 참고하세요.' },
         ],
       },
       relatedReading: {
@@ -1522,7 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Home Assistant Energy 대시보드' }, { '@type': 'Thing', name: '로컬 에너지 모니터링' }, { '@type': 'Thing', name: '부하 이동 자동화' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
