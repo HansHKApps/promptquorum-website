@@ -7,6 +7,7 @@ https://www.promptquorum.com/balcony-solar/apsystems-microinverter-balcony-solar
 https://www.promptquorum.com/balcony-solar/balcony-solar-battery-storage-standard-2027
 https://www.promptquorum.com/balcony-solar/balcony-solar-brazil-status-2027
 https://www.promptquorum.com/balcony-solar/balcony-solar-china-2027
+https://www.promptquorum.com/balcony-solar/balcony-solar-france
 https://www.promptquorum.com/balcony-solar/balcony-solar-global-market-overview
 https://www.promptquorum.com/balcony-solar/balcony-solar-greece-status-2027
 https://www.promptquorum.com/balcony-solar/balcony-solar-gulf-mena
@@ -19,6 +20,7 @@ https://www.promptquorum.com/balcony-solar/balcony-solar-not-producing-power-fix
 https://www.promptquorum.com/balcony-solar/balcony-solar-payback-worth-it-2026
 https://www.promptquorum.com/balcony-solar/balcony-solar-portugal-brazil
 https://www.promptquorum.com/balcony-solar/balcony-solar-sizing-yield-payback
+https://www.promptquorum.com/balcony-solar/balcony-solar-south-korea
 https://www.promptquorum.com/balcony-solar/balcony-solar-spain-latam
 https://www.promptquorum.com/balcony-solar/balcony-vs-rooftop-solar
 https://www.promptquorum.com/balcony-solar/balkonkraftwerk-germany-rules
@@ -848,4 +850,3 @@ https://www.promptquorum.com/smart-home/smart-home-without-subscriptions
 https://www.promptquorum.com/smart-home/thread-14-wifi-7-routers-guide
 https://www.promptquorum.com/smart-home/what-is-a-smart-home
 https://www.promptquorum.com/smart-home/why-local-smart-home-beats-cloud
-https://www.promptquorum.com/waitlist
