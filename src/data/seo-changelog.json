@@ -4139,5 +4139,30 @@
       "ctr": 0,
       "period": "GSC 2026-10 (hiwaifu brand queries)"
     }
+  },
+  {
+    "id": "f57802d3-bd87-465d-96b6-a93cfd1dd3e5",
+    "slug": "/local-llms",
+    "date": "2026-10-18T18:16:20.624Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best Local AI & LLMs by VRAM Tier 2026: 12GB, 24GB, 48GB",
+        "new": "Best Local AI & LLMs 2026: Tier List by VRAM, 4GB to 48GB"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Best local AI models (LLMs) ranked by VRAM tier (4GB–48GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials.",
+        "new": "Local AI & LLM tier list by VRAM: 4GB Llama 3.2 3B, 12–16GB Qwen3 14B, 24GB Qwen3.8-27B, 48GB 70B Q4. Run via Ollama or LM Studio on a mid-range PC."
+      }
+    ],
+    "reason": "geo-meta-optimizer (EN only): top-10 GSC queries (126 rows, thin sample) — 'tier list' (11 imp), 'lm studio best model for mid pc' (47 imp, 0 clicks), '4gb'/'48gb'/'largest llm' VRAM-range queries were not in title/meta; added Tier List + 4GB-to-48GB range, models per tier and LM Studio/mid-range PC to meta. Kept today's 'Local AI & LLMs' wording. Diagnosis B1 (body gaps: RAG on 2GB laptop, 16GB RAM quantization, 12B, largest model) not yet written.",
+    "baseline": {
+      "position": 8.8,
+      "impressions": 140,
+      "clicks": 1,
+      "ctr": 0.007142857142857143,
+      "period": "GSC top-10 queries, paste 2026-10-18"
+    }
   }
 ]
