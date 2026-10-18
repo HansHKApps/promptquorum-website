@@ -39,16 +39,19 @@ function GuideIcon() {
 
 interface ItemCardProps {
   item: HubItem
-  tileIndex: number
+  /** This item's position across the whole open panel (guides then profiles), not just its group. */
+  itemIndex: number
   labels: HubExploreLabels
   /** Kept in the HTML but not shown (items 7 and up while the panel shows its first six). */
   collapsed: boolean
 }
 
-function ItemCard({ item, tileIndex, labels, collapsed }: ItemCardProps) {
+function ItemCard({ item, itemIndex, labels, collapsed }: ItemCardProps) {
   // Profile items (Herstellerprofile) carry their own category tone, verified per manufacturer
-  // from their company-profile article; every other item still cycles by tile, as before.
-  const toneKey = item.categoryTone ?? cycleTone(tileIndex)
+  // from their company-profile article. Guides have no such category, so they cycle by position
+  // in the panel instead — otherwise every card in a panel shares one flat tile-level tone and
+  // the grid reads as a wall of identical boxes (reported on "Rechtslage nach Land", 8 cards).
+  const toneKey = item.categoryTone ?? cycleTone(itemIndex)
   const tone = HUB_TONES[toneKey]
   const isProfile = item.kind === 'profile'
   const avatarLetter = isProfile ? item.title.trim().charAt(0).toUpperCase() : null
@@ -260,7 +263,7 @@ export function HubExplore({ tiles, labels, sortLocale }: HubExploreProps) {
                       <ItemCard
                         key={item.href}
                         item={item}
-                        tileIndex={index}
+                        itemIndex={index + group.offset + i}
                         labels={labels}
                         collapsed={canExpand && !showAll && group.offset + i >= PREVIEW_COUNT}
                       />
