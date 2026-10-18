@@ -337,7 +337,7 @@ export function HubTemplate(props: HubTemplateProps) {
                   </summary>
                   <p className={`px-5 leading-relaxed text-text-secondary ${item.bullets ? 'pb-2' : 'pb-4'}`}>{renderEmphasis(item.a)}</p>
                   {item.bullets && (
-                    <ul className="list-disc space-y-1 px-5 pb-4 pl-9 text-sm leading-relaxed text-text-secondary">
+                    <ul className="list-disc space-y-1 px-5 pb-4 ps-9 text-sm leading-relaxed text-text-secondary">
                       {item.bullets.map((bullet) => (
                         <li key={bullet}>{renderEmphasis(bullet)}</li>
                       ))}

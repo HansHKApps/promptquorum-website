@@ -168,7 +168,7 @@ export function HubExplore({ tiles, labels, sortLocale }: HubExploreProps) {
               aria-expanded={isOpen}
               aria-controls={panelId}
               style={{ order: index * 2, '--tile-tone': `var(--hub-${toneKey})` } as CSSProperties}
-              className={`group relative block w-full cursor-pointer rounded-[18px] p-0 text-left text-white shadow-[0_6px_16px_-6px_rgba(23,20,43,0.35)] transition-[transform,box-shadow,filter] duration-150 hover:-translate-y-0.5 hover:shadow-[0_16px_30px_-10px_var(--tile-tone)] hover:brightness-[0.94] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-primary ${tone.solid}`}
+              className={`group relative block w-full cursor-pointer rounded-[18px] p-0 text-start text-white shadow-[0_6px_16px_-6px_rgba(23,20,43,0.35)] transition-[transform,box-shadow,filter] duration-150 hover:-translate-y-0.5 hover:shadow-[0_16px_30px_-10px_var(--tile-tone)] hover:brightness-[0.94] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-text-primary ${tone.solid}`}
             >
               <span aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden rounded-[18px]">
                 <span className="absolute -right-9 -top-9 h-36 w-36 rounded-full bg-white/10" />
@@ -219,7 +219,7 @@ export function HubExplore({ tiles, labels, sortLocale }: HubExploreProps) {
               <div className="mb-1 flex flex-wrap items-center justify-between gap-3">
                 <h3 id={headingId} className="text-[22px] font-bold text-text-primary">
                   {tile.title}{' '}
-                  <span className={`ml-1 inline-block rounded-full px-3 py-0.5 align-middle text-sm font-semibold ${tone.tint} ${tone.ink}`}>
+                  <span className={`ms-1 inline-block rounded-full px-3 py-0.5 align-middle text-sm font-semibold ${tone.tint} ${tone.ink}`}>
                     {total} {tile.unit}
                   </span>
                 </h3>
@@ -244,7 +244,7 @@ export function HubExplore({ tiles, labels, sortLocale }: HubExploreProps) {
                   <button
                     type="button"
                     onClick={() => setShowAll(false)}
-                    className={`ml-auto min-h-11 cursor-pointer rounded-lg border bg-white px-3.5 py-2 text-sm font-semibold ${tone.solidBorder} ${tone.ink}`}
+                    className={`ms-auto min-h-11 cursor-pointer rounded-lg border bg-white px-3.5 py-2 text-sm font-semibold ${tone.solidBorder} ${tone.ink}`}
                   >
                     {labels.showLess}
                   </button>
