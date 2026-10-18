@@ -5,7 +5,7 @@ import { useLang } from '@/hooks/useLang'
 import { translations, type Language } from '@/translations'
 import { LangLinksBar } from '@/components/LangLinksBar'
 
-const EFFECTIVE_DATE = '15 March 2026'
+const EFFECTIVE_DATE = '18 October 2026'
 const CONTROLLER = 'PromptQuorum'
 const CONTROLLER_EMAIL = 'hello@promptquorum.com'
 const SITE_URL = 'https://www.promptquorum.com'
@@ -61,7 +61,7 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
             {t.privacyPageTitle}
           </h1>
           <p className="text-sm font-mono text-text-secondary">
-            {t.privacyEffectiveDate} <time dateTime="2026-03-15">{EFFECTIVE_DATE}</time> &nbsp;·&nbsp; {t.privacyController} {CONTROLLER} &nbsp;·&nbsp; {t.privacyContact} {CONTROLLER_EMAIL}
+            {t.privacyEffectiveDate} <time dateTime="2026-10-18">{EFFECTIVE_DATE}</time> &nbsp;·&nbsp; {t.privacyController} {CONTROLLER} &nbsp;·&nbsp; {t.privacyContact} {CONTROLLER_EMAIL}
           </p>
         </div>
 
@@ -121,6 +121,8 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
             <P>{t.privacyAltLookupNote}</P>
             <H3>{t.privacyMcpTitle}</H3>
             <P>{t.privacyMcpNote}</P>
+            <P>{t.privacyHostingNote}</P>
+            <P>{t.privacyConsentLogNote}</P>
             <P>{t.privacyS2Closure}</P>
           </section>
 
@@ -179,6 +181,18 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
                     <Td>{t.privacyS4Row4Data}</Td>
                     <Td>{t.privacyS4Row4Loc}</Td>
                   </tr>
+                  <tr className="border-b border-gray-100">
+                    <Td><strong>{t.privacyS4Row5Proc}</strong></Td>
+                    <Td>{t.privacyS4Row5Role}</Td>
+                    <Td>{t.privacyS4Row5Data}</Td>
+                    <Td>{t.privacyS4Row5Loc}</Td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <Td><strong>{t.privacyS4Row6Proc}</strong></Td>
+                    <Td>{t.privacyS4Row6Role}</Td>
+                    <Td>{t.privacyS4Row6Data}</Td>
+                    <Td>{t.privacyS4Row6Loc}</Td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -192,6 +206,7 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
             <ul className="list-disc pl-6 space-y-2 text-text-secondary text-[15px] leading-relaxed">
               <li><strong className="text-text-primary">Resend:</strong> {t.privacyS5Bullet1}</li>
               <li><strong className="text-text-primary">{gaRemoved ? 'Analytics:' : 'Google Analytics:'}</strong> {t.privacyS5Bullet2}</li>
+              <li><strong className="text-text-primary">Vercel / Upstash:</strong> {t.privacyS5Bullet3}</li>
             </ul>
             <P>{renderTemplate(t.privacyS5Closure, { email: CONTROLLER_EMAIL }).split(CONTROLLER_EMAIL).map((part, i) => (
               <span key={i}>
