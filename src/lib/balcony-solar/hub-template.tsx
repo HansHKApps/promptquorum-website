@@ -13,6 +13,7 @@ import { HUB_EXPLORE_LABELS, HUB_SORT_LOCALE } from '@/components/hub-template/l
 import { cycleTone } from '@/components/hub-template/palette'
 import type { HubTone } from '@/components/hub-template/palette'
 import type { HubItem, HubLatestCard, HubLink, HubStartCard, HubTile } from '@/components/hub-template/types'
+import { PROFILE_META } from './profile-meta'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Lang } from '@/lib/i18n/constants'
@@ -73,7 +74,7 @@ interface HubTemplateCopy {
   jump: { label: string; start: string; explore: string; why: string; latest: string; deeper: string; faq: string }
   start: { title: string; intro: string; badge: string; goals: Record<keyof typeof START_SLUGS, string> }
   explore: { title: string; intro: string; guidesUnit: string; profilesUnit: string; tileSummary: Record<string, string>; profilesTitle: string; profilesIntro: string }
-  why: { title: string }
+  why: { title: string; takeaway?: string }
   latest: { title: string; intro: string; more: string; updated: string; published: string }
   deeper: { title: string; intro: string; open: string; lines: Record<string, string>; extra: { slug: string; name: string }[] }
   overview: { title: string; iframeTitle: string }
@@ -82,18 +83,18 @@ interface HubTemplateCopy {
 
 const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
   de: {
-    pill: 'Balcony Solar',
+    pill: 'Balkonkraftwerke',
     titleHighlight: 'ohne Cloud',
     primaryCta: 'Regeln für mein Land prüfen',
     secondaryCta: 'Alle Themen ansehen',
     summary: [
       {
         label: 'In einem Satz',
-        text: 'Ein Balkonkraftwerk ist ein steckerfertiges Solargerät, das Strom für den Eigenverbrauch erzeugt, in den meisten Märkten ohne Dachinstallation oder Elektriker.',
+        text: 'Ein Balkonkraftwerk ist ein **steckerfertiges Solargerät**, das Strom für den Eigenverbrauch erzeugt, in den meisten Märkten **ohne Dachinstallation oder Elektriker**.',
       },
       {
         label: 'In einfachen Worten',
-        text: 'Set auswählen, die Regeln des eigenen Landes prüfen, anschließen. Die Guides unten zeigen jeden Schritt.',
+        text: 'Set auswählen, die Regeln des eigenen Landes prüfen, anschließen. Die Anleitungen unten zeigen **jeden Schritt**.',
       },
     ],
     flow: {
@@ -129,7 +130,7 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
     explore: {
       title: 'Themen entdecken',
       intro: '{tiles} Themen, {pages} Seiten. Ein Klick öffnet ein Thema direkt an Ort und Stelle.',
-      guidesUnit: 'Guides',
+      guidesUnit: 'Anleitungen',
       profilesUnit: 'Profile',
       tileSummary: {
         'hub-money': 'Grundlagen, beste Sets und Betrieb ohne Cloud.',
@@ -140,9 +141,13 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
         'trends-2027': 'EU-Standards, Wohnungsgenossenschaften, Net Metering und Länderberichte.',
       },
       profilesTitle: 'Herstellerprofile',
-      profilesIntro: 'Profile von Herstellern und Marken für Sets, Wechselrichter und Speicher, von Anker SOLIX bis Zendure.',
+      profilesIntro: 'Profile von **Herstellern und Marken** für Sets, Wechselrichter und Speicher, von **Anker SOLIX bis Zendure**.',
     },
-    why: { title: 'Warum Balkonkraftwerk und warum ohne Cloud' },
+    why: {
+      title: 'Warum Balkonkraftwerk und warum ohne Cloud',
+      takeaway:
+        '**Kurz gesagt:** Ein Balkonkraftwerk braucht **keinen Installateur**, amortisiert sich bei den meisten Sets **innerhalb weniger Jahre**, und lässt sich bei den gängigen Marken **komplett ohne Hersteller-Cloud** über Home Assistant betreiben.',
+    },
     latest: {
       title: 'Zuletzt aktualisiert',
       intro: 'Die drei Seiten mit der jüngsten Änderung.',
@@ -167,16 +172,19 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
       ],
     },
     overview: { title: 'Überblick als Präsentation', iframeTitle: 'Balcony Solar Überblick' },
-    guideCountToken: '33 Guides',
+    guideCountToken: '33 Anleitungen',
   },
 }
 
-// One accent color per hub, matching the hubs' own pages.
+// One accent color per hub, matching the hubs' own pages. "local-llms" and "prompt-bites" were
+// 'olive' (green) and 'amber' (yellow-beige) — off-brand next to the rest of the page's
+// purple/blue/indigo/magenta/rose palette, per the owner's review — replaced with 'rose' and
+// 'orchid' from that same palette. 'cyan', 'violet' and 'blue' were kept (already judged fine).
 const HUB_TONES_BY_SLUG: Record<string, HubTone> = {
   'smart-home': 'cyan',
-  'local-llms': 'olive',
+  'local-llms': 'rose',
   'power-local-llm': 'violet',
-  'prompt-bites': 'amber',
+  'prompt-bites': 'orchid',
   'prompt-engineering': 'blue',
 }
 
@@ -189,7 +197,7 @@ export interface BalconySolarHubTemplateSource {
   lang: Lang
   copy: { title: string; intro: string; intro2: string; benefits: { label: string; detail: string }[] }
   categoryCopy?: Record<string, CategoryCopy>
-  faq: { q: string; a: string }[]
+  faq: { q: string; a: string; bullets?: string[] }[]
   faqHeading: string
   relatedLinks: { label: string; path: string }[]
   reviewedDate?: string
@@ -241,12 +249,17 @@ export function BalconySolarHubTemplate(source: BalconySolarHubTemplateSource) {
     const { en, local } = articleOf(slug)
     const isNew = isNewArticle(en?.publishDate)
     const isUpdated = !isNew && isUpdatedArticle(en?.publishDate, en?.dateModified)
+    const isProfile = PROFILE_SLUGS.has(slug)
+    const profile = isProfile ? PROFILE_META[slug] : undefined
     return {
       href: balconySolarArticlePath(lang, slug),
       title: local?.title ?? en?.title ?? source.fallbackTitle(slug),
       summary: local?.intro,
-      kind: PROFILE_SLUGS.has(slug) ? 'profile' : 'guide',
+      kind: isProfile ? 'profile' : 'guide',
       badge: isNew ? 'new' : isUpdated ? 'updated' : undefined,
+      category: profile?.category,
+      categoryTone: profile?.categoryTone,
+      fact: profile?.fact,
     }
   }
 
@@ -331,7 +344,7 @@ export function BalconySolarHubTemplate(source: BalconySolarHubTemplateSource) {
 
   return (
     <HubTemplate
-      accent="orange"
+      accent="indigo"
       breadcrumb={{ homeLabel: source.homeLabel, homeHref: lang === 'en' ? '/' : `/${lang}`, current: copy.pill }}
       pill={copy.pill}
       title={source.copy.title}
@@ -365,6 +378,7 @@ export function BalconySolarHubTemplate(source: BalconySolarHubTemplateSource) {
         title: copy.why.title,
         intro: source.copy.intro2,
         cards: source.copy.benefits.map((benefit, i) => ({ ...benefit, tone: cycleTone(i) })),
+        takeaway: copy.why.takeaway,
       }}
       latest={{
         title: copy.latest.title,
