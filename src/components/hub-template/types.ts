@@ -9,6 +9,11 @@ export interface HubItem {
   /** Guides keep the editorial order; profiles are listed A to Z when the whole tile is opened. */
   kind: 'guide' | 'profile'
   badge?: 'new' | 'updated'
+  /** Profile items only: short role badge (e.g. "Wechselrichter-Hersteller") shown instead of the generic "Profil" label, and its tone. Set both or neither. */
+  category?: string
+  categoryTone?: HubTone
+  /** Profile items only: one short, source-verified fact shown as a chip under the title. */
+  fact?: string
 }
 
 /** One tile in "Explore by topic". Its items open in a panel under the tile's row. */
@@ -76,6 +81,8 @@ export interface HubLink {
 export interface HubFaqItem {
   q: string
   a: string
+  /** Optional: when the answer enumerates several facts, show them as a short list under the lead sentence in `a`. */
+  bullets?: string[]
 }
 
 export interface HubFlowColumn {
