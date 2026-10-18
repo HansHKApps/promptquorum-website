@@ -326,11 +326,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**على Windows وmacOS يعمل Home Assistant فقط بصيغة Home Assistant OS داخل جهاز افتراضي، بينما يستطيع Linux تشغيل HAOS أو تثبيت Container مباشرة.** Home Assistant OS نظام تشغيل مصمم خصيصًا لأتمتة المنزل، والحاسوب المكتبي مناسب للتجربة لكنه مضيف ضعيف للتشغيل المستمر على مدار الساعة.',
         items: [
-          'Windows: أنشئ جهازًا افتراضيًا بنظام UEFI في VirtualBox أو VMware Workstation أو Hyper-V بذاكرة لا تقل عن 2 GB ومعالجين افتراضيين، وأرفق صورة قرص HAOS واضبط الشبكة على وضع الجسر (Bridged). لا يستطيع Hyper-V تمرير أعواد USB الخاصة بـ Zigbee أو Z-Wave إلى الجهاز الافتراضي.',
+          'Windows: أنشئ جهازًا افتراضيًا بنظام UEFI في VirtualBox أو VMware Workstation أو Hyper-V بذاكرة لا تقل عن 2 GB ومعالجين افتراضيين، وأرفق صورة قرص HAOS واضبط الشبكة على وضع الجسر (Bridged). لا يستطيع Hyper-V تمرير محوّلات USB الخاصة بـ Zigbee أو Z-Wave إلى الجهاز الافتراضي.',
           'macOS: استخدم مدير أجهزة افتراضية مثل VirtualBox (يستخدم Apple silicon خيار ARM بنظام 64 بت) مع إعداد شبكة الجسر نفسه.',
           'Linux: شغّل HAOS في جهاز افتراضي (مثل KVM) أو استخدم تثبيت Container مع Docker Compose. لا يتضمن Container التطبيقات (الإضافات سابقًا)، لذا يحتاج Thread وZ-Wave إلى إعداد منفصل.',
           'بعد إقلاع الجهاز الافتراضي، افتح واجهة الويب الخاصة بـ Home Assistant على المنفذ 8123 للجهاز الافتراضي في أي متصفح؛ ولأن التحكم يتم عبر المتصفح فهو يعمل على أي نظام تشغيل مكتبي.',
-          'للتشغيل المستمر اختر جهازًا مخصصًا — Home Assistant Green (السعر الموصى به 199 دولارًا / 179 يورو، ذاكرة 4 GB وتخزين 32 GB) أو Raspberry Pi 4 أو 5 بذاكرة لا تقل عن 2 GB — ليستمر المركز في العمل عندما يدخل حاسوبك في وضع السكون. راجع [دليل التثبيت الرسمي](https://www.home-assistant.io/installation/).',
+          'للتشغيل المستمر اختر جهازًا مخصصًا — Home Assistant Green (السعر الموصى به 199 دولارًا وقد تختلف الأسعار المحلية حسب السوق، ذاكرة 4 GB وتخزين 32 GB) أو Raspberry Pi 4 أو 5 بذاكرة لا تقل عن 2 GB — ليستمر المركز في العمل عندما يدخل حاسوبك في وضع السكون. راجع [دليل التثبيت الرسمي](https://www.home-assistant.io/installation/).',
         ],
       },
       integrations: {
@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant ist der führende Local-First-Smart-Home-Hub: Installieren Sie ihn auf einem Raspberry Pi oder Mini-PC, fügen Sie Integrationen hinzu und steuern Sie alles lokal ohne Cloud. Dieser Einsteiger-Leitfaden behandelt Warum Home Assistant, die Installationsoptionen, erste Integrationen, das Dashboard, Ihre erste Automatisierung und wo Sie später lokale KI hinzufügen – ohne die LLM-Mechanik erneut zu erklären.',
     metaDescription:
-      'Home-Assistant-Tutorial 2026 für Einsteiger: auf Pi, Mini-PC oder Windows/macOS/Linux-VM installieren, Integrationen hinzufügen, erste lokale Automatisierung.',
+      'Home-Assistant-Tutorial 2026 für Einsteiger: auf Pi, Mini-PC oder Windows/macOS/Linux-VM installieren, Integrationen und erste lokale Automatisierung.',
     twitterDescription:
       'Home Assistant Einsteiger-Leitfaden: auf einem Pi oder Mini-PC installieren, Integrationen hinzufügen, Ihre erste lokale Automatisierung bauen. Der Local-First-Hub.',
     readTime: '10 Min. Lesezeit',
@@ -547,7 +547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS: Nutzen Sie einen Hypervisor wie VirtualBox (Apple Silicon verwendet die ARM-64-Bit-Option) mit derselben Bridge-Netzwerk-Einrichtung.',
           'Linux: Betreiben Sie HAOS in einer VM (zum Beispiel KVM) oder nutzen Sie die Container-Installation mit Docker Compose. Container enthält keine Apps (früher Add-ons), daher brauchen Thread und Z-Wave eine separate Einrichtung.',
           'Sobald die VM gestartet ist, öffnen Sie die Home-Assistant-Weboberfläche auf Port 8123 der VM in einem beliebigen Browser; da die Steuerung über den Browser läuft, funktioniert es mit jedem Desktop-Betriebssystem.',
-          'Für den Dauerbetrieb wählen Sie ein dediziertes Gerät – Home Assistant Green (empfohlener Preis 199 $ / 179 €, 4 GB RAM, 32 GB Speicher) oder einen Raspberry Pi 4 oder 5 mit mindestens 2 GB RAM –, damit der Hub weiterläuft, wenn Ihr PC schläft. Siehe [die offizielle Installationsanleitung](https://www.home-assistant.io/installation/).',
+          'Für den Dauerbetrieb wählen Sie ein dediziertes Gerät – Home Assistant Green (empfohlener Preis 179 €, 4 GB RAM, 32 GB Speicher) oder einen Raspberry Pi 4 oder 5 mit mindestens 2 GB RAM –, damit der Hub weiterläuft, wenn Ihr PC schläft. Siehe [die offizielle Installationsanleitung](https://www.home-assistant.io/installation/).',
         ],
       },
       integrations: {
@@ -627,7 +627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant: Vollständiger Einsteiger-Leitfaden (2026)',
-      description: 'Home-Assistant-Tutorial 2026 für Einsteiger: auf Pi, Mini-PC oder Windows/macOS/Linux-VM installieren, Integrationen hinzufügen, erste lokale Automatisierung.',
+      description: 'Home-Assistant-Tutorial 2026 für Einsteiger: auf Pi, Mini-PC oder Windows/macOS/Linux-VM installieren, Integrationen und erste lokale Automatisierung.',
       url: 'https://www.promptquorum.com/de/smart-home/home-assistant-getting-started',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -665,7 +665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant es el hub de smart home local-first líder: instálalo en una Raspberry Pi o un mini PC, añade integraciones y controla todo localmente sin nube. Esta guía para empezar cubre por qué Home Assistant, las opciones de instalación, las primeras integraciones, el panel, tu primera automatización y dónde añadir IA local más adelante, sin reexplicar la mecánica del LLM.',
     metaDescription:
-      'Tutorial de Home Assistant 2026 para principiantes: instálalo en Pi, mini PC o VM de Windows/macOS/Linux, añade integraciones y crea tu primera automatización.',
+      'Tutorial de Home Assistant 2026 para principiantes: instálalo en Pi, mini PC o VM de Windows/macOS/Linux, suma integraciones y crea tu primera automatización.',
     twitterDescription:
       'Guía para empezar con Home Assistant: instala en una Pi o mini PC, añade integraciones, crea tu primera automatización local. El hub local-first.',
     readTime: '10 min de lectura',
@@ -760,11 +760,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**En Windows y macOS, Home Assistant solo se ejecuta como Home Assistant OS dentro de una máquina virtual; Linux puede ejecutar HAOS o la instalación Container directamente.** Home Assistant OS es un sistema operativo creado para la domótica; un PC de escritorio sirve para probar, pero es un mal anfitrión 24/7.',
         items: [
-          'Windows: crea una máquina virtual UEFI en VirtualBox, VMware Workstation o Hyper-V con al menos 2 GB de RAM y 2 vCPU, adjunta la imagen de disco de HAOS y configura la red en modo puente. Hyper-V no puede pasar memorias USB Zigbee o Z-Wave a la VM.',
+          'Windows: crea una máquina virtual UEFI en VirtualBox, VMware Workstation o Hyper-V con al menos 2 GB de RAM y 2 vCPU, adjunta la imagen de disco de HAOS y configura la red en modo puente. Hyper-V no puede pasar adaptadores USB Zigbee o Z-Wave a la VM.',
           'macOS: usa un hipervisor como VirtualBox (Apple silicon usa la opción ARM de 64 bits) con la misma configuración de red en modo puente.',
           'Linux: ejecuta HAOS en una VM (por ejemplo KVM) o usa la instalación Container con Docker Compose. Container no incluye apps (antes add-ons), así que Thread y Z-Wave requieren una configuración aparte.',
           'Cuando la VM arranque, abre la interfaz web de Home Assistant en el puerto 8123 de la VM desde cualquier navegador; como se controla desde el navegador, funciona en cualquier sistema operativo de escritorio.',
-          'Para uso continuo, elige un dispositivo dedicado — Home Assistant Green (precio recomendado 199 $ / 179 €, 4 GB de RAM, 32 GB de almacenamiento) o una Raspberry Pi 4 o 5 con al menos 2 GB de RAM — para que el hub siga funcionando cuando tu PC se suspende. Consulta [la guía oficial de instalación](https://www.home-assistant.io/installation/).',
+          'Para uso continuo, elige un dispositivo dedicado — Home Assistant Green (precio recomendado 179 € en España; en Latinoamérica, 199 USD, y los precios locales pueden variar; 4 GB de RAM, 32 GB de almacenamiento) o una Raspberry Pi 4 o 5 con al menos 2 GB de RAM — para que el hub siga funcionando cuando tu PC se suspende. Consulta [la guía oficial de instalación](https://www.home-assistant.io/installation/).',
         ],
       },
       integrations: {
@@ -844,7 +844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant: Guía Completa para Empezar (2026)',
-      description: 'Tutorial de Home Assistant 2026 para principiantes: instálalo en Pi, mini PC o VM de Windows/macOS/Linux, añade integraciones y crea tu primera automatización.',
+      description: 'Tutorial de Home Assistant 2026 para principiantes: instálalo en Pi, mini PC o VM de Windows/macOS/Linux, suma integraciones y crea tu primera automatización.',
       url: 'https://www.promptquorum.com/es/smart-home/home-assistant-getting-started',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Home Assistant는 선도적인 로컬 우선 스마트 홈 허브입니다. Raspberry Pi나 미니 PC에 설치하고 통합을 추가하면 클라우드 없이 모든 것을 로컬로 제어할 수 있습니다. 이 시작 가이드는 Home Assistant를 선택하는 이유, 설치 옵션, 첫 번째 통합, 대시보드, 첫 번째 자동화, 나중에 로컬 AI를 추가하는 방법을 다룹니다.',
     metaDescription:
-      'Home Assistant 2026 입문 튜토리얼: Pi, 미니 PC, Windows/macOS/Linux VM에 설치하고 통합을 추가해 첫 로컬 자동화를 만드세요.',
+      'Home Assistant 2026 입문 튜토리얼: Pi, 미니 PC, Windows/macOS/Linux VM에 설치하고 통합을 추가해 첫 로컬 자동화를 만드는 방법을 안내합니다.',
     twitterDescription:
       'Home Assistant 시작 가이드: Pi 또는 미니 PC에 설치하고, 통합을 추가하며, 첫 번째 로컬 자동화를 구축합니다. 로컬 우선 허브.',
     readTime: '10분 분량',
@@ -977,11 +977,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Windows와 macOS에서는 Home Assistant가 가상 머신 안의 Home Assistant OS로만 실행되며, Linux에서는 HAOS 또는 Container 설치를 직접 실행할 수 있습니다.** Home Assistant OS는 홈 오토메이션 전용으로 만든 운영체제이며, 데스크톱 PC는 테스트에는 쓸 수 있지만 24시간 운영 호스트로는 적합하지 않습니다.',
         items: [
-          'Windows: VirtualBox, VMware Workstation, Hyper-V에서 RAM 2 GB 이상, 2 vCPU 이상의 UEFI 가상 머신을 만들고 HAOS 디스크 이미지를 연결한 뒤 네트워크를 브리지로 설정합니다. Hyper-V는 USB Zigbee/Z-Wave 스틱을 가상 머신에 전달할 수 없습니다.',
+          'Windows: VirtualBox, VMware Workstation, Hyper-V에서 RAM 2 GB 이상, 2 vCPU 이상의 UEFI 가상 머신을 만들고 HAOS 디스크 이미지를 연결한 뒤 네트워크를 브리지로 설정합니다. Hyper-V는 USB Zigbee/Z-Wave 어댑터를 가상 머신에 전달할 수 없습니다.',
           'macOS: VirtualBox 같은 하이퍼바이저를 사용하고(Apple 실리콘은 ARM 64비트 옵션 선택) 같은 브리지 네트워크 설정을 합니다.',
           'Linux: VM(예: KVM)에서 HAOS를 실행하거나 Docker Compose로 Container 설치를 사용합니다. Container에는 앱(구 애드온)이 없으므로 Thread와 Z-Wave는 별도 설정이 필요합니다.',
           'VM이 부팅되면 아무 브라우저에서 VM의 8123 포트로 Home Assistant 웹 인터페이스를 엽니다. 브라우저로 제어하므로 어떤 데스크톱 운영체제에서도 사용할 수 있습니다.',
-          '상시 운영에는 전용 기기를 고르세요. Home Assistant Green(권장 가격 199달러 / 179유로, RAM 4 GB, 저장공간 32 GB) 또는 RAM 2 GB 이상의 Raspberry Pi 4/5라면 PC가 절전 모드가 되어도 허브가 계속 동작합니다. [공식 설치 가이드](https://www.home-assistant.io/installation/)를 참고하세요.',
+          '상시 운영에는 전용 기기를 선택하는 것이 좋습니다. Home Assistant Green(권장 가격 199달러, 지역별 가격은 다를 수 있음, RAM 4 GB, 저장공간 32 GB) 또는 RAM 2 GB 이상의 Raspberry Pi 4/5라면 PC가 절전 모드가 되어도 허브가 계속 동작합니다. [공식 설치 가이드](https://www.home-assistant.io/installation/)를 참고하십시오.',
         ],
       },
       integrations: {
@@ -1040,7 +1040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Home Assistant는 무료입니까?', a: '네. Home Assistant는 무료 오픈 소스입니다. 실행되는 하드웨어와 원격 접근을 위한 클라우드 릴레이 같은 선택적 추가 기능에만 비용이 듭니다. 핵심 로컬 제어에는 구독이 필요 없습니다.' },
           { q: 'Home Assistant를 사용하려면 코딩이 필요합니까?', a: '아니오. 일반적인 설정, 대시보드, 자동화는 그래픽 인터페이스를 통해 구축됩니다. YAML 설정은 고급 자동화에 사용 가능하지만 시작할 때는 선택 사항입니다.' },
           { q: 'Home Assistant로 AI를 실행할 수 있습니까?', a: '네. Home Assistant는 로컬 모델이 대화 에이전트로 작동할 수 있도록 Ollama와 통합되며, Whisper와 Piper로 로컬 음성을 지원합니다. 미니 PC에서 이것들을 실행하면 모든 것이 로컬로 유지됩니다. 설정은 Ollama 통합 가이드를 참조하십시오.' },
-          { q: 'Windows나 macOS에 Home Assistant를 설치할 수 있나요?', a: '네, 다만 가상 머신 안의 Home Assistant OS로만 가능합니다(Windows에서는 VirtualBox, VMware, Hyper-V). VM에 RAM 2 GB 이상, 2 vCPU 이상, UEFI 부팅, 브리지 네트워크를 할당하세요. Linux에서는 Container 설치도 직접 실행할 수 있습니다.' },
+          { q: 'Windows나 macOS에 Home Assistant를 설치할 수 있나요?', a: '네, 다만 가상 머신 안의 Home Assistant OS로만 가능합니다(Windows에서는 VirtualBox, VMware, Hyper-V). VM에 RAM 2 GB 이상, 2 vCPU 이상, UEFI 부팅, 브리지 네트워크를 할당해야 합니다. Linux에서는 Container 설치도 직접 실행할 수 있습니다.' },
           { q: 'Home Assistant OS란 무엇인가요?', a: 'Home Assistant OS(HAOS)는 Home Assistant를 실행하기 위해서만 만든 최소 구성의 운영체제입니다. 앱, 백업, 원클릭 업데이트를 포함하며 Home Assistant가 대부분의 사용자에게 권장하는 설치 방식입니다.' },
         ],
       },
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Home Assistant: 완전한 시작 가이드 (2026)',
-      description: 'Home Assistant 2026 입문 튜토리얼: Pi, 미니 PC, Windows/macOS/Linux VM에 설치하고 통합을 추가해 첫 로컬 자동화를 만드세요.',
+      description: 'Home Assistant 2026 입문 튜토리얼: Pi, 미니 PC, Windows/macOS/Linux VM에 설치하고 통합을 추가해 첫 로컬 자동화를 만드는 방법을 안내합니다.',
       url: 'https://www.promptquorum.com/ko/smart-home/home-assistant-getting-started',
       inLanguage: 'ko',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1081,7 +1081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Home Assistant는 무료입니까?', acceptedAnswer: { '@type': 'Answer', text: '네. 무료 오픈 소스입니다. 하드웨어와 원격 접근을 위한 클라우드 릴레이 같은 선택적 추가 기능에만 비용이 듭니다. 핵심 로컬 제어에는 구독이 필요 없습니다.' } },
         { '@type': 'Question', name: 'Home Assistant를 사용하려면 코딩이 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: '아니오. 일반적인 설정, 대시보드, 자동화는 그래픽 인터페이스를 통해 구축됩니다. YAML은 고급 자동화에 선택 사항입니다.' } },
         { '@type': 'Question', name: 'Home Assistant로 AI를 실행할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '네. 로컬 대화 에이전트를 위해 Ollama와 통합되며 Whisper와 Piper로 로컬 음성을 지원합니다. 미니 PC에서 실행하면 모든 것이 로컬로 유지됩니다.' } },
-        { '@type': 'Question', name: 'Windows나 macOS에 Home Assistant를 설치할 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '네, 다만 가상 머신 안의 Home Assistant OS로만 가능합니다(Windows에서는 VirtualBox, VMware, Hyper-V). VM에 RAM 2 GB 이상, 2 vCPU 이상, UEFI 부팅, 브리지 네트워크를 할당하세요. Linux에서는 Container 설치도 직접 실행할 수 있습니다.' } },
+        { '@type': 'Question', name: 'Windows나 macOS에 Home Assistant를 설치할 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '네, 다만 가상 머신 안의 Home Assistant OS로만 가능합니다(Windows에서는 VirtualBox, VMware, Hyper-V). VM에 RAM 2 GB 이상, 2 vCPU 이상, UEFI 부팅, 브리지 네트워크를 할당해야 합니다. Linux에서는 Container 설치도 직접 실행할 수 있습니다.' } },
         { '@type': 'Question', name: 'Home Assistant OS란 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant OS(HAOS)는 Home Assistant를 실행하기 위해서만 만든 최소 구성의 운영체제입니다. 앱, 백업, 원클릭 업데이트를 포함하며 Home Assistant가 대부분의 사용자에게 권장하는 설치 방식입니다.' } },
       ],
     },
@@ -1194,11 +1194,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Sous Windows et macOS, Home Assistant ne fonctionne que sous forme de Home Assistant OS dans une machine virtuelle ; Linux peut exécuter HAOS ou l\'installation Container directement.** Home Assistant OS est un système d\'exploitation conçu pour la domotique ; un PC de bureau convient pour tester, mais mal pour un fonctionnement 24 h/24.',
         items: [
-          'Windows : créez une machine virtuelle UEFI dans VirtualBox, VMware Workstation ou Hyper-V avec au moins 2 Go de RAM et 2 vCPU, attachez l\'image disque HAOS et configurez le réseau en mode ponté. Hyper-V ne peut pas transmettre de clés USB Zigbee ou Z-Wave à la VM.',
+          'Windows : créez une machine virtuelle UEFI dans VirtualBox, VMware Workstation ou Hyper-V avec au moins 2 Go de RAM et 2 vCPU, attachez l\'image disque HAOS et configurez le réseau en mode ponté. Hyper-V ne peut pas transmettre d\'adaptateurs USB Zigbee ou Z-Wave à la VM.',
           'macOS : utilisez un hyperviseur comme VirtualBox (Apple silicon utilise l\'option ARM 64 bits) avec la même configuration réseau en mode ponté.',
           'Linux : exécutez HAOS dans une VM (par exemple KVM) ou utilisez l\'installation Container avec Docker Compose. Container n\'inclut pas les applications (anciennement add-ons), donc Thread et Z-Wave demandent une configuration séparée.',
           'Une fois la VM démarrée, ouvrez l\'interface web de Home Assistant sur le port 8123 de la VM dans n\'importe quel navigateur ; comme le pilotage passe par le navigateur, cela fonctionne depuis tout système de bureau.',
-          'Pour un usage permanent, choisissez un appareil dédié — Home Assistant Green (prix recommandé 199 $ / 179 €, 4 Go de RAM, 32 Go de stockage) ou un Raspberry Pi 4 ou 5 avec au moins 2 Go de RAM — afin que le hub reste actif quand votre PC est en veille. Voir [le guide d\'installation officiel](https://www.home-assistant.io/installation/).',
+          'Pour un usage permanent, choisissez un appareil dédié — Home Assistant Green (prix recommandé 179 €, 4 Go de RAM, 32 Go de stockage) ou un Raspberry Pi 4 ou 5 avec au moins 2 Go de RAM — afin que le hub reste actif quand votre PC est en veille. Voir [le guide d\'installation officiel](https://www.home-assistant.io/installation/).',
         ],
       },
       integrations: {
@@ -1411,11 +1411,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**WindowsとmacOSでは、Home Assistantは仮想マシン内のHome Assistant OSとしてのみ動作し、LinuxではHAOSまたはContainerインストールを直接実行できます。** Home Assistant OSはホームオートメーション専用に作られたOSです。デスクトップPCはテストには使えますが、24時間365日の運用には向きません。',
         items: [
-          'Windows：VirtualBox、VMware Workstation、Hyper-VでRAM 2 GB以上・2 vCPU以上のUEFI仮想マシンを作成し、HAOSのディスクイメージを接続して、ネットワークをブリッジに設定します。Hyper-VはUSB接続のZigbee/Z-Waveスティックを仮想マシンに渡せません。',
+          'Windows：VirtualBox、VMware Workstation、Hyper-VでRAM 2 GB以上・2 vCPU以上のUEFI仮想マシンを作成し、HAOSのディスクイメージを接続して、ネットワークをブリッジに設定します。Hyper-VはUSB接続のZigbee/Z-Waveアダプターを仮想マシンに渡せません。',
           'macOS：VirtualBoxなどのハイパーバイザーを使い（Apple siliconではARM 64ビットを選択）、同じブリッジネットワーク設定にします。',
           'Linux：VM（例：KVM）でHAOSを実行するか、Docker ComposeでContainerインストールを使います。Containerにはアプリ（旧アドオン）が含まれないため、ThreadやZ-Waveは別途セットアップが必要です。',
           'VMが起動したら、任意のブラウザでVMのポート8123にあるHome Assistantのウェブインターフェースを開きます。操作はブラウザ経由のため、どのデスクトップOSからでも使えます。',
-          '常時稼働には専用デバイスを選びましょう。Home Assistant Green（推奨価格199ドル／179ユーロ、RAM 4 GB、ストレージ32 GB）または2 GB以上のRaspberry Pi 4/5なら、PCがスリープしてもハブが動き続けます。[公式インストールガイド](https://www.home-assistant.io/installation/)を参照してください。',
+          '常時稼働には専用デバイスを選びましょう。Home Assistant Green（推奨価格199ドル、日本での価格は販売店により異なります。RAM 4 GB、ストレージ32 GB）または2 GB以上のRaspberry Pi 4/5なら、PCがスリープしてもハブが動き続けます。[公式インストールガイド](https://www.home-assistant.io/installation/)を参照してください。',
         ],
       },
       integrations: {
@@ -1628,11 +1628,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**No Windows e no macOS, o Home Assistant roda apenas como Home Assistant OS dentro de uma máquina virtual; o Linux pode rodar o HAOS ou a instalação Container diretamente.** O Home Assistant OS é um sistema operacional feito para automação residencial; um PC de mesa serve para testar, mas é um mau host 24/7.',
         items: [
-          'Windows: crie uma máquina virtual UEFI no VirtualBox, VMware Workstation ou Hyper-V com pelo menos 2 GB de RAM e 2 vCPUs, anexe a imagem de disco do HAOS e configure a rede em modo bridge. O Hyper-V não repassa pendrives USB Zigbee ou Z-Wave para a VM.',
+          'Windows: crie uma máquina virtual UEFI no VirtualBox, VMware Workstation ou Hyper-V com pelo menos 2 GB de RAM e 2 vCPUs, anexe a imagem de disco do HAOS e configure a rede em modo bridge. O Hyper-V não repassa adaptadores USB Zigbee ou Z-Wave para a VM.',
           'macOS: use um hipervisor como o VirtualBox (Apple silicon usa a opção ARM de 64 bits) com a mesma configuração de rede em modo bridge.',
           'Linux: rode o HAOS em uma VM (por exemplo, KVM) ou use a instalação Container com Docker Compose. O Container não inclui apps (antes add-ons), então Thread e Z-Wave exigem configuração separada.',
           'Quando a VM iniciar, abra a interface web do Home Assistant na porta 8123 da VM em qualquer navegador; como o controle é feito pelo navegador, funciona em qualquer sistema operacional de desktop.',
-          'Para uso contínuo, escolha um dispositivo dedicado — Home Assistant Green (preço recomendado US$ 199 / € 179, 4 GB de RAM, 32 GB de armazenamento) ou um Raspberry Pi 4 ou 5 com pelo menos 2 GB de RAM — para que o hub continue funcionando quando seu PC entrar em suspensão. Veja [o guia oficial de instalação](https://www.home-assistant.io/installation/).',
+          'Para uso contínuo, escolha um dispositivo dedicado — Home Assistant Green (preço recomendado US$ 199; no Brasil, os preços podem variar bastante devido a impostos de importação; 4 GB de RAM, 32 GB de armazenamento) ou um Raspberry Pi 4 ou 5 com pelo menos 2 GB de RAM — para que o hub continue funcionando quando seu PC entrar em suspensão. Veja [o guia oficial de instalação](https://www.home-assistant.io/installation/).',
         ],
       },
       integrations: {
@@ -1849,7 +1849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS：使用 VirtualBox 等虚拟化软件（Apple 芯片选择 ARM 64 位选项），网络同样设置为桥接。',
           'Linux：在虚拟机（例如 KVM）中运行 HAOS，或使用 Docker Compose 的 Container 安装。Container 不含应用（原称加载项），因此 Thread 和 Z-Wave 需要另行配置。',
           '虚拟机启动后，在任意浏览器中打开该虚拟机 8123 端口上的 Home Assistant 网页界面；由于通过浏览器控制，它可在任何桌面操作系统上使用。',
-          '若要长期运行，请选择专用设备——Home Assistant Green（建议售价 199 美元 / 179 欧元，4 GB 内存，32 GB 存储）或至少 2 GB 内存的 Raspberry Pi 4 或 5——这样即使电脑休眠，中枢也能持续运行。参见[官方安装指南](https://www.home-assistant.io/installation/)。',
+          '若要长期运行，请选择专用设备——Home Assistant Green（建议售价 199 美元，4 GB 内存，32 GB 存储）或至少 2 GB 内存的 Raspberry Pi 4 或 5——这样即使电脑休眠，中枢也能持续运行。参见[官方安装指南](https://www.home-assistant.io/installation/)。',
         ],
       },
       integrations: {
