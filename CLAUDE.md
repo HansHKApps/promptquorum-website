@@ -23,7 +23,7 @@ Summary of non-negotiable rules:
 
 ## Project Summary
 
-PromptQuorum Website is the marketing site for PromptQuorum — a multi-model AI prompt dispatch and consensus tool. The site showcases features, explains how the product works, hosts a blog, and collects waitlist signups. It deploys automatically to Vercel on every push to `main`.
+PromptQuorum Website is the marketing site for PromptQuorum — a multi-model AI prompt dispatch and consensus tool. The site showcases features, explains how the product works, and hosts the content clusters. The app is in free public beta — there is no waitlist (retired 2026-10-18; /waitlist 301s to /download). It deploys automatically to Vercel on every push to `main`.
 
 ## Tech Stack
 
@@ -60,7 +60,6 @@ src/
     features/        # Features page
     how-it-works/    # How it works page
     faq/             # FAQ page
-    waitlist/        # Waitlist page (auto-opens modal)
     about/           # About page
     not-found.tsx    # Custom 404 page
     layout.tsx       # Root layout with shared header/footer
@@ -68,8 +67,6 @@ src/
     HeaderClient.tsx # Navigation with language switcher
     Footer.tsx       # Site footer
     LanguageSwitcherWrapper.tsx
-  context/           # React context providers
-    WaitlistContext.tsx
   hooks/
     useLang.ts       # Reads ?lang= query param for language routing
   lib/

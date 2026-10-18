@@ -286,7 +286,7 @@ export default async function FrameworkPage({ params }: { params: Promise<{ slug
               All 9 frameworks are built in. Write, optimize with your own LLM, dispatch to 25+ AI models, and run consensus analysis — free, no account required.
             </p>
             <Link
-              href="/#waitlist"
+              href="/download"
               className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
               Download the Beta

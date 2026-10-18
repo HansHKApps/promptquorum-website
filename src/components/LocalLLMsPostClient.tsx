@@ -119,6 +119,10 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Utilisez PromptQuorum avec un LLM local, vos propres clés API, ou les deux — vous choisissez le backend.',
     ja: 'ローカルLLM、独自のAPIキー、またはその両方でPromptQuorumを使用できます — バックエンドはあなたが選択します。',
     zh: '使用本地LLM、您自己的API密钥或两者运行PromptQuorum — 您来决定使用哪个后端。',
+    es: 'Usa PromptQuorum con un LLM local, tus propias claves API o ambos — tú eliges el backend.',
+    pt: 'Use o PromptQuorum com um LLM local, suas próprias chaves de API ou ambos — você escolhe o backend.',
+    ar: 'استخدم PromptQuorum مع نموذج لغوي محلي أو مفاتيح API الخاصة بك أو كليهما — أنت من يختار الواجهة الخلفية.',
+    ko: 'PromptQuorum을 로컬 LLM, 직접 보유한 API 키 또는 둘 다와 함께 사용하세요 — 백엔드는 직접 선택합니다.',
   },
   ctaButton: {
     en: 'Download the PromptQuorum Beta →',
@@ -126,6 +130,10 @@ const POST_UI: Record<string, Record<string, string>> = {
     fr: 'Télécharger la bêta PromptQuorum →',
     ja: 'PromptQuorumベータ版をダウンロード →',
     zh: '下载 PromptQuorum 测试版 →',
+    es: 'Descargar la beta de PromptQuorum →',
+    pt: 'Baixar o beta do PromptQuorum →',
+    ar: 'تنزيل النسخة التجريبية من PromptQuorum ←',
+    ko: 'PromptQuorum 베타 다운로드 →',
   },
   backLink: {
     en: '← Back to Local LLMs',
@@ -1161,7 +1169,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
             {article?.ctaText ?? POST_UI.ctaText[lang] ?? POST_UI.ctaText['en']}
           </p>
           <a
-            href={(article as any)?.ctaHref ?? (lang === 'en' ? '/waitlist' : `/${lang}/waitlist`)}
+            href={(article as any)?.ctaHref ?? (lang === 'en' ? '/download' : `/${lang}/download`)}
             className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
           >
             {(article as any)?.ctaButton ?? POST_UI.ctaButton[lang] ?? POST_UI.ctaButton['en']}

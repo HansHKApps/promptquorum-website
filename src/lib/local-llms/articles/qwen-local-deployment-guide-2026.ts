@@ -60,7 +60,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateDisclosure: true,
     ctaText: 'Dispatch across Qwen3, DeepSeek, and Llama from one interface →',
     ctaButton: 'Try PromptQuorum Free',
-    ctaHref: '/waitlist',
     leadAnswerBlock: '**The new flagship pick is Qwen 3.6 27B — a dense, Apache 2.0 model with a 256K context window that runs in ~17 GB of VRAM at Q4_K_M via `ollama run qwen3.6:27b`.** For a lighter setup, Qwen3 8B installs with Ollama and `ollama pull qwen2.5:7b` — 5.5 GB of VRAM, 57 tokens/sec on an RTX 3060. For coding tasks use Qwen2.5-Coder; for Chinese/Japanese document OCR use Qwen2-VL. Already know your VRAM budget? Jump straight to [which GPU or Mac to buy for each Qwen tier](#affiliate-picks).',
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
@@ -484,7 +483,6 @@ curl http://localhost:11434/v1/chat/completions \\
     affiliateDisclosure: true,
     ctaText: 'Despacha entre Qwen3, DeepSeek y Llama desde una sola interfaz →',
     ctaButton: 'Prueba PromptQuorum gratis',
-    ctaHref: '/waitlist',
     leadAnswerBlock: '**La nueva recomendación insignia es Qwen 3.6 27B — un modelo denso con licencia Apache 2.0 y ventana de contexto de 256K que funciona con ~17 GB de VRAM en Q4_K_M mediante `ollama run qwen3.6:27b`.** Para una opción más ligera, Qwen3 8B se instala con Ollama y `ollama pull qwen2.5:7b` — 5,5 GB de VRAM, 57 tokens/seg en una RTX 3060. Para tareas de código usa Qwen2.5-Coder; para OCR de documentos en chino/japonés usa Qwen2-VL. ¿Ya conoces tu presupuesto de VRAM? Ve directamente a [qué GPU o Mac comprar para cada nivel de Qwen](#affiliate-picks).',
     toc: [
       { label: 'Puntos clave', anchor: '#key-takeaways' },
@@ -931,7 +929,6 @@ curl http://localhost:11434/v1/chat/completions \\
     affiliateDisclosure: true,
     ctaText: 'وزّع بين Qwen3 وDeepSeek وLlama من واجهة واحدة ←',
     ctaButton: 'جرّب PromptQuorum مجانًا',
-    ctaHref: '/waitlist',
     leadAnswerBlock: '**الاختيار الرائد الجديد هو Qwen 3.6 27B — نموذج كثيف برخصة Apache 2.0 ونافذة سياق 256K يعمل بـ ~17 GB من VRAM عند Q4_K_M عبر `ollama run qwen3.6:27b`.** لإعداد أخف، ثبّت Ollama ونفّذ `ollama pull qwen2.5:7b` لتشغيل Qwen3 8B — يتطلب 5.5 GB من VRAM ويقدّم 57 token/ثانية على RTX 3060. لمهام الكود استخدم Qwen2.5-Coder؛ ولـ OCR للمستندات الصينية/اليابانية استخدم Qwen2-VL. هل تعرف بالفعل ميزانية VRAM لديك؟ انتقل مباشرة إلى [بطاقة الرسوم أو جهاز Mac المناسب لكل مستوى من Qwen](#affiliate-picks).',
     toc: [
       { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
@@ -1322,7 +1319,6 @@ curl http://localhost:11434/v1/chat/completions \\
     affiliateDisclosure: true,
     ctaText: 'Despache entre Qwen3, DeepSeek e Llama a partir de uma única interface →',
     ctaButton: 'Experimente o PromptQuorum gratuitamente',
-    ctaHref: '/waitlist',
     leadAnswerBlock: '**A nova escolha principal é o Qwen 3.6 27B — um modelo denso, sob licença Apache 2.0, com janela de contexto de 256K, que funciona com ~17 GB de VRAM em Q4_K_M via `ollama run qwen3.6:27b`.** Para uma configuração mais leve, instale o Ollama e execute `ollama pull qwen2.5:7b` — requer 5,5 GB de VRAM e entrega 57 tokens/seg em uma RTX 3060. Para tarefas de código use o Qwen2.5-Coder; para OCR de documentos em chinês/japonês use o Qwen2-VL. Já sabe qual é o seu orçamento de VRAM? Vá direto para [qual GPU ou Mac comprar para cada nível do Qwen](#affiliate-picks).',
     toc: [
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
@@ -1711,7 +1707,6 @@ curl http://localhost:11434/v1/chat/completions \\
     affiliateDisclosure: true,
     ctaText: 'Dispatcher entre Qwen3, DeepSeek et Llama depuis une interface →',
     ctaButton: 'Essayer PromptQuorum gratuitement',
-    ctaHref: '/waitlist',
     leadAnswerBlock: '**Le nouveau modèle phare est Qwen 3.6 27B — un modèle dense sous licence Apache 2.0 avec une fenêtre de contexte de 256 K, qui tourne avec ~17 Go de VRAM en Q4_K_M via `ollama run qwen3.6:27b`.** Pour une configuration plus légère, installez Ollama et exécutez `ollama pull qwen2.5:7b` pour Qwen3 8B — 5,5 Go de VRAM suffisent, 57 tokens/s sur une RTX 3060. Pour le code, utilisez Qwen2.5-Coder ; pour l\'OCR de documents CJK, Qwen2-VL. Vous connaissez déjà votre budget VRAM ? Accédez directement au [GPU ou Mac à acheter pour chaque niveau Qwen](#affiliate-picks).',
     toc: [
       { label: 'Points clés', anchor: '#key-takeaways' },
@@ -2174,7 +2169,6 @@ curl http://localhost:11434/v1/chat/completions \\
     affiliateDisclosure: true,
     ctaText: 'Qwen3, DeepSeek und Llama über eine Oberfläche dispatchen →',
     ctaButton: 'PromptQuorum kostenlos testen',
-    ctaHref: '/waitlist',
     leadAnswerBlock: '**Das neue Flagship-Modell ist Qwen 3.6 27B — ein dichtes Modell unter Apache 2.0 mit 256K-Kontextfenster, das mit ~17 GB VRAM in Q4_K_M über `ollama run qwen3.6:27b` läuft.** Für ein schlankeres Setup installieren Sie Ollama und führen Sie `ollama pull qwen2.5:7b` für Qwen3 8B aus — das Modell benötigt 5,5 GB VRAM und liefert 57 Tokens/Sek. auf einer RTX 3060. Für Coding-Aufgaben verwenden Sie Qwen2.5-Coder; für chinesisches/japanisches Dokument-OCR Qwen2-VL. Kennen Sie Ihr VRAM-Budget bereits? Springen Sie direkt zu [welche GPU oder welchen Mac Sie für welche Qwen-Stufe kaufen sollten](#affiliate-picks).',
     toc: [
       { label: 'Zusammenfassung', anchor: '#key-takeaways' },
@@ -2572,7 +2566,6 @@ curl http://localhost:11434/v1/chat/completions \\
     affiliateDisclosure: true,
     ctaText: 'Qwen3・DeepSeek・Llamaを1つのインターフェースからディスパッチ →',
     ctaButton: 'PromptQuorumを無料で試す',
-    ctaHref: '/waitlist',
     leadAnswerBlock: '**新しいフラッグシップはQwen 3.6 27Bです。Apache 2.0ライセンスの密なモデルで、256Kコンテキストウィンドウを持ち、`ollama run qwen3.6:27b`でQ4_K_M約17GBのVRAMで動作します。** より軽量な構成なら、Ollamaをインストールして`ollama pull qwen2.5:7b`を実行すればQwen3 8BがVRAM 5.5GB、RTX 3060で57トークン/秒で動作します。コーディング用途にはQwen2.5-Coderを、中国語・日本語ドキュメントOCRにはQwen2-VLを使用してください。VRAM予算がすでに決まっている方は、[各Qwen階層に最適なGPUまたはMacの選び方](#affiliate-picks)へ直接お進みください。',
     toc: [
       { label: '重要ポイント', anchor: '#key-takeaways' },
@@ -3046,7 +3039,6 @@ curl http://localhost:11434/v1/chat/completions \\
     affiliateDisclosure: true,
     ctaText: '通过一个界面调度Qwen3、DeepSeek和Llama →',
     ctaButton: '免费试用PromptQuorum',
-    ctaHref: '/waitlist',
     leadAnswerBlock: '**新旗舰是Qwen 3.6 27B——Apache 2.0授权的密集模型，256K上下文窗口，通过`ollama run qwen3.6:27b`在Q4_K_M量化下约17GB显存即可运行。** 更轻量的方案：安装Ollama并执行`ollama pull qwen2.5:7b`即可运行Qwen3 8B，仅需5.5GB显存，RTX 3060上可达57个token/秒。代码任务使用Qwen2.5-Coder；中日文档OCR使用Qwen2-VL。已经知道自己的显存预算了？直接跳转查看[各Qwen档位应该买哪款GPU或Mac](#affiliate-picks)。',
     toc: [
       { label: '核心要点', anchor: '#key-takeaways' },
@@ -3546,7 +3538,6 @@ curl http://localhost:11434/v1/chat/completions \\
     affiliateDisclosure: true,
     ctaText: 'Qwen3, DeepSeek, Llama를 하나의 인터페이스에서 실행하십시오 →',
     ctaButton: 'PromptQuorum 무료로 사용해보기',
-    ctaHref: '/waitlist',
     leadAnswerBlock: '**새로운 플래그십 모델은 Qwen 3.6 27B입니다** — Apache 2.0 라이선스의 밀집 모델로, 256K 컨텍스트 창을 갖추고 있으며 `ollama run qwen3.6:27b`를 통해 Q4_K_M 기준 약 17GB의 VRAM으로 실행됩니다. 더 가벼운 설정을 원하면 Ollama를 설치하고 `ollama pull qwen2.5:7b`를 실행해 Qwen3 8B를 사용하십시오 — 5.5 GB의 VRAM이 필요하며 RTX 3060에서 초당 57 토큰을 처리합니다. 코딩 작업에는 Qwen2.5-Coder를, 중국어/일본어 문서 OCR에는 Qwen2-VL을 사용하십시오. 이미 원하는 VRAM 예산을 알고 계신가요? [각 Qwen 티어에 맞는 GPU 또는 Mac 구매 가이드](#affiliate-picks)로 바로 이동하십시오.',
     toc: [
       { label: '핵심 요약', anchor: '#key-takeaways' },

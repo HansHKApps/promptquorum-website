@@ -27,9 +27,9 @@ import { getHomeStats } from '@/lib/home/stats'
  * every block goes through the shared HomeCard primitive so the page reads
  * as one coherent system despite the uneven sizing.
  *
- * The hero/product-pitch/waitlist-CTA and the Features/How-It-Works/FAQ
+ * The hero/product-pitch/CTA and the Features/How-It-Works/FAQ
  * sections that used to live here are gone (redundant with /pq-apps now,
- * and the signup funnel lives on at /download and /waitlist) — this
+ * and the download funnel lives on at /download) — this
  * component owns the page's <h1> instead, since nothing else does anymore.
  */
 export function Home({ lang }: { lang: Language }) {

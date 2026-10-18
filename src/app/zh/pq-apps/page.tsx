@@ -72,7 +72,7 @@ export default function ZhPQAppsPage() {
               一次输入，同时发送给25+款AI模型——支持本地LLM，并提供多模型共识分析，一切都在浏览器中完成。
             </p>
             <Link
-              href="/zh/waitlist"
+              href="/zh/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               试用测试版
@@ -1031,7 +1031,7 @@ export default function ZhPQAppsPage() {
           {/* Repeat CTA */}
           <div className="text-center py-12 border-t border-primary/20">
             <Link
-              href="/zh/waitlist"
+              href="/zh/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               试用测试版

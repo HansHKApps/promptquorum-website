@@ -24,8 +24,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Qwen vs Claude vs DeepSeek local 2026',
     leadAnswerBlock: '**Qwen 3.6 27B leads open-weight coding at 92.1% HumanEval and runs on 16 GB VRAM. Claude Sonnet 5 delivers 89.4% HumanEval with zero hardware cost. DeepSeek R2 is the cheapest frontier option at $0.14/1M tokens. For EU GDPR compliance, only local deployment (Qwen via Ollama) guarantees data residency. The best 2026 strategy is dispatch routing: local Qwen for sensitive tasks, cloud for headless scale.**',
     ctaText: 'Ready to build your dispatch strategy?',
-    ctaButton: 'Join the waitlist →',
-    ctaHref: '/waitlist',
     quickAnswerTop: {
       en: {
         question: 'Qwen 3.6 vs Claude Sonnet 5 vs DeepSeek R2 — which should I use in 2026?',
@@ -273,7 +271,6 @@ dispatch_rules:
           '[Qwen Coder vs DeepSeek vs Mistral: Local Coding Benchmark 2026](/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[The Local LLM Privacy Manifesto 2026](/local-llms/qwen-gdpr-privacy-manifesto-2026)',
           '[Best Local LLMs for Coding 2026](/local-llms/best-local-llms-for-coding)',
-          '[Join the PromptQuorum Waitlist](/waitlist)',
         ],
       },
       faq: {
@@ -306,8 +303,6 @@ dispatch_rules:
     primaryTerm: 'Qwen vs Claude vs DeepSeek local 2026',
     leadAnswerBlock: '**Qwen 3.6 27B lidera en código open-weight con 92,1% HumanEval y funciona con 16 GB de VRAM. Claude Sonnet 5 ofrece 89,4% HumanEval sin coste de hardware. DeepSeek R2 es la opción frontier más barata a $0,14/1M tokens. Para cumplimiento GDPR de la UE, solo el despliegue local (Qwen via Ollama) garantiza la residencia de datos. La mejor estrategia en 2026 es el enrutamiento por despacho: Qwen local para tareas sensibles, nube para escalar.**',
     ctaText: '¿Listo para construir tu estrategia de despacho?',
-    ctaButton: 'Unirse a la lista de espera →',
-    ctaHref: '/waitlist',
     toc: [
       { label: 'Puntos clave', anchor: '#key-takeaways' },
       { label: 'Panorama de LLM local en 2026', anchor: '#landscape-2026' },
@@ -492,7 +487,6 @@ dispatch_rules:
           '[Qwen Coder vs DeepSeek vs Mistral: Benchmark de código local 2026](/es/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[El manifiesto de privacidad de LLM local 2026](/es/local-llms/qwen-gdpr-privacy-manifesto-2026)',
           '[Mejores LLMs locales para código 2026](/es/local-llms/best-local-llms-for-coding)',
-          '[Únete a la lista de espera de PromptQuorum](/waitlist)',
         ],
       },
       faq: {
@@ -554,8 +548,6 @@ dispatch_rules:
     primaryTerm: 'Qwen مقابل Claude مقابل DeepSeek محلي 2026',
     leadAnswerBlock: '**يتصدر Qwen 3.6 27B في الكود مفتوح الأوزان بـ 92.1% HumanEval ويعمل بـ 16 GB من VRAM. يقدّم Claude Sonnet 5 نسبة 89.4% HumanEval دون تكلفة أجهزة. وDeepSeek R2 هو الخيار الحدودي الأرخص بـ $0.14/1M token. لامتثال GDPR في الاتحاد الأوروبي، يضمن النشر المحلي وحده (Qwen عبر Ollama) إقامة البيانات. أفضل استراتيجية في 2026 هي التوجيه بالتوزيع: Qwen محلي للمهام الحساسة، والسحابة للتوسّع.**',
     ctaText: 'هل أنت مستعد لبناء استراتيجية التوزيع الخاصة بك؟',
-    ctaButton: 'انضم إلى قائمة الانتظار ←',
-    ctaHref: '/waitlist',
     toc: [
       { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
       { label: 'مشهد LLM المحلي في 2026', anchor: '#landscape-2026' },
@@ -740,7 +732,6 @@ dispatch_rules:
           '[Qwen Coder مقابل DeepSeek مقابل Mistral: معيار الكود المحلي 2026](/ar/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[بيان خصوصية نموذج LLM المحلي 2026](/ar/local-llms/qwen-gdpr-privacy-manifesto-2026)',
           '[أفضل نماذج LLM المحلية للكود 2026](/ar/local-llms/best-local-llms-for-coding)',
-          '[انضم إلى قائمة انتظار PromptQuorum](/waitlist)',
         ],
       },
       faq: {
@@ -815,8 +806,6 @@ dispatch_rules:
       },
     },
     ctaText: 'Pronto para construir sua estratégia de despacho?',
-    ctaButton: 'Entrar na lista de espera →',
-    ctaHref: '/waitlist',
     toc: [
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
       { label: 'Panorama de LLM local em 2026', anchor: '#landscape-2026' },
@@ -981,7 +970,6 @@ dispatch_rules:
           '[Como executar o Qwen 3 localmente — Guia completo de configuração 2026](/pt/local-llms/run-qwen-locally-guide-2026)',
           '[Manifesto de privacidade de LLM local 2026](/pt/local-llms/qwen-gdpr-privacy-manifesto-2026)',
           '[Melhores LLMs locais para código 2026](/pt/local-llms/best-local-llms-for-coding)',
-          '[Entre na lista de espera do PromptQuorum](/waitlist)',
         ],
       },
       faq: {
@@ -1030,8 +1018,6 @@ dispatch_rules:
     primaryTerm: 'Qwen vs Claude vs DeepSeek lokal 2026',
     leadAnswerBlock: '**Qwen 3.6 27B führt bei Open-Weight-Coding mit 92,1% HumanEval und läuft auf 16 GB VRAM. Claude Sonnet 5 liefert 89,4% HumanEval ohne Hardware-Kosten. DeepSeek R2 ist die kostengünstigste Frontier-Option bei 0,14 $/1M Token. Für EU-DSGVO-Compliance garantiert nur lokales Deployment (Qwen via Ollama) Datenspeicherung. Die beste Strategie 2026 ist Dispatch-Routing: lokales Qwen für sensible Aufgaben, Cloud für Skalierung.**',
     ctaText: 'Bereit, Ihre Dispatch-Strategie zu bauen?',
-    ctaButton: 'Zur Warteliste →',
-    ctaHref: '/waitlist',
     toc: [
       { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
       { label: 'Lokale KI-Landschaft 2026', anchor: '#landscape-2026' },
@@ -1215,7 +1201,6 @@ dispatch_rules:
           '[Qwen Coder vs DeepSeek vs Mistral: Lokales Coding-Benchmark 2026](/de/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[Das Local LLM Privacy Manifesto 2026](/de/local-llms/qwen-gdpr-privacy-manifesto-2026)',
           '[Best Local LLMs für Coding 2026](/de/local-llms/best-local-llms-for-coding)',
-          '[Zur PromptQuorum Warteliste](/waitlist)',
         ],
       },
       faq: {
@@ -1253,8 +1238,6 @@ dispatch_rules:
     primaryTerm: 'Qwen vs Claude vs DeepSeek local 2026',
     leadAnswerBlock: '**Qwen 3.6 27B mène en code open-weight : 92.1% HumanEval sur 16 Go VRAM. Claude Sonnet 5 offre 89.4% HumanEval sans matériel. DeepSeek R2 est le moins cher à 0.14 $/1M tokens. Pour la conformité RGPD, seul le déploiement local (Qwen via Ollama) garantit la résidence des données. La meilleure stratégie 2026 est le dispatch : Qwen local pour les tâches sensibles, cloud pour la scalabilité.**',
     ctaText: 'Prêt à construire votre stratégie de dispatch ?',
-    ctaButton: 'Rejoindre la liste d\'attente →',
-    ctaHref: '/waitlist',
     toc: [
       { label: 'Points clés', anchor: '#key-takeaways' },
       { label: 'Paysage des IA locales 2026', anchor: '#landscape-2026' },
@@ -1438,7 +1421,6 @@ dispatch_rules:
           '[Qwen Coder vs DeepSeek vs Mistral : Benchmark code local 2026](/fr/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[Le manifeste IA locale 2026](/fr/local-llms/qwen-gdpr-privacy-manifesto-2026)',
           '[Meilleures IA locales pour code 2026](/fr/local-llms/best-local-llms-for-coding)',
-          '[Rejoindre liste attente PromptQuorum](/waitlist)',
         ],
       },
       faq: {
@@ -1476,8 +1458,6 @@ dispatch_rules:
     primaryTerm: 'Qwen vs Claude vs DeepSeek 本地推理 2026',
     leadAnswerBlock: '**Qwen 3.6 27B以92.1% HumanEval领跑开源编码、16 GB显存本地运行。Claude Sonnet 5无需硬件、89.4% HumanEval、$3/1M令牌。DeepSeek R2最便宜$0.14/1M令牌。中国企业受数据安全法约束，本地Qwen是最安全选择。2026最优策略：本地Qwen处理敏感编码任务，云端API处理推理和高容量工作。**',
     ctaText: '准备好构建您的分发策略了吗？',
-    ctaButton: '加入等候名单 →',
-    ctaHref: '/waitlist',
     comparisonTable: {
       columns: ['模型', 'HumanEval', 'SWE-bench', 'MMLU', '显存/硬件需求', '成本(输入)', '数据主权'],
       rows: [
@@ -1665,7 +1645,6 @@ dispatch_rules:
           '[Qwen编码器 vs DeepSeek vs Mistral：本地编程基准2026](/zh/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[本地LLM隐私宣言2026](/zh/local-llms/qwen-gdpr-privacy-manifesto-2026)',
           '[2026年最佳编程本地LLM](/zh/local-llms/best-local-llms-for-coding)',
-          '[加入PromptQuorum等待列表](/zh/waitlist)',
         ],
       },
       faqSection: {
@@ -1998,8 +1977,6 @@ dispatchers:
       },
     },
     ctaText: 'ローカルLLM戦略をお探しですか？',
-    ctaButton: 'Waitlistに参加',
-    ctaHref: 'https://www.promptquorum.com/ja/waitlist',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -2060,8 +2037,6 @@ dispatchers:
     primaryTerm: 'Qwen vs Claude vs DeepSeek 로컬 2026',
     leadAnswerBlock: 'Qwen 3.6 27B는 오픈웨이트 코딩 부문에서 HumanEval 92.1%로 선두를 달리며 16 GB VRAM에서 실행됩니다. Claude Sonnet 5는 하드웨어 비용 없이 HumanEval 89.4%를 제공합니다. DeepSeek R2는 $0.14/1M 토큰으로 가장 저렴한 최전선 옵션입니다. EU GDPR 준수 측면에서는 로컬 배포(Ollama를 통한 Qwen)만이 데이터 잔류를 보장합니다. 2026년 최선의 전략은 디스패치 라우팅입니다: 민감한 작업에는 로컬 Qwen, 대규모 처리에는 클라우드를 활용하십시오.',
     ctaText: '디스패치 전략을 구축할 준비가 되셨나요?',
-    ctaButton: '대기자 명단 참여하기 →',
-    ctaHref: '/waitlist',
     quickAnswerTop: {
       ko: {
         question: 'Qwen 3.6 vs Claude Sonnet 5 vs DeepSeek R2 — 2026년에 무엇을 사용해야 합니까?',
@@ -2261,7 +2236,6 @@ dispatch_rules:
           '[Qwen Coder vs DeepSeek vs Mistral: 로컬 코딩 벤치마크 2026](/ko/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[로컬 LLM 프라이버시 선언문 2026](/ko/local-llms/qwen-gdpr-privacy-manifesto-2026)',
           '[2026년 코딩 최고 로컬 LLM](/ko/local-llms/best-local-llms-for-coding)',
-          '[PromptQuorum 대기자 명단 등록](/waitlist)',
         ],
       },
       faq: {

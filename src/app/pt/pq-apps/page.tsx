@@ -72,7 +72,7 @@ export default function PtPQAppsPage() {
               Um único prompt, enviado simultaneamente para mais de 25 modelos de IA — com suporte a LLMs locais e análise de consenso multimodelo, tudo direto do seu navegador.
             </p>
             <Link
-              href="/pt/waitlist"
+              href="/pt/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Testar a Beta
@@ -1047,7 +1047,7 @@ export default function PtPQAppsPage() {
           {/* Repeat CTA */}
           <div className="text-center py-12 border-t border-primary/20">
             <Link
-              href="/pt/waitlist"
+              href="/pt/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Testar a Beta

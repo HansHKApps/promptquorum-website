@@ -11,6 +11,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "70b-models-consumer-hardware",
+        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
+        "url": "/local-llms/70b-models-consumer-hardware",
+        "dateModified": "2026-10-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "best-mini-pcs-local-llm",
         "title": "Best Mini PCs for Local LLMs 2026: Mac Mini M6, M5 Pro, and Framework Desktop Compared",
         "url": "/local-llms/best-mini-pcs-local-llm",
@@ -72,14 +80,6 @@
         "url": "/local-llms/llm-quantization-explained",
         "dateModified": "2026-10-17",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-hardware-guide",
-        "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
-        "url": "/local-llms/local-llm-hardware-guide",
-        "dateModified": "2026-10-17",
-        "tier": "about"
       }
     ],
     "totalCount": 302,
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "70b-models-consumer-hardware",
+        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
+        "url": "/local-llms/70b-models-consumer-hardware",
+        "dateModified": "2026-10-18",
         "tier": "about"
       },
       {
@@ -157,14 +165,6 @@
         "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
         "url": "/local-llms/apple-silicon-m5-local-llm",
         "dateModified": "2026-10-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "open-webui-review",
-        "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
-        "url": "/local-llms/open-webui-review",
-        "dateModified": "2026-10-09",
         "tier": "about"
       }
     ],
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 92,
+    "totalCount": 93,
     "capped": true
   },
   "LocalAI": {
@@ -542,6 +542,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "70b-models-consumer-hardware",
+        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
+        "url": "/local-llms/70b-models-consumer-hardware",
+        "dateModified": "2026-10-18",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
@@ -564,18 +572,10 @@
         "url": "/power-local-llm/lmdeploy-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openllm-review",
-        "title": "OpenLLM Review: BentoML's Self-Hostable LLM API Server",
-        "url": "/power-local-llm/openllm-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "ExLlamaV2": {
     "articles": [
@@ -7800,7 +7800,7 @@
         "slug": "hiwaifu-review",
         "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
         "url": "/power-local-llm/hiwaifu-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-10-18",
         "tier": "about"
       },
       {
@@ -10685,6 +10685,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "hiwaifu-review",
+        "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
+        "url": "/power-local-llm/hiwaifu-review",
+        "dateModified": "2026-10-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "snug-protocol-review",
         "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
         "url": "/power-local-llm/snug-protocol-review",
@@ -10744,14 +10752,6 @@
         "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
         "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
         "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "easy-diffusion-review",
-        "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
-        "url": "/power-local-llm/easy-diffusion-review",
         "dateModified": "2026-10-17",
         "tier": "mentioned"
       }
@@ -11542,7 +11542,7 @@
         "slug": "hiwaifu-review",
         "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
         "url": "/power-local-llm/hiwaifu-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-10-18",
         "tier": "about"
       }
     ],
@@ -11690,7 +11690,7 @@
         "slug": "hiwaifu-review",
         "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
         "url": "/power-local-llm/hiwaifu-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-10-18",
         "tier": "about"
       }
     ],

@@ -591,7 +591,7 @@
       ]
     },
     "70b-models-consumer-hardware": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -606,20 +606,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/70b-models-consumer-hardware-hardware-comparison-hero-en.webp",
-          "title": "Hardware comparison: Apple Silicon M5 Max achieves 25-35 tok/sec with no offloading, while NVIDIA RTX 4090 with layer offloading reaches 10-18 tok/sec, and CPU-only 70B inference produces just 1-3 tok/sec."
-        },
-        {
-          "url": "/images/70b-models-consumer-hardware-quantization-tradeoff-hero-en.webp",
-          "title": "Quantization trade-off curve: Q4_K_M (recommended) requires 40-43 GB RAM with only 1-3% quality loss versus FP16, balancing practicality and performance for consumer hardware."
-        },
-        {
-          "url": "/images/70b-layer-offloading.svg",
-          "title": "Layer offloading architecture: RTX 4090 GPU (24 GB) holds ~60% of layers (1-48) at 10-18 tok/sec, while system RAM (32 GB) holds remaining layers (49-80) running at CPU speed (2-5 tok/sec), achieving 10-18 tok/sec overall."
-        }
-      ]
+      "images": []
     },
     "llm-quantization-explained": {
       "dateModified": "2026-10-17",
@@ -11104,7 +11091,7 @@
       "images": []
     },
     "hiwaifu-review": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-10-17",
       "hasSections": true,
@@ -15919,7 +15906,7 @@
       ]
     },
     "local-smart-home-energy-management-2027": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15937,7 +15924,7 @@
       "images": []
     },
     "matter-solar-inverter-heat-pump-integration": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15955,7 +15942,7 @@
       "images": []
     },
     "home-assistant-energy-dashboard-guide": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15973,7 +15960,7 @@
       "images": []
     },
     "home-as-energy-microgrid-2027": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -15991,7 +15978,7 @@
       "images": []
     },
     "matter-1-6-explained": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -16009,7 +15996,7 @@
       "images": []
     },
     "thread-14-wifi-7-routers-guide": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -16027,7 +16014,7 @@
       "images": []
     },
     "eu-data-act-smart-home-2027": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -16045,7 +16032,7 @@
       "images": []
     },
     "ikea-matter-ecosystem-guide-2027": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -16063,7 +16050,7 @@
       "images": []
     },
     "local-small-language-models-smart-home": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -16081,7 +16068,7 @@
       "images": []
     },
     "radar-presence-sensing-no-camera": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -16099,7 +16086,7 @@
       "images": []
     },
     "reducing-llm-hallucinations-home-automation": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -16117,7 +16104,7 @@
       "images": []
     },
     "sensor-fusion-smart-home-2027": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -16135,7 +16122,7 @@
       "images": []
     },
     "home-digital-twin-explained": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -16243,7 +16230,7 @@
       "images": []
     },
     "nvidia-jetson-orin-nano-smart-home-review": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-10-18",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,

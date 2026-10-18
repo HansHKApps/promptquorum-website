@@ -36,7 +36,7 @@ const ARTICLE_DIRS = {
 }
 const STATIC_ALLOW = new Set([
   '/', '/features', '/features/optimization', '/features/quorum',
-  '/how-it-works', '/compare', '/faq', '/about', '/blog', '/waitlist',
+  '/how-it-works', '/compare', '/faq', '/about', '/blog',
   '/privacy', '/terms', '/glossary', '/contact',
 ])
 const UNVALIDATED_CLUSTERS = new Set(['frameworks'])

@@ -7,7 +7,6 @@ export const PAGES: Page[] = [
   { path: '/pq-apps', priority: 0.9, changefreq: 'weekly', lastmod: '2026-09-20' },
   { path: '/directory', priority: 0.9, changefreq: 'weekly', lastmod: articleLastmod(metadata['power-local-llm'], POWER_LLM_SLUG_TO_KEY['local-llm-software-directory'], '2026-09-20') },
   { path: '/about', priority: 0.5, changefreq: 'monthly', lastmod: '2026-03-16' },
-  { path: '/waitlist', priority: 0.6, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/privacy', priority: 0.3, changefreq: 'monthly', lastmod: '2026-10-18' },
   { path: '/frameworks', priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/frameworks/co-star', priority: 0.8, changefreq: 'monthly', lastmod: '2026-03-16' },

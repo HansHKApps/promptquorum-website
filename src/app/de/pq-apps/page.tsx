@@ -72,7 +72,7 @@ export default function DePQAppsPage() {
               Ein Prompt, gleichzeitig an 25+ KI-Modelle gesendet — mit Unterstützung für lokale LLMs und Multi-Modell-Konsensanalyse, alles direkt aus deinem Browser.
             </p>
             <Link
-              href="/de/waitlist"
+              href="/de/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Beta testen
@@ -1031,7 +1031,7 @@ export default function DePQAppsPage() {
           {/* Repeat CTA */}
           <div className="text-center py-12 border-t border-primary/20">
             <Link
-              href="/de/waitlist"
+              href="/de/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Beta testen

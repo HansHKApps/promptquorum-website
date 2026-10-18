@@ -72,7 +72,7 @@ export default function EsPQAppsPage() {
               Un solo prompt, enviado simultáneamente a más de 25 modelos de IA, con soporte para LLMs locales y análisis de consenso multi-modelo, todo desde tu navegador.
             </p>
             <Link
-              href="/es/waitlist"
+              href="/es/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Probar la beta
@@ -1035,7 +1035,7 @@ export default function EsPQAppsPage() {
           {/* Repeat CTA */}
           <div className="text-center py-12 border-t border-primary/20">
             <Link
-              href="/es/waitlist"
+              href="/es/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Probar la beta

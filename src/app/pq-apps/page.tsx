@@ -72,7 +72,7 @@ export default function PQAppsPage() {
               One prompt, dispatched to 25+ AI models at once — with local LLM support and multi-model consensus analysis, all from your browser.
             </p>
             <Link
-              href="/waitlist"
+              href="/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Try Beta
@@ -1047,7 +1047,7 @@ export default function PQAppsPage() {
           {/* Repeat CTA */}
           <div className="text-center py-12 border-t border-primary/20">
             <Link
-              href="/waitlist"
+              href="/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               Try Beta

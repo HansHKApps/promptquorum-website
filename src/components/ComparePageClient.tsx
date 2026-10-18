@@ -1745,7 +1745,7 @@ function CompareContent({ initialLang }: { initialLang?: Lang }) {
           <h2 className="text-2xl font-bold text-white mb-3">{t.ctaH2}</h2>
           <p className="text-white/75 mb-6">{t.ctaSubtext}</p>
           <Link
-            href={lang === 'en' ? '/#waitlist' : `/${lang}#waitlist`}
+            href={lang === 'en' ? '/download' : `/${lang}/download`}
             className="inline-block bg-white text-primary font-bold text-sm px-7 py-3 rounded-lg hover:opacity-90 transition-opacity"
           >
             {t.ctaButton}

@@ -19657,7 +19657,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         pricing: {
           title: 'Pricing Model',
           content: [
-            'PromptQuorum is currently in free beta, with an early-access waitlist. The pricing model post-launch has not been finalised publicly, but the beta is free with no credit card required.',
+            'PromptQuorum is currently in free public beta. The pricing model post-launch has not been finalised publicly, but the beta is free with no credit card required.',
             'AskQuorum AI operates a subscription or usage-based model depending on the plan tier. Pricing targets consumer and small-business segments.',
           ],
         },

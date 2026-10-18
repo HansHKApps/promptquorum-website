@@ -6,10 +6,8 @@ import { redis } from '@/lib/redis'
 // Homepage feedback block ("What's your biggest local LLM headache?").
 // Deliberately anonymous — no email collected, no persistent contact list,
 // no recurring email sent back to the submitter — so this sidesteps the
-// GDPR consent/audit-log machinery src/app/api/waitlist/route.ts needs for
-// its double opt-in marketing flow. Just a one-directional notification
-// email to the site owner via Resend, modeled on the waitlist route's
-// rate-limiting pattern.
+// GDPR consent/audit-log machinery a double opt-in marketing flow would need.
+// Just a one-directional notification email to the site owner via Resend.
 
 const ipLimiter = new Ratelimit({
   redis,

@@ -67,14 +67,6 @@ echo "--- second request (should read HIT) ---"
 curl -sI "$BASE/de/" | grep -i "x-vercel-cache"
 echo
 
-echo "================================================================"
-echo "7) BlogPostClient CTA translation — #221"
-echo "================================================================"
-echo "--- DE: any blog post, footer CTA should not contain English 'Join the PromptQuorum Waitlist' ---"
-SLUG=$(curl -s "$BASE/sitemap.xml" | grep -oE '/blog/[a-z0-9-]+' | head -1 | sed 's#/blog/##')
-curl -s "$BASE/de/blog/${SLUG:-prompt-frameworks}" | grep -c "Join the PromptQuorum Waitlist"
-echo "(expect 0 — German page should not contain the English CTA string)"
-echo
 
 echo "================================================================"
 echo "8) Korean webfont — #222, computed font-family (requires a browser;"

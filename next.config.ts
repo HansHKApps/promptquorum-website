@@ -93,6 +93,18 @@ const nextConfig: NextConfig = {
         destination: '/:lang/pq-apps#features',
         permanent: true,
       },
+      // Waitlist retired (2026-10-18): the app is in free public beta, so every
+      // /waitlist URL goes to the download page.
+      {
+        source: '/waitlist',
+        destination: '/download',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/waitlist',
+        destination: '/:lang/download',
+        permanent: true,
+      },
       {
         source: '/how-it-works',
         destination: '/pq-apps#how-it-works',

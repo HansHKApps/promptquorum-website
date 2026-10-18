@@ -77,7 +77,6 @@ const staticPages = [
   '/about',
   '/privacy',
   '/download',
-  '/waitlist',
   '/prompt-engineering',
   '/blog',
   '/frameworks',

@@ -1361,7 +1361,7 @@ function HowItWorksContent({ initialLang }: { initialLang?: import("@/hooks/useL
         <div className="bg-primary/5 border border-primary/20 rounded-2xl p-10">
           <h2 className="text-2xl font-bold text-text-primary mb-3">{t.ctaH2}</h2>
           <p className="text-text-secondary mb-6">{t.ctaDesc}</p>
-          <Link href="/#waitlist" className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+          <Link href="/download" className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
             {t.ctaBtn}
           </Link>
           <div className="mt-6">

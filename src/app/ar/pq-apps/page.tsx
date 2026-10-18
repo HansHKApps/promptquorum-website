@@ -72,7 +72,7 @@ export default function ArPQAppsPage() {
               تعليمة واحدة تُرسل في آن واحد إلى أكثر من 25 نموذج ذكاء اصطناعي — مع دعم النماذج المحلية وتحليل التوافق متعدد النماذج، كل ذلك من متصفحك.
             </p>
             <Link
-              href="/ar/waitlist"
+              href="/ar/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               جرّب النسخة التجريبية
@@ -1047,7 +1047,7 @@ export default function ArPQAppsPage() {
           {/* Repeat CTA */}
           <div className="text-center py-12 border-t border-primary/20">
             <Link
-              href="/ar/waitlist"
+              href="/ar/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               جرّب النسخة التجريبية

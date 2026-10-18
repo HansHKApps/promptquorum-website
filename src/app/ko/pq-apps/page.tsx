@@ -72,7 +72,7 @@ export default function KoPQAppsPage() {
               하나의 프롬프트를 25개 이상의 AI 모델에 동시 전송 — 로컬 LLM 지원과 다중 모델 합의 분석까지, 모두 브라우저에서.
             </p>
             <Link
-              href="/ko/waitlist"
+              href="/ko/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               베타 체험
@@ -1047,7 +1047,7 @@ export default function KoPQAppsPage() {
           {/* Repeat CTA */}
           <div className="text-center py-12 border-t border-primary/20">
             <Link
-              href="/ko/waitlist"
+              href="/ko/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               베타 체험

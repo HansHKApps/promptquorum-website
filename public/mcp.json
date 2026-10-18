@@ -58,7 +58,7 @@
     {
       "uri": "https://www.promptquorum.com/",
       "name": "PromptQuorum Homepage",
-      "description": "Product overview: 4-stage pipeline (Write → Optimize → Dispatch → Quorum), waitlist, core value proposition. Start here for a complete product summary.",
+      "description": "Product overview: 4-stage pipeline (Write → Optimize → Dispatch → Quorum), core value proposition. Start here for a complete product summary.",
       "mimeType": "text/html",
       "priority": "high"
     },
