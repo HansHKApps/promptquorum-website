@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'breaches',
         title: 'Breaches and Exposure',
         content:
-          '**Any data stored on company servers is exposed to breaches, policy changes, and third-party sharing you cannot control.** The only data that cannot leak from a vendor is data the vendor never receives.',
+          '**Any data stored on company servers is exposed to breaches, policy changes, and third-party sharing you cannot control.** Data a vendor never receives cannot be leaked by that vendor.',
         items: [
           'Centralised footage and recordings are attractive breach targets.',
           'Privacy policies can change, expanding how your data is used.',
@@ -141,7 +141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-fix',
         title: 'The Fix: Local-First and Local AI',
         content:
-          '**The fix is local control: run the hub, voice, and AI on your own hardware so no data leaves the house.** You keep smart features without the third-party processor.',
+          '**The fix is local control: run the hub, voice, and AI on your own hardware so that little or no data leaves the house.** You keep smart features without the third-party processor.',
         items: [
           'Move to a local hub and local devices — see [the complete local smart home guide](/smart-home/local-smart-home-complete-guide).',
           'Replace cloud voice with a local assistant — see [connect Ollama to Home Assistant](/smart-home/home-assistant-ollama-integration).',
@@ -178,9 +178,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'Do smart speakers always listen?', a: 'Cloud voice assistants listen for a wake word locally, then send the following audio to the cloud for processing. That means your spoken queries are transmitted and may be retained. A local voice assistant processes everything on your hardware instead.' },
-          { q: 'Where do my camera feeds go?', a: 'Cloud cameras upload footage to the vendor\'s servers, where it is stored and often gated behind a subscription. A local setup with Frigate keeps footage on your own hardware, so it never leaves the house.' },
+          { q: 'Where do my camera feeds go?', a: 'Cloud cameras upload footage to the vendor\'s servers, where it is stored and often gated behind a subscription. A local setup with Frigate keeps footage on your own hardware, so by default it stays on your network.' },
           { q: 'Can I stop the data collection?', a: 'For cloud devices, you can limit but rarely eliminate collection through settings. The reliable fix is to switch to local-capable devices and a local hub, so the data is never sent to a vendor in the first place.' },
-          { q: 'Is a local smart home actually private?', a: 'Yes. With a local hub, local voice, and local AI, device data, recordings, and automations stay on your hardware with no third-party processor. This is what makes a local-first setup private by design.' },
+          { q: 'Is a local smart home actually private?', a: 'Largely, yes. With a local hub, local voice, and local AI, device data, recordings, and automations stay on your hardware with no third-party processor, provided no cloud integrations are enabled. This is what makes a local-first setup private by design.' },
           { q: 'What does local data processing mean for a smart home?', a: 'It means the hub, voice recognition, and AI model run on hardware inside your home, so device events, recordings, and camera footage are processed there instead of on a vendor server. It applies per component: automations, voice, cameras, and AI can each be local or cloud.' },
           { q: 'Did Amazon remove the option to keep Echo voice recordings off its cloud?', a: 'Yes. On 28 March 2025, Amazon removed the "Do Not Send Voice Recordings" setting, which was available only on the 4th-generation Echo Dot, Echo Show 10, and Echo Show 15 for US English users. Amazon said fewer than 0.03% of customers used it.' },
           { q: 'Does the EU Data Act stop smart home companies from collecting data?', a: 'No. Since 12 September 2025 it gives users the right to access the data their connected devices generate and to share it with a third party, but it is an access right, not a ban on collection; GDPR applies separately. Only local processing keeps data from reaching the vendor at all.' },
@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Do smart speakers always listen?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud voice assistants listen for a wake word locally, then send the following audio to the cloud for processing, so queries are transmitted and may be retained. A local voice assistant processes everything on your hardware.' } },
         { '@type': 'Question', name: 'Where do my camera feeds go?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud cameras upload footage to the vendor\'s servers, often behind a subscription. A local setup with Frigate keeps footage on your own hardware.' } },
         { '@type': 'Question', name: 'Can I stop the data collection?', acceptedAnswer: { '@type': 'Answer', text: 'For cloud devices you can limit but rarely eliminate collection. The reliable fix is switching to local-capable devices and a local hub so data is never sent to a vendor.' } },
-        { '@type': 'Question', name: 'Is a local smart home actually private?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. With a local hub, local voice, and local AI, device data, recordings, and automations stay on your hardware with no third-party processor.' } },
+        { '@type': 'Question', name: 'Is a local smart home actually private?', acceptedAnswer: { '@type': 'Answer', text: 'Largely, yes. With a local hub, local voice, and local AI, device data, recordings, and automations stay on your hardware with no third-party processor, provided no cloud integrations are enabled.' } },
         { '@type': 'Question', name: 'What does local data processing mean for a smart home?', acceptedAnswer: { '@type': 'Answer', text: 'It means the hub, voice recognition, and AI model run on hardware inside your home, so device events, recordings, and camera footage are processed there instead of on a vendor server. It applies per component: automations, voice, cameras, and AI can each be local or cloud.' } },
         { '@type': 'Question', name: 'Did Amazon remove the option to keep Echo voice recordings off its cloud?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. On 28 March 2025, Amazon removed the "Do Not Send Voice Recordings" setting, which was available only on the 4th-generation Echo Dot, Echo Show 10, and Echo Show 15 for US English users. Amazon said fewer than 0.03% of customers used it.' } },
         { '@type': 'Question', name: 'Does the EU Data Act stop smart home companies from collecting data?', acceptedAnswer: { '@type': 'Answer', text: 'No. Since 12 September 2025 it gives users the right to access the data their connected devices generate and to share it with a third party, but it is an access right, not a ban on collection; GDPR applies separately. Only local processing keeps data from reaching the vendor at all.' } },
@@ -339,7 +339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'breaches',
         title: 'الاختراقات والتعرض للخطر',
         content:
-          '**أي بيانات مخزّنة على خوادم الشركات معرّضة للاختراقات وتغييرات السياسات والمشاركة مع الأطراف الثالثة التي لا تملك السيطرة عليها.** البيانات الوحيدة التي لا يمكن تسريبها من المورد هي البيانات التي لم يتلقَّها أصلًا.',
+          '**أي بيانات مخزّنة على خوادم الشركات معرّضة للاختراقات وتغييرات السياسات والمشاركة مع الأطراف الثالثة التي لا تملك السيطرة عليها.** البيانات التي لا يتلقاها المورد أصلًا لا يمكن أن يسرّبها.',
         items: [
           'اللقطات والتسجيلات المركزية أهداف جذابة للاختراق.',
           'يمكن تغيير سياسات الخصوصية لتوسيع كيفية استخدام بياناتك.',
@@ -377,7 +377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-fix',
         title: 'الحل: المحلي أولًا والذكاء الاصطناعي المحلي',
         content:
-          '**الحل هو التحكم المحلي: شغّل المركز والصوت والذكاء الاصطناعي على أجهزتك الخاصة حتى لا تغادر البيانات المنزل.** تحتفظ بالميزات الذكية دون المعالج الخارجي.',
+          '**الحل هو التحكم المحلي: شغّل المركز والصوت والذكاء الاصطناعي على أجهزتك الخاصة حتى لا تغادر المنزل إلا أقل قدر من البيانات.** تحتفظ بالميزات الذكية دون المعالج الخارجي.',
         items: [
           'انتقل إلى مركز محلي وأجهزة محلية — راجع [الدليل الكامل للمنزل الذكي المحلي](/ar/smart-home/local-smart-home-complete-guide).',
           'استبدل الصوت السحابي بمساعد محلي — راجع [ربط Ollama بـ Home Assistant](/ar/smart-home/home-assistant-ollama-integration).',
@@ -414,9 +414,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'هل السماعات الذكية تستمع دائمًا؟', a: 'تستمع المساعدات الصوتية السحابية محليًا لكلمة التنشيط، ثم ترسل الصوت التالي إلى السحابة للمعالجة. هذا يعني أن استعلاماتك الصوتية تُنقَل وقد يُحتفَظ بها. المساعد الصوتي المحلي يعالج كل شيء على أجهزتك عوضًا عن ذلك.' },
-          { q: 'أين تذهب بث كاميراتي؟', a: 'ترفع الكاميرات السحابية اللقطات إلى خوادم المورد، حيث تُخزَّن وغالبًا ما تكون خلف اشتراك مدفوع. الإعداد المحلي مع Frigate يُبقي اللقطات على أجهزتك الخاصة، فلا تغادر المنزل قط.' },
+          { q: 'أين تذهب بث كاميراتي؟', a: 'ترفع الكاميرات السحابية اللقطات إلى خوادم المورد، حيث تُخزَّن وغالبًا ما تكون خلف اشتراك مدفوع. الإعداد المحلي مع Frigate يُبقي اللقطات على أجهزتك الخاصة، فتبقى افتراضيًا على شبكتك.' },
           { q: 'هل يمكنني وقف جمع البيانات؟', a: 'للأجهزة السحابية، يمكنك تقييد الجمع لكن نادرًا ما تستطيع إيقافه تمامًا عبر الإعدادات. الحل الموثوق هو التحول إلى أجهزة ذات قدرة محلية ومركز محلي، حتى لا تُرسَل البيانات إلى المورد أصلًا.' },
-          { q: 'هل المنزل الذكي المحلي خاص فعلًا؟', a: 'نعم. مع مركز محلي وصوت محلي وذكاء اصطناعي محلي، تبقى بيانات الأجهزة والتسجيلات والأتمتات على أجهزتك دون أي معالج خارجي. هذا ما يجعل الإعداد المحلي أولًا خاصًا بحكم التصميم.' },
+          { q: 'هل المنزل الذكي المحلي خاص فعلًا؟', a: 'إلى حد كبير نعم. مع مركز محلي وصوت محلي وذكاء اصطناعي محلي، تبقى بيانات الأجهزة والتسجيلات والأتمتات على أجهزتك دون أي معالج خارجي، ما دامت تكاملات السحابة معطّلة. هذا ما يجعل الإعداد المحلي أولًا خاصًا بحكم التصميم.' },
           { q: 'ماذا تعني المعالجة المحلية للبيانات في المنزل الذكي؟', a: 'تعني أن المركز والتعرف على الصوت ونموذج الذكاء الاصطناعي تعمل على أجهزة داخل منزلك، فتُعالَج أحداث الأجهزة والتسجيلات ولقطات الكاميرا هناك بدل خادم الشركة المصنّعة. وهي تنطبق لكل مكوّن: يمكن أن تكون الأتمتة والصوت والكاميرات والذكاء الاصطناعي محلية أو سحابية.' },
           { q: 'هل أزالت أمازون خيار عدم إرسال تسجيلات Echo الصوتية إلى سحابتها؟', a: 'نعم. في 28 مارس 2025 أزالت أمازون إعداد «عدم إرسال التسجيلات الصوتية»، الذي كان متاحًا فقط على Echo Dot من الجيل الرابع وEcho Show 10 وEcho Show 15 لمستخدمي الولايات المتحدة بالإنجليزية. وقالت أمازون إن أقل من 0.03% من العملاء استخدموه.' },
           { q: 'هل يمنع قانون البيانات الأوروبي شركات المنزل الذكي من جمع البيانات؟', a: 'لا. منذ 12 سبتمبر 2025 يمنح المستخدمين حق الوصول إلى بيانات أجهزتهم المتصلة ومشاركتها مع طرف ثالث، لكنه حق وصول وليس حظرًا للجمع؛ ويسري GDPR بشكل منفصل. المعالجة المحلية وحدها تمنع وصول البيانات إلى الشركة المصنّعة أصلًا.' },
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'هل السماعات الذكية تستمع دائمًا؟', acceptedAnswer: { '@type': 'Answer', text: 'تستمع السحابية محليًا لكلمة التنشيط، ثم ترسل الصوت للسحابة للمعالجة، فتُنقَل الاستعلامات وقد يُحتفَظ بها. المحلي يعالج كل شيء على أجهزتك.' } },
         { '@type': 'Question', name: 'أين تذهب بث كاميراتي؟', acceptedAnswer: { '@type': 'Answer', text: 'ترفع الكاميرات السحابية اللقطات إلى خوادم المورد، غالبًا خلف اشتراك. Frigate المحلي يُبقيها على أجهزتك.' } },
         { '@type': 'Question', name: 'هل يمكنني وقف جمع البيانات؟', acceptedAnswer: { '@type': 'Answer', text: 'للأجهزة السحابية يمكنك التقييد لكن نادرًا الإيقاف التام. الحل الموثوق هو التحول إلى أجهزة محلية ومركز محلي.' } },
-        { '@type': 'Question', name: 'هل المنزل الذكي المحلي خاص فعلًا؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. مع مركز محلي وصوت وذكاء اصطناعي محليين، تبقى البيانات والتسجيلات والأتمتات على أجهزتك دون معالج خارجي.' } },
+        { '@type': 'Question', name: 'هل المنزل الذكي المحلي خاص فعلًا؟', acceptedAnswer: { '@type': 'Answer', text: 'إلى حد كبير نعم. مع مركز محلي وصوت وذكاء اصطناعي محليين، تبقى البيانات والتسجيلات والأتمتات على أجهزتك دون معالج خارجي، ما دامت تكاملات السحابة معطّلة.' } },
         { '@type': 'Question', name: 'ماذا تعني المعالجة المحلية للبيانات في المنزل الذكي؟', acceptedAnswer: { '@type': 'Answer', text: 'تعني أن المركز والتعرف على الصوت ونموذج الذكاء الاصطناعي تعمل على أجهزة داخل منزلك، فتُعالَج أحداث الأجهزة والتسجيلات ولقطات الكاميرا هناك بدل خادم الشركة المصنّعة. وهي تنطبق لكل مكوّن: يمكن أن تكون الأتمتة والصوت والكاميرات والذكاء الاصطناعي محلية أو سحابية.' } },
         { '@type': 'Question', name: 'هل أزالت أمازون خيار عدم إرسال تسجيلات Echo الصوتية إلى سحابتها؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. في 28 مارس 2025 أزالت أمازون إعداد «عدم إرسال التسجيلات الصوتية»، الذي كان متاحًا فقط على Echo Dot من الجيل الرابع وEcho Show 10 وEcho Show 15 لمستخدمي الولايات المتحدة بالإنجليزية. وقالت أمازون إن أقل من 0.03% من العملاء استخدموه.' } },
         { '@type': 'Question', name: 'هل يمنع قانون البيانات الأوروبي شركات المنزل الذكي من جمع البيانات؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. منذ 12 سبتمبر 2025 يمنح المستخدمين حق الوصول إلى بيانات أجهزتهم المتصلة ومشاركتها مع طرف ثالث، لكنه حق وصول وليس حظرًا للجمع؛ ويسري GDPR بشكل منفصل. المعالجة المحلية وحدها تمنع وصول البيانات إلى الشركة المصنّعة أصلًا.' } },
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'breaches',
         title: 'Datenlecks und Offenlegung',
         content:
-          '**Alle auf Firmen-Servern gespeicherten Daten sind Datenlecks, Richtlinienänderungen und einer Weitergabe an Dritte ausgesetzt, die Sie nicht kontrollieren können.** Die einzigen Daten, die nicht von einem Anbieter leaken können, sind die, die der Anbieter nie erhält.',
+          '**Alle auf Firmen-Servern gespeicherten Daten sind Datenlecks, Richtlinienänderungen und einer Weitergabe an Dritte ausgesetzt, die Sie nicht kontrollieren können.** Daten, die ein Anbieter nie erhält, kann er auch nicht preisgeben.',
         items: [
           'Zentralisierte Aufnahmen sind attraktive Angriffsziele.',
           'Datenschutzrichtlinien können sich ändern und die Nutzung Ihrer Daten erweitern.',
@@ -613,7 +613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-fix',
         title: 'Die Lösung: Local-First und lokale KI',
         content:
-          '**Die Lösung ist lokale Steuerung: Hub, Sprache und KI auf eigener Hardware betreiben, sodass keine Daten das Haus verlassen.** Sie behalten smarte Funktionen ohne den externen Verarbeiter. Für deutsche Haushalte, Heimbüros und den Mittelstand kann dieser Ansatz die Datenminimierung nach DSGVO unterstützen, da keine Auftragsverarbeitung durch Dritte stattfindet; eine Compliance-Prüfung ersetzt er nicht.',
+          '**Die Lösung ist lokale Steuerung: Hub, Sprache und KI auf eigener Hardware betreiben, sodass kaum noch Daten das Haus verlassen.** Sie behalten smarte Funktionen ohne den externen Verarbeiter. Für deutsche Haushalte, Heimbüros und den Mittelstand kann dieser Ansatz die Datenminimierung nach DSGVO unterstützen, da keine Auftragsverarbeitung durch Dritte stattfindet; eine Compliance-Prüfung ersetzt er nicht.',
         items: [
           'Wechseln Sie zu einem lokalen Hub und lokalen Geräten – siehe [der komplette Leitfaden zum lokalen Smart Home](/de/smart-home/local-smart-home-complete-guide).',
           'Ersetzen Sie Cloud-Sprache durch einen lokalen Assistenten – siehe [Ollama mit Home Assistant verbinden](/de/smart-home/home-assistant-ollama-integration).',
@@ -650,9 +650,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Lauschen smarte Lautsprecher ständig?', a: 'Cloud-Sprachassistenten warten lokal auf ein Aktivierungswort und senden dann das folgende Audio zur Verarbeitung in die Cloud. Das bedeutet, dass Ihre gesprochenen Anfragen übertragen und gespeichert werden können. Ein lokaler Sprachassistent verarbeitet stattdessen alles auf Ihrer Hardware.' },
-          { q: 'Wohin gehen meine Kamerafeeds?', a: 'Cloud-Kameras laden Aufnahmen auf die Server des Anbieters, wo sie gespeichert und oft hinter einem Abonnement gehalten werden. Ein lokales Setup mit Frigate hält die Aufnahmen auf Ihrer eigenen Hardware, sodass sie das Haus nie verlassen.' },
+          { q: 'Wohin gehen meine Kamerafeeds?', a: 'Cloud-Kameras laden Aufnahmen auf die Server des Anbieters, wo sie gespeichert und oft hinter einem Abonnement gehalten werden. Ein lokales Setup mit Frigate hält die Aufnahmen auf Ihrer eigenen Hardware, sodass sie standardmäßig in Ihrem Netzwerk bleiben.' },
           { q: 'Kann ich die Datensammlung stoppen?', a: 'Bei Cloud-Geräten können Sie die Sammlung über Einstellungen begrenzen, aber selten ganz beenden. Die zuverlässige Lösung ist der Wechsel zu lokal-fähigen Geräten und einem lokalen Hub, sodass die Daten gar nicht erst an einen Anbieter gesendet werden.' },
-          { q: 'Ist ein lokales Smart Home tatsächlich privat?', a: 'Ja. Mit einem lokalen Hub, lokaler Sprache und lokaler KI bleiben Gerätedaten, Aufnahmen und Automatisierungen ohne externen Verarbeiter auf Ihrer Hardware. Das macht ein Local-First-Setup datenschutzfreundlich von Grund auf.' },
+          { q: 'Ist ein lokales Smart Home tatsächlich privat?', a: 'Weitgehend ja. Mit einem lokalen Hub, lokaler Sprache und lokaler KI bleiben Gerätedaten, Aufnahmen und Automatisierungen ohne externen Verarbeiter auf Ihrer Hardware, sofern keine Cloud-Integrationen aktiviert sind. Das macht ein Local-First-Setup datenschutzfreundlich von Grund auf.' },
           { q: 'Muss ich bei einem Smart Home die DSGVO beachten?', a: 'Smart-Home-Daten wie Anwesenheit, Sprache und Video sind personenbezogene Daten im Sinne der DSGVO. Cloud-Geräte, die diese an Anbieter senden, führen einen Auftragsverarbeiter ein (DSGVO Art. 28). Lokale Verarbeitung hält die Daten in Ihrem Zuhause und unterstützt Datenminimierung und Datenresidenz von Grund auf, da kein externer Verarbeiter beteiligt ist.' },
           { q: 'Gilt das auch für Heimbüros und den deutschen Mittelstand?', a: 'Es kann helfen. Für Heimbüros und KMU im DACH-Raum hält ein lokales Smart Home Gerätedaten und Aufnahmen vor Ort. Da keine Auftragsverarbeitung durch Dritte stattfindet, kann sich die interne Compliance-Dokumentation vereinfachen; eine rechtliche Prüfung ersetzt das nicht.' },
           { q: 'Was bedeutet lokale Datenverarbeitung im Smart Home?', a: 'Hub, Spracherkennung und KI-Modell laufen auf Hardware in Ihrem Zuhause, sodass Geräteereignisse, Aufnahmen und Kameramaterial dort statt auf einem Hersteller-Server verarbeitet werden. Das gilt pro Komponente: Automationen, Sprache, Kameras und KI können jeweils lokal oder in der Cloud laufen.' },
@@ -704,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Lauschen smarte Lautsprecher ständig?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud-Sprachassistenten warten lokal auf ein Aktivierungswort und senden dann das folgende Audio zur Verarbeitung in die Cloud, sodass Anfragen übertragen und gespeichert werden können. Ein lokaler Assistent verarbeitet alles auf Ihrer Hardware.' } },
         { '@type': 'Question', name: 'Wohin gehen meine Kamerafeeds?', acceptedAnswer: { '@type': 'Answer', text: 'Cloud-Kameras laden Aufnahmen auf die Server des Anbieters, oft hinter einem Abonnement. Ein lokales Setup mit Frigate hält die Aufnahmen auf Ihrer eigenen Hardware.' } },
         { '@type': 'Question', name: 'Kann ich die Datensammlung stoppen?', acceptedAnswer: { '@type': 'Answer', text: 'Bei Cloud-Geräten können Sie sie begrenzen, aber selten ganz beenden. Die zuverlässige Lösung ist der Wechsel zu lokal-fähigen Geräten und einem lokalen Hub.' } },
-        { '@type': 'Question', name: 'Ist ein lokales Smart Home tatsächlich privat?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Mit lokalem Hub, lokaler Sprache und lokaler KI bleiben Gerätedaten, Aufnahmen und Automatisierungen ohne externen Verarbeiter auf Ihrer Hardware.' } },
+        { '@type': 'Question', name: 'Ist ein lokales Smart Home tatsächlich privat?', acceptedAnswer: { '@type': 'Answer', text: 'Weitgehend ja. Mit lokalem Hub, lokaler Sprache und lokaler KI bleiben Gerätedaten, Aufnahmen und Automatisierungen ohne externen Verarbeiter auf Ihrer Hardware, sofern keine Cloud-Integrationen aktiviert sind.' } },
         { '@type': 'Question', name: 'Muss ich bei einem Smart Home die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Smart-Home-Daten sind personenbezogene Daten. Cloud-Geräte, die sie an Anbieter senden, führen einen Auftragsverarbeiter ein (DSGVO Art. 28). Lokale Verarbeitung unterstützt Datenminimierung und Datenresidenz von Grund auf.' } },
         { '@type': 'Question', name: 'Gilt das auch für Heimbüros und den deutschen Mittelstand?', acceptedAnswer: { '@type': 'Answer', text: 'Es kann helfen. Für Heimbüros und KMU im DACH-Raum hält ein lokales Smart Home Daten vor Ort; da keine Auftragsverarbeitung durch Dritte stattfindet, kann sich die Compliance-Dokumentation vereinfachen. Eine rechtliche Prüfung ersetzt das nicht.' } },
         { '@type': 'Question', name: 'Was bedeutet lokale Datenverarbeitung im Smart Home?', acceptedAnswer: { '@type': 'Answer', text: 'Hub, Spracherkennung und KI-Modell laufen auf Hardware in Ihrem Zuhause, sodass Geräteereignisse, Aufnahmen und Kameramaterial dort statt auf einem Hersteller-Server verarbeitet werden. Das gilt pro Komponente: Automationen, Sprache, Kameras und KI können jeweils lokal oder in der Cloud laufen.' } },
@@ -815,7 +815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'breaches',
         title: 'Brechas y exposición',
         content:
-          '**Cualquier dato almacenado en servidores de las empresas está expuesto a brechas, cambios de políticas y compartición con terceros que no puedes controlar.** Los únicos datos que no pueden filtrarse de un proveedor son los que el proveedor nunca recibe.',
+          '**Cualquier dato almacenado en servidores de las empresas está expuesto a brechas, cambios de políticas y compartición con terceros que no puedes controlar.** Los datos que un proveedor nunca recibe no puede filtrarlos.',
         items: [
           'Las grabaciones centralizadas son objetivos atractivos de brechas.',
           'Las políticas de privacidad pueden cambiar y ampliar cómo se usan tus datos.',
@@ -853,7 +853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-fix',
         title: 'La solución: local-first e IA local',
         content:
-          '**La solución es el control local: ejecutar el hub, la voz y la IA en tu propio hardware para que ningún dato salga de la casa.** Conservas las funciones inteligentes sin el procesador externo. En España y la UE esto respalda el RGPD (la AEPD recomienda minimizar el tratamiento), y en Latinoamérica encaja con leyes como la LFPDPPP (México) o la Ley 1581 (Colombia), porque no interviene ningún procesador externo.',
+          '**La solución es el control local: ejecutar el hub, la voz y la IA en tu propio hardware para que salgan de casa muy pocos datos.** Conservas las funciones inteligentes sin el procesador externo. En España y la UE esto respalda el RGPD (la AEPD recomienda minimizar el tratamiento), y en Latinoamérica encaja con leyes como la LFPDPPP (México) o la Ley 1581 (Colombia), porque no interviene ningún procesador externo.',
         items: [
           'Pásate a un hub local y dispositivos locales — consulta [la guía completa del smart home local](/es/smart-home/local-smart-home-complete-guide).',
           'Reemplaza la voz en la nube por un asistente local — consulta [conectar Ollama a Home Assistant](/es/smart-home/home-assistant-ollama-integration).',
@@ -890,9 +890,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           { q: '¿Los altavoces inteligentes escuchan siempre?', a: 'Los asistentes de voz en la nube escuchan localmente una palabra de activación y luego envían el audio siguiente a la nube para procesarlo. Eso significa que tus consultas habladas se transmiten y pueden conservarse. Un asistente de voz local procesa todo en tu hardware en su lugar.' },
-          { q: '¿A dónde va el vídeo de mis cámaras?', a: 'Las cámaras en la nube suben el vídeo a los servidores del fabricante, donde se almacena y a menudo se gestiona tras una suscripción. Una configuración local con Frigate mantiene el vídeo en tu propio hardware, así que nunca sale de casa.' },
+          { q: '¿A dónde va el vídeo de mis cámaras?', a: 'Las cámaras en la nube suben el vídeo a los servidores del fabricante, donde se almacena y a menudo se gestiona tras una suscripción. Una configuración local con Frigate mantiene el vídeo en tu propio hardware, así que por defecto se queda en tu red.' },
           { q: '¿Puedo detener la recopilación de datos?', a: 'En los dispositivos en la nube puedes limitarla pero rara vez eliminarla mediante ajustes. La solución fiable es cambiar a dispositivos con capacidad local y un hub local, para que los datos nunca se envíen a un proveedor en primer lugar.' },
-          { q: '¿Es un smart home local realmente privado?', a: 'Sí. Con un hub local, voz local e IA local, los datos de dispositivos, las grabaciones y las automatizaciones se quedan en tu hardware sin procesador externo. Esto es lo que hace que una configuración local-first sea privada por diseño.' },
+          { q: '¿Es un smart home local realmente privado?', a: 'En gran medida, sí. Con un hub local, voz local e IA local, los datos de dispositivos, las grabaciones y las automatizaciones se quedan en tu hardware sin procesador externo, siempre que no actives integraciones en la nube. Esto es lo que hace que una configuración local-first sea privada por diseño.' },
           { q: '¿Qué significa el procesamiento local de datos en un smart home?', a: 'Significa que el hub, el reconocimiento de voz y el modelo de IA funcionan en hardware dentro de tu casa, de modo que los eventos, grabaciones e imágenes de cámara se procesan allí y no en un servidor del fabricante. Se aplica por componente: automatizaciones, voz, cámaras e IA pueden ser locales o en la nube.' },
           { q: '¿Eliminó Amazon la opción de no enviar las grabaciones de voz de Echo a su nube?', a: 'Sí. El 28 de marzo de 2025, Amazon eliminó el ajuste «No enviar grabaciones de voz», disponible solo en el Echo Dot de 4.ª generación, el Echo Show 10 y el Echo Show 15 para usuarios de EE. UU. con inglés. Amazon indicó que lo usaba menos del 0,03 % de los clientes.' },
           { q: '¿Impide el Reglamento de Datos de la UE que las empresas de smart home recopilen datos?', a: 'No. Desde el 12 de septiembre de 2025 da a los usuarios derecho a acceder a los datos de sus dispositivos conectados y a compartirlos con un tercero, pero es un derecho de acceso, no una prohibición de recopilar; el RGPD se aplica por separado. Solo el procesamiento local evita que los datos lleguen al fabricante.' },
@@ -942,7 +942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '¿Los altavoces inteligentes escuchan siempre?', acceptedAnswer: { '@type': 'Answer', text: 'Los asistentes de voz en la nube escuchan localmente una palabra de activación y luego envían el audio siguiente a la nube, así que tus consultas se transmiten y pueden conservarse. Un asistente local procesa todo en tu hardware.' } },
         { '@type': 'Question', name: '¿A dónde va el vídeo de mis cámaras?', acceptedAnswer: { '@type': 'Answer', text: 'Las cámaras en la nube suben el vídeo a los servidores del fabricante, a menudo tras una suscripción. Una configuración local con Frigate mantiene el vídeo en tu propio hardware.' } },
         { '@type': 'Question', name: '¿Puedo detener la recopilación de datos?', acceptedAnswer: { '@type': 'Answer', text: 'En los dispositivos en la nube puedes limitarla pero rara vez eliminarla. La solución fiable es cambiar a dispositivos con capacidad local y un hub local.' } },
-        { '@type': 'Question', name: '¿Es un smart home local realmente privado?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Con un hub local, voz local e IA local, los datos de dispositivos, las grabaciones y las automatizaciones se quedan en tu hardware sin procesador externo.' } },
+        { '@type': 'Question', name: '¿Es un smart home local realmente privado?', acceptedAnswer: { '@type': 'Answer', text: 'En gran medida, sí. Con un hub local, voz local e IA local, los datos de dispositivos, las grabaciones y las automatizaciones se quedan en tu hardware sin procesador externo, siempre que no actives integraciones en la nube.' } },
         { '@type': 'Question', name: '¿Qué significa el procesamiento local de datos en un smart home?', acceptedAnswer: { '@type': 'Answer', text: 'Significa que el hub, el reconocimiento de voz y el modelo de IA funcionan en hardware dentro de tu casa, de modo que los eventos, grabaciones e imágenes de cámara se procesan allí y no en un servidor del fabricante. Se aplica por componente: automatizaciones, voz, cámaras e IA pueden ser locales o en la nube.' } },
         { '@type': 'Question', name: '¿Eliminó Amazon la opción de no enviar las grabaciones de voz de Echo a su nube?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. El 28 de marzo de 2025, Amazon eliminó el ajuste «No enviar grabaciones de voz», disponible solo en el Echo Dot de 4.ª generación, el Echo Show 10 y el Echo Show 15 para usuarios de EE. UU. con inglés. Amazon indicó que lo usaba menos del 0,03 % de los clientes.' } },
         { '@type': 'Question', name: '¿Impide el Reglamento de Datos de la UE que las empresas de smart home recopilen datos?', acceptedAnswer: { '@type': 'Answer', text: 'No. Desde el 12 de septiembre de 2025 da a los usuarios derecho a acceder a los datos de sus dispositivos conectados y a compartirlos con un tercero, pero es un derecho de acceso, no una prohibición de recopilar; el RGPD se aplica por separado. Solo el procesamiento local evita que los datos lleguen al fabricante.' } },
@@ -1007,7 +1007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     snippetBlocks: [
       { type: 'one-sentence', content: '클라우드 스마트홈 기기는 이용 데이터, 음성 녹음, 카메라 영상을 기업 서버에 수집합니다. 로컬 제어는 해당 데이터를 집 안에 유지합니다.' },
-      { type: 'plain-terms', content: '클라우드에 의존하는 스마트홈 기기는 귀하의 집에 관한 정보를 기업 서버로 전송합니다. 언제 집에 오고 가는지, 스피커에 무슨 말을 하는지, 카메라가 무엇을 보는지가 포함됩니다. 그 데이터는 보관·공유·유출될 수 있습니다. 모든 것을 로컬에서 실행하면 아무것도 집 밖으로 나가지 않습니다.' },
+      { type: 'plain-terms', content: '클라우드에 의존하는 스마트홈 기기는 귀하의 집에 관한 정보를 기업 서버로 전송합니다. 언제 집에 오고 가는지, 스피커에 무슨 말을 하는지, 카메라가 무엇을 보는지가 포함됩니다. 그 데이터는 보관·공유·유출될 수 있습니다. 모든 것을 로컬에서 실행하면 그 데이터는 기본적으로 집 밖으로 나가지 않습니다.' },
     ],
     sections: {
       tldr: {
@@ -1051,7 +1051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'breaches',
         title: '침해와 노출',
         content:
-          '**기업 서버에 저장된 모든 데이터는 침해, 정책 변경, 통제할 수 없는 제3자 공유에 노출됩니다.** 제공업체로부터 유출될 수 없는 유일한 데이터는 제공업체가 받지 않은 데이터입니다.',
+          '**기업 서버에 저장된 모든 데이터는 침해, 정책 변경, 통제할 수 없는 제3자 공유에 노출됩니다.** 제공업체가 받지 않은 데이터는 그 제공업체가 유출할 수 없습니다.',
         items: [
           '중앙화된 영상과 녹음은 침해의 매력적인 표적입니다.',
           '개인정보 처리방침이 변경되어 데이터 사용 방식이 확장될 수 있습니다.',
@@ -1089,7 +1089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-fix',
         title: '해결책: 로컬 우선과 로컬 AI',
         content:
-          '**해결책은 로컬 제어입니다. 허브, 음성, AI를 자신의 하드웨어에서 실행하여 데이터가 집 밖으로 나가지 않도록 합니다.** 제3자 처리자 없이 스마트 기능을 유지할 수 있습니다. 한국 개인정보 보호법(PIPA)과 개인정보보호위원회(PIPC)는 개인정보 최소 처리를 권장하며, 제3자가 관여하지 않는 로컬 우선 설정은 이를 충족합니다.',
+          '**해결책은 로컬 제어입니다. 허브, 음성, AI를 자신의 하드웨어에서 실행하여 데이터가 집 밖으로 거의 나가지 않도록 합니다.** 제3자 처리자 없이 스마트 기능을 유지할 수 있습니다. 한국 개인정보 보호법(PIPA)과 개인정보보호위원회(PIPC)는 개인정보 최소 처리를 권장하며, 제3자가 관여하지 않는 로컬 우선 설정은 이를 충족합니다.',
         items: [
           '로컬 허브와 로컬 기기로 전환하십시오 — [완전한 로컬 스마트홈 가이드](/ko/smart-home/local-smart-home-complete-guide)를 참조하십시오.',
           '클라우드 음성을 로컬 어시스턴트로 교체하십시오 — [Ollama를 Home Assistant에 연결하기](/ko/smart-home/home-assistant-ollama-integration)를 참조하십시오.',
@@ -1126,9 +1126,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           { q: '스마트 스피커는 항상 듣고 있습니까?', a: '클라우드 음성 어시스턴트는 로컬에서 웨이크 워드를 감지한 후 이후 오디오를 클라우드로 전송하여 처리합니다. 음성 질의가 전송되고 보관될 수 있습니다. 로컬 음성 어시스턴트는 모든 것을 귀하의 하드웨어에서 처리합니다.' },
-          { q: '카메라 영상은 어디로 갑니까?', a: '클라우드 카메라는 영상을 제조사 서버에 업로드하며 구독 서비스 뒤에 있는 경우가 많습니다. Frigate를 이용한 로컬 설정은 영상을 귀하의 하드웨어에 유지하므로 집 밖으로 나가지 않습니다.' },
+          { q: '카메라 영상은 어디로 갑니까?', a: '클라우드 카메라는 영상을 제조사 서버에 업로드하며 구독 서비스 뒤에 있는 경우가 많습니다. Frigate를 이용한 로컬 설정은 영상을 귀하의 하드웨어에 유지하므로 기본적으로 내 네트워크에 머뭅니다.' },
           { q: '데이터 수집을 중단할 수 있습니까?', a: '클라우드 기기의 경우 설정을 통해 수집을 제한할 수 있지만 완전히 중단하기는 어렵습니다. 신뢰할 수 있는 해결책은 로컬 가능 기기와 로컬 허브로 전환하여 데이터가 애초에 제조사에게 전송되지 않도록 하는 것입니다.' },
-          { q: '로컬 스마트홈은 실제로 프라이빗합니까?', a: '그렇습니다. 로컬 허브, 로컬 음성, 로컬 AI를 사용하면 기기 데이터, 녹음, 자동화가 제3자 처리자 없이 귀하의 하드웨어에 유지됩니다. 이것이 로컬 우선 설정을 설계 단계부터 프라이빗하게 만드는 요소입니다.' },
+          { q: '로컬 스마트홈은 실제로 프라이빗합니까?', a: '대체로 그렇습니다. 로컬 허브, 로컬 음성, 로컬 AI를 사용하면 기기 데이터, 녹음, 자동화가 제3자 처리자 없이 귀하의 하드웨어에 유지됩니다(클라우드 연동을 켜지 않은 경우). 이것이 로컬 우선 설정을 설계 단계부터 프라이빗하게 만드는 요소입니다.' },
           { q: '스마트홈에서 로컬 데이터 처리란 무엇인가요?', a: '허브, 음성 인식, AI 모델을 집 안 하드웨어에서 실행해 기기 이벤트, 녹음, 카메라 영상을 제조사 서버가 아닌 집 안에서 처리하는 것입니다. 구성 요소별로 적용되어 자동화, 음성, 카메라, AI를 각각 로컬 또는 클라우드로 선택할 수 있습니다.' },
           { q: '아마존이 Echo 음성 녹음을 클라우드로 보내지 않는 옵션을 삭제했나요?', a: '네. 2025년 3월 28일 아마존은 미국 영어 사용자용 Echo Dot 4세대, Echo Show 10, Echo Show 15에만 있던 "음성 녹음 전송 안 함" 설정을 삭제했습니다. 아마존은 사용 고객이 0.03% 미만이라고 밝혔습니다.' },
           { q: 'EU 데이터법이 스마트홈 기업의 데이터 수집을 막나요?', a: '아니요. 2025년 9월 12일부터 사용자는 커넥티드 기기 데이터에 접근하고 제3자와 공유하도록 요청할 권리가 있지만, 이는 접근 권리이지 수집 금지가 아니며 GDPR은 별도로 적용됩니다. 데이터가 제조사에 도달하는 것 자체를 막는 것은 로컬 처리뿐입니다.' },
@@ -1178,7 +1178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '스마트 스피커는 항상 듣고 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '클라우드 음성 어시스턴트는 로컬에서 웨이크 워드를 감지한 후 이후 오디오를 클라우드로 전송합니다. 질의가 전송되고 보관될 수 있습니다. 로컬 어시스턴트는 모든 것을 귀하의 하드웨어에서 처리합니다.' } },
         { '@type': 'Question', name: '카메라 영상은 어디로 갑니까?', acceptedAnswer: { '@type': 'Answer', text: '클라우드 카메라는 영상을 제조사 서버에 업로드하며 구독 서비스 뒤에 있는 경우가 많습니다. Frigate를 이용한 로컬 설정은 영상을 귀하의 하드웨어에 유지합니다.' } },
         { '@type': 'Question', name: '데이터 수집을 중단할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '클라우드 기기는 제한할 수 있지만 완전히 중단하기는 어렵습니다. 신뢰할 수 있는 해결책은 로컬 가능 기기와 로컬 허브로 전환하는 것입니다.' } },
-        { '@type': 'Question', name: '로컬 스마트홈은 실제로 프라이빗합니까?', acceptedAnswer: { '@type': 'Answer', text: '그렇습니다. 로컬 허브, 로컬 음성, 로컬 AI를 사용하면 기기 데이터, 녹음, 자동화가 제3자 처리자 없이 귀하의 하드웨어에 유지됩니다.' } },
+        { '@type': 'Question', name: '로컬 스마트홈은 실제로 프라이빗합니까?', acceptedAnswer: { '@type': 'Answer', text: '대체로 그렇습니다. 로컬 허브, 로컬 음성, 로컬 AI를 사용하면 기기 데이터, 녹음, 자동화가 제3자 처리자 없이 귀하의 하드웨어에 유지됩니다(클라우드 연동을 켜지 않은 경우).' } },
         { '@type': 'Question', name: '스마트홈에서 로컬 데이터 처리란 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '허브, 음성 인식, AI 모델을 집 안 하드웨어에서 실행해 기기 이벤트, 녹음, 카메라 영상을 제조사 서버가 아닌 집 안에서 처리하는 것입니다. 구성 요소별로 적용되어 자동화, 음성, 카메라, AI를 각각 로컬 또는 클라우드로 선택할 수 있습니다.' } },
         { '@type': 'Question', name: '아마존이 Echo 음성 녹음을 클라우드로 보내지 않는 옵션을 삭제했나요?', acceptedAnswer: { '@type': 'Answer', text: '네. 2025년 3월 28일 아마존은 미국 영어 사용자용 Echo Dot 4세대, Echo Show 10, Echo Show 15에만 있던 "음성 녹음 전송 안 함" 설정을 삭제했습니다. 아마존은 사용 고객이 0.03% 미만이라고 밝혔습니다.' } },
         { '@type': 'Question', name: 'EU 데이터법이 스마트홈 기업의 데이터 수집을 막나요?', acceptedAnswer: { '@type': 'Answer', text: '아니요. 2025년 9월 12일부터 사용자는 커넥티드 기기 데이터에 접근하고 제3자와 공유하도록 요청할 권리가 있지만, 이는 접근 권리이지 수집 금지가 아니며 GDPR은 별도로 적용됩니다. 데이터가 제조사에 도달하는 것 자체를 막는 것은 로컬 처리뿐입니다.' } },
@@ -1287,7 +1287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'breaches',
         title: 'Fuites et exposition',
         content:
-          '**Toute donnée stockée sur les serveurs des entreprises est exposée aux fuites, aux changements de politique et au partage avec des tiers que vous ne pouvez pas contrôler.** Les seules données qui ne peuvent pas fuiter d\'un fournisseur sont celles que le fournisseur ne reçoit jamais.',
+          '**Toute donnée stockée sur les serveurs des entreprises est exposée aux fuites, aux changements de politique et au partage avec des tiers que vous ne pouvez pas contrôler.** Les données qu\'un fournisseur ne reçoit jamais, il ne peut pas les divulguer.',
         items: [
           'Les enregistrements centralisés sont des cibles de fuite attrayantes.',
           'Les politiques de confidentialité peuvent changer et étendre l\'usage de vos données.',
@@ -1325,7 +1325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-fix',
         title: 'La solution : local-first et IA locale',
         content:
-          '**La solution est le contrôle local : exécuter le hub, la voix et l\'IA sur votre propre matériel pour qu\'aucune donnée ne quitte la maison.** Vous gardez les fonctions connectées sans le sous-traitant externe. Pour les données professionnelles sensibles (financières, médicales, juridiques), la CNIL recommande un traitement local de l\'IA, ce qu\'un setup local-first satisfait puisque aucun sous-traitant externe n\'intervient.',
+          '**La solution est le contrôle local : exécuter le hub, la voix et l\'IA sur votre propre matériel pour que très peu de données quittent la maison.** Vous gardez les fonctions connectées sans le sous-traitant externe. Pour les données professionnelles sensibles (financières, médicales, juridiques), la CNIL recommande un traitement local de l\'IA, ce qu\'un setup local-first satisfait puisque aucun sous-traitant externe n\'intervient.',
         items: [
           'Passez à un hub local et des appareils locaux — voir [le guide complet de la maison connectée locale](/fr/smart-home/local-smart-home-complete-guide).',
           'Remplacez la voix cloud par un assistant local — voir [connecter Ollama à Home Assistant](/fr/smart-home/home-assistant-ollama-integration).',
@@ -1362,9 +1362,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquemment posées',
         faqs: [
           { q: 'Les enceintes connectées écoutent-elles en permanence ?', a: 'Les assistants vocaux cloud écoutent localement un mot d\'activation, puis envoient l\'audio suivant au cloud pour traitement. Cela signifie que vos requêtes vocales sont transmises et peuvent être conservées. Un assistant vocal local traite tout sur votre matériel à la place.' },
-          { q: 'Où vont les flux de mes caméras ?', a: 'Les caméras cloud téléversent les images sur les serveurs du fournisseur, où elles sont stockées et souvent gérées derrière un abonnement. Une configuration locale avec Frigate garde les images sur votre propre matériel, elles ne quittent donc jamais la maison.' },
+          { q: 'Où vont les flux de mes caméras ?', a: 'Les caméras cloud téléversent les images sur les serveurs du fournisseur, où elles sont stockées et souvent gérées derrière un abonnement. Une configuration locale avec Frigate garde les images sur votre propre matériel, elles restent donc par défaut sur votre réseau.' },
           { q: 'Puis-je arrêter la collecte de données ?', a: 'Sur les appareils cloud, vous pouvez la limiter mais rarement l\'éliminer via les réglages. La solution fiable est de passer à des appareils à capacité locale et à un hub local, pour que les données ne soient jamais envoyées à un fournisseur.' },
-          { q: 'Une maison connectée locale est-elle vraiment privée ?', a: 'Oui. Avec un hub local, une voix locale et une IA locale, les données d\'appareils, les enregistrements et les automatisations restent sur votre matériel sans sous-traitant externe. C\'est ce qui rend une configuration local-first privée par conception.' },
+          { q: 'Une maison connectée locale est-elle vraiment privée ?', a: 'En grande partie, oui. Avec un hub local, une voix locale et une IA locale, les données d\'appareils, les enregistrements et les automatisations restent sur votre matériel sans sous-traitant externe, tant que les intégrations cloud sont désactivées. C\'est ce qui rend une configuration local-first privée par conception.' },
           { q: 'Que signifie le traitement local des données pour une maison connectée ?', a: 'Le hub, la reconnaissance vocale et le modèle d\'IA tournent sur du matériel chez vous : les événements, enregistrements et images de caméra y sont traités plutôt que sur un serveur du fabricant. Cela s\'applique par composant : automatisations, voix, caméras et IA peuvent chacune être locales ou dans le cloud.' },
           { q: 'Amazon a-t-il supprimé l\'option empêchant l\'envoi des enregistrements vocaux Echo vers son cloud ?', a: 'Oui. Le 28 mars 2025, Amazon a supprimé le réglage « Ne pas envoyer les enregistrements vocaux », disponible uniquement sur l\'Echo Dot 4e génération, l\'Echo Show 10 et l\'Echo Show 15 pour les utilisateurs américains en anglais. Amazon a indiqué qu\'il était utilisé par moins de 0,03 % des clients.' },
           { q: 'Le Data Act européen empêche-t-il les entreprises de maison connectée de collecter des données ?', a: 'Non. Depuis le 12 septembre 2025, il donne aux utilisateurs le droit d\'accéder aux données de leurs appareils connectés et de les partager avec un tiers, mais c\'est un droit d\'accès, pas une interdiction de collecte ; le RGPD s\'applique séparément. Seul le traitement local empêche les données d\'atteindre le fabricant.' },
@@ -1414,7 +1414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Les enceintes connectées écoutent-elles en permanence ?', acceptedAnswer: { '@type': 'Answer', text: 'Les assistants vocaux cloud écoutent localement un mot d\'activation, puis envoient l\'audio suivant au cloud, donc vos requêtes sont transmises et peuvent être conservées. Un assistant local traite tout sur votre matériel.' } },
         { '@type': 'Question', name: 'Où vont les flux de mes caméras ?', acceptedAnswer: { '@type': 'Answer', text: 'Les caméras cloud téléversent les images sur les serveurs du fournisseur, souvent derrière un abonnement. Une configuration locale avec Frigate garde les images sur votre propre matériel.' } },
         { '@type': 'Question', name: 'Puis-je arrêter la collecte de données ?', acceptedAnswer: { '@type': 'Answer', text: 'Sur les appareils cloud, vous pouvez la limiter mais rarement l\'éliminer. La solution fiable est de passer à des appareils à capacité locale et à un hub local.' } },
-        { '@type': 'Question', name: 'Une maison connectée locale est-elle vraiment privée ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Avec un hub local, une voix locale et une IA locale, les données d\'appareils, les enregistrements et les automatisations restent sur votre matériel sans sous-traitant externe.' } },
+        { '@type': 'Question', name: 'Une maison connectée locale est-elle vraiment privée ?', acceptedAnswer: { '@type': 'Answer', text: 'En grande partie, oui. Avec un hub local, une voix locale et une IA locale, les données d\'appareils, les enregistrements et les automatisations restent sur votre matériel sans sous-traitant externe, tant que les intégrations cloud sont désactivées.' } },
         { '@type': 'Question', name: 'Que signifie le traitement local des données pour une maison connectée ?', acceptedAnswer: { '@type': 'Answer', text: 'Le hub, la reconnaissance vocale et le modèle d\'IA tournent sur du matériel chez vous : les événements, enregistrements et images de caméra y sont traités plutôt que sur un serveur du fabricant. Cela s\'applique par composant : automatisations, voix, caméras et IA peuvent chacune être locales ou dans le cloud.' } },
         { '@type': 'Question', name: 'Amazon a-t-il supprimé l\'option empêchant l\'envoi des enregistrements vocaux Echo vers son cloud ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Le 28 mars 2025, Amazon a supprimé le réglage « Ne pas envoyer les enregistrements vocaux », disponible uniquement sur l\'Echo Dot 4e génération, l\'Echo Show 10 et l\'Echo Show 15 pour les utilisateurs américains en anglais. Amazon a indiqué qu\'il était utilisé par moins de 0,03 % des clients.' } },
         { '@type': 'Question', name: 'Le Data Act européen empêche-t-il les entreprises de maison connectée de collecter des données ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Depuis le 12 septembre 2025, il donne aux utilisateurs le droit d\'accéder aux données de leurs appareils connectés et de les partager avec un tiers, mais c\'est un droit d\'accès, pas une interdiction de collecte ; le RGPD s\'applique séparément. Seul le traitement local empêche les données d\'atteindre le fabricant.' } },
@@ -1454,7 +1454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: 'スマートホームのプライバシーリスクとは何ですか？',
         answer:
-          'クラウド接続のスマートホーム機器は、利用データ・音声録音・カメラ映像を企業のサーバーへ送り、そこで保持・第三者共有・漏えいの対象になり得ます。常時待ち受けのアシスタントとクラウドカメラが最もリスクの高い機器です。ローカル制御へ移れば、こうしたデータは自分のハードウェアにとどまります。',
+          'クラウド接続のスマートホーム機器は、利用データ・音声録音・カメラ映像を企業のサーバーへ送り、そこで保持・第三者共有・漏えいの対象になり得ます。常時待ち受けのアシスタントとクラウドカメラが最もリスクの高い機器です。ローカル制御へ移れば、こうしたデータは自分のハードウェアにとどまります（クラウド連携を有効にしない場合）。',
         bullets: [
           'クラウドの利用データは習慣や在宅を露呈する',
           '音声アシスタントは録音をクラウドで処理する',
@@ -1479,7 +1479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     snippetBlocks: [
       { type: 'one-sentence', content: 'クラウド型スマートホーム機器は、利用データ・音声録音・カメラ映像を企業のサーバーに収集します；ローカル制御はそのデータを家にとどめます。' },
-      { type: 'plain-terms', content: 'クラウドに依存するスマートホーム機器は、あなたの家に関する情報——いつ出入りするか、スピーカーに何を話すか、カメラが何を見るか——を企業のサーバーへ送ります。こうしたデータは保持・共有・漏えいの可能性があります。すべてをローカルで動かせば、そのどれも家を出ません。' },
+      { type: 'plain-terms', content: 'クラウドに依存するスマートホーム機器は、あなたの家に関する情報——いつ出入りするか、スピーカーに何を話すか、カメラが何を見るか——を企業のサーバーへ送ります。こうしたデータは保持・共有・漏えいの可能性があります。すべてをローカルで動かせば、そのデータはデフォルトでは家の外へ出ません。' },
     ],
     sections: {
       tldr: {
@@ -1523,7 +1523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'breaches',
         title: '漏えいと露呈',
         content:
-          '**企業のサーバーに保存されたデータはすべて、あなたが制御できない漏えい・ポリシー変更・第三者共有にさらされます。** 事業者から漏れ得ないデータは、事業者が一度も受け取らないデータだけです。',
+          '**企業のサーバーに保存されたデータはすべて、あなたが制御できない漏えい・ポリシー変更・第三者共有にさらされます。** 事業者が一度も受け取らないデータは、その事業者から漏れることはありません。',
         items: [
           '集中保存された録画は魅力的な攻撃対象です。',
           'プライバシーポリシーは変更され、データの使われ方が拡大し得ます。',
@@ -1561,7 +1561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-fix',
         title: '解決策：ローカルファーストとローカルAI',
         content:
-          '**解決策はローカル制御：ハブ、音声、AIを自分のハードウェアで動かし、データが家を出ないようにすることです。** 外部処理者なしでスマート機能を残せます。日本では、経済産業省（METI）の AI ガバナンス・ガイドライン（2024）が企業のデータ管理を重視しており、ローカル構成は外部処理者を介さないため、こうした方針に沿いやすくなります。',
+          '**解決策はローカル制御：ハブ、音声、AIを自分のハードウェアで動かし、データがほとんど家を出ないようにすることです。** 外部処理者なしでスマート機能を残せます。日本では、経済産業省（METI）の AI ガバナンス・ガイドライン（2024）が企業のデータ管理を重視しており、ローカル構成は外部処理者を介さないため、こうした方針に沿いやすくなります。',
         items: [
           'ローカルハブとローカル機器へ移る——[ローカルスマートホーム完全ガイド](/ja/smart-home/local-smart-home-complete-guide)を参照。',
           'クラウド音声をローカルアシスタントで置き換える——[Ollama を Home Assistant に接続する](/ja/smart-home/home-assistant-ollama-integration)を参照。',
@@ -1598,9 +1598,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           { q: 'スマートスピーカーは常に聞いていますか？', a: 'クラウド音声アシスタントは、ウェイクワードをローカルで待ち受け、その後の音声を処理のためクラウドへ送ります。つまり、あなたの音声クエリは送信され、保持され得ます。ローカル音声アシスタントは代わりにすべてを自分のハードウェアで処理します。' },
-          { q: 'カメラの映像はどこへ行きますか？', a: 'クラウドカメラは映像を事業者のサーバーへアップロードし、そこで保存され、多くはサブスクの背後で管理されます。Frigate を使うローカル構成は映像を自分のハードウェアにとどめ、家を出ません。' },
+          { q: 'カメラの映像はどこへ行きますか？', a: 'クラウドカメラは映像を事業者のサーバーへアップロードし、そこで保存され、多くはサブスクの背後で管理されます。Frigate を使うローカル構成は映像を自分のハードウェアにとどめ、デフォルトでは自宅のネットワーク内にとどまります。' },
           { q: 'データ収集を止められますか？', a: 'クラウド機器では設定で収集を制限できますが、完全に止められることは稀です。確実な解決策は、ローカル対応機器とローカルハブへ切り替え、そもそもデータが事業者へ送られないようにすることです。' },
-          { q: 'ローカルスマートホームは本当にプライベートですか？', a: 'はい。ローカルハブ、ローカル音声、ローカルAIなら、機器データ・録画・自動化が外部処理者なしで自分のハードウェアにとどまります。これがローカルファースト構成を設計上プライベートにします。' },
+          { q: 'ローカルスマートホームは本当にプライベートですか？', a: 'おおむねはい。ローカルハブ、ローカル音声、ローカルAIなら、機器データ・録画・自動化が外部処理者なしで自分のハードウェアにとどまります（クラウド連携を有効にしない場合）。これがローカルファースト構成を設計上プライベートにします。' },
           { q: 'スマートホームのローカルデータ処理とは何ですか？', a: 'ハブ、音声認識、AIモデルを自宅内のハードウェアで動かし、機器のイベント、録音、カメラ映像をメーカーのサーバーではなく自宅内で処理することです。コンポーネントごとに選べ、自動化、音声、カメラ、AIをそれぞれローカルにもクラウドにもできます。' },
           { q: 'Amazonは、Echoの音声録音をクラウドに送らない設定を廃止しましたか？', a: 'はい。2025年3月28日、Amazonは「音声録音を送信しない」設定を廃止しました。この設定は、米国の英語設定ユーザー向けのEcho Dot（第4世代）、Echo Show 10、Echo Show 15のみで利用できました。Amazonによると利用者は顧客の0.03%未満でした。' },
           { q: 'EUデータ法により、スマートホーム企業のデータ収集は禁止されますか？', a: 'いいえ。2025年9月12日以降、利用者はコネクテッド機器のデータにアクセスし、第三者へ共有させる権利を持ちますが、これはアクセス権であり収集の禁止ではありません。GDPRは別途適用されます。データがメーカーに届くこと自体を防げるのは、ローカル処理だけです。' },
@@ -1650,7 +1650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'スマートスピーカーは常に聞いていますか？', acceptedAnswer: { '@type': 'Answer', text: 'クラウド音声アシスタントはウェイクワードをローカルで待ち受け、その後の音声をクラウドへ送ります。つまりクエリは送信・保持され得ます。ローカルアシスタントはすべてを自分のハードウェアで処理します。' } },
         { '@type': 'Question', name: 'カメラの映像はどこへ行きますか？', acceptedAnswer: { '@type': 'Answer', text: 'クラウドカメラは映像を事業者のサーバーへアップロードし、多くはサブスクの背後で管理します。Frigate のローカル構成は映像を自分のハードウェアにとどめます。' } },
         { '@type': 'Question', name: 'データ収集を止められますか？', acceptedAnswer: { '@type': 'Answer', text: 'クラウド機器では制限できますが、完全に止められることは稀です。確実な解決策はローカル対応機器とローカルハブへの切り替えです。' } },
-        { '@type': 'Question', name: 'ローカルスマートホームは本当にプライベートですか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。ローカルハブ、ローカル音声、ローカルAIなら、機器データ・録画・自動化が外部処理者なしで自分のハードウェアにとどまります。' } },
+        { '@type': 'Question', name: 'ローカルスマートホームは本当にプライベートですか？', acceptedAnswer: { '@type': 'Answer', text: 'おおむねはい。ローカルハブ、ローカル音声、ローカルAIなら、機器データ・録画・自動化が外部処理者なしで自分のハードウェアにとどまります（クラウド連携を有効にしない場合）。' } },
         { '@type': 'Question', name: 'スマートホームのローカルデータ処理とは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'ハブ、音声認識、AIモデルを自宅内のハードウェアで動かし、機器のイベント、録音、カメラ映像をメーカーのサーバーではなく自宅内で処理することです。コンポーネントごとに選べ、自動化、音声、カメラ、AIをそれぞれローカルにもクラウドにもできます。' } },
         { '@type': 'Question', name: 'Amazonは、Echoの音声録音をクラウドに送らない設定を廃止しましたか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。2025年3月28日、Amazonは「音声録音を送信しない」設定を廃止しました。この設定は、米国の英語設定ユーザー向けのEcho Dot（第4世代）、Echo Show 10、Echo Show 15のみで利用できました。Amazonによると利用者は顧客の0.03%未満でした。' } },
         { '@type': 'Question', name: 'EUデータ法により、スマートホーム企業のデータ収集は禁止されますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。2025年9月12日以降、利用者はコネクテッド機器のデータにアクセスし、第三者へ共有させる権利を持ちますが、これはアクセス権であり収集の禁止ではありません。GDPRは別途適用されます。データがメーカーに届くこと自体を防げるのは、ローカル処理だけです。' } },
@@ -1759,7 +1759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'breaches',
         title: 'Vazamentos e exposição',
         content:
-          '**Qualquer dado armazenado em servidores das empresas fica exposto a vazamentos, mudanças de política e compartilhamento com terceiros que você não pode controlar.** Os únicos dados que não podem vazar de um fornecedor são os que o fornecedor nunca recebe.',
+          '**Qualquer dado armazenado em servidores das empresas fica exposto a vazamentos, mudanças de política e compartilhamento com terceiros que você não pode controlar.** Os dados que um fornecedor nunca recebe não podem ser vazados por ele.',
         items: [
           'Gravações centralizadas são alvos atraentes de vazamento.',
           'Políticas de privacidade podem mudar e ampliar como seus dados são usados.',
@@ -1797,7 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-fix',
         title: 'A solução: local-first e IA local',
         content:
-          '**A solução é o controle local: rodar o hub, a voz e a IA no seu próprio hardware para que nenhum dado saia de casa.** Você mantém os recursos inteligentes sem o processador externo. No Brasil, isso apoia a LGPD (Lei Geral de Proteção de Dados) e as obrigações fiscalizadas pela ANPD (Autoridade Nacional de Proteção de Dados), pois o processamento local mantém dados de dispositivos, voz e câmera na sua residência, sem um operador externo.',
+          '**A solução é o controle local: rodar o hub, a voz e a IA no seu próprio hardware para que muito poucos dados saiam de casa.** Você mantém os recursos inteligentes sem o processador externo. No Brasil, isso apoia a LGPD (Lei Geral de Proteção de Dados) e as obrigações fiscalizadas pela ANPD (Autoridade Nacional de Proteção de Dados), pois o processamento local mantém dados de dispositivos, voz e câmera na sua residência, sem um operador externo.',
         items: [
           'Migre para um hub local e dispositivos locais — veja [o guia completo da casa inteligente local](/pt/smart-home/local-smart-home-complete-guide).',
           'Substitua a voz na nuvem por um assistente local — veja [conectar o Ollama ao Home Assistant](/pt/smart-home/home-assistant-ollama-integration).',
@@ -1834,9 +1834,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Alto-falantes inteligentes ficam sempre ouvindo?', a: 'Assistentes de voz na nuvem ouvem localmente uma palavra de ativação e depois enviam o áudio seguinte à nuvem para processar. Isso significa que suas consultas faladas são transmitidas e podem ser retidas. Um assistente de voz local processa tudo no seu hardware.' },
-          { q: 'Para onde vão as imagens das minhas câmeras?', a: 'Câmeras na nuvem enviam as imagens aos servidores do fornecedor, onde são armazenadas e muitas vezes ficam atrás de uma assinatura. Uma configuração local com Frigate mantém as imagens no seu próprio hardware, então elas nunca saem de casa.' },
+          { q: 'Para onde vão as imagens das minhas câmeras?', a: 'Câmeras na nuvem enviam as imagens aos servidores do fornecedor, onde são armazenadas e muitas vezes ficam atrás de uma assinatura. Uma configuração local com Frigate mantém as imagens no seu próprio hardware, então, por padrão, elas ficam na sua rede.' },
           { q: 'Posso parar a coleta de dados?', a: 'Em dispositivos na nuvem, você pode limitar, mas raramente eliminar a coleta pelas configurações. A solução confiável é mudar para dispositivos com capacidade local e um hub local, para que os dados nunca sejam enviados a um fornecedor.' },
-          { q: 'Uma casa inteligente local é realmente privada?', a: 'Sim. Com um hub local, voz local e IA local, os dados de dispositivos, as gravações e as automações ficam no seu hardware sem processador externo. É isso que torna uma configuração local-first privada por design.' },
+          { q: 'Uma casa inteligente local é realmente privada?', a: 'Em grande parte, sim. Com um hub local, voz local e IA local, os dados de dispositivos, as gravações e as automações ficam no seu hardware sem processador externo, desde que nenhuma integração em nuvem esteja ativa. É isso que torna uma configuração local-first privada por design.' },
           { q: 'O que significa processamento local de dados na casa inteligente?', a: 'Significa que o hub, o reconhecimento de voz e o modelo de IA rodam em hardware dentro da sua casa, e eventos, gravações e imagens de câmera são processados ali, não em um servidor do fabricante. Vale por componente: automações, voz, câmeras e IA podem ser locais ou em nuvem.' },
           { q: 'A Amazon removeu a opção de não enviar as gravações de voz do Echo para a nuvem?', a: 'Sim. Em 28 de março de 2025, a Amazon removeu a configuração "Não enviar gravações de voz", disponível apenas no Echo Dot de 4ª geração, no Echo Show 10 e no Echo Show 15 para usuários dos EUA com inglês. A Amazon disse que menos de 0,03% dos clientes a usavam.' },
           { q: 'O Data Act da UE impede empresas de casa inteligente de coletar dados?', a: 'Não. Desde 12 de setembro de 2025, ele dá aos usuários o direito de acessar os dados de seus dispositivos conectados e compartilhá-los com terceiros, mas é um direito de acesso, não uma proibição de coleta; o GDPR se aplica separadamente. Só o processamento local impede que os dados cheguem ao fabricante.' },
@@ -1886,7 +1886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Alto-falantes inteligentes ficam sempre ouvindo?', acceptedAnswer: { '@type': 'Answer', text: 'Assistentes de voz na nuvem ouvem localmente uma palavra de ativação e depois enviam o áudio seguinte à nuvem, então suas consultas são transmitidas e podem ser retidas. Um assistente local processa tudo no seu hardware.' } },
         { '@type': 'Question', name: 'Para onde vão as imagens das minhas câmeras?', acceptedAnswer: { '@type': 'Answer', text: 'Câmeras na nuvem enviam as imagens aos servidores do fornecedor, muitas vezes atrás de uma assinatura. Uma configuração local com Frigate mantém as imagens no seu próprio hardware.' } },
         { '@type': 'Question', name: 'Posso parar a coleta de dados?', acceptedAnswer: { '@type': 'Answer', text: 'Em dispositivos na nuvem você pode limitar, mas raramente eliminar a coleta. A solução confiável é mudar para dispositivos com capacidade local e um hub local.' } },
-        { '@type': 'Question', name: 'Uma casa inteligente local é realmente privada?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Com um hub local, voz local e IA local, os dados de dispositivos, as gravações e as automações ficam no seu hardware sem processador externo.' } },
+        { '@type': 'Question', name: 'Uma casa inteligente local é realmente privada?', acceptedAnswer: { '@type': 'Answer', text: 'Em grande parte, sim. Com um hub local, voz local e IA local, os dados de dispositivos, as gravações e as automações ficam no seu hardware sem processador externo, desde que nenhuma integração em nuvem esteja ativa.' } },
         { '@type': 'Question', name: 'O que significa processamento local de dados na casa inteligente?', acceptedAnswer: { '@type': 'Answer', text: 'Significa que o hub, o reconhecimento de voz e o modelo de IA rodam em hardware dentro da sua casa, e eventos, gravações e imagens de câmera são processados ali, não em um servidor do fabricante. Vale por componente: automações, voz, câmeras e IA podem ser locais ou em nuvem.' } },
         { '@type': 'Question', name: 'A Amazon removeu a opção de não enviar as gravações de voz do Echo para a nuvem?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Em 28 de março de 2025, a Amazon removeu a configuração "Não enviar gravações de voz", disponível apenas no Echo Dot de 4ª geração, no Echo Show 10 e no Echo Show 15 para usuários dos EUA com inglês. A Amazon disse que menos de 0,03% dos clientes a usavam.' } },
         { '@type': 'Question', name: 'O Data Act da UE impede empresas de casa inteligente de coletar dados?', acceptedAnswer: { '@type': 'Answer', text: 'Não. Desde 12 de setembro de 2025, ele dá aos usuários o direito de acessar os dados de seus dispositivos conectados e compartilhá-los com terceiros, mas é um direito de acesso, não uma proibição de coleta; o GDPR se aplica separadamente. Só o processamento local impede que os dados cheguem ao fabricante.' } },
@@ -1995,7 +1995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'breaches',
         title: '泄露与暴露',
         content:
-          '**任何存储在企业服务器上的数据都面临你无法控制的泄露、政策变更和第三方共享。** 唯一不会从厂商泄露的数据，是厂商从未收到的数据。',
+          '**任何存储在企业服务器上的数据都面临你无法控制的泄露、政策变更和第三方共享。** 厂商从未收到的数据，厂商自身无法泄露。',
         items: [
           '集中存储的录像是诱人的泄露目标。',
           '隐私政策可能变更，扩大你数据的用途。',
@@ -2033,7 +2033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'the-fix',
         title: '解决办法：本地优先与本地AI',
         content:
-          '**解决办法是本地控制：把中枢、语音和AI运行在你自己的硬件上，使任何数据都不离开家门。** 你能在没有外部处理方的情况下保留智能功能。在中国，《数据安全法》（2021）要求重要数据本地存储；本地处理把设备、语音和摄像头数据留在境内你的硬件上、不经外部处理方，因而更易满足此类合规要求。',
+          '**解决办法是本地控制：把中枢、语音和AI运行在你自己的硬件上，使几乎没有数据离开家门。** 你能在没有外部处理方的情况下保留智能功能。在中国，《数据安全法》（2021）要求重要数据本地存储；本地处理把设备、语音和摄像头数据留在境内你的硬件上、不经外部处理方，因而更易满足此类合规要求。',
         items: [
           '迁移到本地中枢和本地设备——参见[本地智能家居完整指南](/zh/smart-home/local-smart-home-complete-guide)。',
           '用本地助手替换云端语音——参见[把 Ollama 连接到 Home Assistant](/zh/smart-home/home-assistant-ollama-integration)。',
@@ -2070,9 +2070,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: '智能音箱会一直在听吗？', a: '云端语音助手在本地等待唤醒词，然后把随后的音频发到云端处理。这意味着你说出的查询会被传输并可能被保留。本地语音助手则把一切都在你的硬件上处理。' },
-          { q: '我的摄像头画面去哪儿了？', a: '云端摄像头把画面上传到厂商服务器，在那里存储，并常常置于订阅之后。使用 Frigate 的本地配置把画面留在你自己的硬件上，因此永不离开家门。' },
+          { q: '我的摄像头画面去哪儿了？', a: '云端摄像头把画面上传到厂商服务器，在那里存储，并常常置于订阅之后。使用 Frigate 的本地配置把画面留在你自己的硬件上，因此默认留在你的本地网络内。' },
           { q: '我能停止数据收集吗？', a: '对云端设备，你可以通过设置加以限制，但很少能彻底停止。可靠的办法是改用支持本地的设备和本地中枢，从根本上让数据不被发送给厂商。' },
-          { q: '本地智能家居真的私密吗？', a: '是的。有了本地中枢、本地语音和本地AI，设备数据、录像和自动化都在你的硬件上、没有外部处理方。这正是本地优先配置在设计上私密的原因。' },
+          { q: '本地智能家居真的私密吗？', a: '基本上是。有了本地中枢、本地语音和本地AI，设备数据、录像和自动化都在你的硬件上、没有外部处理方（前提是未启用云端集成）。这正是本地优先配置在设计上私密的原因。' },
           { q: '智能家居的本地数据处理是什么意思？', a: '指中枢、语音识别和AI模型运行在家中的硬件上，设备事件、录音和摄像头画面在本地处理，而不是在厂商服务器上。它按组件区分：自动化、语音、摄像头和AI可分别选择本地或云端。' },
           { q: '亚马逊是否移除了Echo语音录音不上传云端的选项？', a: '是的。2025年3月28日，亚马逊移除了“不发送语音录音”设置，该设置仅限美国英语用户的第4代Echo Dot、Echo Show 10和Echo Show 15使用。亚马逊称使用该设置的客户不足0.03%。' },
           { q: '欧盟《数据法案》会阻止智能家居公司收集数据吗？', a: '不会。自2025年9月12日起，用户有权访问联网设备产生的数据并将其分享给第三方，但这是访问权而非收集禁令；GDPR另行适用。只有本地处理才能让数据根本不到达厂商。' },
@@ -2122,7 +2122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '智能音箱会一直在听吗？', acceptedAnswer: { '@type': 'Answer', text: '云端语音助手在本地等待唤醒词，然后把随后的音频发到云端处理，因此你的查询会被传输并可能被保留。本地助手把一切在你的硬件上处理。' } },
         { '@type': 'Question', name: '我的摄像头画面去哪儿了？', acceptedAnswer: { '@type': 'Answer', text: '云端摄像头把画面上传到厂商服务器，常置于订阅之后。使用 Frigate 的本地配置把画面留在你自己的硬件上。' } },
         { '@type': 'Question', name: '我能停止数据收集吗？', acceptedAnswer: { '@type': 'Answer', text: '对云端设备可以限制，但很少能彻底停止。可靠的办法是改用支持本地的设备和本地中枢。' } },
-        { '@type': 'Question', name: '本地智能家居真的私密吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。有了本地中枢、本地语音和本地AI，设备数据、录像和自动化都在你的硬件上、没有外部处理方。' } },
+        { '@type': 'Question', name: '本地智能家居真的私密吗？', acceptedAnswer: { '@type': 'Answer', text: '基本上是。有了本地中枢、本地语音和本地AI，设备数据、录像和自动化都在你的硬件上、没有外部处理方（前提是未启用云端集成）。' } },
         { '@type': 'Question', name: '智能家居的本地数据处理是什么意思？', acceptedAnswer: { '@type': 'Answer', text: '指中枢、语音识别和AI模型运行在家中的硬件上，设备事件、录音和摄像头画面在本地处理，而不是在厂商服务器上。它按组件区分：自动化、语音、摄像头和AI可分别选择本地或云端。' } },
         { '@type': 'Question', name: '亚马逊是否移除了Echo语音录音不上传云端的选项？', acceptedAnswer: { '@type': 'Answer', text: '是的。2025年3月28日，亚马逊移除了“不发送语音录音”设置，该设置仅限美国英语用户的第4代Echo Dot、Echo Show 10和Echo Show 15使用。亚马逊称使用该设置的客户不足0.03%。' } },
         { '@type': 'Question', name: '欧盟《数据法案》会阻止智能家居公司收集数据吗？', acceptedAnswer: { '@type': 'Answer', text: '不会。自2025年9月12日起，用户有权访问联网设备产生的数据并将其分享给第三方，但这是访问权而非收集禁令；GDPR另行适用。只有本地处理才能让数据根本不到达厂商。' } },
