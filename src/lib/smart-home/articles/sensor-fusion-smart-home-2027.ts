@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-en.webp',
     title: 'Sensor Fusion in the Smart Home (2026)',
@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'radar and motion sensor combination',
     ],
     leadAnswerBlock:
-      '**Sensor fusion combines readings from multiple sensor types — for example, requiring both radar and motion sensor agreement before an automation treats a room as "occupied" — to reduce false positives and false negatives that any single sensor produces on its own.** This is a Home Assistant automation-logic pattern, not a specific product.',
+      '**Sensor fusion combines readings from multiple sensor types into one automation decision — for example, holding a room "occupied" while radar still detects presence after the PIR motion sensor has gone quiet, or requiring a door contact and a camera person-detection to agree before alerting — to reduce the false positives and false negatives any single sensor produces on its own.** This is a Home Assistant automation-logic pattern, not a specific product.',
     quickAnswerTop: {
       en: {
         question: 'How does combining multiple sensors improve home automation accuracy?',
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Built with standard Home Assistant automation conditions — template sensors or multi-condition triggers',
           'Common example: radar + motion for occupancy, or contact + camera for security events',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -49,6 +49,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Why One Sensor Isn\'t Enough', anchor: 'why-one-sensor-fails' },
       { label: 'Building a Fusion Automation', anchor: 'building-fusion' },
       { label: 'Common Fusion Patterns', anchor: 'common-patterns' },
+      { label: 'Weighted Fusion and Robustness', anchor: 'weighted-fusion' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -64,6 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Every sensor type has its own failure mode when used alone — sensor fusion cancels these out by requiring agreement',
           'Built with standard Home Assistant automation conditions (multi-condition triggers or template sensors), not special hardware',
           'Common pattern: radar + PIR motion for occupancy, contact + camera for security events',
+          'For several imperfect signals, Home Assistant\'s Bayesian binary sensor weighs each one by reliability instead of using fixed AND/OR rules',
           'The trade-off is added automation complexity and slightly more setup time for meaningfully fewer false triggers',
           'See the radar presence sensing guide for the specific sensor type most commonly fused with motion detection',
         ],
@@ -74,7 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Every sensor type has a specific blind spot: PIR motion sensors miss stationary occupants, radar can occasionally false-positive on appliance vibration, contact sensors don\'t identify who triggered them, and cameras raise privacy considerations cameras-free sensors avoid.**',
         items: [
-          'A PIR-only occupancy automation will turn off lights on someone sitting still, which is the most commonly cited smart-home automation annoyance.',
+          'A PIR-only occupancy automation will turn off lights on someone sitting still, a well-known annoyance with PIR-only smart-home automations.',
           'A radar-only automation can occasionally register a false positive from a fan, HVAC vibration, or a pet, depending on sensitivity settings.',
           'Relying on any single sensor means inheriting that sensor\'s specific failure mode across every automation built on it.',
         ],
@@ -101,6 +103,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Environmental: averaging multiple temperature sensors in a room to reduce the impact of one sensor being placed in a draft or near a heat source, giving climate automations a more representative reading.',
         ],
       },
+      weightedFusion: {
+        id: 'weighted-fusion',
+        title: 'Weighted Fusion and Robustness',
+        content:
+          '**When simple AND/OR rules are not enough, Home Assistant\'s Bayesian binary sensor weighs sensors probabilistically: each observation moves a probability up or down, and the sensor turns on once it passes a threshold.**',
+        items: [
+          'Bayesian binary sensor: you set a prior (the baseline probability), then give each observation (a state, numeric range or template) a prob_given_true and a prob_given_false. The sensor turns on when the resulting probability exceeds probability_threshold (default 0.5). It can be set up in the UI (percentages) or in YAML (values from 0 to 1).',
+          'Choose fixed template logic when the rule fits in one sentence (radar OR a recent PIR trigger). Choose the Bayesian sensor when several imperfect signals — radar, PIR, a light switch, a phone\'s presence — each carry partial evidence. You estimate the probabilities yourself, so start simple and tune.',
+          'Add a delay off to the fused template binary sensor so brief gaps between sensor reports do not flip a room to unoccupied. Template binary sensors support delay_on and delay_off in YAML and under Additional options in the UI helper.',
+          'Handle offline inputs deliberately: a template entity is always available unless you configure an availability template, so an offline source sensor simply fails its \'on\' test. Check source availability in the template if a missing input must not be read as \'no activity\'.',
+          'For environmental fusion, the Min/Max helper combines two or more sensors that share a unit into a mean, median, minimum or maximum value (UI helper or YAML).',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Frequently Asked Questions',
@@ -110,6 +125,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Does sensor fusion add noticeable automation complexity?', a: 'Some — you\'re writing a template sensor with combined logic instead of pointing an automation at one sensor directly. This is a manageable trade-off for meaningfully fewer false triggers on automations that matter (like security notifications).' },
           { q: 'Can I fuse a local LLM\'s reasoning with sensor data?', a: 'Yes — once fused sensor data is exposed as a standard Home Assistant entity, an LLM automation (see the AI automations guide) can reason over it the same way it would any other sensor, potentially adding further context-aware logic on top.' },
           { q: 'Is this the same as a home digital twin?', a: 'Related but narrower — sensor fusion combines a few sensors for one specific automation decision. A digital twin (see that guide) is a broader, ongoing model of the whole home\'s state that many automations could draw from.' },
+          { q: 'When should I use the Bayesian sensor instead of a template sensor?', a: 'Use a template sensor when a simple AND/OR rule captures the logic. Use the Bayesian binary sensor when several imperfect signals each give partial evidence and you want them weighed by reliability — it needs a prior and per-observation probabilities that you estimate yourself.' },
+          { q: 'What happens to a fused sensor when one input sensor goes offline?', a: 'By default a template sensor stays available and an offline input simply fails its condition, so the fused result can be wrong without any warning. Add an availability template or check the input states if the result must not be trusted while an input is missing.' },
         ],
       },
       relatedReading: {
@@ -133,7 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Sensor fusion' }, { '@type': 'Thing', name: 'Home automation reliability' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -146,6 +163,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Do I need special hardware for sensor fusion?', acceptedAnswer: { '@type': 'Answer', text: 'No — it\'s an automation-logic pattern built with standard Home Assistant template sensors and multi-condition triggers.' } },
         { '@type': 'Question', name: 'What\'s the simplest sensor fusion example to start with?', acceptedAnswer: { '@type': 'Answer', text: 'Combining a radar presence sensor with a PIR motion sensor for occupancy detection.' } },
         { '@type': 'Question', name: 'Is this the same as a home digital twin?', acceptedAnswer: { '@type': 'Answer', text: 'Related but narrower — sensor fusion combines a few sensors for one automation decision; a digital twin is a broader ongoing whole-home state model.' } },
+        { '@type': 'Question', name: 'When should I use the Bayesian sensor instead of a template sensor?', acceptedAnswer: { '@type': 'Answer', text: 'Use a template sensor when a simple AND/OR rule captures the logic. Use the Bayesian binary sensor when several imperfect signals each give partial evidence and you want them weighed by reliability — it needs a prior and per-observation probabilities that you estimate yourself.' } },
+        { '@type': 'Question', name: 'What happens to a fused sensor when one input sensor goes offline?', acceptedAnswer: { '@type': 'Answer', text: 'By default a template sensor stays available and an offline input simply fails its condition, so the fused result can be wrong without any warning. Add an availability template or check the input states if the result must not be trusted while an input is missing.' } },
       ],
     },
   },
@@ -153,8 +172,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-de.webp',
     title: 'Sensorfusion im Smart Home (2026)',
@@ -177,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'radar und bewegungssensor kombination',
     ],
     leadAnswerBlock:
-      '**Sensorfusion kombiniert Messwerte mehrerer Sensortypen — zum Beispiel, dass sowohl Radar- als auch Bewegungssensor übereinstimmen müssen, bevor eine Automatisierung einen Raum als „belegt" behandelt — um False Positives und False Negatives zu reduzieren, die ein einzelner Sensor allein erzeugt.** Dies ist ein Home-Assistant-Automatisierungslogik-Muster, kein spezifisches Produkt.',
+      '**Sensorfusion kombiniert Messwerte mehrerer Sensortypen zu einer Automatisierungsentscheidung — zum Beispiel, einen Raum als „belegt“ zu halten, solange das Radar noch Anwesenheit erkennt, obwohl der PIR-Bewegungssensor längst ruhig ist, oder vor einer Benachrichtigung zu verlangen, dass Türkontakt und kamerabasierte Personenerkennung übereinstimmen — um False Positives und False Negatives zu reduzieren, die ein einzelner Sensor allein erzeugt.** Dies ist ein Home-Assistant-Automatisierungslogik-Muster, kein spezifisches Produkt.',
     quickAnswerTop: {
       de: {
         question: 'Wie verbessert die Kombination mehrerer Sensoren die Genauigkeit der Hausautomation?',
@@ -189,7 +208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Umgesetzt mit Standard-Home-Assistant-Automatisierungsbedingungen — Template-Sensoren oder Multi-Condition-Trigger',
           'Häufiges Beispiel: Radar + Bewegung für Anwesenheit, oder Kontakt + Kamera für Sicherheitsereignisse',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -197,6 +216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Warum ein Sensor nicht ausreicht', anchor: 'why-one-sensor-fails' },
       { label: 'Eine Fusions-Automatisierung erstellen', anchor: 'building-fusion' },
       { label: 'Häufige Fusionsmuster', anchor: 'common-patterns' },
+      { label: 'Gewichtete Fusion und Robustheit', anchor: 'weighted-fusion' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -212,6 +232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jeder Sensortyp hat allein verwendet seine eigene Fehlerquelle — Sensorfusion hebt diese auf, indem sie Übereinstimmung verlangt',
           'Umgesetzt mit Standard-Home-Assistant-Automatisierungsbedingungen (Multi-Condition-Trigger oder Template-Sensoren), keine spezielle Hardware',
           'Häufiges Muster: Radar + PIR-Bewegung für Anwesenheit, Kontakt + Kamera für Sicherheitsereignisse',
+          'Bei mehreren unvollkommenen Signalen gewichtet der Bayes’sche Binärsensor von Home Assistant jedes nach Zuverlässigkeit, statt feste UND/ODER-Regeln zu nutzen',
           'Der Trade-off ist zusätzliche Automatisierungskomplexität und etwas mehr Einrichtungszeit für spürbar weniger Fehlauslösungen',
           'Siehe den Leitfaden zur Radar-Anwesenheitserkennung für den Sensortyp, der am häufigsten mit Bewegungserkennung fusioniert wird',
         ],
@@ -222,7 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Jeder Sensortyp hat einen spezifischen blinden Fleck: PIR-Bewegungssensoren übersehen still sitzende Personen, Radar kann gelegentlich bei Gerätevibrationen einen False Positive erzeugen, Kontaktsensoren identifizieren nicht, wer sie ausgelöst hat, und Kameras werfen Datenschutzfragen auf, die kamerafreie Sensoren vermeiden.**',
         items: [
-          'Eine reine PIR-Anwesenheitsautomatisierung schaltet das Licht bei jemandem aus, der still sitzt — das ist die am häufigsten genannte Störung bei Smart-Home-Automatisierungen.',
+          'Eine reine PIR-Anwesenheitsautomatisierung schaltet das Licht bei jemandem aus, der still sitzt — ein bekanntes Ärgernis bei reinen PIR-Automatisierungen im Smart Home.',
           'Eine reine Radar-Automatisierung kann je nach Empfindlichkeitseinstellung gelegentlich einen False Positive durch einen Ventilator, HVAC-Vibrationen oder ein Haustier registrieren.',
           'Sich auf einen einzelnen Sensor zu verlassen bedeutet, dessen spezifische Fehlerquelle in jeder darauf aufgebauten Automatisierung zu übernehmen.',
         ],
@@ -249,6 +270,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Umgebung: Mittelung mehrerer Temperatursensoren in einem Raum, um den Einfluss eines Sensors zu reduzieren, der in einem Luftzug oder in der Nähe einer Wärmequelle platziert ist — das liefert Klimaautomatisierungen eine repräsentativere Messung.',
         ],
       },
+      weightedFusion: {
+        id: 'weighted-fusion',
+        title: 'Gewichtete Fusion und Robustheit',
+        content:
+          '**Wenn einfache UND/ODER-Regeln nicht reichen, gewichtet der Bayes’sche Binärsensor von Home Assistant Sensoren probabilistisch: Jede Beobachtung verschiebt eine Wahrscheinlichkeit nach oben oder unten, und der Sensor schaltet ein, sobald sie einen Schwellenwert überschreitet.**',
+        items: [
+          'Bayes’scher Binärsensor: Du legst einen Prior (die Basiswahrscheinlichkeit) fest und gibst jeder Beobachtung (Zustand, Zahlenbereich oder Template) ein prob_given_true und ein prob_given_false. Der Sensor schaltet ein, wenn die resultierende Wahrscheinlichkeit probability_threshold (Standard 0,5) übersteigt. Einrichtung in der UI (Prozent) oder in YAML (Werte von 0 bis 1).',
+          'Nimm feste Template-Logik, wenn die Regel in einen Satz passt (Radar ODER kürzlicher PIR-Trigger). Nimm den Bayes’schen Sensor, wenn mehrere unvollkommene Signale — Radar, PIR, ein Lichtschalter, die Anwesenheit eines Telefons — jeweils Teilbeweise liefern. Die Wahrscheinlichkeiten schätzt du selbst, also einfach starten und nachjustieren.',
+          'Füge dem fusionierten Template-Binärsensor eine Abschaltverzögerung (delay off) hinzu, damit kurze Lücken zwischen Sensormeldungen einen Raum nicht auf „unbelegt“ kippen. Template-Binärsensoren unterstützen delay_on und delay_off in YAML und unter „Zusätzliche Optionen“ im UI-Helfer.',
+          'Gehe bewusst mit ausgefallenen Eingängen um: Eine Template-Entität ist immer verfügbar, solange du kein Availability-Template konfigurierst — ein offline gegangener Quellsensor besteht also einfach seinen „an“-Test nicht. Prüfe die Verfügbarkeit der Quellen im Template, wenn ein fehlender Eingang nicht als „keine Aktivität“ gelesen werden darf.',
+          'Für die Umgebungsfusion kombiniert der Min/Max-Helfer zwei oder mehr Sensoren mit gleicher Einheit zu Mittelwert, Median, Minimum oder Maximum (UI-Helfer oder YAML).',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
@@ -258,6 +292,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Erhöht Sensorfusion die Automatisierungskomplexität spürbar?', a: 'Etwas — du schreibst einen Template-Sensor mit kombinierter Logik, statt eine Automatisierung direkt auf einen Sensor zu richten. Das ist ein überschaubarer Trade-off für spürbar weniger Fehlauslösungen bei Automatisierungen, die wichtig sind (wie Sicherheitsbenachrichtigungen).' },
           { q: 'Kann ich die Logik eines lokalen LLM mit Sensordaten fusionieren?', a: 'Ja — sobald fusionierte Sensordaten als Standard-Home-Assistant-Entität verfügbar sind, kann eine LLM-Automatisierung (siehe den Leitfaden zu KI-Automatisierungen) genauso darüber schlussfolgern wie über jeden anderen Sensor und potenziell weitere kontextbewusste Logik hinzufügen.' },
           { q: 'Ist das dasselbe wie ein digitaler Zwilling des Zuhauses?', a: 'Verwandt, aber enger gefasst — Sensorfusion kombiniert wenige Sensoren für eine spezifische Automatisierungsentscheidung. Ein digitaler Zwilling (siehe diesen Leitfaden) ist ein breiteres, fortlaufendes Modell des gesamten Zustands des Hauses, aus dem viele Automatisierungen schöpfen könnten.' },
+          { q: 'Wann sollte ich den Bayes’schen Sensor statt eines Template-Sensors nutzen?', a: 'Nutze einen Template-Sensor, wenn eine einfache UND/ODER-Regel die Logik abdeckt. Nutze den Bayes’schen Binärsensor, wenn mehrere unvollkommene Signale jeweils Teilbeweise liefern und nach Zuverlässigkeit gewichtet werden sollen — er braucht einen Prior und Wahrscheinlichkeiten je Beobachtung, die du selbst schätzt.' },
+          { q: 'Was passiert mit einem fusionierten Sensor, wenn ein Eingangssensor offline geht?', a: 'Standardmäßig bleibt ein Template-Sensor verfügbar, und ein ausgefallener Eingang erfüllt seine Bedingung einfach nicht — das fusionierte Ergebnis kann also ohne Warnung falsch sein. Füge ein Availability-Template hinzu oder prüfe die Eingangszustände, wenn dem Ergebnis bei fehlendem Eingang nicht vertraut werden darf.' },
         ],
       },
       relatedReading: {
@@ -281,7 +317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Sensorfusion' }, { '@type': 'Thing', name: 'Zuverlässigkeit der Hausautomation' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -294,6 +330,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Brauche ich spezielle Hardware für Sensorfusion?', acceptedAnswer: { '@type': 'Answer', text: 'Nein — es ist ein Automatisierungslogik-Muster, das mit Standard-Home-Assistant-Template-Sensoren und Multi-Condition-Triggern umgesetzt wird.' } },
         { '@type': 'Question', name: 'Was ist das einfachste Sensorfusions-Beispiel zum Einstieg?', acceptedAnswer: { '@type': 'Answer', text: 'Die Kombination eines Radar-Anwesenheitssensors mit einem PIR-Bewegungssensor für die Anwesenheitserkennung.' } },
         { '@type': 'Question', name: 'Ist das dasselbe wie ein digitaler Zwilling des Zuhauses?', acceptedAnswer: { '@type': 'Answer', text: 'Verwandt, aber enger gefasst — Sensorfusion kombiniert wenige Sensoren für eine Automatisierungsentscheidung; ein digitaler Zwilling ist ein breiteres, fortlaufendes Modell des gesamten Hauszustands.' } },
+        { '@type': 'Question', name: 'Wann sollte ich den Bayes’schen Sensor statt eines Template-Sensors nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Nutze einen Template-Sensor, wenn eine einfache UND/ODER-Regel die Logik abdeckt. Nutze den Bayes’schen Binärsensor, wenn mehrere unvollkommene Signale jeweils Teilbeweise liefern und nach Zuverlässigkeit gewichtet werden sollen — er braucht einen Prior und Wahrscheinlichkeiten je Beobachtung, die du selbst schätzt.' } },
+        { '@type': 'Question', name: 'Was passiert mit einem fusionierten Sensor, wenn ein Eingangssensor offline geht?', acceptedAnswer: { '@type': 'Answer', text: 'Standardmäßig bleibt ein Template-Sensor verfügbar, und ein ausgefallener Eingang erfüllt seine Bedingung einfach nicht — das fusionierte Ergebnis kann also ohne Warnung falsch sein. Füge ein Availability-Template hinzu oder prüfe die Eingangszustände, wenn dem Ergebnis bei fehlendem Eingang nicht vertraut werden darf.' } },
       ],
     },
   },
@@ -301,8 +339,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-fr.webp',
     title: 'Fusion de capteurs dans la maison connectée (2026)',
@@ -325,7 +363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'combinaison capteur radar et mouvement',
     ],
     leadAnswerBlock:
-      "**La fusion de capteurs combine les relevés de plusieurs types de capteurs — par exemple, exiger l'accord du radar et du capteur de mouvement avant qu'une automatisation ne considère une pièce comme « occupée » — pour réduire les faux positifs et les faux négatifs qu'un seul capteur produit à lui seul.** Il s'agit d'un modèle de logique d'automatisation Home Assistant, pas d'un produit spécifique.",
+      '**La fusion de capteurs combine les relevés de plusieurs types de capteurs en une seule décision d’automatisation — par exemple maintenir une pièce « occupée » tant que le radar détecte encore une présence alors que le capteur de mouvement PIR est redevenu silencieux, ou exiger qu’un contact de porte et une détection de personne par caméra concordent avant d’alerter — afin de réduire les faux positifs et faux négatifs qu’un capteur seul produit.** Il s’agit d’un schéma de logique d’automatisation Home Assistant, pas d’un produit précis.',
     quickAnswerTop: {
       fr: {
         question: 'Comment la combinaison de plusieurs capteurs améliore-t-elle la précision de l\'automatisation domestique ?',
@@ -337,7 +375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Construit avec des conditions d\'automatisation Home Assistant standard — capteurs modèles ou déclencheurs multi-conditions',
           'Exemple courant : radar + mouvement pour l\'occupation, ou contact + caméra pour les événements de sécurité',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -345,6 +383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: "Pourquoi un seul capteur ne suffit pas", anchor: 'why-one-sensor-fails' },
       { label: 'Construire une automatisation de fusion', anchor: 'building-fusion' },
       { label: 'Modèles de fusion courants', anchor: 'common-patterns' },
+      { label: 'Fusion pondérée et robustesse', anchor: 'weighted-fusion' },
       { label: 'Questions fréquentes', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -360,6 +399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Chaque type de capteur a son propre mode de défaillance lorsqu'il est utilisé seul — la fusion de capteurs les annule en exigeant un accord",
           "Construit avec des conditions d'automatisation Home Assistant standard (déclencheurs multi-conditions ou capteurs modèles), pas de matériel spécial",
           "Modèle courant : radar + mouvement PIR pour l'occupation, contact + caméra pour les événements de sécurité",
+          'Pour plusieurs signaux imparfaits, le capteur binaire bayésien de Home Assistant pondère chacun selon sa fiabilité au lieu d’appliquer des règles ET/OU fixes',
           "Le compromis est une complexité d'automatisation accrue et un peu plus de temps de configuration pour nettement moins de déclenchements erronés",
           "Voir le guide de détection de présence radar pour le type de capteur le plus souvent fusionné avec la détection de mouvement",
         ],
@@ -370,7 +410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Chaque type de capteur a un angle mort spécifique : les capteurs de mouvement PIR manquent les occupants immobiles, le radar peut occasionnellement donner un faux positif à cause de vibrations d'appareils, les capteurs de contact n'identifient pas qui les a déclenchés, et les caméras soulèvent des considérations de confidentialité que les capteurs sans caméra évitent.**",
         items: [
-          "Une automatisation d'occupation basée uniquement sur le PIR éteindra les lumières sur quelqu'un assis immobile, ce qui est l'agacement d'automatisation domotique le plus souvent cité.",
+          "Une automatisation d'occupation basée uniquement sur le PIR éteindra les lumières sur quelqu'un assis immobile, un désagrément bien connu des automatisations domotiques basées uniquement sur le PIR.",
           "Une automatisation basée uniquement sur le radar peut occasionnellement enregistrer un faux positif à cause d'un ventilateur, de vibrations HVAC, ou d'un animal domestique, selon les réglages de sensibilité.",
           "Se fier à un seul capteur signifie hériter du mode de défaillance spécifique de ce capteur dans chaque automatisation construite dessus.",
         ],
@@ -397,6 +437,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Environnemental : moyenner plusieurs capteurs de température dans une pièce pour réduire l'impact d'un capteur placé dans un courant d'air ou près d'une source de chaleur, donnant aux automatisations climatiques une lecture plus représentative.",
         ],
       },
+      weightedFusion: {
+        id: 'weighted-fusion',
+        title: 'Fusion pondérée et robustesse',
+        content:
+          '**Quand de simples règles ET/OU ne suffisent pas, le capteur binaire bayésien de Home Assistant pondère les capteurs de façon probabiliste : chaque observation fait monter ou descendre une probabilité, et le capteur s’active dès qu’elle dépasse un seuil.**',
+        items: [
+          'Capteur binaire bayésien : vous définissez un a priori (la probabilité de base), puis vous donnez à chaque observation (un état, une plage numérique ou un template) un prob_given_true et un prob_given_false. Le capteur s’active lorsque la probabilité obtenue dépasse probability_threshold (0,5 par défaut). Configuration dans l’interface (pourcentages) ou en YAML (valeurs de 0 à 1).',
+          'Choisissez une logique de template fixe quand la règle tient en une phrase (radar OU déclenchement PIR récent). Choisissez le capteur bayésien quand plusieurs signaux imparfaits — radar, PIR, un interrupteur, la présence d’un téléphone — apportent chacun une preuve partielle. Vous estimez vous-même les probabilités : commencez simple, puis ajustez.',
+          'Ajoutez un délai d’extinction (delay off) au capteur binaire template fusionné pour que de brèves interruptions entre les relevés ne basculent pas une pièce sur « inoccupée ». Les capteurs binaires template prennent en charge delay_on et delay_off en YAML et sous « Options supplémentaires » dans l’assistant d’interface.',
+          'Traitez volontairement les entrées hors ligne : une entité template est toujours disponible tant que vous ne configurez pas de template de disponibilité, donc un capteur source hors ligne échoue simplement à son test « on ». Vérifiez la disponibilité des sources dans le template si une entrée manquante ne doit pas être lue comme « aucune activité ».',
+          'Pour la fusion environnementale, l’assistant Min/Max combine deux capteurs ou plus partageant la même unité en moyenne, médiane, minimum ou maximum (assistant d’interface ou YAML).',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Questions fréquentes',
@@ -406,6 +459,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: "La fusion de capteurs ajoute-t-elle une complexité d'automatisation notable ?", a: "Un peu — vous écrivez un capteur modèle avec une logique combinée au lieu de pointer une automatisation directement vers un seul capteur. C'est un compromis gérable pour nettement moins de déclenchements erronés sur les automatisations importantes (comme les notifications de sécurité)." },
           { q: "Puis-je fusionner le raisonnement d'un LLM local avec des données de capteurs ?", a: "Oui — une fois que les données de capteurs fusionnées sont exposées comme une entité Home Assistant standard, une automatisation LLM (voir le guide des automatisations IA) peut raisonner dessus de la même manière que sur tout autre capteur, en ajoutant potentiellement une logique contextuelle supplémentaire." },
           { q: "Est-ce la même chose qu'un jumeau numérique domestique ?", a: "Lié mais plus étroit — la fusion de capteurs combine quelques capteurs pour une décision d'automatisation spécifique. Un jumeau numérique (voir ce guide) est un modèle plus large et continu de l'état de toute la maison dont de nombreuses automatisations pourraient tirer parti." },
+          { q: 'Quand utiliser le capteur bayésien plutôt qu’un capteur template ?', a: 'Utilisez un capteur template quand une règle ET/OU simple suffit. Utilisez le capteur binaire bayésien quand plusieurs signaux imparfaits apportent chacun une preuve partielle et que vous voulez les pondérer selon leur fiabilité — il exige un a priori et des probabilités par observation que vous estimez vous-même.' },
+          { q: 'Que se passe-t-il pour un capteur fusionné quand une entrée passe hors ligne ?', a: 'Par défaut, un capteur template reste disponible et une entrée hors ligne ne remplit simplement pas sa condition : le résultat fusionné peut donc être faux sans avertissement. Ajoutez un template de disponibilité ou vérifiez les états d’entrée si le résultat ne doit pas être cru lorsqu’une entrée manque.' },
         ],
       },
       relatedReading: {
@@ -429,7 +484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Fusion de capteurs' }, { '@type': 'Thing', name: "Fiabilité de l'automatisation domestique" }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -442,6 +497,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: "Ai-je besoin de matériel spécial pour la fusion de capteurs ?", acceptedAnswer: { '@type': 'Answer', text: "Non — c'est un modèle de logique d'automatisation construit avec des capteurs modèles Home Assistant standard et des déclencheurs multi-conditions." } },
         { '@type': 'Question', name: "Quel est l'exemple de fusion de capteurs le plus simple pour commencer ?", acceptedAnswer: { '@type': 'Answer', text: "Combiner un capteur de présence radar avec un capteur de mouvement PIR pour la détection d'occupation." } },
         { '@type': 'Question', name: "Est-ce la même chose qu'un jumeau numérique domestique ?", acceptedAnswer: { '@type': 'Answer', text: "Lié mais plus étroit — la fusion de capteurs combine quelques capteurs pour une décision d'automatisation ; un jumeau numérique est un modèle plus large et continu de l'état de toute la maison." } },
+        { '@type': 'Question', name: 'Quand utiliser le capteur bayésien plutôt qu’un capteur template ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez un capteur template quand une règle ET/OU simple suffit. Utilisez le capteur binaire bayésien quand plusieurs signaux imparfaits apportent chacun une preuve partielle et que vous voulez les pondérer selon leur fiabilité — il exige un a priori et des probabilités par observation que vous estimez vous-même.' } },
+        { '@type': 'Question', name: 'Que se passe-t-il pour un capteur fusionné quand une entrée passe hors ligne ?', acceptedAnswer: { '@type': 'Answer', text: 'Par défaut, un capteur template reste disponible et une entrée hors ligne ne remplit simplement pas sa condition : le résultat fusionné peut donc être faux sans avertissement. Ajoutez un template de disponibilité ou vérifiez les états d’entrée si le résultat ne doit pas être cru lorsqu’une entrée manque.' } },
       ],
     },
   },
@@ -449,8 +506,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-ja.webp',
     title: 'スマートホームにおけるセンサーフュージョン（2026年）',
@@ -473,7 +530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'レーダー モーションセンサー 組み合わせ',
     ],
     leadAnswerBlock:
-      '**センサーフュージョンとは、複数のセンサータイプからの情報を組み合わせること——たとえば、自動化が部屋を「在室」と判断する前にレーダーとモーションセンサーの両方の一致を要求すること——により、単一のセンサーだけでは避けられない誤検知と検知漏れを減らす手法です。** これはHome Assistantの自動化ロジックのパターンであり、特定の製品ではありません。',
+      '**センサーフュージョンとは、複数のセンサータイプの情報を1つの自動化判断にまとめることです。たとえば、PIRモーションセンサーが静かになった後もレーダーが在室を検知している間は部屋を「在室」のまま保つ、あるいは通知前にドア接点とカメラの人物検知の両方が一致することを求めるといった方法で、単一のセンサーが単独で生む誤検知（偽陽性）と見逃し（偽陰性）を減らします。**これは特定の製品ではなく、Home Assistantの自動化ロジックのパターンです。',
     quickAnswerTop: {
       ja: {
         question: '複数のセンサーを組み合わせるとホームオートメーションの精度はどう向上しますか?',
@@ -485,7 +542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '標準的なHome Assistantの自動化条件——テンプレートセンサーやマルチ条件トリガー——で構築される',
           '一般的な例:在室検知にはレーダー+モーション、セキュリティイベントには接点+カメラ',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -493,6 +550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '単一センサーでは不十分な理由', anchor: 'why-one-sensor-fails' },
       { label: 'フュージョン自動化の構築', anchor: 'building-fusion' },
       { label: '一般的なフュージョンパターン', anchor: 'common-patterns' },
+      { label: '重み付けフュージョンと堅牢性', anchor: 'weighted-fusion' },
       { label: 'よくある質問', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -508,6 +566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '各センサータイプには単独使用時に固有の失敗パターンがある——センサーフュージョンは一致を要求することでこれらを打ち消す',
           '特別なハードウェアではなく、標準的なHome Assistantの自動化条件(マルチ条件トリガーやテンプレートセンサー)で構築される',
           '一般的なパターン:在室検知にはレーダー+PIRモーション、セキュリティイベントには接点+カメラ',
+          '不完全な信号が複数ある場合、Home Assistantのベイジアン・バイナリセンサーは固定のAND/OR規則ではなく、各信号を信頼性で重み付けします',
           'トレードオフは自動化の複雑さがやや増し、設定に多少時間がかかることだが、その分誤動作を大きく減らせる',
           'モーション検知と最もよく組み合わされる具体的なセンサータイプについては、レーダー在室検知ガイドを参照',
         ],
@@ -518,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**すべてのセンサータイプには固有の死角があります。PIRモーションセンサーはじっとしている人を見逃し、レーダーは家電の振動でまれに誤検知を起こすことがあり、接点センサーは誰がトリガーしたかを識別できず、カメラはカメラなしのセンサーには存在しないプライバシー上の懸念を生みます。**',
         items: [
-          'PIRのみの在室自動化は、じっと座っている人がいると照明を消してしまいます——これはスマートホーム自動化で最もよく挙げられる不満です。',
+          'PIRのみの在室自動化は、じっと座っている人がいると照明を消してしまいます——これはPIRのみのスマートホーム自動化でよく知られた不満です。',
           'レーダーのみの自動化は、感度設定によっては扇風機やHVACの振動、ペットなどから時折誤検知を起こすことがあります。',
           '単一のセンサーに頼るということは、そのセンサーに固有の失敗パターンを、それを土台にしたすべての自動化に引き継ぐことを意味します。',
         ],
@@ -545,6 +604,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '環境:部屋内の複数の温度センサーを平均化することで、1つのセンサーがすきま風や熱源の近くに設置されている影響を減らし、空調自動化により代表的な値を与えます。',
         ],
       },
+      weightedFusion: {
+        id: 'weighted-fusion',
+        title: '重み付けフュージョンと堅牢性',
+        content:
+          '**単純なAND/OR規則では足りない場合、Home Assistantのベイジアン・バイナリセンサーが確率的にセンサーを重み付けします。各観測が確率を上下させ、しきい値を超えるとセンサーがオンになります。**',
+        items: [
+          'ベイジアン・バイナリセンサー：事前確率（prior、基準となる確率）を設定し、各観測（状態、数値範囲、テンプレート）にprob_given_trueとprob_given_falseを与えます。得られた確率がprobability_threshold（デフォルト0.5）を超えるとオンになります。UI（パーセント）またはYAML（0〜1の値）で設定できます。',
+          'ルールが一文で言える場合（レーダー OR 直近のPIR作動）は固定のテンプレートロジックを選びます。レーダー、PIR、照明スイッチ、スマートフォンの在宅状態など、複数の不完全な信号がそれぞれ部分的な根拠を持つ場合はベイジアンセンサーを選びます。確率は自分で見積もるので、まず単純に始めて調整してください。',
+          '融合したテンプレート・バイナリセンサーにオフ遅延（delay off）を追加すると、センサー報告の短い途切れで部屋が「不在」に切り替わるのを防げます。テンプレート・バイナリセンサーはYAMLのdelay_on／delay_off、およびUIヘルパーの「追加オプション」で利用できます。',
+          'オフラインの入力は意図的に扱います。可用性（availability）テンプレートを設定しない限りテンプレートエンティティは常に利用可能なので、オフラインの元センサーは単に「オン」の条件を満たさないだけになります。入力の欠落を「活動なし」と読み取らせたくない場合は、テンプレート内で元センサーの可用性を確認してください。',
+          '環境データの融合では、Min/Maxヘルパーが同じ単位の2つ以上のセンサーを平均値、中央値、最小値、最大値にまとめます（UIヘルパーまたはYAML）。',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'よくある質問',
@@ -554,6 +626,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'センサーフュージョンは自動化の複雑さを目に見えて増やしますか?', a: '多少は増えます——自動化を1つのセンサーに直接向けるのではなく、組み合わせたロジックを持つテンプレートセンサーを書くことになります。ただしこれは、セキュリティ通知のような重要な自動化での誤動作を大きく減らせるという点で、十分に見合うトレードオフです。' },
           { q: 'ローカルLLMの推論とセンサーデータを融合できますか?', a: 'はい——融合されたセンサーデータが標準的なHome Assistantエンティティとして公開されれば、LLM自動化(AI自動化ガイドを参照)は他のセンサーと同じようにそれを推論に利用でき、さらに文脈を考慮したロジックを追加できる可能性があります。' },
           { q: 'これはホームデジタルツインと同じものですか?', a: '関連はしていますが、より狭い概念です——センサーフュージョンは1つの具体的な自動化判断のためにいくつかのセンサーを組み合わせます。デジタルツイン(該当ガイドを参照)は、多くの自動化が利用できる、家全体の状態に関するより広範で継続的なモデルです。' },
+          { q: 'テンプレートセンサーではなくベイジアンセンサーを使うのはどんなときですか？', a: '単純なAND/OR規則でロジックを表せるならテンプレートセンサーを使います。複数の不完全な信号がそれぞれ部分的な根拠を持ち、信頼性で重み付けしたい場合はベイジアン・バイナリセンサーを使います。事前確率と各観測の確率が必要で、これらは自分で見積もります。' },
+          { q: '入力センサーの1つがオフラインになると、融合センサーはどうなりますか？', a: 'デフォルトではテンプレートセンサーは利用可能のままで、オフラインの入力は条件を満たさないだけなので、警告なしに融合結果が誤る可能性があります。入力が欠けている間は結果を信頼できない場合、可用性テンプレートを追加するか入力の状態を確認してください。' },
         ],
       },
       relatedReading: {
@@ -577,7 +651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'センサーフュージョン' }, { '@type': 'Thing', name: 'ホームオートメーションの信頼性' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -590,6 +664,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'センサーフュージョンには特別なハードウェアが必要ですか?', acceptedAnswer: { '@type': 'Answer', text: 'いいえ——標準的なHome Assistantのテンプレートセンサーとマルチ条件トリガーで構築される自動化ロジックのパターンです。' } },
         { '@type': 'Question', name: '最も簡単なセンサーフュージョンの例は何ですか?', acceptedAnswer: { '@type': 'Answer', text: 'レーダー在室センサーとPIRモーションセンサーを組み合わせて在室検知を行う方法です。' } },
         { '@type': 'Question', name: 'これはホームデジタルツインと同じものですか?', acceptedAnswer: { '@type': 'Answer', text: '関連はしていますが、より狭い概念です——センサーフュージョンは1つの自動化判断のために少数のセンサーを組み合わせます。デジタルツインは家全体の状態に関する、より広範で継続的なモデルです。' } },
+        { '@type': 'Question', name: 'テンプレートセンサーではなくベイジアンセンサーを使うのはどんなときですか？', acceptedAnswer: { '@type': 'Answer', text: '単純なAND/OR規則でロジックを表せるならテンプレートセンサーを使います。複数の不完全な信号がそれぞれ部分的な根拠を持ち、信頼性で重み付けしたい場合はベイジアン・バイナリセンサーを使います。事前確率と各観測の確率が必要で、これらは自分で見積もります。' } },
+        { '@type': 'Question', name: '入力センサーの1つがオフラインになると、融合センサーはどうなりますか？', acceptedAnswer: { '@type': 'Answer', text: 'デフォルトではテンプレートセンサーは利用可能のままで、オフラインの入力は条件を満たさないだけなので、警告なしに融合結果が誤る可能性があります。入力が欠けている間は結果を信頼できない場合、可用性テンプレートを追加するか入力の状態を確認してください。' } },
       ],
     },
   },
@@ -597,8 +673,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-zh.webp',
     title: '智能家居中的传感器融合(2026年)',
@@ -621,7 +697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '雷达和运动传感器组合',
     ],
     leadAnswerBlock:
-      '**传感器融合是指组合多种传感器类型的读数——例如,要求雷达和运动传感器同时确认后,自动化才判定房间为"有人"——从而减少单一传感器自身产生的误报和漏报。**这是一种Home Assistant自动化逻辑模式,而不是特定产品。',
+      '**传感器融合是指把多种传感器类型的读数合并为一个自动化决策——例如,在PIR运动传感器已不再触发后,只要雷达仍检测到有人就保持房间为“有人”;或在发出通知前,要求门磁和摄像头人员检测两者一致——从而减少单一传感器自身产生的误报和漏报。**这是一种Home Assistant自动化逻辑模式,而不是某个特定产品。',
     quickAnswerTop: {
       zh: {
         question: '组合多个传感器如何提升家庭自动化的准确性?',
@@ -633,7 +709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '用标准的Home Assistant自动化条件构建——模板传感器或多条件触发器',
           '常见示例:在室检测用雷达+运动,安全事件用接触+摄像头',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -641,6 +717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '为什么单一传感器不够', anchor: 'why-one-sensor-fails' },
       { label: '构建融合自动化', anchor: 'building-fusion' },
       { label: '常见融合模式', anchor: 'common-patterns' },
+      { label: '加权融合与稳健性', anchor: 'weighted-fusion' },
       { label: '常见问题', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -656,6 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '每种传感器类型单独使用时都有其失效模式——传感器融合通过要求一致来抵消这些问题',
           '用标准的Home Assistant自动化条件(多条件触发器或模板传感器)构建,不需要特殊硬件',
           '常见模式:在室检测用雷达+PIR运动,安全事件用接触+摄像头',
+          '当存在多个不完美的信号时,Home Assistant的贝叶斯二元传感器会按可靠性为每个信号加权,而不是使用固定的AND/OR规则',
           '代价是自动化复杂度略有增加、设置时间稍长,但换来的是误触发的显著减少',
           '关于最常与运动检测组合使用的具体传感器类型,请参阅雷达在室检测指南',
         ],
@@ -666,7 +744,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**每种传感器类型都有特定的盲区:PIR运动传感器会漏检静止不动的人,雷达偶尔会因家电振动而误报,接触传感器无法识别是谁触发的,而摄像头会带来无摄像头传感器所没有的隐私顾虑。**',
         items: [
-          '仅使用PIR的在室自动化会在有人静坐不动时关灯,这是智能家居自动化中最常被提及的烦恼。',
+          '仅使用PIR的在室自动化会在有人静坐不动时关灯,这是仅用PIR的智能家居自动化中一个众所周知的烦恼。',
           '仅使用雷达的自动化偶尔会因风扇、HVAC振动或宠物而误报,具体取决于灵敏度设置。',
           '依赖单一传感器意味着,基于它构建的每一个自动化都会继承该传感器特有的失效模式。',
         ],
@@ -693,6 +771,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '环境:对房间内多个温度传感器取平均值,可以减少某个传感器因安装在通风口或热源附近而带来的偏差,为空调自动化提供更具代表性的读数。',
         ],
       },
+      weightedFusion: {
+        id: 'weighted-fusion',
+        title: '加权融合与稳健性',
+        content:
+          '**当简单的AND/OR规则不够用时,Home Assistant的贝叶斯二元传感器会以概率方式为传感器加权:每个观测会使概率上升或下降,一旦超过阈值,传感器就会变为开启。**',
+        items: [
+          '贝叶斯二元传感器:先设定先验概率(prior,即基准概率),再为每个观测(状态、数值范围或模板)给出prob_given_true和prob_given_false。当得出的概率超过probability_threshold(默认0.5)时传感器开启。可在界面(百分比)或YAML(0到1的数值)中配置。',
+          '规则能用一句话说清时(雷达 OR 最近一次PIR触发),选用固定的模板逻辑。当雷达、PIR、灯光开关、手机在家状态等多个不完美信号各自提供部分证据时,选用贝叶斯传感器。概率需要你自己估计,因此先从简单做起再逐步调整。',
+          '为融合后的模板二元传感器添加关闭延迟(delay off),避免传感器上报之间的短暂间隔让房间被误判为无人。模板二元传感器在YAML中支持delay_on和delay_off,在界面辅助元素的“其他选项”中也可设置。',
+          '有意识地处理离线输入:除非配置可用性(availability)模板,模板实体始终可用,因此离线的源传感器只是无法通过“开启”的判断。如果缺失的输入不能被当作“无活动”,请在模板中检查源传感器的可用性。',
+          '对于环境数据融合,Min/Max辅助元素可把两个或更多单位相同的传感器合并为平均值、中位数、最小值或最大值(界面辅助元素或YAML)。',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: '常见问题',
@@ -702,6 +793,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '传感器融合会明显增加自动化的复杂度吗?', a: '会有一些——你需要编写一个带有组合逻辑的模板传感器,而不是让自动化直接指向单一传感器。对于像安全通知这类重要的自动化来说,这是一个换来显著减少误触发的可控代价。' },
           { q: '可以将本地LLM的推理与传感器数据融合吗?', a: '可以——一旦融合后的传感器数据以标准的Home Assistant实体形式暴露出来,LLM自动化(参见AI自动化指南)就可以像处理其他任何传感器一样对其进行推理,并有可能在此基础上添加更多具备上下文感知能力的逻辑。' },
           { q: '这和家庭数字孪生是一回事吗?', a: '相关但范围更窄——传感器融合是为某一个具体的自动化判断组合少数几个传感器。数字孪生(参见该指南)则是对整个家庭状态更广泛、持续更新的模型,许多自动化都可以从中取用数据。' },
+          { q: '什么时候该用贝叶斯传感器而不是模板传感器?', a: '简单的AND/OR规则就能表达逻辑时,用模板传感器。当多个不完美信号各自提供部分证据、并希望按可靠性加权时,用贝叶斯二元传感器——它需要先验概率和每个观测的概率,这些都要你自己估计。' },
+          { q: '某个输入传感器离线时,融合传感器会怎样?', a: '默认情况下模板传感器保持可用,离线的输入只是不满足其条件,因此融合结果可能在没有任何提示的情况下出错。如果输入缺失时不应信任结果,请添加可用性模板或检查输入状态。' },
         ],
       },
       relatedReading: {
@@ -725,7 +818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: '传感器融合' }, { '@type': 'Thing', name: '家庭自动化可靠性' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -738,6 +831,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '传感器融合需要特殊硬件吗?', acceptedAnswer: { '@type': 'Answer', text: '不需要——这是一种用标准的Home Assistant模板传感器和多条件触发器构建的自动化逻辑模式。' } },
         { '@type': 'Question', name: '最简单的传感器融合示例是什么?', acceptedAnswer: { '@type': 'Answer', text: '将雷达在室传感器与PIR运动传感器组合用于在室检测。' } },
         { '@type': 'Question', name: '这和家庭数字孪生是一回事吗?', acceptedAnswer: { '@type': 'Answer', text: '相关但范围更窄——传感器融合是为某一个自动化判断组合少数几个传感器;数字孪生则是对整个家庭状态更广泛、持续更新的模型。' } },
+        { '@type': 'Question', name: '什么时候该用贝叶斯传感器而不是模板传感器?', acceptedAnswer: { '@type': 'Answer', text: '简单的AND/OR规则就能表达逻辑时,用模板传感器。当多个不完美信号各自提供部分证据、并希望按可靠性加权时,用贝叶斯二元传感器——它需要先验概率和每个观测的概率,这些都要你自己估计。' } },
+        { '@type': 'Question', name: '某个输入传感器离线时,融合传感器会怎样?', acceptedAnswer: { '@type': 'Answer', text: '默认情况下模板传感器保持可用,离线的输入只是不满足其条件,因此融合结果可能在没有任何提示的情况下出错。如果输入缺失时不应信任结果,请添加可用性模板或检查输入状态。' } },
       ],
     },
   },
@@ -745,8 +840,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-es.webp',
     title: 'Fusión de sensores en el hogar inteligente (2026)',
@@ -769,7 +864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'combinacion sensor radar y movimiento',
     ],
     leadAnswerBlock:
-      '**La fusión de sensores combina lecturas de varios tipos de sensor — por ejemplo, exigir que tanto el radar como el sensor de movimiento coincidan antes de que una automatización trate una habitación como "ocupada" — para reducir los falsos positivos y falsos negativos que produce cualquier sensor por sí solo.** Este es un patrón de lógica de automatización de Home Assistant, no un producto específico.',
+      '**La fusión de sensores combina lecturas de varios tipos de sensor en una sola decisión de automatización — por ejemplo, mantener una habitación como “ocupada” mientras el radar aún detecta presencia aunque el sensor de movimiento PIR ya esté en reposo, o exigir que un contacto de puerta y una detección de personas por cámara coincidan antes de avisar — para reducir los falsos positivos y falsos negativos que produce un sensor por sí solo.** Es un patrón de lógica de automatización de Home Assistant, no un producto concreto.',
     quickAnswerTop: {
       es: {
         question: '¿Cómo mejora la precisión de la automatización del hogar al combinar varios sensores?',
@@ -781,7 +876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se construye con condiciones de automatización estándar de Home Assistant — sensores de plantilla o disparadores multicondición',
           'Ejemplo común: radar + movimiento para ocupación, o contacto + cámara para eventos de seguridad',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -789,6 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Por qué un solo sensor no es suficiente', anchor: 'why-one-sensor-fails' },
       { label: 'Construir una automatización de fusión', anchor: 'building-fusion' },
       { label: 'Patrones de fusión comunes', anchor: 'common-patterns' },
+      { label: 'Fusión ponderada y robustez', anchor: 'weighted-fusion' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -804,6 +900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cada tipo de sensor tiene su propio modo de fallo cuando se usa solo — la fusión de sensores lo anula al exigir coincidencia',
           'Se construye con condiciones de automatización estándar de Home Assistant (disparadores multicondición o sensores de plantilla), no con hardware especial',
           'Patrón común: radar + movimiento PIR para ocupación, contacto + cámara para eventos de seguridad',
+          'Con varias señales imperfectas, el sensor binario bayesiano de Home Assistant pondera cada una según su fiabilidad en lugar de usar reglas fijas Y/O',
           'La contrapartida es más complejidad de automatización y algo más de tiempo de configuración a cambio de menos falsos disparos de forma significativa',
           'Consulta la guía de detección de presencia por radar para conocer el tipo de sensor que se fusiona con más frecuencia con la detección de movimiento',
         ],
@@ -814,7 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cada tipo de sensor tiene un punto ciego específico: los sensores de movimiento PIR no detectan a los ocupantes inmóviles, el radar puede dar ocasionalmente un falso positivo por la vibración de un electrodoméstico, los sensores de contacto no identifican quién los activó, y las cámaras plantean consideraciones de privacidad que los sensores sin cámara evitan.**',
         items: [
-          'Una automatización de ocupación basada solo en PIR apagará las luces de alguien sentado sin moverse, la queja de automatización del hogar inteligente más citada.',
+          'Una automatización de ocupación basada solo en PIR apagará las luces de alguien sentado sin moverse, un inconveniente conocido de las automatizaciones solo con PIR.',
           'Una automatización basada solo en radar puede registrar ocasionalmente un falso positivo por un ventilador, la vibración del HVAC o una mascota, dependiendo de la configuración de sensibilidad.',
           'Depender de un único sensor significa heredar el modo de fallo específico de ese sensor en cada automatización construida sobre él.',
         ],
@@ -841,6 +938,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ambiental: promediar varios sensores de temperatura en una habitación para reducir el impacto de que uno esté colocado en una corriente de aire o cerca de una fuente de calor, dando a las automatizaciones climáticas una lectura más representativa.',
         ],
       },
+      weightedFusion: {
+        id: 'weighted-fusion',
+        title: 'Fusión ponderada y robustez',
+        content:
+          '**Cuando las reglas simples Y/O no bastan, el sensor binario bayesiano de Home Assistant pondera los sensores de forma probabilística: cada observación sube o baja una probabilidad y el sensor se activa cuando supera un umbral.**',
+        items: [
+          'Sensor binario bayesiano: defines una probabilidad a priori (la probabilidad base) y das a cada observación (un estado, un rango numérico o una plantilla) un prob_given_true y un prob_given_false. El sensor se activa cuando la probabilidad resultante supera probability_threshold (0,5 por defecto). Se configura en la interfaz (porcentajes) o en YAML (valores de 0 a 1).',
+          'Elige lógica de plantilla fija cuando la regla cabe en una frase (radar O un disparo reciente del PIR). Elige el sensor bayesiano cuando varias señales imperfectas — radar, PIR, un interruptor de luz, la presencia de un teléfono — aportan cada una evidencia parcial. Las probabilidades las estimas tú, así que empieza simple y ajusta.',
+          'Añade un retardo de apagado (delay off) al sensor binario de plantilla fusionado para que breves huecos entre informes de los sensores no cambien una habitación a “desocupada”. Los sensores binarios de plantilla admiten delay_on y delay_off en YAML y en “Opciones adicionales” del asistente de la interfaz.',
+          'Gestiona las entradas sin conexión de forma deliberada: una entidad de plantilla siempre está disponible salvo que configures una plantilla de disponibilidad, así que un sensor de origen sin conexión simplemente no supera su prueba de “encendido”. Comprueba la disponibilidad de las fuentes en la plantilla si una entrada ausente no debe leerse como “sin actividad”.',
+          'Para la fusión ambiental, el asistente Min/Max combina dos o más sensores con la misma unidad en una media, mediana, mínimo o máximo (asistente de la interfaz o YAML).',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Preguntas frecuentes',
@@ -850,6 +960,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿La fusión de sensores añade una complejidad de automatización notable?', a: 'Algo — estás escribiendo un sensor de plantilla con lógica combinada en lugar de apuntar una automatización directamente a un sensor. Es una contrapartida manejable a cambio de menos falsos disparos de forma significativa en automatizaciones que importan (como las notificaciones de seguridad).' },
           { q: '¿Puedo fusionar el razonamiento de un LLM local con datos de sensores?', a: 'Sí — una vez que los datos de sensores fusionados se exponen como una entidad estándar de Home Assistant, una automatización con LLM (consulta la guía de automatizaciones con IA) puede razonar sobre ellos igual que sobre cualquier otro sensor, añadiendo potencialmente más lógica consciente del contexto.' },
           { q: '¿Es esto lo mismo que un gemelo digital del hogar?', a: 'Está relacionado pero es más limitado — la fusión de sensores combina unos pocos sensores para una decisión de automatización específica. Un gemelo digital (consulta esa guía) es un modelo más amplio y continuo del estado de toda la casa del que muchas automatizaciones podrían nutrirse.' },
+          { q: '¿Cuándo debo usar el sensor bayesiano en lugar de un sensor de plantilla?', a: 'Usa un sensor de plantilla cuando una regla Y/O simple recoja la lógica. Usa el sensor binario bayesiano cuando varias señales imperfectas aporten cada una evidencia parcial y quieras ponderarlas según su fiabilidad: requiere una probabilidad a priori y probabilidades por observación que estimas tú mismo.' },
+          { q: '¿Qué ocurre con un sensor fusionado cuando una entrada se queda sin conexión?', a: 'Por defecto, un sensor de plantilla sigue disponible y una entrada sin conexión simplemente no cumple su condición, de modo que el resultado fusionado puede ser erróneo sin aviso. Añade una plantilla de disponibilidad o comprueba los estados de entrada si no debe confiarse en el resultado mientras falte una entrada.' },
         ],
       },
       relatedReading: {
@@ -873,7 +985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Fusión de sensores' }, { '@type': 'Thing', name: 'Fiabilidad de la automatización del hogar' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -886,6 +998,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '¿Necesito hardware especial para la fusión de sensores?', acceptedAnswer: { '@type': 'Answer', text: 'No — es un patrón de lógica de automatización construido con sensores de plantilla y disparadores multicondición estándar de Home Assistant.' } },
         { '@type': 'Question', name: '¿Cuál es el ejemplo más sencillo de fusión de sensores para empezar?', acceptedAnswer: { '@type': 'Answer', text: 'Combinar un sensor de presencia por radar con un sensor de movimiento PIR para la detección de ocupación.' } },
         { '@type': 'Question', name: '¿Es esto lo mismo que un gemelo digital del hogar?', acceptedAnswer: { '@type': 'Answer', text: 'Está relacionado pero es más limitado — la fusión de sensores combina unos pocos sensores para una decisión de automatización; un gemelo digital es un modelo más amplio y continuo del estado de toda la casa.' } },
+        { '@type': 'Question', name: '¿Cuándo debo usar el sensor bayesiano en lugar de un sensor de plantilla?', acceptedAnswer: { '@type': 'Answer', text: 'Usa un sensor de plantilla cuando una regla Y/O simple recoja la lógica. Usa el sensor binario bayesiano cuando varias señales imperfectas aporten cada una evidencia parcial y quieras ponderarlas según su fiabilidad: requiere una probabilidad a priori y probabilidades por observación que estimas tú mismo.' } },
+        { '@type': 'Question', name: '¿Qué ocurre con un sensor fusionado cuando una entrada se queda sin conexión?', acceptedAnswer: { '@type': 'Answer', text: 'Por defecto, un sensor de plantilla sigue disponible y una entrada sin conexión simplemente no cumple su condición, de modo que el resultado fusionado puede ser erróneo sin aviso. Añade una plantilla de disponibilidad o comprueba los estados de entrada si no debe confiarse en el resultado mientras falte una entrada.' } },
       ],
     },
   },
@@ -893,8 +1007,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-pt.webp',
     title: 'Fusão de sensores na casa inteligente (2026)',
@@ -917,7 +1031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'combinação de sensor radar e movimento',
     ],
     leadAnswerBlock:
-      '**A fusão de sensores combina leituras de vários tipos de sensor — por exemplo, exigir que tanto o radar quanto o sensor de movimento concordem antes que uma automação trate um cômodo como "ocupado" — para reduzir os falsos positivos e falsos negativos que qualquer sensor isolado produz por conta própria.** Este é um padrão de lógica de automação do Home Assistant, não um produto específico.',
+      '**A fusão de sensores combina leituras de vários tipos de sensor em uma única decisão de automação — por exemplo, manter um cômodo como “ocupado” enquanto o radar ainda detecta presença, mesmo com o sensor de movimento PIR já em repouso, ou exigir que um contato de porta e uma detecção de pessoa por câmera concordem antes de alertar — para reduzir os falsos positivos e falsos negativos que um sensor produz sozinho.** É um padrão de lógica de automação do Home Assistant, não um produto específico.',
     quickAnswerTop: {
       pt: {
         question: 'Como a combinação de vários sensores melhora a precisão da automação residencial?',
@@ -929,7 +1043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Construído com condições de automação padrão do Home Assistant — sensores de template ou gatilhos multicondição',
           'Exemplo comum: radar + movimento para ocupação, ou contato + câmera para eventos de segurança',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -937,6 +1051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Por que um único sensor não é suficiente', anchor: 'why-one-sensor-fails' },
       { label: 'Construindo uma automação de fusão', anchor: 'building-fusion' },
       { label: 'Padrões comuns de fusão', anchor: 'common-patterns' },
+      { label: 'Fusão ponderada e robustez', anchor: 'weighted-fusion' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -952,6 +1067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cada tipo de sensor tem seu próprio modo de falha quando usado sozinho — a fusão de sensores anula isso exigindo concordância',
           'Construída com condições de automação padrão do Home Assistant (gatilhos multicondição ou sensores de template), não hardware especial',
           'Padrão comum: radar + movimento PIR para ocupação, contato + câmera para eventos de segurança',
+          'Com vários sinais imperfeitos, o sensor binário bayesiano do Home Assistant pondera cada um pela confiabilidade em vez de usar regras fixas E/OU',
           'A contrapartida é mais complexidade de automação e um pouco mais de tempo de configuração em troca de bem menos disparos falsos',
           'Veja o guia de detecção de presença por radar para o tipo de sensor mais comumente fundido com detecção de movimento',
         ],
@@ -962,7 +1078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Cada tipo de sensor tem um ponto cego específico: sensores de movimento PIR não percebem ocupantes parados, o radar pode ocasionalmente dar falso positivo pela vibração de um eletrodoméstico, sensores de contato não identificam quem os acionou, e câmeras levantam considerações de privacidade que sensores sem câmera evitam.**',
         items: [
-          'Uma automação de ocupação baseada apenas em PIR vai apagar as luzes de alguém sentado parado, a reclamação de automação residencial mais citada.',
+          'Uma automação de ocupação baseada apenas em PIR vai apagar as luzes de alguém sentado parado, um incômodo conhecido das automações apenas com PIR.',
           'Uma automação baseada apenas em radar pode ocasionalmente registrar um falso positivo por causa de um ventilador, vibração do HVAC ou um animal de estimação, dependendo das configurações de sensibilidade.',
           'Depender de um único sensor significa herdar o modo de falha específico daquele sensor em toda automação construída sobre ele.',
         ],
@@ -989,6 +1105,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ambiental: fazer a média de vários sensores de temperatura em um cômodo para reduzir o impacto de um sensor posicionado em uma corrente de ar ou perto de uma fonte de calor, dando às automações de climatização uma leitura mais representativa.',
         ],
       },
+      weightedFusion: {
+        id: 'weighted-fusion',
+        title: 'Fusão ponderada e robustez',
+        content:
+          '**Quando regras simples E/OU não bastam, o sensor binário bayesiano do Home Assistant pondera os sensores de forma probabilística: cada observação aumenta ou diminui uma probabilidade, e o sensor liga quando ela passa de um limite.**',
+        items: [
+          'Sensor binário bayesiano: você define uma probabilidade a priori (a probabilidade base) e dá a cada observação (um estado, uma faixa numérica ou um template) um prob_given_true e um prob_given_false. O sensor liga quando a probabilidade resultante ultrapassa probability_threshold (padrão 0,5). Pode ser configurado na interface (porcentagens) ou em YAML (valores de 0 a 1).',
+          'Escolha lógica de template fixa quando a regra cabe em uma frase (radar OU um disparo recente do PIR). Escolha o sensor bayesiano quando vários sinais imperfeitos — radar, PIR, um interruptor de luz, a presença de um celular — trazem, cada um, evidência parcial. Você mesmo estima as probabilidades, então comece simples e ajuste.',
+          'Adicione um atraso de desligamento (delay off) ao sensor binário template fundido para que pequenas lacunas entre os relatos dos sensores não mudem um cômodo para “desocupado”. Sensores binários template aceitam delay_on e delay_off em YAML e em “Opções adicionais” no auxiliar da interface.',
+          'Trate as entradas offline de forma deliberada: uma entidade template está sempre disponível a menos que você configure um template de disponibilidade, então um sensor de origem offline simplesmente não passa no teste de “ligado”. Verifique a disponibilidade das fontes no template se uma entrada ausente não puder ser lida como “sem atividade”.',
+          'Para a fusão ambiental, o auxiliar Min/Max combina dois ou mais sensores com a mesma unidade em média, mediana, mínimo ou máximo (auxiliar da interface ou YAML).',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'Perguntas frequentes',
@@ -998,6 +1127,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'A fusão de sensores adiciona complexidade perceptível à automação?', a: 'Alguma — você está escrevendo um sensor de template com lógica combinada em vez de apontar uma automação diretamente para um sensor. É uma contrapartida administrável em troca de bem menos disparos falsos em automações que importam (como notificações de segurança).' },
           { q: 'Posso fundir o raciocínio de um LLM local com dados de sensores?', a: 'Sim — uma vez que os dados de sensores fundidos são expostos como uma entidade padrão do Home Assistant, uma automação com LLM (veja o guia de automações com IA) pode raciocinar sobre eles da mesma forma que faria com qualquer outro sensor, potencialmente adicionando lógica com mais contexto.' },
           { q: 'Isso é a mesma coisa que um gêmeo digital da casa?', a: 'Relacionado, mas mais restrito — a fusão de sensores combina alguns sensores para uma decisão de automação específica. Um gêmeo digital (veja esse guia) é um modelo mais amplo e contínuo do estado de toda a casa do qual várias automações podem se beneficiar.' },
+          { q: 'Quando devo usar o sensor bayesiano em vez de um sensor template?', a: 'Use um sensor template quando uma regra E/OU simples resolve a lógica. Use o sensor binário bayesiano quando vários sinais imperfeitos trazem, cada um, evidência parcial e você quer ponderá-los pela confiabilidade — ele exige uma probabilidade a priori e probabilidades por observação que você mesmo estima.' },
+          { q: 'O que acontece com um sensor fundido quando uma entrada fica offline?', a: 'Por padrão, um sensor template continua disponível e uma entrada offline simplesmente não cumpre sua condição, então o resultado fundido pode estar errado sem nenhum aviso. Adicione um template de disponibilidade ou verifique os estados das entradas se o resultado não puder ser confiável enquanto faltar uma entrada.' },
         ],
       },
       relatedReading: {
@@ -1021,7 +1152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Fusão de sensores' }, { '@type': 'Thing', name: 'Confiabilidade da automação residencial' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1034,6 +1165,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Preciso de hardware especial para fusão de sensores?', acceptedAnswer: { '@type': 'Answer', text: 'Não — é um padrão de lógica de automação construído com sensores de template e gatilhos multicondição padrão do Home Assistant.' } },
         { '@type': 'Question', name: 'Qual é o exemplo mais simples de fusão de sensores para começar?', acceptedAnswer: { '@type': 'Answer', text: 'Combinar um sensor de presença por radar com um sensor de movimento PIR para detecção de ocupação.' } },
         { '@type': 'Question', name: 'Isso é a mesma coisa que um gêmeo digital da casa?', acceptedAnswer: { '@type': 'Answer', text: 'Relacionado, mas mais restrito — a fusão de sensores combina alguns sensores para uma decisão de automação; um gêmeo digital é um modelo mais amplo e contínuo do estado de toda a casa.' } },
+        { '@type': 'Question', name: 'Quando devo usar o sensor bayesiano em vez de um sensor template?', acceptedAnswer: { '@type': 'Answer', text: 'Use um sensor template quando uma regra E/OU simples resolve a lógica. Use o sensor binário bayesiano quando vários sinais imperfeitos trazem, cada um, evidência parcial e você quer ponderá-los pela confiabilidade — ele exige uma probabilidade a priori e probabilidades por observação que você mesmo estima.' } },
+        { '@type': 'Question', name: 'O que acontece com um sensor fundido quando uma entrada fica offline?', acceptedAnswer: { '@type': 'Answer', text: 'Por padrão, um sensor template continua disponível e uma entrada offline simplesmente não cumpre sua condição, então o resultado fundido pode estar errado sem nenhum aviso. Adicione um template de disponibilidade ou verifique os estados das entradas se o resultado não puder ser confiável enquanto faltar uma entrada.' } },
       ],
     },
   },
@@ -1041,8 +1174,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-ar.webp',
     title: 'دمج بيانات الاستشعار في المنزل الذكي (2026)',
@@ -1065,7 +1198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'الجمع بين الرادار وجهاز استشعار الحركة',
     ],
     leadAnswerBlock:
-      '**دمج بيانات الاستشعار يجمع بين قراءات عدة أنواع من أجهزة الاستشعار — على سبيل المثال، اشتراط توافق كل من الرادار وجهاز استشعار الحركة قبل أن تعتبر الأتمتة الغرفة "مشغولة" — لتقليل الإيجابيات والسلبيات الخاطئة التي ينتجها أي جهاز استشعار وحده.** هذا نمط منطق أتمتة في Home Assistant، وليس منتجًا محددًا.',
+      '**دمج بيانات الاستشعار يجمع قراءات عدة أنواع من أجهزة الاستشعار في قرار أتمتة واحد — على سبيل المثال، إبقاء الغرفة «مشغولة» ما دام الرادار يكتشف وجود شخص حتى بعد أن يصمت مستشعر الحركة PIR، أو اشتراط توافق مستشعر تلامس الباب مع اكتشاف الأشخاص بالكاميرا قبل إرسال التنبيه — لتقليل الإيجابيات الكاذبة والسلبيات الكاذبة التي ينتجها أي مستشعر بمفرده.** هذا نمط لمنطق الأتمتة في Home Assistant وليس منتجًا بعينه.',
     quickAnswerTop: {
       ar: {
         question: 'كيف يحسّن الجمع بين عدة أجهزة استشعار دقة أتمتة المنزل؟',
@@ -1077,7 +1210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُبنى باستخدام شروط أتمتة قياسية في Home Assistant — أجهزة استشعار قوالب أو مشغّلات متعددة الشروط',
           'مثال شائع: الرادار + الحركة للإشغال، أو التلامس + الكاميرا لأحداث الأمن',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1085,6 +1218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'لماذا لا يكفي جهاز استشعار واحد', anchor: 'why-one-sensor-fails' },
       { label: 'بناء أتمتة دمج بيانات الاستشعار', anchor: 'building-fusion' },
       { label: 'أنماط الدمج الشائعة', anchor: 'common-patterns' },
+      { label: 'الدمج الموزون والمتانة', anchor: 'weighted-fusion' },
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -1100,6 +1234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'كل نوع من أجهزة الاستشعار له نمط فشل خاص به عند استخدامه بمفرده — دمج بيانات الاستشعار يلغي هذا باشتراط التوافق',
           'يُبنى باستخدام شروط أتمتة قياسية في Home Assistant (مشغّلات متعددة الشروط أو أجهزة استشعار قوالب)، وليس بأجهزة خاصة',
           'النمط الشائع: الرادار + الحركة PIR للإشغال، والتلامس + الكاميرا لأحداث الأمن',
+          'عند وجود عدة إشارات غير مثالية، يوزّن مستشعر Bayesian الثنائي في Home Assistant كل إشارة بحسب موثوقيتها بدلًا من قواعد AND/OR الثابتة',
           'المقايضة هي تعقيد إضافي في الأتمتة ووقت إعداد أطول قليلًا مقابل تقليل ملموس للمشغّلات الخاطئة',
           'راجع دليل استشعار الحضور بالرادار لمعرفة نوع جهاز الاستشعار الأكثر دمجًا مع كشف الحركة',
         ],
@@ -1110,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**كل نوع من أجهزة الاستشعار له نقطة عمياء محددة: أجهزة استشعار الحركة PIR تفوّت الأشخاص الثابتين، والرادار قد يسجل أحيانًا إيجابية خاطئة من اهتزاز جهاز كهربائي، وأجهزة استشعار التلامس لا تحدد من قام بتشغيلها، والكاميرات تثير اعتبارات خصوصية تتجنبها أجهزة الاستشعار الخالية من الكاميرات.**',
         items: [
-          'أتمتة الإشغال المعتمدة على PIR فقط ستطفئ الأضواء عن شخص يجلس ساكنًا، وهو أكثر إزعاج شائع مذكور في أتمتة المنزل الذكي.',
+          'أتمتة الإشغال المعتمدة على PIR فقط ستطفئ الأضواء عن شخص يجلس ساكنًا، وهو إزعاج معروف في أتمتة المنزل الذكي المعتمدة على PIR فقط.',
           'أتمتة الرادار فقط قد تسجل أحيانًا إيجابية خاطئة من مروحة أو اهتزاز نظام التدفئة والتهوية أو حيوان أليف، حسب إعدادات الحساسية.',
           'الاعتماد على جهاز استشعار واحد يعني وراثة نمط الفشل الخاص بذلك الجهاز عبر كل أتمتة تُبنى عليه.',
         ],
@@ -1137,6 +1272,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'البيئي: حساب متوسط عدة أجهزة استشعار حرارة في غرفة واحدة لتقليل أثر وضع جهاز استشعار واحد في مجرى هواء أو بالقرب من مصدر حرارة، مما يمنح أتمتة المناخ قراءة أكثر تمثيلًا.',
         ],
       },
+      weightedFusion: {
+        id: 'weighted-fusion',
+        title: 'الدمج الموزون والمتانة',
+        content:
+          '**عندما لا تكفي قواعد AND/OR البسيطة، يوزّن مستشعر Bayesian الثنائي في Home Assistant المستشعرات احتماليًا: كل ملاحظة ترفع الاحتمال أو تخفضه، ويتحول المستشعر إلى وضع التشغيل عندما يتجاوز عتبة محددة.**',
+        items: [
+          'مستشعر Bayesian الثنائي: تحدد احتمالًا مسبقًا (prior، أي الاحتمال الأساسي)، ثم تمنح كل ملاحظة (حالة أو نطاقًا رقميًا أو قالبًا) قيمتي prob_given_true وprob_given_false. يتحول المستشعر إلى وضع التشغيل عندما يتجاوز الاحتمال الناتج probability_threshold (الافتراضي 0.5). يمكن إعداده من الواجهة (نسب مئوية) أو عبر YAML (قيم من 0 إلى 1).',
+          'اختر منطق القالب الثابت عندما تُختصر القاعدة في جملة واحدة (الرادار OR تشغيل PIR حديث). واختر مستشعر Bayesian عندما تقدّم عدة إشارات غير مثالية — الرادار وPIR ومفتاح الإضاءة ووجود الهاتف — دليلًا جزئيًا كلٌّ على حدة. أنت من يقدّر الاحتمالات بنفسك، فابدأ ببساطة ثم اضبط.',
+          'أضف تأخير الإيقاف (delay off) إلى المستشعر الثنائي المدمج المعتمد على القالب حتى لا تحوّل الفجوات القصيرة بين تقارير المستشعرات الغرفة إلى «غير مشغولة». تدعم المستشعرات الثنائية القائمة على القوالب delay_on وdelay_off في YAML وضمن «خيارات إضافية» في مساعد الواجهة.',
+          'تعامل مع المدخلات غير المتصلة بشكل متعمد: كيان القالب متاح دائمًا ما لم تضبط قالب توفر (availability)، لذا فإن المستشعر المصدر غير المتصل لا يجتاز ببساطة اختبار «التشغيل». تحقق من توفر المصادر داخل القالب إذا كان لا يجوز قراءة المدخل المفقود على أنه «لا نشاط».',
+          'لدمج البيانات البيئية، يجمع مساعد Min/Max مستشعرين أو أكثر بنفس الوحدة في متوسط أو وسيط أو حد أدنى أو حد أقصى (مساعد الواجهة أو YAML).',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
@@ -1146,6 +1294,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل يضيف دمج بيانات الاستشعار تعقيدًا ملحوظًا للأتمتة؟', a: 'بعض الشيء — أنت تكتب جهاز استشعار قالب بمنطق مدمج بدلًا من توجيه أتمتة إلى جهاز استشعار واحد مباشرة. هذه مقايضة يمكن التعامل معها مقابل تقليل ملموس للمشغّلات الخاطئة في الأتمتة المهمة (مثل إشعارات الأمن).' },
           { q: 'هل يمكنني دمج استدلال نموذج لغوي محلي مع بيانات الاستشعار؟', a: 'نعم — بمجرد أن تُعرض بيانات الاستشعار المدمجة ككيان قياسي في Home Assistant، يمكن لأتمتة نموذج لغوي (راجع دليل أتمتة الذكاء الاصطناعي) أن تستدل عليها بنفس طريقة أي جهاز استشعار آخر، وربما تضيف منطقًا أكثر وعيًا بالسياق فوقها.' },
           { q: 'هل هذا نفس التوأم الرقمي للمنزل؟', a: 'مرتبط لكنه أضيق نطاقًا — دمج بيانات الاستشعار يجمع بين عدد قليل من أجهزة الاستشعار لقرار أتمتة واحد محدد. التوأم الرقمي (راجع ذلك الدليل) هو نموذج أوسع ومستمر لحالة المنزل بأكمله يمكن أن تستمد منه أتمتة عديدة.' },
+          { q: 'متى أستخدم مستشعر Bayesian بدلًا من مستشعر القالب؟', a: 'استخدم مستشعر القالب عندما تغطي قاعدة AND/OR بسيطة المنطق. واستخدم مستشعر Bayesian الثنائي عندما تقدّم عدة إشارات غير مثالية دليلًا جزئيًا كلٌّ على حدة وتريد توزينها بحسب موثوقيتها — فهو يحتاج إلى احتمال مسبق واحتمالات لكل ملاحظة تقدّرها بنفسك.' },
+          { q: 'ماذا يحدث للمستشعر المدمج عندما ينقطع اتصال أحد مستشعرات المدخل؟', a: 'افتراضيًا يبقى مستشعر القالب متاحًا ولا يستوفي المدخل غير المتصل شرطه ببساطة، لذا قد تكون النتيجة المدمجة خاطئة دون أي تحذير. أضف قالب توفر أو تحقق من حالات المدخلات إذا كان لا يجوز الوثوق بالنتيجة أثناء غياب أحد المدخلات.' },
         ],
       },
       relatedReading: {
@@ -1169,7 +1319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'دمج بيانات الاستشعار' }, { '@type': 'Thing', name: 'موثوقية أتمتة المنزل' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1182,6 +1332,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'هل أحتاج إلى أجهزة خاصة لدمج بيانات الاستشعار؟', acceptedAnswer: { '@type': 'Answer', text: 'لا — إنه نمط منطق أتمتة يُبنى باستخدام أجهزة استشعار قوالب قياسية في Home Assistant ومشغّلات متعددة الشروط.' } },
         { '@type': 'Question', name: 'ما هو أبسط مثال لدمج بيانات الاستشعار للبدء به؟', acceptedAnswer: { '@type': 'Answer', text: 'الجمع بين جهاز استشعار حضور بالرادار وجهاز استشعار حركة PIR لكشف الإشغال.' } },
         { '@type': 'Question', name: 'هل هذا نفس التوأم الرقمي للمنزل؟', acceptedAnswer: { '@type': 'Answer', text: 'مرتبط لكنه أضيق نطاقًا — دمج بيانات الاستشعار يجمع بين عدد قليل من أجهزة الاستشعار لقرار أتمتة واحد؛ التوأم الرقمي نموذج أوسع ومستمر لحالة المنزل بأكمله.' } },
+        { '@type': 'Question', name: 'متى أستخدم مستشعر Bayesian بدلًا من مستشعر القالب؟', acceptedAnswer: { '@type': 'Answer', text: 'استخدم مستشعر القالب عندما تغطي قاعدة AND/OR بسيطة المنطق. واستخدم مستشعر Bayesian الثنائي عندما تقدّم عدة إشارات غير مثالية دليلًا جزئيًا كلٌّ على حدة وتريد توزينها بحسب موثوقيتها — فهو يحتاج إلى احتمال مسبق واحتمالات لكل ملاحظة تقدّرها بنفسك.' } },
+        { '@type': 'Question', name: 'ماذا يحدث للمستشعر المدمج عندما ينقطع اتصال أحد مستشعرات المدخل؟', acceptedAnswer: { '@type': 'Answer', text: 'افتراضيًا يبقى مستشعر القالب متاحًا ولا يستوفي المدخل غير المتصل شرطه ببساطة، لذا قد تكون النتيجة المدمجة خاطئة دون أي تحذير. أضف قالب توفر أو تحقق من حالات المدخلات إذا كان لا يجوز الوثوق بالنتيجة أثناء غياب أحد المدخلات.' } },
       ],
     },
   },
@@ -1189,8 +1341,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-07-16',
-    dateModified: '2026-07-16',
-    next_refresh_due: '2027-01-16',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Advanced Local AI',
     heroImage: '/images/sensor-fusion-smart-home-2027-overview-hero-ko.webp',
     title: '스마트홈의 센서 퓨전 (2026년)',
@@ -1213,7 +1365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '레이더와 모션 센서 결합',
     ],
     leadAnswerBlock:
-      '**센서 퓨전은 여러 유형의 센서에서 얻은 값을 결합합니다 — 예를 들어, 자동화가 방을 "재실 중"으로 판단하기 전에 레이더와 모션 센서 모두의 일치를 요구하는 방식으로 — 단일 센서 하나만으로는 발생하는 오탐과 미탐을 줄입니다.** 이는 특정 제품이 아니라 Home Assistant 자동화 로직 패턴입니다.',
+      '**센서 퓨전은 여러 유형의 센서 값을 하나의 자동화 판단으로 결합합니다 — 예를 들어 PIR 모션 센서가 조용해진 뒤에도 레이더가 사람을 감지하는 동안 방을 "재실 중"으로 유지하거나, 알림을 보내기 전에 문 접촉 센서와 카메라의 사람 감지가 일치하도록 요구하는 방식으로 — 단일 센서가 혼자서 만들어내는 오탐(거짓 양성)과 미탐(거짓 음성)을 줄입니다.** 이는 특정 제품이 아니라 Home Assistant 자동화 로직 패턴입니다.',
     quickAnswerTop: {
       ko: {
         question: '여러 센서를 결합하면 홈 오토메이션 정확도가 어떻게 향상되나요?',
@@ -1225,7 +1377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '표준 Home Assistant 자동화 조건 — 템플릿 센서 또는 다중 조건 트리거로 구축',
           '일반적인 예: 재실 감지를 위한 레이더 + 모션, 또는 보안 이벤트를 위한 접점 + 카메라',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1233,6 +1385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '센서 하나만으로는 부족한 이유', anchor: 'why-one-sensor-fails' },
       { label: '퓨전 자동화 구축하기', anchor: 'building-fusion' },
       { label: '일반적인 퓨전 패턴', anchor: 'common-patterns' },
+      { label: '가중 퓨전과 견고성', anchor: 'weighted-fusion' },
       { label: '자주 묻는 질문', anchor: 'faq' },
     ],
     snippetBlocks: [
@@ -1248,6 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '모든 센서 유형은 단독으로 사용될 때 고유한 실패 모드를 가집니다 — 센서 퓨전은 일치를 요구함으로써 이를 상쇄합니다',
           '특수한 하드웨어가 아니라 표준 Home Assistant 자동화 조건(다중 조건 트리거 또는 템플릿 센서)으로 구축됩니다',
           '일반적인 패턴: 재실 감지를 위한 레이더 + PIR 모션, 보안 이벤트를 위한 접점 + 카메라',
+          '불완전한 신호가 여러 개일 때 Home Assistant의 베이지안 바이너리 센서는 고정된 AND/OR 규칙 대신 각 신호를 신뢰도에 따라 가중합니다',
           '트레이드오프는 자동화 복잡성 증가와 약간 더 긴 설정 시간이며, 그 대가로 오작동이 의미 있게 줄어듭니다',
           '모션 감지와 가장 흔히 결합되는 센서 유형에 대해서는 레이더 재실 감지 가이드를 참고하세요',
         ],
@@ -1258,7 +1412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**모든 센서 유형에는 특정한 사각지대가 있습니다: PIR 모션 센서는 가만히 있는 재실자를 놓치고, 레이더는 가전제품의 진동으로 이따금 오탐을 일으킬 수 있으며, 접점 센서는 누가 작동시켰는지 식별하지 못하고, 카메라는 카메라 없는 센서라면 피할 수 있는 프라이버시 문제를 야기합니다.**',
         items: [
-          'PIR 전용 재실 자동화는 가만히 앉아 있는 사람의 조명을 꺼버리며, 이는 스마트홈 자동화에서 가장 흔히 언급되는 불편 사항입니다.',
+          'PIR 전용 재실 자동화는 가만히 앉아 있는 사람의 조명을 꺼버리며, 이는 PIR 전용 스마트홈 자동화에서 잘 알려진 불편 사항입니다.',
           '레이더 전용 자동화는 감도 설정에 따라 선풍기, 냉난방기 진동, 또는 반려동물로 인해 이따금 오탐을 등록할 수 있습니다.',
           '단일 센서에만 의존하면 그 센서에 구축된 모든 자동화가 해당 센서의 특정 실패 모드를 그대로 물려받게 됩니다.',
         ],
@@ -1285,6 +1439,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '환경: 한 방에 있는 여러 온도 센서를 평균화하여 하나의 센서가 외풍이나 열원 근처에 배치된 영향을 줄이고, 기후 자동화에 더 대표성 있는 값을 제공합니다.',
         ],
       },
+      weightedFusion: {
+        id: 'weighted-fusion',
+        title: '가중 퓨전과 견고성',
+        content:
+          '**단순한 AND/OR 규칙으로 부족할 때, Home Assistant의 베이지안 바이너리 센서는 센서를 확률적으로 가중합니다. 각 관측이 확률을 올리거나 내리고, 임계값을 넘으면 센서가 켜집니다.**',
+        items: [
+          '베이지안 바이너리 센서: 사전 확률(prior, 기준 확률)을 정한 뒤 각 관측(상태, 숫자 범위 또는 템플릿)에 prob_given_true와 prob_given_false를 지정합니다. 결과 확률이 probability_threshold(기본값 0.5)를 넘으면 센서가 켜집니다. UI(퍼센트) 또는 YAML(0~1 값)로 설정할 수 있습니다.',
+          '규칙이 한 문장으로 설명된다면(레이더 OR 최근 PIR 작동) 고정 템플릿 로직을 선택하세요. 레이더, PIR, 조명 스위치, 휴대폰 재실 정보처럼 불완전한 신호 여러 개가 각각 부분적 근거를 줄 때는 베이지안 센서를 선택하세요. 확률은 직접 추정해야 하므로 단순하게 시작해서 조정하세요.',
+          '융합한 템플릿 바이너리 센서에 꺼짐 지연(delay off)을 추가하면 센서 보고 사이의 짧은 공백 때문에 방이 "비어 있음"으로 바뀌는 일을 막을 수 있습니다. 템플릿 바이너리 센서는 YAML의 delay_on·delay_off와 UI 헬퍼의 "추가 옵션"에서 지원됩니다.',
+          '오프라인 입력은 의도적으로 처리하세요. 가용성(availability) 템플릿을 설정하지 않으면 템플릿 엔티티는 항상 사용 가능 상태이므로, 오프라인인 소스 센서는 단지 "켜짐" 조건을 충족하지 못할 뿐입니다. 빠진 입력을 "활동 없음"으로 읽으면 안 된다면 템플릿에서 소스의 가용성을 확인하세요.',
+          '환경 데이터 퓨전에는 Min/Max 헬퍼가 단위가 같은 센서 둘 이상을 평균, 중앙값, 최솟값, 최댓값으로 결합합니다(UI 헬퍼 또는 YAML).',
+        ],
+      },
       faqSection: {
         id: 'faq',
         title: '자주 묻는 질문',
@@ -1294,6 +1461,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '센서 퓨전은 자동화 복잡성을 눈에 띄게 늘리나요?', a: '어느 정도는 그렇습니다 — 자동화를 단일 센서에 직접 연결하는 대신 결합 로직을 가진 템플릿 센서를 작성하게 됩니다. 이는 (보안 알림처럼) 중요한 자동화에서 오작동을 의미 있게 줄여주는 대가로 감당할 만한 트레이드오프입니다.' },
           { q: '로컬 LLM의 추론을 센서 데이터와 결합할 수 있나요?', a: '네 — 결합된 센서 데이터가 표준 Home Assistant 엔티티로 노출되면, LLM 자동화(AI 자동화 가이드 참고)는 다른 센서와 마찬가지로 그것에 대해 추론할 수 있으며, 그 위에 맥락을 더 잘 인식하는 로직을 추가할 수도 있습니다.' },
           { q: '이것은 홈 디지털 트윈과 같은 것인가요?', a: '관련은 있지만 더 좁은 개념입니다 — 센서 퓨전은 하나의 특정 자동화 결정을 위해 몇 개의 센서를 결합합니다. 디지털 트윈(해당 가이드 참고)은 여러 자동화가 활용할 수 있는, 집 전체 상태에 대한 더 넓고 지속적인 모델입니다.' },
+          { q: '템플릿 센서 대신 베이지안 센서를 언제 써야 하나요?', a: '단순한 AND/OR 규칙으로 로직을 표현할 수 있다면 템플릿 센서를 쓰세요. 불완전한 신호 여러 개가 각각 부분적 근거를 주고 신뢰도에 따라 가중하고 싶다면 베이지안 바이너리 센서를 쓰세요. 사전 확률과 관측별 확률이 필요하며 직접 추정해야 합니다.' },
+          { q: '입력 센서 하나가 오프라인이 되면 융합 센서는 어떻게 되나요?', a: '기본적으로 템플릿 센서는 계속 사용 가능 상태이고 오프라인 입력은 조건을 충족하지 못할 뿐이어서, 경고 없이 융합 결과가 틀릴 수 있습니다. 입력이 빠진 동안 결과를 신뢰하면 안 된다면 가용성 템플릿을 추가하거나 입력 상태를 확인하세요.' },
         ],
       },
       relatedReading: {
@@ -1317,7 +1486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-07-16',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: '센서 퓨전' }, { '@type': 'Thing', name: '홈 오토메이션 신뢰성' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1330,6 +1499,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '센서 퓨전에 특수한 하드웨어가 필요한가요?', acceptedAnswer: { '@type': 'Answer', text: '아니요 — 표준 Home Assistant 템플릿 센서와 다중 조건 트리거로 구축되는 자동화 로직 패턴입니다.' } },
         { '@type': 'Question', name: '시작하기 가장 간단한 센서 퓨전 예시는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '재실 감지를 위해 레이더 재실 센서와 PIR 모션 센서를 결합하는 것입니다.' } },
         { '@type': 'Question', name: '이것은 홈 디지털 트윈과 같은 것인가요?', acceptedAnswer: { '@type': 'Answer', text: '관련은 있지만 더 좁은 개념입니다 — 센서 퓨전은 하나의 자동화 결정을 위해 몇 개의 센서를 결합하며, 디지털 트윈은 집 전체 상태에 대한 더 넓고 지속적인 모델입니다.' } },
+        { '@type': 'Question', name: '템플릿 센서 대신 베이지안 센서를 언제 써야 하나요?', acceptedAnswer: { '@type': 'Answer', text: '단순한 AND/OR 규칙으로 로직을 표현할 수 있다면 템플릿 센서를 쓰세요. 불완전한 신호 여러 개가 각각 부분적 근거를 주고 신뢰도에 따라 가중하고 싶다면 베이지안 바이너리 센서를 쓰세요. 사전 확률과 관측별 확률이 필요하며 직접 추정해야 합니다.' } },
+        { '@type': 'Question', name: '입력 센서 하나가 오프라인이 되면 융합 센서는 어떻게 되나요?', acceptedAnswer: { '@type': 'Answer', text: '기본적으로 템플릿 센서는 계속 사용 가능 상태이고 오프라인 입력은 조건을 충족하지 못할 뿐이어서, 경고 없이 융합 결과가 틀릴 수 있습니다. 입력이 빠진 동안 결과를 신뢰하면 안 된다면 가용성 템플릿을 추가하거나 입력 상태를 확인하세요.' } },
       ],
     },
   },
