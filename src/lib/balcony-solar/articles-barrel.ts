@@ -36,6 +36,8 @@ import { article as a_balkonkraftwerk_germany_rules } from './articles/balkonkra
 import { article as a_balcony_solar_spain_latam } from './articles/balcony-solar-spain-latam'
 import { article as a_balcony_solar_portugal_brazil } from './articles/balcony-solar-portugal-brazil'
 import { article as a_balcony_solar_gulf_mena } from './articles/balcony-solar-gulf-mena'
+import { article as a_balcony_solar_france } from './articles/balcony-solar-france'
+import { article as a_balcony_solar_south_korea } from './articles/balcony-solar-south-korea'
 
 // TIER 4 — Long-tail / conversion support (BSOL-17..20) — all 4 authored (EN-only so far)
 import { article as a_ecoflow_vs_anker_vs_zendure_balcony_solar } from './articles/ecoflow-vs-anker-vs-zendure-balcony-solar'
@@ -122,6 +124,8 @@ export const balconySolarContent: Record<string, Partial<Record<Language, LLMArt
   'balcony-solar-spain-latam':                 a_balcony_solar_spain_latam,
   'balcony-solar-portugal-brazil':             a_balcony_solar_portugal_brazil,
   'balcony-solar-gulf-mena':                   a_balcony_solar_gulf_mena,
+  'balcony-solar-france':                      a_balcony_solar_france,
+  'balcony-solar-south-korea':                 a_balcony_solar_south_korea,
 
   // TIER 4 — Long-tail / conversion support (all 4 authored, EN-only)
   'ecoflow-vs-anker-vs-zendure-balcony-solar': a_ecoflow_vs_anker_vs_zendure_balcony_solar,
