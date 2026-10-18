@@ -40,7 +40,6 @@ export const app: ToolRecord = {
     ar: 'بروتوكول مفتوح في مرحلة مبكرة لتطبيقات شخصية يبنيها الذكاء الاصطناعي، تُحفظ في ملف .snug محمول يملكه المستخدم وتعمل على أي مضيف متوافق',
     ko: 'AI가 만든 개인용 앱을 사용자가 소유한 이동 가능한 .snug 파일에 담아 호환 호스트에서 실행하는 초기 단계의 오픈 프로토콜',
   },
-  compare: {},
   lastVerifiedDate: '2026-10-18',
   lastUpstreamUpdate: '2026-10-15', // newer of latest GitHub release (2026-09-05) and last push (2026-10-15)
   lastUpstreamUpdateSource: 'https://github.com/snugprotocol/snug',
