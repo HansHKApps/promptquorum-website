@@ -3,6 +3,7 @@ import { translations } from '@/translations'
 import { LocalLLMsHub } from '@/components/LocalLLMsHub'
 import { generateAlternates } from '@/lib/hreflang'
 import { buildLLMHubData } from '@/lib/local-llms/hub-data'
+import { LocalLlmsHubTemplate, usesLocalLlmsHubTemplate } from '@/lib/local-llms/hub-template'
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = 'zh'
@@ -28,5 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ZhLocalLLMsPage() {
-  return <LocalLLMsHub initialLang="zh" {...buildLLMHubData('zh')} />
+  const hubData = buildLLMHubData('zh')
+  if (usesLocalLlmsHubTemplate('zh')) return <LocalLlmsHubTemplate lang="zh" {...hubData} />
+  return <LocalLLMsHub initialLang="zh" {...hubData} />
 }

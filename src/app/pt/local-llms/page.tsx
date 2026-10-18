@@ -4,6 +4,7 @@ import { LocalLLMsHub } from '@/components/LocalLLMsHub'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { buildLLMHubData } from '@/lib/local-llms/hub-data'
+import { LocalLlmsHubTemplate, usesLocalLlmsHubTemplate } from '@/lib/local-llms/hub-template'
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = 'pt'
@@ -29,5 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function EsLocalLLMsPage() {
-  return <LocalLLMsHub initialLang="pt" {...buildLLMHubData('pt')} />
+  const hubData = buildLLMHubData('pt')
+  if (usesLocalLlmsHubTemplate('pt')) return <LocalLlmsHubTemplate lang="pt" {...hubData} />
+  return <LocalLLMsHub initialLang="pt" {...hubData} />
 }
