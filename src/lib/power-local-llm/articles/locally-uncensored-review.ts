@@ -33,6 +33,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Locally Uncensored license',
       'run local AI models with phone access',
       'is Locally Uncensored safe',
+      'is Locally Uncensored legit',
+      'Locally Uncensored GitHub',
+      'locallyuncensored',
     ],
     leadAnswerBlock: '**Locally Uncensored is a free, open-source desktop app ([locallyuncensored.com](https://locallyuncensored.com), source at [github.com/PurpleDoubleD/locally-uncensored](https://github.com/PurpleDoubleD/locally-uncensored)) that runs chat, a coding agent, image generation, video generation, and LoRA training on your own Windows or Linux computer, working as a front end over backends such as Ollama, llama.cpp, KoboldCpp, and LocalAI.** The application itself carries no subscription and no fee — it is licensed under [AGPL-3.0-only](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE), matching the directory\'s license listing for this tool. A separate, optional paid add-on called LU Labs Cloud sells hosted GPU inference by subscription or credit pack for people without capable local hardware; the desktop app does not require it. Its most distinctive feature is phone and tablet access to the PC-hosted model via a QR-code and passcode pairing flow, reachable over the local network by default or, if the user explicitly turns it on, over an encrypted Cloudflare Tunnel for access outside the LAN.',
     quickAnswerTop: {
