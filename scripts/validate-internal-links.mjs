@@ -59,7 +59,7 @@ const EXTRA_FILES = [
 
 // Real routes that are not slug-mapped articles. Hub roots are added below.
 const STATIC_ALLOW = new Set([
-  '/', '/pq-apps', '/directory', '/about', '/blog', '/waitlist',
+  '/', '/pq-apps', '/directory', '/about', '/blog',
   '/privacy', '/terms', '/glossary', '/contact', '/download',
 ])
 

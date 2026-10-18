@@ -206,7 +206,7 @@ export interface BalconySolarHubTemplateSource {
   presentationDescription: string
   presentationUrl: string
   fallbackTitle: (slug: string) => string
-  footer: ReactNode
+  footer?: ReactNode
 }
 
 const ALL_SLUGS = BALCONY_SOLAR_CATEGORIES.flatMap((category) => category.articleSlugs)

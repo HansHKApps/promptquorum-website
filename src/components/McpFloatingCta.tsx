@@ -15,7 +15,7 @@ import { usePathname } from 'next/navigation'
 import { useLang } from '@/hooks/useLang'
 
 // Already on the MCP page, or on pages that carry their own CTA.
-const HIDDEN_PATH_PATTERNS = [/\/mcp-stats(\/|$)/, /\/download(\/|$)/, /\/waitlist(\/|$)/]
+const HIDDEN_PATH_PATTERNS = [/\/mcp-stats(\/|$)/, /\/download(\/|$)/]
 
 const ARIA: Record<string, string> = {
   en: 'PromptQuorum MCP server',

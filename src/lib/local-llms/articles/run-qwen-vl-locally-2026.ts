@@ -46,7 +46,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RTX 3060 12 GB',
       'Apple Silicon (unified memory)',
     ],
-    ctaText: 'Join the PromptQuorum Waitlist →',
     leadAnswerBlock: '**Run `ollama pull qwen2-vl:7b` on any machine with 8 GB of VRAM to read Chinese, Japanese, and mixed-language documents locally.** Qwen2-VL is the strongest open vision model for multilingual OCR — every image is processed on your machine, with no cloud upload.',
     quickAnswerTop: {
       en: {
@@ -394,7 +393,6 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       'RTX 3060 12 GB',
       'Apple Silicon (unified memory)',
     ],
-    ctaText: 'Únete a la lista de espera de PromptQuorum →',
     leadAnswerBlock: '**Ejecuta `ollama pull qwen2-vl:7b` en cualquier máquina con 8 GB de VRAM para leer documentos en chino, japonés e idiomas mixtos en local.** Qwen2-VL es el modelo de visión abierto más potente para OCR multilingüe — cada imagen se procesa en tu máquina, sin subida a la nube.',
     quickAnswerTop: {
       es: {
@@ -755,7 +753,6 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       'RTX 3060 12 GB',
       'Apple Silicon (unified memory)',
     ],
-    ctaText: 'انضم إلى قائمة انتظار PromptQuorum ←',
     leadAnswerBlock: '**نفّذ `ollama pull qwen2-vl:7b` على أي جهاز بسعة 8 GB من VRAM لقراءة المستندات بالصينية واليابانية واللغات المختلطة محليًا.** Qwen2-VL هو أقوى نموذج رؤية مفتوح لـ OCR متعدد اللغات — تُعالَج كل صورة على جهازك، دون رفع إلى السحابة.',
     quickAnswerTop: {
       ar: {
@@ -1089,7 +1086,6 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores e analistas que precisam de OCR de documentos offline e compreensão de imagens — especialmente para arquivos em chinês, japonês e idiomas mistos — sem enviar dados para APIs na nuvem',
     primaryTerm: 'executar Qwen2-VL localmente',
-    ctaText: 'Entrar na lista de espera do PromptQuorum →',
     leadAnswerBlock: '**Execute `ollama pull qwen2-vl:7b` em qualquer máquina com 8 GB de VRAM para ler documentos em chinês, japonês e idiomas mistos localmente.** O Qwen2-VL é o modelo de visão aberto mais poderoso para OCR multilíngue — cada imagem é processada na sua máquina, sem upload para a nuvem.',
     quickAnswerTop: {
       pt: {
@@ -1409,7 +1405,6 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       'RTX 3060 12 GB',
       'Apple Silicon (unified memory)',
     ],
-    ctaText: 'Auf die PromptQuorum-Warteliste →',
     leadAnswerBlock: '**Führen Sie `ollama pull qwen2-vl:7b` auf jedem Rechner mit 8 GB VRAM aus, um chinesische, japanische und gemischtsprachige Dokumente lokal zu lesen.** Qwen2-VL ist das stärkste offene Vision-Modell für mehrsprachige OCR — jedes Bild wird auf Ihrem Rechner verarbeitet, ohne Cloud-Upload.',
     quickAnswerTop: {
       de: {
@@ -1759,7 +1754,6 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       'RTX 3060 12 GB',
       'Apple Silicon (unified memory)',
     ],
-    ctaText: "Rejoindre la liste d'attente PromptQuorum →",
     leadAnswerBlock: "**Exécutez `ollama pull qwen2-vl:7b` sur toute machine disposant de 8 GB de VRAM pour lire localement des documents en chinois, en japonais et multilingues.** Qwen2-VL est le modèle de vision ouvert le plus performant pour l'OCR multilingue — chaque image est traitée sur votre machine, sans envoi vers le cloud.",
     quickAnswerTop: {
       fr: {
@@ -2107,7 +2101,6 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       'RTX 3060 12 GB',
       'Apple Silicon (unified memory)',
     ],
-    ctaText: 'PromptQuorumの順番待ちリストに登録 →',
     leadAnswerBlock: '**8 GBのVRAMを搭載したマシンで `ollama pull qwen2-vl:7b` を実行すれば、中国語・日本語・多言語混在のドキュメントをローカルで読み取れます。** Qwen2-VLは多言語OCRで最も優れたオープンなvisionモデルで、すべての画像がご自身のマシンで処理され、クラウドへのアップロードはありません。',
     quickAnswerTop: {
       ja: {
@@ -2455,7 +2448,6 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       'RTX 3060 12 GB',
       'Apple Silicon (unified memory)',
     ],
-    ctaText: '加入 PromptQuorum 等候名单 →',
     leadAnswerBlock: '**在任何配备 8 GB VRAM 的机器上运行 `ollama pull qwen2-vl:7b`，即可本地读取中文、日文和多语言混合文档。** Qwen2-VL 是多语言 OCR 最强的开源视觉模型——每张图像都在你的机器上处理，不会上传到云端。',
     quickAnswerTop: {
       zh: {
@@ -2802,7 +2794,6 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
       'RTX 3060 12 GB',
       'Apple Silicon (통합 메모리)',
     ],
-    ctaText: 'PromptQuorum 대기자 명단 등록 →',
     leadAnswerBlock: '**VRAM이 8 GB인 모든 기기에서 `ollama pull qwen2-vl:7b`를 실행하면 중국어, 일본어, 혼합 언어 문서를 로컬에서 읽을 수 있습니다.** Qwen2-VL은 다국어 OCR에 가장 강력한 오픈 비전 모델로, 모든 이미지가 클라우드에 업로드되지 않고 사용자 기기에서 처리됩니다.',
     quickAnswerTop: {
       ko: {

@@ -14,9 +14,9 @@ const T = {
     founderH2: 'About the Founder',
     founderTitle: 'Founder & Developer, PromptQuorum',
     founderBio: 'Hans Kuepper is an independent developer based in Baden-Württemberg, Germany, who speaks four languages and has worked in 20+ countries. He built PromptQuorum because teams need a verification layer for AI-generated answers — a way to detect when models hallucinate by comparing outputs across multiple models. Privacy is non-negotiable: your prompts and API keys never touch PromptQuorum servers.',
-    ctaH2: 'Join the Waitlist for Early Access',
-    ctaDesc: 'Early access includes lifetime premium features and priority support. Be among the first to try PromptQuorum when it launches.',
-    ctaBtn: 'Join Waitlist',
+    ctaH2: 'Ready to try it?',
+    ctaDesc: 'PromptQuorum is in free public beta — download it today. No waitlist, no signup required.',
+    ctaBtn: 'Download the Beta',
     back: '← Back to Home',
   },
   de: {
@@ -25,9 +25,9 @@ const T = {
     founderH2: 'Über den Gründer',
     founderTitle: 'Gründer & Entwickler, PromptQuorum',
     founderBio: 'Hans Kuepper ist ein unabhängiger Entwickler aus Baden-Württemberg, Deutschland, der vier Sprachen spricht und in über 20 Ländern gelebt und gearbeitet hat. Er entwickelte PromptQuorum, weil Teams eine Verifikationsebene für KI-generierte Antworten benötigen — eine Möglichkeit, Halluzinationen zu erkennen, indem Ausgaben mehrerer Modelle verglichen werden. Datenschutz ist nicht verhandelbar: Ihre Prompts und API-Schlüssel berühren niemals PromptQuorum-Server.',
-    ctaH2: 'Warteliste für frühen Zugang beitreten',
-    ctaDesc: 'Früher Zugang umfasst lebenslange Premium-Funktionen und vorrangigen Support. Gehören Sie zu den Ersten, die PromptQuorum ausprobieren können.',
-    ctaBtn: 'Warteliste beitreten',
+    ctaH2: 'Bereit zum Ausprobieren?',
+    ctaDesc: 'PromptQuorum befindet sich in der öffentlichen Beta — laden Sie es noch heute herunter. Keine Warteliste, keine Anmeldung nötig.',
+    ctaBtn: 'Beta herunterladen',
     back: '← Zurück zur Startseite',
   },
   fr: {
@@ -36,9 +36,9 @@ const T = {
     founderH2: 'À propos du fondateur',
     founderTitle: 'Fondateur & Développeur, PromptQuorum',
     founderBio: 'Hans Kuepper est un développeur indépendant basé en Bade-Wurtemberg, Allemagne, qui parle quatre langues et a travaillé dans plus de 20 pays. Il a créé PromptQuorum parce que les équipes ont besoin d\'une couche de vérification pour les réponses générées par l\'IA — un moyen de détecter les hallucinations en comparant les résultats de plusieurs modèles. La confidentialité est non-négociable : vos prompts et clés API ne passent jamais par les serveurs PromptQuorum.',
-    ctaH2: 'Rejoindre la liste d\'attente pour un accès anticipé',
-    ctaDesc: 'L\'accès anticipé inclut des fonctionnalités premium à vie et un support prioritaire. Soyez parmi les premiers à essayer PromptQuorum.',
-    ctaBtn: 'Rejoindre la liste d\'attente',
+    ctaH2: 'Prêt à l\'essayer ?',
+    ctaDesc: 'PromptQuorum est en bêta publique — téléchargez-le dès aujourd\'hui. Sans liste d\'attente, sans inscription.',
+    ctaBtn: 'Télécharger la bêta',
     back: '← Retour à l\'accueil',
   },
   ja: {
@@ -47,9 +47,9 @@ const T = {
     founderH2: '創設者について',
     founderTitle: '創設者 & 開発者、PromptQuorum',
     founderBio: 'ハンス・キュッパーはドイツのバーデン＝ヴュルテンベルク州を拠点とする独立系開発者で、4か国語を話し、20か国以上で生活・勤務経験があります。チームはAI生成の回答を検証する必要があると考え、複数のモデルの出力を比較することで幻覚を検出する方法としてPromptQuorumを構築しました。プライバシーは譲歩できません。あなたのプロンプトとAPIキーはPromptQuorumのサーバーを通過しません。',
-    ctaH2: '早期アクセスのウェイトリストに参加',
-    ctaDesc: '早期アクセスは生涯プレミアム機能と優先サポートを含みます。PromptQuorum のローンチ時にいち早く試した最初のユーザーの一員になりましょう。',
-    ctaBtn: 'ウェイトリストに参加',
+    ctaH2: '試してみる準備はできましたか？',
+    ctaDesc: 'PromptQuorumはパブリックベータ公開中です。今すぐダウンロードできます。ウェイトリストや登録は不要です。',
+    ctaBtn: 'ベータ版をダウンロード',
     back: '← ホームに戻る',
   },
   zh: {
@@ -58,9 +58,9 @@ const T = {
     founderH2: '关于创始人',
     founderTitle: '创始人 & 开发者，PromptQuorum',
     founderBio: '汉斯·库佩尔是一位独立开发者，位于德国巴登-符腾堡州，会说四种语言，曾在20多个国家生活和工作。他创建PromptQuorum是因为团队需要一个验证层来确保AI生成的答案——通过比较多个模型的输出来检测幻觉。隐私不可妥协：您的提示和API密钥永远不会经过PromptQuorum的服务器。',
-    ctaH2: '加入早期访问候补名单',
-    ctaDesc: '早期访问包括终身高级功能和优先支持。成为首批尝试 PromptQuorum 的用户之一。',
-    ctaBtn: '加入候补名单',
+    ctaH2: '准备好尝试了吗？',
+    ctaDesc: 'PromptQuorum 现已开放公开测试——立即下载。无需候补名单，无需注册。',
+    ctaBtn: '下载测试版',
     back: '← 返回首页',
   },
   es: {
@@ -69,9 +69,9 @@ const T = {
     founderH2: 'Sobre el fundador',
     founderTitle: 'Fundador y desarrollador, PromptQuorum',
     founderBio: 'Hans Kuepper es un desarrollador independiente con base en Baden-Württemberg, Alemania, que habla cuatro idiomas y ha trabajado en más de 20 países. Creó PromptQuorum porque los equipos necesitan una capa de verificación para las respuestas generadas por IA — una forma de detectar alucinaciones comparando los resultados de múltiples modelos. La privacidad no es negociable: tus prompts y claves de API nunca pasan por los servidores de PromptQuorum.',
-    ctaH2: 'Únete a la lista de espera para acceso anticipado',
-    ctaDesc: 'El acceso anticipado incluye funciones premium de por vida y soporte prioritario. Sé de los primeros en probar PromptQuorum cuando se lance.',
-    ctaBtn: 'Unirse a la lista de espera',
+    ctaH2: '¿Listo para probarlo?',
+    ctaDesc: 'PromptQuorum está en beta pública — descárgalo hoy mismo. Sin lista de espera, sin registro.',
+    ctaBtn: 'Descargar la beta',
     back: '← Volver al inicio',
   },
   pt: {
@@ -80,9 +80,9 @@ const T = {
     founderH2: 'Sobre o fundador',
     founderTitle: 'Fundador e desenvolvedor, PromptQuorum',
     founderBio: 'Hans Kuepper é um desenvolvedor independente baseado em Baden-Württemberg, Alemanha, que fala quatro idiomas e já trabalhou em mais de 20 países. Ele criou o PromptQuorum porque as equipes precisam de uma camada de verificação para as respostas geradas por IA — uma forma de detectar alucinações comparando os resultados de múltiplos modelos. A privacidade não é negociável: seus prompts e chaves de API nunca passam pelos servidores do PromptQuorum.',
-    ctaH2: 'Entre na lista de espera para acesso antecipado',
-    ctaDesc: 'O acesso antecipado inclui recursos premium vitalícios e suporte prioritário. Seja um dos primeiros a experimentar o PromptQuorum quando ele for lançado.',
-    ctaBtn: 'Entrar na lista de espera',
+    ctaH2: 'Pronto para experimentar?',
+    ctaDesc: 'O PromptQuorum está em beta pública — baixe hoje mesmo. Sem lista de espera, sem cadastro.',
+    ctaBtn: 'Baixar o Beta',
     back: '← Voltar ao início',
   },
   ko: {
@@ -91,9 +91,9 @@ const T = {
     founderH2: '창립자 소개',
     founderTitle: '창립자 & 개발자, PromptQuorum',
     founderBio: 'Hans Kuepper는 독일 바덴-뷔르템베르크 주에 기반을 둔 독립 개발자로, 4개 언어를 구사하며 20개 이상의 나라에서 생활하고 일했습니다. 그는 팀이 AI가 생성한 답변을 검증할 레이어가 필요하다고 판단해 PromptQuorum을 개발했습니다. 여러 모델의 출력을 비교하면 환각을 감지할 수 있습니다. 개인정보 보호는 타협할 수 없습니다: 프롬프트와 API 키는 절대 PromptQuorum 서버에 전달되지 않습니다.',
-    ctaH2: '얼리 액세스 대기자 명단에 참여하세요',
-    ctaDesc: '얼리 액세스에는 평생 프리미엄 기능과 우선 지원이 포함됩니다. PromptQuorum 출시 시 가장 먼저 사용해 보세요.',
-    ctaBtn: '대기자 명단 참여',
+    ctaH2: 'هل أنت مستعد للتجربة؟',
+    ctaDesc: 'يتوفر PromptQuorum الآن في النسخة التجريبية العامة — نزّله اليوم. دون قائمة انتظار ودون تسجيل.',
+    ctaBtn: 'تنزيل النسخة التجريبية',
     back: '← 홈으로 돌아가기',
   },
   ar: {
@@ -102,9 +102,9 @@ const T = {
     founderH2: 'عن المؤسس',
     founderTitle: 'المؤسس والمطور، PromptQuorum',
     founderBio: 'هانس كوبر مطور مستقل مقيم في بادن-فورتمبرغ، ألمانيا، يتحدث أربع لغات وعمل في أكثر من 20 دولة. بنى PromptQuorum لأن الفرق تحتاج إلى طبقة تحقق للإجابات التي تولّدها الذكاء الاصطناعي — طريقة للكشف عن الهلوسة عبر مقارنة مخرجات نماذج متعددة. الخصوصية غير قابلة للتفاوض: لا تمر تعليماتك ومفاتيح API الخاصة بك أبدًا عبر خوادم PromptQuorum.',
-    ctaH2: 'انضم إلى قائمة الانتظار للوصول المبكر',
-    ctaDesc: 'يتضمن الوصول المبكر ميزات بريميوم مدى الحياة ودعمًا ذا أولوية. كن من أوائل من يجربون PromptQuorum عند إطلاقه.',
-    ctaBtn: 'انضم إلى قائمة الانتظار',
+    ctaH2: '사용해볼 준비가 되셨나요?',
+    ctaDesc: 'PromptQuorum은 퍼블릭 베타 단계입니다 — 지금 바로 다운로드하세요. 대기자 명단이나 가입이 필요하지 않습니다.',
+    ctaBtn: '베타 다운로드',
     back: '→ العودة إلى الصفحة الرئيسية',
   },
 }
@@ -176,7 +176,7 @@ function FAQContent({ initialLang }: { initialLang?: import("@/hooks/useLang").L
           <h2 className="text-2xl font-bold text-gray-900 mb-4">{t.ctaH2}</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">{t.ctaDesc}</p>
           <a
-            href="/#waitlist"
+            href="/download"
             className="inline-block px-8 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors"
           >
             {t.ctaBtn}

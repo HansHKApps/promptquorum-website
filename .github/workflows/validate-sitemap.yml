@@ -30,7 +30,7 @@ jobs:
           echo "1️⃣  Static Pages Validation"
           STATIC_PAGES=(
             "" "/" "compare" "features" "features/optimization" "features/quorum"
-            "how-it-works" "download" "faq" "about" "waitlist" "privacy"
+            "how-it-works" "download" "faq" "about" "privacy"
           )
           STATIC_COUNT=${#STATIC_PAGES[@]}
           for page in "${STATIC_PAGES[@]}"; do

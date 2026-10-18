@@ -281,7 +281,6 @@ DEEPSEEK_MODEL=deepseek-flash
           '[How to Run Qwen 3 Locally — Ollama + LM Studio Guide](/local-llms/run-qwen-locally-guide-2026)',
           '[Compare Models on PromptQuorum](/compare)',
           '[Best Local LLMs for Coding 2026](/local-llms/best-local-llms-for-coding)',
-          '[Join the PromptQuorum Waitlist](/waitlist)',
         ],
       },
       faq: {
@@ -497,7 +496,6 @@ DEEPSEEK_MODEL=deepseek-flash
             '[Qwen 3 lokal ausführen — Ollama- und LM-Studio-Anleitung](/de/local-llms/run-qwen-locally-guide-2026)',
             '[Modelle auf PromptQuorum vergleichen](/de/compare)',
             '[Beste lokale LLMs fürs Coding 2026](/de/local-llms/best-local-llms-for-coding)',
-            '[Der PromptQuorum-Warteliste beitreten](/de/waitlist)',
           ],
         },
         faq: {
@@ -713,7 +711,6 @@ DEEPSEEK_MODEL=deepseek-flash
           '[Comment faire tourner Qwen 3 en local — Guide Ollama + LM Studio](/fr/local-llms/run-qwen-locally-guide-2026)',
           '[Comparer les modèles sur PromptQuorum](/fr/compare)',
           '[Meilleurs LLM locaux pour le code en 2026](/fr/local-llms/best-local-llms-for-coding)',
-          '[Rejoindre la liste d\'attente PromptQuorum](/fr/waitlist)',
         ],
       },
       faq: {
@@ -929,7 +926,6 @@ DEEPSEEK_MODEL=deepseek-flash
             '[Qwen 3をローカルで動かす — OllamaとLM Studioのガイド](/ja/local-llms/run-qwen-locally-guide-2026)',
             '[PromptQuorumでモデルを比較](/ja/compare)',
             '[2026年のコーディング向けローカルLLMおすすめ](/ja/local-llms/best-local-llms-for-coding)',
-            '[PromptQuorumのウェイトリストに参加](/ja/waitlist)',
           ],
         },
         faq: {
@@ -1145,7 +1141,6 @@ DEEPSEEK_MODEL=deepseek-flash
             '[如何在本地运行 Qwen 3 — Ollama 与 LM Studio 指南](/zh/local-llms/run-qwen-locally-guide-2026)',
             '[在 PromptQuorum 上对比模型](/zh/compare)',
             '[2026 年最佳本地编程 LLM](/zh/local-llms/best-local-llms-for-coding)',
-            '[加入 PromptQuorum 候补名单](/zh/waitlist)',
           ],
         },
         faq: {
@@ -1361,7 +1356,6 @@ DEEPSEEK_MODEL=deepseek-flash
           '[Cómo ejecutar Qwen 3 localmente — Guía Ollama + LM Studio](/es/local-llms/run-qwen-locally-guide-2026)',
           '[Comparar modelos en PromptQuorum](/es/compare)',
           '[Los mejores LLMs locales para código en 2026](/es/local-llms/best-local-llms-for-coding)',
-          '[Únete a la lista de espera de PromptQuorum](/es/waitlist)',
         ],
       },
       faq: {
@@ -1577,7 +1571,6 @@ DEEPSEEK_MODEL=deepseek-flash
           '[كيفية تشغيل Qwen 3 محليًا — دليل Ollama + LM Studio](/ar/local-llms/run-qwen-locally-guide-2026)',
           '[قارن النماذج في PromptQuorum](/ar/compare)',
           '[أفضل نماذج LLM المحلية للكود في 2026](/ar/local-llms/best-local-llms-for-coding)',
-          '[انضم إلى قائمة انتظار PromptQuorum](/ar/waitlist)',
         ],
       },
       faq: {
@@ -1808,7 +1801,6 @@ DEEPSEEK_MODEL=deepseek-flash
           '[Como executar o Qwen 3 localmente — Guia Ollama + LM Studio](/pt/local-llms/run-qwen-locally-guide-2026)',
           '[Comparar modelos no PromptQuorum](/pt/compare)',
           '[Os melhores LLMs locais para código em 2026](/pt/local-llms/best-local-llms-for-coding)',
-          '[Entre na lista de espera do PromptQuorum](/pt/waitlist)',
         ],
       },
       faq: {
@@ -2038,7 +2030,6 @@ DEEPSEEK_MODEL=deepseek-flash
           '[Qwen 3 로컬 실행 방법 — Ollama + LM Studio 가이드](/ko/local-llms/run-qwen-locally-guide-2026)',
           '[PromptQuorum에서 모델 비교하기](/compare)',
           '[2026년 코딩을 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding)',
-          '[PromptQuorum 대기자 목록 등록](/waitlist)',
         ],
       },
       faq: {

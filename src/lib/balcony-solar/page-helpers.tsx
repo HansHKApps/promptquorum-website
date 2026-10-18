@@ -17,7 +17,6 @@ import { notFound } from 'next/navigation'
 import { AppLink as Link } from '@/components/AppLink'
 import { truncateTitle } from '@/lib/utils'
 import { BalconySolarPostClient } from '@/components/BalconySolarPostClient'
-import { BalconySolarWaitlistCTA } from '@/components/BalconySolarWaitlistCTA'
 import { balconySolarContent } from './content'
 import { BALCONY_SOLAR_SLUG_TO_KEY } from './slugs'
 import { BALCONY_SOLAR_CATEGORIES } from './categories'
@@ -771,18 +770,6 @@ const HUB_RELATED_LINKS: Partial<Record<Lang, { label: string; path: string }[]>
   ],
 }
 
-const HUB_WAITLIST_CTA_LABEL: Partial<Record<Lang, string>> = {
-  en: 'Join the PromptQuorum Waitlist',
-  de: 'PromptQuorum-Warteliste beitreten',
-  fr: "Rejoindre la liste d'attente PromptQuorum",
-  ja: 'PromptQuorumのウェイトリストに参加',
-  zh: '加入 PromptQuorum 候补名单',
-  es: 'Únete a la lista de espera de PromptQuorum',
-  pt: 'Entre na lista de espera do PromptQuorum',
-  ar: 'انضم إلى قائمة انتظار PromptQuorum',
-  ko: 'PromptQuorum 대기자 명단 참여',
-}
-
 const HUB_PRESENTATION_URL = '/presentations/balcony-solar-overview-static.html'
 
 const HUB_PRESENTATION_DESCRIPTION: Partial<Record<Lang, string>> = {
@@ -822,7 +809,6 @@ function renderHub(lang: Lang) {
         presentationDescription={HUB_PRESENTATION_DESCRIPTION[lang] ?? HUB_PRESENTATION_DESCRIPTION['en']!}
         presentationUrl={HUB_PRESENTATION_URL}
         fallbackTitle={slugToTitle}
-        footer={<BalconySolarWaitlistCTA label={HUB_WAITLIST_CTA_LABEL[lang] ?? HUB_WAITLIST_CTA_LABEL['en']!} />}
       />
     )
   }
@@ -957,8 +943,6 @@ function renderHub(lang: Lang) {
             ))}
           </div>
         </section>
-
-        <BalconySolarWaitlistCTA label={HUB_WAITLIST_CTA_LABEL[lang] ?? HUB_WAITLIST_CTA_LABEL['en']!} />
       </div>
     </div>
   )

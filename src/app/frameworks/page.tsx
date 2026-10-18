@@ -153,7 +153,7 @@ export default async function FrameworksIndexPage({ searchParams }: PageProps) {
               A Framework Wizard helps you choose. Then optimize, dispatch to 25+ AI models, and run consensus analysis — free.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/#waitlist" className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+              <Link href="/download" className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">
                 Download the Beta
               </Link>
             </div>

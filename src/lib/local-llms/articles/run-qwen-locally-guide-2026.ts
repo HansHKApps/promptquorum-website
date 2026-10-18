@@ -22,7 +22,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Beginner',
     audience: 'Developers setting up a local LLM for the first time, EU teams seeking GDPR-compliant AI',
     primaryTerm: 'run Qwen 3 locally 2026',
-    ctaText: 'Join the PromptQuorum Waitlist →',
     leadAnswerBlock: '**Run `ollama pull qwen3.6:27b` on any machine with 16 GB VRAM or Apple Silicon with 32+ GB unified memory. For GUI access, use LM Studio. Both run Qwen 3.6 27B fully offline. Critical: set `num_ctx` to 32768 or higher — Ollama\'s runtime default (VRAM-scaled) tokens truncates most real-world tasks.**',
     nextStep: {
       text: 'Qwen is running locally. Now explore the best UIs that make it usable.',
@@ -332,7 +331,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
           '[Qwen Coder vs DeepSeek vs Mistral — Coding Benchmark 2026](/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[Local AI Production Deployment: Building a Privacy-First Customer Service Agent](https://www.youtube.com/watch?v=W1f9bWj4pAE) — Rob Braxman case study covering hardware trade-offs, memory management, and real-world performance for self-hosted AI agents.',
           '[Browse All Local LLM Guides](/local-llms)',
-          '[Join the PromptQuorum Waitlist](/waitlist)',
         ],
       },
       faq: {
@@ -367,7 +365,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
     educationalLevel: 'Beginner',
     audience: 'Desarrolladores que configuran un LLM local por primera vez, equipos en la UE que buscan IA conforme al RGPD',
     primaryTerm: 'run Qwen 3 locally 2026',
-    ctaText: 'Unirse a la lista de espera de PromptQuorum →',
     leadAnswerBlock: '**Ejecuta `ollama pull qwen3.6:27b` en cualquier máquina con 16 GB VRAM o Apple Silicon con 32+ GB de memoria unificada. Para acceso GUI, usa LM Studio. Ambos ejecutan Qwen 3.6 27B completamente sin conexión. Crítico: establece `num_ctx` en 32768 o superior — el valor predeterminado de 2048 tokens de Ollama trunca la mayoría de las tareas reales.**',
     nextStep: {
       text: 'Qwen está corriendo localmente. Ahora explora las mejores interfaces que lo hacen usable.',
@@ -629,7 +626,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
           '[Qwen Coder vs DeepSeek vs Mistral — Benchmark de programación 2026](/es/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[Local AI Production Deployment: Building a Privacy-First Customer Service Agent](https://www.youtube.com/watch?v=W1f9bWj4pAE) — Estudio de caso de Rob Braxman sobre compensaciones de hardware, gestión de memoria y rendimiento en producción para agentes de IA autoalojados.',
           '[Ver todas las guías de LLM local](/es/local-llms)',
-          '[Unirse a la lista de espera de PromptQuorum](/es/waitlist)',
         ],
       },
       faq: {
@@ -677,7 +673,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
     educationalLevel: 'Beginner',
     audience: 'المطورون الذين يُعدّون نموذج LLM محلي لأول مرة، وفرق الاتحاد الأوروبي الباحثة عن ذكاء اصطناعي متوافق مع GDPR',
     primaryTerm: 'تشغيل Qwen 3 محليًا 2026',
-    ctaText: 'انضم إلى قائمة انتظار PromptQuorum ←',
     leadAnswerBlock: '**نفّذ `ollama pull qwen3.6:27b` على أي جهاز بسعة 16 GB من VRAM أو Apple Silicon بذاكرة موحدة 32+ GB. للوصول عبر واجهة رسومية، استخدم LM Studio. كلاهما يشغّل Qwen 3.6 27B دون اتصال بالكامل. حرج: اضبط `num_ctx` على 32768 أو أعلى — قيمة Ollama الافتراضية البالغة 2048 token تقتطع معظم المهام الفعلية.**',
     nextStep: {
       text: 'Qwen يعمل محليًا. استكشف الآن أفضل الواجهات التي تجعله قابلًا للاستخدام.',
@@ -939,7 +934,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
           '[Qwen Coder مقابل DeepSeek مقابل Mistral — معيار البرمجة 2026](/ar/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[Local AI Production Deployment: Building a Privacy-First Customer Service Agent](https://www.youtube.com/watch?v=W1f9bWj4pAE) — دراسة حالة لـ Rob Braxman حول مفاضلات الأجهزة وإدارة الذاكرة والأداء في الإنتاج لوكلاء الذكاء الاصطناعي ذاتيي الاستضافة.',
           '[عرض جميع أدلة نماذج LLM المحلية](/ar/local-llms)',
-          '[انضم إلى قائمة انتظار PromptQuorum](/ar/waitlist)',
         ],
       },
       faq: {
@@ -987,7 +981,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
     educationalLevel: 'Beginner',
     audience: 'Desenvolvedores configurando um LLM local pela primeira vez, equipes que buscam IA em conformidade com LGPD/GDPR',
     primaryTerm: 'executar Qwen 3 localmente 2026',
-    ctaText: 'Entrar na lista de espera do PromptQuorum →',
     leadAnswerBlock: '**Execute `ollama pull qwen3.6:27b` em qualquer máquina com 16 GB de VRAM ou Apple Silicon com 32+ GB de memória unificada. Para acesso GUI, use o LM Studio. Ambos executam o Qwen 3.6 27B completamente offline. Crítico: defina `num_ctx` como 32768 ou superior — o valor padrão de 2048 tokens do Ollama trunca a maioria das tarefas reais.**',
     quickAnswerTop: {
       pt: {
@@ -1074,7 +1067,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
     educationalLevel: 'Beginner',
     audience: 'Entwickler, die erstmals ein lokales LLM einrichten; EU-Teams auf der Suche nach DSGVO-konformer KI',
     primaryTerm: 'run Qwen 3 locally 2026',
-    ctaText: 'Zur PromptQuorum-Warteliste anmelden →',
     leadAnswerBlock: '**Führen Sie `ollama pull qwen3.6:27b` auf jedem Rechner mit 16 GB VRAM oder Apple Silicon mit 32+ GB Unified Memory aus. Für den GUI-Zugriff verwenden Sie LM Studio. Beide führen Qwen 3.6 27B vollständig offline aus. Wichtig: Setzen Sie `num_ctx` auf 32768 oder höher — Ollamas Standard von 2048 Token kürzt die meisten realen Aufgaben ab.**',
     nextStep: {
       text: 'Qwen läuft lokal. Entdecken Sie jetzt die besten Benutzeroberflächen.',
@@ -1329,7 +1321,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
           '[Warum EU-Unternehmen auf lokales Qwen umsteigen](/de/blog/eu-companies-local-qwen-gdpr-shift)',
           '[Qwen Coder vs. DeepSeek vs. Mistral — Coding-Benchmark 2026](/de/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[Alle Local-LLM-Guides](/de/local-llms)',
-          '[PromptQuorum-Warteliste beitreten](/de/waitlist)',
         ],
       },
       faq: {
@@ -1362,7 +1353,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
     educationalLevel: 'Beginner',
     audience: 'Développeurs configurant un LLM local pour la première fois, équipes UE cherchant une IA conforme au RGPD',
     primaryTerm: 'run Qwen 3 locally 2026',
-    ctaText: 'Rejoindre la liste d\'attente PromptQuorum →',
     leadAnswerBlock: '**Exécutez `ollama pull qwen3.6:27b` sur n\'importe quelle machine avec 16 Go VRAM ou Apple Silicon avec 32+ Go de mémoire unifiée. Pour un accès GUI, utilisez LM Studio. Les deux exécutent Qwen 3.6 27B entièrement hors ligne. Important : définissez `num_ctx` à 32 768 ou supérieur — la valeur par défaut d\'Ollama de 2 048 tokens tronque la plupart des tâches réelles.**',
     nextStep: {
       text: 'Qwen fonctionne en local. Découvrez maintenant les meilleures interfaces.',
@@ -1617,7 +1607,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
           '[Pourquoi les entreprises UE passent à Qwen local](/fr/blog/eu-companies-local-qwen-gdpr-shift)',
           '[Qwen Coder vs DeepSeek vs Mistral — Benchmark codage 2026](/fr/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[Tous les guides LLM local](/fr/local-llms)',
-          '[Rejoindre la liste d\'attente PromptQuorum](/fr/waitlist)',
         ],
       },
       faq: {
@@ -1648,7 +1637,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
     educationalLevel: 'Beginner',
     audience: '初めてローカルLLMを構築する開発者、GDPRに準拠したAIを求めるEUチーム',
     primaryTerm: 'run Qwen 3 locally 2026',
-    ctaText: 'PromptQuorumウェイトリストに登録 →',
     leadAnswerBlock: '**16 GB VRAMまたはApple Silicon（32 GB以上の統合メモリ）を搭載したマシンで`ollama pull qwen3.6:27b`を実行してください。GUIアクセスにはLM Studioを使用します。どちらもQwen 3.6 27Bを完全オフラインで実行できます。重要：`num_ctx`を32768以上に設定してください — Ollamaのデフォルトは2048トークンで、ほとんどの実際のタスクを切り捨ててしまいます。**',
     nextStep: {
       text: 'Qwenがローカルで動いています。次は使いやすくする最良のUIを探しましょう。',
@@ -1903,7 +1891,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
           '[EU企業がローカルQwenに移行する理由](/ja/blog/eu-companies-local-qwen-gdpr-shift)',
           '[Qwen Coder vs DeepSeek vs Mistral — コーディングベンチマーク2026](/ja/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[すべてのローカルLLMガイド](/ja/local-llms)',
-          '[PromptQuorumウェイトリストに登録](/ja/waitlist)',
         ],
       },
       faq: {
@@ -1934,7 +1921,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
     educationalLevel: 'Beginner',
     audience: '首次搭建本地LLM的开发者，寻求GDPR合规AI方案的欧盟团队',
     primaryTerm: 'run Qwen 3 locally 2026',
-    ctaText: '加入PromptQuorum候补名单 →',
     leadAnswerBlock: '**在任何配备16 GB显存或32 GB以上统一内存Apple Silicon的机器上运行`ollama pull qwen3.6:27b`。GUI访问推荐使用LM Studio。两者均可完全离线运行Qwen 3.6 27B。重要：将`num_ctx`设置为32768或更高——Ollama默认的2048 token会截断大多数实际任务。**',
     nextStep: {
       text: 'Qwen已在本地运行。现在探索最好的UI界面。',
@@ -2189,7 +2175,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
           '[欧盟企业为何转向本地Qwen](/zh/blog/eu-companies-local-qwen-gdpr-shift)',
           '[Qwen Coder vs DeepSeek vs Mistral — 代码基准测试2026](/zh/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[所有本地LLM指南](/zh/local-llms)',
-          '[加入PromptQuorum候补名单](/zh/waitlist)',
         ],
       },
       faq: {
@@ -2220,7 +2205,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
     educationalLevel: 'Beginner',
     audience: '처음으로 로컬 LLM을 설정하는 개발자, GDPR 준수 AI를 찾는 EU 팀',
     primaryTerm: '2026년 Qwen 3 로컬 실행',
-    ctaText: 'PromptQuorum 대기자 명단 등록 →',
     leadAnswerBlock: '16GB VRAM이 있는 기기 또는 32GB 이상의 통합 메모리를 갖춘 Apple Silicon에서 `ollama pull qwen3.6:27b`를 실행하십시오. GUI 접근을 원하시면 LM Studio를 사용하십시오. 두 방법 모두 Qwen 3.6 27B를 완전히 오프라인으로 실행합니다. 중요: `num_ctx`를 32768 이상으로 설정하십시오 — Ollama의 기본값인 2048 토큰은 대부분의 실제 작업을 잘라냅니다.',
     nextStep: {
       text: 'Qwen이 로컬에서 실행 중입니다. 이제 더 유용하게 활용할 수 있는 최고의 UI를 살펴보십시오.',
@@ -2482,7 +2466,6 @@ LOCAL_LLM_MODEL=qwen3.6:27b
           '[Qwen Coder vs DeepSeek vs Mistral — 2026년 코딩 벤치마크](/ko/local-llms/qwen-coder-vs-deepseek-mistral-local-2026)',
           '[로컬 AI 프로덕션 배포: 개인정보 우선 고객 서비스 에이전트 구축](https://www.youtube.com/watch?v=W1f9bWj4pAE) — Rob Braxman의 하드웨어 트레이드오프, 메모리 관리 및 자체 호스팅 AI 에이전트의 실제 성능을 다룬 사례 연구.',
           '[모든 로컬 LLM 가이드 보기](/local-llms)',
-          '[PromptQuorum 대기자 명단 등록](/waitlist)',
         ],
       },
       faq: {

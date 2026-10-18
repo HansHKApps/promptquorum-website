@@ -131,8 +131,7 @@ export type Page = {
 
 // Pages that exist only at the English canonical URL — no /{lang}/path routes.
 // Listing these with path-prefix alternates in the sitemap causes Google to crawl
-// non-existent URLs and receive 404s. /waitlist now has real /{lang}/waitlist
-// routes (src/app/{lang}/waitlist/page.tsx) so it no longer belongs here.
+// non-existent URLs and receive 404s.
 export const ENGLISH_ONLY_PATHS = new Set<string>([])
 
 export const LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'] as const

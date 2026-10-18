@@ -390,7 +390,7 @@ function BlogPostClientContent({ post, slug, initialLang, availableLangs }: Blog
           </p>
           <div className="text-center">
             <a
-              href={lang === 'en' ? '/waitlist' : `/${lang}/waitlist`}
+              href={lang === 'en' ? '/download' : `/${lang}/download`}
               className="inline-block px-8 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               {BLOG_UI.ctaButton[lang] ?? BLOG_UI.ctaButton.en}

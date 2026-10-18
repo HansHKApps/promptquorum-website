@@ -72,7 +72,7 @@ export default function JaPQAppsPage() {
               1つのプロンプトを25以上のAIモデルに同時送信 — ローカルLLM対応とマルチモデル合意分析を、すべてブラウザから。
             </p>
             <Link
-              href="/ja/waitlist"
+              href="/ja/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               ベータを試す
@@ -1031,7 +1031,7 @@ export default function JaPQAppsPage() {
           {/* Repeat CTA */}
           <div className="text-center py-12 border-t border-primary/20">
             <Link
-              href="/ja/waitlist"
+              href="/ja/download"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors"
             >
               ベータを試す

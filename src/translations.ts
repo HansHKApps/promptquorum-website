@@ -5,11 +5,9 @@ export const translations = {
     features: "Features",
     howItWorks: "How it Works",
     faq: "FAQ",
-    waitlist: "Waitlist",
     readIn: "Read in:",
 
     // Hero
-    waitlistNowOpen: "Waitlist Now Open",
     heroTitle: "PromptQuorum: AI Prompt Optimizer for",
     heroTitleHighlight: "ChatGPT, Claude & Gemini",
     heroDescription: "The AI prompt powertool that optimizes your prompts and sends them to multiple AI providers simultaneously. Compare results, find consensus, get better answers.",
@@ -59,14 +57,6 @@ export const translations = {
     faq6Question: "Are there any limits?",
     faq6Answer: "No limits from PromptQuorum side. Your usage is only limited by your API keys or local LLM resources.",
 
-    // Waitlist CTA
-    waitlistCtaTitle: "Ready to Transform Your Prompts?",
-    waitlistCtaDesc: "Early access users get priority onboarding, direct access to the developer, and a free power tool!",
-    emailPlaceholder: "Enter your email",
-    joinWaitlist: "Join Waitlist",
-    joining: "Joining...",
-    youAreOnTheList: "You are on the list!",
-    notifyWhenLaunch: "We will notify you when PromptQuorum launches.",
 
     // Blog
     blogTitle: "Prompt Engineering Guides",
@@ -317,11 +307,9 @@ export const translations = {
     features: "Funktionen",
     howItWorks: "So funktioniert es",
     faq: "FAQ",
-    waitlist: "Warteliste",
     readIn: "Lesen auf:",
 
     // Hero
-    waitlistNowOpen: "Warteliste jetzt offen",
     heroTitle: "Von der groben Idee zum",
     heroTitleHighlight: "praezisen Prompt",
     heroDescription: "Das KI-Prompt-Powertool, das Ihre Prompts optimiert und gleichzeitig an mehrere KI-Anbieter sendet. Vergleichen Sie Ergebnisse, finden Sie Konsens, erhalten Sie bessere Antworten.",
@@ -371,14 +359,6 @@ export const translations = {
     faq6Question: "Gibt es Limits?",
     faq6Answer: "Keine Limits von PromptQuorum Seite. Ihre Nutzung wird nur durch Ihre API-Keys oder lokalen LLM-Ressourcen begrenzt.",
 
-    // Waitlist CTA
-    waitlistCtaTitle: "Bereit, Ihre Prompts zu transformieren?",
-    waitlistCtaDesc: "Early-Access-Nutzer erhalten bevorzugtes Onboarding, direkten Zugang zum Entwickler und ein kostenloses Power-Tool!",
-    emailPlaceholder: "Geben Sie Ihre E-Mail ein",
-    joinWaitlist: "Warteliste beitreten",
-    joining: "Wird hinzugefuegt...",
-    youAreOnTheList: "Sie sind auf der Liste!",
-    notifyWhenLaunch: "Wir benachrichtigen Sie, sobald PromptQuorum startet.",
 
     // Blog
     blogTitle: "Prompt-Engineering-Leitfäden",
@@ -637,11 +617,9 @@ export const translations = {
     features: "Fonctionnalites",
     howItWorks: "Comment ca marche",
     faq: "FAQ",
-    waitlist: "Liste d'attente",
     readIn: "Lire en:",
 
     // Hero
-    waitlistNowOpen: "Liste d'attente ouverte",
     heroTitle: "D'une idee vague a un",
     heroTitleHighlight: "prompt precis",
     heroDescription: "L'outil IA qui optimise vos prompts et les envoie simultanement a plusieurs fournisseurs d'IA. Comparez les resultats, trouvez un consensus, get better answers.",
@@ -691,14 +669,6 @@ export const translations = {
     faq6Question: "Y a-t-il des limites?",
     faq6Answer: "Aucune limite cote PromptQuorum. Votre utilisation est seulement limitee par vos cles API ou ressources LLM locales.",
 
-    // Waitlist CTA
-    waitlistCtaTitle: "Pret a transformer vos prompts?",
-    waitlistCtaDesc: "Les membres early-access bénéficient d'un onboarding prioritaire, d'un accès direct au développeur et d'un outil puissant offert !",
-    emailPlaceholder: "Entrez votre email",
-    joinWaitlist: "Rejoindre la liste",
-    joining: "Inscription...",
-    youAreOnTheList: "Vous etes sur la liste!",
-    notifyWhenLaunch: "Nous vous previendrons au lancement de PromptQuorum.",
 
     // Blog
     blogTitle: "Guides d'ingénierie des prompts",
@@ -949,11 +919,9 @@ export const translations = {
     features: "機箞",
     howItWorks: "使い方",
     faq: "よくある質問",
-    waitlist: "ウェイティングリスト",
     readIn: "言語を選択:",
 
     // Hero
-    waitlistNowOpen: "ウェイティングリスト受付開始",
     heroTitle: "曖昧なアイデアから",
     heroTitleHighlight: "精密プロンプトへ",
     heroDescription: "AIプロンプトを最適化し、複数のAIプロバイダーに同時に送信するAIツールです。結果を比較し、コンセンサスをを見つけ、より良い回答を得ましょう。",
@@ -1003,14 +971,6 @@ export const translations = {
     faq6Question: "制限はありますか？",
     faq6Answer: "PromptQuorum側からの制限はありません。使用はAPIキーまたはローカルLLMリソースによってのみ制限されます。",
 
-    // Waitlist CTA
-    waitlistCtaTitle: "プロンプトを変革する準備はできましたか？",
-    waitlistCtaDesc: "早期アクセスユーザーには、優先オンボーディング、開発者への直接アクセス、そして無料のパワーツールをご提供します！",
-    emailPlaceholder: "メールアドレスを入力",
-    joinWaitlist: "ウェイトリストに参加",
-    joining: "参加中...",
-    youAreOnTheList: "リストに加わりました！",
-    notifyWhenLaunch: "PromptQuorumがローンチしたときにご連絡します。",
 
     // Blog
     blogTitle: "プロンプトエンジニアリングガイド",
@@ -1261,11 +1221,9 @@ export const translations = {
     features: "功能",
     howItWorks: "工作原理",
     faq: "常见问题",
-    waitlist: "候补名单",
     readIn: "选择语言:",
 
     // Hero
-    waitlistNowOpen: "候补名单现已开放",
     heroTitle: "从模糊想法到",
     heroTitleHighlight: "精确提示词",
     heroDescription: "这款AI提示词优化工具可同时向多个AI提供商发送提示词。比较结果、达成共识、获得更好的答案。",
@@ -1315,14 +1273,6 @@ export const translations = {
     faq6Question: "有限制吗？",
     faq6Answer: "PromptQuorum端没有限制。您的使用仅受API密钥或本地LLM资源限制。",
 
-    // Waitlist CTA
-    waitlistCtaTitle: "准备好改变您的提示词了吗？",
-    waitlistCtaDesc: "早期访问用户将获得优先入职辅导、与开发者的直接联系，以及一个免费的强大工具！",
-    emailPlaceholder: "输入您的邮箱",
-    joinWaitlist: "加入候补名单",
-    joining: "加入中...",
-    youAreOnTheList: "您已在列表中！",
-    notifyWhenLaunch: "PromptQuorum发布时我们会通知您。",
 
     // Blog
     blogTitle: "提示工程指南",
@@ -1573,11 +1523,9 @@ export const translations = {
     features: "Funciones",
     howItWorks: "Cómo funciona",
     faq: "FAQ",
-    waitlist: "Lista de espera",
     readIn: "Leer en:",
 
     // Hero
-    waitlistNowOpen: "Lista de espera abierta",
     heroTitle: "PromptQuorum: optimizador de prompts IA para",
     heroTitleHighlight: "ChatGPT, Claude y Gemini",
     heroDescription: "La herramienta de prompts IA que optimiza tus prompts y los envía a múltiples proveedores de IA simultáneamente. Compara resultados, encuentra consenso, obtén mejores respuestas.",
@@ -1627,14 +1575,6 @@ export const translations = {
     faq6Question: "¿Hay límites?",
     faq6Answer: "Sin límites por parte de PromptQuorum. Tu uso solo está limitado por tus claves API o los recursos de tu LLM local.",
 
-    // Waitlist CTA
-    waitlistCtaTitle: "¿Listo para transformar tus prompts?",
-    waitlistCtaDesc: "¡Los usuarios de acceso anticipado reciben incorporación prioritaria, acceso directo al desarrollador y una poderosa herramienta gratuita!",
-    emailPlaceholder: "Introduce tu email",
-    joinWaitlist: "Unirse a la lista de espera",
-    joining: "Uniéndose...",
-    youAreOnTheList: "¡Estás en la lista!",
-    notifyWhenLaunch: "Te avisaremos cuando PromptQuorum esté disponible.",
 
     // Blog
     blogTitle: "Guías de prompt engineering",
@@ -1885,11 +1825,9 @@ export const translations = {
     features: "Funcionalidades",
     howItWorks: "Como funciona",
     faq: "FAQ",
-    waitlist: "Lista de espera",
     readIn: "Ler em:",
 
     // Hero
-    waitlistNowOpen: "Lista de espera aberta",
     heroTitle: "PromptQuorum: otimizador de prompts de IA para",
     heroTitleHighlight: "ChatGPT, Claude e Gemini",
     heroDescription: "A ferramenta de prompts de IA que otimiza seus prompts e os envia para vários provedores de IA simultaneamente. Compare resultados, encontre consenso, obtenha melhores respostas.",
@@ -1939,14 +1877,6 @@ export const translations = {
     faq6Question: "Há algum limite?",
     faq6Answer: "Nenhum limite do lado do PromptQuorum. Seu uso é limitado apenas pelas suas chaves de API ou recursos de LLM local.",
 
-    // Waitlist CTA
-    waitlistCtaTitle: "Pronto para transformar seus prompts?",
-    waitlistCtaDesc: "Usuários de acesso antecipado recebem integração prioritária, acesso direto ao desenvolvedor e uma ferramenta gratuita!",
-    emailPlaceholder: "Digite seu e-mail",
-    joinWaitlist: "Entrar na lista de espera",
-    joining: "Entrando...",
-    youAreOnTheList: "Você está na lista!",
-    notifyWhenLaunch: "Avisaremos quando o PromptQuorum estiver disponível.",
 
     // Blog
     blogTitle: "Guias de engenharia de prompts",
@@ -2197,11 +2127,9 @@ export const translations = {
     features: "الميزات",
     howItWorks: "كيف يعمل",
     faq: "FAQ",
-    waitlist: "قائمة الانتظار",
     readIn: "اقرأ بـ:",
 
     // Hero
-    waitlistNowOpen: "قائمة الانتظار مفتوحة الآن",
     heroTitle: "PromptQuorum: محسِّن البرامج النصية للذكاء الاصطناعي لـ",
     heroTitleHighlight: "ChatGPT وClaude وGemini",
     heroDescription: "أداة البرامج النصية للذكاء الاصطناعي التي تحسِّن برامجك النصية وترسلها إلى مزودي ذكاء اصطناعي متعددين في آنٍ واحد. قارن النتائج، وابحث عن توافق الآراء، واحصل على إجابات أفضل.",
@@ -2251,14 +2179,6 @@ export const translations = {
     faq6Question: "هل ثمة حدود؟",
     faq6Answer: "لا حدود من جانب PromptQuorum. استخدامك مقيَّد فقط بمفاتيح API الخاصة بك أو موارد LLM المحلي لديك.",
 
-    // Waitlist CTA
-    waitlistCtaTitle: "هل أنت مستعد لتحويل برامجك النصية؟",
-    waitlistCtaDesc: "يحصل مستخدمو الوصول المبكر على إعداد ذي أولوية، ووصول مباشر إلى المطور، وأداة مجانية قوية!",
-    emailPlaceholder: "أدخل بريدك الإلكتروني",
-    joinWaitlist: "الانضمام إلى قائمة الانتظار",
-    joining: "جارٍ الانضمام...",
-    youAreOnTheList: "أنت في القائمة!",
-    notifyWhenLaunch: "سنُخطرك عندما يصبح PromptQuorum متاحًا.",
 
     // Blog
     blogTitle: "أدلة هندسة البرامج النصية",
@@ -2509,11 +2429,9 @@ export const translations = {
     features: "기능",
     howItWorks: "작동 방식",
     faq: "FAQ",
-    waitlist: "대기자 명단",
     readIn: "언어 선택:",
 
     // Hero
-    waitlistNowOpen: "대기자 명단 접수 중",
     heroTitle: "PromptQuorum: AI 프롬프트 최적화 도구,",
     heroTitleHighlight: "ChatGPT, Claude & Gemini 지원",
     heroDescription: "프롬프트를 최적화하고 여러 AI 제공업체에 동시에 전송하는 AI 프롬프트 전문 도구입니다. 결과를 비교하고 합의를 도출하여 더 나은 답변을 얻으십시오.",
@@ -2563,14 +2481,6 @@ export const translations = {
     faq6Question: "사용 제한이 있습니까?",
     faq6Answer: "PromptQuorum 측에서는 제한이 없습니다. 사용량은 API 키 또는 로컬 LLM 리소스에 의해서만 제한됩니다.",
 
-    // Waitlist CTA
-    waitlistCtaTitle: "프롬프트를 혁신할 준비가 되셨습니까?",
-    waitlistCtaDesc: "조기 접근 사용자는 우선 온보딩, 개발자 직접 접근 및 무료 강력한 도구를 제공받습니다!",
-    emailPlaceholder: "이메일을 입력하십시오",
-    joinWaitlist: "대기자 명단 등록",
-    joining: "등록 중...",
-    youAreOnTheList: "명단에 등록되셨습니다!",
-    notifyWhenLaunch: "PromptQuorum 출시 시 알림을 보내 드리겠습니다.",
 
     // Blog
     blogTitle: "프롬프트 엔지니어링 가이드",

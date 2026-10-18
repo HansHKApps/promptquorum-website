@@ -30,7 +30,7 @@ const SLOT_ID = 'google_preferred_sources'
 // even though it can't survive a reload or a new tab.
 let sessionShownFallback = false
 
-const HIDDEN_PATH_PATTERNS = [/\/download(\/|$)/, /\/waitlist(\/|$)/, /\/settings(\/|$)/, /\/preferences(\/|$)/]
+const HIDDEN_PATH_PATTERNS = [/\/download(\/|$)/, /\/settings(\/|$)/, /\/preferences(\/|$)/]
 
 type Copy = {
   title: string
