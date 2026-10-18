@@ -41,12 +41,12 @@ export const app: ToolRecord = {
     ko: 'AI가 만든 개인용 앱을 사용자가 소유한 이동 가능한 .snug 파일에 담아 호환 호스트에서 실행하는 초기 단계의 오픈 프로토콜',
   },
   compare: {},
-  lastVerifiedDate: '2026-10-17',
+  lastVerifiedDate: '2026-10-18',
   lastUpstreamUpdate: '2026-10-15', // newer of latest GitHub release (2026-09-05) and last push (2026-10-15)
   lastUpstreamUpdateSource: 'https://github.com/snugprotocol/snug',
   reviewSlug: 'snug-protocol-review',
   pqReview: {
-    date: '2026-10-17',
+    date: '2026-10-18',
     version: '0.1.3',
     versionSourceUrl: 'https://github.com/snugprotocol/snug/releases/tag/v0.1.3',
   },
