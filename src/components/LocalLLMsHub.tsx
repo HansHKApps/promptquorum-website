@@ -12,6 +12,7 @@ import { LazySection } from './hub/LazySection'
 import { HubReviewedBadge } from './hub/HubReviewedBadge'
 import { latestDateModified } from '@/lib/hub-reviewed-date'
 import type { LLMHubData } from '@/lib/local-llms/hub-data'
+import { HUB_PRACTICAL_SECTIONS } from '@/lib/local-llms/hub-practical-sections'
 
 const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU', ja: '新着', zh: '新', es: 'NUEVO', pt: 'NOVO', ar: 'جديد', ko: '새글' }
 const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث', ko: '업데이트' }
@@ -356,8 +357,8 @@ const HUB_VRAM_TIER_ROWS: Record<string, { vram: string; model: string; gpu: str
   en: [
     { vram: '4 GB', model: 'Llama 3.2 3B or Phi-3.5-mini (~2 GB)', gpu: 'RTX 3050 4 GB, GTX 1650' },
     { vram: '8 GB', model: 'Llama 3.1 8B or Qwen3 8B (~4-5 GB)', gpu: 'RTX 4060 Ti 8 GB, RTX 3070' },
-    { vram: '12 GB', model: 'Qwen3 14B (~6.5 GB), or 7-8B at Q5/Q8 for higher quality', gpu: 'RTX 3060 12 GB, RTX 4070' },
-    { vram: '16 GB', model: 'Qwen3 14B at Q5/Q8, or 22B-class (~11 GB)', gpu: 'RTX 4060 Ti 16 GB, RTX 4080' },
+    { vram: '12 GB', model: 'Qwen3 14B (~8.4 GB), or 7-8B at Q5/Q8 for higher quality', gpu: 'RTX 3060 12 GB, RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14B at Q5/Q8, or 22B-class (~13 GB)', gpu: 'RTX 4060 Ti 16 GB, RTX 4080' },
     { vram: '24 GB', model: 'Qwen3.8-27B (~22 GB, best overall on consumer hardware)', gpu: 'RTX 4090, RTX 3090' },
     { vram: '32 GB', model: '22-32B at full precision, or one card in a dual-GPU 70B rig', gpu: 'RTX 5090' },
     { vram: '48 GB', model: '70B models at Q4 (~35 GB), tightly at Q5', gpu: '2x RTX 4090, RTX 6000 Ada' },
@@ -365,8 +366,8 @@ const HUB_VRAM_TIER_ROWS: Record<string, { vram: string; model: string; gpu: str
   de: [
     { vram: '4 GB', model: 'Llama 3.2 3B oder Phi-3.5-mini (~2 GB)', gpu: 'RTX 3050 4 GB, GTX 1650' },
     { vram: '8 GB', model: 'Llama 3.1 8B oder Qwen3 8B (~4-5 GB)', gpu: 'RTX 4060 Ti 8 GB, RTX 3070' },
-    { vram: '12 GB', model: 'Qwen3 14B (~6,5 GB), oder 7-8B bei Q5/Q8 für höhere Qualität', gpu: 'RTX 3060 12 GB, RTX 4070' },
-    { vram: '16 GB', model: 'Qwen3 14B bei Q5/Q8, oder 22B-Klasse (~11 GB)', gpu: 'RTX 4060 Ti 16 GB, RTX 4080' },
+    { vram: '12 GB', model: 'Qwen3 14B (~8,4 GB), oder 7-8B bei Q5/Q8 für höhere Qualität', gpu: 'RTX 3060 12 GB, RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14B bei Q5/Q8, oder 22B-Klasse (~13 GB)', gpu: 'RTX 4060 Ti 16 GB, RTX 4080' },
     { vram: '24 GB', model: 'Qwen3.8-27B (~22 GB, beste Gesamtqualität)', gpu: 'RTX 4090, RTX 3090' },
     { vram: '32 GB', model: '22-32B in voller Präzision, oder 1 Karte im Dual-GPU-70B-Rig', gpu: 'RTX 5090' },
     { vram: '48 GB', model: '70B-Modelle bei Q4 (~35 GB), knapp bei Q5', gpu: '2x RTX 4090, RTX 6000 Ada' },
@@ -374,8 +375,8 @@ const HUB_VRAM_TIER_ROWS: Record<string, { vram: string; model: string; gpu: str
   fr: [
     { vram: '4 Go', model: 'Llama 3.2 3B ou Phi-3.5-mini (~2 Go)', gpu: 'RTX 3050 4 Go, GTX 1650' },
     { vram: '8 Go', model: 'Llama 3.1 8B ou Qwen3 8B (~4-5 Go)', gpu: 'RTX 4060 Ti 8 Go, RTX 3070' },
-    { vram: '12 Go', model: 'Qwen3 14B (~6,5 Go), ou 7-8B en Q5/Q8 pour + de qualité', gpu: 'RTX 3060 12 Go, RTX 4070' },
-    { vram: '16 Go', model: 'Qwen3 14B en Q5/Q8, ou classe 22B (~11 Go)', gpu: 'RTX 4060 Ti 16 Go, RTX 4080' },
+    { vram: '12 Go', model: 'Qwen3 14B (~8,4 Go), ou 7-8B en Q5/Q8 pour + de qualité', gpu: 'RTX 3060 12 Go, RTX 4070' },
+    { vram: '16 Go', model: 'Qwen3 14B en Q5/Q8, ou classe 22B (~13 Go)', gpu: 'RTX 4060 Ti 16 Go, RTX 4080' },
     { vram: '24 Go', model: 'Qwen3.8-27B (~22 Go, meilleur global grand public)', gpu: 'RTX 4090, RTX 3090' },
     { vram: '32 Go', model: '22-32B pleine précision, ou 1 carte d\'un rig double-GPU 70B', gpu: 'RTX 5090' },
     { vram: '48 Go', model: 'Modèles 70B en Q4 (~35 Go), tout juste en Q5', gpu: '2x RTX 4090, RTX 6000 Ada' },
@@ -383,8 +384,8 @@ const HUB_VRAM_TIER_ROWS: Record<string, { vram: string; model: string; gpu: str
   ja: [
     { vram: '4 GB', model: 'Llama 3.2 3B または Phi-3.5-mini（約2 GB）', gpu: 'RTX 3050 4GB、GTX 1650' },
     { vram: '8 GB', model: 'Llama 3.1 8B または Qwen3 8B（約4〜5 GB）', gpu: 'RTX 4060 Ti 8GB、RTX 3070' },
-    { vram: '12 GB', model: 'Qwen3 14B（約6.5 GB）、または高品質重視なら7〜8BをQ5/Q8で', gpu: 'RTX 3060 12GB、RTX 4070' },
-    { vram: '16 GB', model: 'Qwen3 14BをQ5/Q8で、または22Bクラス（約11 GB）', gpu: 'RTX 4060 Ti 16GB、RTX 4080' },
+    { vram: '12 GB', model: 'Qwen3 14B（約8.4 GB）、または高品質重視なら7〜8BをQ5/Q8で', gpu: 'RTX 3060 12GB、RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14BをQ5/Q8で、または22Bクラス（約13 GB）', gpu: 'RTX 4060 Ti 16GB、RTX 4080' },
     { vram: '24 GB', model: 'Qwen3.8-27B（約22 GB、コンシューマー向け総合最高）', gpu: 'RTX 4090、RTX 3090' },
     { vram: '32 GB', model: '22〜32Bをフル精度で、または70B用デュアルGPU構成の1枚として', gpu: 'RTX 5090' },
     { vram: '48 GB', model: '70BモデルをQ4で（約35 GB）、Q5ではぎりぎり', gpu: '2枚のRTX 4090、RTX 6000 Ada' },
@@ -392,8 +393,8 @@ const HUB_VRAM_TIER_ROWS: Record<string, { vram: string; model: string; gpu: str
   zh: [
     { vram: '4 GB', model: 'Llama 3.2 3B 或 Phi-3.5-mini（约2 GB）', gpu: 'RTX 3050 4GB、GTX 1650' },
     { vram: '8 GB', model: 'Llama 3.1 8B 或 Qwen3 8B（约4-5 GB）', gpu: 'RTX 4060 Ti 8GB、RTX 3070' },
-    { vram: '12 GB', model: 'Qwen3 14B（约6.5 GB），或追求更高质量选7-8B的Q5/Q8', gpu: 'RTX 3060 12GB、RTX 4070' },
-    { vram: '16 GB', model: 'Qwen3 14B用Q5/Q8，或22B级别（约11 GB）', gpu: 'RTX 4060 Ti 16GB、RTX 4080' },
+    { vram: '12 GB', model: 'Qwen3 14B（约8.4 GB），或追求更高质量选7-8B的Q5/Q8', gpu: 'RTX 3060 12GB、RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14B用Q5/Q8，或22B级别（约13 GB）', gpu: 'RTX 4060 Ti 16GB、RTX 4080' },
     { vram: '24 GB', model: 'Qwen3.8-27B（约22 GB，消费级硬件综合最佳）', gpu: 'RTX 4090、RTX 3090' },
     { vram: '32 GB', model: '22-32B全精度运行，或作为双卡70B方案中的一张显卡', gpu: 'RTX 5090' },
     { vram: '48 GB', model: '70B模型用Q4（约35 GB），Q5则较为紧张', gpu: '2张RTX 4090、RTX 6000 Ada' },
@@ -401,8 +402,8 @@ const HUB_VRAM_TIER_ROWS: Record<string, { vram: string; model: string; gpu: str
   es: [
     { vram: '4 GB', model: 'Llama 3.2 3B o Phi-3.5-mini (~2 GB)', gpu: 'RTX 3050 4 GB, GTX 1650' },
     { vram: '8 GB', model: 'Llama 3.1 8B o Qwen3 8B (~4-5 GB)', gpu: 'RTX 4060 Ti 8 GB, RTX 3070' },
-    { vram: '12 GB', model: 'Qwen3 14B (~6.5 GB), o 7-8B en Q5/Q8 para mayor calidad', gpu: 'RTX 3060 12 GB, RTX 4070' },
-    { vram: '16 GB', model: 'Qwen3 14B en Q5/Q8, o clase 22B (~11 GB)', gpu: 'RTX 4060 Ti 16 GB, RTX 4080' },
+    { vram: '12 GB', model: 'Qwen3 14B (~8.4 GB), o 7-8B en Q5/Q8 para mayor calidad', gpu: 'RTX 3060 12 GB, RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14B en Q5/Q8, o clase 22B (~13 GB)', gpu: 'RTX 4060 Ti 16 GB, RTX 4080' },
     { vram: '24 GB', model: 'Qwen3.8-27B (~22 GB, mejor opción en hardware de consumo)', gpu: 'RTX 4090, RTX 3090' },
     { vram: '32 GB', model: '22-32B a máx. precisión, o 1 tarjeta de equipo doble-GPU 70B', gpu: 'RTX 5090' },
     { vram: '48 GB', model: 'Modelos 70B en Q4 (~35 GB), justo en Q5', gpu: '2x RTX 4090, RTX 6000 Ada' },
@@ -410,8 +411,8 @@ const HUB_VRAM_TIER_ROWS: Record<string, { vram: string; model: string; gpu: str
   pt: [
     { vram: '4 GB', model: 'Llama 3.2 3B ou Phi-3.5-mini (~2 GB)', gpu: 'RTX 3050 4 GB, GTX 1650' },
     { vram: '8 GB', model: 'Llama 3.1 8B ou Qwen3 8B (~4-5 GB)', gpu: 'RTX 4060 Ti 8 GB, RTX 3070' },
-    { vram: '12 GB', model: 'Qwen3 14B (~6,5 GB), ou 7-8B em Q5/Q8 para mais qualidade', gpu: 'RTX 3060 12 GB, RTX 4070' },
-    { vram: '16 GB', model: 'Qwen3 14B em Q5/Q8, ou classe 22B (~11 GB)', gpu: 'RTX 4060 Ti 16 GB, RTX 4080' },
+    { vram: '12 GB', model: 'Qwen3 14B (~8,4 GB), ou 7-8B em Q5/Q8 para mais qualidade', gpu: 'RTX 3060 12 GB, RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14B em Q5/Q8, ou classe 22B (~13 GB)', gpu: 'RTX 4060 Ti 16 GB, RTX 4080' },
     { vram: '24 GB', model: 'Qwen3.8-27B (~22 GB, melhor opção em hardware de consumo)', gpu: 'RTX 4090, RTX 3090' },
     { vram: '32 GB', model: '22-32B em precisão total, ou 1 placa de setup dual-GPU 70B', gpu: 'RTX 5090' },
     { vram: '48 GB', model: 'Modelos 70B em Q4 (~35 GB), no limite em Q5', gpu: '2x RTX 4090, RTX 6000 Ada' },
@@ -419,8 +420,8 @@ const HUB_VRAM_TIER_ROWS: Record<string, { vram: string; model: string; gpu: str
   ko: [
     { vram: '4 GB', model: 'Llama 3.2 3B 또는 Phi-3.5-mini (~2 GB)', gpu: 'RTX 3050 4GB, GTX 1650' },
     { vram: '8 GB', model: 'Llama 3.1 8B 또는 Qwen3 8B (~4-5 GB)', gpu: 'RTX 4060 Ti 8GB, RTX 3070' },
-    { vram: '12 GB', model: 'Qwen3 14B (~6.5 GB), 또는 고품질을 원하면 7-8B를 Q5/Q8로', gpu: 'RTX 3060 12GB, RTX 4070' },
-    { vram: '16 GB', model: 'Qwen3 14B를 Q5/Q8로, 또는 22B급 (~11 GB)', gpu: 'RTX 4060 Ti 16GB, RTX 4080' },
+    { vram: '12 GB', model: 'Qwen3 14B (~8.4 GB), 또는 고품질을 원하면 7-8B를 Q5/Q8로', gpu: 'RTX 3060 12GB, RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14B를 Q5/Q8로, 또는 22B급 (~13 GB)', gpu: 'RTX 4060 Ti 16GB, RTX 4080' },
     { vram: '24 GB', model: 'Qwen3.8-27B (~22 GB, 소비자 하드웨어 종합 최고)', gpu: 'RTX 4090, RTX 3090' },
     { vram: '32 GB', model: '22-32B를 완전한 정밀도로, 또는 듀얼 GPU 70B 구성의 카드 한 장으로', gpu: 'RTX 5090' },
     { vram: '48 GB', model: 'Q4에서 70B 모델 (~35 GB), Q5에서는 빠듯함', gpu: '2x RTX 4090, RTX 6000 Ada' },
@@ -428,8 +429,8 @@ const HUB_VRAM_TIER_ROWS: Record<string, { vram: string; model: string; gpu: str
   ar: [
     { vram: '⁨4 GB⁩', model: 'Llama 3.2 3B أو Phi-3.5-mini (⁨~2 GB⁩)', gpu: '⁨RTX 3050 4GB, GTX 1650⁩' },
     { vram: '⁨8 GB⁩', model: 'Llama 3.1 8B أو Qwen3 8B (⁨~4-5 GB⁩)', gpu: '⁨RTX 4060 Ti 8GB, RTX 3070⁩' },
-    { vram: '⁨12 GB⁩', model: 'Qwen3 14B (⁨~6.5 GB⁩)، أو 7-8B بجودة ⁨Q5/Q8⁩ لأداء أعلى', gpu: '⁨RTX 3060 12GB, RTX 4070⁩' },
-    { vram: '⁨16 GB⁩', model: 'Qwen3 14B بجودة ⁨Q5/Q8⁩، أو فئة 22B (⁨~11 GB⁩)', gpu: '⁨RTX 4060 Ti 16GB, RTX 4080⁩' },
+    { vram: '⁨12 GB⁩', model: 'Qwen3 14B (⁨~8.4 GB⁩)، أو 7-8B بجودة ⁨Q5/Q8⁩ لأداء أعلى', gpu: '⁨RTX 3060 12GB, RTX 4070⁩' },
+    { vram: '⁨16 GB⁩', model: 'Qwen3 14B بجودة ⁨Q5/Q8⁩، أو فئة 22B (⁨~13 GB⁩)', gpu: '⁨RTX 4060 Ti 16GB, RTX 4080⁩' },
     { vram: '⁨24 GB⁩', model: 'Qwen3.8-27B (⁨~22 GB⁩، الأفضل عمومًا على أجهزة المستهلكين)', gpu: '⁨RTX 4090, RTX 3090⁩' },
     { vram: '⁨32 GB⁩', model: '22-32B بدقة كاملة، أو بطاقة واحدة في نظام مزدوج ⁨GPU⁩ لـ70B', gpu: '⁨RTX 5090⁩' },
     { vram: '⁨48 GB⁩', model: 'نماذج 70B بجودة ⁨Q4⁩ (⁨~35 GB⁩)، بالكاد عند ⁨Q5⁩', gpu: '⁨2x RTX 4090, RTX 6000 Ada⁩' },
@@ -2352,6 +2353,39 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
             )}
           </div>
         </section>
+
+        {/* Practical answers: largest model, 16 GB quantization, mid-range PC, low-RAM RAG */}
+        {(HUB_PRACTICAL_SECTIONS[lang] ?? HUB_PRACTICAL_SECTIONS['en']).map(section => (
+          <section key={section.id} id={section.id} className="mb-16 scroll-mt-24">
+            <h2 className="text-2xl font-bold text-text-primary mb-3">{section.heading}</h2>
+            <p className="text-sm text-text-secondary mb-6 max-w-2xl leading-relaxed">
+              {renderDescription(section.intro, lang)}
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="border-b border-primary/20">
+                    {section.cols.map(col => (
+                      <th key={col} className="text-left py-1.5 sm:py-2 pr-4 text-xs font-bold text-text-secondary uppercase tracking-wide">{col}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {section.rows.map((row, i) => (
+                    <tr key={i} className="border-b border-primary/10 hover:bg-primary/3">
+                      {row.map((cell, j) => (
+                        <td key={j} className={`py-1.5 sm:py-2.5 pr-4 ${j === 0 ? 'font-medium text-text-primary' : 'text-text-secondary'}`}>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-text-secondary mt-4 max-w-2xl leading-relaxed">
+              {renderDescription(section.outro, lang)}
+            </p>
+          </section>
+        ))}
 
         {/* Ollama vs LM Studio vs Jan.ai */}
         <section className="mb-16">
