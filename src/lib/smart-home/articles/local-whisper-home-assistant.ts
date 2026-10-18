@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'Local Speech-to-Text for Smart Homes: Whisper + HA (2026)',
     heroImage: '/images/local-whisper-home-assistant-overview-hero-en.webp',
-    seoTitle: 'Home Assistant Whisper: faster-whisper vs whisper.cpp',
+    seoTitle: 'Home Assistant Whisper: Local Speech-to-Text Setup',
     intro:
       'Home Assistant\'s Whisper app gives Assist private speech-to-text over the Wyoming protocol, with no cloud. This guide covers faster-whisper vs whisper.cpp for Home Assistant, model sizes and memory, what the published speed numbers do and do not show, Piper for text-to-speech, and why MacWhisper is a desktop app rather than a Home Assistant component.',
     metaDescription:
@@ -334,7 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'تحويل الكلام إلى نص محليًا للمنازل الذكية: ⁨Whisper + HA⁩ (⁨2026⁩)',
     heroImage: '/images/local-whisper-home-assistant-overview-hero-ar.webp',
-    seoTitle: 'HA وWhisper: faster-whisper مقابل whisper.cpp',
+    seoTitle: 'Home Assistant Whisper: التعرف على الكلام محليًا',
     intro:
       'يمنح تطبيق Whisper في Home Assistant خدمة Assist تحويلًا خاصًا للكلام إلى نص عبر بروتوكول Wyoming دون سحابة. يتناول هذا الدليل المقارنة بين faster-whisper وwhisper.cpp في Home Assistant، وأحجام النماذج والذاكرة، وما تُظهره أرقام السرعة المنشورة وما لا تُظهره، وPiper لتحويل النص إلى كلام، ولماذا يُعدّ MacWhisper تطبيق سطح مكتب وليس مكوّنًا من Home Assistant.',
     metaDescription:
@@ -658,7 +658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'Lokales Sprache-zu-Text fürs Smart Home: Whisper + HA (2026)',
     heroImage: '/images/local-whisper-home-assistant-overview-hero-de.webp',
-    seoTitle: 'Home Assistant Whisper: faster-whisper vs whisper.cpp',
+    seoTitle: 'Home Assistant Whisper: Lokale Spracherkennung einrichten',
     intro:
       'Die Whisper-App von Home Assistant liefert Assist privates Sprache-zu-Text über das Wyoming-Protokoll, ohne Cloud. Dieser Leitfaden behandelt faster-whisper vs whisper.cpp für Home Assistant, Modellgrößen und Speicherbedarf, was veröffentlichte Geschwindigkeitszahlen zeigen und was nicht, Piper für Text-to-Speech und warum MacWhisper eine Desktop-App und keine Home-Assistant-Komponente ist.',
     metaDescription:
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'Voz-a-Texto Local para Smart Homes: Whisper + HA (2026)',
     heroImage: '/images/local-whisper-home-assistant-overview-hero-es.webp',
-    seoTitle: 'Home Assistant Whisper: faster-whisper vs whisper.cpp',
+    seoTitle: 'Home Assistant Whisper: reconocimiento de voz local',
     intro:
       'La app Whisper de Home Assistant da a Assist voz-a-texto privado mediante el protocolo Wyoming, sin nube. Esta guía cubre faster-whisper vs whisper.cpp para Home Assistant, tamaños de modelo y memoria, qué muestran y qué no las cifras de velocidad publicadas, Piper para texto-a-voz y por qué MacWhisper es una app de escritorio y no un componente de Home Assistant.',
     metaDescription:
@@ -1306,7 +1306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI & LLMs in the Smart Home',
     title: '스마트 홈용 로컬 음성→텍스트: Whisper + HA (2026)',
     heroImage: '/images/local-whisper-home-assistant-overview-hero-ko.webp',
-    seoTitle: 'HA용 faster-whisper vs whisper.cpp',
+    seoTitle: 'Home Assistant Whisper: 로컬 음성 인식 설정',
     intro:
       'Home Assistant의 Whisper 앱은 클라우드 없이 Wyoming 프로토콜로 Assist에 비공개 음성→텍스트 변환을 제공합니다. 이 가이드는 Home Assistant용 faster-whisper와 whisper.cpp 비교, 모델 크기와 메모리, 공개된 속도 수치가 보여 주는 것과 보여 주지 못하는 것, 텍스트→음성용 Piper, 그리고 MacWhisper가 Home Assistant 구성 요소가 아니라 데스크톱 앱인 이유를 다룹니다.',
     metaDescription:
@@ -1630,7 +1630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'Reconnaissance Vocale Locale pour la Maison Connectée : Whisper + HA (2026)',
     heroImage: '/images/local-whisper-home-assistant-overview-hero-fr.webp',
-    seoTitle: 'Home Assistant Whisper : faster-whisper vs whisper.cpp',
+    seoTitle: 'Home Assistant Whisper : reconnaissance vocale locale',
     intro:
       'L’app Whisper de Home Assistant offre à Assist une reconnaissance vocale privée via le protocole Wyoming, sans cloud. Ce guide couvre faster-whisper vs whisper.cpp pour Home Assistant, les tailles de modèle et la mémoire, ce que les chiffres de vitesse publiés montrent ou non, Piper pour la synthèse vocale, et pourquoi MacWhisper est une app de bureau et non un composant de Home Assistant.',
     metaDescription:
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'スマートホーム向けのローカル音声認識：Whisper + HA（2026）',
     heroImage: '/images/local-whisper-home-assistant-overview-hero-ja.webp',
-    seoTitle: 'faster-whisper と whisper.cpp：HA',
+    seoTitle: 'Home Assistant Whisper：ローカル音声認識の設定',
     intro:
       'Home Assistant の Whisper アプリは、クラウドなしで Wyoming プロトコル経由の非公開な音声認識を Assist に提供します。本ガイドでは、Home Assistant 向けの faster-whisper と whisper.cpp の違い、モデルサイズとメモリ、公開された速度の数値が示すことと示さないこと、音声合成の Piper、そして MacWhisper が Home Assistant の部品ではなくデスクトップアプリである理由を扱います。',
     metaDescription:
@@ -2278,7 +2278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI & LLMs in the Smart Home',
     title: 'Voz-para-Texto Local para Casas Inteligentes: Whisper + HA (2026)',
     heroImage: '/images/local-whisper-home-assistant-overview-hero-pt.webp',
-    seoTitle: 'Home Assistant Whisper: faster-whisper vs whisper.cpp',
+    seoTitle: 'Home Assistant Whisper: reconhecimento de voz local',
     intro:
       'O app Whisper do Home Assistant dá ao Assist voz-para-texto privado pelo protocolo Wyoming, sem nuvem. Este guia cobre faster-whisper vs whisper.cpp no Home Assistant, tamanhos de modelo e memória, o que os números de velocidade publicados mostram ou não, Piper para texto-para-voz e por que o MacWhisper é um app de desktop e não um componente do Home Assistant.',
     metaDescription:
@@ -2602,7 +2602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Local AI & LLMs in the Smart Home',
     title: '智能家居的本地语音转文字：Whisper + HA（2026）',
     heroImage: '/images/local-whisper-home-assistant-overview-hero-zh.webp',
-    seoTitle: 'HA：faster-whisper 对比 whisper.cpp',
+    seoTitle: 'Home Assistant Whisper：本地语音识别设置',
     intro:
       'Home Assistant 的 Whisper 应用通过 Wyoming 协议为 Assist 提供私密的本地语音识别，无需云端。本指南涵盖 Home Assistant 中 faster-whisper 与 whisper.cpp 的对比、模型大小与内存、已发布速度数据能说明与不能说明的内容、用于语音合成的 Piper，以及为什么 MacWhisper 是桌面应用而不是 Home Assistant 组件。',
     metaDescription:
