@@ -39289,7 +39289,7 @@
     "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
     "excerpt": "Snug Protocol is an early open protocol for AI-built apps kept in a portable .snug file: how it works, local models, security design and what is unproven.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-18",
     "url": "/power-local-llm/snug-protocol-review",
     "cluster": "power-local-llm"
   },
@@ -39298,7 +39298,7 @@
     "title": "Snug Protocol: Portable, KI-erstellte persönliche Apps erklärt",
     "excerpt": "Snug Protocol: frühes offenes Protokoll für KI-erstellte Apps in einer portablen .snug-Datei. Funktionsweise, lokale Modelle, Sicherheit, offene Fragen.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-18",
     "url": "/de/power-local-llm/snug-protocol-review",
     "cluster": "power-local-llm"
   },
@@ -39307,7 +39307,7 @@
     "title": "Snug Protocol : applications personnelles portables créées par IA, expliquées",
     "excerpt": "Snug Protocol est un protocole ouvert récent pour des applications créées par IA, stockées dans un fichier .snug portable : fonctionnement, limites.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-18",
     "url": "/fr/power-local-llm/snug-protocol-review",
     "cluster": "power-local-llm"
   },
@@ -39316,7 +39316,7 @@
     "title": "Snug Protocol解説:持ち運べるAI製の個人用アプリ",
     "excerpt": "Snug Protocolは、AI製アプリを持ち運べる.snugファイルに保存する初期のオープンプロトコルです。仕組み、ローカルモデル、セキュリティ設計、未検証の点を解説します。",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-18",
     "url": "/ja/power-local-llm/snug-protocol-review",
     "cluster": "power-local-llm"
   },
@@ -39325,7 +39325,7 @@
     "title": "Snug Protocol 详解:可移植的 AI 构建个人应用",
     "excerpt": "Snug Protocol 是早期开放协议,让 AI 构建的应用保存在可移植的 .snug 文件中。本文介绍其工作方式、本地模型、安全设计及未经证实之处。",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-18",
     "url": "/zh/power-local-llm/snug-protocol-review",
     "cluster": "power-local-llm"
   },
@@ -39334,7 +39334,7 @@
     "title": "Snug Protocol: apps personales portátiles creadas con IA, explicado",
     "excerpt": "Snug Protocol es un protocolo abierto y temprano para apps creadas con IA en un archivo .snug portátil: cómo funciona, modelos locales, seguridad y dudas.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-18",
     "url": "/es/power-local-llm/snug-protocol-review",
     "cluster": "power-local-llm"
   },
@@ -39343,7 +39343,7 @@
     "title": "Snug Protocol: apps pessoais portáteis criados por IA, explicados",
     "excerpt": "Snug Protocol: protocolo aberto e recente para apps criados por IA em um arquivo .snug portátil. Como funciona, segurança e o que não está provado.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-18",
     "url": "/pt/power-local-llm/snug-protocol-review",
     "cluster": "power-local-llm"
   },
@@ -39352,7 +39352,7 @@
     "title": "Snug Protocol: تطبيقات شخصية محمولة يبنيها الذكاء الاصطناعي، شرح مفصّل",
     "excerpt": "Snug Protocol بروتوكول مفتوح ناشئ لتطبيقات يبنيها الذكاء الاصطناعي في ملف .snug محمول: طريقة عمله والنماذج المحلية وتصميم الأمان وما لم يثبت.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-18",
     "url": "/ar/power-local-llm/snug-protocol-review",
     "cluster": "power-local-llm"
   },
@@ -39361,7 +39361,7 @@
     "title": "Snug Protocol: 이식 가능한 AI 제작 개인 앱 해설",
     "excerpt": "Snug Protocol은 이식 가능한 .snug 파일에 담는 AI 제작 앱을 위한 초기 개방형 프로토콜입니다. 작동 방식, 로컬 모델, 보안 설계, 미검증 사항을 정리했습니다.",
     "publishDate": "2026-10-17",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-18",
     "url": "/ko/power-local-llm/snug-protocol-review",
     "cluster": "power-local-llm"
   },
@@ -63020,81 +63020,81 @@
   {
     "lang": "en",
     "title": "Smart Home for Beginners: Where to Start in 2026",
-    "excerpt": "Start a smart home the right way: pick a hub, begin with one room, add local-capable devices, automate, then expand. A practical 2026 beginner's path.",
+    "excerpt": "New to smart homes? See what you need, how to choose a hub, and how to set up one room with local-capable devices and simple automations.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/smart-home/smart-home-for-beginners-where-to-start",
     "cluster": "smart-home"
   },
   {
     "lang": "de",
     "title": "Smart Home für Einsteiger: Wo Sie 2026 starten",
-    "excerpt": "Smart Home richtig starten 2026: Hub wählen, einen Raum einrichten, lokal-fähige Geräte hinzufügen und automatisieren. Praktischer Einsteiger-Weg.",
+    "excerpt": "Neu im Smart Home? Was Sie brauchen, wie Sie einen Hub wählen und einen Raum mit lokal-fähigen Geräten und einfachen Automatisierungen einrichten.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/de/smart-home/smart-home-for-beginners-where-to-start",
     "cluster": "smart-home"
   },
   {
     "lang": "fr",
     "title": "Maison Connectée pour Débutants : Par Où Commencer en 2026",
-    "excerpt": "Démarrer une maison connectée en 2026 : choisir un hub, une pièce, des appareils locaux, automatiser puis étendre. Parcours pratique pour débutants.",
+    "excerpt": "Débutant en maison connectée ? Ce qu'il faut, comment choisir un hub et configurer une pièce avec des appareils locaux et des automatisations simples.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/fr/smart-home/smart-home-for-beginners-where-to-start",
     "cluster": "smart-home"
   },
   {
     "lang": "ja",
     "title": "スマートホーム初心者：2026年 どこから始めるか",
-    "excerpt": "スマートホームを2026年に正しく始める方法を解説：ハブの選び方、まず一部屋から始める手順、ローカル対応機器の追加方法、自動化ルーティンの設定から段階的な拡張まで実践的に紹介します。",
+    "excerpt": "スマートホーム初心者向けに、必要なもの、ハブの選び方、ローカル対応機器を使った一部屋のセットアップと簡単な自動化の始め方を解説します。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/ja/smart-home/smart-home-for-beginners-where-to-start",
     "cluster": "smart-home"
   },
   {
     "lang": "zh",
     "title": "智能家居新手：2026 从何处开始",
-    "excerpt": "2026年智能家居入门完整指南：从挑选中枢控制器到布置第一个房间，添加支持本地运行的设备，配置自动化场景，再到系统扩展，一步步带你搭建私密可靠的本地优先智能家居。",
+    "excerpt": "智能家居新手入门：了解需要准备什么、如何选择中枢，以及如何用支持本地的设备和简单自动化搭建第一个房间。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/zh/smart-home/smart-home-for-beginners-where-to-start",
     "cluster": "smart-home"
   },
   {
     "lang": "es",
     "title": "Smart Home para Principiantes: Por Dónde Empezar en 2026",
-    "excerpt": "Empieza un smart home en 2026: elige hub, monta una habitación, añade dispositivos locales, automatiza y amplía. Guía práctica para principiantes.",
+    "excerpt": "¿Nuevo en smart home? Descubre qué necesitas, cómo elegir un hub y cómo montar una habitación con dispositivos locales y automatizaciones simples.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/es/smart-home/smart-home-for-beginners-where-to-start",
     "cluster": "smart-home"
   },
   {
     "lang": "pt",
     "title": "Casa Inteligente para Iniciantes: Por Onde Começar em 2026",
-    "excerpt": "Comece uma casa inteligente em 2026: escolha um hub, configure um cômodo, adicione dispositivos locais, automatize e expanda. Caminho prático para iniciantes.",
+    "excerpt": "Novo em casa inteligente? Veja o que você precisa, como escolher um hub e como montar um cômodo com dispositivos locais e automações simples.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/pt/smart-home/smart-home-for-beginners-where-to-start",
     "cluster": "smart-home"
   },
   {
     "lang": "ar",
     "title": "المنزل الذكي للمبتدئين: من أين تبدأ في ⁨2026⁩",
-    "excerpt": "5 خطوات لبدء منزل ذكي في 2026: اختر مركزًا، ابدأ بغرفة، أضِف أجهزة Zigbee محلية، أتمِت روتينًا ثم وسِّع. مسار عملي يتجنب أخطاء المبتدئين.",
+    "excerpt": "جديد على المنازل الذكية؟ تعرّف على ما تحتاجه، وكيف تختار مركزًا، وكيف تجهّز غرفة واحدة بأجهزة ذات قدرة محلية وأتمتات بسيطة. دليل عملي للمبتدئين.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/ar/smart-home/smart-home-for-beginners-where-to-start",
     "cluster": "smart-home"
   },
   {
     "lang": "ko",
     "title": "스마트홈 입문: 2026년 시작 방법 완전 가이드",
-    "excerpt": "스마트홈 2026 시작하기: 허브 선택, 한 방 구성, 로컬 기기 추가, 자동화 설정, 확장. 입문자를 위한 실용 가이드.",
+    "excerpt": "스마트홈이 처음이라면? 필요한 준비물, 허브 고르는 법, 로컬 지원 기기와 간단한 자동화로 한 방을 구성하는 방법을 안내합니다.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/ko/smart-home/smart-home-for-beginners-where-to-start",
     "cluster": "smart-home"
   },
@@ -63508,7 +63508,7 @@
     "title": "Building a GDPR-Friendly Private Smart Home (EU, 2026)",
     "excerpt": "Build a GDPR-friendly private smart home: data residency, no cloud processing, local voice and AI. An EU guide to keeping connected-home data on your hardware.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/smart-home/private-smart-home-gdpr",
     "cluster": "smart-home"
   },
@@ -63517,7 +63517,7 @@
     "title": "Ein DSGVO-freundliches privates Smart Home bauen (EU, 2026)",
     "excerpt": "DSGVO-freundliches privates Smart Home 2026: Datenresidenz, keine Cloud-Verarbeitung, lokale Sprache und KI. EU-Leitfaden für Datenschutz by Design.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/de/smart-home/private-smart-home-gdpr",
     "cluster": "smart-home"
   },
@@ -63526,7 +63526,7 @@
     "title": "Construire une Maison Connectée Privée Conforme au RGPD (UE, 2026)",
     "excerpt": "Maison connectée privée conforme au RGPD 2026 : résidence des données, zéro cloud, voix et IA locales. Guide UE pour garder les données du foyer chez vous.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/fr/smart-home/private-smart-home-gdpr",
     "cluster": "smart-home"
   },
@@ -63535,7 +63535,7 @@
     "title": "GDPR に配慮したプライベートなスマートホームを作る（EU・2026）",
     "excerpt": "GDPR準拠のプライベートスマートホーム（2026年）：すべてのデータを自宅のハードウェアで管理し、クラウド処理を一切使わずローカル音声認識とAIを活用。EUのプライバシー規制に対応したスマートホーム構築の完全ガイド。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/ja/smart-home/private-smart-home-gdpr",
     "cluster": "smart-home"
   },
@@ -63544,7 +63544,7 @@
     "title": "构建符合 GDPR 的私密智能家居（欧盟，2026）",
     "excerpt": "构建完全符合GDPR规范的私密智能家居（2026年）：所有数据完全本地化存储、零云端处理、支持本地语音识别与AI功能。专为欧盟用户设计的智能家居隐私合规与数据主权完整实施指南。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/zh/smart-home/private-smart-home-gdpr",
     "cluster": "smart-home"
   },
@@ -63553,7 +63553,7 @@
     "title": "Construir un Smart Home Privado Compatible con el RGPD (UE, 2026)",
     "excerpt": "Smart home privado compatible con el RGPD 2026: residencia de datos, sin nube, voz e IA locales. Guía UE para datos del hogar siempre en tu hardware.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/es/smart-home/private-smart-home-gdpr",
     "cluster": "smart-home"
   },
@@ -63562,7 +63562,7 @@
     "title": "Construir uma Casa Inteligente Privada Compatível com GDPR/LGPD (2026)",
     "excerpt": "Smart home privada compatível com GDPR 2026: residência de dados, sem nuvem, voz e IA locais. Guia para manter dados do lar no seu hardware.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/pt/smart-home/private-smart-home-gdpr",
     "cluster": "smart-home"
   },
@@ -63571,7 +63571,7 @@
     "title": "بناء منزل ذكي خاص ومتوافق مع اللائحة الأوروبية لحماية البيانات ⁨GDPR⁩ (الاتحاد الأوروبي، ⁨2026⁩)",
     "excerpt": "GDPR والمنزل الذكي 2026: المعالجة المحلية تُبقي البيانات في منزلك — لا معالج سحابي، لا نقل بيانات خارجي. دليل الاتحاد الأوروبي لإعداد خاص.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-18",
     "url": "/ar/smart-home/private-smart-home-gdpr",
     "cluster": "smart-home"
   },
@@ -63580,7 +63580,7 @@
     "title": "개인정보 보호법(PIPA) 준수 프라이빗 스마트홈 구축 가이드 (한국, 2026)",
     "excerpt": "개인정보 보호법 준수 프라이빗 스마트홈 2026: 데이터 상주, 클라우드 없음, 로컬 음성·AI. 홈 데이터를 항상 내 하드웨어에 보관하는 한국 가이드.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-18",
     "url": "/ko/smart-home/private-smart-home-gdpr",
     "cluster": "smart-home"
   },

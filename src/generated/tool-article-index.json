@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "snug-protocol-review",
+        "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
+        "url": "/power-local-llm/snug-protocol-review",
+        "dateModified": "2026-10-18",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-ai-coding-assistant-local-llm",
         "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
@@ -70,14 +78,6 @@
         "slug": "qwen-vs-llama-vs-mistral",
         "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
         "url": "/local-llms/qwen-vs-llama-vs-mistral",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "top-open-source-models-ollama",
-        "title": "Ollama Latest Version 2026: v0.40.5 + Best Models by Use Case",
-        "url": "/local-llms/top-open-source-models-ollama",
         "dateModified": "2026-10-17",
         "tier": "about"
       }
@@ -3682,7 +3682,7 @@
         "slug": "snug-protocol-review",
         "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
         "url": "/power-local-llm/snug-protocol-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-10-18",
         "tier": "mentioned"
       },
       {
@@ -3760,7 +3760,7 @@
         "slug": "snug-protocol-review",
         "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
         "url": "/power-local-llm/snug-protocol-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-10-18",
         "tier": "mentioned"
       },
       {
@@ -9686,7 +9686,7 @@
         "slug": "snug-protocol-review",
         "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
         "url": "/power-local-llm/snug-protocol-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-10-18",
         "tier": "mentioned"
       },
       {
@@ -10685,6 +10685,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "snug-protocol-review",
+        "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
+        "url": "/power-local-llm/snug-protocol-review",
+        "dateModified": "2026-10-18",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "transcriptionsuite-review",
         "title": "TranscriptionSuite Review: Free Local Speech-to-Text with Speaker Labels",
         "url": "/power-local-llm/transcriptionsuite-review",
@@ -10744,14 +10752,6 @@
         "slug": "easy-diffusion-review",
         "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
         "url": "/power-local-llm/easy-diffusion-review",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "firecrawl-review",
-        "title": "Firecrawl Review: Open-Source Web Data API for LLM Pipelines",
-        "url": "/power-local-llm/firecrawl-review",
         "dateModified": "2026-10-17",
         "tier": "mentioned"
       }
@@ -11578,7 +11578,7 @@
         "slug": "snug-protocol-review",
         "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
         "url": "/power-local-llm/snug-protocol-review",
-        "dateModified": "2026-10-17",
+        "dateModified": "2026-10-18",
         "tier": "about"
       }
     ],
