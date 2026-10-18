@@ -1,0 +1,41 @@
+window,query,clicks,impressions,ctr_pct,position
+28d,whisper.cpp,4,1378,0.29,8.64
+28d,faster-whisper,7,951,0.74,8.43
+28d,faster whisper,3,643,0.47,8.51
+28d,macwhisper,7,1011,0.69,6.09
+28d,piper tts,11,451,2.44,7.91
+28d,whisper home assistant,4,169,2.37,6.25
+28d,home assistant whisper,2,116,1.72,6.73
+28d,home assistant vs google home,2,329,0.61,6.12
+28d,alexa vs google home,2,298,0.67,8.19
+28d,home assistant vs alexa,6,135,4.44,4.44
+28d,best mini pc for local llm,8,122,6.56,2.34
+28d,mini pc for local llm,5,121,4.13,3.16
+28d,mini pc for llm,not in top-1000 sheet,,,
+28d,uncensored llm,8,182,4.4,5.91
+28d,nsfw llm,109,1202,9.07,5.18
+28d,llm nsfw,31,264,11.74,5.41
+28d,best nsfw llm,10,251,3.98,4.86
+28d,erotic llm,19,92,20.65,2.4
+28d,llm uncensored,3,68,4.41,7.53
+28d,locally uncensored,133,14859,0.9,5.21
+3mo,whisper.cpp,7,1915,0.37,8.58
+3mo,faster-whisper,7,1139,0.61,9.93
+3mo,faster whisper,5,836,0.6,9.72
+3mo,macwhisper,7,1036,0.68,6.17
+3mo,piper tts,12,521,2.3,8.35
+3mo,whisper home assistant,9,468,1.92,6.67
+3mo,home assistant whisper,8,329,2.43,6.88
+3mo,home assistant vs google home,10,1154,0.87,6.56
+3mo,alexa vs google home,8,677,1.18,9.19
+3mo,home assistant vs alexa,12,379,3.17,4.49
+3mo,best mini pc for local llm,18,484,3.72,2.48
+3mo,mini pc for local llm,32,435,7.36,3.18
+3mo,mini pc for llm,29,294,9.86,2.85
+3mo,uncensored llm,29,551,5.26,6.73
+3mo,nsfw llm,135,1486,9.08,5.45
+3mo,llm nsfw,34,327,10.4,5.64
+3mo,best nsfw llm,12,308,3.9,4.85
+3mo,erotic llm,51,255,20.0,2.68
+3mo,llm uncensored,16,250,6.4,6.7
+3mo,locally uncensored,148,16568,0.89,5.25
