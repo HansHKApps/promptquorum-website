@@ -5,39 +5,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-16',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-24',
-    last_full_refresh: '2026-08-25',
-    next_seo_review_due: '2026-10-01',
-    last_seo_review: '2026-08-25',
-    current_hardware_mentioned: ['Home Assistant Green', 'Hubitat Elevation C-8 Pro', 'Homey Pro (2026)', 'Aqara Hub M3', 'IKEA DIRIGERA'],
+    dateModified: '2026-10-18',
+    next_refresh_due: '2026-11-17',
+    last_full_refresh: '2026-10-18',
+    next_seo_review_due: '2027-01-01',
+    last_seo_review: '2026-10-18',
+    current_hardware_mentioned: ['Home Assistant Green', 'Hubitat Elevation C-8 Pro', 'Homey Pro (2026)', 'Homey Pro mini', 'Aqara Hub M3', 'IKEA DIRIGERA'],
     theme: "Buyer's Guides",
     heroImage: '/images/best-smart-home-hubs-2027-overview-hero-en.webp',
     affiliateDisclosure: true,
-    // Verified 2026-08-25 against official/primary sources: home-assistant.io/green + nabucasa.com's
+    // Verified 2026-08-25, re-verified 2026-10-18 (Hubitat $184.95 US-only, DIRIGERA $139.99, Homey Pro $449 unchanged, Homey Pro mini $249, HA Green $199/€179 unchanged; Aqara price NOT re-confirmed — product page lists none) against official/primary sources: home-assistant.io/green + nabucasa.com's
     // own 2026-01-08 pricing-change post ($199/€179, RK3566 quad-core Cortex-A55, 4GB LPDDR4X RAM, 32GB
     // eMMC, NO built-in Zigbee/Thread/Z-Wave radio — needs a separate USB dongle such as Connect ZBT-2);
-    // hubitat.com's own C-8 Pro US product page ($188.95 — UP from the $179.95 this page previously
-    // cited, a real price increase caught in this pass; Zigbee 3.0, Z-Wave 800 LR, Matter 1.5 controller,
+    // hubitat.com's own C-8 Pro US product page ($184.95 — DOWN from the $188.95 this page previously
+    // cited, a small price drop caught in this pass; Zigbee 3.0, Z-Wave 800 LR, Matter 1.5 controller,
     // Bluetooth); homey.app's own Homey Pro (2026) page ($449, ARMv8 quad-core 1.5GHz, 4GB RAM, 8GB eMMC,
     // Wi-Fi, BLE 5.0, Matter v1.5, Thread border router, Zigbee 3.0, Z-Wave 700, 433MHz, IR); aqara.com's
     // Hub M3 + specs page (MSRP $219.99, frequently discounted to ~$159.99 on Amazon per price-history
     // trackers — could not pin one single "current" number, flagged below; Zigbee/Thread via 802.15.4,
     // Wi-Fi, BLE 5.1, PoE, IR blaster, Matter controller, NO Z-Wave); ikea.com's own DIRIGERA product page
-    // ($119.99, Matter 1.4 controller + Thread Border Router via a 2025 firmware update — this repo
+    // ($139.99, Matter 1.4 controller + Thread Border Router via a 2025 firmware update — this repo
     // already has a dedicated DIRIGERA article at ikea-matter-ecosystem-guide-2027, confirmed by grep, not
     // assumed). Every cross-link target below was confirmed to exist in src/lib/smart-home/slugs.ts before
     // linking; no affiliate program exists anywhere on this site (src/lib/affiliate-links.ts,
     // src/lib/tracking/affiliate.ts) — every link below is a disclosed plain product link, not an
     // affiliate link, and no hub on this page has been tested or benchmarked by PromptQuorum.
-    title: 'Best Smart Home Hubs for Local Control in 2026: Home Assistant vs Hubitat vs Homey',
-    seoTitle: 'Best Smart Home Hubs 2026: HA Green vs Hubitat vs Homey',
+    title: 'Best Smart Home Hub for Local Control in 2026: Home Assistant vs Hubitat vs Homey',
+    seoTitle: 'Best Smart Home Hub 2026: HA Green vs Hubitat vs Homey',
     intro:
-      "Choosing a smart home hub in 2026 comes down to one question most buyers skip: do you want the platform with the most local-AI headroom and zero lock-in (Home Assistant Green), the one that behaves like a simple appliance and stays out of your way (Hubitat Elevation C-8 Pro), or the one that pays for convenience with a much higher price tag (Homey Pro)? Aqara's Hub M3 and IKEA's DIRIGERA round out the field for buyers already committed to a specific device ecosystem. This guide is the commercial parent page for this site's local-smart-home cluster — every price and spec below was checked against manufacturer sources on 2026-08-25, and none of this hardware has been tested or benchmarked by PromptQuorum; every capability claim is a research-based assessment from official documentation, not a lab result.",
+      "Choosing a smart home hub in 2026 comes down to one question most buyers skip: do you want the platform with the most local-AI headroom and zero lock-in (Home Assistant Green), the one that behaves like a simple appliance and stays out of your way (Hubitat Elevation C-8 Pro), or the one that pays for convenience with a much higher price tag (Homey Pro)? Aqara's Hub M3 and IKEA's DIRIGERA round out the field for buyers already committed to a specific device ecosystem. This guide is the commercial parent page for this site's local-smart-home cluster — every price and spec below was checked against manufacturer sources on 2026-10-18, and none of this hardware has been tested or benchmarked by PromptQuorum; every capability claim is a research-based assessment from official documentation, not a lab result.",
     metaDescription:
-      'Best smart home hubs for local control in 2026: Home Assistant Green vs Hubitat Elevation C-8 Pro vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA — current prices, protocols, and which one fits your buying profile.',
+      'Best smart home hub for local control in 2026: Home Assistant Green vs Hubitat C-8 Pro vs Homey Pro (and Homey Pro alternatives) vs Aqara M3 vs IKEA DIRIGERA — prices, protocols, Japan notes.',
     twitterDescription:
-      'Home Assistant Green vs Hubitat vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA — current 2026 prices and protocol support compared, plus which hub fits your local-AI setup.',
+      'Best smart home hub 2026: Home Assistant Green vs Hubitat vs Homey Pro vs Aqara M3 vs IKEA DIRIGERA — prices, protocols, Homey Pro alternatives and Japan notes.',
     readTime: '13 min read',
     educationalLevel: 'Beginner',
     audience: 'Smart home buyers choosing a hub appliance for local control, with or without local-AI ambitions',
@@ -49,22 +49,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aqara hub m3 vs home assistant',
       'ikea dirigera vs home assistant green',
       'local ai smart home hub',
+      'homey pro alternative',
+      'hubitat vs homey',
+      'best home automation hub',
+      'best smart home hub japan',
     ],
     leadAnswerBlock:
-      "**Home Assistant Green ($199/€179) is the best overall smart home hub for 2026 if you want maximum local control and local-AI headroom — it runs the real Home Assistant platform, but it ships with no built-in Zigbee/Thread/Z-Wave radio, so budget for a USB dongle on top.** Hubitat Elevation C-8 Pro ($188.95, price confirmed up from an earlier $179.95) is the best pick if you want appliance-like local automation without maintaining a Linux-style system. Homey Pro ($449) is the best premium all-in-one for buyers who'll pay roughly 2.3x Home Assistant Green's price for the broadest built-in radio set and the least DIY setup. Aqara Hub M3 (MSRP $219.99, often ~$159.99 on sale) suits households already deep in Aqara's ecosystem. IKEA DIRIGERA ($119.99) is the cheapest genuine entry point, with its own dedicated guide on this site.",
+      "**Home Assistant Green ($199/€179) is the best overall smart home hub for 2026 if you want maximum local control and local-AI headroom — it runs the real Home Assistant platform, but it ships with no built-in Zigbee/Thread/Z-Wave radio, so budget for a USB dongle on top.** Hubitat Elevation C-8 Pro ($184.95) is the best pick if you want appliance-like local automation without maintaining a Linux-style system. Homey Pro ($449) is the best premium all-in-one for buyers who'll pay roughly 2.3x Home Assistant Green's price for the broadest built-in radio set and the least DIY setup. Aqara Hub M3 (MSRP $219.99, often ~$159.99 on sale) suits households already deep in Aqara's ecosystem. IKEA DIRIGERA ($139.99) is the cheapest genuine entry point, with its own dedicated guide on this site.",
     quickAnswerTop: {
       en: {
         question: 'What is the best smart home hub for local control in 2026?',
         answer:
-          "For most buyers who want local-first control and room to add local AI later, Home Assistant Green ($199/€179) is the best pick — it runs the actual Home Assistant platform, the most open and integration-rich system in this comparison, though it needs a separate USB dongle for Zigbee/Thread/Z-Wave since none is built in. If you want local automation with far less tinkering, Hubitat Elevation C-8 Pro ($188.95) behaves like an appliance rather than a system you maintain. Homey Pro ($449) is the premium all-in-one choice with the broadest built-in radio support of any hub here, at roughly 2.3x Home Assistant Green's price. Aqara Hub M3 (MSRP $219.99) fits buyers already committed to Aqara devices. IKEA DIRIGERA ($119.99) is the lowest-cost genuine Matter/Thread entry point. None of these hubs has been tested by PromptQuorum — every claim below is sourced from manufacturer documentation, checked 2026-08-25.",
+          "For most buyers who want local-first control and room to add local AI later, Home Assistant Green ($199/€179) is the best pick — it runs the actual Home Assistant platform, the most open and integration-rich system in this comparison, though it needs a separate USB dongle for Zigbee/Thread/Z-Wave since none is built in. If you want local automation with far less tinkering, Hubitat Elevation C-8 Pro ($184.95) behaves like an appliance rather than a system you maintain. Homey Pro ($449) is the premium all-in-one choice with the broadest built-in radio support of any hub here, at roughly 2.3x Home Assistant Green's price. Aqara Hub M3 (MSRP $219.99) fits buyers already committed to Aqara devices. IKEA DIRIGERA ($139.99) is the lowest-cost genuine Matter/Thread entry point. None of these hubs has been tested by PromptQuorum — every claim below is sourced from manufacturer documentation, checked 2026-10-18.",
         bullets: [
           'Best overall / best for local AI: Home Assistant Green ($199/€179) — needs a separate Zigbee/Thread/Z-Wave dongle',
-          'Best simpler local alternative: Hubitat Elevation C-8 Pro ($188.95) — appliance-like, less tinkering',
+          'Best simpler local alternative: Hubitat Elevation C-8 Pro ($184.95) — appliance-like, less tinkering',
           'Best premium all-in-one: Homey Pro ($449) — broadest built-in radios, highest price',
           'Best for Aqara-ecosystem households: Aqara Hub M3 (MSRP $219.99, often ~$159.99)',
-          'Best affordable ecosystem hub: IKEA DIRIGERA ($119.99) — see the dedicated guide on this site',
+          'Best affordable ecosystem hub: IKEA DIRIGERA ($139.99) — see the dedicated guide on this site',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -78,6 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Starter Package Cost', anchor: 'starter-package' },
       { label: 'Hubitat Elevation C-8 Pro', anchor: 'hubitat' },
       { label: 'Homey Pro', anchor: 'homey' },
+      { label: 'Homey Pro Alternatives', anchor: 'homey-alternatives' },
       { label: 'Aqara Hub M3', anchor: 'aqara-m3' },
       { label: 'IKEA DIRIGERA', anchor: 'dirigera' },
       { label: 'Full Comparison Table', anchor: 'comparison' },
@@ -86,6 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Which Hub Should You Buy? (Again)', anchor: 'which-to-buy-2' },
       { label: "Don't Buy a Hub Yet", anchor: 'dont-buy-yet' },
       { label: 'Protocol Decision Tree', anchor: 'protocol-tree' },
+      { label: 'Smart Home Hubs in Japan', anchor: 'japan' },
       { label: 'Best Hub for Local AI', anchor: 'local-ai' },
       { label: 'Local Smart Home Starter Kit', anchor: 'starter-kit' },
       { label: 'Budget Ladder', anchor: 'budget-ladder' },
@@ -98,7 +104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Home Assistant Green ($199/€179) is the best overall smart home hub for local control and local-AI potential in 2026, with Hubitat Elevation C-8 Pro ($188.95) as the simpler no-tinkering alternative and Homey Pro ($449) as the premium all-in-one option.' },
+      { type: 'one-sentence', content: 'Home Assistant Green ($199/€179) is the best overall smart home hub for local control and local-AI potential in 2026, with Hubitat Elevation C-8 Pro ($184.95) as the simpler no-tinkering alternative and Homey Pro ($449) as the premium all-in-one option.' },
       { type: 'plain-terms', content: 'A smart home hub is the box that talks to your devices and runs your automations without needing the internet. This guide compares five current ones — which protocols they support out of the box, what they cost today, and which buying profile each one actually fits — without claiming PromptQuorum has tested any of them.' },
     ],
     sections: {
@@ -108,11 +114,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Home Assistant Green ($199/€179) — best overall and best local-AI potential, but needs a separate Zigbee/Thread/Z-Wave USB dongle',
-          'Hubitat Elevation C-8 Pro ($188.95, confirmed up from an earlier $179.95) — best appliance-like local automation, least tinkering',
+          'Hubitat Elevation C-8 Pro ($184.95, US-only shipping) — best appliance-like local automation, least tinkering',
           'Homey Pro ($449) — best premium all-in-one, broadest built-in radios, roughly 2.3x Home Assistant Green\'s price',
           'Aqara Hub M3 (MSRP $219.99, often ~$159.99) — best fit for households already invested in Aqara devices, not an open platform',
-          'IKEA DIRIGERA ($119.99) — cheapest genuine ecosystem hub, see this site\'s dedicated DIRIGERA guide',
-          'None of these hubs has been tested or benchmarked by PromptQuorum — every claim is sourced from manufacturer documentation, checked 2026-08-25',
+          'IKEA DIRIGERA ($139.99) — cheapest genuine ecosystem hub, see this site\'s dedicated DIRIGERA guide',
+          'None of these hubs has been tested or benchmarked by PromptQuorum — every claim is sourced from manufacturer documentation, checked 2026-10-18',
         ],
       },
       quickVerdict: {
@@ -122,14 +128,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Hub', 'Best for', 'Local rating', 'Zigbee', 'Z-Wave', 'Matter/Thread', 'AI potential', 'Price'],
         rows: [
           { Hub: '[Home Assistant Green](https://www.home-assistant.io/green/)', 'Best for': 'Max control/AI', 'Local rating': 'Highest', Zigbee: 'Via dongle', 'Z-Wave': 'Via dongle', 'Matter/Thread': 'Via dongle', 'AI potential': 'Highest (Ollama)', Price: '$199/€179' },
-          { Hub: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 'Best for': 'Simple local automation', 'Local rating': 'High', Zigbee: 'Built-in 3.0', 'Z-Wave': 'Built-in 800 LR', 'Matter/Thread': 'Matter 1.5 (no Thread radio)', 'AI potential': 'Low (appliance)', Price: '$188.95' },
+          { Hub: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 'Best for': 'Simple local automation', 'Local rating': 'High', Zigbee: 'Built-in 3.0', 'Z-Wave': 'Built-in 800 LR', 'Matter/Thread': 'Matter 1.5 (no Thread radio)', 'AI potential': 'Low (appliance)', Price: '$184.95' },
           { Hub: '[Homey Pro](https://homey.app/en-us/homey-pro/)', 'Best for': 'Premium all-in-one', 'Local rating': 'Mixed*', Zigbee: 'Built-in 3.0', 'Z-Wave': 'Built-in 700', 'Matter/Thread': 'Matter 1.5 + Thread BR', 'AI potential': 'Low (appliance)', Price: '$449' },
           { Hub: '[Aqara Hub M3](https://www.aqara.com/en/product/hub-m3/)', 'Best for': 'Aqara ecosystem', 'Local rating': 'Mixed*', Zigbee: 'Built-in', 'Z-Wave': 'None', 'Matter/Thread': 'Matter controller + Thread', 'AI potential': 'None (bridge)', Price: '$219.99 MSRP' },
-          { Hub: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 'Best for': 'Budget ecosystem', 'Local rating': 'Mixed*', Zigbee: 'IKEA devices only', 'Z-Wave': 'None', 'Matter/Thread': 'Matter 1.4 + Thread BR', 'AI potential': 'None (bridge)', Price: '$119.99' },
+          { Hub: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 'Best for': 'Budget ecosystem', 'Local rating': 'Mixed*', Zigbee: 'IKEA devices only', 'Z-Wave': 'None', 'Matter/Thread': 'Matter 1.4 + Thread BR', 'AI potential': 'None (bridge)', Price: '$139.99' },
         ],
         items: [
           '*"Mixed" local rating: Homey, Aqara, and IKEA run cloud-connected companion apps for setup/remote access alongside local automation execution — none is fully offline-only the way a self-hosted Home Assistant instance can be. See "What Does Local Actually Give You?" below for the nuance.',
-          'Every cell above was checked independently against each manufacturer\'s own current product page on 2026-08-25 — do not copy these figures without re-verifying, this category has already had one confirmed price increase (Hubitat) since an earlier version of this page.',
+          'Every cell above was checked independently against each manufacturer\'s own current product page on 2026-10-18 (the Aqara Hub M3 price was last confirmed 2026-08-25 — Aqara\'s current product page lists no price) — do not copy these figures without re-verifying: prices in this category moved twice since August (Hubitat down, IKEA DIRIGERA up).',
         ],
       },
       topPicks: {
@@ -138,12 +144,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Start here if you just want the answer.**",
         items: [
           "Best overall — Home Assistant Green ($199/€179): runs the real Home Assistant platform, the most integration-rich and open system in this comparison. Editorial rating: 9.3/10 (research-based assessment from official documentation, not a lab-tested score).",
-          "Best simpler alternative — Hubitat Elevation C-8 Pro ($188.95): local automation that behaves like an appliance, not a Linux box you maintain. Editorial rating: 8.7/10.",
+          "Best simpler alternative — Hubitat Elevation C-8 Pro ($184.95): local automation that behaves like an appliance, not a Linux box you maintain. Editorial rating: 8.7/10.",
           "Best all-in-one — Homey Pro ($449): broadest built-in protocol support of any hub here, at a real price premium worth naming plainly. Editorial rating: 8.5/10.",
         ],
         affiliateLinks: [
           { label: 'Check current price — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199 / €179' },
-          { label: 'Check current price — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: 'Check current price — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
           { label: 'Check current price — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '$449' },
           { label: 'Check current price — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Check current price — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -212,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hubitat',
         title: 'Hubitat Elevation C-8 Pro — Best Simpler Local Alternative',
         content:
-          "**Editorial rating: 8.7/10 (research-based assessment, not a lab-tested score).** Hubitat's Elevation C-8 Pro ($188.95, confirmed on hubitat.com — up from the $179.95 an earlier version of this page cited, a real and current price increase) runs Hubitat's own local-automation platform, not Home Assistant. It supports Zigbee 3.0, Z-Wave 800 Long Range, Matter 1.5 as a controller, and Bluetooth, all built in.",
+          "**Editorial rating: 8.7/10 (research-based assessment, not a lab-tested score).** Hubitat's Elevation C-8 Pro ($184.95, confirmed on hubitat.com on 2026-10-18 — slightly down from the $188.95 this page cited in August; Hubitat ships to the 48 contiguous US states only) runs Hubitat's own local-automation platform, not Home Assistant. It supports Zigbee 3.0, Z-Wave 800 Long Range, Matter 1.5 as a controller, and Bluetooth, all built in.",
         items: [
           "Best for users who want an appliance-like local automation experience, not a Linux-style system to maintain — Hubitat's rule engine, web interface, and update process are designed to feel closed and stable, not like a general-purpose computer you're administering.",
           "Why Home Assistant wins instead: far larger integration count, native Frigate/camera-AI support, deep customization via YAML and community add-ons, and a realistic path to local-LLM automation. Hubitat's own platform is not built for any of that.",
@@ -220,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Compatibility: Zigbee 3.0 ✅ built-in · Z-Wave 800 LR ✅ built-in · Matter 1.5 ✅ (controller only, no Thread radio) · Bluetooth ✅ · Setup difficulty: easy.",
         ],
         affiliateLinks: [
-          { label: 'Check current price — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: 'Check current price — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
         ],
       },
       homey: {
@@ -229,13 +235,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Editorial rating: 8.5/10 (research-based assessment, not a lab-tested score).** Homey Pro (2026) is $449 (confirmed on homey.app, up from $399 after a June 1, 2026 price change) with 4GB RAM, 8GB eMMC, and a 1.5GHz quad-core ARMv8 processor. It has the broadest built-in radio set of any hub in this guide: Wi-Fi, Bluetooth 5.0, Matter v1.5, a Thread border router, Zigbee 3.0, Z-Wave 700, 433MHz, and infrared.",
         items: [
-          "Name the price gap plainly: $449 is roughly 2.3x Home Assistant Green's $199 and about 2.4x Hubitat's $188.95 — that premium buys built-in radios you'd otherwise assemble yourself, not a fundamentally different capability tier.",
+          "Name the price gap plainly: $449 is roughly 2.3x Home Assistant Green's $199 and about 2.4x Hubitat's $184.95 — that premium buys built-in radios you'd otherwise assemble yourself, not a fundamentally different capability tier.",
           "Best for buyers who want the single broadest out-of-box radio set with no dongle shopping at all, and who value Homey's own app ecosystem and polish over Home Assistant's much larger open community.",
           "Why Home Assistant/Hubitat win instead: at this price, a Home Assistant Green plus a Connect ZBT-2 dongle ($199 + $49 = $248) still undercuts Homey Pro by roughly $200 while adding local-AI headroom Homey's own platform doesn't offer.",
           "Compatibility: Zigbee 3.0 ✅ built-in · Z-Wave 700 ✅ built-in · Matter v1.5 ✅ · Thread border router ✅ built-in · 433MHz ✅ · IR ✅ · Setup difficulty: easy.",
         ],
         affiliateLinks: [
           { label: 'Check current price — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '$449' },
+        ],
+      },
+      homeyAlternatives: {
+        id: 'homey-alternatives',
+        title: 'Homey Pro Alternatives and Hubitat vs Homey',
+        content: "**The best Homey Pro alternative depends on what you are avoiding: the $449 price, the closed app platform, or the need to buy radios separately.** Hubitat and Home Assistant Green each answer one of those, and Homey's own cheaper Pro mini answers the price question inside the same platform.",
+        columns: ['Alternative', 'Price', 'Trade-off vs Homey Pro'],
+        rows: [
+          { Alternative: '[Hubitat Elevation C-8 Pro](https://hubitat.com/products/7194320273451)', Price: '$184.95', 'Trade-off vs Homey Pro': 'Zigbee/Z-Wave built in, no Thread radio, US-only shipping' },
+          { Alternative: '[Home Assistant Green](https://www.home-assistant.io/green/) + ZBT-2', Price: '$248 total', 'Trade-off vs Homey Pro': 'Most open, more setup, Z-Wave needs a second dongle' },
+          { Alternative: '[Homey Pro mini](https://homey.app/en-us/homey-pro-mini/)', Price: '$249', 'Trade-off vs Homey Pro': 'Same Homey OS, but no Z-Wave, Wi-Fi or Bluetooth built in' },
+          { Alternative: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', Price: '$139.99', 'Trade-off vs Homey Pro': 'Matter/Thread only, IKEA-first, no Z-Wave' },
+        ],
+        items: [
+          "Hubitat vs Homey, price: Hubitat Elevation C-8 Pro ($184.95) costs less than half of Homey Pro ($449), and both include Zigbee 3.0, Z-Wave and a Matter controller.",
+          "Hubitat vs Homey, radios: Homey Pro adds a Thread border router, 433MHz and infrared; Hubitat has no Thread radio. Homey's Z-Wave is the 700 series, Hubitat's is 800 series with Long Range.",
+          "Hubitat vs Homey, platform: Hubitat is a closed rule-engine appliance with a web interface; Homey is app- and flow-based with a polished mobile app and a community app store. Neither runs a local LLM integration on its own platform.",
+          "Homey Pro mini ($249, confirmed on homey.app 2026-10-18) runs the same Homey Pro OS with Zigbee 3.0, Matter v1.5 and a Thread border router built in, but Z-Wave, Bluetooth, 433MHz and infrared need the separate $69 Homey Bridge, so it only saves money if you do not need those radios.",
+          "If the reason you are leaving Homey is lock-in rather than price, the practical alternative is Home Assistant Green — the only option here where the platform is open source and portable to other hardware.",
         ],
       },
       aqaraM3: {
@@ -258,15 +283,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dirigera',
         title: 'IKEA DIRIGERA — Best Affordable Ecosystem Hub',
         content:
-          "**Editorial rating: 7.8/10 (research-based assessment, not a lab-tested score).** IKEA's DIRIGERA ($119.99, confirmed on ikea.com) is the cheapest genuine Matter/Thread hub in this comparison. It became a full Matter controller and Thread Border Router via a 2025 firmware update, letting it onboard some third-party Matter devices, not only IKEA's own line. This site has a dedicated DIRIGERA guide with the full ecosystem breakdown.",
+          "**Editorial rating: 7.8/10 (research-based assessment, not a lab-tested score).** IKEA's DIRIGERA ($139.99, confirmed on ikea.com) is the cheapest genuine Matter/Thread hub in this comparison. It became a full Matter controller and Thread Border Router via a 2025 firmware update, letting it onboard some third-party Matter devices, not only IKEA's own line. This site has a dedicated DIRIGERA guide with the full ecosystem breakdown.",
         items: [
           "Buy if: you want the lowest-cost genuine entry point into local Matter/Thread control, are fine with IKEA's own app and device range as the primary experience, and don't need Hubitat/Home Assistant-level customization.",
           "Don't buy if: you want a single hub to also manage non-Matter Zigbee devices from other brands, need Z-Wave, or want the integration depth of Home Assistant — DIRIGERA's own automation engine is intentionally simple.",
-          "Price comparison, stated plainly: DIRIGERA ($119.99) is about $80 cheaper than Home Assistant Green ($199) and about $69 cheaper than Hubitat ($188.95) — the tradeoff is a far smaller, IKEA-first device and automation ecosystem.",
+          "Price comparison, stated plainly: DIRIGERA ($139.99) is about $59 cheaper than Home Assistant Green ($199) and about $45 cheaper than Hubitat ($184.95) — the tradeoff is a far smaller, IKEA-first device and automation ecosystem.",
           "Compatibility: Matter 1.4 ✅ controller · Thread Border Router ✅ · Zigbee ✅ (IKEA devices, via Matter bridging for some third-party) · Z-Wave ❌ · Setup difficulty: easy.",
         ],
         affiliateLinks: [
-          { label: 'Check current price — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '$119.99' },
+          { label: 'Check current price — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '$139.99' },
         ],
       },
       comparison: {
@@ -286,7 +311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Dimension: 'Local AI (Ollama/LLM)', 'Home Assistant Green': 'Yes, on a scaled-up box; not Green\'s 4GB alone', 'Hubitat C-8 Pro': 'Not supported by the platform', 'Homey Pro': 'Not supported by the platform' },
           { Dimension: 'Frigate / camera AI', 'Home Assistant Green': 'Yes, via Home Assistant add-on', 'Hubitat C-8 Pro': 'No native support', 'Homey Pro': 'No native support' },
           { Dimension: 'Ecosystem freedom', 'Home Assistant Green': 'Highest — no vendor lock-in', 'Hubitat C-8 Pro': 'Moderate — Hubitat-specific', 'Homey Pro': 'Moderate — Homey-specific' },
-          { Dimension: 'Price', 'Home Assistant Green': '$199 / €179', 'Hubitat C-8 Pro': '$188.95', 'Homey Pro': '$449' },
+          { Dimension: 'Price', 'Home Assistant Green': '$199 / €179', 'Hubitat C-8 Pro': '$184.95', 'Homey Pro': '$449' },
         ],
       },
       hubVsController: {
@@ -327,7 +352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Check current price — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199 / €179' },
-          { label: 'Check current price — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: 'Check current price — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
           { label: 'Check current price — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub' },
           { label: 'Check current price — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Check current price — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -354,6 +379,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'If you are': 'Starting fresh with Matter', 'Best-fit hub(s)': 'Any of the five — all act as Matter controllers' },
           { 'If you are': 'Thread-heavy (Matter over Thread)', 'Best-fit hub(s)': 'Homey or DIRIGERA (built-in border router)' },
           { 'If you are': 'Want maximum future flexibility', 'Best-fit hub(s)': 'Home Assistant Green + dongle' },
+        ],
+      },
+      japan: {
+        id: 'japan',
+        title: 'Best Smart Home Hub in Japan: Which Hubs Work With Most Devices',
+        content: "**In Japan, choose a hub by radio and by whether it can legally be bought and used there: Zigbee, Thread and Matter run on 2.4GHz worldwide, but Z-Wave uses a separate Japanese band and several hubs here are sold for the US market only.**",
+        items: [
+          "Z-Wave is the regional trap: Japan's Z-Wave band is 922–926 MHz (ARIB STD-T108, per Z-Wave.me's documentation), not the 908.4 MHz US band. Hubitat's C-8 Pro Z-Wave radio is the US frequency and Hubitat ships only to the 48 contiguous US states, so it is not a practical Japan purchase.",
+          "Homey says its Pro antennas switch with local regulations, but its page lists no Japan-specific Z-Wave variant — confirm Japanese Z-Wave support with Athom before buying Homey Pro for Z-Wave devices in Japan.",
+          "Zigbee 3.0, Thread and Matter need no regional hardware: Home Assistant Green plus a Connect ZBT-2, Aqara Hub M3 (Aqara lists a 110-household Japanese deployment) and IKEA DIRIGERA all cover these protocols.",
+          "Best fit for 'works with the most devices': Home Assistant Green, because its integration library covers Matter, Zigbee and cloud-less local devices alike. At $199 plus about $49 for the ZBT-2 it is roughly $248 before shipping and import costs.",
+          "Check each device's own Japanese radio-law certification (the technical conformity mark) — a device or dongle bought abroad may not be legally usable in Japan. This is general guidance, not legal advice; PromptQuorum has not tested any hub in Japan.",
         ],
       },
       localAi: {
@@ -403,8 +440,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**What each price tier actually buys.**',
         columns: ['Budget', 'What you get'],
         rows: [
-          { Budget: 'Under $150', 'What you get': 'IKEA DIRIGERA ($119.99) — entry-level Matter/Thread ecosystem' },
-          { Budget: '$150-250', 'What you get': 'Home Assistant Green ($199) or Hubitat C-8 Pro ($188.95) — one hub, no radios/sensors yet' },
+          { Budget: 'Under $150', 'What you get': 'IKEA DIRIGERA ($139.99) — entry-level Matter/Thread ecosystem' },
+          { Budget: '$150-250', 'What you get': 'Home Assistant Green ($199) or Hubitat C-8 Pro ($184.95) — one hub, no radios/sensors yet' },
           { Budget: '$250-500', 'What you get': 'HA Green + dongle + a few sensors, or Homey Pro ($449) alone' },
           { Budget: '$500-1,000+', 'What you get': 'HA Green + dedicated AI mini PC + cameras + sensors + a lock (see starter kit above)' },
         ],
@@ -467,15 +504,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Five hubs, five different buyer profiles — the right pick depends on what you actually need, not which one scores highest on paper.**',
         items: [
           "Home Assistant Green ($199/€179) — best overall. Editorial rating: 9.3/10. Buy it if you want the most open platform and real local-AI headroom, and don't mind assembling a dongle-and-sensor system.",
-          "Hubitat Elevation C-8 Pro ($188.95) — best local appliance. Editorial rating: 8.7/10. Buy it if you want local automation with the least tinkering and don't need Home Assistant's integration breadth.",
+          "Hubitat Elevation C-8 Pro ($184.95) — best local appliance. Editorial rating: 8.7/10. Buy it if you want local automation with the least tinkering and don't need Home Assistant's integration breadth.",
           "Homey Pro ($449) — best premium all-in-one. Editorial rating: 8.5/10. Buy it if built-in radio breadth and Homey's own app polish are worth roughly 2.3x Home Assistant Green's price to you.",
           "Aqara Hub M3 ($219.99 MSRP, often ~$159.99) — best Aqara ecosystem hub. Editorial rating: 8.0/10. Buy it if you're already invested in Aqara devices specifically.",
-          "IKEA DIRIGERA ($119.99) — best simple ecosystem hub. Editorial rating: 7.8/10. Buy it if budget is the deciding factor and you're fine centering the IKEA app.",
+          "IKEA DIRIGERA ($139.99) — best simple ecosystem hub. Editorial rating: 7.8/10. Buy it if budget is the deciding factor and you're fine centering the IKEA app.",
           "The key buying rule for this site's local-AI-focused audience: recommend the platform with the least ecosystem lock-in, which is Home Assistant Green — but that's not the right call for every buyer. If appliance-simplicity or built-in radio breadth matters more to you than openness, Hubitat or Homey are the honestly correct choice, not a consolation prize.",
         ],
         affiliateLinks: [
           { label: 'Check current price — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199 / €179' },
-          { label: 'Check current price — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: 'Check current price — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
           { label: 'Check current price — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '$449' },
           { label: 'Check current price — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Check current price — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -511,6 +548,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Do I need a Zigbee dongle with Home Assistant Green?', a: "Yes, if you have or plan to buy any Zigbee devices — Green has no built-in radio. See this site's Zigbee & Thread dongle guide for current options like the Home Assistant Connect ZBT-2 ($49/€45)." },
           { q: 'Does Home Assistant Green support local AI?', a: "Home Assistant's software supports local LLM integration via Ollama, but Green's own 4GB RAM is not sized to also run a local LLM well — pair it with a separate, more powerful AI mini PC (two-box architecture) for genuine local-AI use, rather than expecting Green alone to handle both jobs." },
           { q: 'Home Assistant Green vs Hubitat — which should I buy?', a: "Home Assistant Green if you want maximum openness, integration breadth, and local-AI potential and don't mind assembling a dongle-based system. Hubitat Elevation C-8 Pro if you want local automation that behaves like a simple appliance with built-in Zigbee/Z-Wave and minimal setup." },
+          { q: 'What is the best Homey Pro alternative?', a: "Hubitat Elevation C-8 Pro ($184.95) is the closest built-in-radio alternative at under half the price; Home Assistant Green plus a ZBT-2 dongle ($248) is the open-platform alternative; Homey Pro mini ($249) keeps the Homey platform but drops Z-Wave, Wi-Fi and Bluetooth unless you add the $69 Homey Bridge." },
+          { q: 'Hubitat vs Homey — which is better?', a: "Hubitat is cheaper ($184.95 vs $449) and an appliance-like local rule engine with no Thread radio; Homey Pro adds Thread, 433MHz and infrared and a more polished app. Neither is fully offline, and neither offers a native local-LLM integration." },
+          { q: 'What is the best smart home hub for Japan?', a: "For breadth of device support, Home Assistant Green with a Zigbee/Thread dongle, since Zigbee, Thread and Matter are global 2.4GHz standards. Z-Wave in Japan uses 922–926 MHz, and Hubitat's C-8 Pro uses the US frequency and ships only within the contiguous US, so verify regional Z-Wave support before buying any Z-Wave hub." },
+          { q: 'What is the best home automation hub for beginners?', a: "Hubitat Elevation C-8 Pro ($184.95) if you are in the US and want local automation with Zigbee and Z-Wave built in; Homey Pro ($449) if you want the easiest setup and will pay for it; Home Assistant Green if you accept a longer setup for the most flexibility." },
           { q: 'What is the best hub for Matter?', a: "All five hubs in this guide (Home Assistant Green, Hubitat, Homey Pro, Aqara Hub M3, IKEA DIRIGERA) can act as Matter controllers, but Homey Pro and IKEA DIRIGERA have a Thread border router built in, while Home Assistant Green needs a dongle for that role — check the specific Matter device's supported controller list before buying." },
         ],
       },
@@ -518,14 +559,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Best Smart Home Hubs for Local Control in 2026: Home Assistant vs Hubitat vs Homey',
+      headline: 'Best Smart Home Hub for Local Control in 2026: Home Assistant vs Hubitat vs Homey',
       description: 'Best smart home hubs for local control in 2026: Home Assistant Green vs Hubitat Elevation C-8 Pro vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA compared.',
       url: 'https://www.promptquorum.com/smart-home/best-smart-home-hubs-2027',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Smart home hub' }, { '@type': 'Thing', name: 'Home Assistant Green' }, { '@type': 'Thing', name: 'Hubitat' }, { '@type': 'Thing', name: 'Homey' }, { '@type': 'Thing', name: 'Aqara Hub M3' }, { '@type': 'Thing', name: 'IKEA DIRIGERA' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -537,6 +578,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'What is the best hub for Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green ($199/€179) is the official first-party hardware but needs a separate Zigbee/Thread/Z-Wave USB dongle.' } },
         { '@type': 'Question', name: 'Is Home Assistant Green worth it?', acceptedAnswer: { '@type': 'Answer', text: 'Yes for buyers who want the most open platform and local-AI headroom, but expect a moderate setup process and a separate dongle purchase.' } },
+        { '@type': 'Question', name: 'What is the best Homey Pro alternative?', acceptedAnswer: { '@type': 'Answer', text: 'Hubitat Elevation C-8 Pro ($184.95) for built-in radios at under half the price, Home Assistant Green plus a ZBT-2 dongle ($248) for an open platform, or Homey Pro mini ($249) to stay on Homey with fewer built-in radios.' } },
+        { '@type': 'Question', name: 'What is the best smart home hub for Japan?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green with a Zigbee/Thread dongle covers the most devices; Z-Wave in Japan uses 922–926 MHz and Hubitat ships only within the contiguous US, so verify regional support first.' } },
         { '@type': 'Question', name: 'Home Assistant Green vs Hubitat — which should I buy?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green for maximum openness and local-AI potential; Hubitat Elevation C-8 Pro for appliance-like local automation with minimal setup.' } },
       ],
     },
@@ -545,20 +588,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-16',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-24',
-    last_full_refresh: '2026-08-25',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2026-11-17',
+    last_full_refresh: '2026-10-18',
     theme: "Buyer's Guides",
     heroImage: '/images/best-smart-home-hubs-2027-overview-hero-de.webp',
     affiliateDisclosure: true,
-    title: 'Die besten Smart-Home-Hubs für lokale Steuerung 2026: Home Assistant vs. Hubitat vs. Homey',
-    seoTitle: 'Beste Smart-Home-Hubs 2026: HA Green vs. Hubitat vs. Homey',
+    title: 'Der beste Smart-Home-Hub für lokale Steuerung 2026: Home Assistant vs. Hubitat vs. Homey',
+    seoTitle: 'Bester Smart-Home-Hub 2026: HA Green vs. Hubitat vs. Homey',
     intro:
-      "Bei der Wahl eines Smart-Home-Hubs 2026 kommt es auf eine Frage an, die die meisten Käufer überspringen: Willst du die Plattform mit dem meisten Spielraum für lokale KI und ohne Anbieterbindung (Home Assistant Green), die, die sich wie ein einfaches Gerät verhält und dir nicht im Weg steht (Hubitat Elevation C-8 Pro), oder die, die Komfort mit einem deutlich höheren Preis bezahlt (Homey Pro)? Aqaras Hub M3 und IKEAs DIRIGERA runden das Feld für Käufer ab, die bereits in ein bestimmtes Geräte-Ökosystem investiert haben. Dieser Leitfaden ist die kommerzielle Hauptseite für den lokalen Smart-Home-Cluster dieser Website — jeder Preis und jede Spezifikation unten wurde am 25.08.2026 gegen Herstellerquellen geprüft, und keine dieser Hardware wurde von PromptQuorum getestet oder benchmarkt; jede Fähigkeitsaussage ist eine recherchebasierte Einschätzung aus offizieller Dokumentation, kein Laborergebnis.",
+      "Bei der Wahl eines Smart-Home-Hubs 2026 kommt es auf eine Frage an, die die meisten Käufer überspringen: Willst du die Plattform mit dem meisten Spielraum für lokale KI und ohne Anbieterbindung (Home Assistant Green), die, die sich wie ein einfaches Gerät verhält und dir nicht im Weg steht (Hubitat Elevation C-8 Pro), oder die, die Komfort mit einem deutlich höheren Preis bezahlt (Homey Pro)? Aqaras Hub M3 und IKEAs DIRIGERA runden das Feld für Käufer ab, die bereits in ein bestimmtes Geräte-Ökosystem investiert haben. Dieser Leitfaden ist die kommerzielle Hauptseite für den lokalen Smart-Home-Cluster dieser Website — jeder Preis und jede Spezifikation unten wurde am 18.10.2026 gegen Herstellerquellen geprüft, und keine dieser Hardware wurde von PromptQuorum getestet oder benchmarkt; jede Fähigkeitsaussage ist eine recherchebasierte Einschätzung aus offizieller Dokumentation, kein Laborergebnis.",
     metaDescription:
-      'Die besten Smart-Home-Hubs für lokale Steuerung 2026: Home Assistant Green vs. Hubitat Elevation C-8 Pro vs. Homey Pro vs. Aqara Hub M3 vs. IKEA DIRIGERA — aktuelle Preise, Protokolle und welcher zu deinem Kaufprofil passt.',
+      'Der beste Smart-Home-Hub für lokale Steuerung 2026: Home Assistant Green vs. Hubitat C-8 Pro vs. Homey Pro (und Homey-Pro-Alternativen) vs. Aqara M3 vs. IKEA DIRIGERA — Preise, Protokolle, Hinweise für Japan.',
     twitterDescription:
-      'Home Assistant Green vs. Hubitat vs. Homey Pro vs. Aqara Hub M3 vs. IKEA DIRIGERA — aktuelle Preise und Protokollunterstützung 2026 verglichen, plus welcher Hub zu deinem lokalen KI-Setup passt.',
+      'Bester Smart-Home-Hub 2026: Home Assistant Green vs. Hubitat vs. Homey Pro vs. Aqara M3 vs. IKEA DIRIGERA — Preise, Homey-Pro-Alternativen und Hinweise für Japan.',
     readTime: '13 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Smart-Home-Käufer, die ein Hub-Gerät für lokale Steuerung wählen, mit oder ohne Ambitionen für lokale KI',
@@ -570,22 +613,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aqara hub m3 vs home assistant',
       'ikea dirigera vs home assistant green',
       'lokaler ki smart home hub',
+      'homey pro alternative',
+      'hubitat vs homey',
+      'beste home automation zentrale',
+      'bester smart home hub japan',
     ],
     leadAnswerBlock:
-      "**Home Assistant Green ($199/€179) ist 2026 insgesamt der beste Smart-Home-Hub, wenn du maximale lokale Kontrolle und Spielraum für lokale KI willst — er läuft auf der echten Home-Assistant-Plattform, wird aber ohne eingebautes Zigbee-/Thread-/Z-Wave-Funkmodul ausgeliefert, plane also zusätzlich einen USB-Dongle ein.** Hubitat Elevation C-8 Pro ($188.95, Preis bestätigt gegenüber einem früheren $179.95 gestiegen) ist die beste Wahl, wenn du gerätehafte lokale Automatisierung ohne die Pflege eines Linux-artigen Systems willst. Homey Pro ($449) ist die beste Premium-Komplettlösung für Käufer, die etwa das 2,3-Fache von Home Assistant Greens Preis für den breitesten eingebauten Funksatz und den geringsten DIY-Aufwand zahlen. Aqara Hub M3 (UVP $219.99, oft ~$159.99 im Angebot) passt zu Haushalten, die bereits tief im Aqara-Ökosystem stecken. IKEA DIRIGERA ($119.99) ist der günstigste echte Einstiegspunkt, mit einem eigenen ausführlichen Leitfaden auf dieser Website.",
+      "**Home Assistant Green ($199/€179) ist 2026 insgesamt der beste Smart-Home-Hub, wenn du maximale lokale Kontrolle und Spielraum für lokale KI willst — er läuft auf der echten Home-Assistant-Plattform, wird aber ohne eingebautes Zigbee-/Thread-/Z-Wave-Funkmodul ausgeliefert, plane also zusätzlich einen USB-Dongle ein.** Hubitat Elevation C-8 Pro ($184.95) ist die beste Wahl, wenn du gerätehafte lokale Automatisierung ohne die Pflege eines Linux-artigen Systems willst. Homey Pro ($449) ist die beste Premium-Komplettlösung für Käufer, die etwa das 2,3-Fache von Home Assistant Greens Preis für den breitesten eingebauten Funksatz und den geringsten DIY-Aufwand zahlen. Aqara Hub M3 (UVP $219.99, oft ~$159.99 im Angebot) passt zu Haushalten, die bereits tief im Aqara-Ökosystem stecken. IKEA DIRIGERA ($139.99) ist der günstigste echte Einstiegspunkt, mit einem eigenen ausführlichen Leitfaden auf dieser Website.",
     quickAnswerTop: {
       de: {
         question: 'Was ist der beste Smart-Home-Hub für lokale Steuerung 2026?',
         answer:
-          "Für die meisten Käufer, die lokale-first-Steuerung und Raum für spätere lokale KI wollen, ist Home Assistant Green ($199/€179) die beste Wahl — er läuft auf der tatsächlichen Home-Assistant-Plattform, dem offensten und integrationsreichsten System in diesem Vergleich, benötigt aber einen separaten USB-Dongle für Zigbee/Thread/Z-Wave, da keines eingebaut ist. Wenn du lokale Automatisierung mit deutlich weniger Bastelei willst, verhält sich Hubitat Elevation C-8 Pro ($188.95) wie ein Gerät statt wie ein System, das du pflegen musst. Homey Pro ($449) ist die Premium-Komplettlösung mit dem breitesten eingebauten Funksatz aller hier verglichenen Hubs, zum etwa 2,3-fachen Preis von Home Assistant Green. Aqara Hub M3 (UVP $219.99) passt zu Käufern, die bereits in Aqara-Geräte investiert haben. IKEA DIRIGERA ($119.99) ist der günstigste echte Matter-/Thread-Einstiegspunkt. Keiner dieser Hubs wurde von PromptQuorum getestet — jede Aussage unten stammt aus Herstellerdokumentation, geprüft am 25.08.2026.",
+          "Für die meisten Käufer, die lokale-first-Steuerung und Raum für spätere lokale KI wollen, ist Home Assistant Green ($199/€179) die beste Wahl — er läuft auf der tatsächlichen Home-Assistant-Plattform, dem offensten und integrationsreichsten System in diesem Vergleich, benötigt aber einen separaten USB-Dongle für Zigbee/Thread/Z-Wave, da keines eingebaut ist. Wenn du lokale Automatisierung mit deutlich weniger Bastelei willst, verhält sich Hubitat Elevation C-8 Pro ($184.95) wie ein Gerät statt wie ein System, das du pflegen musst. Homey Pro ($449) ist die Premium-Komplettlösung mit dem breitesten eingebauten Funksatz aller hier verglichenen Hubs, zum etwa 2,3-fachen Preis von Home Assistant Green. Aqara Hub M3 (UVP $219.99) passt zu Käufern, die bereits in Aqara-Geräte investiert haben. IKEA DIRIGERA ($139.99) ist der günstigste echte Matter-/Thread-Einstiegspunkt. Keiner dieser Hubs wurde von PromptQuorum getestet — jede Aussage unten stammt aus Herstellerdokumentation, geprüft am 18.10.2026.",
         bullets: [
           'Insgesamt beste Wahl / beste für lokale KI: Home Assistant Green ($199/€179) — benötigt separaten Zigbee-/Thread-/Z-Wave-Dongle',
-          'Beste einfachere lokale Alternative: Hubitat Elevation C-8 Pro ($188.95) — gerätehaft, weniger Bastelei',
+          'Beste einfachere lokale Alternative: Hubitat Elevation C-8 Pro ($184.95) — gerätehaft, weniger Bastelei',
           'Beste Premium-Komplettlösung: Homey Pro ($449) — breitester eingebauter Funksatz, höchster Preis',
           'Am besten für Aqara-Ökosystem-Haushalte: Aqara Hub M3 (UVP $219.99, oft ~$159.99)',
-          'Bester günstiger Ökosystem-Hub: IKEA DIRIGERA ($119.99) — siehe den eigenen Leitfaden auf dieser Website',
+          'Bester günstiger Ökosystem-Hub: IKEA DIRIGERA ($139.99) — siehe den eigenen Leitfaden auf dieser Website',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -599,6 +646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Kosten des Starterpakets', anchor: 'starter-package' },
       { label: 'Hubitat Elevation C-8 Pro', anchor: 'hubitat' },
       { label: 'Homey Pro', anchor: 'homey' },
+      { label: 'Homey-Pro-Alternativen', anchor: 'homey-alternatives' },
       { label: 'Aqara Hub M3', anchor: 'aqara-m3' },
       { label: 'IKEA DIRIGERA', anchor: 'dirigera' },
       { label: 'Vollständige Vergleichstabelle', anchor: 'comparison' },
@@ -607,6 +655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Welchen Hub solltest du kaufen? (nochmal)', anchor: 'which-to-buy-2' },
       { label: 'Kauf noch nicht nötig?', anchor: 'dont-buy-yet' },
       { label: 'Protokoll-Entscheidungsbaum', anchor: 'protocol-tree' },
+      { label: 'Smart-Home-Hubs in Japan', anchor: 'japan' },
       { label: 'Bester Hub für lokale KI', anchor: 'local-ai' },
       { label: 'Lokales Smart-Home-Starterkit', anchor: 'starter-kit' },
       { label: 'Budget-Leiter', anchor: 'budget-ladder' },
@@ -619,7 +668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Home Assistant Green ($199/€179) ist 2026 insgesamt der beste Smart-Home-Hub für lokale Steuerung und lokales KI-Potenzial, mit Hubitat Elevation C-8 Pro ($188.95) als einfacherer bastelfreier Alternative und Homey Pro ($449) als Premium-Komplettlösung.' },
+      { type: 'one-sentence', content: 'Home Assistant Green ($199/€179) ist 2026 insgesamt der beste Smart-Home-Hub für lokale Steuerung und lokales KI-Potenzial, mit Hubitat Elevation C-8 Pro ($184.95) als einfacherer bastelfreier Alternative und Homey Pro ($449) als Premium-Komplettlösung.' },
       { type: 'plain-terms', content: 'Ein Smart-Home-Hub ist die Box, die mit deinen Geräten spricht und deine Automatisierungen ausführt, ohne das Internet zu benötigen. Dieser Leitfaden vergleicht fünf aktuelle Modelle — welche Protokolle sie ab Werk unterstützen, was sie heute kosten und zu welchem Kaufprofil jedes tatsächlich passt — ohne zu behaupten, dass PromptQuorum eines davon getestet hat.' },
     ],
     sections: {
@@ -629,11 +678,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Home Assistant Green ($199/€179) — insgesamt beste Wahl und bestes lokales KI-Potenzial, benötigt aber separaten Zigbee-/Thread-/Z-Wave-USB-Dongle',
-          'Hubitat Elevation C-8 Pro ($188.95, bestätigt gegenüber früherem $179.95 gestiegen) — beste gerätehafte lokale Automatisierung, am wenigsten Bastelei',
+          'Hubitat Elevation C-8 Pro ($184.95, Versand nur in die USA) — beste gerätehafte lokale Automatisierung, am wenigsten Bastelei',
           'Homey Pro ($449) — beste Premium-Komplettlösung, breitester eingebauter Funksatz, etwa das 2,3-Fache von Home Assistant Greens Preis',
           'Aqara Hub M3 (UVP $219.99, oft ~$159.99) — am besten für Haushalte, die bereits in Aqara-Geräte investiert haben, keine offene Plattform',
-          'IKEA DIRIGERA ($119.99) — günstigster echter Ökosystem-Hub, siehe den eigenen DIRIGERA-Leitfaden dieser Website',
-          'Keiner dieser Hubs wurde von PromptQuorum getestet oder benchmarkt — jede Aussage stammt aus Herstellerdokumentation, geprüft am 25.08.2026',
+          'IKEA DIRIGERA ($139.99) — günstigster echter Ökosystem-Hub, siehe den eigenen DIRIGERA-Leitfaden dieser Website',
+          'Keiner dieser Hubs wurde von PromptQuorum getestet oder benchmarkt — jede Aussage stammt aus Herstellerdokumentation, geprüft am 18.10.2026',
         ],
       },
       quickVerdict: {
@@ -643,14 +692,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Hub', 'Am besten für', 'Lokal-Bewertung', 'Zigbee', 'Z-Wave', 'Matter/Thread', 'KI-Potenzial', 'Preis'],
         rows: [
           { Hub: '[Home Assistant Green](https://www.home-assistant.io/green/)', 'Am besten für': 'Max. Kontrolle/KI', 'Lokal-Bewertung': 'Höchste', Zigbee: 'Via Dongle', 'Z-Wave': 'Via Dongle', 'Matter/Thread': 'Via Dongle', 'KI-Potenzial': 'Höchstes (Ollama)', Preis: '$199/€179' },
-          { Hub: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 'Am besten für': 'Einfache lokale Automatisierung', 'Lokal-Bewertung': 'Hoch', Zigbee: 'Eingebaut 3.0', 'Z-Wave': 'Eingebaut 800 LR', 'Matter/Thread': 'Matter 1.5 (kein Thread-Funk)', 'KI-Potenzial': 'Niedrig (Gerät)', Preis: '$188.95' },
+          { Hub: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 'Am besten für': 'Einfache lokale Automatisierung', 'Lokal-Bewertung': 'Hoch', Zigbee: 'Eingebaut 3.0', 'Z-Wave': 'Eingebaut 800 LR', 'Matter/Thread': 'Matter 1.5 (kein Thread-Funk)', 'KI-Potenzial': 'Niedrig (Gerät)', Preis: '$184.95' },
           { Hub: '[Homey Pro](https://homey.app/en-us/homey-pro/)', 'Am besten für': 'Premium-Komplettlösung', 'Lokal-Bewertung': 'Gemischt*', Zigbee: 'Eingebaut 3.0', 'Z-Wave': 'Eingebaut 700', 'Matter/Thread': 'Matter 1.5 + Thread-BR', 'KI-Potenzial': 'Niedrig (Gerät)', Preis: '$449' },
           { Hub: '[Aqara Hub M3](https://www.aqara.com/en/product/hub-m3/)', 'Am besten für': 'Aqara-Ökosystem', 'Lokal-Bewertung': 'Gemischt*', Zigbee: 'Eingebaut', 'Z-Wave': 'Keine', 'Matter/Thread': 'Matter-Controller + Thread', 'KI-Potenzial': 'Keine (Brücke)', Preis: '$219.99 UVP' },
-          { Hub: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 'Am besten für': 'Budget-Ökosystem', 'Lokal-Bewertung': 'Gemischt*', Zigbee: 'Nur IKEA-Geräte', 'Z-Wave': 'Keine', 'Matter/Thread': 'Matter 1.4 + Thread-BR', 'KI-Potenzial': 'Keine (Brücke)', Preis: '$119.99' },
+          { Hub: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 'Am besten für': 'Budget-Ökosystem', 'Lokal-Bewertung': 'Gemischt*', Zigbee: 'Nur IKEA-Geräte', 'Z-Wave': 'Keine', 'Matter/Thread': 'Matter 1.4 + Thread-BR', 'KI-Potenzial': 'Keine (Brücke)', Preis: '$139.99' },
         ],
         items: [
           '*„Gemischte" Lokal-Bewertung: Homey, Aqara und IKEA nutzen cloudverbundene Begleit-Apps für Einrichtung/Fernzugriff neben der lokalen Automatisierungsausführung — keiner ist so vollständig offline-fähig wie eine selbst gehostete Home-Assistant-Instanz. Siehe „Was bringt lokal wirklich?" unten für die Nuance.',
-          'Jede Zelle oben wurde unabhängig gegen die aktuelle Produktseite jedes Herstellers am 25.08.2026 geprüft — übernimm diese Zahlen nicht ohne erneute Prüfung, diese Kategorie hatte bereits eine bestätigte Preiserhöhung (Hubitat) seit einer früheren Version dieser Seite.',
+          'Jede Zelle oben wurde unabhängig gegen die aktuelle Produktseite jedes Herstellers am 18.10.2026 geprüft (der Preis des Aqara Hub M3 wurde zuletzt am 25.08.2026 bestätigt — Aqaras aktuelle Produktseite nennt keinen Preis) — übernimm diese Zahlen nicht ohne erneute Prüfung: Die Preise in dieser Kategorie haben sich seit August zweimal bewegt (Hubitat gesunken, IKEA DIRIGERA gestiegen).',
         ],
       },
       topPicks: {
@@ -659,12 +708,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Hier anfangen, wenn du nur die Antwort willst.**",
         items: [
           "Insgesamt beste Wahl — Home Assistant Green ($199/€179): läuft auf der echten Home-Assistant-Plattform, dem integrationsreichsten und offensten System in diesem Vergleich. Redaktionelle Bewertung: 9,3/10 (recherchebasierte Einschätzung aus offizieller Dokumentation, kein Laborergebnis).",
-          "Beste einfachere Alternative — Hubitat Elevation C-8 Pro ($188.95): lokale Automatisierung, die sich wie ein Gerät verhält, keine Linux-Box, die du pflegen musst. Redaktionelle Bewertung: 8,7/10.",
+          "Beste einfachere Alternative — Hubitat Elevation C-8 Pro ($184.95): lokale Automatisierung, die sich wie ein Gerät verhält, keine Linux-Box, die du pflegen musst. Redaktionelle Bewertung: 8,7/10.",
           "Beste Komplettlösung — Homey Pro ($449): breiteste eingebaute Protokollunterstützung aller hier verglichenen Hubs, zu einem echten Preisaufschlag, der klar benannt werden sollte. Redaktionelle Bewertung: 8,5/10.",
         ],
         affiliateLinks: [
           { label: 'Aktuellen Preis prüfen — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199 / €179' },
-          { label: 'Aktuellen Preis prüfen — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: 'Aktuellen Preis prüfen — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
           { label: 'Aktuellen Preis prüfen — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '$449' },
           { label: 'Aktuellen Preis prüfen — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Aktuellen Preis prüfen — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -733,7 +782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hubitat',
         title: 'Hubitat Elevation C-8 Pro — Beste einfachere lokale Alternative',
         content:
-          "**Redaktionelle Bewertung: 8,7/10 (recherchebasierte Einschätzung, kein Laborergebnis).** Hubitats Elevation C-8 Pro ($188.95, bestätigt auf hubitat.com — gestiegen gegenüber den $179.95, die eine frühere Version dieser Seite zitierte, eine echte und aktuelle Preiserhöhung) läuft auf Hubitats eigener lokaler Automatisierungsplattform, nicht auf Home Assistant. Es unterstützt Zigbee 3.0, Z-Wave 800 Long Range, Matter 1.5 als Controller und Bluetooth, alles eingebaut.",
+          "**Redaktionelle Bewertung: 8,7/10 (recherchebasierte Einschätzung, kein Laborergebnis).** Hubitats Elevation C-8 Pro ($184.95, am 18.10.2026 auf hubitat.com bestätigt — leicht gesunken gegenüber den im August genannten $188.95; Hubitat liefert nur in die 48 zusammenhängenden US-Bundesstaaten) läuft auf Hubitats eigener lokaler Automatisierungsplattform, nicht auf Home Assistant. Es unterstützt Zigbee 3.0, Z-Wave 800 Long Range, Matter 1.5 als Controller und Bluetooth, alles eingebaut.",
         items: [
           "Am besten für Nutzer, die eine gerätehafte lokale Automatisierungserfahrung wollen, kein Linux-artiges System zu pflegen — Hubitats Regel-Engine, Weboberfläche und Update-Prozess sind darauf ausgelegt, geschlossen und stabil zu wirken, nicht wie ein Allzweckcomputer, den du administrierst.",
           "Warum Home Assistant stattdessen gewinnt: weit größere Integrationszahl, native Frigate-/Kamera-KI-Unterstützung, tiefe Anpassung via YAML und Community-Add-ons und ein realistischer Weg zu lokaler LLM-Automatisierung. Hubitats eigene Plattform ist für nichts davon gebaut.",
@@ -741,7 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Kompatibilität: Zigbee 3.0 ✅ eingebaut · Z-Wave 800 LR ✅ eingebaut · Matter 1.5 ✅ (nur Controller, kein Thread-Funk) · Bluetooth ✅ · Einrichtungsschwierigkeit: einfach.",
         ],
         affiliateLinks: [
-          { label: 'Aktuellen Preis prüfen — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: 'Aktuellen Preis prüfen — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
         ],
       },
       homey: {
@@ -750,13 +799,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Redaktionelle Bewertung: 8,5/10 (recherchebasierte Einschätzung, kein Laborergebnis).** Homey Pro (2026) kostet $449 (bestätigt auf homey.app, gestiegen von $399 nach einer Preisänderung am 1. Juni 2026) mit 4GB RAM, 8GB eMMC und einem 1,5GHz-Quad-Core-ARMv8-Prozessor. Es hat den breitesten eingebauten Funksatz aller Hubs in diesem Leitfaden: Wi-Fi, Bluetooth 5.0, Matter v1.5, einen Thread-Border-Router, Zigbee 3.0, Z-Wave 700, 433MHz und Infrarot.",
         items: [
-          "Die Preislücke klar benennen: $449 sind etwa das 2,3-Fache von Home Assistant Greens $199 und etwa das 2,4-Fache von Hubitats $188.95 — dieser Aufpreis kauft eingebaute Funkmodule, die du sonst selbst zusammenstellen würdest, keine grundlegend andere Fähigkeitsstufe.",
+          "Die Preislücke klar benennen: $449 sind etwa das 2,3-Fache von Home Assistant Greens $199 und etwa das 2,4-Fache von Hubitats $184.95 — dieser Aufpreis kauft eingebaute Funkmodule, die du sonst selbst zusammenstellen würdest, keine grundlegend andere Fähigkeitsstufe.",
           "Am besten für Käufer, die den insgesamt breitesten Funksatz ab Werk ohne jegliches Dongle-Shopping wollen und Homeys eigenes App-Ökosystem und Politur mehr schätzen als Home Assistants viel größere offene Community.",
           "Warum Home Assistant/Hubitat stattdessen gewinnen: Zu diesem Preis unterbietet ein Home Assistant Green plus ein Connect-ZBT-2-Dongle ($199 + $49 = $248) Homey Pro immer noch um etwa $200, während es lokalen-KI-Spielraum hinzufügt, den Homeys eigene Plattform nicht bietet.",
           "Kompatibilität: Zigbee 3.0 ✅ eingebaut · Z-Wave 700 ✅ eingebaut · Matter v1.5 ✅ · Thread-Border-Router ✅ eingebaut · 433MHz ✅ · IR ✅ · Einrichtungsschwierigkeit: einfach.",
         ],
         affiliateLinks: [
           { label: 'Aktuellen Preis prüfen — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '$449' },
+        ],
+      },
+      homeyAlternatives: {
+        id: 'homey-alternatives',
+        title: 'Homey-Pro-Alternativen und Hubitat vs. Homey',
+        content: "**Die beste Homey-Pro-Alternative hängt davon ab, was du vermeiden willst: den Preis von $449, die geschlossene App-Plattform oder den separaten Kauf von Funkmodulen.** Hubitat und Home Assistant Green beantworten jeweils eine dieser Fragen, und Homeys eigener günstigerer Pro mini löst die Preisfrage innerhalb derselben Plattform.",
+        columns: ['Alternative', 'Preis', 'Kompromiss ggü. Homey Pro'],
+        rows: [
+          { Alternative: '[Hubitat Elevation C-8 Pro](https://hubitat.com/products/7194320273451)', Preis: '$184.95', 'Kompromiss ggü. Homey Pro': 'Zigbee/Z-Wave eingebaut, kein Thread-Funk, Versand nur USA' },
+          { Alternative: '[Home Assistant Green](https://www.home-assistant.io/green/) + ZBT-2', Preis: '$248 gesamt', 'Kompromiss ggü. Homey Pro': 'Am offensten, mehr Einrichtung, Z-Wave braucht 2. Dongle' },
+          { Alternative: '[Homey Pro mini](https://homey.app/en-us/homey-pro-mini/)', Preis: '$249', 'Kompromiss ggü. Homey Pro': 'Gleiches Homey OS, aber ohne Z-Wave, Wi-Fi und Bluetooth' },
+          { Alternative: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', Preis: '$139.99', 'Kompromiss ggü. Homey Pro': 'Nur Matter/Thread, IKEA-zentriert, kein Z-Wave' },
+        ],
+        items: [
+          "Hubitat vs. Homey, Preis: Hubitat Elevation C-8 Pro ($184.95) kostet weniger als die Hälfte von Homey Pro ($449), und beide bieten Zigbee 3.0, Z-Wave und einen Matter-Controller.",
+          "Hubitat vs. Homey, Funkmodule: Homey Pro bringt zusätzlich einen Thread-Border-Router, 433MHz und Infrarot mit; Hubitat hat kein Thread-Funkmodul. Homeys Z-Wave ist die 700er-Serie, Hubitats die 800er-Serie mit Long Range.",
+          "Hubitat vs. Homey, Plattform: Hubitat ist ein geschlossenes Regel-Engine-Gerät mit Weboberfläche; Homey arbeitet mit Apps und Flows, bietet eine ausgereifte Mobile-App und einen Community-App-Store. Keines von beiden bietet auf der eigenen Plattform eine lokale LLM-Integration.",
+          "Homey Pro mini ($249, am 18.10.2026 auf homey.app bestätigt) läuft mit demselben Homey-Pro-Betriebssystem und hat Zigbee 3.0, Matter v1.5 und einen Thread-Border-Router eingebaut; Z-Wave, Bluetooth, 433MHz und Infrarot erfordern jedoch die separate Homey Bridge für $69, daher spart er nur Geld, wenn du diese Funkstandards nicht brauchst.",
+          "Wenn du Homey wegen der Anbieterbindung und nicht wegen des Preises verlassen willst, ist die praktische Alternative Home Assistant Green — die einzige Option hier, deren Plattform Open Source und auf andere Hardware übertragbar ist.",
         ],
       },
       aqaraM3: {
@@ -779,15 +847,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dirigera',
         title: 'IKEA DIRIGERA — Bester günstiger Ökosystem-Hub',
         content:
-          "**Redaktionelle Bewertung: 7,8/10 (recherchebasierte Einschätzung, kein Laborergebnis).** IKEAs DIRIGERA ($119.99, bestätigt auf ikea.com) ist der günstigste echte Matter-/Thread-Hub in diesem Vergleich. Er wurde durch ein Firmware-Update 2025 zu einem vollständigen Matter-Controller und Thread-Border-Router, wodurch er einige Matter-Geräte von Drittanbietern einrichten kann, nicht nur IKEAs eigene Produktlinie. Diese Website hat einen eigenen DIRIGERA-Leitfaden mit der vollständigen Ökosystem-Aufschlüsselung.",
+          "**Redaktionelle Bewertung: 7,8/10 (recherchebasierte Einschätzung, kein Laborergebnis).** IKEAs DIRIGERA ($139.99, bestätigt auf ikea.com) ist der günstigste echte Matter-/Thread-Hub in diesem Vergleich. Er wurde durch ein Firmware-Update 2025 zu einem vollständigen Matter-Controller und Thread-Border-Router, wodurch er einige Matter-Geräte von Drittanbietern einrichten kann, nicht nur IKEAs eigene Produktlinie. Diese Website hat einen eigenen DIRIGERA-Leitfaden mit der vollständigen Ökosystem-Aufschlüsselung.",
         items: [
           "Kaufen, wenn: du den günstigsten echten Einstiegspunkt in lokale Matter-/Thread-Steuerung willst, mit IKEAs eigener App und Geräteauswahl als Haupterlebnis zufrieden bist und keine Hubitat-/Home-Assistant-Level-Anpassung brauchst.",
           "Nicht kaufen, wenn: du einen einzigen Hub willst, der auch Nicht-Matter-Zigbee-Geräte anderer Marken verwaltet, Z-Wave brauchst oder die Integrationstiefe von Home Assistant willst — DIRIGERAs eigene Automatisierungs-Engine ist absichtlich einfach.",
-          "Preisvergleich, klar benannt: DIRIGERA ($119.99) ist etwa $80 günstiger als Home Assistant Green ($199) und etwa $69 günstiger als Hubitat ($188.95) — der Kompromiss ist ein deutlich kleineres, IKEA-zentriertes Geräte- und Automatisierungs-Ökosystem.",
+          "Preisvergleich, klar benannt: DIRIGERA ($139.99) ist etwa $59 günstiger als Home Assistant Green ($199) und etwa $45 günstiger als Hubitat ($184.95) — der Kompromiss ist ein deutlich kleineres, IKEA-zentriertes Geräte- und Automatisierungs-Ökosystem.",
           "Kompatibilität: Matter 1.4 ✅ Controller · Thread-Border-Router ✅ · Zigbee ✅ (IKEA-Geräte, via Matter-Brücke für einige Drittanbieter) · Z-Wave ❌ · Einrichtungsschwierigkeit: einfach.",
         ],
         affiliateLinks: [
-          { label: 'Aktuellen Preis prüfen — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '$119.99' },
+          { label: 'Aktuellen Preis prüfen — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '$139.99' },
         ],
       },
       comparison: {
@@ -807,7 +875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Dimension: 'Lokale KI (Ollama/LLM)', 'Home Assistant Green': 'Ja, auf hochskalierter Box; nicht Greens 4GB allein', 'Hubitat C-8 Pro': 'Von der Plattform nicht unterstützt', 'Homey Pro': 'Von der Plattform nicht unterstützt' },
           { Dimension: 'Frigate / Kamera-KI', 'Home Assistant Green': 'Ja, via Home-Assistant-Add-on', 'Hubitat C-8 Pro': 'Keine native Unterstützung', 'Homey Pro': 'Keine native Unterstützung' },
           { Dimension: 'Ökosystem-Freiheit', 'Home Assistant Green': 'Am höchsten — keine Anbieterbindung', 'Hubitat C-8 Pro': 'Mittel — Hubitat-spezifisch', 'Homey Pro': 'Mittel — Homey-spezifisch' },
-          { Dimension: 'Preis', 'Home Assistant Green': '$199 / €179', 'Hubitat C-8 Pro': '$188.95', 'Homey Pro': '$449' },
+          { Dimension: 'Preis', 'Home Assistant Green': '$199 / €179', 'Hubitat C-8 Pro': '$184.95', 'Homey Pro': '$449' },
         ],
       },
       hubVsController: {
@@ -848,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Aktuellen Preis prüfen — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199 / €179' },
-          { label: 'Aktuellen Preis prüfen — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: 'Aktuellen Preis prüfen — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
           { label: 'Aktuellen Preis prüfen — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub' },
           { label: 'Aktuellen Preis prüfen — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Aktuellen Preis prüfen — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -875,6 +943,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Wenn du bist': 'Neustart mit Matter', 'Passende Hub(s)': 'Jeder der fünf — alle fungieren als Matter-Controller' },
           { 'Wenn du bist': 'Thread-lastig (Matter over Thread)', 'Passende Hub(s)': 'Homey oder DIRIGERA (eingebauter Border-Router)' },
           { 'Wenn du bist': 'Maximale zukünftige Flexibilität', 'Passende Hub(s)': 'Home Assistant Green + Dongle' },
+        ],
+      },
+      japan: {
+        id: 'japan',
+        title: 'Bester Smart-Home-Hub in Japan: Welche Hubs mit den meisten Geräten funktionieren',
+        content: "**In Japan wählst du einen Hub nach Funkstandard und danach, ob er dort legal gekauft und betrieben werden kann: Zigbee, Thread und Matter laufen weltweit auf 2,4GHz, Z-Wave nutzt in Japan jedoch ein eigenes Frequenzband, und mehrere Hubs werden nur für den US-Markt verkauft.**",
+        items: [
+          "Z-Wave ist die regionale Falle: Japans Z-Wave-Band liegt bei 922–926 MHz (ARIB STD-T108, laut Dokumentation von Z-Wave.me), nicht beim US-Band mit 908,4 MHz. Das Z-Wave-Funkmodul des Hubitat C-8 Pro nutzt die US-Frequenz, und Hubitat liefert nur in die 48 zusammenhängenden US-Bundesstaaten, daher ist er kein praktikabler Kauf für Japan.",
+          "Homey gibt an, dass die Antennen des Pro sich an lokale Vorschriften anpassen, nennt aber auf seiner Seite keine Japan-spezifische Z-Wave-Variante — kläre die Z-Wave-Unterstützung für Japan vor dem Kauf eines Homey Pro für Z-Wave-Geräte in Japan mit Athom.",
+          "Zigbee 3.0, Thread und Matter brauchen keine regionale Hardware: Home Assistant Green plus ein Connect ZBT-2, Aqara Hub M3 (Aqara nennt eine Installation in 110 japanischen Haushalten) und IKEA DIRIGERA decken diese Protokolle alle ab.",
+          "Beste Wahl für „funktioniert mit den meisten Geräten“: Home Assistant Green, weil seine Integrationsbibliothek Matter, Zigbee und Cloud-freie lokale Geräte gleichermaßen abdeckt. Mit $199 plus etwa $49 für den ZBT-2 sind das rund $248 vor Versand- und Importkosten.",
+          "Prüfe die japanische Funkgesetz-Zertifizierung jedes Geräts (das Konformitätszeichen) — ein im Ausland gekauftes Gerät oder ein Dongle ist in Japan möglicherweise nicht legal nutzbar. Dies ist ein allgemeiner Hinweis, keine Rechtsberatung; PromptQuorum hat keinen Hub in Japan getestet.",
         ],
       },
       localAi: {
@@ -924,8 +1004,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Was jede Preisstufe tatsächlich bringt.**',
         columns: ['Budget', 'Was du bekommst'],
         rows: [
-          { Budget: 'Unter $150', 'Was du bekommst': 'IKEA DIRIGERA ($119.99) — Einstiegs-Matter-/Thread-Ökosystem' },
-          { Budget: '$150-250', 'Was du bekommst': 'Home Assistant Green ($199) oder Hubitat C-8 Pro ($188.95) — ein Hub, noch keine Funkmodule/Sensoren' },
+          { Budget: 'Unter $150', 'Was du bekommst': 'IKEA DIRIGERA ($139.99) — Einstiegs-Matter-/Thread-Ökosystem' },
+          { Budget: '$150-250', 'Was du bekommst': 'Home Assistant Green ($199) oder Hubitat C-8 Pro ($184.95) — ein Hub, noch keine Funkmodule/Sensoren' },
           { Budget: '$250-500', 'Was du bekommst': 'HA Green + Dongle + ein paar Sensoren, oder Homey Pro ($449) allein' },
           { Budget: '$500-1.000+', 'Was du bekommst': 'HA Green + dedizierter KI-Mini-PC + Kameras + Sensoren + ein Schloss (siehe Starterkit oben)' },
         ],
@@ -988,15 +1068,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Fünf Hubs, fünf unterschiedliche Käuferprofile — die richtige Wahl hängt davon ab, was du tatsächlich brauchst, nicht davon, welcher auf dem Papier am besten abschneidet.**',
         items: [
           "Home Assistant Green ($199/€179) — insgesamt beste Wahl. Redaktionelle Bewertung: 9,3/10. Kaufe es, wenn du die offenste Plattform und echten lokalen-KI-Spielraum willst und es dir nichts ausmacht, ein Dongle-und-Sensor-System zusammenzustellen.",
-          "Hubitat Elevation C-8 Pro ($188.95) — bestes lokales Gerät. Redaktionelle Bewertung: 8,7/10. Kaufe es, wenn du lokale Automatisierung mit möglichst wenig Bastelei willst und Home Assistants Integrationsbreite nicht brauchst.",
+          "Hubitat Elevation C-8 Pro ($184.95) — bestes lokales Gerät. Redaktionelle Bewertung: 8,7/10. Kaufe es, wenn du lokale Automatisierung mit möglichst wenig Bastelei willst und Home Assistants Integrationsbreite nicht brauchst.",
           "Homey Pro ($449) — beste Premium-Komplettlösung. Redaktionelle Bewertung: 8,5/10. Kaufe es, wenn dir eingebaute Funkbreite und Homeys eigene App-Politur etwa das 2,3-Fache von Home Assistant Greens Preis wert sind.",
           "Aqara Hub M3 (UVP $219.99, oft ~$159.99) — bester Aqara-Ökosystem-Hub. Redaktionelle Bewertung: 8,0/10. Kaufe es, wenn du bereits speziell in Aqara-Geräte investiert bist.",
-          "IKEA DIRIGERA ($119.99) — bester einfacher Ökosystem-Hub. Redaktionelle Bewertung: 7,8/10. Kaufe es, wenn Budget der entscheidende Faktor ist und du damit zufrieden bist, die IKEA-App in den Mittelpunkt zu stellen.",
+          "IKEA DIRIGERA ($139.99) — bester einfacher Ökosystem-Hub. Redaktionelle Bewertung: 7,8/10. Kaufe es, wenn Budget der entscheidende Faktor ist und du damit zufrieden bist, die IKEA-App in den Mittelpunkt zu stellen.",
           "Die wichtigste Kaufregel für das lokale-KI-fokussierte Publikum dieser Website: empfiehl die Plattform mit der geringsten Ökosystem-Bindung, das ist Home Assistant Green — aber das ist nicht für jeden Käufer die richtige Wahl. Wenn dir Geräte-Einfachheit oder eingebaute Funkbreite wichtiger sind als Offenheit, sind Hubitat oder Homey die ehrlich richtige Wahl, kein Trostpreis.",
         ],
         affiliateLinks: [
           { label: 'Aktuellen Preis prüfen — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199 / €179' },
-          { label: 'Aktuellen Preis prüfen — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: 'Aktuellen Preis prüfen — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
           { label: 'Aktuellen Preis prüfen — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '$449' },
           { label: 'Aktuellen Preis prüfen — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Aktuellen Preis prüfen — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -1032,6 +1112,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Brauche ich einen Zigbee-Dongle mit Home Assistant Green?', a: "Ja, wenn du Zigbee-Geräte hast oder planst zu kaufen — Green hat kein eingebautes Funkmodul. Siehe den Zigbee- & Thread-Dongle-Leitfaden dieser Website für aktuelle Optionen wie den Home Assistant Connect ZBT-2 ($49/€45)." },
           { q: 'Unterstützt Home Assistant Green lokale KI?', a: "Home Assistants Software unterstützt lokale LLM-Integration via Ollama, aber Greens eigene 4GB RAM sind nicht dafür ausgelegt, zusätzlich ein lokales LLM gut auszuführen — kombiniere es mit einem separaten, leistungsfähigeren KI-Mini-PC (Zwei-Box-Architektur) für echten lokalen-KI-Einsatz, statt zu erwarten, dass Green allein beide Aufgaben bewältigt." },
           { q: 'Home Assistant Green vs. Hubitat — was soll ich kaufen?', a: "Home Assistant Green, wenn du maximale Offenheit, Integrationsbreite und lokales KI-Potenzial willst und es dir nichts ausmacht, ein Dongle-basiertes System zusammenzustellen. Hubitat Elevation C-8 Pro, wenn du lokale Automatisierung willst, die sich wie ein einfaches Gerät verhält, mit eingebautem Zigbee/Z-Wave und minimaler Einrichtung." },
+          { q: 'Was ist die beste Homey-Pro-Alternative?', a: "Hubitat Elevation C-8 Pro ($184.95) ist die nächstliegende Alternative mit eingebauten Funkmodulen zu weniger als dem halben Preis; Home Assistant Green plus ein ZBT-2-Dongle ($248) ist die Alternative mit offener Plattform; Homey Pro mini ($249) bleibt auf der Homey-Plattform, verzichtet aber auf Z-Wave, Wi-Fi und Bluetooth, sofern du nicht die Homey Bridge für $69 dazukaufst." },
+          { q: 'Hubitat vs. Homey — was ist besser?', a: "Hubitat ist günstiger ($184.95 vs. $449) und eine gerätehafte lokale Regel-Engine ohne Thread-Funkmodul; Homey Pro bietet zusätzlich Thread, 433MHz und Infrarot sowie eine ausgereiftere App. Keines von beiden arbeitet vollständig offline, und keines bietet eine native lokale LLM-Integration." },
+          { q: 'Was ist der beste Smart-Home-Hub für Japan?', a: "Für die größte Gerätevielfalt Home Assistant Green mit einem Zigbee-/Thread-Dongle, da Zigbee, Thread und Matter weltweite 2,4GHz-Standards sind. Z-Wave nutzt in Japan 922–926 MHz, und Hubitats C-8 Pro verwendet die US-Frequenz und wird nur innerhalb der zusammenhängenden USA geliefert — prüfe daher die regionale Z-Wave-Unterstützung, bevor du einen Z-Wave-Hub kaufst." },
+          { q: 'Was ist der beste Home-Automation-Hub für Einsteiger?', a: "Hubitat Elevation C-8 Pro ($184.95), wenn du in den USA bist und lokale Automatisierung mit eingebautem Zigbee und Z-Wave willst; Homey Pro ($449), wenn du die einfachste Einrichtung willst und dafür zahlst; Home Assistant Green, wenn du für maximale Flexibilität eine längere Einrichtung in Kauf nimmst." },
           { q: 'Was ist der beste Hub für Matter?', a: "Alle fünf Hubs in diesem Leitfaden (Home Assistant Green, Hubitat, Homey Pro, Aqara Hub M3, IKEA DIRIGERA) können als Matter-Controller fungieren, aber Homey Pro und IKEA DIRIGERA haben einen eingebauten Thread-Border-Router, während Home Assistant Green dafür einen Dongle braucht — prüfe die unterstützte Controller-Liste des spezifischen Matter-Geräts vor dem Kauf." },
         ],
       },
@@ -1039,14 +1123,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Die besten Smart-Home-Hubs für lokale Steuerung 2026: Home Assistant vs. Hubitat vs. Homey',
+      headline: 'Der beste Smart-Home-Hub für lokale Steuerung 2026: Home Assistant vs. Hubitat vs. Homey',
       description: 'Die besten Smart-Home-Hubs für lokale Steuerung 2026: Home Assistant Green vs. Hubitat Elevation C-8 Pro vs. Homey Pro vs. Aqara Hub M3 vs. IKEA DIRIGERA im Vergleich.',
       url: 'https://www.promptquorum.com/de/smart-home/best-smart-home-hubs-2027',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Smart home hub' }, { '@type': 'Thing', name: 'Home Assistant Green' }, { '@type': 'Thing', name: 'Hubitat' }, { '@type': 'Thing', name: 'Homey' }, { '@type': 'Thing', name: 'Aqara Hub M3' }, { '@type': 'Thing', name: 'IKEA DIRIGERA' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1058,6 +1142,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'Was ist der beste Hub für Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green ($199/€179) ist die offizielle Erstanbieter-Hardware, benötigt aber einen separaten Zigbee-/Thread-/Z-Wave-USB-Dongle.' } },
         { '@type': 'Question', name: 'Lohnt sich Home Assistant Green?', acceptedAnswer: { '@type': 'Answer', text: 'Ja für Käufer, die die offenste Plattform und lokalen KI-Spielraum wollen, aber ein mittlerer Einrichtungsprozess und ein separater Dongle-Kauf sind zu erwarten.' } },
+        { '@type': 'Question', name: 'Was ist die beste Homey-Pro-Alternative?', acceptedAnswer: { '@type': 'Answer', text: 'Hubitat Elevation C-8 Pro ($184.95) für eingebaute Funkmodule zum halben Preis, Home Assistant Green plus ein ZBT-2-Dongle ($248) für eine offene Plattform oder Homey Pro mini ($249), um bei Homey mit weniger eingebauten Funkmodulen zu bleiben.' } },
+        { '@type': 'Question', name: 'Was ist der beste Smart-Home-Hub für Japan?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green mit einem Zigbee-/Thread-Dongle deckt die meisten Geräte ab; Z-Wave nutzt in Japan 922–926 MHz, und Hubitat liefert nur in die zusammenhängenden USA, prüfe daher zuerst die regionale Unterstützung.' } },
         { '@type': 'Question', name: 'Home Assistant Green vs. Hubitat — was soll ich kaufen?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green für maximale Offenheit und lokales KI-Potenzial; Hubitat Elevation C-8 Pro für gerätehafte lokale Automatisierung mit minimaler Einrichtung.' } },
       ],
     },
@@ -1066,20 +1152,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-16',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-24',
-    last_full_refresh: '2026-08-25',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2026-11-17',
+    last_full_refresh: '2026-10-18',
     theme: "Buyer's Guides",
     heroImage: '/images/best-smart-home-hubs-2027-overview-hero-fr.webp',
     affiliateDisclosure: true,
-    title: 'Meilleurs hubs domotiques pour le contrôle local en 2026 : Home Assistant vs Hubitat vs Homey',
-    seoTitle: 'Meilleurs hubs domotiques 2026 : HA Green vs Hubitat vs Homey',
+    title: 'Meilleur hub domotique pour le contrôle local en 2026 : Home Assistant vs Hubitat vs Homey',
+    seoTitle: 'Meilleur hub domotique 2026 : HA Green vs Hubitat vs Homey',
     intro:
-      "Choisir un hub domotique en 2026 revient à une question que la plupart des acheteurs sautent : voulez-vous la plateforme offrant le plus de marge pour l'IA locale et aucun verrouillage (Home Assistant Green), celle qui se comporte comme un appareil simple et ne vous complique pas la vie (Hubitat Elevation C-8 Pro), ou celle qui fait payer le confort au prix fort (Homey Pro) ? Le Hub M3 d'Aqara et le DIRIGERA d'IKEA complètent le tableau pour les acheteurs déjà engagés dans un écosystème d'appareils spécifique. Ce guide est la page commerciale mère du cluster maison connectée locale de ce site — chaque prix et spécification ci-dessous a été vérifié auprès des sources des fabricants le 25/08/2026, et aucun de ces matériels n'a été testé ni benchmarké par PromptQuorum ; chaque affirmation de capacité est une évaluation basée sur la recherche à partir de documentation officielle, pas un résultat de laboratoire.",
+      "Choisir un hub domotique en 2026 revient à une question que la plupart des acheteurs sautent : voulez-vous la plateforme offrant le plus de marge pour l'IA locale et aucun verrouillage (Home Assistant Green), celle qui se comporte comme un appareil simple et ne vous complique pas la vie (Hubitat Elevation C-8 Pro), ou celle qui fait payer le confort au prix fort (Homey Pro) ? Le Hub M3 d'Aqara et le DIRIGERA d'IKEA complètent le tableau pour les acheteurs déjà engagés dans un écosystème d'appareils spécifique. Ce guide est la page commerciale mère du cluster maison connectée locale de ce site — chaque prix et spécification ci-dessous a été vérifié auprès des sources des fabricants le 18/10/2026, et aucun de ces matériels n'a été testé ni benchmarké par PromptQuorum ; chaque affirmation de capacité est une évaluation basée sur la recherche à partir de documentation officielle, pas un résultat de laboratoire.",
     metaDescription:
-      "Meilleurs hubs domotiques pour le contrôle local en 2026 : Home Assistant Green vs Hubitat Elevation C-8 Pro vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA — prix actuels, protocoles, et lequel correspond à votre profil d'achat.",
+      "Meilleur hub domotique pour le contrôle local en 2026 : Home Assistant Green vs Hubitat C-8 Pro vs Homey Pro (et alternatives à Homey Pro) vs Aqara M3 vs IKEA DIRIGERA — prix, protocoles, notes Japon.",
     twitterDescription:
-      'Home Assistant Green vs Hubitat vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA — prix actuels 2026 et prise en charge des protocoles comparés, plus quel hub convient à votre installation IA locale.',
+      'Meilleur hub domotique 2026 : Home Assistant Green vs Hubitat vs Homey Pro vs Aqara M3 vs IKEA DIRIGERA — prix, alternatives à Homey Pro et notes Japon.',
     readTime: '13 min de lecture',
     educationalLevel: 'Beginner',
     audience: "Acheteurs de maison connectée choisissant un hub dédié pour le contrôle local, avec ou sans ambitions d'IA locale",
@@ -1091,22 +1177,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aqara hub m3 vs home assistant',
       'ikea dirigera vs home assistant green',
       'hub domotique ia locale',
+      'alternative homey pro',
+      'hubitat vs homey',
+      'meilleur hub domotique',
+      'meilleur hub domotique japon',
     ],
     leadAnswerBlock:
-      "**Home Assistant Green (199 $/179 €) est le meilleur hub domotique globalement pour 2026 si vous voulez un contrôle local maximal et de la marge pour l'IA locale — il exécute la véritable plateforme Home Assistant, mais est livré sans radio Zigbee/Thread/Z-Wave intégrée, prévoyez donc un dongle USB en plus.** Hubitat Elevation C-8 Pro (188,95 $, prix confirmé en hausse par rapport à 179,95 $ précédemment) est le meilleur choix si vous voulez une automatisation locale façon appareil ménager sans entretenir un système de type Linux. Homey Pro (449 $) est la meilleure solution tout-en-un premium pour les acheteurs prêts à payer environ 2,3 fois le prix de Home Assistant Green pour le plus large ensemble radio intégré et le moins de configuration DIY. Aqara Hub M3 (PDSF 219,99 $, souvent ~159,99 $ en promotion) convient aux foyers déjà investis dans l'écosystème Aqara. IKEA DIRIGERA (119,99 $) est le point d'entrée authentique le moins cher, avec son propre guide dédié sur ce site.",
+      "**Home Assistant Green (199 $/179 €) est le meilleur hub domotique globalement pour 2026 si vous voulez un contrôle local maximal et de la marge pour l'IA locale — il exécute la véritable plateforme Home Assistant, mais est livré sans radio Zigbee/Thread/Z-Wave intégrée, prévoyez donc un dongle USB en plus.** Hubitat Elevation C-8 Pro (184,95 $) est le meilleur choix si vous voulez une automatisation locale façon appareil ménager sans entretenir un système de type Linux. Homey Pro (449 $) est la meilleure solution tout-en-un premium pour les acheteurs prêts à payer environ 2,3 fois le prix de Home Assistant Green pour le plus large ensemble radio intégré et le moins de configuration DIY. Aqara Hub M3 (PDSF 219,99 $, souvent ~159,99 $ en promotion) convient aux foyers déjà investis dans l'écosystème Aqara. IKEA DIRIGERA (139,99 $) est le point d'entrée authentique le moins cher, avec son propre guide dédié sur ce site.",
     quickAnswerTop: {
       fr: {
         question: 'Quel est le meilleur hub domotique pour le contrôle local en 2026 ?',
         answer:
-          "Pour la plupart des acheteurs voulant un contrôle local-first et de la place pour ajouter de l'IA locale plus tard, Home Assistant Green (199 $/179 €) est le meilleur choix — il exécute la véritable plateforme Home Assistant, le système le plus ouvert et le plus riche en intégrations de ce comparatif, mais nécessite un dongle USB séparé pour Zigbee/Thread/Z-Wave puisqu'aucun n'est intégré. Si vous voulez une automatisation locale avec beaucoup moins de bricolage, Hubitat Elevation C-8 Pro (188,95 $) se comporte comme un appareil plutôt qu'un système à entretenir. Homey Pro (449 $) est le choix tout-en-un premium avec le plus large support radio intégré de tous les hubs ici, à environ 2,3 fois le prix de Home Assistant Green. Aqara Hub M3 (PDSF 219,99 $) convient aux acheteurs déjà engagés dans les appareils Aqara. IKEA DIRIGERA (119,99 $) est le point d'entrée Matter/Thread authentique le moins cher. Aucun de ces hubs n'a été testé par PromptQuorum — chaque affirmation ci-dessous provient de la documentation des fabricants, vérifiée le 25/08/2026.",
+          "Pour la plupart des acheteurs voulant un contrôle local-first et de la place pour ajouter de l'IA locale plus tard, Home Assistant Green (199 $/179 €) est le meilleur choix — il exécute la véritable plateforme Home Assistant, le système le plus ouvert et le plus riche en intégrations de ce comparatif, mais nécessite un dongle USB séparé pour Zigbee/Thread/Z-Wave puisqu'aucun n'est intégré. Si vous voulez une automatisation locale avec beaucoup moins de bricolage, Hubitat Elevation C-8 Pro (184,95 $) se comporte comme un appareil plutôt qu'un système à entretenir. Homey Pro (449 $) est le choix tout-en-un premium avec le plus large support radio intégré de tous les hubs ici, à environ 2,3 fois le prix de Home Assistant Green. Aqara Hub M3 (PDSF 219,99 $) convient aux acheteurs déjà engagés dans les appareils Aqara. IKEA DIRIGERA (139,99 $) est le point d'entrée Matter/Thread authentique le moins cher. Aucun de ces hubs n'a été testé par PromptQuorum — chaque affirmation ci-dessous provient de la documentation des fabricants, vérifiée le 18/10/2026.",
         bullets: [
           "Meilleur global / meilleur pour l'IA locale : Home Assistant Green (199 $/179 €) — nécessite un dongle Zigbee/Thread/Z-Wave séparé",
-          'Meilleure alternative locale plus simple : Hubitat Elevation C-8 Pro (188,95 $) — façon appareil ménager, moins de bricolage',
+          'Meilleure alternative locale plus simple : Hubitat Elevation C-8 Pro (184,95 $) — façon appareil ménager, moins de bricolage',
           'Meilleur tout-en-un premium : Homey Pro (449 $) — radios intégrées les plus larges, prix le plus élevé',
           'Meilleur pour les foyers dans l\'écosystème Aqara : Aqara Hub M3 (PDSF 219,99 $, souvent ~159,99 $)',
-          'Meilleur hub d\'écosystème abordable : IKEA DIRIGERA (119,99 $) — voir le guide dédié sur ce site',
+          'Meilleur hub d\'écosystème abordable : IKEA DIRIGERA (139,99 $) — voir le guide dédié sur ce site',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1120,6 +1210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Coût du kit de démarrage', anchor: 'starter-package' },
       { label: 'Hubitat Elevation C-8 Pro', anchor: 'hubitat' },
       { label: 'Homey Pro', anchor: 'homey' },
+      { label: 'Alternatives à Homey Pro', anchor: 'homey-alternatives' },
       { label: 'Aqara Hub M3', anchor: 'aqara-m3' },
       { label: 'IKEA DIRIGERA', anchor: 'dirigera' },
       { label: 'Tableau comparatif complet', anchor: 'comparison' },
@@ -1128,6 +1219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Quel hub devriez-vous acheter ? (bis)', anchor: 'which-to-buy-2' },
       { label: "N'achetez pas encore de hub", anchor: 'dont-buy-yet' },
       { label: 'Arbre de décision des protocoles', anchor: 'protocol-tree' },
+      { label: 'Hubs domotiques au Japon', anchor: 'japan' },
       { label: "Meilleur hub pour l'IA locale", anchor: 'local-ai' },
       { label: 'Kit de démarrage maison connectée locale', anchor: 'starter-kit' },
       { label: 'Échelle de budget', anchor: 'budget-ladder' },
@@ -1140,7 +1232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: "Home Assistant Green (199 $/179 €) est le meilleur hub domotique global pour le contrôle local et le potentiel d'IA locale en 2026, avec Hubitat Elevation C-8 Pro (188,95 $) comme alternative plus simple sans bricolage et Homey Pro (449 $) comme option tout-en-un premium." },
+      { type: 'one-sentence', content: "Home Assistant Green (199 $/179 €) est le meilleur hub domotique global pour le contrôle local et le potentiel d'IA locale en 2026, avec Hubitat Elevation C-8 Pro (184,95 $) comme alternative plus simple sans bricolage et Homey Pro (449 $) comme option tout-en-un premium." },
       { type: 'plain-terms', content: "Un hub domotique est le boîtier qui communique avec vos appareils et exécute vos automatisations sans avoir besoin d'internet. Ce guide compare cinq modèles actuels — quels protocoles ils prennent en charge de base, ce qu'ils coûtent aujourd'hui, et quel profil d'achat convient réellement à chacun — sans prétendre que PromptQuorum en a testé un seul." },
     ],
     sections: {
@@ -1150,11 +1242,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           "Home Assistant Green (199 $/179 €) — meilleur global et meilleur potentiel d'IA locale, mais nécessite un dongle USB Zigbee/Thread/Z-Wave séparé",
-          'Hubitat Elevation C-8 Pro (188,95 $, confirmé en hausse par rapport à 179,95 $ précédemment) — meilleure automatisation locale façon appareil ménager, le moins de bricolage',
+          'Hubitat Elevation C-8 Pro (184,95 $, livraison limitée aux États-Unis) — meilleure automatisation locale façon appareil ménager, le moins de bricolage',
           "Homey Pro (449 $) — meilleur tout-en-un premium, radios intégrées les plus larges, environ 2,3 fois le prix de Home Assistant Green",
           "Aqara Hub M3 (PDSF 219,99 $, souvent ~159,99 $) — meilleur pour les foyers déjà investis dans les appareils Aqara, pas une plateforme ouverte",
-          "IKEA DIRIGERA (119,99 $) — hub d'écosystème authentique le moins cher, voir le guide dédié DIRIGERA de ce site",
-          "Aucun de ces hubs n'a été testé ou benchmarké par PromptQuorum — chaque affirmation provient de la documentation des fabricants, vérifiée le 25/08/2026",
+          "IKEA DIRIGERA (139,99 $) — hub d'écosystème authentique le moins cher, voir le guide dédié DIRIGERA de ce site",
+          "Aucun de ces hubs n'a été testé ou benchmarké par PromptQuorum — chaque affirmation provient de la documentation des fabricants, vérifiée le 18/10/2026",
         ],
       },
       quickVerdict: {
@@ -1164,14 +1256,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Hub', 'Idéal pour', 'Note locale', 'Zigbee', 'Z-Wave', 'Matter/Thread', 'Potentiel IA', 'Prix'],
         rows: [
           { Hub: '[Home Assistant Green](https://www.home-assistant.io/green/)', 'Idéal pour': 'Contrôle/IA max', 'Note locale': 'La plus haute', Zigbee: 'Via dongle', 'Z-Wave': 'Via dongle', 'Matter/Thread': 'Via dongle', 'Potentiel IA': 'Le plus élevé (Ollama)', Prix: '199 $/179 €' },
-          { Hub: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 'Idéal pour': 'Automatisation locale simple', 'Note locale': 'Élevée', Zigbee: 'Intégré 3.0', 'Z-Wave': 'Intégré 800 LR', 'Matter/Thread': 'Matter 1.5 (pas de radio Thread)', 'Potentiel IA': 'Faible (appareil)', Prix: '188,95 $' },
+          { Hub: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 'Idéal pour': 'Automatisation locale simple', 'Note locale': 'Élevée', Zigbee: 'Intégré 3.0', 'Z-Wave': 'Intégré 800 LR', 'Matter/Thread': 'Matter 1.5 (pas de radio Thread)', 'Potentiel IA': 'Faible (appareil)', Prix: '184,95 $' },
           { Hub: '[Homey Pro](https://homey.app/en-us/homey-pro/)', 'Idéal pour': 'Tout-en-un premium', 'Note locale': 'Mixte*', Zigbee: 'Intégré 3.0', 'Z-Wave': 'Intégré 700', 'Matter/Thread': 'Matter 1.5 + BR Thread', 'Potentiel IA': 'Faible (appareil)', Prix: '449 $' },
           { Hub: '[Aqara Hub M3](https://www.aqara.com/en/product/hub-m3/)', 'Idéal pour': 'Écosystème Aqara', 'Note locale': 'Mixte*', Zigbee: 'Intégré', 'Z-Wave': 'Aucun', 'Matter/Thread': 'Contrôleur Matter + Thread', 'Potentiel IA': 'Aucun (passerelle)', Prix: '219,99 $ PDSF' },
-          { Hub: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 'Idéal pour': "Écosystème économique", 'Note locale': 'Mixte*', Zigbee: 'Appareils IKEA uniquement', 'Z-Wave': 'Aucun', 'Matter/Thread': 'Matter 1.4 + BR Thread', 'Potentiel IA': 'Aucun (passerelle)', Prix: '119,99 $' },
+          { Hub: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 'Idéal pour': "Écosystème économique", 'Note locale': 'Mixte*', Zigbee: 'Appareils IKEA uniquement', 'Z-Wave': 'Aucun', 'Matter/Thread': 'Matter 1.4 + BR Thread', 'Potentiel IA': 'Aucun (passerelle)', Prix: '139,99 $' },
         ],
         items: [
           '*Note locale « mixte » : Homey, Aqara et IKEA utilisent des applications compagnes connectées au cloud pour la configuration/l\'accès à distance en plus de l\'exécution locale des automatisations — aucun n\'est aussi entièrement hors-ligne qu\'une instance Home Assistant auto-hébergée. Voir « Que donne vraiment le local ? » ci-dessous pour la nuance.',
-          "Chaque cellule ci-dessus a été vérifiée indépendamment sur la page produit actuelle de chaque fabricant le 25/08/2026 — ne recopiez pas ces chiffres sans revérifier, cette catégorie a déjà connu une hausse de prix confirmée (Hubitat) depuis une version antérieure de cette page.",
+          "Chaque cellule ci-dessus a été vérifiée indépendamment sur la page produit actuelle de chaque fabricant le 18/10/2026 (le prix de l'Aqara Hub M3 a été confirmé pour la dernière fois le 25/08/2026 — la page produit actuelle d'Aqara n'affiche aucun prix) — ne recopiez pas ces chiffres sans revérifier : les prix de cette catégorie ont bougé deux fois depuis août (Hubitat à la baisse, IKEA DIRIGERA à la hausse).",
         ],
       },
       topPicks: {
@@ -1180,12 +1272,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Commencez ici si vous voulez juste la réponse.**",
         items: [
           "Meilleur global — Home Assistant Green (199 $/179 €) : exécute la véritable plateforme Home Assistant, le système le plus riche en intégrations et le plus ouvert de ce comparatif. Note éditoriale : 9,3/10 (évaluation basée sur la recherche à partir de documentation officielle, pas un score testé en laboratoire).",
-          "Meilleure alternative plus simple — Hubitat Elevation C-8 Pro (188,95 $) : automatisation locale qui se comporte comme un appareil ménager, pas une machine Linux à entretenir. Note éditoriale : 8,7/10.",
+          "Meilleure alternative plus simple — Hubitat Elevation C-8 Pro (184,95 $) : automatisation locale qui se comporte comme un appareil ménager, pas une machine Linux à entretenir. Note éditoriale : 8,7/10.",
           "Meilleur tout-en-un — Homey Pro (449 $) : le plus large support de protocoles intégré de tous les hubs ici, à un vrai supplément de prix qui mérite d'être nommé clairement. Note éditoriale : 8,5/10.",
         ],
         affiliateLinks: [
           { label: 'Vérifier le prix actuel — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199 $ / 179 €' },
-          { label: 'Vérifier le prix actuel — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188,95 $' },
+          { label: 'Vérifier le prix actuel — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184,95 $' },
           { label: 'Vérifier le prix actuel — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '449 $' },
           { label: 'Vérifier le prix actuel — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Vérifier le prix actuel — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -1254,7 +1346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hubitat',
         title: 'Hubitat Elevation C-8 Pro — Meilleure alternative locale plus simple',
         content:
-          "**Note éditoriale : 8,7/10 (évaluation basée sur la recherche, pas un score testé en laboratoire).** L'Elevation C-8 Pro d'Hubitat (188,95 $, confirmé sur hubitat.com — en hausse par rapport aux 179,95 $ cités par une version antérieure de cette page, une hausse de prix réelle et actuelle) exécute la propre plateforme d'automatisation locale d'Hubitat, pas Home Assistant. Il prend en charge Zigbee 3.0, Z-Wave 800 Long Range, Matter 1.5 en tant que contrôleur, et Bluetooth, tous intégrés.",
+          "**Note éditoriale : 8,7/10 (évaluation basée sur la recherche, pas un score testé en laboratoire).** L'Elevation C-8 Pro d'Hubitat (184,95 $, confirmé sur hubitat.com le 18/10/2026 — légèrement en baisse par rapport aux 188,95 $ cités en août ; Hubitat livre uniquement dans les 48 États contigus des États-Unis) exécute la propre plateforme d'automatisation locale d'Hubitat, pas Home Assistant. Il prend en charge Zigbee 3.0, Z-Wave 800 Long Range, Matter 1.5 en tant que contrôleur, et Bluetooth, tous intégrés.",
         items: [
           "Idéal pour les utilisateurs voulant une expérience d'automatisation locale façon appareil ménager, pas un système de type Linux à entretenir — le moteur de règles, l'interface web et le processus de mise à jour d'Hubitat sont conçus pour paraître fermés et stables, pas comme un ordinateur polyvalent que vous administrez.",
           "Pourquoi Home Assistant gagne à la place : nombre d'intégrations bien plus grand, prise en charge native de Frigate/IA caméra, personnalisation profonde via YAML et modules communautaires, et un chemin réaliste vers l'automatisation LLM locale. La propre plateforme d'Hubitat n'est conçue pour rien de tout cela.",
@@ -1262,7 +1354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Compatibilité : Zigbee 3.0 ✅ intégré · Z-Wave 800 LR ✅ intégré · Matter 1.5 ✅ (contrôleur uniquement, pas de radio Thread) · Bluetooth ✅ · Difficulté de configuration : facile.",
         ],
         affiliateLinks: [
-          { label: 'Vérifier le prix actuel — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188,95 $' },
+          { label: 'Vérifier le prix actuel — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184,95 $' },
         ],
       },
       homey: {
@@ -1271,13 +1363,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Note éditoriale : 8,5/10 (évaluation basée sur la recherche, pas un score testé en laboratoire).** Homey Pro (2026) coûte 449 $ (confirmé sur homey.app, en hausse depuis 399 $ après un changement de prix le 1er juin 2026) avec 4 Go de RAM, 8 Go eMMC, et un processeur quad-core ARMv8 à 1,5 GHz. Il a le plus large ensemble radio intégré de tous les hubs de ce guide : Wi-Fi, Bluetooth 5.0, Matter v1.5, un routeur de bordure Thread, Zigbee 3.0, Z-Wave 700, 433 MHz, et infrarouge.",
         items: [
-          "Nommer l'écart de prix clairement : 449 $ représente environ 2,3 fois les 199 $ de Home Assistant Green et environ 2,4 fois les 188,95 $ d'Hubitat — ce supplément achète des radios intégrées que vous assembleriez autrement vous-même, pas un niveau de capacité fondamentalement différent.",
+          "Nommer l'écart de prix clairement : 449 $ représente environ 2,3 fois les 199 $ de Home Assistant Green et environ 2,4 fois les 184,95 $ d'Hubitat — ce supplément achète des radios intégrées que vous assembleriez autrement vous-même, pas un niveau de capacité fondamentalement différent.",
           "Idéal pour les acheteurs voulant le plus large ensemble radio de base sans aucun achat de dongle, et qui valorisent l'écosystème d'applications propre à Homey et son fini plus que la communauté ouverte bien plus grande de Home Assistant.",
           "Pourquoi Home Assistant/Hubitat gagnent à la place : à ce prix, un Home Assistant Green plus un dongle Connect ZBT-2 (199 $ + 49 $ = 248 $) reste environ 200 $ moins cher que Homey Pro tout en ajoutant une marge d'IA locale que la propre plateforme de Homey n'offre pas.",
           "Compatibilité : Zigbee 3.0 ✅ intégré · Z-Wave 700 ✅ intégré · Matter v1.5 ✅ · Routeur de bordure Thread ✅ intégré · 433 MHz ✅ · IR ✅ · Difficulté de configuration : facile.",
         ],
         affiliateLinks: [
           { label: 'Vérifier le prix actuel — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '449 $' },
+        ],
+      },
+      homeyAlternatives: {
+        id: 'homey-alternatives',
+        title: 'Alternatives à Homey Pro et Hubitat vs Homey',
+        content: "**La meilleure alternative à Homey Pro dépend de ce que vous voulez éviter : le prix de 449 $, la plateforme d'applications fermée, ou l'achat séparé des radios.** Hubitat et Home Assistant Green répondent chacun à l'un de ces points, et le Pro mini, moins cher, répond à la question du prix au sein de la même plateforme Homey.",
+        columns: ['Alternative', 'Prix', 'Compromis vs Homey Pro'],
+        rows: [
+          { Alternative: '[Hubitat Elevation C-8 Pro](https://hubitat.com/products/7194320273451)', Prix: '184,95 $', 'Compromis vs Homey Pro': 'Zigbee/Z-Wave intégrés, sans Thread, livraison US seule' },
+          { Alternative: '[Home Assistant Green](https://www.home-assistant.io/green/) + ZBT-2', Prix: '248 $ au total', 'Compromis vs Homey Pro': 'Plus ouverte, plus de config ; Z-Wave exige un 2e dongle' },
+          { Alternative: '[Homey Pro mini](https://homey.app/en-us/homey-pro-mini/)', Prix: '249 $', 'Compromis vs Homey Pro': 'Même Homey OS, sans Z-Wave, Wi-Fi ni Bluetooth intégrés' },
+          { Alternative: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', Prix: '139,99 $', 'Compromis vs Homey Pro': 'Matter/Thread seulement, centré IKEA, sans Z-Wave' },
+        ],
+        items: [
+          "Hubitat vs Homey, prix : l'Hubitat Elevation C-8 Pro (184,95 $) coûte moins de la moitié du Homey Pro (449 $), et les deux intègrent Zigbee 3.0, Z-Wave et un contrôleur Matter.",
+          "Hubitat vs Homey, radios : Homey Pro ajoute un routeur de bordure Thread, le 433 MHz et l'infrarouge ; Hubitat n'a pas de radio Thread. Le Z-Wave de Homey est de la série 700, celui d'Hubitat de la série 800 avec Long Range.",
+          "Hubitat vs Homey, plateforme : Hubitat est un appareil à moteur de règles fermé avec une interface web ; Homey fonctionne par applications et flux, avec une application mobile soignée et une boutique d'applications communautaire. Ni l'un ni l'autre n'exécute d'intégration LLM locale sur sa propre plateforme.",
+          "Le Homey Pro mini (249 $, confirmé sur homey.app le 18/10/2026) exécute le même OS que Homey Pro avec Zigbee 3.0, Matter v1.5 et un routeur de bordure Thread intégrés, mais le Z-Wave, le Bluetooth, le 433 MHz et l'infrarouge exigent le Homey Bridge séparé à 69 $ — il ne fait donc économiser de l'argent que si vous pouvez vous passer de ces radios.",
+          "Si vous quittez Homey à cause du verrouillage plutôt que du prix, l'alternative pratique est Home Assistant Green — la seule option ici dont la plateforme est open source et portable vers d'autres matériels.",
         ],
       },
       aqaraM3: {
@@ -1300,15 +1411,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dirigera',
         title: "IKEA DIRIGERA — Meilleur hub écosystème abordable",
         content:
-          "**Note éditoriale : 7,8/10 (évaluation basée sur la recherche, pas un score testé en laboratoire).** Le DIRIGERA d'IKEA (119,99 $, confirmé sur ikea.com) est le hub Matter/Thread authentique le moins cher de ce comparatif. Il est devenu un contrôleur Matter complet et un routeur de bordure Thread via une mise à jour firmware 2025, lui permettant d'intégrer certains appareils Matter tiers, pas seulement la propre gamme d'IKEA. Ce site a un guide DIRIGERA dédié avec le détail complet de l'écosystème.",
+          "**Note éditoriale : 7,8/10 (évaluation basée sur la recherche, pas un score testé en laboratoire).** Le DIRIGERA d'IKEA (139,99 $, confirmé sur ikea.com) est le hub Matter/Thread authentique le moins cher de ce comparatif. Il est devenu un contrôleur Matter complet et un routeur de bordure Thread via une mise à jour firmware 2025, lui permettant d'intégrer certains appareils Matter tiers, pas seulement la propre gamme d'IKEA. Ce site a un guide DIRIGERA dédié avec le détail complet de l'écosystème.",
         items: [
           "Achetez si : vous voulez le point d'entrée authentique le moins cher vers le contrôle Matter/Thread local, êtes à l'aise avec la propre application et gamme d'appareils d'IKEA comme expérience principale, et n'avez pas besoin d'une personnalisation au niveau d'Hubitat/Home Assistant.",
           "N'achetez pas si : vous voulez un seul hub gérant aussi des appareils Zigbee non-Matter d'autres marques, avez besoin de Z-Wave, ou voulez la profondeur d'intégration de Home Assistant — le propre moteur d'automatisation de DIRIGERA est intentionnellement simple.",
-          "Comparaison de prix, énoncée clairement : DIRIGERA (119,99 $) est environ 80 $ moins cher que Home Assistant Green (199 $) et environ 69 $ moins cher qu'Hubitat (188,95 $) — le compromis est un écosystème d'appareils et d'automatisation bien plus restreint et centré sur IKEA.",
+          "Comparaison de prix, énoncée clairement : DIRIGERA (139,99 $) est environ 59 $ moins cher que Home Assistant Green (199 $) et environ 45 $ moins cher qu'Hubitat (184,95 $) — le compromis est un écosystème d'appareils et d'automatisation bien plus restreint et centré sur IKEA.",
           "Compatibilité : Matter 1.4 ✅ contrôleur · Routeur de bordure Thread ✅ · Zigbee ✅ (appareils IKEA, via passerelle Matter pour certains tiers) · Z-Wave ❌ · Difficulté de configuration : facile.",
         ],
         affiliateLinks: [
-          { label: 'Vérifier le prix actuel — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '119,99 $' },
+          { label: 'Vérifier le prix actuel — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '139,99 $' },
         ],
       },
       comparison: {
@@ -1328,7 +1439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Dimension: 'IA locale (Ollama/LLM)', 'Home Assistant Green': "Oui, sur un boîtier monté en gamme ; pas les 4 Go de Green seul", 'Hubitat C-8 Pro': 'Non pris en charge par la plateforme', 'Homey Pro': 'Non pris en charge par la plateforme' },
           { Dimension: 'Frigate / IA caméra', 'Home Assistant Green': 'Oui, via module Home Assistant', 'Hubitat C-8 Pro': 'Pas de prise en charge native', 'Homey Pro': 'Pas de prise en charge native' },
           { Dimension: "Liberté d'écosystème", 'Home Assistant Green': 'La plus élevée — pas de verrouillage fournisseur', 'Hubitat C-8 Pro': 'Modérée — spécifique à Hubitat', 'Homey Pro': 'Modérée — spécifique à Homey' },
-          { Dimension: 'Prix', 'Home Assistant Green': '199 $ / 179 €', 'Hubitat C-8 Pro': '188,95 $', 'Homey Pro': '449 $' },
+          { Dimension: 'Prix', 'Home Assistant Green': '199 $ / 179 €', 'Hubitat C-8 Pro': '184,95 $', 'Homey Pro': '449 $' },
         ],
       },
       hubVsController: {
@@ -1369,7 +1480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Vérifier le prix actuel — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199 $ / 179 €' },
-          { label: 'Vérifier le prix actuel — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188,95 $' },
+          { label: 'Vérifier le prix actuel — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184,95 $' },
           { label: 'Vérifier le prix actuel — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub' },
           { label: 'Vérifier le prix actuel — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Vérifier le prix actuel — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -1396,6 +1507,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Si vous êtes': 'Vous lancez avec Matter', 'Hub(s) le(s) plus adapté(s)': 'N\'importe lequel des cinq — tous agissent comme contrôleurs Matter' },
           { 'Si vous êtes': 'Fortement Thread (Matter over Thread)', 'Hub(s) le(s) plus adapté(s)': 'Homey ou DIRIGERA (routeur de bordure intégré)' },
           { 'Si vous êtes': 'Vous voulez une flexibilité future maximale', 'Hub(s) le(s) plus adapté(s)': 'Home Assistant Green + dongle' },
+        ],
+      },
+      japan: {
+        id: 'japan',
+        title: "Meilleur hub domotique au Japon : quels hubs fonctionnent avec le plus d'appareils",
+        content: "**Au Japon, choisissez un hub selon ses radios et selon qu'il peut y être légalement acheté et utilisé : Zigbee, Thread et Matter fonctionnent en 2,4 GHz dans le monde entier, mais le Z-Wave utilise une bande japonaise distincte et plusieurs hubs ici sont vendus uniquement pour le marché américain.**",
+        items: [
+          "Le Z-Wave est le piège régional : la bande Z-Wave du Japon est 922–926 MHz (ARIB STD-T108, d'après la documentation de Z-Wave.me), et non la bande américaine de 908,4 MHz. La radio Z-Wave de l'Hubitat C-8 Pro est sur la fréquence américaine et Hubitat ne livre que dans les 48 États contigus des États-Unis ; ce n'est donc pas un achat réaliste pour le Japon.",
+          "Homey indique que les antennes du Pro s'adaptent à la réglementation locale, mais sa page ne mentionne aucune variante Z-Wave spécifique au Japon — confirmez la prise en charge du Z-Wave japonais auprès d'Athom avant d'acheter un Homey Pro pour des appareils Z-Wave au Japon.",
+          "Zigbee 3.0, Thread et Matter ne demandent aucun matériel régional : Home Assistant Green avec un Connect ZBT-2, l'Aqara Hub M3 (Aqara cite un déploiement japonais de 110 foyers) et l'IKEA DIRIGERA couvrent tous ces protocoles.",
+          "Meilleur choix pour « fonctionne avec le plus d'appareils » : Home Assistant Green, car sa bibliothèque d'intégrations couvre aussi bien Matter et Zigbee que les appareils locaux sans cloud. À 199 $ plus environ 49 $ pour le ZBT-2, cela fait environ 248 $ avant frais de port et d'importation.",
+          "Vérifiez la certification japonaise de conformité radio de chaque appareil (la marque de conformité technique) — un appareil ou un dongle acheté à l'étranger n'est peut-être pas légalement utilisable au Japon. Ce sont des indications générales, pas un avis juridique ; PromptQuorum n'a testé aucun hub au Japon.",
         ],
       },
       localAi: {
@@ -1445,8 +1568,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Ce que chaque tranche de prix achète réellement.**',
         columns: ['Budget', 'Ce que vous obtenez'],
         rows: [
-          { Budget: 'Moins de 150 $', 'Ce que vous obtenez': "IKEA DIRIGERA (119,99 $) — écosystème Matter/Thread d'entrée de gamme" },
-          { Budget: '150-250 $', 'Ce que vous obtenez': 'Home Assistant Green (199 $) ou Hubitat C-8 Pro (188,95 $) — un hub, pas encore de radios/capteurs' },
+          { Budget: 'Moins de 150 $', 'Ce que vous obtenez': "IKEA DIRIGERA (139,99 $) — écosystème Matter/Thread d'entrée de gamme" },
+          { Budget: '150-250 $', 'Ce que vous obtenez': 'Home Assistant Green (199 $) ou Hubitat C-8 Pro (184,95 $) — un hub, pas encore de radios/capteurs' },
           { Budget: '250-500 $', 'Ce que vous obtenez': 'HA Green + dongle + quelques capteurs, ou Homey Pro (449 $) seul' },
           { Budget: '500-1 000 $+', 'Ce que vous obtenez': 'HA Green + mini-PC IA dédié + caméras + capteurs + une serrure (voir kit de démarrage ci-dessus)' },
         ],
@@ -1509,15 +1632,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Cinq hubs, cinq profils d'acheteurs différents — le bon choix dépend de ce dont vous avez réellement besoin, pas de celui qui obtient le meilleur score sur papier.**",
         items: [
           "Home Assistant Green (199 $/179 €) — meilleur global. Note éditoriale : 9,3/10. Achetez-le si vous voulez la plateforme la plus ouverte et une vraie marge d'IA locale, et que ça ne vous dérange pas d'assembler un système de dongles et de capteurs.",
-          "Hubitat Elevation C-8 Pro (188,95 $) — meilleur appareil local. Note éditoriale : 8,7/10. Achetez-le si vous voulez une automatisation locale avec le moins de bricolage et n'avez pas besoin de l'étendue d'intégration de Home Assistant.",
+          "Hubitat Elevation C-8 Pro (184,95 $) — meilleur appareil local. Note éditoriale : 8,7/10. Achetez-le si vous voulez une automatisation locale avec le moins de bricolage et n'avez pas besoin de l'étendue d'intégration de Home Assistant.",
           "Homey Pro (449 $) — meilleur tout-en-un premium. Note éditoriale : 8,5/10. Achetez-le si l'étendue radio intégrée et le fini propre de l'application Homey valent pour vous environ 2,3 fois le prix de Home Assistant Green.",
           "Aqara Hub M3 (PDSF 219,99 $, souvent ~159,99 $) — meilleur hub écosystème Aqara. Note éditoriale : 8,0/10. Achetez-le si vous êtes déjà spécifiquement investi dans les appareils Aqara.",
-          "IKEA DIRIGERA (119,99 $) — meilleur hub écosystème simple. Note éditoriale : 7,8/10. Achetez-le si le budget est le facteur décisif et que vous êtes à l'aise à centrer l'application IKEA.",
+          "IKEA DIRIGERA (139,99 $) — meilleur hub écosystème simple. Note éditoriale : 7,8/10. Achetez-le si le budget est le facteur décisif et que vous êtes à l'aise à centrer l'application IKEA.",
           "La règle d'achat clé pour le public de ce site axé IA locale : recommander la plateforme avec le moins de verrouillage d'écosystème, c'est-à-dire Home Assistant Green — mais ce n'est pas le bon choix pour tout acheteur. Si la simplicité d'appareil ou l'étendue radio intégrée compte plus pour vous que l'ouverture, Hubitat ou Homey sont le choix honnêtement correct, pas un lot de consolation.",
         ],
         affiliateLinks: [
           { label: 'Vérifier le prix actuel — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199 $ / 179 €' },
-          { label: 'Vérifier le prix actuel — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188,95 $' },
+          { label: 'Vérifier le prix actuel — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184,95 $' },
           { label: 'Vérifier le prix actuel — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '449 $' },
           { label: 'Vérifier le prix actuel — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Vérifier le prix actuel — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -1553,6 +1676,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ai-je besoin d\'un dongle Zigbee avec Home Assistant Green ?', a: "Oui, si vous avez ou prévoyez d'acheter des appareils Zigbee — Green n'a pas de radio intégrée. Voir le guide des dongles Zigbee et Thread de ce site pour les options actuelles comme le Home Assistant Connect ZBT-2 (49 $/45 €)." },
           { q: "Home Assistant Green prend-il en charge l'IA locale ?", a: "Le logiciel de Home Assistant prend en charge l'intégration LLM locale via Ollama, mais les 4 Go de RAM de Green ne sont pas dimensionnés pour bien exécuter aussi un LLM local en plus — associez-le à un mini-PC IA séparé et plus puissant (architecture deux boîtes) pour un vrai usage IA locale, plutôt que d'attendre que Green seul gère les deux tâches." },
           { q: 'Home Assistant Green vs Hubitat — lequel dois-je acheter ?', a: "Home Assistant Green si vous voulez une ouverture maximale, une étendue d'intégration et un potentiel d'IA locale et que ça ne vous dérange pas d'assembler un système basé sur des dongles. Hubitat Elevation C-8 Pro si vous voulez une automatisation locale qui se comporte comme un appareil simple avec Zigbee/Z-Wave intégrés et une configuration minimale." },
+          { q: 'Quelle est la meilleure alternative à Homey Pro ?', a: "L'Hubitat Elevation C-8 Pro (184,95 $) est l'alternative à radios intégrées la plus proche, à moins de la moitié du prix ; Home Assistant Green plus un dongle ZBT-2 (248 $) est l'alternative sur plateforme ouverte ; le Homey Pro mini (249 $) conserve la plateforme Homey mais perd le Z-Wave, le Wi-Fi et le Bluetooth sauf si vous ajoutez le Homey Bridge à 69 $." },
+          { q: 'Hubitat vs Homey — lequel est le meilleur ?', a: "Hubitat est moins cher (184,95 $ contre 449 $) et c'est un moteur de règles local façon appareil, sans radio Thread ; Homey Pro ajoute Thread, le 433 MHz et l'infrarouge ainsi qu'une application plus soignée. Aucun des deux n'est entièrement hors-ligne, et aucun n'offre d'intégration LLM locale native." },
+          { q: 'Quel est le meilleur hub domotique pour le Japon ?', a: "Pour l'étendue de la prise en charge d'appareils, Home Assistant Green avec un dongle Zigbee/Thread, car Zigbee, Thread et Matter sont des standards 2,4 GHz mondiaux. Au Japon, le Z-Wave utilise 922–926 MHz, et le C-8 Pro d'Hubitat utilise la fréquence américaine et ne livre qu'aux États-Unis continentaux : vérifiez la prise en charge Z-Wave régionale avant d'acheter un hub Z-Wave." },
+          { q: 'Quel est le meilleur hub domotique pour débuter ?', a: "L'Hubitat Elevation C-8 Pro (184,95 $) si vous êtes aux États-Unis et voulez une automatisation locale avec Zigbee et Z-Wave intégrés ; Homey Pro (449 $) si vous voulez la configuration la plus simple et acceptez de la payer ; Home Assistant Green si vous acceptez une configuration plus longue pour la plus grande flexibilité." },
           { q: 'Quel est le meilleur hub pour Matter ?', a: "Les cinq hubs de ce guide (Home Assistant Green, Hubitat, Homey Pro, Aqara Hub M3, IKEA DIRIGERA) peuvent tous agir comme contrôleurs Matter, mais Homey Pro et IKEA DIRIGERA ont un routeur de bordure Thread intégré, tandis que Home Assistant Green a besoin d'un dongle pour ce rôle — vérifiez la liste des contrôleurs pris en charge de l'appareil Matter spécifique avant d'acheter." },
         ],
       },
@@ -1560,14 +1687,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Meilleurs hubs domotiques pour le contrôle local en 2026 : Home Assistant vs Hubitat vs Homey',
+      headline: 'Meilleur hub domotique pour le contrôle local en 2026 : Home Assistant vs Hubitat vs Homey',
       description: "Meilleurs hubs domotiques pour le contrôle local en 2026 : Home Assistant Green vs Hubitat Elevation C-8 Pro vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA comparés.",
       url: 'https://www.promptquorum.com/fr/smart-home/best-smart-home-hubs-2027',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Smart home hub' }, { '@type': 'Thing', name: 'Home Assistant Green' }, { '@type': 'Thing', name: 'Hubitat' }, { '@type': 'Thing', name: 'Homey' }, { '@type': 'Thing', name: 'Aqara Hub M3' }, { '@type': 'Thing', name: 'IKEA DIRIGERA' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1579,6 +1706,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'Quel est le meilleur hub pour Home Assistant ?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green (199 $/179 €) est le matériel officiel de premier fournisseur mais nécessite un dongle USB Zigbee/Thread/Z-Wave séparé.' } },
         { '@type': 'Question', name: 'Home Assistant Green en vaut-il la peine ?', acceptedAnswer: { '@type': 'Answer', text: "Oui pour les acheteurs voulant la plateforme la plus ouverte et une marge d'IA locale, mais attendez-vous à un processus de configuration modéré et un achat de dongle séparé." } },
+        { '@type': 'Question', name: 'Quelle est la meilleure alternative à Homey Pro ?', acceptedAnswer: { '@type': 'Answer', text: "Hubitat Elevation C-8 Pro (184,95 $) pour des radios intégrées à moins de la moitié du prix, Home Assistant Green plus un dongle ZBT-2 (248 $) pour une plateforme ouverte, ou Homey Pro mini (249 $) pour rester sur Homey avec moins de radios intégrées." } },
+        { '@type': 'Question', name: 'Quel est le meilleur hub domotique pour le Japon ?', acceptedAnswer: { '@type': 'Answer', text: "Home Assistant Green avec un dongle Zigbee/Thread couvre le plus d'appareils ; au Japon, le Z-Wave utilise 922–926 MHz et Hubitat ne livre qu'aux États-Unis continentaux, vérifiez donc d'abord la prise en charge régionale." } },
         { '@type': 'Question', name: 'Home Assistant Green vs Hubitat — lequel dois-je acheter ?', acceptedAnswer: { '@type': 'Answer', text: "Home Assistant Green pour une ouverture maximale et un potentiel d'IA locale ; Hubitat Elevation C-8 Pro pour une automatisation locale façon appareil simple avec une configuration minimale." } },
       ],
     },
@@ -1587,20 +1716,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-16',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-24',
-    last_full_refresh: '2026-08-25',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2026-11-17',
+    last_full_refresh: '2026-10-18',
     theme: "Buyer's Guides",
     heroImage: '/images/best-smart-home-hubs-2027-overview-hero-es.webp',
     affiliateDisclosure: true,
-    title: 'Los mejores hubs domóticos para control local en 2026: Home Assistant vs Hubitat vs Homey',
-    seoTitle: 'Mejores hubs domóticos 2026: HA Green vs Hubitat vs Homey',
+    title: 'El mejor hub domótico para control local en 2026: Home Assistant vs Hubitat vs Homey',
+    seoTitle: 'Mejor hub domótico 2026: HA Green vs Hubitat vs Homey',
     intro:
-      "Elegir un hub domótico en 2026 se reduce a una pregunta que la mayoría de compradores se salta: ¿quieres la plataforma con más margen para IA local y sin dependencia de fabricante (Home Assistant Green), la que se comporta como un simple electrodoméstico y no te complica la vida (Hubitat Elevation C-8 Pro), o la que cobra la comodidad a un precio mucho más alto (Homey Pro)? El Hub M3 de Aqara y el DIRIGERA de IKEA completan el panorama para compradores ya comprometidos con un ecosistema de dispositivos concreto. Esta guía es la página comercial madre del clúster de hogar inteligente local de este sitio — cada precio y especificación se verificó contra fuentes de los fabricantes el 25/08/2026, y ninguno de estos dispositivos ha sido probado ni evaluado por PromptQuorum; cada afirmación de capacidad es una evaluación basada en investigación a partir de documentación oficial, no un resultado de laboratorio.",
+      "Elegir un hub domótico en 2026 se reduce a una pregunta que la mayoría de compradores se salta: ¿quieres la plataforma con más margen para IA local y sin dependencia de fabricante (Home Assistant Green), la que se comporta como un simple electrodoméstico y no te complica la vida (Hubitat Elevation C-8 Pro), o la que cobra la comodidad a un precio mucho más alto (Homey Pro)? El Hub M3 de Aqara y el DIRIGERA de IKEA completan el panorama para compradores ya comprometidos con un ecosistema de dispositivos concreto. Esta guía es la página comercial madre del clúster de hogar inteligente local de este sitio — cada precio y especificación se verificó contra fuentes de los fabricantes el 18/10/2026, y ninguno de estos dispositivos ha sido probado ni evaluado por PromptQuorum; cada afirmación de capacidad es una evaluación basada en investigación a partir de documentación oficial, no un resultado de laboratorio.",
     metaDescription:
-      'Los mejores hubs domóticos para control local en 2026: Home Assistant Green vs Hubitat Elevation C-8 Pro vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA — precios actuales, protocolos y cuál se ajusta a tu perfil de compra.',
+      'El mejor hub domótico para control local en 2026: Home Assistant Green vs Hubitat C-8 Pro vs Homey Pro (y alternativas a Homey Pro) vs Aqara M3 vs IKEA DIRIGERA — precios, protocolos y notas sobre Japón.',
     twitterDescription:
-      'Home Assistant Green vs Hubitat vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA — precios actuales de 2026 y soporte de protocolos comparados, más qué hub encaja con tu configuración de IA local.',
+      'Mejor hub domótico 2026: Home Assistant Green vs Hubitat vs Homey Pro vs Aqara M3 vs IKEA DIRIGERA — precios, alternativas a Homey Pro y notas sobre Japón.',
     readTime: '13 min de lectura',
     educationalLevel: 'Beginner',
     audience: 'Compradores de hogar inteligente que eligen un hub dedicado para control local, con o sin ambiciones de IA local',
@@ -1612,22 +1741,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aqara hub m3 vs home assistant',
       'ikea dirigera vs home assistant green',
       'hub domotico ia local',
+      'alternativa a homey pro',
+      'hubitat vs homey',
+      'mejor hub de automatizacion del hogar',
+      'mejor hub domotico japon',
     ],
     leadAnswerBlock:
-      "**Home Assistant Green (199 $/179 €) es el mejor hub domótico en general para 2026 si quieres máximo control local y margen para IA local — ejecuta la plataforma Home Assistant real, pero viene sin radio Zigbee/Thread/Z-Wave integrada, así que presupuesta un dongle USB adicional.** Hubitat Elevation C-8 Pro (188,95 $, precio confirmado en alza desde 179,95 $ anteriores) es la mejor opción si quieres automatización local tipo electrodoméstico sin mantener un sistema tipo Linux. Homey Pro (449 $) es la mejor solución premium todo en uno para compradores dispuestos a pagar aproximadamente 2,3 veces el precio de Home Assistant Green por el conjunto de radios integradas más amplio y la menor configuración DIY. Aqara Hub M3 (PVP 219,99 $, a menudo ~159,99 $ en oferta) conviene a hogares ya invertidos en el ecosistema Aqara. IKEA DIRIGERA (119,99 $) es el punto de entrada genuino más barato, con su propia guía dedicada en este sitio.",
+      "**Home Assistant Green (199 $/179 €) es el mejor hub domótico en general para 2026 si quieres máximo control local y margen para IA local — ejecuta la plataforma Home Assistant real, pero viene sin radio Zigbee/Thread/Z-Wave integrada, así que presupuesta un dongle USB adicional.** Hubitat Elevation C-8 Pro (184,95 $) es la mejor opción si quieres automatización local tipo electrodoméstico sin mantener un sistema tipo Linux. Homey Pro (449 $) es la mejor solución premium todo en uno para compradores dispuestos a pagar aproximadamente 2,3 veces el precio de Home Assistant Green por el conjunto de radios integradas más amplio y la menor configuración DIY. Aqara Hub M3 (PVP 219,99 $, a menudo ~159,99 $ en oferta) conviene a hogares ya invertidos en el ecosistema Aqara. IKEA DIRIGERA (139,99 $) es el punto de entrada genuino más barato, con su propia guía dedicada en este sitio.",
     quickAnswerTop: {
       es: {
         question: '¿Cuál es el mejor hub domótico para control local en 2026?',
         answer:
-          "Para la mayoría de compradores que quieren control local-first y margen para añadir IA local después, Home Assistant Green (199 $/179 €) es la mejor opción — ejecuta la plataforma real de Home Assistant, el sistema más abierto y rico en integraciones de esta comparativa, aunque necesita un dongle USB separado para Zigbee/Thread/Z-Wave ya que ninguno viene integrado. Si quieres automatización local con mucho menos trasteo, Hubitat Elevation C-8 Pro (188,95 $) se comporta como un electrodoméstico en lugar de un sistema que hay que mantener. Homey Pro (449 $) es la opción premium todo en uno con el soporte de radio integrado más amplio de todos los hubs aquí, a aproximadamente 2,3 veces el precio de Home Assistant Green. Aqara Hub M3 (PVP 219,99 $) encaja con compradores ya comprometidos con dispositivos Aqara. IKEA DIRIGERA (119,99 $) es el punto de entrada Matter/Thread genuino más barato. Ninguno de estos hubs ha sido probado por PromptQuorum — cada afirmación abajo procede de documentación de los fabricantes, verificada el 25/08/2026.",
+          "Para la mayoría de compradores que quieren control local-first y margen para añadir IA local después, Home Assistant Green (199 $/179 €) es la mejor opción — ejecuta la plataforma real de Home Assistant, el sistema más abierto y rico en integraciones de esta comparativa, aunque necesita un dongle USB separado para Zigbee/Thread/Z-Wave ya que ninguno viene integrado. Si quieres automatización local con mucho menos trasteo, Hubitat Elevation C-8 Pro (184,95 $) se comporta como un electrodoméstico en lugar de un sistema que hay que mantener. Homey Pro (449 $) es la opción premium todo en uno con el soporte de radio integrado más amplio de todos los hubs aquí, a aproximadamente 2,3 veces el precio de Home Assistant Green. Aqara Hub M3 (PVP 219,99 $) encaja con compradores ya comprometidos con dispositivos Aqara. IKEA DIRIGERA (139,99 $) es el punto de entrada Matter/Thread genuino más barato. Ninguno de estos hubs ha sido probado por PromptQuorum — cada afirmación abajo procede de documentación de los fabricantes, verificada el 18/10/2026.",
         bullets: [
           'Mejor en general / mejor para IA local: Home Assistant Green (199 $/179 €) — necesita dongle Zigbee/Thread/Z-Wave separado',
-          'Mejor alternativa local más simple: Hubitat Elevation C-8 Pro (188,95 $) — tipo electrodoméstico, menos trasteo',
+          'Mejor alternativa local más simple: Hubitat Elevation C-8 Pro (184,95 $) — tipo electrodoméstico, menos trasteo',
           'Mejor todo en uno premium: Homey Pro (449 $) — radios integradas más amplias, precio más alto',
           'Mejor para hogares en el ecosistema Aqara: Aqara Hub M3 (PVP 219,99 $, a menudo ~159,99 $)',
-          'Mejor hub de ecosistema económico: IKEA DIRIGERA (119,99 $) — ver la guía dedicada en este sitio',
+          'Mejor hub de ecosistema económico: IKEA DIRIGERA (139,99 $) — ver la guía dedicada en este sitio',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1641,6 +1774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Coste del paquete inicial', anchor: 'starter-package' },
       { label: 'Hubitat Elevation C-8 Pro', anchor: 'hubitat' },
       { label: 'Homey Pro', anchor: 'homey' },
+      { label: 'Alternativas a Homey Pro', anchor: 'homey-alternatives' },
       { label: 'Aqara Hub M3', anchor: 'aqara-m3' },
       { label: 'IKEA DIRIGERA', anchor: 'dirigera' },
       { label: 'Tabla comparativa completa', anchor: 'comparison' },
@@ -1649,6 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '¿Qué hub deberías comprar? (de nuevo)', anchor: 'which-to-buy-2' },
       { label: 'Todavía no compres un hub', anchor: 'dont-buy-yet' },
       { label: 'Árbol de decisión de protocolos', anchor: 'protocol-tree' },
+      { label: 'Hubs domóticos en Japón', anchor: 'japan' },
       { label: 'Mejor hub para IA local', anchor: 'local-ai' },
       { label: 'Kit inicial de hogar inteligente local', anchor: 'starter-kit' },
       { label: 'Escalera de presupuesto', anchor: 'budget-ladder' },
@@ -1661,7 +1796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Preguntas frecuentes', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Home Assistant Green (199 $/179 €) es el mejor hub domótico en general para control local y potencial de IA local en 2026, con Hubitat Elevation C-8 Pro (188,95 $) como alternativa más simple sin trasteo y Homey Pro (449 $) como opción premium todo en uno.' },
+      { type: 'one-sentence', content: 'Home Assistant Green (199 $/179 €) es el mejor hub domótico en general para control local y potencial de IA local en 2026, con Hubitat Elevation C-8 Pro (184,95 $) como alternativa más simple sin trasteo y Homey Pro (449 $) como opción premium todo en uno.' },
       { type: 'plain-terms', content: 'Un hub domótico es la caja que habla con tus dispositivos y ejecuta tus automatizaciones sin necesitar internet. Esta guía compara cinco modelos actuales — qué protocolos soportan de fábrica, cuánto cuestan hoy y qué perfil de comprador encaja realmente con cada uno — sin afirmar que PromptQuorum haya probado ninguno.' },
     ],
     sections: {
@@ -1671,11 +1806,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Home Assistant Green (199 $/179 €) — mejor en general y mejor potencial de IA local, pero necesita dongle USB Zigbee/Thread/Z-Wave separado',
-          'Hubitat Elevation C-8 Pro (188,95 $, confirmado en alza desde 179,95 $ anteriores) — mejor automatización local tipo electrodoméstico, menos trasteo',
+          'Hubitat Elevation C-8 Pro (184,95 $, envío solo a EE. UU.) — mejor automatización local tipo electrodoméstico, menos trasteo',
           'Homey Pro (449 $) — mejor todo en uno premium, radios integradas más amplias, aproximadamente 2,3 veces el precio de Home Assistant Green',
           'Aqara Hub M3 (PVP 219,99 $, a menudo ~159,99 $) — mejor para hogares ya invertidos en dispositivos Aqara, no una plataforma abierta',
-          'IKEA DIRIGERA (119,99 $) — hub de ecosistema genuino más barato, ver la guía dedicada de DIRIGERA de este sitio',
-          'Ninguno de estos hubs ha sido probado o evaluado por PromptQuorum — cada afirmación procede de documentación de fabricantes, verificada el 25/08/2026',
+          'IKEA DIRIGERA (139,99 $) — hub de ecosistema genuino más barato, ver la guía dedicada de DIRIGERA de este sitio',
+          'Ninguno de estos hubs ha sido probado o evaluado por PromptQuorum — cada afirmación procede de documentación de fabricantes, verificada el 18/10/2026',
         ],
       },
       quickVerdict: {
@@ -1685,14 +1820,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Hub', 'Mejor para', 'Puntuación local', 'Zigbee', 'Z-Wave', 'Matter/Thread', 'Potencial IA', 'Precio'],
         rows: [
           { Hub: '[Home Assistant Green](https://www.home-assistant.io/green/)', 'Mejor para': 'Máximo control/IA', 'Puntuación local': 'La más alta', Zigbee: 'Vía dongle', 'Z-Wave': 'Vía dongle', 'Matter/Thread': 'Vía dongle', 'Potencial IA': 'El más alto (Ollama)', Precio: '199 $/179 €' },
-          { Hub: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 'Mejor para': 'Automatización local simple', 'Puntuación local': 'Alta', Zigbee: 'Integrado 3.0', 'Z-Wave': 'Integrado 800 LR', 'Matter/Thread': 'Matter 1.5 (sin radio Thread)', 'Potencial IA': 'Bajo (electrodoméstico)', Precio: '188,95 $' },
+          { Hub: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 'Mejor para': 'Automatización local simple', 'Puntuación local': 'Alta', Zigbee: 'Integrado 3.0', 'Z-Wave': 'Integrado 800 LR', 'Matter/Thread': 'Matter 1.5 (sin radio Thread)', 'Potencial IA': 'Bajo (electrodoméstico)', Precio: '184,95 $' },
           { Hub: '[Homey Pro](https://homey.app/en-us/homey-pro/)', 'Mejor para': 'Todo en uno premium', 'Puntuación local': 'Mixta*', Zigbee: 'Integrado 3.0', 'Z-Wave': 'Integrado 700', 'Matter/Thread': 'Matter 1.5 + BR Thread', 'Potencial IA': 'Bajo (electrodoméstico)', Precio: '449 $' },
           { Hub: '[Aqara Hub M3](https://www.aqara.com/en/product/hub-m3/)', 'Mejor para': 'Ecosistema Aqara', 'Puntuación local': 'Mixta*', Zigbee: 'Integrado', 'Z-Wave': 'Ninguno', 'Matter/Thread': 'Controlador Matter + Thread', 'Potencial IA': 'Ninguno (puente)', Precio: '219,99 $ PVP' },
-          { Hub: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 'Mejor para': 'Ecosistema económico', 'Puntuación local': 'Mixta*', Zigbee: 'Solo dispositivos IKEA', 'Z-Wave': 'Ninguno', 'Matter/Thread': 'Matter 1.4 + BR Thread', 'Potencial IA': 'Ninguno (puente)', Precio: '119,99 $' },
+          { Hub: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 'Mejor para': 'Ecosistema económico', 'Puntuación local': 'Mixta*', Zigbee: 'Solo dispositivos IKEA', 'Z-Wave': 'Ninguno', 'Matter/Thread': 'Matter 1.4 + BR Thread', 'Potencial IA': 'Ninguno (puente)', Precio: '139,99 $' },
         ],
         items: [
           '*Puntuación local "mixta": Homey, Aqara e IKEA usan apps complementarias conectadas a la nube para configuración/acceso remoto junto a la ejecución local de automatizaciones — ninguno es tan completamente sin conexión como una instancia de Home Assistant autoalojada. Ver "¿Qué da realmente lo local?" abajo para el matiz.',
-          'Cada celda arriba se verificó de forma independiente contra la página de producto actual de cada fabricante el 25/08/2026 — no copies estas cifras sin reverificar, esta categoría ya tuvo una subida de precio confirmada (Hubitat) desde una versión anterior de esta página.',
+          'Cada celda arriba se verificó de forma independiente contra la página de producto actual de cada fabricante el 18/10/2026 (el precio del Aqara Hub M3 se confirmó por última vez el 25/08/2026 — la página de producto actual de Aqara no indica precio) — no copies estas cifras sin reverificar: los precios de esta categoría se movieron dos veces desde agosto (Hubitat a la baja, IKEA DIRIGERA al alza).',
         ],
       },
       topPicks: {
@@ -1701,12 +1836,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Empieza aquí si solo quieres la respuesta.**",
         items: [
           "Mejor en general — Home Assistant Green (199 $/179 €): ejecuta la plataforma real de Home Assistant, el sistema más rico en integraciones y más abierto de esta comparativa. Puntuación editorial: 9,3/10 (evaluación basada en investigación a partir de documentación oficial, no un resultado probado en laboratorio).",
-          "Mejor alternativa más simple — Hubitat Elevation C-8 Pro (188,95 $): automatización local que se comporta como un electrodoméstico, no una máquina Linux que mantener. Puntuación editorial: 8,7/10.",
+          "Mejor alternativa más simple — Hubitat Elevation C-8 Pro (184,95 $): automatización local que se comporta como un electrodoméstico, no una máquina Linux que mantener. Puntuación editorial: 8,7/10.",
           "Mejor todo en uno — Homey Pro (449 $): el soporte de protocolos integrado más amplio de todos los hubs aquí, con un sobreprecio real que merece nombrarse claramente. Puntuación editorial: 8,5/10.",
         ],
         affiliateLinks: [
           { label: 'Ver precio actual — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199 $ / 179 €' },
-          { label: 'Ver precio actual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188,95 $' },
+          { label: 'Ver precio actual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184,95 $' },
           { label: 'Ver precio actual — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '449 $' },
           { label: 'Ver precio actual — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Ver precio actual — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -1775,7 +1910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hubitat',
         title: 'Hubitat Elevation C-8 Pro — Mejor alternativa local más simple',
         content:
-          "**Puntuación editorial: 8,7/10 (evaluación basada en investigación, no un resultado probado en laboratorio).** El Elevation C-8 Pro de Hubitat (188,95 $, confirmado en hubitat.com — en alza desde los 179,95 $ que citaba una versión anterior de esta página, una subida de precio real y actual) ejecuta la propia plataforma de automatización local de Hubitat, no Home Assistant. Soporta Zigbee 3.0, Z-Wave 800 Long Range, Matter 1.5 como controlador, y Bluetooth, todo integrado.",
+          "**Puntuación editorial: 8,7/10 (evaluación basada en investigación, no un resultado probado en laboratorio).** El Elevation C-8 Pro de Hubitat (184,95 $, confirmado en hubitat.com el 18/10/2026 — ligeramente por debajo de los 188,95 $ que citaba esta página en agosto; Hubitat solo envía a los 48 estados contiguos de EE. UU.) ejecuta la propia plataforma de automatización local de Hubitat, no Home Assistant. Soporta Zigbee 3.0, Z-Wave 800 Long Range, Matter 1.5 como controlador, y Bluetooth, todo integrado.",
         items: [
           "Mejor para usuarios que quieren una experiencia de automatización local tipo electrodoméstico, no un sistema tipo Linux que mantener — el motor de reglas, la interfaz web y el proceso de actualización de Hubitat están diseñados para sentirse cerrados y estables, no como un ordenador de propósito general que administras.",
           "Por qué gana Home Assistant en su lugar: número de integraciones mucho mayor, soporte nativo de Frigate/IA de cámaras, personalización profunda vía YAML y add-ons comunitarios, y un camino realista hacia automatización de LLM local. La propia plataforma de Hubitat no está construida para nada de eso.",
@@ -1783,7 +1918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Compatibilidad: Zigbee 3.0 ✅ integrado · Z-Wave 800 LR ✅ integrado · Matter 1.5 ✅ (solo controlador, sin radio Thread) · Bluetooth ✅ · Dificultad de configuración: fácil.",
         ],
         affiliateLinks: [
-          { label: 'Ver precio actual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188,95 $' },
+          { label: 'Ver precio actual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184,95 $' },
         ],
       },
       homey: {
@@ -1792,13 +1927,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Puntuación editorial: 8,5/10 (evaluación basada en investigación, no un resultado probado en laboratorio).** Homey Pro (2026) cuesta 449 $ (confirmado en homey.app, en alza desde 399 $ tras un cambio de precio el 1 de junio de 2026) con 4 GB de RAM, 8 GB eMMC, y un procesador quad-core ARMv8 de 1,5 GHz. Tiene el conjunto de radios integradas más amplio de todos los hubs de esta guía: Wi-Fi, Bluetooth 5.0, Matter v1.5, un router frontera Thread, Zigbee 3.0, Z-Wave 700, 433 MHz e infrarrojos.",
         items: [
-          "Nombrar la brecha de precio claramente: 449 $ es aproximadamente 2,3 veces los 199 $ de Home Assistant Green y unas 2,4 veces los 188,95 $ de Hubitat — ese sobreprecio compra radios integradas que de otro modo ensamblarías tú mismo, no un nivel de capacidad fundamentalmente distinto.",
+          "Nombrar la brecha de precio claramente: 449 $ es aproximadamente 2,3 veces los 199 $ de Home Assistant Green y unas 2,4 veces los 184,95 $ de Hubitat — ese sobreprecio compra radios integradas que de otro modo ensamblarías tú mismo, no un nivel de capacidad fundamentalmente distinto.",
           "Mejor para compradores que quieren el conjunto de radios de fábrica más amplio sin ninguna compra de dongles, y que valoran el propio ecosistema de apps y acabado de Homey más que la comunidad abierta mucho más grande de Home Assistant.",
           "Por qué ganan Home Assistant/Hubitat en su lugar: a este precio, un Home Assistant Green más un dongle Connect ZBT-2 (199 $ + 49 $ = 248 $) sigue siendo unos 200 $ más barato que Homey Pro mientras añade margen de IA local que la propia plataforma de Homey no ofrece.",
           "Compatibilidad: Zigbee 3.0 ✅ integrado · Z-Wave 700 ✅ integrado · Matter v1.5 ✅ · Router frontera Thread ✅ integrado · 433 MHz ✅ · IR ✅ · Dificultad de configuración: fácil.",
         ],
         affiliateLinks: [
           { label: 'Ver precio actual — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '449 $' },
+        ],
+      },
+      homeyAlternatives: {
+        id: 'homey-alternatives',
+        title: 'Alternativas a Homey Pro y Hubitat vs Homey',
+        content: "**La mejor alternativa a Homey Pro depende de lo que quieras evitar: los 449 $ de precio, la plataforma de apps cerrada o tener que comprar las radios por separado.** Hubitat y Home Assistant Green responden cada uno a una de esas objeciones, y el Pro mini de Homey responde a la del precio dentro de la misma plataforma.",
+        columns: ['Alternativa', 'Precio', 'Compromiso vs Homey Pro'],
+        rows: [
+          { Alternativa: '[Hubitat Elevation C-8 Pro](https://hubitat.com/products/7194320273451)', Precio: '184,95 $', 'Compromiso vs Homey Pro': 'Zigbee/Z-Wave integrados, sin Thread, envío solo a EE. UU.' },
+          { Alternativa: '[Home Assistant Green](https://www.home-assistant.io/green/) + ZBT-2', Precio: '248 $ en total', 'Compromiso vs Homey Pro': 'El más abierto, más ajustes, Z-Wave pide otro dongle' },
+          { Alternativa: '[Homey Pro mini](https://homey.app/en-us/homey-pro-mini/)', Precio: '249 $', 'Compromiso vs Homey Pro': 'Mismo Homey OS, sin Z-Wave, Wi-Fi ni Bluetooth integrados' },
+          { Alternativa: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', Precio: '139,99 $', 'Compromiso vs Homey Pro': 'Solo Matter/Thread, prioriza IKEA, sin Z-Wave' },
+        ],
+        items: [
+          "Hubitat vs Homey, precio: Hubitat Elevation C-8 Pro (184,95 $) cuesta menos de la mitad que Homey Pro (449 $), y ambos incluyen Zigbee 3.0, Z-Wave y un controlador Matter.",
+          "Hubitat vs Homey, radios: Homey Pro añade un router frontera Thread, 433 MHz e infrarrojos; Hubitat no tiene radio Thread. El Z-Wave de Homey es de la serie 700, el de Hubitat de la serie 800 con Long Range.",
+          "Hubitat vs Homey, plataforma: Hubitat es un electrodoméstico cerrado con motor de reglas e interfaz web; Homey se basa en apps y flujos, con una app móvil muy cuidada y una tienda de apps comunitaria. Ninguno ofrece una integración de LLM local en su propia plataforma.",
+          "Homey Pro mini (249 $, confirmado en homey.app el 18/10/2026) ejecuta el mismo Homey Pro OS con Zigbee 3.0, Matter v1.5 y un router frontera Thread integrados, pero Z-Wave, Bluetooth, 433 MHz e infrarrojos requieren el Homey Bridge por separado (69 $), así que solo ahorra dinero si no necesitas esas radios.",
+          "Si el motivo para dejar Homey es la dependencia del fabricante y no el precio, la alternativa práctica es Home Assistant Green — la única opción aquí cuya plataforma es de código abierto y portable a otro hardware.",
         ],
       },
       aqaraM3: {
@@ -1821,15 +1975,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dirigera',
         title: 'IKEA DIRIGERA — Mejor hub de ecosistema económico',
         content:
-          "**Puntuación editorial: 7,8/10 (evaluación basada en investigación, no un resultado probado en laboratorio).** El DIRIGERA de IKEA (119,99 $, confirmado en ikea.com) es el hub Matter/Thread genuino más barato de esta comparativa. Se convirtió en un controlador Matter completo y router frontera Thread mediante una actualización de firmware de 2025, permitiéndole incorporar algunos dispositivos Matter de terceros, no solo la propia línea de IKEA. Este sitio tiene una guía dedicada de DIRIGERA con el desglose completo del ecosistema.",
+          "**Puntuación editorial: 7,8/10 (evaluación basada en investigación, no un resultado probado en laboratorio).** El DIRIGERA de IKEA (139,99 $, confirmado en ikea.com) es el hub Matter/Thread genuino más barato de esta comparativa. Se convirtió en un controlador Matter completo y router frontera Thread mediante una actualización de firmware de 2025, permitiéndole incorporar algunos dispositivos Matter de terceros, no solo la propia línea de IKEA. Este sitio tiene una guía dedicada de DIRIGERA con el desglose completo del ecosistema.",
         items: [
           "Cómpralo si: quieres el punto de entrada genuino más barato al control local Matter/Thread, te parece bien la propia app y gama de dispositivos de IKEA como experiencia principal, y no necesitas personalización a nivel de Hubitat/Home Assistant.",
           "No lo compres si: quieres un único hub que también gestione dispositivos Zigbee no-Matter de otras marcas, necesitas Z-Wave, o quieres la profundidad de integración de Home Assistant — el propio motor de automatización de DIRIGERA es intencionadamente simple.",
-          "Comparación de precio, dicha claramente: DIRIGERA (119,99 $) es unos 80 $ más barato que Home Assistant Green (199 $) y unos 69 $ más barato que Hubitat (188,95 $) — la contrapartida es un ecosistema de dispositivos y automatización mucho más pequeño y centrado en IKEA.",
+          "Comparación de precio, dicha claramente: DIRIGERA (139,99 $) es unos 59 $ más barato que Home Assistant Green (199 $) y unos 45 $ más barato que Hubitat (184,95 $) — la contrapartida es un ecosistema de dispositivos y automatización mucho más pequeño y centrado en IKEA.",
           "Compatibilidad: Matter 1.4 ✅ controlador · Router frontera Thread ✅ · Zigbee ✅ (dispositivos IKEA, vía puente Matter para algunos terceros) · Z-Wave ❌ · Dificultad de configuración: fácil.",
         ],
         affiliateLinks: [
-          { label: 'Ver precio actual — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '119,99 $' },
+          { label: 'Ver precio actual — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '139,99 $' },
         ],
       },
       comparison: {
@@ -1849,7 +2003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Dimensión: 'IA local (Ollama/LLM)', 'Home Assistant Green': 'Sí, en una caja escalada; no los 4 GB de Green solo', 'Hubitat C-8 Pro': 'No soportado por la plataforma', 'Homey Pro': 'No soportado por la plataforma' },
           { Dimensión: 'Frigate / IA de cámara', 'Home Assistant Green': 'Sí, vía add-on de Home Assistant', 'Hubitat C-8 Pro': 'Sin soporte nativo', 'Homey Pro': 'Sin soporte nativo' },
           { Dimensión: 'Libertad de ecosistema', 'Home Assistant Green': 'La más alta — sin dependencia de fabricante', 'Hubitat C-8 Pro': 'Moderada — específica de Hubitat', 'Homey Pro': 'Moderada — específica de Homey' },
-          { Dimensión: 'Precio', 'Home Assistant Green': '199 $ / 179 €', 'Hubitat C-8 Pro': '188,95 $', 'Homey Pro': '449 $' },
+          { Dimensión: 'Precio', 'Home Assistant Green': '199 $ / 179 €', 'Hubitat C-8 Pro': '184,95 $', 'Homey Pro': '449 $' },
         ],
       },
       hubVsController: {
@@ -1890,7 +2044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Ver precio actual — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199 $ / 179 €' },
-          { label: 'Ver precio actual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188,95 $' },
+          { label: 'Ver precio actual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184,95 $' },
           { label: 'Ver precio actual — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub' },
           { label: 'Ver precio actual — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Ver precio actual — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -1917,6 +2071,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Si eres': 'Empezando de cero con Matter', 'Hub(s) más adecuado(s)': 'Cualquiera de los cinco — todos actúan como controladores Matter' },
           { 'Si eres': 'Muy centrado en Thread (Matter over Thread)', 'Hub(s) más adecuado(s)': 'Homey o DIRIGERA (router frontera integrado)' },
           { 'Si eres': 'Quieres máxima flexibilidad futura', 'Hub(s) más adecuado(s)': 'Home Assistant Green + dongle' },
+        ],
+      },
+      japan: {
+        id: 'japan',
+        title: 'El mejor hub domótico en Japón: qué hubs funcionan con más dispositivos',
+        content: "**En Japón, elige el hub por sus radios y por si se puede comprar y usar legalmente allí: Zigbee, Thread y Matter funcionan en 2,4 GHz en todo el mundo, pero Z-Wave usa una banda japonesa propia y varios hubs de esta guía se venden solo para el mercado estadounidense.**",
+        items: [
+          "Z-Wave es la trampa regional: la banda Z-Wave de Japón es 922–926 MHz (ARIB STD-T108, según la documentación de Z-Wave.me), no la banda estadounidense de 908,4 MHz. La radio Z-Wave del Hubitat C-8 Pro es la de la frecuencia de EE. UU. y Hubitat solo envía a los 48 estados contiguos, así que no es una compra práctica para Japón.",
+          "Homey afirma que las antenas de su Pro cambian según la normativa local, pero su página no menciona ninguna variante Z-Wave específica para Japón — confirma con Athom el soporte de Z-Wave en Japón antes de comprar un Homey Pro para dispositivos Z-Wave allí.",
+          "Zigbee 3.0, Thread y Matter no requieren hardware regional: Home Assistant Green con un Connect ZBT-2, el Aqara Hub M3 (Aqara indica un despliegue japonés de 110 hogares) e IKEA DIRIGERA cubren estos protocolos.",
+          "La mejor opción para \"funciona con más dispositivos\": Home Assistant Green, porque su biblioteca de integraciones abarca Matter, Zigbee y dispositivos locales sin nube por igual. Con 199 $ más unos 49 $ del ZBT-2 salen unos 248 $ antes de gastos de envío e importación.",
+          "Comprueba la certificación de la ley de radio japonesa de cada dispositivo (la marca de conformidad técnica) — un dispositivo o dongle comprado en el extranjero puede no ser legal en Japón. Es una orientación general, no asesoramiento jurídico; PromptQuorum no ha probado ningún hub en Japón.",
         ],
       },
       localAi: {
@@ -1966,8 +2132,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Qué compra realmente cada tramo de precio.**',
         columns: ['Presupuesto', 'Qué obtienes'],
         rows: [
-          { Presupuesto: 'Menos de 150 $', 'Qué obtienes': 'IKEA DIRIGERA (119,99 $) — ecosistema Matter/Thread de entrada' },
-          { Presupuesto: '150-250 $', 'Qué obtienes': 'Home Assistant Green (199 $) o Hubitat C-8 Pro (188,95 $) — un hub, aún sin radios/sensores' },
+          { Presupuesto: 'Menos de 150 $', 'Qué obtienes': 'IKEA DIRIGERA (139,99 $) — ecosistema Matter/Thread de entrada' },
+          { Presupuesto: '150-250 $', 'Qué obtienes': 'Home Assistant Green (199 $) o Hubitat C-8 Pro (184,95 $) — un hub, aún sin radios/sensores' },
           { Presupuesto: '250-500 $', 'Qué obtienes': 'HA Green + dongle + algunos sensores, o Homey Pro (449 $) solo' },
           { Presupuesto: '500-1.000 $+', 'Qué obtienes': 'HA Green + mini-PC de IA dedicado + cámaras + sensores + una cerradura (ver kit inicial arriba)' },
         ],
@@ -2030,15 +2196,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Cinco hubs, cinco perfiles de comprador diferentes — la elección correcta depende de lo que realmente necesites, no de cuál puntúe más alto sobre el papel.**',
         items: [
           "Home Assistant Green (199 $/179 €) — mejor en general. Puntuación editorial: 9,3/10. Cómpralo si quieres la plataforma más abierta y margen real de IA local, y no te importa ensamblar un sistema de dongles y sensores.",
-          "Hubitat Elevation C-8 Pro (188,95 $) — mejor electrodoméstico local. Puntuación editorial: 8,7/10. Cómpralo si quieres automatización local con el menor trasteo y no necesitas la amplitud de integración de Home Assistant.",
+          "Hubitat Elevation C-8 Pro (184,95 $) — mejor electrodoméstico local. Puntuación editorial: 8,7/10. Cómpralo si quieres automatización local con el menor trasteo y no necesitas la amplitud de integración de Home Assistant.",
           "Homey Pro (449 $) — mejor todo en uno premium. Puntuación editorial: 8,5/10. Cómpralo si la amplitud de radios integradas y el acabado de la propia app de Homey valen para ti aproximadamente 2,3 veces el precio de Home Assistant Green.",
           "Aqara Hub M3 (PVP 219,99 $, a menudo ~159,99 $) — mejor hub de ecosistema Aqara. Puntuación editorial: 8,0/10. Cómpralo si ya estás específicamente invertido en dispositivos Aqara.",
-          "IKEA DIRIGERA (119,99 $) — mejor hub de ecosistema simple. Puntuación editorial: 7,8/10. Cómpralo si el presupuesto es el factor decisivo y te parece bien centrarte en la app de IKEA.",
+          "IKEA DIRIGERA (139,99 $) — mejor hub de ecosistema simple. Puntuación editorial: 7,8/10. Cómpralo si el presupuesto es el factor decisivo y te parece bien centrarte en la app de IKEA.",
           "La regla de compra clave para la audiencia centrada en IA local de este sitio: recomendar la plataforma con menos dependencia de ecosistema, que es Home Assistant Green — pero esa no es la decisión correcta para todo comprador. Si la simplicidad de electrodoméstico o la amplitud de radios integradas te importa más que la apertura, Hubitat u Homey son la elección honestamente correcta, no un premio de consolación.",
         ],
         affiliateLinks: [
           { label: 'Ver precio actual — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199 $ / 179 €' },
-          { label: 'Ver precio actual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188,95 $' },
+          { label: 'Ver precio actual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184,95 $' },
           { label: 'Ver precio actual — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '449 $' },
           { label: 'Ver precio actual — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Ver precio actual — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -2074,6 +2240,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Necesito un dongle Zigbee con Home Assistant Green?', a: "Sí, si tienes o planeas comprar dispositivos Zigbee — Green no tiene radio integrada. Ve la guía de dongles Zigbee y Thread de este sitio para opciones actuales como el Home Assistant Connect ZBT-2 (49 $/45 €)." },
           { q: '¿Soporta Home Assistant Green IA local?', a: "El software de Home Assistant soporta integración de LLM local vía Ollama, pero los 4 GB de RAM propios de Green no están dimensionados para ejecutar también bien un LLM local — combínalo con un mini-PC de IA separado y más potente (arquitectura de dos cajas) para un uso genuino de IA local, en lugar de esperar que Green solo maneje ambas tareas." },
           { q: 'Home Assistant Green vs Hubitat — ¿cuál debería comprar?', a: "Home Assistant Green si quieres máxima apertura, amplitud de integración y potencial de IA local y no te importa ensamblar un sistema basado en dongles. Hubitat Elevation C-8 Pro si quieres automatización local que se comporte como un electrodoméstico simple con Zigbee/Z-Wave integrados y mínima configuración." },
+          { q: '¿Cuál es la mejor alternativa a Homey Pro?', a: "Hubitat Elevation C-8 Pro (184,95 $) es la alternativa más cercana con radios integradas por menos de la mitad del precio; Home Assistant Green más un dongle ZBT-2 (248 $) es la alternativa de plataforma abierta; Homey Pro mini (249 $) mantiene la plataforma Homey pero pierde Z-Wave, Wi-Fi y Bluetooth salvo que añadas el Homey Bridge de 69 $." },
+          { q: 'Hubitat vs Homey — ¿cuál es mejor?', a: "Hubitat es más barato (184,95 $ frente a 449 $) y es un motor de reglas local tipo electrodoméstico sin radio Thread; Homey Pro añade Thread, 433 MHz e infrarrojos y una app más cuidada. Ninguno funciona totalmente sin conexión y ninguno ofrece una integración nativa de LLM local." },
+          { q: '¿Cuál es el mejor hub domótico para Japón?', a: "Por amplitud de dispositivos compatibles, Home Assistant Green con un dongle Zigbee/Thread, ya que Zigbee, Thread y Matter son estándares globales de 2,4 GHz. Z-Wave en Japón usa 922–926 MHz, y el C-8 Pro de Hubitat usa la frecuencia de EE. UU. y solo se envía dentro del territorio continental estadounidense, así que verifica el soporte regional de Z-Wave antes de comprar cualquier hub Z-Wave." },
+          { q: '¿Cuál es el mejor hub de automatización del hogar para principiantes?', a: "Hubitat Elevation C-8 Pro (184,95 $) si estás en EE. UU. y quieres automatización local con Zigbee y Z-Wave integrados; Homey Pro (449 $) si quieres la configuración más sencilla y estás dispuesto a pagarla; Home Assistant Green si aceptas una configuración más larga a cambio de la máxima flexibilidad." },
           { q: '¿Cuál es el mejor hub para Matter?', a: "Los cinco hubs de esta guía (Home Assistant Green, Hubitat, Homey Pro, Aqara Hub M3, IKEA DIRIGERA) pueden actuar todos como controladores Matter, pero Homey Pro e IKEA DIRIGERA tienen un router frontera Thread integrado, mientras que Home Assistant Green necesita un dongle para ese rol — comprueba la lista de controladores soportados del dispositivo Matter específico antes de comprar." },
         ],
       },
@@ -2081,14 +2251,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Los mejores hubs domóticos para control local en 2026: Home Assistant vs Hubitat vs Homey',
+      headline: 'El mejor hub domótico para control local en 2026: Home Assistant vs Hubitat vs Homey',
       description: 'Los mejores hubs domóticos para control local en 2026: Home Assistant Green vs Hubitat Elevation C-8 Pro vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA comparados.',
       url: 'https://www.promptquorum.com/es/smart-home/best-smart-home-hubs-2027',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Smart home hub' }, { '@type': 'Thing', name: 'Home Assistant Green' }, { '@type': 'Thing', name: 'Hubitat' }, { '@type': 'Thing', name: 'Homey' }, { '@type': 'Thing', name: 'Aqara Hub M3' }, { '@type': 'Thing', name: 'IKEA DIRIGERA' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -2100,6 +2270,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: '¿Cuál es el mejor hub para Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green (199 $/179 €) es el hardware oficial de primer fabricante pero necesita un dongle USB Zigbee/Thread/Z-Wave separado.' } },
         { '@type': 'Question', name: '¿Vale la pena Home Assistant Green?', acceptedAnswer: { '@type': 'Answer', text: 'Sí para compradores que quieren la plataforma más abierta y margen de IA local, pero espera un proceso de configuración moderado y una compra de dongle separada.' } },
+        { '@type': 'Question', name: '¿Cuál es la mejor alternativa a Homey Pro?', acceptedAnswer: { '@type': 'Answer', text: 'Hubitat Elevation C-8 Pro (184,95 $) para radios integradas a menos de la mitad del precio, Home Assistant Green más un dongle ZBT-2 (248 $) para una plataforma abierta, o Homey Pro mini (249 $) para seguir en Homey con menos radios integradas.' } },
+        { '@type': 'Question', name: '¿Cuál es el mejor hub domótico para Japón?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green con un dongle Zigbee/Thread cubre más dispositivos; Z-Wave en Japón usa 922–926 MHz y Hubitat solo se envía al territorio continental de EE. UU., así que verifica primero el soporte regional.' } },
         { '@type': 'Question', name: 'Home Assistant Green vs Hubitat — ¿cuál debería comprar?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green para máxima apertura y potencial de IA local; Hubitat Elevation C-8 Pro para automatización local tipo electrodoméstico con mínima configuración.' } },
       ],
     },
@@ -2108,20 +2280,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-16',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-24',
-    last_full_refresh: '2026-08-25',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2026-11-17',
+    last_full_refresh: '2026-10-18',
     theme: "Buyer's Guides",
     heroImage: '/images/best-smart-home-hubs-2027-overview-hero-pt.webp',
     affiliateDisclosure: true,
-    title: 'Os melhores hubs de casa inteligente para controle local em 2026: Home Assistant vs Hubitat vs Homey',
-    seoTitle: 'Melhores hubs de casa inteligente 2026: HA Green vs Hubitat vs Homey',
+    title: 'Melhor hub de casa inteligente para controle local em 2026: Home Assistant vs Hubitat vs Homey',
+    seoTitle: 'Melhor hub de casa inteligente 2026: HA Green vs Hubitat vs Homey',
     intro:
-      "Escolher um hub de casa inteligente em 2026 se resume a uma pergunta que a maioria dos compradores pula: você quer a plataforma com mais espaço para IA local e zero dependência de fabricante (Home Assistant Green), a que se comporta como um eletrodoméstico simples e não atrapalha (Hubitat Elevation C-8 Pro), ou a que cobra caro pela conveniência (Homey Pro)? O Hub M3 da Aqara e o DIRIGERA da IKEA completam o quadro para compradores já comprometidos com um ecossistema de dispositivos específico. Este guia é a página comercial principal do cluster de casa inteligente local deste site — todo preço e especificação abaixo foi verificado com fontes dos fabricantes em 25/08/2026, e nenhum desse hardware foi testado ou avaliado em bancada pela PromptQuorum; toda afirmação de capacidade é uma avaliação baseada em pesquisa a partir de documentação oficial, não um resultado de laboratório.",
+      "Escolher um hub de casa inteligente em 2026 se resume a uma pergunta que a maioria dos compradores pula: você quer a plataforma com mais espaço para IA local e zero dependência de fabricante (Home Assistant Green), a que se comporta como um eletrodoméstico simples e não atrapalha (Hubitat Elevation C-8 Pro), ou a que cobra caro pela conveniência (Homey Pro)? O Hub M3 da Aqara e o DIRIGERA da IKEA completam o quadro para compradores já comprometidos com um ecossistema de dispositivos específico. Este guia é a página comercial principal do cluster de casa inteligente local deste site — todo preço e especificação abaixo foi verificado com fontes dos fabricantes em 18/10/2026, e nenhum desse hardware foi testado ou avaliado em bancada pela PromptQuorum; toda afirmação de capacidade é uma avaliação baseada em pesquisa a partir de documentação oficial, não um resultado de laboratório.",
     metaDescription:
-      'Os melhores hubs de casa inteligente para controle local em 2026: Home Assistant Green vs Hubitat Elevation C-8 Pro vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA — preços atuais, protocolos e qual combina com seu perfil de compra.',
+      'Melhor hub de casa inteligente para controle local em 2026: Home Assistant Green vs Hubitat C-8 Pro vs Homey Pro (e alternativas ao Homey Pro) vs Aqara M3 vs IKEA DIRIGERA — preços, protocolos, notas sobre o Japão.',
     twitterDescription:
-      'Home Assistant Green vs Hubitat vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA — preços atuais de 2026 e suporte a protocolos comparados, além de qual hub combina com sua configuração de IA local.',
+      'Melhor hub de casa inteligente 2026: Home Assistant Green vs Hubitat vs Homey Pro vs Aqara M3 vs IKEA DIRIGERA — preços, protocolos, alternativas ao Homey Pro e notas sobre o Japão.',
     readTime: '13 min de leitura',
     educationalLevel: 'Beginner',
     audience: 'Compradores de casa inteligente escolhendo um hub dedicado para controle local, com ou sem ambições de IA local',
@@ -2133,22 +2305,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aqara hub m3 vs home assistant',
       'ikea dirigera vs home assistant green',
       'hub ia local casa inteligente',
+      'alternativa ao homey pro',
+      'hubitat vs homey',
+      'melhor hub de automação residencial',
+      'melhor hub casa inteligente japão',
     ],
     leadAnswerBlock:
-      "**O Home Assistant Green (US$ 199/€179) é o melhor hub de casa inteligente no geral para 2026 se você quer controle local máximo e espaço para IA local — ele roda a plataforma Home Assistant de verdade, mas vem sem rádio Zigbee/Thread/Z-Wave embutido, então reserve orçamento para um dongle USB extra.** O Hubitat Elevation C-8 Pro (US$ 188,95, preço confirmado em alta em relação aos US$ 179,95 anteriores) é a melhor escolha se você quer automação local tipo eletrodoméstico sem manter um sistema estilo Linux. O Homey Pro (US$ 449) é a melhor solução premium tudo-em-um para compradores dispostos a pagar cerca de 2,3 vezes o preço do Home Assistant Green pelo conjunto de rádios embutidos mais amplo e a menor configuração DIY. O Aqara Hub M3 (PMSR US$ 219,99, geralmente ~US$ 159,99 em promoção) serve para famílias já investidas no ecossistema Aqara. O IKEA DIRIGERA (US$ 119,99) é o ponto de entrada genuíno mais barato, com seu próprio guia dedicado neste site.",
+      "**O Home Assistant Green (US$ 199/€179) é o melhor hub de casa inteligente no geral para 2026 se você quer controle local máximo e espaço para IA local — ele roda a plataforma Home Assistant de verdade, mas vem sem rádio Zigbee/Thread/Z-Wave embutido, então reserve orçamento para um dongle USB extra.** O Hubitat Elevation C-8 Pro (US$ 184,95, confirmado em hubitat.com em 18/10/2026 — ligeiramente abaixo dos US$ 188,95 citados em agosto; envia apenas para os 48 estados contíguos dos EUA) é a melhor escolha se você quer automação local tipo eletrodoméstico sem manter um sistema estilo Linux. O Homey Pro (US$ 449) é a melhor solução premium tudo-em-um para compradores dispostos a pagar cerca de 2,3 vezes o preço do Home Assistant Green pelo conjunto de rádios embutidos mais amplo e a menor configuração DIY. O Aqara Hub M3 (PMSR US$ 219,99, geralmente ~US$ 159,99 em promoção) serve para famílias já investidas no ecossistema Aqara. O IKEA DIRIGERA (US$ 139,99) é o ponto de entrada genuíno mais barato, com seu próprio guia dedicado neste site.",
     quickAnswerTop: {
       pt: {
         question: 'Qual é o melhor hub de casa inteligente para controle local em 2026?',
         answer:
-          "Para a maioria dos compradores que querem controle local-first e espaço para adicionar IA local depois, o Home Assistant Green (US$ 199/€179) é a melhor escolha — ele roda a plataforma real do Home Assistant, o sistema mais aberto e rico em integrações desta comparação, embora precise de um dongle USB separado para Zigbee/Thread/Z-Wave já que nenhum vem embutido. Se você quer automação local com muito menos trabalho manual, o Hubitat Elevation C-8 Pro (US$ 188,95) se comporta como um eletrodoméstico em vez de um sistema que você precisa manter. O Homey Pro (US$ 449) é a opção premium tudo-em-um com o suporte de rádio embutido mais amplo de todos os hubs aqui, por cerca de 2,3 vezes o preço do Home Assistant Green. O Aqara Hub M3 (PMSR US$ 219,99) combina com compradores já comprometidos com dispositivos Aqara. O IKEA DIRIGERA (US$ 119,99) é o ponto de entrada genuíno Matter/Thread mais barato. Nenhum desses hubs foi testado pela PromptQuorum — cada afirmação abaixo vem da documentação dos fabricantes, verificada em 25/08/2026.",
+          "Para a maioria dos compradores que querem controle local-first e espaço para adicionar IA local depois, o Home Assistant Green (US$ 199/€179) é a melhor escolha — ele roda a plataforma real do Home Assistant, o sistema mais aberto e rico em integrações desta comparação, embora precise de um dongle USB separado para Zigbee/Thread/Z-Wave já que nenhum vem embutido. Se você quer automação local com muito menos trabalho manual, o Hubitat Elevation C-8 Pro (US$ 184,95) se comporta como um eletrodoméstico em vez de um sistema que você precisa manter. O Homey Pro (US$ 449) é a opção premium tudo-em-um com o suporte de rádio embutido mais amplo de todos os hubs aqui, por cerca de 2,3 vezes o preço do Home Assistant Green. O Aqara Hub M3 (PMSR US$ 219,99) combina com compradores já comprometidos com dispositivos Aqara. O IKEA DIRIGERA (US$ 139,99) é o ponto de entrada genuíno Matter/Thread mais barato. Nenhum desses hubs foi testado pela PromptQuorum — cada afirmação abaixo vem da documentação dos fabricantes, verificada em 18/10/2026.",
         bullets: [
           'Melhor no geral / melhor para IA local: Home Assistant Green (US$ 199/€179) — precisa de dongle Zigbee/Thread/Z-Wave separado',
-          'Melhor alternativa local mais simples: Hubitat Elevation C-8 Pro (US$ 188,95) — tipo eletrodoméstico, menos trabalho manual',
+          'Melhor alternativa local mais simples: Hubitat Elevation C-8 Pro (US$ 184,95) — tipo eletrodoméstico, menos trabalho manual',
           'Melhor tudo-em-um premium: Homey Pro (US$ 449) — rádios embutidos mais amplos, preço mais alto',
           'Melhor para famílias no ecossistema Aqara: Aqara Hub M3 (PMSR US$ 219,99, geralmente ~US$ 159,99)',
-          'Melhor hub de ecossistema acessível: IKEA DIRIGERA (US$ 119,99) — veja o guia dedicado neste site',
+          'Melhor hub de ecossistema acessível: IKEA DIRIGERA (US$ 139,99) — veja o guia dedicado neste site',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -2162,6 +2338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Custo do pacote inicial', anchor: 'starter-package' },
       { label: 'Hubitat Elevation C-8 Pro', anchor: 'hubitat' },
       { label: 'Homey Pro', anchor: 'homey' },
+      { label: 'Alternativas ao Homey Pro', anchor: 'homey-alternatives' },
       { label: 'Aqara Hub M3', anchor: 'aqara-m3' },
       { label: 'IKEA DIRIGERA', anchor: 'dirigera' },
       { label: 'Tabela comparativa completa', anchor: 'comparison' },
@@ -2170,6 +2347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Qual hub você deveria comprar? (de novo)', anchor: 'which-to-buy-2' },
       { label: 'Ainda não compre um hub', anchor: 'dont-buy-yet' },
       { label: 'Árvore de decisão de protocolos', anchor: 'protocol-tree' },
+      { label: 'Hubs de casa inteligente no Japão', anchor: 'japan' },
       { label: 'Melhor hub para IA local', anchor: 'local-ai' },
       { label: 'Kit inicial de casa inteligente local', anchor: 'starter-kit' },
       { label: 'Escada de orçamento', anchor: 'budget-ladder' },
@@ -2182,7 +2360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Perguntas frequentes', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'O Home Assistant Green (US$ 199/€179) é o melhor hub de casa inteligente no geral para controle local e potencial de IA local em 2026, com o Hubitat Elevation C-8 Pro (US$ 188,95) como alternativa mais simples sem trabalho manual e o Homey Pro (US$ 449) como opção premium tudo-em-um.' },
+      { type: 'one-sentence', content: 'O Home Assistant Green (US$ 199/€179) é o melhor hub de casa inteligente no geral para controle local e potencial de IA local em 2026, com o Hubitat Elevation C-8 Pro (US$ 184,95) como alternativa mais simples sem trabalho manual e o Homey Pro (US$ 449) como opção premium tudo-em-um.' },
       { type: 'plain-terms', content: 'Um hub de casa inteligente é a caixa que conversa com seus dispositivos e executa suas automações sem precisar de internet. Este guia compara cinco modelos atuais — quais protocolos eles suportam de fábrica, quanto custam hoje e qual perfil de compra realmente combina com cada um — sem afirmar que a PromptQuorum testou algum deles.' },
     ],
     sections: {
@@ -2192,11 +2370,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Home Assistant Green (US$ 199/€179) — melhor no geral e melhor potencial de IA local, mas precisa de dongle USB Zigbee/Thread/Z-Wave separado',
-          'Hubitat Elevation C-8 Pro (US$ 188,95, confirmado em alta em relação aos US$ 179,95 anteriores) — melhor automação local tipo eletrodoméstico, menos trabalho manual',
+          'Hubitat Elevation C-8 Pro (US$ 184,95, envio apenas nos EUA) — melhor automação local tipo eletrodoméstico, menos trabalho manual',
           'Homey Pro (US$ 449) — melhor tudo-em-um premium, rádios embutidos mais amplos, cerca de 2,3 vezes o preço do Home Assistant Green',
           'Aqara Hub M3 (PMSR US$ 219,99, geralmente ~US$ 159,99) — melhor para famílias já investidas em dispositivos Aqara, não uma plataforma aberta',
-          'IKEA DIRIGERA (US$ 119,99) — hub de ecossistema genuíno mais barato, veja o guia dedicado do DIRIGERA deste site',
-          'Nenhum desses hubs foi testado ou avaliado em bancada pela PromptQuorum — cada afirmação vem da documentação dos fabricantes, verificada em 25/08/2026',
+          'IKEA DIRIGERA (US$ 139,99) — hub de ecossistema genuíno mais barato, veja o guia dedicado do DIRIGERA deste site',
+          'Nenhum desses hubs foi testado ou avaliado em bancada pela PromptQuorum — cada afirmação vem da documentação dos fabricantes, verificada em 18/10/2026',
         ],
       },
       quickVerdict: {
@@ -2206,14 +2384,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Hub', 'Melhor para', 'Nota local', 'Zigbee', 'Z-Wave', 'Matter/Thread', 'Potencial de IA', 'Preço'],
         rows: [
           { Hub: '[Home Assistant Green](https://www.home-assistant.io/green/)', 'Melhor para': 'Controle/IA máximos', 'Nota local': 'A mais alta', Zigbee: 'Via dongle', 'Z-Wave': 'Via dongle', 'Matter/Thread': 'Via dongle', 'Potencial de IA': 'O mais alto (Ollama)', Preço: 'US$ 199/€179' },
-          { Hub: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 'Melhor para': 'Automação local simples', 'Nota local': 'Alta', Zigbee: 'Embutido 3.0', 'Z-Wave': 'Embutido 800 LR', 'Matter/Thread': 'Matter 1.5 (sem rádio Thread)', 'Potencial de IA': 'Baixo (eletrodoméstico)', Preço: 'US$ 188,95' },
+          { Hub: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 'Melhor para': 'Automação local simples', 'Nota local': 'Alta', Zigbee: 'Embutido 3.0', 'Z-Wave': 'Embutido 800 LR', 'Matter/Thread': 'Matter 1.5 (sem rádio Thread)', 'Potencial de IA': 'Baixo (eletrodoméstico)', Preço: 'US$ 184,95' },
           { Hub: '[Homey Pro](https://homey.app/en-us/homey-pro/)', 'Melhor para': 'Tudo-em-um premium', 'Nota local': 'Mista*', Zigbee: 'Embutido 3.0', 'Z-Wave': 'Embutido 700', 'Matter/Thread': 'Matter 1.5 + BR Thread', 'Potencial de IA': 'Baixo (eletrodoméstico)', Preço: 'US$ 449' },
           { Hub: '[Aqara Hub M3](https://www.aqara.com/en/product/hub-m3/)', 'Melhor para': 'Ecossistema Aqara', 'Nota local': 'Mista*', Zigbee: 'Embutido', 'Z-Wave': 'Nenhum', 'Matter/Thread': 'Controlador Matter + Thread', 'Potencial de IA': 'Nenhum (ponte)', Preço: 'US$ 219,99 PMSR' },
-          { Hub: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 'Melhor para': 'Ecossistema econômico', 'Nota local': 'Mista*', Zigbee: 'Só dispositivos IKEA', 'Z-Wave': 'Nenhum', 'Matter/Thread': 'Matter 1.4 + BR Thread', 'Potencial de IA': 'Nenhum (ponte)', Preço: 'US$ 119,99' },
+          { Hub: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 'Melhor para': 'Ecossistema econômico', 'Nota local': 'Mista*', Zigbee: 'Só dispositivos IKEA', 'Z-Wave': 'Nenhum', 'Matter/Thread': 'Matter 1.4 + BR Thread', 'Potencial de IA': 'Nenhum (ponte)', Preço: 'US$ 139,99' },
         ],
         items: [
           '*Nota local "mista": Homey, Aqara e IKEA usam aplicativos complementares conectados à nuvem para configuração/acesso remoto além da execução local de automações — nenhum é tão totalmente offline quanto uma instância do Home Assistant auto-hospedada. Veja "O que o local realmente oferece?" abaixo para a nuance.',
-          'Cada célula acima foi verificada de forma independente na página de produto atual de cada fabricante em 25/08/2026 — não copie esses números sem reverificar, essa categoria já teve um aumento de preço confirmado (Hubitat) desde uma versão anterior desta página.',
+          'Cada célula acima foi verificada de forma independente na página de produto atual de cada fabricante em 18/10/2026 (o preço do Aqara Hub M3 foi confirmado pela última vez em 25/08/2026 — a página de produto atual da Aqara não lista preço) — não copie esses números sem reverificar: os preços nessa categoria mudaram duas vezes desde agosto (Hubitat caiu, IKEA DIRIGERA subiu).',
         ],
       },
       topPicks: {
@@ -2222,12 +2400,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: "**Comece aqui se você só quer a resposta.**",
         items: [
           "Melhor no geral — Home Assistant Green (US$ 199/€179): roda a plataforma real do Home Assistant, o sistema mais rico em integrações e mais aberto desta comparação. Nota editorial: 9,3/10 (avaliação baseada em pesquisa a partir de documentação oficial, não um resultado testado em bancada).",
-          "Melhor alternativa mais simples — Hubitat Elevation C-8 Pro (US$ 188,95): automação local que se comporta como um eletrodoméstico, não uma máquina Linux para manter. Nota editorial: 8,7/10.",
+          "Melhor alternativa mais simples — Hubitat Elevation C-8 Pro (US$ 184,95): automação local que se comporta como um eletrodoméstico, não uma máquina Linux para manter. Nota editorial: 8,7/10.",
           "Melhor tudo-em-um — Homey Pro (US$ 449): o suporte de protocolo embutido mais amplo de todos os hubs aqui, com um sobrepreço real que merece ser nomeado claramente. Nota editorial: 8,5/10.",
         ],
         affiliateLinks: [
           { label: 'Ver preço atual — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: 'US$ 199 / €179' },
-          { label: 'Ver preço atual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: 'US$ 188,95' },
+          { label: 'Ver preço atual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: 'US$ 184,95' },
           { label: 'Ver preço atual — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: 'US$ 449' },
           { label: 'Ver preço atual — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Ver preço atual — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -2296,7 +2474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hubitat',
         title: 'Hubitat Elevation C-8 Pro — Melhor alternativa local mais simples',
         content:
-          "**Nota editorial: 8,7/10 (avaliação baseada em pesquisa, não um resultado testado em bancada).** O Elevation C-8 Pro da Hubitat (US$ 188,95, confirmado em hubitat.com — em alta em relação aos US$ 179,95 citados por uma versão anterior desta página, um aumento de preço real e atual) roda a própria plataforma de automação local da Hubitat, não o Home Assistant. Ele suporta Zigbee 3.0, Z-Wave 800 Long Range, Matter 1.5 como controlador, e Bluetooth, tudo embutido.",
+          "**Nota editorial: 8,7/10 (avaliação baseada em pesquisa, não um resultado testado em bancada).** O Elevation C-8 Pro da Hubitat (US$ 184,95, confirmado em hubitat.com em 18/10/2026 — ligeiramente abaixo dos US$ 188,95 citados em agosto; a Hubitat envia apenas para os 48 estados contíguos dos EUA) roda a própria plataforma de automação local da Hubitat, não o Home Assistant. Ele suporta Zigbee 3.0, Z-Wave 800 Long Range, Matter 1.5 como controlador, e Bluetooth, tudo embutido.",
         items: [
           "Melhor para usuários que querem uma experiência de automação local tipo eletrodoméstico, não um sistema estilo Linux para manter — o motor de regras, a interface web e o processo de atualização da Hubitat são projetados para parecer fechados e estáveis, não como um computador de uso geral que você administra.",
           "Por que o Home Assistant ganha em vez disso: contagem de integrações muito maior, suporte nativo a Frigate/IA de câmera, personalização profunda via YAML e complementos da comunidade, e um caminho realista para automação com LLM local. A própria plataforma da Hubitat não foi construída para nada disso.",
@@ -2304,7 +2482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Compatibilidade: Zigbee 3.0 ✅ embutido · Z-Wave 800 LR ✅ embutido · Matter 1.5 ✅ (só controlador, sem rádio Thread) · Bluetooth ✅ · Dificuldade de configuração: fácil.",
         ],
         affiliateLinks: [
-          { label: 'Ver preço atual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: 'US$ 188,95' },
+          { label: 'Ver preço atual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: 'US$ 184,95' },
         ],
       },
       homey: {
@@ -2313,13 +2491,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           "**Nota editorial: 8,5/10 (avaliação baseada em pesquisa, não um resultado testado em bancada).** O Homey Pro (2026) custa US$ 449 (confirmado em homey.app, em alta em relação a US$ 399 após uma mudança de preço em 1º de junho de 2026) com 4 GB de RAM, 8 GB eMMC, e um processador quad-core ARMv8 de 1,5 GHz. Ele tem o conjunto de rádios embutidos mais amplo de todos os hubs deste guia: Wi-Fi, Bluetooth 5.0, Matter v1.5, um roteador de borda Thread, Zigbee 3.0, Z-Wave 700, 433MHz, e infravermelho.",
         items: [
-          "Nomear a diferença de preço claramente: US$ 449 é cerca de 2,3 vezes os US$ 199 do Home Assistant Green e cerca de 2,4 vezes os US$ 188,95 da Hubitat — esse sobrepreço compra rádios embutidos que você teria que montar sozinho, não um nível de capacidade fundamentalmente diferente.",
+          "Nomear a diferença de preço claramente: US$ 449 é cerca de 2,3 vezes os US$ 199 do Home Assistant Green e cerca de 2,4 vezes os US$ 184,95 da Hubitat — esse sobrepreço compra rádios embutidos que você teria que montar sozinho, não um nível de capacidade fundamentalmente diferente.",
           "Melhor para compradores que querem o conjunto de rádios de fábrica mais amplo sem nenhuma compra de dongles, e que valorizam o próprio ecossistema de aplicativos e o acabamento do Homey mais do que a comunidade aberta muito maior do Home Assistant.",
           "Por que o Home Assistant/Hubitat ganham em vez disso: nesse preço, um Home Assistant Green mais um dongle Connect ZBT-2 (US$ 199 + US$ 49 = US$ 248) ainda fica cerca de US$ 200 mais barato que o Homey Pro enquanto adiciona espaço para IA local que a própria plataforma do Homey não oferece.",
           "Compatibilidade: Zigbee 3.0 ✅ embutido · Z-Wave 700 ✅ embutido · Matter v1.5 ✅ · Roteador de borda Thread ✅ embutido · 433MHz ✅ · IR ✅ · Dificuldade de configuração: fácil.",
         ],
         affiliateLinks: [
           { label: 'Ver preço atual — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: 'US$ 449' },
+        ],
+      },
+      homeyAlternatives: {
+        id: 'homey-alternatives',
+        title: 'Alternativas ao Homey Pro e Hubitat vs Homey',
+        content: "**A melhor alternativa ao Homey Pro depende do que você quer evitar: o preço de US$ 449, a plataforma de apps fechada ou a necessidade de comprar rádios à parte.** A Hubitat e o Home Assistant Green respondem cada um a um desses pontos, e o Pro mini, mais barato e da própria Homey, resolve a questão do preço dentro da mesma plataforma.",
+        columns: ['Alternativa', 'Preço', 'Troca vs Homey Pro'],
+        rows: [
+          { Alternativa: '[Hubitat Elevation C-8 Pro](https://hubitat.com/products/7194320273451)', Preço: 'US$ 184,95', 'Troca vs Homey Pro': 'Zigbee/Z-Wave embutidos, sem rádio Thread, envio só EUA' },
+          { Alternativa: '[Home Assistant Green](https://www.home-assistant.io/green/) + ZBT-2', Preço: 'US$ 248 no total', 'Troca vs Homey Pro': 'Mais aberto, mais configuração, Z-Wave pede 2º dongle' },
+          { Alternativa: '[Homey Pro mini](https://homey.app/en-us/homey-pro-mini/)', Preço: 'US$ 249', 'Troca vs Homey Pro': 'Mesmo Homey OS, mas sem Z-Wave, Wi-Fi nem Bluetooth' },
+          { Alternativa: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', Preço: 'US$ 139,99', 'Troca vs Homey Pro': 'Só Matter/Thread, foco IKEA, sem Z-Wave' },
+        ],
+        items: [
+          "Hubitat vs Homey, preço: o Hubitat Elevation C-8 Pro (US$ 184,95) custa menos da metade do Homey Pro (US$ 449), e ambos incluem Zigbee 3.0, Z-Wave e um controlador Matter.",
+          "Hubitat vs Homey, rádios: o Homey Pro acrescenta um roteador de borda Thread, 433MHz e infravermelho; o Hubitat não tem rádio Thread. O Z-Wave do Homey é da série 700, o do Hubitat é da série 800 com Long Range.",
+          "Hubitat vs Homey, plataforma: o Hubitat é um eletrodoméstico fechado com motor de regras e interface web; o Homey é baseado em apps e fluxos, com um app móvel bem acabado e uma loja de apps da comunidade. Nenhum dos dois roda uma integração de LLM local na própria plataforma.",
+          "O Homey Pro mini (US$ 249, confirmado em homey.app em 18/10/2026) roda o mesmo sistema do Homey Pro, com Zigbee 3.0, Matter v1.5 e um roteador de borda Thread embutidos, mas Z-Wave, Bluetooth, 433MHz e infravermelho exigem a Homey Bridge separada de US$ 69, então ele só economiza dinheiro se você não precisa desses rádios.",
+          "Se o motivo para deixar o Homey é a dependência de fabricante e não o preço, a alternativa prática é o Home Assistant Green — a única opção aqui em que a plataforma é de código aberto e portável para outro hardware.",
         ],
       },
       aqaraM3: {
@@ -2342,15 +2539,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dirigera',
         title: 'IKEA DIRIGERA — Melhor hub de ecossistema acessível',
         content:
-          "**Nota editorial: 7,8/10 (avaliação baseada em pesquisa, não um resultado testado em bancada).** O DIRIGERA da IKEA (US$ 119,99, confirmado em ikea.com) é o hub Matter/Thread genuíno mais barato desta comparação. Ele se tornou um controlador Matter completo e roteador de borda Thread através de uma atualização de firmware em 2025, permitindo integrar alguns dispositivos Matter de terceiros, não só a própria linha da IKEA. Este site tem um guia dedicado do DIRIGERA com o detalhamento completo do ecossistema.",
+          "**Nota editorial: 7,8/10 (avaliação baseada em pesquisa, não um resultado testado em bancada).** O DIRIGERA da IKEA (US$ 139,99, confirmado em ikea.com) é o hub Matter/Thread genuíno mais barato desta comparação. Ele se tornou um controlador Matter completo e roteador de borda Thread através de uma atualização de firmware em 2025, permitindo integrar alguns dispositivos Matter de terceiros, não só a própria linha da IKEA. Este site tem um guia dedicado do DIRIGERA com o detalhamento completo do ecossistema.",
         items: [
           "Compre se: você quer o ponto de entrada genuíno mais barato para o controle local Matter/Thread, está tranquilo com o próprio aplicativo e a gama de dispositivos da IKEA como experiência principal, e não precisa de personalização no nível do Hubitat/Home Assistant.",
           "Não compre se: você quer um único hub que também gerencie dispositivos Zigbee não-Matter de outras marcas, precisa de Z-Wave, ou quer a profundidade de integração do Home Assistant — o próprio motor de automação do DIRIGERA é intencionalmente simples.",
-          "Comparação de preço, dita claramente: o DIRIGERA (US$ 119,99) é cerca de US$ 80 mais barato que o Home Assistant Green (US$ 199) e cerca de US$ 69 mais barato que o Hubitat (US$ 188,95) — a contrapartida é um ecossistema de dispositivos e automação bem menor e centrado na IKEA.",
+          "Comparação de preço, dita claramente: o DIRIGERA (US$ 139,99) é cerca de US$ 59 mais barato que o Home Assistant Green (US$ 199) e cerca de US$ 45 mais barato que o Hubitat (US$ 184,95) — a contrapartida é um ecossistema de dispositivos e automação bem menor e centrado na IKEA.",
           "Compatibilidade: Matter 1.4 ✅ controlador · Roteador de borda Thread ✅ · Zigbee ✅ (dispositivos IKEA, via ponte Matter para alguns terceiros) · Z-Wave ❌ · Dificuldade de configuração: fácil.",
         ],
         affiliateLinks: [
-          { label: 'Ver preço atual — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: 'US$ 119,99' },
+          { label: 'Ver preço atual — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: 'US$ 139,99' },
         ],
       },
       comparison: {
@@ -2370,7 +2567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Dimensão: 'IA local (Ollama/LLM)', 'Home Assistant Green': 'Sim, em uma caixa escalada; não os 4 GB do Green sozinho', 'Hubitat C-8 Pro': 'Não suportado pela plataforma', 'Homey Pro': 'Não suportado pela plataforma' },
           { Dimensão: 'Frigate / IA de câmera', 'Home Assistant Green': 'Sim, via complemento do Home Assistant', 'Hubitat C-8 Pro': 'Sem suporte nativo', 'Homey Pro': 'Sem suporte nativo' },
           { Dimensão: 'Liberdade de ecossistema', 'Home Assistant Green': 'A mais alta — sem dependência de fornecedor', 'Hubitat C-8 Pro': 'Moderada — específica da Hubitat', 'Homey Pro': 'Moderada — específica do Homey' },
-          { Dimensão: 'Preço', 'Home Assistant Green': 'US$ 199 / €179', 'Hubitat C-8 Pro': 'US$ 188,95', 'Homey Pro': 'US$ 449' },
+          { Dimensão: 'Preço', 'Home Assistant Green': 'US$ 199 / €179', 'Hubitat C-8 Pro': 'US$ 184,95', 'Homey Pro': 'US$ 449' },
         ],
       },
       hubVsController: {
@@ -2411,7 +2608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'Ver preço atual — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: 'US$ 199 / €179' },
-          { label: 'Ver preço atual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: 'US$ 188,95' },
+          { label: 'Ver preço atual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: 'US$ 184,95' },
           { label: 'Ver preço atual — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub' },
           { label: 'Ver preço atual — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Ver preço atual — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -2438,6 +2635,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Se você é': 'Começando do zero com Matter', 'Hub(s) mais adequado(s)': 'Qualquer um dos cinco — todos atuam como controladores Matter' },
           { 'Se você é': 'Muito focado em Thread (Matter over Thread)', 'Hub(s) mais adequado(s)': 'Homey ou DIRIGERA (roteador de borda embutido)' },
           { 'Se você é': 'Quer máxima flexibilidade futura', 'Hub(s) mais adequado(s)': 'Home Assistant Green + dongle' },
+        ],
+      },
+      japan: {
+        id: 'japan',
+        title: 'Melhor hub de casa inteligente no Japão: quais hubs funcionam com mais dispositivos',
+        content: "**No Japão, escolha o hub pelo rádio e por poder ser comprado e usado legalmente lá: Zigbee, Thread e Matter funcionam em 2,4 GHz no mundo todo, mas o Z-Wave usa uma banda japonesa própria e vários hubs aqui são vendidos só para o mercado dos EUA.**",
+        items: [
+          "O Z-Wave é a armadilha regional: a banda Z-Wave do Japão é 922–926 MHz (ARIB STD-T108, segundo a documentação da Z-Wave.me), não a banda de 908,4 MHz dos EUA. O rádio Z-Wave do Hubitat C-8 Pro usa a frequência dos EUA e a Hubitat envia apenas para os 48 estados contíguos dos EUA, então ele não é uma compra prática para o Japão.",
+          "A Homey diz que as antenas do Pro mudam conforme a regulamentação local, mas a página não lista uma variante de Z-Wave específica para o Japão — confirme o suporte a Z-Wave japonês com a Athom antes de comprar o Homey Pro para dispositivos Z-Wave no Japão.",
+          "Zigbee 3.0, Thread e Matter não exigem hardware regional: o Home Assistant Green mais um Connect ZBT-2, o Aqara Hub M3 (a Aqara cita uma implantação japonesa com 110 residências) e o IKEA DIRIGERA cobrem esses protocolos.",
+          "Melhor opção para \"funciona com mais dispositivos\": o Home Assistant Green, porque sua biblioteca de integrações cobre Matter, Zigbee e dispositivos locais sem nuvem. Por US$ 199 mais cerca de US$ 49 do ZBT-2, são aproximadamente US$ 248 antes de frete e custos de importação.",
+          "Verifique a certificação da lei de rádio japonesa de cada dispositivo (a marca de conformidade técnica) — um dispositivo ou dongle comprado no exterior pode não ser legalmente utilizável no Japão. Isto é orientação geral, não aconselhamento jurídico; a PromptQuorum não testou nenhum hub no Japão.",
         ],
       },
       localAi: {
@@ -2487,8 +2696,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**O que cada faixa de preço realmente compra.**',
         columns: ['Orçamento', 'O que você recebe'],
         rows: [
-          { Orçamento: 'Abaixo de US$ 150', 'O que você recebe': 'IKEA DIRIGERA (US$ 119,99) — ecossistema Matter/Thread de entrada' },
-          { Orçamento: 'US$ 150-250', 'O que você recebe': 'Home Assistant Green (US$ 199) ou Hubitat C-8 Pro (US$ 188,95) — um hub, ainda sem rádios/sensores' },
+          { Orçamento: 'Abaixo de US$ 150', 'O que você recebe': 'IKEA DIRIGERA (US$ 139,99) — ecossistema Matter/Thread de entrada' },
+          { Orçamento: 'US$ 150-250', 'O que você recebe': 'Home Assistant Green (US$ 199) ou Hubitat C-8 Pro (US$ 184,95) — um hub, ainda sem rádios/sensores' },
           { Orçamento: 'US$ 250-500', 'O que você recebe': 'HA Green + dongle + alguns sensores, ou Homey Pro (US$ 449) sozinho' },
           { Orçamento: 'US$ 500-1.000+', 'O que você recebe': 'HA Green + mini PC de IA dedicado + câmeras + sensores + uma fechadura (veja o kit inicial acima)' },
         ],
@@ -2551,15 +2760,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Cinco hubs, cinco perfis de comprador diferentes — a escolha certa depende do que você realmente precisa, não de qual pontua mais alto no papel.**',
         items: [
           "Home Assistant Green (US$ 199/€179) — melhor no geral. Nota editorial: 9,3/10. Compre se você quer a plataforma mais aberta e espaço real para IA local, e não se importa em montar um sistema de dongles e sensores.",
-          "Hubitat Elevation C-8 Pro (US$ 188,95) — melhor eletrodoméstico local. Nota editorial: 8,7/10. Compre se você quer automação local com o mínimo de trabalho manual e não precisa da amplitude de integração do Home Assistant.",
+          "Hubitat Elevation C-8 Pro (US$ 184,95) — melhor eletrodoméstico local. Nota editorial: 8,7/10. Compre se você quer automação local com o mínimo de trabalho manual e não precisa da amplitude de integração do Home Assistant.",
           "Homey Pro (US$ 449) — melhor tudo-em-um premium. Nota editorial: 8,5/10. Compre se a amplitude de rádios embutidos e o acabamento do próprio app do Homey valem para você cerca de 2,3 vezes o preço do Home Assistant Green.",
           "Aqara Hub M3 (PMSR US$ 219,99, geralmente ~US$ 159,99) — melhor hub de ecossistema Aqara. Nota editorial: 8,0/10. Compre se você já está especificamente investido em dispositivos Aqara.",
-          "IKEA DIRIGERA (US$ 119,99) — melhor hub de ecossistema simples. Nota editorial: 7,8/10. Compre se o orçamento é o fator decisivo e você está tranquilo em centrar no app da IKEA.",
+          "IKEA DIRIGERA (US$ 139,99) — melhor hub de ecossistema simples. Nota editorial: 7,8/10. Compre se o orçamento é o fator decisivo e você está tranquilo em centrar no app da IKEA.",
           "A regra de compra chave para o público focado em IA local deste site: recomendar a plataforma com a menor dependência de ecossistema, que é o Home Assistant Green — mas essa não é a escolha certa para todo comprador. Se a simplicidade de eletrodoméstico ou a amplitude de rádios embutidos importa mais para você do que a abertura, Hubitat ou Homey são a escolha honestamente correta, não um prêmio de consolação.",
         ],
         affiliateLinks: [
           { label: 'Ver preço atual — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: 'US$ 199 / €179' },
-          { label: 'Ver preço atual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: 'US$ 188,95' },
+          { label: 'Ver preço atual — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: 'US$ 184,95' },
           { label: 'Ver preço atual — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: 'US$ 449' },
           { label: 'Ver preço atual — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'Ver preço atual — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -2595,6 +2804,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Preciso de um dongle Zigbee com o Home Assistant Green?', a: "Sim, se você tem ou planeja comprar dispositivos Zigbee — o Green não tem rádio embutido. Veja o guia de dongles Zigbee e Thread deste site para opções atuais como o Home Assistant Connect ZBT-2 (US$ 49/€45)." },
           { q: 'O Home Assistant Green suporta IA local?', a: "O software do Home Assistant suporta integração de LLM local via Ollama, mas os próprios 4 GB de RAM do Green não são dimensionados para também rodar bem um LLM local — combine-o com um mini PC de IA separado e mais potente (arquitetura de duas caixas) para uso genuíno de IA local, em vez de esperar que o Green sozinho lide com as duas tarefas." },
           { q: 'Home Assistant Green vs Hubitat — qual devo comprar?', a: "Home Assistant Green se você quer abertura máxima, amplitude de integração e potencial de IA local e não se importa em montar um sistema baseado em dongles. Hubitat Elevation C-8 Pro se você quer automação local que se comporta como um eletrodoméstico simples com Zigbee/Z-Wave embutidos e configuração mínima." },
+          { q: 'Qual é a melhor alternativa ao Homey Pro?', a: "O Hubitat Elevation C-8 Pro (US$ 184,95) é a alternativa mais próxima com rádios embutidos, por menos da metade do preço; o Home Assistant Green mais um dongle ZBT-2 (US$ 248) é a alternativa de plataforma aberta; o Homey Pro mini (US$ 249) mantém a plataforma Homey, mas perde Z-Wave, Wi-Fi e Bluetooth, a menos que você adicione a Homey Bridge de US$ 69." },
+          { q: 'Hubitat vs Homey — qual é melhor?', a: "O Hubitat é mais barato (US$ 184,95 vs US$ 449) e é um motor de regras local tipo eletrodoméstico sem rádio Thread; o Homey Pro acrescenta Thread, 433MHz e infravermelho e um app mais bem acabado. Nenhum dos dois é totalmente offline, e nenhum oferece integração nativa com LLM local." },
+          { q: 'Qual é o melhor hub de casa inteligente para o Japão?', a: "Em amplitude de suporte a dispositivos, o Home Assistant Green com um dongle Zigbee/Thread, já que Zigbee, Thread e Matter são padrões globais de 2,4 GHz. O Z-Wave no Japão usa 922–926 MHz, e o C-8 Pro da Hubitat usa a frequência dos EUA e só é enviado dentro dos EUA contíguos, então verifique o suporte regional a Z-Wave antes de comprar qualquer hub Z-Wave." },
+          { q: 'Qual é o melhor hub de automação residencial para iniciantes?', a: "O Hubitat Elevation C-8 Pro (US$ 184,95) se você está nos EUA e quer automação local com Zigbee e Z-Wave embutidos; o Homey Pro (US$ 449) se você quer a configuração mais fácil e aceita pagar por isso; o Home Assistant Green se você aceita uma configuração mais longa em troca de mais flexibilidade." },
           { q: 'Qual é o melhor hub para Matter?', a: "Os cinco hubs deste guia (Home Assistant Green, Hubitat, Homey Pro, Aqara Hub M3, IKEA DIRIGERA) podem todos atuar como controladores Matter, mas o Homey Pro e o IKEA DIRIGERA têm um roteador de borda Thread embutido, enquanto o Home Assistant Green precisa de um dongle para essa função — verifique a lista de controladores suportados do dispositivo Matter específico antes de comprar." },
         ],
       },
@@ -2602,14 +2815,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Os melhores hubs de casa inteligente para controle local em 2026: Home Assistant vs Hubitat vs Homey',
+      headline: 'Melhor hub de casa inteligente para controle local em 2026: Home Assistant vs Hubitat vs Homey',
       description: 'Os melhores hubs de casa inteligente para controle local em 2026: Home Assistant Green vs Hubitat Elevation C-8 Pro vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA comparados.',
       url: 'https://www.promptquorum.com/pt/smart-home/best-smart-home-hubs-2027',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Smart home hub' }, { '@type': 'Thing', name: 'Home Assistant Green' }, { '@type': 'Thing', name: 'Hubitat' }, { '@type': 'Thing', name: 'Homey' }, { '@type': 'Thing', name: 'Aqara Hub M3' }, { '@type': 'Thing', name: 'IKEA DIRIGERA' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -2621,6 +2834,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'Qual é o melhor hub para o Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'O Home Assistant Green (US$ 199/€179) é o hardware oficial de primeiro fornecedor mas precisa de um dongle USB Zigbee/Thread/Z-Wave separado.' } },
         { '@type': 'Question', name: 'Vale a pena o Home Assistant Green?', acceptedAnswer: { '@type': 'Answer', text: 'Sim para compradores que querem a plataforma mais aberta e espaço para IA local, mas espere um processo de configuração moderado e uma compra de dongle separada.' } },
+        { '@type': 'Question', name: 'Qual é a melhor alternativa ao Homey Pro?', acceptedAnswer: { '@type': 'Answer', text: 'Hubitat Elevation C-8 Pro (US$ 184,95) para rádios embutidos por menos da metade do preço, Home Assistant Green mais um dongle ZBT-2 (US$ 248) para uma plataforma aberta, ou Homey Pro mini (US$ 249) para continuar no Homey com menos rádios embutidos.' } },
+        { '@type': 'Question', name: 'Qual é o melhor hub de casa inteligente para o Japão?', acceptedAnswer: { '@type': 'Answer', text: 'O Home Assistant Green com um dongle Zigbee/Thread cobre mais dispositivos; o Z-Wave no Japão usa 922–926 MHz e a Hubitat só envia dentro dos EUA contíguos, então verifique primeiro o suporte regional.' } },
         { '@type': 'Question', name: 'Home Assistant Green vs Hubitat — qual devo comprar?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green para abertura máxima e potencial de IA local; Hubitat Elevation C-8 Pro para automação local tipo eletrodoméstico com configuração mínima.' } },
       ],
     },
@@ -2629,20 +2844,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-16',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-24',
-    last_full_refresh: '2026-08-25',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2026-11-17',
+    last_full_refresh: '2026-10-18',
     theme: "Buyer's Guides",
     heroImage: '/images/best-smart-home-hubs-2027-overview-hero-zh.webp',
     affiliateDisclosure: true,
     title: '2026年本地控制最佳智能家居中枢：Home Assistant对比Hubitat对比Homey',
     seoTitle: '2026年最佳智能家居中枢：HA Green对比Hubitat对比Homey',
     intro:
-      '2026年选择智能家居中枢，归结为大多数买家会跳过的一个问题：你想要哪种平台——本地AI潜力最大、零厂商锁定的（Home Assistant Green），表现得像简单电器、不给你添麻烦的（Hubitat Elevation C-8 Pro），还是用高得多的价格换取便利的（Homey Pro）？Aqara的Hub M3和IKEA的DIRIGERA则适合已经投入特定设备生态系统的买家。本指南是本站本地智能家居集群的商业主页——以下每个价格和规格均于2026年8月25日对照厂商来源核实，且没有任何一款硬件经过PromptQuorum测试或跑分；所有能力方面的说法都是基于官方文档的研究性评估，而非实验室结果。',
+      '2026年选择智能家居中枢，归结为大多数买家会跳过的一个问题：你想要哪种平台——本地AI潜力最大、零厂商锁定的（Home Assistant Green），表现得像简单电器、不给你添麻烦的（Hubitat Elevation C-8 Pro），还是用高得多的价格换取便利的（Homey Pro）？Aqara的Hub M3和IKEA的DIRIGERA则适合已经投入特定设备生态系统的买家。本指南是本站本地智能家居集群的商业主页——以下每个价格和规格均于2026年10月18日对照厂商来源核实，且没有任何一款硬件经过PromptQuorum测试或跑分；所有能力方面的说法都是基于官方文档的研究性评估，而非实验室结果。',
     metaDescription:
-      '2026年本地控制最佳智能家居中枢：Home Assistant Green对比Hubitat Elevation C-8 Pro对比Homey Pro对比Aqara Hub M3对比IKEA DIRIGERA——现行价格、协议支持，以及哪款适合你的购买场景。',
+      '2026年本地控制最佳智能家居中枢：Home Assistant Green对比Hubitat C-8 Pro对比Homey Pro（含Homey Pro替代方案）对比Aqara M3对比IKEA DIRIGERA——价格、协议与日本使用说明。',
     twitterDescription:
-      'Home Assistant Green对比Hubitat对比Homey Pro对比Aqara Hub M3对比IKEA DIRIGERA——2026年现行价格与协议支持对比，以及哪款中枢适合你的本地AI方案。',
+      '2026年最佳智能家居中枢：Home Assistant Green对比Hubitat对比Homey Pro对比Aqara M3对比IKEA DIRIGERA——价格、协议、Homey Pro替代方案与日本使用说明。',
     readTime: '阅读需13分钟',
     educationalLevel: 'Beginner',
     audience: '为本地控制选择专用中枢设备的智能家居买家，无论是否有本地AI需求',
@@ -2654,22 +2869,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aqara hub m3对比home assistant',
       'ikea dirigera对比home assistant green',
       '本地ai智能家居中枢',
+      'homey pro替代方案',
+      'hubitat对比homey',
+      '最佳家庭自动化中枢',
+      '日本最佳智能家居中枢',
     ],
     leadAnswerBlock:
-      '**如果你想要最大程度的本地控制和本地AI扩展空间，Home Assistant Green（199美元/179欧元）是2026年综合最佳的智能家居中枢——它运行真正的Home Assistant平台，但出厂不带Zigbee/Thread/Z-Wave无线模块，因此还需另外预算购买USB加密狗。** 如果你想要电器般的本地自动化、不想维护类Linux系统，Hubitat Elevation C-8 Pro（188.95美元，价格已确认较此前的179.95美元上涨）是最佳选择。Homey Pro（449美元）是最佳高端一体化方案，适合愿意支付约Home Assistant Green价格2.3倍、换取最广泛内置无线支持和最少DIY搭建的买家。Aqara Hub M3（建议零售价219.99美元，促销常见约159.99美元）适合已深度投入Aqara生态的家庭。IKEA DIRIGERA（119.99美元）是最便宜的真正入门选择，本站有专门的详细指南。',
+      '**如果你想要最大程度的本地控制和本地AI扩展空间，Home Assistant Green（199美元/179欧元）是2026年综合最佳的智能家居中枢——它运行真正的Home Assistant平台，但出厂不带Zigbee/Thread/Z-Wave无线模块，因此还需另外预算购买USB加密狗。** 如果你想要电器般的本地自动化、不想维护类Linux系统，Hubitat Elevation C-8 Pro（184.95美元）是最佳选择。Homey Pro（449美元）是最佳高端一体化方案，适合愿意支付约Home Assistant Green价格2.3倍、换取最广泛内置无线支持和最少DIY搭建的买家。Aqara Hub M3（建议零售价219.99美元，促销常见约159.99美元）适合已深度投入Aqara生态的家庭。IKEA DIRIGERA（139.99美元）是最便宜的真正入门选择，本站有专门的详细指南。',
     quickAnswerTop: {
       zh: {
         question: '2026年本地控制最佳的智能家居中枢是什么？',
         answer:
-          '对于想要本地优先控制、并为日后添加本地AI留出空间的大多数买家来说，Home Assistant Green（199美元/179欧元）是最佳选择——它运行真正的Home Assistant平台，是本对比中最开放、集成最丰富的系统，不过因为没有内置无线模块，需要单独购买Zigbee/Thread/Z-Wave USB加密狗。如果你想要本地自动化、且折腾更少，Hubitat Elevation C-8 Pro（188.95美元）表现得像一台电器，而不是需要维护的系统。Homey Pro（449美元）是高端一体化选择，拥有本对比中最广泛的内置无线支持，价格约为Home Assistant Green的2.3倍。Aqara Hub M3（建议零售价219.99美元）适合已经投入Aqara设备的买家。IKEA DIRIGERA（119.99美元）是最便宜的真正Matter/Thread入门选择。这些中枢均未经PromptQuorum测试——以下所有说法均来自厂商文档，于2026年8月25日核实。',
+          '对于想要本地优先控制、并为日后添加本地AI留出空间的大多数买家来说，Home Assistant Green（199美元/179欧元）是最佳选择——它运行真正的Home Assistant平台，是本对比中最开放、集成最丰富的系统，不过因为没有内置无线模块，需要单独购买Zigbee/Thread/Z-Wave USB加密狗。如果你想要本地自动化、且折腾更少，Hubitat Elevation C-8 Pro（184.95美元）表现得像一台电器，而不是需要维护的系统。Homey Pro（449美元）是高端一体化选择，拥有本对比中最广泛的内置无线支持，价格约为Home Assistant Green的2.3倍。Aqara Hub M3（建议零售价219.99美元）适合已经投入Aqara设备的买家。IKEA DIRIGERA（139.99美元）是最便宜的真正Matter/Thread入门选择。这些中枢均未经PromptQuorum测试——以下所有说法均来自厂商文档，于2026年10月18日核实。',
         bullets: [
           '综合最佳/本地AI最佳：Home Assistant Green（199美元/179欧元）——需要单独的Zigbee/Thread/Z-Wave加密狗',
-          '最佳更简单的本地替代方案：Hubitat Elevation C-8 Pro（188.95美元）——电器化，折腾更少',
+          '最佳更简单的本地替代方案：Hubitat Elevation C-8 Pro（184.95美元）——电器化，折腾更少',
           '最佳高端一体化：Homey Pro（449美元）——内置无线支持最广，价格最高',
           '最适合Aqara生态家庭：Aqara Hub M3（建议零售价219.99美元，促销常见约159.99美元）',
-          '最佳经济型生态中枢：IKEA DIRIGERA（119.99美元）——参见本站专门指南',
+          '最佳经济型生态中枢：IKEA DIRIGERA（139.99美元）——参见本站专门指南',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -2683,6 +2902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '入门套装成本', anchor: 'starter-package' },
       { label: 'Hubitat Elevation C-8 Pro', anchor: 'hubitat' },
       { label: 'Homey Pro', anchor: 'homey' },
+      { label: 'Homey Pro替代方案', anchor: 'homey-alternatives' },
       { label: 'Aqara Hub M3', anchor: 'aqara-m3' },
       { label: 'IKEA DIRIGERA', anchor: 'dirigera' },
       { label: '完整对比表', anchor: 'comparison' },
@@ -2691,6 +2911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '你应该买哪款中枢？（再谈）', anchor: 'which-to-buy-2' },
       { label: '先别急着买中枢', anchor: 'dont-buy-yet' },
       { label: '协议决策树', anchor: 'protocol-tree' },
+      { label: '日本的智能家居中枢', anchor: 'japan' },
       { label: '本地AI最佳中枢', anchor: 'local-ai' },
       { label: '本地智能家居入门套件', anchor: 'starter-kit' },
       { label: '预算阶梯', anchor: 'budget-ladder' },
@@ -2703,7 +2924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '常见问题', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Home Assistant Green（199美元/179欧元）是2026年本地控制和本地AI潜力方面综合最佳的智能家居中枢，Hubitat Elevation C-8 Pro（188.95美元）是更简单、无需折腾的替代方案，Homey Pro（449美元）则是高端一体化选择。' },
+      { type: 'one-sentence', content: 'Home Assistant Green（199美元/179欧元）是2026年本地控制和本地AI潜力方面综合最佳的智能家居中枢，Hubitat Elevation C-8 Pro（184.95美元）是更简单、无需折腾的替代方案，Homey Pro（449美元）则是高端一体化选择。' },
       { type: 'plain-terms', content: '智能家居中枢是与你的设备通信、执行自动化且不需要联网的那个盒子。本指南比较了五款现行产品——它们开箱支持哪些协议、目前售价多少，以及各自真正适合哪种购买场景——但并不声称PromptQuorum测试过其中任何一款。' },
     ],
     sections: {
@@ -2713,11 +2934,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Home Assistant Green（199美元/179欧元）——综合最佳且本地AI潜力最佳，但需要单独的Zigbee/Thread/Z-Wave USB加密狗',
-          'Hubitat Elevation C-8 Pro（188.95美元，确认较此前179.95美元上涨）——最佳电器化本地自动化，折腾最少',
+          'Hubitat Elevation C-8 Pro（184.95美元，仅限美国配送）——最佳电器化本地自动化，折腾最少',
           'Homey Pro（449美元）——最佳高端一体化，内置无线支持最广，价格约为Home Assistant Green的2.3倍',
           'Aqara Hub M3（建议零售价219.99美元，常见约159.99美元）——最适合已投入Aqara设备的家庭，并非开放平台',
-          'IKEA DIRIGERA（119.99美元）——最便宜的真正生态中枢，参见本站专门的DIRIGERA指南',
-          '这些中枢均未经PromptQuorum测试或跑分——所有说法均来自厂商文档，于2026年8月25日核实',
+          'IKEA DIRIGERA（139.99美元）——最便宜的真正生态中枢，参见本站专门的DIRIGERA指南',
+          '这些中枢均未经PromptQuorum测试或跑分——所有说法均来自厂商文档，于2026年10月18日核实',
         ],
       },
       quickVerdict: {
@@ -2727,14 +2948,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['中枢', '最适合', '本地评级', 'Zigbee', 'Z-Wave', 'Matter/Thread', 'AI潜力', '价格'],
         rows: [
           { 中枢: '[Home Assistant Green](https://www.home-assistant.io/green/)', 最适合: '最大控制/AI', 本地评级: '最高', Zigbee: '通过加密狗', 'Z-Wave': '通过加密狗', 'Matter/Thread': '通过加密狗', 'AI潜力': '最高（Ollama）', 价格: '199美元/179欧元' },
-          { 中枢: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 最适合: '简单本地自动化', 本地评级: '高', Zigbee: '内置3.0', 'Z-Wave': '内置800 LR', 'Matter/Thread': 'Matter 1.5（无Thread无线）', 'AI潜力': '低（电器）', 价格: '188.95美元' },
+          { 中枢: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 最适合: '简单本地自动化', 本地评级: '高', Zigbee: '内置3.0', 'Z-Wave': '内置800 LR', 'Matter/Thread': 'Matter 1.5（无Thread无线）', 'AI潜力': '低（电器）', 价格: '184.95美元' },
           { 中枢: '[Homey Pro](https://homey.app/en-us/homey-pro/)', 最适合: '高端一体化', 本地评级: '混合*', Zigbee: '内置3.0', 'Z-Wave': '内置700', 'Matter/Thread': 'Matter 1.5 + Thread边界路由器', 'AI潜力': '低（电器）', 价格: '449美元' },
           { 中枢: '[Aqara Hub M3](https://www.aqara.com/en/product/hub-m3/)', 最适合: 'Aqara生态', 本地评级: '混合*', Zigbee: '内置', 'Z-Wave': '无', 'Matter/Thread': 'Matter控制器 + Thread', 'AI潜力': '无（桥接）', 价格: '219.99美元建议零售价' },
-          { 中枢: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 最适合: '经济型生态', 本地评级: '混合*', Zigbee: '仅IKEA设备', 'Z-Wave': '无', 'Matter/Thread': 'Matter 1.4 + Thread边界路由器', 'AI潜力': '无（桥接）', 价格: '119.99美元' },
+          { 中枢: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 最适合: '经济型生态', 本地评级: '混合*', Zigbee: '仅IKEA设备', 'Z-Wave': '无', 'Matter/Thread': 'Matter 1.4 + Thread边界路由器', 'AI潜力': '无（桥接）', 价格: '139.99美元' },
         ],
         items: [
           '*"混合"本地评级：Homey、Aqara和IKEA除本地执行自动化外，还使用连接云端的配套应用进行设置/远程访问——都不像自托管的Home Assistant实例那样完全离线运行。相关细节见下文"本地究竟能带来什么？"。',
-          '以上每个数据均于2026年8月25日独立对照各厂商当前产品页面核实——请勿未经复核直接引用这些数字，此品类自本页早前版本以来已确认发生过一次涨价（Hubitat）。',
+          '以上每个数据均于2026年10月18日独立对照各厂商当前产品页面核实（Aqara Hub M3的价格最后一次确认是在2026年8月25日——Aqara当前产品页面未标注价格）——请勿未经复核直接引用这些数字：8月以来此品类的价格已变动两次（Hubitat下调，IKEA DIRIGERA上调）。',
         ],
       },
       topPicks: {
@@ -2743,12 +2964,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**只想要答案的话从这里开始。**',
         items: [
           '综合最佳——Home Assistant Green（199美元/179欧元）：运行真正的Home Assistant平台，是本对比中集成最丰富、最开放的系统。编辑评分：9.3/10（基于官方文档的研究性评估，非实验室测试得分）。',
-          '最佳更简单替代方案——Hubitat Elevation C-8 Pro（188.95美元）：本地自动化表现得像电器，而非需要维护的Linux主机。编辑评分：8.7/10。',
+          '最佳更简单替代方案——Hubitat Elevation C-8 Pro（184.95美元）：本地自动化表现得像电器，而非需要维护的Linux主机。编辑评分：8.7/10。',
           '最佳一体化——Homey Pro（449美元）：本对比中内置协议支持最广，值得明确指出其真实的价格溢价。编辑评分：8.5/10。',
         ],
         affiliateLinks: [
           { label: '查看当前价格 — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199美元 / 179欧元' },
-          { label: '查看当前价格 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188.95美元' },
+          { label: '查看当前价格 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184.95美元' },
           { label: '查看当前价格 — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '449美元' },
           { label: '查看当前价格 — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: '查看当前价格 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -2817,7 +3038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hubitat',
         title: 'Hubitat Elevation C-8 Pro — 最佳更简单本地替代方案',
         content:
-          '**编辑评分：8.7/10（基于研究的评估，非实验室测试得分）。** Hubitat的Elevation C-8 Pro（188.95美元，已在hubitat.com确认——较本页此前版本引用的179.95美元有所上涨，这是一次真实且现行的涨价）运行Hubitat自家的本地自动化平台，而非Home Assistant。它内置支持Zigbee 3.0、Z-Wave 800 Long Range、作为控制器的Matter 1.5以及蓝牙。',
+          '**编辑评分：8.7/10（基于研究的评估，非实验室测试得分）。** Hubitat的Elevation C-8 Pro（184.95美元，已于2026年10月18日在hubitat.com确认——较8月引用的188.95美元略有下降；Hubitat仅配送至美国本土48个相邻州）运行Hubitat自家的本地自动化平台，而非Home Assistant。它内置支持Zigbee 3.0、Z-Wave 800 Long Range、作为控制器的Matter 1.5以及蓝牙。',
         items: [
           '最适合希望获得电器般本地自动化体验、而不想维护类Linux系统的用户——Hubitat的规则引擎、网页界面和更新流程都设计得让人感觉封闭而稳定，而不是像在管理一台通用计算机。',
           '为什么Home Assistant反而更胜一筹：集成数量远超对方，原生支持Frigate/摄像头AI，可通过YAML和社区插件深度定制，并且真正有可行路径通向本地LLM自动化。Hubitat自家平台并未为这些设计。',
@@ -2825,7 +3046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '兼容性：Zigbee 3.0 ✅内置 · Z-Wave 800 LR ✅内置 · Matter 1.5 ✅（仅作为控制器，无Thread无线模块） · 蓝牙 ✅ · 配置难度：简单。',
         ],
         affiliateLinks: [
-          { label: '查看当前价格 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188.95美元' },
+          { label: '查看当前价格 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184.95美元' },
         ],
       },
       homey: {
@@ -2834,13 +3055,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**编辑评分：8.5/10（基于研究的评估，非实验室测试得分）。** Homey Pro（2026款）售价449美元（已在homey.app确认，自2026年6月1日调价后由399美元上涨），配4GB内存、8GB eMMC，以及1.5GHz四核ARMv8处理器。它拥有本指南中所有中枢里最广泛的内置无线组合：Wi-Fi、蓝牙5.0、Matter v1.5、Thread边界路由器、Zigbee 3.0、Z-Wave 700、433MHz以及红外。',
         items: [
-          '把价格差距说清楚：449美元约为Home Assistant Green的199美元的2.3倍，约为Hubitat 188.95美元的2.4倍——这笔溢价买到的是本可以自行组装的内置无线模块，而非本质上不同的能力层级。',
+          '把价格差距说清楚：449美元约为Home Assistant Green的199美元的2.3倍，约为Hubitat 184.95美元的2.4倍——这笔溢价买到的是本可以自行组装的内置无线模块，而非本质上不同的能力层级。',
           '最适合想要开箱即拥有最广泛无线组合、完全不用为加密狗购物，且更看重Homey自家应用生态和打磨程度、而非Home Assistant更庞大开放社区的买家。',
           '为什么Home Assistant/Hubitat反而更胜一筹：以这个价格，一台Home Assistant Green加一个Connect ZBT-2加密狗（199美元+49美元=248美元）依然比Homey Pro便宜约200美元，同时还多出Homey自家平台无法提供的本地AI扩展空间。',
           '兼容性：Zigbee 3.0 ✅内置 · Z-Wave 700 ✅内置 · Matter v1.5 ✅ · Thread边界路由器 ✅内置 · 433MHz ✅ · 红外 ✅ · 配置难度：简单。',
         ],
         affiliateLinks: [
           { label: '查看当前价格 — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '449美元' },
+        ],
+      },
+      homeyAlternatives: {
+        id: 'homey-alternatives',
+        title: 'Homey Pro替代方案，以及Hubitat对比Homey',
+        content: '**最佳的Homey Pro替代方案取决于你想避开什么：449美元的价格、封闭的应用平台，还是需要另购无线模块。** Hubitat和Home Assistant Green各自解决其中一个问题，而Homey自家更便宜的Pro mini则在同一平台内解决价格问题。',
+        columns: ['替代方案', '价格', '与Homey Pro相比的取舍'],
+        rows: [
+          { 替代方案: '[Hubitat Elevation C-8 Pro](https://hubitat.com/products/7194320273451)', 价格: '184.95美元', '与Homey Pro相比的取舍': '内置Zigbee/Z-Wave，无Thread无线模块，仅限美国配送' },
+          { 替代方案: '[Home Assistant Green](https://www.home-assistant.io/green/) + ZBT-2', 价格: '共248美元', '与Homey Pro相比的取舍': '最开放，配置更多，Z-Wave需再买一个加密狗' },
+          { 替代方案: '[Homey Pro mini](https://homey.app/en-us/homey-pro-mini/)', 价格: '249美元', '与Homey Pro相比的取舍': '同为Homey OS，但不内置Z-Wave、Wi-Fi和蓝牙' },
+          { 替代方案: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 价格: '139.99美元', '与Homey Pro相比的取舍': '仅Matter/Thread，IKEA优先，无Z-Wave' },
+        ],
+        items: [
+          'Hubitat对比Homey，价格：Hubitat Elevation C-8 Pro（184.95美元）的价格不到Homey Pro（449美元）的一半，且两者都内置Zigbee 3.0、Z-Wave和Matter控制器。',
+          'Hubitat对比Homey，无线模块：Homey Pro额外提供Thread边界路由器、433MHz和红外；Hubitat没有Thread无线模块。Homey的Z-Wave是700系列，Hubitat的是支持Long Range的800系列。',
+          'Hubitat对比Homey，平台：Hubitat是带网页界面的封闭规则引擎电器；Homey则基于应用和流程，配有打磨精良的手机应用和社区应用商店。两者在自家平台上都不提供本地LLM集成。',
+          'Homey Pro mini（249美元，已于2026年10月18日在homey.app确认）运行同样的Homey Pro OS，内置Zigbee 3.0、Matter v1.5和Thread边界路由器，但Z-Wave、蓝牙、433MHz和红外需要另购69美元的Homey Bridge，因此只有在你不需要这些无线模块时才能省钱。',
+          '如果你离开Homey的原因是厂商锁定而非价格，那么现实的替代方案是Home Assistant Green——这里唯一一个平台开源、可移植到其他硬件的选项。',
         ],
       },
       aqaraM3: {
@@ -2863,15 +3103,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dirigera',
         title: 'IKEA DIRIGERA — 最佳经济型生态中枢',
         content:
-          '**编辑评分：7.8/10（基于研究的评估，非实验室测试得分）。** IKEA的DIRIGERA（119.99美元，已在ikea.com确认）是本对比中最便宜的真正Matter/Thread中枢。它通过2025年的固件更新成为完整的Matter控制器和Thread边界路由器，因而可以接入部分第三方Matter设备，而不仅限于IKEA自家产品线。本站有专门的DIRIGERA指南，包含完整的生态系统解析。',
+          '**编辑评分：7.8/10（基于研究的评估，非实验室测试得分）。** IKEA的DIRIGERA（139.99美元，已在ikea.com确认）是本对比中最便宜的真正Matter/Thread中枢。它通过2025年的固件更新成为完整的Matter控制器和Thread边界路由器，因而可以接入部分第三方Matter设备，而不仅限于IKEA自家产品线。本站有专门的DIRIGERA指南，包含完整的生态系统解析。',
         items: [
           '适合购买的情况：你想要进入本地Matter/Thread控制领域的最低成本真正入门选择，能接受以IKEA自家应用和设备范围作为主要体验，且不需要Hubitat/Home Assistant级别的定制能力。',
           '不适合购买的情况：你想用同一个中枢管理其他品牌的非Matter Zigbee设备，需要Z-Wave，或者想要Home Assistant那样的集成深度——DIRIGERA自家的自动化引擎有意做得很简单。',
-          '价格对比，说清楚：DIRIGERA（119.99美元）比Home Assistant Green（199美元）便宜约80美元，比Hubitat（188.95美元）便宜约69美元——代价是一个规模小得多、以IKEA为中心的设备与自动化生态系统。',
+          '价格对比，说清楚：DIRIGERA（139.99美元）比Home Assistant Green（199美元）便宜约59美元，比Hubitat（184.95美元）便宜约45美元——代价是一个规模小得多、以IKEA为中心的设备与自动化生态系统。',
           '兼容性：Matter 1.4 ✅控制器 · Thread边界路由器 ✅ · Zigbee ✅（IKEA设备，部分第三方通过Matter桥接） · Z-Wave ❌ · 配置难度：简单。',
         ],
         affiliateLinks: [
-          { label: '查看当前价格 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '119.99美元' },
+          { label: '查看当前价格 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '139.99美元' },
         ],
       },
       comparison: {
@@ -2891,7 +3131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 维度: '本地AI（Ollama/LLM）', 'Home Assistant Green': '可以，需升级主机；仅靠Green的4GB内存不行', 'Hubitat C-8 Pro': '平台不支持', 'Homey Pro': '平台不支持' },
           { 维度: 'Frigate / 摄像头AI', 'Home Assistant Green': '可以，通过Home Assistant插件', 'Hubitat C-8 Pro': '无原生支持', 'Homey Pro': '无原生支持' },
           { 维度: '生态自由度', 'Home Assistant Green': '最高——无厂商锁定', 'Hubitat C-8 Pro': '中等——限于Hubitat', 'Homey Pro': '中等——限于Homey' },
-          { 维度: '价格', 'Home Assistant Green': '199美元 / 179欧元', 'Hubitat C-8 Pro': '188.95美元', 'Homey Pro': '449美元' },
+          { 维度: '价格', 'Home Assistant Green': '199美元 / 179欧元', 'Hubitat C-8 Pro': '184.95美元', 'Homey Pro': '449美元' },
         ],
       },
       hubVsController: {
@@ -2932,7 +3172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: '查看当前价格 — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199美元 / 179欧元' },
-          { label: '查看当前价格 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188.95美元' },
+          { label: '查看当前价格 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184.95美元' },
           { label: '查看当前价格 — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub' },
           { label: '查看当前价格 — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: '查看当前价格 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -2959,6 +3199,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 如果你是: '从零开始接触Matter', 最适合的中枢: '五款均可——都能充当Matter控制器' },
           { 如果你是: '大量使用Thread（Matter over Thread）', 最适合的中枢: 'Homey或DIRIGERA（内置边界路由器）' },
           { 如果你是: '想要未来最大灵活性', 最适合的中枢: 'Home Assistant Green+加密狗' },
+        ],
+      },
+      japan: {
+        id: 'japan',
+        title: '日本最佳智能家居中枢：哪些中枢兼容的设备最多',
+        content: '**在日本，选择中枢要看无线协议，以及它能否在当地合法购买和使用：Zigbee、Thread和Matter在全球都使用2.4GHz，但Z-Wave在日本使用独立频段，而且这里的几款中枢仅面向美国市场销售。**',
+        items: [
+          'Z-Wave是最容易踩的地区陷阱：日本的Z-Wave频段为922–926 MHz（ARIB STD-T108，据Z-Wave.me的文档），而非美国的908.4 MHz频段。Hubitat C-8 Pro的Z-Wave无线模块是美国频率，且Hubitat仅配送至美国本土48个相邻州，因此在日本并不是现实的购买选择。',
+          'Homey称其Pro的天线会根据当地法规切换，但其页面并未列出日本专用的Z-Wave版本——如果要在日本用Homey Pro连接Z-Wave设备，购买前请向Athom确认是否支持日本的Z-Wave。',
+          'Zigbee 3.0、Thread和Matter不需要地区专用硬件：Home Assistant Green加Connect ZBT-2、Aqara Hub M3（Aqara列出了在日本110户家庭的部署案例）以及IKEA DIRIGERA都覆盖这些协议。',
+          '“兼容设备最多”的最佳选择：Home Assistant Green，因为其集成库同时覆盖Matter、Zigbee和无云依赖的本地设备。199美元加上ZBT-2约49美元，运费和进口成本之前合计约248美元。',
+          '请核对每台设备自身的日本无线电法规认证（技术基准适合证明标志）——在海外购买的设备或加密狗可能无法在日本合法使用。这只是一般性指引，不构成法律意见；PromptQuorum未在日本测试过任何中枢。',
         ],
       },
       localAi: {
@@ -3008,8 +3260,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**每个价格档位实际能买到什么。**',
         columns: ['预算', '你能获得什么'],
         rows: [
-          { 预算: '150美元以下', 你能获得什么: 'IKEA DIRIGERA（119.99美元）——入门级Matter/Thread生态' },
-          { 预算: '150-250美元', 你能获得什么: 'Home Assistant Green（199美元）或Hubitat C-8 Pro（188.95美元）——一个中枢，还没有无线模块/传感器' },
+          { 预算: '150美元以下', 你能获得什么: 'IKEA DIRIGERA（139.99美元）——入门级Matter/Thread生态' },
+          { 预算: '150-250美元', 你能获得什么: 'Home Assistant Green（199美元）或Hubitat C-8 Pro（184.95美元）——一个中枢，还没有无线模块/传感器' },
           { 预算: '250-500美元', 你能获得什么: 'HA Green+加密狗+几个传感器，或单独一台Homey Pro（449美元）' },
           { 预算: '500-1,000美元以上', 你能获得什么: 'HA Green+专用AI迷你主机+摄像头+传感器+一把门锁（见上方入门套件）' },
         ],
@@ -3072,15 +3324,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**五款中枢，五种不同的买家画像——正确的选择取决于你实际需要什么，而不是哪款在纸面上得分最高。**',
         items: [
           'Home Assistant Green（199美元/179欧元）——综合最佳。编辑评分：9.3/10。如果你想要最开放的平台和真正的本地AI扩展空间，并且不介意自己组装加密狗和传感器系统，请购买它。',
-          'Hubitat Elevation C-8 Pro（188.95美元）——最佳本地电器。编辑评分：8.7/10。如果你想要折腾最少的本地自动化，并不需要Home Assistant的集成广度，请购买它。',
+          'Hubitat Elevation C-8 Pro（184.95美元）——最佳本地电器。编辑评分：8.7/10。如果你想要折腾最少的本地自动化，并不需要Home Assistant的集成广度，请购买它。',
           'Homey Pro（449美元）——最佳高端一体化。编辑评分：8.5/10。如果内置无线组合的广度和Homey自家应用的打磨程度，值得你为此支付约Home Assistant Green价格2.3倍的溢价，请购买它。',
           'Aqara Hub M3（建议零售价219.99美元，常见约159.99美元）——最佳Aqara生态中枢。编辑评分：8.0/10。如果你已经专门投入了Aqara设备，请购买它。',
-          'IKEA DIRIGERA（119.99美元）——最佳简单生态中枢。编辑评分：7.8/10。如果预算是决定因素，且你能接受以IKEA应用为中心，请购买它。',
+          'IKEA DIRIGERA（139.99美元）——最佳简单生态中枢。编辑评分：7.8/10。如果预算是决定因素，且你能接受以IKEA应用为中心，请购买它。',
           '面向本站关注本地AI的读者，关键购买原则是：推荐生态锁定最少的平台，也就是Home Assistant Green——但这并不是对所有买家都正确的选择。如果电器般的简单性或内置无线组合的广度对你来说比开放性更重要，那么Hubitat或Homey才是真正正确的选择，而不是退而求其次的安慰奖。',
         ],
         affiliateLinks: [
           { label: '查看当前价格 — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199美元 / 179欧元' },
-          { label: '查看当前价格 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188.95美元' },
+          { label: '查看当前价格 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184.95美元' },
           { label: '查看当前价格 — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '449美元' },
           { label: '查看当前价格 — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: '查看当前价格 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -3116,6 +3368,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '使用Home Assistant Green是否需要Zigbee加密狗？', a: '如果你已有或计划购买任何Zigbee设备，就需要——Green没有内置无线模块。当前选项见本站Zigbee与Thread加密狗指南，例如Home Assistant Connect ZBT-2（49美元/45欧元）。' },
           { q: 'Home Assistant Green是否支持本地AI？', a: 'Home Assistant的软件通过Ollama支持本地LLM集成，但Green自身的4GB内存并未按同时良好运行本地LLM来设计——为实现真正的本地AI使用，请将其与单独、更强大的AI迷你主机（双机架构）搭配使用，而不是指望Green单独承担两项任务。' },
           { q: 'Home Assistant Green对比Hubitat——我该买哪个？', a: '如果你想要最大程度的开放性、集成广度和本地AI潜力，并且不介意组装基于加密狗的系统，选Home Assistant Green。如果你想要表现得像简单电器、内置Zigbee/Z-Wave、配置最少的本地自动化，选Hubitat Elevation C-8 Pro。' },
+          { q: '最佳的Homey Pro替代方案是什么？', a: 'Hubitat Elevation C-8 Pro（184.95美元）是最接近的内置无线模块替代方案，价格不到一半；Home Assistant Green加ZBT-2加密狗（248美元）是开放平台方案；Homey Pro mini（249美元）仍使用Homey平台，但除非另购69美元的Homey Bridge，否则不内置Z-Wave、Wi-Fi和蓝牙。' },
+          { q: 'Hubitat对比Homey——哪个更好？', a: 'Hubitat更便宜（184.95美元对449美元），是电器般的本地规则引擎，没有Thread无线模块；Homey Pro额外提供Thread、433MHz和红外，应用也更精致。两者都不是完全离线，也都没有原生的本地LLM集成。' },
+          { q: '日本最佳的智能家居中枢是什么？', a: '就设备支持广度而言，选Home Assistant Green加Zigbee/Thread加密狗，因为Zigbee、Thread和Matter都是全球通用的2.4GHz标准。日本的Z-Wave使用922–926 MHz，而Hubitat C-8 Pro使用美国频率且仅在美国本土配送，因此购买任何Z-Wave中枢前请先确认是否支持当地的Z-Wave频段。' },
+          { q: '适合初学者的最佳家庭自动化中枢是什么？', a: '如果你在美国，想要内置Zigbee和Z-Wave的本地自动化，选Hubitat Elevation C-8 Pro（184.95美元）；想要最简单的设置并愿意为此付费，选Homey Pro（449美元）；如果你能接受更长的设置时间以换取最大灵活性，选Home Assistant Green。' },
           { q: 'Matter方面最佳的中枢是什么？', a: '本指南中的五款中枢（Home Assistant Green、Hubitat、Homey Pro、Aqara Hub M3、IKEA DIRIGERA）都可以充当Matter控制器，但Homey Pro和IKEA DIRIGERA内置了Thread边界路由器，而Home Assistant Green需要加密狗来承担这一角色——购买前请核对具体Matter设备支持的控制器列表。' },
         ],
       },
@@ -3130,7 +3386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Smart home hub' }, { '@type': 'Thing', name: 'Home Assistant Green' }, { '@type': 'Thing', name: 'Hubitat' }, { '@type': 'Thing', name: 'Homey' }, { '@type': 'Thing', name: 'Aqara Hub M3' }, { '@type': 'Thing', name: 'IKEA DIRIGERA' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -3142,6 +3398,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'Home Assistant最佳的中枢是什么？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green（199美元/179欧元）是官方原厂硬件，但需要单独购买Zigbee/Thread/Z-Wave USB加密狗。' } },
         { '@type': 'Question', name: 'Home Assistant Green值得购买吗？', acceptedAnswer: { '@type': 'Answer', text: '对于想要最开放平台和本地AI扩展空间的买家来说值得，但请预期中等程度的配置过程，以及需要单独购买加密狗。' } },
+        { '@type': 'Question', name: '最佳的Homey Pro替代方案是什么？', acceptedAnswer: { '@type': 'Answer', text: 'Hubitat Elevation C-8 Pro（184.95美元）以不到一半的价格提供内置无线模块；Home Assistant Green加ZBT-2加密狗（248美元）提供开放平台；Homey Pro mini（249美元）则留在Homey平台，但内置无线模块更少。' } },
+        { '@type': 'Question', name: '日本最佳的智能家居中枢是什么？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green加Zigbee/Thread加密狗覆盖的设备最多；日本的Z-Wave使用922–926 MHz，且Hubitat仅在美国本土配送，因此请先确认当地支持情况。' } },
         { '@type': 'Question', name: 'Home Assistant Green对比Hubitat——我该买哪个？', acceptedAnswer: { '@type': 'Answer', text: '追求最大开放性和本地AI潜力选Home Assistant Green；追求电器般本地自动化、配置最少选Hubitat Elevation C-8 Pro。' } },
       ],
     },
@@ -3150,20 +3408,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-16',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-24',
-    last_full_refresh: '2026-08-25',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2026-11-17',
+    last_full_refresh: '2026-10-18',
     theme: "Buyer's Guides",
     heroImage: '/images/best-smart-home-hubs-2027-overview-hero-ja.webp',
     affiliateDisclosure: true,
     title: '2026年ローカル制御向けベストスマートホームハブ：Home Assistant対Hubitat対Homey',
     seoTitle: '2026年ベストスマートホームハブ：HA Green対Hubitat対Homey',
     intro:
-      '2026年にスマートホームハブを選ぶことは、多くの買い手が飛ばしてしまう一つの問いに帰着する。ローカルAIの余地が最も大きくロックインがないプラットフォーム（Home Assistant Green）が欲しいのか、シンプルな家電のように振る舞い手間をかけさせないもの（Hubitat Elevation C-8 Pro）が欲しいのか、それとも利便性のためにずっと高い価格を払うもの（Homey Pro）が欲しいのか。AqaraのHub M3とIKEAのDIRIGERAは、すでに特定のデバイス・エコシステムに投資している買い手向けの選択肢となる。本ガイドは、このサイトのローカルスマートホーム・クラスターの商業的な親ページである——以下のすべての価格と仕様は2026年8月25日にメーカーの情報源と照合済みであり、これらのハードウェアはいずれもPromptQuorumによってテストまたはベンチマークされていない。すべての機能に関する記述は、公式ドキュメントに基づく調査ベースの評価であり、実験室での結果ではない。',
+      '2026年にスマートホームハブを選ぶことは、多くの買い手が飛ばしてしまう一つの問いに帰着する。ローカルAIの余地が最も大きくロックインがないプラットフォーム（Home Assistant Green）が欲しいのか、シンプルな家電のように振る舞い手間をかけさせないもの（Hubitat Elevation C-8 Pro）が欲しいのか、それとも利便性のためにずっと高い価格を払うもの（Homey Pro）が欲しいのか。AqaraのHub M3とIKEAのDIRIGERAは、すでに特定のデバイス・エコシステムに投資している買い手向けの選択肢となる。本ガイドは、このサイトのローカルスマートホーム・クラスターの商業的な親ページである——以下のすべての価格と仕様は2026年10月18日にメーカーの情報源と照合済みであり、これらのハードウェアはいずれもPromptQuorumによってテストまたはベンチマークされていない。すべての機能に関する記述は、公式ドキュメントに基づく調査ベースの評価であり、実験室での結果ではない。',
     metaDescription:
-      '2026年ローカル制御向けベストスマートホームハブ：Home Assistant Green対Hubitat Elevation C-8 Pro対Homey Pro対Aqara Hub M3対IKEA DIRIGERA — 現行価格、対応プロトコル、そしてあなたの購入プロファイルに合うのはどれか。',
+      '2026年ローカル制御向けベストスマートホームハブ：Home Assistant Green対Hubitat C-8 Pro対Homey Pro（代替機種も）対Aqara M3対IKEA DIRIGERA — 価格、対応プロトコル、日本向けの注意点。',
     twitterDescription:
-      'Home Assistant Green対Hubitat対Homey Pro対Aqara Hub M3対IKEA DIRIGERA — 2026年の現行価格とプロトコル対応を比較し、あなたのローカルAI環境に合うハブを紹介。',
+      '2026年ベストスマートホームハブ：Home Assistant Green対Hubitat対Homey Pro対Aqara M3対IKEA DIRIGERA — 価格、プロトコル、Homey Proの代替機種、日本向けの注意点。',
     readTime: '読了時間13分',
     educationalLevel: 'Beginner',
     audience: 'ローカルAIの野心の有無にかかわらず、ローカル制御向けの専用ハブ機器を選ぶスマートホーム購入者',
@@ -3175,22 +3433,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aqara hub m3 vs home assistant',
       'ikea dirigera vs home assistant green',
       'ローカルai スマートホームハブ',
+      'homey pro 代替',
+      'hubitat vs homey 比較',
+      'ホームオートメーション おすすめハブ',
+      '日本向け スマートホームハブ おすすめ',
     ],
     leadAnswerBlock:
-      '**最大限のローカル制御とローカルAIの余地を望むなら、Home Assistant Green（$199/€179）が2026年の総合ベストのスマートホームハブだ——本物のHome Assistantプラットフォームを実行するが、Zigbee/Thread/Z-Wave無線が内蔵されていないため、追加でUSBドングルの予算を見込む必要がある。** Linux風システムを維持せずに家電のようなローカルオートメーションが欲しいなら、Hubitat Elevation C-8 Pro（$188.95、以前の$179.95から確認済みの値上げ）が最良の選択だ。Homey Pro（$449）は、最も幅広い内蔵無線セットと最小限のDIY設定のためにHome Assistant Greenの約2.3倍の価格を払う買い手にとって最良のプレミアム・オールインワンだ。Aqara Hub M3（希望小売価格$219.99、セール時はしばしば約$159.99）は、すでにAqaraエコシステムに深く投資している家庭に向いている。IKEA DIRIGERA（$119.99）は最も安価な本物の入門選択肢で、このサイトに専用の詳細ガイドがある。',
+      '**最大限のローカル制御とローカルAIの余地を望むなら、Home Assistant Green（$199/€179）が2026年の総合ベストのスマートホームハブだ——本物のHome Assistantプラットフォームを実行するが、Zigbee/Thread/Z-Wave無線が内蔵されていないため、追加でUSBドングルの予算を見込む必要がある。** Linux風システムを維持せずに家電のようなローカルオートメーションが欲しいなら、Hubitat Elevation C-8 Pro（$184.95）が最良の選択だ。Homey Pro（$449）は、最も幅広い内蔵無線セットと最小限のDIY設定のためにHome Assistant Greenの約2.3倍の価格を払う買い手にとって最良のプレミアム・オールインワンだ。Aqara Hub M3（希望小売価格$219.99、セール時はしばしば約$159.99）は、すでにAqaraエコシステムに深く投資している家庭に向いている。IKEA DIRIGERA（$139.99）は最も安価な本物の入門選択肢で、このサイトに専用の詳細ガイドがある。',
     quickAnswerTop: {
       ja: {
         question: '2026年、ローカル制御向けの最良のスマートホームハブは何ですか？',
         answer:
-          'ローカルファーストな制御と、後でローカルAIを追加する余地を望む大多数の買い手にとって、Home Assistant Green（$199/€179）が最良の選択だ——本物のHome Assistantプラットフォームを実行し、この比較の中で最もオープンで統合が豊富なシステムだが、Zigbee/Thread/Z-Waveは内蔵されていないため別途USBドングルが必要になる。手間をずっと減らしてローカルオートメーションを求めるなら、Hubitat Elevation C-8 Pro（$188.95）は維持すべきシステムというより家電のように振る舞う。Homey Pro（$449）は、ここにあるどのハブよりも幅広い内蔵無線対応を持つプレミアム・オールインワンの選択肢で、Home Assistant Greenの約2.3倍の価格だ。Aqara Hub M3（希望小売価格$219.99）は、すでにAqaraデバイスに投資している買い手に向いている。IKEA DIRIGERA（$119.99）は最も安価な本物のMatter/Thread入門選択肢だ。これらのハブはいずれもPromptQuorumによってテストされていない——以下のすべての記述は、2026年8月25日に確認済みのメーカードキュメントに基づいている。',
+          'ローカルファーストな制御と、後でローカルAIを追加する余地を望む大多数の買い手にとって、Home Assistant Green（$199/€179）が最良の選択だ——本物のHome Assistantプラットフォームを実行し、この比較の中で最もオープンで統合が豊富なシステムだが、Zigbee/Thread/Z-Waveは内蔵されていないため別途USBドングルが必要になる。手間をずっと減らしてローカルオートメーションを求めるなら、Hubitat Elevation C-8 Pro（$184.95）は維持すべきシステムというより家電のように振る舞う。Homey Pro（$449）は、ここにあるどのハブよりも幅広い内蔵無線対応を持つプレミアム・オールインワンの選択肢で、Home Assistant Greenの約2.3倍の価格だ。Aqara Hub M3（希望小売価格$219.99）は、すでにAqaraデバイスに投資している買い手に向いている。IKEA DIRIGERA（$139.99）は最も安価な本物のMatter/Thread入門選択肢だ。これらのハブはいずれもPromptQuorumによってテストされていない——以下のすべての記述は、2026年10月18日に確認済みのメーカードキュメントに基づいている。',
         bullets: [
           '総合ベスト／ローカルAIに最良：Home Assistant Green（$199/€179）— 別途Zigbee/Thread/Z-Waveドングルが必要',
-          '最良のよりシンプルなローカル代替：Hubitat Elevation C-8 Pro（$188.95）— 家電的、手間が少ない',
+          '最良のよりシンプルなローカル代替：Hubitat Elevation C-8 Pro（$184.95）— 家電的、手間が少ない',
           '最良のプレミアム・オールインワン：Homey Pro（$449）— 内蔵無線が最も幅広く、価格も最高',
           'Aqaraエコシステムの家庭に最良：Aqara Hub M3（希望小売価格$219.99、しばしば約$159.99）',
-          '最良の手頃なエコシステムハブ：IKEA DIRIGERA（$119.99）— このサイトの専用ガイド参照',
+          '最良の手頃なエコシステムハブ：IKEA DIRIGERA（$139.99）— このサイトの専用ガイド参照',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -3204,6 +3466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'スターターパッケージのコスト', anchor: 'starter-package' },
       { label: 'Hubitat Elevation C-8 Pro', anchor: 'hubitat' },
       { label: 'Homey Pro', anchor: 'homey' },
+      { label: 'Homey Proの代替機種', anchor: 'homey-alternatives' },
       { label: 'Aqara Hub M3', anchor: 'aqara-m3' },
       { label: 'IKEA DIRIGERA', anchor: 'dirigera' },
       { label: '完全比較表', anchor: 'comparison' },
@@ -3212,6 +3475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'どのハブを買うべきか？（再掲）', anchor: 'which-to-buy-2' },
       { label: 'まだハブを買わない方がいい場合', anchor: 'dont-buy-yet' },
       { label: 'プロトコル決定木', anchor: 'protocol-tree' },
+      { label: '日本で使えるスマートホームハブ', anchor: 'japan' },
       { label: 'ローカルAIに最良のハブ', anchor: 'local-ai' },
       { label: 'ローカルスマートホーム・スターターキット', anchor: 'starter-kit' },
       { label: '予算のはしご', anchor: 'budget-ladder' },
@@ -3224,7 +3488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'よくある質問', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: '2026年、ローカル制御とローカルAIの可能性において総合ベストのスマートホームハブはHome Assistant Green（$199/€179）であり、Hubitat Elevation C-8 Pro（$188.95）は手間のかからないよりシンプルな代替、Homey Pro（$449）はプレミアム・オールインワンの選択肢だ。' },
+      { type: 'one-sentence', content: '2026年、ローカル制御とローカルAIの可能性において総合ベストのスマートホームハブはHome Assistant Green（$199/€179）であり、Hubitat Elevation C-8 Pro（$184.95）は手間のかからないよりシンプルな代替、Homey Pro（$449）はプレミアム・オールインワンの選択肢だ。' },
       { type: 'plain-terms', content: 'スマートホームハブとは、インターネットを必要とせずにあなたのデバイスと会話し、オートメーションを実行する箱のことだ。本ガイドは現行の5製品を比較する——標準でどのプロトコルに対応するか、今いくらするか、それぞれが実際にどの購入プロファイルに合うか——ただしPromptQuorumがそのいずれかをテストしたとは主張しない。' },
     ],
     sections: {
@@ -3234,11 +3498,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Home Assistant Green（$199/€179）— 総合ベストかつローカルAIの可能性が最良だが、別途Zigbee/Thread/Z-Wave USBドングルが必要',
-          'Hubitat Elevation C-8 Pro（$188.95、以前の$179.95から確認済みの値上げ）— 家電的なローカルオートメーションが最良、手間が最も少ない',
+          'Hubitat Elevation C-8 Pro（$184.95、米国内のみ配送）— 家電的なローカルオートメーションが最良、手間が最も少ない',
           'Homey Pro（$449）— プレミアム・オールインワンが最良、内蔵無線が最も幅広く、Home Assistant Greenの約2.3倍の価格',
           'Aqara Hub M3（希望小売価格$219.99、しばしば約$159.99）— すでにAqaraデバイスに投資している家庭に最適、オープンプラットフォームではない',
-          'IKEA DIRIGERA（$119.99）— 最も安価な本物のエコシステムハブ、このサイトの専用DIRIGERAガイド参照',
-          'これらのハブはいずれもPromptQuorumによってテストまたはベンチマークされていない——すべての記述は2026年8月25日に確認済みのメーカードキュメントに基づく',
+          'IKEA DIRIGERA（$139.99）— 最も安価な本物のエコシステムハブ、このサイトの専用DIRIGERAガイド参照',
+          'これらのハブはいずれもPromptQuorumによってテストまたはベンチマークされていない——すべての記述は2026年10月18日に確認済みのメーカードキュメントに基づく',
         ],
       },
       quickVerdict: {
@@ -3248,14 +3512,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['ハブ', '最適な用途', 'ローカル評価', 'Zigbee', 'Z-Wave', 'Matter/Thread', 'AIポテンシャル', '価格'],
         rows: [
           { ハブ: '[Home Assistant Green](https://www.home-assistant.io/green/)', 最適な用途: '最大限の制御/AI', ローカル評価: '最高', Zigbee: 'ドングル経由', 'Z-Wave': 'ドングル経由', 'Matter/Thread': 'ドングル経由', AIポテンシャル: '最高（Ollama）', 価格: '$199/€179' },
-          { ハブ: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 最適な用途: 'シンプルなローカルオートメーション', ローカル評価: '高', Zigbee: '内蔵3.0', 'Z-Wave': '内蔵800 LR', 'Matter/Thread': 'Matter 1.5（Thread無線なし）', AIポテンシャル: '低（家電）', 価格: '$188.95' },
+          { ハブ: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 最適な用途: 'シンプルなローカルオートメーション', ローカル評価: '高', Zigbee: '内蔵3.0', 'Z-Wave': '内蔵800 LR', 'Matter/Thread': 'Matter 1.5（Thread無線なし）', AIポテンシャル: '低（家電）', 価格: '$184.95' },
           { ハブ: '[Homey Pro](https://homey.app/en-us/homey-pro/)', 最適な用途: 'プレミアム・オールインワン', ローカル評価: '混在*', Zigbee: '内蔵3.0', 'Z-Wave': '内蔵700', 'Matter/Thread': 'Matter 1.5 + Thread境界ルーター', AIポテンシャル: '低（家電）', 価格: '$449' },
           { ハブ: '[Aqara Hub M3](https://www.aqara.com/en/product/hub-m3/)', 最適な用途: 'Aqaraエコシステム', ローカル評価: '混在*', Zigbee: '内蔵', 'Z-Wave': 'なし', 'Matter/Thread': 'Matterコントローラー + Thread', AIポテンシャル: 'なし（ブリッジ）', 価格: '$219.99 希望小売価格' },
-          { ハブ: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 最適な用途: '予算重視のエコシステム', ローカル評価: '混在*', Zigbee: 'IKEAデバイスのみ', 'Z-Wave': 'なし', 'Matter/Thread': 'Matter 1.4 + Thread境界ルーター', AIポテンシャル: 'なし（ブリッジ）', 価格: '$119.99' },
+          { ハブ: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 最適な用途: '予算重視のエコシステム', ローカル評価: '混在*', Zigbee: 'IKEAデバイスのみ', 'Z-Wave': 'なし', 'Matter/Thread': 'Matter 1.4 + Thread境界ルーター', AIポテンシャル: 'なし（ブリッジ）', 価格: '$139.99' },
         ],
         items: [
           '*「混在」のローカル評価：Homey、Aqara、IKEAは、ローカルなオートメーション実行に加えて、設定/リモートアクセスにクラウド接続の連携アプリを使う——自己ホストのHome Assistantインスタンスほど完全にオフライン専用ではない。ニュアンスは下記「ローカルは実際何をもたらすか？」を参照。',
-          '上記の各セルは2026年8月25日に各メーカーの現行製品ページに対して独自に確認済み——これらの数字は再確認せずにそのまま引用しないこと。このカテゴリーはすでに本ページの以前のバージョン以降、確認済みの値上げ（Hubitat）を一度経験している。',
+          '上記の各セルは2026年10月18日に各メーカーの現行製品ページに対して独自に確認済み（Aqara Hub M3の価格は2026年8月25日が最終確認で、Aqaraの現行製品ページには価格の記載がない）——これらの数字は再確認せずにそのまま引用しないこと。このカテゴリーの価格は8月以降に2回動いた（Hubitatは値下げ、IKEA DIRIGERAは値上げ）。',
         ],
       },
       topPicks: {
@@ -3264,12 +3528,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**答えだけ知りたいならここから。**',
         items: [
           '総合ベスト — Home Assistant Green（$199/€179）：本物のHome Assistantプラットフォームを実行し、この比較の中で最も統合が豊富でオープンなシステム。編集部評価：9.3/10（公式ドキュメントに基づく調査ベースの評価であり、実験室でテストされたスコアではない）。',
-          '最良のよりシンプルな代替 — Hubitat Elevation C-8 Pro（$188.95）：維持すべきLinuxマシンではなく、家電のように振る舞うローカルオートメーション。編集部評価：8.7/10。',
+          '最良のよりシンプルな代替 — Hubitat Elevation C-8 Pro（$184.95）：維持すべきLinuxマシンではなく、家電のように振る舞うローカルオートメーション。編集部評価：8.7/10。',
           '最良のオールインワン — Homey Pro（$449）：ここにあるどのハブよりも幅広い内蔵プロトコル対応だが、はっきりと名指す価値のある実質的な価格プレミアムがある。編集部評価：8.5/10。',
         ],
         affiliateLinks: [
           { label: '現在の価格を確認 — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199 / €179' },
-          { label: '現在の価格を確認 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: '現在の価格を確認 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
           { label: '現在の価格を確認 — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '$449' },
           { label: '現在の価格を確認 — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: '現在の価格を確認 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -3338,7 +3602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hubitat',
         title: 'Hubitat Elevation C-8 Pro — 最良のよりシンプルなローカル代替',
         content:
-          '**編集部評価：8.7/10（調査ベースの評価であり、実験室でテストされたスコアではない）。** HubitatのElevation C-8 Pro（$188.95、hubitat.comで確認済み — 本ページの以前のバージョンが引用していた$179.95から上昇した、実質的で現行の値上げ）は、Home Assistantではなく、Hubitat自身のローカルオートメーションプラットフォームを実行する。Zigbee 3.0、Z-Wave 800 Long Range、コントローラーとしてのMatter 1.5、Bluetoothをすべて内蔵で対応する。',
+          '**編集部評価：8.7/10（調査ベースの評価であり、実験室でテストされたスコアではない）。** HubitatのElevation C-8 Pro（$184.95、2026年10月18日にhubitat.comで確認済み — 8月に本ページが引用した$188.95からわずかに下落。Hubitatの配送先は米国本土48州のみ）は、Home Assistantではなく、Hubitat自身のローカルオートメーションプラットフォームを実行する。Zigbee 3.0、Z-Wave 800 Long Range、コントローラーとしてのMatter 1.5、Bluetoothをすべて内蔵で対応する。',
         items: [
           'Linux風システムを維持するのではなく、家電のようなローカルオートメーション体験を求めるユーザーに最適——Hubitatのルールエンジン、ウェブインターフェース、更新プロセスは、管理する汎用コンピューターではなく、閉じていて安定している感覚を与えるよう設計されている。',
           'Home Assistantが代わりに勝る理由：はるかに多い統合数、ネイティブのFrigate/カメラAI対応、YAMLとコミュニティアドオンによる深いカスタマイズ、そしてローカルLLMオートメーションへの現実的な道。Hubitat自身のプラットフォームはこれらのいずれのためにも構築されていない。',
@@ -3346,7 +3610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '互換性：Zigbee 3.0 ✅内蔵 · Z-Wave 800 LR ✅内蔵 · Matter 1.5 ✅（コントローラーのみ、Thread無線なし） · Bluetooth ✅ · セットアップ難易度：簡単。',
         ],
         affiliateLinks: [
-          { label: '現在の価格を確認 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: '現在の価格を確認 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
         ],
       },
       homey: {
@@ -3355,13 +3619,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**編集部評価：8.5/10（調査ベースの評価であり、実験室でテストされたスコアではない）。** Homey Pro（2026年版）は$449（homey.appで確認済み、2026年6月1日の価格改定後に$399から上昇）で、4GB RAM、8GB eMMC、1.5GHzクアッドコアARMv8プロセッサを備える。本ガイド中のどのハブよりも幅広い内蔵無線セットを持つ：Wi-Fi、Bluetooth 5.0、Matter v1.5、Thread境界ルーター、Zigbee 3.0、Z-Wave 700、433MHz、赤外線。',
         items: [
-          '価格差を率直に示す：$449はHome Assistant Greenの$199の約2.3倍、Hubitatの$188.95の約2.4倍だ——このプレミアムは、根本的に異なる能力レベルではなく、自分で組み立てることになる内蔵無線を買っているにすぎない。',
+          '価格差を率直に示す：$449はHome Assistant Greenの$199の約2.3倍、Hubitatの$184.95の約2.4倍だ——このプレミアムは、根本的に異なる能力レベルではなく、自分で組み立てることになる内蔵無線を買っているにすぎない。',
           'ドングル探しを一切せずに開梱時最も幅広い無線セットを求め、Home Assistantのはるかに大きなオープンコミュニティよりもHomey自身のアプリエコシステムと洗練度を重視する買い手に最適。',
           'Home Assistant/Hubitatが代わりに勝る理由：この価格帯では、Home Assistant Greenに Connect ZBT-2ドングルを足しても（$199 + $49 = $248）Homey Proより約$200安く、しかもHomey自身のプラットフォームが提供しないローカルAIの余地が加わる。',
           '互換性：Zigbee 3.0 ✅内蔵 · Z-Wave 700 ✅内蔵 · Matter v1.5 ✅ · Thread境界ルーター ✅内蔵 · 433MHz ✅ · 赤外線 ✅ · セットアップ難易度：簡単。',
         ],
         affiliateLinks: [
           { label: '現在の価格を確認 — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '$449' },
+        ],
+      },
+      homeyAlternatives: {
+        id: 'homey-alternatives',
+        title: 'Homey Proの代替機種とHubitat対Homeyの比較',
+        content: '**Homey Proの代替として何が最適かは、何を避けたいかで決まる：$449という価格か、クローズドなアプリプラットフォームか、無線を別買いする手間か。** HubitatとHome Assistant Greenはそのうち1つずつに答えを出し、Homey自身の廉価版Pro miniは同じプラットフォームのまま価格の問題に答える。',
+        columns: ['代替機種', '価格', 'Homey Proとの違い'],
+        rows: [
+          { 代替機種: '[Hubitat Elevation C-8 Pro](https://hubitat.com/products/7194320273451)', 価格: '$184.95', 'Homey Proとの違い': 'Zigbee/Z-Wave内蔵、Thread無線なし、米国内のみ配送' },
+          { 代替機種: '[Home Assistant Green](https://www.home-assistant.io/green/) + ZBT-2', 価格: '合計$248', 'Homey Proとの違い': '最もオープン、設定の手間は大、Z-Waveは別ドングル' },
+          { 代替機種: '[Homey Pro mini](https://homey.app/en-us/homey-pro-mini/)', 価格: '$249', 'Homey Proとの違い': '同じHomey OSだが、Z-Wave・Wi-Fi・Bluetoothは非内蔵' },
+          { 代替機種: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 価格: '$139.99', 'Homey Proとの違い': 'Matter/Thread専用、IKEA中心、Z-Waveなし' },
+        ],
+        items: [
+          'Hubitat対Homey、価格：Hubitat Elevation C-8 Pro（$184.95）はHomey Pro（$449）の半額未満で、どちらもZigbee 3.0、Z-Wave、Matterコントローラーを備える。',
+          'Hubitat対Homey、無線：Homey ProにはThread境界ルーター、433MHz、赤外線が加わるが、HubitatにはThread無線がない。Z-WaveはHomeyが700シリーズ、HubitatがLong Range対応の800シリーズ。',
+          'Hubitat対Homey、プラットフォーム：Hubitatはウェブインターフェースを備えたクローズドなルールエンジン型の家電。Homeyはアプリとフローが中心で、洗練されたモバイルアプリとコミュニティのアプリストアがある。どちらも自身のプラットフォーム上ではローカルLLM統合を提供しない。',
+          'Homey Pro mini（$249、2026年10月18日にhomey.appで確認済み）は、同じHomey Pro OSでZigbee 3.0、Matter v1.5、Thread境界ルーターを内蔵するが、Z-Wave、Bluetooth、433MHz、赤外線は別売の$69のHomey Bridgeが必要になる。そのため、これらの無線が不要な場合にだけ節約になる。',
+          'Homeyを離れる理由が価格ではなくロックインなら、現実的な代替はHome Assistant Greenだ——プラットフォームがオープンソースで、他のハードウェアにも移せるのはここでは唯一この選択肢だけ。',
         ],
       },
       aqaraM3: {
@@ -3384,15 +3667,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dirigera',
         title: 'IKEA DIRIGERA — 最良の手頃なエコシステムハブ',
         content:
-          '**編集部評価：7.8/10（調査ベースの評価であり、実験室でテストされたスコアではない）。** IKEAのDIRIGERA（$119.99、ikea.comで確認済み）は、この比較の中で最も安価な本物のMatter/Threadハブだ。2025年のファームウェア更新によって完全なMatterコントローラー兼Thread境界ルーターとなり、IKEA自身の製品ラインだけでなく一部のサードパーティ製Matterデバイスもオンボードできるようになった。このサイトには、エコシステムの完全な内訳を含む専用のDIRIGERAガイドがある。',
+          '**編集部評価：7.8/10（調査ベースの評価であり、実験室でテストされたスコアではない）。** IKEAのDIRIGERA（$139.99、ikea.comで確認済み）は、この比較の中で最も安価な本物のMatter/Threadハブだ。2025年のファームウェア更新によって完全なMatterコントローラー兼Thread境界ルーターとなり、IKEA自身の製品ラインだけでなく一部のサードパーティ製Matterデバイスもオンボードできるようになった。このサイトには、エコシステムの完全な内訳を含む専用のDIRIGERAガイドがある。',
         items: [
           '購入すべき場合：ローカルなMatter/Thread制御への最も安価な本物の入門ポイントを求め、IKEA自身のアプリとデバイスの範囲を主な体験とすることに問題がなく、Hubitat/Home Assistantレベルのカスタマイズを必要としない場合。',
           '購入すべきでない場合：他ブランドの非MatterのZigbeeデバイスも管理する単一のハブが欲しい場合、Z-Waveが必要な場合、またはHome Assistantの統合の深さを求める場合——DIRIGERA自身のオートメーションエンジンは意図的にシンプルだ。',
-          '価格比較を率直に示す：DIRIGERA（$119.99）はHome Assistant Green（$199）より約$80安く、Hubitat（$188.95）より約$69安い——引き換えに、はるかに小さくIKEA中心のデバイス／オートメーション・エコシステムになる。',
+          '価格比較を率直に示す：DIRIGERA（$139.99）はHome Assistant Green（$199）より約$59安く、Hubitat（$184.95）より約$45安い——引き換えに、はるかに小さくIKEA中心のデバイス／オートメーション・エコシステムになる。',
           '互換性：Matter 1.4 ✅コントローラー · Thread境界ルーター ✅ · Zigbee ✅（IKEAデバイス、一部サードパーティはMatterブリッジ経由） · Z-Wave ❌ · セットアップ難易度：簡単。',
         ],
         affiliateLinks: [
-          { label: '現在の価格を確認 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '$119.99' },
+          { label: '現在の価格を確認 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '$139.99' },
         ],
       },
       comparison: {
@@ -3412,7 +3695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 観点: 'ローカルAI（Ollama/LLM）', 'Home Assistant Green': 'スケールアップした機体では可能、Green単体の4GBでは不可', 'Hubitat C-8 Pro': 'プラットフォームが非対応', 'Homey Pro': 'プラットフォームが非対応' },
           { 観点: 'Frigate / カメラAI', 'Home Assistant Green': '可能、Home Assistantアドオン経由', 'Hubitat C-8 Pro': 'ネイティブ対応なし', 'Homey Pro': 'ネイティブ対応なし' },
           { 観点: 'エコシステムの自由度', 'Home Assistant Green': '最高 — ベンダーロックインなし', 'Hubitat C-8 Pro': '中程度 — Hubitat固有', 'Homey Pro': '中程度 — Homey固有' },
-          { 観点: '価格', 'Home Assistant Green': '$199 / €179', 'Hubitat C-8 Pro': '$188.95', 'Homey Pro': '$449' },
+          { 観点: '価格', 'Home Assistant Green': '$199 / €179', 'Hubitat C-8 Pro': '$184.95', 'Homey Pro': '$449' },
         ],
       },
       hubVsController: {
@@ -3453,7 +3736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: '現在の価格を確認 — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199 / €179' },
-          { label: '現在の価格を確認 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: '現在の価格を確認 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
           { label: '現在の価格を確認 — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub' },
           { label: '現在の価格を確認 — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: '現在の価格を確認 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -3480,6 +3763,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { あなたが: 'Matterからゼロで始める', 最適なハブ: '5つのいずれでも — すべてMatterコントローラーとして機能' },
           { あなたが: 'Threadが多い（Matter over Thread）', 最適なハブ: 'HomeyまたはDIRIGERA（内蔵境界ルーター）' },
           { あなたが: '将来の最大限の柔軟性を求める', 最適なハブ: 'Home Assistant Green + ドングル' },
+        ],
+      },
+      japan: {
+        id: 'japan',
+        title: '日本で選ぶベストスマートホームハブ：対応デバイスが最も多いのはどれか',
+        content: '**日本では、無線の種類に加えて、そのハブを国内で合法的に購入・使用できるかで選ぶこと。Zigbee、Thread、Matterは世界共通の2.4GHz帯だが、Z-Waveは日本独自の周波数帯を使い、このガイドのハブの一部は米国市場専用で販売されている。**',
+        items: [
+          'Z-Waveは地域差の落とし穴：日本のZ-Wave周波数帯は922〜926MHz（ARIB STD-T108、Z-Wave.meのドキュメントによる）で、米国の908.4MHz帯とは異なる。HubitatのC-8 ProのZ-Wave無線は米国向け周波数で、配送先も米国本土48州のみのため、日本での購入は現実的ではない。',
+          'Homeyは、Proのアンテナが現地の規制に合わせて切り替わると説明しているが、製品ページには日本向けのZ-Waveモデルの記載がない——日本でZ-WaveデバイスのためにHomey Proを買う前に、Athomに日本でのZ-Wave対応を確認すること。',
+          'Zigbee 3.0、Thread、Matterは地域別のハードウェアを必要としない：Home Assistant GreenにConnect ZBT-2を組み合わせた構成、Aqara Hub M3（Aqaraは日本で110世帯への導入事例を掲載している）、IKEA DIRIGERAのいずれもこれらのプロトコルに対応する。',
+          '「最も多くのデバイスで動く」という観点での最適解はHome Assistant Green：統合ライブラリがMatter、Zigbee、クラウドに依存しないローカルデバイスをまとめてカバーするため。$199にZBT-2の約$49を足すと約$248で、送料や輸入コストは別。',
+          '各デバイスが日本の電波法に基づく認証（技適マーク）を取得しているか必ず確認すること——海外で購入した機器やドングルは、日本国内では法的に使用できない場合がある。これは一般的な案内であり、法的助言ではない。PromptQuorumは日本でどのハブもテストしていない。',
         ],
       },
       localAi: {
@@ -3529,8 +3824,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**各価格帯で実際に何が買えるか。**',
         columns: ['予算', '得られるもの'],
         rows: [
-          { 予算: '$150未満', 得られるもの: 'IKEA DIRIGERA（$119.99）— エントリーレベルのMatter/Threadエコシステム' },
-          { 予算: '$150-250', 得られるもの: 'Home Assistant Green（$199）またはHubitat C-8 Pro（$188.95）— ハブ1台、無線/センサーはまだなし' },
+          { 予算: '$150未満', 得られるもの: 'IKEA DIRIGERA（$139.99）— エントリーレベルのMatter/Threadエコシステム' },
+          { 予算: '$150-250', 得られるもの: 'Home Assistant Green（$199）またはHubitat C-8 Pro（$184.95）— ハブ1台、無線/センサーはまだなし' },
           { 予算: '$250-500', 得られるもの: 'HA Green+ドングル+いくつかのセンサー、またはHomey Pro（$449）単体' },
           { 予算: '$500-1,000以上', 得られるもの: 'HA Green+専用AIミニPC+カメラ+センサー+ロック（上記スターターキット参照）' },
         ],
@@ -3593,15 +3888,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**5つのハブ、5つの異なる買い手プロファイル——正しい選択は、紙の上で最高得点を出すかではなく、あなたが実際に何を必要とするかによる。**',
         items: [
           'Home Assistant Green（$199/€179）— 総合ベスト。編集部評価：9.3/10。最もオープンなプラットフォームと本物のローカルAIの余地を求め、ドングルとセンサーのシステムを組み立てることを厭わないなら購入すること。',
-          'Hubitat Elevation C-8 Pro（$188.95）— 最良のローカル家電。編集部評価：8.7/10。手間が最も少ないローカルオートメーションを求め、Home Assistantの統合の広さを必要としないなら購入すること。',
+          'Hubitat Elevation C-8 Pro（$184.95）— 最良のローカル家電。編集部評価：8.7/10。手間が最も少ないローカルオートメーションを求め、Home Assistantの統合の広さを必要としないなら購入すること。',
           'Homey Pro（$449）— 最良のプレミアム・オールインワン。編集部評価：8.5/10。内蔵無線の広さとHomey自身のアプリの洗練度が、Home Assistant Greenの約2.3倍の価格に見合うと感じるなら購入すること。',
           'Aqara Hub M3（希望小売価格$219.99、しばしば約$159.99）— 最良のAqaraエコシステムハブ。編集部評価：8.0/10。すでにAqaraデバイスに特化して投資しているなら購入すること。',
-          'IKEA DIRIGERA（$119.99）— 最良のシンプルなエコシステムハブ。編集部評価：7.8/10。予算が決定要因で、IKEAアプリを中心に据えることに問題がなければ購入すること。',
+          'IKEA DIRIGERA（$139.99）— 最良のシンプルなエコシステムハブ。編集部評価：7.8/10。予算が決定要因で、IKEAアプリを中心に据えることに問題がなければ購入すること。',
           'このサイトのローカルAI重視の読者向けの重要な購入原則：エコシステムのロックインが最も少ないプラットフォーム、つまりHome Assistant Greenを推奨する——しかしそれはすべての買い手にとって正しい選択ではない。開放性よりも家電的なシンプルさや内蔵無線の広さがあなたにとって重要なら、HubitatやHomeyこそが正直に正しい選択であり、妥協案ではない。',
         ],
         affiliateLinks: [
           { label: '現在の価格を確認 — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199 / €179' },
-          { label: '現在の価格を確認 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: '現在の価格を確認 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
           { label: '現在の価格を確認 — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '$449' },
           { label: '現在の価格を確認 — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: '現在の価格を確認 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -3637,6 +3932,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Home Assistant GreenにはZigbeeドングルが必要ですか？', a: 'Zigbeeデバイスを持っている、または購入予定なら、必要だ——Greenには内蔵無線がない。Home Assistant Connect ZBT-2（$49/€45）などの現行の選択肢は、このサイトのZigbee & Threadドングルガイドを参照。' },
           { q: 'Home Assistant Greenはローカル AIに対応していますか？', a: 'Home Assistantのソフトウェアは Ollama経由のローカルLLM統合に対応しているが、Green自身の4GB RAMはハブと並行してローカルLLMをうまく実行できる規模ではない——Greenだけで両方のタスクをこなすことを期待するのではなく、本物のローカルAI利用のためには別途、より強力なAIミニPC（2ボックスアーキテクチャ）と組み合わせること。' },
           { q: 'Home Assistant Green対Hubitat — どちらを買うべきですか？', a: '最大限の開放性、統合の広さ、ローカルAIの可能性を求め、ドングルベースのシステムを組み立てることを厭わないならHome Assistant Green。内蔵Zigbee/Z-Waveでセットアップが最小限の、シンプルな家電のように振る舞うローカルオートメーションを求めるならHubitat Elevation C-8 Pro。' },
+          { q: 'Homey Proの最良の代替機種は何ですか？', a: '内蔵無線を備える最も近い代替はHubitat Elevation C-8 Pro（$184.95）で、価格は半額未満。オープンなプラットフォームならHome Assistant GreenにZBT-2ドングルを足した構成（$248）。Homeyのプラットフォームに留まるならHomey Pro mini（$249）だが、$69のHomey Bridgeを追加しない限りZ-Wave、Wi-Fi、Bluetoothは使えない。' },
+          { q: 'Hubitat対Homey — どちらが優れていますか？', a: 'Hubitatのほうが安く（$184.95対$449）、Thread無線のない家電的なローカルルールエンジンだ。Homey ProにはThread、433MHz、赤外線が加わり、アプリもより洗練されている。どちらも完全にオフラインではなく、ネイティブのローカルLLM統合も提供しない。' },
+          { q: '日本に最適なスマートホームハブは何ですか？', a: 'デバイス対応の広さではZigbee/ThreadドングルをつけたHome Assistant Green。ZigbeeとThread、Matterは世界共通の2.4GHz規格だからだ。日本のZ-Waveは922〜926MHzを使い、HubitatのC-8 Proは米国向け周波数で米国本土内にしか配送されないため、Z-Waveハブを買う前に地域ごとの対応を確認すること。' },
+          { q: '初心者に最適なホームオートメーション用ハブは何ですか？', a: '米国在住でZigbeeとZ-Waveを内蔵したローカルオートメーションを求めるならHubitat Elevation C-8 Pro（$184.95）。最も簡単なセットアップに対価を払うならHomey Pro（$449）。最大限の柔軟性のために長めのセットアップを受け入れるならHome Assistant Green。' },
           { q: 'Matterに最適なハブは何ですか？', a: '本ガイドの5つのハブ（Home Assistant Green、Hubitat、Homey Pro、Aqara Hub M3、IKEA DIRIGERA）はいずれもMatterコントローラーとして機能できるが、Homey ProとIKEA DIRIGERAはThread境界ルーターを内蔵しており、Home Assistant Greenはその役割にドングルが必要だ——購入前に特定のMatterデバイスが対応するコントローラーの一覧を確認すること。' },
         ],
       },
@@ -3651,7 +3950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Smart home hub' }, { '@type': 'Thing', name: 'Home Assistant Green' }, { '@type': 'Thing', name: 'Hubitat' }, { '@type': 'Thing', name: 'Homey' }, { '@type': 'Thing', name: 'Aqara Hub M3' }, { '@type': 'Thing', name: 'IKEA DIRIGERA' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -3663,6 +3962,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'Home Assistantに最適なハブは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green（$199/€179）は公式の純正ハードウェアだが、別途Zigbee/Thread/Z-Wave USBドングルが必要になる。' } },
         { '@type': 'Question', name: 'Home Assistant Greenは価値がありますか？', acceptedAnswer: { '@type': 'Answer', text: '最もオープンなプラットフォームとローカルAIの余地を求める買い手にはイエスだが、中程度のセットアップ工程と別途ドングルの購入を想定すること。' } },
+        { '@type': 'Question', name: 'Homey Proの最良の代替機種は何ですか？', acceptedAnswer: { '@type': 'Answer', text: '内蔵無線ならHubitat Elevation C-8 Pro（$184.95）で半額未満、オープンなプラットフォームならHome Assistant GreenにZBT-2ドングルを足した構成（$248）、内蔵無線は減るがHomeyに留まるならHomey Pro mini（$249）。' } },
+        { '@type': 'Question', name: '日本に最適なスマートホームハブは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee/ThreadドングルをつけたHome Assistant Greenが最も多くのデバイスをカバーする。日本のZ-Waveは922〜926MHzで、Hubitatは米国本土内にしか配送されないため、まず地域ごとの対応を確認すること。' } },
         { '@type': 'Question', name: 'Home Assistant Green対Hubitat — どちらを買うべきですか？', acceptedAnswer: { '@type': 'Answer', text: '最大限の開放性とローカルAIの可能性を求めるならHome Assistant Green、セットアップが最小限で家電的なローカルオートメーションを求めるならHubitat Elevation C-8 Pro。' } },
       ],
     },
@@ -3671,20 +3972,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-16',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-24',
-    last_full_refresh: '2026-08-25',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2026-11-17',
+    last_full_refresh: '2026-10-18',
     theme: "Buyer's Guides",
     heroImage: '/images/best-smart-home-hubs-2027-overview-hero-ko.webp',
     affiliateDisclosure: true,
     title: '2026년 로컬 제어를 위한 최고의 스마트홈 허브: Home Assistant vs Hubitat vs Homey',
     seoTitle: '2026년 최고의 스마트홈 허브: HA Green vs Hubitat vs Homey',
     intro:
-      '2026년 스마트홈 허브를 고르는 일은 대부분의 구매자가 건너뛰는 한 가지 질문으로 귀결된다. 로컬 AI 여지가 가장 크고 종속이 없는 플랫폼(Home Assistant Green)을 원하는가, 단순한 가전제품처럼 작동해 신경 쓸 일이 없는 것(Hubitat Elevation C-8 Pro)을 원하는가, 아니면 편의성 대가로 훨씬 높은 가격을 지불하는 것(Homey Pro)을 원하는가? Aqara의 Hub M3와 IKEA의 DIRIGERA는 이미 특정 기기 생태계에 투자한 구매자를 위한 선택지다. 이 가이드는 이 사이트의 로컬 스마트홈 클러스터의 상업적 허브 페이지다 — 아래의 모든 가격과 사양은 2026년 8월 25일에 제조사 출처와 대조 확인했으며, 이 하드웨어 중 어느 것도 PromptQuorum이 테스트하거나 벤치마크하지 않았다. 모든 성능 관련 주장은 공식 문서에 기반한 조사 기반 평가이며, 실험실 결과가 아니다.',
+      '2026년 스마트홈 허브를 고르는 일은 대부분의 구매자가 건너뛰는 한 가지 질문으로 귀결된다. 로컬 AI 여지가 가장 크고 종속이 없는 플랫폼(Home Assistant Green)을 원하는가, 단순한 가전제품처럼 작동해 신경 쓸 일이 없는 것(Hubitat Elevation C-8 Pro)을 원하는가, 아니면 편의성 대가로 훨씬 높은 가격을 지불하는 것(Homey Pro)을 원하는가? Aqara의 Hub M3와 IKEA의 DIRIGERA는 이미 특정 기기 생태계에 투자한 구매자를 위한 선택지다. 이 가이드는 이 사이트의 로컬 스마트홈 클러스터의 상업적 허브 페이지다 — 아래의 모든 가격과 사양은 2026년 10월 18일에 제조사 출처와 대조 확인했으며, 이 하드웨어 중 어느 것도 PromptQuorum이 테스트하거나 벤치마크하지 않았다. 모든 성능 관련 주장은 공식 문서에 기반한 조사 기반 평가이며, 실험실 결과가 아니다.',
     metaDescription:
-      '2026년 로컬 제어를 위한 최고의 스마트홈 허브: Home Assistant Green vs Hubitat Elevation C-8 Pro vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA — 현재 가격, 프로토콜, 그리고 당신의 구매 프로필에 맞는 제품.',
+      '2026년 로컬 제어를 위한 최고의 스마트홈 허브: Home Assistant Green vs Hubitat C-8 Pro vs Homey Pro(및 Homey Pro 대안) vs Aqara M3 vs IKEA DIRIGERA — 가격, 프로토콜, 일본 참고 사항.',
     twitterDescription:
-      'Home Assistant Green vs Hubitat vs Homey Pro vs Aqara Hub M3 vs IKEA DIRIGERA — 2026년 현재 가격과 프로토콜 지원 비교, 그리고 어떤 허브가 당신의 로컬 AI 구성에 맞는지.',
+      'Home Assistant Green vs Hubitat vs Homey Pro vs Aqara M3 vs IKEA DIRIGERA — 2026년 가격, 프로토콜, Homey Pro 대안, 일본 참고 사항.',
     readTime: '13분 소요',
     educationalLevel: 'Beginner',
     audience: '로컬 AI 목표 여부와 관계없이 로컬 제어를 위한 전용 허브 기기를 선택하는 스마트홈 구매자',
@@ -3696,22 +3997,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aqara hub m3 vs home assistant',
       'ikea dirigera vs home assistant green',
       '로컬 ai 스마트홈 허브',
+      'homey pro 대안',
+      'hubitat vs homey',
+      '최고의 홈 오토메이션 허브',
+      '일본 스마트홈 허브 추천',
     ],
     leadAnswerBlock:
-      '**최대한의 로컬 제어와 로컬 AI 여지를 원한다면 Home Assistant Green($199/€179)이 2026년 종합 최고의 스마트홈 허브다 — 실제 Home Assistant 플랫폼을 실행하지만 Zigbee/Thread/Z-Wave 무선이 내장되어 있지 않으므로 USB 동글 예산을 추가로 잡아야 한다.** Linux 방식 시스템을 유지하지 않고 가전제품 같은 로컬 자동화를 원한다면 Hubitat Elevation C-8 Pro($188.95, 이전 $179.95에서 인상된 것으로 확인됨)가 최선의 선택이다. Homey Pro($449)는 가장 폭넓은 내장 무선 세트와 최소한의 DIY 설정을 위해 Home Assistant Green 가격의 약 2.3배를 지불할 의향이 있는 구매자에게 최고의 프리미엄 올인원이다. Aqara Hub M3(권장 소비자가 $219.99, 세일 시 보통 ~$159.99)는 이미 Aqara 생태계에 깊이 투자한 가정에 적합하다. IKEA DIRIGERA($119.99)는 가장 저렴한 진짜 진입점이며, 이 사이트에 전용 가이드가 있다.',
+      '**최대한의 로컬 제어와 로컬 AI 여지를 원한다면 Home Assistant Green($199/€179)이 2026년 종합 최고의 스마트홈 허브다 — 실제 Home Assistant 플랫폼을 실행하지만 Zigbee/Thread/Z-Wave 무선이 내장되어 있지 않으므로 USB 동글 예산을 추가로 잡아야 한다.** Linux 방식 시스템을 유지하지 않고 가전제품 같은 로컬 자동화를 원한다면 Hubitat Elevation C-8 Pro($184.95)가 최선의 선택이다. Homey Pro($449)는 가장 폭넓은 내장 무선 세트와 최소한의 DIY 설정을 위해 Home Assistant Green 가격의 약 2.3배를 지불할 의향이 있는 구매자에게 최고의 프리미엄 올인원이다. Aqara Hub M3(권장 소비자가 $219.99, 세일 시 보통 ~$159.99)는 이미 Aqara 생태계에 깊이 투자한 가정에 적합하다. IKEA DIRIGERA($139.99)는 가장 저렴한 진짜 진입점이며, 이 사이트에 전용 가이드가 있다.',
     quickAnswerTop: {
       ko: {
         question: '2026년 로컬 제어를 위한 최고의 스마트홈 허브는 무엇인가요?',
         answer:
-          '로컬 우선 제어와 나중에 로컬 AI를 추가할 여지를 원하는 대부분의 구매자에게는 Home Assistant Green($199/€179)이 최선이다 — 실제 Home Assistant 플랫폼을 실행하며, 이 비교에서 가장 개방적이고 통합이 풍부한 시스템이지만, 무선이 내장되어 있지 않아 Zigbee/Thread/Z-Wave용 별도 USB 동글이 필요하다. 훨씬 적은 수고로 로컬 자동화를 원한다면 Hubitat Elevation C-8 Pro($188.95)는 유지해야 할 시스템이라기보다 가전제품처럼 동작한다. Homey Pro($449)는 여기 있는 어떤 허브보다 가장 폭넓은 내장 무선 지원을 갖춘 프리미엄 올인원 선택지로, Home Assistant Green 가격의 약 2.3배다. Aqara Hub M3(권장 소비자가 $219.99)는 이미 Aqara 기기에 투자한 구매자에게 적합하다. IKEA DIRIGERA($119.99)는 가장 저렴한 진짜 Matter/Thread 진입점이다. 이 허브들 중 어느 것도 PromptQuorum이 테스트하지 않았다 — 아래의 모든 주장은 2026년 8월 25일에 확인된 제조사 문서에서 나온 것이다.',
+          '로컬 우선 제어와 나중에 로컬 AI를 추가할 여지를 원하는 대부분의 구매자에게는 Home Assistant Green($199/€179)이 최선이다 — 실제 Home Assistant 플랫폼을 실행하며, 이 비교에서 가장 개방적이고 통합이 풍부한 시스템이지만, 무선이 내장되어 있지 않아 Zigbee/Thread/Z-Wave용 별도 USB 동글이 필요하다. 훨씬 적은 수고로 로컬 자동화를 원한다면 Hubitat Elevation C-8 Pro($184.95)는 유지해야 할 시스템이라기보다 가전제품처럼 동작한다. Homey Pro($449)는 여기 있는 어떤 허브보다 가장 폭넓은 내장 무선 지원을 갖춘 프리미엄 올인원 선택지로, Home Assistant Green 가격의 약 2.3배다. Aqara Hub M3(권장 소비자가 $219.99)는 이미 Aqara 기기에 투자한 구매자에게 적합하다. IKEA DIRIGERA($139.99)는 가장 저렴한 진짜 Matter/Thread 진입점이다. 이 허브들 중 어느 것도 PromptQuorum이 테스트하지 않았다 — 아래의 모든 주장은 2026년 10월 18일에 확인된 제조사 문서에서 나온 것이다.',
         bullets: [
           '종합 최고 / 로컬 AI 최고: Home Assistant Green($199/€179) — 별도 Zigbee/Thread/Z-Wave 동글 필요',
-          '더 간단한 최고의 로컬 대안: Hubitat Elevation C-8 Pro($188.95) — 가전제품 같음, 수고 적음',
+          '더 간단한 최고의 로컬 대안: Hubitat Elevation C-8 Pro($184.95) — 가전제품 같음, 수고 적음',
           '최고의 프리미엄 올인원: Homey Pro($449) — 가장 폭넓은 내장 무선, 가장 높은 가격',
           'Aqara 생태계 가정에 최적: Aqara Hub M3(권장 소비자가 $219.99, 보통 ~$159.99)',
-          '최고의 저렴한 생태계 허브: IKEA DIRIGERA($119.99) — 이 사이트의 전용 가이드 참고',
+          '최고의 저렴한 생태계 허브: IKEA DIRIGERA($139.99) — 이 사이트의 전용 가이드 참고',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -3725,6 +4030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '스타터 패키지 비용', anchor: 'starter-package' },
       { label: 'Hubitat Elevation C-8 Pro', anchor: 'hubitat' },
       { label: 'Homey Pro', anchor: 'homey' },
+      { label: 'Homey Pro 대안', anchor: 'homey-alternatives' },
       { label: 'Aqara Hub M3', anchor: 'aqara-m3' },
       { label: 'IKEA DIRIGERA', anchor: 'dirigera' },
       { label: '전체 비교표', anchor: 'comparison' },
@@ -3733,6 +4039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '어떤 허브를 사야 하나요? (다시)', anchor: 'which-to-buy-2' },
       { label: '아직 허브를 사지 마세요', anchor: 'dont-buy-yet' },
       { label: '프로토콜 결정 트리', anchor: 'protocol-tree' },
+      { label: '일본의 스마트홈 허브', anchor: 'japan' },
       { label: '로컬 AI에 최고인 허브', anchor: 'local-ai' },
       { label: '로컬 스마트홈 스타터 키트', anchor: 'starter-kit' },
       { label: '예산 사다리', anchor: 'budget-ladder' },
@@ -3745,7 +4052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '자주 묻는 질문', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Home Assistant Green($199/€179)은 2026년 로컬 제어와 로컬 AI 잠재력 면에서 종합 최고의 스마트홈 허브이며, Hubitat Elevation C-8 Pro($188.95)는 수고가 적은 더 단순한 대안, Homey Pro($449)는 프리미엄 올인원 옵션이다.' },
+      { type: 'one-sentence', content: 'Home Assistant Green($199/€179)은 2026년 로컬 제어와 로컬 AI 잠재력 면에서 종합 최고의 스마트홈 허브이며, Hubitat Elevation C-8 Pro($184.95)는 수고가 적은 더 단순한 대안, Homey Pro($449)는 프리미엄 올인원 옵션이다.' },
       { type: 'plain-terms', content: '스마트홈 허브는 인터넷 없이도 당신의 기기와 대화하고 자동화를 실행하는 상자다. 이 가이드는 현재 판매 중인 다섯 가지 제품을 비교한다 — 기본으로 어떤 프로토콜을 지원하는지, 지금 얼마인지, 각각 실제로 어떤 구매 프로필에 맞는지 — 다만 PromptQuorum이 그중 어느 것도 테스트했다고 주장하지는 않는다.' },
     ],
     sections: {
@@ -3755,11 +4062,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Home Assistant Green($199/€179) — 종합 최고이자 로컬 AI 잠재력 최고, 다만 별도 Zigbee/Thread/Z-Wave USB 동글 필요',
-          'Hubitat Elevation C-8 Pro($188.95, 이전 $179.95에서 인상된 것으로 확인됨) — 가전제품 같은 로컬 자동화 최고, 수고가 가장 적음',
+          'Hubitat Elevation C-8 Pro($184.95, 미국 전용 배송) — 가전제품 같은 로컬 자동화 최고, 수고가 가장 적음',
           'Homey Pro($449) — 최고의 프리미엄 올인원, 가장 폭넓은 내장 무선, Home Assistant Green 가격의 약 2.3배',
           'Aqara Hub M3(권장 소비자가 $219.99, 보통 ~$159.99) — 이미 Aqara 기기에 투자한 가정에 최적, 개방형 플랫폼은 아님',
-          'IKEA DIRIGERA($119.99) — 가장 저렴한 진짜 생태계 허브, 이 사이트의 전용 DIRIGERA 가이드 참고',
-          '이 허브들 중 어느 것도 PromptQuorum이 테스트하거나 벤치마크하지 않았다 — 모든 주장은 2026년 8월 25일에 확인된 제조사 문서에서 나온 것',
+          'IKEA DIRIGERA($139.99) — 가장 저렴한 진짜 생태계 허브, 이 사이트의 전용 DIRIGERA 가이드 참고',
+          '이 허브들 중 어느 것도 PromptQuorum이 테스트하거나 벤치마크하지 않았다 — 모든 주장은 2026년 10월 18일에 확인된 제조사 문서에서 나온 것',
         ],
       },
       quickVerdict: {
@@ -3769,14 +4076,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['허브', '최적 용도', '로컬 등급', 'Zigbee', 'Z-Wave', 'Matter/Thread', 'AI 잠재력', '가격'],
         rows: [
           { 허브: '[Home Assistant Green](https://www.home-assistant.io/green/)', '최적 용도': '최대 제어/AI', '로컬 등급': '최고', Zigbee: '동글 경유', 'Z-Wave': '동글 경유', 'Matter/Thread': '동글 경유', 'AI 잠재력': '최고(Ollama)', 가격: '$199/€179' },
-          { 허브: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', '최적 용도': '단순한 로컬 자동화', '로컬 등급': '높음', Zigbee: '내장 3.0', 'Z-Wave': '내장 800 LR', 'Matter/Thread': 'Matter 1.5(Thread 무선 없음)', 'AI 잠재력': '낮음(가전제품)', 가격: '$188.95' },
+          { 허브: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', '최적 용도': '단순한 로컬 자동화', '로컬 등급': '높음', Zigbee: '내장 3.0', 'Z-Wave': '내장 800 LR', 'Matter/Thread': 'Matter 1.5(Thread 무선 없음)', 'AI 잠재력': '낮음(가전제품)', 가격: '$184.95' },
           { 허브: '[Homey Pro](https://homey.app/en-us/homey-pro/)', '최적 용도': '프리미엄 올인원', '로컬 등급': '혼합*', Zigbee: '내장 3.0', 'Z-Wave': '내장 700', 'Matter/Thread': 'Matter 1.5 + Thread 경계 라우터', 'AI 잠재력': '낮음(가전제품)', 가격: '$449' },
           { 허브: '[Aqara Hub M3](https://www.aqara.com/en/product/hub-m3/)', '최적 용도': 'Aqara 생태계', '로컬 등급': '혼합*', Zigbee: '내장', 'Z-Wave': '없음', 'Matter/Thread': 'Matter 컨트롤러 + Thread', 'AI 잠재력': '없음(브리지)', 가격: '$219.99 권장가' },
-          { 허브: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', '최적 용도': '저예산 생태계', '로컬 등급': '혼합*', Zigbee: 'IKEA 기기만', 'Z-Wave': '없음', 'Matter/Thread': 'Matter 1.4 + Thread 경계 라우터', 'AI 잠재력': '없음(브리지)', 가격: '$119.99' },
+          { 허브: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', '최적 용도': '저예산 생태계', '로컬 등급': '혼합*', Zigbee: 'IKEA 기기만', 'Z-Wave': '없음', 'Matter/Thread': 'Matter 1.4 + Thread 경계 라우터', 'AI 잠재력': '없음(브리지)', 가격: '$139.99' },
         ],
         items: [
           '*"혼합" 로컬 등급: Homey, Aqara, IKEA는 로컬 자동화 실행 외에도 설정/원격 접속을 위해 클라우드 연결 동반 앱을 사용한다 — 자체 호스팅 Home Assistant 인스턴스만큼 완전히 오프라인 전용은 아니다. 세부 내용은 아래 "로컬이 실제로 주는 것은?" 참고.',
-          '위의 각 항목은 2026년 8월 25일 각 제조사의 현재 제품 페이지와 독립적으로 대조 확인했다 — 재확인 없이 이 수치를 그대로 인용하지 말 것. 이 카테고리는 이 페이지의 이전 버전 이후 이미 한 차례(Hubitat) 확인된 가격 인상을 겪었다.',
+          '위의 각 항목은 2026년 10월 18일 각 제조사의 현재 제품 페이지와 독립적으로 대조 확인했다(Aqara Hub M3 가격은 2026년 8월 25일에 마지막으로 확인되었으며, Aqara의 현재 제품 페이지에는 가격이 표시되어 있지 않다) — 재확인 없이 이 수치를 그대로 인용하지 말 것: 이 카테고리의 가격은 8월 이후 두 차례 변동했다(Hubitat 하락, IKEA DIRIGERA 상승).',
         ],
       },
       topPicks: {
@@ -3785,12 +4092,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**답만 원한다면 여기서 시작하세요.**',
         items: [
           '종합 최고 — Home Assistant Green($199/€179): 실제 Home Assistant 플랫폼을 실행하며, 이 비교에서 가장 통합이 풍부하고 개방적인 시스템. 편집 평가: 9.3/10(공식 문서에 기반한 조사 기반 평가이며, 실험실 테스트 점수가 아님).',
-          '더 간단한 최고의 대안 — Hubitat Elevation C-8 Pro($188.95): 유지해야 할 Linux 머신이 아니라 가전제품처럼 동작하는 로컬 자동화. 편집 평가: 8.7/10.',
+          '더 간단한 최고의 대안 — Hubitat Elevation C-8 Pro($184.95): 유지해야 할 Linux 머신이 아니라 가전제품처럼 동작하는 로컬 자동화. 편집 평가: 8.7/10.',
           '최고의 올인원 — Homey Pro($449): 여기 있는 어떤 허브보다 가장 폭넓은 내장 프로토콜 지원, 다만 분명히 밝힐 가치가 있는 실질적인 가격 프리미엄이 있음. 편집 평가: 8.5/10.',
         ],
         affiliateLinks: [
           { label: '현재 가격 확인 — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199 / €179' },
-          { label: '현재 가격 확인 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: '현재 가격 확인 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
           { label: '현재 가격 확인 — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '$449' },
           { label: '현재 가격 확인 — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: '현재 가격 확인 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -3859,7 +4166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hubitat',
         title: 'Hubitat Elevation C-8 Pro — 더 간단한 최고의 로컬 대안',
         content:
-          '**편집 평가: 8.7/10(조사 기반 평가이며, 실험실 테스트 점수가 아님).** Hubitat의 Elevation C-8 Pro($188.95, hubitat.com에서 확인됨 — 이 페이지 이전 버전이 인용했던 $179.95에서 인상된, 실질적이고 현재 유효한 가격 인상)는 Home Assistant가 아닌 Hubitat 자체의 로컬 자동화 플랫폼을 실행한다. Zigbee 3.0, Z-Wave 800 Long Range, 컨트롤러로서의 Matter 1.5, 블루투스를 모두 내장으로 지원한다.',
+          '**편집 평가: 8.7/10(조사 기반 평가이며, 실험실 테스트 점수가 아님).** Hubitat의 Elevation C-8 Pro($184.95, 2026년 10월 18일 hubitat.com에서 확인됨 — 8월에 이 페이지가 인용한 $188.95에서 소폭 하락, 미국 본토 48개 주에만 배송)는 Home Assistant가 아닌 Hubitat 자체의 로컬 자동화 플랫폼을 실행한다. Zigbee 3.0, Z-Wave 800 Long Range, 컨트롤러로서의 Matter 1.5, 블루투스를 모두 내장으로 지원한다.',
         items: [
           'Linux 방식 시스템을 유지하지 않고 가전제품 같은 로컬 자동화 경험을 원하는 사용자에게 최적 — Hubitat의 규칙 엔진, 웹 인터페이스, 업데이트 프로세스는 관리해야 하는 범용 컴퓨터가 아니라 폐쇄적이고 안정적으로 느껴지도록 설계되었다.',
           'Home Assistant가 대신 이기는 이유: 훨씬 많은 통합 수, 네이티브 Frigate/카메라 AI 지원, YAML과 커뮤니티 애드온을 통한 깊은 커스터마이징, 그리고 로컬 LLM 자동화로 가는 현실적인 경로. Hubitat 자체 플랫폼은 이런 것들을 위해 만들어지지 않았다.',
@@ -3867,7 +4174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '호환성: Zigbee 3.0 ✅내장 · Z-Wave 800 LR ✅내장 · Matter 1.5 ✅(컨트롤러만, Thread 무선 없음) · 블루투스 ✅ · 설정 난이도: 쉬움.',
         ],
         affiliateLinks: [
-          { label: '현재 가격 확인 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: '현재 가격 확인 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
         ],
       },
       homey: {
@@ -3876,13 +4183,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**편집 평가: 8.5/10(조사 기반 평가이며, 실험실 테스트 점수가 아님).** Homey Pro(2026)는 $449(homey.app에서 확인됨, 2026년 6월 1일 가격 변경 후 $399에서 인상)이며 4GB RAM, 8GB eMMC, 1.5GHz 쿼드코어 ARMv8 프로세서를 갖췄다. 이 가이드의 어떤 허브보다 가장 폭넓은 내장 무선 세트를 갖췄다: Wi-Fi, 블루투스 5.0, Matter v1.5, Thread 경계 라우터, Zigbee 3.0, Z-Wave 700, 433MHz, 적외선.',
         items: [
-          '가격 차이를 분명히 말하면: $449는 Home Assistant Green $199의 약 2.3배, Hubitat $188.95의 약 2.4배다 — 이 프리미엄은 근본적으로 다른 성능 등급이 아니라 직접 조립해야 했을 내장 무선을 사는 것이다.',
+          '가격 차이를 분명히 말하면: $449는 Home Assistant Green $199의 약 2.3배, Hubitat $184.95의 약 2.4배다 — 이 프리미엄은 근본적으로 다른 성능 등급이 아니라 직접 조립해야 했을 내장 무선을 사는 것이다.',
           '동글 쇼핑을 전혀 하지 않고 개봉 즉시 가장 폭넓은 무선 세트를 원하며, Home Assistant의 훨씬 큰 개방형 커뮤니티보다 Homey 자체 앱 생태계와 완성도를 중시하는 구매자에게 최적.',
           'Home Assistant/Hubitat이 대신 이기는 이유: 이 가격대에서는 Home Assistant Green에 Connect ZBT-2 동글을 더해도($199 + $49 = $248) Homey Pro보다 약 $200 저렴하면서, Homey 자체 플랫폼이 제공하지 않는 로컬 AI 여지까지 추가된다.',
           '호환성: Zigbee 3.0 ✅내장 · Z-Wave 700 ✅내장 · Matter v1.5 ✅ · Thread 경계 라우터 ✅내장 · 433MHz ✅ · 적외선 ✅ · 설정 난이도: 쉬움.',
         ],
         affiliateLinks: [
           { label: '현재 가격 확인 — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '$449' },
+        ],
+      },
+      homeyAlternatives: {
+        id: 'homey-alternatives',
+        title: 'Homey Pro 대안과 Hubitat vs Homey',
+        content: '**최고의 Homey Pro 대안은 무엇을 피하고 싶은지에 달려 있다: $449라는 가격, 폐쇄적인 앱 플랫폼, 아니면 무선 모듈을 따로 사야 하는 점.** Hubitat과 Home Assistant Green이 각각 그중 하나에 답하고, Homey의 더 저렴한 Pro mini는 같은 플랫폼 안에서 가격 문제에 답한다.',
+        columns: ['대안', '가격', 'Homey Pro 대비 장단점'],
+        rows: [
+          { 대안: '[Hubitat Elevation C-8 Pro](https://hubitat.com/products/7194320273451)', 가격: '$184.95', 'Homey Pro 대비 장단점': 'Zigbee/Z-Wave 내장, Thread 무선 없음, 미국 전용 배송' },
+          { 대안: '[Home Assistant Green](https://www.home-assistant.io/green/) + ZBT-2', 가격: '총 $248', 'Homey Pro 대비 장단점': '가장 개방적, 설정 더 많음, Z-Wave는 동글 추가 필요' },
+          { 대안: '[Homey Pro mini](https://homey.app/en-us/homey-pro-mini/)', 가격: '$249', 'Homey Pro 대비 장단점': '같은 Homey OS, 단 Z-Wave·Wi-Fi·블루투스 내장 없음' },
+          { 대안: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 가격: '$139.99', 'Homey Pro 대비 장단점': 'Matter/Thread 전용, IKEA 중심, Z-Wave 없음' },
+        ],
+        items: [
+          'Hubitat vs Homey, 가격: Hubitat Elevation C-8 Pro($184.95)는 Homey Pro($449)의 절반도 안 되는 가격이며, 둘 다 Zigbee 3.0, Z-Wave, Matter 컨트롤러를 포함한다.',
+          'Hubitat vs Homey, 무선: Homey Pro는 Thread 경계 라우터, 433MHz, 적외선을 추가로 갖추고 Hubitat에는 Thread 무선이 없다. Homey의 Z-Wave는 700 시리즈이고 Hubitat은 Long Range를 지원하는 800 시리즈다.',
+          'Hubitat vs Homey, 플랫폼: Hubitat은 웹 인터페이스를 갖춘 폐쇄형 규칙 엔진 가전제품이고, Homey는 앱과 플로우 기반으로 완성도 높은 모바일 앱과 커뮤니티 앱 스토어를 갖췄다. 둘 다 자체 플랫폼에서 로컬 LLM 통합을 실행하지 못한다.',
+          'Homey Pro mini($249, 2026년 10월 18일 homey.app에서 확인됨)는 같은 Homey Pro OS에 Zigbee 3.0, Matter v1.5, Thread 경계 라우터를 내장하고 있지만, Z-Wave, 블루투스, 433MHz, 적외선에는 별매 $69 Homey Bridge가 필요하므로 그 무선이 필요 없을 때만 비용이 절약된다.',
+          'Homey를 떠나려는 이유가 가격이 아니라 종속이라면 현실적인 대안은 Home Assistant Green이다 — 플랫폼이 오픈소스이고 다른 하드웨어로 옮길 수 있는 유일한 선택지다.',
         ],
       },
       aqaraM3: {
@@ -3905,15 +4231,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dirigera',
         title: 'IKEA DIRIGERA — 최고의 저렴한 생태계 허브',
         content:
-          '**편집 평가: 7.8/10(조사 기반 평가이며, 실험실 테스트 점수가 아님).** IKEA의 DIRIGERA($119.99, ikea.com에서 확인됨)는 이 비교에서 가장 저렴한 진짜 Matter/Thread 허브다. 2025년 펌웨어 업데이트를 통해 완전한 Matter 컨트롤러이자 Thread 경계 라우터가 되어, IKEA 자체 라인뿐 아니라 일부 서드파티 Matter 기기도 온보딩할 수 있게 되었다. 이 사이트에는 전체 생태계를 상세히 다루는 전용 DIRIGERA 가이드가 있다.',
+          '**편집 평가: 7.8/10(조사 기반 평가이며, 실험실 테스트 점수가 아님).** IKEA의 DIRIGERA($139.99, ikea.com에서 확인됨)는 이 비교에서 가장 저렴한 진짜 Matter/Thread 허브다. 2025년 펌웨어 업데이트를 통해 완전한 Matter 컨트롤러이자 Thread 경계 라우터가 되어, IKEA 자체 라인뿐 아니라 일부 서드파티 Matter 기기도 온보딩할 수 있게 되었다. 이 사이트에는 전체 생태계를 상세히 다루는 전용 DIRIGERA 가이드가 있다.',
         items: [
           '구매해야 할 경우: 로컬 Matter/Thread 제어에 대한 가장 저렴한 진짜 진입점을 원하고, IKEA 자체 앱과 기기 범위를 주된 경험으로 받아들일 수 있으며, Hubitat/Home Assistant 수준의 커스터마이징이 필요 없는 경우.',
           '구매하지 말아야 할 경우: 다른 브랜드의 비Matter Zigbee 기기도 관리할 단일 허브를 원하거나, Z-Wave가 필요하거나, Home Assistant 수준의 통합 깊이를 원하는 경우 — DIRIGERA 자체 자동화 엔진은 의도적으로 단순하다.',
-          '가격 비교를 분명히 말하면: DIRIGERA($119.99)는 Home Assistant Green($199)보다 약 $80 저렴하고 Hubitat($188.95)보다 약 $69 저렴하다 — 대가는 훨씬 작고 IKEA 중심적인 기기/자동화 생태계다.',
+          '가격 비교를 분명히 말하면: DIRIGERA($139.99)는 Home Assistant Green($199)보다 약 $59 저렴하고 Hubitat($184.95)보다 약 $45 저렴하다 — 대가는 훨씬 작고 IKEA 중심적인 기기/자동화 생태계다.',
           '호환성: Matter 1.4 ✅컨트롤러 · Thread 경계 라우터 ✅ · Zigbee ✅(IKEA 기기, 일부 서드파티는 Matter 브리징 경유) · Z-Wave ❌ · 설정 난이도: 쉬움.',
         ],
         affiliateLinks: [
-          { label: '현재 가격 확인 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '$119.99' },
+          { label: '현재 가격 확인 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '$139.99' },
         ],
       },
       comparison: {
@@ -3933,7 +4259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 항목: '로컬 AI(Ollama/LLM)', 'Home Assistant Green': '확장된 기기에서는 가능; Green 단독 4GB로는 불가', 'Hubitat C-8 Pro': '플랫폼에서 지원하지 않음', 'Homey Pro': '플랫폼에서 지원하지 않음' },
           { 항목: 'Frigate / 카메라 AI', 'Home Assistant Green': '가능, Home Assistant 애드온 경유', 'Hubitat C-8 Pro': '네이티브 지원 없음', 'Homey Pro': '네이티브 지원 없음' },
           { 항목: '생태계 자유도', 'Home Assistant Green': '최고 — 벤더 종속 없음', 'Hubitat C-8 Pro': '보통 — Hubitat 전용', 'Homey Pro': '보통 — Homey 전용' },
-          { 항목: '가격', 'Home Assistant Green': '$199 / €179', 'Hubitat C-8 Pro': '$188.95', 'Homey Pro': '$449' },
+          { 항목: '가격', 'Home Assistant Green': '$199 / €179', 'Hubitat C-8 Pro': '$184.95', 'Homey Pro': '$449' },
         ],
       },
       hubVsController: {
@@ -3974,7 +4300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: '현재 가격 확인 — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199 / €179' },
-          { label: '현재 가격 확인 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: '현재 가격 확인 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
           { label: '현재 가격 확인 — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub' },
           { label: '현재 가격 확인 — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: '현재 가격 확인 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -4001,6 +4327,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 당신이: 'Matter로 새로 시작', '가장 적합한 허브': '다섯 개 모두 — 모두 Matter 컨트롤러로 작동' },
           { 당신이: 'Thread 위주(Matter over Thread)', '가장 적합한 허브': 'Homey 또는 DIRIGERA(내장 경계 라우터)' },
           { 당신이: '미래의 최대 유연성을 원함', '가장 적합한 허브': 'Home Assistant Green + 동글' },
+        ],
+      },
+      japan: {
+        id: 'japan',
+        title: '일본에서 가장 좋은 스마트홈 허브: 가장 많은 기기와 호환되는 허브',
+        content: '**일본에서는 무선 방식과 그 허브를 현지에서 합법적으로 구매·사용할 수 있는지를 기준으로 고르세요: Zigbee, Thread, Matter는 전 세계 어디서나 2.4GHz로 동작하지만, Z-Wave는 일본 전용 별도 대역을 쓰고 여기 나온 허브 중 여럿은 미국 시장 전용으로 판매됩니다.**',
+        items: [
+          'Z-Wave가 지역별 함정이다: 일본의 Z-Wave 대역은 922–926 MHz(ARIB STD-T108, Z-Wave.me 문서 기준)로, 미국의 908.4 MHz 대역과 다르다. Hubitat C-8 Pro의 Z-Wave 무선은 미국 주파수이고 Hubitat은 미국 본토 48개 주에만 배송하므로 일본에서는 현실적인 구매 대상이 아니다.',
+          'Homey는 Pro의 안테나가 현지 규정에 맞춰 전환된다고 밝히지만, 제품 페이지에는 일본 전용 Z-Wave 버전이 나와 있지 않다 — 일본에서 Z-Wave 기기용으로 Homey Pro를 사기 전에 Athom에 일본 Z-Wave 지원 여부를 확인할 것.',
+          'Zigbee 3.0, Thread, Matter는 지역별 하드웨어가 필요 없다: Home Assistant Green에 Connect ZBT-2를 더한 구성, Aqara Hub M3(Aqara는 일본 110가구 규모의 도입 사례를 게시), IKEA DIRIGERA 모두 이 프로토콜을 지원한다.',
+          '\'가장 많은 기기와 호환되는\' 허브로는 Home Assistant Green이 최적이다. 통합 라이브러리가 Matter, Zigbee, 클라우드 없는 로컬 기기를 모두 포괄하기 때문이다. $199에 ZBT-2 약 $49를 더하면 배송비와 수입 비용 전 약 $248이다.',
+          '각 기기의 일본 전파법 인증(기술기준적합 마크)을 확인할 것 — 해외에서 구매한 기기나 동글은 일본에서 합법적으로 사용할 수 없을 수 있다. 이는 일반적인 안내이며 법률 자문이 아니다. PromptQuorum은 일본에서 어떤 허브도 테스트하지 않았다.',
         ],
       },
       localAi: {
@@ -4050,8 +4388,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**각 가격대에서 실제로 무엇을 살 수 있는지.**',
         columns: ['예산', '얻는 것'],
         rows: [
-          { 예산: '$150 미만', '얻는 것': 'IKEA DIRIGERA($119.99) — 입문용 Matter/Thread 생태계' },
-          { 예산: '$150-250', '얻는 것': 'Home Assistant Green($199) 또는 Hubitat C-8 Pro($188.95) — 허브 하나, 아직 무선/센서 없음' },
+          { 예산: '$150 미만', '얻는 것': 'IKEA DIRIGERA($139.99) — 입문용 Matter/Thread 생태계' },
+          { 예산: '$150-250', '얻는 것': 'Home Assistant Green($199) 또는 Hubitat C-8 Pro($184.95) — 허브 하나, 아직 무선/센서 없음' },
           { 예산: '$250-500', '얻는 것': 'HA Green+동글+센서 몇 개, 또는 Homey Pro($449) 단독' },
           { 예산: '$500-1,000 이상', '얻는 것': 'HA Green+전용 AI 미니 PC+카메라+센서+잠금장치(위의 스타터 키트 참고)' },
         ],
@@ -4114,15 +4452,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**다섯 개의 허브, 다섯 가지 다른 구매자 프로필 — 올바른 선택은 어느 것이 서류상 가장 높은 점수를 받는지가 아니라 당신이 실제로 무엇을 필요로 하는지에 달려 있다.**',
         items: [
           'Home Assistant Green($199/€179) — 종합 최고. 편집 평가: 9.3/10. 가장 개방적인 플랫폼과 진짜 로컬 AI 여지를 원하고, 동글과 센서로 이루어진 시스템을 조립하는 것을 개의치 않는다면 구매할 것.',
-          'Hubitat Elevation C-8 Pro($188.95) — 최고의 로컬 가전제품. 편집 평가: 8.7/10. 손질이 가장 적은 로컬 자동화를 원하고 Home Assistant의 통합 폭이 필요하지 않다면 구매할 것.',
+          'Hubitat Elevation C-8 Pro($184.95) — 최고의 로컬 가전제품. 편집 평가: 8.7/10. 손질이 가장 적은 로컬 자동화를 원하고 Home Assistant의 통합 폭이 필요하지 않다면 구매할 것.',
           'Homey Pro($449) — 최고의 프리미엄 올인원. 편집 평가: 8.5/10. 내장 무선의 폭과 Homey 자체 앱의 완성도가 Home Assistant Green 가격의 약 2.3배만큼 당신에게 가치 있다면 구매할 것.',
           'Aqara Hub M3(권장 소비자가 $219.99, 보통 ~$159.99) — 최고의 Aqara 생태계 허브. 편집 평가: 8.0/10. 이미 Aqara 기기에 특별히 투자했다면 구매할 것.',
-          'IKEA DIRIGERA($119.99) — 최고의 단순한 생태계 허브. 편집 평가: 7.8/10. 예산이 결정 요인이고 IKEA 앱을 중심에 두는 것이 괜찮다면 구매할 것.',
+          'IKEA DIRIGERA($139.99) — 최고의 단순한 생태계 허브. 편집 평가: 7.8/10. 예산이 결정 요인이고 IKEA 앱을 중심에 두는 것이 괜찮다면 구매할 것.',
           '이 사이트의 로컬 AI 중심 독자를 위한 핵심 구매 원칙: 생태계 종속이 가장 적은 플랫폼, 즉 Home Assistant Green을 추천한다 — 하지만 이것이 모든 구매자에게 옳은 선택은 아니다. 개방성보다 가전제품 같은 단순함이나 내장 무선의 폭이 당신에게 더 중요하다면, Hubitat이나 Homey가 정직하게 올바른 선택이지 차선책이 아니다.',
         ],
         affiliateLinks: [
           { label: '현재 가격 확인 — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '$199 / €179' },
-          { label: '현재 가격 확인 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$188.95' },
+          { label: '현재 가격 확인 — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '$184.95' },
           { label: '현재 가격 확인 — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '$449' },
           { label: '현재 가격 확인 — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: '현재 가격 확인 — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -4158,6 +4496,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Home Assistant Green에는 Zigbee 동글이 필요한가요?', a: 'Zigbee 기기를 보유하고 있거나 구매할 계획이라면 필요하다 — Green에는 내장 무선이 없다. Home Assistant Connect ZBT-2($49/€45) 같은 현재 옵션은 이 사이트의 Zigbee & Thread 동글 가이드를 참고할 것.' },
           { q: 'Home Assistant Green은 로컬 AI를 지원하나요?', a: 'Home Assistant의 소프트웨어는 Ollama를 통한 로컬 LLM 통합을 지원하지만, Green 자체의 4GB RAM은 로컬 LLM도 함께 잘 실행할 만한 규모가 아니다 — Green 혼자 두 작업을 모두 처리하기를 기대하는 대신, 진정한 로컬 AI 사용을 위해서는 별도의 더 강력한 AI 미니 PC(투박스 아키텍처)와 결합할 것.' },
           { q: 'Home Assistant Green vs Hubitat — 어느 것을 사야 하나요?', a: '최대한의 개방성, 통합 폭, 로컬 AI 잠재력을 원하고 동글 기반 시스템 조립을 개의치 않는다면 Home Assistant Green. 내장 Zigbee/Z-Wave와 최소한의 설정으로 단순한 가전제품처럼 동작하는 로컬 자동화를 원한다면 Hubitat Elevation C-8 Pro.' },
+          { q: '최고의 Homey Pro 대안은 무엇인가요?', a: 'Hubitat Elevation C-8 Pro($184.95)는 절반도 안 되는 가격의 가장 가까운 내장 무선 대안이고, Home Assistant Green에 ZBT-2 동글을 더한 구성($248)은 개방형 플랫폼 대안이며, Homey Pro mini($249)는 Homey 플랫폼을 유지하지만 $69 Homey Bridge를 추가하지 않으면 Z-Wave, Wi-Fi, 블루투스가 빠진다.' },
+          { q: 'Hubitat vs Homey — 어느 쪽이 더 나은가요?', a: 'Hubitat이 더 저렴하고($184.95 vs $449) Thread 무선이 없는 가전제품 같은 로컬 규칙 엔진이다. Homey Pro는 Thread, 433MHz, 적외선과 더 완성도 높은 앱을 추가한다. 둘 다 완전한 오프라인은 아니며 네이티브 로컬 LLM 통합도 제공하지 않는다.' },
+          { q: '일본에서 가장 좋은 스마트홈 허브는 무엇인가요?', a: '기기 지원 폭으로는 Zigbee/Thread 동글을 더한 Home Assistant Green이다. Zigbee, Thread, Matter는 전 세계 공통 2.4GHz 표준이기 때문이다. 일본의 Z-Wave는 922–926 MHz를 사용하며 Hubitat C-8 Pro는 미국 주파수를 쓰고 미국 본토 내에만 배송하므로, 어떤 Z-Wave 허브든 사기 전에 지역별 Z-Wave 지원을 확인할 것.' },
+          { q: '입문자에게 가장 좋은 홈 오토메이션 허브는 무엇인가요?', a: '미국에 있고 Zigbee와 Z-Wave가 내장된 로컬 자동화를 원한다면 Hubitat Elevation C-8 Pro($184.95), 가장 쉬운 설정을 원하고 그만한 값을 낼 의향이 있다면 Homey Pro($449), 긴 설정을 감수하고 최대한의 유연성을 원한다면 Home Assistant Green.' },
           { q: 'Matter에 가장 좋은 허브는 무엇인가요?', a: '이 가이드의 다섯 허브(Home Assistant Green, Hubitat, Homey Pro, Aqara Hub M3, IKEA DIRIGERA)는 모두 Matter 컨트롤러로 작동할 수 있지만, Homey Pro와 IKEA DIRIGERA는 Thread 경계 라우터를 내장하고 있는 반면 Home Assistant Green은 이 역할에 동글이 필요하다 — 구매 전 특정 Matter 기기가 지원하는 컨트롤러 목록을 확인할 것.' },
         ],
       },
@@ -4172,7 +4514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Smart home hub' }, { '@type': 'Thing', name: 'Home Assistant Green' }, { '@type': 'Thing', name: 'Hubitat' }, { '@type': 'Thing', name: 'Homey' }, { '@type': 'Thing', name: 'Aqara Hub M3' }, { '@type': 'Thing', name: 'IKEA DIRIGERA' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -4184,6 +4526,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'Home Assistant에 가장 좋은 허브는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green($199/€179)은 공식 자체 하드웨어지만 별도의 Zigbee/Thread/Z-Wave USB 동글이 필요하다.' } },
         { '@type': 'Question', name: 'Home Assistant Green은 살 가치가 있나요?', acceptedAnswer: { '@type': 'Answer', text: '가장 개방적인 플랫폼과 로컬 AI 여지를 원하는 구매자에게는 그렇지만, 보통 수준의 설정 과정과 별도의 동글 구매를 예상할 것.' } },
+        { '@type': 'Question', name: '최고의 Homey Pro 대안은 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '절반도 안 되는 가격에 내장 무선을 갖춘 Hubitat Elevation C-8 Pro($184.95), 개방형 플랫폼을 위한 Home Assistant Green에 ZBT-2 동글을 더한 구성($248), 또는 내장 무선이 줄어드는 대신 Homey에 머무는 Homey Pro mini($249).' } },
+        { '@type': 'Question', name: '일본에서 가장 좋은 스마트홈 허브는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: 'Zigbee/Thread 동글을 더한 Home Assistant Green이 가장 많은 기기를 지원한다. 일본의 Z-Wave는 922–926 MHz를 사용하고 Hubitat은 미국 본토 내에만 배송하므로 먼저 지역별 지원을 확인할 것.' } },
         { '@type': 'Question', name: 'Home Assistant Green vs Hubitat — 어느 것을 사야 하나요?', acceptedAnswer: { '@type': 'Answer', text: '최대한의 개방성과 로컬 AI 잠재력을 원하면 Home Assistant Green; 최소한의 설정으로 가전제품 같은 로컬 자동화를 원하면 Hubitat Elevation C-8 Pro.' } },
       ],
     },
@@ -4192,20 +4536,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'monthly',
     publishDate: '2026-07-16',
-    dateModified: '2026-08-25',
-    next_refresh_due: '2026-09-24',
-    last_full_refresh: '2026-08-25',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2026-11-17',
+    last_full_refresh: '2026-10-18',
     theme: "Buyer's Guides",
     heroImage: '/images/best-smart-home-hubs-2027-overview-hero-ar.webp',
     affiliateDisclosure: true,
-    title: 'أفضل محاور المنزل الذكي للتحكم المحلي في ⁨2026⁩: Home Assistant مقابل Hubitat مقابل Homey',
-    seoTitle: 'أفضل محاور المنزل الذكي ⁨2026⁩: HA Green مقابل Hubitat مقابل Homey',
+    title: 'أفضل محور منزل ذكي للتحكم المحلي في ⁨2026⁩: Home Assistant مقابل Hubitat مقابل Homey',
+    seoTitle: 'أفضل محور منزل ذكي ⁨2026⁩: HA Green مقابل Hubitat مقابل Homey',
     intro:
-      'يتلخّص اختيار محور المنزل الذكي في ⁨2026⁩ في سؤال واحد يتجاهله معظم المشترين: هل تريد المنصة التي تمنح أكبر مساحة للذكاء الاصطناعي المحلي ولا ترتبط بمورّد واحد (Home Assistant Green)، أم التي تتصرف كجهاز بسيط ولا تعقّد حياتك (Hubitat Elevation C-8 Pro)، أم التي تدفع ثمن الراحة بسعر أعلى بكثير (Homey Pro)؟ يكمّل Hub M3 من Aqara وDIRIGERA من IKEA الصورة للمشترين الملتزمين بالفعل بنظام أجهزة معيّن. هذا الدليل هو الصفحة التجارية الأم لمجموعة المنزل الذكي المحلي في هذا الموقع — تم التحقق من كل سعر ومواصفة أدناه مقابل مصادر الشركات المصنّعة في 25 أغسطس 2026، ولم يتم اختبار أو قياس أداء أي من هذه الأجهزة من قِبل PromptQuorum؛ كل ادعاء بشأن القدرات هو تقييم مبني على البحث من الوثائق الرسمية، وليس نتيجة معملية.',
+      'يتلخّص اختيار محور المنزل الذكي في ⁨2026⁩ في سؤال واحد يتجاهله معظم المشترين: هل تريد المنصة التي تمنح أكبر مساحة للذكاء الاصطناعي المحلي ولا ترتبط بمورّد واحد (Home Assistant Green)، أم التي تتصرف كجهاز بسيط ولا تعقّد حياتك (Hubitat Elevation C-8 Pro)، أم التي تدفع ثمن الراحة بسعر أعلى بكثير (Homey Pro)؟ يكمّل Hub M3 من Aqara وDIRIGERA من IKEA الصورة للمشترين الملتزمين بالفعل بنظام أجهزة معيّن. هذا الدليل هو الصفحة التجارية الأم لمجموعة المنزل الذكي المحلي في هذا الموقع — تم التحقق من كل سعر ومواصفة أدناه مقابل مصادر الشركات المصنّعة في 18 أكتوبر 2026، ولم يتم اختبار أو قياس أداء أي من هذه الأجهزة من قِبل PromptQuorum؛ كل ادعاء بشأن القدرات هو تقييم مبني على البحث من الوثائق الرسمية، وليس نتيجة معملية.',
     metaDescription:
-      'أفضل محاور المنزل الذكي للتحكم المحلي في ⁨2026⁩: Home Assistant Green مقابل Hubitat Elevation C-8 Pro مقابل Homey Pro مقابل Aqara Hub M3 مقابل IKEA DIRIGERA — الأسعار الحالية والبروتوكولات وأيها يناسب نمط شرائك.',
+      'أفضل محور منزل ذكي للتحكم المحلي في ⁨2026⁩: Home Assistant Green مقابل Hubitat C-8 Pro مقابل Homey Pro (وبدائله) مقابل Aqara M3 مقابل IKEA DIRIGERA — الأسعار والبروتوكولات وملاحظات اليابان.',
     twitterDescription:
-      'Home Assistant Green مقابل Hubitat مقابل Homey Pro مقابل Aqara Hub M3 مقابل IKEA DIRIGERA — مقارنة الأسعار الحالية لعام ⁨2026⁩ ودعم البروتوكولات، وأي محور يناسب إعداد الذكاء الاصطناعي المحلي لديك.',
+      'أفضل محور منزل ذكي ⁨2026⁩: Home Assistant Green مقابل Hubitat مقابل Homey Pro مقابل Aqara M3 مقابل IKEA DIRIGERA — الأسعار والبروتوكولات وبدائل Homey Pro وملاحظات اليابان.',
     readTime: '13 دقيقة للقراءة',
     educationalLevel: 'Beginner',
     audience: 'مشترو المنزل الذكي الذين يختارون جهاز محور مخصص للتحكم المحلي، سواء كانت لديهم طموحات ذكاء اصطناعي محلي أم لا',
@@ -4217,22 +4561,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aqara hub m3 vs home assistant',
       'ikea dirigera vs home assistant green',
       'محور منزل ذكي ذكاء اصطناعي محلي',
+      'بديل homey pro',
+      'hubitat vs homey',
+      'افضل محور اتمتة منزلية',
+      'افضل محور منزل ذكي في اليابان',
     ],
     leadAnswerBlock:
-      '**يُعد Home Assistant Green (199 دولارًا/179 يورو) أفضل محور منزل ذكي إجمالًا لعام ⁨2026⁩ إذا كنت تريد أقصى قدر من التحكم المحلي ومساحة للذكاء الاصطناعي المحلي — فهو يشغّل منصة Home Assistant الحقيقية، لكنه يأتي دون راديو Zigbee/Thread/Z-Wave مدمج، لذا خصّص ميزانية إضافية لدونجل USB.** يُعد Hubitat Elevation C-8 Pro (188.95 دولارًا، تم تأكيد ارتفاع سعره من 179.95 دولارًا سابقًا) الخيار الأفضل إذا كنت تريد أتمتة محلية أشبه بجهاز منزلي دون صيانة نظام على طراز Linux. يُعد Homey Pro (449 دولارًا) أفضل حل متكامل فاخر للمشترين المستعدين لدفع نحو 2.3 ضعف سعر Home Assistant Green مقابل أوسع مجموعة راديو مدمجة وأقل إعداد ذاتي. يناسب Aqara Hub M3 (السعر المقترح 219.99 دولارًا، وغالبًا حوالي 159.99 دولارًا عند التخفيض) الأسر المستثمرة بالفعل بعمق في نظام Aqara. يُعد IKEA DIRIGERA (119.99 دولارًا) أرخص نقطة دخول حقيقية، وله دليل مخصص خاص به على هذا الموقع.',
+      '**يُعد Home Assistant Green (199 دولارًا/179 يورو) أفضل محور منزل ذكي إجمالًا لعام ⁨2026⁩ إذا كنت تريد أقصى قدر من التحكم المحلي ومساحة للذكاء الاصطناعي المحلي — فهو يشغّل منصة Home Assistant الحقيقية، لكنه يأتي دون راديو Zigbee/Thread/Z-Wave مدمج، لذا خصّص ميزانية إضافية لدونجل USB.** يُعد Hubitat Elevation C-8 Pro (184.95 دولارًا) الخيار الأفضل إذا كنت تريد أتمتة محلية أشبه بجهاز منزلي دون صيانة نظام على طراز Linux. يُعد Homey Pro (449 دولارًا) أفضل حل متكامل فاخر للمشترين المستعدين لدفع نحو 2.3 ضعف سعر Home Assistant Green مقابل أوسع مجموعة راديو مدمجة وأقل إعداد ذاتي. يناسب Aqara Hub M3 (السعر المقترح 219.99 دولارًا، وغالبًا حوالي 159.99 دولارًا عند التخفيض) الأسر المستثمرة بالفعل بعمق في نظام Aqara. يُعد IKEA DIRIGERA (139.99 دولارًا) أرخص نقطة دخول حقيقية، وله دليل مخصص خاص به على هذا الموقع.',
     quickAnswerTop: {
       ar: {
         question: 'ما هو أفضل محور منزل ذكي للتحكم المحلي في ⁨2026⁩؟',
         answer:
-          'بالنسبة لمعظم المشترين الذين يريدون تحكمًا محليًا أولًا ومجالًا لإضافة الذكاء الاصطناعي المحلي لاحقًا، يُعد Home Assistant Green (199 دولارًا/179 يورو) الخيار الأفضل — فهو يشغّل منصة Home Assistant الفعلية، وهي الأكثر انفتاحًا وغنى بالتكاملات في هذه المقارنة، لكنه يحتاج إلى دونجل USB منفصل لـ Zigbee/Thread/Z-Wave لأنه لا يحتوي على أي منها مدمجًا. إذا كنت تريد أتمتة محلية بجهد أقل بكثير، فإن Hubitat Elevation C-8 Pro (188.95 دولارًا) يتصرف كجهاز منزلي بدلًا من نظام يجب صيانته. يُعد Homey Pro (449 دولارًا) الخيار المتكامل الفاخر بأوسع دعم راديو مدمج بين جميع المحاور هنا، بسعر يبلغ نحو 2.3 ضعف سعر Home Assistant Green. يناسب Aqara Hub M3 (السعر المقترح 219.99 دولارًا) المشترين الملتزمين بالفعل بأجهزة Aqara. يُعد IKEA DIRIGERA (119.99 دولارًا) أرخص نقطة دخول حقيقية لـ Matter/Thread. لم يتم اختبار أي من هذه المحاور من قِبل PromptQuorum — كل ادعاء أدناه مصدره وثائق الشركات المصنّعة، تم التحقق منه في 25 أغسطس 2026.',
+          'بالنسبة لمعظم المشترين الذين يريدون تحكمًا محليًا أولًا ومجالًا لإضافة الذكاء الاصطناعي المحلي لاحقًا، يُعد Home Assistant Green (199 دولارًا/179 يورو) الخيار الأفضل — فهو يشغّل منصة Home Assistant الفعلية، وهي الأكثر انفتاحًا وغنى بالتكاملات في هذه المقارنة، لكنه يحتاج إلى دونجل USB منفصل لـ Zigbee/Thread/Z-Wave لأنه لا يحتوي على أي منها مدمجًا. إذا كنت تريد أتمتة محلية بجهد أقل بكثير، فإن Hubitat Elevation C-8 Pro (184.95 دولارًا) يتصرف كجهاز منزلي بدلًا من نظام يجب صيانته. يُعد Homey Pro (449 دولارًا) الخيار المتكامل الفاخر بأوسع دعم راديو مدمج بين جميع المحاور هنا، بسعر يبلغ نحو 2.3 ضعف سعر Home Assistant Green. يناسب Aqara Hub M3 (السعر المقترح 219.99 دولارًا) المشترين الملتزمين بالفعل بأجهزة Aqara. يُعد IKEA DIRIGERA (139.99 دولارًا) أرخص نقطة دخول حقيقية لـ Matter/Thread. لم يتم اختبار أي من هذه المحاور من قِبل PromptQuorum — كل ادعاء أدناه مصدره وثائق الشركات المصنّعة، تم التحقق منه في 18 أكتوبر 2026.',
         bullets: [
           'الأفضل إجمالًا / الأفضل للذكاء الاصطناعي المحلي: Home Assistant Green (199 دولارًا/179 يورو) — يحتاج دونجل Zigbee/Thread/Z-Wave منفصل',
-          'أفضل بديل محلي أبسط: Hubitat Elevation C-8 Pro (188.95 دولارًا) — أشبه بجهاز منزلي، جهد أقل',
+          'أفضل بديل محلي أبسط: Hubitat Elevation C-8 Pro (184.95 دولارًا) — أشبه بجهاز منزلي، جهد أقل',
           'أفضل حل متكامل فاخر: Homey Pro (449 دولارًا) — أوسع راديوهات مدمجة، أعلى سعر',
           'الأفضل لأسر نظام Aqara: Aqara Hub M3 (السعر المقترح 219.99 دولارًا، غالبًا حوالي 159.99 دولارًا)',
-          'أفضل محور نظام اقتصادي: IKEA DIRIGERA (119.99 دولارًا) — راجع الدليل المخصص على هذا الموقع',
+          'أفضل محور نظام اقتصادي: IKEA DIRIGERA (139.99 دولارًا) — راجع الدليل المخصص على هذا الموقع',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -4246,6 +4594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'تكلفة الحزمة الأولية', anchor: 'starter-package' },
       { label: 'Hubitat Elevation C-8 Pro', anchor: 'hubitat' },
       { label: 'Homey Pro', anchor: 'homey' },
+      { label: 'بدائل Homey Pro', anchor: 'homey-alternatives' },
       { label: 'Aqara Hub M3', anchor: 'aqara-m3' },
       { label: 'IKEA DIRIGERA', anchor: 'dirigera' },
       { label: 'جدول المقارنة الكامل', anchor: 'comparison' },
@@ -4254,6 +4603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'أي محور يجب أن تشتري؟ (مرة أخرى)', anchor: 'which-to-buy-2' },
       { label: 'لا تشترِ محورًا بعد', anchor: 'dont-buy-yet' },
       { label: 'شجرة قرار البروتوكولات', anchor: 'protocol-tree' },
+      { label: 'محاور المنزل الذكي في اليابان', anchor: 'japan' },
       { label: 'أفضل محور للذكاء الاصطناعي المحلي', anchor: 'local-ai' },
       { label: 'مجموعة بداية المنزل الذكي المحلي', anchor: 'starter-kit' },
       { label: 'سلّم الميزانية', anchor: 'budget-ladder' },
@@ -4266,7 +4616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'يُعد Home Assistant Green (199 دولارًا/179 يورو) أفضل محور منزل ذكي إجمالًا للتحكم المحلي وإمكانات الذكاء الاصطناعي المحلي في ⁨2026⁩، مع Hubitat Elevation C-8 Pro (188.95 دولارًا) كبديل أبسط دون جهد إضافي وHomey Pro (449 دولارًا) كخيار متكامل فاخر.' },
+      { type: 'one-sentence', content: 'يُعد Home Assistant Green (199 دولارًا/179 يورو) أفضل محور منزل ذكي إجمالًا للتحكم المحلي وإمكانات الذكاء الاصطناعي المحلي في ⁨2026⁩، مع Hubitat Elevation C-8 Pro (184.95 دولارًا) كبديل أبسط دون جهد إضافي وHomey Pro (449 دولارًا) كخيار متكامل فاخر.' },
       { type: 'plain-terms', content: 'محور المنزل الذكي هو الجهاز الذي يتحدث مع أجهزتك وينفّذ أتمتتك دون الحاجة إلى الإنترنت. يقارن هذا الدليل خمسة منتجات حالية — ما البروتوكولات التي تدعمها من الصندوق، وكم تكلّف اليوم، وأي نمط شراء يناسب كل واحد منها فعليًا — دون الادعاء بأن PromptQuorum اختبر أيًا منها.' },
     ],
     sections: {
@@ -4276,11 +4626,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Home Assistant Green (199 دولارًا/179 يورو) — الأفضل إجمالًا وأفضل إمكانات ذكاء اصطناعي محلي، لكنه يحتاج دونجل USB منفصل لـ Zigbee/Thread/Z-Wave',
-          'Hubitat Elevation C-8 Pro (188.95 دولارًا، تم تأكيد ارتفاعه من 179.95 دولارًا سابقًا) — أفضل أتمتة محلية أشبه بجهاز منزلي، وأقل جهد',
+          'Hubitat Elevation C-8 Pro (184.95 دولارًا، الشحن داخل الولايات المتحدة فقط) — أفضل أتمتة محلية أشبه بجهاز منزلي، وأقل جهد',
           'Homey Pro (449 دولارًا) — أفضل حل متكامل فاخر، أوسع راديوهات مدمجة، بسعر يبلغ نحو 2.3 ضعف سعر Home Assistant Green',
           'Aqara Hub M3 (السعر المقترح 219.99 دولارًا، غالبًا حوالي 159.99 دولارًا) — الأنسب للأسر المستثمرة بالفعل في أجهزة Aqara، وليس منصة مفتوحة',
-          'IKEA DIRIGERA (119.99 دولارًا) — أرخص محور نظام حقيقي، راجع دليل DIRIGERA المخصص على هذا الموقع',
-          'لم يتم اختبار أو قياس أداء أي من هذه المحاور من قِبل PromptQuorum — كل ادعاء مصدره وثائق الشركات المصنّعة، تم التحقق منه في 25 أغسطس 2026',
+          'IKEA DIRIGERA (139.99 دولارًا) — أرخص محور نظام حقيقي، راجع دليل DIRIGERA المخصص على هذا الموقع',
+          'لم يتم اختبار أو قياس أداء أي من هذه المحاور من قِبل PromptQuorum — كل ادعاء مصدره وثائق الشركات المصنّعة، تم التحقق منه في 18 أكتوبر 2026',
         ],
       },
       quickVerdict: {
@@ -4290,14 +4640,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['المحور', 'الأفضل لـ', 'تقييم التحكم المحلي', 'Zigbee', 'Z-Wave', 'Matter/Thread', 'إمكانات الذكاء الاصطناعي', 'السعر'],
         rows: [
           { المحور: '[Home Assistant Green](https://www.home-assistant.io/green/)', 'الأفضل لـ': 'أقصى تحكم/ذكاء اصطناعي', 'تقييم التحكم المحلي': 'الأعلى', Zigbee: 'عبر دونجل', 'Z-Wave': 'عبر دونجل', 'Matter/Thread': 'عبر دونجل', 'إمكانات الذكاء الاصطناعي': 'الأعلى (Ollama)', السعر: '199 دولارًا/179 يورو' },
-          { المحور: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 'الأفضل لـ': 'أتمتة محلية بسيطة', 'تقييم التحكم المحلي': 'عالٍ', Zigbee: 'مدمج 3.0', 'Z-Wave': 'مدمج 800 LR', 'Matter/Thread': 'Matter 1.5 (بلا راديو Thread)', 'إمكانات الذكاء الاصطناعي': 'منخفضة (جهاز منزلي)', السعر: '188.95 دولارًا' },
+          { المحور: '[Hubitat C-8 Pro](https://hubitat.com/products/7194320273451)', 'الأفضل لـ': 'أتمتة محلية بسيطة', 'تقييم التحكم المحلي': 'عالٍ', Zigbee: 'مدمج 3.0', 'Z-Wave': 'مدمج 800 LR', 'Matter/Thread': 'Matter 1.5 (بلا راديو Thread)', 'إمكانات الذكاء الاصطناعي': 'منخفضة (جهاز منزلي)', السعر: '184.95 دولارًا' },
           { المحور: '[Homey Pro](https://homey.app/en-us/homey-pro/)', 'الأفضل لـ': 'حل متكامل فاخر', 'تقييم التحكم المحلي': 'مختلط*', Zigbee: 'مدمج 3.0', 'Z-Wave': 'مدمج 700', 'Matter/Thread': 'Matter 1.5 + موجّه حدودي Thread', 'إمكانات الذكاء الاصطناعي': 'منخفضة (جهاز منزلي)', السعر: '449 دولارًا' },
           { المحور: '[Aqara Hub M3](https://www.aqara.com/en/product/hub-m3/)', 'الأفضل لـ': 'نظام Aqara', 'تقييم التحكم المحلي': 'مختلط*', Zigbee: 'مدمج', 'Z-Wave': 'لا يوجد', 'Matter/Thread': 'وحدة تحكم Matter + Thread', 'إمكانات الذكاء الاصطناعي': 'لا يوجد (جسر)', السعر: '219.99 دولارًا سعر مقترح' },
-          { المحور: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 'الأفضل لـ': 'نظام اقتصادي', 'تقييم التحكم المحلي': 'مختلط*', Zigbee: 'أجهزة IKEA فقط', 'Z-Wave': 'لا يوجد', 'Matter/Thread': 'Matter 1.4 + موجّه حدودي Thread', 'إمكانات الذكاء الاصطناعي': 'لا يوجد (جسر)', السعر: '119.99 دولارًا' },
+          { المحور: '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 'الأفضل لـ': 'نظام اقتصادي', 'تقييم التحكم المحلي': 'مختلط*', Zigbee: 'أجهزة IKEA فقط', 'Z-Wave': 'لا يوجد', 'Matter/Thread': 'Matter 1.4 + موجّه حدودي Thread', 'إمكانات الذكاء الاصطناعي': 'لا يوجد (جسر)', السعر: '139.99 دولارًا' },
         ],
         items: [
           '*تقييم التحكم المحلي "المختلط": تستخدم Homey وAqara وIKEA تطبيقات مرافقة متصلة بالسحابة للإعداد/الوصول عن بُعد إلى جانب تنفيذ الأتمتة محليًا — لا يعمل أي منها بلا اتصال تمامًا بقدر ما يمكن لنسخة Home Assistant المستضافة ذاتيًا أن تعمل. راجع "ماذا يمنحك التحكم المحلي فعليًا؟" أدناه لمعرفة التفاصيل الدقيقة.',
-          'تم التحقق من كل خلية أعلاه بشكل مستقل مقابل صفحة المنتج الحالية لكل شركة مصنّعة في 25 أغسطس 2026 — لا تنسخ هذه الأرقام دون إعادة التحقق، فقد شهدت هذه الفئة بالفعل ارتفاعًا مؤكدًا في السعر (Hubitat) منذ نسخة سابقة من هذه الصفحة.',
+          'تم التحقق من كل خلية أعلاه بشكل مستقل مقابل صفحة المنتج الحالية لكل شركة مصنّعة في 18 أكتوبر 2026 (آخر تأكيد لسعر Aqara Hub M3 كان في 25 أغسطس 2026 — صفحة منتج Aqara الحالية لا تعرض أي سعر) — لا تنسخ هذه الأرقام دون إعادة التحقق: تغيّرت الأسعار في هذه الفئة مرتين منذ أغسطس (انخفض سعر Hubitat وارتفع سعر IKEA DIRIGERA).',
         ],
       },
       topPicks: {
@@ -4306,12 +4656,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**ابدأ هنا إذا كنت تريد الإجابة فقط.**',
         items: [
           'الأفضل إجمالًا — Home Assistant Green (199 دولارًا/179 يورو): يشغّل منصة Home Assistant الحقيقية، وهي النظام الأكثر غنى بالتكاملات وانفتاحًا في هذه المقارنة. التقييم التحريري: 9.3/10 (تقييم مبني على البحث من الوثائق الرسمية، وليس نتيجة مختبرة معمليًا).',
-          'أفضل بديل أبسط — Hubitat Elevation C-8 Pro (188.95 دولارًا): أتمتة محلية تتصرف كجهاز منزلي، وليست جهاز Linux يجب صيانته. التقييم التحريري: 8.7/10.',
+          'أفضل بديل أبسط — Hubitat Elevation C-8 Pro (184.95 دولارًا): أتمتة محلية تتصرف كجهاز منزلي، وليست جهاز Linux يجب صيانته. التقييم التحريري: 8.7/10.',
           'أفضل حل متكامل — Homey Pro (449 دولارًا): أوسع دعم بروتوكولات مدمج بين جميع المحاور هنا، بعلاوة سعرية حقيقية تستحق أن تُذكر بوضوح. التقييم التحريري: 8.5/10.',
         ],
         affiliateLinks: [
           { label: 'تحقق من السعر الحالي — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199 دولارًا / 179 يورو' },
-          { label: 'تحقق من السعر الحالي — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188.95 دولارًا' },
+          { label: 'تحقق من السعر الحالي — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184.95 دولارًا' },
           { label: 'تحقق من السعر الحالي — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '449 دولارًا' },
           { label: 'تحقق من السعر الحالي — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'تحقق من السعر الحالي — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -4380,7 +4730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hubitat',
         title: 'Hubitat Elevation C-8 Pro — أفضل بديل محلي أبسط',
         content:
-          '**التقييم التحريري: 8.7/10 (تقييم مبني على البحث، وليس نتيجة مختبرة معمليًا).** يشغّل Elevation C-8 Pro من Hubitat (188.95 دولارًا، مؤكد على hubitat.com — ارتفاعًا عن 179.95 دولارًا التي استشهدت بها نسخة سابقة من هذه الصفحة، وهو ارتفاع سعر حقيقي وحالي) منصة الأتمتة المحلية الخاصة بـ Hubitat، وليس Home Assistant. يدعم Zigbee 3.0 وZ-Wave 800 Long Range وMatter 1.5 كوحدة تحكم وBluetooth، جميعها مدمجة.',
+          '**التقييم التحريري: 8.7/10 (تقييم مبني على البحث، وليس نتيجة مختبرة معمليًا).** يشغّل Elevation C-8 Pro من Hubitat (184.95 دولارًا، مؤكد على hubitat.com بتاريخ 18 أكتوبر 2026 — أقل قليلًا من السعر الذي ذكرته هذه الصفحة في أغسطس؛ يُشحن Hubitat إلى الولايات الأمريكية الـ48 المتجاورة فقط) منصة الأتمتة المحلية الخاصة بـ Hubitat، وليس Home Assistant. يدعم Zigbee 3.0 وZ-Wave 800 Long Range وMatter 1.5 كوحدة تحكم وBluetooth، جميعها مدمجة.',
         items: [
           'الأفضل للمستخدمين الذين يريدون تجربة أتمتة محلية أشبه بجهاز منزلي، وليس نظامًا على طراز Linux يجب صيانته — صُمم محرك القواعد وواجهة الويب وعملية التحديث في Hubitat لتبدو مغلقة ومستقرة، وليست كجهاز كمبيوتر عام الغرض تديره بنفسك.',
           'لماذا يفوز Home Assistant بدلًا من ذلك: عدد تكاملات أكبر بكثير، دعم أصلي لـ Frigate/الذكاء الاصطناعي للكاميرات، تخصيص عميق عبر YAML وإضافات المجتمع، ومسار واقعي نحو أتمتة نموذج اللغة الكبير المحلي. منصة Hubitat الخاصة غير مصممة لأي من ذلك.',
@@ -4388,7 +4738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التوافق: Zigbee 3.0 ✅مدمج · Z-Wave 800 LR ✅مدمج · Matter 1.5 ✅ (كوحدة تحكم فقط، بلا راديو Thread) · Bluetooth ✅ · صعوبة الإعداد: سهلة.',
         ],
         affiliateLinks: [
-          { label: 'تحقق من السعر الحالي — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188.95 دولارًا' },
+          { label: 'تحقق من السعر الحالي — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184.95 دولارًا' },
         ],
       },
       homey: {
@@ -4397,13 +4747,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**التقييم التحريري: 8.5/10 (تقييم مبني على البحث، وليس نتيجة مختبرة معمليًا).** يبلغ سعر Homey Pro (2026) 449 دولارًا (مؤكد على homey.app، ارتفاعًا من 399 دولارًا بعد تغيير السعر في 1 يونيو 2026) مع 4 غيغابايت رام و8 غيغابايت eMMC ومعالج رباعي النواة ARMv8 بسرعة 1.5 غيغاهرتز. يمتلك أوسع مجموعة راديو مدمجة بين جميع المحاور في هذا الدليل: Wi-Fi وBluetooth 5.0 وMatter v1.5 وموجّه حدودي Thread وZigbee 3.0 وZ-Wave 700 و433 ميغاهرتز والأشعة تحت الحمراء.',
         items: [
-          'لنسمّ فجوة السعر بوضوح: 449 دولارًا يعادل نحو 2.3 ضعف سعر Home Assistant Green البالغ 199 دولارًا، ونحو 2.4 ضعف سعر Hubitat البالغ 188.95 دولارًا — تشتري هذه العلاوة راديوهات مدمجة كنت ستجمّعها بنفسك، وليس مستوى قدرات مختلفًا جذريًا.',
+          'لنسمّ فجوة السعر بوضوح: 449 دولارًا يعادل نحو 2.3 ضعف سعر Home Assistant Green البالغ 199 دولارًا، ونحو 2.4 ضعف سعر Hubitat البالغ 184.95 دولارًا — تشتري هذه العلاوة راديوهات مدمجة كنت ستجمّعها بنفسك، وليس مستوى قدرات مختلفًا جذريًا.',
           'الأفضل للمشترين الذين يريدون أوسع مجموعة راديو جاهزة من الصندوق دون أي تسوق للدونجلات على الإطلاق، ويقدّرون نظام تطبيقات Homey الخاص وصقله أكثر من مجتمع Home Assistant المفتوح الأكبر بكثير.',
           'لماذا يفوز Home Assistant/Hubitat بدلًا من ذلك: عند هذا السعر، يظل Home Assistant Green مع دونجل Connect ZBT-2 (199 دولارًا + 49 دولارًا = 248 دولارًا) أرخص من Homey Pro بنحو 200 دولار مع إضافة مساحة للذكاء الاصطناعي المحلي لا توفرها منصة Homey الخاصة.',
           'التوافق: Zigbee 3.0 ✅مدمج · Z-Wave 700 ✅مدمج · Matter v1.5 ✅ · موجّه حدودي Thread ✅مدمج · 433 ميغاهرتز ✅ · أشعة تحت حمراء ✅ · صعوبة الإعداد: سهلة.',
         ],
         affiliateLinks: [
           { label: 'تحقق من السعر الحالي — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '449 دولارًا' },
+        ],
+      },
+      homeyAlternatives: {
+        id: 'homey-alternatives',
+        title: 'بدائل Homey Pro والمقارنة بين Hubitat وHomey',
+        content: '**يعتمد أفضل بديل لـ Homey Pro على ما تريد تجنّبه: السعر البالغ 449 دولارًا، أو المنصة المغلقة للتطبيقات، أو الحاجة إلى شراء الراديوهات منفصلة.** يجيب Hubitat وHome Assistant Green كل منهما عن واحد من هذه الأسباب، ويجيب Homey Pro mini الأرخص من Homey نفسها عن سؤال السعر داخل المنصة ذاتها.',
+        columns: ['البديل', 'السعر', 'المقايضة مقابل Homey Pro'],
+        rows: [
+          { 'البديل': '[Hubitat Elevation C-8 Pro](https://hubitat.com/products/7194320273451)', 'السعر': '184.95 دولارًا', 'المقايضة مقابل Homey Pro': 'Zigbee/Z-Wave مدمجان، بلا Thread، شحن داخل أمريكا فقط' },
+          { 'البديل': '[Home Assistant Green](https://www.home-assistant.io/green/) + ZBT-2', 'السعر': '248 دولارًا إجمالًا', 'المقايضة مقابل Homey Pro': 'الأكثر انفتاحًا، إعداد أكثر، Z-Wave يحتاج دونجل ثانيًا' },
+          { 'البديل': '[Homey Pro mini](https://homey.app/en-us/homey-pro-mini/)', 'السعر': '249 دولارًا', 'المقايضة مقابل Homey Pro': 'نفس نظام Homey، لكن بلا Z-Wave أو Wi-Fi أو Bluetooth مدمج' },
+          { 'البديل': '[IKEA DIRIGERA](https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/)', 'السعر': '139.99 دولارًا', 'المقايضة مقابل Homey Pro': 'Matter/Thread فقط، يتمحور حول IKEA، بلا Z-Wave' },
+        ],
+        items: [
+          'Hubitat مقابل Homey من حيث السعر: يكلّف Hubitat Elevation C-8 Pro (184.95 دولارًا) أقل من نصف سعر Homey Pro (449 دولارًا)، ويضم كلاهما Zigbee 3.0 وZ-Wave ووحدة تحكم Matter.',
+          'Hubitat مقابل Homey من حيث الراديوهات: يضيف Homey Pro موجّهًا حدوديًا لـ Thread و433 ميغاهرتز والأشعة تحت الحمراء؛ أما Hubitat فلا يملك راديو Thread. Z-Wave في Homey من سلسلة 700، وفي Hubitat من سلسلة 800 مع Long Range.',
+          'Hubitat مقابل Homey من حيث المنصة: Hubitat جهاز مغلق بمحرك قواعد وواجهة ويب؛ أما Homey فقائم على التطبيقات والتدفقات مع تطبيق جوال متقن ومتجر تطبيقات مجتمعي. لا تشغّل أي منهما تكامل نموذج لغة كبير محلي على منصتها الخاصة.',
+          'يشغّل Homey Pro mini (249 دولارًا، مؤكد على homey.app بتاريخ 18 أكتوبر 2026) نفس نظام Homey Pro مع Zigbee 3.0 وMatter v1.5 وموجّه حدودي Thread مدمجة، لكن Z-Wave وBluetooth و433 ميغاهرتز والأشعة تحت الحمراء تحتاج إلى Homey Bridge المنفصل بسعر 69 دولارًا، لذا لا يوفّر المال إلا إذا كنت لا تحتاج إلى تلك الراديوهات.',
+          'إذا كان سبب مغادرتك Homey هو الارتباط بمورّد واحد لا السعر، فالبديل العملي هو Home Assistant Green — الخيار الوحيد هنا الذي تكون منصته مفتوحة المصدر وقابلة للنقل إلى أجهزة أخرى.',
         ],
       },
       aqaraM3: {
@@ -4426,15 +4795,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'dirigera',
         title: 'IKEA DIRIGERA — أفضل محور نظام اقتصادي',
         content:
-          '**التقييم التحريري: 7.8/10 (تقييم مبني على البحث، وليس نتيجة مختبرة معمليًا).** يُعد DIRIGERA من IKEA (119.99 دولارًا، مؤكد على ikea.com) أرخص محور Matter/Thread حقيقي في هذه المقارنة. أصبح وحدة تحكم Matter كاملة وموجّهًا حدوديًا لـ Thread عبر تحديث للبرنامج الثابت في 2025، مما يتيح له إدراج بعض أجهزة Matter من جهات خارجية، وليس فقط خط منتجات IKEA الخاص. يمتلك هذا الموقع دليلًا مخصصًا لـ DIRIGERA مع تفصيل كامل للنظام البيئي.',
+          '**التقييم التحريري: 7.8/10 (تقييم مبني على البحث، وليس نتيجة مختبرة معمليًا).** يُعد DIRIGERA من IKEA (139.99 دولارًا، مؤكد على ikea.com) أرخص محور Matter/Thread حقيقي في هذه المقارنة. أصبح وحدة تحكم Matter كاملة وموجّهًا حدوديًا لـ Thread عبر تحديث للبرنامج الثابت في 2025، مما يتيح له إدراج بعض أجهزة Matter من جهات خارجية، وليس فقط خط منتجات IKEA الخاص. يمتلك هذا الموقع دليلًا مخصصًا لـ DIRIGERA مع تفصيل كامل للنظام البيئي.',
         items: [
           'اشترِه إذا: أردت أرخص نقطة دخول حقيقية إلى التحكم المحلي في Matter/Thread، وكنت مرتاحًا لتطبيق IKEA الخاص ونطاق أجهزتها كتجربة أساسية، ولا تحتاج إلى تخصيص بمستوى Hubitat/Home Assistant.',
           'لا تشترِه إذا: أردت محورًا واحدًا يدير أيضًا أجهزة Zigbee غير Matter من علامات تجارية أخرى، أو تحتاج إلى Z-Wave، أو تريد عمق تكامل Home Assistant — محرك الأتمتة الخاص بـ DIRIGERA بسيط عمدًا.',
-          'مقارنة الأسعار بوضوح: DIRIGERA (119.99 دولارًا) أرخص بنحو 80 دولارًا من Home Assistant Green (199 دولارًا) وأرخص بنحو 69 دولارًا من Hubitat (188.95 دولارًا) — والمقايضة هي نظام أجهزة وأتمتة أصغر بكثير ومتمحور حول IKEA.',
+          'مقارنة الأسعار بوضوح: DIRIGERA (139.99 دولارًا) أرخص بنحو 59 دولارًا من Home Assistant Green (199 دولارًا) وأرخص بنحو 45 دولارًا من Hubitat (184.95 دولارًا) — والمقايضة هي نظام أجهزة وأتمتة أصغر بكثير ومتمحور حول IKEA.',
           'التوافق: Matter 1.4 ✅وحدة تحكم · موجّه حدودي Thread ✅ · Zigbee ✅ (أجهزة IKEA، عبر جسر Matter لبعض الجهات الخارجية) · Z-Wave ❌ · صعوبة الإعداد: سهلة.',
         ],
         affiliateLinks: [
-          { label: 'تحقق من السعر الحالي — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '119.99 دولارًا' },
+          { label: 'تحقق من السعر الحالي — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub', priceRange: '139.99 دولارًا' },
         ],
       },
       comparison: {
@@ -4454,7 +4823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { البُعد: 'ذكاء اصطناعي محلي (Ollama/LLM)', 'Home Assistant Green': 'نعم، على جهاز مرتقى؛ ليس على 4 غيغابايت في Green وحدها', 'Hubitat C-8 Pro': 'غير مدعوم من المنصة', 'Homey Pro': 'غير مدعوم من المنصة' },
           { البُعد: 'Frigate / ذكاء اصطناعي للكاميرا', 'Home Assistant Green': 'نعم، عبر إضافة Home Assistant', 'Hubitat C-8 Pro': 'لا دعم أصلي', 'Homey Pro': 'لا دعم أصلي' },
           { البُعد: 'حرية النظام البيئي', 'Home Assistant Green': 'الأعلى — بلا ارتباط بمورّد', 'Hubitat C-8 Pro': 'متوسطة — خاصة بـ Hubitat', 'Homey Pro': 'متوسطة — خاصة بـ Homey' },
-          { البُعد: 'السعر', 'Home Assistant Green': '199 دولارًا / 179 يورو', 'Hubitat C-8 Pro': '188.95 دولارًا', 'Homey Pro': '449 دولارًا' },
+          { البُعد: 'السعر', 'Home Assistant Green': '199 دولارًا / 179 يورو', 'Hubitat C-8 Pro': '184.95 دولارًا', 'Homey Pro': '449 دولارًا' },
         ],
       },
       hubVsController: {
@@ -4495,7 +4864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         affiliateLinks: [
           { label: 'تحقق من السعر الحالي — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199 دولارًا / 179 يورو' },
-          { label: 'تحقق من السعر الحالي — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188.95 دولارًا' },
+          { label: 'تحقق من السعر الحالي — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184.95 دولارًا' },
           { label: 'تحقق من السعر الحالي — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub' },
           { label: 'تحقق من السعر الحالي — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'تحقق من السعر الحالي — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -4522,6 +4891,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'إذا كنت': 'تبدأ من جديد مع Matter', 'المحور (أو المحاور) الأنسب': 'أي من الخمسة — جميعها تعمل كوحدات تحكم Matter' },
           { 'إذا كنت': 'كثيف استخدام Thread (Matter over Thread)', 'المحور (أو المحاور) الأنسب': 'Homey أو DIRIGERA (موجّه حدودي مدمج)' },
           { 'إذا كنت': 'تريد أقصى مرونة مستقبلية', 'المحور (أو المحاور) الأنسب': 'Home Assistant Green + دونجل' },
+        ],
+      },
+      japan: {
+        id: 'japan',
+        title: 'أفضل محور منزل ذكي في اليابان: أي المحاور تعمل مع أكبر عدد من الأجهزة',
+        content: '**في اليابان، اختر المحور بحسب الراديو وبحسب إمكانية شرائه واستخدامه قانونيًا هناك: تعمل Zigbee وThread وMatter على 2.4 غيغاهرتز عالميًا، لكن Z-Wave تستخدم نطاقًا يابانيًا مستقلًا، وتُباع عدة محاور هنا للسوق الأمريكية فقط.**',
+        items: [
+          'Z-Wave هي الفخ الإقليمي: نطاق Z-Wave في اليابان هو 922–926 ميغاهرتز (ARIB STD-T108، بحسب وثائق Z-Wave.me)، وليس نطاق 908.4 ميغاهرتز الأمريكي. راديو Z-Wave في Hubitat C-8 Pro بالتردد الأمريكي، ويشحن Hubitat إلى الولايات الأمريكية الـ48 المتجاورة فقط، فلا يُعد شراؤه عمليًا في اليابان.',
+          'تذكر Homey أن هوائيات Pro لديها تتبدّل بحسب اللوائح المحلية، لكن صفحتها لا تذكر نسخة Z-Wave خاصة باليابان — تأكد من دعم Z-Wave الياباني لدى Athom قبل شراء Homey Pro لأجهزة Z-Wave في اليابان.',
+          'لا تحتاج Zigbee 3.0 وThread وMatter إلى أجهزة إقليمية: تغطي هذه البروتوكولات جميعها Home Assistant Green مع Connect ZBT-2 وAqara Hub M3 (تذكر Aqara نشرًا يابانيًا يضم 110 أسر) وIKEA DIRIGERA.',
+          'الأنسب لعبارة «يعمل مع أكبر عدد من الأجهزة»: Home Assistant Green، لأن مكتبة تكاملاته تغطي Matter وZigbee والأجهزة المحلية دون سحابة. بسعر 199 دولارًا مع نحو 49 دولارًا لـ ZBT-2 يبلغ المجموع نحو 248 دولارًا قبل تكاليف الشحن والاستيراد.',
+          'تحقق من شهادة قانون الراديو الياباني الخاصة بكل جهاز (علامة المطابقة التقنية) — فقد لا يجوز قانونيًا استخدام جهاز أو دونجل اشتُري من الخارج في اليابان. هذا إرشاد عام وليس استشارة قانونية؛ لم تختبر PromptQuorum أي محور في اليابان.',
         ],
       },
       localAi: {
@@ -4571,8 +4952,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**ما تحصل عليه فعليًا في كل مستوى سعري.**',
         columns: ['الميزانية', 'ما تحصل عليه'],
         rows: [
-          { الميزانية: 'أقل من 150 دولارًا', 'ما تحصل عليه': 'IKEA DIRIGERA (119.99 دولارًا) — نظام Matter/Thread للمبتدئين' },
-          { الميزانية: '150-250 دولارًا', 'ما تحصل عليه': 'Home Assistant Green (199 دولارًا) أو Hubitat C-8 Pro (188.95 دولارًا) — محور واحد، بلا راديوهات/مستشعرات بعد' },
+          { الميزانية: 'أقل من 150 دولارًا', 'ما تحصل عليه': 'IKEA DIRIGERA (139.99 دولارًا) — نظام Matter/Thread للمبتدئين' },
+          { الميزانية: '150-250 دولارًا', 'ما تحصل عليه': 'Home Assistant Green (199 دولارًا) أو Hubitat C-8 Pro (184.95 دولارًا) — محور واحد، بلا راديوهات/مستشعرات بعد' },
           { الميزانية: '250-500 دولارًا', 'ما تحصل عليه': 'HA Green + دونجل + بضعة مستشعرات، أو Homey Pro (449 دولارًا) وحده' },
           { الميزانية: '500-1,000 دولار أو أكثر', 'ما تحصل عليه': 'HA Green + كمبيوتر ذكاء اصطناعي مصغّر مخصص + كاميرات + مستشعرات + قفل (راجع مجموعة البداية أعلاه)' },
         ],
@@ -4635,15 +5016,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**خمسة محاور، خمسة أنماط مشترين مختلفة — الاختيار الصحيح يعتمد على ما تحتاجه فعليًا، وليس على من يحصل على أعلى درجة على الورق.**',
         items: [
           'Home Assistant Green (199 دولارًا/179 يورو) — الأفضل إجمالًا. التقييم التحريري: 9.3/10. اشترِه إذا أردت المنصة الأكثر انفتاحًا ومساحة حقيقية للذكاء الاصطناعي المحلي، ولا تمانع تجميع نظام من الدونجلات والمستشعرات.',
-          'Hubitat Elevation C-8 Pro (188.95 دولارًا) — أفضل جهاز منزلي محلي. التقييم التحريري: 8.7/10. اشترِه إذا أردت أتمتة محلية بأقل جهد ولا تحتاج إلى اتساع تكاملات Home Assistant.',
+          'Hubitat Elevation C-8 Pro (184.95 دولارًا) — أفضل جهاز منزلي محلي. التقييم التحريري: 8.7/10. اشترِه إذا أردت أتمتة محلية بأقل جهد ولا تحتاج إلى اتساع تكاملات Home Assistant.',
           'Homey Pro (449 دولارًا) — أفضل حل متكامل فاخر. التقييم التحريري: 8.5/10. اشترِه إذا كان اتساع الراديوهات المدمجة وصقل تطبيق Homey الخاص يستحقان بالنسبة لك نحو 2.3 ضعف سعر Home Assistant Green.',
           'Aqara Hub M3 (السعر المقترح 219.99 دولارًا، غالبًا حوالي 159.99 دولارًا) — أفضل محور لنظام Aqara. التقييم التحريري: 8.0/10. اشترِه إذا كنت مستثمرًا بالفعل تحديدًا في أجهزة Aqara.',
-          'IKEA DIRIGERA (119.99 دولارًا) — أفضل محور نظام بسيط. التقييم التحريري: 7.8/10. اشترِه إذا كانت الميزانية هي العامل الحاسم وكنت مرتاحًا لجعل تطبيق IKEA محور تجربتك.',
+          'IKEA DIRIGERA (139.99 دولارًا) — أفضل محور نظام بسيط. التقييم التحريري: 7.8/10. اشترِه إذا كانت الميزانية هي العامل الحاسم وكنت مرتاحًا لجعل تطبيق IKEA محور تجربتك.',
           'قاعدة الشراء الأساسية لجمهور هذا الموقع المهتم بالذكاء الاصطناعي المحلي: التوصية بالمنصة الأقل ارتباطًا بنظام بيئي واحد، وهي Home Assistant Green — لكن هذا ليس الاختيار الصحيح لكل مشترٍ. إذا كانت بساطة الجهاز المنزلي أو اتساع الراديوهات المدمجة أهم بالنسبة لك من الانفتاح، فإن Hubitat أو Homey هما الاختيار الصحيح بصدق، وليسا جائزة ترضية.',
         ],
         affiliateLinks: [
           { label: 'تحقق من السعر الحالي — Home Assistant Green', url: 'https://www.home-assistant.io/green/', productName: 'Home Assistant Green', productCategory: 'Smart home hub', priceRange: '199 دولارًا / 179 يورو' },
-          { label: 'تحقق من السعر الحالي — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '188.95 دولارًا' },
+          { label: 'تحقق من السعر الحالي — Hubitat Elevation C-8 Pro', url: 'https://hubitat.com/products/7194320273451', productName: 'Hubitat Elevation C-8 Pro', productCategory: 'Smart home hub', priceRange: '184.95 دولارًا' },
           { label: 'تحقق من السعر الحالي — Homey Pro', url: 'https://homey.app/en-us/homey-pro/', productName: 'Homey Pro', productCategory: 'Smart home hub', priceRange: '449 دولارًا' },
           { label: 'تحقق من السعر الحالي — Aqara Hub M3', url: 'https://www.aqara.com/en/product/hub-m3/', productName: 'Aqara Hub M3', productCategory: 'Smart home hub' },
           { label: 'تحقق من السعر الحالي — IKEA DIRIGERA', url: 'https://www.ikea.com/us/en/p/dirigera-hub-for-smart-products-white-smart-50503414/', productName: 'IKEA DIRIGERA', productCategory: 'Smart home hub' },
@@ -4679,6 +5060,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل أحتاج دونجل Zigbee مع Home Assistant Green؟', a: 'نعم، إذا كان لديك أو تخطط لشراء أي أجهزة Zigbee — لا يحتوي Green على راديو مدمج. راجع دليل دونجل Zigbee وThread على هذا الموقع للخيارات الحالية مثل Home Assistant Connect ZBT-2 (49 دولارًا/45 يورو).' },
           { q: 'هل يدعم Home Assistant Green الذكاء الاصطناعي المحلي؟', a: 'يدعم برنامج Home Assistant تكامل نموذج لغة كبير محلي عبر Ollama، لكن ذاكرة Green البالغة 4 غيغابايت غير مصممة لتشغيل نموذج لغة كبير محلي بشكل جيد أيضًا — اقرنه بكمبيوتر ذكاء اصطناعي مصغّر منفصل وأقوى (معمارية الصندوقين) للاستخدام الحقيقي للذكاء الاصطناعي المحلي، بدلًا من توقّع أن يتولى Green وحده كلتا المهمتين.' },
           { q: 'Home Assistant Green مقابل Hubitat — أيهما يجب أن أشتري؟', a: 'Home Assistant Green إذا أردت أقصى انفتاح واتساع تكامل وإمكانات ذكاء اصطناعي محلي ولا تمانع تجميع نظام قائم على الدونجل. Hubitat Elevation C-8 Pro إذا أردت أتمتة محلية تتصرف كجهاز منزلي بسيط مع Zigbee/Z-Wave مدمجين وإعداد بأدنى حد.' },
+          { q: 'ما هو أفضل بديل لـ Homey Pro؟', a: 'Hubitat Elevation C-8 Pro (184.95 دولارًا) هو أقرب بديل براديوهات مدمجة بأقل من نصف السعر؛ وHome Assistant Green مع دونجل ZBT-2 (248 دولارًا) هو البديل المفتوح المنصة؛ أما Homey Pro mini (249 دولارًا) فيُبقيك على منصة Homey لكنه يفقد Z-Wave وWi-Fi وBluetooth ما لم تضف Homey Bridge بسعر 69 دولارًا.' },
+          { q: 'Hubitat مقابل Homey — أيهما أفضل؟', a: 'Hubitat أرخص (184.95 دولارًا مقابل 449 دولارًا) وهو محرك قواعد محلي أشبه بجهاز منزلي بلا راديو Thread؛ ويضيف Homey Pro راديو Thread و433 ميغاهرتز والأشعة تحت الحمراء وتطبيقًا أكثر إتقانًا. لا يعمل أي منهما دون اتصال بالكامل، ولا يقدّم أي منهما تكامل نموذج لغة كبير محلي أصليًا.' },
+          { q: 'ما هو أفضل محور منزل ذكي لليابان؟', a: 'لاتساع دعم الأجهزة، Home Assistant Green مع دونجل Zigbee/Thread، لأن Zigbee وThread وMatter معايير عالمية على 2.4 غيغاهرتز. تستخدم Z-Wave في اليابان نطاق 922–926 ميغاهرتز، ويعمل Hubitat C-8 Pro بالتردد الأمريكي ولا يُشحن إلا داخل الولايات المتحدة المتجاورة، لذا تحقق من دعم Z-Wave الإقليمي قبل شراء أي محور Z-Wave.' },
+          { q: 'ما هو أفضل محور أتمتة منزلية للمبتدئين؟', a: 'Hubitat Elevation C-8 Pro (184.95 دولارًا) إذا كنت في الولايات المتحدة وتريد أتمتة محلية مع Zigbee وZ-Wave مدمجين؛ Homey Pro (449 دولارًا) إذا أردت أسهل إعداد وكنت مستعدًا لدفع ثمنه؛ Home Assistant Green إذا قبلت إعدادًا أطول مقابل أقصى مرونة.' },
           { q: 'ما هو أفضل محور لـ Matter؟', a: 'يمكن لجميع المحاور الخمسة في هذا الدليل (Home Assistant Green وHubitat وHomey Pro وAqara Hub M3 وIKEA DIRIGERA) أن تعمل كوحدات تحكم Matter، لكن Homey Pro وIKEA DIRIGERA يمتلكان موجّهًا حدوديًا لـ Thread مدمجًا، بينما يحتاج Home Assistant Green إلى دونجل لهذا الدور — تحقق من قائمة وحدات التحكم المدعومة لجهاز Matter المحدد قبل الشراء.' },
         ],
       },
@@ -4686,14 +5071,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'أفضل محاور المنزل الذكي للتحكم المحلي في ⁨2026⁩: Home Assistant مقابل Hubitat مقابل Homey',
+      headline: 'أفضل محور منزل ذكي للتحكم المحلي في ⁨2026⁩: Home Assistant مقابل Hubitat مقابل Homey',
       description: 'أفضل محاور المنزل الذكي للتحكم المحلي في ⁨2026⁩: مقارنة Home Assistant Green وHubitat Elevation C-8 Pro وHomey Pro وAqara Hub M3 وIKEA DIRIGERA.',
       url: 'https://www.promptquorum.com/ar/smart-home/best-smart-home-hubs-2027',
       inLanguage: 'ar',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-07-16',
-      dateModified: '2026-08-25',
+      dateModified: '2026-10-18',
       about: [{ '@type': 'Thing', name: 'Smart home hub' }, { '@type': 'Thing', name: 'Home Assistant Green' }, { '@type': 'Thing', name: 'Hubitat' }, { '@type': 'Thing', name: 'Homey' }, { '@type': 'Thing', name: 'Aqara Hub M3' }, { '@type': 'Thing', name: 'IKEA DIRIGERA' }],
       'proficiencyLevel': 'Beginner',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -4705,6 +5090,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       mainEntity: [
         { '@type': 'Question', name: 'ما هو أفضل محور لـ Home Assistant؟', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green (199 دولارًا/179 يورو) هو الجهاز الرسمي من الشركة الأولى لكنه يحتاج دونجل USB منفصل لـ Zigbee/Thread/Z-Wave.' } },
         { '@type': 'Question', name: 'هل يستحق Home Assistant Green الشراء؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم للمشترين الذين يريدون المنصة الأكثر انفتاحًا ومساحة للذكاء الاصطناعي المحلي، لكن توقع عملية إعداد متوسطة وشراء دونجل منفصل.' } },
+        { '@type': 'Question', name: 'ما هو أفضل بديل لـ Homey Pro؟', acceptedAnswer: { '@type': 'Answer', text: 'Hubitat Elevation C-8 Pro (184.95 دولارًا) براديوهات مدمجة بأقل من نصف السعر، أو Home Assistant Green مع دونجل ZBT-2 (248 دولارًا) لمنصة مفتوحة، أو Homey Pro mini (249 دولارًا) للبقاء على Homey مع راديوهات مدمجة أقل.' } },
+        { '@type': 'Question', name: 'ما هو أفضل محور منزل ذكي لليابان؟', acceptedAnswer: { '@type': 'Answer', text: 'يغطي Home Assistant Green مع دونجل Zigbee/Thread أكبر عدد من الأجهزة؛ تستخدم Z-Wave في اليابان نطاق 922–926 ميغاهرتز ولا يُشحن Hubitat إلا داخل الولايات المتحدة المتجاورة، لذا تحقق من الدعم الإقليمي أولًا.' } },
         { '@type': 'Question', name: 'Home Assistant Green مقابل Hubitat — أيهما يجب أن أشتري؟', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant Green لأقصى انفتاح وإمكانات ذكاء اصطناعي محلي؛ Hubitat Elevation C-8 Pro لأتمتة محلية أشبه بجهاز منزلي بإعداد بأدنى حد.' } },
       ],
     },

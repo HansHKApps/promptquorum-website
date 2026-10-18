@@ -10,10 +10,26 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-mini-pcs-local-llm",
+        "title": "Best Mini PCs for Local LLMs 2026: Mac Mini M6, M5 Pro, and Framework Desktop Compared",
+        "url": "/local-llms/best-mini-pcs-local-llm",
+        "dateModified": "2026-10-18",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "snug-protocol-review",
         "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
         "url": "/power-local-llm/snug-protocol-review",
+        "dateModified": "2026-10-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "uncensored-local-llm-creative-writing-ethics",
+        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
+        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
         "dateModified": "2026-10-18",
         "tier": "about"
       },
@@ -62,22 +78,6 @@
         "slug": "local-llm-hardware-guide",
         "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
         "url": "/local-llms/local-llm-hardware-guide",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "qwen-coder-vs-deepseek-mistral-local-2026",
-        "title": "Qwen3.6 vs DeepSeek vs Devstral: Local Coding Model Comparison 2026",
-        "url": "/local-llms/qwen-coder-vs-deepseek-mistral-local-2026",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "qwen-vs-llama-vs-mistral",
-        "title": "Qwen3.8-27B vs Llama 4 vs Mistral: Local LLM Comparison 2026",
-        "url": "/local-llms/qwen-vs-llama-vs-mistral",
         "dateModified": "2026-10-17",
         "tier": "about"
       }
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 163,
+    "totalCount": 164,
     "capped": true
   },
   "vLLM": {
@@ -860,6 +860,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "uncensored-local-llm-creative-writing-ethics",
+        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
+        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+        "dateModified": "2026-10-18",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "llm-quantization-explained",
         "title": "LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)",
@@ -921,14 +929,6 @@
         "title": "SpiritBox Ultimate Review: Windows Early Access for LM Studio Users",
         "url": "/power-local-llm/spiritbox-ultimate-review",
         "dateModified": "2026-10-16",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "atlarix-review",
-        "title": "Atlarix Review: A Free, Local-First AI Coding Agent",
-        "url": "/power-local-llm/atlarix-review",
-        "dateModified": "2026-09-25",
         "tier": "about"
       }
     ],
@@ -2307,6 +2307,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "uncensored-local-llm-creative-writing-ethics",
+        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
+        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+        "dateModified": "2026-10-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "agnai-review",
         "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
@@ -2359,14 +2367,6 @@
         "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
         "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
         "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-local-llm-creative-writing-ethics",
-        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
-        "dateModified": "2026-08-24",
         "tier": "about"
       },
       {
@@ -7711,6 +7711,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "uncensored-local-llm-creative-writing-ethics",
+        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
+        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+        "dateModified": "2026-10-18",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -7739,14 +7747,6 @@
         "title": "SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend (2026)",
         "url": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
         "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-local-llm-creative-writing-ethics",
-        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
-        "dateModified": "2026-08-24",
         "tier": "about"
       },
       {
@@ -7853,18 +7853,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-creative-writing",
-        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
-        "url": "/power-local-llm/best-local-llm-creative-writing",
-        "dateModified": "2026-10-17",
+        "slug": "uncensored-local-llm-creative-writing-ethics",
+        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
+        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+        "dateModified": "2026-10-18",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "agnai-review",
-        "title": "Agnai Review: Self-Hostable AI Roleplay Chat",
-        "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-09-12",
+        "slug": "best-local-llm-creative-writing",
+        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
+        "url": "/power-local-llm/best-local-llm-creative-writing",
+        "dateModified": "2026-10-17",
         "tier": "mentioned"
       }
     ],
