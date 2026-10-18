@@ -83,7 +83,7 @@ function renderTitle(title: string, highlight: string | undefined) {
   return (
     <>
       {title.slice(0, at)}
-      <span className={`rounded-[10px] px-2.5 ${HUB_TONES.rose.tint} ${HUB_TONES.rose.ink}`}>{highlight}</span>
+      <span className={`inline-block whitespace-nowrap rounded-[10px] px-2.5 ${HUB_TONES.rose.tint} ${HUB_TONES.rose.ink}`}>{highlight}</span>
       {title.slice(at + highlight.length)}
     </>
   )

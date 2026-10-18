@@ -839,7 +839,7 @@ function renderHub(lang: Lang) {
         {reviewedDate && (
           <time
             dateTime={reviewedDate}
-            className="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-300 text-emerald-700 px-2.5 py-0.5 rounded-full text-xs font-semibold mb-10"
+            className="inline-flex items-center gap-1.5 bg-indigo-50 border border-indigo-300 text-indigo-800 px-2.5 py-0.5 rounded-full text-xs font-semibold mb-10"
           >
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
