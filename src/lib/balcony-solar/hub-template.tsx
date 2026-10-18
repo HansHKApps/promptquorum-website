@@ -129,7 +129,7 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
     },
     explore: {
       title: 'Themen entdecken',
-      intro: '{tiles} Themen, {pages} Seiten. Ein Klick öffnet ein Thema direkt an Ort und Stelle.',
+      intro: '{tiles} Themen, {pages} Seiten ({guides} Anleitungen und {profiles} Firmenprofile). Ein Klick öffnet ein Thema direkt an Ort und Stelle.',
       guidesUnit: 'Anleitungen',
       profilesUnit: 'Profile',
       tileSummary: {
@@ -369,7 +369,7 @@ export function BalconySolarHubTemplate(source: BalconySolarHubTemplateSource) {
       start={{ title: copy.start.title, intro: copy.start.intro, cards: startCards }}
       explore={{
         title: copy.explore.title,
-        intro: fill(copy.explore.intro, { tiles: tiles.length, pages: allSlugs.length }),
+        intro: fill(copy.explore.intro, { tiles: tiles.length, pages: allSlugs.length, guides: allSlugs.filter((slug) => !PROFILE_SLUGS.has(slug)).length, profiles: allSlugs.filter((slug) => PROFILE_SLUGS.has(slug)).length }),
         tiles,
         labels,
         sortLocale: HUB_SORT_LOCALE[lang] ?? lang,
