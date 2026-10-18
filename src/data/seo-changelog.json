@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -3762,6 +3762,31 @@
       "clicks": 16,
       "ctr": 0.0903954802259887,
       "period": "last 28 days to 2026-10-17"
+    }
+  },
+  {
+    "id": "9b909a12-ac80-4b88-b730-6fb3dd5796ce",
+    "slug": "/smart-home/history-of-smart-home-technology",
+    "date": "2026-10-18T08:10:04.458Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Smart Home History: From X10 to Local AI (2026)",
+        "new": "History of Home Automation: From X10 to Local AI (2026)"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Smart Home Technology History: X10 to Local AI (2026)",
+        "new": "History of Home Automation & Smart Homes: 1966 to 2026"
+      }
+    ],
+    "reason": "GSC 2026-09-19..10-16: 'history of home automation' family ~210 imp, 0 clicks, pos 11-15; retitled around home automation, added pre-X10 section + 3 FAQs",
+    "baseline": {
+      "position": 11.6,
+      "impressions": 300,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "2026-09-19/2026-10-16"
     }
   }
 ]
