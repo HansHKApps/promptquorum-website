@@ -9,8 +9,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-24',
-    next_refresh_due: '2026-11-24',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Creative & Roleplay',
     title: 'Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin',
     seoTitle: 'Best Uncensored Local LLMs for NSFW & Erotica 2026',
@@ -37,6 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
+      'Hermes 4.3 36B',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -64,6 +65,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dolphin mistral uncensored setup',
       'local llm dark fiction',
       'uncensored ai writing ethics',
+      'uncensored llm',
+      'nsfw llm',
+      'best nsfw llm',
+      'abliterated llm',
+      'best uncensored local llms ranked',
     ],
     leadAnswerBlock:
       '**Uncensored local LLMs are appropriate for fiction writers who need to generate morally complex characters, dark themes, violence, mature romantic content, or unreliable narrator voices that cloud models refuse to produce. They are appropriate only when the output is used for creative fiction with an adult audience — not as a tool to produce real-world harmful content, non-consensual depictions of real people, or content involving minors in sexual contexts. The models that fit most fiction-writing use cases in 2026 are Hermes 3 Llama 3.1 (fewer refusals, strong instruction following) and Dolphin 3.0 Mistral (broader uncensored range, smaller footprint). Both run fully locally through Ollama or LM Studio with no data leaving your machine. The ethical responsibilities that apply when using these models are not zero — writers working with uncensored models still have obligations around distribution, minors, and real people that no local setup removes.**',
@@ -92,6 +98,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'When Uncensored Models Are Appropriate', anchor: '#appropriate-use' },
       { label: 'When They Are Not', anchor: '#inappropriate-use' },
       { label: 'Model Comparison', anchor: '#models' },
+      { label: 'Ranked: Best Uncensored Models', anchor: '#ranked-models' },
+      { label: 'Uncensored vs Abliterated', anchor: '#steerable-vs-abliterated' },
       { label: 'Setup: Ollama and LM Studio', anchor: '#setup' },
       { label: 'Ethical Responsibilities That Remain', anchor: '#ethics' },
       { label: 'Practical Workflow', anchor: '#workflow' },
@@ -255,6 +263,62 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-en.webp',
           imageCaption: 'Hermes 3 balances instruction quality and uncensored range best — fully abliterated models drift faster and write worse prose.',
         },
+      rankedModels: {
+        id: 'ranked-models',
+        title: 'Best Uncensored Local LLMs, Ranked by Hardware Tier',
+        content:
+          '**These seven models are ordered by Q4_K_M download size, smallest first. The ordering is editorial and follows hardware tiers; it is not a benchmark ranking.** Pick the last row whose file size fits comfortably inside your GPU VRAM or Mac unified memory. File sizes come from each model\'s GGUF repository on Hugging Face; the context cache and runtime need memory on top of the weights, so leave headroom above the file size. The legal and ethical limits in [Ethical Responsibilities That Remain](#ethics) apply to every model in this list.',
+        columns: ['Rank', 'Model', 'Type (per card)', 'Q4_K_M file', 'License tag'],
+        rows: [
+          { 'Rank': '1', 'Model': '[Hermes 3 Llama 3.1 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B)', 'Type (per card)': 'Steerable fine-tune', 'Q4_K_M file': '4.92 GB', 'License tag': 'llama3' },
+          { 'Rank': '2', 'Model': '[Dolphin 3.0 Llama 3.1 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B)', 'Type (per card)': 'Steerable fine-tune', 'Q4_K_M file': '4.92 GB', 'License tag': 'llama3.1' },
+          { 'Rank': '3', 'Model': '[Llama 3.1 8B Instruct abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated)', 'Type (per card)': 'Abliterated', 'Q4_K_M file': '4.92 GB', 'License tag': 'llama3.1' },
+          { 'Rank': '4', 'Model': '[Dolphin 3.0 R1 Mistral 24B](https://huggingface.co/cognitivecomputations/Dolphin3.0-R1-Mistral-24B)', 'Type (per card)': 'Steerable fine-tune', 'Q4_K_M file': '14.33 GB', 'License tag': 'not shown on card' },
+          { 'Rank': '5', 'Model': '[Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated)', 'Type (per card)': 'Abliterated', 'Q4_K_M file': '16.5 GB', 'License tag': 'gemma' },
+          { 'Rank': '6', 'Model': '[Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B)', 'Type (per card)': 'Neutral alignment', 'Q4_K_M file': '21.76 GB', 'License tag': 'apache-2.0' },
+          { 'Rank': '7', 'Model': '[Hermes 3 Llama 3.1 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B)', 'Type (per card)': 'Steerable fine-tune', 'Q4_K_M file': '42.52 GB', 'License tag': 'llama3' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Rows 3 and 5 are community abliterated releases; the Gemma 3 card calls its model "fairly experimental". Rows 1, 2, 4, 6 and 7 are steerable or neutrally aligned fine-tunes that you direct through the system prompt. If a scene already works on a steerable model, the abliterated variant adds quality risk without benefit.',
+          },
+        ],
+        items: [
+          '**File size sources:** [Hermes 3 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B-GGUF) · [Dolphin 3.0 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B-GGUF) · [Llama 3.1 8B abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF) · [Dolphin 3.0 R1 24B](https://huggingface.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF) · [Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated-GGUF) · [Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B-GGUF) · [Hermes 3 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B-GGUF). Q8_0 files are larger, for example 8.54 GB for the three 8B models and 38.42 GB for Hermes 4.3 36B.',
+          '**Refusal claims come from the model cards, not from our own tests.** Only Hermes 4.3 publishes a refusal figure: its card reports 74.60% of RefusalBench questions answered in non-reasoning mode and 72.29% in reasoning mode (average of 5 trials) and calls itself state of the art among non-abliterated models on that leaderboard. That is a vendor self-report we have not reproduced.',
+          '**Ollama:** `hermes3` (3b 2.0 GB, 8b 4.7 GB, 70b 40 GB, 405b 229 GB) and `dolphin3` (8b 4.9 GB) are in the Ollama library. Every other row runs with `ollama run hf.co/<user>/<repo>`; Hugging Face documents Q4_K_M as the default quantization when the repository contains it.',
+          '**LM Studio:** `lms get <model-name>@q4_k_m` searches online repositories and downloads the quantization after the `@`.',
+          '**llama.cpp:** `llama cli -hf <user>/<repo>` downloads a model from Hugging Face and runs it; `llama serve -hf <user>/<repo>` starts an OpenAI-compatible API server.',
+        ],
+        promptExamples: [
+          { label: 'Ollama: run the ranked models', text: '# Ollama library tags (hermes3 default = 8B, 4.7 GB per the library page)\nollama run hermes3\nollama run dolphin3\nollama run hermes3:70b\n\n# Any GGUF on Hugging Face; the quant tag after the colon is optional (default Q4_K_M)\nollama run hf.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF\nollama run hf.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF:Q4_K_M\nollama run hf.co/mlabonne/gemma-3-27b-it-abliterated-GGUF:Q4_K_M\nollama run hf.co/NousResearch/Hermes-4.3-36B-GGUF:Q4_K_M' },
+          { label: 'LM Studio: download a quantization', text: '# LM Studio CLI: search and download; @ selects the quantization\nlms get <model-name>@q4_k_m\n\n# GGUF files you downloaded yourself can also be imported in the LM Studio app' },
+          { label: 'llama.cpp: run from Hugging Face', text: '# llama.cpp (commands as written in its README)\nllama cli -hf mlabonne/gemma-3-27b-it-abliterated-GGUF\nllama serve -hf mlabonne/gemma-3-27b-it-abliterated-GGUF' },
+        ],
+      },
+      uncensoredVsAbliterated: {
+        id: 'steerable-vs-abliterated',
+        title: 'Uncensored vs Abliterated vs Fine-Tuned: What the Terms Mean',
+        content:
+          '**"Uncensored" is used for three different techniques, and only one of them is called abliteration.** The model cards, not the marketing words, tell you which one you are downloading.',
+        items: [
+          '**Steerable or neutrally aligned fine-tunes (Hermes 3, Hermes 4.3, Dolphin 3.0):** the cards do not use the word "uncensored". The Dolphin 3.0 card says "You decide the alignment" and "Dolphin does not impose its ethics or guidelines on you"; the Hermes 3 card describes "aligning LLMs to the user"; the Hermes 4.3 card claims "broadly neutral alignment". Behaviour depends on your system prompt.',
+          '**Dataset-filtered fine-tuning:** Eric Hartford\'s essay [Uncensored Models](https://erichartford.com/uncensored-models) describes removing refusals and biased answers from the training data and retraining the model the same way as the original.',
+          '**Abliteration:** [Arditi et al.](https://arxiv.org/abs/2406.11717) find that refusal is "mediated by a one-dimensional subspace" in 13 open chat models up to 72B parameters, and that erasing this direction stops the model refusing. The [mlabonne abliteration write-up](https://huggingface.co/blog/mlabonne/abliteration) applies it without retraining and reports a performance drop across all benchmarks, which a DPO pass only partly recovered.',
+          '**Practical consequence:** abliterated releases trade some quality for removed refusals; steerable fine-tunes stay controllable through the system prompt. Start with a steerable model and move to an abliterated one only if it still refuses.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '"Uncensored LLM" is an umbrella term: steerable fine-tunes such as Hermes and Dolphin leave alignment to your system prompt, while abliterated models have the refusal direction removed from their weights.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Three routes lead to a model that refuses less. Retrain on data without refusals, ship a model whose card hands alignment to the user, or edit the finished weights to cancel the refusal direction. The last route is abliteration, and its own write-up reports a quality drop against the source model.',
+          },
+        ],
+      },
       setup: {
         id: 'setup',
         title: 'Setup: Ollama and LM Studio',
@@ -401,6 +465,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Open-weight models running locally via Ollama or LM Studio have no telemetry, no remote logging, and no usage tracking. The model authors (Nous Research for Hermes 3, Cognitive Computations for Dolphin) cannot see what you generate — there is no server callback during inference. The only telemetry risk is from the frontend (SillyTavern, Agnai — both telemetry-free by default) or the OS. Run a network monitor (Little Snitch on macOS, Wireshark on Linux) once after install to verify.',
           },
             { q: 'Which local LLMs have no content restrictions?', a: 'The uncensored and abliterated fine-tunes covered here \u2014 Hermes 3 and Dolphin 3.0 among them \u2014 have had the refusal layer trained out, so they carry no content policy of their own. That is the practical difference between a local model and a hosted one: a cloud provider enforces its terms on every request, while an unrestricted model running on your own machine has no provider in the loop and no censorship applied at inference time. NSFW and explicit fiction are therefore not blocked. What does not change is the law where you live and the responsibility that comes with publishing \u2014 no content policy is not the same as no limits, and the ethics section below covers where those lines sit.' },
+          {
+            q: 'What is the best uncensored local LLM?',
+            a: 'There is no single best one; it depends on your memory. This page orders seven models with verified model cards by Q4_K_M file size: Hermes 3 Llama 3.1 8B, Dolphin 3.0 Llama 3.1 8B and Llama 3.1 8B Instruct abliterated (4.92 GB each), Dolphin 3.0 R1 Mistral 24B (14.33 GB), Gemma 3 27B abliterated (16.5 GB), Hermes 4.3 36B (21.76 GB) and Hermes 3 Llama 3.1 70B (42.52 GB). The ordering is editorial and by hardware tier, not a benchmark, and we have not run these models ourselves.',
+          },
+          {
+            q: 'What is the best NSFW LLM to run locally?',
+            a: 'The same ranked list applies: pick the largest model whose Q4_K_M file fits your memory. The Hermes 3 and Dolphin 3.0 cards describe user-controlled alignment rather than naming NSFW, while the two abliterated releases are labelled uncensored on their cards. Keep the scope to fiction between adult characters: sexual content involving minors and sexual depictions of real people are off limits whatever the model, as the ethics section explains.',
+          },
+          {
+            q: 'What does abliterated mean for an LLM?',
+            a: 'Abliterated means the direction in the model that mediates refusals has been removed from the weights without retraining. Researchers found that refusal is mediated by a one-dimensional subspace in 13 open chat models, and the abliteration write-up reports a performance drop versus the source model that fine-tuning only partly recovered. It is different from a fine-tune whose card leaves alignment to the system prompt.',
+          },
+          {
+            q: 'How much VRAM do I need for an uncensored LLM?',
+            a: 'At least the Q4_K_M file size, plus room for the context cache and runtime: 4.92 GB for the three 8B models, 14.33 GB for Dolphin 3.0 R1 Mistral 24B, 16.5 GB for Gemma 3 27B abliterated, 21.76 GB for Hermes 4.3 36B and 42.52 GB for Hermes 3 Llama 3.1 70B. Q8_0 files are larger, for example 8.54 GB for the 8B models and 38.42 GB for Hermes 4.3 36B.',
+          },
+          {
+            q: 'How do I run an uncensored LLM in Ollama, LM Studio or llama.cpp?',
+            a: 'In Ollama, run `ollama run hermes3` or `ollama run dolphin3`, or load any GGUF with `ollama run hf.co/<user>/<repo>`. In LM Studio, run `lms get <model-name>@q4_k_m`. In llama.cpp, run `llama cli -hf <user>/<repo>`, or `llama serve -hf <user>/<repo>` for an OpenAI-compatible server. The Setup section above covers frontends such as SillyTavern.',
+          },
         ],
       },
       relatedReading: {
@@ -422,8 +506,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Creative & Roleplay',
     title: 'Uncensored Local LLMs für kreatives Schreiben: Wann Autoren sie brauchen (2026)',
     seoTitle: 'Unzensierte LLMs für Erotik & NSFW-Texte 2026',
@@ -450,6 +534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
+      'Hermes 4.3 36B',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -496,6 +581,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Wann Uncensored-Modelle für Belletristik geeignet sind', anchor: '#appropriate-use' },
       { label: 'Wann sie es nicht sind', anchor: '#inappropriate-use' },
       { label: 'Modellvergleich', anchor: '#models' },
+      { label: 'Rangliste: beste unzensierte Modelle', anchor: '#ranked-models' },
+      { label: 'Unzensiert vs. Abliteration', anchor: '#steerable-vs-abliterated' },
       { label: 'Einrichtung: Ollama und LM Studio', anchor: '#setup' },
       { label: 'Bleibende ethische Verantwortung', anchor: '#ethics' },
       { label: 'Praktischer Workflow', anchor: '#workflow' },
@@ -659,6 +746,62 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-de.webp',
           imageCaption: 'Hermes 3 bietet die beste Balance aus Anweisungsqualität und unzensiertem Umfang — voll abliterierte Modelle driften schneller ab.',
         },
+      rankedModels: {
+        id: 'ranked-models',
+        title: 'Beste unzensierte lokale LLMs, gereiht nach Hardware-Stufe',
+        content:
+          '**Diese sieben Modelle sind nach Größe der Q4_K_M-Datei sortiert, das kleinste zuerst. Die Reihenfolge ist redaktionell und folgt Hardware-Stufen; sie ist kein Benchmark-Ranking.** Wählen Sie die letzte Zeile, deren Dateigröße bequem in Ihren GPU-VRAM oder den einheitlichen Speicher Ihres Macs passt. Die Dateigrößen stammen aus dem GGUF-Repository des jeweiligen Modells auf Hugging Face; Kontext-Cache und Laufzeit brauchen zusätzlich Speicher zu den Gewichten, planen Sie also Reserve über der Dateigröße ein. Die rechtlichen und ethischen Grenzen aus [Ethical Responsibilities That Remain](#ethics) gelten für jedes Modell dieser Liste.',
+        columns: ['Rang', 'Modell', 'Typ (laut Karte)', 'Q4_K_M-Datei', 'Lizenz-Tag'],
+        rows: [
+          { 'Rang': '1', 'Modell': '[Hermes 3 Llama 3.1 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B)', 'Typ (laut Karte)': 'Steuerbares Fine-Tuning', 'Q4_K_M-Datei': '4,92 GB', 'Lizenz-Tag': 'llama3' },
+          { 'Rang': '2', 'Modell': '[Dolphin 3.0 Llama 3.1 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B)', 'Typ (laut Karte)': 'Steuerbares Fine-Tuning', 'Q4_K_M-Datei': '4,92 GB', 'Lizenz-Tag': 'llama3.1' },
+          { 'Rang': '3', 'Modell': '[Llama 3.1 8B Instruct abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated)', 'Typ (laut Karte)': 'Abliteriert', 'Q4_K_M-Datei': '4,92 GB', 'Lizenz-Tag': 'llama3.1' },
+          { 'Rang': '4', 'Modell': '[Dolphin 3.0 R1 Mistral 24B](https://huggingface.co/cognitivecomputations/Dolphin3.0-R1-Mistral-24B)', 'Typ (laut Karte)': 'Steuerbares Fine-Tuning', 'Q4_K_M-Datei': '14,33 GB', 'Lizenz-Tag': 'auf der Karte nicht angegeben' },
+          { 'Rang': '5', 'Modell': '[Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated)', 'Typ (laut Karte)': 'Abliteriert', 'Q4_K_M-Datei': '16,5 GB', 'Lizenz-Tag': 'gemma' },
+          { 'Rang': '6', 'Modell': '[Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B)', 'Typ (laut Karte)': 'Neutrale Ausrichtung', 'Q4_K_M-Datei': '21,76 GB', 'Lizenz-Tag': 'apache-2.0' },
+          { 'Rang': '7', 'Modell': '[Hermes 3 Llama 3.1 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B)', 'Typ (laut Karte)': 'Steuerbares Fine-Tuning', 'Q4_K_M-Datei': '42,52 GB', 'Lizenz-Tag': 'llama3' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Zeilen 3 und 5 sind abliterierte Community-Veröffentlichungen; die Gemma-3-Karte nennt ihr Modell „fairly experimental“. Zeilen 1, 2, 4, 6 und 7 sind steuerbare oder neutral ausgerichtete Fine-Tunes, die Sie über den System-Prompt lenken. Funktioniert eine Szene schon mit einem steuerbaren Modell, bringt die abliterierte Variante nur Qualitätsrisiko ohne Nutzen.',
+          },
+        ],
+        items: [
+          '**Quellen der Dateigrößen:** [Hermes 3 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B-GGUF) · [Dolphin 3.0 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B-GGUF) · [Llama 3.1 8B abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF) · [Dolphin 3.0 R1 24B](https://huggingface.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF) · [Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated-GGUF) · [Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B-GGUF) · [Hermes 3 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B-GGUF). Q8_0-Dateien sind größer, etwa 8,54 GB bei den drei 8B-Modellen und 38,42 GB bei Hermes 4.3 36B.',
+          '**Aussagen zu Verweigerungen stammen aus den Modellkarten, nicht aus eigenen Tests.** Nur Hermes 4.3 nennt eine Zahl: Laut Karte beantwortet es 74,60 % der RefusalBench-Fragen im Nicht-Reasoning-Modus und 72,29 % im Reasoning-Modus (Mittel aus 5 Läufen) und bezeichnet sich als führend unter nicht abliterierten Modellen in der RefusalBench-Bestenliste. Das ist eine Herstellerangabe, die wir nicht nachgeprüft haben.',
+          '**Ollama:** `hermes3` (3b 2,0 GB, 8b 4,7 GB, 70b 40 GB, 405b 229 GB) und `dolphin3` (8b 4,9 GB) liegen in der Ollama-Bibliothek. Alle anderen Zeilen laufen mit `ollama run hf.co/<user>/<repo>`; laut Hugging Face-Dokumentation ist Q4_K_M die Standard-Quantisierung, wenn das Repository sie enthält.',
+          '**LM Studio:** `lms get <model-name>@q4_k_m` durchsucht Online-Repositories und lädt die Quantisierung hinter dem `@` herunter.',
+          '**llama.cpp:** `llama cli -hf <user>/<repo>` lädt ein Modell von Hugging Face und startet es; `llama serve -hf <user>/<repo>` startet einen OpenAI-kompatiblen API-Server.',
+        ],
+        promptExamples: [
+          { label: 'Ollama: die Modelle der Rangliste starten', text: '# Ollama library tags (hermes3 default = 8B, 4.7 GB per the library page)\nollama run hermes3\nollama run dolphin3\nollama run hermes3:70b\n\n# Any GGUF on Hugging Face; the quant tag after the colon is optional (default Q4_K_M)\nollama run hf.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF\nollama run hf.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF:Q4_K_M\nollama run hf.co/mlabonne/gemma-3-27b-it-abliterated-GGUF:Q4_K_M\nollama run hf.co/NousResearch/Hermes-4.3-36B-GGUF:Q4_K_M' },
+          { label: 'LM Studio: eine Quantisierung herunterladen', text: '# LM Studio CLI: search and download; @ selects the quantization\nlms get <model-name>@q4_k_m\n\n# GGUF files you downloaded yourself can also be imported in the LM Studio app' },
+          { label: 'llama.cpp: direkt von Hugging Face starten', text: '# llama.cpp (commands as written in its README)\nllama cli -hf mlabonne/gemma-3-27b-it-abliterated-GGUF\nllama serve -hf mlabonne/gemma-3-27b-it-abliterated-GGUF' },
+        ],
+      },
+      uncensoredVsAbliterated: {
+        id: 'steerable-vs-abliterated',
+        title: 'Unzensiert, abliteriert, feinjustiert: was die Begriffe bedeuten',
+        content:
+          '**„Unzensiert“ steht für drei verschiedene Verfahren, und nur eines davon heißt Abliteration.** Welches Sie herunterladen, verraten die Modellkarten, nicht die Werbebegriffe.',
+        items: [
+          '**Steuerbare oder neutral ausgerichtete Fine-Tunes (Hermes 3, Hermes 4.3, Dolphin 3.0):** Die Karten verwenden das Wort „uncensored“ nicht. Die Dolphin-3.0-Karte sagt „You decide the alignment“ und „Dolphin does not impose its ethics or guidelines on you“; die Hermes-3-Karte beschreibt „aligning LLMs to the user“; die Hermes-4.3-Karte nennt „broadly neutral alignment“. Das Verhalten hängt von Ihrem System-Prompt ab.',
+          '**Fine-Tuning mit gefilterten Daten:** Eric Hartfords Essay [Uncensored Models](https://erichartford.com/uncensored-models) beschreibt, Verweigerungen und voreingenommene Antworten aus den Trainingsdaten zu entfernen und das Modell genauso neu zu trainieren wie das Original.',
+          '**Abliteration:** [Arditi et al.](https://arxiv.org/abs/2406.11717) zeigen, dass Verweigerung in 13 offenen Chat-Modellen bis 72B Parametern „mediated by a one-dimensional subspace“ ist und das Löschen dieser Richtung die Verweigerung beendet. Die [Abliteration-Anleitung von mlabonne](https://huggingface.co/blog/mlabonne/abliteration) wendet das ohne Neutraining an und meldet einen Leistungsabfall in allen Benchmarks, den ein DPO-Durchlauf nur teilweise ausglich.',
+          '**Praktische Folge:** Abliterierte Veröffentlichungen tauschen etwas Qualität gegen entfernte Verweigerungen; steuerbare Fine-Tunes bleiben über den System-Prompt kontrollierbar. Beginnen Sie mit einem steuerbaren Modell und wechseln Sie nur zu einem abliterierten, wenn es weiterhin verweigert.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '„Unzensiertes LLM“ ist ein Sammelbegriff: Steuerbare Fine-Tunes wie Hermes und Dolphin überlassen die Ausrichtung Ihrem System-Prompt, abliterierte Modelle haben die Verweigerungsrichtung aus ihren Gewichten entfernt.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Drei Wege führen zu einem Modell, das weniger verweigert: mit Daten ohne Verweigerungen neu trainieren, ein Modell veröffentlichen, dessen Karte die Ausrichtung dem Nutzer überlässt, oder die fertigen Gewichte so ändern, dass die Verweigerungsrichtung wegfällt. Der letzte Weg ist die Abliteration; ihre eigene Anleitung meldet einen Qualitätsverlust gegenüber dem Ausgangsmodell.',
+          },
+        ],
+      },
       setup: {
         id: 'setup',
         title: 'Einrichtung: Ollama und LM Studio',
@@ -808,6 +951,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Welche lokalen LLMs haben keine Inhaltsbeschränkungen?',
             a: 'Die hier vorgestellten unzensierten und "abliterated" Fine-Tunes — darunter Hermes 3 und Dolphin 3.0 — haben die Verweigerungsschicht heraustrainiert bekommen und tragen deshalb keine eigene Inhaltsrichtlinie. Das ist der praktische Unterschied zwischen einem lokalen und einem gehosteten Modell: Ein Cloud-Anbieter setzt bei jeder Anfrage seine Nutzungsbedingungen durch, während ein uneingeschränktes Modell auf dem eigenen Rechner ohne Anbieter in der Schleife läuft und zur Inferenzzeit keine Zensur anwendet. NSFW- und explizite Fiktion werden dadurch nicht blockiert. Was sich nicht ändert, ist das Recht des jeweiligen Landes und die Verantwortung, die mit der Veröffentlichung einhergeht — keine Inhaltsrichtlinie zu haben bedeutet nicht, keine Grenzen zu haben, und der Ethik-Abschnitt weiter unten zeigt, wo diese Grenzen liegen.',
           },
+          {
+            q: 'Was ist das beste unzensierte lokale LLM?',
+            a: 'Ein einzelnes bestes gibt es nicht, es hängt von Ihrem Speicher ab. Diese Seite ordnet sieben Modelle mit geprüften Modellkarten nach Größe der Q4_K_M-Datei: Hermes 3 Llama 3.1 8B, Dolphin 3.0 Llama 3.1 8B und Llama 3.1 8B Instruct abliterated (je 4,92 GB), Dolphin 3.0 R1 Mistral 24B (14,33 GB), Gemma 3 27B abliterated (16,5 GB), Hermes 4.3 36B (21,76 GB) und Hermes 3 Llama 3.1 70B (42,52 GB). Die Reihenfolge ist redaktionell und nach Hardware-Stufe, kein Benchmark, und wir haben diese Modelle nicht selbst ausgeführt.',
+          },
+          {
+            q: 'Welches ist das beste NSFW-LLM für den lokalen Einsatz?',
+            a: 'Es gilt dieselbe Rangliste: Wählen Sie das größte Modell, dessen Q4_K_M-Datei in Ihren Speicher passt. Die Karten von Hermes 3 und Dolphin 3.0 beschreiben nutzerkontrollierte Ausrichtung und nennen NSFW nicht ausdrücklich, die beiden abliterierten Veröffentlichungen sind auf ihren Karten als uncensored ausgewiesen. Bleiben Sie bei Fiktion zwischen erwachsenen Figuren: Sexuelle Inhalte mit Minderjährigen und sexuelle Darstellungen realer Personen sind bei jedem Modell tabu, wie der Ethik-Abschnitt erklärt.',
+          },
+          {
+            q: 'Was bedeutet „abliteriert“ bei einem LLM?',
+            a: 'Abliteriert heißt, dass die Richtung im Modell, die Verweigerungen vermittelt, ohne Neutraining aus den Gewichten entfernt wurde. Forschende fanden in 13 offenen Chat-Modellen, dass Verweigerung durch einen eindimensionalen Unterraum vermittelt wird; die Abliteration-Anleitung meldet gegenüber dem Ausgangsmodell einen Leistungsabfall, den Feinabstimmung nur teilweise ausglich. Das unterscheidet sich von einem Fine-Tune, dessen Karte die Ausrichtung dem System-Prompt überlässt.',
+          },
+          {
+            q: 'Wie viel VRAM brauche ich für ein unzensiertes LLM?',
+            a: 'Mindestens die Größe der Q4_K_M-Datei plus Platz für Kontext-Cache und Laufzeit: 4,92 GB für die drei 8B-Modelle, 14,33 GB für Dolphin 3.0 R1 Mistral 24B, 16,5 GB für Gemma 3 27B abliterated, 21,76 GB für Hermes 4.3 36B und 42,52 GB für Hermes 3 Llama 3.1 70B. Q8_0-Dateien sind größer, etwa 8,54 GB bei den 8B-Modellen und 38,42 GB bei Hermes 4.3 36B.',
+          },
+          {
+            q: 'Wie starte ich ein unzensiertes LLM in Ollama, LM Studio oder llama.cpp?',
+            a: 'In Ollama: `ollama run hermes3` oder `ollama run dolphin3`, oder jede GGUF-Datei mit `ollama run hf.co/<user>/<repo>`. In LM Studio: `lms get <model-name>@q4_k_m`. In llama.cpp: `llama cli -hf <user>/<repo>`, oder `llama serve -hf <user>/<repo>` für einen OpenAI-kompatiblen Server. Der Abschnitt Einrichtung oben behandelt Frontends wie SillyTavern.',
+          },
         ],
       },
       relatedReading: {
@@ -829,8 +992,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Creative & Roleplay',
     title: 'LLM locaux non censurés pour l\'écriture créative : quand les auteurs en ont besoin (2026)',
     seoTitle: 'LLMs non censurés pour érotisme & NSFW 2026',
@@ -857,6 +1020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
+      'Hermes 4.3 36B',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 Go',
@@ -903,6 +1067,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Quand les modèles non censurés sont adaptés', anchor: '#appropriate-use' },
       { label: 'Quand ils ne le sont pas', anchor: '#inappropriate-use' },
       { label: 'Comparaison des modèles', anchor: '#models' },
+      { label: 'Classement : meilleurs modèles non censurés', anchor: '#ranked-models' },
+      { label: 'Non censuré vs abliteration', anchor: '#steerable-vs-abliterated' },
       { label: 'Configuration : Ollama et LM Studio', anchor: '#setup' },
       { label: 'Responsabilités éthiques qui subsistent', anchor: '#ethics' },
       { label: 'Flux de travail pratique', anchor: '#workflow' },
@@ -1066,6 +1232,62 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-fr.webp',
           imageCaption: 'Hermes 3 offre le meilleur équilibre entre qualité d’instruction et étendue non censurée — les modèles totalement abliterés dérivent plus vite.',
         },
+      rankedModels: {
+        id: 'ranked-models',
+        title: 'Meilleurs LLM locaux non censurés, classés par palier matériel',
+        content:
+          '**Ces sept modèles sont classés par taille de fichier Q4_K_M, du plus petit au plus grand. Cet ordre est éditorial et suit des paliers matériels ; ce n\'est pas un classement de benchmark.** Choisissez la dernière ligne dont la taille de fichier tient confortablement dans la VRAM de votre GPU ou la mémoire unifiée de votre Mac. Les tailles proviennent du dépôt GGUF de chaque modèle sur Hugging Face ; le cache de contexte et l\'exécution demandent de la mémoire en plus des poids, prévoyez donc une marge au-dessus de la taille du fichier. Les limites juridiques et éthiques de [Ethical Responsibilities That Remain](#ethics) s\'appliquent à chaque modèle de cette liste.',
+        columns: ['Rang', 'Modèle', 'Type (selon la fiche)', 'Fichier Q4_K_M', 'Licence (tag)'],
+        rows: [
+          { 'Rang': '1', 'Modèle': '[Hermes 3 Llama 3.1 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B)', 'Type (selon la fiche)': 'Fine-tune orientable', 'Fichier Q4_K_M': '4,92 Go', 'Licence (tag)': 'llama3' },
+          { 'Rang': '2', 'Modèle': '[Dolphin 3.0 Llama 3.1 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B)', 'Type (selon la fiche)': 'Fine-tune orientable', 'Fichier Q4_K_M': '4,92 Go', 'Licence (tag)': 'llama3.1' },
+          { 'Rang': '3', 'Modèle': '[Llama 3.1 8B Instruct abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated)', 'Type (selon la fiche)': 'Abliteré', 'Fichier Q4_K_M': '4,92 Go', 'Licence (tag)': 'llama3.1' },
+          { 'Rang': '4', 'Modèle': '[Dolphin 3.0 R1 Mistral 24B](https://huggingface.co/cognitivecomputations/Dolphin3.0-R1-Mistral-24B)', 'Type (selon la fiche)': 'Fine-tune orientable', 'Fichier Q4_K_M': '14,33 Go', 'Licence (tag)': 'non indiquée sur la fiche' },
+          { 'Rang': '5', 'Modèle': '[Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated)', 'Type (selon la fiche)': 'Abliteré', 'Fichier Q4_K_M': '16,5 Go', 'Licence (tag)': 'gemma' },
+          { 'Rang': '6', 'Modèle': '[Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B)', 'Type (selon la fiche)': 'Alignement neutre', 'Fichier Q4_K_M': '21,76 Go', 'Licence (tag)': 'apache-2.0' },
+          { 'Rang': '7', 'Modèle': '[Hermes 3 Llama 3.1 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B)', 'Type (selon la fiche)': 'Fine-tune orientable', 'Fichier Q4_K_M': '42,52 Go', 'Licence (tag)': 'llama3' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Les lignes 3 et 5 sont des versions abliterées de la communauté ; la fiche de Gemma 3 décrit son modèle comme « fairly experimental ». Les lignes 1, 2, 4, 6 et 7 sont des fine-tunes orientables ou à alignement neutre que vous dirigez par le prompt système. Si une scène fonctionne déjà avec un modèle orientable, la variante abliterée ajoute un risque de qualité sans bénéfice.',
+          },
+        ],
+        items: [
+          '**Sources des tailles de fichier :** [Hermes 3 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B-GGUF) · [Dolphin 3.0 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B-GGUF) · [Llama 3.1 8B abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF) · [Dolphin 3.0 R1 24B](https://huggingface.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF) · [Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated-GGUF) · [Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B-GGUF) · [Hermes 3 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B-GGUF). Les fichiers Q8_0 sont plus gros, par exemple 8,54 Go pour les trois modèles 8B et 38,42 Go pour Hermes 4.3 36B.',
+          '**Les affirmations sur les refus viennent des fiches de modèle, pas de nos propres tests.** Seul Hermes 4.3 publie un chiffre : sa fiche indique 74,60 % de réponses aux questions de RefusalBench en mode sans raisonnement et 72,29 % en mode raisonnement (moyenne de 5 essais), et se présente comme l\'état de l\'art parmi les modèles non abliterés du classement RefusalBench. C\'est une déclaration du fournisseur que nous n\'avons pas reproduite.',
+          '**Ollama :** `hermes3` (3b 2,0 Go, 8b 4,7 Go, 70b 40 Go, 405b 229 Go) et `dolphin3` (8b 4,9 Go) figurent dans la bibliothèque Ollama. Toutes les autres lignes se lancent avec `ollama run hf.co/<user>/<repo>` ; la documentation de Hugging Face indique Q4_K_M comme quantification par défaut quand le dépôt la contient.',
+          '**LM Studio :** `lms get <model-name>@q4_k_m` recherche dans les dépôts en ligne et télécharge la quantification indiquée après le `@`.',
+          '**llama.cpp :** `llama cli -hf <user>/<repo>` télécharge un modèle depuis Hugging Face et l\'exécute ; `llama serve -hf <user>/<repo>` lance un serveur d\'API compatible OpenAI.',
+        ],
+        promptExamples: [
+          { label: 'Ollama : lancer les modèles du classement', text: '# Ollama library tags (hermes3 default = 8B, 4.7 GB per the library page)\nollama run hermes3\nollama run dolphin3\nollama run hermes3:70b\n\n# Any GGUF on Hugging Face; the quant tag after the colon is optional (default Q4_K_M)\nollama run hf.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF\nollama run hf.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF:Q4_K_M\nollama run hf.co/mlabonne/gemma-3-27b-it-abliterated-GGUF:Q4_K_M\nollama run hf.co/NousResearch/Hermes-4.3-36B-GGUF:Q4_K_M' },
+          { label: 'LM Studio : télécharger une quantification', text: '# LM Studio CLI: search and download; @ selects the quantization\nlms get <model-name>@q4_k_m\n\n# GGUF files you downloaded yourself can also be imported in the LM Studio app' },
+          { label: 'llama.cpp : lancer depuis Hugging Face', text: '# llama.cpp (commands as written in its README)\nllama cli -hf mlabonne/gemma-3-27b-it-abliterated-GGUF\nllama serve -hf mlabonne/gemma-3-27b-it-abliterated-GGUF' },
+        ],
+      },
+      uncensoredVsAbliterated: {
+        id: 'steerable-vs-abliterated',
+        title: 'Non censuré, abliteré, fine-tuné : ce que veulent dire les termes',
+        content:
+          '**« Non censuré » désigne trois techniques différentes, et une seule s\'appelle l\'abliteration.** Ce sont les fiches de modèle, et non les mots du marketing, qui disent lequel vous téléchargez.',
+        items: [
+          '**Fine-tunes orientables ou à alignement neutre (Hermes 3, Hermes 4.3, Dolphin 3.0) :** les fiches n\'emploient pas le mot « uncensored ». La fiche de Dolphin 3.0 dit « You decide the alignment » et « Dolphin does not impose its ethics or guidelines on you » ; celle de Hermes 3 parle d\'« aligning LLMs to the user » ; celle de Hermes 4.3 revendique un « broadly neutral alignment ». Le comportement dépend de votre prompt système.',
+          '**Fine-tuning sur données filtrées :** l\'essai d\'Eric Hartford, [Uncensored Models](https://erichartford.com/uncensored-models), décrit la suppression des refus et des réponses biaisées dans les données d\'entraînement, puis le réentraînement du modèle comme l\'original.',
+          '**Abliteration :** [Arditi et al.](https://arxiv.org/abs/2406.11717) montrent que le refus est « mediated by a one-dimensional subspace » dans 13 modèles de chat ouverts jusqu\'à 72B de paramètres, et qu\'effacer cette direction empêche le modèle de refuser. Le [guide d\'abliteration de mlabonne](https://huggingface.co/blog/mlabonne/abliteration) l\'applique sans réentraînement et signale une baisse de performance sur tous les benchmarks, que seule une passe DPO a partiellement corrigée.',
+          '**Conséquence pratique :** les versions abliterées sacrifient un peu de qualité contre la suppression des refus ; les fine-tunes orientables restent contrôlables par le prompt système. Commencez par un modèle orientable et ne passez à un modèle abliteré que s\'il refuse encore.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '« LLM non censuré » est un terme générique : les fine-tunes orientables comme Hermes et Dolphin laissent l\'alignement à votre prompt système, tandis que les modèles abliterés ont vu la direction du refus retirée de leurs poids.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Trois voies mènent à un modèle qui refuse moins : réentraîner sur des données sans refus, publier un modèle dont la fiche laisse l\'alignement à l\'utilisateur, ou modifier les poids finis pour annuler la direction du refus. La dernière voie est l\'abliteration, et son propre guide signale une baisse de qualité par rapport au modèle d\'origine.',
+          },
+        ],
+      },
       setup: {
         id: 'setup',
         title: 'Configuration : Ollama et LM Studio',
@@ -1223,6 +1445,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Quels LLM locaux n\'ont aucune restriction de contenu ?',
             a: 'Les fine-tunes non censurés et « abliterated » présentés ici — dont Hermes 3 et Dolphin 3.0 — ont eu leur couche de refus entraînée pour disparaître, et ne portent donc aucune politique de contenu propre. C\'est la différence pratique entre un modèle local et un modèle hébergé : un fournisseur cloud applique ses conditions d\'utilisation à chaque requête, tandis qu\'un modèle non restreint tournant sur votre propre machine n\'a aucun fournisseur dans la boucle et n\'applique aucune censure au moment de l\'inférence. Le contenu NSFW et la fiction explicite ne sont donc pas bloqués. Ce qui ne change pas, c\'est la loi de votre pays et la responsabilité qui accompagne la publication — l\'absence de politique de contenu n\'équivaut pas à l\'absence de limites, et la section éthique ci-dessous précise où se situent ces limites.',
           },
+          {
+            q: 'Quel est le meilleur LLM local non censuré ?',
+            a: 'Il n\'y a pas de meilleur modèle unique : cela dépend de votre mémoire. Cette page classe sept modèles aux fiches vérifiées par taille de fichier Q4_K_M : Hermes 3 Llama 3.1 8B, Dolphin 3.0 Llama 3.1 8B et Llama 3.1 8B Instruct abliterated (4,92 Go chacun), Dolphin 3.0 R1 Mistral 24B (14,33 Go), Gemma 3 27B abliterated (16,5 Go), Hermes 4.3 36B (21,76 Go) et Hermes 3 Llama 3.1 70B (42,52 Go). L\'ordre est éditorial, par palier matériel, ce n\'est pas un benchmark, et nous n\'avons pas exécuté ces modèles nous-mêmes.',
+          },
+          {
+            q: 'Quel est le meilleur LLM NSFW à exécuter en local ?',
+            a: 'Le même classement s\'applique : prenez le plus grand modèle dont le fichier Q4_K_M tient dans votre mémoire. Les fiches de Hermes 3 et Dolphin 3.0 décrivent un alignement contrôlé par l\'utilisateur sans citer le NSFW, tandis que les deux versions abliterées sont étiquetées uncensored sur leur fiche. Restez dans la fiction entre personnages adultes : les contenus sexuels impliquant des mineurs et les représentations sexuelles de personnes réelles sont exclus quel que soit le modèle, comme l\'explique la section éthique.',
+          },
+          {
+            q: 'Que signifie « abliteré » pour un LLM ?',
+            a: 'Abliteré signifie que la direction du modèle qui médie les refus a été retirée des poids sans réentraînement. Des chercheurs ont montré que le refus passe par un sous-espace à une dimension dans 13 modèles de chat ouverts ; le guide d\'abliteration signale une baisse de performance par rapport au modèle d\'origine, que le fine-tuning n\'a corrigée qu\'en partie. C\'est différent d\'un fine-tune dont la fiche laisse l\'alignement au prompt système.',
+          },
+          {
+            q: 'De combien de VRAM ai-je besoin pour un LLM non censuré ?',
+            a: 'Au minimum la taille du fichier Q4_K_M, plus de la place pour le cache de contexte et l\'exécution : 4,92 Go pour les trois modèles 8B, 14,33 Go pour Dolphin 3.0 R1 Mistral 24B, 16,5 Go pour Gemma 3 27B abliterated, 21,76 Go pour Hermes 4.3 36B et 42,52 Go pour Hermes 3 Llama 3.1 70B. Les fichiers Q8_0 sont plus gros, par exemple 8,54 Go pour les modèles 8B et 38,42 Go pour Hermes 4.3 36B.',
+          },
+          {
+            q: 'Comment exécuter un LLM non censuré avec Ollama, LM Studio ou llama.cpp ?',
+            a: 'Avec Ollama : `ollama run hermes3` ou `ollama run dolphin3`, ou n\'importe quel GGUF avec `ollama run hf.co/<user>/<repo>`. Avec LM Studio : `lms get <model-name>@q4_k_m`. Avec llama.cpp : `llama cli -hf <user>/<repo>`, ou `llama serve -hf <user>/<repo>` pour un serveur compatible OpenAI. La section Installation ci-dessus couvre les interfaces comme SillyTavern.',
+          },
         ],
       },
       relatedReading: {
@@ -1244,8 +1486,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-30',
-    next_refresh_due: '2027-03-01',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Creative & Roleplay',
     title: '無検閲ローカルLLMと創作活動：小説家が使うべき場面（2026年版）',
     seoTitle: '無検閲ローカルLLM 5選：日本語小説と倫理 2026',
@@ -1272,6 +1514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
+      'Hermes 4.3 36B',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -1318,6 +1561,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '無検閲モデルが適切な場面', anchor: '#appropriate-use' },
       { label: '適切でない場面', anchor: '#inappropriate-use' },
       { label: 'モデル比較', anchor: '#models' },
+      { label: 'ランキング：おすすめ無検閲モデル', anchor: '#ranked-models' },
+      { label: '無検閲とアブリテレーション', anchor: '#steerable-vs-abliterated' },
       { label: '日本語で書く場合のモデル選び', anchor: '#japanese' },
       { label: 'セットアップ：OllamaとLM Studio', anchor: '#setup' },
       { label: '残る倫理的責任', anchor: '#ethics' },
@@ -1512,6 +1757,62 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      rankedModels: {
+        id: 'ranked-models',
+        title: '無検閲ローカルLLMおすすめ一覧：ハードウェア段階別',
+        content:
+          '**この7モデルはQ4_K_Mのファイルサイズが小さい順に並べています。順序は編集部によるハードウェア段階別の並びで、ベンチマークの順位ではありません。** お使いのGPUのVRAMまたはMacのユニファイドメモリに余裕をもって収まる最後の行を選んでください。ファイルサイズは各モデルのHugging Face上のGGUFリポジトリの値です。重みに加えてコンテキストキャッシュと実行環境にもメモリが必要なので、ファイルサイズより余裕を見てください。[Ethical Responsibilities That Remain](#ethics)の法的・倫理的な限界は、この一覧のすべてのモデルに適用されます。',
+        columns: ['順位', 'モデル', '種類（カード記載）', 'Q4_K_Mファイル', 'ライセンスtag'],
+        rows: [
+          { '順位': '1', 'モデル': '[Hermes 3 Llama 3.1 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B)', '種類（カード記載）': '調整可能なファインチューン', 'Q4_K_Mファイル': '4.92 GB', 'ライセンスtag': 'llama3' },
+          { '順位': '2', 'モデル': '[Dolphin 3.0 Llama 3.1 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B)', '種類（カード記載）': '調整可能なファインチューン', 'Q4_K_Mファイル': '4.92 GB', 'ライセンスtag': 'llama3.1' },
+          { '順位': '3', 'モデル': '[Llama 3.1 8B Instruct abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated)', '種類（カード記載）': 'アブリテレーション済み', 'Q4_K_Mファイル': '4.92 GB', 'ライセンスtag': 'llama3.1' },
+          { '順位': '4', 'モデル': '[Dolphin 3.0 R1 Mistral 24B](https://huggingface.co/cognitivecomputations/Dolphin3.0-R1-Mistral-24B)', '種類（カード記載）': '調整可能なファインチューン', 'Q4_K_Mファイル': '14.33 GB', 'ライセンスtag': 'カードに記載なし' },
+          { '順位': '5', 'モデル': '[Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated)', '種類（カード記載）': 'アブリテレーション済み', 'Q4_K_Mファイル': '16.5 GB', 'ライセンスtag': 'gemma' },
+          { '順位': '6', 'モデル': '[Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B)', '種類（カード記載）': '中立的なアライメント', 'Q4_K_Mファイル': '21.76 GB', 'ライセンスtag': 'apache-2.0' },
+          { '順位': '7', 'モデル': '[Hermes 3 Llama 3.1 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B)', '種類（カード記載）': '調整可能なファインチューン', 'Q4_K_Mファイル': '42.52 GB', 'ライセンスtag': 'llama3' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '3行目と5行目はコミュニティによるアブリテレーション版で、Gemma 3のカードは自モデルを「fairly experimental」と述べています。1・2・4・6・7行目は、システムプロンプトで方向づける調整可能または中立的なファインチューンです。調整可能なモデルでシーンがすでに成立するなら、アブリテレーション版は品質リスクだけが増えて利点がありません。',
+          },
+        ],
+        items: [
+          '**ファイルサイズの出典：** [Hermes 3 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B-GGUF) · [Dolphin 3.0 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B-GGUF) · [Llama 3.1 8B abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF) · [Dolphin 3.0 R1 24B](https://huggingface.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF) · [Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated-GGUF) · [Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B-GGUF) · [Hermes 3 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B-GGUF)。Q8_0ファイルはさらに大きく、たとえば8Bの3モデルは8.54 GB、Hermes 4.3 36Bは38.42 GBです。',
+          '**拒否に関する記述はモデルカードに基づくもので、当社の検証ではありません。** 拒否の数値を公表しているのはHermes 4.3だけです。カードによると、RefusalBenchの質問に非推論モードで74.60%、推論モードで72.29%回答し（5回の平均）、そのリーダーボードの非アブリテレーションモデルでは最先端だとしています。これは提供元の自己申告で、当社は再現していません。',
+          '**Ollama：** `hermes3`（3b 2.0 GB、8b 4.7 GB、70b 40 GB、405b 229 GB）と`dolphin3`（8b 4.9 GB）はOllamaライブラリにあります。ほかの行は`ollama run hf.co/<user>/<repo>`で実行します。Hugging Faceのドキュメントでは、リポジトリにQ4_K_Mがあればそれが既定の量子化です。',
+          '**LM Studio：** `lms get <model-name>@q4_k_m`はオンラインのリポジトリを検索し、`@`以降で指定した量子化をダウンロードします。',
+          '**llama.cpp：** `llama cli -hf <user>/<repo>`はHugging Faceからモデルをダウンロードして実行し、`llama serve -hf <user>/<repo>`はOpenAI互換のAPIサーバーを起動します。',
+        ],
+        promptExamples: [
+          { label: 'Ollama：ランキングのモデルを実行', text: '# Ollama library tags (hermes3 default = 8B, 4.7 GB per the library page)\nollama run hermes3\nollama run dolphin3\nollama run hermes3:70b\n\n# Any GGUF on Hugging Face; the quant tag after the colon is optional (default Q4_K_M)\nollama run hf.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF\nollama run hf.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF:Q4_K_M\nollama run hf.co/mlabonne/gemma-3-27b-it-abliterated-GGUF:Q4_K_M\nollama run hf.co/NousResearch/Hermes-4.3-36B-GGUF:Q4_K_M' },
+          { label: 'LM Studio：量子化をダウンロード', text: '# LM Studio CLI: search and download; @ selects the quantization\nlms get <model-name>@q4_k_m\n\n# GGUF files you downloaded yourself can also be imported in the LM Studio app' },
+          { label: 'llama.cpp：Hugging Faceから実行', text: '# llama.cpp (commands as written in its README)\nllama cli -hf mlabonne/gemma-3-27b-it-abliterated-GGUF\nllama serve -hf mlabonne/gemma-3-27b-it-abliterated-GGUF' },
+        ],
+      },
+      uncensoredVsAbliterated: {
+        id: 'steerable-vs-abliterated',
+        title: '無検閲・アブリテレーション・ファインチューンの違い',
+        content:
+          '**「無検閲」は3つの異なる手法に使われ、アブリテレーションと呼ばれるのはそのうち1つだけです。** どれをダウンロードするのかは、宣伝文句ではなくモデルカードで確認してください。',
+        items: [
+          '**調整可能・中立的アライメントのファインチューン（Hermes 3、Hermes 4.3、Dolphin 3.0）：** カードに「uncensored」という語はありません。Dolphin 3.0のカードは「You decide the alignment」「Dolphin does not impose its ethics or guidelines on you」、Hermes 3は「aligning LLMs to the user」、Hermes 4.3は「broadly neutral alignment」と述べています。挙動はシステムプロンプト次第です。',
+          '**データを絞り込むファインチューン：** Eric Hartfordの記事[Uncensored Models](https://erichartford.com/uncensored-models)は、学習データから拒否応答と偏った回答を取り除き、元のモデルと同じ方法で再学習する手法を説明しています。',
+          '**アブリテレーション：** [Arditiらの論文](https://arxiv.org/abs/2406.11717)は、最大72Bパラメータの公開チャットモデル13種で拒否が「mediated by a one-dimensional subspace」であり、この方向を消すと拒否しなくなると報告しています。[mlabonneのアブリテレーション解説](https://huggingface.co/blog/mlabonne/abliteration)は再学習なしでこれを適用し、全ベンチマークで性能が低下し、DPOでも一部しか回復しなかったと報告しています。',
+          '**実用上の結論：** アブリテレーション版は拒否の除去と引き換えに品質を一部手放し、調整可能なファインチューンはシステムプロンプトで制御できます。まず調整可能なモデルを試し、それでも拒否される場合にだけアブリテレーション版へ移ってください。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '「無検閲LLM」は総称です。HermesやDolphinのような調整可能なファインチューンはアライメントをシステムプロンプトに委ね、アブリテレーション済みモデルは重みから拒否の方向を取り除いています。',
+          },
+          {
+            type: 'plain-terms',
+            text: '拒否の少ないモデルに至る道は3つあります。拒否のないデータで再学習する、カードでアライメントを利用者に委ねるモデルを公開する、完成した重みを編集して拒否の方向を打ち消す、です。最後がアブリテレーションで、その解説自身が元モデルより品質が下がると報告しています。',
+          },
+        ],
+      },
       setup: {
         id: 'setup',
         title: 'セットアップ：OllamaとLM Studio',
@@ -1686,6 +1987,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'コンテンツ制限のないローカルLLMはどれですか？',
             a: '本記事で扱う無検閲・「abliterated」ファインチューン――Hermes 3やDolphin 3.0を含む――は拒否層を追加学習で外してあるため、独自のコンテンツポリシーを持ちません。これがローカルモデルとホスト型モデルの実務上の違いです：クラウドプロバイダーはリクエストごとに利用規約を適用しますが、自分のマシンで動く無規制モデルには介在するプロバイダーがなく、推論時に検閲もかかりません。そのためNSFWや明示的なフィクションはブロックされません。変わらないのは居住地の法律と、公開に伴う責任です――コンテンツポリシーがないことは、限界がないことと同じではありません。その境界線については後述の倫理の節で扱います。',
           },
+          {
+            q: 'おすすめの無検閲ローカルLLMは？',
+            a: '唯一の最良モデルはなく、お使いのメモリ次第です。このページでは、モデルカードを確認できた7モデルをQ4_K_Mのファイルサイズ順に並べています。Hermes 3 Llama 3.1 8B、Dolphin 3.0 Llama 3.1 8B、Llama 3.1 8B Instruct abliterated（各4.92 GB）、Dolphin 3.0 R1 Mistral 24B（14.33 GB）、Gemma 3 27B abliterated（16.5 GB）、Hermes 4.3 36B（21.76 GB）、Hermes 3 Llama 3.1 70B（42.52 GB）です。順序は編集部によるハードウェア段階別でベンチマークではなく、当社がこれらのモデルを実行したわけでもありません。',
+          },
+          {
+            q: 'ローカルで動かせるおすすめのNSFW LLMは？',
+            a: '同じランキングが当てはまります。Q4_K_Mファイルがメモリに収まる最大のモデルを選んでください。Hermes 3とDolphin 3.0のカードは利用者が制御するアライメントを説明しており、NSFWには触れていません。アブリテレーション版の2つはカードにuncensoredと明記されています。範囲は成人の登場人物によるフィクションにとどめてください。未成年が関わる性的内容や実在の人物の性的描写は、どのモデルでも許されません。詳しくは倫理のセクションをご覧ください。',
+          },
+          {
+            q: 'LLMでアブリテレーションとは何ですか？',
+            a: 'アブリテレーション（abliteration）とは、拒否を媒介するモデル内の方向を、再学習せずに重みから取り除くことです。研究者は公開チャットモデル13種で拒否が一次元の部分空間に媒介されていることを見いだしました。解説記事は元モデルより性能が下がり、追加学習でも一部しか回復しなかったと報告しています。カードがアライメントをシステムプロンプトに委ねるファインチューンとは別物です。',
+          },
+          {
+            q: '無検閲LLMにはどれくらいのVRAMが必要ですか？',
+            a: '最低でもQ4_K_Mのファイルサイズに加え、コンテキストキャッシュと実行環境の分が必要です。8Bの3モデルは4.92 GB、Dolphin 3.0 R1 Mistral 24Bは14.33 GB、Gemma 3 27B abliteratedは16.5 GB、Hermes 4.3 36Bは21.76 GB、Hermes 3 Llama 3.1 70Bは42.52 GBです。Q8_0はさらに大きく、8Bモデルで8.54 GB、Hermes 4.3 36Bで38.42 GBです。',
+          },
+          {
+            q: '無検閲LLMをOllama、LM Studio、llama.cppで動かすには？',
+            a: 'Ollamaでは`ollama run hermes3`か`ollama run dolphin3`、または任意のGGUFを`ollama run hf.co/<user>/<repo>`で実行します。LM Studioでは`lms get <model-name>@q4_k_m`。llama.cppでは`llama cli -hf <user>/<repo>`、OpenAI互換サーバーなら`llama serve -hf <user>/<repo>`です。SillyTavernなどのフロントエンドは上のセットアップのセクションで扱っています。',
+          },
         ],
       },
       relatedReading: {
@@ -1707,8 +2028,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Creative & Roleplay',
     title: '无审查本地LLM与创意写作：创作者何时需要它们（2026年）',
     seoTitle: '无限制本地LLM：情色与NSFW创作2026',
@@ -1735,6 +2056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
+      'Hermes 4.3 36B',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -1781,6 +2103,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '无审查模型的适用场景', anchor: '#appropriate-use' },
       { label: '不适用场景', anchor: '#inappropriate-use' },
       { label: '模型对比', anchor: '#models' },
+      { label: '排名：推荐的无审查模型', anchor: '#ranked-models' },
+      { label: '无审查与abliteration', anchor: '#steerable-vs-abliterated' },
       { label: '配置：Ollama与LM Studio', anchor: '#setup' },
       { label: '仍需承担的伦理责任', anchor: '#ethics' },
       { label: '实践工作流', anchor: '#workflow' },
@@ -1945,6 +2269,62 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-zh.webp',
           imageCaption: 'Hermes 3在指令质量和无审查范围之间平衡最佳 — 完全消融模型偏离更快，文笔质量更低。',
         },
+      rankedModels: {
+        id: 'ranked-models',
+        title: '最佳无审查本地LLM：按硬件档位排序',
+        content:
+          '**这7个模型按Q4_K_M文件大小从小到大排列。排序由编辑部按硬件档位给出，不是基准测试排名。** 请选择文件大小能从容放进你的GPU显存或Mac统一内存的最后一行。文件大小取自各模型在Hugging Face上的GGUF仓库；除权重外，上下文缓存和运行时也要占用内存，因此请在文件大小之上留出余量。[Ethical Responsibilities That Remain](#ethics)中的法律与伦理限制适用于本列表中的每个模型。',
+        columns: ['排名', '模型', '类型（据模型卡）', 'Q4_K_M文件', '许可证标签'],
+        rows: [
+          { '排名': '1', '模型': '[Hermes 3 Llama 3.1 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B)', '类型（据模型卡）': '可引导的微调模型', 'Q4_K_M文件': '4.92 GB', '许可证标签': 'llama3' },
+          { '排名': '2', '模型': '[Dolphin 3.0 Llama 3.1 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B)', '类型（据模型卡）': '可引导的微调模型', 'Q4_K_M文件': '4.92 GB', '许可证标签': 'llama3.1' },
+          { '排名': '3', '模型': '[Llama 3.1 8B Instruct abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated)', '类型（据模型卡）': '已abliterate', 'Q4_K_M文件': '4.92 GB', '许可证标签': 'llama3.1' },
+          { '排名': '4', '模型': '[Dolphin 3.0 R1 Mistral 24B](https://huggingface.co/cognitivecomputations/Dolphin3.0-R1-Mistral-24B)', '类型（据模型卡）': '可引导的微调模型', 'Q4_K_M文件': '14.33 GB', '许可证标签': '模型卡未注明' },
+          { '排名': '5', '模型': '[Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated)', '类型（据模型卡）': '已abliterate', 'Q4_K_M文件': '16.5 GB', '许可证标签': 'gemma' },
+          { '排名': '6', '模型': '[Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B)', '类型（据模型卡）': '中立对齐', 'Q4_K_M文件': '21.76 GB', '许可证标签': 'apache-2.0' },
+          { '排名': '7', '模型': '[Hermes 3 Llama 3.1 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B)', '类型（据模型卡）': '可引导的微调模型', 'Q4_K_M文件': '42.52 GB', '许可证标签': 'llama3' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '第3行和第5行是社区发布的abliterated版本；Gemma 3的模型卡称其模型“fairly experimental”。第1、2、4、6、7行是可引导或中立对齐的微调模型，通过系统提示词来控制。如果某个场景在可引导模型上已经能写出来，abliterated版本只会增加质量风险，没有收益。',
+          },
+        ],
+        items: [
+          '**文件大小来源：** [Hermes 3 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B-GGUF) · [Dolphin 3.0 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B-GGUF) · [Llama 3.1 8B abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF) · [Dolphin 3.0 R1 24B](https://huggingface.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF) · [Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated-GGUF) · [Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B-GGUF) · [Hermes 3 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B-GGUF)。Q8_0文件更大，例如三个8B模型为8.54 GB，Hermes 4.3 36B为38.42 GB。',
+          '**关于拒答的说法来自模型卡，而非我们自己的测试。** 只有Hermes 4.3公布了拒答数据：其模型卡称在RefusalBench上，非推理模式回答了74.60%的问题，推理模式为72.29%（5次平均），并称在该榜单的非abliterated模型中处于领先水平。这是厂商自述，我们没有复现。',
+          '**Ollama：** `hermes3`（3b 2.0 GB、8b 4.7 GB、70b 40 GB、405b 229 GB）和`dolphin3`（8b 4.9 GB）在Ollama库中。其余各行用`ollama run hf.co/<user>/<repo>`运行；Hugging Face文档说明，仓库包含Q4_K_M时默认使用它。',
+          '**LM Studio：** `lms get <model-name>@q4_k_m`会搜索在线仓库，并下载`@`之后指定的量化版本。',
+          '**llama.cpp：** `llama cli -hf <user>/<repo>`从Hugging Face下载模型并运行；`llama serve -hf <user>/<repo>`启动兼容OpenAI的API服务器。',
+        ],
+        promptExamples: [
+          { label: 'Ollama：运行排名中的模型', text: '# Ollama library tags (hermes3 default = 8B, 4.7 GB per the library page)\nollama run hermes3\nollama run dolphin3\nollama run hermes3:70b\n\n# Any GGUF on Hugging Face; the quant tag after the colon is optional (default Q4_K_M)\nollama run hf.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF\nollama run hf.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF:Q4_K_M\nollama run hf.co/mlabonne/gemma-3-27b-it-abliterated-GGUF:Q4_K_M\nollama run hf.co/NousResearch/Hermes-4.3-36B-GGUF:Q4_K_M' },
+          { label: 'LM Studio：下载某个量化版本', text: '# LM Studio CLI: search and download; @ selects the quantization\nlms get <model-name>@q4_k_m\n\n# GGUF files you downloaded yourself can also be imported in the LM Studio app' },
+          { label: 'llama.cpp：直接从Hugging Face运行', text: '# llama.cpp (commands as written in its README)\nllama cli -hf mlabonne/gemma-3-27b-it-abliterated-GGUF\nllama serve -hf mlabonne/gemma-3-27b-it-abliterated-GGUF' },
+        ],
+      },
+      uncensoredVsAbliterated: {
+        id: 'steerable-vs-abliterated',
+        title: '无审查、abliterated与微调：这些术语的含义',
+        content:
+          '**“无审查”被用来指三种不同的技术，其中只有一种叫abliteration。** 你下载的是哪一种，要看模型卡，而不是宣传用语。',
+        items: [
+          '**可引导或中立对齐的微调模型（Hermes 3、Hermes 4.3、Dolphin 3.0）：** 模型卡并未使用“uncensored”一词。Dolphin 3.0的模型卡写道“You decide the alignment”和“Dolphin does not impose its ethics or guidelines on you”；Hermes 3称“aligning LLMs to the user”；Hermes 4.3称“broadly neutral alignment”。其行为取决于你的系统提示词。',
+          '**用过滤后的数据微调：** Eric Hartford的文章[Uncensored Models](https://erichartford.com/uncensored-models)介绍了从训练数据中去掉拒答和带偏见的回答，再以与原模型相同的方式重新训练。',
+          '**Abliteration：** [Arditi等人](https://arxiv.org/abs/2406.11717)发现，在13个最高72B参数的开源对话模型中，拒答由“a one-dimensional subspace”所介导，抹去这个方向就能让模型不再拒答。[mlabonne的abliteration说明](https://huggingface.co/blog/mlabonne/abliteration)在不重新训练的情况下应用该方法，并报告所有基准测试成绩均下降，DPO只能部分恢复。',
+          '**实际结论：** abliterated版本以一部分质量换取拒答的消除；可引导的微调模型仍可通过系统提示词控制。先用可引导的模型，只有它仍然拒答时再换abliterated版本。',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '“无审查LLM”是一个统称：Hermes、Dolphin这类可引导的微调模型把对齐交给你的系统提示词，而abliterated模型则从权重中移除了拒答方向。',
+          },
+          {
+            type: 'plain-terms',
+            text: '要得到更少拒答的模型有三条路：用不含拒答的数据重新训练；发布模型卡把对齐交给用户的模型；或编辑已完成的权重来抵消拒答方向。最后一条就是abliteration，其说明本身也报告了相对原模型的质量下降。',
+          },
+        ],
+      },
       setup: {
         id: 'setup',
         title: '配置：Ollama与LM Studio',
@@ -2095,6 +2475,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '哪些本地LLM没有内容限制？',
             a: '本文介绍的无审查和"abliterated"微调模型——包括Hermes 3和Dolphin 3.0——已通过训练移除了拒绝层，因此不带有任何自身的内容政策。这正是本地模型与托管模型的实际区别：云服务商在每次请求时都会执行其服务条款，而运行在自己机器上的无限制模型没有服务商介入，推理时也不会施加任何审查。因此NSFW和露骨的虚构内容不会被屏蔽。不会改变的是所在地的法律，以及发布内容所伴随的责任——没有内容政策不等于没有底线，下文的伦理部分说明了这些底线具体在哪里。',
           },
+          {
+            q: '最好的无审查本地LLM是哪个？',
+            a: '没有唯一的最佳选择，取决于你的内存。本页按Q4_K_M文件大小排列了7个已核对模型卡的模型：Hermes 3 Llama 3.1 8B、Dolphin 3.0 Llama 3.1 8B和Llama 3.1 8B Instruct abliterated（各4.92 GB），Dolphin 3.0 R1 Mistral 24B（14.33 GB），Gemma 3 27B abliterated（16.5 GB），Hermes 4.3 36B（21.76 GB）以及Hermes 3 Llama 3.1 70B（42.52 GB）。排序由编辑部按硬件档位给出，并非基准测试，我们也没有亲自运行过这些模型。',
+          },
+          {
+            q: '本地运行最好的NSFW LLM是哪个？',
+            a: '适用同一份排名：选择Q4_K_M文件能放进你内存的最大模型。Hermes 3和Dolphin 3.0的模型卡描述的是由用户控制的对齐，并未提及NSFW；两个abliterated版本的模型卡则标注了uncensored。请把范围限定在成年角色之间的虚构作品：涉及未成年人的性内容以及对真实人物的性描写，无论使用哪个模型都不可触碰，伦理部分对此有说明。',
+          },
+          {
+            q: 'LLM中的abliterated是什么意思？',
+            a: 'Abliterated指无需重新训练，直接把模型中介导拒答的方向从权重里移除。研究者在13个开源对话模型中发现，拒答由一维子空间介导；abliteration说明报告称相对原模型性能下降，微调只能部分恢复。这与模型卡把对齐交给系统提示词的微调模型不同。',
+          },
+          {
+            q: '运行无审查LLM需要多少显存？',
+            a: '至少是Q4_K_M文件的大小，再加上上下文缓存和运行时所需的空间：三个8B模型为4.92 GB，Dolphin 3.0 R1 Mistral 24B为14.33 GB，Gemma 3 27B abliterated为16.5 GB，Hermes 4.3 36B为21.76 GB，Hermes 3 Llama 3.1 70B为42.52 GB。Q8_0文件更大，例如8B模型为8.54 GB，Hermes 4.3 36B为38.42 GB。',
+          },
+          {
+            q: '如何在Ollama、LM Studio或llama.cpp中运行无审查LLM？',
+            a: '在Ollama中运行`ollama run hermes3`或`ollama run dolphin3`，也可以用`ollama run hf.co/<user>/<repo>`加载任意GGUF。在LM Studio中运行`lms get <model-name>@q4_k_m`。在llama.cpp中运行`llama cli -hf <user>/<repo>`，需要兼容OpenAI的服务器则用`llama serve -hf <user>/<repo>`。SillyTavern等前端见上文的设置部分。',
+          },
         ],
       },
       relatedReading: {
@@ -2116,8 +2516,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Creative & Roleplay',
     title: 'LLMs locales sin censura para escritura creativa: cuándo los escritores los necesitan (2026)',
     seoTitle: 'LLMs sin censura para erótica y NSFW 2026',
@@ -2144,6 +2544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
+      'Hermes 4.3 36B',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -2190,6 +2591,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Cuándo son apropiados los modelos sin censura', anchor: '#appropriate-use' },
       { label: 'Cuándo no lo son', anchor: '#inappropriate-use' },
       { label: 'Comparación de modelos', anchor: '#models' },
+      { label: 'Ranking: mejores modelos sin censura', anchor: '#ranked-models' },
+      { label: 'Sin censura vs abliteración', anchor: '#steerable-vs-abliterated' },
       { label: 'Configuración: Ollama y LM Studio', anchor: '#setup' },
       { label: 'Responsabilidades éticas que permanecen', anchor: '#ethics' },
       { label: 'Flujo de trabajo práctico', anchor: '#workflow' },
@@ -2354,6 +2757,62 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-es.webp',
           imageCaption: 'Hermes 3 ofrece el mejor equilibrio entre calidad de instrucción y rango sin censura — los modelos totalmente abliterados derivan más rápido.',
         },
+      rankedModels: {
+        id: 'ranked-models',
+        title: 'Mejores LLM locales sin censura, ordenados por nivel de hardware',
+        content:
+          '**Estos siete modelos están ordenados por el tamaño del archivo Q4_K_M, de menor a mayor. El orden es editorial y sigue niveles de hardware; no es un ranking de benchmarks.** Elige la última fila cuyo tamaño de archivo quepa con holgura en la VRAM de tu GPU o en la memoria unificada de tu Mac. Los tamaños proceden del repositorio GGUF de cada modelo en Hugging Face; la caché de contexto y el entorno de ejecución necesitan memoria además de los pesos, así que deja margen por encima del tamaño del archivo. Los límites legales y éticos de [Ethical Responsibilities That Remain](#ethics) se aplican a todos los modelos de esta lista.',
+        columns: ['Puesto', 'Modelo', 'Tipo (según la ficha)', 'Archivo Q4_K_M', 'Licencia (tag)'],
+        rows: [
+          { 'Puesto': '1', 'Modelo': '[Hermes 3 Llama 3.1 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B)', 'Tipo (según la ficha)': 'Fine-tune orientable', 'Archivo Q4_K_M': '4,92 GB', 'Licencia (tag)': 'llama3' },
+          { 'Puesto': '2', 'Modelo': '[Dolphin 3.0 Llama 3.1 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B)', 'Tipo (según la ficha)': 'Fine-tune orientable', 'Archivo Q4_K_M': '4,92 GB', 'Licencia (tag)': 'llama3.1' },
+          { 'Puesto': '3', 'Modelo': '[Llama 3.1 8B Instruct abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated)', 'Tipo (según la ficha)': 'Abliterado', 'Archivo Q4_K_M': '4,92 GB', 'Licencia (tag)': 'llama3.1' },
+          { 'Puesto': '4', 'Modelo': '[Dolphin 3.0 R1 Mistral 24B](https://huggingface.co/cognitivecomputations/Dolphin3.0-R1-Mistral-24B)', 'Tipo (según la ficha)': 'Fine-tune orientable', 'Archivo Q4_K_M': '14,33 GB', 'Licencia (tag)': 'no indicada en la ficha' },
+          { 'Puesto': '5', 'Modelo': '[Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated)', 'Tipo (según la ficha)': 'Abliterado', 'Archivo Q4_K_M': '16,5 GB', 'Licencia (tag)': 'gemma' },
+          { 'Puesto': '6', 'Modelo': '[Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B)', 'Tipo (según la ficha)': 'Alineación neutral', 'Archivo Q4_K_M': '21,76 GB', 'Licencia (tag)': 'apache-2.0' },
+          { 'Puesto': '7', 'Modelo': '[Hermes 3 Llama 3.1 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B)', 'Tipo (según la ficha)': 'Fine-tune orientable', 'Archivo Q4_K_M': '42,52 GB', 'Licencia (tag)': 'llama3' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Las filas 3 y 5 son lanzamientos abliterados de la comunidad; la ficha de Gemma 3 describe su modelo como «fairly experimental». Las filas 1, 2, 4, 6 y 7 son fine-tunes orientables o de alineación neutral que diriges con el prompt de sistema. Si una escena ya funciona con un modelo orientable, la variante abliterada añade riesgo de calidad sin beneficio.',
+          },
+        ],
+        items: [
+          '**Fuentes de los tamaños de archivo:** [Hermes 3 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B-GGUF) · [Dolphin 3.0 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B-GGUF) · [Llama 3.1 8B abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF) · [Dolphin 3.0 R1 24B](https://huggingface.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF) · [Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated-GGUF) · [Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B-GGUF) · [Hermes 3 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B-GGUF). Los archivos Q8_0 son mayores, por ejemplo 8,54 GB en los tres modelos de 8B y 38,42 GB en Hermes 4.3 36B.',
+          '**Las afirmaciones sobre rechazos proceden de las fichas de los modelos, no de pruebas propias.** Solo Hermes 4.3 publica una cifra: su ficha indica que responde el 74,60 % de las preguntas de RefusalBench en modo sin razonamiento y el 72,29 % en modo de razonamiento (media de 5 pruebas), y se presenta como estado del arte entre los modelos no abliterados de la clasificación de RefusalBench. Es una declaración del proveedor que no hemos reproducido.',
+          '**Ollama:** `hermes3` (3b 2,0 GB, 8b 4,7 GB, 70b 40 GB, 405b 229 GB) y `dolphin3` (8b 4,9 GB) están en la biblioteca de Ollama. Las demás filas se ejecutan con `ollama run hf.co/<user>/<repo>`; la documentación de Hugging Face indica Q4_K_M como cuantización por defecto cuando el repositorio la incluye.',
+          '**LM Studio:** `lms get <model-name>@q4_k_m` busca en repositorios en línea y descarga la cuantización indicada tras la `@`.',
+          '**llama.cpp:** `llama cli -hf <user>/<repo>` descarga un modelo de Hugging Face y lo ejecuta; `llama serve -hf <user>/<repo>` inicia un servidor de API compatible con OpenAI.',
+        ],
+        promptExamples: [
+          { label: 'Ollama: ejecutar los modelos del ranking', text: '# Ollama library tags (hermes3 default = 8B, 4.7 GB per the library page)\nollama run hermes3\nollama run dolphin3\nollama run hermes3:70b\n\n# Any GGUF on Hugging Face; the quant tag after the colon is optional (default Q4_K_M)\nollama run hf.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF\nollama run hf.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF:Q4_K_M\nollama run hf.co/mlabonne/gemma-3-27b-it-abliterated-GGUF:Q4_K_M\nollama run hf.co/NousResearch/Hermes-4.3-36B-GGUF:Q4_K_M' },
+          { label: 'LM Studio: descargar una cuantización', text: '# LM Studio CLI: search and download; @ selects the quantization\nlms get <model-name>@q4_k_m\n\n# GGUF files you downloaded yourself can also be imported in the LM Studio app' },
+          { label: 'llama.cpp: ejecutar desde Hugging Face', text: '# llama.cpp (commands as written in its README)\nllama cli -hf mlabonne/gemma-3-27b-it-abliterated-GGUF\nllama serve -hf mlabonne/gemma-3-27b-it-abliterated-GGUF' },
+        ],
+      },
+      uncensoredVsAbliterated: {
+        id: 'steerable-vs-abliterated',
+        title: 'Sin censura, abliterado y fine-tuned: qué significan los términos',
+        content:
+          '**«Sin censura» se usa para tres técnicas distintas, y solo una se llama abliteración.** Las fichas de los modelos, no las palabras de marketing, te dicen cuál estás descargando.',
+        items: [
+          '**Fine-tunes orientables o de alineación neutral (Hermes 3, Hermes 4.3, Dolphin 3.0):** las fichas no usan la palabra «uncensored». La ficha de Dolphin 3.0 dice «You decide the alignment» y «Dolphin does not impose its ethics or guidelines on you»; la de Hermes 3 habla de «aligning LLMs to the user»; la de Hermes 4.3 afirma una «broadly neutral alignment». El comportamiento depende de tu prompt de sistema.',
+          '**Fine-tuning con datos filtrados:** el ensayo de Eric Hartford [Uncensored Models](https://erichartford.com/uncensored-models) describe eliminar rechazos y respuestas sesgadas de los datos de entrenamiento y reentrenar el modelo igual que el original.',
+          '**Abliteración:** [Arditi et al.](https://arxiv.org/abs/2406.11717) encuentran que el rechazo está «mediated by a one-dimensional subspace» en 13 modelos de chat abiertos de hasta 72B parámetros, y que borrar esa dirección detiene los rechazos. La [guía de abliteración de mlabonne](https://huggingface.co/blog/mlabonne/abliteration) la aplica sin reentrenar e informa de una caída de rendimiento en todos los benchmarks, que una pasada de DPO solo recuperó en parte.',
+          '**Consecuencia práctica:** los lanzamientos abliterados cambian algo de calidad por eliminar rechazos; los fine-tunes orientables siguen siendo controlables con el prompt de sistema. Empieza por un modelo orientable y pasa a uno abliterado solo si aún rechaza.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '«LLM sin censura» es un término genérico: los fine-tunes orientables como Hermes y Dolphin dejan la alineación en tu prompt de sistema, mientras que los modelos abliterados tienen la dirección de rechazo eliminada de sus pesos.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Hay tres caminos hacia un modelo que rechaza menos: reentrenar con datos sin rechazos, publicar un modelo cuya ficha deja la alineación al usuario, o editar los pesos ya terminados para anular la dirección de rechazo. El último es la abliteración, y su propia guía informa de una pérdida de calidad frente al modelo original.',
+          },
+        ],
+      },
       setup: {
         id: 'setup',
         title: 'Configuración: Ollama y LM Studio',
@@ -2503,6 +2962,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Qué LLMs locales no tienen restricciones de contenido?',
             a: 'Los fine-tunes sin censura y "abliterated" que cubre esta guía — entre ellos Hermes 3 y Dolphin 3.0 — han tenido su capa de rechazo entrenada para eliminarse, por lo que no llevan ninguna política de contenido propia. Esa es la diferencia práctica entre un modelo local y uno alojado en la nube: un proveedor cloud aplica sus términos de servicio en cada solicitud, mientras que un modelo sin restricciones que corre en tu propia máquina no tiene ningún proveedor de por medio ni aplica censura alguna durante la inferencia. El contenido NSFW y la ficción explícita, por tanto, no quedan bloqueados. Lo que no cambia es la ley del lugar donde vives y la responsabilidad que conlleva publicar — no tener política de contenido no es lo mismo que no tener límites, y la sección de ética más abajo explica dónde están esos límites.',
           },
+          {
+            q: '¿Cuál es el mejor LLM local sin censura?',
+            a: 'No hay un único mejor; depende de tu memoria. Esta página ordena siete modelos con fichas verificadas por tamaño del archivo Q4_K_M: Hermes 3 Llama 3.1 8B, Dolphin 3.0 Llama 3.1 8B y Llama 3.1 8B Instruct abliterated (4,92 GB cada uno), Dolphin 3.0 R1 Mistral 24B (14,33 GB), Gemma 3 27B abliterated (16,5 GB), Hermes 4.3 36B (21,76 GB) y Hermes 3 Llama 3.1 70B (42,52 GB). El orden es editorial y por nivel de hardware, no un benchmark, y no hemos ejecutado estos modelos nosotros mismos.',
+          },
+          {
+            q: '¿Cuál es el mejor LLM NSFW para ejecutar en local?',
+            a: 'Vale el mismo ranking: elige el modelo más grande cuyo archivo Q4_K_M quepa en tu memoria. Las fichas de Hermes 3 y Dolphin 3.0 describen una alineación controlada por el usuario sin nombrar NSFW, mientras que los dos lanzamientos abliterados se etiquetan como uncensored en su ficha. Limítate a ficción entre personajes adultos: el contenido sexual con menores y las representaciones sexuales de personas reales quedan fuera con cualquier modelo, como explica la sección de ética.',
+          },
+          {
+            q: '¿Qué significa «abliterado» en un LLM?',
+            a: 'Abliterado significa que la dirección del modelo que media los rechazos se ha eliminado de los pesos sin reentrenar. Investigadores hallaron que el rechazo está mediado por un subespacio unidimensional en 13 modelos de chat abiertos; la guía de abliteración informa de una caída de rendimiento frente al modelo original que el ajuste solo recuperó en parte. Es distinto de un fine-tune cuya ficha deja la alineación al prompt de sistema.',
+          },
+          {
+            q: '¿Cuánta VRAM necesito para un LLM sin censura?',
+            a: 'Como mínimo el tamaño del archivo Q4_K_M, más espacio para la caché de contexto y el entorno de ejecución: 4,92 GB para los tres modelos de 8B, 14,33 GB para Dolphin 3.0 R1 Mistral 24B, 16,5 GB para Gemma 3 27B abliterated, 21,76 GB para Hermes 4.3 36B y 42,52 GB para Hermes 3 Llama 3.1 70B. Los archivos Q8_0 son mayores, por ejemplo 8,54 GB en los modelos de 8B y 38,42 GB en Hermes 4.3 36B.',
+          },
+          {
+            q: '¿Cómo ejecuto un LLM sin censura en Ollama, LM Studio o llama.cpp?',
+            a: 'En Ollama: `ollama run hermes3` o `ollama run dolphin3`, o cualquier GGUF con `ollama run hf.co/<user>/<repo>`. En LM Studio: `lms get <model-name>@q4_k_m`. En llama.cpp: `llama cli -hf <user>/<repo>`, o `llama serve -hf <user>/<repo>` para un servidor compatible con OpenAI. La sección de configuración anterior cubre frontends como SillyTavern.',
+          },
         ],
       },
       relatedReading: {
@@ -2535,8 +3014,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Creative & Roleplay',
     title: '창의적 글쓰기를 위한 무검열 로컬 LLM: 작가가 필요로 할 때 (2026)',
     seoTitle: '에로티카 & NSFW 무검열 로컬 LLM 2026',
@@ -2563,6 +3042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
+      'Hermes 4.3 36B',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -2609,6 +3089,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '무검열 모델이 픽션에 적합한 경우', anchor: '#appropriate-use' },
       { label: '적합하지 않은 경우', anchor: '#inappropriate-use' },
       { label: '모델 비교', anchor: '#models' },
+      { label: '순위: 추천 무검열 모델', anchor: '#ranked-models' },
+      { label: '무검열과 abliteration', anchor: '#steerable-vs-abliterated' },
       { label: '설정: Ollama와 LM Studio', anchor: '#setup' },
       { label: '남아있는 윤리적 책임', anchor: '#ethics' },
       { label: '실용적인 워크플로우', anchor: '#workflow' },
@@ -2773,6 +3255,62 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ko.webp',
           imageCaption: 'Hermes 3는 지시 품질과 무검열 범위의 균형이 가장 좋음 — 완전 절제 모델은 더 빨리 벗어나고 문장 품질도 낮음.',
         },
+      rankedModels: {
+        id: 'ranked-models',
+        title: '최고의 무검열 로컬 LLM: 하드웨어 단계별 순위',
+        content:
+          '**이 7개 모델은 Q4_K_M 파일 크기가 작은 순서대로 나열했습니다. 순서는 편집팀이 하드웨어 단계에 따라 정한 것이며 벤치마크 순위가 아닙니다.** GPU VRAM이나 Mac 통합 메모리에 여유 있게 들어가는 마지막 행을 고르세요. 파일 크기는 각 모델의 Hugging Face GGUF 저장소 기준입니다. 가중치 외에 컨텍스트 캐시와 런타임도 메모리를 쓰므로 파일 크기보다 여유를 두세요. [Ethical Responsibilities That Remain](#ethics)의 법적·윤리적 한계는 이 목록의 모든 모델에 적용됩니다.',
+        columns: ['순위', '모델', '유형(모델 카드 기준)', 'Q4_K_M 파일', '라이선스 태그'],
+        rows: [
+          { '순위': '1', '모델': '[Hermes 3 Llama 3.1 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B)', '유형(모델 카드 기준)': '조정 가능한 파인튜닝', 'Q4_K_M 파일': '4.92 GB', '라이선스 태그': 'llama3' },
+          { '순위': '2', '모델': '[Dolphin 3.0 Llama 3.1 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B)', '유형(모델 카드 기준)': '조정 가능한 파인튜닝', 'Q4_K_M 파일': '4.92 GB', '라이선스 태그': 'llama3.1' },
+          { '순위': '3', '모델': '[Llama 3.1 8B Instruct abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated)', '유형(모델 카드 기준)': 'Abliteration 적용', 'Q4_K_M 파일': '4.92 GB', '라이선스 태그': 'llama3.1' },
+          { '순위': '4', '모델': '[Dolphin 3.0 R1 Mistral 24B](https://huggingface.co/cognitivecomputations/Dolphin3.0-R1-Mistral-24B)', '유형(모델 카드 기준)': '조정 가능한 파인튜닝', 'Q4_K_M 파일': '14.33 GB', '라이선스 태그': '카드에 표기 없음' },
+          { '순위': '5', '모델': '[Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated)', '유형(모델 카드 기준)': 'Abliteration 적용', 'Q4_K_M 파일': '16.5 GB', '라이선스 태그': 'gemma' },
+          { '순위': '6', '모델': '[Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B)', '유형(모델 카드 기준)': '중립적 정렬', 'Q4_K_M 파일': '21.76 GB', '라이선스 태그': 'apache-2.0' },
+          { '순위': '7', '모델': '[Hermes 3 Llama 3.1 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B)', '유형(모델 카드 기준)': '조정 가능한 파인튜닝', 'Q4_K_M 파일': '42.52 GB', '라이선스 태그': 'llama3' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: '3행과 5행은 커뮤니티가 공개한 abliteration 모델이며, Gemma 3 카드는 자사 모델을 "fairly experimental"이라고 설명합니다. 1, 2, 4, 6, 7행은 시스템 프롬프트로 방향을 잡는 조정 가능 또는 중립적 정렬의 파인튜닝 모델입니다. 조정 가능한 모델에서 장면이 이미 잘 나온다면 abliteration 버전은 품질 위험만 더할 뿐 이점이 없습니다.',
+          },
+        ],
+        items: [
+          '**파일 크기 출처:** [Hermes 3 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B-GGUF) · [Dolphin 3.0 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B-GGUF) · [Llama 3.1 8B abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF) · [Dolphin 3.0 R1 24B](https://huggingface.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF) · [Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated-GGUF) · [Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B-GGUF) · [Hermes 3 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B-GGUF). Q8_0 파일은 더 커서, 예를 들어 8B 모델 3종은 8.54 GB, Hermes 4.3 36B는 38.42 GB입니다.',
+          '**거부 관련 설명은 모델 카드에 근거하며 자체 테스트가 아닙니다.** 거부 수치를 공개한 모델은 Hermes 4.3뿐입니다. 카드에 따르면 RefusalBench 질문 중 비추론 모드에서 74.60%, 추론 모드에서 72.29%에 답했고(5회 평균), 해당 리더보드의 abliteration 미적용 모델 중 최고 수준이라고 밝힙니다. 이는 제작사의 자체 보고이며 저희가 재현하지 않았습니다.',
+          '**Ollama:** `hermes3`(3b 2.0 GB, 8b 4.7 GB, 70b 40 GB, 405b 229 GB)와 `dolphin3`(8b 4.9 GB)는 Ollama 라이브러리에 있습니다. 나머지 행은 `ollama run hf.co/<user>/<repo>`로 실행하며, Hugging Face 문서에 따르면 저장소에 Q4_K_M이 있을 때 기본 양자화로 쓰입니다.',
+          '**LM Studio:** `lms get <model-name>@q4_k_m`은 온라인 저장소를 검색하고 `@` 뒤에 지정한 양자화를 내려받습니다.',
+          '**llama.cpp:** `llama cli -hf <user>/<repo>`는 Hugging Face에서 모델을 내려받아 실행하고, `llama serve -hf <user>/<repo>`는 OpenAI 호환 API 서버를 시작합니다.',
+        ],
+        promptExamples: [
+          { label: 'Ollama: 순위의 모델 실행', text: '# Ollama library tags (hermes3 default = 8B, 4.7 GB per the library page)\nollama run hermes3\nollama run dolphin3\nollama run hermes3:70b\n\n# Any GGUF on Hugging Face; the quant tag after the colon is optional (default Q4_K_M)\nollama run hf.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF\nollama run hf.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF:Q4_K_M\nollama run hf.co/mlabonne/gemma-3-27b-it-abliterated-GGUF:Q4_K_M\nollama run hf.co/NousResearch/Hermes-4.3-36B-GGUF:Q4_K_M' },
+          { label: 'LM Studio: 양자화 파일 내려받기', text: '# LM Studio CLI: search and download; @ selects the quantization\nlms get <model-name>@q4_k_m\n\n# GGUF files you downloaded yourself can also be imported in the LM Studio app' },
+          { label: 'llama.cpp: Hugging Face에서 바로 실행', text: '# llama.cpp (commands as written in its README)\nllama cli -hf mlabonne/gemma-3-27b-it-abliterated-GGUF\nllama serve -hf mlabonne/gemma-3-27b-it-abliterated-GGUF' },
+        ],
+      },
+      uncensoredVsAbliterated: {
+        id: 'steerable-vs-abliterated',
+        title: '무검열, abliteration, 파인튜닝: 용어의 차이',
+        content:
+          '**"무검열"은 서로 다른 세 가지 기법에 쓰이며, 그중 abliteration이라 부르는 것은 하나뿐입니다.** 어떤 모델을 받는지는 홍보 문구가 아니라 모델 카드로 확인하세요.',
+        items: [
+          '**조정 가능 또는 중립적 정렬의 파인튜닝(Hermes 3, Hermes 4.3, Dolphin 3.0):** 카드에는 "uncensored"라는 표현이 없습니다. Dolphin 3.0 카드는 "You decide the alignment"와 "Dolphin does not impose its ethics or guidelines on you"라고 하고, Hermes 3은 "aligning LLMs to the user", Hermes 4.3은 "broadly neutral alignment"라고 설명합니다. 동작은 시스템 프롬프트에 달려 있습니다.',
+          '**데이터를 걸러 낸 파인튜닝:** Eric Hartford의 글 [Uncensored Models](https://erichartford.com/uncensored-models)는 학습 데이터에서 거부와 편향된 답변을 제거한 뒤 원본과 같은 방식으로 모델을 다시 학습하는 방법을 설명합니다.',
+          '**Abliteration:** [Arditi 외](https://arxiv.org/abs/2406.11717)는 최대 72B 파라미터의 공개 채팅 모델 13종에서 거부가 "mediated by a one-dimensional subspace"이며 이 방향을 지우면 거부하지 않게 된다고 밝혔습니다. [mlabonne의 abliteration 설명](https://huggingface.co/blog/mlabonne/abliteration)은 재학습 없이 이를 적용했고, 모든 벤치마크에서 성능이 떨어졌으며 DPO로도 일부만 회복됐다고 보고합니다.',
+          '**실용적 결론:** abliteration 모델은 거부를 없애는 대신 품질을 일부 내주고, 조정 가능한 파인튜닝은 시스템 프롬프트로 제어할 수 있습니다. 조정 가능한 모델부터 시작하고, 그래도 거부할 때만 abliteration 모델로 옮기세요.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '"무검열 LLM"은 포괄적인 용어입니다. Hermes나 Dolphin 같은 조정 가능한 파인튜닝은 정렬을 시스템 프롬프트에 맡기고, abliteration 모델은 가중치에서 거부 방향을 제거했습니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '덜 거부하는 모델에 이르는 길은 셋입니다. 거부가 없는 데이터로 다시 학습하거나, 카드에서 정렬을 사용자에게 맡기는 모델을 공개하거나, 완성된 가중치를 수정해 거부 방향을 상쇄하는 것입니다. 마지막이 abliteration이며, 그 설명 자체가 원본 모델보다 품질이 떨어진다고 보고합니다.',
+          },
+        ],
+      },
       setup: {
         id: 'setup',
         title: '설정: Ollama와 LM Studio',
@@ -2922,6 +3460,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '콘텐츠 제한이 없는 로컬 LLM은 어떤 것입니까?',
             a: '이 글에서 다루는 무검열 및 "abliterated" 파인튜닝 모델 — Hermes 3와 Dolphin 3.0을 포함 — 은 거부 레이어를 학습을 통해 제거했기 때문에 자체 콘텐츠 정책을 갖고 있지 않습니다. 이것이 로컬 모델과 호스팅형 모델의 실질적인 차이입니다: 클라우드 제공업체는 모든 요청에 약관을 적용하지만, 자신의 기기에서 실행되는 무제한 모델은 중간에 개입하는 제공업체가 없고 추론 시점에 어떤 검열도 적용되지 않습니다. 따라서 NSFW와 노골적인 픽션이 차단되지 않습니다. 변하지 않는 것은 거주 지역의 법률과 공개에 따르는 책임입니다 — 콘텐츠 정책이 없다는 것이 한계가 없다는 것을 의미하지는 않으며, 그 경계가 어디에 있는지는 아래 윤리 섹션에서 다룹니다.',
           },
+          {
+            q: '가장 좋은 무검열 로컬 LLM은 무엇인가요?',
+            a: '하나의 최고 모델은 없으며 보유한 메모리에 따라 다릅니다. 이 페이지는 모델 카드를 확인한 7개 모델을 Q4_K_M 파일 크기순으로 나열합니다. Hermes 3 Llama 3.1 8B, Dolphin 3.0 Llama 3.1 8B, Llama 3.1 8B Instruct abliterated(각 4.92 GB), Dolphin 3.0 R1 Mistral 24B(14.33 GB), Gemma 3 27B abliterated(16.5 GB), Hermes 4.3 36B(21.76 GB), Hermes 3 Llama 3.1 70B(42.52 GB)입니다. 순서는 편집팀의 하드웨어 단계별 구분이며 벤치마크가 아니고, 저희가 이 모델들을 직접 실행한 것도 아닙니다.',
+          },
+          {
+            q: '로컬에서 쓸 최고의 NSFW LLM은 무엇인가요?',
+            a: '같은 순위가 적용됩니다. Q4_K_M 파일이 메모리에 들어가는 가장 큰 모델을 고르세요. Hermes 3과 Dolphin 3.0 카드는 사용자가 제어하는 정렬을 설명할 뿐 NSFW를 언급하지 않고, abliteration 모델 두 개는 카드에 uncensored로 표기돼 있습니다. 범위는 성인 등장인물 사이의 창작물로 한정하세요. 미성년자가 관련된 성적 콘텐츠와 실존 인물의 성적 묘사는 어떤 모델이든 금지이며, 윤리 섹션에서 설명합니다.',
+          },
+          {
+            q: 'LLM에서 abliterated는 무슨 뜻인가요?',
+            a: 'Abliterated는 거부를 매개하는 모델 내부의 방향을 재학습 없이 가중치에서 제거했다는 뜻입니다. 연구자들은 공개 채팅 모델 13종에서 거부가 1차원 부분공간으로 매개된다는 것을 발견했고, abliteration 설명은 원본 모델 대비 성능 하락과 파인튜닝으로도 일부만 회복됐다고 보고합니다. 카드에서 정렬을 시스템 프롬프트에 맡기는 파인튜닝과는 다릅니다.',
+          },
+          {
+            q: '무검열 LLM에는 VRAM이 얼마나 필요한가요?',
+            a: '최소한 Q4_K_M 파일 크기에 컨텍스트 캐시와 런타임 공간을 더한 만큼 필요합니다. 8B 모델 3종은 4.92 GB, Dolphin 3.0 R1 Mistral 24B는 14.33 GB, Gemma 3 27B abliterated는 16.5 GB, Hermes 4.3 36B는 21.76 GB, Hermes 3 Llama 3.1 70B는 42.52 GB입니다. Q8_0 파일은 더 커서 8B 모델은 8.54 GB, Hermes 4.3 36B는 38.42 GB입니다.',
+          },
+          {
+            q: 'Ollama, LM Studio, llama.cpp에서 무검열 LLM을 어떻게 실행하나요?',
+            a: 'Ollama에서는 `ollama run hermes3` 또는 `ollama run dolphin3`을 실행하거나 `ollama run hf.co/<user>/<repo>`로 임의의 GGUF를 불러옵니다. LM Studio에서는 `lms get <model-name>@q4_k_m`을 실행합니다. llama.cpp에서는 `llama cli -hf <user>/<repo>`를, OpenAI 호환 서버가 필요하면 `llama serve -hf <user>/<repo>`를 실행합니다. SillyTavern 같은 프런트엔드는 위의 설정 섹션에서 다룹니다.',
+          },
         ],
       },
       relatedReading: {
@@ -2954,8 +3512,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Creative & Roleplay',
     title: 'LLMs locais sem censura para escrita criativa: quando escritores precisam deles em 2026',
     seoTitle: 'LLMs sem censura para erótica e NSFW 2026',
@@ -2982,6 +3540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
+      'Hermes 4.3 36B',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -3028,6 +3587,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Quando modelos sem censura são apropriados', anchor: '#appropriate-use' },
       { label: 'Quando não são', anchor: '#inappropriate-use' },
       { label: 'Comparação de modelos', anchor: '#models' },
+      { label: 'Ranking: melhores modelos sem censura', anchor: '#ranked-models' },
+      { label: 'Sem censura vs abliteração', anchor: '#steerable-vs-abliterated' },
       { label: 'Configuração: Ollama e LM Studio', anchor: '#setup' },
       { label: 'Responsabilidades éticas que permanecem', anchor: '#ethics' },
       { label: 'Fluxo de trabalho prático', anchor: '#workflow' },
@@ -3192,6 +3753,62 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-pt.webp',
           imageCaption: 'Hermes 3 tem o melhor equilíbrio entre qualidade de instrução e alcance sem censura — modelos totalmente ablacionados desviam mais rápido.',
         },
+      rankedModels: {
+        id: 'ranked-models',
+        title: 'Melhores LLMs locais sem censura, ordenados por nível de hardware',
+        content:
+          '**Estes sete modelos estão ordenados pelo tamanho do arquivo Q4_K_M, do menor para o maior. A ordem é editorial e segue níveis de hardware; não é um ranking de benchmarks.** Escolha a última linha cujo tamanho de arquivo caiba com folga na VRAM da sua GPU ou na memória unificada do seu Mac. Os tamanhos vêm do repositório GGUF de cada modelo no Hugging Face; o cache de contexto e o ambiente de execução precisam de memória além dos pesos, então deixe margem acima do tamanho do arquivo. Os limites legais e éticos de [Ethical Responsibilities That Remain](#ethics) valem para todos os modelos desta lista.',
+        columns: ['Posição', 'Modelo', 'Tipo (segundo a ficha)', 'Arquivo Q4_K_M', 'Licença (tag)'],
+        rows: [
+          { 'Posição': '1', 'Modelo': '[Hermes 3 Llama 3.1 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B)', 'Tipo (segundo a ficha)': 'Fine-tune orientável', 'Arquivo Q4_K_M': '4,92 GB', 'Licença (tag)': 'llama3' },
+          { 'Posição': '2', 'Modelo': '[Dolphin 3.0 Llama 3.1 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B)', 'Tipo (segundo a ficha)': 'Fine-tune orientável', 'Arquivo Q4_K_M': '4,92 GB', 'Licença (tag)': 'llama3.1' },
+          { 'Posição': '3', 'Modelo': '[Llama 3.1 8B Instruct abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated)', 'Tipo (segundo a ficha)': 'Abliterado', 'Arquivo Q4_K_M': '4,92 GB', 'Licença (tag)': 'llama3.1' },
+          { 'Posição': '4', 'Modelo': '[Dolphin 3.0 R1 Mistral 24B](https://huggingface.co/cognitivecomputations/Dolphin3.0-R1-Mistral-24B)', 'Tipo (segundo a ficha)': 'Fine-tune orientável', 'Arquivo Q4_K_M': '14,33 GB', 'Licença (tag)': 'não consta na ficha' },
+          { 'Posição': '5', 'Modelo': '[Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated)', 'Tipo (segundo a ficha)': 'Abliterado', 'Arquivo Q4_K_M': '16,5 GB', 'Licença (tag)': 'gemma' },
+          { 'Posição': '6', 'Modelo': '[Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B)', 'Tipo (segundo a ficha)': 'Alinhamento neutro', 'Arquivo Q4_K_M': '21,76 GB', 'Licença (tag)': 'apache-2.0' },
+          { 'Posição': '7', 'Modelo': '[Hermes 3 Llama 3.1 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B)', 'Tipo (segundo a ficha)': 'Fine-tune orientável', 'Arquivo Q4_K_M': '42,52 GB', 'Licença (tag)': 'llama3' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'As linhas 3 e 5 são lançamentos abliterados da comunidade; a ficha do Gemma 3 descreve seu modelo como "fairly experimental". As linhas 1, 2, 4, 6 e 7 são fine-tunes orientáveis ou de alinhamento neutro que você dirige pelo prompt de sistema. Se uma cena já funciona com um modelo orientável, a variante abliterada traz risco de qualidade sem benefício.',
+          },
+        ],
+        items: [
+          '**Fontes dos tamanhos de arquivo:** [Hermes 3 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B-GGUF) · [Dolphin 3.0 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B-GGUF) · [Llama 3.1 8B abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF) · [Dolphin 3.0 R1 24B](https://huggingface.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF) · [Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated-GGUF) · [Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B-GGUF) · [Hermes 3 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B-GGUF). Os arquivos Q8_0 são maiores, por exemplo 8,54 GB nos três modelos de 8B e 38,42 GB no Hermes 4.3 36B.',
+          '**As afirmações sobre recusas vêm das fichas dos modelos, não de testes próprios.** Só o Hermes 4.3 publica um número: sua ficha informa 74,60 % das perguntas do RefusalBench respondidas no modo sem raciocínio e 72,29 % no modo de raciocínio (média de 5 execuções) e se apresenta como estado da arte entre os modelos não abliterados do ranking do RefusalBench. É uma declaração do fornecedor que não reproduzimos.',
+          '**Ollama:** `hermes3` (3b 2,0 GB, 8b 4,7 GB, 70b 40 GB, 405b 229 GB) e `dolphin3` (8b 4,9 GB) estão na biblioteca do Ollama. As demais linhas rodam com `ollama run hf.co/<user>/<repo>`; a documentação do Hugging Face indica Q4_K_M como quantização padrão quando o repositório a contém.',
+          '**LM Studio:** `lms get <model-name>@q4_k_m` pesquisa repositórios online e baixa a quantização indicada após o `@`.',
+          '**llama.cpp:** `llama cli -hf <user>/<repo>` baixa um modelo do Hugging Face e o executa; `llama serve -hf <user>/<repo>` inicia um servidor de API compatível com a OpenAI.',
+        ],
+        promptExamples: [
+          { label: 'Ollama: executar os modelos do ranking', text: '# Ollama library tags (hermes3 default = 8B, 4.7 GB per the library page)\nollama run hermes3\nollama run dolphin3\nollama run hermes3:70b\n\n# Any GGUF on Hugging Face; the quant tag after the colon is optional (default Q4_K_M)\nollama run hf.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF\nollama run hf.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF:Q4_K_M\nollama run hf.co/mlabonne/gemma-3-27b-it-abliterated-GGUF:Q4_K_M\nollama run hf.co/NousResearch/Hermes-4.3-36B-GGUF:Q4_K_M' },
+          { label: 'LM Studio: baixar uma quantização', text: '# LM Studio CLI: search and download; @ selects the quantization\nlms get <model-name>@q4_k_m\n\n# GGUF files you downloaded yourself can also be imported in the LM Studio app' },
+          { label: 'llama.cpp: executar a partir do Hugging Face', text: '# llama.cpp (commands as written in its README)\nllama cli -hf mlabonne/gemma-3-27b-it-abliterated-GGUF\nllama serve -hf mlabonne/gemma-3-27b-it-abliterated-GGUF' },
+        ],
+      },
+      uncensoredVsAbliterated: {
+        id: 'steerable-vs-abliterated',
+        title: 'Sem censura, abliterado e fine-tuned: o que os termos significam',
+        content:
+          '**"Sem censura" é usado para três técnicas diferentes, e só uma delas se chama abliteração.** As fichas dos modelos, e não as palavras de marketing, dizem qual você está baixando.',
+        items: [
+          '**Fine-tunes orientáveis ou de alinhamento neutro (Hermes 3, Hermes 4.3, Dolphin 3.0):** as fichas não usam a palavra "uncensored". A ficha do Dolphin 3.0 diz "You decide the alignment" e "Dolphin does not impose its ethics or guidelines on you"; a do Hermes 3 fala em "aligning LLMs to the user"; a do Hermes 4.3 declara um "broadly neutral alignment". O comportamento depende do seu prompt de sistema.',
+          '**Fine-tuning com dados filtrados:** o ensaio de Eric Hartford, [Uncensored Models](https://erichartford.com/uncensored-models), descreve remover recusas e respostas enviesadas dos dados de treino e retreinar o modelo da mesma forma que o original.',
+          '**Abliteração:** [Arditi et al.](https://arxiv.org/abs/2406.11717) constatam que a recusa é "mediated by a one-dimensional subspace" em 13 modelos de chat abertos de até 72B parâmetros, e que apagar essa direção impede o modelo de recusar. O [guia de abliteração de mlabonne](https://huggingface.co/blog/mlabonne/abliteration) a aplica sem retreinar e relata queda de desempenho em todos os benchmarks, que uma etapa de DPO só recuperou em parte.',
+          '**Consequência prática:** lançamentos abliterados trocam um pouco de qualidade pela remoção das recusas; fine-tunes orientáveis continuam controláveis pelo prompt de sistema. Comece por um modelo orientável e passe a um abliterado só se ele ainda recusar.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '"LLM sem censura" é um termo guarda-chuva: fine-tunes orientáveis como Hermes e Dolphin deixam o alinhamento para o seu prompt de sistema, enquanto modelos abliterados têm a direção de recusa removida dos pesos.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Há três caminhos para um modelo que recusa menos: retreinar com dados sem recusas, publicar um modelo cuja ficha entrega o alinhamento ao usuário, ou editar os pesos prontos para anular a direção de recusa. O último é a abliteração, e o próprio guia relata perda de qualidade em relação ao modelo de origem.',
+          },
+        ],
+      },
       setup: {
         id: 'setup',
         title: 'Configuração: Ollama e LM Studio',
@@ -3341,6 +3958,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Quais LLMs locais não têm restrições de conteúdo?',
             a: 'Os fine-tunes sem censura e "abliterated" abordados aqui — incluindo o Hermes 3 e o Dolphin 3.0 — tiveram a camada de recusa removida por treinamento, e por isso não carregam nenhuma política de conteúdo própria. Essa é a diferença prática entre um modelo local e um hospedado: um provedor de nuvem aplica seus termos de serviço em cada requisição, enquanto um modelo sem restrições rodando na sua própria máquina não tem nenhum provedor no meio do caminho e não aplica censura nenhuma no momento da inferência. Conteúdo NSFW e ficção explícita, portanto, não são bloqueados. O que não muda é a lei do lugar onde você vive e a responsabilidade que acompanha a publicação — não ter política de conteúdo não é o mesmo que não ter limites, e a seção de ética abaixo mostra onde esses limites estão.',
           },
+          {
+            q: 'Qual é o melhor LLM local sem censura?',
+            a: 'Não existe um único melhor; depende da sua memória. Esta página ordena sete modelos com fichas verificadas pelo tamanho do arquivo Q4_K_M: Hermes 3 Llama 3.1 8B, Dolphin 3.0 Llama 3.1 8B e Llama 3.1 8B Instruct abliterated (4,92 GB cada), Dolphin 3.0 R1 Mistral 24B (14,33 GB), Gemma 3 27B abliterated (16,5 GB), Hermes 4.3 36B (21,76 GB) e Hermes 3 Llama 3.1 70B (42,52 GB). A ordem é editorial e por nível de hardware, não um benchmark, e nós não executamos esses modelos.',
+          },
+          {
+            q: 'Qual é o melhor LLM NSFW para rodar localmente?',
+            a: 'Vale o mesmo ranking: escolha o maior modelo cujo arquivo Q4_K_M caiba na sua memória. As fichas do Hermes 3 e do Dolphin 3.0 descrevem alinhamento controlado pelo usuário sem citar NSFW, enquanto os dois lançamentos abliterados são rotulados uncensored nas fichas. Mantenha o escopo em ficção entre personagens adultos: conteúdo sexual com menores e representações sexuais de pessoas reais estão fora de questão com qualquer modelo, como explica a seção de ética.',
+          },
+          {
+            q: 'O que significa "abliterado" em um LLM?',
+            a: 'Abliterado significa que a direção do modelo que medeia as recusas foi removida dos pesos sem retreinamento. Pesquisadores constataram que a recusa é mediada por um subespaço unidimensional em 13 modelos de chat abertos; o guia de abliteração relata queda de desempenho em relação ao modelo de origem, que o ajuste só recuperou em parte. É diferente de um fine-tune cuja ficha deixa o alinhamento para o prompt de sistema.',
+          },
+          {
+            q: 'De quanta VRAM preciso para um LLM sem censura?',
+            a: 'No mínimo o tamanho do arquivo Q4_K_M, mais espaço para o cache de contexto e o ambiente de execução: 4,92 GB para os três modelos de 8B, 14,33 GB para o Dolphin 3.0 R1 Mistral 24B, 16,5 GB para o Gemma 3 27B abliterated, 21,76 GB para o Hermes 4.3 36B e 42,52 GB para o Hermes 3 Llama 3.1 70B. Os arquivos Q8_0 são maiores, por exemplo 8,54 GB nos modelos de 8B e 38,42 GB no Hermes 4.3 36B.',
+          },
+          {
+            q: 'Como executo um LLM sem censura no Ollama, LM Studio ou llama.cpp?',
+            a: 'No Ollama: `ollama run hermes3` ou `ollama run dolphin3`, ou qualquer GGUF com `ollama run hf.co/<user>/<repo>`. No LM Studio: `lms get <model-name>@q4_k_m`. No llama.cpp: `llama cli -hf <user>/<repo>`, ou `llama serve -hf <user>/<repo>` para um servidor compatível com a OpenAI. A seção de configuração acima cobre frontends como o SillyTavern.',
+          },
         ],
       },
       relatedReading: {
@@ -3374,8 +4011,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-05-07',
-    next_refresh_due: '2026-11-07',
+    dateModified: '2026-10-18',
+    next_refresh_due: '2027-04-18',
     theme: 'Creative & Roleplay',
     title: 'نماذج ⁨LLM⁩ المحلية بدون قيود للكتابة الإبداعية: متى يحتاجها الكتّاب (⁨2026⁩)',
     seoTitle: '⁨LLM⁩ بدون قيود للإيروتيكا و⁨NSFW⁩: دليل ⁨2026⁩',
@@ -3402,6 +4039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Mistral Large',
+      'Hermes 4.3 36B',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -3448,6 +4086,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'متى تكون النماذج بدون قيود مناسبة', anchor: '#appropriate-use' },
       { label: 'متى لا تكون مناسبة', anchor: '#inappropriate-use' },
       { label: 'مقارنة النماذج', anchor: '#models' },
+      { label: 'الترتيب: أفضل النماذج غير المقيّدة', anchor: '#ranked-models' },
+      { label: 'غير مقيّد مقابل abliteration', anchor: '#steerable-vs-abliterated' },
       { label: 'الإعداد: Ollama و LM Studio', anchor: '#setup' },
       { label: 'المسؤوليات الأخلاقية التي تبقى', anchor: '#ethics' },
       { label: 'سير العمل العملي', anchor: '#workflow' },
@@ -3612,6 +4252,62 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           image: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ar.webp',
           imageCaption: 'يوازن Hermes 3 بين جودة التعليمات والنطاق غير الخاضع للرقابة بشكل أفضل — النماذج المُستأصلة بالكامل تنحرف أسرع وتنتج نثرًا أضعف.',
         },
+      rankedModels: {
+        id: 'ranked-models',
+        title: 'أفضل نماذج LLM المحلية غير المقيّدة، مرتبة حسب فئة العتاد',
+        content:
+          '**رُتّبت هذه النماذج السبعة بحسب حجم ملف Q4_K_M من الأصغر إلى الأكبر. الترتيب تحريري ويتبع فئات العتاد، وليس ترتيب اختبارات أداء.** اختر آخر صف يتسع حجم ملفه براحة في ذاكرة VRAM لبطاقتك الرسومية أو الذاكرة الموحدة في جهاز Mac. أحجام الملفات مأخوذة من مستودع GGUF الخاص بكل نموذج على Hugging Face؛ ويحتاج الكاش السياقي وبيئة التشغيل إلى ذاكرة إضافية فوق الأوزان، فاترك هامشاً فوق حجم الملف. تنطبق الحدود القانونية والأخلاقية الواردة في [Ethical Responsibilities That Remain](#ethics) على كل نموذج في هذه القائمة.',
+        columns: ['الترتيب', 'النموذج', 'النوع (حسب البطاقة)', 'ملف Q4_K_M', 'وسم الترخيص'],
+        rows: [
+          { 'الترتيب': '1', 'النموذج': '[Hermes 3 Llama 3.1 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B)', 'النوع (حسب البطاقة)': 'ضبط دقيق قابل للتوجيه', 'ملف Q4_K_M': '4.92 GB', 'وسم الترخيص': 'llama3' },
+          { 'الترتيب': '2', 'النموذج': '[Dolphin 3.0 Llama 3.1 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B)', 'النوع (حسب البطاقة)': 'ضبط دقيق قابل للتوجيه', 'ملف Q4_K_M': '4.92 GB', 'وسم الترخيص': 'llama3.1' },
+          { 'الترتيب': '3', 'النموذج': '[Llama 3.1 8B Instruct abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated)', 'النوع (حسب البطاقة)': 'مُعدَّل بـ abliteration', 'ملف Q4_K_M': '4.92 GB', 'وسم الترخيص': 'llama3.1' },
+          { 'الترتيب': '4', 'النموذج': '[Dolphin 3.0 R1 Mistral 24B](https://huggingface.co/cognitivecomputations/Dolphin3.0-R1-Mistral-24B)', 'النوع (حسب البطاقة)': 'ضبط دقيق قابل للتوجيه', 'ملف Q4_K_M': '14.33 GB', 'وسم الترخيص': 'غير مذكور في البطاقة' },
+          { 'الترتيب': '5', 'النموذج': '[Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated)', 'النوع (حسب البطاقة)': 'مُعدَّل بـ abliteration', 'ملف Q4_K_M': '16.5 GB', 'وسم الترخيص': 'gemma' },
+          { 'الترتيب': '6', 'النموذج': '[Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B)', 'النوع (حسب البطاقة)': 'محاذاة محايدة', 'ملف Q4_K_M': '21.76 GB', 'وسم الترخيص': 'apache-2.0' },
+          { 'الترتيب': '7', 'النموذج': '[Hermes 3 Llama 3.1 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B)', 'النوع (حسب البطاقة)': 'ضبط دقيق قابل للتوجيه', 'ملف Q4_K_M': '42.52 GB', 'وسم الترخيص': 'llama3' },
+        ],
+        callouts: [
+          {
+            type: 'tip',
+            text: 'الصفان 3 و5 إصداران مجتمعيان مُعدَّلان بـ abliteration؛ وتصف بطاقة Gemma 3 نموذجها بأنه "fairly experimental". أما الصفوف 1 و2 و4 و6 و7 فهي نماذج مضبوطة بدقة قابلة للتوجيه أو محايدة المحاذاة توجّهها عبر موجّه النظام. إذا كان المشهد ينجح أصلاً على نموذج قابل للتوجيه، فالنسخة المعدّلة بـ abliteration تضيف مخاطرة على الجودة دون فائدة.',
+          },
+        ],
+        items: [
+          '**مصادر أحجام الملفات:** [Hermes 3 8B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-8B-GGUF) · [Dolphin 3.0 8B](https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B-GGUF) · [Llama 3.1 8B abliterated](https://huggingface.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF) · [Dolphin 3.0 R1 24B](https://huggingface.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF) · [Gemma 3 27B abliterated](https://huggingface.co/mlabonne/gemma-3-27b-it-abliterated-GGUF) · [Hermes 4.3 36B](https://huggingface.co/NousResearch/Hermes-4.3-36B-GGUF) · [Hermes 3 70B](https://huggingface.co/NousResearch/Hermes-3-Llama-3.1-70B-GGUF). ملفات Q8_0 أكبر، مثلاً 8.54 GB للنماذج الثلاثة من فئة 8B و38.42 GB لـ Hermes 4.3 36B.',
+          '**ادعاءات الرفض مأخوذة من بطاقات النماذج وليست من اختباراتنا.** Hermes 4.3 وحده ينشر رقماً عن الرفض: تذكر بطاقته أنه أجاب عن 74.60% من أسئلة RefusalBench في وضع عدم الاستدلال و72.29% في وضع الاستدلال (متوسط 5 تجارب)، وتصف نفسها بأنها الأحدث أداءً بين النماذج غير المعدّلة بـ abliteration في تلك القائمة. هذا إقرار ذاتي من الجهة المطوِّرة لم نعد إنتاجه.',
+          '**Ollama:** النموذجان `hermes3` (3b بحجم 2.0 GB، 8b بحجم 4.7 GB، 70b بحجم 40 GB، 405b بحجم 229 GB) و`dolphin3` (8b بحجم 4.9 GB) موجودان في مكتبة Ollama. أما بقية الصفوف فتُشغَّل بالأمر `ollama run hf.co/<user>/<repo>`؛ وتوثّق Hugging Face أن Q4_K_M هو التكميم الافتراضي عند وجوده في المستودع.',
+          '**LM Studio:** الأمر `lms get <model-name>@q4_k_m` يبحث في المستودعات على الإنترنت وينزّل التكميم المحدد بعد علامة `@`.',
+          '**llama.cpp:** الأمر `llama cli -hf <user>/<repo>` ينزّل نموذجاً من Hugging Face ويشغّله، والأمر `llama serve -hf <user>/<repo>` يشغّل خادم API متوافقاً مع OpenAI.',
+        ],
+        promptExamples: [
+          { label: 'Ollama: تشغيل نماذج الترتيب', text: '# Ollama library tags (hermes3 default = 8B, 4.7 GB per the library page)\nollama run hermes3\nollama run dolphin3\nollama run hermes3:70b\n\n# Any GGUF on Hugging Face; the quant tag after the colon is optional (default Q4_K_M)\nollama run hf.co/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated-GGUF\nollama run hf.co/bartowski/cognitivecomputations_Dolphin3.0-R1-Mistral-24B-GGUF:Q4_K_M\nollama run hf.co/mlabonne/gemma-3-27b-it-abliterated-GGUF:Q4_K_M\nollama run hf.co/NousResearch/Hermes-4.3-36B-GGUF:Q4_K_M' },
+          { label: 'LM Studio: تنزيل تكميم', text: '# LM Studio CLI: search and download; @ selects the quantization\nlms get <model-name>@q4_k_m\n\n# GGUF files you downloaded yourself can also be imported in the LM Studio app' },
+          { label: 'llama.cpp: التشغيل مباشرة من Hugging Face', text: '# llama.cpp (commands as written in its README)\nllama cli -hf mlabonne/gemma-3-27b-it-abliterated-GGUF\nllama serve -hf mlabonne/gemma-3-27b-it-abliterated-GGUF' },
+        ],
+      },
+      uncensoredVsAbliterated: {
+        id: 'steerable-vs-abliterated',
+        title: 'غير مقيّد وabliteration والضبط الدقيق: ماذا تعني المصطلحات',
+        content:
+          '**يُستخدم وصف "غير مقيّد" لثلاث تقنيات مختلفة، وواحدة منها فقط تُسمّى abliteration.** بطاقات النماذج، لا العبارات التسويقية، هي التي تخبرك بما تنزّله.',
+        items: [
+          '**نماذج مضبوطة بدقة قابلة للتوجيه أو محايدة المحاذاة (Hermes 3 وHermes 4.3 وDolphin 3.0):** لا تستخدم البطاقات كلمة "uncensored". تقول بطاقة Dolphin 3.0 "You decide the alignment" و"Dolphin does not impose its ethics or guidelines on you"؛ وتصف بطاقة Hermes 3 "aligning LLMs to the user"؛ وتذكر بطاقة Hermes 4.3 "broadly neutral alignment". ويعتمد السلوك على موجّه النظام لديك.',
+          '**ضبط دقيق ببيانات مُرشَّحة:** يصف مقال Eric Hartford بعنوان [Uncensored Models](https://erichartford.com/uncensored-models) حذف حالات الرفض والإجابات المتحيزة من بيانات التدريب، ثم إعادة تدريب النموذج بالطريقة نفسها التي دُرِّب بها الأصل.',
+          '**Abliteration:** وجد [Arditi وآخرون](https://arxiv.org/abs/2406.11717) أن الرفض "mediated by a one-dimensional subspace" في 13 نموذج محادثة مفتوحاً حتى 72B معاملاً، وأن محو هذا الاتجاه يوقف الرفض. ويطبّق [شرح mlabonne لـ abliteration](https://huggingface.co/blog/mlabonne/abliteration) ذلك دون إعادة تدريب، ويبلغ عن هبوط في الأداء في جميع الاختبارات لم تستعده خطوة DPO إلا جزئياً.',
+          '**النتيجة العملية:** الإصدارات المعدّلة بـ abliteration تتنازل عن بعض الجودة مقابل إزالة الرفض؛ أما النماذج القابلة للتوجيه فتبقى قابلة للتحكم عبر موجّه النظام. ابدأ بنموذج قابل للتوجيه، ولا تنتقل إلى نموذج معدَّل بـ abliteration إلا إذا ظل يرفض.',
+        ],
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: '"LLM غير مقيّد" مصطلح جامع: النماذج القابلة للتوجيه مثل Hermes وDolphin تترك المحاذاة لموجّه النظام لديك، بينما أُزيل اتجاه الرفض من أوزان النماذج المعدّلة بـ abliteration.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'هناك ثلاثة طرق للوصول إلى نموذج يرفض أقل: إعادة التدريب ببيانات خالية من الرفض، أو نشر نموذج تترك بطاقته المحاذاة للمستخدم، أو تعديل الأوزان الجاهزة لإلغاء اتجاه الرفض. الطريق الأخير هو abliteration، ويبلغ شرحه نفسه عن انخفاض في الجودة مقارنة بالنموذج الأصلي.',
+          },
+        ],
+      },
       setup: {
         id: 'setup',
         title: 'الإعداد: Ollama و LM Studio',
@@ -3760,6 +4456,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'ما النماذج المحلية التي لا تحتوي على قيود محتوى؟',
             a: 'التعديلات الدقيقة بدون قيود ونسخ "abliterated" التي يغطيها هذا الدليل — ومنها Hermes 3 وDolphin 3.0 — أُزيلت منها طبقة الرفض عبر التدريب، ولذلك لا تحمل أي سياسة محتوى خاصة بها. هذا هو الفرق العملي بين نموذج محلي ونموذج مستضاف: مزوّد السحابة يطبّق شروط استخدامه على كل طلب، بينما النموذج بدون قيود الذي يعمل على جهازك لا يوجد فيه أي مزوّد وسيط ولا تُطبَّق أي رقابة وقت الاستدلال. لذلك لا يُحظر محتوى NSFW ولا الخيال الصريح. ما لا يتغيّر هو قانون بلدك والمسؤولية التي تصاحب النشر — عدم وجود سياسة محتوى لا يعني عدم وجود حدود، ويوضّح قسم الأخلاقيات أدناه أين تقع هذه الحدود.',
+          },
+          {
+            q: 'ما أفضل LLM محلي غير مقيّد؟',
+            a: 'لا يوجد نموذج أفضل واحد؛ فالأمر يعتمد على ذاكرتك. ترتّب هذه الصفحة سبعة نماذج تحققنا من بطاقاتها بحسب حجم ملف Q4_K_M: Hermes 3 Llama 3.1 8B وDolphin 3.0 Llama 3.1 8B وLlama 3.1 8B Instruct abliterated (4.92 GB لكل منها)، وDolphin 3.0 R1 Mistral 24B (14.33 GB)، وGemma 3 27B abliterated (16.5 GB)، وHermes 4.3 36B (21.76 GB)، وHermes 3 Llama 3.1 70B (42.52 GB). الترتيب تحريري وحسب فئة العتاد وليس اختبار أداء، ولم نشغّل هذه النماذج بأنفسنا.',
+          },
+          {
+            q: 'ما أفضل LLM لمحتوى NSFW للتشغيل محلياً؟',
+            a: 'ينطبق الترتيب نفسه: اختر أكبر نموذج يتسع ملف Q4_K_M الخاص به في ذاكرتك. تصف بطاقتا Hermes 3 وDolphin 3.0 محاذاة يتحكم فيها المستخدم دون ذكر NSFW، بينما وُسم الإصداران المعدّلان بـ abliteration بأنهما uncensored في بطاقتيهما. اقتصر على الخيال بين شخصيات بالغة: المحتوى الجنسي الذي يشمل قاصرين والتصوير الجنسي لأشخاص حقيقيين محظوران مع أي نموذج، كما يوضح قسم الأخلاقيات.',
+          },
+          {
+            q: 'ماذا تعني كلمة abliterated في نموذج LLM؟',
+            a: 'تعني أن الاتجاه داخل النموذج الذي يتوسط الرفض أُزيل من الأوزان دون إعادة تدريب. وجد الباحثون أن الرفض يتوسطه فضاء جزئي أحادي البعد في 13 نموذج محادثة مفتوحاً، ويبلغ شرح abliteration عن انخفاض في الأداء مقارنة بالنموذج الأصلي لم يستعده الضبط إلا جزئياً. وهذا يختلف عن ضبط دقيق تترك بطاقته المحاذاة لموجّه النظام.',
+          },
+          {
+            q: 'كم أحتاج من VRAM لتشغيل LLM غير مقيّد؟',
+            a: 'على الأقل حجم ملف Q4_K_M، مضافاً إليه مساحة للكاش السياقي وبيئة التشغيل: 4.92 GB للنماذج الثلاثة من فئة 8B، و14.33 GB لـ Dolphin 3.0 R1 Mistral 24B، و16.5 GB لـ Gemma 3 27B abliterated، و21.76 GB لـ Hermes 4.3 36B، و42.52 GB لـ Hermes 3 Llama 3.1 70B. ملفات Q8_0 أكبر، مثلاً 8.54 GB لنماذج 8B و38.42 GB لـ Hermes 4.3 36B.',
+          },
+          {
+            q: 'كيف أشغّل LLM غير مقيّد في Ollama أو LM Studio أو llama.cpp؟',
+            a: 'في Ollama شغّل `ollama run hermes3` أو `ollama run dolphin3`، أو حمّل أي ملف GGUF بالأمر `ollama run hf.co/<user>/<repo>`. في LM Studio شغّل `lms get <model-name>@q4_k_m`. في llama.cpp شغّل `llama cli -hf <user>/<repo>`، أو `llama serve -hf <user>/<repo>` لخادم متوافق مع OpenAI. ويغطي قسم الإعداد أعلاه الواجهات مثل SillyTavern.',
           },
         ],
       },
