@@ -72,7 +72,7 @@ interface HubTemplateCopy {
   summary: { label: string; text: string }[]
   flow: { title: string; caption: string; ariaLabel: string; columns: { label: string; tone: HubTone; chips: string[] }[] }
   jump: { label: string; start: string; explore: string; why: string; latest: string; deeper: string; faq: string }
-  start: { title: string; intro: string; badge: string; goals: Record<keyof typeof START_SLUGS, string> }
+  start: { title: string; intro: string; badge: string; rulesSlug: string; goals: Record<keyof typeof START_SLUGS, string> }
   explore: { title: string; intro: string; guidesUnit: string; profilesUnit: string; tileSummary: Record<string, string>; profilesTitle: string; profilesIntro: string }
   why: { title: string; takeaway?: string }
   latest: { title: string; intro: string; more: string; updated: string; published: string }
@@ -120,6 +120,7 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
       title: 'Hier starten',
       intro: 'Vier häufige Ziele. Wählen Sie das, das zu Ihnen passt.',
       badge: 'Hier starten',
+      rulesSlug: 'balkonkraftwerk-germany-rules',
       goals: {
         kits: 'Das passende Set finden',
         rules: 'Die Regeln in Deutschland prüfen',
@@ -198,7 +199,8 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
       title: 'Start here',
       intro: 'Four common goals. Pick the one that fits you.',
       badge: 'Start here',
-      goals: { kits: 'Find the right kit', rules: 'Check the rules in Germany', noCloud: 'Monitor it without a vendor cloud', payback: 'See whether it pays off' },
+      rulesSlug: 'balcony-solar-legal-us-states',
+      goals: { kits: 'Find the right kit', rules: 'Check the rules in the US and UK', noCloud: 'Monitor it without a vendor cloud', payback: 'See whether it pays off' },
     },
     explore: {
       title: 'Explore by topic',
@@ -264,7 +266,8 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
       title: 'Commencer ici',
       intro: 'Quatre objectifs courants. Choisissez celui qui vous correspond.',
       badge: 'Commencer ici',
-      goals: { kits: 'Trouver le bon kit', rules: 'Vérifier les règles en Allemagne', noCloud: 'Surveiller sans cloud du fabricant', payback: 'Savoir si c\'est rentable' },
+      rulesSlug: 'balcony-solar-france',
+      goals: { kits: 'Trouver le bon kit', rules: 'Vérifier les règles en France', noCloud: 'Surveiller sans cloud du fabricant', payback: 'Savoir si c\'est rentable' },
     },
     explore: {
       title: 'Explorer par sujet',
@@ -330,7 +333,8 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
       title: 'ここから始める',
       intro: 'よくある4つの目的です。当てはまるものを選んでください。',
       badge: 'ここから始める',
-      goals: { kits: '最適なキットを探す', rules: 'ドイツのルールを確認する', noCloud: 'メーカーのクラウドなしで監視する', payback: '元が取れるか確認する' },
+      rulesSlug: 'balcony-solar-japan-status-2027',
+      goals: { kits: '最適なキットを探す', rules: '日本の現状を確認する', noCloud: 'メーカーのクラウドなしで監視する', payback: '元が取れるか確認する' },
     },
     explore: {
       title: 'トピックから探す',
@@ -396,7 +400,8 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
       title: '从这里开始',
       intro: '四个常见目标，选择最适合您的一个。',
       badge: '从这里开始',
-      goals: { kits: '找到合适的套件', rules: '查看德国的规定', noCloud: '不依赖厂商云端进行监控', payback: '判断是否划算' },
+      rulesSlug: 'balcony-solar-china-2027',
+      goals: { kits: '找到合适的套件', rules: '查看中国的情况', noCloud: '不依赖厂商云端进行监控', payback: '判断是否划算' },
     },
     explore: {
       title: '按主题浏览',
@@ -462,7 +467,8 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
       title: 'Empezar aquí',
       intro: 'Cuatro objetivos habituales. Elige el que más te convenga.',
       badge: 'Empezar aquí',
-      goals: { kits: 'Encontrar el kit adecuado', rules: 'Revisar las normas en Alemania', noCloud: 'Monitorizar sin nube del fabricante', payback: 'Ver si compensa' },
+      rulesSlug: 'balcony-solar-spain-latam',
+      goals: { kits: 'Encontrar el kit adecuado', rules: 'Revisar las normas en España y Latinoamérica', noCloud: 'Monitorizar sin nube del fabricante', payback: 'Ver si compensa' },
     },
     explore: {
       title: 'Explorar por tema',
@@ -528,7 +534,8 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
       title: 'Comece aqui',
       intro: 'Quatro objetivos comuns. Escolha o que combina com você.',
       badge: 'Comece aqui',
-      goals: { kits: 'Encontrar o kit certo', rules: 'Conferir as regras na Alemanha', noCloud: 'Monitorar sem a nuvem do fabricante', payback: 'Ver se compensa' },
+      rulesSlug: 'balcony-solar-portugal-brazil',
+      goals: { kits: 'Encontrar o kit certo', rules: 'Conferir as regras em Portugal e no Brasil', noCloud: 'Monitorar sem a nuvem do fabricante', payback: 'Ver se compensa' },
     },
     explore: {
       title: 'Explorar por tema',
@@ -594,7 +601,8 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
       title: 'ابدأ هنا',
       intro: 'أربعة أهداف شائعة. اختر ما يناسبك.',
       badge: 'ابدأ هنا',
-      goals: { kits: 'العثور على الطقم المناسب', rules: 'التحقق من القواعد في ألمانيا', noCloud: 'المراقبة دون سحابة الشركة المصنّعة', payback: 'معرفة ما إذا كان مجديًا' },
+      rulesSlug: 'balcony-solar-gulf-mena',
+      goals: { kits: 'العثور على الطقم المناسب', rules: 'التحقق من القواعد في منطقة الخليج والشرق الأوسط وشمال أفريقيا', noCloud: 'المراقبة دون سحابة الشركة المصنّعة', payback: 'معرفة ما إذا كان مجديًا' },
     },
     explore: {
       title: 'استكشف حسب الموضوع',
@@ -660,7 +668,8 @@ const HUB_TEMPLATE_COPY: Partial<Record<Lang, HubTemplateCopy>> = {
       title: '여기서 시작',
       intro: '자주 찾는 네 가지 목표입니다. 맞는 것을 고르세요.',
       badge: '여기서 시작',
-      goals: { kits: '알맞은 키트 찾기', rules: '독일 규정 확인하기', noCloud: '제조사 클라우드 없이 모니터링하기', payback: '본전을 뽑을지 확인하기' },
+      rulesSlug: 'balcony-solar-south-korea',
+      goals: { kits: '알맞은 키트 찾기', rules: '한국의 규정과 보조금 확인하기', noCloud: '제조사 클라우드 없이 모니터링하기', payback: '본전을 뽑을지 확인하기' },
     },
     explore: {
       title: '주제별로 살펴보기',
@@ -825,10 +834,12 @@ export function BalconySolarHubTemplate(source: BalconySolarHubTemplateSource) {
   const startTones: HubTone[] = ['violet', 'azure', 'rose', 'indigo']
   const startIcons: HubStartCard['icon'][] = ['package', 'shield', 'home', 'trend']
   const startKeys = Object.keys(START_SLUGS) as (keyof typeof START_SLUGS)[]
+  // The "rules" card points at the page for the reader's own market; the other three goals are the same everywhere.
+  const startSlugs: Record<keyof typeof START_SLUGS, string> = { ...START_SLUGS, rules: copy.start.rulesSlug }
   const startCards: HubStartCard[] = startKeys.map((key, i) => ({
-    href: balconySolarArticlePath(lang, START_SLUGS[key]),
+    href: balconySolarArticlePath(lang, startSlugs[key]),
     goal: copy.start.goals[key],
-    title: toItem(START_SLUGS[key]).title,
+    title: toItem(startSlugs[key]).title,
     tone: startTones[i],
     icon: startIcons[i],
     badge: i === 0 ? copy.start.badge : undefined,

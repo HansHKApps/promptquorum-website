@@ -99,6 +99,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: '/balcony-solar/balcony-solar-spain-latam', title: 'Balcony Solar in Spain & Latin America', description: 'Spain\'s ambiguous status explained' },
           { url: '/balcony-solar/balcony-solar-portugal-brazil', title: 'Balcony Solar in Portugal & Brazil', description: 'Portugal\'s codified regime vs. Brazil\'s regulatory gap' },
           { url: '/balcony-solar/balcony-solar-gulf-mena', title: 'Balcony Solar in the Gulf & MENA Region', description: 'Nascent regulation in the UAE and Saudi Arabia' },
+          { url: '/balcony-solar/balcony-solar-france', title: 'Balcony Solar in France', description: 'Enedis declaration, the NF C 15-100 conflict and the unconfirmed power limit' },
+          { url: '/balcony-solar/balcony-solar-south-korea', title: 'Balcony Solar in South Korea', description: '2026 national plan, local subsidies and unconfirmed KEPCO rules' },
         ],
       },
       howRulesAreChanging: {
@@ -223,6 +225,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: '/de/balcony-solar/balcony-solar-spain-latam', title: 'Balkonkraftwerk in Spanien und Lateinamerika', description: 'Spaniens unklarer Status erklärt' },
           { url: '/de/balcony-solar/balcony-solar-portugal-brazil', title: 'Balkonkraftwerk in Portugal und Brasilien', description: 'Portugals kodifiziertes System versus Brasiliens Regulierungslücke' },
           { url: '/de/balcony-solar/balcony-solar-gulf-mena', title: 'Balkonkraftwerk in der Golfregion und MENA', description: 'Aufkommende Regulierung in den VAE und Saudi-Arabien' },
+          { url: '/de/balcony-solar/balcony-solar-france', title: 'Balkonkraftwerk in Frankreich', description: 'Enedis-Anmeldung, der NF-C-15-100-Konflikt und die unbestätigte Leistungsgrenze' },
+          { url: '/de/balcony-solar/balcony-solar-south-korea', title: 'Balkonkraftwerk in Südkorea', description: 'Nationaler Plan 2026, regionale Förderung und unbestätigte KEPCO-Regeln' },
         ],
       },
       howRulesAreChanging: {
@@ -348,6 +352,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: '/es/balcony-solar/balcony-solar-spain-latam', title: 'Energía solar de balcón en España y Latinoamérica', description: 'El estado ambiguo de España explicado' },
           { url: '/es/balcony-solar/balcony-solar-portugal-brazil', title: 'Energía solar de balcón en Portugal y Brasil', description: 'El régimen codificado de Portugal frente al vacío normativo de Brasil' },
           { url: '/es/balcony-solar/balcony-solar-gulf-mena', title: 'Energía solar de balcón en la región del Golfo y MENA', description: 'Regulación incipiente en los Emiratos Árabes Unidos y Arabia Saudita' },
+          { url: '/es/balcony-solar/balcony-solar-france', title: 'Energía solar de balcón en Francia', description: 'Declaración a Enedis, el conflicto con la NF C 15-100 y el límite de potencia sin confirmar' },
+          { url: '/es/balcony-solar/balcony-solar-south-korea', title: 'Energía solar de balcón en Corea del Sur', description: 'Plan nacional de 2026, ayudas locales y normas de KEPCO sin confirmar' },
         ],
       },
       howRulesAreChanging: {
@@ -473,6 +479,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: '/pt/balcony-solar/balcony-solar-spain-latam', title: 'Energia solar de varanda na Espanha e na América Latina', description: 'O status ambíguo da Espanha explicado' },
           { url: '/pt/balcony-solar/balcony-solar-portugal-brazil', title: 'Energia solar de varanda em Portugal e no Brasil', description: 'O regime codificado de Portugal versus o vazio regulatório do Brasil' },
           { url: '/pt/balcony-solar/balcony-solar-gulf-mena', title: 'Energia solar de varanda na região do Golfo e MENA', description: 'Regulação nascente nos Emirados Árabes Unidos e na Arábia Saudita' },
+          { url: '/pt/balcony-solar/balcony-solar-france', title: 'Energia solar de varanda na França', description: 'Declaração à Enedis, o conflito com a NF C 15-100 e o limite de potência não confirmado' },
+          { url: '/pt/balcony-solar/balcony-solar-south-korea', title: 'Energia solar de varanda na Coreia do Sul', description: 'Plano nacional de 2026, subsídios locais e regras da KEPCO não confirmadas' },
         ],
       },
       howRulesAreChanging: {
@@ -598,6 +606,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: '/ar/balcony-solar/balcony-solar-spain-latam', title: 'الطاقة الشمسية للشرفة في إسبانيا وأمريكا اللاتينية', description: 'شرح وضع إسبانيا الغامض' },
           { url: '/ar/balcony-solar/balcony-solar-portugal-brazil', title: 'الطاقة الشمسية للشرفة في البرتغال والبرازيل', description: 'النظام المقنَّن في البرتغال مقابل الفراغ التنظيمي في البرازيل' },
           { url: '/ar/balcony-solar/balcony-solar-gulf-mena', title: 'الطاقة الشمسية للشرفة في منطقة الخليج وشمال أفريقيا', description: 'تنظيم ناشئ في الإمارات العربية المتحدة والمملكة العربية السعودية' },
+          { url: '/ar/balcony-solar/balcony-solar-france', title: 'الطاقة الشمسية للشرفة في فرنسا', description: 'التصريح لدى Enedis وتعارض NF C 15-100 وسقف القدرة غير المؤكد' },
+          { url: '/ar/balcony-solar/balcony-solar-south-korea', title: 'الطاقة الشمسية للشرفة في كوريا الجنوبية', description: 'الخطة الوطنية 2026 والدعم المحلي وقواعد KEPCO غير المؤكدة' },
         ],
       },
       howRulesAreChanging: {
@@ -723,6 +733,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: '/ja/balcony-solar/balcony-solar-spain-latam', title: 'スペイン・ラテンアメリカのバルコニーソーラー', description: 'スペインのあいまいなステータスを解説' },
           { url: '/ja/balcony-solar/balcony-solar-portugal-brazil', title: 'ポルトガル・ブラジルのバルコニーソーラー', description: 'ポルトガルの成文化された制度とブラジルの規制の空白の対比' },
           { url: '/ja/balcony-solar/balcony-solar-gulf-mena', title: '湾岸・MENA地域のバルコニーソーラー', description: 'UAEとサウジアラビアにおける新興の規制' },
+          { url: '/ja/balcony-solar/balcony-solar-france', title: 'フランスのバルコニーソーラー', description: 'Enedisへの届出、NF C 15-100との矛盾、未確認の出力上限' },
+          { url: '/ja/balcony-solar/balcony-solar-south-korea', title: '韓国のバルコニーソーラー', description: '2026年の国の計画、自治体補助金、未確認のKEPCOルール' },
         ],
       },
       howRulesAreChanging: {
@@ -848,6 +860,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: '/zh/balcony-solar/balcony-solar-spain-latam', title: '西班牙与拉丁美洲的阳台光伏', description: '详解西班牙不明确的状态' },
           { url: '/zh/balcony-solar/balcony-solar-portugal-brazil', title: '葡萄牙与巴西的阳台光伏', description: '葡萄牙的成文制度对比巴西的监管空白' },
           { url: '/zh/balcony-solar/balcony-solar-gulf-mena', title: '海湾与MENA地区的阳台光伏', description: '阿联酋和沙特阿拉伯正在兴起的监管' },
+          { url: '/zh/balcony-solar/balcony-solar-france', title: '法国的阳台光伏', description: 'Enedis申报、与NF C 15-100的矛盾以及未确认的功率上限' },
+          { url: '/zh/balcony-solar/balcony-solar-south-korea', title: '韩国的阳台光伏', description: '2026年国家计划、地方补贴与未确认的KEPCO规则' },
         ],
       },
       howRulesAreChanging: {
@@ -973,6 +987,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: '/fr/balcony-solar/balcony-solar-spain-latam', title: "L'énergie solaire de balcon en Espagne et en Amérique latine", description: "Le statut ambigu de l'Espagne expliqué" },
           { url: '/fr/balcony-solar/balcony-solar-portugal-brazil', title: "L'énergie solaire de balcon au Portugal et au Brésil", description: "Le régime codifié du Portugal face au vide réglementaire du Brésil" },
           { url: '/fr/balcony-solar/balcony-solar-gulf-mena', title: "L'énergie solaire de balcon dans le Golfe et la région MENA", description: "Réglementation naissante aux Émirats arabes unis et en Arabie saoudite" },
+          { url: '/fr/balcony-solar/balcony-solar-france', title: 'Le solaire de balcon en France', description: 'Déclaration Enedis, conflit avec la NF C 15-100 et limite de puissance non confirmée' },
+          { url: '/fr/balcony-solar/balcony-solar-south-korea', title: 'Le solaire de balcon en Corée du Sud', description: 'Plan national 2026, aides locales et règles KEPCO non confirmées' },
         ],
       },
       howRulesAreChanging: {
@@ -1098,6 +1114,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: '/ko/balcony-solar/balcony-solar-spain-latam', title: '스페인과 라틴아메리카의 베란다 태양광 발전', description: '스페인의 모호한 지위 설명' },
           { url: '/ko/balcony-solar/balcony-solar-portugal-brazil', title: '포르투갈과 브라질의 베란다 태양광 발전', description: '포르투갈의 성문화된 제도와 브라질의 규제 공백 비교' },
           { url: '/ko/balcony-solar/balcony-solar-gulf-mena', title: '걸프 및 MENA 지역의 베란다 태양광 발전', description: 'UAE와 사우디아라비아의 신생 규제' },
+          { url: '/ko/balcony-solar/balcony-solar-france', title: '프랑스의 베란다 태양광', description: 'Enedis 신고, NF C 15-100과의 충돌, 확인되지 않은 출력 상한' },
+          { url: '/ko/balcony-solar/balcony-solar-south-korea', title: '한국의 베란다 태양광', description: '2026년 국가 계획, 지자체 보조금, 확인되지 않은 한전 규정' },
         ],
       },
       howRulesAreChanging: {
