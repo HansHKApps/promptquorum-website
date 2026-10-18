@@ -2,7 +2,7 @@
 
 Shared layout for content hub pages. Used by the Balcony Solar hub (`src/lib/balcony-solar/hub-template.tsx`) and the Smart Home hub
 (`src/lib/smart-home/hub-template.tsx`), both in all 9 languages (`*_HUB_TEMPLATE_LANGS`; per-language strings in `HUB_TEMPLATE_COPY` in each
-adapter and `HUB_EXPLORE_LABELS` in `src/components/hub-template/labels.ts`). The other 4 clusters still use their old hub components.
+adapter and `HUB_EXPLORE_LABELS` in `src/components/hub-template/labels.ts`). Prompt Bites, Power Local LLM and Local LLMs use it too (adapters in `src/lib/{prompt-bites,power-local-llm,local-llms}/hub-template.tsx`; old hub components remain as fallback). Only Prompt Engineering still uses its old hub.
 Smart Home has no company profiles, so all 8 category tiles are plain guide tiles and the intro count is simply the number of listed pages.
 RTL: use logical Tailwind classes (`ps-`, `ms-`, `text-start`), never `pl-`/`ml-`/`text-left`.
 
