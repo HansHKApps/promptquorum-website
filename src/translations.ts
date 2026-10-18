@@ -121,7 +121,7 @@ export const translations = {
     privacyS1Title: "Who we are",
     privacyS1Para1: "PromptQuorum (\"we\", \"us\", or \"our\") is a software product available at {{url}}. PromptQuorum is developed by Hans Kuepper (the \"data controller\" for the purposes of GDPR).",
     privacyS1Para2: "We operate a multi-model AI dispatch and consensus analysis tool. The product itself processes no personal data — prompts, API keys, and AI responses are handled entirely within your browser and transmitted directly from your device to the AI providers you choose. PromptQuorum servers never receive, store, or process your prompts or API keys.",
-    privacyS1Para3: "This Privacy Policy covers only the personal data we collect through the PromptQuorum website — specifically the waitlist form at {{url}}.",
+    privacyS1Para3: "This Privacy Policy covers the personal data we process through the PromptQuorum website and its public MCP server: the waitlist form at {{url}}, hosting and server logs, cookie-consent records, rate-limiting hashes and the optional MCP profile (see §2).",
 
     // Section 2
     privacyS2Title: "Data we collect and why",
@@ -129,6 +129,8 @@ export const translations = {
     privacyAltLookupNote: "Directory alternatives lookup (test feature): when you search for an online app, we store only the normalized search text and a counter, with no cookie or identifier. To limit abuse, a salted hash of your IP address (not the address itself) is kept for up to one hour for rate limiting and is never linked to the search text. Do not enter personal data into the search field.",
     privacyMcpTitle: "MCP server profile (optional)",
     privacyMcpNote: "If you connect an AI assistant to our public MCP server and answer \"yes\" to the privacy question shown by its start menu, we store a pseudonymous profile: a random profile code (kept only as a keyed hash), the date of your consent and the version of the consent text, your preferred language, and creation and last-use timestamps. We store no name, email address, IP address, user agent or conversation content in the profile. Purpose: remembering your language and a personalised start menu. Legal basis: your consent (Art. 6(1)(a) GDPR), which you can withdraw at any time by asking the assistant to \"forget me\" (tool forget_me) or by writing to hello@promptquorum.com; you can view the stored data with the my_profile tool. Profiles are stored in an EU-region database operated by our processor Upstash and are deleted automatically after 6 months without use. If you answer \"no\", nothing is stored and all tools work the same. Independently of this, the MCP server keeps anonymous per-tool call counters (no personal data) and a salted hash of the IP address for up to one minute for rate limiting.",
+    privacyHostingNote: "Hosting and server logs: our website and MCP server are hosted by our processor Vercel Inc. When you visit the site or call the MCP server, Vercel processes your IP address and request metadata (such as time, URL and user agent) in technical server logs to deliver the service and keep it secure. Legal basis: our legitimate interest in a secure and stable service (Art. 6(1)(f) GDPR). We do not use these logs to build visitor profiles.",
+    privacyConsentLogNote: "Cookie-consent record: when you make a choice in the cookie banner, we store the choice, your language, a timestamp, the first 120 characters of your browser's user agent and a shortened salted hash of your IP address for up to 25 months, as proof that consent was given or refused. Legal basis: legal obligation and legitimate interest in being able to demonstrate consent (Art. 6(1)(c) and (f), Art. 7(1) GDPR). The record is stored with our processor Upstash.",
     privacyS2Col1: "Data",
     privacyS2Col2: "How collected",
     privacyS2Col3: "Purpose",
@@ -141,7 +143,7 @@ export const translations = {
     privacyS2Row2_2: "Cookieless analytics (Umami, Microsoft Clarity)",
     privacyS2Row2_3: "Understand which pages are visited; improve the site",
     privacyS2Row2_4: "Legitimate interest (Art. 6(1)(f) GDPR) — see §7",
-    privacyS2Closure: "We do not collect names, phone numbers, payment information, IP addresses stored beyond session-level aggregation, or any special-category data under Art. 9 GDPR.",
+    privacyS2Closure: "We do not collect names, phone numbers, payment information or any special-category data under Art. 9 GDPR. IP addresses are processed only as described in this section.",
 
     // Section 3
     privacyS3Title: "Lawful basis for processing",
@@ -173,6 +175,14 @@ export const translations = {
     privacyS4Row4Role: "Session replay and heatmaps — loaded for all visitors in cookieless mode",
     privacyS4Row4Data: "Interaction events and viewport data (collected in cookieless mode)",
     privacyS4Row4Loc: "United States",
+    privacyS4Row5Proc: "Upstash (Upstash, Inc.)",
+    privacyS4Row5Role: "Managed Redis database — optional MCP profiles, anonymous call counters, rate-limiting hashes, cookie-consent records",
+    privacyS4Row5Data: "Pseudonymous MCP profile (opt-in), hashed IP values, consent records, counters",
+    privacyS4Row5Loc: "EU region (MCP profiles); provider headquartered in the United States",
+    privacyS4Row6Proc: "Vercel (Vercel Inc.)",
+    privacyS4Row6Role: "Hosting, content delivery and server logs for the website and the MCP server",
+    privacyS4Row6Data: "IP address and request metadata (time, URL, user agent)",
+    privacyS4Row6Loc: "United States / global edge network",
     privacyS4Closure: "We do not sell your data to any third party. We do not share your email address with advertisers.",
 
     // Section 5
@@ -180,6 +190,7 @@ export const translations = {
     privacyS5Intro: "Some of our processors are based in the United States. Transfers of personal data from the European Economic Area (EEA) or the United Kingdom (UK) to the United States are subject to appropriate safeguards:",
     privacyS5Bullet1: "Resend: Transfer is covered by Standard Contractual Clauses (SCCs) adopted by the European Commission under GDPR Art. 46(2)(c). Resend's Data Processing Agreement is available at resend.com/legal/dpa.",
     privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) is US-based and operates cookielessly. Transfers are safeguarded by Standard Contractual Clauses (SCCs) under GDPR Art. 46; Microsoft additionally participates in the EU–US Data Privacy Framework. Umami is hosted in the EU, so no transfer occurs.",
+    privacyS5Bullet3: "Both providers are US-based. Transfers rely on Standard Contractual Clauses (SCCs) under GDPR Art. 46(2)(c) in their Data Processing Agreements and, where the provider is certified, on the EU–US Data Privacy Framework. MCP profiles are stored in an EU region.",
     privacyS5Closure: "You may request a copy of the applicable SCCs by emailing {{email}}.",
 
     // Section 6
@@ -422,7 +433,7 @@ export const translations = {
     privacyS1Title: "Wer wir sind",
     privacyS1Para1: "PromptQuorum (\"wir\", \"uns\" oder \"unser\") ist ein Softwareprodukt, das unter {{url}} verfügbar ist. PromptQuorum wird von Hans Kuepper entwickelt (der \"Verantwortliche\" im Sinne der DSGVO).",
     privacyS1Para2: "Wir betreiben ein Multi-Modell-KI-Dispatch- und Konsensanalyse-Tool. Das Produkt selbst verarbeitet keine personenbezogenen Daten — Prompts, API-Schlüssel und KI-Antworten werden vollständig in Ihrem Browser verarbeitet und direkt von Ihrem Gerät an die KI-Anbieter Ihrer Wahl übertragen. PromptQuorum-Server empfangen, speichern oder verarbeiten niemals Ihre Prompts oder API-Schlüssel.",
-    privacyS1Para3: "Diese Datenschutzrichtlinie deckt nur die personenbezogenen Daten ab, die wir über die PromptQuorum-Website sammeln — speziell über das Wartelisten-Formular unter {{url}}.",
+    privacyS1Para3: "Diese Datenschutzerklärung gilt für die personenbezogenen Daten, die wir über die PromptQuorum-Website und den öffentlichen MCP-Server verarbeiten: das Wartelisten-Formular unter {{url}}, Hosting und Server-Logs, Einwilligungsnachweise zu Cookies, Hashes zur Anfragebegrenzung und das optionale MCP-Profil (siehe §2).",
 
     // Section 2
     privacyS2Title: "Daten, die wir sammeln, und warum",
@@ -430,6 +441,8 @@ export const translations = {
     privacyAltLookupNote: "Alternativen-Suche im Verzeichnis (Testfunktion): Wenn du nach einer Online-App suchst, speichern wir nur den normalisierten Suchtext und einen Zähler, ohne Cookie oder Kennung. Zur Missbrauchsabwehr wird ein gesalzener Hash deiner IP-Adresse (nicht die Adresse selbst) bis zu eine Stunde für die Anfragebegrenzung gespeichert und nie mit dem Suchtext verknüpft. Gib keine personenbezogenen Daten in das Suchfeld ein.",
     privacyMcpTitle: "MCP-Server-Profil (optional)",
     privacyMcpNote: "Wenn du einen KI-Assistenten mit unserem öffentlichen MCP-Server verbindest und die Datenschutzfrage seines Startmenüs mit „ja“ beantwortest, speichern wir ein pseudonymes Profil: einen zufälligen Profilcode (nur als geschlüsselter Hash), das Datum deiner Einwilligung und die Version des Einwilligungstexts, deine bevorzugte Sprache sowie Zeitstempel für Anlage und letzte Nutzung. Name, E-Mail-Adresse, IP-Adresse, User-Agent und Gesprächsinhalte werden im Profil nicht gespeichert. Zweck: Merken deiner Sprache und ein personalisiertes Startmenü. Rechtsgrundlage: deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO); du kannst sie jederzeit widerrufen, indem du den Assistenten bittest, dich zu „vergessen“ (Tool forget_me), oder an hello@promptquorum.com schreibst; gespeicherte Daten siehst du mit dem Tool my_profile. Profile liegen in einer Datenbank in einer EU-Region, betrieben von unserem Auftragsverarbeiter Upstash, und werden nach 6 Monaten ohne Nutzung automatisch gelöscht. Antwortest du „nein“, wird nichts gespeichert und alle Tools funktionieren gleich. Unabhängig davon führt der MCP-Server anonyme Aufrufzähler je Tool (keine personenbezogenen Daten) und speichert einen gesalzenen Hash der IP-Adresse bis zu eine Minute zur Anfragebegrenzung.",
+    privacyHostingNote: "Hosting und Server-Logs: Unsere Website und der MCP-Server werden von unserem Auftragsverarbeiter Vercel Inc. gehostet. Wenn du die Website besuchst oder den MCP-Server aufrufst, verarbeitet Vercel deine IP-Adresse und Anfragemetadaten (z. B. Zeitpunkt, URL und User-Agent) in technischen Server-Logs, um den Dienst bereitzustellen und abzusichern. Rechtsgrundlage: unser berechtigtes Interesse an einem sicheren und stabilen Dienst (Art. 6 Abs. 1 lit. f DSGVO). Wir verwenden diese Logs nicht, um Besucherprofile zu erstellen.",
+    privacyConsentLogNote: "Cookie-Einwilligungsnachweis: Wenn du im Cookie-Banner eine Auswahl triffst, speichern wir bis zu 25 Monate lang die Auswahl, deine Sprache, einen Zeitstempel, die ersten 120 Zeichen des User-Agents deines Browsers und einen gekürzten, gesalzenen Hash deiner IP-Adresse als Nachweis, dass eingewilligt oder abgelehnt wurde. Rechtsgrundlage: rechtliche Verpflichtung und berechtigtes Interesse am Nachweis der Einwilligung (Art. 6 Abs. 1 lit. c und f, Art. 7 Abs. 1 DSGVO). Der Nachweis wird bei unserem Auftragsverarbeiter Upstash gespeichert.",
     privacyS2Col1: "Daten",
     privacyS2Col2: "Wie gesammelt",
     privacyS2Col3: "Zweck",
@@ -442,7 +455,7 @@ export const translations = {
     privacyS2Row2_2: "Cookielose Analyse (Umami, Microsoft Clarity)",
     privacyS2Row2_3: "Verstehen, welche Seiten besucht werden; Website verbessern",
     privacyS2Row2_4: "Berechtigtes Interesse (Art. 6(1)(f) DSGVO) — siehe §7",
-    privacyS2Closure: "Wir sammeln keine Namen, Telefonnummern, Zahlungsinformationen, IP-Adressen, die über die Aggregation auf Sitzungsebene hinaus gespeichert werden, oder spezielle Kategorien von Daten gemäß Art. 9 DSGVO.",
+    privacyS2Closure: "Wir erheben keine Namen, Telefonnummern, Zahlungsinformationen oder besonderen Kategorien von Daten gemäß Art. 9 DSGVO. IP-Adressen werden nur so verarbeitet, wie in diesem Abschnitt beschrieben.",
 
     // Section 3
     privacyS3Title: "Rechtliche Grundlage für die Verarbeitung",
@@ -474,6 +487,14 @@ export const translations = {
     privacyS4Row4Role: "Session-Aufzeichnung und Heatmaps – werden für alle Besucher im cookielosen Modus geladen",
     privacyS4Row4Data: "Interaktionsereignisse und Viewport-Daten (werden im cookielosen Modus erfasst)",
     privacyS4Row4Loc: "Vereinigte Staaten",
+    privacyS4Row5Proc: "Upstash (Upstash, Inc.)",
+    privacyS4Row5Role: "Verwaltete Redis-Datenbank — optionale MCP-Profile, anonyme Aufrufzähler, Hashes zur Anfragebegrenzung, Cookie-Einwilligungsnachweise",
+    privacyS4Row5Data: "Pseudonymes MCP-Profil (Opt-in), gehashte IP-Werte, Einwilligungsnachweise, Zähler",
+    privacyS4Row5Loc: "EU-Region (MCP-Profile); Anbieter mit Sitz in den Vereinigten Staaten",
+    privacyS4Row6Proc: "Vercel (Vercel Inc.)",
+    privacyS4Row6Role: "Hosting, Content-Auslieferung und Server-Logs für die Website und den MCP-Server",
+    privacyS4Row6Data: "IP-Adresse und Anfragemetadaten (Zeitpunkt, URL, User-Agent)",
+    privacyS4Row6Loc: "Vereinigte Staaten / globales Edge-Netzwerk",
     privacyS4Closure: "Wir verkaufen Ihre Daten nicht an Dritte. Wir geben Ihre E-Mail-Adresse nicht an Werbetreibende weiter.",
 
     // Section 5
@@ -481,6 +502,7 @@ export const translations = {
     privacyS5Intro: "Einige unserer Verarbeiter sind in den USA ansässig. Übertragungen personenbezogener Daten aus dem Europäischen Wirtschaftsraum (EWR) oder dem Vereinigten Königreich (UK) in die USA unterliegen angemessenen Schutzmaßnahmen:",
     privacyS5Bullet1: "Resend: Die Übertragung wird durch Standardvertragsklauseln (SVK) abgedeckt, die von der Europäischen Kommission unter DSGVO Art. 46(2)(c) angenommen wurden. Die Datenverarbeitungsvereinbarung von Resend ist unter resend.com/legal/dpa verfügbar.",
     privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) hat seinen Sitz in den USA und arbeitet cookielos. Übermittlungen sind durch Standardvertragsklauseln (SVK) gemäß Art. 46 DSGVO abgesichert; Microsoft ist zusätzlich dem EU-USA-Datenschutzrahmen beigetreten. Umami wird in der EU gehostet, sodass keine Übermittlung stattfindet.",
+    privacyS5Bullet3: "Beide Anbieter haben ihren Sitz in den USA. Übermittlungen stützen sich auf Standardvertragsklauseln (SCCs) nach Art. 46 Abs. 2 lit. c DSGVO in ihren Auftragsverarbeitungsverträgen und, soweit der Anbieter zertifiziert ist, auf das EU-US Data Privacy Framework. MCP-Profile werden in einer EU-Region gespeichert.",
     privacyS5Closure: "Sie können eine Kopie der geltenden SVK anfordern, indem Sie {{email}} eine E-Mail senden.",
 
     // Section 6
@@ -731,7 +753,7 @@ export const translations = {
     privacyS1Title: "Qui nous sommes",
     privacyS1Para1: "PromptQuorum (\"nous\", \"nos\" ou \"notre\") est un produit logiciel disponible à {{url}}. PromptQuorum est développé par Hans Kuepper (le \"responsable du traitement\" au sens du RGPD).",
     privacyS1Para2: "Nous exploitons un outil de distribution multi-IA et d'analyse de consensus. Le produit lui-même ne traite aucune donnée personnelle — les prompts, les clés API et les réponses d'IA sont entièrement traités dans votre navigateur et transmis directement de votre appareil aux fournisseurs d'IA que vous choisissez. Les serveurs PromptQuorum ne reçoivent, ne stockent ni ne traitent jamais vos prompts ou clés API.",
-    privacyS1Para3: "Cette politique de confidentialité ne couvre que les données personnelles que nous collectons via le site Web PromptQuorum — spécifiquement le formulaire de liste d'attente à {{url}}.",
+    privacyS1Para3: "Cette politique de confidentialité couvre les données personnelles que nous traitons via le site Web PromptQuorum et son serveur MCP public : le formulaire de liste d'attente à {{url}}, l'hébergement et les journaux serveur, les preuves de consentement aux cookies, les hachages de limitation de débit et le profil MCP facultatif (voir §2).",
 
     // Section 2
     privacyS2Title: "Données que nous collectons et pourquoi",
@@ -739,6 +761,8 @@ export const translations = {
     privacyAltLookupNote: "Recherche d’alternatives dans l’annuaire (fonction de test) : lorsque vous recherchez une application en ligne, nous ne conservons que le texte de recherche normalisé et un compteur, sans cookie ni identifiant. Pour limiter les abus, un hachage salé de votre adresse IP (et non l’adresse elle-même) est conservé jusqu’à une heure pour limiter le nombre de requêtes et n’est jamais associé au texte recherché. Ne saisissez pas de données personnelles dans le champ de recherche.",
     privacyMcpTitle: "Profil du serveur MCP (facultatif)",
     privacyMcpNote: "Si vous connectez un assistant IA à notre serveur MCP public et répondez « oui » à la question de confidentialité de son menu de démarrage, nous enregistrons un profil pseudonymisé : un code de profil aléatoire (conservé uniquement sous forme de hachage à clé), la date de votre consentement et la version du texte de consentement, votre langue préférée ainsi que les horodatages de création et de dernière utilisation. Nous n'enregistrons dans le profil ni nom, ni adresse e-mail, ni adresse IP, ni user agent, ni contenu de conversation. Finalité : mémoriser votre langue et proposer un menu de démarrage personnalisé. Base légale : votre consentement (art. 6, § 1, point a RGPD), que vous pouvez retirer à tout moment en demandant à l'assistant de vous « oublier » (outil forget_me) ou en écrivant à hello@promptquorum.com ; l'outil my_profile affiche les données enregistrées. Les profils sont stockés dans une base de données située dans une région de l'UE, exploitée par notre sous-traitant Upstash, et supprimés automatiquement après 6 mois sans utilisation. Si vous répondez « non », rien n'est enregistré et tous les outils fonctionnent de la même façon. Indépendamment, le serveur MCP tient des compteurs d'appels anonymes par outil (aucune donnée personnelle) et conserve un hachage salé de l'adresse IP pendant une minute au plus pour limiter le débit.",
+    privacyHostingNote: "Hébergement et journaux serveur : notre site Web et notre serveur MCP sont hébergés par notre sous-traitant Vercel Inc. Lorsque vous visitez le site ou appelez le serveur MCP, Vercel traite votre adresse IP et des métadonnées de requête (par exemple l'heure, l'URL et le user agent) dans des journaux serveur techniques afin de fournir le service et d'en assurer la sécurité. Base légale : notre intérêt légitime à disposer d'un service sûr et stable (art. 6, § 1, point f RGPD). Nous n'utilisons pas ces journaux pour établir des profils de visiteurs.",
+    privacyConsentLogNote: "Preuve de consentement aux cookies : lorsque vous faites un choix dans la bannière de cookies, nous conservons pendant 25 mois au plus ce choix, votre langue, un horodatage, les 120 premiers caractères du user agent de votre navigateur et un hachage salé raccourci de votre adresse IP, afin de prouver que le consentement a été donné ou refusé. Base légale : obligation légale et intérêt légitime à pouvoir démontrer le consentement (art. 6, § 1, points c et f, et art. 7, § 1 RGPD). Cette preuve est stockée chez notre sous-traitant Upstash.",
     privacyS2Col1: "Données",
     privacyS2Col2: "Comment collectées",
     privacyS2Col3: "Objet",
@@ -751,7 +775,7 @@ export const translations = {
     privacyS2Row2_2: "Analyse sans cookies (Umami, Microsoft Clarity)",
     privacyS2Row2_3: "Comprendre quelles pages sont visitées; améliorer le site",
     privacyS2Row2_4: "Intérêt légitime (Art. 6(1)(f) RGPD) — voir §7",
-    privacyS2Closure: "Nous ne collectons pas les noms, les numéros de téléphone, les informations de paiement, les adresses IP stockées au-delà de l'agrégation au niveau de la session, ou toute catégorie particulière de données en vertu de l'art. 9 RGPD.",
+    privacyS2Closure: "Nous ne collectons pas de noms, de numéros de téléphone, d'informations de paiement ni de catégories particulières de données au sens de l'art. 9 RGPD. Les adresses IP sont traitées uniquement comme décrit dans cette section.",
 
     // Section 3
     privacyS3Title: "Fondement juridique du traitement",
@@ -783,6 +807,14 @@ export const translations = {
     privacyS4Row4Role: "Relecture de session et cartes de chaleur — chargées pour tous les visiteurs en mode sans cookies",
     privacyS4Row4Data: "Événements d'interaction et données de fenêtre d'affichage (collectés en mode sans cookies)",
     privacyS4Row4Loc: "États-Unis",
+    privacyS4Row5Proc: "Upstash (Upstash, Inc.)",
+    privacyS4Row5Role: "Base de données Redis gérée — profils MCP facultatifs, compteurs d'appels anonymes, hachages de limitation de débit, preuves de consentement aux cookies",
+    privacyS4Row5Data: "Profil MCP pseudonymisé (opt-in), valeurs d'IP hachées, preuves de consentement, compteurs",
+    privacyS4Row5Loc: "Région UE (profils MCP) ; prestataire dont le siège est aux États-Unis",
+    privacyS4Row6Proc: "Vercel (Vercel Inc.)",
+    privacyS4Row6Role: "Hébergement, diffusion de contenu et journaux serveur pour le site Web et le serveur MCP",
+    privacyS4Row6Data: "Adresse IP et métadonnées de requête (heure, URL, user agent)",
+    privacyS4Row6Loc: "États-Unis / réseau edge mondial",
     privacyS4Closure: "Nous ne vendons pas vos données à des tiers. Nous ne partageons pas votre adresse e-mail avec les annonceurs.",
 
     // Section 5
@@ -790,6 +822,7 @@ export const translations = {
     privacyS5Intro: "Certains de nos sous-traitants sont basés aux États-Unis. Les transferts de données personnelles de l'Espace économique européen (EEE) ou du Royaume-Uni (RU) vers les États-Unis sont soumis à des garanties appropriées:",
     privacyS5Bullet1: "Resend: Le transfert est couvert par les clauses contractuelles types (CCT) adoptées par la Commission européenne en vertu de l'art. 46(2)(c) du RGPD. L'accord de traitement des données de Resend est disponible à resend.com/legal/dpa.",
     privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) est basé aux États-Unis et fonctionne sans cookies. Les transferts sont encadrés par les clauses contractuelles types (CCT) au titre de l'art. 46 du RGPD ; Microsoft adhère en outre au cadre de protection des données UE–États-Unis (EU–US Data Privacy Framework). Umami est hébergé dans l'UE, de sorte qu'aucun transfert n'a lieu.",
+    privacyS5Bullet3: "Les deux prestataires sont basés aux États-Unis. Les transferts reposent sur les clauses contractuelles types (CCT) au titre de l'art. 46, § 2, point c RGPD prévues dans leurs accords de traitement des données et, lorsque le prestataire est certifié, sur le cadre de protection des données UE–États-Unis. Les profils MCP sont stockés dans une région de l'UE.",
     privacyS5Closure: "Vous pouvez demander une copie des CCT applicables en envoyant un e-mail à {{email}}.",
 
     // Section 6
@@ -1032,7 +1065,7 @@ export const translations = {
     privacyS1Title: "私たちについて",
     privacyS1Para1: "PromptQuorum(\"私たち\"、\"当社\"、または\"当方\")は{{url}}で利用可能なソフトウェア製品です。PromptQuorumはHans Kuepper(GDPR目的での\"データ管理者\")により開発されています。",
     privacyS1Para2: "私たちはマルチモデルAI配信およびコンセンサス分析ツールを運営しています。製品自体は個人データを処理しません—プロンプト、APIキー、AI応答はすべてあなたのブラウザ内で処理され、あなたのデバイスから直接あなたが選択したAIプロバイダーに送信されます。PromptQuorumサーバーはあなたのプロンプトやAPIキーを受信、保存、処理することはありません。",
-    privacyS1Para3: "本プライバシーポリシーは、PromptQuorumウェブサイトを通じて収集する個人データのみをカバーしています—特に{{url}}のウェイティングリストフォームです。",
+    privacyS1Para3: "本プライバシーポリシーは、PromptQuorumウェブサイトおよび公開MCPサーバーを通じて処理する個人データを対象としています。具体的には、{{url}}のウェイティングリストフォーム、ホスティングとサーバーログ、Cookie同意の記録、リクエスト制限用のハッシュ、任意のMCPプロフィールです（§2参照）。",
 
     // Section 2
     privacyS2Title: "収集するデータとその理由",
@@ -1040,6 +1073,8 @@ export const translations = {
     privacyAltLookupNote: "ディレクトリの代替検索（テスト機能）：オンラインアプリを検索すると、正規化した検索テキストとカウンターのみを保存し、Cookieや識別子は使用しません。不正利用を防ぐため、リクエスト数の制限を目的として、IPアドレスそのものではなくソルト付きハッシュを最大1時間保持し、検索テキストとは紐づけません。検索欄に個人データを入力しないでください。",
     privacyMcpTitle: "MCPサーバーのプロフィール（任意）",
     privacyMcpNote: "公開MCPサーバーにAIアシスタントを接続し、スタートメニューで表示されるプライバシーの質問に「はい」と答えた場合、仮名化されたプロフィールを保存します。内容は、ランダムなプロフィールコード（鍵付きハッシュとしてのみ保持）、同意日と同意文のバージョン、希望言語、作成日時と最終利用日時です。氏名、メールアドレス、IPアドレス、ユーザーエージェント、会話内容はプロフィールに保存しません。目的は、言語の記憶とパーソナライズされたスタートメニューです。法的根拠は、お客様の同意（GDPR第6条第1項(a)）で、アシスタントに「忘れて」と伝える（forget_meツール）か hello@promptquorum.com へ連絡することでいつでも撤回できます。保存内容は my_profile ツールで確認できます。プロフィールは、処理委託先Upstashが運営するEUリージョンのデータベースに保存され、6か月間利用がない場合は自動的に削除されます。「いいえ」の場合は何も保存されず、すべてのツールが同じように動作します。これとは別に、MCPサーバーはツールごとの匿名の呼び出し回数（個人データなし）と、リクエスト制限のためのIPアドレスのソルト付きハッシュ（最長1分間）を保持します。",
+    privacyHostingNote: "ホスティングとサーバーログ：当サイトとMCPサーバーは、処理委託先のVercel Inc.がホストしています。サイトにアクセスした場合やMCPサーバーを呼び出した場合、Vercelはサービスの提供と安全確保のため、技術的なサーバーログにIPアドレスとリクエストのメタデータ（時刻、URL、ユーザーエージェントなど）を記録します。法的根拠：安全で安定したサービスを提供するという当社の正当な利益（GDPR第6条第1項(f)）。これらのログを訪問者のプロファイル作成には使用しません。",
+    privacyConsentLogNote: "Cookie同意の記録：Cookieバナーで選択を行うと、同意または拒否の証拠として、選択内容、言語、タイムスタンプ、ブラウザーのユーザーエージェントの先頭120文字、およびIPアドレスの短縮したソルト付きハッシュを最長25か月間保存します。法的根拠：法的義務、および同意を証明できることに対する正当な利益（GDPR第6条第1項(c)および(f)、第7条第1項）。この記録は処理委託先のUpstashに保存されます。",
     privacyS2Col1: "データ",
     privacyS2Col2: "収集方法",
     privacyS2Col3: "目的",
@@ -1052,7 +1087,7 @@ export const translations = {
     privacyS2Row2_2: "クッキーレス分析（Umami、Microsoft Clarity）",
     privacyS2Row2_3: "訪問されたページを理解する; サイトを改善する",
     privacyS2Row2_4: "正当な利益(GDPR第6条(1)(f)) — §7を参照",
-    privacyS2Closure: "私たちは名前、電話番号、支払い情報、セッションレベルの集約を超えて保存されたIPアドレス、またはGDPR第9条の特別カテゴリーのデータを収集しません。",
+    privacyS2Closure: "私たちは、氏名、電話番号、支払い情報、またはGDPR第9条に定める特別カテゴリーのデータを収集しません。IPアドレスは、このセクションに記載する範囲でのみ処理します。",
 
     // Section 3
     privacyS3Title: "処理の法的根拠",
@@ -1084,6 +1119,14 @@ export const translations = {
     privacyS4Row4Role: "セッションリプレイおよびヒートマップ — すべての訪問者に対してクッキーレスモードで読み込まれます",
     privacyS4Row4Data: "操作イベントおよびビューポートデータ（クッキーレスモードで収集されます）",
     privacyS4Row4Loc: "アメリカ合衆国",
+    privacyS4Row5Proc: "Upstash（Upstash, Inc.）",
+    privacyS4Row5Role: "マネージドRedisデータベース — 任意のMCPプロフィール、匿名の呼び出し回数、リクエスト制限用ハッシュ、Cookie同意の記録",
+    privacyS4Row5Data: "仮名化されたMCPプロフィール（オプトイン）、ハッシュ化したIP値、同意の記録、カウンター",
+    privacyS4Row5Loc: "EUリージョン（MCPプロフィール）。提供元の本社は米国",
+    privacyS4Row6Proc: "Vercel（Vercel Inc.）",
+    privacyS4Row6Role: "ウェブサイトとMCPサーバーのホスティング、コンテンツ配信、サーバーログ",
+    privacyS4Row6Data: "IPアドレスとリクエストのメタデータ（時刻、URL、ユーザーエージェント）",
+    privacyS4Row6Loc: "米国／グローバルエッジネットワーク",
     privacyS4Closure: "私たちはあなたのデータを第三者に売却しません。あなたのメールアドレスを広告主と共有することはありません。",
 
     // Section 5
@@ -1091,6 +1134,7 @@ export const translations = {
     privacyS5Intro: "私たちの処理業者の一部は米国に拠点を置いています。ヨーロッパ経済地域(EEA)または英国(UK)から米国への個人データの転送には、適切な保護措置が適用されます:",
     privacyS5Bullet1: "Resend: 転送はGDPR第46条(2)(c)の下で欧州委員会により採択された標準契約条項(SCC)によってカバーされています。Resendのデータ処理契約はresend.com/legal/dpaで利用可能です。",
     privacyS5Bullet2: "Microsoft Clarity（Microsoft Corporation）は米国に拠点を置き、クッキーレスで動作します。移転はGDPR第46条に基づく標準契約条項（SCC）によって保護されており、MicrosoftはさらにEU–米国データプライバシーフレームワーク（EU–US Data Privacy Framework）に参加しています。UmamiはEU内でホストされているため、移転は発生しません。",
+    privacyS5Bullet3: "両プロバイダーとも米国に拠点があります。移転は、データ処理契約に含まれるGDPR第46条第2項(c)の標準契約条項（SCC）に基づき、プロバイダーが認証を受けている場合はEU・米国データプライバシーフレームワークにも基づきます。MCPプロフィールはEUリージョンに保存されます。",
     privacyS5Closure: "{{email}}にメールを送信することで、適用されるSCCのコピーをリクエストできます。",
 
     // Section 6
@@ -1333,7 +1377,7 @@ export const translations = {
     privacyS1Title: "我们是谁",
     privacyS1Para1: "PromptQuorum(\"我们\"、\"本\"或\"我们的\")是在{{url}}提供的软件产品。PromptQuorum由Hans Kuepper开发(GDPR目的下的\"数据控制人\")。",
     privacyS1Para2: "我们运营一个多模型AI分发和共识分析工具。该产品本身不处理任何个人数据—提示词、API密钥和AI响应完全在您的浏览器中处理,并直接从您的设备传输给您选择的AI提供商。PromptQuorum服务器绝不接收、存储或处理您的提示词或API密钥。",
-    privacyS1Para3: "本隐私政策仅涵盖我们通过PromptQuorum网站收集的个人数据—特别是{{url}}的候补名单表单。",
+    privacyS1Para3: "本隐私政策涵盖我们通过 PromptQuorum 网站及其公开 MCP 服务器处理的个人数据：{{url}} 的候补名单表单、托管与服务器日志、Cookie 同意记录、限流哈希值以及可选的 MCP 档案（见 §2）。",
 
     // Section 2
     privacyS2Title: "我们收集的数据及其原因",
@@ -1341,6 +1385,8 @@ export const translations = {
     privacyAltLookupNote: "目录中的替代方案查询（测试功能）：当您搜索在线应用时，我们仅保存规范化后的搜索文本和一个计数器，不使用 Cookie 或标识符。为防止滥用，我们会为限制请求频率而保留您 IP 地址的加盐哈希值（而非 IP 地址本身），最长一小时，且绝不与搜索文本关联。请勿在搜索框中输入个人数据。",
     privacyMcpTitle: "MCP 服务器档案（可选）",
     privacyMcpNote: "如果你把 AI 助手连接到我们的公开 MCP 服务器，并对其开始菜单中的隐私问题回答“是”，我们会保存一份假名化档案：随机生成的档案代码（仅以带密钥的哈希形式保存）、你同意的日期和同意文本的版本、你偏好的语言，以及创建和最近使用的时间戳。档案中不保存姓名、电子邮箱、IP 地址、User-Agent 或对话内容。目的：记住你的语言并提供个性化的开始菜单。法律依据：你的同意（GDPR 第 6 条第 1 款 a 项），你可以随时撤回——请助手“忘记我”（forget_me 工具）或发邮件至 hello@promptquorum.com；你可以用 my_profile 工具查看已存储的数据。档案存储在由我们的处理方 Upstash 运营的欧盟区域数据库中，连续 6 个月未使用将自动删除。如果你回答“否”，则不会保存任何内容，所有工具照常工作。另外，MCP 服务器会保存按工具统计的匿名调用计数（不含个人数据），并为限流目的将 IP 地址的加盐哈希最多保留一分钟。",
+    privacyHostingNote: "托管与服务器日志：我们的网站和 MCP 服务器由我们的处理方 Vercel Inc. 托管。当你访问网站或调用 MCP 服务器时，Vercel 会在技术性服务器日志中处理你的 IP 地址和请求元数据（如时间、URL 和 User-Agent），以提供服务并保障安全。法律依据：我们对安全稳定服务的合法利益（GDPR 第 6 条第 1 款 f 项）。我们不会使用这些日志来建立访客画像。",
+    privacyConsentLogNote: "Cookie 同意记录：当你在 Cookie 横幅中做出选择时，我们会将该选择、你的语言、时间戳、浏览器 User-Agent 的前 120 个字符以及缩短的加盐 IP 地址哈希值最多保存 25 个月，作为已同意或已拒绝的证明。法律依据：法定义务以及证明同意的合法利益（GDPR 第 6 条第 1 款 c 项和 f 项，第 7 条第 1 款）。该记录存储在我们的处理方 Upstash。",
     privacyS2Col1: "数据",
     privacyS2Col2: "收集方式",
     privacyS2Col3: "用途",
@@ -1353,7 +1399,7 @@ export const translations = {
     privacyS2Row2_2: "无Cookie分析（Umami、Microsoft Clarity）",
     privacyS2Row2_3: "了解访问的页面; 改进网站",
     privacyS2Row2_4: "合法利益(GDPR第6条(1)(f)) — 参见§7",
-    privacyS2Closure: "我们不收集姓名、电话号码、付款信息、超过会话级别汇总存储的IP地址或GDPR第9条下的任何特殊类别数据。",
+    privacyS2Closure: "我们不收集姓名、电话号码、付款信息或 GDPR 第 9 条下的任何特殊类别数据。IP 地址仅按本节所述方式处理。",
 
     // Section 3
     privacyS3Title: "处理的法律依据",
@@ -1385,6 +1431,14 @@ export const translations = {
     privacyS4Row4Role: "会话回放和热图——以无 Cookie 模式对所有访客加载",
     privacyS4Row4Data: "交互事件和视口数据（以无 Cookie 模式收集）",
     privacyS4Row4Loc: "美利坚合众国",
+    privacyS4Row5Proc: "Upstash（Upstash, Inc.）",
+    privacyS4Row5Role: "托管 Redis 数据库 — 可选的 MCP 档案、匿名调用计数、限流哈希值、Cookie 同意记录",
+    privacyS4Row5Data: "假名化 MCP 档案（需选择加入）、哈希化的 IP 值、同意记录、计数器",
+    privacyS4Row5Loc: "欧盟区域（MCP 档案）；服务商总部位于美国",
+    privacyS4Row6Proc: "Vercel（Vercel Inc.）",
+    privacyS4Row6Role: "网站和 MCP 服务器的托管、内容分发和服务器日志",
+    privacyS4Row6Data: "IP 地址和请求元数据（时间、URL、User-Agent）",
+    privacyS4Row6Loc: "美国 / 全球边缘网络",
     privacyS4Closure: "我们不向任何第三方出售您的数据。我们不与广告商分享您的电子邮件地址。",
 
     // Section 5
@@ -1392,6 +1446,7 @@ export const translations = {
     privacyS5Intro: "我们的一些处理人位于美国。从欧洲经济区(EEA)或英国(UK)向美国转移个人数据受适当的保护措施约束:",
     privacyS5Bullet1: "Resend: 转移受欧盟委员会在GDPR第46条(2)(c)下采用的标准合同条款(SCC)的保护。Resend的数据处理协议可在resend.com/legal/dpa获取。",
     privacyS5Bullet2: "Microsoft Clarity（Microsoft Corporation）位于美国，以无Cookie方式运行。数据传输受GDPR第46条下的标准合同条款（SCC）保护；Microsoft还参与了欧盟–美国数据隐私框架（EU–US Data Privacy Framework）。Umami托管在欧盟境内，因此不发生数据传输。",
+    privacyS5Bullet3: "两家服务商均位于美国。数据传输依据其数据处理协议中的标准合同条款（SCC，GDPR 第 46 条第 2 款 c 项），在服务商已获认证的情况下还依据欧盟—美国数据隐私框架。MCP 档案存储在欧盟区域。",
     privacyS5Closure: "您可以通过向{{email}}发送电子邮件来请求适用SCC的副本。",
 
     // Section 6
@@ -1634,7 +1689,7 @@ export const translations = {
     privacyS1Title: "Quiénes somos",
     privacyS1Para1: "PromptQuorum (\"nosotros\", \"nos\" o \"nuestro\") es un producto de software disponible en {{url}}. PromptQuorum es desarrollado por Hans Kuepper (el \"responsable del tratamiento\" a efectos del RGPD).",
     privacyS1Para2: "Operamos una herramienta de despacho multi-IA y análisis de consenso. El producto en sí no procesa datos personales — los prompts, claves API y respuestas de IA se gestionan completamente en tu navegador y se transmiten directamente desde tu dispositivo a los proveedores de IA que eliges. Los servidores de PromptQuorum nunca reciben, almacenan ni procesan tus prompts o claves API.",
-    privacyS1Para3: "Esta política de privacidad cubre únicamente los datos personales que recopilamos a través del sitio web de PromptQuorum — específicamente el formulario de lista de espera en {{url}}.",
+    privacyS1Para3: "Esta política de privacidad cubre los datos personales que tratamos a través del sitio web de PromptQuorum y de su servidor MCP público: el formulario de lista de espera en {{url}}, el alojamiento y los registros del servidor, los registros de consentimiento de cookies, los hashes de limitación de peticiones y el perfil MCP opcional (véase §2).",
 
     // Section 2
     privacyS2Title: "Datos que recopilamos y por qué",
@@ -1642,6 +1697,8 @@ export const translations = {
     privacyAltLookupNote: "Búsqueda de alternativas en el directorio (función de prueba): cuando buscas una aplicación en línea, solo almacenamos el texto de búsqueda normalizado y un contador, sin cookie ni identificador. Para limitar abusos, se conserva hasta una hora un hash con sal de tu dirección IP (no la dirección en sí) para limitar las solicitudes, y nunca se vincula al texto de búsqueda. No introduzcas datos personales en el campo de búsqueda.",
     privacyMcpTitle: "Perfil del servidor MCP (opcional)",
     privacyMcpNote: "Si conectas un asistente de IA a nuestro servidor MCP público y respondes «sí» a la pregunta de privacidad de su menú de inicio, guardamos un perfil seudónimo: un código de perfil aleatorio (conservado solo como hash con clave), la fecha de tu consentimiento y la versión del texto de consentimiento, tu idioma preferido y las marcas de tiempo de creación y último uso. En el perfil no guardamos nombre, correo electrónico, dirección IP, user agent ni contenido de conversaciones. Finalidad: recordar tu idioma y ofrecer un menú de inicio personalizado. Base jurídica: tu consentimiento (art. 6.1.a RGPD), que puedes retirar en cualquier momento pidiendo al asistente que te «olvide» (herramienta forget_me) o escribiendo a hello@promptquorum.com; con la herramienta my_profile puedes ver los datos guardados. Los perfiles se almacenan en una base de datos en una región de la UE operada por nuestro encargado del tratamiento Upstash y se eliminan automáticamente tras 6 meses sin uso. Si respondes «no», no se guarda nada y todas las herramientas funcionan igual. Con independencia de esto, el servidor MCP mantiene contadores anónimos de llamadas por herramienta (sin datos personales) y un hash con sal de la dirección IP durante un máximo de un minuto para limitar la frecuencia de peticiones.",
+    privacyHostingNote: "Alojamiento y registros del servidor: nuestro sitio web y el servidor MCP están alojados por nuestro encargado del tratamiento Vercel Inc. Cuando visitas el sitio o llamas al servidor MCP, Vercel trata tu dirección IP y metadatos de la petición (como la hora, la URL y el user agent) en registros técnicos del servidor para prestar el servicio y mantenerlo seguro. Base jurídica: nuestro interés legítimo en un servicio seguro y estable (art. 6.1.f RGPD). No usamos estos registros para elaborar perfiles de visitantes.",
+    privacyConsentLogNote: "Registro de consentimiento de cookies: cuando eliges una opción en el banner de cookies, guardamos durante un máximo de 25 meses la opción, tu idioma, una marca de tiempo, los primeros 120 caracteres del user agent de tu navegador y un hash con sal abreviado de tu dirección IP, como prueba de que el consentimiento se dio o se rechazó. Base jurídica: obligación legal e interés legítimo en poder demostrar el consentimiento (art. 6.1.c y f, art. 7.1 RGPD). El registro se almacena con nuestro encargado del tratamiento Upstash.",
     privacyS2Col1: "Dato",
     privacyS2Col2: "Cómo se recopila",
     privacyS2Col3: "Finalidad",
@@ -1654,7 +1711,7 @@ export const translations = {
     privacyS2Row2_2: "Analítica sin cookies (Umami, Microsoft Clarity)",
     privacyS2Row2_3: "Entender qué páginas se visitan; mejorar el sitio",
     privacyS2Row2_4: "Interés legítimo (Art. 6(1)(f) RGPD) — ver §7",
-    privacyS2Closure: "No recopilamos nombres, números de teléfono, información de pago, direcciones IP almacenadas más allá de la agregación a nivel de sesión, ni datos de categorías especiales según el Art. 9 del RGPD.",
+    privacyS2Closure: "No recopilamos nombres, números de teléfono, información de pago ni datos de categorías especiales según el Art. 9 del RGPD. Las direcciones IP se tratan únicamente como se describe en esta sección.",
 
     // Section 3
     privacyS3Title: "Base jurídica del tratamiento",
@@ -1686,6 +1743,14 @@ export const translations = {
     privacyS4Row4Role: "Reproducción de sesiones y mapas de calor — se cargan para todos los visitantes en modo sin cookies",
     privacyS4Row4Data: "Eventos de interacción y datos de viewport (se recopilan en modo sin cookies)",
     privacyS4Row4Loc: "Estados Unidos",
+    privacyS4Row5Proc: "Upstash (Upstash, Inc.)",
+    privacyS4Row5Role: "Base de datos Redis gestionada — perfiles MCP opcionales, contadores anónimos de llamadas, hashes de limitación de peticiones, registros de consentimiento de cookies",
+    privacyS4Row5Data: "Perfil MCP seudónimo (opt-in), valores de IP con hash, registros de consentimiento, contadores",
+    privacyS4Row5Loc: "Región de la UE (perfiles MCP); proveedor con sede en Estados Unidos",
+    privacyS4Row6Proc: "Vercel (Vercel Inc.)",
+    privacyS4Row6Role: "Alojamiento, distribución de contenido y registros del servidor para el sitio web y el servidor MCP",
+    privacyS4Row6Data: "Dirección IP y metadatos de la petición (hora, URL, user agent)",
+    privacyS4Row6Loc: "Estados Unidos / red edge global",
     privacyS4Closure: "No vendemos tus datos a terceros. No compartimos tu dirección de email con anunciantes.",
 
     // Section 5
@@ -1693,6 +1758,7 @@ export const translations = {
     privacyS5Intro: "Algunos de nuestros encargados del tratamiento tienen su sede en Estados Unidos. Las transferencias de datos personales desde el Espacio Económico Europeo (EEE) o el Reino Unido (RU) a Estados Unidos están sujetas a garantías adecuadas:",
     privacyS5Bullet1: "Resend: la transferencia está cubierta por Cláusulas Contractuales Tipo (CCT) adoptadas por la Comisión Europea en virtud del Art. 46(2)(c) del RGPD. El Acuerdo de Tratamiento de Datos de Resend está disponible en resend.com/legal/dpa.",
     privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) tiene su sede en Estados Unidos y funciona sin cookies. Las transferencias están protegidas por las cláusulas contractuales tipo (CCT) en virtud del art. 46 del RGPD; además, Microsoft participa en el Marco de Privacidad de Datos UE–EE. UU. (EU–US Data Privacy Framework). Umami está alojado en la UE, por lo que no se produce ninguna transferencia.",
+    privacyS5Bullet3: "Ambos proveedores tienen su sede en Estados Unidos. Las transferencias se basan en las cláusulas contractuales tipo (CCT) del art. 46.2.c RGPD incluidas en sus acuerdos de encargo del tratamiento y, cuando el proveedor está certificado, en el Marco de Privacidad de Datos UE-EE. UU. Los perfiles MCP se almacenan en una región de la UE.",
     privacyS5Closure: "Puedes solicitar una copia de las CCT aplicables enviando un email a {{email}}.",
 
     // Section 6
@@ -1935,7 +2001,7 @@ export const translations = {
     privacyS1Title: "Quem somos",
     privacyS1Para1: "PromptQuorum (\"nós\", \"nos\" ou \"nosso\") é um produto de software disponível em {{url}}. O PromptQuorum é desenvolvido por Hans Kuepper (o \"controlador de dados\" para fins da LGPD e do GDPR).",
     privacyS1Para2: "Operamos uma ferramenta de envio multi-modelo de IA e análise de consenso. O produto em si não processa dados pessoais — prompts, chaves de API e respostas de IA são gerenciados inteiramente no seu navegador e transmitidos diretamente do seu dispositivo para os provedores de IA escolhidos. Os servidores do PromptQuorum nunca recebem, armazenam ou processam seus prompts ou chaves de API.",
-    privacyS1Para3: "Esta Política de Privacidade cobre apenas os dados pessoais que coletamos por meio do site do PromptQuorum — especificamente o formulário de lista de espera em {{url}}.",
+    privacyS1Para3: "Esta Política de Privacidade cobre os dados pessoais que tratamos por meio do site do PromptQuorum e de seu servidor MCP público: o formulário de lista de espera em {{url}}, a hospedagem e os logs do servidor, os registros de consentimento de cookies, os hashes de limitação de requisições e o perfil MCP opcional (veja §2).",
 
     // Section 2
     privacyS2Title: "Dados que coletamos e por quê",
@@ -1943,6 +2009,8 @@ export const translations = {
     privacyAltLookupNote: "Busca de alternativas no diretório (recurso de teste): quando você pesquisa um app online, armazenamos apenas o texto de busca normalizado e um contador, sem cookie ou identificador. Para limitar abusos, um hash com salt do seu endereço IP (não o endereço em si) é mantido por até uma hora para limitar solicitações e nunca é associado ao texto da busca. Não insira dados pessoais no campo de busca.",
     privacyMcpTitle: "Perfil do servidor MCP (opcional)",
     privacyMcpNote: "Se você conectar um assistente de IA ao nosso servidor MCP público e responder «sim» à pergunta de privacidade do menu inicial, guardamos um perfil pseudonimizado: um código de perfil aleatório (mantido apenas como hash com chave), a data do seu consentimento e a versão do texto de consentimento, seu idioma preferido e os carimbos de data de criação e de último uso. Não guardamos no perfil nome, e-mail, endereço IP, user agent nem conteúdo de conversas. Finalidade: lembrar seu idioma e oferecer um menu inicial personalizado. Base legal: seu consentimento (art. 7º, I, LGPD), que você pode retirar a qualquer momento pedindo ao assistente que «esqueça de você» (ferramenta forget_me) ou escrevendo para hello@promptquorum.com; com a ferramenta my_profile você vê os dados guardados. Os perfis ficam em um banco de dados em uma região da UE operado por nosso operador Upstash e são excluídos automaticamente após 6 meses sem uso. Se você responder «não», nada é guardado e todas as ferramentas funcionam igual. Independentemente disso, o servidor MCP mantém contadores anônimos de chamadas por ferramenta (sem dados pessoais) e um hash com sal do endereço IP por até um minuto para limitar a taxa de requisições.",
+    privacyHostingNote: "Hospedagem e logs do servidor: nosso site e o servidor MCP são hospedados por nosso operador Vercel Inc. Quando você visita o site ou chama o servidor MCP, a Vercel trata seu endereço IP e metadados da requisição (como horário, URL e user agent) em logs técnicos do servidor para prestar o serviço e mantê-lo seguro. Base legal: nosso interesse legítimo em um serviço seguro e estável (art. 7º, IX, LGPD; art. 6(1)(f) GDPR). Não usamos esses logs para criar perfis de visitantes.",
+    privacyConsentLogNote: "Registro de consentimento de cookies: quando você faz uma escolha no banner de cookies, guardamos por até 25 meses a escolha, seu idioma, um carimbo de data e hora, os primeiros 120 caracteres do user agent do seu navegador e um hash com sal abreviado do seu endereço IP, como prova de que o consentimento foi dado ou recusado. Base legal: obrigação legal e interesse legítimo em poder comprovar o consentimento (art. 7º, II e IX, LGPD; art. 6(1)(c) e (f) e art. 7(1) GDPR). O registro é armazenado com nosso operador Upstash.",
     privacyS2Col1: "Dado",
     privacyS2Col2: "Como coletado",
     privacyS2Col3: "Finalidade",
@@ -1955,7 +2023,7 @@ export const translations = {
     privacyS2Row2_2: "Análise sem cookies (Umami, Microsoft Clarity)",
     privacyS2Row2_3: "Entender quais páginas são visitadas; melhorar o site",
     privacyS2Row2_4: "Interesse legítimo (Art. 6(1)(f) GDPR / Art. 10 LGPD) — ver §7",
-    privacyS2Closure: "Não coletamos nomes, números de telefone, informações de pagamento, endereços IP armazenados além da agregação em nível de sessão, nem dados de categorias especiais nos termos do Art. 9 do GDPR / Art. 11 da LGPD.",
+    privacyS2Closure: "Não coletamos nomes, números de telefone, informações de pagamento nem dados de categorias especiais nos termos do Art. 9 do GDPR / Art. 11 da LGPD. Endereços IP são tratados apenas conforme descrito nesta seção.",
 
     // Section 3
     privacyS3Title: "Base jurídica para o tratamento",
@@ -1987,6 +2055,14 @@ export const translations = {
     privacyS4Row4Role: "Reprodução de sessões e mapas de calor — carregadas para todos os visitantes em modo sem cookies",
     privacyS4Row4Data: "Eventos de interação e dados de viewport (coletados em modo sem cookies)",
     privacyS4Row4Loc: "Estados Unidos",
+    privacyS4Row5Proc: "Upstash (Upstash, Inc.)",
+    privacyS4Row5Role: "Banco de dados Redis gerenciado — perfis MCP opcionais, contadores anônimos de chamadas, hashes de limitação de requisições, registros de consentimento de cookies",
+    privacyS4Row5Data: "Perfil MCP pseudonimizado (opt-in), valores de IP com hash, registros de consentimento, contadores",
+    privacyS4Row5Loc: "Região da UE (perfis MCP); provedor com sede nos Estados Unidos",
+    privacyS4Row6Proc: "Vercel (Vercel Inc.)",
+    privacyS4Row6Role: "Hospedagem, entrega de conteúdo e logs do servidor para o site e o servidor MCP",
+    privacyS4Row6Data: "Endereço IP e metadados da requisição (horário, URL, user agent)",
+    privacyS4Row6Loc: "Estados Unidos / rede edge global",
     privacyS4Closure: "Não vendemos seus dados a terceiros. Não compartilhamos seu endereço de e-mail com anunciantes.",
 
     // Section 5
@@ -1994,6 +2070,7 @@ export const translations = {
     privacyS5Intro: "Alguns de nossos processadores estão sediados nos Estados Unidos. As transferências de dados pessoais da Área Econômica Europeia (AEE) ou do Reino Unido (RU) para os Estados Unidos estão sujeitas a salvaguardas adequadas:",
     privacyS5Bullet1: "Resend: a transferência é coberta por Cláusulas Contratuais Padrão (CCPs) adotadas pela Comissão Europeia nos termos do Art. 46(2)(c) do GDPR. O Contrato de Processamento de Dados da Resend está disponível em resend.com/legal/dpa.",
     privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) fica nos Estados Unidos e opera sem cookies. As transferências são protegidas por cláusulas contratuais padrão (SCCs) nos termos do art. 46 do GDPR; além disso, a Microsoft participa do Quadro de Privacidade de Dados UE–EUA (EU–US Data Privacy Framework). O Umami é hospedado na UE, portanto nenhuma transferência ocorre.",
+    privacyS5Bullet3: "Ambos os provedores têm sede nos Estados Unidos. As transferências baseiam-se nas cláusulas contratuais padrão (SCCs) do art. 46(2)(c) do GDPR constantes de seus acordos de tratamento de dados e, quando o provedor é certificado, no EU–US Data Privacy Framework. Os perfis MCP são armazenados em uma região da UE.",
     privacyS5Closure: "Você pode solicitar uma cópia das CCPs aplicáveis enviando um e-mail para {{email}}.",
 
     // Section 6
@@ -2236,7 +2313,7 @@ export const translations = {
     privacyS1Title: "من نحن",
     privacyS1Para1: "PromptQuorum (\"نحن\" أو \"لنا\" أو \"خاصتنا\") منتج برمجي متاح على {{url}}. يطوِّر PromptQuorum هانس كويبر (\"المسؤول عن المعالجة\" لأغراض RGPD).",
     privacyS1Para2: "نُشغِّل أداة لإرسال البرامج النصية لأنظمة ذكاء اصطناعي متعددة وتحليل توافق الآراء. المنتج بحد ذاته لا يعالج بيانات شخصية — تُدار البرامج النصية ومفاتيح API وردود الذكاء الاصطناعي كليًا في متصفحك وتُرسَل مباشرةً من جهازك إلى مزودي الذكاء الاصطناعي الذين تختارهم. لا تتلقى خوادم PromptQuorum برامجك النصية أو مفاتيح API ولا تخزِّنها ولا تعالجها.",
-    privacyS1Para3: "تغطي سياسة الخصوصية هذه فقط البيانات الشخصية التي نجمعها عبر موقع PromptQuorum الإلكتروني — تحديدًا نموذج قائمة الانتظار على {{url}}.",
+    privacyS1Para3: "تغطي سياسة الخصوصية هذه البيانات الشخصية التي نعالجها عبر موقع PromptQuorum وخادم MCP العام التابع له: نموذج قائمة الانتظار على {{url}}، والاستضافة وسجلات الخادم، وسجلات الموافقة على ملفات تعريف الارتباط، وقيم التجزئة المستخدمة لتحديد معدل الطلبات، وملف MCP الشخصي الاختياري (انظر §2).",
 
     // Section 2
     privacyS2Title: "البيانات التي نجمعها ولماذا",
@@ -2244,6 +2321,8 @@ export const translations = {
     privacyAltLookupNote: "البحث عن البدائل في الدليل (ميزة تجريبية): عند بحثك عن تطبيق عبر الإنترنت نحفظ فقط نص البحث بعد توحيده وعدّادًا، دون ملف تعريف ارتباط أو معرّف. للحد من إساءة الاستخدام يُحتفَظ بتجزئة مملَّحة لعنوان IP الخاص بك (وليس العنوان نفسه) لمدة تصل إلى ساعة لتحديد معدل الطلبات، ولا تُربط أبدًا بنص البحث. لا تُدخل بيانات شخصية في حقل البحث.",
     privacyMcpTitle: "الملف الشخصي لخادم MCP (اختياري)",
     privacyMcpNote: "إذا ربطتَ مساعد ذكاء اصطناعي بخادم MCP العام لدينا وأجبتَ بـ «نعم» على سؤال الخصوصية في قائمة البدء، فإننا نحفظ ملفًا شخصيًا باسم مستعار: رمز ملف عشوائي (يُحفظ فقط في صورة تجزئة بمفتاح)، وتاريخ موافقتك ونسخة نص الموافقة، ولغتك المفضلة، وطابعَي وقت الإنشاء وآخر استخدام. لا نحفظ في الملف اسمًا ولا بريدًا إلكترونيًا ولا عنوان IP ولا وكيل المستخدم ولا محتوى المحادثات. الغرض: تذكّر لغتك وتقديم قائمة بدء مخصصة. الأساس القانوني: موافقتك (المادة 6(1)(أ) من GDPR)، ويمكنك سحبها في أي وقت بطلب «انسَني» من المساعد (أداة forget_me) أو بمراسلة hello@promptquorum.com؛ ويمكنك عرض البيانات المخزَّنة بأداة my_profile. تُخزَّن الملفات في قاعدة بيانات في منطقة داخل الاتحاد الأوروبي تشغّلها الجهة المعالِجة لدينا Upstash، وتُحذف تلقائيًا بعد 6 أشهر من عدم الاستخدام. إذا أجبتَ بـ «لا» فلا يُحفظ شيء وتعمل كل الأدوات بالطريقة نفسها. وبصورة مستقلة، يحتفظ خادم MCP بعدّادات مجهولة لاستدعاءات كل أداة (دون بيانات شخصية) وبتجزئة مملّحة لعنوان IP لمدة تصل إلى دقيقة لتحديد معدل الطلبات.",
+    privacyHostingNote: "الاستضافة وسجلات الخادم: يُستضاف موقعنا وخادم MCP لدى الجهة المعالِجة Vercel Inc. عند زيارتك الموقع أو استدعائك خادم MCP، تعالج Vercel عنوان IP الخاص بك وبيانات وصفية للطلب (مثل الوقت وعنوان URL ووكيل المستخدم) في سجلات فنية للخادم لتقديم الخدمة وحمايتها. الأساس القانوني: مصلحتنا المشروعة في خدمة آمنة ومستقرة (المادة 6(1)(و) من GDPR). لا نستخدم هذه السجلات لبناء ملفات تعريفية للزوار.",
+    privacyConsentLogNote: "سجل الموافقة على ملفات تعريف الارتباط: عند اختيارك أحد الخيارات في شريط ملفات تعريف الارتباط، نحفظ لمدة تصل إلى 25 شهرًا الخيار ولغتك وطابعًا زمنيًا وأول 120 حرفًا من وكيل المستخدم في متصفحك وتجزئة مملّحة مختصرة لعنوان IP الخاص بك، كدليل على منح الموافقة أو رفضها. الأساس القانوني: التزام قانوني ومصلحة مشروعة في القدرة على إثبات الموافقة (المادة 6(1)(ج) و(و) والمادة 7(1) من GDPR). يُخزَّن السجل لدى الجهة المعالِجة Upstash.",
     privacyS2Col1: "البيان",
     privacyS2Col2: "كيفية الجمع",
     privacyS2Col3: "الغرض",
@@ -2256,7 +2335,7 @@ export const translations = {
     privacyS2Row2_2: "تحليلات بدون ملفات تعريف الارتباط (Umami وMicrosoft Clarity)",
     privacyS2Row2_3: "فهم الصفحات التي يُزارها؛ تحسين الموقع",
     privacyS2Row2_4: "المصلحة المشروعة (المادة 6(1)(و) RGPD) — انظر §7",
-    privacyS2Closure: "لا نجمع أسماء أو أرقام هاتف أو معلومات دفع أو عناوين IP مخزَّنة تتجاوز التجميع على مستوى الجلسة، ولا بيانات من الفئات الخاصة بموجب المادة 9 من RGPD.",
+    privacyS2Closure: "لا نجمع أسماء أو أرقام هاتف أو معلومات دفع أو أي بيانات من الفئات الخاصة بموجب المادة 9 من GDPR. تُعالَج عناوين IP فقط على النحو الموصوف في هذا القسم.",
 
     // Section 3
     privacyS3Title: "الأساس القانوني للمعالجة",
@@ -2288,6 +2367,14 @@ export const translations = {
     privacyS4Row4Role: "إعادة تشغيل الجلسات وخرائط الحرارة — تُحمَّل لجميع الزوار في وضع بدون ملفات تعريف ارتباط",
     privacyS4Row4Data: "أحداث التفاعل وبيانات نافذة العرض (تُجمَع في وضع بدون ملفات تعريف ارتباط)",
     privacyS4Row4Loc: "الولايات المتحدة",
+    privacyS4Row5Proc: "Upstash (Upstash, Inc.)",
+    privacyS4Row5Role: "قاعدة بيانات Redis مُدارة — ملفات MCP الشخصية الاختيارية، وعدّادات الاستدعاءات المجهولة، وقيم التجزئة لتحديد معدل الطلبات، وسجلات الموافقة على ملفات تعريف الارتباط",
+    privacyS4Row5Data: "ملف MCP شخصي باسم مستعار (بالاشتراك الاختياري)، وقيم IP مجزَّأة، وسجلات الموافقة، والعدّادات",
+    privacyS4Row5Loc: "منطقة داخل الاتحاد الأوروبي (ملفات MCP الشخصية)؛ المزوّد مقرّه في الولايات المتحدة",
+    privacyS4Row6Proc: "Vercel (Vercel Inc.)",
+    privacyS4Row6Role: "الاستضافة وتسليم المحتوى وسجلات الخادم للموقع وخادم MCP",
+    privacyS4Row6Data: "عنوان IP وبيانات وصفية للطلب (الوقت وعنوان URL ووكيل المستخدم)",
+    privacyS4Row6Loc: "الولايات المتحدة / شبكة الحافة العالمية",
     privacyS4Closure: "لا نبيع بياناتك لأطراف ثالثة. لا نشارك عنوان بريدك الإلكتروني مع المعلنين.",
 
     // Section 5
@@ -2295,6 +2382,7 @@ export const translations = {
     privacyS5Intro: "يتخذ بعض معالجينا المفوَّضين من الولايات المتحدة مقرًا لهم. تخضع نقلات البيانات الشخصية من المنطقة الاقتصادية الأوروبية (EEE) أو المملكة المتحدة إلى الولايات المتحدة لضمانات مناسبة:",
     privacyS5Bullet1: "Resend: النقل مشمول بالبنود التعاقدية القياسية (CCT) المعتمدة من المفوضية الأوروبية بموجب المادة 46(2)(ج) من RGPD. اتفاقية معالجة بيانات Resend متاحة على resend.com/legal/dpa.",
     privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) متخذة من الولايات المتحدة مقرًا وتعمل بدون ملفات تعريف ارتباط. النقلات محمية بالبنود التعاقدية القياسية (CCT) بموجب المادة 46 من RGPD؛ علاوةً على ذلك، تشارك Microsoft في إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة (EU–US Data Privacy Framework). Umami مستضاف في الاتحاد الأوروبي، لذلك لا يحدث أي نقل.",
+    privacyS5Bullet3: "كلا المزوّدين مقرّه في الولايات المتحدة. تستند عمليات النقل إلى البنود التعاقدية النموذجية (SCCs) بموجب المادة 46(2)(ج) من GDPR الواردة في اتفاقيات معالجة البيانات الخاصة بهما، وإلى إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة حيثما كان المزوّد معتمدًا. تُخزَّن ملفات MCP الشخصية في منطقة داخل الاتحاد الأوروبي.",
     privacyS5Closure: "يمكنك طلب نسخة من CCT المعمول بها بإرسال بريد إلكتروني إلى {{email}}.",
 
     // Section 6
@@ -2537,7 +2625,7 @@ export const translations = {
     privacyS1Title: "당사 소개",
     privacyS1Para1: "PromptQuorum(\"당사\", \"저희\" 또는 \"당사의\")은 {{url}}에서 제공되는 소프트웨어 제품입니다. PromptQuorum은 Hans Kuepper(GDPR 목적의 \"데이터 관리자\")가 개발했습니다.",
     privacyS1Para2: "당사는 다중 모델 AI 전송 및 합의 분석 도구를 운영합니다. 제품 자체는 개인 데이터를 처리하지 않습니다 — 프롬프트, API 키 및 AI 응답은 전적으로 브라우저 내에서 처리되며 귀하의 기기에서 선택한 AI 제공업체로 직접 전송됩니다. PromptQuorum 서버는 귀하의 프롬프트나 API 키를 수신, 저장 또는 처리하지 않습니다.",
-    privacyS1Para3: "이 개인 정보 처리 방침은 PromptQuorum 웹사이트를 통해 수집하는 개인 데이터 — 특히 {{url}}의 대기자 명단 양식 — 만을 다룹니다.",
+    privacyS1Para3: "이 개인 정보 처리 방침은 PromptQuorum 웹사이트와 공개 MCP 서버를 통해 처리하는 개인 데이터를 다룹니다. 즉 {{url}}의 대기자 명단 양식, 호스팅 및 서버 로그, 쿠키 동의 기록, 요청 제한용 해시, 선택 사항인 MCP 프로필입니다(§2 참조).",
 
     // Section 2
     privacyS2Title: "수집 데이터 및 수집 이유",
@@ -2545,6 +2633,8 @@ export const translations = {
     privacyAltLookupNote: "디렉터리 대안 검색(테스트 기능): 온라인 앱을 검색하면 정규화된 검색 텍스트와 카운터만 저장하며 쿠키나 식별자는 사용하지 않습니다. 오남용을 막기 위해 요청 횟수 제한 용도로 IP 주소 자체가 아닌 솔트 해시를 최대 1시간 보관하며, 검색 텍스트와 연결하지 않습니다. 검색란에 개인정보를 입력하지 마세요.",
     privacyMcpTitle: "MCP 서버 프로필(선택)",
     privacyMcpNote: "공개 MCP 서버에 AI 어시스턴트를 연결하고 시작 메뉴의 개인정보 질문에 \"예\"라고 답하면 가명 처리된 프로필을 저장합니다. 저장 항목은 무작위 프로필 코드(키 해시 형태로만 보관), 동의 날짜와 동의 문구 버전, 선호 언어, 생성 및 마지막 사용 시각입니다. 프로필에는 이름, 이메일 주소, IP 주소, 사용자 에이전트, 대화 내용을 저장하지 않습니다. 목적은 언어를 기억하고 맞춤형 시작 메뉴를 제공하는 것입니다. 법적 근거는 귀하의 동의(GDPR 제6조 제1항 (a))이며, 어시스턴트에게 \"나를 잊어줘\"(forget_me 도구)라고 요청하거나 hello@promptquorum.com 으로 연락하여 언제든지 철회할 수 있습니다. 저장된 데이터는 my_profile 도구로 확인할 수 있습니다. 프로필은 수탁업체 Upstash가 운영하는 EU 리전 데이터베이스에 저장되며, 6개월간 사용하지 않으면 자동으로 삭제됩니다. \"아니요\"라고 답하면 아무것도 저장되지 않고 모든 도구가 똑같이 동작합니다. 이와 별도로 MCP 서버는 도구별 익명 호출 횟수(개인정보 없음)를 집계하고, 요청 제한을 위해 IP 주소의 솔트 해시를 최대 1분간 보관합니다.",
+    privacyHostingNote: "호스팅 및 서버 로그: 당사 웹사이트와 MCP 서버는 수탁업체 Vercel Inc.가 호스팅합니다. 사이트를 방문하거나 MCP 서버를 호출하면 Vercel은 서비스 제공과 보안을 위해 기술적 서버 로그에 IP 주소와 요청 메타데이터(시각, URL, 사용자 에이전트 등)를 처리합니다. 법적 근거: 안전하고 안정적인 서비스에 대한 당사의 정당한 이익(GDPR 제6조 제1항 (f)). 이 로그를 방문자 프로필 생성에 사용하지 않습니다.",
+    privacyConsentLogNote: "쿠키 동의 기록: 쿠키 배너에서 선택을 하면 동의 또는 거부의 증거로 선택 내용, 언어, 타임스탬프, 브라우저 사용자 에이전트의 처음 120자, 그리고 IP 주소의 축약된 솔트 해시를 최대 25개월 동안 저장합니다. 법적 근거: 법적 의무 및 동의를 입증할 수 있어야 한다는 정당한 이익(GDPR 제6조 제1항 (c) 및 (f), 제7조 제1항). 이 기록은 수탁업체 Upstash에 저장됩니다.",
     privacyS2Col1: "데이터",
     privacyS2Col2: "수집 방법",
     privacyS2Col3: "목적",
@@ -2557,7 +2647,7 @@ export const translations = {
     privacyS2Row2_2: "쿠키 없는 분석(Umami, Microsoft Clarity)",
     privacyS2Row2_3: "방문 페이지 파악, 사이트 개선",
     privacyS2Row2_4: "정당한 이익(GDPR 제6조 제1항 (f)호) — §7 참조",
-    privacyS2Closure: "당사는 이름, 전화번호, 결제 정보, 세션 수준 집계를 초과하여 저장된 IP 주소 또는 GDPR 제9조에 따른 특수 카테고리 데이터를 수집하지 않습니다.",
+    privacyS2Closure: "당사는 이름, 전화번호, 결제 정보 또는 GDPR 제9조에 따른 특수 카테고리 데이터를 수집하지 않습니다. IP 주소는 이 섹션에 설명된 범위에서만 처리합니다.",
 
     // Section 3
     privacyS3Title: "처리의 법적 근거",
@@ -2589,6 +2679,14 @@ export const translations = {
     privacyS4Row4Role: "세션 재생 및 히트맵 — 쿠키 없는 모드로 모든 방문자에게 로드됨",
     privacyS4Row4Data: "상호작용 이벤트 및 뷰포트 데이터(쿠키 없는 모드로 수집됨)",
     privacyS4Row4Loc: "미국",
+    privacyS4Row5Proc: "Upstash (Upstash, Inc.)",
+    privacyS4Row5Role: "관리형 Redis 데이터베이스 — 선택 사항인 MCP 프로필, 익명 호출 횟수, 요청 제한용 해시, 쿠키 동의 기록",
+    privacyS4Row5Data: "가명 처리된 MCP 프로필(옵트인), 해시된 IP 값, 동의 기록, 카운터",
+    privacyS4Row5Loc: "EU 리전(MCP 프로필); 제공업체 본사는 미국",
+    privacyS4Row6Proc: "Vercel (Vercel Inc.)",
+    privacyS4Row6Role: "웹사이트 및 MCP 서버의 호스팅, 콘텐츠 전송, 서버 로그",
+    privacyS4Row6Data: "IP 주소 및 요청 메타데이터(시각, URL, 사용자 에이전트)",
+    privacyS4Row6Loc: "미국 / 글로벌 엣지 네트워크",
     privacyS4Closure: "당사는 귀하의 데이터를 제3자에게 판매하지 않습니다. 귀하의 이메일 주소를 광고주와 공유하지 않습니다.",
 
     // Section 5
@@ -2596,6 +2694,7 @@ export const translations = {
     privacyS5Intro: "일부 처리자는 미국에 위치합니다. 유럽경제지역(EEA) 또는 영국(UK)에서 미국으로의 개인 데이터 이전은 적절한 보호 조치를 따릅니다:",
     privacyS5Bullet1: "Resend: 이전은 GDPR 제46조 제2항 (c)호에 따라 유럽 위원회가 채택한 표준 계약 조항(SCC)으로 보호됩니다. Resend의 데이터 처리 계약은 resend.com/legal/dpa에서 확인하실 수 있습니다.",
     privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation)는 미국에 기반하며 쿠키 없이 운영됩니다. 이전은 GDPR 제46조에 따른 표준 계약 조항(SCC)으로 보호됩니다. Microsoft는 추가로 EU-미국 데이터 개인 정보 보호 프레임워크에 참여합니다. Umami는 EU에 호스팅되므로 이전이 발생하지 않습니다.",
+    privacyS5Bullet3: "두 제공업체 모두 미국에 기반을 두고 있습니다. 전송은 데이터 처리 계약에 포함된 GDPR 제46조 제2항 (c)의 표준 계약 조항(SCC)에 근거하며, 제공업체가 인증을 받은 경우 EU–미국 데이터 프라이버시 프레임워크에도 근거합니다. MCP 프로필은 EU 리전에 저장됩니다.",
     privacyS5Closure: "적용 가능한 SCC 사본은 {{email}}로 이메일을 보내 요청하실 수 있습니다.",
 
     // Section 6

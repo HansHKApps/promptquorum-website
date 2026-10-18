@@ -24,7 +24,7 @@
 - **Dispatch**: One-click simultaneous dispatch to all connected AI services; tabs open in parallel
 - **Quorum Analysis (13 types)**: Consensus Summary, Weighted Merge, Atomic Facts Extraction, Overlap Mapping, Contradiction Detection, Confidence Scoring, Completeness Check, Hallucination Detection, Redundancy Elimination, Best Answer Selection, Multi-Model Ensemble, Controversy Flag, Response Ranking
 - **Optimization**: AI-powered iterative prompt refinement with 8 one-click refinements and full version history
-- **Privacy (BYOM)**: API keys stored only in browser localStorage, never transmitted; zero telemetry, zero tracking
+- **Privacy (BYOM)**: In the desktop app, API keys are stored only in browser localStorage and never transmitted; the app has zero telemetry. Website and public MCP server data handling: https://www.promptquorum.com/privacy
 - **Export**: Results export in TXT, MD, JSON, CSV, HTML, PDF
 
 ## Pages

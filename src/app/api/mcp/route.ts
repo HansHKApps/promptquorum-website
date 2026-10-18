@@ -632,7 +632,7 @@ async function rateLimited(request: Request): Promise<Response | null> {
   if (request.method !== 'POST') return null
   try {
     const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown'
-    const key = createHash('sha256').update(`${process.env.ALTERNATIVES_LOG_TOKEN ?? ''}:${ip}`).digest('hex')
+    const key = createHash('sha256').update(`${process.env.MCP_RATELIMIT_SALT ?? process.env.ALTERNATIVES_LOG_TOKEN ?? ''}:${ip}`).digest('hex')
     const { success, reset } = await mcpLimiter.limit(key)
     if (success) return null
     const retryAfter = Math.max(1, Math.ceil((reset - Date.now()) / 1000))
