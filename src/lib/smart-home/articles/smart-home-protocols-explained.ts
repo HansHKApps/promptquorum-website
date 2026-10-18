@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'thread protocol smart home',
     ],
     leadAnswerBlock:
-      '**Zigbee and Z-Wave are mature low-power mesh protocols, Thread is the modern IP-based low-power mesh, and Matter is the application-layer standard that runs over Thread, Wi-Fi, and Ethernet to unify devices.** Zigbee, Z-Wave, and Thread are local by default; Matter can run locally through a local controller. Current versions are Matter 1.6, Thread 1.4, Zigbee 4.0, and Z-Wave Long Range.',
+      '**Zigbee and Z-Wave are mature low-power mesh protocols, Thread is the modern IP-based low-power mesh, and Matter is the application-layer standard that runs over Thread, Wi-Fi, and Ethernet to unify devices.** Zigbee, Z-Wave, and Thread are local by default; Matter can run locally through a local controller. Current versions are Matter 1.6.1, Thread 1.4, Zigbee 4.0, and Z-Wave Long Range.',
     quickAnswerTop: {
       en: {
         question: 'What is the difference between Matter, Thread, Zigbee, and Z-Wave?',
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Thread: modern IP-based low-power mesh',
           'Matter: a standard over Thread/Wi-Fi/Ethernet, not a radio',
           'Zigbee, Z-Wave, Thread are local by default',
-          'Current versions: Matter 1.6, Thread 1.4, Zigbee 4.0, Z-Wave Long Range',
+          'Current versions: Matter 1.6.1, Thread 1.4, Zigbee 4.0, Z-Wave Long Range',
         ],
         updatedDate: '2026-10',
       },
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter: an application-layer standard (not a radio) over Thread, Wi-Fi, and Ethernet',
           'Zigbee, Z-Wave, and Thread are local by default; Matter runs locally via a local controller',
           'Choose by device availability and whether you want sub-GHz range (Z-Wave) or broad choice (Zigbee)',
-          'Latest versions: Matter 1.6, Thread 1.4, Zigbee 4.0 (with sub-GHz Suzi), and Z-Wave Long Range; Matter 1.6, Zigbee 4.0, and Z-Wave LR are designed to work with existing devices',
+          'Latest versions: Matter 1.6.1, Thread 1.4, Zigbee 4.0 (with sub-GHz Suzi), and Z-Wave Long Range; Matter 1.6, Zigbee 4.0, and Z-Wave LR are designed to work with existing devices',
         ],
       },
       whyProtocols: {
@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter standardises how devices are described and controlled across brands.',
           'It runs on top of Thread (low-power devices) or Wi-Fi/Ethernet (mains devices).',
           'Local control is possible with a local Matter controller like Home Assistant.',
-          'Matter 1.6 is the current release and remains backward compatible with existing 1.x devices; Matter 1.5 added cameras.',
+          'Matter 1.6.1 is the current release and remains backward compatible with existing 1.x devices; Matter 1.5 added cameras.',
         ],
       },
       matterRange: {
@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'بروتوكول thread للمنزل الذكي',
     ],
     leadAnswerBlock:
-      '**Zigbee وZ-Wave بروتوكولات شبكية ناضجة منخفضة الطاقة، وThread هو الشبكة الشبكية الحديثة المبنية على IP منخفضة الطاقة، وMatter هو معيار طبقة التطبيقات الذي يعمل عبر Thread وWi-Fi وEthernet لتوحيد الأجهزة.** Zigbee وZ-Wave وThread محلية بشكل افتراضي؛ يمكن تشغيل Matter محليًا من خلال متحكم محلي. الإصدارات الحالية هي Matter 1.6 وThread 1.4 وZigbee 4.0 وZ-Wave Long Range.',
+      '**Zigbee وZ-Wave بروتوكولات شبكية ناضجة منخفضة الطاقة، وThread هو الشبكة الشبكية الحديثة المبنية على IP منخفضة الطاقة، وMatter هو معيار طبقة التطبيقات الذي يعمل عبر Thread وWi-Fi وEthernet لتوحيد الأجهزة.** Zigbee وZ-Wave وThread محلية بشكل افتراضي؛ يمكن تشغيل Matter محليًا من خلال متحكم محلي. الإصدارات الحالية هي Matter 1.6.1 وThread 1.4 وZigbee 4.0 وZ-Wave Long Range.',
     quickAnswerTop: {
       ar: {
         question: 'ما الفرق بين Matter وThread وZigbee وZ-Wave؟',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Thread: شبكة شبكية حديثة منخفضة الطاقة مبنية على IP',
           'Matter: معيار عبر Thread/Wi-Fi/Ethernet، وليس تردد لاسلكي',
           'Zigbee وZ-Wave وThread محلية بشكل افتراضي',
-          'الإصدارات الحالية: Matter 1.6 وThread 1.4 وZigbee 4.0 وZ-Wave Long Range',
+          'الإصدارات الحالية: Matter 1.6.1 وThread 1.4 وZigbee 4.0 وZ-Wave Long Range',
         ],
         updatedDate: '2026-10',
       },
@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter: معيار طبقة تطبيق (وليس تردد لاسلكي) عبر Thread وWi-Fi وEthernet',
           'Zigbee وZ-Wave وThread محلية بشكل افتراضي؛ Matter يعمل محليًا عبر متحكم محلي',
           'اختر حسب توفر الأجهزة وما إذا أردت مدى دون GHz (Z-Wave) أو اختيارًا واسعًا (Zigbee)',
-          'أحدث الإصدارات: Matter 1.6 وThread 1.4 وZigbee 4.0 (مع Suzi في النطاق دون الجيجاهرتز) وZ-Wave Long Range؛ صُمّمت Matter 1.6 وZigbee 4.0 وZ-Wave LR للعمل مع الأجهزة الحالية',
+          'أحدث الإصدارات: Matter 1.6.1 وThread 1.4 وZigbee 4.0 (مع Suzi في النطاق دون الجيجاهرتز) وZ-Wave Long Range؛ صُمّمت Matter 1.6 وZigbee 4.0 وZ-Wave LR للعمل مع الأجهزة الحالية',
         ],
       },
       whyProtocols: {
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يوحّد Matter كيفية وصف الأجهزة والتحكم فيها عبر العلامات التجارية.',
           'يعمل فوق Thread (للأجهزة منخفضة الطاقة) أو Wi-Fi/Ethernet (للأجهزة المتصلة بالكهرباء).',
           'التحكم المحلي ممكن مع متحكم Matter محلي مثل Home Assistant.',
-          'Matter 1.6 هو الإصدار الحالي ويظل متوافقًا مع أجهزة 1.x الحالية؛ وأضاف Matter 1.5 دعم الكاميرات.',
+          'Matter 1.6.1 هو الإصدار الحالي ويظل متوافقًا مع أجهزة 1.x الحالية؛ وأضاف Matter 1.5 دعم الكاميرات.',
         ],
       },
       matterRange: {
@@ -491,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'thread protokoll smart home',
     ],
     leadAnswerBlock:
-      '**Zigbee und Z-Wave sind ausgereifte stromsparende Mesh-Protokolle, Thread ist das moderne IP-basierte stromsparende Mesh, und Matter ist der Standard auf Anwendungsebene, der über Thread, WLAN und Ethernet läuft, um Geräte zu vereinheitlichen.** Zigbee, Z-Wave und Thread sind standardmäßig lokal; Matter kann über einen lokalen Controller lokal laufen. Aktuelle Versionen sind Matter 1.6, Thread 1.4, Zigbee 4.0 und Z-Wave Long Range.',
+      '**Zigbee und Z-Wave sind ausgereifte stromsparende Mesh-Protokolle, Thread ist das moderne IP-basierte stromsparende Mesh, und Matter ist der Standard auf Anwendungsebene, der über Thread, WLAN und Ethernet läuft, um Geräte zu vereinheitlichen.** Zigbee, Z-Wave und Thread sind standardmäßig lokal; Matter kann über einen lokalen Controller lokal laufen. Aktuelle Versionen sind Matter 1.6.1, Thread 1.4, Zigbee 4.0 und Z-Wave Long Range.',
     quickAnswerTop: {
       de: {
         question: 'Was ist der Unterschied zwischen Matter, Thread, Zigbee und Z-Wave?',
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Thread: modernes IP-basiertes stromsparendes Mesh',
           'Matter: ein Standard über Thread/WLAN/Ethernet, kein Funk',
           'Zigbee, Z-Wave, Thread sind standardmäßig lokal',
-          'Aktuelle Versionen: Matter 1.6, Thread 1.4, Zigbee 4.0, Z-Wave Long Range',
+          'Aktuelle Versionen: Matter 1.6.1, Thread 1.4, Zigbee 4.0, Z-Wave Long Range',
         ],
         updatedDate: '2026-10',
       },
@@ -536,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter: ein Standard auf Anwendungsebene (kein Funk) über Thread, WLAN und Ethernet',
           'Zigbee, Z-Wave und Thread sind standardmäßig lokal; Matter läuft lokal über einen lokalen Controller',
           'Wählen Sie nach Geräteverfügbarkeit und ob Sie Sub-GHz-Reichweite (Z-Wave) oder breite Auswahl (Zigbee) wollen',
-          'Neueste Versionen: Matter 1.6, Thread 1.4, Zigbee 4.0 (mit Sub-GHz-Suzi) und Z-Wave Long Range; Matter 1.6, Zigbee 4.0 und Z-Wave LR sind darauf ausgelegt, mit bestehenden Geräten zu funktionieren',
+          'Neueste Versionen: Matter 1.6.1, Thread 1.4, Zigbee 4.0 (mit Sub-GHz-Suzi) und Z-Wave Long Range; Matter 1.6, Zigbee 4.0 und Z-Wave LR sind darauf ausgelegt, mit bestehenden Geräten zu funktionieren',
         ],
       },
       whyProtocols: {
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter standardisiert, wie Geräte markenübergreifend beschrieben und gesteuert werden.',
           'Es läuft auf Thread (stromsparende Geräte) oder WLAN/Ethernet (netzbetriebene Geräte).',
           'Lokale Steuerung ist mit einem lokalen Matter-Controller wie Home Assistant möglich.',
-          'Matter 1.6 ist die aktuelle Version und bleibt abwärtskompatibel zu bestehenden 1.x-Geräten; Matter 1.5 brachte Kameras.',
+          'Matter 1.6.1 ist die aktuelle Version und bleibt abwärtskompatibel zu bestehenden 1.x-Geräten; Matter 1.5 brachte Kameras.',
         ],
       },
       matterRange: {
@@ -722,7 +722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'protocolo thread smart home',
     ],
     leadAnswerBlock:
-      '**Zigbee y Z-Wave son protocolos mesh de bajo consumo maduros, Thread es el mesh moderno de bajo consumo basado en IP, y Matter es el estándar de capa de aplicación que corre sobre Thread, Wi-Fi y Ethernet para unificar dispositivos.** Zigbee, Z-Wave y Thread son locales por defecto; Matter puede correr localmente mediante un controlador local. Las versiones actuales son Matter 1.6, Thread 1.4, Zigbee 4.0 y Z-Wave Long Range.',
+      '**Zigbee y Z-Wave son protocolos mesh de bajo consumo maduros, Thread es el mesh moderno de bajo consumo basado en IP, y Matter es el estándar de capa de aplicación que corre sobre Thread, Wi-Fi y Ethernet para unificar dispositivos.** Zigbee, Z-Wave y Thread son locales por defecto; Matter puede correr localmente mediante un controlador local. Las versiones actuales son Matter 1.6.1, Thread 1.4, Zigbee 4.0 y Z-Wave Long Range.',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es la diferencia entre Matter, Thread, Zigbee y Z-Wave?',
@@ -734,7 +734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Thread: mesh moderno de bajo consumo basado en IP',
           'Matter: un estándar sobre Thread/Wi-Fi/Ethernet, no una radio',
           'Zigbee, Z-Wave, Thread son locales por defecto',
-          'Versiones actuales: Matter 1.6, Thread 1.4, Zigbee 4.0, Z-Wave Long Range',
+          'Versiones actuales: Matter 1.6.1, Thread 1.4, Zigbee 4.0, Z-Wave Long Range',
         ],
         updatedDate: '2026-10',
       },
@@ -767,7 +767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter: un estándar de capa de aplicación (no una radio) sobre Thread, Wi-Fi y Ethernet',
           'Zigbee, Z-Wave y Thread son locales por defecto; Matter corre localmente mediante un controlador local',
           'Elige por disponibilidad de dispositivos y si quieres alcance sub-GHz (Z-Wave) o amplia variedad (Zigbee)',
-          'Últimas versiones: Matter 1.6, Thread 1.4, Zigbee 4.0 (con Suzi en sub-GHz) y Z-Wave Long Range; Matter 1.6, Zigbee 4.0 y Z-Wave LR están diseñados para funcionar con dispositivos existentes',
+          'Últimas versiones: Matter 1.6.1, Thread 1.4, Zigbee 4.0 (con Suzi en sub-GHz) y Z-Wave Long Range; Matter 1.6, Zigbee 4.0 y Z-Wave LR están diseñados para funcionar con dispositivos existentes',
         ],
       },
       whyProtocols: {
@@ -826,7 +826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter estandariza cómo se describen y controlan los dispositivos entre marcas.',
           'Corre sobre Thread (dispositivos de bajo consumo) o Wi-Fi/Ethernet (dispositivos con alimentación de red).',
           'El control local es posible con un controlador Matter local como Home Assistant.',
-          'Matter 1.6 es la versión actual y sigue siendo compatible con los dispositivos 1.x existentes; Matter 1.5 añadió cámaras.',
+          'Matter 1.6.1 es la versión actual y sigue siendo compatible con los dispositivos 1.x existentes; Matter 1.5 añadió cámaras.',
         ],
       },
       matterRange: {
@@ -953,7 +953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Thread 프로토콜 스마트홈',
     ],
     leadAnswerBlock:
-      '**Zigbee와 Z-Wave는 성숙한 저전력 메시 프로토콜이고, Thread는 현대적인 IP 기반 저전력 메시이며, Matter는 Thread·Wi-Fi·Ethernet 위에서 실행되어 기기를 통합하는 애플리케이션 계층 표준입니다.** Zigbee, Z-Wave, Thread는 기본적으로 로컬이며 Matter는 로컬 컨트롤러를 통해 로컬로 실행될 수 있습니다. 현재 버전은 Matter 1.6, Thread 1.4, Zigbee 4.0, Z-Wave Long Range입니다.',
+      '**Zigbee와 Z-Wave는 성숙한 저전력 메시 프로토콜이고, Thread는 현대적인 IP 기반 저전력 메시이며, Matter는 Thread·Wi-Fi·Ethernet 위에서 실행되어 기기를 통합하는 애플리케이션 계층 표준입니다.** Zigbee, Z-Wave, Thread는 기본적으로 로컬이며 Matter는 로컬 컨트롤러를 통해 로컬로 실행될 수 있습니다. 현재 버전은 Matter 1.6.1, Thread 1.4, Zigbee 4.0, Z-Wave Long Range입니다.',
     quickAnswerTop: {
       ko: {
         question: 'Matter, Thread, Zigbee, Z-Wave의 차이는 무엇입니까?',
@@ -965,7 +965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Thread: 현대적인 IP 기반 저전력 메시',
           'Matter: Thread/Wi-Fi/Ethernet 위의 표준, 무선 방식 아님',
           'Zigbee, Z-Wave, Thread는 기본적으로 로컬',
-          '현재 버전: Matter 1.6, Thread 1.4, Zigbee 4.0, Z-Wave Long Range',
+          '현재 버전: Matter 1.6.1, Thread 1.4, Zigbee 4.0, Z-Wave Long Range',
         ],
         updatedDate: '2026-10',
       },
@@ -998,7 +998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter: Thread, Wi-Fi, Ethernet 위의 애플리케이션 계층 표준(무선 방식 아님)',
           'Zigbee, Z-Wave, Thread는 기본적으로 로컬; Matter는 로컬 컨트롤러를 통해 로컬로 실행',
           '기기 가용성, 서브 GHz 범위(Z-Wave) 또는 폭넓은 선택지(Zigbee) 중 원하는 것에 따라 선택',
-          '최신 버전: Matter 1.6, Thread 1.4, Zigbee 4.0(서브 GHz Suzi 포함), Z-Wave Long Range. Matter 1.6, Zigbee 4.0, Z-Wave LR은 기존 기기와 함께 작동하도록 설계되었습니다',
+          '최신 버전: Matter 1.6.1, Thread 1.4, Zigbee 4.0(서브 GHz Suzi 포함), Z-Wave Long Range. Matter 1.6, Zigbee 4.0, Z-Wave LR은 기존 기기와 함께 작동하도록 설계되었습니다',
         ],
       },
       whyProtocols: {
@@ -1057,7 +1057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter는 브랜드 전반에서 기기를 설명하고 제어하는 방식을 표준화합니다.',
           'Thread(저전력 기기) 또는 Wi-Fi/Ethernet(유선 전원 기기) 위에서 실행됩니다.',
           'Home Assistant와 같은 로컬 Matter 컨트롤러로 로컬 제어가 가능합니다.',
-          'Matter 1.6이 현재 버전이며 기존 1.x 기기와 하위 호환을 유지합니다. Matter 1.5에서 카메라가 추가되었습니다.',
+          'Matter 1.6.1이 현재 버전이며 기존 1.x 기기와 하위 호환을 유지합니다. Matter 1.5에서 카메라가 추가되었습니다.',
         ],
       },
       matterRange: {
@@ -1184,7 +1184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'protocole thread maison connectée',
     ],
     leadAnswerBlock:
-      '**Zigbee et Z-Wave sont des protocoles mesh basse consommation matures, Thread est le mesh moderne basse consommation basé sur IP, et Matter est le standard de couche application qui tourne sur Thread, Wi-Fi et Ethernet pour unifier les appareils.** Zigbee, Z-Wave et Thread sont locaux par défaut ; Matter peut tourner localement via un contrôleur local. Les versions actuelles sont Matter 1.6, Thread 1.4, Zigbee 4.0 et Z-Wave Long Range.',
+      '**Zigbee et Z-Wave sont des protocoles mesh basse consommation matures, Thread est le mesh moderne basse consommation basé sur IP, et Matter est le standard de couche application qui tourne sur Thread, Wi-Fi et Ethernet pour unifier les appareils.** Zigbee, Z-Wave et Thread sont locaux par défaut ; Matter peut tourner localement via un contrôleur local. Les versions actuelles sont Matter 1.6.1, Thread 1.4, Zigbee 4.0 et Z-Wave Long Range.',
     quickAnswerTop: {
       fr: {
         question: 'Quelle est la différence entre Matter, Thread, Zigbee et Z-Wave ?',
@@ -1196,7 +1196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Thread : mesh moderne basse consommation basé sur IP',
           'Matter : un standard sur Thread/Wi-Fi/Ethernet, pas une radio',
           'Zigbee, Z-Wave, Thread sont locaux par défaut',
-          'Versions actuelles : Matter 1.6, Thread 1.4, Zigbee 4.0, Z-Wave Long Range',
+          'Versions actuelles : Matter 1.6.1, Thread 1.4, Zigbee 4.0, Z-Wave Long Range',
         ],
         updatedDate: '2026-10',
       },
@@ -1229,7 +1229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter : un standard de couche application (pas une radio) sur Thread, Wi-Fi et Ethernet',
           'Zigbee, Z-Wave et Thread sont locaux par défaut ; Matter tourne localement via un contrôleur local',
           'Choisissez selon la disponibilité des appareils et si vous voulez la portée sub-GHz (Z-Wave) ou un large choix (Zigbee)',
-          'Dernières versions : Matter 1.6, Thread 1.4, Zigbee 4.0 (avec Suzi en sub-GHz) et Z-Wave Long Range ; Matter 1.6, Zigbee 4.0 et Z-Wave LR sont conçus pour fonctionner avec les appareils existants',
+          'Dernières versions : Matter 1.6.1, Thread 1.4, Zigbee 4.0 (avec Suzi en sub-GHz) et Z-Wave Long Range ; Matter 1.6, Zigbee 4.0 et Z-Wave LR sont conçus pour fonctionner avec les appareils existants',
         ],
       },
       whyProtocols: {
@@ -1288,7 +1288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter standardise la façon dont les appareils sont décrits et commandés entre marques.',
           'Il tourne sur Thread (appareils basse consommation) ou Wi-Fi/Ethernet (appareils sur secteur).',
           'Le contrôle local est possible avec un contrôleur Matter local comme Home Assistant.',
-          'Matter 1.6 est la version actuelle et reste rétrocompatible avec les appareils 1.x existants ; Matter 1.5 a ajouté les caméras.',
+          'Matter 1.6.1 est la version actuelle et reste rétrocompatible avec les appareils 1.x existants ; Matter 1.5 a ajouté les caméras.',
         ],
       },
       matterRange: {
@@ -1415,7 +1415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'thread プロトコル スマートホーム',
     ],
     leadAnswerBlock:
-      '**Zigbee と Z-Wave は成熟した低消費電力のメッシュプロトコル、Thread は現代的な IP ベースの低消費電力メッシュ、Matter は機器を統一するために Thread・Wi-Fi・Ethernet 上で動くアプリケーション層の規格です。** Zigbee・Z-Wave・Thread は標準でローカル；Matter はローカルコントローラー経由でローカル動作できます。最新バージョンはMatter 1.6、Thread 1.4、Zigbee 4.0、Z-Wave Long Rangeです。',
+      '**Zigbee と Z-Wave は成熟した低消費電力のメッシュプロトコル、Thread は現代的な IP ベースの低消費電力メッシュ、Matter は機器を統一するために Thread・Wi-Fi・Ethernet 上で動くアプリケーション層の規格です。** Zigbee・Z-Wave・Thread は標準でローカル；Matter はローカルコントローラー経由でローカル動作できます。最新バージョンはMatter 1.6.1、Thread 1.4、Zigbee 4.0、Z-Wave Long Rangeです。',
     quickAnswerTop: {
       ja: {
         question: 'Matter・Thread・Zigbee・Z-Wave の違いは何ですか？',
@@ -1427,7 +1427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Thread：現代的な IP ベースの低消費電力メッシュ',
           'Matter：Thread/Wi-Fi/Ethernet 上の規格であって無線ではない',
           'Zigbee・Z-Wave・Thread は標準でローカル',
-          '最新バージョン：Matter 1.6、Thread 1.4、Zigbee 4.0、Z-Wave Long Range',
+          '最新バージョン：Matter 1.6.1、Thread 1.4、Zigbee 4.0、Z-Wave Long Range',
         ],
         updatedDate: '2026-10',
       },
@@ -1460,7 +1460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter：Thread・Wi-Fi・Ethernet 上のアプリケーション層規格（無線ではない）',
           'Zigbee・Z-Wave・Thread は標準でローカル；Matter はローカルコントローラー経由でローカル動作',
           '機器の入手性と、サブ GHz の到達距離（Z-Wave）か幅広い選択肢（Zigbee）かで選ぶ',
-          '最新バージョン：Matter 1.6、Thread 1.4、Zigbee 4.0（Sub-GHzのSuzi対応）、Z-Wave Long Range。Matter 1.6、Zigbee 4.0、Z-Wave LRは既存デバイスと動作するよう設計されています',
+          '最新バージョン：Matter 1.6.1、Thread 1.4、Zigbee 4.0（Sub-GHzのSuzi対応）、Z-Wave Long Range。Matter 1.6、Zigbee 4.0、Z-Wave LRは既存デバイスと動作するよう設計されています',
         ],
       },
       whyProtocols: {
@@ -1519,7 +1519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter は、機器の記述と制御の仕方をブランド横断で標準化します。',
           'Thread（低消費電力機器）または Wi-Fi/Ethernet（電源接続機器）上で動きます。',
           'Home Assistant のようなローカル Matter コントローラーでローカル制御が可能です。',
-          'Matter 1.6が現行バージョンで、既存の1.xデバイスとの後方互換性を保ちます。Matter 1.5ではカメラが追加されました。',
+          'Matter 1.6.1が現行バージョンで、既存の1.xデバイスとの後方互換性を保ちます。Matter 1.5ではカメラが追加されました。',
         ],
       },
       matterRange: {
@@ -1646,7 +1646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'protocolo thread casa inteligente',
     ],
     leadAnswerBlock:
-      '**Zigbee e Z-Wave são protocolos mesh de baixo consumo maduros, Thread é o mesh moderno de baixo consumo baseado em IP, e Matter é o padrão de camada de aplicação que roda sobre Thread, Wi-Fi e Ethernet para unificar dispositivos.** Zigbee, Z-Wave e Thread são locais por padrão; o Matter pode rodar localmente por meio de um controlador local. As versões atuais são Matter 1.6, Thread 1.4, Zigbee 4.0 e Z-Wave Long Range.',
+      '**Zigbee e Z-Wave são protocolos mesh de baixo consumo maduros, Thread é o mesh moderno de baixo consumo baseado em IP, e Matter é o padrão de camada de aplicação que roda sobre Thread, Wi-Fi e Ethernet para unificar dispositivos.** Zigbee, Z-Wave e Thread são locais por padrão; o Matter pode rodar localmente por meio de um controlador local. As versões atuais são Matter 1.6.1, Thread 1.4, Zigbee 4.0 e Z-Wave Long Range.',
     quickAnswerTop: {
       pt: {
         question: 'Qual a diferença entre Matter, Thread, Zigbee e Z-Wave?',
@@ -1658,7 +1658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Thread: mesh moderno de baixo consumo baseado em IP',
           'Matter: um padrão sobre Thread/Wi-Fi/Ethernet, não um rádio',
           'Zigbee, Z-Wave, Thread são locais por padrão',
-          'Versões atuais: Matter 1.6, Thread 1.4, Zigbee 4.0, Z-Wave Long Range',
+          'Versões atuais: Matter 1.6.1, Thread 1.4, Zigbee 4.0, Z-Wave Long Range',
         ],
         updatedDate: '2026-10',
       },
@@ -1691,7 +1691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter: um padrão de camada de aplicação (não um rádio) sobre Thread, Wi-Fi e Ethernet',
           'Zigbee, Z-Wave e Thread são locais por padrão; o Matter roda localmente por meio de um controlador local',
           'Escolha pela disponibilidade de dispositivos e se você quer alcance sub-GHz (Z-Wave) ou ampla variedade (Zigbee)',
-          'Versões mais recentes: Matter 1.6, Thread 1.4, Zigbee 4.0 (com Suzi em sub-GHz) e Z-Wave Long Range; Matter 1.6, Zigbee 4.0 e Z-Wave LR foram projetados para funcionar com dispositivos existentes',
+          'Versões mais recentes: Matter 1.6.1, Thread 1.4, Zigbee 4.0 (com Suzi em sub-GHz) e Z-Wave Long Range; Matter 1.6, Zigbee 4.0 e Z-Wave LR foram projetados para funcionar com dispositivos existentes',
         ],
       },
       whyProtocols: {
@@ -1750,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O Matter padroniza como os dispositivos são descritos e controlados entre marcas.',
           'Roda sobre Thread (dispositivos de baixo consumo) ou Wi-Fi/Ethernet (dispositivos ligados à tomada).',
           'O controle local é possível com um controlador Matter local como o Home Assistant.',
-          'O Matter 1.6 é a versão atual e continua compatível com dispositivos 1.x existentes; o Matter 1.5 adicionou câmeras.',
+          'O Matter 1.6.1 é a versão atual e continua compatível com dispositivos 1.x existentes; o Matter 1.5 adicionou câmeras.',
         ],
       },
       matterRange: {
@@ -1877,7 +1877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'thread 协议 智能家居',
     ],
     leadAnswerBlock:
-      '**Zigbee 和 Z-Wave 是成熟的低功耗网状协议，Thread 是现代基于 IP 的低功耗网状，Matter 是运行在 Thread、Wi-Fi 和以太网之上、用于统一设备的应用层标准。** Zigbee、Z-Wave、Thread 默认本地；Matter 可经由本地控制器本地运行。当前版本为 Matter 1.6、Thread 1.4、Zigbee 4.0 和 Z-Wave Long Range。',
+      '**Zigbee 和 Z-Wave 是成熟的低功耗网状协议，Thread 是现代基于 IP 的低功耗网状，Matter 是运行在 Thread、Wi-Fi 和以太网之上、用于统一设备的应用层标准。** Zigbee、Z-Wave、Thread 默认本地；Matter 可经由本地控制器本地运行。当前版本为 Matter 1.6.1、Thread 1.4、Zigbee 4.0 和 Z-Wave Long Range。',
     quickAnswerTop: {
       zh: {
         question: 'Matter、Thread、Zigbee 和 Z-Wave 有什么区别？',
@@ -1889,7 +1889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Thread：现代基于 IP 的低功耗网状',
           'Matter：运行在 Thread/Wi-Fi/以太网之上的标准，并非无线电',
           'Zigbee、Z-Wave、Thread 默认本地',
-          '当前版本：Matter 1.6、Thread 1.4、Zigbee 4.0、Z-Wave Long Range',
+          '当前版本：Matter 1.6.1、Thread 1.4、Zigbee 4.0、Z-Wave Long Range',
         ],
         updatedDate: '2026-10',
       },
@@ -1922,7 +1922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter：运行在 Thread、Wi-Fi 和以太网之上的应用层标准（并非无线电）',
           'Zigbee、Z-Wave、Thread 默认本地；Matter 经由本地控制器本地运行',
           '按设备可得性，以及你想要亚 GHz 覆盖（Z-Wave）还是广泛选择（Zigbee）来选',
-          '最新版本：Matter 1.6、Thread 1.4、Zigbee 4.0（含 Sub-GHz 的 Suzi）和 Z-Wave Long Range；Matter 1.6、Zigbee 4.0 和 Z-Wave LR 均设计为可与现有设备配合使用',
+          '最新版本：Matter 1.6.1、Thread 1.4、Zigbee 4.0（含 Sub-GHz 的 Suzi）和 Z-Wave Long Range；Matter 1.6、Zigbee 4.0 和 Z-Wave LR 均设计为可与现有设备配合使用',
         ],
       },
       whyProtocols: {
@@ -1981,7 +1981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Matter 统一了跨品牌描述与控制设备的方式。',
           '它运行在 Thread（低功耗设备）或 Wi-Fi/以太网（市电供电设备）之上。',
           '借助像 Home Assistant 这样的本地 Matter 控制器即可实现本地控制。',
-          'Matter 1.6 是当前版本，并保持与现有 1.x 设备向后兼容；Matter 1.5 新增了摄像头支持。',
+          'Matter 1.6.1 是当前版本，并保持与现有 1.x 设备向后兼容；Matter 1.5 新增了摄像头支持。',
         ],
       },
       matterRange: {
