@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'benchmark-table',
         title: 'Qwen Model Performance by Hardware',
         content:
-          '**Choose your hardware based on model size, not GPU brand.** VRAM is the hard constraint: if the model does not fit, it will not run at GPU speed. The table below shows measured inference speeds at Q4_K_M quantization (the best quality-to-size ratio for Ollama deployments). Note: the RTX 4090 is EOL (NVIDIA discontinued it in 2026) — every card below is now used-market only, at ~$2,000–2,600.',
+          '**Choose your hardware based on model size, not GPU brand.** VRAM is the hard constraint: if the model does not fit, it will not run at GPU speed. The table below shows indicative inference speeds at Q4_K_M quantization (not PromptQuorum measurements; they vary with GPU, driver, context length and Ollama version) (the best quality-to-size ratio for Ollama deployments). Note: the RTX 4090 is EOL (NVIDIA discontinued it in 2026) — every card below is now used-market only, at ~$2,000–2,600.',
         columns: ['Model', 'VRAM (Q4_K_M)', 'Min GPU', 'Speed (tok/s)', 'CPU fallback', 'Production-ready?'],
         rows: [
           {
@@ -163,7 +163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '5': 'Multi-GPU or cloud only',
           },
         ],
-        note: 'Speeds measured on PCIe Gen 4 systems. NVLink improves dual-GPU throughput by ~15% on supported cards. Qwen2.5-72B at Q4_K_M with single A100 80 GB on RunPod: 18–22 tok/s. Qwen 3.6 27B (`ollama pull qwen3.6:27b`) is a newer, stronger-coding release from Alibaba; see the Qwen model comparison guide for its measured benchmarks.',
+        note: 'Speeds are indicative values for PCIe Gen 4 systems, not PromptQuorum measurements. The RTX 4090 has no NVLink connector, so two RTX 4090s communicate over PCIe only; NVLink exists on some cards such as the RTX 3090. Qwen2.5-72B at Q4_K_M on a single A100 80 GB on RunPod: roughly 18–22 tok/s (indicative). Qwen 3.6 27B (`ollama pull qwen3.6:27b`) is a newer release from Alibaba that also ships a coding variant (`qwen3.6:27b-coding`); see the Qwen model comparison guide for benchmark data.',
         image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
         imageCaption:
           'Qwen model VRAM requirements at Q4_K_M quantization: Qwen3 8B needs 5.2 GB (RTX 3060 12 GB), Qwen3 32B needs 20.1 GB (RTX 4090 24 GB, now EOL/used-only), and Qwen2.5-72B needs 43.5 GB (dual RTX 4090s, EOL/used-only).',
@@ -237,6 +237,12 @@ volumes:
   ollama_data:
   open_webui_data:`,
         codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'warning',
+            text: 'The compose file publishes Ollama on port 11434 on every network interface, and Ollama has no built-in authentication. On a machine reachable from the internet or an untrusted network, bind the port to localhost (`127.0.0.1:11434:11434`) or block it with a firewall and expose only the authenticated Nginx gateway. Use at your own risk.',
+          },
+        ],
       },
       multiGpu: {
         id: 'multi-gpu',
@@ -246,7 +252,7 @@ volumes:
         items: [
           'Ollama automatically splits the model across all available GPUs — set CUDA_VISIBLE_DEVICES=0,1 in the compose environment to target specific cards',
           'For dual RTX 4090s, both must be in the same PCIe bandwidth tier — a B650 or Z790 board with two PCIe Gen 4 x8 slots is the minimum',
-          'NVLink between two RTX 4090s is not officially supported by NVIDIA on consumer cards but works on RTX 4090 Founders Edition pairs via third-party NVLink bridges — adds ~15% throughput',
+          'The RTX 4090 has no NVLink connector, so two RTX 4090s communicate over PCIe only; NVLink bridges exist for some earlier cards such as the RTX 3090',
           'vLLM is an alternative inference engine that uses tensor parallelism for more efficient multi-GPU utilization — use vLLM instead of Ollama for sustained 70B inference loads above 100 concurrent requests',
           'For occasional Qwen2.5-72B use, RunPod A40 48 GB at $0.44/hr is cheaper than a dual-RTX-4090 build ($4,600+ at current EOL used pricing)',
         ],
@@ -270,7 +276,7 @@ docker run --gpus all \\
           'OLLAMA_KEEP_ALIVE=-1 — prevents the model from unloading after inactivity (default is 5 minutes, fatal for server deployments)',
           'OLLAMA_NUM_PARALLEL=4 — allows up to 4 concurrent inference requests; raise this if you have multiple VRAM GB headroom',
           'OLLAMA_MAX_LOADED_MODELS=1 — keep only one model in VRAM at a time on small GPU builds to prevent thrashing',
-          'OLLAMA_FLASH_ATTENTION=1 — enables flash attention for 20–30% speed improvement on NVIDIA Ampere/Ada GPUs (RTX 3060 and newer)',
+          'OLLAMA_FLASH_ATTENTION=1 — enables flash attention, which can improve speed on NVIDIA Ampere/Ada GPUs (RTX 3060 and newer); gains vary by model and context length',
           'OLLAMA_GPU_OVERHEAD=512 — reserve 512 MB VRAM for OS and driver overhead; reduces OOM crashes on cards with exactly 8 or 16 GB',
         ],
         callouts: [
@@ -319,7 +325,7 @@ docker run --gpus all \\
             '0': 'Alibaba Cloud PAI (A10 GPU)',
             '1': '$0.50–0.80/hr',
             '2': '$1.20–2.00/hr (A100)',
-            '3': '$0 upfront + $50 credit for new accounts',
+            '3': '$0 upfront; check current new-account offers',
             '4': 'Qwen-optimized inference, Alibaba Cloud ecosystem',
           },
           {
@@ -336,7 +342,7 @@ docker run --gpus all \\
             productName: 'RunPod GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: 'From $0.20/hr',
-            label: 'Start on RunPod (free credits for new accounts) →',
+            label: 'Start on RunPod →',
           },
           {
             url: 'https://vast.ai',
@@ -351,7 +357,7 @@ docker run --gpus all \\
         id: 'always-on-server',
         title: 'Always-On Qwen Server Hardware Recommendations',
         content:
-          '**A mini PC running Qwen3 8B as a 24/7 API server costs $0.50–1.50/month in electricity — far cheaper than any cloud alternative.** Two mini PC builds cover most always-on Qwen use cases:',
+          '**A mini PC running Qwen3 8B as a 24/7 API server costs $0.50–1.50/month in electricity — usually cheaper than a comparable cloud instance running all month.** Two mini PC builds cover most always-on Qwen use cases:',
         items: [
           'Budget (Qwen3 8B CPU inference): Minisforum UM890 Pro — AMD Ryzen 9 8945HS, 32 GB DDR5, 512 GB NVMe. ~$429 new. Qwen3 8B runs via Ollama CPU backend at 3–5 tok/s. Adequate for personal assistants and document summarization. 12W idle, 45W peak. Very quiet. Ships from US/EU warehouse.',
           'Recommended (Qwen3 14B GPU): AOOSTAR GEM12 Pro OCuLink — supports external GPU via OCuLink port. Pair with an RTX 4060 Ti 16 GB eGPU enclosure (~$340 GPU + $100 enclosure). Total ~$800. Runs Qwen3 14B at 16–18 tok/s. Significantly better than CPU fallback for interactive use.',
@@ -424,7 +430,7 @@ docker run --gpus all \\
           },
           {
             q: 'Is there a Qwen 3.8 model?',
-            a: 'No — "Qwen 3.8" is not a real release. You most likely mean Qwen3-8B (`ollama pull qwen3:8b`, 8 billion parameters) or Qwen 3.6 (`ollama pull qwen3.6:27b`), a newer, stronger-coding release from Alibaba in the same VRAM tier as Qwen3 32B. Alibaba\'s versioning is Qwen3 (dense sizes 0.6B–32B) and the separate Qwen 3.6 point release — there is no "3.8" in either line.',
+            a: 'No — "Qwen 3.8" is not a real release. You most likely mean Qwen3-8B (`ollama pull qwen3:8b`, 8 billion parameters) or Qwen 3.6 (`ollama pull qwen3.6:27b`), a newer release from Alibaba that also has a coding variant in the same VRAM tier as Qwen3 32B. Alibaba\'s versioning is Qwen3 (dense sizes 0.6B–32B) and the separate Qwen 3.6 point release — there is no "3.8" in either line.',
           },
           {
             q: 'Can I run Qwen2.5-72B on a single RTX 4090?',
@@ -432,7 +438,7 @@ docker run --gpus all \\
           },
           {
             q: 'What is the difference between Ollama and vLLM for production Qwen deployment?',
-            a: 'Ollama is simpler to set up and handles multi-GPU splitting automatically — best for personal servers and teams with under 20 concurrent users. vLLM uses tensor parallelism and continuous batching, making it 2–4× more efficient under concurrent load — best for 100+ requests per hour or production APIs serving many users.',
+            a: 'Ollama is simpler to set up and handles multi-GPU splitting automatically — best for personal servers and teams with under 20 concurrent users. vLLM uses tensor parallelism and continuous batching, which typically makes it more efficient under concurrent load — best for 100+ requests per hour or production APIs serving many users.',
           },
           {
             q: 'Does Ollama support multi-GPU inference for Qwen natively?',
@@ -440,7 +446,7 @@ docker run --gpus all \\
           },
           {
             q: 'Is Alibaba Cloud cheaper than RunPod for Qwen inference?',
-            a: 'Alibaba Cloud PAI costs $0.50–2.00/hr depending on GPU tier and region. RunPod A40 48 GB costs $0.44/hr. For Qwen specifically, Alibaba Cloud offers pre-configured Qwen inference environments with Qwen-optimized runtimes that can be 20–30% faster than generic Ollama — worth testing if you are already in the Alibaba Cloud ecosystem. For pure cost, RunPod spot instances are cheaper.',
+            a: 'Alibaba Cloud PAI costs $0.50–2.00/hr depending on GPU tier and region. RunPod A40 48 GB costs $0.44/hr. For Qwen specifically, Alibaba Cloud offers pre-configured Qwen inference environments with runtimes that Alibaba describes as optimized for Qwen — worth testing if you are already in the Alibaba Cloud ecosystem. For pure cost, RunPod spot instances are cheaper.',
           },
           {
             q: 'How much power does an always-on Qwen server use?',
@@ -456,7 +462,7 @@ docker run --gpus all \\
         id: 'update-log',
         title: 'Update Log',
         items: [
-          '2026-05-26: Initial publication. Benchmark data from May 2026 hardware. Prices confirmed against Newegg, Amazon, and GPU market trackers.',
+          '2026-05-26: Initial publication. Prices and speeds are indicative ranges, not PromptQuorum measurements; check current listings.',
           '2026-08-27: RTX 4090 reframed as EOL/used-market only (NVIDIA discontinued the RTX 40-series in 2026); prices updated from ~$1,900 new to ~$2,000–2,600 used across all builds and tables. Added Qwen 3.6 27B as a newer same-tier alternative to Qwen3 32B.',
           '2026-10-19: Qwen3 is now labelled as the previous Qwen generation (still widely deployed) and Qwen 3.6 (27B dense, 35B-A3B mixture-of-experts) as the newer generation; the Qwen 3.6 27B memory figure in the table now matches the companion deployment guide.',
           'Next review scheduled: 2027-02-27',
@@ -488,7 +494,7 @@ docker run --gpus all \\
           name: 'What is the difference between Ollama and vLLM for production Qwen deployment?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ollama is simpler to set up and handles multi-GPU splitting automatically — best for personal servers and teams with under 20 concurrent users. vLLM uses tensor parallelism and continuous batching, making it 2–4× more efficient under concurrent load — best for 100+ requests per hour or production APIs serving many users.',
+            text: 'Ollama is simpler to set up and handles multi-GPU splitting automatically — best for personal servers and teams with under 20 concurrent users. vLLM uses tensor parallelism and continuous batching, which typically makes it more efficient under concurrent load — best for 100+ requests per hour or production APIs serving many users.',
           },
         },
         {
@@ -504,7 +510,7 @@ docker run --gpus all \\
           name: 'Is Alibaba Cloud cheaper than RunPod for Qwen inference?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Alibaba Cloud PAI costs $0.50–2.00/hr depending on GPU tier and region. RunPod A40 48 GB costs $0.44/hr. For Qwen specifically, Alibaba Cloud offers pre-configured Qwen inference environments with Qwen-optimized runtimes that can be 20–30% faster than generic Ollama.',
+            text: 'Alibaba Cloud PAI costs $0.50–2.00/hr depending on GPU tier and region. RunPod A40 48 GB costs $0.44/hr. For Qwen specifically, Alibaba Cloud offers pre-configured Qwen inference environments with runtimes that Alibaba describes as optimized for Qwen.',
           },
         },
         {
@@ -635,7 +641,7 @@ docker run --gpus all \\
         id: 'benchmark-table',
         title: 'Qwen-Modell-Performance nach Hardware',
         content:
-          '**Hardware nach Modellgröße wählen, nicht nach GPU-Marke.** VRAM ist die harte Grenze: Passt das Modell nicht, läuft es nicht mit GPU-Geschwindigkeit. Die Tabelle zeigt gemessene Inferenzgeschwindigkeiten bei Q4_K_M-Quantisierung.',
+          '**Hardware nach Modellgröße wählen, nicht nach GPU-Marke.** VRAM ist die harte Grenze: Passt das Modell nicht, läuft es nicht mit GPU-Geschwindigkeit. Die Tabelle zeigt Richtwerte für die Inferenzgeschwindigkeit bei Q4_K_M-Quantisierung (keine Messungen von PromptQuorum; sie hängen von GPU, Treiber, Kontextlänge und Ollama-Version ab).',
         columns: ['Modell', 'VRAM (Q4_K_M)', 'Min. GPU', 'Geschwindigkeit (tok/s)', 'CPU-Fallback', 'Produktionstauglich?'],
         rows: [
           { '0': 'Qwen3 8B', '1': '5,2 GB', '2': 'RTX 3060 12 GB', '3': '22–28 tok/s', '4': 'Ja (32 GB RAM, ~4 tok/s)', '5': 'Ja — Single GPU' },
@@ -661,6 +667,12 @@ docker run --gpus all \\
           { title: 'Nginx als API-Gateway mit Basic-Auth für öffentliche Deployments hinzufügen', whyItMatters: 'Ollama ohne Auth öffentlich exponieren erlaubt jedem, Inferenz auf Ihrer GPU auszuführen.' },
           { title: 'Container-Restart-Policy auf unless-stopped setzen', whyItMatters: 'Stellt sicher, dass der Qwen-Server System-Neustarts überlebt — kritisch für Always-On-Miniserver.' },
         ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Die Compose-Datei veröffentlicht Ollama auf Port 11434 an allen Netzwerkschnittstellen, und Ollama bringt keine eigene Authentifizierung mit. Binden Sie den Port auf Rechnern, die aus dem Internet oder einem nicht vertrauenswürdigen Netz erreichbar sind, an localhost (`127.0.0.1:11434:11434`) oder sperren Sie ihn per Firewall und machen Sie nur das per Authentifizierung geschützte Nginx-Gateway erreichbar. Nutzung auf eigene Verantwortung.',
+          },
+        ],
       },
       faq: {
         id: 'faq',
@@ -668,7 +680,7 @@ docker run --gpus all \\
         faqs: [
           {
             q: 'Gibt es ein Qwen 3.8 Modell?',
-            a: 'Nein — "Qwen 3.8" ist keine reale Version. Gemeint ist wahrscheinlich Qwen3-8B (`ollama pull qwen3:8b`, 8 Milliarden Parameter) oder Qwen 3.6 (`ollama pull qwen3.6:27b`), ein neueres, im Coding stärkeres Release von Alibaba in derselben VRAM-Klasse wie Qwen3 32B. Alibabas Versionierung besteht aus Qwen3 (Dense-Größen 0,6B–32B) und dem separaten Qwen 3.6 Point-Release — eine "3.8" gibt es in keiner der beiden Reihen.',
+            a: 'Nein — "Qwen 3.8" ist keine reale Version. Gemeint ist wahrscheinlich Qwen3-8B (`ollama pull qwen3:8b`, 8 Milliarden Parameter) oder Qwen 3.6 (`ollama pull qwen3.6:27b`), ein neueres Release von Alibaba, das auch eine Coding-Variante hat in derselben VRAM-Klasse wie Qwen3 32B. Alibabas Versionierung besteht aus Qwen3 (Dense-Größen 0,6B–32B) und dem separaten Qwen 3.6 Point-Release — eine "3.8" gibt es in keiner der beiden Reihen.',
           },
           {
             q: 'Gibt es ein Qwen3 8B Modell?',
@@ -680,11 +692,11 @@ docker run --gpus all \\
           },
           {
             q: 'Was ist der Unterschied zwischen Ollama und vLLM für Qwen?',
-            a: 'Ollama ist einfacher einzurichten und handhabt Multi-GPU-Splitting automatisch — am besten für persönliche Server und Teams mit unter 20 gleichzeitigen Nutzern. vLLM nutzt Tensor-Parallelismus und kontinuierliches Batching und ist 2–4× effizienter bei hoher Last — optimal für 100+ Anfragen pro Stunde.',
+            a: 'Ollama ist einfacher einzurichten und handhabt Multi-GPU-Splitting automatisch — am besten für persönliche Server und Teams mit unter 20 gleichzeitigen Nutzern. vLLM nutzt Tensor-Parallelismus und kontinuierliches Batching und ist bei hoher Last in der Regel effizienter — optimal für 100+ Anfragen pro Stunde.',
           },
           {
             q: 'Ist Alibaba Cloud günstiger als RunPod für Qwen-Inferenz?',
-            a: 'Alibaba Cloud PAI kostet je nach GPU-Tier und Region 0,50–2,00 US-Dollar pro Stunde. RunPod A40 48 GB kostet 0,44 US-Dollar/Stunde. Alibaba Cloud bietet voreingerichtete Qwen-Inferenzumgebungen, die 20–30% schneller sein können als generisches Ollama — bei Nutzung des Alibaba-Cloud-Ökosystems empfehlenswert.',
+            a: 'Alibaba Cloud PAI kostet je nach GPU-Tier und Region 0,50–2,00 US-Dollar pro Stunde. RunPod A40 48 GB kostet 0,44 US-Dollar/Stunde. Alibaba Cloud bietet voreingerichtete Qwen-Inferenzumgebungen, die Alibaba als für Qwen optimiert bezeichnet — bei Nutzung des Alibaba-Cloud-Ökosystems empfehlenswert.',
           },
           {
             q: 'Wie viel Strom verbraucht ein Always-On-Qwen-Server?',
@@ -705,7 +717,7 @@ docker run --gpus all \\
         {
           '@type': 'Question',
           name: 'Was ist der Unterschied zwischen Ollama und vLLM für Qwen?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Ollama ist einfacher einzurichten — optimal für unter 20 gleichzeitige Nutzer. vLLM ist 2–4× effizienter bei hoher Last — optimal für 100+ Anfragen pro Stunde.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Ollama ist einfacher einzurichten — optimal für unter 20 gleichzeitige Nutzer. vLLM ist bei hoher Last in der Regel effizienter — optimal für 100+ Anfragen pro Stunde.' },
         },
       ],
     },
@@ -795,7 +807,7 @@ docker run --gpus all \\
         faqs: [
           {
             q: 'Existe-t-il un modèle Qwen 3.8 ?',
-            a: "Non — « Qwen 3.8 » n'est pas une version réelle. Vous voulez probablement dire Qwen3-8B (`ollama pull qwen3:8b`, 8 milliards de paramètres) ou Qwen 3.6 (`ollama pull qwen3.6:27b`), une version plus récente et plus performante en code publiée par Alibaba, dans la même classe de VRAM que Qwen3 32B. Le versionnement d'Alibaba se compose de Qwen3 (tailles denses de 0,6B à 32B) et de la version ponctuelle distincte Qwen 3.6 — il n'existe de « 3.8 » dans aucune des deux gammes.",
+            a: "Non — « Qwen 3.8 » n'est pas une version réelle. Vous voulez probablement dire Qwen3-8B (`ollama pull qwen3:8b`, 8 milliards de paramètres) ou Qwen 3.6 (`ollama pull qwen3.6:27b`), une version plus récente publiée par Alibaba, qui propose aussi une variante code, dans la même classe de VRAM que Qwen3 32B. Le versionnement d'Alibaba se compose de Qwen3 (tailles denses de 0,6B à 32B) et de la version ponctuelle distincte Qwen 3.6 — il n'existe de « 3.8 » dans aucune des deux gammes.",
           },
           {
             q: 'Existe-t-il un modèle Qwen3 8B ?',
@@ -807,11 +819,11 @@ docker run --gpus all \\
           },
           {
             q: 'Quelle est la différence entre Ollama et vLLM pour le déploiement de Qwen ?',
-            a: 'Ollama est plus simple à configurer et gère automatiquement la répartition multi-GPU — idéal pour les serveurs personnels et les équipes de moins de 20 utilisateurs simultanés. vLLM utilise le parallélisme tensoriel et le batching continu, 2 à 4× plus efficace sous charge — optimal pour plus de 100 requêtes par heure.',
+            a: 'Ollama est plus simple à configurer et gère automatiquement la répartition multi-GPU — idéal pour les serveurs personnels et les équipes de moins de 20 utilisateurs simultanés. vLLM utilise le parallélisme tensoriel et le batching continu, en général plus efficace sous charge — optimal pour plus de 100 requêtes par heure.',
           },
           {
             q: 'Alibaba Cloud est-il moins cher que RunPod pour l\'inférence Qwen ?',
-            a: 'Alibaba Cloud PAI coûte 0,50 à 2,00 $/heure selon le tier GPU. RunPod A40 48 Go coûte 0,44 $/heure. Alibaba Cloud propose des environnements d\'inférence Qwen préconfigurés 20 à 30% plus rapides — intéressant si vous êtes déjà dans l\'écosystème Alibaba Cloud.',
+            a: 'Alibaba Cloud PAI coûte 0,50 à 2,00 $/heure selon le tier GPU. RunPod A40 48 Go coûte 0,44 $/heure. Alibaba Cloud propose des environnements d\'inférence Qwen préconfigurés que Alibaba présente comme optimisés pour Qwen — intéressant si vous êtes déjà dans l\'écosystème Alibaba Cloud.',
           },
           {
             q: 'Quelle consommation électrique pour un serveur Qwen toujours actif ?',
@@ -930,7 +942,7 @@ docker run --gpus all \\
         faqs: [
           {
             q: 'Qwen 3.8というモデルは存在しますか？',
-            a: 'いいえ——「Qwen 3.8」という実在のリリースはありません。おそらくQwen3-8B（`ollama pull qwen3:8b`、80億パラメータ）か、Qwen 3.6（`ollama pull qwen3.6:27b`、Qwen3 32Bと同じVRAM帯でコーディング性能が強化されたAlibabaの新しいリリース）のことを指していると考えられます。Alibabaのバージョン体系はQwen3（denseサイズ0.6B〜32B）と、別系統のポイントリリースであるQwen 3.6で構成されており、どちらのラインにも「3.8」は存在しません。',
+            a: 'いいえ——「Qwen 3.8」という実在のリリースはありません。おそらくQwen3-8B（`ollama pull qwen3:8b`、80億パラメータ）か、Qwen 3.6（`ollama pull qwen3.6:27b`、Qwen3 32Bと同じVRAM帯でコーディング版も提供されているAlibabaの新しいリリース）のことを指していると考えられます。Alibabaのバージョン体系はQwen3（denseサイズ0.6B〜32B）と、別系統のポイントリリースであるQwen 3.6で構成されており、どちらのラインにも「3.8」は存在しません。',
           },
           {
             q: 'Qwen3 8Bモデルは存在しますか？',
@@ -942,11 +954,11 @@ docker run --gpus all \\
           },
           {
             q: 'OllamaとvLLMの違いは？',
-            a: 'Ollamaはセットアップが簡単でマルチGPU分割を自動処理します。同時接続ユーザーが20人以下の個人・小規模チームに最適です。vLLMはテンソル並列処理と連続バッチ処理を使用し、高負荷時に2〜4倍効率的です。毎時100件以上のリクエストに対応する本番APIに最適です。',
+            a: 'Ollamaはセットアップが簡単でマルチGPU分割を自動処理します。同時接続ユーザーが20人以下の個人・小規模チームに最適です。vLLMはテンソル並列処理と連続バッチ処理を使用し、高負荷時に一般に効率的です。毎時100件以上のリクエストに対応する本番APIに最適です。',
           },
           {
             q: 'Alibaba CloudとRunPodはどちらが安い？',
-            a: 'Alibaba Cloud PAIはGPUティアと地域によって1時間あたり約75〜300円。RunPod A40 48GBは約65円/時間。Alibaba Cloudは最適化されたQwen推論環境を提供しており、汎用Ollamaより20〜30%高速な場合があります。',
+            a: 'Alibaba Cloud PAIはGPUティアと地域によって1時間あたり約75〜300円。RunPod A40 48GBは約65円/時間。Alibaba Cloudは、Alibabaが最適化済みと説明するQwen推論環境を提供しています。',
           },
           {
             q: '常時稼働Qwenサーバーの消費電力は？',
@@ -967,7 +979,7 @@ docker run --gpus all \\
         {
           '@type': 'Question',
           name: 'OllamaとvLLMの違いは？',
-          acceptedAnswer: { '@type': 'Answer', text: 'Ollamaはセットアップが簡単で個人・小規模チームに最適。vLLMは高負荷時に2〜4倍効率的で、毎時100件以上のリクエストを処理する本番APIに適しています。' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Ollamaはセットアップが簡単で個人・小規模チームに最適。vLLMは高負荷時に一般に効率的で、毎時100件以上のリクエストを処理する本番APIに適しています。' },
         },
       ],
     },
@@ -1069,7 +1081,7 @@ docker run --gpus all \\
         id: 'benchmark-table',
         title: 'Qwen模型性能对比（按硬件分类）',
         content:
-          '**根据模型大小选择硬件，而非GPU品牌。** 显存是硬性约束：模型放不进去就无法以GPU速度运行。下表展示Q4_K_M量化（Ollama部署的最佳质量-体积比）的实测推理速度。',
+          '**根据模型大小选择硬件，而非GPU品牌。** 显存是硬性约束：模型放不进去就无法以GPU速度运行。下表展示Q4_K_M量化（Ollama部署的最佳质量-体积比）下的参考推理速度（并非PromptQuorum的实测结果，会随GPU、驱动、上下文长度和Ollama版本变化）。',
         columns: ['模型', '显存（Q4_K_M）', '最低GPU', '速度（tok/s）', 'CPU备选', '是否适合生产？'],
         rows: [
           { '0': 'Qwen3 8B', '1': '5.2 GB', '2': 'RTX 3060 12GB', '3': '22–28 tok/s', '4': '是（32GB RAM，约4 tok/s）', '5': '是——单GPU' },
@@ -1088,7 +1100,7 @@ docker run --gpus all \\
         faqs: [
           {
             q: '有Qwen 3.8这个型号吗？',
-            a: '没有——"Qwen 3.8"并非真实存在的版本。你很可能想找的是Qwen3-8B（`ollama pull qwen3:8b`，80亿参数）或Qwen 3.6（`ollama pull qwen3.6:27b`），后者是阿里巴巴发布的更新、编码能力更强的版本，与Qwen3 32B处于相同的显存档位。阿里巴巴的版本体系由Qwen3（dense尺寸0.6B–32B）和独立的Qwen 3.6点版本组成——这两条线中都不存在"3.8"。',
+            a: '没有——"Qwen 3.8"并非真实存在的版本。你很可能想找的是Qwen3-8B（`ollama pull qwen3:8b`，80亿参数）或Qwen 3.6（`ollama pull qwen3.6:27b`），后者是阿里巴巴发布的较新版本，同样提供代码变体，与Qwen3 32B处于相同的显存档位。阿里巴巴的版本体系由Qwen3（dense尺寸0.6B–32B）和独立的Qwen 3.6点版本组成——这两条线中都不存在"3.8"。',
           },
           {
             q: '有Qwen3 8B型号吗？',
@@ -1100,11 +1112,11 @@ docker run --gpus all \\
           },
           {
             q: '生产环境中Ollama和vLLM有什么区别？',
-            a: 'Ollama配置更简单，自动处理多GPU分配——适合个人服务器和20人以下并发的团队。vLLM使用张量并行和连续批处理，在高负载下效率高2-4倍——适合每小时100+请求的生产API。',
+            a: 'Ollama配置更简单，自动处理多GPU分配——适合个人服务器和20人以下并发的团队。vLLM使用张量并行和连续批处理，在高负载下通常效率更高——适合每小时100+请求的生产API。',
           },
           {
             q: '阿里云和RunPod哪个更便宜？',
-            a: '阿里云PAI根据GPU类型和地区收费每小时约3.5-14元人民币。RunPod A40 48GB约3元/小时。阿里云提供预配置的Qwen推理环境，比通用Ollama快20-30%——如果已在阿里云生态系统中，值得考虑。',
+            a: '阿里云PAI根据GPU类型和地区收费每小时约3.5-14元人民币。RunPod A40 48GB约3元/小时。阿里云提供预配置的Qwen推理环境（阿里云称针对Qwen做了优化）——如果已在阿里云生态系统中，值得考虑。',
           },
           {
             q: '全天候Qwen服务器消耗多少电力？',
@@ -1129,7 +1141,7 @@ docker run --gpus all \\
         {
           '@type': 'Question',
           name: '生产环境中Ollama和vLLM有什么区别？',
-          acceptedAnswer: { '@type': 'Answer', text: 'Ollama配置简单，适合20人以下并发。vLLM在高负载下效率高2-4倍，适合每小时100+请求的生产API。' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Ollama配置简单，适合20人以下并发。vLLM在高负载下通常效率更高，适合每小时100+请求的生产API。' },
         },
       ],
     },
@@ -1268,7 +1280,7 @@ docker run --gpus all \\
         id: 'benchmark-table',
         title: 'Rendimiento de modelos Qwen por hardware',
         content:
-          '**Elige el hardware según el tamaño del modelo, no por la marca de GPU.** La VRAM es la restricción principal: si el modelo no cabe, no se ejecutará a velocidad de GPU. La tabla muestra velocidades de inferencia medidas con cuantización Q4_K_M (la mejor relación calidad-tamaño para despliegues con Ollama).',
+          '**Elige el hardware según el tamaño del modelo, no por la marca de GPU.** La VRAM es la restricción principal: si el modelo no cabe, no se ejecutará a velocidad de GPU. La tabla muestra velocidades de inferencia orientativas (no son mediciones de PromptQuorum; varían según GPU, controlador, longitud de contexto y versión de Ollama) con cuantización Q4_K_M (la mejor relación calidad-tamaño para despliegues con Ollama).',
         columns: ['Modelo', 'VRAM (Q4_K_M)', 'GPU mínima', 'Velocidad (tok/s)', 'Fallback CPU', '¿Listo para producción?'],
         rows: [
           {
@@ -1320,7 +1332,7 @@ docker run --gpus all \\
             '5': 'Solo multi-GPU o nube',
           },
         ],
-        note: 'Velocidades medidas en sistemas PCIe Gen 4. NVLink mejora el rendimiento en configuraciones dual-GPU ~15% en tarjetas compatibles. Qwen2.5-72B con Q4_K_M en un A100 80 GB único en RunPod: 18–22 tok/s.',
+        note: 'Velocidades orientativas para sistemas PCIe Gen 4, no mediciones de PromptQuorum. La RTX 4090 no tiene conector NVLink, por lo que dos RTX 4090 se comunican solo por PCIe; NVLink existe en algunas tarjetas como la RTX 3090. Qwen2.5-72B con Q4_K_M en un A100 80 GB único en RunPod: aproximadamente 18–22 tok/s (orientativo).',
         image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
         imageCaption:
           'Requisitos de VRAM de los modelos Qwen con cuantización Q4_K_M: Qwen3 8B necesita 5,2 GB (RTX 3060 12 GB), Qwen3 32B necesita 20,1 GB (RTX 4090 24 GB) y Qwen2.5-72B necesita 43,5 GB (dos RTX 4090).',
@@ -1394,6 +1406,12 @@ volumes:
   ollama_data:
   open_webui_data:`,
         codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'warning',
+            text: 'El archivo compose publica Ollama en el puerto 11434 en todas las interfaces de red, y Ollama no incluye autenticación. En una máquina accesible desde internet o desde una red no confiable, enlaza el puerto a localhost (`127.0.0.1:11434:11434`) o bloquéalo con un cortafuegos y expón solo la pasarela Nginx con autenticación. Úsalo bajo tu propia responsabilidad.',
+          },
+        ],
       },
       multiGpu: {
         id: 'multi-gpu',
@@ -1403,7 +1421,7 @@ volumes:
         items: [
           'Ollama divide el modelo automáticamente entre todas las GPUs disponibles — establece CUDA_VISIBLE_DEVICES=0,1 en el entorno del compose para apuntar a tarjetas específicas',
           'Para dos RTX 4090, ambas deben estar en el mismo nivel de ancho de banda PCIe — una placa B650 o Z790 con dos ranuras PCIe Gen 4 x8 es el mínimo',
-          'NVLink entre dos RTX 4090 no cuenta con soporte oficial de NVIDIA en tarjetas de consumo, pero funciona en pares de RTX 4090 Founders Edition mediante bridges NVLink de terceros — añade ~15% de rendimiento',
+          'La RTX 4090 no tiene conector NVLink, así que dos RTX 4090 se comunican solo por PCIe; los puentes NVLink existen para algunas tarjetas anteriores, como la RTX 3090',
           'vLLM es un motor de inferencia alternativo que usa paralelismo tensorial para una utilización multi-GPU más eficiente — usa vLLM en lugar de Ollama para cargas sostenidas de inferencia 70B por encima de 100 solicitudes concurrentes',
           'Para uso ocasional de Qwen2.5-72B, RunPod A40 48 GB a $0,44/hr es más barato que un build con dos RTX 4090 ($3.800+)',
         ],
@@ -1427,7 +1445,7 @@ docker run --gpus all \\
           'OLLAMA_KEEP_ALIVE=-1 — evita que el modelo se descargue tras inactividad (el valor por defecto es 5 minutos, fatal para despliegues de servidor)',
           'OLLAMA_NUM_PARALLEL=4 — permite hasta 4 solicitudes de inferencia concurrentes; auméntalo si tienes margen de VRAM disponible',
           'OLLAMA_MAX_LOADED_MODELS=1 — mantén solo un modelo en VRAM a la vez en builds de GPU pequeñas para evitar thrashing',
-          'OLLAMA_FLASH_ATTENTION=1 — habilita flash attention para una mejora de velocidad del 20–30% en GPUs NVIDIA Ampere/Ada (RTX 3060 y más nuevas)',
+          'OLLAMA_FLASH_ATTENTION=1 — habilita flash attention, que puede mejorar la velocidad en GPUs NVIDIA Ampere/Ada (RTX 3060 y más nuevas); la mejora varía según el modelo y el contexto',
           'OLLAMA_GPU_OVERHEAD=512 — reserva 512 MB de VRAM para la sobrecarga del SO y los drivers; reduce los cuelgues por OOM en tarjetas con exactamente 8 o 16 GB',
         ],
         callouts: [
@@ -1476,7 +1494,7 @@ docker run --gpus all \\
             '0': 'Alibaba Cloud PAI (GPU A10)',
             '1': '$0,50–0,80/hr',
             '2': '$1,20–2,00/hr (A100)',
-            '3': '$0 inicial + $50 de crédito para nuevas cuentas',
+            '3': '$0 inicial; consulta las ofertas actuales',
             '4': 'Inferencia optimizada para Qwen, ecosistema Alibaba Cloud',
           },
           {
@@ -1493,7 +1511,7 @@ docker run --gpus all \\
             productName: 'RunPod GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: 'Desde $0,20/hr',
-            label: 'Empieza en RunPod (créditos gratuitos para nuevas cuentas) →',
+            label: 'Empieza en RunPod →',
           },
           {
             url: 'https://vast.ai',
@@ -1508,7 +1526,7 @@ docker run --gpus all \\
         id: 'always-on-server',
         title: 'Recomendaciones de hardware para servidor Qwen siempre activo',
         content:
-          '**Un mini PC ejecutando Qwen3 8B como servidor API 24/7 cuesta $0,50–1,50/mes en electricidad — mucho más barato que cualquier alternativa en la nube.** Dos builds de mini PC cubren la mayoría de los casos de uso de Qwen siempre activo:',
+          '**Un mini PC ejecutando Qwen3 8B como servidor API 24/7 cuesta $0,50–1,50/mes en electricidad — normalmente más barato que una instancia en la nube equivalente encendida todo el mes.** Dos builds de mini PC cubren la mayoría de los casos de uso de Qwen siempre activo:',
         items: [
           'Económico (inferencia CPU con Qwen3 8B): Minisforum UM890 Pro — AMD Ryzen 9 8945HS, 32 GB DDR5, 512 GB NVMe. ~$429 nuevo. Qwen3 8B se ejecuta mediante el backend CPU de Ollama a 3–5 tok/s. Adecuado para asistentes personales y resumen de documentos. 12W en reposo, 45W en carga. Muy silencioso. Se envía desde almacenes en EE.UU./UE.',
           'Recomendado (GPU Qwen3 14B): AOOSTAR GEM12 Pro OCuLink — admite GPU externa mediante puerto OCuLink. Combina con una RTX 4060 Ti 16 GB en enclosure eGPU (~$340 GPU + $100 enclosure). Total ~$800. Ejecuta Qwen3 14B a 16–18 tok/s. Significativamente mejor que el fallback CPU para uso interactivo.',
@@ -1577,7 +1595,7 @@ docker run --gpus all \\
         faqs: [
           {
             q: '¿Existe un modelo Qwen 3.8?',
-            a: 'No — "Qwen 3.8" no es una versión real. Probablemente te refieras a Qwen3-8B (`ollama pull qwen3:8b`, 8 mil millones de parámetros) o a Qwen 3.6 (`ollama pull qwen3.6:27b`), un lanzamiento más reciente de Alibaba con mejor rendimiento en código, en la misma categoría de VRAM que Qwen3 32B. El versionado de Alibaba consiste en Qwen3 (tamaños densos de 0,6B a 32B) y el lanzamiento puntual independiente Qwen 3.6 — no existe un "3.8" en ninguna de las dos líneas.',
+            a: 'No — "Qwen 3.8" no es una versión real. Probablemente te refieras a Qwen3-8B (`ollama pull qwen3:8b`, 8 mil millones de parámetros) o a Qwen 3.6 (`ollama pull qwen3.6:27b`), un lanzamiento más reciente de Alibaba que también tiene una variante de código, en la misma categoría de VRAM que Qwen3 32B. El versionado de Alibaba consiste en Qwen3 (tamaños densos de 0,6B a 32B) y el lanzamiento puntual independiente Qwen 3.6 — no existe un "3.8" en ninguna de las dos líneas.',
           },
           {
             q: '¿Existe un modelo Qwen3 8B?',
@@ -1589,7 +1607,7 @@ docker run --gpus all \\
           },
           {
             q: '¿Cuál es la diferencia entre Ollama y vLLM para el despliegue de Qwen en producción?',
-            a: 'Ollama es más fácil de configurar y gestiona automáticamente la distribución multi-GPU — la mejor opción para servidores personales y equipos con menos de 20 usuarios concurrentes. vLLM usa paralelismo tensorial y batching continuo, siendo 2–4 veces más eficiente bajo carga concurrente — la mejor opción para más de 100 solicitudes por hora o APIs de producción con muchos usuarios.',
+            a: 'Ollama es más fácil de configurar y gestiona automáticamente la distribución multi-GPU — la mejor opción para servidores personales y equipos con menos de 20 usuarios concurrentes. vLLM usa paralelismo tensorial y batching continuo, que normalmente lo hace más eficiente bajo carga concurrente — la mejor opción para más de 100 solicitudes por hora o APIs de producción con muchos usuarios.',
           },
           {
             q: '¿Ollama admite inferencia multi-GPU para Qwen de forma nativa?',
@@ -1597,7 +1615,7 @@ docker run --gpus all \\
           },
           {
             q: '¿Es Alibaba Cloud más barato que RunPod para la inferencia de Qwen?',
-            a: 'Alibaba Cloud PAI cuesta $0,50–2,00/hr según el nivel de GPU y la región. RunPod A40 48 GB cuesta $0,44/hr. Para Qwen específicamente, Alibaba Cloud ofrece entornos de inferencia Qwen preconfigurados con runtimes optimizados que pueden ser un 20–30% más rápidos que Ollama genérico — vale la pena probar si ya estás en el ecosistema de Alibaba Cloud. Para puro coste, las instancias spot de RunPod son más baratas.',
+            a: 'Alibaba Cloud PAI cuesta $0,50–2,00/hr según el nivel de GPU y la región. RunPod A40 48 GB cuesta $0,44/hr. Para Qwen específicamente, Alibaba Cloud ofrece entornos de inferencia Qwen preconfigurados con runtimes que Alibaba describe como optimizados para Qwen — vale la pena probar si ya estás en el ecosistema de Alibaba Cloud. Para puro coste, las instancias spot de RunPod son más baratas.',
           },
           {
             q: '¿Cuánta electricidad consume un servidor Qwen siempre activo?',
@@ -1613,7 +1631,7 @@ docker run --gpus all \\
         id: 'update-log',
         title: 'Registro de actualizaciones',
         items: [
-          '2026-05-26: Publicación inicial. Datos de benchmark de hardware de mayo de 2026. Precios verificados en Newegg, Amazon y rastreadores del mercado de GPU.',
+          '2026-05-26: Publicación inicial. Precios y velocidades orientativos, no mediciones de PromptQuorum; consulta los anuncios actuales.',
           '2026-10-19: Qwen3 se presenta ahora como la generación anterior de Qwen (aún muy desplegada) y Qwen 3.6 (27B denso, 35B-A3B mezcla de expertos) como la generación más reciente.',
           'Próxima revisión programada: 2026-11-26',
         ],
@@ -1637,7 +1655,7 @@ docker run --gpus all \\
           name: '¿Cuál es la diferencia entre Ollama y vLLM para el despliegue de Qwen en producción?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ollama es más fácil de configurar y gestiona automáticamente la distribución multi-GPU — la mejor opción para servidores personales y equipos con menos de 20 usuarios concurrentes. vLLM usa paralelismo tensorial y batching continuo, siendo 2–4 veces más eficiente bajo carga concurrente — la mejor opción para más de 100 solicitudes por hora o APIs de producción con muchos usuarios.',
+            text: 'Ollama es más fácil de configurar y gestiona automáticamente la distribución multi-GPU — la mejor opción para servidores personales y equipos con menos de 20 usuarios concurrentes. vLLM usa paralelismo tensorial y batching continuo, que normalmente lo hace más eficiente bajo carga concurrente — la mejor opción para más de 100 solicitudes por hora o APIs de producción con muchos usuarios.',
           },
         },
         {
@@ -1653,7 +1671,7 @@ docker run --gpus all \\
           name: '¿Es Alibaba Cloud más barato que RunPod para la inferencia de Qwen?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Alibaba Cloud PAI cuesta $0,50–2,00/hr según el nivel de GPU. RunPod A40 48 GB cuesta $0,44/hr. Alibaba Cloud ofrece entornos Qwen preconfigurados un 20–30% más rápidos que Ollama genérico.',
+            text: 'Alibaba Cloud PAI cuesta $0,50–2,00/hr según el nivel de GPU. RunPod A40 48 GB cuesta $0,44/hr. Alibaba Cloud ofrece entornos Qwen preconfigurados con runtimes que Alibaba describe como optimizados para Qwen.',
           },
         },
         {
@@ -1823,7 +1841,7 @@ docker run --gpus all \\
         id: 'benchmark-table',
         title: 'Desempenho dos modelos Qwen por hardware',
         content:
-          '**Escolha o hardware pelo tamanho do modelo, não pela marca da GPU.** A VRAM é a restrição principal: se o modelo não couber, ele não rodará na velocidade da GPU. A tabela abaixo mostra velocidades de inferência medidas com quantização Q4_K_M (a melhor relação qualidade-tamanho para implantações com Ollama).',
+          '**Escolha o hardware pelo tamanho do modelo, não pela marca da GPU.** A VRAM é a restrição principal: se o modelo não couber, ele não rodará na velocidade da GPU. A tabela abaixo mostra velocidades de inferência indicativas (não são medições do PromptQuorum; variam conforme GPU, driver, tamanho do contexto e versão do Ollama) com quantização Q4_K_M (a melhor relação qualidade-tamanho para implantações com Ollama).',
         columns: ['Modelo', 'VRAM (Q4_K_M)', 'GPU mínima', 'Velocidade (tok/s)', 'Fallback de CPU', 'Pronto para produção?'],
         rows: [
           {
@@ -1875,7 +1893,7 @@ docker run --gpus all \\
             '5': 'Apenas multi-GPU ou nuvem',
           },
         ],
-        note: 'Velocidades medidas em sistemas PCIe Gen 4. O NVLink melhora a vazão em configurações dual-GPU em ~15% nas placas compatíveis. Qwen2.5-72B com Q4_K_M em um A100 80 GB único na RunPod: 18–22 tok/s.',
+        note: 'Velocidades indicativas para sistemas PCIe Gen 4, não medições do PromptQuorum. A RTX 4090 não tem conector NVLink, então duas RTX 4090 se comunicam apenas por PCIe; o NVLink existe em algumas placas, como a RTX 3090. Qwen2.5-72B com Q4_K_M em um A100 80 GB único na RunPod: aproximadamente 18–22 tok/s (indicativo).',
         image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
         imageCaption:
           'Requisitos de VRAM dos modelos Qwen com quantização Q4_K_M: Qwen3 8B precisa de 5,2 GB (RTX 3060 12 GB), Qwen3 32B precisa de 20,1 GB (RTX 4090 24 GB) e Qwen2.5-72B precisa de 43,5 GB (duas RTX 4090).',
@@ -1949,6 +1967,12 @@ volumes:
   ollama_data:
   open_webui_data:`,
         codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'warning',
+            text: 'O arquivo compose publica o Ollama na porta 11434 em todas as interfaces de rede, e o Ollama não tem autenticação integrada. Em uma máquina acessível pela internet ou por uma rede não confiável, vincule a porta ao localhost (`127.0.0.1:11434:11434`) ou bloqueie-a com um firewall e exponha apenas o gateway Nginx autenticado. Use por sua conta e risco.',
+          },
+        ],
       },
       multiGpu: {
         id: 'multi-gpu',
@@ -1958,7 +1982,7 @@ volumes:
         items: [
           'O Ollama divide o modelo automaticamente entre todas as GPUs disponíveis — defina CUDA_VISIBLE_DEVICES=0,1 no ambiente do compose para mirar placas específicas',
           'Para duas RTX 4090, ambas devem estar no mesmo nível de largura de banda PCIe — uma placa B650 ou Z790 com dois slots PCIe Gen 4 x8 é o mínimo',
-          'O NVLink entre duas RTX 4090 não tem suporte oficial da NVIDIA em placas de consumo, mas funciona em pares de RTX 4090 Founders Edition por meio de bridges NVLink de terceiros — adiciona ~15% de vazão',
+          'A RTX 4090 não tem conector NVLink, então duas RTX 4090 se comunicam apenas por PCIe; as pontes NVLink existem para algumas placas anteriores, como a RTX 3090',
           'O vLLM é um motor de inferência alternativo que usa paralelismo tensorial para uma utilização multi-GPU mais eficiente — use o vLLM em vez do Ollama para cargas sustentadas de inferência 70B acima de 100 requisições simultâneas',
           'Para uso ocasional do Qwen2.5-72B, a RunPod A40 48 GB a US$ 0,44/h é mais barata do que um build com duas RTX 4090 (US$ 3.800+)',
         ],
@@ -1982,7 +2006,7 @@ docker run --gpus all \\
           'OLLAMA_KEEP_ALIVE=-1 — evita que o modelo seja descarregado após inatividade (o padrão é 5 minutos, fatal para implantações de servidor)',
           'OLLAMA_NUM_PARALLEL=4 — permite até 4 requisições de inferência simultâneas; aumente esse valor se tiver margem de VRAM disponível',
           'OLLAMA_MAX_LOADED_MODELS=1 — mantenha apenas um modelo na VRAM por vez em builds de GPU pequenas para evitar thrashing',
-          'OLLAMA_FLASH_ATTENTION=1 — habilita o flash attention para uma melhoria de velocidade de 20–30% em GPUs NVIDIA Ampere/Ada (RTX 3060 e mais novas)',
+          'OLLAMA_FLASH_ATTENTION=1 — habilita o flash attention, que pode melhorar a velocidade em GPUs NVIDIA Ampere/Ada (RTX 3060 e mais novas); o ganho varia conforme o modelo e o contexto',
           'OLLAMA_GPU_OVERHEAD=512 — reserva 512 MB de VRAM para a sobrecarga do SO e dos drivers; reduz as falhas por OOM em placas com exatamente 8 ou 16 GB',
         ],
         callouts: [
@@ -2031,7 +2055,7 @@ docker run --gpus all \\
             '0': 'Alibaba Cloud PAI (GPU A10)',
             '1': 'US$ 0,50–0,80/h',
             '2': 'US$ 1,20–2,00/h (A100)',
-            '3': 'US$ 0 inicial + US$ 50 de crédito para novas contas',
+            '3': 'US$ 0 inicial; veja as ofertas atuais',
             '4': 'Inferência otimizada para Qwen, ecossistema Alibaba Cloud',
           },
           {
@@ -2048,7 +2072,7 @@ docker run --gpus all \\
             productName: 'RunPod GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: 'A partir de US$ 0,20/h',
-            label: 'Comece na RunPod (créditos gratuitos para novas contas) →',
+            label: 'Comece na RunPod →',
           },
           {
             url: 'https://vast.ai',
@@ -2063,7 +2087,7 @@ docker run --gpus all \\
         id: 'always-on-server',
         title: 'Recomendações de hardware para servidor Qwen sempre ativo',
         content:
-          '**Um mini PC rodando o Qwen3 8B como servidor API 24/7 custa US$ 0,50–1,50/mês em eletricidade — muito mais barato do que qualquer alternativa na nuvem.** Dois builds de mini PC cobrem a maioria dos casos de uso do Qwen sempre ativo:',
+          '**Um mini PC rodando o Qwen3 8B como servidor API 24/7 custa US$ 0,50–1,50/mês em eletricidade — normalmente mais barato do que uma instância equivalente na nuvem ligada o mês todo.** Dois builds de mini PC cobrem a maioria dos casos de uso do Qwen sempre ativo:',
         items: [
           'Econômico (inferência em CPU com Qwen3 8B): Minisforum UM890 Pro — AMD Ryzen 9 8945HS, 32 GB DDR5, 512 GB NVMe. ~US$ 429 novo. O Qwen3 8B roda pelo backend de CPU do Ollama a 3–5 tok/s. Adequado para assistentes pessoais e resumo de documentos. 12W em repouso, 45W em carga. Muito silencioso. Enviado de armazéns nos EUA/UE.',
           'Recomendado (GPU Qwen3 14B): AOOSTAR GEM12 Pro OCuLink — suporta GPU externa pela porta OCuLink. Combine com uma RTX 4060 Ti 16 GB em enclosure eGPU (~US$ 340 GPU + US$ 100 enclosure). Total ~US$ 800. Roda o Qwen3 14B a 16–18 tok/s. Significativamente melhor do que o fallback de CPU para uso interativo.',
@@ -2132,7 +2156,7 @@ docker run --gpus all \\
         faqs: [
           {
             q: 'Existe um modelo Qwen 3.8?',
-            a: 'Não — "Qwen 3.8" não é um lançamento real. Você provavelmente quer dizer Qwen3-8B (`ollama pull qwen3:8b`, 8 bilhões de parâmetros) ou Qwen 3.6 (`ollama pull qwen3.6:27b`), um lançamento mais novo e com melhor desempenho em código da Alibaba, na mesma faixa de VRAM do Qwen3 32B. O versionamento da Alibaba é composto pelo Qwen3 (tamanhos densos de 0,6B a 32B) e pelo lançamento pontual separado Qwen 3.6 — não existe um "3.8" em nenhuma das duas linhas.',
+            a: 'Não — "Qwen 3.8" não é um lançamento real. Você provavelmente quer dizer Qwen3-8B (`ollama pull qwen3:8b`, 8 bilhões de parâmetros) ou Qwen 3.6 (`ollama pull qwen3.6:27b`), um lançamento mais novo da Alibaba que também tem uma variante de programação, na mesma faixa de VRAM do Qwen3 32B. O versionamento da Alibaba é composto pelo Qwen3 (tamanhos densos de 0,6B a 32B) e pelo lançamento pontual separado Qwen 3.6 — não existe um "3.8" em nenhuma das duas linhas.',
           },
           {
             q: 'Existe um modelo Qwen3 8B?',
@@ -2144,7 +2168,7 @@ docker run --gpus all \\
           },
           {
             q: 'Qual é a diferença entre Ollama e vLLM para a implantação do Qwen em produção?',
-            a: 'O Ollama é mais fácil de configurar e gerencia automaticamente a divisão multi-GPU — a melhor opção para servidores pessoais e times com menos de 20 usuários simultâneos. O vLLM usa paralelismo tensorial e batching contínuo, sendo 2–4 vezes mais eficiente sob carga simultânea — a melhor opção para mais de 100 requisições por hora ou APIs de produção que atendem muitos usuários.',
+            a: 'O Ollama é mais fácil de configurar e gerencia automaticamente a divisão multi-GPU — a melhor opção para servidores pessoais e times com menos de 20 usuários simultâneos. O vLLM usa paralelismo tensorial e batching contínuo, o que normalmente o torna mais eficiente sob carga simultânea — a melhor opção para mais de 100 requisições por hora ou APIs de produção que atendem muitos usuários.',
           },
           {
             q: 'O Ollama suporta inferência multi-GPU para o Qwen de forma nativa?',
@@ -2152,7 +2176,7 @@ docker run --gpus all \\
           },
           {
             q: 'A Alibaba Cloud é mais barata do que a RunPod para a inferência do Qwen?',
-            a: 'A Alibaba Cloud PAI custa US$ 0,50–2,00/h conforme o nível de GPU e a região. A RunPod A40 48 GB custa US$ 0,44/h. Para o Qwen especificamente, a Alibaba Cloud oferece ambientes de inferência Qwen pré-configurados com runtimes otimizados que podem ser 20–30% mais rápidos do que o Ollama genérico — vale a pena testar se você já está no ecossistema da Alibaba Cloud. Para puro custo, as instâncias spot da RunPod são mais baratas.',
+            a: 'A Alibaba Cloud PAI custa US$ 0,50–2,00/h conforme o nível de GPU e a região. A RunPod A40 48 GB custa US$ 0,44/h. Para o Qwen especificamente, a Alibaba Cloud oferece ambientes de inferência Qwen pré-configurados com runtimes que a Alibaba descreve como otimizados para o Qwen — vale a pena testar se você já está no ecossistema da Alibaba Cloud. Para puro custo, as instâncias spot da RunPod são mais baratas.',
           },
           {
             q: 'Quanta eletricidade consome um servidor Qwen sempre ativo?',
@@ -2168,7 +2192,7 @@ docker run --gpus all \\
         id: 'update-log',
         title: 'Registro de atualizações',
         items: [
-          '2026-05-26: Publicação inicial. Dados de benchmark de hardware de maio de 2026. Preços verificados na Newegg, Amazon e rastreadores do mercado de GPU.',
+          '2026-05-26: Publicação inicial. Preços e velocidades indicativos, não medições do PromptQuorum; confira os anúncios atuais.',
           '2026-10-19: O Qwen3 agora é apresentado como a geração anterior do Qwen (ainda muito usada) e o Qwen 3.6 (27B denso, 35B-A3B mistura de especialistas) como a geração mais recente.',
           'Próxima revisão programada: 2026-11-26',
         ],
@@ -2192,7 +2216,7 @@ docker run --gpus all \\
           name: 'Qual é a diferença entre Ollama e vLLM para a implantação do Qwen em produção?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'O Ollama é mais fácil de configurar e gerencia automaticamente a divisão multi-GPU — a melhor opção para servidores pessoais e times com menos de 20 usuários simultâneos. O vLLM usa paralelismo tensorial e batching contínuo, sendo 2–4 vezes mais eficiente sob carga simultânea — a melhor opção para mais de 100 requisições por hora ou APIs de produção que atendem muitos usuários.',
+            text: 'O Ollama é mais fácil de configurar e gerencia automaticamente a divisão multi-GPU — a melhor opção para servidores pessoais e times com menos de 20 usuários simultâneos. O vLLM usa paralelismo tensorial e batching contínuo, o que normalmente o torna mais eficiente sob carga simultânea — a melhor opção para mais de 100 requisições por hora ou APIs de produção que atendem muitos usuários.',
           },
         },
         {
@@ -2208,7 +2232,7 @@ docker run --gpus all \\
           name: 'A Alibaba Cloud é mais barata do que a RunPod para a inferência do Qwen?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A Alibaba Cloud PAI custa US$ 0,50–2,00/h conforme o nível de GPU. A RunPod A40 48 GB custa US$ 0,44/h. A Alibaba Cloud oferece ambientes Qwen pré-configurados 20–30% mais rápidos do que o Ollama genérico.',
+            text: 'A Alibaba Cloud PAI custa US$ 0,50–2,00/h conforme o nível de GPU. A RunPod A40 48 GB custa US$ 0,44/h. A Alibaba Cloud oferece ambientes Qwen pré-configurados com runtimes que a Alibaba descreve como otimizados para o Qwen.',
           },
         },
         {
@@ -2329,7 +2353,7 @@ docker run --gpus all \\
         bullets: [
           'Qwen3 8B: RTX 3060 12 جيجابايت، ~25 رمز/ثانية، $150–350 GPU مستعمل',
           'Qwen3 14B: RTX 4060 Ti 16 جيجابايت، ~18 رمز/ثانية، ~$424 جديد',
-          'Qwen3 32B: RTX 4090 24 جيجابايت، ~12 رمز/ثانية، ~$1,900 جديد (الجيل السابق؛ الأحدث: Qwen 3.6 27B، `qwen3.6:27b`، فئة 24 جيجابايت نفسها)',
+          'Qwen3 32B: RTX 4090 24 جيجابايت، ~12 رمز/ثانية، ~$2,000–2,600 مستعملة (البطاقة متوقفة عن الإنتاج) (الجيل السابق؛ الأحدث: Qwen 3.6 27B، `qwen3.6:27b`، فئة 24 جيجابايت نفسها)',
           'Qwen2.5-72B: RTX 4090 مزدوج أو RunPod A100 80 جيجابايت ($1.64/ساعة)',
           'خادم دائم التشغيل: Minisforum UM890 Pro، $429، يشغّل Qwen3 8B 24/7',
         ],
@@ -2379,16 +2403,16 @@ docker run --gpus all \\
         id: 'benchmark-table',
         title: 'أداء نماذج Qwen حسب الجهاز',
         content:
-          '**اختر الجهاز بحسب حجم النموذج لا بحسب ماركة GPU.** VRAM هو القيد الرئيسي: إذا لم يتسع النموذج، لن يعمل بسرعة GPU. يُظهر الجدول سرعات الاستدلال المقاسة مع تكميم Q4_K_M (أفضل نسبة جودة إلى حجم لنشر Ollama).',
+          '**اختر الجهاز بحسب حجم النموذج لا بحسب ماركة GPU.** VRAM هو القيد الرئيسي: إذا لم يتسع النموذج، لن يعمل بسرعة GPU. يُظهر الجدول سرعات استدلال تقريبية (ليست قياسات أجرتها PromptQuorum؛ وتختلف حسب GPU وبرنامج التشغيل وطول السياق وإصدار Ollama) مع تكميم Q4_K_M (أفضل نسبة جودة إلى حجم لنشر Ollama).',
         columns: ['النموذج', 'VRAM المطلوبة', 'الجهاز الموصى به', 'السرعة (Q4_K_M)', 'تكلفة GPU (USD)'],
         rows: [
           { 'النموذج': 'Qwen3 8B', 'VRAM المطلوبة': '~6 جيجابايت', 'الجهاز الموصى به': 'RTX 3060 12 جيجابايت', 'السرعة (Q4_K_M)': '~25 رمز/ثانية', 'تكلفة GPU (USD)': '$150–350 مستعمل' },
           { 'النموذج': 'Qwen3 14B', 'VRAM المطلوبة': '12 جيجابايت', 'الجهاز الموصى به': 'RTX 4060 Ti 16 جيجابايت', 'السرعة (Q4_K_M)': '~18 رمز/ثانية', 'تكلفة GPU (USD)': '~$424 جديد' },
-          { 'النموذج': 'Qwen3 32B (الجيل السابق)', 'VRAM المطلوبة': '20+ جيجابايت', 'الجهاز الموصى به': 'RTX 4090 24 جيجابايت', 'السرعة (Q4_K_M)': '~12 رمز/ثانية', 'تكلفة GPU (USD)': '~$1,900 جديد' },
-          { 'النموذج': 'Qwen 3.6 27B', 'VRAM المطلوبة': '~17 جيجابايت', 'الجهاز الموصى به': 'RTX 4090 24 جيجابايت', 'السرعة (Q4_K_M)': 'انظر دليل المقارنة', 'تكلفة GPU (USD)': '~$1,900 جديد' },
+          { 'النموذج': 'Qwen3 32B (الجيل السابق)', 'VRAM المطلوبة': '20+ جيجابايت', 'الجهاز الموصى به': 'RTX 4090 24 جيجابايت', 'السرعة (Q4_K_M)': '~12 رمز/ثانية', 'تكلفة GPU (USD)': '~$2,000–2,600 مستعملة (البطاقة متوقفة عن الإنتاج)' },
+          { 'النموذج': 'Qwen 3.6 27B', 'VRAM المطلوبة': '~17 جيجابايت', 'الجهاز الموصى به': 'RTX 4090 24 جيجابايت', 'السرعة (Q4_K_M)': 'انظر دليل المقارنة', 'تكلفة GPU (USD)': '~$2,000–2,600 مستعملة (البطاقة متوقفة عن الإنتاج)' },
           { 'النموذج': 'Qwen2.5-72B', 'VRAM المطلوبة': '48+ جيجابايت', 'الجهاز الموصى به': 'RTX 4090 × 2 أو GPU سحابي', 'السرعة (Q4_K_M)': '~5–8 رمز/ثانية', 'تكلفة GPU (USD)': '$3,800+ أو $0.44/ساعة' },
         ],
-        note: 'أرقام السرعة من إعدادات Ollama + Docker الفعلية على نظام Linux مع تشغيل حاوية واحدة للاستدلال.',
+        note: 'أرقام السرعة قيم تقريبية وليست قياسات أجرتها PromptQuorum، وتختلف حسب الجهاز وبرنامج التشغيل وطول السياق وإصدار Ollama.',
         image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
         imageCaption:
           'متطلبات VRAM لنماذج Qwen بتكميم Q4_K_M: يحتاج Qwen3 8B إلى 5.2 جيجابايت (RTX 3060 12 جيجابايت)، ويحتاج Qwen3 32B إلى 20.1 جيجابايت (RTX 4090 24 جيجابايت)، ويحتاج Qwen2.5-72B إلى 43.5 جيجابايت (RTX 4090 × 2).',
@@ -2468,7 +2492,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         id: 'cost-comparison',
         title: 'مقارنة التكاليف: self-hosted مقابل السحابة',
         content: [
-          'تكاليف الاستضافة الذاتية مُهلَكة على عمر الجهاز (3 سنوات مفترضة). تكاليف السحابة تعكس الأسعار الفعلية لـ RunPod في مايو 2026.',
+          'تكاليف الاستضافة الذاتية مُهلَكة على عمر الجهاز (3 سنوات مفترضة). تكاليف السحابة تقريبية لأسعار RunPod المعلنة وقت آخر تحديث؛ تحقق من الأسعار الحالية.',
         ],
         columns: ['الخيار', 'تكلفة الجهاز', 'تكلفة الكهرباء', 'التكلفة اليومية المُهلَكة', 'أفضل لـ'],
         rows: [
@@ -2516,11 +2540,11 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
           ],
           cloudIf: [
             'Qwen2.5-72B للتجريب السريع → RunPod لتجنب الاستثمار في الجهاز',
-            'الميزانية < $500 ولكن تحتاج Qwen2.5-72B → السحابة حتمًا',
+            'الميزانية < $500 ولكن تحتاج Qwen2.5-72B → السحابة هي الخيار الأرجح',
           ],
           quick: [
             'الخيار الافتراضي لمعظم المستخدمين: Qwen3 8B على RTX 3060',
-            'أفضل نسبة قيمة/أداء: RTX 4060 Ti 16 جيجابايت + Qwen3 14B',
+            'نسبة قيمة/أداء جيدة في تقديرنا: RTX 4060 Ti 16 جيجابايت + Qwen3 14B',
           ],
         },
         image: '/images/qwen-local-deployment-complete-guide-2026-self-hosted-vs-cloud-en.svg',
@@ -2540,7 +2564,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-            { q: 'هل يوجد نموذج Qwen 3.8؟', a: 'لا — "Qwen 3.8" ليس إصداراً حقيقياً. على الأرجح تقصد Qwen3-8B (`ollama pull qwen3:8b`، بـ8 مليارات معامل) أو Qwen 3.6 (`ollama pull qwen3.6:27b`)، وهو إصدار أحدث وأقوى في البرمجة من Alibaba يقع ضمن نفس فئة VRAM الخاصة بـ Qwen3 32B. يتكون ترقيم Alibaba من Qwen3 (بأحجام كثيفة من 0.6B إلى 32B) وإصدار Qwen 3.6 المنفصل — ولا يوجد "3.8" في أي من السلسلتين.' },
+            { q: 'هل يوجد نموذج Qwen 3.8؟', a: 'لا — "Qwen 3.8" ليس إصداراً حقيقياً. على الأرجح تقصد Qwen3-8B (`ollama pull qwen3:8b`، بـ8 مليارات معامل) أو Qwen 3.6 (`ollama pull qwen3.6:27b`)، وهو إصدار أحدث من Alibaba يتوفر أيضًا بمتغير للبرمجة يقع ضمن نفس فئة VRAM الخاصة بـ Qwen3 32B. يتكون ترقيم Alibaba من Qwen3 (بأحجام كثيفة من 0.6B إلى 32B) وإصدار Qwen 3.6 المنفصل — ولا يوجد "3.8" في أي من السلسلتين.' },
             { q: 'هل يوجد نموذج Qwen3 8B؟', a: 'لا. تشكيلة Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد 7B. إذا بحثت عن "Qwen3 8B"، فإن أقرب نموذج هو Qwen3-8B (`ollama pull qwen3:8b`)، الذي يتسع ضمن ~5–6 جيجابايت من VRAM بتكميم Q4_K_M ويعمل بنحو 25 رمز/ثانية على RTX 3060 بـ 12 جيجابايت. ولنموذج من فئة 72B، استخدم Qwen2.5-72B.' },
             { q: 'ما VRAM الأدنى لتشغيل Qwen3 8B على GPU؟', a: 'حوالي 6 جيجابايت من VRAM بتكميم Q4_K_M. RTX 3060 بـ 12 جيجابايت هو الخيار الموصى به للاستخدام في الإنتاج.' },
             { q: 'هل يمكن تشغيل Qwen2.5-72B على GPU واحدة؟', a: 'ليس بسرعة GPU بالكامل. Qwen2.5-72B بـ Q4_K_M يحتاج ~45.6 جيجابايت VRAM. RTX 4090 الواحدة (24 جيجابايت) ستُشغّله جزئيًا على المعالج مما يُبطّئه إلى ~2–4 رموز/ثانية. للإنتاج، استخدم GPU مزدوجًا أو سحابة.' },
@@ -2554,7 +2578,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         id: 'update-log',
         title: 'سجل التحديثات',
         items: [
-          '**2026-05-26:** إصدار مبدئي — تغطي معايير Qwen3 8B/14B/32B/72B وDockerfile الكامل وأسعار السحابة في مايو 2026.',
+          '**2026-05-26:** إصدار مبدئي — تغطي Qwen3 8B/14B/32B/72B وDockerfile الكامل وأسعار السحابة التقريبية.',
           '**2026-10-19:** أصبح Qwen3 يُعرض بوصفه الجيل السابق من Qwen (ولا يزال منتشرًا على نطاق واسع)، وQwen 3.6 (27B كثيف، 35B-A3B مزيج خبراء) بوصفه الجيل الأحدث.',
         ],
       },
@@ -2569,7 +2593,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
             'name': 'هل يوجد نموذج Qwen 3.8؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'لا — "Qwen 3.8" ليس إصداراً حقيقياً. على الأرجح تقصد Qwen3-8B (`ollama pull qwen3:8b`، بـ8 مليارات معامل) أو Qwen 3.6 (`ollama pull qwen3.6:27b`)، وهو إصدار أحدث وأقوى في البرمجة من Alibaba يقع ضمن نفس فئة VRAM الخاصة بـ Qwen3 32B. يتكون ترقيم Alibaba من Qwen3 (بأحجام كثيفة من 0.6B إلى 32B) وإصدار Qwen 3.6 المنفصل — ولا يوجد "3.8" في أي من السلسلتين.',
+              'text': 'لا — "Qwen 3.8" ليس إصداراً حقيقياً. على الأرجح تقصد Qwen3-8B (`ollama pull qwen3:8b`، بـ8 مليارات معامل) أو Qwen 3.6 (`ollama pull qwen3.6:27b`)، وهو إصدار أحدث من Alibaba يتوفر أيضًا بمتغير للبرمجة يقع ضمن نفس فئة VRAM الخاصة بـ Qwen3 32B. يتكون ترقيم Alibaba من Qwen3 (بأحجام كثيفة من 0.6B إلى 32B) وإصدار Qwen 3.6 المنفصل — ولا يوجد "3.8" في أي من السلسلتين.',
             },
           },
           {
@@ -2778,7 +2802,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         id: 'benchmark-table',
         title: 'Qwen 모델별 하드웨어 성능',
         content:
-          '**GPU 브랜드가 아니라 모델 크기에 맞는 하드웨어를 선택하십시오.** VRAM이 주요 제약입니다. 모델이 맞지 않으면 GPU 속도로 실행되지 않습니다. 아래 표는 Ollama 배포에 최적 품질-크기 비율인 Q4_K_M 양자화로 측정한 추론 속도를 나타냅니다.',
+          '**GPU 브랜드가 아니라 모델 크기에 맞는 하드웨어를 선택하십시오.** VRAM이 주요 제약입니다. 모델이 맞지 않으면 GPU 속도로 실행되지 않습니다. 아래 표는 Ollama 배포에 최적 품질-크기 비율인 Q4_K_M 양자화 기준의 참고용 추론 속도를 나타냅니다(PromptQuorum의 실측 결과가 아니며 GPU, 드라이버, 컨텍스트 길이, Ollama 버전에 따라 달라집니다).',
         columns: ['모델', 'VRAM (Q4_K_M)', '최소 GPU', '속도 (tok/s)', 'CPU 대체', '프로덕션 준비'],
         rows: [
           {
@@ -2830,7 +2854,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
             '5': 'Multi-GPU 또는 클라우드만 가능',
           },
         ],
-        note: 'PCIe Gen 4 시스템 측정 기준. NVLink는 지원 카드의 듀얼 GPU 구성에서 성능을 약 15% 향상시킵니다. RunPod A100 80 GB 단일 카드에서 Qwen2.5-72B Q4_K_M: 18–22 tok/s.',
+        note: 'PCIe Gen 4 시스템 기준의 참고용 속도이며 PromptQuorum의 실측 결과가 아닙니다. RTX 4090에는 NVLink 커넥터가 없어 RTX 4090 두 장은 PCIe로만 통신하며, NVLink는 RTX 3090 같은 일부 카드에 있습니다. RunPod A100 80 GB 단일 카드에서 Qwen2.5-72B Q4_K_M: 약 18–22 tok/s(참고용).',
         image: '/images/qwen-local-deployment-complete-guide-2026-vram-by-model-en.svg',
         imageCaption:
           'Q4_K_M 양자화 기준 Qwen 모델 VRAM 요구량: Qwen3 8B는 5.2GB(RTX 3060 12GB), Qwen3 32B는 20.1GB(RTX 4090 24GB), Qwen2.5-72B는 43.5GB(RTX 4090 두 장)가 필요합니다.',
@@ -2904,6 +2928,12 @@ volumes:
   ollama_data:
   open_webui_data:`,
         codeLanguage: 'yaml',
+        callouts: [
+          {
+            type: 'warning',
+            text: 'compose 파일은 Ollama를 모든 네트워크 인터페이스의 11434 포트에 게시하며, Ollama에는 자체 인증 기능이 없습니다. 인터넷이나 신뢰할 수 없는 네트워크에서 접근 가능한 장비에서는 포트를 localhost(`127.0.0.1:11434:11434`)에 바인딩하거나 방화벽으로 차단하고, 인증이 적용된 Nginx 게이트웨이만 노출하십시오. 사용에 따른 책임은 사용자에게 있습니다.',
+          },
+        ],
       },
       multiGpu: {
         id: 'multi-gpu',
@@ -2913,7 +2943,7 @@ volumes:
         items: [
           'Ollama는 사용 가능한 모든 GPU에 자동으로 모델을 분산합니다 — compose 환경에서 CUDA_VISIBLE_DEVICES=0,1로 특정 카드를 지정하십시오',
           'RTX 4090 두 장의 경우, 두 카드 모두 동일한 PCIe 대역폭 레벨에 있어야 합니다 — PCIe Gen 4 x8 슬롯 두 개가 있는 B650 또는 Z790 메인보드가 최소 요구사항입니다',
-          'RTX 4090 두 장 간의 NVLink는 소비자 카드에서 NVIDIA 공식 지원이 없지만, Founders Edition RTX 4090 쌍에서 서드파티 NVLink 브리지를 통해 작동합니다 — 약 15% 성능 향상',
+          'RTX 4090에는 NVLink 커넥터가 없어 RTX 4090 두 장은 PCIe로만 통신하며, NVLink 브리지는 RTX 3090 같은 일부 이전 카드에 있습니다',
           'vLLM은 텐서 병렬성을 사용하는 대체 추론 엔진으로, Multi-GPU 활용 효율이 더 높습니다 — 동시 요청 100개 이상의 지속 70B 추론 부하에서는 Ollama 대신 vLLM을 사용하십시오',
           'Qwen2.5-72B를 비정기적으로 사용하는 경우, RunPod A40 48 GB($0.44/시간)가 RTX 4090 두 장 빌드($3,800+)보다 저렴합니다',
         ],
@@ -2937,7 +2967,7 @@ docker run --gpus all \
           'OLLAMA_KEEP_ALIVE=-1 — 비활성 후 모델이 언로드되지 않도록 합니다 (기본값은 5분으로, 서버 배포에서는 치명적)',
           'OLLAMA_NUM_PARALLEL=4 — 최대 4개의 동시 추론 요청을 허용합니다. VRAM 여유가 있다면 늘리십시오',
           'OLLAMA_MAX_LOADED_MODELS=1 — 소형 GPU 빌드에서 스래싱 방지를 위해 VRAM에 모델 하나만 유지합니다',
-          'OLLAMA_FLASH_ATTENTION=1 — NVIDIA Ampere/Ada GPU(RTX 3060 이상)에서 flash attention을 활성화하여 20–30% 속도 향상',
+          'OLLAMA_FLASH_ATTENTION=1 — NVIDIA Ampere/Ada GPU(RTX 3060 이상)에서 flash attention을 활성화하며 속도가 향상될 수 있습니다(향상 폭은 모델과 컨텍스트에 따라 다릅니다)',
           'OLLAMA_GPU_OVERHEAD=512 — OS 및 드라이버 오버헤드를 위해 VRAM 512 MB를 예약합니다. 정확히 8 GB 또는 16 GB 카드에서 OOM 크래시를 줄여줍니다',
         ],
         callouts: [
@@ -2986,7 +3016,7 @@ docker run --gpus all \
             '0': 'Alibaba Cloud PAI (GPU A10)',
             '1': '$0.50–0.80/시간',
             '2': '$1.20–2.00/시간 (A100)',
-            '3': '초기 비용 $0 + 신규 계정 크레딧 $50',
+            '3': '초기 비용 $0; 현재 신규 계정 혜택 확인',
             '4': 'Qwen 최적화 추론 환경, Alibaba Cloud 생태계',
           },
           {
@@ -3003,7 +3033,7 @@ docker run --gpus all \
             productName: 'RunPod GPU Cloud',
             productCategory: 'cloud-gpu',
             priceRange: '$0.20/시간부터',
-            label: 'RunPod 시작하기 (신규 계정 무료 크레딧) →',
+            label: 'RunPod 시작하기 →',
           },
           {
             url: 'https://vast.ai',
@@ -3018,7 +3048,7 @@ docker run --gpus all \
         id: 'always-on-server',
         title: 'Qwen 상시 가동 서버 하드웨어 추천',
         content:
-          '**API 서버로 Qwen3 8B를 24/7 실행하는 mini PC는 전기료가 월 $0.50–1.50 — 어떤 클라우드 대안보다 훨씬 저렴합니다.** 두 가지 mini PC 빌드가 대부분의 Qwen 상시 가동 사용 사례를 커버합니다:',
+          '**API 서버로 Qwen3 8B를 24/7 실행하는 mini PC는 전기료가 월 $0.50–1.50 — 같은 기간 켜 둔 비슷한 클라우드 인스턴스보다 대체로 저렴합니다.** 두 가지 mini PC 빌드가 대부분의 Qwen 상시 가동 사용 사례를 커버합니다:',
         items: [
           '저렴한 옵션 (Qwen3 8B CPU 추론): Minisforum UM890 Pro — AMD Ryzen 9 8945HS, 32 GB DDR5, 512 GB NVMe. 신품 약 $429. Qwen3 8B는 Ollama CPU 백엔드로 3–5 tok/s 실행. 개인 어시스턴트 및 문서 요약에 적합. 유휴 시 12W, 부하 시 45W. 매우 조용함. 미국/EU 창고에서 배송 가능.',
           '추천 옵션 (GPU Qwen3 14B): AOOSTAR GEM12 Pro OCuLink — OCuLink 포트를 통해 외부 GPU 지원. eGPU 인클로저의 RTX 4060 Ti 16 GB와 결합 (GPU 약 $340 + 인클로저 $100). 총 약 $800. Qwen3 14B를 16–18 tok/s로 실행. 인터랙티브 사용 시 CPU 대체보다 현저히 우수.',
@@ -3087,7 +3117,7 @@ docker run --gpus all \
         faqs: [
           {
             q: 'Qwen 3.8 모델이 있습니까?',
-            a: '아니요 — "Qwen 3.8"은 실제 출시된 버전이 아닙니다. Qwen3-8B(`ollama pull qwen3:8b`, 80억 파라미터) 또는 Qwen 3.6(`ollama pull qwen3.6:27b`, Qwen3 32B와 동일한 VRAM 등급이며 코딩 성능이 더 강화된 알리바바의 최신 릴리스)을 찾으시는 것일 가능성이 높습니다. 알리바바의 버전 체계는 Qwen3(0.6B~32B의 dense 크기)와 별도의 Qwen 3.6 포인트 릴리스로 구성되며, 두 라인 어디에도 "3.8"은 존재하지 않습니다.',
+            a: '아니요 — "Qwen 3.8"은 실제 출시된 버전이 아닙니다. Qwen3-8B(`ollama pull qwen3:8b`, 80억 파라미터) 또는 Qwen 3.6(`ollama pull qwen3.6:27b`, Qwen3 32B와 동일한 VRAM 등급이며 코딩 변형도 제공하는 알리바바의 최신 릴리스)을 찾으시는 것일 가능성이 높습니다. 알리바바의 버전 체계는 Qwen3(0.6B~32B의 dense 크기)와 별도의 Qwen 3.6 포인트 릴리스로 구성되며, 두 라인 어디에도 "3.8"은 존재하지 않습니다.',
           },
           {
             q: 'Qwen3 8B 모델이 있습니까?',
@@ -3099,7 +3129,7 @@ docker run --gpus all \
           },
           {
             q: '프로덕션 Qwen 배포에서 Ollama와 vLLM의 차이점은 무엇입니까?',
-            a: 'Ollama는 설정이 쉽고 Multi-GPU 분산을 자동으로 처리합니다 — 개인 서버 및 동시 사용자 20명 미만의 팀에 최적입니다. vLLM은 텐서 병렬성과 연속 배칭을 사용하여 동시 부하에서 2–4배 효율적 — 시간당 100개 이상의 요청이나 다수 사용자를 위한 프로덕션 API에 최적입니다.',
+            a: 'Ollama는 설정이 쉽고 Multi-GPU 분산을 자동으로 처리합니다 — 개인 서버 및 동시 사용자 20명 미만의 팀에 최적입니다. vLLM은 텐서 병렬성과 연속 배칭을 사용하여 동시 부하에서 일반적으로 더 효율적 — 시간당 100개 이상의 요청이나 다수 사용자를 위한 프로덕션 API에 최적입니다.',
           },
           {
             q: 'Ollama는 Qwen의 Multi-GPU 추론을 네이티브로 지원합니까?',
@@ -3107,7 +3137,7 @@ docker run --gpus all \
           },
           {
             q: 'Qwen 추론에서 Alibaba Cloud가 RunPod보다 저렴합니까?',
-            a: 'Alibaba Cloud PAI는 GPU 등급 및 지역에 따라 시간당 $0.50–2.00입니다. RunPod A40 48 GB는 시간당 $0.44입니다. Alibaba Cloud는 일반 Ollama보다 20–30% 빠를 수 있는 Qwen 사전 구성 추론 환경을 제공합니다 — 이미 Alibaba Cloud 생태계를 사용하고 있다면 시도해볼 만합니다. 순수 비용 측면에서는 RunPod 스팟 인스턴스가 더 저렴합니다.',
+            a: 'Alibaba Cloud PAI는 GPU 등급 및 지역에 따라 시간당 $0.50–2.00입니다. RunPod A40 48 GB는 시간당 $0.44입니다. Alibaba Cloud는 Alibaba가 Qwen에 최적화되었다고 설명하는 Qwen 사전 구성 추론 환경을 제공합니다 — 이미 Alibaba Cloud 생태계를 사용하고 있다면 시도해볼 만합니다. 순수 비용 측면에서는 RunPod 스팟 인스턴스가 더 저렴합니다.',
           },
           {
             q: '상시 가동 Qwen 서버는 전기를 얼마나 사용합니까?',
@@ -3123,7 +3153,7 @@ docker run --gpus all \
         id: 'update-log',
         title: '업데이트 기록',
         items: [
-          '2026-05-26: 최초 게시. 2026년 5월 하드웨어 벤치마크 데이터. Newegg, Amazon 및 GPU 시장 추적기에서 가격 검증.',
+          '2026-05-26: 최초 게시. 가격과 속도는 참고용 범위이며 PromptQuorum의 실측 결과가 아닙니다. 현재 판매 정보를 확인하십시오.',
           '2026-10-19: Qwen3를 Qwen의 이전 세대(여전히 널리 배포됨)로, Qwen 3.6(27B dense, 35B-A3B 전문가 혼합)을 더 새로운 세대로 표기하도록 변경.',
           '다음 검토 예정: 2026-11-26',
         ],
@@ -3147,7 +3177,7 @@ docker run --gpus all \
           name: '프로덕션 Qwen 배포에서 Ollama와 vLLM의 차이점은 무엇입니까?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Ollama는 설정이 쉽고 Multi-GPU 분산을 자동으로 처리합니다 — 개인 서버 및 동시 사용자 20명 미만의 팀에 최적입니다. vLLM은 텐서 병렬성과 연속 배칭을 사용하여 동시 부하에서 2–4배 효율적 — 시간당 100개 이상의 요청이나 다수 사용자를 위한 프로덕션 API에 최적입니다.',
+            text: 'Ollama는 설정이 쉽고 Multi-GPU 분산을 자동으로 처리합니다 — 개인 서버 및 동시 사용자 20명 미만의 팀에 최적입니다. vLLM은 텐서 병렬성과 연속 배칭을 사용하여 동시 부하에서 일반적으로 더 효율적 — 시간당 100개 이상의 요청이나 다수 사용자를 위한 프로덕션 API에 최적입니다.',
           },
         },
         {
@@ -3163,7 +3193,7 @@ docker run --gpus all \
           name: 'Qwen 추론에서 Alibaba Cloud가 RunPod보다 저렴합니까?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Alibaba Cloud PAI는 GPU 등급에 따라 시간당 $0.50–2.00입니다. RunPod A40 48 GB는 시간당 $0.44입니다. Alibaba Cloud는 일반 Ollama보다 20–30% 빠를 수 있는 Qwen 사전 구성 추론 환경을 제공합니다.',
+            text: 'Alibaba Cloud PAI는 GPU 등급에 따라 시간당 $0.50–2.00입니다. RunPod A40 48 GB는 시간당 $0.44입니다. Alibaba Cloud는 Alibaba가 Qwen에 최적화되었다고 설명하는 Qwen 사전 구성 추론 환경을 제공합니다.',
           },
         },
         {

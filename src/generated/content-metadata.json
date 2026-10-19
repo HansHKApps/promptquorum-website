@@ -3390,7 +3390,7 @@
       "images": []
     },
     "run-qwen-vl-locally-2026": {
-      "dateModified": "2026-07-31",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -3408,11 +3408,11 @@
       "images": [
         {
           "url": "/images/run-qwen-vl-locally-2026-vision-pipeline-en.svg",
-          "title": "Qwen2-VL vision pipeline: a 4096×4096 image passes through the vision encoder into the 7B language model (~6 GB VRAM) and returns OCR or Q&A text — fully offline, no cloud upload."
+          "title": "Vision pipeline: an image passes through the vision encoder into the language model and returns OCR or Q&A text, processed by your local Ollama server."
         },
         {
           "url": "/images/run-qwen-vl-locally-2026-ollama-setup-steps-en.svg",
-          "title": "Ollama setup for Qwen2-VL in 5 steps: install Ollama, pull qwen2-vl:7b (~6 GB), run and attach an image, send via the API, then verify CJK OCR — under 10 minutes on an 8 GB VRAM GPU."
+          "title": "Ollama setup in 5 steps: install or update Ollama, pull a Qwen vision tag, run and attach an image, send it via the API, then verify CJK OCR."
         }
       ]
     },
@@ -3435,7 +3435,7 @@
       "images": []
     },
     "qwen-local-deployment-guide-2026": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -3453,11 +3453,11 @@
       "images": [
         {
           "url": "/images/qwen-local-deployment-guide-2026-hardware-hero-en.webp",
-          "title": "Qwen3 VRAM requirements by model size (Q4_K_M) — PromptQuorum 2026"
+          "title": "Qwen3 VRAM requirements by model size (Q4_K_M) — approximate values"
         },
         {
           "url": "/images/qwen-local-deployment-guide-2026-benchmarks-hero-en.webp",
-          "title": "Qwen3 benchmark scores (Q4_K_M) — PromptQuorum 2026"
+          "title": "Qwen3 benchmark scores (Q4_K_M) — approximate values"
         }
       ]
     },
@@ -7500,7 +7500,7 @@
       "images": []
     },
     "qwen-local-deployment-complete-guide-2026": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,

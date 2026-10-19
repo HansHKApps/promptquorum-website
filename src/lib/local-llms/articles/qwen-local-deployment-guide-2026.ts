@@ -105,7 +105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'What is the best Qwen model for coding locally?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 32B is the best locally runnable coding model — it scores 92.7% on HumanEval and needs a 24 GB GPU (RTX 3090 or RTX 4090). If your VRAM is 12 GB or less, use Qwen2.5-Coder 14B (HumanEval 85.2%, 9.5 GB VRAM).' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 32B is the largest dedicated Qwen2.5 coding model that fits a 24 GB GPU (RTX 3090 or RTX 4090); Qwen reports 92.7% on HumanEval for the full-precision Instruct version. Qwen 3.6 27B also ships a coding variant (`qwen3.6:27b-coding`). If your VRAM is 12 GB or less, use Qwen2.5-Coder 14B (HumanEval 85.2%, 9.5 GB VRAM).' },
         },
         {
           '@type': 'Question',
@@ -125,7 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'Is Qwen good for Chinese-language tasks?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 was pretrained on a large Chinese corpus and natively handles Simplified and Traditional Chinese, Japanese, Korean, and 26 other languages. It consistently outperforms Llama 3.3 and Mistral on Chinese reading comprehension and generation — making it the preferred choice for Chinese-language local AI.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 was pretrained on a large Chinese corpus and natively handles Simplified and Traditional Chinese, Japanese, Korean, and many more languages (see the model card). It is a strong candidate for Chinese-language local AI; test it on your own documents.' },
         },
         {
           '@type': 'Question',
@@ -148,12 +148,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3 8B runs in 5.5 GB of VRAM** — one `ollama pull qwen3:8b` command and you\'re running at 57 tokens/sec on an RTX 3060.',
           '**Four practical sub-families**: Qwen3 (general, thinking-mode; previous generation, still widely deployed), Qwen2.5 (general, widest tested), Qwen2.5-Coder (coding, 92.7% HumanEval at 32B), Qwen2.5-VL (vision, CJK document OCR; Qwen3-VL is the newer vision generation).',
           '**Dense architecture = consumer-friendly**: unlike DeepSeek V4-Flash (a 284B-parameter MoE model), Qwen2.5-72B fits in 46 GB VRAM on two RTX 3090s.',
-          '**Native multilingual**: pretrained on Chinese, Japanese, Korean, Arabic, German, French, and 23 more — Qwen3 consistently beats Llama 3.3 on CJK tasks.',
+          '**Native multilingual**: pretrained on Chinese, Japanese, Korean, Arabic, German, French, and many more languages (see the model card for the exact list).',
           '**Q4_K_M is the right quantization** for most users: ~55% VRAM reduction, less than 1% quality loss on benchmarks.',
           '**Hardware decision**: 12 GB VRAM → 14B model; 24 GB VRAM → 32B; 48 GB+ (two GPUs or Apple Silicon 64 GB) → 72B.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3 8B runs in 5.5 GB VRAM via Ollama; Qwen2.5-Coder 32B needs 24 GB and scores 92.7% on HumanEval.' },
+          { type: 'one-sentence', text: 'Qwen3 8B runs in 5.5 GB VRAM via Ollama; Qwen2.5-Coder 32B needs 24 GB and is reported at 92.7% on HumanEval.' },
           { type: 'plain-terms', text: 'Qwen is a family of open-weight AI models from Alibaba that run on consumer GPUs — from a laptop GPU to a desktop RTX 4090 — without sending data to any cloud.' },
         ],
       },
@@ -198,7 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'tip', text: 'Found your VRAM tier? See [exactly which GPU or Mac to buy for that tier](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M5 Pro or dual GPU.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-en.webp',
-        imageCaption: 'Qwen3 VRAM requirements by model size (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'Qwen3 VRAM requirements by model size (Q4_K_M) — approximate values',
       },
       ollamaSetup: {
         id: 'ollama-setup',
@@ -226,7 +226,7 @@ ollama pull qwen2.5:7b           # Qwen2.5 general 7B (~5.5 GB)
 ollama pull qwen2.5:14b          # Qwen2.5 general 14B (~9.5 GB)
 ollama pull qwen2.5:32b          # Qwen2.5 general 32B (~20.5 GB)
 ollama pull qwen2.5-coder:32b    # Qwen2.5-Coder 32B (~20.5 GB)
-ollama pull qwen2.5vl:7b          # vision 7B (~6.2 GB)
+ollama pull qwen2.5vl:7b          # vision 7B (~6.0 GB)
 
 # Run interactively
 ollama run qwen2.5:7b
@@ -273,7 +273,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'benchmarks',
         title: 'How Does Qwen3 Perform on Consumer Hardware?',
         content: [
-          '**Qwen3 32B Q4_K_M on an RTX 4090 delivers 28 tokens/sec — fast enough for real-time coding assistance.** Qwen3 32B is the previous Qwen generation; the newer Qwen 3.6 27B fits the same 24 GB tier (see the hardware table above). Scores below are for Q4_K_M GGUF builds tested on Ollama. Full-precision FP16 scores are 1–2% higher.',
+          '**Qwen3 32B Q4_K_M on an RTX 4090 delivers 28 tokens/sec — fast enough for real-time coding assistance.** Qwen3 32B is the previous Qwen generation; the newer Qwen 3.6 27B fits the same 24 GB tier (see the hardware table above). The figures below are indicative values, not PromptQuorum measurements: speeds vary with GPU, driver, context length and Ollama version, accuracy scores have not been re-run by us, and Q4_K_M builds typically score slightly below full precision. Check each model card and test on your own hardware.',
         ],
         rows: [
           { 'Model (Q4_K_M)': 'Qwen3 8B', 'MMLU': '74.2%', 'Math': '58.8%', 'HumanEval': '57.3%', 'Speed (RTX 3060 12 GB)': '57 tok/s' },
@@ -290,13 +290,13 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: 'Want that 92.7% HumanEval score at 27 tok/s? See the [24 GB GPU that runs Qwen2.5-Coder 32B](#affiliate-picks).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-en.webp',
-        imageCaption: 'Qwen3 benchmark scores (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'Qwen3 benchmark scores (Q4_K_M) — approximate values',
       },
       vsComparison: {
         id: 'vs-comparison',
         title: 'Qwen vs DeepSeek vs Llama: Which to Run Locally',
         content: [
-          '**Qwen wins on VRAM efficiency on consumer hardware; DeepSeek\'s current V4 line is large-scale (V4-Flash: 284B total parameters) and impractical on a single consumer GPU; Llama 3.3 70B is the best single-GPU option if you prefer Meta\'s open model.** The table below compares the practical options at each VRAM tier.',
+          '**In our assessment Qwen is the more VRAM-efficient family on consumer hardware; DeepSeek\'s current V4 line is large-scale (V4-Flash: 284B total parameters) and impractical on a single consumer GPU; Llama 3.3 70B is an alternative if you prefer Meta\'s open model and accept offloading part of the layers to system RAM on a single GPU.** The table below compares the practical options at each VRAM tier.',
         ],
         rows: [
           { 'VRAM Tier': '6 GB', 'Best Qwen': 'Qwen3 8B', 'Best Competitor': 'Llama 3.2 3B (fits, but 3B)', 'Verdict': 'Qwen3 8B wins — same VRAM, much larger model' },
@@ -312,13 +312,13 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'regional-context',
         title: 'Chinese Users: Data Sovereignty and Local Deployment',
         content: [
-          '**Running Qwen3 locally means zero data transfer outside your machine — no compliance exposure under China\'s Data Security Law (DSL) or the Cybersecurity Law.** Cloud-based LLM APIs require sending prompts to foreign servers, which creates cross-border data transfer risk under DSL Article 31.',
-          'Qwen3 is trained by Alibaba\'s Qwen team on a predominantly Chinese and multilingual corpus. This makes it the strongest locally-deployable model for Simplified Chinese, Traditional Chinese, Classical Chinese, and mixed-language (Chinese/English) documents.',
+          '**Running Qwen3 locally keeps inference prompts on your own hardware, so no inference data is sent to a cloud API — which avoids that cross-border transfer for the inference layer.** Cloud-based LLM APIs require sending prompts to servers abroad, which can raise cross-border data transfer questions under China\'s Data Security Law (DSL) and related rules. Whether your overall setup complies depends on your data, your purposes and your own legal assessment; this is not legal advice.',
+          'Qwen3 is trained by Alibaba\'s Qwen team on a predominantly Chinese and multilingual corpus. This makes it a strong candidate for Simplified Chinese, Traditional Chinese, Classical Chinese, and mixed-language (Chinese/English) documents; test it on your own material.',
           '**For enterprise deployments in China**: air-gapped Qwen3 setups (no internet at inference time) are generally easier to align with CAC regulations on generative AI, but compliance depends on your use case and should be confirmed with legal counsel. The model runs entirely on local compute, and the regulator\'s focus, as we read it, is training data and output moderation rather than inference on offline hardware. See [running AI fully offline](/power-local-llm/local-ai-behind-firewall-offline-2026) for a complete air-gapped setup guide.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3 runs completely offline after download — no data leaves your machine, which removes cross-border transfer of inference data (compliance under China\'s Data Security Law still depends on your use case).' },
-          { type: 'plain-terms', text: 'When you run Qwen3 locally, your prompts and documents never leave your computer. There is no cloud API call, no foreign server, and no data that regulators can intercept or audit.' },
+          { type: 'one-sentence', text: 'Qwen3 can run fully offline after download, so inference data need not leave your machine, which removes cross-border transfer of inference data (compliance under China\'s Data Security Law still depends on your use case).' },
+          { type: 'plain-terms', text: 'When you run Qwen3 locally, your prompts and documents stay on your computer unless you connect it to a cloud service. Inference needs no cloud API call; how the rest of your setup handles data is your responsibility.' },
         ],
       },
       affiliatePicks: {
@@ -443,11 +443,11 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'How much VRAM do I need to run Qwen3 8B locally?', a: 'Qwen3 8B Q4_K_M requires 5.5 GB of VRAM. An RTX 3060 6 GB, RTX 4060, or Apple M-series chip with 8 GB of unified memory all run it. At 8 GB VRAM you have headroom for context and system RAM.' },
-          { q: 'What is the best Qwen model for coding locally?', a: 'Qwen2.5-Coder 32B is the best locally runnable coding model — it scores 92.7% on HumanEval and needs a 24 GB GPU (RTX 3090 or RTX 4090). If your VRAM is 12 GB or less, use Qwen2.5-Coder 14B (HumanEval 85.2%, 9.5 GB VRAM).' },
+          { q: 'What is the best Qwen model for coding locally?', a: 'Qwen2.5-Coder 32B is the largest dedicated Qwen2.5 coding model that fits a 24 GB GPU (RTX 3090 or RTX 4090); Qwen reports 92.7% on HumanEval for the full-precision Instruct version. Qwen 3.6 27B also ships a coding variant (`qwen3.6:27b-coding`). If your VRAM is 12 GB or less, use Qwen2.5-Coder 14B (HumanEval 85.2%, 9.5 GB VRAM).' },
           { q: 'How does Qwen compare to DeepSeek for local deployment?', a: 'Qwen uses a dense architecture that fits on consumer hardware. DeepSeek\'s current open-weight line is V4 (V4-Flash: 284B total parameters, mixture-of-experts), which is far beyond a single consumer GPU; the older DeepSeek-V2.5 (236B MoE, 2024) has been superseded by V3 and then V4. For limited VRAM, a Qwen model is the practical choice.' },
           { q: 'Can I run Qwen on a Mac?', a: 'Yes. Apple Silicon uses unified memory — an M2 Pro 32 GB runs Qwen3 14B at ~32 tok/s. An M3 Max 64 GB handles Qwen3 32B at ~22 tok/s. Use the Ollama macOS app or LM Studio for the simplest setup.' },
           { q: 'What Ollama command do I use for Qwen?', a: 'For the flagship, run `ollama run qwen3.6:27b` (~17 GB VRAM). For Qwen3, use `ollama pull qwen3:8b`. For Qwen2.5, use `ollama pull qwen2.5:7b` for 7B, `ollama pull qwen2.5:14b` for 14B, `ollama pull qwen2.5:32b` for 32B, or `ollama pull qwen2.5-coder:32b` for the coding variant. Always use explicit size tags.' },
-          { q: 'Is Qwen good for Chinese-language tasks?', a: 'Qwen3 was pretrained on a large Chinese corpus and natively supports Simplified Chinese, Traditional Chinese, Japanese, Korean, Arabic, and 24 more languages. It consistently outperforms Llama 3.3 and Mistral on Chinese reading comprehension and generation.' },
+          { q: 'Is Qwen good for Chinese-language tasks?', a: 'Qwen3 was pretrained on a large Chinese corpus and natively supports Simplified Chinese, Traditional Chinese, Japanese, Korean, Arabic, and many more languages (see the model card). It is a strong candidate for Chinese-language local AI; test it on your own documents.' },
           { q: 'What quantization should I use for Qwen3?', a: 'Q4_K_M is the recommended default — it cuts VRAM by ~55% versus FP16 with less than 1% quality loss on benchmarks. Use Q8_0 if you have spare VRAM and want near-FP16 quality. Avoid Q2_K for Chinese-language use.' },
           { q: 'Does Qwen2.5-VL work for Chinese document OCR?', a: 'Yes — Qwen2.5-VL 7B runs through Ollama (`ollama pull qwen2.5vl:7b`, a 6.0 GB download), accepts text and image input, and can read Chinese, Japanese, and Korean text in scanned documents; test it on your own scans. The newer Qwen3-VL is `qwen3-vl:8b`. See the full guide at /local-llms/run-qwen-vl-locally-2026.' },
         ],
@@ -457,7 +457,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Related Reading',
         links: [
           { url: '/local-llms/run-qwen-locally-guide-2026', title: 'How to Run Qwen 3 Locally in 2026', description: 'Single-model setup guide for Qwen 3.6 27B with Ollama and LM Studio — the fastest path to a working Qwen instance.' },
-          { url: '/local-llms/run-qwen-vl-locally-2026', title: 'Run Qwen2-VL Locally 2026', description: 'Full guide to Qwen2-VL — CJK document OCR, image Q&A, and multilingual screenshot reading on consumer hardware.' },
+          { url: '/local-llms/run-qwen-vl-locally-2026', title: 'Run Qwen2.5-VL and Qwen3-VL Locally 2026', description: 'Full guide to Qwen2.5-VL and Qwen3-VL — Ollama tags, sizes, licences, CJK document OCR and image Q&A on consumer hardware.' },
           { url: '/local-llms/qwen-vs-llama-vs-mistral', title: 'Qwen vs Llama vs Mistral 2026', description: 'Head-to-head benchmark comparison of Qwen 3.6 27B, Llama 4 Scout, and Mistral Small 3.1 on MMLU, SWE-bench, and MATH.' },
           { url: '/local-llms/llm-quantization-explained', title: 'LLM Quantization Explained', description: 'What Q4_K_M, Q8_0, and IQ4_XS mean — how they affect VRAM, speed, and output quality.' },
           { url: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'DeepSeek vs Qwen Local Comparison 2026', description: 'Full head-to-head: DeepSeek-R1-Distill-Qwen-32B vs Qwen3 32B on coding, reasoning, Chinese, and creative writing — with Mac vs NVIDIA breakdowns.' },
@@ -532,7 +532,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': '¿Cuál es el mejor modelo Qwen para programación en local?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen2.5-Coder 32B — 92,7 % en HumanEval, necesita GPU de 24 GB. Con 12 GB de VRAM o menos: Qwen2.5-Coder 14B (85,2 %, 9,5 GB de VRAM).',
+              'text': 'Qwen2.5-Coder 32B es el modelo de código dedicado más grande de Qwen2.5 que cabe en una GPU de 24 GB; Qwen indica un 92,7 % en HumanEval para la versión Instruct en precisión completa. Qwen 3.6 27B también tiene una variante de código (`qwen3.6:27b-coding`). Con 12 GB de VRAM o menos: Qwen2.5-Coder 14B (85,2 %, 9,5 GB de VRAM).',
             },
           },
           {
@@ -564,7 +564,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': '¿Qwen es adecuado para tareas en chino?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sí. Qwen3 fue preentrenado sobre un gran corpus chino y soporta de forma nativa chino simplificado, chino tradicional, japonés, coreano y 24 idiomas más.',
+              'text': 'Sí. Qwen3 fue preentrenado sobre un gran corpus chino y soporta de forma nativa chino simplificado, chino tradicional, japonés, coreano y muchos idiomas más (consulta la ficha del modelo). Es un candidato sólido para IA local en chino; pruébalo con tus propios documentos.',
             },
           },
           {
@@ -594,13 +594,13 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Qwen3 8B funciona con 5,5 GB de VRAM** — un solo comando `ollama pull qwen3:8b` y ya está en marcha a 57 tokens/seg en una RTX 3060.',
           '**Cuatro subfamilias prácticas**: Qwen3 (general, modo de razonamiento; generación anterior, aún muy desplegada), Qwen2.5 (general, la más probada), Qwen2.5-Coder (programación, 92,7 % en HumanEval en 32B), Qwen2.5-VL (visión, OCR de documentos CJK; Qwen3-VL es la generación de visión más reciente).',
           '**Arquitectura densa = compatible con hardware de consumo**: a diferencia de DeepSeek V4-Flash (modelo MoE de 284B parámetros), Qwen2.5-72B cabe en 46 GB de VRAM en dos RTX 3090.',
-          '**Multilingüe nativo**: preentrenado en chino, japonés, coreano, árabe, alemán, francés y 23 idiomas más — Qwen3 supera sistemáticamente a Llama 3.3 en tareas CJK.',
+          '**Multilingüe nativo**: preentrenado en chino, japonés, coreano, árabe, alemán, francés y muchos idiomas más (consulta la ficha del modelo para la lista exacta).',
           '**Q4_K_M es la cuantización correcta** para la mayoría de usuarios: ~55 % de reducción de VRAM, menos del 1 % de pérdida de calidad en los benchmarks.',
           '**Decisión de hardware**: 12 GB de VRAM → modelo 14B; 24 GB → 32B; 48 GB+ (dos GPUs o Apple Silicon 64 GB) → 72B.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen cubre tres subfamilias de despliegue local — uso general (7B–72B), programación (Coder 7B–32B) y visión (VL 3B–72B) — todas ejecutables mediante Ollama o LM Studio.' },
-          { type: 'plain-terms', text: 'Ejecutar un modelo en local significa que la IA corre en tu propio ordenador en lugar de en un servidor en la nube. Ningún dato sale de tu máquina y no hay coste por token después de adquirir el hardware.' },
+          { type: 'plain-terms', text: 'Ejecutar un modelo en local significa que la IA corre en tu propio ordenador en lugar de en un servidor en la nube. Los datos de inferencia no salen de tu máquina (salvo que actives servicios en la nube) y no hay coste por token después de adquirir el hardware.' },
         ],
       },
       modelFamily: {
@@ -644,7 +644,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: '¿Ya identificaste tu nivel de VRAM? Consulta [exactamente qué GPU o Mac comprar para ese nivel](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M5 Pro o doble GPU.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-es.webp',
-        imageCaption: 'Requisitos de VRAM de Qwen3 por tamaño de modelo (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'Requisitos de VRAM de Qwen3 por tamaño de modelo (Q4_K_M) — valores aproximados',
       },
       ollamaSetup: {
         id: 'ollama-setup',
@@ -672,7 +672,7 @@ ollama pull qwen2.5:7b           # Qwen2.5 uso general 7B (~5,5 GB)
 ollama pull qwen2.5:14b          # Qwen2.5 uso general 14B (~9,5 GB)
 ollama pull qwen2.5:32b          # Qwen2.5 uso general 32B (~20,5 GB)
 ollama pull qwen2.5-coder:32b    # Qwen2.5-Coder 32B (~20,5 GB)
-ollama pull qwen2.5vl:7b          # visión 7B (~6,2 GB)
+ollama pull qwen2.5vl:7b          # visión 7B (~6,0 GB)
 
 # Ejecutar en modo interactivo
 ollama run qwen2.5:7b
@@ -719,7 +719,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'benchmarks',
         title: 'Rendimiento en benchmarks en hardware de consumo',
         content: [
-          '**Qwen3 32B Q4_K_M en una RTX 4090 entrega 28 tokens/seg — velocidad suficiente para asistencia de código en tiempo real.** Qwen3 32B es la generación anterior de Qwen; el más reciente Qwen 3.6 27B cabe en el mismo nivel de 24 GB (consulta la tabla de hardware anterior). Las puntuaciones a continuación corresponden a builds GGUF Q4_K_M probados en Ollama. Las puntuaciones FP16 son un 1–2 % mayores.',
+          '**Qwen3 32B Q4_K_M en una RTX 4090 entrega 28 tokens/seg — velocidad suficiente para asistencia de código en tiempo real.** Qwen3 32B es la generación anterior de Qwen; el más reciente Qwen 3.6 27B cabe en el mismo nivel de 24 GB (consulta la tabla de hardware anterior). Las cifras siguientes son valores orientativos, no mediciones de PromptQuorum: la velocidad varía según la GPU, el controlador, la longitud de contexto y la versión de Ollama, no hemos vuelto a ejecutar las puntuaciones de precisión y las versiones Q4_K_M suelen puntuar algo por debajo de la precisión completa. Consulta la ficha de cada modelo y prueba en tu propio hardware.',
         ],
         rows: [
           { 'Modelo (Q4_K_M)': 'Qwen3 8B', 'MMLU': '74,2 %', 'Math': '58,8 %', 'HumanEval': '57,3 %', 'Velocidad (RTX 3060 12 GB)': '57 tok/s' },
@@ -736,13 +736,13 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: '¿Quieres esa puntuación del 92,7 % en HumanEval a 27 tok/s? Consulta la [GPU de 24 GB que ejecuta Qwen2.5-Coder 32B](#affiliate-picks).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-es.webp',
-        imageCaption: 'Puntuaciones de benchmark de Qwen3 (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'Puntuaciones de benchmark de Qwen3 (Q4_K_M) — valores aproximados',
       },
       vsComparison: {
         id: 'vs-comparison',
         title: 'Qwen vs DeepSeek vs Llama: qué ejecutar en local',
         content: [
-          '**Qwen gana en eficiencia de VRAM en hardware de consumo; la línea actual V4 de DeepSeek es de gran escala (V4-Flash: 284B de parámetros totales) y poco práctica en una sola GPU de consumo; Llama 3.3 70B es la mejor opción en una sola GPU si prefieres el modelo abierto de Meta.** La tabla a continuación compara las opciones prácticas en cada nivel de VRAM.',
+          '**En nuestra valoración, Qwen es la familia más eficiente en VRAM en hardware de consumo; la línea actual V4 de DeepSeek es de gran escala (V4-Flash: 284B de parámetros totales) y poco práctica en una sola GPU de consumo; Llama 3.3 70B es una alternativa si prefieres el modelo abierto de Meta y aceptas descargar parte de las capas a la RAM del sistema en una sola GPU.** La tabla a continuación compara las opciones prácticas en cada nivel de VRAM.',
         ],
         rows: [
           { 'Nivel de VRAM': '6 GB', 'Mejor Qwen': 'Qwen3 8B', 'Mejor competidor': 'Llama 3.2 3B (cabe, pero solo 3B)', 'Veredicto': 'Qwen3 8B gana — misma VRAM, modelo mucho mayor' },
@@ -758,13 +758,13 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'regional-context',
         title: 'Usuarios hispanohablantes: soberanía de datos y despliegue local',
         content: [
-          '**Ejecutar Qwen3 en local significa que ningún dato sale de tu máquina — sin transferencia a servidores en la nube, sin exposición bajo el RGPD o leyes de protección de datos latinoamericanas.** Las API de LLM en la nube exigen enviar prompts a servidores externos, lo que activa los requisitos de tratamiento de datos y posibles transferencias internacionales.',
-          'Qwen3 fue entrenado por el equipo Qwen de Alibaba sobre un corpus predominantemente chino y multilingüe. Es el modelo con despliegue local más potente para documentos en chino simplificado, chino tradicional y textos mixtos (chino/español/inglés).',
-          '**Para despliegues en empresas hispanohablantes**: una configuración de Qwen3 sin conexión a internet durante la inferencia es plenamente compatible con los marcos regulatorios de España (RGPD/AEPD), México (LFPDPPP), Argentina (Ley 25.326) y otros países hispanohablantes. El modelo corre íntegramente en hardware local — ningún tercero accede a los datos de entrada o salida. Consulta [ejecutar IA completamente sin conexión](/es/power-local-llm/local-ai-behind-firewall-offline-2026) para una guía completa de configuración aislada.',
+          '**Ejecutar Qwen3 en local mantiene los prompts de inferencia en tu propio hardware, de modo que no se envían datos de inferencia a una API en la nube y se evita esa transferencia internacional en la capa de inferencia.** Las API de LLM en la nube exigen enviar prompts a servidores externos, lo que puede activar los requisitos del RGPD y de las leyes latinoamericanas sobre tratamiento de datos y transferencias internacionales. Que tu configuración en conjunto cumpla la normativa depende de tus datos, tus finalidades y tu propia valoración jurídica; esto no es asesoramiento legal.',
+          'Qwen3 fue entrenado por el equipo Qwen de Alibaba sobre un corpus predominantemente chino y multilingüe. Es un candidato sólido para documentos en chino simplificado, chino tradicional y textos mixtos (chino/español/inglés); pruébalo con tu propio material.',
+          '**Para despliegues en empresas hispanohablantes**: una configuración de Qwen3 sin conexión a internet durante la inferencia puede facilitar el cumplimiento de los marcos regulatorios de España (RGPD/AEPD), México (LFPDPPP), Argentina (Ley 25.326) y otros países hispanohablantes, pero el cumplimiento depende de tu caso de uso y conviene confirmarlo con asesoría jurídica. El modelo corre íntegramente en hardware local, por lo que ningún proveedor externo recibe los datos de entrada o salida de la inferencia. Consulta [ejecutar IA completamente sin conexión](/es/power-local-llm/local-ai-behind-firewall-offline-2026) para una guía completa de configuración aislada.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3 funciona completamente sin conexión después de la descarga — ningún dato sale de tu máquina, reduciendo el riesgo de transferencia transfronteriza de datos bajo el RGPD y las leyes latinoamericanas.' },
-          { type: 'plain-terms', text: 'Cuando ejecutas Qwen3 en local, tus prompts y documentos nunca abandonan tu ordenador. No hay llamadas a una API en la nube, no hay servidor externo y no hay datos a los que reguladores o terceros puedan acceder.' },
+          { type: 'one-sentence', text: 'Qwen3 puede funcionar completamente sin conexión después de la descarga, por lo que los datos de inferencia no tienen que salir de tu máquina, lo que reduce el riesgo de transferencia transfronteriza de datos bajo el RGPD y las leyes latinoamericanas (el cumplimiento sigue dependiendo de tu caso de uso).' },
+          { type: 'plain-terms', text: 'Cuando ejecutas Qwen3 en local, tus prompts y documentos permanecen en tu ordenador salvo que lo conectes a un servicio en la nube. La inferencia no necesita llamar a ninguna API en la nube; cómo trate los datos el resto de tu configuración es responsabilidad tuya.' },
         ],
       },
       affiliatePicks: {
@@ -889,11 +889,11 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Preguntas frecuentes',
         faqs: [
             { q: '¿Cuánta VRAM necesito para ejecutar Qwen3 8B en local?', a: 'Qwen3 8B Q4_K_M requiere 5,5 GB de VRAM. Una RTX 3060 6 GB, RTX 4060 o chip Apple M con 8 GB de memoria unificada son suficientes.' },
-            { q: '¿Cuál es el mejor modelo Qwen para programación en local?', a: 'Qwen2.5-Coder 32B — 92,7 % en HumanEval, necesita GPU de 24 GB. Con 12 GB de VRAM o menos: Qwen2.5-Coder 14B (85,2 %, 9,5 GB de VRAM).' },
+            { q: '¿Cuál es el mejor modelo Qwen para programación en local?', a: 'Qwen2.5-Coder 32B es el modelo de código dedicado más grande de Qwen2.5 que cabe en una GPU de 24 GB; Qwen indica un 92,7 % en HumanEval para la versión Instruct en precisión completa. Qwen 3.6 27B también tiene una variante de código (`qwen3.6:27b-coding`). Con 12 GB de VRAM o menos: Qwen2.5-Coder 14B (85,2 %, 9,5 GB de VRAM).' },
             { q: '¿Cómo se compara Qwen con DeepSeek para el despliegue local?', a: 'Qwen usa arquitectura densa compatible con hardware de consumo. La línea abierta actual de DeepSeek es V4 (V4-Flash: 284B de parámetros totales, MoE), muy por encima de una sola GPU de consumo; DeepSeek-V2.5 (236B MoE, 2024) quedó superado por V3 y luego por V4.' },
             { q: '¿Puedo ejecutar Qwen en un Mac?', a: 'Sí. M2 Pro 32 GB ejecuta Qwen3 14B a ~32 tok/s. M3 Max 64 GB maneja Qwen3 32B a ~22 tok/s.' },
             { q: '¿Qué comando de Ollama uso para Qwen?', a: 'Para la insignia, `ollama run qwen3.6:27b` (~17 GB de VRAM). Para Qwen3, `ollama pull qwen3:8b`. Para Qwen2.5, `ollama pull qwen2.5:7b` para 7B, `:14b` para 14B, `:32b` para 32B, o `qwen2.5-coder:32b` para la variante de programación. Usa siempre etiquetas de tamaño explícitas.' },
-            { q: '¿Qwen es adecuado para tareas en chino?', a: 'Sí. Qwen3 fue preentrenado sobre un gran corpus chino y soporta de forma nativa chino simplificado, chino tradicional, japonés, coreano y 24 idiomas más.' },
+            { q: '¿Qwen es adecuado para tareas en chino?', a: 'Sí. Qwen3 fue preentrenado sobre un gran corpus chino y soporta de forma nativa chino simplificado, chino tradicional, japonés, coreano y muchos idiomas más (consulta la ficha del modelo). Es un candidato sólido para IA local en chino; pruébalo con tus propios documentos.' },
             { q: '¿Qué cuantización debo usar para Qwen3?', a: 'Q4_K_M por defecto — reduce la VRAM ~55 % respecto a FP16 con menos del 1 % de pérdida de calidad. Evita Q2_K para uso en chino.' },
             { q: '¿Funciona Qwen2.5-VL para OCR de documentos en chino?', a: 'Sí — `ollama pull qwen2.5vl:7b` (descarga de 6,0 GB), acepta texto e imagen y lee texto CJK en documentos escaneados; prueba con tus propios escaneos. El más reciente Qwen3-VL es `qwen3-vl:8b`.' },
           ],
@@ -903,7 +903,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Lectura relacionada',
         links: [
           { url: '/es/local-llms/run-qwen-locally-guide-2026', title: 'Cómo ejecutar Qwen 3 en local en 2026', description: 'Guía de configuración de un solo modelo para Qwen 3.6 27B con Ollama y LM Studio — la forma más rápida de tener una instancia de Qwen funcionando.' },
-          { url: '/es/local-llms/run-qwen-vl-locally-2026', title: 'Ejecutar Qwen2-VL en local en 2026', description: 'Guía completa de Qwen2-VL — OCR de documentos CJK, preguntas sobre imágenes y lectura multilingüe de capturas de pantalla en hardware de consumo.' },
+          { url: '/es/local-llms/run-qwen-vl-locally-2026', title: 'Ejecutar Qwen2.5-VL y Qwen3-VL en local en 2026', description: 'Guía completa de Qwen2.5-VL y Qwen3-VL — etiquetas de Ollama, tamaños, licencias, OCR de documentos CJK y preguntas sobre imágenes en hardware de consumo.' },
           { url: '/es/local-llms/qwen-vs-llama-vs-mistral', title: 'Qwen vs Llama vs Mistral 2026', description: 'Comparación de benchmarks de Qwen 3.6 27B, Llama 4 Scout y Mistral Small 3.1 en MMLU, SWE-bench y MATH.' },
           { url: '/es/local-llms/llm-quantization-explained', title: 'Cuantización de LLM explicada', description: 'Qué significan Q4_K_M, Q8_0 e IQ4_XS — cómo afectan a la VRAM, la velocidad y la calidad de salida.' },
           { url: '/es/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'Comparación local DeepSeek vs Qwen 2026', description: 'Comparación completa: DeepSeek-R1-Distill-Qwen-32B vs Qwen3 32B en programación, razonamiento, chino y escritura creativa — con desglose Mac vs NVIDIA.' },
@@ -966,11 +966,11 @@ curl http://localhost:11434/v1/chat/completions \\
       inLanguage: 'ar',
       mainEntity: [
         { '@type': 'Question', name: 'كم من VRAM أحتاج لتشغيل Qwen3 8B محليًا؟', acceptedAnswer: { '@type': 'Answer', text: 'يتطلب Qwen3 8B Q4_K_M 5.5 GB من VRAM. تكفي NVIDIA RTX 3060 6 GB أو RTX 4060 أو شريحة Apple M بذاكرة موحدة 8 GB.' } },
-        { '@type': 'Question', name: 'ما أفضل نموذج Qwen للبرمجة محليًا؟', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 32B هو أفضل نموذج برمجة قابل للتشغيل محليًا — يحقق 92.7% في HumanEval ويحتاج إلى بطاقة رسوم بسعة 24 GB (RTX 3090 أو RTX 4090). بـ 12 GB من VRAM أو أقل، استخدم Qwen2.5-Coder 14B (HumanEval 85.2%، 9.5 GB من VRAM).' } },
+        { '@type': 'Question', name: 'ما أفضل نموذج Qwen للبرمجة محليًا؟', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 32B أكبر نموذج برمجة مخصص من Qwen2.5 يتسع في بطاقة رسوم بسعة 24 GB (RTX 3090 أو RTX 4090)؛ وتذكر Qwen نتيجة 92.7% في HumanEval لنسخة Instruct بدقة كاملة. بـ 12 GB من VRAM أو أقل، استخدم Qwen2.5-Coder 14B (HumanEval 85.2%، 9.5 GB من VRAM).' } },
         { '@type': 'Question', name: 'كيف يقارن Qwen بـ DeepSeek للنشر المحلي؟', acceptedAnswer: { '@type': 'Answer', text: 'يستخدم Qwen بنية كثيفة تتسع في الأجهزة الاستهلاكية. خط DeepSeek المفتوح الحالي هو V4 (V4-Flash: 284B معامل إجمالي، MoE)، وهو أكبر بكثير من بطاقة رسوم استهلاكية واحدة؛ أما DeepSeek-V2.5 (236B MoE، 2024) فقد حلّ محله V3 ثم V4. عند محدودية VRAM يبقى نموذج Qwen هو الخيار العملي.' } },
         { '@type': 'Question', name: 'هل يمكنني تشغيل Qwen على جهاز Mac؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يستخدم Apple Silicon ذاكرة موحدة — يشغّل M2 Pro 32 GB نموذج Qwen3 14B بـ ~32 token/ثانية. ويتعامل M3 Max 64 GB مع Qwen3 32B بـ ~22 token/ثانية.' } },
         { '@type': 'Question', name: 'ما أمر Ollama الذي أستخدمه لـ Qwen؟', acceptedAnswer: { '@type': 'Answer', text: 'للنموذج الرائد، نفّذ `ollama run qwen3.6:27b` (~17 GB من VRAM). لـ Qwen3، استخدم `ollama pull qwen3:8b`. لـ Qwen2.5، استخدم `ollama pull qwen2.5:7b` لـ 7B، و`ollama pull qwen2.5:14b` لـ 14B، و`ollama pull qwen2.5:32b` لـ 32B، أو `ollama pull qwen2.5-coder:32b` لمتغير البرمجة. استخدم دائمًا وسوم حجم صريحة.' } },
-        { '@type': 'Question', name: 'هل Qwen مناسب للمهام باللغة الصينية؟', acceptedAnswer: { '@type': 'Answer', text: 'دُرّب Qwen3 مسبقًا على مجموعة نصية صينية ضخمة ويدعم أصليًا الصينية المبسّطة والتقليدية واليابانية والكورية والعربية و24 لغة أخرى. يتفوق باستمرار على Llama 3.3 وMistral في الفهم والتوليد بالصينية.' } },
+        { '@type': 'Question', name: 'هل Qwen مناسب للمهام باللغة الصينية؟', acceptedAnswer: { '@type': 'Answer', text: 'دُرّب Qwen3 مسبقًا على مجموعة نصية صينية ضخمة ويدعم أصليًا الصينية المبسّطة والتقليدية واليابانية والكورية والعربية ولغات كثيرة أخرى (راجع بطاقة النموذج). وهو مرشح قوي للذكاء الاصطناعي المحلي بالصينية؛ جرّبه على مستنداتك.' } },
         { '@type': 'Question', name: 'أي تكميم ينبغي أن أستخدم لـ Qwen3؟', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M هو القيمة الافتراضية الموصى بها — يقلّل VRAM بنحو 55% مقارنةً بـ FP16 مع أقل من 1% فقدان جودة في المعايير. استخدم Q8_0 إذا كان لديك فائض من VRAM وتريد جودة قريبة من FP16. تجنّب Q2_K للاستخدام بالصينية.' } },
         { '@type': 'Question', name: 'هل يعمل Qwen2.5-VL لـ OCR للمستندات الصينية؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم — يعمل Qwen2.5-VL 7B عبر Ollama (`ollama pull qwen2.5vl:7b`، تنزيل 6.0 GB) ويقبل النص والصور، ويمكنه قراءة النصوص الصينية واليابانية والكورية في المستندات الممسوحة؛ جرّبه على مستنداتك لأن الدقة تعتمد على جودة المسح. وQwen3-VL الأحدث متاح عبر `qwen3-vl:8b` (6.1 GB).' } },
       ],
@@ -984,13 +984,13 @@ curl http://localhost:11434/v1/chat/completions \\
           '**يعمل Qwen3 8B بـ 5.5 GB من VRAM** — أمر واحد `ollama pull qwen3:8b` وينطلق بـ 57 token/ثانية على RTX 3060.',
           '**أربع عائلات فرعية عملية**: Qwen3 (استخدام عام، وضع استدلال؛ الجيل السابق ولا يزال منتشرًا)، Qwen2.5 (استخدام عام، الأكثر اختبارًا)، Qwen2.5-Coder (برمجة، 92.7% في HumanEval على 32B)، Qwen2.5-VL (رؤية، OCR لمستندات CJK؛ وQwen3-VL هو جيل الرؤية الأحدث).',
           '**بنية كثيفة = متوافقة مع الأجهزة الاستهلاكية**: على عكس DeepSeek V4-Flash (نموذج MoE بحجم 284B معامل)، يتسع Qwen2.5-72B في 46 GB من VRAM على بطاقتي RTX 3090.',
-          '**متعدد اللغات أصليًا**: مدرَّب مسبقًا على الصينية واليابانية والكورية والعربية والألمانية والفرنسية و23 لغة أخرى — يتفوق Qwen3 باستمرار على Llama 3.3 في مهام CJK.',
+          '**متعدد اللغات أصليًا**: مدرَّب مسبقًا على الصينية واليابانية والكورية والعربية والألمانية والفرنسية ولغات كثيرة أخرى (راجع بطاقة النموذج للقائمة الدقيقة).',
           '**Q4_K_M هو التكميم الصحيح** لمعظم المستخدمين: تقليل VRAM بنحو 55%، أقل من 1% فقدان جودة في المعايير.',
           '**قرار الأجهزة**: 12 GB من VRAM ← نموذج 14B؛ 24 GB ← 32B؛ 48 GB+ (بطاقتا رسوم أو Apple Silicon 64 GB) ← 72B.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'يغطي Qwen ثلاث عائلات فرعية للنشر المحلي — استخدام عام (7B–72B) وبرمجة (Coder 7B–32B) ورؤية (VL 3B–72B) — جميعها قابلة للتشغيل عبر Ollama أو LM Studio.' },
-          { type: 'plain-terms', text: 'تشغيل نموذج محليًا يعني أن الذكاء الاصطناعي يعمل على حاسوبك بدلًا من خادم سحابي. لا تغادر أي بيانات جهازك ولا توجد تكلفة لكل token بعد اقتناء الأجهزة.' },
+          { type: 'plain-terms', text: 'تشغيل نموذج محليًا يعني أن الذكاء الاصطناعي يعمل على حاسوبك بدلًا من خادم سحابي. لا تغادر بيانات الاستدلال جهازك (ما لم تفعّل خدمات سحابية) ولا توجد تكلفة لكل token بعد اقتناء الأجهزة.' },
         ],
       },
       modelFamily: {
@@ -1034,7 +1034,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: 'هل حددت مستوى VRAM الخاص بك؟ اطّلع على [بطاقة الرسوم أو جهاز Mac المناسب تمامًا لهذا المستوى](#affiliate-picks) — 6 GB ← RTX 4060، 12 GB ← RTX 4070 Super، 24 GB ← RTX 3090/4090، 48 GB فأكثر ← Mac mini M5 Pro أو بطاقتا رسوم.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-ar.webp',
-        imageCaption: 'متطلبات VRAM لـ Qwen3 حسب حجم النموذج (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'متطلبات VRAM لـ Qwen3 حسب حجم النموذج (Q4_K_M) — قيم تقريبية',
       },
       ollamaSetup: {
         id: 'ollama-setup',
@@ -1062,7 +1062,7 @@ ollama pull qwen2.5:7b           # Qwen2.5 uso general 7B (~5,5 GB)
 ollama pull qwen2.5:14b          # Qwen2.5 uso general 14B (~9,5 GB)
 ollama pull qwen2.5:32b          # Qwen2.5 uso general 32B (~20,5 GB)
 ollama pull qwen2.5-coder:32b    # Qwen2.5-Coder 32B (~20,5 GB)
-ollama pull qwen2.5vl:7b          # visión 7B (~6,2 GB)
+ollama pull qwen2.5vl:7b          # visión 7B (~6,0 GB)
 
 # Ejecutar en modo interactivo
 ollama run qwen2.5:7b
@@ -1109,7 +1109,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'benchmarks',
         title: 'أداء المعايير على الأجهزة الاستهلاكية',
         content: [
-          '**يقدّم Qwen3 32B Q4_K_M على RTX 4090 سرعة 28 token/ثانية — سرعة كافية للمساعدة البرمجية في الوقت الفعلي.** Qwen3 32B هو الجيل السابق من Qwen؛ ويتسع Qwen 3.6 27B الأحدث في مستوى 24 GB نفسه (راجع جدول الأجهزة أعلاه). الدرجات أدناه تخصّ بناءات GGUF Q4_K_M المختبرة في Ollama. درجات FP16 أعلى بـ 1–2%.',
+          '**يقدّم Qwen3 32B Q4_K_M على RTX 4090 سرعة 28 token/ثانية — سرعة كافية للمساعدة البرمجية في الوقت الفعلي.** Qwen3 32B هو الجيل السابق من Qwen؛ ويتسع Qwen 3.6 27B الأحدث في مستوى 24 GB نفسه (راجع جدول الأجهزة أعلاه). الأرقام أدناه قيم تقريبية وليست قياسات أجرتها PromptQuorum: تختلف السرعة بحسب بطاقة الرسوم وبرنامج التشغيل وطول السياق وإصدار Ollama، ولم نُعد تشغيل درجات الدقة، وتسجّل نسخ Q4_K_M عادةً درجة أقل قليلًا من الدقة الكاملة. راجع بطاقة كل نموذج واختبر على جهازك قبل الاعتماد عليها.',
         ],
         rows: [
           { 'Modelo (Q4_K_M)': 'Qwen3 8B', 'MMLU': '74.2%', 'Math': '58.8%', 'HumanEval': '57.3%', 'Velocidad (RTX 3060 12 GB)': '57 tok/s' },
@@ -1126,13 +1126,13 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: 'هل تريد تحقيق درجة 92.7% في HumanEval بسرعة 27 token/ثانية؟ اطّلع على [بطاقة الرسوم بسعة 24 GB التي تشغّل Qwen2.5-Coder 32B](#affiliate-picks).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-ar.webp',
-        imageCaption: 'درجات معيار Qwen3 (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'درجات معيار Qwen3 (Q4_K_M) — قيم تقريبية',
       },
       vsComparison: {
         id: 'vs-comparison',
         title: 'Qwen مقابل DeepSeek مقابل Llama: ماذا تشغّل محليًا',
         content: [
-          '**يتفوق Qwen في كفاءة VRAM على الأجهزة الاستهلاكية؛ وخط DeepSeek V4 الحالي واسع النطاق (V4-Flash: 284B معامل إجمالي) وغير عملي على بطاقة رسوم استهلاكية واحدة؛ وLlama 3.3 70B هو الخيار الأفضل على بطاقة رسوم واحدة إذا كنت تفضّل النموذج المفتوح من Meta.** يقارن الجدول أدناه الخيارات العملية في كل مستوى VRAM.',
+          '**في تقديرنا، تُعد عائلة Qwen الأكثر كفاءة في استخدام VRAM على الأجهزة الاستهلاكية؛ وخط DeepSeek V4 الحالي واسع النطاق (V4-Flash: 284B معامل إجمالي) وغير عملي على بطاقة رسوم استهلاكية واحدة؛ وLlama 3.3 70B بديل إذا كنت تفضّل النموذج المفتوح من Meta وتقبل نقل جزء من الطبقات إلى ذاكرة النظام على بطاقة رسوم واحدة.** يقارن الجدول أدناه الخيارات العملية في كل مستوى VRAM.',
         ],
         rows: [
           { 'Nivel de VRAM': '6 GB', 'Mejor Qwen': 'Qwen3 8B', 'Mejor competidor': 'Llama 3.2 3B (يتسع، لكنه 3B فقط)', 'Veredicto': 'يفوز Qwen3 8B — نفس VRAM، نموذج أكبر بكثير' },
@@ -1148,13 +1148,13 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'regional-context',
         title: 'المستخدمون الناطقون بالعربية: سيادة البيانات والنشر المحلي',
         content: [
-          '**تشغيل Qwen3 محليًا يعني أن أي بيانات لا تغادر جهازك — لا نقل إلى خوادم سحابية، ولا تعرّض بموجب GDPR أو قوانين حماية البيانات في الخليج.** تتطلب واجهات API لنماذج LLM السحابية إرسال الأوامر إلى خوادم خارجية، مما يُفعّل متطلبات معالجة البيانات وعمليات النقل الدولية المحتملة.',
-          'دُرّب Qwen3 على يد فريق Qwen التابع لـ Alibaba على مجموعة نصية صينية ومتعددة اللغات في الغالب. وهو أقوى نموذج بنشر محلي للمستندات بالصينية المبسّطة والتقليدية والنصوص المختلطة (صينية/عربية/إنجليزية).',
+          '**تشغيل Qwen3 محليًا يُبقي أوامر الاستدلال على جهازك، فلا تُرسل بيانات الاستدلال إلى واجهة API سحابية، وبذلك يُتجنَّب هذا النقل الدولي في طبقة الاستدلال.** تتطلب واجهات API لنماذج LLM السحابية إرسال الأوامر إلى خوادم خارجية، مما قد يُفعّل متطلبات GDPR وقوانين حماية البيانات في الخليج بشأن معالجة البيانات والنقل الدولي. ويعتمد امتثال إعدادك ككل على بياناتك وأغراضك وتقييمك القانوني؛ وهذا ليس استشارة قانونية.',
+          'دُرّب Qwen3 على يد فريق Qwen التابع لـ Alibaba على مجموعة نصية صينية ومتعددة اللغات في الغالب. وهو مرشح قوي للمستندات بالصينية المبسّطة والتقليدية والنصوص المختلطة (صينية/عربية/إنجليزية)؛ جرّبه على موادك الخاصة.',
           '**لعمليات النشر في الشركات الناطقة بالعربية**: إعداد Qwen3 دون اتصال بالإنترنت أثناء الاستدلال يسهّل الالتزام بالأطر التنظيمية في السعودية (PDPL) والإمارات (قانون حماية البيانات) ودول الخليج الأخرى، لكن الامتثال يعتمد على حالة الاستخدام ويُنصح بتأكيده مع مستشار قانوني. يعمل النموذج بالكامل على أجهزة محلية — لا يصل أي طرف ثالث إلى بيانات الإدخال أو الإخراج. كما تتوفر بدائل عربية سيادية مثل Jais وALLaM للمؤسسات التي تفضّل نماذج عربية المنشأ. راجع [تشغيل الذكاء الاصطناعي دون اتصال بالكامل](/ar/power-local-llm/local-ai-behind-firewall-offline-2026) للحصول على دليل كامل للإعداد المعزول.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'يعمل Qwen3 دون اتصال بالكامل بعد التنزيل — لا تغادر أي بيانات جهازك، مما يلغي مخاطر نقل البيانات عبر الحدود بموجب GDPR وقوانين الخليج.' },
-          { type: 'plain-terms', text: 'عندما تشغّل Qwen3 محليًا، لا تغادر أوامرك ومستنداتك حاسوبك أبدًا. لا استدعاءات إلى API سحابي، ولا خادم خارجي، ولا بيانات يمكن للجهات التنظيمية أو الأطراف الثالثة الوصول إليها.' },
+          { type: 'one-sentence', text: 'يمكن تشغيل Qwen3 دون اتصال بالكامل بعد التنزيل، فلا حاجة لأن تغادر بيانات الاستدلال جهازك، مما يقلّل مخاطر نقل البيانات عبر الحدود بموجب GDPR وقوانين الخليج (ويظل الامتثال معتمدًا على حالة استخدامك).' },
+          { type: 'plain-terms', text: 'عندما تشغّل Qwen3 محليًا، تبقى أوامرك ومستنداتك على حاسوبك ما لم تربطه بخدمة سحابية. لا يحتاج الاستدلال إلى استدعاء API سحابي؛ أما كيفية تعامل بقية إعدادك مع البيانات فمسؤوليتك.' },
         ],
       },
       affiliatePicks: {
@@ -1279,11 +1279,11 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'كم من VRAM أحتاج لتشغيل Qwen3 8B محليًا؟', a: 'يتطلب Qwen3 8B Q4_K_M 5.5 GB من VRAM. تكفي RTX 3060 6 GB أو RTX 4060 أو شريحة Apple M بذاكرة موحدة 8 GB.' },
-          { q: 'ما أفضل نموذج Qwen للبرمجة محليًا؟', a: 'Qwen2.5-Coder 32B — 92.7% في HumanEval، يحتاج إلى بطاقة رسوم بسعة 24 GB. بـ 12 GB من VRAM أو أقل: Qwen2.5-Coder 14B (85.2%، 9.5 GB من VRAM).' },
+          { q: 'ما أفضل نموذج Qwen للبرمجة محليًا؟', a: 'Qwen2.5-Coder 32B أكبر نموذج برمجة مخصص من Qwen2.5 يتسع في بطاقة رسوم بسعة 24 GB؛ وتذكر Qwen نتيجة 92.7% في HumanEval لنسخة Instruct بدقة كاملة. كما يتوفر لـ Qwen 3.6 27B متغير برمجة (`qwen3.6:27b-coding`). بـ 12 GB من VRAM أو أقل: Qwen2.5-Coder 14B (85.2%، 9.5 GB من VRAM).' },
           { q: 'كيف يقارن Qwen بـ DeepSeek للنشر المحلي؟', a: 'يستخدم Qwen بنية كثيفة متوافقة مع الأجهزة الاستهلاكية. خط DeepSeek المفتوح الحالي هو V4 (V4-Flash: 284B معامل إجمالي، MoE)، وهو أكبر بكثير من بطاقة رسوم استهلاكية واحدة؛ أما DeepSeek-V2.5 (236B MoE، 2024) فقد حلّ محله V3 ثم V4.' },
           { q: 'هل يمكنني تشغيل Qwen على جهاز Mac؟', a: 'نعم. يشغّل M2 Pro 32 GB نموذج Qwen3 14B بـ ~32 token/ثانية. ويتعامل M3 Max 64 GB مع Qwen3 32B بـ ~22 token/ثانية.' },
           { q: 'ما أمر Ollama الذي أستخدمه لـ Qwen؟', a: 'للنموذج الرائد، `ollama run qwen3.6:27b` (~17 GB من VRAM). لـ Qwen3، `ollama pull qwen3:8b`. لـ Qwen2.5، `ollama pull qwen2.5:7b` لـ 7B، و`:14b` لـ 14B، و`:32b` لـ 32B، أو `qwen2.5-coder:32b` لمتغير البرمجة. استخدم دائمًا وسوم حجم صريحة.' },
-          { q: 'هل Qwen مناسب للمهام باللغة الصينية؟', a: 'نعم. دُرّب Qwen3 مسبقًا على مجموعة نصية صينية ضخمة ويدعم أصليًا الصينية المبسّطة والتقليدية واليابانية والكورية و24 لغة أخرى.' },
+          { q: 'هل Qwen مناسب للمهام باللغة الصينية؟', a: 'نعم. دُرّب Qwen3 مسبقًا على مجموعة نصية صينية ضخمة ويدعم أصليًا الصينية المبسّطة والتقليدية واليابانية والكورية ولغات كثيرة أخرى (راجع بطاقة النموذج). وهو مرشح قوي للذكاء الاصطناعي المحلي بالصينية؛ جرّبه على مستنداتك.' },
           { q: 'أي تكميم ينبغي أن أستخدم لـ Qwen3؟', a: 'Q4_K_M افتراضيًا — يقلّل VRAM بنحو 55% مقارنةً بـ FP16 مع أقل من 1% فقدان جودة. تجنّب Q2_K للاستخدام بالصينية.' },
           { q: 'هل يعمل Qwen2.5-VL لـ OCR للمستندات الصينية؟', a: 'نعم — `ollama pull qwen2.5vl:7b` (تنزيل 6.0 GB)، يقبل النص والصور ويقرأ نص CJK في المستندات الممسوحة؛ جرّبه على مستنداتك. وQwen3-VL الأحدث هو `qwen3-vl:8b`.' },
         ],
@@ -1293,7 +1293,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'قراءات ذات صلة',
         links: [
           { url: '/ar/local-llms/run-qwen-locally-guide-2026', title: 'كيفية تشغيل Qwen 3 محليًا في 2026', description: 'دليل إعداد نموذج واحد لـ Qwen 3.6 27B مع Ollama وLM Studio — أسرع طريقة لتشغيل نسخة Qwen.' },
-          { url: '/ar/local-llms/run-qwen-vl-locally-2026', title: 'تشغيل Qwen2-VL محليًا في 2026', description: 'دليل كامل لـ Qwen2-VL — OCR للمستندات CJK، والأسئلة عن الصور، وقراءة لقطات الشاشة متعددة اللغات على الأجهزة الاستهلاكية.' },
+          { url: '/ar/local-llms/run-qwen-vl-locally-2026', title: 'تشغيل Qwen2.5-VL وQwen3-VL محليًا في 2026', description: 'دليل كامل لـ Qwen2.5-VL وQwen3-VL — وسوم Ollama والأحجام والتراخيص وOCR للمستندات CJK والأسئلة عن الصور على الأجهزة الاستهلاكية.' },
           { url: '/ar/local-llms/qwen-vs-llama-vs-mistral', title: 'Qwen مقابل Llama مقابل Mistral 2026', description: 'مقارنة معايير Qwen 3.6 27B وLlama 4 Scout وMistral Small 3.1 في MMLU وSWE-bench وMATH.' },
           { url: '/ar/local-llms/llm-quantization-explained', title: 'تكميم نماذج LLM موضّحًا', description: 'ماذا يعني Q4_K_M وQ8_0 وIQ4_XS — كيف تؤثر في VRAM والسرعة وجودة المخرجات.' },
           { url: '/ar/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'مقارنة محلية DeepSeek مقابل Qwen 2026', description: 'مقارنة كاملة: DeepSeek-R1-Distill-Qwen-32B مقابل Qwen3 32B في البرمجة والاستدلال والصينية والكتابة الإبداعية — مع تفصيل Mac مقابل NVIDIA.' },
@@ -1356,11 +1356,11 @@ curl http://localhost:11434/v1/chat/completions \\
       inLanguage: 'pt-BR',
       mainEntity: [
         { '@type': 'Question', name: 'Quanta VRAM preciso para executar o Qwen3 8B localmente?', acceptedAnswer: { '@type': 'Answer', text: 'O Qwen3 8B Q4_K_M requer 5,5 GB de VRAM. Uma NVIDIA RTX 3060 6 GB, RTX 4060 ou chip Apple M com 8 GB de memória unificada são suficientes.' } },
-        { '@type': 'Question', name: 'Qual é o melhor modelo Qwen para programação localmente?', acceptedAnswer: { '@type': 'Answer', text: 'O Qwen2.5-Coder 32B é o melhor modelo de programação executável localmente — atinge 92,7% no HumanEval e precisa de uma GPU de 24 GB (RTX 3090 ou RTX 4090). Com 12 GB de VRAM ou menos, use o Qwen2.5-Coder 14B (HumanEval 85,2%, 9,5 GB de VRAM).' } },
+        { '@type': 'Question', name: 'Qual é o melhor modelo Qwen para programação localmente?', acceptedAnswer: { '@type': 'Answer', text: 'O Qwen2.5-Coder 32B é o maior modelo de programação dedicado do Qwen2.5 que cabe em uma GPU de 24 GB (RTX 3090 ou RTX 4090); a Qwen informa 92,7% no HumanEval para a versão Instruct em precisão total. Com 12 GB de VRAM ou menos, use o Qwen2.5-Coder 14B (HumanEval 85,2%, 9,5 GB de VRAM).' } },
         { '@type': 'Question', name: 'Como o Qwen se compara ao DeepSeek para implantação local?', acceptedAnswer: { '@type': 'Answer', text: 'O Qwen usa uma arquitetura densa que cabe em hardware de consumo. A linha aberta atual do DeepSeek é a V4 (V4-Flash: 284B de parâmetros totais, MoE), muito além de uma única GPU de consumo; o DeepSeek-V2.5 (236B MoE, 2024) foi superado pela V3 e depois pela V4. Com VRAM limitada, um modelo Qwen é a opção prática.' } },
         { '@type': 'Question', name: 'Posso executar o Qwen em um Mac?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. O Apple Silicon usa memória unificada — um M2 Pro 32 GB executa o Qwen3 14B a ~32 tokens/seg. Um M3 Max 64 GB gerencia o Qwen3 32B a ~22 tokens/seg.' } },
         { '@type': 'Question', name: 'Qual comando do Ollama uso para o Qwen?', acceptedAnswer: { '@type': 'Answer', text: 'Para o novo flagship, execute `ollama run qwen3.6:27b` (~17 GB de VRAM). Para o Qwen3, use `ollama pull qwen3:8b`. Para o Qwen2.5, use `ollama pull qwen2.5:7b` para 7B, `ollama pull qwen2.5:14b` para 14B, `ollama pull qwen2.5:32b` para 32B, ou `ollama pull qwen2.5-coder:32b` para a variante de programação. Sempre use tags de tamanho explícitas.' } },
-        { '@type': 'Question', name: 'O Qwen é adequado para tarefas em chinês?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. O Qwen3 foi pré-treinado em um grande corpus chinês e suporta nativamente chinês simplificado, chinês tradicional, japonês, coreano, árabe e mais 24 idiomas. Supera sistematicamente o Llama 3.3 e Mistral em compreensão e geração em chinês.' } },
+        { '@type': 'Question', name: 'O Qwen é adequado para tarefas em chinês?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. O Qwen3 foi pré-treinado em um grande corpus chinês e suporta nativamente chinês simplificado, chinês tradicional, japonês, coreano, árabe e muitos outros idiomas (veja a ficha do modelo). É um candidato sólido para IA local em chinês; teste com seus próprios documentos.' } },
         { '@type': 'Question', name: 'Qual quantização devo usar para o Qwen3?', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M é o padrão recomendado — reduz a VRAM em aproximadamente 55% em relação ao FP16 com menos de 1% de perda de qualidade nos benchmarks. Use Q8_0 se tiver VRAM sobrando e quiser qualidade próxima ao FP16. Evite Q2_K para uso em chinês.' } },
         { '@type': 'Question', name: 'O Qwen2.5-VL funciona para OCR de documentos em chinês?', acceptedAnswer: { '@type': 'Answer', text: 'Sim — o Qwen2.5-VL 7B roda pelo Ollama (`ollama pull qwen2.5vl:7b`, download de 6,0 GB), aceita texto e imagem e consegue ler texto em chinês, japonês e coreano em documentos digitalizados; teste com os seus próprios scans, pois a precisão depende da qualidade da digitalização. O Qwen3-VL, mais recente, está em `qwen3-vl:8b` (6,1 GB).' } },
       ],
@@ -1374,13 +1374,13 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Qwen3 8B funciona com 5,5 GB de VRAM** — um único comando `ollama pull qwen3:8b` e já está em execução a 57 tokens/seg em uma RTX 3060.',
           '**Quatro subfamílias práticas**: Qwen3 (geral, modo de raciocínio; geração anterior, ainda muito usada), Qwen2.5 (geral, mais testada), Qwen2.5-Coder (programação, 92,7% no HumanEval em 32B), Qwen2.5-VL (visão, OCR de documentos CJK; o Qwen3-VL é a geração de visão mais recente).',
           '**Arquitetura densa = compatível com hardware de consumo**: ao contrário do DeepSeek V4-Flash (modelo MoE de 284B parâmetros), o Qwen2.5-72B cabe em 46 GB de VRAM em duas RTX 3090.',
-          '**Multilíngue nativo**: pré-treinado em chinês, japonês, coreano, árabe, alemão, francês e mais 23 idiomas — o Qwen3 supera sistematicamente o Llama 3.3 em tarefas CJK.',
+          '**Multilíngue nativo**: pré-treinado em chinês, japonês, coreano, árabe, alemão, francês e muitos outros idiomas (veja a ficha do modelo para a lista exata).',
           '**Q4_K_M é a quantização correta** para a maioria dos usuários: ~55% de redução de VRAM, menos de 1% de perda de qualidade nos benchmarks.',
           '**Decisão de hardware**: 12 GB de VRAM → modelo 14B; 24 GB → 32B; 48 GB+ (duas GPUs ou Apple Silicon 64 GB) → 72B.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'O Qwen cobre três subfamílias de implantação local — uso geral (7B–72B), programação (Coder 7B–32B) e visão (VL 3B–72B) — todas executáveis via Ollama ou LM Studio.' },
-          { type: 'plain-terms', text: 'Executar um modelo localmente significa que a IA roda no seu próprio computador em vez de em um servidor na nuvem. Nenhum dado sai da sua máquina e não há custo por token após adquirir o hardware.' },
+          { type: 'plain-terms', text: 'Executar um modelo localmente significa que a IA roda no seu próprio computador em vez de em um servidor na nuvem. Os dados de inferência não saem da sua máquina (a menos que você ative serviços na nuvem) e não há custo por token após adquirir o hardware.' },
         ],
       },
       modelFamily: {
@@ -1424,7 +1424,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: 'Já identificou o seu nível de VRAM? Veja [exatamente qual GPU ou Mac comprar para esse nível](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M5 Pro ou GPU dupla.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-pt.webp',
-        imageCaption: 'Requisitos de VRAM do Qwen3 por tamanho de modelo (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'Requisitos de VRAM do Qwen3 por tamanho de modelo (Q4_K_M) — valores aproximados',
       },
       ollamaSetup: {
         id: 'ollama-setup',
@@ -1452,7 +1452,7 @@ ollama pull qwen2.5:7b           # Qwen2.5 uso geral 7B (~5,5 GB)
 ollama pull qwen2.5:14b          # Qwen2.5 uso geral 14B (~9,5 GB)
 ollama pull qwen2.5:32b          # Qwen2.5 uso geral 32B (~20,5 GB)
 ollama pull qwen2.5-coder:32b    # Qwen2.5-Coder 32B (~20,5 GB)
-ollama pull qwen2.5vl:7b          # visão 7B (~6,2 GB)
+ollama pull qwen2.5vl:7b          # visão 7B (~6,0 GB)
 
 # Executar em modo interativo
 ollama run qwen2.5:7b
@@ -1499,7 +1499,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'benchmarks',
         title: 'Desempenho em benchmarks em hardware de consumo',
         content: [
-          '**O Qwen3 32B Q4_K_M em uma RTX 4090 entrega 28 tokens/seg — velocidade suficiente para assistência de código em tempo real.** O Qwen3 32B é a geração anterior do Qwen; o Qwen 3.6 27B, mais recente, cabe na mesma faixa de 24 GB (veja a tabela de hardware acima). As pontuações abaixo correspondem a builds GGUF Q4_K_M testados no Ollama.',
+          '**O Qwen3 32B Q4_K_M em uma RTX 4090 entrega 28 tokens/seg — velocidade suficiente para assistência de código em tempo real.** O Qwen3 32B é a geração anterior do Qwen; o Qwen 3.6 27B, mais recente, cabe na mesma faixa de 24 GB (veja a tabela de hardware acima). Os números abaixo são valores indicativos, não medições do PromptQuorum: a velocidade varia conforme GPU, driver, tamanho do contexto e versão do Ollama, não reexecutamos as pontuações de precisão e builds Q4_K_M costumam pontuar um pouco abaixo da precisão total. Consulte a ficha de cada modelo e teste no seu próprio hardware.',
         ],
         rows: [
           { 'Modelo (Q4_K_M)': 'Qwen3 8B', 'MMLU': '74,2%', 'Math': '58,8%', 'HumanEval': '57,3%', 'Velocidade (RTX 3060 12 GB)': '57 tok/s' },
@@ -1516,13 +1516,13 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: 'Quer essa pontuação de 92,7% no HumanEval a 27 tok/s? Veja a [GPU de 24 GB que executa o Qwen2.5-Coder 32B](#affiliate-picks).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-pt.webp',
-        imageCaption: 'Pontuações de benchmark do Qwen3 (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'Pontuações de benchmark do Qwen3 (Q4_K_M) — valores aproximados',
       },
       vsComparison: {
         id: 'vs-comparison',
         title: 'Qwen vs DeepSeek vs Llama: o que executar localmente',
         content: [
-          '**O Qwen vence em eficiência de VRAM em hardware de consumo; a linha atual V4 do DeepSeek é de grande escala (V4-Flash: 284B de parâmetros totais) e impraticável em uma única GPU de consumo; o Llama 3.3 70B é a melhor opção em uma única GPU se você preferir o modelo aberto da Meta.**',
+          '**Em nossa avaliação, o Qwen é a família mais eficiente em VRAM em hardware de consumo; a linha atual V4 do DeepSeek é de grande escala (V4-Flash: 284B de parâmetros totais) e impraticável em uma única GPU de consumo; o Llama 3.3 70B é uma alternativa se você preferir o modelo aberto da Meta e aceitar mover parte das camadas para a RAM do sistema em uma única GPU.**',
         ],
         rows: [
           { 'Nível de VRAM': '6 GB', 'Melhor Qwen': 'Qwen3 8B', 'Melhor concorrente': 'Llama 3.2 3B (cabe, mas apenas 3B)', 'Veredicto': 'Qwen3 8B vence — mesma VRAM, modelo muito maior' },
@@ -1537,13 +1537,13 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'regional-context',
         title: 'Usuários brasileiros: soberania de dados e implantação local',
         content: [
-          '**Executar o Qwen3 localmente significa que nenhum dado sai da sua máquina — sem transferência para servidores na nuvem, sem exposição sob a LGPD ou outras leis de proteção de dados brasileiras.** APIs de LLM na nuvem exigem enviar prompts para servidores externos, o que aciona os requisitos de tratamento de dados e possíveis transferências internacionais.',
-          'O Qwen3 foi treinado pela equipe Qwen da Alibaba em um corpus predominantemente chinês e multilíngue. É o modelo com implantação local mais poderoso para documentos em chinês simplificado, chinês tradicional e textos mistos.',
-          '**Para implantações em empresas brasileiras**: uma configuração do Qwen3 sem conexão à internet durante a inferência é totalmente compatível com a Lei Geral de Proteção de Dados (LGPD) e as diretrizes da ANPD. O modelo roda inteiramente em hardware local — nenhum terceiro acessa os dados de entrada ou saída.',
+          '**Executar o Qwen3 localmente mantém os prompts de inferência no seu próprio hardware, de modo que nenhum dado de inferência é enviado a uma API na nuvem e essa transferência internacional é evitada na camada de inferência.** APIs de LLM na nuvem exigem enviar prompts para servidores externos, o que pode acionar os requisitos da LGPD e de outras leis de proteção de dados sobre tratamento e transferências internacionais. Se a sua configuração como um todo está em conformidade depende dos seus dados, das suas finalidades e da sua própria avaliação jurídica; isto não é aconselhamento jurídico.',
+          'O Qwen3 foi treinado pela equipe Qwen da Alibaba em um corpus predominantemente chinês e multilíngue. É um candidato sólido para documentos em chinês simplificado, chinês tradicional e textos mistos; teste com o seu próprio material.',
+          '**Para implantações em empresas brasileiras**: uma configuração do Qwen3 sem conexão à internet durante a inferência pode facilitar a conformidade com a Lei Geral de Proteção de Dados (LGPD) e as diretrizes da ANPD, mas a conformidade depende do seu caso de uso e deve ser confirmada com assessoria jurídica. O modelo roda inteiramente em hardware local, de modo que nenhum fornecedor externo recebe os dados de entrada ou saída da inferência.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'O Qwen3 funciona completamente offline após o download — nenhum dado sai da sua máquina, reduzindo o risco de transferência transfronteiriça de dados sob a LGPD e as regulamentações da ANPD.' },
-          { type: 'plain-terms', text: 'Quando você executa o Qwen3 localmente, seus prompts e documentos nunca saem do seu computador. Não há chamadas para uma API na nuvem, não há servidor externo e não há dados acessíveis por reguladores ou terceiros.' },
+          { type: 'one-sentence', text: 'O Qwen3 pode funcionar completamente offline após o download, de modo que os dados de inferência não precisam sair da sua máquina, o que reduz o risco de transferência transfronteiriça de dados sob a LGPD e as regulamentações da ANPD (a conformidade continua dependendo do seu caso de uso).' },
+          { type: 'plain-terms', text: 'Quando você executa o Qwen3 localmente, seus prompts e documentos permanecem no seu computador, a menos que você o conecte a um serviço na nuvem. A inferência não precisa chamar nenhuma API na nuvem; como o restante da sua configuração trata os dados é responsabilidade sua.' },
         ],
       },
       affiliatePicks: {
@@ -1668,11 +1668,11 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Quanta VRAM preciso para executar o Qwen3 8B localmente?', a: 'O Qwen3 8B Q4_K_M requer 5,5 GB de VRAM. Uma RTX 3060 6 GB, RTX 4060 ou chip Apple M com 8 GB de memória unificada são suficientes.' },
-          { q: 'Qual é o melhor modelo Qwen para programação localmente?', a: 'Qwen2.5-Coder 32B — 92,7% no HumanEval, precisa de GPU de 24 GB. Com 12 GB de VRAM ou menos: Qwen2.5-Coder 14B (85,2%, 9,5 GB de VRAM).' },
+          { q: 'Qual é o melhor modelo Qwen para programação localmente?', a: 'O Qwen2.5-Coder 32B é o maior modelo de programação dedicado do Qwen2.5 que cabe em uma GPU de 24 GB; a Qwen informa 92,7% no HumanEval para a versão Instruct em precisão total. O Qwen 3.6 27B também tem uma variante de programação (`qwen3.6:27b-coding`). Com 12 GB de VRAM ou menos: Qwen2.5-Coder 14B (85,2%, 9,5 GB de VRAM).' },
           { q: 'Como o Qwen se compara ao DeepSeek para implantação local?', a: 'O Qwen usa arquitetura densa compatível com hardware de consumo. A linha aberta atual do DeepSeek é a V4 (V4-Flash: 284B de parâmetros totais, MoE), muito além de uma única GPU de consumo; o DeepSeek-V2.5 (236B MoE, 2024) foi superado pela V3 e depois pela V4.' },
           { q: 'Posso executar o Qwen em um Mac?', a: 'Sim. M2 Pro 32 GB executa o Qwen3 14B a ~32 tok/s. M3 Max 64 GB gerencia o Qwen3 32B a ~22 tok/s.' },
           { q: 'Qual comando do Ollama uso para o Qwen?', a: 'Para o flagship, `ollama run qwen3.6:27b` (~17 GB de VRAM). Para o Qwen3, `ollama pull qwen3:8b`. Para o Qwen2.5, `ollama pull qwen2.5:7b` para 7B, `:14b` para 14B, `:32b` para 32B, ou `qwen2.5-coder:32b` para a variante de programação. Sempre use tags de tamanho explícitas.' },
-          { q: 'O Qwen é adequado para tarefas em chinês?', a: 'Sim. O Qwen3 foi pré-treinado em um grande corpus chinês e suporta nativamente chinês simplificado, chinês tradicional, japonês, coreano e mais 24 idiomas.' },
+          { q: 'O Qwen é adequado para tarefas em chinês?', a: 'Sim. O Qwen3 foi pré-treinado em um grande corpus chinês e suporta nativamente chinês simplificado, chinês tradicional, japonês, coreano e muitos outros idiomas (veja a ficha do modelo). É um candidato sólido para IA local em chinês; teste com seus próprios documentos.' },
           { q: 'Qual quantização devo usar para o Qwen3?', a: 'Q4_K_M por padrão — reduz a VRAM ~55% em relação ao FP16 com menos de 1% de perda de qualidade. Evite Q2_K para uso em chinês.' },
           { q: 'O Qwen2.5-VL funciona para OCR de documentos em chinês?', a: 'Sim — `ollama pull qwen2.5vl:7b` (download de 6,0 GB), aceita texto e imagem e lê texto CJK em documentos digitalizados; teste com seus próprios scans. O Qwen3-VL, mais recente, é `qwen3-vl:8b`.' },
         ],
@@ -1682,7 +1682,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Leitura relacionada',
         links: [
           { url: '/pt/local-llms/run-qwen-locally-guide-2026', title: 'Como executar o Qwen 3 localmente em 2026', description: 'Guia de configuração de modelo único para o Qwen 3.6 27B com Ollama e LM Studio.' },
-          { url: '/pt/local-llms/run-qwen-vl-locally-2026', title: 'Executar o Qwen2-VL localmente em 2026', description: 'Guia completo do Qwen2-VL — OCR de documentos CJK e leitura multilíngue de capturas de tela.' },
+          { url: '/pt/local-llms/run-qwen-vl-locally-2026', title: 'Executar o Qwen2.5-VL e o Qwen3-VL localmente em 2026', description: 'Guia completo do Qwen2.5-VL e do Qwen3-VL — tags do Ollama, tamanhos, licenças, OCR de documentos CJK e perguntas sobre imagens em hardware de consumo.' },
           { url: '/pt/local-llms/qwen-vs-llama-vs-mistral', title: 'Qwen vs Llama vs Mistral 2026', description: 'Comparação de benchmarks do Qwen 3.6 27B, Llama 4 Scout e Mistral Small 3.1.' },
           { url: '/pt/local-llms/llm-quantization-explained', title: 'Quantização de LLM explicada', description: 'O que significam Q4_K_M, Q8_0 e IQ4_XS — como afetam a VRAM, velocidade e qualidade de saída.' },
         ],
@@ -1755,7 +1755,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': 'Quel est le meilleur modèle Qwen pour le code en local ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen2.5-Coder 32B — 92,7 % sur HumanEval, GPU 24 Go requis. Avec 12 Go de VRAM : Qwen2.5-Coder 14B (85,2 %, 9,5 Go VRAM).',
+              'text': 'Qwen2.5-Coder 32B est le plus grand modèle de code dédié de Qwen2.5 qui tient sur un GPU de 24 Go ; Qwen annonce 92,7 % sur HumanEval pour la version Instruct en pleine précision. Qwen 3.6 27B propose aussi une variante code (`qwen3.6:27b-coding`). Avec 12 Go de VRAM : Qwen2.5-Coder 14B (85,2 %, 9,5 Go VRAM).',
             },
           },
           {
@@ -1787,7 +1787,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': 'Qwen est-il adapté aux tâches en langue chinoise ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui. Qwen3 supporte nativement le chinois simplifié, traditionnel, le japonais, le coréen et 24 autres langues.',
+              'text': 'Oui. Qwen3 supporte nativement le chinois simplifié, traditionnel, le japonais, le coréen et de nombreuses autres langues (voir la fiche du modèle). C\'est un candidat solide pour l\'IA locale en chinois ; testez-le sur vos propres documents.',
             },
           },
           {
@@ -1811,7 +1811,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': 'Qwen3 est-il compatible avec le RGPD ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'En déploiement local, Qwen3 utilise une architecture compatible avec le RGPD (aucune donnée d\'inférence envoyée à des tiers) — en principe pas de DPA requis pour la couche IA selon l\'article 28 du RGPD tant qu\'aucun tiers n\'accède aux données (le RGPD continue de s\'appliquer à votre traitement). La CNIL recommande le traitement local pour les données sensibles.',
+              'text': 'En déploiement local, aucune donnée d\'inférence n\'est envoyée à des tiers — en principe pas de contrat de sous-traitance requis pour la couche IA selon l\'article 28 du RGPD tant qu\'aucun tiers n\'accède aux données (le RGPD continue de s\'appliquer à votre traitement ; ceci ne constitue pas un conseil juridique).',
             },
           },
           {
@@ -1833,13 +1833,13 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Qwen3 8B tourne avec 5,5 Go de VRAM** — une commande `ollama pull qwen3:8b` suffit ; 57 tokens/s sur RTX 3060.',
           '**Quatre sous-familles pratiques** : Qwen3 (général, mode réflexion ; génération précédente, encore très déployée), Qwen2.5 (général, le plus testé), Qwen2.5-Coder (code, 92,7 % HumanEval en 32B), Qwen2.5-VL (vision, OCR de documents CJK ; Qwen3-VL est la génération vision plus récente).',
           '**Architecture dense = compatible matériel grand public** : contrairement à DeepSeek V4-Flash (MoE de 284 Md de paramètres), Qwen2.5-72B tient en 46 Go VRAM sur deux RTX 3090.',
-          '**Multilinguisme natif** : pré-entraîné sur le chinois, le japonais, le coréen, l\'arabe, le français et 24 autres langues.',
+          '**Multilinguisme natif** : pré-entraîné sur le chinois, le japonais, le coréen, l\'arabe, l\'allemand, le français et de nombreuses autres langues (voir la fiche du modèle pour la liste exacte).',
           '**Q4_K_M est la bonne quantification** pour la plupart des utilisateurs : ~55 % de réduction VRAM, moins de 1 % de perte de qualité.',
           '**Décision matérielle** : 12 Go VRAM → modèle 14B ; 24 Go → 32B ; 48 Go+ → 72B.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen couvre trois sous-familles de déploiement local — usage général (7B–72B), code (Coder 7B–32B) et vision (VL 3B–72B) — toutes exécutables via Ollama ou LM Studio.' },
-          { type: 'plain-terms', text: 'Faire tourner un modèle en local signifie que l\'IA s\'exécute sur votre propre ordinateur, sans serveur cloud. Aucune donnée ne quitte votre machine, et il n\'y a aucun coût par token après l\'achat du matériel.' },
+          { type: 'plain-terms', text: 'Faire tourner un modèle en local signifie que l\'IA s\'exécute sur votre propre ordinateur, sans serveur cloud. Les données d\'inférence ne quittent pas votre machine (sauf si vous activez des services cloud), et il n\'y a aucun coût par token après l\'achat du matériel.' },
         ],
       },
       modelFamily: {
@@ -1882,7 +1882,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: 'Vous avez identifié votre niveau VRAM ? Consultez [exactement quel GPU ou Mac acheter pour ce niveau](#affiliate-picks) — 6 Go → RTX 4060, 12 Go → RTX 4070 Super, 24 Go → RTX 3090/4090, 48 Go et plus → Mac mini M5 Pro ou double GPU.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-fr.webp',
-        imageCaption: 'Exigences VRAM Qwen3 par taille de modèle (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'Exigences VRAM Qwen3 par taille de modèle (Q4_K_M) — valeurs approximatives',
       },
       ollamaSetup: {
         id: 'ollama-setup',
@@ -1910,7 +1910,7 @@ ollama pull qwen2.5:7b           # Qwen2.5 usage général 7B (~5,5 Go)
 ollama pull qwen2.5:14b          # Qwen2.5 14B (~9,5 Go)
 ollama pull qwen2.5:32b          # Qwen2.5 32B (~20,5 Go)
 ollama pull qwen2.5-coder:32b    # Qwen2.5-Coder 32B (~20,5 Go)
-ollama pull qwen2.5vl:7b          # vision 7B (~6,2 Go)
+ollama pull qwen2.5vl:7b          # vision 7B (~6,0 Go)
 
 # Exécuter en mode interactif
 ollama run qwen2.5:7b
@@ -1957,7 +1957,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'benchmarks',
         title: 'Performances benchmark sur matériel grand public',
         content: [
-          '**Qwen3 32B Q4_K_M sur RTX 4090 : 28 tokens/s** — assez rapide pour l\'assistance au code en temps réel. Qwen3 32B est la génération précédente de Qwen ; le plus récent Qwen 3.6 27B tient dans le même palier de 24 Go (voir le tableau matériel ci-dessus). Scores ci-dessous pour les builds GGUF Q4_K_M testés sur Ollama.',
+          '**Qwen3 32B Q4_K_M sur RTX 4090 : 28 tokens/s** — assez rapide pour l\'assistance au code en temps réel. Qwen3 32B est la génération précédente de Qwen ; le plus récent Qwen 3.6 27B tient dans le même palier de 24 Go (voir le tableau matériel ci-dessus). Les chiffres ci-dessous sont indicatifs et ne sont pas des mesures de PromptQuorum : la vitesse varie selon le GPU, le pilote, la longueur de contexte et la version d\'Ollama, nous n\'avons pas réexécuté les scores de précision et les builds Q4_K_M obtiennent généralement un peu moins que la pleine précision. Consultez la fiche de chaque modèle et testez sur votre matériel.',
         ],
         rows: [
           { 'Modèle (Q4_K_M)': 'Qwen3 8B', 'MMLU': '74,2 %', 'Math': '58,8 %', 'HumanEval': '57,3 %', 'Vitesse (RTX 3060 12 Go)': '57 tokens/s' },
@@ -1974,13 +1974,13 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: 'Vous voulez ce score HumanEval de 92,7 % à 27 tokens/s ? Consultez le [GPU 24 Go qui exécute Qwen2.5-Coder 32B](#affiliate-picks).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-fr.webp',
-        imageCaption: 'Scores benchmark Qwen3 (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'Scores benchmark Qwen3 (Q4_K_M) — valeurs approximatives',
       },
       vsComparison: {
         id: 'vs-comparison',
         title: 'Qwen vs DeepSeek vs Llama : que déployer localement ?',
         content: [
-          '**Qwen gagne sur l\'efficacité VRAM en matériel grand public ; la gamme actuelle V4 de DeepSeek est de grande échelle (V4-Flash : 284 Md de paramètres au total) et impraticable sur un seul GPU grand public ; Llama 3.3 70B est la meilleure option monoGPU si vous préférez le modèle ouvert de Meta.**',
+          '**Selon notre évaluation, Qwen est la famille la plus économe en VRAM sur matériel grand public ; la gamme actuelle V4 de DeepSeek est de grande échelle (V4-Flash : 284 Md de paramètres au total) et impraticable sur un seul GPU grand public ; Llama 3.3 70B est une alternative si vous préférez le modèle ouvert de Meta et acceptez de déporter une partie des couches vers la RAM sur un seul GPU.**',
         ],
         rows: [
           { 'Niveau VRAM': '6 Go', 'Meilleur Qwen': 'Qwen3 8B', 'Meilleur concurrent': 'Llama 3.2 3B', 'Recommandation': 'Qwen3 8B — même VRAM, modèle beaucoup plus grand' },
@@ -1996,13 +1996,13 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'regional-context',
         title: 'Contexte réglementaire : RGPD et CNIL',
         content: [
-          '**Déployer Qwen3 en local signifie qu\'aucune donnée ne quitte votre machine — aucun transfert vers un serveur cloud étranger.** Les API LLM cloud exigent l\'envoi de prompts vers des serveurs étrangers, ce qui déclenche l\'article 28 du RGPD (sous-traitant) et potentiellement les articles 44 et suivants (transferts hors UE).',
-          'Qwen3 a été entraîné par l\'équipe Qwen d\'Alibaba sur un corpus principalement chinois et multilingue. C\'est le modèle localement déployable le plus performant pour le chinois simplifié, le traditionnel et les documents mixtes chinois/anglais/français.',
-          '**Pour les déploiements professionnels** : la CNIL recommande le traitement local des données personnelles sensibles dans les secteurs réglementés (médical, juridique, financier) lorsque cela est techniquement possible. Un déploiement Qwen3 sans connexion internet pendant l\'inférence utilise une architecture compatible avec le RGPD (aucune donnée d\'inférence envoyée à des tiers). Guide complet pour les setups hors ligne : [IA locale entièrement hors ligne](/fr/power-local-llm/local-ai-behind-firewall-offline-2026).',
+          '**Déployer Qwen3 en local garde les prompts d\'inférence sur votre propre matériel : aucune donnée d\'inférence n\'est envoyée à une API cloud, ce qui évite ce transfert pour la couche d\'inférence.** Les API LLM cloud exigent l\'envoi de prompts vers des serveurs externes, ce qui peut déclencher l\'article 28 du RGPD (sous-traitant) et potentiellement les articles 44 et suivants (transferts hors UE). La conformité de l\'ensemble de votre dispositif dépend de vos données, de vos finalités et de votre propre analyse juridique ; ceci ne constitue pas un conseil juridique.',
+          'Qwen3 a été entraîné par l\'équipe Qwen d\'Alibaba sur un corpus principalement chinois et multilingue. C\'est un candidat solide pour le chinois simplifié, le traditionnel et les documents mixtes chinois/anglais/français ; testez-le sur vos propres documents.',
+          '**Pour les déploiements professionnels** : pour les données personnelles sensibles dans les secteurs réglementés (médical, juridique, financier), le traitement local peut réduire l\'exposition aux transferts de données, mais la conformité dépend de votre cas d\'usage et doit être confirmée avec un conseil juridique. Un déploiement Qwen3 sans connexion internet pendant l\'inférence n\'envoie aucune donnée d\'inférence à des tiers. Guide complet pour les setups hors ligne : [IA locale entièrement hors ligne](/fr/power-local-llm/local-ai-behind-firewall-offline-2026).',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3 fonctionne entièrement hors ligne après téléchargement — aucune donnée ne quitte votre appareil, réduisant les risques de transfert transfrontalier sous le RGPD.' },
-          { type: 'plain-terms', text: 'En mode local, vos prompts et documents ne quittent jamais votre ordinateur. Aucun appel API cloud, aucun serveur externe, aucune donnée accessible à des tiers ou régulateurs.' },
+          { type: 'one-sentence', text: 'Qwen3 peut fonctionner entièrement hors ligne après téléchargement : les données d\'inférence n\'ont pas à quitter votre appareil, ce qui réduit les risques de transfert transfrontalier sous le RGPD (la conformité dépend de votre cas d\'usage).' },
+          { type: 'plain-terms', text: 'En mode local, vos prompts et documents restent sur votre ordinateur tant que vous ne le connectez pas à un service cloud. L\'inférence n\'exige aucun appel API cloud ; la façon dont le reste de votre dispositif traite les données relève de votre responsabilité.' },
         ],
       },
       affiliatePicks: {
@@ -2127,14 +2127,14 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Questions fréquentes',
         faqs: [
             { q: 'Quelle quantité de VRAM est nécessaire pour Qwen3 8B en local ?', a: 'Qwen3 8B Q4_K_M nécessite 5,5 Go de VRAM. Une RTX 3060 6 Go, RTX 4060 ou puce Apple M avec 8 Go de mémoire unifiée suffisent.' },
-            { q: 'Quel est le meilleur modèle Qwen pour le code en local ?', a: 'Qwen2.5-Coder 32B — 92,7 % sur HumanEval, GPU 24 Go requis. Avec 12 Go de VRAM : Qwen2.5-Coder 14B (85,2 %, 9,5 Go VRAM).' },
+            { q: 'Quel est le meilleur modèle Qwen pour le code en local ?', a: 'Qwen2.5-Coder 32B est le plus grand modèle de code dédié de Qwen2.5 qui tient sur un GPU de 24 Go ; Qwen annonce 92,7 % sur HumanEval pour la version Instruct en pleine précision. Qwen 3.6 27B propose aussi une variante code (`qwen3.6:27b-coding`). Avec 12 Go de VRAM : Qwen2.5-Coder 14B (85,2 %, 9,5 Go VRAM).' },
             { q: 'Comment Qwen se compare-t-il à DeepSeek ?', a: 'Qwen utilise une architecture dense compatible matériel grand public. La gamme ouverte actuelle de DeepSeek est la V4 (V4-Flash : 284 Md de paramètres au total, MoE), bien au-delà d\'un seul GPU grand public ; DeepSeek-V2.5 (MoE 236B, 2024) a été remplacé par la V3, puis la V4.' },
             { q: 'Puis-je utiliser Qwen sur un Mac ?', a: 'Oui. M2 Pro 32 Go : Qwen3 14B à ~32 tokens/s. M3 Max 64 Go : Qwen3 32B à ~22 tokens/s.' },
             { q: 'Quelle commande Ollama utiliser pour Qwen ?', a: 'Pour le modèle phare, `ollama run qwen3.6:27b` (~17 Go de VRAM). Pour Qwen3, `ollama pull qwen3:8b`. Pour Qwen2.5, `ollama pull qwen2.5:7b` pour 7B, `:14b` pour 14B, `:32b` pour 32B, ou `qwen2.5-coder:32b` pour la variante code. Toujours des tags explicites.' },
-            { q: 'Qwen est-il adapté aux tâches en langue chinoise ?', a: 'Oui. Qwen3 supporte nativement le chinois simplifié, traditionnel, le japonais, le coréen et 24 autres langues.' },
+            { q: 'Qwen est-il adapté aux tâches en langue chinoise ?', a: 'Oui. Qwen3 supporte nativement le chinois simplifié, traditionnel, le japonais, le coréen et de nombreuses autres langues (voir la fiche du modèle). C\'est un candidat solide pour l\'IA locale en chinois ; testez-le sur vos propres documents.' },
             { q: 'Quelle quantification utiliser pour Qwen3 ?', a: 'Q4_K_M par défaut — ~55 % de réduction VRAM, moins de 1 % de perte de qualité vs FP16. Éviter Q2_K pour les usages en langue chinoise.' },
             { q: 'Qwen2.5-VL fonctionne-t-il pour l\'OCR de documents chinois ?', a: 'Oui — `ollama pull qwen2.5vl:7b` (téléchargement de 6,0 Go), accepte texte et image et lit le texte CJK de documents numérisés ; testez sur vos propres scans. Le plus récent Qwen3-VL est `qwen3-vl:8b`.' },
-            { q: 'Qwen3 est-il compatible avec le RGPD ?', a: 'En déploiement local, Qwen3 utilise une architecture compatible avec le RGPD (aucune donnée d\'inférence envoyée à des tiers) — en principe pas de DPA requis pour la couche IA selon l\'article 28 du RGPD tant qu\'aucun tiers n\'accède aux données (le RGPD continue de s\'appliquer à votre traitement). La CNIL recommande le traitement local pour les données sensibles.' },
+            { q: 'Qwen3 est-il compatible avec le RGPD ?', a: 'En déploiement local, aucune donnée d\'inférence n\'est envoyée à des tiers — en principe pas de contrat de sous-traitance requis pour la couche IA selon l\'article 28 du RGPD tant qu\'aucun tiers n\'accède aux données (le RGPD continue de s\'appliquer à votre traitement ; ceci ne constitue pas un conseil juridique).' },
             { q: 'Qwen3 peut-il traiter des documents mixtes français-chinois ?', a: 'Oui. Qwen3 gère nativement le français et le chinois dans le même contexte. Pour l\'OCR de documents mixtes, Qwen2.5-VL 7B est plus adapté.' },
           ],
       },
@@ -2143,7 +2143,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Articles associés',
         links: [
           { url: '/fr/local-llms/run-qwen-locally-guide-2026', title: 'Exécuter Qwen 3 en local 2026', description: 'Guide setup pour un seul modèle : Qwen 3.6 27B avec Ollama et LM Studio.' },
-          { url: '/fr/local-llms/run-qwen-vl-locally-2026', title: 'Qwen2-VL en local 2026', description: 'Guide complet Qwen2-VL — OCR de documents CJK, Q&A sur images sur matériel grand public.' },
+          { url: '/fr/local-llms/run-qwen-vl-locally-2026', title: 'Qwen2.5-VL et Qwen3-VL en local 2026', description: 'Guide complet Qwen2.5-VL et Qwen3-VL — tags Ollama, tailles, licences, OCR de documents CJK et questions sur images sur matériel grand public.' },
           { url: '/fr/local-llms/qwen-vs-llama-vs-mistral', title: 'Qwen vs Llama vs Mistral 2026', description: 'Comparaison benchmark : Qwen 3.6 27B, Llama 4 Scout et Mistral Small 3.1.' },
           { url: '/fr/local-llms/llm-quantization-explained', title: 'Quantification LLM expliquée', description: 'Q4_K_M, Q8_0 et IQ4_XS — impact sur le VRAM, la vitesse et la qualité.' },
           { url: '/fr/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'DeepSeek vs Qwen local 2026', description: 'Comparaison complète : DeepSeek-R1-Distill-Qwen-32B vs Qwen3 32B sur le code, le raisonnement et les langues.' },
@@ -2205,11 +2205,11 @@ curl http://localhost:11434/v1/chat/completions \\
       inLanguage: 'de',
       mainEntity: [
         { '@type': 'Question', name: 'Wie viel VRAM benötige ich für Qwen3 8B lokal?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B Q4_K_M benötigt 5,5 GB VRAM. Eine NVIDIA RTX 3060 6 GB, RTX 4060 oder ein Apple-M-Chip mit 8 GB Unified Memory reichen aus.' } },
-        { '@type': 'Question', name: 'Welches Qwen-Modell eignet sich am besten für Coding lokal?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 32B ist das beste lokal ausführbare Coding-Modell — es erreicht 92,7 % auf HumanEval und benötigt eine 24-GB-GPU (RTX 3090 oder RTX 4090). Bei 12 GB VRAM oder weniger: Qwen2.5-Coder 14B (HumanEval 85,2 %, 9,5 GB VRAM).' } },
+        { '@type': 'Question', name: 'Welches Qwen-Modell eignet sich am besten für Coding lokal?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 32B ist das größte dedizierte Coding-Modell der Qwen2.5-Reihe, das auf eine 24-GB-GPU (RTX 3090 oder RTX 4090) passt; Qwen nennt 92,7 % auf HumanEval für die Instruct-Version in voller Präzision. Bei 12 GB VRAM oder weniger: Qwen2.5-Coder 14B (HumanEval 85,2 %, 9,5 GB VRAM).' } },
         { '@type': 'Question', name: 'Wie schneidet Qwen im Vergleich zu DeepSeek ab?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen verwendet eine Dense-Architektur, die auf Consumer-Hardware passt. DeepSeeks aktuelle offene Linie ist V4 (V4-Flash: 284B Parameter insgesamt, MoE) und liegt weit jenseits einer einzelnen Consumer-GPU; DeepSeek-V2.5 (236B-MoE, 2024) wurde durch V3 und dann V4 abgelöst. Bei begrenztem VRAM ist ein Qwen-Modell die praktische Wahl.' } },
         { '@type': 'Question', name: 'Kann ich Qwen auf einem Mac betreiben?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Apple Silicon nutzt Unified Memory — ein M2 Pro 32 GB führt Qwen3 14B flüssig mit ~32 Tokens/Sek. aus. Ein M3 Max 64 GB bewältigt Qwen3 32B mit ~22 Tokens/Sek.' } },
         { '@type': 'Question', name: 'Welchen Ollama-Befehl verwende ich für Qwen?', acceptedAnswer: { '@type': 'Answer', text: 'Für das neue Flagship-Modell: `ollama run qwen3.6:27b` (~17 GB VRAM). Für Qwen3: `ollama pull qwen3:8b`. Für Qwen2.5: `ollama pull qwen2.5:7b` für 7B, `ollama pull qwen2.5:14b` für 14B, `ollama pull qwen2.5:32b` für 32B oder `ollama pull qwen2.5-coder:32b` für die Coding-Variante. Immer explizite Größen-Tags verwenden.' } },
-        { '@type': 'Question', name: 'Ist Qwen für chinesischsprachige Aufgaben geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 wurde auf einem umfangreichen chinesischen Korpus vortrainiert und unterstützt nativ Vereinfachtes Chinesisch, Traditionelles Chinesisch, Japanisch, Koreanisch, Arabisch und 24 weitere Sprachen.' } },
+        { '@type': 'Question', name: 'Ist Qwen für chinesischsprachige Aufgaben geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 wurde auf einem umfangreichen chinesischen Korpus vortrainiert und unterstützt nativ Vereinfachtes Chinesisch, Traditionelles Chinesisch, Japanisch, Koreanisch, Arabisch und viele weitere Sprachen (siehe Modellkarte). Es ist ein starker Kandidat für lokale KI auf Chinesisch; testen Sie es mit Ihren eigenen Dokumenten.' } },
         { '@type': 'Question', name: 'Welche Quantisierung sollte ich für Qwen3 verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M ist die empfohlene Standardauswahl — es reduziert den VRAM um ~55 % gegenüber FP16 bei weniger als 1 % Qualitätsverlust. Q8_0 für nahezu FP16-Qualität bei ausreichend VRAM. Q2_K bei chinesischsprachigen Anwendungsfällen vermeiden.' } },
         { '@type': 'Question', name: 'Funktioniert Qwen2.5-VL für chinesisches Dokument-OCR?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Qwen2.5-VL 7B läuft über Ollama (`ollama pull qwen2.5vl:7b`, 6,0 GB Download), nimmt Text und Bilder entgegen und kann chinesischen, japanischen und koreanischen Text in gescannten Dokumenten lesen; testen Sie mit eigenen Scans, da die Genauigkeit von der Scanqualität abhängt. Das neuere Qwen3-VL gibt es als `qwen3-vl:8b` (6,1 GB).' } },
         { '@type': 'Question', name: 'Muss ich bei der Verwendung von Qwen3 die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Beim lokalen Betrieb von Qwen3 verlassen keine Daten Ihren Server — das Modell verarbeitet Anfragen vollständig auf Ihrer Hardware. Damit ist für die Inferenz in der Regel kein Auftragsverarbeitungsvertrag (AVV) nach DSGVO Art. 28 nötig, sofern kein Drittanbieter Zugriff auf die Daten erhält; die DSGVO gilt für Ihre Verarbeitung aber weiterhin. Für Unternehmen, die das BSI-Grundschutz-Kompendium anwenden, kann die lokale Inferenz den IT-Grundschutz-Baustein OPS.2.2 unterstützen. Dies ist keine Rechtsberatung.' } },
@@ -2225,13 +2225,13 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Qwen3 8B läuft mit 5,5 GB VRAM** — ein einziger `ollama pull qwen3:8b`-Befehl genügt; auf einer RTX 3060 erreicht es 57 Tokens/Sek.',
           '**Vier praktische Teilfamilien**: Qwen3 (allgemein, Thinking-Mode; Vorgängergeneration, weiterhin stark verbreitet), Qwen2.5 (allgemein, am besten getestet), Qwen2.5-Coder (Coding, 92,7 % HumanEval bei 32B), Qwen2.5-VL (Vision, CJK-Dokument-OCR; Qwen3-VL ist die neuere Vision-Generation).',
           '**Dense-Architektur = Consumer-freundlich**: Anders als DeepSeek V4-Flash (MoE-Modell mit 284B Parametern) passt Qwen2.5-72B mit 46 GB VRAM auf zwei RTX 3090.',
-          '**Natives Mehrsprachigkeit**: Vortrainiert auf Chinesisch, Japanisch, Koreanisch, Arabisch, Deutsch, Französisch und 23 weiteren Sprachen — Qwen3 übertrifft Llama 3.3 bei CJK-Aufgaben.',
+          '**Native Mehrsprachigkeit**: Vortrainiert auf Chinesisch, Japanisch, Koreanisch, Arabisch, Deutsch, Französisch und vielen weiteren Sprachen (die genaue Liste steht auf der Modellkarte).',
           '**Q4_K_M ist die richtige Quantisierung** für die meisten Nutzer: ~55 % VRAM-Reduktion, weniger als 1 % Qualitätsverlust.',
           '**Hardware-Entscheidung**: 12 GB VRAM → 14B-Modell; 24 GB → 32B; 48 GB+ (zwei GPUs oder Apple Silicon 64 GB) → 72B.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen umfasst drei lokale Deployment-Teilfamilien — Allgemein (7B–72B), Coding (Coder 7B–32B) und Vision (VL 3B–72B) — alle über Ollama oder LM Studio ausführbar.' },
-          { type: 'plain-terms', text: 'Ein Modell lokal betreiben bedeutet, dass die KI auf dem eigenen Computer statt auf einem Cloud-Server läuft. Keine Daten verlassen die eigene Hardware, und nach der Anschaffung fallen keine Kosten pro Token an.' },
+          { type: 'plain-terms', text: 'Ein Modell lokal betreiben bedeutet, dass die KI auf dem eigenen Computer statt auf einem Cloud-Server läuft. Inferenzdaten verlassen die eigene Hardware nicht (sofern Sie keine Cloud-Dienste aktivieren), und nach der Anschaffung fallen keine Kosten pro Token an.' },
         ],
       },
       modelFamily: {
@@ -2275,7 +2275,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: 'Ihre VRAM-Stufe steht fest? Sehen Sie sich an, [welche GPU oder welchen Mac Sie für diese Stufe genau kaufen sollten](#affiliate-picks) — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB+ → Mac mini M5 Pro oder Dual-GPU.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-de.webp',
-        imageCaption: 'Qwen3 VRAM-Anforderungen nach Modellgröße (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'Qwen3 VRAM-Anforderungen nach Modellgröße (Q4_K_M) — Näherungswerte',
       },
       ollamaSetup: {
         id: 'ollama-setup',
@@ -2303,7 +2303,7 @@ ollama pull qwen2.5:7b           # Qwen2.5 allgemein 7B (~5,5 GB)
 ollama pull qwen2.5:14b          # Qwen2.5 allgemein 14B (~9,5 GB)
 ollama pull qwen2.5:32b          # Qwen2.5 allgemein 32B (~20,5 GB)
 ollama pull qwen2.5-coder:32b    # Qwen2.5-Coder 32B (~20,5 GB)
-ollama pull qwen2.5vl:7b          # Vision 7B (~6,2 GB)
+ollama pull qwen2.5vl:7b          # Vision 7B (~6,0 GB)
 
 # Interaktiv ausführen
 ollama run qwen2.5:7b
@@ -2350,7 +2350,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'benchmarks',
         title: 'Benchmark-Performance auf Consumer-Hardware',
         content: [
-          '**Qwen3 32B Q4_K_M auf einer RTX 4090 liefert 28 Tokens/Sek. — schnell genug für Echtzeit-Coding-Assistenz.** Qwen3 32B ist die Vorgängergeneration von Qwen; das neuere Qwen 3.6 27B passt in dieselbe 24-GB-Stufe (siehe Hardware-Tabelle oben). Die unten aufgeführten Werte gelten für Q4_K_M-GGUF-Builds, getestet unter Ollama. Full-Precision-FP16-Werte sind um 1–2 % höher.',
+          '**Qwen3 32B Q4_K_M auf einer RTX 4090 liefert 28 Tokens/Sek. — schnell genug für Echtzeit-Coding-Assistenz.** Qwen3 32B ist die Vorgängergeneration von Qwen; das neuere Qwen 3.6 27B passt in dieselbe 24-GB-Stufe (siehe Hardware-Tabelle oben). Die unten aufgeführten Werte sind Richtwerte und keine Messungen von PromptQuorum: Die Geschwindigkeit hängt von GPU, Treiber, Kontextlänge und Ollama-Version ab, die Genauigkeitswerte haben wir nicht selbst erneut ermittelt, und Q4_K_M-Builds liegen meist etwas unter voller Präzision. Prüfen Sie die jeweilige Modellkarte und testen Sie auf Ihrer eigenen Hardware.',
         ],
         rows: [
           { 'Modell (Q4_K_M)': 'Qwen3 8B', 'MMLU': '74,2 %', 'Math': '58,8 %', 'HumanEval': '57,3 %', 'Geschwindigkeit (RTX 3060 12 GB)': '57 Tokens/Sek.' },
@@ -2367,13 +2367,13 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: 'Sie möchten diesen HumanEval-Score von 92,7 % bei 27 Tokens/Sek.? Sehen Sie sich die [24-GB-GPU an, die Qwen2.5-Coder 32B ausführt](#affiliate-picks).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-de.webp',
-        imageCaption: 'Qwen3 Benchmark-Ergebnisse (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'Qwen3 Benchmark-Ergebnisse (Q4_K_M) — Näherungswerte',
       },
       vsComparison: {
         id: 'vs-comparison',
         title: 'Qwen vs. DeepSeek vs. Llama: Was lokal betreiben?',
         content: [
-          '**Qwen gewinnt bei der VRAM-Effizienz auf Consumer-Hardware; DeepSeeks aktuelle V4-Linie ist groß angelegt (V4-Flash: 284B Parameter insgesamt) und auf einer einzelnen Consumer-GPU kaum praktikabel; Llama 3.3 70B ist die beste Einzel-GPU-Option, wenn Meta\'s offenes Modell bevorzugt wird.** Die folgende Tabelle vergleicht die praktischen Optionen je VRAM-Stufe.',
+          '**Nach unserer Einschätzung ist Qwen auf Consumer-Hardware die VRAM-effizientere Familie; DeepSeeks aktuelle V4-Linie ist groß angelegt (V4-Flash: 284B Parameter insgesamt) und auf einer einzelnen Consumer-GPU kaum praktikabel; Llama 3.3 70B ist eine Alternative, wenn Sie Metas offenes Modell bevorzugen und auf einer einzelnen GPU einen Teil der Schichten in den System-RAM auslagern.** Die folgende Tabelle vergleicht die praktischen Optionen je VRAM-Stufe.',
         ],
         rows: [
           { 'VRAM-Stufe': '6 GB', 'Bestes Qwen': 'Qwen3 8B', 'Bester Konkurrent': 'Llama 3.2 3B (passt, aber nur 3B)', 'Empfehlung': 'Qwen3 8B gewinnt — gleiches VRAM, viel größeres Modell' },
@@ -2389,13 +2389,13 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'regional-context',
         title: 'Datensouveränität für deutsche und europäische Nutzer',
         content: [
-          '**Der lokale Betrieb von Qwen3 bedeutet, dass keine Daten das eigene Gerät verlassen — kein Cloud-API-Aufruf, kein Drittlandtransfer über eine Cloud-API; die DSGVO und das IT-Sicherheitsrecht gelten für Ihre Verarbeitung aber weiterhin.** Cloud-basierte LLM-APIs erfordern die Übermittlung von Prompts an externe Server im Ausland, was DSGVO Art. 28 (Auftragsverarbeitung) und ggf. Art. 44 ff. (Drittlandübermittlung) auslöst.',
-          'Qwen3 wurde vom Qwen-Team bei Alibaba auf einem überwiegend chinesisch- und mehrsprachigen Korpus trainiert. Es ist das stärkste lokal einsetzbare Modell für Vereinfachtes Chinesisch, Traditionelles Chinesisch und gemischtsprachige Dokumente (Chinesisch/Englisch/Deutsch).',
-          '**Für Unternehmensdeployments im DACH-Raum**: Ein luftgespaltenes Qwen3-Setup (keine Internetverbindung während der Inferenz) vermeidet die Übermittlung von Inferenzdaten an externe Anbieter, was die DSGVO-Umsetzung erleichtert (keine Rechtsberatung). Das Modell läuft ausschließlich auf lokaler Hardware — kein Drittanbieter erhält Zugriff auf Eingabe- oder Ausgabedaten. Für BSI-Grundschutz-konforme Setups empfiehlt sich Baustein OPS.2.2 (Fremdsoftware). Vollständige Anleitung für luftgespaltene Setups: [KI vollständig offline betreiben](/de/power-local-llm/local-ai-behind-firewall-offline-2026).',
+          '**Der lokale Betrieb von Qwen3 bedeutet, dass die Prompts auf der eigenen Hardware bleiben — es gehen keine Inferenzdaten an eine Cloud-API, es entsteht kein Drittlandtransfer über eine Cloud-API; die DSGVO und das IT-Sicherheitsrecht gelten für Ihre Verarbeitung aber weiterhin.** Cloud-basierte LLM-APIs erfordern die Übermittlung von Prompts an externe Server im Ausland, was DSGVO Art. 28 (Auftragsverarbeitung) und ggf. Art. 44 ff. (Drittlandübermittlung) auslösen kann.',
+          'Qwen3 wurde vom Qwen-Team bei Alibaba auf einem überwiegend chinesisch- und mehrsprachigen Korpus trainiert. Es ist ein starker Kandidat für Vereinfachtes Chinesisch, Traditionelles Chinesisch und gemischtsprachige Dokumente (Chinesisch/Englisch/Deutsch); testen Sie es mit Ihrem eigenen Material.',
+          '**Für Unternehmensdeployments im DACH-Raum**: Ein luftgespaltenes Qwen3-Setup (keine Internetverbindung während der Inferenz) vermeidet die Übermittlung von Inferenzdaten an externe Anbieter, was die DSGVO-Umsetzung erleichtert (keine Rechtsberatung). Das Modell läuft ausschließlich auf lokaler Hardware — kein Drittanbieter erhält Zugriff auf Eingabe- oder Ausgabedaten. Für Setups nach BSI-Grundschutz kann Baustein OPS.2.2 (Fremdsoftware) herangezogen werden; die Konformität ist stets im Einzelfall zu prüfen. Vollständige Anleitung für luftgespaltene Setups: [KI vollständig offline betreiben](/de/power-local-llm/local-ai-behind-firewall-offline-2026).',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3 läuft nach dem Download vollständig offline — keine Daten verlassen Ihr Gerät, wodurch das Risiko einer Drittlandübermittlung von Inferenzdaten entfällt.' },
-          { type: 'plain-terms', text: 'Beim lokalen Betrieb von Qwen3 verlassen Ihre Prompts und Dokumente niemals den eigenen Computer. Es gibt keinen Cloud-API-Aufruf, keinen externen Server und keine Daten, auf die Behörden oder Dritte zugreifen könnten.' },
+          { type: 'one-sentence', text: 'Qwen3 kann nach dem Download vollständig offline laufen — Inferenzdaten müssen Ihr Gerät nicht verlassen, wodurch das Risiko einer Drittlandübermittlung von Inferenzdaten sinkt (die Einhaltung der DSGVO hängt weiterhin von Ihrem Anwendungsfall ab).' },
+          { type: 'plain-terms', text: 'Beim lokalen Betrieb von Qwen3 bleiben Ihre Prompts und Dokumente auf Ihrem Computer, solange Sie ihn nicht mit einem Cloud-Dienst verbinden. Die Inferenz braucht keinen Cloud-API-Aufruf; wie der Rest Ihres Setups mit Daten umgeht, liegt in Ihrer Verantwortung.' },
         ],
       },
       affiliatePicks: {
@@ -2524,11 +2524,11 @@ curl http://localhost:11434/v1/chat/completions \\
           { q: 'Welcher Ollama-Befehl lädt Qwen 3.6 27B?', a: '`ollama run qwen3.6:27b` lädt das Modell beim ersten Aufruf herunter und startet es direkt. Ollama verwendet standardmäßig eine Q4_K_M-Quantisierung, was hier den ~17 GB VRAM entspricht. Soll das Modell nur geladen, aber noch nicht gestartet werden, nutzen Sie `ollama pull qwen3.6:27b`.' },
           { q: 'Läuft Qwen 3.6 27B auf 12 GB VRAM?', a: 'Nicht sinnvoll. Mit ~17 GB Bedarf in Q4_K_M passt das Modell nicht vollständig auf eine 12-GB-Karte; ein Teil müsste in den System-RAM ausgelagert werden, was die Geschwindigkeit stark einbrechen lässt. Auf 12 GB VRAM fahren Sie mit einem kleineren Qwen-Modell deutlich besser — dort bleibt auch Platz für einen längeren Kontext.' },
           { q: 'Wie viel VRAM benötige ich für Qwen3 8B lokal?', a: 'Qwen3 8B Q4_K_M benötigt 5,5 GB VRAM. Eine RTX 3060 6 GB, RTX 4060 oder ein Apple-M-Chip mit 8 GB Unified Memory reichen aus.' },
-          { q: 'Welches Qwen-Modell eignet sich am besten für Coding lokal?', a: 'Qwen2.5-Coder 32B ist das beste lokal ausführbare Coding-Modell — 92,7 % auf HumanEval, benötigt 24 GB GPU. Bei 12 GB VRAM: Qwen2.5-Coder 14B (85,2 %, 9,5 GB VRAM).' },
+          { q: 'Welches Qwen-Modell eignet sich am besten für Coding lokal?', a: 'Qwen2.5-Coder 32B ist das größte dedizierte Coding-Modell der Qwen2.5-Reihe, das auf eine 24-GB-GPU passt; Qwen nennt 92,7 % auf HumanEval für die Instruct-Version in voller Präzision. Qwen 3.6 27B bietet zudem eine Coding-Variante (`qwen3.6:27b-coding`). Bei 12 GB VRAM: Qwen2.5-Coder 14B (85,2 %, 9,5 GB VRAM).' },
           { q: 'Wie schneidet Qwen im Vergleich zu DeepSeek ab?', a: 'Qwen nutzt eine Dense-Architektur, die auf Consumer-Hardware passt. DeepSeeks aktuelle offene Linie ist V4 (V4-Flash: 284B Parameter insgesamt, MoE) und liegt weit jenseits einer einzelnen Consumer-GPU; DeepSeek-V2.5 (236B-MoE, 2024) wurde durch V3 und dann V4 abgelöst.' },
           { q: 'Kann ich Qwen auf einem Mac betreiben?', a: 'Ja. M2 Pro 32 GB führt Qwen3 14B mit ~32 Tokens/Sek. aus. M3 Max 64 GB bewältigt Qwen3 32B mit ~22 Tokens/Sek.' },
           { q: 'Welchen Ollama-Befehl verwende ich für Qwen?', a: 'Für das Flagship-Modell: `ollama run qwen3.6:27b` (~17 GB VRAM). Für Qwen3: `ollama pull qwen3:8b`. Für Qwen2.5: `ollama pull qwen2.5:7b` für 7B, `:14b` für 14B, `:32b` für 32B oder `qwen2.5-coder:32b` für die Coding-Variante. Immer explizite Größen-Tags verwenden.' },
-          { q: 'Ist Qwen für chinesischsprachige Aufgaben geeignet?', a: 'Ja. Qwen3 wurde auf einem umfangreichen chinesischen Korpus vortrainiert und unterstützt nativ Vereinfachtes Chinesisch, Traditionelles Chinesisch, Japanisch, Koreanisch und 24 weitere Sprachen.' },
+          { q: 'Ist Qwen für chinesischsprachige Aufgaben geeignet?', a: 'Ja. Qwen3 wurde auf einem umfangreichen chinesischen Korpus vortrainiert und unterstützt nativ Vereinfachtes Chinesisch, Traditionelles Chinesisch, Japanisch, Koreanisch und viele weitere Sprachen (siehe Modellkarte). Es ist ein starker Kandidat für lokale KI auf Chinesisch; testen Sie es mit Ihren eigenen Dokumenten.' },
           { q: 'Welche Quantisierung sollte ich für Qwen3 verwenden?', a: 'Q4_K_M ist die empfohlene Standardwahl — ~55 % VRAM-Reduktion bei weniger als 1 % Qualitätsverlust. Q8_0 für nahezu FP16-Qualität. Q2_K bei chinesischsprachigen Anwendungen vermeiden.' },
           { q: 'Funktioniert Qwen2.5-VL für chinesisches Dokument-OCR?', a: 'Ja — Qwen2.5-VL 7B läuft über Ollama (`ollama pull qwen2.5vl:7b`, 6,0 GB Download), nimmt Text und Bilder entgegen und liest CJK-Text in gescannten Dokumenten; testen Sie mit eigenen Scans. Das neuere Qwen3-VL ist `qwen3-vl:8b`.' },
           { q: 'Muss ich bei der Verwendung von Qwen3 die DSGVO beachten?', a: 'Beim lokalen Betrieb verlassen keine Daten den eigenen Server — in der Regel kein AVV nach DSGVO Art. 28 nötig, sofern kein Drittanbieter Datenzugriff hat; die DSGVO gilt weiterhin. Kann den BSI-Baustein OPS.2.2 unterstützen.' },
@@ -2540,7 +2540,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Weiterführende Artikel',
         links: [
           { url: '/de/local-llms/run-qwen-locally-guide-2026', title: 'Qwen 3 lokal betreiben 2026', description: 'Einzelmodell-Setup-Guide für Qwen 3.6 27B mit Ollama und LM Studio — der schnellste Weg zu einer funktionierenden Qwen-Instanz.' },
-          { url: '/de/local-llms/run-qwen-vl-locally-2026', title: 'Qwen2-VL lokal betreiben 2026', description: 'Vollständiger Guide zu Qwen2-VL — CJK-Dokument-OCR, Bild-Q&A und mehrsprachige Screenshot-Analyse auf Consumer-Hardware.' },
+          { url: '/de/local-llms/run-qwen-vl-locally-2026', title: 'Qwen2.5-VL und Qwen3-VL lokal betreiben 2026', description: 'Vollständiger Guide zu Qwen2.5-VL und Qwen3-VL — Ollama-Tags, Größen, Lizenzen, CJK-Dokument-OCR und Bild-Q&A auf Consumer-Hardware.' },
           { url: '/de/local-llms/qwen-vs-llama-vs-mistral', title: 'Qwen vs. Llama vs. Mistral 2026', description: 'Benchmark-Vergleich von Qwen 3.6 27B, Llama 4 Scout und Mistral Small 3.1 auf MMLU, SWE-bench und MATH.' },
           { url: '/de/local-llms/llm-quantization-explained', title: 'LLM-Quantisierung erklärt', description: 'Was Q4_K_M, Q8_0 und IQ4_XS bedeuten — wie sie VRAM, Geschwindigkeit und Ausgabequalität beeinflussen.' },
           { url: '/de/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'DeepSeek vs. Qwen Lokal-Vergleich 2026', description: 'Vollständiger Vergleich: DeepSeek-R1-Distill-Qwen-32B vs. Qwen3 32B bei Coding, Reasoning, Chinesisch und kreativem Schreiben — mit Mac-vs.-NVIDIA-Aufschlüsselung.' },
@@ -2615,7 +2615,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': 'コーディング用途に最適なQwenモデルは？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen2.5-Coder 32B — HumanEval 92.7%、GPU 24GB必要。VRAM 12GB以下ならQwen2.5-Coder 14B（85.2%、9.5GB VRAM）。',
+              'text': 'Qwen2.5-Coder 32Bは、24GB GPUに収まるQwen2.5系の最大の専用コーディングモデルで、Qwenはフル精度のInstruct版でHumanEval 92.7%と報告しています。Qwen 3.6 27Bにもコーディング版（`qwen3.6:27b-coding`）があります。VRAM 12GB以下ならQwen2.5-Coder 14B（85.2%、9.5GB VRAM）。',
             },
           },
           {
@@ -2647,7 +2647,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': '中国語タスクにQwenは適していますか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'はい。Qwen3は大規模な中国語コーパスで学習され、簡体字・繁体字・日本語・韓国語を含む29言語をネイティブサポートしています。',
+              'text': 'はい。Qwen3は大規模な中国語コーパスで学習され、簡体字・繁体字・日本語・韓国語を含む多数の言語をネイティブサポートしています（詳細はモデルカード参照）。中国語のローカルAIの有力な選択肢ですが、ご自身の文書で検証してください。',
             },
           },
           {
@@ -2671,7 +2671,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': 'METI AIガイドラインへの対応は？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'ローカルデプロイでデータが社外に出ないため、METI「AI事業者ガイドライン2024」のデータガバナンス要件に対応しやすい構成です。',
+              'text': 'ローカルデプロイでは推論データを社外に出さずに済むため、METI「AI事業者ガイドライン」のデータガバナンスの観点で検討しやすい構成ですが、適合性は用途によります（法的助言ではありません）。',
             },
           },
           {
@@ -2687,7 +2687,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': '日本の企業でQwen3を使う場合のMETIガイドラインへの対応は？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'ローカルデプロイ時はデータが社外に出ないため、経済産業省の「AI事業者ガイドライン（2024年）」が求めるデータガバナンスの観点でも有利です。特に個人情報・秘密情報を扱う業務では、オフライン推論がリスク管理として有効です。',
+              'text': 'ローカルデプロイでは推論データを社外に出さずに済むため、経済産業省の「AI事業者ガイドライン」が扱うデータガバナンスの観点でも検討しやすくなります。個人情報・秘密情報を扱う業務では、オフライン推論がリスク管理の一手段になり得ますが、適合性は用途によります（法的助言ではありません）。',
             },
           },
         ],
@@ -2701,13 +2701,13 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Qwen3 8BはVRAM 5.5GBで動作** — `ollama pull qwen3:8b`の1コマンドで起動。RTX 3060で57トークン/秒。',
           '**4つの実用的なサブファミリー**：Qwen3（汎用、思考モード。前世代で今も広く使われている）、Qwen2.5（汎用、最も検証済み）、Qwen2.5-Coder（コーディング、32BでHumanEval 92.7%）、Qwen2.5-VL（ビジョン、CJKドキュメントOCR。Qwen3-VLがより新しいビジョン世代）。',
           '**Denseアーキテクチャ = コンシューマー向け**：DeepSeek V4-Flash（284BパラメータのMoE）と違い、Qwen2.5-72BはVRAM 46GBで2枚のRTX 3090に収まります。',
-          '**ネイティブ多言語対応**：中国語・日本語・韓国語・アラビア語・ドイツ語・フランス語など29言語でLlama 3.3を上回る性能。',
+          '**ネイティブ多言語対応**：中国語・日本語・韓国語・アラビア語・ドイツ語・フランス語など多数の言語で事前学習（対応言語の一覧はモデルカードを参照）。',
           '**Q4_K_Mが最適な量子化**：FP16比でVRAMを約55%削減し、品質低下は1%未満。',
           '**ハードウェア判断基準**：VRAM 12GB → 14Bモデル；24GB → 32B；48GB+（デュアルGPUまたはApple Silicon 64GB）→ 72B。',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen 3.6 27B（256Kコンテキスト、Q4_K_M約17GB）が新フラッグシップ。Qwenには4つのローカルデプロイ用サブファミリーがあります：汎用（7B〜72B）、コーディング（Coder 7B〜32B）、ビジョン（VL 3B〜72B）。すべてOllamaまたはLM Studioで実行可能。' },
-          { type: 'plain-terms', text: 'モデルをローカルで動かすとは、AIがクラウドサーバーではなく自分のコンピュータ上で動作することを意味します。データが外部に出ず、ハードウェア購入後はトークンごとのコストもかかりません。' },
+          { type: 'plain-terms', text: 'モデルをローカルで動かすとは、AIがクラウドサーバーではなく自分のコンピュータ上で動作することを意味します。推論データは外部に出ず（クラウド機能を有効にしない限り）、ハードウェア購入後はトークンごとのコストもかかりません。' },
         ],
       },
       modelFamily: {
@@ -2751,7 +2751,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: 'ご自身のVRAM階層が決まったら、[その階層に最適なGPUまたはMacの選び方](#affiliate-picks)をご覧ください — 6GB → RTX 4060、12GB → RTX 4070 Super、24GB → RTX 3090/4090、48GB以上 → Mac mini M5 Proまたはデュアル GPU。' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-ja.webp',
-        imageCaption: 'Qwen3 モデルサイズ別VRAM要件（Q4_K_M）— PromptQuorum 2026',
+        imageCaption: 'Qwen3 モデルサイズ別VRAM要件（Q4_K_M）— 目安の値',
       },
       ollamaSetup: {
         id: 'ollama-setup',
@@ -2779,7 +2779,7 @@ ollama pull qwen2.5:7b           # Qwen2.5汎用7B（約5.5GB）
 ollama pull qwen2.5:14b          # Qwen2.5汎用14B（約9.5GB）
 ollama pull qwen2.5:32b          # Qwen2.5汎用32B（約20.5GB）
 ollama pull qwen2.5-coder:32b    # Qwen2.5-Coder 32B（約20.5GB）
-ollama pull qwen2.5vl:7b          # ビジョン7B（約6.2GB）
+ollama pull qwen2.5vl:7b          # ビジョン7B（約6.0GB）
 
 # インタラクティブ実行
 ollama run qwen2.5:7b
@@ -2826,7 +2826,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'benchmarks',
         title: 'コンシューマーハードウェアでのベンチマーク性能',
         content: [
-          '**RTX 4090でのQwen3 32B Q4_K_Mは28トークン/秒** — リアルタイムのコーディング支援に十分な速度です。Qwen3 32BはQwenの前世代で、より新しいQwen 3.6 27Bが同じ24GB階層に収まります（上のハードウェア表を参照）。以下のスコアはOllamaでテストしたQ4_K_M GGUFビルドの値です。',
+          '**RTX 4090でのQwen3 32B Q4_K_Mは28トークン/秒** — リアルタイムのコーディング支援に十分な速度です。Qwen3 32BはQwenの前世代で、より新しいQwen 3.6 27Bが同じ24GB階層に収まります（上のハードウェア表を参照）。以下の数値は目安であり、PromptQuorumによる実測値ではありません。速度はGPU、ドライバ、コンテキスト長、Ollamaのバージョンによって変わり、精度スコアは当社で再実行したものではなく、Q4_K_Mビルドは通常、フル精度よりわずかに低いスコアになります。各モデルカードを確認し、お使いのハードウェアでお試しください。',
         ],
         rows: [
           { 'モデル（Q4_K_M）': 'Qwen3 8B', 'MMLU': '74.2%', 'Math': '58.8%', 'HumanEval': '57.3%', '速度（RTX 3060 12GB）': '57トークン/秒' },
@@ -2843,13 +2843,13 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: '27トークン/秒でHumanEval 92.7%を狙いたいですか？[Qwen2.5-Coder 32Bを動かせる24GB GPU](#affiliate-picks)をご覧ください。' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-ja.webp',
-        imageCaption: 'Qwen3ベンチマークスコア（Q4_K_M）— PromptQuorum 2026',
+        imageCaption: 'Qwen3ベンチマークスコア（Q4_K_M）— 目安の値',
       },
       vsComparison: {
         id: 'vs-comparison',
         title: 'Qwen vs DeepSeek vs Llama：何をローカルで動かすか',
         content: [
-          '**QwenはコンシューマーハードウェアでのVRAM効率で優位。DeepSeekの現行V4系列は大規模（V4-Flash：総パラメータ284B）で、単一のコンシューマーGPUでは非現実的。Llama 3.3 70BはMetaのオープンモデルを好む場合のシングルGPU最良選択肢です。**',
+          '**当社の見方では、QwenはコンシューマーハードウェアでのVRAM効率に優れるファミリーです。DeepSeekの現行V4系列は大規模（V4-Flash：総パラメータ284B）で、単一のコンシューマーGPUでは非現実的。Llama 3.3 70Bは、Metaのオープンモデルを好み、単一GPUで一部のレイヤーをシステムRAMにオフロードしても構わない場合の代替案です。**',
         ],
         rows: [
           { 'VRAM階層': '6GB', '最良Qwen': 'Qwen3 8B', '最良競合': 'Llama 3.2 3B（収まるが3Bのみ）', '判定': 'Qwen3 8Bが優位 — 同VRAM、より大きなモデル' },
@@ -2865,13 +2865,13 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'regional-context',
         title: '日本企業でのデータ主権と規制対応',
         content: [
-          '**Qwen3をローカルで運用すると、データが社外のサーバーに送信されません** — クラウドAPIと異なり、推論時に外部ネットワーク通信が発生しないためです。これは経済産業省（METI）の「AI事業者ガイドライン（2024年）」が求めるデータガバナンスの観点で有利な構成です。',
-          '日本語はQwen3の29言語ネイティブサポートに含まれており、医療・法律・金融などの日本語専門文書でも高精度なテキスト処理が可能です。Qwen2.5-VL 7Bは日本語ドキュメントのOCRにも使えるローカルビジョンモデルです。',
-          '**アジア太平洋地域の規制環境** — 日本の個人情報保護法（PIPA改正版）では、個人データの安全管理措置として「技術的安全管理措置」が義務付けられています。ローカルLLMは、個人データをオンプレミスで処理することで、この要件に対応しやすい構成です。中国・韓国・シンガポール・オーストラリアでも同様に、機密データのローカル処理はクロスボーダーデータ転送リスクを低減します（適合性は用途によるため、専門家にご確認ください）。完全オフライン構成のガイドは[完全オフラインでAIを動かす](/ja/power-local-llm/local-ai-behind-firewall-offline-2026)をご覧ください。',
+          '**Qwen3をローカルで運用すると、推論データをクラウドAPIに送信せずに済みます** — クラウドAPIと異なり、推論時に外部ネットワーク通信が不要なためです。経済産業省（METI）の「AI事業者ガイドライン」が扱うデータガバナンスの観点で検討しやすい構成ですが、適合するかどうかは用途や運用体制によります。法的助言ではありませんので、専門家にご確認ください。',
+          '日本語はQwen3のネイティブ対応言語に含まれています。医療・法律・金融などの日本語専門文書での精度は文書によって異なるため、ご自身の資料で検証してください。Qwen2.5-VL 7Bは日本語ドキュメントのOCRにも使えるローカルビジョンモデルです。',
+          '**アジア太平洋地域の規制環境** — 日本の個人情報保護法（改正法）では、個人データの安全管理措置として「技術的安全管理措置」が義務付けられています。ローカルLLMは、個人データをオンプレミスで処理することで、この要件に対応しやすい構成です。中国・韓国・シンガポール・オーストラリアでも同様に、機密データのローカル処理はクロスボーダーデータ転送リスクを低減します（適合性は用途によるため、専門家にご確認ください）。完全オフライン構成のガイドは[完全オフラインでAIを動かす](/ja/power-local-llm/local-ai-behind-firewall-offline-2026)をご覧ください。',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3はダウンロード後に完全オフラインで動作し、データが社外に出ないためMETIのAIガバナンスガイドラインへの対応が容易です。' },
-          { type: 'plain-terms', text: 'ローカルで動かすと、プロンプトや文書がコンピュータから出ません。クラウドAPIコールもなく、外部サーバーもなく、第三者がアクセスできるデータもありません。' },
+          { type: 'one-sentence', text: 'Qwen3はダウンロード後に完全オフラインで動作させることができ、推論データを社外に出さずに済むため、METIのAIガバナンスガイドラインへの対応を検討しやすくなります（適合性は用途によります）。' },
+          { type: 'plain-terms', text: 'ローカルで動かすと、クラウドサービスに接続しない限り、プロンプトや文書はコンピュータ上にとどまります。推論にクラウドAPI呼び出しは不要ですが、それ以外の構成がデータをどう扱うかは利用者の責任です。' },
         ],
       },
       affiliatePicks: {
@@ -2996,16 +2996,16 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'よくある質問',
         faqs: [
             { q: 'Qwen3 8Bをローカルで動かすのに必要なVRAMは？', a: 'Qwen3 8B Q4_K_MにはVRAM 5.5GBが必要です。RTX 3060 6GB、RTX 4060、またはApple M系8GBユニファイドメモリで動作します。' },
-            { q: 'コーディング用途に最適なQwenモデルは？', a: 'Qwen2.5-Coder 32B — HumanEval 92.7%、GPU 24GB必要。VRAM 12GB以下ならQwen2.5-Coder 14B（85.2%、9.5GB VRAM）。' },
+            { q: 'コーディング用途に最適なQwenモデルは？', a: 'Qwen2.5-Coder 32Bは、24GB GPUに収まるQwen2.5系の最大の専用コーディングモデルで、Qwenはフル精度のInstruct版でHumanEval 92.7%と報告しています。Qwen 3.6 27Bにもコーディング版（`qwen3.6:27b-coding`）があります。VRAM 12GB以下ならQwen2.5-Coder 14B（85.2%、9.5GB VRAM）。' },
             { q: 'QwenとDeepSeekのローカルデプロイ比較は？', a: 'Qwenはコンシューマーハードウェアに収まるDenseアーキテクチャです。DeepSeekの現行オープン系列はV4（V4-Flash：総パラメータ284B、MoE）で、単一のコンシューマーGPUをはるかに超えます。DeepSeek-V2.5（236B MoE、2024年）はV3、次いでV4に置き換えられました。' },
             { q: 'MacでQwenを動かせますか？', a: 'はい。M2 Pro 32GBはQwen3 14Bを約32トークン/秒で実行。M3 Max 64GBはQwen3 32Bを約22トークン/秒で処理。' },
             { q: 'QwenのOllamaコマンドは？', a: 'フラッグシップは`ollama run qwen3.6:27b`（VRAM約17GB）。Qwen3は`ollama pull qwen3:8b`。Qwen2.5は`ollama pull qwen2.5:7b`（7B）、`:14b`（14B）、`:32b`（32B）、`qwen2.5-coder:32b`（コーディング版）。常に明示的なサイズタグを使用。' },
-            { q: '中国語タスクにQwenは適していますか？', a: 'はい。Qwen3は大規模な中国語コーパスで学習され、簡体字・繁体字・日本語・韓国語を含む29言語をネイティブサポートしています。' },
+            { q: '中国語タスクにQwenは適していますか？', a: 'はい。Qwen3は大規模な中国語コーパスで学習され、簡体字・繁体字・日本語・韓国語を含む多数の言語をネイティブサポートしています（詳細はモデルカード参照）。中国語のローカルAIの有力な選択肢ですが、ご自身の文書で検証してください。' },
             { q: 'Qwen3に推奨する量子化は？', a: 'Q4_K_Mがデフォルト推奨 — FP16比でVRAM約55%削減、品質低下1%未満。Q8_0は品質重視、Q2_Kは中国語には不適。' },
             { q: 'Qwen2.5-VLは日本語・中国語OCRに使えますか？', a: 'はい。Qwen2.5-VL 7Bは`ollama pull qwen2.5vl:7b`（6.0GBのダウンロード）で動作し、テキストと画像を入力でき、スキャン文書のCJKテキストを読み取れます。ご自身のスキャンで試してください。より新しいQwen3-VLは`qwen3-vl:8b`です。' },
-            { q: 'METI AIガイドラインへの対応は？', a: 'ローカルデプロイでデータが社外に出ないため、METI「AI事業者ガイドライン2024」のデータガバナンス要件に対応しやすい構成です。' },
+            { q: 'METI AIガイドラインへの対応は？', a: 'ローカルデプロイでは推論データを社外に出さずに済むため、METI「AI事業者ガイドライン」のデータガバナンスの観点で検討しやすい構成ですが、適合性は用途によります（法的助言ではありません）。' },
             { q: 'Apple M系チップでQwen2.5-72Bを動かせますか？', a: 'M2 Ultra 192GBまたはM3 Ultra 192GBで動作します。Q4_K_Mで約46GBのメモリが必要です。' },
-            { q: '日本の企業でQwen3を使う場合のMETIガイドラインへの対応は？', a: 'ローカルデプロイ時はデータが社外に出ないため、経済産業省の「AI事業者ガイドライン（2024年）」が求めるデータガバナンスの観点でも有利です。特に個人情報・秘密情報を扱う業務では、オフライン推論がリスク管理として有効です。' },
+            { q: '日本の企業でQwen3を使う場合のMETIガイドラインへの対応は？', a: 'ローカルデプロイでは推論データを社外に出さずに済むため、経済産業省の「AI事業者ガイドライン」が扱うデータガバナンスの観点でも検討しやすくなります。個人情報・秘密情報を扱う業務では、オフライン推論がリスク管理の一手段になり得ますが、適合性は用途によります（法的助言ではありません）。' },
           ],
       },
       relatedReading: {
@@ -3013,7 +3013,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: '関連記事',
         links: [
           { url: '/ja/local-llms/run-qwen-locally-guide-2026', title: 'Qwen 3をローカルで動かす2026年版ガイド', description: 'OllamaとLM StudioでQwen 3.6 27Bをセットアップする単一モデルガイド。' },
-          { url: '/ja/local-llms/run-qwen-vl-locally-2026', title: 'Qwen2-VLをローカルで動かす2026年版', description: 'Qwen2-VL完全ガイド — CJKドキュメントOCR、画像Q&A、コンシューマーハードウェアでの多言語スクリーンショット解析。' },
+          { url: '/ja/local-llms/run-qwen-vl-locally-2026', title: 'Qwen2.5-VLとQwen3-VLをローカルで動かす2026年版', description: 'Qwen2.5-VLとQwen3-VLの完全ガイド — Ollamaタグ、サイズ、ライセンス、CJKドキュメントOCR、画像Q&A。' },
           { url: '/ja/local-llms/qwen-vs-llama-vs-mistral', title: 'Qwen vs Llama vs Mistral 2026', description: 'Qwen 3.6 27B、Llama 4 Scout、Mistral Small 3.1のMMLU・SWE-bench・MATH比較。' },
           { url: '/ja/local-llms/llm-quantization-explained', title: 'LLM量子化の解説', description: 'Q4_K_M・Q8_0・IQ4_XSの意味 — VRAMと速度と品質への影響。' },
           { url: '/ja/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'DeepSeek vs Qwenローカル比較2026', description: 'DeepSeek-R1-Distill-Qwen-32B vs Qwen3 32Bの全面比較：コーディング・推論・中国語・クリエイティブライティング。Mac vs NVIDIAの詳細付き。' },
@@ -3088,7 +3088,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': '本地运行最适合代码任务的Qwen模型？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen2.5-Coder 32B——HumanEval 92.7%，需24GB GPU。显存12GB或以下：Qwen2.5-Coder 14B（85.2%，9.5GB显存）。',
+              'text': 'Qwen2.5-Coder 32B是Qwen2.5系列中可装入24GB GPU的最大专用代码模型，Qwen报告其Instruct版全精度HumanEval为92.7%。Qwen 3.6 27B也有代码版（`qwen3.6:27b-coding`）。显存12GB或以下：Qwen2.5-Coder 14B（85.2%，9.5GB显存）。',
             },
           },
           {
@@ -3120,7 +3120,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': 'Qwen适合中文任务吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '是的。Qwen3在大规模中文语料库上预训练，原生支持简体中文、繁体中文、日语、韩语等29种语言，中文任务持续超越Llama 3.3和Mistral。',
+              'text': '是的。Qwen3在大规模中文语料库上预训练，原生支持简体中文、繁体中文、日语、韩语等众多语言（详见模型卡），是中文本地AI的有力候选；请用自己的文档测试。',
             },
           },
           {
@@ -3144,7 +3144,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': '本地部署Qwen3是否符合数据安全法要求？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '本地运行时数据不离开本地服务器，无需跨境传输，符合《数据安全法》第31条规定。金融、医疗、法律等受监管行业的最佳合规选择。',
+              'text': '本地运行时推理数据无需离开本地服务器，可降低跨境传输方面的风险；但是否符合《数据安全法》取决于具体用途，受监管行业（金融、医疗、法律）应咨询法律专业人士。本文不构成法律建议。',
             },
           },
           {
@@ -3166,13 +3166,13 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Qwen3 8B仅需5.5GB显存**——执行`ollama pull qwen3:8b`即可启动，RTX 3060上达到57 token/秒。',
           '**四个实用子系列**：Qwen3（通用，思考模式；上一代，仍被广泛部署）、Qwen2.5（通用，验证最充分）、Qwen2.5-Coder（代码，32B达HumanEval 92.7%）、Qwen2.5-VL（视觉，CJK文档OCR；Qwen3-VL是更新的视觉世代）。',
           '**Dense架构=消费级友好**：与DeepSeek V4-Flash（284B参数的MoE）不同，Qwen2.5-72B仅需46GB显存，两块RTX 3090即可运行。',
-          '**原生多语言**：在中文、日语、韩语、阿拉伯语、德语、法语等29种语言上预训练，CJK任务持续超越Llama 3.3。',
+          '**原生多语言**：在中文、日语、韩语、阿拉伯语、德语、法语等众多语言上预训练（具体语言列表见模型卡）。',
           '**Q4_K_M是正确的量化选择**：对大多数用户而言减少约55%显存，质量损失不足1%。',
           '**硬件决策**：12GB显存→14B模型；24GB→32B；48GB+（双卡或Apple Silicon 64GB）→72B。',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen 3.6 27B（256K上下文，Q4_K_M约17GB）是新旗舰。Qwen覆盖四个本地部署子系列——通用（7B–72B）、代码（Coder 7B–32B）和视觉（VL 3B–72B），均可通过Ollama或LM Studio运行。' },
-          { type: 'plain-terms', text: '本地运行模型意味着AI在你自己的电脑上运行，而非云端服务器。数据不离开本机，购买硬件后也无需按token付费。' },
+          { type: 'plain-terms', text: '本地运行模型意味着AI在你自己的电脑上运行，而非云端服务器。推理数据不离开本机（除非您启用云服务），购买硬件后也无需按token付费。' },
         ],
       },
       modelFamily: {
@@ -3216,7 +3216,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: '已经确定自己的显存档位了？查看[该档位对应的确切GPU或Mac购买建议](#affiliate-picks)——6GB → RTX 4060，12GB → RTX 4070 Super，24GB → RTX 3090/4090，48GB以上 → Mac mini M5 Pro或双卡方案。' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-zh.webp',
-        imageCaption: 'Qwen3各模型尺寸显存要求（Q4_K_M）— PromptQuorum 2026',
+        imageCaption: 'Qwen3各模型尺寸显存要求（Q4_K_M）— 近似值',
       },
       ollamaSetup: {
         id: 'ollama-setup',
@@ -3244,7 +3244,7 @@ ollama pull qwen2.5:7b           # Qwen2.5通用7B（约5.5GB）
 ollama pull qwen2.5:14b          # Qwen2.5通用14B（约9.5GB）
 ollama pull qwen2.5:32b          # Qwen2.5通用32B（约20.5GB）
 ollama pull qwen2.5-coder:32b    # Qwen2.5-Coder 32B（约20.5GB）
-ollama pull qwen2.5vl:7b          # 视觉7B（约6.2GB）
+ollama pull qwen2.5vl:7b          # 视觉7B（约6.0GB）
 
 # 交互式运行
 ollama run qwen2.5:7b
@@ -3291,7 +3291,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'benchmarks',
         title: '消费级硬件基准测试性能',
         content: [
-          '**RTX 4090上的Qwen3 32B Q4_K_M达到28 token/秒**——完全满足实时代码辅助需求。Qwen3 32B是Qwen的上一代；更新的Qwen 3.6 27B适配同一24GB档位（见上方硬件表）。以下评分适用于Ollama测试的Q4_K_M GGUF构建版本。',
+          '**RTX 4090上的Qwen3 32B Q4_K_M达到28 token/秒**——完全满足实时代码辅助需求。Qwen3 32B是Qwen的上一代；更新的Qwen 3.6 27B适配同一24GB档位（见上方硬件表）。以下数值仅为参考值，并非PromptQuorum的实测结果：速度因GPU、驱动、上下文长度和Ollama版本而异，精度评分并非我们重新运行所得，Q4_K_M构建的得分通常略低于全精度。请查看各模型卡，并在自己的硬件上测试。',
         ],
         rows: [
           { '模型（Q4_K_M）': 'Qwen3 8B', 'MMLU': '74.2%', 'Math': '58.8%', 'HumanEval': '57.3%', '速度（RTX 3060 12GB）': '57 token/秒' },
@@ -3308,13 +3308,13 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: '想要以27 token/秒的速度获得92.7%的HumanEval评分？查看[运行Qwen2.5-Coder 32B所需的24GB显存GPU](#affiliate-picks)。' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-zh.webp',
-        imageCaption: 'Qwen3基准测试评分（Q4_K_M）— PromptQuorum 2026',
+        imageCaption: 'Qwen3基准测试评分（Q4_K_M）— 近似值',
       },
       vsComparison: {
         id: 'vs-comparison',
         title: 'Qwen vs DeepSeek vs Llama：本地应该运行哪个',
         content: [
-          '**Qwen在消费级硬件的显存效率上胜出；DeepSeek当前的V4系列规模庞大（V4-Flash：总参数284B），在单块消费级GPU上不实用；Llama 3.3 70B是偏好Meta开放模型时的最佳单卡选择。**',
+          '**在我们看来，Qwen在消费级硬件上的显存效率更高；DeepSeek当前的V4系列规模庞大（V4-Flash：总参数284B），在单块消费级GPU上不实用；Llama 3.3 70B是偏好Meta开放模型、并接受在单卡上将部分层卸载到系统内存时的替代方案。**',
         ],
         rows: [
           { '显存档位': '6GB', '最佳Qwen': 'Qwen3 8B', '最佳竞品': 'Llama 3.2 3B（可装入但仅3B）', '建议': 'Qwen3 8B胜出——相同显存，更大模型' },
@@ -3330,13 +3330,13 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'regional-context',
         title: '中国用户：数据安全合规与本地部署',
         content: [
-          '**本地运行Qwen3意味着数据完全不离开本地服务器——无需跨境传输，符合《数据安全法》（DSL）第31条和《网络安全法》的相关规定。** 基于云端的LLM API需要将提示词发送至境外服务器，可能触发DSL的数据出境安全评估要求。',
-          'Qwen3由阿里巴巴Qwen团队在大规模中文及多语言语料库上训练，是简体中文、繁体中文及中英混合文档本地部署的最强选择。在中文阅读理解和文本生成任务上，持续优于Llama 3.3和Mistral。',
-          '**受监管行业（金融、医疗、法律）的企业部署方案**：完全离线的Qwen3部署（推理时无互联网连接）有助于满足合规要求，但是否符合国家互联网信息办公室（CAC）关于生成式AI服务的管理规定取决于具体用途，建议咨询法律专业人士。模型完全在本地算力上运行——监管关注点在于训练数据和输出内容审核，而非在离线硬件上进行的推理过程。**亚太地区数据跨境**：中国、韩国、新加坡、澳大利亚均已建立数据本地化框架，本地LLM推理可降低跨境传输风险。**金融/医疗/法律企业方案**：大型银行、医院、律所如需在内网处理敏感数据，搭配防火墙内Qwen3有助于满足内部AI合规要求。完整的离线部署指南请参阅[完全离线运行AI](/zh/power-local-llm/local-ai-behind-firewall-offline-2026)。',
+          '**本地运行Qwen3可将推理提示词保留在自己的硬件上，不向云端API发送推理数据，从而在推理环节避免跨境传输。** 基于云端的LLM API需要将提示词发送至境外服务器，可能引发《数据安全法》（DSL）等规定下的数据出境问题。整体方案是否合规取决于您的数据、处理目的和自身的法律评估；本文不构成法律建议。',
+          'Qwen3由阿里巴巴Qwen团队在大规模中文及多语言语料库上训练，是简体中文、繁体中文及中英混合文档本地部署的有力候选；请用您自己的资料测试。',
+          '**受监管行业（金融、医疗、法律）的企业部署方案**：完全离线的Qwen3部署（推理时无互联网连接）有助于满足合规要求，但是否符合国家互联网信息办公室（CAC）关于生成式AI服务的管理规定取决于具体用途，建议咨询法律专业人士。模型完全在本地算力上运行——在我们看来，监管关注点在于训练数据和输出内容审核，而非在离线硬件上进行的推理过程。**亚太地区数据跨境**：中国、韩国、新加坡、澳大利亚均已建立数据本地化框架，本地LLM推理可降低跨境传输风险。**金融/医疗/法律企业方案**：大型银行、医院、律所如需在内网处理敏感数据，搭配防火墙内Qwen3有助于满足内部AI合规要求。完整的离线部署指南请参阅[完全离线运行AI](/zh/power-local-llm/local-ai-behind-firewall-offline-2026)。',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3下载后可完全离线运行——数据不离开本机，降低了《数据安全法》下的跨境数据传输风险。' },
-          { type: 'plain-terms', text: '本地运行Qwen3时，您的提示词和文档永远不会离开您的电脑。没有云API调用，没有境外服务器，也没有监管机构或第三方可以访问的数据。' },
+          { type: 'one-sentence', text: 'Qwen3下载后可完全离线运行，推理数据无需离开本机，从而降低《数据安全法》下的跨境数据传输风险（是否合规仍取决于具体用途）。' },
+          { type: 'plain-terms', text: '本地运行Qwen3时，只要不接入云服务，您的提示词和文档就留在自己的电脑上。推理不需要调用云API；其余环节如何处理数据，由您自行负责。' },
         ],
       },
       affiliatePicks: {
@@ -3461,14 +3461,14 @@ curl http://localhost:11434/v1/chat/completions \\
         title: '常见问题',
         faqs: [
             { q: '本地运行Qwen3 8B需要多少显存？', a: 'Qwen3 8B Q4_K_M需要5.5GB显存。RTX 3060 6GB、RTX 4060或Apple M系列芯片8GB统一内存均可。' },
-            { q: '本地运行最适合代码任务的Qwen模型？', a: 'Qwen2.5-Coder 32B——HumanEval 92.7%，需24GB GPU。显存12GB或以下：Qwen2.5-Coder 14B（85.2%，9.5GB显存）。' },
+            { q: '本地运行最适合代码任务的Qwen模型？', a: 'Qwen2.5-Coder 32B是Qwen2.5系列中可装入24GB GPU的最大专用代码模型，Qwen报告其Instruct版全精度HumanEval为92.7%。Qwen 3.6 27B也有代码版（`qwen3.6:27b-coding`）。显存12GB或以下：Qwen2.5-Coder 14B（85.2%，9.5GB显存）。' },
             { q: 'Qwen与DeepSeek本地部署对比？', a: 'Qwen使用适合消费级硬件的Dense架构。DeepSeek当前的开源系列是V4（V4-Flash：总参数284B，MoE），远超单块消费级GPU；DeepSeek-V2.5（236B MoE，2024年）已被V3及随后的V4取代。' },
             { q: '可以在Mac上运行Qwen吗？', a: '可以。M2 Pro 32GB可流畅运行Qwen3 14B，约32 token/秒。M3 Max 64GB可处理Qwen3 32B，约22 token/秒。' },
             { q: 'Qwen的Ollama命令是什么？', a: '旗舰模型使用`ollama run qwen3.6:27b`（约17GB显存）。Qwen3使用`ollama pull qwen3:8b`。Qwen2.5的7B用`ollama pull qwen2.5:7b`，14B用`:14b`，32B用`:32b`，代码版用`qwen2.5-coder:32b`。始终使用明确的尺寸标签。' },
-            { q: 'Qwen适合中文任务吗？', a: '是的。Qwen3在大规模中文语料库上预训练，原生支持简体中文、繁体中文、日语、韩语等29种语言，中文任务持续超越Llama 3.3和Mistral。' },
+            { q: 'Qwen适合中文任务吗？', a: '是的。Qwen3在大规模中文语料库上预训练，原生支持简体中文、繁体中文、日语、韩语等众多语言（详见模型卡），是中文本地AI的有力候选；请用自己的文档测试。' },
             { q: 'Qwen3应该使用哪种量化格式？', a: 'Q4_K_M是推荐默认格式——相比FP16减少约55%显存，质量损失不足1%。显存充足时用Q8_0。中文任务避免Q2_K。' },
             { q: 'Qwen2.5-VL适合中文文档OCR吗？', a: '是的——`ollama pull qwen2.5vl:7b`（下载约6.0GB），支持文本和图像输入，可读取扫描文档中的中日韩文字；请用自己的扫描件测试。更新的Qwen3-VL为`qwen3-vl:8b`。' },
-            { q: '本地部署Qwen3是否符合数据安全法要求？', a: '本地运行时数据不离开本地服务器，无需跨境传输，符合《数据安全法》第31条规定。金融、医疗、法律等受监管行业的最佳合规选择。' },
+            { q: '本地部署Qwen3是否符合数据安全法要求？', a: '本地运行时推理数据无需离开本地服务器，可降低跨境传输方面的风险；但是否符合《数据安全法》取决于具体用途，受监管行业（金融、医疗、法律）应咨询法律专业人士。本文不构成法律建议。' },
             { q: 'Qwen2.5-72B需要什么硬件？', a: 'Q4_K_M量化需约46GB显存。两块RTX 3090（合计48GB）或带64GB+统一内存的Apple Silicon（M2 Ultra 192GB可流畅运行）。' },
           ],
       },
@@ -3477,12 +3477,12 @@ curl http://localhost:11434/v1/chat/completions \\
         title: '相关阅读',
         links: [
           { url: '/zh/local-llms/run-qwen-locally-guide-2026', title: '2026年本地运行Qwen 3指南', description: 'Qwen 3.6 27B单模型设置指南，使用Ollama和LM Studio——最快速的Qwen实例启动方法。' },
-          { url: '/zh/local-llms/run-qwen-vl-locally-2026', title: '2026年本地运行Qwen2-VL', description: 'Qwen2-VL完整指南——消费级硬件上的CJK文档OCR、图像问答和多语言截图分析。' },
+          { url: '/zh/local-llms/run-qwen-vl-locally-2026', title: '2026年本地运行Qwen2.5-VL与Qwen3-VL', description: 'Qwen2.5-VL与Qwen3-VL完整指南——Ollama标签、尺寸、许可证、CJK文档OCR和图像问答。' },
           { url: '/zh/local-llms/qwen-vs-llama-vs-mistral', title: 'Qwen vs Llama vs Mistral 2026', description: 'Qwen 3.6 27B、Llama 4 Scout和Mistral Small 3.1在MMLU、SWE-bench和MATH上的基准对比。' },
           { url: '/zh/local-llms/llm-quantization-explained', title: 'LLM量化解析', description: 'Q4_K_M、Q8_0和IQ4_XS的含义——对显存、速度和输出质量的影响。' },
           { url: '/zh/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'DeepSeek vs Qwen本地对比2026', description: '完整对比：DeepSeek-R1-Distill-Qwen-32B vs Qwen3 32B在代码、推理、中文和创意写作上的表现——含Mac vs NVIDIA详细分析。' },
           { url: '/zh/prompt-bites/best-qwen-model-for-coding', title: '最佳Qwen编码模型', description: 'Qwen2.5-Coder 7B vs 32B：本地自动补全与代码审查的选择指南。' },
-          { url: '/zh/power-local-llm/deepseek-offline-china-self-hosted-2026', title: '本地离线部署 DeepSeek：完全断网运行指南', description: '想用推理模型？了解如何在完全离线环境中本地部署 DeepSeek-R1 Distill，数据不出境，有助于满足《数据安全法》合规要求。' },
+          { url: '/zh/power-local-llm/deepseek-offline-china-self-hosted-2026', title: '本地离线部署 DeepSeek：完全断网运行指南', description: '想用推理模型？了解如何在完全离线环境中本地部署 DeepSeek-R1 Distill，推理数据无需出境，有助于满足《数据安全法》合规要求。' },
         ],
       },
     },
@@ -3580,7 +3580,7 @@ curl http://localhost:11434/v1/chat/completions \\
         {
           '@type': 'Question',
           name: '로컬에서 코딩에 가장 적합한 Qwen 모델은 무엇입니까?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 32B는 로컬에서 실행 가능한 최고의 코딩 모델입니다 — HumanEval에서 92.7%를 기록하며 24 GB GPU(RTX 3090 또는 RTX 4090)가 필요합니다. VRAM이 12 GB 이하인 경우 Qwen2.5-Coder 14B(HumanEval 85.2%, 9.5 GB VRAM)를 사용하십시오.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 32B는 24 GB GPU(RTX 3090 또는 RTX 4090)에 들어가는 Qwen2.5 계열 최대 코딩 전용 모델이며, Qwen은 전체 정밀도 Instruct 버전의 HumanEval 점수를 92.7%로 보고했습니다. Qwen 3.6 27B에도 코딩 변형(`qwen3.6:27b-coding`)이 있습니다. VRAM이 12 GB 이하인 경우 Qwen2.5-Coder 14B(HumanEval 85.2%, 9.5 GB VRAM)를 사용하십시오.' },
         },
         {
           '@type': 'Question',
@@ -3600,7 +3600,7 @@ curl http://localhost:11434/v1/chat/completions \\
         {
           '@type': 'Question',
           name: 'Qwen은 중국어 작업에 적합합니까?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3는 대규모 중국어 코퍼스로 사전 학습되었으며 간체 중국어, 번체 중국어, 일본어, 한국어 및 26개 언어를 기본 지원합니다. 중국어 읽기 이해 및 생성에서 Llama 3.3과 Mistral을 지속적으로 능가하여 중국어 로컬 AI의 선호 모델입니다.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3는 대규모 중국어 코퍼스로 사전 학습되었으며 간체 중국어, 번체 중국어, 일본어, 한국어 등 다양한 언어를 기본 지원합니다(자세한 목록은 모델 카드 참조). 중국어 로컬 AI에 유력한 후보이므로 직접 보유한 문서로 테스트하십시오.' },
         },
         {
           '@type': 'Question',
@@ -3623,13 +3623,13 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Qwen3 8B는 5.5 GB VRAM에서 실행됩니다** — `ollama pull qwen3:8b` 명령어 하나로 RTX 3060에서 초당 57 토큰 속도로 실행할 수 있습니다.',
           '**네 가지 실용적인 하위 패밀리**: Qwen3(범용, 사고 모드; 이전 세대이지만 여전히 널리 배포됨), Qwen2.5(범용, 가장 폭넓게 검증됨), Qwen2.5-Coder(코딩, 32B에서 HumanEval 92.7%), Qwen2.5-VL(비전, CJK 문서 OCR; Qwen3-VL이 더 새로운 비전 세대).',
           '**밀집 아키텍처 = 소비자 친화적**: DeepSeek V4-Flash(284B 파라미터 MoE)와 달리, Qwen2.5-72B는 두 개의 RTX 3090에서 46 GB VRAM으로 실행됩니다.',
-          '**네이티브 다국어**: 중국어, 일본어, 한국어, 아랍어, 독일어, 프랑스어 및 23개 언어로 사전 학습 — Qwen3는 CJK 작업에서 Llama 3.3을 지속적으로 능가합니다.',
+          '**네이티브 다국어**: 중국어, 일본어, 한국어, 아랍어, 독일어, 프랑스어 등 다양한 언어로 사전 학습되었습니다(정확한 목록은 모델 카드 참조).',
           '**Q4_K_M이 적합한 양자화**: 대부분의 사용자에게 최적 — VRAM 약 55% 절감, 벤치마크 품질 손실 1% 미만.',
           '**하드웨어 결정**: VRAM 12 GB → 14B 모델; 24 GB → 32B; 48 GB 이상(GPU 두 개 또는 Apple Silicon 64 GB) → 72B.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen 3.6 27B(256K 컨텍스트, Q4_K_M 기준 약 17GB)가 새로운 플래그십입니다. Qwen은 범용(7B–72B), 코딩(Coder 7B–32B), 비전(VL 3B–72B) 네 가지 로컬 배포 하위 패밀리를 제공하며, 모두 Ollama 또는 LM Studio를 통해 실행 가능합니다.' },
-          { type: 'plain-terms', text: '모델을 로컬에서 실행한다는 것은 AI가 클라우드 서버가 아닌 여러분의 컴퓨터에서 실행된다는 의미입니다. 데이터가 외부로 전송되지 않으며, 하드웨어 구입 후에는 토큰당 비용이 발생하지 않습니다.' },
+          { type: 'plain-terms', text: '모델을 로컬에서 실행한다는 것은 AI가 클라우드 서버가 아닌 여러분의 컴퓨터에서 실행된다는 의미입니다. 추론 데이터가 외부로 전송되지 않으며(클라우드 기능을 켜지 않는 한), 하드웨어 구입 후에는 토큰당 비용이 발생하지 않습니다.' },
         ],
       },
       modelFamily: {
@@ -3673,7 +3673,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: 'VRAM 티어를 확인하셨나요? [해당 티어에 맞는 정확한 GPU 또는 Mac 구매 가이드](#affiliate-picks)를 확인하십시오 — 6 GB → RTX 4060, 12 GB → RTX 4070 Super, 24 GB → RTX 3090/4090, 48 GB 이상 → Mac mini M5 Pro 또는 듀얼 GPU.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-hardware-hero-ko.webp',
-        imageCaption: 'Qwen 모델 크기별 VRAM 요구사항 (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'Qwen 모델 크기별 VRAM 요구사항 (Q4_K_M) — 근삿값',
       },
       ollamaSetup: {
         id: 'ollama-setup',
@@ -3701,7 +3701,7 @@ ollama pull qwen2.5:7b           # Qwen2.5 general 7B (~5.5 GB)
 ollama pull qwen2.5:14b          # Qwen2.5 general 14B (~9.5 GB)
 ollama pull qwen2.5:32b          # Qwen2.5 general 32B (~20.5 GB)
 ollama pull qwen2.5-coder:32b    # Qwen2.5-Coder 32B (~20.5 GB)
-ollama pull qwen2.5vl:7b          # vision 7B (~6.2 GB)
+ollama pull qwen2.5vl:7b          # vision 7B (~6.0 GB)
 
 # Run interactively
 ollama run qwen2.5:7b
@@ -3748,7 +3748,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'benchmarks',
         title: '소비자 하드웨어에서의 벤치마크 성능',
         content: [
-          '**RTX 4090에서 Qwen3 32B Q4_K_M은 초당 28 토큰을 처리합니다 — 실시간 코딩 지원에 충분한 속도입니다.** Qwen3 32B는 Qwen의 이전 세대이며, 더 새로운 Qwen 3.6 27B가 같은 24 GB 티어에 들어갑니다(위 하드웨어 표 참조). 아래 점수는 Ollama에서 테스트된 Q4_K_M GGUF 빌드 기준입니다. 전체 정밀도 FP16 점수는 1–2% 높습니다.',
+          '**RTX 4090에서 Qwen3 32B Q4_K_M은 초당 28 토큰을 처리합니다 — 실시간 코딩 지원에 충분한 속도입니다.** Qwen3 32B는 Qwen의 이전 세대이며, 더 새로운 Qwen 3.6 27B가 같은 24 GB 티어에 들어갑니다(위 하드웨어 표 참조). 아래 수치는 참고용 값이며 PromptQuorum의 실측 결과가 아닙니다. 속도는 GPU, 드라이버, 컨텍스트 길이, Ollama 버전에 따라 달라지고, 정확도 점수는 저희가 다시 측정한 것이 아니며, Q4_K_M 빌드는 보통 전체 정밀도보다 약간 낮은 점수를 보입니다. 각 모델 카드를 확인하고 직접 하드웨어에서 테스트하십시오.',
         ],
         rows: [
           { '모델 (Q4_K_M)': 'Qwen3 8B', 'MMLU': '74.2%', 'Math': '58.8%', 'HumanEval': '57.3%', '속도 (RTX 3060 12 GB)': '57 tok/s' },
@@ -3765,13 +3765,13 @@ curl http://localhost:11434/v1/chat/completions \\
           { type: 'tip', text: '초당 27 토큰으로 HumanEval 92.7% 점수를 원하십니까? [Qwen2.5-Coder 32B를 실행하는 24 GB GPU](#affiliate-picks)를 확인하십시오.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-ko.webp',
-        imageCaption: 'Qwen3 벤치마크 점수 (Q4_K_M) — PromptQuorum 2026',
+        imageCaption: 'Qwen3 벤치마크 점수 (Q4_K_M) — 근삿값',
       },
       vsComparison: {
         id: 'vs-comparison',
         title: 'Qwen vs DeepSeek vs Llama: 로컬 실행 시 어떤 것을 선택할까',
         content: [
-          '**Qwen은 소비자 하드웨어에서의 VRAM 효율성에서 우수합니다. DeepSeek의 현재 V4 계열은 대규모(V4-Flash: 총 284B 파라미터)여서 단일 소비자 GPU에서는 비실용적입니다. Llama 3.3 70B는 Meta의 오픈 모델을 선호한다면 단일 GPU에 가장 적합한 옵션입니다.** 아래 표는 각 VRAM 티어에서의 실용적인 옵션을 비교합니다.',
+          '**저희 평가로는 Qwen이 소비자 하드웨어에서 VRAM 효율성이 더 높은 계열입니다. DeepSeek의 현재 V4 계열은 대규모(V4-Flash: 총 284B 파라미터)여서 단일 소비자 GPU에서는 비실용적입니다. Llama 3.3 70B는 Meta의 오픈 모델을 선호하고 단일 GPU에서 일부 레이어를 시스템 RAM으로 오프로드해도 괜찮다면 고려할 수 있는 대안입니다.** 아래 표는 각 VRAM 티어에서의 실용적인 옵션을 비교합니다.',
         ],
         rows: [
           { 'VRAM 티어': '6 GB', '최고 Qwen': 'Qwen3 8B', '최고 경쟁자': 'Llama 3.2 3B (맞지만 3B)', '결론': 'Qwen3 8B 우위 — 같은 VRAM, 훨씬 큰 모델' },
@@ -3787,13 +3787,13 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'regional-context',
         title: '중국 사용자: 데이터 주권과 로컬 배포',
         content: [
-          '**Qwen3를 로컬에서 실행하면 데이터가 외부 기기로 전혀 전송되지 않습니다 — 중국의 데이터 보안법(DSL) 또는 사이버보안법에 따른 컴플라이언스 위험이 없습니다.** 클라우드 기반 LLM API는 프롬프트를 해외 서버로 전송해야 하며, 이는 DSL 제31조에 따른 국경 간 데이터 전송 위험을 초래합니다.',
-          'Qwen3는 Alibaba의 Qwen 팀이 주로 중국어 및 다국어 코퍼스로 학습시킨 모델입니다. 이로 인해 간체 중국어, 번체 중국어, 고전 중국어, 혼합 언어(중국어/영어) 문서에서 로컬로 배포 가능한 가장 강력한 모델이 됩니다.',
-          '**중국 내 엔터프라이즈 배포의 경우**: 에어갭(인터넷 차단) Qwen3 설정은 생성형 AI에 관한 CAC 규정을 충족하기 쉬운 구성이지만, 준수 여부는 사용 사례에 따라 다르므로 법률 전문가와 확인하십시오. 모델은 전적으로 로컬 컴퓨팅에서 실행됩니다 — 규제 기관의 관심사는 학습 데이터와 출력 모더레이션이지, 오프라인 하드웨어에서의 추론이 아닙니다. 완전한 에어갭 설정 가이드는 [완전 오프라인 AI 실행](/ko/power-local-llm/local-ai-behind-firewall-offline-2026)을 참조하십시오.',
+          '**Qwen3를 로컬에서 실행하면 추론용 프롬프트가 자신의 하드웨어에 머물러 클라우드 API로 추론 데이터가 전송되지 않으므로, 추론 단계에서는 해당 국경 간 전송을 피할 수 있습니다.** 클라우드 기반 LLM API는 프롬프트를 해외 서버로 전송해야 하며, 이는 중국 데이터 보안법(DSL) 등에 따른 국경 간 데이터 전송 문제를 일으킬 수 있습니다. 전체 구성이 규정을 준수하는지는 데이터, 목적, 그리고 자체 법률 검토에 달려 있으며, 이는 법률 자문이 아닙니다.',
+          'Qwen3는 Alibaba의 Qwen 팀이 주로 중국어 및 다국어 코퍼스로 학습시킨 모델입니다. 이로 인해 간체 중국어, 번체 중국어, 고전 중국어, 혼합 언어(중국어/영어) 문서에 유력한 후보가 되지만, 직접 보유한 자료로 테스트하십시오.',
+          '**중국 내 엔터프라이즈 배포의 경우**: 에어갭(인터넷 차단) Qwen3 설정은 생성형 AI에 관한 CAC 규정을 충족하기 쉬운 구성이지만, 준수 여부는 사용 사례에 따라 다르므로 법률 전문가와 확인하십시오. 모델은 전적으로 로컬 컴퓨팅에서 실행됩니다 — 저희 판단으로는 규제 기관의 관심사는 학습 데이터와 출력 모더레이션이지, 오프라인 하드웨어에서의 추론이 아닙니다. 완전한 에어갭 설정 가이드는 [완전 오프라인 AI 실행](/ko/power-local-llm/local-ai-behind-firewall-offline-2026)을 참조하십시오.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3는 다운로드 후 완전히 오프라인으로 실행됩니다 — 데이터가 기기를 떠나지 않아 중국의 데이터 보안법에 따른 국경 간 데이터 전송 위험을 없앱니다.' },
-          { type: 'plain-terms', text: 'Qwen3를 로컬에서 실행하면 프롬프트와 문서가 절대 컴퓨터 밖으로 나가지 않습니다. 클라우드 API 호출, 해외 서버, 규제 기관이 가로채거나 감사할 수 있는 데이터가 없습니다.' },
+          { type: 'one-sentence', text: 'Qwen3는 다운로드 후 완전히 오프라인으로 실행할 수 있어 추론 데이터가 기기를 떠날 필요가 없으며, 중국 데이터 보안법에 따른 국경 간 데이터 전송 위험을 줄여 줍니다(준수 여부는 여전히 사용 사례에 달려 있습니다).' },
+          { type: 'plain-terms', text: 'Qwen3를 로컬에서 실행하면 클라우드 서비스에 연결하지 않는 한 프롬프트와 문서가 컴퓨터에 머뭅니다. 추론에는 클라우드 API 호출이 필요 없으며, 나머지 구성이 데이터를 어떻게 다루는지는 사용자의 책임입니다.' },
         ],
       },
       affiliatePicks: {
@@ -3918,11 +3918,11 @@ curl http://localhost:11434/v1/chat/completions \\
         title: '자주 묻는 질문',
         faqs: [
           { q: 'Qwen3 8B를 로컬에서 실행하려면 VRAM이 얼마나 필요합니까?', a: 'Qwen3 8B Q4_K_M는 5.5 GB의 VRAM이 필요합니다. RTX 3060 6 GB, RTX 4060, 또는 통합 메모리 8 GB의 Apple M 시리즈 칩에서 모두 실행됩니다. VRAM이 8 GB이면 컨텍스트 및 시스템 RAM을 위한 여유 공간이 생깁니다.' },
-          { q: '로컬에서 코딩에 가장 적합한 Qwen 모델은 무엇입니까?', a: 'Qwen2.5-Coder 32B는 로컬에서 실행 가능한 최고의 코딩 모델입니다 — HumanEval에서 92.7%를 기록하며 24 GB GPU(RTX 3090 또는 RTX 4090)가 필요합니다. VRAM이 12 GB 이하인 경우 Qwen2.5-Coder 14B(HumanEval 85.2%, 9.5 GB VRAM)를 사용하십시오.' },
+          { q: '로컬에서 코딩에 가장 적합한 Qwen 모델은 무엇입니까?', a: 'Qwen2.5-Coder 32B는 24 GB GPU(RTX 3090 또는 RTX 4090)에 들어가는 Qwen2.5 계열 최대 코딩 전용 모델이며, Qwen은 전체 정밀도 Instruct 버전의 HumanEval 점수를 92.7%로 보고했습니다. Qwen 3.6 27B에도 코딩 변형(`qwen3.6:27b-coding`)이 있습니다. VRAM이 12 GB 이하인 경우 Qwen2.5-Coder 14B(HumanEval 85.2%, 9.5 GB VRAM)를 사용하십시오.' },
           { q: '로컬 배포에서 Qwen은 DeepSeek와 어떻게 비교됩니까?', a: 'Qwen은 소비자 하드웨어에 맞는 밀집 아키텍처를 사용합니다. DeepSeek의 현재 오픈 웨이트 계열은 V4(V4-Flash: 총 284B 파라미터, MoE)로 단일 소비자 GPU를 훨씬 넘어서며, DeepSeek-V2.5(236B MoE, 2024년)는 V3를 거쳐 V4로 대체되었습니다. VRAM이 제한된 환경에서는 Qwen 모델이 실용적인 선택입니다.' },
           { q: 'Mac에서 Qwen을 실행할 수 있습니까?', a: '가능합니다. Apple Silicon은 통합 메모리를 사용합니다 — M2 Pro 32 GB는 Qwen3 14B를 초당 약 32 토큰으로 실행합니다. M3 Max 64 GB는 Qwen3 32B를 초당 약 22 토큰으로 처리합니다. 가장 간단한 설정을 위해 Ollama macOS 앱 또는 LM Studio를 사용하십시오.' },
           { q: 'Qwen에 사용할 Ollama 명령어는 무엇입니까?', a: '플래그십 모델은 `ollama run qwen3.6:27b`(약 17GB VRAM)를 사용하십시오. Qwen3는 `ollama pull qwen3:8b`를 사용하십시오. Qwen2.5는 7B는 `ollama pull qwen2.5:7b`, 14B는 `ollama pull qwen2.5:14b`, 32B는 `ollama pull qwen2.5:32b`, 코딩 변형은 `ollama pull qwen2.5-coder:32b`를 사용하십시오. 항상 명시적 크기 태그를 사용하십시오.' },
-          { q: 'Qwen은 중국어 작업에 적합합니까?', a: 'Qwen3는 대규모 중국어 코퍼스로 사전 학습되었으며 간체 중국어, 번체 중국어, 일본어, 한국어, 아랍어 및 24개 언어를 기본 지원합니다. 중국어 읽기 이해 및 생성에서 Llama 3.3과 Mistral을 지속적으로 능가합니다.' },
+          { q: 'Qwen은 중국어 작업에 적합합니까?', a: 'Qwen3는 대규모 중국어 코퍼스로 사전 학습되었으며 간체 중국어, 번체 중국어, 일본어, 한국어, 아랍어 등 다양한 언어를 기본 지원합니다(자세한 목록은 모델 카드 참조). 중국어 로컬 AI에 유력한 후보이므로 직접 보유한 문서로 테스트하십시오.' },
           { q: 'Qwen3에 어떤 양자화를 사용해야 합니까?', a: 'Q4_K_M이 권장 기본값입니다 — FP16 대비 VRAM을 약 55% 줄이면서 벤치마크 품질 손실이 1% 미만입니다. 여유 VRAM이 있고 FP16에 가까운 품질을 원한다면 Q8_0을 사용하십시오. 중국어 용도에는 Q2_K를 피하십시오.' },
           { q: 'Qwen2.5-VL이 중국어 문서 OCR에 효과적입니까?', a: '그렇습니다 — Qwen2.5-VL 7B는 Ollama(`ollama pull qwen2.5vl:7b`, 다운로드 6.0 GB)로 실행되며 텍스트와 이미지를 입력받아 스캔 문서의 중국어, 일본어, 한국어 텍스트를 읽을 수 있습니다. 직접 가진 스캔본으로 테스트하십시오. 더 새로운 Qwen3-VL은 `qwen3-vl:8b`입니다. 전체 가이드는 /local-llms/run-qwen-vl-locally-2026에서 확인하십시오.' },
         ],
@@ -3932,7 +3932,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: '관련 읽을거리',
         links: [
           { url: '/local-llms/run-qwen-locally-guide-2026', title: '2026년 Qwen 3를 로컬에서 실행하는 방법', description: 'Ollama와 LM Studio를 사용한 Qwen 3.6 27B 단일 모델 설정 가이드 — 작동하는 Qwen 인스턴스를 가장 빠르게 구축하는 방법.' },
-          { url: '/local-llms/run-qwen-vl-locally-2026', title: '2026년 Qwen2-VL 로컬 실행', description: 'Qwen2-VL 전체 가이드 — 소비자 하드웨어에서의 CJK 문서 OCR, 이미지 Q&A, 다국어 스크린샷 읽기.' },
+          { url: '/ko/local-llms/run-qwen-vl-locally-2026', title: '2026년 Qwen2.5-VL·Qwen3-VL 로컬 실행', description: 'Qwen2.5-VL·Qwen3-VL 전체 가이드 — Ollama 태그, 크기, 라이선스, CJK 문서 OCR, 이미지 Q&A.' },
           { url: '/local-llms/qwen-vs-llama-vs-mistral', title: '2026년 Qwen vs Llama vs Mistral', description: 'MMLU, SWE-bench, MATH에서 Qwen 3.6 27B, Llama 4 Scout, Mistral Small 3.1의 헤드투헤드 벤치마크 비교.' },
           { url: '/local-llms/llm-quantization-explained', title: 'LLM 양자화 설명', description: 'Q4_K_M, Q8_0, IQ4_XS의 의미 — VRAM, 속도, 출력 품질에 미치는 영향.' },
           { url: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: '2026년 DeepSeek vs Qwen 로컬 비교', description: '코딩, 추론, 중국어, 창의적 글쓰기에서 DeepSeek-R1-Distill-Qwen-32B vs Qwen3 32B 전체 비교 — Mac vs NVIDIA 세부 분석 포함.' },
