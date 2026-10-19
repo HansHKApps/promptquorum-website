@@ -9,14 +9,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-08-30',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-en.webp',
     title: 'Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)',
     seoTitle: 'Logseq LLM vs Joplin LLM: Local AI Setup Guide 2026',
     intro:
-      '[Logseq](https://logseq.com) and [Joplin](https://joplinapp.org) are the two open-source notes apps in 2026 that pair cleanly with a local LLM and never need a cloud round-trip. Logseq runs the logseq-copilot plugin against [Ollama](https://ollama.com) for outliner-native chat and daily-journal AI; Joplin runs the Jarvis plugin against Ollama for note-aware chat, summaries, and embedding-backed retrieval — the closer of the two to a true local RAG knowledge base. Both are GDPR-friendlier than Notion AI by default architecture — Notion sends note content to OpenAI; Logseq and Joplin send nothing unless you wire it up that way. The catch in 2026 is mobile: neither Logseq nor Joplin supports plugins on iOS or Android, so AI features run only on desktop. This guide ranks both tools on Ollama plugin setup, RAG/embedding support, sync-without-cloud paths (including iOS/cloud sync options), mobile compatibility, how each stacks up against Obsidian, and the migration path from Notion.',
+      '[Logseq](https://logseq.com) and [Joplin](https://joplinapp.org) are the two open-source notes apps in 2026 that pair cleanly with a local LLM and never need a cloud round-trip. Logseq runs the logseq-copilot plugin against [Ollama](https://ollama.com) for outliner-native chat and daily-journal AI; Joplin runs the Jarvis plugin against Ollama for note-aware chat, summaries, and embedding-backed retrieval — the closer of the two to a true local RAG knowledge base. Both are GDPR-friendlier than Notion AI by default architecture — Notion sends page content to third-party model providers; Logseq and Joplin send nothing unless you wire it up that way. The catch in 2026 is mobile: neither Logseq nor Joplin supports plugins on iOS or Android, so AI features run only on desktop. This guide ranks both tools on Ollama plugin setup, RAG/embedding support, sync-without-cloud paths (including iOS/cloud sync options), mobile compatibility, how each stacks up against Obsidian, and the migration path from Notion.',
     metaDescription:
       'Logseq LLM (logseq-copilot) vs Joplin LLM (Jarvis) with Ollama: RAG support, cloud-free sync, mobile gaps, and Notion AI migration compared. 2026.',
     twitterDescription:
@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Both plugins point at Ollama via `http://localhost:11434/v1` — no cloud calls by default.',
           'Logseq sync without cloud: Git (built-in) or local file sync via Syncthing/iCloud Drive. Joplin sync: end-to-end encrypted Joplin Cloud, or self-hosted Joplin Server, or Nextcloud / WebDAV / Dropbox / OneDrive with E2EE.',
           'Mobile plugin gap (2026): neither Logseq Mobile nor Joplin Mobile supports plugins. AI features are desktop-only — mobile is for capture, desktop is for processing.',
-          'Notion AI migration: Logseq has the cleaner Markdown import path; Joplin loses block-level structure but preserves content. Both stop sending data to OpenAI the moment you switch.',
+          'Notion AI migration: Logseq has the cleaner Markdown import path; Joplin loses block-level structure but preserves content. Both stop sending page content to Notion\'s AI providers the moment you switch.',
           'Recommended Ollama models: chat — Llama 3.2 3B or Phi-4 Mini; embeddings (Joplin Jarvis only) — nomic-embed-text or mxbai-embed-large.',
         ],
         updatedDate: '2026-05-08',
@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Logseq + logseq-copilot is the recommended combo for outliner / daily-journal users.** logseq-copilot adds chat blocks and slash commands inside Logseq, configured against Ollama at `http://localhost:11434/v1`. Best for users who already live in Logseq\'s daily-journal page model.',
           '**Joplin + Jarvis is the recommended combo for plain-Markdown notes users.** Jarvis adds a chat sidebar, summarisation commands, and embedding-backed semantic search across the notebook. Best for users who want a Notion-style notebook with strong end-to-end encrypted sync.',
           '**Both tools are open-source under AGPL 3.0** — the licence is permissive for personal and commercial use; the only constraint is source disclosure if you modify and host them publicly.',
-          '**Privacy posture beats Notion AI by architecture.** Notion AI sends note content to OpenAI by design; Logseq and Joplin send nothing unless you explicitly configure a cloud provider. This is a meaningful distinction for healthcare, legal, journalism, and any GDPR-regulated context.',
+          '**Privacy posture beats Notion AI by architecture.** Notion AI sends page content to third-party model providers by design; Logseq and Joplin send nothing unless you explicitly configure a cloud provider. This is a meaningful distinction for healthcare, legal, journalism, and any GDPR-regulated context.',
           '**Mobile plugin gap is the biggest constraint in 2026.** Neither Logseq Mobile nor Joplin Mobile supports plugins. AI features run only on desktop — mobile becomes a capture surface (write notes), and processing (summarise, chat, retrieve) happens later on desktop.',
           '**Sync without cloud is straightforward but each tool takes a different approach.** Logseq has built-in Git sync and works cleanly with Syncthing or iCloud Drive. Joplin has end-to-end encrypted Joplin Cloud, self-hosted Joplin Server, or any WebDAV / Nextcloud / Dropbox backend with E2EE on top.',
           '**Notion AI migration is a one-way trip both tools handle.** Logseq imports Notion\'s Markdown export with cleaner block fidelity; Joplin imports content but flattens nested blocks. Once migrated, no notes leave your machine unless you choose to.',
@@ -230,17 +230,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-notion',
         title: 'The Privacy Case Against Notion AI',
         content:
-          '**Notion AI sends note content to OpenAI by design — that is the architecture, not a configuration choice.** When you use Notion AI features on a page, Notion ships the page content to OpenAI servers, OpenAI processes it, and the response comes back through Notion. The data is governed by OpenAI\'s and Notion\'s privacy policies, not by your local file system. For users in regulated contexts (healthcare, legal, financial advice, journalism, GDPR-covered EU data) this is a structural problem that no setting fixes.',
+          '**Notion AI sends page content to third-party model providers by design — that is the architecture, not a configuration choice.** When you use Notion AI features on a page, Notion sends the page content to the model provider that handles the request and returns the response through Notion. Notion states that by default neither it nor its AI providers use customer data to train models, and that on its Enterprise plan most models offer zero data retention (on other plans, providers retain data for up to 30 days). The data still leaves your machine and sits under Notion\'s and its providers\' terms, not under your local file system. For users in regulated contexts (healthcare, legal, financial advice, journalism, GDPR-covered EU data) that is a structural difference that no setting removes.',
         items: [
-          '**Notion AI architecture:** notes leave your machine to be processed by OpenAI. Subject to OpenAI Enterprise data-handling terms (better than standard OpenAI API), but still off your infrastructure.',
+          '**Notion AI architecture:** notes leave your machine to be processed by the model providers Notion uses (the current list is on Notion\'s subprocessor page), under Notion\'s data-processing terms — but still off your infrastructure.',
           '**Logseq + logseq-copilot architecture:** Logseq runs as a local app, the plugin sends prompts to your local Ollama, no note content reaches a third party unless you explicitly configure a cloud provider in the plugin.',
           '**Joplin + Jarvis architecture:** Joplin runs as a local app, Jarvis sends prompts to your local Ollama, embedding generation runs locally, no note content reaches a third party unless you explicitly configure a cloud provider in Jarvis.',
-          '**Data residency:** with Logseq or Joplin + Ollama, every byte of note content stays on your machine. With Notion AI, note content transits to US-based OpenAI servers regardless of where you are.',
+          '**Data residency:** with Logseq or Joplin + Ollama, every byte of note content stays on your machine. With Notion AI, note content is sent to Notion\'s servers and model providers; check Notion\'s subprocessor list for where they operate.',
           '**Audit trail:** with local LLMs, you can run a packet capture (Wireshark, Little Snitch, etc.) once after install and verify that the plugins make zero outbound calls during AI use. With Notion AI, outbound calls are inherent — there is nothing to verify.',
-          '**Subprocessor risk:** Notion AI inherits all of OpenAI\'s subprocessors (Microsoft Azure as primary infrastructure, plus support vendors). Logseq and Joplin + Ollama have zero subprocessors for the AI layer.',
+          '**Subprocessor risk:** Notion AI relies on the model providers listed on Notion\'s subprocessor page, each of which is a further party to review. Logseq and Joplin + Ollama have no subprocessors for the AI layer.',
         ],
         image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
-        imageCaption: 'Notion AI ships note content to OpenAI Cloud (US) on every request; Logseq + logseq-copilot and Joplin + Jarvis route the same request to Ollama at localhost:11434/v1, so content never leaves the device.',
+        imageCaption: 'Notion AI sends note content to Notion\'s cloud and its model providers on every request; Logseq + logseq-copilot and Joplin + Jarvis route the same request to Ollama at localhost:11434/v1, so content never leaves the device.',
         callouts: [
           {
             type: 'tip',
@@ -293,19 +293,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr',
         title: 'GDPR and EU Data Residency',
         content:
-          '**For EU and DACH users, Logseq + logseq-copilot + Ollama and Joplin + Jarvis + Ollama are GDPR-friendlier than Notion AI by default architecture.** Note content never leaves the data controller\'s machine, so the data flows that GDPR Article 28 (processor agreements), Article 44 (international transfers), and the BSI-Grundschutz-Kataloge require to be documented for SaaS tools simply do not exist for the local stack.',
+          '**For EU and DACH users, Logseq + logseq-copilot + Ollama and Joplin + Jarvis + Ollama are GDPR-friendlier than Notion AI by default architecture.** Note content never leaves the data controller\'s machine, so the data flows that GDPR Article 28 (processor agreements), Article 44 (international transfers), and BSI IT-Grundschutz require to be documented for SaaS tools simply do not exist for the local stack.',
         items: [
-          '**Article 28 (Processor agreements):** with Notion AI, Notion + OpenAI are processors and require a Data Processing Agreement (DPA) plus Standard Contractual Clauses for the OpenAI international transfer. With Logseq / Joplin + Ollama, there is no third-party processor — just the data controller running local software.',
-          '**Article 44 (International transfers):** Notion AI ships data to US-based OpenAI servers; this is a Schrems II "international transfer" requiring SCCs and a Transfer Impact Assessment. Local Ollama processing eliminates the transfer entirely.',
-          '**BSI-Grundschutz-Kataloge (DACH):** the German federal IT security guidelines treat cloud AI services as outsourcing requiring formal risk assessment. Local AI processing falls under the much simpler "in-house IT" baseline.',
-          '**Right to erasure (Article 17):** with Notion AI, deleting note content from your account does not necessarily delete it from OpenAI\'s training pipeline or logs (depends on enterprise terms). With local Ollama, deletion is filesystem deletion — verifiable and complete.',
+          '**Article 28 (Processor agreements):** with Notion AI, Notion acts as processor under its Data Processing Addendum and relies on sub-processors for AI, so the DPA and its sub-processor list need review. With Logseq / Joplin + Ollama, there is no third-party processor — just the data controller running local software.',
+          '**Article 44 (International transfers):** depending on which providers Notion uses for a request, Notion AI may involve transfers outside the EU that need Standard Contractual Clauses and a transfer assessment — check Notion\'s DPA and subprocessor list. Local Ollama processing avoids the transfer for the AI step.',
+          '**BSI IT-Grundschutz (DACH):** the German federal IT security guidance generally treats cloud services as outsourcing that needs a formal risk assessment. Local AI processing falls under the simpler in-house IT measures.',
+          '**Right to erasure (Article 17):** with Notion AI, deleted content may remain with AI providers for a retention period (Notion states up to 30 days on non-Enterprise plans). With local Ollama, deletion is deletion on your own filesystem, including any backups and sync copies you control.',
           '**Auditability:** local stacks are easier to audit. Run a packet capture once, verify zero outbound traffic during AI use, document the result. Cloud AI services require relying on the vendor\'s SOC 2 / ISO 27001 reports.',
           '**EU-friendly hosting (when sync involves a server):** Joplin Cloud is hosted in the EU; self-hosted Joplin Server can be hosted on EU infrastructure (Hetzner, OVH, IONOS). Logseq Sync is operated by Logseq Inc. (US-based) — for strict EU residency, prefer Git or Syncthing for Logseq sync.',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'For organisations needing a defensible AI-features story under GDPR, the local-LLM-on-Logseq-or-Joplin stack is the simplest answer. The DPA discussion goes from "we use Notion + OpenAI as subprocessors with these clauses" to "we use local software running on the controller\'s endpoint, no processor involved". The compliance team\'s job becomes much easier.',
+            text: 'For organisations needing a defensible AI-features story under GDPR, the local-LLM-on-Logseq-or-Joplin stack is the simplest answer. The DPA discussion goes from "we use Notion and its AI sub-processors with these clauses" to "we use local software running on the controller\'s endpoint, no processor involved". The compliance team\'s job becomes much easier.',
           },
         ],
       },
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'notion-migration',
         title: 'Migrating From Notion AI to Logseq or Joplin',
         content:
-          '**Notion offers a native Markdown export that both Logseq and Joplin can import — Logseq preserves block-level structure better, Joplin preserves content but flattens nested blocks.** Either way, the migration is a one-time export-import, not an ongoing sync, and it stops the data flow to OpenAI immediately.',
+          '**Notion offers a native Markdown export that both Logseq and Joplin can import — Logseq preserves block-level structure better, Joplin preserves content but flattens nested blocks.** Either way, the migration is a one-time export-import, not an ongoing sync, and it stops sending page content to Notion\'s AI providers immediately.',
         numberedItems: [
           '**Export from Notion:** Settings → Settings & members → Settings → "Export all workspace content" → choose "Markdown & CSV" → download the ZIP. The export contains one .md file per page plus folders for nested pages.',
           '**Unzip and clean up:** Notion\'s export uses long page-ID suffixes in filenames (e.g., `My Page 1f8b2a3c4d5e6f7g8h9i.md`). Run a quick rename script to drop the IDs if filenames matter for your new tool.',
@@ -371,7 +371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Joplin — [joplinapp.org](https://joplinapp.org) and [github.com/laurent22/joplin](https://github.com/laurent22/joplin) (open-source notebook; AGPL 3.0).',
           'Jarvis (Joplin) — [github.com/alondmnt/joplin-plugin-jarvis](https://github.com/alondmnt/joplin-plugin-jarvis) (open-source Joplin plugin; AGPL 3.0).',
           'Ollama — [ollama.com](https://ollama.com) and [github.com/ollama/ollama](https://github.com/ollama/ollama) (local LLM runtime; MIT).',
-          'Notion AI privacy and data handling — [notion.com/help/notion-ai-faqs](https://www.notion.com/help/notion-ai-faqs) (vendor documentation for the comparison context).',
+          'Notion AI security practices (providers, training, retention) — [notion.com/help/notion-ai-security-practices](https://www.notion.com/help/notion-ai-security-practices) (vendor documentation for the comparison context).',
         ],
       },
       faq: {
@@ -416,7 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is open-source local AI integration safer than Notion AI?',
-            a: 'Yes by default architecture. Notion AI sends note content to OpenAI by design — that is structural, not a configuration choice. Logseq + logseq-copilot + Ollama and Joplin + Jarvis + Ollama send nothing to a third party unless you explicitly configure a cloud LLM provider. For GDPR-covered EU data, healthcare, legal, and journalism contexts, this distinction is meaningful: local stacks have no processor, no international transfer, no subprocessor risk. The auditability is also simpler — a one-time packet capture proves zero outbound traffic during AI use.',
+            a: 'The architecture differs. Notion AI sends note content to third-party model providers by design; Notion states that by default neither it nor its providers train on customer data, and that Enterprise offers zero data retention. Logseq + logseq-copilot + Ollama and Joplin + Jarvis + Ollama send nothing to a third party unless you explicitly configure a cloud LLM provider. For GDPR-covered EU data, healthcare, legal, and journalism contexts, that difference matters: local stacks have no processor, no international transfer, and no subprocessor for the AI layer. Auditability is also simpler — a one-time packet capture shows whether any outbound traffic happens during AI use.',
           },
           {
             q: 'Does Logseq support RAG or work as a local knowledge base?',
@@ -443,14 +443,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-es.webp',
     title: 'Logseq y Joplin con LLMs locales: notas inteligentes sin sincronización en la nube (2026)',
     seoTitle: 'Logseq + Ollama: LLM local, RAG y Joplin (2026)',
     intro:
-      '[Logseq](https://logseq.com) y [Joplin](https://joplinapp.org) son las dos aplicaciones de notas open source que en 2026 se integran limpiamente con un LLM local y nunca necesitan una conexión a la nube. Logseq ejecuta el plugin logseq-copilot contra [Ollama](https://ollama.com) para chat nativo del outliner e IA en el diario diario; Joplin ejecuta el plugin Jarvis contra Ollama para chat consciente de notas, resúmenes y búsqueda respaldada por embeddings — la opción más cercana a una verdadera base de conocimiento local con RAG. Ambas son más compatibles con el RGPD que Notion AI por arquitectura predeterminada: Notion envía el contenido de las notas a OpenAI; Logseq y Joplin no envían nada a menos que tú lo configures así. El inconveniente en 2026 es el móvil: ni Logseq ni Joplin admiten plugins en iOS o Android, por lo que las funciones de IA solo se ejecutan en el escritorio. Esta guía clasifica ambas herramientas según la configuración con Ollama, el soporte de RAG/embeddings, las rutas de sincronización sin nube (incluyendo iOS), la compatibilidad móvil, la comparación con Obsidian y el camino de migración desde Notion.',
+      '[Logseq](https://logseq.com) y [Joplin](https://joplinapp.org) son las dos aplicaciones de notas open source que en 2026 se integran limpiamente con un LLM local y nunca necesitan una conexión a la nube. Logseq ejecuta el plugin logseq-copilot contra [Ollama](https://ollama.com) para chat nativo del outliner e IA en el diario diario; Joplin ejecuta el plugin Jarvis contra Ollama para chat consciente de notas, resúmenes y búsqueda respaldada por embeddings — la opción más cercana a una verdadera base de conocimiento local con RAG. Ambas son más compatibles con el RGPD que Notion AI por arquitectura predeterminada: Notion envía el contenido de las páginas a proveedores de modelos de terceros; Logseq y Joplin no envían nada a menos que tú lo configures así. El inconveniente en 2026 es el móvil: ni Logseq ni Joplin admiten plugins en iOS o Android, por lo que las funciones de IA solo se ejecutan en el escritorio. Esta guía clasifica ambas herramientas según la configuración con Ollama, el soporte de RAG/embeddings, las rutas de sincronización sin nube (incluyendo iOS), la compatibilidad móvil, la comparación con Obsidian y el camino de migración desde Notion.',
     metaDescription:
       'Logseq + Ollama en LLM local: plugin logseq-copilot, límites de RAG frente a Joplin + Jarvis, sync sin nube y comparación con Obsidian. 2026.',
     twitterDescription:
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ambos plugins apuntan a Ollama via `http://localhost:11434/v1` — sin llamadas a la nube por defecto.',
           'Sync de Logseq sin nube: Git (integrado) o sincronización de archivos local mediante Syncthing/iCloud Drive. Sync de Joplin: Joplin Cloud cifrado de extremo a extremo, Joplin Server auto-alojado, o Nextcloud / WebDAV / Dropbox / OneDrive con E2EE.',
           'Brecha de plugins móviles (2026): ni Logseq Mobile ni Joplin Mobile admiten plugins. Las funciones de IA son solo de escritorio — el móvil es para captura, el escritorio para procesamiento.',
-          'Migración desde Notion AI: Logseq tiene la ruta de importación Markdown más limpia; Joplin pierde la estructura a nivel de bloque pero preserva el contenido. Ambos dejan de enviar datos a OpenAI en el momento en que cambias.',
+          'Migración desde Notion AI: Logseq tiene la ruta de importación Markdown más limpia; Joplin pierde la estructura a nivel de bloque pero preserva el contenido. Ambos dejan de enviar el contenido de las páginas a los proveedores de IA de Notion en el momento en que cambias.',
           'Modelos de Ollama recomendados: chat — Llama 3.2 3B o Phi-4 Mini; embeddings (solo Joplin Jarvis) — nomic-embed-text o mxbai-embed-large.',
         ],
         updatedDate: '2026-05-08',
@@ -528,7 +528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Logseq + logseq-copilot es la combinación recomendada para usuarios de outliner / diario diario.** logseq-copilot añade bloques de chat y comandos slash dentro de Logseq, configurado contra Ollama en `http://localhost:11434/v1`. Ideal para usuarios que ya viven en el modelo de página de diario diario de Logseq.',
           '**Joplin + Jarvis es la combinación recomendada para usuarios de notas Markdown puras.** Jarvis añade una barra lateral de chat, comandos de resumen y búsqueda semántica respaldada por embeddings en todo el cuaderno. Ideal para usuarios que quieren un cuaderno estilo Notion con sincronización cifrada de extremo a extremo robusta.',
           '**Ambas herramientas son open source bajo AGPL 3.0** — la licencia es permisiva para uso personal y comercial; la única restricción es la divulgación del código fuente si las modificas y las alojas públicamente.',
-          '**La postura de privacidad supera a Notion AI por arquitectura.** Notion AI envía el contenido de las notas a OpenAI por diseño; Logseq y Joplin no envían nada a menos que configures explícitamente un proveedor en la nube. Esta distinción es significativa para sanidad, derecho, periodismo y cualquier contexto regulado por el RGPD.',
+          '**La postura de privacidad supera a Notion AI por arquitectura.** Notion AI envía el contenido de las páginas a proveedores de modelos de terceros por diseño; Logseq y Joplin no envían nada a menos que configures explícitamente un proveedor en la nube. Esta distinción es significativa para sanidad, derecho, periodismo y cualquier contexto regulado por el RGPD.',
           '**La brecha de plugins móviles es la mayor restricción en 2026.** Ni Logseq Mobile ni Joplin Mobile admiten plugins. Las funciones de IA solo se ejecutan en el escritorio — el móvil se convierte en una superficie de captura (escribir notas), y el procesamiento (resumir, chatear, recuperar) ocurre más tarde en el escritorio.',
           '**La sync sin nube es sencilla, pero cada herramienta toma un enfoque diferente.** Logseq tiene sincronización Git integrada y funciona limpiamente con Syncthing o iCloud Drive. Joplin tiene Joplin Cloud cifrado de extremo a extremo, Joplin Server auto-alojado, o cualquier backend WebDAV / Nextcloud / Dropbox con E2EE encima.',
           '**La migración desde Notion AI es un viaje de ida que ambas herramientas gestionan.** Logseq importa el exportador Markdown de Notion con mayor fidelidad a nivel de bloque; Joplin importa el contenido pero aplana los bloques anidados. Una vez migrado, ninguna nota sale de tu máquina a menos que lo decidas.',
@@ -664,17 +664,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-notion',
         title: 'El caso de privacidad contra Notion AI',
         content:
-          '**Notion AI envía el contenido de las notas a OpenAI por diseño — eso es la arquitectura, no una elección de configuración.** Cuando usas las funciones de Notion AI en una página, Notion envía el contenido de la página a los servidores de OpenAI, OpenAI lo procesa, y la respuesta vuelve a través de Notion. Los datos se rigen por las políticas de privacidad de OpenAI y Notion, no por tu sistema de archivos local. Para usuarios en contextos regulados (sanidad, derecho, asesoramiento financiero, periodismo, datos de la UE cubiertos por el RGPD) este es un problema estructural que ninguna configuración soluciona.',
+          '**Notion AI envía el contenido de las páginas a proveedores de modelos de terceros por diseño — eso es la arquitectura, no una elección de configuración.** Cuando usas las funciones de Notion AI en una página, Notion envía el contenido de la página al proveedor de modelos que gestiona la solicitud y devuelve la respuesta a través de Notion. Notion afirma que, por defecto, ni Notion ni sus proveedores de IA usan los datos de los clientes para entrenar modelos, y que en su plan Enterprise la mayoría de los modelos ofrecen retención cero de datos (en los demás planes, los proveedores conservan los datos hasta 30 días). Aun así, los datos salen de tu máquina y quedan bajo los términos de Notion y de sus proveedores, no bajo tu sistema de archivos local. Para usuarios en contextos regulados (sanidad, derecho, asesoramiento financiero, periodismo, datos de la UE cubiertos por el RGPD) es una diferencia estructural que ninguna configuración elimina.',
         items: [
-          '**Arquitectura de Notion AI:** las notas salen de tu máquina para ser procesadas por OpenAI. Sujeto a los términos de manejo de datos de OpenAI Enterprise (mejor que la API estándar de OpenAI), pero aún fuera de tu infraestructura.',
+          '**Arquitectura de Notion AI:** las notas salen de tu máquina para ser procesadas por los proveedores de modelos que usa Notion (la lista actual está en la página de subencargados de Notion), bajo los términos de tratamiento de datos de Notion — pero aún fuera de tu infraestructura.',
           '**Arquitectura de Logseq + logseq-copilot:** Logseq se ejecuta como una aplicación local, el plugin envía los prompts a tu Ollama local, ningún contenido de nota llega a un tercero a menos que configures explícitamente un proveedor en la nube en el plugin.',
           '**Arquitectura de Joplin + Jarvis:** Joplin se ejecuta como una aplicación local, Jarvis envía los prompts a tu Ollama local, la generación de embeddings se ejecuta localmente, ningún contenido de nota llega a un tercero a menos que configures explícitamente un proveedor en la nube en Jarvis.',
-          '**Residencia de datos:** con Logseq o Joplin + Ollama, cada byte de contenido de nota permanece en tu máquina. Con Notion AI, el contenido de las notas transita por servidores de OpenAI con sede en EE. UU. independientemente de dónde estés.',
+          '**Residencia de datos:** con Logseq o Joplin + Ollama, cada byte de contenido de nota permanece en tu máquina. Con Notion AI, el contenido de las notas se envía a los servidores de Notion y a sus proveedores de modelos; consulta la lista de subencargados de Notion para saber dónde operan.',
           '**Pista de auditoría:** con LLMs locales, puedes ejecutar una captura de paquetes (Wireshark, Little Snitch, etc.) una vez después de la instalación y verificar que los plugins realizan cero llamadas salientes durante el uso de IA. Con Notion AI, las llamadas salientes son inherentes — no hay nada que verificar.',
-          '**Riesgo de subprocesadores:** Notion AI hereda todos los subprocesadores de OpenAI (Microsoft Azure como infraestructura principal, más proveedores de soporte). Logseq y Joplin + Ollama tienen cero subprocesadores para la capa de IA.',
+          '**Riesgo de subprocesadores:** Notion AI depende de los proveedores de modelos que figuran en la página de subencargados de Notion, cada uno de los cuales es un tercero adicional que debe revisarse. Logseq y Joplin + Ollama no tienen subprocesadores para la capa de IA.',
         ],
         image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
-        imageCaption: 'Notion AI envía el contenido de las notas a OpenAI Cloud (EE. UU.) en cada solicitud; Logseq + logseq-copilot y Joplin + Jarvis dirigen la misma solicitud a Ollama en localhost:11434/v1, por lo que el contenido nunca sale del dispositivo.',
+        imageCaption: 'Notion AI envía el contenido de las notas a la nube de Notion y a sus proveedores de modelos en cada solicitud; Logseq + logseq-copilot y Joplin + Jarvis dirigen la misma solicitud a Ollama en localhost:11434/v1, por lo que el contenido nunca sale del dispositivo.',
         callouts: [
           {
             type: 'tip',
@@ -727,19 +727,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr',
         title: 'RGPD y residencia de datos en la UE',
         content:
-          '**Para usuarios de la UE y DACH, Logseq + logseq-copilot + Ollama y Joplin + Jarvis + Ollama son más compatibles con el RGPD que Notion AI por arquitectura predeterminada.** El contenido de las notas nunca sale de la máquina del responsable del tratamiento, por lo que los flujos de datos que el artículo 28 del RGPD (acuerdos con encargados del tratamiento), el artículo 44 (transferencias internacionales) y los catálogos BSI-Grundschutz requieren documentar para herramientas SaaS simplemente no existen para la pila local.',
+          '**Para usuarios de la UE y DACH, Logseq + logseq-copilot + Ollama y Joplin + Jarvis + Ollama son más compatibles con el RGPD que Notion AI por arquitectura predeterminada.** El contenido de las notas nunca sale de la máquina del responsable del tratamiento, por lo que los flujos de datos que el artículo 28 del RGPD (acuerdos con encargados del tratamiento), el artículo 44 (transferencias internacionales) y BSI IT-Grundschutz requieren documentar para herramientas SaaS simplemente no existen para la pila local.',
         items: [
-          '**Artículo 28 (Acuerdos con encargados del tratamiento):** con Notion AI, Notion + OpenAI son encargados del tratamiento y requieren un Acuerdo de Procesamiento de Datos (APD) más Cláusulas Contractuales Estándar para la transferencia internacional a OpenAI. Con Logseq / Joplin + Ollama, no hay ningún encargado del tratamiento de terceros — solo el responsable ejecutando software local.',
-          '**Artículo 44 (Transferencias internacionales):** Notion AI envía datos a servidores de OpenAI con sede en EE. UU.; esta es una "transferencia internacional" de Schrems II que requiere CCE y una Evaluación de Impacto de la Transferencia. El procesamiento local de Ollama elimina la transferencia por completo.',
-          '**Catálogos BSI-Grundschutz (DACH):** las directrices federales de seguridad informática de Alemania tratan los servicios de IA en la nube como subcontratación que requiere evaluación formal de riesgos. El procesamiento de IA local cae bajo la línea de base de "TI interna" mucho más sencilla.',
-          '**Derecho de supresión (Artículo 17):** con Notion AI, eliminar el contenido de las notas de tu cuenta no necesariamente lo elimina del pipeline de entrenamiento o los registros de OpenAI (depende de los términos empresariales). Con Ollama local, la eliminación es la eliminación del sistema de archivos — verificable y completa.',
+          '**Artículo 28 (Acuerdos con encargados del tratamiento):** con Notion AI, Notion actúa como encargado del tratamiento bajo su Adenda de Procesamiento de Datos y recurre a subencargados para la IA, por lo que hay que revisar el APD y su lista de subencargados. Con Logseq / Joplin + Ollama, no hay ningún encargado del tratamiento de terceros — solo el responsable ejecutando software local.',
+          '**Artículo 44 (Transferencias internacionales):** según los proveedores que Notion use para una solicitud, Notion AI puede implicar transferencias fuera de la UE que requieren Cláusulas Contractuales Estándar y una evaluación de la transferencia — consulta el APD y la lista de subencargados de Notion. El procesamiento local de Ollama evita la transferencia en el paso de IA.',
+          '**BSI IT-Grundschutz (DACH):** las directrices federales de seguridad informática de Alemania suelen tratar los servicios en la nube como subcontratación que requiere una evaluación formal de riesgos. El procesamiento de IA local cae bajo las medidas más sencillas de TI interna.',
+          '**Derecho de supresión (Artículo 17):** con Notion AI, el contenido eliminado puede permanecer en los proveedores de IA durante un periodo de retención (Notion indica hasta 30 días en los planes que no son Enterprise). Con Ollama local, la eliminación es la eliminación en tu propio sistema de archivos, incluidas las copias de seguridad y de sincronización que controlas.',
           '**Auditabilidad:** las pilas locales son más fáciles de auditar. Ejecuta una captura de paquetes una vez, verifica cero tráfico saliente durante el uso de IA, documenta el resultado. Los servicios de IA en la nube requieren confiar en los informes SOC 2 / ISO 27001 del proveedor.',
           '**Alojamiento compatible con la UE (cuando la sync implica un servidor):** Joplin Cloud está alojado en la UE; Joplin Server auto-alojado puede alojarse en infraestructura de la UE (Hetzner, OVH, IONOS). Logseq Sync está operado por Logseq Inc. (con sede en EE. UU.) — para residencia estricta en la UE, prefiere Git o Syncthing para la sync de Logseq.',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Para organizaciones que necesitan una historia defendible de funciones de IA bajo el RGPD, la pila de LLM local en Logseq o Joplin es la respuesta más sencilla. La discusión sobre el APD pasa de "usamos Notion + OpenAI como subprocesadores con estas cláusulas" a "usamos software local ejecutándose en el endpoint del responsable, sin ningún encargado del tratamiento implicado". El trabajo del equipo de cumplimiento se vuelve mucho más sencillo.',
+            text: 'Para organizaciones que necesitan una historia defendible de funciones de IA bajo el RGPD, la pila de LLM local en Logseq o Joplin es la respuesta más sencilla. La discusión sobre el APD pasa de "usamos Notion y sus subencargados de IA con estas cláusulas" a "usamos software local ejecutándose en el endpoint del responsable, sin ningún encargado del tratamiento implicado". El trabajo del equipo de cumplimiento se vuelve mucho más sencillo.',
           },
         ],
       },
@@ -747,7 +747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'notion-migration',
         title: 'Migrar de Notion AI a Logseq o Joplin',
         content:
-          '**Notion ofrece una exportación nativa de Markdown que tanto Logseq como Joplin pueden importar — Logseq preserva mejor la estructura a nivel de bloque, Joplin preserva el contenido pero aplana los bloques anidados.** De cualquier manera, la migración es una exportación-importación única, no una sync continua, y detiene el flujo de datos a OpenAI de inmediato.',
+          '**Notion ofrece una exportación nativa de Markdown que tanto Logseq como Joplin pueden importar — Logseq preserva mejor la estructura a nivel de bloque, Joplin preserva el contenido pero aplana los bloques anidados.** De cualquier manera, la migración es una exportación-importación única, no una sync continua, y detiene de inmediato el envío del contenido de las páginas a los proveedores de IA de Notion.',
         numberedItems: [
           '**Exportar desde Notion:** Configuración → Configuración y miembros → Configuración → "Exportar todo el contenido del espacio de trabajo" → elige "Markdown & CSV" → descarga el ZIP. La exportación contiene un archivo .md por página más carpetas para páginas anidadas.',
           '**Descomprimir y limpiar:** la exportación de Notion usa sufijos largos de ID de página en los nombres de archivo (p. ej., `My Page 1f8b2a3c4d5e6f7g8h9i.md`). Ejecuta un script rápido de renombrado para eliminar los IDs si los nombres de archivo importan para tu nueva herramienta.',
@@ -805,7 +805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Joplin — [joplinapp.org](https://joplinapp.org) y [github.com/laurent22/joplin](https://github.com/laurent22/joplin) (cuaderno open source; AGPL 3.0).',
           'Jarvis (Joplin) — [github.com/alondmnt/joplin-plugin-jarvis](https://github.com/alondmnt/joplin-plugin-jarvis) (plugin open source de Joplin; AGPL 3.0).',
           'Ollama — [ollama.com](https://ollama.com) y [github.com/ollama/ollama](https://github.com/ollama/ollama) (runtime de LLM local; MIT).',
-          'Privacidad y manejo de datos de Notion AI — [notion.com/help/notion-ai-faqs](https://www.notion.com/help/notion-ai-faqs) (documentación del proveedor para el contexto comparativo).',
+          'Prácticas de seguridad de Notion AI (proveedores, entrenamiento, retención) — [notion.com/help/notion-ai-security-practices](https://www.notion.com/help/notion-ai-security-practices) (documentación del proveedor para el contexto comparativo).',
         ],
       },
       faq: {
@@ -850,7 +850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es la integración de IA local open source más segura que Notion AI?',
-            a: 'Sí por arquitectura predeterminada. Notion AI envía el contenido de las notas a OpenAI por diseño — eso es estructural, no una elección de configuración. Logseq + logseq-copilot + Ollama y Joplin + Jarvis + Ollama no envían nada a un tercero a menos que configures explícitamente un proveedor de LLM en la nube. Para datos de la UE cubiertos por el RGPD, sanidad, derecho y periodismo, esta distinción es significativa: las pilas locales no tienen encargado del tratamiento, no hay transferencia internacional, no hay riesgo de subprocesadores. La auditabilidad también es más sencilla — una captura de paquetes única demuestra cero tráfico saliente durante el uso de IA.',
+            a: 'La arquitectura es distinta. Notion AI envía el contenido de las notas a proveedores de modelos de terceros por diseño; Notion afirma que, por defecto, ni Notion ni sus proveedores entrenan con los datos de los clientes, y que Enterprise ofrece retención cero de datos. Logseq + logseq-copilot + Ollama y Joplin + Jarvis + Ollama no envían nada a un tercero a menos que configures explícitamente un proveedor de LLM en la nube. Para datos de la UE cubiertos por el RGPD, sanidad, derecho y periodismo, esa diferencia importa: las pilas locales no tienen encargado del tratamiento, ni transferencia internacional, ni subprocesadores para la capa de IA. La auditabilidad también es más sencilla — una captura de paquetes única muestra si hay tráfico saliente durante el uso de IA.',
           },
           {
             q: '¿Logseq admite RAG o funciona como base de conocimiento local?',
@@ -880,7 +880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/local-llm-with-logseq-and-joplin',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-14',
+      dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -890,14 +890,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-pt.webp',
     title: 'Logseq e Joplin com LLMs locais: notas inteligentes sem sincronização na nuvem (2026)',
     seoTitle: 'Logseq + Ollama: LLM local, RAG e Joplin (2026)',
     intro:
-      '[Logseq](https://logseq.com) e [Joplin](https://joplinapp.org) são os dois aplicativos de notas de código aberto que em 2026 se integram de forma limpa com um LLM local e nunca precisam de uma ida e volta à nuvem. O Logseq roda o plugin logseq-copilot contra o [Ollama](https://ollama.com) para chat nativo do outliner e IA no diário diário; o Joplin roda o plugin Jarvis contra o Ollama para chat consciente das notas, resumos e recuperação respaldada por embeddings — a opção mais próxima de uma verdadeira base de conhecimento local com RAG. Ambos são mais compatíveis com o GDPR que o Notion AI por arquitetura padrão — o Notion envia o conteúdo das notas para a OpenAI; o Logseq e o Joplin não enviam nada a menos que você configure assim. O obstáculo em 2026 é o celular: nem o Logseq nem o Joplin suportam plugins no iOS ou Android, então os recursos de IA rodam apenas no desktop. Este guia classifica ambas as ferramentas pela configuração com o Ollama, pelo suporte a RAG/embeddings, pelas rotas de sincronização sem nuvem (incluindo iOS), pela compatibilidade móvel, pela comparação com o Obsidian e pelo caminho de migração a partir do Notion.',
+      '[Logseq](https://logseq.com) e [Joplin](https://joplinapp.org) são os dois aplicativos de notas de código aberto que em 2026 se integram de forma limpa com um LLM local e nunca precisam de uma ida e volta à nuvem. O Logseq roda o plugin logseq-copilot contra o [Ollama](https://ollama.com) para chat nativo do outliner e IA no diário diário; o Joplin roda o plugin Jarvis contra o Ollama para chat consciente das notas, resumos e recuperação respaldada por embeddings — a opção mais próxima de uma verdadeira base de conhecimento local com RAG. Ambos são mais compatíveis com o GDPR que o Notion AI por arquitetura padrão — o Notion envia o conteúdo das páginas para provedores de modelos de terceiros; o Logseq e o Joplin não enviam nada a menos que você configure assim. O obstáculo em 2026 é o celular: nem o Logseq nem o Joplin suportam plugins no iOS ou Android, então os recursos de IA rodam apenas no desktop. Este guia classifica ambas as ferramentas pela configuração com o Ollama, pelo suporte a RAG/embeddings, pelas rotas de sincronização sem nuvem (incluindo iOS), pela compatibilidade móvel, pela comparação com o Obsidian e pelo caminho de migração a partir do Notion.',
     metaDescription:
       'Logseq + Ollama em LLM local: plugin logseq-copilot, limites de RAG vs. Joplin + Jarvis, sync sem nuvem e comparação com o Obsidian. 2026.',
     twitterDescription:
@@ -943,7 +943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ambos os plugins apontam para o Ollama via `http://localhost:11434/v1` — sem chamadas à nuvem por padrão.',
           'Sync do Logseq sem nuvem: Git (integrado) ou sincronização de arquivos local via Syncthing/iCloud Drive. Sync do Joplin: Joplin Cloud criptografado de ponta a ponta, Joplin Server auto-hospedado, ou Nextcloud / WebDAV / Dropbox / OneDrive com E2EE.',
           'Lacuna de plugins móveis (2026): nem o Logseq Mobile nem o Joplin Mobile suportam plugins. Os recursos de IA são apenas de desktop — o celular é para captura, o desktop para processamento.',
-          'Migração a partir do Notion AI: o Logseq tem o caminho de importação Markdown mais limpo; o Joplin perde a estrutura no nível de bloco, mas preserva o conteúdo. Ambos param de enviar dados para a OpenAI no momento em que você muda.',
+          'Migração a partir do Notion AI: o Logseq tem o caminho de importação Markdown mais limpo; o Joplin perde a estrutura no nível de bloco, mas preserva o conteúdo. Ambos param de enviar o conteúdo das páginas aos provedores de IA do Notion no momento em que você muda.',
           'Modelos do Ollama recomendados: chat — Llama 3.2 3B ou Phi-4 Mini; embeddings (apenas Joplin Jarvis) — nomic-embed-text ou mxbai-embed-large.',
         ],
         updatedDate: '2026-05-08',
@@ -975,7 +975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Logseq + logseq-copilot é a combinação recomendada para usuários de outliner / diário diário.** O logseq-copilot adiciona blocos de chat e comandos de barra dentro do Logseq, configurado contra o Ollama em `http://localhost:11434/v1`. Ideal para usuários que já vivem no modelo de página de diário diário do Logseq.',
           '**Joplin + Jarvis é a combinação recomendada para usuários de notas Markdown puras.** O Jarvis adiciona uma barra lateral de chat, comandos de resumo e busca semântica respaldada por embeddings em todo o caderno. Ideal para usuários que querem um caderno estilo Notion com sincronização criptografada de ponta a ponta robusta.',
           '**Ambas as ferramentas são de código aberto sob AGPL 3.0** — a licença é permissiva para uso pessoal e comercial; a única restrição é a divulgação do código-fonte se você as modificar e hospedar publicamente.',
-          '**A postura de privacidade supera o Notion AI por arquitetura.** O Notion AI envia o conteúdo das notas para a OpenAI por design; o Logseq e o Joplin não enviam nada a menos que você configure explicitamente um provedor de nuvem. Essa distinção é significativa para saúde, jurídico, jornalismo e qualquer contexto regulado pelo GDPR.',
+          '**A postura de privacidade supera o Notion AI por arquitetura.** O Notion AI envia o conteúdo das páginas para provedores de modelos de terceiros por design; o Logseq e o Joplin não enviam nada a menos que você configure explicitamente um provedor de nuvem. Essa distinção é significativa para saúde, jurídico, jornalismo e qualquer contexto regulado pelo GDPR.',
           '**A lacuna de plugins móveis é a maior restrição em 2026.** Nem o Logseq Mobile nem o Joplin Mobile suportam plugins. Os recursos de IA rodam apenas no desktop — o celular se torna uma superfície de captura (escrever notas), e o processamento (resumir, conversar, recuperar) acontece depois no desktop.',
           '**A sync sem nuvem é simples, mas cada ferramenta adota uma abordagem diferente.** O Logseq tem sincronização Git integrada e funciona de forma limpa com Syncthing ou iCloud Drive. O Joplin tem Joplin Cloud criptografado de ponta a ponta, Joplin Server auto-hospedado, ou qualquer backend WebDAV / Nextcloud / Dropbox com E2EE por cima.',
           '**A migração a partir do Notion AI é uma viagem só de ida que ambas as ferramentas gerenciam.** O Logseq importa o exportador Markdown do Notion com maior fidelidade no nível de bloco; o Joplin importa o conteúdo, mas achata os blocos aninhados. Uma vez migrado, nenhuma nota sai da sua máquina a menos que você decida.',
@@ -1111,17 +1111,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-notion',
         title: 'O argumento de privacidade contra o Notion AI',
         content:
-          '**O Notion AI envia o conteúdo das notas para a OpenAI por design — isso é a arquitetura, não uma escolha de configuração.** Quando você usa os recursos do Notion AI em uma página, o Notion envia o conteúdo da página para os servidores da OpenAI, a OpenAI o processa, e a resposta volta através do Notion. Os dados são regidos pelas políticas de privacidade da OpenAI e do Notion, não pelo seu sistema de arquivos local. Para usuários em contextos regulados (saúde, jurídico, aconselhamento financeiro, jornalismo, dados da UE cobertos pelo GDPR) este é um problema estrutural que nenhuma configuração resolve.',
+          '**O Notion AI envia o conteúdo das páginas para provedores de modelos de terceiros por design — isso é a arquitetura, não uma escolha de configuração.** Quando você usa os recursos do Notion AI em uma página, o Notion envia o conteúdo da página ao provedor de modelo que atende a solicitação e devolve a resposta através do Notion. O Notion afirma que, por padrão, nem ele nem seus provedores de IA usam dados de clientes para treinar modelos, e que no plano Enterprise a maioria dos modelos oferece retenção zero de dados (nos demais planos, os provedores retêm os dados por até 30 dias). Mesmo assim, os dados saem da sua máquina e ficam sujeitos aos termos do Notion e de seus provedores, não ao seu sistema de arquivos local. Para usuários em contextos regulados (saúde, jurídico, aconselhamento financeiro, jornalismo, dados da UE cobertos pelo GDPR) isso é uma diferença estrutural que nenhuma configuração elimina.',
         items: [
-          '**Arquitetura do Notion AI:** as notas saem da sua máquina para serem processadas pela OpenAI. Sujeito aos termos de tratamento de dados do OpenAI Enterprise (melhor que a API padrão da OpenAI), mas ainda fora da sua infraestrutura.',
+          '**Arquitetura do Notion AI:** as notas saem da sua máquina para serem processadas pelos provedores de modelos que o Notion usa (a lista atual está na página de subprocessadores do Notion), sob os termos de tratamento de dados do Notion — mas ainda fora da sua infraestrutura.',
           '**Arquitetura do Logseq + logseq-copilot:** o Logseq roda como um aplicativo local, o plugin envia os prompts para o seu Ollama local, nenhum conteúdo de nota chega a um terceiro a menos que você configure explicitamente um provedor de nuvem no plugin.',
           '**Arquitetura do Joplin + Jarvis:** o Joplin roda como um aplicativo local, o Jarvis envia os prompts para o seu Ollama local, a geração de embeddings roda localmente, nenhum conteúdo de nota chega a um terceiro a menos que você configure explicitamente um provedor de nuvem no Jarvis.',
-          '**Residência de dados:** com Logseq ou Joplin + Ollama, cada byte de conteúdo de nota permanece na sua máquina. Com o Notion AI, o conteúdo das notas transita por servidores da OpenAI sediados nos EUA independentemente de onde você esteja.',
+          '**Residência de dados:** com Logseq ou Joplin + Ollama, cada byte de conteúdo de nota permanece na sua máquina. Com o Notion AI, o conteúdo das notas é enviado aos servidores do Notion e a seus provedores de modelos; consulte a lista de subprocessadores do Notion para saber onde eles operam.',
           '**Trilha de auditoria:** com LLMs locais, você pode executar uma captura de pacotes (Wireshark, Little Snitch, etc.) uma vez após a instalação e verificar que os plugins fazem zero chamadas de saída durante o uso de IA. Com o Notion AI, as chamadas de saída são inerentes — não há nada a verificar.',
-          '**Risco de subprocessadores:** o Notion AI herda todos os subprocessadores da OpenAI (Microsoft Azure como infraestrutura principal, mais fornecedores de suporte). O Logseq e o Joplin + Ollama têm zero subprocessadores para a camada de IA.',
+          '**Risco de subprocessadores:** o Notion AI depende dos provedores de modelos listados na página de subprocessadores do Notion, e cada um deles é mais uma parte a ser avaliada. O Logseq e o Joplin + Ollama não têm subprocessadores para a camada de IA.',
         ],
         image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
-        imageCaption: 'O Notion AI envia o conteúdo das notas para a OpenAI Cloud (EUA) em cada solicitação; Logseq + logseq-copilot e Joplin + Jarvis direcionam a mesma solicitação para o Ollama em localhost:11434/v1, então o conteúdo nunca sai do dispositivo.',
+        imageCaption: 'O Notion AI envia o conteúdo das notas para a nuvem do Notion e seus provedores de modelos em cada solicitação; Logseq + logseq-copilot e Joplin + Jarvis direcionam a mesma solicitação para o Ollama em localhost:11434/v1, então o conteúdo nunca sai do dispositivo.',
         callouts: [
           {
             type: 'tip',
@@ -1174,19 +1174,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr',
         title: 'GDPR e residência de dados na UE',
         content:
-          '**Para usuários da UE e DACH, Logseq + logseq-copilot + Ollama e Joplin + Jarvis + Ollama são mais compatíveis com o GDPR que o Notion AI por arquitetura padrão.** O conteúdo das notas nunca sai da máquina do controlador de dados, então os fluxos de dados que o Artigo 28 do GDPR (acordos de operador), o Artigo 44 (transferências internacionais) e os catálogos BSI-Grundschutz exigem documentar para ferramentas SaaS simplesmente não existem para a pilha local.',
+          '**Para usuários da UE e DACH, Logseq + logseq-copilot + Ollama e Joplin + Jarvis + Ollama são mais compatíveis com o GDPR que o Notion AI por arquitetura padrão.** O conteúdo das notas nunca sai da máquina do controlador de dados, então os fluxos de dados que o Artigo 28 do GDPR (acordos de operador), o Artigo 44 (transferências internacionais) e o BSI IT-Grundschutz exigem documentar para ferramentas SaaS simplesmente não existem para a pilha local.',
         items: [
-          '**Artigo 28 (Acordos de operador):** com o Notion AI, o Notion + a OpenAI são operadores e exigem um Acordo de Tratamento de Dados (DPA) mais Cláusulas Contratuais Padrão para a transferência internacional à OpenAI. Com Logseq / Joplin + Ollama, não há nenhum operador terceiro — apenas o controlador de dados rodando software local.',
-          '**Artigo 44 (Transferências internacionais):** o Notion AI envia dados para servidores da OpenAI sediados nos EUA; esta é uma "transferência internacional" de Schrems II que exige SCCs e uma Avaliação de Impacto da Transferência. O processamento local do Ollama elimina a transferência por completo.',
-          '**Catálogos BSI-Grundschutz (DACH):** as diretrizes federais alemãs de segurança de TI tratam os serviços de IA na nuvem como terceirização que exige avaliação formal de risco. O processamento de IA local cai sob a linha de base muito mais simples de "TI interna".',
-          '**Direito ao apagamento (Artigo 17):** com o Notion AI, apagar o conteúdo das notas da sua conta não necessariamente o apaga do pipeline de treinamento ou dos logs da OpenAI (depende dos termos corporativos). Com o Ollama local, o apagamento é o apagamento do sistema de arquivos — verificável e completo.',
+          '**Artigo 28 (Acordos de operador):** com o Notion AI, o Notion atua como operador sob seu Adendo de Tratamento de Dados e recorre a subprocessadores para a IA, então o DPA e a lista de subprocessadores precisam ser revisados. Com Logseq / Joplin + Ollama, não há nenhum operador terceiro — apenas o controlador de dados rodando software local.',
+          '**Artigo 44 (Transferências internacionais):** dependendo dos provedores que o Notion usa em cada solicitação, o Notion AI pode envolver transferências para fora da UE que exigem Cláusulas Contratuais Padrão e uma avaliação da transferência — consulte o DPA e a lista de subprocessadores do Notion. O processamento local do Ollama evita a transferência na etapa de IA.',
+          '**BSI IT-Grundschutz (DACH):** as orientações federais alemãs de segurança de TI geralmente tratam os serviços em nuvem como terceirização que exige avaliação formal de risco. O processamento de IA local cai sob as medidas mais simples de TI interna.',
+          '**Direito ao apagamento (Artigo 17):** com o Notion AI, o conteúdo apagado pode permanecer com os provedores de IA durante um período de retenção (o Notion afirma até 30 dias nos planos que não são Enterprise). Com o Ollama local, o apagamento é o apagamento no seu próprio sistema de arquivos, incluindo quaisquer backups e cópias de sincronização que você controla.',
           '**Auditabilidade:** as pilhas locais são mais fáceis de auditar. Execute uma captura de pacotes uma vez, verifique zero tráfego de saída durante o uso de IA, documente o resultado. Os serviços de IA na nuvem exigem confiar nos relatórios SOC 2 / ISO 27001 do fornecedor.',
           '**Hospedagem compatível com a UE (quando a sync envolve um servidor):** o Joplin Cloud é hospedado na UE; o Joplin Server auto-hospedado pode ser hospedado em infraestrutura da UE (Hetzner, OVH, IONOS). O Logseq Sync é operado pela Logseq Inc. (sediada nos EUA) — para residência estrita na UE, prefira Git ou Syncthing para a sync do Logseq.',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Para organizações que precisam de um argumento defensável de recursos de IA sob o GDPR, a pilha de LLM local no Logseq ou Joplin é a resposta mais simples. A discussão sobre o DPA passa de "usamos Notion + OpenAI como subprocessadores com estas cláusulas" para "usamos software local rodando no endpoint do controlador, sem nenhum operador envolvido". O trabalho da equipe de conformidade se torna muito mais fácil.',
+            text: 'Para organizações que precisam de um argumento defensável de recursos de IA sob o GDPR, a pilha de LLM local no Logseq ou Joplin é a resposta mais simples. A discussão sobre o DPA passa de "usamos o Notion e seus subprocessadores de IA com estas cláusulas" para "usamos software local rodando no endpoint do controlador, sem nenhum operador envolvido". O trabalho da equipe de conformidade se torna muito mais fácil.',
           },
         ],
       },
@@ -1194,7 +1194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'notion-migration',
         title: 'Migrar do Notion AI para o Logseq ou Joplin',
         content:
-          '**O Notion oferece uma exportação nativa de Markdown que tanto o Logseq quanto o Joplin podem importar — o Logseq preserva melhor a estrutura no nível de bloco, o Joplin preserva o conteúdo, mas achata os blocos aninhados.** De qualquer forma, a migração é uma exportação-importação única, não uma sync contínua, e interrompe o fluxo de dados para a OpenAI imediatamente.',
+          '**O Notion oferece uma exportação nativa de Markdown que tanto o Logseq quanto o Joplin podem importar — o Logseq preserva melhor a estrutura no nível de bloco, o Joplin preserva o conteúdo, mas achata os blocos aninhados.** De qualquer forma, a migração é uma exportação-importação única, não uma sync contínua, e interrompe imediatamente o envio do conteúdo das páginas aos provedores de IA do Notion.',
         numberedItems: [
           '**Exportar do Notion:** Configurações → Configurações e membros → Configurações → "Exportar todo o conteúdo do espaço de trabalho" → escolha "Markdown & CSV" → baixe o ZIP. A exportação contém um arquivo .md por página mais pastas para páginas aninhadas.',
           '**Descompactar e limpar:** a exportação do Notion usa sufixos longos de ID de página nos nomes de arquivo (por exemplo, `My Page 1f8b2a3c4d5e6f7g8h9i.md`). Execute um script rápido de renomeação para remover os IDs se os nomes de arquivo importarem para a sua nova ferramenta.',
@@ -1252,7 +1252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Joplin — [joplinapp.org](https://joplinapp.org) e [github.com/laurent22/joplin](https://github.com/laurent22/joplin) (caderno de código aberto; AGPL 3.0).',
           'Jarvis (Joplin) — [github.com/alondmnt/joplin-plugin-jarvis](https://github.com/alondmnt/joplin-plugin-jarvis) (plugin de código aberto do Joplin; AGPL 3.0).',
           'Ollama — [ollama.com](https://ollama.com) e [github.com/ollama/ollama](https://github.com/ollama/ollama) (runtime de LLM local; MIT).',
-          'Privacidade e tratamento de dados do Notion AI — [notion.com/help/notion-ai-faqs](https://www.notion.com/help/notion-ai-faqs) (documentação do fornecedor para o contexto comparativo).',
+          'Práticas de segurança do Notion AI (provedores, treinamento, retenção) — [notion.com/help/notion-ai-security-practices](https://www.notion.com/help/notion-ai-security-practices) (documentação do fornecedor para o contexto comparativo).',
         ],
       },
       faq: {
@@ -1297,7 +1297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'A integração de IA local de código aberto é mais segura que o Notion AI?',
-            a: 'Sim por arquitetura padrão. O Notion AI envia o conteúdo das notas para a OpenAI por design — isso é estrutural, não uma escolha de configuração. O Logseq + logseq-copilot + Ollama e o Joplin + Jarvis + Ollama não enviam nada a um terceiro a menos que você configure explicitamente um provedor de LLM na nuvem. Para dados da UE cobertos pelo GDPR, saúde, jurídico e jornalismo, essa distinção é significativa: as pilhas locais não têm operador, não há transferência internacional, não há risco de subprocessadores. A auditabilidade também é mais simples — uma captura de pacotes única prova zero tráfego de saída durante o uso de IA.',
+            a: 'A arquitetura é diferente. O Notion AI envia o conteúdo das notas para provedores de modelos de terceiros por design; o Notion afirma que, por padrão, nem ele nem seus provedores treinam com dados de clientes, e que o plano Enterprise oferece retenção zero de dados. O Logseq + logseq-copilot + Ollama e o Joplin + Jarvis + Ollama não enviam nada a um terceiro a menos que você configure explicitamente um provedor de LLM na nuvem. Para dados da UE cobertos pelo GDPR, saúde, jurídico e jornalismo, essa diferença importa: as pilhas locais não têm operador, não há transferência internacional e não há subprocessador para a camada de IA. A auditabilidade também é mais simples — uma captura de pacotes única mostra se há algum tráfego de saída durante o uso de IA.',
           },
           {
             q: 'O Logseq suporta RAG ou funciona como base de conhecimento local?',
@@ -1327,7 +1327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/local-llm-with-logseq-and-joplin',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-14',
+      dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1336,14 +1336,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-de.webp',
     title: 'Logseq und Joplin mit lokalen LLMs: Intelligente Notizen ohne Cloud-Synchronisierung (2026)',
     seoTitle: 'Logseq + Ollama: Lokales LLM, RAG & Joplin (2026)',
     intro:
-      '[Logseq](https://logseq.com) und [Joplin](https://joplinapp.org) sind die beiden Open-Source-Notiz-Apps, die sich 2026 sauber mit einem lokalen LLM kombinieren lassen und niemals eine Cloud-Verbindung benötigen. Logseq nutzt das logseq-copilot-Plugin gegen [Ollama](https://ollama.com) für Outliner-natives Chatten und KI im Tagesjournal; Joplin nutzt das Jarvis-Plugin gegen Ollama für notizbewussten Chat, Zusammenfassungen und Embedding-gestützte Suche — die Option, die einer echten lokalen RAG-Wissensdatenbank am nächsten kommt. Beide sind durch ihre Standardarchitektur DSGVO-freundlicher als Notion AI — Notion sendet Notizinhalte an OpenAI; Logseq und Joplin senden nichts, sofern Sie es nicht entsprechend konfigurieren. Der Haken in 2026 ist mobil: Weder Logseq noch Joplin unterstützen Plugins unter iOS oder Android, KI-Funktionen laufen also ausschließlich am Desktop. Dieser Leitfaden bewertet beide Tools nach Ollama-Konfiguration, RAG-/Embedding-Unterstützung, Synchronisierungspfaden ohne Cloud (inklusive iOS), mobiler Kompatibilität, dem Vergleich mit Obsidian und dem Migrationspfad von Notion.',
+      '[Logseq](https://logseq.com) und [Joplin](https://joplinapp.org) sind die beiden Open-Source-Notiz-Apps, die sich 2026 sauber mit einem lokalen LLM kombinieren lassen und niemals eine Cloud-Verbindung benötigen. Logseq nutzt das logseq-copilot-Plugin gegen [Ollama](https://ollama.com) für Outliner-natives Chatten und KI im Tagesjournal; Joplin nutzt das Jarvis-Plugin gegen Ollama für notizbewussten Chat, Zusammenfassungen und Embedding-gestützte Suche — die Option, die einer echten lokalen RAG-Wissensdatenbank am nächsten kommt. Beide sind durch ihre Standardarchitektur DSGVO-freundlicher als Notion AI — Notion sendet Seiteninhalte an Drittanbieter von KI-Modellen; Logseq und Joplin senden nichts, sofern Sie es nicht entsprechend konfigurieren. Der Haken in 2026 ist mobil: Weder Logseq noch Joplin unterstützen Plugins unter iOS oder Android, KI-Funktionen laufen also ausschließlich am Desktop. Dieser Leitfaden bewertet beide Tools nach Ollama-Konfiguration, RAG-/Embedding-Unterstützung, Synchronisierungspfaden ohne Cloud (inklusive iOS), mobiler Kompatibilität, dem Vergleich mit Obsidian und dem Migrationspfad von Notion.',
     metaDescription:
       'Logseq + Ollama als lokales LLM: logseq-copilot-Plugin, RAG-Grenzen vs. Joplin + Jarvis, cloudfreie Synchronisierung und Vergleich mit Obsidian. 2026.',
     twitterDescription:
@@ -1389,7 +1389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Beide Plugins verbinden sich mit Ollama unter `http://localhost:11434/v1` — keine Cloud-Aufrufe in der Standardkonfiguration.',
           'Logseq-Sync ohne Cloud: Git (eingebaut) oder lokale Datei-Synchronisierung über Syncthing/iCloud Drive. Joplin-Sync: Ende-zu-Ende-verschlüsselte Joplin Cloud, selbstgehosteter Joplin Server oder Nextcloud / WebDAV / Dropbox / OneDrive mit E2EE.',
           'Mobile Plugin-Lücke (2026): Weder Logseq Mobile noch Joplin Mobile unterstützt Plugins. KI-Funktionen laufen nur am Desktop — Mobile dient der Erfassung, der Desktop der Verarbeitung.',
-          'Notion-AI-Migration: Logseq hat den saubereren Markdown-Importpfad; Joplin verliert die Block-Struktur, behält aber den Inhalt. Beide stoppen den Datenfluss zu OpenAI sofort beim Wechsel.',
+          'Notion-AI-Migration: Logseq hat den saubereren Markdown-Importpfad; Joplin verliert die Block-Struktur, behält aber den Inhalt. Beide hören beim Wechsel sofort auf, Seiteninhalte an die KI-Anbieter von Notion zu senden.',
           'Empfohlene Ollama-Modelle: Chat — Llama 3.2 3B oder Phi-4 Mini; Embeddings (nur Joplin Jarvis) — nomic-embed-text oder mxbai-embed-large.',
         ],
         updatedDate: '2026-05-08',
@@ -1421,7 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Logseq + logseq-copilot ist die empfohlene Kombination für Outliner- / Tagesjournal-Nutzer.** logseq-copilot fügt Chat-Blöcke und Slash-Befehle innerhalb von Logseq hinzu, konfiguriert gegen Ollama unter `http://localhost:11434/v1`. Optimal für Nutzer, die bereits im Tagesjournal-Seitenmodell von Logseq arbeiten.',
           '**Joplin + Jarvis ist die empfohlene Kombination für Nutzer reiner Markdown-Notizen.** Jarvis fügt eine Chat-Sidebar, Zusammenfassungs-Befehle und Embedding-gestützte semantische Suche über das gesamte Notizbuch hinzu. Optimal für Nutzer, die ein Notion-ähnliches Notizbuch mit starker Ende-zu-Ende-verschlüsselter Synchronisierung möchten.',
           '**Beide Tools sind Open Source unter AGPL 3.0** — die Lizenz ist permissiv für private und kommerzielle Nutzung; die einzige Auflage ist die Quelloffenlegung, falls Sie sie modifizieren und öffentlich hosten.',
-          '**Datenschutzhaltung schlägt Notion AI architektonisch.** Notion AI sendet Notizinhalte per Design an OpenAI; Logseq und Joplin senden nichts, sofern Sie nicht ausdrücklich einen Cloud-Anbieter konfigurieren. Diese Unterscheidung ist relevant für Gesundheitswesen, Recht, Journalismus und jeden DSGVO-regulierten Kontext.',
+          '**Datenschutzhaltung schlägt Notion AI architektonisch.** Notion AI sendet Seiteninhalte per Design an Drittanbieter von KI-Modellen; Logseq und Joplin senden nichts, sofern Sie nicht ausdrücklich einen Cloud-Anbieter konfigurieren. Diese Unterscheidung ist relevant für Gesundheitswesen, Recht, Journalismus und jeden DSGVO-regulierten Kontext.',
           '**Die mobile Plugin-Lücke ist die größte Einschränkung 2026.** Weder Logseq Mobile noch Joplin Mobile unterstützt Plugins. KI-Funktionen laufen nur am Desktop — Mobile wird zur Erfassungsfläche (Notizen schreiben), und die Verarbeitung (Zusammenfassung, Chat, Abruf) erfolgt später am Desktop.',
           '**Synchronisierung ohne Cloud ist unkompliziert, jedes Tool geht jedoch einen anderen Weg.** Logseq verfügt über eingebaute Git-Synchronisierung und arbeitet sauber mit Syncthing oder iCloud Drive. Joplin bietet Ende-zu-Ende-verschlüsselte Joplin Cloud, selbstgehosteten Joplin Server oder beliebiges WebDAV / Nextcloud / Dropbox / OneDrive mit E2EE-Aufsatz.',
           '**Die Migration von Notion AI ist eine Einbahnstraße, die beide Tools beherrschen.** Logseq importiert Notions Markdown-Export mit besserer Block-Treue; Joplin importiert Inhalte, flacht aber verschachtelte Blöcke ab. Nach der Migration verlassen keine Notizen Ihren Rechner mehr, sofern Sie es nicht selbst entscheiden.',
@@ -1557,17 +1557,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-notion',
         title: 'Der Datenschutz-Fall gegen Notion AI',
         content:
-          '**Notion AI sendet Notizinhalte per Design an OpenAI — das ist Architektur, keine Konfigurationsentscheidung.** Wenn Sie Notion-AI-Funktionen auf einer Seite nutzen, schickt Notion den Seiteninhalt an OpenAI-Server, OpenAI verarbeitet ihn, und die Antwort kommt über Notion zurück. Die Daten unterliegen den Datenschutzrichtlinien von OpenAI und Notion, nicht Ihrem lokalen Dateisystem. Für Nutzer in regulierten Kontexten (Gesundheitswesen, Recht, Finanzberatung, Journalismus, DSGVO-pflichtige EU-Daten) ist das ein strukturelles Problem, das keine Einstellung beheben kann.',
+          '**Notion AI sendet Seiteninhalte per Design an Drittanbieter von KI-Modellen — das ist Architektur, keine Konfigurationsentscheidung.** Wenn Sie Notion-AI-Funktionen auf einer Seite nutzen, sendet Notion den Seiteninhalt an den Modellanbieter, der die Anfrage bearbeitet, und liefert die Antwort über Notion zurück. Notion gibt an, dass weder Notion noch seine KI-Anbieter Kundendaten standardmäßig zum Training von Modellen verwenden und dass die meisten Modelle im Enterprise-Tarif keine Daten speichern (Zero Data Retention); in anderen Tarifen speichern die Anbieter Daten bis zu 30 Tage. Die Daten verlassen dennoch Ihren Rechner und unterliegen den Bedingungen von Notion und seinen Anbietern, nicht Ihrem lokalen Dateisystem. Für Nutzer in regulierten Kontexten (Gesundheitswesen, Recht, Finanzberatung, Journalismus, DSGVO-pflichtige EU-Daten) ist das ein struktureller Unterschied, den keine Einstellung beseitigen kann.',
         items: [
-          '**Notion-AI-Architektur:** Notizen verlassen Ihren Rechner zur Verarbeitung durch OpenAI. Den Bedingungen von OpenAI Enterprise unterworfen (besser als die Standard-OpenAI-API), aber dennoch außerhalb Ihrer Infrastruktur.',
+          '**Notion-AI-Architektur:** Notizen verlassen Ihren Rechner zur Verarbeitung durch die von Notion genutzten Modellanbieter (die aktuelle Liste steht auf der Subprozessor-Seite von Notion), unter den Datenverarbeitungsbedingungen von Notion — aber dennoch außerhalb Ihrer Infrastruktur.',
           '**Logseq + logseq-copilot-Architektur:** Logseq läuft als lokale App, das Plugin sendet Prompts an Ihr lokales Ollama, kein Notizinhalt erreicht einen Dritten, sofern Sie nicht ausdrücklich einen Cloud-Anbieter im Plugin konfigurieren.',
           '**Joplin + Jarvis-Architektur:** Joplin läuft als lokale App, Jarvis sendet Prompts an Ihr lokales Ollama, die Embedding-Generierung läuft lokal, kein Notizinhalt erreicht einen Dritten, sofern Sie nicht ausdrücklich einen Cloud-Anbieter in Jarvis konfigurieren.',
-          '**Datenresidenz:** Mit Logseq oder Joplin + Ollama bleibt jedes Byte Notizinhalt auf Ihrem Rechner. Mit Notion AI durchlaufen Notizinhalte US-basierte OpenAI-Server, unabhängig davon, wo Sie sich befinden.',
+          '**Datenresidenz:** Mit Logseq oder Joplin + Ollama bleibt jedes Byte Notizinhalt auf Ihrem Rechner. Bei Notion AI werden Notizinhalte an die Server von Notion und an dessen Modellanbieter gesendet; wo diese arbeiten, entnehmen Sie der Subprozessor-Liste von Notion.',
           '**Audit-Spur:** Mit lokalen LLMs können Sie nach der Installation einmalig eine Paketmitschnitt-Aufnahme (Wireshark, Little Snitch, etc.) durchführen und verifizieren, dass die Plugins während der KI-Nutzung null ausgehende Anfragen machen. Bei Notion AI sind ausgehende Anfragen inhärent — es gibt nichts zu verifizieren.',
-          '**Unterauftragsverarbeiter-Risiko:** Notion AI erbt alle Unterauftragsverarbeiter von OpenAI (Microsoft Azure als primäre Infrastruktur plus Support-Anbieter). Logseq und Joplin + Ollama haben null Unterauftragsverarbeiter für die KI-Schicht.',
+          '**Unterauftragsverarbeiter-Risiko:** Notion AI stützt sich auf die Modellanbieter, die auf der Subprozessor-Seite von Notion aufgeführt sind; jeder von ihnen ist eine weitere Partei, die geprüft werden muss. Logseq und Joplin + Ollama haben keine Unterauftragsverarbeiter für die KI-Schicht.',
         ],
         image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
-        imageCaption: 'Notion AI sendet Notizinhalte bei jeder Anfrage an die OpenAI Cloud (USA); Logseq + logseq-copilot und Joplin + Jarvis leiten dieselbe Anfrage an Ollama unter localhost:11434/v1 — der Inhalt verlässt das Gerät nie.',
+        imageCaption: 'Notion AI sendet Notizinhalte bei jeder Anfrage an die Cloud von Notion und dessen Modellanbieter; Logseq + logseq-copilot und Joplin + Jarvis leiten dieselbe Anfrage an Ollama unter localhost:11434/v1 — der Inhalt verlässt das Gerät nie.',
         callouts: [
           {
             type: 'tip',
@@ -1620,19 +1620,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr',
         title: 'DSGVO und EU-Datenresidenz',
         content:
-          '**Für EU- und DACH-Nutzer sind Logseq + logseq-copilot + Ollama und Joplin + Jarvis + Ollama durch ihre Standardarchitektur DSGVO-freundlicher als Notion AI.** Notizinhalte verlassen niemals den Rechner des Verantwortlichen, sodass die Datenflüsse, deren Dokumentation DSGVO-Artikel 28 (Auftragsverarbeitungsverträge), Artikel 44 (Internationale Übermittlungen) und die BSI-Grundschutz-Kataloge für SaaS-Tools verlangen, beim lokalen Stack schlicht nicht existieren.',
+          '**Für EU- und DACH-Nutzer sind Logseq + logseq-copilot + Ollama und Joplin + Jarvis + Ollama durch ihre Standardarchitektur DSGVO-freundlicher als Notion AI.** Notizinhalte verlassen niemals den Rechner des Verantwortlichen, sodass die Datenflüsse, deren Dokumentation DSGVO-Artikel 28 (Auftragsverarbeitungsverträge), Artikel 44 (Internationale Übermittlungen) und BSI IT-Grundschutz für SaaS-Tools verlangen, beim lokalen Stack schlicht nicht existieren.',
         items: [
-          '**Artikel 28 (Auftragsverarbeitungsverträge):** Bei Notion AI sind Notion + OpenAI Auftragsverarbeiter und erfordern einen Auftragsverarbeitungsvertrag (AVV) plus Standardvertragsklauseln für die internationale Übermittlung an OpenAI. Bei Logseq / Joplin + Ollama gibt es keinen Drittauftragsverarbeiter — nur den Verantwortlichen, der lokale Software ausführt.',
-          '**Artikel 44 (Internationale Übermittlungen):** Notion AI sendet Daten an US-basierte OpenAI-Server; das ist eine Schrems-II-„internationale Übermittlung", die SCCs und ein Transfer Impact Assessment erfordert. Lokale Ollama-Verarbeitung eliminiert die Übermittlung vollständig.',
-          '**BSI-Grundschutz-Kataloge (DACH):** Die deutschen IT-Grundschutz-Richtlinien des Bundesamts für Sicherheit in der Informationstechnik behandeln Cloud-KI-Dienste als Outsourcing, das eine formelle Risikobewertung erfordert. Lokale KI-Verarbeitung fällt unter den deutlich einfacheren „eigene IT"-Basisschutz und ist für Mittelstand und öffentliche Verwaltung prüfungstechnisch wesentlich leichter zu vertreten.',
-          '**Recht auf Löschung (Artikel 17):** Bei Notion AI bedeutet das Löschen von Notizinhalten aus Ihrem Konto nicht zwangsläufig die Löschung aus OpenAIs Trainingspipeline oder Logs (abhängig von Enterprise-Bedingungen). Bei lokalem Ollama ist Löschung Dateisystem-Löschung — verifizierbar und vollständig.',
+          '**Artikel 28 (Auftragsverarbeitungsverträge):** Bei Notion AI handelt Notion als Auftragsverarbeiter auf Grundlage seines Data Processing Addendum und setzt für KI Unterauftragsverarbeiter ein, sodass der AVV und dessen Unterauftragsverarbeiter-Liste geprüft werden müssen. Bei Logseq / Joplin + Ollama gibt es keinen Drittauftragsverarbeiter — nur den Verantwortlichen, der lokale Software ausführt.',
+          '**Artikel 44 (Internationale Übermittlungen):** Je nachdem, welche Anbieter Notion für eine Anfrage einsetzt, kann Notion AI Übermittlungen außerhalb der EU umfassen, die Standardvertragsklauseln und eine Transfer-Bewertung erfordern — prüfen Sie den AVV und die Subprozessor-Liste von Notion. Lokale Ollama-Verarbeitung vermeidet die Übermittlung für den KI-Schritt.',
+          '**BSI IT-Grundschutz (DACH):** Die Vorgaben des Bundesamts für Sicherheit in der Informationstechnik zum IT-Grundschutz behandeln Cloud-Dienste in der Regel als Outsourcing, das eine formelle Risikobewertung erfordert. Lokale KI-Verarbeitung fällt unter die einfacheren Maßnahmen für die eigene IT und ist für Mittelstand und öffentliche Verwaltung prüfungstechnisch deutlich leichter zu vertreten.',
+          '**Recht auf Löschung (Artikel 17):** Bei Notion AI können gelöschte Inhalte für einen Aufbewahrungszeitraum bei KI-Anbietern verbleiben (laut Notion bis zu 30 Tage in Nicht-Enterprise-Tarifen). Bei lokalem Ollama ist Löschung eine Löschung auf Ihrem eigenen Dateisystem, einschließlich aller Backups und Sync-Kopien, die Sie kontrollieren.',
           '**Auditierbarkeit:** Lokale Stacks sind einfacher zu auditieren. Führen Sie einmal eine Paketmitschnitt-Aufnahme durch, verifizieren Sie null ausgehenden Verkehr während der KI-Nutzung, dokumentieren Sie das Ergebnis. Cloud-KI-Dienste erfordern den Verlass auf die SOC-2- / ISO-27001-Berichte des Anbieters.',
           '**EU-freundliches Hosting (wenn Synchronisierung einen Server erfordert):** Joplin Cloud wird in der EU gehostet; selbstgehosteter Joplin Server kann auf EU-Infrastruktur (Hetzner, OVH, IONOS) gehostet werden. Logseq Sync wird von Logseq Inc. (US-basiert) betrieben — für strikte EU-Datenresidenz bevorzugen Sie Git oder Syncthing für die Logseq-Synchronisierung.',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Für Organisationen, die eine vertretbare KI-Funktionen-Story unter der DSGVO benötigen, ist der Stack mit lokalem LLM auf Logseq oder Joplin die einfachste Antwort. Die AVV-Diskussion verschiebt sich von „wir nutzen Notion + OpenAI als Unterauftragsverarbeiter mit folgenden Klauseln" zu „wir nutzen lokale Software, die auf dem Endgerät des Verantwortlichen läuft, ohne beteiligten Auftragsverarbeiter". Die Arbeit des Compliance-Teams wird deutlich einfacher.',
+            text: 'Für Organisationen, die eine vertretbare KI-Funktionen-Story unter der DSGVO benötigen, ist der Stack mit lokalem LLM auf Logseq oder Joplin die einfachste Antwort. Die AVV-Diskussion verschiebt sich von „wir nutzen Notion und dessen KI-Unterauftragsverarbeiter mit folgenden Klauseln" zu „wir nutzen lokale Software, die auf dem Endgerät des Verantwortlichen läuft, ohne beteiligten Auftragsverarbeiter". Die Arbeit des Compliance-Teams wird deutlich einfacher.',
           },
         ],
       },
@@ -1640,7 +1640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'notion-migration',
         title: 'Migration von Notion AI zu Logseq oder Joplin',
         content:
-          '**Notion bietet einen nativen Markdown-Export, den sowohl Logseq als auch Joplin importieren können — Logseq erhält die Block-Struktur besser, Joplin erhält den Inhalt, flacht aber verschachtelte Blöcke ab.** So oder so ist die Migration ein einmaliger Export-Import, kein laufender Sync, und sie stoppt den Datenfluss zu OpenAI sofort.',
+          '**Notion bietet einen nativen Markdown-Export, den sowohl Logseq als auch Joplin importieren können — Logseq erhält die Block-Struktur besser, Joplin erhält den Inhalt, flacht aber verschachtelte Blöcke ab.** So oder so ist die Migration ein einmaliger Export-Import, kein laufender Sync, und sie beendet sofort das Senden von Seiteninhalten an die KI-Anbieter von Notion.',
         numberedItems: [
           '**Aus Notion exportieren:** Einstellungen → Einstellungen & Mitglieder → Einstellungen → „Gesamten Workspace-Inhalt exportieren" → „Markdown & CSV" wählen → ZIP herunterladen. Der Export enthält eine .md-Datei pro Seite plus Ordner für verschachtelte Seiten.',
           '**Entpacken und aufräumen:** Notions Export verwendet lange Seiten-ID-Suffixe in Dateinamen (z. B. `My Page 1f8b2a3c4d5e6f7g8h9i.md`). Führen Sie ein schnelles Umbenennungs-Skript aus, um die IDs zu entfernen, falls Dateinamen für Ihr neues Tool wichtig sind.',
@@ -1698,7 +1698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Joplin — [joplinapp.org](https://joplinapp.org) und [github.com/laurent22/joplin](https://github.com/laurent22/joplin) (Open-Source-Notizbuch; AGPL 3.0).',
           'Jarvis (Joplin) — [github.com/alondmnt/joplin-plugin-jarvis](https://github.com/alondmnt/joplin-plugin-jarvis) (Open-Source-Joplin-Plugin; AGPL 3.0).',
           'Ollama — [ollama.com](https://ollama.com) und [github.com/ollama/ollama](https://github.com/ollama/ollama) (lokale LLM-Laufzeitumgebung; MIT).',
-          'Notion-AI-Datenschutz und Datenverarbeitung — [notion.com/help/notion-ai-faqs](https://www.notion.com/help/notion-ai-faqs) (Anbieter-Dokumentation für den Vergleichskontext).',
+          'Notion AI Sicherheitspraktiken (Anbieter, Training, Aufbewahrung) — [notion.com/help/notion-ai-security-practices](https://www.notion.com/help/notion-ai-security-practices) (Anbieter-Dokumentation für den Vergleichskontext).',
         ],
       },
       faq: {
@@ -1743,7 +1743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Open-Source-lokale-KI-Integration sicherer als Notion AI?',
-            a: 'Ja, durch die Standardarchitektur. Notion AI sendet Notizinhalte per Design an OpenAI — das ist strukturell, keine Konfigurationsentscheidung. Logseq + logseq-copilot + Ollama und Joplin + Jarvis + Ollama senden nichts an Dritte, sofern Sie nicht ausdrücklich einen Cloud-LLM-Anbieter konfigurieren. Für DSGVO-pflichtige EU-Daten, Gesundheitswesen, Recht und Journalismus ist diese Unterscheidung relevant: Lokale Stacks haben keinen Auftragsverarbeiter, keine internationale Übermittlung, kein Unterauftragsverarbeiter-Risiko. Die Auditierbarkeit ist ebenfalls einfacher — eine einmalige Paketmitschnitt-Aufnahme beweist null ausgehenden Verkehr während der KI-Nutzung.',
+            a: 'Die Architektur unterscheidet sich. Notion AI sendet Notizinhalte per Design an Drittanbieter von KI-Modellen; Notion gibt an, dass weder Notion noch seine Anbieter standardmäßig mit Kundendaten trainieren und dass Enterprise keine Datenspeicherung (Zero Data Retention) bietet. Logseq + logseq-copilot + Ollama und Joplin + Jarvis + Ollama senden nichts an Dritte, sofern Sie nicht ausdrücklich einen Cloud-LLM-Anbieter konfigurieren. Für DSGVO-pflichtige EU-Daten, Gesundheitswesen, Recht und Journalismus ist dieser Unterschied relevant: Lokale Stacks haben keinen Auftragsverarbeiter, keine internationale Übermittlung und keinen Unterauftragsverarbeiter für die KI-Schicht. Die Auditierbarkeit ist ebenfalls einfacher — eine einmalige Paketmitschnitt-Aufnahme zeigt, ob während der KI-Nutzung ausgehender Verkehr stattfindet.',
           },
           {
             q: 'Unterstützt Logseq RAG oder funktioniert es als lokale Wissensdatenbank?',
@@ -1751,11 +1751,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Muss ich bei der Verwendung von Logseq + logseq-copilot oder Joplin + Jarvis die DSGVO beachten?',
-            a: 'Ja, aber die Compliance-Last wird durch die lokale Architektur deutlich reduziert. Da Notizinhalte den Rechner des Verantwortlichen niemals verlassen, entfallen DSGVO-Artikel 28 (Auftragsverarbeitungsverträge) und Artikel 44 (internationale Übermittlungen) für die KI-Schicht — es gibt schlicht keinen Auftragsverarbeiter und keine Übermittlung in ein Drittland. Im Vergleich zu Notion AI, das einen AVV mit Notion plus Standardvertragsklauseln für die OpenAI-Übermittlung erfordert, vereinfacht sich das DSGVO-Verzeichnis von Verarbeitungstätigkeiten erheblich. Für die DACH-Region erfüllen lokale Stacks den BSI-Grundschutz-Kataloge-Baustein „eigene IT" einfacher als Cloud-KI-Outsourcing-Bausteine. Halten Sie weiterhin Datenschutz-Folgenabschätzungen (Artikel 35) für sensible Notizinhalte vor, wo erforderlich.',
+            a: 'Ja, aber die Compliance-Last wird durch die lokale Architektur deutlich reduziert. Da Notizinhalte den Rechner des Verantwortlichen niemals verlassen, entfallen DSGVO-Artikel 28 (Auftragsverarbeitungsverträge) und Artikel 44 (internationale Übermittlungen) für die KI-Schicht — es gibt schlicht keinen Auftragsverarbeiter und keine Übermittlung in ein Drittland. Im Vergleich zu Notion AI, das einen AVV mit Notion samt Prüfung dessen KI-Unterauftragsverarbeiter und gegebenenfalls Standardvertragsklauseln erfordert, vereinfacht sich das DSGVO-Verzeichnis von Verarbeitungstätigkeiten erheblich. Für die DACH-Region erfüllen lokale Stacks die BSI-IT-Grundschutz-Anforderungen an die „eigene IT" einfacher als Cloud-KI-Outsourcing-Bausteine. Halten Sie weiterhin Datenschutz-Folgenabschätzungen (Artikel 35) für sensible Notizinhalte vor, wo erforderlich.',
           },
           {
             q: 'Sind Logseq und Joplin für den deutschen Mittelstand geeignet?',
-            a: 'Ja, beide eignen sich gut für den deutschen Mittelstand und österreichische / Schweizer KMU mit ähnlichen Anforderungen. Mittelständische Unternehmen profitieren von drei Aspekten: Erstens senken die AGPL-3.0-Lizenzen Beschaffungsbarrieren (keine Lizenzkosten, keine Vendor-Lock-in-Risiken), zweitens vereinfachen lokale KI-Plugins die BSI-Grundschutz-Vorgaben für IT-Sicherheitsverantwortliche (kein externes Cloud-Outsourcing zu prüfen), drittens lässt sich der selbstgehostete Joplin Server in vorhandene NAS-, VPS- oder On-Premises-Infrastruktur integrieren — typisch für mittelständische IT-Landschaften. Für regulierte Branchen (Steuerberater, Rechtsanwälte, Arztpraxen, Berater mit Mandantengeheimnissen) ist die Kombination lokale Verarbeitung + selbstgehostete Synchronisierung ein gangbarer Weg, der gegenüber Wirtschaftsprüfern und Datenschutzbeauftragten einfacher zu vertreten ist als SaaS-KI mit Drittland-Übermittlung.',
+            a: 'Ja, beide eignen sich gut für den deutschen Mittelstand und österreichische / Schweizer KMU mit ähnlichen Anforderungen. Mittelständische Unternehmen profitieren von drei Aspekten: Erstens senken die AGPL-3.0-Lizenzen Beschaffungsbarrieren (keine Lizenzkosten, keine Vendor-Lock-in-Risiken), zweitens vereinfachen lokale KI-Plugins die IT-Grundschutz-Anforderungen für IT-Sicherheitsverantwortliche (kein externes Cloud-Outsourcing zu prüfen), drittens lässt sich der selbstgehostete Joplin Server in vorhandene NAS-, VPS- oder On-Premises-Infrastruktur integrieren — typisch für mittelständische IT-Landschaften. Für regulierte Branchen (Steuerberater, Rechtsanwälte, Arztpraxen, Berater mit Mandantengeheimnissen) ist die Kombination lokale Verarbeitung + selbstgehostete Synchronisierung ein gangbarer Weg, der gegenüber Wirtschaftsprüfern und Datenschutzbeauftragten einfacher zu vertreten ist als SaaS-KI mit Drittland-Übermittlung.',
           },
         ],
       },
@@ -1777,14 +1777,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-fr.webp',
     title: 'Logseq et Joplin avec LLM locaux : notes intelligentes sans synchronisation cloud (2026)',
     seoTitle: 'Logseq + Ollama : LLM local, RAG et Joplin (2026)',
     intro:
-      '[Logseq](https://logseq.com) et [Joplin](https://joplinapp.org) sont les deux applications de prise de notes open source qui se combinent proprement avec un LLM local en 2026 sans jamais nécessiter d\'aller-retour cloud. Logseq exécute le plugin logseq-copilot contre [Ollama](https://ollama.com) pour un chat natif outliner et de l\'IA dans le journal quotidien ; Joplin exécute le plugin Jarvis contre Ollama pour un chat conscient des notes, des résumés et une recherche basée sur les embeddings — l\'option la plus proche d\'une véritable base de connaissances locale avec RAG. Les deux sont plus respectueux du RGPD que Notion AI par architecture par défaut — Notion envoie le contenu des notes à OpenAI ; Logseq et Joplin n\'envoient rien sauf si vous le configurez ainsi. Le hic en 2026 est mobile : ni Logseq ni Joplin ne prennent en charge les plugins sur iOS ou Android, donc les fonctionnalités IA s\'exécutent uniquement sur ordinateur de bureau. Ce guide classe les deux outils selon la configuration avec Ollama, la prise en charge du RAG/des embeddings, les chemins de synchronisation sans cloud (y compris iOS), la compatibilité mobile, la comparaison avec Obsidian et le chemin de migration depuis Notion.',
+      '[Logseq](https://logseq.com) et [Joplin](https://joplinapp.org) sont les deux applications de prise de notes open source qui se combinent proprement avec un LLM local en 2026 sans jamais nécessiter d\'aller-retour cloud. Logseq exécute le plugin logseq-copilot contre [Ollama](https://ollama.com) pour un chat natif outliner et de l\'IA dans le journal quotidien ; Joplin exécute le plugin Jarvis contre Ollama pour un chat conscient des notes, des résumés et une recherche basée sur les embeddings — l\'option la plus proche d\'une véritable base de connaissances locale avec RAG. Les deux sont plus respectueux du RGPD que Notion AI par architecture par défaut — Notion envoie le contenu des pages à des fournisseurs de modèles tiers ; Logseq et Joplin n\'envoient rien sauf si vous le configurez ainsi. Le hic en 2026 est mobile : ni Logseq ni Joplin ne prennent en charge les plugins sur iOS ou Android, donc les fonctionnalités IA s\'exécutent uniquement sur ordinateur de bureau. Ce guide classe les deux outils selon la configuration avec Ollama, la prise en charge du RAG/des embeddings, les chemins de synchronisation sans cloud (y compris iOS), la compatibilité mobile, la comparaison avec Obsidian et le chemin de migration depuis Notion.',
     metaDescription:
       'Logseq + Ollama en LLM local : plugin logseq-copilot, limites RAG face à Joplin + Jarvis, synchronisation sans cloud et comparaison avec Obsidian. 2026.',
     twitterDescription:
@@ -1830,7 +1830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les deux plugins pointent vers Ollama via `http://localhost:11434/v1` — aucun appel cloud par défaut.',
           'Sync Logseq sans cloud : Git (intégré) ou sync de fichiers locale via Syncthing/iCloud Drive. Sync Joplin : Joplin Cloud chiffré de bout en bout, Joplin Server auto-hébergé, ou Nextcloud / WebDAV / Dropbox / OneDrive avec E2EE.',
           'Lacune des plugins mobiles (2026) : ni Logseq Mobile ni Joplin Mobile ne prend en charge les plugins. Les fonctionnalités IA sont uniquement sur bureau — le mobile pour la capture, le bureau pour le traitement.',
-          'Migration Notion AI : Logseq a le chemin d\'import Markdown le plus propre ; Joplin perd la structure au niveau des blocs mais préserve le contenu. Les deux arrêtent immédiatement l\'envoi de données à OpenAI dès le passage.',
+          'Migration Notion AI : Logseq a le chemin d\'import Markdown le plus propre ; Joplin perd la structure au niveau des blocs mais préserve le contenu. Les deux cessent immédiatement d\'envoyer le contenu des pages aux fournisseurs d\'IA de Notion dès le passage.',
           'Modèles Ollama recommandés : chat — Llama 3.2 3B ou Phi-4 Mini ; embeddings (Joplin Jarvis uniquement) — nomic-embed-text ou mxbai-embed-large.',
         ],
         updatedDate: '2026-05-08',
@@ -1862,7 +1862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Logseq + logseq-copilot est la combinaison recommandée pour les utilisateurs outliner / journal quotidien.** logseq-copilot ajoute des blocs de chat et des commandes slash dans Logseq, configuré contre Ollama sur `http://localhost:11434/v1`. Idéal pour les utilisateurs qui vivent déjà dans le modèle de page journal quotidien de Logseq.',
           '**Joplin + Jarvis est la combinaison recommandée pour les utilisateurs de notes Markdown pures.** Jarvis ajoute une barre latérale de chat, des commandes de résumé et une recherche sémantique basée sur les embeddings sur l\'ensemble du carnet. Idéal pour les utilisateurs qui veulent un carnet façon Notion avec une synchronisation chiffrée de bout en bout robuste.',
           '**Les deux outils sont open source sous AGPL 3.0** — la licence est permissive pour usage personnel et commercial ; la seule contrainte est la divulgation des sources si vous les modifiez et les hébergez publiquement.',
-          '**La posture de confidentialité bat Notion AI par architecture.** Notion AI envoie le contenu des notes à OpenAI par conception ; Logseq et Joplin n\'envoient rien sauf si vous configurez explicitement un fournisseur cloud. Cette distinction est significative pour la santé, le droit, le journalisme et tout contexte régulé par le RGPD.',
+          '**La posture de confidentialité bat Notion AI par architecture.** Notion AI envoie le contenu des pages à des fournisseurs de modèles tiers par conception ; Logseq et Joplin n\'envoient rien sauf si vous configurez explicitement un fournisseur cloud. Cette distinction est significative pour la santé, le droit, le journalisme et tout contexte régulé par le RGPD.',
           '**La lacune des plugins mobiles est la plus grande contrainte en 2026.** Ni Logseq Mobile ni Joplin Mobile ne prend en charge les plugins. Les fonctionnalités IA s\'exécutent uniquement sur bureau — le mobile devient une surface de capture (écrire des notes), et le traitement (résumé, chat, recherche) se fait plus tard sur bureau.',
           '**La sync sans cloud est simple, mais chaque outil prend une approche différente.** Logseq dispose d\'une sync Git intégrée et fonctionne proprement avec Syncthing ou iCloud Drive. Joplin propose Joplin Cloud chiffré de bout en bout, Joplin Server auto-hébergé, ou tout backend WebDAV / Nextcloud / Dropbox / OneDrive avec couche E2EE.',
           '**La migration depuis Notion AI est un aller simple que les deux outils gèrent.** Logseq importe l\'export Markdown de Notion avec une meilleure fidélité au niveau des blocs ; Joplin importe le contenu mais aplatit les blocs imbriqués. Une fois migré, aucune note ne quitte votre machine sauf si vous le décidez.',
@@ -1998,17 +1998,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-notion',
         title: 'Le dossier confidentialité contre Notion AI',
         content:
-          '**Notion AI envoie le contenu des notes à OpenAI par conception — c\'est l\'architecture, pas un choix de configuration.** Lorsque vous utilisez les fonctionnalités Notion AI sur une page, Notion expédie le contenu de la page aux serveurs OpenAI, OpenAI le traite, et la réponse revient via Notion. Les données sont régies par les politiques de confidentialité d\'OpenAI et de Notion, pas par votre système de fichiers local. Pour les utilisateurs en contexte régulé (santé, droit, conseil financier, journalisme, données UE couvertes par le RGPD), c\'est un problème structurel qu\'aucun paramètre ne corrige.',
+          '**Notion AI envoie le contenu des pages à des fournisseurs de modèles tiers par conception — c\'est l\'architecture, pas un choix de configuration.** Lorsque vous utilisez les fonctionnalités Notion AI sur une page, Notion envoie le contenu de la page au fournisseur de modèles qui traite la requête et renvoie la réponse via Notion. Notion indique que, par défaut, ni Notion ni ses fournisseurs d\'IA n\'utilisent les données des clients pour entraîner des modèles, et que, sur son offre Enterprise, la plupart des modèles offrent une rétention zéro des données (sur les autres offres, les fournisseurs conservent les données jusqu\'à 30 jours). Les données quittent néanmoins votre machine et relèvent des conditions de Notion et de ses fournisseurs, et non de votre système de fichiers local. Pour les utilisateurs en contexte régulé (santé, droit, conseil financier, journalisme, données UE couvertes par le RGPD), c\'est une différence structurelle qu\'aucun paramètre ne supprime.',
         items: [
-          '**Architecture Notion AI :** les notes quittent votre machine pour être traitées par OpenAI. Soumis aux conditions de traitement des données OpenAI Enterprise (meilleures que l\'API OpenAI standard), mais toujours en dehors de votre infrastructure.',
+          '**Architecture Notion AI :** les notes quittent votre machine pour être traitées par les fournisseurs de modèles qu\'utilise Notion (la liste actuelle figure sur la page des sous-traitants de Notion), selon les conditions de traitement des données de Notion — mais toujours en dehors de votre infrastructure.',
           '**Architecture Logseq + logseq-copilot :** Logseq s\'exécute en application locale, le plugin envoie les prompts à votre Ollama local, aucun contenu de note n\'atteint un tiers sauf si vous configurez explicitement un fournisseur cloud dans le plugin.',
           '**Architecture Joplin + Jarvis :** Joplin s\'exécute en application locale, Jarvis envoie les prompts à votre Ollama local, la génération d\'embeddings s\'exécute localement, aucun contenu de note n\'atteint un tiers sauf si vous configurez explicitement un fournisseur cloud dans Jarvis.',
-          '**Résidence des données :** avec Logseq ou Joplin + Ollama, chaque octet de contenu de note reste sur votre machine. Avec Notion AI, le contenu des notes transite vers les serveurs OpenAI basés aux États-Unis quel que soit votre emplacement.',
+          '**Résidence des données :** avec Logseq ou Joplin + Ollama, chaque octet de contenu de note reste sur votre machine. Avec Notion AI, le contenu des notes est envoyé aux serveurs de Notion et à ses fournisseurs de modèles ; consultez la liste des sous-traitants de Notion pour savoir où ils opèrent.',
           '**Piste d\'audit :** avec les LLM locaux, vous pouvez exécuter une capture de paquets (Wireshark, Little Snitch, etc.) une fois après installation et vérifier que les plugins ne font aucun appel sortant pendant l\'usage IA. Avec Notion AI, les appels sortants sont inhérents — il n\'y a rien à vérifier.',
-          '**Risque sous-traitant :** Notion AI hérite de tous les sous-traitants d\'OpenAI (Microsoft Azure comme infrastructure principale, plus fournisseurs de support). Logseq et Joplin + Ollama n\'ont aucun sous-traitant pour la couche IA.',
+          '**Risque sous-traitant :** Notion AI s\'appuie sur les fournisseurs de modèles listés sur la page des sous-traitants de Notion, chacun constituant une partie supplémentaire à examiner. Logseq et Joplin + Ollama n\'ont aucun sous-traitant pour la couche IA.',
         ],
         image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
-        imageCaption: 'Notion AI envoie le contenu des notes vers OpenAI Cloud (États-Unis) à chaque requête ; Logseq + logseq-copilot et Joplin + Jarvis acheminent la même requête vers Ollama sur localhost:11434/v1, si bien que le contenu ne quitte jamais l\'appareil.',
+        imageCaption: 'Notion AI envoie le contenu des notes au cloud de Notion et à ses fournisseurs de modèles à chaque requête ; Logseq + logseq-copilot et Joplin + Jarvis acheminent la même requête vers Ollama sur localhost:11434/v1, si bien que le contenu ne quitte jamais l\'appareil.',
         callouts: [
           {
             type: 'tip',
@@ -2061,19 +2061,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr',
         title: 'RGPD et résidence des données UE',
         content:
-          '**Pour les utilisateurs UE et DACH, Logseq + logseq-copilot + Ollama et Joplin + Jarvis + Ollama sont plus respectueux du RGPD que Notion AI par architecture par défaut.** Le contenu des notes ne quitte jamais la machine du responsable de traitement, donc les flux de données que l\'article 28 du RGPD (contrats de sous-traitance), l\'article 44 (transferts internationaux) et les catalogues BSI-Grundschutz exigent de documenter pour les outils SaaS n\'existent simplement pas pour la pile locale. La CNIL recommande explicitement le traitement IA local lorsqu\'on manipule des données professionnelles sensibles (financières, médicales, juridiques) — la pile Logseq ou Joplin avec Ollama répond directement à cette recommandation.',
+          '**Pour les utilisateurs UE et DACH, Logseq + logseq-copilot + Ollama et Joplin + Jarvis + Ollama sont plus respectueux du RGPD que Notion AI par architecture par défaut.** Le contenu des notes ne quitte jamais la machine du responsable de traitement, donc les flux de données que l\'article 28 du RGPD (contrats de sous-traitance), l\'article 44 (transferts internationaux) et le BSI IT-Grundschutz exigent de documenter pour les outils SaaS n\'existent simplement pas pour la pile locale. La CNIL recommande explicitement le traitement IA local lorsqu\'on manipule des données professionnelles sensibles (financières, médicales, juridiques) — la pile Logseq ou Joplin avec Ollama répond directement à cette recommandation.',
         items: [
-          '**Article 28 (contrats de sous-traitance) :** avec Notion AI, Notion + OpenAI sont sous-traitants et exigent un Contrat de Sous-Traitance des Données (DPA) plus des Clauses Contractuelles Types pour le transfert international vers OpenAI. Avec Logseq / Joplin + Ollama, il n\'y a pas de sous-traitant tiers — juste le responsable de traitement exécutant un logiciel local.',
-          '**Article 44 (transferts internationaux) :** Notion AI expédie les données aux serveurs OpenAI basés aux États-Unis ; c\'est un « transfert international » Schrems II nécessitant des CCT et une Évaluation d\'Impact sur les Transferts. Le traitement Ollama local élimine entièrement le transfert.',
-          '**Catalogues BSI-Grundschutz (DACH) :** les directives fédérales allemandes de sécurité IT considèrent les services IA cloud comme de l\'externalisation nécessitant une évaluation formelle des risques. Le traitement IA local relève de la base « IT interne » beaucoup plus simple.',
-          '**Droit à l\'effacement (article 17) :** avec Notion AI, supprimer le contenu de note de votre compte ne supprime pas nécessairement de la pipeline d\'entraînement ou des logs d\'OpenAI (selon les conditions entreprise). Avec Ollama local, la suppression est une suppression de système de fichiers — vérifiable et complète.',
+          '**Article 28 (contrats de sous-traitance) :** avec Notion AI, Notion agit en tant que sous-traitant au titre de son Data Processing Addendum et s\'appuie sur des sous-traitants ultérieurs pour l\'IA ; le DPA et sa liste de sous-traitants ultérieurs doivent donc être examinés. Avec Logseq / Joplin + Ollama, il n\'y a pas de sous-traitant tiers — juste le responsable de traitement exécutant un logiciel local.',
+          '**Article 44 (transferts internationaux) :** selon les fournisseurs que Notion utilise pour une requête, Notion AI peut impliquer des transferts hors de l\'UE nécessitant des Clauses Contractuelles Types et une évaluation du transfert — consultez le DPA et la liste des sous-traitants de Notion. Le traitement Ollama local évite le transfert pour l\'étape IA.',
+          '**BSI IT-Grundschutz (DACH) :** les recommandations fédérales allemandes de sécurité IT considèrent généralement les services cloud comme de l\'externalisation nécessitant une évaluation formelle des risques. Le traitement IA local relève des mesures plus simples de l\'IT interne.',
+          '**Droit à l\'effacement (article 17) :** avec Notion AI, le contenu supprimé peut rester chez les fournisseurs d\'IA pendant une durée de rétention (Notion indique jusqu\'à 30 jours sur les offres hors Enterprise). Avec Ollama local, la suppression est une suppression sur votre propre système de fichiers, y compris les sauvegardes et copies de synchronisation que vous contrôlez.',
           '**Auditabilité :** les piles locales sont plus faciles à auditer. Exécutez une capture de paquets une fois, vérifiez aucun trafic sortant pendant l\'usage IA, documentez le résultat. Les services IA cloud nécessitent de s\'appuyer sur les rapports SOC 2 / ISO 27001 du fournisseur.',
           '**Hébergement compatible UE (lorsque la sync implique un serveur) :** Joplin Cloud est hébergé en UE ; Joplin Server auto-hébergé peut l\'être sur infrastructure UE (Hetzner, OVH, IONOS). Logseq Sync est opéré par Logseq Inc. (basé aux États-Unis) — pour une stricte résidence UE, préférez Git ou Syncthing pour la sync Logseq.',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Pour les organisations ayant besoin d\'une histoire défendable de fonctionnalités IA sous le RGPD, la pile LLM-local-sur-Logseq-ou-Joplin est la réponse la plus simple. La discussion DPA passe de « nous utilisons Notion + OpenAI comme sous-traitants avec ces clauses » à « nous utilisons un logiciel local s\'exécutant sur le terminal du responsable, sans sous-traitant impliqué ». Le travail de l\'équipe conformité devient bien plus facile.',
+            text: 'Pour les organisations ayant besoin d\'une histoire défendable de fonctionnalités IA sous le RGPD, la pile LLM-local-sur-Logseq-ou-Joplin est la réponse la plus simple. La discussion DPA passe de « nous utilisons Notion et ses sous-traitants ultérieurs pour l\'IA avec ces clauses » à « nous utilisons un logiciel local s\'exécutant sur le terminal du responsable, sans sous-traitant impliqué ». Le travail de l\'équipe conformité devient bien plus facile.',
           },
         ],
       },
@@ -2081,7 +2081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'notion-migration',
         title: 'Migrer de Notion AI vers Logseq ou Joplin',
         content:
-          '**Notion offre un export Markdown natif que Logseq comme Joplin peuvent importer — Logseq préserve mieux la structure au niveau des blocs, Joplin préserve le contenu mais aplatit les blocs imbriqués.** Quoi qu\'il en soit, la migration est un export-import unique, pas une sync continue, et elle arrête immédiatement le flux de données vers OpenAI.',
+          '**Notion offre un export Markdown natif que Logseq comme Joplin peuvent importer — Logseq préserve mieux la structure au niveau des blocs, Joplin préserve le contenu mais aplatit les blocs imbriqués.** Quoi qu\'il en soit, la migration est un export-import unique, pas une sync continue, et elle cesse immédiatement d\'envoyer le contenu des pages aux fournisseurs d\'IA de Notion.',
         numberedItems: [
           '**Exporter depuis Notion :** Paramètres → Paramètres & membres → Paramètres → « Exporter tout le contenu de l\'espace de travail » → choisir « Markdown & CSV » → télécharger le ZIP. L\'export contient un fichier .md par page plus des dossiers pour les pages imbriquées.',
           '**Décompresser et nettoyer :** l\'export de Notion utilise de longs suffixes d\'ID de page dans les noms de fichiers (par ex. `My Page 1f8b2a3c4d5e6f7g8h9i.md`). Exécutez un script de renommage rapide pour supprimer les ID si les noms de fichiers comptent pour votre nouvel outil.',
@@ -2139,7 +2139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Joplin — [joplinapp.org](https://joplinapp.org) et [github.com/laurent22/joplin](https://github.com/laurent22/joplin) (carnet open source ; AGPL 3.0).',
           'Jarvis (Joplin) — [github.com/alondmnt/joplin-plugin-jarvis](https://github.com/alondmnt/joplin-plugin-jarvis) (plugin Joplin open source ; AGPL 3.0).',
           'Ollama — [ollama.com](https://ollama.com) et [github.com/ollama/ollama](https://github.com/ollama/ollama) (runtime LLM local ; MIT).',
-          'Confidentialité et traitement des données Notion AI — [notion.com/help/notion-ai-faqs](https://www.notion.com/help/notion-ai-faqs) (documentation fournisseur pour le contexte de comparaison).',
+          'Pratiques de sécurité de Notion AI (fournisseurs, entraînement, rétention) — [notion.com/help/notion-ai-security-practices](https://www.notion.com/help/notion-ai-security-practices) (documentation fournisseur pour le contexte de comparaison).',
         ],
       },
       faq: {
@@ -2184,7 +2184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'L\'intégration IA locale open source est-elle plus sûre que Notion AI ?',
-            a: 'Oui par architecture par défaut. Notion AI envoie le contenu des notes à OpenAI par conception — c\'est structurel, pas un choix de configuration. Logseq + logseq-copilot + Ollama et Joplin + Jarvis + Ollama n\'envoient rien à un tiers sauf si vous configurez explicitement un fournisseur LLM cloud. Pour les données UE couvertes par le RGPD, la santé, le droit et le journalisme, cette distinction est significative : les piles locales n\'ont pas de sous-traitant, pas de transfert international, pas de risque sous-traitant. L\'auditabilité est aussi plus simple — une capture de paquets unique prouve aucun trafic sortant pendant l\'usage IA.',
+            a: 'L\'architecture diffère. Notion AI envoie le contenu des notes à des fournisseurs de modèles tiers par conception ; Notion indique que, par défaut, ni Notion ni ses fournisseurs n\'entraînent de modèles sur les données des clients, et que l\'offre Enterprise offre une rétention zéro des données. Logseq + logseq-copilot + Ollama et Joplin + Jarvis + Ollama n\'envoient rien à un tiers sauf si vous configurez explicitement un fournisseur LLM cloud. Pour les données UE couvertes par le RGPD, la santé, le droit et le journalisme, cette différence compte : les piles locales n\'ont pas de sous-traitant, pas de transfert international et pas de sous-traitant pour la couche IA. L\'auditabilité est aussi plus simple — une capture de paquets unique montre si du trafic sortant a lieu pendant l\'usage IA.',
           },
           {
             q: 'Logseq prend-il en charge le RAG ou fonctionne-t-il comme base de connaissances locale ?',
@@ -2210,14 +2210,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-ja.webp',
     title: 'Logseq と Joplin でローカル LLM：クラウド同期なしのスマートノート（2026）',
     seoTitle: 'Logseq + Ollamaローカル LLM：RAGとJoplin比較 2026',
     intro:
-      '[Logseq](https://logseq.com) と [Joplin](https://joplinapp.org) は、2026年にローカル LLM とクリーンに統合でき、クラウド往復が不要な2つのオープンソースのノートアプリです。Logseq は logseq-copilot プラグインを [Ollama](https://ollama.com) に対して実行し、アウトライナーネイティブなチャットと日々のジャーナル AI を提供します。Joplin は Jarvis プラグインを Ollama に対して実行し、ノート対応チャット、要約、埋め込みベースの検索を提供します — 真のローカル RAG ナレッジベースに最も近い選択肢です。両者ともデフォルトアーキテクチャの観点から Notion AI より日本の APPI（個人情報保護法）への適合性が高い構成です — Notion はノート内容を OpenAI に送信しますが、Logseq と Joplin は設定しない限り何も送信しません。2026年の落とし穴はモバイル：Logseq も Joplin も iOS や Android でプラグインをサポートしていないため、AI 機能はデスクトップでのみ動作します。本ガイドでは両ツールを Ollama 設定、RAG/埋め込み対応、クラウドなし同期（iOS 含む）、モバイル互換性、Obsidian との比較、Notion からの移行パスで評価します。',
+      '[Logseq](https://logseq.com) と [Joplin](https://joplinapp.org) は、2026年にローカル LLM とクリーンに統合でき、クラウド往復が不要な2つのオープンソースのノートアプリです。Logseq は logseq-copilot プラグインを [Ollama](https://ollama.com) に対して実行し、アウトライナーネイティブなチャットと日々のジャーナル AI を提供します。Joplin は Jarvis プラグインを Ollama に対して実行し、ノート対応チャット、要約、埋め込みベースの検索を提供します — 真のローカル RAG ナレッジベースに最も近い選択肢です。両者ともデフォルトアーキテクチャの観点から Notion AI より日本の APPI（個人情報保護法）への適合性が高い構成です — Notion はページ内容をサードパーティのモデルプロバイダーに送信しますが、Logseq と Joplin は設定しない限り何も送信しません。2026年の落とし穴はモバイル：Logseq も Joplin も iOS や Android でプラグインをサポートしていないため、AI 機能はデスクトップでのみ動作します。本ガイドでは両ツールを Ollama 設定、RAG/埋め込み対応、クラウドなし同期（iOS 含む）、モバイル互換性、Obsidian との比較、Notion からの移行パスで評価します。',
     metaDescription:
       'Logseq + Ollamaでローカル LLM：logseq-copilotとRAGの限界、Joplin + Jarvis比較、クラウド不要同期。Obsidianとの比較も。2026年版。',
     twitterDescription:
@@ -2263,7 +2263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '両プラグインとも `http://localhost:11434/v1` 経由で Ollama を指します — デフォルトでクラウド呼び出しなし。',
           'Logseq のクラウドなし同期：Git（組み込み）または Syncthing / iCloud Drive 経由のローカルファイル同期。Joplin の同期：エンドツーエンド暗号化された Joplin Cloud、自己ホスト型 Joplin Server、または E2EE 付きの Nextcloud / WebDAV / Dropbox / OneDrive。',
           'モバイルプラグイン制約（2026）：Logseq Mobile も Joplin Mobile もプラグインをサポートしていません。AI 機能はデスクトップ専用 — モバイルはキャプチャ用、デスクトップは処理用。',
-          'Notion AI 移行：Logseq はよりクリーンな Markdown インポートパス。Joplin はブロック構造を失いますが内容は保持。両者とも切り替え時点で OpenAI へのデータ送信を即停止。',
+          'Notion AI 移行：Logseq はよりクリーンな Markdown インポートパス。Joplin はブロック構造を失いますが内容は保持。両者とも切り替えた時点で Notion の AI プロバイダーへのページ内容の送信を停止。',
           '推奨 Ollama モデル：チャット — Llama 3.2 3B または Phi-4 Mini。埋め込み（Joplin Jarvis のみ）— nomic-embed-text または mxbai-embed-large。',
         ],
         updatedDate: '2026-05-08',
@@ -2295,7 +2295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Logseq + logseq-copilot は、アウトライナー / デイリージャーナルユーザーへの推奨構成。** logseq-copilot は Logseq 内にチャットブロックとスラッシュコマンドを追加し、`http://localhost:11434/v1` の Ollama に対して設定します。すでに Logseq のデイリージャーナルページモデルで生活しているユーザーに最適。',
           '**Joplin + Jarvis は、プレーン Markdown ノートユーザーへの推奨構成。** Jarvis は Joplin 内にチャットサイドバー、要約コマンド、ノートブック全体への埋め込みベースのセマンティック検索を追加します。強力なエンドツーエンド暗号化同期付きの Notion 風ノートブックが欲しいユーザーに最適。',
           '**両ツールとも AGPL 3.0 のオープンソース。** 個人および商用利用に寛容なライセンス。唯一の制約は、変更して公開ホストする場合のソース開示要件のみ。',
-          '**プライバシー姿勢はアーキテクチャ的に Notion AI を上回ります。** Notion AI は設計上ノート内容を OpenAI に送信します。Logseq と Joplin は、明示的にクラウドプロバイダを設定しない限り何も送信しません。医療、法務、ジャーナリズム、APPI 規制下の文脈で意味のある差です。',
+          '**プライバシー姿勢はアーキテクチャ的に Notion AI を上回ります。** Notion AI は設計上ページ内容をサードパーティのモデルプロバイダーに送信します。Logseq と Joplin は、明示的にクラウドプロバイダを設定しない限り何も送信しません。医療、法務、ジャーナリズム、APPI 規制下の文脈で意味のある差です。',
           '**モバイルプラグイン制約は、2026年の最大の制限。** Logseq Mobile も Joplin Mobile もプラグインをサポートしません。AI 機能はデスクトップでのみ動作 — モバイルはキャプチャ面（ノートを書く）、処理（要約、チャット、検索）は後でデスクトップで実施。',
           '**クラウドなし同期はシンプルですが、各ツールが異なるアプローチを取ります。** Logseq は組み込み Git 同期があり、Syncthing や iCloud Drive とクリーンに動作します。Joplin はエンドツーエンド暗号化された Joplin Cloud、自己ホスト型 Joplin Server、または E2EE を重ねた WebDAV / Nextcloud / Dropbox / OneDrive バックエンドを提供します。',
           '**Notion AI からの移行は、両ツールが処理する一方向の旅。** Logseq は Notion の Markdown エクスポートを、ブロックレベルの忠実度を保ったままインポートします。Joplin は内容をインポートしますが、ネストされたブロックを平坦化します。移行後、選択しない限りノートはマシンを離れません。',
@@ -2431,17 +2431,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-notion',
         title: 'Notion AI に対するプライバシーの論点',
         content:
-          '**Notion AI は設計上ノート内容を OpenAI に送信します — これはアーキテクチャであり、設定の選択ではありません。** ページで Notion AI 機能を使用すると、Notion がページコンテンツを OpenAI サーバーに送信し、OpenAI が処理し、応答が Notion 経由で返ります。データは OpenAI と Notion のプライバシーポリシーに従い、あなたのローカルファイルシステムには従いません。規制された文脈のユーザー（医療、法務、金融アドバイス、ジャーナリズム、APPI 対象データ）にとって、これは設定では修正できない構造的問題です。',
+          '**Notion AI は設計上ページ内容をサードパーティのモデルプロバイダーに送信します — これはアーキテクチャであり、設定の選択ではありません。** ページで Notion AI 機能を使用すると、Notion はそのリクエストを処理するモデルプロバイダーにページコンテンツを送信し、応答を Notion 経由で返します。Notion は、デフォルトでは Notion 自身もその AI プロバイダーも顧客データをモデルの学習に使用しないこと、また Enterprise プランでは大半のモデルでゼロデータ保持が提供されること（その他のプランではプロバイダーによる保持は最大30日）を明示しています。それでもデータはあなたのマシンの外に出て、あなたのローカルファイルシステムではなく、Notion とそのプロバイダーの規約の下に置かれます。規制された文脈のユーザー（医療、法務、金融アドバイス、ジャーナリズム、APPI 対象データ）にとって、これは設定では取り除けない構造的な違いです。',
         items: [
-          '**Notion AI のアーキテクチャ：** ノートがマシンを離れて OpenAI で処理されます。OpenAI Enterprise のデータ取扱条件下（標準 OpenAI API より良好）ですが、依然としてあなたのインフラ外。',
+          '**Notion AI のアーキテクチャ：** ノートがマシンを離れ、Notion が利用するモデルプロバイダー（最新の一覧は Notion のサブプロセッサーページに掲載）で、Notion のデータ処理条件の下に処理されます — ただし依然としてあなたのインフラ外。',
           '**Logseq + logseq-copilot のアーキテクチャ：** Logseq はローカルアプリとして動作し、プラグインはローカル Ollama にプロンプトを送信。プラグイン内でクラウドプロバイダを明示的に設定しない限り、ノート内容が第三者に到達することはありません。',
           '**Joplin + Jarvis のアーキテクチャ：** Joplin はローカルアプリとして動作し、Jarvis はローカル Ollama にプロンプトを送信。埋め込み生成もローカル。Jarvis 内でクラウドプロバイダを明示的に設定しない限り、ノート内容が第三者に到達することはありません。',
-          '**データ主権：** Logseq または Joplin + Ollama では、ノート内容の全バイトがマシン上に留まります。Notion AI では、所在地に関わらず、ノート内容が米国の OpenAI サーバーを経由します。',
+          '**データ主権：** Logseq または Joplin + Ollama では、ノート内容の全バイトがマシン上に留まります。Notion AI では、ノート内容が Notion のサーバーとモデルプロバイダーに送信されます。それらの所在地は Notion のサブプロセッサー一覧で確認してください。',
           '**監査証跡：** ローカル LLM では、インストール後にパケットキャプチャ（Wireshark、Little Snitch 等）を一度実行し、AI 使用中にプラグインがアウトバウンド通信ゼロであることを検証できます。Notion AI ではアウトバウンド通信が本質的に発生 — 検証する対象がありません。',
-          '**副処理者リスク：** Notion AI は OpenAI のすべての副処理者（主要インフラとして Microsoft Azure、加えてサポートベンダー）を継承します。Logseq と Joplin + Ollama は、AI 層に副処理者がゼロ。',
+          '**副処理者リスク：** Notion AI は Notion のサブプロセッサーページに掲載されたモデルプロバイダーに依存しており、それぞれが追加で確認すべき当事者となります。Logseq と Joplin + Ollama は、AI 層に副処理者がありません。',
         ],
         image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
-        imageCaption: 'Notion AI はリクエストのたびにノート内容を OpenAI Cloud（米国）へ送信する。Logseq + logseq-copilot と Joplin + Jarvis は同じリクエストを localhost:11434/v1 の Ollama へ送るため、内容が端末の外に出ることはない。',
+        imageCaption: 'Notion AI はリクエストのたびにノート内容を Notion のクラウドとそのモデルプロバイダーへ送信する。Logseq + logseq-copilot と Joplin + Jarvis は同じリクエストを localhost:11434/v1 の Ollama へ送るため、内容が端末の外に出ることはない。',
         callouts: [
           {
             type: 'tip',
@@ -2497,18 +2497,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**日本のエンタープライズおよび規制業界のユーザーにとって、Logseq + logseq-copilot + Ollama と Joplin + Jarvis + Ollama は、METI の AI ガバナンスガイドライン2024 に整合する数少ないアーキテクチャの一つです。** ノート内容が責任者のマシンを離れることがないため、クラウド AI 利用時に必要となる委託先管理、データ越境制御、副処理者リスクの議論が、ローカルスタックでは発生しません。このセクションでは、日本固有のコンプライアンス文脈から始め、東アジアおよび APAC、エンタープライズセクター、技術監査の順に整理します。',
         items: [
           '**METI AI ガバナンスガイドライン2024（日本）：** AI システムのデータフローの追跡可能性が求められます。ローカル推論はデータが内部ネットワーク内に留まるため、最も追跡しやすいパターン。エンタープライズ導入時、追加コンプライアンス資料は最小限で済みます。',
-          '**APPI（個人情報保護法）：** 第三者提供および委託に関する厳格な要件があります。ローカル LLM 処理は第三者提供にも委託にも該当しないため、これらの要件が AI 層では発生しません。Notion AI を使用する場合、Notion + OpenAI が委託先となり、それぞれに対する確認・契約が必要です。',
+          '**APPI（個人情報保護法）：** 第三者提供および委託に関する厳格な要件があります。ローカル LLM 処理は第三者提供にも委託にも該当しないため、これらの要件が AI 層では発生しません。Notion AI を使用する場合、Notion が委託先となり、AI 処理のために再委託先（サブプロセッサー）を利用するため、Notion のデータ処理条件とその再委託先一覧を確認する必要があります。',
           '**データ主権・東アジア：** 日本と韓国の双方とも、機密企業データのクラウド AI 処理に関する規制が強化されつつあります。ローカル LLM は、データ越境のリスクを完全に回避します。',
           '**APAC コンプライアンスパターン：** シンガポール、台湾、香港の金融・医療・法務セクターは、データ越境制限のため多くの SaaS AI サービスを採用できません。Logseq / Joplin + Ollama は、これらの制約下で機能する数少ない構成です。',
           '**規制業界（金融・医療・法務）：** 日本の金融機関、医療機関、法律事務所は、顧客機密データの第三者送信に厳しい制約があります。ローカル LLM スタックは、これらの業界での AI 導入を実現可能にし、内部監査・外部監査の双方で説明しやすい構成です。',
-          '**削除の検証可能性：** Notion AI では、ノート内容のアカウントからの削除が必ずしも OpenAI のトレーニングパイプラインやログから削除されるとは限りません（エンタープライズ条件次第）。ローカル Ollama では、削除はファイルシステム削除 — 検証可能かつ完全。',
+          '**削除の検証可能性：** Notion AI では、削除した内容が保持期間中 AI プロバイダー側に残る場合があります（Notion によれば Enterprise 以外のプランでは最大30日）。ローカル Ollama では、削除は自分のファイルシステム上の削除であり、自分で管理するバックアップや同期コピーも含めて検証できます。',
           '**監査性：** ローカルスタックは監査が容易。Wireshark 等のパケットキャプチャを一度実行し、AI 使用中のアウトバウンド通信がゼロであることを確認・記録します。クラウド AI サービスでは、ベンダーの SOC 2 / ISO 27001 レポートに依存する必要があります。',
           '**日本国内ホスティング（同期サーバーが必要な場合）：** 自己ホスト型 Joplin Server は、AWS Tokyo、Sakura Internet、IDC Frontier、Z.com 等の日本国内インフラ上で実行可能。データ主権が厳しく要求される場合、Logseq には Git または Syncthing が推奨されます（Logseq Sync は米国運営のため）。',
         ],
         callouts: [
           {
             type: 'tip',
-            text: '弁解可能な AI 機能ストーリーを必要とする日本のエンタープライズにとって、Logseq または Joplin 上のローカル LLM スタックが最もシンプルな答えです。委託の議論は「Notion + OpenAI を副処理者として使用、これらの条項で」から「責任者のエンドポイントで動作するローカルソフトウェアを使用、処理者は介在せず」に変わります。コンプライアンスチームの作業は格段に楽になります。',
+            text: '弁解可能な AI 機能ストーリーを必要とする日本のエンタープライズにとって、Logseq または Joplin 上のローカル LLM スタックが最もシンプルな答えです。委託の議論は「Notion とその AI 再委託先を使用、これらの条項で」から「責任者のエンドポイントで動作するローカルソフトウェアを使用、処理者は介在せず」に変わります。コンプライアンスチームの作業は格段に楽になります。',
           },
         ],
       },
@@ -2516,7 +2516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'notion-migration',
         title: 'Notion AI から Logseq または Joplin への移行',
         content:
-          '**Notion はネイティブの Markdown エクスポートを提供し、Logseq と Joplin の両者がインポート可能です — Logseq はブロックレベルの構造をよりよく保ち、Joplin は内容を保つがネストされたブロックを平坦化します。** いずれの場合も、移行は一度きりのエクスポート・インポートであり、継続的な同期ではありません。OpenAI へのデータ送信を即座に停止します。',
+          '**Notion はネイティブの Markdown エクスポートを提供し、Logseq と Joplin の両者がインポート可能です — Logseq はブロックレベルの構造をよりよく保ち、Joplin は内容を保つがネストされたブロックを平坦化します。** いずれの場合も、移行は一度きりのエクスポート・インポートであり、継続的な同期ではありません。Notion の AI プロバイダーへのページ内容の送信を即座に停止します。',
         numberedItems: [
           '**Notion からエクスポート：** Settings → Settings & members → Settings → 「Export all workspace content」→ 「Markdown & CSV」を選択 → ZIP をダウンロード。エクスポートは1ページあたり1つの .md ファイルと、ネストされたページ用のフォルダを含みます。',
           '**解凍してクリーンアップ：** Notion のエクスポートはファイル名に長いページ ID サフィックスを使用（例：`My Page 1f8b2a3c4d5e6f7g8h9i.md`）。新ツールでファイル名が重要なら、ID を削除する簡単なリネームスクリプトを実行します。',
@@ -2574,7 +2574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Joplin — [joplinapp.org](https://joplinapp.org) および [github.com/laurent22/joplin](https://github.com/laurent22/joplin)（オープンソースノートブック；AGPL 3.0）。',
           'Jarvis（Joplin）— [github.com/alondmnt/joplin-plugin-jarvis](https://github.com/alondmnt/joplin-plugin-jarvis)（オープンソース Joplin プラグイン；AGPL 3.0）。',
           'Ollama — [ollama.com](https://ollama.com) および [github.com/ollama/ollama](https://github.com/ollama/ollama)（ローカル LLM ランタイム；MIT）。',
-          'Notion AI のプライバシーとデータ取扱 — [notion.com/help/notion-ai-faqs](https://www.notion.com/help/notion-ai-faqs)（比較文脈のためのベンダードキュメント）。',
+          'Notion AI のセキュリティ対策（プロバイダー、学習、データ保持） — [notion.com/help/notion-ai-security-practices](https://www.notion.com/help/notion-ai-security-practices)（比較文脈のためのベンダードキュメント）。',
         ],
       },
       faq: {
@@ -2619,7 +2619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'オープンソースのローカル AI 統合は Notion AI より安全ですか？',
-            a: 'デフォルトアーキテクチャの観点で「はい」です。Notion AI は設計上ノート内容を OpenAI に送信します — これは構造的、設定の選択ではありません。Logseq + logseq-copilot + Ollama と Joplin + Jarvis + Ollama は、明示的にクラウド LLM プロバイダを設定しない限り、第三者に何も送信しません。APPI 対象データ、医療、法務、ジャーナリズム文脈では、この区別が重要です：ローカルスタックには委託先がなく、国際移転がなく、副処理者リスクがありません。監査性もシンプル — 一度のパケットキャプチャで AI 使用中のアウトバウンド通信ゼロを証明できます。',
+            a: 'アーキテクチャが異なります。Notion AI は設計上ノート内容をサードパーティのモデルプロバイダーに送信します。Notion は、デフォルトでは Notion 自身もそのプロバイダーも顧客データを学習に使用せず、Enterprise ではゼロデータ保持を提供すると説明しています。Logseq + logseq-copilot + Ollama と Joplin + Jarvis + Ollama は、明示的にクラウド LLM プロバイダを設定しない限り、第三者に何も送信しません。APPI 対象データ、医療、法務、ジャーナリズム文脈では、この違いが重要です：ローカルスタックには委託先がなく、国際移転がなく、AI 層の副処理者もありません。監査性もシンプル — 一度のパケットキャプチャで、AI 使用中にアウトバウンド通信が発生するかどうかを確認できます。',
           },
           {
             q: 'Logseq は RAG に対応していますか？ローカルナレッジベースとして機能しますか？',
@@ -2645,14 +2645,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-zh.webp',
     title: 'Logseq 与 Joplin 配合本地 LLM：无云同步的智能笔记（2026）',
     seoTitle: 'Logseq + Ollama 本地LLM：RAG与Joplin对比 2026',
     intro:
-      '[Logseq](https://logseq.com) 和 [Joplin](https://joplinapp.org) 是 2026 年两款可与本地 LLM 完美集成、无需任何云端往返的开源笔记应用。Logseq 通过 logseq-copilot 插件对接 [Ollama](https://ollama.com)，提供大纲器原生的聊天和每日日志 AI；Joplin 通过 Jarvis 插件对接 Ollama，提供笔记感知聊天、摘要和基于嵌入的检索——这是最接近真正本地 RAG 知识库的方案。两者的默认架构都比 Notion AI 更符合数据安全法和跨境合规要求——Notion 会将笔记内容发送至 OpenAI；Logseq 和 Joplin 除非您主动配置，否则不发送任何数据。2026 年的硬限制是移动端：Logseq 和 Joplin 都不支持 iOS 或 Android 插件，因此 AI 功能仅在桌面端运行。本指南从 Ollama 配置、RAG/嵌入支持、无云同步路径（含 iOS）、移动兼容性、与 Obsidian 的对比以及从 Notion 的迁移路径对两款工具进行评分。',
+      '[Logseq](https://logseq.com) 和 [Joplin](https://joplinapp.org) 是 2026 年两款可与本地 LLM 完美集成、无需任何云端往返的开源笔记应用。Logseq 通过 logseq-copilot 插件对接 [Ollama](https://ollama.com)，提供大纲器原生的聊天和每日日志 AI；Joplin 通过 Jarvis 插件对接 Ollama，提供笔记感知聊天、摘要和基于嵌入的检索——这是最接近真正本地 RAG 知识库的方案。两者的默认架构都比 Notion AI 更符合数据安全法和跨境合规要求——Notion 会将页面内容发送至第三方模型提供商；Logseq 和 Joplin 除非您主动配置，否则不发送任何数据。2026 年的硬限制是移动端：Logseq 和 Joplin 都不支持 iOS 或 Android 插件，因此 AI 功能仅在桌面端运行。本指南从 Ollama 配置、RAG/嵌入支持、无云同步路径（含 iOS）、移动兼容性、与 Obsidian 的对比以及从 Notion 的迁移路径对两款工具进行评分。',
     metaDescription:
       'Logseq + Ollama 本地LLM指南：logseq-copilot 插件、RAG 局限对比 Joplin + Jarvis、无云同步及与 Obsidian 的对比。2026 年。',
     twitterDescription:
@@ -2698,7 +2698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '两款插件都通过 `http://localhost:11434/v1` 对接 Ollama——默认无云端调用。',
           'Logseq 无云同步：内置 Git 或通过 Syncthing/iCloud Drive 的本地文件同步。Joplin 同步：端到端加密的 Joplin Cloud、自托管 Joplin Server，或带 E2EE 的 Nextcloud / WebDAV / Dropbox / OneDrive。',
           '移动端插件限制（2026）：Logseq Mobile 和 Joplin Mobile 都不支持插件。AI 功能仅在桌面端——移动用于捕获，桌面用于处理。',
-          'Notion AI 迁移：Logseq 提供更干净的 Markdown 导入路径；Joplin 丢失块级结构但保留内容。两者都在切换瞬间停止向 OpenAI 发送数据。',
+          'Notion AI 迁移：Logseq 提供更干净的 Markdown 导入路径；Joplin 丢失块级结构但保留内容。两者都在切换瞬间停止向 Notion 的 AI 提供商发送页面内容。',
           '推荐 Ollama 模型：聊天——Llama 3.2 3B 或 Phi-4 Mini；嵌入（仅 Joplin Jarvis）——nomic-embed-text 或 mxbai-embed-large。',
         ],
         updatedDate: '2026-05-08',
@@ -2730,7 +2730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Logseq + logseq-copilot 是大纲器 / 每日日志用户的推荐组合。** logseq-copilot 在 Logseq 中添加聊天块和斜杠命令，配置对接 `http://localhost:11434/v1` 的 Ollama。最适合已在 Logseq 每日日志页面模型中工作的用户。',
           '**Joplin + Jarvis 是纯 Markdown 笔记用户的推荐组合。** Jarvis 在 Joplin 中添加聊天侧边栏、摘要命令和跨整个笔记本的基于嵌入的语义检索。最适合需要带强端到端加密同步的 Notion 风格笔记本的用户。',
           '**两款工具都在 AGPL 3.0 下开源**——许可对个人和商业使用宽松；唯一限制是若您修改并公开托管时需开源。',
-          '**隐私态势在架构层面优于 Notion AI。** Notion AI 按设计将笔记内容发送至 OpenAI；Logseq 和 Joplin 除非您明确配置云端提供商，否则不发送任何数据。在医疗、法律、新闻和数据安全法监管场景中，这是有意义的区别。',
+          '**隐私态势在架构层面优于 Notion AI。** Notion AI 按设计将页面内容发送至第三方模型提供商；Logseq 和 Joplin 除非您明确配置云端提供商，否则不发送任何数据。在医疗、法律、新闻和数据安全法监管场景中，这是有意义的区别。',
           '**移动端插件限制是 2026 年最大的约束。** Logseq Mobile 和 Joplin Mobile 都不支持插件。AI 功能仅在桌面端运行——移动端成为捕获面（写笔记），处理（摘要、对话、检索）稍后在桌面端进行。',
           '**无云同步简单直接，但每款工具方式不同。** Logseq 内置 Git 同步，与 Syncthing 或 iCloud Drive 协作顺畅。Joplin 提供端到端加密的 Joplin Cloud、自托管 Joplin Server，或叠加 E2EE 的任何 WebDAV / Nextcloud / Dropbox / OneDrive 后端。',
           '**Notion AI 迁移是两款工具都能处理的单向操作。** Logseq 导入 Notion Markdown 导出时块级结构保真度更高；Joplin 导入内容但展平嵌套块。迁移后，除非您主动选择，否则笔记不再离开您的设备。',
@@ -2866,17 +2866,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-notion',
         title: '反对 Notion AI 的隐私论据',
         content:
-          '**Notion AI 按设计将笔记内容发送至 OpenAI——这是架构而非配置选择。** 当您在页面上使用 Notion AI 功能时，Notion 将页面内容发送至 OpenAI 服务器，OpenAI 处理后通过 Notion 返回响应。数据受 OpenAI 和 Notion 的隐私政策约束，而非您的本地文件系统。对于受监管场景中的用户（医疗、法律、金融咨询、新闻、数据安全法覆盖的中国数据），这是任何设置都无法修复的结构性问题。',
+          '**Notion AI 按设计将页面内容发送至第三方模型提供商——这是架构而非配置选择。** 当您在页面上使用 Notion AI 功能时，Notion 会将页面内容发送给处理该请求的模型提供商，并通过 Notion 返回响应。Notion 声明，默认情况下 Notion 及其 AI 提供商均不会使用客户数据训练模型，且在其 Enterprise 方案中大多数模型提供零数据留存（其他方案中，提供商最多留存数据 30 天）。但数据仍会离开您的设备，受 Notion 及其提供商的条款约束，而非您的本地文件系统。对于受监管场景中的用户（医疗、法律、金融咨询、新闻、数据安全法覆盖的中国数据），这是任何设置都无法消除的结构性差异。',
         items: [
-          '**Notion AI 架构：** 笔记离开您的设备由 OpenAI 处理。受 OpenAI Enterprise 数据处理条款约束（优于标准 OpenAI API），但仍在您的基础设施之外。',
+          '**Notion AI 架构：** 笔记离开您的设备，由 Notion 使用的模型提供商处理（当前名单见 Notion 的子处理方页面），受 Notion 数据处理条款约束——但仍在您的基础设施之外。',
           '**Logseq + logseq-copilot 架构：** Logseq 作为本地应用运行，插件将提示词发送至您的本地 Ollama，除非您在插件中明确配置云端提供商，否则没有笔记内容到达第三方。',
           '**Joplin + Jarvis 架构：** Joplin 作为本地应用运行，Jarvis 将提示词发送至您的本地 Ollama，嵌入生成本地运行，除非您在 Jarvis 中明确配置云端提供商，否则没有笔记内容到达第三方。',
-          '**数据驻留：** 使用 Logseq 或 Joplin + Ollama，笔记内容的每一字节都留在您的设备上。使用 Notion AI 时，无论您身处何地，笔记内容都通过美国 OpenAI 服务器传输。',
+          '**数据驻留：** 使用 Logseq 或 Joplin + Ollama，笔记内容的每一字节都留在您的设备上。使用 Notion AI 时，笔记内容会发送至 Notion 的服务器和模型提供商；其运营地点请查阅 Notion 的子处理方名单。',
           '**审计跟踪：** 使用本地 LLM，您可以在安装后运行一次抓包（Wireshark、Little Snitch 等）并验证插件在 AI 使用期间零出站调用。使用 Notion AI 时，出站调用是必然的——没什么可验证的。',
-          '**子处理方风险：** Notion AI 继承 OpenAI 的所有子处理方（Microsoft Azure 作为主要基础设施，加上支持供应商）。Logseq 和 Joplin + Ollama 在 AI 层有零子处理方。',
+          '**子处理方风险：** Notion AI 依赖 Notion 子处理方页面列出的模型提供商，每一家都是需要额外审查的第三方。Logseq 和 Joplin + Ollama 在 AI 层没有子处理方。',
         ],
         image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
-        imageCaption: 'Notion AI 在每次请求时都会将笔记内容发送到 OpenAI 云端（美国）；Logseq + logseq-copilot 和 Joplin + Jarvis 将同样的请求发送到 localhost:11434/v1 上的 Ollama，内容永远不会离开设备。',
+        imageCaption: 'Notion AI 在每次请求时都会将笔记内容发送到 Notion 的云端及其模型提供商；Logseq + logseq-copilot 和 Joplin + Jarvis 将同样的请求发送到 localhost:11434/v1 上的 Ollama，内容永远不会离开设备。',
         callouts: [
           {
             type: 'tip',
@@ -2935,14 +2935,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**亚太地区（数据跨境）：** 新加坡、香港、台湾的金融和医疗机构受到严格的数据跨境限制。Logseq / Joplin + Ollama 是符合这些跨境框架的少数 SaaS AI 替代方案之一。日韩的合规要求也类似——对云端 AI 处理机密数据的限制日益严格，本地推理完全规避此类风险。',
           '**企业部署：** 中国大型银行、医院、律师事务所对客户机密数据的第三方传输有严格限制。本地 LLM 堆栈使这些行业能够采用 AI 工具，同时符合内部审计和外部监管要求。自托管 Joplin Server 可在阿里云、腾讯云、华为云等中国境内基础设施上运行——为强制要求境内托管的部署提供清晰路径。',
           '**数据本地化合规：** 跨境数据流是云端 AI 服务的核心合规挑战。本地推理完全消除跨境流——所有数据处理在用户设备内完成。无需签署跨境传输协议、无需进行传输影响评估。',
-          '**删除可验证性：** 使用 Notion AI 时，从账户删除笔记内容未必从 OpenAI 训练管道或日志中删除（取决于企业条款）。使用本地 Ollama 时，删除即文件系统删除——可验证且完整。',
+          '**删除可验证性：** 使用 Notion AI 时，已删除的内容可能在保留期内仍存在于 AI 提供商处（Notion 声明非 Enterprise 方案最多 30 天）。使用本地 Ollama 时，删除即您自己文件系统上的删除，包括您所控制的任何备份和同步副本。',
           '**可审计性：** 本地堆栈更易审计。运行一次抓包，验证 AI 使用期间零出站流量，记录结果。云端 AI 服务需要依赖供应商的 SOC 2 / ISO 27001 报告。',
           '**境内托管选项（当同步涉及服务器时）：** 自托管 Joplin Server 可运行在阿里云、腾讯云、华为云等中国境内基础设施上。对于受跨境数据流限制的部署，避免使用 Logseq Sync（美国运营），优先选择 Git 或 Syncthing。',
         ],
         callouts: [
           {
             type: 'tip',
-            text: '对于在数据安全法或行业监管框架下需要可辩护 AI 功能策略的组织，Logseq 或 Joplin 上的本地 LLM 堆栈是最简答案。讨论从"使用 Notion + OpenAI 作为子处理方，包含以下条款"转变为"使用在数据控制方端点上运行的本地软件，无第三方处理方涉及"。合规团队的工作变得显著容易。',
+            text: '对于在数据安全法或行业监管框架下需要可辩护 AI 功能策略的组织，Logseq 或 Joplin 上的本地 LLM 堆栈是最简答案。讨论从"使用 Notion 及其 AI 子处理方，包含以下条款"转变为"使用在数据控制方端点上运行的本地软件，无第三方处理方涉及"。合规团队的工作变得显著容易。',
           },
         ],
       },
@@ -2950,7 +2950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'notion-migration',
         title: '从 Notion AI 迁移到 Logseq 或 Joplin',
         content:
-          '**Notion 提供原生 Markdown 导出，Logseq 和 Joplin 都可导入——Logseq 块级结构保留更好，Joplin 保留内容但展平嵌套块。** 无论哪种方式，迁移都是一次性导出 - 导入，而非持续同步，且立即停止向 OpenAI 的数据流。',
+          '**Notion 提供原生 Markdown 导出，Logseq 和 Joplin 都可导入——Logseq 块级结构保留更好，Joplin 保留内容但展平嵌套块。** 无论哪种方式，迁移都是一次性导出 - 导入，而非持续同步，且立即停止向 Notion 的 AI 提供商发送页面内容。',
         numberedItems: [
           '**从 Notion 导出：** 设置 → 设置和成员 → 设置 → "导出所有工作区内容" → 选择 "Markdown & CSV" → 下载 ZIP。导出包含每页一个 .md 文件加上嵌套页面的文件夹。',
           '**解压和清理：** Notion 的导出在文件名中使用长页面 ID 后缀（例如，`My Page 1f8b2a3c4d5e6f7g8h9i.md`）。如果文件名对您的新工具重要，运行快速重命名脚本删除 ID。',
@@ -3008,7 +3008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Joplin——[joplinapp.org](https://joplinapp.org) 和 [github.com/laurent22/joplin](https://github.com/laurent22/joplin)（开源笔记本；AGPL 3.0）。',
           'Jarvis（Joplin）——[github.com/alondmnt/joplin-plugin-jarvis](https://github.com/alondmnt/joplin-plugin-jarvis)（开源 Joplin 插件；AGPL 3.0）。',
           'Ollama——[ollama.com](https://ollama.com) 和 [github.com/ollama/ollama](https://github.com/ollama/ollama)（本地 LLM 运行时；MIT）。',
-          'Notion AI 隐私和数据处理——[notion.com/help/notion-ai-faqs](https://www.notion.com/help/notion-ai-faqs)（用于比较上下文的供应商文档）。',
+          'Notion AI 安全实践（提供商、训练、留存）——[notion.com/help/notion-ai-security-practices](https://www.notion.com/help/notion-ai-security-practices)（用于比较上下文的供应商文档）。',
         ],
       },
       faq: {
@@ -3053,7 +3053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '开源本地 AI 集成比 Notion AI 更安全吗？',
-            a: '默认架构上是。Notion AI 按设计将笔记内容发送至 OpenAI——这是结构性的，而非配置选择。Logseq + logseq-copilot + Ollama 与 Joplin + Jarvis + Ollama 除非您明确配置云端 LLM 提供商，否则不向第三方发送任何数据。对于受数据安全法约束的中国数据、医疗、法律和新闻场景，这一区别有意义：本地堆栈无处理方、无跨境传输、无子处理方风险。可审计性也更简单——一次抓包证明 AI 使用期间零出站流量。',
+            a: '两者架构不同。Notion AI 按设计将笔记内容发送至第三方模型提供商；Notion 声明默认情况下 Notion 及其提供商均不使用客户数据训练，且 Enterprise 方案提供零数据留存。Logseq + logseq-copilot + Ollama 与 Joplin + Jarvis + Ollama 除非您明确配置云端 LLM 提供商，否则不向第三方发送任何数据。对于受数据安全法约束的中国数据、医疗、法律和新闻场景，这一差异很重要：本地堆栈无处理方、无跨境传输、AI 层无子处理方。可审计性也更简单——一次抓包即可确认 AI 使用期间是否有出站流量。',
           },
           {
             q: 'Logseq 支持 RAG 或可作为本地知识库使用吗？',
@@ -3079,14 +3079,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-ar.webp',
     title: '⁨Logseq⁩ و⁨Joplin⁩ مع نماذج اللغة المحلية: ملاحظات ذكية بدون مزامنة سحابية (⁨2026⁩)',
     seoTitle: '⁨Logseq⁩ مع ⁨Ollama⁩: ⁨LLM⁩ محلي و⁨RAG⁩ مقابل ⁨Joplin⁩ (⁨2026⁩)',
     intro:
-      '[Logseq](https://logseq.com) و[Joplin](https://joplinapp.org) هما تطبيقا الملاحظات مفتوحا المصدر في 2026 اللذان يتكاملان بسلاسة مع نماذج اللغة المحلية دون الحاجة إلى الاتصال بالسحابة. يُشغّل Logseq ملحق logseq-copilot مع [Ollama](https://ollama.com) للمحادثة الأصيلة في أداة التخطيط الهرمي والذكاء الاصطناعي لليوميات؛ بينما يُشغّل Joplin ملحق Jarvis مع Ollama للدردشة المدركة للملاحظات والملخصات والاسترجاع المدعوم بالتضمينات — وهو الخيار الأقرب إلى قاعدة معرفة محلية حقيقية قائمة على RAG. كلا التطبيقين أكثر امتثالاً للائحة حماية البيانات العامة GDPR من Notion AI بحكم هندستهما الافتراضية — إذ يُرسل Notion محتوى الملاحظات إلى OpenAI، بينما لا يُرسل Logseq ولا Joplin أي شيء ما لم تُهيئهما على ذلك. القيد الرئيسي في 2026 هو الجوّال: لا يدعم أيٌّ منهما الملحقات على iOS أو Android، وبذلك تعمل ميزات الذكاء الاصطناعي على سطح المكتب فقط. يقيّم هذا الدليل كلا الأداتين من حيث إعداد Ollama، ودعم RAG/التضمينات، ومسارات المزامنة بدون سحابة (بما في ذلك iOS)، وتوافق الجوّال، والمقارنة مع Obsidian، ومسار الانتقال من Notion.',
+      '[Logseq](https://logseq.com) و[Joplin](https://joplinapp.org) هما تطبيقا الملاحظات مفتوحا المصدر في 2026 اللذان يتكاملان بسلاسة مع نماذج اللغة المحلية دون الحاجة إلى الاتصال بالسحابة. يُشغّل Logseq ملحق logseq-copilot مع [Ollama](https://ollama.com) للمحادثة الأصيلة في أداة التخطيط الهرمي والذكاء الاصطناعي لليوميات؛ بينما يُشغّل Joplin ملحق Jarvis مع Ollama للدردشة المدركة للملاحظات والملخصات والاسترجاع المدعوم بالتضمينات — وهو الخيار الأقرب إلى قاعدة معرفة محلية حقيقية قائمة على RAG. كلا التطبيقين أكثر امتثالاً للائحة حماية البيانات العامة GDPR من Notion AI بحكم هندستهما الافتراضية — إذ يُرسل Notion محتوى الصفحات إلى موفري نماذج لغوية من أطراف ثالثة، بينما لا يُرسل Logseq ولا Joplin أي شيء ما لم تُهيئهما على ذلك. القيد الرئيسي في 2026 هو الجوّال: لا يدعم أيٌّ منهما الملحقات على iOS أو Android، وبذلك تعمل ميزات الذكاء الاصطناعي على سطح المكتب فقط. يقيّم هذا الدليل كلا الأداتين من حيث إعداد Ollama، ودعم RAG/التضمينات، ومسارات المزامنة بدون سحابة (بما في ذلك iOS)، وتوافق الجوّال، والمقارنة مع Obsidian، ومسار الانتقال من Notion.',
     metaDescription:
       '⁨Logseq⁩ مع ⁨Ollama⁩ كنموذج لغوي محلي: ملحق ⁨logseq-copilot⁩، وحدود ⁨RAG⁩ مقارنة بـ ⁨Joplin⁩ + ⁨Jarvis⁩، ومزامنة بلا سحابة، ومقارنة بـ ⁨Obsidian⁩. 2026.',
     twitterDescription:
@@ -3132,7 +3132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يتصل كلا الملحقين بـ Ollama عبر `http://localhost:11434/v1` — لا استدعاءات سحابية افتراضياً.',
           'مزامنة Logseq بدون سحابة: Git (مدمج) أو مزامنة ملفات محلية عبر Syncthing/iCloud Drive. مزامنة Joplin: Joplin Cloud مشفرة من طرف إلى طرف، أو Joplin Server ذاتي الاستضافة، أو Nextcloud / WebDAV / Dropbox / OneDrive مع E2EE.',
           'فجوة ملحقات الجوّال (2026): لا يدعم Logseq Mobile ولا Joplin Mobile الملحقات. ميزات الذكاء الاصطناعي حصرية لسطح المكتب — الجوّال للالتقاط، وسطح المكتب للمعالجة.',
-          'الانتقال من Notion AI: Logseq لديه مسار استيراد Markdown أنظف؛ Joplin يفقد بنية مستوى الكتل لكنه يحافظ على المحتوى. كلاهما يوقف إرسال البيانات إلى OpenAI فور التبديل.',
+          'الانتقال من Notion AI: Logseq لديه مسار استيراد Markdown أنظف؛ Joplin يفقد بنية مستوى الكتل لكنه يحافظ على المحتوى. كلاهما يوقف إرسال محتوى الصفحات إلى موفري الذكاء الاصطناعي لدى Notion فور التبديل.',
           'نماذج Ollama الموصى بها: دردشة — Llama 3.2 3B أو Phi-4 Mini؛ تضمينات (Joplin Jarvis فقط) — nomic-embed-text أو mxbai-embed-large.',
         ],
         updatedDate: '2026-05-08',
@@ -3164,7 +3164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Logseq + logseq-copilot هو المزيج الموصى به لمستخدمي أداة التخطيط الهرمي / اليوميات اليومية.** يُضيف logseq-copilot كتل دردشة وأوامر slash داخل Logseq، مُهيَّأ للعمل مع Ollama على `http://localhost:11434/v1`. الأنسب للمستخدمين الذين يعيشون بالفعل في نموذج صفحة يوميات Logseq.',
           '**Joplin + Jarvis هو المزيج الموصى به لمستخدمي ملاحظات Markdown العادية.** يُضيف Jarvis شريطاً جانبياً للدردشة وأوامر تلخيص وبحثاً دلالياً مدعوماً بالتضمينات عبر دفتر الملاحظات. الأنسب للمستخدمين الذين يريدون دفتراً بأسلوب Notion مع مزامنة مشفرة من طرف إلى طرف قوية.',
           '**كلتا الأداتين مفتوحتا المصدر بموجب AGPL 3.0** — الترخيص متساهل للاستخدام الشخصي والتجاري؛ القيد الوحيد هو الإفصاح عن الكود المصدري إن عدّلتهما واستضفتهما علناً.',
-          '**وضعية الخصوصية تتفوق على Notion AI بالهندسة.** يُرسل Notion AI محتوى الملاحظات إلى OpenAI بحكم التصميم؛ لا يُرسل Logseq ولا Joplin أي شيء ما لم تُهيّئ موفراً سحابياً صراحةً. هذا فارق ذو معنى في الرعاية الصحية والقانون والصحافة وأي سياق خاضع للائحة GDPR.',
+          '**وضعية الخصوصية تتفوق على Notion AI بالهندسة.** يُرسل Notion AI محتوى الصفحات إلى موفري نماذج لغوية من أطراف ثالثة بحكم التصميم؛ لا يُرسل Logseq ولا Joplin أي شيء ما لم تُهيّئ موفراً سحابياً صراحةً. هذا فارق ذو معنى في الرعاية الصحية والقانون والصحافة وأي سياق خاضع للائحة GDPR.',
           '**فجوة ملحقات الجوّال هي القيد الأكبر في 2026.** لا يدعم Logseq Mobile ولا Joplin Mobile الملحقات. تعمل ميزات الذكاء الاصطناعي على سطح المكتب فقط — يتحول الجوّال إلى سطح التقاط (كتابة الملاحظات)، وتجري المعالجة (التلخيص والدردشة والاسترجاع) لاحقاً على سطح المكتب.',
           '**المزامنة بدون سحابة مباشرة لكن كل أداة تتبع نهجاً مختلفاً.** يمتلك Logseq مزامنة Git مدمجة ويعمل بنظافة مع Syncthing أو iCloud Drive. يمتلك Joplin Joplin Cloud مشفراً من طرف إلى طرف أو Joplin Server ذاتي الاستضافة أو أي خلفية WebDAV / Nextcloud / Dropbox مع E2EE فوقها.',
           '**الانتقال من Notion AI رحلة في اتجاه واحد تتعامل معها كلتا الأداتين.** يستورد Logseq تصدير Markdown من Notion بدقة أعلى على مستوى الكتل؛ يستورد Joplin المحتوى لكنه يُسطّح الكتل المتداخلة. بعد الانتقال، لا تغادر أي ملاحظة جهازك ما لم تختر ذلك.',
@@ -3300,17 +3300,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-notion',
         title: 'الحجة الخصوصية ضد Notion AI',
         content:
-          '**يُرسل Notion AI محتوى الملاحظات إلى OpenAI بحكم التصميم — هذه هي الهندسة، وليست خياراً في الإعدادات.** حين تستخدم ميزات Notion AI على صفحة ما، يُرسل Notion محتوى الصفحة إلى خوادم OpenAI، تعالجه OpenAI، وتعود الاستجابة عبر Notion. تخضع البيانات لسياسات الخصوصية لدى OpenAI وNotion، وليس لنظام ملفاتك المحلي. بالنسبة للمستخدمين في سياقات منظَّمة (رعاية صحية، قانون، استشارات مالية، صحافة، بيانات الاتحاد الأوروبي الخاضعة للائحة GDPR)، هذه مشكلة هيكلية لا يحلها أي إعداد.',
+          '**يُرسل Notion AI محتوى الصفحات إلى موفري نماذج لغوية من أطراف ثالثة بحكم التصميم — هذه هي الهندسة، وليست خياراً في الإعدادات.** حين تستخدم ميزات Notion AI على صفحة ما، يُرسل Notion محتوى الصفحة إلى موفر النموذج الذي يعالج الطلب، وتعود الاستجابة عبر Notion. ويذكر Notion أنه بشكل افتراضي لا يستخدم هو ولا موفرو الذكاء الاصطناعي لديه بيانات العملاء لتدريب النماذج، وأن خطة Enterprise توفر لدى معظم النماذج عدم الاحتفاظ بالبيانات إطلاقاً (وفي الخطط الأخرى يحتفظ الموفرون بالبيانات حتى 30 يوماً). ومع ذلك تغادر البيانات جهازك وتخضع لشروط Notion وموفريه، وليس لنظام ملفاتك المحلي. بالنسبة للمستخدمين في سياقات منظَّمة (رعاية صحية، قانون، استشارات مالية، صحافة، بيانات الاتحاد الأوروبي الخاضعة للائحة GDPR)، هذا فارق هيكلي لا يزيله أي إعداد.',
         items: [
-          '**هندسة Notion AI:** تغادر الملاحظات جهازك لمعالجتها بواسطة OpenAI. تخضع لشروط التعامل مع البيانات لدى OpenAI Enterprise (أفضل من OpenAI API القياسية)، لكنها لا تزال خارج بنيتك التحتية.',
+          '**هندسة Notion AI:** تغادر الملاحظات جهازك لمعالجتها بواسطة موفري النماذج اللغوية الذين يستخدمهم Notion (القائمة الحالية في صفحة المعالجين الفرعيين لدى Notion)، بموجب شروط معالجة البيانات لدى Notion — لكنها لا تزال خارج بنيتك التحتية.',
           '**هندسة Logseq + logseq-copilot:** يعمل Logseq كتطبيق محلي، يُرسل الملحق الموجّهات إلى Ollama المحلي الخاص بك، لا يصل أي محتوى ملاحظات إلى طرف ثالث ما لم تُهيّئ صراحةً موفراً سحابياً في الملحق.',
           '**هندسة Joplin + Jarvis:** يعمل Joplin كتطبيق محلي، يُرسل Jarvis الموجّهات إلى Ollama المحلي الخاص بك، يعمل توليد التضمينات محلياً، لا يصل أي محتوى ملاحظات إلى طرف ثالث ما لم تُهيّئ صراحةً موفراً سحابياً في Jarvis.',
-          '**إقامة البيانات:** مع Logseq أو Joplin + Ollama، يبقى كل بايت من محتوى الملاحظات على جهازك. مع Notion AI، يعبر محتوى الملاحظات خوادم OpenAI الموجودة في الولايات المتحدة بصرف النظر عن موقعك.',
+          '**إقامة البيانات:** مع Logseq أو Joplin + Ollama، يبقى كل بايت من محتوى الملاحظات على جهازك. مع Notion AI، يُرسل محتوى الملاحظات إلى خوادم Notion وموفري النماذج لديه؛ راجع قائمة المعالجين الفرعيين لدى Notion لمعرفة أماكن عملهم.',
           '**مسار التدقيق:** مع نماذج اللغة المحلية، يمكنك تشغيل التقاط حزم (Wireshark، Little Snitch، إلخ) مرةً واحدة بعد التثبيت والتحقق من صفر مكالمات صادرة أثناء استخدام الذكاء الاصطناعي. مع Notion AI، المكالمات الصادرة متأصلة — لا شيء للتحقق منه.',
-          '**مخاطر المعالجين الفرعيين:** يرث Notion AI جميع المعالجين الفرعيين لـ OpenAI (Microsoft Azure كبنية تحتية رئيسية، بالإضافة إلى موردي الدعم). لدى Logseq وJoplin + Ollama صفر معالجين فرعيين لطبقة الذكاء الاصطناعي.',
+          '**مخاطر المعالجين الفرعيين:** يعتمد Notion AI على موفري النماذج المدرجين في صفحة المعالجين الفرعيين لدى Notion، وكل منهم طرف إضافي تجب مراجعته. لا يوجد لدى Logseq وJoplin + Ollama أي معالجين فرعيين لطبقة الذكاء الاصطناعي.',
         ],
         image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
-        imageCaption: 'يرسل Notion AI محتوى الملاحظات إلى OpenAI Cloud (الولايات المتحدة) مع كل طلب؛ بينما يوجّه Logseq + logseq-copilot وJoplin + Jarvis الطلب نفسه إلى Ollama على localhost:11434/v1، بحيث لا يغادر المحتوى الجهاز أبدًا.',
+        imageCaption: 'يرسل Notion AI محتوى الملاحظات إلى سحابة Notion وموفري النماذج لديه مع كل طلب؛ بينما يوجّه Logseq + logseq-copilot وJoplin + Jarvis الطلب نفسه إلى Ollama على localhost:11434/v1، بحيث لا يغادر المحتوى الجهاز أبدًا.',
         callouts: [
           {
             type: 'tip',
@@ -3363,19 +3363,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr',
         title: 'GDPR وإقامة البيانات في الاتحاد الأوروبي',
         content:
-          '**بالنسبة لمستخدمي الاتحاد الأوروبي ومنطقة DACH، يتوافق Logseq + logseq-copilot + Ollama وJoplin + Jarvis + Ollama مع اللائحة العامة لحماية البيانات بشكل أفضل من Notion AI بحكم الهندسة الافتراضية.** لا يغادر محتوى الملاحظات أبداً جهاز المسؤول عن المعالجة، لذا فإن تدفقات البيانات التي تتطلب المادة 28 من GDPR (اتفاقيات المعالجين)، والمادة 44 (النقل الدولي)، وكتالوجات BSI-Grundschutz توثيقها لأدوات SaaS لا وجود لها ببساطة مع المكدس المحلي.',
+          '**بالنسبة لمستخدمي الاتحاد الأوروبي ومنطقة DACH، يتوافق Logseq + logseq-copilot + Ollama وJoplin + Jarvis + Ollama مع اللائحة العامة لحماية البيانات بشكل أفضل من Notion AI بحكم الهندسة الافتراضية.** لا يغادر محتوى الملاحظات أبداً جهاز المسؤول عن المعالجة، لذا فإن تدفقات البيانات التي تتطلب المادة 28 من GDPR (اتفاقيات المعالجين)، والمادة 44 (النقل الدولي)، وBSI IT-Grundschutz توثيقها لأدوات SaaS لا وجود لها ببساطة مع المكدس المحلي.',
         items: [
-          '**المادة 28 (اتفاقيات المعالجين):** مع Notion AI، يُعدّ Notion + OpenAI معالجَين ويتطلبان اتفاقية معالجة بيانات (DPA) بالإضافة إلى بنود تعاقدية قياسية للنقل الدولي إلى OpenAI. مع Logseq / Joplin + Ollama، لا يوجد معالج بيانات طرف ثالث — المسؤول فقط يُشغّل برنامجاً محلياً.',
-          '**المادة 44 (النقل الدولي):** يُرسل Notion AI البيانات إلى خوادم OpenAI في الولايات المتحدة؛ هذا "نقل دولي" بموجب Schrems II يتطلب بنوداً تعاقدية قياسية وتقييم أثر النقل. المعالجة المحلية بـ Ollama تُلغي النقل كلياً.',
-          '**كتالوجات BSI-Grundschutz (DACH):** تتعامل إرشادات أمن المعلومات الاتحادية الألمانية مع خدمات الذكاء الاصطناعي السحابية كاستعانة بمصادر خارجية تتطلب تقييم مخاطر رسمي. المعالجة المحلية بالذكاء الاصطناعي تندرج تحت خط الأساس الأبسط بكثير لـ "تقنية المعلومات الداخلية".',
-          '**الحق في المحو (المادة 17):** مع Notion AI، حذف محتوى الملاحظات من حسابك لا يحذفه بالضرورة من خط أنابيب التدريب أو سجلات OpenAI (يعتمد على الشروط المؤسسية). مع Ollama المحلي، الحذف هو حذف من نظام الملفات — قابل للتحقق وكامل.',
+          '**المادة 28 (اتفاقيات المعالجين):** مع Notion AI، يعمل Notion كمعالج بموجب ملحق معالجة البيانات (DPA) لديه ويعتمد على معالجين فرعيين للذكاء الاصطناعي، لذا تجب مراجعة DPA وقائمة معالجيه الفرعيين. مع Logseq / Joplin + Ollama، لا يوجد معالج بيانات طرف ثالث — المسؤول فقط يُشغّل برنامجاً محلياً.',
+          '**المادة 44 (النقل الدولي):** بحسب الموفرين الذين يستخدمهم Notion لكل طلب، قد يتضمن Notion AI عمليات نقل خارج الاتحاد الأوروبي تتطلب بنوداً تعاقدية قياسية وتقييماً للنقل — راجع DPA وقائمة المعالجين الفرعيين لدى Notion. المعالجة المحلية بـ Ollama تتجنب النقل في خطوة الذكاء الاصطناعي.',
+          '**BSI IT-Grundschutz (DACH):** تتعامل إرشادات أمن المعلومات الاتحادية الألمانية عموماً مع الخدمات السحابية كاستعانة بمصادر خارجية تتطلب تقييم مخاطر رسمي. المعالجة المحلية بالذكاء الاصطناعي تندرج تحت إجراءات تقنية المعلومات الداخلية الأبسط.',
+          '**الحق في المحو (المادة 17):** مع Notion AI، قد يبقى المحتوى المحذوف لدى موفري الذكاء الاصطناعي طوال مدة احتفاظ (يذكر Notion حتى 30 يوماً في الخطط غير Enterprise). مع Ollama المحلي، الحذف هو حذف على نظام ملفاتك الخاص، بما في ذلك أي نسخ احتياطية ونسخ مزامنة تتحكم بها.',
           '**قابلية التدقيق:** المكدسات المحلية أسهل في التدقيق. شغّل التقاط حزم مرةً واحدة، تحقق من صفر حركة مرور صادرة أثناء استخدام الذكاء الاصطناعي، وثّق النتيجة. تتطلب خدمات الذكاء الاصطناعي السحابية الوثوق بتقارير SOC 2 / ISO 27001 للموفر.',
           '**الاستضافة المتوافقة مع الاتحاد الأوروبي (حين تتضمن المزامنة خادماً):** تُستضاف Joplin Cloud في الاتحاد الأوروبي؛ يمكن استضافة Joplin Server ذاتياً على بنية تحتية أوروبية (Hetzner، OVH، IONOS). تُشغَّل Logseq Sync بواسطة Logseq Inc. (مقرها الولايات المتحدة) — للإقامة الصارمة في الاتحاد الأوروبي، فضّل Git أو Syncthing لمزامنة Logseq.',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'للمؤسسات التي تحتاج قصة قابلة للدفاع عنها لميزات الذكاء الاصطناعي بموجب GDPR، مكدس نموذج اللغة المحلي في Logseq أو Joplin هو الجواب الأبسط. تتحول مناقشة DPA من "نستخدم Notion + OpenAI كمعالجَين فرعيَّين مع هذه البنود" إلى "نستخدم برنامجاً محلياً يعمل على نقطة نهاية المسؤول، دون أي معالج بيانات مُشارك". يصبح عمل فريق الامتثال أبسط بكثير.',
+            text: 'للمؤسسات التي تحتاج قصة قابلة للدفاع عنها لميزات الذكاء الاصطناعي بموجب GDPR، مكدس نموذج اللغة المحلي في Logseq أو Joplin هو الجواب الأبسط. تتحول مناقشة DPA من "نستخدم Notion ومعالجيه الفرعيين للذكاء الاصطناعي مع هذه البنود" إلى "نستخدم برنامجاً محلياً يعمل على نقطة نهاية المسؤول، دون أي معالج بيانات مُشارك". يصبح عمل فريق الامتثال أبسط بكثير.',
           },
         ],
       },
@@ -3383,7 +3383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'notion-migration',
         title: 'الانتقال من Notion AI إلى Logseq أو Joplin',
         content:
-          '**يوفر Notion تصديراً أصيلاً بـ Markdown يمكن لـ Logseq وJoplin استيراده — يحافظ Logseq على البنية على مستوى الكتل بشكل أفضل، بينما يحافظ Joplin على المحتوى لكنه يُسطّح الكتل المتداخلة.** في كلتا الحالتين، الانتقال عملية تصدير-استيراد لمرة واحدة، وليس مزامنة مستمرة، ويوقف تدفق البيانات إلى OpenAI فوراً.',
+          '**يوفر Notion تصديراً أصيلاً بـ Markdown يمكن لـ Logseq وJoplin استيراده — يحافظ Logseq على البنية على مستوى الكتل بشكل أفضل، بينما يحافظ Joplin على المحتوى لكنه يُسطّح الكتل المتداخلة.** في كلتا الحالتين، الانتقال عملية تصدير-استيراد لمرة واحدة، وليس مزامنة مستمرة، ويوقف إرسال محتوى الصفحات إلى موفري الذكاء الاصطناعي لدى Notion فوراً.',
         numberedItems: [
           '**التصدير من Notion:** الإعدادات ← الإعدادات والأعضاء ← الإعدادات ← "تصدير كل محتوى مساحة العمل" ← اختر "Markdown & CSV" ← نزّل الملف المضغوط. يحتوي التصدير على ملف .md لكل صفحة بالإضافة إلى مجلدات للصفحات المتداخلة.',
           '**فك الضغط والتنظيف:** يستخدم تصدير Notion لاحقات معرّف صفحة طويلة في أسماء الملفات (مثلاً `My Page 1f8b2a3c4d5e6f7g8h9i.md`). شغّل نصاً برمجياً سريعاً لإعادة التسمية لإزالة المعرّفات إن كانت أسماء الملفات مهمة لأداتك الجديدة.',
@@ -3441,7 +3441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Joplin — [joplinapp.org](https://joplinapp.org) و[github.com/laurent22/joplin](https://github.com/laurent22/joplin) (دفتر ملاحظات مفتوح المصدر؛ AGPL 3.0).',
           'Jarvis (Joplin) — [github.com/alondmnt/joplin-plugin-jarvis](https://github.com/alondmnt/joplin-plugin-jarvis) (ملحق Joplin مفتوح المصدر؛ AGPL 3.0).',
           'Ollama — [ollama.com](https://ollama.com) و[github.com/ollama/ollama](https://github.com/ollama/ollama) (وقت تشغيل LLM محلي؛ MIT).',
-          'الخصوصية والتعامل مع بيانات Notion AI — [notion.com/help/notion-ai-faqs](https://www.notion.com/help/notion-ai-faqs) (وثائق الموفر للسياق المقارن).',
+          'ممارسات الأمان في Notion AI (الموفرون والتدريب والاحتفاظ) — [notion.com/help/notion-ai-security-practices](https://www.notion.com/help/notion-ai-security-practices) (وثائق الموفر للسياق المقارن).',
         ],
       },
       faq: {
@@ -3486,7 +3486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل تكامل الذكاء الاصطناعي المحلي مفتوح المصدر أكثر أماناً من Notion AI؟',
-            a: 'نعم بحكم الهندسة الافتراضية. يُرسل Notion AI محتوى الملاحظات إلى OpenAI بحكم التصميم — هذا هيكلي، وليس خيار إعداد. Logseq + logseq-copilot + Ollama وJoplin + Jarvis + Ollama لا يُرسلان أي شيء إلى طرف ثالث ما لم تُهيّئ صراحةً موفر LLM سحابي. بالنسبة لبيانات الاتحاد الأوروبي الخاضعة للائحة GDPR والرعاية الصحية والقانون والصحافة، هذا الفارق ذو معنى: المكدسات المحلية بلا معالج بيانات، وبلا نقل دولي، وبلا مخاطر معالجين فرعيين. قابلية التدقيق أيضاً أبسط — التقاط حزم واحد يُثبت صفر حركة مرور صادرة أثناء استخدام الذكاء الاصطناعي.',
+            a: 'الهندسة مختلفة. يُرسل Notion AI محتوى الملاحظات إلى موفري نماذج لغوية من أطراف ثالثة بحكم التصميم؛ ويذكر Notion أنه بشكل افتراضي لا يدرّب هو ولا موفروه على بيانات العملاء، وأن Enterprise توفر عدم الاحتفاظ بالبيانات. Logseq + logseq-copilot + Ollama وJoplin + Jarvis + Ollama لا يُرسلان أي شيء إلى طرف ثالث ما لم تُهيّئ صراحةً موفر LLM سحابي. بالنسبة لبيانات الاتحاد الأوروبي الخاضعة للائحة GDPR والرعاية الصحية والقانون والصحافة، هذا الفارق مهم: المكدسات المحلية بلا معالج بيانات، وبلا نقل دولي، وبلا معالج فرعي لطبقة الذكاء الاصطناعي. قابلية التدقيق أيضاً أبسط — التقاط حزم واحد يُظهر ما إذا كانت هناك حركة مرور صادرة أثناء استخدام الذكاء الاصطناعي.',
           },
           {
             q: 'هل يدعم Logseq تقنية RAG أو يعمل كقاعدة معرفة محلية؟',
@@ -3516,7 +3516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-llm-with-logseq-and-joplin',
       inLanguage: 'ar',
       datePublished: '2026-05-08',
-      dateModified: '2026-07-14',
+      dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3525,14 +3525,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-07-14',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-ko.webp',
     title: 'Logseq와 Joplin으로 로컬 LLM 활용하기: 클라우드 동기화 없는 스마트 노트 (2026)',
     seoTitle: 'Logseq + Ollama 로컬 LLM: RAG와 Joplin 비교 2026',
     intro:
-      '[Logseq](https://logseq.com)와 [Joplin](https://joplinapp.org)은 2026년 현재 로컬 LLM과 깔끔하게 연동되며 클라우드 왕복을 전혀 필요로 하지 않는 두 가지 오픈소스 노트 앱입니다. Logseq는 logseq-copilot 플러그인을 [Ollama](https://ollama.com)에 연결하여 아웃라이너 네이티브 채팅과 일일 저널 AI를 제공하고, Joplin은 Jarvis 플러그인을 Ollama에 연결하여 노트 인식 채팅, 요약, 임베딩 기반 검색을 지원합니다 — 진정한 로컬 RAG 지식 베이스에 가장 가까운 조합입니다. 두 도구 모두 기본 아키텍처 측면에서 Notion AI보다 GDPR에 더 친화적입니다. Notion은 노트 내용을 OpenAI에 전송하지만, Logseq와 Joplin은 별도로 설정하지 않는 한 아무것도 전송하지 않습니다. 2026년의 주요 제약은 모바일입니다. Logseq와 Joplin 모두 iOS 또는 Android에서 플러그인을 지원하지 않으므로 AI 기능은 데스크톱에서만 실행됩니다. 이 가이드는 Ollama 설정, RAG/임베딩 지원, 클라우드 없는 동기화 경로(iOS 포함), 모바일 호환성, Obsidian과의 비교, Notion에서의 마이그레이션 경로를 기준으로 두 도구를 비교합니다.',
+      '[Logseq](https://logseq.com)와 [Joplin](https://joplinapp.org)은 2026년 현재 로컬 LLM과 깔끔하게 연동되며 클라우드 왕복을 전혀 필요로 하지 않는 두 가지 오픈소스 노트 앱입니다. Logseq는 logseq-copilot 플러그인을 [Ollama](https://ollama.com)에 연결하여 아웃라이너 네이티브 채팅과 일일 저널 AI를 제공하고, Joplin은 Jarvis 플러그인을 Ollama에 연결하여 노트 인식 채팅, 요약, 임베딩 기반 검색을 지원합니다 — 진정한 로컬 RAG 지식 베이스에 가장 가까운 조합입니다. 두 도구 모두 기본 아키텍처 측면에서 Notion AI보다 GDPR에 더 친화적입니다. Notion은 페이지 내용을 제3자 모델 공급자에 전송하지만, Logseq와 Joplin은 별도로 설정하지 않는 한 아무것도 전송하지 않습니다. 2026년의 주요 제약은 모바일입니다. Logseq와 Joplin 모두 iOS 또는 Android에서 플러그인을 지원하지 않으므로 AI 기능은 데스크톱에서만 실행됩니다. 이 가이드는 Ollama 설정, RAG/임베딩 지원, 클라우드 없는 동기화 경로(iOS 포함), 모바일 호환성, Obsidian과의 비교, Notion에서의 마이그레이션 경로를 기준으로 두 도구를 비교합니다.',
     metaDescription:
       'Logseq + Ollama 로컬 LLM 가이드: logseq-copilot 플러그인, RAG 한계 대비 Joplin + Jarvis, 클라우드 없는 동기화, Obsidian과의 비교를 다룹니다. 2026년.',
     twitterDescription:
@@ -3577,7 +3577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '두 플러그인 모두 `http://localhost:11434/v1`을 통해 Ollama를 가리킴 — 기본적으로 클라우드 호출 없음.',
           'Logseq 클라우드 없는 동기화: Git(내장) 또는 Syncthing/iCloud Drive를 통한 로컬 파일 동기화. Joplin 동기화: 종단 간 암호화 Joplin Cloud, 자체 호스팅 Joplin Server, 또는 E2EE를 갖춘 Nextcloud / WebDAV / Dropbox / OneDrive.',
           '모바일 플러그인 격차(2026): Logseq Mobile도 Joplin Mobile도 플러그인을 지원하지 않음. AI 기능은 데스크톱 전용 — 모바일은 캡처, 데스크톱은 처리.',
-          'Notion AI에서의 마이그레이션: Logseq는 가장 깔끔한 Markdown 가져오기 경로를 제공하고, Joplin은 블록 수준 구조를 잃지만 내용을 보존합니다. 전환하는 즉시 두 앱 모두 OpenAI로의 데이터 전송이 중단됩니다.',
+          'Notion AI에서의 마이그레이션: Logseq는 가장 깔끔한 Markdown 가져오기 경로를 제공하고, Joplin은 블록 수준 구조를 잃지만 내용을 보존합니다. 전환하는 즉시 두 앱 모두 페이지 내용을 Notion의 AI 공급자에게 전송하는 일이 중단됩니다.',
           '권장 Ollama 모델: 채팅 — Llama 3.2 3B 또는 Phi-4 Mini; 임베딩(Joplin Jarvis 전용) — nomic-embed-text 또는 mxbai-embed-large.',
         ],
         updatedDate: '2026-05-08',
@@ -3609,7 +3609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Logseq + logseq-copilot은 아웃라이너 / 일일 저널 사용자에게 권장되는 조합입니다.** logseq-copilot은 `http://localhost:11434/v1`의 Ollama에 연결하여 Logseq 내에 채팅 블록과 슬래시 명령어를 추가합니다. 이미 Logseq의 일일 저널 페이지 모델에서 생활하는 사용자에게 이상적입니다.',
           '**Joplin + Jarvis는 순수 Markdown 노트 사용자에게 권장되는 조합입니다.** Jarvis는 전체 노트북에 채팅 사이드바, 요약 명령어, 임베딩 기반 시맨틱 검색을 추가합니다. 강력한 종단 간 암호화 동기화를 갖춘 Notion 스타일 노트북을 원하는 사용자에게 이상적입니다.',
           '**두 도구 모두 AGPL 3.0 하에 오픈소스입니다** — 라이선스는 개인 및 상업적 사용에 허용적이며, 수정하여 공개적으로 호스팅하는 경우 소스 코드를 공개해야 하는 제약만 있습니다.',
-          '**프라이버시 자세는 아키텍처 측면에서 Notion AI를 능가합니다.** Notion AI는 설계상 노트 내용을 OpenAI에 전송하지만, Logseq와 Joplin은 클라우드 공급자를 명시적으로 설정하지 않는 한 아무것도 전송하지 않습니다. 이 차이는 의료, 법률, 저널리즘, GDPR 적용 맥락에서 중요합니다.',
+          '**프라이버시 자세는 아키텍처 측면에서 Notion AI를 능가합니다.** Notion AI는 설계상 페이지 내용을 제3자 모델 공급자에 전송하지만, Logseq와 Joplin은 클라우드 공급자를 명시적으로 설정하지 않는 한 아무것도 전송하지 않습니다. 이 차이는 의료, 법률, 저널리즘, GDPR 적용 맥락에서 중요합니다.',
           '**모바일 플러그인 격차가 2026년 최대 제약입니다.** Logseq Mobile도 Joplin Mobile도 플러그인을 지원하지 않습니다. AI 기능은 데스크톱에서만 실행되며, 모바일은 캡처(노트 작성) 화면이 되고, 처리(요약, 채팅, 검색)는 나중에 데스크톱에서 이루어집니다.',
           '**클라우드 없는 동기화는 간단하지만 각 도구가 서로 다른 접근 방식을 취합니다.** Logseq는 내장 Git 동기화를 갖추고 있으며 Syncthing 또는 iCloud Drive와 깔끔하게 작동합니다. Joplin은 종단 간 암호화 Joplin Cloud, 자체 호스팅 Joplin Server, 또는 E2EE를 갖춘 WebDAV / Nextcloud / Dropbox 백엔드를 제공합니다.',
           '**Notion AI에서의 마이그레이션은 두 도구 모두 처리하는 일방향 이동입니다.** Logseq는 블록 수준 충실도가 높은 Notion Markdown 내보내기를 가져오고, Joplin은 내용을 가져오지만 중첩된 블록을 평탄화합니다. 마이그레이션 후에는 결정하지 않는 한 어떤 노트도 귀하의 컴퓨터를 떠나지 않습니다.',
@@ -3745,17 +3745,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'vs-notion',
         title: 'Notion AI에 반대하는 프라이버시 논거',
         content:
-          '**Notion AI는 설계상 노트 내용을 OpenAI에 전송합니다 — 이것은 아키텍처이지 설정 선택이 아닙니다.** Notion AI 기능을 페이지에서 사용하면 Notion이 페이지 내용을 OpenAI 서버에 전송하고, OpenAI가 처리하며, 응답이 Notion을 통해 돌아옵니다. 데이터는 귀하의 로컬 파일 시스템이 아닌 OpenAI와 Notion의 개인정보 처리 방침에 의해 관리됩니다. 규제 맥락(의료, 법률, 재무 자문, 저널리즘, GDPR 적용 EU 데이터)의 사용자에게 이것은 어떤 설정으로도 해결할 수 없는 구조적 문제입니다.',
+          '**Notion AI는 설계상 페이지 내용을 제3자 모델 공급자에 전송합니다 — 이것은 아키텍처이지 설정 선택이 아닙니다.** Notion AI 기능을 페이지에서 사용하면 Notion이 페이지 내용을 해당 요청을 처리하는 모델 공급자에 전송하고, 응답은 Notion을 통해 돌아옵니다. Notion은 기본적으로 Notion과 AI 공급자 모두 고객 데이터를 모델 학습에 사용하지 않으며, Enterprise 요금제에서는 대부분의 모델이 데이터 제로 보존을 제공한다고(다른 요금제에서는 공급자가 최대 30일간 데이터를 보존) 밝히고 있습니다. 그래도 데이터는 귀하의 컴퓨터를 떠나며, 귀하의 로컬 파일 시스템이 아닌 Notion과 해당 공급자의 약관에 따라 관리됩니다. 규제 맥락(의료, 법률, 재무 자문, 저널리즘, GDPR 적용 EU 데이터)의 사용자에게 이것은 어떤 설정으로도 없앨 수 없는 구조적 차이입니다.',
         items: [
-          '**Notion AI 아키텍처:** 노트가 OpenAI에 의해 처리되기 위해 귀하의 컴퓨터를 떠납니다. OpenAI Enterprise 데이터 처리 조건(표준 OpenAI API보다 더 좋음)에 따르지만, 여전히 귀하의 인프라 밖에 있습니다.',
+          '**Notion AI 아키텍처:** 노트가 Notion이 사용하는 모델 공급자(현재 목록은 Notion의 하위 처리자 페이지에 있음)에 의해 처리되기 위해 귀하의 컴퓨터를 떠나며, Notion의 데이터 처리 조건을 따르지만 여전히 귀하의 인프라 밖에 있습니다.',
           '**Logseq + logseq-copilot 아키텍처:** Logseq는 로컬 앱으로 실행되고, 플러그인이 로컬 Ollama로 프롬프트를 전송하며, 플러그인에서 클라우드 공급자를 명시적으로 설정하지 않는 한 어떤 노트 내용도 제3자에게 도달하지 않습니다.',
           '**Joplin + Jarvis 아키텍처:** Joplin은 로컬 앱으로 실행되고, Jarvis가 로컬 Ollama로 프롬프트를 전송하며, 임베딩 생성이 로컬에서 실행되고, Jarvis에서 클라우드 공급자를 명시적으로 설정하지 않는 한 어떤 노트 내용도 제3자에게 도달하지 않습니다.',
-          '**데이터 거주:** Logseq 또는 Joplin + Ollama를 사용하면 모든 노트 내용 바이트가 귀하의 컴퓨터에 남습니다. Notion AI를 사용하면 위치에 관계없이 노트 내용이 미국 소재 OpenAI 서버를 통과합니다.',
+          '**데이터 거주:** Logseq 또는 Joplin + Ollama를 사용하면 모든 노트 내용 바이트가 귀하의 컴퓨터에 남습니다. Notion AI를 사용하면 노트 내용이 Notion의 서버와 모델 공급자에 전송되며, 이들이 어디서 운영되는지는 Notion의 하위 처리자 목록에서 확인하십시오.',
           '**감사 추적:** 로컬 LLM을 사용하면 설치 후 한 번 패킷 캡처(Wireshark, Little Snitch 등)를 실행하여 AI 사용 중 플러그인이 발신 호출을 전혀 하지 않는지 확인할 수 있습니다. Notion AI의 경우 발신 호출이 본질적입니다 — 확인할 것이 없습니다.',
-          '**하위 처리자 위험:** Notion AI는 OpenAI의 모든 하위 처리자(주요 인프라로서 Microsoft Azure, 추가 지원 공급자)를 상속합니다. Logseq와 Joplin + Ollama는 AI 계층에 대한 하위 처리자가 없습니다.',
+          '**하위 처리자 위험:** Notion AI는 Notion의 하위 처리자 페이지에 나열된 모델 공급자에 의존하며, 각 공급자는 추가로 검토해야 할 당사자입니다. Logseq와 Joplin + Ollama는 AI 계층에 대한 하위 처리자가 없습니다.',
         ],
         image: '/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg',
-        imageCaption: 'Notion AI는 요청마다 노트 내용을 OpenAI 클라우드(미국)로 전송합니다. Logseq + logseq-copilot과 Joplin + Jarvis는 동일한 요청을 localhost:11434/v1의 Ollama로 전달하므로 콘텐츠가 기기를 벗어나지 않습니다.',
+        imageCaption: 'Notion AI는 요청마다 노트 내용을 Notion의 클라우드와 모델 공급자로 전송합니다. Logseq + logseq-copilot과 Joplin + Jarvis는 동일한 요청을 localhost:11434/v1의 Ollama로 전달하므로 콘텐츠가 기기를 벗어나지 않습니다.',
         callouts: [
           {
             type: 'tip',
@@ -3808,19 +3808,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'gdpr',
         title: 'GDPR 및 EU 데이터 거주',
         content:
-          '**EU 및 DACH 사용자에게 Logseq + logseq-copilot + Ollama와 Joplin + Jarvis + Ollama는 기본 아키텍처 측면에서 Notion AI보다 GDPR에 더 준수적입니다.** 노트 내용이 데이터 컨트롤러의 컴퓨터를 절대 떠나지 않으므로, SaaS 도구에 대해 GDPR 제28조(처리자 계약), 제44조(국제 이전), BSI-Grundschutz 카탈로그가 문서화를 요구하는 데이터 흐름이 로컬 스택에서는 단순히 존재하지 않습니다.',
+          '**EU 및 DACH 사용자에게 Logseq + logseq-copilot + Ollama와 Joplin + Jarvis + Ollama는 기본 아키텍처 측면에서 Notion AI보다 GDPR에 더 준수적입니다.** 노트 내용이 데이터 컨트롤러의 컴퓨터를 절대 떠나지 않으므로, SaaS 도구에 대해 GDPR 제28조(처리자 계약), 제44조(국제 이전), BSI IT-Grundschutz가 문서화를 요구하는 데이터 흐름이 로컬 스택에서는 단순히 존재하지 않습니다.',
         items: [
-          '**제28조(처리자 계약):** Notion AI를 사용하면 Notion + OpenAI가 처리자이며 OpenAI로의 국제 이전을 위한 데이터 처리 계약(DPA) + 표준 계약 조항(SCC)이 필요합니다. Logseq / Joplin + Ollama를 사용하면 제3자 처리자가 없습니다 — 로컬 소프트웨어를 실행하는 컨트롤러만 있습니다.',
-          '**제44조(국제 이전):** Notion AI는 미국 소재 OpenAI 서버에 데이터를 전송합니다. 이것은 SCC와 이전 영향 평가(TIA)가 필요한 Schrems II "국제 이전"입니다. Ollama의 로컬 처리는 이전을 완전히 제거합니다.',
-          '**BSI-Grundschutz 카탈로그(DACH):** 독일의 연방 IT 보안 지침은 클라우드 AI 서비스를 공식적인 위험 평가가 필요한 아웃소싱으로 취급합니다. 로컬 AI 처리는 훨씬 더 간단한 "내부 IT" 기준선에 해당합니다.',
-          '**삭제권(제17조):** Notion AI를 사용하면 계정에서 노트 내용을 삭제해도 OpenAI의 훈련 파이프라인 또는 로그에서 반드시 삭제되지는 않습니다(엔터프라이즈 조건에 따라 다름). 로컬 Ollama를 사용하면 삭제는 파일 시스템 삭제입니다 — 확인 가능하고 완전합니다.',
+          '**제28조(처리자 계약):** Notion AI를 사용하면 Notion은 데이터 처리 부속서(DPA)에 따라 처리자로 활동하며 AI를 위해 하위 처리자에 의존하므로, DPA와 하위 처리자 목록을 검토해야 합니다. Logseq / Joplin + Ollama를 사용하면 제3자 처리자가 없습니다 — 로컬 소프트웨어를 실행하는 컨트롤러만 있습니다.',
+          '**제44조(국제 이전):** Notion이 요청에 어떤 공급자를 사용하느냐에 따라 Notion AI에는 표준 계약 조항(SCC)과 이전 평가가 필요한 EU 외부로의 이전이 수반될 수 있습니다 — Notion의 DPA와 하위 처리자 목록을 확인하십시오. Ollama의 로컬 처리는 AI 단계에서 이전을 피할 수 있게 해 줍니다.',
+          '**BSI IT-Grundschutz(DACH):** 독일의 연방 IT 보안 지침은 일반적으로 클라우드 서비스를 공식적인 위험 평가가 필요한 아웃소싱으로 취급합니다. 로컬 AI 처리는 더 간단한 내부 IT 조치에 해당합니다.',
+          '**삭제권(제17조):** Notion AI를 사용하면 삭제된 내용이 보존 기간 동안 AI 공급자에게 남아 있을 수 있습니다(Notion은 Enterprise가 아닌 요금제에서 최대 30일이라고 밝히고 있음). 로컬 Ollama를 사용하면 삭제는 귀하의 파일 시스템에서의 삭제이며, 귀하가 관리하는 백업과 동기화 사본도 포함됩니다.',
           '**감사 가능성:** 로컬 스택은 감사하기 더 쉽습니다. 한 번 패킷 캡처를 실행하고, AI 사용 중 발신 트래픽이 없음을 확인하고, 결과를 문서화합니다. 클라우드 AI 서비스는 공급자의 SOC 2 / ISO 27001 보고서를 신뢰해야 합니다.',
           '**EU 호환 호스팅(동기화에 서버가 포함될 때):** Joplin Cloud는 EU에서 호스팅됩니다; 자체 호스팅 Joplin Server는 EU 인프라(Hetzner, OVH, IONOS)에서 호스팅 가능합니다. Logseq Sync는 Logseq Inc.(미국 소재)에 의해 운영됩니다 — EU 엄격한 거주를 위해서는 Logseq 동기화에 Git 또는 Syncthing을 선호하십시오.',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'GDPR 하에서 AI 기능에 대한 방어 가능한 입장이 필요한 조직에게 Logseq 또는 Joplin의 로컬 LLM 스택이 가장 간단한 답입니다. DPA 논의는 "이러한 조항을 통해 Notion + OpenAI를 하위 처리자로 사용합니다"에서 "컨트롤러 엔드포인트에서 실행되는 로컬 소프트웨어를 사용하며 관련된 처리자가 없습니다"로 바뀝니다. 규정 준수 팀의 작업이 훨씬 간단해집니다.',
+            text: 'GDPR 하에서 AI 기능에 대한 방어 가능한 입장이 필요한 조직에게 Logseq 또는 Joplin의 로컬 LLM 스택이 가장 간단한 답입니다. DPA 논의는 "이러한 조항을 통해 Notion과 그 AI 하위 처리자를 사용합니다"에서 "컨트롤러 엔드포인트에서 실행되는 로컬 소프트웨어를 사용하며 관련된 처리자가 없습니다"로 바뀝니다. 규정 준수 팀의 작업이 훨씬 간단해집니다.',
           },
         ],
       },
@@ -3828,7 +3828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'notion-migration',
         title: 'Notion AI에서 Logseq 또는 Joplin으로 마이그레이션',
         content:
-          '**Notion은 Logseq와 Joplin 모두 가져올 수 있는 네이티브 Markdown 내보내기를 제공합니다 — Logseq는 블록 수준 구조를 더 잘 보존하고, Joplin은 내용을 보존하지만 중첩된 블록을 평탄화합니다.** 어느 쪽이든 마이그레이션은 지속적인 동기화가 아닌 일회성 내보내기-가져오기이며, OpenAI로의 데이터 흐름을 즉시 중단합니다.',
+          '**Notion은 Logseq와 Joplin 모두 가져올 수 있는 네이티브 Markdown 내보내기를 제공합니다 — Logseq는 블록 수준 구조를 더 잘 보존하고, Joplin은 내용을 보존하지만 중첩된 블록을 평탄화합니다.** 어느 쪽이든 마이그레이션은 지속적인 동기화가 아닌 일회성 내보내기-가져오기이며, 페이지 내용을 Notion의 AI 공급자에게 전송하는 일을 즉시 중단합니다.',
         numberedItems: [
           '**Notion에서 내보내기:** 설정 → 설정 및 구성원 → 설정 → "전체 워크스페이스 콘텐츠 내보내기" → "Markdown & CSV" 선택 → ZIP 다운로드. 내보내기에는 페이지당 하나의 .md 파일과 중첩 페이지용 폴더가 포함됩니다.',
           '**압축 해제 및 정리:** Notion 내보내기는 파일 이름에 긴 페이지 ID 접미사를 사용합니다(예: `My Page 1f8b2a3c4d5e6f7g8h9i.md`). 파일 이름이 새 도구에서 중요하다면 빠른 이름 바꾸기 스크립트를 실행하여 ID를 제거하십시오.',
@@ -3886,7 +3886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Joplin — [joplinapp.org](https://joplinapp.org) 및 [github.com/laurent22/joplin](https://github.com/laurent22/joplin) (오픈소스 노트북; AGPL 3.0).',
           'Jarvis(Joplin) — [github.com/alondmnt/joplin-plugin-jarvis](https://github.com/alondmnt/joplin-plugin-jarvis) (오픈소스 Joplin 플러그인; AGPL 3.0).',
           'Ollama — [ollama.com](https://ollama.com) 및 [github.com/ollama/ollama](https://github.com/ollama/ollama) (로컬 LLM 런타임; MIT).',
-          'Notion AI 개인정보 보호 및 데이터 처리 — [notion.com/help/notion-ai-faqs](https://www.notion.com/help/notion-ai-faqs) (비교 맥락을 위한 공급자 문서).',
+          'Notion AI 보안 관행(공급자, 학습, 보존) — [notion.com/help/notion-ai-security-practices](https://www.notion.com/help/notion-ai-security-practices) (비교 맥락을 위한 공급자 문서).',
         ],
       },
       faq: {
@@ -3931,7 +3931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 AI 통합이 Notion AI보다 더 안전합니까?',
-            a: '기본 아키텍처 측면에서 그렇습니다. Notion AI는 설계상 노트 내용을 OpenAI에 전송합니다 — 이것은 구조적이며 설정 선택이 아닙니다. Logseq + logseq-copilot + Ollama와 Joplin + Jarvis + Ollama는 클라우드 LLM 공급자를 명시적으로 설정하지 않는 한 제3자에게 아무것도 전송하지 않습니다. GDPR 적용 EU 데이터, 의료, 법률, 저널리즘의 경우 이 차이가 중요합니다. 로컬 스택은 처리자가 없고, 국제 이전이 없으며, 하위 처리자 위험이 없습니다. 감사 가능성도 더 간단합니다 — 한 번의 패킷 캡처가 AI 사용 중 발신 트래픽이 없음을 증명합니다.',
+            a: '아키텍처가 다릅니다. Notion AI는 설계상 노트 내용을 제3자 모델 공급자에 전송하며, Notion은 기본적으로 Notion과 공급자 모두 고객 데이터로 학습하지 않고 Enterprise는 데이터 제로 보존을 제공한다고 밝히고 있습니다. Logseq + logseq-copilot + Ollama와 Joplin + Jarvis + Ollama는 클라우드 LLM 공급자를 명시적으로 설정하지 않는 한 제3자에게 아무것도 전송하지 않습니다. GDPR 적용 EU 데이터, 의료, 법률, 저널리즘의 경우 이 차이가 중요합니다. 로컬 스택은 처리자가 없고, 국제 이전이 없으며, AI 계층에 대한 하위 처리자가 없습니다. 감사 가능성도 더 간단합니다 — 한 번의 패킷 캡처로 AI 사용 중 발신 트래픽이 있는지 확인할 수 있습니다.',
           },
           {
             q: 'Logseq는 RAG를 지원하거나 로컬 지식 베이스로 작동합니까?',
@@ -3961,7 +3961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-with-logseq-and-joplin',
       inLanguage: 'ko',
       datePublished: '2026-05-08',
-      dateModified: '2026-07-14',
+      dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

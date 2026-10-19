@@ -21955,7 +21955,7 @@
     "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
     "excerpt": "Logseq LLM (logseq-copilot) vs Joplin LLM (Jarvis) with Ollama: RAG support, cloud-free sync, mobile gaps, and Notion AI migration compared. 2026.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-08-30",
+    "dateModified": "2026-10-19",
     "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
     "cluster": "power-local-llm"
   },
@@ -21964,7 +21964,7 @@
     "title": "Logseq und Joplin mit lokalen LLMs: Intelligente Notizen ohne Cloud-Synchronisierung (2026)",
     "excerpt": "Logseq + Ollama als lokales LLM: logseq-copilot-Plugin, RAG-Grenzen vs. Joplin + Jarvis, cloudfreie Synchronisierung und Vergleich mit Obsidian. 2026.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/de/power-local-llm/local-llm-with-logseq-and-joplin",
     "cluster": "power-local-llm"
   },
@@ -21973,7 +21973,7 @@
     "title": "Logseq et Joplin avec LLM locaux : notes intelligentes sans synchronisation cloud (2026)",
     "excerpt": "Logseq + Ollama en LLM local : plugin logseq-copilot, limites RAG face à Joplin + Jarvis, synchronisation sans cloud et comparaison avec Obsidian. 2026.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/fr/power-local-llm/local-llm-with-logseq-and-joplin",
     "cluster": "power-local-llm"
   },
@@ -21982,7 +21982,7 @@
     "title": "Logseq と Joplin でローカル LLM：クラウド同期なしのスマートノート（2026）",
     "excerpt": "Logseq + Ollamaでローカル LLM：logseq-copilotとRAGの限界、Joplin + Jarvis比較、クラウド不要同期。Obsidianとの比較も。2026年版。",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/ja/power-local-llm/local-llm-with-logseq-and-joplin",
     "cluster": "power-local-llm"
   },
@@ -21991,7 +21991,7 @@
     "title": "Logseq 与 Joplin 配合本地 LLM：无云同步的智能笔记（2026）",
     "excerpt": "Logseq + Ollama 本地LLM指南：logseq-copilot 插件、RAG 局限对比 Joplin + Jarvis、无云同步及与 Obsidian 的对比。2026 年。",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/zh/power-local-llm/local-llm-with-logseq-and-joplin",
     "cluster": "power-local-llm"
   },
@@ -22000,7 +22000,7 @@
     "title": "Logseq y Joplin con LLMs locales: notas inteligentes sin sincronización en la nube (2026)",
     "excerpt": "Logseq + Ollama en LLM local: plugin logseq-copilot, límites de RAG frente a Joplin + Jarvis, sync sin nube y comparación con Obsidian. 2026.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/es/power-local-llm/local-llm-with-logseq-and-joplin",
     "cluster": "power-local-llm"
   },
@@ -22009,7 +22009,7 @@
     "title": "Logseq e Joplin com LLMs locais: notas inteligentes sem sincronização na nuvem (2026)",
     "excerpt": "Logseq + Ollama em LLM local: plugin logseq-copilot, limites de RAG vs. Joplin + Jarvis, sync sem nuvem e comparação com o Obsidian. 2026.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/pt/power-local-llm/local-llm-with-logseq-and-joplin",
     "cluster": "power-local-llm"
   },
@@ -22018,7 +22018,7 @@
     "title": "⁨Logseq⁩ و⁨Joplin⁩ مع نماذج اللغة المحلية: ملاحظات ذكية بدون مزامنة سحابية (⁨2026⁩)",
     "excerpt": "⁨Logseq⁩ مع ⁨Ollama⁩ كنموذج لغوي محلي: ملحق ⁨logseq-copilot⁩، وحدود ⁨RAG⁩ مقارنة بـ ⁨Joplin⁩ + ⁨Jarvis⁩، ومزامنة بلا سحابة، ومقارنة بـ ⁨Obsidian⁩. 2026.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/ar/power-local-llm/local-llm-with-logseq-and-joplin",
     "cluster": "power-local-llm"
   },
@@ -22027,7 +22027,7 @@
     "title": "Logseq와 Joplin으로 로컬 LLM 활용하기: 클라우드 동기화 없는 스마트 노트 (2026)",
     "excerpt": "Logseq + Ollama 로컬 LLM 가이드: logseq-copilot 플러그인, RAG 한계 대비 Joplin + Jarvis, 클라우드 없는 동기화, Obsidian과의 비교를 다룹니다. 2026년.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/ko/power-local-llm/local-llm-with-logseq-and-joplin",
     "cluster": "power-local-llm"
   },
