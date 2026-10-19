@@ -34,7 +34,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'What are the current AI model knowledge cutoff dates?',
-        answer: 'Verified cutoffs: Claude Opus 5.5 June 2026 (reliable cutoff; supersedes Claude Opus 5, May 2026); GPT-6 Astra and GPT-6.1 Sol April 2026, GPT-6 Luna May 2026 (ChatGPT searches Bing by default; the GPT-6 family supersedes GPT-5.6, Feb 2026; GPT-4o is a legacy model, Oct 2023); Grok 4.7 May 2026 (searches X by default in the consumer app; supersedes Grok 4.6, Feb 2026). Google, Mistral, and DeepSeek state no cutoff for Gemini 4 Argon, Mistral Large 4, or DeepSeek-V4; the previous Gemini flagship, Gemini 3.1 Pro, lists January 2025 (native Google Search). Local LLMs (Llama, Qwen, Gemma, Phi) have no web search and their cutoff is absolute. Previous-generation open-weight models keep their dates: DeepSeek-V3 July 2024, Gemma 3 27B August 2024, Phi-4 June 2024, Qwen2.5 December 2023; DeepSeek-V4 and Gemma 4 are the newer generations.',
+        answer: 'Verified cutoffs: Claude Opus 5.5 June 2026 (reliable cutoff; supersedes Claude Opus 5, May 2026); GPT-6 Astra and GPT-6.1 Sol April 2026, GPT-6 Luna May 2026 (ChatGPT searches Bing by default; the GPT-6 family supersedes GPT-5.6, Feb 2026; GPT-4o is a legacy model, Oct 2023); Grok 4.7 May 2026 (searches X by default in the consumer app; supersedes Grok 4.6, Feb 2026). Google, Mistral, and DeepSeek state no cutoff for Gemini 4 Argon, Mistral Large 4, or DeepSeek-V4; the previous Gemini flagship, Gemini 3.1 Pro, lists January 2025 (native Google Search). Local LLMs (Llama, Qwen, Gemma, Phi) have no web search and their cutoff is absolute. Among open-weight models, Meta documents August 2024 for Llama 4 Scout, Google August 2024 for Gemma 3 27B and Microsoft June 2024 for Phi-4; we found no stated cutoff for DeepSeek-V3 and V4, Qwen2.5 and Qwen3, Mistral Small 3 or Gemma 4.',
         bullets: [
           'GPT-6 family (ChatGPT): Apr–May 2026 cutoff — partially offset by Bing search default',
           'Claude (Opus 5.5): June 2026 reliable cutoff — web search requires explicit tool activation',
@@ -69,7 +69,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'A knowledge cutoff is a hard date — the model has zero training data after it, and will confabulate or say it doesn\'t know about anything after that date',
           'Cloud models (ChatGPT, Gemini, Grok) partially compensate via built-in web search; the search layer can override stale training data for factual queries',
           'Local LLMs (Llama, Qwen, Gemma, Phi, Mistral) have NO search layer — their cutoff is an absolute frozen knowledge limit with no override',
-          'Several major models — Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Llama 4, Qwen3 — have not publicly disclosed exact cutoff dates; "Not publicly disclosed" below means no primary source exists',
+          'Several major models — Gemini 4 Argon, Mistral Large 4, DeepSeek-V4 and Qwen3 — have not publicly disclosed exact cutoff dates; "Not publicly disclosed" below means we found no primary source stating one',
           'For GEO strategy: appearing in cloud AI requires SEO/search optimization; appearing in local AI requires RAG pipelines built by the deployer',
         ],
       },
@@ -91,7 +91,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'ChatGPT searches Bing by default, Gemini searches Google, and Grok searches X — but Claude requires explicit tool activation and DeepSeek has no search layer at all.',
+            text: 'ChatGPT searches Bing by default, Gemini searches Google, and Grok searches X — but Claude\'s web search must be enabled as a tool, and DeepSeek\'s API models have no built-in search layer.',
           },
         ],
       },
@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '<strong>Cloud AI models and local LLMs handle knowledge cutoffs differently in one critical way: cloud models can search the live web; local models cannot.</strong>',
           'When ChatGPT can\'t answer from training data, it silently queries Bing and augments its response with current results. When Gemini is asked about a recent event, it searches Google. These search layers hide the cutoff from casual users — you get a current-sounding answer even though the base model\'s training data is months or years old.',
-          'A locally-run Qwen3 or Llama 4 on your machine has no such safety net. Ask it about a product launched last month and it has two options: confabulate (hallucinate a plausible-sounding but fabricated answer), or say it doesn\'t know. There is no third option — it physically cannot reach the internet unless you build that capability yourself via a RAG pipeline.',
+          'A locally-run Qwen3 or Llama 4 on your machine has no such safety net. Ask it about a product launched last month and it has two options: confabulate (hallucinate a plausible-sounding but fabricated answer), or say it doesn\'t know. There is no third option — it cannot reach the internet on its own unless you add that capability yourself, for example via a RAG pipeline or a search tool.',
           'This distinction matters for three groups: <strong>users</strong> who need accurate current-events answers; <strong>businesses</strong> deploying AI internally on local hardware; and <strong>companies</strong> that want to appear in AI answers (GEO strategy — see the <a href="/prompt-engineering/knowledge-cutoffs-and-geo" class="text-primary hover:underline">full GEO analysis</a>).',
         ],
         callouts: [
@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             { q: 'What is a knowledge cutoff date in AI?', a: 'A knowledge cutoff date is the date after which an AI model has no training data. Events, product releases, research papers, or any information published after the cutoff are invisible to the model. The model cannot know these things exist unless it can search the live web or is given the information in the prompt.' },
             { q: 'What is the difference between a knowledge cutoff and live search?', a: 'A knowledge cutoff is a property of the model\'s training data — a fixed frozen date. Live search is a capability layered on top of the model that lets it retrieve current web pages at query time. ChatGPT (Bing), Gemini (Google), and Grok (X) have live search by default. Claude requires explicit tool activation. Local LLMs have no live search by default — you must build a RAG pipeline to add it.' },
             { q: 'Do local LLMs ever update their knowledge?', a: 'No. A local LLM\'s knowledge is frozen at its training cutoff and stays frozen indefinitely. To give a local LLM access to newer information, you must either: (1) fine-tune or retrain the model on newer data (expensive), or (2) build a RAG (Retrieval-Augmented Generation) pipeline that fetches relevant documents at query time and injects them into the prompt. See our guide to <a href="/local-llms/local-rag-2026" class="text-primary hover:underline">local RAG pipelines</a>.' },
-            { q: 'Which AI models can see today\'s news and current events?', a: 'ChatGPT (uses Bing by default in paid tiers), Gemini (uses Google by default), and Grok (searches X/Twitter by default in the consumer app) can access current information. Perplexity is web-search-native and retrieves live results for every query. Claude can search the web only when developers explicitly enable the web search tool. DeepSeek, Mistral Large, and all local LLMs (Llama, Qwen, Gemma, Phi) have no default search access.' },
+            { q: 'Which AI models can see today\'s news and current events?', a: 'ChatGPT (uses Bing by default in paid tiers), Gemini (uses Google by default), and Grok (searches X/Twitter by default in the consumer app) can access current information. Perplexity is web-search-native and retrieves live results for every query. Via the API, Claude can search the web only when developers explicitly enable the web search tool, and DeepSeek and Mistral Large have no built-in search layer. Local LLMs (Llama, Qwen, Gemma, Phi) have no default search access.' },
             { q: 'Is the ChatGPT cutoff date the same as what it knows right now?', a: 'No. ChatGPT (the product) has both a training cutoff date and a live Bing search capability. For recent factual queries, it searches Bing and augments its answer with current results — so what it "knows" at query time can be much newer than the training cutoff. The training cutoff still matters for: nuanced understanding of events (not just facts), contextual knowledge woven into its reasoning, and any information not indexed by Bing.' },
           ],
       },
@@ -210,7 +210,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Which AI models can see today\'s news and current events?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'ChatGPT (uses Bing by default in paid tiers), Gemini (uses Google by default), and Grok (searches X/Twitter by default in the consumer app) can access current information. Perplexity is web-search-native and retrieves live results for every query. Claude can search the web only when developers explicitly enable the web search tool. DeepSeek, Mistral Large, and all local LLMs (Llama, Qwen, Gemma, Phi) have no default search access.',
+              'text': 'ChatGPT (uses Bing by default in paid tiers), Gemini (uses Google by default), and Grok (searches X/Twitter by default in the consumer app) can access current information. Perplexity is web-search-native and retrieves live results for every query. Via the API, Claude can search the web only when developers explicitly enable the web search tool, and DeepSeek and Mistral Large have no built-in search layer. Local LLMs (Llama, Qwen, Gemma, Phi) have no default search access.',
             },
           },
           {
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Ein Wissens-Cutoff ist ein hartes Datum — das Modell hat nach diesem Datum keinerlei Trainingsdaten',
           'Cloud-Modelle (ChatGPT, Gemini, Grok) kompensieren dies teilweise durch eingebaute Websuche',
           'Lokale LLMs (Llama, Qwen, Gemma, Phi, Mistral) haben KEINE Suchfunktion — ihr Cutoff ist eine absolute Wissensgrenze',
-          'Mehrere große Modelle — Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Llama 4, Qwen3 — haben keine öffentlichen Cutoff-Daten bekannt gegeben',
+          'Mehrere große Modelle — Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Qwen3 — haben keine öffentlichen Cutoff-Daten bekannt gegeben',
         ],
       },
       relatedBites: {
@@ -285,7 +285,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { q: 'Was ist ein Wissens-Cutoff-Datum bei KI?', a: 'Ein Wissens-Cutoff-Datum ist das Datum, nach dem ein KI-Modell keine Trainingsdaten mehr hat. Ereignisse, Produktveröffentlichungen oder Informationen nach diesem Datum sind für das Modell unsichtbar, es sei denn, es kann im Live-Web suchen oder erhält die Information im Prompt.' },
           { q: 'Was ist der Unterschied zwischen Wissens-Cutoff und Live-Suche?', a: 'Ein Wissens-Cutoff ist eine Eigenschaft der Trainingsdaten des Modells — ein fixes, eingefrorenes Datum. Live-Suche ist eine zusätzliche Fähigkeit, die aktuelle Webseiten zur Abfragezeit abruft. Lokale LLMs haben standardmäßig keine Live-Suche.' },
           { q: 'Aktualisieren lokale LLMs jemals ihr Wissen?', a: 'Nein. Das Wissen eines lokalen LLM ist bei seinem Trainings-Cutoff eingefroren und bleibt dauerhaft eingefroren. Um Zugriff auf neuere Informationen zu geben, muss man entweder das Modell neu trainieren oder eine RAG-Pipeline aufbauen.' },
-          { q: 'Welche KI-Modelle können aktuelle Nachrichten sehen?', a: 'ChatGPT, Gemini und Grok haben standardmäßig Zugriff auf aktuelle Informationen über eingebaute Websuche. Claude kann nur suchen, wenn Entwickler das Websuche-Tool explizit aktivieren. Lokale LLMs (Llama, Qwen, Gemma, Phi) haben keinen Standard-Suchzugriff.' },
+          { q: 'Welche KI-Modelle können aktuelle Nachrichten sehen?', a: 'ChatGPT, Gemini und Grok haben standardmäßig Zugriff auf aktuelle Informationen über eingebaute Websuche. Über die API kann Claude nur suchen, wenn Entwickler das Websuche-Tool explizit aktivieren; DeepSeek und Mistral Large haben dort keine eingebaute Suche. Lokale LLMs (Llama, Qwen, Gemma, Phi) haben keinen Standard-Suchzugriff.' },
         ],
       },
     },
@@ -321,7 +321,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Un corte de conocimiento es una fecha fija — el modelo no tiene ningún dato de entrenamiento después de esa fecha',
           'Los modelos en la nube (ChatGPT, Gemini, Grok) compensan esto parcialmente con búsqueda web integrada',
           'Los LLM locales (Llama, Qwen, Gemma, Phi, Mistral) NO tienen capa de búsqueda — su corte es un límite de conocimiento absoluto',
-          'Varios modelos importantes — incluyendo Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Llama 4 y Qwen3 — no han revelado fechas de corte exactas',
+          'Varios modelos importantes — incluyendo Gemini 4 Argon, Mistral Large 4, DeepSeek-V4 y Qwen3 — no han revelado fechas de corte exactas',
         ],
       },
       faq: {
@@ -342,7 +342,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué modelos de IA pueden ver las noticias y los eventos actuales?',
-            a: 'ChatGPT (usa Bing por defecto en los planes de pago), Gemini (usa Google por defecto) y Grok (busca en X/Twitter por defecto en la app de consumidor) pueden acceder a información actual. Perplexity es nativo de búsqueda web y recupera resultados en vivo para cada consulta. Claude solo puede buscar en la web cuando los desarrolladores activan explícitamente la herramienta de búsqueda web. DeepSeek, Mistral Large y todos los LLM locales (Llama, Qwen, Gemma, Phi) no tienen acceso de búsqueda por defecto.',
+            a: 'ChatGPT (usa Bing por defecto en los planes de pago), Gemini (usa Google por defecto) y Grok (busca en X/Twitter por defecto en la app de consumidor) pueden acceder a información actual. Perplexity es nativo de búsqueda web y recupera resultados en vivo para cada consulta. A través de la API, Claude solo puede buscar en la web cuando los desarrolladores activan explícitamente la herramienta de búsqueda web, y DeepSeek y Mistral Large no tienen una capa de búsqueda integrada. Los LLM locales (Llama, Qwen, Gemma, Phi) no tienen acceso de búsqueda por defecto.',
           },
           {
             q: '¿La fecha de corte de ChatGPT es lo mismo que lo que sabe ahora mismo?',
@@ -393,7 +393,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Une date de coupure est fixe — le modèle n\'a aucune donnée d\'entraînement après cette date',
           'Les modèles cloud (ChatGPT, Gemini, Grok) compensent partiellement via la recherche web intégrée',
           'Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont AUCUNE couche de recherche — leur coupure est une limite absolue',
-          'Plusieurs grands modèles — Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Llama 4, Qwen3 — n\'ont pas divulgué de dates de coupure exactes',
+          'Plusieurs grands modèles — Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Qwen3 — n\'ont pas divulgué de dates de coupure exactes',
         ],
       },
       faq: {
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quels modèles d\'IA peuvent voir les actualités et événements actuels ?',
-            a: 'ChatGPT (utilise Bing par défaut dans les offres payantes), Gemini (utilise Google par défaut) et Grok (recherche X/Twitter par défaut dans l\'app grand public) peuvent accéder aux informations actuelles. Perplexity est nativement connecté au web et récupère des résultats en direct pour chaque requête. Claude ne peut rechercher sur le web que si les développeurs activent explicitement l\'outil de recherche web. DeepSeek, Mistral Large et tous les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas d\'accès à la recherche par défaut.',
+            a: 'ChatGPT (utilise Bing par défaut dans les offres payantes), Gemini (utilise Google par défaut) et Grok (recherche X/Twitter par défaut dans l\'app grand public) peuvent accéder aux informations actuelles. Perplexity est nativement connecté au web et récupère des résultats en direct pour chaque requête. Via l\'API, Claude ne peut rechercher sur le web que si les développeurs activent explicitement l\'outil de recherche web, et DeepSeek et Mistral Large n\'ont pas de couche de recherche intégrée. Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas d\'accès à la recherche par défaut.',
           },
           {
             q: 'La date de coupure de ChatGPT correspond-elle à ce qu\'il sait actuellement ?',
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '知識カットオフは固定された日付 — その日以降のデータはモデルに存在しない',
           'クラウドモデル（ChatGPT、Gemini、Grok）は組み込みのウェブ検索で部分的に補完',
           'ローカルLLM（Llama、Qwen、Gemma、Phi）は検索レイヤーなし — カットオフは絶対的な制限',
-          'Gemini 4 Argon、Mistral Large 4、DeepSeek-V4、Llama 4、Qwen3など主要モデルのカットオフ日は非公開',
+          'Gemini 4 Argon、Mistral Large 4、DeepSeek-V4、Qwen3など主要モデルのカットオフ日は非公開',
         ],
       },
       faq: {
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '今日のニュースや最新の出来事を確認できるAIモデルはどれですか？',
-            a: 'ChatGPT（有料プランではデフォルトでBingを使用）、Gemini（デフォルトでGoogleを使用）、Grok（コンシューマー向けアプリではデフォルトでX/Twitterを検索）は最新情報にアクセスできます。Perplexityはウェブ検索ネイティブで、すべてのクエリに対してライブ結果を取得します。Claudeは開発者がウェブ検索ツールを明示的に有効化した場合のみウェブ検索が可能です。DeepSeek、Mistral Large、およびすべてのローカルLLM（Llama、Qwen、Gemma、Phi）はデフォルトの検索アクセスを持ちません。',
+            a: 'ChatGPT（有料プランではデフォルトでBingを使用）、Gemini（デフォルトでGoogleを使用）、Grok（コンシューマー向けアプリではデフォルトでX/Twitterを検索）は最新情報にアクセスできます。Perplexityはウェブ検索ネイティブで、すべてのクエリに対してライブ結果を取得します。APIではClaudeは開発者がウェブ検索ツールを明示的に有効化した場合のみウェブ検索が可能で、DeepSeekとMistral Largeには組み込みの検索レイヤーがありません。ローカルLLM（Llama、Qwen、Gemma、Phi）はデフォルトの検索アクセスを持ちません。',
           },
           {
             q: 'ChatGPTのカットオフ日は、現在知っていることと同じですか？',
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '知识截止日期是固定的——该日期之后的信息对模型不可见',
           '云端模型（ChatGPT、Gemini、Grok）通过内置网络搜索部分弥补这一限制',
           '本地LLM（Llama、Qwen、Gemma、Phi）无搜索层——截止日期是绝对的知识边界',
-          'Gemini 4 Argon、Mistral Large 4、DeepSeek-V4、Llama 4、Qwen3等多个主要模型未公开具体截止日期',
+          'Gemini 4 Argon、Mistral Large 4、DeepSeek-V4、Qwen3等多个主要模型未公开具体截止日期',
         ],
       },
       faq: {
@@ -558,7 +558,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '哪些AI模型可以查看今天的新闻和最新事件？',
-            a: 'ChatGPT（在付费套餐中默认使用Bing）、Gemini（默认使用Google）和Grok（消费级应用默认搜索X/Twitter）可以访问最新信息。Perplexity原生支持网络搜索，每次查询都会检索实时结果。Claude只有在开发者明确启用网络搜索工具时才能进行网络搜索。DeepSeek、Mistral Large以及所有本地LLM（Llama、Qwen、Gemma、Phi）默认没有搜索访问权限。',
+            a: 'ChatGPT（在付费套餐中默认使用Bing）、Gemini（默认使用Google）和Grok（消费级应用默认搜索X/Twitter）可以访问最新信息。Perplexity原生支持网络搜索，每次查询都会检索实时结果。通过API使用时，Claude只有在开发者明确启用网络搜索工具时才能进行网络搜索，DeepSeek和Mistral Large没有内置搜索层。本地LLM（Llama、Qwen、Gemma、Phi）默认没有搜索访问权限。',
           },
           {
             q: 'ChatGPT的截止日期与它当前所知道的内容相同吗？',
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '지식 컷오프는 고정된 날짜입니다 — 그 날짜 이후의 정보는 모델에 존재하지 않습니다',
           '클라우드 모델(ChatGPT, Gemini, Grok)은 내장된 웹 검색으로 이를 부분적으로 보완합니다',
           '로컬 LLM(Llama, Qwen, Gemma, Phi)은 검색 레이어가 없습니다 — 컷오프는 절대적인 지식의 한계입니다',
-          'Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Llama 4, Qwen3 등 여러 주요 모델은 정확한 컷오프 날짜를 공개하지 않았습니다',
+          'Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Qwen3 등 여러 주요 모델은 정확한 컷오프 날짜를 공개하지 않았습니다',
         ],
       },
       faq: {
@@ -630,7 +630,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '오늘의 뉴스와 최신 사건을 확인할 수 있는 AI 모델은 무엇인가요?',
-            a: 'ChatGPT(유료 요금제에서 기본적으로 Bing 사용), Gemini(기본적으로 Google 사용), Grok(일반 소비자용 앱에서 기본적으로 X/Twitter 검색)은 최신 정보에 접근할 수 있습니다. Perplexity는 웹 검색 네이티브로, 모든 질의에 대해 실시간 결과를 가져옵니다. Claude는 개발자가 웹 검색 도구를 명시적으로 활성화한 경우에만 웹을 검색할 수 있습니다. DeepSeek, Mistral Large 및 모든 로컬 LLM(Llama, Qwen, Gemma, Phi)은 기본적으로 검색 접근 권한이 없습니다.',
+            a: 'ChatGPT(유료 요금제에서 기본적으로 Bing 사용), Gemini(기본적으로 Google 사용), Grok(일반 소비자용 앱에서 기본적으로 X/Twitter 검색)은 최신 정보에 접근할 수 있습니다. Perplexity는 웹 검색 네이티브로, 모든 질의에 대해 실시간 결과를 가져옵니다. API에서는 Claude가 개발자가 웹 검색 도구를 명시적으로 활성화한 경우에만 웹을 검색할 수 있으며, DeepSeek와 Mistral Large에는 내장 검색 레이어가 없습니다. 로컬 LLM(Llama, Qwen, Gemma, Phi)은 기본적으로 검색 접근 권한이 없습니다.',
           },
           {
             q: 'ChatGPT의 컷오프 날짜가 현재 알고 있는 것과 같은가요?',
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Datas de corte de conhecimento são fixas — informações após essa data não existem para o modelo',
           'Modelos em nuvem (ChatGPT, Gemini, Grok) compensam parcialmente com busca web integrada',
           'LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto de conhecimento',
-          'Vários modelos principais — incluindo Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Llama 4 e Qwen3 — não divulgaram datas de corte exatas',
+          'Vários modelos principais — incluindo Gemini 4 Argon, Mistral Large 4, DeepSeek-V4 e Qwen3 — não divulgaram datas de corte exatas',
         ],
       },
       faq: {
@@ -702,7 +702,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quais modelos de IA conseguem ver notícias e eventos atuais?',
-            a: 'ChatGPT (usa o Bing por padrão nos planos pagos), Gemini (usa o Google por padrão) e Grok (busca no X/Twitter por padrão no app para consumidores) podem acessar informações atuais. O Perplexity é nativo de busca web e recupera resultados ao vivo para cada consulta. O Claude só consegue buscar na web quando os desenvolvedores ativam explicitamente a ferramenta de busca web. DeepSeek, Mistral Large e todos os LLMs locais (Llama, Qwen, Gemma, Phi) não têm acesso de busca por padrão.',
+            a: 'ChatGPT (usa o Bing por padrão nos planos pagos), Gemini (usa o Google por padrão) e Grok (busca no X/Twitter por padrão no app para consumidores) podem acessar informações atuais. O Perplexity é nativo de busca web e recupera resultados ao vivo para cada consulta. Pela API, o Claude só consegue buscar na web quando os desenvolvedores ativam explicitamente a ferramenta de busca web, e DeepSeek e Mistral Large não têm camada de busca integrada. Os LLMs locais (Llama, Qwen, Gemma, Phi) não têm acesso de busca por padrão.',
           },
           {
             q: 'A data de corte do ChatGPT é a mesma coisa que ele sabe agora?',
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'تواريخ انقطاع المعرفة ثابتة — المعلومات بعد هذا التاريخ غير موجودة للنموذج',
           'نماذج السحابة (ChatGPT وGemini وGrok) تعوّض جزئيًا ببحث ويب مدمج',
           'نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد معرفي مطلق',
-          'عدة نماذج رئيسية — بما فيها Gemini 4 Argon وMistral Large 4 وDeepSeek-V4 وLlama 4 وQwen3 — لم تُفصح عن تواريخ انقطاع دقيقة',
+          'عدة نماذج رئيسية — بما فيها Gemini 4 Argon وMistral Large 4 وDeepSeek-V4 وQwen3 — لم تُفصح عن تواريخ انقطاع دقيقة',
         ],
       },
       faq: {
@@ -774,7 +774,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'ما هي نماذج الذكاء الاصطناعي القادرة على رؤية الأخبار والأحداث الحالية؟',
-            a: 'يمكن لـ ChatGPT (يستخدم Bing افتراضيًا في الخطط المدفوعة)، وGemini (يستخدم Google افتراضيًا)، وGrok (يبحث في X/Twitter افتراضيًا في تطبيق المستهلكين) الوصول إلى معلومات حالية. Perplexity مبني أصلًا على البحث في الويب ويسترجع نتائج مباشرة لكل استعلام. لا يستطيع Claude البحث في الويب إلا عندما يُفعّل المطورون أداة البحث في الويب صراحةً. لا تملك DeepSeek وMistral Large وجميع نماذج LLM المحلية (Llama وQwen وGemma وPhi) إمكانية بحث افتراضية.',
+            a: 'يمكن لـ ChatGPT (يستخدم Bing افتراضيًا في الخطط المدفوعة)، وGemini (يستخدم Google افتراضيًا)، وGrok (يبحث في X/Twitter افتراضيًا في تطبيق المستهلكين) الوصول إلى معلومات حالية. Perplexity مبني أصلًا على البحث في الويب ويسترجع نتائج مباشرة لكل استعلام. عبر واجهة API لا يستطيع Claude البحث في الويب إلا عندما يُفعّل المطورون أداة البحث في الويب صراحةً، ولا تملك DeepSeek وMistral Large طبقة بحث مدمجة. أما نماذج LLM المحلية (Llama وQwen وGemma وPhi) فلا تملك إمكانية بحث افتراضية.',
           },
           {
             q: 'هل تاريخ انقطاع ChatGPT هو نفسه ما يعرفه الآن؟',

@@ -11,7 +11,7 @@
  *  - hasLiveSearch: whether the model searches the live web BY DEFAULT for end users.
  *    Tool-use integrations that must be explicitly wired are NOT counted as "default on".
  *
- * Last fact-checked: 2026-08-29
+ * Last fact-checked: 2026-10-19
  */
 
 export type SearchLayer =
@@ -214,16 +214,16 @@ export const CLOUD_MODELS: ModelCutoffEntry[] = [
   {
     modelName: 'DeepSeek-V3 / R1 (previous generation)',
     vendor: 'DeepSeek',
-    cutoffDate: '2024-07',
-    cutoffVerified: true,
+    cutoffDate: 'Not publicly disclosed',
+    cutoffVerified: false,
     hasLiveSearchDefault: false,
     searchLayer: 'None',
     searchNote:
       'DeepSeek chat does not offer live web search by default; knowledge cutoff is a hard limit.',
     license: 'Proprietary',
     deployment: 'Cloud only',
-    sourceUrl: 'https://arxiv.org/pdf/2501.12948',
-    sourceNote: 'July 2024 cutoff per DeepSeek-V3 technical report.',
+    sourceUrl: 'https://arxiv.org/abs/2412.19437',
+    sourceNote: 'The DeepSeek-V3 technical report states no knowledge cutoff (checked 2026-10-19).',
   },
 ];
 
@@ -231,32 +231,31 @@ export const CLOUD_MODELS: ModelCutoffEntry[] = [
 
 export const LOCAL_MODELS: ModelCutoffEntry[] = [
   {
-    modelName: 'Llama 4 Scout / Llama 4 Maverick',
+    modelName: 'Llama 4 Scout',
     vendor: 'Meta',
-    cutoffDate: 'Not publicly disclosed',
-    cutoffVerified: false,
+    cutoffDate: '2024-08',
+    cutoffVerified: true,
     hasLiveSearchDefault: false,
     searchLayer: 'None',
     searchNote: 'Open-weight model. No search layer. Cutoff is a hard limit when run locally.',
     license: 'Open weights',
     deployment: 'Both',
-    sourceUrl: 'https://ai.meta.com/blog/meta-llama-3-1/',
-    sourceNote:
-      'Meta does not publish exact training data cutoff dates in official model cards as of June 2026.',
+    sourceUrl: 'https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct',
+    sourceNote: 'Pretraining data cutoff of August 2024 per the Llama 4 Scout model card (checked 2026-10-19).',
   },
   {
     modelName: 'Qwen3 14B / Qwen2.5 72B',
     vendor: 'Alibaba',
-    cutoffDate: '2023-12',
-    cutoffVerified: true,
+    cutoffDate: 'Not publicly disclosed',
+    cutoffVerified: false,
     hasLiveSearchDefault: false,
     searchLayer: 'None',
     searchNote:
-      'Open-weight model. No search layer. December 2023 cutoff verified for Qwen2.5; Qwen3 cutoff not publicly disclosed.',
+      'Open-weight model. No search layer. Cutoff is a hard limit when run locally.',
     license: 'Open weights',
     deployment: 'Both',
-    sourceUrl: 'https://arxiv.org/pdf/2412.15115',
-    sourceNote: 'December 2023 cutoff per Qwen2.5 technical report (arxiv 2412.15115).',
+    sourceUrl: 'https://arxiv.org/abs/2412.15115',
+    sourceNote: 'Neither the Qwen2.5 technical report nor the Qwen2.5-72B-Instruct model card states a knowledge cutoff (checked 2026-10-19).',
   },
   {
     modelName: 'Mistral Small 3 / Mistral 7B',
@@ -288,16 +287,16 @@ export const LOCAL_MODELS: ModelCutoffEntry[] = [
   {
     modelName: 'DeepSeek-V3 (open weights, previous generation)',
     vendor: 'DeepSeek',
-    cutoffDate: '2024-07',
-    cutoffVerified: true,
+    cutoffDate: 'Not publicly disclosed',
+    cutoffVerified: false,
     hasLiveSearchDefault: false,
     searchLayer: 'None',
     searchNote:
-      'Open-weight variant of DeepSeek-V3. No search layer. July 2024 is a hard knowledge limit.',
+      'Open-weight variant of DeepSeek-V3. No search layer. Cutoff is a hard limit when run locally.',
     license: 'Open weights',
     deployment: 'Both',
-    sourceUrl: 'https://arxiv.org/pdf/2501.12948',
-    sourceNote: 'July 2024 cutoff per DeepSeek-V3 technical report.',
+    sourceUrl: 'https://arxiv.org/abs/2412.19437',
+    sourceNote: 'Neither the DeepSeek-V3 technical report nor the Hugging Face model card states a knowledge cutoff (checked 2026-10-19).',
   },
   {
     modelName: 'Gemma 4',
@@ -323,8 +322,8 @@ export const LOCAL_MODELS: ModelCutoffEntry[] = [
       'Open-weight model from Google. No search layer. August 2024 is a hard knowledge limit when run locally.',
     license: 'Open weights',
     deployment: 'Both',
-    sourceUrl: 'https://developers.googleblog.com/en/introducing-gemma3/',
-    sourceNote: 'August 2024 cutoff per Google developer blog introducing Gemma 3; superseded by Gemma 4.',
+    sourceUrl: 'https://ai.google.dev/gemma/docs/core/model_card_3',
+    sourceNote: 'August 2024 cutoff per the Gemma 3 model card ("The knowledge cutoff date for the training data was August 2024"); superseded by Gemma 4.',
   },
   {
     modelName: 'Phi-4',
@@ -337,8 +336,8 @@ export const LOCAL_MODELS: ModelCutoffEntry[] = [
       'Open-weight model from Microsoft. No search layer. June 2024 is a hard knowledge limit when run locally.',
     license: 'Open weights',
     deployment: 'Both',
-    sourceUrl: 'https://www.microsoft.com/en-us/research/publication/phi-4-technical-report/',
-    sourceNote: 'June 2024 cutoff per Microsoft Research Phi-4 technical report.',
+    sourceUrl: 'https://huggingface.co/microsoft/phi-4',
+    sourceNote: 'June 2024 per the Phi-4 model card ("cutoff dates of June 2024 and earlier for publicly available data").',
   },
 ];
 
@@ -347,4 +346,4 @@ export const LOCAL_MODELS: ModelCutoffEntry[] = [
 export const ALL_MODELS: ModelCutoffEntry[] = [...CLOUD_MODELS, ...LOCAL_MODELS];
 
 /** Last date all entries above were fact-checked against primary sources. */
-export const CUTOFF_DATA_LAST_VERIFIED = '2026-08-29';
+export const CUTOFF_DATA_LAST_VERIFIED = '2026-10-19';

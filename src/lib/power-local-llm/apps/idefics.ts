@@ -33,8 +33,6 @@ export const app: ToolRecord = {
     ar: 'نموذج وسائط متعددة مفتوح المصدر للرؤية واللغة',
     ko: '비전과 언어를 위한 오픈소스 멀티모달 모델',
   },
-  lastUpstreamUpdate: '2024-12-02', // latest commit on the Idefics3-8B-Llama3 repo (model-card edit); last weights/config change 2024-09-18; checked 2026-10-19
-  lastUpstreamUpdateSource: 'https://huggingface.co/HuggingFaceM4/Idefics3-8B-Llama3/commits/main',
   reviewSlug: 'idefics-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { multiImage: true },
