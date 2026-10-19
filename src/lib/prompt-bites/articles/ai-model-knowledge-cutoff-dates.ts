@@ -1,14 +1,16 @@
 import type { Language } from '@/lib/blog/blogContent'
 import type { PromptBiteArticle } from '../types'
-import { CLOUD_MODELS, LOCAL_MODELS, CUTOFF_DATA_LAST_VERIFIED } from '@/lib/shared/cutoff-data'
+import { CLOUD_MODELS, LOCAL_MODELS } from '@/lib/shared/cutoff-data'
 import { buildOgImageObject } from "@/lib/imageObjectSchema";
 
 const OG_SLUG = 'ai-model-knowledge-cutoff-dates';
+// Date this page's model list was last re-checked against the model registry (differs from the shared table-data date).
+const PAGE_UPDATED = '2026-10-19';
 
 export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-19',
     is_living_page: true,
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-en.webp',
@@ -19,12 +21,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     educationalLevel: 'Beginner',
     audience: 'Anyone using AI tools who needs to know whether model answers reflect current information',
     publishDate: '2026-06-12',
-    dateModified: CUTOFF_DATA_LAST_VERIFIED,
-    lastUpdated: CUTOFF_DATA_LAST_VERIFIED,
+    dateModified: PAGE_UPDATED,
+    lastUpdated: PAGE_UPDATED,
     current_models_mentioned: [
-      'Claude Opus 5', 'ChatGPT', 'GPT-5.6', 'GPT-4o', 'Gemini 3.1 Pro',
-      'Grok 4.6', 'Mistral Large 3', 'DeepSeek-V3', 'Llama 4 Scout', 'Qwen3 14B',
-      'Gemma 3 27B', 'Phi-4',
+      'Claude Opus 5.5', 'ChatGPT', 'GPT-6 Astra', 'GPT-6.1 Sol', 'GPT-6 Luna', 'Gemini 4 Argon',
+      'Grok 4.7', 'Mistral Large 4', 'DeepSeek-V4', 'Llama 4 Scout', 'Qwen3 14B',
+      'Gemma 4', 'Phi-4',
     ],
     parentArticle: '/prompt-engineering/knowledge-cutoffs-and-geo',
     siblingBites: ['best-llm-right-now', 'co-star-prompt-framework'],
@@ -32,14 +34,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'What are the current AI model knowledge cutoff dates?',
-        answer: 'Verified cutoffs: GPT-5.6 February 2026 (ChatGPT searches Bing by default; GPT-4o legacy Oct 2023; supersedes GPT-5.5); Claude Opus 5 May 2026 (reliable cutoff); Grok 4.6 February 2026 (searches X by default in the consumer app; supersedes Grok 4.3); Gemini 3.1 Pro January 2025 (native Google Search); DeepSeek-V3 July 2024; Gemma 3 27B August 2024; Phi-4 June 2024; Qwen2.5 December 2023. Several major models — including Mistral Large, Llama 4, and Qwen3 — have not publicly disclosed exact cutoff dates. Local LLMs have no web search and their cutoff is absolute. (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
+        answer: 'Verified cutoffs: Claude Opus 5.5 June 2026 (reliable cutoff; supersedes Claude Opus 5, May 2026); GPT-6 Astra and GPT-6.1 Sol April 2026, GPT-6 Luna May 2026 (ChatGPT searches Bing by default; the GPT-6 family supersedes GPT-5.6, Feb 2026; GPT-4o is a legacy model, Oct 2023); Grok 4.7 May 2026 (searches X by default in the consumer app; supersedes Grok 4.6, Feb 2026). Google, Mistral, and DeepSeek state no cutoff for Gemini 4 Argon, Mistral Large 4, or DeepSeek-V4; the previous Gemini flagship, Gemini 3.1 Pro, lists January 2025 (native Google Search). Local LLMs (Llama, Qwen, Gemma, Phi) have no web search and their cutoff is absolute. Previous-generation open-weight models keep their dates: DeepSeek-V3 July 2024, Gemma 3 27B August 2024, Phi-4 June 2024, Qwen2.5 December 2023; DeepSeek-V4 and Gemma 4 are the newer generations.',
         bullets: [
-          'GPT-5.6 (ChatGPT): Feb 2026 cutoff — partially offset by Bing search default',
-          'Claude (Opus 5): May 2026 reliable cutoff — web search requires explicit tool activation',
-          'Grok 4.6: Feb 2026 cutoff — searches X (Twitter) by default in the consumer app',
+          'GPT-6 family (ChatGPT): Apr–May 2026 cutoff — partially offset by Bing search default',
+          'Claude (Opus 5.5): June 2026 reliable cutoff — web search requires explicit tool activation',
+          'Grok 4.7: May 2026 cutoff — searches X (Twitter) by default in the consumer app',
           'Local LLMs (Llama, Qwen, Gemma, Phi): no search layer — cutoff is a hard frozen limit',
         ],
-        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+        updatedDate: PAGE_UPDATED,
       },
     },
     snippetBlocks: [
@@ -67,7 +69,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'A knowledge cutoff is a hard date — the model has zero training data after it, and will confabulate or say it doesn\'t know about anything after that date',
           'Cloud models (ChatGPT, Gemini, Grok) partially compensate via built-in web search; the search layer can override stale training data for factual queries',
           'Local LLMs (Llama, Qwen, Gemma, Phi, Mistral) have NO search layer — their cutoff is an absolute frozen knowledge limit with no override',
-          'Several major models — Mistral Large, Llama 4, Qwen3 — have not publicly disclosed exact cutoff dates; "Not publicly disclosed" below means no primary source exists',
+          'Several major models — Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Llama 4, Qwen3 — have not publicly disclosed exact cutoff dates; "Not publicly disclosed" below means no primary source exists',
           'For GEO strategy: appearing in cloud AI requires SEO/search optimization; appearing in local AI requires RAG pipelines built by the deployer',
         ],
       },
@@ -97,7 +99,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'local-models-table',
         title: 'Local / Open-Weight LLMs: Hard Knowledge Cutoffs',
         content: [
-          'Local LLMs run entirely on your device or a self-hosted server. They have no internet connection by default and no built-in search layer. Every entry in this table has "None" for search — because the only way to give a local LLM access to current information is to build a RAG pipeline yourself.',
+          'Local LLMs run entirely on your device or a self-hosted server. They have no internet connection by default and no built-in search layer. Every entry in this table has "None" for search — because the usual way to give a local LLM access to current information is to build a RAG pipeline yourself.',
           '<strong>This means the cutoff dates below are HARD limits.</strong> Ask a locally-run Llama 4 Scout about something that happened after its training cutoff and it will either make something up or admit it doesn\'t know.',
         ],
         columns: ['Model', 'Vendor', 'Cutoff Date', 'Cutoff Verified', 'Search Layer'],
@@ -126,7 +128,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Why Local LLMs Are Fundamentally Different',
         content: [
           '<strong>Cloud AI models and local LLMs handle knowledge cutoffs differently in one critical way: cloud models can search the live web; local models cannot.</strong>',
-          'When ChatGPT can\'t answer from training data, it silently queries Bing and augments its response with current results. When Gemini 3.1 Pro is asked about a recent event, it searches Google. These search layers hide the cutoff from casual users — you get a current-sounding answer even though the base model\'s training data is months or years old.',
+          'When ChatGPT can\'t answer from training data, it silently queries Bing and augments its response with current results. When Gemini is asked about a recent event, it searches Google. These search layers hide the cutoff from casual users — you get a current-sounding answer even though the base model\'s training data is months or years old.',
           'A locally-run Qwen3 or Llama 4 on your machine has no such safety net. Ask it about a product launched last month and it has two options: confabulate (hallucinate a plausible-sounding but fabricated answer), or say it doesn\'t know. There is no third option — it physically cannot reach the internet unless you build that capability yourself via a RAG pipeline.',
           'This distinction matters for three groups: <strong>users</strong> who need accurate current-events answers; <strong>businesses</strong> deploying AI internally on local hardware; and <strong>companies</strong> that want to appear in AI answers (GEO strategy — see the <a href="/prompt-engineering/knowledge-cutoffs-and-geo" class="text-primary hover:underline">full GEO analysis</a>).',
         ],
@@ -144,7 +146,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             { q: 'What is a knowledge cutoff date in AI?', a: 'A knowledge cutoff date is the date after which an AI model has no training data. Events, product releases, research papers, or any information published after the cutoff are invisible to the model. The model cannot know these things exist unless it can search the live web or is given the information in the prompt.' },
             { q: 'What is the difference between a knowledge cutoff and live search?', a: 'A knowledge cutoff is a property of the model\'s training data — a fixed frozen date. Live search is a capability layered on top of the model that lets it retrieve current web pages at query time. ChatGPT (Bing), Gemini (Google), and Grok (X) have live search by default. Claude requires explicit tool activation. Local LLMs have no live search by default — you must build a RAG pipeline to add it.' },
             { q: 'Do local LLMs ever update their knowledge?', a: 'No. A local LLM\'s knowledge is frozen at its training cutoff and stays frozen indefinitely. To give a local LLM access to newer information, you must either: (1) fine-tune or retrain the model on newer data (expensive), or (2) build a RAG (Retrieval-Augmented Generation) pipeline that fetches relevant documents at query time and injects them into the prompt. See our guide to <a href="/local-llms/local-rag-2026" class="text-primary hover:underline">local RAG pipelines</a>.' },
-            { q: 'Which AI models can see today\'s news and current events?', a: 'ChatGPT (uses Bing by default in paid tiers), Gemini 3.1 Pro (uses Google by default), and Grok 4.6 (searches X/Twitter by default in the consumer app) can access current information. Perplexity is web-search-native and retrieves live results for every query. Claude can search the web only when developers explicitly enable the web search tool. DeepSeek, Mistral Large, and all local LLMs (Llama, Qwen, Gemma, Phi) have no default search access.' },
+            { q: 'Which AI models can see today\'s news and current events?', a: 'ChatGPT (uses Bing by default in paid tiers), Gemini (uses Google by default), and Grok (searches X/Twitter by default in the consumer app) can access current information. Perplexity is web-search-native and retrieves live results for every query. Claude can search the web only when developers explicitly enable the web search tool. DeepSeek, Mistral Large, and all local LLMs (Llama, Qwen, Gemma, Phi) have no default search access.' },
             { q: 'Is the ChatGPT cutoff date the same as what it knows right now?', a: 'No. ChatGPT (the product) has both a training cutoff date and a live Bing search capability. For recent factual queries, it searches Bing and augments its answer with current results — so what it "knows" at query time can be much newer than the training cutoff. The training cutoff still matters for: nuanced understanding of events (not just facts), contextual knowledge woven into its reasoning, and any information not indexed by Bing.' },
           ],
       },
@@ -155,7 +157,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       headline: 'AI Model Knowledge Cutoff Dates 2026: Complete Cheat Sheet',
       description: 'Verified knowledge cutoff dates for Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma, and Phi — with live search layer breakdown for each model.',
       datePublished: '2026-06-12',
-      dateModified: CUTOFF_DATA_LAST_VERIFIED,
+      dateModified: PAGE_UPDATED,
       inLanguage: 'en',
       proficiencyLevel: 'Beginner',
       keywords: [
@@ -208,7 +210,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Which AI models can see today\'s news and current events?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'ChatGPT (uses Bing by default in paid tiers), Gemini 3.1 Pro (uses Google by default), and Grok 4.6 (searches X/Twitter by default in the consumer app) can access current information. Perplexity is web-search-native and retrieves live results for every query. Claude can search the web only when developers explicitly enable the web search tool. DeepSeek, Mistral Large, and all local LLMs (Llama, Qwen, Gemma, Phi) have no default search access.',
+              'text': 'ChatGPT (uses Bing by default in paid tiers), Gemini (uses Google by default), and Grok (searches X/Twitter by default in the consumer app) can access current information. Perplexity is web-search-native and retrieves live results for every query. Claude can search the web only when developers explicitly enable the web search tool. DeepSeek, Mistral Large, and all local LLMs (Llama, Qwen, Gemma, Phi) have no default search access.',
             },
           },
           {
@@ -234,25 +236,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   de: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-de.webp',
     title: 'KI-Modell Wissens-Cutoff-Daten 2026: Vollständige Übersicht',
     seoTitle: 'KI Wissens-Cutoff-Daten 2026 | PromptQuorum',
     metaDescription: 'Verifizierte Wissens-Cutoff-Daten für Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma und Phi. Welche Modelle live suchen — und welche eingefroren sind.',
     publishDate: '2026-06-12',
-    dateModified: '2026-08-29',
+    dateModified: PAGE_UPDATED,
     quickAnswerTop: {
       de: {
         question: 'Was sind die aktuellen Wissens-Cutoff-Daten der KI-Modelle?',
-        answer: 'Verifizierte Cutoffs: GPT-5.6 Februar 2026 (ChatGPT durchsucht standardmäßig Bing; GPT-4o-Legacy Okt 2023; Nachfolger von GPT-5.5); Claude Opus 5 Mai 2026 (zuverlässiger Cutoff); Grok 4.6 Februar 2026 (durchsucht X standardmäßig in der Verbraucher-App; Nachfolger von Grok 4.3); Gemini 3.1 Pro Januar 2025 (native Google Search). Lokale LLMs (Llama, Qwen, Gemma, Phi) haben keine Websuche — ihr Cutoff ist absolut.',
+        answer: 'Verifizierte Cutoffs: Claude Opus 5.5 Juni 2026 (zuverlässiger Cutoff; Nachfolger von Claude Opus 5, Mai 2026); GPT-6 Astra und GPT-6.1 Sol April 2026, GPT-6 Luna Mai 2026 (ChatGPT durchsucht standardmäßig Bing; die GPT-6-Familie löst GPT-5.6 ab, Februar 2026; GPT-4o ist ein Legacy-Modell, Okt 2023); Grok 4.7 Mai 2026 (durchsucht X standardmäßig in der Verbraucher-App; Nachfolger von Grok 4.6, Februar 2026). Für Gemini 4 Argon nennt Google keinen Cutoff; das frühere Gemini-Flaggschiff Gemini 3.1 Pro nennt Januar 2025 (native Google Search). Lokale LLMs (Llama, Qwen, Gemma, Phi) haben keine Websuche — ihr Cutoff ist absolut.',
         bullets: [
-          'GPT-5.6 (ChatGPT): Cutoff Feb 2026 — teilweise durch Bing-Suche ausgeglichen',
-          'Claude (Opus 5): Cutoff Mai 2026 (zuverlässig) — Websuche nur als optionales Tool',
-          'Grok 4.6: Cutoff Feb 2026 — durchsucht X standardmäßig in der Verbraucher-App',
+          'GPT-6-Familie (ChatGPT): Cutoff Apr–Mai 2026 — teilweise durch Bing-Suche ausgeglichen',
+          'Claude (Opus 5.5): Cutoff Juni 2026 (zuverlässig) — Websuche nur als optionales Tool',
+          'Grok 4.7: Cutoff Mai 2026 — durchsucht X standardmäßig in der Verbraucher-App',
           'Lokale LLMs: keine Suchfunktion — Cutoff ist eine harte Wissensgrenze',
         ],
-        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+        updatedDate: PAGE_UPDATED,
       },
     },
     sections: {
@@ -263,7 +265,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Ein Wissens-Cutoff ist ein hartes Datum — das Modell hat nach diesem Datum keinerlei Trainingsdaten',
           'Cloud-Modelle (ChatGPT, Gemini, Grok) kompensieren dies teilweise durch eingebaute Websuche',
           'Lokale LLMs (Llama, Qwen, Gemma, Phi, Mistral) haben KEINE Suchfunktion — ihr Cutoff ist eine absolute Wissensgrenze',
-          'Mehrere große Modelle — Mistral Large, Llama 4, Qwen3 — haben keine öffentlichen Cutoff-Daten bekannt gegeben',
+          'Mehrere große Modelle — Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Llama 4, Qwen3 — haben keine öffentlichen Cutoff-Daten bekannt gegeben',
         ],
       },
       relatedBites: {
@@ -290,25 +292,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   es: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-es.webp',
     title: 'Fechas de Corte de Conocimiento de los Modelos de IA 2026: Hoja de Referencia Completa',
     seoTitle: 'Fechas de Corte de Conocimiento IA 2026 | PromptQuorum',
     metaDescription: 'Fechas de corte de conocimiento verificadas para Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma y Phi. Descubre qué modelos usan búsqueda web en vivo y cuáles quedaron congelados en el tiempo.',
     publishDate: '2026-06-12',
-    dateModified: '2026-08-29',
+    dateModified: PAGE_UPDATED,
     quickAnswerTop: {
       es: {
         question: '¿Cuáles son las fechas de corte de conocimiento actuales de los modelos de IA?',
-        answer: 'Cortes verificados: GPT-5.6 febrero de 2026 (ChatGPT busca en Bing por defecto; GPT-4o heredado octubre de 2023; sucede a GPT-5.5); Claude Opus 5 mayo de 2026 (corte confiable); Grok 4.6 febrero de 2026 (busca en X por defecto en la app de consumidor; sucede a Grok 4.3); Gemini 3.1 Pro enero de 2025 (Google Search nativo). Los LLM locales (Llama, Qwen, Gemma, Phi) no tienen capa de búsqueda — su corte es un límite absoluto.',
+        answer: 'Cortes verificados: Claude Opus 5.5 junio de 2026 (corte confiable; sucede a Claude Opus 5, mayo de 2026); GPT-6 Astra y GPT-6.1 Sol abril de 2026, GPT-6 Luna mayo de 2026 (ChatGPT busca en Bing por defecto; la familia GPT-6 sucede a GPT-5.6, febrero de 2026; GPT-4o es un modelo heredado, octubre de 2023); Grok 4.7 mayo de 2026 (busca en X por defecto en la app de consumidor; sucede a Grok 4.6, febrero de 2026). Google no indica un corte para Gemini 4 Argon; el anterior buque insignia, Gemini 3.1 Pro, indica enero de 2025 (Google Search nativo). Los LLM locales (Llama, Qwen, Gemma, Phi) no tienen capa de búsqueda — su corte es un límite absoluto.',
         bullets: [
-          'GPT-5.6 (ChatGPT): corte feb 2026 — parcialmente compensado por la búsqueda de Bing',
-          'Claude (Opus 5): corte mayo 2026 (confiable) — la búsqueda web requiere activación explícita',
-          'Grok 4.6: corte feb 2026 — busca en X por defecto en la app de consumidor',
+          'Familia GPT-6 (ChatGPT): corte abr–may 2026 — parcialmente compensado por la búsqueda de Bing',
+          'Claude (Opus 5.5): corte junio 2026 (confiable) — la búsqueda web requiere activación explícita',
+          'Grok 4.7: corte mayo 2026 — busca en X por defecto en la app de consumidor',
           'LLM locales: sin capa de búsqueda — el corte es un límite de conocimiento fijo',
         ],
-        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+        updatedDate: PAGE_UPDATED,
       },
     },
     sections: {
@@ -319,7 +321,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Un corte de conocimiento es una fecha fija — el modelo no tiene ningún dato de entrenamiento después de esa fecha',
           'Los modelos en la nube (ChatGPT, Gemini, Grok) compensan esto parcialmente con búsqueda web integrada',
           'Los LLM locales (Llama, Qwen, Gemma, Phi, Mistral) NO tienen capa de búsqueda — su corte es un límite de conocimiento absoluto',
-          'Varios modelos importantes — incluyendo Mistral Large, Llama 4 y Qwen3 — no han revelado fechas de corte exactas',
+          'Varios modelos importantes — incluyendo Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Llama 4 y Qwen3 — no han revelado fechas de corte exactas',
         ],
       },
       faq: {
@@ -340,7 +342,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué modelos de IA pueden ver las noticias y los eventos actuales?',
-            a: 'ChatGPT (usa Bing por defecto en los planes de pago), Gemini 3.1 Pro (usa Google por defecto) y Grok 4.6 (busca en X/Twitter por defecto en la app de consumidor) pueden acceder a información actual. Perplexity es nativo de búsqueda web y recupera resultados en vivo para cada consulta. Claude solo puede buscar en la web cuando los desarrolladores activan explícitamente la herramienta de búsqueda web. DeepSeek, Mistral Large y todos los LLM locales (Llama, Qwen, Gemma, Phi) no tienen acceso de búsqueda por defecto.',
+            a: 'ChatGPT (usa Bing por defecto en los planes de pago), Gemini (usa Google por defecto) y Grok (busca en X/Twitter por defecto en la app de consumidor) pueden acceder a información actual. Perplexity es nativo de búsqueda web y recupera resultados en vivo para cada consulta. Claude solo puede buscar en la web cuando los desarrolladores activan explícitamente la herramienta de búsqueda web. DeepSeek, Mistral Large y todos los LLM locales (Llama, Qwen, Gemma, Phi) no tienen acceso de búsqueda por defecto.',
           },
           {
             q: '¿La fecha de corte de ChatGPT es lo mismo que lo que sabe ahora mismo?',
@@ -362,25 +364,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   fr: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-fr.webp',
     title: 'Dates de Coupure des Modèles IA 2026 : Référence Complète',
     seoTitle: 'Dates de Coupure IA 2026 | PromptQuorum',
     metaDescription: 'Dates de coupure vérifiées pour Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma et Phi. Quels modèles utilisent la recherche live — et lesquels sont figés dans le temps.',
     publishDate: '2026-06-12',
-    dateModified: '2026-08-29',
+    dateModified: PAGE_UPDATED,
     quickAnswerTop: {
       fr: {
         question: 'Quelles sont les dates de coupure des modèles d\'IA en 2026 ?',
-        answer: 'Coupures vérifiées : GPT-5.6 février 2026 (ChatGPT recherche Bing par défaut ; GPT-4o legacy oct 2023 ; succède à GPT-5.5) ; Claude Opus 5 mai 2026 (coupure fiable) ; Grok 4.6 février 2026 (recherche X par défaut dans l\'app grand public ; succède à Grok 4.3) ; Gemini 3.1 Pro janvier 2025 (Google Search natif). Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas de couche de recherche — leur coupure est une limite absolue.',
+        answer: 'Coupures vérifiées : Claude Opus 5.5 juin 2026 (coupure fiable ; succède à Claude Opus 5, mai 2026) ; GPT-6 Astra et GPT-6.1 Sol avril 2026, GPT-6 Luna mai 2026 (ChatGPT recherche Bing par défaut ; la famille GPT-6 succède à GPT-5.6, février 2026 ; GPT-4o est un modèle legacy, oct 2023) ; Grok 4.7 mai 2026 (recherche X par défaut dans l\'app grand public ; succède à Grok 4.6, février 2026). Google n\'indique aucune coupure pour Gemini 4 Argon ; l\'ancien modèle phare, Gemini 3.1 Pro, indique janvier 2025 (Google Search natif). Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas de couche de recherche — leur coupure est une limite absolue.',
         bullets: [
-          'GPT-5.6 (ChatGPT) : coupure février 2026 — partiellement compensée par Bing',
-          'Claude (Opus 5) : coupure mai 2026 (fiable) — recherche web opt-in uniquement',
-          'Grok 4.6 : coupure février 2026 — recherche X par défaut dans l\'app grand public',
+          'Famille GPT-6 (ChatGPT) : coupure avr.–mai 2026 — partiellement compensée par Bing',
+          'Claude (Opus 5.5) : coupure juin 2026 (fiable) — recherche web opt-in uniquement',
+          'Grok 4.7 : coupure mai 2026 — recherche X par défaut dans l\'app grand public',
           'LLM locaux : aucune recherche — la coupure est une limite dure',
         ],
-        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+        updatedDate: PAGE_UPDATED,
       },
     },
     sections: {
@@ -391,7 +393,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Une date de coupure est fixe — le modèle n\'a aucune donnée d\'entraînement après cette date',
           'Les modèles cloud (ChatGPT, Gemini, Grok) compensent partiellement via la recherche web intégrée',
           'Les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont AUCUNE couche de recherche — leur coupure est une limite absolue',
-          'Plusieurs grands modèles — Mistral Large, Llama 4, Qwen3 — n\'ont pas divulgué de dates de coupure exactes',
+          'Plusieurs grands modèles — Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Llama 4, Qwen3 — n\'ont pas divulgué de dates de coupure exactes',
         ],
       },
       faq: {
@@ -412,7 +414,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quels modèles d\'IA peuvent voir les actualités et événements actuels ?',
-            a: 'ChatGPT (utilise Bing par défaut dans les offres payantes), Gemini 3.1 Pro (utilise Google par défaut) et Grok 4.6 (recherche X/Twitter par défaut dans l\'app grand public) peuvent accéder aux informations actuelles. Perplexity est nativement connecté au web et récupère des résultats en direct pour chaque requête. Claude ne peut rechercher sur le web que si les développeurs activent explicitement l\'outil de recherche web. DeepSeek, Mistral Large et tous les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas d\'accès à la recherche par défaut.',
+            a: 'ChatGPT (utilise Bing par défaut dans les offres payantes), Gemini (utilise Google par défaut) et Grok (recherche X/Twitter par défaut dans l\'app grand public) peuvent accéder aux informations actuelles. Perplexity est nativement connecté au web et récupère des résultats en direct pour chaque requête. Claude ne peut rechercher sur le web que si les développeurs activent explicitement l\'outil de recherche web. DeepSeek, Mistral Large et tous les LLM locaux (Llama, Qwen, Gemma, Phi) n\'ont pas d\'accès à la recherche par défaut.',
           },
           {
             q: 'La date de coupure de ChatGPT correspond-elle à ce qu\'il sait actuellement ?',
@@ -434,25 +436,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ja: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-ja.webp',
     title: 'AIモデルの知識カットオフ日2026：完全チートシート',
     seoTitle: 'AIモデル知識カットオフ日2026 | PromptQuorum',
     metaDescription: 'Claude、ChatGPT、Gemini、Grok、Llama、Qwen、Gemma、Phiの検証済み知識カットオフ日。どのモデルがライブ検索を使用し、どのモデルが凍結されているかを解説。',
     publishDate: '2026-06-12',
-    dateModified: '2026-08-29',
+    dateModified: PAGE_UPDATED,
     quickAnswerTop: {
       ja: {
         question: 'AIモデルの知識カットオフ日は2026年現在どうなっていますか？',
-        answer: '確認済みカットオフ：GPT-5.6は2026年2月（ChatGPTはデフォルトでBing検索；GPT-4oレガシーは2023年10月；GPT-5.5の後継）、Claude Opus 5は2026年5月（信頼性の高いカットオフ）、Grok 4.6は2026年2月（コンシューマー向けアプリではデフォルトでX検索；Grok 4.3の後継）、Gemini 3.1 Proは2025年1月（Google Search統合）。ローカルLLM（Llama、Qwen、Gemma、Phi）は検索レイヤーなし — カットオフは絶対的な制限。',
+        answer: '確認済みカットオフ：Claude Opus 5.5は2026年6月（信頼性の高いカットオフ；Claude Opus 5（2026年5月）の後継）、GPT-6 AstraとGPT-6.1 Solは2026年4月、GPT-6 Lunaは2026年5月（ChatGPTはデフォルトでBing検索；GPT-6ファミリーはGPT-5.6（2026年2月）の後継；GPT-4oはレガシーモデルで2023年10月）、Grok 4.7は2026年5月（コンシューマー向けアプリではデフォルトでX検索；Grok 4.6（2026年2月）の後継）。GoogleはGemini 4 Argonのカットオフを公表していません。前世代のフラッグシップGemini 3.1 Proは2025年1月（Google Search統合）です。ローカルLLM（Llama、Qwen、Gemma、Phi）は検索レイヤーなし — カットオフは絶対的な制限。',
         bullets: [
-          'GPT-5.6 (ChatGPT)：カットオフ2026年2月 — Bing検索で部分補完',
-          'Claude (Opus 5)：カットオフ2026年5月（信頼性高）— ウェブ検索はオプトイン',
-          'Grok 4.6：カットオフ2026年2月 — コンシューマー向けアプリではX検索をデフォルトで使用',
+          'GPT-6ファミリー (ChatGPT)：カットオフ2026年4〜5月 — Bing検索で部分補完',
+          'Claude (Opus 5.5)：カットオフ2026年6月（信頼性高）— ウェブ検索はオプトイン',
+          'Grok 4.7：カットオフ2026年5月 — コンシューマー向けアプリではX検索をデフォルトで使用',
           'ローカルLLM：検索なし — カットオフは固定された絶対的な知識の限界',
         ],
-        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+        updatedDate: PAGE_UPDATED,
       },
     },
     sections: {
@@ -463,7 +465,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '知識カットオフは固定された日付 — その日以降のデータはモデルに存在しない',
           'クラウドモデル（ChatGPT、Gemini、Grok）は組み込みのウェブ検索で部分的に補完',
           'ローカルLLM（Llama、Qwen、Gemma、Phi）は検索レイヤーなし — カットオフは絶対的な制限',
-          'Mistral Large、Llama 4、Qwen3など主要モデルのカットオフ日は非公開',
+          'Gemini 4 Argon、Mistral Large 4、DeepSeek-V4、Llama 4、Qwen3など主要モデルのカットオフ日は非公開',
         ],
       },
       faq: {
@@ -484,7 +486,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '今日のニュースや最新の出来事を確認できるAIモデルはどれですか？',
-            a: 'ChatGPT（有料プランではデフォルトでBingを使用）、Gemini 3.1 Pro（デフォルトでGoogleを使用）、Grok 4.6（コンシューマー向けアプリではデフォルトでX/Twitterを検索）は最新情報にアクセスできます。Perplexityはウェブ検索ネイティブで、すべてのクエリに対してライブ結果を取得します。Claudeは開発者がウェブ検索ツールを明示的に有効化した場合のみウェブ検索が可能です。DeepSeek、Mistral Large、およびすべてのローカルLLM（Llama、Qwen、Gemma、Phi）はデフォルトの検索アクセスを持ちません。',
+            a: 'ChatGPT（有料プランではデフォルトでBingを使用）、Gemini（デフォルトでGoogleを使用）、Grok（コンシューマー向けアプリではデフォルトでX/Twitterを検索）は最新情報にアクセスできます。Perplexityはウェブ検索ネイティブで、すべてのクエリに対してライブ結果を取得します。Claudeは開発者がウェブ検索ツールを明示的に有効化した場合のみウェブ検索が可能です。DeepSeek、Mistral Large、およびすべてのローカルLLM（Llama、Qwen、Gemma、Phi）はデフォルトの検索アクセスを持ちません。',
           },
           {
             q: 'ChatGPTのカットオフ日は、現在知っていることと同じですか？',
@@ -506,25 +508,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   zh: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-zh.webp',
     title: 'AI模型知识截止日期2026：完整参考表',
     seoTitle: 'AI模型知识截止日期2026 | PromptQuorum',
     metaDescription: 'Claude、ChatGPT、Gemini、Grok、Llama、Qwen、Gemma和Phi的已验证知识截止日期。哪些模型使用实时搜索，哪些模型知识被冻结。',
     publishDate: '2026-06-12',
-    dateModified: '2026-08-29',
+    dateModified: PAGE_UPDATED,
     quickAnswerTop: {
       zh: {
         question: '2026年AI模型的知识截止日期是什么？',
-        answer: '已验证截止日期：GPT-5.6 2026年2月（ChatGPT默认搜索Bing；GPT-4o旧版2023年10月；接替GPT-5.5）；Claude Opus 5 2026年5月（可靠截止日期）；Grok 4.6 2026年2月（消费级应用默认搜索X；接替Grok 4.3）；Gemini 3.1 Pro 2025年1月（原生Google Search集成）。本地LLM（Llama、Qwen、Gemma、Phi）无搜索层——截止日期是绝对硬限制。',
+        answer: '已验证截止日期：Claude Opus 5.5 2026年6月（可靠截止日期；接替Claude Opus 5，2026年5月）；GPT-6 Astra与GPT-6.1 Sol 2026年4月，GPT-6 Luna 2026年5月（ChatGPT默认搜索Bing；GPT-6系列接替GPT-5.6，2026年2月；GPT-4o为旧版模型，2023年10月）；Grok 4.7 2026年5月（消费级应用默认搜索X；接替Grok 4.6，2026年2月）。Google未公布Gemini 4 Argon的截止日期；上一代旗舰Gemini 3.1 Pro为2025年1月（原生Google Search集成）。本地LLM（Llama、Qwen、Gemma、Phi）无搜索层——截止日期是绝对硬限制。',
         bullets: [
-          'GPT-5.6 (ChatGPT)：截止2026年2月 — 由Bing搜索部分补充',
-          'Claude (Opus 5)：截止2026年5月（可靠）— 网络搜索需手动启用',
-          'Grok 4.6：截止2026年2月 — 消费级应用默认搜索X',
+          'GPT-6系列 (ChatGPT)：截止2026年4–5月 — 由Bing搜索部分补充',
+          'Claude (Opus 5.5)：截止2026年6月（可靠）— 网络搜索需手动启用',
+          'Grok 4.7：截止2026年5月 — 消费级应用默认搜索X',
           '本地LLM：无搜索层 — 截止日期是冻结的绝对知识边界',
         ],
-        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+        updatedDate: PAGE_UPDATED,
       },
     },
     sections: {
@@ -535,7 +537,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '知识截止日期是固定的——该日期之后的信息对模型不可见',
           '云端模型（ChatGPT、Gemini、Grok）通过内置网络搜索部分弥补这一限制',
           '本地LLM（Llama、Qwen、Gemma、Phi）无搜索层——截止日期是绝对的知识边界',
-          'Mistral Large、Llama 4、Qwen3等多个主要模型未公开具体截止日期',
+          'Gemini 4 Argon、Mistral Large 4、DeepSeek-V4、Llama 4、Qwen3等多个主要模型未公开具体截止日期',
         ],
       },
       faq: {
@@ -556,7 +558,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '哪些AI模型可以查看今天的新闻和最新事件？',
-            a: 'ChatGPT（在付费套餐中默认使用Bing）、Gemini 3.1 Pro（默认使用Google）和Grok 4.6（消费级应用默认搜索X/Twitter）可以访问最新信息。Perplexity原生支持网络搜索，每次查询都会检索实时结果。Claude只有在开发者明确启用网络搜索工具时才能进行网络搜索。DeepSeek、Mistral Large以及所有本地LLM（Llama、Qwen、Gemma、Phi）默认没有搜索访问权限。',
+            a: 'ChatGPT（在付费套餐中默认使用Bing）、Gemini（默认使用Google）和Grok（消费级应用默认搜索X/Twitter）可以访问最新信息。Perplexity原生支持网络搜索，每次查询都会检索实时结果。Claude只有在开发者明确启用网络搜索工具时才能进行网络搜索。DeepSeek、Mistral Large以及所有本地LLM（Llama、Qwen、Gemma、Phi）默认没有搜索访问权限。',
           },
           {
             q: 'ChatGPT的截止日期与它当前所知道的内容相同吗？',
@@ -578,25 +580,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ko: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-ko.webp',
     title: 'AI 모델 지식 컷오프 날짜 2026: 완전한 치트 시트',
     seoTitle: 'AI 모델 지식 컷오프 날짜 2026 | PromptQuorum',
     metaDescription: 'Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma, Phi의 검증된 지식 컷오프 날짜. 어떤 모델이 실시간 웹 검색을 사용하고 어떤 모델이 과거 시점에 고정되어 있는지 확인하세요.',
     publishDate: '2026-06-12',
-    dateModified: '2026-08-29',
+    dateModified: PAGE_UPDATED,
     quickAnswerTop: {
       ko: {
         question: '2026년 현재 AI 모델의 지식 컷오프 날짜는 무엇인가요?',
-        answer: '검증된 컷오프: GPT-5.6은 2026년 2월(ChatGPT는 기본적으로 Bing 검색 사용; GPT-4o 레거시는 2023년 10월; GPT-5.5의 후속), Claude Opus 5는 2026년 5월(신뢰할 수 있는 컷오프), Grok 4.6은 2026년 2월(일반 소비자용 앱에서는 기본적으로 X 검색; Grok 4.3의 후속), Gemini 3.1 Pro는 2025년 1월(네이티브 Google Search). 로컬 LLM(Llama, Qwen, Gemma, Phi)은 검색 레이어가 없으므로 컷오프가 절대적인 한계입니다.',
+        answer: '검증된 컷오프: Claude Opus 5.5는 2026년 6월(신뢰할 수 있는 컷오프; Claude Opus 5(2026년 5월)의 후속), GPT-6 Astra와 GPT-6.1 Sol은 2026년 4월, GPT-6 Luna는 2026년 5월(ChatGPT는 기본적으로 Bing 검색 사용; GPT-6 제품군은 GPT-5.6(2026년 2월)의 후속; GPT-4o는 레거시 모델로 2023년 10월), Grok 4.7은 2026년 5월(일반 소비자용 앱에서는 기본적으로 X 검색; Grok 4.6(2026년 2월)의 후속). Google은 Gemini 4 Argon의 컷오프를 공개하지 않았으며, 이전 세대 플래그십인 Gemini 3.1 Pro는 2025년 1월(네이티브 Google Search)입니다. 로컬 LLM(Llama, Qwen, Gemma, Phi)은 검색 레이어가 없으므로 컷오프가 절대적인 한계입니다.',
         bullets: [
-          'GPT-5.6 (ChatGPT): 컷오프 2026년 2월 — Bing 검색으로 부분 보완',
-          'Claude (Opus 5): 컷오프 2026년 5월(신뢰 가능) — 웹 검색은 명시적 도구 활성화 필요',
-          'Grok 4.6: 컷오프 2026년 2월 — 일반 소비자용 앱에서는 기본적으로 X 검색',
+          'GPT-6 제품군 (ChatGPT): 컷오프 2026년 4~5월 — Bing 검색으로 부분 보완',
+          'Claude (Opus 5.5): 컷오프 2026년 6월(신뢰 가능) — 웹 검색은 명시적 도구 활성화 필요',
+          'Grok 4.7: 컷오프 2026년 5월 — 일반 소비자용 앱에서는 기본적으로 X 검색',
           '로컬 LLM: 검색 레이어 없음 — 컷오프는 고정된 절대적 한계',
         ],
-        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+        updatedDate: PAGE_UPDATED,
       },
     },
     sections: {
@@ -607,7 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '지식 컷오프는 고정된 날짜입니다 — 그 날짜 이후의 정보는 모델에 존재하지 않습니다',
           '클라우드 모델(ChatGPT, Gemini, Grok)은 내장된 웹 검색으로 이를 부분적으로 보완합니다',
           '로컬 LLM(Llama, Qwen, Gemma, Phi)은 검색 레이어가 없습니다 — 컷오프는 절대적인 지식의 한계입니다',
-          'Mistral Large, Llama 4, Qwen3 등 여러 주요 모델은 정확한 컷오프 날짜를 공개하지 않았습니다',
+          'Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Llama 4, Qwen3 등 여러 주요 모델은 정확한 컷오프 날짜를 공개하지 않았습니다',
         ],
       },
       faq: {
@@ -628,7 +630,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '오늘의 뉴스와 최신 사건을 확인할 수 있는 AI 모델은 무엇인가요?',
-            a: 'ChatGPT(유료 요금제에서 기본적으로 Bing 사용), Gemini 3.1 Pro(기본적으로 Google 사용), Grok 4.6(일반 소비자용 앱에서 기본적으로 X/Twitter 검색)은 최신 정보에 접근할 수 있습니다. Perplexity는 웹 검색 네이티브로, 모든 질의에 대해 실시간 결과를 가져옵니다. Claude는 개발자가 웹 검색 도구를 명시적으로 활성화한 경우에만 웹을 검색할 수 있습니다. DeepSeek, Mistral Large 및 모든 로컬 LLM(Llama, Qwen, Gemma, Phi)은 기본적으로 검색 접근 권한이 없습니다.',
+            a: 'ChatGPT(유료 요금제에서 기본적으로 Bing 사용), Gemini(기본적으로 Google 사용), Grok(일반 소비자용 앱에서 기본적으로 X/Twitter 검색)은 최신 정보에 접근할 수 있습니다. Perplexity는 웹 검색 네이티브로, 모든 질의에 대해 실시간 결과를 가져옵니다. Claude는 개발자가 웹 검색 도구를 명시적으로 활성화한 경우에만 웹을 검색할 수 있습니다. DeepSeek, Mistral Large 및 모든 로컬 LLM(Llama, Qwen, Gemma, Phi)은 기본적으로 검색 접근 권한이 없습니다.',
           },
           {
             q: 'ChatGPT의 컷오프 날짜가 현재 알고 있는 것과 같은가요?',
@@ -650,25 +652,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   pt: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-pt.webp',
     title: 'Datas de corte de conhecimento dos modelos de IA 2026: guia de referência completo',
     seoTitle: 'Datas de corte de conhecimento de IA 2026 | PromptQuorum',
     metaDescription: 'Datas de corte verificadas para Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma e Phi. Descubra quais modelos usam busca web ao vivo e quais estão congelados em um ponto no tempo.',
     publishDate: '2026-06-12',
-    dateModified: '2026-08-29',
+    dateModified: PAGE_UPDATED,
     quickAnswerTop: {
       pt: {
         question: 'Quais são as datas de corte de conhecimento dos modelos de IA em 2026?',
-        answer: 'Datas de corte verificadas: GPT-5.6 fevereiro 2026 (ChatGPT busca no Bing por padrão; GPT-4o legado out 2023; sucede o GPT-5.5); Claude Opus 5 maio 2026 (corte confiável); Grok 4.6 fevereiro 2026 (busca X por padrão no app para consumidores; sucede o Grok 4.3); Gemini 3.1 Pro janeiro 2025 (Google Search nativo). LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto.',
+        answer: 'Datas de corte verificadas: Claude Opus 5.5 junho 2026 (corte confiável; sucede o Claude Opus 5, maio 2026); GPT-6 Astra e GPT-6.1 Sol abril 2026, GPT-6 Luna maio 2026 (ChatGPT busca no Bing por padrão; a família GPT-6 sucede o GPT-5.6, fevereiro 2026; GPT-4o é um modelo legado, out 2023); Grok 4.7 maio 2026 (busca X por padrão no app para consumidores; sucede o Grok 4.6, fevereiro 2026). O Google não informa data de corte para o Gemini 4 Argon; o carro-chefe anterior, Gemini 3.1 Pro, indica janeiro 2025 (Google Search nativo). LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto.',
         bullets: [
-          'GPT-5.6 (ChatGPT): corte fev 2026 — parcialmente compensado pela busca Bing',
-          'Claude (Opus 5): corte maio 2026 (confiável) — busca web requer ativação explícita',
-          'Grok 4.6: corte fev 2026 — busca X por padrão no app para consumidores',
+          'Família GPT-6 (ChatGPT): corte abr–mai 2026 — parcialmente compensado pela busca Bing',
+          'Claude (Opus 5.5): corte junho 2026 (confiável) — busca web requer ativação explícita',
+          'Grok 4.7: corte maio 2026 — busca X por padrão no app para consumidores',
           'LLMs locais: sem camada de busca — o corte é um limite de conhecimento fixo',
         ],
-        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+        updatedDate: PAGE_UPDATED,
       },
     },
     sections: {
@@ -679,7 +681,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Datas de corte de conhecimento são fixas — informações após essa data não existem para o modelo',
           'Modelos em nuvem (ChatGPT, Gemini, Grok) compensam parcialmente com busca web integrada',
           'LLMs locais (Llama, Qwen, Gemma, Phi) não têm camada de busca — o corte é um limite absoluto de conhecimento',
-          'Vários modelos principais — incluindo Mistral Large, Llama 4 e Qwen3 — não divulgaram datas de corte exatas',
+          'Vários modelos principais — incluindo Gemini 4 Argon, Mistral Large 4, DeepSeek-V4, Llama 4 e Qwen3 — não divulgaram datas de corte exatas',
         ],
       },
       faq: {
@@ -700,7 +702,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quais modelos de IA conseguem ver notícias e eventos atuais?',
-            a: 'ChatGPT (usa o Bing por padrão nos planos pagos), Gemini 3.1 Pro (usa o Google por padrão) e Grok 4.6 (busca no X/Twitter por padrão no app para consumidores) podem acessar informações atuais. O Perplexity é nativo de busca web e recupera resultados ao vivo para cada consulta. O Claude só consegue buscar na web quando os desenvolvedores ativam explicitamente a ferramenta de busca web. DeepSeek, Mistral Large e todos os LLMs locais (Llama, Qwen, Gemma, Phi) não têm acesso de busca por padrão.',
+            a: 'ChatGPT (usa o Bing por padrão nos planos pagos), Gemini (usa o Google por padrão) e Grok (busca no X/Twitter por padrão no app para consumidores) podem acessar informações atuais. O Perplexity é nativo de busca web e recupera resultados ao vivo para cada consulta. O Claude só consegue buscar na web quando os desenvolvedores ativam explicitamente a ferramenta de busca web. DeepSeek, Mistral Large e todos os LLMs locais (Llama, Qwen, Gemma, Phi) não têm acesso de busca por padrão.',
           },
           {
             q: 'A data de corte do ChatGPT é a mesma coisa que ele sabe agora?',
@@ -722,25 +724,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   },
   ar: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-19',
     theme: 'Knowledge & Research',
     heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-ar.webp',
     title: 'تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي ⁨2026⁩: دليل مرجعي شامل',
     seoTitle: 'تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي ⁨2026⁩',
     metaDescription: 'تواريخ انقطاع موثّقة لـ ⁨Claude⁩ و⁨ChatGPT⁩ و⁨Gemini⁩ و⁨Llama⁩ و⁨Qwen⁩. اكتشف أي النماذج تستخدم البحث المباشر وأيها مجمّدة عند نقطة زمنية محددة.',
     publishDate: '2026-06-12',
-    dateModified: '2026-08-29',
+    dateModified: PAGE_UPDATED,
     quickAnswerTop: {
       ar: {
         question: 'ما هي تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي في 2026؟',
-        answer: 'تواريخ انقطاع موثّقة: GPT-5.6 فبراير 2026 (ChatGPT يبحث في Bing افتراضيًا؛ GPT-4o القديم أكتوبر 2023؛ خلف GPT-5.5)؛ Claude Opus 5 مايو 2026 (انقطاع موثوق)؛ Grok 4.6 فبراير 2026 (يبحث في X افتراضيًا في تطبيق المستهلكين؛ خلف Grok 4.3)؛ Gemini 3.1 Pro يناير 2025 (Google Search الأصيل). نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد مطلق.',
+        answer: 'تواريخ انقطاع موثّقة: Claude Opus 5.5 يونيو 2026 (انقطاع موثوق؛ خلف Claude Opus 5، مايو 2026)؛ GPT-6 Astra وGPT-6.1 Sol أبريل 2026، وGPT-6 Luna مايو 2026 (ChatGPT يبحث في Bing افتراضيًا؛ عائلة GPT-6 خلفت GPT-5.6، فبراير 2026؛ GPT-4o نموذج قديم، أكتوبر 2023)؛ Grok 4.7 مايو 2026 (يبحث في X افتراضيًا في تطبيق المستهلكين؛ خلف Grok 4.6، فبراير 2026). لم تنشر Google تاريخ انقطاع لـ Gemini 4 Argon؛ أما الرائد السابق Gemini 3.1 Pro فتاريخه يناير 2025 (Google Search الأصيل). نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد مطلق.',
         bullets: [
-          'GPT-5.6 (ChatGPT): انقطاع فبراير 2026 — مُعوَّض جزئيًا ببحث Bing',
-          'Claude (Opus 5): انقطاع مايو 2026 (موثوق) — بحث الويب يتطلب تفعيلًا صريحًا',
-          'Grok 4.6: انقطاع فبراير 2026 — يبحث في X افتراضيًا في تطبيق المستهلكين',
+          'عائلة GPT-6 (ChatGPT): انقطاع أبريل–مايو 2026 — مُعوَّض جزئيًا ببحث Bing',
+          'Claude (Opus 5.5): انقطاع يونيو 2026 (موثوق) — بحث الويب يتطلب تفعيلًا صريحًا',
+          'Grok 4.7: انقطاع مايو 2026 — يبحث في X افتراضيًا في تطبيق المستهلكين',
           'نماذج LLM المحلية: بلا بحث — الانقطاع حد معرفي مجمّد مطلق',
         ],
-        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+        updatedDate: PAGE_UPDATED,
       },
     },
     sections: {
@@ -751,7 +753,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'تواريخ انقطاع المعرفة ثابتة — المعلومات بعد هذا التاريخ غير موجودة للنموذج',
           'نماذج السحابة (ChatGPT وGemini وGrok) تعوّض جزئيًا ببحث ويب مدمج',
           'نماذج LLM المحلية (Llama وQwen وGemma وPhi) بلا طبقة بحث — الانقطاع حد معرفي مطلق',
-          'عدة نماذج رئيسية — بما فيها Mistral Large وLlama 4 وQwen3 — لم تُفصح عن تواريخ انقطاع دقيقة',
+          'عدة نماذج رئيسية — بما فيها Gemini 4 Argon وMistral Large 4 وDeepSeek-V4 وLlama 4 وQwen3 — لم تُفصح عن تواريخ انقطاع دقيقة',
         ],
       },
       faq: {
@@ -772,7 +774,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'ما هي نماذج الذكاء الاصطناعي القادرة على رؤية الأخبار والأحداث الحالية؟',
-            a: 'يمكن لـ ChatGPT (يستخدم Bing افتراضيًا في الخطط المدفوعة)، وGemini 3.1 Pro (يستخدم Google افتراضيًا)، وGrok 4.6 (يبحث في X/Twitter افتراضيًا في تطبيق المستهلكين) الوصول إلى معلومات حالية. Perplexity مبني أصلًا على البحث في الويب ويسترجع نتائج مباشرة لكل استعلام. لا يستطيع Claude البحث في الويب إلا عندما يُفعّل المطورون أداة البحث في الويب صراحةً. لا تملك DeepSeek وMistral Large وجميع نماذج LLM المحلية (Llama وQwen وGemma وPhi) إمكانية بحث افتراضية.',
+            a: 'يمكن لـ ChatGPT (يستخدم Bing افتراضيًا في الخطط المدفوعة)، وGemini (يستخدم Google افتراضيًا)، وGrok (يبحث في X/Twitter افتراضيًا في تطبيق المستهلكين) الوصول إلى معلومات حالية. Perplexity مبني أصلًا على البحث في الويب ويسترجع نتائج مباشرة لكل استعلام. لا يستطيع Claude البحث في الويب إلا عندما يُفعّل المطورون أداة البحث في الويب صراحةً. لا تملك DeepSeek وMistral Large وجميع نماذج LLM المحلية (Llama وQwen وGemma وPhi) إمكانية بحث افتراضية.',
           },
           {
             q: 'هل تاريخ انقطاع ChatGPT هو نفسه ما يعرفه الآن؟',

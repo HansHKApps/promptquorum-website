@@ -21,7 +21,7 @@ export const app: ToolRecord = {
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['image'],
-  url: 'huggingface.co/HuggingFaceM4/idefics',
+  url: 'huggingface.co/HuggingFaceM4/Idefics3-8B-Llama3', // repointed 2026-10-19 from the 2023 original to Idefics3, the newest generation the review recommends
   tagline: {
     en: 'Open-source multimodal model for vision and language',
     de: 'Open-Source-Multimodalmodell für Vision und Sprache',
@@ -33,8 +33,10 @@ export const app: ToolRecord = {
     ar: 'نموذج وسائط متعددة مفتوح المصدر للرؤية واللغة',
     ko: '비전과 언어를 위한 오픈소스 멀티모달 모델',
   },
+  lastUpstreamUpdate: '2024-12-02', // latest commit on the Idefics3-8B-Llama3 repo (model-card edit); last weights/config change 2024-09-18; checked 2026-10-19
+  lastUpstreamUpdateSource: 'https://huggingface.co/HuggingFaceM4/Idefics3-8B-Llama3/commits/main',
   reviewSlug: 'idefics-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { multiImage: true },
-  lastVerifiedDate: '2026-09-07', // Verified against HuggingFace model cards for idefics-80b, idefics2-8b, and Idefics3-8B-Llama3 — see /power-local-llm/idefics-review
+  lastVerifiedDate: '2026-10-19', // Verified against HuggingFace model cards for idefics-80b, idefics2-8b, and Idefics3-8B-Llama3 — see /power-local-llm/idefics-review
 }
