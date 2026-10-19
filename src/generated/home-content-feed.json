@@ -22519,82 +22519,82 @@
   },
   {
     "lang": "en",
-    "title": "Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
-    "excerpt": "Six small LLMs run CPU-only on phones in 2026: Phi-4 Mini (3.8B), Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B, Llama 3.2 3B compared on speed, RAM, quality.",
+    "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
+    "excerpt": "Best LLM for phones in 2026: Phi-4 Mini on 8 GB+ RAM, SmolLM 2 for speed, Qwen3 for languages. Six mobile models compared by speed, size and RAM.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Beste mobile KI-Modelle 2026: Phi-4 Mini vs. Gemma 3 vs. SmolLM",
-    "excerpt": "Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B und Llama 3.2 3B: Smartphone-Benchmark 2026. Geschwindigkeit, RAM und Qualität im Vergleich.",
+    "title": "Beste mobile KI-Modelle für Smartphones 2026: Phi-4 Mini vs. Gemma 3 vs. SmolLM",
+    "excerpt": "Bestes LLM fürs Smartphone 2026: Phi-4 Mini ab 8 GB RAM, SmolLM 2 für Tempo, Qwen3 für Sprachen. Sechs Mobile LLMs nach Tempo, Größe und RAM verglichen.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Meilleurs modèles LLM mobiles 2026 : Phi-4 Mini vs Gemma 3 vs SmolLM",
-    "excerpt": "Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B et Llama 3.2 3B comparés sur smartphone en 2026 : vitesse, RAM et qualité en un seul tableau.",
+    "title": "Meilleurs modèles LLM pour smartphone en 2026 : Phi-4 Mini vs Gemma 3 vs SmolLM",
+    "excerpt": "Meilleur LLM pour smartphone en 2026 : Phi-4 Mini dès 8 Go de RAM, SmolLM 2 pour la vitesse, Qwen3 pour les langues. Six modèles comparés en taille et RAM.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/fr/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "2026年モバイルLLMモデル比較：Phi-4 Mini vs Gemma 3 vs SmolLM",
-    "excerpt": "2026年スマートフォン向けの6つの小型LLMベンチマーク。Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen3 1.7B、Llama 3.2 3Bをspeed・RAM・品質で比較。",
+    "title": "2026年スマートフォン向けLLMモデル比較：Phi-4 Mini vs Gemma 3 vs SmolLM",
+    "excerpt": "2026年のスマホ向けLLMはRAM 8GB以上ならPhi-4 Mini、速度ならSmolLM 2、多言語ならQwen3。6つのモバイルモデルを速度・サイズ・RAMで比較。",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/ja/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "2026年最佳移动端LLM模型：Phi-4 Mini vs Gemma 3 vs SmolLM对比",
-    "excerpt": "2026年六款手机端小型LLM基准测试：Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen3 1.7B、Llama 3.2 3B速度、RAM与质量全面对比。",
+    "title": "2026年手机端最佳LLM模型：Phi-4 Mini vs Gemma 3 vs SmolLM对比",
+    "excerpt": "2026年手机最佳LLM：RAM 8GB以上选Phi-4 Mini，求快选SmolLM 2，多语言选Qwen3。六款手机端模型的速度、体积与RAM全面对比。",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/zh/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "Mejores modelos LLM para móviles en 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
-    "excerpt": "Seis LLMs pequeños evaluados en teléfonos en 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B, Llama 3.2 3B comparados en velocidad, RAM y calidad.",
+    "title": "Mejores modelos LLM para teléfonos móviles en 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
+    "excerpt": "Mejor LLM para móvil en 2026: Phi-4 Mini con 8 GB+ de RAM, SmolLM 2 por velocidad, Qwen3 por idiomas. Seis modelos comparados en velocidad, tamaño y RAM.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/es/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "Melhores modelos LLM para celular em 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
-    "excerpt": "Seis LLMs pequenos avaliados em celulares em 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B, Llama 3.2 3B comparados em velocidade, RAM e qualidade.",
+    "title": "Melhores modelos de LLM para celulares em 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
+    "excerpt": "Melhor LLM para celular em 2026: Phi-4 Mini com 8 GB+ de RAM, SmolLM 2 pela velocidade, Qwen3 para idiomas. Seis modelos comparados em velocidade e RAM.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/pt/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "أفضل نماذج ⁨LLM⁩ للهاتف في ⁨2026⁩: ⁨Phi-4 Mini⁩ مقابل ⁨Gemma 3⁩ مقابل ⁨SmolLM⁩",
-    "excerpt": "Phi-4 Mini وGemma 3 وSmolLM 2 مُختبرة على iPhone 17 Pro وGalaxy S25 Ultra. مقارنة السرعة والذاكرة RAM والجودة — وسبب هيمنة Q4_K_M على الهاتف.",
+    "title": "أفضل نماذج ⁨LLM⁩ للهاتف المحمول في ⁨2026⁩: ⁨Phi-4 Mini⁩ مقابل ⁨Gemma 3⁩ مقابل ⁨SmolLM⁩",
+    "excerpt": "أفضل LLM للهاتف في 2026: Phi-4 Mini لهواتف 8 جيجابايت أو أكثر، وSmolLM 2 للسرعة، وQwen3 للغات. ستة نماذج مقارنة بالسرعة والحجم والذاكرة RAM والجودة.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/ar/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "2026년 모바일 LLM 최고 모델: Phi-4 Mini vs Gemma 3 vs SmolLM 비교",
-    "excerpt": "2026년 스마트폰에서 테스트한 소형 LLM 6종 비교. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B, Llama 3.2 3B의 속도·RAM·품질을 비교합니다.",
+    "title": "2026년 스마트폰용 최고 모바일 LLM 모델: Phi-4 Mini vs Gemma 3 vs SmolLM 비교",
+    "excerpt": "2026년 폰 LLM 추천: RAM 8GB 이상은 Phi-4 Mini, 속도는 SmolLM 2, 다국어는 Qwen3. 모바일 모델 6종을 속도·용량·RAM으로 비교합니다.",
     "publishDate": "2026-05-08",
-    "dateModified": "2026-07-14",
+    "dateModified": "2026-10-19",
     "url": "/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
     "cluster": "power-local-llm"
   },
@@ -54110,9 +54110,9 @@
   {
     "lang": "en",
     "title": "Best Copilot+ PC for Local LLMs in 2026: NPU vs GPU",
-    "excerpt": "Don't buy a Copilot+ PC for its NPU alone. For local LLMs, prioritize RAM, GPU, and memory bandwidth — the NPU accelerates Windows AI features, not Ollama.",
+    "excerpt": "Don't buy a Copilot+ PC for its NPU alone. Intel, AMD and Snapdragon NPUs power Windows AI features; for local LLMs, RAM, GPU and bandwidth matter more.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54121,7 +54121,7 @@
     "title": "Bester Copilot+-PC für lokale LLMs 2026: NPU vs. GPU",
     "excerpt": "Kaufen Sie einen Copilot+-PC nicht nur wegen der NPU. Für lokale LLMs zählen RAM, GPU und Speicherbandbreite — die NPU dient Windows-Funktionen, nicht Ollama.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/de/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54130,7 +54130,7 @@
     "title": "Meilleur PC Copilot+ pour LLM Locaux en 2026 : NPU vs GPU",
     "excerpt": "N'achetez pas un PC Copilot+ juste pour son NPU. Pour les LLM locaux, priorisez la RAM, le GPU et la bande passante mémoire — le NPU sert Windows, pas Ollama.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/fr/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54139,7 +54139,7 @@
     "title": "2026年版ローカルLLMに最適なCopilot+ PC: NPU vs GPU",
     "excerpt": "Copilot+ PCをNPUだけで選ばないこと。ローカルLLMではRAM・GPU・メモリ帯域幅を優先——NPUはWindows機能向けでOllamaには使われません。",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/ja/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54148,7 +54148,7 @@
     "title": "2026 年本地 LLM 最佳 Copilot+ PC：NPU 对比 GPU",
     "excerpt": "不要只为了 NPU 而购买 Copilot+ PC。运行本地 LLM 应优先考虑内存、GPU 和内存带宽——NPU 服务于 Windows 功能，而非 Ollama。",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/zh/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54157,7 +54157,7 @@
     "title": "Mejor Copilot+ PC para LLMs Locales en 2026: NPU vs GPU",
     "excerpt": "No compres una Copilot+ PC solo por su NPU. Para LLMs locales, prioriza RAM, GPU y ancho de banda de memoria — la NPU sirve a funciones de Windows, no a Ollama.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/es/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54166,7 +54166,7 @@
     "title": "Melhor PC Copilot+ para LLMs Locais em 2026: NPU vs GPU",
     "excerpt": "Não compre um PC Copilot+ só pela NPU. Para LLMs locais, priorize RAM, GPU e largura de banda de memória — a NPU serve recursos do Windows, não o Ollama.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/pt/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54175,7 +54175,7 @@
     "title": "أفضل جهاز Copilot+ PC لتشغيل LLM محلي في 2026: NPU مقابل GPU",
     "excerpt": "لا تشترِ جهاز Copilot+ PC من أجل NPU فقط. لتشغيل LLM محلي، امنح الأولوية للذاكرة وGPU — فـ NPU يخدم ميزات Windows وليس Ollama.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/ar/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54184,7 +54184,7 @@
     "title": "2026년 로컬 LLM에 최적인 Copilot+ PC: NPU 대 GPU",
     "excerpt": "NPU만 보고 Copilot+ PC를 사지 마십시오. 로컬 LLM에는 RAM·GPU·메모리 대역폭이 우선입니다 — NPU는 Windows 기능용이지 Ollama용이 아닙니다.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/ko/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },

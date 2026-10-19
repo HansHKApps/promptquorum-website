@@ -6863,7 +6863,7 @@
       "images": []
     },
     "mobile-llm-models-phi4-gemma-smollm": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -6885,11 +6885,11 @@
         },
         {
           "url": "/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-en.webp",
-          "title": "Six mobile LLM models benchmarked at Q4_K_M on iPhone 17 Pro: Phi-4 Mini (3.8B, ~13–18 tok/sec) is the smartest; SmolLM 2 (1.7B, ~26–32 tok/sec) is the fastest; Qwen3 (1.7B) is the best multilingual; Gemma 3 1B (~35–45 tok/sec) works on 4 GB phones."
+          "title": "Six mobile LLM models compared at Q4_K_M, with indicative speeds for iPhone 17 Pro: Phi-4 Mini (3.8B, ~13–18 tok/sec) is the smartest; SmolLM 2 (1.7B, ~26–32 tok/sec) is the fastest; Qwen3 (1.7B) is the best multilingual; Gemma 3 1B (~35–45 tok/sec) works on 4 GB phones."
         },
         {
           "url": "/images/mobile-llm-models-phi4-gemma-smollm-speed-chart-hero-en.webp",
-          "title": "Tokens-per-second comparison for 6 mobile LLM models on 3 devices at Q4_K_M: Gemma 3 1B (~35–45 on iPhone 17 Pro) and SmolLM 2 1.7B (~26–32) lead on speed; Phi-4 Mini (~13–18) and Gemma 3 4B (~10–13) are slower but smarter."
+          "title": "Indicative tokens-per-second comparison for 6 mobile LLM models at Q4_K_M (reference devices, not measured by PromptQuorum): Gemma 3 1B (~35–45 on iPhone 17 Pro) and SmolLM 2 1.7B (~26–32) lead on speed; Phi-4 Mini (~13–18) and Gemma 3 4B (~10–13) are slower but smarter."
         },
         {
           "url": "/images/mobile-llm-models-quantization-guide-en.svg",
@@ -14258,7 +14258,7 @@
       "images": []
     },
     "bestNpuCopilotPcLocalLlm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,

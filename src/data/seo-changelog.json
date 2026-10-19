@@ -4335,5 +4335,176 @@
     ],
     "reason": "geo-meta-optimizer (no GSC data, data-free): add number, fix length (title<=60 / meta 140-160), answer-first meta; dateModified not bumped",
     "baseline": null
+  },
+  {
+    "id": "391dc581-e3d6-4ef1-8d47-1f5d88f177cb",
+    "slug": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
+    "date": "2026-10-19T19:56:47.465Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best Mobile LLM 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
+        "new": "Best Mobile LLM Models for Phones 2026: 6 Compared"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Six small LLMs run CPU-only on phones in 2026: Phi-4 Mini (3.8B), Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B, Llama 3.2 3B compared on speed, RAM, quality.",
+        "new": "Best LLM for phones in 2026: Phi-4 Mini on 8 GB+ RAM, SmolLM 2 for speed, Qwen3 for languages. Six mobile models compared by speed, size and RAM."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven phone/mobile query alignment (best phone for local llm, mobile llm models), coherence fix B2/C - new sections SmolLM 3/Gemma 3n, download sizes, best phones, on-device vision, 10 FAQs",
+    "baseline": null
+  },
+  {
+    "id": "b684ccdf-1ba0-46b5-a99f-80e3a1226319",
+    "slug": "/es/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
+    "date": "2026-10-19T19:56:47.583Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Phi-4 Mini vs Gemma 3 vs SmolLM: LLMs móviles 2026",
+        "new": "Mejores LLM para móvil 2026: 6 modelos comparados"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Seis LLMs pequeños evaluados en teléfonos en 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B, Llama 3.2 3B comparados en velocidad, RAM y calidad.",
+        "new": "Mejor LLM para móvil en 2026: Phi-4 Mini con 8 GB+ de RAM, SmolLM 2 por velocidad, Qwen3 por idiomas. Seis modelos comparados en velocidad, tamaño y RAM."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven phone/mobile query alignment (best phone for local llm, mobile llm models), coherence fix B2/C - new sections SmolLM 3/Gemma 3n, download sizes, best phones, on-device vision, 10 FAQs",
+    "baseline": null
+  },
+  {
+    "id": "26226c7e-eaa0-420e-81c0-b44d81abca54",
+    "slug": "/pt/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
+    "date": "2026-10-19T19:56:47.687Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Phi-4 Mini vs Gemma 3 vs SmolLM: LLMs de celular 2026",
+        "new": "Melhor LLM para celular em 2026: 6 modelos comparados"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Seis LLMs pequenos avaliados em celulares em 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B, Llama 3.2 3B comparados em velocidade, RAM e qualidade.",
+        "new": "Melhor LLM para celular em 2026: Phi-4 Mini com 8 GB+ de RAM, SmolLM 2 pela velocidade, Qwen3 para idiomas. Seis modelos comparados em velocidade e RAM."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven phone/mobile query alignment (best phone for local llm, mobile llm models), coherence fix B2/C - new sections SmolLM 3/Gemma 3n, download sizes, best phones, on-device vision, 10 FAQs",
+    "baseline": null
+  },
+  {
+    "id": "5d34a853-27f9-4520-9041-97058b69bc7b",
+    "slug": "/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
+    "date": "2026-10-19T19:56:47.790Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Phi-4 Mini vs. Gemma 3 vs. SmolLM: Mobile LLMs 2026",
+        "new": "Bestes LLM fürs Smartphone 2026: 6 Modelle im Vergleich"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B und Llama 3.2 3B: Smartphone-Benchmark 2026. Geschwindigkeit, RAM und Qualität im Vergleich.",
+        "new": "Bestes LLM fürs Smartphone 2026: Phi-4 Mini ab 8 GB RAM, SmolLM 2 für Tempo, Qwen3 für Sprachen. Sechs Mobile LLMs nach Tempo, Größe und RAM verglichen."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven phone/mobile query alignment (best phone for local llm, mobile llm models), coherence fix B2/C - new sections SmolLM 3/Gemma 3n, download sizes, best phones, on-device vision, 10 FAQs",
+    "baseline": null
+  },
+  {
+    "id": "c8d976de-dd36-4ff6-8b43-ee055f7174e3",
+    "slug": "/fr/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
+    "date": "2026-10-19T19:56:47.895Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Phi-4 Mini vs Gemma 3 vs SmolLM : LLMs mobiles 2026",
+        "new": "Meilleurs LLM pour smartphone 2026 : 6 modèles comparés"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B et Llama 3.2 3B comparés sur smartphone en 2026 : vitesse, RAM et qualité en un seul tableau.",
+        "new": "Meilleur LLM pour smartphone en 2026 : Phi-4 Mini dès 8 Go de RAM, SmolLM 2 pour la vitesse, Qwen3 pour les langues. Six modèles comparés en taille et RAM."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven phone/mobile query alignment (best phone for local llm, mobile llm models), coherence fix B2/C - new sections SmolLM 3/Gemma 3n, download sizes, best phones, on-device vision, 10 FAQs",
+    "baseline": null
+  },
+  {
+    "id": "0c0baf1b-0319-4f74-b951-c4cc0b5cb265",
+    "slug": "/ja/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
+    "date": "2026-10-19T19:56:48.000Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Phi-4 Mini vs Gemma 3 vs SmolLM：モバイルLLM 2026年",
+        "new": "スマホ向けLLMモデル2026年：6モデルを速度・RAMで比較"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026年スマートフォン向けの6つの小型LLMベンチマーク。Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen3 1.7B、Llama 3.2 3Bをspeed・RAM・品質で比較。",
+        "new": "2026年のスマホ向けLLMはRAM 8GB以上ならPhi-4 Mini、速度ならSmolLM 2、多言語ならQwen3。6つのモバイルモデルを速度・サイズ・RAMで比較。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven phone/mobile query alignment (best phone for local llm, mobile llm models), coherence fix B2/C - new sections SmolLM 3/Gemma 3n, download sizes, best phones, on-device vision, 10 FAQs",
+    "baseline": null
+  },
+  {
+    "id": "2b7ed075-cbbb-43a3-a8f8-be1c0605df72",
+    "slug": "/zh/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
+    "date": "2026-10-19T19:56:48.107Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Phi-4 Mini vs Gemma 3 vs SmolLM：2026移动LLM对比",
+        "new": "2026年手机端最佳LLM模型：6款本地大模型对比"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026年六款手机端小型LLM基准测试：Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen3 1.7B、Llama 3.2 3B速度、RAM与质量全面对比。",
+        "new": "2026年手机最佳LLM：RAM 8GB以上选Phi-4 Mini，求快选SmolLM 2，多语言选Qwen3。六款手机端模型的速度、体积与RAM全面对比。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven phone/mobile query alignment (best phone for local llm, mobile llm models), coherence fix B2/C - new sections SmolLM 3/Gemma 3n, download sizes, best phones, on-device vision, 10 FAQs",
+    "baseline": null
+  },
+  {
+    "id": "cbadcbdc-d862-4145-82aa-c9ef24b5c2b2",
+    "slug": "/ar/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
+    "date": "2026-10-19T19:56:48.216Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "نماذج ⁨LLM⁩ للهاتف ⁨2026⁩: ⁨Phi-4 Mini⁩ و⁨Gemma 3⁩ و⁨SmolLM⁩",
+        "new": "أفضل نماذج ⁨LLM⁩ للهاتف ⁨2026⁩: مقارنة ⁨6⁩ نماذج"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Phi-4 Mini وGemma 3 وSmolLM 2 مُختبرة على iPhone 17 Pro وGalaxy S25 Ultra. مقارنة السرعة والذاكرة RAM والجودة — وسبب هيمنة Q4_K_M على الهاتف.",
+        "new": "أفضل LLM للهاتف في 2026: Phi-4 Mini لهواتف 8 جيجابايت أو أكثر، وSmolLM 2 للسرعة، وQwen3 للغات. ستة نماذج مقارنة بالسرعة والحجم والذاكرة RAM والجودة."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven phone/mobile query alignment (best phone for local llm, mobile llm models), coherence fix B2/C - new sections SmolLM 3/Gemma 3n, download sizes, best phones, on-device vision, 10 FAQs",
+    "baseline": null
+  },
+  {
+    "id": "ae2cb6fe-648a-4373-ac1b-b2f935104bfc",
+    "slug": "/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
+    "date": "2026-10-19T19:56:48.317Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Phi-4 Mini vs Gemma 3 vs SmolLM: 모바일 LLM 2026",
+        "new": "스마트폰 LLM 추천 2026: 모바일 모델 6종 비교"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026년 스마트폰에서 테스트한 소형 LLM 6종 비교. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B, Llama 3.2 3B의 속도·RAM·품질을 비교합니다.",
+        "new": "2026년 폰 LLM 추천: RAM 8GB 이상은 Phi-4 Mini, 속도는 SmolLM 2, 다국어는 Qwen3. 모바일 모델 6종을 속도·용량·RAM으로 비교합니다."
+      }
+    ],
+    "reason": "geo-meta-optimizer: GSC-driven phone/mobile query alignment (best phone for local llm, mobile llm models), coherence fix B2/C - new sections SmolLM 3/Gemma 3n, download sizes, best phones, on-device vision, 10 FAQs",
+    "baseline": null
   }
 ]
