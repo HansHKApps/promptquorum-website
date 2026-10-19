@@ -5,6 +5,8 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { toOutputLocale } from '@/lib/i18n/constants'
 import { buildPEHubData } from '@/lib/prompt-engineering/hub-data'
+import { PeHubTemplate, usesPeHubTemplate } from '@/lib/prompt-engineering/hub-template'
+import type { Lang } from '@/lib/i18n/constants'
 import type { Language } from '@/translations'
 import { truncateTitle } from '@/lib/utils'
 
@@ -173,7 +175,7 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
   const howToForLang = HOWTO_TRANSLATIONS[selectedLang] ?? HOWTO_TRANSLATIONS['en']
 
   // Titles/levels/dates scoped to the resolved language (keeps full article content server-side)
-  const { titlesMap, articleLevels, datesMap } = buildPEHubData(selectedLang as Language)
+  const hubData = buildPEHubData(selectedLang as Language)
 
   const BREADCRUMB_LABELS: Record<string, string> = {
     en: 'Prompt Engineering', de: 'Prompt Engineering', fr: 'Ingénierie de prompts',
@@ -329,7 +331,11 @@ export default async function PromptEngineeringPage({ searchParams }: PageProps)
           __html: JSON.stringify(jsonLdSchemas),
         }}
       />
-      <PromptEngineeringHub initialLang={selectedLang as Language} titlesMap={titlesMap} articleLevels={articleLevels} datesMap={datesMap} />
+      {usesPeHubTemplate(selectedLang) ? (
+        <PeHubTemplate lang={selectedLang as Lang} {...hubData} />
+      ) : (
+        <PromptEngineeringHub initialLang={selectedLang as Language} {...hubData} />
+      )}
     </>
   )
 }
