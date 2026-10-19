@@ -1259,6 +1259,11 @@
     "urlSlug": "hiwaifu-review",
     "url": "/power-local-llm/hiwaifu-review"
   },
+  "memoryai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "memoryai-review",
+    "url": "/power-local-llm/memoryai-review"
+  },
   "whisper-notes": {
     "cluster": "power-local-llm",
     "urlSlug": "whisper-notes-review",

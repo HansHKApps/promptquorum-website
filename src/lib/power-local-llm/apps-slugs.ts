@@ -199,6 +199,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'whisper-notes':                           'whisper-notes',
   'anyllm':                                  'anyllm',
   'hiwaifu':                                 'hiwaifu',
+  'memoryai':                                'memoryai',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)

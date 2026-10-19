@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 164,
+    "totalCount": 165,
     "capped": true
   },
   "vLLM": {
@@ -5900,7 +5900,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 34,
+    "totalCount": 35,
     "capped": true
   },
   "Pocket AI": {
@@ -11403,6 +11403,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "memoryai-review",
+        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
+        "url": "/power-local-llm/memoryai-review",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mlxhub-review",
         "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
         "url": "/power-local-llm/mlxhub-review",
@@ -11450,7 +11458,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "LLM Hub": {
@@ -11691,6 +11699,20 @@
         "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
         "url": "/power-local-llm/hiwaifu-review",
         "dateModified": "2026-10-18",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "MemoryAI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "memoryai-review",
+        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
+        "url": "/power-local-llm/memoryai-review",
+        "dateModified": "2026-10-19",
         "tier": "about"
       }
     ],
