@@ -22,9 +22,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MemoryAI is an offline chat app for iPhone and Android from Alessandro Facchini (trading as Facchinits), an independent developer in Italy. It runs open-weight language models on the phone through two engines, llama.cpp and Google\'s LiteRT, and was first released on the App Store on 30 March 2026. This review reflects its store listings, website and privacy policy as checked on 19 October 2026.',
     metaDescription:
-      'MemoryAI review: free, closed-source offline AI chat for iPhone and Android with document Q&A, editable Agent Memory and Kid Mode. Privacy and limits.',
+      'MemoryAI review: free, closed-source offline AI chat for iPhone and Android with document Q&A, editable Agent Memory and voice. Privacy and limits.',
     twitterDescription:
-      'MemoryAI review: a free, closed-source offline AI chat app for iPhone and Android with document Q&A, editable on-device memory, hands-free voice and a PIN-locked Kid Mode. What the listings and privacy policy say.',
+      'MemoryAI review: a free, closed-source offline AI chat app for iPhone and Android with document Q&A, editable on-device memory, hands-free voice and parental controls. What the listings and privacy policy say.',
     audience:
       'iPhone and Android users who want a free chat app that runs language models on the device, and who need to know what stays offline, what it sends out, and what the sources do not confirm.',
     readTime: '8 min read',
@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'memoryai offline private ai',
       'offline ai chat app iphone android',
       'on-device ai agent memory',
-      'ai kid mode offline app',
+      'offline ai chat app for kids',
       'gguf import mobile app',
       'memoryai vs private mind',
     ],
@@ -53,7 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Free on [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) and the [App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586).',
           'Chat with GGUF and LiteRT models such as Gemma, Qwen, Llama, Phi and DeepSeek.',
           'Optional Agent Memory that you can view, edit and delete, plus document and image questions.',
-          'Kid Mode with a parent PIN, a content filter and a locked model.',
+          'Parental controls with a PIN, a content filter and a locked model.',
         ],
         updatedDate: '2026-10',
       },
@@ -64,6 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Get It', anchor: 'get-it' },
       { label: 'How to Get Started', anchor: 'getting-started' },
       { label: 'Features Confirmed by the Sources', anchor: 'key-features' },
+      { label: 'Kid Mode', anchor: 'kid-mode' },
       { label: 'Privacy and Network Use', anchor: 'privacy' },
       { label: 'Who Should Use It', anchor: 'who-should-use' },
       { label: 'What We Could Not Verify', anchor: 'who-should-not-use' },
@@ -81,7 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MemoryAI is a closed-source iPhone and Android app that keeps an editable Agent Memory on the device and adds document questions, hands-free voice and a PIN-locked Kid Mode.',
+            text: 'MemoryAI is a closed-source iPhone and Android app that keeps an editable Agent Memory on the device and adds document questions, hands-free voice and parental controls.',
           },
           {
             type: 'plain-terms',
@@ -181,10 +182,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Agent Memory.** Optional; the AI stores what you tell it in your own words on the device, and you can view, edit or delete each memory. The 1.0.52 notes say requests such as "write an email" are no longer saved as memories.',
           '**Documents and images.** Questions about PDF, TXT and Markdown files, image analysis with vision models (several images at once), and text recognition on photos through Google ML Kit.',
           '**Voice.** On-device voice input, text-to-speech, and a continuous hands-free mode.',
-          '**Kid Mode.** A parent PIN, a filter that blocks inappropriate words before they reach the model, a locked model, a safety prompt, warnings for unverified imported models, and a parental unlock that opens settings without ending the mode.',
           '**Everyday tools.** Chat search, 20 persona templates, a speed benchmark in tokens per second, a context-window display, a screen showing whether the loaded model runs on the GPU or CPU, and backup to Google Drive on Android or iCloud on iPhone.',
         ],
         note: 'The two store descriptions are near-identical but not the same; for example, the iOS text mentions iCloud backup and the Android text Google Drive. The installed build is the final authority.',
+      },
+      kidMode: {
+        id: 'kid-mode',
+        title: 'Kid Mode',
+        content: [
+          '**The app offers a PIN-protected mode for children that its store descriptions present as a headline feature.** Everything below comes from those descriptions; PromptQuorum has not tested how well the mode holds up.',
+        ],
+        items: [
+          '**Parent PIN.** A parent sets a PIN that guards the mode and its settings.',
+          '**Locked model.** The active model is fixed, so a child cannot switch models or change settings.',
+          '**Content filter.** Inappropriate words are blocked before they reach the model, and a safety prompt guides age-appropriate replies.',
+          '**Import warnings.** The app warns before an unverified imported model can run in this mode.',
+          '**Parental unlock.** Settings and documents can be opened temporarily from the chat screen without ending the mode.',
+        ],
       },
       privacy: {
         id: 'privacy',
@@ -197,7 +211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'The app is closed source, so none of these claims can be checked in code, and PromptQuorum has not audited network traffic. Anyone handling confidential data, or setting up Kid Mode for a child, should verify behavior on their own device.',
+            text: 'The app is closed source, so none of these claims can be checked in code, and PromptQuorum has not audited network traffic. Anyone handling confidential data, or configuring parental controls for a child, should verify behavior on their own device.',
           },
         ],
       },
@@ -206,7 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Who Should Use It',
         items: [
           '**People who want a phone assistant that remembers them without a cloud account.** The Agent Memory is stored locally and editable.',
-          '**Parents who want a child-facing offline chat.** Kid Mode combines a PIN, a filter and a locked model, though its effectiveness is unverified.',
+          '**Parents who want a child-facing offline chat.** Parental controls are included, with the caveat that their strength is unverified.',
           '**People who want to question their own PDFs and photos privately.** Document and image questions are included.',
           '**Users who like to bring their own models.** GGUF import and two engines suit anyone who already has a favorite model.',
         ],
@@ -215,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'What We Could Not Verify',
         items: [
-          '**Hands-on performance.** PromptQuorum did not run the app, so speed, battery use, answer quality and the real strength of Kid Mode are not assessed.',
+          '**Hands-on performance.** PromptQuorum did not run the app, so speed, battery use, answer quality and the real strength of the parental controls are not assessed.',
           '**Source code and license.** The app is closed source; the feedback repository holds only a README and an issue tracker.',
           '**Purchases and tracking.** The store texts and the privacy policy disagree, as described in the privacy section.',
           '**Android requirements.** The Google Play text read shows no minimum Android version; the iOS minimum is 16.4.',
@@ -269,12 +283,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Yes. Agent Memory is optional, stored on the device in your own words, and each entry can be viewed, edited or deleted. It needs an embedding model to work.',
           },
           {
-            q: 'How does Kid Mode work?',
-            a: 'A parent sets a PIN; the app then locks the active model, filters inappropriate words before they reach the AI, and adds a safety prompt. A parental unlock opens settings temporarily without ending the mode.',
-          },
-          {
             q: 'Can I use my own models?',
-            a: 'Yes. You can import compatible GGUF files from Hugging Face and run them on the llama.cpp engine; Gemma-family models can run on the LiteRT engine. The app warns before an unverified imported model runs in Kid Mode.',
+            a: 'Yes. You can import compatible GGUF files from Hugging Face and run them on the llama.cpp engine; Gemma-family models can run on the LiteRT engine.',
           },
           {
             q: 'Does it work on a Mac?',
@@ -290,7 +300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'MemoryAI is a free offline mobile chat app that keeps an editable memory of the user on the device and offers a PIN-locked Kid Mode, alongside document and image questions, hands-free voice and two inference engines. It is also frequently updated, with a release the day before this review was checked. Against that, it is closed source, new, small in reach, limited to small on-device models, and its store texts and privacy policy disagree on purchases and tracking, so its privacy claims cannot be checked in code. It suits readers who want these specific features and accept a young, closed app; readers who want auditable code can compare [Private Mind](/power-local-llm/private-mind-review) or [PocketPal AI](/power-local-llm/pocketpal-ai-review).',
+          'MemoryAI is a free offline mobile chat app that keeps an editable memory of the user on the device and offers parental controls, alongside document and image questions, hands-free voice and two inference engines. It is also frequently updated, with a release the day before this review was checked. Against that, it is closed source, new, small in reach, limited to small on-device models, and its store texts and privacy policy disagree on purchases and tracking, so its privacy claims cannot be checked in code. It suits readers who want these specific features and accept a young, closed app; readers who want auditable code can compare [Private Mind](/power-local-llm/private-mind-review) or [PocketPal AI](/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -320,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'MemoryAI Review: Free Offline AI Chat for iPhone and Android',
       description:
-        'MemoryAI review: a free, closed-source offline AI chat app for iPhone and Android with document Q&A, editable Agent Memory, voice mode and Kid Mode. Privacy, limits and what the sources do not confirm.',
+        'MemoryAI review: a free, closed-source offline AI chat app for iPhone and Android with document Q&A, editable Agent Memory, voice mode and parental controls. Privacy, limits and what the sources do not confirm.',
       url: 'https://promptquorum.com/power-local-llm/memoryai-review',
       inLanguage: 'en',
       datePublished: '2026-10-19',
@@ -360,9 +370,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MemoryAI ist eine Offline-Chat-App für iPhone und Android von Alessandro Facchini (Handelsname Facchinits), einem unabhängigen Entwickler in Italien. Sie führt Open-Weight-Sprachmodelle über zwei Engines auf dem Telefon aus, llama.cpp und Googles LiteRT, und wurde am 30. März 2026 erstmals im App Store veröffentlicht. Diese Rezension gibt die Store-Einträge, die Website und die Datenschutzerklärung wieder, wie am 19. Oktober 2026 geprüft.',
     metaDescription:
-      'MemoryAI-Rezension: kostenlose, nicht quelloffene Offline-KI-Chat-App für iPhone und Android mit Dokumenten-Q&A, Agent Memory, Kindermodus. Datenschutz.',
+      'MemoryAI-Rezension: kostenlose, nicht quelloffene Offline-KI-Chat-App für iPhone und Android mit Dokumenten-Q&A, Agent Memory, Sprache. Datenschutz.',
     twitterDescription:
-      'MemoryAI-Rezension: kostenlose, nicht quelloffene Offline-KI-Chat-App für iPhone und Android mit Dokumenten-Q&A, editierbarem Gerätegedächtnis, freihändiger Sprache und PIN-gesperrtem Kindermodus. Was die Quellen sagen.',
+      'MemoryAI-Rezension: kostenlose, nicht quelloffene Offline-KI-Chat-App für iPhone und Android mit Dokumenten-Q&A, editierbarem Gerätegedächtnis, freihändiger Sprache und Kindersicherung. Was die Quellen sagen.',
     audience:
       'iPhone- und Android-Nutzer, die eine kostenlose Chat-App wünschen, die Sprachmodelle auf dem Gerät ausführt, und die wissen müssen, was offline bleibt, was nach außen gesendet wird und was die Quellen nicht bestätigen.',
     readTime: '8 Min. Lesezeit',
@@ -374,7 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'memoryai offline private ki',
       'offline ki chat app iphone android',
       'agent memory ki auf dem gerät',
-      'ki kindermodus offline app',
+      'offline ki chat app für kinder',
       'gguf import mobile app',
       'memoryai vs private mind',
     ],
@@ -391,7 +401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kostenlos bei [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) und im [App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586).',
           'Chat mit GGUF- und LiteRT-Modellen wie Gemma, Qwen, Llama, Phi und DeepSeek.',
           'Optionaler Agent Memory, den Sie ansehen, bearbeiten und löschen können, dazu Fragen zu Dokumenten und Bildern.',
-          'Kindermodus mit Eltern-PIN, Inhaltsfilter und gesperrtem Modell.',
+          'Kindersicherung mit PIN, Inhaltsfilter und gesperrtem Modell.',
         ],
         updatedDate: '2026-10',
       },
@@ -402,6 +412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Bezugsquelle', anchor: 'get-it' },
       { label: 'So gelingt der Einstieg', anchor: 'getting-started' },
       { label: 'Von den Quellen bestätigte Funktionen', anchor: 'key-features' },
+      { label: 'Kindermodus', anchor: 'kid-mode' },
       { label: 'Datenschutz und Netzwerknutzung', anchor: 'privacy' },
       { label: 'Für wen sich die App eignet', anchor: 'who-should-use' },
       { label: 'Was wir nicht überprüfen konnten', anchor: 'who-should-not-use' },
@@ -419,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MemoryAI ist eine nicht quelloffene iPhone- und Android-App, die einen editierbaren Agent Memory auf dem Gerät führt und Dokumentenfragen, freihändige Sprache und einen per PIN gesperrten Kindermodus bietet.',
+            text: 'MemoryAI ist eine nicht quelloffene iPhone- und Android-App, die einen editierbaren Agent Memory auf dem Gerät führt und Dokumentenfragen, freihändige Sprache und eine Kindersicherung bietet.',
           },
           {
             type: 'plain-terms',
@@ -519,10 +530,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Agent Memory.** Optional; die KI speichert, was Sie ihr in Ihren eigenen Worten sagen, auf dem Gerät, und Sie können jede Erinnerung ansehen, bearbeiten oder löschen. Die Hinweise zu 1.0.52 besagen, dass Anfragen wie „schreibe eine E-Mail“ nicht mehr als Erinnerungen gespeichert werden.',
           '**Dokumente und Bilder.** Fragen zu PDF-, TXT- und Markdown-Dateien, Bildanalyse mit Vision-Modellen (mehrere Bilder gleichzeitig) und Texterkennung auf Fotos über Google ML Kit.',
           '**Sprache.** Spracheingabe auf dem Gerät, Sprachausgabe und ein kontinuierlicher freihändiger Modus.',
-          '**Kindermodus.** Eine Eltern-PIN, ein Filter, der unangemessene Wörter blockiert, bevor sie das Modell erreichen, ein gesperrtes Modell, ein Sicherheitsprompt, Warnungen für nicht verifizierte importierte Modelle und eine Eltern-Entsperrung, die die Einstellungen öffnet, ohne den Modus zu beenden.',
           '**Alltagswerkzeuge.** Chat-Suche, 20 Persona-Vorlagen, ein Geschwindigkeits-Benchmark in Token pro Sekunde, eine Anzeige des Kontextfensters, eine Ansicht, ob das geladene Modell auf GPU oder CPU läuft, und Backup bei Google Drive unter Android oder iCloud auf dem iPhone.',
         ],
         note: 'Die beiden Store-Beschreibungen sind nahezu identisch, aber nicht gleich; so erwähnt der iOS-Text das iCloud-Backup und der Android-Text Google Drive. Maßgeblich ist letztlich die installierte Version.',
+      },
+      kidMode: {
+        id: 'kid-mode',
+        title: 'Kindermodus',
+        content: [
+          '**Die App bietet einen PIN-geschützten Modus für Kinder, den ihre Store-Beschreibungen als zentrale Funktion darstellen.** Alles Folgende stammt aus diesen Beschreibungen; PromptQuorum hat nicht getestet, wie gut der Modus standhält.',
+        ],
+        items: [
+          '**Eltern-PIN.** Ein Elternteil legt eine PIN fest, die den Modus und seine Einstellungen schützt.',
+          '**Gesperrtes Modell.** Das aktive Modell ist fest vorgegeben, sodass ein Kind weder das Modell wechseln noch Einstellungen ändern kann.',
+          '**Inhaltsfilter.** Unangemessene Wörter werden blockiert, bevor sie das Modell erreichen, und ein Sicherheitsprompt steuert altersgerechte Antworten.',
+          '**Importwarnungen.** Die App warnt, bevor ein nicht verifiziertes importiertes Modell in diesem Modus laufen kann.',
+          '**Eltern-Entsperrung.** Einstellungen und Dokumente lassen sich vom Chatbildschirm aus vorübergehend öffnen, ohne den Modus zu beenden.',
+        ],
       },
       privacy: {
         id: 'privacy',
@@ -535,7 +559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Die App ist nicht quelloffen, daher lässt sich keine dieser Angaben im Code prüfen, und PromptQuorum hat den Netzwerkverkehr nicht geprüft. Wer vertrauliche Daten verarbeitet oder den Kindermodus für ein Kind einrichtet, sollte das Verhalten auf dem eigenen Gerät überprüfen.',
+            text: 'Die App ist nicht quelloffen, daher lässt sich keine dieser Angaben im Code prüfen, und PromptQuorum hat den Netzwerkverkehr nicht geprüft. Wer vertrauliche Daten verarbeitet oder die Kindersicherung für ein Kind einrichtet, sollte das Verhalten auf dem eigenen Gerät überprüfen.',
           },
         ],
       },
@@ -544,7 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Für wen sich die App eignet',
         items: [
           '**Menschen, die einen Telefon-Assistenten wünschen, der sich ohne Cloud-Konto an sie erinnert.** Der Agent Memory wird lokal gespeichert und ist editierbar.',
-          '**Eltern, die einen Offline-Chat für ihr Kind wünschen.** Der Kindermodus kombiniert PIN, Filter und gesperrtes Modell, seine Wirksamkeit ist jedoch nicht verifiziert.',
+          '**Eltern, die einen Offline-Chat für ihr Kind wünschen.** Eine Kindersicherung ist enthalten, wobei ihre Stärke nicht verifiziert ist.',
           '**Menschen, die ihre eigenen PDFs und Fotos privat befragen möchten.** Fragen zu Dokumenten und Bildern sind enthalten.',
           '**Nutzer, die gern eigene Modelle mitbringen.** GGUF-Import und zwei Engines passen zu allen, die bereits ein Lieblingsmodell haben.',
         ],
@@ -553,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Was wir nicht überprüfen konnten',
         items: [
-          '**Praktische Leistung.** PromptQuorum hat die App nicht ausgeführt; Geschwindigkeit, Akkuverbrauch, Antwortqualität und die tatsächliche Stärke des Kindermodus wurden daher nicht bewertet.',
+          '**Praktische Leistung.** PromptQuorum hat die App nicht ausgeführt; Geschwindigkeit, Akkuverbrauch, Antwortqualität und die tatsächliche Stärke der Kindersicherung wurden daher nicht bewertet.',
           '**Quellcode und Lizenz.** Die App ist nicht quelloffen; das Feedback-Repository enthält nur eine README und einen Issue-Tracker.',
           '**Käufe und Tracking.** Die Store-Texte und die Datenschutzerklärung widersprechen sich, wie im Abschnitt zum Datenschutz beschrieben.',
           '**Android-Anforderungen.** Der gelesene Google-Play-Text nennt keine Mindestversion von Android; unter iOS ist das Minimum 16.4.',
@@ -607,12 +631,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Ja. Der Agent Memory ist optional, wird in Ihren eigenen Worten auf dem Gerät gespeichert, und jeder Eintrag lässt sich ansehen, bearbeiten oder löschen. Er braucht dafür ein Embedding-Modell.',
           },
           {
-            q: 'Wie funktioniert der Kindermodus?',
-            a: 'Ein Elternteil legt eine PIN fest; die App sperrt dann das aktive Modell, filtert unangemessene Wörter, bevor sie die KI erreichen, und ergänzt einen Sicherheitsprompt. Eine Eltern-Entsperrung öffnet die Einstellungen vorübergehend, ohne den Modus zu beenden.',
-          },
-          {
             q: 'Kann ich eigene Modelle verwenden?',
-            a: 'Ja. Sie können kompatible GGUF-Dateien von Hugging Face importieren und auf der llama.cpp-Engine ausführen; Modelle der Gemma-Familie können auf der LiteRT-Engine laufen. Die App warnt, bevor ein nicht verifiziertes importiertes Modell im Kindermodus läuft.',
+            a: 'Ja. Sie können kompatible GGUF-Dateien von Hugging Face importieren und auf der llama.cpp-Engine ausführen; Modelle der Gemma-Familie können auf der LiteRT-Engine laufen.',
           },
           {
             q: 'Funktioniert sie auf einem Mac?',
@@ -628,7 +648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'MemoryAI ist eine kostenlose mobile Offline-Chat-App, die ein editierbares Gedächtnis über den Nutzer auf dem Gerät führt und neben Fragen zu Dokumenten und Bildern, freihändiger Sprache und zwei Inferenz-Engines einen per PIN gesperrten Kindermodus bietet. Sie wird zudem häufig aktualisiert, mit einer Veröffentlichung am Tag vor der Prüfung dieser Rezension. Dagegen steht: Sie ist nicht quelloffen, neu, in der Reichweite klein, auf kleine Modelle auf dem Gerät begrenzt, und ihre Store-Texte und ihre Datenschutzerklärung widersprechen sich bei Käufen und Tracking, sodass sich ihre Datenschutzangaben nicht im Code prüfen lassen. Sie eignet sich für Leser, die genau diese Funktionen wollen und eine junge, geschlossene App akzeptieren; wer prüfbaren Code möchte, kann [Private Mind](/de/power-local-llm/private-mind-review) oder [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) vergleichen.',
+          'MemoryAI ist eine kostenlose mobile Offline-Chat-App, die ein editierbares Gedächtnis über den Nutzer auf dem Gerät führt und neben Fragen zu Dokumenten und Bildern, freihändiger Sprache und zwei Inferenz-Engines eine Kindersicherung bietet. Sie wird zudem häufig aktualisiert, mit einer Veröffentlichung am Tag vor der Prüfung dieser Rezension. Dagegen steht: Sie ist nicht quelloffen, neu, in der Reichweite klein, auf kleine Modelle auf dem Gerät begrenzt, und ihre Store-Texte und ihre Datenschutzerklärung widersprechen sich bei Käufen und Tracking, sodass sich ihre Datenschutzangaben nicht im Code prüfen lassen. Sie eignet sich für Leser, die genau diese Funktionen wollen und eine junge, geschlossene App akzeptieren; wer prüfbaren Code möchte, kann [Private Mind](/de/power-local-llm/private-mind-review) oder [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) vergleichen.',
       },
       sources: {
         id: 'sources',
@@ -666,9 +686,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MemoryAI es una app de chat sin conexión para iPhone y Android de Alessandro Facchini (que opera como Facchinits), un desarrollador independiente de Italia. Ejecuta modelos de lenguaje de pesos abiertos en el teléfono mediante dos motores, llama.cpp y LiteRT de Google, y salió por primera vez en la App Store el 30 de marzo de 2026. Este análisis refleja sus fichas de las tiendas, su sitio web y su política de privacidad, consultados el 19 de octubre de 2026.',
     metaDescription:
-      'Análisis de MemoryAI: chat de IA offline, gratuito y de código cerrado para iPhone y Android, con memoria editable y Kid Mode. Privacidad y límites.',
+      'Análisis de MemoryAI: chat de IA offline, gratuito y de código cerrado para iPhone y Android, con memoria editable y voz. Privacidad y límites.',
     twitterDescription:
-      'Análisis de MemoryAI: una app de chat de IA offline, gratuita y de código cerrado para iPhone y Android con preguntas sobre documentos, memoria editable en el dispositivo, voz con manos libres y un Kid Mode protegido con PIN. Lo que dicen las fichas y la política de privacidad.',
+      'Análisis de MemoryAI: una app de chat de IA offline, gratuita y de código cerrado para iPhone y Android con preguntas sobre documentos, memoria editable en el dispositivo, voz con manos libres y controles parentales. Lo que dicen las fichas y la política de privacidad.',
     audience:
       'Usuarios de iPhone y Android que quieren una app de chat gratuita que ejecute modelos de lenguaje en el dispositivo, y que necesitan saber qué se queda offline, qué envía fuera la app y qué no confirman las fuentes.',
     readTime: '8 min de lectura',
@@ -680,7 +700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'memoryai offline private ai',
       'app de chat de ia offline iphone android',
       'memoria de agente de ia en el dispositivo',
-      'modo infantil ia app offline',
+      'app de chat de ia offline para niños',
       'importar gguf app móvil',
       'memoryai vs private mind',
     ],
@@ -697,7 +717,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratis en [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) y en la [App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586).',
           'Chat con modelos GGUF y LiteRT como Gemma, Qwen, Llama, Phi y DeepSeek.',
           'Agent Memory opcional que puedes ver, editar y borrar, además de preguntas sobre documentos e imágenes.',
-          'Kid Mode con PIN para los padres, filtro de contenido y modelo bloqueado.',
+          'Controles parentales con PIN, filtro de contenido y modelo bloqueado.',
         ],
         updatedDate: '2026-10',
       },
@@ -708,6 +728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Cómo obtenerla', anchor: 'get-it' },
       { label: 'Cómo empezar', anchor: 'getting-started' },
       { label: 'Funciones confirmadas por las fuentes', anchor: 'key-features' },
+      { label: 'Kid Mode', anchor: 'kid-mode' },
       { label: 'Privacidad y uso de la red', anchor: 'privacy' },
       { label: 'Para quién es', anchor: 'who-should-use' },
       { label: 'Lo que no pudimos verificar', anchor: 'who-should-not-use' },
@@ -725,7 +746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MemoryAI es una app de código cerrado para iPhone y Android que mantiene en el dispositivo una Agent Memory editable y añade preguntas sobre documentos, voz con manos libres y un Kid Mode protegido con PIN.',
+            text: 'MemoryAI es una app de código cerrado para iPhone y Android que mantiene en el dispositivo una Agent Memory editable y añade preguntas sobre documentos, voz con manos libres y controles parentales.',
           },
           {
             type: 'plain-terms',
@@ -825,10 +846,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Agent Memory.** Opcional; la IA guarda en el dispositivo, con tus propias palabras, lo que le cuentas, y puedes ver, editar o borrar cada recuerdo. Las notas de la versión 1.0.52 dicen que peticiones como «escribe un correo» ya no se guardan como recuerdos.',
           '**Documentos e imágenes.** Preguntas sobre archivos PDF, TXT y Markdown, análisis de imágenes con modelos de visión (varias imágenes a la vez) y reconocimiento de texto en fotos mediante Google ML Kit.',
           '**Voz.** Entrada de voz en el dispositivo, síntesis de voz y un modo continuo con manos libres.',
-          '**Kid Mode.** Un PIN para los padres, un filtro que bloquea palabras inapropiadas antes de que lleguen al modelo, un modelo bloqueado, un mensaje de seguridad, avisos para modelos importados no verificados y un desbloqueo parental que abre los ajustes sin terminar el modo.',
           '**Herramientas del día a día.** Búsqueda en los chats, 20 plantillas de personaje, una prueba de velocidad en tokens por segundo, una vista de la ventana de contexto, una pantalla que indica si el modelo cargado se ejecuta en la GPU o en la CPU, y copia de seguridad en Google Drive en Android o en iCloud en iPhone.',
         ],
         note: 'Las dos descripciones de las tiendas son casi idénticas, pero no iguales; por ejemplo, el texto de iOS menciona la copia de seguridad en iCloud y el de Android, Google Drive. La compilación instalada tiene la última palabra.',
+      },
+      kidMode: {
+        id: 'kid-mode',
+        title: 'Kid Mode',
+        content: [
+          '**La app ofrece un modo protegido con PIN para niños que las descripciones de sus tiendas presentan como una función destacada.** Todo lo que sigue procede de esas descripciones; PromptQuorum no ha probado hasta qué punto resiste el modo.',
+        ],
+        items: [
+          '**PIN parental.** Un padre o una madre establece un PIN que protege el modo y sus ajustes.',
+          '**Modelo bloqueado.** El modelo activo queda fijo, de modo que un niño no puede cambiar de modelo ni modificar los ajustes.',
+          '**Filtro de contenido.** Las palabras inapropiadas se bloquean antes de que lleguen al modelo, y un mensaje de seguridad orienta respuestas adecuadas a la edad.',
+          '**Avisos de importación.** La app avisa antes de que un modelo importado no verificado pueda ejecutarse en este modo.',
+          '**Desbloqueo parental.** Los ajustes y los documentos se pueden abrir de forma temporal desde la pantalla del chat sin terminar el modo.',
+        ],
       },
       privacy: {
         id: 'privacy',
@@ -841,7 +875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'La app es de código cerrado, por lo que ninguna de estas afirmaciones se puede comprobar en el código, y PromptQuorum no ha auditado el tráfico de red. Quien maneje datos confidenciales, o configure Kid Mode para un niño, debería verificar el comportamiento en su propio dispositivo.',
+            text: 'La app es de código cerrado, por lo que ninguna de estas afirmaciones se puede comprobar en el código, y PromptQuorum no ha auditado el tráfico de red. Quien maneje datos confidenciales, o configure los controles parentales para un niño, debería verificar el comportamiento en su propio dispositivo.',
           },
         ],
       },
@@ -850,7 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Para quién es',
         items: [
           '**Personas que quieren un asistente en el teléfono que las recuerde sin una cuenta en la nube.** Agent Memory se guarda en local y se puede editar.',
-          '**Padres que quieren un chat offline pensado para niños.** Kid Mode combina un PIN, un filtro y un modelo bloqueado, aunque su eficacia no está verificada.',
+          '**Padres que quieren un chat offline pensado para niños.** Los controles parentales están incluidos, con la salvedad de que su solidez no está verificada.',
           '**Personas que quieren hacer preguntas sobre sus propios PDF y fotos de forma privada.** Las preguntas sobre documentos e imágenes están incluidas.',
           '**Usuarios a los que les gusta traer sus propios modelos.** La importación de GGUF y los dos motores van bien a quien ya tiene un modelo favorito.',
         ],
@@ -859,7 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Lo que no pudimos verificar',
         items: [
-          '**Rendimiento en la práctica.** PromptQuorum no ejecutó la app, así que no se evalúan la velocidad, el consumo de batería, la calidad de las respuestas ni la eficacia real de Kid Mode.',
+          '**Rendimiento en la práctica.** PromptQuorum no ejecutó la app, así que no se evalúan la velocidad, el consumo de batería, la calidad de las respuestas ni la eficacia real de los controles parentales.',
           '**Código fuente y licencia.** La app es de código cerrado; el repositorio de comentarios solo contiene un README y un gestor de incidencias.',
           '**Compras y rastreo.** Los textos de las tiendas y la política de privacidad no coinciden, como se describe en la sección de privacidad.',
           '**Requisitos de Android.** El texto de Google Play que leímos no muestra una versión mínima de Android; el mínimo de iOS es 16.4.',
@@ -913,12 +947,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Sí. Agent Memory es opcional, se guarda en el dispositivo con tus propias palabras y cada entrada se puede ver, editar o borrar. Necesita un modelo de embeddings para funcionar.',
           },
           {
-            q: '¿Cómo funciona Kid Mode?',
-            a: 'Un padre o una madre establece un PIN; la app bloquea entonces el modelo activo, filtra las palabras inapropiadas antes de que lleguen a la IA y añade un mensaje de seguridad. Un desbloqueo parental abre los ajustes de forma temporal sin terminar el modo.',
-          },
-          {
             q: '¿Puedo usar mis propios modelos?',
-            a: 'Sí. Puedes importar archivos GGUF compatibles de Hugging Face y ejecutarlos con el motor llama.cpp; los modelos de la familia Gemma pueden ejecutarse con el motor LiteRT. La app avisa antes de que un modelo importado no verificado se ejecute en Kid Mode.',
+            a: 'Sí. Puedes importar archivos GGUF compatibles de Hugging Face y ejecutarlos con el motor llama.cpp; los modelos de la familia Gemma pueden ejecutarse con el motor LiteRT.',
           },
           {
             q: '¿Funciona en un Mac?',
@@ -934,7 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'MemoryAI es una app de chat móvil offline y gratuita que guarda en el dispositivo una memoria editable del usuario y ofrece un Kid Mode protegido con PIN, junto con preguntas sobre documentos e imágenes, voz con manos libres y dos motores de inferencia. También se actualiza con frecuencia, con una versión el día anterior a la consulta de este análisis. En contra, es de código cerrado, reciente, de alcance reducido y limitada a modelos pequeños en el dispositivo, y sus textos de las tiendas y su política de privacidad no coinciden en compras y rastreo, por lo que sus afirmaciones de privacidad no se pueden comprobar en el código. Encaja con quienes quieren estas funciones concretas y aceptan una app joven y cerrada; quienes quieran código auditable pueden comparar [Private Mind](/es/power-local-llm/private-mind-review) o [PocketPal AI](/es/power-local-llm/pocketpal-ai-review).',
+          'MemoryAI es una app de chat móvil offline y gratuita que guarda en el dispositivo una memoria editable del usuario y ofrece controles parentales, junto con preguntas sobre documentos e imágenes, voz con manos libres y dos motores de inferencia. También se actualiza con frecuencia, con una versión el día anterior a la consulta de este análisis. En contra, es de código cerrado, reciente, de alcance reducido y limitada a modelos pequeños en el dispositivo, y sus textos de las tiendas y su política de privacidad no coinciden en compras y rastreo, por lo que sus afirmaciones de privacidad no se pueden comprobar en el código. Encaja con quienes quieren estas funciones concretas y aceptan una app joven y cerrada; quienes quieran código auditable pueden comparar [Private Mind](/es/power-local-llm/private-mind-review) o [PocketPal AI](/es/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -972,9 +1002,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MemoryAI est une application de chat hors ligne pour iPhone et Android, créée par Alessandro Facchini (sous le nom Facchinits), développeur indépendant en Italie. Elle exécute des modèles de langage à poids ouverts sur le téléphone grâce à deux moteurs, llama.cpp et LiteRT de Google, et a été publiée pour la première fois sur l\'App Store le 30 mars 2026. Cet avis reflète ses fiches de boutique, son site et sa politique de confidentialité, consultés le 19 octobre 2026.',
     metaDescription:
-      'Avis MemoryAI : appli de chat IA gratuite, à code fermé, hors ligne, pour iPhone et Android, avec Q&R sur documents, Agent Memory, voix et Kid Mode.',
+      'Avis MemoryAI : appli de chat IA gratuite, code fermé, hors ligne, sur iPhone et Android, avec Q&R sur documents, Agent Memory, voix et contrôle parental.',
     twitterDescription:
-      'Avis MemoryAI : une appli de chat IA gratuite et à code fermé pour iPhone et Android, avec Q&R sur documents, mémoire modifiable sur l\'appareil, voix mains libres et Kid Mode verrouillé par PIN. Ce que disent les fiches et la politique de confidentialité.',
+      'Avis MemoryAI : une appli de chat IA gratuite et à code fermé pour iPhone et Android, avec Q&R sur documents, mémoire modifiable sur l\'appareil, voix mains libres et contrôle parental. Ce que disent les fiches et la politique de confidentialité.',
     audience:
       'Utilisateurs d\'iPhone et d\'Android qui veulent une application de chat gratuite exécutant des modèles de langage sur l\'appareil, et qui ont besoin de savoir ce qui reste hors ligne, ce qu\'elle envoie à l\'extérieur et ce que les sources ne confirment pas.',
     readTime: '8 min de lecture',
@@ -986,7 +1016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'memoryai ia privée hors ligne',
       'application chat ia hors ligne iphone android',
       'mémoire d\'agent ia sur l\'appareil',
-      'mode enfant ia application hors ligne',
+      'application chat ia hors ligne pour enfants',
       'importer gguf application mobile',
       'memoryai vs private mind',
     ],
@@ -1003,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratuite sur [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) et l\'[App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586).',
           'Chat avec des modèles GGUF et LiteRT tels que Gemma, Qwen, Llama, Phi et DeepSeek.',
           'Agent Memory facultative que vous pouvez consulter, modifier et supprimer, ainsi que des questions sur documents et images.',
-          'Kid Mode avec code PIN parental, filtre de contenu et modèle verrouillé.',
+          'Contrôle parental avec code PIN, filtre de contenu et modèle verrouillé.',
         ],
         updatedDate: '2026-10',
       },
@@ -1014,6 +1044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Où la télécharger', anchor: 'get-it' },
       { label: 'Pour bien démarrer', anchor: 'getting-started' },
       { label: 'Fonctions confirmées par les sources', anchor: 'key-features' },
+      { label: 'Kid Mode', anchor: 'kid-mode' },
       { label: 'Confidentialité et usage du réseau', anchor: 'privacy' },
       { label: 'À qui elle convient', anchor: 'who-should-use' },
       { label: 'Ce que nous n\'avons pas pu vérifier', anchor: 'who-should-not-use' },
@@ -1031,7 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MemoryAI est une application à code source fermé pour iPhone et Android, qui conserve sur l\'appareil une Agent Memory modifiable et ajoute des questions sur documents, la voix mains libres et un Kid Mode verrouillé par code PIN.',
+            text: 'MemoryAI est une application à code source fermé pour iPhone et Android, qui conserve sur l\'appareil une Agent Memory modifiable et ajoute des questions sur documents, la voix mains libres et le contrôle parental.',
           },
           {
             type: 'plain-terms',
@@ -1131,10 +1162,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Agent Memory.** Facultative ; l\'IA enregistre sur l\'appareil, avec vos propres mots, ce que vous lui dites, et vous pouvez consulter, modifier ou supprimer chaque souvenir. Les notes de la version 1.0.52 indiquent que des demandes telles que « écris un e-mail » ne sont plus enregistrées comme souvenirs.',
           '**Documents et images.** Questions sur des fichiers PDF, TXT et Markdown, analyse d\'images avec des modèles de vision (plusieurs images à la fois) et reconnaissance de texte sur des photos via Google ML Kit.',
           '**Voix.** Saisie vocale sur l\'appareil, synthèse vocale et mode continu mains libres.',
-          '**Kid Mode.** Un code PIN parental, un filtre qui bloque les mots inappropriés avant qu\'ils n\'atteignent le modèle, un modèle verrouillé, une consigne de sécurité, des avertissements pour les modèles importés non vérifiés et un déverrouillage parental qui ouvre les réglages sans mettre fin au mode.',
           '**Outils du quotidien.** Recherche dans les conversations, 20 modèles de personas, un test de vitesse en tokens par seconde, un affichage de la fenêtre de contexte, un écran indiquant si le modèle chargé s\'exécute sur le GPU ou le CPU, et une sauvegarde sur Google Drive sur Android ou sur iCloud sur iPhone.',
         ],
         note: 'Les deux descriptions des boutiques sont presque identiques mais pas tout à fait ; par exemple, le texte iOS mentionne la sauvegarde iCloud et le texte Android Google Drive. La build installée fait foi.',
+      },
+      kidMode: {
+        id: 'kid-mode',
+        title: 'Kid Mode',
+        content: [
+          '**L\'application propose un mode protégé par code PIN pour les enfants, que ses descriptions de boutique présentent comme une fonction phare.** Tout ce qui suit provient de ces descriptions ; PromptQuorum n\'a pas testé la solidité de ce mode.',
+        ],
+        items: [
+          '**Code PIN parental.** Un parent définit un code PIN qui protège le mode et ses réglages.',
+          '**Modèle verrouillé.** Le modèle actif est figé : un enfant ne peut ni changer de modèle ni modifier les réglages.',
+          '**Filtre de contenu.** Les mots inappropriés sont bloqués avant d\'atteindre le modèle, et une consigne de sécurité guide des réponses adaptées à l\'âge.',
+          '**Avertissements à l\'import.** L\'application avertit avant qu\'un modèle importé non vérifié puisse s\'exécuter dans ce mode.',
+          '**Déverrouillage parental.** Les réglages et les documents peuvent être ouverts temporairement depuis l\'écran de chat sans mettre fin au mode.',
+        ],
       },
       privacy: {
         id: 'privacy',
@@ -1147,7 +1191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'L\'application étant à code source fermé, aucune de ces affirmations ne peut être vérifiée dans le code, et PromptQuorum n\'a pas audité le trafic réseau. Quiconque traite des données confidentielles, ou configure le Kid Mode pour un enfant, devrait vérifier le comportement sur son propre appareil.',
+            text: 'L\'application étant à code source fermé, aucune de ces affirmations ne peut être vérifiée dans le code, et PromptQuorum n\'a pas audité le trafic réseau. Quiconque traite des données confidentielles, ou configure le contrôle parental pour un enfant, devrait vérifier le comportement sur son propre appareil.',
           },
         ],
       },
@@ -1156,7 +1200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'À qui elle convient',
         items: [
           '**Les personnes qui veulent un assistant sur téléphone qui se souvient d\'elles sans compte cloud.** L\'Agent Memory est stockée en local et modifiable.',
-          '**Les parents qui veulent un chat hors ligne destiné à un enfant.** Le Kid Mode combine un code PIN, un filtre et un modèle verrouillé, bien que son efficacité ne soit pas vérifiée.',
+          '**Les parents qui veulent un chat hors ligne destiné à un enfant.** Le contrôle parental est inclus, avec la réserve que sa solidité n\'est pas vérifiée.',
           '**Les personnes qui veulent interroger leurs propres PDF et photos en toute confidentialité.** Les questions sur documents et images sont incluses.',
           '**Les utilisateurs qui aiment apporter leurs propres modèles.** L\'import GGUF et les deux moteurs conviennent à quiconque a déjà un modèle favori.',
         ],
@@ -1165,7 +1209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Ce que nous n\'avons pas pu vérifier',
         items: [
-          '**Performances en pratique.** PromptQuorum n\'a pas exécuté l\'application : la vitesse, la consommation de batterie, la qualité des réponses et la solidité réelle du Kid Mode ne sont donc pas évaluées.',
+          '**Performances en pratique.** PromptQuorum n\'a pas exécuté l\'application : la vitesse, la consommation de batterie, la qualité des réponses et la solidité réelle du contrôle parental ne sont donc pas évaluées.',
           '**Code source et licence.** L\'application est à code source fermé ; le dépôt de retours ne contient qu\'un README et un outil de suivi des problèmes.',
           '**Achats et suivi.** Les textes des boutiques et la politique de confidentialité divergent, comme décrit dans la section sur la confidentialité.',
           '**Prérequis Android.** Le texte Google Play lu n\'indique aucune version minimale d\'Android ; le minimum iOS est 16.4.',
@@ -1219,12 +1263,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Oui. L\'Agent Memory est facultative, stockée sur l\'appareil avec vos propres mots, et chaque entrée peut être consultée, modifiée ou supprimée. Elle nécessite un modèle d\'embedding pour fonctionner.',
           },
           {
-            q: 'Comment fonctionne le Kid Mode ?',
-            a: 'Un parent définit un code PIN ; l\'application verrouille alors le modèle actif, filtre les mots inappropriés avant qu\'ils n\'atteignent l\'IA et ajoute une consigne de sécurité. Un déverrouillage parental ouvre temporairement les réglages sans mettre fin au mode.',
-          },
-          {
             q: 'Puis-je utiliser mes propres modèles ?',
-            a: 'Oui. Vous pouvez importer des fichiers GGUF compatibles depuis Hugging Face et les exécuter avec le moteur llama.cpp ; les modèles de la famille Gemma peuvent s\'exécuter avec le moteur LiteRT. L\'application avertit avant qu\'un modèle importé non vérifié ne s\'exécute en Kid Mode.',
+            a: 'Oui. Vous pouvez importer des fichiers GGUF compatibles depuis Hugging Face et les exécuter avec le moteur llama.cpp ; les modèles de la famille Gemma peuvent s\'exécuter avec le moteur LiteRT.',
           },
           {
             q: 'Fonctionne-t-elle sur Mac ?',
@@ -1240,7 +1280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'MemoryAI est une application de chat mobile gratuite et hors ligne qui conserve sur l\'appareil une mémoire modifiable de l\'utilisateur et propose un Kid Mode verrouillé par code PIN, avec des questions sur documents et images, la voix mains libres et deux moteurs d\'inférence. Elle est aussi mise à jour fréquemment, avec une version la veille de la date de consultation de cet avis. En contrepartie, elle est à code source fermé, récente, de portée limitée, restreinte à de petits modèles sur l\'appareil, et ses textes de boutique et sa politique de confidentialité divergent sur les achats et le suivi, de sorte que ses affirmations de confidentialité ne peuvent pas être vérifiées dans le code. Elle convient aux lecteurs qui veulent ces fonctions précises et acceptent une application jeune et fermée ; ceux qui souhaitent un code auditable peuvent comparer [Private Mind](/fr/power-local-llm/private-mind-review) ou [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review).',
+          'MemoryAI est une application de chat mobile gratuite et hors ligne qui conserve sur l\'appareil une mémoire modifiable de l\'utilisateur et propose le contrôle parental, avec des questions sur documents et images, la voix mains libres et deux moteurs d\'inférence. Elle est aussi mise à jour fréquemment, avec une version la veille de la date de consultation de cet avis. En contrepartie, elle est à code source fermé, récente, de portée limitée, restreinte à de petits modèles sur l\'appareil, et ses textes de boutique et sa politique de confidentialité divergent sur les achats et le suivi, de sorte que ses affirmations de confidentialité ne peuvent pas être vérifiées dans le code. Elle convient aux lecteurs qui veulent ces fonctions précises et acceptent une application jeune et fermée ; ceux qui souhaitent un code auditable peuvent comparer [Private Mind](/fr/power-local-llm/private-mind-review) ou [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -1278,9 +1318,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MemoryAIは、イタリアの個人開発者Alessandro Facchini(Facchinitsの名義で活動)が提供する、iPhone・Android向けのオフラインチャットアプリです。llama.cppとGoogleのLiteRTという2つのエンジンで、オープンウェイトの言語モデルを端末上で動かします。App Storeでの最初のリリースは2026年3月30日でした。本レビューは、2026年10月19日に確認したストアの掲載情報、ウェブサイト、プライバシーポリシーに基づいています。',
     metaDescription:
-      'MemoryAIレビュー:ドキュメントQ&A、編集可能なAgent Memory、音声、キッズモードを備えた無料のオフラインAIチャット。プライバシーと制約を解説します。',
+      'MemoryAIレビュー:ドキュメントQ&A、編集可能なAgent Memory、音声、ペアレンタルコントロールを備えた無料のオフラインAIチャット。プライバシーと制約を解説します。',
     twitterDescription:
-      'MemoryAIレビュー:ドキュメントQ&A、編集可能な端末内メモリ、ハンズフリー音声、PINで保護されたキッズモードを備えた、iPhone・Android向けの無料・ソース非公開のオフラインAIチャットアプリ。ストアの掲載情報とプライバシーポリシーの内容を解説します。',
+      'MemoryAIレビュー:ドキュメントQ&A、編集可能な端末内メモリ、ハンズフリー音声、ペアレンタルコントロールを備えた、iPhone・Android向けの無料・ソース非公開のオフラインAIチャットアプリ。ストアの掲載情報とプライバシーポリシーの内容を解説します。',
     audience:
       '言語モデルを端末上で動かす無料のチャットアプリを求めるiPhoneとAndroidのユーザーで、何がオフラインのままなのか、何が外部に送信されるのか、情報源が何を確認していないのかを知りたい方向け。',
     readTime: '8分で読める',
@@ -1292,7 +1332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'memoryai offline private ai',
       'オフライン aiチャット アプリ iphone android',
       '端末内 ai エージェントメモリ',
-      'ai キッズモード オフライン アプリ',
+      'お子さま向け オフライン aiチャット アプリ',
       'gguf インポート モバイルアプリ',
       'memoryai private mind 比較',
     ],
@@ -1309,7 +1349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai)と[App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586)で無料。',
           'Gemma、Qwen、Llama、Phi、DeepSeekなどのGGUFおよびLiteRTモデルでチャットできる。',
           '表示・編集・削除できるオプションのAgent Memory、ドキュメントや画像についての質問。',
-          '保護者用PIN、コンテンツフィルター、ロックされたモデルを備えたキッズモード。',
+          'PIN、コンテンツフィルター、ロックされたモデルを備えたペアレンタルコントロール。',
         ],
         updatedDate: '2026-10',
       },
@@ -1320,6 +1360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '入手方法', anchor: 'get-it' },
       { label: '始め方', anchor: 'getting-started' },
       { label: '情報源で確認できる機能', anchor: 'key-features' },
+      { label: 'キッズモード', anchor: 'kid-mode' },
       { label: 'プライバシーとネットワーク利用', anchor: 'privacy' },
       { label: '向いている人', anchor: 'who-should-use' },
       { label: '確認できなかった点', anchor: 'who-should-not-use' },
@@ -1337,7 +1378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MemoryAIは、ソース非公開のiPhone・Androidアプリで、編集可能なAgent Memoryを端末上に保持し、ドキュメントへの質問、ハンズフリー音声、PINで保護されたキッズモードを備えている。',
+            text: 'MemoryAIは、ソース非公開のiPhone・Androidアプリで、編集可能なAgent Memoryを端末上に保持し、ドキュメントへの質問、ハンズフリー音声、ペアレンタルコントロールを備えている。',
           },
           {
             type: 'plain-terms',
@@ -1437,10 +1478,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Agent Memory。** オプションの機能です。AIはユーザーが伝えた内容をユーザー自身の言葉で端末上に保存し、各メモリを表示、編集、削除できます。1.0.52のリリースノートによれば、「メールを書いて」のような依頼はメモリとして保存されなくなりました。',
           '**ドキュメントと画像。** PDF、TXT、Markdownファイルについての質問、ビジョンモデルによる画像分析(複数の画像を同時に)、Google ML Kitを通じた写真のテキスト認識に対応しています。',
           '**音声。** 端末内の音声入力、読み上げ(text-to-speech)、連続のハンズフリーモードがあります。',
-          '**キッズモード。** 保護者用PIN、不適切な単語がモデルに届く前にブロックするフィルター、ロックされたモデル、安全プロンプト、未検証のインポートモデルに対する警告、モードを終了せずに設定を開ける保護者用ロック解除を備えています。',
           '**日常的なツール。** チャット検索、20種類のペルソナテンプレート、1秒あたりのトークン数で示す速度ベンチマーク、コンテキストウィンドウの表示、読み込んだモデルがGPUとCPUのどちらで動いているかを示す画面、AndroidではGoogle Drive、iPhoneではiCloudへのバックアップがあります。',
         ],
         note: '2つのストアの説明文はほぼ同じですが、同一ではありません。たとえばiOS版のテキストはiCloudバックアップに、Android版のテキストはGoogle Driveに触れています。最終的な判断基準は、インストールしたビルドです。',
+      },
+      kidMode: {
+        id: 'kid-mode',
+        title: 'キッズモード',
+        content: [
+          '**このアプリには、お子さま向けのPIN保護モードがあり、ストアの説明文はこれを主要機能として紹介しています。** 以下の内容はすべてその説明文に基づくもので、PromptQuorumはこのモードの実際の有効性をテストしていません。',
+        ],
+        items: [
+          '**保護者用PIN。** 保護者がPINを設定し、モードとその設定を保護します。',
+          '**ロックされたモデル。** 使用中のモデルが固定されるため、お子さまはモデルの切り替えや設定の変更ができません。',
+          '**コンテンツフィルター。** 不適切な単語はモデルに届く前にブロックされ、安全プロンプトが年齢にふさわしい回答を導きます。',
+          '**インポート時の警告。** 未検証のインポートモデルをこのモードで実行する前に、アプリが警告を表示します。',
+          '**保護者用ロック解除。** チャット画面から、モードを終了せずに設定とドキュメントを一時的に開けます。',
+        ],
       },
       privacy: {
         id: 'privacy',
@@ -1453,7 +1507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'アプリはソース非公開のため、これらの主張をコードで確認することはできず、PromptQuorumはネットワーク通信の監査も行っていません。機密データを扱う方や、お子さまのためにキッズモードを設定する方は、ご自身の端末で動作を確認してください。',
+            text: 'アプリはソース非公開のため、これらの主張をコードで確認することはできず、PromptQuorumはネットワーク通信の監査も行っていません。機密データを扱う方や、お子さまのためにペアレンタルコントロールを設定する方は、ご自身の端末で動作を確認してください。',
           },
         ],
       },
@@ -1462,7 +1516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '向いている人',
         items: [
           '**クラウドアカウントなしで、自分のことを覚えていてくれるスマートフォンのアシスタントを求める人。** Agent Memoryは端末内に保存され、編集できます。',
-          '**お子さま向けのオフラインチャットを求める保護者。** キッズモードはPIN、フィルター、ロックされたモデルを組み合わせていますが、その効果は未検証です。',
+          '**お子さま向けのオフラインチャットを求める保護者。** ペアレンタルコントロールは含まれていますが、その強度は未検証です。',
           '**自分のPDFや写真についてプライベートに質問したい人。** ドキュメントと画像への質問が含まれています。',
           '**自分のモデルを持ち込みたいユーザー。** GGUFのインポートと2つのエンジンは、すでにお気に入りのモデルがある人に向いています。',
         ],
@@ -1471,7 +1525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '確認できなかった点',
         items: [
-          '**実機での性能。** PromptQuorumはアプリを実行していないため、速度、バッテリー消費、回答の品質、キッズモードの実際の強度は評価していません。',
+          '**実機での性能。** PromptQuorumはアプリを実行していないため、速度、バッテリー消費、回答の品質、ペアレンタルコントロールの実際の強度は評価していません。',
           '**ソースコードとライセンス。** アプリはソース非公開で、フィードバック用リポジトリにはREADMEとイシュートラッカーしかありません。',
           '**課金とトラッキング。** プライバシーの項で述べたとおり、ストアの説明文とプライバシーポリシーは食い違っています。',
           '**Androidの要件。** 確認できたGoogle Playのテキストには、Androidの最低バージョンが示されていません。iOSの最低バージョンは16.4です。',
@@ -1525,12 +1579,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'はい。Agent Memoryはオプションで、ユーザー自身の言葉で端末上に保存され、各項目を表示、編集、削除できます。動作には埋め込みモデルが必要です。',
           },
           {
-            q: 'キッズモードはどのように動作しますか?',
-            a: '保護者がPINを設定すると、アプリは使用中のモデルをロックし、不適切な単語がAIに届く前にフィルタリングして、安全プロンプトを追加します。保護者用ロック解除を使うと、モードを終了せずに一時的に設定を開けます。',
-          },
-          {
             q: '自分のモデルを使えますか?',
-            a: 'はい。Hugging Faceから互換性のあるGGUFファイルをインポートして、llama.cppエンジンで実行できます。Gemma系モデルはLiteRTエンジンで実行できます。未検証のインポートモデルをキッズモードで実行する前には、アプリが警告を表示します。',
+            a: 'はい。Hugging Faceから互換性のあるGGUFファイルをインポートして、llama.cppエンジンで実行できます。Gemma系モデルはLiteRTエンジンで実行できます。',
           },
           {
             q: 'Macでも動きますか?',
@@ -1546,7 +1596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          'MemoryAIは、ユーザーに関する編集可能なメモリを端末上に保持し、PINで保護されたキッズモードを提供する無料のオフラインモバイルチャットアプリで、ドキュメントと画像への質問、ハンズフリー音声、2つの推論エンジンも備えています。更新も頻繁で、本レビューの確認日の前日にもリリースがありました。その一方で、ソースは非公開で、公開から間もなく、利用規模は小さく、端末上の小型モデルに限られ、ストアの説明文とプライバシーポリシーは課金とトラッキングについて食い違っているため、プライバシーに関する主張をコードで確認することはできません。これらの機能を求め、新しくソース非公開のアプリを受け入れられる方に向いています。検証可能なコードを求める方は、[Private Mind](/ja/power-local-llm/private-mind-review)や[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)と比較してみてください。',
+          'MemoryAIは、ユーザーに関する編集可能なメモリを端末上に保持し、ペアレンタルコントロールを提供する無料のオフラインモバイルチャットアプリで、ドキュメントと画像への質問、ハンズフリー音声、2つの推論エンジンも備えています。更新も頻繁で、本レビューの確認日の前日にもリリースがありました。その一方で、ソースは非公開で、公開から間もなく、利用規模は小さく、端末上の小型モデルに限られ、ストアの説明文とプライバシーポリシーは課金とトラッキングについて食い違っているため、プライバシーに関する主張をコードで確認することはできません。これらの機能を求め、新しくソース非公開のアプリを受け入れられる方に向いています。検証可能なコードを求める方は、[Private Mind](/ja/power-local-llm/private-mind-review)や[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)と比較してみてください。',
       },
       sources: {
         id: 'sources',
@@ -1584,9 +1634,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O MemoryAI é um app de chat offline para iPhone e Android de Alessandro Facchini (que atua como Facchinits), desenvolvedor independente na Itália. Ele roda modelos de linguagem de peso aberto no celular por dois motores, o llama.cpp e o LiteRT do Google, e foi lançado na App Store em 30 de março de 2026. Esta análise reflete as fichas das lojas, o site e a política de privacidade, consultados em 19 de outubro de 2026.',
     metaDescription:
-      'Análise do MemoryAI: chat de IA offline, grátis e de código fechado para iPhone e Android, com perguntas sobre documentos, memória editável e Modo Criança.',
+      'Análise do MemoryAI: chat de IA offline, grátis e de código fechado para iPhone e Android, com perguntas sobre documentos, memória editável e voz.',
     twitterDescription:
-      'Análise do MemoryAI: app de chat de IA offline, gratuito e de código fechado, para iPhone e Android, com perguntas sobre documentos, memória editável no dispositivo, voz com as mãos livres e um Modo Criança com PIN. O que dizem as fichas e a política de privacidade.',
+      'Análise do MemoryAI: app de chat de IA offline, gratuito e de código fechado, para iPhone e Android, com perguntas sobre documentos, memória editável no dispositivo, voz com as mãos livres e controles parentais. O que dizem as fichas e a política de privacidade.',
     audience:
       'Usuários de iPhone e Android que querem um app de chat gratuito que rode modelos de linguagem no dispositivo e que precisam saber o que fica offline, o que é enviado para fora e o que as fontes não confirmam.',
     readTime: '8 min de leitura',
@@ -1598,7 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'memoryai ia offline privada',
       'app de chat de ia offline iphone android',
       'memória de agente de ia no dispositivo',
-      'modo criança ia app offline',
+      'app de chat de ia offline para crianças',
       'importar gguf app de celular',
       'memoryai vs private mind',
     ],
@@ -1615,7 +1665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratuito no [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) e na [App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586).',
           'Chat com modelos GGUF e LiteRT como Gemma, Qwen, Llama, Phi e DeepSeek.',
           'Agent Memory opcional que você pode ver, editar e apagar, além de perguntas sobre documentos e imagens.',
-          'Modo Criança com PIN dos pais, filtro de conteúdo e modelo bloqueado.',
+          'Controles parentais com PIN, filtro de conteúdo e modelo bloqueado.',
         ],
         updatedDate: '2026-10',
       },
@@ -1626,6 +1676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Como obter', anchor: 'get-it' },
       { label: 'Como começar', anchor: 'getting-started' },
       { label: 'Recursos confirmados pelas fontes', anchor: 'key-features' },
+      { label: 'Modo Criança', anchor: 'kid-mode' },
       { label: 'Privacidade e uso da rede', anchor: 'privacy' },
       { label: 'Para quem é indicado', anchor: 'who-should-use' },
       { label: 'O que não conseguimos verificar', anchor: 'who-should-not-use' },
@@ -1643,7 +1694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'O MemoryAI é um app de código fechado para iPhone e Android que mantém no dispositivo uma Agent Memory editável e acrescenta perguntas sobre documentos, voz com as mãos livres e um Modo Criança protegido por PIN.',
+            text: 'O MemoryAI é um app de código fechado para iPhone e Android que mantém no dispositivo uma Agent Memory editável e acrescenta perguntas sobre documentos, voz com as mãos livres e controles parentais.',
           },
           {
             type: 'plain-terms',
@@ -1743,10 +1794,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Agent Memory.** Opcional; a IA guarda no dispositivo, em suas próprias palavras, o que você conta a ela, e você pode ver, editar ou apagar cada memória. As notas da versão 1.0.52 dizem que pedidos como "escreva um e-mail" deixaram de ser salvos como memórias.',
           '**Documentos e imagens.** Perguntas sobre arquivos PDF, TXT e Markdown, análise de imagens com modelos de visão (várias imagens ao mesmo tempo) e reconhecimento de texto em fotos pelo Google ML Kit.',
           '**Voz.** Entrada de voz no dispositivo, conversão de texto em fala e um modo contínuo com as mãos livres.',
-          '**Modo Criança.** Um PIN dos pais, um filtro que bloqueia palavras inadequadas antes de chegarem ao modelo, um modelo bloqueado, um prompt de segurança, avisos para modelos importados não verificados e um desbloqueio dos pais que abre as configurações sem encerrar o modo.',
           '**Ferramentas do dia a dia.** Busca nas conversas, 20 modelos de persona, um benchmark de velocidade em tokens por segundo, a exibição da janela de contexto, uma tela que mostra se o modelo carregado roda na GPU ou na CPU e backup no Google Drive no Android ou no iCloud no iPhone.',
         ],
         note: 'As duas descrições das lojas são quase idênticas, mas não iguais; por exemplo, o texto do iOS menciona o backup no iCloud e o do Android, o Google Drive. A versão instalada é a palavra final.',
+      },
+      kidMode: {
+        id: 'kid-mode',
+        title: 'Modo Criança',
+        content: [
+          '**O app oferece um modo protegido por PIN para crianças, que as descrições das lojas apresentam como um recurso de destaque.** Tudo o que segue vem dessas descrições; a PromptQuorum não testou o quão bem o modo se sustenta.',
+        ],
+        items: [
+          '**PIN dos pais.** Um dos pais define um PIN que protege o modo e suas configurações.',
+          '**Modelo bloqueado.** O modelo ativo fica fixo, então a criança não pode trocar de modelo nem alterar as configurações.',
+          '**Filtro de conteúdo.** Palavras inadequadas são bloqueadas antes de chegarem ao modelo, e um prompt de segurança orienta respostas adequadas à idade.',
+          '**Avisos de importação.** O app avisa antes de um modelo importado não verificado poder rodar neste modo.',
+          '**Desbloqueio dos pais.** As configurações e os documentos podem ser abertos temporariamente a partir da tela de chat sem encerrar o modo.',
+        ],
       },
       privacy: {
         id: 'privacy',
@@ -1759,7 +1823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'O app é de código fechado, então nenhuma dessas afirmações pode ser conferida no código, e a PromptQuorum não auditou o tráfego de rede. Quem lida com dados confidenciais, ou configura o Modo Criança para uma criança, deve verificar o comportamento no próprio aparelho.',
+            text: 'O app é de código fechado, então nenhuma dessas afirmações pode ser conferida no código, e a PromptQuorum não auditou o tráfego de rede. Quem lida com dados confidenciais, ou configura os controles parentais para uma criança, deve verificar o comportamento no próprio aparelho.',
           },
         ],
       },
@@ -1768,7 +1832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Para quem é indicado',
         items: [
           '**Pessoas que querem um assistente no celular que se lembre delas sem uma conta na nuvem.** A Agent Memory é guardada localmente e é editável.',
-          '**Pais que querem um chat offline para crianças.** O Modo Criança combina PIN, filtro e modelo bloqueado, embora sua eficácia não tenha sido verificada.',
+          '**Pais que querem um chat offline para crianças.** Os controles parentais estão incluídos, com a ressalva de que sua força não foi verificada.',
           '**Pessoas que querem fazer perguntas sobre seus próprios PDFs e fotos com privacidade.** Perguntas sobre documentos e imagens estão incluídas.',
           '**Usuários que gostam de trazer os próprios modelos.** A importação de GGUF e os dois motores servem a quem já tem um modelo favorito.',
         ],
@@ -1777,7 +1841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'O que não conseguimos verificar',
         items: [
-          '**Desempenho na prática.** A PromptQuorum não executou o app, então velocidade, consumo de bateria, qualidade das respostas e a força real do Modo Criança não foram avaliados.',
+          '**Desempenho na prática.** A PromptQuorum não executou o app, então velocidade, consumo de bateria, qualidade das respostas e a força real dos controles parentais não foram avaliados.',
           '**Código-fonte e licença.** O app é de código fechado; o repositório de feedback contém apenas um README e um rastreador de problemas.',
           '**Compras e rastreamento.** Os textos das lojas e a política de privacidade divergem, como descrito na seção de privacidade.',
           '**Requisitos do Android.** O texto lido do Google Play não mostra uma versão mínima do Android; o mínimo no iOS é 16.4.',
@@ -1831,12 +1895,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Sim. A Agent Memory é opcional, fica guardada no dispositivo em suas próprias palavras, e cada entrada pode ser vista, editada ou apagada. Ela precisa de um modelo de embedding para funcionar.',
           },
           {
-            q: 'Como funciona o Modo Criança?',
-            a: 'Um dos pais define um PIN; o app então bloqueia o modelo ativo, filtra palavras inadequadas antes de chegarem à IA e adiciona um prompt de segurança. Um desbloqueio dos pais abre as configurações temporariamente sem encerrar o modo.',
-          },
-          {
             q: 'Posso usar meus próprios modelos?',
-            a: 'Sim. Você pode importar arquivos GGUF compatíveis do Hugging Face e rodá-los no motor llama.cpp; modelos da família Gemma podem rodar no motor LiteRT. O app avisa antes de um modelo importado não verificado rodar no Modo Criança.',
+            a: 'Sim. Você pode importar arquivos GGUF compatíveis do Hugging Face e rodá-los no motor llama.cpp; modelos da família Gemma podem rodar no motor LiteRT.',
           },
           {
             q: 'Funciona em um Mac?',
@@ -1852,7 +1912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O MemoryAI é um app de chat móvel offline e gratuito que mantém no dispositivo uma memória editável do usuário e oferece um Modo Criança protegido por PIN, além de perguntas sobre documentos e imagens, voz com as mãos livres e dois motores de inferência. Ele também é atualizado com frequência, com uma versão no dia anterior à consulta desta análise. Em contrapartida, é de código fechado, recente, de alcance pequeno, limitado a modelos pequenos no dispositivo, e os textos das lojas e a política de privacidade divergem sobre compras e rastreamento, então suas afirmações de privacidade não podem ser conferidas no código. Serve a quem quer esses recursos específicos e aceita um app jovem e fechado; quem quer código auditável pode comparar o [Private Mind](/pt/power-local-llm/private-mind-review) ou o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review).',
+          'O MemoryAI é um app de chat móvel offline e gratuito que mantém no dispositivo uma memória editável do usuário e oferece controles parentais, além de perguntas sobre documentos e imagens, voz com as mãos livres e dois motores de inferência. Ele também é atualizado com frequência, com uma versão no dia anterior à consulta desta análise. Em contrapartida, é de código fechado, recente, de alcance pequeno, limitado a modelos pequenos no dispositivo, e os textos das lojas e a política de privacidade divergem sobre compras e rastreamento, então suas afirmações de privacidade não podem ser conferidas no código. Serve a quem quer esses recursos específicos e aceita um app jovem e fechado; quem quer código auditável pode comparar o [Private Mind](/pt/power-local-llm/private-mind-review) ou o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -1890,9 +1950,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MemoryAI تطبيق دردشة يعمل دون اتصال لأجهزة iPhone وأندرويد من أليساندرو فاكيني (باسم Facchinits)، وهو مطوّر مستقل في إيطاليا. يشغّل نماذج لغوية مفتوحة الأوزان على الهاتف عبر محرّكين هما llama.cpp و LiteRT من Google، وصدر أول إصدار منه على App Store في 30 مارس 2026. تعكس هذه المراجعة صفحتي المتجر والموقع وسياسة الخصوصية كما جرى التحقق منها في 19 أكتوبر 2026.',
     metaDescription:
-      'مراجعة MemoryAI: تطبيق دردشة مجاني ومغلق المصدر دون اتصال لـ iPhone وأندرويد مع أسئلة على المستندات وذاكرة قابلة للتعديل ووضع للأطفال. الخصوصية والقيود.',
+      'مراجعة MemoryAI: تطبيق دردشة مجاني ومغلق المصدر دون اتصال لـ iPhone وأندرويد مع أسئلة على المستندات وذاكرة قابلة للتعديل وصوت. الخصوصية والقيود.',
     twitterDescription:
-      'مراجعة MemoryAI: تطبيق دردشة مجاني ومغلق المصدر دون اتصال لـ iPhone وأندرويد مع أسئلة على المستندات وذاكرة قابلة للتعديل على الجهاز ووضع صوتي دون لمس ووضع للأطفال محمي برقم PIN. ما تقوله صفحتا المتجر وسياسة الخصوصية.',
+      'مراجعة MemoryAI: تطبيق دردشة مجاني ومغلق المصدر دون اتصال لـ iPhone وأندرويد مع أسئلة على المستندات وذاكرة قابلة للتعديل على الجهاز ووضع صوتي دون لمس ورقابة أبوية. ما تقوله صفحتا المتجر وسياسة الخصوصية.',
     audience:
       'مستخدمو iPhone وأندرويد الذين يريدون تطبيق دردشة مجانياً يشغّل النماذج اللغوية على الجهاز، ويحتاجون إلى معرفة ما يبقى دون اتصال، وما الذي يرسله إلى الخارج، وما الذي لا تؤكده المصادر.',
     readTime: '8 دقائق للقراءة',
@@ -1904,7 +1964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'memoryai ذكاء اصطناعي خاص دون اتصال',
       'تطبيق دردشة ذكاء اصطناعي دون اتصال iphone أندرويد',
       'ذاكرة وكيل ذكاء اصطناعي على الجهاز',
-      'وضع الأطفال في تطبيق ذكاء اصطناعي دون اتصال',
+      'تطبيق دردشة ذكاء اصطناعي دون اتصال للأطفال',
       'استيراد gguf في تطبيق للهاتف',
       'memoryai مقابل private mind',
     ],
@@ -1921,7 +1981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مجاني على [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) و[App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586).',
           'دردشة مع نماذج GGUF و LiteRT مثل Gemma و Qwen و Llama و Phi و DeepSeek.',
           'ميزة Agent Memory اختيارية يمكنك عرضها وتعديلها وحذفها، إضافة إلى أسئلة عن المستندات والصور.',
-          'وضع الأطفال برقم PIN للوالدين ومرشّح محتوى ونموذج مقفل.',
+          'رقابة أبوية برقم PIN ومرشّح محتوى ونموذج مقفل.',
         ],
         updatedDate: '2026-10',
       },
@@ -1932,6 +1992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'كيف تحصل عليه', anchor: 'get-it' },
       { label: 'كيف تبدأ', anchor: 'getting-started' },
       { label: 'الميزات التي تؤكدها المصادر', anchor: 'key-features' },
+      { label: 'وضع الأطفال', anchor: 'kid-mode' },
       { label: 'الخصوصية واستخدام الشبكة', anchor: 'privacy' },
       { label: 'لمن يناسب', anchor: 'who-should-use' },
       { label: 'ما لم نتمكن من التحقق منه', anchor: 'who-should-not-use' },
@@ -1949,7 +2010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MemoryAI تطبيق مغلق المصدر لأجهزة iPhone وأندرويد، يحتفظ بميزة Agent Memory (ذاكرة الوكيل) القابلة للتعديل على الجهاز ويضيف أسئلة عن المستندات، وصوتاً دون لمس، ووضعاً للأطفال محمياً برقم PIN.',
+            text: 'MemoryAI تطبيق مغلق المصدر لأجهزة iPhone وأندرويد، يحتفظ بميزة Agent Memory (ذاكرة الوكيل) القابلة للتعديل على الجهاز ويضيف أسئلة عن المستندات، وصوتاً دون لمس، ورقابة أبوية.',
           },
           {
             type: 'plain-terms',
@@ -2049,10 +2110,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Agent Memory.** اختيارية؛ يخزّن الذكاء الاصطناعي ما تخبره به بكلماتك على الجهاز، ويمكنك عرض كل ذاكرة أو تعديلها أو حذفها. وتذكر ملاحظات الإصدار 1.0.52 أن طلبات مثل «اكتب بريداً إلكترونياً» لم تعد تُحفظ كذكريات.',
           '**المستندات والصور.** أسئلة عن ملفات PDF و TXT و Markdown، وتحليل الصور بنماذج الرؤية (عدة صور في آن واحد)، والتعرّف على النص في الصور عبر Google ML Kit.',
           '**الصوت.** إدخال صوتي على الجهاز، وتحويل النص إلى كلام، ووضع مستمر دون لمس.',
-          '**وضع الأطفال.** رقم PIN للوالدين، ومرشّح يحجب الكلمات غير اللائقة قبل وصولها إلى النموذج، ونموذج مقفل، وتعليمات أمان، وتحذيرات للنماذج المستوردة غير الموثّقة، وفتح والدي يتيح الوصول إلى الإعدادات دون إنهاء الوضع.',
           '**أدوات يومية.** بحث في المحادثات، و20 قالب شخصية، واختبار سرعة بالرموز في الثانية، وعرض لنافذة السياق، وشاشة تبيّن إن كان النموذج المحمّل يعمل على GPU أو CPU، ونسخ احتياطي إلى Google Drive على أندرويد أو iCloud على iPhone.',
         ],
         note: 'وصفا المتجر متقاربان لكنهما غير متطابقين؛ فمثلاً يذكر نص iOS النسخ الاحتياطي إلى iCloud ويذكر نص أندرويد Google Drive. والنسخة المثبّتة هي المرجع الأخير.',
+      },
+      kidMode: {
+        id: 'kid-mode',
+        title: 'وضع الأطفال',
+        content: [
+          '**يقدّم التطبيق ميزة محمية برقم PIN مخصصة للأطفال، وتعرضها أوصاف المتجر ميزة رئيسية.** كل ما يلي مصدره هذه الأوصاف؛ ولم تختبر PromptQuorum مدى صمود هذا الوضع.',
+        ],
+        items: [
+          '**رقم PIN للوالدين.** يضبط أحد الوالدين رقم PIN يحمي هذه الميزة وإعداداتها.',
+          '**نموذج مقفل.** النموذج النشط ثابت، فلا يستطيع الطفل تبديل النماذج أو تغيير الإعدادات.',
+          '**مرشّح المحتوى.** تُحجب الكلمات غير اللائقة قبل وصولها إلى النموذج، وتوجّه تعليمات الأمان الردود لتناسب العمر.',
+          '**تحذيرات الاستيراد.** يحذّر التطبيق قبل تشغيل نموذج مستورد غير موثّق في هذا الوضع.',
+          '**الفتح الوالدي.** يمكن فتح الإعدادات والمستندات مؤقتاً من شاشة الدردشة دون إنهاء الوضع.',
+        ],
       },
       privacy: {
         id: 'privacy',
@@ -2065,7 +2139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'التطبيق مغلق المصدر، لذا لا يمكن التحقق من أي من هذه الادعاءات في الكود، ولم تدقق PromptQuorum حركة الشبكة. وينبغي لمن يتعامل مع بيانات سرية، أو يهيّئ وضع الأطفال لطفل، أن يتحقق من السلوك على جهازه.',
+            text: 'التطبيق مغلق المصدر، لذا لا يمكن التحقق من أي من هذه الادعاءات في الكود، ولم تدقق PromptQuorum حركة الشبكة. وينبغي لمن يتعامل مع بيانات سرية، أو يضبط الرقابة الأبوية لطفل، أن يتحقق من السلوك على جهازه.',
           },
         ],
       },
@@ -2074,7 +2148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'لمن يناسب',
         items: [
           '**من يريد مساعداً على الهاتف يتذكره دون حساب سحابي.** تُخزَّن Agent Memory محلياً وهي قابلة للتعديل.',
-          '**الآباء الذين يريدون دردشة دون اتصال موجّهة للأطفال.** يجمع وضع الأطفال بين رقم PIN ومرشّح ونموذج مقفل، وإن كانت فعاليته غير مؤكدة.',
+          '**الآباء الذين يريدون دردشة دون اتصال موجّهة للأطفال.** تتوفر رقابة أبوية، مع التنبيه إلى أن قوتها غير مؤكدة.',
           '**من يريد طرح أسئلة على ملفات PDF وصوره الخاصة بخصوصية.** تتوفر أسئلة المستندات والصور.',
           '**المستخدمون الذين يحبون إحضار نماذجهم الخاصة.** يناسب استيراد GGUF ووجود محرّكين كل من لديه نموذج مفضّل.',
         ],
@@ -2083,7 +2157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'ما لم نتمكن من التحقق منه',
         items: [
-          '**الأداء العملي.** لم تشغّل PromptQuorum التطبيق، لذا لم تُقيَّم السرعة واستهلاك البطارية وجودة الإجابات والقوة الفعلية لوضع الأطفال.',
+          '**الأداء العملي.** لم تشغّل PromptQuorum التطبيق، لذا لم تُقيَّم السرعة واستهلاك البطارية وجودة الإجابات والقوة الفعلية للرقابة الأبوية.',
           '**الكود المصدري والترخيص.** التطبيق مغلق المصدر؛ ولا يحتوي مستودع الملاحظات إلا على ملف README ونظام تتبع للمشكلات.',
           '**المشتريات والتتبّع.** تختلف نصوص المتجر عن سياسة الخصوصية، كما هو موضح في قسم الخصوصية.',
           '**متطلبات أندرويد.** لا يعرض نص Google Play الذي قرأناه حداً أدنى لإصدار أندرويد؛ والحد الأدنى لـ iOS هو 16.4.',
@@ -2137,12 +2211,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'نعم. ميزة Agent Memory اختيارية، وتُخزَّن على الجهاز بكلماتك أنت، ويمكن عرض كل إدخال أو تعديله أو حذفه. وهي تحتاج إلى نموذج تضمين لتعمل.',
           },
           {
-            q: 'كيف يعمل وضع الأطفال؟',
-            a: 'يضبط أحد الوالدين رقم PIN؛ ثم يقفل التطبيق النموذج النشط، ويصفّي الكلمات غير اللائقة قبل وصولها إلى الذكاء الاصطناعي، ويضيف تعليمات أمان. ويفتح الفتح الوالدي الإعدادات مؤقتاً دون إنهاء الوضع.',
-          },
-          {
             q: 'هل يمكنني استخدام نماذجي الخاصة؟',
-            a: 'نعم. يمكنك استيراد ملفات GGUF متوافقة من Hugging Face وتشغيلها على محرّك llama.cpp؛ ويمكن تشغيل نماذج عائلة Gemma على محرّك LiteRT. ويحذّر التطبيق قبل تشغيل نموذج مستورد غير موثّق في وضع الأطفال.',
+            a: 'نعم. يمكنك استيراد ملفات GGUF متوافقة من Hugging Face وتشغيلها على محرّك llama.cpp؛ ويمكن تشغيل نماذج عائلة Gemma على محرّك LiteRT.',
           },
           {
             q: 'هل يعمل على Mac؟',
@@ -2158,7 +2228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'MemoryAI تطبيق دردشة مجاني على الهاتف يعمل دون اتصال، يحتفظ بذاكرة قابلة للتعديل عن المستخدم على الجهاز ويقدّم وضعاً للأطفال محمياً برقم PIN، إلى جانب أسئلة المستندات والصور وصوت دون لمس ومحرّكي استدلال. كما أنه يُحدَّث كثيراً، إذ صدر إصدار قبل يوم من التحقق من هذه المراجعة. في المقابل، هو مغلق المصدر وحديث وضيق الانتشار ومقتصر على نماذج صغيرة على الجهاز، وتختلف نصوص المتجر وسياسة الخصوصية بشأن المشتريات والتتبّع، لذا لا يمكن التحقق من ادعاءاته الخاصة بالخصوصية في الكود. وهو يناسب القراء الذين يريدون هذه الميزات تحديداً ويقبلون تطبيقاً حديثاً ومغلقاً؛ أما من يريد كوداً قابلاً للتدقيق فيمكنه مقارنة [Private Mind](/ar/power-local-llm/private-mind-review) أو [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review).',
+          'MemoryAI تطبيق دردشة مجاني على الهاتف يعمل دون اتصال، يحتفظ بذاكرة قابلة للتعديل عن المستخدم على الجهاز ويقدّم رقابة أبوية، إلى جانب أسئلة المستندات والصور وصوت دون لمس ومحرّكي استدلال. كما أنه يُحدَّث كثيراً، إذ صدر إصدار قبل يوم من التحقق من هذه المراجعة. في المقابل، هو مغلق المصدر وحديث وضيق الانتشار ومقتصر على نماذج صغيرة على الجهاز، وتختلف نصوص المتجر وسياسة الخصوصية بشأن المشتريات والتتبّع، لذا لا يمكن التحقق من ادعاءاته الخاصة بالخصوصية في الكود. وهو يناسب القراء الذين يريدون هذه الميزات تحديداً ويقبلون تطبيقاً حديثاً ومغلقاً؛ أما من يريد كوداً قابلاً للتدقيق فيمكنه مقارنة [Private Mind](/ar/power-local-llm/private-mind-review) أو [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -2196,9 +2266,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MemoryAI 是一款适用于 iPhone 和 Android 的离线聊天应用,由意大利独立开发者 Alessandro Facchini(以 Facchinits 名义发布)开发。它通过 llama.cpp 和 Google 的 LiteRT 两个引擎在手机上运行开放权重语言模型,首次在 App Store 发布是在 2026 年 3 月 30 日。本评测反映其应用商店页面、网站和隐私政策在 2026 年 10 月 19 日的情况。',
     metaDescription:
-      'MemoryAI 评测:免费、闭源的 iPhone 和 Android 离线 AI 聊天应用,支持文档问答、可编辑 Agent Memory、语音模式与儿童模式。涵盖隐私与局限。',
+      'MemoryAI 评测:免费、闭源的 iPhone 和 Android 离线 AI 聊天应用,支持文档问答、可编辑 Agent Memory、语音模式与家长控制。涵盖隐私与局限。',
     twitterDescription:
-      'MemoryAI 评测:免费、闭源的 iPhone 和 Android 离线 AI 聊天应用——文档问答、可编辑的设备端记忆、免动手语音和带 PIN 锁的儿童模式。应用商店页面与隐私政策怎么说。',
+      'MemoryAI 评测:免费、闭源的 iPhone 和 Android 离线 AI 聊天应用——文档问答、可编辑的设备端记忆、免动手语音和家长控制。应用商店页面与隐私政策怎么说。',
     audience:
       '希望使用免费聊天应用在设备上运行语言模型的 iPhone 和 Android 用户,并且需要了解哪些内容保持离线、应用会向外发送什么,以及哪些内容来源并未确认。',
     readTime: '阅读约8分钟',
@@ -2210,7 +2280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'memoryai 离线私密 ai',
       '离线 ai 聊天应用 iphone android',
       '设备端 ai 代理记忆',
-      'ai 儿童模式 离线应用',
+      '适合孩子的离线 ai 聊天应用',
       'gguf 导入 手机应用',
       'memoryai 与 private mind 对比',
     ],
@@ -2227,7 +2297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可在 [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) 和 [App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) 免费获取。',
           '可与 Gemma、Qwen、Llama、Phi 和 DeepSeek 等 GGUF 和 LiteRT 模型聊天。',
           '可选的 Agent Memory,可查看、编辑和删除,另支持文档和图片提问。',
-          '儿童模式带家长 PIN、内容过滤器和锁定的模型。',
+          '家长控制带 PIN、内容过滤器和锁定的模型。',
         ],
         updatedDate: '2026-10',
       },
@@ -2238,6 +2308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '获取方式', anchor: 'get-it' },
       { label: '如何开始使用', anchor: 'getting-started' },
       { label: '来源已确认的功能', anchor: 'key-features' },
+      { label: '儿童模式', anchor: 'kid-mode' },
       { label: '隐私与网络使用', anchor: 'privacy' },
       { label: '适合哪些人使用', anchor: 'who-should-use' },
       { label: '我们无法核实的内容', anchor: 'who-should-not-use' },
@@ -2255,7 +2326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MemoryAI 是一款闭源的 iPhone 和 Android 应用,在设备上保存可编辑的 Agent Memory,并提供文档问答、免动手语音和带 PIN 锁的儿童模式。',
+            text: 'MemoryAI 是一款闭源的 iPhone 和 Android 应用,在设备上保存可编辑的 Agent Memory,并提供文档问答、免动手语音和家长控制。',
           },
           {
             type: 'plain-terms',
@@ -2355,10 +2426,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Agent Memory。** 可选;AI 会以你自己的话把你告诉它的内容存储在设备上,你可以查看、编辑或删除每一条记忆。1.0.52 版本的更新说明称,诸如“写一封邮件”之类的请求不再被保存为记忆。',
           '**文档与图片。** 针对 PDF、TXT 和 Markdown 文件提问,使用视觉模型分析图片(可同时处理多张),并通过 Google ML Kit 识别照片中的文字。',
           '**语音。** 设备端语音输入、文本转语音,以及连续的免动手模式。',
-          '**儿童模式(Kid Mode)。** 家长 PIN、在不当词语到达模型之前将其拦截的过滤器、锁定的模型、安全提示词、对未经验证的导入模型的警告,以及无需结束该模式即可打开设置的家长解锁。',
           '**日常工具。** 聊天搜索、20 个角色模板、以每秒 token 数计的速度基准测试、上下文窗口显示、显示已加载模型运行在 GPU 还是 CPU 上的界面,以及备份(Android 上到 Google Drive,iPhone 上到 iCloud)。',
         ],
         note: '两个应用商店的描述几乎相同,但并不完全一致;例如,iOS 文字提到 iCloud 备份,而 Android 文字提到 Google Drive。最终以已安装的版本为准。',
+      },
+      kidMode: {
+        id: 'kid-mode',
+        title: '儿童模式',
+        content: [
+          '**该应用提供一种受 PIN 保护、面向孩子的模式,其应用商店描述将其作为主打功能。** 以下内容均来自这些描述;PromptQuorum 未测试该模式的实际防护效果。',
+        ],
+        items: [
+          '**家长 PIN。** 家长设置 PIN,用于保护该模式及其设置。',
+          '**锁定的模型。** 当前模型被固定,孩子无法切换模型或更改设置。',
+          '**内容过滤器。** 不当词语在到达模型之前被拦截,并由安全提示词引导生成适合该年龄的回复。',
+          '**导入警告。** 在未经验证的导入模型于该模式下运行之前,应用会发出警告。',
+          '**家长解锁。** 可在聊天界面临时打开设置和文档,而不会结束该模式。',
+        ],
       },
       privacy: {
         id: 'privacy',
@@ -2371,7 +2455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '该应用为闭源,因此这些说法均无法通过代码核查,PromptQuorum 也未审计其网络流量。处理机密数据的人,或为孩子设置儿童模式的人,应在自己的设备上核实其行为。',
+            text: '该应用为闭源,因此这些说法均无法通过代码核查,PromptQuorum 也未审计其网络流量。处理机密数据的人,或为孩子配置家长控制的人,应在自己的设备上核实其行为。',
           },
         ],
       },
@@ -2380,7 +2464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '适合哪些人使用',
         items: [
           '**想要一个无需云账号就能记住自己的手机助手的人。** Agent Memory 存储在本地,且可编辑。',
-          '**想要面向孩子的离线聊天的家长。** 儿童模式结合了 PIN、过滤器和锁定的模型,但其效果未经验证。',
+          '**想要面向孩子的离线聊天的家长。** 应用包含家长控制,但其强度未经验证。',
           '**想要私密地查询自己的 PDF 和照片的人。** 已包含文档和图片提问。',
           '**喜欢自带模型的用户。** GGUF 导入和两个引擎适合已经有喜爱模型的人。',
         ],
@@ -2389,7 +2473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '我们无法核实的内容',
         items: [
-          '**实际使用性能。** PromptQuorum 没有运行该应用,因此速度、耗电、回答质量以及儿童模式的真实效果均未评估。',
+          '**实际使用性能。** PromptQuorum 没有运行该应用,因此速度、耗电、回答质量以及家长控制的真实效果均未评估。',
           '**源代码与许可证。** 该应用为闭源;反馈代码仓库仅包含 README 和问题追踪器。',
           '**内购与追踪。** 应用商店文字与隐私政策不一致,详见隐私部分。',
           '**Android 要求。** 所读取的 Google Play 文字未显示最低 Android 版本;iOS 最低版本为 16.4。',
@@ -2443,12 +2527,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '可以。Agent Memory 为可选功能,以你自己的话存储在设备上,每一条都可以查看、编辑或删除。它需要一个嵌入模型才能工作。',
           },
           {
-            q: '儿童模式是如何工作的?',
-            a: '家长设置 PIN;之后应用会锁定当前模型,在不当词语到达 AI 之前将其过滤,并添加安全提示词。家长解锁可临时打开设置,而不会结束该模式。',
-          },
-          {
             q: '我可以使用自己的模型吗?',
-            a: '可以。你可以从 Hugging Face 导入兼容的 GGUF 文件,并在 llama.cpp 引擎上运行;Gemma 系列模型可在 LiteRT 引擎上运行。在儿童模式下运行未经验证的导入模型之前,应用会发出警告。',
+            a: '可以。你可以从 Hugging Face 导入兼容的 GGUF 文件,并在 llama.cpp 引擎上运行;Gemma 系列模型可在 LiteRT 引擎上运行。',
           },
           {
             q: '它能在 Mac 上使用吗?',
@@ -2464,7 +2544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'MemoryAI 是一款免费的离线手机聊天应用,在设备上保存用户的可编辑记忆,并提供带 PIN 锁的儿童模式,同时支持文档和图片提问、免动手语音以及两个推理引擎。它的更新也很频繁,在本评测核实的前一天还有一次发布。另一方面,它是闭源的、上线时间短、影响范围小、只能运行设备端的小型模型,并且其应用商店文字与隐私政策在内购和追踪方面不一致,因此无法通过代码核查其隐私说法。它适合想要这些特定功能并能接受一款年轻的闭源应用的读者;想要可审计代码的读者可以比较 [Private Mind](/zh/power-local-llm/private-mind-review) 或 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)。',
+          'MemoryAI 是一款免费的离线手机聊天应用,在设备上保存用户的可编辑记忆,并提供家长控制,同时支持文档和图片提问、免动手语音以及两个推理引擎。它的更新也很频繁,在本评测核实的前一天还有一次发布。另一方面,它是闭源的、上线时间短、影响范围小、只能运行设备端的小型模型,并且其应用商店文字与隐私政策在内购和追踪方面不一致,因此无法通过代码核查其隐私说法。它适合想要这些特定功能并能接受一款年轻的闭源应用的读者;想要可审计代码的读者可以比较 [Private Mind](/zh/power-local-llm/private-mind-review) 或 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)。',
       },
       sources: {
         id: 'sources',
@@ -2502,9 +2582,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MemoryAI는 이탈리아의 독립 개발자 Alessandro Facchini(Facchinits라는 이름으로 활동)가 만든 iPhone·Android용 오프라인 채팅 앱입니다. llama.cpp와 Google의 LiteRT라는 두 엔진으로 오픈 웨이트 언어 모델을 휴대폰에서 실행하며, App Store 첫 출시일은 2026년 3월 30일입니다. 이 리뷰는 2026년 10월 19일에 확인한 스토어 게재 정보, 웹사이트, 개인정보 처리방침을 반영합니다.',
     metaDescription:
-      'MemoryAI 리뷰: 문서 Q&A, 편집 가능한 Agent Memory, 음성 모드, 키즈 모드를 갖춘 iPhone·Android용 무료 비공개 소스 오프라인 AI 앱. 개인정보와 한계.',
+      'MemoryAI 리뷰: 문서 Q&A, 편집 가능한 Agent Memory, 음성 모드, 자녀 보호 기능을 갖춘 iPhone·Android용 무료 비공개 소스 오프라인 AI 앱. 개인정보와 한계.',
     twitterDescription:
-      'MemoryAI 리뷰: 문서 Q&A, 편집 가능한 온디바이스 메모리, 핸즈프리 음성, PIN으로 잠그는 키즈 모드를 갖춘 iPhone·Android용 무료 비공개 소스 오프라인 AI 채팅 앱. 스토어 게재 정보와 개인정보 처리방침의 내용을 다룹니다.',
+      'MemoryAI 리뷰: 문서 Q&A, 편집 가능한 온디바이스 메모리, 핸즈프리 음성, 자녀 보호 기능을 갖춘 iPhone·Android용 무료 비공개 소스 오프라인 AI 채팅 앱. 스토어 게재 정보와 개인정보 처리방침의 내용을 다룹니다.',
     audience:
       '기기에서 언어 모델을 실행하는 무료 채팅 앱을 찾는 iPhone·Android 이용자로, 무엇이 오프라인에 머무는지, 무엇을 외부로 보내는지, 출처가 무엇을 확인해 주지 않는지 알아야 하는 분들.',
     readTime: '8분 읽기',
@@ -2516,7 +2596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'memoryai 오프라인 프라이빗 ai',
       '오프라인 ai 채팅 앱 아이폰 안드로이드',
       '온디바이스 ai 에이전트 메모리',
-      'ai 키즈 모드 오프라인 앱',
+      '어린이용 오프라인 ai 채팅 앱',
       'gguf 가져오기 모바일 앱',
       'memoryai private mind 비교',
     ],
@@ -2533,7 +2613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai)와 [App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586)에서 무료.',
           'Gemma, Qwen, Llama, Phi, DeepSeek 같은 GGUF·LiteRT 모델로 채팅할 수 있습니다.',
           '이용자가 보고, 편집하고, 삭제할 수 있는 선택형 Agent Memory와 문서·이미지 질문.',
-          '부모 PIN, 콘텐츠 필터, 잠긴 모델을 갖춘 키즈 모드.',
+          'PIN, 콘텐츠 필터, 잠긴 모델을 갖춘 자녀 보호 기능.',
         ],
         updatedDate: '2026-10',
       },
@@ -2544,6 +2624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '어디서 받나요?', anchor: 'get-it' },
       { label: '시작하는 방법', anchor: 'getting-started' },
       { label: '출처로 확인되는 기능', anchor: 'key-features' },
+      { label: '키즈 모드', anchor: 'kid-mode' },
       { label: '개인정보와 네트워크 사용', anchor: 'privacy' },
       { label: '이런 분께 적합합니다', anchor: 'who-should-use' },
       { label: '확인하지 못한 사항', anchor: 'who-should-not-use' },
@@ -2561,7 +2642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MemoryAI는 편집 가능한 Agent Memory를 기기에 보관하고 문서 질문, 핸즈프리 음성, PIN으로 잠그는 키즈 모드를 더한 비공개 소스 iPhone·Android 앱입니다.',
+            text: 'MemoryAI는 편집 가능한 Agent Memory를 기기에 보관하고 문서 질문, 핸즈프리 음성, 자녀 보호 기능을 더한 비공개 소스 iPhone·Android 앱입니다.',
           },
           {
             type: 'plain-terms',
@@ -2661,10 +2742,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Agent Memory.** 선택 사항이며, AI가 이용자가 말한 내용을 이용자 자신의 표현으로 기기에 저장하고, 각 메모리를 보고 편집하거나 삭제할 수 있습니다. 1.0.52 노트에는 "이메일 써 줘" 같은 요청은 더 이상 메모리로 저장되지 않는다고 되어 있습니다.',
           '**문서와 이미지.** PDF, TXT, Markdown 파일에 대한 질문, 비전 모델을 이용한 이미지 분석(여러 장 동시 가능), Google ML Kit를 통한 사진 속 텍스트 인식.',
           '**음성.** 온디바이스 음성 입력, 텍스트 음성 변환, 연속 핸즈프리 모드.',
-          '**키즈 모드.** 부모 PIN, 부적절한 단어가 모델에 닿기 전에 막는 필터, 잠긴 모델, 안전 프롬프트, 검증되지 않은 가져온 모델에 대한 경고, 모드를 끝내지 않고 설정을 여는 부모 잠금 해제.',
           '**일상 도구.** 채팅 검색, 페르소나 템플릿 20개, 초당 토큰 수로 보여 주는 속도 벤치마크, 컨텍스트 윈도우 표시, 불러온 모델이 GPU와 CPU 중 어디서 실행되는지 보여 주는 화면, Android의 Google Drive 또는 iPhone의 iCloud 백업.',
         ],
         note: '두 스토어 설명은 거의 같지만 동일하지는 않습니다. 예를 들어 iOS 설명에는 iCloud 백업이, Android 설명에는 Google Drive가 언급됩니다. 최종 기준은 설치된 빌드입니다.',
+      },
+      kidMode: {
+        id: 'kid-mode',
+        title: '키즈 모드',
+        content: [
+          '**이 앱은 스토어 설명에서 핵심 기능으로 내세우는, PIN으로 보호되는 어린이용 모드를 제공합니다.** 아래 내용은 모두 그 설명에서 나온 것이며, PromptQuorum은 이 모드가 얼마나 견고한지 테스트하지 않았습니다.',
+        ],
+        items: [
+          '**부모 PIN.** 부모가 PIN을 설정하면 이 모드와 그 설정이 보호됩니다.',
+          '**잠긴 모델.** 사용 중인 모델이 고정되어 있어 아이가 모델을 바꾸거나 설정을 변경할 수 없습니다.',
+          '**콘텐츠 필터.** 부적절한 단어가 모델에 닿기 전에 걸러지며, 안전 프롬프트가 연령에 맞는 답변을 유도합니다.',
+          '**가져오기 경고.** 검증되지 않은 가져온 모델이 이 모드에서 실행되기 전에 앱이 경고합니다.',
+          '**부모 잠금 해제.** 모드를 끝내지 않고 채팅 화면에서 설정과 문서를 잠시 열 수 있습니다.',
+        ],
       },
       privacy: {
         id: 'privacy',
@@ -2677,7 +2771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '이 앱은 소스 코드가 공개되어 있지 않아 위 주장은 어느 것도 코드에서 확인할 수 없으며, PromptQuorum은 네트워크 트래픽을 감사하지 않았습니다. 기밀 데이터를 다루는 분이나 자녀를 위해 키즈 모드를 설정하는 분은 본인 기기에서 동작을 직접 확인해야 합니다.',
+            text: '이 앱은 소스 코드가 공개되어 있지 않아 위 주장은 어느 것도 코드에서 확인할 수 없으며, PromptQuorum은 네트워크 트래픽을 감사하지 않았습니다. 기밀 데이터를 다루는 분이나 자녀 보호 기능을 설정하는 분은 본인 기기에서 동작을 직접 확인해야 합니다.',
           },
         ],
       },
@@ -2686,7 +2780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '이런 분께 적합합니다',
         items: [
           '**클라우드 계정 없이 자신을 기억하는 휴대폰 어시스턴트를 원하는 분.** Agent Memory는 로컬에 저장되며 편집할 수 있습니다.',
-          '**아이가 쓸 오프라인 채팅을 원하는 부모.** 키즈 모드는 PIN, 필터, 잠긴 모델을 결합하지만 그 효과는 검증되지 않았습니다.',
+          '**아이가 쓸 오프라인 채팅을 원하는 부모.** 자녀 보호 기능이 포함되어 있지만 그 강도는 검증되지 않았습니다.',
           '**자신의 PDF와 사진에 대해 비공개로 질문하고 싶은 분.** 문서·이미지 질문이 포함되어 있습니다.',
           '**자신의 모델을 가져와 쓰고 싶은 이용자.** GGUF 가져오기와 두 엔진은 이미 좋아하는 모델이 있는 분께 맞습니다.',
         ],
@@ -2695,7 +2789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '확인하지 못한 사항',
         items: [
-          '**직접 사용해 본 성능.** PromptQuorum은 앱을 실행하지 않았으므로 속도, 배터리 사용량, 답변 품질, 키즈 모드의 실제 강도는 평가하지 않았습니다.',
+          '**직접 사용해 본 성능.** PromptQuorum은 앱을 실행하지 않았으므로 속도, 배터리 사용량, 답변 품질, 자녀 보호 기능의 실제 강도는 평가하지 않았습니다.',
           '**소스 코드와 라이선스.** 앱은 소스 코드가 공개되어 있지 않으며, 피드백 저장소에는 README와 이슈 트래커만 있습니다.',
           '**결제와 추적.** 개인정보 항목에서 설명했듯이 스토어 설명과 개인정보 처리방침이 서로 다릅니다.',
           '**Android 요구 사항.** 읽은 Google Play 설명에는 최소 Android 버전이 나와 있지 않으며, iOS 최소 버전은 16.4입니다.',
@@ -2749,12 +2843,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '예. Agent Memory는 선택 사항이며 이용자 자신의 표현으로 기기에 저장되고, 각 항목을 보고, 편집하고, 삭제할 수 있습니다. 작동하려면 임베딩 모델이 필요합니다.',
           },
           {
-            q: '키즈 모드는 어떻게 작동하나요?',
-            a: '부모가 PIN을 설정하면 앱이 사용 중인 모델을 잠그고, 부적절한 단어가 AI에 닿기 전에 걸러내며, 안전 프롬프트를 추가합니다. 부모 잠금 해제를 하면 모드를 끝내지 않고 설정을 잠시 열 수 있습니다.',
-          },
-          {
             q: '내 모델을 쓸 수 있나요?',
-            a: '예. Hugging Face의 호환 GGUF 파일을 가져와 llama.cpp 엔진에서 실행할 수 있고, Gemma 계열 모델은 LiteRT 엔진에서 실행할 수 있습니다. 검증되지 않은 가져온 모델을 키즈 모드에서 실행하기 전에는 앱이 경고합니다.',
+            a: '예. Hugging Face의 호환 GGUF 파일을 가져와 llama.cpp 엔진에서 실행할 수 있고, Gemma 계열 모델은 LiteRT 엔진에서 실행할 수 있습니다.',
           },
           {
             q: 'Mac에서도 작동하나요?',
@@ -2770,7 +2860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          'MemoryAI는 이용자에 관한 편집 가능한 메모리를 기기에 보관하고 PIN으로 잠그는 키즈 모드를 제공하는 무료 오프라인 모바일 채팅 앱이며, 문서·이미지 질문, 핸즈프리 음성, 두 가지 추론 엔진도 갖추고 있습니다. 또한 업데이트가 잦아서, 이 리뷰를 확인하기 하루 전에도 릴리스가 있었습니다. 반면 소스 코드가 공개되어 있지 않고, 출시된 지 얼마 되지 않았으며, 도달 범위가 작고, 모델이 작은 온디바이스 모델로 제한되며, 스토어 설명과 개인정보 처리방침이 결제와 추적에 관해 서로 다르므로 개인정보 주장을 코드에서 확인할 수 없습니다. 이 특정 기능들을 원하고 젊은 비공개 소스 앱을 감수할 수 있는 분께 맞으며, 검증 가능한 코드를 원하는 분은 [Private Mind](/ko/power-local-llm/private-mind-review)나 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)와 비교해 보시기 바랍니다.',
+          'MemoryAI는 이용자에 관한 편집 가능한 메모리를 기기에 보관하고 자녀 보호 기능을 제공하는 무료 오프라인 모바일 채팅 앱이며, 문서·이미지 질문, 핸즈프리 음성, 두 가지 추론 엔진도 갖추고 있습니다. 또한 업데이트가 잦아서, 이 리뷰를 확인하기 하루 전에도 릴리스가 있었습니다. 반면 소스 코드가 공개되어 있지 않고, 출시된 지 얼마 되지 않았으며, 도달 범위가 작고, 모델이 작은 온디바이스 모델로 제한되며, 스토어 설명과 개인정보 처리방침이 결제와 추적에 관해 서로 다르므로 개인정보 주장을 코드에서 확인할 수 없습니다. 이 특정 기능들을 원하고 젊은 비공개 소스 앱을 감수할 수 있는 분께 맞으며, 검증 가능한 코드를 원하는 분은 [Private Mind](/ko/power-local-llm/private-mind-review)나 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)와 비교해 보시기 바랍니다.',
       },
       sources: {
         id: 'sources',
