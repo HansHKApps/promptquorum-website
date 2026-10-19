@@ -15,7 +15,7 @@ export const app: ToolRecord = {
   worksWith: ['Hugging Face'],
   engine: 'builtin', // on-device inference on mlx-swift (Apple MLX)
   license: 'Closed source',
-  price: 'freemium', // free download; MLXHub Plus $6.99/month, $44.99/year, lifetime $229.99 — verified 2026-10-05, re-read 2026-10-19 (US store). Maker (2026-10-19): 2.3.0, still in App Store review, adds a $34.49 LAN Server IAP credited toward lifetime ($195.99 instead of $229.99); not yet on the listing
+  price: 'freemium', // free download; MLXHub Plus $6.99/month, $44.99/year, lifetime $229.99 — verified 2026-10-05, re-read 2026-10-19 (US store). Maker (2026-10-19): 2.3.0 adds a $34.49 LAN Server IAP credited toward lifetime ($195.99 instead of $229.99); developer-stated, treated as live by owner decision 2026-10-19
   hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // no RAM minimum: any A14/M1 or newer chip; RAM only decides which models fit
   stars: null,
   addedDate: '2026-10-05',
@@ -38,12 +38,12 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'mlxhub-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: {
-    date: '2026-10-19', // 2.2.1 = version shown on the App Store listing on that date (2.3.0 is in review, per the maker)
-    version: '2.2.1',
+    date: '2026-10-19', // 2.3.0 treated as the live version by owner decision (was in App Store review per the maker); listing not yet re-read
+    version: '2.3.0',
     versionSourceUrl: 'https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144',
   },
   // Comparison attributes: each value taken from the App Store listing / official site on 2026-10-05; a missing key = not stated there, never false.
-  compare: { offline: true, modelDownloads: true, visionInput: true },
+  compare: { offline: true, modelDownloads: true, visionInput: true, voice: true }, // voice: Voice Mode in 2.3.0, developer-stated
   lastVerifiedDate: '2026-10-19',
   founderReviewedDate: '2026-10-19', // Juan Colilla (DreamFoundries) supplied comments and corrections 2026-10-19; drives the amber Founder-reviewed banner + star
   lastUpstreamUpdate: '2026-10-12', // App Store version history, read 2026-10-16
