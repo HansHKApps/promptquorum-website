@@ -1249,6 +1249,11 @@
     "urlSlug": "local-ai-chat-pocket-review",
     "url": "/power-local-llm/local-ai-chat-pocket-review"
   },
+  "castmates": {
+    "cluster": "power-local-llm",
+    "urlSlug": "castmates-review",
+    "url": "/power-local-llm/castmates-review"
+  },
   "pixlstash": {
     "cluster": "power-local-llm",
     "urlSlug": "pixlstash-review",
