@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 15–45% Per Course Sale',
-            content: 'Coursera\'s affiliate program pays 15–45% depending on the course and enrollment type. The 30-day cookie applies to both free trial starts and paid enrollments. AI, deep learning, and MLOps specializations from major universities convert well from developer audiences. Rates and terms follow Coursera\'s affiliate page and can change; degree and certificate purchases do not qualify, and Coursera and Udemy merged on 11 May 2026, so check the current terms before joining.',
+            content: 'Coursera\'s affiliate program pays 15–45% depending on the course and enrollment type. The 30-day window applies to qualified purchases made within 30 days of a click. AI, deep learning, and MLOps specializations from major universities convert well from developer audiences. Rates and terms follow Coursera\'s affiliate page and can change; degree and certificate purchases do not qualify, and Coursera and Udemy merged on 11 May 2026, so check the current terms before joining.',
           },
         ],
         affiliateLinks: [
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 15–45 % pro Kursverkauf',
-            content: 'Das Coursera-Affiliate-Programm zahlt 15–45 % abhängig vom Kurs und der Anmeldungsart. Der 30-Tage-Cookie gilt für kostenlose Testanmeldungen und kostenpflichtige Einschreibungen. KI-, Deep-Learning- und MLOps-Spezialisierungen großer Universitäten konvertieren bei Entwickler-Zielgruppen gut. Sätze und Bedingungen folgen der Coursera-Affiliate-Seite und können sich ändern; Abschlüsse und Zertifikatskäufe sind nicht provisionsberechtigt, und Coursera und Udemy haben am 11. Mai 2026 fusioniert – prüfen Sie daher vor dem Beitritt die aktuellen Bedingungen.',
+            content: 'Das Coursera-Affiliate-Programm zahlt 15–45 % abhängig vom Kurs und der Anmeldungsart. Das 30-Tage-Zeitfenster gilt für qualifizierte Käufe innerhalb von 30 Tagen nach einem Klick. KI-, Deep-Learning- und MLOps-Spezialisierungen großer Universitäten konvertieren bei Entwickler-Zielgruppen gut. Sätze und Bedingungen folgen der Coursera-Affiliate-Seite und können sich ändern; Abschlüsse und Zertifikatskäufe sind nicht provisionsberechtigt, und Coursera und Udemy haben am 11. Mai 2026 fusioniert – prüfen Sie daher vor dem Beitritt die aktuellen Bedingungen.',
           },
         ],
         affiliateLinks: [
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 15–45 % par vente de cours',
-            content: 'Le programme affilié de Coursera paie 15–45 % selon le cours et le type d\'inscription. Le cookie de 30 jours s\'applique aux démarrages d\'essai gratuit et aux inscriptions payantes. Les spécialisations IA, deep learning et MLOps des grandes universités convertissent bien auprès des audiences de développeurs. Les taux et conditions suivent la page d\'affiliation de Coursera et peuvent changer ; les achats de diplômes et de certificats ne sont pas éligibles, et Coursera et Udemy ont fusionné le 11 mai 2026 : vérifiez les conditions actuelles avant de vous inscrire.',
+            content: 'Le programme affilié de Coursera paie 15–45 % selon le cours et le type d\'inscription. La fenêtre de 30 jours s\'applique aux achats éligibles effectués dans les 30 jours suivant un clic. Les spécialisations IA, deep learning et MLOps des grandes universités convertissent bien auprès des audiences de développeurs. Les taux et conditions suivent la page d\'affiliation de Coursera et peuvent changer ; les achats de diplômes et de certificats ne sont pas éligibles, et Coursera et Udemy ont fusionné le 11 mai 2026 : vérifiez les conditions actuelles avant de vous inscrire.',
           },
         ],
         affiliateLinks: [
@@ -832,7 +832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — コース販売1件につき15〜45%',
-            content: 'Courseraのアフィリエイトプログラムは、コースと登録タイプに応じて15〜45%を支払います。30日Cookieは無料トライアル開始と有料登録の両方に適用されます。主要大学のAI、ディープラーニング、MLOps専攻はデベロッパーオーディエンスでよく転換します。料率と条件はCourseraのアフィリエイトページに基づいており変更される可能性があります。学位や修了証の購入は対象外で、CourseraとUdemyは2026年5月11日に統合したため、参加前に最新の条件を確認してください。',
+            content: 'Courseraのアフィリエイトプログラムは、コースと登録タイプに応じて15〜45%を支払います。30日間の対象期間は、リンクをクリックしてから30日以内の対象購入に適用されます。主要大学のAI、ディープラーニング、MLOps専攻はデベロッパーオーディエンスでよく転換します。料率と条件はCourseraのアフィリエイトページに基づいており変更される可能性があります。学位や修了証の購入は対象外で、CourseraとUdemyは2026年5月11日に統合したため、参加前に最新の条件を確認してください。',
           },
         ],
         affiliateLinks: [
@@ -1068,7 +1068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 每次课程销售15–45%',
-            content: 'Coursera联盟计划根据课程和注册类型支付15–45%。30天Cookie适用于免费试用开始和付费注册。顶尖大学的AI、深度学习和MLOps专项课程在开发者受众中转化率高。费率和条款依据Coursera联盟页面，可能变更；学位和证书购买不计佣金，且Coursera与Udemy已于2026年5月11日合并，加入前请核对最新条款。',
+            content: 'Coursera联盟计划根据课程和注册类型支付15–45%。30天有效期适用于点击链接后30天内的合格购买。顶尖大学的AI、深度学习和MLOps专项课程在开发者受众中转化率高。费率和条款依据Coursera联盟页面，可能变更；学位和证书购买不计佣金，且Coursera与Udemy已于2026年5月11日合并，加入前请核对最新条款。',
           },
         ],
         affiliateLinks: [
@@ -1305,7 +1305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 15–45% por venta de curso',
-            content: 'El programa de afiliados de Coursera paga entre un 15 y un 45% según el curso y el tipo de matrícula. La cookie de 30 días aplica tanto a inicios de prueba gratuita como a matrículas de pago. Las especializaciones en IA, deep learning y MLOps de las principales universidades convierten bien entre audiencias de desarrolladores. Las tasas y condiciones siguen la página de afiliados de Coursera y pueden cambiar; las compras de títulos y certificados no cuentan, y Coursera y Udemy se fusionaron el 11 de mayo de 2026, así que revisa las condiciones actuales antes de unirte.',
+            content: 'El programa de afiliados de Coursera paga entre un 15 y un 45% según el curso y el tipo de matrícula. La ventana de 30 días aplica a las compras que cumplen los requisitos realizadas en los 30 días posteriores a un clic. Las especializaciones en IA, deep learning y MLOps de las principales universidades convierten bien entre audiencias de desarrolladores. Las tasas y condiciones siguen la página de afiliados de Coursera y pueden cambiar; las compras de títulos y certificados no cuentan, y Coursera y Udemy se fusionaron el 11 de mayo de 2026, así que revisa las condiciones actuales antes de unirte.',
           },
         ],
         affiliateLinks: [
@@ -1555,7 +1555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 15–45% por venda de curso',
-            content: 'O programa de afiliados da Coursera paga de 15 a 45% dependendo do curso e do tipo de matrícula. O cookie de 30 dias se aplica tanto a inícios de teste gratuito quanto a matrículas pagas. Especializações em IA, deep learning e MLOps das principais universidades convertem bem entre audiências de desenvolvedores. As taxas e condições seguem a página de afiliados da Coursera e podem mudar; compras de diplomas e certificados não são elegíveis, e a Coursera e a Udemy se fundiram em 11 de maio de 2026, então confira as condições atuais antes de entrar.',
+            content: 'O programa de afiliados da Coursera paga de 15 a 45% dependendo do curso e do tipo de matrícula. A janela de 30 dias se aplica a compras qualificadas feitas em até 30 dias após um clique. Especializações em IA, deep learning e MLOps das principais universidades convertem bem entre audiências de desenvolvedores. As taxas e condições seguem a página de afiliados da Coursera e podem mudar; compras de diplomas e certificados não são elegíveis, e a Coursera e a Udemy se fundiram em 11 de maio de 2026, então confira as condições atuais antes de entrar.',
           },
         ],
         affiliateLinks: [
@@ -1805,7 +1805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 15–45% لكل بيع دورة',
-            content: 'يدفع برنامج شراكة Coursera من 15 إلى 45% بحسب الدورة ونوع التسجيل. يُطبَّق ملف تعريف الارتباط لـ30 يوماً على بدايات التجربة المجانية والتسجيلات المدفوعة معاً. تخصصات الذكاء الاصطناعي والتعلم العميق وMLOps من الجامعات الكبرى تتحوّل جيداً مع جماهير المطوّرين. تستند النسب والشروط إلى صفحة الشراكة في Coursera وقد تتغيّر؛ لا تُحتسب عمولة على شراء الدرجات العلمية والشهادات، وقد اندمجت Coursera وUdemy في 11 مايو 2026، فراجع الشروط الحالية قبل الانضمام.',
+            content: 'يدفع برنامج شراكة Coursera من 15 إلى 45% بحسب الدورة ونوع التسجيل. تُطبَّق نافذة الـ30 يوماً على المشتريات المؤهَّلة التي تتم خلال 30 يوماً من النقر. تخصصات الذكاء الاصطناعي والتعلم العميق وMLOps من الجامعات الكبرى تتحوّل جيداً مع جماهير المطوّرين. تستند النسب والشروط إلى صفحة الشراكة في Coursera وقد تتغيّر؛ لا تُحتسب عمولة على شراء الدرجات العلمية والشهادات، وقد اندمجت Coursera وUdemy في 11 مايو 2026، فراجع الشروط الحالية قبل الانضمام.',
           },
         ],
         affiliateLinks: [
@@ -2055,7 +2055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 강좌 판매당 15–45%',
-            content: 'Coursera 제휴 프로그램은 강좌와 등록 유형에 따라 15~45%를 지급합니다. 30일 쿠키는 무료 체험 시작과 유료 등록 모두에 적용됩니다. 주요 대학의 AI, 딥러닝, MLOps 특화 과정은 개발자 독자층에서 전환율이 높습니다. 요율과 약관은 Coursera 제휴 페이지를 따르며 변경될 수 있습니다. 학위 및 수료증 구매는 대상이 아니며, Coursera와 Udemy가 2026년 5월 11일 합병했으므로 가입 전에 최신 약관을 확인하십시오.',
+            content: 'Coursera 제휴 프로그램은 강좌와 등록 유형에 따라 15~45%를 지급합니다. 30일 기간은 링크를 클릭한 뒤 30일 이내의 해당 구매에 적용됩니다. 주요 대학의 AI, 딥러닝, MLOps 특화 과정은 개발자 독자층에서 전환율이 높습니다. 요율과 약관은 Coursera 제휴 페이지를 따르며 변경될 수 있습니다. 학위 및 수료증 구매는 대상이 아니며, Coursera와 Udemy가 2026년 5월 11일 합병했으므로 가입 전에 최신 약관을 확인하십시오.',
           },
         ],
         affiliateLinks: [

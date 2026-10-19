@@ -1516,7 +1516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Choisissez un GPU si votre cours implique d\'exécuter des modèles en local](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — le guide d\'achat de matériel pour les travaux pratiques en IA.',
           '[Choisissez un écran pour le développement et l\'étude en IA](/fr/power-local-llm/best-monitors-ai-development-2026) — l\'installation de bureau qui accompagne les cours d\'IA riches en projets.',
           '[Exécutez des LLM locaux sur un ordinateur portable pour les projets de cours](/fr/local-llms/local-llm-on-laptop) — comment vous exercer avec des modèles sur le matériel que vous possédez déjà.',
-          "[Meilleurs programmes d'affiliation pour développeurs IA : gagnez en construisant (2026)](/fr/power-local-llm/best-affiliate-tools-ai-developers-2026) -- aperçu des programmes d'affiliation pour les outils IA destinés aux développeurs",
+          "[Meilleurs programmes d'affiliation pour développeurs IA : gagnez en codant (2026)](/fr/power-local-llm/best-affiliate-tools-ai-developers-2026) -- aperçu des programmes d'affiliation pour les outils IA destinés aux développeurs",
         ],
       },
     },
