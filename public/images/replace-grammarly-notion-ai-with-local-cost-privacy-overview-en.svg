@@ -14,9 +14,9 @@
 
   <text x="48" y="140" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">&#8226; 2 separate paid subscriptions</text>
   <text x="48" y="170" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">&#8226; Text sent to cloud servers to process</text>
-  <text x="48" y="200" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">&#8226; Notion AI routes documents to OpenAI's API</text>
-  <text x="48" y="230" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">&#8226; Grammarly licenses submitted text for</text>
-  <text x="58" y="248" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">product improvement</text>
+  <text x="48" y="200" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">&#8226; Notion AI routes requests to third-party AI providers</text>
+  <text x="48" y="230" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">&#8226; Grammarly licenses your content for</text>
+  <text x="58" y="248" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">service operation and improvement</text>
   <text x="48" y="278" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#49454F">&#8226; Recurring monthly fee, indefinitely</text>
 
   <!-- Right panel: Local LLM (goal) -->
