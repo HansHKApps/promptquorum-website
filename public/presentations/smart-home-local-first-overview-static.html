@@ -10,29 +10,45 @@
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://www.promptquorum.com/smart-home" />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+<style>
+        /* Hub-template design: tokens mirror --hub-* in src/app/globals.css (iframe cannot read site CSS). */
+        @font-face { font-family: 'Plus Jakarta Sans'; font-weight: 700; font-display: swap; src: url('/fonts/PlusJakartaSans-700.woff') format('woff'); }
+        @font-face { font-family: 'Plus Jakarta Sans'; font-weight: 800; font-display: swap; src: url('/fonts/PlusJakartaSans-800.woff') format('woff'); }
+        @font-face { font-family: 'Beiruti'; font-weight: 400; font-display: swap; src: url('/fonts/Beiruti-Regular.ttf') format('truetype'); }
+        @font-face { font-family: 'Beiruti'; font-weight: 700; font-display: swap; src: url('/fonts/Beiruti-Bold.ttf') format('truetype'); }
+
+        :root {
+            --violet: #6750a4; --violet-tint: #eee9f8; --violet-ink: #4f3c8f; --violet-edge: #d9cff0;
+            --azure: #2f6fc4; --azure-tint: #e4eefb; --azure-ink: #1b4f8f; --azure-edge: #c5dbf5;
+            --indigo: #4a5bc4; --indigo-tint: #e8eafb; --indigo-ink: #33408f; --indigo-edge: #cbd0f3;
+            --orchid: #a24bb0; --orchid-tint: #f4e6f7; --orchid-ink: #7a2c85; --orchid-edge: #e8c9ee;
+            --rose: #c13a7a; --rose-tint: #fbe6ef; --rose-ink: #8c1f55; --rose-edge: #f3c7da;
+            --poster: linear-gradient(135deg, #1E0A4A 0%, #4C1D95 38%, #6750A4 62%, #C026D3 100%);
+            --gold: #FBBF24; --gold-soft: #FDE68A;
+            --ink: #1c1b1f; --muted: #49454f;
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         html, body {
             width: 100%;
             height: 100%;
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f6f4f4;
-            color: #1c1b1f;
+            background: #fff;
+            color: var(--ink);
             overflow: hidden;
         }
+        html[dir="rtl"], html[dir="rtl"] body, html[dir="rtl"] button { font-family: 'Beiruti', 'Plus Jakarta Sans', sans-serif; }
 
-        .presentation-container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            background: white;
-        }
+        .presentation-container { width: 100%; height: 100%; display: flex; flex-direction: column; background: #fff; }
+        .content-area { flex: 1; overflow: hidden; min-height: 0; }
+
+        /* Tone cycle per slide (violet, azure, indigo, orchid, rose), like HUB_CYCLE */
+        .t0 { --tone: var(--violet); --tint: var(--violet-tint); --tink: var(--violet-ink); --edge: var(--violet-edge); }
+        .t1 { --tone: var(--azure); --tint: var(--azure-tint); --tink: var(--azure-ink); --edge: var(--azure-edge); }
+        .t2 { --tone: var(--indigo); --tint: var(--indigo-tint); --tink: var(--indigo-ink); --edge: var(--indigo-edge); }
+        .t3 { --tone: var(--orchid); --tint: var(--orchid-tint); --tink: var(--orchid-ink); --edge: var(--orchid-edge); }
+        .t4 { --tone: var(--rose); --tint: var(--rose-tint); --tink: var(--rose-ink); --edge: var(--rose-edge); }
 
         .slide {
             width: 100%;
@@ -40,343 +56,164 @@
             display: none;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            padding: 32px 48px;
-            text-align: center;
+            align-items: stretch;
+            padding: clamp(14px, 2.6vw, 36px) clamp(18px, 4.5vw, 64px);
+            text-align: start;
+            overflow: auto;
+            background: #fff;
+            animation: fadeIn 0.4s ease-in;
+        }
+        .slide.active { display: flex; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .slide-head { display: flex; align-items: center; gap: 14px; margin-bottom: clamp(10px, 1.8vw, 22px); }
+        .chip {
+            flex-shrink: 0;
+            min-width: 44px; height: 36px; padding: 0 10px;
+            display: inline-flex; align-items: center; justify-content: center;
+            border-radius: 10px;
+            background: var(--tone); color: #fff;
+            font-size: 15px; font-weight: 800; letter-spacing: 0.02em;
+        }
+        .slide h2 { font-size: clamp(22px, 3vw, 38px); font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; color: var(--ink); }
+        .slide p { font-size: clamp(14px, 1.6vw, 20px); color: var(--muted); line-height: 1.5; }
+        .slide strong { font-weight: 800; color: var(--tink); }
+
+        /* Cards */
+        .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(8px, 1.2vw, 16px); }
+        .cards.c3 { grid-template-columns: repeat(3, 1fr); }
+        .cards.faq { font-size: clamp(12px, 1.42vw, 18px); }
+        .card {
+            background: var(--tint);
+            border: 1.5px solid var(--edge);
+            border-radius: 14px;
+            padding: clamp(10px, 1.4vw, 18px) clamp(12px, 1.6vw, 20px);
+            font-size: clamp(14px, 1.75vw, 22px);
+            line-height: 1.42;
+            color: var(--tink);
+        }
+        .card:nth-child(5n+1) { --tint: var(--violet-tint); --edge: var(--violet-edge); --tink: var(--violet-ink); --tone: var(--violet); }
+        .card:nth-child(5n+2) { --tint: var(--azure-tint); --edge: var(--azure-edge); --tink: var(--azure-ink); --tone: var(--azure); }
+        .card:nth-child(5n+3) { --tint: var(--indigo-tint); --edge: var(--indigo-edge); --tink: var(--indigo-ink); --tone: var(--indigo); }
+        .card:nth-child(5n+4) { --tint: var(--orchid-tint); --edge: var(--orchid-edge); --tink: var(--orchid-ink); --tone: var(--orchid); }
+        .card:nth-child(5n+5) { --tint: var(--rose-tint); --edge: var(--rose-edge); --tink: var(--rose-ink); --tone: var(--rose); }
+        .card strong { color: inherit; }
+        .cards.faq .card { font-size: inherit; }
+
+        .rows { display: flex; flex-direction: column; gap: clamp(7px, 1vw, 12px); }
+        .row { display: flex; align-items: flex-start; gap: 14px; }
+        .row .num {
+            flex-shrink: 0; width: 34px; height: 34px; border-radius: 9999px;
+            display: flex; align-items: center; justify-content: center;
+            background: var(--tone); color: #fff; font-weight: 800; font-size: 16px;
+        }
+        .row .card { flex: 1; font-size: clamp(13px, 1.5vw, 19px); padding-block: clamp(7px, 1vw, 12px); }
+
+        .faq-q { font-weight: 800; font-size: 1.02em; color: var(--tink); margin-bottom: 6px; }
+        .faq-a { font-size: 0.92em; color: var(--ink); opacity: 0.88; }
+
+        /* Tables */
+        .table-wrap { border: 1.5px solid var(--edge); border-radius: 14px; overflow: auto; background: #fff; }
+        table { width: 100%; border-collapse: collapse; font-size: clamp(12px, 1.55vw, 19px); text-align: start; }
+        th { background: var(--tone); color: #fff; padding: 9px 14px; font-weight: 800; text-align: start; border: none; }
+        td { padding: 8px 14px; border-bottom: 1px solid var(--edge); vertical-align: top; }
+        tbody tr:nth-child(even) td { background: var(--tint); }
+        tbody tr:last-child td { border-bottom: none; }
+        td:first-child { font-weight: 800; color: var(--tink); }
+
+        /* Poster slides: title + CTA */
+        .slide.title, .slide.cta {
+            background: var(--poster);
+            color: #fff;
+            position: relative;
             overflow: hidden;
-            animation: fadeIn 0.5s ease-in;
         }
-
-        .slide.active {
-            display: flex;
+        .slide.title::before, .slide.cta::before {
+            content: ""; position: absolute; top: -180px; inset-inline-end: -120px; width: 560px; height: 560px; border-radius: 9999px;
+            background: radial-gradient(circle, rgba(251,191,36,0.5) 0%, rgba(251,191,36,0) 68%);
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .slide.title > *, .slide.cta > * { position: relative; }
+        .slide.title .logo { width: 56px; height: 56px; margin-bottom: 22px; filter: brightness(0) invert(1); }
+        .slide.title h1 {
+            font-size: clamp(30px, 4.6vw, 64px); font-weight: 800; line-height: 1.08; letter-spacing: -0.02em;
+            color: #fff; text-shadow: 0 4px 24px rgba(0,0,0,0.35); margin-bottom: 18px; max-width: 18em;
         }
-
-        .slide h1 {
-            font-size: clamp(32px, 4vw, 48px);
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #1c1b1f;
-            line-height: 1.2;
-        }
-
-        .slide h2 {
-            font-size: clamp(26px, 3vw, 38px);
-            font-weight: 700;
-            margin-bottom: 16px;
-            color: #1c1b1f;
-        }
-
-        .slide p {
-            font-size: clamp(16px, 1.8vw, 20px);
-            margin-bottom: 10px;
-            color: #49454f;
-            line-height: 1.5;
-        }
-
-        .slide.title {
-            background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%);
-        }
-
-        .slide.title .logo {
-            width: 56px;
-            height: 56px;
-            margin-bottom: 20px;
-        }
-
-        .slide.title p {
-            font-size: clamp(16px, 1.8vw, 22px);
-            color: #6750a4;
-            font-weight: 500;
-            margin-top: 12px;
-        }
-
+        .slide.title p { color: #fff; font-size: clamp(14px, 1.7vw, 22px); font-weight: 700; max-width: 40em; opacity: 0.95; }
+        .slide.title .link { margin-top: 26px; font-size: clamp(14px, 1.5vw, 20px); }
         .slide.title a {
-            color: #6750a4;
-            text-decoration: none;
-            border-bottom: 2px solid #6750a4;
-            transition: all 0.2s;
+            color: #3B0764; background: var(--gold); text-decoration: none; font-weight: 800;
+            padding: 8px 18px; border-radius: 9999px; display: inline-block;
         }
-
-        .slide.title a:hover {
-            color: #7d5260;
-            border-bottom-color: #7d5260;
-        }
-
-        .slide ul, .slide ol {
-            text-align: start;
-            margin: 12px auto;
-            max-width: 640px;
-        }
-
-        .slide ul li, .slide ol li {
-            font-size: clamp(14px, 1.5vw, 18px);
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-
-        .slide strong {
-            color: #1c1b1f;
-            font-weight: 700;
-        }
-
-        table {
-            margin: 12px auto;
-            border-collapse: collapse;
-            font-size: clamp(12px, 1.3vw, 15px);
-            text-align: start;
-            max-width: 90%;
-        }
-
-        th {
-            background: #6750a4;
-            color: white;
-            padding: 8px 14px;
-            font-weight: 700;
-            border: none;
-        }
-
-        td {
-            padding: 8px 14px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        tr:hover td {
-            background: #f7f2fa;
+        .slide.cta h2 { color: #fff; font-size: clamp(28px, 4vw, 54px); text-shadow: 0 4px 24px rgba(0,0,0,0.35); }
+        .slide.cta p { color: #fff; max-width: 34em; margin-top: 16px; font-weight: 700; }
+        .slide.cta .btn {
+            display: inline-block; margin-top: 28px; padding: 14px 30px; align-self: flex-start;
+            background: var(--gold); color: #3B0764; border-radius: 14px; text-decoration: none;
+            font-size: clamp(16px, 1.8vw, 22px); font-weight: 800; box-shadow: 0 6px 0 #B45309, 0 14px 28px rgba(0,0,0,0.3);
         }
 
         .header {
-            padding: 12px 20px;
-            border-bottom: 1px solid #e0e0e0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: white;
-            flex-shrink: 0;
+            padding: 10px 20px; border-bottom: 1.5px solid var(--violet-edge);
+            display: flex; justify-content: space-between; align-items: center; background: #fff; flex-shrink: 0;
         }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #1c1b1f;
-        }
-
-        .header-left img {
-            width: 28px;
-            height: 28px;
-        }
-
-        .header-links {
-            display: flex;
-            gap: 16px;
-        }
-
-        .header-links a {
-            font-size: 12px;
-            color: #6750a4;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .header-links a:hover {
-            color: #7d5260;
-        }
-
-        .content-area {
-            flex: 1;
-            overflow: hidden;
-        }
+        .header-left { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 800; color: var(--violet-ink); }
+        .header-left img { width: 28px; height: 28px; }
+        .header-links { display: flex; gap: 16px; }
+        .header-links a { font-size: 12px; font-weight: 700; color: var(--violet); text-decoration: none; transition: color 0.2s; }
+        .header-links a:hover { color: var(--rose); }
 
         .controls {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 20px;
-            background: white;
-            border-top: 1px solid #e8e0f0;
-            flex-shrink: 0;
+            display: flex; gap: 12px; align-items: center; justify-content: center; padding: 10px 20px;
+            background: #fff; border-top: 1.5px solid var(--violet-edge); flex-shrink: 0;
         }
-
         button {
-            background: #6750a4;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
-            transition: background 0.2s;
+            background: var(--violet); color: #fff; border: none; padding: 8px 18px; border-radius: 10px;
+            cursor: pointer; font-size: 14px; font-weight: 800; font-family: inherit; transition: background 0.2s;
+            box-shadow: 0 3px 0 var(--violet-ink);
         }
+        button:hover { background: var(--violet-ink); }
+        button:disabled { background: #d4d0dc; box-shadow: none; cursor: not-allowed; }
+        .slide-counter { font-size: 14px; color: var(--muted); font-weight: 800; min-width: 50px; text-align: center; }
 
-        button:hover {
-            background: #7d5260;
-        }
-
-        button:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-        }
-
-        .slide-counter {
-            font-size: 14px;
-            color: #49454f;
-            font-weight: 600;
-            min-width: 50px;
-            text-align: center;
-        }
-
-        @page {
-            size: A4 landscape;
-            margin: 0;
-        }
+        @page { size: A4 landscape; margin: 0; }
 
         @media (max-width: 640px) {
-          .slide { padding: 20px 16px; }
-          .slide h1 { font-size: clamp(20px, 5.5vw, 28px); }
-          .slide h2 { font-size: clamp(16px, 4.5vw, 22px); }
-          .slide p { font-size: 14px; margin-bottom: 10px; }
-          .slide ul { font-size: 1em; margin: 10px 0; }
-          .slide ul li { margin-bottom: 8px; }
-          .slide table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.85em; }
-          .slide table th, .slide table td { padding: 6px 8px; white-space: nowrap; }
-          .header { padding: 10px 12px; }
-          .header-left span { font-size: 12px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-          .header-links { gap: 8px; font-size: 11px; }
-          .subtitle { font-size: 14px; }
-          .logo { height: 24px; margin-bottom: 12px; }
-          .controls { padding: 10px 12px; }
-          .controls button { padding: 6px 12px; font-size: 12px; }
+            .slide { padding: 16px; justify-content: flex-start; }
+            .slide h2 { font-size: clamp(18px, 5vw, 24px); }
+            .cards, .cards.c3 { grid-template-columns: 1fr; }
+            .table-wrap table th, .table-wrap table td { padding: 6px 8px; white-space: nowrap; }
+            .header { padding: 8px 12px; }
+            .header-left span { font-size: 12px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            .header-links { gap: 8px; }
+            .controls { padding: 8px 12px; }
+            .controls button { padding: 6px 12px; font-size: 12px; }
         }
 
         @media print {
+            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
             .slide, .slide * { animation: none !important; opacity: 1 !important; }
-            * {
-                margin: 0;
-                padding: 0;
-            }
-
-            html, body {
-                overflow: visible !important;
-                height: auto !important;
-                width: 100% !important;
-                background: white !important;
-                color: black !important;
-            }
-
-            .header, .controls {
-                display: none !important;
-            }
-
-            .presentation-container {
-                display: block !important;
-                height: auto !important;
-                width: 100%;
-                counter-reset: page-counter;
-            }
-
-            .content-area {
-                display: block !important;
-                overflow: visible !important;
-                height: auto !important;
-                width: 100%;
-            }
-
+            html, body { overflow: visible !important; height: auto !important; width: 100% !important; background: #fff !important; }
+            .header, .controls { display: none !important; }
+            .presentation-container { display: block !important; height: auto !important; width: 100%; counter-reset: page-counter; }
+            .content-area { display: block !important; overflow: visible !important; height: auto !important; width: 100%; }
             .slide {
-                display: flex !important;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                page-break-after: always;
-                break-after: page;
-                width: 100%;
-                height: 210mm;
-                padding: 20mm 24mm;
-                box-sizing: border-box;
-                overflow: visible !important;
-                margin: 0;
-                background: white;
-                color: #1c1b1f;
-                position: relative;
-                counter-increment: page-counter;
+                display: flex !important; page-break-after: always; break-after: page;
+                width: 100%; height: 210mm; padding: 16mm 22mm 24mm; overflow: hidden !important;
+                position: relative; counter-increment: page-counter;
             }
-
-            .slide::before {
-                content: "promptquorum.com/smart-home — " attr(data-lang);
-                position: absolute;
-                bottom: 15mm;
-                left: 24mm;
-                font-size: 9pt;
-                color: #999;
-                text-decoration: none;
-            }
-
             .slide::after {
                 content: counter(page-counter) " / 11";
-                position: absolute;
-                bottom: 15mm;
-                right: 24mm;
-                font-size: 9pt;
-                color: #999;
-                font-weight: 600;
+                position: absolute; bottom: 10mm; inset-inline-end: 22mm; font-size: 9pt; font-weight: 800; color: #999;
             }
-
-            .slide h1, .slide h2, .slide p, .slide li {
-                color: #000 !important;
+            .slide.title::after, .slide.cta::after { color: rgba(255,255,255,0.8); }
+            .slide:not(.title):not(.cta)::before {
+                content: "promptquorum.com/smart-home — " attr(data-lang);
+                position: absolute; bottom: 10mm; inset-inline-start: 22mm; font-size: 9pt; color: #999;
             }
-
-            .slide strong {
-                color: #000 !important;
-                font-weight: 700;
-            }
-
-            .slide li {
-                color: #000 !important;
-            }
-
-            table th {
-                background: #6750a4 !important;
-                color: #fff !important;
-            }
-
-            table td {
-                color: #000 !important;
-                border-color: #ccc !important;
-            }
-
-            .slide:last-child {
-                page-break-after: avoid;
-                break-after: avoid;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .slide {
-                padding: 24px;
-            }
-
-            .slide h1 {
-                font-size: 28px;
-            }
-
-            .slide h2 {
-                font-size: 22px;
-            }
-
-            button {
-                padding: 6px 12px;
-                font-size: 12px;
-            }
+            .slide:last-child { page-break-after: avoid; break-after: avoid; }
         }
     </style>
+
 </head>
 <body>
     <div class="presentation-container">
@@ -561,21 +398,22 @@
       },
     };
 
-    function renderSlide(slide) {
+    function renderSlide(slide, idx) {
+      const head = (h2) => `<div class="slide-head"><span class="chip">${String(idx).padStart(2, '0')}</span><h2>${h2}</h2></div>`;
       let html = '';
       switch (slide.type) {
         case 'title':
-          html = `<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>${slide.h1}</h1><p>${slide.subtitle}</p><p style="margin-top: 40px; font-size: 18px; color: #79747e;"><a href="${slide.link}">${slide.link.replace('https://www.', '')}</a></p>`;
+          html = `<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>${slide.h1}</h1><p>${slide.subtitle}</p><p class="link"><a href="${slide.link}">${slide.link.replace('https://www.', '')}</a></p>`;
           break;
         case 'list':
-          html = `<h2>${slide.h2}</h2>`;
-          if (slide.intro) html += `<p>${slide.intro}</p>`;
-          html += '<ul style="font-size: 1.1em; margin-top: 16px;">';
-          slide.items.forEach(item => { html += `<li>${item}</li>`; });
-          html += '</ul>';
+          html = head(slide.h2);
+          if (slide.intro) html += `<p style="margin-bottom: 14px;">${slide.intro}</p>`;
+          html += `<div class="cards${slide.items.length === 3 ? ' c3' : ''}">`;
+          slide.items.forEach(item => { html += `<div class="card">${item}</div>`; });
+          html += '</div>';
           break;
         case 'table':
-          html = `<h2>${slide.h2}</h2><table><thead><tr>`;
+          html = `${head(slide.h2)}<div class="table-wrap"><table><thead><tr>`;
           slide.columns.forEach(col => { html += `<th>${col}</th>`; });
           html += '</tr></thead><tbody>';
           slide.rows.forEach(row => {
@@ -583,24 +421,25 @@
             slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
             html += '</tr>';
           });
-          html += '</tbody></table>';
+          html += '</tbody></table></div>';
           break;
         case 'numbered':
-          html = `<h2>${slide.h2}</h2><ol style="font-size: 1.05em; margin-top: 16px; text-align: start; max-width: 640px;">`;
-          slide.items.forEach(item => { html += `<li style="margin-bottom: 10px;">${item}</li>`; });
-          html += '</ol>';
+          html = `${head(slide.h2)}<div class="rows">`;
+          slide.items.forEach((item, i) => { html += `<div class="row"><span class="num">${i + 1}</span><div class="card">${item}</div></div>`; });
+          html += '</div>';
           break;
         case 'faq':
-          html = `<h2>${slide.h2}</h2>`;
+          html = `${head(slide.h2)}<div class="cards faq">`;
           slide.faqs.forEach(faq => {
-            html += `<div style="margin-bottom: 18px; text-align: start; max-width: 680px;"><strong>Q: ${faq.q}</strong><p style="margin-top: 6px; font-size: 0.95em;">A: ${faq.a}</p></div>`;
+            html += `<div class="card"><div class="faq-q">${faq.q}</div><div class="faq-a">${faq.a}</div></div>`;
           });
+          html += '</div>';
           break;
         case 'cta':
-          html = `<h2>${slide.h2}</h2><p style="max-width: 600px; margin: 20px auto;">${slide.body}</p><a href="${slide.href}" style="display: inline-block; margin-top: 24px; padding: 14px 28px; background: #6750a4; color: white; border-radius: 8px; text-decoration: none; font-size: 18px; font-weight: 700;">${slide.cta}</a>`;
+          html = `<h2>${slide.h2}</h2><p>${slide.body}</p><a class="btn" href="${slide.href}">${slide.cta}</a>`;
           break;
       }
-      return `<div class="slide ${slide.type}" data-lang="${lang}">${html}</div>`;
+      return `<div class="slide ${slide.type} t${idx % 5}" data-lang="${lang}">${html}</div>`;
     }
 
     const params = new URLSearchParams(window.location.search);
@@ -613,7 +452,7 @@
     document.getElementById('back-link').href = BACK_LINKS[lang] || BACK_LINKS.en;
 
     const container = document.getElementById('slides-container');
-    content.slides.forEach(slide => { container.innerHTML += renderSlide(slide); });
+    content.slides.forEach((slide, i) => { container.innerHTML += renderSlide(slide, i); });
 
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');

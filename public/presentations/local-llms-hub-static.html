@@ -10,107 +10,247 @@
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://www.promptquorum.com/local-llms">
     <style>
+        /* Hub-template design: tokens mirror --hub-* in src/app/globals.css (iframe cannot read site CSS). */
+        @font-face { font-family: 'Plus Jakarta Sans'; font-weight: 700; font-display: swap; src: url('/fonts/PlusJakartaSans-700.woff') format('woff'); }
+        @font-face { font-family: 'Plus Jakarta Sans'; font-weight: 800; font-display: swap; src: url('/fonts/PlusJakartaSans-800.woff') format('woff'); }
+        @font-face { font-family: 'Beiruti'; font-weight: 400; font-display: swap; src: url('/fonts/Beiruti-Regular.ttf') format('truetype'); }
+        @font-face { font-family: 'Beiruti'; font-weight: 700; font-display: swap; src: url('/fonts/Beiruti-Bold.ttf') format('truetype'); }
+
+        :root {
+            --violet: #6750a4; --violet-tint: #eee9f8; --violet-ink: #4f3c8f; --violet-edge: #d9cff0;
+            --azure: #2f6fc4; --azure-tint: #e4eefb; --azure-ink: #1b4f8f; --azure-edge: #c5dbf5;
+            --indigo: #4a5bc4; --indigo-tint: #e8eafb; --indigo-ink: #33408f; --indigo-edge: #cbd0f3;
+            --orchid: #a24bb0; --orchid-tint: #f4e6f7; --orchid-ink: #7a2c85; --orchid-edge: #e8c9ee;
+            --rose: #c13a7a; --rose-tint: #fbe6ef; --rose-ink: #8c1f55; --rose-edge: #f3c7da;
+            --poster: linear-gradient(135deg, #1E0A4A 0%, #4C1D95 38%, #6750A4 62%, #C026D3 100%);
+            --gold: #FBBF24; --gold-soft: #FDE68A;
+            --ink: #1c1b1f; --muted: #49454f;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body { width: 100%; height: 100%; font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f6f4f4; color: #1c1b1f; overflow: hidden; }
-        .presentation-container { width: 100%; height: 100%; display: flex; flex-direction: column; background: white; }
-        .slide { width: 100%; height: 100%; display: none; flex-direction: column; justify-content: center; align-items: center; padding: 32px 48px; text-align: center; overflow: hidden; animation: fadeIn 0.5s ease-in; position: relative; }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #fff;
+            color: var(--ink);
+            overflow: hidden;
+        }
+        html[dir="rtl"], html[dir="rtl"] body, html[dir="rtl"] button { font-family: 'Beiruti', 'Plus Jakarta Sans', sans-serif; }
+
+        .presentation-container { width: 100%; height: 100%; display: flex; flex-direction: column; background: #fff; }
+        .content-area { flex: 1; overflow: hidden; min-height: 0; }
+
+        /* Tone cycle per slide (violet, azure, indigo, orchid, rose), like HUB_CYCLE */
+        .t0 { --tone: var(--violet); --tint: var(--violet-tint); --tink: var(--violet-ink); --edge: var(--violet-edge); }
+        .t1 { --tone: var(--azure); --tint: var(--azure-tint); --tink: var(--azure-ink); --edge: var(--azure-edge); }
+        .t2 { --tone: var(--indigo); --tint: var(--indigo-tint); --tink: var(--indigo-ink); --edge: var(--indigo-edge); }
+        .t3 { --tone: var(--orchid); --tint: var(--orchid-tint); --tink: var(--orchid-ink); --edge: var(--orchid-edge); }
+        .t4 { --tone: var(--rose); --tint: var(--rose-tint); --tink: var(--rose-ink); --edge: var(--rose-edge); }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            padding: clamp(14px, 2.6vw, 36px) clamp(18px, 4.5vw, 64px);
+            text-align: start;
+            overflow: auto;
+            background: #fff;
+            animation: fadeIn 0.4s ease-in;
+        }
         .slide.active { display: flex; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .slide h1 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; margin-bottom: 12px; color: #1c1b1f; line-height: 1.2; }
-        .slide h2 { font-size: clamp(22px, 2.8vw, 36px); font-weight: 700; margin-bottom: 14px; color: #1c1b1f; }
-        .slide p { font-size: clamp(15px, 1.7vw, 19px); margin-bottom: 10px; color: #49454f; line-height: 1.5; }
-        .slide.title { background: linear-gradient(135deg, #f7f2fa 0%, #fffbfe 100%); }
-        .slide.title .logo { width: 56px; height: 56px; margin-bottom: 20px; }
-        .slide.title p { font-size: clamp(15px, 1.7vw, 21px); color: #6750a4; font-weight: 500; margin-top: 12px; }
-        .slide.title a { color: #6750a4; text-decoration: none; border-bottom: 2px solid #6750a4; }
-        .slide ul, .slide ol { text-align: left; margin: 10px auto; max-width: 680px; width: 100%; }
-        .slide ul li, .slide ol li { font-size: clamp(13px, 1.4vw, 17px); margin-bottom: 9px; line-height: 1.45; }
-        .slide strong { color: #1c1b1f; font-weight: 700; }
-        table { margin: 10px auto; border-collapse: collapse; font-size: clamp(11px, 1.2vw, 14px); text-align: left; max-width: 92%; width: 100%; }
-        th { background: #6750a4; color: white; padding: 8px 12px; font-weight: 700; }
-        td { padding: 7px 12px; border-bottom: 1px solid #e0e0e0; }
-        tr:hover td { background: #f7f2fa; }
-        .header { padding: 12px 20px; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center; background: white; flex-shrink: 0; }
-        .header-left { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #1c1b1f; }
+
+        .slide-head { display: flex; align-items: center; gap: 14px; margin-bottom: clamp(10px, 1.8vw, 22px); }
+        .chip {
+            flex-shrink: 0;
+            min-width: 44px; height: 36px; padding: 0 10px;
+            display: inline-flex; align-items: center; justify-content: center;
+            border-radius: 10px;
+            background: var(--tone); color: #fff;
+            font-size: 15px; font-weight: 800; letter-spacing: 0.02em;
+        }
+        .slide h2 { font-size: clamp(22px, 3vw, 38px); font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; color: var(--ink); }
+        .slide p { font-size: clamp(14px, 1.6vw, 20px); color: var(--muted); line-height: 1.5; }
+        .slide strong { font-weight: 800; color: var(--tink); }
+
+        /* Cards */
+        .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(8px, 1.2vw, 16px); }
+        .cards.c3 { grid-template-columns: repeat(3, 1fr); }
+        .cards.faq { font-size: clamp(12px, 1.42vw, 18px); }
+        .card {
+            background: var(--tint);
+            border: 1.5px solid var(--edge);
+            border-radius: 14px;
+            padding: clamp(10px, 1.4vw, 18px) clamp(12px, 1.6vw, 20px);
+            font-size: clamp(14px, 1.75vw, 22px);
+            line-height: 1.42;
+            color: var(--tink);
+        }
+        .card:nth-child(5n+1) { --tint: var(--violet-tint); --edge: var(--violet-edge); --tink: var(--violet-ink); --tone: var(--violet); }
+        .card:nth-child(5n+2) { --tint: var(--azure-tint); --edge: var(--azure-edge); --tink: var(--azure-ink); --tone: var(--azure); }
+        .card:nth-child(5n+3) { --tint: var(--indigo-tint); --edge: var(--indigo-edge); --tink: var(--indigo-ink); --tone: var(--indigo); }
+        .card:nth-child(5n+4) { --tint: var(--orchid-tint); --edge: var(--orchid-edge); --tink: var(--orchid-ink); --tone: var(--orchid); }
+        .card:nth-child(5n+5) { --tint: var(--rose-tint); --edge: var(--rose-edge); --tink: var(--rose-ink); --tone: var(--rose); }
+        .card strong { color: inherit; }
+        .cards.faq .card { font-size: inherit; }
+
+        .rows { display: flex; flex-direction: column; gap: clamp(7px, 1vw, 12px); }
+        .row { display: flex; align-items: flex-start; gap: 14px; }
+        .row .num {
+            flex-shrink: 0; width: 34px; height: 34px; border-radius: 9999px;
+            display: flex; align-items: center; justify-content: center;
+            background: var(--tone); color: #fff; font-weight: 800; font-size: 16px;
+        }
+        .row .card { flex: 1; font-size: clamp(13px, 1.5vw, 19px); padding-block: clamp(7px, 1vw, 12px); }
+
+        .faq-q { font-weight: 800; font-size: 1.02em; color: var(--tink); margin-bottom: 6px; }
+        .faq-a { font-size: 0.92em; color: var(--ink); opacity: 0.88; }
+
+        /* Tables */
+        .table-wrap { border: 1.5px solid var(--edge); border-radius: 14px; overflow: auto; background: #fff; }
+        table { width: 100%; border-collapse: collapse; font-size: clamp(12px, 1.55vw, 19px); text-align: start; }
+        th { background: var(--tone); color: #fff; padding: 9px 14px; font-weight: 800; text-align: start; border: none; }
+        td { padding: 8px 14px; border-bottom: 1px solid var(--edge); vertical-align: top; }
+        tbody tr:nth-child(even) td { background: var(--tint); }
+        tbody tr:last-child td { border-bottom: none; }
+        td:first-child { font-weight: 800; color: var(--tink); }
+
+        /* Poster slides: title + CTA */
+        .slide.title, .slide.cta {
+            background: var(--poster);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide.title::before, .slide.cta::before {
+            content: ""; position: absolute; top: -180px; inset-inline-end: -120px; width: 560px; height: 560px; border-radius: 9999px;
+            background: radial-gradient(circle, rgba(251,191,36,0.5) 0%, rgba(251,191,36,0) 68%);
+        }
+        .slide.title > *, .slide.cta > * { position: relative; }
+        .slide.title .logo { width: 56px; height: 56px; margin-bottom: 22px; filter: brightness(0) invert(1); }
+        .slide.title h1 {
+            font-size: clamp(30px, 4.6vw, 64px); font-weight: 800; line-height: 1.08; letter-spacing: -0.02em;
+            color: #fff; text-shadow: 0 4px 24px rgba(0,0,0,0.35); margin-bottom: 18px; max-width: 18em;
+        }
+        .slide.title p { color: #fff; font-size: clamp(14px, 1.7vw, 22px); font-weight: 700; max-width: 40em; opacity: 0.95; }
+        .slide.title .link { margin-top: 26px; font-size: clamp(14px, 1.5vw, 20px); }
+        .slide.title a {
+            color: #3B0764; background: var(--gold); text-decoration: none; font-weight: 800;
+            padding: 8px 18px; border-radius: 9999px; display: inline-block;
+        }
+        .slide.cta h2 { color: #fff; font-size: clamp(28px, 4vw, 54px); text-shadow: 0 4px 24px rgba(0,0,0,0.35); }
+        .slide.cta p { color: #fff; max-width: 34em; margin-top: 16px; font-weight: 700; }
+        .slide.cta .btn {
+            display: inline-block; margin-top: 28px; padding: 14px 30px; align-self: flex-start;
+            background: var(--gold); color: #3B0764; border-radius: 14px; text-decoration: none;
+            font-size: clamp(16px, 1.8vw, 22px); font-weight: 800; box-shadow: 0 6px 0 #B45309, 0 14px 28px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            padding: 10px 20px; border-bottom: 1.5px solid var(--violet-edge);
+            display: flex; justify-content: space-between; align-items: center; background: #fff; flex-shrink: 0;
+        }
+        .header-left { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 800; color: var(--violet-ink); }
         .header-left img { width: 28px; height: 28px; }
         .header-links { display: flex; gap: 16px; }
-        .header-links a { font-size: 12px; color: #6750a4; text-decoration: none; }
-        .header-links a:hover { color: #7d5260; }
-        .content-area { flex: 1; overflow: hidden; }
-        .controls { display: flex; gap: 12px; align-items: center; justify-content: center; padding: 12px 20px; background: white; border-top: 1px solid #e8e0f0; flex-shrink: 0; }
-        button { background: #6750a4; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 600; transition: background 0.2s; }
-        button:hover { background: #7d5260; }
-        button:disabled { background: #ccc; cursor: not-allowed; }
-        .slide-counter { font-size: 14px; color: #49454f; font-weight: 600; min-width: 50px; text-align: center; }
-        .slide-footer { position: absolute; bottom: 12px; right: 16px; font-size: 10px; color: #bbb; }
-        .slide-footer a { color: #bbb; text-decoration: none; border-bottom: 1px solid #e0e0e0; }
-        .slide-footer a:hover { color: #6750a4; }
-        @page { size: A4 landscape; margin: 0; }
-        
-    @media (max-width: 640px) {
-      .slide { padding: 20px 16px; }
-      .slide h1 { font-size: clamp(20px, 5.5vw, 28px); }
-      .slide h2 { font-size: clamp(16px, 4.5vw, 22px); }
-      .slide p { font-size: 14px; margin-bottom: 10px; }
-      .slide ul { font-size: 1em; margin: 10px 0; }
-      .slide ul li { margin-bottom: 8px; }
-      .slide table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; font-size: 0.85em; }
-      .slide table th, .slide table td { padding: 6px 8px; white-space: nowrap; }
-      .header { padding: 10px 12px; }
-      .header-left span { font-size: 12px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-      .header-links { gap: 8px; font-size: 11px; }
-      .subtitle { font-size: 14px; }
-      .logo { height: 24px; margin-bottom: 12px; }
-      .controls { padding: 10px 12px; }
-      .controls button { padding: 6px 12px; font-size: 12px; }
-    }
+        .header-links a { font-size: 12px; font-weight: 700; color: var(--violet); text-decoration: none; transition: color 0.2s; }
+        .header-links a:hover { color: var(--rose); }
 
-    @media print {
+        .controls {
+            display: flex; gap: 12px; align-items: center; justify-content: center; padding: 10px 20px;
+            background: #fff; border-top: 1.5px solid var(--violet-edge); flex-shrink: 0;
+        }
+        button {
+            background: var(--violet); color: #fff; border: none; padding: 8px 18px; border-radius: 10px;
+            cursor: pointer; font-size: 14px; font-weight: 800; font-family: inherit; transition: background 0.2s;
+            box-shadow: 0 3px 0 var(--violet-ink);
+        }
+        button:hover { background: var(--violet-ink); }
+        button:disabled { background: #d4d0dc; box-shadow: none; cursor: not-allowed; }
+        .btn-secondary { background: var(--indigo); box-shadow: 0 3px 0 var(--indigo-ink); }
+        .btn-secondary:hover { background: var(--indigo-ink); }
+        .slide-counter { font-size: 14px; color: var(--muted); font-weight: 800; min-width: 50px; text-align: center; }
+
+        @page { size: A4 landscape; margin: 0; }
+
+        @media (max-width: 640px) {
+            .slide { padding: 16px; justify-content: flex-start; }
+            .slide h2 { font-size: clamp(18px, 5vw, 24px); }
+            .cards, .cards.c3 { grid-template-columns: 1fr; }
+            .table-wrap table th, .table-wrap table td { padding: 6px 8px; white-space: nowrap; }
+            .header { padding: 8px 12px; }
+            .header-left span { font-size: 12px; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            .header-links { gap: 8px; }
+            .controls { padding: 8px 12px; }
+            .controls button { padding: 6px 12px; font-size: 12px; }
+        }
+
+        @media print {
+            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
             .slide, .slide * { animation: none !important; opacity: 1 !important; }
-            * { margin: 0; padding: 0; }
-            html, body { overflow: visible !important; height: auto !important; width: 100% !important; background: white !important; color: black !important; }
+            html, body { overflow: visible !important; height: auto !important; width: 100% !important; background: #fff !important; }
             .header, .controls { display: none !important; }
             .presentation-container { display: block !important; height: auto !important; width: 100%; counter-reset: page-counter; }
             .content-area { display: block !important; overflow: visible !important; height: auto !important; width: 100%; }
-            .slide { display: flex !important; flex-direction: column; justify-content: center; align-items: center; page-break-after: always; break-after: page; width: 100%; height: 210mm; padding: 20mm 24mm; box-sizing: border-box; overflow: visible !important; margin: 0; background: white; color: #1c1b1f; position: relative; counter-increment: page-counter; }
-            .slide::before { content: "https://www.promptquorum.com/local-llms"; position: absolute; bottom: 12mm; left: 24mm; font-size: 9pt; color: #999; }
-            .slide::after { content: counter(page-counter) " / 14"; position: absolute; bottom: 12mm; right: 24mm; font-size: 9pt; color: #999; font-weight: 600; }
-            .slide h1, .slide h2, .slide p, .slide li { color: #000 !important; }
-            .slide strong { color: #000 !important; font-weight: 700; }
-            table th { background: #6750a4 !important; color: #fff !important; }
-            table td { color: #000 !important; border-color: #ccc !important; }
+            .slide {
+                display: flex !important; page-break-after: always; break-after: page;
+                width: 100%; height: 210mm; padding: 16mm 22mm 24mm; overflow: hidden !important;
+                position: relative; counter-increment: page-counter;
+            }
+            .slide::after {
+                content: counter(page-counter) " / 14";
+                position: absolute; bottom: 10mm; inset-inline-end: 22mm; font-size: 9pt; font-weight: 800; color: #999;
+            }
+            .slide.title::after, .slide.cta::after { color: rgba(255,255,255,0.8); }
+            .slide:not(.title):not(.cta)::before {
+                content: "promptquorum.com/local-llms — " attr(data-lang);
+                position: absolute; bottom: 10mm; inset-inline-start: 22mm; font-size: 9pt; color: #999;
+            }
             .slide:last-child { page-break-after: avoid; break-after: avoid; }
-            .slide-footer { display: none; }
-        }
-        @media (max-width: 768px) {
-            .slide { padding: 20px 24px; }
-            .header { padding: 8px 14px; }
-            .header-left span { display: none; }
         }
     </style>
 </head>
 <body>
-<div class="presentation-container">
-    <div class="header">
-        <div class="header-left">
-            <img src="/logo.svg" alt="PromptQuorum" />
-            <span id="header-title">Local LLMs: Complete Guide 2026</span>
+    <div class="presentation-container">
+        <div class="header">
+            <div class="header-left">
+                <img src="/logo.svg" alt="PromptQuorum" />
+                <span id="header-title">Local LLMs: Complete Guide 2026</span>
+            </div>
+            <div class="header-links">
+                <a id="back-link" href="https://www.promptquorum.com/local-llms">← Back to Hub</a>
+                <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+            </div>
         </div>
-        <div class="header-links">
-            <a id="back-link" href="https://www.promptquorum.com/local-llms">← Back to Hub</a>
-            <a href="https://www.promptquorum.com">PromptQuorum.com</a>
+
+        <div class="content-area" id="slides-container">
+        </div>
+
+        <div class="controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
+            <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
+            <button class="btn-secondary" onclick="window.print()" style="margin-inline-start:8px;">Save as PDF</button>
         </div>
     </div>
-    <div class="content-area" id="slides-container"></div>
-    <div class="controls">
-        <button id="prevBtn" onclick="changeSlide(-1)">← Prev</button>
-        <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">14</span></span>
-        <button id="nextBtn" onclick="changeSlide(1)">Next →</button>
-        <button onclick="window.print()" style="background:#49454f;margin-left:8px;">Save as PDF</button>
-    </div>
-</div>
-<script>
-const CONTENT = {
+
+    <script>
+    const BACK_LINKS = {
+      en: 'https://www.promptquorum.com/local-llms',
+      de: 'https://www.promptquorum.com/de/local-llms',
+      fr: 'https://www.promptquorum.com/fr/local-llms',
+      ja: 'https://www.promptquorum.com/ja/local-llms',
+      zh: 'https://www.promptquorum.com/zh/local-llms',
+      es: 'https://www.promptquorum.com/es/local-llms',
+      pt: 'https://www.promptquorum.com/pt/local-llms'
+    };
+
+    const CONTENT = {
   en: {
     title: 'Local LLMs: Complete Guide 2026',
     slides: [
@@ -246,94 +386,104 @@ const CONTENT = {
   }
 };
 
-function renderSlide(slide) {
-  const articleUrl = 'https://www.promptquorum.com/local-llms?lang=' + lang;
-  const footerLink = '<p class="slide-footer"><a href="' + articleUrl + '">← Hub</a></p>';
-  let html = '';
-  switch (slide.type) {
-    case 'title':
-      html = '<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>' + slide.h1 + '</h1><p>' + slide.subtitle + '</p><p style="margin-top:32px;font-size:16px;color:#79747e;"><a href="' + slide.link + '">promptquorum.com/local-llms</a></p>';
-      break;
-    case 'list':
-      html = '<h2>' + slide.h2 + '</h2>';
-      if (slide.intro) html += '<p>' + slide.intro + '</p>';
-      html += '<ul style="margin-top:16px;">';
-      slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
-      html += '</ul>' + footerLink;
-      break;
-    case 'table':
-      html = '<h2>' + slide.h2 + '</h2><table><tr>';
-      slide.columns.forEach(function(col) { html += '<th>' + col + '</th>'; });
-      html += '</tr>';
-      slide.rows.forEach(function(row) {
-        html += '<tr>';
-        slide.columns.forEach(function(col) { html += '<td>' + row[col] + '</td>'; });
-        html += '</tr>';
-      });
-      html += '</table>' + footerLink;
-      break;
-    case 'comparison':
-      html = '<h2>' + slide.h2 + '</h2><p style="margin-top:32px;font-size:clamp(14px,1.6vw,19px);">' + slide.line1 + '</p><p style="font-size:clamp(14px,1.6vw,19px);margin-top:16px;">' + slide.line2 + '</p><p style="margin-top:32px;font-size:clamp(13px,1.4vw,16px);color:#6750a4;font-style:italic;">' + slide.tip + '</p>' + footerLink;
-      break;
-    case 'numbered':
-      html = '<h2>' + slide.h2 + '</h2><ol style="margin-top:16px;">';
-      slide.items.forEach(function(item) { html += '<li>' + item + '</li>'; });
-      html += '</ol>' + footerLink;
-      break;
-    case 'faq':
-      html = '<h2>' + slide.h2 + '</h2>';
-      slide.faqs.forEach(function(faq) {
-        html += '<div style="margin-bottom:18px;text-align:left;max-width:680px;margin-left:auto;margin-right:auto;"><strong style="font-size:clamp(13px,1.4vw,16px);">Q: ' + faq.q + '</strong><p style="margin-top:6px;font-size:clamp(12px,1.3vw,15px);">A: ' + faq.a + '</p></div>';
-      });
-      html += footerLink;
-      break;
-    case 'cta':
-      html = '<h2>' + slide.h2 + '</h2><p style="margin-top:20px;max-width:540px;">' + slide.body + '</p><a href="' + slide.href + '" style="display:inline-block;margin-top:32px;padding:14px 28px;background:#6750a4;color:white;border-radius:8px;text-decoration:none;font-size:16px;font-weight:700;">' + slide.cta + '</a>' + footerLink;
-      break;
-  }
-  return '<div class="slide ' + slide.type + '">' + html + '</div>';
-}
+    function renderSlide(slide, idx) {
+      const head = (h2) => `<div class="slide-head"><span class="chip">${String(idx).padStart(2, '0')}</span><h2>${h2}</h2></div>`;
+      let html = '';
+      switch (slide.type) {
+        case 'title':
+          html = `<img src="/logo.svg" alt="PromptQuorum" class="logo" /><h1>${slide.h1}</h1><p>${slide.subtitle}</p><p class="link"><a href="${slide.link}">${slide.link.replace('https://www.', '')}</a></p>`;
+          break;
+        case 'list':
+          html = head(slide.h2);
+          if (slide.intro) html += `<p style="margin-bottom: 14px;">${slide.intro}</p>`;
+          html += `<div class="cards${slide.items.length === 3 ? ' c3' : ''}">`;
+          slide.items.forEach(item => { html += `<div class="card">${item}</div>`; });
+          html += '</div>';
+          break;
+        case 'table':
+          html = `${head(slide.h2)}<div class="table-wrap"><table><thead><tr>`;
+          slide.columns.forEach(col => { html += `<th>${col}</th>`; });
+          html += '</tr></thead><tbody>';
+          slide.rows.forEach(row => {
+            html += '<tr>';
+            slide.columns.forEach(col => { html += `<td>${row[col]}</td>`; });
+            html += '</tr>';
+          });
+          html += '</tbody></table></div>';
+          break;
+        case 'numbered':
+          html = `${head(slide.h2)}<div class="rows">`;
+          slide.items.forEach((item, i) => { html += `<div class="row"><span class="num">${i + 1}</span><div class="card">${item}</div></div>`; });
+          html += '</div>';
+          break;
+        case 'faq':
+          html = `${head(slide.h2)}<div class="cards faq">`;
+          slide.faqs.forEach(faq => {
+            html += `<div class="card"><div class="faq-q">${faq.q}</div><div class="faq-a">${faq.a}</div></div>`;
+          });
+          html += '</div>';
+          break;
+        case 'comparison':
+          html = `${head(slide.h2)}<div class="cards"><div class="card">${slide.line1}</div><div class="card">${slide.line2}</div></div><p style="margin-top: 16px; font-style: italic; color: var(--tink);">${slide.tip}</p>`;
+          break;
+        case 'cta':
+          html = `<h2>${slide.h2}</h2><p>${slide.body}</p><a class="btn" href="${slide.href}">${slide.cta}</a>`;
+          break;
+      }
+      return `<div class="slide ${slide.type} t${idx % 5}" data-lang="${lang}">${html}</div>`;
+    }
 
-var params = new URLSearchParams(window.location.search);
-var lang = params.get('lang') || 'en';
-var isPrint = params.get('print') === '1';
-var content = CONTENT[lang] || CONTENT.en;
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang') || 'en';
+    const isPrint = params.get('print') === '1';
+    const content = CONTENT[lang] || CONTENT.en;
 
-document.getElementById('header-title').textContent = content.title;
-document.getElementById('back-link').href = 'https://www.promptquorum.com/local-llms?lang=' + lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.getElementById('header-title').textContent = content.title;
+    document.getElementById('back-link').href = BACK_LINKS[lang] || BACK_LINKS.en;
 
-var container = document.getElementById('slides-container');
-content.slides.forEach(function(slide) { container.innerHTML += renderSlide(slide); });
+    const container = document.getElementById('slides-container');
+    content.slides.forEach((slide, i) => { container.innerHTML += renderSlide(slide, i); });
 
-var currentSlide = 0;
-var slides = document.querySelectorAll('.slide');
-var totalSlides = slides.length;
-document.getElementById('totalSlides').textContent = totalSlides;
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    document.getElementById('totalSlides').textContent = totalSlides;
 
-function showSlide(n) {
-  if (n >= totalSlides) n = totalSlides - 1;
-  if (n < 0) n = 0;
-  currentSlide = n;
-  slides.forEach(function(s) { s.classList.remove('active'); });
-  slides[currentSlide].classList.add('active');
-  document.getElementById('currentSlide').textContent = currentSlide + 1;
-  document.getElementById('prevBtn').disabled = currentSlide === 0;
-  document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
-}
+    function showSlide(n) {
+      if (n >= totalSlides) currentSlide = totalSlides - 1;
+      else if (n < 0) currentSlide = 0;
+      else currentSlide = n;
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[currentSlide].classList.add('active');
+      document.getElementById('currentSlide').textContent = currentSlide + 1;
+      document.getElementById('prevBtn').disabled = currentSlide === 0;
+      document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;
+    }
 
-function changeSlide(n) { showSlide(currentSlide + n); }
+    function changeSlide(n) {
+      currentSlide += n;
+      showSlide(currentSlide);
+    }
 
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'ArrowLeft') changeSlide(-1);
-  if (e.key === 'ArrowRight') changeSlide(1);
-});
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
 
-window.addEventListener('beforeprint', function() { slides.forEach(function(s) { s.style.display = 'flex'; }); });
-window.addEventListener('afterprint', function() { slides.forEach(function(s) { s.style.removeProperty('display'); }); showSlide(currentSlide); });
+    window.addEventListener('beforeprint', () => {
+      slides.forEach(slide => { slide.style.display = 'flex'; });
+    });
+    window.addEventListener('afterprint', () => {
+      slides.forEach(slide => { slide.style.removeProperty('display'); });
+      showSlide(currentSlide);
+    });
 
-if (isPrint) { window.addEventListener('load', function() { window.print(); }); }
+    if (isPrint) {
+      window.addEventListener('load', () => { window.print(); });
+    }
 
-showSlide(0);
-</script>
+    showSlide(0);
+    </script>
 </body>
 </html>
