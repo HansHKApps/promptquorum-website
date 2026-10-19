@@ -695,27 +695,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Galaxy S26 Lokale KI Leitfaden: Galaxy AI & NPU erklär (2026)',
     seoTitle: 'Galaxy S26 Lokale KI: Galaxy AI & NPU Funktionsweise',
     intro: 'Das Galaxy S26, das am 25. Februar 2026 eingeführt wurde, bringt Samsungs Hybrid-Plattform für lokale und Cloud-KI — Galaxy AI — in Ihre Tasche. Im Gegensatz zu Apples Ansatz mit lokaler KI konzentriert sich Samsung auf den Ausgleich zwischen lokaler Verarbeitung und Cloud-Funktionen, sodass Sie entscheiden können, wo Ihre Daten verarbeitet werden. Dieser Leitfaden erklärt, was Galaxy AI tatsächlich lokal auf dem Gerät tut, welche Funktionen Cloud benötigen, und wie Sie Ihre eigenen Open-Weight-LLMs auf der S26-Hardware ausführen.',
-    metaDescription: 'Galaxy S26 Lokale KI erklärt: Welche Galaxy AI-Funktionen lokal laufen, welche Cloud benötigen, und wie Sie Ollama oder MLC Chat auf Exynos 2600/Snapdragon 8 Elite Gen 5 ausführen.',
+    metaDescription: 'Galaxy S26 Lokale KI erklärt: Was die Samsung Personal Data Engine leistet, welche Galaxy-AI-Funktionen die Cloud brauchen und wie Sie lokale LLMs ausführen.',
     publishDate: '2026-06-15',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-19',
     readTime: '10 Min Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Android-Nutzer interessiert an lokaler KI, Galaxy S26 Käufer, Entwickler die mobile LLM Inferenz erkunden',
     primaryTerm: 'Galaxy S26 lokale KI',
-    leadAnswerBlock: '**Galaxy S26 betreibt Galaxy AI — eine Hybrid-Plattform, die lokale Verarbeitung(Anruffilterung, Now Nudge, Betrugserkennung) mit Cloud-Funktionen(Creative Studio Bildgenerierung, Gemini-Integration) mischt. Sie steuern das Datenschutz-Toggle: "Daten nur auf dem Gerät verarbeiten" beschränkt alles auf lokale Verarbeitung. Der Exynos 2600 (2nm GAA, +113% KI vs S25) ist deutlich schneller für lokale Inferenz als Snapdragon 8 Elite Gen 5, was das globale S26/S26+ zur besseren Wahl für lokale KI macht. Für Ihre eigenen LLMs: quantisierte 7B-Modelle bei Q4 (4-Bit) erreichen ~24 tokens/sec auf LPDDR5X 85,6 GB/s.**',
+    leadAnswerBlock: '**Galaxy S26 betreibt Galaxy AI — eine Hybrid-Plattform, die lokale Verarbeitung(Anruffilterung, Now Nudge, Betrugserkennung) mit Cloud-Funktionen(Creative Studio Bildgenerierung, Gemini-Integration) mischt. Sie steuern das Datenschutz-Toggle: "Daten nur auf dem Gerät verarbeiten" beschränkt alles auf lokale Verarbeitung. Die Chips unterscheiden sich nach Modell und Region: Das S26 Ultra nutzt überall den Snapdragon 8 Elite Gen 5 for Galaxy, S26 und S26+ nutzen in Europa, Korea und den meisten anderen Märkten den Exynos 2600 und in den USA, China und Japan den Snapdragon; unabhängige KI-Tests sehen beide ungefähr gleichauf, wählen Sie also nach Modell und Preis, nicht nach Chip. Für Ihre eigenen LLMs: quantisierte 7B-Modelle bei Q4 (4-Bit) erreichen ~24 tokens/sec auf LPDDR5X 85,6 GB/s.**',
     quickAnswerTop: {
       de: {
         question: 'Welche Galaxy-AI-Funktionen des S26 laufen lokal auf dem Gerät, ohne Daten in die Cloud zu senden?',
-        answer: 'Anruffilterung (beantwortet Anrufe lokal), Now Nudge (Kontextvorschläge), Now Brief (persönliche Zusammenfassungen) und Betrugserkennung verarbeiten alle Daten lokal mithilfe der Personal Data Engine (PDE). Sie können "Daten nur auf dem Gerät verarbeiten" in den Galaxy-AI-Einstellungen aktivieren, um Cloudfall-backs für unterstützte Funktionen zu blockieren. Bildgenerierung (Creative Studio) ist ausschließlich Cloud-gebunden und benötigt Samsung-Konto und Netzwerkverbindung.',
+        answer: 'Anruffilterung (beantwortet Anrufe lokal), Now Nudge (Kontextvorschläge), Now Brief (persönliche Zusammenfassungen) und Betrugserkennung verarbeiten alle Daten lokal mithilfe der Personal Data Engine (PDE). Sie können "Daten nur auf dem Gerät verarbeiten" in den Galaxy-AI-Einstellungen aktivieren, um Cloudfall-backs für unterstützte Funktionen zu blockieren. Bildgenerierung (Creative Studio) benötigt eine Netzwerkverbindung und eine Samsung-Konto-Anmeldung.',
         bullets: [
-          'Anruffilterung transkribiert und leitet Spamrufe lokal ohne Cloud-Roundtrip weiter',
-          'Now Nudge liest Bildschirmkontext lokal und zeigt One-Tap-Vorschläge',
-          'Betrugserkennung führt lokales Gemini-Modell aus, um betrügerische Anrufe in Echtzeit zu kennzeichnen',
+          'Anruffilterung erkennt unbekannte Anrufer und fasst deren Anliegen zusammen (Samsung gibt nicht an, wo sie läuft)',
+          'Now Nudge schlägt Galerie-Fotos zum Teilen vor und erfordert eine Samsung-Konto-Anmeldung',
+          'Betrugserkennung kennzeichnet verdächtige Anrufe; Samsung veröffentlicht den Verarbeitungsort nicht',
           'Aktivieren Sie den Schalter "Daten nur auf dem Gerät verarbeiten", um lokale Verarbeitung zu erzwingen',
           'Creative Studio Bildgenerierung ist nur Cloud (erfordert Samsung-Konto + Netzwerk)',
           'Exynos 2600 ist 2,4x schneller bei Stable Diffusion als Exynos 2500'
         ],
-        updatedDate: '2026-06-15'
+        updatedDate: '2026-10-19'
       },
     },
     toc: [
@@ -734,21 +734,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'Galaxy AI ist eine Hybrid-Plattform: Anruffilterung, Now Nudge, Now Brief, Betrugserkennung laufen 100% lokal über die Personal Data Engine (PDE). Creative Studio Bildgenerierung und Gemini-Integration benötigen Cloud-Server.',
-          'Galaxy S26 teilt Hardware nach Region: Exynos 2600 (Europa/Korea/Indien) ist +113% schneller bei KI als Exynos 2500, während Snapdragon 8 Elite Gen 5 (US/China/Japan) +39% NPU vs S25 bietet. Exynos 2600 ist der bessere Chip für lokale LLM-Inferenz.',
+          'Galaxy AI ist eine Hybrid-Plattform: Samsung gibt an, dass die Personal Data Engine (PDE) auf dem Gerät läuft und Kontextfunktionen wie Now Nudge, Now Brief und Anruffilterung antreibt, veröffentlicht aber keine Aufstellung pro Funktion, wo sie verarbeitet wird. Creative Studio erfordert eine Netzwerkverbindung und ein Samsung-Konto; Circle to Search erfordert Internet.',
+          'Der Chip hängt von Modell und Region ab: Das S26 Ultra nutzt immer den Snapdragon 8 Elite Gen 5 for Galaxy; S26 und S26+ nutzen außerhalb der USA, Chinas und Japans den Exynos 2600. Samsung nennt +113% NPU gegenüber dem Exynos 2500 und +39% NPU für das Ultra gegenüber dem S25 Ultra; die MLPerf-Mobile-Ergebnisse verteilen sich auf beide Chips, daher ist keiner ein klarer Sieger für lokale LLMs.',
           'Datenschutz-Toggle: Aktivieren Sie "Daten nur auf dem Gerät verarbeiten" in Einstellungen > Galaxy AI, um Cloud-Fallbacks zu verhindern. Knox Vault bietet Hardwaresicherheit; Knox Matrix synchronisiert Einstellungen zwischen Geräten.',
           'Lokale Bildgenerierung: Samsung partnerte mit Nota AI an EdgeFusion, das 512×512 Bilder in unter einer Sekunde auf Exynos 2600 NPU generiert. Creative Studio (die Benutzer-App) benötigt Netzwerk + Samsung-Konto.',
           'Ihre eigenen LLMs: LPDDR5X-Speicher (85,6 GB/s) begrenzt Decodedurchsatz. Ein 7B-Modell bei Q4 (4-Bit) erreicht ~24 tokens/sec theoretisches Maximum. Verwenden Sie MLC Chat oder Ollama für Android zum Testen.',
-          'Snapdragon-Speicher: S26- und S26 Ultra-Varianten in US/China/Japan nutzen Snapdragon 8 Elite Gen 5 (84,8 GB/s LPDDR5X), etwas langsamer für LLM-Inferenz als Exynos 2600 aufgrund schwächerer NPU, nicht Speicher.'
+          'RAM: S26 und S26+ haben 12 GB, das S26 Ultra 12 GB oder 16 GB. Die Speichergröße bestimmt, welche Modelle passen, die Bandbreite die Dekodiergeschwindigkeit: Ein S26 mit 12 GB reicht für 3B–8B-Modelle bei Q4, das Ultra mit 16 GB bietet Reserven für größere.'
         ]
       },
       'what-is-galaxy-ai': {
         id: 'what-is-galaxy-ai',
         title: 'Was ist Galaxy AI auf dem Galaxy S26?',
         content: [
-          'Galaxy AI ist Samsungs On-Device-Intelligence-Plattform, aufgebaut auf Samsungs eigenem Gauss-Sprachmodell plus Gemini-Integration. Es wurde mit Galaxy S24 eingeführt, auf S25 verbessert und auf S26 erweitert (Start 25. Februar 2026). Es balanciert lokale Verarbeitung für Datenschutz mit Cloud-Funktionen für Leistung.',
+          'Galaxy AI ist Samsungs On-Device-Intelligence-Plattform, die Samsung als On-Device-Galaxy-AI auf Basis der Personal Data Engine beschreibt, mit Gemini und Perplexity als integrierten Agenten; Samsung veröffentlicht nicht, welches Sprachmodell welche lokale Funktion antreibt. Es wurde mit Galaxy S24 eingeführt, auf S25 verbessert und auf S26 erweitert (Start 25. Februar 2026). Es balanciert lokale Verarbeitung für Datenschutz mit Cloud-Funktionen für Leistung.',
           'Die Personal Data Engine (PDE) ist der Kern: Sie lernt aus lokalen Daten — Nachrichten, Kalender, Fotos, Standortverlauf — ohne Samsungs Server zu erreichen, es sei denn, Sie aktivieren Cloud-Funktionen explizit. Knox Vault, eine Hardware-Sicherheit, isoliert sensitive Daten (Anmeldedaten, Gesundheitsdaten, Zahlungsinfo) von sogar Samsungs eigenem OS.',
-          'Galaxy AI-Funktionen teilen sich in drei Kategorien: rein lokal (Anruffilterung), Hybrid mit lokaler Priorität (Now Nudge, Now Brief, Betrugserkennung), und Cloud-abhängig (Creative Studio, Gemini-Agenten, Circle to Search).',
+          'Samsung bestätigt pro Funktion nur zwei Dinge: Creative Studio erfordert eine Netzwerkverbindung und ein Samsung-Konto, Circle to Search erfordert Internet. Für Anruffilterung, Now Nudge, Now Brief und Betrugserkennung nennt Samsung den Verarbeitungsort nicht; die Tabelle unten ist daher eine Arbeitsklassifizierung, keine Samsung-Garantie.',
           'Nutzerkontrolle ist zentral: Ein einzelner Toggle in Galaxy AI-Einstellungen — "Daten nur auf dem Gerät verarbeiten" — blockiert alle Cloud-Fallbacks für unterstützte Funktionen. Das ist nicht nachträglicher Datenschutz; es ist das Standardverhalten, wenn Sie nicht mehr Leistung anfordern.'
         ],
         snippetBlocks: [
@@ -837,44 +837,44 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'npu-comparison',
         title: 'Exynos 2600 vs Snapdragon 8 Elite Gen 5 NPU',
         image: '/images/galaxy-s26-npu-comparison-en.svg',
-        imageCaption: 'Exynos 2600 vs. Snapdragon 8 Elite Gen 5 im Galaxy S26: 2nm GAA vs 3nm FinFET, +113% vs +39% KI-Leistung Gen-über-Gen, 2,4x schnelleres Stable Diffusion, 85,6 GB/s vs 84,8 GB/s LPDDR5X-Speicherbandbreite.',
+        imageCaption: 'Exynos 2600 vs. Snapdragon 8 Elite Gen 5 im Galaxy S26: 2nm GAA vs 3nm FinFET, von Samsung angegebene +113% vs +39% NPU Gen-über-Gen (unterschiedliche Basiswerte), 85,6 GB/s vs 84,8 GB/s LPDDR5X-Speicherbandbreite.',
         columns: ['Metrik', 'Exynos 2600', 'Snapdragon 8 Elite Gen 5', 'Gewinner für Lokale KI?'],
         rows: [
           {
             'Metrik': 'Knoten / Fab',
             'Exynos 2600': '2nm GAA (Samsung SF2)',
             'Snapdragon 8 Elite Gen 5': '3nm FinFET (TSMC)',
-            'Gewinner für Lokale KI?': 'Exynos (kleiner, effizienter)'
+            'Gewinner für Lokale KI?': 'Unbewiesen (Fertigung verschieden)'
           },
           {
             'Metrik': 'KI-Leistung Gen-über-Gen',
             'Exynos 2600': '+113% vs Exynos 2500',
-            'Snapdragon 8 Elite Gen 5': '+39% NPU vs S25',
-            'Gewinner für Lokale KI?': 'Exynos (3x größerer Sprung)'
+            'Snapdragon 8 Elite Gen 5': '+39% NPU vs S25 Ultra (Ultra)',
+            'Gewinner für Lokale KI?': 'Nicht vergleichbar (andere Basis)'
           },
           {
             'Metrik': 'Stable Diffusion Geschwindigkeit',
             'Exynos 2600': '2,4x schneller als Exynos 2500',
-            'Snapdragon 8 Elite Gen 5': 'Keine veröffentlichten SD Benchmarks',
-            'Gewinner für Lokale KI?': 'Exynos (verifiziert; Snapdragon TBD)'
+            'Snapdragon 8 Elite Gen 5': 'Gewinnt den MLPerf-Stable-Diffusion-Test',
+            'Gewinner für Lokale KI?': 'Snapdragon (MLPerf Mobile)'
           },
           {
             'Metrik': 'Verfügbare Regionen/Varianten',
-            'Exynos 2600': 'S26 (global), S26+ (global)',
-            'Snapdragon 8 Elite Gen 5': 'S26 (US/China/Japan), S26 Ultra (alle)',
-            'Gewinner für Lokale KI?': 'Exynos (globale Verfügbarkeit)'
+            'Exynos 2600': 'S26 / S26+ (außer USA, China, Japan)',
+            'Snapdragon 8 Elite Gen 5': 'S26 / S26+ (USA, China, Japan); Ultra (alle)',
+            'Gewinner für Lokale KI?': 'Hängt von Ihrer Region ab'
           },
           {
             'Metrik': 'Speicherbandbreite',
             'Exynos 2600': 'LPDDR5X 85,6 GB/s (typisch)',
             'Snapdragon 8 Elite Gen 5': 'LPDDR5X 84,8 GB/s (typisch)',
-            'Gewinner für Lokale KI?': 'Exynos (leicht höher)'
+            'Gewinner für Lokale KI?': 'Gleichstand (unter 1%)'
           },
           {
             'Metrik': 'Fazit',
-            'Exynos 2600': 'Best für On-Device LLM & Bildgen',
-            'Snapdragon 8 Elite Gen 5': 'Wettbewerbsfähig; EdgeFusion unklar',
-            'Gewinner für Lokale KI?': 'Exynos (wählen S26/S26+ über Ultra)'
+            'Exynos 2600': 'Gewinnt Klassifikation, Erkennung, Sprache',
+            'Snapdragon 8 Elite Gen 5': 'Gewinnt Segmentierung, Super-Res, Stable Diffusion',
+            'Gewinner für Lokale KI?': 'Ungefähr gleichauf; nach Modell/Preis wählen'
           }
         ]
       },
@@ -887,14 +887,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die Speicherbandbreite des Galaxy S26 ist der begrenzende Faktor. LPDDR5X bei 85,6 GB/s bedeutet Token-Generierung (die "Dekodier-Phase" der LLM-Inferenz) maxes rund memory_bandwidth / model_size_in_bytes tokens pro Sekunde aus.',
           'Mathematik: Ein 7B-Parameter-Modell in FP16 (16-Bit Floats) wiegt ~14 GB. Bei 85,6 GB/s ÷ 14 GB ≈ 6 tokens/sec theoretisches Maximum. Aber Quantisierung ändert das dramatisch.',
           'Bei Q4 (4-Bit, 2 Parameter pro Byte gespeichert), das gleiche 7B-Modell schrumpft auf ~3,5 GB. Durchsatz skaliert: 85,6 GB/s ÷ 3,5 GB ≈ 24 tokens/sec theoretisches Max. Real-world ist niedriger wegen Rechnung-Overhead, aber realistisch sind 8–15 tokens/sec auf Galaxy S26 für quantisiertes 7B.',
-          'Beste Tools: MLC Chat (cross-platform, community models) und Ollama für Android. Beide unterstützen quantisierte Modelle. Beginnen Sie mit 7B-Modellen (Mistral 7B, Llama 2 7B, Phi 2.7B) bei Q4 oder Q5 Quantisierung.'
+          'Beste Tools: MLC Chat (plattformübergreifend, Community-Modelle), Google AI Edge Gallery und Ollama in Termux. Alle unterstützen quantisierte Modelle. Beginnen Sie mit einem 3B–8B-Modell (Qwen3 4B, Gemma 3 4B, Llama 3.2 3B, Phi-4-mini) bei Q4 oder Q5; ein 7B–8B-Modell passt in 12 GB RAM, lässt aber weniger Platz für Android selbst.'
         ],
         items: [
           'Q4 (4-Bit) Quantisierung für 7B-Modelle verwenden; Q3 passt größere aber mit Qualitätsverlust',
           'Vermeiden Sie FP16 Voll-Präzisions-Modelle; zu groß für praktischen Durchsatz',
-          'Beste Open-Weight-Modelle für Mobile: Mistral 7B, Phi 2.7B, TinyLlama 1.1B',
+          'Beste Open-Weight-Modelle für Mobile: Qwen3 4B, Gemma 3 4B, Llama 3.2 3B, Phi-4-mini',
           'Erwartete Geschwindigkeit: 8–15 tokens/sec für 7B Q4; 3–5 für unquantisiert 7B',
-          'MLC Chat oder Ollama verwenden; beide auto-optimieren für Exynos/Snapdragon',
+          'MLC Chat, Google AI Edge Gallery oder Ollama in Termux verwenden; NPU-Unterstützung je App prüfen, da viele nur auf CPU/GPU laufen',
           'Offline testen: wenn Ollama das Modell cached, funktioniert Inferenz völlig ohne Internet'
         ]
       },
@@ -904,9 +904,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Knox Vault ist Samsungs Hardware-Sicherheitsmodul: ein separater Prozessor, isoliert vom Haupt-CPU und Android OS. Sensitive Daten — Zahlungsmethoden, Fingerabdrücke, Gesundheitsdaten, Passwörter — lebt in Knox Vault und wird niemals Apps oder Samsungs Servern ohne explizite Nutzer-Aktion ausgesetzt.',
           'Personal Data Engine (PDE) lernt lokal: On-Device Machine Learning-Modelle trainieren auf Ihrem Nutzungsmuster, Kalender, Nachrichten, Fotos, und Kontakten. Standardmäßig erreicht diese Daten Samsungs Cloud niemals. Sie steuern die Grenze mit dem "Daten nur auf dem Gerät verarbeiten"-Toggle in Galaxy AI Einstellungen.',
-          'Cloud-Funktionen sind opt-in: Creative Studio, Gemini-Agenten, und Circle to Search benötigen Ihre Erlaubnis und senden Daten zu Samsung und Google Servern. Jede Funktion hat ihre eigene Datenschutzrichtlinie. Das Deaktivieren dieser Funktionen verhindert jede Cloud-Übertragung.',
-          'Cross-Device Datenschutz: Knox Matrix synchronisiert Sicherheits-Einstellungen und verschlüsselte Daten über Galaxy-Geräte mit End-zu-End-Verschlüsselung. Samsung agiert als Relay, nicht als Dekryptionslayer.',
-          'Standard-Annahme: wenn Sie nicht explizit eine Cloud-Funktion aktiviert haben, bleiben Ihre Daten lokal. Das ist das Gegenteil von Apple Intelligence (immer-an Cloud PCC) und dem Gegenteil von Google Gemini (engere Cloud-Integration standardmäßig).'
+          'Cloud-Funktionen benötigen eine Netzwerkverbindung: Creative Studio erfordert eine Samsung-Konto-Anmeldung, Circle to Search erfordert Internet. Jede Funktion hat ihre eigene Datenschutzrichtlinie; lesen Sie diese vor der Nutzung.',
+          'Cross-Device Datenschutz: Knox Matrix synchronisiert Sicherheits-Einstellungen und verschlüsselte Daten über Galaxy-Geräte mit End-zu-End-Verschlüsselung. Samsung beschreibt Knox Enhanced Encrypted Protection (KEEP) als Verschlüsselung der Daten jeder App.',
+          'Prüfen statt annehmen: Samsung veröffentlicht keine Aufstellung pro Funktion, was lokal läuft. Prüfen Sie daher die Einstellung "Daten nur auf dem Gerät verarbeiten" und den Datenschutzhinweis jeder Funktion auf Ihrem Telefon.'
         ],
         items: [
           'Knox Vault = Hardware-isolierte Aufbewahrung für Geheimnisse; separater Prozessor, separates OS, nie zu Cloud gesynct',
@@ -914,7 +914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '"Daten nur auf dem Gerät verarbeiten"-Toggle = blockiert alle Cloud-Fallbacks für unterstützte Funktionen',
           'Creative Studio = Cloud-abhängig; das Deaktivieren verhindert Bildgen-Daten-Übertragung',
           'Gemini-Agenten = Google-gefüttert; nutzt Ihr Google-Konto für mehrstufige Aufgaben',
-          'Knox Matrix = Cross-Device-Sync mit End-zu-End-Verschlüsselung; Samsung sieht verschlüsselte Blobs, kein Klartext'
+          'Knox Matrix = geräteübergreifende Sicherheits-Synchronisierung; Verschlüsselungsmodell siehe Samsungs Knox-Dokumentation'
         ]
       },
       faqSection: {
@@ -926,12 +926,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Hybrid. Anruffilterung, Now Nudge, Now Brief, und Betrugserkennung laufen vollständig lokal über Personal Data Engine. Bildgenerierung (Creative Studio), Gemini-Agenten und Circle to Search benötigen Cloud-Server. Aktivieren Sie "Daten nur auf dem Gerät verarbeiten" in Einstellungen, um lokale Verarbeitung für unterstützte Funktionen zu erzwingen.'
           },
           {
+            q: 'Was ist die Personal Data Engine auf dem Galaxy S26?',
+            a: 'Samsung beschreibt die Personal Data Engine (PDE) als die Komponente auf dem Gerät, die kontextbezogene, personalisierte Galaxy-AI-Erlebnisse ermöglicht. Laut Samsungs Launch-Material läuft die PDE auf dem Gerät, Samsung veröffentlicht jedoch weder ihre Architektur noch das zugrunde liegende Modell noch eine Liste der Funktionen, die von ihr abhängen.'
+          },
+          {
+            q: 'Ist die Nutzung von KI auf dem Galaxy S26 sicher?',
+            a: 'Sicherer, wenn die Verarbeitung auf dem Telefon bleibt, aber nicht durchgängig. Creative Studio erfordert eine Netzwerkverbindung und eine Samsung-Konto-Anmeldung, Circle to Search erfordert Internet; dabei verlassen Daten das Gerät. Die Einstellung "Daten nur auf dem Gerät verarbeiten" beschränkt Galaxy AI auf lokale Verarbeitung; Anleitungen zu früheren One-UI-Versionen beschreiben sie als Einstellung, die Sie selbst aktivieren, und berichten, dass cloudbasierte Fotobearbeitung dann nicht mehr funktioniert. Der Menüort variiert je nach Firmware, prüfen Sie ihn also auf Ihrem Telefon und lesen Sie Samsungs Datenschutzhinweis.'
+          },
+          {
+            q: 'Reicht das Basis-Galaxy-S26 für On-Device-KI oder brauche ich das Ultra?',
+            a: 'Für die Galaxy-AI-Funktionen reicht das Basis-S26: Samsung gibt allen drei Modellen dieselbe Galaxy-AI-Suite. Beim Ausführen eigener Modelle zählt vor allem der RAM: S26 und S26+ haben 12 GB, das Ultra 12 GB oder 16 GB. Ein Telefon mit 12 GB schafft 3B–8B-Modelle bei Q4; das Ultra mit 16 GB lohnt sich nur für größere Modelle. Unabhängige KI-Tests sehen den Exynos 2600 und den Snapdragon 8 Elite Gen 5 ungefähr gleichauf.'
+          },
+          {
             q: 'Was ist der Unterschied zwischen Exynos 2600 und Snapdragon 8 Elite Gen 5?',
-            a: 'Exynos 2600 (2nm, Samsung Foundry) ist +113% schneller bei KI als vorheriger Exynos 2500. Snapdragon 8 Elite Gen 5 (3nm, TSMC) ist +39% schneller bei NPU als Snapdragon 8 Gen 1 (S25). Exynos 2600 ist der klare Gewinner für On-Device LLM-Inferenz; 2,4x schneller bei Stable Diffusion.'
+            a: 'Für den Exynos 2600 (2nm, Samsung Foundry) gibt Samsung +113% bei KI gegenüber dem Exynos 2500 an. Der Snapdragon 8 Elite Gen 5 for Galaxy bringt dem S26 Ultra +39% NPU gegenüber dem S25 Ultra (Samsung-Angabe). In den MLPerf-Mobile-Ergebnissen gewinnt der Exynos bei Klassifikation, Erkennung und Sprache, der Snapdragon bei Segmentierung, Super-Resolution und Stable Diffusion; keiner ist also ein klarer Sieger für lokale KI.'
           },
           {
             q: 'Kann ich ein großes Sprachmodell auf Galaxy S26 ausführen?',
-            a: 'Ja, aber mit Limits. LPDDR5X-Bandbreite (85,6 GB/s) capped Dekodedurchsatz. Ein quantisiertes 7B-Modell bei Q4 erreicht ~24 tokens/sec theoretisches Maximum (~8–15 realistisch). Verwenden Sie MLC Chat oder Ollama für Android. Größere Modelle (13B, 70B) sind unpraktisch wegen Speicher und Bandbreite-Constraints.'
+            a: 'Ja, aber mit Limits. LPDDR5X-Bandbreite (85,6 GB/s) capped Dekodedurchsatz. Ein quantisiertes 7B-Modell bei Q4 erreicht ~24 tokens/sec theoretisches Maximum (~8–15 realistisch). Verwenden Sie MLC Chat, Google AI Edge Gallery oder Ollama in Termux. Größere Modelle (13B, 70B) sind unpraktisch wegen Speicher und Bandbreite-Constraints.'
           },
           {
             q: 'Funktioniert Galaxy AI offline?',
@@ -943,11 +955,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welche Daten sammelt Samsung über Galaxy AI?',
-            a: 'Standardmäßig keine. Personal Data Engine bleibt lokal. Wenn Sie Cloud-Funktionen — Creative Studio, Gemini-Agenten — aktivieren, werden Daten zu Samsung (für Galaxy AI) oder Google (für Gemini) gesendet. Deaktivieren Sie diese Funktionen, um Übertragung zu verhindern. Prüfen Sie Einstellungen > Datenschutz > Galaxy AI für eine Übersicht.'
+            a: 'Samsung gibt an, dass die Personal Data Engine auf dem Gerät läuft. Cloud-Funktionen wie Creative Studio (Netzwerk und Samsung-Konto erforderlich) und Circle to Search (Internet erforderlich) senden Daten. Wenn Sie Cloud-Funktionen — Creative Studio, Gemini-Agenten — aktivieren, werden Daten zu Samsung (für Galaxy AI) oder Google (für Gemini) gesendet. Deaktivieren Sie diese Funktionen, um Übertragung zu verhindern. Prüfen Sie Einstellungen > Datenschutz > Galaxy AI für eine Übersicht.'
           },
           {
             q: 'Schützt Knox Vault meine Daten vor Samsung?',
-            a: 'Ja. Knox Vault ist ein separater Hardware-Prozessor, isoliert vom Haupt-OS. Sensitive Daten (Biometrie, Zahlungsinfo, Gesundheit) in Knox Vault können nicht von Android-Apps oder Samsung-Software ohne explizites Unlock zugegriffen werden. Sogar Samsung-Ingenieure können Knox Vault-Daten nicht ohne physischen Gerät-Zugriff und Privileg-Eskalation extrahieren.'
+            a: 'Ja. Knox Vault ist ein separater Hardware-Prozessor, isoliert vom Haupt-OS. Sensitive Daten (Biometrie, Zahlungsinfo, Gesundheit) in Knox Vault können nicht von Android-Apps oder Samsung-Software ohne explizites Unlock zugegriffen werden. Samsung beschreibt Knox Vault als physische Schicht, die sensible Daten in eigener sicherer Hardware isoliert; kein Sicherheitssystem ist absolut.'
           },
           {
             q: 'Kann ich Galaxy AI Cloud-Funktionen komplett deaktivieren?',
@@ -955,19 +967,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Galaxy S26 besser als iPhone um lokale KI auszuführen?',
-            a: 'Für das Ausführen Ihrer eigenen quantisierten LLMs, ja. Exynos 2600 ist schneller bei Stable Diffusion als Apples A18 Pro NPU, und Android unterstützt mehr Open-Weight-Modell-Tools (Ollama, MLC Chat). Aber Apples On-Device-First-Philosophie und kryptographisch auditable PCC machen es stärker für Datenschutz, wenn Sie Apples Infrastruktur über Samsungs vertrauen.'
+            a: 'Für das Ausführen Ihrer eigenen quantisierten LLMs, ja. Android unterstützt mehr Open-Weight-Modell-Tools (MLC Chat, Google AI Edge Gallery, Ollama in Termux). Aber Apples On-Device-First-Philosophie und kryptographisch auditable PCC machen es stärker für Datenschutz, wenn Sie Apples Infrastruktur über Samsungs vertrauen.'
           },
           {
             q: 'Wie oft werden Galaxy AI Funktionen aktualisiert?',
-            a: 'Galaxy AI Funktionen rollen via One UI-Updates aus (normalerweise monatliche Sicherheits-Patches + quartals-Feature-Updates). Samsung hat sich zu 7 Jahren OS-Updates und 7 Jahren Sicherheits-Patches für Galaxy S26 verpflichtet, daher erwarten Sie neue Galaxy AI-Funktionen und Leistungs-Verbesserungen bis 2033.'
-          },
-          {
-            q: 'Datenschutz für Unternehmen: Wie schlüsselt Samsung meine E-Mails auf?',
-            a: 'Knox Vault speichert E-Mail-Anmeldedaten in einem hardware-isolierten Bereich. Samsung liest Ihre E-Mails nicht; sein Server agiert nur als Relay. Alle Decodierungen geschehen lokal auf dem Gerät nach Authentifizierung. Für Compliance-Anforderungen (DSGVO, etc.) siehe Knox White Paper.'
-          },
-          {
-            q: 'Kann ich E2E-Verschlüsslung mit Knox Matrix einrichten?',
-            a: 'Ja. Knox Matrix synchronisiert alle Daten unter End-zu-End-Verschlüsslung. Samsung nie Schlüssel hat. Für zusätzliche Sicherheit wird Biometrie-Unlock empfohlen (Fingerabdruck oder Gesicht + Knox Vault PIN).'
+            a: 'Galaxy AI Funktionen rollen via One UI-Updates aus (normalerweise monatliche Sicherheits-Patches + quartals-Feature-Updates). Samsung nennt sieben Jahre Sicherheitsupdates für das Galaxy S26; die Zusage für OS-Updates finden Sie auf Samsungs Support-Seiten.'
           }
         ]
       },
@@ -990,10 +994,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'Galaxy S26 Lokale KI Leitfaden: Galaxy AI & NPU erklär (2026)',
-      'description': 'Galaxy S26 Lokale KI erklärt: Welche Galaxy AI-Funktionen lokal laufen, welche Cloud benötigen, und wie Sie Ollama oder MLC Chat auf Exynos 2600/Snapdragon 8 Elite Gen 5 ausführen.',
+      'description': 'Galaxy S26 Lokale KI erklärt: Was die Samsung Personal Data Engine leistet, welche Galaxy-AI-Funktionen die Cloud brauchen und wie Sie lokale LLMs ausführen.',
       'image': 'https://www.promptquorum.com/og-images/galaxy-s26-local-ai-on-device-2026.png',
       'datePublished': '2026-06-15',
-      'dateModified': '2026-06-15',
+      'dateModified': '2026-10-19',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'de',
@@ -1005,6 +1009,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       'inLanguage': 'de',
       'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Was ist die Personal Data Engine auf dem Galaxy S26?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Samsung beschreibt die Personal Data Engine (PDE) als die Komponente auf dem Gerät, die kontextbezogene, personalisierte Galaxy-AI-Erlebnisse ermöglicht. Laut Samsungs Launch-Material läuft die PDE auf dem Gerät, Samsung veröffentlicht jedoch weder ihre Architektur noch das zugrunde liegende Modell noch eine Liste der Funktionen, die von ihr abhängen.'
+          }
+        },
         {
           '@type': 'Question',
           'name': 'Ist Galaxy AI vollständig lokal oder nutzt es Cloud?',
