@@ -1,5 +1,5 @@
 // Power Local LLM — Local AI Workstation Build Guide: 3 Budget Tiers
-// Slug: local-ai-workstation-build-guide-2026
+// Slug: local-ai-workstation-build-guide
 // Affiliate buying guide. Outbound component links use rel="nofollow" (no affiliate
 // tags joined yet) and a neutral third-party-link notice. EN block first;
 // DE/FR/JA/ZH render as "Coming Soon" until translated.
@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-en.webp',
@@ -481,6 +481,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           {
+            q: "Is a 1000 W power supply overkill for a single-GPU build?",
+            a: "Not for an RTX 5090, which is rated at 575 W and can spike above that for milliseconds, so NVIDIA's reference guidance is a 1000 W unit. For the budget and mid builds in this guide it is overkill: 650 W and 850 W (80+ Gold) cover the RTX 4060 Ti 16 GB and RTX 4070 Ti Super 16 GB with headroom. Prefer an ATX 3.1 unit with a native 12V-2x6 connector over simply buying more watts.",
+          },
+          {
             q: 'How much does it cost to build a PC for local AI in 2026?',
             a: 'A budget local-AI PC costs roughly $1,100, a mid build roughly $2,400, and an enthusiast 70B build roughly $5,000. These are July 2026 snapshots — the 2026 memory-chip shortage pushed GPU prices 1.5-2x above MSRP, and since the GPU is the largest line in every build, it raised each total above what the same parts cost a year ago.',
           },
@@ -531,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-de.webp',
@@ -996,6 +1000,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           {
+            q: "Ist ein 1000-W-Netzteil für einen Build mit einer GPU übertrieben?",
+            a: "Nicht für eine RTX 5090: Sie ist mit 575 W spezifiziert und kann kurzzeitig darüber hinaus spitzen, weshalb NVIDIA in der Referenzangabe ein 1000-W-Netzteil nennt. Für den Budget- und den Mittelklasse-Build dieses Leitfadens wäre es übertrieben: 650 W und 850 W (80+ Gold) bieten für RTX 4060 Ti 16 GB und RTX 4070 Ti Super 16 GB ausreichend Reserve. Ein ATX-3.1-Netzteil mit nativem 12V-2x6-Anschluss ist wichtiger als zusätzliche Watt.",
+          },
+          {
             q: 'Was kostet es 2026, einen PC für lokale KI zu bauen?',
             a: 'Ein Budget-Lokal-KI-PC kostet rund 1.250 €, ein Mittelklasse-Build rund 2.500 € und ein Enthusiasten-70B-Build rund 5.200 €. Das sind Momentaufnahmen vom Juli 2026 — die Speicherchip-Knappheit 2026 hat die GPU-Preise auf das 1,5- bis 2-Fache der UVP getrieben, und da die GPU die größte Position in jedem Build ist, hat sie jede Summe gegenüber demselben Teilesatz vor einem Jahr angehoben.',
           },
@@ -1053,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-fr.webp',
@@ -1518,6 +1526,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquemment posées',
         faqs: [
           {
+            q: "Une alimentation de 1000 W est-elle excessive pour une configuration à un seul GPU ?",
+            a: "Pas pour une RTX 5090, donnée pour 575 W et capable de pics brefs au-delà ; NVIDIA indique donc une alimentation de 1000 W pour sa référence. Pour les configurations économique et intermédiaire de ce guide, c'est excessif : 650 W et 850 W (80+ Gold) couvrent la RTX 4060 Ti 16 Go et la RTX 4070 Ti Super 16 Go avec de la marge. Privilégiez un modèle ATX 3.1 avec connecteur 12V-2x6 natif plutôt que davantage de watts.",
+          },
+          {
             q: 'Combien coûte le montage d\'un PC pour IA locale en 2026 ?',
             a: 'Un PC budget pour IA locale coûte environ 1 250 €, une configuration intermédiaire environ 2 550 € et une configuration enthousiaste 70B environ 5 300 €. Ce sont des instantanés de juillet 2026 — la pénurie de puces mémoire de 2026 a poussé les prix des GPU à 1,5-2 fois au-dessus du tarif conseillé et, comme le GPU est la plus grande ligne de chaque configuration, elle a relevé chaque total par rapport aux mêmes pièces il y a un an.',
           },
@@ -1567,7 +1579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-ja.webp',
@@ -2032,6 +2044,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           {
+            q: "GPU1枚の構成に1000W電源は過剰ですか?",
+            a: "RTX 5090の場合は過剰ではありません。定格は575Wで、瞬間的にそれを超えるピークも生じるため、NVIDIAの基準仕様は1000W電源です。本ガイドのエントリー構成とミドル構成では過剰で、650Wと850W(80+ Gold)でRTX 4060 Ti 16GBとRTX 4070 Ti Super 16GBに十分な余裕があります。ワット数を増やすより、12V-2x6コネクタをネイティブ搭載したATX 3.1電源を選んでください。",
+          },
+          {
             q: '2026年にローカルAI用のPCを組む費用はいくらですか？',
             a: 'エントリーのローカルAI PCはおよそ¥185,000、ミドル構成はおよそ¥400,000、ハイエンドの70B構成はおよそ¥850,000です。これらは2026年7月時点のスナップショットです——2026年のメモリチップ不足によりGPU価格は希望小売価格の1.5〜2倍に上昇し、GPUはすべての構成で最大の項目であるため、1年前の同じパーツより各合計を引き上げました。',
           },
@@ -2081,7 +2097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-zh.webp',
@@ -2546,6 +2562,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           {
+            q: "单GPU配置用1000W电源是否过剩?",
+            a: "对RTX 5090并不过剩:它的额定功耗为575W,还可能出现短时峰值,因此NVIDIA的参考规格建议1000W电源。对本指南中的入门和中端配置则属过剩:650W和850W(80+ Gold)已为RTX 4060 Ti 16GB和RTX 4070 Ti Super 16GB留出充足余量。与其盲目加大瓦数,不如选择带原生12V-2x6接口的ATX 3.1电源。",
+          },
+          {
             q: '2026 年装一台本地 AI PC 要花多少钱？',
             a: '一台入门本地 AI PC 约 1,100 美元,中端配置约 2,400 美元,发烧级 70B 配置约 5,000 美元。这些是 2026 年 7 月的快照——2026 年的存储芯片短缺把 GPU 价格推高至建议零售价的 1.5-2 倍,而由于 GPU 是每套配置中最大的一项,它把每套总价都抬到了高于一年前同样部件的水平。',
           },
@@ -2595,7 +2615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-es.webp',
@@ -3060,6 +3080,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           {
+            q: "¿Es excesiva una fuente de 1000 W para una configuración con una sola GPU?",
+            a: "No para una RTX 5090, cuya potencia nominal es de 575 W y puede tener picos breves por encima; por eso la referencia de NVIDIA es una fuente de 1000 W. Para las configuraciones económica y media de esta guía sí lo sería: 650 W y 850 W (80+ Gold) cubren la RTX 4060 Ti 16 GB y la RTX 4070 Ti Super 16 GB con margen. Es mejor una fuente ATX 3.1 con conector 12V-2x6 nativo que simplemente más vatios.",
+          },
+          {
             q: '¿Cuánto cuesta armar una PC para IA local en 2026?',
             a: 'Con precios minoristas de España (Amazon.es, PcComponentes), una PC para IA local económica cuesta aproximadamente €1.250, una configuración media aproximadamente €2.500 y una configuración entusiasta 70B aproximadamente €5.200. Estas son instantáneas de julio de 2026 — la escasez de chips de memoria de 2026 empujó los precios de GPU a 1,5-2 veces por encima del precio de lista, y dado que la GPU es la línea más grande en cada configuración, elevó cada total respecto a los mismos componentes de hace un año. En Latinoamérica, los precios pueden variar según impuestos locales.',
           },
@@ -3110,10 +3134,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Guía para armar una PC con IA local 2026: 3 niveles de presupuesto',
       description: 'Tres configuraciones completas de PC para IA local en 2026: económica 7B-13B, media 14B-33B y entusiasta 70B. Listas de componentes exactas, tokens por segundo esperados y costos totales de julio de 2026.',
-      url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-workstation-build-guide-2026',
+      url: 'https://www.promptquorum.com/es/power-local-llm/local-ai-workstation-build-guide',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-01',
+      dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3122,7 +3146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-pt.webp',
@@ -3587,6 +3611,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           {
+            q: "Uma fonte de 1000 W é exagero para uma montagem com uma única GPU?",
+            a: "Não para uma RTX 5090, que tem potência nominal de 575 W e pode ter picos breves acima disso; por isso a referência da NVIDIA é uma fonte de 1000 W. Para as montagens básica e intermediária deste guia seria exagero: 650 W e 850 W (80+ Gold) atendem a RTX 4060 Ti 16 GB e a RTX 4070 Ti Super 16 GB com folga. Prefira uma fonte ATX 3.1 com conector 12V-2x6 nativo a simplesmente comprar mais watts.",
+          },
+          {
             q: 'Quanto custa montar um PC para IA local em 2026?',
             a: 'Com preços de varejo no Brasil (KaBuM!, Pichau, Mercado Livre), um PC para IA local econômico custa aproximadamente R$ 11.500, uma configuração intermediária aproximadamente R$ 15.000 e uma configuração entusiasta 70B aproximadamente R$ 32.000. Essas são capturas de julho de 2026 — a escassez de chips de memória de 2026 empurrou os preços de GPU para 1,5–2 vezes acima do preço de lista, e como a GPU é a linha mais cara em cada configuração, elevou cada total em relação aos mesmos componentes do ano passado. Os preços no Brasil podem variar bastante devido a impostos de importação.',
           },
@@ -3637,10 +3665,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Guia para montar um PC com IA local 2026: 3 níveis de orçamento',
       description: 'Três configurações completas de PC para IA local em 2026: econômica 7B–13B, intermediária 14B–33B e entusiasta 70B. Listas de componentes exatas, tokens por segundo esperados e custos totais de maio de 2026.',
-      url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-workstation-build-guide-2026',
+      url: 'https://www.promptquorum.com/pt/power-local-llm/local-ai-workstation-build-guide',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-01',
+      dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3650,7 +3678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-ar.webp',
@@ -4115,6 +4143,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           {
+            q: "هل مزود طاقة 1000 واط مبالغ فيه لتجميعة بوحدة معالجة رسومات واحدة؟",
+            a: "ليس لبطاقة RTX 5090 التي تبلغ قدرتها المقدّرة 575 واط وقد تشهد ذروات لحظية أعلى منها، ولذلك يوصي مرجع NVIDIA بمزود طاقة 1000 واط. أما للتجميعتين الاقتصادية والمتوسطة في هذا الدليل فهو مبالغ فيه: يكفي 650 واط و850 واط (80+ Gold) لبطاقتي RTX 4060 Ti 16 GB وRTX 4070 Ti Super 16 GB مع هامش جيد. فضّل مزود طاقة ATX 3.1 بموصل 12V-2x6 أصلي على مجرد زيادة الواطات.",
+          },
+          {
             q: 'كم يكلّف بناء حاسوب للذكاء الاصطناعي المحلي في 2026؟',
             a: 'حاسوب اقتصادي للذكاء الاصطناعي المحلي يكلّف حوالي 1100 دولار، وإعداد متوسط حوالي 2400 دولار، وإعداد متحمس بـ70B حوالي 5000 دولار. هذه لقطات من يوليو 2026 — شحّ رقائق الذاكرة دفع أسعار GPU إلى 1.5–2 ضعف السعر الاسمي، ورفع كل إجمالي عن نفس المكوّنات العام الماضي.',
           },
@@ -4165,10 +4197,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'دليل بناء محطة عمل الذكاء الاصطناعي المحلي 2026: 3 مستويات ميزانية',
       description: 'ثلاثة إعدادات كاملة لحاسوب الذكاء الاصطناعي المحلي في 2026: اقتصادي 7B–13B ومتوسط 14B–33B ومتحمس 70B. قوائم مكوّنات دقيقة وتوكن/ثانية متوقع وتكاليف إجمالية من يوليو 2026.',
-      url: 'https://www.promptquorum.com/ar/power-local-llm/local-ai-workstation-build-guide-2026',
+      url: 'https://www.promptquorum.com/ar/power-local-llm/local-ai-workstation-build-guide',
       inLanguage: 'ar',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-01',
+      dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -4177,7 +4209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     heroImage: '/images/local-ai-workstation-build-guide-2026-overview-hero-ko.webp',
@@ -4642,6 +4674,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           {
+            q: "GPU 1개 구성에 1000W 파워서플라이는 과한가요?",
+            a: "RTX 5090에는 과하지 않습니다. 정격 575W이며 순간적으로 그 이상 치솟을 수 있어 NVIDIA 레퍼런스는 1000W 파워를 제시합니다. 이 가이드의 보급형·중급형 구성에는 과합니다. 650W와 850W(80+ Gold)로 RTX 4060 Ti 16GB와 RTX 4070 Ti Super 16GB에 충분한 여유가 있습니다. 와트 수를 늘리기보다 12V-2x6 커넥터를 기본 지원하는 ATX 3.1 제품을 고르세요.",
+          },
+          {
             q: '2026년에 로컬 AI PC를 구성하는 데 얼마나 비용이 듭니까?',
             a: '보급형 로컬 AI PC는 약 $1,100, 중급형 구성은 약 $2,400, 고급형 70B 구성은 약 $5,000입니다. 이는 2026년 7월 기준 스냅샷입니다. 2026년 메모리 칩 공급 부족으로 GPU 가격이 정가의 1.5~2배까지 상승했으며, GPU가 각 구성에서 가장 큰 항목이기 때문에 전년도 동일한 부품 대비 각 총액이 높아졌습니다.',
           },
@@ -4692,10 +4728,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '로컬 AI 워크스테이션 구성 가이드 2026: 예산별 3단계',
       description: '2026년 로컬 AI PC 세 가지 완전 구성: 보급형 7B–13B, 중급형 14B–33B, 고급형 70B. 정확한 부품 목록, 예상 tokens/s, 2026년 7월 총 비용.',
-      url: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-workstation-build-guide-2026',
+      url: 'https://www.promptquorum.com/ko/power-local-llm/local-ai-workstation-build-guide',
       inLanguage: 'ko',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-01',
+      dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -4706,7 +4742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: '[www.promptquorum.com/ko/power-local-llm](https://www.promptquorum.com/ko/power-local-llm)' },
-        { '@type': 'ListItem', position: 3, name: '로컬 AI 워크스테이션 구성 가이드 2026', item: '[www.promptquorum.com/ko/power-local-llm/local-ai-workstation-build-guide-2026](https://www.promptquorum.com/ko/power-local-llm/local-ai-workstation-build-guide-2026)' },
+        { '@type': 'ListItem', position: 3, name: '로컬 AI 워크스테이션 구성 가이드 2026', item: '[www.promptquorum.com/ko/power-local-llm/local-ai-workstation-build-guide](https://www.promptquorum.com/ko/power-local-llm/local-ai-workstation-build-guide)' },
       ],
     },
   },

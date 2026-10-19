@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[vLLM Explained](/power-local-llm/vllm-explained) -- a single-subject deep dive on vLLM specifically: PagedAttention, continuous batching, quantization support, and how to install and run it.',
           '[Choose a GPU for on-prem inference hardware](/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- consumer and workstation GPU tiers if you are sizing hardware to buy rather than rent.',
-          '[Build a local AI workstation](/power-local-llm/local-ai-workstation-build-guide-2026) -- part lists and costs for a self-hosted inference machine.',
+          '[Build a local AI workstation](/power-local-llm/local-ai-workstation-build-guide) -- part lists and costs for a self-hosted inference machine.',
           '[llama.cpp vs Ollama vs vLLM compared](/local-llms/llamacpp-vs-ollama-vs-vllm) -- the underlying engine differences referenced throughout this guide.',
           '[Local LLM hardware guide](/local-llms/local-llm-hardware-guide) -- VRAM and GPU sizing fundamentals behind the fleet-sizing math above.',
           '[Rent GPUs instead of buying a fleet](/power-local-llm/cloud-gpu-rental-guide-2026) -- RunPod, Lambda Labs, and Vast.ai compared for testing this stack before committing to owned hardware.',
@@ -615,7 +615,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[vLLM erklärt](/de/power-local-llm/vllm-explained) -- ein Deep-Dive speziell zu vLLM: PagedAttention, Continuous Batching, Quantisierungsunterstützung und Installation.',
           '[GPU für On-Prem-Inferenz-Hardware wählen](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- Consumer- und Workstation-GPU-Stufen, falls Sie Hardware kaufen statt mieten wollen.',
-          '[Lokale KI-Workstation bauen](/de/power-local-llm/local-ai-workstation-build-guide-2026) -- Teilelisten und Kosten für eine selbst gehostete Inferenz-Maschine.',
+          '[Lokale KI-Workstation bauen](/de/power-local-llm/local-ai-workstation-build-guide) -- Teilelisten und Kosten für eine selbst gehostete Inferenz-Maschine.',
           '[llama.cpp vs Ollama vs vLLM im Vergleich](/de/local-llms/llamacpp-vs-ollama-vs-vllm) -- die Engine-Unterschiede, auf die dieser Leitfaden durchgehend verweist.',
           '[Hardware-Leitfaden für lokale LLMs](/de/local-llms/local-llm-hardware-guide) -- VRAM- und GPU-Grundlagen hinter der Flottendimensionierung oben.',
           '[GPUs mieten statt eine Flotte zu kaufen](/de/power-local-llm/cloud-gpu-rental-guide-2026) -- RunPod, Lambda Labs und Vast.ai im Vergleich, um diesen Stack vor dem Hardwarekauf zu testen.',
@@ -920,7 +920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Choisir un GPU pour du matériel d\'inférence sur site](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- niveaux de GPU grand public et workstation si vous dimensionnez du matériel à acheter plutôt qu\'à louer.',
-          '[Construire une station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide-2026) -- listes de composants et coûts pour une machine d\'inférence auto-hébergée.',
+          '[Construire une station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide) -- listes de composants et coûts pour une machine d\'inférence auto-hébergée.',
           '[llama.cpp vs Ollama vs vLLM comparés](/fr/local-llms/llamacpp-vs-ollama-vs-vllm) -- les différences de moteur référencées tout au long de ce guide.',
           '[Guide matériel pour LLM locaux](/fr/local-llms/local-llm-hardware-guide) -- fondamentaux VRAM et GPU derrière le calcul de dimensionnement de parc ci-dessus.',
           '[Louer des GPU plutôt qu\'acheter un parc](/fr/power-local-llm/cloud-gpu-rental-guide-2026) -- RunPod, Lambda Labs et Vast.ai comparés pour tester ce stack avant d\'investir dans du matériel.',
@@ -1225,7 +1225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Elegir una GPU para hardware de inferencia on-prem](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- niveles de GPU de consumo y workstation si va a comprar hardware en lugar de alquilarlo.',
-          '[Construir una estación de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide-2026) -- listas de piezas y costes para una máquina de inferencia autoalojada.',
+          '[Construir una estación de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide) -- listas de piezas y costes para una máquina de inferencia autoalojada.',
           '[llama.cpp vs Ollama vs vLLM comparados](/es/local-llms/llamacpp-vs-ollama-vs-vllm) -- las diferencias de motor referenciadas a lo largo de esta guía.',
           '[Guía de hardware para LLM locales](/es/local-llms/local-llm-hardware-guide) -- fundamentos de VRAM y GPU detrás del cálculo de dimensionamiento de flota anterior.',
           '[Alquilar GPU en lugar de comprar una flota](/es/power-local-llm/cloud-gpu-rental-guide-2026) -- RunPod, Lambda Labs y Vast.ai comparados para probar este stack antes de invertir en hardware propio.',
@@ -1530,7 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Escolher uma GPU para hardware de inferência on-prem](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- níveis de GPU de consumo e workstation se você for comprar hardware em vez de alugar.',
-          '[Montar uma workstation de IA local](/pt/power-local-llm/local-ai-workstation-build-guide-2026) -- listas de peças e custos para uma máquina de inferência auto-hospedada.',
+          '[Montar uma workstation de IA local](/pt/power-local-llm/local-ai-workstation-build-guide) -- listas de peças e custos para uma máquina de inferência auto-hospedada.',
           '[llama.cpp vs Ollama vs vLLM comparados](/pt/local-llms/llamacpp-vs-ollama-vs-vllm) -- as diferenças de engine referenciadas ao longo deste guia.',
           '[Guia de hardware para LLMs locais](/pt/local-llms/local-llm-hardware-guide) -- fundamentos de VRAM e GPU por trás do cálculo de dimensionamento de frota acima.',
           '[Alugar GPUs em vez de comprar uma frota](/pt/power-local-llm/cloud-gpu-rental-guide-2026) -- RunPod, Lambda Labs e Vast.ai comparados para testar esse stack antes de investir em hardware próprio.',
@@ -1835,7 +1835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[オンプレミス推論ハードウェア向けGPUの選び方](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- レンタルではなく購入する場合のコンシューマー/ワークステーションGPU階層。',
-          '[ローカルAIワークステーションの構築](/ja/power-local-llm/local-ai-workstation-build-guide-2026) -- 自己ホスト型推論マシンのパーツリストと費用。',
+          '[ローカルAIワークステーションの構築](/ja/power-local-llm/local-ai-workstation-build-guide) -- 自己ホスト型推論マシンのパーツリストと費用。',
           '[llama.cpp対Ollama対vLLM比較](/ja/local-llms/llamacpp-vs-ollama-vs-vllm) -- 本ガイド全体で参照するエンジンの違い。',
           '[ローカルLLMハードウェアガイド](/ja/local-llms/local-llm-hardware-guide) -- 上記のフリート見積もり計算の根拠となるVRAM・GPUの基礎知識。',
           '[フリート購入の前にGPUをレンタルする](/ja/power-local-llm/cloud-gpu-rental-guide-2026) -- 自社ハードウェアへの投資前にこのスタックを検証するためのRunPod、Lambda Labs、Vast.aiの比較。',
@@ -2140,7 +2140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[为本地推理硬件选择GPU](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) —— 若您打算购买而非租用硬件,这里有消费级和工作站级GPU的分层选择。',
-          '[搭建本地AI工作站](/zh/power-local-llm/local-ai-workstation-build-guide-2026) —— 自建推理主机的配件清单和成本。',
+          '[搭建本地AI工作站](/zh/power-local-llm/local-ai-workstation-build-guide) —— 自建推理主机的配件清单和成本。',
           '[llama.cpp对比Ollama对比vLLM](/zh/local-llms/llamacpp-vs-ollama-vs-vllm) —— 本指南全文引用的引擎差异详解。',
           '[本地LLM硬件指南](/zh/local-llms/local-llm-hardware-guide) —— 上文集群规模计算背后的显存和GPU基础知识。',
           '[租用GPU而非购买整个集群](/zh/power-local-llm/cloud-gpu-rental-guide-2026) —— 在投资自有硬件前,对比RunPod、Lambda Labs和Vast.ai以测试此技术栈。',
@@ -2445,7 +2445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[اختيار وحدة معالجة رسومية لأجهزة استدلال محلية](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- مستويات وحدات المعالجة الرسومية الاستهلاكية ومحطات العمل إذا كنت تخطط لشراء الأجهزة بدلاً من استئجارها.',
-          '[بناء محطة عمل ذكاء اصطناعي محلية](/ar/power-local-llm/local-ai-workstation-build-guide-2026) -- قوائم القطع والتكاليف لجهاز استدلال مستضاف ذاتياً.',
+          '[بناء محطة عمل ذكاء اصطناعي محلية](/ar/power-local-llm/local-ai-workstation-build-guide) -- قوائم القطع والتكاليف لجهاز استدلال مستضاف ذاتياً.',
           '[مقارنة llama.cpp وOllama وvLLM](/ar/local-llms/llamacpp-vs-ollama-vs-vllm) -- فروق المحركات المُشار إليها في هذا الدليل.',
           '[دليل أجهزة نماذج اللغة المحلية](/ar/local-llms/local-llm-hardware-guide) -- أساسيات VRAM ووحدات المعالجة الرسومية وراء حساب حجم الأسطول أعلاه.',
           '[استئجار وحدات معالجة رسومية بدلاً من شراء أسطول](/ar/power-local-llm/cloud-gpu-rental-guide-2026) -- مقارنة RunPod وLambda Labs وVast.ai لاختبار هذه الحزمة قبل الاستثمار في أجهزة خاصة.',
@@ -2750,7 +2750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 글',
         items: [
           '[온프레미스 추론 하드웨어용 GPU 선택하기](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- 임대가 아닌 구매를 고려한다면 참고할 소비자용/워크스테이션급 GPU 등급.',
-          '[로컬 AI 워크스테이션 구축하기](/ko/power-local-llm/local-ai-workstation-build-guide-2026) -- 자체 호스팅 추론 머신을 위한 부품 목록과 비용.',
+          '[로컬 AI 워크스테이션 구축하기](/ko/power-local-llm/local-ai-workstation-build-guide) -- 자체 호스팅 추론 머신을 위한 부품 목록과 비용.',
           '[llama.cpp vs Ollama vs vLLM 비교](/ko/local-llms/llamacpp-vs-ollama-vs-vllm) -- 본 가이드 전반에서 참조하는 엔진 차이.',
           '[로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide) -- 위 플릿 규모 산정 계산의 근거가 되는 VRAM 및 GPU 기본 지식.',
           '[플릿을 구매하는 대신 GPU 임대하기](/ko/power-local-llm/cloud-gpu-rental-guide-2026) -- 자체 하드웨어에 투자하기 전 이 스택을 테스트하기 위한 RunPod, Lambda Labs, Vast.ai 비교.',

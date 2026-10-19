@@ -642,6 +642,17 @@ const nextConfig: NextConfig = {
         destination: '/:lang/directory',
         permanent: true,
       },
+      // Year removed from slug (2026-10-19): no year or month in URLs.
+      {
+        source: '/power-local-llm/local-ai-workstation-build-guide-2026',
+        destination: '/power-local-llm/local-ai-workstation-build-guide',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/local-ai-workstation-build-guide-2026',
+        destination: '/:lang/power-local-llm/local-ai-workstation-build-guide',
+        permanent: true,
+      },
       {
         source: '/power-local-llm/locally-ai-review-2026',
         destination: '/power-local-llm/locally-ai-review',

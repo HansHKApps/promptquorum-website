@@ -19850,7 +19850,7 @@
     "excerpt": "Three complete local-AI PC builds for 2026: budget 7B-13B, mid 14B-33B, and enthusiast 70B tiers. Exact parts lists, expected tokens/sec, and July 2026 total costs.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-07-01",
-    "url": "/power-local-llm/local-ai-workstation-build-guide-2026",
+    "url": "/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
@@ -19859,7 +19859,7 @@
     "excerpt": "Lokale KI-Workstation bauen 2026: CPU, GPU, RAM und Speicher für LLM-Inferenz. Komplette Build-Anleitungen nach Budget, von Einsteiger bis RTX 5090.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-07-01",
-    "url": "/de/power-local-llm/local-ai-workstation-build-guide-2026",
+    "url": "/de/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
@@ -19868,7 +19868,7 @@
     "excerpt": "Construire une station IA locale 2026 : CPU, GPU, RAM et stockage pour l'inférence LLM. Guides de build complets par budget, du débutant à la RTX 5090.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-07-01",
-    "url": "/fr/power-local-llm/local-ai-workstation-build-guide-2026",
+    "url": "/fr/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
@@ -19877,7 +19877,7 @@
     "excerpt": "2026年ローカルAIワークステーション構築：LLM推論向けのCPU、GPU、RAM、ストレージ。予算別の完全ビルドガイド。入門機からRTX 5090搭載ハイエンドまで解説。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-07-01",
-    "url": "/ja/power-local-llm/local-ai-workstation-build-guide-2026",
+    "url": "/ja/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
@@ -19886,7 +19886,7 @@
     "excerpt": "2026年本地AI工作站搭建：LLM推理所需的CPU、GPU、内存和存储。按预算的完整搭建指南，从入门级到搭载RTX 5090的高端配置，全面解析硬件选择。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-07-01",
-    "url": "/zh/power-local-llm/local-ai-workstation-build-guide-2026",
+    "url": "/zh/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
@@ -19895,7 +19895,7 @@
     "excerpt": "Tres PCs para IA local en 2026: económica 7B–13B, media 14B–33B y entusiasta 70B. Listas de componentes exactas, tokens/s esperados y costos totales.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-07-01",
-    "url": "/es/power-local-llm/local-ai-workstation-build-guide-2026",
+    "url": "/es/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
@@ -19904,7 +19904,7 @@
     "excerpt": "Três PCs para IA local em 2026: econômica 7B–13B, intermediária 14B–33B e entusiasta 70B. Listas de componentes exatas, tokens/s esperados e custos totais.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-07-01",
-    "url": "/pt/power-local-llm/local-ai-workstation-build-guide-2026",
+    "url": "/pt/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
@@ -19913,7 +19913,7 @@
     "excerpt": "3 قوائم مكوّنات كاملة لحاسوب LLM محلي 2026: مستوى اقتصادي لنماذج 7B–13B ومتوسط لـ 14B–33B ومتحمس لـ 70B. أداء توكن/ثانية وتكاليف يوليو 2026.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-07-01",
-    "url": "/ar/power-local-llm/local-ai-workstation-build-guide-2026",
+    "url": "/ar/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {
@@ -19922,7 +19922,7 @@
     "excerpt": "2026년 로컬 AI PC 3가지 구성: 보급형 7B–13B, 중급형 14B–33B, 고급형 70B. 정확한 부품 목록, 예상 tokens/s, 총 비용을 확인하십시오.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-07-01",
-    "url": "/ko/power-local-llm/local-ai-workstation-build-guide-2026",
+    "url": "/ko/power-local-llm/local-ai-workstation-build-guide",
     "cluster": "power-local-llm"
   },
   {

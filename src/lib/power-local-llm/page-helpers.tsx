@@ -763,7 +763,7 @@ const HUB_THEMES: Array<{
       'rtx-3090-local-llm-buy-or-rent',
       'best-gpu-buying-guide-local-llm-2026',
       'best-mac-for-local-ai-2026',
-      'local-ai-workstation-build-guide-2026',
+      'local-ai-workstation-build-guide',
       'best-vpn-ai-privacy-local-llm-2026',
       'best-nas-storage-local-ai-models-2026',
       'best-ai-coding-tools-comparison-2026',

@@ -352,7 +352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Best GPU for Local LLMs 2026](/power-local-llm/best-gpu-buying-guide-local-llm-2026) -- GPU buying guide for every workstation tier',
-          '[Local AI Workstation Build Guide 2026](/power-local-llm/local-ai-workstation-build-guide-2026) -- need 48 GB+ VRAM or multiple concurrent 70B users? Our advanced dual-GPU build guide covers that',
+          '[Local AI Workstation Build Guide 2026](/power-local-llm/local-ai-workstation-build-guide) -- need 48 GB+ VRAM or multiple concurrent 70B users? Our advanced dual-GPU build guide covers that',
           '[Best Local AI App for Low-End PCs](/power-local-llm/best-local-ai-app-low-end-pc) -- software options if you are not ready for a full workstation',
           '[Best Mac for Local AI 2026](/power-local-llm/best-mac-for-local-ai-2026) -- Apple Silicon alternative to a GPU workstation',
           '[Best Laptops for Running Local LLMs: Buying Guide 2026](/power-local-llm/best-laptops-local-llm-2026) -- portable options before committing to a workstation build',
