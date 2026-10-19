@@ -13,11 +13,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     title: 'Best Local Models for Tool Calling in 2026: Benchmarks & Comparison',
-    seoTitle: 'Best Local Tool-Calling Models 2026: Real MCP Benchmarks',
+    seoTitle: 'Best Small Local Models for Tool Calling 2026: MCP Tests',
     intro:
       'Tool-call reliability is the single biggest determinant of whether a local agent finishes a task or stalls. The harness you wrap the model in matters less — same Cline, same MCP servers, same prompt: the model emits well-formed tool calls or it does not. This guide benchmarks the five reliable tool-callers in 2026 (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) on real MCP workflows, names the failure modes, and tells you which model to pick per VRAM budget.',
     metaDescription:
-      'Compare Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, and Llama 3.3 70B for tool-calling reliability. Real MCP benchmarks, not leaderboard scores.',
+      'Best small local LLM for tool calling? Gemma 4 27B runs in 16 GB VRAM at ~95% well-formed calls. Compared with Qwen3, GLM-4.7, Llama 3.3 on real MCP.',
     heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-en.webp',
     twitterDescription:
       '5 local models benchmarked on real MCP tool calls: Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder, Llama 3.3. Reliability rates, VRAM, and failure modes named.',
@@ -370,6 +370,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Do newer releases like Qwen3.6 or Llama 4 change these picks?',
             a: 'Not yet for tool calling. Qwen3.6 (27B dense, plus a 35B-A3B MoE) is the newer Qwen generation and the natural candidate to trial first on a 24 GB rig, but it has not been through this MCP test round, and Qwen3.6 has not shipped a dedicated coder variant to replace Qwen3-Coder 30B. Llama 4 Scout and Maverick are large MoE models — Scout wants ~55 GB VRAM at Q4, a different hardware class than the 24 GB rigs this guide targets, not a drop-in upgrade over Llama 3.3 70B. The five tested models above remain the recommendations until they go through the same benchmark; treat newer releases as candidates to evaluate on your own workload, not as automatic upgrades.',
           },
+          {
+            q: 'What is the best small local model for tool calling?',
+            a: 'Gemma 4 27B is the best small pick that stays reliable: ~95% well-formed calls at ~16 GB VRAM (Q4_K_M), so it fits 24 GB of VRAM or 16 GB of unified memory. Qwen3-Coder 30B (~18 GB) is the pick for code-shaped tools. Below that, Llama 3.2 3B (4–8 GB VRAM) is fine for single-tool triage and classification but not for multi-step plans, and models under 7B emit malformed calls in our tests. On a 16 GB machine, start with Gemma 4 27B at Q4_K_M and move to a larger model only if chained calls fail.',
+          },
+          {
+            q: 'How do I benchmark tool-calling accuracy for a local LLM?',
+            a: 'Hold the harness constant and vary only the model. Pick the MCP servers or tools you actually use, write 30–50 task prompts per tool (single calls, multi-step plans, parallel calls), run each prompt 3 times, and grade four signals per call: well-formed against the schema, correct tool selected, correct arguments, successful execution. Report ranges, not falsely sharp numbers. Our own run is 600 graded calls per model. Public suites such as BFCL give directional signal but do not match MCP workloads, so use them to shortlist and your own prompts to decide.',
+          },
         ],
       },
       relatedReading: {
@@ -393,11 +401,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     title: 'Beste lokale Modelle für Tool Calling in 2026: Benchmarks und Vergleich',
-    seoTitle: 'Beste lokale Tool-Calling-Modelle 2026: MCP-Benchmarks',
+    seoTitle: 'Beste kleine lokale Modelle für Tool Calling 2026: MCP-Tests',
     intro:
       'Die Zuverlässigkeit von Tool Calls ist der wichtigste Faktor dafür, ob ein lokaler Agent eine Aufgabe abschließt oder stehen bleibt. Das Harness, das das Modell umhüllt, spielt weniger Rolle — bei gleichen Cline-, MCP-Servern und gleichem Prompt: Das Modell gibt korrekt geformte Tool Calls ab oder nicht. Dieser Leitfaden benchmarkt die fünf zuverlässigen Tool-Caller im Jahr 2026 (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) auf echten MCP-Workflows, benennt die Fehlermuster und sagt Ihnen, welches Modell Sie je nach VRAM-Budget wählen sollten.',
     metaDescription:
-      'Vergleichen Sie Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder und Llama 3.3 für Zuverlässigkeit von Tool Calls. Echte MCP-Benchmarks, keine Leaderboard-Scores.',
+      'Bestes kleines lokales LLM für Tool Calling? Gemma 4 27B: 16 GB VRAM, ca. 95 % wohlgeformte Aufrufe. Verglichen mit Qwen3, GLM-4.7, Llama 3.3 auf echtem MCP.',
     heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-de.webp',
     twitterDescription:
       '5 lokale Modelle auf echten MCP Tool Calls getestet: Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder, Llama 3.3. Zuverlässigkeitsraten, VRAM-Budgets und Fehlermuster.',
@@ -776,6 +784,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Ist dieses Setup für deutsche Mittelstand-Unternehmen geeignet?',
             a: 'Ja, besonders für kleine bis mittlere Unternehmen (SMEs) in DACH. Gemma 4 27B auf einem Apple M-series MacBook Pro (64 GB) oder einer RTX 4090 bietet vollständige Kontrolle über die Modell-Inferenz ohne Cloud-Abhängigkeiten — das entspricht deutschen Unternehmensstandards für IT-Kontrolle und Datenschutz. Viele DACH-Mittelstände bevorzugen lokale Systeme aus Gründen der Kontrolle, Compliance und niedrigeren Betriebskosten. Q4_K_M-Quantisierung bietet auch ein gutes Preis-Leistungs-Verhältnis für die Mittelstandskalkulation — ein einzelnes MacBook oder ein RTX-Rig ersetzt Tausende in API-Gebühren.',
           },
+          {
+            q: 'Was ist das beste kleine lokale Modell für Tool Calling?',
+            a: 'Gemma 4 27B ist die beste kleine Wahl, die zuverlässig bleibt: ca. 95 % wohlgeformte Aufrufe bei ~16 GB VRAM (Q4_K_M). Es passt in 24 GB VRAM oder 16 GB Unified Memory. Qwen3-Coder 30B (~18 GB) ist die Wahl für codenahe Tools. Darunter eignet sich Llama 3.2 3B (4–8 GB VRAM) für Triage und Klassifikation mit einem einzelnen Tool, nicht für mehrstufige Pläne; Modelle unter 7B erzeugen in unseren Tests fehlerhafte Aufrufe. Starten Sie auf einem 16-GB-Rechner mit Gemma 4 27B in Q4_K_M und wechseln Sie erst dann zu einem größeren Modell, wenn verkettete Aufrufe scheitern.',
+          },
+          {
+            q: 'Wie teste ich die Tool-Calling-Genauigkeit eines lokalen LLM?',
+            a: 'Halten Sie das Harness konstant und variieren Sie nur das Modell. Wählen Sie die MCP-Server oder Tools, die Sie wirklich einsetzen, schreiben Sie 30–50 Aufgaben-Prompts pro Tool (Einzelaufrufe, mehrstufige Pläne, parallele Aufrufe), lassen Sie jeden Prompt dreimal laufen und bewerten Sie pro Aufruf vier Signale: wohlgeformt gemäß Schema, richtiges Tool gewählt, richtige Argumente, erfolgreiche Ausführung. Geben Sie Bandbreiten statt scheinpräziser Zahlen an. Unser eigener Lauf umfasst 600 bewertete Aufrufe pro Modell. Öffentliche Suiten wie BFCL liefern eine Richtung, bilden MCP-Workloads aber nicht eins zu eins ab – nutzen Sie sie für die Vorauswahl und Ihre eigenen Prompts für die Entscheidung.',
+          },
         ],
       },
       relatedReading: {
@@ -799,11 +815,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     title: 'Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison',
-    seoTitle: 'Modèles locaux pour le tool calling 2026 : Qwen, Llama',
+    seoTitle: 'Meilleurs petits modèles locaux pour tool calling 2026',
     intro:
       'La fiabilité des appels d\'outils est le déterminant le plus important du succès ou de l\'interruption d\'un agent local. Le harness qui enveloppe le modèle compte moins — même Cline, mêmes serveurs MCP, même prompt : le modèle émet des appels d\'outils bien formés ou non. Ce guide compare les cinq modèles fiables pour Tool Calling en 2026 (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) sur des flux MCP réels, nomme les modes de défaillance et vous dit quel modèle choisir selon votre budget VRAM.',
     metaDescription:
-      'Comparez Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder et Llama 3.3 pour la fiabilité du Tool Calling. Benchmarks MCP réels, pas des scores de classement.',
+      'Meilleur petit LLM local pour le tool calling ? Gemma 4 27B : 16 GB de VRAM, ~95 % d\'appels valides. Comparé à Qwen3, GLM-4.7 et Llama 3.3 sur MCP réel.',
     heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-fr.webp',
     twitterDescription:
       '5 modèles locaux testés sur des Tool Calls MCP réels : Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder, Llama 3.3. Taux de fiabilité, budgets VRAM et modes de défaillance.',
@@ -1162,6 +1178,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Les nouvelles versions comme Qwen3.6 ou Llama 4 changent-elles ces choix ?',
             a: 'Pas encore pour le Tool Calling. Qwen3.6 (27B dense, plus un MoE 35B-A3B) est la nouvelle génération Qwen et le candidat naturel à essayer d\'abord sur une machine 24 GB, mais elle n\'a pas encore traversé cette série de tests MCP, et Qwen3.6 n\'a pas publié de variante Coder dédiée pour remplacer Qwen3-Coder 30B. Llama 4 Scout et Maverick sont de grands modèles MoE — Scout demande ~55 GB de VRAM en Q4, une classe de matériel différente des machines 24 GB visées par ce guide, pas un remplacement direct de Llama 3.3 70B. Les cinq modèles testés restent les recommandations jusqu\'à ce que les nouvelles versions passent le même benchmark ; traitez-les comme des candidats à évaluer sur votre propre charge de travail, pas comme des mises à niveau automatiques.',
           },
+          {
+            q: 'Quel est le meilleur petit modèle local pour le tool calling ?',
+            a: 'Gemma 4 27B est le meilleur petit choix qui reste fiable : environ 95 % d\'appels bien formés pour ~16 GB de VRAM (Q4_K_M), soit 24 GB de VRAM ou 16 GB de mémoire unifiée. Qwen3-Coder 30B (~18 GB) convient aux outils orientés code. En dessous, Llama 3.2 3B (4–8 GB de VRAM) suffit pour le tri et la classification avec un seul outil, pas pour des plans en plusieurs étapes ; dans nos tests, les modèles de moins de 7B produisent des appels mal formés. Sur une machine de 16 GB, commencez par Gemma 4 27B en Q4_K_M et ne passez à un modèle plus grand que si les appels enchaînés échouent.',
+          },
+          {
+            q: 'Comment mesurer la précision du tool calling d\'un LLM local ?',
+            a: 'Gardez le harness constant et ne faites varier que le modèle. Choisissez les serveurs MCP ou les outils que vous utilisez réellement, rédigez 30 à 50 prompts de tâches par outil (appels simples, plans en plusieurs étapes, appels parallèles), exécutez chacun trois fois et notez quatre signaux par appel : bien formé selon le schéma, bon outil choisi, bons arguments, exécution réussie. Publiez des fourchettes plutôt que des chiffres faussement précis. Notre propre campagne compte 600 appels notés par modèle. Les suites publiques comme BFCL donnent une tendance, mais ne reflètent pas les charges MCP : servez-vous-en pour présélectionner, et de vos propres prompts pour décider.',
+          },
         ],
       },
       relatedReading: {
@@ -1185,11 +1209,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     title: '2026年のベストローカルツール呼び出しモデル : ベンチマークと比較',
-    seoTitle: 'ベストローカルツール呼び出しモデル2026 : 実MCP ベンチマーク',
+    seoTitle: '小型ローカルLLMのツール呼び出し比較2026：MCP実測',
     intro:
       'ツール呼び出しの信頼性は、ローカルエージェントがタスクを完了するか停止するかを決める最も重要な要因です。モデルをラップするハーネスはそれほど重要ではありません — 同じCline、同じMCPサーバー、同じプロンプト : モデルは正しく形成されたツール呼び出しを出力するか、出力しません。このガイドは、2026年の5つの信頼できるツール呼び出し実行者(Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B)を実MCPワークフローでベンチマークし、失敗モードに名前を付け、VRAMバジェットあたりどのモデルを選択するかを示します。',
     metaDescription:
-      '2026年のツール呼び出しに最適なローカルLLM。Qwen3、Llama 3.3、Mistralを実機テスト。関数呼び出し精度、JSON出力の信頼性、エージェント対応を比較。',
+      'ツール呼び出しに強い小型ローカルLLMは？Gemma 4 27BはVRAM約16 GBで整形式の呼び出し率約95%。Qwen3・GLM-4.7・Llama 3.3と実MCPサーバーで比較。',
     heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-ja.webp',
     twitterDescription:
       '実MCPツール呼び出しでテストされた5つのローカルモデル: Gemma 4、GLM-4.7、Qwen3、Qwen3-Coder、Llama 3.3。信頼度、VRAMバジェット、失敗モード。',
@@ -1548,6 +1572,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Qwen3.6やLlama 4のような新しいリリースはこの選択を変えますか?',
             a: 'ツール呼び出しに関してはまだ変わりません。Qwen3.6(27B denseと35B-A3B MoE)は新しいQwen世代で、24GBリグで最初に試す自然な候補ですが、このMCPテストラウンドをまだ通過しておらず、Qwen3-Coder 30Bを置き換える専用Coderバリアントも出ていません。Llama 4 ScoutとMaverickは大型MoEモデルで、ScoutはQ4で~55 GBのVRAMを必要とします — このガイドが対象とする24GBリグとは異なるハードウェアクラスであり、Llama 3.3 70Bのドロップイン・アップグレードではありません。新しいリリースが同じベンチマークを通過するまで、テスト済みの5モデルが引き続き推奨です。新モデルは自動アップグレードではなく、自身のワークロードで評価する候補として扱ってください。',
           },
+          {
+            q: 'ツール呼び出しに最適な小型ローカルモデルはどれですか？',
+            a: '信頼性を保てる小型モデルの最有力は Gemma 4 27B です。Q4_K_M で VRAM 約16 GB、整形式の呼び出し率は約95%で、24 GB の VRAM または 16 GB のユニファイドメモリに収まります。コード系ツールには Qwen3-Coder 30B（約18 GB）が向いています。それより小さい Llama 3.2 3B（VRAM 4〜8 GB）は、単一ツールのトリアージや分類には使えますが、複数ステップの計画には不十分です。今回のテストでは 7B 未満のモデルは不正な形式の呼び出しを出力しました。16 GB のマシンではまず Gemma 4 27B（Q4_K_M）を試し、連鎖呼び出しが失敗する場合のみ大きなモデルに移行してください。',
+          },
+          {
+            q: 'ローカルLLMのツール呼び出し精度はどう測定しますか？',
+            a: 'ハーネスを固定し、モデルだけを変えます。実際に使う MCP サーバーやツールを選び、ツールごとに30〜50件のタスクプロンプト（単発呼び出し、複数ステップ、並列呼び出し）を用意して各3回実行し、呼び出しごとに4つの指標を採点します。スキーマに対する整形式、正しいツールの選択、正しい引数、実行の成功です。結果は精密に見える数値ではなく範囲で報告してください。当サイトのテストでは1モデルあたり600回の呼び出しを採点しました。BFCL などの公開ベンチマークは傾向を示しますが、MCP ワークロードとは一致しません。候補の絞り込みに使い、最終判断は自分のプロンプトで行ってください。',
+          },
         ],
       },
       relatedReading: {
@@ -1571,11 +1603,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     title: '2026年最佳本地工具调用模型：基准和比较',
-    seoTitle: '最佳本地工具调用模型2026：真实MCP基准',
+    seoTitle: '最佳小型本地工具调用模型2026：MCP实测对比',
     intro:
       '工具调用可靠性是本地代理能否完成任务的最关键因素。包装模型的工具框架不太重要——相同的Cline、相同的MCP服务器、相同的提示：模型发出格式良好的工具调用或不发出。本指南针对2026年的5个可靠工具调用者（Gemma 4 27B、GLM-4.7 32B、Qwen3 32B、Qwen3-Coder 30B、Llama 3.3 70B）进行真实MCP工作流基准测试，列出失败模式，并告诉您根据VRAM预算应该选择哪个模型。',
     metaDescription:
-      '比较Gemma 4、GLM-4.7、Qwen3、Qwen3-Coder和Llama 3.3的工具调用可靠性。真实MCP基准，而非排行榜分数。',
+      '工具调用最佳小型本地模型？Gemma 4 27B 仅需约16 GB VRAM，格式正确率约95%。与Qwen3、GLM-4.7、Llama 3.3在真实MCP服务器上对比。',
     heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-zh.webp',
     twitterDescription:
       '5个模型在真实MCP工具调用上测试：Gemma 4、GLM-4.7、Qwen3、Qwen3-Coder、Llama 3.3。可靠率、VRAM预算和故障模式。',
@@ -1934,6 +1966,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Qwen3.6或Llama 4等较新版本会改变这些推荐吗？',
             a: '在工具调用方面还没有。Qwen3.6（27B dense加35B-A3B MoE）是较新的Qwen世代，是24GB平台上最值得先试的候选，但尚未经过本轮MCP测试，Qwen3.6也还没有发布替代Qwen3-Coder 30B的专用Coder变体。Llama 4 Scout和Maverick是大型MoE模型——Scout在Q4下需要约55 GB VRAM，与本指南针对的24GB平台属于不同硬件级别，不是Llama 3.3 70B的直接升级。在较新版本通过相同基准测试之前，上述五个已测模型仍是推荐；请将新版本视为在你自己的工作负载上评估的候选，而不是自动升级。',
           },
+          {
+            q: '工具调用最佳的小型本地模型是哪个？',
+            a: 'Gemma 4 27B 是仍能保持可靠的最佳小型选择：Q4_K_M 下约占 16 GB VRAM，格式正确的调用率约 95%，可在 24 GB VRAM 或 16 GB 统一内存上运行。偏代码的工具可选 Qwen3-Coder 30B（约 18 GB）。更小的 Llama 3.2 3B（4–8 GB VRAM）适合单工具的分流和分类，不适合多步骤规划；在我们的测试中，7B 以下的模型会输出格式错误的调用。16 GB 的机器建议先用 Q4_K_M 的 Gemma 4 27B，只有链式调用失败时再换更大的模型。',
+          },
+          {
+            q: '如何测试本地 LLM 的工具调用准确率？',
+            a: '固定测试框架，只更换模型。选择你实际使用的 MCP 服务器或工具，为每个工具编写 30–50 个任务提示词（单次调用、多步骤、并行调用），每个运行 3 次，并对每次调用评估四项：是否符合 schema、是否选对工具、参数是否正确、是否执行成功。报告区间，而不是虚假的精确数字。我们自己的测试为每个模型评分 600 次调用。BFCL 等公开基准能提供方向，但与 MCP 工作负载并不一一对应：用它们做初筛，用你自己的提示词做决定。',
+          },
         ],
       },
       relatedReading: {
@@ -1957,11 +1997,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     title: 'Mejores modelos locales para Tool Calling en 2026: Benchmarks y comparativa',
-    seoTitle: 'Mejores modelos locales para Tool Calling 2026: MCP real',
+    seoTitle: 'Mejores modelos pequeños para Tool Calling 2026: MCP real',
     intro:
       'La fiabilidad en las llamadas a herramientas es el factor determinante de si un agente local completa una tarea o se detiene. El harness que envuelve el modelo importa menos — mismo Cline, mismos servidores MCP, mismo prompt: el modelo emite llamadas a herramientas bien formadas o no lo hace. Esta guía compara los cinco modelos fiables para Tool Calling en 2026 (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) en flujos de trabajo MCP reales, identifica los modos de fallo y te indica qué modelo elegir según tu presupuesto de VRAM.',
     metaDescription:
-      'Compara Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B y Llama 3.3 70B en fiabilidad de Tool Calling. Benchmarks MCP reales, no de leaderboard.',
+      '¿Mejor LLM local pequeño para tool calling? Gemma 4 27B: 16 GB de VRAM y ~95 % de llamadas válidas. Comparado con Qwen3, GLM-4.7 y Llama 3.3 en MCP real.',
     heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-es.webp',
     twitterDescription:
       '5 modelos locales evaluados en tool calls MCP reales: Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder, Llama 3.3. Tasas de fiabilidad, VRAM y modos de fallo.',
@@ -2320,6 +2360,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Las versiones más nuevas como Qwen3.6 o Llama 4 cambian estas recomendaciones?',
             a: 'Para tool calling, todavía no. Qwen3.6 (27B dense, más un MoE 35B-A3B) es la generación Qwen más nueva y el candidato natural para probar primero en un rig de 24 GB, pero aún no ha pasado por esta ronda de pruebas MCP, y Qwen3.6 no ha publicado una variante Coder dedicada que sustituya a Qwen3-Coder 30B. Llama 4 Scout y Maverick son modelos MoE grandes — Scout necesita ~55 GB de VRAM en Q4, una clase de hardware distinta de los rigs de 24 GB de esta guía, no una mejora directa sobre Llama 3.3 70B. Los cinco modelos probados siguen siendo las recomendaciones hasta que las versiones nuevas pasen el mismo benchmark; trátalas como candidatas a evaluar en tu propia carga de trabajo, no como mejoras automáticas.',
           },
+          {
+            q: '¿Cuál es el mejor modelo local pequeño para tool calling?',
+            a: 'Gemma 4 27B es la mejor opción pequeña que sigue siendo fiable: ~95 % de llamadas bien formadas con ~16 GB de VRAM (Q4_K_M), así que cabe en 24 GB de VRAM o en 16 GB de memoria unificada. Qwen3-Coder 30B (~18 GB) es la elección para herramientas orientadas a código. Por debajo, Llama 3.2 3B (4–8 GB de VRAM) sirve para triaje y clasificación con una sola herramienta, no para planes de varios pasos; en nuestras pruebas, los modelos de menos de 7B generan llamadas mal formadas. En un equipo de 16 GB, empieza con Gemma 4 27B en Q4_K_M y pasa a un modelo mayor solo si fallan las llamadas encadenadas.',
+          },
+          {
+            q: '¿Cómo mido la precisión de tool calling de un LLM local?',
+            a: 'Mantén el harness constante y cambia solo el modelo. Elige los servidores MCP o las herramientas que usas de verdad, escribe entre 30 y 50 prompts de tareas por herramienta (llamadas simples, planes de varios pasos, llamadas en paralelo), ejecuta cada uno tres veces y puntúa cuatro señales por llamada: bien formada según el esquema, herramienta correcta, argumentos correctos y ejecución exitosa. Informa rangos, no cifras falsamente precisas. Nuestra propia prueba suma 600 llamadas puntuadas por modelo. Las suites públicas como BFCL dan una orientación, pero no reflejan las cargas MCP: úsalas para preseleccionar y tus propios prompts para decidir.',
+          },
         ],
       },
       relatedReading: {
@@ -2343,11 +2391,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     title: 'Melhores modelos locais para Tool Calling em 2026: Benchmarks e comparativo',
-    seoTitle: 'Melhores modelos locais para Tool Calling 2026: MCP real',
+    seoTitle: 'Melhores modelos pequenos para Tool Calling 2026: MCP real',
     intro:
       'A confiabilidade nas chamadas a ferramentas é o fator determinante de se um agente local conclui uma tarefa ou trava. O harness que envolve o modelo importa menos — mesmo Cline, mesmos servidores MCP, mesmo prompt: o modelo emite chamadas a ferramentas bem formadas ou não. Este guia compara os cinco modelos confiáveis para Tool Calling em 2026 (Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B) em fluxos de trabalho MCP reais, identifica os modos de falha e indica qual modelo escolher conforme seu orçamento de VRAM.',
     metaDescription:
-      'Compare Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B na confiabilidade de Tool Calling. Benchmarks MCP reais, não de leaderboard.',
+      'Melhor LLM local pequeno para tool calling? Gemma 4 27B: 16 GB de VRAM e ~95% de chamadas válidas. Comparado a Qwen3, GLM-4.7 e Llama 3.3 em MCP real.',
     heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-pt.webp',
     twitterDescription:
       '5 modelos locais avaliados em tool calls MCP reais: Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder, Llama 3.3. Taxas de confiabilidade, VRAM e modos de falha.',
@@ -2706,6 +2754,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Versões mais novas como Qwen3.6 ou Llama 4 mudam essas recomendações?',
             a: 'Para tool calling, ainda não. O Qwen3.6 (27B dense, mais um MoE 35B-A3B) é a geração Qwen mais nova e o candidato natural para testar primeiro em um rig de 24 GB, mas ainda não passou por esta rodada de testes MCP, e o Qwen3.6 não lançou uma variante Coder dedicada para substituir o Qwen3-Coder 30B. O Llama 4 Scout e o Maverick são modelos MoE grandes — o Scout exige ~55 GB de VRAM em Q4, uma classe de hardware diferente dos rigs de 24 GB deste guia, não um upgrade direto sobre o Llama 3.3 70B. Os cinco modelos testados continuam sendo as recomendações até que as versões novas passem pelo mesmo benchmark; trate-as como candidatas a avaliar na sua própria carga de trabalho, não como upgrades automáticos.',
           },
+          {
+            q: 'Qual é o melhor modelo local pequeno para tool calling?',
+            a: 'O Gemma 4 27B é a melhor escolha pequena que continua confiável: ~95% de chamadas bem formadas com ~16 GB de VRAM (Q4_K_M), então cabe em 24 GB de VRAM ou em 16 GB de memória unificada. O Qwen3-Coder 30B (~18 GB) é a escolha para ferramentas voltadas a código. Abaixo disso, o Llama 3.2 3B (4–8 GB de VRAM) serve para triagem e classificação com uma única ferramenta, não para planos de vários passos; nos nossos testes, modelos abaixo de 7B geram chamadas malformadas. Em uma máquina de 16 GB, comece com o Gemma 4 27B em Q4_K_M e só passe para um modelo maior se as chamadas encadeadas falharem.',
+          },
+          {
+            q: 'Como medir a precisão de tool calling de um LLM local?',
+            a: 'Mantenha o harness constante e varie apenas o modelo. Escolha os servidores MCP ou as ferramentas que você realmente usa, escreva de 30 a 50 prompts de tarefa por ferramenta (chamadas simples, planos de vários passos, chamadas paralelas), execute cada um três vezes e avalie quatro sinais por chamada: bem formada conforme o schema, ferramenta correta, argumentos corretos e execução bem-sucedida. Reporte faixas, não números falsamente precisos. Nosso próprio teste soma 600 chamadas avaliadas por modelo. Suítes públicas como o BFCL dão uma direção, mas não refletem cargas MCP: use-as para pré-selecionar e seus próprios prompts para decidir.',
+          },
         ],
       },
       relatedReading: {
@@ -2730,11 +2786,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     title: 'أفضل النماذج المحلية لاستدعاء الأدوات في ⁨2026⁩: المعايير والمقارنة',
-    seoTitle: 'نماذج استدعاء الأدوات المحلية ⁨2026⁩: ⁨Qwen3⁩ و⁨Gemma⁩',
+    seoTitle: 'أفضل نماذج استدعاء الأدوات المحلية الصغيرة ⁨2026⁩',
     intro:
       'موثوقية استدعاء الأدوات هي العامل الحاسم الأول في تحديد ما إذا كان الوكيل المحلي يكمل المهمة أم يتوقف. المنظومة التي تُغلّف النموذج بها أقل أهمية — نفس Cline، نفس خوادم MCP، نفس الموجّه: النموذج يُصدر استدعاءات أدوات مشكّلة جيداً أو لا يفعل. يقارن هذا الدليل النماذج الخمسة الموثوقة لاستدعاء الأدوات في عام 2026 (Gemma 4 27B وGLM-4.7 32B وQwen3 32B وQwen3-Coder 30B وLlama 3.3 70B) على سير عمل MCP الحقيقية، ويُحدّد أوضاع الفشل، ويُرشدك إلى النموذج المناسب لكل ميزانية VRAM.',
     metaDescription:
-      'Qwen3 32B وGemma 4 27B وLlama 3.3 70B مُقيَّمة على سير عمل MCP حقيقية. موثوقية استدعاء الأدوات والفشل وVRAM لكل نموذج — لا نقاط لوحة صدارة.',
+      'ما أفضل نموذج محلي صغير لاستدعاء الأدوات؟ يعمل Gemma 4 27B بنحو 16 GB من VRAM وبدقة ~95%. مقارنة مع Qwen3 وGLM-4.7 وLlama 3.3 على خوادم MCP حقيقية.',
     heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-ar.webp',
     twitterDescription:
       '5 نماذج محلية مُقيَّمة على استدعاءات أدوات MCP الحقيقية: Gemma 4 وGLM-4.7 وQwen3 وQwen3-Coder وLlama 3.3. معدلات الموثوقية وVRAM وأوضاع الفشل.',
@@ -3093,6 +3149,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'هل تُغيّر الإصدارات الأحدث مثل Qwen3.6 أو Llama 4 هذه التوصيات؟',
             a: 'ليس بعد فيما يخص استدعاء الأدوات. Qwen3.6 (نموذج dense بحجم 27B، إضافةً إلى MoE بحجم 35B-A3B) هو جيل Qwen الأحدث والمرشح الطبيعي لتجربته أولاً على جهاز بذاكرة 24 GB، لكنه لم يخضع بعد لجولة اختبارات MCP هذه، ولم يُصدر Qwen3.6 نسخة Coder مخصصة لتحل محل Qwen3-Coder 30B. أما Llama 4 Scout وMaverick فهما نموذجا MoE كبيران — يحتاج Scout إلى ~55 GB من VRAM عند Q4، وهي فئة أجهزة مختلفة عن أجهزة 24 GB التي يستهدفها هذا الدليل، وليس ترقية مباشرة عن Llama 3.3 70B. تبقى النماذج الخمسة المختبرة أعلاه هي التوصيات حتى تجتاز الإصدارات الأحدث المعيار نفسه؛ تعامل معها كمرشحة للتقييم على عبء العمل الخاص بك، لا كترقيات تلقائية.',
           },
+          {
+            q: 'ما أفضل نموذج محلي صغير لاستدعاء الأدوات؟',
+            a: 'يُعد Gemma 4 27B أفضل خيار صغير يحافظ على الموثوقية: نحو 95% من الاستدعاءات سليمة البنية مع نحو 16 GB من VRAM (Q4_K_M)، فيعمل ضمن 24 GB من VRAM أو 16 GB من الذاكرة الموحدة. ويناسب Qwen3-Coder 30B (نحو 18 GB) الأدوات المرتبطة بالشيفرة. أما Llama 3.2 3B (من 4 إلى 8 GB من VRAM) فيكفي لفرز المهام وتصنيفها بأداة واحدة، لا للخطط متعددة الخطوات؛ وفي اختباراتنا تُنتج النماذج الأصغر من 7B استدعاءات مشوّهة. على جهاز بسعة 16 GB ابدأ بـ Gemma 4 27B بصيغة Q4_K_M، ولا تنتقل إلى نموذج أكبر إلا إذا فشلت الاستدعاءات المتسلسلة.',
+          },
+          {
+            q: 'كيف أقيس دقة استدعاء الأدوات في نموذج LLM محلي؟',
+            a: 'ثبّت بيئة الاختبار (harness) وغيّر النموذج فقط. اختر خوادم MCP أو الأدوات التي تستخدمها فعلاً، واكتب من 30 إلى 50 مهمة لكل أداة (استدعاءات مفردة، وخطوات متعددة، واستدعاءات متوازية)، ونفّذ كل مهمة ثلاث مرات، وقيّم أربع إشارات لكل استدعاء: سلامة البنية وفق المخطط (schema)، واختيار الأداة الصحيحة، وصحة المعاملات، ونجاح التنفيذ. أبلغ عن نطاقات لا عن أرقام دقيقة زائفة. تضم تجربتنا 600 استدعاء مُقيَّم لكل نموذج. توفر المقاييس العامة مثل BFCL اتجاهًا عامًا لكنها لا تطابق أحمال MCP، فاستخدمها للتصفية الأولية واعتمد على مهامك الخاصة للقرار.',
+          },
         ],
       },
       relatedReading: {
@@ -3116,11 +3180,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     title: '2026년 Tool Calling 최고의 로컬 모델: 벤치마크 및 비교',
-    seoTitle: '2026년 Tool Calling 최고 로컬 모델: 실제 MCP 벤치마크',
+    seoTitle: '2026년 소형 로컬 Tool Calling 모델 추천: MCP 실측',
     intro:
       '도구 호출의 신뢰성은 로컬 에이전트가 작업을 완료할지 멈출지를 결정하는 핵심 요소입니다. 모델을 감싸는 harness는 그다지 중요하지 않습니다 — 동일한 Cline, 동일한 MCP 서버, 동일한 프롬프트: 모델이 올바르게 형성된 도구 호출을 발행하거나 그렇지 않거나입니다. 이 가이드는 2026년 기준 신뢰할 수 있는 5개의 Tool Calling 모델(Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B)을 실제 MCP 워크플로우에서 비교하고, 실패 모드를 파악하며, VRAM 예산에 따라 어떤 모델을 선택할지 안내합니다.',
     metaDescription:
-      'Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B의 Tool Calling 신뢰성 비교. 리더보드가 아닌 실제 MCP 벤치마크입니다.',
+      '소형 로컬 Tool Calling 모델은? Gemma 4 27B는 VRAM 약 16 GB에서 올바른 호출 약 95%. Qwen3, GLM-4.7, Llama 3.3과 실제 MCP 서버로 비교.',
     heroImage: '/images/best-local-models-tool-calling-2026-comparison-hero-ko.webp',
     twitterDescription:
       '실제 MCP tool calls로 평가한 5개 로컬 모델: Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder, Llama 3.3. 신뢰성 비율, VRAM, 실패 모드.',
@@ -3478,6 +3542,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Qwen3.6이나 Llama 4 같은 최신 릴리스가 이 추천을 바꿉니까?',
             a: 'Tool calling에 관해서는 아직 아닙니다. Qwen3.6(27B dense와 35B-A3B MoE)은 최신 Qwen 세대이며 24GB 환경에서 가장 먼저 시험해 볼 만한 후보이지만, 아직 이번 MCP 테스트 라운드를 거치지 않았고, Qwen3-Coder 30B를 대체할 전용 Coder 변형도 출시되지 않았습니다. Llama 4 Scout와 Maverick은 대형 MoE 모델로, Scout는 Q4에서 약 55 GB VRAM을 요구합니다 — 이 가이드가 대상으로 하는 24GB 환경과는 다른 하드웨어 등급이며, Llama 3.3 70B의 직접적인 업그레이드가 아닙니다. 최신 릴리스가 동일한 벤치마크를 통과할 때까지 위의 다섯 개 테스트된 모델이 계속 추천이며, 새 모델은 자동 업그레이드가 아니라 자신의 워크로드에서 평가할 후보로 취급하십시오.',
+          },
+          {
+            q: '가장 좋은 소형 로컬 Tool Calling 모델은 무엇입니까?',
+            a: '신뢰성을 유지하는 소형 모델 중에서는 Gemma 4 27B가 가장 좋습니다. Q4_K_M 기준 VRAM 약 16 GB에서 올바른 형식의 호출 비율이 약 95%이며, 24 GB VRAM 또는 16 GB 통합 메모리에 들어갑니다. 코드 중심 도구에는 Qwen3-Coder 30B(약 18 GB)가 적합합니다. 그보다 작은 Llama 3.2 3B(VRAM 4~8 GB)는 단일 도구 분류·트리아지에는 쓸 수 있지만 다단계 계획에는 부족하며, 저희 테스트에서 7B 미만 모델은 잘못된 형식의 호출을 생성했습니다. 16 GB 머신에서는 Gemma 4 27B(Q4_K_M)로 시작하고, 연쇄 호출이 실패할 때만 더 큰 모델로 옮기십시오.',
+          },
+          {
+            q: '로컬 LLM의 Tool Calling 정확도는 어떻게 벤치마크합니까?',
+            a: '하네스는 고정하고 모델만 바꿉니다. 실제로 사용하는 MCP 서버나 도구를 고르고, 도구마다 30~50개의 작업 프롬프트(단일 호출, 다단계, 병렬 호출)를 작성해 각각 3회 실행한 뒤, 호출마다 네 가지를 채점합니다. 스키마에 맞는 올바른 형식, 올바른 도구 선택, 올바른 인수, 실행 성공입니다. 정밀해 보이는 수치 대신 범위로 보고하십시오. 저희 테스트는 모델당 600회의 호출을 채점했습니다. BFCL 같은 공개 벤치마크는 방향을 보여 주지만 MCP 워크로드와 일치하지 않으므로, 후보를 좁히는 데 쓰고 최종 결정은 직접 만든 프롬프트로 하십시오.',
           },
         ],
       },

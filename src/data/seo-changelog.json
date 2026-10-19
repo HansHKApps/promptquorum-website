@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -4505,6 +4505,183 @@
       }
     ],
     "reason": "geo-meta-optimizer: GSC-driven phone/mobile query alignment (best phone for local llm, mobile llm models), coherence fix B2/C - new sections SmolLM 3/Gemma 3n, download sizes, best phones, on-device vision, 10 FAQs",
+    "baseline": null
+  },
+  {
+    "id": "da4dac77-34e4-46a3-b94c-520cd69c5c61",
+    "slug": "/power-local-llm/best-local-models-tool-calling-2026",
+    "date": "2026-10-19T20:22:17.091Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best Local Tool-Calling Models 2026: Real MCP Benchmarks",
+        "new": "Best Small Local Models for Tool Calling 2026: MCP Tests"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Compare Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, and Llama 3.3 70B for tool-calling reliability. Real MCP benchmarks, not leaderboard scores.",
+        "new": "Best small local LLM for tool calling? Gemma 4 27B runs in 16 GB VRAM at ~95% well-formed calls. Compared with Qwen3, GLM-4.7, Llama 3.3 on real MCP."
+      }
+    ],
+    "reason": "geo-meta-optimizer: diagnosis-A, small-model queries (0 clicks at pos 1-3); title/meta now lead with small-model answer; +2 FAQs (best small model, benchmark how-to)",
+    "baseline": {
+      "position": 3.3,
+      "impressions": 200,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC query paste 2026-10-19"
+    }
+  },
+  {
+    "id": "1f213fa4-c0b5-4394-bcc3-e185cb19b705",
+    "slug": "/de/power-local-llm/best-local-models-tool-calling-2026",
+    "date": "2026-10-19T20:22:17.274Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste lokale Tool-Calling-Modelle 2026: MCP-Benchmarks",
+        "new": "Beste kleine lokale Modelle für Tool Calling 2026: MCP-Tests"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Vergleichen Sie Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder und Llama 3.3 für Zuverlässigkeit von Tool Calls. Echte MCP-Benchmarks, keine Leaderboard-Scores.",
+        "new": "Bestes kleines lokales LLM für Tool Calling? Gemma 4 27B: 16 GB VRAM, ca. 95 % wohlgeformte Aufrufe. Verglichen mit Qwen3, GLM-4.7, Llama 3.3 auf echtem MCP."
+      }
+    ],
+    "reason": "geo-meta-optimizer: diagnosis-A, small-model queries (0 clicks at pos 1-3); title/meta now lead with small-model answer; +2 FAQs (best small model, benchmark how-to)",
+    "baseline": null
+  },
+  {
+    "id": "2d0de0c5-5dba-43a0-b2f3-485b92ec17ae",
+    "slug": "/fr/power-local-llm/best-local-models-tool-calling-2026",
+    "date": "2026-10-19T20:22:17.402Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Modèles locaux pour le tool calling 2026 : Qwen, Llama",
+        "new": "Meilleurs petits modèles locaux pour tool calling 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Comparez Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder et Llama 3.3 pour la fiabilité du Tool Calling. Benchmarks MCP réels, pas des scores de classement.",
+        "new": "Meilleur petit LLM local pour le tool calling ? Gemma 4 27B : 16 GB de VRAM, ~95 % d'appels valides. Comparé à Qwen3, GLM-4.7 et Llama 3.3 sur MCP réel."
+      }
+    ],
+    "reason": "geo-meta-optimizer: diagnosis-A, small-model queries (0 clicks at pos 1-3); title/meta now lead with small-model answer; +2 FAQs (best small model, benchmark how-to)",
+    "baseline": null
+  },
+  {
+    "id": "2f3935ae-35c5-4320-a7cb-5542a7cb7a1d",
+    "slug": "/ja/power-local-llm/best-local-models-tool-calling-2026",
+    "date": "2026-10-19T20:22:17.526Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ベストローカルツール呼び出しモデル2026 : 実MCP ベンチマーク",
+        "new": "小型ローカルLLMのツール呼び出し比較2026：MCP実測"
+      },
+      {
+        "field": "metaDescription",
+        "old": "2026年のツール呼び出しに最適なローカルLLM。Qwen3、Llama 3.3、Mistralを実機テスト。関数呼び出し精度、JSON出力の信頼性、エージェント対応を比較。",
+        "new": "ツール呼び出しに強い小型ローカルLLMは？Gemma 4 27BはVRAM約16 GBで整形式の呼び出し率約95%。Qwen3・GLM-4.7・Llama 3.3と実MCPサーバーで比較。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: diagnosis-A, small-model queries (0 clicks at pos 1-3); title/meta now lead with small-model answer; +2 FAQs (best small model, benchmark how-to)",
+    "baseline": null
+  },
+  {
+    "id": "31a4ac03-da5f-46ae-9eda-e567c0a6cf3a",
+    "slug": "/zh/power-local-llm/best-local-models-tool-calling-2026",
+    "date": "2026-10-19T20:22:17.650Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "最佳本地工具调用模型2026：真实MCP基准",
+        "new": "最佳小型本地工具调用模型2026：MCP实测对比"
+      },
+      {
+        "field": "metaDescription",
+        "old": "比较Gemma 4、GLM-4.7、Qwen3、Qwen3-Coder和Llama 3.3的工具调用可靠性。真实MCP基准，而非排行榜分数。",
+        "new": "工具调用最佳小型本地模型？Gemma 4 27B 仅需约16 GB VRAM，格式正确率约95%。与Qwen3、GLM-4.7、Llama 3.3在真实MCP服务器上对比。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: diagnosis-A, small-model queries (0 clicks at pos 1-3); title/meta now lead with small-model answer; +2 FAQs (best small model, benchmark how-to)",
+    "baseline": null
+  },
+  {
+    "id": "2681fa4c-3b9b-4980-b5a8-157cf2d06d56",
+    "slug": "/es/power-local-llm/best-local-models-tool-calling-2026",
+    "date": "2026-10-19T20:22:17.773Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Mejores modelos locales para Tool Calling 2026: MCP real",
+        "new": "Mejores modelos pequeños para Tool Calling 2026: MCP real"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Compara Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B y Llama 3.3 70B en fiabilidad de Tool Calling. Benchmarks MCP reales, no de leaderboard.",
+        "new": "¿Mejor LLM local pequeño para tool calling? Gemma 4 27B: 16 GB de VRAM y ~95 % de llamadas válidas. Comparado con Qwen3, GLM-4.7 y Llama 3.3 en MCP real."
+      }
+    ],
+    "reason": "geo-meta-optimizer: diagnosis-A, small-model queries (0 clicks at pos 1-3); title/meta now lead with small-model answer; +2 FAQs (best small model, benchmark how-to)",
+    "baseline": null
+  },
+  {
+    "id": "3d61545b-d1ee-41a0-96b0-b548563297e9",
+    "slug": "/pt/power-local-llm/best-local-models-tool-calling-2026",
+    "date": "2026-10-19T20:22:17.895Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Melhores modelos locais para Tool Calling 2026: MCP real",
+        "new": "Melhores modelos pequenos para Tool Calling 2026: MCP real"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Compare Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B na confiabilidade de Tool Calling. Benchmarks MCP reais, não de leaderboard.",
+        "new": "Melhor LLM local pequeno para tool calling? Gemma 4 27B: 16 GB de VRAM e ~95% de chamadas válidas. Comparado a Qwen3, GLM-4.7 e Llama 3.3 em MCP real."
+      }
+    ],
+    "reason": "geo-meta-optimizer: diagnosis-A, small-model queries (0 clicks at pos 1-3); title/meta now lead with small-model answer; +2 FAQs (best small model, benchmark how-to)",
+    "baseline": null
+  },
+  {
+    "id": "038bd32d-193b-41d0-85b7-f4bc5f3958c2",
+    "slug": "/ar/power-local-llm/best-local-models-tool-calling-2026",
+    "date": "2026-10-19T20:22:18.027Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "نماذج استدعاء الأدوات المحلية ⁨2026⁩: ⁨Qwen3⁩ و⁨Gemma⁩",
+        "new": "أفضل نماذج استدعاء الأدوات المحلية الصغيرة ⁨2026⁩"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Qwen3 32B وGemma 4 27B وLlama 3.3 70B مُقيَّمة على سير عمل MCP حقيقية. موثوقية استدعاء الأدوات والفشل وVRAM لكل نموذج — لا نقاط لوحة صدارة.",
+        "new": "ما أفضل نموذج محلي صغير لاستدعاء الأدوات؟ يعمل Gemma 4 27B بنحو 16 GB من VRAM وبدقة ~95%. مقارنة مع Qwen3 وGLM-4.7 وLlama 3.3 على خوادم MCP حقيقية."
+      }
+    ],
+    "reason": "geo-meta-optimizer: diagnosis-A, small-model queries (0 clicks at pos 1-3); title/meta now lead with small-model answer; +2 FAQs (best small model, benchmark how-to)",
+    "baseline": null
+  },
+  {
+    "id": "960c0703-3a1e-47a2-a1de-d3b985e0216f",
+    "slug": "/ko/power-local-llm/best-local-models-tool-calling-2026",
+    "date": "2026-10-19T20:22:18.149Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026년 Tool Calling 최고 로컬 모델: 실제 MCP 벤치마크",
+        "new": "2026년 소형 로컬 Tool Calling 모델 추천: MCP 실측"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B의 Tool Calling 신뢰성 비교. 리더보드가 아닌 실제 MCP 벤치마크입니다.",
+        "new": "소형 로컬 Tool Calling 모델은? Gemma 4 27B는 VRAM 약 16 GB에서 올바른 호출 약 95%. Qwen3, GLM-4.7, Llama 3.3과 실제 MCP 서버로 비교."
+      }
+    ],
+    "reason": "geo-meta-optimizer: diagnosis-A, small-model queries (0 clicks at pos 1-3); title/meta now lead with small-model answer; +2 FAQs (best small model, benchmark how-to)",
     "baseline": null
   }
 ]
