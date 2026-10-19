@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/deepseek-r1-vs-distills-explained-2026-overview-hero-en.webp',
     title: 'DeepSeek-R1 vs Distills 2026: What You Actually Lose',
     seoTitle: 'DeepSeek-R1 vs Distills 2026: What You Actually Lose',
-    intro: 'You cannot run the real 671B DeepSeek-R1 at home — what you run is a distill built on a Qwen2.5 or Llama 3 base. This explainer covers exactly what the distillation keeps (chain-of-thought, self-verification, reflection), what it loses (raw capability and breadth), and whether that gap matters for your use case.',
+    intro: 'You cannot run the real 671B DeepSeek-R1 at home — what you run is a distill built on a Qwen2.5 or Llama 3.1/3.3 base. This explainer covers exactly what the distillation keeps (chain-of-thought, self-verification, reflection), what it loses (raw capability and breadth), and whether that gap matters for your use case. DeepSeek\'s current generation is DeepSeek-V4; R1 and its distills are the previous generation, and the distills remain valid to run locally.',
     metaDescription: 'You can\'t run the real 671B DeepSeek-R1 at home — you run a distill. Here\'s what distillation keeps, what it loses, and whether the gap matters.',
     twitterDescription: 'The full 671B DeepSeek-R1 is datacenter-only. A distill copies its reasoning onto a small base. Here\'s what survives distillation, what doesn\'t, and when the gap matters.',
     publishDate: '2026-06-19',
@@ -19,15 +19,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Developers deciding whether a local DeepSeek-R1 distill is good enough versus the full hosted R1 model',
     primaryTerm: 'DeepSeek-R1 distillation',
-    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Llama 3', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3'],
+    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3', 'DeepSeek-V4-Flash', 'DeepSeek-V4-Pro'],
     targetKeywords: ['deepseek r1 vs distill', 'deepseek distillation explained', 'full r1 vs distilled', 'what does distillation lose', 'deepseek r1 671b'],
     ctaText: 'Wondering how far a local distill is from the full R1? Send the same reasoning prompt to your distill and to the hosted frontier models in one dispatch with PromptQuorum — the gap is easier to see side by side than to guess at.',
-    leadAnswerBlock: '**Distillation copies DeepSeek-R1\'s reasoning behavior — chain-of-thought, self-verification, and reflection — onto a small Qwen2.5 or Llama 3 base, but it cannot copy the full 671B model\'s raw capability and breadth.** You keep the way R1 thinks; you lose some of what it knows and how reliably it solves the hardest problems. For most local math and logic tasks the gap is small; for frontier-difficulty or broad-knowledge work it is real.',
+    leadAnswerBlock: '**Distillation copies DeepSeek-R1\'s reasoning behavior — chain-of-thought, self-verification, and reflection — onto a small Qwen2.5 or Llama 3.1/3.3 base, but it cannot copy the full 671B model\'s raw capability and breadth.** You keep the way R1 thinks; you lose some of what it knows and how reliably it solves the hardest problems. For most local math and logic tasks the gap is small; for frontier-difficulty or broad-knowledge work it is real.',
     quickAnswerTop: {
       en: {
         question: 'What do you actually lose by running a DeepSeek-R1 distill instead of the full R1?',
         answer: 'You keep R1\'s reasoning style — the explicit chain-of-thought, self-checking, and reflection that make it strong at math and logic. You lose raw capability and breadth: the full 671B model solves the hardest problems more reliably and knows more. For everyday local reasoning the gap is small; it widens on frontier-difficulty tasks.',
         bullets: [
+          'Newer line: DeepSeek-V4 is current; R1 and V3 are previous-generation, and the R1 distills still run locally',
           'Full R1: 671B MoE, ~37B active per token, ~376–404 GB at Q4 — datacenter only',
           'A distill = an existing small model fine-tuned on ~800K reasoning samples from R1',
           'KEPT: chain-of-thought, self-verification, reflection (the reasoning behavior)',
@@ -57,8 +58,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
+          'DeepSeek\'s current generation is DeepSeek-V4 (Flash and Pro, open weights, server-class); R1 and V3 are previous-generation, but the R1 distills are separate open-weight releases that still run locally.',
           'The full DeepSeek-R1 is a 671B Mixture-of-Experts model (~37B active per token) needing ~376–404 GB at Q4 — you cannot run it at home.',
-          'A "distill" is a separate, smaller model (Qwen2.5 or Llama 3 base) fine-tuned on ~800K reasoning traces generated by the full R1.',
+          'A "distill" is a separate, smaller model (Qwen2.5 or Llama 3.1/3.3 base) fine-tuned on ~800K reasoning traces generated by the full R1.',
           'Distillation KEEPS the reasoning behavior: explicit chain-of-thought, self-verification, and reflection.',
           'Distillation LOSES raw capability and breadth — the full model solves the hardest problems more reliably and knows more.',
           'For everyday local math and logic, the gap is small; it widens on frontier-difficulty and broad-knowledge tasks.',
@@ -74,12 +76,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**When you type `ollama run deepseek-r1:14b`, you are not running a smaller version of DeepSeek-R1 — you are running Qwen2.5 14B taught to imitate R1\'s reasoning.** The name "DeepSeek-R1-Distill-Qwen-14B" is precise but easy to misread: the "DeepSeek-R1" part describes where the reasoning came from, and the "Qwen-14B" part is the actual model running on your GPU.',
           'This matters because expectations follow the name. People assume a distill is "R1, but smaller and a bit worse." It is closer to "a capable open model that learned to think like R1." That framing predicts the behavior you will actually see: excellent reasoning structure, occasional gaps in raw knowledge or hardest-case reliability.',
           'For the hardware reality behind why the full model is off-limits at home, see [DeepSeek-V3 Local Hardware Requirements](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 is the chat-model sibling with the same 671B-class footprint.',
-          '**Update:** DeepSeek has since released DeepSeek-V4 (Flash and Pro) as its newer flagship generation, also available as open weights. The R1 distills covered here are not being discontinued and remain fully valid to run locally — if you want the newest architecture, V4 is worth evaluating alongside them.',
+          '**Update — DeepSeek\'s current generation is DeepSeek-V4, not R1.** V4 (Flash and Pro) is published as open weights (V4-Flash: about 284B total / 13B active parameters, MIT license) but is server-class, not a single-GPU model. DeepSeek\'s changelog scheduled the old `deepseek-chat` and `deepseek-reasoner` API names (the V3 and R1 generations) for discontinuation on 2026-07-24, and its API now serves the V4 family, so a "hosted R1" in this article means the full R1 weights on a third-party host or your own cluster. The R1 distills covered here are separate open-weight releases that this notice did not retire and that still run locally — they are previous-generation models, not DeepSeek\'s newest line.',
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'A DeepSeek-R1 distill is an existing small model (Qwen2.5 or Llama 3) fine-tuned to imitate the full R1\'s reasoning, not a shrunken copy of R1 itself.',
+            text: 'A DeepSeek-R1 distill is an existing small model (Qwen2.5 or Llama 3.1/3.3) fine-tuned to imitate the full R1\'s reasoning, not a shrunken copy of R1 itself.',
           },
           {
             type: 'plain-terms',
@@ -107,11 +109,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'DeepSeek fine-tuned Qwen2.5 and Llama 3 base models on ~800,000 reasoning samples generated by the full R1, transferring its reasoning style to small models.',
+            text: 'DeepSeek fine-tuned Qwen2.5 and Llama 3.1/3.3 base models on ~800,000 reasoning samples generated by the full R1, transferring its reasoning style to small models.',
           },
         ],
         image: '/images/deepseek-r1-vs-distills-explained-2026-distillation-tree-en.svg',
-        imageCaption: 'DeepSeek-R1 distillation tree: the full 671B R1 generates ~800K reasoning samples that fine-tune six official distills on Qwen2.5 (1.5B–32B) and Llama 3 (8B, 70B) bases, all of which run on consumer GPUs.',
+        imageCaption: 'DeepSeek-R1 distillation tree: the full 671B R1 generates ~800K reasoning samples that fine-tune six official distills on Qwen2.5 (1.5B–32B) and Llama 3.1/3.3 (8B, 70B) bases, all of which run on consumer GPUs.',
       },
       distillList: {
         id: 'distill-list',
@@ -202,7 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'Is a DeepSeek-R1 distill the same model as DeepSeek-R1, just smaller?', a: 'No. A distill is a different base model (Qwen2.5 or Llama 3) fine-tuned to imitate R1\'s reasoning on ~800K samples. It keeps R1\'s reasoning style but contains none of R1\'s parameters.' },
+          { q: 'Is a DeepSeek-R1 distill the same model as DeepSeek-R1, just smaller?', a: 'No. A distill is a different base model (Qwen2.5 or Llama 3.1/3.3) fine-tuned to imitate R1\'s reasoning on ~800K samples. It keeps R1\'s reasoning style but contains none of R1\'s parameters.' },
           { q: 'What exactly does distillation keep from the full R1?', a: 'The reasoning behavior: chain-of-thought, self-verification, and reflection. These are token-generation patterns that supervised fine-tuning transfers reliably, which is why a 7B distill reaches 55.5% on AIME 2024.' },
           { q: 'What does a distill lose versus the full 671B R1?', a: 'Raw capability, breadth of world knowledge, and reliability on the hardest problems. The smaller the distill, the larger the gap — though it stays small on common reasoning tasks.' },
           { q: 'Why can\'t I run the full 671B DeepSeek-R1 at home?', a: 'It needs ~376–404 GB of VRAM at Q4 because all 671B parameters must be resident even though only ~37B activate per token. That is datacenter hardware. A 1.58-bit build runs at ~0.3 tok/s — a curiosity, not usable.' },
@@ -212,6 +214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Is DeepSeek-V3 a distill of R1?', a: 'No. DeepSeek-V3 is a separate 671B MoE chat model, not a reasoning model and not a distill. R1 is the reasoning model; the distills imitate R1, not V3.' },
           { q: 'What is the difference between DeepSeek-R1 and DeepSeek-R1-Distill?', a: 'DeepSeek-R1 is the 671B Mixture-of-Experts reasoning model; a DeepSeek-R1-Distill model is a smaller Qwen or Llama model fine-tuned on reasoning samples generated by R1. The name gives the source (R1) and the base (Qwen or Llama), and the base sets the knowledge ceiling.' },
           { q: 'Which Ollama tag is which DeepSeek-R1 distill?', a: 'The 1.5b, 7b, 14b, 32b and 70b tags map to the matching Qwen- or Llama-based distills, and 671b is the full R1. The 8b tag — also what a bare `ollama run deepseek-r1` pulls — is DeepSeek-R1-0528-Qwen3-8B, not the original Llama-8B distill.' },
+          { q: 'Is DeepSeek-R1 still DeepSeek\'s newest model?', a: 'No. DeepSeek\'s current generation is DeepSeek-V4 (Flash and Pro), published as open weights. R1 and V3 are previous-generation models, and DeepSeek\'s changelog scheduled the deepseek-chat and deepseek-reasoner API names for discontinuation on 2026-07-24. The R1 distills are separate open-weight releases that this notice did not retire, so they still run locally; they are simply no longer DeepSeek\'s newest line.' },
         ],
       },
       relatedArticles: {
@@ -232,6 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Published 2026-06-19. Next review due 2027-06-19 (annual freshness tier — evergreen explainer with year-anchored model facts).',
           'Covers the full 671B R1 versus the six official distills and DeepSeek-R1-0528-Qwen3-8B. Reasoning-internal comparison only; cross-model coding comparisons live in the coding guide.',
           'Updated 2026-10-19: added the six-distill reference table (base models, AIME 2024, Ollama tags), corrected the base-model list, clarified that the deepseek-r1:8b tag is R1-0528-Qwen3-8B, and noted its system-prompt exception.',
+          'Updated 2026-10-19 (generation check): stated that DeepSeek-V4 is the current generation and R1/V3 are previous-generation, that the R1 distills are separate open-weight releases still valid to run locally, and reworded the Llama 3 base-model references to Llama 3.1/3.3.',
         ],
       },
     },
@@ -244,7 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/deepseek-r1-vs-distills-explained-2026-overview-hero-de.webp',
     title: 'DeepSeek-R1 vs. Distills 2026: Was Sie wirklich verlieren',
     seoTitle: 'DeepSeek-R1 vs. Distills 2026: Was Sie verlieren',
-    intro: 'Das echte 671B-DeepSeek-R1 lässt sich zu Hause nicht ausführen — was Sie ausführen, ist ein Distill auf Basis von Qwen2.5 oder Llama 3. Dieser Beitrag erklärt genau, was die Distillation behält (Chain-of-Thought, Selbstverifikation, Reflexion), was sie verliert (rohe Leistungsfähigkeit und Breite) und ob diese Lücke für Ihren Anwendungsfall relevant ist.',
+    intro: 'Das echte 671B-DeepSeek-R1 lässt sich zu Hause nicht ausführen — was Sie ausführen, ist ein Distill auf Basis von Qwen2.5 oder Llama 3.1/3.3. Dieser Beitrag erklärt genau, was die Distillation behält (Chain-of-Thought, Selbstverifikation, Reflexion), was sie verliert (rohe Leistungsfähigkeit und Breite) und ob diese Lücke für Ihren Anwendungsfall relevant ist. DeepSeeks aktuelle Generation ist DeepSeek-V4; R1 und seine Distillate gehören zur Vorgängergeneration, und die Distillate lassen sich weiterhin lokal betreiben.',
     metaDescription: 'Das echte 671B-DeepSeek-R1 läuft nicht zu Hause — Sie führen ein Distill aus. Hier steht genau, was die Distillation behält, was sie verliert und ob die Lücke für Sie zählt.',
     twitterDescription: 'Das vollständige 671B-DeepSeek-R1 läuft nur im Rechenzentrum. Ein Distill kopiert sein Reasoning auf eine kleine Basis. Was die Distillation übersteht, was nicht und wann die Lücke zählt.',
     publishDate: '2026-06-19',
@@ -253,15 +257,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Entwickler, die entscheiden, ob ein lokales DeepSeek-R1-Distill ausreicht oder ob das vollständige gehostete R1-Modell nötig ist',
     primaryTerm: 'DeepSeek-R1 distillation',
-    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Llama 3', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3'],
+    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3', 'DeepSeek-V4-Flash', 'DeepSeek-V4-Pro'],
     targetKeywords: ['deepseek r1 vs distill', 'deepseek distillation erklärt', 'volles r1 vs distill', 'was verliert distillation', 'deepseek r1 671b'],
     ctaText: 'Sie fragen sich, wie weit ein lokales Distill vom vollständigen R1 entfernt ist? Senden Sie denselben Reasoning-Prompt mit PromptQuorum in einem Durchlauf an Ihr Distill und an die gehosteten Spitzenmodelle — im direkten Vergleich ist die Lücke leichter zu erkennen als zu erraten.',
-    leadAnswerBlock: '**Die Distillation kopiert das Reasoning-Verhalten von DeepSeek-R1 — Chain-of-Thought, Selbstverifikation und Reflexion — auf eine kleine Qwen2.5- oder Llama-3-Basis, sie kann aber die rohe Leistungsfähigkeit und Breite des vollständigen 671B-Modells nicht kopieren.** Sie behalten die Art, wie R1 denkt; Sie verlieren einen Teil dessen, was es weiß, und wie zuverlässig es die schwierigsten Probleme löst. Bei den meisten lokalen Mathe- und Logikaufgaben ist die Lücke klein; bei Aufgaben am Rand des Machbaren oder mit breitem Wissensbedarf ist sie real.',
+    leadAnswerBlock: '**Die Distillation kopiert das Reasoning-Verhalten von DeepSeek-R1 — Chain-of-Thought, Selbstverifikation und Reflexion — auf eine kleine Qwen2.5- oder Llama-3.1/3.3-Basis, sie kann aber die rohe Leistungsfähigkeit und Breite des vollständigen 671B-Modells nicht kopieren.** Sie behalten die Art, wie R1 denkt; Sie verlieren einen Teil dessen, was es weiß, und wie zuverlässig es die schwierigsten Probleme löst. Bei den meisten lokalen Mathe- und Logikaufgaben ist die Lücke klein; bei Aufgaben am Rand des Machbaren oder mit breitem Wissensbedarf ist sie real.',
     quickAnswerTop: {
       de: {
         question: 'Was verlieren Sie tatsächlich, wenn Sie ein DeepSeek-R1-Distill statt des vollständigen R1 ausführen?',
         answer: 'Sie behalten den Reasoning-Stil von R1 — den expliziten Chain-of-Thought, die Selbstprüfung und die Reflexion, die es bei Mathe und Logik stark machen. Sie verlieren rohe Leistungsfähigkeit und Breite: Das vollständige 671B-Modell löst die schwierigsten Probleme zuverlässiger und weiß mehr. Für alltägliches lokales Reasoning ist die Lücke klein; bei Aufgaben am Rand des Machbaren wird sie größer.',
         bullets: [
+          'Neuere Linie: DeepSeek-V4 ist aktuell; R1 und V3 sind Vorgängergeneration, die R1-Distillate laufen weiterhin lokal',
           'Volles R1: 671B MoE, ~37B aktiv pro Token, ~376–404 GB bei Q4 — nur im Rechenzentrum',
           'Ein Distill = ein bestehendes kleines Modell, feinabgestimmt auf ~800K Reasoning-Beispiele von R1',
           'BEHALTEN: Chain-of-Thought, Selbstverifikation, Reflexion (das Reasoning-Verhalten)',
@@ -291,8 +296,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
+          'DeepSeeks aktuelle Generation ist DeepSeek-V4 (Flash und Pro, offene Gewichte, Server-Klasse); R1 und V3 sind Vorgängergeneration, die R1-Distillate sind jedoch eigenständige Open-Weight-Veröffentlichungen und laufen weiterhin lokal.',
           'Das vollständige DeepSeek-R1 ist ein 671B-Mixture-of-Experts-Modell (~37B aktiv pro Token), das bei Q4 ~376–404 GB benötigt — zu Hause nicht ausführbar.',
-          'Ein „Distill" ist ein eigenständiges, kleineres Modell (Qwen2.5- oder Llama-3-Basis), feinabgestimmt auf ~800K Reasoning-Spuren, die das vollständige R1 erzeugt hat.',
+          'Ein „Distill" ist ein eigenständiges, kleineres Modell (Qwen2.5- oder Llama-3.1/3.3-Basis), feinabgestimmt auf ~800K Reasoning-Spuren, die das vollständige R1 erzeugt hat.',
           'Die Distillation BEHÄLT das Reasoning-Verhalten: expliziten Chain-of-Thought, Selbstverifikation und Reflexion.',
           'Die Distillation VERLIERT rohe Leistungsfähigkeit und Breite — das vollständige Modell löst die schwierigsten Probleme zuverlässiger und weiß mehr.',
           'Für alltägliche lokale Mathe und Logik ist die Lücke klein; bei Aufgaben am Rand des Machbaren und mit breitem Wissensbedarf wird sie größer.',
@@ -308,12 +314,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Wenn Sie `ollama run deepseek-r1:14b` eingeben, führen Sie keine kleinere Version von DeepSeek-R1 aus — Sie führen ein Qwen2.5 14B aus, das gelernt hat, das Reasoning von R1 nachzuahmen.** Der Name „DeepSeek-R1-Distill-Qwen-14B" ist präzise, aber leicht falsch zu lesen: Der Teil „DeepSeek-R1" beschreibt, woher das Reasoning stammt, und der Teil „Qwen-14B" ist das tatsächliche Modell, das auf Ihrer GPU läuft.',
           'Das ist wichtig, weil die Erwartungen dem Namen folgen. Man nimmt an, ein Distill sei „R1, nur kleiner und etwas schlechter". Es ist näher an „einem fähigen offenen Modell, das gelernt hat, wie R1 zu denken". Diese Sichtweise sagt das Verhalten voraus, das Sie tatsächlich sehen werden: ausgezeichnete Reasoning-Struktur, gelegentliche Lücken beim rohen Wissen oder bei der Zuverlässigkeit in den schwierigsten Fällen.',
           'Zur Hardware-Realität dahinter, warum das vollständige Modell zu Hause tabu ist, siehe [DeepSeek-V3 Lokale Hardware-Anforderungen](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 ist das Chat-Modell-Geschwister mit demselben 671B-Klassen-Fußabdruck.',
-          '**Update:** DeepSeek hat inzwischen DeepSeek-V4 (Flash und Pro) als neuere Flaggschiff-Generation veröffentlicht, ebenfalls als offene Gewichte verfügbar. Die hier behandelten R1-Distillate werden nicht eingestellt und bleiben weiterhin uneingeschränkt lokal nutzbar — wer die neueste Architektur möchte, sollte V4 zusätzlich in Betracht ziehen.',
+          '**Update — DeepSeeks aktuelle Generation ist DeepSeek-V4, nicht R1.** V4 (Flash und Pro) ist als offene Gewichte veröffentlicht (V4-Flash: rund 284B Parameter gesamt, 13B aktiv, MIT-Lizenz), gehört aber zur Server-Klasse und ist kein Modell für eine einzelne GPU. Laut DeepSeek-Changelog waren die alten API-Namen `deepseek-chat` und `deepseek-reasoner` (die Generationen V3 und R1) zur Abschaltung am 2026-07-24 vorgesehen; die API liefert jetzt die V4-Familie. Ein „gehostetes R1“ meint in diesem Beitrag daher die vollständigen R1-Gewichte bei einem Drittanbieter oder auf einem eigenen Cluster. Die hier behandelten R1-Distillate sind eigenständige Open-Weight-Veröffentlichungen, die von dieser Mitteilung nicht eingestellt wurden und weiterhin lokal laufen — sie sind Modelle der Vorgängergeneration, nicht DeepSeeks neueste Linie.',
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Ein DeepSeek-R1-Distill ist ein bestehendes kleines Modell (Qwen2.5 oder Llama 3), das feinabgestimmt wurde, um das Reasoning des vollständigen R1 nachzuahmen — keine verkleinerte Kopie von R1 selbst.',
+            text: 'Ein DeepSeek-R1-Distill ist ein bestehendes kleines Modell (Qwen2.5 oder Llama 3.1/3.3), das feinabgestimmt wurde, um das Reasoning des vollständigen R1 nachzuahmen — keine verkleinerte Kopie von R1 selbst.',
           },
           {
             type: 'plain-terms',
@@ -341,11 +347,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'DeepSeek stimmte Qwen2.5- und Llama-3-Basismodelle auf ~800.000 vom vollständigen R1 erzeugten Reasoning-Beispielen fein ab und übertrug so seinen Reasoning-Stil auf kleine Modelle.',
+            text: 'DeepSeek stimmte Qwen2.5- und Llama-3.1/3.3-Basismodelle auf ~800.000 vom vollständigen R1 erzeugten Reasoning-Beispielen fein ab und übertrug so seinen Reasoning-Stil auf kleine Modelle.',
           },
         ],
         image: '/images/deepseek-r1-vs-distills-explained-2026-distillation-tree-de.svg',
-        imageCaption: 'DeepSeek-R1-Distillationsbaum: Das vollständige 671B-R1 erzeugt rund 800K Reasoning-Beispiele, mit denen sechs offizielle Distills auf Qwen2.5-Basis (1,5B–32B) und Llama-3-Basis (8B, 70B) feinabgestimmt werden — alle laufen auf Consumer-GPUs.',
+        imageCaption: 'DeepSeek-R1-Distillationsbaum: Das vollständige 671B-R1 erzeugt rund 800K Reasoning-Beispiele, mit denen sechs offizielle Distills auf Qwen2.5-Basis (1,5B–32B) und Llama-3.1/3.3-Basis (8B, 70B) feinabgestimmt werden — alle laufen auf Consumer-GPUs.',
       },
       distillList: {
         id: 'distill-list',
@@ -436,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Ist ein DeepSeek-R1-Distill dasselbe Modell wie DeepSeek-R1, nur kleiner?', a: 'Nein. Ein Distill ist ein anderes Basismodell (Qwen2.5 oder Llama 3), das auf ~800K Beispielen feinabgestimmt wurde, um das Reasoning von R1 nachzuahmen. Es behält den Reasoning-Stil von R1, enthält aber keinen der Parameter von R1.' },
+          { q: 'Ist ein DeepSeek-R1-Distill dasselbe Modell wie DeepSeek-R1, nur kleiner?', a: 'Nein. Ein Distill ist ein anderes Basismodell (Qwen2.5 oder Llama 3.1/3.3), das auf ~800K Beispielen feinabgestimmt wurde, um das Reasoning von R1 nachzuahmen. Es behält den Reasoning-Stil von R1, enthält aber keinen der Parameter von R1.' },
           { q: 'Was genau behält die Distillation vom vollständigen R1?', a: 'Das Reasoning-Verhalten: Chain-of-Thought, Selbstverifikation und Reflexion. Das sind Muster der Token-Generierung, die überwachtes Fine-Tuning zuverlässig überträgt — deshalb erreicht ein 7B-Distill 55,5 % bei AIME 2024.' },
           { q: 'Was verliert ein Distill gegenüber dem vollständigen 671B-R1?', a: 'Rohe Leistungsfähigkeit, Breite des Weltwissens und Zuverlässigkeit bei den schwierigsten Problemen. Je kleiner das Distill, desto größer die Lücke — auch wenn sie bei gängigen Reasoning-Aufgaben klein bleibt.' },
           { q: 'Warum kann ich das vollständige 671B-DeepSeek-R1 nicht zu Hause ausführen?', a: 'Es benötigt bei Q4 ~376–404 GB VRAM, weil alle 671B-Parameter resident sein müssen, obwohl pro Token nur ~37B aktiviert werden. Das ist Rechenzentrums-Hardware. Ein 1,58-Bit-Build läuft mit ~0,3 Token/s — eine Kuriosität, nicht nutzbar.' },
@@ -446,6 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ist DeepSeek-V3 ein Distill von R1?', a: 'Nein. DeepSeek-V3 ist ein eigenständiges 671B-MoE-Chat-Modell, kein Reasoning-Modell und kein Distill. R1 ist das Reasoning-Modell; die Distills ahmen R1 nach, nicht V3.' },
           { q: 'Was ist der Unterschied zwischen DeepSeek-R1 und DeepSeek-R1-Distill?', a: 'DeepSeek-R1 ist das 671B-Mixture-of-Experts-Reasoning-Modell; ein DeepSeek-R1-Distill-Modell ist ein kleineres Qwen- oder Llama-Modell, das auf von R1 erzeugten Reasoning-Beispielen feinabgestimmt wurde. Der Name nennt die Quelle (R1) und die Basis (Qwen oder Llama) — und die Basis bestimmt die Wissensgrenze.' },
           { q: 'Welcher Ollama-Tag entspricht welchem DeepSeek-R1-Distill?', a: 'Die Tags 1.5b, 7b, 14b, 32b und 70b entsprechen den jeweiligen Qwen- oder Llama-basierten Distills, 671b ist das vollständige R1. Der Tag 8b — den auch ein bloßes `ollama run deepseek-r1` lädt — ist DeepSeek-R1-0528-Qwen3-8B, nicht das ursprüngliche Llama-8B-Distill.' },
+          { q: 'Ist DeepSeek-R1 noch das neueste Modell von DeepSeek?', a: 'Nein. DeepSeeks aktuelle Generation ist DeepSeek-V4 (Flash und Pro), veröffentlicht als offene Gewichte. R1 und V3 sind Modelle der Vorgängergeneration; laut Changelog waren die API-Namen deepseek-chat und deepseek-reasoner zur Abschaltung am 2026-07-24 vorgesehen. Die R1-Distillate sind eigenständige Open-Weight-Veröffentlichungen, die diese Mitteilung nicht eingestellt hat, daher laufen sie weiterhin lokal — sie sind lediglich nicht mehr DeepSeeks neueste Linie.' },
         ],
       },
       relatedArticles: {
@@ -466,6 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Veröffentlicht am 19.06.2026. Nächste Überprüfung fällig am 19.06.2027 (jährliche Freshness-Stufe — zeitloser Explainer mit jahresgebundenen Modellfakten).',
           'Behandelt das vollständige 671B-R1 gegenüber den sechs offiziellen Distills und DeepSeek-R1-0528-Qwen3-8B. Nur reasoning-interner Vergleich; modellübergreifende Coding-Vergleiche stehen im Coding-Leitfaden.',
           'Aktualisiert am 19.10.2026: Referenztabelle der sechs Distills (Basismodelle, AIME 2024, Ollama-Tags) ergänzt, Liste der Basismodelle korrigiert, klargestellt, dass der Tag deepseek-r1:8b R1-0528-Qwen3-8B ist, und dessen System-Prompt-Ausnahme vermerkt.',
+          'Aktualisiert am 2026-10-19 (Generationsprüfung): DeepSeek-V4 als aktuelle Generation und R1/V3 als Vorgängergeneration kenntlich gemacht, die R1-Distillate als eigenständige, weiterhin lokal nutzbare Open-Weight-Veröffentlichungen eingeordnet und die Llama-3-Basismodell-Angaben zu Llama 3.1/3.3 präzisiert.',
         ],
       },
     },
@@ -478,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/deepseek-r1-vs-distills-explained-2026-overview-hero-fr.webp',
     title: 'DeepSeek-R1 vs distills 2026 : ce que vous perdez vraiment',
     seoTitle: 'DeepSeek-R1 vs distills 2026 : ce que vous perdez',
-    intro: 'Impossible de faire tourner le vrai DeepSeek-R1 671B chez vous — ce que vous exécutez est un distill bâti sur une base Qwen2.5 ou Llama 3. Ce guide explique précisément ce que la distillation conserve (chaîne de raisonnement, auto-vérification, réflexion), ce qu\'elle perd (capacité brute et étendue) et si cet écart compte pour votre cas d\'usage.',
+    intro: 'Impossible de faire tourner le vrai DeepSeek-R1 671B chez vous — ce que vous exécutez est un distill bâti sur une base Qwen2.5 ou Llama 3.1/3.3. Ce guide explique précisément ce que la distillation conserve (chaîne de raisonnement, auto-vérification, réflexion), ce qu\'elle perd (capacité brute et étendue) et si cet écart compte pour votre cas d\'usage. La génération actuelle de DeepSeek est DeepSeek-V4 ; R1 et ses distillations appartiennent à la génération précédente et restent utilisables en local.',
     metaDescription: 'Impossible de faire tourner le vrai DeepSeek-R1 671B chez vous — vous exécutez un distill. Voici précisément ce que la distillation conserve, ce qu\'elle perd et si l\'écart compte pour vous.',
     twitterDescription: 'Le DeepSeek-R1 671B complet tourne uniquement en datacenter. Un distill copie son raisonnement sur une petite base. Voici ce qui survit à la distillation, ce qui disparaît et quand l\'écart compte.',
     publishDate: '2026-06-19',
@@ -487,15 +495,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Développeurs qui se demandent si un distill DeepSeek-R1 local suffit face au modèle R1 complet hébergé',
     primaryTerm: 'DeepSeek-R1 distillation',
-    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Llama 3', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3'],
+    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3', 'DeepSeek-V4-Flash', 'DeepSeek-V4-Pro'],
     targetKeywords: ['deepseek r1 vs distill', 'distillation deepseek expliquée', 'r1 complet vs distillé', 'que perd la distillation', 'deepseek r1 671b'],
     ctaText: 'Vous vous demandez à quelle distance un distill local se trouve du R1 complet ? Envoyez le même prompt de raisonnement à votre distill et aux modèles de pointe hébergés en un seul envoi avec PromptQuorum — l\'écart se voit mieux côte à côte qu\'à deviner.',
-    leadAnswerBlock: '**La distillation copie le comportement de raisonnement de DeepSeek-R1 — chaîne de raisonnement, auto-vérification et réflexion — sur une petite base Qwen2.5 ou Llama 3, mais elle ne peut pas copier la capacité brute et l\'étendue du modèle 671B complet.** Vous conservez la façon dont R1 pense ; vous perdez une partie de ce qu\'il sait et de sa fiabilité sur les problèmes les plus difficiles. Pour la plupart des tâches locales de maths et de logique, l\'écart est faible ; pour le travail à la limite du domaine ou exigeant un large savoir, il est réel.',
+    leadAnswerBlock: '**La distillation copie le comportement de raisonnement de DeepSeek-R1 — chaîne de raisonnement, auto-vérification et réflexion — sur une petite base Qwen2.5 ou Llama 3.1/3.3, mais elle ne peut pas copier la capacité brute et l\'étendue du modèle 671B complet.** Vous conservez la façon dont R1 pense ; vous perdez une partie de ce qu\'il sait et de sa fiabilité sur les problèmes les plus difficiles. Pour la plupart des tâches locales de maths et de logique, l\'écart est faible ; pour le travail à la limite du domaine ou exigeant un large savoir, il est réel.',
     quickAnswerTop: {
       fr: {
         question: 'Que perdez-vous vraiment en exécutant un distill DeepSeek-R1 plutôt que le R1 complet ?',
         answer: 'Vous conservez le style de raisonnement de R1 — la chaîne de raisonnement explicite, l\'auto-vérification et la réflexion qui le rendent solide en maths et en logique. Vous perdez la capacité brute et l\'étendue : le modèle 671B complet résout les problèmes les plus difficiles de manière plus fiable et en sait plus. Pour le raisonnement local quotidien, l\'écart est faible ; il s\'élargit sur les tâches à la limite du domaine.',
         bullets: [
+          'Gamme plus récente : DeepSeek-V4 est la génération actuelle ; R1 et V3 sont la génération précédente, et les distillations R1 s\'exécutent toujours en local',
           'R1 complet : 671B MoE, ~37B actifs par token, ~376–404 Go en Q4 — datacenter uniquement',
           'Un distill = un petit modèle existant affiné sur ~800K échantillons de raisonnement issus de R1',
           'CONSERVÉ : chaîne de raisonnement, auto-vérification, réflexion (le comportement de raisonnement)',
@@ -525,8 +534,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
+          'La génération actuelle de DeepSeek est DeepSeek-V4 (Flash et Pro, poids ouverts, classe serveur) ; R1 et V3 appartiennent à la génération précédente, mais les distillations R1 sont des publications distinctes en poids ouverts qui s\'exécutent toujours en local.',
           'Le DeepSeek-R1 complet est un modèle Mixture-of-Experts de 671B (~37B actifs par token) nécessitant ~376–404 Go en Q4 — impossible à exécuter chez vous.',
-          'Un « distill » est un modèle distinct et plus petit (base Qwen2.5 ou Llama 3) affiné sur ~800K traces de raisonnement générées par le R1 complet.',
+          'Un « distill » est un modèle distinct et plus petit (base Qwen2.5 ou Llama 3.1/3.3) affiné sur ~800K traces de raisonnement générées par le R1 complet.',
           'La distillation CONSERVE le comportement de raisonnement : chaîne de raisonnement explicite, auto-vérification et réflexion.',
           'La distillation PERD la capacité brute et l\'étendue — le modèle complet résout les problèmes les plus difficiles de manière plus fiable et en sait plus.',
           'Pour les maths et la logique locales du quotidien, l\'écart est faible ; il s\'élargit sur les tâches à la limite du domaine et exigeant un large savoir.',
@@ -542,12 +552,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Quand vous tapez `ollama run deepseek-r1:14b`, vous n\'exécutez pas une version plus petite de DeepSeek-R1 — vous exécutez Qwen2.5 14B entraîné à imiter le raisonnement de R1.** Le nom « DeepSeek-R1-Distill-Qwen-14B » est précis mais facile à mal lire : la partie « DeepSeek-R1 » décrit d\'où vient le raisonnement, et la partie « Qwen-14B » est le modèle réel qui tourne sur votre GPU.',
           'Cela compte, car les attentes suivent le nom. On suppose qu\'un distill est « R1, mais plus petit et un peu moins bon ». Il est plus proche d\'« un modèle ouvert compétent qui a appris à penser comme R1 ». Ce cadrage prédit le comportement que vous observerez réellement : une excellente structure de raisonnement, des lacunes ponctuelles en savoir brut ou en fiabilité dans les cas les plus difficiles.',
           'Pour la réalité matérielle expliquant pourquoi le modèle complet est inaccessible chez soi, voir [Configuration matérielle locale de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 est le frère modèle de chat avec la même empreinte de classe 671B.',
-          '**Mise à jour :** DeepSeek a depuis publié DeepSeek-V4 (Flash et Pro) comme nouvelle génération phare, également disponible en poids ouverts. Les distillations R1 présentées ici ne sont pas abandonnées et restent pleinement utilisables en local — si vous voulez l\'architecture la plus récente, V4 mérite d\'être évalué en complément.',
+          '**Mise à jour — la génération actuelle de DeepSeek est DeepSeek-V4, et non R1.** V4 (Flash et Pro) est publié en poids ouverts (V4-Flash : environ 284B de paramètres au total, 13B actifs, licence MIT), mais relève de la classe serveur et non d\'un modèle pour un seul GPU. Le journal des modifications de DeepSeek prévoyait l\'arrêt, le 2026-07-24, des anciens noms d\'API `deepseek-chat` et `deepseek-reasoner` (générations V3 et R1) ; l\'API sert désormais la famille V4. Un « R1 hébergé » désigne donc ici les poids complets de R1 chez un hébergeur tiers ou sur votre propre cluster. Les distillations R1 traitées ici sont des publications distinctes en poids ouverts, non retirées par cet avis et toujours exécutables en local — ce sont des modèles de la génération précédente, pas la gamme la plus récente de DeepSeek.',
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Un distill DeepSeek-R1 est un petit modèle existant (Qwen2.5 ou Llama 3) affiné pour imiter le raisonnement du R1 complet, et non une copie réduite de R1 lui-même.',
+            text: 'Un distill DeepSeek-R1 est un petit modèle existant (Qwen2.5 ou Llama 3.1/3.3) affiné pour imiter le raisonnement du R1 complet, et non une copie réduite de R1 lui-même.',
           },
           {
             type: 'plain-terms',
@@ -575,11 +585,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'DeepSeek a affiné des modèles de base Qwen2.5 et Llama 3 sur ~800 000 échantillons de raisonnement générés par le R1 complet, transférant son style de raisonnement à de petits modèles.',
+            text: 'DeepSeek a affiné des modèles de base Qwen2.5 et Llama 3.1/3.3 sur ~800 000 échantillons de raisonnement générés par le R1 complet, transférant son style de raisonnement à de petits modèles.',
           },
         ],
         image: '/images/deepseek-r1-vs-distills-explained-2026-distillation-tree-fr.svg',
-        imageCaption: 'Arbre de distillation DeepSeek-R1 : le R1 671B complet génère environ 800K échantillons de raisonnement qui affinent six distills officiels sur bases Qwen2.5 (1,5B–32B) et Llama 3 (8B, 70B), tous exécutables sur GPU grand public.',
+        imageCaption: 'Arbre de distillation DeepSeek-R1 : le R1 671B complet génère environ 800K échantillons de raisonnement qui affinent six distills officiels sur bases Qwen2.5 (1,5B–32B) et Llama 3.1/3.3 (8B, 70B), tous exécutables sur GPU grand public.',
       },
       distillList: {
         id: 'distill-list',
@@ -670,7 +680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Un distill DeepSeek-R1 est-il le même modèle que DeepSeek-R1, juste plus petit ?', a: 'Non. Un distill est un modèle de base différent (Qwen2.5 ou Llama 3) affiné pour imiter le raisonnement de R1 sur ~800K échantillons. Il conserve le style de raisonnement de R1 mais ne contient aucun de ses paramètres.' },
+          { q: 'Un distill DeepSeek-R1 est-il le même modèle que DeepSeek-R1, juste plus petit ?', a: 'Non. Un distill est un modèle de base différent (Qwen2.5 ou Llama 3.1/3.3) affiné pour imiter le raisonnement de R1 sur ~800K échantillons. Il conserve le style de raisonnement de R1 mais ne contient aucun de ses paramètres.' },
           { q: 'Que conserve exactement la distillation du R1 complet ?', a: 'Le comportement de raisonnement : chaîne de raisonnement, auto-vérification et réflexion. Ce sont des schémas de génération de tokens que l\'affinage supervisé transfère de manière fiable, raison pour laquelle un distill 7B atteint 55.5 % sur AIME 2024.' },
           { q: 'Que perd un distill face au R1 671B complet ?', a: 'La capacité brute, l\'étendue du savoir général et la fiabilité sur les problèmes les plus difficiles. Plus le distill est petit, plus l\'écart est grand — même s\'il reste faible sur les tâches de raisonnement courantes.' },
           { q: 'Pourquoi ne puis-je pas exécuter le DeepSeek-R1 671B complet chez moi ?', a: 'Il nécessite ~376–404 Go de VRAM en Q4 car les 671B paramètres doivent tous résider en mémoire même si seuls ~37B s\'activent par token. C\'est du matériel de datacenter. Un build en 1.58 bits tourne à ~0.3 token/s — une curiosité, inutilisable.' },
@@ -680,6 +690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'DeepSeek-V3 est-il un distill de R1 ?', a: 'Non. DeepSeek-V3 est un modèle de chat MoE 671B distinct, pas un modèle de raisonnement ni un distill. R1 est le modèle de raisonnement ; les distills imitent R1, pas V3.' },
           { q: 'Quelle est la différence entre DeepSeek-R1 et DeepSeek-R1-Distill ?', a: 'DeepSeek-R1 est le modèle de raisonnement Mixture-of-Experts de 671B ; un modèle DeepSeek-R1-Distill est un modèle Qwen ou Llama plus petit, affiné sur des échantillons de raisonnement générés par R1. Le nom indique la source (R1) et la base (Qwen ou Llama), et c\'est la base qui fixe le plafond de connaissances.' },
           { q: 'Quel tag Ollama correspond à quel distill DeepSeek-R1 ?', a: 'Les tags 1.5b, 7b, 14b, 32b et 70b correspondent aux distills Qwen ou Llama du même nom, et 671b est le R1 complet. Le tag 8b — que télécharge aussi un simple `ollama run deepseek-r1` — est DeepSeek-R1-0528-Qwen3-8B, pas le distill Llama-8B d\'origine.' },
+          { q: 'DeepSeek-R1 est-il encore le modèle le plus récent de DeepSeek ?', a: 'Non. La génération actuelle de DeepSeek est DeepSeek-V4 (Flash et Pro), publiée en poids ouverts. R1 et V3 sont des modèles de la génération précédente, et le journal des modifications de DeepSeek prévoyait l\'arrêt des noms d\'API deepseek-chat et deepseek-reasoner le 2026-07-24. Les distillations R1 sont des publications distinctes en poids ouverts que cet avis n\'a pas retirées : elles s\'exécutent donc toujours en local, mais ne constituent plus la gamme la plus récente de DeepSeek.' },
         ],
       },
       relatedArticles: {
@@ -700,6 +711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Publié le 19/06/2026. Prochaine révision prévue le 19/06/2027 (palier de fraîcheur annuel — explication intemporelle avec des faits modèles ancrés sur l\'année).',
           'Couvre le R1 671B complet face aux six distills officiels et à DeepSeek-R1-0528-Qwen3-8B. Comparaison interne au raisonnement uniquement ; les comparaisons de code entre modèles figurent dans le guide de code.',
           'Mis à jour le 19/10/2026 : ajout du tableau de référence des six distills (modèles de base, AIME 2024, tags Ollama), correction de la liste des modèles de base, précision que le tag deepseek-r1:8b correspond à R1-0528-Qwen3-8B et mention de son exception pour le prompt système.',
+          'Mis à jour le 2026-10-19 (contrôle de génération) : DeepSeek-V4 indiqué comme génération actuelle et R1/V3 comme génération précédente, distillations R1 présentées comme publications distinctes en poids ouverts toujours utilisables en local, et références aux modèles de base Llama 3 précisées en Llama 3.1/3.3.',
         ],
       },
     },
@@ -712,7 +724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/deepseek-r1-vs-distills-explained-2026-overview-hero-ja.webp',
     title: 'DeepSeek-R1 vs 蒸留版 2026：実際に失うもの',
     seoTitle: 'DeepSeek-R1 vs 蒸留版 2026：実際に失うもの',
-    intro: '本物の671BのDeepSeek-R1を自宅で動かすことはできません。動かせるのは、Qwen2.5またはLlama 3をベースに構築された蒸留版です。本記事では、蒸留が保持するもの（思考の連鎖、自己検証、再考）、失うもの（生の能力と知識の広さ）、そしてそのギャップがあなたの用途で問題になるかどうかを正確に解説します。',
+    intro: '本物の671BのDeepSeek-R1を自宅で動かすことはできません。動かせるのは、Qwen2.5またはLlama 3をベースに構築された蒸留版です。本記事では、蒸留が保持するもの（思考の連鎖、自己検証、再考）、失うもの（生の能力と知識の広さ）、そしてそのギャップがあなたの用途で問題になるかどうかを正確に解説します。DeepSeekの現行世代はDeepSeek-V4です。R1とその蒸留モデルは前世代ですが、蒸留モデルは引き続きローカルで利用できます。',
     metaDescription: '本物の671BのDeepSeek-R1は自宅で動かせず、動かすのは蒸留版です。蒸留が何を保持し、何を失い、そのギャップがあなたにとって問題かを正確に解説します。',
     twitterDescription: '完全な671BのDeepSeek-R1はデータセンター専用です。蒸留版はその推論を小型ベースにコピーします。蒸留で何が残り、何が失われ、いつギャップが問題になるかを解説します。',
     publishDate: '2026-06-19',
@@ -721,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'ローカルのDeepSeek-R1蒸留版で十分か、それとも完全なホスト版R1モデルが必要かを判断する開発者',
     primaryTerm: 'DeepSeek-R1 distillation',
-    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Llama 3', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3'],
+    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3', 'DeepSeek-V4-Flash', 'DeepSeek-V4-Pro'],
     targetKeywords: ['DeepSeek-R1 蒸留版 比較', 'DeepSeek 蒸留 解説', '完全版R1 蒸留版', '蒸留で失うもの', 'DeepSeek-R1 671B'],
     ctaText: 'ローカルの蒸留版が完全なR1からどれだけ離れているか気になりますか？PromptQuorumを使えば、同じ推論プロンプトを蒸留版とホスト版のフロンティアモデルに1回でまとめて送信できます。ギャップは推測するより並べて見るほうが分かりやすいです。',
     leadAnswerBlock: '**蒸留はDeepSeek-R1の推論の振る舞い（思考の連鎖、自己検証、再考）を小型のQwen2.5またはLlama 3ベースにコピーしますが、完全な671Bモデルの生の能力と知識の広さはコピーできません。** R1の考え方は保持されますが、R1が知っていることの一部と、最難問を解く信頼性の一部が失われます。多くのローカルな数学・論理タスクではギャップは小さく、フロンティア級の難易度や広範な知識を要する作業では現実的な差になります。',
@@ -730,6 +742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '完全版R1の代わりにDeepSeek-R1蒸留版を動かすと、実際に何を失うのですか？',
         answer: 'R1の推論スタイル、つまり数学と論理を得意にする明示的な思考の連鎖、自己チェック、再考は保持されます。失うのは生の能力と知識の広さです。完全な671Bモデルは最難問をより確実に解き、より多くを知っています。日常的なローカル推論ではギャップは小さく、フロンティア級の難易度のタスクで広がります。',
         bullets: [
+          '新しいライン：現行はDeepSeek-V4。R1とV3は前世代で、R1の蒸留モデルは引き続きローカルで動作',
           '完全版R1：671B MoE、トークンあたり約37Bがアクティブ、Q4で約376–404 GB — データセンター専用',
           '蒸留版 = 既存の小型モデルをR1由来の約800Kの推論サンプルでファインチューニングしたもの',
           '保持：思考の連鎖、自己検証、再考（推論の振る舞い）',
@@ -759,6 +772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
+          'DeepSeekの現行世代はDeepSeek-V4（FlashとPro、オープンウェイト、サーバー級）です。R1とV3は前世代ですが、R1の蒸留モデルは独立したオープンウェイトの公開物で、引き続きローカルで動かせます。',
           '完全なDeepSeek-R1は671BのMixture-of-Expertsモデル（トークンあたり約37Bがアクティブ）で、Q4で約376–404 GBが必要 — 自宅では動かせません。',
           '「蒸留版」とは、完全版R1が生成した約800Kの推論トレースでファインチューニングされた、別個の小型モデル（Qwen2.5またはLlama 3ベース）です。',
           '蒸留は推論の振る舞いを保持します：明示的な思考の連鎖、自己検証、再考。',
@@ -776,7 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**`ollama run deepseek-r1:14b`と入力したとき、あなたが動かしているのはDeepSeek-R1の小型版ではなく、R1の推論を模倣するように教えられたQwen2.5 14Bです。** 名称「DeepSeek-R1-Distill-Qwen-14B」は正確ですが誤読しやすく、「DeepSeek-R1」の部分は推論の出所を表し、「Qwen-14B」の部分こそが実際にGPU上で動くモデルです。',
           'これが重要なのは、期待が名称に従うからです。多くの人は蒸留版を「R1の小型かつ少し劣る版」と考えます。実際には「R1のように考えることを学んだ、有能なオープンモデル」に近いものです。この捉え方は、実際に目にする振る舞いを予測します。優れた推論構造と、生の知識や最難ケースの信頼性における時折のギャップです。',
           '完全版モデルが自宅では使えない背景にあるハードウェアの現実については、[DeepSeek-V3 ローカルハードウェア要件](/prompt-bites/deepseek-v3-local-hardware-requirements)を参照してください。V3は同じ671Bクラスのフットプリントを持つチャットモデルの兄弟です。',
-          '**更新:** DeepSeekはその後、新しいフラッグシップ世代としてDeepSeek-V4(FlashおよびPro)をリリースしました。オープンウェイトとしても提供されています。本記事で扱うR1の蒸留モデルは廃止されるものではなく、引き続きローカルで問題なく利用できます。最新のアーキテクチャを求める場合は、V4もあわせて検討する価値があります。',
+          '**更新：DeepSeekの現行世代はR1ではなくDeepSeek-V4です。** V4（FlashとPro）はオープンウェイトとして公開されています（V4-Flash：総パラメータ約284B、アクティブ13B、MITライセンス）が、サーバー級であり、単一GPUで動かすモデルではありません。DeepSeekの変更履歴では、旧APIの名称`deepseek-chat`と`deepseek-reasoner`（V3・R1世代）は2026-07-24に終了する予定とされており、APIは現在V4ファミリーを提供しています。そのため本記事でいう「ホスト版R1」とは、第三者のホスト、または自前のクラスターで動かすR1の完全な重みを指します。ここで扱うR1の蒸留モデルは、この通知で廃止されていない独立したオープンウェイトの公開物であり、引き続きローカルで動かせます。ただし前世代のモデルであり、DeepSeekの最新ラインではありません。',
         ],
         snippetBlocks: [
           {
@@ -914,6 +928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'DeepSeek-V3はR1の蒸留版ですか？', a: 'いいえ。DeepSeek-V3は別個の671B MoEチャットモデルであり、推論モデルでも蒸留版でもありません。R1が推論モデルであり、蒸留版はV3ではなくR1を模倣します。' },
           { q: 'DeepSeek-R1とDeepSeek-R1-Distillの違いは何ですか？', a: 'DeepSeek-R1は671BのMixture-of-Experts推論モデルです。DeepSeek-R1-Distillモデルは、R1が生成した推論サンプルでファインチューニングされた、より小さなQwenまたはLlamaモデルです。名前は出どころ（R1）とベース（QwenまたはLlama）を示し、知識の上限を決めるのはベースです。' },
           { q: 'OllamaのどのタグがどのDeepSeek-R1蒸留版ですか？', a: '1.5b、7b、14b、32b、70bのタグは、それぞれ対応するQwenまたはLlamaベースの蒸留版に対応し、671bは完全版R1です。8bタグ（タグなしの`ollama run deepseek-r1`が取得するもの）は、元のLlama-8B蒸留版ではなくDeepSeek-R1-0528-Qwen3-8Bです。' },
+          { q: 'DeepSeek-R1は今もDeepSeekの最新モデルですか？', a: 'いいえ。DeepSeekの現行世代は、オープンウェイトとして公開されたDeepSeek-V4（FlashとPro）です。R1とV3は前世代のモデルで、DeepSeekの変更履歴ではAPI名deepseek-chatとdeepseek-reasonerが2026-07-24に終了する予定とされていました。R1の蒸留モデルはこの通知で廃止されていない独立したオープンウェイトの公開物のため、引き続きローカルで動かせます。ただし、DeepSeekの最新ラインではなくなっています。' },
         ],
       },
       relatedArticles: {
@@ -934,6 +949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2026-06-19公開。次回レビュー予定は2027-06-19（年次のフレッシュネス階層 — 年に紐づくモデル事実を含む不変の解説）。',
           '完全な671B R1と6つの公式蒸留版、およびDeepSeek-R1-0528-Qwen3-8Bを扱います。推論内部の比較のみで、モデル横断のコーディング比較はコーディングガイドにあります。',
           '2026-10-19更新：6つの蒸留版の参照表（ベースモデル、AIME 2024、Ollamaタグ）を追加し、ベースモデルの一覧を訂正し、deepseek-r1:8bタグがR1-0528-Qwen3-8Bであること、およびそのシステムプロンプトの例外を明記しました。',
+          '2026-10-19更新（世代チェック）：DeepSeek-V4が現行世代でR1/V3は前世代であること、R1の蒸留モデルは引き続きローカルで利用できる独立したオープンウェイトの公開物であることを明記し、ベースモデルのLlama 3の表記をLlama 3.1/3.3に改めました。',
         ],
       },
     },
@@ -946,7 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/deepseek-r1-vs-distills-explained-2026-overview-hero-zh.webp',
     title: 'DeepSeek-R1 与蒸馏版对比 2026：你实际会失去什么',
     seoTitle: 'DeepSeek-R1 与蒸馏版 2026：你实际失去什么',
-    intro: '你无法在家运行真正的 671B DeepSeek-R1，你能运行的是基于 Qwen2.5 或 Llama 3 构建的蒸馏版。本文准确说明蒸馏保留了什么（思维链、自我验证、反思）、失去了什么（原始能力与知识广度），以及这一差距对你的使用场景是否重要。',
+    intro: '你无法在家运行真正的 671B DeepSeek-R1，你能运行的是基于 Qwen2.5 或 Llama 3.1/3.3 构建的蒸馏版。本文准确说明蒸馏保留了什么（思维链、自我验证、反思）、失去了什么（原始能力与知识广度），以及这一差距对你的使用场景是否重要。DeepSeek 当前一代是 DeepSeek-V4；R1 及其蒸馏模型属于上一代，蒸馏模型仍可在本地运行。',
     metaDescription: '你无法在家运行真正的 671B DeepSeek-R1，运行的是蒸馏版。本文准确说明蒸馏保留什么、失去什么，以及差距对你是否重要。',
     twitterDescription: '完整的 671B DeepSeek-R1 仅限数据中心。蒸馏版把它的推理复制到小型基座上。本文讲清蒸馏中什么得以保留、什么会丢失，以及何时差距才重要。',
     publishDate: '2026-06-19',
@@ -955,15 +971,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: '需要判断本地 DeepSeek-R1 蒸馏版是否够用、还是必须用完整托管 R1 模型的开发者',
     primaryTerm: 'DeepSeek-R1 distillation',
-    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Llama 3', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3'],
+    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3', 'DeepSeek-V4-Flash', 'DeepSeek-V4-Pro'],
     targetKeywords: ['deepseek r1 与蒸馏版对比', 'deepseek 蒸馏 解析', '完整r1 与蒸馏版', '蒸馏会失去什么', 'deepseek r1 671b'],
     ctaText: '想知道本地蒸馏版离完整 R1 有多远？用 PromptQuorum 一次性把同一条推理提示词分发给你的蒸馏版和托管的前沿模型——差距并排对比比凭空猜测更容易看清。',
-    leadAnswerBlock: '**蒸馏把 DeepSeek-R1 的推理行为——思维链、自我验证和反思——复制到小型 Qwen2.5 或 Llama 3 基座上，但无法复制完整 671B 模型的原始能力和知识广度。** 你保留了 R1 的思考方式；你失去了它所知内容的一部分，以及它解决最难问题的可靠性。对大多数本地数学和逻辑任务而言，差距很小；对前沿难度或需要广博知识的工作而言，差距是实实在在的。',
+    leadAnswerBlock: '**蒸馏把 DeepSeek-R1 的推理行为——思维链、自我验证和反思——复制到小型 Qwen2.5 或 Llama 3.1/3.3 基座上，但无法复制完整 671B 模型的原始能力和知识广度。** 你保留了 R1 的思考方式；你失去了它所知内容的一部分，以及它解决最难问题的可靠性。对大多数本地数学和逻辑任务而言，差距很小；对前沿难度或需要广博知识的工作而言，差距是实实在在的。',
     quickAnswerTop: {
       zh: {
         question: '用 DeepSeek-R1 蒸馏版而非完整 R1，你实际会失去什么？',
         answer: '你保留了 R1 的推理风格——让它在数学和逻辑上强大的显式思维链、自我检查和反思。你失去了原始能力和知识广度：完整的 671B 模型解决最难问题更可靠、知道得更多。对日常本地推理而言差距很小；在前沿难度任务上差距会扩大。',
         bullets: [
+          '更新的产品线：当前是 DeepSeek-V4；R1 与 V3 属于上一代，R1 蒸馏模型仍可在本地运行',
           '完整 R1：671B MoE，每个 token 约激活 37B，Q4 下约 376–404 GB——仅限数据中心',
           '蒸馏版 = 用 R1 生成的约 800K 条推理样本微调的现有小模型',
           '保留：思维链、自我验证、反思（推理行为）',
@@ -993,8 +1010,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
+          'DeepSeek 当前一代是 DeepSeek-V4（Flash 与 Pro，开放权重，服务器级）；R1 与 V3 属于上一代，但 R1 蒸馏模型是独立发布的开放权重模型，仍可在本地运行。',
           '完整的 DeepSeek-R1 是 671B 的混合专家（MoE）模型（每个 token 约激活 37B），Q4 下需要约 376–404 GB——无法在家运行。',
-          '“蒸馏版”是一个独立的较小模型（Qwen2.5 或 Llama 3 基座），用完整 R1 生成的约 800K 条推理轨迹微调而成。',
+          '“蒸馏版”是一个独立的较小模型（Qwen2.5 或 Llama 3.1/3.3 基座），用完整 R1 生成的约 800K 条推理轨迹微调而成。',
           '蒸馏保留推理行为：显式思维链、自我验证和反思。',
           '蒸馏失去原始能力和广度——完整模型解决最难问题更可靠、知道得更多。',
           '对日常本地数学和逻辑而言差距很小；在前沿难度和需要广博知识的任务上差距会扩大。',
@@ -1010,12 +1028,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**当你输入 `ollama run deepseek-r1:14b` 时，你运行的并不是 DeepSeek-R1 的较小版本，而是被教会模仿 R1 推理的 Qwen2.5 14B。** 名称 “DeepSeek-R1-Distill-Qwen-14B” 很精确但容易误读：“DeepSeek-R1” 部分描述推理来自哪里，而 “Qwen-14B” 部分才是真正运行在你 GPU 上的模型。',
           '这一点很重要，因为预期会跟着名称走。人们以为蒸馏版是 “R1，只是更小、稍差”。它更接近 “一个学会像 R1 一样思考的有能力的开源模型”。这种理解能预测你实际会看到的行为：出色的推理结构，偶尔在原始知识或最难情形可靠性上的缺口。',
           '关于完整模型为何在家无法使用的硬件现实，参见 [DeepSeek-V3 本地硬件要求](/prompt-bites/deepseek-v3-local-hardware-requirements)——V3 是同属 671B 级别占用的对话模型兄弟。',
-          '**更新:** DeepSeek 此后发布了新一代旗舰模型 DeepSeek-V4(Flash 和 Pro),同样提供开源权重。本文介绍的 R1 蒸馏模型并未停用,依然可以完整地在本地运行——如果你想使用最新架构,可以将 V4 一并纳入考虑。',
+          '**更新：DeepSeek 当前一代是 DeepSeek-V4，而不是 R1。** V4（Flash 与 Pro）以开放权重发布（V4-Flash：总参数约 284B，激活参数 13B，MIT 许可证），但属于服务器级，并非单 GPU 模型。DeepSeek 的更新日志已将旧 API 名称 `deepseek-chat` 与 `deepseek-reasoner`（V3 与 R1 世代）安排在 2026-07-24 停用，API 现已提供 V4 系列。因此，本文所说的“托管 R1”指第三方托管或自建集群上的完整 R1 权重。本文介绍的 R1 蒸馏模型是独立发布的开放权重模型，该通知并未将其下线，仍可在本地运行——但它们属于上一代模型，并非 DeepSeek 最新一代产品。',
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'DeepSeek-R1 蒸馏版是一个被微调以模仿完整 R1 推理的现有小模型（Qwen2.5 或 Llama 3），而不是 R1 本身的缩小副本。',
+            text: 'DeepSeek-R1 蒸馏版是一个被微调以模仿完整 R1 推理的现有小模型（Qwen2.5 或 Llama 3.1/3.3），而不是 R1 本身的缩小副本。',
           },
           {
             type: 'plain-terms',
@@ -1043,11 +1061,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'DeepSeek 在完整 R1 生成的约 800,000 条推理样本上微调 Qwen2.5 和 Llama 3 基座模型，将其推理风格迁移到小模型上。',
+            text: 'DeepSeek 在完整 R1 生成的约 800,000 条推理样本上微调 Qwen2.5 和 Llama 3.1/3.3 基座模型，将其推理风格迁移到小模型上。',
           },
         ],
         image: '/images/deepseek-r1-vs-distills-explained-2026-distillation-tree-zh.svg',
-        imageCaption: 'DeepSeek-R1 蒸馏树：完整的 671B R1 生成约 80 万条推理样本，用于微调基于 Qwen2.5（1.5B–32B）和 Llama 3（8B、70B）的六个官方蒸馏版，均可在消费级 GPU 上运行。',
+        imageCaption: 'DeepSeek-R1 蒸馏树：完整的 671B R1 生成约 80 万条推理样本，用于微调基于 Qwen2.5（1.5B–32B）和 Llama 3.1/3.3（8B、70B）的六个官方蒸馏版，均可在消费级 GPU 上运行。',
       },
       distillList: {
         id: 'distill-list',
@@ -1138,7 +1156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: 'DeepSeek-R1 蒸馏版和 DeepSeek-R1 是同一个模型、只是更小吗？', a: '不是。蒸馏版是另一个基座模型（Qwen2.5 或 Llama 3），在约 800K 样本上微调以模仿 R1 的推理。它保留 R1 的推理风格，但不含 R1 的任何参数。' },
+          { q: 'DeepSeek-R1 蒸馏版和 DeepSeek-R1 是同一个模型、只是更小吗？', a: '不是。蒸馏版是另一个基座模型（Qwen2.5 或 Llama 3.1/3.3），在约 800K 样本上微调以模仿 R1 的推理。它保留 R1 的推理风格，但不含 R1 的任何参数。' },
           { q: '蒸馏究竟从完整 R1 保留了什么？', a: '推理行为：思维链、自我验证和反思。这些是监督微调能可靠迁移的 token 生成模式，这正是 7B 蒸馏版能在 AIME 2024 上达到 55.5% 的原因。' },
           { q: '蒸馏版相比完整 671B R1 失去了什么？', a: '原始能力、世界知识广度，以及在最难问题上的可靠性。蒸馏版越小差距越大——不过在常见推理任务上它仍然很小。' },
           { q: '为什么我不能在家运行完整的 671B DeepSeek-R1？', a: '它在 Q4 下需要约 376–404 GB 显存，因为即便每个 token 只激活约 37B，全部 671B 参数也必须常驻内存。那是数据中心硬件。1.58 位构建以约 0.3 token/秒运行——只是新奇，不可用。' },
@@ -1148,6 +1166,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'DeepSeek-V3 是 R1 的蒸馏版吗？', a: '不是。DeepSeek-V3 是一个独立的 671B MoE 对话模型，既不是推理模型，也不是蒸馏版。R1 才是推理模型；蒸馏版模仿的是 R1，而不是 V3。' },
           { q: 'DeepSeek-R1 与 DeepSeek-R1-Distill 有什么区别？', a: 'DeepSeek-R1 是 671B 的混合专家推理模型；DeepSeek-R1-Distill 模型则是在 R1 生成的推理样本上微调的、更小的 Qwen 或 Llama 模型。名称给出了来源（R1）和基座（Qwen 或 Llama），而基座决定了知识上限。' },
           { q: 'Ollama 的哪个标签对应哪个 DeepSeek-R1 蒸馏版？', a: '1.5b、7b、14b、32b 和 70b 标签对应相应的 Qwen 或 Llama 基座蒸馏版，671b 是完整 R1。8b 标签（不带标签的 `ollama run deepseek-r1` 拉取的也是它）是 DeepSeek-R1-0528-Qwen3-8B，而不是最初的 Llama-8B 蒸馏版。' },
+          { q: 'DeepSeek-R1 仍是 DeepSeek 最新的模型吗？', a: '不是。DeepSeek 当前一代是以开放权重发布的 DeepSeek-V4（Flash 与 Pro）。R1 与 V3 属于上一代模型，DeepSeek 的更新日志已将 API 名称 deepseek-chat 与 deepseek-reasoner 安排在 2026-07-24 停用。R1 蒸馏模型是独立发布的开放权重模型，该通知并未将其下线，因此仍可在本地运行，只是不再是 DeepSeek 最新一代产品。' },
         ],
       },
       relatedArticles: {
@@ -1168,6 +1187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2026-06-19 发布。下次复查时间 2027-06-19（年度新鲜度档位——含按年份锚定的模型事实的长效解析）。',
           '涵盖完整 671B R1 对比六个官方蒸馏版及 DeepSeek-R1-0528-Qwen3-8B。仅做推理内部对比；跨模型的编码对比见编码指南。',
           '2026-10-19 更新：新增六个蒸馏版参考表（基座模型、AIME 2024、Ollama 标签），更正基座模型列表，说明 deepseek-r1:8b 标签对应 R1-0528-Qwen3-8B，并注明其系统提示词例外。',
+          '2026-10-19 更新（世代核查）：注明 DeepSeek-V4 为当前一代、R1/V3 属于上一代，R1 蒸馏模型是仍可在本地运行的独立开放权重模型；并将基础模型中的 Llama 3 表述更正为 Llama 3.1/3.3。',
         ],
       },
     },
@@ -1180,7 +1200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/deepseek-r1-vs-distills-explained-2026-overview-hero-es.webp',
     title: 'DeepSeek-R1 vs distills 2026: qué pierdes realmente',
     seoTitle: 'DeepSeek-R1 vs distills 2026: qué pierdes realmente',
-    intro: 'No puedes ejecutar el DeepSeek-R1 671B real en casa: lo que ejecutas es un distill construido sobre una base Qwen2.5 o Llama 3. Esta explicación cubre con exactitud qué conserva la destilación (cadena de pensamiento, autoverificación, reflexión), qué pierde (capacidad bruta y amplitud) y si esa brecha importa para tu caso de uso.',
+    intro: 'No puedes ejecutar el DeepSeek-R1 671B real en casa: lo que ejecutas es un distill construido sobre una base Qwen2.5 o Llama 3.1/3.3. Esta explicación cubre con exactitud qué conserva la destilación (cadena de pensamiento, autoverificación, reflexión), qué pierde (capacidad bruta y amplitud) y si esa brecha importa para tu caso de uso. La generación actual de DeepSeek es DeepSeek-V4; R1 y sus destilaciones son de la generación anterior, y las destilaciones siguen siendo válidas para ejecutar en local.',
     metaDescription: 'No puedes ejecutar el DeepSeek-R1 671B real en casa: ejecutas un distill. Aquí está exactamente qué conserva la destilación, qué pierde y si la brecha te importa.',
     twitterDescription: 'El DeepSeek-R1 671B completo es solo para centros de datos. Un distill copia su razonamiento sobre una base pequeña. Esto es lo que sobrevive a la destilación, lo que no y cuándo importa la brecha.',
     publishDate: '2026-06-19',
@@ -1189,15 +1209,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Desarrolladores que deciden si un distill local de DeepSeek-R1 es suficiente frente al modelo R1 completo alojado',
     primaryTerm: 'DeepSeek-R1 distillation',
-    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Llama 3', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3'],
+    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3', 'DeepSeek-V4-Flash', 'DeepSeek-V4-Pro'],
     targetKeywords: ['deepseek r1 vs distill', 'destilación deepseek explicada', 'r1 completo vs destilado', 'qué pierde la destilación', 'deepseek r1 671b'],
     ctaText: '¿Te preguntas qué tan lejos está un distill local del R1 completo? Envía el mismo prompt de razonamiento a tu distill y a los modelos de frontera alojados en un solo despacho con PromptQuorum: la brecha es más fácil de ver lado a lado que de adivinar.',
-    leadAnswerBlock: '**La destilación copia el comportamiento de razonamiento de DeepSeek-R1 —cadena de pensamiento, autoverificación y reflexión— sobre una base pequeña Qwen2.5 o Llama 3, pero no puede copiar la capacidad bruta y la amplitud del modelo 671B completo.** Conservas la forma en que R1 piensa; pierdes parte de lo que sabe y de cuán fiablemente resuelve los problemas más difíciles. Para la mayoría de las tareas locales de matemáticas y lógica la brecha es pequeña; para trabajo de dificultad de frontera o de conocimiento amplio es real.',
+    leadAnswerBlock: '**La destilación copia el comportamiento de razonamiento de DeepSeek-R1 —cadena de pensamiento, autoverificación y reflexión— sobre una base pequeña Qwen2.5 o Llama 3.1/3.3, pero no puede copiar la capacidad bruta y la amplitud del modelo 671B completo.** Conservas la forma en que R1 piensa; pierdes parte de lo que sabe y de cuán fiablemente resuelve los problemas más difíciles. Para la mayoría de las tareas locales de matemáticas y lógica la brecha es pequeña; para trabajo de dificultad de frontera o de conocimiento amplio es real.',
     quickAnswerTop: {
       es: {
         question: '¿Qué pierdes realmente al ejecutar un distill de DeepSeek-R1 en lugar del R1 completo?',
         answer: 'Conservas el estilo de razonamiento de R1: la cadena de pensamiento explícita, la autocomprobación y la reflexión que lo hacen fuerte en matemáticas y lógica. Pierdes capacidad bruta y amplitud: el modelo 671B completo resuelve los problemas más difíciles de forma más fiable y sabe más. Para el razonamiento local cotidiano la brecha es pequeña; se ensancha en tareas de dificultad de frontera.',
         bullets: [
+          'Línea más nueva: DeepSeek-V4 es la actual; R1 y V3 son de la generación anterior y las destilaciones de R1 siguen ejecutándose en local',
           'R1 completo: 671B MoE, ~37B activos por token, ~376–404 GB en Q4: solo centro de datos',
           'Un distill = un modelo pequeño existente ajustado con ~800K muestras de razonamiento de R1',
           'CONSERVA: cadena de pensamiento, autoverificación, reflexión (el comportamiento de razonamiento)',
@@ -1227,8 +1248,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
+          'La generación actual de DeepSeek es DeepSeek-V4 (Flash y Pro, pesos abiertos, clase servidor); R1 y V3 son de la generación anterior, pero las destilaciones de R1 son lanzamientos de pesos abiertos independientes que siguen ejecutándose en local.',
           'El DeepSeek-R1 completo es un modelo Mixture-of-Experts de 671B (~37B activos por token) que necesita ~376–404 GB en Q4: no puedes ejecutarlo en casa.',
-          'Un "distill" es un modelo independiente y más pequeño (base Qwen2.5 o Llama 3) ajustado con ~800K trazas de razonamiento generadas por el R1 completo.',
+          'Un "distill" es un modelo independiente y más pequeño (base Qwen2.5 o Llama 3.1/3.3) ajustado con ~800K trazas de razonamiento generadas por el R1 completo.',
           'La destilación CONSERVA el comportamiento de razonamiento: cadena de pensamiento explícita, autoverificación y reflexión.',
           'La destilación PIERDE capacidad bruta y amplitud: el modelo completo resuelve los problemas más difíciles de forma más fiable y sabe más.',
           'Para matemáticas y lógica locales cotidianas la brecha es pequeña; se ensancha en tareas de dificultad de frontera y de conocimiento amplio.',
@@ -1244,12 +1266,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Cuando escribes `ollama run deepseek-r1:14b`, no estás ejecutando una versión más pequeña de DeepSeek-R1: estás ejecutando Qwen2.5 14B enseñado a imitar el razonamiento de R1.** El nombre "DeepSeek-R1-Distill-Qwen-14B" es preciso pero fácil de malinterpretar: la parte "DeepSeek-R1" describe de dónde viene el razonamiento, y la parte "Qwen-14B" es el modelo real que corre en tu GPU.',
           'Esto importa porque las expectativas siguen al nombre. La gente supone que un distill es "R1, pero más pequeño y un poco peor". Está más cerca de "un modelo abierto capaz que aprendió a pensar como R1". Ese enfoque predice el comportamiento que verás realmente: excelente estructura de razonamiento, huecos ocasionales en conocimiento bruto o en fiabilidad de los casos más difíciles.',
           'Para la realidad de hardware detrás de por qué el modelo completo está fuera de alcance en casa, consulta [Requisitos de hardware local de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements): V3 es el modelo de chat hermano con la misma huella de clase 671B.',
-          '**Actualización:** DeepSeek ha lanzado desde entonces DeepSeek-V4 (Flash y Pro) como su nueva generación insignia, también disponible en pesos abiertos. Las destilaciones de R1 tratadas aquí no se están descontinuando y siguen siendo totalmente válidas para ejecutar en local — si quieres la arquitectura más reciente, vale la pena evaluar V4 también.',
+          '**Actualización — la generación actual de DeepSeek es DeepSeek-V4, no R1.** V4 (Flash y Pro) se publica con pesos abiertos (V4-Flash: unos 284B de parámetros en total, 13B activos, licencia MIT), pero es de clase servidor, no un modelo para una sola GPU. El registro de cambios de DeepSeek programó para el 2026-07-24 la retirada de los antiguos nombres de API `deepseek-chat` y `deepseek-reasoner` (las generaciones V3 y R1); la API sirve ahora la familia V4. Por eso, un «R1 alojado» en este artículo significa los pesos completos de R1 en un proveedor externo o en tu propio clúster. Las destilaciones de R1 que se tratan aquí son lanzamientos de pesos abiertos independientes que ese aviso no retiró y que siguen ejecutándose en local: son modelos de la generación anterior, no la línea más reciente de DeepSeek.',
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Un distill de DeepSeek-R1 es un modelo pequeño existente (Qwen2.5 o Llama 3) ajustado para imitar el razonamiento del R1 completo, no una copia reducida del propio R1.',
+            text: 'Un distill de DeepSeek-R1 es un modelo pequeño existente (Qwen2.5 o Llama 3.1/3.3) ajustado para imitar el razonamiento del R1 completo, no una copia reducida del propio R1.',
           },
           {
             type: 'plain-terms',
@@ -1277,11 +1299,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'DeepSeek ajustó los modelos base Qwen2.5 y Llama 3 con ~800.000 muestras de razonamiento generadas por el R1 completo, transfiriendo su estilo de razonamiento a modelos pequeños.',
+            text: 'DeepSeek ajustó los modelos base Qwen2.5 y Llama 3.1/3.3 con ~800.000 muestras de razonamiento generadas por el R1 completo, transfiriendo su estilo de razonamiento a modelos pequeños.',
           },
         ],
         image: '/images/deepseek-r1-vs-distills-explained-2026-distillation-tree-es.svg',
-        imageCaption: 'Árbol de destilación de DeepSeek-R1: el R1 671B completo genera ~800K muestras de razonamiento que ajustan seis distills oficiales sobre bases Qwen2.5 (1.5B–32B) y Llama 3 (8B, 70B), todos ejecutables en GPU de consumo.',
+        imageCaption: 'Árbol de destilación de DeepSeek-R1: el R1 671B completo genera ~800K muestras de razonamiento que ajustan seis distills oficiales sobre bases Qwen2.5 (1.5B–32B) y Llama 3.1/3.3 (8B, 70B), todos ejecutables en GPU de consumo.',
       },
       distillList: {
         id: 'distill-list',
@@ -1372,7 +1394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Es un distill de DeepSeek-R1 el mismo modelo que DeepSeek-R1, solo que más pequeño?', a: 'No. Un distill es un modelo base distinto (Qwen2.5 o Llama 3) ajustado para imitar el razonamiento de R1 con ~800K muestras. Conserva el estilo de razonamiento de R1 pero no contiene ninguno de sus parámetros.' },
+          { q: '¿Es un distill de DeepSeek-R1 el mismo modelo que DeepSeek-R1, solo que más pequeño?', a: 'No. Un distill es un modelo base distinto (Qwen2.5 o Llama 3.1/3.3) ajustado para imitar el razonamiento de R1 con ~800K muestras. Conserva el estilo de razonamiento de R1 pero no contiene ninguno de sus parámetros.' },
           { q: '¿Qué conserva exactamente la destilación del R1 completo?', a: 'El comportamiento de razonamiento: cadena de pensamiento, autoverificación y reflexión. Son patrones de generación de tokens que el ajuste fino supervisado transfiere de forma fiable, por eso un distill de 7B alcanza 55.5% en AIME 2024.' },
           { q: '¿Qué pierde un distill frente al R1 671B completo?', a: 'Capacidad bruta, amplitud de conocimiento del mundo y fiabilidad en los problemas más difíciles. Cuanto más pequeño el distill, mayor la brecha, aunque sigue siendo pequeña en tareas de razonamiento comunes.' },
           { q: '¿Por qué no puedo ejecutar el DeepSeek-R1 671B completo en casa?', a: 'Necesita ~376–404 GB de VRAM en Q4 porque los 671B parámetros deben residir todos en memoria aunque solo ~37B se activen por token. Eso es hardware de centro de datos. Una compilación de 1.58 bits corre a ~0.3 tok/s: una curiosidad, no utilizable.' },
@@ -1382,6 +1404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Es DeepSeek-V3 un distill de R1?', a: 'No. DeepSeek-V3 es un modelo de chat MoE de 671B independiente, no un modelo de razonamiento ni un distill. R1 es el modelo de razonamiento; los distills imitan a R1, no a V3.' },
           { q: '¿Cuál es la diferencia entre DeepSeek-R1 y DeepSeek-R1-Distill?', a: 'DeepSeek-R1 es el modelo de razonamiento Mixture-of-Experts de 671B; un modelo DeepSeek-R1-Distill es un modelo Qwen o Llama más pequeño, ajustado con muestras de razonamiento generadas por R1. El nombre indica el origen (R1) y la base (Qwen o Llama), y la base fija el techo de conocimiento.' },
           { q: '¿Qué etiqueta de Ollama corresponde a cada distill de DeepSeek-R1?', a: 'Las etiquetas 1.5b, 7b, 14b, 32b y 70b corresponden a los distills basados en Qwen o Llama del mismo tamaño, y 671b es el R1 completo. La etiqueta 8b —que también descarga un simple `ollama run deepseek-r1`— es DeepSeek-R1-0528-Qwen3-8B, no el distill Llama-8B original.' },
+          { q: '¿Sigue siendo DeepSeek-R1 el modelo más reciente de DeepSeek?', a: 'No. La generación actual de DeepSeek es DeepSeek-V4 (Flash y Pro), publicada con pesos abiertos. R1 y V3 son modelos de la generación anterior, y el registro de cambios de DeepSeek programó para el 2026-07-24 la retirada de los nombres de API deepseek-chat y deepseek-reasoner. Las destilaciones de R1 son lanzamientos de pesos abiertos independientes que ese aviso no retiró, así que siguen ejecutándose en local; simplemente ya no son la línea más reciente de DeepSeek.' },
         ],
       },
       relatedArticles: {
@@ -1402,6 +1425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Publicado el 19-06-2026. Próxima revisión prevista para el 19-06-2027 (nivel de frescura anual: explicación perdurable con datos de modelos anclados al año).',
           'Cubre el R1 671B completo frente a los seis distills oficiales y DeepSeek-R1-0528-Qwen3-8B. Solo comparación interna de razonamiento; las comparaciones de código entre modelos están en la guía de código.',
           'Actualizado el 19-10-2026: se añadió la tabla de referencia de los seis distills (modelos base, AIME 2024, etiquetas de Ollama), se corrigió la lista de modelos base, se aclaró que la etiqueta deepseek-r1:8b es R1-0528-Qwen3-8B y se anotó su excepción de prompt de sistema.',
+          'Actualizado el 2026-10-19 (revisión de generación): se indica que DeepSeek-V4 es la generación actual y R1/V3 son de la generación anterior, que las destilaciones de R1 son lanzamientos de pesos abiertos independientes aún válidos para ejecutar en local, y se precisaron las referencias a los modelos base Llama 3 como Llama 3.1/3.3.',
         ],
       },
     },
@@ -1414,7 +1438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/deepseek-r1-vs-distills-explained-2026-overview-hero-pt.webp',
     title: 'DeepSeek-R1 vs distills 2026: o que você realmente perde',
     seoTitle: 'DeepSeek-R1 vs distills 2026: o que você perde',
-    intro: 'Você não consegue rodar o DeepSeek-R1 671B real em casa — o que você roda é um distill construído sobre uma base Qwen2.5 ou Llama 3. Este guia explica exatamente o que a destilação mantém (cadeia de raciocínio, autoverificação, reflexão), o que ela perde (capacidade bruta e amplitude) e se essa diferença importa para o seu caso de uso.',
+    intro: 'Você não consegue rodar o DeepSeek-R1 671B real em casa — o que você roda é um distill construído sobre uma base Qwen2.5 ou Llama 3.1/3.3. Este guia explica exatamente o que a destilação mantém (cadeia de raciocínio, autoverificação, reflexão), o que ela perde (capacidade bruta e amplitude) e se essa diferença importa para o seu caso de uso. A geração atual da DeepSeek é o DeepSeek-V4; o R1 e suas destilações são da geração anterior, e as destilações continuam válidas para rodar localmente.',
     metaDescription: 'Você não consegue rodar o DeepSeek-R1 671B real em casa — você roda um distill. Veja exatamente o que a destilação mantém, o que perde e se a diferença importa para você.',
     twitterDescription: 'O DeepSeek-R1 671B completo é só para data center. Um distill copia o raciocínio dele para uma base pequena. Veja o que sobrevive à destilação, o que não sobrevive e quando a diferença importa.',
     publishDate: '2026-06-19',
@@ -1423,15 +1447,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Desenvolvedores que decidem se um distill local do DeepSeek-R1 é bom o suficiente diante do modelo R1 completo hospedado',
     primaryTerm: 'DeepSeek-R1 distillation',
-    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Llama 3', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3'],
+    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3', 'DeepSeek-V4-Flash', 'DeepSeek-V4-Pro'],
     targetKeywords: ['deepseek r1 vs distill', 'destilação deepseek explicada', 'r1 completo vs destilado', 'o que a destilação perde', 'deepseek r1 671b'],
     ctaText: 'Quer saber o quão longe um distill local está do R1 completo? Envie o mesmo prompt de raciocínio para o seu distill e para os modelos de fronteira hospedados em um único disparo com o PromptQuorum — a diferença é mais fácil de ver lado a lado do que de adivinhar.',
-    leadAnswerBlock: '**A destilação copia o comportamento de raciocínio do DeepSeek-R1 — cadeia de raciocínio, autoverificação e reflexão — para uma base pequena Qwen2.5 ou Llama 3, mas não consegue copiar a capacidade bruta e a amplitude do modelo 671B completo.** Você mantém a forma como o R1 pensa; você perde parte do que ele sabe e da confiabilidade com que resolve os problemas mais difíceis. Para a maioria das tarefas locais de matemática e lógica a diferença é pequena; para trabalho de dificuldade de fronteira ou de conhecimento amplo ela é real.',
+    leadAnswerBlock: '**A destilação copia o comportamento de raciocínio do DeepSeek-R1 — cadeia de raciocínio, autoverificação e reflexão — para uma base pequena Qwen2.5 ou Llama 3.1/3.3, mas não consegue copiar a capacidade bruta e a amplitude do modelo 671B completo.** Você mantém a forma como o R1 pensa; você perde parte do que ele sabe e da confiabilidade com que resolve os problemas mais difíceis. Para a maioria das tarefas locais de matemática e lógica a diferença é pequena; para trabalho de dificuldade de fronteira ou de conhecimento amplo ela é real.',
     quickAnswerTop: {
       pt: {
         question: 'O que você realmente perde ao rodar um distill do DeepSeek-R1 em vez do R1 completo?',
         answer: 'Você mantém o estilo de raciocínio do R1 — a cadeia de raciocínio explícita, a autoverificação e a reflexão que o tornam forte em matemática e lógica. Você perde capacidade bruta e amplitude: o modelo 671B completo resolve os problemas mais difíceis de forma mais confiável e sabe mais. Para o raciocínio local do dia a dia a diferença é pequena; ela aumenta em tarefas de dificuldade de fronteira.',
         bullets: [
+          'Linha mais nova: o DeepSeek-V4 é o atual; R1 e V3 são da geração anterior, e as destilações do R1 continuam rodando localmente',
           'R1 completo: 671B MoE, ~37B ativos por token, ~376–404 GB em Q4 — só data center',
           'Um distill = um modelo pequeno existente ajustado com ~800K amostras de raciocínio do R1',
           'MANTÉM: cadeia de raciocínio, autoverificação, reflexão (o comportamento de raciocínio)',
@@ -1461,8 +1486,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
+          'A geração atual da DeepSeek é o DeepSeek-V4 (Flash e Pro, pesos abertos, classe servidor); R1 e V3 são da geração anterior, mas as destilações do R1 são lançamentos de pesos abertos independentes que continuam rodando localmente.',
           'O DeepSeek-R1 completo é um modelo Mixture-of-Experts de 671B (~37B ativos por token) que precisa de ~376–404 GB em Q4 — você não consegue rodar em casa.',
-          'Um "distill" é um modelo separado e menor (base Qwen2.5 ou Llama 3) ajustado com ~800K traços de raciocínio gerados pelo R1 completo.',
+          'Um "distill" é um modelo separado e menor (base Qwen2.5 ou Llama 3.1/3.3) ajustado com ~800K traços de raciocínio gerados pelo R1 completo.',
           'A destilação MANTÉM o comportamento de raciocínio: cadeia de raciocínio explícita, autoverificação e reflexão.',
           'A destilação PERDE capacidade bruta e amplitude — o modelo completo resolve os problemas mais difíceis de forma mais confiável e sabe mais.',
           'Para matemática e lógica locais do dia a dia a diferença é pequena; ela aumenta em tarefas de dificuldade de fronteira e de conhecimento amplo.',
@@ -1478,12 +1504,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Quando você digita `ollama run deepseek-r1:14b`, você não está rodando uma versão menor do DeepSeek-R1 — está rodando o Qwen2.5 14B ensinado a imitar o raciocínio do R1.** O nome "DeepSeek-R1-Distill-Qwen-14B" é preciso, mas fácil de ler errado: a parte "DeepSeek-R1" descreve de onde veio o raciocínio, e a parte "Qwen-14B" é o modelo de fato rodando na sua GPU.',
           'Isso importa porque as expectativas seguem o nome. As pessoas presumem que um distill é "o R1, só que menor e um pouco pior". Ele está mais perto de "um modelo aberto capaz que aprendeu a pensar como o R1". Esse enquadramento prevê o comportamento que você realmente verá: excelente estrutura de raciocínio, lacunas pontuais em conhecimento bruto ou na confiabilidade dos casos mais difíceis.',
           'Para a realidade de hardware por trás do motivo de o modelo completo ser inviável em casa, veja [Requisitos de hardware local do DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — o V3 é o modelo de chat irmão com a mesma pegada de classe 671B.',
-          '**Atualização:** Desde então, a DeepSeek lançou o DeepSeek-V4 (Flash e Pro) como sua nova geração principal, também disponível em pesos abertos. As destilações do R1 abordadas aqui não estão sendo descontinuadas e continuam totalmente válidas para rodar localmente — se você quiser a arquitetura mais recente, vale a pena avaliar o V4 também.',
+          '**Atualização — a geração atual da DeepSeek é o DeepSeek-V4, não o R1.** O V4 (Flash e Pro) é publicado com pesos abertos (V4-Flash: cerca de 284B de parâmetros no total, 13B ativos, licença MIT), mas é de classe servidor, não um modelo para uma única GPU. O changelog da DeepSeek programou para 2026-07-24 a descontinuação dos antigos nomes de API `deepseek-chat` e `deepseek-reasoner` (as gerações V3 e R1); a API agora serve a família V4. Por isso, um "R1 hospedado" neste artigo significa os pesos completos do R1 em um provedor terceiro ou no seu próprio cluster. As destilações do R1 tratadas aqui são lançamentos de pesos abertos independentes, que esse aviso não aposentou e que continuam rodando localmente — são modelos da geração anterior, não a linha mais nova da DeepSeek.',
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Um distill do DeepSeek-R1 é um modelo pequeno existente (Qwen2.5 ou Llama 3) ajustado para imitar o raciocínio do R1 completo, não uma cópia reduzida do próprio R1.',
+            text: 'Um distill do DeepSeek-R1 é um modelo pequeno existente (Qwen2.5 ou Llama 3.1/3.3) ajustado para imitar o raciocínio do R1 completo, não uma cópia reduzida do próprio R1.',
           },
           {
             type: 'plain-terms',
@@ -1511,11 +1537,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'A DeepSeek ajustou os modelos base Qwen2.5 e Llama 3 com ~800.000 amostras de raciocínio geradas pelo R1 completo, transferindo seu estilo de raciocínio para modelos pequenos.',
+            text: 'A DeepSeek ajustou os modelos base Qwen2.5 e Llama 3.1/3.3 com ~800.000 amostras de raciocínio geradas pelo R1 completo, transferindo seu estilo de raciocínio para modelos pequenos.',
           },
         ],
         image: '/images/deepseek-r1-vs-distills-explained-2026-distillation-tree-pt.svg',
-        imageCaption: 'Árvore de destilação do DeepSeek-R1: o R1 671B completo gera ~800K amostras de raciocínio que ajustam seis distills oficiais sobre bases Qwen2.5 (1.5B–32B) e Llama 3 (8B, 70B), todos executáveis em GPU de consumo.',
+        imageCaption: 'Árvore de destilação do DeepSeek-R1: o R1 671B completo gera ~800K amostras de raciocínio que ajustam seis distills oficiais sobre bases Qwen2.5 (1.5B–32B) e Llama 3.1/3.3 (8B, 70B), todos executáveis em GPU de consumo.',
       },
       distillList: {
         id: 'distill-list',
@@ -1606,7 +1632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Um distill do DeepSeek-R1 é o mesmo modelo que o DeepSeek-R1, só que menor?', a: 'Não. Um distill é um modelo base diferente (Qwen2.5 ou Llama 3) ajustado para imitar o raciocínio do R1 com ~800K amostras. Ele mantém o estilo de raciocínio do R1, mas não contém nenhum dos parâmetros do R1.' },
+          { q: 'Um distill do DeepSeek-R1 é o mesmo modelo que o DeepSeek-R1, só que menor?', a: 'Não. Um distill é um modelo base diferente (Qwen2.5 ou Llama 3.1/3.3) ajustado para imitar o raciocínio do R1 com ~800K amostras. Ele mantém o estilo de raciocínio do R1, mas não contém nenhum dos parâmetros do R1.' },
           { q: 'O que exatamente a destilação mantém do R1 completo?', a: 'O comportamento de raciocínio: cadeia de raciocínio, autoverificação e reflexão. São padrões de geração de tokens que o ajuste fino supervisionado transfere de forma confiável, por isso um distill de 7B chega a 55.5% no AIME 2024.' },
           { q: 'O que um distill perde em relação ao R1 671B completo?', a: 'Capacidade bruta, amplitude de conhecimento do mundo e confiabilidade nos problemas mais difíceis. Quanto menor o distill, maior a diferença — embora ela continue pequena em tarefas de raciocínio comuns.' },
           { q: 'Por que não consigo rodar o DeepSeek-R1 671B completo em casa?', a: 'Ele precisa de ~376–404 GB de VRAM em Q4 porque todos os 671B parâmetros precisam estar residentes mesmo que só ~37B sejam ativados por token. Isso é hardware de data center. Um build de 1.58 bits roda a ~0.3 tok/s — uma curiosidade, não utilizável.' },
@@ -1616,6 +1642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O DeepSeek-V3 é um distill do R1?', a: 'Não. O DeepSeek-V3 é um modelo de chat MoE de 671B separado, não um modelo de raciocínio nem um distill. O R1 é o modelo de raciocínio; os distills imitam o R1, não o V3.' },
           { q: 'Qual é a diferença entre DeepSeek-R1 e DeepSeek-R1-Distill?', a: 'O DeepSeek-R1 é o modelo de raciocínio Mixture-of-Experts de 671B; um modelo DeepSeek-R1-Distill é um modelo Qwen ou Llama menor, ajustado com amostras de raciocínio geradas pelo R1. O nome informa a origem (R1) e a base (Qwen ou Llama), e a base define o teto de conhecimento.' },
           { q: 'Qual tag do Ollama corresponde a qual distill do DeepSeek-R1?', a: 'As tags 1.5b, 7b, 14b, 32b e 70b correspondem aos distills baseados em Qwen ou Llama do mesmo tamanho, e 671b é o R1 completo. A tag 8b — que um simples `ollama run deepseek-r1` também baixa — é o DeepSeek-R1-0528-Qwen3-8B, não o distill Llama-8B original.' },
+          { q: 'O DeepSeek-R1 ainda é o modelo mais novo da DeepSeek?', a: 'Não. A geração atual da DeepSeek é o DeepSeek-V4 (Flash e Pro), publicado com pesos abertos. R1 e V3 são modelos da geração anterior, e o changelog da DeepSeek programou para 2026-07-24 a descontinuação dos nomes de API deepseek-chat e deepseek-reasoner. As destilações do R1 são lançamentos de pesos abertos independentes que esse aviso não aposentou, então continuam rodando localmente; só deixaram de ser a linha mais nova da DeepSeek.' },
         ],
       },
       relatedArticles: {
@@ -1636,6 +1663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Publicado em 19/06/2026. Próxima revisão prevista para 19/06/2027 (nível de atualização anual — explicação duradoura com fatos de modelos ancorados ao ano).',
           'Cobre o R1 671B completo diante dos seis distills oficiais e do DeepSeek-R1-0528-Qwen3-8B. Apenas comparação interna de raciocínio; as comparações de código entre modelos estão no guia de código.',
           'Atualizado em 19/10/2026: adicionada a tabela de referência dos seis distills (modelos base, AIME 2024, tags do Ollama), corrigida a lista de modelos base, esclarecido que a tag deepseek-r1:8b é o R1-0528-Qwen3-8B e registrada a sua exceção de prompt de sistema.',
+          'Atualizado em 2026-10-19 (verificação de geração): indicado que o DeepSeek-V4 é a geração atual e R1/V3 são da geração anterior, que as destilações do R1 são lançamentos de pesos abertos independentes ainda válidos para rodar localmente, e as referências aos modelos base Llama 3 foram precisadas como Llama 3.1/3.3.',
         ],
       },
     },
@@ -1648,7 +1676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/deepseek-r1-vs-distills-explained-2026-overview-hero-ar.webp',
     title: '⁨DeepSeek-R1⁩ مقابل النسخ المقطّرة ⁨2026⁩: ما الذي تخسره فعليًا',
     seoTitle: '⁨DeepSeek-R1⁩ مقابل المقطّرة ⁨2026⁩: ما الذي تخسره',
-    intro: 'لا يمكنك تشغيل DeepSeek-R1 الحقيقي بحجم 671B في المنزل — ما تشغّله هو نسخة مقطّرة مبنية على قاعدة Qwen2.5 أو Llama 3. يشرح هذا الدليل بدقة ما الذي يحتفظ به التقطير (سلسلة التفكير، التحقق الذاتي، التأمل)، وما الذي يخسره (القدرة الخام والاتساع)، وما إذا كانت هذه الفجوة مهمة لحالة استخدامك.',
+    intro: 'لا يمكنك تشغيل DeepSeek-R1 الحقيقي بحجم 671B في المنزل — ما تشغّله هو نسخة مقطّرة مبنية على قاعدة Qwen2.5 أو Llama 3.1/3.3. يشرح هذا الدليل بدقة ما الذي يحتفظ به التقطير (سلسلة التفكير، التحقق الذاتي، التأمل)، وما الذي يخسره (القدرة الخام والاتساع)، وما إذا كانت هذه الفجوة مهمة لحالة استخدامك. الجيل الحالي من DeepSeek هو DeepSeek-V4؛ أما R1 ونسخه المقطّرة فمن الجيل السابق، وتظل النسخ المقطّرة صالحة للتشغيل محليًا.',
     metaDescription: 'لا يمكنك تشغيل ⁨DeepSeek-R1⁩ الحقيقي بحجم ⁨671B⁩ في المنزل — أنت تشغّل نسخة مقطّرة. إليك بالضبط ما يحتفظ به التقطير، وما يخسره، وهل تهمّك الفجوة.',
     twitterDescription: 'إصدار ⁨DeepSeek-R1⁩ الكامل بحجم ⁨671B⁩ لمراكز البيانات فقط. تنسخ النسخة المقطّرة تفكيره إلى قاعدة صغيرة. إليك ما يبقى بعد التقطير وما يُفقد ومتى تهمّ الفجوة.',
     publishDate: '2026-06-19',
@@ -1657,15 +1685,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'المطورون الذين يقررون ما إذا كانت نسخة DeepSeek-R1 المقطّرة المحلية كافية مقابل نموذج R1 الكامل المستضاف',
     primaryTerm: 'DeepSeek-R1 distillation',
-    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Llama 3', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3'],
+    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3', 'DeepSeek-V4-Flash', 'DeepSeek-V4-Pro'],
     targetKeywords: ['DeepSeek-R1 مقابل المقطّرة', 'شرح تقطير DeepSeek', 'R1 الكامل مقابل المقطّر', 'ماذا يخسر التقطير', 'DeepSeek-R1 671B'],
     ctaText: 'تتساءل كم تبعد النسخة المقطّرة المحلية عن R1 الكامل؟ أرسل نفس مطالبة التفكير إلى نسختك المقطّرة وإلى النماذج الرائدة المستضافة في إرسال واحد عبر PromptQuorum — رؤية الفجوة جنبًا إلى جنب أسهل من تخمينها.',
-    leadAnswerBlock: '**ينسخ التقطير سلوك التفكير لـ DeepSeek-R1 — سلسلة التفكير والتحقق الذاتي والتأمل — إلى قاعدة صغيرة Qwen2.5 أو Llama 3، لكنه لا يستطيع نسخ القدرة الخام والاتساع للنموذج الكامل بحجم 671B.** أنت تحتفظ بطريقة تفكير R1؛ وتخسر جزءًا مما يعرفه ومن مدى موثوقيته في حل أصعب المسائل. بالنسبة لمعظم مهام الرياضيات والمنطق المحلية تكون الفجوة صغيرة؛ أما في العمل عند حدود الصعوبة القصوى أو الذي يتطلب معرفة واسعة فالفجوة حقيقية.',
+    leadAnswerBlock: '**ينسخ التقطير سلوك التفكير لـ DeepSeek-R1 — سلسلة التفكير والتحقق الذاتي والتأمل — إلى قاعدة صغيرة Qwen2.5 أو Llama 3.1/3.3، لكنه لا يستطيع نسخ القدرة الخام والاتساع للنموذج الكامل بحجم 671B.** أنت تحتفظ بطريقة تفكير R1؛ وتخسر جزءًا مما يعرفه ومن مدى موثوقيته في حل أصعب المسائل. بالنسبة لمعظم مهام الرياضيات والمنطق المحلية تكون الفجوة صغيرة؛ أما في العمل عند حدود الصعوبة القصوى أو الذي يتطلب معرفة واسعة فالفجوة حقيقية.',
     quickAnswerTop: {
       ar: {
         question: 'ما الذي تخسره فعليًا عند تشغيل نسخة مقطّرة من DeepSeek-R1 بدلًا من R1 الكامل؟',
         answer: 'تحتفظ بأسلوب تفكير R1 — سلسلة التفكير الصريحة والتحقق الذاتي والتأمل التي تجعله قويًا في الرياضيات والمنطق. وتخسر القدرة الخام والاتساع: النموذج الكامل بحجم 671B يحل أصعب المسائل بموثوقية أعلى ويعرف أكثر. بالنسبة للتفكير المحلي اليومي تكون الفجوة صغيرة؛ وتتسع في المهام عند حدود الصعوبة القصوى.',
         bullets: [
+          'الخط الأحدث: DeepSeek-V4 هو الحالي؛ R1 وV3 من الجيل السابق، ونسخ R1 المقطّرة ما زالت تعمل محليًا',
           'R1 الكامل: 671B MoE، نحو 37B نشطة لكل token، نحو 376–404 GB عند Q4 — مراكز البيانات فقط',
           'النسخة المقطّرة = نموذج صغير موجود مسبقًا تمت معايرته على نحو 800K عينة تفكير من R1',
           'يُحتفظ به: سلسلة التفكير، التحقق الذاتي، التأمل (سلوك التفكير)',
@@ -1695,8 +1724,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
+          'الجيل الحالي من DeepSeek هو DeepSeek-V4 (بنسختيه Flash وPro، أوزان مفتوحة، فئة الخوادم)؛ أما R1 وV3 فمن الجيل السابق، لكن نسخ R1 المقطّرة إصدارات مفتوحة الأوزان مستقلة ما زالت تعمل محليًا.',
           'DeepSeek-R1 الكامل هو نموذج Mixture-of-Experts بحجم 671B (نحو 37B نشطة لكل token) يحتاج إلى نحو 376–404 GB عند Q4 — لا يمكنك تشغيله في المنزل.',
-          'النسخة "المقطّرة" هي نموذج منفصل وأصغر (قاعدة Qwen2.5 أو Llama 3) تمت معايرته على نحو 800K أثر تفكير ولّدها R1 الكامل.',
+          'النسخة "المقطّرة" هي نموذج منفصل وأصغر (قاعدة Qwen2.5 أو Llama 3.1/3.3) تمت معايرته على نحو 800K أثر تفكير ولّدها R1 الكامل.',
           'يحتفظ التقطير بسلوك التفكير: سلسلة تفكير صريحة وتحقق ذاتي وتأمل.',
           'يخسر التقطير القدرة الخام والاتساع — النموذج الكامل يحل أصعب المسائل بموثوقية أعلى ويعرف أكثر.',
           'بالنسبة للرياضيات والمنطق المحلية اليومية تكون الفجوة صغيرة؛ وتتسع في المهام عند حدود الصعوبة القصوى والتي تتطلب معرفة واسعة.',
@@ -1712,12 +1742,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**عندما تكتب `ollama run deepseek-r1:14b`، فأنت لا تشغّل نسخة أصغر من DeepSeek-R1 — بل تشغّل Qwen2.5 14B الذي تعلّم محاكاة تفكير R1.** الاسم "DeepSeek-R1-Distill-Qwen-14B" دقيق لكنه سهل القراءة الخاطئة: الجزء "DeepSeek-R1" يصف من أين جاء التفكير، والجزء "Qwen-14B" هو النموذج الفعلي الذي يعمل على GPU لديك.',
           'هذا مهم لأن التوقعات تتبع الاسم. يفترض الناس أن النسخة المقطّرة هي "R1 لكن أصغر وأسوأ قليلًا". وهي أقرب إلى "نموذج مفتوح قادر تعلّم أن يفكر مثل R1". هذا التأطير يتنبأ بالسلوك الذي ستراه فعليًا: بنية تفكير ممتازة، مع ثغرات أحيانًا في المعرفة الخام أو في الموثوقية في أصعب الحالات.',
           'لمعرفة واقع العتاد وراء عدم إمكانية تشغيل النموذج الكامل في المنزل، راجع [متطلبات العتاد المحلي لـ DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 هو الشقيق نموذج المحادثة بالبصمة نفسها من فئة 671B.',
-          '**تحديث:** أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 (Flash وPro) كجيلها الرئيسي الأحدث، وهو متاح أيضًا كأوزان مفتوحة. نسخ R1 المقطّرة المتناولة هنا لم يتم إيقافها ولا تزال صالحة تمامًا للتشغيل محليًا — إذا كنت تريد أحدث بنية، يستحق V4 التقييم أيضًا.',
+          '**تحديث — الجيل الحالي من DeepSeek هو DeepSeek-V4 وليس R1.** نُشر V4 (بنسختيه Flash وPro) بأوزان مفتوحة (V4-Flash: نحو 284B معامل إجمالًا و13B نشطة، برخصة MIT)، لكنه من فئة الخوادم وليس نموذجًا لبطاقة GPU واحدة. وفق سجل تغييرات DeepSeek، كان من المقرر إيقاف أسماء API القديمة `deepseek-chat` و`deepseek-reasoner` (جيلَا V3 وR1) في 2026-07-24، وتخدم واجهة API الآن عائلة V4. لذلك تعني عبارة «R1 المستضاف» في هذا المقال أوزان R1 الكاملة لدى مزوّد خارجي أو على عنقودك الخاص. أما نسخ R1 المقطّرة المعروضة هنا فهي إصدارات مفتوحة الأوزان مستقلة لم يُلغها هذا الإشعار وما زالت تعمل محليًا — وهي نماذج من الجيل السابق وليست أحدث خطوط DeepSeek.',
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'النسخة المقطّرة من DeepSeek-R1 هي نموذج صغير موجود مسبقًا (Qwen2.5 أو Llama 3) تمت معايرته لمحاكاة تفكير R1 الكامل، وليست نسخة مصغّرة من R1 نفسه.',
+            text: 'النسخة المقطّرة من DeepSeek-R1 هي نموذج صغير موجود مسبقًا (Qwen2.5 أو Llama 3.1/3.3) تمت معايرته لمحاكاة تفكير R1 الكامل، وليست نسخة مصغّرة من R1 نفسه.',
           },
           {
             type: 'plain-terms',
@@ -1840,7 +1870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'هل النسخة المقطّرة من DeepSeek-R1 هي نفس نموذج DeepSeek-R1 لكن أصغر فقط؟', a: 'لا. النسخة المقطّرة نموذج قاعدة مختلف (Qwen2.5 أو Llama 3) تمت معايرته لمحاكاة تفكير R1 على نحو 800K عينة. يحتفظ بأسلوب تفكير R1 لكنه لا يحتوي على أي من معاملات R1.' },
+          { q: 'هل النسخة المقطّرة من DeepSeek-R1 هي نفس نموذج DeepSeek-R1 لكن أصغر فقط؟', a: 'لا. النسخة المقطّرة نموذج قاعدة مختلف (Qwen2.5 أو Llama 3.1/3.3) تمت معايرته لمحاكاة تفكير R1 على نحو 800K عينة. يحتفظ بأسلوب تفكير R1 لكنه لا يحتوي على أي من معاملات R1.' },
           { q: 'ما الذي يحتفظ به التقطير بالضبط من R1 الكامل؟', a: 'سلوك التفكير: سلسلة التفكير والتحقق الذاتي والتأمل. وهي أنماط لتوليد الـ tokens تنقلها المعايرة المُشرف عليها بموثوقية، ولهذا تبلغ نسخة مقطّرة 7B نسبة 55.5% في AIME 2024.' },
           { q: 'ما الذي تخسره النسخة المقطّرة مقابل R1 الكامل 671B؟', a: 'القدرة الخام، واتساع المعرفة بالعالم، والموثوقية في أصعب المسائل. كلما صغرت النسخة المقطّرة كبرت الفجوة — مع أنها تبقى صغيرة في مهام التفكير الشائعة.' },
           { q: 'لماذا لا أستطيع تشغيل DeepSeek-R1 الكامل 671B في المنزل؟', a: 'يحتاج إلى نحو 376–404 GB من VRAM عند Q4 لأن كل معاملات الـ 671B يجب أن تكون مقيمة رغم تفعيل نحو 37B فقط لكل token. هذا عتاد مراكز البيانات. بناء 1.58 بت يعمل عند نحو 0.3 token/ث — طُرفة، غير قابل للاستخدام.' },
@@ -1850,6 +1880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل DeepSeek-V3 نسخة مقطّرة من R1؟', a: 'لا. DeepSeek-V3 نموذج محادثة MoE منفصل بحجم 671B، وليس نموذج تفكير ولا نسخة مقطّرة. R1 هو نموذج التفكير؛ والنسخ المقطّرة تحاكي R1 لا V3.' },
           { q: 'ما الفرق بين DeepSeek-R1 وDeepSeek-R1-Distill؟', a: 'DeepSeek-R1 هو نموذج التفكير بمزيج الخبراء بحجم 671B؛ أما نموذج DeepSeek-R1-Distill فهو نموذج Qwen أو Llama أصغر عايرته DeepSeek على عينات تفكير ولّدها R1. يوضح الاسم المصدر (R1) والقاعدة (Qwen أو Llama)، والقاعدة هي التي تحدد سقف المعرفة.' },
           { q: 'أي وسم في Ollama يقابل أي نسخة مقطّرة من DeepSeek-R1؟', a: 'تقابل الوسوم 1.5b و7b و14b و32b و70b النسخ المقطّرة المبنية على Qwen أو Llama بالحجم نفسه، ويمثّل 671b نموذج R1 الكامل. أما الوسم 8b — وهو ما يسحبه أيضًا الأمر المجرّد `ollama run deepseek-r1` — فهو DeepSeek-R1-0528-Qwen3-8B، وليس النسخة المقطّرة الأصلية Llama-8B.' },
+          { q: 'هل ما زال DeepSeek-R1 أحدث نموذج من DeepSeek؟', a: 'لا. الجيل الحالي من DeepSeek هو DeepSeek-V4 (بنسختيه Flash وPro) المنشور بأوزان مفتوحة. R1 وV3 نموذجان من الجيل السابق، وقد أعلن سجل تغييرات DeepSeek عزمه إيقاف أسماء API‏ deepseek-chat وdeepseek-reasoner في 2026-07-24. أما نسخ R1 المقطّرة فهي إصدارات مفتوحة الأوزان مستقلة لم يُلغها هذا الإشعار، لذا تعمل محليًا إلى الآن؛ فقط لم تعد أحدث خطوط DeepSeek.' },
         ],
       },
       relatedArticles: {
@@ -1870,6 +1901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'نُشر في 2026-06-19. المراجعة التالية مستحقة في 2027-06-19 (مستوى تحديث سنوي — شرح دائم مع حقائق نماذج مرتبطة بالسنة).',
           'يغطي R1 الكامل 671B مقابل النسخ المقطّرة الرسمية الست وDeepSeek-R1-0528-Qwen3-8B. مقارنة داخلية للتفكير فقط؛ مقارنات البرمجة بين النماذج موجودة في دليل البرمجة.',
           'حُدّثت في 2026-10-19: أُضيف جدول مرجعي للنسخ المقطّرة الست (النماذج الأساسية وAIME 2024 ووسوم Ollama)، وصُحّحت قائمة النماذج الأساسية، وأُوضح أن الوسم deepseek-r1:8b هو R1-0528-Qwen3-8B، ودُوّن استثناؤه الخاص بمطالبة النظام.',
+          'تحديث 2026-10-19 (مراجعة الأجيال): توضيح أن DeepSeek-V4 هو الجيل الحالي وأن R1/V3 من الجيل السابق، وأن نسخ R1 المقطّرة إصدارات مفتوحة الأوزان مستقلة ما زالت صالحة للتشغيل محليًا، وتحديد إشارات النموذج الأساسي Llama 3 بأنها Llama 3.1/3.3.',
         ],
       },
     },
@@ -1882,7 +1914,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/deepseek-r1-vs-distills-explained-2026-overview-hero-ko.webp',
     title: 'DeepSeek-R1 대 디스틸 2026: 실제로 무엇을 잃는가',
     seoTitle: 'DeepSeek-R1 대 디스틸 2026: 무엇을 잃는가',
-    intro: '진짜 671B DeepSeek-R1은 집에서 실행할 수 없습니다. 실행하는 것은 Qwen2.5 또는 Llama 3 베이스 위에 만들어진 디스틸입니다. 이 글은 증류가 정확히 무엇을 유지하는지(사고의 연쇄, 자기 검증, 반성), 무엇을 잃는지(원시 역량과 폭), 그리고 그 격차가 여러분의 사용 사례에서 중요한지를 다룹니다.',
+    intro: '진짜 671B DeepSeek-R1은 집에서 실행할 수 없습니다. 실행하는 것은 Qwen2.5 또는 Llama 3.1/3.3 베이스 위에 만들어진 디스틸입니다. 이 글은 증류가 정확히 무엇을 유지하는지(사고의 연쇄, 자기 검증, 반성), 무엇을 잃는지(원시 역량과 폭), 그리고 그 격차가 여러분의 사용 사례에서 중요한지를 다룹니다. DeepSeek의 현재 세대는 DeepSeek-V4이며, R1과 그 증류 모델은 이전 세대이지만 증류 모델은 계속 로컬에서 실행할 수 있습니다.',
     metaDescription: '진짜 671B DeepSeek-R1은 집에서 실행할 수 없고, 디스틸을 실행합니다. 증류가 무엇을 유지하고, 무엇을 잃으며, 그 격차가 중요한지를 정확히 설명합니다.',
     twitterDescription: '완전한 671B DeepSeek-R1은 데이터센터 전용입니다. 디스틸은 그 추론을 작은 베이스에 복사합니다. 증류에서 무엇이 남고, 무엇이 사라지며, 언제 격차가 중요한지 설명합니다.',
     publishDate: '2026-06-19',
@@ -1891,15 +1923,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: '로컬 DeepSeek-R1 디스틸로 충분한지, 아니면 완전한 호스팅 R1 모델이 필요한지 결정하는 개발자',
     primaryTerm: 'DeepSeek-R1 distillation',
-    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Llama 3', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3'],
+    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Qwen3 8B', 'DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Llama-8B', 'Qwen2.5-Math', 'Llama 3.1', 'Llama 3.3', 'DeepSeek-V4-Flash', 'DeepSeek-V4-Pro'],
     targetKeywords: ['DeepSeek-R1 디스틸 비교', 'DeepSeek 증류 설명', '완전 R1 대 디스틸', '증류가 잃는 것', 'DeepSeek-R1 671B'],
     ctaText: '로컬 디스틸이 완전한 R1에서 얼마나 떨어져 있는지 궁금하신가요? PromptQuorum으로 같은 추론 프롬프트를 디스틸과 호스팅 프런티어 모델에 한 번에 보내 보십시오. 격차는 추측하기보다 나란히 보는 편이 더 분명합니다.',
-    leadAnswerBlock: '**증류는 DeepSeek-R1의 추론 행동(사고의 연쇄, 자기 검증, 반성)을 작은 Qwen2.5 또는 Llama 3 베이스에 복사하지만, 완전한 671B 모델의 원시 역량과 폭은 복사할 수 없습니다.** R1이 사고하는 방식은 유지하지만, R1이 아는 것의 일부와 가장 어려운 문제를 얼마나 안정적으로 푸는지의 일부를 잃습니다. 대부분의 로컬 수학·논리 작업에서는 격차가 작고, 프런티어 난이도나 폭넓은 지식이 필요한 작업에서는 격차가 실재합니다.',
+    leadAnswerBlock: '**증류는 DeepSeek-R1의 추론 행동(사고의 연쇄, 자기 검증, 반성)을 작은 Qwen2.5 또는 Llama 3.1/3.3 베이스에 복사하지만, 완전한 671B 모델의 원시 역량과 폭은 복사할 수 없습니다.** R1이 사고하는 방식은 유지하지만, R1이 아는 것의 일부와 가장 어려운 문제를 얼마나 안정적으로 푸는지의 일부를 잃습니다. 대부분의 로컬 수학·논리 작업에서는 격차가 작고, 프런티어 난이도나 폭넓은 지식이 필요한 작업에서는 격차가 실재합니다.',
     quickAnswerTop: {
       ko: {
         question: '완전한 R1 대신 DeepSeek-R1 디스틸을 실행하면 실제로 무엇을 잃습니까?',
         answer: 'R1의 추론 스타일, 즉 수학과 논리에서 강하게 만드는 명시적 사고의 연쇄, 자기 점검, 반성은 유지됩니다. 잃는 것은 원시 역량과 폭입니다. 완전한 671B 모델은 가장 어려운 문제를 더 안정적으로 풀고 더 많이 압니다. 일상적인 로컬 추론에서는 격차가 작고, 프런티어 난이도 작업에서 넓어집니다.',
         bullets: [
+          '최신 라인: 현재는 DeepSeek-V4이며, R1과 V3는 이전 세대이고 R1 증류 모델은 계속 로컬에서 실행 가능',
           '완전 R1: 671B MoE, 토큰당 약 37B 활성, Q4에서 약 376–404 GB — 데이터센터 전용',
           '디스틸 = R1이 만든 약 800K개의 추론 샘플로 파인튜닝한 기존 소형 모델',
           '유지: 사고의 연쇄, 자기 검증, 반성(추론 행동)',
@@ -1929,8 +1962,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
+          'DeepSeek의 현재 세대는 DeepSeek-V4(Flash 및 Pro, 오픈 웨이트, 서버급)입니다. R1과 V3는 이전 세대이지만, R1 증류 모델은 별도의 오픈 웨이트 공개물로 계속 로컬에서 실행할 수 있습니다.',
           '완전한 DeepSeek-R1은 671B Mixture-of-Experts 모델(토큰당 약 37B 활성)로 Q4에서 약 376–404 GB가 필요합니다 — 집에서 실행할 수 없습니다.',
-          '"디스틸"은 완전한 R1이 생성한 약 800K개의 추론 트레이스로 파인튜닝된 별도의 더 작은 모델(Qwen2.5 또는 Llama 3 베이스)입니다.',
+          '"디스틸"은 완전한 R1이 생성한 약 800K개의 추론 트레이스로 파인튜닝된 별도의 더 작은 모델(Qwen2.5 또는 Llama 3.1/3.3 베이스)입니다.',
           '증류는 추론 행동을 유지합니다: 명시적 사고의 연쇄, 자기 검증, 반성.',
           '증류는 원시 역량과 폭을 잃습니다 — 완전한 모델은 가장 어려운 문제를 더 안정적으로 풀고 더 많이 압니다.',
           '일상적인 로컬 수학과 논리에서는 격차가 작고, 프런티어 난이도와 폭넓은 지식이 필요한 작업에서 넓어집니다.',
@@ -1946,12 +1980,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**`ollama run deepseek-r1:14b`을 입력할 때, 여러분은 DeepSeek-R1의 더 작은 버전을 실행하는 것이 아니라 R1의 추론을 모방하도록 학습된 Qwen2.5 14B를 실행하는 것입니다.** "DeepSeek-R1-Distill-Qwen-14B"라는 이름은 정확하지만 오해하기 쉽습니다. "DeepSeek-R1" 부분은 추론이 어디에서 왔는지를 설명하고, "Qwen-14B" 부분이 실제로 여러분의 GPU에서 실행되는 모델입니다.',
           '이것이 중요한 이유는 기대가 이름을 따라가기 때문입니다. 사람들은 디스틸을 "R1인데 더 작고 조금 못한 것"이라고 가정합니다. 실제로는 "R1처럼 사고하는 법을 배운 유능한 오픈 모델"에 가깝습니다. 이 관점은 여러분이 실제로 보게 될 행동을 예측합니다. 뛰어난 추론 구조와, 원시 지식이나 가장 어려운 경우의 안정성에서의 간헐적 공백입니다.',
           '완전한 모델이 집에서 사용할 수 없는 이유의 하드웨어 현실에 대해서는 [DeepSeek-V3 로컬 하드웨어 요구 사항](/ko/prompt-bites/deepseek-v3-local-hardware-requirements)을 참고하십시오. V3는 동일한 671B급 용량을 가진 챗 모델 형제입니다.',
-          '**업데이트:** DeepSeek는 이후 새로운 플래그십 세대인 DeepSeek-V4(Flash 및 Pro)를 출시했으며, 이 역시 오픈 웨이트로 제공됩니다. 여기서 다루는 R1 증류 모델은 단종되지 않았으며 로컬에서 계속 문제없이 실행할 수 있습니다 — 최신 아키텍처를 원한다면 V4도 함께 검토할 가치가 있습니다.',
+          '**업데이트 — DeepSeek의 현재 세대는 R1이 아니라 DeepSeek-V4입니다.** V4(Flash 및 Pro)는 오픈 웨이트로 공개되었지만(V4-Flash: 총 약 284B, 활성 13B 파라미터, MIT 라이선스) 서버급 모델이며 단일 GPU용이 아닙니다. DeepSeek 변경 로그는 기존 API 이름인 `deepseek-chat`과 `deepseek-reasoner`(V3·R1 세대)를 2026-07-24에 종료하기로 예고했으며, 현재 API는 V4 계열을 제공합니다. 따라서 이 글에서 “호스팅된 R1”은 외부 호스팅 업체 또는 자체 클러스터에서 구동하는 R1 전체 가중치를 뜻합니다. 여기서 다루는 R1 증류 모델은 이 공지로 폐기되지 않은 별도의 오픈 웨이트 공개물이며 계속 로컬에서 실행할 수 있습니다. 다만 이전 세대 모델이며 DeepSeek의 최신 라인은 아닙니다.',
         ],
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'DeepSeek-R1 디스틸은 R1 자체를 축소한 사본이 아니라, 완전한 R1의 추론을 모방하도록 파인튜닝된 기존 소형 모델(Qwen2.5 또는 Llama 3)입니다.',
+            text: 'DeepSeek-R1 디스틸은 R1 자체를 축소한 사본이 아니라, 완전한 R1의 추론을 모방하도록 파인튜닝된 기존 소형 모델(Qwen2.5 또는 Llama 3.1/3.3)입니다.',
           },
           {
             type: 'plain-terms',
@@ -1979,11 +2013,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'DeepSeek는 완전한 R1이 생성한 약 800,000개의 추론 샘플로 Qwen2.5와 Llama 3 베이스 모델을 파인튜닝하여 그 추론 스타일을 소형 모델로 이전했습니다.',
+            text: 'DeepSeek는 완전한 R1이 생성한 약 800,000개의 추론 샘플로 Qwen2.5와 Llama 3.1/3.3 베이스 모델을 파인튜닝하여 그 추론 스타일을 소형 모델로 이전했습니다.',
           },
         ],
         image: '/images/deepseek-r1-vs-distills-explained-2026-distillation-tree-ko.svg',
-        imageCaption: 'DeepSeek-R1 증류 트리: 완전한 671B R1이 약 80만 개의 추론 샘플을 생성해 Qwen2.5 베이스(1.5B–32B)와 Llama 3 베이스(8B, 70B)의 6개 공식 디스틸을 파인튜닝하며, 모두 소비자용 GPU에서 실행된다.',
+        imageCaption: 'DeepSeek-R1 증류 트리: 완전한 671B R1이 약 80만 개의 추론 샘플을 생성해 Qwen2.5 베이스(1.5B–32B)와 Llama 3.1/3.3 베이스(8B, 70B)의 6개 공식 디스틸을 파인튜닝하며, 모두 소비자용 GPU에서 실행된다.',
       },
       distillList: {
         id: 'distill-list',
@@ -2074,7 +2108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: 'DeepSeek-R1 디스틸은 DeepSeek-R1과 같은 모델인데 더 작기만 한 것입니까?', a: '아닙니다. 디스틸은 R1의 추론을 약 800K개의 샘플로 모방하도록 파인튜닝된 다른 베이스 모델(Qwen2.5 또는 Llama 3)입니다. R1의 추론 스타일은 유지하지만 R1의 파라미터는 전혀 포함하지 않습니다.' },
+          { q: 'DeepSeek-R1 디스틸은 DeepSeek-R1과 같은 모델인데 더 작기만 한 것입니까?', a: '아닙니다. 디스틸은 R1의 추론을 약 800K개의 샘플로 모방하도록 파인튜닝된 다른 베이스 모델(Qwen2.5 또는 Llama 3.1/3.3)입니다. R1의 추론 스타일은 유지하지만 R1의 파라미터는 전혀 포함하지 않습니다.' },
           { q: '증류는 완전한 R1에서 정확히 무엇을 유지합니까?', a: '추론 행동입니다: 사고의 연쇄, 자기 검증, 반성. 이들은 지도 파인튜닝이 안정적으로 이전하는 토큰 생성 패턴이며, 그래서 7B 디스틸이 AIME 2024에서 55.5%에 도달합니다.' },
           { q: '디스틸은 완전한 671B R1 대비 무엇을 잃습니까?', a: '원시 역량, 세계 지식의 폭, 가장 어려운 문제에서의 안정성입니다. 디스틸이 작을수록 격차가 커지지만, 일반적인 추론 작업에서는 작게 유지됩니다.' },
           { q: '완전한 671B DeepSeek-R1을 집에서 실행할 수 없는 이유는?', a: '토큰당 약 37B만 활성화되더라도 671B 파라미터 전부가 상주해야 하므로 Q4에서 약 376–404 GB의 VRAM이 필요합니다. 이는 데이터센터 하드웨어입니다. 1.58비트 빌드는 초당 약 0.3 토큰으로 실행되어 흥밋거리일 뿐 사용 불가입니다.' },
@@ -2084,6 +2118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'DeepSeek-V3는 R1의 디스틸입니까?', a: '아닙니다. DeepSeek-V3는 별도의 671B MoE 챗 모델이며, 추론 모델도 디스틸도 아닙니다. R1이 추론 모델이고, 디스틸은 V3가 아니라 R1을 모방합니다.' },
           { q: 'DeepSeek-R1과 DeepSeek-R1-Distill은 무엇이 다릅니까?', a: 'DeepSeek-R1은 671B Mixture-of-Experts 추론 모델이고, DeepSeek-R1-Distill 모델은 R1이 생성한 추론 샘플로 파인튜닝한 더 작은 Qwen 또는 Llama 모델입니다. 이름은 출처(R1)와 베이스(Qwen 또는 Llama)를 알려 주며, 지식의 상한은 베이스가 정합니다.' },
           { q: 'Ollama의 어떤 태그가 어떤 DeepSeek-R1 디스틸입니까?', a: '1.5b, 7b, 14b, 32b, 70b 태그는 같은 크기의 Qwen 또는 Llama 기반 디스틸에 해당하고, 671b는 완전한 R1입니다. 8b 태그(태그 없는 `ollama run deepseek-r1`이 받는 것도 이것)는 원래의 Llama-8B 디스틸이 아니라 DeepSeek-R1-0528-Qwen3-8B입니다.' },
+          { q: 'DeepSeek-R1은 여전히 DeepSeek의 최신 모델입니까?', a: '아닙니다. DeepSeek의 현재 세대는 오픈 웨이트로 공개된 DeepSeek-V4(Flash 및 Pro)입니다. R1과 V3는 이전 세대 모델이며, DeepSeek 변경 로그는 API 이름 deepseek-chat과 deepseek-reasoner를 2026-07-24에 종료하기로 예고했습니다. R1 증류 모델은 이 공지로 폐기되지 않은 별도의 오픈 웨이트 공개물이므로 계속 로컬에서 실행할 수 있으나, 더 이상 DeepSeek의 최신 라인은 아닙니다.' },
         ],
       },
       relatedArticles: {
@@ -2104,6 +2139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2026-06-19 게시. 다음 검토 예정일 2027-06-19(연간 신선도 등급 — 연도에 고정된 모델 사실을 담은 지속형 설명).',
           '완전한 671B R1을 여섯 공식 디스틸 및 DeepSeek-R1-0528-Qwen3-8B와 비교합니다. 추론 내부 비교만 다루며, 모델 간 코딩 비교는 코딩 가이드에 있습니다.',
           '2026-10-19 업데이트: 여섯 디스틸 참조 표(베이스 모델, AIME 2024, Ollama 태그)를 추가하고 베이스 모델 목록을 바로잡았으며, deepseek-r1:8b 태그가 R1-0528-Qwen3-8B임과 그 시스템 프롬프트 예외를 명시했습니다.',
+          '2026-10-19 업데이트(세대 점검): DeepSeek-V4가 현재 세대이고 R1/V3가 이전 세대임을, R1 증류 모델이 계속 로컬에서 쓸 수 있는 별도의 오픈 웨이트 공개물임을 명시했으며, 기반 모델의 Llama 3 표기를 Llama 3.1/3.3으로 구체화했습니다.',
         ],
       },
     },
