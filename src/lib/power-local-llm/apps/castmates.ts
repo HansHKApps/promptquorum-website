@@ -29,6 +29,8 @@ export const app: ToolRecord = {
   storeLinks: {
     appStore: 'https://apps.apple.com/us/app/castmates-ai-characters/id6785844694',
   },
+  installEffort: 'installer',
+  installEvidence: 'App Store listing id6785844694 (free, iOS/iPadOS 17.0+, 35.6 MB plus a ~1.9 GB in-app model download), read 2026-10-19',
   tagline: {
     en: 'Offline iPhone character chat with 32 ready-made characters, custom characters and no account',
     de: 'Offline-Charakter-Chat für das iPhone mit 32 fertigen Charakteren, eigenen Charakteren und ohne Konto',
@@ -41,6 +43,13 @@ export const app: ToolRecord = {
     ko: 'iPhone용 오프라인 캐릭터 채팅 앱. 기본 캐릭터 32종과 커스텀 캐릭터를 제공하며 계정이 필요 없음',
   },
   // Comparison attributes: the roleplay segment only defines lorebooks / groupChats; neither is stated on the listing or site, so `compare` stays unset (not stated, never false).
+  reviewSlug: 'castmates-review',
+  pqReview: {
+    date: '2026-10-19',
+    version: '1.1.7',
+    versionSourceUrl: 'https://apps.apple.com/us/app/castmates-ai-characters/id6785844694',
+  },
+  verdict: 'Best for adults who want free, account-less offline character roleplay on iPhone; limited by being closed source and only three months old, English only, with an unnamed model, and by analytics events that still leave the phone while the App Store label says "Data Not Collected".',
   lastVerifiedDate: '2026-10-19',
   lastUpstreamUpdate: '2026-10-19', // App Store version 1.1.7, currentVersionReleaseDate via iTunes lookup 2026-10-19
   lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/castmates-ai-characters/id6785844694',
