@@ -3561,7 +3561,7 @@
       ]
     },
     "saudi-pdpl-data-sovereignty-local-ai-2026": {
-      "dateModified": "2026-06-14",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-06-14",
       "hasSections": true,
@@ -3723,7 +3723,7 @@
       ]
     },
     "galaxy-s26-local-ai-on-device-2026": {
-      "dateModified": "2026-06-15",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-06-15",
       "hasSections": true,
@@ -3741,7 +3741,7 @@
       "images": [
         {
           "url": "/images/galaxy-s26-npu-comparison-en.svg",
-          "title": "Exynos 2600 vs. Snapdragon 8 Elite Gen 5 on the Galaxy S26: 2nm GAA vs 3nm FinFET, +113% vs +39% AI gen-over-gen, 2.4x faster Stable Diffusion, and 85.6 GB/s vs 84.8 GB/s LPDDR5X memory bandwidth."
+          "title": "Exynos 2600 vs. Snapdragon 8 Elite Gen 5 on the Galaxy S26: 2nm GAA vs 3nm FinFET, Samsung-claimed +113% vs +39% NPU gen-over-gen (different baselines), and 85.6 GB/s vs 84.8 GB/s LPDDR5X memory bandwidth."
         },
         {
           "url": "/images/galaxy-s26-7b-model-throughput-en.svg",
@@ -5816,7 +5816,7 @@
       ]
     },
     "best-gpu-buying-guide-local-llm-2026": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -5834,7 +5834,7 @@
       "images": [
         {
           "url": "/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-en.webp",
-          "title": "Eight consumer GPUs for local LLMs compared by VRAM, 7B Q4 inference speed, power draw, and Jul 2026 price across four budget tiers. VRAM rises from 12 GB (RTX 3060) to 32 GB (RTX 5090); buy for the model size you need before optimizing for speed."
+          "title": "Ten consumer graphics cards for local LLMs compared by VRAM, 7B Q4 inference speed, power draw, and current US price across four budget tiers. VRAM rises from 12 GB (RTX 3060) to 32 GB (RTX 5090); buy for the model size you need before optimizing for speed."
         },
         {
           "url": "/images/best-gpu-buying-guide-local-llm-2026-decision-flowchart-hero-en.webp",
@@ -5909,8 +5909,8 @@
       ],
       "images": []
     },
-    "local-ai-workstation-build-guide-2026": {
-      "dateModified": "2026-07-01",
+    "local-ai-workstation-build-guide": {
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -5928,11 +5928,11 @@
       "images": [
         {
           "url": "/images/local-ai-workstation-build-guide-2026-tier-comparison-en.svg",
-          "title": "Local AI PC build tiers compared: RTX 4060 Ti 16GB budget build (~$1,100) runs 7B-13B models, RTX 4070 Ti Super 16GB mid build (~$2,400) runs 14B-33B models, RTX 5090 32GB enthusiast build (~$5,000) runs 33B-70B models."
+          "title": "Local AI PC build tiers compared: RTX 4060 Ti 16GB budget build (~$2,000) runs 7B-13B models, RTX 4070 Ti Super 16GB mid build (~$3,100) runs 14B-33B models, RTX 5090 32GB enthusiast build (~$9,600) runs 33B-70B models."
         },
         {
           "url": "/images/local-ai-workstation-build-guide-2026-decision-tree-en.svg",
-          "title": "Decision tree for choosing a local-AI PC build by largest model size: 7B-13B models route to the ~$1,100 budget build, 14B-33B models to the ~$2,400 mid build, and 70B models to the ~$5,000 enthusiast build."
+          "title": "Decision tree for choosing a local-AI PC build by largest model size: 7B-13B models route to the ~$2,000 budget build, 14B-33B models to the ~$3,100 mid build, and 70B models to the ~$9,600 enthusiast build."
         }
       ]
     },
@@ -6625,7 +6625,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 8 categories of a local LLM stack: 262 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
+          "title": "The 8 categories of a local LLM stack: 264 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), Train & Operate, and At the Edge."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -7289,7 +7289,7 @@
       ]
     },
     "local-vision-models-llava-ollama-2026": {
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-14",
       "hasSections": true,
@@ -7307,11 +7307,11 @@
       "images": [
         {
           "url": "/images/local-vision-models-llava-ollama-2026-vram-comparison-en.svg",
-          "title": "Local vision model comparison by VRAM and OCR quality: Moondream 2 runs in 2 GB, MiniCPM-V 4.5 and Qwen3-VL 8B lead document OCR at 6 GB, and Llama 3.2 Vision 11B delivers the best general quality at 8 GB via Ollama."
+          "title": "Local vision model comparison by VRAM and OCR quality: Moondream 2 runs in 2 GB, Qwen3-VL 8B leads document OCR at 6 GB, and Gemma 4 delivers the best general quality from 8 GB (E4B) to 24 GB (26B and 31B) via Ollama."
         },
         {
           "url": "/images/local-vision-models-llava-ollama-2026-ollama-setup-flow-en.svg",
-          "title": "Ollama vision model setup pipeline: install Ollama, pull llama3.2-vision (~8 GB download), run via CLI with --image or POST to the HTTP API at localhost:11434, and receive text output for OCR, Q&A, or image description."
+          "title": "Ollama vision model setup pipeline: install Ollama, pull a vision model such as gemma4:e4b, run it via the CLI with the image path in the prompt or POST to the HTTP API at localhost:11434, and receive text output for OCR, Q&A, or image description."
         }
       ]
     },
@@ -10848,6 +10848,24 @@
       ],
       "images": []
     },
+    "secret-ai-review": {
+      "dateModified": "2026-10-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "swerve-ai-review": {
       "dateModified": "2026-10-17",
       "lastFactChecked": null,
@@ -11101,6 +11119,24 @@
       "images": []
     },
     "memoryai-review": {
+      "dateModified": "2026-10-19",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-19",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "llamatik-review": {
       "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-10-19",
@@ -16562,7 +16598,7 @@
       "images": []
     },
     "balcony-solar-gulf-mena": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -16652,7 +16688,7 @@
       "images": []
     },
     "balcony-solar-payback-worth-it-2026": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
@@ -16670,7 +16706,7 @@
       "images": []
     },
     "balcony-solar-not-producing-power-fixes": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-07-02",
       "hasSections": true,
