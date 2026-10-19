@@ -690,7 +690,7 @@
       ]
     },
     "top-open-source-models-ollama": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -709,10 +709,6 @@
         {
           "url": "/images/top-open-source-models-ollama-use-case-picks-hero-en.webp",
           "title": "Ollama model selection by use case: pick qwen3.8:27b (best overall, 61.7 SWE-bench Pro) for chat and coding, kimi-k2.6 for frontier coding, gpt-oss:20b on 16 GB, deepseek-r1:7b for math."
-        },
-        {
-          "url": "/images/ollama-deepseek-r1-reasoning-comparison-en.svg",
-          "title": "DeepSeek-R1 7B vs Mistral Small: 52% vs 28% on MATH. Chain-of-thought reasoning model -- slower, significantly better accuracy."
         },
         {
           "url": "/images/ollama-vision-models-comparison-en.svg",
@@ -5642,8 +5638,8 @@
       "images": []
     },
     "knowledge-cutoffs-and-geo": {
-      "dateModified": "2026-08-29",
-      "lastFactChecked": "2026-08-29",
+      "dateModified": "2026-10-19",
+      "lastFactChecked": "2026-10-19",
       "publishDate": "2026-06-12",
       "hasSections": true,
       "langs": [
@@ -9913,7 +9909,7 @@
       "images": []
     },
     "idefics-review": {
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-09-07",
       "hasSections": true,
@@ -13466,7 +13462,7 @@
       "images": []
     },
     "bestLlmRightNow": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -14132,7 +14128,7 @@
       "images": []
     },
     "aiModelKnowledgeCutoffDates": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-06-12",
       "hasSections": true,
