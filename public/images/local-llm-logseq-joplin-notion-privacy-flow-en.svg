@@ -19,8 +19,8 @@
 
   <rect x="384" y="80" width="190" height="58" rx="6" fill="#FFFFFF" stroke="#EA4335" stroke-width="2"/>
   <rect x="384" y="80" width="190" height="4" rx="0" fill="#EA4335"/>
-  <text x="479" y="107" font-size="12" font-weight="700" fill="#EA4335" text-anchor="middle">OpenAI Cloud (US)</text>
-  <text x="479" y="124" font-size="10" fill="#49454F" text-anchor="middle">processes note content</text>
+  <text x="479" y="107" font-size="12" font-weight="700" fill="#EA4335" text-anchor="middle">Notion’s AI providers</text>
+  <text x="479" y="124" font-size="10" fill="#49454F" text-anchor="middle">process note content</text>
 
   <text x="586" y="115" font-size="18" fill="#EA4335" text-anchor="middle">→</text>
 
@@ -57,5 +57,5 @@
   <text x="681" y="255" font-size="12" font-weight="700" fill="#1C1B1F" text-anchor="middle">AI Response</text>
   <text x="681" y="272" font-size="10" fill="#49454F" text-anchor="middle">stays on device</text>
 
-  <text x="400" y="330" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Notion AI ships note content to OpenAI servers by design; Logseq + Ollama and Joplin + Jarvis + Ollama send nothing unless you configure a cloud provider.</text>
+  <text x="400" y="330" font-family="system-ui, sans-serif" font-size="11.5" fill="#49454F" text-anchor="middle">Notion AI sends note content to model providers by design; Logseq and Joplin + Ollama send nothing unless you set a cloud provider.</text>
 <text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>

@@ -19,6 +19,30 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "deepseek-r1-vs-distills-explained-2026",
+        "title": "DeepSeek-R1 vs Distills 2026: What You Actually Lose",
+        "url": "/power-local-llm/deepseek-r1-vs-distills-explained-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-with-logseq-and-joplin",
+        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
+        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-vision-models-llava-ollama-2026",
         "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
         "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
@@ -35,6 +59,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "run-ai-on-tablet-ipad-android",
+        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
+        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "secret-ai-review",
         "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
         "url": "/power-local-llm/secret-ai-review",
@@ -46,38 +78,6 @@
         "slug": "70b-models-consumer-hardware",
         "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
         "url": "/local-llms/70b-models-consumer-hardware",
-        "dateModified": "2026-10-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-mini-pcs-local-llm",
-        "title": "Best Mini PCs for Local LLMs 2026: Mac Mini M6, M5 Pro, and Framework Desktop Compared",
-        "url": "/local-llms/best-mini-pcs-local-llm",
-        "dateModified": "2026-10-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "small-local-llm-models",
-        "title": "Best Small Local LLMs 2026: Top 4B Models and the Smallest to Run Locally",
-        "url": "/local-llms/small-local-llm-models",
-        "dateModified": "2026-10-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "snug-protocol-review",
-        "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
-        "url": "/power-local-llm/snug-protocol-review",
-        "dateModified": "2026-10-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "uncensored-local-llm-creative-writing-ethics",
-        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
         "dateModified": "2026-10-18",
         "tier": "about"
       }
@@ -100,6 +100,14 @@
         "slug": "saudi-pdpl-data-sovereignty-local-ai-2026",
         "title": "Saudi PDPL & Data Sovereignty: Why AI Must Run Inside the Kingdom (2026)",
         "url": "/local-llms/saudi-pdpl-data-sovereignty-local-ai-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
         "dateModified": "2026-10-19",
         "tier": "about"
       },
@@ -156,14 +164,6 @@
         "slug": "local-llm-hardware-guide",
         "title": "Local LLM Hardware: GPU vs Mini PC vs Mac Compared",
         "url": "/local-llms/local-llm-hardware-guide",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-ai-coding-tools-comparison-2026",
-        "title": "Best AI Coding Tools Compared 2026: Cursor vs Continue.dev",
-        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
         "dateModified": "2026-10-17",
         "tier": "about"
       }
@@ -721,6 +721,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "run-ai-on-tablet-ipad-android",
+        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
+        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "omlx-review",
         "title": "oMLX Review: Apple Silicon Inference Server With SSD Caching",
         "url": "/power-local-llm/omlx-review",
@@ -749,14 +757,6 @@
         "title": "LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox: 2026 Comparison",
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-09-02",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "run-ai-on-tablet-ipad-android",
-        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
-        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
-        "dateModified": "2026-07-14",
         "tier": "mentioned"
       }
     ],
@@ -1979,18 +1979,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-chat-assistants-compared",
-        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-        "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
+        "slug": "local-llm-with-logseq-and-joplin",
+        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
+        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-with-logseq-and-joplin",
-        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
-        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
-        "dateModified": "2026-08-30",
+        "slug": "local-llm-chat-assistants-compared",
+        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
+        "url": "/power-local-llm/local-llm-chat-assistants-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -2045,6 +2045,14 @@
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
         "url": "/local-llms/open-webui-review",
         "dateModified": "2026-10-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "run-ai-on-tablet-ipad-android",
+        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
+        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
@@ -2108,14 +2116,6 @@
         "slug": "nextchat-review",
         "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
         "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "page-assist-review",
-        "title": "Page Assist Review 2026: Browser Sidebar for Local AI Models",
-        "url": "/local-llms/page-assist-review",
         "dateModified": "2026-09-11",
         "tier": "about"
       }
@@ -5751,6 +5751,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-iphone-2026",
         "title": "Best Local LLM Apps for iPhone in 2026 (Run AI Without WiFi)",
         "url": "/power-local-llm/best-local-llm-apps-iphone-2026",
@@ -5763,14 +5771,6 @@
         "title": "Mobile Local LLMs 2026: iPhone 16 Pro, iPad M4 & Snapdragon X",
         "url": "/local-llms/mobile-local-llms",
         "dateModified": "2026-08-28",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-08-24",
         "tier": "about"
       },
       {
@@ -5804,17 +5804,9 @@
         "url": "/local-llms/galaxy-vs-iphone-on-device-ai-2026",
         "dateModified": "2026-08-29",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "run-ai-on-tablet-ipad-android",
-        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
-        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
-        "dateModified": "2026-07-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 8,
     "capped": false
   },
   "PocketPal AI": {
@@ -5825,6 +5817,22 @@
         "title": "PocketPal AI Review: Free, Open-Source On-Device Chat",
         "url": "/power-local-llm/pocketpal-ai-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "run-ai-on-tablet-ipad-android",
+        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
+        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
@@ -5882,25 +5890,9 @@
         "url": "/power-local-llm/google-ai-edge-gallery-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "noema-review",
-        "title": "Noema Review: Multi-Format Local AI for iPhone, iPad, and Mac",
-        "url": "/power-local-llm/noema-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anythingllm-mobile-review",
-        "title": "AnythingLLM Mobile Review: On-Device Chat + RAG",
-        "url": "/power-local-llm/anythingllm-mobile-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 39,
+    "totalCount": 40,
     "capped": true
   },
   "Pocket AI": {
@@ -6031,6 +6023,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "run-ai-on-tablet-ipad-android",
+        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
+        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -6062,7 +6062,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "LLM Farm": {
@@ -6073,6 +6073,14 @@
         "title": "LLM Farm Review: Open-Source GGUF App, Off the App Store",
         "url": "/power-local-llm/llm-farm-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "run-ai-on-tablet-ipad-android",
+        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
+        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
@@ -6089,14 +6097,6 @@
         "title": "Build a Local Voice Assistant on Your Phone: Whisper + Local LLM (No Cloud) — 2026",
         "url": "/power-local-llm/voice-assistant-local-mobile-offline",
         "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "run-ai-on-tablet-ipad-android",
-        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
-        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
-        "dateModified": "2026-07-14",
         "tier": "about"
       },
       {
@@ -6123,6 +6123,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "paios-review",
         "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
         "url": "/power-local-llm/paios-review",
@@ -6135,14 +6143,6 @@
         "title": "Build a Local Voice Assistant on Your Phone: Whisper + Local LLM (No Cloud) — 2026",
         "url": "/power-local-llm/voice-assistant-local-mobile-offline",
         "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-08-24",
         "tier": "about"
       },
       {
@@ -6160,17 +6160,9 @@
         "url": "/power-local-llm/toolneuron-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "run-ai-on-tablet-ipad-android",
-        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
-        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
-        "dateModified": "2026-07-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 6,
     "capped": false
   },
   "Maid": {
@@ -6181,6 +6173,14 @@
         "title": "Maid Review: Open-Source Local LLM Chat App for Android",
         "url": "/power-local-llm/maid-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
@@ -6205,14 +6205,6 @@
         "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
         "url": "/power-local-llm/private-llm-review",
         "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-08-24",
         "tier": "about"
       },
       {
@@ -6246,17 +6238,9 @@
         "url": "/power-local-llm/llm-farm-review",
         "dateModified": "2026-09-06",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "run-ai-on-tablet-ipad-android",
-        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
-        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
-        "dateModified": "2026-07-14",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
+    "totalCount": 9,
     "capped": false
   },
   "Chapper": {
@@ -6537,6 +6521,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "run-ai-on-tablet-ipad-android",
+        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
+        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "oscilla-review",
         "title": "Oscilla Review: Free On-Device AI Chat for iPhone",
         "url": "/power-local-llm/oscilla-review",
@@ -6576,7 +6568,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Arbiter": {
@@ -7207,6 +7199,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-with-logseq-and-joplin",
+        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
+        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "replace-grammarly-notion-ai-with-local",
         "title": "Replace Grammarly and Notion AI with a Local LLM (2026)",
         "url": "/power-local-llm/replace-grammarly-notion-ai-with-local",
@@ -7235,14 +7235,6 @@
         "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
         "url": "/power-local-llm/obsidian-logseq-ai-plugins",
         "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-with-logseq-and-joplin",
-        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
-        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
-        "dateModified": "2026-08-30",
         "tier": "about"
       },
       {
@@ -7293,6 +7285,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-with-logseq-and-joplin",
+        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
+        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -7337,14 +7337,6 @@
         "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
         "url": "/power-local-llm/obsidian-logseq-ai-plugins",
         "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-with-logseq-and-joplin",
-        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
-        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
-        "dateModified": "2026-08-30",
         "tier": "about"
       },
       {
@@ -7441,6 +7433,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-with-logseq-and-joplin",
+        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
+        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -7453,14 +7453,6 @@
         "title": "AI Note-Taking Plugins for Obsidian and Logseq, Compared",
         "url": "/power-local-llm/obsidian-logseq-ai-plugins",
         "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-with-logseq-and-joplin",
-        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
-        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
-        "dateModified": "2026-08-30",
         "tier": "about"
       },
       {
@@ -7581,18 +7573,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-knowledge-retrieval-compared",
-        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
-        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
-        "dateModified": "2026-09-20",
+        "slug": "local-llm-with-logseq-and-joplin",
+        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
+        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-with-logseq-and-joplin",
-        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
-        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
-        "dateModified": "2026-08-30",
+        "slug": "local-llm-knowledge-retrieval-compared",
+        "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
+        "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -7861,18 +7853,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "uncensored-local-llm-creative-writing-ethics",
-        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
-        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
-        "dateModified": "2026-10-18",
+        "slug": "run-ai-on-tablet-ipad-android",
+        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
+        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
+        "dateModified": "2026-10-19",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-creative-writing",
-        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
-        "url": "/power-local-llm/best-local-llm-creative-writing",
-        "dateModified": "2026-10-17",
+        "slug": "uncensored-local-llm-creative-writing-ethics",
+        "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
+        "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+        "dateModified": "2026-10-18",
         "tier": "mentioned"
       }
     ],
@@ -9228,19 +9220,19 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "deepseek-r1-vs-distills-explained-2026",
+        "title": "DeepSeek-R1 vs Distills 2026: What You Actually Lose",
+        "url": "/power-local-llm/deepseek-r1-vs-distills-explained-2026",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-local-llms-for-coding",
         "title": "Best Local LLMs for Coding 2026: Qwen3.8 27B, Devstral, Laguna",
         "url": "/local-llms/best-local-llms-for-coding",
         "dateModified": "2026-10-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-vs-nvidia-gpu-local-llm",
-        "title": "Apple Silicon vs NVIDIA GPU for Local LLMs 2026: Performance, Cost, Workflow Compared",
-        "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
-        "dateModified": "2026-09-01",
         "tier": "mentioned"
       }
     ],
@@ -10693,6 +10685,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-local-llm-apps-android-2026",
+        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
+        "url": "/power-local-llm/best-local-llm-apps-android-2026",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "castmates-review",
         "title": "Castmates Review: Offline AI Character Chat for iPhone",
         "url": "/power-local-llm/castmates-review",
@@ -10704,6 +10704,14 @@
         "slug": "local-ai-workstation-build-guide",
         "title": "Local AI Workstation Build Guide 2026: 3 Budget Tiers",
         "url": "/power-local-llm/local-ai-workstation-build-guide",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-with-logseq-and-joplin",
+        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
+        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
       },
@@ -10733,38 +10741,22 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "secret-ai-review",
-        "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
-        "url": "/power-local-llm/secret-ai-review",
+        "slug": "run-ai-on-tablet-ipad-android",
+        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
+        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "hiwaifu-review",
-        "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
-        "url": "/power-local-llm/hiwaifu-review",
-        "dateModified": "2026-10-18",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "snug-protocol-review",
-        "title": "Snug Protocol: Portable, AI-Built Personal Apps, Explained",
-        "url": "/power-local-llm/snug-protocol-review",
-        "dateModified": "2026-10-18",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "transcriptionsuite-review",
-        "title": "TranscriptionSuite Review: Free Local Speech-to-Text with Speaker Labels",
-        "url": "/power-local-llm/transcriptionsuite-review",
-        "dateModified": "2026-10-18",
+        "slug": "secret-ai-review",
+        "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
+        "url": "/power-local-llm/secret-ai-review",
+        "dateModified": "2026-10-19",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 202,
+    "totalCount": 203,
     "capped": true
   },
   "Qdrant": {

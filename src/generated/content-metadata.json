@@ -6195,7 +6195,7 @@
       ]
     },
     "best-local-llm-apps-android-2026": {
-      "dateModified": "2026-08-24",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -6691,7 +6691,7 @@
       ]
     },
     "local-llm-with-logseq-and-joplin": {
-      "dateModified": "2026-08-30",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -6713,7 +6713,7 @@
         },
         {
           "url": "/images/local-llm-logseq-joplin-notion-privacy-flow-en.svg",
-          "title": "Notion AI ships note content to OpenAI Cloud (US) on every request; Logseq + logseq-copilot and Joplin + Jarvis route the same request to Ollama at localhost:11434/v1, so content never leaves the device."
+          "title": "Notion AI sends note content to Notion's cloud and its model providers on every request; Logseq + logseq-copilot and Joplin + Jarvis route the same request to Ollama at localhost:11434/v1, so content never leaves the device."
         }
       ]
     },
@@ -6974,7 +6974,7 @@
       "images": []
     },
     "run-ai-on-tablet-ipad-android": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -7000,7 +7000,7 @@
         },
         {
           "url": "/images/run-ai-on-tablet-termux-setup-en.svg",
-          "title": "Android on-device AI: 5-step Termux + Ollama setup — install Termux from F-Droid (not Play Store), update packages, install Ollama via curl, pull a model (phi4-mini or qwen3:1.7b), then start the server at localhost:11434. Requires 8 GB RAM minimum."
+          "title": "Android on-device AI: 5-step Termux + Ollama setup — install Termux from F-Droid (not Play Store), update packages, install Ollama with pkg install ollama, pull a model (phi4-mini or qwen3:1.7b), then start the server at localhost:11434. Requires 8 GB RAM minimum."
         },
         {
           "url": "/images/run-ai-on-tablet-ipad-android-remote-setup-hero-en.webp",
@@ -7743,7 +7743,7 @@
       ]
     },
     "deepseek-r1-vs-distills-explained-2026": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-06-19",
       "hasSections": true,
