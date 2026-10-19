@@ -25,18 +25,9 @@ interface PrivacyPageClientProps {
   initialLang?: Language
 }
 
-// Languages whose privacy prose has been migrated to the cookieless reality
-// (GA4 removed). For these, the GA4 processor row (§4), the _ga cookie rows
-// (§7) and the §5 "Google Analytics" label are hidden so the page stays
-// internally consistent. Other languages still carry the GA4 prose, so their
-// GA4 block stays intact until /geo-translation migrates them too — then add
-// the language code here.
-const COOKIELESS_MIGRATED_LANGS: Language[] = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
-
 export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
   const lang = useLang(initialLang) as Language
   const t = translations[lang as keyof typeof translations]
-  const gaRemoved = COOKIELESS_MIGRATED_LANGS.includes(lang)
 
   const renderTemplate = (text: string, vars: Record<string, string> = {}) => {
     let result = text
@@ -161,14 +152,6 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
                     <Td>{t.privacyS4Row1Data}</Td>
                     <Td>{t.privacyS4Row1Loc}</Td>
                   </tr>
-                  {!gaRemoved && (
-                  <tr className="border-b border-gray-100">
-                    <Td><strong>{t.privacyS4Row2Proc}</strong></Td>
-                    <Td>{t.privacyS4Row2Role}</Td>
-                    <Td>{t.privacyS4Row2Data}</Td>
-                    <Td>{t.privacyS4Row2Loc}</Td>
-                  </tr>
-                  )}
                   <tr className="border-b border-gray-100">
                     <Td><strong>{t.privacyS4Row3Proc}</strong></Td>
                     <Td>{t.privacyS4Row3Role}</Td>
@@ -205,7 +188,7 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
             <P>{t.privacyS5Intro}</P>
             <ul className="list-disc pl-6 space-y-2 text-text-secondary text-[15px] leading-relaxed">
               <li><strong className="text-text-primary">Resend:</strong> {t.privacyS5Bullet1}</li>
-              <li><strong className="text-text-primary">{gaRemoved ? 'Analytics:' : 'Google Analytics:'}</strong> {t.privacyS5Bullet2}</li>
+              <li><strong className="text-text-primary">Microsoft Clarity / Umami:</strong> {t.privacyS5Bullet2}</li>
               <li><strong className="text-text-primary">Vercel / Upstash:</strong> {t.privacyS5Bullet3}</li>
             </ul>
             <P>{renderTemplate(t.privacyS5Closure, { email: CONTROLLER_EMAIL }).split(CONTROLLER_EMAIL).map((part, i) => (
@@ -239,22 +222,6 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
                   </tr>
                 </thead>
                 <tbody>
-                  {!gaRemoved && (
-                  <tr className="border-b border-gray-100">
-                    <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row1Cookie}</code></Td>
-                    <Td>{t.privacyS7Row1SetBy}</Td>
-                    <Td>{t.privacyS7Row1Purpose}</Td>
-                    <Td>{t.privacyS7Row1Duration}</Td>
-                  </tr>
-                  )}
-                  {!gaRemoved && (
-                  <tr className="border-b border-gray-100">
-                    <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row2Cookie}</code></Td>
-                    <Td>{t.privacyS7Row2SetBy}</Td>
-                    <Td>{t.privacyS7Row2Purpose}</Td>
-                    <Td>{t.privacyS7Row2Duration}</Td>
-                  </tr>
-                  )}
                   <tr className="border-b border-gray-100">
                     <Td><code className="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{t.privacyS7Row3Cookie}</code></Td>
                     <Td>{t.privacyS7Row3SetBy}</Td>
