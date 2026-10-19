@@ -296,6 +296,7 @@ https://www.promptquorum.com/power-local-llm/boltai-review
 https://www.promptquorum.com/power-local-llm/build-local-voice-assistant-2026
 https://www.promptquorum.com/power-local-llm/camel-review
 https://www.promptquorum.com/power-local-llm/candle-vllm-review
+https://www.promptquorum.com/power-local-llm/castmates-review
 https://www.promptquorum.com/power-local-llm/chapper-review
 https://www.promptquorum.com/power-local-llm/chat-with-1000-pdfs-locally
 https://www.promptquorum.com/power-local-llm/chatterbox-vs-elevenlabs
