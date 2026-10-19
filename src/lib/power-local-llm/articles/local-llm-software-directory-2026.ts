@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-05',
     theme: 'Overview & Reference',
     title: 'The Complete Local AI & LLM Software Directory: ' + TOTAL_TOOL_COUNT + ' Apps & Tools for Running AI Locally (2026)',
@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Das vollständige Verzeichnis für lokale KI- & LLM-Software: ' + TOTAL_TOOL_COUNT + ' Apps und Tools, um KI lokal auszuführen (2026)',
@@ -1193,7 +1193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'Le répertoire complet des logiciels d\'IA et de LLM locaux : ' + TOTAL_TOOL_COUNT + ' apps et outils pour exécuter l\'IA en local (2026)',
@@ -1778,7 +1778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす' + TOTAL_TOOL_COUNT + 'のアプリ＆ツール（2026年版）',
@@ -2365,7 +2365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: '本地AI与LLM软件完整目录：' + TOTAL_TOOL_COUNT + '款应用与工具，在本地运行AI（2026）',
@@ -2952,7 +2952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'El directorio completo de software de IA y LLM local: ' + TOTAL_TOOL_COUNT + ' apps y herramientas para ejecutar IA en local (2026)',
@@ -3553,7 +3553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'O diretório completo de software de IA e LLM local: ' + TOTAL_TOOL_COUNT + ' apps e ferramentas para executar IA localmente (2026)',
@@ -4153,7 +4153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: 'الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: ' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)',
@@ -4753,7 +4753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'monthly',
     publishDate: '2026-05-07',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
     title: '로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 ' + TOTAL_TOOL_COUNT + '개 앱과 도구 (2026)',

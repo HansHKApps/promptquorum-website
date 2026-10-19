@@ -193,6 +193,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'honey-llm':                               'honey-llm',
   'mlxhub':                                  'mlxhub',
   'local-ai-chat-pocket':                    'local-ai-chat-pocket',
+  'castmates':                               'castmates',
   'pixlstash':                               'pixlstash',
   'swerve-ai':                               'swerve-ai',
   'openmontage':                             'openmontage',
