@@ -324,12 +324,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Need an inexpensive RAG server?** See the [best mini PCs for local LLMs](/local-llms/best-mini-pcs-local-llm).',
           '**Need GPU acceleration for larger models or more concurrent users?** See the [GPU buying guide for local LLMs](/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
-          '**Need a complete workstation build?** See the [local AI workstation build guide](/power-local-llm/local-ai-workstation-build-guide-2026).',
+          '**Need a complete workstation build?** See the [local AI workstation build guide](/power-local-llm/local-ai-workstation-build-guide).',
           '**Prefer a quiet Mac-based server?** See the [best Mac for local AI](/power-local-llm/best-mac-for-local-ai-2026).',
         ],
         affiliateLinks: [
           { label: 'See best mini PCs for local AI →', url: '/local-llms/best-mini-pcs-local-llm', productName: 'Mini PC', productCategory: 'Hardware' },
-          { label: 'See best local AI workstations →', url: '/power-local-llm/local-ai-workstation-build-guide-2026', productName: 'Workstation', productCategory: 'Hardware' },
+          { label: 'See best local AI workstations →', url: '/power-local-llm/local-ai-workstation-build-guide', productName: 'Workstation', productCategory: 'Hardware' },
         ],
       },
       useCases: {
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM vs PrivateGPT vs Open WebUI](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — the deeper head-to-head this guide links out to',
           '[RAGFlow: Deep Document Understanding & Citations](/power-local-llm/ragflow-document-understanding-rag-review) — full review of the layout-aware parsing and citation traceability that makes RAGFlow the pick for complex documents.',
           '[Best Workstation Build for Local AI (2026): Three Budget Tiers](/power-local-llm/best-workstation-build-local-ai-2026) — hardware foundation for running large RAG models locally',
-          '[Local AI Workstation Build Guide](/power-local-llm/local-ai-workstation-build-guide-2026) — full custom build for department/enterprise-scale RAG',
+          '[Local AI Workstation Build Guide](/power-local-llm/local-ai-workstation-build-guide) — full custom build for department/enterprise-scale RAG',
           '[Best Mini PCs for Local LLMs](/local-llms/best-mini-pcs-local-llm) — the cheapest way to run a solo/small-team RAG server',
           '[Best GPU Buying Guide for Local LLMs](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU requirements for larger embedding and inference workloads',
           '[Best Local Embedding Models for RAG](/power-local-llm/best-embedding-models-local-rag-2026) — the embedding-model layer for multilingual or specialized corpora',
@@ -906,12 +906,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Brauchen Sie einen kostengünstigen RAG-Server?** Siehe die [besten Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm).',
           '**Brauchen Sie GPU-Beschleunigung für größere Modelle oder mehr gleichzeitige Nutzer?** Siehe den [GPU-Kaufratgeber für lokale LLMs](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
-          '**Brauchen Sie einen kompletten Workstation-Build?** Siehe den [Leitfaden für den Bau einer lokalen KI-Workstation](/de/power-local-llm/local-ai-workstation-build-guide-2026).',
+          '**Brauchen Sie einen kompletten Workstation-Build?** Siehe den [Leitfaden für den Bau einer lokalen KI-Workstation](/de/power-local-llm/local-ai-workstation-build-guide).',
           '**Bevorzugen Sie einen leisen Mac-basierten Server?** Siehe den [besten Mac für lokale KI](/de/power-local-llm/best-mac-for-local-ai-2026).',
         ],
         affiliateLinks: [
           { label: 'Beste Mini-PCs für lokale KI ansehen →', url: '/de/local-llms/best-mini-pcs-local-llm', productName: 'Mini-PC', productCategory: 'Hardware' },
-          { label: 'Beste lokale KI-Workstations ansehen →', url: '/de/power-local-llm/local-ai-workstation-build-guide-2026', productName: 'Workstation', productCategory: 'Hardware' },
+          { label: 'Beste lokale KI-Workstations ansehen →', url: '/de/power-local-llm/local-ai-workstation-build-guide', productName: 'Workstation', productCategory: 'Hardware' },
         ],
       },
       useCases: {
@@ -1095,7 +1095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — der tiefere Direktvergleich, auf den dieser Leitfaden verweist',
           '[RAGFlow: Tiefes Dokumentenverständnis & Zitate](/de/power-local-llm/ragflow-document-understanding-rag-review) — vollständiger Test des layoutbewussten Parsings und der Zitat-Nachvollziehbarkeit, die RAGFlow zur richtigen Wahl für komplexe Dokumente machen.',
           '[Beste Workstation für lokale KI (2026): Drei Budgetstufen](/de/power-local-llm/best-workstation-build-local-ai-2026) — Hardware-Grundlage für den Betrieb großer RAG-Modelle lokal',
-          '[Leitfaden für den Bau einer lokalen KI-Workstation](/de/power-local-llm/local-ai-workstation-build-guide-2026) — kompletter individueller Build für RAG im Abteilungs-/Enterprise-Maßstab',
+          '[Leitfaden für den Bau einer lokalen KI-Workstation](/de/power-local-llm/local-ai-workstation-build-guide) — kompletter individueller Build für RAG im Abteilungs-/Enterprise-Maßstab',
           '[Beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm) — der günstigste Weg, einen Solo-/Kleinteam-RAG-Server zu betreiben',
           '[Bester GPU-Kaufratgeber für lokale LLMs](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — GPU-Anforderungen für größere Embedding- und Inferenz-Workloads',
           '[Beste lokale Embedding-Modelle für RAG](/de/power-local-llm/best-embedding-models-local-rag-2026) — die Embedding-Modell-Ebene für mehrsprachige oder spezialisierte Korpora',
@@ -1496,12 +1496,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Besoin d\'un serveur RAG abordable ?** Voir les [meilleurs mini PC pour LLM locaux](/fr/local-llms/best-mini-pcs-local-llm).',
           '**Besoin d\'accélération GPU pour de plus grands modèles ou plus d\'utilisateurs simultanés ?** Voir le [guide d\'achat GPU pour LLM locaux](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
-          '**Besoin d\'une station de travail complète ?** Voir le [guide de construction d\'une station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide-2026).',
+          '**Besoin d\'une station de travail complète ?** Voir le [guide de construction d\'une station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide).',
           '**Vous préférez un serveur Mac silencieux ?** Voir le [meilleur Mac pour l\'IA locale](/fr/power-local-llm/best-mac-for-local-ai-2026).',
         ],
         affiliateLinks: [
           { label: 'Voir les meilleurs mini PC pour l\'IA locale →', url: '/fr/local-llms/best-mini-pcs-local-llm', productName: 'Mini PC', productCategory: 'Hardware' },
-          { label: 'Voir les meilleures stations de travail IA locale →', url: '/fr/power-local-llm/local-ai-workstation-build-guide-2026', productName: 'Workstation', productCategory: 'Hardware' },
+          { label: 'Voir les meilleures stations de travail IA locale →', url: '/fr/power-local-llm/local-ai-workstation-build-guide', productName: 'Workstation', productCategory: 'Hardware' },
         ],
       },
       useCases: {
@@ -1677,7 +1677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM vs PrivateGPT vs Open WebUI](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — le comparatif approfondi vers lequel ce guide renvoie',
           '[RAGFlow : compréhension approfondie des documents et citations](/fr/power-local-llm/ragflow-document-understanding-rag-review) — test complet de l\'analyse sensible à la mise en page et de la traçabilité des citations qui font de RAGFlow le bon choix pour les documents complexes.',
           '[Meilleure configuration de station de travail pour l\'IA locale (2026) : trois budgets](/fr/power-local-llm/best-workstation-build-local-ai-2026) — la base matérielle pour exécuter de grands modèles RAG en local',
-          '[Guide de construction d\'une station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide-2026) — construction complète sur mesure pour un RAG à l\'échelle service/entreprise',
+          '[Guide de construction d\'une station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide) — construction complète sur mesure pour un RAG à l\'échelle service/entreprise',
           '[Meilleurs mini PC pour LLM locaux](/fr/local-llms/best-mini-pcs-local-llm) — la façon la moins chère d\'exécuter un serveur RAG solo/petite équipe',
           '[Meilleur guide d\'achat GPU pour LLM locaux](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — exigences GPU pour de plus grandes charges d\'embedding et d\'inférence',
           '[Meilleurs modèles d\'embedding locaux pour le RAG](/fr/power-local-llm/best-embedding-models-local-rag-2026) — la couche modèle d\'embedding pour corpus multilingues ou spécialisés',
@@ -2078,12 +2078,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**手頃な価格のRAGサーバーが必要ですか？** [ローカルLLM向けベストミニPC](/ja/local-llms/best-mini-pcs-local-llm)をご覧ください。',
           '**より大きなモデルや同時接続ユーザーが多い場合のGPUアクセラレーションが必要ですか？** [ローカルLLM向けGPU購入ガイド](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026)をご覧ください。',
-          '**完全なワークステーション構築が必要ですか？** [ローカルAIワークステーション構築ガイド](/ja/power-local-llm/local-ai-workstation-build-guide-2026)をご覧ください。',
+          '**完全なワークステーション構築が必要ですか？** [ローカルAIワークステーション構築ガイド](/ja/power-local-llm/local-ai-workstation-build-guide)をご覧ください。',
           '**静音なMacベースのサーバーをお探しですか？** [ローカルAI向けベストMac](/ja/power-local-llm/best-mac-for-local-ai-2026)をご覧ください。',
         ],
         affiliateLinks: [
           { label: 'ローカルAI向けベストミニPCを見る →', url: '/ja/local-llms/best-mini-pcs-local-llm', productName: 'Mini PC', productCategory: 'Hardware' },
-          { label: 'ローカルAI向けベストワークステーションを見る →', url: '/ja/power-local-llm/local-ai-workstation-build-guide-2026', productName: 'Workstation', productCategory: 'Hardware' },
+          { label: 'ローカルAI向けベストワークステーションを見る →', url: '/ja/power-local-llm/local-ai-workstation-build-guide', productName: 'Workstation', productCategory: 'Hardware' },
         ],
       },
       useCases: {
@@ -2259,7 +2259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM対PrivateGPT対Open WebUI](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 本ガイドがリンクしているより詳細な比較記事',
           '[RAGFlow：深い文書理解と引用](/ja/power-local-llm/ragflow-document-understanding-rag-review) — 複雑な文書にRAGFlowが適する理由となる、レイアウト認識解析と引用の追跡性を詳しく解説するレビュー。',
           '[ローカルAI最適ワークステーション構築（2026年）：3つの予算ティア](/ja/power-local-llm/best-workstation-build-local-ai-2026) — 大規模なRAGモデルをローカルで実行するためのハードウェア基盤',
-          '[ローカルAIワークステーション構築ガイド](/ja/power-local-llm/local-ai-workstation-build-guide-2026) — 部門／エンタープライズ規模のRAG向けフルカスタムビルド',
+          '[ローカルAIワークステーション構築ガイド](/ja/power-local-llm/local-ai-workstation-build-guide) — 部門／エンタープライズ規模のRAG向けフルカスタムビルド',
           '[ローカルLLM向けベストミニPC](/ja/local-llms/best-mini-pcs-local-llm) — 個人／小規模チーム向けRAGサーバーを最も安く実行する方法',
           '[ローカルLLM向けベストGPU購入ガイド](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — より大きな埋め込み・推論ワークロード向けGPU要件',
           '[ローカル埋め込みモデルRAG向けベスト](/ja/power-local-llm/best-embedding-models-local-rag-2026) — 多言語または専門コーパス向けの埋め込みモデル層',
@@ -2647,12 +2647,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**想要一台经济实惠的RAG服务器？** 参见[本地LLM最佳迷你主机推荐](/zh/local-llms/best-mini-pcs-local-llm)。',
           '**需要为更大模型或更多并发用户提供GPU加速？** 参见[本地LLM最佳GPU购买指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026)。',
-          '**需要完整的工作站构建方案？** 参见[本地AI工作站构建指南](/zh/power-local-llm/local-ai-workstation-build-guide-2026)。',
+          '**需要完整的工作站构建方案？** 参见[本地AI工作站构建指南](/zh/power-local-llm/local-ai-workstation-build-guide)。',
           '**偏好安静的Mac服务器？** 参见[本地AI最佳Mac选择](/zh/power-local-llm/best-mac-for-local-ai-2026)。',
         ],
         affiliateLinks: [
           { label: '查看本地AI最佳迷你主机 →', url: '/zh/local-llms/best-mini-pcs-local-llm', productName: 'Mini PC', productCategory: 'Hardware' },
-          { label: '查看本地AI最佳工作站 →', url: '/zh/power-local-llm/local-ai-workstation-build-guide-2026', productName: 'Workstation', productCategory: 'Hardware' },
+          { label: '查看本地AI最佳工作站 →', url: '/zh/power-local-llm/local-ai-workstation-build-guide', productName: 'Workstation', productCategory: 'Hardware' },
         ],
       },
       useCases: {
@@ -2828,7 +2828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM vs PrivateGPT vs Open WebUI对比](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) —— 本指南延伸链接到的深度对比文章',
           '[RAGFlow：深度文档理解与引用](/zh/power-local-llm/ragflow-document-understanding-rag-review) —— 详细评测版面感知解析与引用可追溯性,这正是RAGFlow适合处理复杂文档的原因。',
           '[2026年本地AI最佳工作站配置：三档预算方案](/zh/power-local-llm/best-workstation-build-local-ai-2026) —— 本地运行大型RAG模型的硬件基础',
-          '[本地AI工作站构建指南](/zh/power-local-llm/local-ai-workstation-build-guide-2026) —— 面向部门/企业级RAG的完整定制构建方案',
+          '[本地AI工作站构建指南](/zh/power-local-llm/local-ai-workstation-build-guide) —— 面向部门/企业级RAG的完整定制构建方案',
           '[本地LLM最佳迷你主机推荐](/zh/local-llms/best-mini-pcs-local-llm) —— 运行个人/小团队RAG服务器最省钱的方式',
           '[本地LLM最佳GPU购买指南](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) —— 更大嵌入与推理负载所需的GPU配置',
           '[本地RAG最佳嵌入模型](/zh/power-local-llm/best-embedding-models-local-rag-2026) —— 面向多语言或特定领域语料的嵌入模型层',
@@ -3233,12 +3233,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**¿Necesitas un servidor RAG económico?** Consulta los [mejores mini PC para LLM locales](/es/local-llms/best-mini-pcs-local-llm).',
           '**¿Necesitas aceleración por GPU para modelos más grandes o más usuarios simultáneos?** Consulta la [guía de compra de GPU para LLM locales](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
-          '**¿Necesitas una estación de trabajo completa?** Consulta la [guía de construcción de estaciones de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide-2026).',
+          '**¿Necesitas una estación de trabajo completa?** Consulta la [guía de construcción de estaciones de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide).',
           '**¿Prefieres un servidor silencioso basado en Mac?** Consulta el [mejor Mac para IA local](/es/power-local-llm/best-mac-for-local-ai-2026).',
         ],
         affiliateLinks: [
           { label: 'Ver los mejores mini PC para IA local →', url: '/es/local-llms/best-mini-pcs-local-llm', productName: 'Mini PC', productCategory: 'Hardware' },
-          { label: 'Ver las mejores estaciones de trabajo de IA local →', url: '/es/power-local-llm/local-ai-workstation-build-guide-2026', productName: 'Workstation', productCategory: 'Hardware' },
+          { label: 'Ver las mejores estaciones de trabajo de IA local →', url: '/es/power-local-llm/local-ai-workstation-build-guide', productName: 'Workstation', productCategory: 'Hardware' },
         ],
       },
       useCases: {
@@ -3414,7 +3414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM frente a PrivateGPT frente a Open WebUI](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — la comparativa directa más detallada a la que enlaza esta guía',
           '[RAGFlow: comprensión profunda de documentos y citas](/es/power-local-llm/ragflow-document-understanding-rag-review) — reseña completa del análisis sensible al diseño y la trazabilidad de citas que hacen de RAGFlow la mejor opción para documentos complejos.',
           '[Mejor construcción de estación de trabajo para IA local (2026): tres niveles de presupuesto](/es/power-local-llm/best-workstation-build-local-ai-2026) — la base de hardware para ejecutar grandes modelos RAG en local',
-          '[Guía de construcción de estaciones de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide-2026) — construcción personalizada completa para RAG a escala de departamento/empresa',
+          '[Guía de construcción de estaciones de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide) — construcción personalizada completa para RAG a escala de departamento/empresa',
           '[Mejores mini PC para LLM locales](/es/local-llms/best-mini-pcs-local-llm) — la forma más económica de ejecutar un servidor RAG individual/de equipo pequeño',
           '[Mejor guía de compra de GPU para LLM locales](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — requisitos de GPU para cargas de trabajo más grandes de embedding e inferencia',
           '[Mejores modelos de embedding local para RAG](/es/power-local-llm/best-embedding-models-local-rag-2026) — la capa de modelo de embedding para corpus multilingües o especializados',
@@ -3815,12 +3815,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Precisa de um servidor RAG de baixo custo?** Veja os [melhores mini PCs para LLMs locais](/pt/local-llms/best-mini-pcs-local-llm).',
           '**Precisa de aceleração por GPU para modelos maiores ou mais usuários simultâneos?** Veja o [guia de compra de GPU para LLMs locais](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
-          '**Precisa de uma estação de trabalho completa?** Veja o [guia de montagem de estação de trabalho de IA local](/pt/power-local-llm/local-ai-workstation-build-guide-2026).',
+          '**Precisa de uma estação de trabalho completa?** Veja o [guia de montagem de estação de trabalho de IA local](/pt/power-local-llm/local-ai-workstation-build-guide).',
           '**Prefere um servidor Mac silencioso?** Veja o [melhor Mac para IA local](/pt/power-local-llm/best-mac-for-local-ai-2026).',
         ],
         affiliateLinks: [
           { label: 'Veja os melhores mini PCs para IA local →', url: '/pt/local-llms/best-mini-pcs-local-llm', productName: 'Mini PC', productCategory: 'Hardware' },
-          { label: 'Veja as melhores estações de trabalho de IA local →', url: '/pt/power-local-llm/local-ai-workstation-build-guide-2026', productName: 'Workstation', productCategory: 'Hardware' },
+          { label: 'Veja as melhores estações de trabalho de IA local →', url: '/pt/power-local-llm/local-ai-workstation-build-guide', productName: 'Workstation', productCategory: 'Hardware' },
         ],
       },
       useCases: {
@@ -3996,7 +3996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM vs PrivateGPT vs Open WebUI](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — o comparativo mais aprofundado para o qual este guia remete',
           '[RAGFlow: compreensão profunda de documentos e citações](/pt/power-local-llm/ragflow-document-understanding-rag-review) — avaliação completa da análise sensível ao layout e da rastreabilidade de citações que tornam o RAGFlow a escolha certa para documentos complexos.',
           '[Melhor Estação de Trabalho para IA Local (2026): Três Faixas de Orçamento](/pt/power-local-llm/best-workstation-build-local-ai-2026) — a base de hardware para rodar grandes modelos RAG localmente',
-          '[Guia de Montagem de Estação de Trabalho de IA Local](/pt/power-local-llm/local-ai-workstation-build-guide-2026) — montagem personalizada completa para RAG em escala de departamento/empresa',
+          '[Guia de Montagem de Estação de Trabalho de IA Local](/pt/power-local-llm/local-ai-workstation-build-guide) — montagem personalizada completa para RAG em escala de departamento/empresa',
           '[Melhores Mini PCs para LLMs Locais](/pt/local-llms/best-mini-pcs-local-llm) — a forma mais barata de rodar um servidor RAG individual/para pequenas equipes',
           '[Melhor Guia de Compra de GPU para LLMs Locais](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — requisitos de GPU para cargas de trabalho maiores de embedding e inferência',
           '[Melhores Modelos de Embedding Locais para RAG](/pt/power-local-llm/best-embedding-models-local-rag-2026) — a camada de modelo de embedding para corpora multilíngues ou especializados',
@@ -4401,12 +4401,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**تحتاج خادم RAG غير مكلف؟** انظر [أفضل أجهزة الكمبيوتر المصغرة للنماذج اللغوية المحلية](/ar/local-llms/best-mini-pcs-local-llm).',
           '**تحتاج تسريع GPU لنماذج أكبر أو مزيد من المستخدمين المتزامنين؟** انظر [دليل شراء GPU للنماذج اللغوية المحلية](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026).',
-          '**تحتاج بناء محطة عمل كاملة؟** انظر [دليل بناء محطة عمل ذكاء اصطناعي محلي](/ar/power-local-llm/local-ai-workstation-build-guide-2026).',
+          '**تحتاج بناء محطة عمل كاملة؟** انظر [دليل بناء محطة عمل ذكاء اصطناعي محلي](/ar/power-local-llm/local-ai-workstation-build-guide).',
           '**تفضّل خادم Mac هادئاً؟** انظر [أفضل جهاز Mac للذكاء الاصطناعي المحلي](/ar/power-local-llm/best-mac-for-local-ai-2026).',
         ],
         affiliateLinks: [
           { label: 'شاهد أفضل أجهزة الكمبيوتر المصغرة للذكاء الاصطناعي المحلي ←', url: '/ar/local-llms/best-mini-pcs-local-llm', productName: 'Mini PC', productCategory: 'Hardware' },
-          { label: 'شاهد أفضل محطات عمل الذكاء الاصطناعي المحلي ←', url: '/ar/power-local-llm/local-ai-workstation-build-guide-2026', productName: 'Workstation', productCategory: 'Hardware' },
+          { label: 'شاهد أفضل محطات عمل الذكاء الاصطناعي المحلي ←', url: '/ar/power-local-llm/local-ai-workstation-build-guide', productName: 'Workstation', productCategory: 'Hardware' },
         ],
       },
       useCases: {
@@ -4582,7 +4582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — المقارنة المباشرة الأعمق التي يُحيل إليها هذا الدليل',
           '[RAGFlow: فهم عميق للمستندات واستشهادات موثوقة](/ar/power-local-llm/ragflow-document-understanding-rag-review) — مراجعة كاملة للتحليل الواعي بالتخطيط وقابلية تتبع الاستشهادات التي تجعل RAGFlow الخيار الأنسب للمستندات المعقدة.',
           '[أفضل بناء محطة عمل للذكاء الاصطناعي المحلي (2026): ثلاث فئات ميزانية](/ar/power-local-llm/best-workstation-build-local-ai-2026) — الأساس المادي لتشغيل نماذج RAG الكبيرة محلياً',
-          '[دليل بناء محطة عمل ذكاء اصطناعي محلي](/ar/power-local-llm/local-ai-workstation-build-guide-2026) — بناء مخصص كامل لـ RAG على مستوى قسم/مؤسسة',
+          '[دليل بناء محطة عمل ذكاء اصطناعي محلي](/ar/power-local-llm/local-ai-workstation-build-guide) — بناء مخصص كامل لـ RAG على مستوى قسم/مؤسسة',
           '[أفضل أجهزة الكمبيوتر المصغرة للنماذج اللغوية المحلية](/ar/local-llms/best-mini-pcs-local-llm) — أرخص طريقة لتشغيل خادم RAG فردي/لفريق صغير',
           '[أفضل دليل شراء GPU للنماذج اللغوية المحلية](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — متطلبات GPU لأعباء عمل التضمين والاستدلال الأكبر',
           '[أفضل نماذج التضمين المحلية لـ RAG](/ar/power-local-llm/best-embedding-models-local-rag-2026) — طبقة نموذج التضمين للمجموعات متعددة اللغات أو المتخصصة',
@@ -4983,12 +4983,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**저렴한 RAG 서버가 필요하십니까?** [로컬 LLM용 최고의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm)를 참고하십시오.',
           '**더 큰 모델이나 더 많은 동시 사용자를 위한 GPU 가속이 필요하십니까?** [로컬 LLM용 GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026)를 참고하십시오.',
-          '**완전한 워크스테이션 구성이 필요하십니까?** [로컬 AI 워크스테이션 구축 가이드](/ko/power-local-llm/local-ai-workstation-build-guide-2026)를 참고하십시오.',
+          '**완전한 워크스테이션 구성이 필요하십니까?** [로컬 AI 워크스테이션 구축 가이드](/ko/power-local-llm/local-ai-workstation-build-guide)를 참고하십시오.',
           '**조용한 Mac 기반 서버를 선호하십니까?** [로컬 AI용 최고의 Mac](/ko/power-local-llm/best-mac-for-local-ai-2026)을 참고하십시오.',
         ],
         affiliateLinks: [
           { label: '로컬 AI용 최고의 미니 PC 보기 →', url: '/ko/local-llms/best-mini-pcs-local-llm', productName: 'Mini PC', productCategory: 'Hardware' },
-          { label: '최고의 로컬 AI 워크스테이션 보기 →', url: '/ko/power-local-llm/local-ai-workstation-build-guide-2026', productName: 'Workstation', productCategory: 'Hardware' },
+          { label: '최고의 로컬 AI 워크스테이션 보기 →', url: '/ko/power-local-llm/local-ai-workstation-build-guide', productName: 'Workstation', productCategory: 'Hardware' },
         ],
       },
       useCases: {
@@ -5164,7 +5164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM vs PrivateGPT vs Open WebUI](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 이 가이드가 연결하는 더 심층적인 정면 비교',
           '[RAGFlow: 깊이 있는 문서 이해와 인용](/ko/power-local-llm/ragflow-document-understanding-rag-review) — 복잡한 문서에 RAGFlow가 적합한 이유가 되는 레이아웃 인식 분석과 인용 추적성을 다루는 전체 리뷰.',
           '[로컬 AI 최고의 워크스테이션 빌드 (2026): 세 가지 예산 등급](/ko/power-local-llm/best-workstation-build-local-ai-2026) — 대형 RAG 모델을 로컬에서 실행하기 위한 하드웨어 기반',
-          '[로컬 AI 워크스테이션 구축 가이드](/ko/power-local-llm/local-ai-workstation-build-guide-2026) — 부서/엔터프라이즈 규모 RAG를 위한 완전한 맞춤 빌드',
+          '[로컬 AI 워크스테이션 구축 가이드](/ko/power-local-llm/local-ai-workstation-build-guide) — 부서/엔터프라이즈 규모 RAG를 위한 완전한 맞춤 빌드',
           '[로컬 LLM용 최고의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm) — 개인/소규모 팀 RAG 서버를 실행하는 가장 저렴한 방법',
           '[로컬 LLM 최적 GPU 구매 가이드 2026](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 대형 임베딩 및 추론 워크로드를 위한 GPU 요구사항',
           '[로컬 RAG용 최고의 임베딩 모델](/ko/power-local-llm/best-embedding-models-local-rag-2026) — 다국어 또는 특화 코퍼스를 위한 임베딩 모델 계층',

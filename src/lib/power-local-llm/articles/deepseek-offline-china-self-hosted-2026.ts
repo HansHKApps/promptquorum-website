@@ -147,7 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**PromptQuorum\'s take:** for most people, 14B or 32B is the sweet spot. The jump to 70B is a genuinely different hardware category (dual GPUs, large-memory workstation, serious cooling and power) — treat it as its own purchase decision, not a natural next step from 32B.',
-          'The full 671B model is not a normal consumer-PC target. If your workload needs that scale, compare a dedicated AI workstation build against cloud/API costs rather than assembling it piecemeal — see the [local AI workstation build guide](/power-local-llm/local-ai-workstation-build-guide-2026).',
+          'The full 671B model is not a normal consumer-PC target. If your workload needs that scale, compare a dedicated AI workstation build against cloud/API costs rather than assembling it piecemeal — see the [local AI workstation build guide](/power-local-llm/local-ai-workstation-build-guide).',
         ],
         note: 'For an always-on, low-power offline endpoint, a capable mini PC runs the 7B and 14B distills quietly — see [Best Mini PCs for Local LLMs](/local-llms/best-mini-pcs-local-llm). For exact GPU matching see the Bite references in Related Guides.',
         affiliateLinks: [
@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best Mac for Local AI](/power-local-llm/best-mac-for-local-ai-2026) — the Apple Silicon hardware path',
           '[Best Mini PCs for Local LLMs](/local-llms/best-mini-pcs-local-llm) — the always-on low-power hardware path',
           '[Cloud GPU Rental Guide](/power-local-llm/cloud-gpu-rental-guide-2026) — test a tier before buying, or handle burst capacity',
-          '[Local AI Workstation Build Guide](/power-local-llm/local-ai-workstation-build-guide-2026) — for the 70B+ tier and full custom builds',
+          '[Local AI Workstation Build Guide](/power-local-llm/local-ai-workstation-build-guide) — for the 70B+ tier and full custom builds',
           '[Local AI Cost Calculator: Build vs Rent](/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — run your own break-even numbers',
           '[Best DeepSeek Distill for Your GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — match your card to a distill plus the Ollama command',
           '[DeepSeek-R1 Distill VRAM Cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — every distill by quant with VRAM and min-GPU',
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**PromptQuorums Einschätzung:** Für die meisten Menschen ist 14B oder 32B der Sweet Spot. Der Sprung auf 70B ist eine wirklich andere Hardware-Kategorie (Dual-GPUs, Workstation mit viel Speicher, ernsthafte Kühlung und Stromversorgung) — behandeln Sie das als eigenständige Kaufentscheidung, nicht als natürlichen nächsten Schritt von 32B.',
-          'Das vollständige 671B-Modell ist kein normales Ziel für einen Consumer-PC. Wenn Ihr Workload diese Größenordnung benötigt, vergleichen Sie einen dedizierten KI-Workstation-Build mit Cloud-/API-Kosten, statt ihn Stück für Stück zusammenzubauen — siehe den [Leitfaden zum Bau einer lokalen KI-Workstation](/de/power-local-llm/local-ai-workstation-build-guide-2026).',
+          'Das vollständige 671B-Modell ist kein normales Ziel für einen Consumer-PC. Wenn Ihr Workload diese Größenordnung benötigt, vergleichen Sie einen dedizierten KI-Workstation-Build mit Cloud-/API-Kosten, statt ihn Stück für Stück zusammenzubauen — siehe den [Leitfaden zum Bau einer lokalen KI-Workstation](/de/power-local-llm/local-ai-workstation-build-guide).',
         ],
         note: 'Für einen Always-on-Offline-Endpunkt mit geringem Stromverbrauch betreibt ein leistungsfähiger Mini-PC die 7B- und 14B-Distills leise — siehe [Beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm). Für das exakte GPU-Matching siehe die Bite-Referenzen unter Verwandte Leitfäden.',
         affiliateLinks: [
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Bester Mac für lokale KI](/de/power-local-llm/best-mac-for-local-ai-2026) — der Apple-Silicon-Hardware-Pfad',
           '[Beste Mini-PCs für lokale LLMs](/de/local-llms/best-mini-pcs-local-llm) — der dauerhaft laufende, stromsparende Hardware-Pfad',
           '[Leitfaden zur Cloud-GPU-Miete](/de/power-local-llm/cloud-gpu-rental-guide-2026) — eine Stufe vor dem Kauf testen oder Spitzenkapazität abdecken',
-          '[Leitfaden zum Bau einer lokalen KI-Workstation](/de/power-local-llm/local-ai-workstation-build-guide-2026) — für die 70B+-Stufe und vollständig individuelle Builds',
+          '[Leitfaden zum Bau einer lokalen KI-Workstation](/de/power-local-llm/local-ai-workstation-build-guide) — für die 70B+-Stufe und vollständig individuelle Builds',
           '[Kostenrechner für lokale KI: Kaufen vs. Mieten](/de/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — rechnen Sie Ihre eigenen Break-Even-Zahlen aus',
           '[Bester DeepSeek-Distill für Ihre GPU](/de/prompt-bites/best-deepseek-distill-for-your-gpu) — passen Sie Ihre Karte an einen Distill an, inklusive Ollama-Befehl',
           '[DeepSeek-R1-Distill VRAM-Spickzettel](/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — jeder Distill nach Quant mit VRAM und Mindest-GPU',
@@ -793,7 +793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Avis de PromptQuorum :** pour la plupart des gens, le 14B ou le 32B est le point idéal. Le saut vers le 70B est une catégorie matérielle vraiment différente (double GPU, station de travail à grande mémoire, refroidissement et alimentation sérieux) — traitez-le comme sa propre décision d\'achat, pas comme une suite naturelle du 32B.',
-          'Le modèle complet de 671B n\'est pas une cible normale pour un PC grand public. Si votre charge de travail nécessite cette échelle, comparez une station de travail IA dédiée aux coûts cloud/API plutôt que de l\'assembler pièce par pièce — voir le [guide de construction d\'une station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide-2026).',
+          'Le modèle complet de 671B n\'est pas une cible normale pour un PC grand public. Si votre charge de travail nécessite cette échelle, comparez une station de travail IA dédiée aux coûts cloud/API plutôt que de l\'assembler pièce par pièce — voir le [guide de construction d\'une station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide).',
         ],
         note: 'Pour un point de terminaison hors ligne permanent et basse consommation, un mini PC capable exécute les distills 7B et 14B silencieusement — voir [Meilleurs mini PC pour LLM locaux](/fr/local-llms/best-mini-pcs-local-llm). Pour la correspondance GPU exacte, voir les références Bite dans Guides connexes.',
         affiliateLinks: [
@@ -951,7 +951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Meilleur Mac pour l\'IA locale](/fr/power-local-llm/best-mac-for-local-ai-2026) — le parcours matériel Apple Silicon',
           '[Meilleurs mini PC pour LLM locaux](/fr/local-llms/best-mini-pcs-local-llm) — le parcours matériel toujours actif et basse consommation',
           '[Guide de location de GPU cloud](/fr/power-local-llm/cloud-gpu-rental-guide-2026) — tester un palier avant d\'acheter, ou gérer une capacité ponctuelle',
-          '[Guide de construction d\'une station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide-2026) — pour le palier 70B+ et les configurations sur mesure',
+          '[Guide de construction d\'une station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide) — pour le palier 70B+ et les configurations sur mesure',
           '[Calculateur de coût IA locale : construire ou louer](/fr/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — faites vos propres calculs de rentabilité',
           '[Meilleur distill DeepSeek pour votre GPU](/fr/prompt-bites/best-deepseek-distill-for-your-gpu) — associez votre carte à un distill avec la commande Ollama',
           '[Aide-mémoire VRAM des distills DeepSeek-R1](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — chaque distill par quant avec VRAM et GPU minimal',
@@ -1115,7 +1115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**PromptQuorumの見解：** 大半の人には14Bまたは32Bが最適解です。70Bへの飛躍は本当に別のハードウェアカテゴリー（デュアルGPU、大容量メモリのワークステーション、本格的な冷却と電源）であり、32Bからの自然な延長ではなく、独立した購入判断として扱ってください。',
-          'フルの671Bモデルは一般的なコンシューマーPCの対象ではありません。その規模の作業が必要なら、部品を個別に組み立てるのではなく、専用のAIワークステーション構成をクラウド/API費用と比較検討してください。[ローカルAIワークステーション構築ガイド](/ja/power-local-llm/local-ai-workstation-build-guide-2026)を参照してください。',
+          'フルの671Bモデルは一般的なコンシューマーPCの対象ではありません。その規模の作業が必要なら、部品を個別に組み立てるのではなく、専用のAIワークステーション構成をクラウド/API費用と比較検討してください。[ローカルAIワークステーション構築ガイド](/ja/power-local-llm/local-ai-workstation-build-guide)を参照してください。',
         ],
         note: '常時稼働で低消費電力のオフラインエンドポイントには、能力のあるmini PCが7Bと14Bのdistillを静かに実行します。[ローカルLLM向けの最適mini PC](/ja/local-llms/best-mini-pcs-local-llm)を参照してください。正確なGPU対応は関連ガイドのBiteリファレンスを参照してください。',
         affiliateLinks: [
@@ -1273,7 +1273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ローカルAI向けの最適Mac](/ja/power-local-llm/best-mac-for-local-ai-2026) — Apple Siliconのハードウェア経路',
           '[ローカルLLM向けの最適mini PC](/ja/local-llms/best-mini-pcs-local-llm) — 常時稼働・低消費電力のハードウェア経路',
           '[クラウドGPUレンタルガイド](/ja/power-local-llm/cloud-gpu-rental-guide-2026) — 購入前に階層を試す、あるいはバーストキャパシティに対応',
-          '[ローカルAIワークステーション構築ガイド](/ja/power-local-llm/local-ai-workstation-build-guide-2026) — 70B以上の階層とフルカスタム構成向け',
+          '[ローカルAIワークステーション構築ガイド](/ja/power-local-llm/local-ai-workstation-build-guide) — 70B以上の階層とフルカスタム構成向け',
           '[ローカルAIコスト計算機：構築か賃貸か](/ja/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 自分の損益分岐点を計算',
           '[あなたのGPUに最適なDeepSeek distill](/ja/prompt-bites/best-deepseek-distill-for-your-gpu) — カードをdistillに合わせ、Ollamaコマンドも掲載',
           '[DeepSeek-R1 distill VRAMチートシート](/ja/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — quantごとの全distillとVRAM・最小GPU',
@@ -1437,7 +1437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**PromptQuorum 的看法：** 对大多数人来说，14B 或 32B 是最佳平衡点。跳到 70B 是完全不同的硬件门槛（双 GPU、大内存工作站、认真的散热与供电）——把它当作独立的购买决策，而不是从 32B 自然升级的下一步。',
-          '完整的 671B 模型不是普通消费级 PC 的目标。如果你的负载确实需要这个规模，应把专用 AI 工作站方案与云端/API 成本对比，而不是零散拼装——见[本地 AI 工作站搭建指南](/zh/power-local-llm/local-ai-workstation-build-guide-2026)。',
+          '完整的 671B 模型不是普通消费级 PC 的目标。如果你的负载确实需要这个规模，应把专用 AI 工作站方案与云端/API 成本对比，而不是零散拼装——见[本地 AI 工作站搭建指南](/zh/power-local-llm/local-ai-workstation-build-guide)。',
         ],
         note: '若需要一台常开、低功耗的离线端点，一台性能足够的 mini PC 就能安静运行 7B 和 14B 蒸馏版——见[本地 LLM 最佳 mini PC](/zh/local-llms/best-mini-pcs-local-llm)。精确的 GPU 匹配见「相关指南」中的 Bite 参考。',
         affiliateLinks: [
@@ -1595,7 +1595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[本地 AI 最佳 Mac](/zh/power-local-llm/best-mac-for-local-ai-2026) — Apple Silicon 硬件路径',
           '[本地 LLM 最佳 mini PC](/zh/local-llms/best-mini-pcs-local-llm) — 常开、低功耗硬件路径',
           '[云端 GPU 租用指南](/zh/power-local-llm/cloud-gpu-rental-guide-2026) — 购买前先试用某档位，或应对突发算力需求',
-          '[本地 AI 工作站搭建指南](/zh/power-local-llm/local-ai-workstation-build-guide-2026) — 面向 70B+ 档位与完全定制配置',
+          '[本地 AI 工作站搭建指南](/zh/power-local-llm/local-ai-workstation-build-guide) — 面向 70B+ 档位与完全定制配置',
           '[本地 AI 成本计算器：自建 vs 租用](/zh/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 自己算清回本数字',
           '[适配你 GPU 的最佳 DeepSeek 蒸馏版](/zh/prompt-bites/best-deepseek-distill-for-your-gpu) — 把你的显卡与蒸馏版匹配，附 Ollama 命令',
           '[DeepSeek-R1 蒸馏版 VRAM 速查表](/zh/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 按量化档位列出每个蒸馏版的 VRAM 与最低 GPU 需求',
@@ -1759,7 +1759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**La opinión de PromptQuorum:** para la mayoría de las personas, 14B o 32B es el punto óptimo. El salto a 70B es una categoría de hardware genuinamente distinta (GPUs dobles, estación de trabajo con mucha memoria, refrigeración y alimentación serias) — trátalo como una decisión de compra propia, no como el siguiente paso natural desde 32B.',
-          'El modelo completo de 671B no es un objetivo normal para un PC de consumo. Si tu carga de trabajo necesita esa escala, compara una estación de trabajo de IA dedicada frente a los costes de la nube/API en lugar de montarla pieza por pieza — consulta la [guía de construcción de estación de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide-2026).',
+          'El modelo completo de 671B no es un objetivo normal para un PC de consumo. Si tu carga de trabajo necesita esa escala, compara una estación de trabajo de IA dedicada frente a los costes de la nube/API en lugar de montarla pieza por pieza — consulta la [guía de construcción de estación de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide).',
         ],
         note: 'Para un endpoint sin conexión siempre activo y de bajo consumo, un mini PC capaz ejecuta los distills 7B y 14B de forma silenciosa — consulta [los mejores mini PCs para LLM local](/es/local-llms/best-mini-pcs-local-llm). Para la correspondencia exacta de GPU, consulta las referencias Bite en Guías relacionadas.',
         affiliateLinks: [
@@ -1917,7 +1917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[El mejor Mac para IA local](/es/power-local-llm/best-mac-for-local-ai-2026) — la ruta de hardware Apple Silicon',
           '[Los mejores mini PCs para LLM local](/es/local-llms/best-mini-pcs-local-llm) — la ruta de hardware siempre activo y de bajo consumo',
           '[Guía de alquiler de GPU en la nube](/es/power-local-llm/cloud-gpu-rental-guide-2026) — prueba un nivel antes de comprar, o gestiona picos de demanda',
-          '[Guía de construcción de estación de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide-2026) — para el nivel 70B+ y las configuraciones totalmente personalizadas',
+          '[Guía de construcción de estación de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide) — para el nivel 70B+ y las configuraciones totalmente personalizadas',
           '[Calculadora de coste de IA local: construir frente a alquilar](/es/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — calcula tu propio punto de equilibrio',
           '[El mejor distill de DeepSeek para tu GPU](/es/prompt-bites/best-deepseek-distill-for-your-gpu) — empareja tu tarjeta con un distill más el comando de Ollama',
           '[Chuleta de VRAM de los distills DeepSeek-R1](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — cada distill por cuantización con VRAM y GPU mínima',
@@ -2081,7 +2081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**A visão do PromptQuorum:** para a maioria das pessoas, o 14B ou o 32B é o ponto ideal. O salto para o 70B é uma categoria de hardware genuinamente diferente (GPUs duplas, estação de trabalho com muita memória, resfriamento e energia sérios) — trate isso como sua própria decisão de compra, não como um próximo passo natural a partir do 32B.',
-          'O modelo completo de 671B não é um alvo normal de PC de consumidor. Se sua carga de trabalho precisa dessa escala, compare uma estação de trabalho de IA dedicada contra os custos de nuvem/API em vez de montá-la aos poucos — veja o [guia de construção de estação de trabalho de IA local](/pt/power-local-llm/local-ai-workstation-build-guide-2026).',
+          'O modelo completo de 671B não é um alvo normal de PC de consumidor. Se sua carga de trabalho precisa dessa escala, compare uma estação de trabalho de IA dedicada contra os custos de nuvem/API em vez de montá-la aos poucos — veja o [guia de construção de estação de trabalho de IA local](/pt/power-local-llm/local-ai-workstation-build-guide).',
         ],
         note: 'Para um endpoint offline sempre ligado e de baixo consumo, um mini PC capaz roda os distills 7B e 14B de forma silenciosa — veja [Melhores mini PCs para LLMs locais](/pt/local-llms/best-mini-pcs-local-llm). Para a correspondência exata de GPU, veja as referências Bite em Guias relacionados.',
         affiliateLinks: [
@@ -2239,7 +2239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Melhor Mac para IA local](/pt/power-local-llm/best-mac-for-local-ai-2026) — o caminho de hardware Apple Silicon',
           '[Melhores mini PCs para LLMs locais](/pt/local-llms/best-mini-pcs-local-llm) — o caminho de hardware sempre ligado e de baixo consumo',
           '[Guia de aluguel de GPU em nuvem](/pt/power-local-llm/cloud-gpu-rental-guide-2026) — teste um nível antes de comprar, ou lide com capacidade extra ocasional',
-          '[Guia de construção de estação de trabalho de IA local](/pt/power-local-llm/local-ai-workstation-build-guide-2026) — para o nível 70B+ e configurações totalmente personalizadas',
+          '[Guia de construção de estação de trabalho de IA local](/pt/power-local-llm/local-ai-workstation-build-guide) — para o nível 70B+ e configurações totalmente personalizadas',
           '[Calculadora de custo de IA local: construir ou alugar](/pt/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — faça suas próprias contas de ponto de equilíbrio',
           '[Melhor distill do DeepSeek para sua GPU](/pt/prompt-bites/best-deepseek-distill-for-your-gpu) — combine sua placa com um distill, junto com o comando do Ollama',
           '[Folha de consulta de VRAM dos distills DeepSeek-R1](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — cada distill por quantização com VRAM e GPU mínima',
@@ -2403,7 +2403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**رأي PromptQuorum:** بالنسبة لمعظم الأشخاص، يمثل 14B أو 32B نقطة التوازن المثلى. القفز إلى 70B فئة عتاد مختلفة فعليًا (GPU مزدوجة، محطة عمل بذاكرة كبيرة، تبريد وطاقة جادّان) — تعامل معه كقرار شراء مستقل، لا كخطوة طبيعية تالية لـ 32B.',
-          'النموذج الكامل بحجم 671B ليس هدفًا لجهاز مستهلك عادي. إذا احتاج عبء عملك إلى هذا الحجم، فقارن بناء محطة عمل ذكاء اصطناعي مخصصة بتكاليف السحابة/API بدلًا من تجميعها قطعة بقطعة — راجع [دليل بناء محطة عمل الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-ai-workstation-build-guide-2026).',
+          'النموذج الكامل بحجم 671B ليس هدفًا لجهاز مستهلك عادي. إذا احتاج عبء عملك إلى هذا الحجم، فقارن بناء محطة عمل ذكاء اصطناعي مخصصة بتكاليف السحابة/API بدلًا من تجميعها قطعة بقطعة — راجع [دليل بناء محطة عمل الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-ai-workstation-build-guide).',
         ],
         note: 'لنقطة نهاية دون اتصال تعمل دائمًا وبطاقة منخفضة، يشغّل mini PC القادر الـ distill 7B و14B بهدوء — راجع [أفضل أجهزة mini PC لـ LLM المحلية](/ar/local-llms/best-mini-pcs-local-llm). للمطابقة الدقيقة لوحدة GPU راجع مراجع Bite في الأدلة ذات الصلة.',
         affiliateLinks: [
@@ -2561,7 +2561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[أفضل Mac للذكاء الاصطناعي المحلي](/ar/power-local-llm/best-mac-for-local-ai-2026) — مسار عتاد Apple Silicon',
           '[أفضل أجهزة mini PC لـ LLM المحلية](/ar/local-llms/best-mini-pcs-local-llm) — مسار العتاد الدائم التشغيل ومنخفض الاستهلاك',
           '[دليل استئجار GPU السحابي](/ar/power-local-llm/cloud-gpu-rental-guide-2026) — تجربة مستوى قبل الشراء، أو تلبية قدرة إضافية عرضية',
-          '[دليل بناء محطة عمل الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-ai-workstation-build-guide-2026) — لمستوى 70B+ والإعدادات المخصصة الكاملة',
+          '[دليل بناء محطة عمل الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-ai-workstation-build-guide) — لمستوى 70B+ والإعدادات المخصصة الكاملة',
           '[حاسبة تكلفة الذكاء الاصطناعي المحلي: بناء أم استئجار](/ar/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — أجرِ حسابات نقطة التعادل الخاصة بك',
           '[أفضل distill من DeepSeek لوحدة GPU لديك](/ar/prompt-bites/best-deepseek-distill-for-your-gpu) — طابِق بطاقتك مع distill مع أمر Ollama',
           '[ورقة VRAM المرجعية لـ distill من DeepSeek-R1](/ar/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — كل distill حسب التكميم مع VRAM وأدنى GPU',
@@ -2725,7 +2725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**PromptQuorum의 의견:** 대부분의 사람에게는 14B 또는 32B가 최적의 지점입니다. 70B로의 도약은 완전히 다른 하드웨어 범주입니다(듀얼 GPU, 대용량 메모리 워크스테이션, 본격적인 냉각과 전력) — 32B에서 자연스럽게 이어지는 다음 단계가 아니라 별도의 구매 결정으로 취급하세요.',
-          '전체 671B 모델은 일반적인 소비자 PC의 목표가 아닙니다. 워크로드가 그 규모를 필요로 한다면, 부품을 하나씩 조립하기보다는 전용 AI 워크스테이션 구축을 클라우드/API 비용과 비교하세요 — [로컬 AI 워크스테이션 구축 가이드](/ko/power-local-llm/local-ai-workstation-build-guide-2026)를 참조하세요.',
+          '전체 671B 모델은 일반적인 소비자 PC의 목표가 아닙니다. 워크로드가 그 규모를 필요로 한다면, 부품을 하나씩 조립하기보다는 전용 AI 워크스테이션 구축을 클라우드/API 비용과 비교하세요 — [로컬 AI 워크스테이션 구축 가이드](/ko/power-local-llm/local-ai-workstation-build-guide)를 참조하세요.',
         ],
         note: '상시 가동되는 저전력 오프라인 엔드포인트로는 성능 좋은 미니 PC가 7B와 14B distill을 조용히 실행합니다 — [로컬 LLM을 위한 최적의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm)를 참조하세요. 정확한 GPU 매칭은 관련 가이드의 Bite 참조 문서를 확인하세요.',
         affiliateLinks: [
@@ -2883,7 +2883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[로컬 AI를 위한 최적의 Mac](/ko/power-local-llm/best-mac-for-local-ai-2026) — Apple Silicon 하드웨어 경로',
           '[로컬 LLM을 위한 최적의 미니 PC](/ko/local-llms/best-mini-pcs-local-llm) — 상시 가동 저전력 하드웨어 경로',
           '[클라우드 GPU 대여 가이드](/ko/power-local-llm/cloud-gpu-rental-guide-2026) — 구매 전 등급 시험, 또는 버스트 용량 처리',
-          '[로컬 AI 워크스테이션 구축 가이드](/ko/power-local-llm/local-ai-workstation-build-guide-2026) — 70B+ 등급과 완전 맞춤 구성용',
+          '[로컬 AI 워크스테이션 구축 가이드](/ko/power-local-llm/local-ai-workstation-build-guide) — 70B+ 등급과 완전 맞춤 구성용',
           '[로컬 AI 비용 계산기: 구축 vs 대여](/ko/local-llms/local-llm-cost-calculator-build-vs-rent-2026) — 직접 손익분기점 계산',
           '[당신의 GPU에 맞는 최적의 DeepSeek distill](/ko/prompt-bites/best-deepseek-distill-for-your-gpu) — 카드에 맞는 distill과 Ollama 명령',
           '[DeepSeek-R1 distill VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 양자화별 각 distill의 VRAM과 최소 GPU',

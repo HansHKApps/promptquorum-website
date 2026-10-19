@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Who Does Frontier-Class Desktop Compute Actually Matter For?',
         content: [
           '**This hardware tier matters for power users and small teams doing serious local AI work, not the average hobbyist running a chat assistant.** The relevant buyer already hits a hard capacity wall on a high-end gaming GPU — needing to load a much larger open-weight model, fine-tune on private data, or run several large models side by side for research or product development.',
-          "For context on what actually fits inside a single-GPU workstation today and where that ceiling sits, see [our local LLM workstation build guide](/local-llms/local-llm-workstation-build), [best workstation builds for local AI](/power-local-llm/best-workstation-build-local-ai-2026), and [our local AI workstation buying guide](/power-local-llm/local-ai-workstation-build-guide-2026) — all three cover the conventional gaming-GPU tier this new category sits above.",
+          "For context on what actually fits inside a single-GPU workstation today and where that ceiling sits, see [our local LLM workstation build guide](/local-llms/local-llm-workstation-build), [best workstation builds for local AI](/power-local-llm/best-workstation-build-local-ai-2026), and [our local AI workstation buying guide](/power-local-llm/local-ai-workstation-build-guide) — all three cover the conventional gaming-GPU tier this new category sits above.",
         ],
         items: [
           '**Best for:** independent researchers and small AI teams running local fine-tuning jobs on open-weight models too large for a single gaming GPU.',
@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Für wen ist Desktop-Rechenleistung auf Höchstleistungsniveau wirklich relevant?',
         content: [
           '**Diese Hardware-Stufe ist für Power-User und kleine Teams mit ernsthafter lokaler KI-Arbeit relevant, nicht für den durchschnittlichen Hobbyisten mit einem Chat-Assistenten.** Die relevante Zielgruppe stößt bereits an eine harte Kapazitätsgrenze bei einer High-End-Gaming-GPU — sie muss ein deutlich größeres offenes Modell laden, mit privaten Daten fine-tunen oder mehrere große Modelle parallel für Forschung oder Produktentwicklung betreiben.',
-          'Was heute tatsächlich in eine Single-GPU-Workstation passt und wo diese Grenze liegt, zeigen unser [Leitfaden zum lokalen LLM-Workstation-Build](/de/local-llms/local-llm-workstation-build), unser [Leitfaden zu den besten Workstation-Builds für lokale KI](/de/power-local-llm/best-workstation-build-local-ai-2026) und unser [Kaufratgeber für lokale KI-Workstations](/de/power-local-llm/local-ai-workstation-build-guide-2026) — alle drei behandeln die gewöhnliche Gaming-GPU-Stufe, über der diese neue Kategorie angesiedelt ist.',
+          'Was heute tatsächlich in eine Single-GPU-Workstation passt und wo diese Grenze liegt, zeigen unser [Leitfaden zum lokalen LLM-Workstation-Build](/de/local-llms/local-llm-workstation-build), unser [Leitfaden zu den besten Workstation-Builds für lokale KI](/de/power-local-llm/best-workstation-build-local-ai-2026) und unser [Kaufratgeber für lokale KI-Workstations](/de/power-local-llm/local-ai-workstation-build-guide) — alle drei behandeln die gewöhnliche Gaming-GPU-Stufe, über der diese neue Kategorie angesiedelt ist.',
         ],
         items: [
           '**Am besten geeignet für:** unabhängige Forschende und kleine KI-Teams, die lokale Fine-Tuning-Jobs mit offenen Modellen durchführen, die für eine einzelne Gaming-GPU zu groß sind.',
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "À qui le calcul de bureau de pointe est-il vraiment utile ?",
         content: [
           "**Cette catégorie matérielle concerne les utilisateurs avancés et les petites équipes menant un travail IA local sérieux, pas l'amateur moyen faisant tourner un assistant conversationnel.** L'acheteur concerné se heurte déjà à un plafond de capacité strict sur un GPU grand public haut de gamme — il a besoin de charger un modèle ouvert bien plus grand, de faire du fine-tuning sur des données privées, ou d'exécuter plusieurs grands modèles en parallèle pour la recherche ou le développement produit.",
-          "Pour savoir ce qui tient réellement aujourd'hui dans une station de travail à GPU unique et où se situe ce plafond, consultez notre [guide de construction de station de travail LLM locale](/fr/local-llms/local-llm-workstation-build), notre [guide des meilleures configurations de station de travail pour l'IA locale](/fr/power-local-llm/best-workstation-build-local-ai-2026) et notre [guide d'achat de station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide-2026) — les trois couvrent la catégorie GPU grand public classique au-dessus de laquelle se situe cette nouvelle catégorie.",
+          "Pour savoir ce qui tient réellement aujourd'hui dans une station de travail à GPU unique et où se situe ce plafond, consultez notre [guide de construction de station de travail LLM locale](/fr/local-llms/local-llm-workstation-build), notre [guide des meilleures configurations de station de travail pour l'IA locale](/fr/power-local-llm/best-workstation-build-local-ai-2026) et notre [guide d'achat de station de travail IA locale](/fr/power-local-llm/local-ai-workstation-build-guide) — les trois couvrent la catégorie GPU grand public classique au-dessus de laquelle se situe cette nouvelle catégorie.",
         ],
         items: [
           "**Idéal pour :** chercheurs indépendants et petites équipes IA exécutant des tâches de fine-tuning local sur des modèles ouverts trop grands pour un seul GPU grand public.",
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'フロンティア級デスクトップ計算能力は実際に誰にとって重要なのか？',
         content: [
           '**このハードウェア階層は、チャットアシスタントを動かす一般的な趣味利用者ではなく、本格的なローカルAI作業を行うパワーユーザーと小規模チームにとって重要です。** 該当する購入者はすでにハイエンドゲーミングGPUで厳しい容量の壁に直面しており、はるかに大きなオープンウェイトモデルを読み込む必要がある、プライベートデータでファインチューニングする必要がある、または研究や製品開発のために複数の大規模モデルを並行して実行する必要があります。',
-          '今日、単一GPUのワークステーションに実際に何が収まり、その上限がどこにあるかについては、[ローカルLLMワークステーション構築ガイド](/ja/local-llms/local-llm-workstation-build)、[ローカルAI向け最適ワークステーション構築ガイド](/ja/power-local-llm/best-workstation-build-local-ai-2026)、[ローカルAIワークステーション購入ガイド](/ja/power-local-llm/local-ai-workstation-build-guide-2026)をご覧ください——いずれも、この新しいカテゴリーが上回る通常のゲーミングGPU階層を扱っています。',
+          '今日、単一GPUのワークステーションに実際に何が収まり、その上限がどこにあるかについては、[ローカルLLMワークステーション構築ガイド](/ja/local-llms/local-llm-workstation-build)、[ローカルAI向け最適ワークステーション構築ガイド](/ja/power-local-llm/best-workstation-build-local-ai-2026)、[ローカルAIワークステーション購入ガイド](/ja/power-local-llm/local-ai-workstation-build-guide)をご覧ください——いずれも、この新しいカテゴリーが上回る通常のゲーミングGPU階層を扱っています。',
         ],
         items: [
           '**最適な対象:** 単一のゲーミングGPUでは大きすぎるオープンウェイトモデルでローカルのファインチューニング作業を行う独立系研究者や小規模AIチーム。',
@@ -581,7 +581,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '前沿级桌面算力究竟对谁重要？',
         content: [
           '**这一硬件品类对从事严肃本地AI工作的高级用户和小型团队重要,而不是运行聊天助手的普通爱好者。** 相关买家已经在高端游戏GPU上遇到了硬性容量瓶颈——需要加载大得多的开源权重模型、在私有数据上进行微调,或为研究或产品开发并行运行多个大模型。',
-          '关于当前单GPU工作站实际能容纳什么、以及这一上限在哪里,请参阅我们的[本地LLM工作站搭建指南](/zh/local-llms/local-llm-workstation-build)、[本地AI最佳工作站搭建指南](/zh/power-local-llm/best-workstation-build-local-ai-2026)和[本地AI工作站购买指南](/zh/power-local-llm/local-ai-workstation-build-guide-2026)——这三篇都涵盖了这一新品类之上所处的普通游戏GPU层级。',
+          '关于当前单GPU工作站实际能容纳什么、以及这一上限在哪里,请参阅我们的[本地LLM工作站搭建指南](/zh/local-llms/local-llm-workstation-build)、[本地AI最佳工作站搭建指南](/zh/power-local-llm/best-workstation-build-local-ai-2026)和[本地AI工作站购买指南](/zh/power-local-llm/local-ai-workstation-build-guide)——这三篇都涵盖了这一新品类之上所处的普通游戏GPU层级。',
         ],
         items: [
           '**最适合:** 对大到单块游戏GPU无法容纳的开源权重模型进行本地微调工作的独立研究者和小型AI团队。',
@@ -707,7 +707,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '¿Para quién importa realmente el cómputo de escritorio de frontera?',
         content: [
           '**Esta categoría de hardware importa a usuarios avanzados y equipos pequeños que hacen trabajo local de IA serio, no al aficionado promedio que ejecuta un asistente de chat.** El comprador relevante ya llega a un límite estricto de capacidad en una GPU de gama alta para videojuegos — necesita cargar un modelo abierto mucho más grande, ajustar finamente con datos privados, o ejecutar varios modelos grandes en paralelo para investigación o desarrollo de producto.',
-          'Para saber qué cabe realmente hoy en una estación de trabajo de una sola GPU y dónde se encuentra ese límite, consulta nuestra [guía de construcción de estación de trabajo LLM local](/es/local-llms/local-llm-workstation-build), nuestra [guía de las mejores estaciones de trabajo para IA local](/es/power-local-llm/best-workstation-build-local-ai-2026) y nuestra [guía de compra de estación de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide-2026) — las tres cubren el nivel convencional de GPU para videojuegos sobre el cual se sitúa esta nueva categoría.',
+          'Para saber qué cabe realmente hoy en una estación de trabajo de una sola GPU y dónde se encuentra ese límite, consulta nuestra [guía de construcción de estación de trabajo LLM local](/es/local-llms/local-llm-workstation-build), nuestra [guía de las mejores estaciones de trabajo para IA local](/es/power-local-llm/best-workstation-build-local-ai-2026) y nuestra [guía de compra de estación de trabajo de IA local](/es/power-local-llm/local-ai-workstation-build-guide) — las tres cubren el nivel convencional de GPU para videojuegos sobre el cual se sitúa esta nueva categoría.',
         ],
         items: [
           '**Ideal para:** investigadores independientes y equipos pequeños de IA que ejecutan trabajos de ajuste fino local sobre modelos abiertos demasiado grandes para una sola GPU para videojuegos.',
@@ -833,7 +833,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Para quem a computação desktop de nível fronteira realmente importa?',
         content: [
           '**Essa categoria de hardware importa para usuários avançados e pequenas equipes fazendo trabalho local de IA sério, não para o hobbyista comum rodando um assistente de chat.** O comprador relevante já esbarra em um teto rígido de capacidade em uma GPU de jogos topo de linha — precisando carregar um modelo de peso aberto muito maior, ajustar finamente com dados privados, ou executar vários modelos grandes lado a lado para pesquisa ou desenvolvimento de produto.',
-          'Para saber o que realmente cabe hoje em uma estação de trabalho de GPU única e onde fica esse teto, veja nosso [guia de montagem de estação de trabalho para LLM local](/pt/local-llms/local-llm-workstation-build), nosso [guia das melhores montagens de estação de trabalho para IA local](/pt/power-local-llm/best-workstation-build-local-ai-2026) e nosso [guia de compra de estação de trabalho de IA local](/pt/power-local-llm/local-ai-workstation-build-guide-2026) — os três cobrem o nível convencional de GPU de jogos acima do qual essa nova categoria se posiciona.',
+          'Para saber o que realmente cabe hoje em uma estação de trabalho de GPU única e onde fica esse teto, veja nosso [guia de montagem de estação de trabalho para LLM local](/pt/local-llms/local-llm-workstation-build), nosso [guia das melhores montagens de estação de trabalho para IA local](/pt/power-local-llm/best-workstation-build-local-ai-2026) e nosso [guia de compra de estação de trabalho de IA local](/pt/power-local-llm/local-ai-workstation-build-guide) — os três cobrem o nível convencional de GPU de jogos acima do qual essa nova categoria se posiciona.',
         ],
         items: [
           '**Melhor para:** pesquisadores independentes e pequenas equipes de IA rodando trabalhos de ajuste fino local em modelos de peso aberto grandes demais para uma única GPU de jogos.',
@@ -959,7 +959,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'لمن تهم حوسبة سطح المكتب من الطراز المتقدم فعليًا؟',
         content: [
           '**تهم فئة الأجهزة هذه المستخدمين المتقدمين والفرق الصغيرة التي تقوم بعمل ذكاء اصطناعي محلي جاد، وليس الهاوي العادي الذي يشغّل مساعد محادثة.** المشتري المعني يصطدم بالفعل بحاجز قدرة صارم على معالج رسومات ألعاب فائق الأداء — إذ يحتاج إلى تحميل نموذج مفتوح الأوزان أكبر بكثير، أو الضبط الدقيق على بيانات خاصة، أو تشغيل عدة نماذج كبيرة جنبًا إلى جنب للبحث أو تطوير المنتجات.',
-          'لمعرفة ما يناسب فعليًا محطة عمل بمعالج رسومات واحد اليوم وأين يقع هذا الحد، راجع [دليلنا لبناء محطة عمل نماذج لغوية محلية](/ar/local-llms/local-llm-workstation-build)، و[دليلنا لأفضل تصاميم محطات العمل للذكاء الاصطناعي المحلي](/ar/power-local-llm/best-workstation-build-local-ai-2026)، و[دليل شراء محطة عمل الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-ai-workstation-build-guide-2026) — تغطي الثلاثة جميعًا مستوى معالج رسومات الألعاب التقليدي الذي تقع هذه الفئة الجديدة فوقه.',
+          'لمعرفة ما يناسب فعليًا محطة عمل بمعالج رسومات واحد اليوم وأين يقع هذا الحد، راجع [دليلنا لبناء محطة عمل نماذج لغوية محلية](/ar/local-llms/local-llm-workstation-build)، و[دليلنا لأفضل تصاميم محطات العمل للذكاء الاصطناعي المحلي](/ar/power-local-llm/best-workstation-build-local-ai-2026)، و[دليل شراء محطة عمل الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-ai-workstation-build-guide) — تغطي الثلاثة جميعًا مستوى معالج رسومات الألعاب التقليدي الذي تقع هذه الفئة الجديدة فوقه.',
         ],
         items: [
           '**الأنسب لـ:** الباحثين المستقلين والفرق الصغيرة للذكاء الاصطناعي التي تشغّل مهام ضبط دقيق محلي على نماذج مفتوحة الأوزان كبيرة جدًا على معالج رسومات ألعاب واحد.',
@@ -1085,7 +1085,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '프론티어급 데스크톱 연산 능력은 실제로 누구에게 중요한가요?',
         content: [
           '**이 하드웨어 계층은 채팅 어시스턴트를 실행하는 일반 취미 사용자가 아니라, 진지한 로컬 AI 작업을 하는 파워 유저와 소규모 팀에게 중요합니다.** 해당 구매자는 이미 고급 게이밍 GPU에서 확실한 용량 한계에 부딪혀, 훨씬 더 큰 오픈 웨이트 모델을 적재하거나, 비공개 데이터로 파인튜닝하거나, 연구나 제품 개발을 위해 여러 대형 모델을 나란히 실행해야 하는 상황입니다.',
-          '오늘날 단일 GPU 워크스테이션에 실제로 무엇이 들어맞고 그 한계가 어디에 있는지는 [로컬 LLM 워크스테이션 구축 가이드](/ko/local-llms/local-llm-workstation-build), [로컬 AI를 위한 최적 워크스테이션 구축 가이드](/ko/power-local-llm/best-workstation-build-local-ai-2026), [로컬 AI 워크스테이션 구매 가이드](/ko/power-local-llm/local-ai-workstation-build-guide-2026)를 참고하세요 — 세 문서 모두 이 새로운 카테고리가 위치하는 상위 지점인 일반 게이밍 GPU 계층을 다룹니다.',
+          '오늘날 단일 GPU 워크스테이션에 실제로 무엇이 들어맞고 그 한계가 어디에 있는지는 [로컬 LLM 워크스테이션 구축 가이드](/ko/local-llms/local-llm-workstation-build), [로컬 AI를 위한 최적 워크스테이션 구축 가이드](/ko/power-local-llm/best-workstation-build-local-ai-2026), [로컬 AI 워크스테이션 구매 가이드](/ko/power-local-llm/local-ai-workstation-build-guide)를 참고하세요 — 세 문서 모두 이 새로운 카테고리가 위치하는 상위 지점인 일반 게이밍 GPU 계층을 다룹니다.',
         ],
         items: [
           '**최적:** 단일 게이밍 GPU로는 너무 큰 오픈 웨이트 모델에 대해 로컬 파인튜닝 작업을 수행하는 독립 연구자와 소규모 AI 팀.',

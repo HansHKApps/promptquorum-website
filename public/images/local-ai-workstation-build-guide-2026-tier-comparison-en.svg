@@ -18,7 +18,7 @@
   <text x="355" y="106" font-size="10.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">16GB</text>
   <text x="410" y="106" font-size="12" fill="#49454F">7B-13B models</text>
   <text x="590" y="106" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">650W</text>
-  <text x="670" y="106" font-size="13" font-weight="700" fill="#1C1B1F">~$1,100</text>
+  <text x="670" y="106" font-size="13" font-weight="700" fill="#1C1B1F">~$2,000</text>
   <line x1="20" y1="122" x2="780" y2="122" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 2: Mid (Editor's Choice highlight) -->
@@ -30,7 +30,7 @@
   <text x="355" y="158" font-size="10.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">16GB</text>
   <text x="410" y="158" font-size="12" fill="#1C1B1F">14B-33B models</text>
   <text x="590" y="158" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#1C1B1F">850W</text>
-  <text x="670" y="158" font-size="13" font-weight="700" fill="#1C1B1F">~$2,400</text>
+  <text x="670" y="158" font-size="13" font-weight="700" fill="#1C1B1F">~$3,100</text>
   <line x1="20" y1="176" x2="780" y2="176" stroke="#F7F2FA" stroke-width="1"/>
 
   <!-- Row 3: Enthusiast -->
@@ -40,7 +40,7 @@
   <text x="355" y="208" font-size="10.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">32GB</text>
   <text x="410" y="208" font-size="12" fill="#49454F">33B-70B models</text>
   <text x="590" y="208" font-family="'SF Mono', Monaco, monospace" font-size="12" fill="#49454F">1000W</text>
-  <text x="670" y="208" font-size="13" font-weight="700" fill="#1C1B1F">~$5,000</text>
+  <text x="670" y="208" font-size="13" font-weight="700" fill="#1C1B1F">~$9,600</text>
   <line x1="20" y1="224" x2="780" y2="224" stroke="#E8DEF8" stroke-width="1.5"/>
 
   <text x="400" y="360" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle">GPU VRAM sets the tier — CPU, RAM, and the power supply are sized to support it, from 650 W up to 1000 W.</text>

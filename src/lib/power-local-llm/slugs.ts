@@ -95,7 +95,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-mac-for-local-ai-2026':                  'best-mac-for-local-ai-2026',
   'asus-mini-pc-local-ai':                  'asus-mini-pc-local-ai-2026',
   'local-llm-electricity-cost-balcony-solar': 'local-llm-electricity-cost-balcony-solar-2026',
-  'local-ai-workstation-build-guide-2026':       'local-ai-workstation-build-guide-2026',
+  'local-ai-workstation-build-guide':       'local-ai-workstation-build-guide',
   'best-vpn-ai-privacy-local-llm-2026':          'best-vpn-ai-privacy-local-llm-2026',
   'best-nas-storage-local-ai-models-2026':       'best-nas-storage-local-ai-models-2026',
   'best-ai-coding-tools-comparison-2026':        'best-ai-coding-tools-comparison-2026',

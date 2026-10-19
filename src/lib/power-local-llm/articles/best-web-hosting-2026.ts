@@ -150,7 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hosting-vs-gpu-cloud',
         title: 'Web Hosting vs. AI/GPU Cloud Hosting',
         content:
-          '**This page covers shared web hosting for a website — file storage, a web server, and a database, priced per month.** It does not cover renting GPU compute to run or fine-tune a local LLM, which is a different product with a different pricing model (per-hour, by GPU type) and different providers. There are three separate ways to run or use an LLM, and shared web hosting is none of them: (1) rent a GPU by the hour and run the model yourself — see the [Cloud GPU Rental Guide 2026](/power-local-llm/cloud-gpu-rental-guide-2026), which compares RunPod, Lambda Labs, and Vast.ai on hourly rate, uptime SLA, and setup time; (2) call a managed inference API, which bills per token or per request and requires no GPU management at all — the trade-off is per-token cost at scale versus zero infrastructure; (3) [build a local AI workstation](/power-local-llm/local-ai-workstation-build-guide-2026) and own the hardware outright, trading a larger upfront cost for no ongoing rental bill. Shared hosting and GPU cloud rental solve different problems and should not be compared on the same table.',
+          '**This page covers shared web hosting for a website — file storage, a web server, and a database, priced per month.** It does not cover renting GPU compute to run or fine-tune a local LLM, which is a different product with a different pricing model (per-hour, by GPU type) and different providers. There are three separate ways to run or use an LLM, and shared web hosting is none of them: (1) rent a GPU by the hour and run the model yourself — see the [Cloud GPU Rental Guide 2026](/power-local-llm/cloud-gpu-rental-guide-2026), which compares RunPod, Lambda Labs, and Vast.ai on hourly rate, uptime SLA, and setup time; (2) call a managed inference API, which bills per token or per request and requires no GPU management at all — the trade-off is per-token cost at scale versus zero infrastructure; (3) [build a local AI workstation](/power-local-llm/local-ai-workstation-build-guide) and own the hardware outright, trading a larger upfront cost for no ongoing rental bill. Shared hosting and GPU cloud rental solve different problems and should not be compared on the same table.',
       },
       hostingTypesExplained: {
         id: 'hosting-types-explained',
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Compare cloud GPU rental for AI inference](/power-local-llm/cloud-gpu-rental-guide-2026) — RunPod, Lambda Labs, and Vast.ai on hourly price, uptime, and setup time, a different product from website hosting.',
-          '[Build a local AI workstation instead of renting compute](/power-local-llm/local-ai-workstation-build-guide-2026) — parts lists and costs for owned hardware.',
+          '[Build a local AI workstation instead of renting compute](/power-local-llm/local-ai-workstation-build-guide) — parts lists and costs for owned hardware.',
         ],
       },
     },
