@@ -45,17 +45,6 @@ function runBuild(extraArgs = []) {
   })
 }
 
-async function pingSitemap() {
-  if (process.env.SKIP_SITEMAP_PING === '1') return
-  const url = 'https://www.google.com/ping?sitemap=https://www.promptquorum.com/sitemap.xml'
-  try {
-    const res = await fetch(url)
-    console.log(`✓ Sitemap submitted to Google (HTTP ${res.status})`)
-  } catch (err) {
-    console.warn('⚠ Sitemap ping failed (non-fatal):', err.message)
-  }
-}
-
 async function validatePresentations() {
   console.log('\n📋 Validating presentation files...\n')
 
@@ -154,7 +143,6 @@ async function main() {
         fixValidator()
         if (code === 0 && buildCompleted()) {
           console.log('\n✓ Build completed successfully!')
-          await pingSitemap()
           process.exit(0)
         }
         await new Promise((resolve) => setTimeout(resolve, 500))
@@ -178,7 +166,6 @@ async function main() {
 
     if (buildCompleted()) {
       console.log('\n✓ Build completed successfully!')
-      await pingSitemap()
       process.exit(0)
     }
 
