@@ -16,9 +16,9 @@
   <!-- Step 2 -->
   <circle cx="247" cy="100" r="22" fill="#6750A4"/>
   <text x="247" y="107" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
-  <text x="247" y="145" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Update &amp; install curl</text>
+  <text x="247" y="145" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Update packages</text>
   <text x="247" y="163" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">pkg update &amp;&amp;</text>
-  <text x="247" y="178" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">pkg install curl</text>
+  <text x="247" y="178" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">pkg upgrade</text>
 
   <!-- Arrow 2→3 -->
   <text x="323" y="107" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
@@ -27,8 +27,8 @@
   <circle cx="400" cy="100" r="22" fill="#6750A4"/>
   <text x="400" y="107" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
   <text x="400" y="145" font-size="13" font-weight="700" fill="#1C1B1F" text-anchor="middle">Install Ollama</text>
-  <text x="400" y="163" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">curl -fsSL</text>
-  <text x="400" y="178" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">ollama.com/install.sh | sh</text>
+  <text x="400" y="163" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">pkg install</text>
+  <text x="400" y="178" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#49454F" text-anchor="middle">ollama</text>
 
   <!-- Arrow 3→4 -->
   <text x="477" y="107" font-size="20" fill="#6750A4" text-anchor="middle">→</text>
