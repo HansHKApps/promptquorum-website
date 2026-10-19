@@ -4164,5 +4164,176 @@
       "ctr": 0.007142857142857143,
       "period": "GSC top-10 queries, paste 2026-10-18"
     }
+  },
+  {
+    "id": "2af1d57d-1ac6-44cd-be92-145b11658672",
+    "slug": "/balcony-solar/balcony-solar-mounting-guide",
+    "date": "2026-10-19T13:29:51.239Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Balcony Solar Mounting Guide: Every Surface Type",
+        "new": "Balcony Solar Mounting Guide: 4 Surface Types"
+      },
+      {
+        "field": "metaDescription",
+        "old": "How to mount balcony solar on a railing, wall, ground stand, or flat roof — tilt angle guidance and wind safety considerations for each surface type.",
+        "new": "Railing, wall, ground or flat roof? Compare the 4 balcony solar mounting methods: drilling needs, tilt-angle limits and wind-load safety for each."
+      }
+    ],
+    "reason": "geo-meta-optimizer (no GSC data, data-free): add number, fix length (title<=60 / meta 140-160), answer-first meta; dateModified not bumped",
+    "baseline": null
+  },
+  {
+    "id": "94ab9afe-5dbf-4f6a-b4b8-a3b2f638117f",
+    "slug": "/es/balcony-solar/balcony-solar-mounting-guide",
+    "date": "2026-10-19T13:29:51.353Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Guía de montaje de solar de balcón: todos los tipos de superficie",
+        "new": "Montaje de solar de balcón: 4 tipos de superficie"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Cómo montar energía solar de balcón en una barandilla, pared, soporte de suelo o techo plano — orientación sobre el ángulo de inclinación y consideraciones de seguridad ante el viento para cada tipo de superficie.",
+        "new": "¿Barandilla, pared, suelo o techo plano? Compara los 4 métodos de montaje de solar de balcón: taladrado, ángulo de inclinación y seguridad ante el viento."
+      }
+    ],
+    "reason": "geo-meta-optimizer (no GSC data, data-free): add number, fix length (title<=60 / meta 140-160), answer-first meta; dateModified not bumped",
+    "baseline": null
+  },
+  {
+    "id": "d3bf3e1f-bdc0-47d0-afed-0c48b41c4b6c",
+    "slug": "/pt/balcony-solar/balcony-solar-mounting-guide",
+    "date": "2026-10-19T13:29:51.462Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Guia de fixação de energia solar de varanda: todo tipo de superfície",
+        "new": "Fixação de solar de varanda: 4 tipos de superfície"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Como fixar energia solar de varanda em uma grade, parede, suporte de solo ou telhado plano — orientação sobre o ângulo de inclinação e considerações de segurança contra vento para cada tipo de superfície.",
+        "new": "Grade, parede, solo ou telhado plano? Compare os 4 métodos de fixação de energia solar de varanda: furos, ângulo de inclinação e segurança contra vento."
+      }
+    ],
+    "reason": "geo-meta-optimizer (no GSC data, data-free): add number, fix length (title<=60 / meta 140-160), answer-first meta; dateModified not bumped",
+    "baseline": null
+  },
+  {
+    "id": "80955f64-847b-4a5e-b902-8025244e9a69",
+    "slug": "/ar/balcony-solar/balcony-solar-mounting-guide",
+    "date": "2026-10-19T13:29:51.577Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "دليل تركيب الطاقة الشمسية على الشرفة: كل أنواع الأسطح",
+        "new": "تركيب الطاقة الشمسية على الشرفة: 4 أنواع أسطح"
+      },
+      {
+        "field": "metaDescription",
+        "old": "كيفية تركيب الطاقة الشمسية على الشرفة باستخدام الدرابزين أو الحائط أو حامل أرضي أو السطح المستوي — إرشادات حول زاوية الميل واعتبارات السلامة من الرياح لكل نوع سطح.",
+        "new": "درابزين أم حائط أم أرض أم سطح مستوٍ؟ قارن بين 4 طرق لتركيب الطاقة الشمسية على الشرفة: الحفر وزاوية الميل والسلامة من الرياح لكل نوع من الأسطح."
+      }
+    ],
+    "reason": "geo-meta-optimizer (no GSC data, data-free): add number, fix length (title<=60 / meta 140-160), answer-first meta; dateModified not bumped",
+    "baseline": null
+  },
+  {
+    "id": "9929a420-4748-4ae7-86d5-2111887fcb55",
+    "slug": "/de/balcony-solar/balcony-solar-mounting-guide",
+    "date": "2026-10-19T13:29:51.692Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Balkonkraftwerk montieren: Alle Montageflächen im Überblick",
+        "new": "Balkonkraftwerk montieren: 4 Montageflächen im Vergleich"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Wie Sie ein Balkonkraftwerk an Geländer, Wand, Bodenständer oder Flachdach montieren – Neigungswinkel-Empfehlungen und Windsicherheitsaspekte für jeden Flächentyp.",
+        "new": "Geländer, Wand, Boden oder Flachdach? Die 4 Montagearten fürs Balkonkraftwerk im Vergleich: Bohren, Neigungswinkel und Windsicherheit je Fläche."
+      }
+    ],
+    "reason": "geo-meta-optimizer (no GSC data, data-free): add number, fix length (title<=60 / meta 140-160), answer-first meta; dateModified not bumped",
+    "baseline": null
+  },
+  {
+    "id": "94eb426c-5abf-440a-b78e-786a0363fbd0",
+    "slug": "/ja/balcony-solar/balcony-solar-mounting-guide",
+    "date": "2026-10-19T13:29:51.802Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "バルコニーソーラー取り付けガイド：あらゆる設置面に対応",
+        "new": "バルコニーソーラー取り付けガイド：4種類の設置面を比較"
+      },
+      {
+        "field": "metaDescription",
+        "old": "バルコニーソーラーを手すり、壁、地面スタンド、陸屋根に取り付ける方法 — 設置面ごとの傾斜角度のガイダンスと風に対する安全性の考慮点。",
+        "new": "手すり・壁・地面・陸屋根のどれに付ける？バルコニーソーラーの4つの取り付け方法を、穴あけの要否・傾斜角・耐風安全性で比較します。"
+      }
+    ],
+    "reason": "geo-meta-optimizer (no GSC data, data-free): add number, fix length (title<=60 / meta 140-160), answer-first meta; dateModified not bumped",
+    "baseline": null
+  },
+  {
+    "id": "c9254005-fa36-44cf-86ac-c2efa1ae39a5",
+    "slug": "/zh/balcony-solar/balcony-solar-mounting-guide",
+    "date": "2026-10-19T13:29:51.921Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "阳台光伏安装指南：适用于所有安装面",
+        "new": "阳台光伏安装指南：栏杆、墙面、地面与平屋顶4种方式"
+      },
+      {
+        "field": "metaDescription",
+        "old": "如何将阳台光伏安装在栏杆、墙面、地面支架或平屋顶上——针对每种安装面的倾角建议与抗风安全注意事项。",
+        "new": "栏杆、墙面、地面还是平屋顶？对比阳台光伏的4种安装方式：是否需要打孔、倾角限制与抗风安全性，帮你选对安装面。"
+      }
+    ],
+    "reason": "geo-meta-optimizer (no GSC data, data-free): add number, fix length (title<=60 / meta 140-160), answer-first meta; dateModified not bumped",
+    "baseline": null
+  },
+  {
+    "id": "780253c0-7f8e-4fd9-a4ea-f22fa6b19488",
+    "slug": "/fr/balcony-solar/balcony-solar-mounting-guide",
+    "date": "2026-10-19T13:29:52.032Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Guide de fixation du solaire de balcon : tous les types de surface",
+        "new": "Fixation du solaire de balcon : 4 types de surface"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Comment fixer le solaire de balcon sur une rambarde, un mur, un support au sol ou un toit plat — conseils sur l'angle d'inclinaison et considérations de sécurité face au vent pour chaque type de surface.",
+        "new": "Rambarde, mur, sol ou toit plat ? Comparez les 4 méthodes de fixation du solaire de balcon : perçage, inclinaison et sécurité face au vent pour chaque surface."
+      }
+    ],
+    "reason": "geo-meta-optimizer (no GSC data, data-free): add number, fix length (title<=60 / meta 140-160), answer-first meta; dateModified not bumped",
+    "baseline": null
+  },
+  {
+    "id": "02d1021f-0d04-4648-954a-15e4009fc325",
+    "slug": "/ko/balcony-solar/balcony-solar-mounting-guide",
+    "date": "2026-10-19T13:29:52.154Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "발코니 태양광 설치 가이드: 모든 설치면 유형",
+        "new": "발코니 태양광 설치 가이드: 4가지 설치면 비교"
+      },
+      {
+        "field": "metaDescription",
+        "old": "난간, 벽면, 지면 스탠드, 평지붕에 발코니 태양광을 설치하는 방법 — 설치면 유형별 경사각 가이드와 바람 안전성 고려사항.",
+        "new": "난간, 벽면, 지면, 평지붕 중 어디에? 발코니 태양광 4가지 설치 방법을 타공 여부, 경사각 한계, 바람 안전성으로 비교합니다."
+      }
+    ],
+    "reason": "geo-meta-optimizer (no GSC data, data-free): add number, fix length (title<=60 / meta 140-160), answer-first meta; dateModified not bumped",
+    "baseline": null
   }
 ]
