@@ -8182,82 +8182,82 @@
   },
   {
     "lang": "en",
-    "title": "Small Local LLM Models: Best Sub-4B Models for Low RAM Machines in 2026",
-    "excerpt": "Best small & smallest local LLMs for 4-8 GB RAM in 2026: Phi-4 Mini 3.8B (68% MMLU), Gemma 4 E2B, Qwen2.5 3B (coding), Llama 3.2 3B/1B (smallest).",
+    "title": "Best Small Local LLMs 2026: Top 4B Models and the Smallest to Run Locally",
+    "excerpt": "Best small local LLMs 2026: Qwen3.5 4B, Gemma 4 E4B and Phi-4 Mini ranked, plus the smallest models (0.8B-2B) you can run on 4-8 GB of RAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-18",
     "url": "/local-llms/small-local-llm-models",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
-    "title": "Beste kleine lokale LLMs 2026 : Sub-4B-Modelle für RAM-arme Maschinen",
-    "excerpt": "Best Sub-4B Modelle für 4-8 GB RAM in 2026: Phi-4 Mini (68% MMLU), Gemma 4 E2B (60% MMLU Pro, 128K Kontext), Qwen2.5 (Codierung), Llama 3.2.",
+    "title": "Beste kleine lokale LLMs 2026: Top-4B-Modelle und das kleinste lokal lauffähige LLM",
+    "excerpt": "Beste kleine lokale LLMs 2026: Qwen3.5 4B, Gemma 4 E4B und Phi-4 Mini im Vergleich plus die kleinsten Modelle (0,8B-2B) für 4-8 GB RAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-04-04",
+    "dateModified": "2026-10-18",
     "url": "/de/local-llms/small-local-llm-models",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
-    "title": "Meilleurs petits LLMs locaux 2026 : modèles sub-4B pour machines à faible RAM",
-    "excerpt": "Top 5 modèles sub-4B pour 4-8 GB RAM en 2026 : Phi-4 Mini (68% MMLU), Gemma 4 E2B (60% MMLU Pro, contexte 128K), Qwen2.5 (codage), Llama 3.2.",
+    "title": "Meilleurs petits LLM locaux 2026 : top des modèles 4B et le plus petit à exécuter en local",
+    "excerpt": "Meilleurs petits LLM locaux 2026 : Qwen3.5 4B, Gemma 4 E4B et Phi-4 Mini classés, plus les plus petits modèles (0.8B-2B) pour 4-8 Go de RAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-04-04",
+    "dateModified": "2026-10-18",
     "url": "/fr/local-llms/small-local-llm-models",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
-    "title": "最高の小規模ローカルLLM 2026：低RAM向けSub-4Bモデル",
-    "excerpt": "4～8GB RAM向け最高5つの小型ローカルLLMモデル2026年完全比較：Phi-4 Mini（68% MMLU）、Gemma 4 E2B（MMLU Pro 60%、128Kコンテキスト）、Qwen2.5（コーディング）、Llama 3.2。",
+    "title": "2026年版 最高の小型ローカルLLM：4Bモデル比較と最小で動かせるモデル",
+    "excerpt": "2026年の小型ローカルLLMを比較。Qwen3.5 4B、Gemma 4 E4B、Phi-4 Miniをランキングし、RAM 4〜8 GBで動く最小モデル（0.8B〜2B）も紹介します。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-04-04",
+    "dateModified": "2026-10-18",
     "url": "/ja/local-llms/small-local-llm-models",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
-    "title": "2026年最佳小型本地LLM：低RAM机器的Sub-4B模型",
-    "excerpt": "本地小模型推荐与排行：Phi-4 Mini（68% MMLU）、Gemma 4 E2B（MMLU Pro 60%，128K上下文）、Qwen2.5（编码最优）、Llama 3.2（通用）。4-8GB 内存即可运行，含性能对比。",
+    "title": "2026年最佳小型本地LLM：最强4B模型与最小可运行模型",
+    "excerpt": "2026本地小模型推荐：Qwen3.5 4B、Gemma 4 E4B、Phi-4 Mini排名，以及4-8 GB内存可运行的最小模型（0.8B-2B）。",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-04-04",
+    "dateModified": "2026-10-18",
     "url": "/zh/local-llms/small-local-llm-models",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
-    "title": "Modelos LLM locales pequeños: los mejores sub-4B para máquinas con poca RAM en 2026",
-    "excerpt": "Mejores modelos LLM locales sub-4B para 4-8 GB de RAM: Phi-4 Mini (68% MMLU), Gemma 4 E2B (60% MMLU Pro, 128K contexto), Qwen2.5 (código), Llama 3.2 (general).",
+    "title": "Mejores LLM locales pequeños 2026: top modelos de 4B y el más pequeño para ejecutar en local",
+    "excerpt": "Mejores LLM locales pequeños 2026: Qwen3.5 4B, Gemma 4 E4B y Phi-4 Mini, más los modelos más pequeños (0.8B-2B) para 4-8 GB de RAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-04-04",
+    "dateModified": "2026-10-18",
     "url": "/es/local-llms/small-local-llm-models",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
-    "title": "Modelos LLM locais pequenos: os melhores sub-4B para máquinas com pouca RAM em 2026",
-    "excerpt": "Melhores modelos LLM locais sub-4B para 4-8 GB de RAM: Phi-4 Mini (68% MMLU), Gemma 4 E2B (60% MMLU Pro, contexto 128K), Qwen2.5 (código), Llama 3.2 (geral).",
+    "title": "Melhores LLMs locais pequenos 2026: top modelos 4B e o menor para rodar",
+    "excerpt": "Melhores LLMs locais pequenos 2026: Qwen3.5 4B, Gemma 4 E4B e Phi-4 Mini no ranking, mais os menores modelos (0.8B-2B) para 4-8 GB de RAM.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-04-04",
+    "dateModified": "2026-10-18",
     "url": "/pt/local-llms/small-local-llm-models",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
-    "title": "نماذج ⁨LLM⁩ المحلية الصغيرة: أفضل نماذج أقل من ⁨4B⁩ للأجهزة منخفضة الذاكرة في ⁨2026⁩",
-    "excerpt": "أفضل ⁨5⁩ نماذج ⁨LLM⁩ محلية أقل من ⁨4B⁩ في ⁨2026⁩: ⁨Phi-4 Mini⁩ (⁨68% MMLU⁩، ⁨2.5 GB⁩)، ⁨Gemma 4 E2B⁩ (⁨60% MMLU Pro⁩، سياق ⁨128K⁩)، ⁨Qwen2.5⁩ (البرمجة)، ⁨Llama 3.2⁩ (عام).",
+    "title": "أفضل نماذج ⁨LLM⁩ المحلية الصغيرة ⁨2026⁩: أفضل نماذج ⁨4B⁩ وأصغر نموذج للتشغيل محليًا",
+    "excerpt": "أفضل نماذج ⁨LLM⁩ المحلية الصغيرة ⁨2026⁩: ترتيب ⁨Qwen3.5 4B⁩ و⁨Gemma 4 E4B⁩ و⁨Phi-4 Mini⁩، وأصغر النماذج (⁨0.8B-2B⁩) لذاكرة ⁨4-8 GB⁩.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-04-04",
+    "dateModified": "2026-10-18",
     "url": "/ar/local-llms/small-local-llm-models",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
-    "title": "소형 로컬 LLM 모델: 2026년 저용량 RAM 기기를 위한 최고의 4B 미만 모델",
-    "excerpt": "RAM 4~8GB용 4B 미만 최고 로컬 LLM 모델: Phi-4 Mini(MMLU 68%), Gemma 4 E2B(MMLU Pro 60%, 컨텍스트 128K), Qwen2.5(코딩), Llama 3.2(범용).",
+    "title": "2026년 최고의 소형 로컬 LLM: 상위 4B 모델과 로컬에서 실행 가능한 최소 모델",
+    "excerpt": "2026 최고의 소형 로컬 LLM: Qwen3.5 4B, Gemma 4 E4B, Phi-4 Mini 순위와 RAM 4-8 GB용 최소 모델(0.8B-2B).",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-04-04",
+    "dateModified": "2026-10-18",
     "url": "/ko/local-llms/small-local-llm-models",
     "cluster": "local-llms"
   },
@@ -59132,81 +59132,81 @@
   {
     "lang": "en",
     "title": "Balkonkraftwerk Rules in Germany: The Complete 2026 Guide",
-    "excerpt": "Germany updated its Balkonkraftwerk rules in 2026 — a new inverter cap, a registration step people skip and get fined for, and a DIN standard that changes what you're allowed to install. Verified against the primary legal text.",
+    "excerpt": "Balkonkraftwerk rules in Germany: 800 VA cap, one-month MaStR registration, moving, decommissioning and DIN VDE V 0126-95 — checked against § 8 EEG.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-07-02",
+    "dateModified": "2026-10-18",
     "url": "/balcony-solar/balkonkraftwerk-germany-rules",
     "cluster": "balcony-solar"
   },
   {
     "lang": "de",
     "title": "Balkonkraftwerk in Deutschland: Der vollständige Ratgeber 2026",
-    "excerpt": "Deutschland hat die Balkonkraftwerk-Regeln 2026 geändert: eine neue Wechselrichter-Grenze, ein Anmeldeschritt, den viele übersehen und dafür Bußgeld zahlen, und eine neue DIN-Norm, die ändert, was installiert werden darf. Geprüft anhand des primären Gesetzestexts.",
+    "excerpt": "Balkonkraftwerk Deutschland: Was ist erlaubt? 800-VA-Grenze, 2.000 Wp, MaStR-Anmeldung binnen eines Monats, Umzug und Stilllegung — geprüft an § 8 EEG.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-07-02",
+    "dateModified": "2026-10-18",
     "url": "/de/balcony-solar/balkonkraftwerk-germany-rules",
     "cluster": "balcony-solar"
   },
   {
     "lang": "fr",
     "title": "Règles du Balkonkraftwerk en Allemagne : le guide complet 2026",
-    "excerpt": "L'Allemagne a mis à jour les règles du Balkonkraftwerk en 2026 : un nouveau plafond d'onduleur, une étape d'enregistrement que beaucoup sautent et qui leur vaut une amende, et une nouvelle norme DIN qui change ce que vous pouvez installer. Vérifié par rapport au texte légal primaire.",
+    "excerpt": "Balkonkraftwerk en Allemagne : plafond de 800 VA, enregistrement MaStR sous un mois, déménagement, mise hors service et norme DIN VDE V 0126-95. Vérifié d'après le § 8 EEG.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-07-02",
+    "dateModified": "2026-10-18",
     "url": "/fr/balcony-solar/balkonkraftwerk-germany-rules",
     "cluster": "balcony-solar"
   },
   {
     "lang": "ja",
     "title": "ドイツのBalkonkraftwerkルール：2026年完全ガイド",
-    "excerpt": "ドイツは2026年にBalkonkraftwerkのルールを改定した — インバーター出力の新しい上限、見落とすと罰則につながる登録手続き、設置できる機器を変える新しいDIN規格。一次法的文書に基づき確認済み。",
+    "excerpt": "ドイツのBalkonkraftwerk：800VAの上限、1か月以内のMaStR登録、引っ越し・運転停止、DIN VDE V 0126-95。§ 8 EEGに基づき確認済み。",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-07-02",
+    "dateModified": "2026-10-18",
     "url": "/ja/balcony-solar/balkonkraftwerk-germany-rules",
     "cluster": "balcony-solar"
   },
   {
     "lang": "zh",
     "title": "德国Balkonkraftwerk规定：2026年完整指南",
-    "excerpt": "德国在2026年更新了Balkonkraftwerk规定——新的逆变器输出上限、一个常被忽略却会被罚款的注册步骤,以及一项改变了可安装设备范围的新DIN标准。已核对一手法律文本。",
+    "excerpt": "德国Balkonkraftwerk规定：800 VA上限、一个月内MaStR注册、搬家与停用，以及DIN VDE V 0126-95标准。已对照§ 8 EEG核实。",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-07-02",
+    "dateModified": "2026-10-18",
     "url": "/zh/balcony-solar/balkonkraftwerk-germany-rules",
     "cluster": "balcony-solar"
   },
   {
     "lang": "es",
     "title": "Normas del Balkonkraftwerk en Alemania: La guía completa 2026",
-    "excerpt": "Alemania actualizó las normas del Balkonkraftwerk en 2026: un nuevo límite en el inversor, un paso de registro que mucha gente se salta y por el que le multan, y una norma DIN que cambia lo que puedes instalar. Verificado con el texto legal primario.",
+    "excerpt": "Balkonkraftwerk en Alemania: límite de 800 VA, registro en el MaStR en el plazo de un mes, mudanza, baja y norma DIN VDE V 0126-95. Verificado con el § 8 EEG.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-07-02",
+    "dateModified": "2026-10-18",
     "url": "/es/balcony-solar/balkonkraftwerk-germany-rules",
     "cluster": "balcony-solar"
   },
   {
     "lang": "pt",
     "title": "Regras do Balkonkraftwerk na Alemanha: O Guia Completo 2026",
-    "excerpt": "A Alemanha atualizou as regras do Balkonkraftwerk em 2026: um novo limite no inversor, uma etapa de registro que muita gente pula e acaba multada, e um padrão DIN que muda o que você pode instalar. Verificado com o texto legal primário.",
+    "excerpt": "Balkonkraftwerk na Alemanha: limite de 800 VA, registro no MaStR em até um mês, mudança, desativação e a norma DIN VDE V 0126-95. Verificado com o § 8 EEG.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-07-02",
+    "dateModified": "2026-10-18",
     "url": "/pt/balcony-solar/balkonkraftwerk-germany-rules",
     "cluster": "balcony-solar"
   },
   {
     "lang": "ar",
     "title": "قواعد Balkonkraftwerk في ألمانيا: الدليل الكامل 2026",
-    "excerpt": "حدّثت ألمانيا قواعد Balkonkraftwerk في 2026: حد جديد لخرج العاكس، وخطوة تسجيل يتجاهلها كثيرون فتتم معاقبتهم عليها، ومعيار DIN جديد يغيّر ما يُسمح لك بتركيبه. تم التحقق منها مقابل النص القانوني الأساسي.",
+    "excerpt": "Balkonkraftwerk في ألمانيا: حد 800 فولت أمبير، والتسجيل في MaStR خلال شهر، والانتقال والإيقاف، ومعيار DIN VDE V 0126-95. تم التحقق مقابل § 8 EEG.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-07-02",
+    "dateModified": "2026-10-18",
     "url": "/ar/balcony-solar/balkonkraftwerk-germany-rules",
     "cluster": "balcony-solar"
   },
   {
     "lang": "ko",
     "title": "독일 Balkonkraftwerk 규정: 2026년 완전 가이드",
-    "excerpt": "독일이 2026년 Balkonkraftwerk 규정을 개정했다 — 새로워진 인버터 출력 상한, 놓치면 과태료로 이어지는 등록 절차, 설치 가능 기기를 바꾸는 새 DIN 규격까지. 1차 법률 문서 대조 확인.",
+    "excerpt": "독일 Balkonkraftwerk: 800VA 상한, 한 달 이내 MaStR 등록, 이사·가동 중단, DIN VDE V 0126-95 규격. § 8 EEG 대조 확인.",
     "publishDate": "2026-07-02",
-    "dateModified": "2026-07-02",
+    "dateModified": "2026-10-18",
     "url": "/ko/balcony-solar/balkonkraftwerk-germany-rules",
     "cluster": "balcony-solar"
   },
@@ -59451,6 +59451,168 @@
     "publishDate": "2026-07-02",
     "dateModified": "2026-07-02",
     "url": "/ko/balcony-solar/balcony-solar-gulf-mena",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "en",
+    "title": "Balcony Solar in France 2026: Enedis Declaration, Consuel and the NF C 15-100 Problem",
+    "excerpt": "Balcony solar in France: Enedis requires declaration at any power, yet NF C 15-100 restricts standard sockets. What is confirmed and what is not.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/balcony-solar/balcony-solar-france",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "de",
+    "title": "Balkonkraftwerk in Frankreich 2026: Enedis-Anmeldung, Consuel und das NF-C-15-100-Problem",
+    "excerpt": "Balkonkraftwerk in Frankreich: Enedis verlangt die Anmeldung bei jeder Leistung, die NF C 15-100 schränkt Steckdosen ein. Was gesichert ist und was nicht.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/de/balcony-solar/balcony-solar-france",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "fr",
+    "title": "Solaire de balcon en France 2026 : déclaration Enedis, Consuel et problème de la NF C 15-100",
+    "excerpt": "Solaire de balcon en France : Enedis impose la déclaration à toute puissance, mais la NF C 15-100 restreint la prise standard. Le confirmé et le non confirmé.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/fr/balcony-solar/balcony-solar-france",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "ja",
+    "title": "フランスのバルコニーソーラー2026：Enedisへの届出、Consuel、NF C 15-100の問題",
+    "excerpt": "フランスのバルコニーソーラー：Enedisは出力を問わず届出を義務としますが、改訂NF C 15-100は一般コンセント接続を制限。確認できた点とできない点。",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ja/balcony-solar/balcony-solar-france",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "zh",
+    "title": "法国阳台光伏2026：Enedis申报、Consuel与NF C 15-100问题",
+    "excerpt": "法国阳台光伏：Enedis要求无论功率大小都须申报，但修订后的NF C 15-100限制接入普通插座。哪些已确认，哪些未确认。",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/zh/balcony-solar/balcony-solar-france",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "es",
+    "title": "Energía solar de balcón en Francia 2026: declaración a Enedis, Consuel y el problema de la NF C 15-100",
+    "excerpt": "Solar de balcón en Francia: Enedis exige declarar a cualquier potencia, pero la NF C 15-100 restringe el enchufe estándar. Qué está confirmado y qué no.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/es/balcony-solar/balcony-solar-france",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "pt",
+    "title": "Energia solar de varanda na França 2026: declaração à Enedis, Consuel e o problema da NF C 15-100",
+    "excerpt": "Solar de varanda na França: a Enedis exige declaração em qualquer potência, mas a NF C 15-100 restringe a tomada comum. O que está confirmado e o que não.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/pt/balcony-solar/balcony-solar-france",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "ar",
+    "title": "الطاقة الشمسية للشرفة في فرنسا 2026: التصريح لدى Enedis وConsuel ومشكلة NF C 15-100",
+    "excerpt": "الطاقة الشمسية للشرفة في فرنسا: تشترط Enedis التصريح مهما كانت القدرة، لكن NF C 15-100 المنقّح يقيّد المقبس العادي. ما المؤكد وما غير المؤكد.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ar/balcony-solar/balcony-solar-france",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "ko",
+    "title": "프랑스 발코니 태양광 2026: Enedis 신고, Consuel, NF C 15-100 문제",
+    "excerpt": "프랑스 발코니 태양광: Enedis는 출력과 상관없이 신고를 의무로 보지만, 개정 NF C 15-100은 일반 콘센트 연결을 제한합니다. 확인된 것과 아닌 것.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ko/balcony-solar/balcony-solar-france",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "en",
+    "title": "Balcony Solar in South Korea 2026: Government Plan, Local Subsidies and Unanswered Grid Rules",
+    "excerpt": "Balcony solar in South Korea: a May 2026 national plan targets 2 million apartments and Jeju pays 80% of installation. KEPCO notification rules are unconfirmed.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/balcony-solar/balcony-solar-south-korea",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "de",
+    "title": "Balkonkraftwerk in Südkorea 2026: Regierungsplan, regionale Förderung und offene Netzregeln",
+    "excerpt": "Balkonkraftwerk in Südkorea: Der Plan vom Mai 2026 zielt auf 2 Mio. Wohnungen, Jeju zahlt 80 % der Installation. Regeln zur KEPCO-Meldung sind unbestätigt.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/de/balcony-solar/balcony-solar-south-korea",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "fr",
+    "title": "Solaire de balcon en Corée du Sud 2026 : plan national, aides locales et règles de réseau sans réponse",
+    "excerpt": "Solaire de balcon en Corée du Sud : le plan de mai 2026 vise 2 millions de logements, Jeju finance 80 %. Les règles de déclaration à KEPCO sont non confirmées.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/fr/balcony-solar/balcony-solar-south-korea",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "ja",
+    "title": "韓国のバルコニーソーラー2026：政府計画、自治体補助金、未解明の系統ルール",
+    "excerpt": "韓国のバルコニーソーラー：2026年5月の国の計画は200万世帯を目標、済州島は設置費の80％を負担。韓国電力への届出ルールは未確認。",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ja/balcony-solar/balcony-solar-south-korea",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "zh",
+    "title": "韩国阳台光伏2026：政府计划、地方补贴与尚无答案的并网规则",
+    "excerpt": "韩国阳台光伏：2026年5月国家计划目标200万户，济州承担80%安装费用。向韩国电力公社申报的规则尚未得到确认。",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/zh/balcony-solar/balcony-solar-south-korea",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "es",
+    "title": "Energía solar de balcón en Corea del Sur 2026: plan del Gobierno, ayudas locales y normas de red sin respuesta",
+    "excerpt": "Solar de balcón en Corea del Sur: el plan de mayo de 2026 apunta a 2 millones de viviendas y Jeju paga el 80 %. Las normas de aviso a KEPCO no están confirmadas.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/es/balcony-solar/balcony-solar-south-korea",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "pt",
+    "title": "Energia solar de varanda na Coreia do Sul 2026: plano do governo, subsídios locais e regras de rede sem resposta",
+    "excerpt": "Solar de varanda na Coreia do Sul: o plano de maio de 2026 mira 2 milhões de apartamentos e Jeju paga 80 %. As regras de aviso à KEPCO não estão confirmadas.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/pt/balcony-solar/balcony-solar-south-korea",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "ar",
+    "title": "الطاقة الشمسية للشرفة في كوريا الجنوبية 2026: خطة الحكومة والدعم المحلي وقواعد الشبكة التي بلا إجابة",
+    "excerpt": "الطاقة الشمسية للشرفة في كوريا الجنوبية: خطة وطنية في مايو 2026 تستهدف مليوني شقة، وجيجو تدفع 80% من التركيب. قواعد إبلاغ KEPCO غير مؤكدة.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ar/balcony-solar/balcony-solar-south-korea",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "ko",
+    "title": "한국 베란다 태양광 2026: 정부 계획, 지자체 보조금, 아직 답이 없는 계통 규정",
+    "excerpt": "한국 베란다 태양광: 2026년 5월 국가 계획은 200만 가구가 목표이고 제주는 설치비 80%를 지원합니다. 한전 신고 규정은 확인되지 않았습니다.",
+    "publishDate": "2026-10-18",
+    "dateModified": "2026-10-18",
+    "url": "/ko/balcony-solar/balcony-solar-south-korea",
     "cluster": "balcony-solar"
   },
   {
