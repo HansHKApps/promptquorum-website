@@ -96,6 +96,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "memoryai-review",
+        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
+        "url": "/power-local-llm/memoryai-review",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "70b-models-consumer-hardware",
         "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
@@ -157,14 +165,6 @@
         "title": "Return Editor Review: Local-First AI Contract Review for Mac and Windows",
         "url": "/power-local-llm/return-editor-review",
         "dateModified": "2026-10-16",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "apple-silicon-m5-local-llm",
-        "title": "Apple Silicon for Local LLM 2026: M5 Pro vs M5 Max vs Mac Studio Compared",
-        "url": "/local-llms/apple-silicon-m5-local-llm",
-        "dateModified": "2026-10-11",
         "tier": "about"
       }
     ],
@@ -2371,14 +2371,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "best-local-llm-creative-writing",
-        "title": "Best Local LLMs for Creative Writing (2026): Fiction, Dialogue & Worldbuilding",
-        "url": "/power-local-llm/best-local-llm-creative-writing",
-        "dateModified": "2026-10-17",
+        "slug": "castmates-review",
+        "title": "Castmates Review: Offline AI Character Chat for iPhone",
+        "url": "/power-local-llm/castmates-review",
+        "dateModified": "2026-10-19",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "LobeChat": {
@@ -5900,7 +5900,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 35,
+    "totalCount": 36,
     "capped": true
   },
   "Pocket AI": {
@@ -10685,6 +10685,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "castmates-review",
+        "title": "Castmates Review: Offline AI Character Chat for iPhone",
+        "url": "/power-local-llm/castmates-review",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mlxhub-review",
         "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
         "url": "/power-local-llm/mlxhub-review",
@@ -10746,17 +10754,9 @@
         "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
         "dateModified": "2026-10-17",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cursor-local-mode-review",
-        "title": "Cursor \"Local Mode\": Does It Really Run Local Models?",
-        "url": "/power-local-llm/cursor-local-mode-review",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 200,
+    "totalCount": 201,
     "capped": true
   },
   "Qdrant": {
