@@ -764,6 +764,16 @@ const nextConfig: NextConfig = {
         destination: '/:lang/prompt-engineering/langsmith-vs-helicone-vs-langfuse',
         permanent: true,
       },
+      {
+        source: '/power-local-llm/best-laptops-local-llm-2026',
+        destination: '/power-local-llm/best-laptop-for-local-llm',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/best-laptops-local-llm-2026',
+        destination: '/:lang/power-local-llm/best-laptop-for-local-llm',
+        permanent: true,
+      },
     ]
   },
   async rewrites() {

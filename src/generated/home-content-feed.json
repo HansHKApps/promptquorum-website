@@ -166,7 +166,7 @@
     "title": "What Is Prompt Engineering? — PromptQuorum Guide",
     "excerpt": "Prompt engineering: designing text inputs for reliable AI outputs. Learn role prompting, chain-of-thought, few-shot techniques for ChatGPT, Claude, Ollama.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-03-01",
+    "dateModified": "2026-10-19",
     "url": "/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -175,16 +175,16 @@
     "title": "Was ist Prompt Engineering? — PromptQuorum Leitfaden",
     "excerpt": "Prompt Engineering 2026: die Technik, die KI-Ausgaben zuverlässig macht. Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-03-01",
+    "dateModified": "2026-10-19",
     "url": "/de/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "fr",
     "title": "Qu'est-ce que le Prompt Engineering ? — Guide PromptQuorum",
-    "excerpt": "Le prompt engineering détermine la qualité de vos résultats IA. Apprenez le prompting de rôle, chain-of-thought et few-shot pour ChatGPT, Claude et Ollama.",
+    "excerpt": "Ingénierie de prompt : définition, principes et techniques (chain-of-thought, few-shot), puis comparaison avec le fine-tuning et le RAG pour ChatGPT et Claude.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-03-01",
+    "dateModified": "2026-10-19",
     "url": "/fr/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -193,7 +193,7 @@
     "title": "プロンプトエンジニアリングとは？",
     "excerpt": "プロンプトエンジニアリングはAI出力の品質を決める技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で習得。",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-03-01",
+    "dateModified": "2026-10-19",
     "url": "/ja/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -202,7 +202,7 @@
     "title": "什么是提示工程？ — PromptQuorum 指南",
     "excerpt": "提示工程是决定AI输出质量的核心技能。学习角色提示、思维链和少样本方法，适用于ChatGPT、Claude和Ollama。初学者友好，约10分钟阅读。",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-03-01",
+    "dateModified": "2026-10-19",
     "url": "/zh/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -211,7 +211,7 @@
     "title": "¿Qué es el Prompt Engineering? — Guía PromptQuorum",
     "excerpt": "Prompt engineering en 2026: diseña entradas de texto para resultados fiables. Aprende role prompting, chain-of-thought y few-shot para ChatGPT y Claude.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-03-01",
+    "dateModified": "2026-10-19",
     "url": "/es/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -220,7 +220,7 @@
     "title": "O que é Prompt Engineering? — Guia PromptQuorum",
     "excerpt": "Prompt engineering em 2026: projete entradas de texto para resultados confiáveis de IA. Aprenda role prompting, chain-of-thought e few-shot para ChatGPT, Claude e Ollama.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-03-01",
+    "dateModified": "2026-10-19",
     "url": "/pt/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -229,7 +229,7 @@
     "title": "ما هي هندسة الطلبات؟ — دليل ⁨PromptQuorum⁩",
     "excerpt": "هندسة الطلبات: صمّم المدخلات النصية للحصول على نتائج موثوقة من ⁨LLMs⁩. تعلّم ⁨role prompting⁩ و⁨chain-of-thought⁩ و⁨few-shot⁩ لـ ⁨ChatGPT⁩ و⁨Claude⁩ و⁨Ollama⁩.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-03-01",
+    "dateModified": "2026-10-19",
     "url": "/ar/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -238,7 +238,7 @@
     "title": "프롬프트 엔지니어링이란? — PromptQuorum 가이드",
     "excerpt": "프롬프트 엔지니어링: 신뢰할 수 있는 AI 출력을 위한 텍스트 입력 설계. ChatGPT, Claude, Ollama를 위한 역할 프롬프팅, 사고 연쇄, 퓨샷 기법을 학습하십시오.",
     "publishDate": "2026-03-01",
-    "dateModified": "2026-03-01",
+    "dateModified": "2026-10-19",
     "url": "/ko/prompt-engineering/what-is-prompt-engineering",
     "cluster": "prompt-engineering"
   },
@@ -20252,82 +20252,82 @@
   {
     "lang": "en",
     "title": "Best Laptops for Running Local LLMs: Buying Guide 2026",
-    "excerpt": "Best laptops for running local LLMs in 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. RAM, GPU VRAM, and real token speeds compared by price tier.",
+    "excerpt": "Best laptop for local LLMs in 2026: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. How much RAM, VRAM and unified memory you need, compared by buying style.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-07-01",
-    "url": "/power-local-llm/best-laptops-local-llm-2026",
+    "dateModified": "2026-10-19",
+    "url": "/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Die besten Laptops für lokale LLMs: Kaufberatung 2026",
-    "excerpt": "Vier Laptop-Familien für lokale LLMs im Vergleich: MacBook Pro, ThinkPad, ASUS ROG und Framework 16. Erst nach Speicher kaufen – VRAM entscheidet.",
+    "excerpt": "Bester Laptop für lokale LLMs 2026: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. Wie viel RAM, VRAM und Unified Memory Sie brauchen – nach Kaufstil verglichen.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-05-22",
-    "url": "/de/power-local-llm/best-laptops-local-llm-2026",
+    "dateModified": "2026-10-19",
+    "url": "/de/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Les meilleurs ordinateurs portables pour LLM locaux : guide d'achat 2026",
-    "excerpt": "Quatre familles de portables comparées pour les LLM locaux : MacBook Pro, Lenovo ThinkPad, ASUS ROG et Framework 16. Achetez d'abord pour la mémoire — la VRAM ou la mémoire unifiée décide du modèle qui tient.",
+    "excerpt": "Le meilleur portable pour LLM locaux en 2026 : MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. De combien de RAM, de VRAM et de mémoire unifiée avez-vous besoin, selon votre style d'achat.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-05-22",
-    "url": "/fr/power-local-llm/best-laptops-local-llm-2026",
+    "dateModified": "2026-10-19",
+    "url": "/fr/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "ローカルLLM向けノートパソコンのおすすめ：購入ガイド2026",
-    "excerpt": "ローカルLLMの実行向けに4つのノートパソコン系統を比較：MacBook Pro、Lenovo ThinkPad、ASUS ROG、Framework 16。まずメモリで選ぶ — VRAMまたはunified memoryがどのモデルが収まるかを決めます。",
+    "excerpt": "2026年のローカルLLM向けノートパソコン：MacBook Pro M5 Pro/Max、ThinkPad、ASUS ROG、Framework 16。必要なRAM、VRAM、unified memoryの容量を購入スタイル別に比較します。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-05-22",
-    "url": "/ja/power-local-llm/best-laptops-local-llm-2026",
+    "dateModified": "2026-10-19",
+    "url": "/ja/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "运行本地大语言模型的最佳笔记本电脑：2026 购买指南",
-    "excerpt": "对比四个笔记本系列运行本地大语言模型的表现：MacBook Pro、Lenovo ThinkPad、ASUS ROG 和 Framework 16。先按内存选购——VRAM 或统一内存决定哪个模型能装下。",
+    "excerpt": "2026 年运行本地大语言模型的最佳笔记本：MacBook Pro M5 Pro/Max、ThinkPad、ASUS ROG、Framework 16。需要多少 RAM、VRAM 和统一内存，按购买取向对比。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-05-22",
-    "url": "/zh/power-local-llm/best-laptops-local-llm-2026",
+    "dateModified": "2026-10-19",
+    "url": "/zh/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Los mejores portátiles para ejecutar LLMs locales: guía de compra 2026",
-    "excerpt": "Los mejores portátiles para LLMs locales en 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad y ASUS ROG. RAM, VRAM y velocidades reales por rango de precio.",
+    "excerpt": "El mejor portátil para LLMs locales en 2026: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG y Framework 16. Cuánta RAM, VRAM y memoria unificada necesitas, comparados por estilo de compra.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-05-22",
-    "url": "/es/power-local-llm/best-laptops-local-llm-2026",
+    "dateModified": "2026-10-19",
+    "url": "/es/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Os melhores notebooks para rodar LLMs locais: guia de compra 2026",
-    "excerpt": "Os melhores notebooks para rodar LLMs locais em 2026: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. RAM, VRAM de GPU e velocidades reais de tokens comparadas por faixa de preço.",
+    "excerpt": "Melhor notebook para LLMs locais em 2026: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. Quanta RAM, VRAM e memória unificada você precisa, comparados por estilo de compra.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-05-22",
-    "url": "/pt/power-local-llm/best-laptops-local-llm-2026",
+    "dateModified": "2026-10-19",
+    "url": "/pt/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "أفضل أجهزة الكمبيوتر المحمولة لتشغيل النماذج اللغوية المحلية: دليل الشراء ⁨2026⁩",
-    "excerpt": "MacBook Pro M5 Max وASUS ROG وThinkPad مقارَنة لتشغيل LLMs: VRAM والذاكرة الموحدة تحدد النموذج المناسب. سرعات الرموز الفعلية لكل فئة سعرية 2026.",
+    "excerpt": "أفضل لابتوب لتشغيل LLMs محلياً 2026: MacBook Pro M5 Pro/Max وThinkPad وASUS ROG وFramework 16. كم RAM وVRAM وذاكرة موحدة تحتاج، مقارَنة حسب أسلوب الشراء.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-05-22",
-    "url": "/ar/power-local-llm/best-laptops-local-llm-2026",
+    "dateModified": "2026-10-19",
+    "url": "/ar/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "로컬 LLM 실행을 위한 최고의 노트북: 2026년 구매 가이드",
-    "excerpt": "2026년 로컬 LLM을 위한 최고의 노트북: MacBook Pro M5 Max, Razer Blade, ThinkPad, ASUS ROG. 가격대별 RAM, VRAM, 실제 토큰 속도 비교.",
+    "excerpt": "2026년 로컬 LLM을 위한 최고의 노트북: MacBook Pro M5 Pro/Max, ThinkPad, ASUS ROG, Framework 16. 구매 스타일별로 비교한 필요 RAM, VRAM, 통합 메모리 용량.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-05-22",
-    "url": "/ko/power-local-llm/best-laptops-local-llm-2026",
+    "dateModified": "2026-10-19",
+    "url": "/ko/power-local-llm/best-laptop-for-local-llm",
     "cluster": "power-local-llm"
   },
   {
@@ -21709,82 +21709,82 @@
   },
   {
     "lang": "en",
-    "title": "The Complete Local AI & LLM Software Directory: 260 Apps & Tools for Running AI Locally (2026)",
-    "excerpt": "Browse 260 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
+    "title": "The Complete Local AI & LLM Software Directory: 262 Apps & Tools for Running AI Locally (2026)",
+    "excerpt": "Browse 262 local LLM apps and tools for Mac, Windows, Linux, iOS and Android. Filter by use case, license, price and hardware to find the right fit.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 260 Apps und Tools, um KI lokal auszuführen (2026)",
-    "excerpt": "Entdecken Sie 260 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
+    "title": "Das vollständige Verzeichnis für lokale KI- & LLM-Software: 262 Apps und Tools, um KI lokal auszuführen (2026)",
+    "excerpt": "Entdecken Sie 262 lokale LLM-Apps und -Tools für Mac, Windows, Linux, iOS und Android. Filter nach Zweck, Lizenz, Preis und Hardware helfen bei der Auswahl.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/de/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 260 apps et outils pour exécuter l'IA en local (2026)",
-    "excerpt": "Parcourez 260 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
+    "title": "Le répertoire complet des logiciels d'IA et de LLM locaux : 262 apps et outils pour exécuter l'IA en local (2026)",
+    "excerpt": "Parcourez 262 apps et outils LLM locaux pour Mac, Windows, Linux, iOS et Android. Filtrez par usage, licence, prix et matériel pour trouver l’outil adapté.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/fr/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす260のアプリ＆ツール（2026年版）",
-    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを260件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
+    "title": "ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす262のアプリ＆ツール（2026年版）",
+    "excerpt": "Mac・Windows・Linux・iOS・Android対応のローカルLLMアプリとツールを262件掲載。用途、ライセンス、価格、ハードウェアで絞り込み、自分に合うソフトを探せます。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/ja/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "本地AI与LLM软件完整目录：260款应用与工具，在本地运行AI（2026）",
-    "excerpt": "收录260款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
+    "title": "本地AI与LLM软件完整目录：262款应用与工具，在本地运行AI（2026）",
+    "excerpt": "收录262款适用于Mac、Windows、Linux、iOS和Android的本地LLM应用与工具。按用途、许可证、价格和硬件筛选，找到适合你的软件。",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/zh/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "El directorio completo de software de IA y LLM local: 260 apps y herramientas para ejecutar IA en local (2026)",
-    "excerpt": "Explora 260 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
+    "title": "El directorio completo de software de IA y LLM local: 262 apps y herramientas para ejecutar IA en local (2026)",
+    "excerpt": "Explora 262 apps y herramientas de LLM local para Mac, Windows, Linux, iOS y Android. Filtra por uso, licencia, precio y hardware y elige la adecuada.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/es/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software de IA e LLM local: 260 apps e ferramentas para executar IA localmente (2026)",
-    "excerpt": "Explore 260 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
+    "title": "O diretório completo de software de IA e LLM local: 262 apps e ferramentas para executar IA localmente (2026)",
+    "excerpt": "Explore 262 apps e ferramentas de LLM local para Mac, Windows, Linux, iOS e Android. Filtre por uso, licença, preço e hardware e encontre o software certo.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/pt/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 260 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
-    "excerpt": "تصفّح 260 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
+    "title": "الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: 262 تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)",
+    "excerpt": "تصفّح 262 تطبيقاً وأداة للنماذج اللغوية المحلية على Mac وWindows وLinux وiOS وAndroid. صفِّ حسب الاستخدام والترخيص والسعر والعتاد لتجد البرنامج المناسب.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/ar/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 260개 앱과 도구 (2026)",
-    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 260개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
+    "title": "로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 262개 앱과 도구 (2026)",
+    "excerpt": "Mac·Windows·Linux·iOS·Android에서 쓸 수 있는 로컬 LLM 앱과 도구 262개. 사용 사례, 라이선스, 가격, 하드웨어로 필터링해 나에게 맞는 소프트웨어를 찾아보세요.",
     "publishDate": "2026-05-07",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/ko/power-local-llm/local-llm-software-directory",
     "cluster": "power-local-llm"
   },
@@ -33455,7 +33455,7 @@
   {
     "lang": "en",
     "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
-    "excerpt": "Compare 47 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
+    "excerpt": "Compare 48 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33464,7 +33464,7 @@
   {
     "lang": "de",
     "title": "Lokale Wissens- und Retrieval-Tools im Vergleich (2026): RAG, Dokumenten-Chat, Vektordatenbanken, Notizen und Suche",
-    "excerpt": "47 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
+    "excerpt": "48 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33473,7 +33473,7 @@
   {
     "lang": "fr",
     "title": "Outils locaux de connaissance et de recherche comparés (2026) : RAG, chat avec documents, bases vectorielles, notes et recherche",
-    "excerpt": "Comparez 47 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
+    "excerpt": "Comparez 48 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33482,7 +33482,7 @@
   {
     "lang": "ja",
     "title": "ローカル知識・検索ツール比較(2026):RAG、ドキュメントチャット、ベクトルデータベース、ノート、検索",
-    "excerpt": "ローカルの知識・検索ツール47種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
+    "excerpt": "ローカルの知識・検索ツール48種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33491,7 +33491,7 @@
   {
     "lang": "zh",
     "title": "本地知识与检索工具对比(2026):RAG、文档对话、向量数据库、笔记与搜索",
-    "excerpt": "并排对比47款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
+    "excerpt": "并排对比48款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33500,7 +33500,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de conocimiento y recuperación comparadas (2026): RAG, chat con documentos, bases de datos vectoriales, notas y búsqueda",
-    "excerpt": "Compara 47 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
+    "excerpt": "Compara 48 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33509,7 +33509,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de conhecimento e recuperação comparadas (2026): RAG, chat com documentos, bancos de dados vetoriais, notas e busca",
-    "excerpt": "Compare 47 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
+    "excerpt": "Compare 48 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33518,7 +33518,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات المعرفة والاسترجاع المحلية (2026): RAG ومحادثة المستندات وقواعد البيانات المتجهية والملاحظات والبحث",
-    "excerpt": "قارن 47 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
+    "excerpt": "قارن 48 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33527,7 +33527,7 @@
   {
     "lang": "ko",
     "title": "로컬 지식·검색 도구 비교(2026): RAG, 문서 채팅, 벡터 데이터베이스, 노트, 검색",
-    "excerpt": "로컬 지식·검색 도구 47개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 지식·검색 도구 48개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33536,7 +33536,7 @@
   {
     "lang": "en",
     "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-    "excerpt": "Compare 87 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
+    "excerpt": "Compare 89 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -33554,7 +33554,7 @@
   {
     "lang": "fr",
     "title": "Applications de chat IA locales et assistants : comparatif (2026) — bureau, mobile, auto-hébergé, assistants et jeu de rôle",
-    "excerpt": "Comparez 87 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
+    "excerpt": "Comparez 89 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-chat-assistants-compared",
@@ -33563,7 +33563,7 @@
   {
     "lang": "ja",
     "title": "ローカルチャットアプリとAIアシスタント比較(2026):デスクトップ、モバイル、セルフホスト、アシスタント、ロールプレイ",
-    "excerpt": "ローカルチャットアプリとAIアシスタント87種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
+    "excerpt": "ローカルチャットアプリとAIアシスタント89種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-chat-assistants-compared",
@@ -33572,7 +33572,7 @@
   {
     "lang": "zh",
     "title": "本地聊天应用与助手对比(2026):桌面、手机、自托管、助手与角色扮演",
-    "excerpt": "并排对比87款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
+    "excerpt": "并排对比89款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-chat-assistants-compared",
@@ -33581,7 +33581,7 @@
   {
     "lang": "es",
     "title": "Apps de chat y asistentes locales, comparados (2026): escritorio, móvil, autoalojados, asistentes y rol",
-    "excerpt": "Compara 87 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
+    "excerpt": "Compara 89 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-chat-assistants-compared",
@@ -33590,7 +33590,7 @@
   {
     "lang": "pt",
     "title": "Apps de chat locais e assistentes comparados (2026): desktop, celular, self-hosted, assistentes e roleplay",
-    "excerpt": "Compare 87 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
+    "excerpt": "Compare 89 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-chat-assistants-compared",
@@ -33599,7 +33599,7 @@
   {
     "lang": "ar",
     "title": "مقارنة تطبيقات الدردشة والمساعدات المحلية (2026): سطح المكتب والجوال والاستضافة الذاتية والمساعدات ولعب الأدوار",
-    "excerpt": "قارن 87 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
+    "excerpt": "قارن 89 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-chat-assistants-compared",
@@ -33608,7 +33608,7 @@
   {
     "lang": "ko",
     "title": "로컬 채팅 앱·AI 어시스턴트 비교(2026): 데스크톱, 모바일, 셀프 호스팅, 어시스턴트, 롤플레이",
-    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 87개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 89개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-chat-assistants-compared",
@@ -40254,6 +40254,168 @@
     "publishDate": "2026-10-17",
     "dateModified": "2026-10-18",
     "url": "/ko/power-local-llm/hiwaifu-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
+    "excerpt": "MemoryAI review: free, closed-source offline AI chat for iPhone and Android with document Q&A, editable Agent Memory and voice. Privacy and limits.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/power-local-llm/memoryai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "MemoryAI-Rezension: Kostenlose Offline-KI-Chat-App für iPhone und Android",
+    "excerpt": "MemoryAI-Rezension: kostenlose, nicht quelloffene Offline-KI-Chat-App für iPhone und Android mit Dokumenten-Q&A, Agent Memory, Sprache. Datenschutz.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/de/power-local-llm/memoryai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Avis MemoryAI : chat IA gratuit hors ligne pour iPhone et Android",
+    "excerpt": "Avis MemoryAI : appli de chat IA gratuite, code fermé, hors ligne, sur iPhone et Android, avec Q&R sur documents, Agent Memory, voix et contrôle parental.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/fr/power-local-llm/memoryai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "MemoryAIレビュー:iPhone・Android向けの無料オフラインAIチャット",
+    "excerpt": "MemoryAIレビュー:ドキュメントQ&A、編集可能なAgent Memory、音声、ペアレンタルコントロールを備えた無料のオフラインAIチャット。プライバシーと制約を解説します。",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/ja/power-local-llm/memoryai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "MemoryAI 评测:适用于 iPhone 和 Android 的免费离线 AI 聊天应用",
+    "excerpt": "MemoryAI 评测:免费、闭源的 iPhone 和 Android 离线 AI 聊天应用,支持文档问答、可编辑 Agent Memory、语音模式与家长控制。涵盖隐私与局限。",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/zh/power-local-llm/memoryai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de MemoryAI: chat de IA offline y gratuito para iPhone y Android",
+    "excerpt": "Análisis de MemoryAI: chat de IA offline, gratuito y de código cerrado para iPhone y Android, con memoria editable y voz. Privacidad y límites.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/es/power-local-llm/memoryai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "MemoryAI: Análise do App Gratuito de Chat de IA Offline para iPhone e Android",
+    "excerpt": "Análise do MemoryAI: chat de IA offline, grátis e de código fechado para iPhone e Android, com perguntas sobre documentos, memória editável e voz.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/pt/power-local-llm/memoryai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة MemoryAI: تطبيق دردشة ذكاء اصطناعي مجاني دون اتصال لـ iPhone وأندرويد",
+    "excerpt": "مراجعة MemoryAI: تطبيق دردشة مجاني ومغلق المصدر دون اتصال لـ iPhone وأندرويد مع أسئلة على المستندات وذاكرة قابلة للتعديل وصوت. الخصوصية والقيود.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/ar/power-local-llm/memoryai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "MemoryAI 리뷰: iPhone·Android용 무료 오프라인 AI 채팅 앱",
+    "excerpt": "MemoryAI 리뷰: 문서 Q&A, 편집 가능한 Agent Memory, 음성 모드, 자녀 보호 기능을 갖춘 iPhone·Android용 무료 비공개 소스 오프라인 AI 앱. 개인정보와 한계.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/ko/power-local-llm/memoryai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Castmates Review: Offline AI Character Chat for iPhone",
+    "excerpt": "Castmates review: free offline iPhone app with 32 AI characters, custom characters and no account. Pricing, privacy and what the sources do not confirm.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/power-local-llm/castmates-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Castmates-Rezension: Offline-KI-Charakterchat für das iPhone",
+    "excerpt": "Castmates-Rezension: kostenlose Offline-iPhone-App mit 32 KI-Charakteren, eigenen Charakteren und ohne Konto. Preise, Datenschutz und offene Punkte.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/de/power-local-llm/castmates-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Test de Castmates : chat de personnages IA hors ligne pour iPhone",
+    "excerpt": "Test de Castmates : appli iPhone gratuite hors ligne, 32 personnages IA, personnages perso, sans compte. Prix, vie privée et points non confirmés.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/fr/power-local-llm/castmates-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Castmatesレビュー：iPhone向けオフラインAIキャラクターチャット",
+    "excerpt": "Castmatesレビュー：32体のAIキャラクターとカスタムキャラクターを備え、アカウント不要で使える無料のオフラインiPhoneアプリ。料金、プライバシー、未確認事項を整理します。",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/ja/power-local-llm/castmates-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Castmates 评测：iPhone 离线 AI 角色聊天",
+    "excerpt": "Castmates 评测：免费离线 iPhone 应用，内置 32 个 AI 角色，可自建角色，无需账号。价格、隐私以及来源未能证实的内容。",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/zh/power-local-llm/castmates-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de Castmates: chat de personajes con IA sin conexión para iPhone",
+    "excerpt": "Reseña de Castmates: app gratis para iPhone sin conexión con 32 personajes de IA, personajes propios y sin cuenta. Precios, privacidad y dudas abiertas.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/es/power-local-llm/castmates-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do Castmates: chat de personagens com IA offline para iPhone",
+    "excerpt": "Análise do Castmates: app grátis e offline para iPhone com 32 personagens de IA, personagens próprios, sem conta. Preços, privacidade e pontos em aberto.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/pt/power-local-llm/castmates-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Castmates: دردشة شخصيات بالذكاء الاصطناعي دون إنترنت لـ iPhone",
+    "excerpt": "مراجعة Castmates: تطبيق iPhone مجاني دون إنترنت بـ 32 شخصية ذكاء اصطناعي وشخصيات مخصصة ودون حساب. الأسعار والخصوصية وما لم تؤكده المصادر بعد.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/ar/power-local-llm/castmates-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Castmates 리뷰: iPhone용 오프라인 AI 캐릭터 채팅",
+    "excerpt": "Castmates 리뷰: AI 캐릭터 32종과 커스텀 캐릭터를 제공하며 계정이 필요 없는 무료 오프라인 iPhone 앱. 가격, 개인정보, 미확인 사항.",
+    "publishDate": "2026-10-19",
+    "dateModified": "2026-10-19",
+    "url": "/ko/power-local-llm/castmates-review",
     "cluster": "power-local-llm"
   },
   {
@@ -48440,81 +48602,81 @@
   {
     "lang": "en",
     "title": "Best Local LLM for 6 GB VRAM?",
-    "excerpt": "Qwen3 8B Q4_K_M (5.0 GB) is the top pick for 6 GB VRAM. Phi-4-mini and Ministral 8B Q4_K_M are solid alternatives. Quick answer from PromptQuorum.",
+    "excerpt": "Qwen3.5 4B Q4_K_M (3.3 GB) is the best fit for 6 GB VRAM; Qwen3 8B (5.2 GB) is stronger but tight. Coding model picks, 6 GB GPUs and Ollama tags.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-19",
     "url": "/prompt-bites/best-local-llm-6gb-vram",
     "cluster": "prompt-bites"
   },
   {
     "lang": "de",
     "title": "Bestes lokales LLM für 6 GB VRAM?",
-    "excerpt": "Qwen3 8B Q4_K_M (5,0 GB) ist die erste Wahl für 6 GB VRAM. Phi-4-mini und Ministral 8B Q4_K_M sind solide Alternativen. Schnelle Antwort von PromptQuorum.",
+    "excerpt": "Qwen3.5 4B Q4_K_M (3,3 GB) passt am besten zu 6 GB VRAM; Qwen3 8B (5,2 GB) ist stärker, aber knapp. Coding-Tipps, GPUs und Ollama-Tags im Überblick.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-19",
     "url": "/de/prompt-bites/best-local-llm-6gb-vram",
     "cluster": "prompt-bites"
   },
   {
     "lang": "fr",
     "title": "Meilleur LLM local pour 6 Go de VRAM ?",
-    "excerpt": "Qwen3 8B Q4_K_M (5,0 Go) est le premier choix pour 6 Go de VRAM. Phi-4-mini et Ministral 8B Q4_K_M sont des alternatives solides. Réponse rapide par PromptQuorum.",
+    "excerpt": "Qwen3.5 4B Q4_K_M (3,3 Go) convient le mieux à 6 Go de VRAM ; Qwen3 8B (5,2 Go) est plus puissant mais juste. Choix pour le code, GPU et tags Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-19",
     "url": "/fr/prompt-bites/best-local-llm-6gb-vram",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ja",
     "title": "6 GB VRAMに最適なローカルLLMは？",
-    "excerpt": "Qwen3 8B Q4_K_M（5.0 GB）が6 GB VRAMの最有力候補です。Phi-4-miniとMinistral 8B Q4_K_Mも優れた代替選択肢です。PromptQuorumの解説。",
+    "excerpt": "6 GB VRAMにはQwen3.5 4B Q4_K_M（3.3 GB）が最適。Qwen3 8B（5.2 GB）は高性能ですが余裕が少なめ。コーディング向けとGPUも解説。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-19",
     "url": "/ja/prompt-bites/best-local-llm-6gb-vram",
     "cluster": "prompt-bites"
   },
   {
     "lang": "zh",
     "title": "6 GB显存最佳本地LLM是什么？",
-    "excerpt": "Qwen3 8B Q4_K_M（5.0 GB）是6 GB显存的首选。Phi-4-mini和Ministral 8B Q4_K_M是可靠的备选方案。PromptQuorum快速解答。",
+    "excerpt": "Qwen3.5 4B Q4_K_M（3.3 GB）最适合6 GB显存；Qwen3 8B（5.2 GB）更强但余量紧张。含编码模型与显卡对照。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-19",
     "url": "/zh/prompt-bites/best-local-llm-6gb-vram",
     "cluster": "prompt-bites"
   },
   {
     "lang": "es",
     "title": "¿Mejor LLM local para 6 GB de VRAM?",
-    "excerpt": "Qwen3 8B Q4_K_M (5,0 GB) es la mejor opción para 6 GB de VRAM. Phi-4-mini y Ministral 8B Q4_K_M son alternativas sólidas. Respuesta rápida de PromptQuorum.",
+    "excerpt": "Qwen3.5 4B Q4_K_M (3,3 GB) es la mejor opción para 6 GB de VRAM; Qwen3 8B (5,2 GB) rinde más pero va justo. Opciones para código, GPU y tags de Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-19",
     "url": "/es/prompt-bites/best-local-llm-6gb-vram",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
     "title": "Melhor LLM local para 6 GB de VRAM?",
-    "excerpt": "Qwen3 8B Q4_K_M (5,0 GB) é a melhor opção para 6 GB de VRAM. Phi-4-mini e Ministral 8B Q4_K_M são alternativas sólidas. Resposta rápida do PromptQuorum.",
+    "excerpt": "Qwen3.5 4B Q4_K_M (3,3 GB) é a melhor opção para 6 GB de VRAM; Qwen3 8B (5,2 GB) rende mais, mas fica apertado. Opções para código, GPUs e tags do Ollama.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-19",
     "url": "/pt/prompt-bites/best-local-llm-6gb-vram",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ar",
     "title": "أفضل نموذج لغوي محلي لـ ⁨6 GB⁩ من ⁨VRAM⁩؟",
-    "excerpt": "⁨Qwen3 8B Q4⁩_⁨K⁩_⁨M⁩ (⁨5.0 GB VRAM⁩) هو أفضل ⁨LLM⁩ محلي لـ⁨6 GB VRAM⁩ بسرعة ~⁨20⁩ رمز/ثانية. ⁨Phi-4-mini⁩ و⁨Ministral 8B Q4⁩_⁨K⁩_⁨M⁩ بدائل قوية.",
+    "excerpt": "⁨Qwen3.5 4B Q4⁩_⁨K⁩_⁨M⁩ (⁨3.3 GB⁩) هو الأنسب لـ⁨6 GB VRAM⁩؛ و⁨Qwen3 8B⁩ (⁨5.2 GB⁩) أقوى لكن الهامش ضيق. خيارات البرمجة وبطاقات الرسوميات.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-19",
     "url": "/ar/prompt-bites/best-local-llm-6gb-vram",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ko",
     "title": "6 GB VRAM에 최적인 로컬 LLM은?",
-    "excerpt": "Qwen3 8B Q4_K_M(5.0 GB)은 6 GB VRAM에서 최선의 선택입니다. Phi-4-mini와 Ministral 8B Q4_K_M이 우수한 대안입니다. PromptQuorum의 빠른 답변.",
+    "excerpt": "6 GB VRAM에는 Qwen3.5 4B Q4_K_M(3.3 GB)이 가장 적합합니다. Qwen3 8B(5.2 GB)는 더 강력하지만 여유가 빠듯합니다. 코딩 모델과 GPU 정리.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-19",
     "url": "/ko/prompt-bites/best-local-llm-6gb-vram",
     "cluster": "prompt-bites"
   },
@@ -63911,81 +64073,81 @@
   {
     "lang": "en",
     "title": "Run Your Smart Home on a Local LLM (2026 Guide)",
-    "excerpt": "Run your smart home on a local LLM: natural-language control, context-aware automations, and private voice via Home Assistant + Ollama. No cloud. 2026 guide.",
+    "excerpt": "Run a local LLM in Home Assistant with Ollama or Home-LLM: setup paths, model sizes, limits, and hardware. Private, offline control. 2026 guide.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/smart-home/local-llm-smart-home-complete-guide",
     "cluster": "smart-home"
   },
   {
     "lang": "de",
     "title": "Ihr Smart Home mit einem lokalen LLM betreiben (Leitfaden 2026)",
-    "excerpt": "Smart Home mit lokalem LLM 2026: Natürlichsprachliche Steuerung und kontextbewusste Automatisierungen via Home Assistant + Ollama. Kein Cloud-Dienst.",
+    "excerpt": "Lokales LLM in Home Assistant mit Ollama oder Home-LLM: Einrichtungswege, Modellgrößen, Grenzen und Hardware. Privat, offline steuern. Leitfaden 2026.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/de/smart-home/local-llm-smart-home-complete-guide",
     "cluster": "smart-home"
   },
   {
     "lang": "fr",
     "title": "Faire Tourner Votre Maison Connectée sur un LLM Local (Guide 2026)",
-    "excerpt": "Maison connectée avec LLM local 2026 : commande en langage naturel et automatisations contextuelles via Home Assistant + Ollama. Sans cloud.",
+    "excerpt": "Un LLM local dans Home Assistant avec Ollama ou Home-LLM : méthodes de mise en place, tailles de modèles, limites, matériel. Contrôle privé et hors ligne. Guide 2026.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/fr/smart-home/local-llm-smart-home-complete-guide",
     "cluster": "smart-home"
   },
   {
     "lang": "ja",
     "title": "ローカルLLMでスマートホームを動かす（2026年ガイド）",
-    "excerpt": "ローカルLLMでスマートホームを動かす2026年ガイド：インストール手順、ハードウェア要件、音声制御の設定方法を解説。Home Assistant と Ollama で自然言語制御と文脈を踏まえた自動化を実現。クラウド不要のプライベートAI環境を構築。",
+    "excerpt": "Home AssistantでローカルLLMを動かす方法を解説。OllamaとHome-LLMの違い、モデルサイズ、制限、必要なハードウェア。プライベートでオフラインの操作。2026年版ガイド。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/ja/smart-home/local-llm-smart-home-complete-guide",
     "cluster": "smart-home"
   },
   {
     "lang": "zh",
     "title": "用本地LLM运行你的智能家居（2026指南）",
-    "excerpt": "用本地LLM运行智能家居完整指南（2026）：实现自然语言设备控制和情境化智能自动化，通过 Home Assistant 与 Ollama 搭建私密语音控制系统。含硬件选型、安装配置步骤和模型选择建议，数据不离家，无需云端。",
+    "excerpt": "在 Home Assistant 中运行本地大模型：Ollama 与 Home-LLM 两条路径、模型大小、限制与硬件要求。私密、离线控制。2026 指南。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/zh/smart-home/local-llm-smart-home-complete-guide",
     "cluster": "smart-home"
   },
   {
     "lang": "es",
     "title": "Ejecuta Tu Smart Home con un LLM Local (Guía 2026)",
-    "excerpt": "Smart home con LLM local 2026: control en lenguaje natural y automatizaciones contextuales via Home Assistant + Ollama. Sin nube.",
+    "excerpt": "LLM local en Home Assistant con Ollama o Home-LLM: vías de instalación, tamaños de modelo, límites y hardware. Control privado y sin conexión. Guía 2026.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/es/smart-home/local-llm-smart-home-complete-guide",
     "cluster": "smart-home"
   },
   {
     "lang": "pt",
     "title": "Rode Sua Casa Inteligente em um LLM Local (Guia 2026)",
-    "excerpt": "Casa inteligente com LLM local 2026: controle em linguagem natural e automações contextuais via Home Assistant + Ollama. Sem nuvem.",
+    "excerpt": "LLM local no Home Assistant com Ollama ou Home-LLM: caminhos de instalação, tamanhos de modelo, limites e hardware. Controle privado e offline. Guia 2026.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/pt/smart-home/local-llm-smart-home-complete-guide",
     "cluster": "smart-home"
   },
   {
     "lang": "ar",
     "title": "شغِّل منزلك الذكي بنموذج لغوي محلي (دليل ⁨2026⁩)",
-    "excerpt": "Home Assistant + Ollama يحوِّل نموذجًا محليًا إلى عقل منزلك الذكي — تحكم بلغة طبيعية وأتمتة واعية بالسياق بدون سحابة. 2026.",
+    "excerpt": "شغِّل نموذجًا لغويًا محليًا في Home Assistant عبر Ollama أو Home-LLM: مسارات الإعداد وأحجام النماذج والقيود والأجهزة. تحكم خاص دون إنترنت. دليل 2026.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/ar/smart-home/local-llm-smart-home-complete-guide",
     "cluster": "smart-home"
   },
   {
     "lang": "ko",
     "title": "로컬 LLM으로 스마트 홈 운영하기 (2026 가이드)",
-    "excerpt": "로컬 LLM 스마트 홈 2026: Home Assistant + Ollama로 자연어 제어와 문맥 인식 자동화를 클라우드 없이 구현하는 완전 가이드.",
+    "excerpt": "Home Assistant에서 로컬 LLM 실행하기: Ollama와 Home-LLM 설정 경로, 모델 크기, 제한, 하드웨어. 프라이빗 오프라인 제어. 2026 가이드.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/ko/smart-home/local-llm-smart-home-complete-guide",
     "cluster": "smart-home"
   },
@@ -64237,7 +64399,7 @@
     "title": "Smarter Home Automations with a Local LLM (2026)",
     "excerpt": "Build context-aware home automations with a local LLM: plain-language rules that beat if-this-then-that. Examples, prompts, architecture, and guardrails.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/smart-home/ai-automations-local-llm",
     "cluster": "smart-home"
   },
@@ -64246,7 +64408,7 @@
     "title": "Smartere Heim-Automatisierungen mit einem lokalen LLM (2026)",
     "excerpt": "Heim-Automatisierungen 2026 mit lokalem LLM: natürlichsprachliche Regeln schlagen starre Wenn-Dann-Regeln. Beispiele, Prompts, Architektur.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/de/smart-home/ai-automations-local-llm",
     "cluster": "smart-home"
   },
@@ -64255,7 +64417,7 @@
     "title": "Des Automatisations Maison Plus Intelligentes avec un LLM Local (2026)",
     "excerpt": "Automatisations maison IA 2026 : LLM local, règles en langage naturel, exemples avec prompts et garde-fous. Dépasse le si-ceci-alors-cela.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/fr/smart-home/ai-automations-local-llm",
     "cluster": "smart-home"
   },
@@ -64264,7 +64426,7 @@
     "title": "ローカルLLMでより賢い家の自動化（2026）",
     "excerpt": "ローカルLLM（2026）でコンテキスト対応のホームオートメーション構築：自然言語ルールが固定のif-thenを超える。例、プロンプト、アーキテクチャ、ガードレールを解説。Home Assistantとの連携方法と実際の設定手順も紹介。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/ja/smart-home/ai-automations-local-llm",
     "cluster": "smart-home"
   },
@@ -64273,7 +64435,7 @@
     "title": "用本地 LLM 实现更聪明的家庭自动化（2026）",
     "excerpt": "用本地LLM构建情境感知家庭自动化（2026年）：自然语言规则替代僵硬触发条件，包含真实使用示例、提示词设计思路、系统架构说明和可靠性护栏，全程本地运行无需任何云端服务。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/zh/smart-home/ai-automations-local-llm",
     "cluster": "smart-home"
   },
@@ -64282,7 +64444,7 @@
     "title": "Automatizaciones del Hogar Más Inteligentes con un LLM Local (2026)",
     "excerpt": "Automatizaciones del hogar con IA 2026: LLM local más allá de si-esto-entonces. Reglas en lenguaje natural, ejemplos, prompts y salvaguardas.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/es/smart-home/ai-automations-local-llm",
     "cluster": "smart-home"
   },
@@ -64291,7 +64453,7 @@
     "title": "Automações Domésticas Mais Inteligentes com um LLM Local (2026)",
     "excerpt": "Automações domésticas com IA 2026: LLM local além do se-isto-então. Regras em linguagem natural, exemplos, prompts e salvaguardas.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/pt/smart-home/ai-automations-local-llm",
     "cluster": "smart-home"
   },
@@ -64300,7 +64462,7 @@
     "title": "أتمتة المنزل الذكي بنموذج لغوي محلي (⁨2026⁩)",
     "excerpt": "نموذج LLM محلي في Home Assistant يُحوّل الأتمتة من قواعد صارمة إلى أهداف بلغة طبيعية. أمثلة وتعليمات وبنية تقنية وضمانات.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/ar/smart-home/ai-automations-local-llm",
     "cluster": "smart-home"
   },
@@ -64309,88 +64471,88 @@
     "title": "로컬 LLM으로 더 스마트한 홈 자동화 (2026)",
     "excerpt": "로컬 LLM으로 상황 인식형 홈 자동화를 구축하십시오. IFTTT를 능가하는 자연어 규칙, 예시, 프롬프트, 아키텍처 및 안전장치.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/ko/smart-home/ai-automations-local-llm",
     "cluster": "smart-home"
   },
   {
     "lang": "en",
     "title": "Local AI Security Cameras with Frigate (2026)",
-    "excerpt": "Run private AI security cameras with Frigate: local object and person detection, no cloud, no subscription. Hardware, Home Assistant setup, and cost vs cloud.",
+    "excerpt": "Frigate runs private AI camera detection locally with no cloud or subscription. Detector choices, Frigate+ cost ($50/yr), best cameras and Home Assistant setup.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/smart-home/local-ai-security-camera",
     "cluster": "smart-home"
   },
   {
     "lang": "de",
     "title": "Lokale KI-Sicherheitskameras mit Frigate (2026)",
-    "excerpt": "Frigate: private KI-Sicherheitskameras 2026 – lokale Erkennung, kein Cloud-Abo. Hardware, Home-Assistant-Setup und Kostenvergleich.",
+    "excerpt": "Frigate erkennt Personen und Objekte lokal per KI – ohne Cloud und Abo. Detektor-Wahl, Frigate+-Kosten (50 $/Jahr), beste Kameras und Home-Assistant-Setup.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/de/smart-home/local-ai-security-camera",
     "cluster": "smart-home"
   },
   {
     "lang": "fr",
     "title": "Caméras de Sécurité à IA Locale avec Frigate (2026)",
-    "excerpt": "Frigate 2026 : caméras IA privées, détection locale d'objets et personnes, sans cloud ni abonnement. Matériel, Home Assistant et coût.",
+    "excerpt": "Frigate détecte personnes et objets par IA en local, sans cloud ni abonnement. Choix du détecteur, coût de Frigate+ (50 $/an), meilleures caméras, Home Assistant.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/fr/smart-home/local-ai-security-camera",
     "cluster": "smart-home"
   },
   {
     "lang": "ja",
     "title": "Frigate によるローカルAIセキュリティカメラ（2026）",
-    "excerpt": "Frigate でプライベートなAIセキュリティカメラを構築（2026）：ローカルの物体・人物検出、クラウドなし、サブスクなし。月額費用ゼロで映像データを自宅内に保持できる。ハードウェア選定、Home Assistant 設定、クラウドとのコスト比較を解説。",
+    "excerpt": "Frigate はクラウドもサブスクも不要で、人物・物体をローカルAIで検出。検出器の選び方、Frigate+ の費用（年額$50）、おすすめカメラ、Home Assistant 連携。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/ja/smart-home/local-ai-security-camera",
     "cluster": "smart-home"
   },
   {
     "lang": "zh",
     "title": "用 Frigate 的本地 AI 安防摄像头（2026）",
-    "excerpt": "用 Frigate 打造私密的 AI 安防摄像头（2026）：本地物体与人物检测，无云端、无订阅费，视频数据完全存储在本地家庭网络中。含详细硬件选型、Home Assistant 集成配置，以及与云端摄像头服务的年度费用对比。",
+    "excerpt": "Frigate 在本地用 AI 检测人物与物体，无需云端和订阅。检测器选择、Frigate+ 费用（每年 $50）、推荐摄像头与 Home Assistant 设置。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/zh/smart-home/local-ai-security-camera",
     "cluster": "smart-home"
   },
   {
     "lang": "es",
     "title": "Cámaras de Seguridad con IA Local con Frigate (2026)",
-    "excerpt": "Frigate 2026: cámaras de seguridad privadas con IA local, detección sin nube, sin suscripción. Hardware, Home Assistant y coste vs nube.",
+    "excerpt": "Frigate detecta personas y objetos con IA en local, sin nube ni suscripción. Elección de detector, coste de Frigate+ (50 $/año), mejores cámaras y Home Assistant.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/es/smart-home/local-ai-security-camera",
     "cluster": "smart-home"
   },
   {
     "lang": "pt",
     "title": "Câmeras de Segurança com IA Local com Frigate (2026)",
-    "excerpt": "Frigate 2026: câmeras de segurança com IA privada, detecção local, sem nuvem, sem assinatura. Hardware, Home Assistant e custo vs nuvem.",
+    "excerpt": "O Frigate detecta pessoas e objetos com IA localmente, sem nuvem nem assinatura. Escolha do detector, custo do Frigate+ (US$ 50/ano), melhores câmeras e Home Assistant.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/pt/smart-home/local-ai-security-camera",
     "cluster": "smart-home"
   },
   {
     "lang": "ar",
     "title": "كاميرات الأمان بالذكاء الاصطناعي المحلي مع ⁨Frigate⁩ (⁨2026⁩)",
-    "excerpt": "Frigate: كشف محلي بالذكاء الاصطناعي عن الأشخاص بدون سحابة وبدون اشتراك شهري. يحتاج Coral TPU أو GPU ويتكامل مع Home Assistant للإشعارات والأتمتة.",
+    "excerpt": "يكشف Frigate الأشخاص والأشياء محليًا بالذكاء الاصطناعي دون سحابة أو اشتراك. اختيار الكاشف، تكلفة Frigate+ (50 دولارًا سنويًا)، أفضل الكاميرات، وإعداد Home Assistant.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/ar/smart-home/local-ai-security-camera",
     "cluster": "smart-home"
   },
   {
     "lang": "ko",
     "title": "Frigate로 로컬 AI 보안 카메라 구축 (2026)",
-    "excerpt": "Frigate로 사적 AI 보안 카메라 실행: 로컬 객체 및 사람 감지, 클라우드 없음, 구독 없음. 하드웨어, Home Assistant 설정, 클라우드 대비 비용.",
+    "excerpt": "Frigate는 클라우드와 구독 없이 로컬 AI로 사람·객체를 감지합니다. 감지기 선택, Frigate+ 비용(연 $50), 추천 카메라, Home Assistant 설정.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/ko/smart-home/local-ai-security-camera",
     "cluster": "smart-home"
   },
@@ -64478,81 +64640,81 @@
   {
     "lang": "en",
     "title": "Best Local LLM Models for Smart Home Control (2026)",
-    "excerpt": "The best local LLM models for smart home control in 2026: small, fast, function-calling models that run on modest hardware. Shortlist and picks by budget.",
+    "excerpt": "Best local LLMs for Home Assistant in 2026: Qwen3.5, Qwen3, Gemma 4 and Home-LLM compared by size, tool calling and hardware. Picks by budget.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-05",
+    "dateModified": "2026-10-19",
     "url": "/smart-home/best-local-llm-models-smart-home",
     "cluster": "smart-home"
   },
   {
     "lang": "de",
     "title": "Beste lokale LLM-Modelle für die Smart-Home-Steuerung (2026)",
-    "excerpt": "Beste lokale LLMs für Home Assistant 2026: kleine, schnelle Function-Calling-Modelle für bescheidene Hardware. Auswahl nach Budgetstufen.",
+    "excerpt": "Beste lokale LLMs für Home Assistant 2026: Qwen3.5, Qwen3, Gemma 4 und Home-LLM im Vergleich nach Größe, Tool-Calling und Hardware. Auswahl nach Budget.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-05",
+    "dateModified": "2026-10-19",
     "url": "/de/smart-home/best-local-llm-models-smart-home",
     "cluster": "smart-home"
   },
   {
     "lang": "fr",
     "title": "Meilleurs Modèles LLM Locaux pour le Contrôle de la Maison Connectée (2026)",
-    "excerpt": "Meilleurs LLM locaux 2026 pour la maison connectée : modèles petits à appel de fonctions, faible latence. Liste restreinte et choix par budget.",
+    "excerpt": "Meilleurs LLM locaux pour Home Assistant en 2026 : Qwen3.5, Qwen3, Gemma 4 et Home-LLM comparés par taille, tool calling et matériel. Choix par budget.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-05",
+    "dateModified": "2026-10-19",
     "url": "/fr/smart-home/best-local-llm-models-smart-home",
     "cluster": "smart-home"
   },
   {
     "lang": "ja",
     "title": "スマートホーム制御に最適なローカルLLMモデル（2026）",
-    "excerpt": "スマートホーム制御に最適なローカルLLMモデル（2026）：控えめなハードウェアで動く小型・高速・関数呼び出しモデルを優先。Ollama対応の推奨リストと予算別の候補を掲載。各モデルの性能と応答速度を比較。",
+    "excerpt": "2026年のHome Assistant向けおすすめローカルLLM：Qwen3.5、Qwen3、Gemma 4、Home-LLMをサイズ・ツール呼び出し・ハードウェアで比較。予算別の選び方。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-05",
+    "dateModified": "2026-10-19",
     "url": "/ja/smart-home/best-local-llm-models-smart-home",
     "cluster": "smart-home"
   },
   {
     "lang": "zh",
     "title": "智能家居控制的最佳本地 LLM 模型（2026）",
-    "excerpt": "2026年智能家居控制最佳本地LLM模型：优先选择小型函数调用模型以降低响应延迟，适合在普通迷你PC或低功耗硬件设备上部署，含按预算的推荐型号清单、功能说明与性能对比表。",
+    "excerpt": "2026 年 Home Assistant 最佳本地 LLM：按大小、工具调用和硬件对比 Qwen3.5、Qwen3、Gemma 4 与 Home-LLM，并按预算给出推荐。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-05",
+    "dateModified": "2026-10-19",
     "url": "/zh/smart-home/best-local-llm-models-smart-home",
     "cluster": "smart-home"
   },
   {
     "lang": "es",
     "title": "Mejores Modelos LLM Locales para el Control del Smart Home (2026)",
-    "excerpt": "Mejores LLMs locales para Home Assistant 2026: modelos 3B–8B con llamada a funciones para hardware modesto. Lista y recomendaciones por presupuesto.",
+    "excerpt": "Mejores LLM locales para Home Assistant en 2026: Qwen3.5, Qwen3, Gemma 4 y Home-LLM comparados por tamaño, tool calling y hardware. Elección por presupuesto.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-05",
+    "dateModified": "2026-10-19",
     "url": "/es/smart-home/best-local-llm-models-smart-home",
     "cluster": "smart-home"
   },
   {
     "lang": "pt",
     "title": "Melhores Modelos LLM Locais para o Controle da Casa Inteligente (2026)",
-    "excerpt": "Melhores LLMs locais para Home Assistant 2026: modelos 3B–8B com chamada de funções para hardware modesto. Lista curta e escolhas por orçamento.",
+    "excerpt": "Melhores LLMs locais para Home Assistant em 2026: Qwen3.5, Qwen3, Gemma 4 e Home-LLM comparados por tamanho, tool calling e hardware. Escolhas por orçamento.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-05",
+    "dateModified": "2026-10-19",
     "url": "/pt/smart-home/best-local-llm-models-smart-home",
     "cluster": "smart-home"
   },
   {
     "lang": "ar",
     "title": "أفضل نماذج ⁨LLM⁩ المحلية للتحكم في المنزل الذكي (⁨2026⁩)",
-    "excerpt": "نماذج 3B–8B صغيرة وسريعة مع استدعاء الدوال هي الأفضل للتحكم المنزلي. Gemma 3 4B وQwen3 4B وQwen3 8B اختيارات شائعة حسب الأجهزة.",
+    "excerpt": "أفضل نماذج LLM المحلية لـ Home Assistant في 2026: مقارنة Qwen3.5 وQwen3 وGemma 4 وHome-LLM حسب الحجم واستدعاء الأدوات والأجهزة، مع اختيارات حسب الميزانية.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-05",
+    "dateModified": "2026-10-19",
     "url": "/ar/smart-home/best-local-llm-models-smart-home",
     "cluster": "smart-home"
   },
   {
     "lang": "ko",
     "title": "스마트 홈 제어를 위한 최고의 로컬 LLM 모델 (2026)",
-    "excerpt": "2026년 스마트 홈 제어를 위한 최고의 로컬 LLM: 평범한 하드웨어에서 실행되는 소형 고속 함수 호출 모델. 단축 목록 및 예산별 선택.",
+    "excerpt": "2026년 Home Assistant용 최고의 로컬 LLM: Qwen3.5, Qwen3, Gemma 4, Home-LLM을 크기·툴 호출·하드웨어로 비교하고 예산별로 추천합니다.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-05",
+    "dateModified": "2026-10-19",
     "url": "/ko/smart-home/best-local-llm-models-smart-home",
     "cluster": "smart-home"
   },
@@ -64804,7 +64966,7 @@
     "title": "How to Build a Smart Home With Zero Subscriptions (2026)",
     "excerpt": "Build a smart home with zero subscriptions: local-capable devices, a local hub, and local camera storage replace monthly fees with one-time hardware costs.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -64813,7 +64975,7 @@
     "title": "Ein Smart Home ganz ohne Abonnements bauen (2026)",
     "excerpt": "Smart Home ohne Abonnements bauen 2026: lokale Geräte, lokaler Hub und lokaler Kameraspeicher ersetzen monatliche Gebühren durch einmalige Hardwarekosten.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/de/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -64822,7 +64984,7 @@
     "title": "Construire une Maison Connectée Sans Aucun Abonnement (2026)",
     "excerpt": "Construire une maison connectée sans abonnement en 2026 : appareils locaux, hub local et stockage local des caméras éliminent les frais mensuels.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/fr/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -64831,7 +64993,7 @@
     "title": "サブスクなしでスマートホームを作る方法（2026）",
     "excerpt": "サブスクなしでスマートホームを作る方法（2026年版）：Home Assistant を中心に、ローカル機器・ローカルハブ・クラウドカメラ不要の構成で月額料金をゼロに。初期費用のみで長期的に安く運用する方法を解説。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/ja/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -64840,7 +65002,7 @@
     "title": "如何打造零订阅的智能家居（2026）",
     "excerpt": "打造零订阅智能家居的完整方案（2026）：选用支持本地运行的设备和 Home Assistant 中枢，用 Frigate 本地存储摄像头画面，以一次性硬件成本彻底取代按月付费。含设备推荐、成本计算与长期节省分析。",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/zh/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -64849,7 +65011,7 @@
     "title": "Cómo Construir un Smart Home con Cero Suscripciones (2026)",
     "excerpt": "Construye un smart home sin suscripciones en 2026: dispositivos locales, hub local y almacenamiento local de cámaras eliminan las cuotas mensuales.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/es/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -64858,7 +65020,7 @@
     "title": "Como Construir uma Casa Inteligente Sem Nenhuma Assinatura (2026)",
     "excerpt": "Construa uma casa inteligente sem assinaturas em 2026: dispositivos locais, hub local e armazenamento local de câmeras eliminam as taxas mensais.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/pt/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -64867,7 +65029,7 @@
     "title": "كيف تبني منزلًا ذكيًا بدون اشتراكات (⁨2026⁩)",
     "excerpt": "معظم اشتراكات المنزل الذكي تأتي من الكاميرات السحابية. Home Assistant وFrigate يُغنيان عن الرسوم الشهرية بتكلفة أجهزة واحدة فقط.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/ar/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },
@@ -64876,7 +65038,7 @@
     "title": "구독료 없이 스마트홈 구축하는 방법 (2026)",
     "excerpt": "구독료 없는 스마트홈 구축: 로컬 가능 기기, 로컬 허브, 로컬 카메라 저장이 월정액을 일회성 하드웨어 비용으로 대체합니다.",
     "publishDate": "2026-06-04",
-    "dateModified": "2026-06-04",
+    "dateModified": "2026-10-19",
     "url": "/ko/smart-home/smart-home-without-subscriptions",
     "cluster": "smart-home"
   },

@@ -134,7 +134,7 @@ import { article as a_best_vpn_ai_privacy_local_llm_2026 } from './articles/best
 import { article as a_best_nas_storage_local_ai_models_2026 } from './articles/best-nas-storage-local-ai-models-2026'
 import { article as a_best_ai_coding_tools_comparison_2026 } from './articles/best-ai-coding-tools-comparison-2026'
 import { article as a_best_monitors_ai_development_2026 } from './articles/best-monitors-ai-development-2026'
-import { article as a_best_laptops_local_llm_2026 } from './articles/best-laptops-local-llm-2026'
+import { article as a_best_laptop_for_local_llm } from './articles/best-laptop-for-local-llm'
 import { article as a_best_ai_courses_certifications_2026 } from './articles/best-ai-courses-certifications-2026'
 import { article as a_elevenlabs_vs_local_tts_piper_xtts } from './articles/elevenlabs-vs-local-tts-piper-xtts'
 import { article as a_best_local_ai_app_low_end_pc } from './articles/best-local-ai-app-low-end-pc'
@@ -385,7 +385,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-nas-storage-local-ai-models-2026':  a_best_nas_storage_local_ai_models_2026,
   'best-ai-coding-tools-comparison-2026':   a_best_ai_coding_tools_comparison_2026,
   'best-monitors-ai-development-2026':      a_best_monitors_ai_development_2026,
-  'best-laptops-local-llm-2026':            a_best_laptops_local_llm_2026,
+  'best-laptop-for-local-llm':            a_best_laptop_for_local_llm,
   'best-ai-courses-certifications-2026':    a_best_ai_courses_certifications_2026,
   'elevenlabs-vs-local-tts-piper-xtts':     a_elevenlabs_vs_local_tts_piper_xtts,
   'best-local-ai-app-low-end-pc':           a_best_local_ai_app_low_end_pc,

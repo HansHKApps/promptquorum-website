@@ -100,7 +100,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-nas-storage-local-ai-models-2026':       'best-nas-storage-local-ai-models-2026',
   'best-ai-coding-tools-comparison-2026':        'best-ai-coding-tools-comparison-2026',
   'best-monitors-ai-development-2026':           'best-monitors-ai-development-2026',
-  'best-laptops-local-llm-2026':                 'best-laptops-local-llm-2026',
+  'best-laptop-for-local-llm':                       'best-laptop-for-local-llm',
   'best-ai-courses-certifications-2026':         'best-ai-courses-certifications-2026',
   'best-affiliate-tools-ai-developers-2026':     'best-affiliate-tools-ai-developers-2026',
   'apple-mlx-vs-nvidia-cuda-local-llm-2026':     'apple-mlx-vs-nvidia-cuda-local-llm-2026',
