@@ -571,6 +571,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-ai-mail-review',
   'pcai-photo-retouch-review',
   'honey-llm-review',
+  'secret-ai-review',
   'swerve-ai-review',
   'friedrichai-review',
   'snug-protocol-review',

@@ -394,6 +394,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-ai-mail-review':                    'local-ai-mail-review',
   'pcai-photo-retouch-review':               'pcai-photo-retouch-review',
   'honey-llm-review':                        'honey-llm-review',
+  'secret-ai-review':                        'secret-ai-review',
   'swerve-ai-review':                        'swerve-ai-review',
   'friedrichai-review':                      'friedrichai-review',
   'snug-protocol-review':                    'snug-protocol-review',

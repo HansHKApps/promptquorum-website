@@ -139,6 +139,7 @@ import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
 import { app as app_local_ai_mail } from './apps/local-ai-mail'
 import { app as app_pcai_photo_retouch } from './apps/pcai-photo-retouch'
 import { app as app_honey_llm } from './apps/honey-llm'
+import { app as app_secret_ai } from './apps/secret-ai'
 import { app as app_layla } from './apps/layla'
 import { app as app_maid } from './apps/maid'
 import { app as app_chapper } from './apps/chapper'
@@ -537,6 +538,7 @@ export const localAiApps: ToolRecord[] = [
   app_local_ai_mail,
   app_pcai_photo_retouch,
   app_honey_llm,
+  app_secret_ai,
   app_swerve_ai,
 ]
 
