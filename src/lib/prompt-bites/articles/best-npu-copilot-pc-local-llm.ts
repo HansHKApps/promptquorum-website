@@ -7,11 +7,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-npu-copilot-pc-local-llm-overview-hero-en.webp',
     title: 'Best Copilot+ PC for Local LLMs in 2026: NPU vs GPU',
     seoTitle: 'Best Copilot+ PC for Local LLMs 2026: NPU vs GPU',
-    metaDescription: "Don't buy a Copilot+ PC for its NPU alone. For local LLMs, prioritize RAM, GPU, and memory bandwidth — the NPU accelerates Windows AI features, not Ollama.",
+    metaDescription: "Don't buy a Copilot+ PC for its NPU alone. Intel, AMD and Snapdragon NPUs power Windows AI features; for local LLMs, RAM, GPU and bandwidth matter more.",
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-04-19',
     current_models_mentioned: [],
     current_hardware_mentioned: ['Snapdragon X2 Elite', 'Intel Core Ultra Series 3 (Panther Lake)', 'AMD Ryzen AI 400', 'NVIDIA RTX laptop GPU'],
     educationalLevel: 'Intermediate',
@@ -19,13 +19,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     affiliateDisclosure: true,
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'best-budget-ai-laptop-under-1000', 'local-ai-trend-2027-ai-pc-npu-normalization'],
     is_living_page: false,
-    leadAnswerBlock: "<strong>Don't buy a Copilot+ PC just because it has a powerful NPU.</strong> For local LLMs, prioritize RAM, GPU performance, and memory bandwidth first — the NPU is valuable for Windows AI features like Recall and Live Captions, but Ollama, llama.cpp, and LM Studio still run on the CPU or GPU, not the NPU,. The best Copilot+ PC for local LLMs depends on what you actually need: an AMD Ryzen AI machine for the best all-round integrated setup, an NVIDIA RTX laptop if local-LLM performance is the real priority, or a Snapdragon X2 Elite machine if battery life matters most.",
+    leadAnswerBlock: "<strong>Don't buy a Copilot+ PC just because it has a powerful NPU.</strong> For local LLMs, prioritize RAM, GPU performance, and memory bandwidth first — the NPU is valuable for Windows AI features like Recall and Live Captions, but Ollama, llama.cpp, and LM Studio still run on the CPU or GPU, not the NPU. The best Copilot+ PC for local LLMs depends on what you actually need: an AMD Ryzen AI machine for the best all-round integrated setup, an NVIDIA RTX laptop if local-LLM performance is the real priority, or a Snapdragon X2 Elite machine if battery life matters most.",
     toc: [
       { label: 'Quick Answer', anchor: '#best-pick' },
       { label: "The Big Local-AI Mistake: NPU TOPS ≠ LLM Speed", anchor: '#npu-mistake' },
       { label: 'Best Integrated Choice: AMD Ryzen AI', anchor: '#amd-pick' },
       { label: 'Best for Local LLM Performance: NVIDIA', anchor: '#nvidia-pick' },
       { label: 'Best Battery Life: Snapdragon X2 Elite', anchor: '#snapdragon-pick' },
+      { label: 'Intel NPU: What Works Today', anchor: '#intel-pick' },
       { label: 'How Much RAM Do You Need?', anchor: '#ram-guide' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Related Reading', anchor: '#related' },
@@ -39,7 +40,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'For local LLMs, the buying priority is VRAM/GPU and RAM first, NPU last — a laptop with a weaker NPU and more RAM will usually run larger models better than the reverse.',
           "Microsoft's Windows AI Foundry and an emerging WSL3 GPU/NPU passthrough path are starting to open NPU access to tools like Ollama, but this is early and opt-in, not the default experience.",
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -92,7 +93,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'The Big Local-AI Mistake: NPU TOPS ≠ LLM Speed',
         content: [
           "<strong>A Copilot+ PC can have a powerful NPU and still be a mediocre local-LLM machine, because your local LLM is almost certainly running on the CPU or GPU, not the NPU.</strong> Microsoft's Copilot+ architecture uses the NPU for supported on-device AI experiences — Recall, Live Captions translation, Studio Effects, and Microsoft's own on-device models like Aion — built through ONNX Runtime and DirectML. That does not mean every local LLM application automatically runs on the NPU.",
-          "Ollama, llama.cpp, and LM Studio still don't route chat inference to the NPU. Using the NPU requires a model hand-converted to ONNX and compiled for the vendor's own execution provider (Qualcomm's QNN, Intel's OpenVINO) — a specialist, opt-in pipeline, not something that happens automatically when you `ollama run` a model. Microsoft's Windows AI Foundry (which folds in Foundry Local and catalogs including Ollama) and an early WSL3 GPU/NPU passthrough path, both introduced around Build 2026, are starting to change this — but they're early and require deliberate setup, not the default experience today.",
+          "Ollama, llama.cpp, and LM Studio still don't route chat inference to the NPU. Using the NPU requires a model hand-converted to ONNX and compiled for the vendor's own execution provider (Qualcomm's QNN, Intel's OpenVINO) — a specialist, opt-in pipeline, not something that happens automatically when you `ollama run` a model. Microsoft's Windows AI Foundry (which folds in Foundry Local and catalogs including Ollama) and an early WSL3 GPU/NPU passthrough path, both introduced around Build 2026, are starting to change this — but they're early and require deliberate setup, not the default experience today. One notable exception is llama.cpp's preview OpenVINO backend, which can target Intel NPUs for small models (see the Intel section below).",
           'For Ollama specifically: NPU TOPS does not equal LLM performance. A laptop advertising 80 TOPS is not necessarily faster at running your 14B model than one advertising 50 TOPS — the TOPS number describes a specific type of AI compute capability, not a universal local-LLM benchmark.',
         ],
         callouts: [
@@ -145,6 +146,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'laptop',
             label: 'Check Snapdragon X2 Elite laptop prices',
           },
+        ],
+      },
+      intelPick: {
+        id: 'intel-pick',
+        title: 'Intel Core Ultra Series 3: What the NPU Can Run Today',
+        content: [
+          '<strong>Intel NPUs can run small models in llama.cpp today, but only as an experiment.</strong> llama.cpp\'s OpenVINO backend, introduced as a preview with OpenVINO 2026.1 in April 2026, runs GGUF models on Intel CPUs, GPUs and NPUs. The [backend documentation](https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/OPENVINO.md) lists the NPU as supported but limited: stateless execution, Q4_0 as the primary quantization, a small context window (it suggests `-c 512`), a build from source, and the Intel NPU driver.',
+          'Validated NPU models include Llama 3.2 1B and 3B, Llama 3.1 8B, several Qwen3 sizes and Gemma 3 4B, while some newer models fail. The documented testing used Core Ultra Series 1 and 2 laptops, not Series 3 (Panther Lake, 50 TOPS), and Ollama and LM Studio do not use this path. Buy an Intel Copilot+ PC for its CPU, GPU, RAM and price — and treat llama.cpp on the NPU as a bonus to experiment with.',
         ],
       },
       ramGuide: {
@@ -204,7 +213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Will Ollama ever support the NPU on Copilot+ PCs?',
-            a: "It's plausible — Microsoft's Windows AI Foundry (which folds in Foundry Local and catalogs including Ollama) and an early WSL3 GPU/NPU passthrough path, both introduced around Build 2026, are steps in that direction. But there is still no mainstream, drop-in NPU backend in Ollama or llama.cpp itself. Treat any current NPU-acceleration claim for these tools with skepticism until verified against the tool's own release notes.",
+            a: 'It\'s plausible, but not yet mainstream. Microsoft\'s Windows AI Foundry (which folds in Foundry Local and catalogs including Ollama) and a WSL3 preview with GPU/NPU passthrough, both introduced around Build 2026, are steps in that direction, and llama.cpp now has a preview OpenVINO backend that can run small models on Intel NPUs. But Ollama itself has no drop-in NPU backend. Treat any NPU-acceleration claim for these tools with skepticism until verified against the tool\'s own release notes.',
           },
           {
             q: 'Does the Snapdragon X2 Elite run local LLMs well?',
@@ -221,6 +230,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'Is the older Ryzen AI 300 or original Snapdragon X Elite still worth buying?',
             a: "Yes, if the price is meaningfully lower than the current generation. Neither chip's NPU generation affects local-LLM performance either way, so the buying decision comes down to CPU/GPU capability and RAM, same as with the current generation — a discounted prior-gen machine with more RAM often beats a current-gen machine with less.",
+          },
+          {
+            q: 'Can llama.cpp use the Intel NPU?',
+            a: 'Yes, in preview. llama.cpp\'s OpenVINO backend can run GGUF models on Intel NPUs after you install the Intel NPU driver, build llama.cpp with the backend and set `GGML_OPENVINO_DEVICE=NPU`. It runs in stateless mode, favors Q4_0 quantization, needs a small context size and fails instead of falling back to the CPU if the NPU is unavailable. Expect small models, not 70B-class ones.',
+          },
+          {
+            q: 'What is WSL3, and does it give Ollama access to the NPU?',
+            a: 'WSL 3 is a preview of the next Windows Subsystem for Linux, shown at Microsoft Build 2026 (June 2026). Press coverage describes GPU and NPU passthrough, but the details differ between reports and we could not confirm Ollama NPU support from a primary source. Don\'t buy a laptop for WSL3 NPU access — check Microsoft\'s WSL release notes first.',
+          },
+          {
+            q: 'What is the best value AI PC for running local AI software?',
+            a: 'The best value is the most RAM and the strongest GPU per dollar, not the highest TOPS number. Every current Copilot+ PC already meets the 40 TOPS requirement, so a 32 GB machine with an AMD Ryzen AI chip or a discrete NVIDIA RTX GPU — or a discounted previous-generation model with more RAM — beats a pricier machine with a faster NPU and 16 GB.',
           },
         ],
       },
@@ -243,9 +264,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل جهاز Copilot+ PC لـ LLM محلي 2026: NPU مقابل GPU',
     metaDescription: 'لا تشترِ جهاز Copilot+ PC من أجل NPU فقط. لتشغيل LLM محلي، امنح الأولوية للذاكرة وGPU — فـ NPU يخدم ميزات Windows وليس Ollama.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-04-19',
     current_models_mentioned: [],
     current_hardware_mentioned: ['Snapdragon X2 Elite', 'Intel Core Ultra Series 3 (Panther Lake)', 'AMD Ryzen AI 400', 'NVIDIA RTX laptop GPU'],
     educationalLevel: 'Intermediate',
@@ -253,13 +274,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     affiliateDisclosure: true,
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'best-budget-ai-laptop-under-1000', 'local-ai-trend-2027-ai-pc-npu-normalization'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>لا تشترِ جهاز Copilot+ PC لمجرد أنه يمتلك NPU قويًا.</strong> لتشغيل LLM محلي، امنح الأولوية للذاكرة وأداء GPU وعرض النطاق الترددي للذاكرة أولًا — NPU مفيد لميزات Windows AI مثل Recall والترجمة الحية للتسميات، لكن Ollama وllama.cpp وLM Studio لا تزال تعمل على CPU أو GPU وليس NPU، اعتبارًا من أغسطس 2026. أفضل جهاز Copilot+ PC لتشغيل LLM محلي يعتمد على احتياجك: جهاز AMD Ryzen AI لأفضل إعداد متكامل شامل، أو جهاز NVIDIA RTX إذا كان أداء LLM المحلي هو الأولوية الفعلية، أو جهاز Snapdragon X2 Elite إذا كان عمر البطارية هو الأهم.',
+    leadAnswerBlock: '<strong>لا تشترِ جهاز Copilot+ PC لمجرد أنه يمتلك NPU قويًا.</strong> لتشغيل LLM محلي، امنح الأولوية للذاكرة وأداء GPU وعرض النطاق الترددي للذاكرة أولًا — NPU مفيد لميزات Windows AI مثل Recall والترجمة الحية للتسميات، لكن Ollama وllama.cpp وLM Studio لا تزال تعمل على CPU أو GPU وليس NPU،. أفضل جهاز Copilot+ PC لتشغيل LLM محلي يعتمد على احتياجك: جهاز AMD Ryzen AI لأفضل إعداد متكامل شامل، أو جهاز NVIDIA RTX إذا كان أداء LLM المحلي هو الأولوية الفعلية، أو جهاز Snapdragon X2 Elite إذا كان عمر البطارية هو الأهم.',
     toc: [
       { label: 'الإجابة السريعة', anchor: '#best-pick' },
       { label: 'الخطأ الكبير: TOPS لا يساوي سرعة LLM', anchor: '#npu-mistake' },
       { label: 'أفضل خيار متكامل: AMD Ryzen AI', anchor: '#amd-pick' },
       { label: 'الأفضل لأداء LLM المحلي: NVIDIA', anchor: '#nvidia-pick' },
       { label: 'الأفضل لعمر البطارية: Snapdragon X2 Elite', anchor: '#snapdragon-pick' },
+      { label: 'Intel NPU: ما الذي يعمل اليوم', anchor: '#intel-pick' },
       { label: 'كم من الذاكرة تحتاج؟', anchor: '#ram-guide' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
       { label: 'قراءات ذات صلة', anchor: '#related' },
@@ -269,11 +291,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'ما أفضل جهاز Copilot+ PC لتشغيل LLM محلي في 2026؟',
         answer: 'لا يوجد جهاز Copilot+ PC واحد هو الأفضل مطلقًا — هناك أفضل خيار لكل أولوية. جهاز AMD Ryzen AI (سلسلة 400، بـ NPU بقوة 60 TOPS وGPU مدمجة قوية) هو الخيار المتكامل الأفضل شمولًا. جهاز NVIDIA RTX هو الأفضل إذا كان أداء LLM المحلي نفسه هو الأولوية، لأن Ollama وllama.cpp يتسارعان على GPU عبر CUDA وليس NPU. جهاز Snapdragon X2 Elite هو الأفضل لعمر البطارية والتنقل، مع تحفظ يتعلق بتوافق البرمجيات مع معمارية ARM يجب التحقق منه أولًا.',
         bullets: [
-          'رقم TOPS للـ NPU (Snapdragon X2 Elite: 80 TOPS، AMD Ryzen AI 400: 60 TOPS، Intel Panther Lake: 50 TOPS) لا يتنبأ بسرعة دردشة LLM المحلي — لا تزال Ollama وllama.cpp وLM Studio تعمل على CPU أو GPU اعتبارًا من أغسطس 2026.',
+          'رقم TOPS للـ NPU (Snapdragon X2 Elite: 80 TOPS، AMD Ryzen AI 400: 60 TOPS، Intel Panther Lake: 50 TOPS) لا يتنبأ بسرعة دردشة LLM المحلي — لا تزال Ollama وllama.cpp وLM Studio تعمل على CPU أو GPU.',
           'لتشغيل LLM محلي، أولوية الشراء هي VRAM/GPU ثم الذاكرة أولًا، وNPU أخيرًا — جهاز بـ NPU أضعف وذاكرة أكبر عادة ما يشغّل نماذج أكبر بشكل أفضل من العكس.',
-          'بدأت منصة Windows AI Foundry من Microsoft ومسار WSL3 GPU/NPU passthrough الناشئ بفتح وصول NPU لأدوات مثل Ollama، لكن اعتبارًا من أغسطس 2026 هذا لا يزال مبكرًا واختياريًا وليس التجربة الافتراضية.',
+          'بدأت منصة Windows AI Foundry من Microsoft ومسار WSL3 GPU/NPU passthrough الناشئ بفتح وصول NPU لأدوات مثل Ollama، لكن هذا لا يزال مبكرًا واختياريًا وليس التجربة الافتراضية.',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -282,7 +304,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'لا تشترِ جهاز Copilot+ PC من أجل TOPS الخاص بـ NPU فقط — لتشغيل LLM محلي، الذاكرة وأداء GPU أهم بكثير',
-          'لا تزال Ollama وllama.cpp وLM Studio تعمل على CPU أو GPU اعتبارًا من أغسطس 2026 — لا يمتلك أي منها واجهة NPU سائدة',
+          'لا تزال Ollama وllama.cpp وLM Studio تعمل على CPU أو GPU — لا يمتلك أي منها واجهة NPU سائدة',
           'أفضل خيار متكامل شامل: سلسلة AMD Ryzen AI 400 (NPU بقوة 60 TOPS + GPU RDNA 3.5 قوية)',
           'الأفضل لأداء LLM المحلي الفعلي: جهاز Copilot+ PC بوحدة رسومات NVIDIA RTX منفصلة',
           'الأفضل لعمر البطارية: Snapdragon X2 Elite (NPU بقوة 80 TOPS) — تحقق من توافق برمجيات ARM أولًا',
@@ -326,7 +348,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'الخطأ الكبير في الذكاء الاصطناعي المحلي: TOPS لا يساوي سرعة LLM',
         content: [
           '<strong>يمكن لجهاز Copilot+ PC أن يمتلك NPU قويًا ويظل جهازًا متوسطًا لتشغيل LLM محلي، لأن نموذجك المحلي يعمل على الأرجح على CPU أو GPU، وليس NPU.</strong> تستخدم منصة Copilot+ من Microsoft وحدة NPU لتجارب ذكاء اصطناعي مدعومة على الجهاز — Recall والترجمة الحية للتسميات وتأثيرات Studio ونماذج Microsoft الخاصة على الجهاز مثل Aion — المبنية على ONNX Runtime وDirectML. هذا لا يعني أن كل تطبيق LLM محلي يعمل تلقائيًا على NPU.',
-          'اعتبارًا من أغسطس 2026، لا تزال Ollama وllama.cpp وLM Studio لا توجه استدلال الدردشة إلى NPU. يتطلب استخدام NPU تحويل نموذج يدويًا إلى ONNX وتصريفه لمزود التنفيذ الخاص بالشركة المصنّعة (QNN من Qualcomm، أو OpenVINO من Intel) — وهو مسار متخصص واختياري، وليس شيئًا يحدث تلقائيًا عند تشغيل `ollama run`. بدأت منصة Windows AI Foundry من Microsoft (التي تدمج Foundry Local وكتالوجات تشمل Ollama) ومسار WSL3 GPU/NPU passthrough المبكر، اللذان أُعلنا حول مؤتمر Build 2026، بتغيير هذا — لكنهما لا يزالان مبكرين ويتطلبان إعدادًا متعمدًا، وليسا التجربة الافتراضية اليوم.',
+          'لا تزال Ollama وllama.cpp وLM Studio لا توجه استدلال الدردشة إلى NPU. يتطلب استخدام NPU تحويل نموذج يدويًا إلى ONNX وتصريفه لمزود التنفيذ الخاص بالشركة المصنّعة (QNN من Qualcomm، أو OpenVINO من Intel) — وهو مسار متخصص واختياري، وليس شيئًا يحدث تلقائيًا عند تشغيل `ollama run`. بدأت منصة Windows AI Foundry من Microsoft (التي تدمج Foundry Local وكتالوجات تشمل Ollama) ومسار WSL3 GPU/NPU passthrough المبكر، اللذان أُعلنا حول مؤتمر Build 2026، بتغيير هذا — لكنهما لا يزالان مبكرين ويتطلبان إعدادًا متعمدًا، وليسا التجربة الافتراضية اليوم. من الاستثناءات اللافتة واجهة OpenVINO الخلفية التجريبية في llama.cpp، التي يمكنها استهداف وحدات NPU من Intel للنماذج الصغيرة (انظر قسم Intel أدناه).',
           'بالنسبة لـ Ollama تحديدًا: TOPS الخاص بـ NPU لا يساوي أداء LLM. جهاز يعلن عن 80 TOPS ليس بالضرورة أسرع في تشغيل نموذجك بحجم 14B من جهاز يعلن عن 50 TOPS — رقم TOPS يصف نوعًا معينًا من قدرة الحوسبة للذكاء الاصطناعي، وليس معيارًا شاملًا لأداء LLM المحلي.',
         ],
         callouts: [
@@ -379,6 +401,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'laptop',
             label: 'تحقق من أسعار أجهزة Snapdragon X2 Elite المحمولة',
           },
+        ],
+      },
+      intelPick: {
+        id: 'intel-pick',
+        title: 'Intel Core Ultra Series 3: ما الذي يستطيع NPU تشغيله اليوم',
+        content: [
+          '<strong>يمكن لوحدات NPU من Intel تشغيل نماذج صغيرة في llama.cpp اليوم، لكن كتجربة فقط.</strong> تشغّل واجهة OpenVINO الخلفية في llama.cpp، التي ظهرت كمعاينة مع OpenVINO 2026.1 في أبريل 2026، نماذج GGUF على CPU وGPU وNPU من Intel. وتصنّف [وثائق الواجهة الخلفية](https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/OPENVINO.md) وحدة NPU على أنها مدعومة لكن بقيود: تنفيذ بلا حالة (stateless)، وQ4_0 كطريقة التكميم الأساسية، ونافذة سياق صغيرة (توصي بـ `-c 512`)، وبناء من المصدر، وتثبيت برنامج تشغيل Intel NPU.',
+          'تشمل نماذج NPU التي جرى التحقق منها Llama 3.2 1B و3B وLlama 3.1 8B وعدة أحجام من Qwen3 وGemma 3 4B، بينما تفشل بعض النماذج الأحدث. أُجريت الاختبارات الموثقة على أجهزة Core Ultra Series 1 و2 وليس Series 3 (Panther Lake، بقدرة 50 TOPS)، ولا تستخدم Ollama وLM Studio هذا المسار. اشترِ جهاز Copilot+ PC من Intel من أجل CPU وGPU والذاكرة والسعر — واعتبر تشغيل llama.cpp على NPU ميزة إضافية للتجربة.',
         ],
       },
       ramGuide: {
@@ -438,7 +468,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'هل سيدعم Ollama يومًا وحدة NPU في أجهزة Copilot+ PC؟',
-            a: 'أمر معقول — تُعد منصة Windows AI Foundry من Microsoft (التي تدمج Foundry Local وكتالوجات تشمل Ollama) ومسار WSL3 GPU/NPU passthrough المبكر، اللذان أُعلنا حول مؤتمر Build 2026، خطوات في هذا الاتجاه. لكن اعتبارًا من أغسطس 2026 لا توجد بعد واجهة NPU سائدة وجاهزة للاستخدام مباشرة في Ollama أو llama.cpp نفسها. عامل أي ادعاء حالي بتسريع NPU لهذه الأدوات بحذر إلى أن يُتحقق منه في ملاحظات إصدار الأداة نفسها.',
+            a: 'هذا معقول، لكنه ليس سائدًا بعد. تُعد منصة Windows AI Foundry من Microsoft (التي تدمج Foundry Local وكتالوجات تشمل Ollama) ومعاينة WSL3 مع تمرير GPU/NPU، وكلاهما أُعلن حول مؤتمر Build 2026، خطوات في هذا الاتجاه، ولدى llama.cpp الآن واجهة OpenVINO خلفية تجريبية تشغّل نماذج صغيرة على وحدات NPU من Intel. لكن Ollama نفسها لا تملك واجهة NPU جاهزة للاستخدام مباشرة. عامل أي ادعاء بتسريع NPU لهذه الأدوات بحذر إلى أن يُتحقق منه في ملاحظات إصدار الأداة نفسها.',
           },
           {
             q: 'هل يشغّل Snapdragon X2 Elite نماذج LLM محلية بشكل جيد؟',
@@ -455,6 +485,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'هل يستحق شراء الجيل الأقدم من Ryzen AI 300 أو Snapdragon X Elite الأصلي؟',
             a: 'نعم، إذا كان السعر أقل بشكل ملموس من الجيل الحالي. لا يؤثر جيل NPU لأي من الشريحتين على أداء LLM المحلي على أي حال، لذا يعتمد قرار الشراء على قدرة CPU/GPU والذاكرة، تمامًا كما هو الحال مع الجيل الحالي — غالبًا ما يتفوق جهاز من الجيل السابق بسعر مخفض وذاكرة أكبر على جهاز من الجيل الحالي بذاكرة أقل.',
+          },
+          {
+            q: 'هل يمكن لـ llama.cpp استخدام Intel NPU؟',
+            a: 'نعم، بشكل تجريبي. تستطيع واجهة OpenVINO الخلفية في llama.cpp تشغيل نماذج GGUF على وحدات NPU من Intel بعد تثبيت برنامج تشغيل Intel NPU وبناء llama.cpp مع هذه الواجهة وضبط `GGML_OPENVINO_DEVICE=NPU`. تعمل في وضع بلا حالة، وتفضّل تكميم Q4_0، وتتطلب حجم سياق صغيرًا، وتفشل بدل الرجوع إلى CPU إذا كانت NPU غير متاحة. توقّع نماذج صغيرة، لا نماذج بحجم 70B.',
+          },
+          {
+            q: 'ما هو WSL3، وهل يمنح Ollama وصولًا إلى NPU؟',
+            a: 'WSL 3 معاينة للإصدار التالي من Windows Subsystem for Linux، عُرضت في مؤتمر Microsoft Build 2026 (يونيو 2026). تصف التغطيات الصحفية تمرير GPU وNPU، لكن التفاصيل تختلف بين التقارير ولم نتمكن من تأكيد دعم NPU في Ollama من مصدر أولي. لا تشترِ حاسوبًا محمولًا من أجل وصول WSL3 إلى NPU — راجع أولًا ملاحظات إصدار WSL من Microsoft.',
+          },
+          {
+            q: 'ما أفضل جهاز AI PC من حيث القيمة لتشغيل برامج الذكاء الاصطناعي المحلية؟',
+            a: 'أفضل قيمة هي أكبر ذاكرة RAM وأقوى GPU مقابل كل دولار، لا أعلى رقم TOPS. كل جهاز Copilot+ PC حالي يستوفي أصلًا شرط 40 TOPS، لذا فإن جهازًا بذاكرة 32 GB مع شريحة AMD Ryzen AI أو GPU منفصل من NVIDIA RTX — أو طرازًا مخفّض السعر من الجيل السابق بذاكرة أكبر — يتفوق على جهاز أغلى بـ NPU أسرع وذاكرة 16 GB.',
           },
         ],
       },
@@ -477,9 +519,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Bester Copilot+-PC für lokale LLMs 2026: NPU vs. GPU',
     metaDescription: 'Kaufen Sie einen Copilot+-PC nicht nur wegen der NPU. Für lokale LLMs zählen RAM, GPU und Speicherbandbreite — die NPU dient Windows-Funktionen, nicht Ollama.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-04-19',
     current_models_mentioned: [],
     current_hardware_mentioned: ['Snapdragon X2 Elite', 'Intel Core Ultra Series 3 (Panther Lake)', 'AMD Ryzen AI 400', 'NVIDIA RTX laptop GPU'],
     educationalLevel: 'Intermediate',
@@ -487,13 +529,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     affiliateDisclosure: true,
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'best-budget-ai-laptop-under-1000', 'local-ai-trend-2027-ai-pc-npu-normalization'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Kaufen Sie einen Copilot+-PC nicht nur, weil er eine starke NPU hat.</strong> Für lokale LLMs zählen RAM, GPU-Leistung und Speicherbandbreite zuerst — die NPU ist wertvoll für Windows-KI-Funktionen wie Recall und Live Captions, aber Ollama, llama.cpp und LM Studio laufen Stand August 2026 weiterhin auf CPU oder GPU, nicht auf der NPU. Der beste Copilot+-PC für lokale LLMs hängt davon ab, was Sie wirklich brauchen: ein AMD-Ryzen-AI-Gerät für das beste integrierte Gesamtpaket, ein NVIDIA-RTX-Laptop, wenn lokale LLM-Leistung die eigentliche Priorität ist, oder ein Snapdragon-X2-Elite-Gerät, wenn Akkulaufzeit am wichtigsten ist.',
+    leadAnswerBlock: '<strong>Kaufen Sie einen Copilot+-PC nicht nur, weil er eine starke NPU hat.</strong> Für lokale LLMs zählen RAM, GPU-Leistung und Speicherbandbreite zuerst — die NPU ist wertvoll für Windows-KI-Funktionen wie Recall und Live Captions, aber Ollama, llama.cpp und LM Studio laufen weiterhin auf CPU oder GPU, nicht auf der NPU. Der beste Copilot+-PC für lokale LLMs hängt davon ab, was Sie wirklich brauchen: ein AMD-Ryzen-AI-Gerät für das beste integrierte Gesamtpaket, ein NVIDIA-RTX-Laptop, wenn lokale LLM-Leistung die eigentliche Priorität ist, oder ein Snapdragon-X2-Elite-Gerät, wenn Akkulaufzeit am wichtigsten ist.',
     toc: [
       { label: 'Kurzantwort', anchor: '#best-pick' },
       { label: 'Der große Fehler: NPU-TOPS ≠ LLM-Geschwindigkeit', anchor: '#npu-mistake' },
       { label: 'Beste integrierte Wahl: AMD Ryzen AI', anchor: '#amd-pick' },
       { label: 'Beste Wahl für lokale LLM-Leistung: NVIDIA', anchor: '#nvidia-pick' },
       { label: 'Beste Akkulaufzeit: Snapdragon X2 Elite', anchor: '#snapdragon-pick' },
+      { label: 'Intel-NPU: Was heute funktioniert', anchor: '#intel-pick' },
       { label: 'Wie viel RAM brauchen Sie?', anchor: '#ram-guide' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Weiterführende Artikel', anchor: '#related' },
@@ -503,11 +546,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Was ist der beste Copilot+-PC für lokale LLMs 2026?',
         answer: 'Es gibt nicht den einen besten Copilot+-PC — es gibt die beste Wahl je nach Priorität. Ein AMD-Ryzen-AI-Laptop (400er-Serie, 60-TOPS-NPU plus fähige integrierte GPU) ist die beste integrierte Allround-Option. Ein NVIDIA-RTX-Laptop ist die beste Wahl, wenn lokale LLM-Leistung selbst die Priorität ist, da Ollama und llama.cpp per CUDA auf der GPU beschleunigen, nicht auf der NPU. Ein Snapdragon-X2-Elite-Laptop ist die beste Wahl für Akkulaufzeit und Mobilität, mit einem ARM-Softwarekompatibilitäts-Vorbehalt, den man vorher prüfen sollte.',
         bullets: [
-          'Die NPU-TOPS-Zahl (Snapdragon X2 Elite: 80 TOPS, AMD Ryzen AI 400: 60 TOPS, Intel Panther Lake: 50 TOPS) sagt nichts über die Geschwindigkeit von lokalem LLM-Chat aus — Ollama, llama.cpp und LM Studio laufen Stand August 2026 weiterhin auf CPU oder GPU.',
+          'Die NPU-TOPS-Zahl (Snapdragon X2 Elite: 80 TOPS, AMD Ryzen AI 400: 60 TOPS, Intel Panther Lake: 50 TOPS) sagt nichts über die Geschwindigkeit von lokalem LLM-Chat aus — Ollama, llama.cpp und LM Studio laufen weiterhin auf CPU oder GPU.',
           'Für lokale LLMs gilt beim Kauf die Priorität VRAM/GPU und RAM zuerst, NPU zuletzt — ein Laptop mit schwächerer NPU, aber mehr RAM, betreibt größere Modelle meist besser als umgekehrt.',
-          'Microsofts Windows AI Foundry und ein aufkommender WSL3-GPU/NPU-Passthrough-Pfad beginnen, NPU-Zugriff für Tools wie Ollama zu öffnen — Stand August 2026 ist das aber noch früh und optional, nicht die Standarderfahrung.',
+          'Microsofts Windows AI Foundry und ein aufkommender WSL3-GPU/NPU-Passthrough-Pfad beginnen, NPU-Zugriff für Tools wie Ollama zu öffnen — das ist aber noch früh und optional, nicht die Standarderfahrung.',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -516,7 +559,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Kaufen Sie einen Copilot+-PC nicht allein wegen NPU-TOPS — für lokale LLMs zählen RAM und GPU-Leistung weit mehr',
-          'Ollama, llama.cpp und LM Studio laufen Stand August 2026 weiterhin auf CPU oder GPU — keines hat ein verbreitetes NPU-Backend',
+          'Ollama, llama.cpp und LM Studio laufen weiterhin auf CPU oder GPU — keines hat ein verbreitetes NPU-Backend',
           'Beste integrierte Allround-Wahl: AMD-Ryzen-AI-400er-Serie (60-TOPS-NPU + fähige RDNA-3.5-GPU)',
           'Beste Wahl für tatsächliche lokale LLM-Leistung: ein Copilot+-PC mit diskreter NVIDIA-RTX-GPU',
           'Beste Akkulaufzeit: Snapdragon X2 Elite (80-TOPS-NPU) — ARM-Softwarekompatibilität vorher prüfen',
@@ -560,7 +603,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Der große Fehler bei lokaler KI: NPU-TOPS ≠ LLM-Geschwindigkeit',
         content: [
           '<strong>Ein Copilot+-PC kann eine starke NPU haben und trotzdem eine mittelmäßige lokale LLM-Maschine sein, weil Ihr lokales LLM mit ziemlicher Sicherheit auf der CPU oder GPU läuft, nicht auf der NPU.</strong> Microsofts Copilot+-Architektur nutzt die NPU für unterstützte On-Device-KI-Erfahrungen — Recall, Live-Captions-Übersetzung, Studio Effects und Microsofts eigene On-Device-Modelle wie Aion — aufgebaut über ONNX Runtime und DirectML. Das bedeutet nicht, dass jede lokale LLM-Anwendung automatisch auf der NPU läuft.',
-          'Stand August 2026 routen Ollama, llama.cpp und LM Studio Chat-Inferenz weiterhin nicht zur NPU. Die NPU-Nutzung erfordert ein manuell nach ONNX konvertiertes Modell, kompiliert für den herstellereigenen Execution Provider (Qualcomms QNN, Intels OpenVINO) — eine spezialisierte, optionale Pipeline, kein automatischer Vorgang beim `ollama run` eines Modells. Microsofts Windows AI Foundry (die Foundry Local und Kataloge einschließlich Ollama einbindet) und ein früher WSL3-GPU/NPU-Passthrough-Pfad, beide rund um Build 2026 vorgestellt, beginnen das zu ändern — aber sie sind noch früh dran und erfordern gezielte Einrichtung, nicht die Standarderfahrung von heute.',
+          'Ollama, llama.cpp und LM Studio routen Chat-Inferenz weiterhin nicht zur NPU. Die NPU-Nutzung erfordert ein manuell nach ONNX konvertiertes Modell, kompiliert für den herstellereigenen Execution Provider (Qualcomms QNN, Intels OpenVINO) — eine spezialisierte, optionale Pipeline, kein automatischer Vorgang beim `ollama run` eines Modells. Microsofts Windows AI Foundry (die Foundry Local und Kataloge einschließlich Ollama einbindet) und ein früher WSL3-GPU/NPU-Passthrough-Pfad, beide rund um Build 2026 vorgestellt, beginnen das zu ändern — aber sie sind noch früh dran und erfordern gezielte Einrichtung, nicht die Standarderfahrung von heute. Eine nennenswerte Ausnahme ist das OpenVINO-Backend von llama.cpp (Vorschau), das Intel-NPUs für kleine Modelle ansprechen kann (siehe den Intel-Abschnitt unten).',
           'Speziell für Ollama gilt: NPU-TOPS ist nicht gleich LLM-Leistung. Ein Laptop mit beworbenen 80 TOPS ist nicht zwangsläufig schneller bei Ihrem 14B-Modell als einer mit 50 TOPS — die TOPS-Zahl beschreibt eine bestimmte Art von KI-Rechenkapazität, keinen universellen Benchmark für lokale LLMs.',
         ],
         callouts: [
@@ -613,6 +656,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'laptop',
             label: 'Preise für Snapdragon-X2-Elite-Laptops prüfen',
           },
+        ],
+      },
+      intelPick: {
+        id: 'intel-pick',
+        title: 'Intel Core Ultra Series 3: Was die NPU heute ausführen kann',
+        content: [
+          '<strong>Intel-NPUs können in llama.cpp heute kleine Modelle ausführen, aber nur als Experiment.</strong> Das OpenVINO-Backend von llama.cpp, als Vorschau mit OpenVINO 2026.1 im April 2026 eingeführt, führt GGUF-Modelle auf Intel-CPUs, -GPUs und -NPUs aus. Die [Backend-Dokumentation](https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/OPENVINO.md) führt die NPU als unterstützt, aber eingeschränkt auf: zustandslose Ausführung (stateless), Q4_0 als primäre Quantisierung, ein kleines Kontextfenster (empfohlen wird `-c 512`), ein Build aus dem Quellcode und der Intel-NPU-Treiber.',
+          'Zu den validierten NPU-Modellen gehören Llama 3.2 1B und 3B, Llama 3.1 8B, mehrere Qwen3-Größen und Gemma 3 4B, während einige neuere Modelle scheitern. Die dokumentierten Tests liefen auf Laptops mit Core Ultra Series 1 und 2, nicht auf Series 3 (Panther Lake, 50 TOPS), und Ollama sowie LM Studio nutzen diesen Pfad nicht. Kaufen Sie einen Intel-Copilot+-PC wegen CPU, GPU, RAM und Preis — und betrachten Sie llama.cpp auf der NPU als Bonus zum Experimentieren.',
         ],
       },
       ramGuide: {
@@ -672,7 +723,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Wird Ollama irgendwann die NPU auf Copilot+-PCs unterstützen?',
-            a: 'Das ist plausibel — Microsofts Windows AI Foundry (die Foundry Local und Kataloge einschließlich Ollama einbindet) und ein früher WSL3-GPU/NPU-Passthrough-Pfad, beide rund um Build 2026 vorgestellt, sind Schritte in diese Richtung. Aber Stand August 2026 gibt es noch kein verbreitetes, direkt einsatzbereites NPU-Backend in Ollama oder llama.cpp selbst. Behandeln Sie jede aktuelle Behauptung zur NPU-Beschleunigung dieser Tools skeptisch, bis sie anhand der Release-Notes des jeweiligen Tools bestätigt ist.',
+            a: 'Das ist plausibel, aber noch nicht verbreitet. Microsofts Windows AI Foundry (die Foundry Local und Kataloge einschließlich Ollama einbindet) und eine WSL3-Vorschau mit GPU/NPU-Passthrough, beide rund um Build 2026 vorgestellt, sind Schritte in diese Richtung, und llama.cpp hat inzwischen ein OpenVINO-Backend (Vorschau), das kleine Modelle auf Intel-NPUs ausführen kann. Ollama selbst hat jedoch kein direkt einsetzbares NPU-Backend. Behandeln Sie jede Behauptung zur NPU-Beschleunigung dieser Tools skeptisch, bis sie anhand der Release-Notes des jeweiligen Tools bestätigt ist.',
           },
           {
             q: 'Läuft der Snapdragon X2 Elite gut mit lokalen LLMs?',
@@ -689,6 +740,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'Lohnt sich der ältere Ryzen AI 300 oder der ursprüngliche Snapdragon X Elite noch?',
             a: 'Ja, wenn der Preis spürbar niedriger ist als bei der aktuellen Generation. Die NPU-Generation beeinflusst bei keinem der beiden Chips die lokale LLM-Leistung, daher hängt die Kaufentscheidung wie bei der aktuellen Generation von CPU-/GPU-Fähigkeit und RAM ab — ein reduziertes Gerät der Vorgängergeneration mit mehr RAM schlägt oft ein aktuelles Gerät mit weniger RAM.',
+          },
+          {
+            q: 'Kann llama.cpp die Intel-NPU nutzen?',
+            a: 'Ja, als Vorschau. Das OpenVINO-Backend von llama.cpp kann GGUF-Modelle auf Intel-NPUs ausführen, nachdem Sie den Intel-NPU-Treiber installiert, llama.cpp mit dem Backend gebaut und `GGML_OPENVINO_DEVICE=NPU` gesetzt haben. Es läuft zustandslos, bevorzugt Q4_0-Quantisierung, braucht eine kleine Kontextgröße und bricht ab, statt auf die CPU zurückzufallen, wenn die NPU nicht verfügbar ist. Rechnen Sie mit kleinen Modellen, nicht mit 70B-Klassen.',
+          },
+          {
+            q: 'Was ist WSL3, und gibt es Ollama Zugriff auf die NPU?',
+            a: 'WSL 3 ist eine Vorschau auf das nächste Windows-Subsystem für Linux, gezeigt auf der Microsoft Build 2026 (Juni 2026). Presseberichte beschreiben GPU- und NPU-Passthrough, die Details unterscheiden sich aber zwischen den Berichten, und wir konnten NPU-Unterstützung für Ollama nicht anhand einer Primärquelle bestätigen. Kaufen Sie keinen Laptop wegen des WSL3-NPU-Zugriffs — prüfen Sie zuerst die WSL-Release-Notes von Microsoft.',
+          },
+          {
+            q: 'Welcher AI-PC bietet das beste Preis-Leistungs-Verhältnis für lokale KI-Software?',
+            a: 'Das beste Preis-Leistungs-Verhältnis bedeutet den meisten RAM und die stärkste GPU pro Euro, nicht die höchste TOPS-Zahl. Jeder aktuelle Copilot+-PC erfüllt die 40-TOPS-Anforderung bereits, daher schlägt ein Gerät mit 32 GB RAM und einem AMD-Ryzen-AI-Chip oder einer dedizierten NVIDIA-RTX-GPU — oder ein reduziertes Vorgängermodell mit mehr RAM — ein teureres Gerät mit schnellerer NPU und 16 GB.',
           },
         ],
       },
@@ -711,9 +774,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejor Copilot+ PC para LLMs Locales 2026: NPU vs GPU',
     metaDescription: 'No compres una Copilot+ PC solo por su NPU. Para LLMs locales, prioriza RAM, GPU y ancho de banda de memoria — la NPU sirve a funciones de Windows, no a Ollama.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-04-19',
     current_models_mentioned: [],
     current_hardware_mentioned: ['Snapdragon X2 Elite', 'Intel Core Ultra Series 3 (Panther Lake)', 'AMD Ryzen AI 400', 'NVIDIA RTX laptop GPU'],
     educationalLevel: 'Intermediate',
@@ -721,13 +784,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     affiliateDisclosure: true,
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'best-budget-ai-laptop-under-1000', 'local-ai-trend-2027-ai-pc-npu-normalization'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>No compres una Copilot+ PC solo porque tenga una NPU potente.</strong> Para LLMs locales, prioriza primero la RAM, el rendimiento de GPU y el ancho de banda de memoria — la NPU es valiosa para funciones de IA de Windows como Recall y Live Captions, pero Ollama, llama.cpp y LM Studio siguen corriendo en la CPU o la GPU, no en la NPU, a agosto de 2026. La mejor Copilot+ PC para LLMs locales depende de lo que realmente necesites: un equipo AMD Ryzen AI para el mejor conjunto integrado, un portátil NVIDIA RTX si el rendimiento de LLM local es la prioridad real, o un equipo Snapdragon X2 Elite si la duración de batería importa más.',
+    leadAnswerBlock: '<strong>No compres una Copilot+ PC solo porque tenga una NPU potente.</strong> Para LLMs locales, prioriza primero la RAM, el rendimiento de GPU y el ancho de banda de memoria — la NPU es valiosa para funciones de IA de Windows como Recall y Live Captions, pero Ollama, llama.cpp y LM Studio siguen corriendo en la CPU o la GPU, no en la NPU. La mejor Copilot+ PC para LLMs locales depende de lo que realmente necesites: un equipo AMD Ryzen AI para el mejor conjunto integrado, un portátil NVIDIA RTX si el rendimiento de LLM local es la prioridad real, o un equipo Snapdragon X2 Elite si la duración de batería importa más.',
     toc: [
       { label: 'Respuesta Rápida', anchor: '#best-pick' },
       { label: 'El Gran Error: TOPS de NPU ≠ Velocidad de LLM', anchor: '#npu-mistake' },
       { label: 'Mejor Opción Integrada: AMD Ryzen AI', anchor: '#amd-pick' },
       { label: 'Mejor para Rendimiento de LLM Local: NVIDIA', anchor: '#nvidia-pick' },
       { label: 'Mejor Duración de Batería: Snapdragon X2 Elite', anchor: '#snapdragon-pick' },
+      { label: 'NPU de Intel: qué funciona hoy', anchor: '#intel-pick' },
       { label: '¿Cuánta RAM Necesitas?', anchor: '#ram-guide' },
       { label: 'Preguntas Frecuentes', anchor: '#faq' },
       { label: 'Lecturas Relacionadas', anchor: '#related' },
@@ -737,11 +801,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: '¿Cuál es la mejor Copilot+ PC para LLMs locales en 2026?',
         answer: 'No hay una única mejor Copilot+ PC — hay una mejor elección según tu prioridad. Un portátil AMD Ryzen AI (serie 400, NPU de 60 TOPS más una GPU integrada capaz) es la mejor opción integrada en general. Un portátil NVIDIA RTX es la mejor opción si el rendimiento de LLM local en sí es la prioridad, ya que Ollama y llama.cpp aceleran en GPU vía CUDA, no en la NPU. Un portátil Snapdragon X2 Elite es la mejor elección para duración de batería y portabilidad, con una salvedad de compatibilidad de software ARM que conviene verificar primero.',
         bullets: [
-          'El número de TOPS de la NPU (Snapdragon X2 Elite: 80 TOPS, AMD Ryzen AI 400: 60 TOPS, Intel Panther Lake: 50 TOPS) no predice la velocidad del chat de LLM local — Ollama, llama.cpp y LM Studio siguen corriendo en CPU o GPU a agosto de 2026.',
+          'El número de TOPS de la NPU (Snapdragon X2 Elite: 80 TOPS, AMD Ryzen AI 400: 60 TOPS, Intel Panther Lake: 50 TOPS) no predice la velocidad del chat de LLM local — Ollama, llama.cpp y LM Studio siguen corriendo en CPU o GPU.',
           'Para LLMs locales, la prioridad de compra es VRAM/GPU y RAM primero, NPU al final — un portátil con una NPU más débil pero más RAM suele ejecutar modelos más grandes mejor que al revés.',
-          'Windows AI Foundry de Microsoft y un incipiente paso de WSL3 GPU/NPU están empezando a abrir el acceso a la NPU para herramientas como Ollama, pero a agosto de 2026 esto es todavía temprano y opcional, no la experiencia predeterminada.',
+          'Windows AI Foundry de Microsoft y un incipiente paso de WSL3 GPU/NPU están empezando a abrir el acceso a la NPU para herramientas como Ollama, pero esto es todavía temprano y opcional, no la experiencia predeterminada.',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -750,7 +814,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'No compres una Copilot+ PC solo por los TOPS de la NPU — para LLMs locales, la RAM y el rendimiento de GPU importan mucho más',
-          'Ollama, llama.cpp y LM Studio siguen corriendo en CPU o GPU a agosto de 2026 — ninguno tiene un backend de NPU generalizado',
+          'Ollama, llama.cpp y LM Studio siguen corriendo en CPU o GPU — ninguno tiene un backend de NPU generalizado',
           'Mejor opción integrada en general: serie AMD Ryzen AI 400 (NPU de 60 TOPS + GPU RDNA 3.5 capaz)',
           'Mejor para rendimiento real de LLM local: una Copilot+ PC con GPU NVIDIA RTX discreta',
           'Mejor duración de batería: Snapdragon X2 Elite (NPU de 80 TOPS) — verifica antes la compatibilidad de software ARM',
@@ -794,7 +858,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'El Gran Error de la IA Local: TOPS de NPU ≠ Velocidad de LLM',
         content: [
           '<strong>Una Copilot+ PC puede tener una NPU potente y aun así ser una máquina mediocre para LLM local, porque tu LLM local casi con toda seguridad corre en la CPU o la GPU, no en la NPU.</strong> La arquitectura Copilot+ de Microsoft usa la NPU para experiencias de IA en el dispositivo compatibles — Recall, traducción de Live Captions, Studio Effects y los propios modelos en el dispositivo de Microsoft como Aion — construidas sobre ONNX Runtime y DirectML. Eso no significa que toda aplicación de LLM local corra automáticamente en la NPU.',
-          'A agosto de 2026, Ollama, llama.cpp y LM Studio todavía no dirigen la inferencia de chat a la NPU. Usar la NPU requiere un modelo convertido manualmente a ONNX y compilado para el proveedor de ejecución propio del fabricante (QNN de Qualcomm, OpenVINO de Intel) — una tubería especializada y opcional, no algo que ocurra automáticamente al ejecutar `ollama run`. Windows AI Foundry de Microsoft (que integra Foundry Local y catálogos que incluyen Ollama) y un incipiente paso de WSL3 GPU/NPU, ambos presentados en torno a Build 2026, están empezando a cambiar esto — pero son tempranos y requieren configuración deliberada, no la experiencia predeterminada de hoy.',
+          'Ollama, llama.cpp y LM Studio todavía no dirigen la inferencia de chat a la NPU. Usar la NPU requiere un modelo convertido manualmente a ONNX y compilado para el proveedor de ejecución propio del fabricante (QNN de Qualcomm, OpenVINO de Intel) — una tubería especializada y opcional, no algo que ocurra automáticamente al ejecutar `ollama run`. Windows AI Foundry de Microsoft (que integra Foundry Local y catálogos que incluyen Ollama) y un incipiente paso de WSL3 GPU/NPU, ambos presentados en torno a Build 2026, están empezando a cambiar esto — pero son tempranos y requieren configuración deliberada, no la experiencia predeterminada de hoy. Una excepción notable es el backend OpenVINO de llama.cpp (vista previa), que puede dirigirse a las NPU de Intel con modelos pequeños (consulta la sección de Intel más abajo).',
           'Para Ollama en concreto: los TOPS de la NPU no equivalen al rendimiento de LLM. Un portátil que anuncia 80 TOPS no es necesariamente más rápido ejecutando tu modelo de 14B que uno que anuncia 50 TOPS — el número de TOPS describe un tipo específico de capacidad de cómputo de IA, no un benchmark universal de LLM local.',
         ],
         callouts: [
@@ -847,6 +911,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'laptop',
             label: 'Consultar precios de portátiles Snapdragon X2 Elite',
           },
+        ],
+      },
+      intelPick: {
+        id: 'intel-pick',
+        title: 'Intel Core Ultra Series 3: qué puede ejecutar hoy la NPU',
+        content: [
+          '<strong>Las NPU de Intel pueden ejecutar modelos pequeños en llama.cpp hoy, pero solo como experimento.</strong> El backend OpenVINO de llama.cpp, presentado como vista previa con OpenVINO 2026.1 en abril de 2026, ejecuta modelos GGUF en CPU, GPU y NPU de Intel. La [documentación del backend](https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/OPENVINO.md) indica que la NPU es compatible pero con limitaciones: ejecución sin estado (stateless), Q4_0 como cuantización principal, una ventana de contexto pequeña (sugiere `-c 512`), compilación desde el código fuente y el controlador de la NPU de Intel.',
+          'Los modelos validados en NPU incluyen Llama 3.2 1B y 3B, Llama 3.1 8B, varios tamaños de Qwen3 y Gemma 3 4B, mientras que algunos modelos más recientes fallan. Las pruebas documentadas usaron portátiles Core Ultra Series 1 y 2, no Series 3 (Panther Lake, 50 TOPS), y Ollama y LM Studio no usan esta vía. Compra una Copilot+ PC de Intel por su CPU, GPU, RAM y precio, y trata llama.cpp en la NPU como un extra para experimentar.',
         ],
       },
       ramGuide: {
@@ -906,7 +978,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Alguna vez Ollama soportará la NPU en las Copilot+ PC?',
-            a: 'Es plausible — Windows AI Foundry de Microsoft (que integra Foundry Local y catálogos que incluyen Ollama) y un incipiente paso de WSL3 GPU/NPU, ambos presentados en torno a Build 2026, son pasos en esa dirección. Pero a agosto de 2026 todavía no hay un backend de NPU generalizado y listo para usar en Ollama o llama.cpp mismos. Trata con escepticismo cualquier afirmación actual de aceleración por NPU para estas herramientas hasta verificarla contra las notas de lanzamiento propias de la herramienta.',
+            a: 'Es plausible, pero todavía no es lo habitual. Windows AI Foundry de Microsoft (que integra Foundry Local y catálogos que incluyen Ollama) y una vista previa de WSL3 con paso de GPU/NPU, ambos presentados en torno a Build 2026, son pasos en esa dirección, y llama.cpp ya tiene un backend OpenVINO en vista previa que puede ejecutar modelos pequeños en NPU de Intel. Pero Ollama en sí no tiene un backend de NPU listo para usar. Trata con escepticismo cualquier afirmación de aceleración por NPU para estas herramientas hasta verificarla contra las notas de lanzamiento propias de la herramienta.',
           },
           {
             q: '¿El Snapdragon X2 Elite ejecuta bien los LLMs locales?',
@@ -923,6 +995,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '¿Merece la pena el Ryzen AI 300 más antiguo o el Snapdragon X Elite original?',
             a: 'Sí, si el precio es notablemente más bajo que el de la generación actual. La generación de NPU de ninguno de los dos chips afecta al rendimiento de LLM local de todos modos, así que la decisión de compra se reduce a la capacidad de CPU/GPU y la RAM, igual que con la generación actual — un equipo de generación anterior con descuento y más RAM suele superar a uno de generación actual con menos RAM.',
+          },
+          {
+            q: '¿Puede llama.cpp usar la NPU de Intel?',
+            a: 'Sí, en vista previa. El backend OpenVINO de llama.cpp puede ejecutar modelos GGUF en NPU de Intel después de instalar el controlador de la NPU de Intel, compilar llama.cpp con el backend y definir `GGML_OPENVINO_DEVICE=NPU`. Funciona sin estado, prefiere la cuantización Q4_0, necesita un tamaño de contexto pequeño y falla en lugar de recurrir a la CPU si la NPU no está disponible. Espera modelos pequeños, no de clase 70B.',
+          },
+          {
+            q: '¿Qué es WSL3 y da a Ollama acceso a la NPU?',
+            a: 'WSL 3 es una vista previa del próximo Subsistema de Windows para Linux, mostrada en Microsoft Build 2026 (junio de 2026). Los medios describen paso de GPU y NPU, pero los detalles varían entre informes y no pudimos confirmar compatibilidad de Ollama con la NPU en una fuente primaria. No compres un portátil por el acceso a la NPU en WSL3: revisa antes las notas de lanzamiento de WSL de Microsoft.',
+          },
+          {
+            q: '¿Cuál es la AI PC con mejor relación calidad-precio para ejecutar software de IA local?',
+            a: 'La mejor relación calidad-precio es la que ofrece más RAM y la GPU más potente por cada euro, no la cifra de TOPS más alta. Toda Copilot+ PC actual ya cumple el requisito de 40 TOPS, así que un equipo con 32 GB, con un chip AMD Ryzen AI o una GPU NVIDIA RTX dedicada —o un modelo de la generación anterior rebajado y con más RAM— supera a un equipo más caro con una NPU más rápida y 16 GB.',
           },
         ],
       },
@@ -945,9 +1029,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleur PC Copilot+ pour LLM Locaux 2026 : NPU vs GPU',
     metaDescription: 'N\'achetez pas un PC Copilot+ juste pour son NPU. Pour les LLM locaux, priorisez la RAM, le GPU et la bande passante mémoire — le NPU sert Windows, pas Ollama.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-04-19',
     current_models_mentioned: [],
     current_hardware_mentioned: ['Snapdragon X2 Elite', 'Intel Core Ultra Series 3 (Panther Lake)', 'AMD Ryzen AI 400', 'NVIDIA RTX laptop GPU'],
     educationalLevel: 'Intermediate',
@@ -955,13 +1039,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     affiliateDisclosure: true,
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'best-budget-ai-laptop-under-1000', 'local-ai-trend-2027-ai-pc-npu-normalization'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>N\'achetez pas un PC Copilot+ uniquement parce qu\'il a un NPU puissant.</strong> Pour les LLM locaux, priorisez d\'abord la RAM, la performance GPU et la bande passante mémoire — le NPU est précieux pour les fonctionnalités IA de Windows comme Recall et les sous-titres en direct, mais Ollama, llama.cpp et LM Studio tournent toujours sur le CPU ou le GPU, pas sur le NPU, en août 2026. Le meilleur PC Copilot+ pour les LLM locaux dépend de votre besoin réel : une machine AMD Ryzen AI pour le meilleur ensemble intégré, un portable NVIDIA RTX si la performance LLM locale est la priorité réelle, ou une machine Snapdragon X2 Elite si l\'autonomie compte le plus.',
+    leadAnswerBlock: '<strong>N\'achetez pas un PC Copilot+ uniquement parce qu\'il a un NPU puissant.</strong> Pour les LLM locaux, priorisez d\'abord la RAM, la performance GPU et la bande passante mémoire — le NPU est précieux pour les fonctionnalités IA de Windows comme Recall et les sous-titres en direct, mais Ollama, llama.cpp et LM Studio tournent toujours sur le CPU ou le GPU, pas sur le NPU. Le meilleur PC Copilot+ pour les LLM locaux dépend de votre besoin réel : une machine AMD Ryzen AI pour le meilleur ensemble intégré, un portable NVIDIA RTX si la performance LLM locale est la priorité réelle, ou une machine Snapdragon X2 Elite si l\'autonomie compte le plus.',
     toc: [
       { label: 'Réponse Rapide', anchor: '#best-pick' },
       { label: 'La Grande Erreur : TOPS du NPU ≠ Vitesse LLM', anchor: '#npu-mistake' },
       { label: 'Meilleur Choix Intégré : AMD Ryzen AI', anchor: '#amd-pick' },
       { label: 'Meilleur pour la Performance LLM Locale : NVIDIA', anchor: '#nvidia-pick' },
       { label: 'Meilleure Autonomie : Snapdragon X2 Elite', anchor: '#snapdragon-pick' },
+      { label: 'NPU Intel : ce qui fonctionne aujourd\'hui', anchor: '#intel-pick' },
       { label: 'Combien de RAM Vous Faut-il ?', anchor: '#ram-guide' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Lectures complémentaires', anchor: '#related' },
@@ -971,11 +1056,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Quel est le meilleur PC Copilot+ pour les LLM locaux en 2026 ?',
         answer: 'Il n\'existe pas un seul meilleur PC Copilot+ — il y a un meilleur choix selon votre priorité. Un portable AMD Ryzen AI (série 400, NPU de 60 TOPS plus un GPU intégré compétent) est la meilleure option intégrée tout-terrain. Un portable NVIDIA RTX est le meilleur choix si la performance LLM locale elle-même est la priorité, car Ollama et llama.cpp accélèrent sur le GPU via CUDA, pas sur le NPU. Un portable Snapdragon X2 Elite est le meilleur choix pour l\'autonomie et la portabilité, avec une réserve de compatibilité logicielle ARM à vérifier au préalable.',
         bullets: [
-          'Le chiffre TOPS du NPU (Snapdragon X2 Elite : 80 TOPS, AMD Ryzen AI 400 : 60 TOPS, Intel Panther Lake : 50 TOPS) ne prédit pas la vitesse du chat LLM local — Ollama, llama.cpp et LM Studio tournent toujours sur CPU ou GPU en août 2026.',
+          'Le chiffre TOPS du NPU (Snapdragon X2 Elite : 80 TOPS, AMD Ryzen AI 400 : 60 TOPS, Intel Panther Lake : 50 TOPS) ne prédit pas la vitesse du chat LLM local — Ollama, llama.cpp et LM Studio tournent toujours sur CPU ou GPU.',
           'Pour les LLM locaux, l\'ordre de priorité à l\'achat est VRAM/GPU puis RAM d\'abord, NPU en dernier — un portable avec un NPU plus faible mais plus de RAM exécutera généralement mieux des modèles plus grands que l\'inverse.',
-          'Windows AI Foundry de Microsoft et un chemin émergent de passthrough GPU/NPU via WSL3 commencent à ouvrir l\'accès au NPU pour des outils comme Ollama, mais en août 2026 cela reste précoce et optionnel, pas l\'expérience par défaut.',
+          'Windows AI Foundry de Microsoft et un chemin émergent de passthrough GPU/NPU via WSL3 commencent à ouvrir l\'accès au NPU pour des outils comme Ollama, mais cela reste précoce et optionnel, pas l\'expérience par défaut.',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -984,7 +1069,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'N\'achetez pas un PC Copilot+ pour les seuls TOPS du NPU — pour les LLM locaux, la RAM et la performance GPU comptent bien davantage',
-          'Ollama, llama.cpp et LM Studio tournent toujours sur CPU ou GPU en août 2026 — aucun n\'a de backend NPU généralisé',
+          'Ollama, llama.cpp et LM Studio tournent toujours sur CPU ou GPU — aucun n\'a de backend NPU généralisé',
           'Meilleur choix intégré tout-terrain : série AMD Ryzen AI 400 (NPU de 60 TOPS + GPU RDNA 3.5 compétent)',
           'Meilleur pour la performance LLM locale réelle : un PC Copilot+ avec GPU NVIDIA RTX dédié',
           'Meilleure autonomie : Snapdragon X2 Elite (NPU de 80 TOPS) — vérifiez d\'abord la compatibilité logicielle ARM',
@@ -1028,7 +1113,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'La Grande Erreur de l\'IA Locale : TOPS du NPU ≠ Vitesse LLM',
         content: [
           '<strong>Un PC Copilot+ peut avoir un NPU puissant tout en étant une machine médiocre pour les LLM locaux, parce que votre LLM local tourne presque certainement sur le CPU ou le GPU, pas sur le NPU.</strong> L\'architecture Copilot+ de Microsoft utilise le NPU pour les expériences IA sur appareil prises en charge — Recall, traduction des sous-titres en direct, Studio Effects et les propres modèles sur appareil de Microsoft comme Aion — construites via ONNX Runtime et DirectML. Cela ne signifie pas que chaque application LLM locale tourne automatiquement sur le NPU.',
-          'En août 2026, Ollama, llama.cpp et LM Studio ne dirigent toujours pas l\'inférence de chat vers le NPU. Utiliser le NPU nécessite un modèle converti manuellement en ONNX et compilé pour le fournisseur d\'exécution propre au constructeur (QNN de Qualcomm, OpenVINO d\'Intel) — un pipeline spécialisé et optionnel, pas quelque chose qui se produit automatiquement en faisant `ollama run` d\'un modèle. Windows AI Foundry de Microsoft (qui intègre Foundry Local et des catalogues incluant Ollama) et un chemin précoce de passthrough GPU/NPU via WSL3, tous deux présentés autour de Build 2026, commencent à changer cela — mais ils sont encore précoces et nécessitent une configuration délibérée, pas l\'expérience par défaut d\'aujourd\'hui.',
+          'Ollama, llama.cpp et LM Studio ne dirigent toujours pas l\'inférence de chat vers le NPU. Utiliser le NPU nécessite un modèle converti manuellement en ONNX et compilé pour le fournisseur d\'exécution propre au constructeur (QNN de Qualcomm, OpenVINO d\'Intel) — un pipeline spécialisé et optionnel, pas quelque chose qui se produit automatiquement en faisant `ollama run` d\'un modèle. Windows AI Foundry de Microsoft (qui intègre Foundry Local et des catalogues incluant Ollama) et un chemin précoce de passthrough GPU/NPU via WSL3, tous deux présentés autour de Build 2026, commencent à changer cela — mais ils sont encore précoces et nécessitent une configuration délibérée, pas l\'expérience par défaut d\'aujourd\'hui. Une exception notable est le backend OpenVINO de llama.cpp (préversion), qui peut cibler les NPU Intel pour de petits modèles (voir la section Intel ci-dessous).',
           'Pour Ollama spécifiquement : les TOPS du NPU n\'équivalent pas à la performance LLM. Un portable annonçant 80 TOPS n\'est pas forcément plus rapide pour exécuter votre modèle 14B qu\'un autre annonçant 50 TOPS — le chiffre TOPS décrit un type spécifique de capacité de calcul IA, pas un benchmark universel pour les LLM locaux.',
         ],
         callouts: [
@@ -1081,6 +1166,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'laptop',
             label: 'Vérifier les prix des portables Snapdragon X2 Elite',
           },
+        ],
+      },
+      intelPick: {
+        id: 'intel-pick',
+        title: 'Intel Core Ultra Series 3 : ce que le NPU peut exécuter aujourd\'hui',
+        content: [
+          '<strong>Les NPU d\'Intel peuvent exécuter de petits modèles dans llama.cpp aujourd\'hui, mais seulement à titre d\'expérience.</strong> Le backend OpenVINO de llama.cpp, introduit en préversion avec OpenVINO 2026.1 en avril 2026, exécute des modèles GGUF sur les CPU, GPU et NPU Intel. La [documentation du backend](https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/OPENVINO.md) indique que le NPU est pris en charge mais limité : exécution sans état (stateless), Q4_0 comme quantification principale, une petite fenêtre de contexte (elle suggère `-c 512`), une compilation depuis les sources et le pilote Intel NPU.',
+          'Les modèles validés sur NPU incluent Llama 3.2 1B et 3B, Llama 3.1 8B, plusieurs tailles de Qwen3 et Gemma 3 4B, tandis que certains modèles plus récents échouent. Les tests documentés ont utilisé des portables Core Ultra Series 1 et 2, et non Series 3 (Panther Lake, 50 TOPS), et Ollama et LM Studio n\'utilisent pas cette voie. Achetez un PC Copilot+ Intel pour son CPU, son GPU, sa RAM et son prix — et considérez llama.cpp sur le NPU comme un bonus à expérimenter.',
         ],
       },
       ramGuide: {
@@ -1140,7 +1233,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Ollama prendra-t-il un jour en charge le NPU des PC Copilot+ ?',
-            a: 'C\'est plausible — Windows AI Foundry de Microsoft (qui intègre Foundry Local et des catalogues incluant Ollama) et un chemin précoce de passthrough GPU/NPU via WSL3, tous deux présentés autour de Build 2026, sont des pas dans cette direction. Mais en août 2026, il n\'existe toujours pas de backend NPU généralisé et prêt à l\'emploi dans Ollama ou llama.cpp eux-mêmes. Traitez toute revendication actuelle d\'accélération NPU pour ces outils avec scepticisme tant qu\'elle n\'est pas vérifiée dans les notes de version de l\'outil lui-même.',
+            a: 'C\'est plausible, mais pas encore courant. Windows AI Foundry de Microsoft (qui intègre Foundry Local et des catalogues incluant Ollama) et une préversion de WSL3 avec passthrough GPU/NPU, tous deux présentés autour de Build 2026, vont dans ce sens, et llama.cpp dispose désormais d\'un backend OpenVINO en préversion capable d\'exécuter de petits modèles sur les NPU Intel. Mais Ollama lui-même n\'a pas de backend NPU prêt à l\'emploi. Traitez toute revendication d\'accélération NPU pour ces outils avec scepticisme tant qu\'elle n\'est pas vérifiée dans les notes de version de l\'outil lui-même.',
           },
           {
             q: 'Le Snapdragon X2 Elite fait-il bien tourner les LLM locaux ?',
@@ -1157,6 +1250,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'Le Ryzen AI 300 plus ancien ou le Snapdragon X Elite original valent-ils encore la peine ?',
             a: 'Oui, si le prix est nettement inférieur à celui de la génération actuelle. La génération de NPU d\'aucune des deux puces n\'affecte de toute façon la performance LLM locale, donc la décision d\'achat se résume à la capacité CPU/GPU et à la RAM, comme pour la génération actuelle — une machine de génération précédente soldée avec plus de RAM bat souvent une machine de génération actuelle avec moins de RAM.',
+          },
+          {
+            q: 'llama.cpp peut-il utiliser le NPU Intel ?',
+            a: 'Oui, en préversion. Le backend OpenVINO de llama.cpp peut exécuter des modèles GGUF sur les NPU Intel après installation du pilote Intel NPU, compilation de llama.cpp avec ce backend et définition de `GGML_OPENVINO_DEVICE=NPU`. Il fonctionne sans état, privilégie la quantification Q4_0, exige une petite taille de contexte et échoue au lieu de basculer sur le CPU si le NPU est indisponible. Attendez-vous à de petits modèles, pas à des modèles de classe 70B.',
+          },
+          {
+            q: 'Qu\'est-ce que WSL3, et donne-t-il à Ollama accès au NPU ?',
+            a: 'WSL 3 est une préversion du prochain Sous-système Windows pour Linux, présentée à Microsoft Build 2026 (juin 2026). La presse décrit un passthrough GPU et NPU, mais les détails diffèrent selon les sources et nous n\'avons pas pu confirmer la prise en charge du NPU par Ollama dans une source primaire. N\'achetez pas un portable pour l\'accès NPU via WSL3 — consultez d\'abord les notes de version de WSL de Microsoft.',
+          },
+          {
+            q: 'Quel est le meilleur PC IA en rapport qualité-prix pour faire tourner des logiciels d\'IA locale ?',
+            a: 'Le meilleur rapport qualité-prix correspond à un maximum de RAM et au GPU le plus puissant par euro, pas au chiffre TOPS le plus élevé. Tout PC Copilot+ actuel respecte déjà l\'exigence des 40 TOPS : une machine de 32 Go avec une puce AMD Ryzen AI ou un GPU NVIDIA RTX dédié — ou un modèle de génération précédente en promotion avec plus de RAM — l\'emporte sur une machine plus chère dotée d\'un NPU plus rapide et de 16 Go.',
           },
         ],
       },
@@ -1179,9 +1284,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2026年版ローカルLLM最適Copilot+ PC: NPU vs GPU',
     metaDescription: 'Copilot+ PCをNPUだけで選ばないこと。ローカルLLMではRAM・GPU・メモリ帯域幅を優先——NPUはWindows機能向けでOllamaには使われません。',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-04-19',
     current_models_mentioned: [],
     current_hardware_mentioned: ['Snapdragon X2 Elite', 'Intel Core Ultra Series 3 (Panther Lake)', 'AMD Ryzen AI 400', 'NVIDIA RTX laptop GPU'],
     educationalLevel: 'Intermediate',
@@ -1189,13 +1294,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     affiliateDisclosure: true,
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'best-budget-ai-laptop-under-1000', 'local-ai-trend-2027-ai-pc-npu-normalization'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>NPUが強力だからという理由だけでCopilot+ PCを選ばないでください。</strong>ローカルLLMではまずRAM、GPU性能、メモリ帯域幅を優先してください——NPUはRecallやライブキャプションなどのWindows AI機能には価値がありますが、2026年8月時点でOllama、llama.cpp、LM StudioはNPUではなく依然としてCPUかGPUで動作します。ローカルLLMに最適なCopilot+ PCは実際の用途次第です。統合性を重視するならAMD Ryzen AI機、ローカルLLM性能そのものが優先ならNVIDIA RTX搭載ノートPC、バッテリー持続時間が最重要ならSnapdragon X2 Elite機が最適です。',
+    leadAnswerBlock: '<strong>NPUが強力だからという理由だけでCopilot+ PCを選ばないでください。</strong>ローカルLLMではまずRAM、GPU性能、メモリ帯域幅を優先してください——NPUはRecallやライブキャプションなどのWindows AI機能には価値がありますが、Ollama、llama.cpp、LM StudioはNPUではなく依然としてCPUかGPUで動作します。ローカルLLMに最適なCopilot+ PCは実際の用途次第です。統合性を重視するならAMD Ryzen AI機、ローカルLLM性能そのものが優先ならNVIDIA RTX搭載ノートPC、バッテリー持続時間が最重要ならSnapdragon X2 Elite機が最適です。',
     toc: [
       { label: 'クイックアンサー', anchor: '#best-pick' },
       { label: '大きな誤解: NPUのTOPSはLLM速度ではない', anchor: '#npu-mistake' },
       { label: '最適な統合型選択肢: AMD Ryzen AI', anchor: '#amd-pick' },
       { label: 'ローカルLLM性能で最良: NVIDIA', anchor: '#nvidia-pick' },
       { label: 'バッテリー持続で最良: Snapdragon X2 Elite', anchor: '#snapdragon-pick' },
+      { label: 'Intel NPU:今日できること', anchor: '#intel-pick' },
       { label: '必要なRAM容量は?', anchor: '#ram-guide' },
       { label: 'よくある質問', anchor: '#faq' },
       { label: '関連記事', anchor: '#related' },
@@ -1205,11 +1311,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: '2026年、ローカルLLMに最適なCopilot+ PCは?',
         answer: '唯一絶対的な最適解はなく、優先事項ごとに最適な選択肢があります。AMD Ryzen AIノートPC(400シリーズ、60 TOPSのNPUと高性能な統合GPU)は総合的に最も優れた統合型の選択肢です。NVIDIA RTXノートPCは、OllamaやLlama.cppがNPUではなくCUDA経由でGPUを使って高速化するため、ローカルLLM性能そのものが優先ならベストな選択です。Snapdragon X2 Eliteノートは、事前に確認すべきARMソフトウェア互換性の注意点はありますが、バッテリー持続時間と携帯性ではベストな選択です。',
         bullets: [
-          'NPUのTOPS値(Snapdragon X2 Elite: 80 TOPS、AMD Ryzen AI 400: 60 TOPS、Intel Panther Lake: 50 TOPS)はローカルLLMチャットの速度を予測しません — 2026年8月時点でOllama、llama.cpp、LM StudioはCPUかGPUで動作します。',
+          'NPUのTOPS値(Snapdragon X2 Elite: 80 TOPS、AMD Ryzen AI 400: 60 TOPS、Intel Panther Lake: 50 TOPS)はローカルLLMチャットの速度を予測しません — Ollama、llama.cpp、LM StudioはCPUかGPUで動作します。',
           'ローカルLLMの購入優先順位はVRAM/GPUとRAMを最初に、NPUは最後です — NPUが弱くてもRAMが多いノートPCの方が、その逆よりも大きなモデルを快適に動かせることが多いです。',
-          'MicrosoftのWindows AI FoundryとWSL3のGPU/NPUパススルーという新興の経路が、OllamaのようなツールへのNPUアクセスを開き始めていますが、2026年8月時点ではまだ初期段階でオプトインであり、デフォルトの体験ではありません。',
+          'MicrosoftのWindows AI FoundryとWSL3のGPU/NPUパススルーという新興の経路が、OllamaのようなツールへのNPUアクセスを開き始めていますが、まだ初期段階でオプトインであり、デフォルトの体験ではありません。',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -1218,7 +1324,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'NPUのTOPS値だけでCopilot+ PCを選ばないこと — ローカルLLMにはRAMとGPU性能の方がはるかに重要',
-          '2026年8月時点でOllama、llama.cpp、LM StudioはCPUかGPUで動作し続けている — 主流のNPUバックエンドを持つものはない',
+          'Ollama、llama.cpp、LM StudioはCPUかGPUで動作し続けている — 主流のNPUバックエンドを持つものはない',
           '総合的に最良の統合型選択肢: AMD Ryzen AI 400シリーズ(60 TOPSのNPU+高性能なRDNA 3.5 GPU)',
           '実際のローカルLLM性能で最良: NVIDIA RTX専用GPU搭載のCopilot+ PC',
           'バッテリー持続で最良: Snapdragon X2 Elite(80 TOPSのNPU) — 事前にARMソフトウェア互換性を確認',
@@ -1262,7 +1368,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'ローカルAIの大きな誤解: NPUのTOPSはLLM速度ではない',
         content: [
           '<strong>Copilot+ PCが強力なNPUを持っていても、ローカルLLMマシンとしては平凡ということがあります。なぜならローカルLLMはほぼ確実にCPUかGPUで動作し、NPUでは動作しないからです。</strong>MicrosoftのCopilot+アーキテクチャは、対応するオンデバイスAI体験(Recall、ライブキャプション翻訳、Studio Effects、そしてAionのようなMicrosoft自身のオンデバイスモデル)にNPUを使用しており、これらはONNX RuntimeとDirectMLを通じて構築されています。これは、あらゆるローカルLLMアプリケーションが自動的にNPUで動作することを意味しません。',
-          '2026年8月時点で、Ollama、llama.cpp、LM Studioは依然としてチャット推論をNPUに振り分けていません。NPUを使用するには、モデルを手動でONNXに変換し、ベンダー独自の実行プロバイダー(QualcommのQNN、IntelのOpenVINO)向けにコンパイルする必要があります — これは専門的でオプトインなパイプラインであり、`ollama run`でモデルを実行するだけで自動的に起こることではありません。Build 2026前後に発表されたMicrosoftのWindows AI Foundry(Foundry LocalおよびOllamaを含むカタログを統合)と初期段階のWSL3 GPU/NPUパススルー経路は、これを変え始めていますが — まだ初期段階で意図的なセットアップが必要であり、今日のデフォルト体験ではありません。',
+          'Ollama、llama.cpp、LM Studioは依然としてチャット推論をNPUに振り分けていません。NPUを使用するには、モデルを手動でONNXに変換し、ベンダー独自の実行プロバイダー(QualcommのQNN、IntelのOpenVINO)向けにコンパイルする必要があります — これは専門的でオプトインなパイプラインであり、`ollama run`でモデルを実行するだけで自動的に起こることではありません。Build 2026前後に発表されたMicrosoftのWindows AI Foundry(Foundry LocalおよびOllamaを含むカタログを統合)と初期段階のWSL3 GPU/NPUパススルー経路は、これを変え始めていますが — まだ初期段階で意図的なセットアップが必要であり、今日のデフォルト体験ではありません。注目すべき例外の一つは、llama.cppのOpenVINOバックエンド(プレビュー)で、小規模モデルならIntel NPUを対象にできます(下のIntelセクションを参照)。',
           'Ollamaに関して具体的に言うと、NPUのTOPSはLLM性能と同義ではありません。80 TOPSを謳うノートPCが、50 TOPSを謳うノートPCよりも必ずしも14Bモデルの実行が速いわけではありません — TOPS値は特定の種類のAI計算能力を表すもので、ローカルLLMの汎用ベンチマークではありません。',
         ],
         callouts: [
@@ -1315,6 +1421,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'laptop',
             label: 'AmazonでSnapdragon X2 Eliteノートの価格を確認',
           },
+        ],
+      },
+      intelPick: {
+        id: 'intel-pick',
+        title: 'Intel Core Ultra Series 3:NPUが今日実行できるもの',
+        content: [
+          '<strong>Intel NPUは、今日のllama.cppで小規模モデルを実行できますが、あくまで実験的な位置づけです。</strong>2026年4月にOpenVINO 2026.1とともにプレビューとして導入されたllama.cppのOpenVINOバックエンドは、Intel CPU・GPU・NPU上でGGUFモデルを実行します。[バックエンドのドキュメント](https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/OPENVINO.md)では、NPUは対応しているものの制限付きとされています。ステートレス実行、主要な量子化はQ4_0、小さなコンテキストウィンドウ(`-c 512`を推奨)、ソースからのビルド、Intel NPUドライバが必要です。',
+          'NPUで検証済みのモデルには、Llama 3.2 1B/3B、Llama 3.1 8B、複数サイズのQwen3、Gemma 3 4Bが含まれますが、一部の新しいモデルは動作しません。文書化されたテストはCore Ultra Series 1および2のノートPCで行われており、Series 3(Panther Lake、50 TOPS)ではありません。また、OllamaとLM Studioはこの経路を使いません。Intel搭載Copilot+ PCはCPU、GPU、RAM、価格で選び、NPUでのllama.cppは試して楽しむ追加要素として捉えてください。',
         ],
       },
       ramGuide: {
@@ -1374,7 +1488,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'OllamaはいつかCopilot+ PCのNPUをサポートしますか?',
-            a: 'その可能性はあります。MicrosoftのWindows AI Foundry(Foundry LocalおよびOllamaを含むカタログを統合)と初期段階のWSL3 GPU/NPUパススルー経路は、いずれもBuild 2026前後に発表され、その方向への一歩です。しかし2026年8月時点で、OllamaやLlama.cpp自体に主流の即使用可能なNPUバックエンドはまだありません。現在のNPUアクセラレーションの主張については、そのツール自身のリリースノートで確認するまで懐疑的に扱ってください。',
+            a: 'その可能性はありますが、まだ主流ではありません。Build 2026前後に発表されたMicrosoftのWindows AI Foundry(Foundry LocalおよびOllamaを含むカタログを統合)と、GPU/NPUパススルーを備えたWSL3のプレビューは、その方向への一歩です。またllama.cppには、Intel NPU上で小規模モデルを実行できるプレビュー版のOpenVINOバックエンドがあります。しかしOllama自体にはそのまま使えるNPUバックエンドがありません。これらのツールに関するNPUアクセラレーションの主張は、そのツール自身のリリースノートで確認できるまで懐疑的に扱ってください。',
           },
           {
             q: 'Snapdragon X2 EliteはローカルLLMをよく動かせますか?',
@@ -1391,6 +1505,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '旧世代のRyzen AI 300や元のSnapdragon X Eliteを買う価値はまだありますか?',
             a: 'あります。現行世代より価格が大きく安ければです。どちらのチップもNPU世代がローカルLLM性能に影響を与えることはないため、購入判断は現行世代と同様にCPU/GPU性能とRAMに帰結します — 値引きされた旧世代機でRAMが多い方が、RAMの少ない現行世代機より優れていることがよくあります。',
+          },
+          {
+            q: 'llama.cppはIntel NPUを使えますか?',
+            a: 'はい、プレビュー段階です。Intel NPUドライバをインストールし、OpenVINOバックエンド付きでllama.cppをビルドして`GGML_OPENVINO_DEVICE=NPU`を設定すれば、llama.cppのOpenVINOバックエンドでIntel NPU上のGGUFモデルを実行できます。ステートレスモードで動作し、Q4_0量子化が推奨され、小さなコンテキストサイズが必要で、NPUが使えない場合はCPUにフォールバックせずに失敗します。70Bクラスではなく、小規模モデルを想定してください。',
+          },
+          {
+            q: 'WSL3とは何ですか。OllamaがNPUを使えるようになりますか?',
+            a: 'WSL 3は次世代のWindows Subsystem for Linuxのプレビューで、Microsoft Build 2026(2026年6月)で披露されました。報道ではGPUとNPUのパススルーが説明されていますが、内容は報道ごとに異なり、OllamaのNPU対応を一次情報で確認することはできませんでした。WSL3でのNPUアクセスのためにノートPCを購入せず、まずMicrosoftのWSLリリースノートを確認してください。',
+          },
+          {
+            q: 'ローカルAIソフトを動かすのに最もコストパフォーマンスの高いAI PCはどれですか?',
+            a: 'コストパフォーマンスが最も高いのは、TOPS値の高さではなく、1円あたりのRAM容量が多く、GPUが強力なマシンです。現行のCopilot+ PCはすべて40 TOPSの要件を満たしているため、32 GBのRAMとAMD Ryzen AIチップまたはNVIDIA RTXの単体GPUを搭載したマシン(あるいはRAMが多い値下げ済みの前世代モデル)は、NPUが高速でもRAMが16 GBの高価なマシンを上回ります。',
           },
         ],
       },
@@ -1413,9 +1539,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2026년 로컬 LLM 최적 Copilot+ PC: NPU 대 GPU',
     metaDescription: 'NPU만 보고 Copilot+ PC를 사지 마십시오. 로컬 LLM에는 RAM·GPU·메모리 대역폭이 우선입니다 — NPU는 Windows 기능용이지 Ollama용이 아닙니다.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-04-19',
     current_models_mentioned: [],
     current_hardware_mentioned: ['Snapdragon X2 Elite', 'Intel Core Ultra Series 3 (Panther Lake)', 'AMD Ryzen AI 400', 'NVIDIA RTX laptop GPU'],
     educationalLevel: 'Intermediate',
@@ -1423,13 +1549,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     affiliateDisclosure: true,
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'best-budget-ai-laptop-under-1000', 'local-ai-trend-2027-ai-pc-npu-normalization'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>NPU가 강력하다는 이유만으로 Copilot+ PC를 사지 마십시오.</strong> 로컬 LLM에는 RAM, GPU 성능, 메모리 대역폭을 먼저 우선하십시오 — NPU는 Recall이나 실시간 자막 같은 Windows AI 기능에는 유용하지만, 2026년 8월 기준 Ollama, llama.cpp, LM Studio는 여전히 NPU가 아니라 CPU나 GPU에서 실행됩니다. 로컬 LLM에 최적인 Copilot+ PC는 실제 필요에 따라 달라집니다 — 전반적인 통합형 구성에는 AMD Ryzen AI 기기, 로컬 LLM 성능 자체가 우선이라면 NVIDIA RTX 노트북, 배터리 수명이 가장 중요하다면 Snapdragon X2 Elite 기기가 최적입니다.',
+    leadAnswerBlock: '<strong>NPU가 강력하다는 이유만으로 Copilot+ PC를 사지 마십시오.</strong> 로컬 LLM에는 RAM, GPU 성능, 메모리 대역폭을 먼저 우선하십시오 — NPU는 Recall이나 실시간 자막 같은 Windows AI 기능에는 유용하지만, Ollama, llama.cpp, LM Studio는 여전히 NPU가 아니라 CPU나 GPU에서 실행됩니다. 로컬 LLM에 최적인 Copilot+ PC는 실제 필요에 따라 달라집니다 — 전반적인 통합형 구성에는 AMD Ryzen AI 기기, 로컬 LLM 성능 자체가 우선이라면 NVIDIA RTX 노트북, 배터리 수명이 가장 중요하다면 Snapdragon X2 Elite 기기가 최적입니다.',
     toc: [
       { label: '빠른 답변', anchor: '#best-pick' },
       { label: '큰 착각: NPU TOPS는 LLM 속도가 아닙니다', anchor: '#npu-mistake' },
       { label: '최적의 통합형 선택: AMD Ryzen AI', anchor: '#amd-pick' },
       { label: '로컬 LLM 성능 최적: NVIDIA', anchor: '#nvidia-pick' },
       { label: '배터리 수명 최적: Snapdragon X2 Elite', anchor: '#snapdragon-pick' },
+      { label: 'Intel NPU: 오늘 가능한 것', anchor: '#intel-pick' },
       { label: '얼마나 많은 RAM이 필요한가?', anchor: '#ram-guide' },
       { label: '자주 묻는 질문', anchor: '#faq' },
       { label: '관련 읽을거리', anchor: '#related' },
@@ -1439,11 +1566,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: '2026년 로컬 LLM에 가장 적합한 Copilot+ PC는 무엇입니까?',
         answer: '단 하나의 최고 Copilot+ PC는 없습니다 — 우선순위에 따라 최적의 선택이 다릅니다. AMD Ryzen AI 노트북(400 시리즈, 60 TOPS NPU와 유능한 통합 GPU)은 전반적으로 가장 뛰어난 통합형 선택지입니다. NVIDIA RTX 노트북은 로컬 LLM 성능 자체가 우선이라면 최적의 선택입니다. Ollama와 llama.cpp는 NPU가 아니라 CUDA를 통해 GPU에서 가속되기 때문입니다. Snapdragon X2 Elite 노트북은 배터리 수명과 휴대성에 최적이지만, ARM 소프트웨어 호환성이라는 사전 확인이 필요한 유의점이 있습니다.',
         bullets: [
-          'NPU TOPS 수치(Snapdragon X2 Elite: 80 TOPS, AMD Ryzen AI 400: 60 TOPS, Intel Panther Lake: 50 TOPS)는 로컬 LLM 채팅 속도를 예측하지 못합니다 — 2026년 8월 기준 Ollama, llama.cpp, LM Studio는 여전히 CPU나 GPU에서 실행됩니다.',
+          'NPU TOPS 수치(Snapdragon X2 Elite: 80 TOPS, AMD Ryzen AI 400: 60 TOPS, Intel Panther Lake: 50 TOPS)는 로컬 LLM 채팅 속도를 예측하지 못합니다 — Ollama, llama.cpp, LM Studio는 여전히 CPU나 GPU에서 실행됩니다.',
           '로컬 LLM에서 구매 우선순위는 VRAM/GPU와 RAM이 먼저이고 NPU는 마지막입니다 — NPU가 약해도 RAM이 많은 노트북이 그 반대보다 대체로 더 큰 모델을 잘 구동합니다.',
-          'Microsoft의 Windows AI Foundry와 신흥 WSL3 GPU/NPU 패스스루 경로가 Ollama 같은 도구에 NPU 접근을 열기 시작했지만, 2026년 8월 기준 이는 아직 초기 단계의 옵트인 방식이며 기본 경험은 아닙니다.',
+          'Microsoft의 Windows AI Foundry와 신흥 WSL3 GPU/NPU 패스스루 경로가 Ollama 같은 도구에 NPU 접근을 열기 시작했지만, 이는 아직 초기 단계의 옵트인 방식이며 기본 경험은 아닙니다.',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -1452,7 +1579,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'NPU TOPS만 보고 Copilot+ PC를 사지 마십시오 — 로컬 LLM에는 RAM과 GPU 성능이 훨씬 더 중요합니다',
-          '2026년 8월 기준 Ollama, llama.cpp, LM Studio는 여전히 CPU나 GPU에서 실행됩니다 — 주류 NPU 백엔드를 갖춘 도구는 없습니다',
+          'Ollama, llama.cpp, LM Studio는 여전히 CPU나 GPU에서 실행됩니다 — 주류 NPU 백엔드를 갖춘 도구는 없습니다',
           '전반적으로 최적인 통합형 선택: AMD Ryzen AI 400 시리즈(60 TOPS NPU + 유능한 RDNA 3.5 GPU)',
           '실제 로컬 LLM 성능에 최적: NVIDIA RTX 전용 GPU를 갖춘 Copilot+ PC',
           '배터리 수명 최적: Snapdragon X2 Elite(80 TOPS NPU) — ARM 소프트웨어 호환성을 먼저 확인하십시오',
@@ -1496,7 +1623,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '로컬 AI의 큰 착각: NPU TOPS는 LLM 속도가 아닙니다',
         content: [
           '<strong>Copilot+ PC가 강력한 NPU를 갖고 있어도 로컬 LLM 머신으로는 평범할 수 있습니다. 로컬 LLM은 거의 확실히 NPU가 아니라 CPU나 GPU에서 실행되기 때문입니다.</strong> Microsoft의 Copilot+ 아키텍처는 Recall, 실시간 자막 번역, Studio Effects, 그리고 Aion 같은 Microsoft 자체 온디바이스 모델 등 지원되는 온디바이스 AI 경험에 NPU를 사용하며, 이는 ONNX Runtime과 DirectML을 통해 구축됩니다. 이것이 모든 로컬 LLM 애플리케이션이 자동으로 NPU에서 실행된다는 의미는 아닙니다.',
-          '2026년 8월 기준, Ollama, llama.cpp, LM Studio는 여전히 채팅 추론을 NPU로 전달하지 않습니다. NPU를 사용하려면 모델을 수동으로 ONNX로 변환하고 제조사 고유의 실행 공급자(Qualcomm의 QNN, Intel의 OpenVINO)용으로 컴파일해야 합니다 — 이는 전문적이고 옵트인 방식의 파이프라인이며, `ollama run`으로 모델을 실행할 때 자동으로 일어나는 일이 아닙니다. Build 2026 전후로 발표된 Microsoft의 Windows AI Foundry(Foundry Local과 Ollama를 포함한 카탈로그를 통합)와 초기 단계의 WSL3 GPU/NPU 패스스루 경로가 이를 바꾸기 시작하고 있지만 — 아직 초기 단계이며 의도적인 설정이 필요하고, 오늘날의 기본 경험은 아닙니다.',
+          'Ollama, llama.cpp, LM Studio는 여전히 채팅 추론을 NPU로 전달하지 않습니다. NPU를 사용하려면 모델을 수동으로 ONNX로 변환하고 제조사 고유의 실행 공급자(Qualcomm의 QNN, Intel의 OpenVINO)용으로 컴파일해야 합니다 — 이는 전문적이고 옵트인 방식의 파이프라인이며, `ollama run`으로 모델을 실행할 때 자동으로 일어나는 일이 아닙니다. Build 2026 전후로 발표된 Microsoft의 Windows AI Foundry(Foundry Local과 Ollama를 포함한 카탈로그를 통합)와 초기 단계의 WSL3 GPU/NPU 패스스루 경로가 이를 바꾸기 시작하고 있지만 — 아직 초기 단계이며 의도적인 설정이 필요하고, 오늘날의 기본 경험은 아닙니다. 눈에 띄는 예외 중 하나는 llama.cpp의 OpenVINO 백엔드(프리뷰)로, 소형 모델에 한해 Intel NPU를 대상으로 할 수 있습니다(아래 Intel 섹션 참조).',
           'Ollama에 구체적으로 적용하면: NPU TOPS는 LLM 성능과 같지 않습니다. 80 TOPS를 광고하는 노트북이 50 TOPS를 광고하는 노트북보다 14B 모델을 반드시 더 빠르게 실행하는 것은 아닙니다 — TOPS 수치는 특정 유형의 AI 연산 능력을 나타낼 뿐, 로컬 LLM의 보편적 벤치마크가 아닙니다.',
         ],
         callouts: [
@@ -1549,6 +1676,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'laptop',
             label: 'Snapdragon X2 Elite 노트북 가격 확인하기',
           },
+        ],
+      },
+      intelPick: {
+        id: 'intel-pick',
+        title: 'Intel Core Ultra Series 3: NPU가 오늘 실행할 수 있는 것',
+        content: [
+          '<strong>Intel NPU는 오늘날 llama.cpp에서 소형 모델을 실행할 수 있지만, 어디까지나 실험 단계입니다.</strong> 2026년 4월 OpenVINO 2026.1과 함께 프리뷰로 도입된 llama.cpp의 OpenVINO 백엔드는 Intel CPU, GPU, NPU에서 GGUF 모델을 실행합니다. [백엔드 문서](https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/OPENVINO.md)는 NPU를 지원하되 제한이 있다고 명시합니다. 상태 비저장(stateless) 실행, Q4_0이 기본 양자화, 작은 컨텍스트 윈도우(`-c 512` 권장), 소스 빌드, Intel NPU 드라이버가 필요합니다.',
+          'NPU에서 검증된 모델로는 Llama 3.2 1B와 3B, Llama 3.1 8B, 여러 크기의 Qwen3, Gemma 3 4B가 있으며 일부 최신 모델은 실패합니다. 문서화된 테스트는 Core Ultra Series 1과 2 노트북에서 진행되었으며 Series 3(Panther Lake, 50 TOPS)에서는 진행되지 않았고, Ollama와 LM Studio는 이 경로를 사용하지 않습니다. Intel Copilot+ PC는 CPU, GPU, RAM, 가격을 보고 구매하시고, NPU에서의 llama.cpp는 실험해 볼 수 있는 덤으로 생각하십시오.',
         ],
       },
       ramGuide: {
@@ -1608,7 +1743,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Ollama가 언젠가 Copilot+ PC의 NPU를 지원하게 될까요?',
-            a: '가능성은 있습니다 — Build 2026 전후로 발표된 Microsoft의 Windows AI Foundry(Foundry Local과 Ollama를 포함한 카탈로그를 통합)와 초기 단계의 WSL3 GPU/NPU 패스스루 경로는 그 방향으로의 진전입니다. 하지만 2026년 8월 기준 Ollama나 llama.cpp 자체에는 아직 주류의, 바로 사용 가능한 NPU 백엔드가 없습니다. 이런 도구에 대한 현재의 NPU 가속 주장은 해당 도구 자체의 릴리스 노트로 확인되기 전까지는 회의적으로 대하십시오.',
+            a: '가능성은 있지만 아직 주류는 아닙니다. Build 2026 전후로 발표된 Microsoft의 Windows AI Foundry(Foundry Local과 Ollama를 포함한 카탈로그를 통합)와 GPU/NPU 패스스루를 갖춘 WSL3 프리뷰는 그 방향으로의 진전이며, llama.cpp에는 이제 Intel NPU에서 소형 모델을 실행할 수 있는 프리뷰 OpenVINO 백엔드가 있습니다. 그러나 Ollama 자체에는 바로 사용할 수 있는 NPU 백엔드가 없습니다. 이런 도구에 대한 NPU 가속 주장은 해당 도구 자체의 릴리스 노트로 확인되기 전까지는 회의적으로 대하십시오.',
           },
           {
             q: 'Snapdragon X2 Elite는 로컬 LLM을 잘 구동합니까?',
@@ -1625,6 +1760,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '구형 Ryzen AI 300이나 원래의 Snapdragon X Elite를 사는 것도 여전히 가치가 있습니까?',
             a: '네, 가격이 현행 세대보다 상당히 낮다면 그렇습니다. 두 칩 모두 NPU 세대가 어느 쪽이든 로컬 LLM 성능에 영향을 주지 않으므로, 구매 결정은 현행 세대와 마찬가지로 CPU/GPU 성능과 RAM에 달려 있습니다 — 할인된 구세대 기기가 RAM이 더 많다면, RAM이 적은 현행 세대 기기보다 나은 경우가 흔합니다.',
+          },
+          {
+            q: 'llama.cpp는 Intel NPU를 사용할 수 있습니까?',
+            a: '예, 프리뷰 단계입니다. Intel NPU 드라이버를 설치하고, OpenVINO 백엔드로 llama.cpp를 빌드한 뒤 `GGML_OPENVINO_DEVICE=NPU`를 설정하면 llama.cpp의 OpenVINO 백엔드로 Intel NPU에서 GGUF 모델을 실행할 수 있습니다. 상태 비저장 모드로 동작하고, Q4_0 양자화를 선호하며, 작은 컨텍스트 크기가 필요하고, NPU를 사용할 수 없을 때 CPU로 대체하지 않고 실패합니다. 70B급이 아닌 소형 모델을 기대하십시오.',
+          },
+          {
+            q: 'WSL3란 무엇이며, Ollama가 NPU에 접근할 수 있게 해 줍니까?',
+            a: 'WSL 3는 차세대 Windows Subsystem for Linux의 프리뷰로, Microsoft Build 2026(2026년 6월)에서 공개되었습니다. 언론 보도는 GPU와 NPU 패스스루를 설명하지만 보도마다 세부 내용이 다르며, Ollama의 NPU 지원을 1차 출처로 확인하지는 못했습니다. WSL3의 NPU 접근을 위해 노트북을 구매하지 마시고, 먼저 Microsoft의 WSL 릴리스 노트를 확인하십시오.',
+          },
+          {
+            q: '로컬 AI 소프트웨어를 실행하기에 가성비가 가장 좋은 AI PC는 무엇입니까?',
+            a: '가성비가 가장 좋은 기기는 TOPS 수치가 가장 높은 기기가 아니라 가격 대비 RAM이 가장 많고 GPU가 가장 강력한 기기입니다. 현재의 모든 Copilot+ PC는 이미 40 TOPS 요건을 충족하므로, 32 GB RAM에 AMD Ryzen AI 칩이나 NVIDIA RTX 외장 GPU를 갖춘 기기(또는 RAM이 더 많은 할인된 이전 세대 모델)가 NPU가 더 빠르지만 RAM이 16 GB인 더 비싼 기기보다 낫습니다.',
           },
         ],
       },
@@ -1647,9 +1794,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor PC Copilot+ para LLMs Locais 2026: NPU vs GPU',
     metaDescription: 'Não compre um PC Copilot+ só pela NPU. Para LLMs locais, priorize RAM, GPU e largura de banda de memória — a NPU serve recursos do Windows, não o Ollama.',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-04-19',
     current_models_mentioned: [],
     current_hardware_mentioned: ['Snapdragon X2 Elite', 'Intel Core Ultra Series 3 (Panther Lake)', 'AMD Ryzen AI 400', 'NVIDIA RTX laptop GPU'],
     educationalLevel: 'Intermediate',
@@ -1657,13 +1804,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     affiliateDisclosure: true,
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'best-budget-ai-laptop-under-1000', 'local-ai-trend-2027-ai-pc-npu-normalization'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>Não compre um PC Copilot+ só porque ele tem uma NPU potente.</strong> Para LLMs locais, priorize primeiro RAM, desempenho de GPU e largura de banda de memória — a NPU é valiosa para recursos de IA do Windows como Recall e Legendas ao Vivo, mas o Ollama, llama.cpp e LM Studio ainda rodam na CPU ou GPU, não na NPU, em agosto de 2026. O melhor PC Copilot+ para LLMs locais depende do que você realmente precisa: uma máquina AMD Ryzen AI para o melhor conjunto integrado, um notebook NVIDIA RTX se o desempenho de LLM local for a prioridade real, ou uma máquina Snapdragon X2 Elite se a duração da bateria importar mais.',
+    leadAnswerBlock: '<strong>Não compre um PC Copilot+ só porque ele tem uma NPU potente.</strong> Para LLMs locais, priorize primeiro RAM, desempenho de GPU e largura de banda de memória — a NPU é valiosa para recursos de IA do Windows como Recall e Legendas ao Vivo, mas o Ollama, llama.cpp e LM Studio ainda rodam na CPU ou GPU, não na NPU. O melhor PC Copilot+ para LLMs locais depende do que você realmente precisa: uma máquina AMD Ryzen AI para o melhor conjunto integrado, um notebook NVIDIA RTX se o desempenho de LLM local for a prioridade real, ou uma máquina Snapdragon X2 Elite se a duração da bateria importar mais.',
     toc: [
       { label: 'Resposta Rápida', anchor: '#best-pick' },
       { label: 'O Grande Erro: TOPS da NPU ≠ Velocidade do LLM', anchor: '#npu-mistake' },
       { label: 'Melhor Escolha Integrada: AMD Ryzen AI', anchor: '#amd-pick' },
       { label: 'Melhor para Desempenho de LLM Local: NVIDIA', anchor: '#nvidia-pick' },
       { label: 'Melhor Duração de Bateria: Snapdragon X2 Elite', anchor: '#snapdragon-pick' },
+      { label: 'NPU da Intel: o que funciona hoje', anchor: '#intel-pick' },
       { label: 'Quanta RAM Você Precisa?', anchor: '#ram-guide' },
       { label: 'Perguntas Frequentes', anchor: '#faq' },
       { label: 'Leitura Relacionada', anchor: '#related' },
@@ -1673,11 +1821,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'Qual é o melhor PC Copilot+ para LLMs locais em 2026?',
         answer: 'Não existe um único melhor PC Copilot+ — há a melhor escolha para cada prioridade. Um notebook AMD Ryzen AI (série 400, NPU de 60 TOPS mais uma GPU integrada capaz) é a melhor opção integrada geral. Um notebook NVIDIA RTX é a melhor escolha se o desempenho de LLM local em si for a prioridade, já que Ollama e llama.cpp aceleram na GPU via CUDA, não na NPU. Um notebook Snapdragon X2 Elite é a melhor escolha para duração de bateria e portabilidade, com uma ressalva de compatibilidade de software ARM a verificar primeiro.',
         bullets: [
-          'O número de TOPS da NPU (Snapdragon X2 Elite: 80 TOPS, AMD Ryzen AI 400: 60 TOPS, Intel Panther Lake: 50 TOPS) não prevê a velocidade do chat de LLM local — Ollama, llama.cpp e LM Studio ainda rodam na CPU ou GPU em agosto de 2026.',
+          'O número de TOPS da NPU (Snapdragon X2 Elite: 80 TOPS, AMD Ryzen AI 400: 60 TOPS, Intel Panther Lake: 50 TOPS) não prevê a velocidade do chat de LLM local — Ollama, llama.cpp e LM Studio ainda rodam na CPU ou GPU.',
           'Para LLMs locais, a prioridade de compra é VRAM/GPU e RAM primeiro, NPU por último — um notebook com uma NPU mais fraca mas mais RAM costuma rodar modelos maiores melhor do que o contrário.',
-          'O Windows AI Foundry da Microsoft e um caminho emergente de passthrough de GPU/NPU via WSL3 estão começando a abrir o acesso à NPU para ferramentas como o Ollama, mas em agosto de 2026 isso ainda é cedo e opcional, não a experiência padrão.',
+          'O Windows AI Foundry da Microsoft e um caminho emergente de passthrough de GPU/NPU via WSL3 estão começando a abrir o acesso à NPU para ferramentas como o Ollama, mas isso ainda é cedo e opcional, não a experiência padrão.',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -1686,7 +1834,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Não compre um PC Copilot+ apenas pelos TOPS da NPU — para LLMs locais, RAM e desempenho de GPU importam muito mais',
-          'Ollama, llama.cpp e LM Studio ainda rodam na CPU ou GPU em agosto de 2026 — nenhum tem um backend de NPU predominante',
+          'Ollama, llama.cpp e LM Studio ainda rodam na CPU ou GPU — nenhum tem um backend de NPU predominante',
           'Melhor escolha integrada geral: série AMD Ryzen AI 400 (NPU de 60 TOPS + GPU RDNA 3.5 capaz)',
           'Melhor para desempenho real de LLM local: um PC Copilot+ com GPU NVIDIA RTX dedicada',
           'Melhor duração de bateria: Snapdragon X2 Elite (NPU de 80 TOPS) — verifique antes a compatibilidade de software ARM',
@@ -1730,7 +1878,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'O Grande Erro da IA Local: TOPS da NPU ≠ Velocidade do LLM',
         content: [
           '<strong>Um PC Copilot+ pode ter uma NPU potente e ainda assim ser uma máquina medíocre para LLM local, porque seu LLM local quase certamente roda na CPU ou GPU, não na NPU.</strong> A arquitetura Copilot+ da Microsoft usa a NPU para experiências de IA on-device suportadas — Recall, tradução de Legendas ao Vivo, Efeitos de Estúdio e os próprios modelos on-device da Microsoft como o Aion — construídas via ONNX Runtime e DirectML. Isso não significa que toda aplicação de LLM local rode automaticamente na NPU.',
-          'Em agosto de 2026, Ollama, llama.cpp e LM Studio ainda não direcionam a inferência de chat para a NPU. Usar a NPU exige um modelo convertido manualmente para ONNX e compilado para o provedor de execução próprio do fabricante (QNN da Qualcomm, OpenVINO da Intel) — um pipeline especializado e opcional, não algo que acontece automaticamente ao rodar `ollama run` de um modelo. O Windows AI Foundry da Microsoft (que integra o Foundry Local e catálogos incluindo o Ollama) e um caminho inicial de passthrough de GPU/NPU via WSL3, ambos apresentados em torno do Build 2026, estão começando a mudar isso — mas ainda são recentes e exigem configuração deliberada, não a experiência padrão de hoje.',
+          'Ollama, llama.cpp e LM Studio ainda não direcionam a inferência de chat para a NPU. Usar a NPU exige um modelo convertido manualmente para ONNX e compilado para o provedor de execução próprio do fabricante (QNN da Qualcomm, OpenVINO da Intel) — um pipeline especializado e opcional, não algo que acontece automaticamente ao rodar `ollama run` de um modelo. O Windows AI Foundry da Microsoft (que integra o Foundry Local e catálogos incluindo o Ollama) e um caminho inicial de passthrough de GPU/NPU via WSL3, ambos apresentados em torno do Build 2026, estão começando a mudar isso — mas ainda são recentes e exigem configuração deliberada, não a experiência padrão de hoje. Uma exceção notável é o backend OpenVINO do llama.cpp (prévia), que pode usar NPUs da Intel para modelos pequenos (veja a seção da Intel abaixo).',
           'Para o Ollama especificamente: os TOPS da NPU não equivalem ao desempenho de LLM. Um notebook anunciando 80 TOPS não é necessariamente mais rápido rodando seu modelo de 14B do que um anunciando 50 TOPS — o número de TOPS descreve um tipo específico de capacidade de computação de IA, não um benchmark universal de LLM local.',
         ],
         callouts: [
@@ -1783,6 +1931,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'laptop',
             label: 'Confira os preços de notebooks Snapdragon X2 Elite',
           },
+        ],
+      },
+      intelPick: {
+        id: 'intel-pick',
+        title: 'Intel Core Ultra Series 3: o que a NPU consegue executar hoje',
+        content: [
+          '<strong>As NPUs da Intel conseguem executar modelos pequenos no llama.cpp hoje, mas apenas como experimento.</strong> O backend OpenVINO do llama.cpp, introduzido como prévia com o OpenVINO 2026.1 em abril de 2026, executa modelos GGUF em CPUs, GPUs e NPUs da Intel. A [documentação do backend](https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/OPENVINO.md) lista a NPU como compatível, porém limitada: execução sem estado (stateless), Q4_0 como quantização principal, uma janela de contexto pequena (sugere `-c 512`), compilação a partir do código-fonte e o driver da NPU da Intel.',
+          'Os modelos validados em NPU incluem Llama 3.2 1B e 3B, Llama 3.1 8B, vários tamanhos do Qwen3 e Gemma 3 4B, enquanto alguns modelos mais novos falham. Os testes documentados usaram notebooks Core Ultra Series 1 e 2, não Series 3 (Panther Lake, 50 TOPS), e o Ollama e o LM Studio não usam esse caminho. Compre um PC Copilot+ da Intel pela CPU, GPU, RAM e preço — e trate o llama.cpp na NPU como um bônus para experimentar.',
         ],
       },
       ramGuide: {
@@ -1842,7 +1998,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'O Ollama algum dia vai suportar a NPU nos PCs Copilot+?',
-            a: 'É plausível — o Windows AI Foundry da Microsoft (que integra o Foundry Local e catálogos incluindo o Ollama) e um caminho inicial de passthrough de GPU/NPU via WSL3, ambos apresentados em torno do Build 2026, são passos nessa direção. Mas em agosto de 2026 ainda não há um backend de NPU predominante e pronto para uso no próprio Ollama ou llama.cpp. Trate qualquer alegação atual de aceleração por NPU nessas ferramentas com ceticismo até verificar nas notas de lançamento da própria ferramenta.',
+            a: 'É plausível, mas ainda não é o padrão. O Windows AI Foundry da Microsoft (que integra o Foundry Local e catálogos incluindo o Ollama) e uma prévia do WSL3 com passthrough de GPU/NPU, ambos apresentados em torno do Build 2026, são passos nessa direção, e o llama.cpp agora tem um backend OpenVINO em prévia que pode executar modelos pequenos em NPUs da Intel. Mas o próprio Ollama não tem um backend de NPU pronto para uso. Trate qualquer alegação de aceleração por NPU nessas ferramentas com ceticismo até verificar nas notas de lançamento da própria ferramenta.',
           },
           {
             q: 'O Snapdragon X2 Elite roda LLMs locais bem?',
@@ -1859,6 +2015,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'Vale a pena comprar o Ryzen AI 300 mais antigo ou o Snapdragon X Elite original?',
             a: 'Sim, se o preço for significativamente mais baixo que o da geração atual. A geração de NPU de nenhum dos dois chips afeta o desempenho de LLM local de qualquer forma, então a decisão de compra se resume à capacidade de CPU/GPU e RAM, assim como na geração atual — uma máquina de geração anterior com desconto e mais RAM costuma superar uma máquina de geração atual com menos RAM.',
+          },
+          {
+            q: 'O llama.cpp consegue usar a NPU da Intel?',
+            a: 'Sim, em prévia. O backend OpenVINO do llama.cpp pode executar modelos GGUF em NPUs da Intel depois que você instala o driver da NPU da Intel, compila o llama.cpp com o backend e define `GGML_OPENVINO_DEVICE=NPU`. Ele roda sem estado, prefere a quantização Q4_0, exige um tamanho de contexto pequeno e falha, em vez de recorrer à CPU, se a NPU não estiver disponível. Espere modelos pequenos, não da classe 70B.',
+          },
+          {
+            q: 'O que é o WSL3 e ele dá ao Ollama acesso à NPU?',
+            a: 'O WSL 3 é uma prévia do próximo Subsistema do Windows para Linux, mostrada no Microsoft Build 2026 (junho de 2026). A imprensa descreve passthrough de GPU e NPU, mas os detalhes variam entre os relatos e não conseguimos confirmar o suporte do Ollama à NPU em uma fonte primária. Não compre um notebook pelo acesso à NPU no WSL3 — confira antes as notas de lançamento do WSL da Microsoft.',
+          },
+          {
+            q: 'Qual é o AI PC com melhor custo-benefício para rodar software de IA local?',
+            a: 'O melhor custo-benefício é ter mais RAM e a GPU mais forte por real gasto, não o maior número de TOPS. Todo PC Copilot+ atual já cumpre o requisito de 40 TOPS, então uma máquina com 32 GB, com um chip AMD Ryzen AI ou uma GPU NVIDIA RTX dedicada — ou um modelo da geração anterior com desconto e mais RAM — supera uma máquina mais cara com NPU mais rápida e 16 GB.',
           },
         ],
       },
@@ -1881,9 +2049,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '2026 年本地 LLM 最佳 Copilot+ PC：NPU 对比 GPU',
     metaDescription: '不要只为了 NPU 而购买 Copilot+ PC。运行本地 LLM 应优先考虑内存、GPU 和内存带宽——NPU 服务于 Windows 功能，而非 Ollama。',
     publishDate: '2026-07-14',
-    dateModified: '2026-08-26',
+    dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2027-02-26',
+    next_refresh_due: '2027-04-19',
     current_models_mentioned: [],
     current_hardware_mentioned: ['Snapdragon X2 Elite', 'Intel Core Ultra Series 3 (Panther Lake)', 'AMD Ryzen AI 400', 'NVIDIA RTX laptop GPU'],
     educationalLevel: 'Intermediate',
@@ -1891,13 +2059,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     affiliateDisclosure: true,
     siblingBites: ['best-local-llm-16gb-ram-laptop', 'best-budget-ai-laptop-under-1000', 'local-ai-trend-2027-ai-pc-npu-normalization'],
     is_living_page: false,
-    leadAnswerBlock: '<strong>不要仅仅因为 NPU 强大就购买 Copilot+ PC。</strong>运行本地 LLM 时，应优先考虑内存、GPU 性能和内存带宽——NPU 对 Recall、实时字幕等 Windows AI 功能很有价值，但截至 2026 年 8 月，Ollama、llama.cpp 和 LM Studio 仍然运行在 CPU 或 GPU 上，而非 NPU。哪款 Copilot+ PC 最适合本地 LLM 取决于你的实际需求：追求整体集成方案选 AMD Ryzen AI 机型，本地 LLM 性能本身是首要考量选 NVIDIA RTX 笔记本电脑，续航最重要则选 Snapdragon X2 Elite 机型。',
+    leadAnswerBlock: '<strong>不要仅仅因为 NPU 强大就购买 Copilot+ PC。</strong>运行本地 LLM 时，应优先考虑内存、GPU 性能和内存带宽——NPU 对 Recall、实时字幕等 Windows AI 功能很有价值，但Ollama、llama.cpp 和 LM Studio 仍然运行在 CPU 或 GPU 上，而非 NPU。哪款 Copilot+ PC 最适合本地 LLM 取决于你的实际需求：追求整体集成方案选 AMD Ryzen AI 机型，本地 LLM 性能本身是首要考量选 NVIDIA RTX 笔记本电脑，续航最重要则选 Snapdragon X2 Elite 机型。',
     toc: [
       { label: '快速答案', anchor: '#best-pick' },
       { label: '最大的误区：NPU TOPS 不等于 LLM 速度', anchor: '#npu-mistake' },
       { label: '最佳集成选择：AMD Ryzen AI', anchor: '#amd-pick' },
       { label: '本地 LLM 性能最佳：NVIDIA', anchor: '#nvidia-pick' },
       { label: '续航最佳：Snapdragon X2 Elite', anchor: '#snapdragon-pick' },
+      { label: 'Intel NPU：目前能做什么', anchor: '#intel-pick' },
       { label: '需要多少内存？', anchor: '#ram-guide' },
       { label: '常见问题', anchor: '#faq' },
       { label: '相关阅读', anchor: '#related' },
@@ -1907,11 +2076,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: '2026 年运行本地 LLM 最佳的 Copilot+ PC 是哪款？',
         answer: '没有唯一的最佳 Copilot+ PC——不同优先级对应不同的最佳选择。AMD Ryzen AI 笔记本电脑（400 系列，60 TOPS 的 NPU 加上高性能集成 GPU）是整体上最好的集成型选择。NVIDIA RTX 笔记本电脑是本地 LLM 性能本身作为优先级时的最佳选择，因为 Ollama 和 llama.cpp 是通过 CUDA 在 GPU 上加速，而非 NPU。Snapdragon X2 Elite 笔记本电脑在续航和便携性上是最佳选择，但需要事先核实 ARM 软件兼容性这一注意事项。',
         bullets: [
-          'NPU 的 TOPS 数值（Snapdragon X2 Elite：80 TOPS，AMD Ryzen AI 400：60 TOPS，Intel Panther Lake：50 TOPS）无法预测本地 LLM 聊天速度——截至 2026 年 8 月，Ollama、llama.cpp 和 LM Studio 仍运行在 CPU 或 GPU 上。',
+          'NPU 的 TOPS 数值（Snapdragon X2 Elite：80 TOPS，AMD Ryzen AI 400：60 TOPS，Intel Panther Lake：50 TOPS）无法预测本地 LLM 聊天速度——Ollama、llama.cpp 和 LM Studio 仍运行在 CPU 或 GPU 上。',
           '对于本地 LLM，购买优先级是 VRAM/GPU 和内存优先，NPU 最后——NPU 较弱但内存更大的笔记本电脑，通常比反过来的配置更能运行较大的模型。',
-          '微软的 Windows AI Foundry 和新兴的 WSL3 GPU/NPU 直通路径正开始为 Ollama 等工具打开 NPU 访问通道，但截至 2026 年 8 月，这仍处于早期且是可选项，而非默认体验。',
+          '微软的 Windows AI Foundry 和新兴的 WSL3 GPU/NPU 直通路径正开始为 Ollama 等工具打开 NPU 访问通道，但这仍处于早期且是可选项，而非默认体验。',
         ],
-        updatedDate: '2026-08',
+        updatedDate: '2026-10',
       },
     },
     sections: {
@@ -1920,7 +2089,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           '不要仅凭 NPU 的 TOPS 就购买 Copilot+ PC——对本地 LLM 而言，内存和 GPU 性能重要得多',
-          '截至 2026 年 8 月，Ollama、llama.cpp 和 LM Studio 仍运行在 CPU 或 GPU 上——没有一个拥有主流的 NPU 后端',
+          'Ollama、llama.cpp 和 LM Studio 仍运行在 CPU 或 GPU 上——没有一个拥有主流的 NPU 后端',
           '整体最佳的集成型选择：AMD Ryzen AI 400 系列（60 TOPS NPU + 高性能 RDNA 3.5 GPU）',
           '实际本地 LLM 性能最佳：配备 NVIDIA RTX 独立 GPU 的 Copilot+ PC',
           '续航最佳：Snapdragon X2 Elite（80 TOPS NPU）——请先核实 ARM 软件兼容性',
@@ -1964,7 +2133,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '本地 AI 的最大误区：NPU TOPS 不等于 LLM 速度',
         content: [
           '<strong>Copilot+ PC 可以拥有强大的 NPU，同时仍是一台平庸的本地 LLM 机器，因为你的本地 LLM 几乎肯定运行在 CPU 或 GPU 上，而非 NPU 上。</strong>微软的 Copilot+ 架构将 NPU 用于受支持的设备端 AI 体验——回忆 Recall、实时字幕翻译、Studio 特效，以及微软自家的设备端模型（如 Aion）——这些都是通过 ONNX Runtime 和 DirectML 构建的。这并不意味着每个本地 LLM 应用都会自动运行在 NPU 上。',
-          '截至 2026 年 8 月，Ollama、llama.cpp 和 LM Studio 仍未将聊天推理导向 NPU。使用 NPU 需要将模型手动转换为 ONNX，并针对厂商自己的执行提供程序（高通的 QNN、英特尔的 OpenVINO）进行编译——这是一条专业化、可选的路径，并非在你运行 `ollama run` 一个模型时自动发生的事情。围绕 Build 2026 前后发布的微软 Windows AI Foundry（整合了 Foundry Local 及包括 Ollama 在内的目录）和早期的 WSL3 GPU/NPU 直通路径，正开始改变这一点——但它们仍处于早期阶段，需要刻意设置，而非今天的默认体验。',
+          'Ollama、llama.cpp 和 LM Studio 仍未将聊天推理导向 NPU。使用 NPU 需要将模型手动转换为 ONNX，并针对厂商自己的执行提供程序（高通的 QNN、英特尔的 OpenVINO）进行编译——这是一条专业化、可选的路径，并非在你运行 `ollama run` 一个模型时自动发生的事情。围绕 Build 2026 前后发布的微软 Windows AI Foundry（整合了 Foundry Local 及包括 Ollama 在内的目录）和早期的 WSL3 GPU/NPU 直通路径，正开始改变这一点——但它们仍处于早期阶段，需要刻意设置，而非今天的默认体验。值得一提的例外之一是 llama.cpp 的 OpenVINO 后端（预览版），它可以针对 Intel NPU 运行小型模型（见下方 Intel 部分）。',
           '具体到 Ollama：NPU 的 TOPS 不等同于 LLM 性能。标称 80 TOPS 的笔记本电脑运行你的 14B 模型不一定比标称 50 TOPS 的更快——TOPS 数值描述的是特定类型的 AI 计算能力，而不是通用的本地 LLM 基准。',
         ],
         callouts: [
@@ -2017,6 +2186,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             productCategory: 'laptop',
             label: '查看 Snapdragon X2 Elite 笔记本电脑价格',
           },
+        ],
+      },
+      intelPick: {
+        id: 'intel-pick',
+        title: 'Intel Core Ultra Series 3：NPU 目前能运行什么',
+        content: [
+          '<strong>Intel NPU 目前可以在 llama.cpp 中运行小型模型，但仅限于实验用途。</strong>llama.cpp 的 OpenVINO 后端于 2026 年 4 月随 OpenVINO 2026.1 以预览版推出，可在 Intel CPU、GPU 和 NPU 上运行 GGUF 模型。[后端文档](https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/OPENVINO.md)将 NPU 列为受支持但有限制：无状态（stateless）执行、以 Q4_0 为主要量化方式、较小的上下文窗口（建议使用 `-c 512`）、需要从源码构建，并需安装 Intel NPU 驱动。',
+          '已验证可在 NPU 上运行的模型包括 Llama 3.2 1B 和 3B、Llama 3.1 8B、多种规格的 Qwen3 以及 Gemma 3 4B，而部分较新的模型会失败。文档中的测试使用的是 Core Ultra Series 1 和 2 笔记本，而不是 Series 3（Panther Lake，50 TOPS），Ollama 和 LM Studio 也不使用这条路径。购买 Intel Copilot+ PC 应看重 CPU、GPU、内存和价格，把 NPU 上的 llama.cpp 当作可以尝试的额外功能。',
         ],
       },
       ramGuide: {
@@ -2076,7 +2253,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Ollama 未来会支持 Copilot+ PC 上的 NPU 吗？',
-            a: '这是有可能的——围绕 Build 2026 前后发布的微软 Windows AI Foundry（整合了 Foundry Local 及包括 Ollama 在内的目录）和早期的 WSL3 GPU/NPU 直通路径，都是朝这个方向迈出的步伐。但截至 2026 年 8 月，Ollama 或 llama.cpp 本身仍没有主流、开箱即用的 NPU 后端。在这些工具自己的发行说明得到验证之前，对任何当前的 NPU 加速说法都应持怀疑态度。',
+            a: '有可能，但尚未成为主流。Microsoft 的 Windows AI Foundry（整合了 Foundry Local 以及包含 Ollama 的目录）和带有 GPU/NPU 直通的 WSL3 预览版均在 Build 2026 前后发布，是朝这个方向迈出的步伐；llama.cpp 现在也有可在 Intel NPU 上运行小型模型的预览版 OpenVINO 后端。但 Ollama 本身没有开箱即用的 NPU 后端。对于这些工具的 NPU 加速说法，在对照该工具自身的发布说明验证之前，请保持怀疑。',
           },
           {
             q: 'Snapdragon X2 Elite 运行本地 LLM 效果好吗？',
@@ -2093,6 +2270,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: '较旧的 Ryzen AI 300 或初代 Snapdragon X Elite 还值得购买吗？',
             a: '值得，前提是价格明显低于现行一代。这两款芯片的 NPU 代际都不会影响本地 LLM 性能，因此购买决策同样归结为 CPU/GPU 性能和内存，与现行一代一样——一台打折的上一代机型如果内存更大，往往会优于内存较小的现行一代机型。',
+          },
+          {
+            q: 'llama.cpp 能使用 Intel NPU 吗？',
+            a: '可以，目前为预览版。安装 Intel NPU 驱动、用 OpenVINO 后端构建 llama.cpp 并设置 `GGML_OPENVINO_DEVICE=NPU` 后，llama.cpp 的 OpenVINO 后端即可在 Intel NPU 上运行 GGUF 模型。它以无状态模式运行，首选 Q4_0 量化，需要较小的上下文长度，并且在 NPU 不可用时会直接失败而不是回退到 CPU。请预期只能运行小型模型，而非 70B 级别的模型。',
+          },
+          {
+            q: 'WSL3 是什么？它能让 Ollama 使用 NPU 吗？',
+            a: 'WSL 3 是下一代 Windows Subsystem for Linux 的预览版，于 Microsoft Build 2026（2026 年 6 月）展示。媒体报道提到了 GPU 和 NPU 直通，但各报道的细节不一，我们也无法从一手来源确认 Ollama 的 NPU 支持。请不要为了 WSL3 的 NPU 访问而购买笔记本——请先查看 Microsoft 的 WSL 发布说明。',
+          },
+          {
+            q: '运行本地 AI 软件，哪款 AI PC 性价比最高？',
+            a: '性价比最高的是每一美元换来最多内存和最强 GPU 的机型，而不是 TOPS 数值最高的机型。目前所有 Copilot+ PC 都已满足 40 TOPS 要求，因此配备 32 GB 内存、搭载 AMD Ryzen AI 芯片或独立 NVIDIA RTX GPU 的机型（或内存更大的降价上一代机型），要胜过 NPU 更快但只有 16 GB 内存的更贵机型。',
           },
         ],
       },
