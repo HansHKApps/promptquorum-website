@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       masterTable: {
         id: 'vram-table',
         title: 'DeepSeek-R1 Distill VRAM by Quantization',
-        content: 'VRAM figures include a small allowance for context and KV cache on top of the raw file size. Q4_K_M is the Ollama default and the best size-to-quality trade-off for reasoning. Use Q8_0 only if you have spare VRAM and want a marginal quality bump; FP16 is rarely worth it locally.',
+        content: 'VRAM figures include a small allowance for context and KV cache on top of the raw file size. Q4_K_M is the Ollama default and a widely used size-to-quality trade-off for reasoning. Use Q8_0 only if you have spare VRAM and want a marginal quality bump; FP16 is rarely worth it locally.',
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', 'Min GPU (Q4_K_M)'],
         rows: [
@@ -86,8 +86,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Which Quantization Should You Pick?',
         content: [
           '**Use Q4_K_M for almost everything** — it is the Ollama default and keeps reasoning quality high while fitting the most models per GB. Pick it unless you have a specific reason not to.',
-          '**Use Q8_0 only with spare VRAM** — it roughly doubles the footprint for a marginal quality gain that rarely changes a reasoning answer. Worth it on a 24 GB card running the 14B, not much else.',
-          '**Skip FP16 locally** — at roughly 4× the Q4_K_M size it pushes the 32B to 80 GB-class hardware for no practical reasoning benefit over Q8_0.',
+          '**Use Q8_0 only with spare VRAM** — it roughly doubles the footprint for a marginal quality gain that usually changes little in a reasoning answer. Worth it on a 24 GB card running the 14B, not much else.',
+          '**Skip FP16 locally** — at roughly 4× the Q4_K_M size it pushes the 32B to 80 GB-class hardware for little practical reasoning benefit over Q8_0 in most local setups.',
         ],
       },
       fourteenB: {
@@ -195,7 +195,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       masterTable: {
         id: 'vram-table',
         title: 'DeepSeek-R1 Distill VRAM nach Quantisierung',
-        content: 'Die VRAM-Werte enthalten einen kleinen Aufschlag für Kontext und KV-Cache zusätzlich zur reinen Dateigröße. Q4_K_M ist der Ollama-Standard und der beste Kompromiss zwischen Größe und Qualität für Reasoning. Nutzen Sie Q8_0 nur, wenn Sie VRAM übrig haben und einen geringfügigen Qualitätsgewinn wünschen; FP16 lohnt sich lokal selten.',
+        content: 'Die VRAM-Werte enthalten einen kleinen Aufschlag für Kontext und KV-Cache zusätzlich zur reinen Dateigröße. Q4_K_M ist der Ollama-Standard und ein weit verbreiteter Kompromiss zwischen Größe und Qualität für Reasoning. Nutzen Sie Q8_0 nur, wenn Sie VRAM übrig haben und einen geringfügigen Qualitätsgewinn wünschen; FP16 lohnt sich lokal selten.',
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', 'Mindest-GPU (Q4_K_M)'],
         rows: [
@@ -218,8 +218,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Welche Quantisierung sollten Sie wählen?',
         content: [
           '**Nutzen Sie Q4_K_M für fast alles** — es ist der Ollama-Standard und hält die Reasoning-Qualität hoch, während es die meisten Modelle pro GB unterbringt. Wählen Sie es, sofern Sie keinen konkreten Grund dagegen haben.',
-          '**Nutzen Sie Q8_0 nur mit freiem VRAM** — es verdoppelt den Speicherbedarf ungefähr für einen geringfügigen Qualitätsgewinn, der eine Reasoning-Antwort selten verändert. Auf einer 24-GB-Karte mit dem 14B lohnenswert, sonst kaum.',
-          '**Überspringen Sie FP16 lokal** — bei etwa dem 4-Fachen der Q4_K_M-Größe treibt es den 32B auf 80-GB-Hardware, ohne praktischen Reasoning-Vorteil gegenüber Q8_0.',
+          '**Nutzen Sie Q8_0 nur mit freiem VRAM** — es verdoppelt den Speicherbedarf ungefähr für einen geringfügigen Qualitätsgewinn, der eine Reasoning-Antwort meist nur wenig verändert. Auf einer 24-GB-Karte mit dem 14B lohnenswert, sonst kaum.',
+          '**Überspringen Sie FP16 lokal** — bei etwa dem 4-Fachen der Q4_K_M-Größe treibt es den 32B auf 80-GB-Hardware, mit wenig praktischem Reasoning-Vorteil gegenüber Q8_0 in den meisten lokalen Setups.',
         ],
       },
       fourteenB: {
@@ -237,7 +237,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs. R1: Nicht verwechseln',
         content: [
-          '**DeepSeek-V3 ist ein Chat-Modell; DeepSeek-R1 (und diese Distills) sind Reasoning-Modelle.** Diese Tabelle gilt nur für die R1-Reasoning-Familie. Wenn Sie V3 suchen: Es ist ein 671B-MoE-Chat-Modell, das ebenfalls nicht auf Consumer-Hardware läuft — siehe den [DeepSeek-V3 Hardware-Bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**DeepSeek-V3 ist ein Chat-Modell; DeepSeek-R1 (und diese Distills) sind Reasoning-Modelle.** Diese Tabelle gilt nur für die R1-Reasoning-Familie. Wenn Sie V3 suchen: Es ist ein 671B-MoE-Chat-Modell, das ebenfalls nicht auf Consumer-Hardware läuft — siehe den [DeepSeek-V3 Hardware-Bite](/de/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**Update:** Die aktuelle Generation von DeepSeek ist DeepSeek-V4 (Flash und Pro), veröffentlicht als Open Weights unter MIT-Lizenz (Preview: 24. April 2026). Die DeepSeek-API liefert jetzt V4: Die Aliase deepseek-chat (V3-Generation) und deepseek-reasoner (R1-Generation) wurden als nach dem 24. Juli 2026 vollständig abgeschaltet angekündigt. Die R1-Distills sind eigenständige Open-Weight-Releases, waren nicht Teil dieser Ankündigung und laufen weiterhin lokal. V4 selbst ist kein Modell für Consumer-GPUs: V4-Pro hat 1,6T Parameter insgesamt (49B aktiv), das ursprüngliche V4-Flash 284B (13B aktiv). Selbst bei 4-Bit-Präzision (Parameterzahl × 0,5 Byte) benötigen allein die Gewichte grob 140 GB (Flash) bis 800 GB (Pro); die Modellkarten von DeepSeek nennen keine GPU-Anforderung. Für Reasoning auf einer einzelnen Consumer-GPU bleiben die Distills die praktische Wahl.',
         ],
       },
@@ -259,9 +259,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related-articles',
         title: 'Verwandte Anleitungen',
         items: [
-          '[Bester DeepSeek Distill für Ihre GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — passen Sie Ihre Karte an einen Distill an, plus Ollama-Befehl und erwartete tok/s',
-          '[Bestes lokales Reasoning-Modell 2026: DeepSeek-R1 im Ranking](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — der vollständige Ranking-Leitfaden mit Benchmarks',
-          '[DeepSeek-V3 lokale Hardware-Anforderungen](/prompt-bites/deepseek-v3-local-hardware-requirements) — das V3-Chat-Modell-Pendant',
+          '[Bester DeepSeek Distill für Ihre GPU](/de/prompt-bites/best-deepseek-distill-for-your-gpu) — passen Sie Ihre Karte an einen Distill an, plus Ollama-Befehl und erwartete tok/s',
+          '[Bestes lokales Reasoning-Modell 2026: DeepSeek-R1 im Ranking](/de/local-llms/best-local-reasoning-model-deepseek-r1-2026) — der vollständige Ranking-Leitfaden mit Benchmarks',
+          '[DeepSeek-V3 lokale Hardware-Anforderungen](/de/prompt-bites/deepseek-v3-local-hardware-requirements) — das V3-Chat-Modell-Pendant',
         ],
       },
     },
@@ -327,7 +327,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       masterTable: {
         id: 'vram-table',
         title: 'VRAM des distillations DeepSeek-R1 par quantification',
-        content: 'Les chiffres de VRAM incluent une petite marge pour le contexte et le cache KV en plus de la taille brute du fichier. Q4_K_M est le format par défaut d\'Ollama et le meilleur compromis taille-qualité pour le raisonnement. Utilisez Q8_0 uniquement si vous avez de la VRAM disponible et souhaitez un gain de qualité marginal ; FP16 vaut rarement la peine en local.',
+        content: 'Les chiffres de VRAM incluent une petite marge pour le contexte et le cache KV en plus de la taille brute du fichier. Q4_K_M est le format par défaut d\'Ollama et un compromis taille-qualité très répandu pour le raisonnement. Utilisez Q8_0 uniquement si vous avez de la VRAM disponible et souhaitez un gain de qualité marginal ; FP16 vaut rarement la peine en local.',
         tableFormat: true,
         columns: ['Distillation', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', 'GPU minimum (Q4_K_M)'],
         rows: [
@@ -350,8 +350,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Quelle quantification choisir ?',
         content: [
           '**Utilisez Q4_K_M pour presque tout** — c\'est le format par défaut d\'Ollama et il maintient une qualité de raisonnement élevée tout en logeant le plus de modèles par GB. Choisissez-le sauf raison précise contraire.',
-          '**Utilisez Q8_0 uniquement avec de la VRAM disponible** — il double environ l\'empreinte pour un gain de qualité marginal qui change rarement une réponse de raisonnement. Pertinent sur une carte 24 GB avec le 14B, guère ailleurs.',
-          '**Évitez FP16 en local** — à environ 4× la taille Q4_K_M, il pousse le 32B vers du matériel de classe 80 GB sans avantage pratique de raisonnement par rapport à Q8_0.',
+          '**Utilisez Q8_0 uniquement avec de la VRAM disponible** — il double environ l\'empreinte pour un gain de qualité marginal qui change généralement peu une réponse de raisonnement. Pertinent sur une carte 24 GB avec le 14B, guère ailleurs.',
+          '**Évitez FP16 en local** — à environ 4× la taille Q4_K_M, il pousse le 32B vers du matériel de classe 80 GB pour un avantage pratique de raisonnement limité par rapport à Q8_0 dans la plupart des configurations locales.',
         ],
       },
       fourteenB: {
@@ -369,7 +369,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs R1 : ne les confondez pas',
         content: [
-          '**DeepSeek-V3 est un modèle de chat ; DeepSeek-R1 (et ces distillations) sont des modèles de raisonnement.** Ce tableau concerne uniquement la famille de raisonnement R1. Si vous cherchez V3, c\'est un modèle de chat MoE 671B qui n\'est pas non plus exécutable par le grand public — voir le [bite matériel DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**DeepSeek-V3 est un modèle de chat ; DeepSeek-R1 (et ces distillations) sont des modèles de raisonnement.** Ce tableau concerne uniquement la famille de raisonnement R1. Si vous cherchez V3, c\'est un modèle de chat MoE 671B qui n\'est pas non plus exécutable par le grand public — voir le [bite matériel DeepSeek-V3](/fr/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**Mise à jour :** la génération actuelle de DeepSeek est DeepSeek-V4 (Flash et Pro), publiée en poids ouverts sous licence MIT (préversion : 24 avril 2026). L\'API de DeepSeek sert désormais V4 : les alias deepseek-chat (génération V3) et deepseek-reasoner (génération R1) ont été annoncés comme totalement retirés après le 24 juillet 2026. Les distillés R1 sont des publications open-weight distinctes, ne faisaient pas partie de cet avis et tournent toujours en local. V4 n\'est pas un modèle pour GPU grand public : V4-Pro compte 1.6T de paramètres au total (49B actifs) et le V4-Flash d\'origine 284B (13B actifs). Même en précision 4 bits (nombre de paramètres × 0.5 octet), les seuls poids demandent environ 140 Go (Flash) à 800 Go (Pro), et les fiches de modèle de DeepSeek n\'indiquent aucune exigence GPU. Pour du raisonnement sur un seul GPU grand public, les distillés restent le choix pratique.',
         ],
       },
@@ -391,9 +391,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related-articles',
         title: 'Guides associés',
         items: [
-          '[Meilleure distillation DeepSeek pour votre GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — associez votre carte à une distillation, avec la commande Ollama et les tok/s attendus',
-          '[Meilleur modèle de raisonnement local 2026 : classement DeepSeek-R1](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — le guide de classement complet avec benchmarks',
-          '[Exigences matérielles locales DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — l\'équivalent du modèle de chat V3',
+          '[Meilleure distillation DeepSeek pour votre GPU](/fr/prompt-bites/best-deepseek-distill-for-your-gpu) — associez votre carte à une distillation, avec la commande Ollama et les tok/s attendus',
+          '[Meilleur modèle de raisonnement local 2026 : classement DeepSeek-R1](/fr/local-llms/best-local-reasoning-model-deepseek-r1-2026) — le guide de classement complet avec benchmarks',
+          '[Exigences matérielles locales DeepSeek-V3](/fr/prompt-bites/deepseek-v3-local-hardware-requirements) — l\'équivalent du modèle de chat V3',
         ],
       },
     },
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       masterTable: {
         id: 'vram-table',
         title: '量子化別 DeepSeek-R1 Distill VRAM',
-        content: 'VRAMの数値には、生のファイルサイズに加えてコンテキストとKVキャッシュ用の小さな余裕が含まれています。Q4_K_MはOllamaのデフォルトで、推論におけるサイズと品質のバランスが最も優れています。VRAMに余裕があり、わずかな品質向上を求める場合のみQ8_0を使用してください。FP16はローカルでは価値があることはほとんどありません。',
+        content: 'VRAMの数値には、生のファイルサイズに加えてコンテキストとKVキャッシュ用の小さな余裕が含まれています。Q4_K_MはOllamaのデフォルトで、推論におけるサイズと品質のバランスとして広く使われています。VRAMに余裕があり、わずかな品質向上を求める場合のみQ8_0を使用してください。FP16はローカルでは価値があることはほとんどありません。',
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', '最小GPU (Q4_K_M)'],
         rows: [
@@ -482,8 +482,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'どの量子化を選ぶべきか？',
         content: [
           '**ほぼすべてにQ4_K_Mを使用してください** — Ollamaのデフォルトで、GBあたり最も多くのモデルを収めながら推論品質を高く保ちます。特別な理由がない限りこれを選んでください。',
-          '**Q8_0はVRAMに余裕がある場合のみ使用してください** — フットプリントを約2倍にしますが、品質向上はわずかで、推論の回答を変えることはほとんどありません。24 GBカードで14Bを動かす場合には価値がありますが、それ以外ではほぼ不要です。',
-          '**ローカルではFP16を避けてください** — Q4_K_Mサイズの約4倍で、32Bを80 GBクラスのハードウェアに押し上げますが、Q8_0に対する実用的な推論上の利点はありません。',
+          '**Q8_0はVRAMに余裕がある場合のみ使用してください** — フットプリントを約2倍にしますが、品質向上はわずかで、推論の回答への影響は通常小さいです。24 GBカードで14Bを動かす場合には価値がありますが、それ以外ではほぼ不要です。',
+          '**ローカルではFP16を避けてください** — Q4_K_Mサイズの約4倍で、32Bを80 GBクラスのハードウェアに押し上げますが、Q8_0に対する実用的な推論上の利点は、ほとんどのローカル環境では小さいです。',
         ],
       },
       fourteenB: {
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3とR1：混同しないでください',
         content: [
-          '**DeepSeek-V3はチャットモデルで、DeepSeek-R1（およびこれらのDistill）は推論モデルです。** この表はR1推論ファミリー専用です。V3をお探しの場合、それは671B MoEチャットモデルで、これも一般消費者向けハードウェアでは動作しません — [DeepSeek V3ハードウェアbite](/prompt-bites/deepseek-v3-local-hardware-requirements)をご覧ください。',
+          '**DeepSeek-V3はチャットモデルで、DeepSeek-R1（およびこれらのDistill）は推論モデルです。** この表はR1推論ファミリー専用です。V3をお探しの場合、それは671B MoEチャットモデルで、これも一般消費者向けハードウェアでは動作しません — [DeepSeek V3ハードウェアbite](/ja/prompt-bites/deepseek-v3-local-hardware-requirements)をご覧ください。',
           '**更新:** DeepSeekの現在の世代はDeepSeek-V4(FlashおよびPro)で、MITライセンスのオープンウェイトとして公開されています(プレビュー版は2026年4月24日)。DeepSeekのAPIは現在V4を提供しており、deepseek-chat(V3世代)とdeepseek-reasoner(R1世代)のエイリアスは2026年7月24日以降に完全に廃止されると告知されました。R1の蒸留モデルは独立したオープンウェイトのリリースで、この告知の対象ではなく、引き続きローカルで動作します。V4自体はコンシューマーGPU向けのモデルではありません。V4-Proは総パラメータ1.6T(アクティブ49B)、当初のV4-Flashは284B(アクティブ13B)で、4ビット精度(パラメータ数×0.5バイト)でも重みだけでおよそ140 GB(Flash)から800 GB(Pro)が必要です。DeepSeekのモデルカードにGPU要件の記載はありません。コンシューマーGPU1枚での推論には、引き続き蒸留モデルが現実的な選択肢です。',
         ],
       },
@@ -523,9 +523,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related-articles',
         title: '関連ガイド',
         items: [
-          '[あなたのGPUに最適なDeepSeek Distill](/prompt-bites/best-deepseek-distill-for-your-gpu) — カードをDistillに合わせ、Ollamaコマンドと想定tok/sも掲載',
-          '[2026年版 最適なローカル推論モデル：DeepSeek-R1ランキング](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — ベンチマーク付きの完全なランキングガイド',
-          '[DeepSeek-V3 ローカルハードウェア要件](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3チャットモデルの対応版',
+          '[あなたのGPUに最適なDeepSeek Distill](/ja/prompt-bites/best-deepseek-distill-for-your-gpu) — カードをDistillに合わせ、Ollamaコマンドと想定tok/sも掲載',
+          '[2026年版 最適なローカル推論モデル：DeepSeek-R1ランキング](/ja/local-llms/best-local-reasoning-model-deepseek-r1-2026) — ベンチマーク付きの完全なランキングガイド',
+          '[DeepSeek-V3 ローカルハードウェア要件](/ja/prompt-bites/deepseek-v3-local-hardware-requirements) — V3チャットモデルの対応版',
         ],
       },
     },
@@ -591,7 +591,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       masterTable: {
         id: 'vram-table',
         title: '按量化等级的 DeepSeek-R1 Distill 显存',
-        content: '显存数值在原始文件大小之上，包含了用于上下文和 KV 缓存的少量余量。Q4_K_M 是 Ollama 默认值，也是推理任务中大小与质量的最佳平衡。仅当你有富余显存并希望获得边际质量提升时才使用 Q8_0；FP16 在本地很少值得使用。',
+        content: '显存数值在原始文件大小之上，包含了用于上下文和 KV 缓存的少量余量。Q4_K_M 是 Ollama 默认值，也是推理任务中被广泛采用的大小与质量平衡。仅当你有富余显存并希望获得边际质量提升时才使用 Q8_0；FP16 在本地很少值得使用。',
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (显存)', 'Q8_0 (显存)', 'FP16 (显存)', '最低 GPU (Q4_K_M)'],
         rows: [
@@ -614,8 +614,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '应该选择哪种量化？',
         content: [
           '**几乎所有情况都用 Q4_K_M**——它是 Ollama 默认值，在保持高推理质量的同时让每 GB 容纳最多的模型。除非有特定理由，否则就选它。',
-          '**仅在有富余显存时使用 Q8_0**——它使占用大约翻倍，换来的质量提升微乎其微，几乎不会改变推理答案。在 24 GB 显卡上运行 14B 时值得，其他情况意义不大。',
-          '**本地请跳过 FP16**——它约为 Q4_K_M 大小的 4 倍，会把 32B 推到 80 GB 级别的硬件上，相比 Q8_0 却没有实际的推理收益。',
+          '**仅在有富余显存时使用 Q8_0**——它使占用大约翻倍，换来的质量提升微乎其微，通常对推理答案影响很小。在 24 GB 显卡上运行 14B 时值得，其他情况意义不大。',
+          '**本地请跳过 FP16**——它约为 Q4_K_M 大小的 4 倍，会把 32B 推到 80 GB 级别的硬件上，相比 Q8_0 在大多数本地环境中实际的推理收益很小。',
         ],
       },
       fourteenB: {
@@ -633,7 +633,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 与 R1：不要混淆',
         content: [
-          '**DeepSeek-V3 是对话模型；DeepSeek-R1（以及这些 distill）是推理模型。** 此表仅针对 R1 推理系列。如果你要找的是 V3，它是一款 671B MoE 对话模型，同样无法在消费级硬件上运行——参见 [DeepSeek-V3 硬件速览](/prompt-bites/deepseek-v3-local-hardware-requirements)。',
+          '**DeepSeek-V3 是对话模型；DeepSeek-R1（以及这些 distill）是推理模型。** 此表仅针对 R1 推理系列。如果你要找的是 V3，它是一款 671B MoE 对话模型，同样无法在消费级硬件上运行——参见 [DeepSeek-V3 硬件速览](/zh/prompt-bites/deepseek-v3-local-hardware-requirements)。',
           '**更新：** DeepSeek 当前一代是 DeepSeek-V4（Flash 和 Pro），以 MIT 许可的开放权重发布（预览版：2026 年 4 月 24 日）。DeepSeek 的 API 现在提供 V4：deepseek-chat（V3 世代）和 deepseek-reasoner（R1 世代）别名已宣布在 2026 年 7 月 24 日之后完全停用。R1 蒸馏版是独立的开放权重发布，不在该通知范围内，仍可在本地运行。V4 本身并不是消费级 GPU 模型：V4-Pro 总参数 1.6T（激活 49B），最初的 V4-Flash 为 284B（激活 13B），即使按 4 位精度（参数量 × 0.5 字节）计算，仅权重就大约需要 140 GB（Flash）到 800 GB（Pro），而且 DeepSeek 的模型卡未列出 GPU 要求。若要在单张消费级 GPU 上做推理，蒸馏版仍是务实之选。',
         ],
       },
@@ -655,9 +655,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related-articles',
         title: '相关指南',
         items: [
-          '[适合你 GPU 的最佳 DeepSeek Distill](/prompt-bites/best-deepseek-distill-for-your-gpu) — 为你的显卡匹配 distill，并附 Ollama 命令和预期 tok/s',
-          '[2026 最佳本地推理模型：DeepSeek-R1 排名](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 含基准测试的完整排名指南',
-          '[DeepSeek-V3 本地硬件要求](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 对话模型的对应版本',
+          '[适合你 GPU 的最佳 DeepSeek Distill](/zh/prompt-bites/best-deepseek-distill-for-your-gpu) — 为你的显卡匹配 distill，并附 Ollama 命令和预期 tok/s',
+          '[2026 最佳本地推理模型：DeepSeek-R1 排名](/zh/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 含基准测试的完整排名指南',
+          '[DeepSeek-V3 本地硬件要求](/zh/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 对话模型的对应版本',
         ],
       },
     },
@@ -723,7 +723,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       masterTable: {
         id: 'vram-table',
         title: 'VRAM de DeepSeek-R1 Distill por cuantización',
-        content: 'Las cifras de VRAM incluyen un pequeño margen para el contexto y la caché KV además del tamaño bruto del archivo. Q4_K_M es el predeterminado de Ollama y el mejor equilibrio entre tamaño y calidad para el razonamiento. Usa Q8_0 solo si tienes VRAM de sobra y quieres una mejora marginal de calidad; FP16 rara vez vale la pena en local.',
+        content: 'Las cifras de VRAM incluyen un pequeño margen para el contexto y la caché KV además del tamaño bruto del archivo. Q4_K_M es el predeterminado de Ollama y un equilibrio entre tamaño y calidad muy utilizado para el razonamiento. Usa Q8_0 solo si tienes VRAM de sobra y quieres una mejora marginal de calidad; FP16 rara vez vale la pena en local.',
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', 'GPU mínima (Q4_K_M)'],
         rows: [
@@ -746,8 +746,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '¿Qué cuantización deberías elegir?',
         content: [
           '**Usa Q4_K_M para casi todo**: es el predeterminado de Ollama y mantiene alta la calidad de razonamiento mientras alberga la mayor cantidad de modelos por GB. Elígelo a menos que tengas una razón concreta para no hacerlo.',
-          '**Usa Q8_0 solo con VRAM de sobra**: duplica aproximadamente el consumo a cambio de una mejora de calidad marginal que rara vez cambia una respuesta de razonamiento. Vale la pena en una tarjeta de 24 GB con el 14B, poco más.',
-          '**Evita FP16 en local**: con unas 4× el tamaño de Q4_K_M, empuja el 32B a hardware de clase 80 GB sin beneficio práctico de razonamiento frente a Q8_0.',
+          '**Usa Q8_0 solo con VRAM de sobra**: duplica aproximadamente el consumo a cambio de una mejora de calidad marginal que normalmente cambia poco una respuesta de razonamiento. Vale la pena en una tarjeta de 24 GB con el 14B, poco más.',
+          '**Evita FP16 en local**: con unas 4× el tamaño de Q4_K_M, empuja el 32B a hardware de clase 80 GB con poco beneficio práctico de razonamiento frente a Q8_0 en la mayoría de configuraciones locales.',
         ],
       },
       fourteenB: {
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs R1: no los confundas',
         content: [
-          '**DeepSeek-V3 es un modelo de chat; DeepSeek-R1 (y estos distills) son modelos de razonamiento.** Esta tabla es solo para la familia de razonamiento R1. Si buscas V3, es un modelo de chat MoE de 671B que tampoco puede ejecutarse en hardware de consumo; consulta el [resumen de hardware de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**DeepSeek-V3 es un modelo de chat; DeepSeek-R1 (y estos distills) son modelos de razonamiento.** Esta tabla es solo para la familia de razonamiento R1. Si buscas V3, es un modelo de chat MoE de 671B que tampoco puede ejecutarse en hardware de consumo; consulta el [resumen de hardware de DeepSeek-V3](/es/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**Actualización:** la generación actual de DeepSeek es DeepSeek-V4 (Flash y Pro), publicada como pesos abiertos con licencia MIT (versión preliminar: 24 de abril de 2026). La API de DeepSeek ya sirve V4: los alias deepseek-chat (generación V3) y deepseek-reasoner (generación R1) se anunciaron como totalmente retirados después del 24 de julio de 2026. Los destilados de R1 son lanzamientos de pesos abiertos independientes, no formaban parte de ese aviso y siguen ejecutándose en local. V4 no es un modelo para GPU de consumo: V4-Pro tiene 1.6T de parámetros en total (49B activos) y el V4-Flash original 284B (13B activos). Incluso con precisión de 4 bits (parámetros × 0.5 bytes), solo los pesos requieren unos 140 GB (Flash) a 800 GB (Pro), y las fichas de modelo de DeepSeek no indican ningún requisito de GPU. Para razonamiento en una sola GPU de consumo, los destilados siguen siendo la opción práctica.',
         ],
       },
@@ -787,9 +787,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related-articles',
         title: 'Guías relacionadas',
         items: [
-          '[El mejor distill de DeepSeek para tu GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — empareja tu tarjeta con un distill, más el comando de Ollama y los tok/s esperados',
-          '[Mejor modelo de razonamiento local 2026: DeepSeek-R1 clasificado](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — la guía completa con clasificación y benchmarks',
-          '[Requisitos de hardware local de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — la contraparte del modelo de chat V3',
+          '[El mejor distill de DeepSeek para tu GPU](/es/prompt-bites/best-deepseek-distill-for-your-gpu) — empareja tu tarjeta con un distill, más el comando de Ollama y los tok/s esperados',
+          '[Mejor modelo de razonamiento local 2026: DeepSeek-R1 clasificado](/es/local-llms/best-local-reasoning-model-deepseek-r1-2026) — la guía completa con clasificación y benchmarks',
+          '[Requisitos de hardware local de DeepSeek-V3](/es/prompt-bites/deepseek-v3-local-hardware-requirements) — la contraparte del modelo de chat V3',
         ],
       },
     },
@@ -855,7 +855,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       masterTable: {
         id: 'vram-table',
         title: 'VRAM do DeepSeek-R1 Distill por quantização',
-        content: 'Os valores de VRAM incluem uma pequena folga para contexto e cache KV além do tamanho bruto do arquivo. O Q4_K_M é o padrão do Ollama e o melhor equilíbrio entre tamanho e qualidade para raciocínio. Use o Q8_0 apenas se tiver VRAM sobrando e quiser um ganho marginal de qualidade; o FP16 raramente vale a pena localmente.',
+        content: 'Os valores de VRAM incluem uma pequena folga para contexto e cache KV além do tamanho bruto do arquivo. O Q4_K_M é o padrão do Ollama e um equilíbrio entre tamanho e qualidade amplamente usado para raciocínio. Use o Q8_0 apenas se tiver VRAM sobrando e quiser um ganho marginal de qualidade; o FP16 raramente vale a pena localmente.',
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', 'GPU mínima (Q4_K_M)'],
         rows: [
@@ -878,8 +878,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Qual quantização você deve escolher?',
         content: [
           '**Use o Q4_K_M para quase tudo** — é o padrão do Ollama e mantém alta a qualidade de raciocínio enquanto acomoda o maior número de modelos por GB. Escolha-o a menos que tenha um motivo específico para não fazê-lo.',
-          '**Use o Q8_0 apenas com VRAM sobrando** — ele praticamente dobra o consumo em troca de um ganho marginal de qualidade que raramente muda uma resposta de raciocínio. Vale a pena em uma placa de 24 GB rodando o 14B, e pouco mais.',
-          '**Pule o FP16 localmente** — com cerca de 4× o tamanho do Q4_K_M, ele empurra o 32B para hardware da classe de 80 GB sem benefício prático de raciocínio em relação ao Q8_0.',
+          '**Use o Q8_0 apenas com VRAM sobrando** — ele praticamente dobra o consumo em troca de um ganho marginal de qualidade que normalmente muda pouco uma resposta de raciocínio. Vale a pena em uma placa de 24 GB rodando o 14B, e pouco mais.',
+          '**Pule o FP16 localmente** — com cerca de 4× o tamanho do Q4_K_M, ele empurra o 32B para hardware da classe de 80 GB com pouco benefício prático de raciocínio em relação ao Q8_0 na maioria das configurações locais.',
         ],
       },
       fourteenB: {
@@ -897,7 +897,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs R1: não confunda',
         content: [
-          '**O DeepSeek-V3 é um modelo de chat; o DeepSeek-R1 (e estes distills) são modelos de raciocínio.** Esta tabela é só para a família de raciocínio R1. Se você procura o V3, ele é um modelo de chat MoE de 671B que também não roda em hardware de consumo — veja a [análise de hardware do DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**O DeepSeek-V3 é um modelo de chat; o DeepSeek-R1 (e estes distills) são modelos de raciocínio.** Esta tabela é só para a família de raciocínio R1. Se você procura o V3, ele é um modelo de chat MoE de 671B que também não roda em hardware de consumo — veja a [análise de hardware do DeepSeek-V3](/pt/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**Atualização:** a geração atual da DeepSeek é o DeepSeek-V4 (Flash e Pro), publicado como pesos abertos sob licença MIT (prévia: 24 de abril de 2026). A API da DeepSeek agora serve o V4: os aliases deepseek-chat (geração V3) e deepseek-reasoner (geração R1) foram anunciados como totalmente desativados após 24 de julho de 2026. Os destilados do R1 são lançamentos de pesos abertos independentes, não faziam parte desse aviso e continuam rodando localmente. O V4 em si não é um modelo para GPU de consumo: o V4-Pro tem 1.6T de parâmetros no total (49B ativos) e o V4-Flash original 284B (13B ativos). Mesmo com precisão de 4 bits (parâmetros × 0.5 byte), só os pesos exigem cerca de 140 GB (Flash) a 800 GB (Pro), e as fichas de modelo da DeepSeek não listam nenhum requisito de GPU. Para raciocínio em uma única GPU de consumo, os destilados continuam sendo a escolha prática.',
         ],
       },
@@ -919,9 +919,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related-articles',
         title: 'Guias relacionados',
         items: [
-          '[Melhor distill do DeepSeek para sua GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — combine sua placa com um distill, além do comando do Ollama e os tok/s esperados',
-          '[Melhor modelo de raciocínio local 2026: DeepSeek-R1 no ranking](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — o guia completo com ranking e benchmarks',
-          '[Requisitos de hardware local do DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — a contraparte do modelo de chat V3',
+          '[Melhor distill do DeepSeek para sua GPU](/pt/prompt-bites/best-deepseek-distill-for-your-gpu) — combine sua placa com um distill, além do comando do Ollama e os tok/s esperados',
+          '[Melhor modelo de raciocínio local 2026: DeepSeek-R1 no ranking](/pt/local-llms/best-local-reasoning-model-deepseek-r1-2026) — o guia completo com ranking e benchmarks',
+          '[Requisitos de hardware local do DeepSeek-V3](/pt/prompt-bites/deepseek-v3-local-hardware-requirements) — a contraparte do modelo de chat V3',
         ],
       },
     },
@@ -987,7 +987,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       masterTable: {
         id: 'vram-table',
         title: 'VRAM لنماذج DeepSeek-R1 Distill حسب التكميم',
-        content: 'تتضمن أرقام VRAM هامشًا صغيرًا للسياق وذاكرة KV cache فوق حجم الملف الخام. Q4_K_M هو الافتراضي في Ollama وأفضل موازنة بين الحجم والجودة للاستدلال. استخدم Q8_0 فقط إذا كان لديك VRAM فائض وتريد تحسينًا هامشيًا في الجودة؛ ونادرًا ما يستحق FP16 العناء محليًا.',
+        content: 'تتضمن أرقام VRAM هامشًا صغيرًا للسياق وذاكرة KV cache فوق حجم الملف الخام. Q4_K_M هو الافتراضي في Ollama وموازنة شائعة الاستخدام بين الحجم والجودة للاستدلال. استخدم Q8_0 فقط إذا كان لديك VRAM فائض وتريد تحسينًا هامشيًا في الجودة؛ ونادرًا ما يستحق FP16 العناء محليًا.',
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', 'أدنى GPU (Q4_K_M)'],
         rows: [
@@ -1010,8 +1010,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'أي تكميم ينبغي أن تختار؟',
         content: [
           '**استخدم Q4_K_M لكل شيء تقريبًا** — فهو الافتراضي في Ollama ويحافظ على جودة استدلال عالية مع استيعاب أكبر عدد من النماذج لكل GB. اخترْه ما لم يكن لديك سبب محدد لغير ذلك.',
-          '**استخدم Q8_0 فقط مع VRAM فائض** — فهو يضاعف البصمة تقريبًا مقابل تحسين هامشي في الجودة نادرًا ما يغيّر إجابة استدلالية. يستحق العناء على بطاقة 24 GB تشغّل نموذج 14B، وليس أكثر من ذلك بكثير.',
-          '**تجنّب FP16 محليًا** — فبحجم نحو 4 أضعاف Q4_K_M، يدفع نموذج 32B إلى عتاد من فئة 80 GB دون فائدة استدلالية عملية مقارنة بـ Q8_0.',
+          '**استخدم Q8_0 فقط مع VRAM فائض** — فهو يضاعف البصمة تقريبًا مقابل تحسين هامشي في الجودة يغيّر الإجابة الاستدلالية عادةً بقدر ضئيل. يستحق العناء على بطاقة 24 GB تشغّل نموذج 14B، وليس أكثر من ذلك بكثير.',
+          '**تجنّب FP16 محليًا** — فبحجم نحو 4 أضعاف Q4_K_M، يدفع نموذج 32B إلى عتاد من فئة 80 GB مع فائدة استدلالية عملية ضئيلة مقارنة بـ Q8_0 في معظم الإعدادات المحلية.',
         ],
       },
       fourteenB: {
@@ -1029,7 +1029,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 مقابل R1: لا تخلط بينهما',
         content: [
-          '**DeepSeek-V3 نموذج محادثة؛ أما DeepSeek-R1 (وهذه النماذج المقطّرة distill) فهي نماذج استدلال.** هذا الجدول مخصص لعائلة الاستدلال R1 فقط. إذا كنت تبحث عن V3، فهو نموذج محادثة MoE بحجم 671B لا يمكن تشغيله أيضًا على عتاد المستهلك — راجع [موجز عتاد DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**DeepSeek-V3 نموذج محادثة؛ أما DeepSeek-R1 (وهذه النماذج المقطّرة distill) فهي نماذج استدلال.** هذا الجدول مخصص لعائلة الاستدلال R1 فقط. إذا كنت تبحث عن V3، فهو نموذج محادثة MoE بحجم 671B لا يمكن تشغيله أيضًا على عتاد المستهلك — راجع [موجز عتاد DeepSeek-V3](/ar/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**تحديث:** الجيل الحالي من DeepSeek هو DeepSeek-V4 (Flash وPro)، صدر بأوزان مفتوحة بترخيص MIT (النسخة التجريبية: 24 أبريل 2026). تقدّم واجهة DeepSeek البرمجية الآن V4: فقد أُعلن أن الاسمين المستعارين deepseek-chat (جيل V3) وdeepseek-reasoner (جيل R1) سيُوقفان نهائيًا بعد 24 يوليو 2026. نماذج R1 المُقطّرة إصدارات مستقلة بأوزان مفتوحة، ولم تكن ضمن هذا الإعلان، وما زالت تعمل محليًا. أما V4 نفسه فليس نموذجًا لبطاقات الرسوميات الاستهلاكية: يضم V4-Pro إجمالي 1.6T معامل (49B نشط)، ويضم V4-Flash الأصلي 284B (13B نشط)، وحتى بدقة 4 بت (عدد المعاملات × 0.5 بايت) تحتاج الأوزان وحدها إلى نحو 140 جيجابايت (Flash) حتى 800 جيجابايت (Pro)، ولا تذكر بطاقات نماذج DeepSeek أي متطلبات لوحدة GPU. وللاستدلال على بطاقة استهلاكية واحدة تبقى النماذج المُقطّرة الخيار العملي.',
         ],
       },
@@ -1051,9 +1051,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related-articles',
         title: 'أدلة ذات صلة',
         items: [
-          '[أفضل DeepSeek Distill لبطاقتك GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — طابِق بطاقتك مع نموذج distill، مع أمر Ollama ومعدل tok/s المتوقع',
-          '[أفضل نموذج استدلال محلي 2026: تصنيف DeepSeek-R1](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — الدليل الكامل بالتصنيف والمعايير القياسية',
-          '[متطلبات العتاد المحلي لـ DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — النظير من نموذج المحادثة V3',
+          '[أفضل DeepSeek Distill لبطاقتك GPU](/ar/prompt-bites/best-deepseek-distill-for-your-gpu) — طابِق بطاقتك مع نموذج distill، مع أمر Ollama ومعدل tok/s المتوقع',
+          '[أفضل نموذج استدلال محلي 2026: تصنيف DeepSeek-R1](/ar/local-llms/best-local-reasoning-model-deepseek-r1-2026) — الدليل الكامل بالتصنيف والمعايير القياسية',
+          '[متطلبات العتاد المحلي لـ DeepSeek-V3](/ar/prompt-bites/deepseek-v3-local-hardware-requirements) — النظير من نموذج المحادثة V3',
         ],
       },
     },
@@ -1119,7 +1119,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       masterTable: {
         id: 'vram-table',
         title: '양자화별 DeepSeek-R1 Distill VRAM',
-        content: 'VRAM 수치에는 원본 파일 크기 외에 컨텍스트와 KV 캐시를 위한 약간의 여유가 포함됩니다. Q4_K_M은 Ollama 기본값이며 추론에서 크기 대 품질의 균형이 가장 좋습니다. VRAM이 남고 미미한 품질 향상을 원할 때만 Q8_0을 사용하십시오. FP16은 로컬에서 가치가 있는 경우가 드뭅니다.',
+        content: 'VRAM 수치에는 원본 파일 크기 외에 컨텍스트와 KV 캐시를 위한 약간의 여유가 포함됩니다. Q4_K_M은 Ollama 기본값이며 추론에서 크기 대 품질 균형으로 널리 쓰입니다. VRAM이 남고 미미한 품질 향상을 원할 때만 Q8_0을 사용하십시오. FP16은 로컬에서 가치가 있는 경우가 드뭅니다.',
         tableFormat: true,
         columns: ['Distill', 'Q4_K_M (VRAM)', 'Q8_0 (VRAM)', 'FP16 (VRAM)', '최소 GPU (Q4_K_M)'],
         rows: [
@@ -1142,8 +1142,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '어떤 양자화를 선택해야 합니까?',
         content: [
           '**거의 모든 경우에 Q4_K_M을 사용하십시오** — Ollama 기본값이며 GB당 가장 많은 모델을 담으면서도 추론 품질을 높게 유지합니다. 특별한 이유가 없다면 이것을 선택하십시오.',
-          '**Q8_0은 VRAM이 남을 때만 사용하십시오** — 사용량을 약 2배로 늘리는 대신 추론 답변을 거의 바꾸지 않는 미미한 품질 향상만 제공합니다. 24 GB 카드에서 14B를 구동할 때는 가치가 있지만 그 외에는 거의 없습니다.',
-          '**로컬에서는 FP16을 건너뛰십시오** — Q4_K_M 크기의 약 4배로, 32B를 80 GB급 하드웨어로 밀어 올리지만 Q8_0 대비 실질적인 추론 이점은 없습니다.',
+          '**Q8_0은 VRAM이 남을 때만 사용하십시오** — 사용량을 약 2배로 늘리는 대신 추론 답변에 대체로 큰 영향을 주지 않는 미미한 품질 향상만 제공합니다. 24 GB 카드에서 14B를 구동할 때는 가치가 있지만 그 외에는 거의 없습니다.',
+          '**로컬에서는 FP16을 건너뛰십시오** — Q4_K_M 크기의 약 4배로, 32B를 80 GB급 하드웨어로 밀어 올리지만 Q8_0 대비 대부분의 로컬 환경에서 실질적인 추론 이점은 작습니다.',
         ],
       },
       fourteenB: {
