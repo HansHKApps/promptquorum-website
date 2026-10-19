@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill VRAM Cheatsheet 2026: Every Quant',
     metaDescription: 'DeepSeek-R1 14B needs ~9.5 GB VRAM at Q4_K_M and fits a 16 GB card. Every distill (1.5B–70B) by quant: Q8_0, FP16, file size and minimum GPU.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: 'Local LLM users sizing a GPU for a DeepSeek-R1 distill across quantization levels',
     affiliateDisclosure: true,
@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
-    leadAnswerBlock: '**Every DeepSeek-R1 distill, by quantization: 1.5B fits 4 GB, 7B/8B fit 8 GB, 14B fits 16 GB, 32B fits 24 GB, and 70B needs dual-GPU — all at the Ollama default Q4_K_M.** Q8_0 roughly doubles the VRAM; FP16 roughly quadruples the Q4_K_M file size. This is the bookmark-it table for matching a distill to a card.',
+    leadAnswerBlock: '**Every DeepSeek-R1 distill, by quantization: 1.5B fits 4 GB, 7B/8B fit 8 GB, 14B fits 16 GB, 32B fits 24 GB, and 70B needs dual-GPU — all at the Ollama default Q4_K_M.** Q8_0 roughly doubles the VRAM; FP16 roughly quadruples the Q4_K_M file size. This is the bookmark-it table for matching a distill to a card. **Status:** R1 is no longer DeepSeek\'s current generation (DeepSeek-V4 is), but these distills are separate open-weight releases that still run locally.',
     quickAnswerTop: {
       en: {
         question: 'How much VRAM does each DeepSeek-R1 distill need?',
@@ -41,6 +41,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1 is no longer DeepSeek\'s current generation — DeepSeek-V4 (Flash and Pro, MIT-licensed open weights) is. The R1 distills are separate open-weight releases and still run locally.',
           'Q4_K_M (Ollama default) VRAM: 1.5B ~1.6 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~44 GB.',
           'Q8_0 is roughly 2× the Q4_K_M size; FP16 is roughly 4× the Q4_K_M file size.',
           'The 14B at Q4_K_M (~9.5 GB) is the sweet spot — fits a 16 GB card with context headroom.',
@@ -105,13 +106,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: Don\'t Confuse Them',
         content: [
           '**DeepSeek-V3 is a chat model; DeepSeek-R1 (and these distills) are reasoning models.** This table is for the R1 reasoning family only. If you are looking for V3, it is a 671B MoE chat model that is also not consumer-runnable — see the [DeepSeek-V3 hardware bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
-          '**Update:** DeepSeek has since released DeepSeek-V4 (Flash and Pro) as its newer flagship generation, also available as open weights. The R1 distills covered here are not being discontinued and remain fully valid to run locally — if you want the newest architecture, V4 is worth evaluating alongside them.',
+          '**Update:** DeepSeek\'s current generation is DeepSeek-V4 (Flash and Pro), released as open weights under the MIT license (preview: April 24, 2026). DeepSeek\'s API now serves V4: the deepseek-chat (V3-generation) and deepseek-reasoner (R1-generation) aliases were announced as fully retired after July 24, 2026. The R1 distills are separate open-weight releases that were not part of that notice, and they still run locally. V4 itself is not a consumer-GPU model: V4-Pro has 1.6T total parameters (49B active) and the original V4-Flash 284B (13B active), so even at 4-bit precision (parameter count × 0.5 byte) the weights alone need roughly 140 GB (Flash) to 800 GB (Pro), and DeepSeek\'s model cards list no GPU requirement. For reasoning on a single consumer GPU, the distills remain the practical pick.',
         ],
       },
       faq: {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
+          { q: 'Is DeepSeek-R1 still DeepSeek\'s current model?', a: 'No. DeepSeek\'s current generation is DeepSeek-V4 (Flash and Pro). The deepseek-reasoner (R1-generation) and deepseek-chat (V3-generation) API aliases were announced as fully retired after July 24, 2026. The open-weight R1 distills are separate releases, were not part of that notice, and still run locally with Ollama.' },
           { q: 'What is the VRAM for DeepSeek-R1-Distill-Qwen-32B?', a: 'About 20.5 GB at Q4_K_M, which fits a 24 GB RTX 4090 but leaves little room for long context. At Q8_0 it needs ~36 GB and at FP16 ~67 GB.' },
           { q: 'How much does Q8_0 add over Q4_K_M?', a: 'Roughly 2× the VRAM. For most reasoning tasks the quality gain is marginal, so Q4_K_M is the better default unless you have spare VRAM.' },
           { q: 'Can I run the 70B distill on one GPU?', a: 'No. At ~44 GB (Q4_K_M) it exceeds any single consumer card. Use two 24 GB GPUs or a 48 GB workstation card.' },
@@ -142,7 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill VRAM-Tabelle 2026: Jede Quant',
     metaDescription: 'DeepSeek-R1 14B braucht ~9.5 GB VRAM bei Q4_K_M und passt auf eine 16-GB-Karte. Jeder Distill (1.5B–70B) je Quant: Q8_0, FP16, Dateigröße, Mindest-GPU.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: 'Lokale-LLM-Nutzer, die eine GPU für einen DeepSeek-R1 Distill über mehrere Quantisierungsstufen hinweg dimensionieren',
     affiliateDisclosure: true,
@@ -151,7 +153,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
-    leadAnswerBlock: '**Jeder DeepSeek-R1 Distill nach Quantisierung: 1.5B passt in 4 GB, 7B/8B in 8 GB, 14B in 16 GB, 32B in 24 GB, und 70B benötigt zwei GPUs — alles beim Ollama-Standard Q4_K_M.** Q8_0 verdoppelt den VRAM ungefähr; FP16 vervierfacht die Q4_K_M-Dateigröße ungefähr. Dies ist die Tabelle zum Merken, um einen Distill auf eine Grafikkarte abzustimmen.',
+    leadAnswerBlock: '**Jeder DeepSeek-R1 Distill nach Quantisierung: 1.5B passt in 4 GB, 7B/8B in 8 GB, 14B in 16 GB, 32B in 24 GB, und 70B benötigt zwei GPUs — alles beim Ollama-Standard Q4_K_M.** Q8_0 verdoppelt den VRAM ungefähr; FP16 vervierfacht die Q4_K_M-Dateigröße ungefähr. Dies ist die Tabelle zum Merken, um einen Distill auf eine Grafikkarte abzustimmen. **Stand:** R1 ist nicht mehr die aktuelle Generation von DeepSeek (das ist DeepSeek-V4), aber diese Distills sind eigenständige Open-Weight-Releases und laufen weiterhin lokal.',
     quickAnswerTop: {
       de: {
         question: 'Wie viel VRAM benötigt jeder DeepSeek-R1 Distill?',
@@ -171,6 +173,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1 ist nicht mehr die aktuelle Generation von DeepSeek – das ist DeepSeek-V4 (Flash und Pro, Open Weights unter MIT-Lizenz). Die R1-Distills sind eigenständige Open-Weight-Releases und laufen weiterhin lokal.',
           'Q4_K_M (Ollama-Standard) VRAM: 1.5B ~1.6 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~44 GB.',
           'Q8_0 ist etwa das 2-Fache der Q4_K_M-Größe; FP16 etwa das 4-Fache der Q4_K_M-Dateigröße.',
           'Der 14B bei Q4_K_M (~9.5 GB) ist der Sweet Spot — passt mit Kontextreserve auf eine 16-GB-Karte.',
@@ -235,13 +238,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs. R1: Nicht verwechseln',
         content: [
           '**DeepSeek-V3 ist ein Chat-Modell; DeepSeek-R1 (und diese Distills) sind Reasoning-Modelle.** Diese Tabelle gilt nur für die R1-Reasoning-Familie. Wenn Sie V3 suchen: Es ist ein 671B-MoE-Chat-Modell, das ebenfalls nicht auf Consumer-Hardware läuft — siehe den [DeepSeek-V3 Hardware-Bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
-          '**Update:** DeepSeek hat inzwischen DeepSeek-V4 (Flash und Pro) als neuere Flaggschiff-Generation veröffentlicht, ebenfalls als offene Gewichte verfügbar. Die hier behandelten R1-Distillate werden nicht eingestellt und bleiben weiterhin uneingeschränkt lokal nutzbar — wer die neueste Architektur möchte, sollte V4 zusätzlich in Betracht ziehen.',
+          '**Update:** Die aktuelle Generation von DeepSeek ist DeepSeek-V4 (Flash und Pro), veröffentlicht als Open Weights unter MIT-Lizenz (Preview: 24. April 2026). Die DeepSeek-API liefert jetzt V4: Die Aliase deepseek-chat (V3-Generation) und deepseek-reasoner (R1-Generation) wurden als nach dem 24. Juli 2026 vollständig abgeschaltet angekündigt. Die R1-Distills sind eigenständige Open-Weight-Releases, waren nicht Teil dieser Ankündigung und laufen weiterhin lokal. V4 selbst ist kein Modell für Consumer-GPUs: V4-Pro hat 1,6T Parameter insgesamt (49B aktiv), das ursprüngliche V4-Flash 284B (13B aktiv). Selbst bei 4-Bit-Präzision (Parameterzahl × 0,5 Byte) benötigen allein die Gewichte grob 140 GB (Flash) bis 800 GB (Pro); die Modellkarten von DeepSeek nennen keine GPU-Anforderung. Für Reasoning auf einer einzelnen Consumer-GPU bleiben die Distills die praktische Wahl.',
         ],
       },
       faq: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
+          { q: 'Ist DeepSeek-R1 noch das aktuelle Modell von DeepSeek?', a: 'Nein. Die aktuelle Generation von DeepSeek ist DeepSeek-V4 (Flash und Pro). Die API-Aliase deepseek-reasoner (R1-Generation) und deepseek-chat (V3-Generation) wurden als nach dem 24. Juli 2026 vollständig abgeschaltet angekündigt. Die Open-Weight-R1-Distills sind eigenständige Releases, waren nicht Teil dieser Ankündigung und laufen weiterhin lokal mit Ollama.' },
           { q: 'Wie viel VRAM braucht DeepSeek-R1-Distill-Qwen-32B?', a: 'Etwa 20.5 GB bei Q4_K_M, was auf eine 24-GB-RTX-4090 passt, aber wenig Platz für langen Kontext lässt. Bei Q8_0 benötigt er ~36 GB und bei FP16 ~67 GB.' },
           { q: 'Wie viel fügt Q8_0 gegenüber Q4_K_M hinzu?', a: 'Etwa das 2-Fache des VRAM. Für die meisten Reasoning-Aufgaben ist der Qualitätsgewinn geringfügig, daher ist Q4_K_M der bessere Standard, sofern Sie keinen VRAM übrig haben.' },
           { q: 'Kann ich den 70B Distill auf einer GPU ausführen?', a: 'Nein. Mit ~44 GB (Q4_K_M) übersteigt er jede einzelne Consumer-Karte. Nutzen Sie zwei 24-GB-GPUs oder eine 48-GB-Workstation-Karte.' },
@@ -272,7 +276,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM DeepSeek-R1 Distill 2026 : chaque quant',
     metaDescription: 'DeepSeek-R1 14B demande ~9.5 GB de VRAM en Q4_K_M et tient sur une carte 16 GB. Chaque distillation (1.5B–70B) par quant : Q8_0, FP16, fichier, GPU minimum.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: 'Utilisateurs de LLM locaux dimensionnant un GPU pour une distillation DeepSeek-R1 selon les niveaux de quantification',
     affiliateDisclosure: true,
@@ -281,7 +285,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
-    leadAnswerBlock: '**Chaque distillation DeepSeek-R1, par quantification : 1.5B tient dans 4 GB, 7B/8B dans 8 GB, 14B dans 16 GB, 32B dans 24 GB, et 70B nécessite deux GPU — le tout au format Q4_K_M par défaut d\'Ollama.** Q8_0 double environ la VRAM ; FP16 quadruple environ la taille du fichier Q4_K_M. C\'est le tableau à garder pour associer une distillation à une carte.',
+    leadAnswerBlock: '**Chaque distillation DeepSeek-R1, par quantification : 1.5B tient dans 4 GB, 7B/8B dans 8 GB, 14B dans 16 GB, 32B dans 24 GB, et 70B nécessite deux GPU — le tout au format Q4_K_M par défaut d\'Ollama.** Q8_0 double environ la VRAM ; FP16 quadruple environ la taille du fichier Q4_K_M. C\'est le tableau à garder pour associer une distillation à une carte. **Situation :** R1 n\'est plus la génération actuelle de DeepSeek (c\'est DeepSeek-V4), mais ces distillés sont des publications open-weight distinctes qui tournent toujours en local.',
     quickAnswerTop: {
       fr: {
         question: 'Combien de VRAM nécessite chaque distillation DeepSeek-R1 ?',
@@ -301,6 +305,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1 n\'est plus la génération actuelle de DeepSeek : c\'est DeepSeek-V4 (Flash et Pro, poids ouverts sous licence MIT). Les distillés R1 sont des publications open-weight distinctes et tournent toujours en local.',
           'VRAM Q4_K_M (par défaut Ollama) : 1.5B ~1.6 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~44 GB.',
           'Q8_0 représente environ 2× la taille Q4_K_M ; FP16 environ 4× la taille du fichier Q4_K_M.',
           'Le 14B en Q4_K_M (~9.5 GB) est le meilleur compromis — il tient sur une carte 16 GB avec une marge de contexte.',
@@ -365,13 +370,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1 : ne les confondez pas',
         content: [
           '**DeepSeek-V3 est un modèle de chat ; DeepSeek-R1 (et ces distillations) sont des modèles de raisonnement.** Ce tableau concerne uniquement la famille de raisonnement R1. Si vous cherchez V3, c\'est un modèle de chat MoE 671B qui n\'est pas non plus exécutable par le grand public — voir le [bite matériel DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
-          '**Mise à jour :** DeepSeek a depuis publié DeepSeek-V4 (Flash et Pro) comme nouvelle génération phare, également disponible en poids ouverts. Les distillations R1 présentées ici ne sont pas abandonnées et restent pleinement utilisables en local — si vous voulez l\'architecture la plus récente, V4 mérite d\'être évalué en complément.',
+          '**Mise à jour :** la génération actuelle de DeepSeek est DeepSeek-V4 (Flash et Pro), publiée en poids ouverts sous licence MIT (préversion : 24 avril 2026). L\'API de DeepSeek sert désormais V4 : les alias deepseek-chat (génération V3) et deepseek-reasoner (génération R1) ont été annoncés comme totalement retirés après le 24 juillet 2026. Les distillés R1 sont des publications open-weight distinctes, ne faisaient pas partie de cet avis et tournent toujours en local. V4 n\'est pas un modèle pour GPU grand public : V4-Pro compte 1.6T de paramètres au total (49B actifs) et le V4-Flash d\'origine 284B (13B actifs). Même en précision 4 bits (nombre de paramètres × 0.5 octet), les seuls poids demandent environ 140 Go (Flash) à 800 Go (Pro), et les fiches de modèle de DeepSeek n\'indiquent aucune exigence GPU. Pour du raisonnement sur un seul GPU grand public, les distillés restent le choix pratique.',
         ],
       },
       faq: {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
+          { q: 'DeepSeek-R1 est-il toujours le modèle actuel de DeepSeek ?', a: 'Non. La génération actuelle de DeepSeek est DeepSeek-V4 (Flash et Pro). Les alias d\'API deepseek-reasoner (génération R1) et deepseek-chat (génération V3) ont été annoncés comme totalement retirés après le 24 juillet 2026. Les distillés R1 en poids ouverts sont des publications distinctes, ne faisaient pas partie de cet avis et tournent toujours en local avec Ollama.' },
           { q: 'Quelle est la VRAM pour DeepSeek-R1-Distill-Qwen-32B ?', a: 'Environ 20.5 GB en Q4_K_M, ce qui tient sur une RTX 4090 24 GB mais laisse peu de place pour un contexte long. En Q8_0 il nécessite ~36 GB et en FP16 ~67 GB.' },
           { q: 'Combien Q8_0 ajoute-t-il par rapport à Q4_K_M ?', a: 'Environ 2× la VRAM. Pour la plupart des tâches de raisonnement, le gain de qualité est marginal, donc Q4_K_M est le meilleur choix par défaut sauf si vous avez de la VRAM disponible.' },
           { q: 'Puis-je exécuter la distillation 70B sur un seul GPU ?', a: 'Non. À ~44 GB (Q4_K_M), elle dépasse toute carte grand public unique. Utilisez deux GPU de 24 GB ou une carte station de travail de 48 GB.' },
@@ -402,7 +408,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill VRAM早見表 2026：全量子化',
     metaDescription: 'DeepSeek-R1 14BはQ4_K_Mで約9.5 GBのVRAMを使い、16 GBカードに収まります。全Distill（1.5B〜70B）の量子化別VRAM・ファイルサイズ・最小GPUを掲載。',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: '量子化レベルを横断してDeepSeek-R1 Distill向けにGPUをサイジングするローカルLLMユーザー',
     affiliateDisclosure: true,
@@ -411,7 +417,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
-    leadAnswerBlock: '**DeepSeek-R1の各Distillを量子化別に：1.5Bは4 GB、7B/8Bは8 GB、14Bは16 GB、32Bは24 GB、70BはデュアルGPUが必要 — すべてOllamaデフォルトのQ4_K_Mでの数値です。** Q8_0はVRAMを約2倍にし、FP16はQ4_K_Mのファイルサイズを約4倍にします。これはDistillをカードに合わせるためのブックマーク用の表です。',
+    leadAnswerBlock: '**DeepSeek-R1の各Distillを量子化別に：1.5Bは4 GB、7B/8Bは8 GB、14Bは16 GB、32Bは24 GB、70BはデュアルGPUが必要 — すべてOllamaデフォルトのQ4_K_Mでの数値です。** Q8_0はVRAMを約2倍にし、FP16はQ4_K_Mのファイルサイズを約4倍にします。これはDistillをカードに合わせるためのブックマーク用の表です。**現状:** R1はDeepSeekの最新世代ではなくなりました(最新はDeepSeek-V4)。ただしこれらの蒸留モデルは独立したオープンウェイトのリリースであり、引き続きローカルで動作します。',
     quickAnswerTop: {
       ja: {
         question: 'DeepSeek-R1の各Distillに必要なVRAMはどれくらいですか？',
@@ -431,6 +437,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1はDeepSeekの最新世代ではなくなりました。現在の世代はDeepSeek-V4(FlashおよびPro、MITライセンスのオープンウェイト)です。R1の蒸留モデルは独立したオープンウェイトのリリースであり、引き続きローカルで動作します。',
           'Q4_K_M（Ollamaデフォルト）VRAM：1.5B ~1.6 GB、7B ~5.5 GB、8B ~6 GB、14B ~9.5 GB、32B ~20.5 GB、70B ~44 GB。',
           'Q8_0はQ4_K_Mサイズの約2倍、FP16はQ4_K_Mファイルサイズの約4倍です。',
           'Q4_K_Mの14B（~9.5 GB）が最適解です — コンテキストの余裕を持って16 GBカードに収まります。',
@@ -495,13 +502,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3とR1：混同しないでください',
         content: [
           '**DeepSeek-V3はチャットモデルで、DeepSeek-R1（およびこれらのDistill）は推論モデルです。** この表はR1推論ファミリー専用です。V3をお探しの場合、それは671B MoEチャットモデルで、これも一般消費者向けハードウェアでは動作しません — [DeepSeek V3ハードウェアbite](/prompt-bites/deepseek-v3-local-hardware-requirements)をご覧ください。',
-          '**更新:** DeepSeekはその後、新しいフラッグシップ世代としてDeepSeek-V4(FlashおよびPro)をリリースしました。オープンウェイトとしても提供されています。本記事で扱うR1の蒸留モデルは廃止されるものではなく、引き続きローカルで問題なく利用できます。最新のアーキテクチャを求める場合は、V4もあわせて検討する価値があります。',
+          '**更新:** DeepSeekの現在の世代はDeepSeek-V4(FlashおよびPro)で、MITライセンスのオープンウェイトとして公開されています(プレビュー版は2026年4月24日)。DeepSeekのAPIは現在V4を提供しており、deepseek-chat(V3世代)とdeepseek-reasoner(R1世代)のエイリアスは2026年7月24日以降に完全に廃止されると告知されました。R1の蒸留モデルは独立したオープンウェイトのリリースで、この告知の対象ではなく、引き続きローカルで動作します。V4自体はコンシューマーGPU向けのモデルではありません。V4-Proは総パラメータ1.6T(アクティブ49B)、当初のV4-Flashは284B(アクティブ13B)で、4ビット精度(パラメータ数×0.5バイト)でも重みだけでおよそ140 GB(Flash)から800 GB(Pro)が必要です。DeepSeekのモデルカードにGPU要件の記載はありません。コンシューマーGPU1枚での推論には、引き続き蒸留モデルが現実的な選択肢です。',
         ],
       },
       faq: {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
+          { q: 'DeepSeek-R1は今もDeepSeekの最新モデルですか?', a: 'いいえ。DeepSeekの現在の世代はDeepSeek-V4(FlashおよびPro)です。APIのエイリアスdeepseek-reasoner(R1世代)とdeepseek-chat(V3世代)は、2026年7月24日以降に完全に廃止されると告知されました。オープンウェイトのR1蒸留モデルは独立したリリースで、この告知の対象ではなく、引き続きOllamaでローカル実行できます。' },
           { q: 'DeepSeek-R1-Distill-Qwen-32BのVRAMはどれくらいですか？', a: 'Q4_K_Mで約20.5 GBで、24 GBのRTX 4090に収まりますが、長いコンテキスト用の余裕はほとんどありません。Q8_0では~36 GB、FP16では~67 GBが必要です。' },
           { q: 'Q8_0はQ4_K_Mに対してどれくらい増えますか？', a: 'VRAMで約2倍です。ほとんどの推論タスクでは品質向上はわずかなので、VRAMに余裕がない限りQ4_K_Mがより良いデフォルトです。' },
           { q: '70B Distillを1台のGPUで実行できますか？', a: 'いいえ。~44 GB（Q4_K_M）で、いかなる単一の消費者向けカードも超えます。24 GBのGPUを2台、または48 GBのワークステーションカードを使用してください。' },
@@ -532,7 +540,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill 显存速查表 2026：全量化',
     metaDescription: 'DeepSeek-R1 14B 在 Q4_K_M 下约需 9.5 GB 显存，可装入 16 GB 显卡。按量化等级列出全部 distill（1.5B–70B）的显存、文件大小和最低 GPU。',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: '需要为跨量化等级的 DeepSeek-R1 distill 选配 GPU 的本地 LLM 用户',
     affiliateDisclosure: true,
@@ -541,7 +549,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
-    leadAnswerBlock: '**按量化等级列出每个 DeepSeek-R1 distill：1.5B 需 4 GB，7B/8B 需 8 GB，14B 需 16 GB，32B 需 24 GB，70B 需双 GPU——均为 Ollama 默认的 Q4_K_M。** Q8_0 大约使显存翻倍；FP16 大约使 Q4_K_M 文件大小翻四倍。这是用来为 distill 匹配显卡、值得收藏的表格。',
+    leadAnswerBlock: '**按量化等级列出每个 DeepSeek-R1 distill：1.5B 需 4 GB，7B/8B 需 8 GB，14B 需 16 GB，32B 需 24 GB，70B 需双 GPU——均为 Ollama 默认的 Q4_K_M。** Q8_0 大约使显存翻倍；FP16 大约使 Q4_K_M 文件大小翻四倍。这是用来为 distill 匹配显卡、值得收藏的表格。**现状：** R1 已不再是 DeepSeek 的当前一代（当前一代是 DeepSeek-V4），但这些蒸馏版是独立的开放权重发布，仍可在本地运行。',
     quickAnswerTop: {
       zh: {
         question: '每个 DeepSeek-R1 distill 需要多少显存？',
@@ -561,6 +569,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1 已不再是 DeepSeek 的当前一代——当前一代是 DeepSeek-V4（Flash 和 Pro，MIT 许可的开放权重）。R1 蒸馏版是独立的开放权重发布，仍可在本地运行。',
           'Q4_K_M（Ollama 默认）显存：1.5B ~1.6 GB，7B ~5.5 GB，8B ~6 GB，14B ~9.5 GB，32B ~20.5 GB，70B ~44 GB。',
           'Q8_0 约为 Q4_K_M 大小的 2 倍；FP16 约为 Q4_K_M 文件大小的 4 倍。',
           'Q4_K_M 下的 14B（~9.5 GB）是最佳选择——可装入 16 GB 显卡并留有上下文余量。',
@@ -625,13 +634,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 与 R1：不要混淆',
         content: [
           '**DeepSeek-V3 是对话模型；DeepSeek-R1（以及这些 distill）是推理模型。** 此表仅针对 R1 推理系列。如果你要找的是 V3，它是一款 671B MoE 对话模型，同样无法在消费级硬件上运行——参见 [DeepSeek-V3 硬件速览](/prompt-bites/deepseek-v3-local-hardware-requirements)。',
-          '**更新:** DeepSeek 此后发布了新一代旗舰模型 DeepSeek-V4(Flash 和 Pro),同样提供开源权重。本文介绍的 R1 蒸馏模型并未停用,依然可以完整地在本地运行——如果你想使用最新架构,可以将 V4 一并纳入考虑。',
+          '**更新：** DeepSeek 当前一代是 DeepSeek-V4（Flash 和 Pro），以 MIT 许可的开放权重发布（预览版：2026 年 4 月 24 日）。DeepSeek 的 API 现在提供 V4：deepseek-chat（V3 世代）和 deepseek-reasoner（R1 世代）别名已宣布在 2026 年 7 月 24 日之后完全停用。R1 蒸馏版是独立的开放权重发布，不在该通知范围内，仍可在本地运行。V4 本身并不是消费级 GPU 模型：V4-Pro 总参数 1.6T（激活 49B），最初的 V4-Flash 为 284B（激活 13B），即使按 4 位精度（参数量 × 0.5 字节）计算，仅权重就大约需要 140 GB（Flash）到 800 GB（Pro），而且 DeepSeek 的模型卡未列出 GPU 要求。若要在单张消费级 GPU 上做推理，蒸馏版仍是务实之选。',
         ],
       },
       faq: {
         id: 'faq',
         title: '常见问题',
         faqs: [
+          { q: 'DeepSeek-R1 仍是 DeepSeek 的当前模型吗？', a: '不是。DeepSeek 当前一代是 DeepSeek-V4（Flash 和 Pro）。API 别名 deepseek-reasoner（R1 世代）和 deepseek-chat（V3 世代）已宣布在 2026 年 7 月 24 日之后完全停用。开放权重的 R1 蒸馏版是独立发布，不在该通知范围内，仍可通过 Ollama 在本地运行。' },
           { q: 'DeepSeek-R1-Distill-Qwen-32B 的显存是多少？', a: '在 Q4_K_M 下约为 20.5 GB，可装入 24 GB 的 RTX 4090，但留给长上下文的空间很小。Q8_0 下需要 ~36 GB，FP16 下需要 ~67 GB。' },
           { q: 'Q8_0 相比 Q4_K_M 增加多少？', a: '大约 2 倍显存。对于大多数推理任务，质量提升微乎其微，因此除非有富余显存，否则 Q4_K_M 是更好的默认选择。' },
           { q: '我能在单块 GPU 上运行 70B distill 吗？', a: '不能。约 44 GB（Q4_K_M）超过了任何单块消费级显卡。请使用两块 24 GB GPU 或一块 48 GB 工作站显卡。' },
@@ -662,7 +672,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM de DeepSeek-R1 Distill 2026: cada cuant.',
     metaDescription: 'DeepSeek-R1 14B necesita ~9.5 GB de VRAM en Q4_K_M y cabe en una tarjeta de 16 GB. Cada distill (1.5B–70B) por cuantización: Q8_0, FP16, archivo y GPU mínima.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: 'Usuarios de LLM locales que dimensionan una GPU para un distill de DeepSeek-R1 según los niveles de cuantización',
     affiliateDisclosure: true,
@@ -671,7 +681,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
-    leadAnswerBlock: '**Cada distill de DeepSeek-R1, por cuantización: 1.5B cabe en 4 GB, 7B/8B en 8 GB, 14B en 16 GB, 32B en 24 GB y 70B necesita doble GPU, todo con el Q4_K_M predeterminado de Ollama.** Q8_0 duplica aproximadamente la VRAM; FP16 cuadruplica aproximadamente el tamaño del archivo Q4_K_M. Esta es la tabla para guardar y emparejar un distill con una tarjeta.',
+    leadAnswerBlock: '**Cada distill de DeepSeek-R1, por cuantización: 1.5B cabe en 4 GB, 7B/8B en 8 GB, 14B en 16 GB, 32B en 24 GB y 70B necesita doble GPU, todo con el Q4_K_M predeterminado de Ollama.** Q8_0 duplica aproximadamente la VRAM; FP16 cuadruplica aproximadamente el tamaño del archivo Q4_K_M. Esta es la tabla para guardar y emparejar un distill con una tarjeta. **Situación:** R1 ya no es la generación actual de DeepSeek (lo es DeepSeek-V4), pero estos destilados son lanzamientos de pesos abiertos independientes que siguen ejecutándose en local.',
     quickAnswerTop: {
       es: {
         question: '¿Cuánta VRAM necesita cada distill de DeepSeek-R1?',
@@ -691,6 +701,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1 ya no es la generación actual de DeepSeek: lo es DeepSeek-V4 (Flash y Pro, pesos abiertos con licencia MIT). Los destilados de R1 son lanzamientos de pesos abiertos independientes y siguen ejecutándose en local.',
           'VRAM en Q4_K_M (predeterminado de Ollama): 1.5B ~1.6 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~44 GB.',
           'Q8_0 es unas 2× el tamaño de Q4_K_M; FP16 unas 4× el tamaño del archivo Q4_K_M.',
           'El 14B en Q4_K_M (~9.5 GB) es el punto óptimo: cabe en una tarjeta de 16 GB con margen para el contexto.',
@@ -755,13 +766,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: no los confundas',
         content: [
           '**DeepSeek-V3 es un modelo de chat; DeepSeek-R1 (y estos distills) son modelos de razonamiento.** Esta tabla es solo para la familia de razonamiento R1. Si buscas V3, es un modelo de chat MoE de 671B que tampoco puede ejecutarse en hardware de consumo; consulta el [resumen de hardware de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
-          '**Actualización:** DeepSeek ha lanzado desde entonces DeepSeek-V4 (Flash y Pro) como su nueva generación insignia, también disponible en pesos abiertos. Las destilaciones de R1 tratadas aquí no se están descontinuando y siguen siendo totalmente válidas para ejecutar en local — si quieres la arquitectura más reciente, vale la pena evaluar V4 también.',
+          '**Actualización:** la generación actual de DeepSeek es DeepSeek-V4 (Flash y Pro), publicada como pesos abiertos con licencia MIT (versión preliminar: 24 de abril de 2026). La API de DeepSeek ya sirve V4: los alias deepseek-chat (generación V3) y deepseek-reasoner (generación R1) se anunciaron como totalmente retirados después del 24 de julio de 2026. Los destilados de R1 son lanzamientos de pesos abiertos independientes, no formaban parte de ese aviso y siguen ejecutándose en local. V4 no es un modelo para GPU de consumo: V4-Pro tiene 1.6T de parámetros en total (49B activos) y el V4-Flash original 284B (13B activos). Incluso con precisión de 4 bits (parámetros × 0.5 bytes), solo los pesos requieren unos 140 GB (Flash) a 800 GB (Pro), y las fichas de modelo de DeepSeek no indican ningún requisito de GPU. Para razonamiento en una sola GPU de consumo, los destilados siguen siendo la opción práctica.',
         ],
       },
       faq: {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
+          { q: '¿Sigue siendo DeepSeek-R1 el modelo actual de DeepSeek?', a: 'No. La generación actual de DeepSeek es DeepSeek-V4 (Flash y Pro). Los alias de API deepseek-reasoner (generación R1) y deepseek-chat (generación V3) se anunciaron como totalmente retirados después del 24 de julio de 2026. Los destilados de R1 de pesos abiertos son lanzamientos independientes, no formaban parte de ese aviso y siguen ejecutándose en local con Ollama.' },
           { q: '¿Cuánta VRAM necesita DeepSeek-R1-Distill-Qwen-32B?', a: 'Unos 20.5 GB en Q4_K_M, lo que cabe en una RTX 4090 de 24 GB pero deja poco espacio para un contexto largo. En Q8_0 necesita ~36 GB y en FP16 ~67 GB.' },
           { q: '¿Cuánto añade Q8_0 sobre Q4_K_M?', a: 'Aproximadamente 2× la VRAM. Para la mayoría de las tareas de razonamiento la mejora de calidad es marginal, así que Q4_K_M es la mejor opción predeterminada salvo que tengas VRAM de sobra.' },
           { q: '¿Puedo ejecutar el distill de 70B en una sola GPU?', a: 'No. Con ~44 GB (Q4_K_M) supera cualquier tarjeta de consumo individual. Usa dos GPU de 24 GB o una tarjeta de estación de trabajo de 48 GB.' },
@@ -792,7 +804,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'VRAM do DeepSeek-R1 Distill 2026: cada quant.',
     metaDescription: 'DeepSeek-R1 14B precisa de ~9.5 GB de VRAM no Q4_K_M e cabe em uma placa de 16 GB. Cada distill (1.5B–70B) por quant: Q8_0, FP16, arquivo e GPU mínima.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: 'Usuários de LLMs locais dimensionando uma GPU para um distill do DeepSeek-R1 entre níveis de quantização',
     affiliateDisclosure: true,
@@ -801,7 +813,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
-    leadAnswerBlock: '**Cada distill do DeepSeek-R1, por quantização: 1.5B cabe em 4 GB, 7B/8B em 8 GB, 14B em 16 GB, 32B em 24 GB e 70B precisa de duas GPUs — tudo no Q4_K_M padrão do Ollama.** O Q8_0 praticamente dobra a VRAM; o FP16 praticamente quadruplica o tamanho do arquivo Q4_K_M. Esta é a tabela para salvar e combinar um distill com uma placa de vídeo.',
+    leadAnswerBlock: '**Cada distill do DeepSeek-R1, por quantização: 1.5B cabe em 4 GB, 7B/8B em 8 GB, 14B em 16 GB, 32B em 24 GB e 70B precisa de duas GPUs — tudo no Q4_K_M padrão do Ollama.** O Q8_0 praticamente dobra a VRAM; o FP16 praticamente quadruplica o tamanho do arquivo Q4_K_M. Esta é a tabela para salvar e combinar um distill com uma placa de vídeo. **Situação:** o R1 não é mais a geração atual da DeepSeek (a atual é o DeepSeek-V4), mas estes destilados são lançamentos de pesos abertos independentes que continuam rodando localmente.',
     quickAnswerTop: {
       pt: {
         question: 'Quanta VRAM cada distill do DeepSeek-R1 precisa?',
@@ -821,6 +833,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'O R1 não é mais a geração atual da DeepSeek: a atual é o DeepSeek-V4 (Flash e Pro, pesos abertos com licença MIT). Os destilados do R1 são lançamentos de pesos abertos independentes e continuam rodando localmente.',
           'VRAM no Q4_K_M (padrão do Ollama): 1.5B ~1.6 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~44 GB.',
           'O Q8_0 é cerca de 2× o tamanho do Q4_K_M; o FP16 cerca de 4× o tamanho do arquivo Q4_K_M.',
           'O 14B no Q4_K_M (~9.5 GB) é o ponto ideal — cabe em uma placa de 16 GB com folga de contexto.',
@@ -885,13 +898,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: não confunda',
         content: [
           '**O DeepSeek-V3 é um modelo de chat; o DeepSeek-R1 (e estes distills) são modelos de raciocínio.** Esta tabela é só para a família de raciocínio R1. Se você procura o V3, ele é um modelo de chat MoE de 671B que também não roda em hardware de consumo — veja a [análise de hardware do DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
-          '**Atualização:** Desde então, a DeepSeek lançou o DeepSeek-V4 (Flash e Pro) como sua nova geração principal, também disponível em pesos abertos. As destilações do R1 abordadas aqui não estão sendo descontinuadas e continuam totalmente válidas para rodar localmente — se você quiser a arquitetura mais recente, vale a pena avaliar o V4 também.',
+          '**Atualização:** a geração atual da DeepSeek é o DeepSeek-V4 (Flash e Pro), publicado como pesos abertos sob licença MIT (prévia: 24 de abril de 2026). A API da DeepSeek agora serve o V4: os aliases deepseek-chat (geração V3) e deepseek-reasoner (geração R1) foram anunciados como totalmente desativados após 24 de julho de 2026. Os destilados do R1 são lançamentos de pesos abertos independentes, não faziam parte desse aviso e continuam rodando localmente. O V4 em si não é um modelo para GPU de consumo: o V4-Pro tem 1.6T de parâmetros no total (49B ativos) e o V4-Flash original 284B (13B ativos). Mesmo com precisão de 4 bits (parâmetros × 0.5 byte), só os pesos exigem cerca de 140 GB (Flash) a 800 GB (Pro), e as fichas de modelo da DeepSeek não listam nenhum requisito de GPU. Para raciocínio em uma única GPU de consumo, os destilados continuam sendo a escolha prática.',
         ],
       },
       faq: {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
+          { q: 'O DeepSeek-R1 ainda é o modelo atual da DeepSeek?', a: 'Não. A geração atual da DeepSeek é o DeepSeek-V4 (Flash e Pro). Os aliases de API deepseek-reasoner (geração R1) e deepseek-chat (geração V3) foram anunciados como totalmente desativados após 24 de julho de 2026. Os destilados do R1 de pesos abertos são lançamentos independentes, não faziam parte desse aviso e continuam rodando localmente com o Ollama.' },
           { q: 'Qual é a VRAM do DeepSeek-R1-Distill-Qwen-32B?', a: 'Cerca de 20.5 GB no Q4_K_M, o que cabe em uma RTX 4090 de 24 GB, mas deixa pouco espaço para contexto longo. No Q8_0 ele precisa de ~36 GB e no FP16 de ~67 GB.' },
           { q: 'Quanto o Q8_0 adiciona em relação ao Q4_K_M?', a: 'Cerca de 2× a VRAM. Para a maioria das tarefas de raciocínio o ganho de qualidade é marginal, então o Q4_K_M é o melhor padrão, a menos que você tenha VRAM sobrando.' },
           { q: 'Posso rodar o distill de 70B em uma única GPU?', a: 'Não. Com ~44 GB (Q4_K_M), ele ultrapassa qualquer placa de consumo individual. Use duas GPUs de 24 GB ou uma placa de estação de trabalho de 48 GB.' },
@@ -922,7 +936,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'جدول ⁨VRAM⁩ لـ ⁨DeepSeek-R1 Distill 2026⁩',
     metaDescription: 'يحتاج ⁨DeepSeek-R1 14B⁩ إلى نحو ⁨9.5 GB⁩ من ⁨VRAM⁩ عند ⁨Q4_K_M⁩ ويتسع في بطاقة ⁨16 GB⁩. كل نماذج ⁨distill⁩ (من ⁨1.5B⁩ إلى ⁨70B⁩) حسب التكميم: ⁨VRAM⁩ وحجم الملف وأدنى ⁨GPU⁩.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: 'مستخدمو نماذج LLM المحلية الذين يحددون حجم GPU لنموذج DeepSeek-R1 distill عبر مستويات التكميم',
     affiliateDisclosure: true,
@@ -931,7 +945,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
-    leadAnswerBlock: '**كل نموذج DeepSeek-R1 distill حسب التكميم: 1.5B يتسع في 4 GB، و7B/8B في 8 GB، و14B في 16 GB، و32B في 24 GB، ويحتاج 70B إلى GPU مزدوج — كل ذلك عند Q4_K_M الافتراضي في Ollama.** يضاعف Q8_0 الـ VRAM تقريبًا؛ ويضاعف FP16 حجم ملف Q4_K_M أربع مرات تقريبًا. هذا هو الجدول الذي تحفظه لمطابقة نموذج distill ببطاقة معينة.',
+    leadAnswerBlock: '**كل نموذج DeepSeek-R1 distill حسب التكميم: 1.5B يتسع في 4 GB، و7B/8B في 8 GB، و14B في 16 GB، و32B في 24 GB، ويحتاج 70B إلى GPU مزدوج — كل ذلك عند Q4_K_M الافتراضي في Ollama.** يضاعف Q8_0 الـ VRAM تقريبًا؛ ويضاعف FP16 حجم ملف Q4_K_M أربع مرات تقريبًا. هذا هو الجدول الذي تحفظه لمطابقة نموذج distill ببطاقة معينة. **الوضع الحالي:** لم يعد R1 الجيل الحالي من DeepSeek (الجيل الحالي هو DeepSeek-V4)، لكن هذه النماذج المُقطّرة إصدارات مستقلة بأوزان مفتوحة ما زالت تعمل محليًا.',
     quickAnswerTop: {
       ar: {
         question: 'كم VRAM يحتاج كل نموذج DeepSeek-R1 distill؟',
@@ -951,6 +965,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'لم يعد R1 الجيل الحالي من DeepSeek؛ الجيل الحالي هو DeepSeek-V4 (Flash وPro، بأوزان مفتوحة بترخيص MIT). نماذج R1 المُقطّرة إصدارات مستقلة بأوزان مفتوحة وما زالت تعمل محليًا.',
           'VRAM عند Q4_K_M (الافتراضي في Ollama): 1.5B ~1.6 GB، و7B ~5.5 GB، و8B ~6 GB، و14B ~9.5 GB، و32B ~20.5 GB، و70B ~44 GB.',
           'يبلغ Q8_0 نحو ضعف حجم Q4_K_M؛ وFP16 نحو 4 أضعاف حجم ملف Q4_K_M.',
           'نموذج 14B عند Q4_K_M (~9.5 GB) هو الخيار الأمثل — يتسع في بطاقة 16 GB مع هامش للسياق.',
@@ -1015,13 +1030,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 مقابل R1: لا تخلط بينهما',
         content: [
           '**DeepSeek-V3 نموذج محادثة؛ أما DeepSeek-R1 (وهذه النماذج المقطّرة distill) فهي نماذج استدلال.** هذا الجدول مخصص لعائلة الاستدلال R1 فقط. إذا كنت تبحث عن V3، فهو نموذج محادثة MoE بحجم 671B لا يمكن تشغيله أيضًا على عتاد المستهلك — راجع [موجز عتاد DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
-          '**تحديث:** أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 (Flash وPro) كجيلها الرئيسي الأحدث، وهو متاح أيضًا كأوزان مفتوحة. نسخ R1 المقطّرة المتناولة هنا لم يتم إيقافها ولا تزال صالحة تمامًا للتشغيل محليًا — إذا كنت تريد أحدث بنية، يستحق V4 التقييم أيضًا.',
+          '**تحديث:** الجيل الحالي من DeepSeek هو DeepSeek-V4 (Flash وPro)، صدر بأوزان مفتوحة بترخيص MIT (النسخة التجريبية: 24 أبريل 2026). تقدّم واجهة DeepSeek البرمجية الآن V4: فقد أُعلن أن الاسمين المستعارين deepseek-chat (جيل V3) وdeepseek-reasoner (جيل R1) سيُوقفان نهائيًا بعد 24 يوليو 2026. نماذج R1 المُقطّرة إصدارات مستقلة بأوزان مفتوحة، ولم تكن ضمن هذا الإعلان، وما زالت تعمل محليًا. أما V4 نفسه فليس نموذجًا لبطاقات الرسوميات الاستهلاكية: يضم V4-Pro إجمالي 1.6T معامل (49B نشط)، ويضم V4-Flash الأصلي 284B (13B نشط)، وحتى بدقة 4 بت (عدد المعاملات × 0.5 بايت) تحتاج الأوزان وحدها إلى نحو 140 جيجابايت (Flash) حتى 800 جيجابايت (Pro)، ولا تذكر بطاقات نماذج DeepSeek أي متطلبات لوحدة GPU. وللاستدلال على بطاقة استهلاكية واحدة تبقى النماذج المُقطّرة الخيار العملي.',
         ],
       },
       faq: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
+          { q: 'هل ما زال DeepSeek-R1 هو النموذج الحالي لدى DeepSeek؟', a: 'لا. الجيل الحالي من DeepSeek هو DeepSeek-V4 (Flash وPro). وقد أُعلن أن الاسمين المستعارين في الواجهة البرمجية deepseek-reasoner (جيل R1) وdeepseek-chat (جيل V3) سيُوقفان نهائيًا بعد 24 يوليو 2026. أما نماذج R1 المُقطّرة بأوزان مفتوحة فهي إصدارات مستقلة، ولم تكن ضمن هذا الإعلان، وما زالت تعمل محليًا عبر Ollama.' },
           { q: 'كم VRAM يحتاج DeepSeek-R1-Distill-Qwen-32B؟', a: 'نحو 20.5 GB عند Q4_K_M، وهو ما يتسع في بطاقة RTX 4090 سعة 24 GB لكنه يترك مساحة ضئيلة للسياق الطويل. عند Q8_0 يحتاج إلى ~36 GB، وعند FP16 إلى ~67 GB.' },
           { q: 'كم يضيف Q8_0 مقارنة بـ Q4_K_M؟', a: 'نحو ضعف الـ VRAM. بالنسبة لمعظم مهام الاستدلال يكون التحسين في الجودة هامشيًا، لذا يظل Q4_K_M الخيار الافتراضي الأفضل ما لم يكن لديك VRAM فائض.' },
           { q: 'هل يمكنني تشغيل نموذج 70B distill على GPU واحد؟', a: 'لا. بحجم ~44 GB (Q4_K_M) فهو يتجاوز أي بطاقة استهلاكية مفردة. استخدم بطاقتي GPU بسعة 24 GB أو بطاقة محطة عمل بسعة 48 GB.' },
@@ -1052,7 +1068,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill VRAM 치트시트 2026',
     metaDescription: 'DeepSeek-R1 14B는 Q4_K_M에서 약 9.5 GB VRAM이 필요해 16 GB 카드에 들어갑니다. 모든 distill(1.5B–70B)의 양자화별 VRAM, 파일 크기, 최소 GPU를 정리했습니다.',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: '양자화 수준 전반에 걸쳐 DeepSeek-R1 distill용 GPU를 산정하는 로컬 LLM 사용자',
     affiliateDisclosure: true,
@@ -1061,7 +1077,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-1.5B', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Llama-8B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'NVIDIA RTX 4070 Laptop 8GB'],
-    leadAnswerBlock: '**모든 DeepSeek-R1 distill을 양자화별로 보면: 1.5B는 4 GB, 7B/8B는 8 GB, 14B는 16 GB, 32B는 24 GB에 들어가고, 70B는 듀얼 GPU가 필요합니다 — 모두 Ollama 기본값 Q4_K_M 기준입니다.** Q8_0은 VRAM을 약 2배로, FP16은 Q4_K_M 파일 크기를 약 4배로 늘립니다. distill을 그래픽카드에 맞추기 위해 북마크해 두는 표입니다.',
+    leadAnswerBlock: '**모든 DeepSeek-R1 distill을 양자화별로 보면: 1.5B는 4 GB, 7B/8B는 8 GB, 14B는 16 GB, 32B는 24 GB에 들어가고, 70B는 듀얼 GPU가 필요합니다 — 모두 Ollama 기본값 Q4_K_M 기준입니다.** Q8_0은 VRAM을 약 2배로, FP16은 Q4_K_M 파일 크기를 약 4배로 늘립니다. distill을 그래픽카드에 맞추기 위해 북마크해 두는 표입니다. **현황:** R1은 더 이상 DeepSeek의 현재 세대가 아닙니다(현재 세대는 DeepSeek-V4). 다만 이 증류 모델들은 독립적인 오픈 웨이트 릴리스이며 여전히 로컬에서 실행됩니다.',
     quickAnswerTop: {
       ko: {
         question: '각 DeepSeek-R1 distill은 VRAM이 얼마나 필요합니까?',
@@ -1081,6 +1097,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1은 더 이상 DeepSeek의 현재 세대가 아닙니다. 현재 세대는 DeepSeek-V4(Flash 및 Pro, MIT 라이선스 오픈 웨이트)입니다. R1 증류 모델은 독립적인 오픈 웨이트 릴리스이며 여전히 로컬에서 실행됩니다.',
           'Q4_K_M(Ollama 기본값) VRAM: 1.5B ~1.6 GB, 7B ~5.5 GB, 8B ~6 GB, 14B ~9.5 GB, 32B ~20.5 GB, 70B ~44 GB.',
           'Q8_0은 Q4_K_M 크기의 약 2배, FP16은 Q4_K_M 파일 크기의 약 4배입니다.',
           'Q4_K_M의 14B(~9.5 GB)가 최적점입니다 — 컨텍스트 여유를 두고 16 GB 카드에 들어갑니다.',
@@ -1145,13 +1162,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: 혼동하지 마십시오',
         content: [
           '**DeepSeek-V3은 채팅 모델이고, DeepSeek-R1(및 이 distill들)은 추론 모델입니다.** 이 표는 R1 추론 계열 전용입니다. V3을 찾고 있다면, 그것은 671B MoE 채팅 모델로 역시 소비자용 하드웨어에서 구동할 수 없습니다 — [DeepSeek-V3 하드웨어 요약](/ko/prompt-bites/deepseek-v3-local-hardware-requirements)을 참고하십시오.',
-          '**업데이트:** DeepSeek는 이후 새로운 플래그십 세대인 DeepSeek-V4(Flash 및 Pro)를 출시했으며, 이 역시 오픈 웨이트로 제공됩니다. 여기서 다루는 R1 증류 모델은 단종되지 않았으며 로컬에서 계속 문제없이 실행할 수 있습니다 — 최신 아키텍처를 원한다면 V4도 함께 검토할 가치가 있습니다.',
+          '**업데이트:** DeepSeek의 현재 세대는 DeepSeek-V4(Flash 및 Pro)이며, MIT 라이선스의 오픈 웨이트로 공개되었습니다(프리뷰: 2026년 4월 24일). DeepSeek API는 이제 V4를 제공합니다. deepseek-chat(V3 세대)과 deepseek-reasoner(R1 세대) 별칭은 2026년 7월 24일 이후 완전히 폐지된다고 공지되었습니다. R1 증류 모델은 독립적인 오픈 웨이트 릴리스로서 해당 공지의 대상이 아니었으며 여전히 로컬에서 실행됩니다. V4 자체는 소비자용 GPU 모델이 아닙니다. V4-Pro는 총 1.6T 파라미터(활성 49B), 최초의 V4-Flash는 284B(활성 13B)이며, 4비트 정밀도(파라미터 수 × 0.5바이트)로도 가중치만 약 140 GB(Flash)에서 800 GB(Pro)가 필요하고, DeepSeek 모델 카드에는 GPU 요구 사항이 명시되어 있지 않습니다. 소비자용 GPU 한 장에서의 추론에는 증류 모델이 여전히 현실적인 선택입니다.',
         ],
       },
       faq: {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
+          { q: 'DeepSeek-R1은 아직도 DeepSeek의 현재 모델입니까?', a: '아닙니다. DeepSeek의 현재 세대는 DeepSeek-V4(Flash 및 Pro)입니다. API 별칭 deepseek-reasoner(R1 세대)와 deepseek-chat(V3 세대)는 2026년 7월 24일 이후 완전히 폐지된다고 공지되었습니다. 오픈 웨이트 R1 증류 모델은 독립적인 릴리스로서 해당 공지의 대상이 아니었으며 여전히 Ollama로 로컬에서 실행됩니다.' },
           { q: 'DeepSeek-R1-Distill-Qwen-32B의 VRAM은 얼마입니까?', a: 'Q4_K_M에서 약 20.5 GB로, 24 GB RTX 4090에 들어가지만 긴 컨텍스트를 위한 여유는 거의 없습니다. Q8_0에서는 ~36 GB, FP16에서는 ~67 GB가 필요합니다.' },
           { q: 'Q8_0은 Q4_K_M보다 얼마나 더 필요합니까?', a: '약 2배의 VRAM입니다. 대부분의 추론 작업에서 품질 향상은 미미하므로, VRAM이 남지 않는 한 Q4_K_M이 더 나은 기본값입니다.' },
           { q: '70B distill을 GPU 한 개로 구동할 수 있습니까?', a: '아니요. ~44 GB(Q4_K_M)로 단일 소비자용 카드를 모두 초과합니다. 24 GB GPU 두 개 또는 48 GB 워크스테이션 카드를 사용하십시오.' },

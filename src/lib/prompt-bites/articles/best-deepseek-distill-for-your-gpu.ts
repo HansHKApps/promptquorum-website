@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Best DeepSeek Distill for Your GPU 2026 + Ollama Cmd',
     metaDescription: 'Your GPU → the exact DeepSeek-R1 distill to run + the Ollama command. RTX 3060 to dual-GPU, matched in one table. R1 reasoning family (not V3).',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: 'Local LLM users matching a DeepSeek-R1 reasoning distill to the GPU they own',
     affiliateDisclosure: true,
@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4070 12GB', 'NVIDIA RTX 4070 Ti Super 16GB', 'NVIDIA RTX 4080 16GB', 'NVIDIA RTX 4090 24GB'],
-    leadAnswerBlock: '**Match your GPU to a DeepSeek-R1 distill in one line: RTX 3060 12GB runs the 7B, RTX 4060 Ti 16GB runs the 14B, RTX 4090 runs the 32B (beats o1-mini), and dual-GPU runs the 70B.** On an 8 GB card, run DeepSeek-R1-0528-Qwen3-8B — the strongest small reasoning distill. All commands default to Q4_K_M.',
+    leadAnswerBlock: '**Match your GPU to a DeepSeek-R1 distill in one line: RTX 3060 12GB runs the 7B, RTX 4060 Ti 16GB runs the 14B, RTX 4090 runs the 32B (beats o1-mini), and dual-GPU runs the 70B.** On an 8 GB card, run DeepSeek-R1-0528-Qwen3-8B — the strongest small reasoning distill. All commands default to Q4_K_M. **Status:** R1 is no longer DeepSeek\'s current generation (DeepSeek-V4 is), but these distills are separate open-weight releases that still run locally. The o1-mini comparison is historical: OpenAI shut o1-mini down on October 27, 2025.',
     quickAnswerTop: {
       en: {
         question: 'Which DeepSeek-R1 distill should I run on my GPU?',
@@ -42,6 +42,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1 is no longer DeepSeek\'s current generation — DeepSeek-V4 (Flash and Pro, MIT-licensed open weights) is. The R1 distills are separate open-weight releases and still run locally.',
           'RTX 3060 12GB → 7B distill; RTX 4060 Ti 16GB → 14B (the sweet spot); RTX 4090 → 32B (beats o1-mini).',
           'Dual-GPU or 48 GB → 70B distill, the strongest of the six.',
           'On 8 GB, the best small model is DeepSeek-R1-0528-Qwen3-8B.',
@@ -99,14 +100,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: This Table Is R1 Only',
         content: [
           '**DeepSeek-R1 is the reasoning family these commands install; DeepSeek-V3 is a separate chat model.** Do not expect a V3 experience from these distills — they are tuned to show step-by-step reasoning for math and logic. V3 is also a 671B MoE and not consumer-runnable; see the [DeepSeek-V3 hardware bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
-          '**Update:** DeepSeek has since released DeepSeek-V4 (Flash and Pro) as its newer flagship generation, also available as open weights. The R1 distills covered here are not being discontinued and remain fully valid to run locally — if you want the newest architecture, V4 is worth evaluating alongside them.',
+          '**Update:** DeepSeek\'s current generation is DeepSeek-V4 (Flash and Pro), released as open weights under the MIT license (preview: April 24, 2026). DeepSeek\'s API now serves V4: the deepseek-chat (V3-generation) and deepseek-reasoner (R1-generation) aliases were announced as fully retired after July 24, 2026. The R1 distills are separate open-weight releases that were not part of that notice, and they still run locally. V4 itself is not a consumer-GPU model: V4-Pro has 1.6T total parameters (49B active) and the original V4-Flash 284B (13B active), so even at 4-bit precision (parameter count × 0.5 byte) the weights alone need roughly 140 GB (Flash) to 800 GB (Pro), and DeepSeek\'s model cards list no GPU requirement. For reasoning on a single consumer GPU, the distills remain the practical pick.',
         ],
       },
       faq: {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What DeepSeek distill runs on an RTX 4090?', a: 'DeepSeek-R1-Distill-Qwen-32B. At Q4_K_M it needs ~20.5 GB, fits a 24 GB RTX 4090 (tight on context), and beats OpenAI o1-mini on several reasoning benchmarks. Command: `ollama run deepseek-r1:32b`.' },
+          { q: 'Is DeepSeek-R1 still DeepSeek\'s current model?', a: 'No. DeepSeek\'s current generation is DeepSeek-V4 (Flash and Pro). The deepseek-reasoner (R1-generation) and deepseek-chat (V3-generation) API aliases were announced as fully retired after July 24, 2026. The open-weight R1 distills are separate releases, were not part of that notice, and still run locally with Ollama.' },
+          { q: 'What DeepSeek distill runs on an RTX 4090?', a: 'DeepSeek-R1-Distill-Qwen-32B. At Q4_K_M it needs ~20.5 GB, fits a 24 GB RTX 4090 (tight on context), and beats OpenAI o1-mini on several reasoning benchmarks. Command: `ollama run deepseek-r1:32b`. Note: OpenAI shut o1-mini down on October 27, 2025, so this is a historical benchmark reference, not a comparison with a current OpenAI model.' },
           { q: 'Which DeepSeek-R1 distill fits 16 GB of VRAM?', a: 'DeepSeek-R1-Distill-Qwen-14B. Its Q4_K_M file is 9.0 GB, leaving room for context on a 16 GB card such as the RTX 4060 Ti 16GB, RTX 4070 Ti Super or RTX 4080. The 32B is 20 GB and does not fit. Command: `ollama run deepseek-r1:14b`.' },
           { q: 'Can an RTX 4070 run deepseek-r1:32b?', a: 'No. The RTX 4070 has 12 GB of VRAM and `deepseek-r1:32b` is a 20 GB download, so it spills into system RAM and throughput collapses. Run `ollama run deepseek-r1:8b` (5.2 GB), or `deepseek-r1:14b` (9.0 GB) with a short context window.' },
           { q: 'What is the best DeepSeek distill for an 8 GB GPU?', a: 'DeepSeek-R1-0528-Qwen3-8B (`ollama run deepseek-r1:8b`) is the strongest small reasoning distill and fits 8 GB. The original 7B distill (`ollama run deepseek-r1:7b`) is the well-supported alternative.' },
@@ -135,7 +137,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste DeepSeek-Distill für Ihre GPU 2026 + Ollama-Befehl',
     metaDescription: 'Ihre GPU → die passende DeepSeek-R1-Distill plus den Ollama-Befehl. Von RTX 3060 bis Dual-GPU, in einer Tabelle. R1-Reasoning-Familie (nicht V3).',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: 'Local-LLM-Nutzer, die eine DeepSeek-R1-Reasoning-Distill auf ihre vorhandene GPU abstimmen',
     affiliateDisclosure: true,
@@ -144,7 +146,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4070 12GB', 'NVIDIA RTX 4070 Ti Super 16GB', 'NVIDIA RTX 4080 16GB', 'NVIDIA RTX 4090 24GB'],
-    leadAnswerBlock: '**Ordnen Sie Ihre GPU in einer Zeile einer DeepSeek-R1-Distill zu: Die RTX 3060 12GB betreibt die 7B, die RTX 4060 Ti 16GB die 14B, die RTX 4090 die 32B (schlägt o1-mini), und Dual-GPU betreibt die 70B.** Auf einer 8-GB-Karte führen Sie DeepSeek-R1-0528-Qwen3-8B aus — die stärkste kleine Reasoning-Distill. Alle Befehle nutzen standardmäßig Q4_K_M.',
+    leadAnswerBlock: '**Ordnen Sie Ihre GPU in einer Zeile einer DeepSeek-R1-Distill zu: Die RTX 3060 12GB betreibt die 7B, die RTX 4060 Ti 16GB die 14B, die RTX 4090 die 32B (schlägt o1-mini), und Dual-GPU betreibt die 70B.** Auf einer 8-GB-Karte führen Sie DeepSeek-R1-0528-Qwen3-8B aus — die stärkste kleine Reasoning-Distill. Alle Befehle nutzen standardmäßig Q4_K_M. **Stand:** R1 ist nicht mehr die aktuelle Generation von DeepSeek (das ist DeepSeek-V4), aber diese Distills sind eigenständige Open-Weight-Releases und laufen weiterhin lokal. Der o1-mini-Vergleich ist historisch: OpenAI hat o1-mini am 27. Oktober 2025 abgeschaltet.',
     quickAnswerTop: {
       de: {
         question: 'Welche DeepSeek-R1-Distill sollte ich auf meiner GPU ausführen?',
@@ -165,6 +167,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1 ist nicht mehr die aktuelle Generation von DeepSeek – das ist DeepSeek-V4 (Flash und Pro, Open Weights unter MIT-Lizenz). Die R1-Distills sind eigenständige Open-Weight-Releases und laufen weiterhin lokal.',
           'RTX 3060 12GB → 7B-Distill; RTX 4060 Ti 16GB → 14B (der ideale Mittelweg); RTX 4090 → 32B (schlägt o1-mini).',
           'Dual-GPU oder 48 GB → 70B-Distill, die stärkste der sechs.',
           'Auf 8 GB ist das beste kleine Modell DeepSeek-R1-0528-Qwen3-8B.',
@@ -222,14 +225,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs. R1: Diese Tabelle gilt nur für R1',
         content: [
           '**DeepSeek-R1 ist die Reasoning-Familie, die diese Befehle installieren; DeepSeek-V3 ist ein separates Chat-Modell.** Erwarten Sie von diesen Distills kein V3-Erlebnis — sie sind darauf abgestimmt, Schritt-für-Schritt-Reasoning für Mathematik und Logik zu zeigen. V3 ist zudem ein 671B-MoE und nicht auf Consumer-Hardware lauffähig; siehe den [DeepSeek-V3-Hardware-Bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
-          '**Update:** DeepSeek hat inzwischen DeepSeek-V4 (Flash und Pro) als neuere Flaggschiff-Generation veröffentlicht, ebenfalls als offene Gewichte verfügbar. Die hier behandelten R1-Distillate werden nicht eingestellt und bleiben weiterhin uneingeschränkt lokal nutzbar — wer die neueste Architektur möchte, sollte V4 zusätzlich in Betracht ziehen.',
+          '**Update:** Die aktuelle Generation von DeepSeek ist DeepSeek-V4 (Flash und Pro), veröffentlicht als Open Weights unter MIT-Lizenz (Preview: 24. April 2026). Die DeepSeek-API liefert jetzt V4: Die Aliase deepseek-chat (V3-Generation) und deepseek-reasoner (R1-Generation) wurden als nach dem 24. Juli 2026 vollständig abgeschaltet angekündigt. Die R1-Distills sind eigenständige Open-Weight-Releases, waren nicht Teil dieser Ankündigung und laufen weiterhin lokal. V4 selbst ist kein Modell für Consumer-GPUs: V4-Pro hat 1,6T Parameter insgesamt (49B aktiv), das ursprüngliche V4-Flash 284B (13B aktiv). Selbst bei 4-Bit-Präzision (Parameterzahl × 0,5 Byte) benötigen allein die Gewichte grob 140 GB (Flash) bis 800 GB (Pro); die Modellkarten von DeepSeek nennen keine GPU-Anforderung. Für Reasoning auf einer einzelnen Consumer-GPU bleiben die Distills die praktische Wahl.',
         ],
       },
       faq: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Welche DeepSeek-Distill läuft auf einer RTX 4090?', a: 'DeepSeek-R1-Distill-Qwen-32B. Bei Q4_K_M benötigt sie ~20,5 GB, passt in eine 24-GB-RTX-4090 (knapp beim Kontext) und schlägt OpenAI o1-mini in mehreren Reasoning-Benchmarks. Befehl: `ollama run deepseek-r1:32b`.' },
+          { q: 'Ist DeepSeek-R1 noch das aktuelle Modell von DeepSeek?', a: 'Nein. Die aktuelle Generation von DeepSeek ist DeepSeek-V4 (Flash und Pro). Die API-Aliase deepseek-reasoner (R1-Generation) und deepseek-chat (V3-Generation) wurden als nach dem 24. Juli 2026 vollständig abgeschaltet angekündigt. Die Open-Weight-R1-Distills sind eigenständige Releases, waren nicht Teil dieser Ankündigung und laufen weiterhin lokal mit Ollama.' },
+          { q: 'Welche DeepSeek-Distill läuft auf einer RTX 4090?', a: 'DeepSeek-R1-Distill-Qwen-32B. Bei Q4_K_M benötigt sie ~20,5 GB, passt in eine 24-GB-RTX-4090 (knapp beim Kontext) und schlägt OpenAI o1-mini in mehreren Reasoning-Benchmarks. Befehl: `ollama run deepseek-r1:32b`. Hinweis: OpenAI hat o1-mini am 27. Oktober 2025 abgeschaltet; der Vergleich ist daher ein historischer Benchmark-Bezug, kein Vergleich mit einem aktuellen OpenAI-Modell.' },
           { q: 'Welche DeepSeek-R1-Distill passt in 16 GB VRAM?', a: 'DeepSeek-R1-Distill-Qwen-14B. Die Q4_K_M-Datei hat 9.0 GB und lässt auf einer 16-GB-Karte wie der RTX 4060 Ti 16GB, RTX 4070 Ti Super oder RTX 4080 Platz für Kontext. Die 32B hat 20 GB und passt nicht. Befehl: `ollama run deepseek-r1:14b`.' },
           { q: 'Kann eine RTX 4070 deepseek-r1:32b ausführen?', a: 'Nein. Die RTX 4070 hat 12 GB VRAM, `deepseek-r1:32b` ist ein 20-GB-Download — das Modell läuft in den System-RAM über und der Durchsatz bricht ein. Führen Sie `ollama run deepseek-r1:8b` (5.2 GB) aus oder `deepseek-r1:14b` (9.0 GB) mit kurzem Kontextfenster.' },
           { q: 'Was ist die beste DeepSeek-Distill für eine 8-GB-GPU?', a: 'DeepSeek-R1-0528-Qwen3-8B (`ollama run deepseek-r1:8b`) ist die stärkste kleine Reasoning-Distill und passt in 8 GB. Die ursprüngliche 7B-Distill (`ollama run deepseek-r1:7b`) ist die gut unterstützte Alternative.' },
@@ -258,7 +262,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleure distillation DeepSeek pour GPU 2026 + Ollama',
     metaDescription: 'Votre GPU → la distillation DeepSeek-R1 à exécuter et la commande Ollama. De la RTX 3060 au double GPU, dans un tableau. Famille R1 (pas V3).',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: 'Utilisateurs de LLM locaux associant une distillation de raisonnement DeepSeek-R1 au GPU dont ils disposent',
     affiliateDisclosure: true,
@@ -267,7 +271,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4070 12GB', 'NVIDIA RTX 4070 Ti Super 16GB', 'NVIDIA RTX 4080 16GB', 'NVIDIA RTX 4090 24GB'],
-    leadAnswerBlock: '**Associez votre GPU à une distillation DeepSeek-R1 en une ligne : la RTX 3060 12GB exécute la 7B, la RTX 4060 Ti 16GB la 14B, la RTX 4090 la 32B (surpasse o1-mini) et le double GPU la 70B.** Sur une carte de 8 Go, exécutez DeepSeek-R1-0528-Qwen3-8B — la meilleure petite distillation de raisonnement. Toutes les commandes utilisent Q4_K_M par défaut.',
+    leadAnswerBlock: '**Associez votre GPU à une distillation DeepSeek-R1 en une ligne : la RTX 3060 12GB exécute la 7B, la RTX 4060 Ti 16GB la 14B, la RTX 4090 la 32B (surpasse o1-mini) et le double GPU la 70B.** Sur une carte de 8 Go, exécutez DeepSeek-R1-0528-Qwen3-8B — la meilleure petite distillation de raisonnement. Toutes les commandes utilisent Q4_K_M par défaut. **Situation :** R1 n\'est plus la génération actuelle de DeepSeek (c\'est DeepSeek-V4), mais ces distillés sont des publications open-weight distinctes qui tournent toujours en local. La comparaison avec o1-mini est historique : OpenAI a arrêté o1-mini le 27 octobre 2025.',
     quickAnswerTop: {
       fr: {
         question: 'Quelle distillation DeepSeek-R1 exécuter sur mon GPU ?',
@@ -288,6 +292,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1 n\'est plus la génération actuelle de DeepSeek : c\'est DeepSeek-V4 (Flash et Pro, poids ouverts sous licence MIT). Les distillés R1 sont des publications open-weight distinctes et tournent toujours en local.',
           'RTX 3060 12GB → distillation 7B ; RTX 4060 Ti 16GB → 14B (le bon équilibre) ; RTX 4090 → 32B (surpasse o1-mini).',
           'Double GPU ou 48 Go → distillation 70B, la plus performante des six.',
           'Sur 8 Go, le meilleur petit modèle est DeepSeek-R1-0528-Qwen3-8B.',
@@ -345,14 +350,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1 : ce tableau ne concerne que R1',
         content: [
           '**DeepSeek-R1 est la famille de raisonnement qu\'installent ces commandes ; DeepSeek-V3 est un modèle de chat distinct.** N\'attendez pas une expérience V3 de ces distillations — elles sont réglées pour montrer un raisonnement étape par étape en mathématiques et en logique. V3 est en outre un MoE 671B non exécutable sur du matériel grand public ; voir la [fiche matériel DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
-          '**Mise à jour :** DeepSeek a depuis publié DeepSeek-V4 (Flash et Pro) comme nouvelle génération phare, également disponible en poids ouverts. Les distillations R1 présentées ici ne sont pas abandonnées et restent pleinement utilisables en local — si vous voulez l\'architecture la plus récente, V4 mérite d\'être évalué en complément.',
+          '**Mise à jour :** la génération actuelle de DeepSeek est DeepSeek-V4 (Flash et Pro), publiée en poids ouverts sous licence MIT (préversion : 24 avril 2026). L\'API de DeepSeek sert désormais V4 : les alias deepseek-chat (génération V3) et deepseek-reasoner (génération R1) ont été annoncés comme totalement retirés après le 24 juillet 2026. Les distillés R1 sont des publications open-weight distinctes, ne faisaient pas partie de cet avis et tournent toujours en local. V4 n\'est pas un modèle pour GPU grand public : V4-Pro compte 1.6T de paramètres au total (49B actifs) et le V4-Flash d\'origine 284B (13B actifs). Même en précision 4 bits (nombre de paramètres × 0.5 octet), les seuls poids demandent environ 140 Go (Flash) à 800 Go (Pro), et les fiches de modèle de DeepSeek n\'indiquent aucune exigence GPU. Pour du raisonnement sur un seul GPU grand public, les distillés restent le choix pratique.',
         ],
       },
       faq: {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Quelle distillation DeepSeek tourne sur une RTX 4090 ?', a: 'DeepSeek-R1-Distill-Qwen-32B. En Q4_K_M elle nécessite ~20.5 Go, tient dans une RTX 4090 de 24 Go (juste pour le contexte) et surpasse OpenAI o1-mini sur plusieurs benchmarks de raisonnement. Commande : `ollama run deepseek-r1:32b`.' },
+          { q: 'DeepSeek-R1 est-il toujours le modèle actuel de DeepSeek ?', a: 'Non. La génération actuelle de DeepSeek est DeepSeek-V4 (Flash et Pro). Les alias d\'API deepseek-reasoner (génération R1) et deepseek-chat (génération V3) ont été annoncés comme totalement retirés après le 24 juillet 2026. Les distillés R1 en poids ouverts sont des publications distinctes, ne faisaient pas partie de cet avis et tournent toujours en local avec Ollama.' },
+          { q: 'Quelle distillation DeepSeek tourne sur une RTX 4090 ?', a: 'DeepSeek-R1-Distill-Qwen-32B. En Q4_K_M elle nécessite ~20.5 Go, tient dans une RTX 4090 de 24 Go (juste pour le contexte) et surpasse OpenAI o1-mini sur plusieurs benchmarks de raisonnement. Commande : `ollama run deepseek-r1:32b`. Remarque : OpenAI a arrêté o1-mini le 27 octobre 2025 ; cette comparaison est donc une référence de benchmark historique, pas une comparaison avec un modèle OpenAI actuel.' },
           { q: 'Quelle distillation DeepSeek-R1 tient dans 16 Go de VRAM ?', a: 'DeepSeek-R1-Distill-Qwen-14B. Son fichier Q4_K_M fait 9.0 Go et laisse de la place au contexte sur une carte de 16 Go comme la RTX 4060 Ti 16GB, la RTX 4070 Ti Super ou la RTX 4080. La 32B fait 20 Go et ne tient pas. Commande : `ollama run deepseek-r1:14b`.' },
           { q: 'Une RTX 4070 peut-elle exécuter deepseek-r1:32b ?', a: 'Non. La RTX 4070 a 12 Go de VRAM et `deepseek-r1:32b` pèse 20 Go : le modèle déborde dans la RAM système et le débit s\'effondre. Lancez `ollama run deepseek-r1:8b` (5.2 Go), ou `deepseek-r1:14b` (9.0 Go) avec une fenêtre de contexte courte.' },
           { q: 'Quelle est la meilleure distillation DeepSeek pour un GPU de 8 Go ?', a: 'DeepSeek-R1-0528-Qwen3-8B (`ollama run deepseek-r1:8b`) est la meilleure petite distillation de raisonnement et tient dans 8 Go. La distillation 7B d\'origine (`ollama run deepseek-r1:7b`) est l\'alternative bien prise en charge.' },
@@ -381,7 +387,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'DeepSeek-R1 Distill GPU別おすすめ + Ollamaコマンド 2026',
     metaDescription: 'お使いのGPU → 実行すべきDeepSeek-R1 distillとOllamaコマンド。RTX 3060からデュアルGPUまで1つの表に。R1推論ファミリー（V3ではありません）。',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: '所有するGPUにDeepSeek-R1推論distillを合わせたいローカルLLMユーザー',
     affiliateDisclosure: true,
@@ -390,7 +396,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4070 12GB', 'NVIDIA RTX 4070 Ti Super 16GB', 'NVIDIA RTX 4080 16GB', 'NVIDIA RTX 4090 24GB'],
-    leadAnswerBlock: '**GPUとDeepSeek-R1 distillを1行で対応づけ：RTX 3060 12GBは7B、RTX 4060 Ti 16GBは14B、RTX 4090は32B（o1-miniを上回る）、デュアルGPUは70Bを実行できます。** 8 GBカードではDeepSeek-R1-0528-Qwen3-8B（最強の小型推論distill）を実行します。すべてのコマンドはデフォルトでQ4_K_Mを使用します。',
+    leadAnswerBlock: '**GPUとDeepSeek-R1 distillを1行で対応づけ：RTX 3060 12GBは7B、RTX 4060 Ti 16GBは14B、RTX 4090は32B（o1-miniを上回る）、デュアルGPUは70Bを実行できます。** 8 GBカードではDeepSeek-R1-0528-Qwen3-8B（最強の小型推論distill）を実行します。すべてのコマンドはデフォルトでQ4_K_Mを使用します。**現状:** R1はDeepSeekの最新世代ではなくなりました(最新はDeepSeek-V4)。ただしこれらの蒸留モデルは独立したオープンウェイトのリリースであり、引き続きローカルで動作します。o1-miniとの比較は過去のものです。OpenAIは2025年10月27日にo1-miniを提供終了しました。',
     quickAnswerTop: {
       ja: {
         question: '自分のGPUではどのDeepSeek-R1 distillを実行すべきですか？',
@@ -411,6 +417,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1はDeepSeekの最新世代ではなくなりました。現在の世代はDeepSeek-V4(FlashおよびPro、MITライセンスのオープンウェイト)です。R1の蒸留モデルは独立したオープンウェイトのリリースであり、引き続きローカルで動作します。',
           'RTX 3060 12GB → 7B distill；RTX 4060 Ti 16GB → 14B（最適な選択）；RTX 4090 → 32B（o1-miniを上回る）。',
           'デュアルGPUまたは48 GB → 70B distill、6つの中で最強です。',
           '8 GBでの最良の小型モデルはDeepSeek-R1-0528-Qwen3-8Bです。',
@@ -468,14 +475,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3とR1：この表はR1専用です',
         content: [
           '**DeepSeek-R1はこれらのコマンドがインストールする推論ファミリーであり、DeepSeek-V3は別個のチャットモデルです。** これらのdistillにV3のような体験を期待しないでください。数学と論理の段階的な推論を示すよう調整されています。さらにV3は671B MoEであり、コンシューマー向けハードウェアでは実行できません。[DeepSeek V3ハードウェアバイト](/prompt-bites/deepseek-v3-local-hardware-requirements)を参照してください。',
-          '**更新:** DeepSeekはその後、新しいフラッグシップ世代としてDeepSeek-V4(FlashおよびPro)をリリースしました。オープンウェイトとしても提供されています。本記事で扱うR1の蒸留モデルは廃止されるものではなく、引き続きローカルで問題なく利用できます。最新のアーキテクチャを求める場合は、V4もあわせて検討する価値があります。',
+          '**更新:** DeepSeekの現在の世代はDeepSeek-V4(FlashおよびPro)で、MITライセンスのオープンウェイトとして公開されています(プレビュー版は2026年4月24日)。DeepSeekのAPIは現在V4を提供しており、deepseek-chat(V3世代)とdeepseek-reasoner(R1世代)のエイリアスは2026年7月24日以降に完全に廃止されると告知されました。R1の蒸留モデルは独立したオープンウェイトのリリースで、この告知の対象ではなく、引き続きローカルで動作します。V4自体はコンシューマーGPU向けのモデルではありません。V4-Proは総パラメータ1.6T(アクティブ49B)、当初のV4-Flashは284B(アクティブ13B)で、4ビット精度(パラメータ数×0.5バイト)でも重みだけでおよそ140 GB(Flash)から800 GB(Pro)が必要です。DeepSeekのモデルカードにGPU要件の記載はありません。コンシューマーGPU1枚での推論には、引き続き蒸留モデルが現実的な選択肢です。',
         ],
       },
       faq: {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'RTX 4090ではどのDeepSeek distillが動きますか？', a: 'DeepSeek-R1-Distill-Qwen-32Bです。Q4_K_Mでは約20.5 GBが必要で、24 GBのRTX 4090に収まり（コンテキストは厳しめ）、複数の推論ベンチマークでOpenAI o1-miniを上回ります。コマンド：`ollama run deepseek-r1:32b`。' },
+          { q: 'DeepSeek-R1は今もDeepSeekの最新モデルですか?', a: 'いいえ。DeepSeekの現在の世代はDeepSeek-V4(FlashおよびPro)です。APIのエイリアスdeepseek-reasoner(R1世代)とdeepseek-chat(V3世代)は、2026年7月24日以降に完全に廃止されると告知されました。オープンウェイトのR1蒸留モデルは独立したリリースで、この告知の対象ではなく、引き続きOllamaでローカル実行できます。' },
+          { q: 'RTX 4090ではどのDeepSeek distillが動きますか？', a: 'DeepSeek-R1-Distill-Qwen-32Bです。Q4_K_Mでは約20.5 GBが必要で、24 GBのRTX 4090に収まり（コンテキストは厳しめ）、複数の推論ベンチマークでOpenAI o1-miniを上回ります。コマンド：`ollama run deepseek-r1:32b`。なお、OpenAIは2025年10月27日にo1-miniを提供終了したため、この比較は過去のベンチマーク参照であり、現行のOpenAIモデルとの比較ではありません。' },
           { q: '16 GBのVRAMに収まるDeepSeek-R1 distillは？', a: 'DeepSeek-R1-Distill-Qwen-14Bです。Q4_K_Mのファイルは9.0 GBで、RTX 4060 Ti 16GB、RTX 4070 Ti Super、RTX 4080などの16 GBカードならコンテキスト用の余裕も残ります。32Bは20 GBで収まりません。コマンド：`ollama run deepseek-r1:14b`。' },
           { q: 'RTX 4070でdeepseek-r1:32bは動きますか？', a: 'いいえ。RTX 4070のVRAMは12 GBで、`deepseek-r1:32b`は20 GBのダウンロードです。システムRAMにあふれてスループットが急落します。`ollama run deepseek-r1:8b`（5.2 GB）、または短いコンテキストウィンドウで`deepseek-r1:14b`（9.0 GB）を実行してください。' },
           { q: '8 GB GPUに最適なDeepSeek distillは？', a: 'DeepSeek-R1-0528-Qwen3-8B (`ollama run deepseek-r1:8b`)が最強の小型推論distillで、8 GBに収まります。元の7B distill（`ollama run deepseek-r1:7b`）は十分にサポートされた代替です。' },
@@ -504,7 +512,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'GPU 最佳 DeepSeek 蒸馏模型 2026 + Ollama 命令',
     metaDescription: '你的 GPU → 应运行的 DeepSeek-R1 蒸馏模型加 Ollama 命令。从 RTX 3060 到双 GPU，一张表对应。R1 推理家族（非 V3）。',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: '希望将 DeepSeek-R1 推理蒸馏模型与自己 GPU 匹配的本地 LLM 用户',
     affiliateDisclosure: true,
@@ -513,7 +521,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4070 12GB', 'NVIDIA RTX 4070 Ti Super 16GB', 'NVIDIA RTX 4080 16GB', 'NVIDIA RTX 4090 24GB'],
-    leadAnswerBlock: '**一行匹配你的 GPU 与 DeepSeek-R1 蒸馏模型：RTX 3060 12GB 运行 7B，RTX 4060 Ti 16GB 运行 14B，RTX 4090 运行 32B（超过 o1-mini），双 GPU 运行 70B。** 在 8 GB 显卡上，运行 DeepSeek-R1-0528-Qwen3-8B——最强的小型推理蒸馏模型。所有命令默认使用 Q4_K_M。',
+    leadAnswerBlock: '**一行匹配你的 GPU 与 DeepSeek-R1 蒸馏模型：RTX 3060 12GB 运行 7B，RTX 4060 Ti 16GB 运行 14B，RTX 4090 运行 32B（超过 o1-mini），双 GPU 运行 70B。** 在 8 GB 显卡上，运行 DeepSeek-R1-0528-Qwen3-8B——最强的小型推理蒸馏模型。所有命令默认使用 Q4_K_M。**现状：** R1 已不再是 DeepSeek 的当前一代（当前一代是 DeepSeek-V4），但这些蒸馏版是独立的开放权重发布，仍可在本地运行。与 o1-mini 的对比属于历史参照：OpenAI 已于 2025 年 10 月 27 日停用 o1-mini。',
     quickAnswerTop: {
       zh: {
         question: '我的 GPU 应该运行哪个 DeepSeek-R1 蒸馏模型？',
@@ -534,6 +542,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1 已不再是 DeepSeek 的当前一代——当前一代是 DeepSeek-V4（Flash 和 Pro，MIT 许可的开放权重）。R1 蒸馏版是独立的开放权重发布，仍可在本地运行。',
           'RTX 3060 12GB → 7B 蒸馏；RTX 4060 Ti 16GB → 14B（最佳平衡点）；RTX 4090 → 32B（超过 o1-mini）。',
           '双 GPU 或 48 GB → 70B 蒸馏，六者中最强。',
           '在 8 GB 上，最佳的小型模型是 DeepSeek-R1-0528-Qwen3-8B。',
@@ -591,14 +600,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 与 R1：此表仅针对 R1',
         content: [
           '**DeepSeek-R1 是这些命令安装的推理家族；DeepSeek-V3 是另一个独立的聊天模型。** 不要指望这些蒸馏模型提供 V3 体验——它们经过调优以展示数学和逻辑的逐步推理。此外 V3 是 671B MoE，无法在消费级硬件上运行；参见 [DeepSeek-V3 硬件简报](/prompt-bites/deepseek-v3-local-hardware-requirements)。',
-          '**更新:** DeepSeek 此后发布了新一代旗舰模型 DeepSeek-V4(Flash 和 Pro),同样提供开源权重。本文介绍的 R1 蒸馏模型并未停用,依然可以完整地在本地运行——如果你想使用最新架构,可以将 V4 一并纳入考虑。',
+          '**更新：** DeepSeek 当前一代是 DeepSeek-V4（Flash 和 Pro），以 MIT 许可的开放权重发布（预览版：2026 年 4 月 24 日）。DeepSeek 的 API 现在提供 V4：deepseek-chat（V3 世代）和 deepseek-reasoner（R1 世代）别名已宣布在 2026 年 7 月 24 日之后完全停用。R1 蒸馏版是独立的开放权重发布，不在该通知范围内，仍可在本地运行。V4 本身并不是消费级 GPU 模型：V4-Pro 总参数 1.6T（激活 49B），最初的 V4-Flash 为 284B（激活 13B），即使按 4 位精度（参数量 × 0.5 字节）计算，仅权重就大约需要 140 GB（Flash）到 800 GB（Pro），而且 DeepSeek 的模型卡未列出 GPU 要求。若要在单张消费级 GPU 上做推理，蒸馏版仍是务实之选。',
         ],
       },
       faq: {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: 'RTX 4090 上能运行哪个 DeepSeek 蒸馏模型？', a: 'DeepSeek-R1-Distill-Qwen-32B。在 Q4_K_M 下需要约 20.5 GB，可装入 24 GB 的 RTX 4090（上下文较紧），并在多项推理基准上超过 OpenAI o1-mini。命令：`ollama run deepseek-r1:32b`。' },
+          { q: 'DeepSeek-R1 仍是 DeepSeek 的当前模型吗？', a: '不是。DeepSeek 当前一代是 DeepSeek-V4（Flash 和 Pro）。API 别名 deepseek-reasoner（R1 世代）和 deepseek-chat（V3 世代）已宣布在 2026 年 7 月 24 日之后完全停用。开放权重的 R1 蒸馏版是独立发布，不在该通知范围内，仍可通过 Ollama 在本地运行。' },
+          { q: 'RTX 4090 上能运行哪个 DeepSeek 蒸馏模型？', a: 'DeepSeek-R1-Distill-Qwen-32B。在 Q4_K_M 下需要约 20.5 GB，可装入 24 GB 的 RTX 4090（上下文较紧），并在多项推理基准上超过 OpenAI o1-mini。命令：`ollama run deepseek-r1:32b`。注意：OpenAI 已于 2025 年 10 月 27 日停用 o1-mini，因此该对比属于历史基准参照，而非与当前 OpenAI 模型的对比。' },
           { q: '16 GB 显存能装下哪个 DeepSeek-R1 蒸馏模型？', a: 'DeepSeek-R1-Distill-Qwen-14B。它的 Q4_K_M 文件为 9.0 GB，在 RTX 4060 Ti 16GB、RTX 4070 Ti Super 或 RTX 4080 这类 16 GB 显卡上还能为上下文留出空间。32B 为 20 GB，装不下。命令：`ollama run deepseek-r1:14b`。' },
           { q: 'RTX 4070 能运行 deepseek-r1:32b 吗？', a: '不能。RTX 4070 只有 12 GB 显存，而 `deepseek-r1:32b` 需要下载 20 GB，会溢出到系统内存，吞吐量骤降。请运行 `ollama run deepseek-r1:8b`（5.2 GB），或在较短上下文窗口下运行 `deepseek-r1:14b`（9.0 GB）。' },
           { q: '8 GB GPU 最佳的 DeepSeek 蒸馏模型是什么？', a: 'DeepSeek-R1-0528-Qwen3-8B (`ollama run deepseek-r1:8b`) 是最强的小型推理蒸馏模型，可装入 8 GB。原始 7B 蒸馏（`ollama run deepseek-r1:7b`）是受良好支持的备选。' },
@@ -627,7 +637,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejor destilación DeepSeek para tu GPU 2026 + Ollama',
     metaDescription: 'Tu GPU → la destilación DeepSeek-R1 exacta a ejecutar más el comando Ollama. De la RTX 3060 a doble GPU, en una tabla. Familia R1 (no V3).',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: 'Usuarios de LLM locales que emparejan una destilación de razonamiento DeepSeek-R1 con la GPU que tienen',
     affiliateDisclosure: true,
@@ -636,7 +646,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4070 12GB', 'NVIDIA RTX 4070 Ti Super 16GB', 'NVIDIA RTX 4080 16GB', 'NVIDIA RTX 4090 24GB'],
-    leadAnswerBlock: '**Empareja tu GPU con una destilación DeepSeek-R1 en una línea: la RTX 3060 12GB ejecuta la 7B, la RTX 4060 Ti 16GB la 14B, la RTX 4090 la 32B (supera a o1-mini) y la doble GPU la 70B.** En una tarjeta de 8 GB, ejecuta DeepSeek-R1-0528-Qwen3-8B, la mejor destilación de razonamiento pequeña. Todos los comandos usan Q4_K_M por defecto.',
+    leadAnswerBlock: '**Empareja tu GPU con una destilación DeepSeek-R1 en una línea: la RTX 3060 12GB ejecuta la 7B, la RTX 4060 Ti 16GB la 14B, la RTX 4090 la 32B (supera a o1-mini) y la doble GPU la 70B.** En una tarjeta de 8 GB, ejecuta DeepSeek-R1-0528-Qwen3-8B, la mejor destilación de razonamiento pequeña. Todos los comandos usan Q4_K_M por defecto. **Situación:** R1 ya no es la generación actual de DeepSeek (lo es DeepSeek-V4), pero estos destilados son lanzamientos de pesos abiertos independientes que siguen ejecutándose en local. La comparación con o1-mini es histórica: OpenAI dio de baja o1-mini el 27 de octubre de 2025.',
     quickAnswerTop: {
       es: {
         question: '¿Qué destilación DeepSeek-R1 debo ejecutar en mi GPU?',
@@ -657,6 +667,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1 ya no es la generación actual de DeepSeek: lo es DeepSeek-V4 (Flash y Pro, pesos abiertos con licencia MIT). Los destilados de R1 son lanzamientos de pesos abiertos independientes y siguen ejecutándose en local.',
           'RTX 3060 12GB → destilación 7B; RTX 4060 Ti 16GB → 14B (el punto óptimo); RTX 4090 → 32B (supera a o1-mini).',
           'Doble GPU o 48 GB → destilación 70B, la más potente de las seis.',
           'En 8 GB, el mejor modelo pequeño es DeepSeek-R1-0528-Qwen3-8B.',
@@ -714,14 +725,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: esta tabla es solo para R1',
         content: [
           '**DeepSeek-R1 es la familia de razonamiento que instalan estos comandos; DeepSeek-V3 es un modelo de chat aparte.** No esperes una experiencia V3 de estas destilaciones: están ajustadas para mostrar razonamiento paso a paso en matemáticas y lógica. Además, V3 es un MoE de 671B y no se puede ejecutar en hardware de consumo; consulta la [ficha de hardware de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
-          '**Actualización:** DeepSeek ha lanzado desde entonces DeepSeek-V4 (Flash y Pro) como su nueva generación insignia, también disponible en pesos abiertos. Las destilaciones de R1 tratadas aquí no se están descontinuando y siguen siendo totalmente válidas para ejecutar en local — si quieres la arquitectura más reciente, vale la pena evaluar V4 también.',
+          '**Actualización:** la generación actual de DeepSeek es DeepSeek-V4 (Flash y Pro), publicada como pesos abiertos con licencia MIT (versión preliminar: 24 de abril de 2026). La API de DeepSeek ya sirve V4: los alias deepseek-chat (generación V3) y deepseek-reasoner (generación R1) se anunciaron como totalmente retirados después del 24 de julio de 2026. Los destilados de R1 son lanzamientos de pesos abiertos independientes, no formaban parte de ese aviso y siguen ejecutándose en local. V4 no es un modelo para GPU de consumo: V4-Pro tiene 1.6T de parámetros en total (49B activos) y el V4-Flash original 284B (13B activos). Incluso con precisión de 4 bits (parámetros × 0.5 bytes), solo los pesos requieren unos 140 GB (Flash) a 800 GB (Pro), y las fichas de modelo de DeepSeek no indican ningún requisito de GPU. Para razonamiento en una sola GPU de consumo, los destilados siguen siendo la opción práctica.',
         ],
       },
       faq: {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Qué destilación DeepSeek se ejecuta en una RTX 4090?', a: 'DeepSeek-R1-Distill-Qwen-32B. En Q4_K_M necesita ~20.5 GB, cabe en una RTX 4090 de 24 GB (justo en contexto) y supera a OpenAI o1-mini en varios benchmarks de razonamiento. Comando: `ollama run deepseek-r1:32b`.' },
+          { q: '¿Sigue siendo DeepSeek-R1 el modelo actual de DeepSeek?', a: 'No. La generación actual de DeepSeek es DeepSeek-V4 (Flash y Pro). Los alias de API deepseek-reasoner (generación R1) y deepseek-chat (generación V3) se anunciaron como totalmente retirados después del 24 de julio de 2026. Los destilados de R1 de pesos abiertos son lanzamientos independientes, no formaban parte de ese aviso y siguen ejecutándose en local con Ollama.' },
+          { q: '¿Qué destilación DeepSeek se ejecuta en una RTX 4090?', a: 'DeepSeek-R1-Distill-Qwen-32B. En Q4_K_M necesita ~20.5 GB, cabe en una RTX 4090 de 24 GB (justo en contexto) y supera a OpenAI o1-mini en varios benchmarks de razonamiento. Comando: `ollama run deepseek-r1:32b`. Nota: OpenAI dio de baja o1-mini el 27 de octubre de 2025; esta comparación es, por tanto, una referencia histórica de benchmark, no una comparación con un modelo actual de OpenAI.' },
           { q: '¿Qué destilación DeepSeek-R1 cabe en 16 GB de VRAM?', a: 'DeepSeek-R1-Distill-Qwen-14B. Su archivo Q4_K_M pesa 9.0 GB y deja margen para el contexto en una tarjeta de 16 GB como la RTX 4060 Ti 16GB, la RTX 4070 Ti Super o la RTX 4080. La 32B pesa 20 GB y no cabe. Comando: `ollama run deepseek-r1:14b`.' },
           { q: '¿Puede una RTX 4070 ejecutar deepseek-r1:32b?', a: 'No. La RTX 4070 tiene 12 GB de VRAM y `deepseek-r1:32b` es una descarga de 20 GB: se desborda a la RAM del sistema y el rendimiento se desploma. Ejecuta `ollama run deepseek-r1:8b` (5.2 GB), o `deepseek-r1:14b` (9.0 GB) con una ventana de contexto corta.' },
           { q: '¿Cuál es la mejor destilación DeepSeek para una GPU de 8 GB?', a: 'DeepSeek-R1-0528-Qwen3-8B (`ollama run deepseek-r1:8b`) es la mejor destilación de razonamiento pequeña y cabe en 8 GB. La destilación 7B original (`ollama run deepseek-r1:7b`) es la alternativa bien soportada.' },
@@ -750,7 +762,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhor destilação DeepSeek para sua GPU 2026 + Ollama',
     metaDescription: 'Sua GPU → a destilação DeepSeek-R1 exata para rodar mais o comando Ollama. Da RTX 3060 ao GPU duplo, em uma tabela. Família R1 (não V3).',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: 'Usuários de LLM local que combinam uma destilação de raciocínio DeepSeek-R1 com a GPU que possuem',
     affiliateDisclosure: true,
@@ -759,7 +771,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4070 12GB', 'NVIDIA RTX 4070 Ti Super 16GB', 'NVIDIA RTX 4080 16GB', 'NVIDIA RTX 4090 24GB'],
-    leadAnswerBlock: '**Combine sua GPU com uma destilação DeepSeek-R1 em uma linha: a RTX 3060 12GB roda a 7B, a RTX 4060 Ti 16GB roda a 14B, a RTX 4090 roda a 32B (supera a o1-mini) e o GPU duplo roda a 70B.** Em uma placa de 8 GB, rode a DeepSeek-R1-0528-Qwen3-8B — a melhor destilação de raciocínio pequena. Todos os comandos usam Q4_K_M por padrão.',
+    leadAnswerBlock: '**Combine sua GPU com uma destilação DeepSeek-R1 em uma linha: a RTX 3060 12GB roda a 7B, a RTX 4060 Ti 16GB roda a 14B, a RTX 4090 roda a 32B (supera a o1-mini) e o GPU duplo roda a 70B.** Em uma placa de 8 GB, rode a DeepSeek-R1-0528-Qwen3-8B — a melhor destilação de raciocínio pequena. Todos os comandos usam Q4_K_M por padrão. **Situação:** o R1 não é mais a geração atual da DeepSeek (a atual é o DeepSeek-V4), mas estes destilados são lançamentos de pesos abertos independentes que continuam rodando localmente. A comparação com o o1-mini é histórica: a OpenAI desativou o o1-mini em 27 de outubro de 2025.',
     quickAnswerTop: {
       pt: {
         question: 'Qual destilação DeepSeek-R1 devo rodar na minha GPU?',
@@ -780,6 +792,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'O R1 não é mais a geração atual da DeepSeek: a atual é o DeepSeek-V4 (Flash e Pro, pesos abertos com licença MIT). Os destilados do R1 são lançamentos de pesos abertos independentes e continuam rodando localmente.',
           'RTX 3060 12GB → destilação 7B; RTX 4060 Ti 16GB → 14B (o ponto ideal); RTX 4090 → 32B (supera a o1-mini).',
           'GPU duplo ou 48 GB → destilação 70B, a mais forte das seis.',
           'Em 8 GB, o melhor modelo pequeno é a DeepSeek-R1-0528-Qwen3-8B.',
@@ -837,14 +850,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 vs R1: esta tabela é só de R1',
         content: [
           '**A DeepSeek-R1 é a família de raciocínio que estes comandos instalam; a DeepSeek-V3 é um modelo de chat separado.** Não espere uma experiência V3 dessas destilações — elas são ajustadas para mostrar raciocínio passo a passo em matemática e lógica. A V3 também é um MoE de 671B e não roda em hardware de consumo; veja a [ficha de hardware da DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
-          '**Atualização:** Desde então, a DeepSeek lançou o DeepSeek-V4 (Flash e Pro) como sua nova geração principal, também disponível em pesos abertos. As destilações do R1 abordadas aqui não estão sendo descontinuadas e continuam totalmente válidas para rodar localmente — se você quiser a arquitetura mais recente, vale a pena avaliar o V4 também.',
+          '**Atualização:** a geração atual da DeepSeek é o DeepSeek-V4 (Flash e Pro), publicado como pesos abertos sob licença MIT (prévia: 24 de abril de 2026). A API da DeepSeek agora serve o V4: os aliases deepseek-chat (geração V3) e deepseek-reasoner (geração R1) foram anunciados como totalmente desativados após 24 de julho de 2026. Os destilados do R1 são lançamentos de pesos abertos independentes, não faziam parte desse aviso e continuam rodando localmente. O V4 em si não é um modelo para GPU de consumo: o V4-Pro tem 1.6T de parâmetros no total (49B ativos) e o V4-Flash original 284B (13B ativos). Mesmo com precisão de 4 bits (parâmetros × 0.5 byte), só os pesos exigem cerca de 140 GB (Flash) a 800 GB (Pro), e as fichas de modelo da DeepSeek não listam nenhum requisito de GPU. Para raciocínio em uma única GPU de consumo, os destilados continuam sendo a escolha prática.',
         ],
       },
       faq: {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Qual destilação DeepSeek roda em uma RTX 4090?', a: 'DeepSeek-R1-Distill-Qwen-32B. Em Q4_K_M ela precisa de ~20.5 GB, cabe em uma RTX 4090 de 24 GB (apertado no contexto) e supera a OpenAI o1-mini em vários benchmarks de raciocínio. Comando: `ollama run deepseek-r1:32b`.' },
+          { q: 'O DeepSeek-R1 ainda é o modelo atual da DeepSeek?', a: 'Não. A geração atual da DeepSeek é o DeepSeek-V4 (Flash e Pro). Os aliases de API deepseek-reasoner (geração R1) e deepseek-chat (geração V3) foram anunciados como totalmente desativados após 24 de julho de 2026. Os destilados do R1 de pesos abertos são lançamentos independentes, não faziam parte desse aviso e continuam rodando localmente com o Ollama.' },
+          { q: 'Qual destilação DeepSeek roda em uma RTX 4090?', a: 'DeepSeek-R1-Distill-Qwen-32B. Em Q4_K_M ela precisa de ~20.5 GB, cabe em uma RTX 4090 de 24 GB (apertado no contexto) e supera a OpenAI o1-mini em vários benchmarks de raciocínio. Comando: `ollama run deepseek-r1:32b`. Observação: a OpenAI desativou o o1-mini em 27 de outubro de 2025; esta comparação é, portanto, uma referência histórica de benchmark, não uma comparação com um modelo atual da OpenAI.' },
           { q: 'Qual destilação DeepSeek-R1 cabe em 16 GB de VRAM?', a: 'A DeepSeek-R1-Distill-Qwen-14B. O arquivo Q4_K_M tem 9.0 GB e deixa espaço para contexto em uma placa de 16 GB, como a RTX 4060 Ti 16GB, a RTX 4070 Ti Super ou a RTX 4080. A 32B tem 20 GB e não cabe. Comando: `ollama run deepseek-r1:14b`.' },
           { q: 'Uma RTX 4070 consegue rodar o deepseek-r1:32b?', a: 'Não. A RTX 4070 tem 12 GB de VRAM e o `deepseek-r1:32b` é um download de 20 GB: ele transborda para a RAM do sistema e a velocidade despenca. Rode `ollama run deepseek-r1:8b` (5.2 GB) ou o `deepseek-r1:14b` (9.0 GB) com uma janela de contexto curta.' },
           { q: 'Qual é a melhor destilação DeepSeek para uma GPU de 8 GB?', a: 'A DeepSeek-R1-0528-Qwen3-8B (`ollama run deepseek-r1:8b`) é a melhor destilação de raciocínio pequena e cabe em 8 GB. A destilação 7B original (`ollama run deepseek-r1:7b`) é a alternativa bem suportada.' },
@@ -873,7 +887,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل ⁨DeepSeek⁩ مقطّر لكرت الشاشة ⁨2026⁩ + أمر ⁨Ollama⁩',
     metaDescription: 'كرت الشاشة لديك → نموذج ⁨DeepSeek-R1⁩ المقطّر المناسب وأمر ⁨Ollama⁩. من ⁨RTX 3060⁩ إلى كرتين، في جدول واحد. عائلة ⁨R1⁩ الاستدلالية (وليس ⁨V3⁩).',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: 'مستخدمو نماذج LLM المحلية الذين يطابقون نموذج DeepSeek-R1 المقطّر للاستدلال مع كرت الشاشة الذي يمتلكونه',
     affiliateDisclosure: true,
@@ -882,7 +896,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4070 12GB', 'NVIDIA RTX 4070 Ti Super 16GB', 'NVIDIA RTX 4080 16GB', 'NVIDIA RTX 4090 24GB'],
-    leadAnswerBlock: '**طابِق كرت الشاشة لديك مع نموذج DeepSeek-R1 مقطّر في سطر واحد: RTX 3060 12GB يشغّل 7B، وRTX 4060 Ti 16GB يشغّل 14B، وRTX 4090 يشغّل 32B (يتفوق على o1-mini)، والكرتان يشغّلان 70B.** على كرت بسعة 8 GB، شغّل DeepSeek-R1-0528-Qwen3-8B — أقوى نموذج استدلال صغير مقطّر. كل الأوامر تستخدم Q4_K_M افتراضيًا.',
+    leadAnswerBlock: '**طابِق كرت الشاشة لديك مع نموذج DeepSeek-R1 مقطّر في سطر واحد: RTX 3060 12GB يشغّل 7B، وRTX 4060 Ti 16GB يشغّل 14B، وRTX 4090 يشغّل 32B (يتفوق على o1-mini)، والكرتان يشغّلان 70B.** على كرت بسعة 8 GB، شغّل DeepSeek-R1-0528-Qwen3-8B — أقوى نموذج استدلال صغير مقطّر. كل الأوامر تستخدم Q4_K_M افتراضيًا. **الوضع الحالي:** لم يعد R1 الجيل الحالي من DeepSeek (الجيل الحالي هو DeepSeek-V4)، لكن هذه النماذج المُقطّرة إصدارات مستقلة بأوزان مفتوحة ما زالت تعمل محليًا. مقارنة o1-mini تاريخية: أوقفت OpenAI نموذج o1-mini في 27 أكتوبر 2025.',
     quickAnswerTop: {
       ar: {
         question: 'أي نموذج DeepSeek-R1 مقطّر يجب أن أشغّل على كرت الشاشة لدي؟',
@@ -903,6 +917,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'لم يعد R1 الجيل الحالي من DeepSeek؛ الجيل الحالي هو DeepSeek-V4 (Flash وPro، بأوزان مفتوحة بترخيص MIT). نماذج R1 المُقطّرة إصدارات مستقلة بأوزان مفتوحة وما زالت تعمل محليًا.',
           'RTX 3060 12GB → نموذج 7B مقطّر؛ RTX 4060 Ti 16GB → 14B (الخيار الأمثل)؛ RTX 4090 → 32B (يتفوق على o1-mini).',
           'كرتان أو 48 GB → نموذج 70B مقطّر، وهو الأقوى من بين الستة.',
           'على 8 GB، أفضل نموذج صغير هو DeepSeek-R1-0528-Qwen3-8B.',
@@ -960,14 +975,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 مقابل R1: هذا الجدول لـ R1 فقط',
         content: [
           '**DeepSeek-R1 هي العائلة الاستدلالية التي تثبّتها هذه الأوامر؛ أما DeepSeek-V3 فهو نموذج محادثة منفصل.** لا تتوقع تجربة V3 من هذه النماذج المقطّرة — فهي مضبوطة لإظهار الاستدلال خطوة بخطوة في الرياضيات والمنطق. كما أن V3 هو نموذج MoE بحجم 671B ولا يمكن تشغيله على عتاد المستهلك؛ راجع [بطاقة عتاد DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
-          '**تحديث:** أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 (Flash وPro) كجيلها الرئيسي الأحدث، وهو متاح أيضًا كأوزان مفتوحة. نسخ R1 المقطّرة المتناولة هنا لم يتم إيقافها ولا تزال صالحة تمامًا للتشغيل محليًا — إذا كنت تريد أحدث بنية، يستحق V4 التقييم أيضًا.',
+          '**تحديث:** الجيل الحالي من DeepSeek هو DeepSeek-V4 (Flash وPro)، صدر بأوزان مفتوحة بترخيص MIT (النسخة التجريبية: 24 أبريل 2026). تقدّم واجهة DeepSeek البرمجية الآن V4: فقد أُعلن أن الاسمين المستعارين deepseek-chat (جيل V3) وdeepseek-reasoner (جيل R1) سيُوقفان نهائيًا بعد 24 يوليو 2026. نماذج R1 المُقطّرة إصدارات مستقلة بأوزان مفتوحة، ولم تكن ضمن هذا الإعلان، وما زالت تعمل محليًا. أما V4 نفسه فليس نموذجًا لبطاقات الرسوميات الاستهلاكية: يضم V4-Pro إجمالي 1.6T معامل (49B نشط)، ويضم V4-Flash الأصلي 284B (13B نشط)، وحتى بدقة 4 بت (عدد المعاملات × 0.5 بايت) تحتاج الأوزان وحدها إلى نحو 140 جيجابايت (Flash) حتى 800 جيجابايت (Pro)، ولا تذكر بطاقات نماذج DeepSeek أي متطلبات لوحدة GPU. وللاستدلال على بطاقة استهلاكية واحدة تبقى النماذج المُقطّرة الخيار العملي.',
         ],
       },
       faq: {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'أي نموذج DeepSeek مقطّر يعمل على RTX 4090؟', a: 'DeepSeek-R1-Distill-Qwen-32B. بصيغة Q4_K_M يحتاج إلى ~20.5 GB، ويتسع في RTX 4090 بسعة 24 GB (ضيّق على السياق)، ويتفوق على OpenAI o1-mini في عدة معايير استدلال. الأمر: `ollama run deepseek-r1:32b`.' },
+          { q: 'هل ما زال DeepSeek-R1 هو النموذج الحالي لدى DeepSeek؟', a: 'لا. الجيل الحالي من DeepSeek هو DeepSeek-V4 (Flash وPro). وقد أُعلن أن الاسمين المستعارين في الواجهة البرمجية deepseek-reasoner (جيل R1) وdeepseek-chat (جيل V3) سيُوقفان نهائيًا بعد 24 يوليو 2026. أما نماذج R1 المُقطّرة بأوزان مفتوحة فهي إصدارات مستقلة، ولم تكن ضمن هذا الإعلان، وما زالت تعمل محليًا عبر Ollama.' },
+          { q: 'أي نموذج DeepSeek مقطّر يعمل على RTX 4090؟', a: 'DeepSeek-R1-Distill-Qwen-32B. بصيغة Q4_K_M يحتاج إلى ~20.5 GB، ويتسع في RTX 4090 بسعة 24 GB (ضيّق على السياق)، ويتفوق على OpenAI o1-mini في عدة معايير استدلال. الأمر: `ollama run deepseek-r1:32b`. ملاحظة: أوقفت OpenAI نموذج o1-mini في 27 أكتوبر 2025؛ لذا فهذه المقارنة مرجع قياسي تاريخي لا مقارنة مع نموذج حالي من OpenAI.' },
           { q: 'أي نموذج DeepSeek-R1 مقطّر يتسع في 16 GB من VRAM؟', a: 'DeepSeek-R1-Distill-Qwen-14B. ملف Q4_K_M حجمه 9.0 GB ويترك مساحة للسياق على كرت 16 GB مثل RTX 4060 Ti 16GB أو RTX 4070 Ti Super أو RTX 4080. أما 32B فحجمه 20 GB ولا يتسع. الأمر: `ollama run deepseek-r1:14b`.' },
           { q: 'هل يستطيع RTX 4070 تشغيل deepseek-r1:32b؟', a: 'لا. يملك RTX 4070 سعة 12 GB من VRAM بينما `deepseek-r1:32b` تنزيل بحجم 20 GB، فيفيض إلى ذاكرة النظام وتنهار سرعة المعالجة. شغّل `ollama run deepseek-r1:8b` (5.2 GB)، أو `deepseek-r1:14b` (9.0 GB) مع نافذة سياق قصيرة.' },
           { q: 'ما أفضل نموذج DeepSeek مقطّر لكرت بسعة 8 GB؟', a: 'DeepSeek-R1-0528-Qwen3-8B (`ollama run deepseek-r1:8b`) هو أقوى نموذج استدلال صغير مقطّر ويتسع في 8 GB. النموذج 7B الأصلي المقطّر (`ollama run deepseek-r1:7b`) هو البديل المدعوم جيدًا.' },
@@ -996,7 +1012,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'GPU별 최적 DeepSeek 디스틸 2026 + Ollama 명령어',
     metaDescription: '내 GPU → 실행할 DeepSeek-R1 디스틸과 Ollama 명령어. RTX 3060부터 듀얼 GPU까지 한 표로. R1 추론 계열(V3 아님).',
     publishDate: '2026-06-19',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     audience: '보유한 GPU에 DeepSeek-R1 추론 디스틸을 맞추려는 로컬 LLM 사용자',
     affiliateDisclosure: true,
@@ -1005,7 +1021,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     current_models_mentioned: ['DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-14B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4070 12GB', 'NVIDIA RTX 4070 Ti Super 16GB', 'NVIDIA RTX 4080 16GB', 'NVIDIA RTX 4090 24GB'],
-    leadAnswerBlock: '**GPU와 DeepSeek-R1 디스틸을 한 줄로 매칭하십시오: RTX 3060 12GB는 7B, RTX 4060 Ti 16GB는 14B, RTX 4090은 32B(o1-mini를 능가), 듀얼 GPU는 70B를 실행합니다.** 8 GB 카드에서는 가장 강력한 소형 추론 디스틸인 DeepSeek-R1-0528-Qwen3-8B를 실행하십시오. 모든 명령어는 기본적으로 Q4_K_M을 사용합니다.',
+    leadAnswerBlock: '**GPU와 DeepSeek-R1 디스틸을 한 줄로 매칭하십시오: RTX 3060 12GB는 7B, RTX 4060 Ti 16GB는 14B, RTX 4090은 32B(o1-mini를 능가), 듀얼 GPU는 70B를 실행합니다.** 8 GB 카드에서는 가장 강력한 소형 추론 디스틸인 DeepSeek-R1-0528-Qwen3-8B를 실행하십시오. 모든 명령어는 기본적으로 Q4_K_M을 사용합니다. **현황:** R1은 더 이상 DeepSeek의 현재 세대가 아닙니다(현재 세대는 DeepSeek-V4). 다만 이 증류 모델들은 독립적인 오픈 웨이트 릴리스이며 여전히 로컬에서 실행됩니다. o1-mini와의 비교는 과거 기준입니다. OpenAI는 2025년 10월 27일에 o1-mini를 종료했습니다.',
     quickAnswerTop: {
       ko: {
         question: '내 GPU에서 어떤 DeepSeek-R1 디스틸을 실행해야 합니까?',
@@ -1026,6 +1042,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
+          'R1은 더 이상 DeepSeek의 현재 세대가 아닙니다. 현재 세대는 DeepSeek-V4(Flash 및 Pro, MIT 라이선스 오픈 웨이트)입니다. R1 증류 모델은 독립적인 오픈 웨이트 릴리스이며 여전히 로컬에서 실행됩니다.',
           'RTX 3060 12GB → 7B 디스틸; RTX 4060 Ti 16GB → 14B(최적 지점); RTX 4090 → 32B(o1-mini를 능가).',
           '듀얼 GPU 또는 48 GB → 70B 디스틸, 여섯 개 중 가장 강력합니다.',
           '8 GB에서 최적의 소형 모델은 DeepSeek-R1-0528-Qwen3-8B입니다.',
@@ -1083,14 +1100,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'V3 대 R1: 이 표는 R1 전용입니다',
         content: [
           '**DeepSeek-R1은 이 명령어가 설치하는 추론 계열이며, DeepSeek-V3는 별도의 채팅 모델입니다.** 이 디스틸에서 V3 경험을 기대하지 마십시오 — 이들은 수학과 논리에 대한 단계별 추론을 보여주도록 조정되어 있습니다. 또한 V3는 671B MoE이며 소비자 하드웨어에서 실행할 수 없습니다. [DeepSeek-V3 하드웨어 바이트](/ko/prompt-bites/deepseek-v3-local-hardware-requirements)를 참조하십시오.',
-          '**업데이트:** DeepSeek는 이후 새로운 플래그십 세대인 DeepSeek-V4(Flash 및 Pro)를 출시했으며, 이 역시 오픈 웨이트로 제공됩니다. 여기서 다루는 R1 증류 모델은 단종되지 않았으며 로컬에서 계속 문제없이 실행할 수 있습니다 — 최신 아키텍처를 원한다면 V4도 함께 검토할 가치가 있습니다.',
+          '**업데이트:** DeepSeek의 현재 세대는 DeepSeek-V4(Flash 및 Pro)이며, MIT 라이선스의 오픈 웨이트로 공개되었습니다(프리뷰: 2026년 4월 24일). DeepSeek API는 이제 V4를 제공합니다. deepseek-chat(V3 세대)과 deepseek-reasoner(R1 세대) 별칭은 2026년 7월 24일 이후 완전히 폐지된다고 공지되었습니다. R1 증류 모델은 독립적인 오픈 웨이트 릴리스로서 해당 공지의 대상이 아니었으며 여전히 로컬에서 실행됩니다. V4 자체는 소비자용 GPU 모델이 아닙니다. V4-Pro는 총 1.6T 파라미터(활성 49B), 최초의 V4-Flash는 284B(활성 13B)이며, 4비트 정밀도(파라미터 수 × 0.5바이트)로도 가중치만 약 140 GB(Flash)에서 800 GB(Pro)가 필요하고, DeepSeek 모델 카드에는 GPU 요구 사항이 명시되어 있지 않습니다. 소비자용 GPU 한 장에서의 추론에는 증류 모델이 여전히 현실적인 선택입니다.',
         ],
       },
       faq: {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: 'RTX 4090에서는 어떤 DeepSeek 디스틸이 실행됩니까?', a: 'DeepSeek-R1-Distill-Qwen-32B입니다. Q4_K_M에서 약 20.5 GB가 필요하며 24 GB RTX 4090에 들어가고(컨텍스트는 빠듯함) 여러 추론 벤치마크에서 OpenAI o1-mini를 능가합니다. 명령어: `ollama run deepseek-r1:32b`.' },
+          { q: 'DeepSeek-R1은 아직도 DeepSeek의 현재 모델입니까?', a: '아닙니다. DeepSeek의 현재 세대는 DeepSeek-V4(Flash 및 Pro)입니다. API 별칭 deepseek-reasoner(R1 세대)와 deepseek-chat(V3 세대)는 2026년 7월 24일 이후 완전히 폐지된다고 공지되었습니다. 오픈 웨이트 R1 증류 모델은 독립적인 릴리스로서 해당 공지의 대상이 아니었으며 여전히 Ollama로 로컬에서 실행됩니다.' },
+          { q: 'RTX 4090에서는 어떤 DeepSeek 디스틸이 실행됩니까?', a: 'DeepSeek-R1-Distill-Qwen-32B입니다. Q4_K_M에서 약 20.5 GB가 필요하며 24 GB RTX 4090에 들어가고(컨텍스트는 빠듯함) 여러 추론 벤치마크에서 OpenAI o1-mini를 능가합니다. 명령어: `ollama run deepseek-r1:32b`. 참고: OpenAI는 2025년 10월 27일에 o1-mini를 종료했으므로, 이 비교는 현재 OpenAI 모델과의 비교가 아니라 과거 벤치마크 참조입니다.' },
           { q: '16 GB VRAM에 들어가는 DeepSeek-R1 디스틸은 무엇입니까?', a: 'DeepSeek-R1-Distill-Qwen-14B입니다. Q4_K_M 파일은 9.0 GB로, RTX 4060 Ti 16GB, RTX 4070 Ti Super, RTX 4080 같은 16 GB 카드에서 컨텍스트를 위한 여유가 남습니다. 32B는 20 GB라 들어가지 않습니다. 명령어: `ollama run deepseek-r1:14b`.' },
           { q: 'RTX 4070에서 deepseek-r1:32b를 실행할 수 있습니까?', a: '아니요. RTX 4070의 VRAM은 12 GB이고 `deepseek-r1:32b`는 20 GB 다운로드이므로 시스템 RAM으로 넘쳐 처리량이 급락합니다. `ollama run deepseek-r1:8b`(5.2 GB)를 실행하거나, 짧은 컨텍스트 창에서 `deepseek-r1:14b`(9.0 GB)를 실행하십시오.' },
           { q: '8 GB GPU에 가장 좋은 DeepSeek 디스틸은 무엇입니까?', a: 'DeepSeek-R1-0528-Qwen3-8B (`ollama run deepseek-r1:8b`)가 가장 강력한 소형 추론 디스틸이며 8 GB에 들어갑니다. 원래 7B 디스틸(`ollama run deepseek-r1:7b`)이 잘 지원되는 대안입니다.' },
