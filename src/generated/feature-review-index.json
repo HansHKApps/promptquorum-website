@@ -1274,6 +1274,11 @@
     "urlSlug": "llamatik-review",
     "url": "/power-local-llm/llamatik-review"
   },
+  "caelum": {
+    "cluster": "power-local-llm",
+    "urlSlug": "caelum-review",
+    "url": "/power-local-llm/caelum-review"
+  },
   "whisper-notes": {
     "cluster": "power-local-llm",
     "urlSlug": "whisper-notes-review",
