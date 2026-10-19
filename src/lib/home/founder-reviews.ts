@@ -26,7 +26,7 @@ export function getFounderReviews(lang: Language = 'en', limit = 10): FounderRev
     .filter((tool) => tool.founder != null || tool.founderReviewedDate != null)
     .map((tool) => {
       const url = featureReviewUrl(tool.slug, lang)
-        ?? (lang === 'en' ? `/directory#${tool.slug}` : `/${lang}/directory#${tool.slug}`)
+        ?? (lang === 'en' ? `/directory?tool=${tool.slug}` : `/${lang}/directory?tool=${tool.slug}`)
       return {
         slug: tool.slug,
         appName: tool.name,
