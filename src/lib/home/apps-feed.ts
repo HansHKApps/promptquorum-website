@@ -15,7 +15,7 @@ export interface LatestAppEntry {
 function toolUrl(tool: ToolRecord, lang: Language): string {
   const review = featureReviewUrl(tool.slug, lang)
   if (review) return review
-  return lang === 'en' ? `/directory#${tool.slug}` : `/${lang}/directory#${tool.slug}`
+  return lang === 'en' ? `/directory?tool=${tool.slug}` : `/${lang}/directory?tool=${tool.slug}`
 }
 
 /**
