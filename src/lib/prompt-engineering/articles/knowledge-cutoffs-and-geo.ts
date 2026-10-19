@@ -35,7 +35,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**Cloud models** covered — verified cutoff dates with primary source links; previous-generation models are labeled as such',
       '**Local/open-weight models** covered — all have "None" for search layer',
-      '**Phi-4** has a June 2024 cutoff, **DeepSeek-V3** July 2024 and **Gemma 3 27B** August 2024 — the latter two are previous-generation models, now superseded by DeepSeek-V4 and Gemma 4',
+      '**Phi-4** has a June 2024 cutoff, **Llama 4 Scout** and **Gemma 3 27B** August 2024 (all per their model cards); DeepSeek-V3, a previous-generation model now superseded by DeepSeek-V4, has no publicly disclosed cutoff',
       '**Claude Opus 5.5** has the most recent verified reliable cutoff in the table: June 2026',
       'Among the cloud models covered here, **Grok 4.7** is the only one whose default search layer is a social platform (X/Twitter) rather than general web',
       '**GEO implication**: companies that deploy Llama/Qwen internally can only be reached via the RAG pipelines those companies build themselves',
@@ -125,7 +125,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Which AI model has the most recent knowledge cutoff date (verified)?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Among primary-source verified cutoffs: Claude Opus 5.5 has the most recent reliable cutoff at June 2026, followed by Grok 4.7 at May 2026 and GPT-6 Astra / GPT-6.1 Sol at April 2026 (GPT-6 Luna: May 2026). Phi-4 is June 2024. GPT-4o (legacy) is October 2023. Several current models (Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3) have not publicly disclosed exact dates. Their superseded predecessors had: Gemini 3.1 Pro (January 2025), DeepSeek-V3 (July 2024) and Gemma 3 27B (August 2024).',
+              'text': 'Among primary-source verified cutoffs: Claude Opus 5.5 has the most recent reliable cutoff at June 2026, followed by Grok 4.7 at May 2026 and GPT-6 Astra / GPT-6.1 Sol at April 2026 (GPT-6 Luna: May 2026). Phi-4 is June 2024. GPT-4o (legacy) is October 2023. Llama 4 Scout (August 2024) and Gemma 3 27B (August 2024, superseded by Gemma 4) state theirs in their model cards. Several other models (Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3, Mistral Large 4, Qwen) have not publicly disclosed a cutoff. The superseded Gemini 3.1 Pro did (January 2025).',
             },
           },
           {
@@ -187,8 +187,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Cloud models (ChatGPT, Gemini, Grok) layer live web search on top of their training data; this partially overrides the cutoff for factual queries',
           'Local LLMs (Llama, Qwen, Gemma, Phi, open-weight Mistral) have NO search layer — the cutoff is absolute and cannot be overridden without building a RAG system',
           'For GEO (Generative Engine Optimization): appearing in cloud AI requires traditional search optimization (Bing, Google, X); appearing in local AI requires RAG pipelines — SEO cannot reach a model that never touches the web',
-          'Verified cutoffs: Claude Opus 5.5 = Jun 2026 (reliable); Grok 4.7 = May 2026; GPT-6 Astra / GPT-6.1 Sol = Apr 2026 (GPT-6 Luna = May 2026); Phi-4 = Jun 2024; GPT-4o (legacy) = Oct 2023. Previous-generation models, now superseded: Gemini 3.1 Pro = Jan 2025; Gemma 3 27B = Aug 2024; DeepSeek-V3 = Jul 2024 (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
-          'Several major models — Llama 4, Qwen3, Mistral Large 4, Gemini 4 Argon, Gemma 4, DeepSeek-V4 — have not publicly disclosed exact cutoff dates',
+          'Verified cutoffs: Claude Opus 5.5 = Jun 2026 (reliable); Grok 4.7 = May 2026; GPT-6 Astra / GPT-6.1 Sol = Apr 2026 (GPT-6 Luna = May 2026); Phi-4 = Jun 2024; Llama 4 Scout = Aug 2024; GPT-4o (legacy) = Oct 2023. Previous-generation models, now superseded: Gemini 3.1 Pro = Jan 2025; Gemma 3 27B = Aug 2024. DeepSeek-V3 (previous generation) has no publicly disclosed cutoff (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
+          'Several major models — Qwen3, Mistral Large 4, Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3 — have not publicly disclosed exact cutoff dates (Llama 4 Scout states August 2024 in its model card)',
         ],
       },
       invisible_limit: {
@@ -390,7 +390,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Why does ChatGPT know about recent events if its cutoff is October 2023?', a: 'ChatGPT (the product) searches Bing by default in paid tiers and synthesizes current search results with its training-data reasoning. The underlying GPT-4o model still has an October 2023 training cutoff — what you\'re seeing is the search layer, not updated training data.' },
             { q: 'Do local LLMs like Llama and Qwen ever receive knowledge updates?', a: 'No — not automatically. A local LLM\'s knowledge is permanently frozen at its training cutoff. Each new model release (Llama 4 Scout, Qwen3 14B) has a different cutoff, but the copy running on your machine has fixed knowledge. To get current information, build a RAG pipeline.' },
             { q: 'What is GEO and how does it relate to knowledge cutoffs?', a: 'GEO (Generative Engine Optimization) is the discipline of making your content appear in AI-generated answers. For cloud AI, GEO works through search optimization — rank in Bing/Google and you get cited. For local LLMs, this is structurally impossible because the model never searches. Local LLM GEO requires RAG pipelines at the deploying organization.' },
-            { q: 'Which AI model has the most recent knowledge cutoff date (verified)?', a: 'Among primary-source verified cutoffs: Claude Opus 5.5 has the most recent reliable cutoff at June 2026, followed by Grok 4.7 at May 2026 and GPT-6 Astra / GPT-6.1 Sol at April 2026 (GPT-6 Luna: May 2026). Phi-4 is June 2024. GPT-4o (legacy) is October 2023. Several current models (Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3) have not publicly disclosed exact dates. Their superseded predecessors had: Gemini 3.1 Pro (January 2025), DeepSeek-V3 (July 2024) and Gemma 3 27B (August 2024).' },
+            { q: 'Which AI model has the most recent knowledge cutoff date (verified)?', a: 'Among primary-source verified cutoffs: Claude Opus 5.5 has the most recent reliable cutoff at June 2026, followed by Grok 4.7 at May 2026 and GPT-6 Astra / GPT-6.1 Sol at April 2026 (GPT-6 Luna: May 2026). Phi-4 is June 2024. GPT-4o (legacy) is October 2023. Llama 4 Scout (August 2024) and Gemma 3 27B (August 2024, superseded by Gemma 4) state theirs in their model cards. Several other models (Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3, Mistral Large 4, Qwen) have not publicly disclosed a cutoff. The superseded Gemini 3.1 Pro did (January 2025).' },
             { q: 'Can I use SEO to appear in Llama or Qwen answers?', a: 'No. SEO cannot influence a locally-deployed LLM because the model never searches the web. The main paths are: (1) be in the training data before the cutoff, or (2) be included in a RAG pipeline by the organization deploying the model.' },
             { q: 'How should I fact-check an AI answer about something that might be affected by the cutoff?', a: 'Three signals suggest a cutoff risk: (1) the topic involves specific versions, prices, people, or events; (2) you asked about something in a fast-moving industry; (3) the AI answer lacks citations. When any of these apply, verify against a primary source — the model\'s confident tone is not a reliability indicator.' },
             { q: 'Is there a way to tell from an AI\'s answer whether it used live search?', a: 'Often yes: Perplexity always shows source citations. Gemini shows a Google search icon when grounding is used. Grok indicates X search results. ChatGPT shows a globe icon and can be prompted to show sources. Claude does not search by default, so no indicator is needed. Local LLMs never search, so no indicator exists — the answer is always from training data.' },
@@ -436,7 +436,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**클라우드 모델** 포함 — 1차 출처 링크와 함께 검증된 마감 날짜. 이전 세대 모델은 그렇게 표시됨',
       '**로컬/오픈웨이트 모델** 포함 — 모두 검색 레이어 "없음"',
-      '**Phi-4**는 2024년 6월, **DeepSeek-V3**는 2024년 7월, **Gemma 3 27B**는 2024년 8월 마감 — 뒤의 두 모델은 이전 세대로, 현재 DeepSeek-V4와 Gemma 4로 대체됨',
+      '**Phi-4**는 2024년 6월, **Llama 4 Scout**와 **Gemma 3 27B**는 2024년 8월 마감(모두 모델 카드 기준); 이전 세대인 DeepSeek-V3(현재 DeepSeek-V4로 대체됨)는 마감 날짜를 공개하지 않음',
       '**Claude Opus 5.5**는 표에서 검증된 신뢰할 수 있는 마감 날짜가 가장 최근: 2026년 6월',
       '**Grok 4.7**은 여기서 다루는 클라우드 모델 중 기본 검색 레이어가 일반 웹이 아닌 소셜 플랫폼(X/Twitter)인 유일한 모델',
       '**GEO 시사점**: Llama/Qwen을 내부적으로 배포하는 기업은 해당 기업이 직접 구축한 RAG 파이프라인을 통해서만 도달할 수 있음',
@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': '검증된 지식 마감 날짜가 가장 최근인 AI 모델은 어느 것입니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '1차 출처 검증 마감 날짜 중: Claude Opus 5.5가 2026년 6월로 가장 최근의 신뢰할 수 있는 마감 날짜를 가지며, Grok 4.7이 2026년 5월, GPT-6 Astra / GPT-6.1 Sol이 2026년 4월로 뒤를 잇습니다(GPT-6 Luna는 2026년 5월). Phi-4는 2024년 6월. GPT-4o(레거시)는 2023년 10월. Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3를 포함한 여러 현재 모델은 정확한 날짜를 공개적으로 공시하지 않았습니다. 이들에 의해 대체된 이전 세대 모델은 날짜를 공개했습니다: Gemini 3.1 Pro(2025년 1월), DeepSeek-V3(2024년 7월), Gemma 3 27B(2024년 8월).',
+              'text': '1차 출처 검증 마감 날짜 중: Claude Opus 5.5가 2026년 6월로 가장 최근의 신뢰할 수 있는 마감 날짜를 가지며, Grok 4.7이 2026년 5월, GPT-6 Astra / GPT-6.1 Sol이 2026년 4월로 뒤를 잇습니다(GPT-6 Luna는 2026년 5월). Phi-4는 2024년 6월. GPT-4o(레거시)는 2023년 10월. Llama 4 Scout(2024년 8월)와 Gemma 3 27B(2024년 8월, Gemma 4로 대체됨)는 모델 카드에 마감 날짜를 명시합니다. Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3, Mistral Large 4, Qwen을 포함한 여러 다른 모델은 마감 날짜를 공개적으로 공시하지 않았습니다. 대체된 이전 세대 Gemini 3.1 Pro는 날짜를 공개했습니다(2025년 1월).',
             },
           },
           {
@@ -588,8 +588,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '클라우드 모델(ChatGPT, Gemini, Grok)은 학습 데이터 위에 실시간 웹 검색을 추가하여 사실 쿼리에 대한 마감 날짜를 부분적으로 재정의합니다',
           '로컬 LLM(Llama, Qwen, Gemma, Phi, 오픈웨이트 Mistral)에는 검색 레이어가 없습니다 — 마감 날짜는 절대적이며 RAG 시스템 없이는 재정의할 수 없습니다',
           'GEO(생성형 엔진 최적화)를 위해: 클라우드 AI에 노출되려면 전통적인 검색 최적화(Bing, Google, X)가 필요하고; 로컬 AI에 노출되려면 RAG 파이프라인이 필요합니다 — SEO로는 웹을 한 번도 접촉하지 않는 모델에 도달할 수 없습니다',
-          '검증된 마감 날짜: Claude Opus 5.5 = 2026년 6월(신뢰 가능); Grok 4.7 = 2026년 5월; GPT-6 Astra / GPT-6.1 Sol = 2026년 4월(GPT-6 Luna = 2026년 5월); Phi-4 = 2024년 6월; GPT-4o(레거시) = 2023년 10월. 대체된 이전 세대 모델: Gemini 3.1 Pro = 2025년 1월; Gemma 3 27B = 2024년 8월; DeepSeek-V3 = 2024년 7월 (DeepSeek는 이후 오픈 웨이트 신세대 모델인 DeepSeek-V4—Flash/Pro—를 출시했습니다. R1/V3는 계속 로컬에서 사용할 수 있습니다.)',
-          'Llama 4, Qwen3, Mistral Large 4, Gemini 4 Argon, Gemma 4, DeepSeek-V4를 포함한 여러 주요 모델은 정확한 마감 날짜를 공개적으로 공시하지 않았습니다',
+          '검증된 마감 날짜: Claude Opus 5.5 = 2026년 6월(신뢰 가능); Grok 4.7 = 2026년 5월; GPT-6 Astra / GPT-6.1 Sol = 2026년 4월(GPT-6 Luna = 2026년 5월); Phi-4 = 2024년 6월; Llama 4 Scout = 2024년 8월; GPT-4o(레거시) = 2023년 10월. 대체된 이전 세대 모델: Gemini 3.1 Pro = 2025년 1월; Gemma 3 27B = 2024년 8월. 이전 세대 DeepSeek-V3는 마감 날짜를 공개하지 않았습니다 (DeepSeek는 이후 오픈 웨이트 신세대 모델인 DeepSeek-V4—Flash/Pro—를 출시했습니다. R1/V3는 계속 로컬에서 사용할 수 있습니다.)',
+          'Qwen3, Mistral Large 4, Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3를 포함한 여러 주요 모델은 정확한 마감 날짜를 공개적으로 공시하지 않았습니다(Llama 4 Scout는 모델 카드에 2024년 8월로 명시)',
         ],
       },
       invisible_limit: {
@@ -791,7 +791,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'ChatGPT의 마감이 2023년 10월이라면 왜 최근 이벤트를 알고 있습니까?', a: 'ChatGPT(제품)는 유료 티어에서 기본적으로 Bing을 검색하여 현재 검색 결과와 학습 데이터 추론을 합성합니다. 기본 GPT-4o 모델은 여전히 2023년 10월 학습 마감 날짜를 가지고 있습니다 — 보이는 것은 검색 레이어이지 업데이트된 학습 데이터가 아닙니다.' },
             { q: 'Llama나 Qwen 같은 로컬 LLM이 지식 업데이트를 받습니까?', a: '아닙니다 — 자동으로는 안 됩니다. 로컬 LLM의 지식은 학습 마감 날짜에 영구적으로 동결됩니다. 각 새로운 모델 릴리스(Llama 4 Scout, Qwen3 14B)는 다른 마감 날짜를 가지지만, 사용자 기기에서 실행 중인 복사본은 고정된 지식을 가집니다. 현재 정보를 얻으려면 RAG 파이프라인을 구축하십시오.' },
             { q: 'GEO란 무엇이며 지식 마감과 어떤 관계가 있습니까?', a: 'GEO(생성형 엔진 최적화)는 콘텐츠를 AI 생성 답변에 노출시키는 분야입니다. 클라우드 AI의 경우 GEO는 검색 최적화를 통해 작동합니다 — Bing/Google에서 순위를 얻으면 인용됩니다. 로컬 LLM의 경우 모델이 검색하지 않기 때문에 이것은 구조적으로 불가능합니다. 로컬 LLM GEO는 배포 조직의 RAG 파이프라인이 필요합니다.' },
-            { q: '검증된 지식 마감 날짜가 가장 최근인 AI 모델은 어느 것입니까?', a: '1차 출처 검증 마감 날짜 중: Claude Opus 5.5가 2026년 6월로 가장 최근의 신뢰할 수 있는 마감 날짜를 가지며, Grok 4.7이 2026년 5월, GPT-6 Astra / GPT-6.1 Sol이 2026년 4월로 뒤를 잇습니다(GPT-6 Luna는 2026년 5월). Phi-4는 2024년 6월. GPT-4o(레거시)는 2023년 10월. Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3를 포함한 여러 현재 모델은 정확한 날짜를 공개적으로 공시하지 않았습니다. 이들에 의해 대체된 이전 세대 모델은 날짜를 공개했습니다: Gemini 3.1 Pro(2025년 1월), DeepSeek-V3(2024년 7월), Gemma 3 27B(2024년 8월).' },
+            { q: '검증된 지식 마감 날짜가 가장 최근인 AI 모델은 어느 것입니까?', a: '1차 출처 검증 마감 날짜 중: Claude Opus 5.5가 2026년 6월로 가장 최근의 신뢰할 수 있는 마감 날짜를 가지며, Grok 4.7이 2026년 5월, GPT-6 Astra / GPT-6.1 Sol이 2026년 4월로 뒤를 잇습니다(GPT-6 Luna는 2026년 5월). Phi-4는 2024년 6월. GPT-4o(레거시)는 2023년 10월. Llama 4 Scout(2024년 8월)와 Gemma 3 27B(2024년 8월, Gemma 4로 대체됨)는 모델 카드에 마감 날짜를 명시합니다. Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3, Mistral Large 4, Qwen을 포함한 여러 다른 모델은 마감 날짜를 공개적으로 공시하지 않았습니다. 대체된 이전 세대 Gemini 3.1 Pro는 날짜를 공개했습니다(2025년 1월).' },
             { q: 'SEO를 사용하여 Llama나 Qwen 답변에 노출될 수 있습니까?', a: '아닙니다. 모델이 웹을 검색하지 않기 때문에 SEO는 로컬로 배포된 LLM에 영향을 줄 수 없습니다. 주요 경로는: (1) 마감 전에 학습 데이터에 있었거나, (2) 모델을 배포하는 조직의 RAG 파이프라인에 포함되는 것입니다.' },
             { q: '마감 날짜의 영향을 받을 수 있는 AI 답변을 어떻게 사실 확인해야 합니까?', a: '세 가지 신호가 마감 위험을 시사합니다: (1) 주제가 특정 버전, 가격, 인물, 또는 이벤트를 포함; (2) 빠르게 변화하는 산업의 것을 물어봄; (3) AI 답변에 인용이 없음. 이 중 어느 하나가 적용되면 1차 출처에서 확인하십시오 — 모델의 자신감 있는 어조는 신뢰도 지표가 아닙니다.' },
             { q: 'AI 답변에서 실시간 검색을 사용했는지 알 수 있는 방법이 있습니까?', a: '종종 그렇습니다: Perplexity는 항상 출처 인용을 표시합니다. Gemini는 그라운딩이 사용될 때 Google 검색 아이콘을 표시합니다. Grok은 X 검색 결과를 나타냅니다. ChatGPT는 지구본 아이콘을 표시하며 출처를 표시하도록 요청할 수 있습니다. Claude는 기본적으로 검색하지 않으므로 지표가 필요 없습니다. 로컬 LLM은 검색하지 않으므로 지표가 없습니다 — 답변은 항상 학습 데이터에서 나옵니다.' },
@@ -837,7 +837,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**Modelos em nuvem** incluídos — datas de corte verificadas com links de fontes primárias; modelos de gerações anteriores são identificados como tais',
       '**Modelos locais/open-weight** incluídos — todos com "nenhuma" camada de busca',
-      '**Phi-4** tem corte em junho de 2024, **DeepSeek-V3** em julho de 2024 e **Gemma 3 27B** em agosto de 2024 — os dois últimos são de geração anterior, agora substituídos por DeepSeek-V4 e Gemma 4',
+      '**Phi-4** tem corte em junho de 2024, **Llama 4 Scout** e **Gemma 3 27B** em agosto de 2024 (todos conforme seus model cards); o DeepSeek-V3, de geração anterior e agora substituído pelo DeepSeek-V4, não tem data de corte divulgada publicamente',
       '**Claude Opus 5.5** tem a data de corte confiável verificada mais recente da tabela: junho de 2026',
       '**Grok 4.7** é, entre os modelos em nuvem tratados aqui, o único cuja camada de busca padrão é uma plataforma social (X/Twitter) em vez da web geral',
       '**Implicação GEO**: empresas que implantam Llama/Qwen internamente só podem ser alcançadas por meio de pipelines RAG que a própria empresa construiu',
@@ -927,7 +927,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Qual modelo de IA tem a data de corte verificada mais recente?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Claude Opus 5.5 tem a data de corte confiável mais recente, em junho de 2026, seguido por Grok 4.7 (maio de 2026) e GPT-6 Astra / GPT-6.1 Sol (abril de 2026; GPT-6 Luna: maio de 2026). Phi-4: junho de 2024. GPT-4o (legado): outubro de 2023. Gemini 4 Argon, Gemma 4, DeepSeek-V4 e Mistral Large 4 não divulgaram data de corte; seus antecessores, já substituídos, divulgaram: Gemini 3.1 Pro (janeiro de 2025), DeepSeek-V3 (julho de 2024) e Gemma 3 27B (agosto de 2024).',
+              'text': 'Claude Opus 5.5 tem a data de corte confiável mais recente, em junho de 2026, seguido por Grok 4.7 (maio de 2026) e GPT-6 Astra / GPT-6.1 Sol (abril de 2026; GPT-6 Luna: maio de 2026). Phi-4: junho de 2024. GPT-4o (legado): outubro de 2023. Llama 4 Scout (agosto de 2024) e Gemma 3 27B (agosto de 2024, substituído pelo Gemma 4) informam a data em seus model cards. Vários outros modelos (Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3, Mistral Large 4, Qwen) não divulgaram publicamente a data de corte. O Gemini 3.1 Pro, já substituído, divulgou (janeiro de 2025).',
             },
           },
           {
@@ -973,8 +973,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Modelos em nuvem (ChatGPT, Gemini, Grok) adicionam busca web ao vivo sobre os dados de treinamento, substituindo parcialmente a data de corte para consultas factuais',
           'LLMs locais (Llama, Qwen, Gemma, Phi, Mistral open-weight) não possuem camada de busca — a data de corte é absoluta e não pode ser substituída sem um sistema RAG',
           'Para GEO: aparecer em IA em nuvem requer otimização de busca tradicional (Bing, Google, X); aparecer em IA local requer pipelines RAG — SEO não alcança modelos que nunca tocam a web',
-          'Datas de corte verificadas: Claude Opus 5.5 = jun 2026 (confiável); Grok 4.7 = mai 2026; GPT-6 Astra / GPT-6.1 Sol = abr 2026 (GPT-6 Luna = mai 2026); Phi-4 = jun 2024; GPT-4o (legado) = out 2023. Modelos da geração anterior, já substituídos: Gemini 3.1 Pro = jan 2025; Gemma 3 27B = ago 2024; DeepSeek-V3 = jul 2024 (Desde então, a DeepSeek lançou o DeepSeek-V4 — Flash/Pro — como nova geração de pesos abertos; R1/V3 continuam válidos para uso local.)',
-          'Vários modelos principais — incluindo Llama 4, Qwen3, Mistral Large 4, Gemini 4 Argon, Gemma 4 e DeepSeek-V4 — não divulgaram publicamente datas exatas de corte',
+          'Datas de corte verificadas: Claude Opus 5.5 = jun 2026 (confiável); Grok 4.7 = mai 2026; GPT-6 Astra / GPT-6.1 Sol = abr 2026 (GPT-6 Luna = mai 2026); Phi-4 = jun 2024; Llama 4 Scout = ago 2024; GPT-4o (legado) = out 2023. Modelos da geração anterior, já substituídos: Gemini 3.1 Pro = jan 2025; Gemma 3 27B = ago 2024. O DeepSeek-V3 (geração anterior) não tem data de corte divulgada publicamente (Desde então, a DeepSeek lançou o DeepSeek-V4 — Flash/Pro — como nova geração de pesos abertos; R1/V3 continuam válidos para uso local.)',
+          'Vários modelos principais — incluindo Qwen3, Mistral Large 4, Gemini 4 Argon, Gemma 4, DeepSeek-V4 e DeepSeek-V3 — não divulgaram publicamente datas exatas de corte (o Llama 4 Scout informa agosto de 2024 em seu model card)',
         ],
       },
       invisible_limit: {
@@ -1176,7 +1176,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Se o corte do ChatGPT é outubro de 2023, por que ele conhece eventos recentes?', a: 'O ChatGPT (produto) busca no Bing por padrão nos planos pagos, sintetizando resultados de busca atuais com a inferência dos dados de treinamento. O modelo GPT-4o base ainda tem data de corte de outubro de 2023 — o que você vê é a camada de busca, não dados de treinamento atualizados.' },
             { q: 'LLMs locais como Llama ou Qwen recebem atualizações de conhecimento?', a: 'Não — não automaticamente. O conhecimento de LLMs locais fica permanentemente congelado na data de corte de treinamento. Para obter informações atuais, construa um pipeline RAG.' },
             { q: 'O que é GEO e como se relaciona com datas de corte?', a: 'GEO (Otimização de Motor Generativo) é a área de fazer conteúdo aparecer em respostas geradas por IA. Para IA em nuvem, GEO funciona via otimização de busca. Para LLMs locais, isso é estruturalmente impossível porque o modelo não busca. GEO de LLM local requer pipeline RAG da organização implantadora.' },
-            { q: 'Qual modelo de IA tem a data de corte verificada mais recente?', a: 'Claude Opus 5.5 tem a data de corte confiável mais recente, em junho de 2026, seguido por Grok 4.7 (maio de 2026) e GPT-6 Astra / GPT-6.1 Sol (abril de 2026; GPT-6 Luna: maio de 2026). Phi-4: junho de 2024. GPT-4o (legado): outubro de 2023. Gemini 4 Argon, Gemma 4, DeepSeek-V4 e Mistral Large 4 não divulgaram data de corte; seus antecessores, já substituídos, divulgaram: Gemini 3.1 Pro (janeiro de 2025), DeepSeek-V3 (julho de 2024) e Gemma 3 27B (agosto de 2024).' },
+            { q: 'Qual modelo de IA tem a data de corte verificada mais recente?', a: 'Claude Opus 5.5 tem a data de corte confiável mais recente, em junho de 2026, seguido por Grok 4.7 (maio de 2026) e GPT-6 Astra / GPT-6.1 Sol (abril de 2026; GPT-6 Luna: maio de 2026). Phi-4: junho de 2024. GPT-4o (legado): outubro de 2023. Llama 4 Scout (agosto de 2024) e Gemma 3 27B (agosto de 2024, substituído pelo Gemma 4) informam a data em seus model cards. Vários outros modelos (Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3, Mistral Large 4, Qwen) não divulgaram publicamente a data de corte. O Gemini 3.1 Pro, já substituído, divulgou (janeiro de 2025).' },
             { q: 'Posso usar SEO para aparecer nas respostas do Llama ou Qwen?', a: 'Não. SEO não consegue influenciar LLMs implantados localmente porque o modelo não busca na web. Os principais caminhos são: (1) estar nos dados de treinamento antes do corte, ou (2) ser incluído no pipeline RAG da organização que implanta o modelo.' },
             { q: 'Como verificar faticamente respostas de IA afetadas por datas de corte?', a: 'Três sinais indicam risco de corte: (1) o tópico envolve versões específicas, preços, pessoas ou eventos; (2) você está perguntando sobre um setor que muda rapidamente; (3) a resposta da IA não tem citações. Se qualquer um se aplicar, verifique em fontes primárias.' },
             { q: 'Como saber se uma resposta de IA usou busca ao vivo?', a: 'Perplexity sempre exibe citações de fontes. Gemini mostra ícone do Google Search quando usa grounding. Grok indica resultados de busca no X. ChatGPT exibe ícone de globo. Claude não busca por padrão. LLMs locais nunca buscam — as respostas sempre vêm dos dados de treinamento.' },
@@ -1220,7 +1220,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**クラウドモデル**収録 — 一次情報源リンク付きの検証済みカットオフ日付。旧世代モデルはその旨を明記',
       '**ローカル/オープンウェイトモデル**収録 — すべて検索レイヤー「なし」',
-      '**Phi-4**は2024年6月、**DeepSeek-V3**は2024年7月、**Gemma 3 27B**は2024年8月 — 後者2つは旧世代で、現在はDeepSeek-V4とGemma 4に置き換えられています',
+      '**Phi-4**は2024年6月、**Llama 4 Scout**と**Gemma 3 27B**は2024年8月（いずれもモデルカード記載）。旧世代で現在はDeepSeek-V4に置き換えられたDeepSeek-V3は、カットオフを公式に開示していません',
       '**Claude Opus 5.5**は表中で検証済みの信頼性の高いカットオフが最も新しい：2026年6月',
       '**Grok 4.7**は、本稿で扱うクラウドモデルの中で、デフォルト検索レイヤーが一般ウェブではなくソーシャルプラットフォーム（X/Twitter）である唯一のモデル',
       '**GEOの示唆**：Llama/Qwenを社内にデプロイしている企業は、その企業が自ら構築したRAGパイプラインを通じてのみアプローチ可能',
@@ -1310,7 +1310,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': '検証済みの中で最も新しい知識カットオフ日を持つAIモデルはどれですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '一次情報源で検証済みのカットオフの中では：Claude Opus 5.5が2026年6月という最も新しい信頼性の高いカットオフを持ち、Grok 4.7が2026年5月、GPT-6 AstraとGPT-6.1 Solが2026年4月（GPT-6 Lunaは2026年5月）で続きます。Phi-4は2024年6月。GPT-4o（レガシー）は2023年10月。Gemini 4 Argon、Gemma 4、DeepSeek-V4、Mistral Large 4、Llama 4、Qwen3を含む複数の現行モデルは正確な日付を公式に開示していません。これらに置き換えられた旧世代のGemini 3.1 Pro（2025年1月）、DeepSeek-V3（2024年7月）、Gemma 3 27B（2024年8月）は日付を開示していました。',
+              'text': '一次情報源で検証済みのカットオフの中では：Claude Opus 5.5が2026年6月という最も新しい信頼性の高いカットオフを持ち、Grok 4.7が2026年5月、GPT-6 AstraとGPT-6.1 Solが2026年4月（GPT-6 Lunaは2026年5月）で続きます。Phi-4は2024年6月。GPT-4o（レガシー）は2023年10月。Llama 4 Scout（2024年8月）とGemma 3 27B（2024年8月、Gemma 4に置き換え済み）はモデルカードで日付を明記しています。Gemini 4 Argon、Gemma 4、DeepSeek-V4、DeepSeek-V3、Mistral Large 4、Qwenを含む他の複数のモデルはカットオフを公式に開示していません。置き換えられた旧世代のGemini 3.1 Proは日付を開示していました（2025年1月）。',
             },
           },
           {
@@ -1372,8 +1372,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'クラウドモデル（ChatGPT、Gemini、Grok）は学習データの上にライブウェブ検索を重ねており、事実確認クエリについてはカットオフを部分的に上書きします',
           'ローカルLLM（Llama、Qwen、Gemma、Phi、オープンウェイトMistral）には検索レイヤーがありません — カットオフは絶対的で、RAGシステムなしに上書きできません',
           'GEO（生成エンジン最適化）の観点で：クラウドAIに露出するには従来の検索最適化（Bing、Google、X）が必要。ローカルAIに露出するにはRAGパイプラインが必要 — SEOはウェブに一切触れないモデルには届きません',
-          '検証済みカットオフ：Claude Opus 5.5 = 2026年6月（信頼性高）、Grok 4.7 = 2026年5月、GPT-6 Astra / GPT-6.1 Sol = 2026年4月（GPT-6 Luna = 2026年5月）、Phi-4 = 2024年6月、GPT-4o（レガシー）= 2023年10月。後継に置き換えられた旧世代：Gemini 3.1 Pro = 2025年1月、Gemma 3 27B = 2024年8月、DeepSeek-V3 = 2024年7月 (DeepSeekはその後、オープンウェイトの新世代としてDeepSeek-V4—Flash/Pro—をリリースしました。R1/V3は引き続きローカルで利用可能です。)',
-          'Llama 4、Qwen3、Mistral Large 4、Gemini 4 Argon、Gemma 4、DeepSeek-V4を含む主要モデル複数が正確なカットオフ日を公式に開示していません',
+          '検証済みカットオフ：Claude Opus 5.5 = 2026年6月（信頼性高）、Grok 4.7 = 2026年5月、GPT-6 Astra / GPT-6.1 Sol = 2026年4月（GPT-6 Luna = 2026年5月）、Phi-4 = 2024年6月、Llama 4 Scout = 2024年8月、GPT-4o（レガシー）= 2023年10月。後継に置き換えられた旧世代：Gemini 3.1 Pro = 2025年1月、Gemma 3 27B = 2024年8月。旧世代のDeepSeek-V3はカットオフを公式に開示していません (DeepSeekはその後、オープンウェイトの新世代としてDeepSeek-V4—Flash/Pro—をリリースしました。R1/V3は引き続きローカルで利用可能です。)',
+          'Qwen3、Mistral Large 4、Gemini 4 Argon、Gemma 4、DeepSeek-V4、DeepSeek-V3を含む主要モデル複数が正確なカットオフ日を公式に開示していません（Llama 4 Scoutはモデルカードで2024年8月と明記）',
         ],
       },
       invisible_limit: {
@@ -1575,7 +1575,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'ChatGPTのカットオフが2023年10月なのに最近の出来事を知っているのはなぜですか？', a: 'ChatGPT（製品）は有料プランではデフォルトでBingを検索し、現在の検索結果を学習データの推論と合わせて統合します。基盤のGPT-4oモデルは依然として2023年10月のトレーニングカットオフを持っています — あなたが見ているのは検索レイヤーであり、更新された学習データではありません。' },
             { q: 'LlamaやQwenのようなローカルLLMは知識のアップデートを受け取りますか？', a: 'いいえ — 自動的にはありません。ローカルLLMの知識はトレーニングカットオフ時点で永久に凍結されます。新しいモデルリリース（Llama 4 Scout、Qwen3 14B）はそれぞれ異なるカットオフを持ちますが、マシン上で実行中のコピーは固定された知識を持ちます。現在の情報を得るにはRAGパイプラインを構築してください。' },
             { q: 'GEOとは何ですか？知識カットオフとどう関係しますか？', a: 'GEO（生成エンジン最適化）とは、コンテンツをAI生成回答に露出させる分野です。クラウドAIでは、GEOは検索最適化を通じて機能します — Bing/Googleで順位を得ることで引用されます。ローカルLLMでは、モデルが検索しないため、これは構造的に不可能です。ローカルLLMのGEOはデプロイ組織のRAGパイプラインが必要です。' },
-            { q: '検証済みの中で最も新しい知識カットオフ日を持つAIモデルはどれですか？', a: '一次情報源で検証済みのカットオフの中では：Claude Opus 5.5が2026年6月という最も新しい信頼性の高いカットオフを持ち、Grok 4.7が2026年5月、GPT-6 AstraとGPT-6.1 Solが2026年4月（GPT-6 Lunaは2026年5月）で続きます。Phi-4は2024年6月。GPT-4o（レガシー）は2023年10月。Gemini 4 Argon、Gemma 4、DeepSeek-V4、Mistral Large 4、Llama 4、Qwen3を含む複数の現行モデルは正確な日付を公式に開示していません。これらに置き換えられた旧世代のGemini 3.1 Pro（2025年1月）、DeepSeek-V3（2024年7月）、Gemma 3 27B（2024年8月）は日付を開示していました。' },
+            { q: '検証済みの中で最も新しい知識カットオフ日を持つAIモデルはどれですか？', a: '一次情報源で検証済みのカットオフの中では：Claude Opus 5.5が2026年6月という最も新しい信頼性の高いカットオフを持ち、Grok 4.7が2026年5月、GPT-6 AstraとGPT-6.1 Solが2026年4月（GPT-6 Lunaは2026年5月）で続きます。Phi-4は2024年6月。GPT-4o（レガシー）は2023年10月。Llama 4 Scout（2024年8月）とGemma 3 27B（2024年8月、Gemma 4に置き換え済み）はモデルカードで日付を明記しています。Gemini 4 Argon、Gemma 4、DeepSeek-V4、DeepSeek-V3、Mistral Large 4、Qwenを含む他の複数のモデルはカットオフを公式に開示していません。置き換えられた旧世代のGemini 3.1 Proは日付を開示していました（2025年1月）。' },
             { q: 'SEOを使ってLlamaやQwenの回答に露出できますか？', a: 'いいえ。モデルがウェブを検索しないため、SEOはローカルにデプロイされたLLMに影響を与えることができません。主な経路は：(1) カットオフ前に学習データに含まれていたか、(2) モデルをデプロイしている組織のRAGパイプラインに含まれることです。' },
             { q: 'カットオフの影響を受ける可能性があるAI回答をどうやってファクトチェックすればよいですか？', a: 'カットオフリスクを示す3つのシグナル：(1) トピックが特定のバージョン、価格、人物、またはイベントを含む；(2) 変化の速い業界について尋ねている；(3) AI回答に引用がない。これらのいずれかが当てはまる場合、一次情報源で確認してください — モデルの自信に満ちたトーンは信頼性の指標ではありません。' },
             { q: 'AI回答がライブ検索を使ったかどうかわかりますか？', a: '多くの場合はわかります：Perplexityは常にソース引用を表示します。GeminiはグラウンディングとGoogle検索アイコンを表示します。GrokはXの検索結果を示します。ChatGPTは地球儀アイコンを表示し、ソースを表示するよう求めることができます。Claudeはデフォルトで検索しないため、インジケーターは不要です。ローカルLLMは決して検索しないため、インジケーターは存在しません — 回答は常に学習データから来ています。' },
@@ -1621,7 +1621,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**النماذج السحابية** متضمنة — تواريخ انقطاع موثّقة بروابط مصادر أولية؛ وتُوسَم نماذج الأجيال السابقة بذلك',
       '**النماذج المحلية / open-weight** متضمنة — جميعها بطبقة بحث "لا شيء"',
-      '**Phi-4** تاريخ انقطاعه يونيو 2024 و**DeepSeek-V3** يوليو 2024 و**Gemma 3 27B** أغسطس 2024 — والأخيران من الجيل السابق وقد حلّ محلهما DeepSeek-V4 وGemma 4',
+      '**Phi-4** تاريخ انقطاعه يونيو 2024، و**Llama 4 Scout** و**Gemma 3 27B** أغسطس 2024 (وفق بطاقات النماذج الخاصة بها)؛ أما DeepSeek-V3، وهو من الجيل السابق وقد حلّ محله DeepSeek-V4، فلم يُعلن تاريخ انقطاعه علنًا',
       '**Claude Opus 5.5** لديه أحدث تاريخ انقطاع موثّق وموثوق في الجدول: يونيو 2026',
       '**Grok 4.7** هو، بين النماذج السحابية المشمولة هنا، الوحيد الذي طبقة بحثه الافتراضية منصة اجتماعية (X/Twitter)',
       '**الأثر على GEO**: الشركات التي تنشر Llama/Qwen داخليًا لا يمكن الوصول إليها إلا عبر خطوط أنابيب RAG',
@@ -1711,7 +1711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'أي نموذج ذكاء اصطناعي لديه أحدث تاريخ انقطاع موثّق؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Claude Opus 5.5 لديه أحدث تاريخ انقطاع موثوق في يونيو 2026، ويليه Grok 4.7 في مايو 2026 وGPT-6 Astra / GPT-6.1 Sol في أبريل 2026 (GPT-6 Luna: مايو 2026). Phi-4: يونيو 2024. GPT-4o القديم: أكتوبر 2023. أما Gemini 4 Argon وGemma 4 وDeepSeek-V4 وMistral Large 4 فلم تُعلن تاريخ انقطاع؛ في المقابل أعلنت الأجيال السابقة التي حلّت محلها تواريخها: Gemini 3.1 Pro (يناير 2025) وDeepSeek-V3 (يوليو 2024) وGemma 3 27B (أغسطس 2024).',
+              'text': 'Claude Opus 5.5 لديه أحدث تاريخ انقطاع موثوق في يونيو 2026، ويليه Grok 4.7 في مايو 2026 وGPT-6 Astra / GPT-6.1 Sol في أبريل 2026 (GPT-6 Luna: مايو 2026). Phi-4: يونيو 2024. GPT-4o القديم: أكتوبر 2023. ويذكر Llama 4 Scout (أغسطس 2024) وGemma 3 27B (أغسطس 2024، وقد حلّ محله Gemma 4) تاريخ انقطاعهما في بطاقات نماذجهما. أما عدة نماذج أخرى (Gemini 4 Argon وGemma 4 وDeepSeek-V4 وDeepSeek-V3 وMistral Large 4 وQwen) فلم تُعلن تاريخ انقطاع علنًا. وقد أعلن Gemini 3.1 Pro، الذي حلّ محله غيره، تاريخه (يناير 2025).',
             },
           },
           {
@@ -1757,8 +1757,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'نماذج السحابة (ChatGPT وGemini وGrok) تضيف بحثًا مباشرًا على الويب فوق بيانات التدريب، مما يتجاوز جزئيًا تاريخ الانقطاع للاستعلامات الواقعية',
           'نماذج LLM المحلية (Llama وQwen وGemma وPhi وMistral open-weight) لا تملك طبقة بحث — تاريخ الانقطاع مطلق ولا يمكن تجاوزه بدون نظام RAG',
           'لاستراتيجية GEO: الظهور في ذكاء اصطناعي السحابة يتطلب تحسين البحث التقليدي (Bing وGoogle وX)؛ الظهور في الذكاء الاصطناعي المحلي يتطلب خطوط أنابيب RAG',
-          'تواريخ انقطاع موثّقة: Claude Opus 5.5 = يونيو 2026؛ Grok 4.7 = مايو 2026؛ GPT-6 Astra / GPT-6.1 Sol = أبريل 2026 (GPT-6 Luna = مايو 2026)؛ Phi-4 = يونيو 2024؛ GPT-4o القديم = أكتوبر 2023. نماذج الجيل السابق التي حلّت محلها نماذج أحدث: Gemini 3.1 Pro = يناير 2025؛ Gemma 3 27B = أغسطس 2024؛ DeepSeek-V3 = يوليو 2024 (أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 — Flash/Pro — كجيل جديد بأوزان مفتوحة؛ يظل R1/V3 صالحًا للتشغيل محليًا.)',
-          'عدة نماذج رئيسية — بما فيها Llama 4 وQwen3 وMistral Large 4 وGemini 4 Argon وGemma 4 وDeepSeek-V4 — لم تُفصح علنًا عن تواريخ انقطاع دقيقة',
+          'تواريخ انقطاع موثّقة: Claude Opus 5.5 = يونيو 2026؛ Grok 4.7 = مايو 2026؛ GPT-6 Astra / GPT-6.1 Sol = أبريل 2026 (GPT-6 Luna = مايو 2026)؛ Phi-4 = يونيو 2024؛ Llama 4 Scout = أغسطس 2024؛ GPT-4o القديم = أكتوبر 2023. نماذج الجيل السابق التي حلّت محلها نماذج أحدث: Gemini 3.1 Pro = يناير 2025؛ Gemma 3 27B = أغسطس 2024. أما DeepSeek-V3 (الجيل السابق) فلم يُعلن تاريخ انقطاعه علنًا (أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 — Flash/Pro — كجيل جديد بأوزان مفتوحة؛ يظل R1/V3 صالحًا للتشغيل محليًا.)',
+          'عدة نماذج رئيسية — بما فيها Qwen3 وMistral Large 4 وGemini 4 Argon وGemma 4 وDeepSeek-V4 وDeepSeek-V3 — لم تُفصح علنًا عن تواريخ انقطاع دقيقة (ويذكر Llama 4 Scout في بطاقة نموذجه أغسطس 2024)',
         ],
       },
       invisible_limit: {
@@ -1960,7 +1960,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'إذا كان انقطاع ChatGPT في أكتوبر 2023، لماذا يعرف الأحداث الأخيرة؟', a: 'ChatGPT (المنتج) يبحث في Bing افتراضيًا في الخطط المدفوعة. النموذج الأساسي GPT-4o لا يزال بتاريخ انقطاع أكتوبر 2023 — ما تراه هو طبقة البحث، وليس بيانات تدريب محدّثة.' },
             { q: 'هل تتلقى نماذج LLM المحلية كـLlama أو Qwen تحديثات للمعرفة؟', a: 'لا. معرفة نماذج LLM المحلية تتجمّد بصفة دائمة عند تاريخ انقطاع التدريب. للحصول على معلومات حالية، ابنِ خط أنابيب RAG.' },
             { q: 'ما هو GEO وعلاقته بتواريخ الانقطاع؟', a: 'GEO (تحسين محرك التوليد) هو ممارسة جعل علامتك التجارية أو محتواك يظهر في إجابات الذكاء الاصطناعي. لذكاء اصطناعي السحابة، GEO يتداخل مع SEO. لنماذج LLM المحلية، هذا مستحيل هيكليًا لأن النموذج لا يبحث.' },
-            { q: 'أي نموذج ذكاء اصطناعي لديه أحدث تاريخ انقطاع موثّق؟', a: 'Claude Opus 5.5 لديه أحدث تاريخ انقطاع موثوق في يونيو 2026، ويليه Grok 4.7 في مايو 2026 وGPT-6 Astra / GPT-6.1 Sol في أبريل 2026 (GPT-6 Luna: مايو 2026). Phi-4: يونيو 2024. GPT-4o القديم: أكتوبر 2023. أما Gemini 4 Argon وGemma 4 وDeepSeek-V4 وMistral Large 4 فلم تُعلن تاريخ انقطاع؛ في المقابل أعلنت الأجيال السابقة التي حلّت محلها تواريخها: Gemini 3.1 Pro (يناير 2025) وDeepSeek-V3 (يوليو 2024) وGemma 3 27B (أغسطس 2024).' },
+            { q: 'أي نموذج ذكاء اصطناعي لديه أحدث تاريخ انقطاع موثّق؟', a: 'Claude Opus 5.5 لديه أحدث تاريخ انقطاع موثوق في يونيو 2026، ويليه Grok 4.7 في مايو 2026 وGPT-6 Astra / GPT-6.1 Sol في أبريل 2026 (GPT-6 Luna: مايو 2026). Phi-4: يونيو 2024. GPT-4o القديم: أكتوبر 2023. ويذكر Llama 4 Scout (أغسطس 2024) وGemma 3 27B (أغسطس 2024، وقد حلّ محله Gemma 4) تاريخ انقطاعهما في بطاقات نماذجهما. أما عدة نماذج أخرى (Gemini 4 Argon وGemma 4 وDeepSeek-V4 وDeepSeek-V3 وMistral Large 4 وQwen) فلم تُعلن تاريخ انقطاع علنًا. وقد أعلن Gemini 3.1 Pro، الذي حلّ محله غيره، تاريخه (يناير 2025).' },
             { q: 'هل يمكنني استخدام SEO للظهور في إجابات Llama أو Qwen؟', a: 'لا. SEO لا يستطيع التأثير في نماذج LLM المنشورة محليًا لأن النموذج لا يبحث في الويب.' },
             { q: 'كيف أتحقق من صحة إجابات الذكاء الاصطناعي المتأثرة بتواريخ الانقطاع؟', a: 'ثلاثة مؤشرات: (1) الموضوع يتضمن إصدارات أو أسعارًا محددة؛ (2) قطاع يتغير بسرعة؛ (3) لا استشهادات في الإجابة. تحقق دائمًا من المصادر الأولية.' },
             { q: 'كيف أعرف إذا كانت إجابة الذكاء الاصطناعي استخدمت البحث المباشر؟', a: 'Perplexity دائمًا يعرض استشهادات. Gemini يعرض أيقونة Google Search. Grok يشير إلى نتائج X. ChatGPT يعرض أيقونة كرة أرضية. Claude لا يبحث افتراضيًا. نماذج LLM المحلية لا تبحث أبدًا.' },
@@ -2004,7 +2004,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**Modèles cloud** couverts — dates de coupure vérifiées avec liens vers les sources primaires ; les modèles de génération précédente sont signalés comme tels',
       '**Modèles locaux/open-weight** couverts — tous ont "Aucune" pour la couche de recherche',
-      '**Phi-4** a une coupure de juin 2024, **DeepSeek-V3** de juillet 2024 et **Gemma 3 27B** d\'août 2024 — les deux derniers sont de la génération précédente, désormais remplacés par DeepSeek-V4 et Gemma 4',
+      '**Phi-4** a une coupure de juin 2024, **Llama 4 Scout** et **Gemma 3 27B** d\'août 2024 (tous selon leurs model cards) ; DeepSeek-V3, de la génération précédente et désormais remplacé par DeepSeek-V4, n\'a pas de coupure divulguée publiquement',
       '**Claude Opus 5.5** a la coupure fiable vérifiée la plus récente du tableau : juin 2026',
       '**Grok 4.7** est, parmi les modèles cloud couverts ici, le seul dont la couche de recherche par défaut est une plateforme sociale (X/Twitter) plutôt que le web général',
       '**Implication GEO** : les entreprises qui déploient Llama/Qwen en interne ne peuvent être atteintes que via les pipelines RAG qu\'elles construisent elles-mêmes',
@@ -2094,7 +2094,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Quel modèle IA a la date de coupure de connaissance la plus récente (vérifiée) ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Parmi les coupures vérifiées par source primaire : Claude Opus 5.5 a la coupure fiable la plus récente à juin 2026, suivi de Grok 4.7 à mai 2026 et de GPT-6 Astra / GPT-6.1 Sol à avril 2026 (GPT-6 Luna : mai 2026). Phi-4 est juin 2024. GPT-4o (héritage) est octobre 2023. Plusieurs modèles actuels (Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3) n\'ont pas divulgué de dates exactes publiquement. Leurs prédécesseurs, désormais remplacés, en avaient publié : Gemini 3.1 Pro (janvier 2025), DeepSeek-V3 (juillet 2024) et Gemma 3 27B (août 2024).',
+              'text': 'Parmi les coupures vérifiées par source primaire : Claude Opus 5.5 a la coupure fiable la plus récente à juin 2026, suivi de Grok 4.7 à mai 2026 et de GPT-6 Astra / GPT-6.1 Sol à avril 2026 (GPT-6 Luna : mai 2026). Phi-4 est juin 2024. GPT-4o (héritage) est octobre 2023. Llama 4 Scout (août 2024) et Gemma 3 27B (août 2024, remplacé par Gemma 4) l\'indiquent dans leurs model cards. Plusieurs autres modèles (Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3, Mistral Large 4, Qwen) n\'ont pas divulgué publiquement de date de coupure. Gemini 3.1 Pro, désormais remplacé, en avait publié une (janvier 2025).',
             },
           },
           {
@@ -2156,8 +2156,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Les modèles cloud (ChatGPT, Gemini, Grok) superposent une recherche web en direct sur leurs données d\'entraînement ; cela remplace partiellement la coupure pour les requêtes factuelles',
           'Les LLM locaux (Llama, Qwen, Gemma, Phi, Mistral open-weight) n\'ont AUCUNE couche de recherche — la coupure est absolue et ne peut pas être contournée sans construire un système RAG',
           'Pour le GEO (Optimisation pour les Moteurs Génératifs) : apparaître dans l\'IA cloud nécessite une optimisation de recherche traditionnelle (Bing, Google, X) ; apparaître dans l\'IA locale nécessite des pipelines RAG — le SEO ne peut pas atteindre un modèle qui ne touche jamais au web',
-          'Coupures vérifiées : Claude Opus 5.5 = juin 2026 (fiable) ; Grok 4.7 = mai 2026 ; GPT-6 Astra / GPT-6.1 Sol = avr. 2026 (GPT-6 Luna = mai 2026) ; Phi-4 = juin 2024 ; GPT-4o (héritage) = oct. 2023. Modèles de la génération précédente, désormais remplacés : Gemini 3.1 Pro = jan. 2025 ; Gemma 3 27B = août 2024 ; DeepSeek-V3 = juil. 2024 (DeepSeek a depuis publié DeepSeek-V4 — Flash/Pro — comme nouvelle génération à poids ouverts ; R1/V3 restent utilisables en local.)',
-          'Plusieurs modèles majeurs — Llama 4, Qwen3, Mistral Large 4, Gemini 4 Argon, Gemma 4, DeepSeek-V4 — n\'ont pas divulgué publiquement de dates de coupure exactes',
+          'Coupures vérifiées : Claude Opus 5.5 = juin 2026 (fiable) ; Grok 4.7 = mai 2026 ; GPT-6 Astra / GPT-6.1 Sol = avr. 2026 (GPT-6 Luna = mai 2026) ; Phi-4 = juin 2024 ; Llama 4 Scout = août 2024 ; GPT-4o (héritage) = oct. 2023. Modèles de la génération précédente, désormais remplacés : Gemini 3.1 Pro = jan. 2025 ; Gemma 3 27B = août 2024 ; DeepSeek-V3 (génération précédente) n\'a pas de coupure divulguée publiquement (DeepSeek a depuis publié DeepSeek-V4 — Flash/Pro — comme nouvelle génération à poids ouverts ; R1/V3 restent utilisables en local.)',
+          'Plusieurs modèles majeurs — Qwen3, Mistral Large 4, Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3 — n\'ont pas divulgué publiquement de dates de coupure exactes (Llama 4 Scout indique août 2024 dans sa model card)',
         ],
       },
       invisible_limit: {
@@ -2359,7 +2359,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Pourquoi ChatGPT connaît-il des événements récents si sa coupure est octobre 2023 ?', a: 'ChatGPT (le produit) recherche sur Bing par défaut dans les niveaux payants et synthétise les résultats de recherche actuels avec son raisonnement issu des données d\'entraînement. Le modèle GPT-4o sous-jacent a toujours une coupure d\'entraînement d\'octobre 2023 — ce que vous voyez est la couche de recherche, pas des données d\'entraînement mises à jour.' },
             { q: 'Les LLM locaux comme Llama et Qwen reçoivent-ils des mises à jour de connaissance ?', a: 'Non — pas automatiquement. La connaissance d\'un LLM local est définitivement figée à sa coupure d\'entraînement. Chaque nouvelle version (Llama 4 Scout, Qwen3 14B) a une coupure différente, mais la copie sur votre machine a une connaissance fixe. Pour obtenir des informations actuelles, construisez un pipeline RAG.' },
             { q: 'Qu\'est-ce que le GEO et quel est son rapport avec les dates de coupure ?', a: 'Le GEO (Generative Engine Optimization) est la discipline qui consiste à faire apparaître votre contenu dans les réponses générées par l\'IA. Pour l\'IA cloud, le GEO fonctionne via l\'optimisation de recherche — classez-vous dans Bing/Google et vous serez cité. Pour les LLM locaux, c\'est structurellement impossible car le modèle ne fait jamais de recherche. Le GEO pour les LLM locaux nécessite des pipelines RAG chez l\'organisation qui déploie le modèle.' },
-            { q: 'Quel modèle IA a la date de coupure de connaissance la plus récente (vérifiée) ?', a: 'Parmi les coupures vérifiées par source primaire : Claude Opus 5.5 a la coupure fiable la plus récente à juin 2026, suivi de Grok 4.7 à mai 2026 et de GPT-6 Astra / GPT-6.1 Sol à avril 2026 (GPT-6 Luna : mai 2026). Phi-4 est juin 2024. GPT-4o (héritage) est octobre 2023. Plusieurs modèles actuels (Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3) n\'ont pas divulgué de dates exactes publiquement. Leurs prédécesseurs, désormais remplacés, en avaient publié : Gemini 3.1 Pro (janvier 2025), DeepSeek-V3 (juillet 2024) et Gemma 3 27B (août 2024).' },
+            { q: 'Quel modèle IA a la date de coupure de connaissance la plus récente (vérifiée) ?', a: 'Parmi les coupures vérifiées par source primaire : Claude Opus 5.5 a la coupure fiable la plus récente à juin 2026, suivi de Grok 4.7 à mai 2026 et de GPT-6 Astra / GPT-6.1 Sol à avril 2026 (GPT-6 Luna : mai 2026). Phi-4 est juin 2024. GPT-4o (héritage) est octobre 2023. Llama 4 Scout (août 2024) et Gemma 3 27B (août 2024, remplacé par Gemma 4) l\'indiquent dans leurs model cards. Plusieurs autres modèles (Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3, Mistral Large 4, Qwen) n\'ont pas divulgué publiquement de date de coupure. Gemini 3.1 Pro, désormais remplacé, en avait publié une (janvier 2025).' },
             { q: 'Puis-je utiliser le SEO pour apparaître dans les réponses de Llama ou Qwen ?', a: 'Non. Le SEO ne peut pas influencer un LLM déployé localement car le modèle ne fait jamais de recherche web. Les principaux chemins sont : (1) être dans les données d\'entraînement avant la coupure, ou (2) être inclus dans un pipeline RAG par l\'organisation qui déploie le modèle.' },
             { q: 'Comment vérifier une réponse IA sur quelque chose qui pourrait être affecté par la coupure ?', a: 'Trois signaux indiquent un risque de coupure : (1) le sujet implique des versions spécifiques, des prix, des personnes ou des événements ; (2) vous avez interrogé sur quelque chose dans un secteur en évolution rapide ; (3) la réponse IA manque de citations. Quand l\'un de ces éléments s\'applique, vérifiez auprès d\'une source primaire — le ton confiant du modèle n\'est pas un indicateur de fiabilité.' },
             { q: 'Peut-on voir dans la réponse d\'une IA si elle a utilisé la recherche en direct ?', a: 'Souvent oui : Perplexity montre toujours des citations de sources. Gemini affiche une icône Google Search quand le grounding est utilisé. Grok indique les résultats de recherche X. ChatGPT affiche une icône globe et peut être invité à montrer ses sources. Claude ne recherche pas par défaut, donc aucun indicateur n\'est nécessaire. Les LLM locaux ne font jamais de recherche, donc aucun indicateur n\'existe — la réponse provient toujours des données d\'entraînement.' },
@@ -2405,7 +2405,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**Cloud-Modelle** abgedeckt — verifizierte Cutoff-Daten mit Primärquellen-Links; Modelle der Vorgängergeneration sind als solche gekennzeichnet',
       '**Lokale/Open-Weight-Modelle** abgedeckt — alle haben „Keine" für die Suchschicht',
-      '**Phi-4** hat einen Cutoff im Juni 2024, **DeepSeek-V3** im Juli 2024 und **Gemma 3 27B** im August 2024 — die beiden letzteren sind Vorgängergenerationen, inzwischen abgelöst durch DeepSeek-V4 und Gemma 4',
+      '**Phi-4** hat einen Cutoff im Juni 2024, **Llama 4 Scout** und **Gemma 3 27B** im August 2024 (jeweils laut Model Card); DeepSeek-V3, eine Vorgängergeneration und inzwischen durch DeepSeek-V4 abgelöst, hat keinen öffentlich bekannt gegebenen Cutoff',
       '**Claude Opus 5.5** hat den aktuellsten verifizierten zuverlässigen Cutoff in der Tabelle: Juni 2026',
       '**Grok 4.7** ist unter den hier behandelten Cloud-Modellen das einzige, dessen Standard-Suchschicht eine soziale Plattform (X/Twitter) statt des allgemeinen Webs ist',
       '**GEO-Implikation**: Unternehmen, die Llama/Qwen intern einsetzen, sind nur über die RAG-Pipelines erreichbar, die diese Unternehmen selbst aufbauen',
@@ -2495,7 +2495,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Welches KI-Modell hat das aktuellste verifizierte Wissens-Cutoff-Datum?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Unter primärquellen-verifizierten Cutoffs: Claude Opus 5.5 hat mit Juni 2026 den aktuellsten zuverlässigen Cutoff, gefolgt von Grok 4.7 (Mai 2026) und GPT-6 Astra / GPT-6.1 Sol (April 2026; GPT-6 Luna: Mai 2026). Phi-4 ist Juni 2024. GPT-4o (Legacy) ist Oktober 2023. Mehrere aktuelle Modelle (Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3) haben keine genauen Daten öffentlich bekannt gegeben. Ihre inzwischen abgelösten Vorgänger hatten Daten veröffentlicht: Gemini 3.1 Pro (Januar 2025), DeepSeek-V3 (Juli 2024) und Gemma 3 27B (August 2024).',
+              'text': 'Unter primärquellen-verifizierten Cutoffs: Claude Opus 5.5 hat mit Juni 2026 den aktuellsten zuverlässigen Cutoff, gefolgt von Grok 4.7 (Mai 2026) und GPT-6 Astra / GPT-6.1 Sol (April 2026; GPT-6 Luna: Mai 2026). Phi-4 ist Juni 2024. GPT-4o (Legacy) ist Oktober 2023. Llama 4 Scout (August 2024) und Gemma 3 27B (August 2024, abgelöst durch Gemma 4) nennen ihn in ihren Model Cards. Mehrere andere Modelle (Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3, Mistral Large 4, Qwen) haben keinen Cutoff öffentlich bekannt gegeben. Das inzwischen abgelöste Gemini 3.1 Pro hatte einen veröffentlicht (Januar 2025).',
             },
           },
           {
@@ -2557,8 +2557,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Cloud-Modelle (ChatGPT, Gemini, Grok) legen Live-Websuche über ihre Trainingsdaten; dies überschreibt den Cutoff für sachliche Abfragen teilweise',
           'Lokale LLMs (Llama, Qwen, Gemma, Phi, Open-Weight-Mistral) haben KEINE Suchschicht — der Cutoff ist absolut und kann ohne den Aufbau eines RAG-Systems nicht überschrieben werden',
           'Für GEO (Generative Engine Optimization): Um in Cloud-KI zu erscheinen, ist traditionelle Suchoptimierung erforderlich (Bing, Google, X); um in lokaler KI zu erscheinen, werden RAG-Pipelines benötigt — SEO kann kein Modell erreichen, das nie das Web berührt',
-          'Verifizierte Cutoffs: Claude Opus 5.5 = Jun 2026 (zuverlässig); Grok 4.7 = Mai 2026; GPT-6 Astra / GPT-6.1 Sol = Apr 2026 (GPT-6 Luna = Mai 2026); Phi-4 = Jun 2024; GPT-4o (Legacy) = Okt 2023. Modelle der Vorgängergeneration, inzwischen abgelöst: Gemini 3.1 Pro = Jan 2025; Gemma 3 27B = Aug 2024; DeepSeek-V3 = Jul 2024 (DeepSeek hat inzwischen DeepSeek-V4 — Flash/Pro — als neuere offene Generation veröffentlicht; R1/V3 bleiben weiterhin lokal nutzbar.)',
-          'Mehrere große Modelle — Llama 4, Qwen3, Mistral Large 4, Gemini 4 Argon, Gemma 4, DeepSeek-V4 — haben keine genauen Cutoff-Daten öffentlich bekannt gegeben',
+          'Verifizierte Cutoffs: Claude Opus 5.5 = Jun 2026 (zuverlässig); Grok 4.7 = Mai 2026; GPT-6 Astra / GPT-6.1 Sol = Apr 2026 (GPT-6 Luna = Mai 2026); Phi-4 = Jun 2024; Llama 4 Scout = Aug 2024; GPT-4o (Legacy) = Okt 2023. Modelle der Vorgängergeneration, inzwischen abgelöst: Gemini 3.1 Pro = Jan 2025; Gemma 3 27B = Aug 2024; DeepSeek-V3 (Vorgängergeneration) hat keinen öffentlich bekannt gegebenen Cutoff (DeepSeek hat inzwischen DeepSeek-V4 — Flash/Pro — als neuere offene Generation veröffentlicht; R1/V3 bleiben weiterhin lokal nutzbar.)',
+          'Mehrere große Modelle — Qwen3, Mistral Large 4, Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3 — haben keine genauen Cutoff-Daten öffentlich bekannt gegeben (Llama 4 Scout nennt August 2024 in seiner Model Card)',
         ],
       },
       invisible_limit: {
@@ -2760,7 +2760,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Warum kennt ChatGPT aktuelle Ereignisse, wenn sein Cutoff Oktober 2023 ist?', a: 'ChatGPT (das Produkt) durchsucht in bezahlten Tarifen standardmäßig Bing und synthetisiert aktuelle Suchergebnisse mit seinen Trainingsdaten. Das zugrundeliegende GPT-4o-Modell hat weiterhin einen Trainings-Cutoff vom Oktober 2023 — was gezeigt wird, ist die Suchschicht, keine aktualisierten Trainingsdaten.' },
             { q: 'Erhalten lokale LLMs wie Llama und Qwen jemals Wissensaktualisierungen?', a: 'Nein — nicht automatisch. Das Wissen eines lokalen LLMs ist permanent auf seinen Trainings-Cutoff eingefroren. Jede neue Modellversion (Llama 4 Scout, Qwen3 14B) hat einen anderen Cutoff, aber die auf dem eigenen Rechner laufende Kopie hat festes Wissen. Für aktuelle Informationen eine RAG-Pipeline aufbauen.' },
             { q: 'Was ist GEO und wie hängt es mit Wissensgrenzen zusammen?', a: 'GEO (Generative Engine Optimization) ist die Disziplin, eigene Inhalte in KI-generierten Antworten erscheinen zu lassen. Bei Cloud-KI funktioniert GEO über Suchoptimierung — in Bing/Google ranken und zitiert werden. Bei lokalen LLMs ist dies strukturell unmöglich, weil das Modell nie sucht. Lokales LLM-GEO erfordert RAG-Pipelines bei der einsetzenden Organisation.' },
-            { q: 'Welches KI-Modell hat das aktuellste verifizierte Wissens-Cutoff-Datum?', a: 'Unter primärquellen-verifizierten Cutoffs: Claude Opus 5.5 hat mit Juni 2026 den aktuellsten zuverlässigen Cutoff, gefolgt von Grok 4.7 (Mai 2026) und GPT-6 Astra / GPT-6.1 Sol (April 2026; GPT-6 Luna: Mai 2026). Phi-4 ist Juni 2024. GPT-4o (Legacy) ist Oktober 2023. Mehrere aktuelle Modelle (Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3) haben keine genauen Daten öffentlich bekannt gegeben. Ihre inzwischen abgelösten Vorgänger hatten Daten veröffentlicht: Gemini 3.1 Pro (Januar 2025), DeepSeek-V3 (Juli 2024) und Gemma 3 27B (August 2024).' },
+            { q: 'Welches KI-Modell hat das aktuellste verifizierte Wissens-Cutoff-Datum?', a: 'Unter primärquellen-verifizierten Cutoffs: Claude Opus 5.5 hat mit Juni 2026 den aktuellsten zuverlässigen Cutoff, gefolgt von Grok 4.7 (Mai 2026) und GPT-6 Astra / GPT-6.1 Sol (April 2026; GPT-6 Luna: Mai 2026). Phi-4 ist Juni 2024. GPT-4o (Legacy) ist Oktober 2023. Llama 4 Scout (August 2024) und Gemma 3 27B (August 2024, abgelöst durch Gemma 4) nennen ihn in ihren Model Cards. Mehrere andere Modelle (Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3, Mistral Large 4, Qwen) haben keinen Cutoff öffentlich bekannt gegeben. Das inzwischen abgelöste Gemini 3.1 Pro hatte einen veröffentlicht (Januar 2025).' },
             { q: 'Kann ich SEO nutzen, um in Llama- oder Qwen-Antworten zu erscheinen?', a: 'Nein. SEO kann einen lokal eingesetzten LLM nicht beeinflussen, weil das Modell nie das Web durchsucht. Die wichtigsten Wege sind: (1) vor dem Cutoff in den Trainingsdaten vorhanden gewesen sein, oder (2) über eine RAG-Pipeline der einsetzenden Organisation eingebunden werden.' },
             { q: 'Wie sollte eine KI-Antwort zu Faktencheck unterzogen werden, die vom Cutoff betroffen sein könnte?', a: 'Drei Signale deuten auf ein Cutoff-Risiko hin: (1) Das Thema betrifft spezifische Versionen, Preise, Personen oder Ereignisse; (2) es wurde nach etwas in einer schnelllebigen Branche gefragt; (3) die KI-Antwort enthält keine Zitate. Wenn eines dieser Zeichen zutrifft, anhand einer Primärquelle verifizieren — der selbstbewusste Ton des Modells ist kein Zuverlässigkeitsindikator.' },
             { q: 'Gibt es eine Möglichkeit, anhand einer KI-Antwort zu erkennen, ob Live-Suche verwendet wurde?', a: 'Oft ja: Perplexity zeigt immer Quellenangaben. Gemini zeigt ein Google-Such-Symbol, wenn Grounding genutzt wird. Grok weist auf X-Suchergebnisse hin. ChatGPT zeigt ein Globus-Symbol und kann aufgefordert werden, Quellen zu zeigen. Claude sucht standardmäßig nicht, daher ist kein Indikator nötig. Lokale LLMs suchen nie, daher gibt es keinen Indikator — die Antwort stammt immer aus den Trainingsdaten.' },
@@ -2806,7 +2806,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**云端模型**收录 — 附一手资料链接的已验证截止日期；上一代模型会如实标注',
       '**本地/开源权重模型**收录 — 全部搜索层为"无"',
-      '**Phi-4** 截止日期为2024年6月，**DeepSeek-V3** 为2024年7月，**Gemma 3 27B** 为2024年8月 — 后两者为上一代模型，现已被 DeepSeek-V4 和 Gemma 4 取代',
+      '**Phi-4** 截止日期为2024年6月，**Llama 4 Scout** 和 **Gemma 3 27B** 为2024年8月（均依据各自模型卡）；上一代模型 DeepSeek-V3 现已被 DeepSeek-V4 取代，其截止日期未公开披露',
       '**Claude Opus 5.5** 在表中拥有最新的已验证可靠截止日期：2026年6月',
       '**Grok 4.7** 是本文涵盖的云端模型中唯一一个默认搜索层为社交平台（X/Twitter）而非通用网络的模型',
       '**GEO启示**：在内部部署Llama/Qwen的企业，只能通过该企业自己构建的RAG管道才能被触达',
@@ -2896,7 +2896,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': '哪个AI模型拥有最新的已验证知识截止日期？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '在一手资料已验证截止日期中：Claude Opus 5.5拥有最新的可靠截止日期——2026年6月，Grok 4.7（2026年5月）以及GPT-6 Astra / GPT-6.1 Sol（2026年4月；GPT-6 Luna为2026年5月）紧随其后。Phi-4为2024年6月。GPT-4o（旧版）为2023年10月。包括Gemini 4 Argon、Gemma 4、DeepSeek-V4、Mistral Large 4、Llama 4和Qwen3在内的多个当前模型尚未公开披露确切日期。已被它们取代的上一代模型曾公布过日期：Gemini 3.1 Pro（2025年1月）、DeepSeek-V3（2024年7月）、Gemma 3 27B（2024年8月）。',
+              'text': '在一手资料已验证截止日期中：Claude Opus 5.5拥有最新的可靠截止日期——2026年6月，Grok 4.7（2026年5月）以及GPT-6 Astra / GPT-6.1 Sol（2026年4月；GPT-6 Luna为2026年5月）紧随其后。Phi-4为2024年6月。GPT-4o（旧版）为2023年10月。Llama 4 Scout（2024年8月）和Gemma 3 27B（2024年8月，已被Gemma 4取代）在其模型卡中注明了截止日期。包括Gemini 4 Argon、Gemma 4、DeepSeek-V4、DeepSeek-V3、Mistral Large 4和Qwen在内的其他多个模型尚未公开披露截止日期。已被取代的Gemini 3.1 Pro曾公布过日期（2025年1月）。',
             },
           },
           {
@@ -2958,8 +2958,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '云端模型（ChatGPT、Gemini、Grok）在训练数据之上叠加实时网络搜索，对事实性查询部分覆盖了截止限制',
           '本地LLM（Llama、Qwen、Gemma、Phi、开源Mistral）没有搜索层——截止日期是绝对的，不构建RAG系统就无法绕过',
           '对于GEO（生成式引擎优化）：出现在云端AI中需要传统搜索优化（Bing、Google、X）；出现在本地AI中需要RAG管道——SEO无法触达从不接触网络的模型',
-          '已验证截止日期：Claude Opus 5.5 = 2026年6月（可靠）；Grok 4.7 = 2026年5月；GPT-6 Astra / GPT-6.1 Sol = 2026年4月（GPT-6 Luna = 2026年5月）；Phi-4 = 2024年6月；GPT-4o（旧版）= 2023年10月。已被取代的上一代模型：Gemini 3.1 Pro = 2025年1月；Gemma 3 27B = 2024年8月；DeepSeek-V3 = 2024年7月 (DeepSeek 此后发布了开源权重新一代模型 DeepSeek-V4——Flash/Pro;R1/V3 仍可在本地正常使用。)',
-          '多个主流模型——Llama 4、Qwen3、Mistral Large 4、Gemini 4 Argon、Gemma 4、DeepSeek-V4——尚未公开披露确切截止日期',
+          '已验证截止日期：Claude Opus 5.5 = 2026年6月（可靠）；Grok 4.7 = 2026年5月；GPT-6 Astra / GPT-6.1 Sol = 2026年4月（GPT-6 Luna = 2026年5月）；Phi-4 = 2024年6月；Llama 4 Scout = 2024年8月；GPT-4o（旧版）= 2023年10月。已被取代的上一代模型：Gemini 3.1 Pro = 2025年1月；Gemma 3 27B = 2024年8月。上一代 DeepSeek-V3 的截止日期未公开披露 (DeepSeek 此后发布了开源权重新一代模型 DeepSeek-V4——Flash/Pro;R1/V3 仍可在本地正常使用。)',
+          '多个主流模型——Qwen3、Mistral Large 4、Gemini 4 Argon、Gemma 4、DeepSeek-V4、DeepSeek-V3——尚未公开披露确切截止日期（Llama 4 Scout 在其模型卡中注明为2024年8月）',
         ],
       },
       invisible_limit: {
@@ -3161,7 +3161,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '如果ChatGPT的截止日期是2023年10月，为什么它知道近期发生的事情？', a: 'ChatGPT（产品）在付费层默认搜索Bing，并将当前搜索结果与训练数据推理综合。底层GPT-4o模型的训练截止日期仍为2023年10月——您看到的是搜索层，而非更新的训练数据。' },
             { q: '像Llama和Qwen这样的本地LLM会收到知识更新吗？', a: '不会——不会自动更新。本地LLM的知识在训练截止日期时就永久冻结。每个新模型版本（Llama 4 Scout、Qwen3 14B）有不同的截止日期，但运行在您机器上的副本具有固定知识。要获取当前信息，请构建RAG管道。' },
             { q: '什么是GEO，它与知识截止日期有何关联？', a: 'GEO（生成式引擎优化）是使内容出现在AI生成回答中的学科。对于云端AI，GEO通过搜索优化实现——在Bing/Google排名靠前就能被引用。对于本地LLM，这在结构上是不可能的，因为模型从不搜索。本地LLM GEO需要部署组织的RAG管道。' },
-            { q: '哪个AI模型拥有最新的已验证知识截止日期？', a: '在一手资料已验证截止日期中：Claude Opus 5.5拥有最新的可靠截止日期——2026年6月，Grok 4.7（2026年5月）以及GPT-6 Astra / GPT-6.1 Sol（2026年4月；GPT-6 Luna为2026年5月）紧随其后。Phi-4为2024年6月。GPT-4o（旧版）为2023年10月。包括Gemini 4 Argon、Gemma 4、DeepSeek-V4、Mistral Large 4、Llama 4和Qwen3在内的多个当前模型尚未公开披露确切日期。已被它们取代的上一代模型曾公布过日期：Gemini 3.1 Pro（2025年1月）、DeepSeek-V3（2024年7月）、Gemma 3 27B（2024年8月）。' },
+            { q: '哪个AI模型拥有最新的已验证知识截止日期？', a: '在一手资料已验证截止日期中：Claude Opus 5.5拥有最新的可靠截止日期——2026年6月，Grok 4.7（2026年5月）以及GPT-6 Astra / GPT-6.1 Sol（2026年4月；GPT-6 Luna为2026年5月）紧随其后。Phi-4为2024年6月。GPT-4o（旧版）为2023年10月。Llama 4 Scout（2024年8月）和Gemma 3 27B（2024年8月，已被Gemma 4取代）在其模型卡中注明了截止日期。包括Gemini 4 Argon、Gemma 4、DeepSeek-V4、DeepSeek-V3、Mistral Large 4和Qwen在内的其他多个模型尚未公开披露截止日期。已被取代的Gemini 3.1 Pro曾公布过日期（2025年1月）。' },
             { q: '我能用SEO让自己出现在Llama或Qwen的回答中吗？', a: '不能。SEO无法影响本地部署的LLM，因为该模型从不搜索网络。主要的途径是：（1）在截止日期前已出现在训练数据中，或（2）被部署该模型的组织的RAG管道所纳入。' },
             { q: '如何对可能受截止日期影响的AI回答进行事实核查？', a: '三个信号提示截止风险：（1）话题涉及特定版本、价格、人物或事件；（2）您询问的是快速变化行业的内容；（3）AI回答缺乏引用。任何一个适用时，请通过一手资料核实——模型自信的语气不是可靠性指标。' },
             { q: '有没有办法从AI的回答判断它是否使用了实时搜索？', a: '通常有：Perplexity始终显示来源引用。Gemini在使用接地功能时会显示Google搜索图标。Grok会标注X搜索结果。ChatGPT会显示地球图标，并可提示其展示来源。Claude默认不搜索，因此无需指示。本地LLM从不搜索，所以不存在任何指示——答案始终来自训练数据。' },
@@ -3207,7 +3207,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       '**Modelos en la nube** cubiertos — fechas de corte verificadas con enlaces a fuentes primarias; los modelos de generaciones anteriores se identifican como tales',
       '**Modelos locales/open-weight** cubiertos — todos tienen "Ninguna" para la capa de búsqueda',
-      '**Phi-4** tiene un corte de junio de 2024, **DeepSeek-V3** de julio de 2024 y **Gemma 3 27B** de agosto de 2024 — los dos últimos son de la generación anterior, ya sustituidos por DeepSeek-V4 y Gemma 4',
+      '**Phi-4** tiene un corte de junio de 2024, **Llama 4 Scout** y **Gemma 3 27B** de agosto de 2024 (todos según sus model cards); DeepSeek-V3, de la generación anterior y ya sustituido por DeepSeek-V4, no tiene un corte divulgado públicamente',
       '**Claude Opus 5.5** tiene el corte fiable verificado más reciente de la tabla: junio de 2026',
       '**Grok 4.7** es, entre los modelos en la nube tratados aquí, el único cuya capa de búsqueda predeterminada es una plataforma social (X/Twitter) en lugar de la web general',
       '**Implicación GEO**: las empresas que despliegan Llama/Qwen internamente solo pueden ser alcanzadas a través de los pipelines RAG que esas empresas construyan por sí mismas',
@@ -3297,7 +3297,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': '¿Qué modelo de IA tiene la fecha de corte del conocimiento más reciente (verificada)?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Entre los cortes verificados por fuente primaria: Claude Opus 5.5 tiene el corte fiable más reciente en junio de 2026, seguido de Grok 4.7 en mayo de 2026 y GPT-6 Astra / GPT-6.1 Sol en abril de 2026 (GPT-6 Luna: mayo de 2026). Phi-4 es junio de 2024. GPT-4o (heredado) es octubre de 2023. Varios modelos actuales (Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3) no han divulgado fechas exactas públicamente. Sus predecesores, ya sustituidos, sí las habían publicado: Gemini 3.1 Pro (enero de 2025), DeepSeek-V3 (julio de 2024) y Gemma 3 27B (agosto de 2024).',
+              'text': 'Entre los cortes verificados por fuente primaria: Claude Opus 5.5 tiene el corte fiable más reciente en junio de 2026, seguido de Grok 4.7 en mayo de 2026 y GPT-6 Astra / GPT-6.1 Sol en abril de 2026 (GPT-6 Luna: mayo de 2026). Phi-4 es junio de 2024. GPT-4o (heredado) es octubre de 2023. Llama 4 Scout (agosto de 2024) y Gemma 3 27B (agosto de 2024, sustituido por Gemma 4) la indican en sus model cards. Varios otros modelos (Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3, Mistral Large 4, Qwen) no han divulgado públicamente una fecha de corte. Gemini 3.1 Pro, ya sustituido, sí la había publicado (enero de 2025).',
             },
           },
           {
@@ -3359,8 +3359,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Los modelos en la nube (ChatGPT, Gemini, Grok) superponen búsqueda web en vivo sobre sus datos de entrenamiento; esto reemplaza parcialmente el corte para consultas factuales',
           'Los LLM locales (Llama, Qwen, Gemma, Phi, Mistral open-weight) NO tienen capa de búsqueda — el corte es absoluto y no puede superarse sin construir un sistema RAG',
           'Para el GEO (Optimización para Motores Generativos): aparecer en la IA en la nube requiere optimización de búsqueda tradicional (Bing, Google, X); aparecer en la IA local requiere pipelines RAG — el SEO no puede alcanzar a un modelo que nunca toca la web',
-          'Cortes verificados: Claude Opus 5.5 = jun. 2026 (fiable); Grok 4.7 = may. 2026; GPT-6 Astra / GPT-6.1 Sol = abr. 2026 (GPT-6 Luna = may. 2026); Phi-4 = jun. 2024; GPT-4o (heredado) = oct. 2023. Modelos de la generación anterior, ya sustituidos: Gemini 3.1 Pro = ene. 2025; Gemma 3 27B = ago. 2024; DeepSeek-V3 = jul. 2024 (DeepSeek ha lanzado desde entonces DeepSeek-V4 —Flash/Pro— como nueva generación de pesos abiertos; R1/V3 siguen siendo válidos para ejecutar en local.)',
-          'Varios modelos principales — Llama 4, Qwen3, Mistral Large 4, Gemini 4 Argon, Gemma 4, DeepSeek-V4 — no han divulgado públicamente fechas de corte exactas',
+          'Cortes verificados: Claude Opus 5.5 = jun. 2026 (fiable); Grok 4.7 = may. 2026; GPT-6 Astra / GPT-6.1 Sol = abr. 2026 (GPT-6 Luna = may. 2026); Phi-4 = jun. 2024; Llama 4 Scout = ago. 2024; GPT-4o (heredado) = oct. 2023. Modelos de la generación anterior, ya sustituidos: Gemini 3.1 Pro = ene. 2025; Gemma 3 27B = ago. 2024; DeepSeek-V3 (generación anterior) no tiene un corte divulgado públicamente (DeepSeek ha lanzado desde entonces DeepSeek-V4 —Flash/Pro— como nueva generación de pesos abiertos; R1/V3 siguen siendo válidos para ejecutar en local.)',
+          'Varios modelos principales — Qwen3, Mistral Large 4, Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3 — no han divulgado públicamente fechas de corte exactas (Llama 4 Scout indica agosto de 2024 en su model card)',
         ],
       },
       invisible_limit: {
@@ -3562,7 +3562,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '¿Por qué ChatGPT conoce eventos recientes si su corte es octubre de 2023?', a: 'ChatGPT (el producto) busca en Bing de forma predeterminada en los planes de pago y sintetiza los resultados de búsqueda actuales con su razonamiento basado en datos de entrenamiento. El modelo GPT-4o subyacente sigue teniendo un corte de entrenamiento de octubre de 2023 — lo que ve es la capa de búsqueda, no datos de entrenamiento actualizados.' },
             { q: '¿Reciben actualizaciones de conocimiento los LLM locales como Llama y Qwen?', a: 'No — no de forma automática. El conocimiento de un LLM local está permanentemente congelado en su corte de entrenamiento. Cada nueva versión del modelo (Llama 4 Scout, Qwen3 14B) tiene un corte diferente, pero la copia en ejecución en su máquina tiene un conocimiento fijo. Para obtener información actual, construya un pipeline RAG.' },
             { q: '¿Qué es el GEO y cómo se relaciona con las fechas de corte?', a: 'El GEO (Generative Engine Optimization) es la disciplina de lograr que su contenido aparezca en las respuestas generadas por IA. Para la IA en la nube, el GEO funciona a través de la optimización de búsqueda — posiciónese en Bing/Google y será citado. Para los LLM locales, esto es estructuralmente imposible porque el modelo nunca realiza búsquedas. El GEO para LLM locales requiere pipelines RAG en la organización que despliega el modelo.' },
-            { q: '¿Qué modelo de IA tiene la fecha de corte del conocimiento más reciente (verificada)?', a: 'Entre los cortes verificados por fuente primaria: Claude Opus 5.5 tiene el corte fiable más reciente en junio de 2026, seguido de Grok 4.7 en mayo de 2026 y GPT-6 Astra / GPT-6.1 Sol en abril de 2026 (GPT-6 Luna: mayo de 2026). Phi-4 es junio de 2024. GPT-4o (heredado) es octubre de 2023. Varios modelos actuales (Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3) no han divulgado fechas exactas públicamente. Sus predecesores, ya sustituidos, sí las habían publicado: Gemini 3.1 Pro (enero de 2025), DeepSeek-V3 (julio de 2024) y Gemma 3 27B (agosto de 2024).' },
+            { q: '¿Qué modelo de IA tiene la fecha de corte del conocimiento más reciente (verificada)?', a: 'Entre los cortes verificados por fuente primaria: Claude Opus 5.5 tiene el corte fiable más reciente en junio de 2026, seguido de Grok 4.7 en mayo de 2026 y GPT-6 Astra / GPT-6.1 Sol en abril de 2026 (GPT-6 Luna: mayo de 2026). Phi-4 es junio de 2024. GPT-4o (heredado) es octubre de 2023. Llama 4 Scout (agosto de 2024) y Gemma 3 27B (agosto de 2024, sustituido por Gemma 4) la indican en sus model cards. Varios otros modelos (Gemini 4 Argon, Gemma 4, DeepSeek-V4, DeepSeek-V3, Mistral Large 4, Qwen) no han divulgado públicamente una fecha de corte. Gemini 3.1 Pro, ya sustituido, sí la había publicado (enero de 2025).' },
             { q: '¿Puedo usar el SEO para aparecer en las respuestas de Llama o Qwen?', a: 'No. El SEO no puede influir en un LLM desplegado localmente porque el modelo nunca realiza búsquedas web. Los caminos principales son: (1) estar en los datos de entrenamiento antes del corte, o (2) ser incluido en un pipeline RAG por la organización que despliega el modelo.' },
             { q: '¿Cómo verifico una respuesta de IA sobre algo que podría estar afectado por el corte?', a: 'Tres señales indican riesgo de corte: (1) el tema involucra versiones específicas, precios, personas o eventos; (2) preguntó sobre algo en un sector de rápida evolución; (3) la respuesta de IA carece de citas. Cuando alguna de estas aplique, verifique con una fuente primaria — el tono confiado del modelo no es un indicador de fiabilidad.' },
             { q: '¿Hay alguna manera de saber a partir de la respuesta de una IA si utilizó búsqueda en vivo?', a: 'A menudo sí: Perplexity siempre muestra citas de fuentes. Gemini muestra un ícono de Google Search cuando se usa grounding. Grok indica resultados de búsqueda en X. ChatGPT muestra un ícono de globo terráqueo y puede solicitársele que muestre las fuentes. Claude no busca de forma predeterminada, por lo que no se necesita indicador. Los LLM locales nunca buscan, así que no existe ningún indicador — la respuesta siempre proviene de los datos de entrenamiento.' },
