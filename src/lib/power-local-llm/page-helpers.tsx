@@ -1047,6 +1047,7 @@ const HUB_THEMES: Array<{
       'maid-review',
       'private-mind-review',
       'memoryai-review',
+      'castmates-review',
       'llm-hub-review',
       'lm-playground-review',
       'localmind-review',
