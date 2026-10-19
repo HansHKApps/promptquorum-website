@@ -655,7 +655,7 @@
       ]
     },
     "long-context-local-llms": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -672,20 +672,20 @@
       ],
       "images": [
         {
-          "url": "/images/long-context-local-llms-models-comparison-hero-en.webp",
-          "title": "8 local LLM models with 128K context support in 2026 -- Qwen3 14B is the top pick for 16 GB machines, Qwen3 4B for 8 GB machines."
+          "url": "/images/long-context-local-llms-context-ladder-en.svg",
+          "title": "Listed context windows of local LLMs on a log scale: 128K is the entry level, 256K is common, Nemotron 3 Nano supports 1M and Llama 4 Scout lists 10M."
         },
         {
-          "url": "/images/long-context-local-llms-ram-scaling-hero-en.webp",
-          "title": "KV cache RAM scales with context length -- a 7B model at Q4_K_M needs ~6 GB at 4K context but ~14 GB at 128K context."
+          "url": "/images/long-context-local-llms-kv-cache-en.svg",
+          "title": "Weights plus f16 KV cache at a 128K context: Llama 3.1 8B needs about 21 GB, while Qwen3.5 9B needs about 11 GB and Nemotron 3 Nano about 19 GB."
         },
         {
-          "url": "/images/lost-in-the-middle-effect-en.svg",
-          "title": "The \"lost in the middle\" effect: LLMs reliably recall content at start and end of the context window but miss the 40K-80K token range."
+          "url": "/images/long-context-local-llms-lost-in-the-middle-en.svg",
+          "title": "Schematic of the \"lost in the middle\" effect: accuracy is highest for information at the start and the end of the prompt and lower in the middle (shape reported by Liu et al., 2023; illustrative, not measured values)."
         },
         {
-          "url": "/images/ollama-context-modelfile-en.svg",
-          "title": "Setting num_ctx 32768 in a Modelfile unlocks 32K context in Ollama -- verified with `ollama ps` showing CTX column."
+          "url": "/images/long-context-local-llms-ollama-settings-en.svg",
+          "title": "Ways to set the context length in Ollama, from server default to per-request, and how to verify the active value with ollama ps."
         }
       ]
     },

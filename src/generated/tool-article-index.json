@@ -11,6 +11,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "long-context-local-llms",
+        "title": "Long Context Local LLMs 2026: 128K, 256K and 1M Models Compared",
+        "url": "/local-llms/long-context-local-llms",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "saudi-pdpl-data-sovereignty-local-ai-2026",
         "title": "Saudi PDPL & Data Sovereignty: Why AI Must Run Inside the Kingdom (2026)",
         "url": "/local-llms/saudi-pdpl-data-sovereignty-local-ai-2026",
@@ -72,14 +80,6 @@
         "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
         "dateModified": "2026-10-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "secret-ai-review",
-        "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
-        "url": "/power-local-llm/secret-ai-review",
-        "dateModified": "2026-10-19",
-        "tier": "about"
       }
     ],
     "totalCount": 302,
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "long-context-local-llms",
+        "title": "Long Context Local LLMs 2026: 128K, 256K and 1M Models Compared",
+        "url": "/local-llms/long-context-local-llms",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
@@ -158,17 +166,9 @@
         "url": "/local-llms/llm-quantization-explained",
         "dateModified": "2026-10-17",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lm-studio-vs-jan-ai",
-        "title": "Jan AI vs LM Studio: Which Is Better for Local LLMs?",
-        "url": "/local-llms/lm-studio-vs-jan-ai",
-        "dateModified": "2026-10-17",
-        "tier": "about"
       }
     ],
-    "totalCount": 166,
+    "totalCount": 167,
     "capped": true
   },
   "vLLM": {
@@ -860,6 +860,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "long-context-local-llms",
+        "title": "Long Context Local LLMs 2026: 128K, 256K and 1M Models Compared",
+        "url": "/local-llms/long-context-local-llms",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "uncensored-local-llm-creative-writing-ethics",
         "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
@@ -922,17 +930,9 @@
         "url": "/power-local-llm/localmind-review",
         "dateModified": "2026-10-17",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "spiritbox-ultimate-review",
-        "title": "SpiritBox Ultimate Review: Windows Early Access for LM Studio Users",
-        "url": "/power-local-llm/spiritbox-ultimate-review",
-        "dateModified": "2026-10-16",
-        "tier": "about"
       }
     ],
-    "totalCount": 146,
+    "totalCount": 147,
     "capped": true
   },
   "Atomic Chat": {
@@ -9165,6 +9165,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "long-context-local-llms",
+        "title": "Long Context Local LLMs 2026: 128K, 256K and 1M Models Compared",
+        "url": "/local-llms/long-context-local-llms",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "llm-quantization-explained",
         "title": "LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)",
         "url": "/local-llms/llm-quantization-explained",
@@ -9226,17 +9234,9 @@
         "url": "/power-local-llm/deepseek-r1-vs-distills-explained-2026",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-for-coding",
-        "title": "Best Local LLMs for Coding 2026: Qwen3.8 27B, Devstral, Laguna",
-        "url": "/local-llms/best-local-llms-for-coding",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 12,
+    "totalCount": 13,
     "capped": true
   },
   "LLaMA-Factory": {

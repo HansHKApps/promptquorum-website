@@ -33754,155 +33754,230 @@
     "width": 1200,
     "height": 675
   },
-  "/images/long-context-local-llms-models-comparison-hero-ar.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-models-comparison-hero-de.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-models-comparison-hero-en.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-models-comparison-hero-es.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-models-comparison-hero-fr.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-models-comparison-hero-ja.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-models-comparison-hero-ko.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-models-comparison-hero-pt.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-models-comparison-hero-zh.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-ram-scaling-hero-ar.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-ram-scaling-hero-de.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-ram-scaling-hero-en.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-ram-scaling-hero-es.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-ram-scaling-hero-fr.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-ram-scaling-hero-ja.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-ram-scaling-hero-ko.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-ram-scaling-hero-pt.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-local-llms-ram-scaling-hero-zh.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/long-context-models-comparison-de.svg": {
+  "/images/long-context-local-llms-context-ladder-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 500
   },
-  "/images/long-context-models-comparison-en.svg": {
+  "/images/long-context-local-llms-context-ladder-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 500
   },
-  "/images/long-context-models-comparison-es.svg": {
+  "/images/long-context-local-llms-context-ladder-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 500
   },
-  "/images/long-context-models-comparison-fr.svg": {
+  "/images/long-context-local-llms-context-ladder-es.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 500
   },
-  "/images/long-context-models-comparison-ja.svg": {
+  "/images/long-context-local-llms-context-ladder-fr.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 500
   },
-  "/images/long-context-models-comparison-zh.svg": {
+  "/images/long-context-local-llms-context-ladder-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 500
   },
-  "/images/long-context-ram-scaling-de.svg": {
+  "/images/long-context-local-llms-context-ladder-ko.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 500
   },
-  "/images/long-context-ram-scaling-en.svg": {
+  "/images/long-context-local-llms-context-ladder-pt.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 500
   },
-  "/images/long-context-ram-scaling-es.svg": {
+  "/images/long-context-local-llms-context-ladder-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 500
   },
-  "/images/long-context-ram-scaling-fr.svg": {
+  "/images/long-context-local-llms-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/long-context-local-llms-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/long-context-local-llms-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/long-context-local-llms-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/long-context-local-llms-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/long-context-local-llms-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/long-context-local-llms-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/long-context-local-llms-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/long-context-local-llms-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/long-context-local-llms-kv-cache-ar.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 510
   },
-  "/images/long-context-ram-scaling-ja.svg": {
+  "/images/long-context-local-llms-kv-cache-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 510
   },
-  "/images/long-context-ram-scaling-zh.svg": {
+  "/images/long-context-local-llms-kv-cache-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 400
+    "height": 510
+  },
+  "/images/long-context-local-llms-kv-cache-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 510
+  },
+  "/images/long-context-local-llms-kv-cache-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 510
+  },
+  "/images/long-context-local-llms-kv-cache-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 510
+  },
+  "/images/long-context-local-llms-kv-cache-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 510
+  },
+  "/images/long-context-local-llms-kv-cache-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 510
+  },
+  "/images/long-context-local-llms-kv-cache-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 510
+  },
+  "/images/long-context-local-llms-lost-in-the-middle-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/long-context-local-llms-lost-in-the-middle-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/long-context-local-llms-lost-in-the-middle-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/long-context-local-llms-lost-in-the-middle-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/long-context-local-llms-lost-in-the-middle-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/long-context-local-llms-lost-in-the-middle-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/long-context-local-llms-lost-in-the-middle-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/long-context-local-llms-lost-in-the-middle-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/long-context-local-llms-lost-in-the-middle-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 440
+  },
+  "/images/long-context-local-llms-ollama-settings-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 452
+  },
+  "/images/long-context-local-llms-ollama-settings-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 452
+  },
+  "/images/long-context-local-llms-ollama-settings-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 452
+  },
+  "/images/long-context-local-llms-ollama-settings-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 452
+  },
+  "/images/long-context-local-llms-ollama-settings-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 452
+  },
+  "/images/long-context-local-llms-ollama-settings-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 452
+  },
+  "/images/long-context-local-llms-ollama-settings-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 452
+  },
+  "/images/long-context-local-llms-ollama-settings-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 452
+  },
+  "/images/long-context-local-llms-ollama-settings-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 452
   },
   "/images/lora-vs-full-fine-tuning-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -33948,36 +34023,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/lost-in-the-middle-effect-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/lost-in-the-middle-effect-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/lost-in-the-middle-effect-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/lost-in-the-middle-effect-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/lost-in-the-middle-effect-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/lost-in-the-middle-effect-zh.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
   },
   "/images/m4-max-vs-m4-pro-local-llm-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -37205,36 +37250,6 @@
     "height": 675
   },
   "/images/ollama-command-guide-quantization-vram-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/ollama-context-modelfile-de.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/ollama-context-modelfile-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/ollama-context-modelfile-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/ollama-context-modelfile-fr.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/ollama-context-modelfile-ja.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/ollama-context-modelfile-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 400
