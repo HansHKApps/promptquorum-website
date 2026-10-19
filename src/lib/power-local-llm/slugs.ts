@@ -534,4 +534,5 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'ai-cutoutwerk-review':                     'ai-cutoutwerk-review',
   'openmontage-review':                       'openmontage-review',
   'hiwaifu-review':                           'hiwaifu-review',
+  'memoryai-review':                          'memoryai-review',
 }

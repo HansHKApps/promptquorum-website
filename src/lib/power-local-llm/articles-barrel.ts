@@ -61,6 +61,7 @@ import { article as a_whisper_notes_review } from './articles/whisper-notes-revi
 import { article as a_transcriptionsuite_review } from './articles/transcriptionsuite-review'
 import { article as a_parrot_review } from './articles/parrot-review'
 import { article as a_hiwaifu_review } from './articles/hiwaifu-review'
+import { article as a_memoryai_review } from './articles/memoryai-review'
 import { article as a_anyllm_review } from './articles/anyllm-review'
 import { article as a_ollama_local_ai_review } from './articles/ollama-local-ai-review'
 import { article as a_comfyui_review } from './articles/comfyui-review'
@@ -665,6 +666,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'transcriptionsuite-review':                     a_transcriptionsuite_review,
   'parrot-review':                                 a_parrot_review,
   'hiwaifu-review':                                a_hiwaifu_review,
+  'memoryai-review':                               a_memoryai_review,
   'anyllm-review':                                 a_anyllm_review,
   'ollama-local-ai-review':                        a_ollama_local_ai_review,
   // ComfyUI review — 2026-09-06

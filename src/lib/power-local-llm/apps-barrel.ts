@@ -131,6 +131,7 @@ import { app as app_local_ai_chat_pocket } from './apps/local-ai-chat-pocket'
 import { app as app_pixlstash } from './apps/pixlstash'
 import { app as app_swerve_ai } from './apps/swerve-ai'
 import { app as app_hiwaifu } from './apps/hiwaifu'
+import { app as app_memoryai } from './apps/memoryai'
 import { app as app_whisper_notes } from './apps/whisper-notes'
 import { app as app_anyllm } from './apps/anyllm'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
@@ -527,6 +528,7 @@ export const localAiApps: ToolRecord[] = [
   app_local_ai_chat_pocket,
   app_pixlstash,
   app_hiwaifu,
+  app_memoryai,
   app_whisper_notes,
   app_anyllm,
   app_local_ai_geetmark,
