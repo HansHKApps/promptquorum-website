@@ -43,12 +43,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI (version 1.0.52 on iOS as of 19 October 2026) pairs an editable on-device memory with a PIN-locked Kid Mode in a free chat app that needs no account.** Models are downloaded once from Hugging Face and then run offline. The store texts and the privacy policy do not fully agree on analytics and purchases, so read the privacy section before relying on the "no tracking" wording.',
+      '**MemoryAI (version 1.0.52 on iOS and 1.0.54 on Android as of 19 October 2026) pairs an editable on-device memory with a PIN-locked Kid Mode in a free chat app that needs no account.** Models are downloaded once from Hugging Face and then run offline. Usage events and crash reports without chat content do leave the phone, so read the privacy section before relying on the "no tracking" wording.',
     quickAnswerTop: {
       en: {
         question: 'Is MemoryAI really offline and free?',
         answer:
-          'Per its listings, yes for the core features: after a one-time model download, chat, document questions and voice run on the phone, and no ads. Its privacy policy adds that anonymous analytics and crash reports are sent out and that purchases for premium features may exist, which the store texts deny.',
+          'Per its listings, yes for the core features: after a one-time model download, chat, document questions and voice run on the phone, with no ads and no in-app purchases. Its privacy policy adds that usage events and crash reports without chat content are sent out.',
         bullets: [
           'Free on [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) and the [App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586).',
           'Chat with GGUF and LiteRT models such as Gemma, Qwen, Llama, Phi and DeepSeek.',
@@ -66,6 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Features Confirmed by the Sources', anchor: 'key-features' },
       { label: 'Kid Mode', anchor: 'kid-mode' },
       { label: 'Privacy and Network Use', anchor: 'privacy' },
+      { label: 'From the Maker', anchor: 'from-the-maker' },
       { label: 'Who Should Use It', anchor: 'who-should-use' },
       { label: 'What We Could Not Verify', anchor: 'who-should-not-use' },
       { label: 'Competitors and Alternatives', anchor: 'vs-alternatives' },
@@ -107,7 +108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-memoryai',
         title: 'What Is MemoryAI?',
         content: [
-          '**MemoryAI is a mobile chat app that runs open-weight language models locally instead of calling a cloud service.** According to its listings, no model is bundled: you pick one from the in-app list or import any compatible GGUF file from Hugging Face, and the first run needs a network connection to download it. Two inference engines are offered, llama.cpp for GGUF models and Google\'s MediaPipe/LiteRT for Gemma-family models.',
+          '**MemoryAI is a mobile chat app that runs open-weight language models locally instead of calling a cloud service.** According to its listings, no model is bundled: you pick one from the in-app list or import any compatible GGUF file from Hugging Face, and the first run needs a network connection to download it. Two inference engines are offered, llama.cpp for GGUF models and Google\'s LiteRT (MediaPipe) for models in LiteRT format. The developer says LiteRT is not limited to Gemma: it also runs Qwen 2.5 1.5B, DeepSeek R1 Distill 1.5B and Phi-4 Mini.',
           'The App Store listing is titled "MemoryAI: Offline Private AI" in the US, Japanese and Korean storefronts, "MemoryAI: Private Offline-KI" in Germany and "MemoryAI: a IA que lembra" in Brazil; the Google Play package is com.ts.memoryai. Its "Agent Memory" is a feature of this app, not a separate product.',
         ],
       },
@@ -133,14 +134,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Platform': 'Privacy policy',
-            'Where to get it': '[Same page](https://alessandrofacchini.github.io/memoryai-privacy/) (English, Italian version linked there; last updated 30 June 2026)',
+            'Where to get it': '[Same page](https://alessandrofacchini.github.io/memoryai-privacy/) (English, Italian version linked there; last updated 19 October 2026)',
           },
           {
             'Platform': 'Bug reports',
             'Where to get it': '[GitHub issues](https://github.com/alessandrofacchini/memoryai-feedback/issues) (feedback only, no source code)',
           },
         ],
-        note: 'Version reviewed: 1.0.52 on iOS, released on 18 October 2026, as shown on the App Store listing; the Google Play page was also updated on 18 October 2026 and its page data lists build 1.0.54. The Google Play listing does not show a minimum Android version in the text read.',
+        note: 'Version reviewed: 1.0.52 on iOS, released on 18 October 2026, as shown on the App Store listing. The developer says Android has been on 1.0.54 since 18 October and that iPhone gets the same changes in its next release; the Google Play page data also lists build 1.0.54. The developer states that Android 9 or later is required; the Google Play text read shows no minimum Android version.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -205,8 +206,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacy and Network Use',
         content: [
           '**Chats, documents and memories stay on the device by default, and the developer says the app has no AI servers and sends no chat text.** The Google Play Data safety section declares no data shared with third parties, with possible collection of app info and performance and of device or other IDs, encrypted in transit. The App Store privacy label lists search history, device ID and product interaction for analytics, and device ID, crash and performance data for app functionality, all marked not linked to you.',
-          'The [privacy policy](https://alessandrofacchini.github.io/memoryai-privacy/) names what does leave the phone: anonymous usage events to TelemetryDeck, crash reports to Sentry, optional push notifications through OneSignal, model downloads from Hugging Face, and optional backup to your own Google Drive or iCloud. It also says local data is not encrypted by the app and relies on the device\'s own protection, and that conversations leave the app only when you export them.',
-          'The store descriptions say "no in-app purchases" and "no tracking", while the policy says the app offers in-app purchases for premium features and lists the analytics above. Which statement matches the current build was not clear from the sources, so treat the policy as the more detailed one.',
+          'The [privacy policy](https://alessandrofacchini.github.io/memoryai-privacy/), updated on 19 October 2026, names what leaves the phone: usage events to TelemetryDeck, crash reports to Sentry, and model downloads from Hugging Face. If the user accepts the in-app "Privacy & Notifications" prompt, OneSignal is used for push notifications and, on Android only, Google Analytics for Firebase is active. Backup to your own Google Drive or iCloud is optional. The developer adds that usage events carry no chat content (for example, "a model was loaded") and that crash reports carry no chat or document content. The policy also says local data is not encrypted by the app and relies on the device\'s own protection, and that conversations leave the app only when you export them.',
+          'The store descriptions say "no in-app purchases", and the developer confirmed to PromptQuorum that the app has none; an earlier paragraph about purchases in the privacy policy was out of date and has been corrected. The "no tracking" wording does not mean that nothing leaves the phone: the analytics and crash reporting above still apply.',
         ],
         callouts: [
           {
@@ -214,6 +215,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'The app is closed source, so none of these claims can be checked in code, and PromptQuorum has not audited network traffic. Anyone handling confidential data, or configuring parental controls for a child, should verify behavior on their own device.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'From the Maker',
+        content: [
+          'Alessandro Facchini, the developer of MemoryAI, checked the draft of this review and sent the note below. It is presented as the developer\'s own words, not as PromptQuorum\'s independent editorial assessment. The corrections in the same message on purchases, data flows, engines and the Android version are applied in this review:',
+          '"I built MemoryAI for people who want an AI assistant without handing their words to a server. Once a model is downloaded, it answers with no internet connection, and the conversation stays on the phone.',
+          'Two ideas shape it. The first is a memory you can see: the app can remember what you tell it, in your own words, and you can open that memory, correct it or delete it at any time. The second is family use: Kid Mode locks the model and the settings behind a parent PIN and keeps replies age-appropriate.',
+          'It is free, with no account and no ads, and it speaks six languages. I build it in Italy with a small team, and two testers try new builds on real Android phones and iPhones. Next on the list: tools the model can use on the phone, now in testing, and on iPhone the faster first answer that Android users already have."',
+        ],
+        note: '— Alessandro Facchini, developer',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -231,8 +243,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Hands-on performance.** PromptQuorum did not run the app, so speed, battery use, answer quality and the real strength of the parental controls are not assessed.',
           '**Source code and license.** The app is closed source; the feedback repository holds only a README and an issue tracker.',
-          '**Purchases and tracking.** The store texts and the privacy policy disagree, as described in the privacy section.',
-          '**Android requirements.** The Google Play text read shows no minimum Android version; the iOS minimum is 16.4.',
+          '**Analytics and traffic.** The app is closed source and PromptQuorum has not audited its network traffic, so the data flows above are the account of the developer and the policy.',
+          '**Android requirements.** The developer states Android 9 or later, which the Google Play text read does not show; the iOS minimum is 16.4.',
           '**Track record.** The app has been out for about seven months, with 1K+ Google Play downloads and no App Store ratings yet; the sources give no support commitment.',
           '**Not for users who need very large models.** The downloadable models are small, so heavier work belongs on a computer.',
         ],
@@ -284,7 +296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can I use my own models?',
-            a: 'Yes. You can import compatible GGUF files from Hugging Face and run them on the llama.cpp engine; Gemma-family models can run on the LiteRT engine.',
+            a: 'Yes. You can import compatible GGUF files from Hugging Face and run them on the llama.cpp engine; the LiteRT engine runs Gemma and, per the developer, also Qwen 2.5 1.5B, DeepSeek R1 Distill 1.5B and Phi-4 Mini in LiteRT format.',
           },
           {
             q: 'Does it work on a Mac?',
@@ -300,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'MemoryAI is a free offline mobile chat app that keeps an editable memory of the user on the device and offers parental controls, alongside document and image questions, hands-free voice and two inference engines. It is also frequently updated, with a release the day before this review was checked. Against that, it is closed source, new, small in reach, limited to small on-device models, and its store texts and privacy policy disagree on purchases and tracking, so its privacy claims cannot be checked in code. It suits readers who want these specific features and accept a young, closed app; readers who want auditable code can compare [Private Mind](/power-local-llm/private-mind-review) or [PocketPal AI](/power-local-llm/pocketpal-ai-review).',
+          'MemoryAI is a free offline mobile chat app that keeps an editable memory of the user on the device and offers parental controls, alongside document and image questions, hands-free voice and two inference engines. It is also frequently updated, with a release the day before this review was checked. Against that, it is closed source, new, small in reach, limited to small on-device models, and its privacy claims cannot be checked in code. It suits readers who want these specific features and accept a young, closed app; readers who want auditable code can compare [Private Mind](/power-local-llm/private-mind-review) or [PocketPal AI](/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -308,7 +320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[MemoryAI on the App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — price, version history, requirements, privacy label and description, checked 19 October 2026.',
           '[MemoryAI on Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) — description, download count, Data safety section and last-updated date, checked 19 October 2026.',
-          '[MemoryAI website and privacy policy](https://alessandrofacchini.github.io/memoryai-privacy/) — data handling, network use, permissions and third-party services, policy last updated 30 June 2026.',
+          '[MemoryAI website and privacy policy](https://alessandrofacchini.github.io/memoryai-privacy/) — data handling, network use, permissions and third-party services, policy last updated 19 October 2026.',
           '[memoryai-feedback on GitHub](https://github.com/alessandrofacchini/memoryai-feedback) — the developer\'s public issue tracker.',
         ],
       },
@@ -391,12 +403,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI (Version 1.0.52 unter iOS, Stand 19. Oktober 2026) verbindet in einer kostenlosen Chat-App ohne Konto ein editierbares Gedächtnis auf dem Gerät mit einem per PIN gesperrten Kindermodus.** Modelle werden einmal von Hugging Face heruntergeladen und laufen danach offline. Die Store-Texte und die Datenschutzerklärung stimmen bei Analyse und Käufen nicht vollständig überein; lesen Sie daher den Abschnitt zum Datenschutz, bevor Sie sich auf die Formulierung „kein Tracking“ verlassen.',
+      '**MemoryAI (Version 1.0.52 unter iOS und 1.0.54 unter Android, Stand 19. Oktober 2026) verbindet in einer kostenlosen Chat-App ohne Konto ein editierbares Gedächtnis auf dem Gerät mit einem per PIN gesperrten Kindermodus.** Modelle werden einmal von Hugging Face heruntergeladen und laufen danach offline. Nutzungsereignisse und Absturzberichte ohne Chat-Inhalte verlassen das Telefon allerdings; lesen Sie daher den Abschnitt zum Datenschutz, bevor Sie sich auf die Formulierung „kein Tracking“ verlassen.',
     quickAnswerTop: {
       de: {
         question: 'Läuft MemoryAI wirklich offline und kostenlos?',
         answer:
-          'Laut den Einträgen ja, für die Kernfunktionen: Nach einem einmaligen Modell-Download laufen Chat, Dokumentenfragen und Sprache auf dem Telefon, ohne Werbung. Die Datenschutzerklärung ergänzt, dass anonyme Analyse- und Absturzdaten gesendet werden und dass Käufe für Premiumfunktionen möglich sein können, was die Store-Texte verneinen.',
+          'Laut den Einträgen ja, für die Kernfunktionen: Nach einem einmaligen Modell-Download laufen Chat, Dokumentenfragen und Sprache auf dem Telefon, ohne Werbung und ohne In-App-Käufe. Die Datenschutzerklärung ergänzt, dass Nutzungsereignisse und Absturzberichte ohne Chat-Inhalte gesendet werden.',
         bullets: [
           'Kostenlos bei [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) und im [App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586).',
           'Chat mit GGUF- und LiteRT-Modellen wie Gemma, Qwen, Llama, Phi und DeepSeek.',
@@ -414,6 +426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Von den Quellen bestätigte Funktionen', anchor: 'key-features' },
       { label: 'Kindermodus', anchor: 'kid-mode' },
       { label: 'Datenschutz und Netzwerknutzung', anchor: 'privacy' },
+      { label: 'Vom Entwickler', anchor: 'from-the-maker' },
       { label: 'Für wen sich die App eignet', anchor: 'who-should-use' },
       { label: 'Was wir nicht überprüfen konnten', anchor: 'who-should-not-use' },
       { label: 'Wettbewerber und Alternativen', anchor: 'vs-alternatives' },
@@ -455,7 +468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-memoryai',
         title: 'Was ist MemoryAI?',
         content: [
-          '**MemoryAI ist eine mobile Chat-App, die Open-Weight-Sprachmodelle lokal ausführt, statt einen Cloud-Dienst aufzurufen.** Laut Einträgen ist kein Modell mitgeliefert: Sie wählen eines aus der Liste in der App oder importieren eine beliebige kompatible GGUF-Datei von Hugging Face, und der erste Start braucht eine Netzwerkverbindung für den Download. Angeboten werden zwei Inferenz-Engines, llama.cpp für GGUF-Modelle und Googles MediaPipe/LiteRT für Modelle der Gemma-Familie.',
+          '**MemoryAI ist eine mobile Chat-App, die Open-Weight-Sprachmodelle lokal ausführt, statt einen Cloud-Dienst aufzurufen.** Laut Einträgen ist kein Modell mitgeliefert: Sie wählen eines aus der Liste in der App oder importieren eine beliebige kompatible GGUF-Datei von Hugging Face, und der erste Start braucht eine Netzwerkverbindung für den Download. Angeboten werden zwei Inferenz-Engines, llama.cpp für GGUF-Modelle und Googles LiteRT (MediaPipe) für Modelle im LiteRT-Format. Laut Entwickler ist LiteRT nicht auf Gemma beschränkt: Es führt auch Qwen 2.5 1.5B, DeepSeek R1 Distill 1.5B und Phi-4 Mini aus.',
           'Der App-Store-Eintrag heißt in den Stores für die USA, Japan und Korea „MemoryAI: Offline Private AI“, in Deutschland „MemoryAI: Private Offline-KI“ und in Brasilien „MemoryAI: a IA que lembra“; das Google-Play-Paket lautet com.ts.memoryai. Der „Agent Memory“ (Agentengedächtnis) ist eine Funktion dieser App, kein eigenes Produkt.',
         ],
       },
@@ -481,14 +494,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plattform': 'Datenschutzerklärung',
-            'Bezugsquelle': '[Gleiche Seite](https://alessandrofacchini.github.io/memoryai-privacy/) (Englisch, italienische Fassung dort verlinkt; Stand 30. Juni 2026)',
+            'Bezugsquelle': '[Gleiche Seite](https://alessandrofacchini.github.io/memoryai-privacy/) (Englisch, italienische Fassung dort verlinkt; Stand 19. Oktober 2026)',
           },
           {
             'Plattform': 'Fehlermeldungen',
             'Bezugsquelle': '[GitHub Issues](https://github.com/alessandrofacchini/memoryai-feedback/issues) (nur Feedback, kein Quellcode)',
           },
         ],
-        note: 'Geprüfte Version: 1.0.52 unter iOS, veröffentlicht am 18. Oktober 2026, laut App-Store-Eintrag; die Google-Play-Seite wurde ebenfalls am 18. Oktober 2026 aktualisiert, und ihre Seitendaten nennen den Build 1.0.54. Der Google-Play-Eintrag zeigt im gelesenen Text keine Mindestversion von Android.',
+        note: 'Geprüfte Version: 1.0.52 unter iOS, veröffentlicht am 18. Oktober 2026, laut App-Store-Eintrag. Laut Entwickler läuft Android seit dem 18. Oktober auf 1.0.54, und das iPhone erhält dieselben Änderungen mit der nächsten Version; auch die Seitendaten von Google Play nennen den Build 1.0.54. Der Entwickler gibt Android 9 oder neuer als Voraussetzung an; der gelesene Google-Play-Text nennt keine Mindestversion von Android.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -553,8 +566,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datenschutz und Netzwerknutzung',
         content: [
           '**Chats, Dokumente und Erinnerungen bleiben standardmäßig auf dem Gerät, und der Entwickler gibt an, dass die App keine KI-Server hat und keinen Chattext sendet.** Der Abschnitt „Datensicherheit“ bei Google Play erklärt, dass keine Daten an Dritte weitergegeben werden, mit möglicher Erhebung von App-Informationen und Leistungsdaten sowie von Geräte- oder anderen Kennungen, bei verschlüsselter Übertragung. Das Datenschutzlabel im App Store führt Suchverlauf, Geräte-ID und Produktinteraktion für Analysen sowie Geräte-ID, Absturz- und Leistungsdaten für die App-Funktionalität auf, jeweils als nicht mit Ihnen verknüpft markiert.',
-          'Die [Datenschutzerklärung](https://alessandrofacchini.github.io/memoryai-privacy/) nennt, was das Telefon tatsächlich verlässt: anonyme Nutzungsereignisse an TelemetryDeck, Absturzberichte an Sentry, optionale Push-Benachrichtigungen über OneSignal, Modell-Downloads von Hugging Face und ein optionales Backup in Ihrem eigenen Google Drive oder iCloud. Sie besagt außerdem, dass lokale Daten von der App nicht verschlüsselt werden und auf den eigenen Schutz des Geräts vertrauen und dass Unterhaltungen die App nur beim Export verlassen.',
-          'Die Store-Beschreibungen sagen „keine In-App-Käufe“ und „kein Tracking“, während die Erklärung angibt, dass die App In-App-Käufe für Premiumfunktionen anbietet, und die oben genannte Analyse aufführt. Welche Aussage zum aktuellen Build passt, war aus den Quellen nicht ersichtlich; betrachten Sie daher die Erklärung als die detailliertere.',
+          'Die [Datenschutzerklärung](https://alessandrofacchini.github.io/memoryai-privacy/), aktualisiert am 19. Oktober 2026, nennt, was das Telefon tatsächlich verlässt: Nutzungsereignisse an TelemetryDeck, Absturzberichte an Sentry und Modell-Downloads von Hugging Face. Nimmt der Nutzer die In-App-Abfrage „Datenschutz & Benachrichtigungen“ an, kommen OneSignal für Push-Benachrichtigungen und, nur unter Android, Google Analytics for Firebase zum Einsatz. Ein Backup in Ihr eigenes Google Drive oder iCloud ist optional. Der Entwickler ergänzt, dass die Nutzungsereignisse keine Chat-Inhalte enthalten (etwa „ein Modell wurde geladen“) und die Absturzberichte keine Chat- oder Dokumentinhalte. Die Erklärung besagt außerdem, dass lokale Daten von der App nicht verschlüsselt werden und auf den eigenen Schutz des Geräts vertrauen und dass Unterhaltungen die App nur beim Export verlassen.',
+          'Die Store-Beschreibungen sagen „keine In-App-Käufe“, und der Entwickler hat PromptQuorum bestätigt, dass die App keine hat; ein früherer Absatz zu Käufen in der Datenschutzerklärung war veraltet und wurde korrigiert. Die Formulierung „kein Tracking“ heißt nicht, dass nichts das Telefon verlässt: Die oben genannte Analyse und die Absturzberichte gelten weiterhin.',
         ],
         callouts: [
           {
@@ -562,6 +575,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Die App ist nicht quelloffen, daher lässt sich keine dieser Angaben im Code prüfen, und PromptQuorum hat den Netzwerkverkehr nicht geprüft. Wer vertrauliche Daten verarbeitet oder die Kindersicherung für ein Kind einrichtet, sollte das Verhalten auf dem eigenen Gerät überprüfen.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Vom Entwickler',
+        content: [
+          'Alessandro Facchini, der Entwickler von MemoryAI, hat den Entwurf dieser Rezension geprüft und die folgende Notiz geschickt. Sie wird als eigene Worte des Entwicklers wiedergegeben, nicht als unabhängige redaktionelle Einschätzung von PromptQuorum. Die Korrekturen aus derselben Nachricht zu Käufen, Datenflüssen, Engines und Android-Version sind in diese Rezension eingearbeitet:',
+          '„Ich habe MemoryAI für Menschen gebaut, die einen KI-Assistenten wollen, ohne ihre Worte einem Server zu überlassen. Sobald ein Modell heruntergeladen ist, antwortet es ohne Internetverbindung, und das Gespräch bleibt auf dem Telefon.',
+          'Zwei Ideen prägen die App. Die erste ist ein Gedächtnis, das man sehen kann: Die App kann sich merken, was Sie ihr sagen, in Ihren eigenen Worten, und Sie können dieses Gedächtnis jederzeit öffnen, korrigieren oder löschen. Die zweite ist die Nutzung in der Familie: Der Kindermodus sperrt Modell und Einstellungen hinter einer Eltern-PIN und hält die Antworten altersgerecht.',
+          'Sie ist kostenlos, ohne Konto und ohne Werbung, und sie spricht sechs Sprachen. Ich entwickle sie in Italien mit einem kleinen Team, und zwei Tester probieren neue Versionen auf echten Android-Telefonen und iPhones aus. Als Nächstes stehen Werkzeuge an, die das Modell auf dem Telefon nutzen kann (derzeit in der Testphase), und auf dem iPhone die schnellere erste Antwort, die Android-Nutzer bereits haben.“',
+        ],
+        note: '— Alessandro Facchini, Entwickler',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -579,8 +603,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Praktische Leistung.** PromptQuorum hat die App nicht ausgeführt; Geschwindigkeit, Akkuverbrauch, Antwortqualität und die tatsächliche Stärke der Kindersicherung wurden daher nicht bewertet.',
           '**Quellcode und Lizenz.** Die App ist nicht quelloffen; das Feedback-Repository enthält nur eine README und einen Issue-Tracker.',
-          '**Käufe und Tracking.** Die Store-Texte und die Datenschutzerklärung widersprechen sich, wie im Abschnitt zum Datenschutz beschrieben.',
-          '**Android-Anforderungen.** Der gelesene Google-Play-Text nennt keine Mindestversion von Android; unter iOS ist das Minimum 16.4.',
+          '**Analyse und Datenverkehr.** Die App ist nicht quelloffen und PromptQuorum hat ihren Netzwerkverkehr nicht geprüft; die oben beschriebenen Datenflüsse stammen daher vom Entwickler und aus der Datenschutzerklärung.',
+          '**Android-Anforderungen.** Der Entwickler nennt Android 9 oder neuer, was der gelesene Google-Play-Text nicht zeigt; unter iOS ist das Minimum 16.4.',
           '**Erfolgsbilanz.** Die App ist seit etwa sieben Monaten erhältlich, mit 1K+ Downloads bei Google Play und noch ohne Bewertungen im App Store; die Quellen enthalten keine Zusage zur Unterstützung.',
           '**Nicht für Nutzer, die sehr große Modelle brauchen.** Die herunterladbaren Modelle sind klein, schwerere Aufgaben gehören daher auf einen Computer.',
         ],
@@ -632,7 +656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ich eigene Modelle verwenden?',
-            a: 'Ja. Sie können kompatible GGUF-Dateien von Hugging Face importieren und auf der llama.cpp-Engine ausführen; Modelle der Gemma-Familie können auf der LiteRT-Engine laufen.',
+            a: 'Ja. Sie können kompatible GGUF-Dateien von Hugging Face importieren und auf der llama.cpp-Engine ausführen; die LiteRT-Engine führt Gemma und laut Entwickler auch Qwen 2.5 1.5B, DeepSeek R1 Distill 1.5B und Phi-4 Mini im LiteRT-Format aus.',
           },
           {
             q: 'Funktioniert sie auf einem Mac?',
@@ -648,7 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'MemoryAI ist eine kostenlose mobile Offline-Chat-App, die ein editierbares Gedächtnis über den Nutzer auf dem Gerät führt und neben Fragen zu Dokumenten und Bildern, freihändiger Sprache und zwei Inferenz-Engines eine Kindersicherung bietet. Sie wird zudem häufig aktualisiert, mit einer Veröffentlichung am Tag vor der Prüfung dieser Rezension. Dagegen steht: Sie ist nicht quelloffen, neu, in der Reichweite klein, auf kleine Modelle auf dem Gerät begrenzt, und ihre Store-Texte und ihre Datenschutzerklärung widersprechen sich bei Käufen und Tracking, sodass sich ihre Datenschutzangaben nicht im Code prüfen lassen. Sie eignet sich für Leser, die genau diese Funktionen wollen und eine junge, geschlossene App akzeptieren; wer prüfbaren Code möchte, kann [Private Mind](/de/power-local-llm/private-mind-review) oder [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) vergleichen.',
+          'MemoryAI ist eine kostenlose mobile Offline-Chat-App, die ein editierbares Gedächtnis über den Nutzer auf dem Gerät führt und neben Fragen zu Dokumenten und Bildern, freihändiger Sprache und zwei Inferenz-Engines eine Kindersicherung bietet. Sie wird zudem häufig aktualisiert, mit einer Veröffentlichung am Tag vor der Prüfung dieser Rezension. Dagegen steht: Sie ist nicht quelloffen, neu, in der Reichweite klein, auf kleine Modelle auf dem Gerät begrenzt, und ihre Datenschutzangaben lassen sich nicht im Code prüfen. Sie eignet sich für Leser, die genau diese Funktionen wollen und eine junge, geschlossene App akzeptieren; wer prüfbaren Code möchte, kann [Private Mind](/de/power-local-llm/private-mind-review) oder [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) vergleichen.',
       },
       sources: {
         id: 'sources',
@@ -656,7 +680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[MemoryAI im App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — Preis, Versionshistorie, Anforderungen, Datenschutzlabel und Beschreibung, geprüft am 19. Oktober 2026.',
           '[MemoryAI bei Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) — Beschreibung, Download-Zahl, Abschnitt „Datensicherheit“ und Datum der letzten Aktualisierung, geprüft am 19. Oktober 2026.',
-          '[MemoryAI-Website und Datenschutzerklärung](https://alessandrofacchini.github.io/memoryai-privacy/) — Datenverarbeitung, Netzwerknutzung, Berechtigungen und Drittanbieterdienste, Erklärung zuletzt aktualisiert am 30. Juni 2026.',
+          '[MemoryAI-Website und Datenschutzerklärung](https://alessandrofacchini.github.io/memoryai-privacy/) — Datenverarbeitung, Netzwerknutzung, Berechtigungen und Drittanbieterdienste, Erklärung zuletzt aktualisiert am 19. Oktober 2026.',
           '[memoryai-feedback auf GitHub](https://github.com/alessandrofacchini/memoryai-feedback) — der öffentliche Issue-Tracker des Entwicklers.',
         ],
       },
@@ -707,12 +731,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI (versión 1.0.52 en iOS a fecha del 19 de octubre de 2026) combina una memoria editable en el dispositivo con un Kid Mode protegido con PIN en una app de chat gratuita que no necesita cuenta.** Los modelos se descargan una sola vez desde Hugging Face y después se ejecutan sin conexión. Los textos de las tiendas y la política de privacidad no coinciden del todo en cuanto a analítica y compras, así que lee la sección de privacidad antes de fiarte de la frase «sin rastreo».',
+      '**MemoryAI (versión 1.0.52 en iOS y 1.0.54 en Android a fecha del 19 de octubre de 2026) combina una memoria editable en el dispositivo con un Kid Mode protegido con PIN en una app de chat gratuita que no necesita cuenta.** Los modelos se descargan una sola vez desde Hugging Face y después se ejecutan sin conexión. Los eventos de uso y los informes de fallos sin contenido de los chats sí salen del teléfono, así que lee la sección de privacidad antes de fiarte de la frase «sin rastreo».',
     quickAnswerTop: {
       es: {
         question: '¿MemoryAI es realmente offline y gratuita?',
         answer:
-          'Según sus fichas, sí en las funciones principales: tras una descarga única del modelo, el chat, las preguntas sobre documentos y la voz se ejecutan en el teléfono, y sin anuncios. Su política de privacidad añade que se envían al exterior analítica anónima e informes de fallos y que puede haber compras para funciones premium, algo que los textos de las tiendas niegan.',
+          'Según sus fichas, sí en las funciones principales: tras una descarga única del modelo, el chat, las preguntas sobre documentos y la voz se ejecutan en el teléfono, sin anuncios y sin compras dentro de la app. Su política de privacidad añade que se envían al exterior eventos de uso e informes de fallos sin contenido de los chats.',
         bullets: [
           'Gratis en [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) y en la [App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586).',
           'Chat con modelos GGUF y LiteRT como Gemma, Qwen, Llama, Phi y DeepSeek.',
@@ -730,6 +754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Funciones confirmadas por las fuentes', anchor: 'key-features' },
       { label: 'Kid Mode', anchor: 'kid-mode' },
       { label: 'Privacidad y uso de la red', anchor: 'privacy' },
+      { label: 'La palabra del desarrollador', anchor: 'from-the-maker' },
       { label: 'Para quién es', anchor: 'who-should-use' },
       { label: 'Lo que no pudimos verificar', anchor: 'who-should-not-use' },
       { label: 'Competidores y alternativas', anchor: 'vs-alternatives' },
@@ -771,7 +796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-memoryai',
         title: '¿Qué es MemoryAI?',
         content: [
-          '**MemoryAI es una app de chat para móvil que ejecuta modelos de lenguaje de pesos abiertos en local en lugar de llamar a un servicio en la nube.** Según sus fichas, no incluye ningún modelo: eliges uno de la lista de la app o importas cualquier archivo GGUF compatible de Hugging Face, y la primera ejecución necesita conexión de red para descargarlo. Ofrece dos motores de inferencia: llama.cpp para modelos GGUF y MediaPipe/LiteRT de Google para modelos de la familia Gemma.',
+          '**MemoryAI es una app de chat para móvil que ejecuta modelos de lenguaje de pesos abiertos en local en lugar de llamar a un servicio en la nube.** Según sus fichas, no incluye ningún modelo: eliges uno de la lista de la app o importas cualquier archivo GGUF compatible de Hugging Face, y la primera ejecución necesita conexión de red para descargarlo. Ofrece dos motores de inferencia: llama.cpp para modelos GGUF y LiteRT (MediaPipe) de Google para modelos en formato LiteRT. Según el desarrollador, LiteRT no se limita a Gemma: también ejecuta Qwen 2.5 1.5B, DeepSeek R1 Distill 1.5B y Phi-4 Mini.',
           'La ficha de la App Store se titula «MemoryAI: Offline Private AI» en las tiendas de EE. UU., Japón y Corea, «MemoryAI: Private Offline-KI» en Alemania y «MemoryAI: a IA que lembra» en Brasil; el paquete de Google Play es com.ts.memoryai. Su «Agent Memory» es una función de esta app, no un producto aparte.',
         ],
       },
@@ -797,14 +822,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plataforma': 'Política de privacidad',
-            'Dónde obtenerla': '[La misma página](https://alessandrofacchini.github.io/memoryai-privacy/) (inglés e italiano; actualizada el 30 jun 2026)',
+            'Dónde obtenerla': '[La misma página](https://alessandrofacchini.github.io/memoryai-privacy/) (inglés e italiano; actualizada el 19 oct 2026)',
           },
           {
             'Plataforma': 'Informes de errores',
             'Dónde obtenerla': '[Incidencias en GitHub](https://github.com/alessandrofacchini/memoryai-feedback/issues) (solo feedback, sin código)',
           },
         ],
-        note: 'Versión analizada: 1.0.52 en iOS, publicada el 18 de octubre de 2026, según la ficha de la App Store; la página de Google Play también se actualizó el 18 de octubre de 2026 y los datos de su página indican la compilación 1.0.54. La ficha de Google Play no muestra una versión mínima de Android en el texto leído.',
+        note: 'Versión analizada: 1.0.52 en iOS, publicada el 18 de octubre de 2026, según la ficha de la App Store. Según el desarrollador, Android está en la 1.0.54 desde el 18 de octubre y el iPhone recibirá los mismos cambios en su próxima versión; los datos de la página de Google Play también indican la compilación 1.0.54. El desarrollador indica que Android requiere la versión 9 o posterior; el texto de Google Play que leímos no muestra una versión mínima de Android.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -869,8 +894,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidad y uso de la red',
         content: [
           '**Los chats, los documentos y los recuerdos se quedan en el dispositivo por defecto, y el desarrollador dice que la app no tiene servidores de IA y no envía texto de los chats.** La sección Seguridad de los datos de Google Play declara que no se comparten datos con terceros, con posible recopilación de información de la app y de rendimiento y de identificadores de dispositivo u otros, cifrados en tránsito. La etiqueta de privacidad de la App Store enumera el historial de búsqueda, el identificador de dispositivo y la interacción con el producto para analítica, y el identificador de dispositivo y los datos de fallos y de rendimiento para el funcionamiento de la app, todos marcados como no vinculados a ti.',
-          'La [política de privacidad](https://alessandrofacchini.github.io/memoryai-privacy/) indica lo que sí sale del teléfono: eventos de uso anónimos a TelemetryDeck, informes de fallos a Sentry, notificaciones push opcionales a través de OneSignal, descargas de modelos desde Hugging Face y copia de seguridad opcional en tu propio Google Drive o iCloud. También dice que la app no cifra los datos locales y que depende de la protección del propio dispositivo, y que las conversaciones solo salen de la app cuando las exportas.',
-          'Las descripciones de las tiendas dicen «sin compras dentro de la app» y «sin rastreo», mientras que la política dice que la app ofrece compras dentro de la app para funciones premium y enumera la analítica anterior. Las fuentes no aclaran qué afirmación corresponde a la compilación actual, así que conviene tratar la política como la más detallada.',
+          'La [política de privacidad](https://alessandrofacchini.github.io/memoryai-privacy/), actualizada el 19 de octubre de 2026, indica lo que sí sale del teléfono: eventos de uso a TelemetryDeck, informes de fallos a Sentry y descargas de modelos desde Hugging Face. Si el usuario acepta el aviso «Privacidad y notificaciones» de la app, se usa OneSignal para las notificaciones push y, solo en Android, está activo Google Analytics para Firebase. La copia de seguridad en tu propio Google Drive o iCloud es opcional. El desarrollador añade que los eventos de uso no llevan contenido de los chats (por ejemplo, «se cargó un modelo») y que los informes de fallos no incluyen contenido de chats ni de documentos. También dice que la app no cifra los datos locales y que depende de la protección del propio dispositivo, y que las conversaciones solo salen de la app cuando las exportas.',
+          'Las descripciones de las tiendas dicen «sin compras dentro de la app» y el desarrollador confirmó a PromptQuorum que la app no tiene ninguna; un párrafo anterior sobre compras en la política de privacidad estaba desactualizado y se ha corregido. La frase «sin rastreo» no significa que nada salga del teléfono: la analítica y los informes de fallos descritos arriba siguen vigentes.',
         ],
         callouts: [
           {
@@ -878,6 +903,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'La app es de código cerrado, por lo que ninguna de estas afirmaciones se puede comprobar en el código, y PromptQuorum no ha auditado el tráfico de red. Quien maneje datos confidenciales, o configure los controles parentales para un niño, debería verificar el comportamiento en su propio dispositivo.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'La palabra del desarrollador',
+        content: [
+          'Alessandro Facchini, desarrollador de MemoryAI, revisó el borrador de este análisis y envió la siguiente nota. Se presenta como las propias palabras del desarrollador, no como una evaluación editorial independiente de PromptQuorum. Las correcciones del mismo mensaje sobre compras, flujos de datos, motores y versión de Android se han aplicado en este análisis:',
+          '«Creé MemoryAI para quienes quieren un asistente de IA sin entregar sus palabras a un servidor. Una vez descargado un modelo, responde sin conexión a internet y la conversación se queda en el teléfono.',
+          'Dos ideas le dan forma. La primera es una memoria que puedes ver: la app puede recordar lo que le cuentas, con tus propias palabras, y puedes abrir esa memoria, corregirla o borrarla en cualquier momento. La segunda es el uso en familia: el Kid Mode bloquea el modelo y los ajustes tras un PIN de madre o padre y mantiene las respuestas adecuadas a la edad.',
+          'Es gratuita, sin cuenta ni anuncios, y habla seis idiomas. La desarrollo en Italia con un equipo pequeño, y dos testers prueban las versiones nuevas en teléfonos Android y iPhone reales. Lo siguiente en la lista: herramientas que el modelo pueda usar en el teléfono, ahora en pruebas, y en iPhone la primera respuesta más rápida que ya tienen los usuarios de Android.»',
+        ],
+        note: '— Alessandro Facchini, desarrollador',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -895,8 +931,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Rendimiento en la práctica.** PromptQuorum no ejecutó la app, así que no se evalúan la velocidad, el consumo de batería, la calidad de las respuestas ni la eficacia real de los controles parentales.',
           '**Código fuente y licencia.** La app es de código cerrado; el repositorio de comentarios solo contiene un README y un gestor de incidencias.',
-          '**Compras y rastreo.** Los textos de las tiendas y la política de privacidad no coinciden, como se describe en la sección de privacidad.',
-          '**Requisitos de Android.** El texto de Google Play que leímos no muestra una versión mínima de Android; el mínimo de iOS es 16.4.',
+          '**Analítica y tráfico de red.** La app es de código cerrado y PromptQuorum no ha auditado su tráfico de red, así que los flujos de datos descritos arriba son la versión del desarrollador y de la política.',
+          '**Requisitos de Android.** El desarrollador indica Android 9 o posterior, algo que el texto de Google Play que leímos no muestra; el mínimo de iOS es 16.4.',
           '**Historial.** La app lleva unos siete meses en el mercado, con más de 1 mil descargas en Google Play y sin valoraciones en la App Store todavía; las fuentes no ofrecen ningún compromiso de soporte.',
           '**No es para quien necesita modelos muy grandes.** Los modelos descargables son pequeños, así que el trabajo más pesado corresponde a un ordenador.',
         ],
@@ -948,7 +984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puedo usar mis propios modelos?',
-            a: 'Sí. Puedes importar archivos GGUF compatibles de Hugging Face y ejecutarlos con el motor llama.cpp; los modelos de la familia Gemma pueden ejecutarse con el motor LiteRT.',
+            a: 'Sí. Puedes importar archivos GGUF compatibles de Hugging Face y ejecutarlos con el motor llama.cpp; el motor LiteRT ejecuta Gemma y, según el desarrollador, también Qwen 2.5 1.5B, DeepSeek R1 Distill 1.5B y Phi-4 Mini en formato LiteRT.',
           },
           {
             q: '¿Funciona en un Mac?',
@@ -964,7 +1000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'MemoryAI es una app de chat móvil offline y gratuita que guarda en el dispositivo una memoria editable del usuario y ofrece controles parentales, junto con preguntas sobre documentos e imágenes, voz con manos libres y dos motores de inferencia. También se actualiza con frecuencia, con una versión el día anterior a la consulta de este análisis. En contra, es de código cerrado, reciente, de alcance reducido y limitada a modelos pequeños en el dispositivo, y sus textos de las tiendas y su política de privacidad no coinciden en compras y rastreo, por lo que sus afirmaciones de privacidad no se pueden comprobar en el código. Encaja con quienes quieren estas funciones concretas y aceptan una app joven y cerrada; quienes quieran código auditable pueden comparar [Private Mind](/es/power-local-llm/private-mind-review) o [PocketPal AI](/es/power-local-llm/pocketpal-ai-review).',
+          'MemoryAI es una app de chat móvil offline y gratuita que guarda en el dispositivo una memoria editable del usuario y ofrece controles parentales, junto con preguntas sobre documentos e imágenes, voz con manos libres y dos motores de inferencia. También se actualiza con frecuencia, con una versión el día anterior a la consulta de este análisis. En contra, es de código cerrado, reciente, de alcance reducido y limitada a modelos pequeños en el dispositivo, y sus afirmaciones de privacidad no se pueden comprobar en el código. Encaja con quienes quieren estas funciones concretas y aceptan una app joven y cerrada; quienes quieran código auditable pueden comparar [Private Mind](/es/power-local-llm/private-mind-review) o [PocketPal AI](/es/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -972,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[MemoryAI en la App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — precio, historial de versiones, requisitos, etiqueta de privacidad y descripción, consultados el 19 de octubre de 2026.',
           '[MemoryAI en Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) — descripción, número de descargas, sección Seguridad de los datos y fecha de la última actualización, consultados el 19 de octubre de 2026.',
-          '[Sitio web y política de privacidad de MemoryAI](https://alessandrofacchini.github.io/memoryai-privacy/) — tratamiento de datos, uso de la red, permisos y servicios de terceros; política actualizada por última vez el 30 de junio de 2026.',
+          '[Sitio web y política de privacidad de MemoryAI](https://alessandrofacchini.github.io/memoryai-privacy/) — tratamiento de datos, uso de la red, permisos y servicios de terceros; política actualizada por última vez el 19 de octubre de 2026.',
           '[memoryai-feedback en GitHub](https://github.com/alessandrofacchini/memoryai-feedback) — el gestor público de incidencias del desarrollador.',
         ],
       },
@@ -1023,12 +1059,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI (version 1.0.52 sur iOS au 19 octobre 2026) associe une mémoire modifiable sur l\'appareil à un Kid Mode verrouillé par code PIN dans une application de chat gratuite qui ne demande aucun compte.** Les modèles sont téléchargés une seule fois depuis Hugging Face, puis exécutés hors ligne. Les textes des boutiques et la politique de confidentialité ne concordent pas entièrement sur l\'analytique et les achats : lisez la section sur la confidentialité avant de vous fier à la mention « aucun suivi ».',
+      '**MemoryAI (version 1.0.52 sur iOS et 1.0.54 sur Android au 19 octobre 2026) associe une mémoire modifiable sur l\'appareil à un Kid Mode verrouillé par code PIN dans une application de chat gratuite qui ne demande aucun compte.** Les modèles sont téléchargés une seule fois depuis Hugging Face, puis exécutés hors ligne. Des événements d\'usage et des rapports de plantage, sans contenu des conversations, quittent bien le téléphone : lisez la section sur la confidentialité avant de vous fier à la mention « aucun suivi ».',
     quickAnswerTop: {
       fr: {
         question: 'MemoryAI fonctionne-t-elle vraiment hors ligne et gratuitement ?',
         answer:
-          'Selon ses fiches, oui pour les fonctions de base : après un téléchargement unique de modèle, le chat, les questions sur documents et la voix s\'exécutent sur le téléphone, et sans publicité. Sa politique de confidentialité ajoute que des données d\'analytique anonymes et des rapports de plantage sont envoyés à l\'extérieur et que des achats pour des fonctions premium peuvent exister, ce que les textes des boutiques démentent.',
+          'Selon ses fiches, oui pour les fonctions de base : après un téléchargement unique de modèle, le chat, les questions sur documents et la voix s\'exécutent sur le téléphone, sans publicité et sans achat intégré. Sa politique de confidentialité ajoute que des événements d\'usage et des rapports de plantage, sans contenu des conversations, sont envoyés à l\'extérieur.',
         bullets: [
           'Gratuite sur [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) et l\'[App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586).',
           'Chat avec des modèles GGUF et LiteRT tels que Gemma, Qwen, Llama, Phi et DeepSeek.',
@@ -1046,6 +1082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Fonctions confirmées par les sources', anchor: 'key-features' },
       { label: 'Kid Mode', anchor: 'kid-mode' },
       { label: 'Confidentialité et usage du réseau', anchor: 'privacy' },
+      { label: 'Le mot du développeur', anchor: 'from-the-maker' },
       { label: 'À qui elle convient', anchor: 'who-should-use' },
       { label: 'Ce que nous n\'avons pas pu vérifier', anchor: 'who-should-not-use' },
       { label: 'Concurrents et alternatives', anchor: 'vs-alternatives' },
@@ -1087,7 +1124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-memoryai',
         title: 'Qu\'est-ce que MemoryAI ?',
         content: [
-          '**MemoryAI est une application de chat mobile qui exécute des modèles de langage à poids ouverts en local, au lieu d\'appeler un service cloud.** Selon ses fiches, aucun modèle n\'est fourni avec l\'application : vous en choisissez un dans la liste intégrée ou vous importez n\'importe quel fichier GGUF compatible depuis Hugging Face, et le premier lancement nécessite une connexion pour le télécharger. Deux moteurs d\'inférence sont proposés : llama.cpp pour les modèles GGUF et MediaPipe/LiteRT de Google pour les modèles de la famille Gemma.',
+          '**MemoryAI est une application de chat mobile qui exécute des modèles de langage à poids ouverts en local, au lieu d\'appeler un service cloud.** Selon ses fiches, aucun modèle n\'est fourni avec l\'application : vous en choisissez un dans la liste intégrée ou vous importez n\'importe quel fichier GGUF compatible depuis Hugging Face, et le premier lancement nécessite une connexion pour le télécharger. Deux moteurs d\'inférence sont proposés : llama.cpp pour les modèles GGUF et LiteRT (MediaPipe) de Google pour les modèles au format LiteRT. Selon le développeur, LiteRT ne se limite pas à Gemma : il exécute aussi Qwen 2.5 1.5B, DeepSeek R1 Distill 1.5B et Phi-4 Mini.',
           'La fiche de l\'App Store s\'intitule « MemoryAI: Offline Private AI » dans les boutiques américaine, japonaise et coréenne, « MemoryAI: Private Offline-KI » en Allemagne et « MemoryAI: a IA que lembra » au Brésil ; le paquet Google Play est com.ts.memoryai. Son « Agent Memory » est une fonction de cette application, et non un produit distinct.',
         ],
       },
@@ -1113,14 +1150,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plateforme': 'Confidentialité',
-            'Où la trouver': '[Même page](https://alessandrofacchini.github.io/memoryai-privacy/) (versions anglaise et italienne ; mise à jour le 30 juin 2026)',
+            'Où la trouver': '[Même page](https://alessandrofacchini.github.io/memoryai-privacy/) (versions anglaise et italienne ; mise à jour le 19 octobre 2026)',
           },
           {
             'Plateforme': 'Signaler un bug',
             'Où la trouver': '[GitHub issues](https://github.com/alessandrofacchini/memoryai-feedback/issues) (retours uniquement, sans code source)',
           },
         ],
-        note: 'Version examinée : 1.0.52 sur iOS, publiée le 18 octobre 2026, selon la fiche de l\'App Store ; la page Google Play a aussi été mise à jour le 18 octobre 2026 et ses données de page indiquent la build 1.0.54. La fiche Google Play n\'indique aucune version minimale d\'Android dans le texte lu.',
+        note: 'Version examinée : 1.0.52 sur iOS, publiée le 18 octobre 2026, selon la fiche de l\'App Store. Selon le développeur, Android est en 1.0.54 depuis le 18 octobre et l\'iPhone recevra les mêmes changements dans sa prochaine version ; les données de la page Google Play indiquent aussi la build 1.0.54. Le développeur indique qu\'Android 9 ou ultérieur est requis ; le texte Google Play lu n\'indique aucune version minimale d\'Android.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1185,8 +1222,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Confidentialité et usage du réseau',
         content: [
           '**Les conversations, les documents et les souvenirs restent par défaut sur l\'appareil, et le développeur affirme que l\'application n\'a aucun serveur d\'IA et n\'envoie aucun texte de conversation.** La section Sécurité des données de Google Play déclare qu\'aucune donnée n\'est partagée avec des tiers, avec une collecte possible d\'informations sur l\'application et de performances ainsi que d\'identifiants d\'appareil ou autres, chiffrés en transit. Le libellé de confidentialité de l\'App Store répertorie l\'historique de recherche, l\'identifiant d\'appareil et l\'interaction avec le produit pour l\'analytique, ainsi que l\'identifiant d\'appareil et les données de plantage et de performance pour le fonctionnement de l\'application, le tout marqué comme non lié à vous.',
-          'La [politique de confidentialité](https://alessandrofacchini.github.io/memoryai-privacy/) précise ce qui quitte le téléphone : des événements d\'usage anonymes envoyés à TelemetryDeck, des rapports de plantage envoyés à Sentry, des notifications push facultatives via OneSignal, des téléchargements de modèles depuis Hugging Face et une sauvegarde facultative vers votre propre Google Drive ou iCloud. Elle indique aussi que les données locales ne sont pas chiffrées par l\'application et reposent sur la protection propre de l\'appareil, et que les conversations ne quittent l\'application que si vous les exportez.',
-          'Les descriptions des boutiques disent « aucun achat intégré » et « aucun suivi », alors que la politique indique que l\'application propose des achats intégrés pour des fonctions premium et énumère l\'analytique ci-dessus. Les sources ne permettent pas de savoir quelle affirmation correspond à la build actuelle : considérez donc la politique comme la plus détaillée.',
+          'La [politique de confidentialité](https://alessandrofacchini.github.io/memoryai-privacy/), mise à jour le 19 octobre 2026, précise ce qui quitte le téléphone : des événements d\'usage envoyés à TelemetryDeck, des rapports de plantage envoyés à Sentry et des téléchargements de modèles depuis Hugging Face. Si l\'utilisateur accepte l\'invite « Confidentialité et notifications » de l\'application, OneSignal sert aux notifications push et, sur Android uniquement, Google Analytics pour Firebase est actif. La sauvegarde vers votre propre Google Drive ou iCloud est facultative. Le développeur ajoute que les événements d\'usage ne contiennent aucun contenu de conversation (par exemple « un modèle a été chargé ») et que les rapports de plantage ne contiennent aucun contenu de conversation ni de document. Elle indique aussi que les données locales ne sont pas chiffrées par l\'application et reposent sur la protection propre de l\'appareil, et que les conversations ne quittent l\'application que si vous les exportez.',
+          'Les descriptions des boutiques disent « aucun achat intégré », et le développeur a confirmé à PromptQuorum que l\'application n\'en propose aucun ; un ancien paragraphe de la politique sur les achats était obsolète et a été corrigé. La mention « aucun suivi » ne signifie pas que rien ne quitte le téléphone : l\'analytique et les rapports de plantage décrits ci-dessus s\'appliquent toujours.',
         ],
         callouts: [
           {
@@ -1194,6 +1231,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'L\'application étant à code source fermé, aucune de ces affirmations ne peut être vérifiée dans le code, et PromptQuorum n\'a pas audité le trafic réseau. Quiconque traite des données confidentielles, ou configure le contrôle parental pour un enfant, devrait vérifier le comportement sur son propre appareil.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Le mot du développeur',
+        content: [
+          'Alessandro Facchini, développeur de MemoryAI, a relu le brouillon de cet avis et envoyé la note ci-dessous. Elle est présentée comme les propres mots du développeur, et non comme une évaluation éditoriale indépendante de PromptQuorum. Les corrections du même message sur les achats, les flux de données, les moteurs et la version d\'Android sont appliquées dans cet avis :',
+          '« J\'ai créé MemoryAI pour les personnes qui veulent un assistant IA sans confier leurs mots à un serveur. Une fois un modèle téléchargé, il répond sans connexion internet, et la conversation reste sur le téléphone.',
+          'Deux idées la façonnent. La première est une mémoire que l\'on peut voir : l\'application peut retenir ce que vous lui dites, avec vos propres mots, et vous pouvez ouvrir cette mémoire, la corriger ou la supprimer à tout moment. La seconde est l\'usage en famille : le Kid Mode verrouille le modèle et les réglages derrière un code PIN parental et garde des réponses adaptées à l\'âge.',
+          'Elle est gratuite, sans compte et sans publicité, et elle parle six langues. Je la développe en Italie avec une petite équipe, et deux testeurs essaient les nouvelles versions sur de vrais téléphones Android et iPhone. Prochaines étapes : des outils que le modèle peut utiliser sur le téléphone, actuellement en test, et sur iPhone la première réponse plus rapide dont bénéficient déjà les utilisateurs Android. »',
+        ],
+        note: '— Alessandro Facchini, développeur',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1211,8 +1259,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Performances en pratique.** PromptQuorum n\'a pas exécuté l\'application : la vitesse, la consommation de batterie, la qualité des réponses et la solidité réelle du contrôle parental ne sont donc pas évaluées.',
           '**Code source et licence.** L\'application est à code source fermé ; le dépôt de retours ne contient qu\'un README et un outil de suivi des problèmes.',
-          '**Achats et suivi.** Les textes des boutiques et la politique de confidentialité divergent, comme décrit dans la section sur la confidentialité.',
-          '**Prérequis Android.** Le texte Google Play lu n\'indique aucune version minimale d\'Android ; le minimum iOS est 16.4.',
+          '**Analytique et trafic réseau.** L\'application est à code source fermé et PromptQuorum n\'a pas audité son trafic réseau : les flux de données décrits ci-dessus reflètent donc le récit du développeur et de la politique.',
+          '**Prérequis Android.** Le développeur indique Android 9 ou ultérieur, ce que le texte Google Play lu ne montre pas ; le minimum iOS est 16.4.',
           '**Historique.** L\'application est sortie depuis environ sept mois, avec plus de 1 000 téléchargements sur Google Play et aucune note sur l\'App Store pour l\'instant ; les sources ne font état d\'aucun engagement de support.',
           '**Pas adaptée à ceux qui ont besoin de très gros modèles.** Les modèles téléchargeables sont petits : les usages plus lourds relèvent d\'un ordinateur.',
         ],
@@ -1264,7 +1312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Puis-je utiliser mes propres modèles ?',
-            a: 'Oui. Vous pouvez importer des fichiers GGUF compatibles depuis Hugging Face et les exécuter avec le moteur llama.cpp ; les modèles de la famille Gemma peuvent s\'exécuter avec le moteur LiteRT.',
+            a: 'Oui. Vous pouvez importer des fichiers GGUF compatibles depuis Hugging Face et les exécuter avec le moteur llama.cpp ; le moteur LiteRT exécute Gemma et, selon le développeur, aussi Qwen 2.5 1.5B, DeepSeek R1 Distill 1.5B et Phi-4 Mini au format LiteRT.',
           },
           {
             q: 'Fonctionne-t-elle sur Mac ?',
@@ -1280,7 +1328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'MemoryAI est une application de chat mobile gratuite et hors ligne qui conserve sur l\'appareil une mémoire modifiable de l\'utilisateur et propose le contrôle parental, avec des questions sur documents et images, la voix mains libres et deux moteurs d\'inférence. Elle est aussi mise à jour fréquemment, avec une version la veille de la date de consultation de cet avis. En contrepartie, elle est à code source fermé, récente, de portée limitée, restreinte à de petits modèles sur l\'appareil, et ses textes de boutique et sa politique de confidentialité divergent sur les achats et le suivi, de sorte que ses affirmations de confidentialité ne peuvent pas être vérifiées dans le code. Elle convient aux lecteurs qui veulent ces fonctions précises et acceptent une application jeune et fermée ; ceux qui souhaitent un code auditable peuvent comparer [Private Mind](/fr/power-local-llm/private-mind-review) ou [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review).',
+          'MemoryAI est une application de chat mobile gratuite et hors ligne qui conserve sur l\'appareil une mémoire modifiable de l\'utilisateur et propose le contrôle parental, avec des questions sur documents et images, la voix mains libres et deux moteurs d\'inférence. Elle est aussi mise à jour fréquemment, avec une version la veille de la date de consultation de cet avis. En contrepartie, elle est à code source fermé, récente, de portée limitée, restreinte à de petits modèles sur l\'appareil, et ses affirmations de confidentialité ne peuvent pas être vérifiées dans le code. Elle convient aux lecteurs qui veulent ces fonctions précises et acceptent une application jeune et fermée ; ceux qui souhaitent un code auditable peuvent comparer [Private Mind](/fr/power-local-llm/private-mind-review) ou [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -1288,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[MemoryAI sur l\'App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — prix, historique des versions, prérequis, libellé de confidentialité et description, consultés le 19 octobre 2026.',
           '[MemoryAI sur Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) — description, nombre de téléchargements, section Sécurité des données et date de dernière mise à jour, consultés le 19 octobre 2026.',
-          '[Site web et politique de confidentialité de MemoryAI](https://alessandrofacchini.github.io/memoryai-privacy/) — traitement des données, usage du réseau, autorisations et services tiers, politique mise à jour pour la dernière fois le 30 juin 2026.',
+          '[Site web et politique de confidentialité de MemoryAI](https://alessandrofacchini.github.io/memoryai-privacy/) — traitement des données, usage du réseau, autorisations et services tiers, politique mise à jour pour la dernière fois le 19 octobre 2026.',
           '[memoryai-feedback sur GitHub](https://github.com/alessandrofacchini/memoryai-feedback) — l\'outil public de suivi des problèmes du développeur.',
         ],
       },
@@ -1339,12 +1387,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI(2026年10月19日時点のiOS版はバージョン1.0.52)は、編集可能な端末内メモリとPINで保護されたキッズモードを組み合わせた、アカウント不要の無料チャットアプリです。** モデルはHugging Faceから一度ダウンロードすれば、その後はオフラインで動作します。ストアの説明文とプライバシーポリシーは、分析機能と課金について完全には一致していないため、「トラッキングなし」という表記を当てにする前に、プライバシーの項を読んでください。',
+      '**MemoryAI(2026年10月19日時点のiOS版はバージョン1.0.52、Android版は1.0.54)は、編集可能な端末内メモリとPINで保護されたキッズモードを組み合わせた、アカウント不要の無料チャットアプリです。** モデルはHugging Faceから一度ダウンロードすれば、その後はオフラインで動作します。チャットの内容を含まない利用イベントとクラッシュレポートは端末の外に送られるため、「トラッキングなし」という表記を当てにする前に、プライバシーの項を読んでください。',
     quickAnswerTop: {
       ja: {
         question: 'MemoryAIは本当にオフラインで動き、無料で使えますか?',
         answer:
-          '掲載情報によれば、中核機能についてはその通りです。モデルを一度ダウンロードしたあとは、チャット、ドキュメントへの質問、音声が端末上で動作し、広告もありません。一方、プライバシーポリシーには、匿名の分析データとクラッシュレポートが外部に送信されること、プレミアム機能の課金が存在しうることが書かれており、ストアの説明文はこれを否定しています。',
+          '掲載情報によれば、中核機能についてはその通りです。モデルを一度ダウンロードしたあとは、チャット、ドキュメントへの質問、音声が端末上で動作し、広告もアプリ内課金もありません。プライバシーポリシーには、チャットの内容を含まない利用イベントとクラッシュレポートが外部に送信されることが書かれています。',
         bullets: [
           '[Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai)と[App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586)で無料。',
           'Gemma、Qwen、Llama、Phi、DeepSeekなどのGGUFおよびLiteRTモデルでチャットできる。',
@@ -1362,6 +1410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '情報源で確認できる機能', anchor: 'key-features' },
       { label: 'キッズモード', anchor: 'kid-mode' },
       { label: 'プライバシーとネットワーク利用', anchor: 'privacy' },
+      { label: '開発者より', anchor: 'from-the-maker' },
       { label: '向いている人', anchor: 'who-should-use' },
       { label: '確認できなかった点', anchor: 'who-should-not-use' },
       { label: '競合と代替アプリ', anchor: 'vs-alternatives' },
@@ -1403,7 +1452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-memoryai',
         title: 'MemoryAIとは?',
         content: [
-          '**MemoryAIは、クラウドサービスを呼び出す代わりに、オープンウェイトの言語モデルをローカルで動かすモバイル向けチャットアプリです。** 掲載情報によれば、モデルは同梱されておらず、アプリ内のリストから選ぶか、Hugging Faceから互換性のある任意のGGUFファイルをインポートします。初回の実行にはダウンロードのためのネットワーク接続が必要です。推論エンジンは2種類で、GGUFモデル向けのllama.cppと、Gemma系モデル向けのGoogleのMediaPipe/LiteRTです。',
+          '**MemoryAIは、クラウドサービスを呼び出す代わりに、オープンウェイトの言語モデルをローカルで動かすモバイル向けチャットアプリです。** 掲載情報によれば、モデルは同梱されておらず、アプリ内のリストから選ぶか、Hugging Faceから互換性のある任意のGGUFファイルをインポートします。初回の実行にはダウンロードのためのネットワーク接続が必要です。推論エンジンは2種類で、GGUFモデル向けのllama.cppと、LiteRT形式のモデル向けのGoogleのLiteRT(MediaPipe)です。開発者によれば、LiteRTはGemmaに限られず、Qwen 2.5 1.5B、DeepSeek R1 Distill 1.5B、Phi-4 Miniも動作します。',
           'App Storeの掲載タイトルは、米国・日本・韓国のストアでは「MemoryAI: Offline Private AI」、ドイツでは「MemoryAI: Private Offline-KI」、ブラジルでは「MemoryAI: a IA que lembra」です。Google Playのパッケージ名はcom.ts.memoryaiです。「Agent Memory」(エージェントメモリ)はこのアプリの機能であり、別個の製品ではありません。',
         ],
       },
@@ -1429,14 +1478,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'プラットフォーム': 'プライバシーポリシー',
-            '入手先': '[同じページ](https://alessandrofacchini.github.io/memoryai-privacy/)(英語、イタリア語版へのリンクあり。最終更新2026年6月30日)',
+            '入手先': '[同じページ](https://alessandrofacchini.github.io/memoryai-privacy/)(英語、イタリア語版へのリンクあり。最終更新2026年10月19日)',
           },
           {
             'プラットフォーム': '不具合の報告',
             '入手先': '[GitHub issues](https://github.com/alessandrofacchini/memoryai-feedback/issues)(フィードバック専用、ソースコードなし)',
           },
         ],
-        note: '確認したバージョン:App Storeの掲載情報によれば、iOS版は2026年10月18日にリリースされた1.0.52です。Google Playのページも2026年10月18日に更新されており、ページデータにはビルド1.0.54と記載されています。確認できたGoogle Playの掲載テキストには、Androidの最低バージョンが示されていません。',
+        note: '確認したバージョン:App Storeの掲載情報によれば、iOS版は2026年10月18日にリリースされた1.0.52です。開発者によれば、Android版は10月18日から1.0.54で、iPhone版も次のリリースで同じ変更が反映されます。Google Playのページデータにもビルド1.0.54と記載されています。開発者はAndroid 9以降が必要と述べていますが、確認できたGoogle Playの掲載テキストには、Androidの最低バージョンが示されていません。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1501,8 +1550,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'プライバシーとネットワーク利用',
         content: [
           '**チャット、ドキュメント、メモリは既定で端末上にとどまり、開発者によれば、アプリにはAIサーバーがなく、チャットのテキストも送信しません。** Google PlayのData safetyセクションでは、第三者と共有されるデータはなく、アプリ情報とパフォーマンス、デバイスまたはその他のIDが収集される可能性があり、通信中は暗号化されると申告されています。App Storeのプライバシーラベルには、分析用として検索履歴、デバイスID、製品の操作が、アプリの機能用としてデバイスID、クラッシュとパフォーマンスのデータが挙げられており、いずれも「ユーザーに関連付けられない」とされています。',
-          '[プライバシーポリシー](https://alessandrofacchini.github.io/memoryai-privacy/)は、端末の外に出るものとして、TelemetryDeckへの匿名の利用イベント、Sentryへのクラッシュレポート、OneSignalを通じたオプションのプッシュ通知、Hugging Faceからのモデルのダウンロード、ご自身のGoogle DriveまたはiCloudへのオプションのバックアップを挙げています。また、ローカルのデータはアプリによって暗号化されず、端末自体の保護に依存すること、会話がアプリの外に出るのはユーザーがエクスポートしたときだけであることも記されています。',
-          'ストアの説明文は「アプリ内課金なし」「トラッキングなし」としていますが、ポリシーはプレミアム機能向けのアプリ内課金を提供しているとし、上記の分析機能を挙げています。どちらの記述が現行のビルドに当てはまるかは情報源からは明確にならなかったため、より詳細なポリシーの記述のほうを参考にしてください。',
+          '[プライバシーポリシー](https://alessandrofacchini.github.io/memoryai-privacy/)(2026年10月19日更新)は、端末の外に出るものとして、TelemetryDeckへの利用イベント、Sentryへのクラッシュレポート、Hugging Faceからのモデルのダウンロードを挙げています。ユーザーがアプリ内の「プライバシーと通知」の確認を承諾した場合は、プッシュ通知にOneSignalが使われ、Androidのみ、Google Analytics for Firebaseも有効になります。ご自身のGoogle DriveまたはiCloudへのバックアップはオプションです。開発者によれば、利用イベントにはチャットの内容が含まれず(たとえば「モデルを読み込んだ」)、クラッシュレポートにもチャットやドキュメントの内容は含まれません。また、ローカルのデータはアプリによって暗号化されず、端末自体の保護に依存すること、会話がアプリの外に出るのはユーザーがエクスポートしたときだけであることも記されています。',
+          'ストアの説明文は「アプリ内課金なし」としており、開発者もPromptQuorumに対してアプリ内課金はないと確認しました。プライバシーポリシーにあった課金に関する以前の記述は古くなっていたため、修正されています。「トラッキングなし」という表記は、端末の外に何も出ないという意味ではありません。上記の分析機能とクラッシュレポートは引き続き該当します。',
         ],
         callouts: [
           {
@@ -1510,6 +1559,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'アプリはソース非公開のため、これらの主張をコードで確認することはできず、PromptQuorumはネットワーク通信の監査も行っていません。機密データを扱う方や、お子さまのためにペアレンタルコントロールを設定する方は、ご自身の端末で動作を確認してください。',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '開発者より',
+        content: [
+          'MemoryAIの開発者であるAlessandro Facchini氏が、このレビューの草稿を確認し、以下のメモを送ってくれました。以下は開発者自身の言葉として提示するものであり、PromptQuorumによる独立した編集上の評価ではありません。同じメッセージにあった課金、データの流れ、エンジン、Androidのバージョンに関する訂正は、このレビューに反映済みです:',
+          '「私がMemoryAIを作ったのは、自分の言葉をサーバーに渡さずにAIアシスタントを使いたい人のためです。モデルをダウンロードすれば、インターネット接続なしで応答し、会話は端末の中にとどまります。',
+          'このアプリには2つの考え方があります。1つ目は、目に見えるメモリです。アプリは、あなたが伝えたことをあなた自身の言葉で記憶でき、そのメモリはいつでも開いて、修正したり削除したりできます。2つ目は家族での利用です。キッズモードは、モデルと設定を保護者用PINの内側にロックし、年齢にふさわしい返答を保ちます。',
+          '無料で、アカウントも広告もなく、6言語に対応しています。私はイタリアで小さなチームとともに開発しており、2人のテスターが実際のAndroid端末とiPhoneで新しいビルドを試しています。次の予定は、端末上でモデルが使えるツール(現在テスト中)と、iPhoneでの、Androidではすでに実現している、より速い最初の応答です。」',
+        ],
+        note: '— Alessandro Facchini氏、開発者',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1527,8 +1587,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**実機での性能。** PromptQuorumはアプリを実行していないため、速度、バッテリー消費、回答の品質、ペアレンタルコントロールの実際の強度は評価していません。',
           '**ソースコードとライセンス。** アプリはソース非公開で、フィードバック用リポジトリにはREADMEとイシュートラッカーしかありません。',
-          '**課金とトラッキング。** プライバシーの項で述べたとおり、ストアの説明文とプライバシーポリシーは食い違っています。',
-          '**Androidの要件。** 確認できたGoogle Playのテキストには、Androidの最低バージョンが示されていません。iOSの最低バージョンは16.4です。',
+          '**分析機能と通信内容。** アプリはソース非公開で、PromptQuorumは通信を監査していません。上記のデータの流れは、開発者とポリシーの説明によるものです。',
+          '**Androidの要件。** 開発者はAndroid 9以降と述べていますが、確認できたGoogle Playのテキストには示されていません。iOSの最低バージョンは16.4です。',
           '**実績。** アプリの公開からおよそ7か月で、Google Playのダウンロード数は1K+、App Storeにはまだ評価がなく、情報源にサポートの確約もありません。',
           '**非常に大きなモデルが必要な人には向きません。** ダウンロードできるモデルは小型のものなので、より重い作業はコンピューターで行うのが適切です。',
         ],
@@ -1580,7 +1640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '自分のモデルを使えますか?',
-            a: 'はい。Hugging Faceから互換性のあるGGUFファイルをインポートして、llama.cppエンジンで実行できます。Gemma系モデルはLiteRTエンジンで実行できます。',
+            a: 'はい。Hugging Faceから互換性のあるGGUFファイルをインポートして、llama.cppエンジンで実行できます。LiteRTエンジンはGemmaのほか、開発者によればLiteRT形式のQwen 2.5 1.5B、DeepSeek R1 Distill 1.5B、Phi-4 Miniも実行します。',
           },
           {
             q: 'Macでも動きますか?',
@@ -1596,7 +1656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          'MemoryAIは、ユーザーに関する編集可能なメモリを端末上に保持し、ペアレンタルコントロールを提供する無料のオフラインモバイルチャットアプリで、ドキュメントと画像への質問、ハンズフリー音声、2つの推論エンジンも備えています。更新も頻繁で、本レビューの確認日の前日にもリリースがありました。その一方で、ソースは非公開で、公開から間もなく、利用規模は小さく、端末上の小型モデルに限られ、ストアの説明文とプライバシーポリシーは課金とトラッキングについて食い違っているため、プライバシーに関する主張をコードで確認することはできません。これらの機能を求め、新しくソース非公開のアプリを受け入れられる方に向いています。検証可能なコードを求める方は、[Private Mind](/ja/power-local-llm/private-mind-review)や[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)と比較してみてください。',
+          'MemoryAIは、ユーザーに関する編集可能なメモリを端末上に保持し、ペアレンタルコントロールを提供する無料のオフラインモバイルチャットアプリで、ドキュメントと画像への質問、ハンズフリー音声、2つの推論エンジンも備えています。更新も頻繁で、本レビューの確認日の前日にもリリースがありました。その一方で、ソースは非公開で、公開から間もなく、利用規模は小さく、端末上の小型モデルに限られ、プライバシーに関する主張をコードで確認することはできません。これらの機能を求め、新しくソース非公開のアプリを受け入れられる方に向いています。検証可能なコードを求める方は、[Private Mind](/ja/power-local-llm/private-mind-review)や[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)と比較してみてください。',
       },
       sources: {
         id: 'sources',
@@ -1604,7 +1664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[App StoreのMemoryAI](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — 価格、バージョン履歴、要件、プライバシーラベル、説明文。2026年10月19日に確認。',
           '[Google PlayのMemoryAI](https://play.google.com/store/apps/details?id=com.ts.memoryai) — 説明文、ダウンロード数、Data safetyセクション、最終更新日。2026年10月19日に確認。',
-          '[MemoryAIのウェブサイトとプライバシーポリシー](https://alessandrofacchini.github.io/memoryai-privacy/) — データの扱い、ネットワーク利用、権限、第三者サービス。ポリシーの最終更新は2026年6月30日。',
+          '[MemoryAIのウェブサイトとプライバシーポリシー](https://alessandrofacchini.github.io/memoryai-privacy/) — データの扱い、ネットワーク利用、権限、第三者サービス。ポリシーの最終更新は2026年10月19日。',
           '[GitHubのmemoryai-feedback](https://github.com/alessandrofacchini/memoryai-feedback) — 開発者の公開イシュートラッカー。',
         ],
       },
@@ -1655,12 +1715,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**O MemoryAI (versão 1.0.52 no iOS em 19 de outubro de 2026) combina uma memória editável no dispositivo com um Modo Criança protegido por PIN em um app de chat gratuito que não exige conta.** Os modelos são baixados uma vez do Hugging Face e depois rodam offline. Os textos das lojas e a política de privacidade não concordam totalmente sobre análises de uso e compras, então leia a seção de privacidade antes de confiar na frase "sem rastreamento".',
+      '**O MemoryAI (versão 1.0.52 no iOS e 1.0.54 no Android em 19 de outubro de 2026) combina uma memória editável no dispositivo com um Modo Criança protegido por PIN em um app de chat gratuito que não exige conta.** Os modelos são baixados uma vez do Hugging Face e depois rodam offline. Eventos de uso e relatórios de falhas, sem o conteúdo das conversas, saem sim do celular, então leia a seção de privacidade antes de confiar na frase "sem rastreamento".',
     quickAnswerTop: {
       pt: {
         question: 'O MemoryAI é mesmo offline e gratuito?',
         answer:
-          'Segundo as fichas, sim para os recursos principais: depois de um download único do modelo, o chat, as perguntas sobre documentos e a voz rodam no celular, e sem anúncios. A política de privacidade acrescenta que análises de uso anônimas e relatórios de falhas são enviados para fora e que pode haver compras de recursos premium, o que os textos das lojas negam.',
+          'Segundo as fichas, sim para os recursos principais: depois de um download único do modelo, o chat, as perguntas sobre documentos e a voz rodam no celular, sem anúncios e sem compras no app. A política de privacidade acrescenta que eventos de uso e relatórios de falhas, sem o conteúdo das conversas, são enviados para fora.',
         bullets: [
           'Gratuito no [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) e na [App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586).',
           'Chat com modelos GGUF e LiteRT como Gemma, Qwen, Llama, Phi e DeepSeek.',
@@ -1678,6 +1738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Recursos confirmados pelas fontes', anchor: 'key-features' },
       { label: 'Modo Criança', anchor: 'kid-mode' },
       { label: 'Privacidade e uso da rede', anchor: 'privacy' },
+      { label: 'A palavra do desenvolvedor', anchor: 'from-the-maker' },
       { label: 'Para quem é indicado', anchor: 'who-should-use' },
       { label: 'O que não conseguimos verificar', anchor: 'who-should-not-use' },
       { label: 'Concorrentes e alternativas', anchor: 'vs-alternatives' },
@@ -1719,7 +1780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-memoryai',
         title: 'O que é o MemoryAI?',
         content: [
-          '**O MemoryAI é um app de chat para celular que roda modelos de linguagem de peso aberto localmente, em vez de chamar um serviço na nuvem.** Segundo as fichas, nenhum modelo vem incluído: você escolhe um na lista do app ou importa qualquer arquivo GGUF compatível do Hugging Face, e a primeira execução precisa de conexão com a rede para baixá-lo. São oferecidos dois motores de inferência, o llama.cpp para modelos GGUF e o MediaPipe/LiteRT do Google para modelos da família Gemma.',
+          '**O MemoryAI é um app de chat para celular que roda modelos de linguagem de peso aberto localmente, em vez de chamar um serviço na nuvem.** Segundo as fichas, nenhum modelo vem incluído: você escolhe um na lista do app ou importa qualquer arquivo GGUF compatível do Hugging Face, e a primeira execução precisa de conexão com a rede para baixá-lo. São oferecidos dois motores de inferência, o llama.cpp para modelos GGUF e o LiteRT (MediaPipe) do Google para modelos no formato LiteRT. Segundo o desenvolvedor, o LiteRT não se limita ao Gemma: ele também roda Qwen 2.5 1.5B, DeepSeek R1 Distill 1.5B e Phi-4 Mini.',
           'A ficha da App Store tem o título "MemoryAI: Offline Private AI" nas lojas dos EUA, do Japão e da Coreia, "MemoryAI: Private Offline-KI" na Alemanha e "MemoryAI: a IA que lembra" no Brasil; o pacote do Google Play é com.ts.memoryai. A "Agent Memory" é um recurso deste app, não um produto separado.',
         ],
       },
@@ -1745,14 +1806,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plataforma': 'Política de privacidade',
-            'Onde obter': '[Mesma página](https://alessandrofacchini.github.io/memoryai-privacy/) (inglês, com link para a versão italiana; atualizada em 30 de junho de 2026)',
+            'Onde obter': '[Mesma página](https://alessandrofacchini.github.io/memoryai-privacy/) (inglês, com link para a versão italiana; atualizada em 19 de outubro de 2026)',
           },
           {
             'Plataforma': 'Relatos de bugs',
             'Onde obter': '[GitHub issues](https://github.com/alessandrofacchini/memoryai-feedback/issues) (só feedback, sem código-fonte)',
           },
         ],
-        note: 'Versão analisada: 1.0.52 no iOS, lançada em 18 de outubro de 2026, conforme a ficha da App Store; a página do Google Play também foi atualizada em 18 de outubro de 2026 e os dados da página indicam o build 1.0.54. A ficha do Google Play não mostra uma versão mínima do Android no texto lido.',
+        note: 'Versão analisada: 1.0.52 no iOS, lançada em 18 de outubro de 2026, conforme a ficha da App Store. Segundo o desenvolvedor, o Android está na 1.0.54 desde 18 de outubro e o iPhone receberá as mesmas mudanças na próxima versão; os dados da página do Google Play também indicam o build 1.0.54. O desenvolvedor informa que o Android 9 ou superior é necessário; o texto lido do Google Play não mostra uma versão mínima do Android.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1817,8 +1878,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidade e uso da rede',
         content: [
           '**Conversas, documentos e memórias ficam no dispositivo por padrão, e o desenvolvedor diz que o app não tem servidores de IA e não envia o texto das conversas.** A seção Segurança dos dados do Google Play declara que nenhum dado é compartilhado com terceiros, com possível coleta de informações do app e de desempenho e de IDs do dispositivo ou outros, criptografados em trânsito. O rótulo de privacidade da App Store lista histórico de pesquisa, ID do dispositivo e interação com o produto para análises, e ID do dispositivo e dados de falhas e desempenho para o funcionamento do app, todos marcados como não vinculados a você.',
-          'A [política de privacidade](https://alessandrofacchini.github.io/memoryai-privacy/) nomeia o que sai do celular: eventos de uso anônimos para o TelemetryDeck, relatórios de falhas para o Sentry, notificações push opcionais pelo OneSignal, downloads de modelos do Hugging Face e backup opcional no seu próprio Google Drive ou iCloud. Ela também diz que os dados locais não são criptografados pelo app e dependem da proteção do próprio dispositivo, e que as conversas só saem do app quando você as exporta.',
-          'As descrições das lojas dizem "sem compras no app" e "sem rastreamento", enquanto a política diz que o app oferece compras no app para recursos premium e lista as análises acima. Não ficou claro, pelas fontes, qual afirmação corresponde à versão atual, então trate a política como a mais detalhada.',
+          'A [política de privacidade](https://alessandrofacchini.github.io/memoryai-privacy/), atualizada em 19 de outubro de 2026, nomeia o que sai do celular: eventos de uso para o TelemetryDeck, relatórios de falhas para o Sentry e downloads de modelos do Hugging Face. Se o usuário aceitar o aviso "Privacidade e notificações" do app, o OneSignal é usado para notificações push e, somente no Android, o Google Analytics para Firebase fica ativo. O backup no seu próprio Google Drive ou iCloud é opcional. O desenvolvedor acrescenta que os eventos de uso não trazem conteúdo das conversas (por exemplo, "um modelo foi carregado") e que os relatórios de falhas não trazem conteúdo de conversas nem de documentos. Ela também diz que os dados locais não são criptografados pelo app e dependem da proteção do próprio dispositivo, e que as conversas só saem do app quando você as exporta.',
+          'As descrições das lojas dizem "sem compras no app", e o desenvolvedor confirmou à PromptQuorum que o app não tem nenhuma; um parágrafo antigo sobre compras na política de privacidade estava desatualizado e foi corrigido. A frase "sem rastreamento" não significa que nada sai do celular: as análises de uso e os relatórios de falhas descritos acima continuam valendo.',
         ],
         callouts: [
           {
@@ -1826,6 +1887,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'O app é de código fechado, então nenhuma dessas afirmações pode ser conferida no código, e a PromptQuorum não auditou o tráfego de rede. Quem lida com dados confidenciais, ou configura os controles parentais para uma criança, deve verificar o comportamento no próprio aparelho.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'A palavra do desenvolvedor',
+        content: [
+          'Alessandro Facchini, desenvolvedor do MemoryAI, revisou o rascunho desta análise e enviou a nota abaixo. Ela é apresentada como as palavras do próprio desenvolvedor, não como uma avaliação editorial independente da PromptQuorum. As correções da mesma mensagem sobre compras, fluxos de dados, motores e versão do Android foram aplicadas nesta análise:',
+          '"Criei o MemoryAI para quem quer um assistente de IA sem entregar suas palavras a um servidor. Depois que um modelo é baixado, ele responde sem conexão com a internet, e a conversa fica no celular.',
+          'Duas ideias o moldam. A primeira é uma memória que você pode ver: o app pode lembrar o que você conta, com as suas próprias palavras, e você pode abrir essa memória, corrigi-la ou apagá-la a qualquer momento. A segunda é o uso em família: o Modo Criança trava o modelo e as configurações atrás de um PIN dos responsáveis e mantém as respostas adequadas à idade.',
+          'É gratuito, sem conta e sem anúncios, e fala seis idiomas. Eu o desenvolvo na Itália com uma equipe pequena, e dois testadores experimentam as novas versões em celulares Android e iPhones reais. O que vem a seguir: ferramentas que o modelo pode usar no celular, agora em teste, e, no iPhone, a primeira resposta mais rápida que os usuários de Android já têm."',
+        ],
+        note: '— Alessandro Facchini, desenvolvedor',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1843,8 +1915,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Desempenho na prática.** A PromptQuorum não executou o app, então velocidade, consumo de bateria, qualidade das respostas e a força real dos controles parentais não foram avaliados.',
           '**Código-fonte e licença.** O app é de código fechado; o repositório de feedback contém apenas um README e um rastreador de problemas.',
-          '**Compras e rastreamento.** Os textos das lojas e a política de privacidade divergem, como descrito na seção de privacidade.',
-          '**Requisitos do Android.** O texto lido do Google Play não mostra uma versão mínima do Android; o mínimo no iOS é 16.4.',
+          '**Análises de uso e tráfego de rede.** O app é de código fechado e a PromptQuorum não auditou o tráfego de rede dele; os fluxos de dados descritos acima são, portanto, o relato do desenvolvedor e da política.',
+          '**Requisitos do Android.** O desenvolvedor informa Android 9 ou superior, o que o texto lido do Google Play não mostra; o mínimo no iOS é 16.4.',
           '**Histórico.** O app está disponível há cerca de sete meses, com mais de 1 mil downloads no Google Play e sem avaliações na App Store ainda; as fontes não indicam nenhum compromisso de suporte.',
           '**Não é para quem precisa de modelos muito grandes.** Os modelos para download são pequenos, então trabalhos mais pesados cabem melhor em um computador.',
         ],
@@ -1896,7 +1968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Posso usar meus próprios modelos?',
-            a: 'Sim. Você pode importar arquivos GGUF compatíveis do Hugging Face e rodá-los no motor llama.cpp; modelos da família Gemma podem rodar no motor LiteRT.',
+            a: 'Sim. Você pode importar arquivos GGUF compatíveis do Hugging Face e rodá-los no motor llama.cpp; o motor LiteRT roda o Gemma e, segundo o desenvolvedor, também Qwen 2.5 1.5B, DeepSeek R1 Distill 1.5B e Phi-4 Mini em formato LiteRT.',
           },
           {
             q: 'Funciona em um Mac?',
@@ -1912,7 +1984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O MemoryAI é um app de chat móvel offline e gratuito que mantém no dispositivo uma memória editável do usuário e oferece controles parentais, além de perguntas sobre documentos e imagens, voz com as mãos livres e dois motores de inferência. Ele também é atualizado com frequência, com uma versão no dia anterior à consulta desta análise. Em contrapartida, é de código fechado, recente, de alcance pequeno, limitado a modelos pequenos no dispositivo, e os textos das lojas e a política de privacidade divergem sobre compras e rastreamento, então suas afirmações de privacidade não podem ser conferidas no código. Serve a quem quer esses recursos específicos e aceita um app jovem e fechado; quem quer código auditável pode comparar o [Private Mind](/pt/power-local-llm/private-mind-review) ou o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review).',
+          'O MemoryAI é um app de chat móvel offline e gratuito que mantém no dispositivo uma memória editável do usuário e oferece controles parentais, além de perguntas sobre documentos e imagens, voz com as mãos livres e dois motores de inferência. Ele também é atualizado com frequência, com uma versão no dia anterior à consulta desta análise. Em contrapartida, é de código fechado, recente, de alcance pequeno, limitado a modelos pequenos no dispositivo, e suas afirmações de privacidade não podem ser conferidas no código. Serve a quem quer esses recursos específicos e aceita um app jovem e fechado; quem quer código auditável pode comparar o [Private Mind](/pt/power-local-llm/private-mind-review) ou o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -1920,7 +1992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[MemoryAI na App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — preço, histórico de versões, requisitos, rótulo de privacidade e descrição, consultados em 19 de outubro de 2026.',
           '[MemoryAI no Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) — descrição, número de downloads, seção Segurança dos dados e data da última atualização, consultados em 19 de outubro de 2026.',
-          '[Site e política de privacidade do MemoryAI](https://alessandrofacchini.github.io/memoryai-privacy/) — tratamento de dados, uso da rede, permissões e serviços de terceiros, política atualizada em 30 de junho de 2026.',
+          '[Site e política de privacidade do MemoryAI](https://alessandrofacchini.github.io/memoryai-privacy/) — tratamento de dados, uso da rede, permissões e serviços de terceiros, política atualizada em 19 de outubro de 2026.',
           '[memoryai-feedback no GitHub](https://github.com/alessandrofacchini/memoryai-feedback) — o rastreador público de problemas do desenvolvedor.',
         ],
       },
@@ -1971,12 +2043,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI (الإصدار 1.0.52 على iOS اعتباراً من 19 أكتوبر 2026) يجمع بين ذاكرة قابلة للتعديل على الجهاز ووضع للأطفال محمي برقم PIN في تطبيق دردشة مجاني لا يتطلب حساباً.** تُنزَّل النماذج مرة واحدة من Hugging Face ثم تعمل دون اتصال. ولا تتفق نصوص المتجر وسياسة الخصوصية تماماً بشأن التحليلات والمشتريات، لذا اقرأ قسم الخصوصية قبل الاعتماد على عبارة «بلا تتبّع».',
+      '**MemoryAI (الإصدار 1.0.52 على iOS و1.0.54 على أندرويد اعتباراً من 19 أكتوبر 2026) يجمع بين ذاكرة قابلة للتعديل على الجهاز ووضع للأطفال محمي برقم PIN في تطبيق دردشة مجاني لا يتطلب حساباً.** تُنزَّل النماذج مرة واحدة من Hugging Face ثم تعمل دون اتصال. لكن أحداث الاستخدام وتقارير الأعطال، دون محتوى المحادثات، تغادر الهاتف فعلاً، لذا اقرأ قسم الخصوصية قبل الاعتماد على عبارة «بلا تتبّع».',
     quickAnswerTop: {
       ar: {
         question: 'هل يعمل MemoryAI فعلاً دون اتصال وبلا أي تكلفة؟',
         answer:
-          'بحسب صفحتيه، نعم بالنسبة للميزات الأساسية: فبعد تنزيل النموذج مرة واحدة تعمل الدردشة والأسئلة عن المستندات والصوت على الهاتف، ودون إعلانات. وتضيف سياسة الخصوصية أن تحليلات مجهولة وتقارير أعطال تُرسل إلى الخارج، وأن مشتريات للميزات المميزة قد تكون موجودة، وهو ما تنفيه نصوص المتجر.',
+          'بحسب صفحتيه، نعم بالنسبة للميزات الأساسية: فبعد تنزيل النموذج مرة واحدة تعمل الدردشة والأسئلة عن المستندات والصوت على الهاتف، ودون إعلانات أو مشتريات داخل التطبيق. وتضيف سياسة الخصوصية أن أحداث استخدام وتقارير أعطال، دون محتوى المحادثات، تُرسل إلى الخارج.',
         bullets: [
           'مجاني على [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) و[App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586).',
           'دردشة مع نماذج GGUF و LiteRT مثل Gemma و Qwen و Llama و Phi و DeepSeek.',
@@ -1994,6 +2066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'الميزات التي تؤكدها المصادر', anchor: 'key-features' },
       { label: 'وضع الأطفال', anchor: 'kid-mode' },
       { label: 'الخصوصية واستخدام الشبكة', anchor: 'privacy' },
+      { label: 'من مطوّر التطبيق', anchor: 'from-the-maker' },
       { label: 'لمن يناسب', anchor: 'who-should-use' },
       { label: 'ما لم نتمكن من التحقق منه', anchor: 'who-should-not-use' },
       { label: 'المنافسون والبدائل', anchor: 'vs-alternatives' },
@@ -2035,7 +2108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-memoryai',
         title: 'ما هو MemoryAI؟',
         content: [
-          '**MemoryAI تطبيق دردشة للهاتف يشغّل نماذج لغوية مفتوحة الأوزان محلياً بدلاً من الاتصال بخدمة سحابية.** وبحسب صفحتيه، لا يتضمن التطبيق أي نموذج: بل تختار واحداً من القائمة داخل التطبيق أو تستورد أي ملف GGUF متوافق من Hugging Face، ويحتاج التشغيل الأول إلى اتصال بالشبكة لتنزيله. ويتوفر محرّكا استدلال: llama.cpp لنماذج GGUF، و MediaPipe/LiteRT من Google لنماذج عائلة Gemma.',
+          '**MemoryAI تطبيق دردشة للهاتف يشغّل نماذج لغوية مفتوحة الأوزان محلياً بدلاً من الاتصال بخدمة سحابية.** وبحسب صفحتيه، لا يتضمن التطبيق أي نموذج: بل تختار واحداً من القائمة داخل التطبيق أو تستورد أي ملف GGUF متوافق من Hugging Face، ويحتاج التشغيل الأول إلى اتصال بالشبكة لتنزيله. ويتوفر محرّكا استدلال: llama.cpp لنماذج GGUF، و LiteRT (MediaPipe) من Google للنماذج بصيغة LiteRT. ويقول المطوّر إن LiteRT لا يقتصر على Gemma، فهو يشغّل أيضاً Qwen 2.5 1.5B وDeepSeek R1 Distill 1.5B وPhi-4 Mini.',
           'يحمل التطبيق على App Store العنوان «MemoryAI: Offline Private AI» في المتاجر الأمريكي والياباني والكوري، و«MemoryAI: Private Offline-KI» في ألمانيا، و«MemoryAI: a IA que lembra» في البرازيل؛ وحزمته على Google Play هي com.ts.memoryai. أما Agent Memory فهي ميزة في هذا التطبيق وليست منتجاً منفصلاً.',
         ],
       },
@@ -2061,14 +2134,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'المنصة': 'سياسة الخصوصية',
-            'مكان الحصول عليه': '[الصفحة نفسها](https://alessandrofacchini.github.io/memoryai-privacy/) (إنجليزية/إيطالية؛ آخر تحديث 30 يونيو 2026)',
+            'مكان الحصول عليه': '[الصفحة نفسها](https://alessandrofacchini.github.io/memoryai-privacy/) (إنجليزية/إيطالية؛ آخر تحديث 19 أكتوبر 2026)',
           },
           {
             'المنصة': 'الإبلاغ عن الأخطاء',
             'مكان الحصول عليه': '[مشكلات GitHub](https://github.com/alessandrofacchini/memoryai-feedback/issues) (للملاحظات فقط)',
           },
         ],
-        note: 'الإصدار الذي جرت مراجعته: 1.0.52 على iOS، صدر في 18 أكتوبر 2026، بحسب صفحة App Store؛ وقد حُدّثت صفحة Google Play أيضاً في 18 أكتوبر 2026 وتذكر بيانات صفحتها الإصدار 1.0.54. ولا تعرض صفحة Google Play في النص الذي قرأناه حداً أدنى لإصدار أندرويد.',
+        note: 'الإصدار الذي جرت مراجعته: 1.0.52 على iOS، صدر في 18 أكتوبر 2026، بحسب صفحة App Store. ويقول المطوّر إن نسخة أندرويد على الإصدار 1.0.54 منذ 18 أكتوبر، وإن iPhone سيحصل على التغييرات نفسها في إصداره التالي؛ كما تذكر بيانات صفحة Google Play الإصدار 1.0.54. ويذكر المطوّر أن أندرويد 9 أو أحدث مطلوب؛ ولا تعرض صفحة Google Play في النص الذي قرأناه حداً أدنى لإصدار أندرويد.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2133,8 +2206,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخصوصية واستخدام الشبكة',
         content: [
           '**تبقى المحادثات والمستندات والذكريات على الجهاز افتراضياً، ويقول المطوّر إن التطبيق لا يملك خوادم ذكاء اصطناعي ولا يرسل نص المحادثات.** ويصرّح قسم أمان البيانات في Google Play بعدم مشاركة أي بيانات مع أطراف ثالثة، مع احتمال جمع معلومات التطبيق والأداء ومعرّفات الجهاز أو غيرها، مشفّرة أثناء النقل. وتسرد بطاقة الخصوصية في App Store سجل البحث ومعرّف الجهاز والتفاعل مع المنتج لأغراض التحليلات، ومعرّف الجهاز وبيانات الأعطال والأداء لوظائف التطبيق، وكلها مصنّفة على أنها غير مرتبطة بهويتك.',
-          'تحدد [سياسة الخصوصية](https://alessandrofacchini.github.io/memoryai-privacy/) ما يغادر الهاتف فعلاً: أحداث استخدام مجهولة إلى TelemetryDeck، وتقارير أعطال إلى Sentry، وإشعارات دفع اختيارية عبر OneSignal، وتنزيلات النماذج من Hugging Face، ونسخ احتياطي اختياري إلى حسابك على Google Drive أو iCloud. وتقول أيضاً إن البيانات المحلية لا يشفّرها التطبيق بل يعتمد على حماية الجهاز نفسه، وإن المحادثات لا تغادر التطبيق إلا عندما تصدّرها أنت.',
-          'تقول وصفا المتجر «بلا مشتريات داخل التطبيق» و«بلا تتبّع»، بينما تقول السياسة إن التطبيق يقدّم مشتريات داخل التطبيق للميزات المميزة وتسرد التحليلات المذكورة أعلاه. ولم يتضح من المصادر أي العبارتين تطابق النسخة الحالية، لذا اعتبر السياسة الأكثر تفصيلاً.',
+          'تحدد [سياسة الخصوصية](https://alessandrofacchini.github.io/memoryai-privacy/)، المحدَّثة في 19 أكتوبر 2026، ما يغادر الهاتف فعلاً: أحداث استخدام إلى TelemetryDeck، وتقارير أعطال إلى Sentry، وتنزيلات النماذج من Hugging Face. وإذا قبل المستخدم نافذة «الخصوصية والإشعارات» داخل التطبيق، يُستخدم OneSignal للإشعارات الفورية، ويعمل Google Analytics for Firebase على أندرويد فقط. والنسخ الاحتياطي إلى حسابك على Google Drive أو iCloud اختياري. ويضيف المطوّر أن أحداث الاستخدام لا تتضمن محتوى المحادثات (مثل «جرى تحميل نموذج»)، وأن تقارير الأعطال لا تتضمن محتوى المحادثات أو المستندات. وتقول السياسة أيضاً إن البيانات المحلية لا يشفّرها التطبيق بل يعتمد على حماية الجهاز نفسه، وإن المحادثات لا تغادر التطبيق إلا عندما تصدّرها أنت.',
+          'يقول وصفا المتجر «بلا مشتريات داخل التطبيق»، وقد أكد المطوّر لـ PromptQuorum أن التطبيق لا يتضمن أي مشتريات؛ أما فقرة سابقة عن المشتريات في سياسة الخصوصية فكانت قديمة وجرى تصحيحها. وعبارة «بلا تتبّع» لا تعني أنه لا يغادر الهاتف شيء: فالتحليلات وتقارير الأعطال المذكورة أعلاه ما زالت سارية.',
         ],
         callouts: [
           {
@@ -2142,6 +2215,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'التطبيق مغلق المصدر، لذا لا يمكن التحقق من أي من هذه الادعاءات في الكود، ولم تدقق PromptQuorum حركة الشبكة. وينبغي لمن يتعامل مع بيانات سرية، أو يضبط الرقابة الأبوية لطفل، أن يتحقق من السلوك على جهازه.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'من مطوّر التطبيق',
+        content: [
+          'راجع Alessandro Facchini، مطوّر MemoryAI، مسودة هذه المراجعة وأرسل الملاحظة التالية. تُعرض بوصفها كلمات المطوّر نفسه، وليست تقييماً تحريرياً مستقلاً من PromptQuorum. وقد طُبّقت في هذه المراجعة التصحيحات الواردة في الرسالة نفسها بشأن المشتريات وتدفقات البيانات والمحرّكات وإصدار أندرويد:',
+          '«بنيتُ MemoryAI لمن يريدون مساعداً بالذكاء الاصطناعي دون تسليم كلماتهم إلى خادم. فبعد تنزيل النموذج يجيب دون اتصال بالإنترنت، وتبقى المحادثة على الهاتف.',
+          'تشكّله فكرتان. الأولى ذاكرة يمكنك رؤيتها: يستطيع التطبيق أن يتذكر ما تخبره به، بكلماتك أنت، ويمكنك فتح هذه الذاكرة وتصحيحها أو حذفها في أي وقت. والثانية الاستخدام العائلي: يقفل وضع الأطفال النموذج والإعدادات خلف رمز PIN للوالدين ويُبقي الردود مناسبة للعمر.',
+          'التطبيق مجاني، بلا حساب ولا إعلانات، ويدعم ست لغات. أطوّره في إيطاليا مع فريق صغير، ويجرّب مختبِران الإصدارات الجديدة على هواتف أندرويد وiPhone حقيقية. وما يلي في القائمة: أدوات يستطيع النموذج استخدامها على الهاتف وهي قيد الاختبار الآن، وعلى iPhone الإجابة الأولى الأسرع التي يحصل عليها مستخدمو أندرويد بالفعل.»',
+        ],
+        note: '— Alessandro Facchini، مطوّر التطبيق',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2159,8 +2243,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**الأداء العملي.** لم تشغّل PromptQuorum التطبيق، لذا لم تُقيَّم السرعة واستهلاك البطارية وجودة الإجابات والقوة الفعلية للرقابة الأبوية.',
           '**الكود المصدري والترخيص.** التطبيق مغلق المصدر؛ ولا يحتوي مستودع الملاحظات إلا على ملف README ونظام تتبع للمشكلات.',
-          '**المشتريات والتتبّع.** تختلف نصوص المتجر عن سياسة الخصوصية، كما هو موضح في قسم الخصوصية.',
-          '**متطلبات أندرويد.** لا يعرض نص Google Play الذي قرأناه حداً أدنى لإصدار أندرويد؛ والحد الأدنى لـ iOS هو 16.4.',
+          '**التحليلات وحركة الشبكة.** التطبيق مغلق المصدر ولم تدقّق PromptQuorum حركة الشبكة فيه، لذا فإن تدفقات البيانات المذكورة أعلاه هي رواية المطوّر والسياسة.',
+          '**متطلبات أندرويد.** يذكر المطوّر أندرويد 9 أو أحدث، وهو ما لا يعرضه نص Google Play الذي قرأناه؛ والحد الأدنى في iOS هو 16.4.',
           '**السجل العام.** مضى على صدور التطبيق نحو سبعة أشهر، مع أكثر من ألف تنزيل على Google Play ودون تقييمات على App Store بعد؛ ولا تقدّم المصادر أي التزام بالدعم.',
           '**لا يناسب من يحتاج إلى نماذج كبيرة جداً.** النماذج القابلة للتنزيل صغيرة، لذا فالأعمال الأثقل مكانها الحاسوب.',
         ],
@@ -2212,7 +2296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يمكنني استخدام نماذجي الخاصة؟',
-            a: 'نعم. يمكنك استيراد ملفات GGUF متوافقة من Hugging Face وتشغيلها على محرّك llama.cpp؛ ويمكن تشغيل نماذج عائلة Gemma على محرّك LiteRT.',
+            a: 'نعم. يمكنك استيراد ملفات GGUF متوافقة من Hugging Face وتشغيلها على محرّك llama.cpp؛ ويشغّل محرّك LiteRT نموذج Gemma، وبحسب المطوّر أيضاً Qwen 2.5 1.5B وDeepSeek R1 Distill 1.5B وPhi-4 Mini بصيغة LiteRT.',
           },
           {
             q: 'هل يعمل على Mac؟',
@@ -2228,7 +2312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'MemoryAI تطبيق دردشة مجاني على الهاتف يعمل دون اتصال، يحتفظ بذاكرة قابلة للتعديل عن المستخدم على الجهاز ويقدّم رقابة أبوية، إلى جانب أسئلة المستندات والصور وصوت دون لمس ومحرّكي استدلال. كما أنه يُحدَّث كثيراً، إذ صدر إصدار قبل يوم من التحقق من هذه المراجعة. في المقابل، هو مغلق المصدر وحديث وضيق الانتشار ومقتصر على نماذج صغيرة على الجهاز، وتختلف نصوص المتجر وسياسة الخصوصية بشأن المشتريات والتتبّع، لذا لا يمكن التحقق من ادعاءاته الخاصة بالخصوصية في الكود. وهو يناسب القراء الذين يريدون هذه الميزات تحديداً ويقبلون تطبيقاً حديثاً ومغلقاً؛ أما من يريد كوداً قابلاً للتدقيق فيمكنه مقارنة [Private Mind](/ar/power-local-llm/private-mind-review) أو [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review).',
+          'MemoryAI تطبيق دردشة مجاني على الهاتف يعمل دون اتصال، يحتفظ بذاكرة قابلة للتعديل عن المستخدم على الجهاز ويقدّم رقابة أبوية، إلى جانب أسئلة المستندات والصور وصوت دون لمس ومحرّكي استدلال. كما أنه يُحدَّث كثيراً، إذ صدر إصدار قبل يوم من التحقق من هذه المراجعة. في المقابل، هو مغلق المصدر وحديث وضيق الانتشار ومقتصر على نماذج صغيرة على الجهاز، ولا يمكن التحقق من ادعاءاته الخاصة بالخصوصية في الكود. وهو يناسب القراء الذين يريدون هذه الميزات تحديداً ويقبلون تطبيقاً حديثاً ومغلقاً؛ أما من يريد كوداً قابلاً للتدقيق فيمكنه مقارنة [Private Mind](/ar/power-local-llm/private-mind-review) أو [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -2236,7 +2320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[MemoryAI على App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — السعر وسجل الإصدارات والمتطلبات وبطاقة الخصوصية والوصف، جرى التحقق منها في 19 أكتوبر 2026.',
           '[MemoryAI على Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) — الوصف وعدد التنزيلات وقسم أمان البيانات وتاريخ آخر تحديث، جرى التحقق منها في 19 أكتوبر 2026.',
-          '[موقع MemoryAI وسياسة الخصوصية](https://alessandrofacchini.github.io/memoryai-privacy/) — التعامل مع البيانات واستخدام الشبكة والأذونات والخدمات الخارجية، وآخر تحديث للسياسة في 30 يونيو 2026.',
+          '[موقع MemoryAI وسياسة الخصوصية](https://alessandrofacchini.github.io/memoryai-privacy/) — التعامل مع البيانات واستخدام الشبكة والأذونات والخدمات الخارجية، وآخر تحديث للسياسة في 19 أكتوبر 2026.',
           '[memoryai-feedback على GitHub](https://github.com/alessandrofacchini/memoryai-feedback) — نظام تتبع المشكلات العام للمطوّر.',
         ],
       },
@@ -2287,12 +2371,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI(截至 2026 年 10 月 19 日,iOS 版本为 1.0.52)将可编辑的设备端记忆与带 PIN 锁的儿童模式结合在一款无需账号的免费聊天应用中。** 模型只需从 Hugging Face 下载一次,之后即可离线运行。应用商店文字与隐私政策在数据分析和内购方面并不完全一致,因此在依赖“无追踪”的说法之前,请先阅读隐私部分。',
+      '**MemoryAI(截至 2026 年 10 月 19 日,iOS 版本为 1.0.52,Android 版本为 1.0.54)将可编辑的设备端记忆与带 PIN 锁的儿童模式结合在一款无需账号的免费聊天应用中。** 模型只需从 Hugging Face 下载一次,之后即可离线运行。不含聊天内容的使用事件和崩溃报告确实会离开手机,因此在依赖“无追踪”的说法之前,请先阅读隐私部分。',
     quickAnswerTop: {
       zh: {
         question: 'MemoryAI 真的能离线运行并且免费吗?',
         answer:
-          '根据其应用商店页面,核心功能确实如此:一次性下载模型后,聊天、文档问答和语音均在手机上运行,也没有广告。其隐私政策补充说明,应用会发送匿名的数据分析和崩溃报告,并且可能存在高级功能的内购,而应用商店文字对此予以否认。',
+          '根据其应用商店页面,核心功能确实如此:一次性下载模型后,聊天、文档问答和语音均在手机上运行,也没有广告和内购。其隐私政策补充说明,应用会发送不含聊天内容的使用事件和崩溃报告。',
         bullets: [
           '可在 [Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) 和 [App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) 免费获取。',
           '可与 Gemma、Qwen、Llama、Phi 和 DeepSeek 等 GGUF 和 LiteRT 模型聊天。',
@@ -2310,6 +2394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '来源已确认的功能', anchor: 'key-features' },
       { label: '儿童模式', anchor: 'kid-mode' },
       { label: '隐私与网络使用', anchor: 'privacy' },
+      { label: '来自开发者', anchor: 'from-the-maker' },
       { label: '适合哪些人使用', anchor: 'who-should-use' },
       { label: '我们无法核实的内容', anchor: 'who-should-not-use' },
       { label: '竞品与替代方案', anchor: 'vs-alternatives' },
@@ -2351,7 +2436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-memoryai',
         title: 'MemoryAI 是什么?',
         content: [
-          '**MemoryAI 是一款在本地运行开放权重语言模型的手机聊天应用,而不是调用云服务。** 根据其应用商店页面,应用不内置任何模型:你可以从应用内列表中选择一个,或从 Hugging Face 导入任何兼容的 GGUF 文件,首次运行需要联网下载。应用提供两个推理引擎:用于 GGUF 模型的 llama.cpp,以及用于 Gemma 系列模型的 Google MediaPipe/LiteRT。',
+          '**MemoryAI 是一款在本地运行开放权重语言模型的手机聊天应用,而不是调用云服务。** 根据其应用商店页面,应用不内置任何模型:你可以从应用内列表中选择一个,或从 Hugging Face 导入任何兼容的 GGUF 文件,首次运行需要联网下载。应用提供两个推理引擎:用于 GGUF 模型的 llama.cpp,以及用于 LiteRT 格式模型的 Google LiteRT(MediaPipe)。开发者表示,LiteRT 不限于 Gemma,也能运行 Qwen 2.5 1.5B、DeepSeek R1 Distill 1.5B 和 Phi-4 Mini。',
           'App Store 页面标题在美国、日本和韩国商店为“MemoryAI: Offline Private AI”,在德国为“MemoryAI: Private Offline-KI”,在巴西为“MemoryAI: a IA que lembra”;Google Play 包名为 com.ts.memoryai。其“Agent Memory”是该应用的一项功能,而不是单独的产品。',
         ],
       },
@@ -2377,14 +2462,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '平台': '隐私政策',
-            '获取方式': '[同一页面](https://alessandrofacchini.github.io/memoryai-privacy/)(含英语,另链接意大利语版;最后更新于 2026 年 6 月 30 日)',
+            '获取方式': '[同一页面](https://alessandrofacchini.github.io/memoryai-privacy/)(含英语,另链接意大利语版;最后更新于 2026 年 10 月 19 日)',
           },
           {
             '平台': '问题反馈',
             '获取方式': '[GitHub issues](https://github.com/alessandrofacchini/memoryai-feedback/issues)(仅限反馈,无源代码)',
           },
         ],
-        note: '所评测版本:iOS 版 1.0.52,发布于 2026 年 10 月 18 日,以 App Store 页面显示为准;Google Play 页面也在 2026 年 10 月 18 日更新,其页面数据列出的构建版本为 1.0.54。所读取的 Google Play 页面文字中未显示最低 Android 版本。',
+        note: '所评测版本:iOS 版 1.0.52,发布于 2026 年 10 月 18 日,以 App Store 页面显示为准。开发者表示,Android 版自 10 月 18 日起为 1.0.54,iPhone 版将在下一个版本中获得相同的更改;Google Play 页面数据也列出构建版本 1.0.54。开发者称需要 Android 9 或更高版本;所读取的 Google Play 页面文字中未显示最低 Android 版本。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2449,8 +2534,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '隐私与网络使用',
         content: [
           '**聊天、文档和记忆默认保存在设备上,开发者称该应用没有 AI 服务器,也不发送聊天文本。** Google Play 的数据安全部分声明未与第三方共享数据,可能收集应用信息、性能数据以及设备或其他 ID,且传输时加密。App Store 隐私标签列出:用于数据分析的搜索历史、设备 ID 和产品交互,以及用于应用功能的设备 ID、崩溃和性能数据,均标注为未与你关联。',
-          '[隐私政策](https://alessandrofacchini.github.io/memoryai-privacy/)列出了确实会离开手机的内容:发送至 TelemetryDeck 的匿名使用事件、发送至 Sentry 的崩溃报告、通过 OneSignal 发送的可选推送通知、来自 Hugging Face 的模型下载,以及可选的备份到你自己的 Google Drive 或 iCloud。政策还称,本地数据不由应用加密,而是依赖设备自身的保护,并且对话仅在你导出时才会离开应用。',
-          '应用商店描述称“无内购”和“无追踪”,而政策则称应用为高级功能提供内购,并列出了上述数据分析。当前版本究竟符合哪种说法,来源中并不明确,因此请将政策视为更详细的一方。',
+          '[隐私政策](https://alessandrofacchini.github.io/memoryai-privacy/)(2026 年 10 月 19 日更新)列出了确实会离开手机的内容:发送至 TelemetryDeck 的使用事件、发送至 Sentry 的崩溃报告,以及来自 Hugging Face 的模型下载。如果用户接受应用内的“隐私与通知”提示,则会使用 OneSignal 发送推送通知,并且仅在 Android 上启用 Google Analytics for Firebase。备份到你自己的 Google Drive 或 iCloud 是可选的。开发者补充说,使用事件不含聊天内容(例如“已加载模型”),崩溃报告也不含聊天或文档内容。政策还称,本地数据不由应用加密,而是依赖设备自身的保护,并且对话仅在你导出时才会离开应用。',
+          '应用商店描述称“无内购”,开发者也向 PromptQuorum 确认应用没有内购;隐私政策中此前关于内购的一段已过时,现已更正。“无追踪”的说法并不意味着没有任何数据离开手机:上述数据分析和崩溃报告依然适用。',
         ],
         callouts: [
           {
@@ -2458,6 +2543,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '该应用为闭源,因此这些说法均无法通过代码核查,PromptQuorum 也未审计其网络流量。处理机密数据的人,或为孩子配置家长控制的人,应在自己的设备上核实其行为。',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '来自开发者',
+        content: [
+          'MemoryAI 的开发者 Alessandro Facchini 审阅了本评测的草稿,并发来以下说明。以下内容以开发者自己的话呈现,并非 PromptQuorum 独立的编辑评估。同一封邮件中关于内购、数据流向、引擎和 Android 版本的更正已体现在本评测中:',
+          '“我做 MemoryAI,是为了那些想要 AI 助手、却不想把自己的话交给服务器的人。模型下载完成后,它无需联网即可回答,对话也留在手机上。',
+          '它由两个理念塑造。第一是看得见的记忆:应用可以用你自己的话记住你告诉它的内容,你可以随时打开这份记忆,修改或删除它。第二是家庭使用:儿童模式把模型和设置锁在家长 PIN 之后,并让回复适合孩子的年龄。',
+          '它免费,无需账号,没有广告,支持六种语言。我在意大利与一个小团队一起开发它,两位测试人员会在真实的 Android 手机和 iPhone 上试用新版本。接下来的计划:让模型在手机上使用的工具(目前在测试中),以及在 iPhone 上实现 Android 用户已经拥有的更快的首次回答。”',
+        ],
+        note: '— Alessandro Facchini,开发者',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2475,8 +2571,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**实际使用性能。** PromptQuorum 没有运行该应用,因此速度、耗电、回答质量以及家长控制的真实效果均未评估。',
           '**源代码与许可证。** 该应用为闭源;反馈代码仓库仅包含 README 和问题追踪器。',
-          '**内购与追踪。** 应用商店文字与隐私政策不一致,详见隐私部分。',
-          '**Android 要求。** 所读取的 Google Play 文字未显示最低 Android 版本;iOS 最低版本为 16.4。',
+          '**数据分析与网络流量。** 该应用为闭源,PromptQuorum 未审计其网络流量,因此上述数据流来自开发者和隐私政策的说明。',
+          '**Android 要求。** 开发者称需要 Android 9 或更高版本,所读取的 Google Play 文字中未显示这一点;iOS 最低版本为 16.4。',
           '**口碑记录。** 该应用上线约七个月,Google Play 下载量 1K+,App Store 暂无评分;来源未给出任何支持承诺。',
           '**不适合需要超大模型的用户。** 可下载的模型都比较小,因此更重的工作应放在电脑上进行。',
         ],
@@ -2528,7 +2624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '我可以使用自己的模型吗?',
-            a: '可以。你可以从 Hugging Face 导入兼容的 GGUF 文件,并在 llama.cpp 引擎上运行;Gemma 系列模型可在 LiteRT 引擎上运行。',
+            a: '可以。你可以从 Hugging Face 导入兼容的 GGUF 文件,并在 llama.cpp 引擎上运行;LiteRT 引擎可运行 Gemma,据开发者称还能运行 LiteRT 格式的 Qwen 2.5 1.5B、DeepSeek R1 Distill 1.5B 和 Phi-4 Mini。',
           },
           {
             q: '它能在 Mac 上使用吗?',
@@ -2544,7 +2640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'MemoryAI 是一款免费的离线手机聊天应用,在设备上保存用户的可编辑记忆,并提供家长控制,同时支持文档和图片提问、免动手语音以及两个推理引擎。它的更新也很频繁,在本评测核实的前一天还有一次发布。另一方面,它是闭源的、上线时间短、影响范围小、只能运行设备端的小型模型,并且其应用商店文字与隐私政策在内购和追踪方面不一致,因此无法通过代码核查其隐私说法。它适合想要这些特定功能并能接受一款年轻的闭源应用的读者;想要可审计代码的读者可以比较 [Private Mind](/zh/power-local-llm/private-mind-review) 或 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)。',
+          'MemoryAI 是一款免费的离线手机聊天应用,在设备上保存用户的可编辑记忆,并提供家长控制,同时支持文档和图片提问、免动手语音以及两个推理引擎。它的更新也很频繁,在本评测核实的前一天还有一次发布。另一方面,它是闭源的、上线时间短、影响范围小、只能运行设备端的小型模型,因此无法通过代码核查其隐私说法。它适合想要这些特定功能并能接受一款年轻的闭源应用的读者;想要可审计代码的读者可以比较 [Private Mind](/zh/power-local-llm/private-mind-review) 或 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)。',
       },
       sources: {
         id: 'sources',
@@ -2552,7 +2648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[App Store 上的 MemoryAI](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — 价格、版本历史、系统要求、隐私标签和描述,核实于 2026 年 10 月 19 日。',
           '[Google Play 上的 MemoryAI](https://play.google.com/store/apps/details?id=com.ts.memoryai) — 描述、下载量、数据安全部分和最后更新日期,核实于 2026 年 10 月 19 日。',
-          '[MemoryAI 网站与隐私政策](https://alessandrofacchini.github.io/memoryai-privacy/) — 数据处理、网络使用、权限和第三方服务,政策最后更新于 2026 年 6 月 30 日。',
+          '[MemoryAI 网站与隐私政策](https://alessandrofacchini.github.io/memoryai-privacy/) — 数据处理、网络使用、权限和第三方服务,政策最后更新于 2026 年 10 月 19 日。',
           '[GitHub 上的 memoryai-feedback](https://github.com/alessandrofacchini/memoryai-feedback) — 开发者的公开问题追踪器。',
         ],
       },
@@ -2603,12 +2699,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Llama', 'Phi', 'Qwen', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'Android', 'Apple M1'],
     leadAnswerBlock:
-      '**MemoryAI(2026년 10월 19일 기준 iOS 버전 1.0.52)는 편집 가능한 온디바이스 메모리와 PIN으로 잠그는 키즈 모드를 갖춘, 계정이 필요 없는 무료 채팅 앱입니다.** 모델은 Hugging Face에서 한 번 내려받은 뒤 오프라인으로 실행됩니다. 스토어 설명과 개인정보 처리방침은 분석과 결제에 관해 서로 완전히 일치하지 않으므로, "추적 없음"이라는 문구에 의존하기 전에 개인정보 항목을 읽어 보시기 바랍니다.',
+      '**MemoryAI(2026년 10월 19일 기준 iOS 버전 1.0.52, Android 버전 1.0.54)는 편집 가능한 온디바이스 메모리와 PIN으로 잠그는 키즈 모드를 갖춘, 계정이 필요 없는 무료 채팅 앱입니다.** 모델은 Hugging Face에서 한 번 내려받은 뒤 오프라인으로 실행됩니다. 채팅 내용이 없는 사용 이벤트와 오류 보고서는 휴대폰 밖으로 전송되므로, "추적 없음"이라는 문구에 의존하기 전에 개인정보 항목을 읽어 보시기 바랍니다.',
     quickAnswerTop: {
       ko: {
         question: 'MemoryAI는 정말 오프라인으로 실행되며 무료입니까?',
         answer:
-          '게재 정보에 따르면 핵심 기능은 그렇습니다. 모델을 한 번 내려받은 뒤에는 채팅, 문서 질문, 음성이 휴대폰에서 실행되며 광고가 없습니다. 다만 개인정보 처리방침에는 익명 분석 데이터와 오류 보고서가 외부로 전송되고 프리미엄 기능의 결제가 있을 수 있다고 적혀 있어, 이를 부인하는 스토어 설명과 다릅니다.',
+          '게재 정보에 따르면 핵심 기능은 그렇습니다. 모델을 한 번 내려받은 뒤에는 채팅, 문서 질문, 음성이 휴대폰에서 실행되며 광고와 앱 내 구입이 없습니다. 개인정보 처리방침에는 채팅 내용이 없는 사용 이벤트와 오류 보고서가 외부로 전송된다고 적혀 있습니다.',
         bullets: [
           '[Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai)와 [App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586)에서 무료.',
           'Gemma, Qwen, Llama, Phi, DeepSeek 같은 GGUF·LiteRT 모델로 채팅할 수 있습니다.',
@@ -2626,6 +2722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '출처로 확인되는 기능', anchor: 'key-features' },
       { label: '키즈 모드', anchor: 'kid-mode' },
       { label: '개인정보와 네트워크 사용', anchor: 'privacy' },
+      { label: '개발자의 말', anchor: 'from-the-maker' },
       { label: '이런 분께 적합합니다', anchor: 'who-should-use' },
       { label: '확인하지 못한 사항', anchor: 'who-should-not-use' },
       { label: '경쟁 앱과 대안', anchor: 'vs-alternatives' },
@@ -2667,7 +2764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'what-is-memoryai',
         title: 'MemoryAI란 무엇인가?',
         content: [
-          '**MemoryAI는 클라우드 서비스를 호출하는 대신 오픈 웨이트 언어 모델을 로컬에서 실행하는 모바일 채팅 앱입니다.** 게재 정보에 따르면 모델은 앱에 포함되어 있지 않으며, 앱 내 목록에서 고르거나 Hugging Face의 호환 GGUF 파일을 가져와야 하고, 처음 실행할 때는 내려받기 위해 네트워크 연결이 필요합니다. 추론 엔진은 두 가지로, GGUF 모델에는 llama.cpp, Gemma 계열 모델에는 Google의 MediaPipe/LiteRT를 제공합니다.',
+          '**MemoryAI는 클라우드 서비스를 호출하는 대신 오픈 웨이트 언어 모델을 로컬에서 실행하는 모바일 채팅 앱입니다.** 게재 정보에 따르면 모델은 앱에 포함되어 있지 않으며, 앱 내 목록에서 고르거나 Hugging Face의 호환 GGUF 파일을 가져와야 하고, 처음 실행할 때는 내려받기 위해 네트워크 연결이 필요합니다. 추론 엔진은 두 가지로, GGUF 모델에는 llama.cpp, LiteRT 형식 모델에는 Google의 LiteRT(MediaPipe)를 제공합니다. 개발자에 따르면 LiteRT는 Gemma에 한정되지 않으며 Qwen 2.5 1.5B, DeepSeek R1 Distill 1.5B, Phi-4 Mini도 실행합니다.',
           'App Store 게재 제목은 미국·일본·한국 스토어에서 "MemoryAI: Offline Private AI", 독일에서 "MemoryAI: Private Offline-KI", 브라질에서 "MemoryAI: a IA que lembra"이며, Google Play 패키지는 com.ts.memoryai입니다. 이 앱의 "Agent Memory"는 별도 제품이 아니라 이 앱의 기능입니다.',
         ],
       },
@@ -2693,14 +2790,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '플랫폼': '개인정보 처리방침',
-            '받는 곳': '[같은 페이지](https://alessandrofacchini.github.io/memoryai-privacy/) (영어, 이탈리아어판 링크 있음, 2026년 6월 30일 개정)',
+            '받는 곳': '[같은 페이지](https://alessandrofacchini.github.io/memoryai-privacy/) (영어, 이탈리아어판 링크 있음, 2026년 10월 19일 개정)',
           },
           {
             '플랫폼': '버그 신고',
             '받는 곳': '[GitHub 이슈](https://github.com/alessandrofacchini/memoryai-feedback/issues) (피드백 전용, 소스 코드 없음)',
           },
         ],
-        note: '확인한 버전은 iOS 1.0.52이며 App Store 게재 정보 기준 2026년 10월 18일에 출시되었습니다. Google Play 페이지도 2026년 10월 18일에 업데이트되었고 페이지 데이터에는 빌드 1.0.54가 표시됩니다. 읽은 Google Play 설명에는 최소 Android 버전이 나와 있지 않습니다.',
+        note: '확인한 버전은 iOS 1.0.52이며 App Store 게재 정보 기준 2026년 10월 18일에 출시되었습니다. 개발자에 따르면 Android는 10월 18일부터 1.0.54이고 iPhone은 다음 릴리스에서 같은 변경을 받습니다. Google Play 페이지 데이터에도 빌드 1.0.54가 표시됩니다. 개발자는 Android 9 이상이 필요하다고 밝혔으나, 읽은 Google Play 설명에는 최소 Android 버전이 나와 있지 않습니다.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2765,8 +2862,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '개인정보와 네트워크 사용',
         content: [
           '**채팅, 문서, 메모리는 기본적으로 기기에 머물며, 개발자는 이 앱에 AI 서버가 없고 채팅 텍스트를 보내지 않는다고 밝힙니다.** Google Play 데이터 보안 항목에는 제3자와 공유하는 데이터가 없다고 되어 있고, 앱 정보와 성능, 기기 또는 기타 ID가 수집될 수 있으며 전송 중 암호화된다고 표시되어 있습니다. App Store 개인정보 보호 라벨에는 분석 목적으로 검색 기록, 기기 ID, 제품 상호작용이, 앱 기능 목적으로 기기 ID, 오류 및 성능 데이터가 나열되어 있으며 모두 이용자와 연결되지 않음으로 표시되어 있습니다.',
-          '[개인정보 처리방침](https://alessandrofacchini.github.io/memoryai-privacy/)은 휴대폰 밖으로 나가는 것을 명시합니다. TelemetryDeck로 보내는 익명 사용 이벤트, Sentry로 보내는 오류 보고서, OneSignal을 통한 선택형 푸시 알림, Hugging Face에서의 모델 내려받기, 이용자 본인의 Google Drive 또는 iCloud로의 선택형 백업입니다. 또한 로컬 데이터는 앱이 암호화하지 않고 기기 자체의 보호에 의존하며, 대화는 이용자가 내보낼 때만 앱 밖으로 나간다고 밝힙니다.',
-          '스토어 설명에는 "앱 내 구입 없음"과 "추적 없음"이라고 되어 있지만, 처리방침에는 앱이 프리미엄 기능에 대한 앱 내 구입을 제공한다고 되어 있고 위의 분석 항목이 나열되어 있습니다. 어느 쪽이 현재 빌드와 일치하는지는 출처만으로 분명하지 않았으므로, 처리방침을 더 자세한 쪽으로 보시기 바랍니다.',
+          '[개인정보 처리방침](https://alessandrofacchini.github.io/memoryai-privacy/)(2026년 10월 19일 개정)은 휴대폰 밖으로 나가는 것을 명시합니다. TelemetryDeck로 보내는 사용 이벤트, Sentry로 보내는 오류 보고서, Hugging Face에서의 모델 내려받기입니다. 이용자가 앱 내 "개인정보 및 알림" 안내를 수락하면 푸시 알림에 OneSignal이 쓰이고, Android에서만 Google Analytics for Firebase가 활성화됩니다. 이용자 본인의 Google Drive 또는 iCloud로의 백업은 선택 사항입니다. 개발자는 사용 이벤트에 채팅 내용이 포함되지 않으며(예: "모델을 불러왔음") 오류 보고서에도 채팅이나 문서 내용이 포함되지 않는다고 덧붙입니다. 또한 로컬 데이터는 앱이 암호화하지 않고 기기 자체의 보호에 의존하며, 대화는 이용자가 내보낼 때만 앱 밖으로 나간다고 밝힙니다.',
+          '스토어 설명에는 "앱 내 구입 없음"이라고 되어 있고, 개발자도 PromptQuorum에 앱 내 구입이 없다고 확인해 주었습니다. 처리방침에 있던 구입 관련 이전 단락은 오래된 내용이어서 수정되었습니다. "추적 없음"이라는 문구가 휴대폰 밖으로 아무것도 나가지 않는다는 뜻은 아닙니다. 위의 분석과 오류 보고는 여전히 적용됩니다.',
         ],
         callouts: [
           {
@@ -2774,6 +2871,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '이 앱은 소스 코드가 공개되어 있지 않아 위 주장은 어느 것도 코드에서 확인할 수 없으며, PromptQuorum은 네트워크 트래픽을 감사하지 않았습니다. 기밀 데이터를 다루는 분이나 자녀 보호 기능을 설정하는 분은 본인 기기에서 동작을 직접 확인해야 합니다.',
           },
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '개발자의 말',
+        content: [
+          'MemoryAI의 개발자 Alessandro Facchini가 이 리뷰의 초안을 확인하고 아래 메모를 보내왔습니다. 개발자 본인의 말로 제시하는 것이며, PromptQuorum의 독립적인 편집 평가가 아닙니다. 같은 메시지에 담긴 결제, 데이터 흐름, 엔진, Android 버전에 관한 정정은 이 리뷰에 반영되었습니다:',
+          '"저는 자신의 말을 서버에 넘기지 않고 AI 어시스턴트를 쓰고 싶은 사람들을 위해 MemoryAI를 만들었습니다. 모델을 내려받고 나면 인터넷 연결 없이 답하며, 대화는 휴대폰에 남습니다.',
+          '이 앱을 이루는 아이디어는 두 가지입니다. 첫째는 눈으로 볼 수 있는 메모리입니다. 앱은 여러분이 말한 내용을 여러분 자신의 표현으로 기억할 수 있고, 그 메모리를 언제든 열어 고치거나 삭제할 수 있습니다. 둘째는 가족 사용입니다. 키즈 모드는 모델과 설정을 부모 PIN 뒤에 잠그고 답변을 나이에 맞게 유지합니다.',
+          '무료이며 계정과 광고가 없고 6개 언어를 지원합니다. 저는 이탈리아에서 작은 팀과 함께 개발하고 있으며, 테스터 두 명이 실제 Android 폰과 iPhone에서 새 빌드를 시험합니다. 다음 계획은 모델이 휴대폰에서 쓸 수 있는 도구(현재 테스트 중)와, Android 사용자가 이미 누리는 더 빠른 첫 답변을 iPhone에도 제공하는 것입니다."',
+        ],
+        note: '— Alessandro Facchini, 개발자',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2791,8 +2899,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**직접 사용해 본 성능.** PromptQuorum은 앱을 실행하지 않았으므로 속도, 배터리 사용량, 답변 품질, 자녀 보호 기능의 실제 강도는 평가하지 않았습니다.',
           '**소스 코드와 라이선스.** 앱은 소스 코드가 공개되어 있지 않으며, 피드백 저장소에는 README와 이슈 트래커만 있습니다.',
-          '**결제와 추적.** 개인정보 항목에서 설명했듯이 스토어 설명과 개인정보 처리방침이 서로 다릅니다.',
-          '**Android 요구 사항.** 읽은 Google Play 설명에는 최소 Android 버전이 나와 있지 않으며, iOS 최소 버전은 16.4입니다.',
+          '**분석과 네트워크 트래픽.** 앱은 소스 코드가 공개되어 있지 않고 PromptQuorum은 네트워크 트래픽을 감사하지 않았으므로, 위의 데이터 흐름은 개발자와 처리방침의 설명입니다.',
+          '**Android 요구 사항.** 개발자는 Android 9 이상이라고 밝혔으나 읽은 Google Play 설명에는 나와 있지 않으며, iOS 최소 버전은 16.4입니다.',
           '**이력.** 앱이 나온 지 약 7개월이며, Google Play 다운로드는 1K+이고 App Store 평점은 아직 없습니다. 출처에는 지원 약속이 나와 있지 않습니다.',
           '**매우 큰 모델이 필요한 분께는 맞지 않습니다.** 내려받는 모델은 작으므로, 더 무거운 작업은 컴퓨터에서 하는 편이 맞습니다.',
         ],
@@ -2844,7 +2952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '내 모델을 쓸 수 있나요?',
-            a: '예. Hugging Face의 호환 GGUF 파일을 가져와 llama.cpp 엔진에서 실행할 수 있고, Gemma 계열 모델은 LiteRT 엔진에서 실행할 수 있습니다.',
+            a: '예. Hugging Face의 호환 GGUF 파일을 가져와 llama.cpp 엔진에서 실행할 수 있고, LiteRT 엔진은 Gemma와, 개발자에 따르면 LiteRT 형식의 Qwen 2.5 1.5B, DeepSeek R1 Distill 1.5B, Phi-4 Mini도 실행합니다.',
           },
           {
             q: 'Mac에서도 작동하나요?',
@@ -2860,7 +2968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          'MemoryAI는 이용자에 관한 편집 가능한 메모리를 기기에 보관하고 자녀 보호 기능을 제공하는 무료 오프라인 모바일 채팅 앱이며, 문서·이미지 질문, 핸즈프리 음성, 두 가지 추론 엔진도 갖추고 있습니다. 또한 업데이트가 잦아서, 이 리뷰를 확인하기 하루 전에도 릴리스가 있었습니다. 반면 소스 코드가 공개되어 있지 않고, 출시된 지 얼마 되지 않았으며, 도달 범위가 작고, 모델이 작은 온디바이스 모델로 제한되며, 스토어 설명과 개인정보 처리방침이 결제와 추적에 관해 서로 다르므로 개인정보 주장을 코드에서 확인할 수 없습니다. 이 특정 기능들을 원하고 젊은 비공개 소스 앱을 감수할 수 있는 분께 맞으며, 검증 가능한 코드를 원하는 분은 [Private Mind](/ko/power-local-llm/private-mind-review)나 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)와 비교해 보시기 바랍니다.',
+          'MemoryAI는 이용자에 관한 편집 가능한 메모리를 기기에 보관하고 자녀 보호 기능을 제공하는 무료 오프라인 모바일 채팅 앱이며, 문서·이미지 질문, 핸즈프리 음성, 두 가지 추론 엔진도 갖추고 있습니다. 또한 업데이트가 잦아서, 이 리뷰를 확인하기 하루 전에도 릴리스가 있었습니다. 반면 소스 코드가 공개되어 있지 않고, 출시된 지 얼마 되지 않았으며, 도달 범위가 작고, 모델이 작은 온디바이스 모델로 제한되며, 개인정보 주장을 코드에서 확인할 수 없습니다. 이 특정 기능들을 원하고 젊은 비공개 소스 앱을 감수할 수 있는 분께 맞으며, 검증 가능한 코드를 원하는 분은 [Private Mind](/ko/power-local-llm/private-mind-review)나 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)와 비교해 보시기 바랍니다.',
       },
       sources: {
         id: 'sources',
@@ -2868,7 +2976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[App Store의 MemoryAI](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — 가격, 버전 기록, 요구 사항, 개인정보 보호 라벨, 설명. 2026년 10월 19일 확인.',
           '[Google Play의 MemoryAI](https://play.google.com/store/apps/details?id=com.ts.memoryai) — 설명, 다운로드 수, 데이터 보안 항목, 마지막 업데이트 날짜. 2026년 10월 19일 확인.',
-          '[MemoryAI 웹사이트와 개인정보 처리방침](https://alessandrofacchini.github.io/memoryai-privacy/) — 데이터 처리, 네트워크 사용, 권한, 제3자 서비스. 처리방침은 2026년 6월 30일 개정.',
+          '[MemoryAI 웹사이트와 개인정보 처리방침](https://alessandrofacchini.github.io/memoryai-privacy/) — 데이터 처리, 네트워크 사용, 권한, 제3자 서비스. 처리방침은 2026년 10월 19일 개정.',
           '[GitHub의 memoryai-feedback](https://github.com/alessandrofacchini/memoryai-feedback) — 개발자의 공개 이슈 트래커.',
         ],
       },
