@@ -6,7 +6,7 @@
 
 import fs from 'node:fs'
 
-const BASE = 'http://localhost:3055';
+const BASE = process.env.HERO_BASE || 'http://localhost:3055';
 
 // The power-local-llm hub footer states the directory's current tool count.
 // `apps-barrel.ts` is TypeScript with extensionless relative imports, which a
@@ -85,15 +85,15 @@ const HUBS = {
     ko: { title: '클라우드 없이 로컬 LLM으로', subtitle: '스마트홈 구동하기', footer: 'Home Assistant, Matter, Thread, Whisper, Piper — 25개 가이드' },
   },
   'balcony-solar': {
-    en: { title: 'Balcony Solar', subtitle: 'Kits, Rules, and No-Cloud Setups', footer: 'No installer needed — plug-in 600-800W kits, notification-only in 6+ EU countries' },
-    de: { title: 'Balcony Solar', subtitle: 'Sets, Regeln und Setups ohne Cloud', footer: 'Kein Installateur nötig — 600-800W-Sets, meldepflichtig in 6+ EU-Ländern' },
-    fr: { title: 'Balcony Solar', subtitle: 'Kits, réglementation, sans cloud', footer: "Sans installateur — kits 600-800W, notification simple dans 6+ pays de l'UE" },
-    ja: { title: 'Balcony Solar', subtitle: 'キット・ルール・クラウド不要', footer: '設置業者不要 — 600〜800Wキット、EU6カ国以上で届出制' },
-    zh: { title: 'Balcony Solar', subtitle: '套件、法规与无云端方案', footer: '无需安装工 — 600-800W插入式套件，欧盟6国以上仅需备案' },
-    es: { title: 'Balcony Solar', subtitle: 'Kits, normativa y sin nube', footer: 'Sin instalador — kits de 600-800W, solo notificación en 6+ países de la UE' },
-    pt: { title: 'Balcony Solar', subtitle: 'Kits, regras e sem nuvem', footer: 'Sem instalador — kits de 600-800W, apenas notificação em 6+ países da UE' },
-    ar: { title: 'Balcony Solar', subtitle: 'الأطقم والقواعد بلا سحابة', footer: 'دون فني تركيب — أطقم 600-800 واط، إخطار فقط في 6+ دول أوروبية' },
-    ko: { title: 'Balcony Solar', subtitle: '키트, 규정, 클라우드 없는 구성', footer: '설치업자 불필요 — 600-800W 키트, EU 6개국 이상 신고제' },
+    en: { title: 'Balcony Solar', highlights: ['No installer needed', 'Plug-in 600-800W kits', 'Notification only in 6+ EU countries'] },
+    de: { title: 'Balcony Solar', highlights: ['Kein Installateur nötig', 'Steckerfertige 600-800W-Sets', 'Nur Meldung in 6+ EU-Ländern'] },
+    fr: { title: 'Balcony Solar', highlights: ['Sans installateur', 'Kits 600-800W à brancher', 'Simple notification dans 6+ pays UE'] },
+    ja: { title: 'Balcony Solar', highlights: ['設置業者は不要', '600〜800Wのプラグインキット', 'EU6カ国以上で届出制'] },
+    zh: { title: 'Balcony Solar', highlights: ['无需安装工', '600-800W插入式套件', '欧盟6国以上仅需备案'] },
+    es: { title: 'Balcony Solar', highlights: ['Sin instalador', 'Kits enchufables 600-800W', 'Solo notificación en 6+ países UE'] },
+    pt: { title: 'Balcony Solar', highlights: ['Sem instalador', 'Kits plug-in de 600-800W', 'Só notificação em 6+ países UE'] },
+    ar: { title: 'Balcony Solar', highlights: ['دون فني تركيب', 'أطقم 600-800 واط', 'إخطار فقط في 6+ دول أوروبية'] },
+    ko: { title: 'Balcony Solar', highlights: ['설치업자 불필요', '600-800W 플러그인 키트', 'EU 6개국 이상 신고제'] },
   },
 };
 
@@ -101,19 +101,25 @@ async function generate(cluster, lang, spec) {
   const res = await fetch(`${BASE}/api/hero-image`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ lang, title: spec.title, subtitle: spec.subtitle, footer: spec.footer }),
+    body: JSON.stringify({ lang, title: spec.title, subtitle: spec.subtitle, footer: spec.footer, highlights: spec.highlights }),
   });
   if (!res.ok) throw new Error(`${cluster}/${lang}: HTTP ${res.status}`);
   const buf = Buffer.from(await res.arrayBuffer());
+  // Route returns PNG; convert to lossless WebP like scripts/convert-heroes-to-webp.mjs.
+  const { default: sharp } = await import('sharp');
   const path = `public/images/${cluster}-hub-overview-hero-${lang}.webp`;
-  await import('node:fs/promises').then(fs => fs.writeFile(path, buf));
+  await sharp(buf).webp({ lossless: true, effort: 6 }).toFile(path);
   console.log(`  ${path} (${buf.length} bytes)`);
 }
 
 (async () => {
+  const only = process.argv[2];
   for (const [cluster, locales] of Object.entries(HUBS)) {
+    if (only && cluster !== only) continue;
+    const onlyLang = process.argv[3];
     console.log(`=== ${cluster} ===`);
     for (const [lang, spec] of Object.entries(locales)) {
+      if (onlyLang && lang !== onlyLang) continue;
       await generate(cluster, lang, spec);
     }
   }
