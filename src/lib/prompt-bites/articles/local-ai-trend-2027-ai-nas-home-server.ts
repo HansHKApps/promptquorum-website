@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Shipped or announced in 2026: UGREEN iDX6011 series (local assistant), QNAP QAI-h1290FX (GPU server), Synology AI Console 2.0 and AI Runtime 1.0 (beta), Asustor Flashstor Gen3 (optional local AI)',
           'Always-on background indexing is the missing piece: Synology\'s Drive AI Search is still beta and needs supported GPU-equipped models',
-          'Memory prices work against the trend: Synology\'s neo+ series ships with 4 GB of RAM, and UGREEN paused pre-orders in March 2026 citing market conditions',
+          'Memory prices work against the trend: Synology\'s neo+ series ships with 4 GB of RAM, and forum posts report UGREEN paused pre-orders in March 2026 citing market conditions',
           'For hardware to buy today, see PromptQuorum\'s NAS buying guides — this article tracks where the category stands, not which box to buy',
         ],
         updatedDate: '2026-10',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'The July forecast is partly confirmed: UGREEN, QNAP, Synology and Asustor have each shipped or announced local AI features for NAS hardware in 2026',
           'Synology\'s on-device models (AI Console 2.0, AI Runtime 1.0, Drive AI Search) have been in beta since June 22, 2026 and need supported GPU-equipped models',
-          'UGREEN\'s iDX6011 series runs a local assistant that ships switched off by default; one reviewer called the AI layer the least mature part of the product',
+          'UGREEN\'s iDX6011 series runs a local assistant that ships switched off by default; NAS Compares\' review called the AI layer the least mature part of the product',
           'QNAP\'s QAI-h1290FX (announced April 30, 2026) is a GPU server for small offices, not a home NAS, and the press release gives no price',
           'Memory prices are squeezing NAS specs and prices, and continuous background indexing is still not a stable, mainstream feature',
         ],
@@ -90,8 +90,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'memory-price-squeeze',
         title: 'How Are Memory Prices Affecting AI NAS Hardware?',
         content: [
-          '<strong>Rising memory prices are pushing NAS hardware the opposite way from the cheaper AI headroom this trend assumed.</strong> Synology\'s neo+ series, launched on August 7, 2026 according to <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>, ships with 4 GB of non-ECC DDR4 instead of the 8 GB of ECC memory typically fitted to its DS Plus models, and Synology said the line reinforces its commitment to accessibility as memory market dynamics shift. UGREEN paused pre-orders for the iDX6011 series on March 11, 2026 citing current market conditions (<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase</a>); it did not name memory prices, and a related ComputerBase thread dated April 10, 2026 reports that UGREEN raised production and resumed taking orders. <a href="https://technews.tw/?p=1622115">TrendForce\'s 4Q26 outlook</a>, as reported on September 30, 2026, expects conventional DRAM contract prices to rise another 10–15% quarter over quarter.',
-          'Pricing for the UGREEN iDX6011 Pro 64 GB has moved a lot, but the cause is not confirmed. Pre-sale pricing was $1,559 (super early bird) against a suggested retail price of $2,599, per NAS Compares. UGREEN\'s <a href="https://ai.ugreen.com/collections/all">US store</a> now lists the Pro at $5,999.99, the 64 GB base model at $3,599.99 and the 32 GB model at $2,349.99, in listings labeled with a 208 TB drive configuration, so they may include drives and are not like-for-like with the earlier prices. <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a> reported on September 23, 2026 that UGREEN France sells the Pro at €5,999.99 without drives. We could not confirm why the price changed. Because the Pro\'s 64 GB of memory is soldered, you cannot add RAM later.',
+          '<strong>Rising memory prices are pushing NAS hardware the opposite way from the cheaper AI headroom this trend assumed.</strong> Synology\'s neo+ series, launched on August 7, 2026 according to <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>, ships with 4 GB of non-ECC DDR4, and Synology said the line reinforces its commitment to accessibility as memory market dynamics shift. UGREEN paused pre-orders for the iDX6011 series on March 11, 2026 citing current market conditions (<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase forum thread</a>); it did not name memory prices, and forum posts in a related ComputerBase thread dated April 10, 2026 report that UGREEN raised production and resumed taking orders. <a href="https://www.trendforce.com/presscenter/news/20260930-13258.html">TrendForce\'s 4Q26 outlook</a>, as reported on September 30, 2026, expects conventional DRAM contract prices to rise another 10–15% quarter over quarter.',
+          'Pricing for the UGREEN iDX6011 Pro 64 GB has moved a lot, but the cause is not confirmed. Pre-sale pricing was $1,559 (super early bird) against a suggested retail price of $2,599, per NAS Compares. <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a> reported on September 23, 2026 that UGREEN France sells the Pro at €5,999.99 without drives. We could not confirm why the price changed. Because the Pro\'s 64 GB of memory is soldered, you cannot add RAM later.',
         ],
       },
       hardwareTodayVsTomorrow: {
@@ -169,7 +169,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '2026 ausgeliefert oder angekündigt: UGREEN iDX6011-Serie (lokaler Assistent), QNAP QAI-h1290FX (GPU-Server), Synology AI Console 2.0 und AI Runtime 1.0 (Beta), Asustor Flashstor Gen3 (optionale lokale KI)',
           'Das fehlende Stück ist die ständige Hintergrund-Indexierung: Synologys KI-Suche für Drive ist noch Beta und braucht unterstützte Modelle mit GPU',
-          'Speicherpreise wirken gegen den Trend: Synologys neo+-Serie kommt mit 4 GB RAM, und UGREEN setzte die Vorbestellungen im März 2026 mit Verweis auf die Marktlage aus',
+          'Speicherpreise wirken gegen den Trend: Synologys neo+-Serie kommt mit 4 GB RAM, und laut Forenbeiträgen setzte UGREEN die Vorbestellungen im März 2026 mit Verweis auf die Marktlage aus',
           'Für Hardware, die Sie heute kaufen sollten, siehe die NAS-Kaufratgeber von PromptQuorum — dieser Artikel zeigt den Stand der Kategorie, nicht welche Box zu kaufen ist',
         ],
         updatedDate: '2026-10',
@@ -182,7 +182,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'Die Prognose vom Juli trifft teilweise zu: UGREEN, QNAP, Synology und Asustor haben 2026 jeweils lokale KI-Funktionen für NAS-Hardware ausgeliefert oder angekündigt',
           'Synologys KI-Modelle für den Betrieb auf dem Gerät (AI Console 2.0, AI Runtime 1.0, KI-Suche in Drive) sind seit dem 22. Juni 2026 in der Beta und brauchen unterstützte Modelle mit GPU',
-          'UGREENs iDX6011-Serie führt einen lokalen Assistenten aus, der standardmäßig ausgeschaltet ausgeliefert wird; ein Tester nannte die KI-Ebene den am wenigsten ausgereiften Teil des Produkts',
+          'UGREENs iDX6011-Serie führt einen lokalen Assistenten aus, der standardmäßig ausgeschaltet ausgeliefert wird; die Rezension von NAS Compares nannte die KI-Ebene den am wenigsten ausgereiften Teil des Produkts',
           'QNAPs QAI-h1290FX (angekündigt am 30. April 2026) ist ein GPU-Server für kleine Büros, kein Heim-NAS, und die Pressemitteilung nennt keinen Preis',
           'Speicherpreise setzen NAS-Ausstattung und -Preise unter Druck, und kontinuierliche Hintergrund-Indexierung ist weiterhin kein stabiles Standardfeature',
         ],
@@ -222,8 +222,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'memory-price-squeeze',
         title: 'Wie wirken sich Speicherpreise auf KI-NAS-Hardware aus?',
         content: [
-          '<strong>Steigende Speicherpreise schieben NAS-Hardware in die entgegengesetzte Richtung zu der günstigeren KI-Reserve, die dieser Trend vorausgesetzt hat.</strong> Synologys neo+-Serie, laut <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a> am 7. August 2026 vorgestellt, kommt mit 4 GB Non-ECC-DDR4 statt der 8 GB ECC-Speicher, die in den DS-Plus-Modellen üblich sind; Synology erklärte, die Serie unterstreiche angesichts der Marktdynamik beim Speicher den Anspruch auf Zugänglichkeit. UGREEN setzte die Vorbestellungen für die iDX6011-Serie am 11. März 2026 mit Verweis auf die aktuelle Marktlage aus (<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase</a>); Speicherpreise nannte das Unternehmen nicht, und ein verwandter ComputerBase-Thread vom 10. April 2026 berichtet, UGREEN habe die Produktion erhöht und nehme wieder Bestellungen an. <a href="https://technews.tw/?p=1622115">TrendForces Ausblick für das 4. Quartal 2026</a> erwartet laut Bericht vom 30. September 2026, dass die DRAM-Vertragspreise für Standardspeicher gegenüber dem Vorquartal um weitere 10–15 % steigen.',
-          'Die Preise für das UGREEN iDX6011 Pro mit 64 GB haben sich stark bewegt, die Ursache ist aber nicht bestätigt. Für Anzahlungs-Inhaber lag der Vorverkaufspreis laut ComputerBase bei 1.559 € (Super Early Bird; NAS Compares nennt 1.559 US-Dollar), bei einer unverbindlichen Preisempfehlung von rund 2.599 €. <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a> berichtete am 23. September 2026, dass UGREEN Frankreich das Pro-Modell für 5.999,99 € ohne Festplatten verkauft; das 64-GB-Basismodell steht dort bei 3.599,99 €, das 32-GB-Modell bei 2.349,99 €. Im <a href="https://ai.ugreen.com/collections/all">US-Shop</a> von UGREEN stehen dieselben Zahlen in US-Dollar, aber mit der Angabe einer 208-TB-Laufwerkskonfiguration, sodass die Angebote Laufwerke enthalten könnten. Warum sich der Preis geändert hat, konnten wir nicht bestätigen. Weil die 64 GB Speicher des Pro-Modells aufgelötet sind, lässt sich später kein RAM nachrüsten.',
+          '<strong>Steigende Speicherpreise schieben NAS-Hardware in die entgegengesetzte Richtung zu der günstigeren KI-Reserve, die dieser Trend vorausgesetzt hat.</strong> Synologys neo+-Serie, laut <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a> am 7. August 2026 vorgestellt, kommt mit 4 GB Non-ECC-DDR4; Synology erklärte, die Serie unterstreiche angesichts der Marktdynamik beim Speicher den Anspruch auf Zugänglichkeit. UGREEN setzte die Vorbestellungen für die iDX6011-Serie am 11. März 2026 mit Verweis auf die aktuelle Marktlage aus (<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase forum thread</a>); Speicherpreise nannte das Unternehmen nicht, und Forenbeiträge in einem verwandten ComputerBase-Thread vom 10. April 2026 berichten, UGREEN habe die Produktion erhöht und nehme wieder Bestellungen an. <a href="https://www.trendforce.com/presscenter/news/20260930-13258.html">TrendForces Ausblick für das 4. Quartal 2026</a> erwartet laut Bericht vom 30. September 2026, dass die DRAM-Vertragspreise für Standardspeicher gegenüber dem Vorquartal um weitere 10–15 % steigen.',
+          'Die Preise für das UGREEN iDX6011 Pro mit 64 GB haben sich stark bewegt, die Ursache ist aber nicht bestätigt. Für Anzahlungs-Inhaber lag der Vorverkaufspreis laut ComputerBase bei 1.559 € (Super Early Bird; NAS Compares nennt 1.559 US-Dollar), bei einer unverbindlichen Preisempfehlung von rund 2.599 €. <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a> berichtete am 23. September 2026, dass UGREEN Frankreich das Pro-Modell für 5.999,99 € ohne Festplatten verkauft. Warum sich der Preis geändert hat, konnten wir nicht bestätigen. Weil die 64 GB Speicher des Pro-Modells aufgelötet sind, lässt sich später kein RAM nachrüsten.',
         ],
       },
       hardwareTodayVsTomorrow: {
@@ -301,7 +301,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Lancé ou annoncé en 2026 : série UGREEN iDX6011 (assistant local), QNAP QAI-h1290FX (serveur GPU), Synology AI Console 2.0 et AI Runtime 1.0 (bêta), Asustor Flashstor Gen3 (IA locale optionnelle)',
           'L\'indexation permanente en arrière-plan reste la pièce manquante : la recherche IA de Synology Drive est encore en bêta et exige des modèles compatibles avec GPU',
-          'Les prix de la mémoire vont à contre-courant : la série neo+ de Synology arrive avec 4 Go de RAM, et UGREEN a suspendu les précommandes en mars 2026 en invoquant l\'état du marché',
+          'Les prix de la mémoire vont à contre-courant : la série neo+ de Synology arrive avec 4 Go de RAM, et, selon des messages de forum, UGREEN a suspendu les précommandes en mars 2026 en invoquant l\'état du marché',
           'Pour le matériel à acheter aujourd\'hui, voir les guides d\'achat NAS de PromptQuorum — cet article fait le point sur la catégorie, pas sur quel boîtier acheter',
         ],
         updatedDate: '2026-10',
@@ -314,7 +314,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'La prévision de juillet est en partie confirmée : UGREEN, QNAP, Synology et Asustor ont chacun lancé ou annoncé en 2026 des fonctions d\'IA locale pour le matériel NAS',
           'Les modèles exécutés sur l\'appareil par Synology (AI Console 2.0, AI Runtime 1.0, recherche IA de Drive) sont en bêta depuis le 22 juin 2026 et exigent des modèles compatibles avec GPU',
-          'La série iDX6011 d\'UGREEN exécute un assistant local livré désactivé par défaut ; un testeur a jugé la couche IA la partie la moins aboutie du produit',
+          'La série iDX6011 d\'UGREEN exécute un assistant local livré désactivé par défaut ; le test de NAS Compares a jugé la couche IA la partie la moins aboutie du produit',
           'Le QAI-h1290FX de QNAP (annoncé le 30 avril 2026) est un serveur GPU pour petites structures, pas un NAS domestique, et le communiqué n\'indique aucun prix',
           'Les prix de la mémoire pèsent sur les configurations et les tarifs des NAS, et l\'indexation continue en arrière-plan n\'est toujours pas une fonction stable et grand public',
         ],
@@ -354,8 +354,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'memory-price-squeeze',
         title: 'Comment les prix de la mémoire affectent-ils le matériel NAS pour l\'IA ?',
         content: [
-          '<strong>La hausse des prix de la mémoire pousse le matériel NAS dans le sens inverse de la marge IA moins chère que supposait cette tendance.</strong> La série neo+ de Synology, lancée le 7 août 2026 selon <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>, arrive avec 4 Go de DDR4 sans ECC au lieu des 8 Go de mémoire ECC généralement montés sur ses modèles DS Plus ; Synology a déclaré que la gamme renforçait son engagement en faveur de l\'accessibilité alors que le marché de la mémoire évolue. UGREEN a suspendu les précommandes de la série iDX6011 le 11 mars 2026 en invoquant l\'état actuel du marché (<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase</a>) ; l\'entreprise n\'a pas cité les prix de la mémoire, et un fil ComputerBase connexe daté du 10 avril 2026 indique qu\'UGREEN a augmenté sa production et reprend les commandes. <a href="https://technews.tw/?p=1622115">Les prévisions de TrendForce pour le 4e trimestre 2026</a>, rapportées le 30 septembre 2026, attendent une nouvelle hausse de 10 à 15 % d\'un trimestre à l\'autre des prix contractuels de la DRAM conventionnelle.',
-          'Le prix de l\'UGREEN iDX6011 Pro 64 Go a beaucoup bougé, mais la cause n\'est pas confirmée. Pour les déposants, le prix de prévente était de 1 559 € selon ComputerBase (Super Early Bird ; NAS Compares indique 1 559 dollars américains), pour un prix public conseillé d\'environ 2 599 €. <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a> a rapporté le 23 septembre 2026 qu\'UGREEN France vend le Pro 5 999,99 € sans disques ; le modèle de base 64 Go y est à 3 599,99 € et le 32 Go à 2 349,99 €. La <a href="https://ai.ugreen.com/collections/all">boutique américaine</a> d\'UGREEN affiche les mêmes chiffres en dollars, mais avec une configuration de disques de 208 To, si bien que ces offres pourraient inclure des disques. Nous n\'avons pas pu confirmer pourquoi le prix a changé. La mémoire de 64 Go du Pro étant soudée, vous ne pourrez pas ajouter de RAM plus tard.',
+          '<strong>La hausse des prix de la mémoire pousse le matériel NAS dans le sens inverse de la marge IA moins chère que supposait cette tendance.</strong> La série neo+ de Synology, lancée le 7 août 2026 selon <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>, arrive avec 4 Go de DDR4 sans ECC ; Synology a déclaré que la gamme renforçait son engagement en faveur de l\'accessibilité alors que le marché de la mémoire évolue. UGREEN a suspendu les précommandes de la série iDX6011 le 11 mars 2026 en invoquant l\'état actuel du marché (<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase forum thread</a>) ; l\'entreprise n\'a pas cité les prix de la mémoire, et des messages d\'un fil ComputerBase connexe daté du 10 avril 2026 indiquent qu\'UGREEN a augmenté sa production et reprend les commandes. <a href="https://www.trendforce.com/presscenter/news/20260930-13258.html">Les prévisions de TrendForce pour le 4e trimestre 2026</a>, rapportées le 30 septembre 2026, attendent une nouvelle hausse de 10 à 15 % d\'un trimestre à l\'autre des prix contractuels de la DRAM conventionnelle.',
+          'Le prix de l\'UGREEN iDX6011 Pro 64 Go a beaucoup bougé, mais la cause n\'est pas confirmée. Pour les déposants, le prix de prévente était de 1 559 € selon ComputerBase (Super Early Bird ; NAS Compares indique 1 559 dollars américains), pour un prix public conseillé d\'environ 2 599 €. <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a> a rapporté le 23 septembre 2026 qu\'UGREEN France vend le Pro 5 999,99 € sans disques. Nous n\'avons pas pu confirmer pourquoi le prix a changé. La mémoire de 64 Go du Pro étant soudée, vous ne pourrez pas ajouter de RAM plus tard.',
         ],
       },
       hardwareTodayVsTomorrow: {
@@ -433,7 +433,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '2026年に投入・発表されたもの:UGREEN iDX6011シリーズ(ローカルアシスタント)、QNAP QAI-h1290FX(GPUサーバー)、Synology AI Console 2.0とAI Runtime 1.0(ベータ)、Asustor Flashstor Gen3(オプションのローカルAI)',
           '欠けているのは常時稼働のバックグラウンド・インデックス作成です。SynologyのDrive向けAI検索はまだベータで、対応するGPU搭載モデルが必要です',
-          'メモリ価格はトレンドに逆行しています。Synologyのneo+シリーズは4 GBのRAMで出荷され、UGREENは2026年3月に市場状況を理由に予約受付を一時停止しました',
+          'メモリ価格はトレンドに逆行しています。Synologyのneo+シリーズは4 GBのRAMで出荷され、フォーラムの投稿によると、UGREENは2026年3月に市場状況を理由に予約受付を一時停止しました',
           '今購入するハードウェアについてはPromptQuorumのNAS購入ガイドを参照してください。この記事はカテゴリの現状を扱い、どの機種を買うべきかは扱いません',
         ],
         updatedDate: '2026-10',
@@ -446,7 +446,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '7月の予測は一部が裏付けられました。UGREEN、QNAP、Synology、Asustorはいずれも2026年にNASハードウェア向けのローカルAI機能を投入または発表しています',
           'Synologyのデバイス上のAIモデル(AI Console 2.0、AI Runtime 1.0、DriveのAI検索)は2026年6月22日からベータ版で、対応するGPU搭載モデルが必要です',
-          'UGREENのiDX6011シリーズはローカルアシスタントを搭載していますが、初期状態ではオフです。あるレビュアーはAI層を製品の中で最も成熟度が低い部分と評価しました',
+          'UGREENのiDX6011シリーズはローカルアシスタントを搭載していますが、初期状態ではオフです。NAS Comparesのレビューは、AI層を製品の中で最も成熟度が低い部分と評価しました',
           'QNAPのQAI-h1290FX(2026年4月30日発表)は小規模オフィス向けのGPUサーバーで、家庭用NASではなく、プレスリリースに価格の記載はありません',
           'メモリ価格がNASの仕様と価格を圧迫しており、継続的なバックグラウンド・インデックス作成は依然として安定した主流機能ではありません',
         ],
@@ -486,8 +486,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'memory-price-squeeze',
         title: 'メモリ価格はAI向けNASハードウェアにどう影響していますか?',
         content: [
-          '<strong>メモリ価格の上昇は、このトレンドが前提としていた「AI用の余力が安くなる」方向とは逆に、NASハードウェアを動かしています。</strong><a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>によると2026年8月7日に発売されたSynologyのneo+シリーズは、DS Plusモデルに通常搭載される8 GBのECCメモリではなく、4 GBの非ECC DDR4で出荷されます。Synologyは、メモリ市場の動向が変わる中でこのシリーズはアクセシビリティへの取り組みを強化するものだと述べています。UGREENは2026年3月11日、現在の市場状況を理由にiDX6011シリーズの予約受付を一時停止しました(<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase</a>)。メモリ価格には言及しておらず、2026年4月10日付のComputerBase関連スレッドは、UGREENが生産を増やして受注を再開したと伝えています。<a href="https://technews.tw/?p=1622115">TrendForceの2026年第4四半期見通し</a>(2026年9月30日に報道)は、汎用DRAMの契約価格がさらに前四半期比10~15%上昇すると予想しています。',
-          'UGREEN iDX6011 Pro 64 GBの価格は大きく動きましたが、原因は確認できていません。NAS Comparesによると、予約販売価格は1,559ドル(スーパーアーリーバード)、希望小売価格は2,599ドルでした。UGREENの<a href="https://ai.ugreen.com/collections/all">米国ストア</a>には現在、Proが5,999.99ドル、64 GBの基本モデルが3,599.99ドル、32 GBモデルが2,349.99ドルで掲載されていますが、いずれも208 TBのドライブ構成が表記されたリストであり、ドライブを含む可能性があるため、以前の価格と同じ条件の比較にはなりません。<a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a>は2026年9月23日、UGREENフランスがProをドライブなしで5,999.99ユーロで販売していると報じました。価格が変わった理由は確認できませんでした。日本での価格は異なる場合があります。ProのメモリはLPDDR5X 64 GBが基板に直付けされているため、後からRAMを増設することはできません。',
+          '<strong>メモリ価格の上昇は、このトレンドが前提としていた「AI用の余力が安くなる」方向とは逆に、NASハードウェアを動かしています。</strong><a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>によると2026年8月7日に発売されたSynologyのneo+シリーズは、4 GBの非ECC DDR4で出荷されます。Synologyは、メモリ市場の動向が変わる中でこのシリーズはアクセシビリティへの取り組みを強化するものだと述べています。UGREENは2026年3月11日、現在の市場状況を理由にiDX6011シリーズの予約受付を一時停止しました(<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase forum thread</a>)。メモリ価格には言及しておらず、2026年4月10日付のComputerBase関連スレッドの投稿は、UGREENが生産を増やして受注を再開したと伝えています。<a href="https://www.trendforce.com/presscenter/news/20260930-13258.html">TrendForceの2026年第4四半期見通し</a>(2026年9月30日に報道)は、汎用DRAMの契約価格がさらに前四半期比10~15%上昇すると予想しています。',
+          'UGREEN iDX6011 Pro 64 GBの価格は大きく動きましたが、原因は確認できていません。NAS Comparesによると、予約販売価格は1,559ドル(スーパーアーリーバード)、希望小売価格は2,599ドルでした。<a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a>は2026年9月23日、UGREENフランスがProをドライブなしで5,999.99ユーロで販売していると報じました。価格が変わった理由は確認できませんでした。日本での価格は異なる場合があります。ProのメモリはLPDDR5X 64 GBが基板に直付けされているため、後からRAMを増設することはできません。',
         ],
       },
       hardwareTodayVsTomorrow: {
@@ -565,7 +565,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '2026年已推出或发布:UGREEN iDX6011系列(本地助手)、QNAP QAI-h1290FX(GPU服务器)、Synology AI Console 2.0和AI Runtime 1.0(测试版)、Asustor Flashstor Gen3(可选本地AI)',
           '缺少的一环是后台持续索引:Synology的Drive AI搜索仍是测试版,并且需要受支持的配备GPU的型号',
-          '内存价格与趋势背道而驰:Synology的neo+系列仅配备4 GB内存,UGREEN也在2026年3月以市场状况为由暂停了预订',
+          '内存价格与趋势背道而驰:Synology的neo+系列仅配备4 GB内存,据论坛帖子称,UGREEN也在2026年3月以市场状况为由暂停了预订',
           '想了解现在该买什么硬件,请参阅PromptQuorum的NAS选购指南——本文跟踪的是品类现状,而不是该买哪一台',
         ],
         updatedDate: '2026-10',
@@ -578,7 +578,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '7月的预测得到部分印证:UGREEN、QNAP、Synology和Asustor在2026年都已推出或发布了面向NAS硬件的本地AI功能',
           'Synology在设备上运行的模型(AI Console 2.0、AI Runtime 1.0、Drive的AI搜索)自2026年6月22日起处于测试阶段,需要受支持的配备GPU的型号',
-          'UGREEN的iDX6011系列运行本地助手,但出厂时默认关闭;一位评测者称AI层是该产品中最不成熟的部分',
+          'UGREEN的iDX6011系列运行本地助手,但出厂时默认关闭;NAS Compares的评测称AI层是该产品中最不成熟的部分',
           'QNAP的QAI-h1290FX(2026年4月30日发布)是面向小型办公室的GPU服务器,不是家用NAS,新闻稿也没有给出价格',
           '内存价格正在挤压NAS的配置与价格,而后台持续索引仍不是稳定的主流功能',
         ],
@@ -618,8 +618,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'memory-price-squeeze',
         title: '内存价格如何影响AI NAS硬件?',
         content: [
-          '<strong>内存价格上涨正把NAS硬件推向与这一趋势所假设的“AI余量变得更便宜”相反的方向。</strong>据<a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>报道,Synology的neo+系列于2026年8月7日发布,配备4 GB非ECC DDR4内存,而不是其DS Plus机型通常配备的8 GB ECC内存;Synology表示,在内存市场动态变化之际,该系列强化了其普及化承诺。UGREEN于2026年3月11日以当前市场状况为由暂停了iDX6011系列的预订(<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase</a>);它没有提及内存价格,ComputerBase在2026年4月10日的相关帖子称UGREEN已提高产量并重新接受订单。<a href="https://technews.tw/?p=1622115">TrendForce对2026年第四季度的展望</a>(2026年9月30日的报道)预计常规DRAM合约价格将再环比上涨10%至15%。',
-          'UGREEN iDX6011 Pro 64 GB的价格变化很大,但原因尚未得到确认。据NAS Compares,预售价为1,559美元(超级早鸟价),建议零售价为2,599美元。UGREEN的<a href="https://ai.ugreen.com/collections/all">美国商店</a>目前将Pro列为5,999.99美元,64 GB基础型号为3,599.99美元,32 GB型号为2,349.99美元,但这些条目标注的是208 TB硬盘配置,可能包含硬盘,因此与之前的价格不具可比性。<a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a>在2026年9月23日报道称,UGREEN法国站以不含硬盘的方式销售Pro,价格为5,999.99欧元。我们无法确认价格变化的原因。由于Pro的64 GB内存是焊接的,之后无法再增加内存。',
+          '<strong>内存价格上涨正把NAS硬件推向与这一趋势所假设的“AI余量变得更便宜”相反的方向。</strong>据<a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>报道,Synology的neo+系列于2026年8月7日发布,配备4 GB非ECC DDR4内存;Synology表示,在内存市场动态变化之际,该系列强化了其普及化承诺。UGREEN于2026年3月11日以当前市场状况为由暂停了iDX6011系列的预订(<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase forum thread</a>);它没有提及内存价格,ComputerBase在2026年4月10日的相关论坛帖子称UGREEN已提高产量并重新接受订单。<a href="https://www.trendforce.com/presscenter/news/20260930-13258.html">TrendForce对2026年第四季度的展望</a>(2026年9月30日的报道)预计常规DRAM合约价格将再环比上涨10%至15%。',
+          'UGREEN iDX6011 Pro 64 GB的价格变化很大,但原因尚未得到确认。据NAS Compares,预售价为1,559美元(超级早鸟价),建议零售价为2,599美元。<a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a>在2026年9月23日报道称,UGREEN法国站以不含硬盘的方式销售Pro,价格为5,999.99欧元。我们无法确认价格变化的原因。由于Pro的64 GB内存是焊接的,之后无法再增加内存。',
         ],
       },
       hardwareTodayVsTomorrow: {
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Lanzado o anunciado en 2026: serie UGREEN iDX6011 (asistente local), QNAP QAI-h1290FX (servidor con GPU), Synology AI Console 2.0 y AI Runtime 1.0 (beta), Asustor Flashstor Gen3 (IA local opcional)',
           'La pieza que falta es la indexación continua en segundo plano: la búsqueda con IA de Synology Drive sigue en beta y requiere modelos compatibles con GPU',
-          'Los precios de la memoria van en contra de la tendencia: la serie neo+ de Synology incluye 4 GB de RAM, y UGREEN pausó las reservas en marzo de 2026 alegando la situación del mercado',
+          'Los precios de la memoria van en contra de la tendencia: la serie neo+ de Synology incluye 4 GB de RAM, y, según mensajes de foro, UGREEN pausó las reservas en marzo de 2026 alegando la situación del mercado',
           'Para el hardware que puedes comprar hoy, consulta las guías de compra de NAS de PromptQuorum — este artículo sigue el estado de la categoría, no qué equipo comprar',
         ],
         updatedDate: '2026-10',
@@ -710,7 +710,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'La previsión de julio se confirma en parte: UGREEN, QNAP, Synology y Asustor han lanzado o anunciado en 2026 funciones de IA local para hardware NAS',
           'Los modelos de Synology que se ejecutan en el equipo (AI Console 2.0, AI Runtime 1.0, búsqueda con IA en Drive) están en beta desde el 22 de junio de 2026 y requieren modelos compatibles con GPU',
-          'La serie iDX6011 de UGREEN ejecuta un asistente local que se entrega desactivado por defecto; un analista calificó la capa de IA como la parte menos madura del producto',
+          'La serie iDX6011 de UGREEN ejecuta un asistente local que se entrega desactivado por defecto; la reseña de NAS Compares calificó la capa de IA como la parte menos madura del producto',
           'El QAI-h1290FX de QNAP (anunciado el 30 de abril de 2026) es un servidor con GPU para oficinas pequeñas, no un NAS doméstico, y el comunicado no indica precio',
           'Los precios de la memoria presionan las configuraciones y los precios de los NAS, y la indexación continua en segundo plano sigue sin ser una función estable y generalizada',
         ],
@@ -750,8 +750,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'memory-price-squeeze',
         title: '¿Cómo afectan los precios de la memoria al hardware NAS para IA?',
         content: [
-          '<strong>La subida de los precios de la memoria empuja el hardware NAS en sentido contrario al margen de IA más barato que suponía esta tendencia.</strong> La serie neo+ de Synology, lanzada el 7 de agosto de 2026 según <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>, incluye 4 GB de DDR4 sin ECC en lugar de los 8 GB de memoria ECC que suelen llevar sus modelos DS Plus; Synology afirmó que la serie refuerza su compromiso con la accesibilidad a medida que cambia el mercado de la memoria. UGREEN pausó las reservas de la serie iDX6011 el 11 de marzo de 2026 alegando las condiciones actuales del mercado (<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase</a>); no mencionó los precios de la memoria, y un hilo relacionado de ComputerBase del 10 de abril de 2026 indica que UGREEN aumentó la producción y volvió a aceptar pedidos. <a href="https://technews.tw/?p=1622115">La previsión de TrendForce para el cuarto trimestre de 2026</a>, según se informó el 30 de septiembre de 2026, espera que los precios contractuales de la DRAM convencional suban otro 10–15 % trimestral.',
-          'El precio del UGREEN iDX6011 Pro de 64 GB se ha movido mucho, pero la causa no está confirmada. Según NAS Compares, la preventa costaba $1,559 (super early bird) frente a un precio recomendado de $2,599. La <a href="https://ai.ugreen.com/collections/all">tienda de EE. UU.</a> de UGREEN lista ahora el Pro a $5,999.99, el modelo base de 64 GB a $3,599.99 y el de 32 GB a $2,349.99, en fichas con una configuración de discos de 208 TB, por lo que podrían incluir discos y no son comparables con los precios anteriores. <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a> informó el 23 de septiembre de 2026 de que UGREEN Francia vende el Pro a 5.999,99 € sin discos. No pudimos confirmar por qué cambió el precio. Como los 64 GB de memoria del Pro están soldados, no podrás añadir RAM después.',
+          '<strong>La subida de los precios de la memoria empuja el hardware NAS en sentido contrario al margen de IA más barato que suponía esta tendencia.</strong> La serie neo+ de Synology, lanzada el 7 de agosto de 2026 según <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>, incluye 4 GB de DDR4 sin ECC; Synology afirmó que la serie refuerza su compromiso con la accesibilidad a medida que cambia el mercado de la memoria. UGREEN pausó las reservas de la serie iDX6011 el 11 de marzo de 2026 alegando las condiciones actuales del mercado (<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase forum thread</a>); no mencionó los precios de la memoria, y mensajes de un hilo relacionado del foro de ComputerBase del 10 de abril de 2026 indican que UGREEN aumentó la producción y volvió a aceptar pedidos. <a href="https://www.trendforce.com/presscenter/news/20260930-13258.html">La previsión de TrendForce para el cuarto trimestre de 2026</a>, según se informó el 30 de septiembre de 2026, espera que los precios contractuales de la DRAM convencional suban otro 10–15 % trimestral.',
+          'El precio del UGREEN iDX6011 Pro de 64 GB se ha movido mucho, pero la causa no está confirmada. Según NAS Compares, la preventa costaba $1,559 (super early bird) frente a un precio recomendado de $2,599. <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a> informó el 23 de septiembre de 2026 de que UGREEN Francia vende el Pro a 5.999,99 € sin discos. No pudimos confirmar por qué cambió el precio. Como los 64 GB de memoria del Pro están soldados, no podrás añadir RAM después.',
         ],
       },
       hardwareTodayVsTomorrow: {
@@ -829,7 +829,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Lançado ou anunciado em 2026: série UGREEN iDX6011 (assistente local), QNAP QAI-h1290FX (servidor com GPU), Synology AI Console 2.0 e AI Runtime 1.0 (beta), Asustor Flashstor Gen3 (IA local opcional)',
           'A peça que falta é a indexação contínua em segundo plano: a busca com IA do Synology Drive ainda está em beta e exige modelos compatíveis com GPU',
-          'Os preços da memória andam contra a tendência: a série neo+ da Synology vem com 4 GB de RAM, e a UGREEN pausou as pré-vendas em março de 2026 citando as condições de mercado',
+          'Os preços da memória andam contra a tendência: a série neo+ da Synology vem com 4 GB de RAM, e, segundo postagens de fórum, a UGREEN pausou as pré-vendas em março de 2026 citando as condições de mercado',
           'Para o hardware que você pode comprar hoje, veja os guias de compra de NAS da PromptQuorum — este artigo acompanha o estado da categoria, não qual equipamento comprar',
         ],
         updatedDate: '2026-10',
@@ -842,7 +842,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'A previsão de julho se confirma em parte: UGREEN, QNAP, Synology e Asustor lançaram ou anunciaram em 2026 recursos de IA local para hardware de NAS',
           'Os modelos da Synology executados no equipamento (AI Console 2.0, AI Runtime 1.0, busca com IA no Drive) estão em beta desde 22 de junho de 2026 e exigem modelos compatíveis com GPU',
-          'A série iDX6011 da UGREEN executa um assistente local que vem desativado por padrão; um analista chamou a camada de IA de a parte menos madura do produto',
+          'A série iDX6011 da UGREEN executa um assistente local que vem desativado por padrão; a análise da NAS Compares chamou a camada de IA de a parte menos madura do produto',
           'O QAI-h1290FX da QNAP (anunciado em 30 de abril de 2026) é um servidor com GPU para escritórios pequenos, não um NAS doméstico, e o comunicado não informa preço',
           'Os preços da memória pressionam as configurações e os preços dos NAS, e a indexação contínua em segundo plano ainda não é um recurso estável e popular',
         ],
@@ -882,8 +882,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'memory-price-squeeze',
         title: 'Como os preços da memória afetam o hardware de NAS para IA?',
         content: [
-          '<strong>A alta dos preços da memória empurra o hardware de NAS no sentido oposto ao da folga de IA mais barata que essa tendência pressupunha.</strong> A série neo+ da Synology, lançada em 7 de agosto de 2026 segundo o <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>, vem com 4 GB de DDR4 sem ECC em vez dos 8 GB de memória ECC normalmente usados nos modelos DS Plus; a Synology disse que a série reforça seu compromisso com a acessibilidade em meio às mudanças do mercado de memória. A UGREEN pausou as pré-vendas da série iDX6011 em 11 de março de 2026 citando as condições atuais do mercado (<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase</a>); a empresa não citou os preços da memória, e um tópico relacionado do ComputerBase de 10 de abril de 2026 informa que a UGREEN aumentou a produção e voltou a aceitar pedidos. <a href="https://technews.tw/?p=1622115">A previsão da TrendForce para o quarto trimestre de 2026</a>, segundo reportagem de 30 de setembro de 2026, espera que os preços contratuais da DRAM convencional subam mais 10–15 % em relação ao trimestre anterior.',
-          'O preço do UGREEN iDX6011 Pro de 64 GB mudou muito, mas a causa não está confirmada. Segundo a NAS Compares, a pré-venda custava US$ 1.559 (super early bird) para um preço sugerido de US$ 2.599. A <a href="https://ai.ugreen.com/collections/all">loja dos EUA</a> da UGREEN agora lista o Pro por US$ 5.999,99, o modelo base de 64 GB por US$ 3.599,99 e o de 32 GB por US$ 2.349,99, em fichas com uma configuração de discos de 208 TB, então podem incluir discos e não são comparáveis aos preços anteriores. O <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a> informou em 23 de setembro de 2026 que a UGREEN França vende o Pro por 5.999,99 € sem discos. Não conseguimos confirmar por que o preço mudou. Os preços no Brasil podem variar bastante devido a impostos de importação. Como os 64 GB de memória do Pro são soldados, não é possível adicionar RAM depois.',
+          '<strong>A alta dos preços da memória empurra o hardware de NAS no sentido oposto ao da folga de IA mais barata que essa tendência pressupunha.</strong> A série neo+ da Synology, lançada em 7 de agosto de 2026 segundo o <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>, vem com 4 GB de DDR4 sem ECC; a Synology disse que a série reforça seu compromisso com a acessibilidade em meio às mudanças do mercado de memória. A UGREEN pausou as pré-vendas da série iDX6011 em 11 de março de 2026 citando as condições atuais do mercado (<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase forum thread</a>); a empresa não citou os preços da memória, e postagens de um tópico relacionado do fórum do ComputerBase de 10 de abril de 2026 informam que a UGREEN aumentou a produção e voltou a aceitar pedidos. <a href="https://www.trendforce.com/presscenter/news/20260930-13258.html">A previsão da TrendForce para o quarto trimestre de 2026</a>, segundo reportagem de 30 de setembro de 2026, espera que os preços contratuais da DRAM convencional subam mais 10–15 % em relação ao trimestre anterior.',
+          'O preço do UGREEN iDX6011 Pro de 64 GB mudou muito, mas a causa não está confirmada. Segundo a NAS Compares, a pré-venda custava US$ 1.559 (super early bird) para um preço sugerido de US$ 2.599. O <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a> informou em 23 de setembro de 2026 que a UGREEN França vende o Pro por 5.999,99 € sem discos. Não conseguimos confirmar por que o preço mudou. Os preços no Brasil podem variar bastante devido a impostos de importação. Como os 64 GB de memória do Pro são soldados, não é possível adicionar RAM depois.',
         ],
       },
       hardwareTodayVsTomorrow: {
@@ -961,7 +961,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'ما أُطلق أو أُعلن في 2026: سلسلة UGREEN iDX6011 (مساعد محلي)، وQNAP QAI-h1290FX (خادم GPU)، وSynology AI Console 2.0 وAI Runtime 1.0 (تجريبي)، وAsustor Flashstor Gen3 (ذكاء اصطناعي محلي اختياري)',
           'القطعة الناقصة هي الفهرسة المستمرة في الخلفية: لا يزال بحث الذكاء الاصطناعي في Synology Drive تجريبياً ويتطلب طرازات مدعومة مزودة بـ GPU',
-          'أسعار الذاكرة تسير عكس الاتجاه: سلسلة neo+ من Synology تأتي بذاكرة 4 GB، وأوقفت UGREEN الطلبات المسبقة في مارس 2026 مشيرة إلى ظروف السوق',
+          'أسعار الذاكرة تسير عكس الاتجاه: سلسلة neo+ من Synology تأتي بذاكرة 4 GB، وتفيد مشاركات في منتدى بأن UGREEN أوقفت الطلبات المسبقة في مارس 2026 مشيرة إلى ظروف السوق',
           'للاطلاع على العتاد الذي يمكن شراؤه اليوم، راجع أدلة شراء NAS من PromptQuorum — هذا المقال يتتبع وضع الفئة، لا الجهاز الذي ينبغي شراؤه',
         ],
         updatedDate: '2026-10',
@@ -974,7 +974,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           'تأكدت توقعات يوليو جزئياً: أطلقت UGREEN وQNAP وSynology وAsustor أو أعلنت جميعها في 2026 عن ميزات ذكاء اصطناعي محلي لعتاد NAS',
           'نماذج Synology التي تعمل على الجهاز (AI Console 2.0 وAI Runtime 1.0 وبحث الذكاء الاصطناعي في Drive) تجريبية منذ 22 يونيو 2026 وتتطلب طرازات مدعومة مزودة بـ GPU',
-          'تشغّل سلسلة iDX6011 من UGREEN مساعداً محلياً يُشحن معطلاً افتراضياً؛ ووصف أحد المراجعين طبقة الذكاء الاصطناعي بأنها أقل أجزاء المنتج نضجاً',
+          'تشغّل سلسلة iDX6011 من UGREEN مساعداً محلياً يُشحن معطلاً افتراضياً؛ ووصفت مراجعة NAS Compares طبقة الذكاء الاصطناعي بأنها أقل أجزاء المنتج نضجاً',
           'جهاز QAI-h1290FX من QNAP (أُعلن في 30 أبريل 2026) خادم GPU للمكاتب الصغيرة وليس NAS منزلياً، ولا يذكر البيان الصحفي سعراً',
           'تضغط أسعار الذاكرة على مواصفات NAS وأسعارها، ولا تزال الفهرسة المستمرة في الخلفية ميزة غير مستقرة وغير واسعة الانتشار',
         ],
@@ -1014,8 +1014,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'memory-price-squeeze',
         title: 'كيف تؤثر أسعار الذاكرة على عتاد NAS للذكاء الاصطناعي؟',
         content: [
-          '<strong>يدفع ارتفاع أسعار الذاكرة عتاد NAS في الاتجاه المعاكس لهامش الذكاء الاصطناعي الأرخص الذي افترضه هذا الاتجاه.</strong> تأتي سلسلة neo+ من Synology، التي أُطلقت في 7 أغسطس 2026 وفق <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>، بذاكرة DDR4 سعة 4 GB دون ECC بدلاً من 8 GB من ذاكرة ECC المعتادة في طرازات DS Plus؛ وقالت Synology إن السلسلة تعزز التزامها بإتاحة منتجاتها مع تغير ديناميكيات سوق الذاكرة. أوقفت UGREEN الطلبات المسبقة لسلسلة iDX6011 في 11 مارس 2026 مشيرة إلى ظروف السوق الحالية (<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase</a>)؛ ولم تذكر أسعار الذاكرة، ويفيد موضوع ذو صلة في ComputerBase بتاريخ 10 أبريل 2026 بأن UGREEN رفعت الإنتاج وعادت لقبول الطلبات. وتتوقع <a href="https://technews.tw/?p=1622115">نظرة TrendForce للربع الرابع من 2026</a> وفق ما أُفيد في 30 سبتمبر 2026 ارتفاع أسعار عقود DRAM التقليدية بنسبة 10–15% إضافية مقارنة بالربع السابق.',
-          'تغير سعر UGREEN iDX6011 Pro بسعة 64 GB كثيراً، لكن السبب غير مؤكد. وفق NAS Compares كان سعر الطلب المسبق 1,559 دولاراً (Super Early Bird) مقابل سعر بيع مقترح قدره 2,599 دولاراً. وتُدرج <a href="https://ai.ugreen.com/collections/all">المتجر الأمريكي</a> التابع لـ UGREEN الآن طراز Pro بسعر 5,999.99 دولاراً والطراز الأساسي بسعة 64 GB بسعر 3,599.99 دولاراً وطراز 32 GB بسعر 2,349.99 دولاراً، ضمن قوائم تحمل تهيئة أقراص بسعة 208 TB، فقد تشمل الأقراص ولا تُقارن مباشرة بالأسعار السابقة. وأفاد <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a> في 23 سبتمبر 2026 بأن UGREEN فرنسا تبيع طراز Pro بسعر 5,999.99 يورو دون أقراص. لم نتمكن من تأكيد سبب تغير السعر. ولأن ذاكرة طراز Pro بسعة 64 GB ملحومة، لا يمكنك إضافة RAM لاحقاً. قد تختلف الأسعار في سوقك بحسب الرسوم والضرائب المحلية.',
+          '<strong>يدفع ارتفاع أسعار الذاكرة عتاد NAS في الاتجاه المعاكس لهامش الذكاء الاصطناعي الأرخص الذي افترضه هذا الاتجاه.</strong> تأتي سلسلة neo+ من Synology، التي أُطلقت في 7 أغسطس 2026 وفق <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>، بذاكرة DDR4 سعة 4 GB دون ECC؛ وقالت Synology إن السلسلة تعزز التزامها بإتاحة منتجاتها مع تغير ديناميكيات سوق الذاكرة. أوقفت UGREEN الطلبات المسبقة لسلسلة iDX6011 في 11 مارس 2026 مشيرة إلى ظروف السوق الحالية (<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase forum thread</a>)؛ ولم تذكر أسعار الذاكرة، وتفيد مشاركات في موضوع ذي صلة بمنتدى ComputerBase بتاريخ 10 أبريل 2026 بأن UGREEN رفعت الإنتاج وعادت لقبول الطلبات. وتتوقع <a href="https://www.trendforce.com/presscenter/news/20260930-13258.html">نظرة TrendForce للربع الرابع من 2026</a> وفق ما أُفيد في 30 سبتمبر 2026 ارتفاع أسعار عقود DRAM التقليدية بنسبة 10–15% إضافية مقارنة بالربع السابق.',
+          'تغير سعر UGREEN iDX6011 Pro بسعة 64 GB كثيراً، لكن السبب غير مؤكد. وفق NAS Compares كان سعر الطلب المسبق 1,559 دولاراً (Super Early Bird) مقابل سعر بيع مقترح قدره 2,599 دولاراً. وأفاد <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a> في 23 سبتمبر 2026 بأن UGREEN فرنسا تبيع طراز Pro بسعر 5,999.99 يورو دون أقراص. لم نتمكن من تأكيد سبب تغير السعر. ولأن ذاكرة طراز Pro بسعة 64 GB ملحومة، لا يمكنك إضافة RAM لاحقاً. قد تختلف الأسعار في سوقك بحسب الرسوم والضرائب المحلية.',
         ],
       },
       hardwareTodayVsTomorrow: {
@@ -1093,7 +1093,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           '2026년에 출시·발표된 것: UGREEN iDX6011 시리즈(로컬 어시스턴트), QNAP QAI-h1290FX(GPU 서버), Synology AI Console 2.0 및 AI Runtime 1.0(베타), Asustor Flashstor Gen3(선택형 로컬 AI)',
           '빠진 조각은 백그라운드 지속 인덱싱입니다. Synology의 Drive AI 검색은 아직 베타이며 지원되는 GPU 탑재 모델이 필요합니다',
-          '메모리 가격은 트렌드를 거스릅니다. Synology neo+ 시리즈는 RAM 4 GB로 출시되며, UGREEN은 2026년 3월 시장 상황을 이유로 사전 주문을 중단했습니다',
+          '메모리 가격은 트렌드를 거스릅니다. Synology neo+ 시리즈는 RAM 4 GB로 출시되며, 포럼 게시글에 따르면 UGREEN은 2026년 3월 시장 상황을 이유로 사전 주문을 중단했습니다',
           '오늘 구매할 하드웨어는 PromptQuorum의 NAS 구매 가이드를 참고하세요. 이 글은 카테고리의 현황을 다루며, 어떤 기기를 사야 하는지는 다루지 않습니다',
         ],
         updatedDate: '2026-10',
@@ -1106,7 +1106,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '7월의 전망은 일부가 확인되었습니다. UGREEN, QNAP, Synology, Asustor는 2026년에 NAS 하드웨어용 로컬 AI 기능을 각각 출시하거나 발표했습니다',
           'Synology의 기기 내 실행 모델(AI Console 2.0, AI Runtime 1.0, Drive AI 검색)은 2026년 6월 22일부터 베타이며 지원되는 GPU 탑재 모델이 필요합니다',
-          'UGREEN iDX6011 시리즈는 로컬 어시스턴트를 실행하지만 기본값은 꺼짐 상태로 출시됩니다. 한 리뷰어는 AI 계층을 제품에서 가장 덜 성숙한 부분이라고 평가했습니다',
+          'UGREEN iDX6011 시리즈는 로컬 어시스턴트를 실행하지만 기본값은 꺼짐 상태로 출시됩니다. NAS Compares의 리뷰는 AI 계층을 제품에서 가장 덜 성숙한 부분이라고 평가했습니다',
           'QNAP QAI-h1290FX(2026년 4월 30일 발표)는 가정용 NAS가 아니라 소규모 사무실용 GPU 서버이며, 보도자료에는 가격이 없습니다',
           '메모리 가격이 NAS 사양과 가격을 압박하고 있으며, 백그라운드 지속 인덱싱은 여전히 안정적인 주류 기능이 아닙니다',
         ],
@@ -1146,8 +1146,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'memory-price-squeeze',
         title: '메모리 가격은 AI NAS 하드웨어에 어떤 영향을 주고 있나요?',
         content: [
-          '<strong>메모리 가격 상승은 이 트렌드가 전제했던 더 저렴한 AI 여력과 반대 방향으로 NAS 하드웨어를 몰고 있습니다.</strong> <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>에 따르면 2026년 8월 7일에 출시된 Synology neo+ 시리즈는 DS Plus 모델에 보통 탑재되는 8 GB ECC 메모리 대신 4 GB 비ECC DDR4로 출시됩니다. Synology는 메모리 시장 상황이 바뀌는 가운데 이 시리즈가 접근성에 대한 의지를 강화한다고 밝혔습니다. UGREEN은 2026년 3월 11일 현재의 시장 상황을 이유로 iDX6011 시리즈 사전 주문을 중단했습니다(<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase</a>). 메모리 가격은 언급하지 않았으며, 2026년 4월 10일자 ComputerBase 관련 스레드는 UGREEN이 생산을 늘리고 주문을 다시 받기 시작했다고 전합니다. <a href="https://technews.tw/?p=1622115">TrendForce의 2026년 4분기 전망</a>(2026년 9월 30일 보도)은 범용 DRAM 계약 가격이 전 분기 대비 10~15% 추가 상승할 것으로 예상합니다.',
-          'UGREEN iDX6011 Pro 64 GB의 가격은 크게 변했지만 원인은 확인되지 않았습니다. NAS Compares에 따르면 사전 판매가는 1,559달러(슈퍼 얼리버드), 권장 소비자가는 2,599달러였습니다. UGREEN <a href="https://ai.ugreen.com/collections/all">미국 스토어</a>에는 현재 Pro가 5,999.99달러, 64 GB 기본 모델이 3,599.99달러, 32 GB 모델이 2,349.99달러로 올라와 있지만, 모두 208 TB 드라이브 구성이 표기된 목록이어서 드라이브가 포함되었을 수 있으므로 이전 가격과 같은 조건의 비교는 아닙니다. <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a>는 2026년 9월 23일 UGREEN 프랑스가 Pro를 드라이브 없이 5,999.99유로에 판매한다고 보도했습니다. 가격이 바뀐 이유는 확인하지 못했습니다. 한국에서의 가격은 다를 수 있습니다. Pro의 64 GB 메모리는 납땜되어 있어 나중에 RAM을 추가할 수 없습니다.',
+          '<strong>메모리 가격 상승은 이 트렌드가 전제했던 더 저렴한 AI 여력과 반대 방향으로 NAS 하드웨어를 몰고 있습니다.</strong> <a href="https://tbreak.com/synology-nas-neo-plus-series-uae">tbreak</a>에 따르면 2026년 8월 7일에 출시된 Synology neo+ 시리즈는 4 GB 비ECC DDR4로 출시됩니다. Synology는 메모리 시장 상황이 바뀌는 가운데 이 시리즈가 접근성에 대한 의지를 강화한다고 밝혔습니다. UGREEN은 2026년 3월 11일 현재의 시장 상황을 이유로 iDX6011 시리즈 사전 주문을 중단했습니다(<a href="https://www.computerbase.de/forum/threads/ai-nas-idx6011-und-idx6011-pro-ugreen-stoppt-vorbestellungen-wegen-aktueller-markt-lage.2267442/page-3">ComputerBase forum thread</a>). 메모리 가격은 언급하지 않았으며, 2026년 4월 10일자 ComputerBase 관련 포럼 스레드의 게시글은 UGREEN이 생산을 늘리고 주문을 다시 받기 시작했다고 전합니다. <a href="https://www.trendforce.com/presscenter/news/20260930-13258.html">TrendForce의 2026년 4분기 전망</a>(2026년 9월 30일 보도)은 범용 DRAM 계약 가격이 전 분기 대비 10~15% 추가 상승할 것으로 예상합니다.',
+          'UGREEN iDX6011 Pro 64 GB의 가격은 크게 변했지만 원인은 확인되지 않았습니다. NAS Compares에 따르면 사전 판매가는 1,559달러(슈퍼 얼리버드), 권장 소비자가는 2,599달러였습니다. <a href="https://syskb.com/ugreen-idx6011-pro-nas-ia/">SysKB</a>는 2026년 9월 23일 UGREEN 프랑스가 Pro를 드라이브 없이 5,999.99유로에 판매한다고 보도했습니다. 가격이 바뀐 이유는 확인하지 못했습니다. 한국에서의 가격은 다를 수 있습니다. Pro의 64 GB 메모리는 납땜되어 있어 나중에 RAM을 추가할 수 없습니다.',
         ],
       },
       hardwareTodayVsTomorrow: {

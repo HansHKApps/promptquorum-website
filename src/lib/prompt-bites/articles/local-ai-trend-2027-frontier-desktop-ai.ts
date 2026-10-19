@@ -50,11 +50,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           "The forecast desktop tier is real: Apple's Mac Studio with M5 Ultra (announced August 25, 2026, shipping since September 22) goes up to 512 GB of unified memory at 1.2 TB/s, with the 512 GB option due in late October",
           "Prices rose instead of falling: NVIDIA raised the 128 GB DGX Spark to $6,950 on October 2, 2026, about 75% above its price a year earlier, and TrendForce expects DRAM supply to stay tight in 2027",
           "What fits: Qwen3.8-27B, gpt-oss-120b and DeepSeek V4 Flash run on machines from a single 32 GB GPU up to 256 GB; GLM-5.3 (753B parameters) is borderline on 512 GB; DeepSeek V4 Pro (1.6T) and Kimi K3 (2.8T) need a server cluster",
-          "Epoch AI measures the best open-weight models about four months behind closed frontier models on its overall index (since January 2026) and 6-7 months behind on cyber tasks (October 2026), but those leaders are the models that do not fit a desktop",
+          "Epoch AI measures the best open-weight models about four months behind closed frontier models on its overall index (since January 2026) and 6-7 months behind on cyber tasks (at the last refresh), but those leaders are the models that do not fit a desktop",
           "This is Part 5 of a 10-part Local AI Trends 2027 series - see also hybrid local-cloud routing, AI NAS home servers, and local agentic AI for related shifts",
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: "In October 2026, desktop machines with up to 512 GB of unified memory exist, but memory shortages made them more expensive and the largest open-weight frontier models still do not fit on a single one." },
+          { type: 'one-sentence', text: "In 2026, desktop machines with up to 512 GB of unified memory exist, but memory shortages made them more expensive and the largest open-weight frontier models still do not fit on a single one." },
           { type: 'plain-terms', text: "In plain terms: the big desktop AI computers arrived, they cost more than expected, and they run good mid-size open models but not the very biggest ones." },
         ],
       },
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "What Has Actually Shipped for Desktop AI Hardware?",
         content: [
           "**Unified memory is now the desktop AI tier, and three vendors ship it.** Apple announced the Mac Studio with M5 Max and M5 Ultra on August 25, 2026, and it shipped on September 22. The M5 Ultra offers up to 512 GB of unified memory at 1.2 TB/s and starts at $5,499 with 96 GB; the M5 Max reaches 128 GB at up to 614 GB/s from $2,499 ([Apple](https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/)). Apple says the 512 GB configuration is coming in late October, so it had not shipped by October 19, and we found no published price for it.",
-          "NVIDIA's DGX Spark (128 GB, 273 GB/s) and AMD's Ryzen AI Max+ 395 \"Strix Halo\" mini PCs sit in the 128 GB class, and Ryzen AI Max+ 495 systems with up to 192 GB were reported shipping in batches in October 2026. On October 2, NVIDIA raised the 128 GB DGX Spark to $6,950, about 75% above its price a year earlier, and added a 64 GB version at around $4,999 through partners ([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
+          "NVIDIA's DGX Spark (128 GB, 273 GB/s) and AMD's Ryzen AI Max+ 395 \"Strix Halo\" mini PCs sit in the 128 GB class, and Ryzen AI Max+ 495 systems with up to 192 GB are on pre-order or shipping in batches, according to [ComputingForGeeks](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/). On October 2, NVIDIA raised the 128 GB DGX Spark to $6,950, about 75% above its price a year earlier, and added a 64 GB version at around $4,999 through partners ([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
           "This is Part 5 of PromptQuorum's 10-part Local AI Trends 2027 series. See also [hybrid local-cloud routing](/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing), [AI NAS home servers](/prompt-bites/local-ai-trend-2027-ai-nas-home-server), and [local agentic AI](/prompt-bites/local-ai-trend-2027-local-agentic-ai) for other shifts arriving alongside this one.",
         ],
         items: [
@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "Which Desktop AI Machines Exist Now, and What Do They Cost?",
         content: [
           "**Memory capacity and price now separate the desktop tiers.** The table shows memory, bandwidth and US prices from the vendor announcements and listings cited above; the Mac Studio 512 GB option has no published price yet.",
-          "Prices are snapshots from early October 2026 and vary by seller and storage size, so check the live listing before ordering.",
+          "Prices are snapshots from the last refresh (see Last updated) and vary by seller and storage size, so check the live listing before ordering.",
         ],
         columns: ["Machine", "Memory", "Bandwidth", "US price"],
         rows: [
@@ -98,13 +98,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ["Model", "Size and license", "Desktop fit (estimate)"],
         rows: [
-          { "Model": "Qwen3.8-27B", "Size and license": "27B dense, Apache 2.0", "Desktop fit (estimate)": "~14 GB: one 32 GB GPU or Mac" },
-          { "Model": "gpt-oss-120b", "Size and license": "117B MoE (5.1B active), Apache 2.0", "Desktop fit (estimate)": "Fits one 80 GB GPU: 96 GB+ machines" },
-          { "Model": "DeepSeek V4 Flash", "Size and license": "284B (13B active), MIT", "Desktop fit (estimate)": "~142 GB: 192-256 GB machines" },
-          { "Model": "Mistral Large 3", "Size and license": "675B (41B active), Apache 2.0", "Desktop fit (estimate)": "~340 GB: 512 GB Mac only" },
-          { "Model": "GLM-5.3", "Size and license": "753B, custom license", "Desktop fit (estimate)": "~380 GB: 512 GB Mac, little spare" },
-          { "Model": "DeepSeek V4 Pro", "Size and license": "1.6T (49B active), MIT", "Desktop fit (estimate)": "~800 GB: server only" },
-          { "Model": "Kimi K3", "Size and license": "2.8T (104B active), Kimi license", "Desktop fit (estimate)": "~1.4 TB: cluster only" },
+          { "Model": "[Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)", "Size and license": "27B dense, Apache 2.0", "Desktop fit (estimate)": "~14 GB: one 32 GB GPU or Mac" },
+          { "Model": "[gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)", "Size and license": "117B MoE (5.1B active), Apache 2.0", "Desktop fit (estimate)": "Fits one 80 GB GPU: 96 GB+ machines" },
+          { "Model": "[DeepSeek V4 Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash)", "Size and license": "284B (13B active), MIT", "Desktop fit (estimate)": "~142 GB: 192-256 GB machines" },
+          { "Model": "[Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512)", "Size and license": "675B (41B active), Apache 2.0", "Desktop fit (estimate)": "~340 GB: 512 GB Mac only" },
+          { "Model": "[GLM-5.3](https://huggingface.co/zai-org/GLM-5.3)", "Size and license": "753B, custom license", "Desktop fit (estimate)": "~380 GB: 512 GB Mac, little spare" },
+          { "Model": "[DeepSeek V4 Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)", "Size and license": "1.6T (49B active), MIT", "Desktop fit (estimate)": "~800 GB: server only" },
+          { "Model": "[Kimi K3](https://huggingface.co/moonshotai/Kimi-K3)", "Size and license": "2.8T (104B active), Kimi license", "Desktop fit (estimate)": "~1.4 TB: cluster only" },
         ],
       },
       gapToClosed: {
@@ -120,8 +120,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "Why Did Desktop AI Hardware Get More Expensive?",
         content: [
           "**A DRAM shortage, not weak demand, turned the forecast into a price increase.** TrendForce expects conventional DRAM contract prices to rise another 10-15% quarter on quarter in the fourth quarter of 2026 and NAND 15-20%, and expects DRAM supply to stay tight in 2027, with PC DRAM supply possibly declining as capacity shifts to servers ([TrendForce](https://www.trendforce.com/presscenter/news/20260930-13258.html)).",
-          "The effects are visible in list prices: the Mac Studio with M5 Max starts at $2,499 where the M4 Max version started at $1,999, and The Register attributes the DGX Spark increase to memory costs. Retail 128 GB Strix Halo mini PCs were listed at roughly $3,300-3,800 in early October 2026, up from around $2,000 in 2025, according to a [price roundup](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/).",
-          "NVIDIA's RTX 5090 MSRP is still $1,999, but a [BuySellRAM survey](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) of asking prices from August 8 to October 11, 2026 found the lowest new listings between $3,004 and $4,920.99, and unconfirmed reports say NVIDIA has stopped producing the card.",
+          "The effects are visible in list prices: the Mac Studio with M5 Max starts at $2,499 where the M4 Max version started at [$1,999](https://www.apple.com/newsroom/2025/03/apple-unveils-new-mac-studio-the-most-powerful-mac-ever/), and The Register attributes the DGX Spark increase to memory costs. Retail 128 GB Strix Halo mini PCs were listed at roughly $3,300-3,800 on 2 October 2026, up from around $2,000 in 2025, according to a [price roundup](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/).",
+          "NVIDIA's RTX 5090 MSRP is still $1,999, but a [BuySellRAM survey](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) of asking prices from August 8 to October 11, 2026 found the lowest new listings between $3,004 and $4,920.99.",
         ],
       },
       whoItsFor: {
@@ -246,11 +246,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           "Die prognostizierte Desktop-Stufe ist real: Apples Mac Studio mit M5 Ultra (vorgestellt am 25. August 2026, seit 22. September lieferbar) bietet bis zu 512 GB Unified Memory bei 1,2 TB/s, die 512-GB-Option folgt Ende Oktober",
           "Die Preise stiegen statt zu fallen: NVIDIA hob die 128-GB-DGX-Spark am 2. Oktober 2026 auf $6.950 an, rund 75 % über dem Vorjahrespreis, und TrendForce erwartet, dass das DRAM-Angebot 2027 knapp bleibt",
           "Was passt: Qwen3.8-27B, gpt-oss-120b und DeepSeek V4 Flash laufen auf Rechnern von einer einzelnen 32-GB-GPU bis 256 GB; GLM-5.3 (753 Mrd. Parameter) ist auf 512 GB grenzwertig; DeepSeek V4 Pro (1,6 Bio.) und Kimi K3 (2,8 Bio.) benötigen einen Server-Cluster",
-          "Epoch AI sieht die besten offenen Modelle im Gesamtindex etwa vier Monate hinter den geschlossenen Frontier-Modellen (seit Januar 2026) und bei Cyber-Aufgaben 6–7 Monate dahinter (Oktober 2026) – doch diese Spitzenmodelle passen nicht auf einen Desktop",
+          "Epoch AI sieht die besten offenen Modelle im Gesamtindex etwa vier Monate hinter den geschlossenen Frontier-Modellen (seit Januar 2026) und bei Cyber-Aufgaben 6–7 Monate dahinter (zum letzten Update) – doch diese Spitzenmodelle passen nicht auf einen Desktop",
           "Dies ist Teil 5 einer 10-teiligen Local-AI-Trends-2027-Serie – siehe auch hybrides Lokal-Cloud-Routing, KI-NAS-Heimserver und lokale agentische KI für verwandte Entwicklungen",
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: "Im Oktober 2026 gibt es Desktop-Rechner mit bis zu 512 GB Unified Memory, doch Speicherknappheit hat sie verteuert, und die größten offenen Frontier-Modelle passen weiterhin auf keinen einzelnen davon." },
+          { type: 'one-sentence', text: "Im Jahr 2026 gibt es Desktop-Rechner mit bis zu 512 GB Unified Memory, doch Speicherknappheit hat sie verteuert, und die größten offenen Frontier-Modelle passen weiterhin auf keinen einzelnen davon." },
           { type: 'plain-terms', text: "Einfach gesagt: Die großen Desktop-KI-Rechner sind da, sie kosten mehr als erwartet und betreiben gute mittelgroße offene Modelle, aber nicht die allergrößten." },
         ],
       },
@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "Was ist bei Desktop-KI-Hardware tatsächlich erschienen?",
         content: [
           "**Unified Memory ist inzwischen die Desktop-KI-Stufe, und drei Hersteller liefern sie.** Apple stellte den Mac Studio mit M5 Max und M5 Ultra am 25. August 2026 vor, ausgeliefert wird er seit dem 22. September. Der M5 Ultra bietet bis zu 512 GB Unified Memory bei 1,2 TB/s und startet mit 96 GB bei $5.499; der M5 Max erreicht 128 GB bei bis zu 614 GB/s ab $2.499 ([Apple](https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/)). Laut Apple erscheint die 512-GB-Konfiguration Ende Oktober, war also am 19. Oktober noch nicht lieferbar; einen veröffentlichten Preis dafür haben wir nicht gefunden. Alle Preise in diesem Beitrag sind US-Preise.",
-          "NVIDIAs DGX Spark (128 GB, 273 GB/s) und AMDs Mini-PCs mit Ryzen AI Max+ 395 „Strix Halo“ liegen in der 128-GB-Klasse; Systeme mit Ryzen AI Max+ 495 und bis zu 192 GB wurden im Oktober 2026 als in Chargen lieferbar gemeldet. Am 2. Oktober hob NVIDIA die 128-GB-DGX-Spark auf $6.950 an, rund 75 % über dem Vorjahrespreis, und ergänzte eine 64-GB-Version für etwa $4.999 über Partner ([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
+          "NVIDIAs DGX Spark (128 GB, 273 GB/s) und AMDs Mini-PCs mit Ryzen AI Max+ 395 „Strix Halo“ liegen in der 128-GB-Klasse; Systeme mit Ryzen AI Max+ 495 und bis zu 192 GB sind laut [ComputingForGeeks](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/) vorbestellbar oder werden in Chargen ausgeliefert. Am 2. Oktober hob NVIDIA die 128-GB-DGX-Spark auf $6.950 an, rund 75 % über dem Vorjahrespreis, und ergänzte eine 64-GB-Version für etwa $4.999 über Partner ([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
           'Dies ist Teil 5 der 10-teiligen Local-AI-Trends-2027-Serie von PromptQuorum. Siehe auch [hybrides Lokal-Cloud-Routing](/de/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing), [KI-NAS-Heimserver](/de/prompt-bites/local-ai-trend-2027-ai-nas-home-server) und [lokale agentische KI](/de/prompt-bites/local-ai-trend-2027-local-agentic-ai) für weitere parallele Entwicklungen.',
         ],
         items: [
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "Welche Desktop-KI-Rechner gibt es jetzt, und was kosten sie?",
         content: [
           "**Speicherkapazität und Preis trennen inzwischen die Desktop-Stufen.** Die Tabelle zeigt Speicher, Bandbreite und US-Preise laut den oben genannten Herstellerangaben und Angeboten; für die 512-GB-Option des Mac Studio gibt es noch keinen veröffentlichten Preis.",
-          "Die Preise sind Momentaufnahmen von Anfang Oktober 2026 und variieren je nach Händler und Speichergröße – prüfen Sie vor der Bestellung das aktuelle Angebot.",
+          "Die Preise sind Momentaufnahmen zum letzten Update (siehe „Zuletzt aktualisiert“) und variieren je nach Händler und Speichergröße – prüfen Sie vor der Bestellung das aktuelle Angebot.",
         ],
         columns: ["Gerät", "Speicher", "Bandbreite", "US-Preis"],
         rows: [
@@ -294,13 +294,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ["Modell", "Größe und Lizenz", "Desktop-Eignung (ca.)"],
         rows: [
-          { "Modell": "Qwen3.8-27B", "Größe und Lizenz": "27B dicht, Apache 2.0", "Desktop-Eignung (ca.)": "~14 GB: eine 32-GB-GPU oder Mac" },
-          { "Modell": "gpt-oss-120b", "Größe und Lizenz": "117B MoE (5,1B aktiv), Apache 2.0", "Desktop-Eignung (ca.)": "Passt auf 80-GB-GPU: ab 96 GB" },
-          { "Modell": "DeepSeek V4 Flash", "Größe und Lizenz": "284B (13B aktiv), MIT", "Desktop-Eignung (ca.)": "~142 GB: Rechner mit 192–256 GB" },
-          { "Modell": "Mistral Large 3", "Größe und Lizenz": "675B (41B aktiv), Apache 2.0", "Desktop-Eignung (ca.)": "~340 GB: nur 512-GB-Mac" },
-          { "Modell": "GLM-5.3", "Größe und Lizenz": "753B, eigene Lizenz", "Desktop-Eignung (ca.)": "~380 GB: 512-GB-Mac, kaum Reserve" },
-          { "Modell": "DeepSeek V4 Pro", "Größe und Lizenz": "1,6T (49B aktiv), MIT", "Desktop-Eignung (ca.)": "~800 GB: nur Server" },
-          { "Modell": "Kimi K3", "Größe und Lizenz": "2,8T (104B aktiv), Kimi-Lizenz", "Desktop-Eignung (ca.)": "~1,4 TB: nur Cluster" },
+          { "Modell": "[Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)", "Größe und Lizenz": "27B dicht, Apache 2.0", "Desktop-Eignung (ca.)": "~14 GB: eine 32-GB-GPU oder Mac" },
+          { "Modell": "[gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)", "Größe und Lizenz": "117B MoE (5,1B aktiv), Apache 2.0", "Desktop-Eignung (ca.)": "Passt auf 80-GB-GPU: ab 96 GB" },
+          { "Modell": "[DeepSeek V4 Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash)", "Größe und Lizenz": "284B (13B aktiv), MIT", "Desktop-Eignung (ca.)": "~142 GB: Rechner mit 192–256 GB" },
+          { "Modell": "[Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512)", "Größe und Lizenz": "675B (41B aktiv), Apache 2.0", "Desktop-Eignung (ca.)": "~340 GB: nur 512-GB-Mac" },
+          { "Modell": "[GLM-5.3](https://huggingface.co/zai-org/GLM-5.3)", "Größe und Lizenz": "753B, eigene Lizenz", "Desktop-Eignung (ca.)": "~380 GB: 512-GB-Mac, kaum Reserve" },
+          { "Modell": "[DeepSeek V4 Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)", "Größe und Lizenz": "1,6T (49B aktiv), MIT", "Desktop-Eignung (ca.)": "~800 GB: nur Server" },
+          { "Modell": "[Kimi K3](https://huggingface.co/moonshotai/Kimi-K3)", "Größe und Lizenz": "2,8T (104B aktiv), Kimi-Lizenz", "Desktop-Eignung (ca.)": "~1,4 TB: nur Cluster" },
         ],
       },
       gapToClosed: {
@@ -316,8 +316,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "Warum wurde Desktop-KI-Hardware teurer?",
         content: [
           "**Ein DRAM-Engpass, nicht schwache Nachfrage, machte aus der Prognose eine Preiserhöhung.** TrendForce erwartet im vierten Quartal 2026 einen weiteren Anstieg der DRAM-Vertragspreise um 10–15 % gegenüber dem Vorquartal und bei NAND um 15–20 %, und rechnet damit, dass das DRAM-Angebot 2027 knapp bleibt; das PC-DRAM-Angebot könnte sinken, weil Kapazitäten zu Servern wandern ([TrendForce](https://www.trendforce.com/presscenter/news/20260930-13258.html)).",
-          "Die Folgen zeigen sich in den Listenpreisen: Der Mac Studio mit M5 Max startet bei $2.499, die M4-Max-Version startete bei $1.999, und The Register führt die DGX-Spark-Erhöhung auf Speicherkosten zurück. Mini-PCs mit 128 GB Strix Halo wurden Anfang Oktober 2026 für etwa $3.300–3.800 gelistet, gegenüber rund $2.000 im Jahr 2025, laut einer [Preisübersicht](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/).",
-          "Die UVP der NVIDIA RTX 5090 liegt weiterhin bei $1.999, doch eine [BuySellRAM-Auswertung](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) der Angebotspreise vom 8. August bis 11. Oktober 2026 fand die günstigsten Neuangebote zwischen $3.004 und $4.920,99, und unbestätigte Berichte besagen, NVIDIA habe die Produktion der Karte eingestellt.",
+          "Die Folgen zeigen sich in den Listenpreisen: Der Mac Studio mit M5 Max startet bei $2.499, die M4-Max-Version startete bei [$1.999](https://www.apple.com/newsroom/2025/03/apple-unveils-new-mac-studio-the-most-powerful-mac-ever/), und The Register führt die DGX-Spark-Erhöhung auf Speicherkosten zurück. Mini-PCs mit 128 GB Strix Halo wurden am 2. Oktober 2026 für etwa $3.300–3.800 gelistet, gegenüber rund $2.000 im Jahr 2025, laut einer [Preisübersicht](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/).",
+          "Die UVP der NVIDIA RTX 5090 liegt weiterhin bei $1.999, doch eine [BuySellRAM-Auswertung](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) der Angebotspreise vom 8. August bis 11. Oktober 2026 fand die günstigsten Neuangebote zwischen $3.004 und $4.920,99.",
         ],
       },
       whoItsFor: {
@@ -442,11 +442,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           "Le niveau de bureau annoncé est réel : le Mac Studio d'Apple avec M5 Ultra (annoncé le 25 août 2026, livré depuis le 22 septembre) monte à 512 Go de mémoire unifiée à 1.2 To/s, l'option 512 Go étant prévue fin octobre",
           "Les prix ont monté au lieu de baisser : NVIDIA a porté la DGX Spark 128 Go à 6 950 $ le 2 octobre 2026, soit environ 75 % de plus qu'un an auparavant, et TrendForce s'attend à une offre de DRAM tendue en 2027",
           "Ce qui tient : Qwen3.8-27B, gpt-oss-120b et DeepSeek V4 Flash tournent sur des machines allant d'un seul GPU de 32 Go à 256 Go ; GLM-5.3 (753 Md de paramètres) est limite sur 512 Go ; DeepSeek V4 Pro (1.6 billion) et Kimi K3 (2.8 billions) exigent un cluster de serveurs",
-          "Epoch AI situe les meilleurs modèles à poids ouverts environ quatre mois derrière les modèles fermés de pointe sur son indice global (depuis janvier 2026) et 6 à 7 mois derrière sur les tâches de cybersécurité (octobre 2026), mais ces modèles de tête ne tiennent pas sur un bureau",
+          "Epoch AI situe les meilleurs modèles à poids ouverts environ quatre mois derrière les modèles fermés de pointe sur son indice global (depuis janvier 2026) et 6 à 7 mois derrière sur les tâches de cybersécurité (à la dernière mise à jour), mais ces modèles de tête ne tiennent pas sur un bureau",
           "Ceci est la partie 5 d'une série de 10 sur les tendances de l'IA locale 2027 - voir aussi le routage hybride local-cloud, les serveurs domestiques NAS IA et l'IA agentique locale pour les évolutions connexes",
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: "En octobre 2026, des machines de bureau avec jusqu'à 512 Go de mémoire unifiée existent, mais la pénurie de mémoire les a renchéries et les plus grands modèles ouverts de pointe ne tiennent toujours pas sur une seule d'entre elles." },
+          { type: 'one-sentence', text: "En 2026, des machines de bureau avec jusqu'à 512 Go de mémoire unifiée existent, mais la pénurie de mémoire les a renchéries et les plus grands modèles ouverts de pointe ne tiennent toujours pas sur une seule d'entre elles." },
           { type: 'plain-terms', text: "En clair : les gros ordinateurs de bureau pour l'IA sont arrivés, ils coûtent plus cher que prévu et font tourner de bons modèles ouverts de taille moyenne, mais pas les plus grands." },
         ],
       },
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "Qu'est-ce qui est réellement sorti côté matériel IA de bureau ?",
         content: [
           "**La mémoire unifiée est désormais le niveau de bureau pour l'IA, et trois fabricants la proposent.** Apple a annoncé le Mac Studio avec M5 Max et M5 Ultra le 25 août 2026, livré depuis le 22 septembre. Le M5 Ultra offre jusqu'à 512 Go de mémoire unifiée à 1.2 To/s et démarre à 5 499 $ avec 96 Go ; le M5 Max atteint 128 Go jusqu'à 614 Go/s à partir de 2 499 $ ([Apple](https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/)). Selon Apple, la configuration 512 Go arrive fin octobre ; elle n'était donc pas livrée au 19 octobre, et nous n'avons trouvé aucun prix publié. Tous les prix de cet article sont des prix américains.",
-          "La DGX Spark de NVIDIA (128 Go, 273 Go/s) et les mini-PC AMD Ryzen AI Max+ 395 « Strix Halo » se situent dans la classe 128 Go ; des systèmes Ryzen AI Max+ 495 jusqu'à 192 Go auraient été livrés par lots en octobre 2026. Le 2 octobre, NVIDIA a porté la DGX Spark 128 Go à 6 950 $, soit environ 75 % de plus qu'un an plus tôt, et ajouté une version 64 Go autour de 4 999 $ via des partenaires ([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
+          "La DGX Spark de NVIDIA (128 Go, 273 Go/s) et les mini-PC AMD Ryzen AI Max+ 395 « Strix Halo » se situent dans la classe 128 Go ; des systèmes Ryzen AI Max+ 495 jusqu'à 192 Go sont, selon [ComputingForGeeks](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/), en précommande ou livrés par lots. Le 2 octobre, NVIDIA a porté la DGX Spark 128 Go à 6 950 $, soit environ 75 % de plus qu'un an plus tôt, et ajouté une version 64 Go autour de 4 999 $ via des partenaires ([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
           "Ceci est la partie 5 de la série en 10 parties Tendances IA locale 2027 de PromptQuorum. Voir aussi [le routage hybride local-cloud](/fr/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing), [les serveurs NAS domestiques IA](/fr/prompt-bites/local-ai-trend-2027-ai-nas-home-server) et [l'IA agentique locale](/fr/prompt-bites/local-ai-trend-2027-local-agentic-ai) pour d'autres évolutions parallèles.",
         ],
         items: [
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "Quelles machines IA de bureau existent aujourd'hui, et à quel prix ?",
         content: [
           "**La capacité mémoire et le prix séparent désormais les niveaux de bureau.** Le tableau indique la mémoire, la bande passante et les prix américains issus des annonces et offres citées plus haut ; l'option 512 Go du Mac Studio n'a pas encore de prix publié.",
-          "Les prix sont des instantanés de début octobre 2026 et varient selon le vendeur et la capacité de stockage : vérifiez l'offre en vigueur avant de commander.",
+          "Les prix sont des instantanés à la dernière mise à jour (voir « Dernière mise à jour ») et varient selon le vendeur et la capacité de stockage : vérifiez l'offre en vigueur avant de commander.",
         ],
         columns: ["Machine", "Mémoire", "Bande passante", "Prix US"],
         rows: [
@@ -490,13 +490,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ["Modèle", "Taille et licence", "Tient sur bureau (est.)"],
         rows: [
-          { "Modèle": "Qwen3.8-27B", "Taille et licence": "27B dense, Apache 2.0", "Tient sur bureau (est.)": "~14 Go : un GPU 32 Go ou un Mac" },
-          { "Modèle": "gpt-oss-120b", "Taille et licence": "117B MoE (5.1B actifs), Apache 2.0", "Tient sur bureau (est.)": "Tient sur GPU 80 Go : dès 96 Go" },
-          { "Modèle": "DeepSeek V4 Flash", "Taille et licence": "284B (13B actifs), MIT", "Tient sur bureau (est.)": "~142 Go : machines de 192–256 Go" },
-          { "Modèle": "Mistral Large 3", "Taille et licence": "675B (41B actifs), Apache 2.0", "Tient sur bureau (est.)": "~340 Go : Mac 512 Go uniquement" },
-          { "Modèle": "GLM-5.3", "Taille et licence": "753B, licence propre", "Tient sur bureau (est.)": "~380 Go : Mac 512 Go, peu de marge" },
-          { "Modèle": "DeepSeek V4 Pro", "Taille et licence": "1.6T (49B actifs), MIT", "Tient sur bureau (est.)": "~800 Go : serveur uniquement" },
-          { "Modèle": "Kimi K3", "Taille et licence": "2.8T (104B actifs), licence Kimi", "Tient sur bureau (est.)": "~1.4 To : cluster uniquement" },
+          { "Modèle": "[Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)", "Taille et licence": "27B dense, Apache 2.0", "Tient sur bureau (est.)": "~14 Go : un GPU 32 Go ou un Mac" },
+          { "Modèle": "[gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)", "Taille et licence": "117B MoE (5.1B actifs), Apache 2.0", "Tient sur bureau (est.)": "Tient sur GPU 80 Go : dès 96 Go" },
+          { "Modèle": "[DeepSeek V4 Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash)", "Taille et licence": "284B (13B actifs), MIT", "Tient sur bureau (est.)": "~142 Go : machines de 192–256 Go" },
+          { "Modèle": "[Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512)", "Taille et licence": "675B (41B actifs), Apache 2.0", "Tient sur bureau (est.)": "~340 Go : Mac 512 Go uniquement" },
+          { "Modèle": "[GLM-5.3](https://huggingface.co/zai-org/GLM-5.3)", "Taille et licence": "753B, licence propre", "Tient sur bureau (est.)": "~380 Go : Mac 512 Go, peu de marge" },
+          { "Modèle": "[DeepSeek V4 Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)", "Taille et licence": "1.6T (49B actifs), MIT", "Tient sur bureau (est.)": "~800 Go : serveur uniquement" },
+          { "Modèle": "[Kimi K3](https://huggingface.co/moonshotai/Kimi-K3)", "Taille et licence": "2.8T (104B actifs), licence Kimi", "Tient sur bureau (est.)": "~1.4 To : cluster uniquement" },
         ],
       },
       gapToClosed: {
@@ -512,8 +512,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "Pourquoi le matériel IA de bureau est-il devenu plus cher ?",
         content: [
           "**Une pénurie de DRAM, et non une demande faible, a transformé la prévision en hausse de prix.** TrendForce s'attend à une nouvelle hausse de 10 à 15 % d'un trimestre à l'autre des prix contractuels de la DRAM au quatrième trimestre 2026, et de 15 à 20 % pour la NAND, et à une offre de DRAM tendue en 2027, l'offre de DRAM pour PC pouvant diminuer à mesure que la capacité se déplace vers les serveurs ([TrendForce](https://www.trendforce.com/presscenter/news/20260930-13258.html)).",
-          "Les effets se voient sur les prix catalogue : le Mac Studio avec M5 Max démarre à 2 499 $ alors que la version M4 Max démarrait à 1 999 $, et The Register attribue la hausse de la DGX Spark au coût de la mémoire. Les mini-PC Strix Halo de 128 Go étaient affichés à environ 3 300–3 800 $ début octobre 2026, contre environ 2 000 $ en 2025, selon un [comparatif de prix](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/).",
-          "Le prix de lancement de la RTX 5090 de NVIDIA reste de 1 999 $, mais une [enquête BuySellRAM](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) sur les prix demandés du 8 août au 11 octobre 2026 a trouvé les offres neuves les moins chères entre 3 004 $ et 4 920,99 $, et des informations non confirmées indiquent que NVIDIA aurait cessé de produire la carte.",
+          "Les effets se voient sur les prix catalogue : le Mac Studio avec M5 Max démarre à 2 499 $ alors que la version M4 Max démarrait à [1 999 $](https://www.apple.com/newsroom/2025/03/apple-unveils-new-mac-studio-the-most-powerful-mac-ever/), et The Register attribue la hausse de la DGX Spark au coût de la mémoire. Les mini-PC Strix Halo de 128 Go étaient affichés à environ 3 300–3 800 $ le 2 octobre 2026, contre environ 2 000 $ en 2025, selon un [comparatif de prix](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/).",
+          "Le prix de lancement de la RTX 5090 de NVIDIA reste de 1 999 $, mais une [enquête BuySellRAM](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) sur les prix demandés du 8 août au 11 octobre 2026 a trouvé les offres neuves les moins chères entre 3 004 $ et 4 920,99 $.",
         ],
       },
       whoItsFor: {
@@ -638,11 +638,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           "予測されていたデスクトップ層は現実になりました。AppleのMac Studio(M5 Ultra、2026年8月25日発表、9月22日から出荷)は最大512 GBのユニファイドメモリを1.2 TB/sで備え、512 GBオプションは10月下旬の予定です",
           "価格は下がらず上昇しました。NVIDIAは2026年10月2日に128 GB版DGX Sparkを$6,950(米国価格)へ引き上げ、前年より約75%高くなりました。TrendForceは2027年もDRAM供給が逼迫すると見ています",
           "収まるモデル:Qwen3.8-27B、gpt-oss-120b、DeepSeek V4 Flashは32 GBのGPU1枚から256 GBまでのマシンで動きます。GLM-5.3(7530億パラメータ)は512 GBでぎりぎり、DeepSeek V4 Pro(1.6兆)とKimi K3(2.8兆)はサーバークラスターが必要です",
-          "Epoch AIは、総合指数で最良のオープンウェイトモデルがクローズドなフロンティアモデルに約4か月(2026年1月以降)、サイバー分野では6〜7か月(2026年10月)遅れていると測定しています。ただし、その先頭のモデルこそデスクトップに収まらないモデルです",
+          "Epoch AIは、総合指数で最良のオープンウェイトモデルがクローズドなフロンティアモデルに約4か月(2026年1月以降)、サイバー分野では6〜7か月(最終更新時点)遅れていると測定しています。ただし、その先頭のモデルこそデスクトップに収まらないモデルです",
           "本記事は全10回のLocal AI Trends 2027シリーズの第5回です。関連する動向として、ハイブリッド・ローカル/クラウド・ルーティング、AI NASホームサーバー、ローカルエージェント型AIも参照してください",
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: "2026年10月時点で最大512 GBのユニファイドメモリを備えたデスクトップ機は存在しますが、メモリ不足で高価になり、最大級のオープンウェイト・フロンティアモデルは依然1台に収まりません。" },
+          { type: 'one-sentence', text: "2026年時点で最大512 GBのユニファイドメモリを備えたデスクトップ機は存在しますが、メモリ不足で高価になり、最大級のオープンウェイト・フロンティアモデルは依然1台に収まりません。" },
           { type: 'plain-terms', text: "つまり、大型のデスクトップAIコンピューターは登場しましたが、予想より高価で、動かせるのは優れた中規模のオープンモデルまでで、最大級のモデルは動かせません。" },
         ],
       },
@@ -651,7 +651,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "デスクトップAIハードウェアで実際に何が登場したのですか?",
         content: [
           "**ユニファイドメモリはデスクトップAI層となり、3社が提供しています。**Appleは2026年8月25日にM5 MaxとM5 Ultra搭載のMac Studioを発表し、9月22日に出荷されました。M5 Ultraは最大512 GBのユニファイドメモリを1.2 TB/sで備え、96 GBモデルが$5,499から、M5 Maxは最大614 GB/sで128 GBまで対応し$2,499からです([Apple](https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/))。Appleによると512 GB構成は10月下旬に登場予定で、10月19日時点では未出荷であり、公表価格も確認できませんでした。本記事の価格はすべて米国価格です。",
-          "NVIDIAのDGX Spark(128 GB、273 GB/s)と、AMD Ryzen AI Max+ 395「Strix Halo」搭載のミニPCは128 GBクラスに位置し、最大192 GBのRyzen AI Max+ 495搭載システムも2026年10月にロット単位で出荷されていると報じられています。NVIDIAは10月2日に128 GB版DGX Sparkを$6,950へ引き上げ(前年より約75%高)、パートナー経由で約$4,999の64 GB版も追加しました([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622))。",
+          "NVIDIAのDGX Spark(128 GB、273 GB/s)と、AMD Ryzen AI Max+ 395「Strix Halo」搭載のミニPCは128 GBクラスに位置し、最大192 GBのRyzen AI Max+ 495搭載システムも[ComputingForGeeks](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/)によると予約受付中またはロット単位で出荷されています。NVIDIAは10月2日に128 GB版DGX Sparkを$6,950へ引き上げ(前年より約75%高)、パートナー経由で約$4,999の64 GB版も追加しました([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622))。",
           'これはPromptQuorumのローカルAIトレンド2027シリーズ(全10回)の第5回です。並行して起きている他の変化については、[ハイブリッドなローカル・クラウドルーティング](/ja/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing)、[AI NASホームサーバー](/ja/prompt-bites/local-ai-trend-2027-ai-nas-home-server)、[ローカルエージェント型AI](/ja/prompt-bites/local-ai-trend-2027-local-agentic-ai)も参照してください。',
         ],
         items: [
@@ -665,7 +665,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "現在、どのデスクトップAI機があり、いくらですか?",
         content: [
           "**メモリ容量と価格が、デスクトップ層を分けるようになりました。**下表は、上で引用したベンダー発表と掲載情報に基づくメモリ、帯域幅、米国価格です。Mac Studioの512 GBオプションには、まだ公表価格がありません。",
-          "価格は2026年10月初旬時点のスナップショットで、販売店やストレージ容量により異なります。注文前に最新の掲載情報をご確認ください。",
+          "価格は最終更新時点(「最終更新」を参照)のスナップショットで、販売店やストレージ容量により異なります。注文前に最新の掲載情報をご確認ください。",
         ],
         columns: ["マシン", "メモリ", "帯域幅", "米国価格"],
         rows: [
@@ -686,13 +686,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ["モデル", "サイズとライセンス", "デスクトップ適合(概算)"],
         rows: [
-          { "モデル": "Qwen3.8-27B", "サイズとライセンス": "27B密、Apache 2.0", "デスクトップ適合(概算)": "約14 GB:32 GBのGPUまたはMac" },
-          { "モデル": "gpt-oss-120b", "サイズとライセンス": "117B MoE(5.1B稼働)、Apache 2.0", "デスクトップ適合(概算)": "80 GB GPUに収まる:96 GB以上" },
-          { "モデル": "DeepSeek V4 Flash", "サイズとライセンス": "284B(13B稼働)、MIT", "デスクトップ適合(概算)": "約142 GB:192〜256 GB機" },
-          { "モデル": "Mistral Large 3", "サイズとライセンス": "675B(41B稼働)、Apache 2.0", "デスクトップ適合(概算)": "約340 GB:512 GBのMacのみ" },
-          { "モデル": "GLM-5.3", "サイズとライセンス": "753B、独自ライセンス", "デスクトップ適合(概算)": "約380 GB:512 GBのMacで余裕わずか" },
-          { "モデル": "DeepSeek V4 Pro", "サイズとライセンス": "1.6T(49B稼働)、MIT", "デスクトップ適合(概算)": "約800 GB:サーバーのみ" },
-          { "モデル": "Kimi K3", "サイズとライセンス": "2.8T(104B稼働)、Kimiライセンス", "デスクトップ適合(概算)": "約1.4 TB:クラスターのみ" },
+          { "モデル": "[Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)", "サイズとライセンス": "27B密、Apache 2.0", "デスクトップ適合(概算)": "約14 GB:32 GBのGPUまたはMac" },
+          { "モデル": "[gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)", "サイズとライセンス": "117B MoE(5.1B稼働)、Apache 2.0", "デスクトップ適合(概算)": "80 GB GPUに収まる:96 GB以上" },
+          { "モデル": "[DeepSeek V4 Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash)", "サイズとライセンス": "284B(13B稼働)、MIT", "デスクトップ適合(概算)": "約142 GB:192〜256 GB機" },
+          { "モデル": "[Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512)", "サイズとライセンス": "675B(41B稼働)、Apache 2.0", "デスクトップ適合(概算)": "約340 GB:512 GBのMacのみ" },
+          { "モデル": "[GLM-5.3](https://huggingface.co/zai-org/GLM-5.3)", "サイズとライセンス": "753B、独自ライセンス", "デスクトップ適合(概算)": "約380 GB:512 GBのMacで余裕わずか" },
+          { "モデル": "[DeepSeek V4 Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)", "サイズとライセンス": "1.6T(49B稼働)、MIT", "デスクトップ適合(概算)": "約800 GB:サーバーのみ" },
+          { "モデル": "[Kimi K3](https://huggingface.co/moonshotai/Kimi-K3)", "サイズとライセンス": "2.8T(104B稼働)、Kimiライセンス", "デスクトップ適合(概算)": "約1.4 TB:クラスターのみ" },
         ],
       },
       gapToClosed: {
@@ -708,8 +708,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "なぜデスクトップAIハードウェアは高くなったのですか?",
         content: [
           "**予測を値上げに変えたのは、需要の弱さではなくDRAM不足です。**TrendForceは、2026年第4四半期の通常DRAM契約価格がさらに前四半期比10〜15%、NANDが15〜20%上昇し、2027年もDRAM供給は逼迫すると見ています。サーバー向けに生産能力が移ることで、PC向けDRAMの供給は減る可能性もあります([TrendForce](https://www.trendforce.com/presscenter/news/20260930-13258.html))。",
-          "影響は定価に表れています。M5 Max搭載Mac Studioは$2,499からで、M4 Max版は$1,999からでした。The RegisterはDGX Sparkの値上げをメモリコストによるものと伝えています。128 GBのStrix HaloミニPCは、2026年10月初旬に約$3,300〜3,800で掲載されており、2025年の約$2,000から上昇しています([価格まとめ](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/)より)。",
-          "NVIDIA RTX 5090のMSRPは$1,999のままですが、[BuySellRAMの調査](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/)では、2026年8月8日から10月11日の希望価格で新品の最安値が$3,004〜$4,920.99でした。NVIDIAが同カードの生産を停止したとの未確認の報道もあります。",
+          "影響は定価に表れています。M5 Max搭載Mac Studioは$2,499からで、M4 Max版は[$1,999](https://www.apple.com/newsroom/2025/03/apple-unveils-new-mac-studio-the-most-powerful-mac-ever/)からでした。The RegisterはDGX Sparkの値上げをメモリコストによるものと伝えています。128 GBのStrix HaloミニPCは、2026年10月2日時点で約$3,300〜3,800で掲載されており、2025年の約$2,000から上昇しています([価格まとめ](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/)より)。",
+          "NVIDIA RTX 5090のMSRPは$1,999のままですが、[BuySellRAMの調査](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/)では、2026年8月8日から10月11日の希望価格で新品の最安値が$3,004〜$4,920.99でした。",
         ],
       },
       whoItsFor: {
@@ -834,11 +834,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           "预测中的桌面级别已成现实:苹果 Mac Studio(M5 Ultra,2026年8月25日发布,9月22日起发货)最高提供512 GB统一内存,带宽1.2 TB/s,512 GB选配预计10月下旬发货",
           "价格不降反升:NVIDIA 于2026年10月2日将128 GB DGX Spark 涨至$6,950(美国价格),比一年前高约75%,TrendForce 预计2027年DRAM供应仍将偏紧",
           "能装下什么:Qwen3.8-27B、gpt-oss-120b 和 DeepSeek V4 Flash 可在从单张32 GB显卡到256 GB的设备上运行;GLM-5.3(7530亿参数)在512 GB上勉强;DeepSeek V4 Pro(1.6万亿)和 Kimi K3(2.8万亿)需要服务器集群",
-          "Epoch AI 测得,最好的开放权重模型在综合指数上落后封闭前沿模型约四个月(2026年1月以来),在网络安全任务上落后6至7个月(2026年10月),但这些领先模型恰恰装不进桌面设备",
+          "Epoch AI 测得,最好的开放权重模型在综合指数上落后封闭前沿模型约四个月(2026年1月以来),在网络安全任务上落后6至7个月(截至最近一次更新),但这些领先模型恰恰装不进桌面设备",
           "本文是10篇《2027年本地AI趋势》系列的第5篇,相关变化另见混合本地-云路由、AI NAS家庭服务器和本地智能体AI",
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: "2026年10月,配备最高512 GB统一内存的桌面设备已经存在,但内存短缺使其更昂贵,最大的开放权重前沿模型仍无法装进任何一台。" },
+          { type: 'one-sentence', text: "2026年,配备最高512 GB统一内存的桌面设备已经存在,但内存短缺使其更昂贵,最大的开放权重前沿模型仍无法装进任何一台。" },
           { type: 'plain-terms', text: "简单来说:大型桌面AI电脑已经问世,价格比预期更高,能运行优秀的中等规模开放模型,但运行不了最大的那些。" },
         ],
       },
@@ -847,7 +847,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "桌面AI硬件实际上推出了什么?",
         content: [
           "**统一内存如今就是桌面AI级别,而且有三家厂商在出货。**苹果于2026年8月25日发布搭载 M5 Max 和 M5 Ultra 的 Mac Studio,并于9月22日发货。M5 Ultra 最高提供512 GB统一内存,带宽1.2 TB/s,96 GB版起价$5,499;M5 Max 最高128 GB,带宽最高614 GB/s,起价$2,499([Apple](https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/))。苹果表示512 GB配置将于10月下旬推出,因此截至10月19日尚未发货,我们也未找到公布的价格。本文所有价格均为美国价格。",
-          "NVIDIA DGX Spark(128 GB,273 GB/s)和搭载 AMD Ryzen AI Max+ 395“Strix Halo”的迷你PC处于128 GB级别,据报道,最高192 GB的 Ryzen AI Max+ 495 系统于2026年10月分批发货。10月2日,NVIDIA 将128 GB DGX Spark 涨至$6,950,比一年前高约75%,并通过合作伙伴新增了约$4,999的64 GB版本([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622))。",
+          "NVIDIA DGX Spark(128 GB,273 GB/s)和搭载 AMD Ryzen AI Max+ 395“Strix Halo”的迷你PC处于128 GB级别,据 [ComputingForGeeks](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/),最高192 GB的 Ryzen AI Max+ 495 系统处于预订或分批发货状态。10月2日,NVIDIA 将128 GB DGX Spark 涨至$6,950,比一年前高约75%,并通过合作伙伴新增了约$4,999的64 GB版本([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622))。",
           '这是PromptQuorum"本地AI趋势2027"系列(共10部分)的第5部分。有关同期出现的其他变化,另请参阅[混合本地-云路由](/zh/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing)、[AI NAS家庭服务器](/zh/prompt-bites/local-ai-trend-2027-ai-nas-home-server)和[本地代理式AI](/zh/prompt-bites/local-ai-trend-2027-local-agentic-ai)。',
         ],
         items: [
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "现在有哪些桌面AI设备,价格是多少?",
         content: [
           "**内存容量和价格现在划分了桌面级别。**下表列出了上文引用的厂商公告和报价中的内存、带宽及美国价格;Mac Studio 的512 GB选配尚无公布价格。",
-          "价格为2026年10月初的快照,因卖家和存储容量而异,下单前请查看最新报价。",
+          "价格为最近一次更新时(见“最后更新”)的快照,因卖家和存储容量而异,下单前请查看最新报价。",
         ],
         columns: ["设备", "内存", "带宽", "美国价格"],
         rows: [
@@ -882,13 +882,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ["模型", "规模与许可证", "桌面适配(估算)"],
         rows: [
-          { "模型": "Qwen3.8-27B", "规模与许可证": "27B稠密,Apache 2.0", "桌面适配(估算)": "约14 GB:一张32 GB显卡或Mac" },
-          { "模型": "gpt-oss-120b", "规模与许可证": "117B MoE(激活5.1B),Apache 2.0", "桌面适配(估算)": "可放入80 GB显卡:96 GB以上" },
-          { "模型": "DeepSeek V4 Flash", "规模与许可证": "284B(激活13B),MIT", "桌面适配(估算)": "约142 GB:192–256 GB设备" },
-          { "模型": "Mistral Large 3", "规模与许可证": "675B(激活41B),Apache 2.0", "桌面适配(估算)": "约340 GB:仅512 GB Mac" },
-          { "模型": "GLM-5.3", "规模与许可证": "753B,自有许可证", "桌面适配(估算)": "约380 GB:512 GB Mac,余量很小" },
-          { "模型": "DeepSeek V4 Pro", "规模与许可证": "1.6T(激活49B),MIT", "桌面适配(估算)": "约800 GB:仅限服务器" },
-          { "模型": "Kimi K3", "规模与许可证": "2.8T(激活104B),Kimi许可证", "桌面适配(估算)": "约1.4 TB:仅限集群" },
+          { "模型": "[Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)", "规模与许可证": "27B稠密,Apache 2.0", "桌面适配(估算)": "约14 GB:一张32 GB显卡或Mac" },
+          { "模型": "[gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)", "规模与许可证": "117B MoE(激活5.1B),Apache 2.0", "桌面适配(估算)": "可放入80 GB显卡:96 GB以上" },
+          { "模型": "[DeepSeek V4 Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash)", "规模与许可证": "284B(激活13B),MIT", "桌面适配(估算)": "约142 GB:192–256 GB设备" },
+          { "模型": "[Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512)", "规模与许可证": "675B(激活41B),Apache 2.0", "桌面适配(估算)": "约340 GB:仅512 GB Mac" },
+          { "模型": "[GLM-5.3](https://huggingface.co/zai-org/GLM-5.3)", "规模与许可证": "753B,自有许可证", "桌面适配(估算)": "约380 GB:512 GB Mac,余量很小" },
+          { "模型": "[DeepSeek V4 Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)", "规模与许可证": "1.6T(激活49B),MIT", "桌面适配(估算)": "约800 GB:仅限服务器" },
+          { "模型": "[Kimi K3](https://huggingface.co/moonshotai/Kimi-K3)", "规模与许可证": "2.8T(激活104B),Kimi许可证", "桌面适配(估算)": "约1.4 TB:仅限集群" },
         ],
       },
       gapToClosed: {
@@ -904,8 +904,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "桌面AI硬件为什么变贵了?",
         content: [
           "**是DRAM短缺,而不是需求疲软,把预测变成了涨价。**TrendForce 预计2026年第四季度常规DRAM合约价格环比再涨10%至15%,NAND涨15%至20%,并预计2027年DRAM供应仍将偏紧,随着产能转向服务器,PC用DRAM供应甚至可能减少([TrendForce](https://www.trendforce.com/presscenter/news/20260930-13258.html))。",
-          "影响已体现在标价上:搭载 M5 Max 的 Mac Studio 起价$2,499,而 M4 Max 版本起价为$1,999;The Register 将 DGX Spark 涨价归因于内存成本。据一份[价格汇总](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/),128 GB 的 Strix Halo 迷你PC在2026年10月初的挂牌价约为$3,300–3,800,而2025年约为$2,000。",
-          "NVIDIA RTX 5090 的建议零售价仍是$1,999,但 [BuySellRAM 的调查](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/)显示,2026年8月8日至10月11日的挂牌价中,全新最低价在$3,004至$4,920.99之间;另有未经证实的报道称 NVIDIA 已停止生产这款显卡。",
+          "影响已体现在标价上:搭载 M5 Max 的 Mac Studio 起价$2,499,而 M4 Max 版本起价为[$1,999](https://www.apple.com/newsroom/2025/03/apple-unveils-new-mac-studio-the-most-powerful-mac-ever/);The Register 将 DGX Spark 涨价归因于内存成本。据一份[价格汇总](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/),128 GB 的 Strix Halo 迷你PC在2026年10月2日的挂牌价约为$3,300–3,800,而2025年约为$2,000。",
+          "NVIDIA RTX 5090 的建议零售价仍是$1,999,但 [BuySellRAM 的调查](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/)显示,2026年8月8日至10月11日的挂牌价中,全新最低价在$3,004至$4,920.99之间。",
         ],
       },
       whoItsFor: {
@@ -1030,11 +1030,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           "El nivel de escritorio pronosticado es real: el Mac Studio de Apple con M5 Ultra (anunciado el 25 de agosto de 2026, en venta desde el 22 de septiembre) llega a 512 GB de memoria unificada a 1.2 TB/s, y la opción de 512 GB se espera a finales de octubre",
           "Los precios subieron en lugar de bajar: NVIDIA subió la DGX Spark de 128 GB a $6,950 el 2 de octubre de 2026 (precio en EE. UU.), cerca de un 75 % más que un año antes, y TrendForce espera que la oferta de DRAM siga ajustada en 2027",
           "Qué cabe: Qwen3.8-27B, gpt-oss-120b y DeepSeek V4 Flash funcionan en equipos desde una sola GPU de 32 GB hasta 256 GB; GLM-5.3 (753 mil millones de parámetros) queda al límite en 512 GB; DeepSeek V4 Pro (1.6 billones) y Kimi K3 (2.8 billones) necesitan un clúster de servidores",
-          "Epoch AI mide que los mejores modelos de pesos abiertos van unos cuatro meses por detrás de los modelos cerrados de vanguardia en su índice general (desde enero de 2026) y de 6 a 7 meses en tareas de ciberseguridad (octubre de 2026), pero esos modelos líderes son los que no caben en un escritorio",
+          "Epoch AI mide que los mejores modelos de pesos abiertos van unos cuatro meses por detrás de los modelos cerrados de vanguardia en su índice general (desde enero de 2026) y de 6 a 7 meses en tareas de ciberseguridad (en la última actualización), pero esos modelos líderes son los que no caben en un escritorio",
           "Esta es la parte 5 de una serie de 10 sobre las tendencias de la IA local 2027: consulta también el enrutamiento híbrido local-nube, los servidores domésticos NAS de IA y la IA agéntica local para otros cambios relacionados",
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: "En octubre de 2026 existen equipos de escritorio con hasta 512 GB de memoria unificada, pero la escasez de memoria los encareció y los mayores modelos abiertos de vanguardia siguen sin caber en uno solo." },
+          { type: 'one-sentence', text: "En 2026 existen equipos de escritorio con hasta 512 GB de memoria unificada, pero la escasez de memoria los encareció y los mayores modelos abiertos de vanguardia siguen sin caber en uno solo." },
           { type: 'plain-terms', text: "En palabras sencillas: los grandes ordenadores de escritorio para IA ya llegaron, cuestan más de lo esperado y ejecutan buenos modelos abiertos de tamaño medio, pero no los más grandes." },
         ],
       },
@@ -1043,7 +1043,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "¿Qué ha salido realmente en hardware de IA de escritorio?",
         content: [
           "**La memoria unificada es ahora el nivel de IA de escritorio, y tres fabricantes la ofrecen.** Apple anunció el Mac Studio con M5 Max y M5 Ultra el 25 de agosto de 2026, y se entregó el 22 de septiembre. El M5 Ultra ofrece hasta 512 GB de memoria unificada a 1.2 TB/s y parte de $5,499 con 96 GB; el M5 Max llega a 128 GB con hasta 614 GB/s desde $2,499 ([Apple](https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/)). Según Apple, la configuración de 512 GB llegará a finales de octubre, así que no se había entregado el 19 de octubre, y no encontramos un precio publicado. Todos los precios de este artículo son de EE. UU.; los precios en tu país pueden variar según impuestos locales.",
-          "La DGX Spark de NVIDIA (128 GB, 273 GB/s) y los miniPC AMD Ryzen AI Max+ 395 «Strix Halo» se sitúan en la clase de 128 GB, y se informó de que sistemas Ryzen AI Max+ 495 de hasta 192 GB se enviaban por lotes en octubre de 2026. El 2 de octubre, NVIDIA subió la DGX Spark de 128 GB a $6,950, cerca de un 75 % más que un año antes, y añadió una versión de 64 GB por unos $4,999 a través de socios ([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
+          "La DGX Spark de NVIDIA (128 GB, 273 GB/s) y los miniPC AMD Ryzen AI Max+ 395 «Strix Halo» se sitúan en la clase de 128 GB, y según [ComputingForGeeks](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/), los sistemas Ryzen AI Max+ 495 de hasta 192 GB están en preventa o se envían por lotes. El 2 de octubre, NVIDIA subió la DGX Spark de 128 GB a $6,950, cerca de un 75 % más que un año antes, y añadió una versión de 64 GB por unos $4,999 a través de socios ([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
           'Esta es la parte 5 de la serie de 10 partes Tendencias de IA local 2027 de PromptQuorum. Ver también [el enrutamiento híbrido local-nube](/es/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing), [los servidores NAS domésticos con IA](/es/prompt-bites/local-ai-trend-2027-ai-nas-home-server) y [la IA agéntica local](/es/prompt-bites/local-ai-trend-2027-local-agentic-ai) para otros cambios que llegan en paralelo a este.',
         ],
         items: [
@@ -1057,7 +1057,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "¿Qué equipos de IA de escritorio existen ahora y cuánto cuestan?",
         content: [
           "**La capacidad de memoria y el precio separan ahora los niveles de escritorio.** La tabla muestra memoria, ancho de banda y precios en EE. UU. según los anuncios y listados citados arriba; la opción de 512 GB del Mac Studio aún no tiene precio publicado.",
-          "Los precios son instantáneas de principios de octubre de 2026 y varían según el vendedor y el almacenamiento, así que comprueba el listado vigente antes de pedir.",
+          "Los precios son instantáneas de la última actualización (véase «Última actualización») y varían según el vendedor y el almacenamiento, así que comprueba el listado vigente antes de pedir.",
         ],
         columns: ["Equipo", "Memoria", "Ancho de banda", "Precio en EE. UU."],
         rows: [
@@ -1078,13 +1078,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ["Modelo", "Tamaño y licencia", "Encaje (estimación)"],
         rows: [
-          { "Modelo": "Qwen3.8-27B", "Tamaño y licencia": "27B denso, Apache 2.0", "Encaje (estimación)": "~14 GB: una GPU de 32 GB o Mac" },
-          { "Modelo": "gpt-oss-120b", "Tamaño y licencia": "117B MoE (5.1B activos), Apache 2.0", "Encaje (estimación)": "Cabe en GPU de 80 GB: desde 96 GB" },
-          { "Modelo": "DeepSeek V4 Flash", "Tamaño y licencia": "284B (13B activos), MIT", "Encaje (estimación)": "~142 GB: equipos de 192–256 GB" },
-          { "Modelo": "Mistral Large 3", "Tamaño y licencia": "675B (41B activos), Apache 2.0", "Encaje (estimación)": "~340 GB: solo Mac de 512 GB" },
-          { "Modelo": "GLM-5.3", "Tamaño y licencia": "753B, licencia propia", "Encaje (estimación)": "~380 GB: Mac de 512 GB, poco margen" },
-          { "Modelo": "DeepSeek V4 Pro", "Tamaño y licencia": "1.6T (49B activos), MIT", "Encaje (estimación)": "~800 GB: solo servidor" },
-          { "Modelo": "Kimi K3", "Tamaño y licencia": "2.8T (104B activos), licencia Kimi", "Encaje (estimación)": "~1.4 TB: solo clúster" },
+          { "Modelo": "[Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)", "Tamaño y licencia": "27B denso, Apache 2.0", "Encaje (estimación)": "~14 GB: una GPU de 32 GB o Mac" },
+          { "Modelo": "[gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)", "Tamaño y licencia": "117B MoE (5.1B activos), Apache 2.0", "Encaje (estimación)": "Cabe en GPU de 80 GB: desde 96 GB" },
+          { "Modelo": "[DeepSeek V4 Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash)", "Tamaño y licencia": "284B (13B activos), MIT", "Encaje (estimación)": "~142 GB: equipos de 192–256 GB" },
+          { "Modelo": "[Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512)", "Tamaño y licencia": "675B (41B activos), Apache 2.0", "Encaje (estimación)": "~340 GB: solo Mac de 512 GB" },
+          { "Modelo": "[GLM-5.3](https://huggingface.co/zai-org/GLM-5.3)", "Tamaño y licencia": "753B, licencia propia", "Encaje (estimación)": "~380 GB: Mac de 512 GB, poco margen" },
+          { "Modelo": "[DeepSeek V4 Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)", "Tamaño y licencia": "1.6T (49B activos), MIT", "Encaje (estimación)": "~800 GB: solo servidor" },
+          { "Modelo": "[Kimi K3](https://huggingface.co/moonshotai/Kimi-K3)", "Tamaño y licencia": "2.8T (104B activos), licencia Kimi", "Encaje (estimación)": "~1.4 TB: solo clúster" },
         ],
       },
       gapToClosed: {
@@ -1100,8 +1100,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "¿Por qué se encareció el hardware de IA de escritorio?",
         content: [
           "**Una escasez de DRAM, no una demanda débil, convirtió el pronóstico en una subida de precios.** TrendForce espera que los precios contractuales de la DRAM convencional suban otro 10-15 % trimestral en el cuarto trimestre de 2026 y los de NAND un 15-20 %, y que la oferta de DRAM siga ajustada en 2027, con una posible reducción de la DRAM para PC a medida que la capacidad se desplaza hacia los servidores ([TrendForce](https://www.trendforce.com/presscenter/news/20260930-13258.html)).",
-          "Los efectos se ven en los precios de lista: el Mac Studio con M5 Max parte de $2,499 donde la versión con M4 Max partía de $1,999, y The Register atribuye la subida de la DGX Spark al coste de la memoria. Los miniPC Strix Halo de 128 GB se listaban a unos $3,300–3,800 a principios de octubre de 2026, frente a unos $2,000 en 2025, según un [resumen de precios](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/).",
-          "El PVP de la RTX 5090 de NVIDIA sigue siendo $1,999, pero una [encuesta de BuySellRAM](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) sobre precios pedidos del 8 de agosto al 11 de octubre de 2026 halló los listados nuevos más baratos entre $3,004 y $4,920.99, y informes no confirmados dicen que NVIDIA ha dejado de producir la tarjeta.",
+          "Los efectos se ven en los precios de lista: el Mac Studio con M5 Max parte de $2,499 donde la versión con M4 Max partía de [$1,999](https://www.apple.com/newsroom/2025/03/apple-unveils-new-mac-studio-the-most-powerful-mac-ever/), y The Register atribuye la subida de la DGX Spark al coste de la memoria. Los miniPC Strix Halo de 128 GB se listaban a unos $3,300–3,800 el 2 de octubre de 2026, frente a unos $2,000 en 2025, según un [resumen de precios](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/).",
+          "El PVP de la RTX 5090 de NVIDIA sigue siendo $1,999, pero una [encuesta de BuySellRAM](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) sobre precios pedidos del 8 de agosto al 11 de octubre de 2026 halló los listados nuevos más baratos entre $3,004 y $4,920.99.",
         ],
       },
       whoItsFor: {
@@ -1226,11 +1226,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           "O nível de desktop previsto é real: o Mac Studio da Apple com M5 Ultra (anunciado em 25 de agosto de 2026, à venda desde 22 de setembro) chega a 512 GB de memória unificada a 1.2 TB/s, com a opção de 512 GB prevista para o fim de outubro",
           "Os preços subiram em vez de cair: a NVIDIA elevou a DGX Spark de 128 GB para US$ 6.950 em 2 de outubro de 2026 (preço nos EUA), cerca de 75% acima do preço de um ano antes, e a TrendForce espera que a oferta de DRAM continue apertada em 2027",
           "O que cabe: Qwen3.8-27B, gpt-oss-120b e DeepSeek V4 Flash rodam em máquinas de uma única GPU de 32 GB até 256 GB; o GLM-5.3 (753 bilhões de parâmetros) fica no limite com 512 GB; DeepSeek V4 Pro (1.6 trilhão) e Kimi K3 (2.8 trilhões) exigem um cluster de servidores",
-          "A Epoch AI mede que os melhores modelos de pesos abertos ficam cerca de quatro meses atrás dos modelos fechados de ponta em seu índice geral (desde janeiro de 2026) e de 6 a 7 meses atrás em tarefas de segurança cibernética (outubro de 2026), mas esses líderes são justamente os modelos que não cabem em um desktop",
+          "A Epoch AI mede que os melhores modelos de pesos abertos ficam cerca de quatro meses atrás dos modelos fechados de ponta em seu índice geral (desde janeiro de 2026) e de 6 a 7 meses atrás em tarefas de segurança cibernética (na última atualização), mas esses líderes são justamente os modelos que não cabem em um desktop",
           "Esta é a parte 5 de uma série de 10 sobre as tendências de IA local 2027 - veja também o roteamento híbrido local-nuvem, os servidores domésticos NAS de IA e a IA agêntica local para mudanças relacionadas",
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: "Em outubro de 2026 existem desktops com até 512 GB de memória unificada, mas a escassez de memória os encareceu e os maiores modelos abertos de ponta continuam não cabendo em um único deles." },
+          { type: 'one-sentence', text: "Em 2026 existem desktops com até 512 GB de memória unificada, mas a escassez de memória os encareceu e os maiores modelos abertos de ponta continuam não cabendo em um único deles." },
           { type: 'plain-terms', text: "Em termos simples: os grandes computadores de desktop para IA chegaram, custam mais do que o esperado e rodam bons modelos abertos de porte médio, mas não os maiores." },
         ],
       },
@@ -1239,7 +1239,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "O que realmente foi lançado em hardware de IA para desktop?",
         content: [
           "**A memória unificada agora é o nível de IA para desktop, e três fabricantes a oferecem.** A Apple anunciou o Mac Studio com M5 Max e M5 Ultra em 25 de agosto de 2026, e ele passou a ser entregue em 22 de setembro. O M5 Ultra oferece até 512 GB de memória unificada a 1.2 TB/s e começa em US$ 5.499 com 96 GB; o M5 Max chega a 128 GB com até 614 GB/s a partir de US$ 2.499 ([Apple](https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/)). Segundo a Apple, a configuração de 512 GB chega no fim de outubro, então ainda não era entregue em 19 de outubro, e não encontramos um preço publicado. Todos os preços deste artigo são dos EUA; os preços no Brasil podem variar bastante devido a impostos de importação.",
-          "A DGX Spark da NVIDIA (128 GB, 273 GB/s) e os mini PCs AMD Ryzen AI Max+ 395 \"Strix Halo\" ficam na classe de 128 GB, e sistemas Ryzen AI Max+ 495 com até 192 GB foram relatados como enviados em lotes em outubro de 2026. Em 2 de outubro, a NVIDIA elevou a DGX Spark de 128 GB para US$ 6.950, cerca de 75% acima do preço de um ano antes, e acrescentou uma versão de 64 GB por cerca de US$ 4.999 por meio de parceiros ([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
+          "A DGX Spark da NVIDIA (128 GB, 273 GB/s) e os mini PCs AMD Ryzen AI Max+ 395 \"Strix Halo\" ficam na classe de 128 GB, e sistemas Ryzen AI Max+ 495 com até 192 GB estão em pré-venda ou sendo enviados em lotes, segundo o [ComputingForGeeks](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/). Em 2 de outubro, a NVIDIA elevou a DGX Spark de 128 GB para US$ 6.950, cerca de 75% acima do preço de um ano antes, e acrescentou uma versão de 64 GB por cerca de US$ 4.999 por meio de parceiros ([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
           'Esta é a parte 5 da série de 10 partes Tendências de IA local 2027 da PromptQuorum. Veja também [roteamento híbrido local-nuvem](/pt/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing), [servidores NAS domésticos com IA](/pt/prompt-bites/local-ai-trend-2027-ai-nas-home-server) e [IA agêntica local](/pt/prompt-bites/local-ai-trend-2027-local-agentic-ai) para outras mudanças que chegam em paralelo a esta.',
         ],
         items: [
@@ -1253,7 +1253,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "Quais máquinas de IA para desktop existem agora e quanto custam?",
         content: [
           "**Capacidade de memória e preço agora separam os níveis de desktop.** A tabela mostra memória, largura de banda e preços nos EUA conforme os anúncios e listagens citados acima; a opção de 512 GB do Mac Studio ainda não tem preço publicado.",
-          "Os preços são retratos do início de outubro de 2026 e variam conforme o vendedor e o armazenamento, então confira a listagem atual antes de comprar.",
+          "Os preços são retratos da última atualização (veja «Última atualização») e variam conforme o vendedor e o armazenamento, então confira a listagem atual antes de comprar.",
         ],
         columns: ["Máquina", "Memória", "Largura de banda", "Preço nos EUA"],
         rows: [
@@ -1274,13 +1274,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ["Modelo", "Tamanho e licença", "Encaixe no desktop (est.)"],
         rows: [
-          { "Modelo": "Qwen3.8-27B", "Tamanho e licença": "27B denso, Apache 2.0", "Encaixe no desktop (est.)": "~14 GB: uma GPU de 32 GB ou Mac" },
-          { "Modelo": "gpt-oss-120b", "Tamanho e licença": "117B MoE (5.1B ativos), Apache 2.0", "Encaixe no desktop (est.)": "Cabe em GPU de 80 GB: a partir de 96 GB" },
-          { "Modelo": "DeepSeek V4 Flash", "Tamanho e licença": "284B (13B ativos), MIT", "Encaixe no desktop (est.)": "~142 GB: máquinas de 192–256 GB" },
-          { "Modelo": "Mistral Large 3", "Tamanho e licença": "675B (41B ativos), Apache 2.0", "Encaixe no desktop (est.)": "~340 GB: só Mac de 512 GB" },
-          { "Modelo": "GLM-5.3", "Tamanho e licença": "753B, licença própria", "Encaixe no desktop (est.)": "~380 GB: Mac de 512 GB, pouca folga" },
-          { "Modelo": "DeepSeek V4 Pro", "Tamanho e licença": "1.6T (49B ativos), MIT", "Encaixe no desktop (est.)": "~800 GB: só servidor" },
-          { "Modelo": "Kimi K3", "Tamanho e licença": "2.8T (104B ativos), licença Kimi", "Encaixe no desktop (est.)": "~1.4 TB: só cluster" },
+          { "Modelo": "[Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)", "Tamanho e licença": "27B denso, Apache 2.0", "Encaixe no desktop (est.)": "~14 GB: uma GPU de 32 GB ou Mac" },
+          { "Modelo": "[gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)", "Tamanho e licença": "117B MoE (5.1B ativos), Apache 2.0", "Encaixe no desktop (est.)": "Cabe em GPU de 80 GB: a partir de 96 GB" },
+          { "Modelo": "[DeepSeek V4 Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash)", "Tamanho e licença": "284B (13B ativos), MIT", "Encaixe no desktop (est.)": "~142 GB: máquinas de 192–256 GB" },
+          { "Modelo": "[Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512)", "Tamanho e licença": "675B (41B ativos), Apache 2.0", "Encaixe no desktop (est.)": "~340 GB: só Mac de 512 GB" },
+          { "Modelo": "[GLM-5.3](https://huggingface.co/zai-org/GLM-5.3)", "Tamanho e licença": "753B, licença própria", "Encaixe no desktop (est.)": "~380 GB: Mac de 512 GB, pouca folga" },
+          { "Modelo": "[DeepSeek V4 Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)", "Tamanho e licença": "1.6T (49B ativos), MIT", "Encaixe no desktop (est.)": "~800 GB: só servidor" },
+          { "Modelo": "[Kimi K3](https://huggingface.co/moonshotai/Kimi-K3)", "Tamanho e licença": "2.8T (104B ativos), licença Kimi", "Encaixe no desktop (est.)": "~1.4 TB: só cluster" },
         ],
       },
       gapToClosed: {
@@ -1296,8 +1296,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "Por que o hardware de IA para desktop ficou mais caro?",
         content: [
           "**Uma escassez de DRAM, e não demanda fraca, transformou a previsão em aumento de preço.** A TrendForce espera que os preços contratuais da DRAM convencional subam mais 10 a 15% sobre o trimestre anterior no quarto trimestre de 2026 e os de NAND, 15 a 20%, e que a oferta de DRAM continue apertada em 2027, com a DRAM para PCs podendo diminuir à medida que a capacidade migra para servidores ([TrendForce](https://www.trendforce.com/presscenter/news/20260930-13258.html)).",
-          "Os efeitos aparecem nos preços de tabela: o Mac Studio com M5 Max começa em US$ 2.499, enquanto a versão com M4 Max começava em US$ 1.999, e o The Register atribui o aumento da DGX Spark ao custo da memória. Mini PCs Strix Halo de 128 GB estavam listados por cerca de US$ 3.300–3.800 no início de outubro de 2026, contra cerca de US$ 2.000 em 2025, segundo um [levantamento de preços](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/).",
-          "O preço sugerido da RTX 5090 da NVIDIA continua sendo US$ 1.999, mas uma [pesquisa da BuySellRAM](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) com preços pedidos de 8 de agosto a 11 de outubro de 2026 encontrou as ofertas novas mais baratas entre US$ 3.004 e US$ 4.920,99, e relatos não confirmados dizem que a NVIDIA parou de produzir a placa.",
+          "Os efeitos aparecem nos preços de tabela: o Mac Studio com M5 Max começa em US$ 2.499, enquanto a versão com M4 Max começava em [US$ 1.999](https://www.apple.com/newsroom/2025/03/apple-unveils-new-mac-studio-the-most-powerful-mac-ever/), e o The Register atribui o aumento da DGX Spark ao custo da memória. Mini PCs Strix Halo de 128 GB estavam listados por cerca de US$ 3.300–3.800 em 2 de outubro de 2026, contra cerca de US$ 2.000 em 2025, segundo um [levantamento de preços](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/).",
+          "O preço sugerido da RTX 5090 da NVIDIA continua sendo US$ 1.999, mas uma [pesquisa da BuySellRAM](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) com preços pedidos de 8 de agosto a 11 de outubro de 2026 encontrou as ofertas novas mais baratas entre US$ 3.004 e US$ 4.920,99.",
         ],
       },
       whoItsFor: {
@@ -1422,11 +1422,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           "الفئة المكتبية المتوقعة أصبحت حقيقة: يصل Mac Studio من Apple بمعالج M5 Ultra (أُعلن عنه في 25 أغسطس 2026 ويُشحن منذ 22 سبتمبر) إلى 512 GB من الذاكرة الموحدة بسرعة 1.2 TB/s، ومن المتوقع وصول خيار 512 GB في أواخر أكتوبر",
           "ارتفعت الأسعار بدل أن تنخفض: رفعت NVIDIA سعر DGX Spark بسعة 128 GB إلى $6,950 في 2 أكتوبر 2026 (السعر في الولايات المتحدة)، أي نحو 75% فوق سعره قبل عام، وتتوقع TrendForce بقاء إمدادات DRAM شحيحة في 2027",
           "ما الذي يتسع: تعمل Qwen3.8-27B وgpt-oss-120b وDeepSeek V4 Flash على أجهزة تبدأ من بطاقة GPU واحدة بسعة 32 GB حتى 256 GB؛ ويقع GLM-5.3 (753 مليار معامل) على الحد في 512 GB؛ أما DeepSeek V4 Pro (1.6 تريليون) وKimi K3 (2.8 تريليون) فتحتاجان إلى مجموعة خوادم",
-          "تقيس Epoch AI تأخر أفضل النماذج مفتوحة الأوزان نحو أربعة أشهر عن النماذج المغلقة المتقدمة في مؤشرها العام (منذ يناير 2026) وبنحو 6 إلى 7 أشهر في مهام الأمن السيبراني (أكتوبر 2026)، لكن هذه النماذج المتصدرة هي بالذات التي لا تتسع في جهاز مكتبي",
+          "تقيس Epoch AI تأخر أفضل النماذج مفتوحة الأوزان نحو أربعة أشهر عن النماذج المغلقة المتقدمة في مؤشرها العام (منذ يناير 2026) وبنحو 6 إلى 7 أشهر في مهام الأمن السيبراني (عند آخر تحديث)، لكن هذه النماذج المتصدرة هي بالذات التي لا تتسع في جهاز مكتبي",
           "هذا هو الجزء 5 من سلسلة من 10 أجزاء عن اتجاهات الذكاء الاصطناعي المحلي 2027 - راجع أيضاً التوجيه الهجين بين المحلي والسحابي، وخوادم NAS المنزلية للذكاء الاصطناعي، والذكاء الاصطناعي الوكيل المحلي لتغيرات ذات صلة",
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: "في أكتوبر 2026 توجد أجهزة مكتبية بذاكرة موحدة تصل إلى 512 GB، لكن نقص الذاكرة جعلها أغلى، وما زالت أكبر النماذج المفتوحة المتقدمة لا تتسع في أي منها." },
+          { type: 'one-sentence', text: "في 2026 توجد أجهزة مكتبية بذاكرة موحدة تصل إلى 512 GB، لكن نقص الذاكرة جعلها أغلى، وما زالت أكبر النماذج المفتوحة المتقدمة لا تتسع في أي منها." },
           { type: 'plain-terms', text: "ببساطة: وصلت حواسيب سطح المكتب الكبيرة للذكاء الاصطناعي، وهي أغلى مما كان متوقعاً، وتشغّل نماذج مفتوحة جيدة متوسطة الحجم لكن ليس الأكبر منها." },
         ],
       },
@@ -1435,7 +1435,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "ما الذي صدر فعلاً من عتاد الذكاء الاصطناعي المكتبي؟",
         content: [
           "**الذاكرة الموحدة هي الآن فئة الذكاء الاصطناعي المكتبي، وتقدمها ثلاث شركات.** أعلنت Apple عن Mac Studio بمعالجي M5 Max وM5 Ultra في 25 أغسطس 2026، وبدأ شحنه في 22 سبتمبر. يوفّر M5 Ultra حتى 512 GB من الذاكرة الموحدة بسرعة 1.2 TB/s ويبدأ سعره من $5,499 مع 96 GB؛ ويصل M5 Max إلى 128 GB بسرعة تصل إلى 614 GB/s بدءاً من $2,499 ([Apple](https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/)). وتقول Apple إن تهيئة 512 GB ستصل في أواخر أكتوبر، أي أنها لم تُشحن حتى 19 أكتوبر، ولم نجد سعراً منشوراً لها. جميع الأسعار في هذا المقال هي أسعار الولايات المتحدة، وقد تختلف الأسعار في بلدك بحسب الأسواق والرسوم.",
-          "يقع جهاز NVIDIA DGX Spark (128 GB، 273 GB/s) وأجهزة AMD المصغّرة Ryzen AI Max+ 395 «Strix Halo» في فئة 128 GB، وأُفيد بأن أنظمة Ryzen AI Max+ 495 بسعة تصل إلى 192 GB تُشحن على دفعات في أكتوبر 2026. وفي 2 أكتوبر رفعت NVIDIA سعر DGX Spark بسعة 128 GB إلى $6,950، أي نحو 75% فوق سعره قبل عام، وأضافت نسخة بسعة 64 GB بنحو $4,999 عبر شركاء ([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
+          "يقع جهاز NVIDIA DGX Spark (128 GB، 273 GB/s) وأجهزة AMD المصغّرة Ryzen AI Max+ 395 «Strix Halo» في فئة 128 GB، وأُفيد بأن أنظمة Ryzen AI Max+ 495 بسعة تصل إلى 192 GB متاحة للطلب المسبق أو تُشحن على دفعات، بحسب [ComputingForGeeks](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/). وفي 2 أكتوبر رفعت NVIDIA سعر DGX Spark بسعة 128 GB إلى $6,950، أي نحو 75% فوق سعره قبل عام، وأضافت نسخة بسعة 64 GB بنحو $4,999 عبر شركاء ([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
           'هذا هو الجزء 5 من سلسلة PromptQuorum المكوّنة من 10 أجزاء بعنوان اتجاهات الذكاء الاصطناعي المحلي 2027. راجع أيضًا [التوجيه الهجين بين المحلي والسحابي](/ar/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing)، و[خوادم NAS المنزلية للذكاء الاصطناعي](/ar/prompt-bites/local-ai-trend-2027-ai-nas-home-server)، و[الذكاء الاصطناعي الوكيلي المحلي](/ar/prompt-bites/local-ai-trend-2027-local-agentic-ai) لتحولات أخرى تصل بالتوازي مع هذا التحول.',
         ],
         items: [
@@ -1449,7 +1449,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "أي أجهزة ذكاء اصطناعي مكتبية موجودة الآن، وكم تكلف؟",
         content: [
           "**سعة الذاكرة والسعر هما ما يفصل الآن بين الفئات المكتبية.** يعرض الجدول الذاكرة وعرض النطاق وأسعار الولايات المتحدة بحسب إعلانات الشركات والقوائم المذكورة أعلاه؛ وخيار 512 GB في Mac Studio ليس له سعر منشور بعد.",
-          "الأسعار لقطات من أوائل أكتوبر 2026 وتختلف بحسب البائع وسعة التخزين، لذا تحقق من القائمة الحالية قبل الطلب.",
+          "الأسعار لقطات عند آخر تحديث (راجع «آخر تحديث») وتختلف بحسب البائع وسعة التخزين، لذا تحقق من القائمة الحالية قبل الطلب.",
         ],
         columns: ["الجهاز", "الذاكرة", "عرض النطاق", "السعر في أمريكا"],
         rows: [
@@ -1470,13 +1470,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ["النموذج", "الحجم والترخيص", "الملاءمة للمكتب (تقدير)"],
         rows: [
-          { "النموذج": "Qwen3.8-27B", "الحجم والترخيص": "27B كثيف، Apache 2.0", "الملاءمة للمكتب (تقدير)": "~14 GB: بطاقة 32 GB أو Mac" },
-          { "النموذج": "gpt-oss-120b", "الحجم والترخيص": "117B MoE (5.1B نشط)، Apache 2.0", "الملاءمة للمكتب (تقدير)": "يتسع في GPU بسعة 80 GB: من 96 GB" },
-          { "النموذج": "DeepSeek V4 Flash", "الحجم والترخيص": "284B (13B نشط)، MIT", "الملاءمة للمكتب (تقدير)": "~142 GB: أجهزة 192–256 GB" },
-          { "النموذج": "Mistral Large 3", "الحجم والترخيص": "675B (41B نشط)، Apache 2.0", "الملاءمة للمكتب (تقدير)": "~340 GB: Mac بسعة 512 GB فقط" },
-          { "النموذج": "GLM-5.3", "الحجم والترخيص": "753B، ترخيص خاص", "الملاءمة للمكتب (تقدير)": "~380 GB: Mac بسعة 512 GB وهامش ضيق" },
-          { "النموذج": "DeepSeek V4 Pro", "الحجم والترخيص": "1.6T (49B نشط)، MIT", "الملاءمة للمكتب (تقدير)": "~800 GB: خادم فقط" },
-          { "النموذج": "Kimi K3", "الحجم والترخيص": "2.8T (104B نشط)، ترخيص Kimi", "الملاءمة للمكتب (تقدير)": "~1.4 TB: مجموعة خوادم فقط" },
+          { "النموذج": "[Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)", "الحجم والترخيص": "27B كثيف، Apache 2.0", "الملاءمة للمكتب (تقدير)": "~14 GB: بطاقة 32 GB أو Mac" },
+          { "النموذج": "[gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)", "الحجم والترخيص": "117B MoE (5.1B نشط)، Apache 2.0", "الملاءمة للمكتب (تقدير)": "يتسع في GPU بسعة 80 GB: من 96 GB" },
+          { "النموذج": "[DeepSeek V4 Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash)", "الحجم والترخيص": "284B (13B نشط)، MIT", "الملاءمة للمكتب (تقدير)": "~142 GB: أجهزة 192–256 GB" },
+          { "النموذج": "[Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512)", "الحجم والترخيص": "675B (41B نشط)، Apache 2.0", "الملاءمة للمكتب (تقدير)": "~340 GB: Mac بسعة 512 GB فقط" },
+          { "النموذج": "[GLM-5.3](https://huggingface.co/zai-org/GLM-5.3)", "الحجم والترخيص": "753B، ترخيص خاص", "الملاءمة للمكتب (تقدير)": "~380 GB: Mac بسعة 512 GB وهامش ضيق" },
+          { "النموذج": "[DeepSeek V4 Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)", "الحجم والترخيص": "1.6T (49B نشط)، MIT", "الملاءمة للمكتب (تقدير)": "~800 GB: خادم فقط" },
+          { "النموذج": "[Kimi K3](https://huggingface.co/moonshotai/Kimi-K3)", "الحجم والترخيص": "2.8T (104B نشط)، ترخيص Kimi", "الملاءمة للمكتب (تقدير)": "~1.4 TB: مجموعة خوادم فقط" },
         ],
       },
       gapToClosed: {
@@ -1492,8 +1492,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "لماذا أصبح عتاد الذكاء الاصطناعي المكتبي أغلى؟",
         content: [
           "**نقص DRAM، لا ضعف الطلب، هو ما حوّل التوقع إلى ارتفاع في الأسعار.** تتوقع TrendForce أن ترتفع أسعار عقود DRAM التقليدية بنسبة 10 إلى 15% إضافية عن الربع السابق في الربع الرابع من 2026، وNAND بنسبة 15 إلى 20%، وأن تبقى إمدادات DRAM شحيحة في 2027، وقد تتراجع إمدادات DRAM للحواسيب مع انتقال الطاقة الإنتاجية إلى الخوادم ([TrendForce](https://www.trendforce.com/presscenter/news/20260930-13258.html)).",
-          "تظهر الآثار في الأسعار المعلنة: يبدأ Mac Studio بمعالج M5 Max من $2,499 بينما بدأت نسخة M4 Max من $1,999، وتعزو The Register رفع سعر DGX Spark إلى تكلفة الذاكرة. وكانت أجهزة Strix Halo المصغّرة بسعة 128 GB معروضة بنحو $3,300–3,800 في أوائل أكتوبر 2026، مقابل نحو $2,000 في 2025، بحسب [ملخص للأسعار](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/).",
-          "لا يزال السعر الإرشادي لبطاقة NVIDIA RTX 5090 هو $1,999، لكن [استطلاعاً أجرته BuySellRAM](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) لأسعار الطلب من 8 أغسطس إلى 11 أكتوبر 2026 وجد أرخص العروض الجديدة بين $3,004 و$4,920.99، وتفيد تقارير غير مؤكدة بأن NVIDIA أوقفت إنتاج البطاقة.",
+          "تظهر الآثار في الأسعار المعلنة: يبدأ Mac Studio بمعالج M5 Max من $2,499 بينما بدأت نسخة M4 Max من [$1,999](https://www.apple.com/newsroom/2025/03/apple-unveils-new-mac-studio-the-most-powerful-mac-ever/)، وتعزو The Register رفع سعر DGX Spark إلى تكلفة الذاكرة. وكانت أجهزة Strix Halo المصغّرة بسعة 128 GB معروضة بنحو $3,300–3,800 في 2 أكتوبر 2026، مقابل نحو $2,000 في 2025، بحسب [ملخص للأسعار](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/).",
+          "لا يزال السعر الإرشادي لبطاقة NVIDIA RTX 5090 هو $1,999، لكن [استطلاعاً أجرته BuySellRAM](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/) لأسعار الطلب من 8 أغسطس إلى 11 أكتوبر 2026 وجد أرخص العروض الجديدة بين $3,004 و$4,920.99.",
         ],
       },
       whoItsFor: {
@@ -1618,11 +1618,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           "예측되었던 데스크톱 계층은 현실이 되었습니다. Apple의 Mac Studio(M5 Ultra, 2026년 8월 25일 발표, 9월 22일부터 출하)는 최대 512 GB 통합 메모리를 1.2 TB/s로 제공하며, 512 GB 옵션은 10월 말 예정입니다",
           "가격은 내리지 않고 올랐습니다. NVIDIA는 2026년 10월 2일 128 GB DGX Spark를 $6,950(미국 가격)으로 인상해 1년 전보다 약 75% 높아졌으며, TrendForce는 2027년에도 DRAM 공급이 빠듯할 것으로 예상합니다",
           "들어가는 모델: Qwen3.8-27B, gpt-oss-120b, DeepSeek V4 Flash는 32 GB GPU 한 장부터 256 GB 기기까지에서 실행됩니다. GLM-5.3(7,530억 파라미터)은 512 GB에서 아슬아슬하고, DeepSeek V4 Pro(1.6조)와 Kimi K3(2.8조)는 서버 클러스터가 필요합니다",
-          "Epoch AI는 종합 지수에서 최고의 오픈 웨이트 모델이 폐쇄형 프론티어 모델보다 약 4개월(2026년 1월 이후), 사이버 과제에서는 6~7개월(2026년 10월) 뒤처진 것으로 측정합니다. 그러나 그 선두 모델들이 바로 데스크톱에 들어가지 않는 모델입니다",
+          "Epoch AI는 종합 지수에서 최고의 오픈 웨이트 모델이 폐쇄형 프론티어 모델보다 약 4개월(2026년 1월 이후), 사이버 과제에서는 6~7개월(최근 업데이트 시점) 뒤처진 것으로 측정합니다. 그러나 그 선두 모델들이 바로 데스크톱에 들어가지 않는 모델입니다",
           "이 글은 총 10편으로 구성된 Local AI Trends 2027 시리즈의 5편입니다. 관련 변화로 하이브리드 로컬-클라우드 라우팅, AI NAS 홈 서버, 로컬 에이전틱 AI도 참고하십시오",
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: "2026년 10월 현재 최대 512 GB 통합 메모리를 갖춘 데스크톱 기기가 존재하지만, 메모리 부족으로 더 비싸졌고 가장 큰 오픈 웨이트 프론티어 모델은 여전히 한 대에 들어가지 않습니다." },
+          { type: 'one-sentence', text: "2026년 현재 최대 512 GB 통합 메모리를 갖춘 데스크톱 기기가 존재하지만, 메모리 부족으로 더 비싸졌고 가장 큰 오픈 웨이트 프론티어 모델은 여전히 한 대에 들어가지 않습니다." },
           { type: 'plain-terms', text: "쉽게 말해, 대형 데스크톱 AI 컴퓨터는 도착했고 예상보다 비싸며, 우수한 중형 오픈 모델은 실행하지만 가장 큰 모델은 실행하지 못합니다." },
         ],
       },
@@ -1631,7 +1631,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "데스크톱 AI 하드웨어에서 실제로 무엇이 출시되었습니까?",
         content: [
           "**통합 메모리가 이제 데스크톱 AI 계층이며, 세 제조사가 이를 출하합니다.** Apple은 2026년 8월 25일 M5 Max와 M5 Ultra를 탑재한 Mac Studio를 발표했고 9월 22일에 출하되었습니다. M5 Ultra는 최대 512 GB 통합 메모리를 1.2 TB/s로 제공하며 96 GB 모델이 $5,499부터 시작합니다. M5 Max는 최대 614 GB/s로 128 GB까지 지원하며 $2,499부터입니다([Apple](https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/)). Apple에 따르면 512 GB 구성은 10월 말에 나오므로 10월 19일 기준으로는 출하되지 않았고, 공개된 가격도 찾지 못했습니다. 이 글의 모든 가격은 미국 가격입니다.",
-          "NVIDIA의 DGX Spark(128 GB, 273 GB/s)와 AMD Ryzen AI Max+ 395 \"Strix Halo\" 미니 PC는 128 GB급에 해당하며, 최대 192 GB의 Ryzen AI Max+ 495 시스템은 2026년 10월에 순차적으로 출하되고 있다고 보도되었습니다. NVIDIA는 10월 2일 128 GB DGX Spark를 $6,950으로 인상해 1년 전보다 약 75% 높아졌고, 파트너를 통해 약 $4,999의 64 GB 버전도 추가했습니다([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
+          "NVIDIA의 DGX Spark(128 GB, 273 GB/s)와 AMD Ryzen AI Max+ 395 \"Strix Halo\" 미니 PC는 128 GB급에 해당하며, 최대 192 GB의 Ryzen AI Max+ 495 시스템은 [ComputingForGeeks](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/)에 따르면 예약 주문 중이거나 순차적으로 출하되고 있습니다. NVIDIA는 10월 2일 128 GB DGX Spark를 $6,950으로 인상해 1년 전보다 약 75% 높아졌고, 파트너를 통해 약 $4,999의 64 GB 버전도 추가했습니다([The Register](https://www.theregister.com/systems/2026/10/02/nvidia-debuts-4999-dgx-spark-with-half-the-ram-and-storage-amid-memory-crunch/5300622)).",
           '이 글은 PromptQuorum의 10부작 로컬 AI 트렌드 2027 시리즈의 5부입니다. 이와 함께 진행되는 다른 변화에 대해서는 [하이브리드 로컬-클라우드 라우팅](/ko/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing), [AI NAS 홈 서버](/ko/prompt-bites/local-ai-trend-2027-ai-nas-home-server), [로컬 에이전틱 AI](/ko/prompt-bites/local-ai-trend-2027-local-agentic-ai)도 참고하세요.',
         ],
         items: [
@@ -1645,7 +1645,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "지금 어떤 데스크톱 AI 기기가 있으며 가격은 얼마입니까?",
         content: [
           "**메모리 용량과 가격이 이제 데스크톱 계층을 나눕니다.** 표는 위에서 인용한 제조사 발표와 판매 목록에 따른 메모리, 대역폭, 미국 가격을 보여 줍니다. Mac Studio의 512 GB 옵션은 아직 공개 가격이 없습니다.",
-          "가격은 2026년 10월 초 시점의 스냅샷이며 판매처와 저장 용량에 따라 다르므로, 주문 전에 최신 판매 목록을 확인하십시오.",
+          "가격은 최근 업데이트 시점(「최종 업데이트」 참조)의 스냅샷이며 판매처와 저장 용량에 따라 다르므로, 주문 전에 최신 판매 목록을 확인하십시오.",
         ],
         columns: ["기기", "메모리", "대역폭", "미국 가격"],
         rows: [
@@ -1666,13 +1666,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         columns: ["모델", "크기와 라이선스", "데스크톱 적합도(추정)"],
         rows: [
-          { "모델": "Qwen3.8-27B", "크기와 라이선스": "27B 밀집, Apache 2.0", "데스크톱 적합도(추정)": "~14 GB: 32 GB GPU 또는 Mac" },
-          { "모델": "gpt-oss-120b", "크기와 라이선스": "117B MoE(활성 5.1B), Apache 2.0", "데스크톱 적합도(추정)": "80 GB GPU에 들어감: 96 GB 이상" },
-          { "모델": "DeepSeek V4 Flash", "크기와 라이선스": "284B(활성 13B), MIT", "데스크톱 적합도(추정)": "~142 GB: 192~256 GB 기기" },
-          { "모델": "Mistral Large 3", "크기와 라이선스": "675B(활성 41B), Apache 2.0", "데스크톱 적합도(추정)": "~340 GB: 512 GB Mac만 가능" },
-          { "모델": "GLM-5.3", "크기와 라이선스": "753B, 자체 라이선스", "데스크톱 적합도(추정)": "~380 GB: 512 GB Mac, 여유 적음" },
-          { "모델": "DeepSeek V4 Pro", "크기와 라이선스": "1.6T(활성 49B), MIT", "데스크톱 적합도(추정)": "~800 GB: 서버만 가능" },
-          { "모델": "Kimi K3", "크기와 라이선스": "2.8T(활성 104B), Kimi 라이선스", "데스크톱 적합도(추정)": "~1.4 TB: 클러스터만 가능" },
+          { "모델": "[Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)", "크기와 라이선스": "27B 밀집, Apache 2.0", "데스크톱 적합도(추정)": "~14 GB: 32 GB GPU 또는 Mac" },
+          { "모델": "[gpt-oss-120b](https://huggingface.co/openai/gpt-oss-120b)", "크기와 라이선스": "117B MoE(활성 5.1B), Apache 2.0", "데스크톱 적합도(추정)": "80 GB GPU에 들어감: 96 GB 이상" },
+          { "모델": "[DeepSeek V4 Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash)", "크기와 라이선스": "284B(활성 13B), MIT", "데스크톱 적합도(추정)": "~142 GB: 192~256 GB 기기" },
+          { "모델": "[Mistral Large 3](https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512)", "크기와 라이선스": "675B(활성 41B), Apache 2.0", "데스크톱 적합도(추정)": "~340 GB: 512 GB Mac만 가능" },
+          { "모델": "[GLM-5.3](https://huggingface.co/zai-org/GLM-5.3)", "크기와 라이선스": "753B, 자체 라이선스", "데스크톱 적합도(추정)": "~380 GB: 512 GB Mac, 여유 적음" },
+          { "모델": "[DeepSeek V4 Pro](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro)", "크기와 라이선스": "1.6T(활성 49B), MIT", "데스크톱 적합도(추정)": "~800 GB: 서버만 가능" },
+          { "모델": "[Kimi K3](https://huggingface.co/moonshotai/Kimi-K3)", "크기와 라이선스": "2.8T(활성 104B), Kimi 라이선스", "데스크톱 적합도(추정)": "~1.4 TB: 클러스터만 가능" },
         ],
       },
       gapToClosed: {
@@ -1688,8 +1688,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: "데스크톱 AI 하드웨어는 왜 더 비싸졌습니까?",
         content: [
           "**예측을 가격 인상으로 바꾼 것은 약한 수요가 아니라 DRAM 부족입니다.** TrendForce는 2026년 4분기에 일반 DRAM 계약 가격이 전 분기 대비 10~15%, NAND가 15~20% 더 오를 것으로 보며, 2027년에도 DRAM 공급이 빠듯하고 생산 능력이 서버로 이동하면서 PC용 DRAM 공급이 줄어들 수 있다고 예상합니다([TrendForce](https://www.trendforce.com/presscenter/news/20260930-13258.html)).",
-          "그 영향은 정가에 드러납니다. M5 Max 탑재 Mac Studio는 $2,499부터이고 M4 Max 버전은 $1,999부터였으며, The Register는 DGX Spark 인상을 메모리 비용 때문이라고 설명합니다. 128 GB Strix Halo 미니 PC는 2026년 10월 초 약 $3,300~3,800에 판매 목록에 올랐으며, 2025년의 약 $2,000에서 오른 가격입니다([가격 정리](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/) 기준).",
-          "NVIDIA RTX 5090의 권장 소비자가는 여전히 $1,999이지만, [BuySellRAM 조사](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/)에서 2026년 8월 8일부터 10월 11일까지의 호가를 보면 신품 최저가가 $3,004~$4,920.99였으며, NVIDIA가 이 카드 생산을 중단했다는 미확인 보도도 있습니다.",
+          "그 영향은 정가에 드러납니다. M5 Max 탑재 Mac Studio는 $2,499부터이고 M4 Max 버전은 [$1,999](https://www.apple.com/newsroom/2025/03/apple-unveils-new-mac-studio-the-most-powerful-mac-ever/)부터였으며, The Register는 DGX Spark 인상을 메모리 비용 때문이라고 설명합니다. 128 GB Strix Halo 미니 PC는 2026년 10월 2일 약 $3,300~3,800에 판매 목록에 올랐으며, 2025년의 약 $2,000에서 오른 가격입니다([가격 정리](https://computingforgeeks.com/ryzen-ai-max-495-vs-395/) 기준).",
+          "NVIDIA RTX 5090의 권장 소비자가는 여전히 $1,999이지만, [BuySellRAM 조사](https://www.buysellram.com/blog/nvidia-consumer-gpu-market-update/)에서 2026년 8월 8일부터 10월 11일까지의 호가를 보면 신품 최저가가 $3,004~$4,920.99였습니다.",
         ],
       },
       whoItsFor: {
