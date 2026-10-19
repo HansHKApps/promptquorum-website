@@ -1269,6 +1269,11 @@
     "urlSlug": "memoryai-review",
     "url": "/power-local-llm/memoryai-review"
   },
+  "llamatik": {
+    "cluster": "power-local-llm",
+    "urlSlug": "llamatik-review",
+    "url": "/power-local-llm/llamatik-review"
+  },
   "whisper-notes": {
     "cluster": "power-local-llm",
     "urlSlug": "whisper-notes-review",

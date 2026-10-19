@@ -105,6 +105,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llamatik-review",
+        "title": "Llamatik Review: Free Offline AI Chatbot for Android and iPhone",
+        "url": "/power-local-llm/llamatik-review",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "memoryai-review",
         "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
         "url": "/power-local-llm/memoryai-review",
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
         "dateModified": "2026-10-17",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "koboldcpp-review",
-        "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
-        "url": "/power-local-llm/koboldcpp-review",
-        "dateModified": "2026-10-17",
-        "tier": "about"
       }
     ],
-    "totalCount": 165,
+    "totalCount": 166,
     "capped": true
   },
   "vLLM": {
@@ -5005,6 +5005,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llamatik-review",
+        "title": "Llamatik Review: Free Offline AI Chatbot for Android and iPhone",
+        "url": "/power-local-llm/llamatik-review",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "transcriptionsuite-review",
         "title": "TranscriptionSuite Review: Free Local Speech-to-Text with Speaker Labels",
         "url": "/power-local-llm/transcriptionsuite-review",
@@ -5066,17 +5074,9 @@
         "url": "/power-local-llm/willow-inference-server-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "meetily-review",
-        "title": "Meetily Review: Local, Privacy-First AI Meeting Notes",
-        "url": "/power-local-llm/meetily-review",
-        "dateModified": "2026-09-18",
-        "tier": "about"
       }
     ],
-    "totalCount": 24,
+    "totalCount": 25,
     "capped": true
   },
   "faster-whisper": {
@@ -5900,7 +5900,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 37,
+    "totalCount": 38,
     "capped": true
   },
   "Pocket AI": {
@@ -11411,6 +11411,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llamatik-review",
+        "title": "Llamatik Review: Free Offline AI Chatbot for Android and iPhone",
+        "url": "/power-local-llm/llamatik-review",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "memoryai-review",
         "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
         "url": "/power-local-llm/memoryai-review",
@@ -11464,18 +11472,10 @@
         "url": "/power-local-llm/tokforge-review",
         "dateModified": "2026-10-09",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llm-hub-review",
-        "title": "LLM Hub Review: On-Device AI Suite for Android and iPhone",
-        "url": "/power-local-llm/llm-hub-review",
-        "dateModified": "2026-10-03",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "LLM Hub": {
     "articles": [
@@ -11728,6 +11728,20 @@
         "slug": "memoryai-review",
         "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
         "url": "/power-local-llm/memoryai-review",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Llamatik": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "llamatik-review",
+        "title": "Llamatik Review: Free Offline AI Chatbot for Android and iPhone",
+        "url": "/power-local-llm/llamatik-review",
         "dateModified": "2026-10-19",
         "tier": "about"
       }
