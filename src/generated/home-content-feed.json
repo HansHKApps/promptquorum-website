@@ -54110,9 +54110,9 @@
   {
     "lang": "en",
     "title": "Best Copilot+ PC for Local LLMs in 2026: NPU vs GPU",
-    "excerpt": "Don't buy a Copilot+ PC for its NPU alone. For local LLMs, prioritize RAM, GPU, and memory bandwidth — the NPU accelerates Windows AI features, not Ollama.",
+    "excerpt": "Don't buy a Copilot+ PC for its NPU alone. Intel, AMD and Snapdragon NPUs power Windows AI features; for local LLMs, RAM, GPU and bandwidth matter more.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54121,7 +54121,7 @@
     "title": "Bester Copilot+-PC für lokale LLMs 2026: NPU vs. GPU",
     "excerpt": "Kaufen Sie einen Copilot+-PC nicht nur wegen der NPU. Für lokale LLMs zählen RAM, GPU und Speicherbandbreite — die NPU dient Windows-Funktionen, nicht Ollama.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/de/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54130,7 +54130,7 @@
     "title": "Meilleur PC Copilot+ pour LLM Locaux en 2026 : NPU vs GPU",
     "excerpt": "N'achetez pas un PC Copilot+ juste pour son NPU. Pour les LLM locaux, priorisez la RAM, le GPU et la bande passante mémoire — le NPU sert Windows, pas Ollama.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/fr/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54139,7 +54139,7 @@
     "title": "2026年版ローカルLLMに最適なCopilot+ PC: NPU vs GPU",
     "excerpt": "Copilot+ PCをNPUだけで選ばないこと。ローカルLLMではRAM・GPU・メモリ帯域幅を優先——NPUはWindows機能向けでOllamaには使われません。",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/ja/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54148,7 +54148,7 @@
     "title": "2026 年本地 LLM 最佳 Copilot+ PC：NPU 对比 GPU",
     "excerpt": "不要只为了 NPU 而购买 Copilot+ PC。运行本地 LLM 应优先考虑内存、GPU 和内存带宽——NPU 服务于 Windows 功能，而非 Ollama。",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/zh/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54157,7 +54157,7 @@
     "title": "Mejor Copilot+ PC para LLMs Locales en 2026: NPU vs GPU",
     "excerpt": "No compres una Copilot+ PC solo por su NPU. Para LLMs locales, prioriza RAM, GPU y ancho de banda de memoria — la NPU sirve a funciones de Windows, no a Ollama.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/es/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54166,7 +54166,7 @@
     "title": "Melhor PC Copilot+ para LLMs Locais em 2026: NPU vs GPU",
     "excerpt": "Não compre um PC Copilot+ só pela NPU. Para LLMs locais, priorize RAM, GPU e largura de banda de memória — a NPU serve recursos do Windows, não o Ollama.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/pt/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54175,7 +54175,7 @@
     "title": "أفضل جهاز Copilot+ PC لتشغيل LLM محلي في 2026: NPU مقابل GPU",
     "excerpt": "لا تشترِ جهاز Copilot+ PC من أجل NPU فقط. لتشغيل LLM محلي، امنح الأولوية للذاكرة وGPU — فـ NPU يخدم ميزات Windows وليس Ollama.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/ar/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
@@ -54184,7 +54184,7 @@
     "title": "2026년 로컬 LLM에 최적인 Copilot+ PC: NPU 대 GPU",
     "excerpt": "NPU만 보고 Copilot+ PC를 사지 마십시오. 로컬 LLM에는 RAM·GPU·메모리 대역폭이 우선입니다 — NPU는 Windows 기능용이지 Ollama용이 아닙니다.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-10-19",
     "url": "/ko/prompt-bites/best-npu-copilot-pc-local-llm",
     "cluster": "prompt-bites"
   },
