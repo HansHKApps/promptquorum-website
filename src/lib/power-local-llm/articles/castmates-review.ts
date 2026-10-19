@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad'],
     leadAnswerBlock:
-      '**Castmates (version 1.1.7 as of 19 October 2026) is a free iPhone app that, per its listing, runs a character-chat AI on the phone after a one-time model download of about 1.9 GB, with 32 ready-made characters and no account.** Its in-app Pro plan removes the daily message cap and unlocks an optional adults-only Mature mode. The app is closed source and no source names the model or runtime, so the on-device claim rests on the developer\'s word.',
+      '**Castmates (version 1.1.7 as of 19 October 2026) is a free iPhone app that, per its listing, runs a character-chat AI on the phone after a one-time model download of about 1.9 GB, with 32 ready-made characters and no account.** Its in-app Pro plan removes the daily message cap and unlocks an optional adults-only Mature mode. The app is closed source; the developer names the model as Impish Llama 3B (Llama 3 based, quantized to Q4_K_M) running through llama.cpp, so the on-device claim still rests on the developer\'s word.',
     quickAnswerTop: {
       en: {
         question: 'Is Castmates really offline and free?',
@@ -70,6 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'What We Could Not Verify', anchor: 'who-should-not-use' },
       { label: 'Competitors and Alternatives', anchor: 'vs-alternatives' },
       { label: 'Frequently Asked Questions', anchor: 'faq' },
+      { label: 'From the Maker', anchor: 'from-the-maker' },
       { label: 'Verdict', anchor: 'verdict' },
       { label: 'Sources', anchor: 'sources' },
       { label: 'Related Reading', anchor: 'related-reading' },
@@ -125,7 +126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Platform': 'Content and safety', 'Where to get it': '[get-castmates.com/age-suitability](https://get-castmates.com/age-suitability)' },
           { 'Platform': 'Terms', 'Where to get it': '[get-castmates.com/terms](https://get-castmates.com/terms)' },
         ],
-        note: 'Version reviewed: 1.1.7, released on 19 October 2026 per the App Store listing. The 1.1.6 release notes say phones with 4 GB of RAM or less get an explanation instead of the model download, so check your iPhone before you install. The listing publishes no other RAM figure.',
+        note: 'Version reviewed: 1.1.7, released on 19 October 2026 per the App Store listing. The developer says the app needs an iPhone with 6 GB of RAM or more; phones with 4 GB or less get an explanation instead of the model download, so check your iPhone before you install. The model is Impish Llama 3B (Llama 3 based, Q4_K_M, about 1.9 GB), run through llama.cpp with a 4,096-token context.',
       },
       pricing: {
         id: 'pricing',
@@ -186,7 +187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacy and Network Use',
         content: [
           '**The developer says conversations, custom characters, avatars and memories stay on the iPhone and that the company never receives, sees or stores them.** The policy names one remote download: the one-time model file, hosted on Cloudflare R2.',
-          'The two privacy statements differ in scope. The App Store label says "Data Not Collected", while the [privacy policy](https://get-castmates.com/privacy), last updated on 10 October 2026, says anonymous usage events go to Mixpanel (app opens, onboarding progress, paywall views and message counts, tied to a random on-device identifier, with IP-based location disabled) and that RevenueCat tracks subscription status through an anonymized app-user ID. The policy says these events hold no message content and nothing that identifies you, and it does not state how long Mixpanel keeps them. Purchases go through Apple.',
+          'The App Store label reads "Data Not Linked to You", in line with the [privacy policy](https://get-castmates.com/privacy), last updated on 10 October 2026, which says anonymous usage events go to Mixpanel (app opens, onboarding progress, paywall views and message counts, tied to a random on-device identifier, with IP-based location disabled) and that RevenueCat tracks subscription status through an anonymized app-user ID. The policy says these events hold no message content and nothing that identifies you, and it does not state how long Mixpanel keeps them. Purchases go through Apple.',
         ],
         callouts: [
           {
@@ -224,9 +225,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What We Could Not Verify',
         items: [
           '**Hands-on quality.** PromptQuorum did not run the app, so reply quality, speed, battery use and the real strength of the content filter are not assessed.',
-          '**Model and runtime.** No source names the model, its size in parameters or the inference engine.',
           '**Source code and license.** The app is closed source and no public repository was found.',
-          '**Traffic and labels.** PromptQuorum has not audited network traffic, so the gap between the "Data Not Collected" label and the analytics in the policy is not resolved.',
+          '**Traffic.** PromptQuorum has not audited network traffic, so the analytics described in the policy are not independently verified.',
           '**Company details.** The website shows only "© 2026 Castmates" and a hidden support email; the privacy policy gives no legal entity.',
           '**Track record.** The app is about three months old and the sources give no support commitment.',
         ],
@@ -270,11 +270,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'From the Maker',
+        content: [
+          'Josip Markovic, the developer behind Castmates, shared the following about the app and the reasons for building it. It is presented as the developer\'s own words, lightly edited for readability, not as PromptQuorum\'s independent editorial assessment:',
+          '"I built Castmates because every character app I tried wanted an account and sent every message to a server. A 3B model on a phone sounded too small for real stories, so most of the work went into making it hold a scene: session summaries so characters remember you, guards that catch the model breaking character, and a lot of eval runs on a Mac before anything ships. Next up is a faster first download and seasonal characters, starting with three Halloween ones."',
+        ],
+        note: '— Josip Markovic, developer',
+      },
       verdict: {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Castmates is a free iPhone roleplay app that says its character chat runs on the device, with 32 ready-made characters, custom characters, session memory and age controls for its optional Mature mode. It is also actively updated, with a release on the day this review was checked. Against that, it is closed source, about three months old, rated by few users, English only, and the model behind it is unnamed; its privacy label and its policy also describe data collection differently. It suits adults who want account-free character chat and accept a young, closed app; readers who want open code and their own models can compare [SillyTavern](/local-llms/sillytavern-review) or [PocketPal AI](/power-local-llm/pocketpal-ai-review).',
+          'Castmates is a free iPhone roleplay app that says its character chat runs on the device, with 32 ready-made characters, custom characters, session memory and age controls for its optional Mature mode. It is also actively updated, with a release on the day this review was checked. Against that, it is closed source, about three months old, rated by few users, English only, and it needs an iPhone with 6 GB of RAM or more. It suits adults who want account-free character chat and accept a young, closed app; readers who want open code and their own models can compare [SillyTavern](/local-llms/sillytavern-review) or [PocketPal AI](/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -362,7 +371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad'],
     leadAnswerBlock:
-      '**Castmates (Version 1.1.7, Stand 19. Oktober 2026) ist eine kostenlose iPhone-App, die laut Eintrag nach einem einmaligen Modell-Download von etwa 1,9 GB eine Charakterchat-KI auf dem Telefon ausführt, mit 32 fertigen Charakteren und ohne Konto.** Der In-App-Tarif Pro hebt das tägliche Nachrichtenlimit auf und schaltet einen optionalen Mature-Modus nur für Erwachsene frei. Die App ist nicht quelloffen, und keine Quelle nennt Modell oder Laufzeitumgebung; die Aussage zur Ausführung auf dem Gerät beruht daher auf dem Wort des Entwicklers.',
+      '**Castmates (Version 1.1.7, Stand 19. Oktober 2026) ist eine kostenlose iPhone-App, die laut Eintrag nach einem einmaligen Modell-Download von etwa 1,9 GB eine Charakterchat-KI auf dem Telefon ausführt, mit 32 fertigen Charakteren und ohne Konto.** Der In-App-Tarif Pro hebt das tägliche Nachrichtenlimit auf und schaltet einen optionalen Mature-Modus nur für Erwachsene frei. Die App ist nicht quelloffen; der Entwickler nennt als Modell Impish Llama 3B (auf Llama 3 basierend, Q4_K_M) mit llama.cpp als Laufzeit, die Aussage zur Ausführung auf dem Gerät beruht daher weiterhin auf dem Wort des Entwicklers.',
     quickAnswerTop: {
       de: {
         question: 'Läuft Castmates wirklich offline und kostenlos?',
@@ -390,6 +399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Was wir nicht überprüfen konnten', anchor: 'who-should-not-use' },
       { label: 'Wettbewerber und Alternativen', anchor: 'vs-alternatives' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
+      { label: 'Vom Entwickler', anchor: 'from-the-maker' },
       { label: 'Fazit', anchor: 'verdict' },
       { label: 'Quellen', anchor: 'sources' },
       { label: 'Weiterführende Artikel', anchor: 'related-reading' },
@@ -445,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plattform': 'Inhalte und Sicherheit', 'Bezugsquelle': '[get-castmates.com/age-suitability](https://get-castmates.com/age-suitability)' },
           { 'Plattform': 'Nutzungsbedingungen', 'Bezugsquelle': '[get-castmates.com/terms](https://get-castmates.com/terms)' },
         ],
-        note: 'Geprüfte Version: 1.1.7, laut App-Store-Eintrag am 19. Oktober 2026 veröffentlicht. Die Release Notes zu 1.1.6 besagen, dass Telefone mit 4 GB RAM oder weniger statt des Modell-Downloads eine Erklärung erhalten; prüfen Sie Ihr iPhone daher vor der Installation. Eine weitere RAM-Angabe enthält der Eintrag nicht.',
+        note: 'Geprüfte Version: 1.1.7, laut App-Store-Eintrag am 19. Oktober 2026 veröffentlicht. Laut Entwickler ist ein iPhone mit mindestens 6 GB RAM nötig; Telefone mit 4 GB oder weniger erhalten statt des Modell-Downloads eine Erklärung, prüfen Sie Ihr iPhone daher vor der Installation. Das Modell ist Impish Llama 3B (auf Llama 3 basierend, Q4_K_M, etwa 1,9 GB) und läuft über llama.cpp mit 4.096 Token Kontext.',
       },
       pricing: {
         id: 'pricing',
@@ -506,7 +516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datenschutz und Netzwerknutzung',
         content: [
           '**Laut Entwickler bleiben Gespräche, eigene Charaktere, Avatare und Erinnerungen auf dem iPhone, und das Unternehmen erhält, sieht oder speichert sie nie.** Die Erklärung nennt einen Fremd-Download: die einmalige Modelldatei, die bei Cloudflare R2 liegt.',
-          'Die beiden Datenschutzangaben unterscheiden sich im Umfang. Das App-Store-Label sagt „Keine Daten erfasst“, während die [Datenschutzerklärung](https://get-castmates.com/privacy) (zuletzt aktualisiert am 10. Oktober 2026) angibt, dass anonyme Nutzungsereignisse an Mixpanel gehen (App-Starts, Onboarding-Fortschritt, Paywall-Aufrufe und Nachrichtenzahlen, verknüpft mit einer zufälligen Kennung auf dem Gerät, bei deaktivierter IP-basierter Ortung) und dass RevenueCat den Abostatus über eine anonymisierte App-Nutzer-ID verwaltet. Die Erklärung sagt, diese Ereignisse enthielten keine Nachrichteninhalte und nichts, was Sie identifiziert, und nennt keine Speicherdauer bei Mixpanel. Käufe laufen über Apple.',
+          'Das App-Store-Label lautet „Nicht mit dir verknüpfte Daten“, passend zur [Datenschutzerklärung](https://get-castmates.com/privacy) (zuletzt aktualisiert am 10. Oktober 2026), die angibt, dass anonyme Nutzungsereignisse an Mixpanel gehen (App-Starts, Onboarding-Fortschritt, Paywall-Aufrufe und Nachrichtenzahlen, verknüpft mit einer zufälligen Kennung auf dem Gerät, bei deaktivierter IP-basierter Ortung) und dass RevenueCat den Abostatus über eine anonymisierte App-Nutzer-ID verwaltet. Die Erklärung sagt, diese Ereignisse enthielten keine Nachrichteninhalte und nichts, was Sie identifiziert, und nennt keine Speicherdauer bei Mixpanel. Käufe laufen über Apple.',
         ],
         callouts: [
           {
@@ -544,9 +554,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was wir nicht überprüfen konnten',
         items: [
           '**Qualität im Praxistest.** PromptQuorum hat die App nicht ausgeführt; Antwortqualität, Geschwindigkeit, Akkuverbrauch und die tatsächliche Stärke des Inhaltsfilters sind nicht bewertet.',
-          '**Modell und Laufzeit.** Keine Quelle nennt das Modell, seine Parameterzahl oder die Inferenz-Engine.',
           '**Quellcode und Lizenz.** Die App ist nicht quelloffen, ein öffentliches Repository wurde nicht gefunden.',
-          '**Datenverkehr und Label.** PromptQuorum hat den Netzwerkverkehr nicht geprüft, daher bleibt der Unterschied zwischen dem Label „Keine Daten erfasst“ und den Analysen in der Erklärung ungeklärt.',
+          '**Datenverkehr.** PromptQuorum hat den Netzwerkverkehr nicht geprüft; die in der Erklärung beschriebenen Analysen sind daher nicht unabhängig verifiziert.',
           '**Unternehmensangaben.** Die Website zeigt nur „© 2026 Castmates“ und eine verborgene Support-E-Mail; die Datenschutzerklärung nennt keine juristische Person.',
           '**Erfahrungswerte.** Die App ist etwa drei Monate alt, und die Quellen machen keine Support-Zusage.',
         ],
@@ -590,11 +599,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Vom Entwickler',
+        content: [
+          'Josip Markovic, der Entwickler hinter Castmates, hat Folgendes zur App und zu den Gründen für ihre Entwicklung mitgeteilt. Es wird als eigene Worte des Entwicklers wiedergegeben, zur besseren Lesbarkeit leicht redigiert, nicht als unabhängige redaktionelle Einschätzung von PromptQuorum:',
+          '„Ich habe Castmates gebaut, weil jede Charakter-App, die ich ausprobiert habe, ein Konto wollte und jede Nachricht an einen Server schickte. Ein 3B-Modell auf einem Telefon klang zu klein für echte Geschichten, deshalb ging der Großteil der Arbeit darauf, es eine Szene halten zu lassen: Sitzungszusammenfassungen, damit sich Charaktere an Sie erinnern, Schutzmechanismen, die erkennen, wenn das Modell aus der Rolle fällt, und viele Eval-Läufe auf einem Mac, bevor etwas erscheint. Als Nächstes kommen ein schnellerer erster Download und saisonale Charaktere, beginnend mit drei Halloween-Charakteren.“',
+        ],
+        note: '— Josip Markovic, Entwickler',
+      },
       verdict: {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Castmates ist eine kostenlose iPhone-Rollenspiel-App, die laut Entwickler ihren Charakterchat auf dem Gerät ausführt, mit 32 fertigen Charakteren, eigenen Charakteren, Sitzungsgedächtnis und Alterskontrollen für den optionalen Mature-Modus. Sie wird zudem aktiv aktualisiert, mit einer Veröffentlichung am Tag der Prüfung dieser Rezension. Dagegen steht: Sie ist nicht quelloffen, etwa drei Monate alt, von wenigen Nutzern bewertet, nur auf Englisch, das Modell dahinter bleibt ungenannt, und Datenschutzlabel und Erklärung beschreiben die Datenerfassung unterschiedlich. Sie eignet sich für Erwachsene, die Charakterchat ohne Konto wollen und eine junge, geschlossene App akzeptieren; wer offenen Code und eigene Modelle möchte, kann [SillyTavern](/de/local-llms/sillytavern-review) oder [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) vergleichen.',
+          'Castmates ist eine kostenlose iPhone-Rollenspiel-App, die laut Entwickler ihren Charakterchat auf dem Gerät ausführt, mit 32 fertigen Charakteren, eigenen Charakteren, Sitzungsgedächtnis und Alterskontrollen für den optionalen Mature-Modus. Sie wird zudem aktiv aktualisiert, mit einer Veröffentlichung am Tag der Prüfung dieser Rezension. Dagegen steht: Sie ist nicht quelloffen, etwa drei Monate alt, von wenigen Nutzern bewertet, nur auf Englisch, und sie braucht ein iPhone mit mindestens 6 GB RAM. Sie eignet sich für Erwachsene, die Charakterchat ohne Konto wollen und eine junge, geschlossene App akzeptieren; wer offenen Code und eigene Modelle möchte, kann [SillyTavern](/de/local-llms/sillytavern-review) oder [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) vergleichen.',
       },
       sources: {
         id: 'sources',
@@ -650,7 +668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad'],
     leadAnswerBlock:
-      '**Castmates (versión 1.1.7 a 19 de octubre de 2026) es una app gratuita para iPhone que, según su ficha, ejecuta una IA de chat de personajes en el teléfono tras una descarga única del modelo de unos 1.9 GB, con 32 personajes listos para usar y sin cuenta.** Su plan Pro dentro de la app elimina el límite diario de mensajes y desbloquea un modo Mature opcional solo para adultos. La app es de código cerrado y ninguna fuente nombra el modelo ni el entorno de ejecución, así que la afirmación sobre el funcionamiento en el dispositivo se apoya en la palabra del desarrollador.',
+      '**Castmates (versión 1.1.7 a 19 de octubre de 2026) es una app gratuita para iPhone que, según su ficha, ejecuta una IA de chat de personajes en el teléfono tras una descarga única del modelo de unos 1.9 GB, con 32 personajes listos para usar y sin cuenta.** Su plan Pro dentro de la app elimina el límite diario de mensajes y desbloquea un modo Mature opcional solo para adultos. La app es de código cerrado; el desarrollador nombra el modelo como Impish Llama 3B (basado en Llama 3, Q4_K_M) ejecutado con llama.cpp, así que la afirmación sobre el funcionamiento en el dispositivo sigue apoyándose en su palabra.',
     quickAnswerTop: {
       es: {
         question: '¿Castmates funciona de verdad sin conexión y es gratis?',
@@ -678,6 +696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lo que no pudimos verificar', anchor: 'who-should-not-use' },
       { label: 'Competidores y alternativas', anchor: 'vs-alternatives' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
+      { label: 'La voz del creador', anchor: 'from-the-maker' },
       { label: 'Veredicto', anchor: 'verdict' },
       { label: 'Fuentes', anchor: 'sources' },
       { label: 'Lecturas relacionadas', anchor: 'related-reading' },
@@ -733,7 +752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plataforma': 'Contenido y seguridad', 'Dónde conseguirla': '[get-castmates.com/age-suitability](https://get-castmates.com/age-suitability)' },
           { 'Plataforma': 'Términos', 'Dónde conseguirla': '[get-castmates.com/terms](https://get-castmates.com/terms)' },
         ],
-        note: 'Versión revisada: 1.1.7, publicada el 19 de octubre de 2026 según la ficha del App Store. Las notas de la versión 1.1.6 dicen que los teléfonos con 4 GB de RAM o menos reciben una explicación en lugar de la descarga del modelo, así que comprueba tu iPhone antes de instalar. La ficha no publica otra cifra de RAM.',
+        note: 'Versión revisada: 1.1.7, publicada el 19 de octubre de 2026 según la ficha del App Store. Según el desarrollador, hace falta un iPhone con 6 GB de RAM o más; los teléfonos con 4 GB o menos reciben una explicación en lugar de la descarga del modelo, así que comprueba tu iPhone antes de instalar. El modelo es Impish Llama 3B (basado en Llama 3, Q4_K_M, unos 1,9 GB) y se ejecuta con llama.cpp con un contexto de 4096 tokens.',
       },
       pricing: {
         id: 'pricing',
@@ -794,7 +813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidad y uso de red',
         content: [
           '**El desarrollador dice que las conversaciones, los personajes propios, los avatares y los recuerdos permanecen en el iPhone y que la empresa nunca los recibe, ve ni almacena.** La política nombra una descarga remota: el archivo de modelo único, alojado en Cloudflare R2.',
-          'Las dos declaraciones de privacidad difieren en alcance. La etiqueta del App Store dice «Datos no recopilados», mientras que la [política de privacidad](https://get-castmates.com/privacy), actualizada por última vez el 10 de octubre de 2026, dice que los eventos de uso anónimos van a Mixpanel (aperturas de la app, progreso de incorporación, vistas del muro de pago y recuento de mensajes, ligados a un identificador aleatorio del dispositivo, con la ubicación por IP desactivada) y que RevenueCat gestiona el estado de la suscripción mediante un ID de usuario de app anonimizado. La política afirma que estos eventos no contienen mensajes ni nada que te identifique, y no indica cuánto tiempo los conserva Mixpanel. Las compras pasan por Apple.',
+          'La etiqueta del App Store dice «Datos no vinculados contigo», en línea con la [política de privacidad](https://get-castmates.com/privacy), actualizada por última vez el 10 de octubre de 2026, que dice que los eventos de uso anónimos van a Mixpanel (aperturas de la app, progreso de incorporación, vistas del muro de pago y recuento de mensajes, ligados a un identificador aleatorio del dispositivo, con la ubicación por IP desactivada) y que RevenueCat gestiona el estado de la suscripción mediante un ID de usuario de app anonimizado. La política afirma que estos eventos no contienen mensajes ni nada que te identifique, y no indica cuánto tiempo los conserva Mixpanel. Las compras pasan por Apple.',
         ],
         callouts: [
           {
@@ -832,9 +851,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lo que no pudimos verificar',
         items: [
           '**Calidad en el uso real.** PromptQuorum no ejecutó la app, así que no se evalúan la calidad de las respuestas, la velocidad, el uso de batería ni la eficacia real del filtro de contenido.',
-          '**Modelo y entorno de ejecución.** Ninguna fuente nombra el modelo, su tamaño en parámetros ni el motor de inferencia.',
           '**Código fuente y licencia.** La app es de código cerrado y no se encontró ningún repositorio público.',
-          '**Tráfico y etiquetas.** PromptQuorum no ha auditado el tráfico de red, por lo que la diferencia entre la etiqueta «Datos no recopilados» y la analítica de la política queda sin resolver.',
+          '**Tráfico.** PromptQuorum no ha auditado el tráfico de red, por lo que la analítica descrita en la política no está verificada de forma independiente.',
           '**Datos de la empresa.** El sitio web solo muestra «© 2026 Castmates» y un correo de soporte oculto; la política de privacidad no indica una entidad legal.',
           '**Historial.** La app tiene unos tres meses y las fuentes no dan ningún compromiso de soporte.',
         ],
@@ -878,11 +896,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'La voz del creador',
+        content: [
+          'Josip Markovic, el desarrollador de Castmates, compartió lo siguiente sobre la app y los motivos por los que la creó. Se presenta como las propias palabras del desarrollador, ligeramente editadas para facilitar la lectura, no como una evaluación editorial independiente de PromptQuorum:',
+          '«Creé Castmates porque todas las apps de personajes que probé querían una cuenta y enviaban cada mensaje a un servidor. Un modelo de 3B en un teléfono parecía demasiado pequeño para historias de verdad, así que la mayor parte del trabajo consistió en lograr que mantuviera una escena: resúmenes de sesión para que los personajes te recuerden, protecciones que detectan cuando el modelo rompe el personaje y muchas pruebas de evaluación en un Mac antes de publicar nada. Lo siguiente son una primera descarga más rápida y personajes de temporada, empezando por tres de Halloween.»',
+        ],
+        note: '— Josip Markovic, desarrollador',
+      },
       verdict: {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Castmates es una app gratuita de rol para iPhone que, según el desarrollador, ejecuta su chat de personajes en el dispositivo, con 32 personajes listos, personajes propios, memoria de sesión y controles de edad para su modo Mature opcional. Además se actualiza activamente, con un lanzamiento el día en que se comprobó esta reseña. En contra: es de código cerrado, tiene unos tres meses, pocas valoraciones, solo está en inglés, el modelo que usa no se nombra, y su etiqueta de privacidad y su política describen la recopilación de datos de forma distinta. Encaja con adultos que quieren chat de personajes sin cuenta y aceptan una app joven y cerrada; quien quiera código abierto y sus propios modelos puede comparar [SillyTavern](/es/local-llms/sillytavern-review) o [PocketPal AI](/es/power-local-llm/pocketpal-ai-review).',
+          'Castmates es una app gratuita de rol para iPhone que, según el desarrollador, ejecuta su chat de personajes en el dispositivo, con 32 personajes listos, personajes propios, memoria de sesión y controles de edad para su modo Mature opcional. Además se actualiza activamente, con un lanzamiento el día en que se comprobó esta reseña. En contra: es de código cerrado, tiene unos tres meses, pocas valoraciones, solo está en inglés y requiere un iPhone con 6 GB de RAM o más. Encaja con adultos que quieren chat de personajes sin cuenta y aceptan una app joven y cerrada; quien quiera código abierto y sus propios modelos puede comparar [SillyTavern](/es/local-llms/sillytavern-review) o [PocketPal AI](/es/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -938,7 +965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad'],
     leadAnswerBlock:
-      '**Castmates (version 1.1.7 au 19 octobre 2026) est une application iPhone gratuite qui, selon sa fiche, exécute une IA de chat de personnages sur le téléphone après un téléchargement unique du modèle d\'environ 1.9 Go, avec 32 personnages prêts à l\'emploi et sans compte.** Son abonnement Pro intégré supprime la limite quotidienne de messages et débloque un mode Mature optionnel réservé aux adultes. L\'appli est propriétaire et aucune source ne nomme le modèle ni le moteur d\'exécution : l\'affirmation d\'un fonctionnement sur l\'appareil repose donc sur la parole du développeur.',
+      '**Castmates (version 1.1.7 au 19 octobre 2026) est une application iPhone gratuite qui, selon sa fiche, exécute une IA de chat de personnages sur le téléphone après un téléchargement unique du modèle d\'environ 1.9 Go, avec 32 personnages prêts à l\'emploi et sans compte.** Son abonnement Pro intégré supprime la limite quotidienne de messages et débloque un mode Mature optionnel réservé aux adultes. L\'appli est propriétaire ; le développeur indique que le modèle est Impish Llama 3B (basé sur Llama 3, Q4_K_M), exécuté via llama.cpp : l\'affirmation d\'un fonctionnement sur l\'appareil repose donc toujours sur sa parole.',
     quickAnswerTop: {
       fr: {
         question: 'Castmates fonctionne-t-elle vraiment hors ligne et gratuitement ?',
@@ -966,6 +993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Ce que nous n\'avons pas pu vérifier', anchor: 'who-should-not-use' },
       { label: 'Concurrents et alternatives', anchor: 'vs-alternatives' },
       { label: 'Questions fréquentes', anchor: 'faq' },
+      { label: 'Le mot du développeur', anchor: 'from-the-maker' },
       { label: 'Verdict', anchor: 'verdict' },
       { label: 'Sources', anchor: 'sources' },
       { label: 'Lectures associées', anchor: 'related-reading' },
@@ -1021,7 +1049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plateforme': 'Contenu et sécurité', 'Où la télécharger': '[get-castmates.com/age-suitability](https://get-castmates.com/age-suitability)' },
           { 'Plateforme': 'Conditions', 'Où la télécharger': '[get-castmates.com/terms](https://get-castmates.com/terms)' },
         ],
-        note: 'Version examinée : 1.1.7, publiée le 19 octobre 2026 d\'après la fiche App Store. Les notes de version 1.1.6 indiquent que les téléphones avec 4 Go de RAM ou moins reçoivent une explication au lieu du téléchargement du modèle ; vérifiez donc votre iPhone avant d\'installer. La fiche ne publie aucun autre chiffre de RAM.',
+        note: 'Version examinée : 1.1.7, publiée le 19 octobre 2026 d\'après la fiche App Store. Selon le développeur, il faut un iPhone avec 6 Go de RAM ou plus ; les téléphones avec 4 Go ou moins reçoivent une explication au lieu du téléchargement du modèle, vérifiez donc votre iPhone avant d\'installer. Le modèle est Impish Llama 3B (basé sur Llama 3, Q4_K_M, environ 1,9 Go), exécuté via llama.cpp avec un contexte de 4 096 jetons.',
       },
       pricing: {
         id: 'pricing',
@@ -1082,7 +1110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Vie privée et usage du réseau',
         content: [
           '**Le développeur dit que les conversations, les personnages personnalisés, les avatars et les souvenirs restent sur l\'iPhone et que la société ne les reçoit, ne les voit ni ne les stocke jamais.** La politique cite un téléchargement distant : le fichier de modèle unique, hébergé sur Cloudflare R2.',
-          'Les deux déclarations de confidentialité diffèrent par leur portée. L\'étiquette de l\'App Store indique « Aucune donnée collectée », alors que la [politique de confidentialité](https://get-castmates.com/privacy), mise à jour le 10 octobre 2026, dit que des événements d\'usage anonymes sont envoyés à Mixpanel (ouvertures de l\'appli, progression de l\'onboarding, vues du paywall et nombre de messages, associés à un identifiant aléatoire de l\'appareil, la localisation par IP étant désactivée) et que RevenueCat suit l\'état de l\'abonnement via un identifiant d\'utilisateur anonymisé. La politique affirme que ces événements ne contiennent aucun message ni rien qui vous identifie, et n\'indique pas combien de temps Mixpanel les conserve. Les achats passent par Apple.',
+          'L\'étiquette de l\'App Store indique « Données non liées à vous », en accord avec la [politique de confidentialité](https://get-castmates.com/privacy), mise à jour le 10 octobre 2026, qui dit que des événements d\'usage anonymes sont envoyés à Mixpanel (ouvertures de l\'appli, progression de l\'onboarding, vues du paywall et nombre de messages, associés à un identifiant aléatoire de l\'appareil, la localisation par IP étant désactivée) et que RevenueCat suit l\'état de l\'abonnement via un identifiant d\'utilisateur anonymisé. La politique affirme que ces événements ne contiennent aucun message ni rien qui vous identifie, et n\'indique pas combien de temps Mixpanel les conserve. Les achats passent par Apple.',
         ],
         callouts: [
           {
@@ -1120,9 +1148,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Ce que nous n\'avons pas pu vérifier',
         items: [
           '**Qualité à l\'usage.** PromptQuorum n\'a pas exécuté l\'appli : la qualité des réponses, la vitesse, la consommation de batterie et la robustesse réelle du filtre de contenu ne sont pas évaluées.',
-          '**Modèle et moteur d\'exécution.** Aucune source ne nomme le modèle, sa taille en paramètres ni le moteur d\'inférence.',
           '**Code source et licence.** L\'appli est propriétaire et aucun dépôt public n\'a été trouvé.',
-          '**Trafic et étiquettes.** PromptQuorum n\'a pas audité le trafic réseau ; l\'écart entre l\'étiquette « Aucune donnée collectée » et les analyses décrites dans la politique reste donc non résolu.',
+          '**Trafic.** PromptQuorum n\'a pas audité le trafic réseau ; les analyses décrites dans la politique ne sont donc pas vérifiées de façon indépendante.',
           '**Informations sur la société.** Le site n\'affiche que « © 2026 Castmates » et une adresse de support masquée ; la politique de confidentialité ne donne aucune entité juridique.',
           '**Historique.** L\'appli a environ trois mois et les sources ne donnent aucun engagement de support.',
         ],
@@ -1166,11 +1193,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Le mot du développeur',
+        content: [
+          'Josip Markovic, le développeur de Castmates, a partagé ce qui suit au sujet de l\'application et des raisons pour lesquelles il l\'a créée. Ce texte est présenté comme les propres mots du développeur, légèrement retouchés pour la lisibilité, et non comme une évaluation éditoriale indépendante de PromptQuorum :',
+          '« J\'ai créé Castmates parce que chaque appli de personnages que j\'ai essayée exigeait un compte et envoyait chaque message à un serveur. Un modèle de 3B sur un téléphone semblait trop petit pour de vraies histoires ; l\'essentiel du travail a donc consisté à lui faire tenir une scène : des résumés de session pour que les personnages se souviennent de vous, des garde-fous qui repèrent quand le modèle sort de son rôle, et de nombreuses séries d\'évaluation sur un Mac avant toute publication. Prochaines étapes : un premier téléchargement plus rapide et des personnages saisonniers, en commençant par trois personnages d\'Halloween. »',
+        ],
+        note: '— Josip Markovic, développeur',
+      },
       verdict: {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Castmates est une appli iPhone gratuite de jeu de rôle qui, selon le développeur, exécute son chat de personnages sur l\'appareil, avec 32 personnages prêts à l\'emploi, des personnages personnalisés, une mémoire de session et des contrôles d\'âge pour son mode Mature optionnel. Elle est aussi mise à jour activement, avec une publication le jour où ce test a été vérifié. En contrepartie, elle est propriétaire, vieille d\'environ trois mois, peu notée, en anglais uniquement, le modèle utilisé n\'est pas nommé, et son étiquette de confidentialité et sa politique décrivent la collecte de données différemment. Elle convient aux adultes qui veulent un chat de personnages sans compte et acceptent une appli jeune et fermée ; ceux qui veulent du code ouvert et leurs propres modèles peuvent comparer [SillyTavern](/fr/local-llms/sillytavern-review) ou [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review).',
+          'Castmates est une appli iPhone gratuite de jeu de rôle qui, selon le développeur, exécute son chat de personnages sur l\'appareil, avec 32 personnages prêts à l\'emploi, des personnages personnalisés, une mémoire de session et des contrôles d\'âge pour son mode Mature optionnel. Elle est aussi mise à jour activement, avec une publication le jour où ce test a été vérifié. En contrepartie, elle est propriétaire, vieille d\'environ trois mois, peu notée, en anglais uniquement et nécessite un iPhone avec 6 Go de RAM ou plus. Elle convient aux adultes qui veulent un chat de personnages sans compte et acceptent une appli jeune et fermée ; ceux qui veulent du code ouvert et leurs propres modèles peuvent comparer [SillyTavern](/fr/local-llms/sillytavern-review) ou [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -1226,7 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad'],
     leadAnswerBlock:
-      '**Castmates（2026年10月19日時点のバージョン1.1.7）は、掲載情報によると、約1.9 GBのモデルを一度ダウンロードした後に端末上でキャラクターチャットAIを動かす無料のiPhoneアプリで、32体の用意済みキャラクターを備え、アカウントは不要です。** アプリ内のProプランで1日のメッセージ上限が解除され、成人向けの任意のMatureモードが使えます。アプリはクローズドソースで、モデルや実行環境を明記した情報源はないため、端末上で動作するという主張は開発者の説明に依拠しています。',
+      '**Castmates（2026年10月19日時点のバージョン1.1.7）は、掲載情報によると、約1.9 GBのモデルを一度ダウンロードした後に端末上でキャラクターチャットAIを動かす無料のiPhoneアプリで、32体の用意済みキャラクターを備え、アカウントは不要です。** アプリ内のProプランで1日のメッセージ上限が解除され、成人向けの任意のMatureモードが使えます。アプリはクローズドソースで、開発者はモデルをImpish Llama 3B（Llama 3ベース、Q4_K_M）、実行環境をllama.cppと説明しており、端末上で動作するという主張は引き続き開発者の説明に依拠しています。',
     quickAnswerTop: {
       ja: {
         question: 'Castmatesは本当にオフラインで無料で使えますか？',
@@ -1254,6 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '確認できなかったこと', anchor: 'who-should-not-use' },
       { label: '競合と代替', anchor: 'vs-alternatives' },
       { label: 'よくある質問', anchor: 'faq' },
+      { label: '開発者から', anchor: 'from-the-maker' },
       { label: '結論', anchor: 'verdict' },
       { label: '情報源', anchor: 'sources' },
       { label: '関連記事', anchor: 'related-reading' },
@@ -1309,7 +1346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'プラットフォーム': 'コンテンツと安全', '入手先': '[get-castmates.com/age-suitability](https://get-castmates.com/age-suitability)' },
           { 'プラットフォーム': '利用規約', '入手先': '[get-castmates.com/terms](https://get-castmates.com/terms)' },
         ],
-        note: '確認したバージョン：1.1.7。App Storeの掲載情報では2026年10月19日にリリースされています。1.1.6のリリースノートによると、RAMが4 GB以下の端末にはモデルのダウンロードの代わりに説明が表示されるため、インストール前にお使いのiPhoneを確認してください。掲載情報にそれ以外のRAMの数値はありません。',
+        note: '確認したバージョン：1.1.7。App Storeの掲載情報では2026年10月19日にリリースされています。開発者によると、RAM 6 GB以上のiPhoneが必要で、4 GB以下の端末にはモデルのダウンロードの代わりに説明が表示されるため、インストール前にお使いのiPhoneを確認してください。モデルはImpish Llama 3B（Llama 3ベース、Q4_K_M、約1.9 GB）で、llama.cppで動作し、コンテキストは4,096トークンです。',
       },
       pricing: {
         id: 'pricing',
@@ -1370,7 +1407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'プライバシーとネットワーク利用',
         content: [
           '**開発者は、会話、自作キャラクター、アバター、メモリはiPhoneの中にとどまり、同社がそれらを受け取ったり、見たり、保存したりすることはないと述べています。** ポリシーが挙げるリモートダウンロードは、Cloudflare R2にホストされた一度きりのモデルファイルの1件です。',
-          '2つのプライバシー表示は範囲が異なります。App Storeのラベルは「データ収集なし」ですが、2026年10月10日更新の[プライバシーポリシー](https://get-castmates.com/privacy)は、匿名の利用イベントがMixpanelに送られ（アプリの起動、オンボーディングの進行、ペイウォールの表示、メッセージ数。端末上のランダムな識別子に紐づき、IPによる位置情報は無効）、RevenueCatが匿名化されたアプリユーザーIDでサブスクリプション状態を管理すると説明しています。ポリシーは、これらのイベントにメッセージの内容や個人を特定できる情報は含まれないとし、Mixpanelでの保持期間は示していません。購入はAppleを通じて行われます。',
+          'App Storeのラベルは「ユーザに関連付けられないデータ」で、2026年10月10日更新の[プライバシーポリシー](https://get-castmates.com/privacy)の内容と一致しています。同ポリシーは、匿名の利用イベントがMixpanelに送られ（アプリの起動、オンボーディングの進行、ペイウォールの表示、メッセージ数。端末上のランダムな識別子に紐づき、IPによる位置情報は無効）、RevenueCatが匿名化されたアプリユーザーIDでサブスクリプション状態を管理すると説明しています。ポリシーは、これらのイベントにメッセージの内容や個人を特定できる情報は含まれないとし、Mixpanelでの保持期間は示していません。購入はAppleを通じて行われます。',
         ],
         callouts: [
           {
@@ -1408,9 +1445,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '確認できなかったこと',
         items: [
           '**実際の使用感。** PromptQuorumはアプリを実行していないため、返答の質、速度、バッテリー消費、コンテンツフィルターの実際の強度は評価していません。',
-          '**モデルと実行環境。** モデル名、パラメータ数、推論エンジンを明記した情報源はありません。',
           '**ソースコードとライセンス。** アプリはクローズドソースで、公開リポジトリは見つかりませんでした。',
-          '**通信とラベル。** ネットワーク通信は監査していないため、「データ収集なし」というラベルとポリシーにある分析との食い違いは解消できていません。',
+          '**通信。** ネットワーク通信は監査していないため、ポリシーに記載された分析は独立して検証されていません。',
           '**会社情報。** 公式サイトには「© 2026 Castmates」と隠されたサポートメールしかなく、プライバシーポリシーにも法人名はありません。',
           '**実績。** アプリは公開から約3か月で、情報源にサポートの約束はありません。',
         ],
@@ -1454,11 +1490,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '開発者から',
+        content: [
+          'Castmatesの開発者であるJosip Markovic氏が、このアプリと開発の理由について次のように述べています。以下は、読みやすさのために軽く編集した開発者自身の言葉として提示するものであり、PromptQuorumによる独立した編集上の評価ではありません:',
+          '「私がCastmatesを作ったのは、これまで試したキャラクターアプリがどれもアカウントを求め、すべてのメッセージをサーバーに送っていたからです。スマートフォン上の3Bモデルでは本格的な物語には小さすぎるように思えたため、作業の大半は、場面を保たせることに費やしました。キャラクターが自分のことを覚えているためのセッション要約、モデルがキャラクターを崩したときに検知するガード、そして公開前にMacで重ねた多数の評価実行です。次は、初回ダウンロードの高速化と季節限定キャラクターで、最初はハロウィンの3キャラクターを予定しています。」',
+        ],
+        note: '— Josip Markovic氏、開発者',
+      },
       verdict: {
         id: 'verdict',
         title: '結論',
         content:
-          'Castmatesは、開発者によればキャラクターチャットを端末上で動かす無料のiPhoneロールプレイアプリで、用意済みの32キャラクター、自作キャラクター、セッションメモリ、任意のMatureモード向けの年齢制御を備えています。また、本レビューを確認した当日にリリースがあるなど、活発に更新されています。一方で、クローズドソースで、公開から約3か月、評価した人は少なく、英語のみ、使われているモデルは非公開で、プライバシーラベルとポリシーのデータ収集の説明も食い違っています。アカウントなしでキャラクターチャットをしたく、新しくてクローズドなアプリを受け入れられる成人に向いています。オープンなコードと自分のモデルを求める方は、[SillyTavern](/ja/local-llms/sillytavern-review)や[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)と比べてください。',
+          'Castmatesは、開発者によればキャラクターチャットを端末上で動かす無料のiPhoneロールプレイアプリで、用意済みの32キャラクター、自作キャラクター、セッションメモリ、任意のMatureモード向けの年齢制御を備えています。また、本レビューを確認した当日にリリースがあるなど、活発に更新されています。一方で、クローズドソースで、公開から約3か月、評価した人は少なく、英語のみ、RAM 6 GB以上のiPhoneが必要です。アカウントなしでキャラクターチャットをしたく、新しくてクローズドなアプリを受け入れられる成人に向いています。オープンなコードと自分のモデルを求める方は、[SillyTavern](/ja/local-llms/sillytavern-review)や[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)と比べてください。',
       },
       sources: {
         id: 'sources',
@@ -1514,7 +1559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad'],
     leadAnswerBlock:
-      '**O Castmates (versão 1.1.7 em 19 de outubro de 2026) é um app gratuito para iPhone que, segundo sua página, executa uma IA de chat de personagens no aparelho após um download único do modelo de cerca de 1.9 GB, com 32 personagens prontos e sem conta.** O plano Pro dentro do app remove o limite diário de mensagens e libera um modo Mature opcional só para adultos. O app é de código fechado e nenhuma fonte nomeia o modelo ou o ambiente de execução, então a afirmação de funcionamento no aparelho depende da palavra do desenvolvedor.',
+      '**O Castmates (versão 1.1.7 em 19 de outubro de 2026) é um app gratuito para iPhone que, segundo sua página, executa uma IA de chat de personagens no aparelho após um download único do modelo de cerca de 1.9 GB, com 32 personagens prontos e sem conta.** O plano Pro dentro do app remove o limite diário de mensagens e libera um modo Mature opcional só para adultos. O app é de código fechado; o desenvolvedor informa que o modelo é o Impish Llama 3B (baseado no Llama 3, Q4_K_M), executado com llama.cpp, então a afirmação de funcionamento no aparelho continua dependendo da palavra dele.',
     quickAnswerTop: {
       pt: {
         question: 'O Castmates é mesmo offline e gratuito?',
@@ -1542,6 +1587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'O que não conseguimos verificar', anchor: 'who-should-not-use' },
       { label: 'Concorrentes e alternativas', anchor: 'vs-alternatives' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
+      { label: 'A palavra do criador', anchor: 'from-the-maker' },
       { label: 'Veredito', anchor: 'verdict' },
       { label: 'Fontes', anchor: 'sources' },
       { label: 'Leituras relacionadas', anchor: 'related-reading' },
@@ -1597,7 +1643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plataforma': 'Conteúdo e segurança', 'Onde baixar': '[get-castmates.com/age-suitability](https://get-castmates.com/age-suitability)' },
           { 'Plataforma': 'Termos', 'Onde baixar': '[get-castmates.com/terms](https://get-castmates.com/terms)' },
         ],
-        note: 'Versão analisada: 1.1.7, lançada em 19 de outubro de 2026 segundo a página da App Store. As notas da versão 1.1.6 dizem que aparelhos com 4 GB de RAM ou menos recebem uma explicação em vez do download do modelo, então confira seu iPhone antes de instalar. A página não publica outro número de RAM.',
+        note: 'Versão analisada: 1.1.7, lançada em 19 de outubro de 2026 segundo a página da App Store. Segundo o desenvolvedor, é preciso um iPhone com 6 GB de RAM ou mais; aparelhos com 4 GB ou menos recebem uma explicação em vez do download do modelo, então confira seu iPhone antes de instalar. O modelo é o Impish Llama 3B (baseado no Llama 3, Q4_K_M, cerca de 1,9 GB), executado com llama.cpp e contexto de 4.096 tokens.',
       },
       pricing: {
         id: 'pricing',
@@ -1658,7 +1704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Privacidade e uso de rede',
         content: [
           '**O desenvolvedor diz que conversas, personagens próprios, avatares e memórias ficam no iPhone e que a empresa nunca os recebe, vê ou armazena.** A política cita um download remoto: o arquivo de modelo único, hospedado no Cloudflare R2.',
-          'As duas declarações de privacidade diferem em alcance. O rótulo da App Store diz "Dados não coletados", enquanto a [política de privacidade](https://get-castmates.com/privacy), atualizada em 10 de outubro de 2026, diz que eventos de uso anônimos vão para o Mixpanel (aberturas do app, progresso da integração, visualizações do paywall e contagem de mensagens, ligados a um identificador aleatório do aparelho, com a localização por IP desativada) e que o RevenueCat gerencia o status da assinatura por meio de um ID de usuário do app anonimizado. A política afirma que esses eventos não contêm conteúdo de mensagens nem nada que identifique você, e não informa por quanto tempo o Mixpanel os guarda. As compras passam pela Apple.',
+          'O rótulo da App Store diz "Dados não vinculados a você", em linha com a [política de privacidade](https://get-castmates.com/privacy), atualizada em 10 de outubro de 2026, que diz que eventos de uso anônimos vão para o Mixpanel (aberturas do app, progresso da integração, visualizações do paywall e contagem de mensagens, ligados a um identificador aleatório do aparelho, com a localização por IP desativada) e que o RevenueCat gerencia o status da assinatura por meio de um ID de usuário do app anonimizado. A política afirma que esses eventos não contêm conteúdo de mensagens nem nada que identifique você, e não informa por quanto tempo o Mixpanel os guarda. As compras passam pela Apple.',
         ],
         callouts: [
           {
@@ -1696,9 +1742,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que não conseguimos verificar',
         items: [
           '**Qualidade no uso real.** A PromptQuorum não executou o app, então qualidade das respostas, velocidade, uso de bateria e a força real do filtro de conteúdo não foram avaliados.',
-          '**Modelo e ambiente de execução.** Nenhuma fonte nomeia o modelo, seu tamanho em parâmetros ou o motor de inferência.',
           '**Código-fonte e licença.** O app é de código fechado e nenhum repositório público foi encontrado.',
-          '**Tráfego e rótulos.** A PromptQuorum não auditou o tráfego de rede, então a diferença entre o rótulo "Dados não coletados" e as análises da política continua sem resolução.',
+          '**Tráfego.** A PromptQuorum não auditou o tráfego de rede, então as análises descritas na política não foram verificadas de forma independente.',
           '**Dados da empresa.** O site mostra apenas "© 2026 Castmates" e um e-mail de suporte oculto; a política de privacidade não informa uma entidade legal.',
           '**Histórico.** O app tem cerca de três meses e as fontes não dão nenhum compromisso de suporte.',
         ],
@@ -1742,11 +1787,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'A palavra do criador',
+        content: [
+          'Josip Markovic, o desenvolvedor do Castmates, compartilhou o seguinte sobre o aplicativo e os motivos de tê-lo criado. É apresentado como as próprias palavras do desenvolvedor, levemente editadas para facilitar a leitura, não como uma avaliação editorial independente da PromptQuorum:',
+          '"Criei o Castmates porque todo app de personagens que experimentei exigia uma conta e enviava cada mensagem a um servidor. Um modelo de 3B em um celular parecia pequeno demais para histórias de verdade, então a maior parte do trabalho foi fazê-lo sustentar uma cena: resumos de sessão para que os personagens se lembrem de você, proteções que detectam quando o modelo sai do personagem e muitas rodadas de avaliação em um Mac antes de qualquer lançamento. Os próximos passos são um primeiro download mais rápido e personagens sazonais, começando por três de Halloween."',
+        ],
+        note: '— Josip Markovic, desenvolvedor',
+      },
       verdict: {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O Castmates é um app gratuito de roleplay para iPhone que, segundo o desenvolvedor, executa o chat de personagens no aparelho, com 32 personagens prontos, personagens próprios, memória de sessão e controles de idade para o modo Mature opcional. Também é atualizado com frequência, com um lançamento no dia em que esta análise foi verificada. Em contrapartida, é de código fechado, tem cerca de três meses, poucas avaliações, só está em inglês, o modelo usado não é nomeado e o rótulo de privacidade e a política descrevem a coleta de dados de forma diferente. Serve para adultos que querem chat de personagens sem conta e aceitam um app jovem e fechado; quem quer código aberto e os próprios modelos pode comparar o [SillyTavern](/pt/local-llms/sillytavern-review) ou o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review).',
+          'O Castmates é um app gratuito de roleplay para iPhone que, segundo o desenvolvedor, executa o chat de personagens no aparelho, com 32 personagens prontos, personagens próprios, memória de sessão e controles de idade para o modo Mature opcional. Também é atualizado com frequência, com um lançamento no dia em que esta análise foi verificada. Em contrapartida, é de código fechado, tem cerca de três meses, poucas avaliações, só está em inglês e exige um iPhone com 6 GB de RAM ou mais. Serve para adultos que querem chat de personagens sem conta e aceitam um app jovem e fechado; quem quer código aberto e os próprios modelos pode comparar o [SillyTavern](/pt/local-llms/sillytavern-review) ou o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -1802,7 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad'],
     leadAnswerBlock:
-      '**Castmates (الإصدار 1.1.7 حتى 19 أكتوبر 2026) تطبيق iPhone مجاني يشغّل، وفق صفحته، ذكاءً اصطناعيًا لدردشة الشخصيات على الهاتف بعد تنزيل النموذج مرة واحدة بحجم نحو 1.9 GB، مع 32 شخصية جاهزة ودون حساب.** تزيل خطة Pro داخل التطبيق الحد اليومي للرسائل وتفتح وضع Mature الاختياري للبالغين فقط. التطبيق مغلق المصدر ولا يذكر أي مصدر النموذج أو بيئة التشغيل، لذا يستند ادعاء التشغيل على الجهاز إلى كلام المطوّر.',
+      '**Castmates (الإصدار 1.1.7 حتى 19 أكتوبر 2026) تطبيق iPhone مجاني يشغّل، وفق صفحته، ذكاءً اصطناعيًا لدردشة الشخصيات على الهاتف بعد تنزيل النموذج مرة واحدة بحجم نحو 1.9 GB، مع 32 شخصية جاهزة ودون حساب.** تزيل خطة Pro داخل التطبيق الحد اليومي للرسائل وتفتح وضع Mature الاختياري للبالغين فقط. التطبيق مغلق المصدر؛ ويذكر المطوّر أن النموذج هو Impish Llama 3B (مبني على Llama 3، بتكميم Q4_K_M) ويعمل عبر llama.cpp، لذا يبقى ادعاء التشغيل على الجهاز قائمًا على كلام المطوّر.',
     quickAnswerTop: {
       ar: {
         question: 'هل يعمل Castmates فعلًا دون إنترنت وبالمجان؟',
@@ -1830,6 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ما لم نتمكن من التحقق منه', anchor: 'who-should-not-use' },
       { label: 'المنافسون والبدائل', anchor: 'vs-alternatives' },
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
+      { label: 'من صانع التطبيق', anchor: 'from-the-maker' },
       { label: 'الخلاصة', anchor: 'verdict' },
       { label: 'المصادر', anchor: 'sources' },
       { label: 'قراءات ذات صلة', anchor: 'related-reading' },
@@ -1885,7 +1940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المنصة': 'المحتوى والأمان', 'كيف تحصل عليه': '[get-castmates.com/age-suitability](https://get-castmates.com/age-suitability)' },
           { 'المنصة': 'الشروط', 'كيف تحصل عليه': '[get-castmates.com/terms](https://get-castmates.com/terms)' },
         ],
-        note: 'الإصدار الذي جرت مراجعته: 1.1.7، صدر في 19 أكتوبر 2026 وفق صفحة App Store. تقول ملاحظات الإصدار 1.1.6 إن الهواتف ذات 4 GB من الذاكرة أو أقل تتلقى شرحًا بدل تنزيل النموذج، فتحقق من هاتفك قبل التثبيت. لا تنشر الصفحة رقمًا آخر للذاكرة.',
+        note: 'الإصدار الذي جرت مراجعته: 1.1.7، صدر في 19 أكتوبر 2026 وفق صفحة App Store. يقول المطوّر إن التطبيق يحتاج إلى iPhone بذاكرة 6 GB أو أكثر؛ أما الهواتف ذات 4 GB أو أقل فتتلقى شرحًا بدل تنزيل النموذج، فتحقق من هاتفك قبل التثبيت. النموذج هو Impish Llama 3B (مبني على Llama 3، Q4_K_M، نحو 1.9 GB) ويعمل عبر llama.cpp بسياق 4096 رمزًا.',
       },
       pricing: {
         id: 'pricing',
@@ -1946,7 +2001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الخصوصية واستخدام الشبكة',
         content: [
           '**يقول المطوّر إن المحادثات والشخصيات المخصصة والصور الرمزية والذكريات تبقى على iPhone وإن الشركة لا تتلقاها ولا تراها ولا تخزّنها أبدًا.** وتذكر السياسة تنزيلًا بعيدًا واحدًا: ملف النموذج لمرة واحدة، المستضاف على Cloudflare R2.',
-          'يختلف بيانا الخصوصية في النطاق. تقول بطاقة App Store "لم تُجمع بيانات"، بينما تذكر [سياسة الخصوصية](https://get-castmates.com/privacy) المحدّثة في 10 أكتوبر 2026 أن أحداث استخدام مجهولة تُرسل إلى Mixpanel (فتح التطبيق وتقدم الإعداد الأولي ومشاهدات شاشة الدفع وعدد الرسائل، مرتبطة بمعرّف عشوائي على الجهاز مع تعطيل تحديد الموقع عبر IP) وأن RevenueCat يدير حالة الاشتراك عبر معرّف مستخدم مجهول للتطبيق. وتقول السياسة إن هذه الأحداث لا تحتوي على محتوى الرسائل ولا على ما يحدد هويتك، ولا تذكر مدة احتفاظ Mixpanel بها. وتتم عمليات الشراء عبر Apple.',
+          'تقول بطاقة App Store "بيانات غير مرتبطة بك"، وهذا يتوافق مع [سياسة الخصوصية](https://get-castmates.com/privacy) المحدّثة في 10 أكتوبر 2026 التي تذكر أن أحداث استخدام مجهولة تُرسل إلى Mixpanel (فتح التطبيق وتقدم الإعداد الأولي ومشاهدات شاشة الدفع وعدد الرسائل، مرتبطة بمعرّف عشوائي على الجهاز مع تعطيل تحديد الموقع عبر IP) وأن RevenueCat يدير حالة الاشتراك عبر معرّف مستخدم مجهول للتطبيق. وتقول السياسة إن هذه الأحداث لا تحتوي على محتوى الرسائل ولا على ما يحدد هويتك، ولا تذكر مدة احتفاظ Mixpanel بها. وتتم عمليات الشراء عبر Apple.',
         ],
         callouts: [
           {
@@ -1984,9 +2039,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما لم نتمكن من التحقق منه',
         items: [
           '**الجودة عمليًا.** لم تشغّل PromptQuorum التطبيق، لذا لم تُقيَّم جودة الردود ولا السرعة ولا استهلاك البطارية ولا القوة الفعلية لمرشّح المحتوى.',
-          '**النموذج وبيئة التشغيل.** لا يذكر أي مصدر النموذج أو حجمه بالمعاملات أو محرك الاستدلال.',
           '**الشفرة المصدرية والترخيص.** التطبيق مغلق المصدر ولم يُعثر على مستودع عام.',
-          '**الحركة على الشبكة والبطاقات.** لم تدقّق PromptQuorum حركة الشبكة، لذا يبقى التباين بين بطاقة "لم تُجمع بيانات" والتحليلات الواردة في السياسة دون حسم.',
+          '**الحركة على الشبكة.** لم تدقّق PromptQuorum حركة الشبكة، لذا فالتحليلات الواردة في السياسة غير موثّقة بشكل مستقل.',
           '**بيانات الشركة.** لا يعرض الموقع سوى "© 2026 Castmates" وبريد دعم مخفي؛ ولا تذكر سياسة الخصوصية كيانًا قانونيًا.',
           '**السجل.** عمر التطبيق نحو ثلاثة أشهر ولا تقدّم المصادر أي التزام بالدعم.',
         ],
@@ -2030,11 +2084,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'من صانع التطبيق',
+        content: [
+          'شارك Josip Markovic، مطوّر Castmates، ما يلي عن التطبيق وأسباب بنائه. يُعرض هنا بوصفه كلمات المطوّر نفسه بعد تحرير طفيف لتسهيل القراءة، وليس تقييمًا تحريريًا مستقلًا من PromptQuorum:',
+          '"بنيت Castmates لأن كل تطبيق شخصيات جربته كان يطلب حسابًا ويرسل كل رسالة إلى خادم. بدا لي نموذج بحجم 3B على الهاتف أصغر من أن يروي قصصًا حقيقية، لذلك ذهب معظم العمل إلى جعله يحافظ على المشهد: ملخصات للجلسات كي تتذكرك الشخصيات، وضوابط تلتقط اللحظة التي يخرج فيها النموذج عن الشخصية، وكثير من جولات التقييم على جهاز Mac قبل إطلاق أي شيء. الخطوة التالية هي تنزيل أول أسرع وشخصيات موسمية، بدءًا بثلاث شخصيات لعيد الهالوين."',
+        ],
+        note: '— Josip Markovic، مطوّر',
+      },
       verdict: {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'Castmates تطبيق iPhone مجاني للعب الأدوار يقول مطوّره إنه يشغّل دردشة الشخصيات على الجهاز، مع 32 شخصية جاهزة وشخصيات مخصصة وذاكرة جلسات وضوابط عمرية لوضع Mature الاختياري. وهو يُحدَّث بنشاط، مع إصدار في اليوم الذي جرى فيه التحقق من هذه المراجعة. في المقابل هو مغلق المصدر، وعمره نحو ثلاثة أشهر، وقيّمه قلة من المستخدمين، وبالإنجليزية فقط، والنموذج وراءه غير مسمّى، وتصف بطاقة الخصوصية والسياسة جمع البيانات بشكل مختلف. يناسب البالغين الذين يريدون دردشة شخصيات دون حساب ويقبلون تطبيقًا حديثًا ومغلقًا؛ ومن يريد شفرة مفتوحة ونماذجه الخاصة يمكنه مقارنة [SillyTavern](/ar/local-llms/sillytavern-review) أو [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review).',
+          'Castmates تطبيق iPhone مجاني للعب الأدوار يقول مطوّره إنه يشغّل دردشة الشخصيات على الجهاز، مع 32 شخصية جاهزة وشخصيات مخصصة وذاكرة جلسات وضوابط عمرية لوضع Mature الاختياري. وهو يُحدَّث بنشاط، مع إصدار في اليوم الذي جرى فيه التحقق من هذه المراجعة. في المقابل هو مغلق المصدر، وعمره نحو ثلاثة أشهر، وقيّمه قلة من المستخدمين، وبالإنجليزية فقط، ويتطلب iPhone بذاكرة 6 GB أو أكثر. يناسب البالغين الذين يريدون دردشة شخصيات دون حساب ويقبلون تطبيقًا حديثًا ومغلقًا؛ ومن يريد شفرة مفتوحة ونماذجه الخاصة يمكنه مقارنة [SillyTavern](/ar/local-llms/sillytavern-review) أو [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review).',
       },
       sources: {
         id: 'sources',
@@ -2090,7 +2153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad'],
     leadAnswerBlock:
-      '**Castmates（截至 2026 年 10 月 19 日为 1.1.7 版）是一款免费 iPhone 应用，据其商店页面，一次性下载约 1.9 GB 的模型后，角色聊天 AI 在手机上运行，内置 32 个现成角色，无需账号。** 应用内的 Pro 方案取消每日消息上限，并解锁仅限成年人的可选 Mature 模式。该应用闭源，也没有来源说明所用模型或运行时，因此“在设备上运行”的说法只来自开发者自述。',
+      '**Castmates（截至 2026 年 10 月 19 日为 1.1.7 版）是一款免费 iPhone 应用，据其商店页面，一次性下载约 1.9 GB 的模型后，角色聊天 AI 在手机上运行，内置 32 个现成角色，无需账号。** 应用内的 Pro 方案取消每日消息上限，并解锁仅限成年人的可选 Mature 模式。该应用闭源；开发者称所用模型为 Impish Llama 3B（基于 Llama 3，Q4_K_M 量化），通过 llama.cpp 运行，因此“在设备上运行”的说法仍来自开发者自述。',
     quickAnswerTop: {
       zh: {
         question: 'Castmates 真的能离线且免费使用吗？',
@@ -2118,6 +2181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '我们未能核实的内容', anchor: 'who-should-not-use' },
       { label: '竞品与替代', anchor: 'vs-alternatives' },
       { label: '常见问题', anchor: 'faq' },
+      { label: '来自开发者', anchor: 'from-the-maker' },
       { label: '结论', anchor: 'verdict' },
       { label: '来源', anchor: 'sources' },
       { label: '相关阅读', anchor: 'related-reading' },
@@ -2173,7 +2237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '平台': '内容与安全', '获取方式': '[get-castmates.com/age-suitability](https://get-castmates.com/age-suitability)' },
           { '平台': '服务条款', '获取方式': '[get-castmates.com/terms](https://get-castmates.com/terms)' },
         ],
-        note: '评测版本：1.1.7，App Store 页面显示发布于 2026 年 10 月 19 日。1.1.6 的更新说明称，内存为 4 GB 或更少的手机只会看到说明，而不会开始模型下载，因此安装前请先确认你的 iPhone。页面没有给出其他内存数字。',
+        note: '评测版本：1.1.7，App Store 页面显示发布于 2026 年 10 月 19 日。开发者称需要 6 GB 或以上内存的 iPhone；内存为 4 GB 或更少的手机只会看到说明，而不会开始模型下载，因此安装前请先确认你的 iPhone。模型为 Impish Llama 3B（基于 Llama 3，Q4_K_M，约 1.9 GB），通过 llama.cpp 运行，上下文为 4,096 个 token。',
       },
       pricing: {
         id: 'pricing',
@@ -2234,7 +2298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '隐私与网络使用',
         content: [
           '**开发者称，对话、自建角色、头像和记忆都留在 iPhone 上，公司从不接收、查看或存储它们。** 政策提到一项远程下载：一次性模型文件，托管在 Cloudflare R2 上。',
-          '两份隐私说明的范围不同。App Store 标签写的是“未收集数据”，而 2026 年 10 月 10 日更新的[隐私政策](https://get-castmates.com/privacy)称，匿名使用事件会发送到 Mixpanel（应用打开、引导进度、付费墙查看和消息数量，关联到设备上的随机标识符，已关闭基于 IP 的定位），并称 RevenueCat 通过匿名化的应用用户 ID 管理订阅状态。政策称这些事件不含消息内容，也不含可识别你的信息，但没有说明 Mixpanel 保留多久。购买通过 Apple 完成。',
+          'App Store 标签写的是“未关联到你的数据”，与 2026 年 10 月 10 日更新的[隐私政策](https://get-castmates.com/privacy)一致。该政策称，匿名使用事件会发送到 Mixpanel（应用打开、引导进度、付费墙查看和消息数量，关联到设备上的随机标识符，已关闭基于 IP 的定位），并称 RevenueCat 通过匿名化的应用用户 ID 管理订阅状态。政策称这些事件不含消息内容，也不含可识别你的信息，但没有说明 Mixpanel 保留多久。购买通过 Apple 完成。',
         ],
         callouts: [
           {
@@ -2272,9 +2336,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '我们未能核实的内容',
         items: [
           '**实际使用表现。** PromptQuorum 没有运行该应用，因此没有评估回复质量、速度、耗电以及内容过滤器的实际强度。',
-          '**模型与运行时。** 没有来源说明模型、参数规模或推理引擎。',
           '**源代码与许可证。** 该应用闭源，也没有找到公开仓库。',
-          '**流量与标签。** PromptQuorum 没有审计网络流量，因此“未收集数据”标签与政策中所述分析之间的差异未能厘清。',
+          '**流量。** PromptQuorum 没有审计网络流量，因此政策中所述的分析未经独立核实。',
           '**公司信息。** 官网只显示“© 2026 Castmates”和一个隐藏的支持邮箱；隐私政策也没有给出法律实体。',
           '**使用记录。** 该应用上架约三个月，来源没有给出任何支持承诺。',
         ],
@@ -2318,11 +2381,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '来自开发者',
+        content: [
+          'Castmates 的开发者 Josip Markovic 分享了以下关于这款应用及其开发原因的内容。以下内容以开发者本人的话呈现，为便于阅读略作编辑，并非 PromptQuorum 独立的编辑评估：',
+          '“我做 Castmates，是因为我试过的每一款角色应用都要求注册账号，并把每条消息发送到服务器。手机上的 3B 模型听起来对真正的故事来说太小了，所以大部分工作都花在让它撑住一个场景上：让角色记住你的会话摘要、发现模型出戏时的防护机制，以及在任何版本发布前在 Mac 上进行的大量评测运行。接下来是更快的首次下载和季节性角色，先从三个万圣节角色开始。”',
+        ],
+        note: '— Josip Markovic，开发者',
+      },
       verdict: {
         id: 'verdict',
         title: '结论',
         content:
-          'Castmates 是一款免费的 iPhone 角色扮演应用，据开发者称，其角色聊天在设备上运行，内置 32 个现成角色，支持自建角色、会话记忆，并为可选的 Mature 模式提供年龄控制。它还在积极更新，本评测核对当天就有一次发布。但另一方面，它闭源、上架约三个月、评分的用户很少、仅支持英语，所用模型没有公开，隐私标签和隐私政策对数据收集的描述也不一致。它适合想要无账号角色聊天、并能接受一款较新且封闭应用的成年人；想要开放代码和自选模型的读者，可以对比 [SillyTavern](/zh/local-llms/sillytavern-review) 或 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)。',
+          'Castmates 是一款免费的 iPhone 角色扮演应用，据开发者称，其角色聊天在设备上运行，内置 32 个现成角色，支持自建角色、会话记忆，并为可选的 Mature 模式提供年龄控制。它还在积极更新，本评测核对当天就有一次发布。但另一方面，它闭源、上架约三个月、评分的用户很少、仅支持英语，并且需要 6 GB 或以上内存的 iPhone。它适合想要无账号角色聊天、并能接受一款较新且封闭应用的成年人；想要开放代码和自选模型的读者，可以对比 [SillyTavern](/zh/local-llms/sillytavern-review) 或 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)。',
       },
       sources: {
         id: 'sources',
@@ -2378,7 +2450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['iPhone', 'iPad'],
     leadAnswerBlock:
-      '**Castmates(2026년 10월 19일 기준 버전 1.1.7)는 페이지에 따르면 약 1.9 GB 모델을 한 번 내려받은 뒤 기기에서 캐릭터 채팅 AI를 실행하는 무료 iPhone 앱으로, 기본 캐릭터 32종을 제공하며 계정이 필요 없습니다.** 앱 내 Pro 플랜은 일일 메시지 한도를 없애고 성인 전용 선택 기능인 Mature 모드를 활성화합니다. 이 앱은 비공개 소스이고 모델이나 런타임을 밝힌 출처가 없으므로, 기기에서 실행된다는 주장은 개발자의 설명에 의존합니다.',
+      '**Castmates(2026년 10월 19일 기준 버전 1.1.7)는 페이지에 따르면 약 1.9 GB 모델을 한 번 내려받은 뒤 기기에서 캐릭터 채팅 AI를 실행하는 무료 iPhone 앱으로, 기본 캐릭터 32종을 제공하며 계정이 필요 없습니다.** 앱 내 Pro 플랜은 일일 메시지 한도를 없애고 성인 전용 선택 기능인 Mature 모드를 활성화합니다. 이 앱은 비공개 소스이며, 개발자는 모델이 Impish Llama 3B(Llama 3 기반, Q4_K_M 양자화)이고 llama.cpp로 실행된다고 밝혔으므로, 기기에서 실행된다는 주장은 여전히 개발자의 설명에 의존합니다.',
     quickAnswerTop: {
       ko: {
         question: 'Castmates는 정말 오프라인에서 무료로 쓸 수 있습니까?',
@@ -2406,6 +2478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '확인하지 못한 내용', anchor: 'who-should-not-use' },
       { label: '경쟁 앱과 대안', anchor: 'vs-alternatives' },
       { label: '자주 묻는 질문', anchor: 'faq' },
+      { label: '개발자의 말', anchor: 'from-the-maker' },
       { label: '결론', anchor: 'verdict' },
       { label: '출처', anchor: 'sources' },
       { label: '관련 글', anchor: 'related-reading' },
@@ -2461,7 +2534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '플랫폼': '콘텐츠와 안전', '받는 곳': '[get-castmates.com/age-suitability](https://get-castmates.com/age-suitability)' },
           { '플랫폼': '이용약관', '받는 곳': '[get-castmates.com/terms](https://get-castmates.com/terms)' },
         ],
-        note: '확인한 버전: 1.1.7로, App Store 페이지에 따르면 2026년 10월 19일에 출시되었습니다. 1.1.6 릴리스 노트는 RAM이 4 GB 이하인 기기에는 모델 다운로드 대신 안내가 표시된다고 하므로 설치 전에 iPhone을 확인하십시오. 페이지는 그 밖의 RAM 수치를 공개하지 않습니다.',
+        note: '확인한 버전: 1.1.7로, App Store 페이지에 따르면 2026년 10월 19일에 출시되었습니다. 개발자에 따르면 RAM 6 GB 이상의 iPhone이 필요하며, 4 GB 이하 기기에는 모델 다운로드 대신 안내가 표시되므로 설치 전에 iPhone을 확인하십시오. 모델은 Impish Llama 3B(Llama 3 기반, Q4_K_M, 약 1.9 GB)이며 llama.cpp로 4,096토큰 컨텍스트에서 실행됩니다.',
       },
       pricing: {
         id: 'pricing',
@@ -2522,7 +2595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '개인정보와 네트워크 사용',
         content: [
           '**개발자는 대화, 커스텀 캐릭터, 아바타, 메모리가 iPhone에 머물며 회사가 이를 받거나 보거나 저장하지 않는다고 밝힙니다.** 방침은 Cloudflare R2에 호스팅된 일회성 모델 파일을 원격 다운로드로 언급합니다.',
-          '두 개인정보 설명은 범위가 다릅니다. App Store 라벨은 "수집된 데이터 없음"이라고 하지만, 2026년 10월 10일에 업데이트된 [개인정보 처리방침](https://get-castmates.com/privacy)은 익명 사용 이벤트가 Mixpanel로 전송되며(앱 열기, 온보딩 진행, 결제 화면 조회, 메시지 수. 기기의 임의 식별자에 연결되고 IP 기반 위치는 비활성화) RevenueCat이 익명화된 앱 사용자 ID로 구독 상태를 관리한다고 설명합니다. 방침은 이 이벤트에 메시지 내용이나 사용자를 식별하는 정보가 없다고 하며, Mixpanel이 이를 얼마나 보관하는지는 밝히지 않습니다. 결제는 Apple을 통해 이루어집니다.',
+          'App Store 라벨은 "사용자에게 연결되지 않은 데이터"로, 2026년 10월 10일에 업데이트된 [개인정보 처리방침](https://get-castmates.com/privacy)과 일치합니다. 이 방침은 익명 사용 이벤트가 Mixpanel로 전송되며(앱 열기, 온보딩 진행, 결제 화면 조회, 메시지 수. 기기의 임의 식별자에 연결되고 IP 기반 위치는 비활성화) RevenueCat이 익명화된 앱 사용자 ID로 구독 상태를 관리한다고 설명합니다. 방침은 이 이벤트에 메시지 내용이나 사용자를 식별하는 정보가 없다고 하며, Mixpanel이 이를 얼마나 보관하는지는 밝히지 않습니다. 결제는 Apple을 통해 이루어집니다.',
         ],
         callouts: [
           {
@@ -2560,9 +2633,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '확인하지 못한 내용',
         items: [
           '**실제 사용 품질.** PromptQuorum은 앱을 실행하지 않았으므로 응답 품질, 속도, 배터리 사용, 콘텐츠 필터의 실제 강도는 평가하지 않았습니다.',
-          '**모델과 런타임.** 모델, 파라미터 규모, 추론 엔진을 밝힌 출처가 없습니다.',
           '**소스 코드와 라이선스.** 앱은 비공개 소스이며 공개 저장소를 찾지 못했습니다.',
-          '**트래픽과 라벨.** 네트워크 트래픽을 감사하지 않았으므로 "수집된 데이터 없음" 라벨과 방침에 나온 분석 사이의 차이는 해소되지 않았습니다.',
+          '**트래픽.** 네트워크 트래픽을 감사하지 않았으므로 방침에 나온 분석은 독립적으로 검증되지 않았습니다.',
           '**회사 정보.** 웹사이트에는 "© 2026 Castmates"와 숨겨진 지원 이메일만 있고 개인정보 처리방침에도 법인명이 없습니다.',
           '**이용 실적.** 앱은 출시 약 3개월이며 출처에는 지원 약속이 없습니다.',
         ],
@@ -2606,11 +2678,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
       },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '개발자의 말',
+        content: [
+          'Castmates의 개발자 Josip Markovic이 앱과 개발 이유에 대해 다음과 같이 전했습니다. 가독성을 위해 가볍게 편집한 개발자 본인의 말로 제시하는 것이며, PromptQuorum의 독립적인 편집 평가가 아닙니다:',
+          '"제가 Castmates를 만든 이유는, 써 본 캐릭터 앱이 하나같이 계정을 요구하고 모든 메시지를 서버로 보냈기 때문입니다. 휴대폰에서 돌아가는 3B 모델은 제대로 된 이야기를 하기에 너무 작아 보였기에, 작업의 대부분은 모델이 장면을 유지하게 만드는 데 들어갔습니다. 캐릭터가 나를 기억하도록 하는 세션 요약, 모델이 캐릭터에서 벗어나는 것을 잡아내는 가드, 그리고 출시 전에 Mac에서 돌린 많은 평가 실행입니다. 다음은 더 빠른 첫 다운로드와 시즌 한정 캐릭터이며, 먼저 할로윈 캐릭터 세 개를 선보입니다."',
+        ],
+        note: '— Josip Markovic, 개발자',
+      },
       verdict: {
         id: 'verdict',
         title: '결론',
         content:
-          'Castmates는 개발자에 따르면 캐릭터 채팅을 기기에서 실행하는 무료 iPhone 롤플레이 앱으로, 기본 캐릭터 32종, 커스텀 캐릭터, 세션 메모리, 선택 기능인 Mature 모드를 위한 연령 제어를 갖추고 있습니다. 또한 이 리뷰를 확인한 당일에 릴리스가 있을 만큼 활발히 업데이트됩니다. 반면 비공개 소스이고, 출시 약 3개월이며, 평가한 사용자가 적고, 영어만 지원하며, 사용하는 모델이 공개되지 않았고, 개인정보 라벨과 방침이 데이터 수집을 서로 다르게 설명합니다. 계정 없는 캐릭터 채팅을 원하고 새롭고 폐쇄적인 앱을 받아들일 수 있는 성인에게 적합합니다. 공개 코드와 자기 모델을 원한다면 [SillyTavern](/ko/local-llms/sillytavern-review)이나 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)를 비교해 보십시오.',
+          'Castmates는 개발자에 따르면 캐릭터 채팅을 기기에서 실행하는 무료 iPhone 롤플레이 앱으로, 기본 캐릭터 32종, 커스텀 캐릭터, 세션 메모리, 선택 기능인 Mature 모드를 위한 연령 제어를 갖추고 있습니다. 또한 이 리뷰를 확인한 당일에 릴리스가 있을 만큼 활발히 업데이트됩니다. 반면 비공개 소스이고, 출시 약 3개월이며, 평가한 사용자가 적고, 영어만 지원하며, 6 GB 이상의 RAM이 있는 iPhone이 필요합니다. 계정 없는 캐릭터 채팅을 원하고 새롭고 폐쇄적인 앱을 받아들일 수 있는 성인에게 적합합니다. 공개 코드와 자기 모델을 원한다면 [SillyTavern](/ko/local-llms/sillytavern-review)이나 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)를 비교해 보십시오.',
       },
       sources: {
         id: 'sources',
