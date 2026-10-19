@@ -40,8 +40,7 @@ export const app: ToolRecord = {
     ar: 'دردشة شخصيات دون إنترنت لـ iPhone مع 32 شخصية جاهزة وشخصيات مخصصة ودون حساب',
     ko: 'iPhone용 오프라인 캐릭터 채팅 앱. 기본 캐릭터 32종과 커스텀 캐릭터를 제공하며 계정이 필요 없음',
   },
-  // Comparison attributes: each value taken from the App Store listing / product site on 2026-10-19; a missing key = not stated, never false.
-  compare: { offline: true },
+  // Comparison attributes: the roleplay segment only defines lorebooks / groupChats; neither is stated on the listing or site, so `compare` stays unset (not stated, never false).
   lastVerifiedDate: '2026-10-19',
   lastUpstreamUpdate: '2026-10-19', // App Store version 1.1.7, currentVersionReleaseDate via iTunes lookup 2026-10-19
   lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/castmates-ai-characters/id6785844694',
