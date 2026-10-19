@@ -1843,7 +1843,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
             },
             {
               q: 'Können Ollama-Modelle Bilder verarbeiten?',
-              a: 'Ja. Llama 3.2 Vision, Qwen2-VL und Gemma 3 sind alle Multi-Modal. Laden Sie Bilder als lokale Dateien hoch; bei lokaler Ausführung erfolgt keine Cloud-Übertragung. Unterstützung: JPEG, PNG, GIF.',
+              a: 'Ja. Llama 3.2 Vision, Qwen2.5-VL und Gemma 3 sind alle Multi-Modal. Laden Sie Bilder als lokale Dateien hoch; bei lokaler Ausführung erfolgt keine Cloud-Übertragung. Unterstützung: JPEG, PNG, GIF.',
             },
             {
               q: 'Wie aktualisiere ich auf neuere Ollama-Modellversionen?',
@@ -2039,7 +2039,7 @@ schema: {
             'name': 'Können Ollama-Modelle Bilder verarbeiten?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ja. Llama 3.2 Vision, Qwen2-VL und Gemma 3 sind alle Multi-Modal. Laden Sie Bilder als lokale Dateien hoch; bei lokaler Ausführung erfolgt keine Cloud-Übertragung. Unterstützung: JPEG, PNG, GIF.',
+              'text': 'Ja. Llama 3.2 Vision, Qwen2.5-VL und Gemma 3 sind alle Multi-Modal. Laden Sie Bilder als lokale Dateien hoch; bei lokaler Ausführung erfolgt keine Cloud-Übertragung. Unterstützung: JPEG, PNG, GIF.',
             }
           },
           {
@@ -2232,7 +2232,7 @@ schema: {
           imageCaption: '4 modèles Ollama vision : llama3.2-vision:11b (8 Go), gemma3:9b (6 Go), minicpm-v (5,5 Go). Tous en local.',
           rows: [
             { 'Modèle': '[Llama 3.2 Vision 11B](https://ollama.com/library/llama3.3)', 'RAM': '11 GB', 'Support image': 'JPEG, PNG, GIF; entrée multi-images', 'Commande Ollama': 'ollama run llama3.2-vision:11b' },
-            { 'Modèle': '[Qwen2-VL 7B](https://ollama.com/library/qwen3)', 'RAM': '8 GB', 'Support image': 'JPEG, PNG; meilleur en OCR et diagrammes', 'Commande Ollama': 'ollama run qwen2-vl:7b' },
+            { 'Modèle': '[Qwen2.5-VL 7B](https://ollama.com/library/qwen2.5vl)', 'RAM': '8 GB', 'Support image': 'JPEG, PNG; meilleur en OCR et diagrammes', 'Commande Ollama': 'ollama run qwen2.5vl:7b' },
             { 'Modèle': '[Gemma 3 Vision 9B](https://ollama.com/library/gemma3)', 'RAM': '9.5 GB', 'Support image': 'JPEG, PNG; contexte natif 128K', 'Commande Ollama': 'ollama run gemma3:9b' },
             { 'Modèle': '[Mistral AI Pixtral 12B](https://ollama.com/library/mistral)', 'RAM': '12.5 GB', 'Support image': 'JPEG, PNG; basé sur latent', 'Commande Ollama': 'ollama run pixtral:12b' },
           ],
@@ -2362,7 +2362,7 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
             },
             {
               q: 'Les modèles Ollama peuvent-ils traiter les images ?',
-              a: 'Oui. Llama 3.2 Vision, Qwen2-VL et Gemma 3 sont tous multimodaux. Chargez les images comme fichiers locaux ; en exécution locale, aucune transmission cloud. Support : JPEG, PNG, GIF.',
+              a: 'Oui. Llama 3.2 Vision, Qwen2.5-VL et Gemma 3 sont tous multimodaux. Chargez les images comme fichiers locaux ; en exécution locale, aucune transmission cloud. Support : JPEG, PNG, GIF.',
             },
             {
               q: 'Comment mettre à jour vers les nouvelles versions des modèles Ollama ?',
@@ -2545,7 +2545,7 @@ schema: {
             'name': 'Les modèles Ollama peuvent-ils traiter les images ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui. Llama 3.2 Vision, Qwen2-VL et Gemma 3 sont tous multimodaux. Chargez les images comme fichiers locaux ; en exécution locale, aucune transmission cloud. Support : JPEG, PNG, GIF.',
+              'text': 'Oui. Llama 3.2 Vision, Qwen2.5-VL et Gemma 3 sont tous multimodaux. Chargez les images comme fichiers locaux ; en exécution locale, aucune transmission cloud. Support : JPEG, PNG, GIF.',
             }
           },
           {
@@ -2763,7 +2763,7 @@ schema: {
           imageCaption: '4つのOllamaビジョンモデル: llama3.2-vision:11b (8 GB)、gemma3:9b (6 GB)、minicpm-v (5.5 GB)。全てローカル実行。',
           rows: [
             { 'モデル': '[Llama 3.2 Vision 11B](https://ollama.com/library/llama3.3)', 'RAM': '11 GB', '画像対応': 'JPEG、PNG、GIF・複数画像入力', 'Ollamaコマンド': 'ollama run llama3.2-vision:11b' },
-            { 'モデル': '[Qwen2-VL 7B](https://ollama.com/library/qwen3)', 'RAM': '8 GB', '画像対応': 'JPEG、PNG・OCR精密', 'Ollamaコマンド': 'ollama run qwen2-vl:7b' },
+            { 'モデル': '[Qwen2.5-VL 7B](https://ollama.com/library/qwen2.5vl)', 'RAM': '8 GB', '画像対応': 'JPEG、PNG・OCR精密', 'Ollamaコマンド': 'ollama run qwen2.5vl:7b' },
             { 'モデル': '[Gemma 3 Vision 9B](https://ollama.com/library/gemma3)', 'RAM': '9.5 GB', '画像対応': 'JPEG、PNG・ネイティブ128Kコンテキスト', 'Ollamaコマンド': 'ollama run gemma3:9b' },
             { 'モデル': '[Mistral AI Pixtral 12B](https://ollama.com/library/mistral)', 'RAM': '12.5 GB', '画像対応': 'JPEG、PNG・潜在表現', 'Ollamaコマンド': 'ollama run pixtral:12b' },
           ],
@@ -2909,7 +2909,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             },
             {
               q: 'Ollamaモデルは画像処理できる？',
-              a: 'はい。Llama 3.2 Vision、Qwen2-VL、Gemma 3全てマルチモーダル。画像をローカルファイルとしてアップロード。ローカル実行ではクラウド転送なし。JPEG、PNG、GIF対応。',
+              a: 'はい。Llama 3.2 Vision、Qwen2.5-VL、Gemma 3全てマルチモーダル。画像をローカルファイルとしてアップロード。ローカル実行ではクラウド転送なし。JPEG、PNG、GIF対応。',
             },
             {
               q: 'Ollamaモデルを新版にアップデートは？',
@@ -3064,7 +3064,7 @@ schema: {
             'name': 'Ollamaモデルは画像処理できる？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'はい。Llama 3.2 Vision、Qwen2-VL、Gemma 3全てマルチモーダル。画像をローカルファイルとしてアップロード。ローカル実行ではクラウド転送なし。JPEG、PNG、GIF対応。',
+              'text': 'はい。Llama 3.2 Vision、Qwen2.5-VL、Gemma 3全てマルチモーダル。画像をローカルファイルとしてアップロード。ローカル実行ではクラウド転送なし。JPEG、PNG、GIF対応。',
             }
           },
           {
@@ -3278,7 +3278,7 @@ schema: {
           rows: [
             { '模型': '[Llama 3.2 Vision 11B](https://ollama.com/library/llama3.3)', 'RAM要求': '11 GB', '图像支持': '是（JPEG、PNG、GIF）', 'Ollama命令': 'ollama run llama3.2-vision:11b' },
             { '模型': '[Gemma 3 9B](https://ollama.com/library/gemma3)', 'RAM要求': '9.5 GB', '图像支持': '是（Gemma 3全系多模态）', 'Ollama命令': 'ollama run gemma3:9b' },
-            { '模型': '[Qwen2-VL 7B](https://ollama.com/library/qwen3)', 'RAM要求': '7.5 GB', '图像支持': '是（视频帧、多页PDF）', 'Ollama命令': 'ollama run qwen2-vl:7b' },
+            { '模型': '[Qwen2.5-VL 7B](https://ollama.com/library/qwen2.5vl)', 'RAM要求': '7.5 GB', '图像支持': '是（JPEG、PNG）', 'Ollama命令': 'ollama run qwen2.5vl:7b' },
             { '模型': '[Phi-4 Vision 14B](https://ollama.com/library/phi4)', 'RAM要求': '14 GB', '图像支持': '是（高分辨率输入）', 'Ollama命令': 'ollama run phi4:14b' },
           ],
         },
@@ -3407,7 +3407,7 @@ schema: {
             },
             {
               q: 'Ollama模型支持图像处理吗？',
-              a: '支持。Llama 3.2 Vision、Qwen2-VL、Gemma 3都是多模态。图像本地上传，本地运行时无云传输。支持JPEG、PNG、GIF。',
+              a: '支持。Llama 3.2 Vision、Qwen2.5-VL、Gemma 3都是多模态。图像本地上传，本地运行时无云传输。支持JPEG、PNG、GIF。',
             },
             {
               q: '如何更新Ollama模型？',
@@ -3565,7 +3565,7 @@ schema: {
             'name': 'Ollama模型支持图像处理吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '支持。Llama 3.2 Vision、Qwen2-VL、Gemma 3都是多模态。图像本地上传，本地运行时无云传输。支持JPEG、PNG、GIF。',
+              'text': '支持。Llama 3.2 Vision、Qwen2.5-VL、Gemma 3都是多模态。图像本地上传，本地运行时无云传输。支持JPEG、PNG、GIF。',
             }
           },
           {
