@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ollama ipad remote connection',
       'termux ollama android',
       'llm farm ipad',
-      'pocket paladin ios llm',
+      'pocketpal ai ipad',
       'local llm on ipad pro m5',
     ],
     leadAnswerBlock:

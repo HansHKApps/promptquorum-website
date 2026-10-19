@@ -7,7 +7,7 @@
   <text x="93" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">设备</text>
   <text x="228" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">内存</text>
   <text x="360" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">推荐模型</text>
-  <text x="515" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">速度</text>
+  <text x="515" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">估算速度</text>
   <text x="690" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">适用场景</text>
 
   <!-- Vertical column dividers -->

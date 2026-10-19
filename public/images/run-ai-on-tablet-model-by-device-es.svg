@@ -7,7 +7,7 @@
   <text x="93" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Dispositivo</text>
   <text x="228" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">RAM</text>
   <text x="360" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Mejor modelo</text>
-  <text x="515" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Velocidad</text>
+  <text x="515" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Veloc. est.</text>
   <text x="690" y="70" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Ideal para</text>
 
   <!-- Vertical column dividers -->
