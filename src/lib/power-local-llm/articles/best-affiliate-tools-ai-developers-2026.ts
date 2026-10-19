@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     primaryTerm: 'affiliate programs for AI developers',
     title: 'Best Affiliate Tools for AI Developers: Earn While You Build (2026)',
@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RunPod: 10% cash via PartnerStack affiliate program',
           'DataCamp: 15–25% commission, 90-day cookie',
         ],
-        updatedDate: '2026-08-29',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 15–45% Per Course Sale',
-            content: 'Coursera\'s affiliate program pays 15–45% depending on the course and enrollment type. The 30-day cookie applies to both free trial starts and paid enrollments. AI, deep learning, and MLOps specializations from major universities convert well from developer audiences.',
+            content: 'Coursera\'s affiliate program pays 15–45% depending on the course and enrollment type. The 30-day cookie applies to both free trial starts and paid enrollments. AI, deep learning, and MLOps specializations from major universities convert well from developer audiences. Rates and terms follow Coursera\'s affiliate page and can change; degree and certificate purchases do not qualify, and Coursera and Udemy merged on 11 May 2026, so check the current terms before joining.',
           },
         ],
         affiliateLinks: [
@@ -176,7 +176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'This sequence minimizes the time between joining a program and publishing your first monetized article.',
         numberedItems: [
           'Choose 2–3 programs that match your existing content. If you write about privacy or VPNs, start with NordVPN. If your audience learns AI/ML, start with DataCamp and Coursera.',
-          'Apply to each program. NordVPN and Coursera accept new publishers with small audiences. RunPod PartnerStack and v0/Vercel may require an application review with content samples.',
+          'Apply to each program. NordVPN and Coursera have historically accepted new publishers with small audiences; check each program\'s current terms, especially Coursera\'s after its merger with Udemy (11 May 2026). RunPod PartnerStack and v0/Vercel may require an application review with content samples.',
           'Set up link tracking. Add data-affiliate="program-name" to affiliate links and track an affiliate_click event in umami or GA4 on each click.',
           'Place the affiliate disclosure above the fold on every page that contains affiliate links: "This page contains affiliate links. We may earn a commission at no extra cost to you."',
           'Review your dashboard monthly via PartnerStack (RunPod), Impact (NordVPN), or each program\'s dedicated portal. Rotate underperforming links to higher-converting alternatives.',
@@ -246,7 +246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     primaryTerm: 'Affiliate-Programme für KI-Entwickler',
     title: 'Beste Affiliate-Programme für KI-Entwickler: Nebeneinkommen beim Entwickeln (2026)',
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RunPod: 10 % bar über PartnerStack-Affiliate-Programm',
           'DataCamp: 15–25 % Provision, 90-Tage-Cookie',
         ],
-        updatedDate: '2026-08-29',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 15–45 % pro Kursverkauf',
-            content: 'Das Coursera-Affiliate-Programm zahlt 15–45 % abhängig vom Kurs und der Anmeldungsart. Der 30-Tage-Cookie gilt für kostenlose Testanmeldungen und kostenpflichtige Einschreibungen. KI-, Deep-Learning- und MLOps-Spezialisierungen großer Universitäten konvertieren bei Entwickler-Zielgruppen gut.',
+            content: 'Das Coursera-Affiliate-Programm zahlt 15–45 % abhängig vom Kurs und der Anmeldungsart. Der 30-Tage-Cookie gilt für kostenlose Testanmeldungen und kostenpflichtige Einschreibungen. KI-, Deep-Learning- und MLOps-Spezialisierungen großer Universitäten konvertieren bei Entwickler-Zielgruppen gut. Sätze und Bedingungen folgen der Coursera-Affiliate-Seite und können sich ändern; Abschlüsse und Zertifikatskäufe sind nicht provisionsberechtigt, und Coursera und Udemy haben am 11. Mai 2026 fusioniert – prüfen Sie daher vor dem Beitritt die aktuellen Bedingungen.',
           },
         ],
         affiliateLinks: [
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Diese Reihenfolge minimiert die Zeit zwischen Programmbeitritt und erstem monetarisierten Artikel.',
         numberedItems: [
           '2–3 Programme auswählen, die zum vorhandenen Inhalt passen. Wer über Datenschutz oder VPNs schreibt, beginnt mit NordVPN. Wer eine KI/ML-Lernzielgruppe hat, beginnt mit DataCamp und Coursera.',
-          'Bei jedem Programm bewerben. NordVPN und Coursera akzeptieren neue Publisher mit kleinen Zielgruppen. RunPod PartnerStack und v0/Vercel können eine Bewerbungsprüfung mit Inhaltsproben erfordern.',
+          'Bei jedem Programm bewerben. NordVPN und Coursera haben bisher neue Publisher mit kleinen Zielgruppen akzeptiert; prüfen Sie die aktuellen Bedingungen jedes Programms, besonders die von Coursera nach der Fusion mit Udemy (11. Mai 2026). RunPod PartnerStack und v0/Vercel können eine Bewerbungsprüfung mit Inhaltsproben erfordern.',
           'Link-Tracking einrichten. data-affiliate="programmname" zu Affiliate-Links hinzufügen und ein affiliate_click-Event in umami oder GA4 bei jedem Klick auslösen.',
           'Affiliate-Offenlegung oberhalb des sichtbaren Bereichs auf jeder Seite mit Affiliate-Links platzieren: „Diese Seite enthält Affiliate-Links. Wir erhalten möglicherweise eine Provision ohne Mehrkosten für Sie."',
           'Dashboard monatlich überprüfen: PartnerStack (RunPod), Impact (NordVPN) oder das jeweilige Programmportal. Leistungsschwache Links durch besser konvertierende Alternativen ersetzen.',
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     primaryTerm: 'programmes d\'affiliation pour développeurs IA',
     title: 'Meilleurs programmes d\'affiliation pour développeurs IA : gagnez en codant (2026)',
@@ -514,7 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RunPod : 10 % en cash via le programme PartnerStack',
           'DataCamp : commission 15–25 %, cookie 90 jours',
         ],
-        updatedDate: '2026-08-29',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 15–45 % par vente de cours',
-            content: 'Le programme affilié de Coursera paie 15–45 % selon le cours et le type d\'inscription. Le cookie de 30 jours s\'applique aux démarrages d\'essai gratuit et aux inscriptions payantes. Les spécialisations IA, deep learning et MLOps des grandes universités convertissent bien auprès des audiences de développeurs.',
+            content: 'Le programme affilié de Coursera paie 15–45 % selon le cours et le type d\'inscription. Le cookie de 30 jours s\'applique aux démarrages d\'essai gratuit et aux inscriptions payantes. Les spécialisations IA, deep learning et MLOps des grandes universités convertissent bien auprès des audiences de développeurs. Les taux et conditions suivent la page d\'affiliation de Coursera et peuvent changer ; les achats de diplômes et de certificats ne sont pas éligibles, et Coursera et Udemy ont fusionné le 11 mai 2026 : vérifiez les conditions actuelles avant de vous inscrire.',
           },
         ],
         affiliateLinks: [
@@ -653,7 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Cette séquence minimise le délai entre l\'adhésion à un programme et la publication de votre premier article monétisé.',
         numberedItems: [
           'Choisissez 2 à 3 programmes correspondant à votre contenu existant. Si vous traitez de la confidentialité ou des VPN, commencez par NordVPN. Si votre audience apprend l\'IA/ML, commencez par DataCamp et Coursera.',
-          'Candidatez à chaque programme. NordVPN et Coursera acceptent les nouveaux éditeurs avec de petites audiences. RunPod PartnerStack et v0/Vercel peuvent nécessiter un examen de candidature avec des échantillons de contenu.',
+          'Candidatez à chaque programme. NordVPN et Coursera ont jusqu\'ici accepté les nouveaux éditeurs avec de petites audiences ; vérifiez les conditions actuelles de chaque programme, en particulier celles de Coursera après sa fusion avec Udemy (11 mai 2026). RunPod PartnerStack et v0/Vercel peuvent nécessiter un examen de candidature avec des échantillons de contenu.',
           'Configurez le suivi des liens. Ajoutez data-affiliate="nom-programme" aux liens affiliés et déclenchez un événement affiliate_click dans umami ou GA4 à chaque clic.',
           'Placez la mention d\'affiliation au-dessus de la ligne de flottaison sur chaque page contenant des liens affiliés : « Cette page contient des liens affiliés. Nous pouvons percevoir une commission sans frais supplémentaires pour vous. »',
           'Consultez votre tableau de bord mensuellement via PartnerStack (RunPod), Impact (NordVPN) ou le portail dédié de chaque programme. Remplacez les liens peu performants par des alternatives mieux converties.',
@@ -723,7 +723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     primaryTerm: 'AIデベロッパー向けアフィリエイトプログラム',
     title: 'AIデベロッパー向けアフィリエイトプログラム完全ガイド：開発しながら稼ぐ（2026年）',
@@ -751,7 +751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RunPod：PartnerStackアフィリエイト経由で10%現金',
           'DataCamp：15〜25%の手数料、90日Cookie',
         ],
-        updatedDate: '2026-08-29',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -832,7 +832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — コース販売1件につき15〜45%',
-            content: 'Courseraのアフィリエイトプログラムは、コースと登録タイプに応じて15〜45%を支払います。30日Cookieは無料トライアル開始と有料登録の両方に適用されます。主要大学のAI、ディープラーニング、MLOps専攻はデベロッパーオーディエンスでよく転換します。',
+            content: 'Courseraのアフィリエイトプログラムは、コースと登録タイプに応じて15〜45%を支払います。30日Cookieは無料トライアル開始と有料登録の両方に適用されます。主要大学のAI、ディープラーニング、MLOps専攻はデベロッパーオーディエンスでよく転換します。料率と条件はCourseraのアフィリエイトページに基づいており変更される可能性があります。学位や修了証の購入は対象外で、CourseraとUdemyは2026年5月11日に統合したため、参加前に最新の条件を確認してください。',
           },
         ],
         affiliateLinks: [
@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'このシーケンスはプログラム参加から最初の収益化記事公開までの時間を最小化します。',
         numberedItems: [
           '既存コンテンツに合ったプログラムを2〜3つ選択。プライバシーやVPNについて書くなら、NordVPNから始める。AI/ML学習オーディエンスがいるなら、DataCampとCourseraから始める。',
-          '各プログラムに申請。NordVPNとCourseraは小規模オーディエンスの新規パブリッシャーを受け入れます。RunPod PartnerStackとv0/Vercelはコンテンツサンプルを含む申請審査が必要な場合があります。',
+          '各プログラムに申請。NordVPNとCourseraはこれまで小規模オーディエンスの新規パブリッシャーを受け入れてきましたが、各プログラムの最新条件、特にUdemyとの統合（2026年5月11日）後のCourseraの条件を確認してください。RunPod PartnerStackとv0/Vercelはコンテンツサンプルを含む申請審査が必要な場合があります。',
           'リンクトラッキングを設定。アフィリエイトリンクにdata-affiliate="プログラム名"を追加し、各クリックでumamiまたはGA4にaffiliate_clickイベントを発火する。',
           'アフィリエイトリンクを含むすべてのページのファーストビューにアフィリエイト開示を配置：「このページにはアフィリエイトリンクが含まれています。これらのリンクを通じてご購入いただいた場合、追加費用なしでコミッションを受け取る場合があります。」',
           'PartnerStack（RunPod）、Impact（NordVPN）、または各プログラムの専用ポータルで月次ダッシュボードを確認。パフォーマンスの低いリンクをより高いコンバージョンの代替に切り替える。',
@@ -959,7 +959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     primaryTerm: 'AI开发者联盟计划',
     title: 'AI开发者最佳联盟计划：边开发边赚钱（2026）',
@@ -987,7 +987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RunPod：通过PartnerStack联盟项目支付10%现金',
           'DataCamp：15–25%佣金，90天Cookie',
         ],
-        updatedDate: '2026-08-29',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -1068,7 +1068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 每次课程销售15–45%',
-            content: 'Coursera联盟计划根据课程和注册类型支付15–45%。30天Cookie适用于免费试用开始和付费注册。顶尖大学的AI、深度学习和MLOps专项课程在开发者受众中转化率高。',
+            content: 'Coursera联盟计划根据课程和注册类型支付15–45%。30天Cookie适用于免费试用开始和付费注册。顶尖大学的AI、深度学习和MLOps专项课程在开发者受众中转化率高。费率和条款依据Coursera联盟页面，可能变更；学位和证书购买不计佣金，且Coursera与Udemy已于2026年5月11日合并，加入前请核对最新条款。',
           },
         ],
         affiliateLinks: [
@@ -1126,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '这个流程最大限度地缩短了从加入计划到发布第一篇变现文章之间的时间。',
         numberedItems: [
           '选择2–3个与现有内容匹配的计划。如果您撰写隐私或VPN相关内容，从NordVPN开始。如果受众正在学习AI/ML，从DataCamp和Coursera开始。',
-          '申请各计划。NordVPN和Coursera接受小受众的新发布者。RunPod PartnerStack和v0/Vercel可能需要提交内容样本进行申请审核。',
+          '申请各计划。NordVPN和Coursera此前接受小受众的新发布者；请核对各计划的最新条款，尤其是Coursera在与Udemy合并（2026年5月11日）之后的条款。RunPod PartnerStack和v0/Vercel可能需要提交内容样本进行申请审核。',
           '设置链接追踪。为联盟链接添加data-affiliate="计划名称"属性，并在每次点击时在umami或GA4中触发affiliate_click事件。',
           '在包含联盟链接的每个页面的首屏位置放置联盟披露声明："本页包含联盟链接。如您通过这些链接购买，我们可能获得佣金，不会产生额外费用。"',
           '每月通过PartnerStack（RunPod）、Impact（NordVPN）或各计划专属门户查看数据面板。将表现不佳的链接替换为转化率更高的替代品。',
@@ -1196,7 +1196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     primaryTerm: 'programas de afiliados para desarrolladores de IA',
     title: 'Mejores programas de afiliados para desarrolladores de IA: gana mientras construyes (2026)',
@@ -1224,7 +1224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RunPod: 10% en efectivo vía programa de afiliados PartnerStack',
           'DataCamp: comisión 15–25%, cookie de 90 días',
         ],
-        updatedDate: '2026-08-29',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -1305,7 +1305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 15–45% por venta de curso',
-            content: 'El programa de afiliados de Coursera paga entre un 15 y un 45% según el curso y el tipo de matrícula. La cookie de 30 días aplica tanto a inicios de prueba gratuita como a matrículas de pago. Las especializaciones en IA, deep learning y MLOps de las principales universidades convierten bien entre audiencias de desarrolladores.',
+            content: 'El programa de afiliados de Coursera paga entre un 15 y un 45% según el curso y el tipo de matrícula. La cookie de 30 días aplica tanto a inicios de prueba gratuita como a matrículas de pago. Las especializaciones en IA, deep learning y MLOps de las principales universidades convierten bien entre audiencias de desarrolladores. Las tasas y condiciones siguen la página de afiliados de Coursera y pueden cambiar; las compras de títulos y certificados no cuentan, y Coursera y Udemy se fusionaron el 11 de mayo de 2026, así que revisa las condiciones actuales antes de unirte.',
           },
         ],
         affiliateLinks: [
@@ -1363,7 +1363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Esta secuencia minimiza el tiempo entre unirte a un programa y publicar tu primer artículo monetizado.',
         numberedItems: [
           'Elige 2–3 programas que se ajusten a tu contenido existente. Si escribes sobre privacidad o VPNs, empieza por NordVPN. Si tu audiencia aprende IA/ML, empieza por DataCamp y Coursera.',
-          'Solicita la adhesión a cada programa. NordVPN y Coursera aceptan nuevos publicadores con audiencias pequeñas. RunPod PartnerStack y v0/Vercel pueden requerir una revisión de solicitud con muestras de contenido.',
+          'Solicita la adhesión a cada programa. NordVPN y Coursera han aceptado hasta ahora a nuevos publicadores con audiencias pequeñas; revisa las condiciones actuales de cada programa, en especial las de Coursera tras su fusión con Udemy (11 de mayo de 2026). RunPod PartnerStack y v0/Vercel pueden requerir una revisión de solicitud con muestras de contenido.',
           'Configura el seguimiento de enlaces. Añade data-affiliate="nombre-del-programa" a los enlaces de afiliado y registra un evento affiliate_click en umami o GA4 en cada clic.',
           'Coloca la divulgación de afiliados por encima del pliegue en cada página que contenga enlaces de afiliado: "Esta página contiene enlaces de afiliado. Podemos ganar una comisión sin coste adicional para ti."',
           'Revisa tu panel mensualmente a través de PartnerStack (RunPod), Impact (NordVPN) o el portal dedicado de cada programa. Sustituye los enlaces con bajo rendimiento por alternativas con mayor conversión.',
@@ -1433,7 +1433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/best-affiliate-tools-ai-developers-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-08-29',
+      dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1446,7 +1446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     primaryTerm: 'programas de afiliados para desenvolvedores de IA',
     title: 'Melhores programas de afiliados para desenvolvedores de IA: ganhe enquanto constrói (2026)',
@@ -1474,7 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RunPod: 10% em dinheiro via programa de afiliados PartnerStack',
           'DataCamp: comissão 15–25%, cookie de 90 dias',
         ],
-        updatedDate: '2026-08-29',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -1555,7 +1555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 15–45% por venda de curso',
-            content: 'O programa de afiliados da Coursera paga de 15 a 45% dependendo do curso e do tipo de matrícula. O cookie de 30 dias se aplica tanto a inícios de teste gratuito quanto a matrículas pagas. Especializações em IA, deep learning e MLOps das principais universidades convertem bem entre audiências de desenvolvedores.',
+            content: 'O programa de afiliados da Coursera paga de 15 a 45% dependendo do curso e do tipo de matrícula. O cookie de 30 dias se aplica tanto a inícios de teste gratuito quanto a matrículas pagas. Especializações em IA, deep learning e MLOps das principais universidades convertem bem entre audiências de desenvolvedores. As taxas e condições seguem a página de afiliados da Coursera e podem mudar; compras de diplomas e certificados não são elegíveis, e a Coursera e a Udemy se fundiram em 11 de maio de 2026, então confira as condições atuais antes de entrar.',
           },
         ],
         affiliateLinks: [
@@ -1613,7 +1613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Esta sequência minimiza o tempo entre entrar em um programa e publicar seu primeiro artigo monetizado.',
         numberedItems: [
           'Escolha de 2 a 3 programas que combinem com seu conteúdo existente. Se você escreve sobre privacidade ou VPNs, comece pela NordVPN. Se sua audiência aprende IA/ML, comece pela DataCamp e pela Coursera.',
-          'Inscreva-se em cada programa. NordVPN e Coursera aceitam novos publicadores com audiências pequenas. RunPod PartnerStack e v0/Vercel podem exigir uma revisão da inscrição com amostras de conteúdo.',
+          'Inscreva-se em cada programa. NordVPN e Coursera aceitaram até agora novos publicadores com audiências pequenas; confira as condições atuais de cada programa, especialmente as da Coursera após a fusão com a Udemy (11 de maio de 2026). RunPod PartnerStack e v0/Vercel podem exigir uma revisão da inscrição com amostras de conteúdo.',
           'Configure o rastreamento de links. Adicione data-affiliate="nome-do-programa" aos links de afiliado e registre um evento affiliate_click no umami ou GA4 a cada clique.',
           'Coloque o aviso de afiliados acima da dobra em toda página que contenha links de afiliado: "Esta página contém links de afiliado. Podemos ganhar uma comissão sem custo adicional para você."',
           'Revise seu painel mensalmente via PartnerStack (RunPod), Impact (NordVPN) ou o portal dedicado de cada programa. Substitua os links de baixo desempenho por alternativas com maior conversão.',
@@ -1683,7 +1683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-affiliate-tools-ai-developers-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-08-29',
+      dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1696,7 +1696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     primaryTerm: 'برامج الشراكة لمطوّري الذكاء الاصطناعي',
     title: 'أفضل برامج الشراكة لمطوّري الذكاء الاصطناعي: اكسب وأنت تبني (⁨2026⁩)',
@@ -1724,7 +1724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RunPod: 10% نقداً عبر برنامج الشراكة PartnerStack',
           'DataCamp: عمولة 15–25%، ملف تعريف ارتباط 90 يوماً',
         ],
-        updatedDate: '2026-08-29',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -1805,7 +1805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 15–45% لكل بيع دورة',
-            content: 'يدفع برنامج شراكة Coursera من 15 إلى 45% بحسب الدورة ونوع التسجيل. يُطبَّق ملف تعريف الارتباط لـ30 يوماً على بدايات التجربة المجانية والتسجيلات المدفوعة معاً. تخصصات الذكاء الاصطناعي والتعلم العميق وMLOps من الجامعات الكبرى تتحوّل جيداً مع جماهير المطوّرين.',
+            content: 'يدفع برنامج شراكة Coursera من 15 إلى 45% بحسب الدورة ونوع التسجيل. يُطبَّق ملف تعريف الارتباط لـ30 يوماً على بدايات التجربة المجانية والتسجيلات المدفوعة معاً. تخصصات الذكاء الاصطناعي والتعلم العميق وMLOps من الجامعات الكبرى تتحوّل جيداً مع جماهير المطوّرين. تستند النسب والشروط إلى صفحة الشراكة في Coursera وقد تتغيّر؛ لا تُحتسب عمولة على شراء الدرجات العلمية والشهادات، وقد اندمجت Coursera وUdemy في 11 مايو 2026، فراجع الشروط الحالية قبل الانضمام.',
           },
         ],
         affiliateLinks: [
@@ -1863,7 +1863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'يُقلّص هذا التسلسل الوقت بين الانضمام لبرنامج ونشر أول مقال مُربح.',
         numberedItems: [
           'اختر 2 إلى 3 برامج تتوافق مع محتواك الحالي. إن كنت تكتب عن الخصوصية أو شبكات VPN، ابدأ بـNordVPN. إن كان جمهورك يتعلم الذكاء الاصطناعي/التعلم الآلي، ابدأ بـDataCamp وCoursera.',
-          'سجّل في كل برنامج. تقبل NordVPN وCoursera ناشرين جدداً بجماهير صغيرة. قد تستلزم RunPod PartnerStack وv0/Vercel مراجعة الطلب مع نماذج محتوى.',
+          'سجّل في كل برنامج. قبلت NordVPN وCoursera حتى الآن ناشرين جدداً بجماهير صغيرة؛ راجع الشروط الحالية لكل برنامج، خاصةً شروط Coursera بعد اندماجها مع Udemy (11 مايو 2026). قد تستلزم RunPod PartnerStack وv0/Vercel مراجعة الطلب مع نماذج محتوى.',
           'أعدّ تتبع الروابط. أضف data-affiliate="اسم-البرنامج" لروابط الشراكة وسجّل حدث affiliate_click في أداة التحليلات (umami أو GA4) عند كل نقرة.',
           'ضع إفصاح الشراكة فوق الطيّة في كل صفحة تحتوي روابط شراكة: "تحتوي هذه الصفحة روابط شراكة. قد نكسب عمولة دون تكلفة إضافية عليك."',
           'راجع لوحة التحكم شهرياً عبر PartnerStack (RunPod) أو Impact (NordVPN) أو البوابة المخصصة لكل برنامج. استبدل الروابط ضعيفة الأداء ببدائل أعلى تحويلاً.',
@@ -1933,7 +1933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-affiliate-tools-ai-developers-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-22',
-      dateModified: '2026-08-29',
+      dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1946,7 +1946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     affiliateDisclosure: true,
     publishDate: '2026-05-22',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-19',
     educationalLevel: 'Intermediate',
     primaryTerm: 'AI 개발자를 위한 제휴 프로그램',
     title: 'AI 개발자를 위한 최고의 제휴 프로그램: 개발하면서 수익 창출하기 (2026)',
@@ -1974,7 +1974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'RunPod: PartnerStack 제휴 프로그램을 통해 현금 10%',
           'DataCamp: 수수료 15–25%, 쿠키 90일',
         ],
-        updatedDate: '2026-08-29',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -2055,7 +2055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Coursera — 강좌 판매당 15–45%',
-            content: 'Coursera 제휴 프로그램은 강좌와 등록 유형에 따라 15~45%를 지급합니다. 30일 쿠키는 무료 체험 시작과 유료 등록 모두에 적용됩니다. 주요 대학의 AI, 딥러닝, MLOps 특화 과정은 개발자 독자층에서 전환율이 높습니다.',
+            content: 'Coursera 제휴 프로그램은 강좌와 등록 유형에 따라 15~45%를 지급합니다. 30일 쿠키는 무료 체험 시작과 유료 등록 모두에 적용됩니다. 주요 대학의 AI, 딥러닝, MLOps 특화 과정은 개발자 독자층에서 전환율이 높습니다. 요율과 약관은 Coursera 제휴 페이지를 따르며 변경될 수 있습니다. 학위 및 수료증 구매는 대상이 아니며, Coursera와 Udemy가 2026년 5월 11일 합병했으므로 가입 전에 최신 약관을 확인하십시오.',
           },
         ],
         affiliateLinks: [
@@ -2113,7 +2113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '이 순서는 프로그램 가입부터 첫 번째 수익화 기사 게시까지 걸리는 시간을 최소화합니다.',
         numberedItems: [
           '기존 콘텐츠에 맞는 2–3개 프로그램을 선택합니다. 개인 정보 보호나 VPN에 대해 글을 쓴다면 NordVPN부터 시작하십시오. 독자층이 AI/ML을 배우는 경우 DataCamp와 Coursera부터 시작하십시오.',
-          '각 프로그램에 가입을 신청합니다. NordVPN과 Coursera는 소규모 독자층의 신규 게시자도 수락합니다. RunPod PartnerStack과 v0/Vercel은 콘텐츠 샘플과 함께 신청서 검토를 요구할 수 있습니다.',
+          '각 프로그램에 가입을 신청합니다. NordVPN과 Coursera는 지금까지 소규모 독자층의 신규 게시자도 수락해 왔습니다. 각 프로그램의 최신 약관, 특히 Udemy와의 합병(2026년 5월 11일) 이후 Coursera의 약관을 확인하십시오. RunPod PartnerStack과 v0/Vercel은 콘텐츠 샘플과 함께 신청서 검토를 요구할 수 있습니다.',
           '링크 추적을 설정합니다. 제휴 링크에 data-affiliate="프로그램명"을 추가하고 클릭마다 umami 또는 GA4에서 affiliate_click 이벤트를 기록합니다.',
           '제휴 링크가 포함된 모든 페이지의 상단에 공시 문구를 배치합니다: "이 페이지에는 제휴 링크가 포함되어 있습니다. 독자에게 추가 비용 없이 수수료를 받을 수 있습니다."',
           'PartnerStack(RunPod), Impact(NordVPN) 또는 각 프로그램의 전용 포털을 통해 매월 대시보드를 검토합니다. 실적이 낮은 링크는 전환율이 더 높은 대안으로 교체합니다.',
@@ -2183,7 +2183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-affiliate-tools-ai-developers-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-22',
-      dateModified: '2026-08-29',
+      dateModified: '2026-10-19',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

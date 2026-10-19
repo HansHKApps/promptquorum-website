@@ -108,7 +108,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: "Editor's Choice: A Paid Structured Course With Graded Projects",
-        sponsoredSlot: true,
         content:
           '**For most learners moving past the basics, a paid structured course or specialization with graded, hands-on projects is the pick that turns AI knowledge into working skill.** The deciding feature is the projects: videos transfer information, but graded projects force you to apply it, which is what carries over to real work. A structured course also sequences topics so you do not skip prerequisites, and many issue a verifiable certificate on completion. If you only want to find out whether AI is for you, start with a free fundamentals course first — it costs nothing and answers that question. If a specific job or contract requires a named credential, choose a certification track instead. Course prices change with promotions and subscription tiers, so check the current price on the platform before enrolling.',
         callouts: [
@@ -338,7 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Evaluate an AI course on its syllabus, its hands-on projects, its pricing model, and whether it issues a verifiable certificate — not on its marketing.** Use this checklist before you pay.',
         items: [
-          '**Read the full syllabus:** confirm it covers what you actually need and that the prerequisites match your current level. A mismatch in level is the most common reason a course fails a learner.',
+          '**Read the full syllabus:** confirm it covers what you actually need and that the prerequisites match your current level. A mismatch in level is a common reason a course fails a learner.',
           '**Check for graded, hands-on projects:** a course that is only videos transfers information but not skill. Projects are what carry over to real work — prioritize courses that include them.',
           '**Compare the pricing model:** a monthly subscription rewards fast finishers; a one-time fee is pace-independent. Estimate your finish time, then pick the cheaper model for that pace.',
           '**Confirm the certificate is verifiable:** if you need a credential, check that the course issues a certificate with a shareable verification link, and that target employers recognize the issuer.',
@@ -432,7 +431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Buying a certification when no one is asking for one.** A certification is worth its cost when a role or employer requires it. Without that requirement, a paid structured course builds the same skill and often issues a certificate too.',
           '**Choosing a video-only course expecting to build skill.** Lectures transfer information; graded projects build skill. A course with no hands-on work leaves you with familiarity, not capability.',
           '**Ignoring the subscription-versus-one-time math.** A monthly subscription is cheap if you finish fast and expensive if you stall. Estimate your finish time before picking a pricing model.',
-          '**Starting with an advanced course because it sounds impressive.** A level mismatch is the top reason learners abandon a course. Match the prerequisites to your current level honestly.',
+          '**Starting with an advanced course because it sounds impressive.** A level mismatch is a common reason learners abandon a course. Match the prerequisites to your current level honestly.',
           '**Treating a general AI course as a prompt engineering course.** General courses teach how models work, not how to write good prompts. If prompting is your goal, take a dedicated prompt engineering course.',
           '**Skipping free material and overpaying.** Some of the best-regarded AI fundamentals content is free. Audit the free option before assuming a paid course is better.',
         ],
@@ -481,7 +480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Do I need a technical background to take an AI course?',
-            a: 'Not for every course. Beginner fundamentals courses and many prompt engineering courses assume no prior technical background. Structured machine learning specializations usually expect some programming and math comfort. The single most important step is reading the prerequisites on the course page and matching them honestly to your current level — a level mismatch is the top reason learners abandon a course.',
+            a: 'Not for every course. Beginner fundamentals courses and many prompt engineering courses assume no prior technical background. Structured machine learning specializations usually expect some programming and math comfort. The single most important step is reading the prerequisites on the course page and matching them honestly to your current level — a level mismatch is a common reason learners abandon a course.',
           },
           {
             q: 'What is the difference between a subscription and a one-time course fee?',
@@ -509,7 +508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Choose a GPU if your course involves running models locally](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — the hardware buying guide for hands-on AI coursework.',
           '[Pick a monitor for AI development and study](/power-local-llm/best-monitors-ai-development-2026) — the desk setup that pairs with project-heavy AI courses.',
           '[Run local LLMs on a laptop for course projects](/local-llms/local-llm-on-laptop) — how to practice with models on the hardware you already own.',
-          '[Best Affiliate Tools for AI Developers: Earn While You Build (2026)](/power-local-llm/best-affiliate-tools-ai-developers-2026) -- earn passive income by recommending AI tools your readers already need',
+          '[Best Affiliate Tools for AI Developers: Earn While You Build (2026)](/power-local-llm/best-affiliate-tools-ai-developers-2026) -- an overview of affiliate programs for AI developer tools',
         ],
       },
     },
@@ -609,7 +608,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Empfehlung der Redaktion: Ein kostenpflichtiger strukturierter Kurs mit bewerteten Projekten',
-        sponsoredSlot: true,
         content:
           '**Für die meisten Lernenden, die über die Grundlagen hinausgehen, ist ein kostenpflichtiger strukturierter Kurs oder eine Spezialisierung mit bewerteten, praxisnahen Projekten die Wahl, die KI-Wissen in anwendbare Kompetenz verwandelt.** Das entscheidende Merkmal sind die Projekte: Videos vermitteln Informationen, aber bewertete Projekte zwingen Sie dazu, sie anzuwenden – und genau das überträgt sich auf echte Arbeit. Ein strukturierter Kurs ordnet die Themen außerdem so an, dass Sie keine Voraussetzungen überspringen, und viele stellen bei Abschluss ein überprüfbares Zertifikat aus. Wenn Sie nur herausfinden möchten, ob KI das Richtige für Sie ist, beginnen Sie zuerst mit einem kostenlosen Grundlagenkurs – er kostet nichts und beantwortet diese Frage. Wenn eine bestimmte Stelle oder ein Auftrag einen benannten Nachweis verlangt, wählen Sie stattdessen einen Zertifizierungspfad. Kurspreise ändern sich mit Aktionen und Abostufen, prüfen Sie daher den aktuellen Preis auf der Plattform, bevor Sie sich einschreiben.',
         callouts: [
@@ -839,7 +837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Bewerten Sie einen KI-Kurs anhand seines Lehrplans, seiner praxisnahen Projekte, seines Preismodells und der Frage, ob er ein überprüfbares Zertifikat ausstellt – nicht anhand seines Marketings.** Nutzen Sie diese Checkliste, bevor Sie zahlen.',
         items: [
-          '**Lesen Sie den vollständigen Lehrplan:** bestätigen Sie, dass er abdeckt, was Sie tatsächlich brauchen, und dass die Voraussetzungen zu Ihrem aktuellen Niveau passen. Eine Niveaudiskrepanz ist der häufigste Grund, warum ein Kurs bei einem Lernenden scheitert.',
+          '**Lesen Sie den vollständigen Lehrplan:** bestätigen Sie, dass er abdeckt, was Sie tatsächlich brauchen, und dass die Voraussetzungen zu Ihrem aktuellen Niveau passen. Eine Niveaudiskrepanz ist ein häufiger Grund, warum ein Kurs bei einem Lernenden scheitert.',
           '**Prüfen Sie auf bewertete, praxisnahe Projekte:** ein Kurs, der nur aus Videos besteht, vermittelt Informationen, aber keine Kompetenz. Projekte sind das, was sich auf echte Arbeit überträgt – priorisieren Sie Kurse, die sie enthalten.',
           '**Vergleichen Sie das Preismodell:** ein monatliches Abo belohnt schnelle Abschließende; eine Einmalgebühr ist tempounabhängig. Schätzen Sie Ihre Abschlusszeit und wählen Sie dann das günstigere Modell für dieses Tempo.',
           '**Bestätigen Sie, dass das Zertifikat überprüfbar ist:** wenn Sie einen Nachweis brauchen, prüfen Sie, dass der Kurs ein Zertifikat mit teilbarem Verifizierungslink ausstellt und dass die Zielarbeitgeber den Aussteller anerkennen.',
@@ -933,7 +931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Eine Zertifizierung kaufen, wenn niemand danach verlangt.** Eine Zertifizierung ist ihre Kosten wert, wenn eine Stelle oder ein Arbeitgeber sie verlangt. Ohne diese Anforderung baut ein kostenpflichtiger strukturierter Kurs dieselbe Kompetenz auf und stellt oft ebenfalls ein Zertifikat aus.',
           '**Einen reinen Videokurs wählen und erwarten, Kompetenz aufzubauen.** Vorlesungen vermitteln Informationen; bewertete Projekte bauen Kompetenz auf. Ein Kurs ohne praxisnahe Arbeit hinterlässt Vertrautheit, nicht Fähigkeit.',
           '**Die Rechnung Abo gegen Einmalkauf ignorieren.** Ein monatliches Abo ist günstig, wenn Sie schnell abschließen, und teuer, wenn Sie ins Stocken geraten. Schätzen Sie Ihre Abschlusszeit, bevor Sie ein Preismodell wählen.',
-          '**Mit einem fortgeschrittenen Kurs beginnen, weil er beeindruckend klingt.** Eine Niveaudiskrepanz ist der häufigste Grund, warum Lernende einen Kurs abbrechen. Gleichen Sie die Voraussetzungen ehrlich mit Ihrem aktuellen Niveau ab.',
+          '**Mit einem fortgeschrittenen Kurs beginnen, weil er beeindruckend klingt.** Eine Niveaudiskrepanz ist ein häufiger Grund, warum Lernende einen Kurs abbrechen. Gleichen Sie die Voraussetzungen ehrlich mit Ihrem aktuellen Niveau ab.',
           '**Einen allgemeinen KI-Kurs als Prompt-Engineering-Kurs behandeln.** Allgemeine Kurse lehren, wie Modelle funktionieren, nicht, wie man gute Prompts schreibt. Wenn Prompting Ihr Ziel ist, belegen Sie einen eigenständigen Prompt-Engineering-Kurs.',
           '**Kostenloses Material überspringen und zu viel zahlen.** Ein Teil des am besten angesehenen KI-Grundlageninhalts ist kostenlos. Prüfen Sie die kostenlose Option als Gasthörer, bevor Sie annehmen, ein kostenpflichtiger Kurs sei besser.',
         ],
@@ -982,7 +980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Benötige ich einen technischen Hintergrund, um einen KI-Kurs zu belegen?',
-            a: 'Nicht für jeden Kurs. Grundlagenkurse für Anfänger und viele Prompt-Engineering-Kurse setzen keinen technischen Hintergrund voraus. Strukturierte Machine-Learning-Spezialisierungen erwarten in der Regel etwas Vertrautheit mit Programmierung und Mathematik. Der wichtigste einzelne Schritt ist, die Voraussetzungen auf der Kursseite zu lesen und sie ehrlich mit Ihrem aktuellen Niveau abzugleichen – eine Niveaudiskrepanz ist der häufigste Grund, warum Lernende einen Kurs abbrechen.',
+            a: 'Nicht für jeden Kurs. Grundlagenkurse für Anfänger und viele Prompt-Engineering-Kurse setzen keinen technischen Hintergrund voraus. Strukturierte Machine-Learning-Spezialisierungen erwarten in der Regel etwas Vertrautheit mit Programmierung und Mathematik. Der wichtigste einzelne Schritt ist, die Voraussetzungen auf der Kursseite zu lesen und sie ehrlich mit Ihrem aktuellen Niveau abzugleichen – eine Niveaudiskrepanz ist ein häufiger Grund, warum Lernende einen Kurs abbrechen.',
           },
           {
             q: 'Was ist der Unterschied zwischen einem Abo und einer einmaligen Kursgebühr?',
@@ -1018,7 +1016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Wählen Sie eine GPU, wenn Ihr Kurs das lokale Ausführen von Modellen umfasst](/de/power-local-llm/best-gpu-buying-guide-local-llm-2026) — der Hardware-Kaufratgeber für praxisnahe KI-Kursarbeit.',
           '[Wählen Sie einen Monitor für KI-Entwicklung und Lernen](/de/power-local-llm/best-monitors-ai-development-2026) — die Schreibtischausstattung, die zu projektreichen KI-Kursen passt.',
           '[Führen Sie lokale LLMs auf einem Laptop für Kursprojekte aus](/de/local-llms/local-llm-on-laptop) — wie Sie mit Modellen auf der Hardware üben, die Sie bereits besitzen.',
-          '[Beste Affiliate-Programme für KI-Entwickler: Nebeneinkommen beim Entwickeln (2026)](/de/power-local-llm/best-affiliate-tools-ai-developers-2026) -- Passiveinkommen durch Empfehlung von KI-Tools, die Ihre Leser ohnehin benötigen',
+          '[Beste Affiliate-Programme für KI-Entwickler: Nebeneinkommen beim Entwickeln (2026)](/de/power-local-llm/best-affiliate-tools-ai-developers-2026) -- Überblick über Affiliate-Programme für KI-Entwickler-Tools',
         ],
       },
     },
@@ -1118,7 +1116,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Choix de la rédaction : un cours structuré payant avec projets notés',
-        sponsoredSlot: true,
         content:
           '**Pour la plupart des apprenants qui dépassent les bases, un cours structuré payant ou une spécialisation avec des projets notés et pratiques est le choix qui transforme les connaissances en IA en compétence opérationnelle.** L\'élément décisif, ce sont les projets : les vidéos transmettent de l\'information, mais les projets notés vous obligent à l\'appliquer, et c\'est ce qui se transpose au travail réel. Un cours structuré séquence aussi les sujets pour que vous ne sautiez pas de prérequis, et beaucoup délivrent un certificat vérifiable à la fin. Si vous voulez seulement découvrir si l\'IA vous convient, commencez d\'abord par un cours de fondamentaux gratuit — il ne coûte rien et répond à cette question. Si un emploi ou un contrat précis exige un titre nommé, choisissez plutôt un parcours de certification. Les tarifs des cours évoluent avec les promotions et les formules d\'abonnement, vérifiez donc le prix actuel sur la plateforme avant de vous inscrire.',
         callouts: [
@@ -1348,7 +1345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Évaluez un cours d\'IA sur son programme, ses projets pratiques, son modèle tarifaire et le fait qu\'il délivre ou non un certificat vérifiable — pas sur son marketing.** Utilisez cette liste de contrôle avant de payer.',
         items: [
-          '**Lisez le programme complet :** confirmez qu\'il couvre ce dont vous avez réellement besoin et que les prérequis correspondent à votre niveau actuel. Un décalage de niveau est la raison la plus courante d\'échec d\'un cours pour un apprenant.',
+          '**Lisez le programme complet :** confirmez qu\'il couvre ce dont vous avez réellement besoin et que les prérequis correspondent à votre niveau actuel. Un décalage de niveau est une raison courante d\'échec d\'un cours pour un apprenant.',
           '**Vérifiez la présence de projets notés et pratiques :** un cours composé uniquement de vidéos transmet de l\'information mais pas de compétence. Les projets sont ce qui se transpose au travail réel — privilégiez les cours qui en incluent.',
           '**Comparez le modèle tarifaire :** un abonnement mensuel récompense ceux qui terminent vite ; des frais uniques sont indépendants du rythme. Estimez votre temps de réalisation, puis choisissez le modèle le moins cher pour ce rythme.',
           '**Confirmez que le certificat est vérifiable :** si vous avez besoin d\'un titre, vérifiez que le cours délivre un certificat avec un lien de vérification partageable, et que les employeurs visés reconnaissent l\'organisme émetteur.',
@@ -1442,7 +1439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Acheter une certification quand personne ne l\'exige.** Une certification vaut son coût quand un poste ou un employeur l\'exige. Sans cette exigence, un cours structuré payant construit la même compétence et délivre souvent aussi un certificat.',
           '**Choisir un cours uniquement vidéo en espérant construire une compétence.** Les cours magistraux transmettent de l\'information ; les projets notés construisent la compétence. Un cours sans travail pratique vous laisse une familiarité, pas une capacité.',
           '**Ignorer le calcul abonnement contre paiement unique.** Un abonnement mensuel est bon marché si vous terminez vite et cher si vous stagnez. Estimez votre temps de réalisation avant de choisir un modèle tarifaire.',
-          '**Commencer par un cours avancé parce qu\'il a l\'air impressionnant.** Un décalage de niveau est la première raison d\'abandon d\'un cours. Adaptez honnêtement les prérequis à votre niveau actuel.',
+          '**Commencer par un cours avancé parce qu\'il a l\'air impressionnant.** Un décalage de niveau est une raison fréquente d\'abandon d\'un cours. Adaptez honnêtement les prérequis à votre niveau actuel.',
           '**Traiter un cours d\'IA général comme un cours de prompt engineering.** Les cours généraux enseignent comment les modèles fonctionnent, pas comment rédiger de bons prompts. Si le prompting est votre objectif, suivez un cours de prompt engineering dédié.',
           '**Sauter le matériel gratuit et trop payer.** Une partie du meilleur contenu de fondamentaux en IA est gratuite. Auditez l\'option gratuite avant de supposer qu\'un cours payant est meilleur.',
         ],
@@ -1491,7 +1488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Faut-il un bagage technique pour suivre un cours d\'IA ?',
-            a: 'Pas pour tous les cours. Les cours de fondamentaux pour débutants et de nombreux cours de prompt engineering ne supposent aucun bagage technique préalable. Les spécialisations structurées en machine learning attendent généralement une certaine aisance en programmation et en mathématiques. L\'étape la plus importante est de lire les prérequis sur la page du cours et de les adapter honnêtement à votre niveau actuel — un décalage de niveau est la première raison d\'abandon d\'un cours.',
+            a: 'Pas pour tous les cours. Les cours de fondamentaux pour débutants et de nombreux cours de prompt engineering ne supposent aucun bagage technique préalable. Les spécialisations structurées en machine learning attendent généralement une certaine aisance en programmation et en mathématiques. L\'étape la plus importante est de lire les prérequis sur la page du cours et de les adapter honnêtement à votre niveau actuel — un décalage de niveau est une raison fréquente d\'abandon d\'un cours.',
           },
           {
             q: 'Quelle est la différence entre un abonnement et des frais de cours uniques ?',
@@ -1519,7 +1516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Choisissez un GPU si votre cours implique d\'exécuter des modèles en local](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026) — le guide d\'achat de matériel pour les travaux pratiques en IA.',
           '[Choisissez un écran pour le développement et l\'étude en IA](/fr/power-local-llm/best-monitors-ai-development-2026) — l\'installation de bureau qui accompagne les cours d\'IA riches en projets.',
           '[Exécutez des LLM locaux sur un ordinateur portable pour les projets de cours](/fr/local-llms/local-llm-on-laptop) — comment vous exercer avec des modèles sur le matériel que vous possédez déjà.',
-          "[Meilleurs programmes d'affiliation pour développeurs IA : gagnez en construisant (2026)](/fr/power-local-llm/best-affiliate-tools-ai-developers-2026) -- gagnez des revenus passifs en recommandant des outils IA que vos lecteurs utilisent déjà",
+          "[Meilleurs programmes d'affiliation pour développeurs IA : gagnez en construisant (2026)](/fr/power-local-llm/best-affiliate-tools-ai-developers-2026) -- aperçu des programmes d'affiliation pour les outils IA destinés aux développeurs",
         ],
       },
     },
@@ -1619,7 +1616,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '編集部のおすすめ：採点付きプロジェクトのある有料の体系的コース',
-        sponsoredSlot: true,
         content:
           '**基礎を越えて先へ進む大半の学習者にとって、採点付きの実践的プロジェクトを伴う有料の体系的コースまたは専門講座が、AIの知識を通用するスキルへ変える選択肢です。** 決め手となる要素はプロジェクトです。動画は情報を伝えますが、採点付きプロジェクトはそれを応用するよう促し、それこそが実務に引き継がれるものです。体系的コースはまた、前提知識を飛ばさないようトピックを順序立てており、多くは修了時に検証可能な証明書を発行します。AIが自分に合うかを確かめたいだけなら、まず無料の基礎コースから始めてください。費用はかからず、その問いに答えてくれます。特定の仕事や契約が指定された資格を求める場合は、代わりに資格認定の経路を選んでください。コース価格はキャンペーンやサブスクリプションの段階によって変動するため、登録前にプラットフォームで現在の価格を確認してください。',
         callouts: [
@@ -1849,7 +1845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**AIコースは、マーケティングではなく、シラバス、実践的プロジェクト、料金モデル、そして検証可能な証明書を発行するかどうかで評価してください。** 支払う前にこのチェックリストを使ってください。',
         items: [
-          '**シラバス全体を読む：** あなたが実際に必要とするものを扱っているか、前提条件が現在の水準に合っているかを確認してください。水準の不一致は、コースが学習者にとって失敗に終わる最も多い理由です。',
+          '**シラバス全体を読む：** あなたが実際に必要とするものを扱っているか、前提条件が現在の水準に合っているかを確認してください。水準の不一致は、コースが学習者にとって失敗に終わるよくある理由の一つです。',
           '**採点付きの実践的プロジェクトがあるか確認する：** 動画だけのコースは情報を伝えますが、スキルは伝えません。実務に引き継がれるのはプロジェクトです。プロジェクトを含むコースを優先してください。',
           '**料金モデルを比較する：** 月額サブスクリプションは速く修了する人に有利で、買い切り料金はペースに左右されません。修了までの時間を見積もり、そのペースに対して安い方のモデルを選んでください。',
           '**証明書が検証可能か確認する：** 資格が必要なら、コースが共有可能な検証リンク付きの証明書を発行し、目標とする雇用主が発行元を認めているかを確認してください。',
@@ -1943,7 +1939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**誰も求めていないのに資格認定を購入する。** 資格認定がその費用に見合うのは、職務や雇用主がそれを求めるときです。その要件がなければ、有料の体系的コースが同じスキルを育て、多くの場合は証明書も発行します。',
           '**スキルが育つと期待して動画だけのコースを選ぶ。** 講義は情報を伝え、採点付きプロジェクトはスキルを育てます。実践的な作業のないコースは、能力ではなく親しみだけを残します。',
           '**サブスクリプションと買い切りの計算を無視する。** 月額サブスクリプションは速く修了すれば安く、行き詰まれば高くつきます。料金モデルを選ぶ前に修了までの時間を見積もってください。',
-          '**印象的に聞こえるという理由で上級コースから始める。** 水準の不一致は、学習者がコースを途中でやめる最大の理由です。前提条件を現在の水準に正直に合わせてください。',
+          '**印象的に聞こえるという理由で上級コースから始める。** 水準の不一致は、学習者がコースを途中でやめるよくある理由の一つです。前提条件を現在の水準に正直に合わせてください。',
           '**一般的なAIコースをprompt engineeringコースとして扱う。** 一般的なコースはモデルの仕組みを教えますが、よいプロンプトの書き方は教えません。プロンプトが目標なら、専門のprompt engineeringコースを受講してください。',
           '**無料教材を飛ばして払いすぎる。** 最も高く評価されているAIの基礎コンテンツの一部は無料です。有料コースの方がよいと決めつける前に、無料の選択肢を聴講してください。',
         ],
@@ -1992,7 +1988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AIコースを受講するのに技術的な素養は必要ですか？',
-            a: 'すべてのコースで必要なわけではありません。初心者向けの基礎コースや多くのprompt engineeringコースは、事前の技術的素養を前提としません。体系的な機械学習の専門講座は、通常ある程度のプログラミングと数学への慣れを期待します。最も重要な一歩は、コースのページで前提条件を読み、それを現在の水準に正直に合わせることです。水準の不一致は、学習者がコースを途中でやめる最大の理由です。',
+            a: 'すべてのコースで必要なわけではありません。初心者向けの基礎コースや多くのprompt engineeringコースは、事前の技術的素養を前提としません。体系的な機械学習の専門講座は、通常ある程度のプログラミングと数学への慣れを期待します。最も重要な一歩は、コースのページで前提条件を読み、それを現在の水準に正直に合わせることです。水準の不一致は、学習者がコースを途中でやめるよくある理由の一つです。',
           },
           {
             q: 'サブスクリプションと一度きりのコース料金の違いは何ですか？',
@@ -2020,7 +2016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[コースでモデルをローカル実行するならGPUを選ぶ](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 実践的なAIコース学習のためのハードウェア購入ガイド。',
           '[AI開発と学習向けのモニターを選ぶ](/ja/power-local-llm/best-monitors-ai-development-2026) — プロジェクト中心のAIコースに合うデスク環境。',
           '[コースのプロジェクト向けにノートパソコンでローカルLLMを実行する](/ja/local-llms/local-llm-on-laptop) — すでに所有しているハードウェアでモデルを練習する方法。',
-          '[AIデベロッパー向けアフィリエイトプログラム完全ガイド：開発しながら稼ぐ（2026年）](/ja/power-local-llm/best-affiliate-tools-ai-developers-2026) -- 読者がすでに必要としているAIツールを紹介してパッシブ収入を得る',
+          '[AIデベロッパー向けアフィリエイトプログラム完全ガイド：開発しながら稼ぐ（2026年）](/ja/power-local-llm/best-affiliate-tools-ai-developers-2026) -- AI開発者向けツールのアフィリエイトプログラムの概要',
         ],
       },
     },
@@ -2120,7 +2116,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '编辑推荐:一门含评分项目的付费体系化课程',
-        sponsoredSlot: true,
         content:
           '**对大多数已越过基础阶段的学习者来说,含评分动手项目的付费体系化课程或专项课程,是把 AI 知识转化为可用技能的那个选择。** 决定性的特点是项目:视频传递信息,但评分项目迫使你去运用它,而这正是能迁移到真实工作中的东西。体系化课程还会把主题排好顺序,让你不会跳过先修知识,许多课程在完成时颁发可验证的证书。如果你只想弄清楚 AI 是否适合你,先从一门免费的基础课程开始——它不花钱,就能回答这个问题。如果某个具体的工作或合同要求指定的凭证,那就改选一条认证路径。课程价格会随促销和订阅档位变化,因此报名前请在平台上核对当前价格。',
         callouts: [
@@ -2350,7 +2345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**评估一门 AI 课程,要看它的教学大纲、它的动手项目、它的定价模式,以及它是否颁发可验证的证书——而不是看它的营销文案。** 付费前请使用这份清单。',
         items: [
-          '**通读完整的教学大纲:** 确认它涵盖你真正需要的内容,且先修要求与你当前的水平相符。水平不匹配是课程对学习者失败的最常见原因。',
+          '**通读完整的教学大纲:** 确认它涵盖你真正需要的内容,且先修要求与你当前的水平相符。水平不匹配是课程对学习者失败的常见原因之一。',
           '**检查是否有评分的动手项目:** 只有视频的课程传递信息,但不传递技能。能迁移到真实工作中的是项目——优先选择包含项目的课程。',
           '**对比定价模式:** 按月订阅奖励完成得快的人;一次性费用与进度无关。估算你的完成时间,然后为那个进度选更便宜的模式。',
           '**确认证书可验证:** 如果你需要凭证,核实课程是否颁发带有可分享验证链接的证书,以及目标雇主是否认可发证方。',
@@ -2444,7 +2439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**在没有人要求时就购买认证。** 认证值这个钱,是在岗位或雇主要求它时。没有这个要求,付费的体系化课程培养同样的技能,而且通常也颁发证书。',
           '**指望靠只有视频的课程建立技能。** 讲课传递信息;评分项目建立技能。一门没有动手作业的课程,留给你的是熟悉感,而不是能力。',
           '**忽视订阅与一次性付费的算账。** 按月订阅在你完成得快时便宜,在你停滞时昂贵。选定价模式前先估算你的完成时间。',
-          '**因为听起来很厉害就从高级课程开始。** 水平不匹配是学习者放弃课程的首要原因。诚实地把先修要求与你当前的水平相匹配。',
+          '**因为听起来很厉害就从高级课程开始。** 水平不匹配是学习者放弃课程的常见原因之一。诚实地把先修要求与你当前的水平相匹配。',
           '**把通用 AI 课程当成 prompt engineering 课程。** 通用课程教模型如何运作,而不教如何写好提示词。如果提示词是你的目标,就上一门专门的 prompt engineering 课程。',
           '**跳过免费材料而多花钱。** 一些口碑最好的 AI 基础内容是免费的。在断定付费课程更好之前,先旁听免费的选项。',
         ],
@@ -2493,7 +2488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '上 AI 课程需要技术背景吗？',
-            a: '并非每门课程都需要。面向初学者的基础课程和许多 prompt engineering 课程不要求任何先前的技术背景。体系化的机器学习专项课程通常期望你对编程和数学有一定的熟悉度。最重要的一步是阅读课程页面上的先修要求,并诚实地把它们与你当前的水平相匹配——水平不匹配是学习者放弃课程的首要原因。',
+            a: '并非每门课程都需要。面向初学者的基础课程和许多 prompt engineering 课程不要求任何先前的技术背景。体系化的机器学习专项课程通常期望你对编程和数学有一定的熟悉度。最重要的一步是阅读课程页面上的先修要求,并诚实地把它们与你当前的水平相匹配——水平不匹配是学习者放弃课程的常见原因之一。',
           },
           {
             q: '订阅和一次性课程费用有什么区别？',
@@ -2521,7 +2516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[如果你的课程涉及在本地运行模型,就选一块 GPU](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 面向动手 AI 课程作业的硬件选购指南。',
           '[为 AI 开发和学习挑选一台显示器](/zh/power-local-llm/best-monitors-ai-development-2026) — 与项目密集的 AI 课程相配的桌面配置。',
           '[在笔记本电脑上运行本地 LLM 做课程项目](/zh/local-llms/local-llm-on-laptop) — 如何用你已经拥有的硬件练习模型。',
-          '[AI开发者最佳联盟计划：边开发边赚钱（2026）](/zh/power-local-llm/best-affiliate-tools-ai-developers-2026) -- 通过推荐读者已经需要的AI工具获得被动收入',
+          '[AI开发者最佳联盟计划：边开发边赚钱（2026）](/zh/power-local-llm/best-affiliate-tools-ai-developers-2026) -- AI开发者工具联盟计划概览',
         ],
       },
     },
@@ -2621,7 +2616,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Elección del editor: un curso estructurado de pago con proyectos evaluados',
-        sponsoredSlot: true,
         content:
           '**Para la mayoría de los estudiantes que van más allá de los fundamentos, un curso estructurado de pago o una especialización con proyectos prácticos evaluados es la elección que convierte el conocimiento de IA en habilidad aplicable.** El elemento decisivo son los proyectos: los vídeos transmiten información, pero los proyectos evaluados te obligan a aplicarla, que es lo que se transfiere al trabajo real. Un curso estructurado también secuencia los temas para que no te saltes prerrequisitos, y muchos emiten un certificado verificable al completarlos. Si solo quieres descubrir si la IA es para ti, empieza antes por un curso gratuito de fundamentos — no cuesta nada y responde esa pregunta. Si un trabajo o contrato concreto exige una credencial con nombre, elige en su lugar un itinerario de certificación. Los precios de los cursos cambian con las promociones y los niveles de suscripción, así que comprueba el precio actual en la plataforma antes de inscribirte.',
         callouts: [
@@ -2851,7 +2845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Evalúa un curso de IA por su temario, sus proyectos prácticos, su modelo de precios y si emite un certificado verificable — no por su marketing.** Usa esta lista de comprobación antes de pagar.',
         items: [
-          '**Lee el temario completo:** confirma que cubre lo que realmente necesitas y que los prerrequisitos encajan con tu nivel actual. Un desajuste de nivel es la razón más habitual por la que un curso falla a un estudiante.',
+          '**Lee el temario completo:** confirma que cubre lo que realmente necesitas y que los prerrequisitos encajan con tu nivel actual. Un desajuste de nivel es una razón habitual por la que un curso falla a un estudiante.',
           '**Comprueba si hay proyectos prácticos evaluados:** un curso que solo tiene vídeos transmite información pero no habilidad. Los proyectos son lo que se transfiere al trabajo real — prioriza los cursos que los incluyan.',
           '**Compara el modelo de precios:** una suscripción mensual recompensa a quienes terminan rápido; una tarifa única es independiente del ritmo. Estima tu tiempo de finalización y luego elige el modelo más barato para ese ritmo.',
           '**Confirma que el certificado es verificable:** si necesitas una credencial, comprueba que el curso emite un certificado con un enlace de verificación compartible y que los empleadores objetivo reconocen al emisor.',
@@ -2945,7 +2939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Comprar una certificación cuando nadie la pide.** Una certificación vale su coste cuando un puesto o empleador la exige. Sin ese requisito, un curso estructurado de pago construye la misma habilidad y normalmente también emite un certificado.',
           '**Elegir un curso solo de vídeo esperando desarrollar habilidad.** Las clases transmiten información; los proyectos evaluados construyen habilidad. Un curso sin trabajo práctico te deja con familiaridad, no con capacidad.',
           '**Ignorar el cálculo suscripción frente a pago único.** Una suscripción mensual es barata si terminas rápido y cara si te estancas. Estima tu tiempo de finalización antes de elegir un modelo de precios.',
-          '**Empezar por un curso avanzado porque suena impresionante.** Un desajuste de nivel es la principal razón por la que los estudiantes abandonan un curso. Ajusta honestamente los prerrequisitos a tu nivel actual.',
+          '**Empezar por un curso avanzado porque suena impresionante.** Un desajuste de nivel es una razón habitual por la que los estudiantes abandonan un curso. Ajusta honestamente los prerrequisitos a tu nivel actual.',
           '**Tratar un curso general de IA como un curso de prompt engineering.** Los cursos generales enseñan cómo funcionan los modelos, no cómo escribir buenos prompts. Si el prompting es tu objetivo, haz un curso dedicado de prompt engineering.',
           '**Saltarte el material gratuito y pagar de más.** Parte del mejor contenido de fundamentos de IA es gratuito. Audita la opción gratuita antes de asumir que un curso de pago es mejor.',
         ],
@@ -2994,7 +2988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Necesito experiencia técnica para hacer un curso de IA?',
-            a: 'No para todos los cursos. Los cursos de fundamentos para principiantes y muchos cursos de prompt engineering no asumen ningún conocimiento técnico previo. Las especializaciones estructuradas de machine learning suelen esperar cierta comodidad con programación y matemáticas. El paso más importante es leer los prerrequisitos en la página del curso y ajustarlos honestamente a tu nivel actual — un desajuste de nivel es la principal razón por la que los estudiantes abandonan un curso.',
+            a: 'No para todos los cursos. Los cursos de fundamentos para principiantes y muchos cursos de prompt engineering no asumen ningún conocimiento técnico previo. Las especializaciones estructuradas de machine learning suelen esperar cierta comodidad con programación y matemáticas. El paso más importante es leer los prerrequisitos en la página del curso y ajustarlos honestamente a tu nivel actual — un desajuste de nivel es una razón habitual por la que los estudiantes abandonan un curso.',
           },
           {
             q: '¿Cuál es la diferencia entre una suscripción y una tarifa única por curso?',
@@ -3022,7 +3016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Elige una GPU si tu curso implica ejecutar modelos en local](/es/power-local-llm/best-gpu-buying-guide-local-llm-2026) — la guía de compra de hardware para el trabajo práctico en cursos de IA.',
           '[Elige un monitor para el desarrollo y el estudio de IA](/es/power-local-llm/best-monitors-ai-development-2026) — la configuración de escritorio que acompaña a los cursos de IA ricos en proyectos.',
           '[Ejecuta LLMs locales en un portátil para los proyectos del curso](/es/local-llms/local-llm-on-laptop) — cómo practicar con modelos en el hardware que ya tienes.',
-          '[Mejores programas de afiliados para desarrolladores de IA: gana mientras construyes (2026)](/es/power-local-llm/best-affiliate-tools-ai-developers-2026) -- genera ingresos pasivos recomendando herramientas de IA que tus lectores ya necesitan',
+          '[Mejores programas de afiliados para desarrolladores de IA: gana mientras construyes (2026)](/es/power-local-llm/best-affiliate-tools-ai-developers-2026) -- panorama de los programas de afiliados para herramientas de IA para desarrolladores',
         ],
       },
     },
@@ -3135,7 +3129,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Escolha do editor: um curso estruturado pago com projetos avaliados',
-        sponsoredSlot: true,
         content:
           '**Para a maioria dos estudantes que avançam além dos fundamentos, um curso estruturado pago ou uma especialização com projetos práticos avaliados é a escolha que transforma o conhecimento de IA em habilidade aplicável.** O elemento decisivo são os projetos: os vídeos transmitem informação, mas os projetos avaliados obrigam você a aplicá-la, que é o que se transfere para o trabalho real. Um curso estruturado também sequencia os temas para que você não pule os pré-requisitos, e muitos emitem um certificado verificável ao concluir. Se você só quer descobrir se a IA é para você, comece antes por um curso gratuito de fundamentos — ele não custa nada e responde a essa pergunta. Se um trabalho ou contrato específico exige uma credencial nomeada, escolha em vez disso uma trilha de certificação. Os preços dos cursos mudam com as promoções e os níveis de assinatura, então verifique o preço atual na plataforma antes de se inscrever.',
         callouts: [
@@ -3365,7 +3358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Avalie um curso de IA pelo seu programa, seus projetos práticos, seu modelo de preços e se ele emite um certificado verificável — não pelo seu marketing.** Use esta lista de verificação antes de pagar.',
         items: [
-          '**Leia o programa completo:** confirme que ele cobre o que você realmente precisa e que os pré-requisitos combinam com o seu nível atual. Um desencontro de nível é o motivo mais comum pelo qual um curso falha com um estudante.',
+          '**Leia o programa completo:** confirme que ele cobre o que você realmente precisa e que os pré-requisitos combinam com o seu nível atual. Um desencontro de nível é um motivo comum pelo qual um curso falha com um estudante.',
           '**Verifique se há projetos práticos avaliados:** um curso que só tem vídeos transmite informação, mas não habilidade. Os projetos são o que se transfere para o trabalho real — priorize os cursos que os incluem.',
           '**Compare o modelo de preços:** uma assinatura mensal recompensa quem termina rápido; uma taxa única é independente do ritmo. Estime o seu tempo de conclusão e então escolha o modelo mais barato para esse ritmo.',
           '**Confirme que o certificado é verificável:** se você precisa de uma credencial, verifique que o curso emite um certificado com um link de verificação compartilhável e que os empregadores-alvo reconhecem o emissor.',
@@ -3459,7 +3452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Comprar uma certificação quando ninguém a pede.** Uma certificação vale o seu custo quando um cargo ou empregador a exige. Sem esse requisito, um curso estruturado pago constrói a mesma habilidade e normalmente também emite um certificado.',
           '**Escolher um curso só de vídeo esperando desenvolver habilidade.** As aulas transmitem informação; os projetos avaliados constroem habilidade. Um curso sem trabalho prático deixa você com familiaridade, não com capacidade.',
           '**Ignorar o cálculo assinatura versus pagamento único.** Uma assinatura mensal é barata se você termina rápido e cara se você empaca. Estime o seu tempo de conclusão antes de escolher um modelo de preços.',
-          '**Começar por um curso avançado porque soa impressionante.** Um desencontro de nível é o principal motivo pelo qual os estudantes abandonam um curso. Ajuste honestamente os pré-requisitos ao seu nível atual.',
+          '**Começar por um curso avançado porque soa impressionante.** Um desencontro de nível é um motivo comum pelo qual os estudantes abandonam um curso. Ajuste honestamente os pré-requisitos ao seu nível atual.',
           '**Tratar um curso geral de IA como um curso de prompt engineering.** Os cursos gerais ensinam como os modelos funcionam, não como escrever bons prompts. Se o prompting é o seu objetivo, faça um curso dedicado de prompt engineering.',
           '**Pular o material gratuito e pagar a mais.** Parte do melhor conteúdo de fundamentos de IA é gratuito. Audite a opção gratuita antes de presumir que um curso pago é melhor.',
         ],
@@ -3508,7 +3501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Preciso de experiência técnica para fazer um curso de IA?',
-            a: 'Não para todos os cursos. Os cursos de fundamentos para iniciantes e muitos cursos de prompt engineering não pressupõem nenhum conhecimento técnico prévio. As especializações estruturadas de machine learning costumam esperar certo conforto com programação e matemática. O passo mais importante é ler os pré-requisitos na página do curso e ajustá-los honestamente ao seu nível atual — um desencontro de nível é o principal motivo pelo qual os estudantes abandonam um curso.',
+            a: 'Não para todos os cursos. Os cursos de fundamentos para iniciantes e muitos cursos de prompt engineering não pressupõem nenhum conhecimento técnico prévio. As especializações estruturadas de machine learning costumam esperar certo conforto com programação e matemática. O passo mais importante é ler os pré-requisitos na página do curso e ajustá-los honestamente ao seu nível atual — um desencontro de nível é um motivo comum pelo qual os estudantes abandonam um curso.',
           },
           {
             q: 'Qual é a diferença entre uma assinatura e uma taxa única por curso?',
@@ -3536,7 +3529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Escolha uma GPU se o seu curso envolve executar modelos localmente](/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026) — o guia de compra de hardware para o trabalho prático em cursos de IA.',
           '[Escolha um monitor para o desenvolvimento e o estudo de IA](/pt/power-local-llm/best-monitors-ai-development-2026) — a configuração de mesa que acompanha os cursos de IA ricos em projetos.',
           '[Execute LLMs locais em um laptop para os projetos do curso](/pt/local-llms/local-llm-on-laptop) — como praticar com modelos no hardware que você já tem.',
-          '[Melhores programas de afiliados para desenvolvedores de IA: ganhe enquanto constrói (2026)](/pt/power-local-llm/best-affiliate-tools-ai-developers-2026) -- gere renda passiva recomendando ferramentas de IA que seus leitores já precisam',
+          '[Melhores programas de afiliados para desenvolvedores de IA: ganhe enquanto constrói (2026)](/pt/power-local-llm/best-affiliate-tools-ai-developers-2026) -- panorama dos programas de afiliados para ferramentas de IA para desenvolvedores',
         ],
       },
     },
@@ -3649,7 +3642,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'اختيار المحرر: دورة مدفوعة منظَّمة ذات مشاريع مُقيَّمة',
-        sponsoredSlot: true,
         content:
           '**بالنسبة لمعظم الطلاب الذين يتجاوزون الأساسيات، الدورة المدفوعة المنظَّمة أو التخصص ذو المشاريع التطبيقية المُقيَّمة هو الاختيار الذي يحوّل معرفة الذكاء الاصطناعي إلى مهارة قابلة للتطبيق.** العنصر الحاسم هو المشاريع: مقاطع الفيديو تنقل المعلومات لكن المشاريع المُقيَّمة تُلزمك بتطبيقها، وهذا ما ينتقل إلى العمل الحقيقي. الدورة المنظَّمة أيضاً تُسلسل الموضوعات حتى لا تتخطى المتطلبات السابقة، وكثير منها يُصدر شهادة قابلة للتحقق عند الاكتمال. إذا كنت تريد فقط أن تكتشف ما إذا كان الذكاء الاصطناعي مناسباً لك، فابدأ أولاً بدورة مجانية في الأساسيات — لا تكلفها شيئاً وتجيب على هذا السؤال. إذا كانت وظيفة أو عقد معين يتطلب بيانات اعتماد محددة الاسم، فاختر مسار شهادة. أسعار الدورات تتغير بالعروض الترويجية ومستويات الاشتراك، لذا تحقق من السعر الحالي على المنصة قبل التسجيل.',
         callouts: [
@@ -3879,7 +3871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**قيّم دورة الذكاء الاصطناعي بمنهجها ومشاريعها التطبيقية ونموذج أسعارها وما إذا كانت تُصدر شهادة قابلة للتحقق — لا بنصّها التسويقي.** استخدم هذه القائمة قبل الدفع.',
         items: [
-          '**اقرأ المنهج كاملاً:** تأكد من أنه يغطي ما تحتاجه فعلاً وأن المتطلبات السابقة تتناسب مع مستواك الحالي. عدم تطابق المستوى هو أكثر أسباب فشل الدورة مع الطالب شيوعاً.',
+          '**اقرأ المنهج كاملاً:** تأكد من أنه يغطي ما تحتاجه فعلاً وأن المتطلبات السابقة تتناسب مع مستواك الحالي. عدم تطابق المستوى هو من أكثر أسباب فشل الدورة مع الطالب شيوعاً.',
           '**تحقق من وجود مشاريع تطبيقية مُقيَّمة:** دورة لا تشتمل إلا على مقاطع فيديو تنقل معلومات لكن لا تبني مهارة. المشاريع هي ما ينتقل إلى العمل الحقيقي — أعطِ الأولوية للدورات التي تتضمنها.',
           '**قارن نموذج الأسعار:** الاشتراك الشهري يكافئ من يُنهي بسرعة؛ الرسوم لمرة واحدة مستقلة عن الوتيرة. قدّر وقت إتمامك ثم اختر النموذج الأرخص لتلك الوتيرة.',
           '**تأكد من أن الشهادة قابلة للتحقق:** إذا كنت تحتاج إلى بيانات اعتماد، تحقق من أن الدورة تُصدر شهادة برابط تحقق مشارك وأن أصحاب العمل المستهدَفين يعترفون بجهة الإصدار.',
@@ -3973,7 +3965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**شراء شهادة حين لا يطلبها أحد.** الشهادة تستحق تكلفتها حين تطلبها وظيفة أو صاحب عمل. بدون هذا المتطلب، الدورة المدفوعة المنظَّمة تبني نفس المهارة وعادةً تُصدر شهادة أيضاً.',
           '**اختيار دورة مقاطع فيديو فحسب توقعاً لبناء مهارة.** المحاضرات تنقل معلومات؛ المشاريع المُقيَّمة تبني المهارة. دورة بدون عمل عملي تتركك بإلمام لا بقدرة.',
           '**تجاهل حساب الاشتراك مقابل الدفعة الواحدة.** الاشتراك الشهري رخيص إذا أنهيت بسرعة وغالٍ إذا تعثّرت. قدّر وقت الإتمام قبل اختيار نموذج الأسعار.',
-          '**البداية بدورة متقدمة لأنها تبدو مثيرة للإعجاب.** عدم تطابق المستوى هو السبب الرئيسي لتخلّي الطلاب عن الدورة. اضبط المتطلبات بصدق مع مستواك الحالي.',
+          '**البداية بدورة متقدمة لأنها تبدو مثيرة للإعجاب.** عدم تطابق المستوى هو أحد الأسباب الشائعة لتخلّي الطلاب عن الدورة. اضبط المتطلبات بصدق مع مستواك الحالي.',
           '**معاملة دورة ذكاء اصطناعي عامة كدورة هندسة أوامر.** الدورات العامة تعلّم كيف تعمل النماذج لا كيف تكتب أوامر جيدة. إذا كانت الأوامر هي هدفك، فالتحق بدورة متخصصة في هندسة الأوامر.',
           '**تخطّي المادة المجانية والدفع أكثر.** بعض أفضل محتوى أساسيات الذكاء الاصطناعي مجاني. دقّق الخيار المجاني قبل افتراض أن الدورة المدفوعة أفضل.',
         ],
@@ -4022,7 +4014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل أحتاج إلى خبرة تقنية لالتحاق بدورة ذكاء اصطناعي؟',
-            a: 'لا لجميع الدورات. دورات الأساسيات للمبتدئين وكثير من دورات هندسة الأوامر لا تفترض أي معرفة تقنية مسبقة. التخصصات المنظَّمة في التعلّم الآلي عادةً تتوقع قدراً من الارتياح مع البرمجة والرياضيات. الخطوة الأهم هي قراءة المتطلبات السابقة في صفحة الدورة ومطابقتها بصدق مع مستواك الحالي — عدم تطابق المستوى هو السبب الرئيسي لتخلّي الطلاب عن الدورة.',
+            a: 'لا لجميع الدورات. دورات الأساسيات للمبتدئين وكثير من دورات هندسة الأوامر لا تفترض أي معرفة تقنية مسبقة. التخصصات المنظَّمة في التعلّم الآلي عادةً تتوقع قدراً من الارتياح مع البرمجة والرياضيات. الخطوة الأهم هي قراءة المتطلبات السابقة في صفحة الدورة ومطابقتها بصدق مع مستواك الحالي — عدم تطابق المستوى هو أحد الأسباب الشائعة لتخلّي الطلاب عن الدورة.',
           },
           {
             q: 'ما الفرق بين الاشتراك والرسوم لمرة واحدة لكل دورة؟',
@@ -4050,7 +4042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[اختر GPU إذا كانت دورتك تتضمن تشغيل النماذج محلياً](/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026) — دليل شراء الأجهزة للعمل التطبيقي في دورات الذكاء الاصطناعي.',
           '[اختر شاشة لتطوير الذكاء الاصطناعي ودراسته](/ar/power-local-llm/best-monitors-ai-development-2026) — إعداد المكتب الذي يلازم دورات الذكاء الاصطناعي الغنية بالمشاريع.',
           '[شغّل LLMs محلية على لابتوب لمشاريع الدورة](/ar/local-llms/local-llm-on-laptop) — كيفية التطبيق مع النماذج على الأجهزة التي تمتلكها بالفعل.',
-          '[أفضل برامج الشراكة لمطوّري الذكاء الاصطناعي: اكسب وأنت تبني (2026)](/ar/power-local-llm/best-affiliate-tools-ai-developers-2026) -- اكسب دخلاً سلبياً بالتوصية بأدوات الذكاء الاصطناعي التي يحتاجها جمهورك',
+          '[أفضل برامج الشراكة لمطوّري الذكاء الاصطناعي: اكسب وأنت تبني (2026)](/ar/power-local-llm/best-affiliate-tools-ai-developers-2026) -- نظرة عامة على برامج الشراكة لأدوات الذكاء الاصطناعي للمطوّرين',
         ],
       },
     },
@@ -4163,7 +4155,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '편집자 선택: 평가형 프로젝트가 있는 구조화된 유료 강좌',
-        sponsoredSlot: true,
         content:
           '**기초를 넘어 발전하는 대부분의 학습자에게 평가형 실무 프로젝트가 있는 구조화된 유료 강좌나 전문화 과정은 AI 지식을 적용 가능한 기술로 전환하는 선택입니다.** 결정적인 요소는 프로젝트입니다: 비디오는 정보를 전달하지만, 평가형 프로젝트는 그것을 적용하도록 강제합니다 — 이것이 실제 업무로 전달되는 것입니다. 구조화된 강좌는 또한 필수 조건을 건너뛰지 않도록 주제를 순차적으로 배열하며, 많은 강좌가 완료 시 검증 가능한 수료증을 발급합니다. AI가 자신에게 맞는지 알고 싶을 뿐이라면 먼저 무료 기초 강좌부터 시작하십시오 — 비용이 들지 않으며 그 질문에 답을 줍니다. 특정 직업이나 계약에서 명시된 자격증을 요구한다면 대신 자격증 과정을 선택하십시오. 강좌 가격은 프로모션과 구독 수준에 따라 변동하므로 등록 전에 플랫폼에서 현재 가격을 확인하십시오.',
         callouts: [
@@ -4393,7 +4384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**AI 강좌를 마케팅이 아닌 교육과정, 실무 프로젝트, 가격 모델, 검증 가능한 수료증 발급 여부로 평가하십시오.** 지불하기 전에 이 체크리스트를 사용하십시오.',
         items: [
-          '**전체 교육과정을 읽으십시오:** 실제로 필요한 것을 다루는지, 필수 조건이 현재 수준에 맞는지 확인하십시오. 수준 불일치가 강좌가 학습자에게 실패하는 가장 일반적인 이유입니다.',
+          '**전체 교육과정을 읽으십시오:** 실제로 필요한 것을 다루는지, 필수 조건이 현재 수준에 맞는지 확인하십시오. 수준 불일치는 강좌가 학습자에게 실패하는 흔한 이유 중 하나입니다.',
           '**평가형 실무 프로젝트가 있는지 확인하십시오:** 비디오만 있는 강좌는 정보를 전달하지만 기술을 전달하지는 않습니다. 프로젝트가 실제 업무로 전달되는 것입니다 — 이를 포함하는 강좌를 우선시하십시오.',
           '**가격 모델을 비교하십시오:** 월간 구독은 빨리 완료하는 사람에게 유리하고; 일회성 요금은 속도와 무관합니다. 완료 시간을 추정하고 그 속도에 가장 저렴한 모델을 선택하십시오.',
           '**수료증이 검증 가능한지 확인하십시오:** 자격증이 필요하다면 강좌에서 공유 가능한 인증 링크가 포함된 수료증을 발급하고 목표 고용주가 발급 기관을 인정하는지 확인하십시오.',
@@ -4487,7 +4478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**아무도 요구하지 않는 자격증을 구매하는 것.** 자격증은 직책이나 고용주가 이를 요구할 때 비용 가치가 있습니다. 그 요건이 없다면 구조화된 유료 강좌가 동일한 기술을 쌓고 보통 수료증도 발급합니다.',
           '**비디오만 있는 강좌를 선택하면서 기술을 쌓기를 기대하는 것.** 강의는 정보를 전달하고; 평가형 프로젝트는 기술을 쌓습니다. 실무 작업이 없는 강좌는 능력이 아닌 친숙함만 남깁니다.',
           '**구독 대 일회성 지불 계산을 무시하는 것.** 월간 구독은 빨리 완료하면 저렴하고 지체하면 비쌉니다. 가격 모델을 선택하기 전에 완료 예상 시간을 추정하십시오.',
-          '**인상적으로 들린다고 고급 강좌부터 시작하는 것.** 수준 불일치가 학습자가 강좌를 포기하는 주된 이유입니다. 현재 수준에 필수 조건을 솔직하게 맞추십시오.',
+          '**인상적으로 들린다고 고급 강좌부터 시작하는 것.** 수준 불일치는 학습자가 강좌를 포기하는 흔한 이유 중 하나입니다. 현재 수준에 필수 조건을 솔직하게 맞추십시오.',
           '**일반 AI 강좌를 prompt engineering 강좌로 취급하는 것.** 일반 강좌는 모델이 어떻게 작동하는지 가르치지, 좋은 prompt를 작성하는 방법은 가르치지 않습니다. prompting이 목표라면 전용 prompt engineering 강좌를 수강하십시오.',
           '**무료 자료를 건너뛰고 더 많이 지불하는 것.** 최고의 AI 기초 콘텐츠 중 일부는 무료입니다. 유료 강좌가 더 좋다고 가정하기 전에 무료 옵션을 청강하십시오.',
         ],
@@ -4536,7 +4527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'AI 강좌를 수강하기 위해 기술적 경험이 필요합니까?',
-            a: '모든 강좌에 필요한 것은 아닙니다. 초보자를 위한 기초 강좌와 많은 prompt engineering 강좌는 사전 기술 지식을 가정하지 않습니다. 구조화된 머신러닝 전문화 과정은 보통 프로그래밍과 수학에 대한 어느 정도의 편안함을 기대합니다. 가장 중요한 단계는 강좌 페이지에서 필수 조건을 읽고 현재 수준에 솔직하게 맞추는 것입니다 — 수준 불일치가 학습자가 강좌를 포기하는 주된 이유입니다.',
+            a: '모든 강좌에 필요한 것은 아닙니다. 초보자를 위한 기초 강좌와 많은 prompt engineering 강좌는 사전 기술 지식을 가정하지 않습니다. 구조화된 머신러닝 전문화 과정은 보통 프로그래밍과 수학에 대한 어느 정도의 편안함을 기대합니다. 가장 중요한 단계는 강좌 페이지에서 필수 조건을 읽고 현재 수준에 솔직하게 맞추는 것입니다 — 수준 불일치는 학습자가 강좌를 포기하는 흔한 이유 중 하나입니다.',
           },
           {
             q: '구독과 강좌당 일회성 요금의 차이는 무엇입니까?',
@@ -4564,7 +4555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[강좌에서 모델을 로컬로 실행하는 경우 GPU 선택](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — AI 강좌의 실무 작업을 위한 하드웨어 구매 가이드.',
           '[AI 개발 및 학습을 위한 모니터 선택](/ko/power-local-llm/best-monitors-ai-development-2026) — 프로젝트가 풍부한 AI 강좌를 위한 데스크톱 설정.',
           '[강좌 프로젝트를 위해 노트북에서 로컬 LLM 실행](/ko/local-llms/local-llm-on-laptop) — 이미 가지고 있는 하드웨어에서 모델로 연습하는 방법.',
-          '[AI 개발자를 위한 최고의 제휴 프로그램: 개발하면서 수익 창출하기 (2026)](/ko/power-local-llm/best-affiliate-tools-ai-developers-2026) -- 독자가 이미 필요로 하는 AI 도구를 추천하여 수동 소득 창출',
+          '[AI 개발자를 위한 최고의 제휴 프로그램: 개발하면서 수익 창출하기 (2026)](/ko/power-local-llm/best-affiliate-tools-ai-developers-2026) -- AI 개발자 도구 제휴 프로그램 개요',
         ],
       },
     },
