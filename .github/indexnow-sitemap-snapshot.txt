@@ -294,6 +294,7 @@ https://www.promptquorum.com/power-local-llm/bobe-review
 https://www.promptquorum.com/power-local-llm/bodega-one-code-review
 https://www.promptquorum.com/power-local-llm/boltai-review
 https://www.promptquorum.com/power-local-llm/build-local-voice-assistant-2026
+https://www.promptquorum.com/power-local-llm/caelum-review
 https://www.promptquorum.com/power-local-llm/camel-review
 https://www.promptquorum.com/power-local-llm/candle-vllm-review
 https://www.promptquorum.com/power-local-llm/castmates-review
@@ -396,6 +397,7 @@ https://www.promptquorum.com/power-local-llm/llama-cpp-explained
 https://www.promptquorum.com/power-local-llm/llama-factory-review
 https://www.promptquorum.com/power-local-llm/llamafile-explained
 https://www.promptquorum.com/power-local-llm/llamaindex-rag-framework-review
+https://www.promptquorum.com/power-local-llm/llamatik-review
 https://www.promptquorum.com/power-local-llm/llava-review
 https://www.promptquorum.com/power-local-llm/llm-farm-review
 https://www.promptquorum.com/power-local-llm/llm-hub-review
@@ -529,6 +531,7 @@ https://www.promptquorum.com/power-local-llm/rtx-3090-local-llm-buy-or-rent
 https://www.promptquorum.com/power-local-llm/run-ai-on-tablet-ipad-android
 https://www.promptquorum.com/power-local-llm/runanywhere-review
 https://www.promptquorum.com/power-local-llm/second-me-review
+https://www.promptquorum.com/power-local-llm/secret-ai-review
 https://www.promptquorum.com/power-local-llm/self-hosted-ai-starter-kit-review
 https://www.promptquorum.com/power-local-llm/semantic-kernel-review
 https://www.promptquorum.com/power-local-llm/sglang-explained
