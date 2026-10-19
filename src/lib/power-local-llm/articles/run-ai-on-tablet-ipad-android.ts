@@ -147,7 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad: On-Device Inference',
         content:
-          '**iPad Pro M5 is the only iPad that runs 7B–8B models at a comfortable speed.** Apple raised the base RAM on the M5 iPad Pro to 12 GB (16 GB on the 1 TB/2 TB storage tiers), up from 8 GB on the base M4 iPad Pro, and increased memory bandwidth to 153 GB/s from 120 GB/s — LLM inference on Apple Silicon is memory-bandwidth-bound, so this translates directly into faster generation. iPad Air M4 (12 GB, up from 8 GB on the M3 Air) now runs 3B–4B models comfortably instead of merely adequately. The iPad Air M3 (8 GB) and other 8 GB iPads are limited to 1B–3B models at Q4. [iPhone with 8 GB RAM also runs small models](/power-local-llm/best-local-llm-apps-iphone-2026) through LLM Farm.',
+          '**iPad Pro M5 is the iPad best suited to 7B–8B models.** Apple raised the base RAM on the M5 iPad Pro to 12 GB (16 GB on the 1 TB/2 TB storage tiers), up from 8 GB on the base M4 iPad Pro, and increased memory bandwidth to 153 GB/s from 120 GB/s — LLM inference on Apple Silicon is memory-bandwidth-bound, so this translates directly into faster generation. iPad Air M4 (12 GB, up from 8 GB on the M3 Air) now runs 3B–4B models comfortably instead of merely adequately. The iPad Air M3 (8 GB) and other 8 GB iPads are limited to 1B–3B models at Q4. [iPhone with 8 GB RAM also runs small models](/power-local-llm/best-local-llm-apps-iphone-2026) through LLM Farm.',
         items: [
           '**PocketPal AI** (free, open-source MIT, iOS + Android): runs GGUF models through llama.cpp, downloads models from Hugging Face inside the app or imports files, and includes a built-in benchmark so you can measure your own tablet\'s tokens per second. Last upstream update: 2026-10-16. See the [PocketPal AI review](/power-local-llm/pocketpal-ai-review).',
           '**Locally AI** (free with paid options, closed-source, iPhone/iPad/Mac): runs open models through Apple\'s MLX framework, built for Apple Silicon. Last App Store update: 2026-10-15. See the [Locally AI review](/power-local-llm/locally-ai-review).',
@@ -271,7 +271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'For roleplay and character-card fiction on iPad, RisuAI connected to a remote Ollama instance running Llama 3.3 70B is the best combination available in 2026. RisuAI\'s mobile interface is designed for touch; the remote connection gives access to a 70B model that produces significantly better character voice than any model that fits on a tablet.',
+            text: 'For roleplay and character-card fiction on iPad, RisuAI connected to a remote Ollama instance running Llama 3.3 70B is a strong combination in 2026. RisuAI\'s mobile interface is designed for touch; the remote connection gives access to a 70B model that produces significantly better character voice than any model that fits on a tablet.',
           },
         ],
       },
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can a tablet handle long-form RAG?',
-            a: 'On-device, no — embedding 1,000+ documents on a tablet is impractical. Via remote connection, yes — your home machine handles the RAG pipeline, the tablet displays the chat interface. AnythingLLM running on a home machine and accessed via browser on the tablet handles document collections of any size with no tablet-side limit. For students or knowledge workers wanting RAG on tablet, remote connection is the only practical option.',
+            a: 'On-device, no — embedding 1,000+ documents on a tablet is impractical. Via remote connection, yes — your home machine handles the RAG pipeline, the tablet displays the chat interface. AnythingLLM running on a home machine and accessed via browser on the tablet handles document collections of any size with no tablet-side limit. For students or knowledge workers wanting RAG on tablet, remote connection is usually the more practical option.',
           },
           {
             q: 'Can I use external displays with tablet AI?',
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is a tablet better than a phone for local AI?',
-            a: 'For typing-heavy use (drafting, RAG, long conversations), yes — keyboard support and screen size matter. For quick chat, voice queries, or on-the-go use, the phone you already carry is better. The iPad Pro M5 is the only tablet that significantly outperforms a flagship phone for local AI; mid-range tablets and phones are roughly equivalent. Most readers should not buy a tablet specifically for local AI — buy one if you want a tablet for other reasons; AI capability is a bonus.',
+            a: 'For typing-heavy use (drafting, RAG, long conversations), yes — keyboard support and screen size matter. For quick chat, voice queries, or on-the-go use, the phone you already carry is better. The iPad Pro M5 is the tablet most likely to outperform a flagship phone for local AI; mid-range tablets and phones are roughly equivalent. Most readers should not buy a tablet specifically for local AI — buy one if you want a tablet for other reasons; AI capability is a bonus.',
           },
           {
             q: 'Why is local AI so slow on my tablet?',
