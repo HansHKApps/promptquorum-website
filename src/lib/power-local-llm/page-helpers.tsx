@@ -1056,6 +1056,7 @@ const HUB_THEMES: Array<{
       'local-ai-mail-review',
       'pcai-photo-retouch-review',
       'honey-llm-review',
+      'secret-ai-review',
       'oscilla-review',
       'tina-review',
       'mlxhub-review',

@@ -11,6 +11,30 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "saudi-pdpl-data-sovereignty-local-ai-2026",
+        "title": "Saudi PDPL & Data Sovereignty: Why AI Must Run Inside the Kingdom (2026)",
+        "url": "/local-llms/saudi-pdpl-data-sovereignty-local-ai-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-vision-models-llava-ollama-2026",
+        "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
+        "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "secret-ai-review",
+        "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
+        "url": "/power-local-llm/secret-ai-review",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "70b-models-consumer-hardware",
         "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
         "url": "/local-llms/70b-models-consumer-hardware",
@@ -56,30 +80,6 @@
         "url": "/local-llms/best-ai-coding-assistant-local-llm",
         "dateModified": "2026-10-17",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-2026",
-        "title": "Best Local LLMs in 2026: Qwen3.8-27B, Gemma 4, and Phi-4-mini Ranked",
-        "url": "/local-llms/best-local-llms-2026",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-for-coding",
-        "title": "Best Local LLMs for Coding 2026: Qwen3.8 27B, Devstral, Laguna",
-        "url": "/local-llms/best-local-llms-for-coding",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "how-to-install-ollama",
-        "title": "Download & Install Ollama on macOS, Windows & Linux",
-        "url": "/local-llms/how-to-install-ollama",
-        "dateModified": "2026-10-17",
-        "tier": "about"
       }
     ],
     "totalCount": 302,
@@ -96,10 +96,26 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "saudi-pdpl-data-sovereignty-local-ai-2026",
+        "title": "Saudi PDPL & Data Sovereignty: Why AI Must Run Inside the Kingdom (2026)",
+        "url": "/local-llms/saudi-pdpl-data-sovereignty-local-ai-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "memoryai-review",
         "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
         "url": "/power-local-llm/memoryai-review",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "secret-ai-review",
+        "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
+        "url": "/power-local-llm/secret-ai-review",
         "dateModified": "2026-10-19",
         "tier": "about"
       },
@@ -149,22 +165,6 @@
         "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
         "url": "/power-local-llm/koboldcpp-review",
         "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "return-editor-review",
-        "title": "Return Editor Review: Local-First AI Contract Review for Mac and Windows",
-        "url": "/power-local-llm/return-editor-review",
-        "dateModified": "2026-10-16",
         "tier": "about"
       }
     ],
@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 148,
+    "totalCount": 147,
     "capped": true
   },
   "Atomic Chat": {
@@ -5589,6 +5589,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-vision-models-llava-ollama-2026",
+        "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
+        "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-images-video-compared",
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
@@ -5649,14 +5657,6 @@
         "title": "VLMs in Cameras and on Drones 2026: On-Device Video Understanding",
         "url": "/power-local-llm/vlm-video-analytics-drones-edge",
         "dateModified": "2026-09-02",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "multimodal-local-llms",
-        "title": "Multimodal Local LLMs: Vision, Audio, and Text Processing",
-        "url": "/local-llms/multimodal-local-llms",
-        "dateModified": "2026-08-31",
         "tier": "about"
       }
     ],
@@ -5782,6 +5782,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "galaxy-s26-local-ai-on-device-2026",
+        "title": "Running Local AI on the Galaxy S26: On-Device AI Explained (2026)",
+        "url": "/local-llms/galaxy-s26-local-ai-on-device-2026",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "runanywhere-review",
         "title": "RunAnywhere Review: On-Device AI SDK for LLM, STT, TTS, and VAD",
@@ -5803,14 +5811,6 @@
         "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
         "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
         "dateModified": "2026-07-14",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "galaxy-s26-local-ai-on-device-2026",
-        "title": "Running Local AI on the Galaxy S26: On-Device AI Explained (2026)",
-        "url": "/local-llms/galaxy-s26-local-ai-on-device-2026",
-        "dateModified": "2026-06-15",
         "tier": "mentioned"
       }
     ],
@@ -5900,7 +5900,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 36,
+    "totalCount": 37,
     "capped": true
   },
   "Pocket AI": {
@@ -6038,6 +6038,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "galaxy-s26-local-ai-on-device-2026",
+        "title": "Running Local AI on the Galaxy S26: On-Device AI Explained (2026)",
+        "url": "/local-llms/galaxy-s26-local-ai-on-device-2026",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "private-mind-review",
         "title": "Private Mind Review: Open-Source Offline AI Chat for iPhone and Android",
@@ -6054,7 +6062,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "LLM Farm": {
@@ -6664,6 +6672,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "galaxy-s26-local-ai-on-device-2026",
+        "title": "Running Local AI on the Galaxy S26: On-Device AI Explained (2026)",
+        "url": "/local-llms/galaxy-s26-local-ai-on-device-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "easy-diffusion-review",
         "title": "Easy Diffusion Review: One-Click Stable Diffusion for PC and Mac",
@@ -6725,14 +6741,6 @@
         "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
         "url": "/power-local-llm/stable-diffusion-forge-review",
         "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "diffusionbee-review",
-        "title": "DiffusionBee Review: Local Stable Diffusion for Mac",
-        "url": "/power-local-llm/diffusionbee-review",
-        "dateModified": "2026-09-12",
         "tier": "about"
       }
     ],
@@ -10693,9 +10701,33 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-workstation-build-guide",
+        "title": "Local AI Workstation Build Guide 2026: 3 Budget Tiers",
+        "url": "/power-local-llm/local-ai-workstation-build-guide",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-vision-models-llava-ollama-2026",
+        "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
+        "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mlxhub-review",
         "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
         "url": "/power-local-llm/mlxhub-review",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "secret-ai-review",
+        "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
+        "url": "/power-local-llm/secret-ai-review",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
       },
@@ -10728,30 +10760,6 @@
         "slug": "best-ai-coding-assistant-local-llm",
         "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
         "url": "/local-llms/best-ai-coding-assistant-local-llm",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "how-to-install-ollama",
-        "title": "Download & Install Ollama on macOS, Windows & Linux",
-        "url": "/local-llms/how-to-install-ollama",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "top-open-source-models-ollama",
-        "title": "Ollama Latest Version 2026: v0.40.5 + Best Models by Use Case",
-        "url": "/local-llms/top-open-source-models-ollama",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-ai-coding-tools-comparison-2026",
-        "title": "Best AI Coding Tools Compared 2026: Cursor vs Continue.dev",
-        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
         "dateModified": "2026-10-17",
         "tier": "mentioned"
       }
@@ -11419,6 +11427,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "secret-ai-review",
+        "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
+        "url": "/power-local-llm/secret-ai-review",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anyllm-review",
         "title": "AnyLLM Review: BYOK AI Chat Client for Android",
         "url": "/power-local-llm/anyllm-review",
@@ -11458,7 +11474,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "LLM Hub": {
@@ -11783,6 +11799,20 @@
         "title": "Honey LLM Review: Offline AI Chat and Document Q&A for Android",
         "url": "/power-local-llm/honey-llm-review",
         "dateModified": "2026-10-16",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Secret AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "secret-ai-review",
+        "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
+        "url": "/power-local-llm/secret-ai-review",
+        "dateModified": "2026-10-19",
         "tier": "about"
       }
     ],

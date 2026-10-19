@@ -47,6 +47,7 @@ import { article as a_local_ai_geetmark_review } from './articles/local-ai-geetm
 import { article as a_local_ai_mail_review } from './articles/local-ai-mail-review'
 import { article as a_pcai_photo_retouch_review } from './articles/pcai-photo-retouch-review'
 import { article as a_honey_llm_review } from './articles/honey-llm-review'
+import { article as a_secret_ai_review } from './articles/secret-ai-review'
 import { article as a_swerve_ai_review } from './articles/swerve-ai-review'
 import { article as a_friedrichai_review } from './articles/friedrichai-review'
 import { article as a_snug_protocol_review } from './articles/snug-protocol-review'
@@ -653,6 +654,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'local-ai-mail-review':                         a_local_ai_mail_review,
   'pcai-photo-retouch-review':                    a_pcai_photo_retouch_review,
   'honey-llm-review':                             a_honey_llm_review,
+  'secret-ai-review':                             a_secret_ai_review,
   'swerve-ai-review':                             a_swerve_ai_review,
   'friedrichai-review':                            a_friedrichai_review,
   'snug-protocol-review':                          a_snug_protocol_review,

@@ -191,6 +191,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'local-ai-mail':                           'local-ai-mail',
   'pcai-photo-retouch':                      'pcai-photo-retouch',
   'honey-llm':                               'honey-llm',
+  'secret-ai':                               'secret-ai',
   'mlxhub':                                  'mlxhub',
   'local-ai-chat-pocket':                    'local-ai-chat-pocket',
   'castmates':                               'castmates',
