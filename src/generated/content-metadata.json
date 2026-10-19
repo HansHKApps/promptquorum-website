@@ -6929,7 +6929,7 @@
       ]
     },
     "replace-grammarly-notion-ai-with-local": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -6947,7 +6947,7 @@
       "images": [
         {
           "url": "/images/replace-grammarly-notion-ai-with-local-notion-ai-setup-flow-en.svg",
-          "title": "Notion AI replacement setup in Obsidian: install Ollama and pull Qwen3 14B, install Obsidian, add the Copilot plugin pointed at localhost:11434, add Smart Connections for full-vault Q&A, then draft documents and query notes entirely locally."
+          "title": "Notion AI replacement setup in Obsidian: install Ollama and pull a model, install Obsidian, add the Copilot plugin pointed at localhost:11434, add Smart Connections for full-vault Q&A, then draft documents and query notes entirely locally."
         },
         {
           "url": "/images/replace-grammarly-notion-ai-with-local-cost-privacy-overview-en.svg",

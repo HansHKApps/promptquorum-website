@@ -27,6 +27,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "replace-grammarly-notion-ai-with-local",
+        "title": "Replace Grammarly and Notion AI with a Local LLM (2026)",
+        "url": "/power-local-llm/replace-grammarly-notion-ai-with-local",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "secret-ai-review",
         "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
         "url": "/power-local-llm/secret-ai-review",
@@ -71,14 +79,6 @@
         "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
         "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics",
         "dateModified": "2026-10-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-ai-coding-assistant-local-llm",
-        "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
-        "url": "/local-llms/best-ai-coding-assistant-local-llm",
-        "dateModified": "2026-10-17",
         "tier": "about"
       }
     ],
@@ -932,7 +932,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 147,
+    "totalCount": 146,
     "capped": true
   },
   "Atomic Chat": {
@@ -1064,7 +1064,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 42,
+    "totalCount": 41,
     "capped": true
   },
   "GPT4All": {
@@ -2120,7 +2120,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 55,
+    "totalCount": 54,
     "capped": true
   },
   "LibreChat": {
@@ -7207,6 +7207,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "replace-grammarly-notion-ai-with-local",
+        "title": "Replace Grammarly and Notion AI with a Local LLM (2026)",
+        "url": "/power-local-llm/replace-grammarly-notion-ai-with-local",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -7251,14 +7259,6 @@
         "title": "Build a Personal Knowledge Base With Local AI: 2026 Stack Guide",
         "url": "/power-local-llm/local-llm-personal-knowledge-base-2026",
         "dateModified": "2026-08-29",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "replace-grammarly-notion-ai-with-local",
-        "title": "Replace Grammarly and Notion AI with a Local LLM (2026)",
-        "url": "/power-local-llm/replace-grammarly-notion-ai-with-local",
-        "dateModified": "2026-07-14",
         "tier": "about"
       },
       {
@@ -7364,7 +7364,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "Text Generator": {
@@ -10725,6 +10725,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "replace-grammarly-notion-ai-with-local",
+        "title": "Replace Grammarly and Notion AI with a Local LLM (2026)",
+        "url": "/power-local-llm/replace-grammarly-notion-ai-with-local",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "secret-ai-review",
         "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
         "url": "/power-local-llm/secret-ai-review",
@@ -10754,17 +10762,9 @@
         "url": "/power-local-llm/transcriptionsuite-review",
         "dateModified": "2026-10-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-ai-coding-assistant-local-llm",
-        "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
-        "url": "/local-llms/best-ai-coding-assistant-local-llm",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 201,
+    "totalCount": 202,
     "capped": true
   },
   "Qdrant": {
