@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-05',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-19',
+    next_refresh_due: '2027-04-19',
     theme: 'Local AI & LLMs in the Smart Home',
     heroImage: '/images/best-local-llm-models-smart-home-overview-hero-en.webp',
     title: 'Best Local LLM Models for Smart Home Control (2026)',
@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'The best local LLM models for smart home control are small, fast, instruction-following models with reliable function-calling — not the largest model your hardware can hold. This guide explains what actually matters for home control, gives a shortlist of suitable small models, compares them, and maps picks to hardware budgets, linking out to deeper model guides rather than re-ranking the whole field.',
     metaDescription:
-      'The best local LLM models for smart home control in 2026: small, fast, function-calling models that run on modest hardware. Shortlist and picks by budget.',
+      'Best local LLMs for Home Assistant in 2026: Qwen3.5, Qwen3, Gemma 4 and Home-LLM compared by size, tool calling and hardware. Picks by budget.',
     twitterDescription:
       'Best local LLM models for Home Assistant control: small, fast, function-calling models over the biggest model you can run. Picks by hardware budget.',
     readTime: '8 min read',
@@ -29,20 +29,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'small local llm home automation',
     ],
     leadAnswerBlock:
-      '**For smart home control, choose a small instruction model with reliable function-calling — a 3B–8B model is the sweet spot, because home control rewards low latency and structured output over raw capability.** Match the model to your hardware rather than picking the largest one available.',
+      '**For smart home control, choose a small instruction model with reliable function-calling — a 3B–9B model is the sweet spot, because home control rewards low latency and structured output over raw capability.** Match the model to your hardware rather than picking the largest one available.',
     quickAnswerTop: {
       en: {
         question: 'What is the best local LLM for smart home control?',
         answer:
-          'A small instruction-following model with solid function-calling, typically in the 4B to 8B range, is the best fit for home control because it responds quickly and emits reliable device actions. Models such as Gemma 3 4B, Qwen3 4B, and Qwen3 8B are common, well-supported choices; the right pick depends on your hardware and language needs.',
+          'A small instruction-following model with solid function-calling, typically 4B to 9B, is the best fit for home control because it responds quickly and emits reliable device actions. In 2026 the most-reported choices are Qwen3.5 (4B, 9B) and Qwen3 (4B, 8B), with Gemma 4 and Gemma 3 as alternatives; the right pick depends on your hardware and language needs.',
         bullets: [
           'Prioritise low latency and function-calling over size',
           '4B models suit low-power hardware; 8B suits a mini PC with a GPU or NPU',
-          'Gemma 3 4B, Qwen3 4B, and Phi-4-mini are common starting points',
+          'Qwen3.5 4B, Qwen3 4B, Gemma 3 4B, and Phi-4-mini are common starting points',
           'Pick a model with strong support for your spoken language',
           'Larger models add little for simple device control',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -51,11 +51,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'The Shortlist', anchor: 'shortlist' },
       { label: 'Comparison', anchor: 'comparison' },
       { label: 'By Hardware Budget', anchor: 'by-budget' },
+      { label: 'Home-LLM and Fine-Tuned Models', anchor: 'home-llm' },
+      { label: 'Benchmarks and Testing', anchor: 'benchmarks' },
       { label: 'How to Pick', anchor: 'how-to-pick' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'The best local LLM for smart home control is a small (3B–8B) instruction model with reliable function-calling, chosen for low latency over raw size.' },
+      { type: 'one-sentence', content: 'The best local LLM for smart home control is a small (3B–9B) instruction model with reliable function-calling, chosen for low latency over raw size.' },
       { type: 'plain-terms', content: 'Controlling a home does not need a giant model — it needs one that responds fast and reliably outputs structured commands the hub can execute. Small models in the 3B to 8B range do this well and run on modest hardware. The deeper model rankings live in the local-llms cluster; this guide focuses on the home-control angle.' },
     ],
     sections: {
@@ -66,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Home control rewards low latency and reliable function-calling, not maximum model size',
           'A 4B model fits low-power hardware; an 8B model suits a mini PC with a GPU or NPU',
-          'Gemma 3 4B (Google), Qwen3 4B (Alibaba), and Qwen3 8B (Alibaba) are common, well-supported choices',
+          'Qwen3.5 (4B, 9B) and Qwen3 (4B, 8B) from Alibaba are the most-reported picks; Gemma 4 and Gemma 3 4B (Google) are alternatives',
           'Qwen3, Gemma 3, and Phi-4-mini have proven Home Assistant tool-calling support today',
           'Pick a model with strong support for the language you speak to it',
           'For deep model rankings and mechanics, link out to the local-llms cluster',
@@ -87,8 +89,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'The Shortlist',
         content:
-          '**These small models are common, well-supported choices for home control across different hardware budgets.** Use a 4B model on light hardware and an 8B model when you have a GPU or NPU. Gemma 4 (June 2026) is the newest option; Qwen3, Gemma 3, and Phi-4-mini have proven Home Assistant tool-calling support today.',
+          '**In 2026, Qwen3.5 and Qwen3 are the most-reported choices for Home Assistant tool-calling, and Gemma 4 is the newest family.** Use a 4B model on light hardware and an 8B–9B model when you have a GPU or NPU. Qwen3.5 and Gemma 4 list native tool support on their Ollama pages, but community Assist results are still mixed, so test with your own commands.',
         items: [
+          '**Qwen3.5 4B (Alibaba):** a current-generation 4B model with tool and thinking support; community guides report reliable tool-calling on 8 GB GPUs — `qwen3.5:4b`.',
+          '**Qwen3.5 9B (Alibaba):** the default `qwen3.5` tag, reported to handle multi-device commands well; one tester found it not clearly better than Qwen3 8B — `qwen3.5:9b`.',
+          '**Gemma 4 E4B (Google):** 4.5B effective parameters with native function-calling and configurable thinking; community reports describe it as fast but less capable — `gemma4:e4b`.',
+          '**Gemma 4 26B-A4B (Google):** a mixture-of-experts model with 3.8B active parameters and a 16–19 GB download, for hosts with 24 GB-class memory — `gemma4:26b`.',
           '**Gemma 3 4B (Google):** a 4-billion-parameter model with broad multilingual coverage (140+ languages), a strong low-power choice — Ollama tag `gemma3:4b`.',
           '**Qwen3 4B (Alibaba):** a fast 4B model with reliable tool use and good multilingual support, low latency on a CPU or integrated GPU — `qwen3:4b`.',
           '**Phi-4-mini (Microsoft):** a compact 3.8B model that punches above its size for instruction-following — `phi4-mini`.',
@@ -108,9 +114,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Model': 'Phi-4-mini', 'Params': '3.8B', 'Approx. footprint (Q4)': '~2.5–3 GB', 'Ollama tag': 'phi4-mini', 'Best for': 'Strong instruction-following' },
           { 'Model': 'Llama 3.2 3B', 'Params': '3B', 'Approx. footprint (Q4)': '~2–3 GB', 'Ollama tag': 'llama3.2:3b', 'Best for': 'Widely-supported baseline' },
           { 'Model': 'Qwen3 8B', 'Params': '8B', 'Approx. footprint (Q4)': '~5 GB', 'Ollama tag': 'qwen3:8b', 'Best for': 'Best quality on GPU/NPU; HA favourite' },
+          { 'Model': 'Qwen3.5 4B', 'Params': '4B', 'Approx. footprint (Q4)': '~3.3 GB', 'Ollama tag': 'qwen3.5:4b', 'Best for': 'Current-gen small; tools' },
+          { 'Model': 'Qwen3.5 9B', 'Params': '9B', 'Approx. footprint (Q4)': '~6.6 GB', 'Ollama tag': 'qwen3.5:9b', 'Best for': 'Multi-device commands, GPU' },
+          { 'Model': 'Gemma 4 E4B', 'Params': '4.5B (eff.)', 'Approx. footprint (Q4)': '~6.6–9.5 GB', 'Ollama tag': 'gemma4:e4b', 'Best for': 'Fast replies; test tool calls' },
+          { 'Model': 'Gemma 4 26B-A4B', 'Params': '26B (3.8B active)', 'Approx. footprint (Q4)': '~16–19 GB', 'Ollama tag': 'gemma4:26b', 'Best for': '24 GB-class memory hosts' },
         ],
         items: [
           'Footprints are approximate and depend on quantization — for VRAM and quantization depth, link out to the local-llms cluster.',
+          'Qwen3.5 and Gemma 4 sizes are the download sizes listed on their Ollama pages; Gemma 4 E4B is larger than its 4.5B effective parameters suggest because the listed 8B figure includes embeddings.',
         ],
         image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
         imageCaption: 'Local LLM RAM footprint for smart home control at Q4 quantization: Gemma 3 4B, Qwen3 4B, and Phi-4-mini need 2.5-3 GB, while Qwen3 8B needs about 5 GB.',
@@ -122,11 +133,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Choose a 4B model on a Pi or CPU-only mini PC; choose an 8B model when you have a GPU or NPU.** This keeps responses snappy at every tier.',
         items: [
           '**Raspberry Pi / low-power:** Gemma 3 4B or Qwen3 4B, accepting slower responses.',
-          '**Mini PC (CPU only):** Qwen3 4B or Phi-4-mini as a responsive default.',
-          '**Mini PC with GPU/NPU:** Qwen3 8B for the best quality at acceptable latency — see [best mini PCs for Home Assistant + local AI](/smart-home/best-mini-pc-home-assistant-local-ai).',
+          '**Mini PC (CPU only):** Qwen3.5 4B, Qwen3 4B, or Phi-4-mini as a responsive default.',
+          '**Mini PC with GPU/NPU:** Qwen3.5 9B or Qwen3 8B for the best quality at acceptable latency; Gemma 4 26B-A4B if you have 24 GB-class memory — see [best mini PCs for Home Assistant + local AI](/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
         image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
         imageCaption: 'Model picks by hardware budget: Raspberry Pi or low-power hosts run Gemma 3 4B or Qwen3 4B, CPU-only mini PCs run Qwen3 4B or Phi-4-mini, and a GPU or NPU mini PC unlocks Qwen3 8B.',
+      },
+      homeLlm: {
+        id: 'home-llm',
+        title: 'Home-LLM and Fine-Tuned Home Models',
+        content:
+          '**Home-LLM is a community custom integration for Home Assistant that pairs with small models fine-tuned for device control — a different route from pulling a general model through the official Ollama integration.** Its [repository](https://github.com/acon96/home-llm) recommends Home-Llama-3.2-3B (3B) and Home-FunctionGemma-270m (270M) and supports llama.cpp, Ollama, and OpenAI-compatible backends.',
+        items: [
+          'Choose it when hardware is very limited: a 270M–3B model built for device control needs far less memory than a general 8B model.',
+          'Choose a general 4B–9B model instead when you also want conversation, summaries, or flexible phrasing — fine-tuned home models are narrower.',
+          'Check the [project repository](https://github.com/acon96/home-llm) for the current release and the Home Assistant version it requires before installing; the project documents breaking changes between versions.',
+        ],
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: 'Benchmarks and Testing',
+        content:
+          '**There is no official Home Assistant leaderboard for local models, so published numbers are community tests, not a verified ranking.** One [community build log](https://community.home-assistant.io/t/my-journey-to-a-reliable-and-enjoyable-locally-hosted-voice-assistant/944860) tested several local models on multi-device commands, context cues, and misheard commands and reported very different results by model and by thinking-mode setting.',
+        items: [
+          'Test multi-device commands ("turn off the kitchen and hall lights"), context cues ("make it warmer"), and misheard or partial commands.',
+          'Compare thinking on and off: thinking usually adds latency, which hurts voice control.',
+          'Measure time to first response on your own host, not tokens per second from a spec sheet.',
+          'Do not read [HomeSec-Bench](https://www.sharpai.org/benchmark/) scores as Home Assistant results — it measures security-camera assistant tasks, not Assist device control.',
+        ],
       },
       howToPick: {
         id: 'how-to-pick',
@@ -148,6 +182,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Does a home-control model need a GPU?', a: 'No for 4B models, which run on CPU or an integrated GPU. A GPU or NPU mainly lets you run an 8B model such as Qwen3 8B at low latency for better understanding. Match the model to your hardware.' },
           { q: 'Which models support function-calling?', a: 'Modern small models including Qwen3, Gemma 3, and Phi-4-mini have proven Home Assistant tool/function-calling support, which is the capability that lets them emit reliable device actions. Prefer a model documented to support it for home control.' },
           { q: 'What is the best model for a Raspberry Pi?', a: 'A 4B model like Gemma 3 4B or Qwen3 4B is the practical ceiling on a Raspberry Pi, and responses will be slower than on a mini PC. For a snappy assistant, a mini PC with a GPU/NPU running Qwen3 8B is the better host.' },
+          { q: 'What is the best LLM for Home Assistant voice control?', a: 'A small model with tool-calling and low latency: Qwen3.5 4B or Qwen3 4B on light hardware, Qwen3.5 9B or Qwen3 8B with a GPU. Prefer non-thinking mode for voice, because thinking adds delay. No official benchmark ranks them, so test with your own commands.' },
+          { q: 'What is the best 4B LLM for Home Assistant?', a: 'Qwen3.5 4B and Qwen3 4B are the most-reported 4B picks for tool-calling. Gemma 3 4B and Gemma 4 E4B are alternatives; community reports describe Gemma 4 E4B as fast but less capable at tool calls. Test them on your own commands.' },
+          { q: 'What is Home-LLM?', a: 'Home-LLM is a community custom integration for Home Assistant that works with small models fine-tuned for device control, such as Home-Llama-3.2-3B and Home-FunctionGemma-270m. It supports llama.cpp, Ollama, and OpenAI-compatible backends. Check its repository for the current version requirements.' },
+          { q: 'Is there a Home Assistant LLM benchmark?', a: 'There is no official Home Assistant leaderboard for local models. Available numbers are community tests, which vary by model, quantization, and thinking-mode setting. Run your own test with multi-device, context, and misheard commands.' },
         ],
       },
       relatedReading: {
@@ -166,13 +204,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Best Local LLM Models for Smart Home Control (2026)',
-      description: 'The best local LLM models for smart home control in 2026: small, fast, function-calling models that run on modest hardware. Shortlist and picks by budget.',
+      description: 'Best local LLMs for Home Assistant in 2026: Qwen3.5, Qwen3, Gemma 4 and Home-LLM compared by size, tool calling and hardware. Picks by budget.',
       url: 'https://www.promptquorum.com/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-05',
+      dateModified: '2026-10-19',
       about: [{ '@type': 'Thing', name: 'Local LLM' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Function calling' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -186,6 +224,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Does a home-control model need a GPU?', acceptedAnswer: { '@type': 'Answer', text: 'No for 4B models, which run on CPU or integrated GPU. A GPU or NPU mainly lets you run an 8B model like Qwen3 8B at low latency.' } },
         { '@type': 'Question', name: 'Which models support function-calling?', acceptedAnswer: { '@type': 'Answer', text: 'Modern small models including Qwen3, Gemma 3, and Phi-4-mini have proven Home Assistant tool/function-calling support, which lets them emit reliable device actions.' } },
         { '@type': 'Question', name: 'What is the best model for a Raspberry Pi?', acceptedAnswer: { '@type': 'Answer', text: 'A 4B model like Gemma 3 4B or Qwen3 4B is the practical ceiling on a Pi, with slower responses. A mini PC with a GPU/NPU running Qwen3 8B is a better host.' } },
+        { '@type': 'Question', name: 'What is the best LLM for Home Assistant voice control?', acceptedAnswer: { '@type': 'Answer', text: 'A small model with tool-calling and low latency: Qwen3.5 4B or Qwen3 4B on light hardware, Qwen3.5 9B or Qwen3 8B with a GPU. Prefer non-thinking mode for voice, because thinking adds delay. No official benchmark ranks them, so test with your own commands.' } },
+        { '@type': 'Question', name: 'What is the best 4B LLM for Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3.5 4B and Qwen3 4B are the most-reported 4B picks for tool-calling. Gemma 3 4B and Gemma 4 E4B are alternatives; community reports describe Gemma 4 E4B as fast but less capable at tool calls. Test them on your own commands.' } },
+        { '@type': 'Question', name: 'What is Home-LLM?', acceptedAnswer: { '@type': 'Answer', text: 'Home-LLM is a community custom integration for Home Assistant that works with small models fine-tuned for device control, such as Home-Llama-3.2-3B and Home-FunctionGemma-270m. It supports llama.cpp, Ollama, and OpenAI-compatible backends. Check its repository for the current version requirements.' } },
+        { '@type': 'Question', name: 'Is there a Home Assistant LLM benchmark?', acceptedAnswer: { '@type': 'Answer', text: 'There is no official Home Assistant leaderboard for local models. Available numbers are community tests, which vary by model, quantization, and thinking-mode setting. Run your own test with multi-device, context, and misheard commands.' } },
       ],
     },
   },
@@ -193,8 +235,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-05',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-19',
+    next_refresh_due: '2027-04-19',
     theme: 'Local AI & LLMs in the Smart Home',
     heroImage: '/images/best-local-llm-models-smart-home-overview-hero-ar.webp',
     title: 'أفضل نماذج ⁨LLM⁩ المحلية للتحكم في المنزل الذكي (⁨2026⁩)',
@@ -202,7 +244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'أفضل نماذج LLM المحلية للتحكم في المنزل الذكي هي نماذج صغيرة وسريعة تتبع التعليمات مع استدعاء دوال موثوق — وليس أكبر نموذج يمكن لجهازك تشغيله. يشرح هذا الدليل ما يهم فعلًا للتحكم المنزلي، ويقدم قائمة مختصرة بالنماذج الصغيرة المناسبة، ويقارنها، ويعيّن الاختيارات حسب ميزانيات الأجهزة، مع إحالات خارجية لأدلة النماذج الأعمق.',
     metaDescription:
-      'نماذج 3B–8B صغيرة وسريعة مع استدعاء الدوال هي الأفضل للتحكم المنزلي. Gemma 3 4B وQwen3 4B وQwen3 8B اختيارات شائعة حسب الأجهزة.',
+      'أفضل نماذج LLM المحلية لـ Home Assistant في 2026: مقارنة Qwen3.5 وQwen3 وGemma 4 وHome-LLM حسب الحجم واستدعاء الأدوات والأجهزة، مع اختيارات حسب الميزانية.',
     twitterDescription:
       'أفضل نماذج LLM المحلية للتحكم بـ Home Assistant: نماذج صغيرة وسريعة مع استدعاء الدوال بدلًا من أكبر نموذج يمكنك تشغيله. اختيارات حسب ميزانية الأجهزة.',
     readTime: '8 دقائق للقراءة',
@@ -217,20 +259,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'llm محلي صغير لأتمتة المنزل',
     ],
     leadAnswerBlock:
-      '**للتحكم في المنزل الذكي، اختر نموذج تعليمات صغيرًا مع استدعاء دوال موثوق — نموذج بحجم 3B–8B هو النقطة المثلى، لأن التحكم المنزلي يكافئ زمن الاستجابة المنخفض والمخرجات المنظمة على حساب القدرة الخام.** طابق النموذج مع جهازك بدلًا من اختيار الأكبر المتاح.',
+      '**للتحكم في المنزل الذكي، اختر نموذج تعليمات صغيرًا مع استدعاء دوال موثوق — نموذج بحجم 3B–9B هو النقطة المثلى، لأن التحكم المنزلي يكافئ زمن الاستجابة المنخفض والمخرجات المنظمة على حساب القدرة الخام.** طابق النموذج مع جهازك بدلًا من اختيار الأكبر المتاح.',
     quickAnswerTop: {
       ar: {
         question: 'ما أفضل نموذج LLM محلي للتحكم في المنزل الذكي؟',
         answer:
-          'نموذج تعليمات صغير مع استدعاء دوال قوي، عادةً في نطاق 4B إلى 8B، هو الأنسب للتحكم المنزلي لأنه يستجيب بسرعة ويصدر إجراءات أجهزة موثوقة. نماذج مثل Gemma 3 4B وQwen3 4B وQwen3 8B هي خيارات شائعة ومدعومة جيدًا؛ الاختيار الصحيح يعتمد على جهازك واحتياجاتك اللغوية.',
+          'نموذج تعليمات صغير مع استدعاء دوال قوي، عادةً من 4B إلى 9B، هو الأنسب للتحكم المنزلي لأنه يستجيب بسرعة ويصدر إجراءات أجهزة موثوقة. في 2026 أكثر الخيارات ذكرًا هي Qwen3.5 (4B و9B) وQwen3 (4B و8B)، مع Gemma 4 وGemma 3 كبدائل؛ الاختيار الصحيح يعتمد على جهازك واحتياجاتك اللغوية.',
         bullets: [
           'أعطِ الأولوية لزمن الاستجابة المنخفض واستدعاء الدوال على حساب الحجم',
           'نماذج 4B تناسب الأجهزة منخفضة الطاقة؛ 8B تناسب mini PC مع GPU أو NPU',
-          'Gemma 3 4B وQwen3 4B وPhi-4-mini نقاط بداية شائعة',
+          'Qwen3.5 4B وQwen3 4B وGemma 3 4B وPhi-4-mini نقاط بداية شائعة',
           'اختر نموذجًا ذا دعم قوي للغة التي تتحدث بها',
           'النماذج الأكبر لا تضيف شيئًا يُذكر للتحكم البسيط في الأجهزة',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -239,11 +281,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'القائمة المختصرة', anchor: 'shortlist' },
       { label: 'المقارنة', anchor: 'comparison' },
       { label: 'حسب ميزانية الأجهزة', anchor: 'by-budget' },
+      { label: 'Home-LLM والنماذج المضبوطة', anchor: 'home-llm' },
+      { label: 'المعايير والاختبار', anchor: 'benchmarks' },
       { label: 'كيفية الاختيار', anchor: 'how-to-pick' },
       { label: 'أسئلة شائعة', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'أفضل نموذج LLM محلي للتحكم في المنزل الذكي هو نموذج تعليمات صغير (3B–8B) مع استدعاء دوال موثوق، يُختار لزمن الاستجابة المنخفض لا للحجم الخام.' },
+      { type: 'one-sentence', content: 'أفضل نموذج LLM محلي للتحكم في المنزل الذكي هو نموذج تعليمات صغير (3B–9B) مع استدعاء دوال موثوق، يُختار لزمن الاستجابة المنخفض لا للحجم الخام.' },
       { type: 'plain-terms', content: 'التحكم في المنزل لا يحتاج نموذجًا ضخمًا — بل يحتاج نموذجًا يستجيب بسرعة ويصدر أوامر منظمة يمكن للمركز تنفيذها. النماذج الصغيرة في نطاق 3B إلى 8B تؤدي هذا بشكل جيد وتعمل على أجهزة متواضعة. تصنيفات النماذج الأعمق موجودة في عنقود local-llms؛ هذا الدليل يركز على جانب التحكم المنزلي.' },
     ],
     sections: {
@@ -254,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'التحكم المنزلي يكافئ زمن الاستجابة المنخفض واستدعاء الدوال الموثوق، لا أقصى حجم للنموذج',
           'نموذج 4B يناسب الأجهزة منخفضة الطاقة؛ نموذج 8B يناسب mini PC مع GPU أو NPU',
-          'Gemma 3 4B (Google) وQwen3 4B (Alibaba) وQwen3 8B (Alibaba) خيارات شائعة ومدعومة جيدًا',
+          'Qwen3.5 (4B و9B) وQwen3 (4B و8B) من Alibaba أكثر الخيارات ذكرًا؛ وGemma 4 وGemma 3 4B (Google) بدائل',
           'Qwen3 وGemma 3 وPhi-4-mini لديها دعم مُثبَت لاستدعاء أدوات Home Assistant اليوم',
           'اختر نموذجًا ذا دعم قوي للغة التي تتحدث بها',
           'لتصنيفات النماذج العميقة والميكانيكا، أحل إلى عنقود local-llms',
@@ -275,8 +319,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'القائمة المختصرة',
         content:
-          '**هذه النماذج الصغيرة خيارات شائعة ومدعومة جيدًا للتحكم المنزلي عبر ميزانيات أجهزة مختلفة.** استخدم نموذج 4B على الأجهزة الخفيفة ونموذج 8B حين تمتلك GPU أو NPU. Gemma 4 (يونيو 2026) هو الخيار الأحدث؛ Qwen3 وGemma 3 وPhi-4-mini لديها دعم مُثبَت لاستدعاء أدوات Home Assistant اليوم.',
+          '**في 2026 تُعد Qwen3.5 وQwen3 أكثر الخيارات ذكرًا لاستدعاء الأدوات في Home Assistant، وGemma 4 هي أحدث عائلة.** استخدم نموذج 4B على الأجهزة الخفيفة ونموذج 8B–9B حين تمتلك GPU أو NPU. تُدرج Qwen3.5 وGemma 4 دعمًا أصليًا للأدوات في صفحات Ollama، لكن نتائج المجتمع مع Assist ما تزال متباينة، فاختبر بأوامرك الخاصة.',
         items: [
+          '**Qwen3.5 4B (Alibaba):** نموذج 4B من الجيل الحالي يدعم الأدوات وthinking؛ تفيد أدلة المجتمع باستدعاء أدوات موثوق على بطاقات GPU بسعة 8 GB — `qwen3.5:4b`.',
+          '**Qwen3.5 9B (Alibaba):** وسم `qwen3.5` الافتراضي، ويُذكر أنه جيد في أوامر الأجهزة المتعددة؛ ولم يجده أحد المختبرين أفضل بوضوح من Qwen3 8B — `qwen3.5:9b`.',
+          '**Gemma 4 E4B (Google):** 4.5B معامل فعّال مع استدعاء دوال أصلي وthinking قابل للضبط؛ تصفه تقارير المجتمع بأنه سريع لكنه أقل قدرة — `gemma4:e4b`.',
+          '**Gemma 4 26B-A4B (Google):** نموذج مزيج خبراء بـ 3.8B معامل نشط وتنزيل بحجم 16–19 GB، لأجهزة بذاكرة من فئة 24 GB — `gemma4:26b`.',
           '**Gemma 3 4B (Google):** نموذج بـ 4 مليار معامل مع تغطية متعددة اللغات واسعة (أكثر من 140 لغة)، خيار قوي منخفض الطاقة — علامة Ollama `gemma3:4b`.',
           '**Qwen3 4B (Alibaba):** نموذج 4B سريع مع استخدام أدوات موثوق ودعم جيد متعدد اللغات، زمن استجابة منخفض على CPU أو GPU متكاملة — `qwen3:4b`.',
           '**Phi-4-mini (Microsoft):** نموذج مدمج بـ 3.8B يتجاوز حجمه في اتباع التعليمات — `phi4-mini`.',
@@ -296,9 +344,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'النموذج': 'Phi-4-mini', 'المعاملات': '3.8B', 'البصمة التقريبية (Q4)': '~2.5–3 GB', 'علامة Ollama': 'phi4-mini', 'الأفضل لـ': 'اتباع تعليمات قوي' },
           { 'النموذج': 'Llama 3.2 3B', 'المعاملات': '3B', 'البصمة التقريبية (Q4)': '~2–3 GB', 'علامة Ollama': 'llama3.2:3b', 'الأفضل لـ': 'قاعدة مدعومة على نطاق واسع' },
           { 'النموذج': 'Qwen3 8B', 'المعاملات': '8B', 'البصمة التقريبية (Q4)': '~5 GB', 'علامة Ollama': 'qwen3:8b', 'الأفضل لـ': 'أفضل جودة على GPU/NPU؛ مفضّل HA' },
+          { 'النموذج': 'Qwen3.5 4B', 'المعاملات': '4B', 'البصمة التقريبية (Q4)': '~3.3 GB', 'علامة Ollama': 'qwen3.5:4b', 'الأفضل لـ': 'جيل حالي؛ أدوات' },
+          { 'النموذج': 'Qwen3.5 9B', 'المعاملات': '9B', 'البصمة التقريبية (Q4)': '~6.6 GB', 'علامة Ollama': 'qwen3.5:9b', 'الأفضل لـ': 'أوامر متعددة الأجهزة، GPU' },
+          { 'النموذج': 'Gemma 4 E4B', 'المعاملات': '4.5B (eff.)', 'البصمة التقريبية (Q4)': '~6.6–9.5 GB', 'علامة Ollama': 'gemma4:e4b', 'الأفضل لـ': 'سريع؛ اختبر استدعاء الأدوات' },
+          { 'النموذج': 'Gemma 4 26B-A4B', 'المعاملات': '26B (3.8B active)', 'البصمة التقريبية (Q4)': '~16–19 GB', 'علامة Ollama': 'gemma4:26b', 'الأفضل لـ': 'أجهزة بذاكرة 24 GB' },
         ],
         items: [
           'البصمات تقريبية وتعتمد على التكميم — لعمق VRAM والتكميم، أحل إلى عنقود local-llms.',
+          'أحجام Qwen3.5 وGemma 4 هي أحجام التنزيل المذكورة في صفحات Ollama؛ وGemma 4 E4B أكبر مما توحي به معاملاته الفعّالة 4.5B لأن رقم 8B المذكور يشمل التضمينات.',
         ],
         image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
         imageCaption: 'بصمة ذاكرة RAM لنماذج LLM المحلية للتحكم في المنزل الذكي عند تكميم Q4: Gemma 3 4B وQwen3 4B وPhi-4-mini تحتاج 2.5-3 GB، بينما يحتاج Qwen3 8B نحو 5 GB.',
@@ -310,11 +363,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**اختر نموذج 4B على Pi أو mini PC بـ CPU فقط؛ اختر نموذج 8B حين تمتلك GPU أو NPU.** يُبقي هذا الاستجابات سريعة في كل مستوى.',
         items: [
           '**Raspberry Pi / منخفض الطاقة:** Gemma 3 4B أو Qwen3 4B، مع قبول استجابات أبطأ.',
-          '**Mini PC (CPU فقط):** Qwen3 4B أو Phi-4-mini كخيار افتراضي سريع الاستجابة.',
-          '**Mini PC مع GPU/NPU:** Qwen3 8B لأفضل جودة بزمن استجابة مقبول — راجع [أفضل mini PCs لـ Home Assistant + ذكاء اصطناعي محلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai).',
+          '**Mini PC (CPU فقط):** Qwen3.5 4B أو Qwen3 4B أو Phi-4-mini كخيار افتراضي سريع الاستجابة.',
+          '**Mini PC مع GPU/NPU:** Qwen3.5 9B أو Qwen3 8B لأفضل جودة بزمن استجابة مقبول؛ وGemma 4 26B-A4B إن توفرت ذاكرة من فئة 24 GB — راجع [أفضل mini PCs لـ Home Assistant + ذكاء اصطناعي محلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
         image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
         imageCaption: 'اختيارات النماذج حسب ميزانية الأجهزة: Raspberry Pi أو الأجهزة منخفضة الطاقة تشغّل Gemma 3 4B أو Qwen3 4B، وmini PC بـ CPU فقط يشغّل Qwen3 4B أو Phi-4-mini، وmini PC بـ GPU أو NPU يفتح المجال لتشغيل Qwen3 8B.',
+      },
+      homeLlm: {
+        id: 'home-llm',
+        title: 'Home-LLM ونماذج المنزل المضبوطة',
+        content:
+          '**Home-LLM تكامل مخصص من المجتمع لـ Home Assistant يعمل مع نماذج صغيرة مضبوطة للتحكم في الأجهزة — وهو مسار مختلف عن تحميل نموذج عام عبر تكامل Ollama الرسمي.** يوصي [مستودعه](https://github.com/acon96/home-llm) بـ Home-Llama-3.2-3B (3B) وHome-FunctionGemma-270m (270M) ويدعم llama.cpp وOllama وواجهات متوافقة مع OpenAI.',
+        items: [
+          'اخترْه حين تكون الأجهزة محدودة جدًا: نموذج 270M–3B مصمم للتحكم في الأجهزة يحتاج ذاكرة أقل بكثير من نموذج عام بحجم 8B.',
+          'اختر بدلًا منه نموذجًا عامًا 4B–9B إذا أردت أيضًا المحادثة أو التلخيص أو صياغات مرنة — فالنماذج المنزلية المضبوطة أضيق نطاقًا.',
+          'راجع [مستودع المشروع](https://github.com/acon96/home-llm) لمعرفة الإصدار الحالي وإصدار Home Assistant المطلوب قبل التثبيت؛ إذ يوثّق المشروع التغييرات الجذرية بين الإصدارات.',
+        ],
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: 'المعايير والاختبار',
+        content:
+          '**لا توجد لوحة ترتيب رسمية من Home Assistant للنماذج المحلية، لذا فالأرقام المنشورة اختبارات مجتمعية لا ترتيب موثّق.** اختبر [سجل بناء مجتمعي](https://community.home-assistant.io/t/my-journey-to-a-reliable-and-enjoyable-locally-hosted-voice-assistant/944860) عدة نماذج محلية على أوامر متعددة الأجهزة وإشارات السياق والأوامر المسموعة خطأً، وأفاد بنتائج مختلفة جدًا حسب النموذج وإعداد thinking.',
+        items: [
+          'اختبر أوامر متعددة الأجهزة («أطفئ إضاءة المطبخ والممر») وإشارات السياق («اجعله أدفأ») والأوامر المسموعة خطأً أو الناقصة.',
+          'قارن بين تشغيل thinking وإيقافه: يزيد thinking عادةً زمن الاستجابة، وهذا يضر بالتحكم الصوتي.',
+          'قِس الزمن حتى أول استجابة على جهازك أنت، لا الرموز في الثانية من ورقة المواصفات.',
+          'لا تقرأ درجات [HomeSec-Bench](https://www.sharpai.org/benchmark/) كنتائج لـ Home Assistant — فهو يقيس مهام مساعدي كاميرات المراقبة لا التحكم في الأجهزة عبر Assist.',
+        ],
       },
       howToPick: {
         id: 'how-to-pick',
@@ -336,6 +412,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل يحتاج نموذج التحكم المنزلي إلى GPU؟', a: 'لا لنماذج 4B التي تعمل على CPU أو GPU متكاملة. GPU أو NPU تتيح لك أساسًا تشغيل نموذج 8B مثل Qwen3 8B بزمن استجابة منخفض لفهم أفضل. طابق النموذج مع جهازك.' },
           { q: 'أي النماذج تدعم استدعاء الدوال؟', a: 'النماذج الصغيرة الحديثة بما فيها Qwen3 وGemma 3 وPhi-4-mini لديها دعم مُثبَت لاستدعاء أدوات/دوال Home Assistant، وهي القدرة التي تتيح لها إصدار إجراءات أجهزة موثوقة. فضّل نموذجًا موثق الدعم للتحكم المنزلي.' },
           { q: 'ما أفضل نموذج لـ Raspberry Pi؟', a: 'نموذج 4B مثل Gemma 3 4B أو Qwen3 4B هو السقف العملي على Raspberry Pi، والاستجابات ستكون أبطأ من mini PC. لمساعد سريع الاستجابة، mini PC مع GPU/NPU يشغّل Qwen3 8B هو المضيف الأفضل.' },
+          { q: 'ما أفضل LLM للتحكم الصوتي في Home Assistant؟', a: 'نموذج صغير مع استدعاء أدوات وزمن استجابة منخفض: Qwen3.5 4B أو Qwen3 4B على الأجهزة الخفيفة، وQwen3.5 9B أو Qwen3 8B مع GPU. فضّل وضع عدم thinking للصوت لأن thinking يضيف تأخيرًا. لا يوجد معيار رسمي يرتبها، فاختبر بأوامرك الخاصة.' },
+          { q: 'ما أفضل LLM بحجم 4B لـ Home Assistant؟', a: 'Qwen3.5 4B وQwen3 4B أكثر خيارات 4B ذكرًا لاستدعاء الأدوات. وGemma 3 4B وGemma 4 E4B بدائل؛ وتصف تقارير المجتمع Gemma 4 E4B بأنه سريع لكنه أقل قدرة في استدعاء الأدوات. اختبرها بأوامرك الخاصة.' },
+          { q: 'ما هو Home-LLM؟', a: 'Home-LLM تكامل مخصص من المجتمع لـ Home Assistant يعمل مع نماذج صغيرة مضبوطة للتحكم في الأجهزة مثل Home-Llama-3.2-3B وHome-FunctionGemma-270m. يدعم llama.cpp وOllama وواجهات متوافقة مع OpenAI. راجع مستودعه لمتطلبات الإصدار الحالية.' },
+          { q: 'هل يوجد معيار LLM لـ Home Assistant؟', a: 'لا توجد لوحة ترتيب رسمية من Home Assistant للنماذج المحلية. الأرقام المتاحة اختبارات مجتمعية تختلف حسب النموذج والتكميم وإعداد thinking. أجرِ اختبارك الخاص بأوامر متعددة الأجهزة وسياقية ومسموعة خطأً.' },
         ],
       },
       relatedReading: {
@@ -354,13 +434,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'أفضل نماذج LLM المحلية للتحكم في المنزل الذكي (2026)',
-      description: 'أفضل نماذج LLM المحلية للتحكم في المنزل الذكي 2026: نماذج صغيرة وسريعة مع استدعاء الدوال تعمل على أجهزة متواضعة. قائمة مختصرة واختيارات حسب الميزانية.',
+      description: 'أفضل نماذج LLM المحلية لـ Home Assistant في 2026: مقارنة Qwen3.5 وQwen3 وGemma 4 وHome-LLM حسب الحجم واستدعاء الأدوات والأجهزة، مع اختيارات حسب الميزانية.',
       url: 'https://www.promptquorum.com/ar/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'ar',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-05',
+      dateModified: '2026-10-19',
       about: [{ '@type': 'Thing', name: 'نموذج LLM محلي' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'استدعاء الدوال' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -374,6 +454,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'هل يحتاج نموذج التحكم المنزلي إلى GPU؟', acceptedAnswer: { '@type': 'Answer', text: 'لا لنماذج 4B التي تعمل على CPU أو GPU متكاملة. GPU أو NPU تتيح لك تشغيل نموذج 8B مثل Qwen3 8B بزمن استجابة منخفض.' } },
         { '@type': 'Question', name: 'أي النماذج تدعم استدعاء الدوال؟', acceptedAnswer: { '@type': 'Answer', text: 'النماذج الصغيرة الحديثة بما فيها Qwen3 وGemma 3 وPhi-4-mini لديها دعم مُثبَت لاستدعاء أدوات Home Assistant، مما يتيح لها إصدار إجراءات أجهزة موثوقة.' } },
         { '@type': 'Question', name: 'ما أفضل نموذج لـ Raspberry Pi؟', acceptedAnswer: { '@type': 'Answer', text: 'نموذج 4B مثل Gemma 3 4B أو Qwen3 4B هو السقف العملي على Pi، مع استجابات أبطأ. mini PC مع GPU/NPU يشغّل Qwen3 8B هو مضيف أفضل.' } },
+        { '@type': 'Question', name: 'ما أفضل LLM للتحكم الصوتي في Home Assistant؟', acceptedAnswer: { '@type': 'Answer', text: 'نموذج صغير مع استدعاء أدوات وزمن استجابة منخفض: Qwen3.5 4B أو Qwen3 4B على الأجهزة الخفيفة، وQwen3.5 9B أو Qwen3 8B مع GPU. فضّل وضع عدم thinking للصوت لأن thinking يضيف تأخيرًا. لا يوجد معيار رسمي يرتبها، فاختبر بأوامرك الخاصة.' } },
+        { '@type': 'Question', name: 'ما أفضل LLM بحجم 4B لـ Home Assistant؟', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3.5 4B وQwen3 4B أكثر خيارات 4B ذكرًا لاستدعاء الأدوات. وGemma 3 4B وGemma 4 E4B بدائل؛ وتصف تقارير المجتمع Gemma 4 E4B بأنه سريع لكنه أقل قدرة في استدعاء الأدوات. اختبرها بأوامرك الخاصة.' } },
+        { '@type': 'Question', name: 'ما هو Home-LLM؟', acceptedAnswer: { '@type': 'Answer', text: 'Home-LLM تكامل مخصص من المجتمع لـ Home Assistant يعمل مع نماذج صغيرة مضبوطة للتحكم في الأجهزة مثل Home-Llama-3.2-3B وHome-FunctionGemma-270m. يدعم llama.cpp وOllama وواجهات متوافقة مع OpenAI. راجع مستودعه لمتطلبات الإصدار الحالية.' } },
+        { '@type': 'Question', name: 'هل يوجد معيار LLM لـ Home Assistant؟', acceptedAnswer: { '@type': 'Answer', text: 'لا توجد لوحة ترتيب رسمية من Home Assistant للنماذج المحلية. الأرقام المتاحة اختبارات مجتمعية تختلف حسب النموذج والتكميم وإعداد thinking. أجرِ اختبارك الخاص بأوامر متعددة الأجهزة وسياقية ومسموعة خطأً.' } },
       ],
     },
   },
@@ -381,8 +465,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-05',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-19',
+    next_refresh_due: '2027-04-19',
     theme: 'Local AI & LLMs in the Smart Home',
     heroImage: '/images/best-local-llm-models-smart-home-overview-hero-de.webp',
     title: 'Beste lokale LLM-Modelle für die Smart-Home-Steuerung (2026)',
@@ -390,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Die besten lokalen LLM-Modelle für die Smart-Home-Steuerung sind kleine, schnelle, instruktionsfolgende Modelle mit zuverlässigem Function-Calling – nicht das größte Modell, das Ihre Hardware fassen kann. Dieser Leitfaden erklärt, was für die Heimsteuerung wirklich zählt, gibt eine Auswahl geeigneter kleiner Modelle, vergleicht sie und ordnet Empfehlungen Hardware-Budgets zu – und verlinkt für tiefere Modell-Leitfäden, statt das ganze Feld neu zu ordnen.',
     metaDescription:
-      'Beste lokale LLMs für Home Assistant 2026: kleine, schnelle Function-Calling-Modelle für bescheidene Hardware. Auswahl nach Budgetstufen.',
+      'Beste lokale LLMs für Home Assistant 2026: Qwen3.5, Qwen3, Gemma 4 und Home-LLM im Vergleich nach Größe, Tool-Calling und Hardware. Auswahl nach Budget.',
     twitterDescription:
       'Beste lokale LLM-Modelle für die Home-Assistant-Steuerung: kleine, schnelle Function-Calling-Modelle statt des größten betreibbaren Modells. Empfehlungen nach Hardware-Budget.',
     readTime: '8 Min. Lesezeit',
@@ -405,20 +489,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'kleines lokales llm heimautomatisierung',
     ],
     leadAnswerBlock:
-      '**Für die Smart-Home-Steuerung wählen Sie ein kleines Instruktionsmodell mit zuverlässigem Function-Calling – ein 3B–8B-Modell ist der Sweet Spot, weil Heimsteuerung niedrige Latenz und strukturierte Ausgabe über rohe Fähigkeit belohnt.** Passen Sie das Modell an Ihre Hardware an, statt das größte verfügbare zu wählen.',
+      '**Für die Smart-Home-Steuerung wählen Sie ein kleines Instruktionsmodell mit zuverlässigem Function-Calling – ein 3B–9B-Modell ist der Sweet Spot, weil Heimsteuerung niedrige Latenz und strukturierte Ausgabe über rohe Fähigkeit belohnt.** Passen Sie das Modell an Ihre Hardware an, statt das größte verfügbare zu wählen.',
     quickAnswerTop: {
       de: {
         question: 'Was ist das beste lokale LLM für die Smart-Home-Steuerung?',
         answer:
-          'Ein kleines, instruktionsfolgendes Modell mit solidem Function-Calling, typischerweise im Bereich 4B bis 8B, passt am besten zur Heimsteuerung, weil es schnell antwortet und zuverlässige Geräteaktionen ausgibt. Modelle wie Gemma 3 4B, Qwen3 4B und Qwen3 8B sind verbreitete, gut unterstützte Wahlen; die richtige Wahl hängt von Ihrer Hardware und Ihren Sprachbedürfnissen ab.',
+          'Ein kleines, instruktionsfolgendes Modell mit solidem Function-Calling, typischerweise 4B bis 9B, passt am besten zur Heimsteuerung, weil es schnell antwortet und zuverlässige Geräteaktionen ausgibt. 2026 sind Qwen3.5 (4B, 9B) und Qwen3 (4B, 8B) die am häufigsten genannten Wahlen, mit Gemma 4 und Gemma 3 als Alternativen; die richtige Wahl hängt von Hardware und Sprachbedarf ab.',
         bullets: [
           'Priorisieren Sie niedrige Latenz und Function-Calling über Größe',
           '4B-Modelle passen zu stromsparender Hardware; 8B zu einem Mini-PC mit GPU oder NPU',
-          'Gemma 3 4B, Qwen3 4B und Phi-4-mini sind verbreitete Ausgangspunkte',
+          'Qwen3.5 4B, Qwen3 4B, Gemma 3 4B und Phi-4-mini sind gängige Startpunkte',
           'Wählen Sie ein Modell mit starker Unterstützung für Ihre gesprochene Sprache',
           'Größere Modelle bringen für einfache Gerätesteuerung wenig',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -427,11 +511,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Die Auswahl', anchor: 'shortlist' },
       { label: 'Vergleich', anchor: 'comparison' },
       { label: 'Nach Hardware-Budget', anchor: 'by-budget' },
+      { label: 'Home-LLM und feinabgestimmte Modelle', anchor: 'home-llm' },
+      { label: 'Benchmarks und Tests', anchor: 'benchmarks' },
       { label: 'Wie man wählt', anchor: 'how-to-pick' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Das beste lokale LLM für die Smart-Home-Steuerung ist ein kleines (3B–8B) Instruktionsmodell mit zuverlässigem Function-Calling, gewählt für niedrige Latenz statt roher Größe.' },
+      { type: 'one-sentence', content: 'Das beste lokale LLM für die Smart-Home-Steuerung ist ein kleines (3B–9B) Instruktionsmodell mit zuverlässigem Function-Calling, gewählt für niedrige Latenz statt roher Größe.' },
       { type: 'plain-terms', content: 'Ein Zuhause zu steuern braucht kein riesiges Modell – es braucht eines, das schnell antwortet und zuverlässig strukturierte Befehle ausgibt, die der Hub ausführen kann. Kleine Modelle im Bereich 3B bis 8B tun das gut und laufen auf bescheidener Hardware. Die tieferen Modell-Rankings leben im local-llms-Cluster; dieser Leitfaden konzentriert sich auf den Heimsteuerungs-Aspekt.' },
     ],
     sections: {
@@ -442,7 +528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Heimsteuerung belohnt niedrige Latenz und zuverlässiges Function-Calling, nicht maximale Modellgröße',
           'Ein 4B-Modell passt zu stromsparender Hardware; ein 8B-Modell zu einem Mini-PC mit GPU oder NPU',
-          'Gemma 3 4B (Google), Qwen3 4B (Alibaba) und Qwen3 8B (Alibaba) sind verbreitete, gut unterstützte Wahlen',
+          'Qwen3.5 (4B, 9B) und Qwen3 (4B, 8B) von Alibaba sind die am häufigsten genannten Wahlen; Gemma 4 und Gemma 3 4B (Google) sind Alternativen',
           'Qwen3, Gemma 3 und Phi-4-mini haben heute nachgewiesene Home-Assistant-Tool-Calling-Unterstützung',
           'Wählen Sie ein Modell mit starker Unterstützung für die Sprache, die Sie damit sprechen',
           'Für tiefe Modell-Rankings und -Mechanik verlinken Sie auf den local-llms-Cluster',
@@ -463,8 +549,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'Die Auswahl',
         content:
-          '**Diese kleinen Modelle sind verbreitete, gut unterstützte Wahlen für die Heimsteuerung über verschiedene Hardware-Budgets hinweg.** Nutzen Sie ein 4B-Modell auf leichter Hardware und ein 8B-Modell, wenn Sie eine GPU oder NPU haben. Gemma 4 (Juni 2026) ist die neueste Option; Qwen3, Gemma 3 und Phi-4-mini haben heute nachgewiesene Home-Assistant-Tool-Calling-Unterstützung.',
+          '**2026 sind Qwen3.5 und Qwen3 die am häufigsten genannten Wahlen für Tool-Calling in Home Assistant, und Gemma 4 ist die neueste Familie.** Nutzen Sie ein 4B-Modell auf leichter Hardware und ein 8B–9B-Modell mit GPU oder NPU. Qwen3.5 und Gemma 4 weisen auf ihren Ollama-Seiten native Tool-Unterstützung aus, doch die Assist-Ergebnisse aus der Community sind noch gemischt – testen Sie mit Ihren eigenen Befehlen.',
         items: [
+          '**Qwen3.5 4B (Alibaba):** ein 4B-Modell der aktuellen Generation mit Tool- und Thinking-Unterstützung; Community-Guides berichten von zuverlässigem Tool-Calling auf 8-GB-GPUs – `qwen3.5:4b`.',
+          '**Qwen3.5 9B (Alibaba):** der Standard-Tag `qwen3.5`, laut Berichten gut bei Mehrgeräte-Befehlen; ein Tester sah keinen klaren Vorteil gegenüber Qwen3 8B – `qwen3.5:9b`.',
+          '**Gemma 4 E4B (Google):** 4,5B effektive Parameter mit nativem Function-Calling und konfigurierbarem Thinking; Community-Berichte beschreiben es als schnell, aber weniger leistungsfähig – `gemma4:e4b`.',
+          '**Gemma 4 26B-A4B (Google):** ein Mixture-of-Experts-Modell mit 3,8B aktiven Parametern und 16–19 GB Download, für Hosts mit 24-GB-Speicherklasse – `gemma4:26b`.',
           '**Gemma 3 4B (Google):** ein Modell mit 4 Milliarden Parametern mit breiter Mehrsprachigkeit (über 140 Sprachen), eine starke stromsparende Wahl – Ollama-Tag `gemma3:4b`.',
           '**Qwen3 4B (Alibaba):** ein schnelles 4B-Modell mit zuverlässigem Tool-Einsatz und guter Mehrsprachigkeit, niedrige Latenz auf einer CPU oder integrierten GPU – `qwen3:4b`.',
           '**Phi-4-mini (Microsoft):** ein kompaktes 3,8B-Modell, das beim Instruktionsfolgen über seiner Größe spielt – `phi4-mini`.',
@@ -484,9 +574,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modell': 'Phi-4-mini', 'Parameter': '3.8B', 'Ungef. Bedarf (Q4)': '~2,5–3 GB', 'Ollama-Tag': 'phi4-mini', 'Am besten für': 'Starkes Instruktionsfolgen' },
           { 'Modell': 'Llama 3.2 3B', 'Parameter': '3B', 'Ungef. Bedarf (Q4)': '~2–3 GB', 'Ollama-Tag': 'llama3.2:3b', 'Am besten für': 'Breit unterstützte Basis' },
           { 'Modell': 'Qwen3 8B', 'Parameter': '8B', 'Ungef. Bedarf (Q4)': '~5 GB', 'Ollama-Tag': 'qwen3:8b', 'Am besten für': 'Beste Qualität auf GPU/NPU; HA-Favorit' },
+          { 'Modell': 'Qwen3.5 4B', 'Parameter': '4B', 'Ungef. Bedarf (Q4)': '~3.3 GB', 'Ollama-Tag': 'qwen3.5:4b', 'Am besten für': 'Aktuelle Generation; Tools' },
+          { 'Modell': 'Qwen3.5 9B', 'Parameter': '9B', 'Ungef. Bedarf (Q4)': '~6.6 GB', 'Ollama-Tag': 'qwen3.5:9b', 'Am besten für': 'Mehrgeräte-Befehle, GPU' },
+          { 'Modell': 'Gemma 4 E4B', 'Parameter': '4.5B (eff.)', 'Ungef. Bedarf (Q4)': '~6.6–9.5 GB', 'Ollama-Tag': 'gemma4:e4b', 'Am besten für': 'Schnell; Tool-Calls testen' },
+          { 'Modell': 'Gemma 4 26B-A4B', 'Parameter': '26B (3.8B active)', 'Ungef. Bedarf (Q4)': '~16–19 GB', 'Ollama-Tag': 'gemma4:26b', 'Am besten für': 'Hosts mit 24 GB Speicher' },
         ],
         items: [
           'Die Bedarfe sind ungefähr und hängen von der Quantisierung ab – für VRAM und Quantisierungs-Tiefe verlinken Sie auf den local-llms-Cluster.',
+          'Die Größen von Qwen3.5 und Gemma 4 sind die Download-Größen auf den Ollama-Seiten; Gemma 4 E4B ist größer, als die 4,5B effektiven Parameter vermuten lassen, weil die genannten 8B die Embeddings einschließen.',
         ],
         image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
         imageCaption: 'RAM-Bedarf lokaler LLMs für die Smart-Home-Steuerung bei Q4-Quantisierung: Gemma 3 4B, Qwen3 4B und Phi-4-mini benötigen 2,5-3 GB, Qwen3 8B rund 5 GB.',
@@ -498,11 +593,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Wählen Sie ein 4B-Modell auf einem Pi oder reinen CPU-Mini-PC; wählen Sie ein 8B-Modell, wenn Sie eine GPU oder NPU haben.** Das hält Antworten auf jeder Stufe flott.',
         items: [
           '**Raspberry Pi / stromsparend:** Gemma 3 4B oder Qwen3 4B, langsamere Antworten in Kauf nehmend.',
-          '**Mini-PC (nur CPU):** Qwen3 4B oder Phi-4-mini als reaktionsschneller Standard.',
-          '**Mini-PC mit GPU/NPU:** Qwen3 8B für die beste Qualität bei akzeptabler Latenz – siehe [beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai).',
+          '**Mini-PC (nur CPU):** Qwen3.5 4B, Qwen3 4B oder Phi-4-mini als reaktionsschneller Standard.',
+          '**Mini-PC mit GPU/NPU:** Qwen3.5 9B oder Qwen3 8B für beste Qualität bei akzeptabler Latenz; Gemma 4 26B-A4B bei 24-GB-Speicherklasse – siehe [beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
         image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
         imageCaption: 'Modellauswahl nach Hardware-Budget: Raspberry Pi oder stromsparende Hosts nutzen Gemma 3 4B oder Qwen3 4B, reine CPU-Mini-PCs nutzen Qwen3 4B oder Phi-4-mini, und ein Mini-PC mit GPU oder NPU ermöglicht Qwen3 8B.',
+      },
+      homeLlm: {
+        id: 'home-llm',
+        title: 'Home-LLM und feinabgestimmte Heimmodelle',
+        content:
+          '**Home-LLM ist eine Community-Integration für Home Assistant, die mit kleinen, auf Gerätesteuerung feinabgestimmten Modellen arbeitet – ein anderer Weg, als ein allgemeines Modell über die offizielle Ollama-Integration zu laden.** Das [Repository](https://github.com/acon96/home-llm) empfiehlt Home-Llama-3.2-3B (3B) und Home-FunctionGemma-270m (270M) und unterstützt llama.cpp, Ollama und OpenAI-kompatible Backends.',
+        items: [
+          'Wählen Sie es bei sehr knapper Hardware: Ein 270M–3B-Modell für Gerätesteuerung braucht deutlich weniger Speicher als ein allgemeines 8B-Modell.',
+          'Wählen Sie stattdessen ein allgemeines 4B–9B-Modell, wenn Sie auch Unterhaltung, Zusammenfassungen oder flexible Formulierungen wollen – feinabgestimmte Heimmodelle sind enger.',
+          'Prüfen Sie vor der Installation im [Projekt-Repository](https://github.com/acon96/home-llm) die aktuelle Version und die benötigte Home-Assistant-Version; das Projekt dokumentiert Breaking Changes zwischen Versionen.',
+        ],
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: 'Benchmarks und Tests',
+        content:
+          '**Es gibt kein offizielles Home-Assistant-Leaderboard für lokale Modelle; veröffentlichte Zahlen sind Community-Tests, kein geprüftes Ranking.** Ein [Community-Baulog](https://community.home-assistant.io/t/my-journey-to-a-reliable-and-enjoyable-locally-hosted-voice-assistant/944860) testete mehrere lokale Modelle bei Mehrgeräte-Befehlen, Kontexthinweisen und falsch verstandenen Befehlen und berichtete stark unterschiedliche Ergebnisse je nach Modell und Thinking-Einstellung.',
+        items: [
+          'Testen Sie Mehrgeräte-Befehle („Schalte Küche und Flur aus“), Kontexthinweise („Mach es wärmer“) sowie falsch verstandene oder unvollständige Befehle.',
+          'Vergleichen Sie Thinking an und aus: Thinking erhöht meist die Latenz, was die Sprachsteuerung beeinträchtigt.',
+          'Messen Sie die Zeit bis zur ersten Antwort auf Ihrem eigenen Host, nicht Tokens pro Sekunde aus einem Datenblatt.',
+          'Lesen Sie [HomeSec-Bench](https://www.sharpai.org/benchmark/)-Werte nicht als Home-Assistant-Ergebnisse – es misst Aufgaben von Überwachungskamera-Assistenten, nicht die Assist-Gerätesteuerung.',
+        ],
       },
       howToPick: {
         id: 'how-to-pick',
@@ -524,6 +642,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Braucht ein Heimsteuerungs-Modell eine GPU?', a: 'Nein für 4B-Modelle, die auf CPU oder einer integrierten GPU laufen. Eine GPU oder NPU lässt Sie vor allem ein 8B-Modell wie Qwen3 8B bei niedriger Latenz für besseres Verständnis betreiben. Passen Sie das Modell an Ihre Hardware an.' },
           { q: 'Welche Modelle unterstützen Function-Calling?', a: 'Moderne kleine Modelle wie Qwen3, Gemma 3 und Phi-4-mini haben nachgewiesene Home-Assistant-Tool-/Function-Calling-Unterstützung, die Fähigkeit, mit der sie zuverlässige Geräteaktionen ausgeben. Bevorzugen Sie für die Heimsteuerung ein Modell, das dies dokumentiert unterstützt.' },
           { q: 'Was ist das beste Modell für einen Raspberry Pi?', a: 'Ein 4B-Modell wie Gemma 3 4B oder Qwen3 4B ist die praktische Obergrenze auf einem Raspberry Pi, und die Antworten sind langsamer als auf einem Mini-PC. Für einen flotten Assistenten ist ein Mini-PC mit GPU/NPU, der Qwen3 8B betreibt, der bessere Host.' },
+          { q: 'Welches ist das beste LLM für die Home-Assistant-Sprachsteuerung?', a: 'Ein kleines Modell mit Tool-Calling und niedriger Latenz: Qwen3.5 4B oder Qwen3 4B auf leichter Hardware, Qwen3.5 9B oder Qwen3 8B mit GPU. Für Sprache den Nicht-Thinking-Modus bevorzugen, da Thinking verzögert. Kein offizieller Benchmark reiht sie ein – testen Sie mit eigenen Befehlen.' },
+          { q: 'Welches ist das beste 4B-LLM für Home Assistant?', a: 'Qwen3.5 4B und Qwen3 4B sind die am häufigsten genannten 4B-Wahlen für Tool-Calling. Gemma 3 4B und Gemma 4 E4B sind Alternativen; Community-Berichte beschreiben Gemma 4 E4B als schnell, aber bei Tool-Calls weniger leistungsfähig. Testen Sie sie mit eigenen Befehlen.' },
+          { q: 'Was ist Home-LLM?', a: 'Home-LLM ist eine Community-Integration für Home Assistant, die mit kleinen, auf Gerätesteuerung feinabgestimmten Modellen wie Home-Llama-3.2-3B und Home-FunctionGemma-270m arbeitet. Sie unterstützt llama.cpp, Ollama und OpenAI-kompatible Backends. Prüfen Sie im Repository die aktuellen Versionsanforderungen.' },
+          { q: 'Gibt es einen Home-Assistant-LLM-Benchmark?', a: 'Es gibt kein offizielles Home-Assistant-Leaderboard für lokale Modelle. Vorhandene Zahlen sind Community-Tests, die je nach Modell, Quantisierung und Thinking-Einstellung variieren. Führen Sie einen eigenen Test mit Mehrgeräte-, Kontext- und falsch verstandenen Befehlen durch.' },
         ],
       },
       relatedReading: {
@@ -542,13 +664,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Beste lokale LLM-Modelle für die Smart-Home-Steuerung (2026)',
-      description: 'Beste lokale LLMs für Home Assistant 2026: kleine, schnelle Function-Calling-Modelle für bescheidene Hardware. Auswahl nach Budgetstufen.',
+      description: 'Beste lokale LLMs für Home Assistant 2026: Qwen3.5, Qwen3, Gemma 4 und Home-LLM im Vergleich nach Größe, Tool-Calling und Hardware. Auswahl nach Budget.',
       url: 'https://www.promptquorum.com/de/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-05',
+      dateModified: '2026-10-19',
       about: [{ '@type': 'Thing', name: 'Lokales LLM' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Function Calling' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -562,6 +684,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Braucht ein Heimsteuerungs-Modell eine GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Nein für 4B-Modelle, die auf CPU oder integrierter GPU laufen. Eine GPU oder NPU lässt Sie vor allem ein 8B-Modell wie Qwen3 8B bei niedriger Latenz betreiben.' } },
         { '@type': 'Question', name: 'Welche Modelle unterstützen Function-Calling?', acceptedAnswer: { '@type': 'Answer', text: 'Moderne kleine Modelle wie Qwen3, Gemma 3 und Phi-4-mini haben nachgewiesene Home-Assistant-Tool-/Function-Calling-Unterstützung, was ihnen zuverlässige Geräteaktionen erlaubt.' } },
         { '@type': 'Question', name: 'Was ist das beste Modell für einen Raspberry Pi?', acceptedAnswer: { '@type': 'Answer', text: 'Ein 4B-Modell wie Gemma 3 4B oder Qwen3 4B ist die praktische Obergrenze auf einem Pi, mit langsameren Antworten. Ein Mini-PC mit GPU/NPU, der Qwen3 8B betreibt, ist ein besserer Host.' } },
+        { '@type': 'Question', name: 'Welches ist das beste LLM für die Home-Assistant-Sprachsteuerung?', acceptedAnswer: { '@type': 'Answer', text: 'Ein kleines Modell mit Tool-Calling und niedriger Latenz: Qwen3.5 4B oder Qwen3 4B auf leichter Hardware, Qwen3.5 9B oder Qwen3 8B mit GPU. Für Sprache den Nicht-Thinking-Modus bevorzugen, da Thinking verzögert. Kein offizieller Benchmark reiht sie ein – testen Sie mit eigenen Befehlen.' } },
+        { '@type': 'Question', name: 'Welches ist das beste 4B-LLM für Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3.5 4B und Qwen3 4B sind die am häufigsten genannten 4B-Wahlen für Tool-Calling. Gemma 3 4B und Gemma 4 E4B sind Alternativen; Community-Berichte beschreiben Gemma 4 E4B als schnell, aber bei Tool-Calls weniger leistungsfähig. Testen Sie sie mit eigenen Befehlen.' } },
+        { '@type': 'Question', name: 'Was ist Home-LLM?', acceptedAnswer: { '@type': 'Answer', text: 'Home-LLM ist eine Community-Integration für Home Assistant, die mit kleinen, auf Gerätesteuerung feinabgestimmten Modellen wie Home-Llama-3.2-3B und Home-FunctionGemma-270m arbeitet. Sie unterstützt llama.cpp, Ollama und OpenAI-kompatible Backends. Prüfen Sie im Repository die aktuellen Versionsanforderungen.' } },
+        { '@type': 'Question', name: 'Gibt es einen Home-Assistant-LLM-Benchmark?', acceptedAnswer: { '@type': 'Answer', text: 'Es gibt kein offizielles Home-Assistant-Leaderboard für lokale Modelle. Vorhandene Zahlen sind Community-Tests, die je nach Modell, Quantisierung und Thinking-Einstellung variieren. Führen Sie einen eigenen Test mit Mehrgeräte-, Kontext- und falsch verstandenen Befehlen durch.' } },
       ],
     },
   },
@@ -569,8 +695,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-05',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-19',
+    next_refresh_due: '2027-04-19',
     theme: 'Local AI & LLMs in the Smart Home',
     heroImage: '/images/best-local-llm-models-smart-home-overview-hero-es.webp',
     title: 'Mejores Modelos LLM Locales para el Control del Smart Home (2026)',
@@ -578,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Los mejores modelos LLM locales para el control del smart home son modelos pequeños, rápidos y que siguen instrucciones con llamada a funciones fiable, no el modelo más grande que tu hardware pueda contener. Esta guía explica qué importa de verdad para el control del hogar, da una lista corta de modelos pequeños adecuados, los compara y asigna opciones a presupuestos de hardware, enlazando a guías de modelos más profundas en vez de reordenar todo el campo.',
     metaDescription:
-      'Mejores LLMs locales para Home Assistant 2026: modelos 3B–8B con llamada a funciones para hardware modesto. Lista y recomendaciones por presupuesto.',
+      'Mejores LLM locales para Home Assistant en 2026: Qwen3.5, Qwen3, Gemma 4 y Home-LLM comparados por tamaño, tool calling y hardware. Elección por presupuesto.',
     twitterDescription:
       'Mejores modelos LLM locales para el control con Home Assistant: modelos pequeños, rápidos y con llamada a funciones sobre el modelo más grande que puedas ejecutar. Opciones por presupuesto.',
     readTime: '8 min de lectura',
@@ -593,20 +719,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'llm local pequeño domótica',
     ],
     leadAnswerBlock:
-      '**Para el control del smart home, elige un modelo de instrucciones pequeño con llamada a funciones fiable — un modelo de 3B–8B es el punto óptimo, porque el control del hogar premia la baja latencia y la salida estructurada sobre la capacidad bruta.** Ajusta el modelo a tu hardware en vez de elegir el más grande disponible.',
+      '**Para el control del smart home, elige un modelo de instrucciones pequeño con llamada a funciones fiable — un modelo de 3B–9B es el punto óptimo, porque el control del hogar premia la baja latencia y la salida estructurada sobre la capacidad bruta.** Ajusta el modelo a tu hardware en vez de elegir el más grande disponible.',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es el mejor LLM local para el control del smart home?',
         answer:
-          'Un modelo pequeño que siga instrucciones con sólida llamada a funciones, normalmente en el rango de 4B a 8B, es el mejor ajuste para el control del hogar porque responde rápido y emite acciones de dispositivo fiables. Modelos como Gemma 3 4B, Qwen3 4B y Qwen3 8B son opciones comunes y bien soportadas; la elección correcta depende de tu hardware y tus necesidades de idioma.',
+          'Un modelo pequeño que siga instrucciones con buen function-calling, normalmente de 4B a 9B, es el más adecuado para el control del hogar porque responde rápido y emite acciones de dispositivo fiables. En 2026 las opciones más citadas son Qwen3.5 (4B, 9B) y Qwen3 (4B, 8B), con Gemma 4 y Gemma 3 como alternativas; la elección depende de tu hardware y de tus necesidades de idioma.',
         bullets: [
           'Prioriza baja latencia y llamada a funciones sobre el tamaño',
           'Los modelos 4B se ajustan a hardware de bajo consumo; 8B a un mini PC con GPU o NPU',
-          'Gemma 3 4B, Qwen3 4B y Phi-4-mini son puntos de partida comunes',
+          'Qwen3.5 4B, Qwen3 4B, Gemma 3 4B y Phi-4-mini son puntos de partida habituales',
           'Elige un modelo con fuerte soporte de tu idioma hablado',
           'Los modelos más grandes añaden poco para el control simple de dispositivos',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -615,11 +741,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'La lista corta', anchor: 'shortlist' },
       { label: 'Comparación', anchor: 'comparison' },
       { label: 'Por presupuesto de hardware', anchor: 'by-budget' },
+      { label: 'Home-LLM y modelos afinados', anchor: 'home-llm' },
+      { label: 'Benchmarks y pruebas', anchor: 'benchmarks' },
       { label: 'Cómo elegir', anchor: 'how-to-pick' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'El mejor LLM local para el control del smart home es un modelo de instrucciones pequeño (3B–8B) con llamada a funciones fiable, elegido por baja latencia sobre tamaño bruto.' },
+      { type: 'one-sentence', content: 'El mejor LLM local para el control del smart home es un modelo de instrucciones pequeño (3B–9B) con llamada a funciones fiable, elegido por baja latencia sobre tamaño bruto.' },
       { type: 'plain-terms', content: 'Controlar un hogar no necesita un modelo gigante — necesita uno que responda rápido y emita de forma fiable comandos estructurados que el hub pueda ejecutar. Los modelos pequeños en el rango de 3B a 8B lo hacen bien y corren en hardware modesto. Los rankings de modelos más profundos viven en el clúster local-llms; esta guía se centra en el ángulo del control del hogar.' },
     ],
     sections: {
@@ -630,7 +758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'El control del hogar premia la baja latencia y la llamada a funciones fiable, no el tamaño máximo de modelo',
           'Un modelo 4B se ajusta a hardware de bajo consumo; un modelo 8B a un mini PC con GPU o NPU',
-          'Gemma 3 4B (Google), Qwen3 4B (Alibaba) y Qwen3 8B (Alibaba) son opciones comunes y bien soportadas',
+          'Qwen3.5 (4B, 9B) y Qwen3 (4B, 8B) de Alibaba son las opciones más citadas; Gemma 4 y Gemma 3 4B (Google) son alternativas',
           'Qwen3, Gemma 3 y Phi-4-mini tienen soporte probado de tool-calling en Home Assistant hoy',
           'Elige un modelo con fuerte soporte del idioma en que le hablas',
           'Para rankings y mecánica de modelos profundos, enlaza al clúster local-llms',
@@ -651,8 +779,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'La lista corta',
         content:
-          '**Estos modelos pequeños son opciones comunes y bien soportadas para el control del hogar en distintos presupuestos de hardware.** Usa un modelo 4B en hardware ligero y un modelo 8B cuando tengas una GPU o NPU. Gemma 4 (junio de 2026) es la opción más nueva; Qwen3, Gemma 3 y Phi-4-mini tienen soporte probado de tool-calling en Home Assistant hoy.',
+          '**En 2026, Qwen3.5 y Qwen3 son las opciones más citadas para el tool-calling en Home Assistant, y Gemma 4 es la familia más reciente.** Usa un modelo 4B en hardware ligero y uno de 8B–9B si tienes GPU o NPU. Qwen3.5 y Gemma 4 indican soporte nativo de herramientas en sus páginas de Ollama, pero los resultados de la comunidad con Assist aún son mixtos: prueba con tus propios comandos.',
         items: [
+          '**Qwen3.5 4B (Alibaba):** un modelo 4B de generación actual con soporte de herramientas y thinking; guías de la comunidad informan de tool-calling fiable en GPU de 8 GB — `qwen3.5:4b`.',
+          '**Qwen3.5 9B (Alibaba):** la etiqueta `qwen3.5` por defecto, que según informes maneja bien comandos multidispositivo; un probador no lo vio claramente mejor que Qwen3 8B — `qwen3.5:9b`.',
+          '**Gemma 4 E4B (Google):** 4,5B de parámetros efectivos con function-calling nativo y thinking configurable; informes de la comunidad lo describen como rápido pero menos capaz — `gemma4:e4b`.',
+          '**Gemma 4 26B-A4B (Google):** un modelo de mezcla de expertos con 3,8B de parámetros activos y descarga de 16–19 GB, para equipos con memoria de clase 24 GB — `gemma4:26b`.',
           '**Gemma 3 4B (Google):** un modelo de 4 mil millones de parámetros con amplia cobertura multilingüe (más de 140 idiomas), una fuerte opción de bajo consumo — etiqueta de Ollama `gemma3:4b`.',
           '**Qwen3 4B (Alibaba):** un modelo 4B rápido con uso fiable de herramientas y buen soporte multilingüe, baja latencia en una CPU o GPU integrada — `qwen3:4b`.',
           '**Phi-4-mini (Microsoft):** un modelo compacto de 3.8B que rinde por encima de su tamaño en seguimiento de instrucciones — `phi4-mini`.',
@@ -672,9 +804,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Phi-4-mini', 'Parámetros': '3.8B', 'Huella aprox. (Q4)': '~2,5–3 GB', 'Etiqueta Ollama': 'phi4-mini', 'Mejor para': 'Fuerte seguimiento de instrucciones' },
           { 'Modelo': 'Llama 3.2 3B', 'Parámetros': '3B', 'Huella aprox. (Q4)': '~2–3 GB', 'Etiqueta Ollama': 'llama3.2:3b', 'Mejor para': 'Base ampliamente soportada' },
           { 'Modelo': 'Qwen3 8B', 'Parámetros': '8B', 'Huella aprox. (Q4)': '~5 GB', 'Etiqueta Ollama': 'qwen3:8b', 'Mejor para': 'Mejor calidad en GPU/NPU; favorito de HA' },
+          { 'Modelo': 'Qwen3.5 4B', 'Parámetros': '4B', 'Huella aprox. (Q4)': '~3.3 GB', 'Etiqueta Ollama': 'qwen3.5:4b', 'Mejor para': 'Generación actual; herramientas' },
+          { 'Modelo': 'Qwen3.5 9B', 'Parámetros': '9B', 'Huella aprox. (Q4)': '~6.6 GB', 'Etiqueta Ollama': 'qwen3.5:9b', 'Mejor para': 'Multidispositivo, GPU' },
+          { 'Modelo': 'Gemma 4 E4B', 'Parámetros': '4.5B (eff.)', 'Huella aprox. (Q4)': '~6.6–9.5 GB', 'Etiqueta Ollama': 'gemma4:e4b', 'Mejor para': 'Rápido; probar tool calls' },
+          { 'Modelo': 'Gemma 4 26B-A4B', 'Parámetros': '26B (3.8B active)', 'Huella aprox. (Q4)': '~16–19 GB', 'Etiqueta Ollama': 'gemma4:26b', 'Mejor para': 'Equipos con 24 GB' },
         ],
         items: [
           'Las huellas son aproximadas y dependen de la cuantización — para VRAM y profundidad de cuantización, enlaza al clúster local-llms.',
+          'Los tamaños de Qwen3.5 y Gemma 4 son los de descarga que indican sus páginas de Ollama; Gemma 4 E4B es mayor de lo que sugieren sus 4,5B efectivos porque la cifra de 8B incluye los embeddings.',
         ],
         image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
         imageCaption: 'Huella de RAM de LLMs locales para el control del smart home con cuantización Q4: Gemma 3 4B, Qwen3 4B y Phi-4-mini necesitan 2,5-3 GB, y Qwen3 8B necesita unos 5 GB.',
@@ -686,11 +823,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Elige un modelo 4B en una Pi o mini PC solo-CPU; elige un modelo 8B cuando tengas una GPU o NPU.** Esto mantiene las respuestas ágiles en cada nivel.',
         items: [
           '**Raspberry Pi / bajo consumo:** Gemma 3 4B o Qwen3 4B, aceptando respuestas más lentas.',
-          '**Mini PC (solo CPU):** Qwen3 4B o Phi-4-mini como predeterminado con buena respuesta.',
-          '**Mini PC con GPU/NPU:** Qwen3 8B para la mejor calidad con latencia aceptable — consulta [mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai).',
+          '**Mini PC (solo CPU):** Qwen3.5 4B, Qwen3 4B o Phi-4-mini como opción ágil por defecto.',
+          '**Mini PC con GPU/NPU:** Qwen3.5 9B o Qwen3 8B para la mejor calidad con latencia aceptable; Gemma 4 26B-A4B si tienes memoria de clase 24 GB — consulta [mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
         image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
         imageCaption: 'Elecciones de modelo por presupuesto de hardware: Raspberry Pi o hosts de bajo consumo ejecutan Gemma 3 4B o Qwen3 4B, los mini PC solo-CPU ejecutan Qwen3 4B o Phi-4-mini, y un mini PC con GPU o NPU habilita Qwen3 8B.',
+      },
+      homeLlm: {
+        id: 'home-llm',
+        title: 'Home-LLM y modelos afinados para el hogar',
+        content:
+          '**Home-LLM es una integración personalizada de la comunidad para Home Assistant que se combina con modelos pequeños afinados para el control de dispositivos: una vía distinta a cargar un modelo general mediante la integración oficial de Ollama.** Su [repositorio](https://github.com/acon96/home-llm) recomienda Home-Llama-3.2-3B (3B) y Home-FunctionGemma-270m (270M) y admite backends llama.cpp, Ollama y compatibles con OpenAI.',
+        items: [
+          'Elígelo cuando el hardware es muy limitado: un modelo de 270M–3B hecho para control de dispositivos necesita mucha menos memoria que un modelo general de 8B.',
+          'Elige en cambio un modelo general de 4B–9B si también quieres conversación, resúmenes o formulaciones flexibles: los modelos afinados para el hogar son más estrechos.',
+          'Consulta el [repositorio del proyecto](https://github.com/acon96/home-llm) para la versión actual y la versión de Home Assistant que requiere antes de instalar; el proyecto documenta cambios incompatibles entre versiones.',
+        ],
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: 'Benchmarks y pruebas',
+        content:
+          '**No existe un ranking oficial de Home Assistant para modelos locales, así que las cifras publicadas son pruebas de la comunidad, no una clasificación verificada.** Un [registro de montaje de la comunidad](https://community.home-assistant.io/t/my-journey-to-a-reliable-and-enjoyable-locally-hosted-voice-assistant/944860) probó varios modelos locales con comandos multidispositivo, pistas de contexto y comandos mal entendidos, y obtuvo resultados muy distintos según el modelo y el ajuste de thinking.',
+        items: [
+          'Prueba comandos multidispositivo («apaga las luces de la cocina y del pasillo»), pistas de contexto («hazlo más cálido») y comandos mal entendidos o parciales.',
+          'Compara thinking activado y desactivado: el thinking suele añadir latencia, lo que perjudica el control por voz.',
+          'Mide el tiempo hasta la primera respuesta en tu propio equipo, no los tokens por segundo de una ficha técnica.',
+          'No interpretes las puntuaciones de [HomeSec-Bench](https://www.sharpai.org/benchmark/) como resultados de Home Assistant: mide tareas de asistentes de cámaras de seguridad, no el control de dispositivos de Assist.',
+        ],
       },
       howToPick: {
         id: 'how-to-pick',
@@ -712,6 +872,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Necesita una GPU un modelo de control del hogar?', a: 'No para modelos 4B, que corren en CPU o una GPU integrada. Una GPU o NPU principalmente te permite ejecutar un modelo 8B como Qwen3 8B con baja latencia para mejor comprensión. Ajusta el modelo a tu hardware.' },
           { q: '¿Qué modelos admiten llamada a funciones?', a: 'Los modelos pequeños modernos, incluidos Qwen3, Gemma 3 y Phi-4-mini, tienen soporte probado de tool/function-calling en Home Assistant, que es la capacidad que les permite emitir acciones de dispositivo fiables. Prefiere un modelo documentado para soportarla en el control del hogar.' },
           { q: '¿Cuál es el mejor modelo para una Raspberry Pi?', a: 'Un modelo 4B como Gemma 3 4B o Qwen3 4B es el techo práctico en una Raspberry Pi, y las respuestas serán más lentas que en un mini PC. Para un asistente ágil, un mini PC con GPU/NPU ejecutando Qwen3 8B es el mejor host.' },
+          { q: '¿Cuál es el mejor LLM para el control por voz de Home Assistant?', a: 'Un modelo pequeño con tool-calling y baja latencia: Qwen3.5 4B o Qwen3 4B en hardware ligero, Qwen3.5 9B o Qwen3 8B con GPU. Prefiere el modo sin thinking para voz, porque el thinking añade retraso. Ningún benchmark oficial los clasifica: prueba con tus propios comandos.' },
+          { q: '¿Cuál es el mejor LLM de 4B para Home Assistant?', a: 'Qwen3.5 4B y Qwen3 4B son las opciones de 4B más citadas para tool-calling. Gemma 3 4B y Gemma 4 E4B son alternativas; informes de la comunidad describen Gemma 4 E4B como rápido pero menos capaz en tool calls. Pruébalos con tus propios comandos.' },
+          { q: '¿Qué es Home-LLM?', a: 'Home-LLM es una integración personalizada de la comunidad para Home Assistant que funciona con modelos pequeños afinados para el control de dispositivos, como Home-Llama-3.2-3B y Home-FunctionGemma-270m. Admite backends llama.cpp, Ollama y compatibles con OpenAI. Consulta su repositorio para los requisitos de versión actuales.' },
+          { q: '¿Existe un benchmark de LLM para Home Assistant?', a: 'No hay un ranking oficial de Home Assistant para modelos locales. Las cifras disponibles son pruebas de la comunidad, que varían según el modelo, la cuantización y el ajuste de thinking. Haz tu propia prueba con comandos multidispositivo, de contexto y mal entendidos.' },
         ],
       },
       relatedReading: {
@@ -730,13 +894,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Mejores Modelos LLM Locales para el Control del Smart Home (2026)',
-      description: 'Mejores LLMs locales para Home Assistant 2026: modelos 3B–8B con llamada a funciones para hardware modesto. Lista y recomendaciones por presupuesto.',
+      description: 'Mejores LLM locales para Home Assistant en 2026: Qwen3.5, Qwen3, Gemma 4 y Home-LLM comparados por tamaño, tool calling y hardware. Elección por presupuesto.',
       url: 'https://www.promptquorum.com/es/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-05',
+      dateModified: '2026-10-19',
       about: [{ '@type': 'Thing', name: 'LLM local' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Llamada a funciones' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -750,6 +914,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '¿Necesita una GPU un modelo de control del hogar?', acceptedAnswer: { '@type': 'Answer', text: 'No para modelos 4B, que corren en CPU o GPU integrada. Una GPU o NPU principalmente te permite ejecutar un modelo 8B como Qwen3 8B con baja latencia.' } },
         { '@type': 'Question', name: '¿Qué modelos admiten llamada a funciones?', acceptedAnswer: { '@type': 'Answer', text: 'Los modelos pequeños modernos como Qwen3, Gemma 3 y Phi-4-mini tienen soporte probado de tool/function-calling en Home Assistant, que les permite emitir acciones de dispositivo fiables.' } },
         { '@type': 'Question', name: '¿Cuál es el mejor modelo para una Raspberry Pi?', acceptedAnswer: { '@type': 'Answer', text: 'Un modelo 4B como Gemma 3 4B o Qwen3 4B es el techo práctico en una Pi, con respuestas más lentas. Un mini PC con GPU/NPU ejecutando Qwen3 8B es un mejor host.' } },
+        { '@type': 'Question', name: '¿Cuál es el mejor LLM para el control por voz de Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Un modelo pequeño con tool-calling y baja latencia: Qwen3.5 4B o Qwen3 4B en hardware ligero, Qwen3.5 9B o Qwen3 8B con GPU. Prefiere el modo sin thinking para voz, porque el thinking añade retraso. Ningún benchmark oficial los clasifica: prueba con tus propios comandos.' } },
+        { '@type': 'Question', name: '¿Cuál es el mejor LLM de 4B para Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3.5 4B y Qwen3 4B son las opciones de 4B más citadas para tool-calling. Gemma 3 4B y Gemma 4 E4B son alternativas; informes de la comunidad describen Gemma 4 E4B como rápido pero menos capaz en tool calls. Pruébalos con tus propios comandos.' } },
+        { '@type': 'Question', name: '¿Qué es Home-LLM?', acceptedAnswer: { '@type': 'Answer', text: 'Home-LLM es una integración personalizada de la comunidad para Home Assistant que funciona con modelos pequeños afinados para el control de dispositivos, como Home-Llama-3.2-3B y Home-FunctionGemma-270m. Admite backends llama.cpp, Ollama y compatibles con OpenAI. Consulta su repositorio para los requisitos de versión actuales.' } },
+        { '@type': 'Question', name: '¿Existe un benchmark de LLM para Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'No hay un ranking oficial de Home Assistant para modelos locales. Las cifras disponibles son pruebas de la comunidad, que varían según el modelo, la cuantización y el ajuste de thinking. Haz tu propia prueba con comandos multidispositivo, de contexto y mal entendidos.' } },
       ],
     },
   },
@@ -757,8 +925,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-05',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-19',
+    next_refresh_due: '2027-04-19',
     theme: 'Local AI & LLMs in the Smart Home',
     heroImage: '/images/best-local-llm-models-smart-home-overview-hero-ko.webp',
     title: '스마트 홈 제어를 위한 최고의 로컬 LLM 모델 (2026)',
@@ -766,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '스마트 홈 제어를 위한 최고의 로컬 LLM 모델은 신뢰할 수 있는 함수 호출 기능을 갖춘 소형 고속 명령 이행 모델입니다. 하드웨어가 수용할 수 있는 가장 큰 모델이 아닙니다. 이 가이드는 홈 제어에 실제로 중요한 것을 설명하고, 적합한 소형 모델의 단축 목록을 제공하며, 비교하고, 하드웨어 예산별 선택을 제시합니다. 전 분야를 재순위화하는 대신 더 깊은 모델 가이드로 링크합니다.',
     metaDescription:
-      '2026년 스마트 홈 제어를 위한 최고의 로컬 LLM: 평범한 하드웨어에서 실행되는 소형 고속 함수 호출 모델. 단축 목록 및 예산별 선택.',
+      '2026년 Home Assistant용 최고의 로컬 LLM: Qwen3.5, Qwen3, Gemma 4, Home-LLM을 크기·툴 호출·하드웨어로 비교하고 예산별로 추천합니다.',
     twitterDescription:
       'Home Assistant 제어를 위한 최고의 로컬 LLM 모델: 실행 가능한 가장 큰 모델보다 소형 고속 함수 호출 모델을 우선시하십시오. 하드웨어 예산별 선택.',
     readTime: '8분 분량',
@@ -786,15 +954,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ko: {
         question: '스마트 홈 제어에 가장 적합한 로컬 LLM은 무엇입니까?',
         answer:
-          '단단한 함수 호출 기능을 갖춘 소형 명령 이행 모델, 일반적으로 4B~8B 범위의 모델이 홈 제어에 가장 적합합니다. 빠르게 응답하고 신뢰할 수 있는 장치 동작을 출력하기 때문입니다. Gemma 3 4B, Qwen3 4B, Qwen3 8B 같은 모델이 일반적이고 잘 지원되는 선택입니다. 올바른 선택은 하드웨어와 언어 요구 사항에 따라 다릅니다.',
+          '홈 제어에는 신뢰할 수 있는 함수 호출을 갖춘 소형 지시 수행 모델(보통 4B~9B)이 가장 적합합니다. 응답이 빠르고 안정적인 기기 동작을 출력하기 때문입니다. 2026년에 가장 많이 언급되는 선택은 Qwen3.5(4B, 9B)와 Qwen3(4B, 8B)이며, Gemma 4와 Gemma 3가 대안입니다. 최적의 선택은 하드웨어와 언어 요구에 따라 달라집니다.',
         bullets: [
           '크기보다 낮은 지연 시간과 함수 호출을 우선시하십시오',
           '4B 모델은 저전력 하드웨어에 적합하고 8B는 GPU 또는 NPU가 있는 미니 PC에 적합합니다',
-          'Gemma 3 4B, Qwen3 4B, Phi-4-mini가 일반적인 시작점입니다',
+          'Qwen3.5 4B, Qwen3 4B, Gemma 3 4B, Phi-4-mini가 일반적인 출발점',
           '사용하는 언어를 강하게 지원하는 모델을 선택하십시오',
           '대형 모델은 단순한 장치 제어에 거의 도움이 되지 않습니다',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -803,6 +971,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '단축 목록', anchor: 'shortlist' },
       { label: '비교', anchor: 'comparison' },
       { label: '하드웨어 예산별', anchor: 'by-budget' },
+      { label: 'Home-LLM과 파인튜닝 모델', anchor: 'home-llm' },
+      { label: '벤치마크와 테스트', anchor: 'benchmarks' },
       { label: '선택 방법', anchor: 'how-to-pick' },
       { label: '자주 묻는 질문', anchor: 'faq' },
     ],
@@ -818,7 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '홈 제어는 최대 모델 크기가 아닌 낮은 지연 시간과 신뢰할 수 있는 함수 호출을 필요로 합니다',
           '4B 모델은 저전력 하드웨어에 적합하고 8B 모델은 GPU 또는 NPU가 있는 미니 PC에 적합합니다',
-          'Gemma 3 4B (Google), Qwen3 4B (Alibaba), Qwen3 8B (Alibaba)가 일반적이고 잘 지원되는 선택입니다',
+          'Alibaba의 Qwen3.5(4B, 9B)와 Qwen3(4B, 8B)가 가장 많이 언급되는 선택이며, Gemma 4와 Gemma 3 4B(Google)는 대안',
           'Qwen3, Gemma 3, Phi-4-mini는 현재 Home Assistant 툴 호출 지원이 검증되어 있습니다',
           '사용하는 언어를 강하게 지원하는 모델을 선택하십시오',
           '깊은 모델 순위와 메커니즘은 local-llms 클러스터로 연결하십시오',
@@ -839,8 +1009,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: '단축 목록',
         content:
-          '**이 소형 모델들은 다양한 하드웨어 예산에서 홈 제어에 일반적이고 잘 지원되는 선택입니다.** 경량 하드웨어에는 4B 모델을, GPU 또는 NPU가 있을 때는 8B 모델을 사용하십시오. Gemma 4 (2026년 6월)가 최신 옵션입니다. Qwen3, Gemma 3, Phi-4-mini는 현재 Home Assistant 툴 호출 지원이 검증되어 있습니다.',
+          '**2026년 Home Assistant 툴 호출에서 가장 많이 언급되는 것은 Qwen3.5와 Qwen3이며, Gemma 4가 가장 새로운 계열입니다.** 가벼운 하드웨어에는 4B 모델을, GPU나 NPU가 있으면 8B~9B 모델을 사용하십시오. Qwen3.5와 Gemma 4는 Ollama 페이지에 네이티브 툴 지원이 표기되어 있지만 커뮤니티의 Assist 결과는 아직 엇갈리므로 직접 쓰는 명령으로 테스트하십시오.',
         items: [
+          '**Qwen3.5 4B (Alibaba):** 툴과 thinking을 지원하는 현세대 4B 모델. 커뮤니티 가이드는 8 GB GPU에서 안정적인 툴 호출을 보고합니다 — `qwen3.5:4b`.',
+          '**Qwen3.5 9B (Alibaba):** 기본 `qwen3.5` 태그로, 다중 기기 명령에 강하다고 보고됩니다. 다만 Qwen3 8B보다 뚜렷이 낫지는 않다는 테스터도 있습니다 — `qwen3.5:9b`.',
+          '**Gemma 4 E4B (Google):** 유효 파라미터 4.5B에 네이티브 함수 호출과 설정 가능한 thinking을 지원합니다. 커뮤니티 보고에서는 빠르지만 능력은 다소 떨어진다고 평가합니다 — `gemma4:e4b`.',
+          '**Gemma 4 26B-A4B (Google):** 활성 파라미터 3.8B의 전문가 혼합 모델로 다운로드 16~19 GB, 24 GB급 메모리 호스트용 — `gemma4:26b`.',
           '**Gemma 3 4B (Google):** 광범위한 다국어 지원(140개 이상 언어)을 갖춘 40억 매개변수 모델로 강력한 저전력 선택입니다 — Ollama 태그 `gemma3:4b`.',
           '**Qwen3 4B (Alibaba):** 신뢰할 수 있는 툴 사용과 우수한 다국어 지원을 갖춘 빠른 4B 모델로 CPU 또는 내장 GPU에서 낮은 지연 시간 — `qwen3:4b`.',
           '**Phi-4-mini (Microsoft):** 명령 이행에서 크기 이상의 성능을 발휘하는 컴팩트한 3.8B 모델 — `phi4-mini`.',
@@ -860,9 +1034,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '모델': 'Phi-4-mini', '매개변수': '3.8B', '근사 풋프린트 (Q4)': '~2.5–3 GB', 'Ollama 태그': 'phi4-mini', '최적 용도': '강력한 명령 이행' },
           { '모델': 'Llama 3.2 3B', '매개변수': '3B', '근사 풋프린트 (Q4)': '~2–3 GB', 'Ollama 태그': 'llama3.2:3b', '최적 용도': '광범위하게 지원되는 기준 모델' },
           { '모델': 'Qwen3 8B', '매개변수': '8B', '근사 풋프린트 (Q4)': '~5 GB', 'Ollama 태그': 'qwen3:8b', '최적 용도': 'GPU/NPU에서 최고 품질; HA 선호 모델' },
+          { '모델': 'Qwen3.5 4B', '매개변수': '4B', '근사 풋프린트 (Q4)': '~3.3 GB', 'Ollama 태그': 'qwen3.5:4b', '최적 용도': '현세대 소형, 툴 지원' },
+          { '모델': 'Qwen3.5 9B', '매개변수': '9B', '근사 풋프린트 (Q4)': '~6.6 GB', 'Ollama 태그': 'qwen3.5:9b', '최적 용도': '다중 기기, GPU용' },
+          { '모델': 'Gemma 4 E4B', '매개변수': '4.5B (eff.)', '근사 풋프린트 (Q4)': '~6.6–9.5 GB', 'Ollama 태그': 'gemma4:e4b', '최적 용도': '빠름, 툴 호출 확인 필요' },
+          { '모델': 'Gemma 4 26B-A4B', '매개변수': '26B (3.8B active)', '근사 풋프린트 (Q4)': '~16–19 GB', 'Ollama 태그': 'gemma4:26b', '최적 용도': '24 GB급 메모리 호스트' },
         ],
         items: [
           '풋프린트는 근사치이며 양자화에 따라 달라집니다. VRAM 및 양자화 심도는 local-llms 클러스터로 연결하십시오.',
+          'Qwen3.5와 Gemma 4의 크기는 Ollama 페이지에 표기된 다운로드 크기입니다. Gemma 4 E4B는 표기된 8B에 임베딩이 포함되어 있어 유효 4.5B로 짐작하는 것보다 큽니다.',
         ],
         image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
         imageCaption: 'Q4 양자화 기준 스마트 홈 제어용 로컬 LLM RAM 사용량: Gemma 3 4B, Qwen3 4B, Phi-4-mini는 2.5-3GB, Qwen3 8B는 약 5GB가 필요합니다.',
@@ -874,11 +1053,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pi 또는 CPU 전용 미니 PC에는 4B 모델, GPU 또는 NPU가 있을 때는 8B 모델을 선택하십시오.** 이렇게 하면 모든 계층에서 응답이 빠릅니다.',
         items: [
           '**Raspberry Pi / 저전력:** 더 느린 응답을 감수하고 Gemma 3 4B 또는 Qwen3 4B.',
-          '**미니 PC (CPU 전용):** 반응이 빠른 기본값으로 Qwen3 4B 또는 Phi-4-mini.',
-          '**GPU/NPU 탑재 미니 PC:** 허용 가능한 지연 시간으로 최고의 품질을 위해 Qwen3 8B — [Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai)를 참조하십시오.',
+          '**미니 PC(CPU 전용):** 응답성 좋은 기본값으로 Qwen3.5 4B, Qwen3 4B 또는 Phi-4-mini.',
+          '**GPU/NPU 탑재 미니 PC:** 허용 가능한 지연 시간에서 최고 품질을 위해 Qwen3.5 9B 또는 Qwen3 8B, 24 GB급 메모리가 있다면 Gemma 4 26B-A4B — [Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai) 참조.',
         ],
         image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
         imageCaption: '하드웨어 예산별 모델 선택: Raspberry Pi 또는 저전력 호스트는 Gemma 3 4B 또는 Qwen3 4B를, CPU 전용 미니 PC는 Qwen3 4B 또는 Phi-4-mini를, GPU 또는 NPU가 있는 미니 PC는 Qwen3 8B를 실행합니다.',
+      },
+      homeLlm: {
+        id: 'home-llm',
+        title: 'Home-LLM과 파인튜닝된 홈 모델',
+        content:
+          '**Home-LLM은 기기 제어용으로 파인튜닝된 소형 모델과 함께 쓰는 Home Assistant용 커뮤니티 커스텀 통합으로, 공식 Ollama 통합으로 범용 모델을 불러오는 방식과는 다른 경로입니다.** [저장소](https://github.com/acon96/home-llm)는 Home-Llama-3.2-3B(3B)와 Home-FunctionGemma-270m(270M)을 권장하며 llama.cpp, Ollama, OpenAI 호환 백엔드를 지원합니다.',
+        items: [
+          '하드웨어가 매우 제한적일 때 선택하십시오. 기기 제어용 270M~3B 모델은 범용 8B 모델보다 메모리가 훨씬 적게 듭니다.',
+          '대화, 요약, 유연한 표현도 원한다면 범용 4B~9B 모델을 선택하십시오. 파인튜닝된 홈 모델은 범위가 좁습니다.',
+          '설치 전에 [프로젝트 저장소](https://github.com/acon96/home-llm)에서 최신 릴리스와 필요한 Home Assistant 버전을 확인하십시오. 프로젝트는 버전 간 호환성이 깨지는 변경을 문서화합니다.',
+        ],
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: '벤치마크와 테스트',
+        content:
+          '**로컬 모델에 대한 Home Assistant 공식 리더보드는 없으며, 공개된 수치는 검증된 순위가 아닌 커뮤니티 테스트입니다.** 한 [커뮤니티 구축 로그](https://community.home-assistant.io/t/my-journey-to-a-reliable-and-enjoyable-locally-hosted-voice-assistant/944860)는 다중 기기 명령, 문맥 단서, 잘못 들은 명령으로 여러 로컬 모델을 테스트했고 모델과 thinking 설정에 따라 결과가 크게 달랐다고 보고했습니다.',
+        items: [
+          '다중 기기 명령("주방과 복도 불 꺼 줘"), 문맥 단서("좀 더 따뜻하게"), 잘못 들었거나 불완전한 명령을 테스트하십시오.',
+          'thinking을 켠 경우와 끈 경우를 비교하십시오. thinking은 보통 지연을 늘려 음성 제어에 불리합니다.',
+          '사양표의 초당 토큰 수가 아니라 직접 쓰는 호스트에서 첫 응답까지의 시간을 측정하십시오.',
+          '[HomeSec-Bench](https://www.sharpai.org/benchmark/) 점수를 Home Assistant 결과로 해석하지 마십시오. 보안 카메라 어시스턴트 작업을 측정하며 Assist 기기 제어가 아닙니다.',
+        ],
       },
       howToPick: {
         id: 'how-to-pick',
@@ -900,6 +1102,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '홈 제어 모델에 GPU가 필요합니까?', a: 'CPU 또는 내장 GPU에서 실행되는 4B 모델에는 필요하지 않습니다. GPU 또는 NPU는 주로 더 나은 이해를 위해 낮은 지연 시간으로 Qwen3 8B 같은 8B 모델을 실행할 수 있게 합니다. 하드웨어에 맞는 모델을 선택하십시오.' },
           { q: '어떤 모델이 함수 호출을 지원합니까?', a: 'Qwen3, Gemma 3, Phi-4-mini를 포함한 현대 소형 모델은 신뢰할 수 있는 장치 동작을 출력할 수 있는 능력인 Home Assistant 툴/함수 호출 지원이 검증되어 있습니다. 홈 제어에는 이를 지원하는 것으로 문서화된 모델을 선호하십시오.' },
           { q: 'Raspberry Pi에 가장 적합한 모델은 무엇입니까?', a: 'Gemma 3 4B나 Qwen3 4B 같은 4B 모델이 Raspberry Pi의 실용적인 상한선이며 응답이 미니 PC보다 느립니다. 빠른 어시스턴트를 원한다면 GPU/NPU로 Qwen3 8B를 실행하는 미니 PC가 더 나은 호스트입니다.' },
+          { q: 'Home Assistant 음성 제어에 가장 좋은 LLM은 무엇입니까?', a: '툴 호출을 지원하고 지연이 낮은 소형 모델입니다. 가벼운 하드웨어에는 Qwen3.5 4B 또는 Qwen3 4B, GPU가 있으면 Qwen3.5 9B 또는 Qwen3 8B를 쓰십시오. 음성에서는 thinking이 지연을 늘리므로 thinking 없는 모드를 권장합니다. 공식 벤치마크는 없으므로 직접 쓰는 명령으로 테스트하십시오.' },
+          { q: 'Home Assistant에 가장 좋은 4B LLM은 무엇입니까?', a: 'Qwen3.5 4B와 Qwen3 4B가 툴 호출에서 가장 많이 언급되는 4B 선택입니다. Gemma 3 4B와 Gemma 4 E4B는 대안이며, 커뮤니티 보고는 Gemma 4 E4B를 빠르지만 툴 호출 능력은 다소 떨어진다고 평가합니다. 직접 쓰는 명령으로 테스트하십시오.' },
+          { q: 'Home-LLM이란 무엇입니까?', a: 'Home-LLM은 Home-Llama-3.2-3B, Home-FunctionGemma-270m처럼 기기 제어용으로 파인튜닝된 소형 모델과 함께 쓰는 Home Assistant용 커뮤니티 커스텀 통합입니다. llama.cpp, Ollama, OpenAI 호환 백엔드를 지원합니다. 현재 버전 요구 사항은 저장소에서 확인하십시오.' },
+          { q: 'Home Assistant용 LLM 벤치마크가 있습니까?', a: '로컬 모델에 대한 Home Assistant 공식 리더보드는 없습니다. 입수 가능한 수치는 커뮤니티 테스트이며 모델, 양자화, thinking 설정에 따라 달라집니다. 다중 기기, 문맥, 잘못 들은 명령으로 직접 테스트하십시오.' },
         ],
       },
       relatedReading: {
@@ -918,13 +1124,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '스마트 홈 제어를 위한 최고의 로컬 LLM 모델 (2026)',
-      description: '2026년 스마트 홈 제어를 위한 최고의 로컬 LLM: 평범한 하드웨어에서 실행되는 소형 고속 함수 호출 모델. 단축 목록 및 예산별 선택.',
+      description: '2026년 Home Assistant용 최고의 로컬 LLM: Qwen3.5, Qwen3, Gemma 4, Home-LLM을 크기·툴 호출·하드웨어로 비교하고 예산별로 추천합니다.',
       url: 'https://www.promptquorum.com/ko/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'ko',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-05',
+      dateModified: '2026-10-19',
       about: [{ '@type': 'Thing', name: '로컬 LLM' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '함수 호출' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -938,6 +1144,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '홈 제어 모델에 GPU가 필요합니까?', acceptedAnswer: { '@type': 'Answer', text: 'CPU 또는 내장 GPU에서 실행되는 4B 모델에는 필요하지 않습니다. GPU 또는 NPU는 주로 낮은 지연 시간으로 Qwen3 8B 같은 8B 모델을 실행할 수 있게 합니다.' } },
         { '@type': 'Question', name: '어떤 모델이 함수 호출을 지원합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3, Gemma 3, Phi-4-mini를 포함한 현대 소형 모델은 신뢰할 수 있는 장치 동작을 출력할 수 있는 Home Assistant 툴/함수 호출 지원이 검증되어 있습니다.' } },
         { '@type': 'Question', name: 'Raspberry Pi에 가장 적합한 모델은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Gemma 3 4B나 Qwen3 4B 같은 4B 모델이 Pi의 실용적인 상한선이며 응답이 더 느립니다. GPU/NPU로 Qwen3 8B를 실행하는 미니 PC가 더 나은 호스트입니다.' } },
+        { '@type': 'Question', name: 'Home Assistant 음성 제어에 가장 좋은 LLM은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: '툴 호출을 지원하고 지연이 낮은 소형 모델입니다. 가벼운 하드웨어에는 Qwen3.5 4B 또는 Qwen3 4B, GPU가 있으면 Qwen3.5 9B 또는 Qwen3 8B를 쓰십시오. 음성에서는 thinking이 지연을 늘리므로 thinking 없는 모드를 권장합니다. 공식 벤치마크는 없으므로 직접 쓰는 명령으로 테스트하십시오.' } },
+        { '@type': 'Question', name: 'Home Assistant에 가장 좋은 4B LLM은 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3.5 4B와 Qwen3 4B가 툴 호출에서 가장 많이 언급되는 4B 선택입니다. Gemma 3 4B와 Gemma 4 E4B는 대안이며, 커뮤니티 보고는 Gemma 4 E4B를 빠르지만 툴 호출 능력은 다소 떨어진다고 평가합니다. 직접 쓰는 명령으로 테스트하십시오.' } },
+        { '@type': 'Question', name: 'Home-LLM이란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Home-LLM은 Home-Llama-3.2-3B, Home-FunctionGemma-270m처럼 기기 제어용으로 파인튜닝된 소형 모델과 함께 쓰는 Home Assistant용 커뮤니티 커스텀 통합입니다. llama.cpp, Ollama, OpenAI 호환 백엔드를 지원합니다. 현재 버전 요구 사항은 저장소에서 확인하십시오.' } },
+        { '@type': 'Question', name: 'Home Assistant용 LLM 벤치마크가 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '로컬 모델에 대한 Home Assistant 공식 리더보드는 없습니다. 입수 가능한 수치는 커뮤니티 테스트이며 모델, 양자화, thinking 설정에 따라 달라집니다. 다중 기기, 문맥, 잘못 들은 명령으로 직접 테스트하십시오.' } },
       ],
     },
   },
@@ -945,8 +1155,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-05',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-19',
+    next_refresh_due: '2027-04-19',
     theme: 'Local AI & LLMs in the Smart Home',
     heroImage: '/images/best-local-llm-models-smart-home-overview-hero-fr.webp',
     title: 'Meilleurs Modèles LLM Locaux pour le Contrôle de la Maison Connectée (2026)',
@@ -954,7 +1164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Les meilleurs modèles LLM locaux pour le contrôle de la maison connectée sont des modèles petits, rapides et suivant les instructions, avec un appel de fonctions fiable — pas le plus gros modèle que votre matériel peut contenir. Ce guide explique ce qui compte vraiment pour le contrôle de la maison, donne une liste restreinte de petits modèles adaptés, les compare et associe des choix aux budgets matériels, en renvoyant vers des guides de modèles plus approfondis plutôt que de reclasser tout le domaine.',
     metaDescription:
-      'Meilleurs LLM locaux 2026 pour la maison connectée : modèles petits à appel de fonctions, faible latence. Liste restreinte et choix par budget.',
+      'Meilleurs LLM locaux pour Home Assistant en 2026 : Qwen3.5, Qwen3, Gemma 4 et Home-LLM comparés par taille, tool calling et matériel. Choix par budget.',
     twitterDescription:
       'Meilleurs modèles LLM locaux pour le contrôle avec Home Assistant : des modèles petits, rapides et à appel de fonctions plutôt que le plus gros modèle exécutable. Choix par budget matériel.',
     readTime: '8 min de lecture',
@@ -969,20 +1179,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'petit llm local domotique',
     ],
     leadAnswerBlock:
-      '**Pour le contrôle de la maison connectée, choisissez un petit modèle d\'instructions avec un appel de fonctions fiable — un modèle de 3B–8B est le point idéal, car le contrôle de la maison récompense la faible latence et la sortie structurée plutôt que la capacité brute.** Adaptez le modèle à votre matériel au lieu de choisir le plus gros disponible.',
+      '**Pour le contrôle de la maison connectée, choisissez un petit modèle d\'instructions avec un appel de fonctions fiable — un modèle de 3B–9B est le point idéal, car le contrôle de la maison récompense la faible latence et la sortie structurée plutôt que la capacité brute.** Adaptez le modèle à votre matériel au lieu de choisir le plus gros disponible.',
     quickAnswerTop: {
       fr: {
         question: 'Quel est le meilleur LLM local pour le contrôle de la maison connectée ?',
         answer:
-          'Un petit modèle suivant les instructions avec un solide appel de fonctions, typiquement dans la plage 4B à 8B, est le meilleur choix pour le contrôle de la maison car il répond vite et émet des actions d\'appareil fiables. Des modèles comme Gemma 3 4B, Qwen3 4B et Qwen3 8B sont des choix courants et bien pris en charge ; le bon choix dépend de votre matériel et de vos besoins linguistiques.',
+          'Un petit modèle suivant les instructions, avec un function-calling solide, typiquement de 4B à 9B, convient le mieux au contrôle domotique car il répond vite et émet des actions fiables. En 2026, les choix les plus cités sont Qwen3.5 (4B, 9B) et Qwen3 (4B, 8B), avec Gemma 4 et Gemma 3 comme alternatives ; le bon choix dépend de votre matériel et de vos besoins linguistiques.',
         bullets: [
           'Priorisez la faible latence et l\'appel de fonctions plutôt que la taille',
           'Les modèles 4B conviennent au matériel basse consommation ; 8B à un mini-PC avec GPU ou NPU',
-          'Gemma 3 4B, Qwen3 4B et Phi-4-mini sont des points de départ courants',
+          'Qwen3.5 4B, Qwen3 4B, Gemma 3 4B et Phi-4-mini sont des points de départ courants',
           'Choisissez un modèle avec un solide support de votre langue parlée',
           'Les plus gros modèles apportent peu pour le contrôle simple d\'appareils',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -991,11 +1201,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'La liste restreinte', anchor: 'shortlist' },
       { label: 'Comparaison', anchor: 'comparison' },
       { label: 'Par budget matériel', anchor: 'by-budget' },
+      { label: 'Home-LLM et modèles affinés', anchor: 'home-llm' },
+      { label: 'Benchmarks et tests', anchor: 'benchmarks' },
       { label: 'Comment choisir', anchor: 'how-to-pick' },
       { label: 'FAQ', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'Le meilleur LLM local pour le contrôle de la maison connectée est un petit modèle d\'instructions (3B–8B) à appel de fonctions fiable, choisi pour la faible latence plutôt que la taille brute.' },
+      { type: 'one-sentence', content: 'Le meilleur LLM local pour le contrôle de la maison connectée est un petit modèle d\'instructions (3B–9B) à appel de fonctions fiable, choisi pour la faible latence plutôt que la taille brute.' },
       { type: 'plain-terms', content: 'Contrôler une maison ne nécessite pas un modèle géant — il en faut un qui réponde vite et émette de façon fiable des commandes structurées que le hub peut exécuter. Les petits modèles de 3B à 8B le font bien et tournent sur du matériel modeste. Les classements de modèles plus approfondis vivent dans le cluster local-llms ; ce guide se concentre sur l\'angle du contrôle de la maison.' },
     ],
     sections: {
@@ -1006,7 +1218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Le contrôle de la maison récompense la faible latence et l\'appel de fonctions fiable, pas la taille maximale du modèle',
           'Un modèle 4B convient au matériel basse consommation ; un modèle 8B à un mini-PC avec GPU ou NPU',
-          'Gemma 3 4B (Google), Qwen3 4B (Alibaba) et Qwen3 8B (Alibaba) sont des choix courants et bien pris en charge',
+          'Qwen3.5 (4B, 9B) et Qwen3 (4B, 8B) d\'Alibaba sont les choix les plus cités ; Gemma 4 et Gemma 3 4B (Google) sont des alternatives',
           'Qwen3, Gemma 3 et Phi-4-mini ont un support de tool-calling Home Assistant prouvé aujourd\'hui',
           'Choisissez un modèle avec un solide support de la langue que vous lui parlez',
           'Pour des classements et une mécanique de modèles approfondis, renvoyez vers le cluster local-llms',
@@ -1027,8 +1239,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'La liste restreinte',
         content:
-          '**Ces petits modèles sont des choix courants et bien pris en charge pour le contrôle de la maison à travers différents budgets matériels.** Utilisez un modèle 4B sur du matériel léger et un modèle 8B quand vous avez un GPU ou un NPU. Gemma 4 (juin 2026) est l\'option la plus récente ; Qwen3, Gemma 3 et Phi-4-mini ont un support de tool-calling Home Assistant prouvé aujourd\'hui.',
+          '**En 2026, Qwen3.5 et Qwen3 sont les choix les plus cités pour le tool-calling dans Home Assistant, et Gemma 4 est la famille la plus récente.** Utilisez un modèle 4B sur du matériel léger et un modèle 8B–9B avec un GPU ou un NPU. Qwen3.5 et Gemma 4 indiquent une prise en charge native des outils sur leurs pages Ollama, mais les retours de la communauté sur Assist restent mitigés : testez avec vos propres commandes.',
         items: [
+          '**Qwen3.5 4B (Alibaba) :** un modèle 4B de génération actuelle avec prise en charge des outils et du thinking ; des guides communautaires signalent un tool-calling fiable sur GPU de 8 Go — `qwen3.5:4b`.',
+          '**Qwen3.5 9B (Alibaba) :** le tag par défaut `qwen3.5`, signalé comme efficace sur les commandes multi-appareils ; un testeur ne l\'a pas trouvé nettement meilleur que Qwen3 8B — `qwen3.5:9b`.',
+          '**Gemma 4 E4B (Google) :** 4,5B de paramètres effectifs avec function-calling natif et thinking configurable ; des retours communautaires le décrivent comme rapide mais moins capable — `gemma4:e4b`.',
+          '**Gemma 4 26B-A4B (Google) :** un modèle à mélange d\'experts avec 3,8B de paramètres actifs et un téléchargement de 16–19 Go, pour les machines à mémoire de classe 24 Go — `gemma4:26b`.',
           '**Gemma 3 4B (Google) :** un modèle de 4 milliards de paramètres à large couverture multilingue (plus de 140 langues), un solide choix basse consommation — tag Ollama `gemma3:4b`.',
           '**Qwen3 4B (Alibaba) :** un modèle 4B rapide avec un usage d\'outils fiable et un bon support multilingue, faible latence sur un CPU ou un GPU intégré — `qwen3:4b`.',
           '**Phi-4-mini (Microsoft) :** un modèle compact de 3,8B qui dépasse sa taille en suivi des instructions — `phi4-mini`.',
@@ -1048,9 +1264,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modèle': 'Phi-4-mini', 'Paramètres': '3.8B', 'Empreinte approx. (Q4)': '~2,5–3 Go', 'Tag Ollama': 'phi4-mini', 'Idéal pour': 'Fort suivi des instructions' },
           { 'Modèle': 'Llama 3.2 3B', 'Paramètres': '3B', 'Empreinte approx. (Q4)': '~2–3 Go', 'Tag Ollama': 'llama3.2:3b', 'Idéal pour': 'Base largement prise en charge' },
           { 'Modèle': 'Qwen3 8B', 'Paramètres': '8B', 'Empreinte approx. (Q4)': '~5 Go', 'Tag Ollama': 'qwen3:8b', 'Idéal pour': 'Meilleure qualité sur GPU/NPU ; favori de HA' },
+          { 'Modèle': 'Qwen3.5 4B', 'Paramètres': '4B', 'Empreinte approx. (Q4)': '~3.3 GB', 'Tag Ollama': 'qwen3.5:4b', 'Idéal pour': 'Génération actuelle ; outils' },
+          { 'Modèle': 'Qwen3.5 9B', 'Paramètres': '9B', 'Empreinte approx. (Q4)': '~6.6 GB', 'Tag Ollama': 'qwen3.5:9b', 'Idéal pour': 'Multi-appareils, GPU' },
+          { 'Modèle': 'Gemma 4 E4B', 'Paramètres': '4.5B (eff.)', 'Empreinte approx. (Q4)': '~6.6–9.5 GB', 'Tag Ollama': 'gemma4:e4b', 'Idéal pour': 'Rapide ; tester les tool calls' },
+          { 'Modèle': 'Gemma 4 26B-A4B', 'Paramètres': '26B (3.8B active)', 'Empreinte approx. (Q4)': '~16–19 GB', 'Tag Ollama': 'gemma4:26b', 'Idéal pour': 'Machines de classe 24 Go' },
         ],
         items: [
           'Les empreintes sont approximatives et dépendent de la quantification — pour la VRAM et la profondeur de quantification, renvoyez vers le cluster local-llms.',
+          'Les tailles de Qwen3.5 et Gemma 4 sont les tailles de téléchargement indiquées sur leurs pages Ollama ; Gemma 4 E4B est plus gros que ses 4,5B effectifs ne le laissent penser, car le chiffre de 8B inclut les embeddings.',
         ],
         image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
         imageCaption: 'Empreinte RAM des LLM locaux pour le contrôle de la maison connectée en quantification Q4 : Gemma 3 4B, Qwen3 4B et Phi-4-mini nécessitent 2,5-3 Go, Qwen3 8B environ 5 Go.',
@@ -1062,11 +1283,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Choisissez un modèle 4B sur une Pi ou un mini-PC CPU seul ; choisissez un modèle 8B quand vous avez un GPU ou un NPU.** Cela garde les réponses vives à chaque niveau.',
         items: [
           '**Raspberry Pi / basse consommation :** Gemma 3 4B ou Qwen3 4B, en acceptant des réponses plus lentes.',
-          '**Mini-PC (CPU seul) :** Qwen3 4B ou Phi-4-mini comme choix par défaut réactif.',
-          '**Mini-PC avec GPU/NPU :** Qwen3 8B pour la meilleure qualité à une latence acceptable — voir [meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai).',
+          '**Mini-PC (CPU seul) :** Qwen3.5 4B, Qwen3 4B ou Phi-4-mini comme choix réactif par défaut.',
+          '**Mini-PC avec GPU/NPU :** Qwen3.5 9B ou Qwen3 8B pour la meilleure qualité à latence acceptable ; Gemma 4 26B-A4B avec une mémoire de classe 24 Go — voir [meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
         image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
         imageCaption: 'Choix de modèle par budget matériel : Raspberry Pi ou hôtes basse consommation utilisent Gemma 3 4B ou Qwen3 4B, les mini-PC CPU seul utilisent Qwen3 4B ou Phi-4-mini, et un mini-PC avec GPU ou NPU permet Qwen3 8B.',
+      },
+      homeLlm: {
+        id: 'home-llm',
+        title: 'Home-LLM et modèles domotiques affinés',
+        content:
+          '**Home-LLM est une intégration personnalisée communautaire pour Home Assistant qui s\'associe à de petits modèles affinés pour le contrôle d\'appareils — une voie différente du chargement d\'un modèle généraliste via l\'intégration Ollama officielle.** Son [dépôt](https://github.com/acon96/home-llm) recommande Home-Llama-3.2-3B (3B) et Home-FunctionGemma-270m (270M) et prend en charge llama.cpp, Ollama et les backends compatibles OpenAI.',
+        items: [
+          'Choisissez-le quand le matériel est très limité : un modèle de 270M–3B conçu pour le contrôle d\'appareils exige bien moins de mémoire qu\'un modèle généraliste de 8B.',
+          'Choisissez plutôt un modèle généraliste de 4B–9B si vous voulez aussi de la conversation, des résumés ou des formulations souples — les modèles domotiques affinés sont plus étroits.',
+          'Consultez le [dépôt du projet](https://github.com/acon96/home-llm) pour la version actuelle et la version de Home Assistant requise avant d\'installer ; le projet documente les changements incompatibles entre versions.',
+        ],
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: 'Benchmarks et tests',
+        content:
+          '**Il n\'existe pas de classement officiel de Home Assistant pour les modèles locaux : les chiffres publiés sont des tests communautaires, pas un classement vérifié.** Un [journal de montage communautaire](https://community.home-assistant.io/t/my-journey-to-a-reliable-and-enjoyable-locally-hosted-voice-assistant/944860) a testé plusieurs modèles locaux sur des commandes multi-appareils, des indices de contexte et des commandes mal comprises, avec des résultats très différents selon le modèle et le réglage du thinking.',
+        items: [
+          'Testez des commandes multi-appareils (« éteins les lumières de la cuisine et du couloir »), des indices de contexte (« réchauffe un peu ») et des commandes mal comprises ou partielles.',
+          'Comparez thinking activé et désactivé : le thinking ajoute généralement de la latence, ce qui nuit au contrôle vocal.',
+          'Mesurez le délai avant la première réponse sur votre propre machine, pas les tokens par seconde d\'une fiche technique.',
+          'Ne lisez pas les scores de [HomeSec-Bench](https://www.sharpai.org/benchmark/) comme des résultats Home Assistant : il mesure des tâches d\'assistants de caméras de sécurité, pas le contrôle d\'appareils par Assist.',
+        ],
       },
       howToPick: {
         id: 'how-to-pick',
@@ -1088,6 +1332,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Un modèle de contrôle de la maison a-t-il besoin d\'un GPU ?', a: 'Non pour les modèles 4B, qui tournent sur CPU ou un GPU intégré. Un GPU ou un NPU vous permet surtout d\'exécuter un modèle 8B comme Qwen3 8B à faible latence pour une meilleure compréhension. Adaptez le modèle à votre matériel.' },
           { q: 'Quels modèles prennent en charge l\'appel de fonctions ?', a: 'Les petits modèles modernes dont Qwen3, Gemma 3 et Phi-4-mini ont un support de tool/function-calling Home Assistant prouvé, la capacité qui leur permet d\'émettre des actions d\'appareil fiables. Préférez un modèle documenté pour la prendre en charge pour le contrôle de la maison.' },
           { q: 'Quel est le meilleur modèle pour une Raspberry Pi ?', a: 'Un modèle 4B comme Gemma 3 4B ou Qwen3 4B est le plafond pratique sur une Raspberry Pi, et les réponses seront plus lentes que sur un mini-PC. Pour un assistant vif, un mini-PC avec GPU/NPU exécutant Qwen3 8B est le meilleur hôte.' },
+          { q: 'Quel est le meilleur LLM pour le contrôle vocal de Home Assistant ?', a: 'Un petit modèle avec tool-calling et faible latence : Qwen3.5 4B ou Qwen3 4B sur matériel léger, Qwen3.5 9B ou Qwen3 8B avec un GPU. Privilégiez le mode sans thinking pour la voix, car le thinking ajoute du délai. Aucun benchmark officiel ne les classe : testez avec vos propres commandes.' },
+          { q: 'Quel est le meilleur LLM 4B pour Home Assistant ?', a: 'Qwen3.5 4B et Qwen3 4B sont les choix 4B les plus cités pour le tool-calling. Gemma 3 4B et Gemma 4 E4B sont des alternatives ; des retours communautaires décrivent Gemma 4 E4B comme rapide mais moins capable sur les tool calls. Testez-les avec vos propres commandes.' },
+          { q: 'Qu\'est-ce que Home-LLM ?', a: 'Home-LLM est une intégration personnalisée communautaire pour Home Assistant qui fonctionne avec de petits modèles affinés pour le contrôle d\'appareils, comme Home-Llama-3.2-3B et Home-FunctionGemma-270m. Elle prend en charge llama.cpp, Ollama et les backends compatibles OpenAI. Consultez son dépôt pour les exigences de version actuelles.' },
+          { q: 'Existe-t-il un benchmark LLM pour Home Assistant ?', a: 'Il n\'existe pas de classement officiel de Home Assistant pour les modèles locaux. Les chiffres disponibles sont des tests communautaires, qui varient selon le modèle, la quantification et le réglage du thinking. Faites votre propre test avec des commandes multi-appareils, de contexte et mal comprises.' },
         ],
       },
       relatedReading: {
@@ -1106,13 +1354,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Meilleurs Modèles LLM Locaux pour le Contrôle de la Maison Connectée (2026)',
-      description: 'Meilleurs LLM locaux 2026 pour la maison connectée : modèles petits à appel de fonctions, faible latence. Liste restreinte et choix par budget.',
+      description: 'Meilleurs LLM locaux pour Home Assistant en 2026 : Qwen3.5, Qwen3, Gemma 4 et Home-LLM comparés par taille, tool calling et matériel. Choix par budget.',
       url: 'https://www.promptquorum.com/fr/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-05',
+      dateModified: '2026-10-19',
       about: [{ '@type': 'Thing', name: 'LLM local' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Appel de fonctions' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1126,6 +1374,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Un modèle de contrôle de la maison a-t-il besoin d\'un GPU ?', acceptedAnswer: { '@type': 'Answer', text: 'Non pour les modèles 4B, qui tournent sur CPU ou GPU intégré. Un GPU ou un NPU vous permet surtout d\'exécuter un modèle 8B comme Qwen3 8B à faible latence.' } },
         { '@type': 'Question', name: 'Quels modèles prennent en charge l\'appel de fonctions ?', acceptedAnswer: { '@type': 'Answer', text: 'Les petits modèles modernes comme Qwen3, Gemma 3 et Phi-4-mini ont un support de tool/function-calling Home Assistant prouvé, qui leur permet d\'émettre des actions d\'appareil fiables.' } },
         { '@type': 'Question', name: 'Quel est le meilleur modèle pour une Raspberry Pi ?', acceptedAnswer: { '@type': 'Answer', text: 'Un modèle 4B comme Gemma 3 4B ou Qwen3 4B est le plafond pratique sur une Pi, avec des réponses plus lentes. Un mini-PC avec GPU/NPU exécutant Qwen3 8B est un meilleur hôte.' } },
+        { '@type': 'Question', name: 'Quel est le meilleur LLM pour le contrôle vocal de Home Assistant ?', acceptedAnswer: { '@type': 'Answer', text: 'Un petit modèle avec tool-calling et faible latence : Qwen3.5 4B ou Qwen3 4B sur matériel léger, Qwen3.5 9B ou Qwen3 8B avec un GPU. Privilégiez le mode sans thinking pour la voix, car le thinking ajoute du délai. Aucun benchmark officiel ne les classe : testez avec vos propres commandes.' } },
+        { '@type': 'Question', name: 'Quel est le meilleur LLM 4B pour Home Assistant ?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3.5 4B et Qwen3 4B sont les choix 4B les plus cités pour le tool-calling. Gemma 3 4B et Gemma 4 E4B sont des alternatives ; des retours communautaires décrivent Gemma 4 E4B comme rapide mais moins capable sur les tool calls. Testez-les avec vos propres commandes.' } },
+        { '@type': 'Question', name: 'Qu\'est-ce que Home-LLM ?', acceptedAnswer: { '@type': 'Answer', text: 'Home-LLM est une intégration personnalisée communautaire pour Home Assistant qui fonctionne avec de petits modèles affinés pour le contrôle d\'appareils, comme Home-Llama-3.2-3B et Home-FunctionGemma-270m. Elle prend en charge llama.cpp, Ollama et les backends compatibles OpenAI. Consultez son dépôt pour les exigences de version actuelles.' } },
+        { '@type': 'Question', name: 'Existe-t-il un benchmark LLM pour Home Assistant ?', acceptedAnswer: { '@type': 'Answer', text: 'Il n\'existe pas de classement officiel de Home Assistant pour les modèles locaux. Les chiffres disponibles sont des tests communautaires, qui varient selon le modèle, la quantification et le réglage du thinking. Faites votre propre test avec des commandes multi-appareils, de contexte et mal comprises.' } },
       ],
     },
   },
@@ -1133,8 +1385,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-05',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-19',
+    next_refresh_due: '2027-04-19',
     theme: 'Local AI & LLMs in the Smart Home',
     heroImage: '/images/best-local-llm-models-smart-home-overview-hero-ja.webp',
     title: 'スマートホーム制御に最適なローカルLLMモデル（2026）',
@@ -1142,7 +1394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'スマートホーム制御に最適なローカルLLMモデルは、信頼できる関数呼び出しを備えた、小型で高速・指示追従のモデルです——ハードウェアが収められる最大のモデルではありません。本ガイドは、家庭制御で実際に重要なことを説明し、適した小型モデルの短いリストを示し、それらを比較し、ハードウェア予算に候補を対応づけます——分野全体を再ランク付けせず、より深いモデルガイドへ外部リンクします。',
     metaDescription:
-      'スマートホーム制御に最適なローカルLLMモデル（2026）：控えめなハードウェアで動く小型・高速・関数呼び出しモデルを優先。Ollama対応の推奨リストと予算別の候補を掲載。各モデルの性能と応答速度を比較。',
+      '2026年のHome Assistant向けおすすめローカルLLM：Qwen3.5、Qwen3、Gemma 4、Home-LLMをサイズ・ツール呼び出し・ハードウェアで比較。予算別の選び方。',
     twitterDescription:
       'Home Assistant 制御に最適なローカルLLMモデル：動かせる最大のモデルより、小型・高速・関数呼び出しのモデル。ハードウェア予算別の候補。',
     readTime: '8分で読める',
@@ -1162,15 +1414,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ja: {
         question: 'スマートホーム制御に最適なローカルLLMは？',
         answer:
-          'しっかりした関数呼び出しを備えた小型の指示追従モデル、通常 4B〜8B の範囲が家庭制御に最適です。素早く応答し、信頼できる機器の動作を出力するからです。Gemma 3 4B、Qwen3 4B、Qwen3 8B は一般的で、よく支援された選択肢で、適切な選択はハードウェアと言語のニーズ次第です。',
+          '家庭制御には、確実な関数呼び出しを備えた指示追従型の小型モデル（目安は4B〜9B）が最適です。応答が速く、信頼できるデバイス操作を出力できるためです。2026年に最も多く挙げられるのはQwen3.5（4B、9B）とQwen3（4B、8B）で、Gemma 4とGemma 3が代替候補です。最適な選択はハードウェアと言語のニーズで決まります。',
         bullets: [
           'サイズより低レイテンシと関数呼び出しを優先する',
           '4B モデルは低消費電力ハードウェアに、8B は GPU または NPU 付きミニPCに適する',
-          'Gemma 3 4B、Qwen3 4B、Phi-4-mini は一般的な出発点',
+          'Qwen3.5 4B、Qwen3 4B、Gemma 3 4B、Phi-4-miniが一般的な出発点',
           'あなたが話す言語を強く支援するモデルを選ぶ',
           '単純な機器制御に、より大きなモデルはほとんど足さない',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1179,6 +1431,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '短いリスト', anchor: 'shortlist' },
       { label: '比較', anchor: 'comparison' },
       { label: 'ハードウェア予算別', anchor: 'by-budget' },
+      { label: 'Home-LLMとファインチューン済みモデル', anchor: 'home-llm' },
+      { label: 'ベンチマークとテスト', anchor: 'benchmarks' },
       { label: '選び方', anchor: 'how-to-pick' },
       { label: 'よくある質問', anchor: 'faq' },
     ],
@@ -1194,7 +1448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '家庭制御は最大のモデルサイズではなく、低レイテンシと信頼できる関数呼び出しを報いる',
           '4B モデルは低消費電力ハードウェアに、8B モデルは GPU または NPU 付きのミニPCに適する',
-          'Gemma 3 4B（Google）、Qwen3 4B（Alibaba）、Qwen3 8B（Alibaba）は一般的で、よく支援された選択肢',
+          'AlibabaのQwen3.5（4B、9B）とQwen3（4B、8B）が最も多く挙げられる選択肢で、Gemma 4とGemma 3 4B（Google）は代替候補',
           'Qwen3、Gemma 3、Phi-4-mini は今日、実証済みの Home Assistant ツール呼び出し対応を備える',
           'あなたが話しかける言語を強く支援するモデルを選ぶ',
           '深いモデルのランキングと仕組みは local-llms クラスターへ外部リンク',
@@ -1215,8 +1469,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: '短いリスト',
         content:
-          '**これらの小型モデルは、さまざまなハードウェア予算にわたる家庭制御で一般的かつよく支援された選択肢です。** 軽いハードウェアでは 4B モデルを、GPU または NPU があるときは 8B モデルを使います。Gemma 4（2026年6月）は最新の選択肢で、Qwen3、Gemma 3、Phi-4-mini は今日、実証済みの Home Assistant ツール呼び出し対応を備えます。',
+          '**2026年、Home Assistantのツール呼び出しで最も多く挙げられるのはQwen3.5とQwen3で、Gemma 4は最新のファミリーです。** 軽量ハードウェアでは4Bモデル、GPUまたはNPUがあれば8B〜9Bモデルを使います。Qwen3.5とGemma 4はOllamaのページでネイティブのツール対応を示していますが、コミュニティのAssist評価はまだ割れているため、自分のコマンドで試してください。',
         items: [
+          '**Qwen3.5 4B（Alibaba）：** ツールとthinkingに対応する現世代の4Bモデル。コミュニティのガイドでは8 GBのGPUで信頼できるツール呼び出しが報告されています — `qwen3.5:4b`。',
+          '**Qwen3.5 9B（Alibaba）：** 既定の`qwen3.5`タグ。複数デバイスのコマンドに強いと報告されていますが、Qwen3 8Bより明確に優れてはいないとするテスターもいます — `qwen3.5:9b`。',
+          '**Gemma 4 E4B（Google）：** 実効4.5Bパラメータで、ネイティブの関数呼び出しと設定可能なthinkingに対応。コミュニティの報告では高速だが能力はやや劣るとされています — `gemma4:e4b`。',
+          '**Gemma 4 26B-A4B（Google）：** アクティブ3.8Bパラメータのエキスパート混合モデルで、ダウンロードは16〜19 GB。24 GBクラスのメモリを持つホスト向け — `gemma4:26b`。',
           '**Gemma 3 4B（Google）：** 40 億パラメータのモデルで、広い多言語対応（140 以上の言語）を持つ、強力な低消費電力の選択肢——Ollama タグ `gemma3:4b`。',
           '**Qwen3 4B（Alibaba）：** 信頼できるツール利用と良好な多言語対応を備えた高速な 4B モデルで、CPU や統合 GPU で低レイテンシ——`qwen3:4b`。',
           '**Phi-4-mini（Microsoft）：** 指示追従でサイズ以上に活躍するコンパクトな 3.8B モデル——`phi4-mini`。',
@@ -1236,9 +1494,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'モデル': 'Phi-4-mini', 'パラメータ': '3.8B', '概算サイズ (Q4)': '約 2.5〜3 GB', 'Ollama タグ': 'phi4-mini', '最適な用途': '強い指示追従' },
           { 'モデル': 'Llama 3.2 3B', 'パラメータ': '3B', '概算サイズ (Q4)': '約 2〜3 GB', 'Ollama タグ': 'llama3.2:3b', '最適な用途': '広く支援されたベースライン' },
           { 'モデル': 'Qwen3 8B', 'パラメータ': '8B', '概算サイズ (Q4)': '約 5 GB', 'Ollama タグ': 'qwen3:8b', '最適な用途': 'GPU/NPU で最高品質；HA のお気に入り' },
+          { 'モデル': 'Qwen3.5 4B', 'パラメータ': '4B', '概算サイズ (Q4)': '~3.3 GB', 'Ollama タグ': 'qwen3.5:4b', '最適な用途': '現世代の小型、ツール対応' },
+          { 'モデル': 'Qwen3.5 9B', 'パラメータ': '9B', '概算サイズ (Q4)': '~6.6 GB', 'Ollama タグ': 'qwen3.5:9b', '最適な用途': '複数デバイス、GPU向け' },
+          { 'モデル': 'Gemma 4 E4B', 'パラメータ': '4.5B (eff.)', '概算サイズ (Q4)': '~6.6–9.5 GB', 'Ollama タグ': 'gemma4:e4b', '最適な用途': '高速、ツール呼び出し要確認' },
+          { 'モデル': 'Gemma 4 26B-A4B', 'パラメータ': '26B (3.8B active)', '概算サイズ (Q4)': '~16–19 GB', 'Ollama タグ': 'gemma4:26b', '最適な用途': '24 GBクラスのホスト' },
         ],
         items: [
           'サイズは概算で、量子化に依存します——VRAM と量子化の詳細は local-llms クラスターへ外部リンク。',
+          'Qwen3.5とGemma 4のサイズはOllamaの各ページに記載のダウンロードサイズです。Gemma 4 E4Bは、記載の8Bに埋め込みが含まれるため、実効4.5Bから想像するより大きくなります。',
         ],
         image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
         imageCaption: 'Q4量子化でのスマートホーム制御向けローカルLLMのRAM使用量：Gemma 3 4B、Qwen3 4B、Phi-4-miniは2.5〜3GB、Qwen3 8Bは約5GBが必要です。',
@@ -1250,11 +1513,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Pi や CPU のみのミニPCには 4B モデルを、GPU または NPU があるときは 8B モデルを選びましょう。** これで各ティアで応答をキビキビ保てます。',
         items: [
           '**Raspberry Pi / 低消費電力：** Gemma 3 4B または Qwen3 4B、より遅い応答を許容して。',
-          '**ミニPC（CPU のみ）：** 反応の良い既定として Qwen3 4B または Phi-4-mini。',
-          '**GPU/NPU 付きミニPC：** 許容できるレイテンシで最高品質なら Qwen3 8B——[Home Assistant＋ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai)を参照。',
+          '**ミニPC（CPUのみ）：** Qwen3.5 4B、Qwen3 4B、またはPhi-4-miniを応答性の高い既定として。',
+          '**GPU/NPU搭載ミニPC：** 許容できる遅延で最高の品質を得るならQwen3.5 9BまたはQwen3 8B。24 GBクラスのメモリがあればGemma 4 26B-A4B — [Home Assistant＋ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai)を参照。',
         ],
         image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
         imageCaption: 'ハードウェア予算別のモデル選択：Raspberry Piや低消費電力ホストはGemma 3 4BかQwen3 4Bを、CPUのみのミニPCはQwen3 4BかPhi-4-miniを、GPUまたはNPU付きミニPCはQwen3 8Bを動かせます。',
+      },
+      homeLlm: {
+        id: 'home-llm',
+        title: 'Home-LLMとファインチューン済みホームモデル',
+        content:
+          '**Home-LLMはHome Assistant向けのコミュニティ製カスタム統合で、デバイス制御向けにファインチューンされた小型モデルと組み合わせます。公式のOllama統合で汎用モデルを使う方法とは別の道です。** その[リポジトリ](https://github.com/acon96/home-llm)はHome-Llama-3.2-3B（3B）とHome-FunctionGemma-270m（270M）を推奨し、llama.cpp、Ollama、OpenAI互換バックエンドに対応しています。',
+        items: [
+          'ハードウェアが非常に限られている場合に選びます。デバイス制御向けの270M〜3Bモデルは、汎用の8Bモデルよりはるかに少ないメモリで動きます。',
+          '会話や要約、柔軟な言い回しも求めるなら、汎用の4B〜9Bモデルを選びます。ファインチューン済みホームモデルは守備範囲が狭めです。',
+          'インストール前に[プロジェクトのリポジトリ](https://github.com/acon96/home-llm)で最新リリースと必要なHome Assistantのバージョンを確認してください。バージョン間の破壊的変更が文書化されています。',
+        ],
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: 'ベンチマークとテスト',
+        content:
+          '**ローカルモデルに関するHome Assistant公式のリーダーボードはなく、公開されている数値はコミュニティのテストであり、検証済みのランキングではありません。** ある[コミュニティの構築ログ](https://community.home-assistant.io/t/my-journey-to-a-reliable-and-enjoyable-locally-hosted-voice-assistant/944860)は、複数デバイスのコマンド、文脈の手がかり、聞き間違いのコマンドで複数のローカルモデルを試し、モデルとthinking設定によって結果が大きく異なると報告しています。',
+        items: [
+          '複数デバイスのコマンド（「キッチンと廊下の電気を消して」）、文脈の手がかり（「もう少し暖かくして」）、聞き間違いや不完全なコマンドを試します。',
+          'thinkingのオンとオフを比較します。thinkingは通常、遅延を増やし、音声操作に不利です。',
+          'スペック表の毎秒トークン数ではなく、自分のホストでの最初の応答までの時間を測ります。',
+          '[HomeSec-Bench](https://www.sharpai.org/benchmark/)のスコアをHome Assistantの結果として読まないでください。これは防犯カメラ・アシスタントのタスクを測るもので、Assistのデバイス制御ではありません。',
+        ],
       },
       howToPick: {
         id: 'how-to-pick',
@@ -1276,6 +1562,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '家庭制御モデルに GPU は必要ですか？', a: 'CPU や統合 GPU で動く 4B モデルには不要です。GPU や NPU は主に、より良い理解のために Qwen3 8B のような 8B モデルを低レイテンシで動かせるようにします。モデルをハードウェアに合わせましょう。' },
           { q: 'どのモデルが関数呼び出しに対応していますか？', a: 'Qwen3、Gemma 3、Phi-4-mini を含む現代の小型モデルは、実証済みの Home Assistant ツール／関数呼び出し対応を備え、これが信頼できる機器の動作を出力させる能力です。家庭制御には、対応が文書化されたモデルを優先しましょう。' },
           { q: 'Raspberry Pi に最適なモデルは？', a: 'Gemma 3 4B や Qwen3 4B のような 4B モデルが Raspberry Pi での実用的な上限で、応答はミニPCより遅くなります。キビキビしたアシスタントには、Qwen3 8B を動かす GPU/NPU 付きのミニPCがより良いホストです。' },
+          { q: 'Home Assistantの音声操作に最適なLLMは？', a: 'ツール呼び出しに対応した低遅延の小型モデルです。軽量ハードウェアではQwen3.5 4BまたはQwen3 4B、GPUがあればQwen3.5 9BまたはQwen3 8Bを使います。音声ではthinkingが遅延を増やすため、thinkingなしのモードを優先してください。公式のベンチマークはないので、自分のコマンドで試してください。' },
+          { q: 'Home Assistantに最適な4B LLMは？', a: 'ツール呼び出しで最も多く挙げられる4BはQwen3.5 4BとQwen3 4Bです。Gemma 3 4BとGemma 4 E4Bは代替候補で、コミュニティの報告ではGemma 4 E4Bは高速だがツール呼び出しの能力はやや劣るとされています。自分のコマンドで試してください。' },
+          { q: 'Home-LLMとは？', a: 'Home-LLMはHome Assistant向けのコミュニティ製カスタム統合で、Home-Llama-3.2-3BやHome-FunctionGemma-270mなど、デバイス制御向けにファインチューンされた小型モデルと組み合わせて使います。llama.cpp、Ollama、OpenAI互換バックエンドに対応しています。現在のバージョン要件はリポジトリで確認してください。' },
+          { q: 'Home Assistant向けのLLMベンチマークはありますか？', a: 'ローカルモデルに関するHome Assistant公式のリーダーボードはありません。入手できる数値はコミュニティのテストで、モデル、量子化、thinking設定によって変わります。複数デバイス、文脈、聞き間違いのコマンドで自分でテストしてください。' },
         ],
       },
       relatedReading: {
@@ -1294,13 +1584,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'スマートホーム制御に最適なローカルLLMモデル（2026）',
-      description: 'スマートホーム制御に最適なローカルLLMモデル（2026）：控えめなハードウェアで動く小型・高速・関数呼び出しモデルを優先。Ollama対応の推奨リストと予算別の候補を掲載。各モデルの性能と応答速度を比較。',
+      description: '2026年のHome Assistant向けおすすめローカルLLM：Qwen3.5、Qwen3、Gemma 4、Home-LLMをサイズ・ツール呼び出し・ハードウェアで比較。予算別の選び方。',
       url: 'https://www.promptquorum.com/ja/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'ja',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-05',
+      dateModified: '2026-10-19',
       about: [{ '@type': 'Thing', name: 'ローカルLLM' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '関数呼び出し' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1314,6 +1604,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '家庭制御モデルに GPU は必要ですか？', acceptedAnswer: { '@type': 'Answer', text: 'CPU や統合 GPU で動く 4B モデルには不要です。GPU や NPU は主に Qwen3 8B のような 8B モデルを低レイテンシで動かせるようにします。' } },
         { '@type': 'Question', name: 'どのモデルが関数呼び出しに対応していますか？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3、Gemma 3、Phi-4-mini を含む現代の小型モデルは実証済みの Home Assistant ツール／関数呼び出し対応を備え、信頼できる機器の動作を出力させます。' } },
         { '@type': 'Question', name: 'Raspberry Pi に最適なモデルは？', acceptedAnswer: { '@type': 'Answer', text: 'Gemma 3 4B や Qwen3 4B のような 4B モデルが Pi での実用的な上限で、応答は遅めです。Qwen3 8B を動かす GPU/NPU 付きのミニPCがより良いホストです。' } },
+        { '@type': 'Question', name: 'Home Assistantの音声操作に最適なLLMは？', acceptedAnswer: { '@type': 'Answer', text: 'ツール呼び出しに対応した低遅延の小型モデルです。軽量ハードウェアではQwen3.5 4BまたはQwen3 4B、GPUがあればQwen3.5 9BまたはQwen3 8Bを使います。音声ではthinkingが遅延を増やすため、thinkingなしのモードを優先してください。公式のベンチマークはないので、自分のコマンドで試してください。' } },
+        { '@type': 'Question', name: 'Home Assistantに最適な4B LLMは？', acceptedAnswer: { '@type': 'Answer', text: 'ツール呼び出しで最も多く挙げられる4BはQwen3.5 4BとQwen3 4Bです。Gemma 3 4BとGemma 4 E4Bは代替候補で、コミュニティの報告ではGemma 4 E4Bは高速だがツール呼び出しの能力はやや劣るとされています。自分のコマンドで試してください。' } },
+        { '@type': 'Question', name: 'Home-LLMとは？', acceptedAnswer: { '@type': 'Answer', text: 'Home-LLMはHome Assistant向けのコミュニティ製カスタム統合で、Home-Llama-3.2-3BやHome-FunctionGemma-270mなど、デバイス制御向けにファインチューンされた小型モデルと組み合わせて使います。llama.cpp、Ollama、OpenAI互換バックエンドに対応しています。現在のバージョン要件はリポジトリで確認してください。' } },
+        { '@type': 'Question', name: 'Home Assistant向けのLLMベンチマークはありますか？', acceptedAnswer: { '@type': 'Answer', text: 'ローカルモデルに関するHome Assistant公式のリーダーボードはありません。入手できる数値はコミュニティのテストで、モデル、量子化、thinking設定によって変わります。複数デバイス、文脈、聞き間違いのコマンドで自分でテストしてください。' } },
       ],
     },
   },
@@ -1321,8 +1615,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-05',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-19',
+    next_refresh_due: '2027-04-19',
     theme: 'Local AI & LLMs in the Smart Home',
     heroImage: '/images/best-local-llm-models-smart-home-overview-hero-pt.webp',
     title: 'Melhores Modelos LLM Locais para o Controle da Casa Inteligente (2026)',
@@ -1330,7 +1624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Os melhores modelos LLM locais para o controle da casa inteligente são modelos pequenos, rápidos e que seguem instruções, com chamada de funções confiável — não o maior modelo que o seu hardware consegue conter. Este guia explica o que realmente importa para o controle do lar, dá uma lista curta de modelos pequenos adequados, os compara e mapeia escolhas a orçamentos de hardware, com link externo para guias de modelos mais profundos em vez de reordenar todo o campo.',
     metaDescription:
-      'Melhores LLMs locais para Home Assistant 2026: modelos 3B–8B com chamada de funções para hardware modesto. Lista curta e escolhas por orçamento.',
+      'Melhores LLMs locais para Home Assistant em 2026: Qwen3.5, Qwen3, Gemma 4 e Home-LLM comparados por tamanho, tool calling e hardware. Escolhas por orçamento.',
     twitterDescription:
       'Melhores modelos LLM locais para o controle com Home Assistant: modelos pequenos, rápidos e com chamada de funções, em vez do maior modelo que você consegue rodar. Escolhas por orçamento de hardware.',
     readTime: '8 min de leitura',
@@ -1350,15 +1644,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pt: {
         question: 'Qual o melhor LLM local para o controle da casa inteligente?',
         answer:
-          'Um modelo pequeno que siga instruções com chamada de funções sólida, normalmente na faixa de 4B a 8B, é o melhor ajuste para o controle do lar porque responde rápido e emite ações de dispositivo confiáveis. Modelos como Gemma 3 4B, Qwen3 4B e Qwen3 8B são escolhas comuns e bem suportadas; a escolha certa depende do seu hardware e das suas necessidades de idioma.',
+          'Um modelo pequeno que siga instruções com function-calling sólido, normalmente de 4B a 9B, é o mais indicado para controle residencial porque responde rápido e emite ações de dispositivo confiáveis. Em 2026, as escolhas mais citadas são Qwen3.5 (4B, 9B) e Qwen3 (4B, 8B), com Gemma 4 e Gemma 3 como alternativas; a escolha certa depende do seu hardware e das suas necessidades de idioma.',
         bullets: [
           'Priorize baixa latência e chamada de funções sobre o tamanho',
           'Modelos 4B servem para hardware de baixo consumo; 8B para um mini PC com GPU ou NPU',
-          'Gemma 3 4B, Qwen3 4B e Phi-4-mini são pontos de partida comuns',
+          'Qwen3.5 4B, Qwen3 4B, Gemma 3 4B e Phi-4-mini são pontos de partida comuns',
           'Escolha um modelo com forte suporte ao seu idioma falado',
           'Modelos maiores acrescentam pouco para o controle simples de dispositivos',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1367,11 +1661,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'A lista curta', anchor: 'shortlist' },
       { label: 'Comparação', anchor: 'comparison' },
       { label: 'Por orçamento de hardware', anchor: 'by-budget' },
+      { label: 'Home-LLM e modelos ajustados', anchor: 'home-llm' },
+      { label: 'Benchmarks e testes', anchor: 'benchmarks' },
       { label: 'Como escolher', anchor: 'how-to-pick' },
       { label: 'Perguntas frequentes', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: 'O melhor LLM local para o controle da casa inteligente é um modelo de instruções pequeno (3B–8B) com chamada de funções confiável, escolhido por baixa latência em vez de tamanho bruto.' },
+      { type: 'one-sentence', content: 'O melhor LLM local para o controle da casa inteligente é um modelo de instruções pequeno (3B–9B) com chamada de funções confiável, escolhido por baixa latência em vez de tamanho bruto.' },
       { type: 'plain-terms', content: 'Controlar um lar não precisa de um modelo gigante — precisa de um que responda rápido e emita de forma confiável comandos estruturados que o hub possa executar. Modelos pequenos na faixa de 3B a 8B fazem isso bem e rodam em hardware modesto. Os rankings de modelos mais profundos ficam no cluster local-llms; este guia foca o ângulo do controle do lar.' },
     ],
     sections: {
@@ -1382,7 +1678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'O controle do lar premia a baixa latência e a chamada de funções confiável, não o tamanho máximo do modelo',
           'Um modelo 4B serve para hardware de baixo consumo; um modelo 8B para um mini PC com GPU ou NPU',
-          'Gemma 3 4B (Google), Qwen3 4B (Alibaba) e Qwen3 8B (Alibaba) são escolhas comuns e bem suportadas',
+          'Qwen3.5 (4B, 9B) e Qwen3 (4B, 8B) da Alibaba são as escolhas mais citadas; Gemma 4 e Gemma 3 4B (Google) são alternativas',
           'Qwen3, Gemma 3 e Phi-4-mini têm suporte comprovado de tool-calling no Home Assistant hoje',
           'Escolha um modelo com forte suporte ao idioma em que você fala com ele',
           'Para rankings e mecânica de modelos profundos, faça link externo para o cluster local-llms',
@@ -1403,8 +1699,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: 'A lista curta',
         content:
-          '**Estes modelos pequenos são escolhas comuns e bem suportadas para o controle do lar em diferentes orçamentos de hardware.** Use um modelo 4B em hardware leve e um modelo 8B quando você tiver uma GPU ou NPU. O Gemma 4 (junho de 2026) é a opção mais nova; Qwen3, Gemma 3 e Phi-4-mini têm suporte comprovado de tool-calling no Home Assistant hoje.',
+          '**Em 2026, Qwen3.5 e Qwen3 são as escolhas mais citadas para tool-calling no Home Assistant, e o Gemma 4 é a família mais nova.** Use um modelo 4B em hardware leve e um modelo 8B–9B quando tiver GPU ou NPU. Qwen3.5 e Gemma 4 indicam suporte nativo a ferramentas em suas páginas do Ollama, mas os resultados da comunidade com o Assist ainda são mistos: teste com seus próprios comandos.',
         items: [
+          '**Qwen3.5 4B (Alibaba):** um modelo 4B de geração atual com suporte a ferramentas e thinking; guias da comunidade relatam tool-calling confiável em GPUs de 8 GB — `qwen3.5:4b`.',
+          '**Qwen3.5 9B (Alibaba):** a tag padrão `qwen3.5`, relatada como boa em comandos multidispositivo; um testador não a achou claramente melhor que o Qwen3 8B — `qwen3.5:9b`.',
+          '**Gemma 4 E4B (Google):** 4,5B de parâmetros efetivos com function-calling nativo e thinking configurável; relatos da comunidade o descrevem como rápido, porém menos capaz — `gemma4:e4b`.',
+          '**Gemma 4 26B-A4B (Google):** um modelo de mistura de especialistas com 3,8B de parâmetros ativos e download de 16–19 GB, para máquinas com memória da classe de 24 GB — `gemma4:26b`.',
           '**Gemma 3 4B (Google):** um modelo de 4 bilhões de parâmetros com ampla cobertura multilíngue (mais de 140 idiomas), uma forte escolha de baixo consumo — tag do Ollama `gemma3:4b`.',
           '**Qwen3 4B (Alibaba):** um modelo 4B rápido com uso confiável de ferramentas e bom suporte multilíngue, baixa latência em uma CPU ou GPU integrada — `qwen3:4b`.',
           '**Phi-4-mini (Microsoft):** um modelo compacto de 3,8B que rende acima do seu tamanho no seguimento de instruções — `phi4-mini`.',
@@ -1424,9 +1724,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Phi-4-mini', 'Parâmetros': '3.8B', 'Tamanho aprox. (Q4)': '~2,5–3 GB', 'Tag Ollama': 'phi4-mini', 'Melhor para': 'Forte seguimento de instruções' },
           { 'Modelo': 'Llama 3.2 3B', 'Parâmetros': '3B', 'Tamanho aprox. (Q4)': '~2–3 GB', 'Tag Ollama': 'llama3.2:3b', 'Melhor para': 'Base amplamente suportada' },
           { 'Modelo': 'Qwen3 8B', 'Parâmetros': '8B', 'Tamanho aprox. (Q4)': '~5 GB', 'Tag Ollama': 'qwen3:8b', 'Melhor para': 'Melhor qualidade em GPU/NPU; favorito do HA' },
+          { 'Modelo': 'Qwen3.5 4B', 'Parâmetros': '4B', 'Tamanho aprox. (Q4)': '~3.3 GB', 'Tag Ollama': 'qwen3.5:4b', 'Melhor para': 'Geração atual; ferramentas' },
+          { 'Modelo': 'Qwen3.5 9B', 'Parâmetros': '9B', 'Tamanho aprox. (Q4)': '~6.6 GB', 'Tag Ollama': 'qwen3.5:9b', 'Melhor para': 'Multidispositivo, GPU' },
+          { 'Modelo': 'Gemma 4 E4B', 'Parâmetros': '4.5B (eff.)', 'Tamanho aprox. (Q4)': '~6.6–9.5 GB', 'Tag Ollama': 'gemma4:e4b', 'Melhor para': 'Rápido; testar tool calls' },
+          { 'Modelo': 'Gemma 4 26B-A4B', 'Parâmetros': '26B (3.8B active)', 'Tamanho aprox. (Q4)': '~16–19 GB', 'Tag Ollama': 'gemma4:26b', 'Melhor para': 'Máquinas com 24 GB' },
         ],
         items: [
           'Os tamanhos são aproximados e dependem da quantização — para VRAM e profundidade de quantização, faça link externo para o cluster local-llms.',
+          'Os tamanhos de Qwen3.5 e Gemma 4 são os tamanhos de download listados nas páginas do Ollama; o Gemma 4 E4B é maior do que seus 4,5B efetivos sugerem, porque o valor de 8B inclui os embeddings.',
         ],
         image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
         imageCaption: 'Uso de RAM de LLMs locais para o controle da casa inteligente com quantização Q4: Gemma 3 4B, Qwen3 4B e Phi-4-mini precisam de 2,5-3 GB, e o Qwen3 8B precisa de cerca de 5 GB.',
@@ -1438,11 +1743,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Escolha um modelo 4B em uma Pi ou mini PC só-CPU; escolha um modelo 8B quando você tiver uma GPU ou NPU.** Isso mantém as respostas ágeis em cada nível.',
         items: [
           '**Raspberry Pi / baixo consumo:** Gemma 3 4B ou Qwen3 4B, aceitando respostas mais lentas.',
-          '**Mini PC (só CPU):** Qwen3 4B ou Phi-4-mini como padrão responsivo.',
-          '**Mini PC com GPU/NPU:** Qwen3 8B para a melhor qualidade com latência aceitável — veja [melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai).',
+          '**Mini PC (só CPU):** Qwen3.5 4B, Qwen3 4B ou Phi-4-mini como padrão responsivo.',
+          '**Mini PC com GPU/NPU:** Qwen3.5 9B ou Qwen3 8B para a melhor qualidade com latência aceitável; Gemma 4 26B-A4B se tiver memória da classe de 24 GB — veja [melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai).',
         ],
         image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
         imageCaption: 'Escolhas de modelo por orçamento de hardware: Raspberry Pi ou hosts de baixo consumo rodam Gemma 3 4B ou Qwen3 4B, mini PCs só-CPU rodam Qwen3 4B ou Phi-4-mini, e um mini PC com GPU ou NPU permite rodar o Qwen3 8B.',
+      },
+      homeLlm: {
+        id: 'home-llm',
+        title: 'Home-LLM e modelos ajustados para a casa',
+        content:
+          '**O Home-LLM é uma integração personalizada da comunidade para o Home Assistant que funciona com modelos pequenos ajustados para controle de dispositivos — um caminho diferente de carregar um modelo geral pela integração oficial do Ollama.** Seu [repositório](https://github.com/acon96/home-llm) recomenda Home-Llama-3.2-3B (3B) e Home-FunctionGemma-270m (270M) e oferece suporte a llama.cpp, Ollama e backends compatíveis com OpenAI.',
+        items: [
+          'Escolha-o quando o hardware for muito limitado: um modelo de 270M–3B feito para controle de dispositivos precisa de bem menos memória que um modelo geral de 8B.',
+          'Escolha um modelo geral de 4B–9B se também quiser conversa, resumos ou formulações flexíveis — modelos ajustados para a casa são mais restritos.',
+          'Consulte o [repositório do projeto](https://github.com/acon96/home-llm) para ver a versão atual e a versão do Home Assistant exigida antes de instalar; o projeto documenta mudanças incompatíveis entre versões.',
+        ],
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: 'Benchmarks e testes',
+        content:
+          '**Não existe um ranking oficial do Home Assistant para modelos locais, então os números publicados são testes da comunidade, não uma classificação verificada.** Um [registro de montagem da comunidade](https://community.home-assistant.io/t/my-journey-to-a-reliable-and-enjoyable-locally-hosted-voice-assistant/944860) testou vários modelos locais com comandos multidispositivo, pistas de contexto e comandos mal compreendidos e relatou resultados muito diferentes conforme o modelo e a configuração de thinking.',
+        items: [
+          'Teste comandos multidispositivo («apague as luzes da cozinha e do corredor»), pistas de contexto («deixe mais quente») e comandos mal compreendidos ou parciais.',
+          'Compare thinking ligado e desligado: o thinking costuma aumentar a latência, o que prejudica o controle por voz.',
+          'Meça o tempo até a primeira resposta no seu próprio equipamento, não os tokens por segundo de uma ficha técnica.',
+          'Não leia as pontuações do [HomeSec-Bench](https://www.sharpai.org/benchmark/) como resultados do Home Assistant: ele mede tarefas de assistentes de câmeras de segurança, não o controle de dispositivos do Assist.',
+        ],
       },
       howToPick: {
         id: 'how-to-pick',
@@ -1464,6 +1792,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Um modelo de controle do lar precisa de uma GPU?', a: 'Não para modelos 4B, que rodam em CPU ou uma GPU integrada. Uma GPU ou NPU principalmente permite rodar um modelo 8B como o Qwen3 8B com baixa latência para melhor compreensão. Ajuste o modelo ao seu hardware.' },
           { q: 'Quais modelos suportam chamada de funções?', a: 'Modelos pequenos modernos, incluindo Qwen3, Gemma 3 e Phi-4-mini, têm suporte comprovado de tool/function-calling no Home Assistant, que é a capacidade que lhes permite emitir ações de dispositivo confiáveis. Prefira um modelo documentado para suportá-la no controle do lar.' },
           { q: 'Qual o melhor modelo para uma Raspberry Pi?', a: 'Um modelo 4B como o Gemma 3 4B ou o Qwen3 4B é o teto prático em uma Raspberry Pi, e as respostas serão mais lentas que em um mini PC. Para um assistente ágil, um mini PC com GPU/NPU rodando o Qwen3 8B é o melhor host.' },
+          { q: 'Qual é o melhor LLM para o controle por voz do Home Assistant?', a: 'Um modelo pequeno com tool-calling e baixa latência: Qwen3.5 4B ou Qwen3 4B em hardware leve, Qwen3.5 9B ou Qwen3 8B com GPU. Prefira o modo sem thinking para voz, pois o thinking adiciona atraso. Nenhum benchmark oficial os classifica: teste com seus próprios comandos.' },
+          { q: 'Qual é o melhor LLM de 4B para o Home Assistant?', a: 'Qwen3.5 4B e Qwen3 4B são as escolhas de 4B mais citadas para tool-calling. Gemma 3 4B e Gemma 4 E4B são alternativas; relatos da comunidade descrevem o Gemma 4 E4B como rápido, mas menos capaz em tool calls. Teste-os com seus próprios comandos.' },
+          { q: 'O que é o Home-LLM?', a: 'O Home-LLM é uma integração personalizada da comunidade para o Home Assistant que funciona com modelos pequenos ajustados para controle de dispositivos, como Home-Llama-3.2-3B e Home-FunctionGemma-270m. Suporta llama.cpp, Ollama e backends compatíveis com OpenAI. Consulte o repositório para os requisitos de versão atuais.' },
+          { q: 'Existe um benchmark de LLM para o Home Assistant?', a: 'Não há um ranking oficial do Home Assistant para modelos locais. Os números disponíveis são testes da comunidade, que variam conforme o modelo, a quantização e a configuração de thinking. Faça seu próprio teste com comandos multidispositivo, de contexto e mal compreendidos.' },
         ],
       },
       relatedReading: {
@@ -1482,13 +1814,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Melhores Modelos LLM Locais para o Controle da Casa Inteligente (2026)',
-      description: 'Melhores LLMs locais para Home Assistant 2026: modelos 3B–8B com chamada de funções para hardware modesto. Lista curta e escolhas por orçamento.',
+      description: 'Melhores LLMs locais para Home Assistant em 2026: Qwen3.5, Qwen3, Gemma 4 e Home-LLM comparados por tamanho, tool calling e hardware. Escolhas por orçamento.',
       url: 'https://www.promptquorum.com/pt/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-05',
+      dateModified: '2026-10-19',
       about: [{ '@type': 'Thing', name: 'LLM local' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: 'Chamada de funções' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1502,6 +1834,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: 'Um modelo de controle do lar precisa de uma GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Não para modelos 4B, que rodam em CPU ou GPU integrada. Uma GPU ou NPU principalmente permite rodar um modelo 8B como o Qwen3 8B com baixa latência.' } },
         { '@type': 'Question', name: 'Quais modelos suportam chamada de funções?', acceptedAnswer: { '@type': 'Answer', text: 'Modelos pequenos modernos como Qwen3, Gemma 3 e Phi-4-mini têm suporte comprovado de tool/function-calling no Home Assistant, que lhes permite emitir ações de dispositivo confiáveis.' } },
         { '@type': 'Question', name: 'Qual o melhor modelo para uma Raspberry Pi?', acceptedAnswer: { '@type': 'Answer', text: 'Um modelo 4B como o Gemma 3 4B ou o Qwen3 4B é o teto prático em uma Pi, com respostas mais lentas. Um mini PC com GPU/NPU rodando o Qwen3 8B é o melhor host.' } },
+        { '@type': 'Question', name: 'Qual é o melhor LLM para o controle por voz do Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Um modelo pequeno com tool-calling e baixa latência: Qwen3.5 4B ou Qwen3 4B em hardware leve, Qwen3.5 9B ou Qwen3 8B com GPU. Prefira o modo sem thinking para voz, pois o thinking adiciona atraso. Nenhum benchmark oficial os classifica: teste com seus próprios comandos.' } },
+        { '@type': 'Question', name: 'Qual é o melhor LLM de 4B para o Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3.5 4B e Qwen3 4B são as escolhas de 4B mais citadas para tool-calling. Gemma 3 4B e Gemma 4 E4B são alternativas; relatos da comunidade descrevem o Gemma 4 E4B como rápido, mas menos capaz em tool calls. Teste-os com seus próprios comandos.' } },
+        { '@type': 'Question', name: 'O que é o Home-LLM?', acceptedAnswer: { '@type': 'Answer', text: 'O Home-LLM é uma integração personalizada da comunidade para o Home Assistant que funciona com modelos pequenos ajustados para controle de dispositivos, como Home-Llama-3.2-3B e Home-FunctionGemma-270m. Suporta llama.cpp, Ollama e backends compatíveis com OpenAI. Consulte o repositório para os requisitos de versão atuais.' } },
+        { '@type': 'Question', name: 'Existe um benchmark de LLM para o Home Assistant?', acceptedAnswer: { '@type': 'Answer', text: 'Não há um ranking oficial do Home Assistant para modelos locais. Os números disponíveis são testes da comunidade, que variam conforme o modelo, a quantização e a configuração de thinking. Faça seu próprio teste com comandos multidispositivo, de contexto e mal compreendidos.' } },
       ],
     },
   },
@@ -1509,8 +1845,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-06-04',
-    dateModified: '2026-06-05',
-    next_refresh_due: '2026-12-04',
+    dateModified: '2026-10-19',
+    next_refresh_due: '2027-04-19',
     theme: 'Local AI & LLMs in the Smart Home',
     heroImage: '/images/best-local-llm-models-smart-home-overview-hero-zh.webp',
     title: '智能家居控制的最佳本地 LLM 模型（2026）',
@@ -1518,7 +1854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '智能家居控制的最佳本地 LLM 模型，是具备可靠函数调用、小而快、能遵循指令的模型——而不是你硬件能容纳的最大模型。本指南讲解家庭控制真正重要的是什么，给出一份适用小型模型的精选清单，对它们进行比较，并把选择对应到硬件预算，并以外链指向更深入的模型指南，而非把整个领域重新排名。',
     metaDescription:
-      '2026年智能家居控制最佳本地LLM模型：优先选择小型函数调用模型以降低响应延迟，适合在普通迷你PC或低功耗硬件设备上部署，含按预算的推荐型号清单、功能说明与性能对比表。',
+      '2026 年 Home Assistant 最佳本地 LLM：按大小、工具调用和硬件对比 Qwen3.5、Qwen3、Gemma 4 与 Home-LLM，并按预算给出推荐。',
     twitterDescription:
       'Home Assistant 控制的最佳本地 LLM 模型：相较你能运行的最大模型，更应选小而快、支持函数调用的模型。按硬件预算给出选择。',
     readTime: '阅读约8分钟',
@@ -1538,15 +1874,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       zh: {
         question: '智能家居控制的最佳本地 LLM 是哪个？',
         answer:
-          '一个能遵循指令、具备扎实函数调用、通常在 4B 到 8B 之间的小型模型，最适合家庭控制，因为它响应快并能输出可靠的设备动作。Gemma 3 4B、Qwen3 4B 和 Qwen3 8B 是常见且受良好支持的选择；正确的选择取决于你的硬件和语言需求。',
+          '家庭控制最适合具备可靠函数调用的小型指令跟随模型（通常为 4B 至 9B），因为它响应快，并能输出可靠的设备动作。2026 年被提及最多的是 Qwen3.5（4B、9B）和 Qwen3（4B、8B），Gemma 4 和 Gemma 3 为备选；最终选择取决于你的硬件和语言需求。',
         bullets: [
           '把低延迟和函数调用置于大小之上',
           '4B 模型适合低功耗硬件；8B 适合带 GPU 或 NPU 的迷你 PC',
-          'Gemma 3 4B、Qwen3 4B 和 Phi-4-mini 是常见起点',
+          'Qwen3.5 4B、Qwen3 4B、Gemma 3 4B 和 Phi-4-mini 是常见的起点',
           '选择对你所说语言有强力支持的模型',
           '对于简单的设备控制，更大的模型几乎无益',
         ],
-        updatedDate: '2026-06',
+        updatedDate: '2026-10',
       },
     },
     toc: [
@@ -1555,11 +1891,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '精选清单', anchor: 'shortlist' },
       { label: '比较', anchor: 'comparison' },
       { label: '按硬件预算', anchor: 'by-budget' },
+      { label: 'Home-LLM 与微调模型', anchor: 'home-llm' },
+      { label: '基准测试与自测', anchor: 'benchmarks' },
       { label: '如何选择', anchor: 'how-to-pick' },
       { label: '常见问题', anchor: 'faq' },
     ],
     snippetBlocks: [
-      { type: 'one-sentence', content: '智能家居控制的最佳本地 LLM 是一个具备可靠函数调用的小型（3B–8B）指令模型，以低延迟而非纯粹的大小来选择。' },
+      { type: 'one-sentence', content: '智能家居控制的最佳本地 LLM 是一个具备可靠函数调用的小型（3B–9B）指令模型，以低延迟而非纯粹的大小来选择。' },
       { type: 'plain-terms', content: '控制一个家并不需要巨型模型——它需要一个响应快、能可靠输出中枢可执行的结构化命令的模型。3B 到 8B 的小型模型在这方面表现良好，并能在普通硬件上运行。更深入的模型排名在 local-llms 集群中；本指南专注于家庭控制这一角度。' },
     ],
     sections: {
@@ -1570,7 +1908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '家庭控制看重低延迟和可靠的函数调用，而非最大的模型大小',
           '4B 模型适合低功耗硬件；8B 模型适合带 GPU 或 NPU 的迷你 PC',
-          'Gemma 3 4B（Google）、Qwen3 4B（Alibaba）和 Qwen3 8B（Alibaba）是常见且受良好支持的选择',
+          'Alibaba 的 Qwen3.5（4B、9B）和 Qwen3（4B、8B）是被提及最多的选择；Gemma 4 和 Gemma 3 4B（Google）为备选',
           'Qwen3、Gemma 3 和 Phi-4-mini 如今具备经过验证的 Home Assistant 工具调用支持',
           '选择对你与它交谈所用语言有强力支持的模型',
           '关于深入的模型排名与机制，以外链指向 local-llms 集群',
@@ -1591,8 +1929,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'shortlist',
         title: '精选清单',
         content:
-          '**这些小型模型是跨不同硬件预算、用于家庭控制的常见且受良好支持的选择。** 在轻量硬件上用 4B 模型，有 GPU 或 NPU 时用 8B 模型。Gemma 4（2026 年 6 月）是最新选项；Qwen3、Gemma 3 和 Phi-4-mini 如今具备经过验证的 Home Assistant 工具调用支持。',
+          '**2026 年，Home Assistant 工具调用被提及最多的是 Qwen3.5 和 Qwen3，Gemma 4 是最新的系列。** 轻量硬件用 4B 模型，有 GPU 或 NPU 时用 8B–9B 模型。Qwen3.5 和 Gemma 4 在各自的 Ollama 页面上标注了原生工具支持，但社区对 Assist 的测试结果仍然不一，请用你自己的指令测试。',
         items: [
+          '**Qwen3.5 4B（Alibaba）：** 当代 4B 模型，支持工具和 thinking；社区指南报告其在 8 GB 显卡上工具调用可靠 — `qwen3.5:4b`。',
+          '**Qwen3.5 9B（Alibaba）：** 默认的 `qwen3.5` 标签，据报告擅长多设备指令；有测试者认为它并不明显优于 Qwen3 8B — `qwen3.5:9b`。',
+          '**Gemma 4 E4B（Google）：** 有效参数 4.5B，支持原生函数调用和可配置的 thinking；社区报告称其速度快但能力稍弱 — `gemma4:e4b`。',
+          '**Gemma 4 26B-A4B（Google）：** 混合专家模型，激活参数 3.8B，下载大小 16–19 GB，适合 24 GB 级内存的主机 — `gemma4:26b`。',
           '**Gemma 3 4B（Google）：** 一个 40 亿参数的模型，具备广泛的多语言覆盖（140 多种语言），是强力的低功耗选择——Ollama 标签 `gemma3:4b`。',
           '**Qwen3 4B（Alibaba）：** 一个快速的 4B 模型，工具使用可靠、多语言支持良好，在 CPU 或集成 GPU 上低延迟——`qwen3:4b`。',
           '**Phi-4-mini（Microsoft）：** 一个紧凑的 3.8B 模型，在指令遵循上的表现超出其体量——`phi4-mini`。',
@@ -1612,9 +1954,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '模型': 'Phi-4-mini', '参数量': '3.8B', '近似占用 (Q4)': '约 2.5–3 GB', 'Ollama 标签': 'phi4-mini', '最适合': '强指令遵循' },
           { '模型': 'Llama 3.2 3B', '参数量': '3B', '近似占用 (Q4)': '约 2–3 GB', 'Ollama 标签': 'llama3.2:3b', '最适合': '广受支持的基线' },
           { '模型': 'Qwen3 8B', '参数量': '8B', '近似占用 (Q4)': '约 5 GB', 'Ollama 标签': 'qwen3:8b', '最适合': 'GPU/NPU 上质量最佳；HA 热门' },
+          { '模型': 'Qwen3.5 4B', '参数量': '4B', '近似占用 (Q4)': '~3.3 GB', 'Ollama 标签': 'qwen3.5:4b', '最适合': '当代小模型；支持工具' },
+          { '模型': 'Qwen3.5 9B', '参数量': '9B', '近似占用 (Q4)': '~6.6 GB', 'Ollama 标签': 'qwen3.5:9b', '最适合': '多设备指令，需 GPU' },
+          { '模型': 'Gemma 4 E4B', '参数量': '4.5B (eff.)', '近似占用 (Q4)': '~6.6–9.5 GB', 'Ollama 标签': 'gemma4:e4b', '最适合': '速度快；需测工具调用' },
+          { '模型': 'Gemma 4 26B-A4B', '参数量': '26B (3.8B active)', '近似占用 (Q4)': '~16–19 GB', 'Ollama 标签': 'gemma4:26b', '最适合': '24 GB 级内存主机' },
         ],
         items: [
           '占用为近似值，取决于量化——关于 VRAM 和量化细节，以外链指向 local-llms 集群。',
+          'Qwen3.5 和 Gemma 4 的大小为其 Ollama 页面列出的下载大小；Gemma 4 E4B 比其 4.5B 有效参数所暗示的更大，因为列出的 8B 数字包含了嵌入层。',
         ],
         image: '/images/best-local-llm-models-smart-home-footprint-comparison-en.svg',
         imageCaption: '在 Q4 量化下用于智能家居控制的本地 LLM 内存占用：Gemma 3 4B、Qwen3 4B 和 Phi-4-mini 需要 2.5-3 GB，Qwen3 8B 约需 5 GB。',
@@ -1626,11 +1973,34 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**在 Pi 或仅 CPU 的迷你 PC 上用 4B 模型；有 GPU 或 NPU 时用 8B 模型。** 这能在每一档都保持响应灵敏。',
         items: [
           '**Raspberry Pi / 低功耗：** Gemma 3 4B 或 Qwen3 4B，接受更慢的响应。',
-          '**迷你 PC（仅 CPU）：** 以 Qwen3 4B 或 Phi-4-mini 作为响应良好的默认。',
-          '**带 GPU/NPU 的迷你 PC：** 要在可接受延迟下获得最佳质量就用 Qwen3 8B——参见[Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai)。',
+          '**迷你主机（仅 CPU）：** 以 Qwen3.5 4B、Qwen3 4B 或 Phi-4-mini 作为响应灵敏的默认选择。',
+          '**带 GPU/NPU 的迷你主机：** 用 Qwen3.5 9B 或 Qwen3 8B 在可接受的延迟下获得最佳质量；若有 24 GB 级内存可用 Gemma 4 26B-A4B — 参见 [Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai)。',
         ],
         image: '/images/best-local-llm-models-smart-home-hardware-budget-picks-en.svg',
         imageCaption: '按硬件预算的模型选择：Raspberry Pi 或低功耗主机运行 Gemma 3 4B 或 Qwen3 4B，仅 CPU 的迷你 PC 运行 Qwen3 4B 或 Phi-4-mini，带 GPU 或 NPU 的迷你 PC 可运行 Qwen3 8B。',
+      },
+      homeLlm: {
+        id: 'home-llm',
+        title: 'Home-LLM 与微调的家居模型',
+        content:
+          '**Home-LLM 是面向 Home Assistant 的社区自定义集成，搭配针对设备控制微调的小型模型 — 与通过官方 Ollama 集成加载通用模型是不同的路线。** 其[代码仓库](https://github.com/acon96/home-llm)推荐 Home-Llama-3.2-3B（3B）和 Home-FunctionGemma-270m（270M），并支持 llama.cpp、Ollama 和兼容 OpenAI 的后端。',
+        items: [
+          '硬件非常有限时选用它：专为设备控制打造的 270M–3B 模型所需内存远少于通用 8B 模型。',
+          '如果还想要对话、摘要或灵活的表达，改选通用的 4B–9B 模型 — 微调的家居模型适用面更窄。',
+          '安装前请在[项目仓库](https://github.com/acon96/home-llm)查看当前版本及所需的 Home Assistant 版本；该项目记录了版本之间的破坏性变更。',
+        ],
+      },
+      benchmarks: {
+        id: 'benchmarks',
+        title: '基准测试与自测',
+        content:
+          '**Home Assistant 没有针对本地模型的官方排行榜，已发布的数字是社区测试，而非经过验证的排名。** 一份[社区搭建日志](https://community.home-assistant.io/t/my-journey-to-a-reliable-and-enjoyable-locally-hosted-voice-assistant/944860)在多设备指令、上下文线索和听错的指令上测试了多个本地模型，并报告结果因模型和 thinking 设置而差异很大。',
+        items: [
+          '测试多设备指令（“关掉厨房和走廊的灯”）、上下文线索（“调暖一点”）以及听错或不完整的指令。',
+          '对比开启与关闭 thinking：thinking 通常会增加延迟，不利于语音控制。',
+          '在你自己的主机上测量首次响应时间，而不是规格表上的每秒 token 数。',
+          '不要把 [HomeSec-Bench](https://www.sharpai.org/benchmark/) 的分数当作 Home Assistant 的结果 — 它衡量的是安防摄像头助手任务，而不是 Assist 设备控制。',
+        ],
       },
       howToPick: {
         id: 'how-to-pick',
@@ -1652,6 +2022,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '家庭控制模型需要 GPU 吗？', a: '4B 模型不需要，它们在 CPU 或集成 GPU 上运行。GPU 或 NPU 主要让你以低延迟运行像 Qwen3 8B 这样的 8B 模型以获得更好理解。把模型匹配到你的硬件。' },
           { q: '哪些模型支持函数调用？', a: '包括 Qwen3、Gemma 3 和 Phi-4-mini 在内的现代小型模型具备经过验证的 Home Assistant 工具/函数调用支持，这正是让它们输出可靠设备动作的能力。家庭控制请优先选择有文档支持的模型。' },
           { q: 'Raspberry Pi 的最佳模型是哪个？', a: '像 Gemma 3 4B 或 Qwen3 4B 这样的 4B 模型，是 Raspberry Pi 上的实际上限，响应会比迷你 PC 更慢。要想助手灵敏，运行 Qwen3 8B 的带 GPU/NPU 迷你 PC 是更好的主机。' },
+          { q: 'Home Assistant 语音控制的最佳 LLM 是什么？', a: '支持工具调用且延迟低的小型模型：轻量硬件用 Qwen3.5 4B 或 Qwen3 4B，有 GPU 用 Qwen3.5 9B 或 Qwen3 8B。语音场景优先使用非 thinking 模式，因为 thinking 会增加延迟。没有官方基准对它们排名，请用你自己的指令测试。' },
+          { q: 'Home Assistant 的最佳 4B LLM 是什么？', a: 'Qwen3.5 4B 和 Qwen3 4B 是工具调用方面被提及最多的 4B 选择。Gemma 3 4B 和 Gemma 4 E4B 为备选；社区报告称 Gemma 4 E4B 速度快，但工具调用能力稍弱。请用你自己的指令测试。' },
+          { q: '什么是 Home-LLM？', a: 'Home-LLM 是面向 Home Assistant 的社区自定义集成，搭配针对设备控制微调的小型模型，如 Home-Llama-3.2-3B 和 Home-FunctionGemma-270m。它支持 llama.cpp、Ollama 和兼容 OpenAI 的后端。当前版本要求请查看其仓库。' },
+          { q: 'Home Assistant 有 LLM 基准测试吗？', a: 'Home Assistant 没有针对本地模型的官方排行榜。现有数字来自社区测试，会因模型、量化和 thinking 设置而异。请用多设备、上下文和听错的指令自行测试。' },
         ],
       },
       relatedReading: {
@@ -1670,13 +2044,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '智能家居控制的最佳本地 LLM 模型（2026）',
-      description: '2026年智能家居控制最佳本地LLM模型：优先选择小型函数调用模型以降低响应延迟，适合在普通迷你PC或低功耗硬件设备上部署，含按预算的推荐型号清单、功能说明与性能对比表。',
+      description: '2026 年 Home Assistant 最佳本地 LLM：按大小、工具调用和硬件对比 Qwen3.5、Qwen3、Gemma 4 与 Home-LLM，并按预算给出推荐。',
       url: 'https://www.promptquorum.com/zh/smart-home/best-local-llm-models-smart-home',
       inLanguage: 'zh',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-06-04',
-      dateModified: '2026-06-05',
+      dateModified: '2026-10-19',
       about: [{ '@type': 'Thing', name: '本地 LLM' }, { '@type': 'Thing', name: 'Home Assistant' }, { '@type': 'Thing', name: '函数调用' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1690,6 +2064,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { '@type': 'Question', name: '家庭控制模型需要 GPU 吗？', acceptedAnswer: { '@type': 'Answer', text: '4B 模型不需要，它们在 CPU 或集成 GPU 上运行。GPU 或 NPU 主要让你以低延迟运行像 Qwen3 8B 这样的 8B 模型。' } },
         { '@type': 'Question', name: '哪些模型支持函数调用？', acceptedAnswer: { '@type': 'Answer', text: '包括 Qwen3、Gemma 3 和 Phi-4-mini 在内的现代小型模型具备经过验证的 Home Assistant 工具/函数调用支持，让它们输出可靠的设备动作。' } },
         { '@type': 'Question', name: 'Raspberry Pi 的最佳模型是哪个？', acceptedAnswer: { '@type': 'Answer', text: '像 Gemma 3 4B 或 Qwen3 4B 这样的 4B 模型是 Pi 上的实际上限，响应更慢。运行 Qwen3 8B 的带 GPU/NPU 迷你 PC 是更好的主机。' } },
+        { '@type': 'Question', name: 'Home Assistant 语音控制的最佳 LLM 是什么？', acceptedAnswer: { '@type': 'Answer', text: '支持工具调用且延迟低的小型模型：轻量硬件用 Qwen3.5 4B 或 Qwen3 4B，有 GPU 用 Qwen3.5 9B 或 Qwen3 8B。语音场景优先使用非 thinking 模式，因为 thinking 会增加延迟。没有官方基准对它们排名，请用你自己的指令测试。' } },
+        { '@type': 'Question', name: 'Home Assistant 的最佳 4B LLM 是什么？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3.5 4B 和 Qwen3 4B 是工具调用方面被提及最多的 4B 选择。Gemma 3 4B 和 Gemma 4 E4B 为备选；社区报告称 Gemma 4 E4B 速度快，但工具调用能力稍弱。请用你自己的指令测试。' } },
+        { '@type': 'Question', name: '什么是 Home-LLM？', acceptedAnswer: { '@type': 'Answer', text: 'Home-LLM 是面向 Home Assistant 的社区自定义集成，搭配针对设备控制微调的小型模型，如 Home-Llama-3.2-3B 和 Home-FunctionGemma-270m。它支持 llama.cpp、Ollama 和兼容 OpenAI 的后端。当前版本要求请查看其仓库。' } },
+        { '@type': 'Question', name: 'Home Assistant 有 LLM 基准测试吗？', acceptedAnswer: { '@type': 'Answer', text: 'Home Assistant 没有针对本地模型的官方排行榜。现有数字来自社区测试，会因模型、量化和 thinking 设置而异。请用多设备、上下文和听错的指令自行测试。' } },
       ],
     },
   },
