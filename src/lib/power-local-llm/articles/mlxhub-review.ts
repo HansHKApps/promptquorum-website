@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'requirements',
         title: 'Device Requirements',
         content: [
-          '**MLXHub requires iOS or iPadOS 26.0 or later and a device with an A14 or M1 chip or newer.** The developer says an earlier "6 GB minimum RAM" statement on the official site was misleading and that RAM only decides which models you can run. The App Store listing also shows macOS 26.0 (Apple M1 or later) and visionOS 26.0 availability for the same app, without describing a separate desktop version.',
+          '**MLXHub requires iOS or iPadOS 26.0 or later and a device with an A14 or M1 chip or newer.** RAM only decides which models you can run. The App Store listing also shows macOS 26.0 (Apple M1 or later) and visionOS 26.0 availability for the same app, without describing a separate desktop version.',
           'RAM is still the practical limit for model size. Apple enforces stricter app memory limits on iPhone than on iPad, so larger models fit more often on an iPad. The site warns that a model that does not fit can occasionally still be downloaded, and that the app tries to stop it loading before iOS shuts the app down, without a guarantee.',
         ],
       },
@@ -592,7 +592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'requirements',
         title: 'Geräteanforderungen',
         content: [
-          '**MLXHub setzt iOS oder iPadOS 26.0 oder neuer und ein Gerät mit A14- oder M1-Chip oder neuer voraus.** Der Entwickler sagt, eine frühere Angabe „mindestens 6 GB RAM" auf der offiziellen Website sei irreführend gewesen und der RAM entscheide nur darüber, welche Modelle Sie ausführen können. Der App-Store-Eintrag zeigt für dieselbe App außerdem die Verfügbarkeit für macOS 26.0 (Apple M1 oder neuer) und visionOS 26.0, ohne eine eigene Desktop-Version zu beschreiben.',
+          '**MLXHub setzt iOS oder iPadOS 26.0 oder neuer und ein Gerät mit A14- oder M1-Chip oder neuer voraus.** Der RAM entscheidet nur darüber, welche Modelle Sie ausführen können. Der App-Store-Eintrag zeigt für dieselbe App außerdem die Verfügbarkeit für macOS 26.0 (Apple M1 oder neuer) und visionOS 26.0, ohne eine eigene Desktop-Version zu beschreiben.',
           'Der RAM bleibt die praktische Grenze für die Modellgröße. Apple setzt auf dem iPhone strengere Speichergrenzen für Apps durch als auf dem iPad, daher passen größere Modelle häufiger auf ein iPad. Die Website warnt, dass sich ein Modell, das nicht passt, mitunter dennoch herunterladen lässt, und dass die App versucht, das Laden zu verhindern, bevor iOS die App beendet, ohne dass dies garantiert ist.',
         ],
       },
@@ -980,7 +980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'requirements',
         title: 'Configuration requise',
         content: [
-          '**MLXHub exige iOS ou iPadOS 26.0 ou ultérieur et un appareil doté d\'une puce A14 ou M1, ou plus récente.** Le développeur indique qu\'une mention antérieure d\'un « minimum de 6 Go de RAM » sur le site officiel était trompeuse et que la RAM détermine seulement quels modèles vous pouvez exécuter. La fiche App Store indique aussi une disponibilité pour macOS 26.0 (Apple M1 ou ultérieur) et visionOS 26.0 pour la même application, sans décrire de version de bureau distincte.',
+          '**MLXHub exige iOS ou iPadOS 26.0 ou ultérieur et un appareil doté d\'une puce A14 ou M1, ou plus récente.** La RAM détermine seulement quels modèles vous pouvez exécuter. La fiche App Store indique aussi une disponibilité pour macOS 26.0 (Apple M1 ou ultérieur) et visionOS 26.0 pour la même application, sans décrire de version de bureau distincte.',
           'La RAM reste la limite pratique pour la taille des modèles. Apple impose des limites de mémoire par application plus strictes sur l\'iPhone que sur l\'iPad ; les modèles plus gros tiennent donc plus souvent sur un iPad. Le site prévient qu\'un modèle qui ne tient pas peut parfois être téléchargé quand même, et que l\'application tente d\'en empêcher le chargement avant qu\'iOS ne ferme l\'application, sans garantie.',
         ],
       },
@@ -1368,7 +1368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'requirements',
         title: '必要な端末要件',
         content: [
-          '**MLXHubには、iOSまたはiPadOS 26.0以降と、A14またはM1以降のチップを搭載した端末が必要です。** 開発者によると、公式サイトにあった以前の「RAM 6 GB以上」という記述は誤解を招くもので、RAMはどのモデルを動かせるかを左右するだけです。App Storeの掲載情報には、同じアプリがmacOS 26.0(Apple M1以降)とvisionOS 26.0でも利用可能と表示されていますが、別のデスクトップ版についての説明はありません。',
+          '**MLXHubには、iOSまたはiPadOS 26.0以降と、A14またはM1以降のチップを搭載した端末が必要です。** RAMはどのモデルを動かせるかを左右するだけです。App Storeの掲載情報には、同じアプリがmacOS 26.0(Apple M1以降)とvisionOS 26.0でも利用可能と表示されていますが、別のデスクトップ版についての説明はありません。',
           'モデルサイズの実質的な限界は、今もRAMです。Appleはアプリのメモリ上限をiPhoneの方がiPadより厳しく設定しているため、大きなモデルはiPadの方が載りやすくなります。サイトは、載らないモデルでもダウンロードできてしまうことがあり、iOSがアプリを終了させる前にアプリが読み込みを止めようとするが、保証はないと警告しています。',
         ],
       },
@@ -1756,7 +1756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'requirements',
         title: '设备要求',
         content: [
-          '**MLXHub需要iOS或iPadOS 26.0或更高版本，以及搭载A14或M1及更新芯片的设备。** 开发者称，官方网站此前“最低6 GB内存”的说法有误导性，内存只决定您能运行哪些模型。App Store页面还显示同一应用提供macOS 26.0（Apple M1或更新芯片）和visionOS 26.0版本，但没有描述单独的桌面版。',
+          '**MLXHub需要iOS或iPadOS 26.0或更高版本，以及搭载A14或M1及更新芯片的设备。** 内存只决定您能运行哪些模型。App Store页面还显示同一应用提供macOS 26.0（Apple M1或更新芯片）和visionOS 26.0版本，但没有描述单独的桌面版。',
           '内存仍然是模型大小的实际上限。苹果对iPhone上应用的内存限制比iPad更严格，因此较大的模型在iPad上更常能装下。网站警告说，装不下的模型有时仍可能被下载下来，应用会在iOS强制关闭应用之前设法阻止其加载，但不作保证。',
         ],
       },
@@ -2144,7 +2144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'requirements',
         title: 'Requisitos del dispositivo',
         content: [
-          '**MLXHub requiere iOS o iPadOS 26.0 o posterior y un dispositivo con un chip A14 o M1, o más reciente.** El desarrollador indica que una declaración anterior del sitio oficial sobre «6 GB de RAM como mínimo» era engañosa y que la RAM solo decide qué modelos puedes ejecutar. La ficha de la App Store muestra además disponibilidad de la misma app para macOS 26.0 (Apple M1 o posterior) y visionOS 26.0, sin describir una versión de escritorio aparte.',
+          '**MLXHub requiere iOS o iPadOS 26.0 o posterior y un dispositivo con un chip A14 o M1, o más reciente.** La RAM solo decide qué modelos puedes ejecutar. La ficha de la App Store muestra además disponibilidad de la misma app para macOS 26.0 (Apple M1 o posterior) y visionOS 26.0, sin describir una versión de escritorio aparte.',
           'La RAM sigue siendo el límite práctico del tamaño del modelo. Apple impone límites de memoria más estrictos a las apps en iPhone que en iPad, así que los modelos grandes caben más a menudo en un iPad. El sitio advierte de que a veces puede descargarse un modelo que no cabe, y de que la app intenta impedir que se cargue antes de que iOS cierre la app, sin garantía.',
         ],
       },
@@ -2532,7 +2532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'requirements',
         title: 'Requisitos do aparelho',
         content: [
-          '**O MLXHub exige iOS ou iPadOS 26.0 ou posterior e um aparelho com chip A14 ou M1, ou mais novo.** O desenvolvedor diz que uma afirmação anterior de "mínimo de 6 GB de RAM" no site oficial era enganosa e que a RAM só define quais modelos você consegue executar. A ficha da App Store também mostra disponibilidade para macOS 26.0 (Apple M1 ou posterior) e visionOS 26.0 para o mesmo aplicativo, sem descrever uma versão de desktop separada.',
+          '**O MLXHub exige iOS ou iPadOS 26.0 ou posterior e um aparelho com chip A14 ou M1, ou mais novo.** A RAM só define quais modelos você consegue executar. A ficha da App Store também mostra disponibilidade para macOS 26.0 (Apple M1 ou posterior) e visionOS 26.0 para o mesmo aplicativo, sem descrever uma versão de desktop separada.',
           'A RAM ainda é o limite prático para o tamanho do modelo. A Apple impõe limites de memória por aplicativo mais rígidos no iPhone do que no iPad, então modelos maiores cabem com mais frequência em um iPad. O site avisa que um modelo que não cabe pode, às vezes, ainda ser baixado, e que o app tenta impedir o carregamento antes que o iOS encerre o aplicativo, sem garantia.',
         ],
       },
@@ -2920,7 +2920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'requirements',
         title: 'متطلبات الجهاز',
         content: [
-          '**يتطلب MLXHub الإصدار 26.0 أو أحدث من iOS أو iPadOS، وجهازًا بمعالج A14 أو M1 أو أحدث.** ويقول المطوّر إن عبارة "6 GB كحد أدنى للذاكرة العشوائية" التي وردت سابقًا في الموقع الرسمي كانت مضلِّلة، وإن الذاكرة العشوائية تحدد فقط أي النماذج يمكنك تشغيلها. وتُظهر صفحة App Store أيضًا توفر التطبيق نفسه على macOS 26.0 (معالج Apple M1 أو أحدث) وvisionOS 26.0، دون وصف إصدار منفصل لسطح المكتب.',
+          '**يتطلب MLXHub الإصدار 26.0 أو أحدث من iOS أو iPadOS، وجهازًا بمعالج A14 أو M1 أو أحدث.** الذاكرة العشوائية تحدد فقط أي النماذج يمكنك تشغيلها. وتُظهر صفحة App Store أيضًا توفر التطبيق نفسه على macOS 26.0 (معالج Apple M1 أو أحدث) وvisionOS 26.0، دون وصف إصدار منفصل لسطح المكتب.',
           'تظل الذاكرة العشوائية الحد العملي لحجم النموذج. تفرض Apple حدودًا أشد لذاكرة التطبيقات على الآيفون مما على الآيباد، لذا تتسع النماذج الأكبر على الآيباد في كثير من الأحيان. ويحذّر الموقع من أن نموذجًا لا يتسع قد يجري تنزيله أحيانًا مع ذلك، وأن التطبيق يحاول منع تحميله قبل أن يغلق iOS التطبيق، دون ضمان.',
         ],
       },
@@ -3308,7 +3308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'requirements',
         title: '기기 요구 사항',
         content: [
-          '**MLXHub에는 iOS 또는 iPadOS 26.0 이상과 A14 또는 M1 이상 칩을 탑재한 기기가 필요합니다.** 개발자는 공식 사이트의 "최소 RAM 6 GB"라는 이전 설명이 오해를 부르는 표현이었으며, RAM은 실행할 수 있는 모델만 결정한다고 밝힙니다. App Store 목록에는 같은 앱이 macOS 26.0(Apple M1 이상)과 visionOS 26.0에서도 제공된다고 표시되지만, 별도의 데스크톱 버전은 설명되어 있지 않습니다.',
+          '**MLXHub에는 iOS 또는 iPadOS 26.0 이상과 A14 또는 M1 이상 칩을 탑재한 기기가 필요합니다.** RAM은 실행할 수 있는 모델만 결정합니다. App Store 목록에는 같은 앱이 macOS 26.0(Apple M1 이상)과 visionOS 26.0에서도 제공된다고 표시되지만, 별도의 데스크톱 버전은 설명되어 있지 않습니다.',
           '모델 크기의 실질적인 한계는 여전히 RAM입니다. Apple은 아이폰에 아이패드보다 더 엄격한 앱 메모리 제한을 적용하므로, 더 큰 모델은 아이패드에서 들어가는 경우가 더 많습니다. 사이트는 기기에 맞지 않는 모델도 간혹 내려받아질 수 있다고 경고하며, iOS가 앱을 종료하기 전에 앱이 모델 로드를 막으려 하지만 보장되지는 않는다고 밝힙니다.',
         ],
       },

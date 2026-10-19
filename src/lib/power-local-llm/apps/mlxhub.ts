@@ -16,7 +16,7 @@ export const app: ToolRecord = {
   engine: 'builtin', // on-device inference on mlx-swift (Apple MLX)
   license: 'Closed source',
   price: 'freemium', // free download; MLXHub Plus $6.99/month, $44.99/year, lifetime $229.99 — verified 2026-10-05, re-read 2026-10-19 (US store). Maker (2026-10-19): 2.3.0, still in App Store review, adds a $34.49 LAN Server IAP credited toward lifetime ($195.99 instead of $229.99); not yet on the listing
-  hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // maker correction 2026-10-19: no RAM minimum, any A14/M1 or newer chip; RAM only decides which models fit (the earlier "6 GB" was misleading)
+  hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // no RAM minimum: any A14/M1 or newer chip; RAM only decides which models fit
   stars: null,
   addedDate: '2026-10-05',
   status: 'listed',
