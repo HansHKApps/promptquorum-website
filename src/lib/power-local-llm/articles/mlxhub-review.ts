@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-05',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-19',
     next_refresh_due: '2027-04-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/mlxhub-review-hero-en.webp',
@@ -18,9 +18,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MLXHub is an iPhone and iPad app that runs open models on the device with Apple\'s MLX framework, can serve them to other apps on your network, and can split one large model across several of your own devices. This review covers what its App Store listing and official site document, what is unclear, and how it compares with other iOS local-AI apps.',
     metaDescription:
-      'MLXHub review: iPhone and iPad app for on-device MLX models with an OpenAI-compatible LAN server and multi-device model splitting. Pricing, iOS 26 and RAM requirements, privacy, limits.',
+      'MLXHub review: iPhone and iPad app for on-device MLX models with an OpenAI-compatible LAN server and multi-device model splitting. Pricing, what Plus unlocks, iOS 26 device requirements, privacy, limits, maker comments.',
     twitterDescription:
-      'MLXHub review: a freemium iOS/iPadOS app that runs MLX models offline, serves them over your LAN, and splits big models across devices. Requirements, pricing, privacy, limits.',
+      'MLXHub review: a freemium iOS/iPadOS app that runs MLX models offline, serves them over your LAN, and splits big models across devices. Requirements, pricing, what Plus unlocks, privacy, limits, maker comments.',
     audience:
       'iPhone and iPad owners who want to run open models offline and, optionally, use the device as a local OpenAI-compatible endpoint — covers features, requirements, pricing, privacy, limits, and alternatives.',
     readTime: '8 min read',
@@ -37,22 +37,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mlx swift app',
       'local ai ipad app',
     ],
-    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A17 Pro', 'M1'],
+    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A14', 'A17 Pro', 'M1'],
     leadAnswerBlock:
-      '**MLXHub is a freemium, closed-source iOS and iPadOS app that runs open language and vision models offline on Apple silicon, can expose them as an OpenAI-compatible server on your Wi-Fi, and can pool several of your devices to load a model none of them fits alone.** Per its App Store listing it needs iOS or iPadOS 26.0 or later and is free to download, with MLXHub Plus as in-app purchases. This review covers version 2.2.0 and is based on the public listing and official site, not hands-on testing.',
+      '**MLXHub is a freemium, closed-source iOS and iPadOS app that runs open language and vision models offline on Apple silicon, can expose them as an OpenAI-compatible server on your Wi-Fi, and can pool several of your devices to load a model none of them fits alone.** Per its App Store listing it needs iOS or iPadOS 26.0 or later and is free to download, with MLXHub Plus as in-app purchases. Per the developer, the free tier allows unlimited chat with up to two downloaded models, while the server, mesh and other advanced features need Plus. The developer, Juan Colilla, reviewed this page and added his own comments and corrections. This review covers the listed version 2.2.1 and is based on the public listing, the official site and the developer\'s statements, not hands-on testing; version 2.3.0 is still in App Store review.',
     quickAnswerTop: {
       en: {
         question: 'Is MLXHub worth installing for local AI on an iPhone or iPad?',
         answer:
-          'Yes, if you have an Apple silicon iPhone or iPad on iOS 26 with at least 6 GB of RAM and want offline chat plus a LAN endpoint or multi-device model splitting. Skip it if you need open source, Android, or a fixed list of free features: the code is not public and the listing does not say what MLXHub Plus unlocks. Locally AI and Private Mind are simpler on-device alternatives.',
+          'Yes, if you have an iPhone or iPad on iOS 26 with an A14 or M1 chip or newer and want offline chat, optionally with a LAN endpoint or multi-device model splitting. RAM only decides which models fit. Skip it if you need open source, Android, or a free LAN server: the code is not public, and per the developer the server and mesh are paid Plus features. Locally AI and Private Mind are simpler on-device alternatives.',
         bullets: [
           'Free download with in-app purchases: Plus at $6.99 per month, $44.99 per year, or $229.99 lifetime.',
+          'Per the developer, chat is unlimited on the free tier, with up to two downloaded models; the server, tools, skills and mesh need Plus.',
           'Runs open text and vision models on-device through mlx-swift; models come from Hugging Face.',
           'Optional LAN server with OpenAI-style /v1/chat/completions and /v1/embeddings routes.',
           'Distributed inference splits one model across your own paired devices on the same network.',
-          'Needs iOS or iPadOS 26.0 or later on Apple silicon with 6 GB RAM or more.',
+          'Needs iOS or iPadOS 26.0 or later on an A14, M1 or newer chip; RAM decides which models fit.',
         ],
-        updatedDate: '2026-10-05',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -65,6 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LAN Server and Distributed Inference', anchor: 'lan-and-distributed' },
       { label: 'Device Requirements', anchor: 'requirements' },
       { label: 'Pricing and Privacy', anchor: 'privacy' },
+      { label: 'From the Maker', anchor: 'from-the-maker' },
       { label: 'Trade-Offs: Benefits vs. Limitations', anchor: 'tradeoffs' },
       { label: 'MLXHub vs. Alternatives', anchor: 'vs-alternatives' },
       { label: 'Who Should Use MLXHub', anchor: 'who-should-use' },
@@ -82,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MLXHub, by developer Juan Colilla, is a freemium iPhone and iPad app that runs open models offline on Apple\'s MLX framework, serves them to your network, and can split a model across several of your devices.',
+            text: 'MLXHub, by developer Juan Colilla, who reviewed this page, is a freemium iPhone and iPad app that runs open models offline on Apple\'s MLX framework, serves them to your network, and can split a model across several of your devices.',
           },
           {
             type: 'plain-terms',
@@ -90,10 +92,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Version reviewed: 2.2.0, as shown on the [App Store listing](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144).',
-          'Price: free to download; MLXHub Plus is listed at $6.99 per month, $44.99 per year and $229.99 lifetime.',
-          'Platform: iOS and iPadOS 26.0 or later; the official site asks for Apple silicon and 6 GB of RAM or more.',
-          'Standout features: LAN server, multi-device model splitting, tools and skills, Hugging Face mirrors.',
+          'Version reviewed: 2.2.1, as shown on the [App Store listing](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144).',
+          'Price: free to download; MLXHub Plus is listed at $6.99 per month, $44.99 per year and $229.99 lifetime. The developer says chat is unlimited on the free tier, with up to two downloaded models.',
+          'Platform: iOS and iPadOS 26.0 or later on an A14, M1 or newer chip; the developer says RAM only decides which models fit.',
+          'Standout features: LAN server, multi-device model splitting, tools and skills, Hugging Face mirrors; the server and mesh are paid.',
+          'Founder-reviewed: the developer supplied comments and corrections, shown under From the Maker.',
           'Openness: closed source; no public repository was found.',
         ],
       },
@@ -133,7 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Attribute': 'In-app model downloads', 'MLXHub': 'Yes, from Hugging Face' },
           { 'Attribute': 'Image input', 'MLXHub': 'Yes, vision-language models' },
           { 'Attribute': 'Local API server', 'MLXHub': 'Yes, OpenAI-compatible on your LAN' },
-          { 'Attribute': 'Voice input / output', 'MLXHub': 'Not stated in the listing' },
+          { 'Attribute': 'Voice input / output', 'MLXHub': 'Voice Mode in 2.3.0 (developer, pending approval)' },
         ],
         note: 'Attributes follow the mobile-chat comparison used in the Local LLM Software Directory. They come from the App Store listing and official site, which do not cover every feature.',
       },
@@ -155,7 +158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Check device and OS',
-            whyItMatters: 'The listing requires iOS or iPadOS 26.0 or later, and the official site asks for an Apple silicon device with 6 GB of RAM or more.',
+            whyItMatters: 'The listing requires iOS or iPadOS 26.0 or later, and the developer says any device with an A14 or M1 chip or newer works, with RAM deciding which models fit.',
           },
           {
             title: 'Install MLXHub',
@@ -185,6 +188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Model switching and mirrors.** Switch between text and vision models mid-conversation, and use a community Hugging Face mirror when Hugging Face is blocked.',
           '**Large-model streaming.** The listing mentions NAND expert streaming for larger models such as Qwen3.6 35B-A3B, without further detail.',
           '**Languages.** The interface is available in English plus 11 other languages.',
+          '**Announced for 2.3.0.** The developer describes a Voice Mode and Voice Center, image generation, Apple Neural Engine support, free benchmarking tools and a visual entity that represents the system. Version 2.3.0 was still in App Store review when this was written, so none of this appears on the listing yet.',
         ],
       },
       lanAndDistributed: {
@@ -193,24 +197,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**The LAN server turns your device into a small OpenAI-compatible endpoint.** The listing names the /v1/chat/completions and /v1/embeddings routes. Per the official site it also serves a lightweight chat page that anyone on the same Wi-Fi can open in a browser to talk to the loaded models, and it binds to local interfaces only, with no port forwarding.',
           '**Distributed inference pools several of your own devices.** One device hosts and the others join, each taking a slice of the model\'s layers, so a model that none of them fits alone can load. The site says the devices are paired and the traffic encrypted, and that nothing leaves the network. Throughput over Wi-Fi is not published, so expect it to be slower than a single device that fits the model.',
+          '**Both the LAN server and mesh creation are paid features.** The developer says the advanced features need a Plus purchase, while anyone can use the app without paying, for example as a stand-in when a cloud assistant is down or on a plane.',
         ],
       },
       requirements: {
         id: 'requirements',
         title: 'Device Requirements',
         content: [
-          '**MLXHub requires iOS or iPadOS 26.0 or later, an Apple silicon device and 6 GB of RAM or more.** The official site recommends an A17 Pro or M1 chip, or newer. The App Store listing also shows macOS 26.0 (Apple M1 or later) and visionOS 26.0 availability for the same app, without describing a separate desktop version.',
-          'RAM is the real limit. Apple enforces stricter app memory limits on iPhone than on iPad, so larger models fit more often on an iPad. The site warns that a model that does not fit can occasionally still be downloaded, and that the app tries to stop it loading before iOS shuts the app down, without a guarantee.',
+          '**MLXHub requires iOS or iPadOS 26.0 or later and a device with an A14 or M1 chip or newer.** The developer says an earlier "6 GB minimum RAM" statement on the official site was misleading and that RAM only decides which models you can run. The App Store listing also shows macOS 26.0 (Apple M1 or later) and visionOS 26.0 availability for the same app, without describing a separate desktop version.',
+          'RAM is still the practical limit for model size. Apple enforces stricter app memory limits on iPhone than on iPad, so larger models fit more often on an iPad. The site warns that a model that does not fit can occasionally still be downloaded, and that the app tries to stop it loading before iOS shuts the app down, without a guarantee.',
         ],
       },
       privacy: {
         id: 'privacy',
         title: 'Pricing and Privacy',
         content: [
-          '**MLXHub is free to download, with MLXHub Plus listed at $6.99 per month, $44.99 per year and a $229.99 lifetime purchase.** Neither the listing nor the site says which features Plus unlocks, so check the paywall in the app before relying on a feature. Models are downloaded free from Hugging Face, with no per-token fees.',
+          '**MLXHub is free to download, with MLXHub Plus listed at $6.99 per month, $44.99 per year and a $229.99 lifetime purchase.** The listing does not itemize Plus, but the developer states that it unlocks more than two downloaded models, all tools that change something, skills, the server, image generation above 512 px, app themes and icons, mesh creation for running dense models across devices, and every future feature. Check the paywall in the app before relying on a feature. Models are downloaded free from Hugging Face, with no per-token fees.',
+          'The developer says that in version 2.3.0 the LAN Server returns as a separate in-app purchase at $34.49, an alternative to the subscription. The amount is credited toward the lifetime purchase, which would then cost $195.99 instead of $229.99. These are developer-stated prices for a version not yet on the App Store, in US dollars, and other storefronts may show different amounts.',
           'The official site says inference is fully on-device, there are no accounts and nothing identifies you. It also states that since version 2.0.0 the app sends anonymous analytics and diagnostics, covering which features you use, device class and whether a model loaded, and that you can switch them off in Settings.',
           'The app is closed source and this review did not inspect network traffic, so the privacy claims are the developer\'s own. If you enable the LAN server, the data on it is as private as your Wi-Fi network.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'From the Maker',
+        content: [
+          'Juan Colilla of DreamFoundries, the developer of MLXHub, reviewed this page and shared the following about why he built the app. It is presented as the developer\'s own words, lightly edited for readability, not as PromptQuorum\'s independent editorial assessment:',
+          '"I am a tech enthusiast, and I love what AI brings to us. I am an open-weights AI supporter; I think it is a technology that cannot and should not be withheld from people, because it is a differentiating factor nowadays.',
+          'I also love Apple devices, as I have been an iOS engineer since 2018. Even though there were apps that brought local inference to iPhones and iPads, I knew there could be much more for those devices. Apps with a fixed model catalog make you wait for an update before you can use a new model, and custom models like SuperGemma 4 Obliterated are out of the question. Other apps that allowed free access to Hugging Face used only GGUF, not taking advantage of Apple\'s MLX development.',
+          'So that is why I built MLXHub: I want it to be the best app for running MLX models on Apple devices, taking full advantage of the hardware, able to use every compatible model (SwissAI Apertus 1.5 from Europe, IFM K2-Horizon from the United Arab Emirates, SuperGemma 4 uncensored) and even models you would never think would fit, like Qwen3.6 35B-A3B through NAND streaming.',
+          'MLXHub represents freedom for me, and that is the philosophy I have in mind when I develop it. That is why most users can use it entirely for free; the limitations that exist are few and only for advanced users, like the server or tools that change things, so they support the time, resources and effort invested in the development.',
+          'In the latest update, 2.3.0, MLXHub includes an entity that is the visual representation of the system, and a Voice Center, so your iPad can act as your home AI server while replying to your questions. Something similar to Apple Home, but more techie. I have also introduced Voice Mode, image generation, Apple Neural Engine support and benchmarking tools, for free. I want MLXHub to be the reliable assistant for everyone: it works offline, it is fast, it is beautiful, and it is the reference for how any iOS device works with local AI models."',
+        ],
+        note: '— Juan Colilla, developer (DreamFoundries)',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -221,27 +240,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Benefit': 'Offline MLX inference',
             'What it means in real use': 'Chat with open models with no connection, using Apple\'s own framework.',
-            'Limitation / caveat': 'Needs iOS 26 and 6 GB of RAM; iPhone memory limits cap model size.',
+            'Limitation / caveat': 'Needs iOS 26 and an A14 or M1 chip; RAM caps model size.',
           },
           {
             'Benefit': 'LAN server',
             'What it means in real use': 'Other apps and browsers on your Wi-Fi can use the loaded models.',
-            'Limitation / caveat': 'The device must stay awake and on the network; no throughput figures are published.',
+            'Limitation / caveat': 'Paid (Plus) per the developer; the device must stay awake and on the network.',
           },
           {
             'Benefit': 'Multi-device splitting',
             'What it means in real use': 'Load a model that no single device of yours can hold.',
-            'Limitation / caveat': 'Speed over Wi-Fi is undocumented and needs several compatible devices.',
+            'Limitation / caveat': 'Paid (Plus); speed over Wi-Fi is undocumented; needs several devices.',
           },
           {
             'Benefit': 'Tools, memory and skills',
             'What it means in real use': 'Reach Calendar, Reminders and Health from a chat.',
-            'Limitation / caveat': 'The listing gives no detail on what each tool does.',
+            'Limitation / caveat': 'Tools that change things are Plus; the listing gives no per-tool detail.',
           },
           {
             'Benefit': 'Free to start',
-            'What it means in real use': 'No per-token fees; models are free from Hugging Face.',
-            'Limitation / caveat': 'Plus costs up to $229.99 lifetime, and what it unlocks is not stated.',
+            'What it means in real use': 'Unlimited free chat per the developer; no per-token fees.',
+            'Limitation / caveat': 'Free tier allows two downloaded models; Plus costs up to $229.99 lifetime.',
           },
         ],
       },
@@ -304,8 +323,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Anyone who needs open source.** The code is not public; [Private Mind](/power-local-llm/private-mind-review) and [PocketPal AI](/power-local-llm/pocketpal-ai-review) are open source.',
           '**Android users.** Only Apple platforms are listed; PocketPal AI and Private Mind both run on Android.',
-          '**Devices below iOS 26 or under 6 GB of RAM.** The listing and site set those floors.',
-          '**Anyone who wants a stated feature list for the paid tier.** What MLXHub Plus unlocks is not documented; try the free tier first.',
+          '**Devices below iOS 26 or older than an A14 or M1 chip.** The listing and the developer set those floors.',
+          '**Anyone who wants the LAN server or mesh for free.** Per the developer, the server, tools that change things, skills and mesh need Plus; the free tier is capped at two downloaded models.',
         ],
       },
       faq: {
@@ -314,7 +333,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is MLXHub free?',
-            a: 'It is free to download with in-app purchases: MLXHub Plus at $6.99 per month, $44.99 per year, or $229.99 lifetime, as shown on the App Store listing.',
+            a: 'It is free to download with in-app purchases: MLXHub Plus at $6.99 per month, $44.99 per year, or $229.99 lifetime, as shown on the App Store listing. The developer says chat is unlimited on the free tier, with up to two downloaded models.',
+          },
+          {
+            q: 'What does MLXHub Plus unlock?',
+            a: 'Per the developer: more than two downloaded models, tools that change things, skills, the server, image generation above 512 px, themes and icons, mesh creation and future features. In 2.3.0 he adds a $34.49 LAN Server purchase credited toward lifetime ($195.99 instead of $229.99), pending App Store approval.',
+          },
+          {
+            q: 'Which devices can run MLXHub?',
+            a: 'Any iPhone or iPad on iOS or iPadOS 26.0 or later with an A14 or M1 chip or newer. RAM does not set a minimum; it decides which models fit.',
           },
           {
             q: 'Who makes MLXHub?',
@@ -339,8 +366,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           'MLXHub is a good fit on paper for someone with a recent iPad or iPhone who wants offline MLX chat plus the option to use the device as a local endpoint or to pool several devices for a bigger model.',
-          'The caveats are transparency and age: it is closed source, the Plus features are undocumented, speed over multi-device splitting is unpublished, and the listing showed only seven ratings at the time of review.',
-          'If you want open source, start with [Private Mind](/power-local-llm/private-mind-review). If you want the LAN server or multi-device splitting, try MLXHub\'s free tier first.',
+          'The caveats are transparency and age: it is closed source, the listing does not itemize Plus (the developer does, see above), speed over multi-device splitting is unpublished, and the listing showed only eight ratings at the time of review. Version 2.3.0 was still in App Store review, so its additions are the developer\'s description, not verified here.',
+          'If you want open source, start with [Private Mind](/power-local-llm/private-mind-review). If you want the LAN server or multi-device splitting, try MLXHub\'s free tier first; both are paid Plus features per the developer.',
         ],
       },
       sources: {
@@ -350,6 +377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[MLXHub: Local AI & LLM Server on the App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144) — version, price, requirements, features and developer.',
           '[MLXHub official site](https://mlxhub.app) — feature descriptions, device requirements and FAQ, including the analytics statement.',
           '[MLXHub privacy policy](https://mlxhub.app/privacy) — policy page linked from the official site.',
+          'Developer comment and corrections from Juan Colilla (DreamFoundries), received 2026-10-19 — Plus features, device requirements, 2.3.0 pricing and the From the Maker text.',
         ],
       },
       relatedReading: {
@@ -369,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-05',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-19',
     next_refresh_due: '2027-04-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/mlxhub-review-hero-de.webp',
@@ -378,9 +406,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MLXHub ist eine iPhone- und iPad-App, die offene Modelle mit Apples MLX-Framework direkt auf dem Gerät ausführt, sie anderen Apps in Ihrem Netzwerk bereitstellen kann und ein großes Modell auf mehrere Ihrer eigenen Geräte verteilen kann. Diese Rezension beschreibt, was der App-Store-Eintrag und die offizielle Website dokumentieren, was unklar bleibt und wie MLXHub im Vergleich zu anderen lokalen KI-Apps für iOS abschneidet.',
     metaDescription:
-      'MLXHub-Rezension: iPhone- und iPad-App für MLX-Modelle auf dem Gerät mit OpenAI-kompatiblem LAN-Server und Modellaufteilung auf mehrere Geräte. Preise, iOS-26- und RAM-Voraussetzungen, Datenschutz, Grenzen.',
+      'MLXHub-Rezension: iPhone- und iPad-App für MLX-Modelle auf dem Gerät mit OpenAI-kompatiblem LAN-Server und Modellaufteilung auf mehrere Geräte. Preise, was Plus freischaltet, iOS-26-Geräteanforderungen, Datenschutz, Grenzen, Kommentare des Entwicklers.',
     twitterDescription:
-      'MLXHub-Rezension: eine Freemium-App für iOS/iPadOS, die MLX-Modelle offline ausführt, über Ihr LAN bereitstellt und große Modelle auf Geräte verteilt. Anforderungen, Preise, Datenschutz, Grenzen.',
+      'MLXHub-Rezension: eine Freemium-App für iOS/iPadOS, die MLX-Modelle offline ausführt, über Ihr LAN bereitstellt und große Modelle auf Geräte verteilt. Anforderungen, Preise, was Plus freischaltet, Datenschutz, Grenzen, Kommentare des Entwicklers.',
     audience:
       'iPhone- und iPad-Nutzer, die offene Modelle offline ausführen und das Gerät optional als lokalen OpenAI-kompatiblen Endpunkt nutzen möchten — behandelt Funktionen, Anforderungen, Preise, Datenschutz, Grenzen und Alternativen.',
     readTime: '8 Min. Lesezeit',
@@ -397,22 +425,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mlx swift app',
       'lokale ki app ipad',
     ],
-    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A17 Pro', 'M1'],
+    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A14', 'A17 Pro', 'M1'],
     leadAnswerBlock:
-      '**MLXHub ist eine nicht quelloffene Freemium-App für iOS und iPadOS, die offene Sprach- und Vision-Modelle offline auf Apple silicon ausführt, sie als OpenAI-kompatiblen Server in Ihrem WLAN bereitstellen kann und mehrere Ihrer Geräte bündeln kann, um ein Modell zu laden, das auf keines davon allein passt.** Laut App-Store-Eintrag setzt sie iOS oder iPadOS 26.0 oder neuer voraus und lässt sich kostenlos herunterladen; MLXHub Plus wird als In-App-Kauf angeboten. Diese Rezension behandelt Version 2.2.0 und beruht auf dem öffentlichen Eintrag und der offiziellen Website, nicht auf praktischen Tests.',
+      '**MLXHub ist eine nicht quelloffene Freemium-App für iOS und iPadOS, die offene Sprach- und Vision-Modelle offline auf Apple silicon ausführt, sie als OpenAI-kompatiblen Server in Ihrem WLAN bereitstellen kann und mehrere Ihrer Geräte bündeln kann, um ein Modell zu laden, das auf keines davon allein passt.** Laut App-Store-Eintrag setzt sie iOS oder iPadOS 26.0 oder neuer voraus und lässt sich kostenlos herunterladen; MLXHub Plus wird als In-App-Kauf angeboten. Laut Entwickler erlaubt die kostenlose Stufe unbegrenzten Chat mit bis zu zwei heruntergeladenen Modellen, während Server, Mesh und weitere erweiterte Funktionen Plus erfordern. Der Entwickler, Juan Colilla, hat diese Seite geprüft und eigene Kommentare und Korrekturen ergänzt. Diese Rezension behandelt die gelistete Version 2.2.1 und beruht auf dem öffentlichen Eintrag, der offiziellen Website und den Angaben des Entwicklers, nicht auf praktischen Tests; Version 2.3.0 befindet sich noch in der App-Store-Prüfung.',
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich MLXHub für lokale KI auf dem iPhone oder iPad?',
         answer:
-          'Ja, wenn Sie ein iPhone oder iPad mit Apple silicon unter iOS 26 und mindestens 6 GB RAM haben und Offline-Chat sowie einen LAN-Endpunkt oder die Modellaufteilung auf mehrere Geräte nutzen möchten. Verzichten Sie darauf, wenn Sie Open Source, Android oder eine feste Liste kostenloser Funktionen brauchen: Der Code ist nicht öffentlich, und der Eintrag nennt nicht, was MLXHub Plus freischaltet. Locally AI und Private Mind sind einfachere On-Device-Alternativen.',
+          'Ja, wenn Sie ein iPhone oder iPad unter iOS 26 mit A14- oder M1-Chip oder neuer haben und Offline-Chat nutzen möchten, optional mit LAN-Endpunkt oder Modellaufteilung auf mehrere Geräte. Der RAM entscheidet nur darüber, welche Modelle passen. Verzichten Sie darauf, wenn Sie Open Source, Android oder einen kostenlosen LAN-Server brauchen: Der Code ist nicht öffentlich, und laut Entwickler sind Server und Mesh kostenpflichtige Plus-Funktionen. Locally AI und Private Mind sind einfachere On-Device-Alternativen.',
         bullets: [
           'Kostenloser Download mit In-App-Käufen: Plus für $6.99 pro Monat, $44.99 pro Jahr oder $229.99 einmalig.',
+          'Laut Entwickler ist der Chat in der kostenlosen Stufe unbegrenzt, mit bis zu zwei heruntergeladenen Modellen; Server, Tools, Skills und Mesh erfordern Plus.',
           'Führt offene Text- und Vision-Modelle über mlx-swift auf dem Gerät aus; die Modelle stammen von Hugging Face.',
           'Optionaler LAN-Server mit den OpenAI-typischen Routen /v1/chat/completions und /v1/embeddings.',
           'Verteilte Inferenz teilt ein Modell auf Ihre eigenen gekoppelten Geräte im selben Netzwerk auf.',
-          'Benötigt iOS oder iPadOS 26.0 oder neuer auf Apple silicon mit mindestens 6 GB RAM.',
+          'Benötigt iOS oder iPadOS 26.0 oder neuer auf einem A14-, M1- oder neueren Chip; der RAM entscheidet, welche Modelle passen.',
         ],
-        updatedDate: '2026-10-05',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -425,6 +454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LAN-Server und verteilte Inferenz', anchor: 'lan-and-distributed' },
       { label: 'Geräteanforderungen', anchor: 'requirements' },
       { label: 'Preise und Datenschutz', anchor: 'privacy' },
+      { label: 'Vom Entwickler', anchor: 'from-the-maker' },
       { label: 'Abwägungen: Vorteile vs. Einschränkungen', anchor: 'tradeoffs' },
       { label: 'MLXHub vs. Alternativen', anchor: 'vs-alternatives' },
       { label: 'Wer MLXHub nutzen sollte', anchor: 'who-should-use' },
@@ -442,7 +472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MLXHub des Entwicklers Juan Colilla ist eine Freemium-App für iPhone und iPad, die offene Modelle mit Apples MLX-Framework offline ausführt, sie Ihrem Netzwerk bereitstellt und ein Modell auf mehrere Ihrer Geräte verteilen kann.',
+            text: 'MLXHub des Entwicklers Juan Colilla, der diese Seite geprüft hat, ist eine Freemium-App für iPhone und iPad, die offene Modelle mit Apples MLX-Framework offline ausführt, sie Ihrem Netzwerk bereitstellt und ein Modell auf mehrere Ihrer Geräte verteilen kann.',
           },
           {
             type: 'plain-terms',
@@ -450,10 +480,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Getestete Version: 2.2.0, wie im [App-Store-Eintrag](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144) angezeigt.',
-          'Preis: kostenloser Download; MLXHub Plus ist mit $6.99 pro Monat, $44.99 pro Jahr und $229.99 einmalig gelistet.',
-          'Plattform: iOS und iPadOS 26.0 oder neuer; die offizielle Website verlangt Apple silicon und mindestens 6 GB RAM.',
-          'Besondere Funktionen: LAN-Server, Modellaufteilung auf mehrere Geräte, Tools und Skills, Hugging-Face-Mirrors.',
+          'Getestete Version: 2.2.1, wie im [App-Store-Eintrag](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144) angezeigt.',
+          'Preis: kostenloser Download; MLXHub Plus ist mit $6.99 pro Monat, $44.99 pro Jahr und $229.99 einmalig gelistet. Laut Entwickler ist der Chat in der kostenlosen Stufe unbegrenzt, mit bis zu zwei heruntergeladenen Modellen.',
+          'Plattform: iOS und iPadOS 26.0 oder neuer auf einem A14-, M1- oder neueren Chip; laut Entwickler entscheidet der RAM nur darüber, welche Modelle passen.',
+          'Besondere Funktionen: LAN-Server, Modellaufteilung auf mehrere Geräte, Tools und Skills, Hugging-Face-Mirrors; Server und Mesh sind kostenpflichtig.',
+          'Vom Entwickler geprüft: Der Entwickler hat Kommentare und Korrekturen geliefert, nachzulesen unter „Vom Entwickler".',
           'Offenheit: nicht quelloffen; es wurde kein öffentliches Repository gefunden.',
         ],
       },
@@ -493,7 +524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Merkmal': 'Modell-Downloads in der App', 'MLXHub': 'Ja, von Hugging Face' },
           { 'Merkmal': 'Bildeingabe', 'MLXHub': 'Ja, Vision-Language-Modelle' },
           { 'Merkmal': 'Lokaler API-Server', 'MLXHub': 'Ja, OpenAI-kompatibel im LAN' },
-          { 'Merkmal': 'Spracheingabe / -ausgabe', 'MLXHub': 'Im Eintrag nicht angegeben' },
+          { 'Merkmal': 'Spracheingabe / -ausgabe', 'MLXHub': 'Voice Mode in 2.3.0 (Entwickler, ausstehend)' },
         ],
         note: 'Die Merkmale folgen dem Vergleichsschema für mobile Chat-Apps im Verzeichnis lokaler LLM-Software. Sie stammen aus dem App-Store-Eintrag und der offiziellen Website, die nicht jede Funktion abdecken.',
       },
@@ -515,7 +546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Gerät und Betriebssystem prüfen',
-            whyItMatters: 'Der Eintrag setzt iOS oder iPadOS 26.0 oder neuer voraus, und die offizielle Website verlangt ein Gerät mit Apple silicon und mindestens 6 GB RAM.',
+            whyItMatters: 'Der Eintrag setzt iOS oder iPadOS 26.0 oder neuer voraus, und laut Entwickler genügt jedes Gerät mit A14- oder M1-Chip oder neuer; der RAM entscheidet, welche Modelle passen.',
           },
           {
             title: 'MLXHub installieren',
@@ -545,6 +576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Modellwechsel und Mirrors.** Wechseln Sie mitten im Gespräch zwischen Text- und Vision-Modellen und nutzen Sie einen Community-Mirror von Hugging Face, wenn Hugging Face blockiert ist.',
           '**Streaming großer Modelle.** Der Eintrag erwähnt NAND-Expert-Streaming für größere Modelle wie Qwen3.6 35B-A3B, ohne weitere Details.',
           '**Sprachen.** Die Oberfläche ist auf Englisch sowie in 11 weiteren Sprachen verfügbar.',
+          '**Für 2.3.0 angekündigt.** Der Entwickler beschreibt einen Voice Mode und ein Voice Center, Bilderzeugung, Unterstützung der Apple Neural Engine, kostenlose Benchmark-Tools und eine visuelle Entität, die das System darstellt. Version 2.3.0 befand sich beim Verfassen noch in der App-Store-Prüfung, daher erscheint nichts davon bisher im Eintrag.',
         ],
       },
       lanAndDistributed: {
@@ -553,24 +585,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Der LAN-Server macht Ihr Gerät zu einem kleinen OpenAI-kompatiblen Endpunkt.** Der Eintrag nennt die Routen /v1/chat/completions und /v1/embeddings. Laut offizieller Website stellt er außerdem eine schlanke Chat-Seite bereit, die jeder im selben WLAN im Browser öffnen kann, um mit den geladenen Modellen zu sprechen; er bindet sich nur an lokale Schnittstellen, ohne Portweiterleitung.',
           '**Verteilte Inferenz bündelt mehrere Ihrer eigenen Geräte.** Ein Gerät fungiert als Host, die anderen schließen sich an und übernehmen jeweils einen Teil der Modellschichten, sodass sich ein Modell laden lässt, das auf keines davon allein passt. Die Website nennt die Geräte gekoppelt und den Datenverkehr verschlüsselt und gibt an, dass nichts das Netzwerk verlässt. Der Durchsatz über WLAN ist nicht veröffentlicht; rechnen Sie daher damit, dass es langsamer ist als auf einem einzelnen Gerät, auf das das Modell passt.',
+          '**LAN-Server und Mesh-Erstellung sind kostenpflichtige Funktionen.** Der Entwickler sagt, die erweiterten Funktionen erfordern einen Plus-Kauf, während sich die App ohne Zahlung nutzen lässt, etwa als Ersatz, wenn ein Cloud-Assistent ausfällt oder im Flugzeug.',
         ],
       },
       requirements: {
         id: 'requirements',
         title: 'Geräteanforderungen',
         content: [
-          '**MLXHub setzt iOS oder iPadOS 26.0 oder neuer, ein Gerät mit Apple silicon und mindestens 6 GB RAM voraus.** Die offizielle Website empfiehlt einen A17-Pro- oder M1-Chip oder neuer. Der App-Store-Eintrag zeigt für dieselbe App außerdem die Verfügbarkeit für macOS 26.0 (Apple M1 oder neuer) und visionOS 26.0, ohne eine eigene Desktop-Version zu beschreiben.',
-          'Der RAM ist die eigentliche Grenze. Apple setzt auf dem iPhone strengere Speichergrenzen für Apps durch als auf dem iPad, daher passen größere Modelle häufiger auf ein iPad. Die Website warnt, dass sich ein Modell, das nicht passt, mitunter dennoch herunterladen lässt, und dass die App versucht, das Laden zu verhindern, bevor iOS die App beendet, ohne dass dies garantiert ist.',
+          '**MLXHub setzt iOS oder iPadOS 26.0 oder neuer und ein Gerät mit A14- oder M1-Chip oder neuer voraus.** Der Entwickler sagt, eine frühere Angabe „mindestens 6 GB RAM" auf der offiziellen Website sei irreführend gewesen und der RAM entscheide nur darüber, welche Modelle Sie ausführen können. Der App-Store-Eintrag zeigt für dieselbe App außerdem die Verfügbarkeit für macOS 26.0 (Apple M1 oder neuer) und visionOS 26.0, ohne eine eigene Desktop-Version zu beschreiben.',
+          'Der RAM bleibt die praktische Grenze für die Modellgröße. Apple setzt auf dem iPhone strengere Speichergrenzen für Apps durch als auf dem iPad, daher passen größere Modelle häufiger auf ein iPad. Die Website warnt, dass sich ein Modell, das nicht passt, mitunter dennoch herunterladen lässt, und dass die App versucht, das Laden zu verhindern, bevor iOS die App beendet, ohne dass dies garantiert ist.',
         ],
       },
       privacy: {
         id: 'privacy',
         title: 'Preise und Datenschutz',
         content: [
-          '**MLXHub lässt sich kostenlos herunterladen; MLXHub Plus ist mit $6.99 pro Monat, $44.99 pro Jahr und einem Einmalkauf für $229.99 gelistet.** Weder der Eintrag noch die Website nennen, welche Funktionen Plus freischaltet, prüfen Sie daher die Paywall in der App, bevor Sie sich auf eine Funktion verlassen. Modelle laden Sie kostenlos von Hugging Face herunter, ohne Gebühren pro Token.',
+          '**MLXHub lässt sich kostenlos herunterladen; MLXHub Plus ist mit $6.99 pro Monat, $44.99 pro Jahr und einem Einmalkauf für $229.99 gelistet.** Der Eintrag schlüsselt Plus nicht auf, doch der Entwickler gibt an, dass es freischaltet: mehr als zwei heruntergeladene Modelle, alle Tools, die etwas verändern, Skills, den Server, Bilderzeugung über 512 px, App-Themes und Icons, die Mesh-Erstellung für dichte Modelle über mehrere Geräte sowie jede künftige Funktion. Prüfen Sie die Paywall in der App, bevor Sie sich auf eine Funktion verlassen. Modelle laden Sie kostenlos von Hugging Face herunter, ohne Gebühren pro Token.',
+          'Der Entwickler sagt, dass der LAN-Server in Version 2.3.0 als separater In-App-Kauf für $34.49 zurückkehrt, als Alternative zum Abo. Der Betrag wird auf den Einmalkauf angerechnet, der dann $195.99 statt $229.99 kosten würde. Das sind vom Entwickler genannte Preise in US-Dollar für eine Version, die noch nicht im App Store ist; in anderen Storefronts können die Beträge abweichen.',
           'Laut offizieller Website läuft die Inferenz vollständig auf dem Gerät, es gibt keine Konten, und nichts identifiziert Sie. Sie gibt außerdem an, dass die App seit Version 2.0.0 anonyme Analyse- und Diagnosedaten sendet, die erfassen, welche Funktionen Sie nutzen, welche Geräteklasse vorliegt und ob ein Modell geladen wurde, und dass Sie dies in den Einstellungen abschalten können.',
           'Die App ist nicht quelloffen, und diese Rezension hat den Netzwerkverkehr nicht untersucht, die Datenschutzangaben stammen also vom Entwickler selbst. Wenn Sie den LAN-Server aktivieren, sind die Daten darauf nur so privat wie Ihr WLAN.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Vom Entwickler',
+        content: [
+          'Juan Colilla von DreamFoundries, der Entwickler von MLXHub, hat diese Seite geprüft und Folgendes dazu geteilt, warum er die App gebaut hat. Es wird als Originalton des Entwicklers wiedergegeben, zur besseren Lesbarkeit leicht bearbeitet, und nicht als unabhängige redaktionelle Einschätzung von PromptQuorum:',
+          '„Ich bin Technikbegeisterter und liebe, was KI uns bringt. Ich unterstütze KI mit offenen Gewichten; ich halte sie für eine Technologie, die den Menschen nicht vorenthalten werden kann und darf, weil sie heutzutage ein entscheidender Unterschiedsfaktor ist.',
+          'Ich liebe außerdem Apple-Geräte, denn ich bin seit 2018 iOS-Entwickler. Obwohl es bereits Apps gab, die lokale Inferenz auf iPhones und iPads brachten, wusste ich, dass für diese Geräte viel mehr möglich ist. Apps mit festem Modellkatalog lassen Sie auf ein Update warten, bevor Sie ein neues Modell nutzen können, und eigene Modelle wie SuperGemma 4 Obliterated sind ausgeschlossen. Andere Apps, die freien Zugriff auf Hugging Face erlaubten, nutzten nur GGUF und machten sich Apples MLX-Entwicklung nicht zunutze.',
+          'Deshalb habe ich MLXHub gebaut: Es soll die beste App zum Ausführen von MLX-Modellen auf Apple-Geräten sein, die Hardware voll ausnutzen, jedes kompatible Modell verwenden können (SwissAI Apertus 1.5 aus Europa, IFM K2-Horizon aus den Vereinigten Arabischen Emiraten, SuperGemma 4 uncensored) und sogar Modelle, von denen man nie denken würde, dass sie passen, wie Qwen3.6 35B-A3B per NAND-Streaming.',
+          'MLXHub steht für mich für Freiheit, und das ist die Philosophie, die ich bei der Entwicklung im Kopf habe. Deshalb können die meisten Nutzer die App vollständig kostenlos verwenden; die wenigen Einschränkungen betreffen nur fortgeschrittene Nutzer, etwa den Server oder Tools, die etwas verändern, und sie tragen die in die Entwicklung investierte Zeit, Ressourcen und Mühe.',
+          'Im neuesten Update, 2.3.0, enthält MLXHub eine Entität, die das System visuell darstellt, und ein Voice Center, sodass Ihr iPad als KI-Server für Ihr Zuhause dienen kann und dabei Ihre Fragen beantwortet. Ähnlich wie Apple Home, nur technischer. Außerdem habe ich Voice Mode, Bilderzeugung, Unterstützung der Apple Neural Engine und Benchmark-Tools eingeführt, kostenlos. Ich möchte, dass MLXHub der verlässliche Assistent für alle ist: Er funktioniert offline, ist schnell, ist schön und ist die Referenz dafür, wie jedes iOS-Gerät mit lokalen KI-Modellen arbeitet."',
+        ],
+        note: '— Juan Colilla, Entwickler (DreamFoundries)',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -581,27 +628,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'MLX-Inferenz offline',
             'Bedeutung im Alltag': 'Chat mit offenen Modellen ohne Verbindung, mit Apples eigenem Framework.',
-            'Einschränkung / Hinweis': 'Braucht iOS 26 und 6 GB RAM; iPhone-Speichergrenzen begrenzen die Modellgröße.',
+            'Einschränkung / Hinweis': 'Braucht iOS 26 und einen A14- oder M1-Chip; der RAM begrenzt die Modellgröße.',
           },
           {
             'Vorteil': 'LAN-Server',
             'Bedeutung im Alltag': 'Andere Apps und Browser in Ihrem WLAN können die geladenen Modelle nutzen.',
-            'Einschränkung / Hinweis': 'Das Gerät muss wach und im Netzwerk bleiben; keine Durchsatzwerte veröffentlicht.',
+            'Einschränkung / Hinweis': 'Kostenpflichtig (Plus) laut Entwickler; das Gerät muss wach und im Netzwerk bleiben.',
           },
           {
             'Vorteil': 'Aufteilung auf mehrere Geräte',
             'Bedeutung im Alltag': 'Laden Sie ein Modell, das auf kein einzelnes Ihrer Geräte passt.',
-            'Einschränkung / Hinweis': 'Tempo über WLAN ist nicht dokumentiert; mehrere kompatible Geräte nötig.',
+            'Einschränkung / Hinweis': 'Kostenpflichtig (Plus); Tempo über WLAN nicht dokumentiert; mehrere Geräte nötig.',
           },
           {
             'Vorteil': 'Tools, Gedächtnis und Skills',
             'Bedeutung im Alltag': 'Aus dem Chat auf Kalender, Erinnerungen und Health zugreifen.',
-            'Einschränkung / Hinweis': 'Der Eintrag gibt keine Details dazu, was die einzelnen Tools tun.',
+            'Einschränkung / Hinweis': 'Tools, die etwas verändern, sind Plus; der Eintrag nennt keine Details je Tool.',
           },
           {
             'Vorteil': 'Kostenloser Einstieg',
-            'Bedeutung im Alltag': 'Keine Gebühren pro Token; Modelle sind bei Hugging Face kostenlos.',
-            'Einschränkung / Hinweis': 'Plus kostet bis zu $229.99 einmalig; was es freischaltet, ist nicht angegeben.',
+            'Bedeutung im Alltag': 'Laut Entwickler unbegrenzter kostenloser Chat; keine Gebühren pro Token.',
+            'Einschränkung / Hinweis': 'Kostenlos: zwei heruntergeladene Modelle; Plus kostet bis zu $229.99 einmalig.',
           },
         ],
       },
@@ -664,8 +711,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Alle, die Open Source brauchen.** Der Code ist nicht öffentlich; [Private Mind](/de/power-local-llm/private-mind-review) und [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) sind quelloffen.',
           '**Android-Nutzer.** Es sind nur Apple-Plattformen gelistet; PocketPal AI und Private Mind laufen beide unter Android.',
-          '**Geräte mit iOS unter Version 26 oder weniger als 6 GB RAM.** Eintrag und Website setzen diese Untergrenzen.',
-          '**Alle, die eine angegebene Funktionsliste für die Bezahlstufe wollen.** Was MLXHub Plus freischaltet, ist nicht dokumentiert; probieren Sie zuerst die kostenlose Stufe aus.',
+          '**Geräte mit iOS unter Version 26 oder älter als ein A14- oder M1-Chip.** Eintrag und Entwickler setzen diese Untergrenzen.',
+          '**Alle, die den LAN-Server oder Mesh kostenlos wollen.** Laut Entwickler erfordern Server, Tools, die etwas verändern, Skills und Mesh Plus; die kostenlose Stufe ist auf zwei heruntergeladene Modelle begrenzt.',
         ],
       },
       faq: {
@@ -674,7 +721,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Ist MLXHub kostenlos?',
-            a: 'Der Download ist kostenlos, mit In-App-Käufen: MLXHub Plus für $6.99 pro Monat, $44.99 pro Jahr oder $229.99 einmalig, wie im App-Store-Eintrag angezeigt.',
+            a: 'Der Download ist kostenlos, mit In-App-Käufen: MLXHub Plus für $6.99 pro Monat, $44.99 pro Jahr oder $229.99 einmalig, wie im App-Store-Eintrag angezeigt. Der Entwickler sagt, der Chat sei in der kostenlosen Stufe unbegrenzt, mit bis zu zwei heruntergeladenen Modellen.',
+          },
+          {
+            q: 'Was schaltet MLXHub Plus frei?',
+            a: 'Laut Entwickler: mehr als zwei heruntergeladene Modelle, Tools, die etwas verändern, Skills, den Server, Bilderzeugung über 512 px, Themes und Icons, Mesh-Erstellung und künftige Funktionen. In 2.3.0 ergänzt er einen LAN-Server-Kauf für $34.49, der auf den Einmalkauf angerechnet wird ($195.99 statt $229.99), vorbehaltlich der App-Store-Freigabe.',
+          },
+          {
+            q: 'Welche Geräte können MLXHub ausführen?',
+            a: 'Jedes iPhone oder iPad mit iOS oder iPadOS 26.0 oder neuer und einem A14- oder M1-Chip oder neuer. Der RAM legt keine Mindestgrenze fest; er entscheidet, welche Modelle passen.',
           },
           {
             q: 'Wer entwickelt MLXHub?',
@@ -699,8 +754,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fazit',
         content: [
           'MLXHub passt auf dem Papier gut zu jemandem mit einem aktuellen iPad oder iPhone, der Offline-MLX-Chat möchte, dazu die Option, das Gerät als lokalen Endpunkt zu nutzen oder mehrere Geräte für ein größeres Modell zu bündeln.',
-          'Die Vorbehalte sind Transparenz und Alter: Die App ist nicht quelloffen, die Plus-Funktionen sind nicht dokumentiert, das Tempo bei der Aufteilung auf mehrere Geräte ist nicht veröffentlicht, und der Eintrag zeigte zum Zeitpunkt der Rezension nur sieben Bewertungen.',
-          'Wenn Sie Open Source wollen, beginnen Sie mit [Private Mind](/de/power-local-llm/private-mind-review). Wenn Sie den LAN-Server oder die Aufteilung auf mehrere Geräte möchten, probieren Sie zuerst die kostenlose Stufe von MLXHub aus.',
+          'Die Vorbehalte sind Transparenz und Alter: Die App ist nicht quelloffen, der Eintrag schlüsselt Plus nicht auf (der Entwickler tut es, siehe oben), das Tempo bei der Aufteilung auf mehrere Geräte ist nicht veröffentlicht, und der Eintrag zeigte zum Zeitpunkt der Rezension nur acht Bewertungen. Version 2.3.0 befand sich noch in der App-Store-Prüfung, ihre Ergänzungen sind daher die Beschreibung des Entwicklers und hier nicht überprüft.',
+          'Wenn Sie Open Source wollen, beginnen Sie mit [Private Mind](/de/power-local-llm/private-mind-review). Wenn Sie den LAN-Server oder die Aufteilung auf mehrere Geräte möchten, probieren Sie zuerst die kostenlose Stufe von MLXHub aus; beides sind laut Entwickler kostenpflichtige Plus-Funktionen.',
         ],
       },
       sources: {
@@ -710,6 +765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[MLXHub: Local AI & LLM Server im App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144) — Version, Preis, Anforderungen, Funktionen und Entwickler.',
           '[Offizielle MLXHub-Website](https://mlxhub.app) — Funktionsbeschreibungen, Geräteanforderungen und FAQ, einschließlich der Angabe zur Analyse.',
           '[Datenschutzerklärung von MLXHub](https://mlxhub.app/privacy) — von der offiziellen Website verlinkte Richtlinienseite.',
+          'Kommentar und Korrekturen von Juan Colilla (DreamFoundries), erhalten am 2026-10-19 — Plus-Funktionen, Geräteanforderungen, Preise in 2.3.0 und der Text „Vom Entwickler".',
         ],
       },
       relatedReading: {
@@ -729,7 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-05',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-19',
     next_refresh_due: '2027-04-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/mlxhub-review-hero-fr.webp',
@@ -738,9 +794,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MLXHub est une application iPhone et iPad qui exécute des modèles ouverts sur l\'appareil grâce au framework MLX d\'Apple, peut les servir à d\'autres applications de votre réseau et peut répartir un gros modèle sur plusieurs de vos propres appareils. Cet avis couvre ce que documentent sa fiche App Store et son site officiel, ce qui reste flou, et la comparaison de MLXHub avec d\'autres applications d\'IA locale pour iOS.',
     metaDescription:
-      'Avis MLXHub : application iPhone et iPad pour modèles MLX sur l\'appareil, avec serveur LAN compatible OpenAI et répartition de modèle entre appareils. Tarifs, prérequis iOS 26 et RAM, confidentialité, limites.',
+      'Avis MLXHub : application iPhone et iPad pour modèles MLX sur l\'appareil, avec serveur LAN compatible OpenAI et répartition de modèle entre appareils. Tarifs, ce que débloque Plus, appareils compatibles iOS 26, confidentialité, limites, commentaires du développeur.',
     twitterDescription:
-      'Avis MLXHub : une application iOS/iPadOS freemium qui exécute des modèles MLX hors ligne, les sert sur votre réseau local et répartit les gros modèles entre appareils. Configuration requise, tarifs, confidentialité, limites.',
+      'Avis MLXHub : une application iOS/iPadOS freemium qui exécute des modèles MLX hors ligne, les sert sur votre réseau local et répartit les gros modèles entre appareils. Configuration requise, tarifs, ce que débloque Plus, confidentialité, limites, commentaires du développeur.',
     audience:
       'Utilisateurs d\'iPhone et d\'iPad qui veulent exécuter des modèles ouverts hors ligne et, en option, utiliser l\'appareil comme point d\'accès local compatible OpenAI — couvre les fonctionnalités, la configuration requise, les tarifs, la confidentialité, les limites et les alternatives.',
     readTime: '8 min de lecture',
@@ -757,22 +813,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'application mlx swift',
       'application ia locale ipad',
     ],
-    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A17 Pro', 'M1'],
+    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A14', 'A17 Pro', 'M1'],
     leadAnswerBlock:
-      '**MLXHub est une application iOS et iPadOS freemium et à code source fermé qui exécute des modèles de langage et de vision ouverts hors ligne sur Apple silicon, peut les exposer comme serveur compatible OpenAI sur votre Wi-Fi, et peut mettre en commun plusieurs de vos appareils pour charger un modèle qu\'aucun ne peut contenir seul.** Selon sa fiche App Store, elle exige iOS ou iPadOS 26.0 ou ultérieur et se télécharge gratuitement, avec MLXHub Plus en achats intégrés. Cet avis porte sur la version 2.2.0 et s\'appuie sur la fiche publique et le site officiel, pas sur des tests pratiques.',
+      '**MLXHub est une application iOS et iPadOS freemium et à code source fermé qui exécute des modèles de langage et de vision ouverts hors ligne sur Apple silicon, peut les exposer comme serveur compatible OpenAI sur votre Wi-Fi, et peut mettre en commun plusieurs de vos appareils pour charger un modèle qu\'aucun ne peut contenir seul.** Selon sa fiche App Store, elle exige iOS ou iPadOS 26.0 ou ultérieur et se télécharge gratuitement, avec MLXHub Plus en achats intégrés. Selon le développeur, la version gratuite permet un chat illimité avec jusqu\'à deux modèles téléchargés, tandis que le serveur, le maillage (mesh) et les autres fonctionnalités avancées nécessitent Plus. Le développeur, Juan Colilla, a relu cette page et y a ajouté ses propres commentaires et corrections. Cet avis porte sur la version 2.2.1 indiquée sur la fiche et s\'appuie sur la fiche publique, le site officiel et les déclarations du développeur, pas sur des tests pratiques ; la version 2.3.0 est encore en cours de validation par l\'App Store.',
     quickAnswerTop: {
       fr: {
         question: 'MLXHub vaut-elle d\'être installée pour l\'IA locale sur iPhone ou iPad ?',
         answer:
-          'Oui, si vous avez un iPhone ou un iPad Apple silicon sous iOS 26 avec au moins 6 Go de RAM et que vous voulez un chat hors ligne, plus un point d\'accès LAN ou la répartition de modèle entre appareils. Passez votre chemin si vous avez besoin d\'open source, d\'Android ou d\'une liste fixe de fonctionnalités gratuites : le code n\'est pas public et la fiche n\'indique pas ce que MLXHub Plus débloque. Locally AI et Private Mind sont des alternatives plus simples sur l\'appareil.',
+          'Oui, si vous avez un iPhone ou un iPad sous iOS 26 avec une puce A14 ou M1 (ou plus récente) et que vous voulez un chat hors ligne, avec en option un point d\'accès LAN ou la répartition de modèle entre appareils. La RAM détermine seulement quels modèles tiennent. Passez votre chemin si vous avez besoin d\'open source, d\'Android ou d\'un serveur LAN gratuit : le code n\'est pas public et, selon le développeur, le serveur et le maillage (mesh) sont des fonctionnalités payantes de Plus. Locally AI et Private Mind sont des alternatives plus simples sur l\'appareil.',
         bullets: [
           'Téléchargement gratuit avec achats intégrés : Plus à $6.99 par mois, $44.99 par an ou $229.99 à vie.',
+          'Selon le développeur, le chat est illimité dans la version gratuite, avec jusqu\'à deux modèles téléchargés ; le serveur, les outils, les compétences et le maillage (mesh) nécessitent Plus.',
           'Exécute des modèles de texte et de vision ouverts sur l\'appareil via mlx-swift ; les modèles viennent de Hugging Face.',
           'Serveur LAN facultatif avec des routes de type OpenAI /v1/chat/completions et /v1/embeddings.',
           'L\'inférence distribuée répartit un modèle entre vos propres appareils appairés sur le même réseau.',
-          'Nécessite iOS ou iPadOS 26.0 ou ultérieur sur Apple silicon avec 6 Go de RAM ou plus.',
+          'Nécessite iOS ou iPadOS 26.0 ou ultérieur sur une puce A14, M1 ou plus récente ; la RAM détermine quels modèles tiennent.',
         ],
-        updatedDate: '2026-10-05',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -785,6 +842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Serveur LAN et inférence distribuée', anchor: 'lan-and-distributed' },
       { label: 'Configuration requise', anchor: 'requirements' },
       { label: 'Tarifs et confidentialité', anchor: 'privacy' },
+      { label: 'Le mot du développeur', anchor: 'from-the-maker' },
       { label: 'Compromis : avantages vs. limites', anchor: 'tradeoffs' },
       { label: 'MLXHub vs. alternatives', anchor: 'vs-alternatives' },
       { label: 'Qui devrait utiliser MLXHub', anchor: 'who-should-use' },
@@ -802,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MLXHub, du développeur Juan Colilla, est une application iPhone et iPad freemium qui exécute des modèles ouverts hors ligne grâce au framework MLX d\'Apple, les sert à votre réseau et peut répartir un modèle sur plusieurs de vos appareils.',
+            text: 'MLXHub, du développeur Juan Colilla, qui a relu cette page, est une application iPhone et iPad freemium qui exécute des modèles ouverts hors ligne grâce au framework MLX d\'Apple, les sert à votre réseau et peut répartir un modèle sur plusieurs de vos appareils.',
           },
           {
             type: 'plain-terms',
@@ -810,10 +868,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Version testée : 2.2.0, telle qu\'affichée sur la [fiche App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144).',
-          'Prix : téléchargement gratuit ; MLXHub Plus est listé à $6.99 par mois, $44.99 par an et $229.99 à vie.',
-          'Plateforme : iOS et iPadOS 26.0 ou ultérieur ; le site officiel demande Apple silicon et 6 Go de RAM ou plus.',
-          'Points forts : serveur LAN, répartition de modèle entre appareils, outils et compétences, miroirs Hugging Face.',
+          'Version testée : 2.2.1, telle qu\'affichée sur la [fiche App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144).',
+          'Prix : téléchargement gratuit ; MLXHub Plus est listé à $6.99 par mois, $44.99 par an et $229.99 à vie. Le développeur indique que le chat est illimité dans la version gratuite, avec jusqu\'à deux modèles téléchargés.',
+          'Plateforme : iOS et iPadOS 26.0 ou ultérieur sur une puce A14, M1 ou plus récente ; le développeur précise que la RAM détermine seulement quels modèles tiennent.',
+          'Points forts : serveur LAN, répartition de modèle entre appareils, outils et compétences, miroirs Hugging Face ; le serveur et le maillage (mesh) sont payants.',
+          'Relu par le développeur : il a fourni commentaires et corrections, présentés sous « Le mot du développeur ».',
           'Ouverture : code source fermé ; aucun dépôt public n\'a été trouvé.',
         ],
       },
@@ -853,7 +912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Attribut': 'Téléchargement de modèles', 'MLXHub': 'Oui, depuis Hugging Face' },
           { 'Attribut': 'Entrée d\'images', 'MLXHub': 'Oui, modèles vision-langage' },
           { 'Attribut': 'Serveur d\'API local', 'MLXHub': 'Oui, compatible OpenAI sur votre LAN' },
-          { 'Attribut': 'Entrée / sortie vocale', 'MLXHub': 'Non indiqué dans la fiche' },
+          { 'Attribut': 'Entrée / sortie vocale', 'MLXHub': 'Mode vocal dans la 2.3.0 (développeur, en attente de validation)' },
         ],
         note: 'Les attributs suivent la comparaison des applications de chat mobiles utilisée dans le répertoire des logiciels LLM locaux. Ils proviennent de la fiche App Store et du site officiel, qui ne couvrent pas toutes les fonctionnalités.',
       },
@@ -875,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Vérifier l\'appareil et le système',
-            whyItMatters: 'La fiche exige iOS ou iPadOS 26.0 ou ultérieur, et le site officiel demande un appareil Apple silicon avec 6 Go de RAM ou plus.',
+            whyItMatters: 'La fiche exige iOS ou iPadOS 26.0 ou ultérieur, et le développeur indique que tout appareil doté d\'une puce A14 ou M1 (ou plus récente) convient, la RAM déterminant quels modèles tiennent.',
           },
           {
             title: 'Installer MLXHub',
@@ -905,6 +964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Changement de modèle et miroirs.** Passez d\'un modèle de texte à un modèle de vision en pleine conversation, et utilisez un miroir Hugging Face communautaire quand Hugging Face est bloqué.',
           '**Diffusion de gros modèles.** La fiche mentionne le streaming d\'experts depuis la NAND pour les modèles plus gros comme Qwen3.6 35B-A3B, sans plus de détails.',
           '**Langues.** L\'interface est disponible en anglais et dans 11 autres langues.',
+          '**Annoncé pour la 2.3.0.** Le développeur décrit un mode vocal et un Voice Center, la génération d\'images, la prise en charge de l\'Apple Neural Engine, des outils de benchmark gratuits et une entité visuelle qui représente le système. La version 2.3.0 était encore en cours de validation par l\'App Store au moment de la rédaction ; rien de tout cela n\'apparaît donc encore sur la fiche.',
         ],
       },
       lanAndDistributed: {
@@ -913,24 +973,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Le serveur LAN transforme votre appareil en petit point d\'accès compatible OpenAI.** La fiche nomme les routes /v1/chat/completions et /v1/embeddings. Selon le site officiel, il sert aussi une page de chat légère que toute personne sur le même Wi-Fi peut ouvrir dans un navigateur pour dialoguer avec les modèles chargés, et il n\'écoute que sur les interfaces locales, sans redirection de port.',
           '**L\'inférence distribuée met en commun plusieurs de vos propres appareils.** Un appareil héberge et les autres le rejoignent, chacun prenant une tranche des couches du modèle, de sorte qu\'un modèle qu\'aucun ne peut contenir seul peut se charger. Le site indique que les appareils sont appairés et le trafic chiffré, et que rien ne quitte le réseau. Le débit sur Wi-Fi n\'est pas publié ; attendez-vous donc à un fonctionnement plus lent que sur un seul appareil capable de contenir le modèle.',
+          '**Le serveur LAN et la création d\'un maillage (mesh) sont des fonctionnalités payantes.** Le développeur indique que les fonctionnalités avancées nécessitent un achat Plus, tandis que tout le monde peut utiliser l\'application sans payer, par exemple en remplacement quand un assistant cloud est en panne ou en avion.',
         ],
       },
       requirements: {
         id: 'requirements',
         title: 'Configuration requise',
         content: [
-          '**MLXHub exige iOS ou iPadOS 26.0 ou ultérieur, un appareil Apple silicon et 6 Go de RAM ou plus.** Le site officiel recommande une puce A17 Pro ou M1, ou plus récente. La fiche App Store indique aussi une disponibilité pour macOS 26.0 (Apple M1 ou ultérieur) et visionOS 26.0 pour la même application, sans décrire de version de bureau distincte.',
-          'La RAM est la vraie limite. Apple impose des limites de mémoire par application plus strictes sur l\'iPhone que sur l\'iPad ; les modèles plus gros tiennent donc plus souvent sur un iPad. Le site prévient qu\'un modèle qui ne tient pas peut parfois être téléchargé quand même, et que l\'application tente d\'en empêcher le chargement avant qu\'iOS ne ferme l\'application, sans garantie.',
+          '**MLXHub exige iOS ou iPadOS 26.0 ou ultérieur et un appareil doté d\'une puce A14 ou M1, ou plus récente.** Le développeur indique qu\'une mention antérieure d\'un « minimum de 6 Go de RAM » sur le site officiel était trompeuse et que la RAM détermine seulement quels modèles vous pouvez exécuter. La fiche App Store indique aussi une disponibilité pour macOS 26.0 (Apple M1 ou ultérieur) et visionOS 26.0 pour la même application, sans décrire de version de bureau distincte.',
+          'La RAM reste la limite pratique pour la taille des modèles. Apple impose des limites de mémoire par application plus strictes sur l\'iPhone que sur l\'iPad ; les modèles plus gros tiennent donc plus souvent sur un iPad. Le site prévient qu\'un modèle qui ne tient pas peut parfois être téléchargé quand même, et que l\'application tente d\'en empêcher le chargement avant qu\'iOS ne ferme l\'application, sans garantie.',
         ],
       },
       privacy: {
         id: 'privacy',
         title: 'Tarifs et confidentialité',
         content: [
-          '**MLXHub se télécharge gratuitement, avec MLXHub Plus listé à $6.99 par mois, $44.99 par an et un achat à vie à $229.99.** Ni la fiche ni le site n\'indiquent quelles fonctionnalités Plus débloque ; vérifiez donc l\'écran d\'achat dans l\'application avant de compter sur une fonctionnalité. Les modèles se téléchargent gratuitement depuis Hugging Face, sans frais par token.',
+          '**MLXHub se télécharge gratuitement, avec MLXHub Plus listé à $6.99 par mois, $44.99 par an et un achat à vie à $229.99.** La fiche ne détaille pas Plus, mais le développeur déclare qu\'il débloque : plus de deux modèles téléchargés, tous les outils qui modifient quelque chose, les compétences, le serveur, la génération d\'images au-delà de 512 px, les thèmes et icônes de l\'application, la création de maillage (mesh) pour exécuter des modèles denses sur plusieurs appareils, et toutes les fonctionnalités futures. Vérifiez l\'écran d\'achat dans l\'application avant de compter sur une fonctionnalité. Les modèles se téléchargent gratuitement depuis Hugging Face, sans frais par token.',
+          'Le développeur indique que, dans la version 2.3.0, le serveur LAN reviendra sous la forme d\'un achat intégré distinct à $34.49, alternative à l\'abonnement. Ce montant serait déduit de l\'achat à vie, qui coûterait alors $195.99 au lieu de $229.99. Ce sont des prix déclarés par le développeur pour une version pas encore sur l\'App Store, en dollars américains ; les autres boutiques peuvent afficher d\'autres montants.',
           'Le site officiel indique que l\'inférence se fait entièrement sur l\'appareil, qu\'il n\'y a pas de compte et que rien ne vous identifie. Il précise aussi que, depuis la version 2.0.0, l\'application envoie des données d\'analyse et de diagnostic anonymes, couvrant les fonctionnalités utilisées, la classe d\'appareil et le chargement réussi ou non d\'un modèle, et que vous pouvez les désactiver dans les Réglages.',
           'L\'application est à code source fermé et cet avis n\'a pas inspecté le trafic réseau ; les affirmations de confidentialité sont donc celles du développeur. Si vous activez le serveur LAN, les données qui y transitent sont aussi privées que votre réseau Wi-Fi.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Le mot du développeur',
+        content: [
+          'Juan Colilla, de DreamFoundries, développeur de MLXHub, a relu cette page et partage ce qui suit sur les raisons pour lesquelles il a créé l\'application. Il s\'agit des propres mots du développeur (citations traduites de l\'anglais, légèrement remaniées pour la lisibilité), et non de l\'évaluation éditoriale indépendante de PromptQuorum :',
+          '« Je suis passionné de technologie et j\'adore ce que l\'IA nous apporte. Je soutiens l\'IA à poids ouverts ; je pense que c\'est une technologie qui ne peut pas et ne doit pas être refusée aux gens, car c\'est aujourd\'hui un facteur de différenciation.',
+          'J\'aime aussi les appareils Apple, puisque je suis ingénieur iOS depuis 2018. Même s\'il existait des applications qui apportaient l\'inférence locale aux iPhone et aux iPad, je savais qu\'on pouvait faire bien plus pour ces appareils. Les applications à catalogue de modèles fixe vous obligent à attendre une mise à jour avant de pouvoir utiliser un nouveau modèle, et les modèles personnalisés comme SuperGemma 4 Obliterated sont hors de question. D\'autres applications, qui donnaient un accès libre à Hugging Face, n\'utilisaient que le format GGUF, sans tirer parti des développements MLX d\'Apple.',
+          'C\'est pourquoi j\'ai créé MLXHub : je veux qu\'elle soit la meilleure application pour exécuter des modèles MLX sur les appareils Apple, en tirant pleinement parti du matériel, capable d\'utiliser tous les modèles compatibles (SwissAI Apertus 1.5 d\'Europe, IFM K2-Horizon des Émirats arabes unis, SuperGemma 4 non censuré) et même des modèles dont on n\'imaginerait jamais qu\'ils tiennent, comme Qwen3.6 35B-A3B grâce au streaming depuis la NAND.',
+          'MLXHub représente la liberté pour moi, et c\'est la philosophie que j\'ai en tête quand je la développe. C\'est pourquoi la plupart des utilisateurs peuvent s\'en servir entièrement gratuitement ; les limitations qui existent sont peu nombreuses et ne concernent que les utilisateurs avancés, comme le serveur ou les outils qui modifient des choses, afin de soutenir le temps, les ressources et les efforts investis dans le développement.',
+          'Dans la dernière mise à jour, la 2.3.0, MLXHub inclut une entité qui est la représentation visuelle du système, et un Voice Center, afin que votre iPad puisse faire office de serveur d\'IA domestique tout en répondant à vos questions. Quelque chose de comparable à Maison, mais plus technique. J\'ai aussi ajouté le mode vocal, la génération d\'images, la prise en charge de l\'Apple Neural Engine et des outils de benchmark, gratuitement. Je veux que MLXHub soit l\'assistant fiable de tout le monde : elle fonctionne hors ligne, elle est rapide, elle est belle, et elle est la référence pour le fonctionnement de tout appareil iOS avec des modèles d\'IA locaux. »',
+        ],
+        note: '— Juan Colilla, développeur (DreamFoundries)',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -941,27 +1016,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Avantage': 'Inférence MLX hors ligne',
             'Ce que cela signifie en usage réel': 'Discutez avec des modèles ouverts sans connexion, avec le framework d\'Apple.',
-            'Limite / réserve': 'Exige iOS 26 et 6 Go de RAM ; les limites mémoire de l\'iPhone plafonnent la taille des modèles.',
+            'Limite / réserve': 'Exige iOS 26 et une puce A14 ou M1 ; la RAM limite les modèles.',
           },
           {
             'Avantage': 'Serveur LAN',
             'Ce que cela signifie en usage réel': 'D\'autres applications et navigateurs de votre Wi-Fi peuvent utiliser les modèles chargés.',
-            'Limite / réserve': 'L\'appareil doit rester allumé et connecté au réseau ; aucun chiffre de débit n\'est publié.',
+            'Limite / réserve': 'Payant (Plus) selon le développeur ; appareil allumé et en réseau.',
           },
           {
             'Avantage': 'Répartition entre appareils',
             'Ce que cela signifie en usage réel': 'Chargez un modèle qu\'aucun de vos appareils ne peut contenir seul.',
-            'Limite / réserve': 'La vitesse sur Wi-Fi n\'est pas documentée et il faut plusieurs appareils compatibles.',
+            'Limite / réserve': 'Payant (Plus) ; vitesse sur Wi-Fi non documentée ; plusieurs appareils requis.',
           },
           {
             'Avantage': 'Outils, mémoire et compétences',
             'Ce que cela signifie en usage réel': 'Accédez à Calendrier, Rappels et Santé depuis un chat.',
-            'Limite / réserve': 'La fiche ne détaille pas ce que fait chaque outil.',
+            'Limite / réserve': 'Les outils qui modifient sont Plus ; aucun détail par outil sur la fiche.',
           },
           {
             'Avantage': 'Gratuite pour commencer',
-            'Ce que cela signifie en usage réel': 'Pas de frais par token ; les modèles sont gratuits sur Hugging Face.',
-            'Limite / réserve': 'Plus coûte jusqu\'à $229.99 à vie, et ce qu\'il débloque n\'est pas indiqué.',
+            'Ce que cela signifie en usage réel': 'Chat gratuit illimité selon le développeur ; pas de frais par token.',
+            'Limite / réserve': 'Gratuit : deux modèles téléchargés ; Plus jusqu\'à $229.99 à vie.',
           },
         ],
       },
@@ -1024,8 +1099,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Toute personne qui a besoin d\'open source.** Le code n\'est pas public ; [Private Mind](/fr/power-local-llm/private-mind-review) et [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) sont open source.',
           '**Les utilisateurs d\'Android.** Seules les plateformes Apple sont listées ; PocketPal AI et Private Mind fonctionnent tous deux sur Android.',
-          '**Les appareils sous iOS 26 ou avec moins de 6 Go de RAM.** La fiche et le site fixent ces seuils.',
-          '**Ceux qui veulent une liste de fonctionnalités explicite pour l\'offre payante.** Ce que MLXHub Plus débloque n\'est pas documenté ; essayez d\'abord la version gratuite.',
+          '**Les appareils sous iOS 26 ou plus anciens qu\'une puce A14 ou M1.** La fiche et le développeur fixent ces seuils.',
+          '**Ceux qui veulent le serveur LAN ou le maillage (mesh) gratuitement.** Selon le développeur, le serveur, les outils qui modifient des choses, les compétences et le maillage nécessitent Plus ; la version gratuite est limitée à deux modèles téléchargés.',
         ],
       },
       faq: {
@@ -1034,7 +1109,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'MLXHub est-elle gratuite ?',
-            a: 'Elle se télécharge gratuitement, avec des achats intégrés : MLXHub Plus à $6.99 par mois, $44.99 par an ou $229.99 à vie, comme indiqué sur la fiche App Store.',
+            a: 'Elle se télécharge gratuitement, avec des achats intégrés : MLXHub Plus à $6.99 par mois, $44.99 par an ou $229.99 à vie, comme indiqué sur la fiche App Store. Le développeur indique que le chat est illimité dans la version gratuite, avec jusqu\'à deux modèles téléchargés.',
+          },
+          {
+            q: 'Que débloque MLXHub Plus ?',
+            a: 'Selon le développeur : plus de deux modèles téléchargés, les outils qui modifient des choses, les compétences, le serveur, la génération d\'images au-delà de 512 px, les thèmes et icônes, la création de maillage (mesh) et les fonctionnalités futures. Dans la 2.3.0, il ajoute un achat « Serveur LAN » à $34.49, déduit de l\'achat à vie ($195.99 au lieu de $229.99), en attente de validation par l\'App Store.',
+          },
+          {
+            q: 'Sur quels appareils MLXHub fonctionne-t-elle ?',
+            a: 'Sur tout iPhone ou iPad sous iOS ou iPadOS 26.0 ou ultérieur avec une puce A14 ou M1, ou plus récente. La RAM ne fixe pas de minimum ; elle détermine quels modèles tiennent.',
           },
           {
             q: 'Qui développe MLXHub ?',
@@ -1059,8 +1142,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Verdict',
         content: [
           'Sur le papier, MLXHub convient bien à qui possède un iPad ou un iPhone récent et veut un chat MLX hors ligne, avec la possibilité d\'utiliser l\'appareil comme point d\'accès local ou de mettre plusieurs appareils en commun pour un modèle plus gros.',
-          'Les réserves tiennent à la transparence et à la jeunesse du projet : le code est fermé, les fonctionnalités Plus ne sont pas documentées, la vitesse de la répartition entre appareils n\'est pas publiée, et la fiche n\'affichait que sept notes au moment de l\'avis.',
-          'Si vous voulez de l\'open source, commencez par [Private Mind](/fr/power-local-llm/private-mind-review). Si vous voulez le serveur LAN ou la répartition entre appareils, essayez d\'abord la version gratuite de MLXHub.',
+          'Les réserves tiennent à la transparence et à la jeunesse du projet : le code est fermé, la fiche ne détaille pas Plus (le développeur le fait, voir plus haut), la vitesse de la répartition entre appareils n\'est pas publiée, et la fiche n\'affichait que huit notes au moment de l\'avis. La version 2.3.0 était encore en cours de validation par l\'App Store ; ses ajouts relèvent donc de la description du développeur et n\'ont pas été vérifiés ici.',
+          'Si vous voulez de l\'open source, commencez par [Private Mind](/fr/power-local-llm/private-mind-review). Si vous voulez le serveur LAN ou la répartition entre appareils, essayez d\'abord la version gratuite de MLXHub ; selon le développeur, les deux sont des fonctionnalités payantes de Plus.',
         ],
       },
       sources: {
@@ -1070,6 +1153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[MLXHub: Local AI & LLM Server sur l\'App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144) — version, prix, configuration requise, fonctionnalités et développeur.',
           '[Site officiel de MLXHub](https://mlxhub.app) — descriptions des fonctionnalités, configuration requise et FAQ, y compris la déclaration sur les données d\'analyse.',
           '[Politique de confidentialité de MLXHub](https://mlxhub.app/privacy) — page de politique liée depuis le site officiel.',
+          'Commentaire et corrections du développeur Juan Colilla (DreamFoundries), reçus le 2026-10-19 — fonctionnalités Plus, configuration requise, tarifs de la 2.3.0 et texte « Le mot du développeur ».',
         ],
       },
       relatedReading: {
@@ -1089,7 +1173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-05',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-19',
     next_refresh_due: '2027-04-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/mlxhub-review-hero-ja.webp',
@@ -1098,9 +1182,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MLXHubは、AppleのMLXフレームワークでオープンモデルを端末上で実行し、ネットワーク上の他のアプリへ提供でき、1つの大きなモデルを手持ちの複数の端末に分割して読み込むこともできるiPhoneとiPad向けアプリです。本レビューでは、App Storeの掲載情報と公式サイトに記載されている内容、不明な点、そして他のiOS向けローカルAIアプリとの比較を扱います。',
     metaDescription:
-      'MLXHubレビュー:オンデバイスのMLXモデル、OpenAI互換のLANサーバー、複数端末でのモデル分割に対応するiPhoneとiPad向けアプリ。料金、iOS 26とRAMの要件、プライバシー、制約を解説。',
+      'MLXHubレビュー:オンデバイスのMLXモデル、OpenAI互換のLANサーバー、複数端末でのモデル分割に対応するiPhoneとiPad向けアプリ。料金、Plusで使える機能、iOS 26の端末要件、プライバシー、制約、開発者コメントを解説。',
     twitterDescription:
-      'MLXHubレビュー:MLXモデルをオフラインで実行し、LAN経由で提供し、大きなモデルを複数端末に分割できるフリーミアムのiOS/iPadOSアプリ。要件、料金、プライバシー、制約を解説。',
+      'MLXHubレビュー:MLXモデルをオフラインで実行し、LAN経由で提供し、大きなモデルを複数端末に分割できるフリーミアムのiOS/iPadOSアプリ。要件、料金、Plusで使える機能、プライバシー、制約、開発者コメントを解説。',
     audience:
       'オープンモデルをオフラインで動かしたい、さらに必要なら端末をローカルのOpenAI互換エンドポイントとして使いたいiPhoneとiPadのユーザー向け——機能、要件、料金、プライバシー、制約、代替アプリを扱う。',
     readTime: '8分で読めます',
@@ -1117,22 +1201,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mlx swift アプリ',
       'ipad ローカルai アプリ',
     ],
-    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A17 Pro', 'M1'],
+    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A14', 'A17 Pro', 'M1'],
     leadAnswerBlock:
-      '**MLXHubは、Apple silicon上でオープンな言語モデルとビジョンモデルをオフライン実行でき、Wi-Fi上でOpenAI互換サーバーとして提供でき、複数の端末をまとめて、どれか1台では載らないモデルを読み込める、フリーミアムでクローズドソースのiOS/iPadOSアプリです。** App Storeの掲載情報によれば、iOSまたはiPadOS 26.0以降が必要で、ダウンロードは無料、MLXHub Plusがアプリ内課金として提供されています。本レビューはバージョン2.2.0が対象で、公開されている掲載情報と公式サイトに基づいており、実機テストは含みません。',
+      '**MLXHubは、Apple silicon上でオープンな言語モデルとビジョンモデルをオフライン実行でき、Wi-Fi上でOpenAI互換サーバーとして提供でき、複数の端末をまとめて、どれか1台では載らないモデルを読み込める、フリーミアムでクローズドソースのiOS/iPadOSアプリです。** App Storeの掲載情報によれば、iOSまたはiPadOS 26.0以降が必要で、ダウンロードは無料、MLXHub Plusがアプリ内課金として提供されています。開発者によると、無料版ではダウンロードしたモデル2つまでチャットが無制限で、サーバー、メッシュなどの高度な機能にはPlusが必要です。開発者のJuan Colilla氏は本ページを確認し、自身のコメントと訂正を寄せました。本レビューは掲載されているバージョン2.2.1が対象で、公開されている掲載情報、公式サイト、開発者の説明に基づいており、実機テストは含みません。バージョン2.3.0はまだApp Storeで審査中です。',
     quickAnswerTop: {
       ja: {
         question: 'iPhoneやiPadでローカルAIを使うために、MLXHubをインストールする価値はありますか?',
         answer:
-          'はい、iOS 26でRAMが6 GB以上のApple silicon搭載iPhoneまたはiPadをお持ちで、オフラインチャットに加えてLANエンドポイントや複数端末でのモデル分割を求めるならおすすめです。オープンソースやAndroid版が必要な人、無料で使える機能の一覧を求める人は見送ってください。コードは公開されておらず、MLXHub Plusで何が使えるようになるかも掲載情報に記載がありません。もっと手軽なオンデバイスの代替アプリは、Locally AIとPrivate Mindです。',
+          'はい、iOS 26でA14またはM1以降のチップを搭載したiPhoneまたはiPadをお持ちで、オフラインチャットを使いたい人(必要ならLANエンドポイントや複数端末でのモデル分割も)におすすめです。RAMは、どのモデルが載るかを左右するだけです。オープンソースやAndroid版が必要な人、無料のLANサーバーを求める人は見送ってください。コードは公開されておらず、開発者によるとサーバーとメッシュは有料のPlus機能です。もっと手軽なオンデバイスの代替アプリは、Locally AIとPrivate Mindです。',
         bullets: [
           'ダウンロードは無料でアプリ内課金あり:Plusは月額$6.99、年額$44.99、買い切り$229.99。',
+          '開発者によると、無料版はダウンロードしたモデル2つまでチャットが無制限。サーバー、ツール、スキル、メッシュにはPlusが必要。',
           'mlx-swiftを通じてオープンなテキストモデルとビジョンモデルを端末上で実行。モデルはHugging Faceから取得。',
           '任意のLANサーバーに、OpenAI形式の/v1/chat/completionsと/v1/embeddingsのルートがある。',
           '分散推論は、同じネットワーク上でペアリングした自分の端末に1つのモデルを分割する。',
-          'Apple siliconでRAM 6 GB以上のiOSまたはiPadOS 26.0以降が必要。',
+          'A14、M1以降のチップを搭載したiOSまたはiPadOS 26.0以降が必要。どのモデルが載るかはRAM次第。',
         ],
-        updatedDate: '2026-10-05',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -1145,6 +1230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LANサーバーと分散推論', anchor: 'lan-and-distributed' },
       { label: '必要な端末要件', anchor: 'requirements' },
       { label: '料金とプライバシー', anchor: 'privacy' },
+      { label: '開発者から', anchor: 'from-the-maker' },
       { label: 'トレードオフ:メリットと制約', anchor: 'tradeoffs' },
       { label: 'MLXHub 対 代替アプリ', anchor: 'vs-alternatives' },
       { label: 'MLXHubを使うべき人', anchor: 'who-should-use' },
@@ -1162,7 +1248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '開発者Juan Colilla氏によるMLXHubは、AppleのMLXフレームワークでオープンモデルをオフライン実行し、ネットワークへ提供でき、1つのモデルを複数の端末に分割することもできる、フリーミアムのiPhoneとiPad向けアプリである。',
+            text: '本ページを確認した開発者Juan Colilla氏によるMLXHubは、AppleのMLXフレームワークでオープンモデルをオフライン実行し、ネットワークへ提供でき、1つのモデルを複数の端末に分割することもできる、フリーミアムのiPhoneとiPad向けアプリである。',
           },
           {
             type: 'plain-terms',
@@ -1170,10 +1256,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'レビュー対象のバージョン:2.2.0。[App Storeの掲載情報](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144)に記載のとおり。',
-          '価格:ダウンロードは無料。MLXHub Plusは月額$6.99、年額$44.99、買い切り$229.99と記載されている。',
-          'プラットフォーム:iOSとiPadOSの26.0以降。公式サイトはApple siliconとRAM 6 GB以上を求めている。',
-          '主な機能:LANサーバー、複数端末でのモデル分割、ツールとスキル、Hugging Faceのミラー。',
+          'レビュー対象のバージョン:2.2.1。[App Storeの掲載情報](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144)に記載のとおり。',
+          '価格:ダウンロードは無料。MLXHub Plusは月額$6.99、年額$44.99、買い切り$229.99と記載されている。開発者によると、無料版はダウンロードしたモデル2つまでチャットが無制限。',
+          'プラットフォーム:A14、M1以降のチップを搭載したiOSとiPadOSの26.0以降。開発者によると、RAMはどのモデルが載るかを左右するだけ。',
+          '主な機能:LANサーバー、複数端末でのモデル分割、ツールとスキル、Hugging Faceのミラー。サーバーとメッシュは有料。',
+          '開発者の確認済み:開発者がコメントと訂正を寄せた。内容は「開発者から」に掲載。',
           'オープン性:クローズドソース。公開リポジトリは見つからなかった。',
         ],
       },
@@ -1213,7 +1300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '項目': 'アプリ内モデルダウンロード', 'MLXHub': '可、Hugging Faceから' },
           { '項目': '画像入力', 'MLXHub': '可、ビジョン言語モデル' },
           { '項目': 'ローカルAPIサーバー', 'MLXHub': '可、LAN上のOpenAI互換' },
-          { '項目': '音声入力/出力', 'MLXHub': '掲載情報に記載なし' },
+          { '項目': '音声入力/出力', 'MLXHub': '2.3.0でVoice Mode(開発者、承認待ち)' },
         ],
         note: '各項目は、ローカルLLMソフトウェアディレクトリで使われているモバイルチャットの比較基準に沿っています。内容はApp Storeの掲載情報と公式サイトに基づいており、すべての機能が網羅されているわけではありません。',
       },
@@ -1235,7 +1322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: '端末とOSを確認する',
-            whyItMatters: '掲載情報ではiOSまたはiPadOS 26.0以降が必要で、公式サイトはRAM 6 GB以上のApple silicon搭載端末を求めています。',
+            whyItMatters: '掲載情報ではiOSまたはiPadOS 26.0以降が必要です。開発者によると、A14またはM1以降のチップを搭載した端末なら動作し、どのモデルが載るかはRAM次第です。',
           },
           {
             title: 'MLXHubをインストールする',
@@ -1265,6 +1352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**モデルの切り替えとミラー。** 会話の途中でテキストモデルとビジョンモデルを切り替えられ、Hugging Faceがブロックされている場合はコミュニティのHugging Faceミラーを使える。',
           '**大きなモデルのストリーミング。** 掲載情報は、Qwen3.6 35B-A3Bのような大きなモデル向けのNANDエキスパートストリーミングに触れているが、詳細は記載していない。',
           '**言語。** インターフェースは英語に加えて11の言語で利用できる。',
+          '**2.3.0で予告されている機能。** 開発者は、Voice ModeとVoice Center、画像生成、Apple Neural Engineへの対応、無料のベンチマークツール、システムを表すビジュアルのエンティティを挙げています。バージョン2.3.0は執筆時点でApp Storeの審査中のため、これらはまだ掲載情報に載っていません。',
         ],
       },
       lanAndDistributed: {
@@ -1273,24 +1361,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**LANサーバーは、端末を小さなOpenAI互換のエンドポイントにします。** 掲載情報には/v1/chat/completionsと/v1/embeddingsのルートが挙げられています。公式サイトによれば、同じWi-Fi上の誰でもブラウザで開いて読み込み済みのモデルと会話できる軽量なチャットページも提供し、ローカルのインターフェースにのみバインドされ、ポート転送は行いません。',
           '**分散推論は、自分の複数の端末をまとめます。** 1台がホストになり、他の端末が参加して、それぞれがモデルのレイヤーの一部を受け持つため、どの端末単体でも載らないモデルを読み込めます。サイトによれば、端末はペアリングされ、通信は暗号化され、ネットワークの外には何も出ません。Wi-Fi経由のスループットは公開されていないため、モデルが載る1台の端末より遅くなると考えてください。',
+          '**LANサーバーとメッシュの作成は、どちらも有料機能です。** 開発者によると、高度な機能にはPlusの購入が必要ですが、課金しなくてもアプリは使えます。たとえば、クラウドのアシスタントが落ちているときの代替や、機内での利用です。',
         ],
       },
       requirements: {
         id: 'requirements',
         title: '必要な端末要件',
         content: [
-          '**MLXHubには、iOSまたはiPadOS 26.0以降、Apple silicon搭載端末、RAM 6 GB以上が必要です。** 公式サイトはA17 ProまたはM1以降のチップを推奨しています。App Storeの掲載情報には、同じアプリがmacOS 26.0(Apple M1以降)とvisionOS 26.0でも利用可能と表示されていますが、別のデスクトップ版についての説明はありません。',
-          '実際の限界はRAMです。Appleはアプリのメモリ上限をiPhoneの方がiPadより厳しく設定しているため、大きなモデルはiPadの方が載りやすくなります。サイトは、載らないモデルでもダウンロードできてしまうことがあり、iOSがアプリを終了させる前にアプリが読み込みを止めようとするが、保証はないと警告しています。',
+          '**MLXHubには、iOSまたはiPadOS 26.0以降と、A14またはM1以降のチップを搭載した端末が必要です。** 開発者によると、公式サイトにあった以前の「RAM 6 GB以上」という記述は誤解を招くもので、RAMはどのモデルを動かせるかを左右するだけです。App Storeの掲載情報には、同じアプリがmacOS 26.0(Apple M1以降)とvisionOS 26.0でも利用可能と表示されていますが、別のデスクトップ版についての説明はありません。',
+          'モデルサイズの実質的な限界は、今もRAMです。Appleはアプリのメモリ上限をiPhoneの方がiPadより厳しく設定しているため、大きなモデルはiPadの方が載りやすくなります。サイトは、載らないモデルでもダウンロードできてしまうことがあり、iOSがアプリを終了させる前にアプリが読み込みを止めようとするが、保証はないと警告しています。',
         ],
       },
       privacy: {
         id: 'privacy',
         title: '料金とプライバシー',
         content: [
-          '**MLXHubはダウンロード無料で、MLXHub Plusは月額$6.99、年額$44.99、買い切り$229.99と記載されています。** 掲載情報にもサイトにも、Plusでどの機能が使えるようになるかは記載がないため、機能を当てにする前にアプリ内の課金画面を確認してください。モデルはHugging Faceから無料でダウンロードでき、トークン単位の料金はありません。',
+          '**MLXHubはダウンロード無料で、MLXHub Plusは月額$6.99、年額$44.99、買い切り$229.99と記載されています。** 掲載情報にはPlusの内訳がありませんが、開発者は、Plusで使えるようになるのは、3つ以上のモデルのダウンロード、状態を変更するすべてのツール、スキル、サーバー、512 pxを超える画像生成、アプリのテーマとアイコン、denseモデルを複数端末で動かすためのメッシュ作成、そして今後のすべての新機能だと述べています。機能を当てにする前にアプリ内の課金画面を確認してください。モデルはHugging Faceから無料でダウンロードでき、トークン単位の料金はありません。',
+          '開発者によると、バージョン2.3.0ではLANサーバーがサブスクリプションの代わりとなる単独のアプリ内課金($34.49)として復活します。この金額は買い切りの代金に充当され、買い切りは$229.99ではなく$195.99になるとのことです。これらはApp Storeにまだ載っていないバージョンについての開発者の説明で、金額は米ドル(米国ストア)です。他のストアでは金額が異なる場合があります。',
           '公式サイトによれば、推論は完全に端末上で行われ、アカウントはなく、身元を特定するものは何もありません。またバージョン2.0.0以降、アプリは匿名の分析データと診断データを送信し、利用する機能、端末の種類、モデルが読み込まれたかどうかが含まれ、設定でオフにできると記されています。',
           'アプリはクローズドソースであり、本レビューではネットワーク通信を検査していないため、プライバシーに関する記述は開発者自身によるものです。LANサーバーを有効にした場合、そこを流れるデータのプライバシーはWi-Fiネットワークの安全性次第です。',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '開発者から',
+        content: [
+          'MLXHubの開発者であるDreamFoundriesのJuan Colilla氏は、本ページを確認し、このアプリをなぜ作ったのかについて次のように語りました。読みやすさのために軽く編集しており、PromptQuorumの独立した編集上の評価ではなく、開発者自身の言葉として掲載します。',
+          '「私はテック好きで、AIがもたらすものが大好きです。オープンウェイトAIの支持者でもあります。これは人々から遠ざけることができず、また遠ざけるべきでもない技術だと考えています。今の時代、差を生む要素だからです。',
+          '私はAppleのデバイスも好きで、2018年からiOSエンジニアをしています。iPhoneやiPadでローカル推論を行うアプリはすでにありましたが、これらのデバイスにはもっと多くの可能性があると分かっていました。モデルのカタログが固定されたアプリでは、新しいモデルを使うにはアップデートを待たなければならず、SuperGemma 4 Obliteratedのようなカスタムモデルは論外です。Hugging Faceへの自由なアクセスを認めている他のアプリは、GGUFしか使わず、AppleのMLXの進展を活かしていませんでした。',
+          'だから私はMLXHubを作りました。Apple端末でMLXモデルを動かす最高のアプリにしたいのです。ハードウェアを存分に活かし、互換性のあるあらゆるモデル(欧州のSwissAI Apertus 1.5、アラブ首長国連邦のIFM K2-Horizon、SuperGemma 4 uncensored)を使え、さらにQwen3.6 35B-A3BをNANDストリーミングで動かすような、載るとは思えないモデルまで扱えるようにしたいと考えています。',
+          '私にとってMLXHubは自由の象徴であり、開発するときもその理念を心に留めています。だからこそ、ほとんどのユーザーは完全に無料で使えます。制限があるとしても、サーバーや状態を変更するツールなど、上級者向けのごく一部だけです。開発に費やした時間、資源、労力を支えてもらうためです。',
+          '最新のアップデートである2.3.0では、MLXHubにシステムを視覚的に表すエンティティとVoice Centerが加わり、iPadが家庭のAIサーバーとして、質問に答えながら動けるようになります。Apple Homeに似ていますが、もっとテック寄りです。Voice Mode、画像生成、Apple Neural Engineへの対応、ベンチマークツールも無料で導入しました。MLXHubを、すべての人にとって頼れるアシスタントにしたいのです。オフラインで動き、速く、美しく、あらゆるiOS端末がローカルAIモデルとどう連携するかの基準になるアプリです。」',
+        ],
+        note: '— Juan Colilla、開発者(DreamFoundries)',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1301,27 +1404,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'メリット': 'オフラインのMLX推論',
             '実際の利用での意味': '接続なしで、Apple自身のフレームワークを使ってオープンモデルとチャットできる。',
-            '制約・注意点': 'iOS 26とRAM 6 GBが必要。iPhoneのメモリ上限がモデルサイズを制限する。',
+            '制約・注意点': 'iOS 26とA14かM1以降のチップが必要。RAMがモデルサイズを制限する。',
           },
           {
             'メリット': 'LANサーバー',
             '実際の利用での意味': '同じWi-Fi上の他のアプリやブラウザが、読み込み済みのモデルを使える。',
-            '制約・注意点': '端末をスリープさせず、ネットワークに接続したままにする必要がある。スループットの数値は公開されていない。',
+            '制約・注意点': '開発者によると有料(Plus)。端末をスリープさせず、ネットワークに接続したままにする必要がある。',
           },
           {
             'メリット': '複数端末での分割',
             '実際の利用での意味': '自分のどの端末にも載らないモデルを読み込める。',
-            '制約・注意点': 'Wi-Fi経由の速度は記載がなく、互換性のある端末が複数必要。',
+            '制約・注意点': '有料(Plus)。Wi-Fi経由の速度は記載がなく、複数の端末が必要。',
           },
           {
             'メリット': 'ツール、メモリ、スキル',
             '実際の利用での意味': 'チャットからカレンダー、リマインダー、ヘルスケアにアクセスできる。',
-            '制約・注意点': '各ツールで何ができるかは、掲載情報に詳細がない。',
+            '制約・注意点': '状態を変更するツールはPlus。ツール別の詳細は掲載情報にない。',
           },
           {
             'メリット': '無料で始められる',
-            '実際の利用での意味': 'トークン単位の料金はなく、モデルはHugging Faceから無料で入手できる。',
-            '制約・注意点': 'Plusは買い切りで最大$229.99。何が使えるようになるかは記載がない。',
+            '実際の利用での意味': '開発者によると無料版のチャットは無制限。トークン単位の料金はなし。',
+            '制約・注意点': '無料版はモデル2つまで。Plusは買い切りで最大$229.99。',
           },
         ],
       },
@@ -1384,8 +1487,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**オープンソースが必須の人。** コードは公開されていません。[Private Mind](/ja/power-local-llm/private-mind-review)と[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)はオープンソースです。',
           '**Androidユーザー。** 記載されているのはAppleのプラットフォームだけです。PocketPal AIとPrivate MindはどちらもAndroidで動作します。',
-          '**iOS 26未満、またはRAMが6 GB未満の端末。** 掲載情報とサイトがその下限を定めています。',
-          '**有料プランの機能一覧が明記されていてほしい人。** MLXHub Plusで何が使えるようになるかは記載がありません。まず無料版を試してください。',
+          '**iOS 26未満、またはA14やM1より古いチップの端末。** 掲載情報と開発者がその下限を定めています。',
+          '**LANサーバーやメッシュを無料で使いたい人。** 開発者によると、サーバー、状態を変更するツール、スキル、メッシュにはPlusが必要で、無料版はダウンロードできるモデルが2つまでです。',
         ],
       },
       faq: {
@@ -1394,7 +1497,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'MLXHubは無料ですか?',
-            a: 'ダウンロードは無料で、App Storeの掲載情報のとおり、アプリ内課金としてMLXHub Plusが月額$6.99、年額$44.99、買い切り$229.99で提供されています。',
+            a: 'ダウンロードは無料で、App Storeの掲載情報のとおり、アプリ内課金としてMLXHub Plusが月額$6.99、年額$44.99、買い切り$229.99で提供されています。開発者によると、無料版はダウンロードしたモデル2つまでチャットが無制限です。',
+          },
+          {
+            q: 'MLXHub Plusで何が使えるようになりますか?',
+            a: '開発者によると、3つ以上のモデルのダウンロード、状態を変更するツール、スキル、サーバー、512 pxを超える画像生成、テーマとアイコン、メッシュ作成、今後の機能です。2.3.0では、買い切りに充当される$34.49のLANサーバー課金($229.99ではなく$195.99)を追加するとのことで、App Storeの承認待ちです。',
+          },
+          {
+            q: 'MLXHubはどの端末で動作しますか?',
+            a: 'iOSまたはiPadOS 26.0以降で、A14またはM1以降のチップを搭載したiPhoneとiPadなら動作します。RAMに最低要件はなく、どのモデルが載るかを左右します。',
           },
           {
             q: 'MLXHubを開発しているのは誰ですか?',
@@ -1419,8 +1530,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '総評',
         content: [
           '最近のiPadやiPhoneをお持ちで、オフラインのMLXチャットに加えて、端末をローカルのエンドポイントとして使う、あるいは複数の端末をまとめてより大きなモデルを動かすという選択肢がほしい人には、書面上はよく合っています。',
-          '懸念は透明性と歴史の浅さです。クローズドソースで、Plusの機能は記載がなく、複数端末分割時の速度も公開されておらず、レビュー時点で掲載情報の評価は7件しかありませんでした。',
-          'オープンソースを求めるなら、[Private Mind](/ja/power-local-llm/private-mind-review)から始めてください。LANサーバーや複数端末での分割を使いたいなら、まずMLXHubの無料版を試してください。',
+          '懸念は透明性と歴史の浅さです。クローズドソースで、掲載情報にはPlusの内訳がなく(開発者は説明しています。上記参照)、複数端末分割時の速度も公開されておらず、レビュー時点で掲載情報の評価は8件しかありませんでした。バージョン2.3.0はまだApp Storeの審査中のため、その追加内容は開発者の説明であり、本レビューでは検証していません。',
+          'オープンソースを求めるなら、[Private Mind](/ja/power-local-llm/private-mind-review)から始めてください。LANサーバーや複数端末での分割を使いたいなら、まずMLXHubの無料版を試してください。開発者によると、どちらも有料のPlus機能です。',
         ],
       },
       sources: {
@@ -1430,6 +1541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[App StoreのMLXHub: Local AI & LLM Server](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144) — バージョン、価格、要件、機能、開発者。',
           '[MLXHub公式サイト](https://mlxhub.app) — 機能の説明、端末要件、分析データに関する記述を含むFAQ。',
           '[MLXHubのプライバシーポリシー](https://mlxhub.app/privacy) — 公式サイトからリンクされているポリシーのページ。',
+          'DreamFoundriesのJuan Colilla氏からのコメントと訂正(2026-10-19受領) — Plusの機能、端末要件、2.3.0の価格、「開発者から」の本文。',
         ],
       },
       relatedReading: {
@@ -1449,7 +1561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-05',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-19',
     next_refresh_due: '2027-04-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/mlxhub-review-hero-zh.webp',
@@ -1458,9 +1570,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MLXHub是一款iPhone和iPad应用，利用苹果的MLX框架在设备上运行开源模型，可以向您网络中的其他应用提供服务，还能把一个大模型拆分到您自己的多台设备上运行。本评测介绍它的App Store页面和官方网站记载了什么、哪些地方不明确，以及它与其他iOS本地AI应用的对比。',
     metaDescription:
-      'MLXHub评测：支持设备端MLX模型、兼容OpenAI的局域网服务器和多设备模型拆分的iPhone和iPad应用。定价、iOS 26与内存要求、隐私、局限。',
+      'MLXHub评测：支持设备端MLX模型、兼容OpenAI的局域网服务器和多设备模型拆分的iPhone和iPad应用。定价、Plus解锁内容、iOS 26设备要求、隐私、局限与开发者评论。',
     twitterDescription:
-      'MLXHub评测：免费增值的iOS/iPadOS应用，离线运行MLX模型，通过局域网提供服务，并可跨设备拆分大模型。设备要求、定价、隐私、局限。',
+      'MLXHub评测：免费增值的iOS/iPadOS应用，离线运行MLX模型，通过局域网提供服务，并可跨设备拆分大模型。设备要求、定价、Plus解锁内容、隐私、局限与开发者评论。',
     audience:
       '想在iPhone或iPad上离线运行开源模型，并可选择把设备用作本地OpenAI兼容端点的用户——涵盖功能、设备要求、定价、隐私、局限和替代方案。',
     readTime: '8分钟阅读',
@@ -1477,22 +1589,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mlx swift应用',
       'iPad本地AI应用',
     ],
-    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A17 Pro', 'M1'],
+    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A14', 'A17 Pro', 'M1'],
     leadAnswerBlock:
-      '**MLXHub是一款免费增值、闭源的iOS和iPadOS应用，可在Apple silicon上离线运行开源语言模型和视觉模型，能在您的Wi-Fi上作为兼容OpenAI的服务器对外提供服务，还能把您的多台设备组合起来，加载任何单台设备都装不下的模型。** 据其App Store页面，它需要iOS或iPadOS 26.0或更高版本，下载免费，MLXHub Plus以应用内购买的方式销售。本评测对应版本2.2.0，依据公开的应用页面和官方网站撰写，并未实际测试。',
+      '**MLXHub是一款免费增值、闭源的iOS和iPadOS应用，可在Apple silicon上离线运行开源语言模型和视觉模型，能在您的Wi-Fi上作为兼容OpenAI的服务器对外提供服务，还能把您的多台设备组合起来，加载任何单台设备都装不下的模型。** 据其App Store页面，它需要iOS或iPadOS 26.0或更高版本，下载免费，MLXHub Plus以应用内购买的方式销售。据开发者称，免费版可无限次聊天，最多下载两个模型，而服务器、mesh和其他高级功能需要Plus。开发者Juan Colilla审阅了本文，并补充了他自己的评论和更正。本评测对应页面所列的版本2.2.1，依据公开的应用页面、官方网站和开发者的说明撰写，并未实际测试；版本2.3.0仍在App Store审核中。',
     quickAnswerTop: {
       zh: {
         question: '想在iPhone或iPad上使用本地AI，MLXHub值得安装吗？',
         answer:
-          '如果您有运行iOS 26、内存至少6 GB的Apple silicon版iPhone或iPad，并且想要离线聊天，外加局域网端点或多设备模型拆分，那么值得。如果您需要开源、Android版本，或一份明确的免费功能清单，则可以跳过：代码并未公开，页面也没有说明MLXHub Plus解锁了什么。Locally AI和Private Mind是更简单的设备端替代方案。',
+          '如果您有运行iOS 26、搭载A14或M1及更新芯片的iPhone或iPad，并且想要离线聊天，还可选用局域网端点或多设备模型拆分，那么值得。内存只决定能装下哪些模型。如果您需要开源、Android版本，或免费的局域网服务器，则可以跳过：代码并未公开，且据开发者称，服务器和mesh是付费的Plus功能。Locally AI和Private Mind是更简单的设备端替代方案。',
         bullets: [
           '免费下载，含应用内购买：Plus为每月$6.99、每年$44.99，或$229.99买断。',
+          '据开发者称，免费版聊天不限次数，最多下载两个模型；服务器、工具、技能和mesh需要Plus。',
           '通过mlx-swift在设备上运行开源文本和视觉模型；模型来自Hugging Face。',
           '可选的局域网服务器，提供OpenAI风格的/v1/chat/completions和/v1/embeddings路由。',
           '分布式推理可把一个模型拆分到同一网络中您自己配对的设备上。',
-          '需要Apple silicon设备上的iOS或iPadOS 26.0或更高版本，内存6 GB或以上。',
+          '需要搭载A14、M1或更新芯片的iOS或iPadOS 26.0或更高版本设备；内存决定能装下哪些模型。',
         ],
-        updatedDate: '2026-10-05',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -1505,6 +1618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '局域网服务器与分布式推理', anchor: 'lan-and-distributed' },
       { label: '设备要求', anchor: 'requirements' },
       { label: '定价与隐私', anchor: 'privacy' },
+      { label: '开发者的话', anchor: 'from-the-maker' },
       { label: '权衡：优点与局限', anchor: 'tradeoffs' },
       { label: 'MLXHub与替代方案对比', anchor: 'vs-alternatives' },
       { label: '谁适合使用MLXHub', anchor: 'who-should-use' },
@@ -1522,7 +1636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MLXHub由开发者Juan Colilla打造，是一款免费增值的iPhone和iPad应用，基于苹果的MLX框架离线运行开源模型，可向您的网络提供服务，并能把一个模型拆分到您的多台设备上。',
+            text: 'MLXHub由开发者Juan Colilla打造（他审阅了本文），是一款免费增值的iPhone和iPad应用，基于苹果的MLX框架离线运行开源模型，可向您的网络提供服务，并能把一个模型拆分到您的多台设备上。',
           },
           {
             type: 'plain-terms',
@@ -1530,10 +1644,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '评测版本：2.2.0，见[App Store页面](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144)。',
-          '价格：免费下载；MLXHub Plus列为每月$6.99、每年$44.99和$229.99买断。',
-          '平台：iOS和iPadOS 26.0或更高版本；官方网站要求Apple silicon和6 GB或以上内存。',
-          '突出功能：局域网服务器、多设备模型拆分、工具与技能、Hugging Face镜像。',
+          '评测版本：2.2.1，见[App Store页面](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144)。',
+          '价格：免费下载；MLXHub Plus列为每月$6.99、每年$44.99和$229.99买断。开发者称免费版聊天不限次数，最多下载两个模型。',
+          '平台：搭载A14、M1或更新芯片的iOS和iPadOS 26.0或更高版本设备；开发者称内存只决定能装下哪些模型。',
+          '突出功能：局域网服务器、多设备模型拆分、工具与技能、Hugging Face镜像；服务器和mesh为付费功能。',
+          '开发者已审阅：开发者提供了评论和更正，见“开发者的话”一节。',
           '开放性：闭源；没有找到公开的代码仓库。',
         ],
       },
@@ -1573,7 +1688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '属性': '应用内下载模型', 'MLXHub': '是，来自Hugging Face' },
           { '属性': '图像输入', 'MLXHub': '是，视觉语言模型' },
           { '属性': '本地API服务器', 'MLXHub': '是，局域网内兼容OpenAI' },
-          { '属性': '语音输入/输出', 'MLXHub': '应用页面未说明' },
+          { '属性': '语音输入/输出', 'MLXHub': '2.3.0语音模式（开发者称，待审核）' },
         ],
         note: '各属性沿用本地LLM软件目录中使用的移动端聊天对比项。它们来自App Store页面和官方网站，而这些来源并未涵盖所有功能。',
       },
@@ -1595,7 +1710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: '确认设备和系统版本',
-            whyItMatters: '应用页面要求iOS或iPadOS 26.0或更高版本，官方网站要求Apple silicon设备且内存6 GB或以上。',
+            whyItMatters: '应用页面要求iOS或iPadOS 26.0或更高版本，开发者称搭载A14或M1及更新芯片的设备均可使用，由内存决定能装下哪些模型。',
           },
           {
             title: '安装MLXHub',
@@ -1625,6 +1740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**模型切换与镜像。** 可在对话中途在文本模型和视觉模型之间切换；当Hugging Face无法访问时，可使用社区提供的Hugging Face镜像。',
           '**大模型流式加载。** 页面提到了面向Qwen3.6 35B-A3B等较大模型的NAND专家流式加载，但没有给出更多细节。',
           '**语言。** 界面提供英语以及另外11种语言。',
+          '**2.3.0预告功能。** 开发者介绍了语音模式和语音中心、图像生成、Apple Neural Engine支持、免费的基准测试工具，以及一个代表系统的可视化形象。撰写本文时2.3.0仍在App Store审核中，因此应用页面上还看不到这些内容。',
         ],
       },
       lanAndDistributed: {
@@ -1633,24 +1749,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**局域网服务器可把您的设备变成一个小型的OpenAI兼容端点。** 页面点名了/v1/chat/completions和/v1/embeddings路由。据官方网站所述，它还提供一个轻量的聊天网页，同一Wi-Fi下的任何人都可以在浏览器中打开并与已加载的模型对话；它只绑定本地接口，不做端口转发。',
           '**分布式推理可把您自己的多台设备组合在一起。** 一台设备作为主机，其他设备加入，各自承担模型的一部分层，因此单台设备都装不下的模型也能加载。网站称设备之间需要配对且流量经过加密，数据不会离开该网络。Wi-Fi下的吞吐量没有公布，因此请预期它会比一台能完整装下该模型的单设备更慢。',
+          '**局域网服务器和mesh创建都是付费功能。** 开发者称高级功能需要购买Plus，而任何人都可以不付费使用该应用，例如在云端助手宕机时或在飞机上作为备用。',
         ],
       },
       requirements: {
         id: 'requirements',
         title: '设备要求',
         content: [
-          '**MLXHub需要iOS或iPadOS 26.0或更高版本、Apple silicon设备以及6 GB或以上内存。** 官方网站建议使用A17 Pro或M1及更新的芯片。App Store页面还显示同一应用提供macOS 26.0（Apple M1或更新芯片）和visionOS 26.0版本，但没有描述单独的桌面版。',
-          '内存才是真正的上限。苹果对iPhone上应用的内存限制比iPad更严格，因此较大的模型在iPad上更常能装下。网站警告说，装不下的模型有时仍可能被下载下来，应用会在iOS强制关闭应用之前设法阻止其加载，但不作保证。',
+          '**MLXHub需要iOS或iPadOS 26.0或更高版本，以及搭载A14或M1及更新芯片的设备。** 开发者称，官方网站此前“最低6 GB内存”的说法有误导性，内存只决定您能运行哪些模型。App Store页面还显示同一应用提供macOS 26.0（Apple M1或更新芯片）和visionOS 26.0版本，但没有描述单独的桌面版。',
+          '内存仍然是模型大小的实际上限。苹果对iPhone上应用的内存限制比iPad更严格，因此较大的模型在iPad上更常能装下。网站警告说，装不下的模型有时仍可能被下载下来，应用会在iOS强制关闭应用之前设法阻止其加载，但不作保证。',
         ],
       },
       privacy: {
         id: 'privacy',
         title: '定价与隐私',
         content: [
-          '**MLXHub免费下载，MLXHub Plus列为每月$6.99、每年$44.99和$229.99买断。** 应用页面和网站都没有说明Plus解锁了哪些功能，因此在依赖某项功能之前，请先在应用内查看付费墙。模型从Hugging Face免费下载，没有按token计费。',
+          '**MLXHub免费下载，MLXHub Plus列为每月$6.99、每年$44.99和$229.99买断。** 应用页面没有逐项列出Plus的内容，但开发者表示，它解锁超过两个的已下载模型、所有会修改内容的工具、技能、服务器、512 px以上的图像生成、应用主题和图标、用于跨设备运行稠密模型的mesh创建，以及未来的所有新功能。在依赖某项功能之前，请先在应用内查看付费墙。模型从Hugging Face免费下载，没有按token计费。',
+          '开发者称，在2.3.0版本中，局域网服务器将作为单独的应用内购买重新推出，价格为$34.49，可作为订阅之外的另一种选择。该金额可抵扣买断价，届时买断价为$195.99，而非$229.99。这些是开发者所述、尚未上架App Store的版本的价格，以美元计（美国商店），其他地区商店显示的金额可能不同。',
           '官方网站称推理完全在设备上进行，没有账号，也没有任何能识别您身份的信息。它同时说明，自2.0.0版本起，应用会发送匿名的分析和诊断数据，内容涵盖您使用了哪些功能、设备类别以及模型是否加载成功，您可以在“设置”中将其关闭。',
           '该应用是闭源的，本评测没有检查网络流量，因此隐私方面的说法来自开发者自己。如果您启用局域网服务器，其中数据的私密程度取决于您的Wi-Fi网络。',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '开发者的话',
+        content: [
+          'MLXHub的开发者、DreamFoundries的Juan Colilla审阅了本文，并分享了他打造这款应用的原因。以下内容是开发者本人的话，为便于阅读做了少量编辑，并非PromptQuorum的独立编辑评价：',
+          '“我是一名技术爱好者，热爱AI带给我们的一切。我支持开放权重AI；我认为这项技术不能也不应该被人们拒之门外，因为在今天它是一个拉开差距的因素。',
+          '我也热爱苹果设备，自2018年起我就是一名iOS工程师。虽然已有一些应用把本地推理带到了iPhone和iPad上，但我知道这些设备能做的远不止于此。模型目录固定的应用，要等到更新之后才能用上新模型，像SuperGemma 4 Obliterated这样的自定义模型更是想都别想。另一些允许免费访问Hugging Face的应用只支持GGUF，没有利用苹果MLX的开发成果。',
+          '这就是我打造MLXHub的原因：我希望它成为在苹果设备上运行MLX模型的最佳应用，充分发挥硬件性能，能够使用所有兼容的模型（来自欧洲的SwissAI Apertus 1.5、来自阿联酋的IFM K2-Horizon、SuperGemma 4 uncensored），甚至是那些您想不到能装下的模型，比如通过NAND流式加载运行的Qwen3.6 35B-A3B。',
+          'MLXHub对我来说代表着自由，这也是我开发它时心中的理念。因此，大多数用户可以完全免费使用它；现有的限制很少，只针对高级用户，比如服务器或会修改内容的工具，用来支撑开发所投入的时间、资源和精力。',
+          '在最新的2.3.0更新中，MLXHub加入了一个代表系统的可视化形象和语音中心，让您的iPad在回答问题的同时，还能充当家庭AI服务器。有点像Apple Home，但更偏技术向。我还免费加入了语音模式、图像生成、Apple Neural Engine支持和基准测试工具。我希望MLXHub成为人人可靠的助手：它能离线工作，速度快，界面美观，是任何iOS设备使用本地AI模型的标杆。”',
+        ],
+        note: '— Juan Colilla，开发者（DreamFoundries）',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -1661,27 +1792,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '优点': '离线MLX推理',
             '实际使用中的意义': '无需联网，借助苹果自家框架与开源模型聊天。',
-            '局限/注意事项': '需要iOS 26和6 GB内存；iPhone的内存限制决定了模型大小上限。',
+            '局限/注意事项': '需要iOS 26和A14或M1芯片；内存决定模型大小上限。',
           },
           {
             '优点': '局域网服务器',
             '实际使用中的意义': 'Wi-Fi上的其他应用和浏览器可使用已加载的模型。',
-            '局限/注意事项': '设备必须保持唤醒并在线；没有公布吞吐量数据。',
+            '局限/注意事项': '据开发者称为付费（Plus）功能；设备须保持唤醒并在线。',
           },
           {
             '优点': '多设备拆分',
             '实际使用中的意义': '加载您任何单台设备都装不下的模型。',
-            '局限/注意事项': 'Wi-Fi下的速度没有记载，且需要多台兼容设备。',
+            '局限/注意事项': '付费（Plus）；Wi-Fi下的速度没有记载；需要多台设备。',
           },
           {
             '优点': '工具、记忆和技能',
             '实际使用中的意义': '在聊天中调用日历、提醒事项和健康。',
-            '局限/注意事项': '页面没有说明每个工具具体能做什么。',
+            '局限/注意事项': '会修改内容的工具需Plus；页面没有逐个说明工具。',
           },
           {
             '优点': '可免费开始',
-            '实际使用中的意义': '没有按token计费；模型可从Hugging Face免费获取。',
-            '局限/注意事项': 'Plus买断最高$229.99，且没有说明它解锁了什么。',
+            '实际使用中的意义': '据开发者称聊天不限次数；没有按token计费。',
+            '局限/注意事项': '免费版最多下载两个模型；Plus买断最高$229.99。',
           },
         ],
       },
@@ -1744,8 +1875,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**需要开源的用户。** 代码并未公开；[Private Mind](/zh/power-local-llm/private-mind-review)和[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)都是开源的。',
           '**Android用户。** 只列出了Apple平台；PocketPal AI和Private Mind都支持Android。',
-          '**系统低于iOS 26或内存不足6 GB的设备。** 应用页面和网站设定了这些门槛。',
-          '**想要付费版明确功能清单的用户。** MLXHub Plus解锁了什么没有记载；请先试用免费版。',
+          '**系统低于iOS 26或芯片早于A14或M1的设备。** 应用页面和开发者设定了这些门槛。',
+          '**想免费使用局域网服务器或mesh的用户。** 据开发者称，服务器、会修改内容的工具、技能和mesh需要Plus；免费版最多只能下载两个模型。',
         ],
       },
       faq: {
@@ -1754,7 +1885,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'MLXHub免费吗？',
-            a: '可免费下载，含应用内购买：MLXHub Plus为每月$6.99、每年$44.99，或$229.99买断，见App Store页面。',
+            a: '可免费下载，含应用内购买：MLXHub Plus为每月$6.99、每年$44.99，或$229.99买断，见App Store页面。开发者称免费版聊天不限次数，最多下载两个模型。',
+          },
+          {
+            q: 'MLXHub Plus解锁了什么？',
+            a: '据开发者称：超过两个的已下载模型、会修改内容的工具、技能、服务器、512 px以上的图像生成、主题和图标、mesh创建以及未来的功能。他还表示，2.3.0将加入$34.49的局域网服务器购买项，可抵扣买断价（$195.99，而非$229.99），尚待App Store批准。',
+          },
+          {
+            q: '哪些设备可以运行MLXHub？',
+            a: '任何运行iOS或iPadOS 26.0或更高版本、搭载A14或M1及更新芯片的iPhone或iPad。内存没有最低要求，它只决定能装下哪些模型。',
           },
           {
             q: 'MLXHub是谁开发的？',
@@ -1779,8 +1918,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '结论',
         content: [
           '从纸面上看，对于拥有较新iPad或iPhone、想要离线MLX聊天，并希望可以把设备用作本地端点，或组合多台设备来运行更大模型的用户，MLXHub很合适。',
-          '需要注意的是透明度和成熟度：它是闭源的，Plus功能没有记载，多设备拆分的速度没有公布，评测时应用页面只有七条评分。',
-          '如果您想要开源方案，请先从[Private Mind](/zh/power-local-llm/private-mind-review)开始。如果您想要局域网服务器或多设备拆分，可以先试用MLXHub的免费版。',
+          '需要注意的是透明度和成熟度：它是闭源的，应用页面没有逐项列出Plus（开发者列出了，见上文），多设备拆分的速度没有公布，评测时应用页面只有八条评分。版本2.3.0仍在App Store审核中，因此其新增内容是开发者的描述，未经本文验证。',
+          '如果您想要开源方案，请先从[Private Mind](/zh/power-local-llm/private-mind-review)开始。如果您想要局域网服务器或多设备拆分，可以先试用MLXHub的免费版；据开发者称，这两者都是付费的Plus功能。',
         ],
       },
       sources: {
@@ -1790,6 +1929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[App Store上的MLXHub: Local AI & LLM Server](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144) — 版本、价格、要求、功能和开发者。',
           '[MLXHub官方网站](https://mlxhub.app) — 功能说明、设备要求和常见问题，包括关于分析数据的说明。',
           '[MLXHub隐私政策](https://mlxhub.app/privacy) — 官方网站链接的政策页面。',
+          '开发者Juan Colilla（DreamFoundries）的评论与更正，2026-10-19收到 — Plus功能、设备要求、2.3.0定价以及“开发者的话”文本。',
         ],
       },
       relatedReading: {
@@ -1809,7 +1949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-05',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-19',
     next_refresh_due: '2027-04-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/mlxhub-review-hero-es.webp',
@@ -1818,9 +1958,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MLXHub es una app para iPhone y iPad que ejecuta modelos abiertos en el propio dispositivo con el framework MLX de Apple, puede servirlos a otras apps de tu red y puede repartir un modelo grande entre varios de tus dispositivos. Esta reseña explica qué documentan su ficha de la App Store y su sitio oficial, qué queda poco claro y cómo se compara con otras apps de IA local para iOS.',
     metaDescription:
-      'Reseña de MLXHub: app para iPhone y iPad con modelos MLX en el dispositivo, servidor LAN compatible con OpenAI y reparto de modelos entre dispositivos. Precios, requisitos de iOS 26 y RAM, privacidad, límites.',
+      'Reseña de MLXHub: app para iPhone y iPad con modelos MLX en el dispositivo, servidor LAN compatible con OpenAI y reparto de modelos entre dispositivos. Precios, qué desbloquea Plus, requisitos de dispositivo con iOS 26, privacidad, límites y comentarios del desarrollador.',
     twitterDescription:
-      'Reseña de MLXHub: una app freemium de iOS/iPadOS que ejecuta modelos MLX sin conexión, los sirve por tu LAN y reparte modelos grandes entre dispositivos. Requisitos, precios, privacidad, límites.',
+      'Reseña de MLXHub: una app freemium de iOS/iPadOS que ejecuta modelos MLX sin conexión, los sirve por tu LAN y reparte modelos grandes entre dispositivos. Requisitos, precios, qué desbloquea Plus, privacidad, límites y comentarios del desarrollador.',
     audience:
       'Usuarios de iPhone y iPad que quieren ejecutar modelos abiertos sin conexión y, opcionalmente, usar el dispositivo como endpoint local compatible con OpenAI — cubre funciones, requisitos, precios, privacidad, límites y alternativas.',
     readTime: '8 min de lectura',
@@ -1837,22 +1977,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app mlx swift',
       'app ia local ipad',
     ],
-    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A17 Pro', 'M1'],
+    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A14', 'A17 Pro', 'M1'],
     leadAnswerBlock:
-      '**MLXHub es una app freemium y de código cerrado para iOS y iPadOS que ejecuta modelos abiertos de lenguaje y visión sin conexión en Apple silicon, puede exponerlos como servidor compatible con OpenAI en tu Wi-Fi y puede combinar varios de tus dispositivos para cargar un modelo que ninguno admite por sí solo.** Según su ficha de la App Store, requiere iOS o iPadOS 26.0 o posterior y se descarga gratis, con MLXHub Plus como compras dentro de la app. Esta reseña cubre la versión 2.2.0 y se basa en la ficha pública y el sitio oficial, no en pruebas prácticas.',
+      '**MLXHub es una app freemium y de código cerrado para iOS y iPadOS que ejecuta modelos abiertos de lenguaje y visión sin conexión en Apple silicon, puede exponerlos como servidor compatible con OpenAI en tu Wi-Fi y puede combinar varios de tus dispositivos para cargar un modelo que ninguno admite por sí solo.** Según su ficha de la App Store, requiere iOS o iPadOS 26.0 o posterior y se descarga gratis, con MLXHub Plus como compras dentro de la app. Según el desarrollador, el nivel gratuito permite chatear sin límite con hasta dos modelos descargados, mientras que el servidor, el mesh y otras funciones avanzadas requieren Plus. El desarrollador, Juan Colilla, revisó esta página y añadió sus propios comentarios y correcciones. Esta reseña cubre la versión 2.2.1 que figura en la ficha y se basa en la ficha pública, el sitio oficial y las declaraciones del desarrollador, no en pruebas prácticas; la versión 2.3.0 aún está en revisión en la App Store.',
     quickAnswerTop: {
       es: {
         question: '¿Vale la pena instalar MLXHub para IA local en un iPhone o iPad?',
         answer:
-          'Sí, si tienes un iPhone o iPad con Apple silicon e iOS 26 y al menos 6 GB de RAM, y quieres chat sin conexión además de un endpoint LAN o reparto de modelos entre dispositivos. Descártala si necesitas código abierto, Android o una lista fija de funciones gratuitas: el código no es público y la ficha no dice qué desbloquea MLXHub Plus. Locally AI y Private Mind son alternativas más sencillas en el dispositivo.',
+          'Sí, si tienes un iPhone o iPad con iOS 26 y un chip A14 o M1 o más reciente, y quieres chat sin conexión, opcionalmente con un endpoint LAN o reparto de modelos entre dispositivos. La RAM solo decide qué modelos caben. Descártala si necesitas código abierto, Android o un servidor LAN gratuito: el código no es público y, según el desarrollador, el servidor y el mesh son funciones de pago de Plus. Locally AI y Private Mind son alternativas más sencillas en el dispositivo.',
         bullets: [
           'Descarga gratuita con compras dentro de la app: Plus a $6.99 al mes, $44.99 al año o $229.99 de por vida.',
+          'Según el desarrollador, el chat es ilimitado en el nivel gratuito, con hasta dos modelos descargados; el servidor, las herramientas, las skills y el mesh requieren Plus.',
           'Ejecuta modelos abiertos de texto y visión en el dispositivo con mlx-swift; los modelos vienen de Hugging Face.',
           'Servidor LAN opcional con rutas al estilo OpenAI /v1/chat/completions y /v1/embeddings.',
           'La inferencia distribuida reparte un modelo entre tus propios dispositivos emparejados de la misma red.',
-          'Requiere iOS o iPadOS 26.0 o posterior en Apple silicon con 6 GB de RAM o más.',
+          'Requiere iOS o iPadOS 26.0 o posterior con un chip A14, M1 o más reciente; la RAM decide qué modelos caben.',
         ],
-        updatedDate: '2026-10-05',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -1865,6 +2006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Servidor LAN e inferencia distribuida', anchor: 'lan-and-distributed' },
       { label: 'Requisitos del dispositivo', anchor: 'requirements' },
       { label: 'Precios y privacidad', anchor: 'privacy' },
+      { label: 'Del creador', anchor: 'from-the-maker' },
       { label: 'Compensaciones: ventajas frente a limitaciones', anchor: 'tradeoffs' },
       { label: 'MLXHub frente a alternativas', anchor: 'vs-alternatives' },
       { label: 'Quién debería usar MLXHub', anchor: 'who-should-use' },
@@ -1882,7 +2024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MLXHub, del desarrollador Juan Colilla, es una app freemium para iPhone y iPad que ejecuta modelos abiertos sin conexión con el framework MLX de Apple, los sirve a tu red y puede repartir un modelo entre varios de tus dispositivos.',
+            text: 'MLXHub, del desarrollador Juan Colilla, quien revisó esta página, es una app freemium para iPhone y iPad que ejecuta modelos abiertos sin conexión con el framework MLX de Apple, los sirve a tu red y puede repartir un modelo entre varios de tus dispositivos.',
           },
           {
             type: 'plain-terms',
@@ -1890,10 +2032,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Versión reseñada: 2.2.0, según la [ficha de la App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144).',
-          'Precio: descarga gratuita; MLXHub Plus figura a $6.99 al mes, $44.99 al año y $229.99 de por vida.',
-          'Plataforma: iOS y iPadOS 26.0 o posterior; el sitio oficial pide Apple silicon y 6 GB de RAM o más.',
-          'Funciones destacadas: servidor LAN, reparto de modelos entre dispositivos, herramientas y skills, espejos de Hugging Face.',
+          'Versión reseñada: 2.2.1, según la [ficha de la App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144).',
+          'Precio: descarga gratuita; MLXHub Plus figura a $6.99 al mes, $44.99 al año y $229.99 de por vida. El desarrollador indica que el chat es ilimitado en el nivel gratuito, con hasta dos modelos descargados.',
+          'Plataforma: iOS y iPadOS 26.0 o posterior con un chip A14, M1 o más reciente; el desarrollador indica que la RAM solo decide qué modelos caben.',
+          'Funciones destacadas: servidor LAN, reparto de modelos entre dispositivos, herramientas y skills, espejos de Hugging Face; el servidor y el mesh son de pago.',
+          'Revisada por el creador: el desarrollador aportó comentarios y correcciones, que se recogen en la sección Del creador.',
           'Apertura: código cerrado; no se encontró ningún repositorio público.',
         ],
       },
@@ -1933,7 +2076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Atributo': 'Descarga de modelos en la app', 'MLXHub': 'Sí, desde Hugging Face' },
           { 'Atributo': 'Entrada de imágenes', 'MLXHub': 'Sí, modelos de visión y lenguaje' },
           { 'Atributo': 'Servidor de API local', 'MLXHub': 'Sí, compatible con OpenAI en tu LAN' },
-          { 'Atributo': 'Entrada / salida de voz', 'MLXHub': 'No se indica en la ficha' },
+          { 'Atributo': 'Entrada / salida de voz', 'MLXHub': 'Modo de voz en 2.3.0 (desarrollador, pendiente)' },
         ],
         note: 'Los atributos siguen la comparación de chats móviles usada en el directorio de software LLM local. Proceden de la ficha de la App Store y del sitio oficial, que no cubren todas las funciones.',
       },
@@ -1955,7 +2098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Comprueba el dispositivo y el sistema operativo',
-            whyItMatters: 'La ficha exige iOS o iPadOS 26.0 o posterior, y el sitio oficial pide un dispositivo con Apple silicon y 6 GB de RAM o más.',
+            whyItMatters: 'La ficha exige iOS o iPadOS 26.0 o posterior, y el desarrollador indica que sirve cualquier dispositivo con un chip A14, M1 o más reciente, y que la RAM decide qué modelos caben.',
           },
           {
             title: 'Instala MLXHub',
@@ -1985,6 +2128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Cambio de modelo y espejos.** Cambia entre modelos de texto y de visión en plena conversación y usa un espejo comunitario de Hugging Face cuando Hugging Face esté bloqueado.',
           '**Streaming de modelos grandes.** La ficha menciona el streaming de expertos desde NAND para modelos grandes como Qwen3.6 35B-A3B, sin más detalle.',
           '**Idiomas.** La interfaz está disponible en inglés y otros 11 idiomas.',
+          '**Anunciado para la 2.3.0.** El desarrollador describe un Modo de voz y un Centro de voz, generación de imágenes, compatibilidad con el Apple Neural Engine, herramientas de benchmarking gratuitas y una entidad visual que representa el sistema. La versión 2.3.0 seguía en revisión en la App Store al redactar esto, así que nada de ello figura aún en la ficha.',
         ],
       },
       lanAndDistributed: {
@@ -1993,24 +2137,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**El servidor LAN convierte tu dispositivo en un pequeño endpoint compatible con OpenAI.** La ficha nombra las rutas /v1/chat/completions y /v1/embeddings. Según el sitio oficial, también ofrece una página de chat ligera que cualquiera en el mismo Wi-Fi puede abrir en un navegador para hablar con los modelos cargados, y solo se enlaza a interfaces locales, sin reenvío de puertos.',
           '**La inferencia distribuida combina varios de tus propios dispositivos.** Uno actúa de anfitrión y los demás se unen, cada uno con una parte de las capas del modelo, de modo que puede cargarse un modelo que ninguno admite por sí solo. El sitio indica que los dispositivos se emparejan y el tráfico va cifrado, y que nada sale de la red. No se publica el rendimiento por Wi-Fi, así que cabe esperar que sea más lento que un solo dispositivo al que el modelo le quepa.',
+          '**Tanto el servidor LAN como la creación de un mesh son funciones de pago.** El desarrollador indica que las funciones avanzadas requieren una compra de Plus, mientras que cualquiera puede usar la app sin pagar, por ejemplo como respaldo cuando un asistente en la nube no funciona o en un avión.',
         ],
       },
       requirements: {
         id: 'requirements',
         title: 'Requisitos del dispositivo',
         content: [
-          '**MLXHub requiere iOS o iPadOS 26.0 o posterior, un dispositivo con Apple silicon y 6 GB de RAM o más.** El sitio oficial recomienda un chip A17 Pro o M1, o más reciente. La ficha de la App Store muestra además disponibilidad de la misma app para macOS 26.0 (Apple M1 o posterior) y visionOS 26.0, sin describir una versión de escritorio aparte.',
-          'La RAM es el límite real. Apple impone límites de memoria más estrictos a las apps en iPhone que en iPad, así que los modelos grandes caben más a menudo en un iPad. El sitio advierte de que a veces puede descargarse un modelo que no cabe, y de que la app intenta impedir que se cargue antes de que iOS cierre la app, sin garantía.',
+          '**MLXHub requiere iOS o iPadOS 26.0 o posterior y un dispositivo con un chip A14 o M1, o más reciente.** El desarrollador indica que una declaración anterior del sitio oficial sobre «6 GB de RAM como mínimo» era engañosa y que la RAM solo decide qué modelos puedes ejecutar. La ficha de la App Store muestra además disponibilidad de la misma app para macOS 26.0 (Apple M1 o posterior) y visionOS 26.0, sin describir una versión de escritorio aparte.',
+          'La RAM sigue siendo el límite práctico del tamaño del modelo. Apple impone límites de memoria más estrictos a las apps en iPhone que en iPad, así que los modelos grandes caben más a menudo en un iPad. El sitio advierte de que a veces puede descargarse un modelo que no cabe, y de que la app intenta impedir que se cargue antes de que iOS cierre la app, sin garantía.',
         ],
       },
       privacy: {
         id: 'privacy',
         title: 'Precios y privacidad',
         content: [
-          '**MLXHub se descarga gratis, con MLXHub Plus a $6.99 al mes, $44.99 al año y una compra de por vida de $229.99.** Ni la ficha ni el sitio dicen qué funciones desbloquea Plus, así que revisa el muro de pago en la app antes de depender de una función. Los modelos se descargan gratis desde Hugging Face, sin tarifas por token.',
+          '**MLXHub se descarga gratis, con MLXHub Plus a $6.99 al mes, $44.99 al año y una compra de por vida de $229.99.** La ficha no detalla Plus, pero el desarrollador afirma que desbloquea más de dos modelos descargados, todas las herramientas que cambian algo, skills, el servidor, la generación de imágenes por encima de 512 px, temas e iconos de la app, la creación de mesh para ejecutar modelos densos entre dispositivos y todas las funciones futuras. Revisa el muro de pago en la app antes de depender de una función. Los modelos se descargan gratis desde Hugging Face, sin tarifas por token.',
+          'El desarrollador indica que en la versión 2.3.0 el servidor LAN vuelve como compra independiente dentro de la app a $34.49, una alternativa a la suscripción. Ese importe se descuenta de la compra de por vida, que pasaría a costar $195.99 en lugar de $229.99. Son precios declarados por el desarrollador para una versión que aún no está en la App Store, en dólares estadounidenses, y otras tiendas pueden mostrar importes distintos.',
           'El sitio oficial dice que la inferencia es totalmente en el dispositivo, que no hay cuentas y que nada te identifica. También indica que, desde la versión 2.0.0, la app envía analíticas y diagnósticos anónimos, que abarcan qué funciones usas, la clase de dispositivo y si un modelo se cargó, y que puedes desactivarlos en Ajustes.',
           'La app es de código cerrado y esta reseña no inspeccionó el tráfico de red, así que las afirmaciones de privacidad son del propio desarrollador. Si activas el servidor LAN, los datos que pasan por él son tan privados como tu red Wi-Fi.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Del creador',
+        content: [
+          'Juan Colilla, de DreamFoundries, desarrollador de MLXHub, revisó esta página y compartió lo siguiente sobre por qué creó la app. Se presenta como palabras del propio desarrollador, ligeramente editadas para facilitar la lectura, y no como valoración editorial independiente de PromptQuorum:',
+          '"Soy un entusiasta de la tecnología y me encanta lo que la IA nos aporta. Apoyo la IA de pesos abiertos; creo que es una tecnología que no se puede ni se debe negar a las personas, porque hoy en día es un factor diferenciador.',
+          'También me encantan los dispositivos Apple, ya que soy ingeniero iOS desde 2018. Aunque ya existían apps que llevaban la inferencia local a iPhones y iPads, sabía que se podía hacer mucho más por esos dispositivos. Las apps con un catálogo fijo de modelos te obligan a esperar una actualización para usar un modelo nuevo, y modelos personalizados como SuperGemma 4 Obliterated quedan fuera de toda posibilidad. Otras apps que permitían el acceso libre a Hugging Face solo usaban GGUF y no aprovechaban el desarrollo de MLX de Apple.',
+          'Por eso creé MLXHub: quiero que sea la mejor app para ejecutar modelos MLX en dispositivos Apple, que aproveche al máximo el hardware, que pueda usar todos los modelos compatibles (SwissAI Apertus 1.5 de Europa, IFM K2-Horizon de los Emiratos Árabes Unidos, SuperGemma 4 sin censura) e incluso modelos que jamás pensarías que cabrían, como Qwen3.6 35B-A3B mediante streaming desde NAND.',
+          'MLXHub representa libertad para mí, y esa es la filosofía que tengo en mente cuando la desarrollo. Por eso la mayoría de los usuarios puede usarla totalmente gratis; las limitaciones que existen son pocas y solo para usuarios avanzados, como el servidor o las herramientas que cambian cosas, para respaldar el tiempo, los recursos y el esfuerzo invertidos en el desarrollo.',
+          'En la última actualización, la 2.3.0, MLXHub incluye una entidad que es la representación visual del sistema y un Centro de voz, para que tu iPad pueda actuar como tu servidor de IA doméstico mientras responde a tus preguntas. Algo parecido a Apple Home, pero más tecnológico. También he incorporado, de forma gratuita, el Modo de voz, la generación de imágenes, la compatibilidad con el Apple Neural Engine y herramientas de benchmarking. Quiero que MLXHub sea el asistente fiable para todos: funciona sin conexión, es rápido, es bonito y es la referencia de cómo cualquier dispositivo iOS trabaja con modelos de IA locales."',
+        ],
+        note: '— Juan Colilla, desarrollador (DreamFoundries)',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2021,27 +2180,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Ventaja': 'Inferencia MLX sin conexión',
             'Qué significa en el uso real': 'Chatea con modelos abiertos sin conexión, con el framework propio de Apple.',
-            'Limitación / advertencia': 'Requiere iOS 26 y 6 GB de RAM; la memoria del iPhone limita el tamaño del modelo.',
+            'Limitación / advertencia': 'Requiere iOS 26 y un chip A14 o M1; la RAM limita el tamaño del modelo.',
           },
           {
             'Ventaja': 'Servidor LAN',
             'Qué significa en el uso real': 'Otras apps y navegadores de tu Wi-Fi pueden usar los modelos cargados.',
-            'Limitación / advertencia': 'El dispositivo debe seguir activo y en la red; no se publican cifras de rendimiento.',
+            'Limitación / advertencia': 'De pago (Plus) según el desarrollador; el dispositivo debe seguir activo y en la red.',
           },
           {
             'Ventaja': 'Reparto entre dispositivos',
             'Qué significa en el uso real': 'Carga un modelo que ningún dispositivo tuyo puede alojar por sí solo.',
-            'Limitación / advertencia': 'La velocidad por Wi-Fi no está documentada y hacen falta varios dispositivos compatibles.',
+            'Limitación / advertencia': 'De pago (Plus); velocidad por Wi-Fi sin documentar; requiere varios dispositivos.',
           },
           {
             'Ventaja': 'Herramientas, memoria y skills',
             'Qué significa en el uso real': 'Accede a Calendario, Recordatorios y Salud desde un chat.',
-            'Limitación / advertencia': 'La ficha no da detalles de lo que hace cada herramienta.',
+            'Limitación / advertencia': 'Las que cambian algo son Plus; la ficha no detalla cada herramienta.',
           },
           {
             'Ventaja': 'Gratis para empezar',
-            'Qué significa en el uso real': 'Sin tarifas por token; los modelos son gratuitos en Hugging Face.',
-            'Limitación / advertencia': 'Plus cuesta hasta $229.99 de por vida y no se indica qué desbloquea.',
+            'Qué significa en el uso real': 'Chat gratis ilimitado según el desarrollador; sin tarifas por token.',
+            'Limitación / advertencia': 'El nivel gratuito admite dos modelos; Plus cuesta hasta $229.99 de por vida.',
           },
         ],
       },
@@ -2104,8 +2263,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Cualquiera que necesite código abierto.** El código no es público; [Private Mind](/es/power-local-llm/private-mind-review) y [PocketPal AI](/es/power-local-llm/pocketpal-ai-review) son de código abierto.',
           '**Usuarios de Android.** Solo figuran plataformas de Apple; PocketPal AI y Private Mind funcionan ambas en Android.',
-          '**Dispositivos con una versión anterior a iOS 26 o con menos de 6 GB de RAM.** La ficha y el sitio fijan esos mínimos.',
-          '**Quien quiera una lista declarada de funciones del nivel de pago.** No se documenta qué desbloquea MLXHub Plus; prueba primero el nivel gratuito.',
+          '**Dispositivos con una versión anterior a iOS 26 o con un chip anterior al A14 o M1.** La ficha y el desarrollador fijan esos mínimos.',
+          '**Quien quiera el servidor LAN o el mesh gratis.** Según el desarrollador, el servidor, las herramientas que cambian cosas, las skills y el mesh requieren Plus; el nivel gratuito se limita a dos modelos descargados.',
         ],
       },
       faq: {
@@ -2114,7 +2273,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Es gratis MLXHub?',
-            a: 'Se descarga gratis con compras dentro de la app: MLXHub Plus a $6.99 al mes, $44.99 al año o $229.99 de por vida, según la ficha de la App Store.',
+            a: 'Se descarga gratis con compras dentro de la app: MLXHub Plus a $6.99 al mes, $44.99 al año o $229.99 de por vida, según la ficha de la App Store. El desarrollador indica que el chat es ilimitado en el nivel gratuito, con hasta dos modelos descargados.',
+          },
+          {
+            q: '¿Qué desbloquea MLXHub Plus?',
+            a: 'Según el desarrollador: más de dos modelos descargados, herramientas que cambian cosas, skills, el servidor, generación de imágenes por encima de 512 px, temas e iconos, creación de mesh y funciones futuras. En la 2.3.0 añade una compra de Servidor LAN de $34.49 que se descuenta de la compra de por vida ($195.99 en lugar de $229.99), pendiente de aprobación de la App Store.',
+          },
+          {
+            q: '¿Qué dispositivos pueden ejecutar MLXHub?',
+            a: 'Cualquier iPhone o iPad con iOS o iPadOS 26.0 o posterior y un chip A14 o M1 o más reciente. La RAM no fija un mínimo; decide qué modelos caben.',
           },
           {
             q: '¿Quién desarrolla MLXHub?',
@@ -2139,8 +2306,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredicto',
         content: [
           'Sobre el papel, MLXHub encaja bien con quien tiene un iPad o un iPhone reciente y quiere chat MLX sin conexión, con la opción de usar el dispositivo como endpoint local o de combinar varios dispositivos para un modelo más grande.',
-          'Las salvedades son la transparencia y la madurez: es de código cerrado, las funciones de Plus no están documentadas, la velocidad del reparto entre dispositivos no se publica y la ficha mostraba solo siete valoraciones en el momento de la reseña.',
-          'Si quieres código abierto, empieza con [Private Mind](/es/power-local-llm/private-mind-review). Si quieres el servidor LAN o el reparto entre dispositivos, prueba primero el nivel gratuito de MLXHub.',
+          'Las salvedades son la transparencia y la madurez: es de código cerrado, la ficha no detalla Plus (el desarrollador sí, véase más arriba), la velocidad del reparto entre dispositivos no se publica y la ficha mostraba solo ocho valoraciones en el momento de la reseña. La versión 2.3.0 seguía en revisión en la App Store, así que sus novedades son la descripción del desarrollador y no se han verificado aquí.',
+          'Si quieres código abierto, empieza con [Private Mind](/es/power-local-llm/private-mind-review). Si quieres el servidor LAN o el reparto entre dispositivos, prueba primero el nivel gratuito de MLXHub; según el desarrollador, ambas son funciones de pago de Plus.',
         ],
       },
       sources: {
@@ -2150,6 +2317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[MLXHub: Local AI & LLM Server en la App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144) — versión, precio, requisitos, funciones y desarrollador.',
           '[Sitio oficial de MLXHub](https://mlxhub.app) — descripciones de funciones, requisitos del dispositivo y preguntas frecuentes, incluida la declaración sobre analíticas.',
           '[Política de privacidad de MLXHub](https://mlxhub.app/privacy) — página de la política enlazada desde el sitio oficial.',
+          'Comentario y correcciones del desarrollador Juan Colilla (DreamFoundries), recibidos el 2026-10-19 — funciones de Plus, requisitos del dispositivo, precios de la 2.3.0 y el texto de Del creador.',
         ],
       },
       relatedReading: {
@@ -2169,7 +2337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-05',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-19',
     next_refresh_due: '2027-04-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/mlxhub-review-hero-pt.webp',
@@ -2178,9 +2346,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'O MLXHub é um aplicativo para iPhone e iPad que executa modelos abertos no próprio aparelho com o framework MLX da Apple, pode servi-los a outros aplicativos da sua rede e pode dividir um modelo grande entre vários dos seus dispositivos. Esta análise cobre o que a ficha dele na App Store e o site oficial documentam, o que fica pouco claro e como ele se compara a outros aplicativos de IA local para iOS.',
     metaDescription:
-      'Análise do MLXHub: app para iPhone e iPad com modelos MLX no dispositivo, servidor LAN compatível com a OpenAI e divisão de modelos entre dispositivos. Preços, exigência do iOS 26 e de RAM, privacidade e limites.',
+      'Análise do MLXHub: app para iPhone e iPad com modelos MLX no dispositivo, servidor LAN compatível com a OpenAI e divisão de modelos entre dispositivos. Preços, o que o Plus libera, requisitos de aparelho do iOS 26, privacidade, limites e comentários do desenvolvedor.',
     twitterDescription:
-      'Análise do MLXHub: um app iOS/iPadOS freemium que roda modelos MLX offline, os serve pela sua LAN e divide modelos grandes entre dispositivos. Requisitos, preços, privacidade e limites.',
+      'Análise do MLXHub: um app iOS/iPadOS freemium que roda modelos MLX offline, os serve pela sua LAN e divide modelos grandes entre dispositivos. Requisitos, preços, o que o Plus libera, privacidade, limites e comentários do desenvolvedor.',
     audience:
       'Donos de iPhone e iPad que querem rodar modelos abertos offline e, opcionalmente, usar o aparelho como endpoint local compatível com a OpenAI — aborda recursos, requisitos, preços, privacidade, limites e alternativas.',
     readTime: '8 min de leitura',
@@ -2197,22 +2365,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app mlx swift',
       'app de ia local para ipad',
     ],
-    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A17 Pro', 'M1'],
+    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A14', 'A17 Pro', 'M1'],
     leadAnswerBlock:
-      '**O MLXHub é um aplicativo freemium e de código fechado para iOS e iPadOS que executa modelos abertos de linguagem e visão offline em Apple silicon, pode expô-los como um servidor compatível com a OpenAI no seu Wi-Fi e pode reunir vários dos seus dispositivos para carregar um modelo que nenhum deles comporta sozinho.** Segundo a ficha dele na App Store, exige iOS ou iPadOS 26.0 ou posterior e é gratuito para baixar, com o MLXHub Plus como compras no aplicativo. Esta análise cobre a versão 2.2.0 e se baseia na ficha pública e no site oficial, não em testes práticos.',
+      '**O MLXHub é um aplicativo freemium e de código fechado para iOS e iPadOS que executa modelos abertos de linguagem e visão offline em Apple silicon, pode expô-los como um servidor compatível com a OpenAI no seu Wi-Fi e pode reunir vários dos seus dispositivos para carregar um modelo que nenhum deles comporta sozinho.** Segundo a ficha dele na App Store, exige iOS ou iPadOS 26.0 ou posterior e é gratuito para baixar, com o MLXHub Plus como compras no aplicativo. Segundo o desenvolvedor, o plano gratuito permite chat ilimitado com até dois modelos baixados, enquanto o servidor, a malha (mesh) e outros recursos avançados exigem o Plus. O desenvolvedor, Juan Colilla, revisou esta página e acrescentou comentários e correções próprios. Esta análise cobre a versão 2.2.1 listada e se baseia na ficha pública, no site oficial e nas declarações do desenvolvedor, não em testes práticos; a versão 2.3.0 ainda está em revisão na App Store.',
     quickAnswerTop: {
       pt: {
         question: 'Vale a pena instalar o MLXHub para IA local em um iPhone ou iPad?',
         answer:
-          'Sim, se você tem um iPhone ou iPad com Apple silicon no iOS 26 e pelo menos 6 GB de RAM e quer chat offline mais um endpoint na LAN ou a divisão de modelos entre dispositivos. Não vale a pena se você precisa de código aberto, de Android ou de uma lista fixa de recursos gratuitos: o código não é público e a ficha não diz o que o MLXHub Plus libera. O Locally AI e o Private Mind são alternativas mais simples no dispositivo.',
+          'Sim, se você tem um iPhone ou iPad no iOS 26 com chip A14 ou M1 ou mais novo e quer chat offline, opcionalmente com um endpoint na LAN ou a divisão de modelos entre dispositivos. A RAM só define quais modelos cabem. Não vale a pena se você precisa de código aberto, de Android ou de um servidor LAN gratuito: o código não é público e, segundo o desenvolvedor, o servidor e a malha são recursos pagos do Plus. O Locally AI e o Private Mind são alternativas mais simples no dispositivo.',
         bullets: [
           'Download gratuito com compras no aplicativo: Plus por $6.99 por mês, $44.99 por ano ou $229.99 vitalício.',
+          'Segundo o desenvolvedor, o chat é ilimitado no plano gratuito, com até dois modelos baixados; servidor, ferramentas, skills e malha exigem o Plus.',
           'Executa modelos abertos de texto e visão no dispositivo via mlx-swift; os modelos vêm do Hugging Face.',
           'Servidor LAN opcional com rotas no estilo da OpenAI, /v1/chat/completions e /v1/embeddings.',
           'A inferência distribuída divide um modelo entre os seus próprios dispositivos pareados, na mesma rede.',
-          'Exige iOS ou iPadOS 26.0 ou posterior em Apple silicon com 6 GB de RAM ou mais.',
+          'Exige iOS ou iPadOS 26.0 ou posterior com chip A14, M1 ou mais novo; a RAM define quais modelos cabem.',
         ],
-        updatedDate: '2026-10-05',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -2225,6 +2394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Servidor LAN e inferência distribuída', anchor: 'lan-and-distributed' },
       { label: 'Requisitos do aparelho', anchor: 'requirements' },
       { label: 'Preços e privacidade', anchor: 'privacy' },
+      { label: 'Palavra do desenvolvedor', anchor: 'from-the-maker' },
       { label: 'Prós e contras: benefícios vs. limitações', anchor: 'tradeoffs' },
       { label: 'MLXHub vs. alternativas', anchor: 'vs-alternatives' },
       { label: 'Quem deveria usar o MLXHub', anchor: 'who-should-use' },
@@ -2242,7 +2412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'O MLXHub, do desenvolvedor Juan Colilla, é um aplicativo freemium para iPhone e iPad que executa modelos abertos offline no framework MLX da Apple, os serve à sua rede e pode dividir um modelo entre vários dos seus dispositivos.',
+            text: 'O MLXHub, do desenvolvedor Juan Colilla, que revisou esta página, é um aplicativo freemium para iPhone e iPad que executa modelos abertos offline no framework MLX da Apple, os serve à sua rede e pode dividir um modelo entre vários dos seus dispositivos.',
           },
           {
             type: 'plain-terms',
@@ -2250,10 +2420,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Versão analisada: 2.2.0, conforme a [ficha da App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144).',
-          'Preço: download gratuito; o MLXHub Plus é listado a $6.99 por mês, $44.99 por ano e $229.99 vitalício.',
-          'Plataforma: iOS e iPadOS 26.0 ou posterior; o site oficial pede Apple silicon e 6 GB de RAM ou mais.',
-          'Recursos de destaque: servidor LAN, divisão de modelos entre dispositivos, ferramentas e skills, espelhos do Hugging Face.',
+          'Versão analisada: 2.2.1, conforme a [ficha da App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144).',
+          'Preço: download gratuito; o MLXHub Plus é listado a $6.99 por mês, $44.99 por ano e $229.99 vitalício. O desenvolvedor diz que o chat é ilimitado no plano gratuito, com até dois modelos baixados.',
+          'Plataforma: iOS e iPadOS 26.0 ou posterior com chip A14, M1 ou mais novo; o desenvolvedor diz que a RAM só define quais modelos cabem.',
+          'Recursos de destaque: servidor LAN, divisão de modelos entre dispositivos, ferramentas e skills, espelhos do Hugging Face; o servidor e a malha são pagos.',
+          'Revisado pelo desenvolvedor: ele enviou comentários e correções, apresentados em Palavra do desenvolvedor.',
           'Abertura: código fechado; não foi encontrado repositório público.',
         ],
       },
@@ -2293,7 +2464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Atributo': 'Download de modelos no app', 'MLXHub': 'Sim, do Hugging Face' },
           { 'Atributo': 'Entrada de imagens', 'MLXHub': 'Sim, modelos de visão e linguagem' },
           { 'Atributo': 'Servidor de API local', 'MLXHub': 'Sim, compatível com a OpenAI na LAN' },
-          { 'Atributo': 'Entrada / saída de voz', 'MLXHub': 'Não informado na ficha' },
+          { 'Atributo': 'Entrada / saída de voz', 'MLXHub': 'Voice Mode na 2.3.0 (desenvolvedor, aguardando aprovação)' },
         ],
         note: 'Os atributos seguem a comparação de chat para celular usada no Diretório de Software de LLM Local. Eles vêm da ficha da App Store e do site oficial, que não cobrem todos os recursos.',
       },
@@ -2315,7 +2486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Verifique o aparelho e o sistema',
-            whyItMatters: 'A ficha exige iOS ou iPadOS 26.0 ou posterior, e o site oficial pede um aparelho com Apple silicon e 6 GB de RAM ou mais.',
+            whyItMatters: 'A ficha exige iOS ou iPadOS 26.0 ou posterior, e o desenvolvedor diz que qualquer aparelho com chip A14 ou M1 ou mais novo funciona, com a RAM definindo quais modelos cabem.',
           },
           {
             title: 'Instale o MLXHub',
@@ -2345,6 +2516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Troca de modelos e espelhos.** Alterne entre modelos de texto e de visão no meio da conversa e use um espelho comunitário do Hugging Face quando o Hugging Face estiver bloqueado.',
           '**Streaming de modelos grandes.** A ficha menciona streaming de especialistas via NAND para modelos maiores, como o Qwen3.6 35B-A3B, sem mais detalhes.',
           '**Idiomas.** A interface está disponível em inglês e em outros 11 idiomas.',
+          '**Anunciado para a 2.3.0.** O desenvolvedor descreve um Voice Mode e uma Voice Center, geração de imagens, suporte ao Apple Neural Engine, ferramentas de benchmark gratuitas e uma entidade visual que representa o sistema. A versão 2.3.0 ainda estava em revisão na App Store quando isto foi escrito, então nada disso aparece na ficha por enquanto.',
         ],
       },
       lanAndDistributed: {
@@ -2353,24 +2525,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**O servidor LAN transforma o seu aparelho em um pequeno endpoint compatível com a OpenAI.** A ficha cita as rotas /v1/chat/completions e /v1/embeddings. Segundo o site oficial, ele também serve uma página de chat leve que qualquer pessoa no mesmo Wi-Fi pode abrir no navegador para conversar com os modelos carregados, e escuta apenas em interfaces locais, sem redirecionamento de portas.',
           '**A inferência distribuída reúne vários dos seus próprios dispositivos.** Um aparelho hospeda e os outros se juntam, cada um assumindo uma parte das camadas do modelo, de modo que um modelo que nenhum deles comporta sozinho pode ser carregado. O site diz que os dispositivos são pareados e o tráfego é criptografado, e que nada sai da rede. A taxa de transferência pelo Wi-Fi não é publicada, então espere algo mais lento do que um único aparelho que comporte o modelo.',
+          '**O servidor LAN e a criação de malha são recursos pagos.** O desenvolvedor diz que os recursos avançados exigem uma compra do Plus, enquanto qualquer pessoa pode usar o aplicativo sem pagar, por exemplo como substituto quando um assistente na nuvem está fora do ar ou num avião.',
         ],
       },
       requirements: {
         id: 'requirements',
         title: 'Requisitos do aparelho',
         content: [
-          '**O MLXHub exige iOS ou iPadOS 26.0 ou posterior, um aparelho com Apple silicon e 6 GB de RAM ou mais.** O site oficial recomenda um chip A17 Pro ou M1, ou mais novo. A ficha da App Store também mostra disponibilidade para macOS 26.0 (Apple M1 ou posterior) e visionOS 26.0 para o mesmo aplicativo, sem descrever uma versão de desktop separada.',
-          'A RAM é o limite real. A Apple impõe limites de memória por aplicativo mais rígidos no iPhone do que no iPad, então modelos maiores cabem com mais frequência em um iPad. O site avisa que um modelo que não cabe pode, às vezes, ainda ser baixado, e que o app tenta impedir o carregamento antes que o iOS encerre o aplicativo, sem garantia.',
+          '**O MLXHub exige iOS ou iPadOS 26.0 ou posterior e um aparelho com chip A14 ou M1, ou mais novo.** O desenvolvedor diz que uma afirmação anterior de "mínimo de 6 GB de RAM" no site oficial era enganosa e que a RAM só define quais modelos você consegue executar. A ficha da App Store também mostra disponibilidade para macOS 26.0 (Apple M1 ou posterior) e visionOS 26.0 para o mesmo aplicativo, sem descrever uma versão de desktop separada.',
+          'A RAM ainda é o limite prático para o tamanho do modelo. A Apple impõe limites de memória por aplicativo mais rígidos no iPhone do que no iPad, então modelos maiores cabem com mais frequência em um iPad. O site avisa que um modelo que não cabe pode, às vezes, ainda ser baixado, e que o app tenta impedir o carregamento antes que o iOS encerre o aplicativo, sem garantia.',
         ],
       },
       privacy: {
         id: 'privacy',
         title: 'Preços e privacidade',
         content: [
-          '**O MLXHub é gratuito para baixar, com o MLXHub Plus listado a $6.99 por mês, $44.99 por ano e uma compra vitalícia de $229.99.** Nem a ficha nem o site dizem quais recursos o Plus libera, então confira a tela de assinatura no aplicativo antes de contar com algum recurso. Os modelos são baixados gratuitamente do Hugging Face, sem cobrança por token.',
+          '**O MLXHub é gratuito para baixar, com o MLXHub Plus listado a $6.99 por mês, $44.99 por ano e uma compra vitalícia de $229.99.** A ficha não detalha o Plus, mas o desenvolvedor afirma que ele libera mais de dois modelos baixados, todas as ferramentas que alteram algo, skills, o servidor, geração de imagens acima de 512 px, temas e ícones do app, a criação de malha para executar modelos densos entre dispositivos e todos os recursos futuros. Confira a tela de assinatura no aplicativo antes de contar com algum recurso. Os modelos são baixados gratuitamente do Hugging Face, sem cobrança por token.',
+          'O desenvolvedor diz que, na versão 2.3.0, o servidor LAN volta como uma compra separada no aplicativo por $34.49, uma alternativa à assinatura. Esse valor é abatido da compra vitalícia, que passaria a custar $195.99 em vez de $229.99. São preços declarados pelo desenvolvedor para uma versão que ainda não está na App Store, em dólares americanos, e outras lojas podem mostrar valores diferentes.',
           'O site oficial diz que a inferência acontece totalmente no dispositivo, que não há contas e que nada identifica você. Ele também informa que, desde a versão 2.0.0, o app envia análises e diagnósticos anônimos, abrangendo quais recursos você usa, a classe do aparelho e se um modelo foi carregado, e que você pode desativá-los em Ajustes.',
           'O aplicativo é de código fechado e esta análise não inspecionou o tráfego de rede, então as afirmações de privacidade são do próprio desenvolvedor. Se você ativar o servidor LAN, os dados nele são tão privados quanto a sua rede Wi-Fi.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Palavra do desenvolvedor',
+        content: [
+          'Juan Colilla, da DreamFoundries, desenvolvedor do MLXHub, revisou esta página e compartilhou o texto a seguir sobre por que criou o aplicativo. Ele é apresentado como as palavras do próprio desenvolvedor, levemente editadas para facilitar a leitura, e não como avaliação editorial independente da PromptQuorum:',
+          '"Sou um entusiasta de tecnologia e adoro o que a IA traz para nós. Sou defensor da IA de pesos abertos; acho que é uma tecnologia que não pode nem deve ser negada às pessoas, porque hoje ela é um fator de diferenciação.',
+          'Também adoro dispositivos Apple, já que sou engenheiro iOS desde 2018. Mesmo existindo apps que levavam a inferência local para iPhones e iPads, eu sabia que esses aparelhos podiam oferecer muito mais. Apps com um catálogo fixo de modelos fazem você esperar uma atualização para usar um modelo novo, e modelos personalizados como o SuperGemma 4 Obliterated nem entram na conversa. Outros apps que davam acesso livre ao Hugging Face usavam apenas GGUF, sem aproveitar o desenvolvimento do MLX da Apple.',
+          'Foi por isso que criei o MLXHub: quero que seja o melhor app para executar modelos MLX em dispositivos Apple, aproveitando todo o hardware, capaz de usar todos os modelos compatíveis (SwissAI Apertus 1.5, da Europa; IFM K2-Horizon, dos Emirados Árabes Unidos; SuperGemma 4 uncensored) e até modelos que você jamais imaginaria que coubessem, como o Qwen3.6 35B-A3B por meio de streaming via NAND.',
+          'O MLXHub representa liberdade para mim, e essa é a filosofia que tenho em mente ao desenvolvê-lo. Por isso a maioria dos usuários pode usá-lo inteiramente de graça; as limitações que existem são poucas e voltadas a usuários avançados, como o servidor ou as ferramentas que alteram algo, para sustentar o tempo, os recursos e o esforço investidos no desenvolvimento.',
+          'Na atualização mais recente, a 2.3.0, o MLXHub inclui uma entidade que é a representação visual do sistema e uma Voice Center, para que o seu iPad possa atuar como o servidor de IA da sua casa enquanto responde às suas perguntas. Algo parecido com o Apple Home, mas mais techie. Também introduzi o Voice Mode, a geração de imagens, o suporte ao Apple Neural Engine e ferramentas de benchmark, de graça. Quero que o MLXHub seja o assistente confiável para todos: funciona offline, é rápido, é bonito e é a referência de como qualquer dispositivo iOS trabalha com modelos de IA locais."',
+        ],
+        note: '— Juan Colilla, desenvolvedor (DreamFoundries)',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2381,27 +2568,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Benefício': 'Inferência MLX offline',
             'O que significa no uso real': 'Converse com modelos abertos sem conexão, usando o framework da própria Apple.',
-            'Limitação / ressalva': 'Exige iOS 26 e 6 GB de RAM; os limites de memória do iPhone restringem o tamanho do modelo.',
+            'Limitação / ressalva': 'Exige iOS 26 e chip A14 ou M1; a RAM limita o tamanho do modelo.',
           },
           {
             'Benefício': 'Servidor LAN',
             'O que significa no uso real': 'Outros aplicativos e navegadores do seu Wi-Fi podem usar os modelos carregados.',
-            'Limitação / ressalva': 'O aparelho precisa ficar ativo e na rede; não há números de taxa de transferência publicados.',
+            'Limitação / ressalva': 'Pago (Plus), segundo o desenvolvedor; o aparelho precisa ficar ativo e na rede.',
           },
           {
             'Benefício': 'Divisão entre dispositivos',
             'O que significa no uso real': 'Carregue um modelo que nenhum dos seus aparelhos comporta sozinho.',
-            'Limitação / ressalva': 'A velocidade pelo Wi-Fi não é documentada e exige vários dispositivos compatíveis.',
+            'Limitação / ressalva': 'Pago (Plus); velocidade no Wi-Fi não documentada; exige vários aparelhos.',
           },
           {
             'Benefício': 'Ferramentas, memória e skills',
             'O que significa no uso real': 'Acesse Calendário, Lembretes e Saúde a partir de um chat.',
-            'Limitação / ressalva': 'A ficha não detalha o que cada ferramenta faz.',
+            'Limitação / ressalva': 'Ferramentas que alteram algo são Plus; a ficha não detalha cada uma.',
           },
           {
             'Benefício': 'Gratuito para começar',
-            'O que significa no uso real': 'Sem cobrança por token; os modelos são gratuitos no Hugging Face.',
-            'Limitação / ressalva': 'O Plus custa até $229.99 vitalício, e o que ele libera não é informado.',
+            'O que significa no uso real': 'Chat gratuito ilimitado, segundo o desenvolvedor; sem cobrança por token.',
+            'Limitação / ressalva': 'O plano gratuito permite dois modelos baixados; o Plus custa até $229.99 vitalício.',
           },
         ],
       },
@@ -2464,8 +2651,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Quem precisa de código aberto.** O código não é público; o [Private Mind](/pt/power-local-llm/private-mind-review) e o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) são de código aberto.',
           '**Usuários de Android.** Só plataformas Apple são listadas; o PocketPal AI e o Private Mind funcionam no Android.',
-          '**Aparelhos abaixo do iOS 26 ou com menos de 6 GB de RAM.** A ficha e o site definem esses mínimos.',
-          '**Quem quer uma lista declarada de recursos do plano pago.** O que o MLXHub Plus libera não é documentado; experimente primeiro a versão gratuita.',
+          '**Aparelhos abaixo do iOS 26 ou mais antigos que um chip A14 ou M1.** A ficha e o desenvolvedor definem esses mínimos.',
+          '**Quem quer o servidor LAN ou a malha de graça.** Segundo o desenvolvedor, o servidor, as ferramentas que alteram algo, as skills e a malha exigem o Plus; o plano gratuito é limitado a dois modelos baixados.',
         ],
       },
       faq: {
@@ -2474,7 +2661,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'O MLXHub é gratuito?',
-            a: 'Ele é gratuito para baixar, com compras no aplicativo: o MLXHub Plus por $6.99 por mês, $44.99 por ano ou $229.99 vitalício, conforme a ficha da App Store.',
+            a: 'Ele é gratuito para baixar, com compras no aplicativo: o MLXHub Plus por $6.99 por mês, $44.99 por ano ou $229.99 vitalício, conforme a ficha da App Store. O desenvolvedor diz que o chat é ilimitado no plano gratuito, com até dois modelos baixados.',
+          },
+          {
+            q: 'O que o MLXHub Plus libera?',
+            a: 'Segundo o desenvolvedor: mais de dois modelos baixados, ferramentas que alteram algo, skills, o servidor, geração de imagens acima de 512 px, temas e ícones, criação de malha e recursos futuros. Na 2.3.0 ele acrescenta uma compra do Servidor LAN por $34.49, abatida da compra vitalícia ($195.99 em vez de $229.99), pendente de aprovação na App Store.',
+          },
+          {
+            q: 'Quais dispositivos executam o MLXHub?',
+            a: 'Qualquer iPhone ou iPad com iOS ou iPadOS 26.0 ou posterior e chip A14 ou M1, ou mais novo. A RAM não define um mínimo; ela define quais modelos cabem.',
           },
           {
             q: 'Quem faz o MLXHub?',
@@ -2499,8 +2694,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Veredito',
         content: [
           'No papel, o MLXHub é uma boa opção para quem tem um iPad ou iPhone recente e quer chat MLX offline, com a possibilidade de usar o aparelho como endpoint local ou de reunir vários dispositivos para um modelo maior.',
-          'As ressalvas são a transparência e a maturidade: o código é fechado, os recursos do Plus não são documentados, a velocidade da divisão entre dispositivos não é publicada, e a ficha exibia apenas sete avaliações no momento da análise.',
-          'Se você quer código aberto, comece pelo [Private Mind](/pt/power-local-llm/private-mind-review). Se quer o servidor LAN ou a divisão entre dispositivos, experimente primeiro a versão gratuita do MLXHub.',
+          'As ressalvas são a transparência e a maturidade: o código é fechado, a ficha não detalha o Plus (o desenvolvedor o faz, veja acima), a velocidade da divisão entre dispositivos não é publicada, e a ficha exibia apenas oito avaliações no momento da análise. A versão 2.3.0 ainda estava em revisão na App Store, então as novidades dela são a descrição do desenvolvedor, não verificadas aqui.',
+          'Se você quer código aberto, comece pelo [Private Mind](/pt/power-local-llm/private-mind-review). Se quer o servidor LAN ou a divisão entre dispositivos, experimente primeiro a versão gratuita do MLXHub; ambos são recursos pagos do Plus, segundo o desenvolvedor.',
         ],
       },
       sources: {
@@ -2510,6 +2705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[MLXHub: Local AI & LLM Server na App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144) — versão, preço, requisitos, recursos e desenvolvedor.',
           '[Site oficial do MLXHub](https://mlxhub.app) — descrições de recursos, requisitos do aparelho e perguntas frequentes, incluindo a declaração sobre análises.',
           '[Política de privacidade do MLXHub](https://mlxhub.app/privacy) — página de política vinculada no site oficial.',
+          'Comentário e correções do desenvolvedor Juan Colilla (DreamFoundries), recebidos em 2026-10-19 — recursos do Plus, requisitos de aparelho, preços da 2.3.0 e o texto de Palavra do desenvolvedor.',
         ],
       },
       relatedReading: {
@@ -2529,7 +2725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-05',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-19',
     next_refresh_due: '2027-04-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/mlxhub-review-hero-ar.webp',
@@ -2538,9 +2734,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MLXHub تطبيق للآيفون والآيباد يشغّل نماذج مفتوحة على الجهاز نفسه عبر إطار MLX من Apple، ويمكنه تقديمها لتطبيقات أخرى على شبكتك، وتقسيم نموذج كبير واحد على عدة أجهزة تملكها. تتناول هذه المراجعة ما توثّقه صفحة التطبيق على App Store والموقع الرسمي، وما هو غير واضح، ومقارنته بتطبيقات الذكاء الاصطناعي المحلي الأخرى على iOS.',
     metaDescription:
-      'مراجعة MLXHub: تطبيق للآيفون والآيباد لتشغيل نماذج MLX على الجهاز مع خادم شبكة محلية متوافق مع OpenAI وتقسيم النموذج على عدة أجهزة. الأسعار ومتطلبات iOS 26 والذاكرة العشوائية والخصوصية والقيود.',
+      'مراجعة MLXHub: تطبيق للآيفون والآيباد لتشغيل نماذج MLX على الجهاز مع خادم شبكة محلية متوافق مع OpenAI وتقسيم النموذج على عدة أجهزة. الأسعار وما يفتحه Plus ومتطلبات أجهزة iOS 26 والخصوصية والقيود وتعليقات المطوّر.',
     twitterDescription:
-      'مراجعة MLXHub: تطبيق iOS/iPadOS مجاني مع مشتريات داخل التطبيق يشغّل نماذج MLX دون إنترنت، ويخدمها عبر شبكتك المحلية، ويقسّم النماذج الكبيرة على عدة أجهزة. المتطلبات والأسعار والخصوصية والقيود.',
+      'مراجعة MLXHub: تطبيق iOS/iPadOS مجاني مع مشتريات داخل التطبيق يشغّل نماذج MLX دون إنترنت، ويخدمها عبر شبكتك المحلية، ويقسّم النماذج الكبيرة على عدة أجهزة. المتطلبات والأسعار وما يفتحه Plus والخصوصية والقيود وتعليقات المطوّر.',
     audience:
       'مستخدمو آيفون وآيباد الذين يريدون تشغيل نماذج مفتوحة دون إنترنت، واستخدام الجهاز اختياريًا كنقطة وصول محلية متوافقة مع OpenAI — يغطي الميزات والمتطلبات والأسعار والخصوصية والقيود والبدائل.',
     readTime: '8 دقائق للقراءة',
@@ -2557,22 +2753,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تطبيق mlx swift',
       'تطبيق ذكاء اصطناعي محلي للآيباد',
     ],
-    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A17 Pro', 'M1'],
+    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A14', 'A17 Pro', 'M1'],
     leadAnswerBlock:
-      '**MLXHub تطبيق مجاني مغلق المصدر مع مشتريات داخل التطبيق لنظامي iOS وiPadOS، يشغّل نماذج لغوية ونماذج رؤية مفتوحة دون إنترنت على معالجات Apple silicon، ويمكنه عرضها كخادم متوافق مع OpenAI على شبكة Wi-Fi لديك، ويمكنه تجميع عدة أجهزة تملكها لتحميل نموذج لا يتسع له أي منها وحده.** بحسب صفحته على App Store يتطلب iOS أو iPadOS بالإصدار 26.0 أو أحدث، وتنزيله مجاني مع MLXHub Plus على شكل مشتريات داخل التطبيق. تغطي هذه المراجعة الإصدار 2.2.0 وتستند إلى الصفحة العلنية والموقع الرسمي، لا إلى اختبار عملي.',
+      '**MLXHub تطبيق مجاني مغلق المصدر مع مشتريات داخل التطبيق لنظامي iOS وiPadOS، يشغّل نماذج لغوية ونماذج رؤية مفتوحة دون إنترنت على معالجات Apple silicon، ويمكنه عرضها كخادم متوافق مع OpenAI على شبكة Wi-Fi لديك، ويمكنه تجميع عدة أجهزة تملكها لتحميل نموذج لا يتسع له أي منها وحده.** بحسب صفحته على App Store يتطلب iOS أو iPadOS بالإصدار 26.0 أو أحدث، وتنزيله مجاني مع MLXHub Plus على شكل مشتريات داخل التطبيق. وبحسب المطوّر تتيح الطبقة المجانية دردشة غير محدودة مع نموذجين منزَّلين على الأكثر، بينما يتطلب الخادم والشبكة المتعددة الأجهزة (mesh) وسائر الميزات المتقدمة اشتراك Plus. وقد راجع المطوّر Juan Colilla هذه الصفحة وأضاف تعليقاته وتصويباته. تغطي هذه المراجعة الإصدار 2.2.1 المدرج وتستند إلى الصفحة العلنية والموقع الرسمي وأقوال المطوّر، لا إلى اختبار عملي؛ أما الإصدار 2.3.0 فلا يزال قيد مراجعة App Store.',
     quickAnswerTop: {
       ar: {
         question: 'هل يستحق MLXHub التثبيت لتشغيل الذكاء الاصطناعي محليًا على الآيفون أو الآيباد؟',
         answer:
-          'نعم، إذا كان لديك آيفون أو آيباد بمعالج Apple silicon وإصدار iOS 26 وذاكرة عشوائية لا تقل عن 6 GB، وتريد دردشة دون إنترنت مع نقطة وصول على الشبكة المحلية أو تقسيم النموذج على عدة أجهزة. تجاوزه إذا كنت تحتاج إلى مصدر مفتوح أو أندرويد أو قائمة ثابتة بالميزات المجانية: الشيفرة غير متاحة، ولا تذكر الصفحة ما يفتحه MLXHub Plus. يظل Locally AI وPrivate Mind بديلين أبسط يعملان على الجهاز.',
+          'نعم، إذا كان لديك آيفون أو آيباد بنظام iOS 26 ومعالج A14 أو M1 أو أحدث، وتريد دردشة دون إنترنت، مع خيار نقطة وصول على الشبكة المحلية أو تقسيم النموذج على عدة أجهزة. الذاكرة العشوائية تحدد فقط أي النماذج يتسع. تجاوزه إذا كنت تحتاج إلى مصدر مفتوح أو أندرويد أو خادم شبكة محلية مجاني: الشيفرة غير متاحة، وبحسب المطوّر فإن الخادم والشبكة المتعددة الأجهزة (mesh) من ميزات Plus المدفوعة. يظل Locally AI وPrivate Mind بديلين أبسط يعملان على الجهاز.',
         bullets: [
           'تنزيل مجاني مع مشتريات داخل التطبيق: Plus بسعر $6.99 شهريًا أو $44.99 سنويًا أو $229.99 مدى الحياة.',
+          'بحسب المطوّر، الدردشة غير محدودة في الطبقة المجانية مع نموذجين منزَّلين على الأكثر؛ أما الخادم والأدوات والمهارات والشبكة المتعددة الأجهزة (mesh) فتتطلب Plus.',
           'يشغّل نماذج نصية ونماذج رؤية مفتوحة على الجهاز عبر mlx-swift؛ وتأتي النماذج من Hugging Face.',
           'خادم شبكة محلية اختياري بمساري /v1/chat/completions و/v1/embeddings على نمط OpenAI.',
           'يقسّم الاستدلال الموزّع نموذجًا واحدًا على أجهزتك المقترنة ضمن الشبكة نفسها.',
-          'يتطلب iOS أو iPadOS بالإصدار 26.0 أو أحدث على Apple silicon وذاكرة عشوائية 6 GB أو أكثر.',
+          'يتطلب iOS أو iPadOS بالإصدار 26.0 أو أحدث على معالج A14 أو M1 أو أحدث؛ والذاكرة العشوائية تحدد أي النماذج يتسع.',
         ],
-        updatedDate: '2026-10-05',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -2585,6 +2782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'خادم الشبكة المحلية والاستدلال الموزّع', anchor: 'lan-and-distributed' },
       { label: 'متطلبات الجهاز', anchor: 'requirements' },
       { label: 'الأسعار والخصوصية', anchor: 'privacy' },
+      { label: 'من المطوّر', anchor: 'from-the-maker' },
       { label: 'المفاضلات: المزايا مقابل القيود', anchor: 'tradeoffs' },
       { label: 'MLXHub مقابل البدائل', anchor: 'vs-alternatives' },
       { label: 'من يجب أن يستخدم MLXHub', anchor: 'who-should-use' },
@@ -2602,7 +2800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MLXHub، من تطوير المطوّر Juan Colilla، تطبيق للآيفون والآيباد مجاني مع مشتريات داخل التطبيق، يشغّل نماذج مفتوحة دون إنترنت على إطار MLX من Apple، ويقدّمها لشبكتك، ويمكنه تقسيم نموذج على عدة أجهزة لديك.',
+            text: 'MLXHub، من تطوير المطوّر Juan Colilla الذي راجع هذه الصفحة، تطبيق للآيفون والآيباد مجاني مع مشتريات داخل التطبيق، يشغّل نماذج مفتوحة دون إنترنت على إطار MLX من Apple، ويقدّمها لشبكتك، ويمكنه تقسيم نموذج على عدة أجهزة لديك.',
           },
           {
             type: 'plain-terms',
@@ -2610,10 +2808,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'الإصدار المراجَع: 2.2.0 كما يظهر في [صفحة التطبيق على App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144).',
-          'السعر: التنزيل مجاني؛ ويُدرج MLXHub Plus بسعر $6.99 شهريًا و$44.99 سنويًا و$229.99 مدى الحياة.',
-          'المنصة: iOS وiPadOS بالإصدار 26.0 أو أحدث؛ ويطلب الموقع الرسمي معالج Apple silicon وذاكرة عشوائية 6 GB أو أكثر.',
-          'أبرز الميزات: خادم الشبكة المحلية وتقسيم النموذج على عدة أجهزة والأدوات والمهارات ومرايا Hugging Face.',
+          'الإصدار المراجَع: 2.2.1 كما يظهر في [صفحة التطبيق على App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144).',
+          'السعر: التنزيل مجاني؛ ويُدرج MLXHub Plus بسعر $6.99 شهريًا و$44.99 سنويًا و$229.99 مدى الحياة. ويقول المطوّر إن الدردشة غير محدودة في الطبقة المجانية مع نموذجين منزَّلين على الأكثر.',
+          'المنصة: iOS وiPadOS بالإصدار 26.0 أو أحدث على معالج A14 أو M1 أو أحدث؛ ويقول المطوّر إن الذاكرة العشوائية تحدد فقط أي النماذج يتسع.',
+          'أبرز الميزات: خادم الشبكة المحلية وتقسيم النموذج على عدة أجهزة والأدوات والمهارات ومرايا Hugging Face؛ والخادم والشبكة المتعددة الأجهزة (mesh) مدفوعان.',
+          'راجعه المطوّر: قدّم المطوّر تعليقات وتصويبات، تظهر ضمن «من المطوّر».',
           'الانفتاح: مغلق المصدر؛ ولم يُعثر على مستودع علني.',
         ],
       },
@@ -2653,7 +2852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الخاصية': 'تنزيل النماذج داخل التطبيق', 'MLXHub': 'نعم، من Hugging Face' },
           { 'الخاصية': 'إدخال الصور', 'MLXHub': 'نعم، نماذج الرؤية واللغة' },
           { 'الخاصية': 'خادم API محلي', 'MLXHub': 'نعم، متوافق مع OpenAI على شبكتك' },
-          { 'الخاصية': 'إدخال/إخراج صوتي', 'MLXHub': 'غير مذكور في الصفحة' },
+          { 'الخاصية': 'إدخال/إخراج صوتي', 'MLXHub': 'Voice Mode في 2.3.0 (بحسب المطوّر، بانتظار الموافقة)' },
         ],
         note: 'تتبع الخصائص مقارنة تطبيقات الدردشة على الجوال المعتمدة في دليل برمجيات LLM المحلية. وهي مستمدة من صفحة App Store والموقع الرسمي، اللذين لا يغطيان كل ميزة.',
       },
@@ -2675,7 +2874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'تحقق من الجهاز ونظام التشغيل',
-            whyItMatters: 'تشترط الصفحة iOS أو iPadOS بالإصدار 26.0 أو أحدث، ويطلب الموقع الرسمي جهازًا بمعالج Apple silicon وذاكرة عشوائية 6 GB أو أكثر.',
+            whyItMatters: 'تشترط الصفحة iOS أو iPadOS بالإصدار 26.0 أو أحدث، ويقول المطوّر إن أي جهاز بمعالج A14 أو M1 أو أحدث يعمل، وإن الذاكرة العشوائية تحدد أي النماذج يتسع.',
           },
           {
             title: 'ثبّت MLXHub',
@@ -2705,6 +2904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تبديل النماذج والمرايا.** بدّل بين النماذج النصية ونماذج الرؤية في منتصف المحادثة، واستخدم مرآة مجتمعية لـ Hugging Face عندما يكون Hugging Face محجوبًا.',
           '**بث النماذج الكبيرة.** تذكر الصفحة بث خبراء NAND للنماذج الأكبر مثل Qwen3.6 35B-A3B، دون مزيد من التفاصيل.',
           '**اللغات.** الواجهة متاحة بالإنجليزية و11 لغة أخرى.',
+          '**معلن للإصدار 2.3.0.** يصف المطوّر Voice Mode وVoice Center وتوليد الصور ودعم Apple Neural Engine وأدوات قياس أداء مجانية وكيانًا مرئيًا يمثّل النظام. كان الإصدار 2.3.0 لا يزال قيد مراجعة App Store وقت الكتابة، لذا لا يظهر شيء من هذا في الصفحة بعد.',
         ],
       },
       lanAndDistributed: {
@@ -2713,24 +2913,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**يحوّل خادم الشبكة المحلية جهازك إلى نقطة وصول صغيرة متوافقة مع OpenAI.** تذكر الصفحة المسارين /v1/chat/completions و/v1/embeddings. وبحسب الموقع الرسمي فإنه يخدم أيضًا صفحة دردشة خفيفة يستطيع أي شخص على شبكة Wi-Fi نفسها فتحها في المتصفح للتحدث مع النماذج المحمّلة، ويرتبط بالواجهات المحلية فقط، دون إعادة توجيه المنافذ.',
           '**يجمع الاستدلال الموزّع عدة أجهزة تملكها.** يستضيف أحد الأجهزة النموذج وتنضم الأجهزة الأخرى، ويتولى كل منها شريحة من طبقات النموذج، فيمكن تحميل نموذج لا يتسع له أي منها وحده. ويقول الموقع إن الأجهزة تُقرن وإن حركة البيانات مشفّرة وإن شيئًا لا يغادر الشبكة. ولم يُنشر معدل الإنتاجية عبر Wi-Fi، فتوقّع أن يكون أبطأ من جهاز واحد يتسع للنموذج.',
+          '**خادم الشبكة المحلية وإنشاء الشبكة المتعددة الأجهزة (mesh) كلاهما من الميزات المدفوعة.** يقول المطوّر إن الميزات المتقدمة تتطلب شراء Plus، بينما يستطيع أي شخص استخدام التطبيق دون دفع، مثلًا بديلًا عندما يتعطل مساعد سحابي أو أثناء رحلة جوية.',
         ],
       },
       requirements: {
         id: 'requirements',
         title: 'متطلبات الجهاز',
         content: [
-          '**يتطلب MLXHub الإصدار 26.0 أو أحدث من iOS أو iPadOS، وجهازًا بمعالج Apple silicon وذاكرة عشوائية 6 GB أو أكثر.** ويوصي الموقع الرسمي بمعالج A17 Pro أو M1 أو أحدث. وتُظهر صفحة App Store أيضًا توفر التطبيق نفسه على macOS 26.0 (معالج Apple M1 أو أحدث) وvisionOS 26.0، دون وصف إصدار منفصل لسطح المكتب.',
-          'الذاكرة العشوائية هي الحد الفعلي. تفرض Apple حدودًا أشد لذاكرة التطبيقات على الآيفون مما على الآيباد، لذا تتسع النماذج الأكبر على الآيباد في كثير من الأحيان. ويحذّر الموقع من أن نموذجًا لا يتسع قد يجري تنزيله أحيانًا مع ذلك، وأن التطبيق يحاول منع تحميله قبل أن يغلق iOS التطبيق، دون ضمان.',
+          '**يتطلب MLXHub الإصدار 26.0 أو أحدث من iOS أو iPadOS، وجهازًا بمعالج A14 أو M1 أو أحدث.** ويقول المطوّر إن عبارة "6 GB كحد أدنى للذاكرة العشوائية" التي وردت سابقًا في الموقع الرسمي كانت مضلِّلة، وإن الذاكرة العشوائية تحدد فقط أي النماذج يمكنك تشغيلها. وتُظهر صفحة App Store أيضًا توفر التطبيق نفسه على macOS 26.0 (معالج Apple M1 أو أحدث) وvisionOS 26.0، دون وصف إصدار منفصل لسطح المكتب.',
+          'تظل الذاكرة العشوائية الحد العملي لحجم النموذج. تفرض Apple حدودًا أشد لذاكرة التطبيقات على الآيفون مما على الآيباد، لذا تتسع النماذج الأكبر على الآيباد في كثير من الأحيان. ويحذّر الموقع من أن نموذجًا لا يتسع قد يجري تنزيله أحيانًا مع ذلك، وأن التطبيق يحاول منع تحميله قبل أن يغلق iOS التطبيق، دون ضمان.',
         ],
       },
       privacy: {
         id: 'privacy',
         title: 'الأسعار والخصوصية',
         content: [
-          '**تنزيل MLXHub مجاني، ويُدرج MLXHub Plus بسعر $6.99 شهريًا و$44.99 سنويًا و$229.99 شراءً مدى الحياة.** لا تذكر الصفحة ولا الموقع الميزات التي يفتحها Plus، لذا افحص شاشة الدفع في التطبيق قبل الاعتماد على ميزة ما. تُنزَّل النماذج مجانًا من Hugging Face، دون رسوم لكل رمز (token).',
+          '**تنزيل MLXHub مجاني، ويُدرج MLXHub Plus بسعر $6.99 شهريًا و$44.99 سنويًا و$229.99 شراءً مدى الحياة.** لا تفصّل الصفحة بنود Plus، لكن المطوّر يذكر أنه يفتح أكثر من نموذجين منزَّلين، وجميع الأدوات التي تغيّر شيئًا، والمهارات، والخادم، وتوليد الصور بدقة أعلى من 512 px، وسمات التطبيق وأيقوناته، وإنشاء الشبكة المتعددة الأجهزة (mesh) لتشغيل النماذج الكثيفة عبر الأجهزة، وكل ميزة مستقبلية. افحص شاشة الدفع في التطبيق قبل الاعتماد على ميزة ما. تُنزَّل النماذج مجانًا من Hugging Face، دون رسوم لكل رمز (token).',
+          'يقول المطوّر إن خادم الشبكة المحلية سيعود في الإصدار 2.3.0 كمشترى منفصل داخل التطبيق بسعر $34.49، بديلًا عن الاشتراك. ويُحتسب هذا المبلغ ضمن الشراء مدى الحياة الذي سيصبح سعره حينها $195.99 بدل $229.99. هذه أسعار ذكرها المطوّر لإصدار لم يصل بعد إلى App Store، بالدولار الأمريكي (متجر الولايات المتحدة)، وقد تعرض المتاجر الأخرى مبالغ مختلفة.',
           'يقول الموقع الرسمي إن الاستدلال يجري بالكامل على الجهاز وإنه لا توجد حسابات ولا شيء يحدد هويتك. ويذكر أيضًا أن التطبيق يرسل منذ الإصدار 2.0.0 بيانات تحليلات وتشخيص مجهولة، تشمل الميزات التي تستخدمها وفئة الجهاز وهل جرى تحميل النموذج، وأنه يمكنك إيقافها من الإعدادات.',
           'التطبيق مغلق المصدر ولم تفحص هذه المراجعة حركة الشبكة، لذا فإن ادعاءات الخصوصية هي ادعاءات المطوّر نفسه. وإذا فعّلت خادم الشبكة المحلية فإن البيانات المارة عليه خاصة بقدر خصوصية شبكة Wi-Fi لديك.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'من المطوّر',
+        content: [
+          'راجع Juan Colilla من DreamFoundries، مطوّر MLXHub، هذه الصفحة وشاركنا ما يلي عن سبب بنائه التطبيق. يُعرض النص بوصفه كلام المطوّر نفسه، بعد تحرير خفيف للقراءة، لا بوصفه تقييمًا تحريريًا مستقلًا من PromptQuorum:',
+          '"أنا شغوف بالتقنية، وأحب ما يقدمه لنا الذكاء الاصطناعي. وأنا من مؤيدي الذكاء الاصطناعي مفتوح الأوزان؛ فأرى أنها تقنية لا يمكن ولا ينبغي حجبها عن الناس، لأنها اليوم عامل تمايز.',
+          'كما أحب أجهزة Apple، فأنا مهندس iOS منذ عام 2018. ورغم وجود تطبيقات تجلب الاستدلال المحلي إلى الآيفون والآيباد، كنت أعلم أن بالإمكان تقديم الكثير مما هو أكثر لهذه الأجهزة. التطبيقات ذات كتالوج النماذج الثابت تجعلك تنتظر تحديثًا قبل أن تستخدم نموذجًا جديدًا، والنماذج المخصصة مثل SuperGemma 4 Obliterated خارج الحسبان. أما التطبيقات الأخرى التي أتاحت وصولًا حرًا إلى Hugging Face فاستخدمت GGUF فقط، دون الاستفادة من تطوير Apple لإطار MLX.',
+          'لهذا بنيت MLXHub: أريده أن يكون أفضل تطبيق لتشغيل نماذج MLX على أجهزة Apple، يستفيد من العتاد بالكامل، ويستطيع استخدام كل نموذج متوافق (SwissAI Apertus 1.5 من أوروبا، وIFM K2-Horizon من الإمارات العربية المتحدة، وSuperGemma 4 غير المقيَّد)، وحتى نماذج لا يخطر ببالك أنها ستتسع، مثل Qwen3.6 35B-A3B عبر بث NAND.',
+          'يمثّل MLXHub الحرية بالنسبة لي، وهذه هي الفلسفة التي أضعها في ذهني عند تطويره. ولهذا يستطيع معظم المستخدمين استخدامه مجانًا بالكامل؛ فالقيود الموجودة قليلة ولا تخص إلا المستخدمين المتقدمين، مثل الخادم أو الأدوات التي تغيّر الأشياء، حتى يدعموا الوقت والموارد والجهد المبذولة في التطوير.',
+          'في التحديث الأخير 2.3.0، يتضمن MLXHub كيانًا هو التمثيل المرئي للنظام، ومركز Voice Center، بحيث يعمل الآيباد خادم ذكاء اصطناعي منزليًا يرد على أسئلتك. شيء يشبه Apple Home لكنه أكثر تقنية. كما أضفت Voice Mode وتوليد الصور ودعم Apple Neural Engine وأدوات قياس الأداء، مجانًا. أريد أن يكون MLXHub المساعد الموثوق للجميع: يعمل دون إنترنت، وهو سريع، وجميل، ومرجع لكيفية عمل أي جهاز iOS مع نماذج الذكاء الاصطناعي المحلية."',
+        ],
+        note: '— Juan Colilla، المطوّر (DreamFoundries)',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -2741,27 +2956,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الميزة': 'استدلال MLX دون إنترنت',
             'ما تعنيه في الاستخدام الفعلي': 'ادردش مع نماذج مفتوحة دون اتصال، بإطار Apple نفسه.',
-            'القيد / الملاحظة': 'يتطلب iOS 26 وذاكرة 6 GB؛ وذاكرة الآيفون تقيّد النموذج.',
+            'القيد / الملاحظة': 'يتطلب iOS 26 ومعالج A14 أو M1؛ والذاكرة تقيّد حجم النموذج.',
           },
           {
             'الميزة': 'خادم الشبكة المحلية',
             'ما تعنيه في الاستخدام الفعلي': 'تستخدم تطبيقات ومتصفحات على Wi-Fi النماذج المحمّلة.',
-            'القيد / الملاحظة': 'يجب أن يبقى الجهاز مستيقظًا ومتصلًا؛ ولا أرقام منشورة.',
+            'القيد / الملاحظة': 'مدفوع (Plus) بحسب المطوّر؛ ويجب أن يبقى الجهاز مستيقظًا ومتصلًا.',
           },
           {
             'الميزة': 'تقسيم النموذج على عدة أجهزة',
             'ما تعنيه في الاستخدام الفعلي': 'حمّل نموذجًا لا يتسع له أي جهاز واحد من أجهزتك.',
-            'القيد / الملاحظة': 'السرعة عبر Wi-Fi غير موثّقة، ويلزم عدة أجهزة متوافقة.',
+            'القيد / الملاحظة': 'مدفوع (Plus)؛ السرعة عبر Wi-Fi غير موثّقة؛ ويلزم عدة أجهزة.',
           },
           {
             'الميزة': 'الأدوات والذاكرة والمهارات',
             'ما تعنيه في الاستخدام الفعلي': 'الوصول إلى التقويم والتذكيرات والصحة من الدردشة.',
-            'القيد / الملاحظة': 'لا تعطي الصفحة تفاصيل عمّا تفعله كل أداة.',
+            'القيد / الملاحظة': 'الأدوات التي تغيّر شيئًا ضمن Plus؛ ولا تفاصيل لكل أداة.',
           },
           {
             'الميزة': 'مجاني للبدء',
-            'ما تعنيه في الاستخدام الفعلي': 'دون رسوم لكل رمز؛ والنماذج مجانية من Hugging Face.',
-            'القيد / الملاحظة': 'يبلغ Plus حتى $229.99 مدى الحياة، وما يفتحه غير مذكور.',
+            'ما تعنيه في الاستخدام الفعلي': 'دردشة مجانية غير محدودة بحسب المطوّر؛ ودون رسوم لكل رمز.',
+            'القيد / الملاحظة': 'الطبقة المجانية تتيح نموذجين منزَّلين؛ ويبلغ Plus حتى $229.99 مدى الحياة.',
           },
         ],
       },
@@ -2824,8 +3039,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**كل من يحتاج إلى مصدر مفتوح.** الشيفرة غير متاحة للعموم؛ و[Private Mind](/ar/power-local-llm/private-mind-review) و[PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) مفتوحا المصدر.',
           '**مستخدمو أندرويد.** تُدرج منصات Apple فقط؛ ويعمل PocketPal AI وPrivate Mind كلاهما على أندرويد.',
-          '**الأجهزة التي تعمل بإصدار أقدم من iOS 26 أو بذاكرة أقل من 6 GB.** فهذان هما الحدان الأدنيان اللذان تضعهما الصفحة والموقع.',
-          '**كل من يريد قائمة معلنة بميزات الشريحة المدفوعة.** ما يفتحه MLXHub Plus غير موثّق؛ فجرّب الطبقة المجانية أولًا.',
+          '**الأجهزة التي تعمل بإصدار أقدم من iOS 26 أو بمعالج أقدم من A14 أو M1.** فهذان هما الحدان الأدنيان اللذان تضعهما الصفحة والمطوّر.',
+          '**كل من يريد خادم الشبكة المحلية أو الشبكة المتعددة الأجهزة (mesh) مجانًا.** بحسب المطوّر، يتطلب الخادم والأدوات التي تغيّر الأشياء والمهارات والشبكة المتعددة الأجهزة اشتراك Plus، وتقتصر الطبقة المجانية على نموذجين منزَّلين.',
         ],
       },
       faq: {
@@ -2834,7 +3049,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل MLXHub مجاني؟',
-            a: 'تنزيله مجاني مع مشتريات داخل التطبيق: MLXHub Plus بسعر $6.99 شهريًا أو $44.99 سنويًا أو $229.99 مدى الحياة، كما تعرض صفحة App Store.',
+            a: 'تنزيله مجاني مع مشتريات داخل التطبيق: MLXHub Plus بسعر $6.99 شهريًا أو $44.99 سنويًا أو $229.99 مدى الحياة، كما تعرض صفحة App Store. ويقول المطوّر إن الدردشة غير محدودة في الطبقة المجانية مع نموذجين منزَّلين على الأكثر.',
+          },
+          {
+            q: 'ما الذي يفتحه MLXHub Plus؟',
+            a: 'بحسب المطوّر: أكثر من نموذجين منزَّلين، والأدوات التي تغيّر الأشياء، والمهارات، والخادم، وتوليد الصور بدقة أعلى من 512 px، والسمات والأيقونات، وإنشاء الشبكة المتعددة الأجهزة (mesh)، والميزات المستقبلية. وفي 2.3.0 يضيف مشترى منفصلًا لخادم الشبكة المحلية بسعر $34.49 يُحتسب ضمن الشراء مدى الحياة ($195.99 بدل $229.99)، بانتظار موافقة App Store.',
+          },
+          {
+            q: 'ما الأجهزة التي يمكنها تشغيل MLXHub؟',
+            a: 'أي آيفون أو آيباد بنظام iOS أو iPadOS بالإصدار 26.0 أو أحدث ومعالج A14 أو M1 أو أحدث. لا توجد ذاكرة عشوائية دنيا؛ فهي تحدد أي النماذج يتسع.',
           },
           {
             q: 'من يطوّر MLXHub؟',
@@ -2859,8 +3082,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الحكم النهائي',
         content: [
           'يبدو MLXHub مناسبًا على الورق لمن يملك آيبادًا أو آيفون حديثًا ويريد دردشة MLX دون إنترنت، مع خيار استخدام الجهاز كنقطة وصول محلية أو تجميع عدة أجهزة لتشغيل نموذج أكبر.',
-          'التحفظان هما الشفافية وحداثة التطبيق: فهو مغلق المصدر، وميزات Plus غير موثّقة، والسرعة عند تقسيم النموذج على عدة أجهزة غير منشورة، وأظهرت الصفحة سبعة تقييمات فقط وقت المراجعة.',
-          'إذا كنت تريد مصدرًا مفتوحًا فابدأ بـ[Private Mind](/ar/power-local-llm/private-mind-review). وإذا أردت خادم الشبكة المحلية أو تقسيم النموذج على عدة أجهزة، فجرّب الطبقة المجانية من MLXHub أولًا.',
+          'التحفظان هما الشفافية وحداثة التطبيق: فهو مغلق المصدر، والصفحة لا تفصّل بنود Plus (يفصّلها المطوّر، انظر أعلاه)، والسرعة عند تقسيم النموذج على عدة أجهزة غير منشورة، وأظهرت الصفحة ثمانية تقييمات فقط وقت المراجعة. وكان الإصدار 2.3.0 لا يزال قيد مراجعة App Store، لذا فإضافاته وصف من المطوّر لم يجرِ التحقق منه هنا.',
+          'إذا كنت تريد مصدرًا مفتوحًا فابدأ بـ[Private Mind](/ar/power-local-llm/private-mind-review). وإذا أردت خادم الشبكة المحلية أو تقسيم النموذج على عدة أجهزة، فجرّب الطبقة المجانية من MLXHub أولًا؛ فكلاهما من ميزات Plus المدفوعة بحسب المطوّر.',
         ],
       },
       sources: {
@@ -2870,6 +3093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[MLXHub: Local AI & LLM Server على App Store](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144) — الإصدار والسعر والمتطلبات والميزات والمطوّر.',
           '[الموقع الرسمي لـ MLXHub](https://mlxhub.app) — وصف الميزات ومتطلبات الجهاز والأسئلة الشائعة، بما فيها بيان التحليلات.',
           '[سياسة خصوصية MLXHub](https://mlxhub.app/privacy) — صفحة السياسة المرتبطة من الموقع الرسمي.',
+          'تعليق المطوّر Juan Colilla (DreamFoundries) وتصويباته، استُلمت في 2026-10-19 — ميزات Plus ومتطلبات الجهاز وأسعار 2.3.0 ونص «من المطوّر».',
         ],
       },
       relatedReading: {
@@ -2889,7 +3113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-05',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-19',
     next_refresh_due: '2027-04-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/mlxhub-review-hero-ko.webp',
@@ -2898,9 +3122,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'MLXHub는 Apple의 MLX 프레임워크로 오픈 모델을 기기에서 직접 실행하고, 같은 네트워크의 다른 앱에 모델을 제공하며, 큰 모델 하나를 사용자 소유의 여러 기기에 나눠 올릴 수도 있는 아이폰 및 아이패드 앱입니다. 이 리뷰는 App Store 목록과 공식 사이트에 문서화된 내용, 불분명한 부분, 그리고 다른 iOS 로컬 AI 앱과의 비교를 다룹니다.',
     metaDescription:
-      'MLXHub 리뷰: OpenAI 호환 LAN 서버와 다중 기기 모델 분할을 지원하는 온디바이스 MLX 모델용 아이폰 및 아이패드 앱. 가격, iOS 26 및 RAM 요구 사항, 개인정보 보호, 한계.',
+      'MLXHub 리뷰: OpenAI 호환 LAN 서버와 다중 기기 모델 분할을 지원하는 온디바이스 MLX 모델용 아이폰 및 아이패드 앱. 가격, Plus가 열어 주는 기능, iOS 26 기기 요구 사항, 개인정보 보호, 한계, 개발자 코멘트.',
     twitterDescription:
-      'MLXHub 리뷰: MLX 모델을 오프라인으로 실행하고, LAN으로 제공하며, 큰 모델을 여러 기기에 나누는 프리미엄 iOS/iPadOS 앱. 요구 사항, 가격, 개인정보 보호, 한계.',
+      'MLXHub 리뷰: MLX 모델을 오프라인으로 실행하고, LAN으로 제공하며, 큰 모델을 여러 기기에 나누는 프리미엄 iOS/iPadOS 앱. 요구 사항, 가격, Plus가 열어 주는 기능, 개인정보 보호, 한계, 개발자 코멘트.',
     audience:
       '오픈 모델을 오프라인으로 실행하고, 필요하면 기기를 로컬 OpenAI 호환 엔드포인트로 쓰고 싶은 아이폰 및 아이패드 사용자 대상 — 기능, 요구 사항, 가격, 개인정보 보호, 한계, 대안을 다룹니다.',
     readTime: '8분 소요',
@@ -2917,22 +3141,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'mlx swift 앱',
       '아이패드 로컬 ai 앱',
     ],
-    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A17 Pro', 'M1'],
+    current_hardware_mentioned: ['iPhone', 'iPad', 'Apple silicon', 'A14', 'A17 Pro', 'M1'],
     leadAnswerBlock:
-      '**MLXHub는 Apple silicon에서 오픈 언어 모델과 비전 모델을 오프라인으로 실행하고, Wi-Fi에서 OpenAI 호환 서버로 제공하며, 한 기기로는 올릴 수 없는 모델을 여러 기기를 묶어 불러올 수 있는 프리미엄 방식의 비공개 소스 iOS 및 iPadOS 앱입니다.** App Store 목록에 따르면 iOS 또는 iPadOS 26.0 이상이 필요하고, 내려받는 데는 비용이 들지 않으며, 앱 내 구매로 MLXHub Plus를 판매합니다. 이 리뷰는 버전 2.2.0을 다루며, 직접 테스트한 결과가 아니라 공개 목록과 공식 사이트에 근거합니다.',
+      '**MLXHub는 Apple silicon에서 오픈 언어 모델과 비전 모델을 오프라인으로 실행하고, Wi-Fi에서 OpenAI 호환 서버로 제공하며, 한 기기로는 올릴 수 없는 모델을 여러 기기를 묶어 불러올 수 있는 프리미엄 방식의 비공개 소스 iOS 및 iPadOS 앱입니다.** App Store 목록에 따르면 iOS 또는 iPadOS 26.0 이상이 필요하고, 내려받는 데는 비용이 들지 않으며, 앱 내 구매로 MLXHub Plus를 판매합니다. 개발자에 따르면 무료 이용 범위에서는 내려받은 모델 최대 두 개로 채팅을 제한 없이 쓸 수 있고, 서버, 메시(mesh) 등 고급 기능은 Plus가 필요합니다. 개발자 Juan Colilla가 이 페이지를 검토하고 자신의 코멘트와 정정 사항을 보내왔습니다. 이 리뷰는 목록에 표시된 버전 2.2.1을 다루며, 직접 테스트한 결과가 아니라 공개 목록, 공식 사이트, 개발자의 설명에 근거합니다. 버전 2.3.0은 아직 App Store 심사 중입니다.',
     quickAnswerTop: {
       ko: {
         question: '아이폰이나 아이패드에서 로컬 AI를 쓰려면 MLXHub를 설치할 가치가 있나요?',
         answer:
-          '네, RAM 6 GB 이상에 iOS 26을 쓰는 Apple silicon 아이폰이나 아이패드가 있고, 오프라인 채팅과 함께 LAN 엔드포인트 또는 다중 기기 모델 분할을 원한다면 그렇습니다. 오픈소스, 안드로이드, 또는 확정된 무료 기능 목록이 필요하다면 건너뛰세요. 코드가 공개되어 있지 않고, 목록에는 MLXHub Plus가 무엇을 열어 주는지 나와 있지 않습니다. Locally AI와 Private Mind는 더 단순한 온디바이스 대안입니다.',
+          '네, A14 또는 M1 이상 칩을 탑재하고 iOS 26을 쓰는 아이폰이나 아이패드가 있고, 오프라인 채팅을 원하며 필요하면 LAN 엔드포인트나 다중 기기 모델 분할도 쓰고 싶다면 그렇습니다. RAM은 어떤 모델이 들어가는지만 결정합니다. 오픈소스, 안드로이드, 또는 무료 LAN 서버가 필요하다면 건너뛰세요. 코드가 공개되어 있지 않고, 개발자에 따르면 서버와 메시는 유료 Plus 기능입니다. Locally AI와 Private Mind는 더 단순한 온디바이스 대안입니다.',
         bullets: [
           '앱 내 구매가 있는 무료 다운로드: Plus는 월 $6.99, 연 $44.99, 평생 $229.99.',
+          '개발자에 따르면 무료 이용 범위에서는 내려받은 모델 최대 두 개로 채팅이 제한 없고, 서버, 도구, 스킬, 메시는 Plus가 필요함.',
           'mlx-swift를 통해 오픈 텍스트 및 비전 모델을 기기에서 실행하며, 모델은 Hugging Face에서 받음.',
           'OpenAI 방식의 /v1/chat/completions 및 /v1/embeddings 경로를 제공하는 선택형 LAN 서버.',
           '분산 추론으로 같은 네트워크에 페어링한 내 기기들에 모델 하나를 나눠 올림.',
-          '6 GB 이상 RAM의 Apple silicon에서 iOS 또는 iPadOS 26.0 이상 필요.',
+          'A14, M1 이상 칩에서 iOS 또는 iPadOS 26.0 이상 필요; 어떤 모델이 들어가는지는 RAM이 결정함.',
         ],
-        updatedDate: '2026-10-05',
+        updatedDate: '2026-10-19',
       },
     },
     toc: [
@@ -2945,6 +3170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'LAN 서버와 분산 추론', anchor: 'lan-and-distributed' },
       { label: '기기 요구 사항', anchor: 'requirements' },
       { label: '가격 및 개인정보 보호', anchor: 'privacy' },
+      { label: '개발자의 말', anchor: 'from-the-maker' },
       { label: '장단점: 이점과 한계', anchor: 'tradeoffs' },
       { label: 'MLXHub 대 대안 앱', anchor: 'vs-alternatives' },
       { label: 'MLXHub를 사용해야 하는 사람', anchor: 'who-should-use' },
@@ -2962,7 +3188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '개발자 Juan Colilla가 만든 MLXHub는 Apple의 MLX 프레임워크로 오픈 모델을 오프라인에서 실행하고, 네트워크에 모델을 제공하며, 모델 하나를 여러 기기에 나눌 수도 있는 프리미엄 방식의 아이폰 및 아이패드 앱입니다.',
+            text: '이 페이지를 검토한 개발자 Juan Colilla가 만든 MLXHub는 Apple의 MLX 프레임워크로 오픈 모델을 오프라인에서 실행하고, 네트워크에 모델을 제공하며, 모델 하나를 여러 기기에 나눌 수도 있는 프리미엄 방식의 아이폰 및 아이패드 앱입니다.',
           },
           {
             type: 'plain-terms',
@@ -2970,10 +3196,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '검토한 버전: 2.2.0, [App Store 목록](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144)에 표시된 버전.',
-          '가격: 내려받기는 무료이며, MLXHub Plus는 월 $6.99, 연 $44.99, 평생 $229.99로 표시되어 있음.',
-          '플랫폼: iOS 및 iPadOS 26.0 이상이며, 공식 사이트는 Apple silicon과 6 GB 이상의 RAM을 요구함.',
-          '주요 기능: LAN 서버, 다중 기기 모델 분할, 도구와 스킬, Hugging Face 미러.',
+          '검토한 버전: 2.2.1, [App Store 목록](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144)에 표시된 버전.',
+          '가격: 내려받기는 무료이며, MLXHub Plus는 월 $6.99, 연 $44.99, 평생 $229.99로 표시되어 있음. 개발자에 따르면 무료 이용 범위에서는 내려받은 모델 최대 두 개로 채팅이 제한 없음.',
+          '플랫폼: iOS 및 iPadOS 26.0 이상, A14, M1 이상 칩; 개발자에 따르면 RAM은 어떤 모델이 들어가는지만 결정함.',
+          '주요 기능: LAN 서버, 다중 기기 모델 분할, 도구와 스킬, Hugging Face 미러; 서버와 메시는 유료.',
+          '개발자 검토: 개발자가 코멘트와 정정 사항을 보내왔으며, 개발자의 말 섹션에 실려 있음.',
           '개방성: 비공개 소스; 공개 저장소를 찾지 못함.',
         ],
       },
@@ -3013,7 +3240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '항목': '앱 내 모델 다운로드', 'MLXHub': '예, Hugging Face에서' },
           { '항목': '이미지 입력', 'MLXHub': '예, 비전-언어 모델' },
           { '항목': '로컬 API 서버', 'MLXHub': '예, LAN에서 OpenAI 호환' },
-          { '항목': '음성 입력/출력', 'MLXHub': '목록에 명시되어 있지 않음' },
+          { '항목': '음성 입력/출력', 'MLXHub': '2.3.0의 음성 모드(개발자 설명, 승인 대기 중)' },
         ],
         note: '항목은 로컬 LLM 소프트웨어 디렉터리에서 사용하는 모바일 채팅 비교 기준을 따릅니다. App Store 목록과 공식 사이트를 근거로 하며, 두 곳이 모든 기능을 다루지는 않습니다.',
       },
@@ -3035,7 +3262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: '기기와 운영체제 확인하기',
-            whyItMatters: '목록에서 iOS 또는 iPadOS 26.0 이상을 요구하며, 공식 사이트는 6 GB 이상의 RAM을 갖춘 Apple silicon 기기를 요구합니다.',
+            whyItMatters: '목록에서 iOS 또는 iPadOS 26.0 이상을 요구하며, 개발자는 A14 또는 M1 이상 칩을 탑재한 기기면 모두 작동하며 어떤 모델이 들어가는지는 RAM이 결정한다고 밝힙니다.',
           },
           {
             title: 'MLXHub 설치하기',
@@ -3065,6 +3292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**모델 전환과 미러.** 대화 도중 텍스트 모델과 비전 모델을 전환할 수 있고, Hugging Face가 차단된 환경에서는 커뮤니티 Hugging Face 미러를 쓸 수 있습니다.',
           '**대형 모델 스트리밍.** 목록은 Qwen3.6 35B-A3B 같은 더 큰 모델을 위한 NAND 전문가 스트리밍을 언급하지만 자세한 설명은 없습니다.',
           '**언어.** 인터페이스는 영어 외에 11개 언어로 제공됩니다.',
+          '**2.3.0 예고 기능.** 개발자는 음성 모드와 음성 센터, 이미지 생성, Apple Neural Engine 지원, 무료 벤치마크 도구, 시스템을 시각적으로 나타내는 엔티티를 설명합니다. 이 글을 쓸 당시 버전 2.3.0은 아직 App Store 심사 중이었으므로 이 내용은 아직 목록에 나타나지 않습니다.',
         ],
       },
       lanAndDistributed: {
@@ -3073,24 +3301,39 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**LAN 서버는 기기를 작은 OpenAI 호환 엔드포인트로 바꿔 줍니다.** 목록에는 /v1/chat/completions 및 /v1/embeddings 경로가 명시되어 있습니다. 공식 사이트에 따르면 같은 Wi-Fi의 누구나 브라우저에서 열어 불러온 모델과 대화할 수 있는 간단한 채팅 페이지도 제공하며, 로컬 인터페이스에만 바인딩되고 포트 포워딩은 쓰지 않습니다.',
           '**분산 추론은 사용자 소유의 여러 기기를 묶습니다.** 한 기기가 호스트가 되고 나머지가 참여해 각각 모델 레이어의 일부를 맡으므로, 한 기기로는 올릴 수 없는 모델도 불러올 수 있습니다. 사이트는 기기가 페어링되고 통신이 암호화되며 네트워크 밖으로 아무것도 나가지 않는다고 밝힙니다. Wi-Fi에서의 처리 속도는 공개되어 있지 않으므로, 모델이 들어가는 기기 한 대보다는 느릴 것으로 예상하세요.',
+          '**LAN 서버와 메시 생성은 모두 유료 기능입니다.** 개발자는 고급 기능에는 Plus 구매가 필요하지만, 클라우드 어시스턴트가 중단되었을 때의 대용품이나 비행기 안에서처럼 결제 없이도 누구나 앱을 쓸 수 있다고 밝힙니다.',
         ],
       },
       requirements: {
         id: 'requirements',
         title: '기기 요구 사항',
         content: [
-          '**MLXHub에는 iOS 또는 iPadOS 26.0 이상, Apple silicon 기기, 6 GB 이상의 RAM이 필요합니다.** 공식 사이트는 A17 Pro 또는 M1 이상의 칩을 권장합니다. App Store 목록에는 같은 앱이 macOS 26.0(Apple M1 이상)과 visionOS 26.0에서도 제공된다고 표시되지만, 별도의 데스크톱 버전은 설명되어 있지 않습니다.',
-          '실제 한계는 RAM입니다. Apple은 아이폰에 아이패드보다 더 엄격한 앱 메모리 제한을 적용하므로, 더 큰 모델은 아이패드에서 들어가는 경우가 더 많습니다. 사이트는 기기에 맞지 않는 모델도 간혹 내려받아질 수 있다고 경고하며, iOS가 앱을 종료하기 전에 앱이 모델 로드를 막으려 하지만 보장되지는 않는다고 밝힙니다.',
+          '**MLXHub에는 iOS 또는 iPadOS 26.0 이상과 A14 또는 M1 이상 칩을 탑재한 기기가 필요합니다.** 개발자는 공식 사이트의 "최소 RAM 6 GB"라는 이전 설명이 오해를 부르는 표현이었으며, RAM은 실행할 수 있는 모델만 결정한다고 밝힙니다. App Store 목록에는 같은 앱이 macOS 26.0(Apple M1 이상)과 visionOS 26.0에서도 제공된다고 표시되지만, 별도의 데스크톱 버전은 설명되어 있지 않습니다.',
+          '모델 크기의 실질적인 한계는 여전히 RAM입니다. Apple은 아이폰에 아이패드보다 더 엄격한 앱 메모리 제한을 적용하므로, 더 큰 모델은 아이패드에서 들어가는 경우가 더 많습니다. 사이트는 기기에 맞지 않는 모델도 간혹 내려받아질 수 있다고 경고하며, iOS가 앱을 종료하기 전에 앱이 모델 로드를 막으려 하지만 보장되지는 않는다고 밝힙니다.',
         ],
       },
       privacy: {
         id: 'privacy',
         title: '가격 및 개인정보 보호',
         content: [
-          '**MLXHub는 내려받기는 무료이며, MLXHub Plus는 월 $6.99, 연 $44.99, 평생 구매 $229.99로 표시되어 있습니다.** 목록과 사이트 어디에도 Plus가 어떤 기능을 열어 주는지 나와 있지 않으므로, 기능에 의존하기 전에 앱 안의 결제 화면을 확인하세요. 모델은 Hugging Face에서 무료로 받으며 토큰당 요금은 없습니다.',
+          '**MLXHub는 내려받기는 무료이며, MLXHub Plus는 월 $6.99, 연 $44.99, 평생 구매 $229.99로 표시되어 있습니다.** 목록에는 Plus의 항목별 내용이 없지만, 개발자는 Plus가 내려받은 모델 두 개 초과, 무언가를 변경하는 모든 도구, 스킬, 서버, 512 px를 넘는 이미지 생성, 앱 테마와 아이콘, 밀집(dense) 모델을 여러 기기에서 실행하기 위한 메시 생성, 그리고 앞으로 추가될 모든 기능을 열어 준다고 밝힙니다. 기능에 의존하기 전에 앱 안의 결제 화면을 확인하세요. 모델은 Hugging Face에서 무료로 받으며 토큰당 요금은 없습니다.',
+          '개발자는 버전 2.3.0에서 LAN 서버가 구독의 대안으로 $34.49짜리 별도 앱 내 구매로 다시 제공된다고 밝힙니다. 이 금액은 평생 구매 가격에서 차감되므로, 그 경우 평생 구매는 $229.99 대신 $195.99가 됩니다. 이 가격은 아직 App Store에 올라오지 않은 버전에 대한 개발자의 설명이며, 미국 달러(US 스토어 기준)이고 다른 국가의 스토어에서는 금액이 다를 수 있습니다.',
           '공식 사이트는 추론이 전적으로 기기에서 이루어지고, 계정이 없으며, 사용자를 식별하는 정보가 없다고 밝힙니다. 또한 버전 2.0.0부터 앱이 어떤 기능을 쓰는지, 기기 등급, 모델이 로드되었는지 여부에 대한 익명 분석 및 진단 데이터를 전송하며, 설정에서 끌 수 있다고 명시합니다.',
           '앱은 비공개 소스이고 이 리뷰에서는 네트워크 트래픽을 검사하지 않았으므로, 개인정보 보호에 관한 내용은 개발자 본인의 설명입니다. LAN 서버를 켜면 그 위의 데이터는 Wi-Fi 네트워크만큼만 비공개입니다.',
         ],
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '개발자의 말',
+        content: [
+          'DreamFoundries의 Juan Colilla는 MLXHub 개발자로, 이 페이지를 검토한 뒤 자신이 이 앱을 만든 이유를 다음과 같이 전했습니다. 가독성을 위해 가볍게 다듬었으며, PromptQuorum의 독립적인 편집 평가가 아니라 개발자 본인의 말로 소개합니다.',
+          '"저는 기술 애호가이며, AI가 우리에게 가져다주는 것을 정말 좋아합니다. 저는 오픈 웨이트 AI를 지지합니다. 요즘 이 기술은 차별화 요소이기 때문에 사람들에게서 빼앗을 수도, 빼앗아서도 안 된다고 생각합니다.',
+          '저는 Apple 기기도 아주 좋아합니다. 2018년부터 iOS 엔지니어로 일해 왔습니다. 아이폰과 아이패드에 로컬 추론을 가져온 앱들이 이미 있었지만, 이 기기들에는 훨씬 더 많은 가능성이 있다는 것을 알고 있었습니다. 모델 카탈로그가 고정된 앱은 새 모델을 쓰려면 업데이트를 기다려야 하고, SuperGemma 4 Obliterated 같은 커스텀 모델은 아예 불가능합니다. Hugging Face에 자유롭게 접근할 수 있게 한 다른 앱들은 GGUF만 사용해서 Apple의 MLX 개발 성과를 활용하지 못했습니다.',
+          '그래서 MLXHub를 만들었습니다. Apple 기기에서 MLX 모델을 실행하는 최고의 앱이 되어, 하드웨어를 온전히 활용하고, 호환되는 모든 모델(유럽의 SwissAI Apertus 1.5, 아랍에미리트의 IFM K2-Horizon, SuperGemma 4 uncensored)을 쓸 수 있게 하고, NAND 스트리밍을 통한 Qwen3.6 35B-A3B처럼 들어갈 거라고는 생각지 못한 모델까지 실행하게 하는 것이 제 바람입니다.',
+          'MLXHub는 저에게 자유를 상징하며, 개발할 때 늘 마음에 두는 철학이 바로 그것입니다. 그래서 대부분의 사용자는 앱을 전부 무료로 쓸 수 있습니다. 존재하는 제한은 서버나 무언가를 변경하는 도구처럼 고급 사용자를 위한 소수의 기능뿐이며, 개발에 들어간 시간과 자원, 노력을 뒷받침하기 위한 것입니다.',
+          '최신 업데이트인 2.3.0에는 시스템을 시각적으로 나타내는 엔티티와 음성 센터가 들어 있어, 아이패드가 질문에 답하면서 집 안의 AI 서버 역할을 할 수 있습니다. Apple Home과 비슷하지만 좀 더 기술 지향적인 것입니다. 음성 모드, 이미지 생성, Apple Neural Engine 지원, 벤치마크 도구도 무료로 도입했습니다. MLXHub가 모두를 위한 믿을 수 있는 어시스턴트가 되기를 바랍니다. 오프라인에서 작동하고, 빠르고, 아름다우며, 모든 iOS 기기가 로컬 AI 모델과 어떻게 작동해야 하는지를 보여 주는 기준이 되기를 바랍니다."',
+        ],
+        note: '— Juan Colilla, 개발자(DreamFoundries)',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -3101,27 +3344,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '이점': '오프라인 MLX 추론',
             '실제 사용에서의 의미': 'Apple 자체 프레임워크로 연결 없이 오픈 모델과 대화할 수 있습니다.',
-            '한계 / 유의 사항': 'iOS 26과 6 GB RAM이 필요하며, 아이폰의 메모리 제한이 모델 크기를 제한합니다.',
+            '한계 / 유의 사항': 'iOS 26과 A14 또는 M1 이상 칩이 필요하며, RAM이 모델 크기를 제한합니다.',
           },
           {
             '이점': 'LAN 서버',
             '실제 사용에서의 의미': 'Wi-Fi의 다른 앱과 브라우저가 불러온 모델을 쓸 수 있습니다.',
-            '한계 / 유의 사항': '기기가 켜져 있고 네트워크에 연결된 상태를 유지해야 하며, 처리 속도 수치는 공개되어 있지 않습니다.',
+            '한계 / 유의 사항': '개발자에 따르면 유료(Plus)이며, 기기가 켜져 있고 네트워크에 연결된 상태를 유지해야 합니다.',
           },
           {
             '이점': '다중 기기 분할',
             '실제 사용에서의 의미': '내 기기 중 어느 하나로도 담을 수 없는 모델을 불러올 수 있습니다.',
-            '한계 / 유의 사항': 'Wi-Fi에서의 속도는 문서화되어 있지 않으며, 호환되는 기기가 여러 대 필요합니다.',
+            '한계 / 유의 사항': '유료(Plus)이며, Wi-Fi에서의 속도는 문서화되어 있지 않고, 기기가 여러 대 필요합니다.',
           },
           {
             '이점': '도구, 메모리, 스킬',
             '실제 사용에서의 의미': '채팅에서 캘린더, 미리 알림, 건강 앱에 접근할 수 있습니다.',
-            '한계 / 유의 사항': '목록에는 각 도구가 무엇을 하는지 설명되어 있지 않습니다.',
+            '한계 / 유의 사항': '무언가를 변경하는 도구는 Plus이며, 목록에는 도구별 설명이 없습니다.',
           },
           {
             '이점': '무료로 시작',
-            '실제 사용에서의 의미': '토큰당 요금이 없고, 모델은 Hugging Face에서 무료입니다.',
-            '한계 / 유의 사항': 'Plus는 평생 구매 시 최대 $229.99이며, 무엇을 열어 주는지는 명시되어 있지 않습니다.',
+            '실제 사용에서의 의미': '개발자에 따르면 무료 채팅은 제한이 없으며, 토큰당 요금도 없습니다.',
+            '한계 / 유의 사항': '무료 이용 범위에서는 내려받은 모델이 두 개까지이며, Plus는 평생 구매 시 최대 $229.99입니다.',
           },
         ],
       },
@@ -3184,8 +3427,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**오픈소스가 필요한 사용자.** 코드가 공개되어 있지 않습니다. [Private Mind](/ko/power-local-llm/private-mind-review)와 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)는 오픈소스입니다.',
           '**안드로이드 사용자.** Apple 플랫폼만 표시되어 있으며, PocketPal AI와 Private Mind는 모두 안드로이드에서 실행됩니다.',
-          '**iOS 26 미만이거나 RAM이 6 GB 미만인 기기.** 목록과 사이트가 그 기준을 정해 두었습니다.',
-          '**유료 플랜의 확정된 기능 목록을 원하는 사용자.** MLXHub Plus가 무엇을 열어 주는지는 문서화되어 있지 않으므로 무료 이용 범위부터 써 보세요.',
+          '**iOS 26 미만이거나 A14, M1보다 오래된 칩을 탑재한 기기.** 목록과 개발자가 그 기준을 정해 두었습니다.',
+          '**LAN 서버나 메시를 무료로 쓰고 싶은 사용자.** 개발자에 따르면 서버, 무언가를 변경하는 도구, 스킬, 메시는 Plus가 필요하며, 무료 이용 범위는 내려받은 모델 두 개로 제한됩니다.',
         ],
       },
       faq: {
@@ -3194,7 +3437,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'MLXHub는 무료인가요?',
-            a: 'App Store 목록에 표시된 대로 내려받기는 무료이며 앱 내 구매가 있습니다. MLXHub Plus는 월 $6.99, 연 $44.99, 평생 $229.99입니다.',
+            a: 'App Store 목록에 표시된 대로 내려받기는 무료이며 앱 내 구매가 있습니다. MLXHub Plus는 월 $6.99, 연 $44.99, 평생 $229.99입니다. 개발자는 무료 이용 범위에서는 내려받은 모델 최대 두 개로 채팅이 제한 없다고 밝힙니다.',
+          },
+          {
+            q: 'MLXHub Plus는 무엇을 열어 주나요?',
+            a: '개발자에 따르면 내려받은 모델 두 개 초과, 무언가를 변경하는 도구, 스킬, 서버, 512 px를 넘는 이미지 생성, 테마와 아이콘, 메시 생성, 앞으로 추가될 기능입니다. 2.3.0에서는 평생 구매에서 차감되는 $34.49짜리 LAN 서버 구매(평생 구매는 $229.99 대신 $195.99)가 추가된다고 하며, App Store 승인을 기다리는 중입니다.',
+          },
+          {
+            q: 'MLXHub는 어떤 기기에서 실행되나요?',
+            a: 'A14 또는 M1 이상 칩을 탑재하고 iOS 또는 iPadOS 26.0 이상을 쓰는 모든 아이폰과 아이패드입니다. RAM은 최소 기준을 정하지 않으며, 어떤 모델이 들어가는지를 결정합니다.',
           },
           {
             q: 'MLXHub는 누가 만드나요?',
@@ -3219,8 +3470,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '총평',
         content: [
           'MLXHub는 최신 아이패드나 아이폰이 있고, 오프라인 MLX 채팅과 함께 기기를 로컬 엔드포인트로 쓰거나 여러 기기를 묶어 더 큰 모델을 올리는 선택지를 원하는 사람에게 문서상으로는 잘 맞습니다.',
-          '유의할 점은 투명성과 앱의 연륜입니다. 비공개 소스이고, Plus 기능은 문서화되어 있지 않으며, 다중 기기 분할의 속도는 공개되어 있지 않고, 검토 시점에 목록의 평점은 일곱 개뿐이었습니다.',
-          '오픈소스를 원한다면 [Private Mind](/ko/power-local-llm/private-mind-review)부터 시작하세요. LAN 서버나 다중 기기 분할을 원한다면 MLXHub의 무료 이용 범위부터 먼저 써 보세요.',
+          '유의할 점은 투명성과 앱의 연륜입니다. 비공개 소스이고, 목록에는 Plus의 항목별 내용이 없으며(개발자가 밝힌 내용은 위를 참고), 다중 기기 분할의 속도는 공개되어 있지 않고, 검토 시점에 목록의 평점은 여덟 개뿐이었습니다. 버전 2.3.0은 당시 아직 App Store 심사 중이었으므로, 추가 기능은 개발자의 설명일 뿐 여기서 검증하지 않았습니다.',
+          '오픈소스를 원한다면 [Private Mind](/ko/power-local-llm/private-mind-review)부터 시작하세요. LAN 서버나 다중 기기 분할을 원한다면 MLXHub의 무료 이용 범위부터 먼저 써 보세요. 개발자에 따르면 둘 다 유료 Plus 기능입니다.',
         ],
       },
       sources: {
@@ -3230,6 +3481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[App Store의 MLXHub: Local AI & LLM Server](https://apps.apple.com/us/app/mlxhub-local-ai-llm-server/id6766485144) — 버전, 가격, 요구 사항, 기능, 개발자.',
           '[MLXHub 공식 사이트](https://mlxhub.app) — 기능 설명, 기기 요구 사항, FAQ(분석 데이터 관련 설명 포함).',
           '[MLXHub 개인정보 처리방침](https://mlxhub.app/privacy) — 공식 사이트에서 연결된 방침 페이지.',
+          '개발자 Juan Colilla(DreamFoundries)의 코멘트와 정정 사항, 2026-10-19 수신 — Plus 기능, 기기 요구 사항, 2.3.0 가격, 개발자의 말 본문.',
         ],
       },
       relatedReading: {

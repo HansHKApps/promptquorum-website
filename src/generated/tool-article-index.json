@@ -5926,7 +5926,7 @@
         "slug": "mlxhub-review",
         "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
         "url": "/power-local-llm/mlxhub-review",
-        "dateModified": "2026-10-05",
+        "dateModified": "2026-10-19",
         "tier": "mentioned"
       }
     ],
@@ -10685,6 +10685,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "mlxhub-review",
+        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
+        "url": "/power-local-llm/mlxhub-review",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "hiwaifu-review",
         "title": "HiWaifu Review: Cloud AI Character Chat for iPhone and iPad",
         "url": "/power-local-llm/hiwaifu-review",
@@ -10744,14 +10752,6 @@
         "slug": "cursor-local-mode-review",
         "title": "Cursor \"Local Mode\": Does It Really Run Local Models?",
         "url": "/power-local-llm/cursor-local-mode-review",
-        "dateModified": "2026-10-17",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
-        "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
-        "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline",
         "dateModified": "2026-10-17",
         "tier": "mentioned"
       }
@@ -11403,6 +11403,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "mlxhub-review",
+        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
+        "url": "/power-local-llm/mlxhub-review",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "anyllm-review",
         "title": "AnyLLM Review: BYOK AI Chat Client for Android",
         "url": "/power-local-llm/anyllm-review",
@@ -11431,14 +11439,6 @@
         "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
         "url": "/power-local-llm/tokforge-review",
         "dateModified": "2026-10-09",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mlxhub-review",
-        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
-        "url": "/power-local-llm/mlxhub-review",
-        "dateModified": "2026-10-05",
         "tier": "mentioned"
       },
       {
@@ -11648,7 +11648,7 @@
         "slug": "mlxhub-review",
         "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
         "url": "/power-local-llm/mlxhub-review",
-        "dateModified": "2026-10-05",
+        "dateModified": "2026-10-19",
         "tier": "about"
       }
     ],
