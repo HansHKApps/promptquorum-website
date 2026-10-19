@@ -1049,6 +1049,7 @@ const HUB_THEMES: Array<{
       'memoryai-review',
       'llamatik-review',
       'castmates-review',
+      'caelum-review',
       'llm-hub-review',
       'lm-playground-review',
       'localmind-review',
