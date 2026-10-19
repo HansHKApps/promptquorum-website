@@ -16609,7 +16609,7 @@
     "title": "GDPR Risk Comparison: Qwen vs DeepSeek vs Llama vs Claude 2026",
     "excerpt": "GDPR-compliant LLM comparison: DeepSeek API (highest risk), Qwen local (lowest), Llama local, Claude/GPT API (mid-risk). Risk matrix by data residency, jurisdiction, ToS, and SCC requirements.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-19",
     "url": "/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
@@ -16618,7 +16618,7 @@
     "title": "DSGVO-Risikovergleich: Qwen vs DeepSeek vs Llama vs Claude 2026",
     "excerpt": "DSGVO-LLM-Vergleich: DeepSeek API (höchstes Risiko), Qwen lokal (niedrigstes), Llama lokal, Claude/GPT API. Risikomatrix nach Speicherung und ToS.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/de/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
@@ -16627,7 +16627,7 @@
     "title": "Comparaison des risques RGPD : Qwen vs DeepSeek vs Llama vs Claude 2026",
     "excerpt": "Comparaison LLM conforme au RGPD : DeepSeek API (risque le plus élevé), Qwen local (risque le plus faible), Llama local, API Claude/GPT (risque moyen). Matrice de risque par résidence des données, juridiction et ToS.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/fr/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
@@ -16636,7 +16636,7 @@
     "title": "GDPR リスク比較: Qwen vs DeepSeek vs Llama vs Claude 2026",
     "excerpt": "GDPR準拠のLLM比較: DeepSeek API（最高リスク）、Qwen ローカル（最低リスク）、Llama ローカル、Claude/GPT API（中程度リスク）。データ拠点、管轄権、ToS、SCC要件によるリスク行列。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/ja/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
@@ -16645,7 +16645,7 @@
     "title": "GDPR 风险比较: Qwen vs DeepSeek vs Llama vs Claude 2026",
     "excerpt": "GDPR合规LLM比较: DeepSeek API（风险最高）、Qwen本地（风险最低）、Llama本地、Claude/GPT API（中等风险）。按数据驻留、管辖权、ToS和SCC要求的风险矩阵。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/zh/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
@@ -16654,7 +16654,7 @@
     "title": "Comparación de riesgos RGPD: Qwen vs DeepSeek vs Llama vs Claude 2026",
     "excerpt": "Comparación de LLM conforme al RGPD: DeepSeek API (mayor riesgo), Qwen local (menor riesgo), Llama local y Claude/GPT API (riesgo medio). Matriz por datos.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-19",
     "url": "/es/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
@@ -16663,7 +16663,7 @@
     "title": "Comparação de riscos GDPR: Qwen vs DeepSeek vs Llama vs Claude 2026",
     "excerpt": "Comparação de LLMs em conformidade com GDPR/LGPD: DeepSeek API (maior risco), Qwen local (menor risco), Llama local e Claude/GPT API (risco médio). Matriz por residência de dados.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-19",
     "url": "/pt/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
@@ -16672,7 +16672,7 @@
     "title": "مقارنة مخاطر ⁨GDPR⁩: ⁨Qwen⁩ مقابل ⁨DeepSeek⁩ مقابل ⁨Llama⁩ مقابل ⁨Claude 2026⁩",
     "excerpt": "⁨DeepSeek API⁩ أعلى مخاطر ⁨GDPR⁩؛ ⁨Qwen⁩ المحلي الأدنى خطراً؛ ⁨Claude/GPT API⁩ مخاطر متوسطة. مصفوفة مقارنة بالولاية القضائية وإقامة البيانات و⁨SCC⁩.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-19",
     "url": "/ar/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
@@ -16681,7 +16681,7 @@
     "title": "GDPR 리스크 비교: Qwen vs DeepSeek vs Llama vs Claude 2026",
     "excerpt": "GDPR 준수 LLM 비교: DeepSeek API(최고 위험), Qwen 로컬(최저), Llama 로컬, Claude/GPT API(중간 위험). 데이터 거주지, 관할권, ToS, SCC 요건별 리스크 매트릭스.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-07-13",
+    "dateModified": "2026-10-19",
     "url": "/ko/local-llms/gdpr-llm-risk-comparison-2026",
     "cluster": "local-llms"
   },
