@@ -186,7 +186,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'example-quality',
           title: 'Example Quality Decides Few-Shot Performance',
           content: [
-            '**Three well-chosen examples routinely outperform ten near-duplicates, because the model learns the boundaries of the task from the variety you show it, not from the volume.** Most disappointing few-shot results trace back to example selection rather than example count.',
+            '**Three well-chosen examples can often outperform ten near-duplicates, because the model learns the boundaries of the task from the variety you show it, not from the volume.** Many disappointing few-shot results trace back to example selection rather than example count.',
           ],
           numberedItems: [
             '**Cover the range, not just the easy cases.** Include the ambiguous ticket, the short one, and the badly written one — those are the inputs that fail in production.',
@@ -217,7 +217,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Reasoning Models Narrowed the Zero-Shot Gap',
           content: [
             '**Strong instruction tuning has closed much of the accuracy gap that few-shot prompting used to buy on frontier models.** On Claude Opus 5.5, GPT-6 Astra, and Gemini 4 Argon, a precisely written zero-shot instruction now matches few-shot on many general tasks — but that convergence does not hold across the whole model landscape.',
-            'Where few-shot still earns its tokens is format and vocabulary: proprietary label sets, internal schemas, house tone, and edge cases the model has never encountered in pre-training. And on smaller or locally hosted models, few-shot remains the single most effective accuracy lever available without fine-tuning.',
+            'Where few-shot still earns its tokens is format and vocabulary: proprietary label sets, internal schemas, house tone, and edge cases the model has never encountered in pre-training. And on smaller or locally hosted models, few-shot is often among the most effective accuracy levers available without fine-tuning.',
           ],
           rows: [
             { 'Model class': 'Frontier reasoning (Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon)', 'Zero-shot quality': 'High on general tasks', 'Does few-shot still help?': 'Mainly for output format, house style, and proprietary label sets' },
@@ -231,7 +231,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'common-mistakes',
           title: 'Common Mistakes',
           content: [
-            '**Most few-shot failures are process failures, not model failures.** These five account for the majority of cases where adding examples made output worse instead of better.',
+            '**Many few-shot failures are process failures, not model failures.** These five are common reasons why adding examples makes output worse instead of better.',
           ],
           mistakes: [
             {
@@ -335,7 +335,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'sources',
           title: 'Sources & Further Reading',
           items: [
-            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — the paper that introduced few-shot, one-shot, and zero-shot as prompting regimes.',
+            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — the GPT-3 paper that defined the zero-shot, one-shot, and few-shot settings for in-context learning.',
             'Zhao, Z., Wallace, E., Feng, S., Klein, D., & Singh, S. (2021). "Calibrate Before Use: Improving Few-Shot Performance of Language Models." ICML 2021. arXiv:2102.09690 — on majority-label and recency bias in example ordering.',
             'Lu, Y., Bartolo, M., Moore, A., Riedel, S., & Stenetorp, P. (2022). "Fantastically Ordered Prompts and Where to Find Them." ACL 2022. arXiv:2104.08786 — on the sensitivity of few-shot accuracy to example order.',
             'Min, S., Lyu, X., Holtzman, A., et al. (2022). "Rethinking the Role of Demonstrations." EMNLP 2022. arXiv:2202.12837 — evidence that the format and input distribution of examples matter more than the correctness of their labels.',
@@ -518,7 +518,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'example-quality',
           title: 'Beispielqualität entscheidet über die Few-Shot-Leistung',
           content: [
-            '**Drei gut gewählte Beispiele schlagen regelmäßig zehn fast identische, weil das Modell die Grenzen der Aufgabe aus der gezeigten Vielfalt lernt und nicht aus der Menge.** Die meisten enttäuschenden Few-Shot-Ergebnisse gehen auf die Beispielauswahl zurück, nicht auf die Beispielanzahl.',
+            '**Drei gut gewählte Beispiele schlagen oft zehn fast identische, weil das Modell die Grenzen der Aufgabe aus der gezeigten Vielfalt lernt und nicht aus der Menge.** Viele enttäuschende Few-Shot-Ergebnisse gehen auf die Beispielauswahl zurück, nicht auf die Beispielanzahl.',
           ],
           numberedItems: [
             '**Decken Sie die Bandbreite ab, nicht nur die einfachen Fälle.** Nehmen Sie das mehrdeutige Ticket auf, das sehr kurze und das schlecht geschriebene — genau diese Eingaben scheitern im Produktivbetrieb.',
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Reasoning-Modelle haben den Zero-Shot-Abstand verkleinert',
           content: [
             '**Starkes Instruction Tuning hat einen Großteil des Genauigkeitsvorsprungs eingeebnet, den Few-Shot Prompting bei Frontier-Modellen früher brachte.** Auf Claude Opus 5.5, GPT-6 Astra und Gemini 4 Argon erreicht eine präzise formulierte Zero-Shot-Anweisung heute bei vielen allgemeinen Aufgaben dasselbe Niveau wie Few-Shot — diese Annäherung gilt aber nicht für die gesamte Modelllandschaft.',
-            'Wo Few-Shot seine Tokens weiterhin verdient, sind Format und Vokabular: proprietäre Label-Sets, interne Schemata, Hausstil und Randfälle, die dem Modell im Pre-Training nie begegnet sind. Und bei kleineren oder lokal betriebenen Modellen bleibt Few-Shot der wirksamste Genauigkeitshebel ohne Fine-Tuning.',
+            'Wo Few-Shot seine Tokens weiterhin verdient, sind Format und Vokabular: proprietäre Label-Sets, interne Schemata, Hausstil und Randfälle, die dem Modell im Pre-Training nie begegnet sind. Und bei kleineren oder lokal betriebenen Modellen ist Few-Shot oft einer der wirksamsten Genauigkeitshebel ohne Fine-Tuning.',
           ],
           rows: [
             { 'Modellklasse': 'Frontier-Reasoning (Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon)', 'Zero-Shot-Qualität': 'Hoch bei allgemeinen Aufgaben', 'Bringt Few-Shot noch etwas?': 'Vor allem für Ausgabeformat, Hausstil und proprietäre Label-Sets' },
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'common-mistakes',
           title: 'Häufige Fehler',
           content: [
-            '**Die meisten Few-Shot-Fehlschläge sind Prozessfehler, keine Modellfehler.** Diese fünf erklären die Mehrzahl der Fälle, in denen zusätzliche Beispiele die Ausgabe verschlechtert statt verbessert haben.',
+            '**Viele Few-Shot-Fehlschläge sind Prozessfehler, keine Modellfehler.** Diese fünf sind häufige Gründe, warum zusätzliche Beispiele die Ausgabe verschlechtern statt verbessern.',
           ],
           mistakes: [
             {
@@ -674,7 +674,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'sources',
           title: 'Quellen & weiterführende Literatur',
           items: [
-            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — die Arbeit, die Few-Shot, One-Shot und Zero-Shot als Prompting-Regime eingeführt hat.',
+            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — die GPT-3-Arbeit, die die Zero-Shot-, One-Shot- und Few-Shot-Settings für In-Context-Learning definiert hat.',
             'Zhao, Z., Wallace, E., Feng, S., Klein, D., & Singh, S. (2021). "Calibrate Before Use: Improving Few-Shot Performance of Language Models." ICML 2021. arXiv:2102.09690 — zu Mehrheits-Label- und Recency-Verzerrung bei der Beispielreihenfolge.',
             'Lu, Y., Bartolo, M., Moore, A., Riedel, S., & Stenetorp, P. (2022). "Fantastically Ordered Prompts and Where to Find Them." ACL 2022. arXiv:2104.08786 — zur Empfindlichkeit der Few-Shot-Genauigkeit gegenüber der Beispielreihenfolge.',
             'Min, S., Lyu, X., Holtzman, A., et al. (2022). "Rethinking the Role of Demonstrations." EMNLP 2022. arXiv:2202.12837 — Belege dafür, dass Format und Eingabeverteilung der Beispiele stärker wirken als die Korrektheit ihrer Labels.',
@@ -857,7 +857,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'example-quality',
           title: 'La calidad de los ejemplos decide el rendimiento few-shot',
           content: [
-            '**Tres ejemplos bien elegidos superan sistemáticamente a diez casi idénticos, porque el modelo aprende los límites de la tarea a partir de la variedad que le muestras, no del volumen.** La mayoría de los resultados decepcionantes con few-shot vienen de la selección de ejemplos, no de su número.',
+            '**Tres ejemplos bien elegidos a menudo superan a diez casi idénticos, porque el modelo aprende los límites de la tarea a partir de la variedad que le muestras, no del volumen.** Muchos resultados decepcionantes con few-shot vienen de la selección de ejemplos, no de su número.',
           ],
           numberedItems: [
             '**Cubre todo el rango, no solo los casos fáciles.** Incluye el ticket ambiguo, el muy corto y el mal redactado: son justamente las entradas que fallan en producción.',
@@ -888,7 +888,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Los modelos de razonamiento acortaron la distancia con Zero-Shot',
           content: [
             '**Un ajuste por instrucciones potente ha cerrado buena parte de la ventaja de precisión que antes compraba el few-shot prompting en los modelos de frontera.** En Claude Opus 5.5, GPT-6 Astra y Gemini 4 Argon, una instrucción zero-shot bien escrita iguala hoy a few-shot en muchas tareas generales, pero esa convergencia no se extiende a todo el panorama de modelos.',
-            'Donde few-shot sigue justificando sus tokens es en formato y vocabulario: conjuntos de etiquetas propios, esquemas internos, tono de la casa y casos límite que el modelo nunca vio en el preentrenamiento. Y en modelos pequeños o alojados localmente, few-shot sigue siendo la palanca de precisión más eficaz sin recurrir al fine-tuning.',
+            'Donde few-shot sigue justificando sus tokens es en formato y vocabulario: conjuntos de etiquetas propios, esquemas internos, tono de la casa y casos límite que el modelo nunca vio en el preentrenamiento. Y en modelos pequeños o alojados localmente, few-shot sigue siendo a menudo una de las palancas de precisión más eficaces sin recurrir al fine-tuning.',
           ],
           rows: [
             { 'Clase de modelo': 'Razonamiento de frontera (Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon)', 'Calidad zero-shot': 'Alta en tareas generales', '¿Sigue ayudando few-shot?': 'Sobre todo para formato de salida, estilo de la casa y etiquetas propias' },
@@ -902,7 +902,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'common-mistakes',
           title: 'Errores comunes',
           content: [
-            '**La mayoría de los fallos con few-shot son fallos de proceso, no del modelo.** Estos cinco explican la mayor parte de los casos en que añadir ejemplos empeoró la salida en lugar de mejorarla.',
+            '**Muchos fallos con few-shot son fallos de proceso, no del modelo.** Estos cinco son causas frecuentes de que añadir ejemplos empeore la salida en lugar de mejorarla.',
           ],
           mistakes: [
             {
@@ -1005,7 +1005,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'sources',
           title: 'Fuentes y lecturas adicionales',
           items: [
-            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — el artículo que introdujo few-shot, one-shot y zero-shot como regímenes de prompting.',
+            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — el artículo de GPT-3 que definió los ajustes zero-shot, one-shot y few-shot para el aprendizaje en contexto.',
             'Zhao, Z., Wallace, E., Feng, S., Klein, D., & Singh, S. (2021). "Calibrate Before Use: Improving Few-Shot Performance of Language Models." ICML 2021. arXiv:2102.09690 — sobre el sesgo de etiqueta mayoritaria y de recencia en el orden de los ejemplos.',
             'Lu, Y., Bartolo, M., Moore, A., Riedel, S., & Stenetorp, P. (2022). "Fantastically Ordered Prompts and Where to Find Them." ACL 2022. arXiv:2104.08786 — sobre la sensibilidad de la precisión few-shot al orden de los ejemplos.',
             'Min, S., Lyu, X., Holtzman, A., et al. (2022). "Rethinking the Role of Demonstrations." EMNLP 2022. arXiv:2202.12837 — evidencia de que el formato y la distribución de entrada de los ejemplos pesan más que la corrección de sus etiquetas.',
@@ -1190,7 +1190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'example-quality',
           title: 'La qualité des exemples détermine la performance du Few-Shot',
           content: [
-            '**Trois exemples bien choisis surpassent régulièrement dix quasi-doublons, car le modèle apprend les frontières de la tâche à partir de la variété qu\'on lui montre, pas du volume.** La plupart des résultats décevants en few-shot viennent de la sélection des exemples, pas de leur nombre.',
+            '**Trois exemples bien choisis peuvent souvent surpasser dix quasi-doublons, car le modèle apprend les frontières de la tâche à partir de la variété qu\'on lui montre, pas du volume.** De nombreux résultats décevants en few-shot viennent de la sélection des exemples, pas de leur nombre.',
           ],
           numberedItems: [
             '**Couvrez toute l\'étendue, pas seulement les cas faciles.** Incluez le ticket ambigu, le très court et le mal rédigé : ce sont précisément les entrées qui échouent en production.',
@@ -1221,7 +1221,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Les modèles de raisonnement ont réduit l\'écart avec le Zero-Shot',
           content: [
             '**Un instruction tuning solide a comblé une grande partie de l\'avantage de précision que le few-shot prompting offrait auparavant sur les modèles de pointe.** Sur Claude Opus 5.5, GPT-6 Astra et Gemini 4 Argon, une consigne zero-shot rédigée avec précision égale désormais le few-shot sur de nombreuses tâches générales — mais cette convergence ne vaut pas pour tout le paysage des modèles.',
-            'Là où le few-shot justifie encore ses tokens, c\'est sur le format et le vocabulaire : jeux d\'étiquettes propriétaires, schémas internes, ton maison et cas limites jamais rencontrés au pré-entraînement. Et sur les modèles plus petits ou hébergés localement, le few-shot demeure le levier de précision le plus efficace sans fine-tuning.',
+            'Là où le few-shot justifie encore ses tokens, c\'est sur le format et le vocabulaire : jeux d\'étiquettes propriétaires, schémas internes, ton maison et cas limites jamais rencontrés au pré-entraînement. Et sur les modèles plus petits ou hébergés localement, le few-shot demeure souvent l\'un des leviers de précision les plus efficaces sans fine-tuning.',
           ],
           rows: [
             { 'Classe de modèle': 'Raisonnement de pointe (Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon)', 'Qualité en zero-shot': 'Élevée sur les tâches générales', 'Le few-shot aide-t-il encore ?': 'Surtout pour le format de sortie, le style maison et les étiquettes propriétaires' },
@@ -1235,7 +1235,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'common-mistakes',
           title: 'Erreurs fréquentes',
           content: [
-            '**La plupart des échecs en few-shot sont des échecs de méthode, pas des échecs de modèle.** Ces cinq-là expliquent la majorité des cas où ajouter des exemples a dégradé la sortie au lieu de l\'améliorer.',
+            '**De nombreux échecs en few-shot sont des échecs de méthode, pas des échecs de modèle.** Ces cinq-là sont des causes fréquentes pour lesquelles ajouter des exemples dégrade la sortie au lieu de l\'améliorer.',
           ],
           mistakes: [
             {
@@ -1355,7 +1355,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'sources',
           title: 'Sources et lectures complémentaires',
           items: [
-            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — l\'article qui a introduit le few-shot, le one-shot et le zero-shot comme régimes de prompting.',
+            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — l\'article sur GPT-3 qui a défini les réglages zero-shot, one-shot et few-shot pour l\'apprentissage en contexte.',
             'Zhao, Z., Wallace, E., Feng, S., Klein, D., & Singh, S. (2021). "Calibrate Before Use: Improving Few-Shot Performance of Language Models." ICML 2021. arXiv:2102.09690 — sur les biais d\'étiquette majoritaire et de récence dans l\'ordre des exemples.',
             'Lu, Y., Bartolo, M., Moore, A., Riedel, S., & Stenetorp, P. (2022). "Fantastically Ordered Prompts and Where to Find Them." ACL 2022. arXiv:2104.08786 — sur la sensibilité de la précision few-shot à l\'ordre des exemples.',
             'Min, S., Lyu, X., Holtzman, A., et al. (2022). "Rethinking the Role of Demonstrations." EMNLP 2022. arXiv:2202.12837 — démonstration que le format et la distribution des entrées comptent davantage que l\'exactitude des étiquettes.',
@@ -1570,7 +1570,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '推論モデルがゼロショットとの差を縮めた',
           content: [
             '**強力な指示チューニングにより、かつてフューショットが稼いでいた精度差の多くはフロンティアモデルで解消しました。** Claude Opus 5.5、GPT-6 Astra、Gemini 4 Argonでは、丁寧に書かれたゼロショット指示が多くの一般タスクでフューショットに並びます。ただしこの収束はモデル全体に当てはまるわけではありません。',
-            'フューショットが今もトークン分の価値を出すのは形式と語彙です。独自のラベル体系、社内スキーマ、社内トーン、事前学習で見たことのない例外ケースが該当します。さらに小型モデルやローカル運用のモデルでは、ファインチューニングを除けば依然として最も効果的な精度改善手段です。',
+            'フューショットが今もトークン分の価値を出すのは形式と語彙です。独自のラベル体系、社内スキーマ、社内トーン、事前学習で見たことのない例外ケースが該当します。さらに小型モデルやローカル運用のモデルでは、ファインチューニングを除けば、依然として最も効果的な精度改善手段の1つであることが多いです。',
           ],
           rows: [
             { 'モデル区分': 'フロンティア推論（Claude Opus 5.5、GPT-6 Astra、Gemini 4 Argon）', 'ゼロショットの品質': '一般タスクで高い', 'フューショットは今も有効か': '主に出力形式・社内トーン・独自ラベル体系で有効' },
@@ -1584,7 +1584,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'common-mistakes',
           title: 'よくある失敗',
           content: [
-            '**フューショットの失敗の多くは、モデルの問題ではなく進め方の問題です。** 例を足したのに出力が悪化した事例の大半は、次の5つで説明できます。',
+            '**フューショットの失敗の多くは、モデルの問題ではなく進め方の問題です。** 例を足したのに出力が悪化する原因として、次の5つがよく見られます。',
           ],
           mistakes: [
             {
@@ -1687,7 +1687,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'sources',
           title: '出典・参考文献',
           items: [
-            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — フューショット・ワンショット・ゼロショットをプロンプティングの枠組みとして提示した論文。',
+            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — インコンテキスト学習におけるゼロショット・ワンショット・フューショットの設定を定義したGPT-3の論文。',
             'Zhao, Z., Wallace, E., Feng, S., Klein, D., & Singh, S. (2021). "Calibrate Before Use: Improving Few-Shot Performance of Language Models." ICML 2021. arXiv:2102.09690 — 例の順序における多数ラベルバイアスと直近バイアスについて。',
             'Lu, Y., Bartolo, M., Moore, A., Riedel, S., & Stenetorp, P. (2022). "Fantastically Ordered Prompts and Where to Find Them." ACL 2022. arXiv:2104.08786 — フューショット精度が例の順序に強く左右されることを示した研究。',
             'Min, S., Lyu, X., Holtzman, A., et al. (2022). "Rethinking the Role of Demonstrations." EMNLP 2022. arXiv:2202.12837 — 例のラベルの正しさより、形式と入力分布の方が効くという証拠。',
@@ -1870,7 +1870,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'example-quality',
           title: '示例质量决定少样本的效果',
           content: [
-            '**三个精选示例常常胜过十个高度雷同的示例，因为模型是从你展示的多样性中学到任务边界的，而不是从数量中。** 大多数令人失望的少样本结果，问题出在示例挑选上，而不是示例数量。',
+            '**三个精选示例常常胜过十个高度雷同的示例，因为模型是从你展示的多样性中学到任务边界的，而不是从数量中。** 许多令人失望的少样本结果，问题出在示例挑选上，而不是示例数量。',
           ],
           numberedItems: [
             '**覆盖整个范围，而不只是简单情况。** 把含糊的工单、极短的工单、写得很差的工单都放进去——真正在生产环境出问题的正是这些输入。',
@@ -1901,7 +1901,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '推理模型缩小了零样本的差距',
           content: [
             '**强力的指令微调，已经补上了少样本提示过去在前沿模型上换来的大部分准确率优势。** 在 Claude Opus 5.5、GPT-6 Astra 和 Gemini 4 Argon 上，一条写得足够精确的零样本指令，如今在许多通用任务上已能与少样本持平——但这种收敛并不适用于所有模型。',
-            '少样本仍然值回 token 的地方在于格式与词表：自有标签体系、内部结构、公司语气，以及模型在预训练中从未见过的边缘情况。而在更小或本地部署的模型上，少样本依然是不做微调时最有效的准确率杠杆。',
+            '少样本仍然值回 token 的地方在于格式与词表：自有标签体系、内部结构、公司语气，以及模型在预训练中从未见过的边缘情况。而在更小或本地部署的模型上，少样本往往仍是不做微调时最有效的准确率杠杆之一。',
           ],
           rows: [
             { '模型类别': '前沿推理模型（Claude Opus 5.5、GPT-6 Astra、Gemini 4 Argon）', '零样本表现': '通用任务上很好', '少样本还有用吗': '主要用于输出格式、公司语气和自有标签体系' },
@@ -1915,7 +1915,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'common-mistakes',
           title: '常见错误',
           content: [
-            '**大多数少样本失败是流程问题，而不是模型问题。** 加了示例反而变差的情况，多数都能归到下面这五条。',
+            '**许多少样本失败是流程问题，而不是模型问题。** 加了示例反而变差时，下面这五条是常见原因。',
           ],
           mistakes: [
             {
@@ -2018,7 +2018,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'sources',
           title: '参考资料与延伸阅读',
           items: [
-            'Brown, T., Mann, B., Ryder, N., et al. (2020).《Language Models are Few-Shot Learners》NeurIPS 2020. arXiv:2005.14165 —— 首次把少样本、单样本和零样本确立为提示范式的论文。',
+            'Brown, T., Mann, B., Ryder, N., et al. (2020).《Language Models are Few-Shot Learners》NeurIPS 2020. arXiv:2005.14165 —— 定义了上下文学习中零样本、单样本和少样本设置的 GPT-3 论文。',
             'Zhao, Z., Wallace, E., Feng, S., Klein, D., & Singh, S. (2021).《Calibrate Before Use: Improving Few-Shot Performance of Language Models》ICML 2021. arXiv:2102.09690 —— 关于示例顺序中的多数标签偏差与近因偏差。',
             'Lu, Y., Bartolo, M., Moore, A., Riedel, S., & Stenetorp, P. (2022).《Fantastically Ordered Prompts and Where to Find Them》ACL 2022. arXiv:2104.08786 —— 关于少样本准确率对示例顺序的敏感性。',
             'Min, S., Lyu, X., Holtzman, A., et al. (2022).《Rethinking the Role of Demonstrations》EMNLP 2022. arXiv:2202.12837 —— 证据表明示例的格式与输入分布比标签是否正确更重要。',
@@ -2201,7 +2201,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'example-quality',
           title: 'A qualidade dos exemplos decide o desempenho do few-shot',
           content: [
-            '**Três exemplos bem escolhidos superam com frequência dez quase idênticos, porque o modelo aprende os limites da tarefa pela variedade que você mostra, não pelo volume.** A maioria dos resultados decepcionantes com few-shot vem da seleção dos exemplos, não da quantidade.',
+            '**Três exemplos bem escolhidos superam com frequência dez quase idênticos, porque o modelo aprende os limites da tarefa pela variedade que você mostra, não pelo volume.** Muitos resultados decepcionantes com few-shot vêm da seleção dos exemplos, não da quantidade.',
           ],
           numberedItems: [
             '**Cubra toda a faixa, não apenas os casos fáceis.** Inclua o ticket ambíguo, o muito curto e o mal escrito — são justamente essas entradas que falham em produção.',
@@ -2232,7 +2232,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Modelos de raciocínio reduziram a diferença do zero-shot',
           content: [
             '**Um ajuste por instruções forte fechou boa parte da vantagem de precisão que o few-shot prompting comprava nos modelos de ponta.** No Claude Opus 5.5, GPT-6 Astra e Gemini 4 Argon, uma instrução zero-shot bem escrita hoje empata com o few-shot em muitas tarefas gerais — mas essa convergência não vale para todo o cenário de modelos.',
-            'O few-shot continua valendo seus tokens em formato e vocabulário: conjuntos de rótulos proprietários, esquemas internos, tom da casa e casos extremos que o modelo nunca viu no pré-treinamento. E em modelos menores ou hospedados localmente, o few-shot segue como a alavanca de precisão mais eficaz sem fine-tuning.',
+            'O few-shot continua valendo seus tokens em formato e vocabulário: conjuntos de rótulos proprietários, esquemas internos, tom da casa e casos extremos que o modelo nunca viu no pré-treinamento. E em modelos menores ou hospedados localmente, o few-shot segue sendo, com frequência, uma das alavancas de precisão mais eficazes sem fine-tuning.',
           ],
           rows: [
             { 'Classe de modelo': 'Raciocínio de ponta (Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon)', 'Qualidade em zero-shot': 'Alta em tarefas gerais', 'O few-shot ainda ajuda?': 'Principalmente para formato de saída, tom da casa e rótulos proprietários' },
@@ -2246,7 +2246,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'common-mistakes',
           title: 'Erros comuns',
           content: [
-            '**A maioria das falhas com few-shot é de processo, não do modelo.** Estes cinco explicam a maior parte dos casos em que acrescentar exemplos piorou a saída em vez de melhorar.',
+            '**Muitas falhas com few-shot são de processo, não do modelo.** Estes cinco são causas frequentes de acrescentar exemplos piorar a saída em vez de melhorar.',
           ],
           mistakes: [
             {
@@ -2349,7 +2349,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'sources',
           title: 'Fontes e leitura adicional',
           items: [
-            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — o artigo que introduziu few-shot, one-shot e zero-shot como regimes de prompting.',
+            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — o artigo do GPT-3 que definiu as configurações zero-shot, one-shot e few-shot para o aprendizado em contexto.',
             'Zhao, Z., Wallace, E., Feng, S., Klein, D., & Singh, S. (2021). "Calibrate Before Use: Improving Few-Shot Performance of Language Models." ICML 2021. arXiv:2102.09690 — sobre viés de rótulo majoritário e de recência na ordem dos exemplos.',
             'Lu, Y., Bartolo, M., Moore, A., Riedel, S., & Stenetorp, P. (2022). "Fantastically Ordered Prompts and Where to Find Them." ACL 2022. arXiv:2104.08786 — sobre a sensibilidade da precisão few-shot à ordem dos exemplos.',
             'Min, S., Lyu, X., Holtzman, A., et al. (2022). "Rethinking the Role of Demonstrations." EMNLP 2022. arXiv:2202.12837 — evidência de que formato e distribuição de entrada dos exemplos pesam mais que a correção dos rótulos.',
@@ -2532,7 +2532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'example-quality',
           title: 'جودة الأمثلة هي الفيصل في أداء التوجيه بأمثلة قليلة',
           content: [
-            '**ثلاثة أمثلة مختارة بعناية تتفوّق باستمرار على عشرة شبه متطابقة، لأن النموذج يتعلّم حدود المهمة من التنوّع الذي تعرضه لا من الكمّ.** معظم النتائج المخيّبة تعود إلى اختيار الأمثلة لا إلى عددها.',
+            '**ثلاثة أمثلة مختارة بعناية تتفوّق غالبًا على عشرة شبه متطابقة، لأن النموذج يتعلّم حدود المهمة من التنوّع الذي تعرضه لا من الكمّ.** كثير من النتائج المخيّبة يعود إلى اختيار الأمثلة لا إلى عددها.',
           ],
           numberedItems: [
             '**غطِّ المدى كاملًا لا الحالات السهلة فقط.** أدرج التذكرة الملتبسة والقصيرة جدًا ورديئة الصياغة؛ فهذه بالضبط هي المدخلات التي تفشل في الإنتاج.',
@@ -2563,7 +2563,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'نماذج الاستدلال قلّصت فارق التوجيه الصفري',
           content: [
             '**ضبط التعليمات القوي أغلق جزءًا كبيرًا من فارق الدقة الذي كانت الأمثلة القليلة تشتريه في النماذج المتقدمة.** على Claude Opus 5.5 وGPT-6 Astra وGemini 4 Argon، صارت التعليمة الصفرية المصاغة بدقّة تضاهي الأمثلة القليلة في كثير من المهام العامة — لكن هذا التقارب لا يسري على مشهد النماذج كله.',
-            'ما تزال الأمثلة تستحق رموزها في الصيغة والمفردات: مجموعات التسميات الخاصة، والمخططات الداخلية، ونبرة المؤسسة، والحالات الحدّية التي لم يصادفها النموذج في التدريب المسبق. وفي النماذج الأصغر أو المستضافة محليًا تظل الأمثلة أقوى رافعة دقة متاحة دون ضبط دقيق.',
+            'ما تزال الأمثلة تستحق رموزها في الصيغة والمفردات: مجموعات التسميات الخاصة، والمخططات الداخلية، ونبرة المؤسسة، والحالات الحدّية التي لم يصادفها النموذج في التدريب المسبق. وفي النماذج الأصغر أو المستضافة محليًا تظل الأمثلة في كثير من الأحيان من أقوى روافع الدقة المتاحة دون ضبط دقيق.',
           ],
           rows: [
             { 'فئة النموذج': 'استدلال متقدم (Claude Opus 5.5، GPT-6 Astra، Gemini 4 Argon)', 'جودة التوجيه الصفري': 'عالية في المهام العامة', 'هل تفيد الأمثلة القليلة؟': 'أساسًا لصيغة المخرجات وأسلوب المؤسسة والتسميات الخاصة' },
@@ -2577,7 +2577,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'common-mistakes',
           title: 'أخطاء شائعة',
           content: [
-            '**معظم إخفاقات التوجيه بأمثلة قليلة إخفاقات في المنهج لا في النموذج.** هذه الخمسة تفسّر أغلب الحالات التي أدّت فيها إضافة الأمثلة إلى تدهور المخرجات بدل تحسينها.',
+            '**كثير من إخفاقات التوجيه بأمثلة قليلة إخفاقات في المنهج لا في النموذج.** هذه الخمسة أسباب شائعة لتدهور المخرجات بدل تحسينها عند إضافة الأمثلة.',
           ],
           mistakes: [
             {
@@ -2680,7 +2680,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'sources',
           title: 'المصادر وقراءات إضافية',
           items: [
-            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — الورقة التي قدّمت الأنماط الصفري والواحد والقليل بوصفها أنظمة توجيه.',
+            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — ورقة GPT-3 التي حدّدت إعدادات الصفر والمثال الواحد والأمثلة القليلة للتعلّم السياقي.',
             'Zhao, Z., Wallace, E., Feng, S., Klein, D., & Singh, S. (2021). "Calibrate Before Use: Improving Few-Shot Performance of Language Models." ICML 2021. arXiv:2102.09690 — عن انحياز التسمية الغالبة وانحياز الحداثة في ترتيب الأمثلة.',
             'Lu, Y., Bartolo, M., Moore, A., Riedel, S., & Stenetorp, P. (2022). "Fantastically Ordered Prompts and Where to Find Them." ACL 2022. arXiv:2104.08786 — عن حساسية دقة الأمثلة القليلة لترتيبها.',
             'Min, S., Lyu, X., Holtzman, A., et al. (2022). "Rethinking the Role of Demonstrations." EMNLP 2022. arXiv:2202.12837 — أدلة على أن صيغة الأمثلة وتوزيع مدخلاتها أهم من صحة تسمياتها.',
@@ -2863,7 +2863,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'example-quality',
           title: '예시의 품질이 퓨샷 성능을 좌우한다',
           content: [
-            '**잘 고른 예시 3개가 거의 똑같은 10개를 꾸준히 앞섭니다. 모델은 양이 아니라 보여 준 다양성에서 과제의 경계를 배우기 때문입니다.** 실망스러운 퓨샷 결과의 대부분은 예시 개수가 아니라 선택의 문제입니다.',
+            '**잘 고른 예시 3개가 거의 똑같은 10개를 자주 앞섭니다. 모델은 양이 아니라 보여 준 다양성에서 과제의 경계를 배우기 때문입니다.** 실망스러운 퓨샷 결과의 상당수는 예시 개수가 아니라 선택의 문제입니다.',
           ],
           numberedItems: [
             '**쉬운 사례만이 아니라 범위 전체를 담으세요.** 모호한 티켓, 아주 짧은 티켓, 엉성하게 쓴 티켓을 포함해야 합니다. 실서비스에서 실패하는 입력이 바로 그런 것들입니다.',
@@ -2894,7 +2894,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '추론 모델이 제로샷과의 격차를 좁혔다',
           content: [
             '**강력한 지시 튜닝 덕분에 퓨샷 프롬프팅이 프런티어 모델에서 벌어 주던 정확도 우위는 상당 부분 사라졌습니다.** Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon에서는 정교하게 쓴 제로샷 지시가 많은 일반 과제에서 퓨샷과 대등합니다. 다만 이 수렴이 모든 모델에 해당하지는 않습니다.',
-            '퓨샷이 여전히 토큰값을 하는 영역은 형식과 어휘입니다. 자체 라벨 체계, 내부 스키마, 사내 톤, 사전 학습에서 본 적 없는 예외 사례가 그렇습니다. 또한 소형 모델이나 로컬 호스팅 모델에서는 파인튜닝을 제외하면 여전히 가장 효과적인 정확도 수단입니다.',
+            '퓨샷이 여전히 토큰값을 하는 영역은 형식과 어휘입니다. 자체 라벨 체계, 내부 스키마, 사내 톤, 사전 학습에서 본 적 없는 예외 사례가 그렇습니다. 또한 소형 모델이나 로컬 호스팅 모델에서는 파인튜닝을 제외하면 여전히 가장 효과적인 정확도 수단 중 하나인 경우가 많습니다.',
           ],
           rows: [
             { '모델 분류': '프런티어 추론(Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon)', '제로샷 품질': '일반 과제에서 높음', '퓨샷이 여전히 도움이 되나': '주로 출력 형식, 사내 톤, 자체 라벨 체계에서' },
@@ -2908,7 +2908,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'common-mistakes',
           title: '흔한 실수',
           content: [
-            '**퓨샷 실패의 대부분은 모델의 문제가 아니라 절차의 문제입니다.** 예시를 넣었는데 출력이 오히려 나빠진 사례는 대체로 다음 다섯 가지로 설명됩니다.',
+            '**퓨샷 실패의 상당수는 모델의 문제가 아니라 절차의 문제입니다.** 예시를 넣었는데 출력이 오히려 나빠지는 경우, 다음 다섯 가지가 흔한 원인입니다.',
           ],
           mistakes: [
             {
@@ -3011,7 +3011,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'sources',
           title: '출처 및 더 읽을거리',
           items: [
-            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — 퓨샷, 원샷, 제로샷을 프롬프팅 방식으로 정립한 논문.',
+            'Brown, T., Mann, B., Ryder, N., et al. (2020). "Language Models are Few-Shot Learners." NeurIPS 2020. arXiv:2005.14165 — 문맥 내 학습에서 제로샷, 원샷, 퓨샷 설정을 정의한 GPT-3 논문.',
             'Zhao, Z., Wallace, E., Feng, S., Klein, D., & Singh, S. (2021). "Calibrate Before Use: Improving Few-Shot Performance of Language Models." ICML 2021. arXiv:2102.09690 — 예시 순서에서 나타나는 다수 라벨 편향과 최근성 편향에 관한 연구.',
             'Lu, Y., Bartolo, M., Moore, A., Riedel, S., & Stenetorp, P. (2022). "Fantastically Ordered Prompts and Where to Find Them." ACL 2022. arXiv:2104.08786 — 퓨샷 정확도가 예시 순서에 얼마나 민감한지 다룬 연구.',
             'Min, S., Lyu, X., Holtzman, A., et al. (2022). "Rethinking the Role of Demonstrations." EMNLP 2022. arXiv:2202.12837 — 라벨의 정확성보다 예시의 형식과 입력 분포가 더 중요하다는 근거.',

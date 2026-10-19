@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '**Local/open-weight models** covered — all have "None" for search layer',
       '**Phi-4** has a June 2024 cutoff, **DeepSeek-V3** July 2024 and **Gemma 3 27B** August 2024 — the latter two are previous-generation models, now superseded by DeepSeek-V4 and Gemma 4',
       '**Claude Opus 5.5** has the most recent verified reliable cutoff in the table: June 2026',
-      '**Grok 4.7** is the only cloud model whose default search layer is a social platform (X/Twitter) rather than general web',
+      'Among the cloud models covered here, **Grok 4.7** is the only one whose default search layer is a social platform (X/Twitter) rather than general web',
       '**GEO implication**: companies that deploy Llama/Qwen internally can only be reached via the RAG pipelines those companies build themselves',
     ],
     toc: [
@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Can I use SEO to appear in Llama or Qwen answers?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. SEO cannot influence a locally-deployed LLM because the model never searches the web. The only paths are: (1) be in the training data before the cutoff, or (2) be included in a RAG pipeline by the organization deploying the model.',
+              'text': 'No. SEO cannot influence a locally-deployed LLM because the model never searches the web. The main paths are: (1) be in the training data before the cutoff, or (2) be included in a RAG pipeline by the organization deploying the model.',
             },
           },
           {
@@ -316,7 +316,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'AI System': 'ChatGPT (paid)', 'Post-Cutoff Behavior': 'Searches Bing automatically', 'Reliability for Current Info': 'High for facts; lower for nuance', 'How to Improve': 'Ask it to cite sources; cross-check key claims' },
           { 'AI System': 'Gemini (paid)', 'Post-Cutoff Behavior': 'Searches Google automatically', 'Reliability for Current Info': 'High for facts; lower for nuance', 'How to Improve': 'Enable grounding; review cited URLs' },
-          { 'AI System': 'Grok ([X.com](https://X.com))', 'Post-Cutoff Behavior': 'Searches X posts automatically', 'Reliability for Current Info': 'Good for social trends; uneven for facts', 'How to Improve': 'Use DeepSearch for deeper web coverage' },
+          { 'AI System': 'Grok ([X.com](https://X.com))', 'Post-Cutoff Behavior': 'Searches X posts automatically', 'Reliability for Current Info': 'Strongest for social trends; verify factual claims independently', 'How to Improve': 'Use DeepSearch for deeper web coverage' },
           { 'AI System': 'Claude (free/pro)', 'Post-Cutoff Behavior': 'Uses training data only by default', 'Reliability for Current Info': 'Moderate — June 2026 reliable cutoff', 'How to Improve': 'Paste current text into context; API users can enable search tool' },
           { 'AI System': 'Perplexity', 'Post-Cutoff Behavior': 'Always searches web first', 'Reliability for Current Info': 'High — search-native product', 'How to Improve': 'Already cites sources by design' },
           { 'AI System': 'Any local LLM', 'Post-Cutoff Behavior': 'Uses training data only — no override', 'Reliability for Current Info': 'Very low for post-cutoff topics', 'How to Improve': 'Build RAG pipeline; paste context manually' },
@@ -333,7 +333,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-strategy',
         title: 'Implications for Companies: GEO Strategy by AI System',
         content: [
-          '<strong>GEO (Generative Engine Optimization) is the practice of making your brand, product, or content appear in AI-generated answers.</strong> For most AI systems, GEO works similarly to SEO — the AI retrieves content from search engines, so ranking well in Bing or Google feeds directly into AI answers.',
+          '<strong>GEO (Generative Engine Optimization) is the practice of making your brand, product, or content appear in AI-generated answers.</strong> For most AI systems, GEO works similarly to SEO — the AI retrieves content from search engines, so ranking well in Bing or Google can feed into AI answers.',
           'But local LLMs break this model completely. A locally-deployed Llama or Qwen never searches the web. You cannot optimize your way into its answers through search — the model will only mention you if you were in its training data before the cutoff, or if the deploying organization injects your content via RAG.',
           'This table maps the GEO channel for each AI system:',
         ],
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'warning',
             label: 'The local LLM GEO blind spot',
-            text: 'Most GEO guides focus entirely on cloud AI — they tell you to optimize for Bing or Google Search. That advice is useless for reaching internal deployments of Llama, Qwen, Gemma, or Phi. Those models never search. The only GEO channel that works is convincing the organization deploying the model to include your content in their RAG pipeline.',
+            text: 'Many GEO guides focus on cloud AI — they tell you to optimize for Bing or Google Search. That advice does not reach internal deployments of Llama, Qwen, Gemma, or Phi. Those models never search. The GEO channel that reaches those deployments is convincing the organization deploying the model to include your content in their RAG pipeline.',
           },
         ],
         image: '/images/knowledge-cutoffs-and-geo-geo-strategy-hero-en.webp',
@@ -361,8 +361,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-solution',
         title: 'The GEO Solution: Building a Moat for Both AI Types',
         content: [
-          '<strong>A complete GEO strategy in 2026 requires two parallel tracks: search optimization for cloud AI, and RAG-readiness for local AI.</strong> Most organizations are executing only the first track.',
-          '<strong>Track 1 — Cloud AI (search-based GEO):</strong> Traditional SEO techniques apply but with AI-specific additions. Your content must be structured for snippet eligibility (FAQ and HowTo JSON-LD schema), factually accurate (AI models avoid citing pages with correction histories), and authoritative (Bing and Google quality signals translate directly into AI citation likelihood). For Grok specifically, X presence (verified account, engagement rate, follower count) determines whether your brand appears in Grok answers.',
+          '<strong>A complete GEO strategy in 2026 requires two parallel tracks: search optimization for cloud AI, and RAG-readiness for local AI.</strong> Many organizations execute only the first track.',
+          '<strong>Track 1 — Cloud AI (search-based GEO):</strong> Traditional SEO techniques apply but with AI-specific additions. Your content must be structured for snippet eligibility (FAQ and HowTo JSON-LD schema), factually accurate (pages with a history of corrections may be cited less often), and authoritative (Bing and Google quality signals can influence AI citation likelihood). For Grok specifically, X presence (verified account, engagement rate, follower count) can influence whether your brand appears in Grok answers.',
           '<strong>Track 2 — Local AI (RAG-based GEO):</strong> You cannot optimize your way into a local LLM through search. The path is entirely different: (1) create machine-readable knowledge bases in formats that RAG pipelines consume (Markdown, JSON-LD, OpenAPI specs, structured FAQs); (2) participate in open data initiatives so your information is available to organizations building RAG systems; (3) build direct relationships with enterprise customers deploying local LLMs and propose data partnership agreements; (4) provide SDKs or APIs that make it trivial to include your content in a RAG pipeline.',
           'For most companies, Track 1 is already underway as part of SEO. Track 2 requires new work — specifically, producing content in formats optimized for machine ingestion, not human reading.',
         ],
@@ -391,7 +391,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Do local LLMs like Llama and Qwen ever receive knowledge updates?', a: 'No — not automatically. A local LLM\'s knowledge is permanently frozen at its training cutoff. Each new model release (Llama 4 Scout, Qwen3 14B) has a different cutoff, but the copy running on your machine has fixed knowledge. To get current information, build a RAG pipeline.' },
             { q: 'What is GEO and how does it relate to knowledge cutoffs?', a: 'GEO (Generative Engine Optimization) is the discipline of making your content appear in AI-generated answers. For cloud AI, GEO works through search optimization — rank in Bing/Google and you get cited. For local LLMs, this is structurally impossible because the model never searches. Local LLM GEO requires RAG pipelines at the deploying organization.' },
             { q: 'Which AI model has the most recent knowledge cutoff date (verified)?', a: 'Among primary-source verified cutoffs: Claude Opus 5.5 has the most recent reliable cutoff at June 2026, followed by Grok 4.7 at May 2026 and GPT-6 Astra / GPT-6.1 Sol at April 2026 (GPT-6 Luna: May 2026). Phi-4 is June 2024. GPT-4o (legacy) is October 2023. Several current models (Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3) have not publicly disclosed exact dates. Their superseded predecessors had: Gemini 3.1 Pro (January 2025), DeepSeek-V3 (July 2024) and Gemma 3 27B (August 2024).' },
-            { q: 'Can I use SEO to appear in Llama or Qwen answers?', a: 'No. SEO cannot influence a locally-deployed LLM because the model never searches the web. The only paths are: (1) be in the training data before the cutoff, or (2) be included in a RAG pipeline by the organization deploying the model.' },
+            { q: 'Can I use SEO to appear in Llama or Qwen answers?', a: 'No. SEO cannot influence a locally-deployed LLM because the model never searches the web. The main paths are: (1) be in the training data before the cutoff, or (2) be included in a RAG pipeline by the organization deploying the model.' },
             { q: 'How should I fact-check an AI answer about something that might be affected by the cutoff?', a: 'Three signals suggest a cutoff risk: (1) the topic involves specific versions, prices, people, or events; (2) you asked about something in a fast-moving industry; (3) the AI answer lacks citations. When any of these apply, verify against a primary source — the model\'s confident tone is not a reliability indicator.' },
             { q: 'Is there a way to tell from an AI\'s answer whether it used live search?', a: 'Often yes: Perplexity always shows source citations. Gemini shows a Google search icon when grounding is used. Grok indicates X search results. ChatGPT shows a globe icon and can be prompted to show sources. Claude does not search by default, so no indicator is needed. Local LLMs never search, so no indicator exists — the answer is always from training data.' },
             { q: 'Why does ChatGPT seem to know about recent events even though its base model has a training cutoff?', a: 'ChatGPT (the product) searches Bing by default in paid tiers and augments its responses with current search results. This means it can answer factual questions about recent events even though the underlying model\'s training data has a fixed cutoff (GPT-6 Astra and GPT-6.1 Sol training cutoff is Apr 2026; legacy GPT-4o ends Oct 2023). The training cutoff still limits contextual understanding of post-cutoff topics.' },
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '**로컬/오픈웨이트 모델** 포함 — 모두 검색 레이어 "없음"',
       '**Phi-4**는 2024년 6월, **DeepSeek-V3**는 2024년 7월, **Gemma 3 27B**는 2024년 8월 마감 — 뒤의 두 모델은 이전 세대로, 현재 DeepSeek-V4와 Gemma 4로 대체됨',
       '**Claude Opus 5.5**는 표에서 검증된 신뢰할 수 있는 마감 날짜가 가장 최근: 2026년 6월',
-      '**Grok 4.7**은 기본 검색 레이어가 일반 웹이 아닌 소셜 플랫폼(X/Twitter)인 유일한 클라우드 모델',
+      '**Grok 4.7**은 여기서 다루는 클라우드 모델 중 기본 검색 레이어가 일반 웹이 아닌 소셜 플랫폼(X/Twitter)인 유일한 모델',
       '**GEO 시사점**: Llama/Qwen을 내부적으로 배포하는 기업은 해당 기업이 직접 구축한 RAG 파이프라인을 통해서만 도달할 수 있음',
     ],
     toc: [
@@ -534,7 +534,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'SEO를 사용하여 Llama나 Qwen 답변에 노출될 수 있습니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '아닙니다. 모델이 웹을 검색하지 않기 때문에 SEO는 로컬로 배포된 LLM에 영향을 줄 수 없습니다. 유일한 경로는: (1) 마감 전에 학습 데이터에 있었거나, (2) 모델을 배포하는 조직의 RAG 파이프라인에 포함되는 것입니다.',
+              'text': '아닙니다. 모델이 웹을 검색하지 않기 때문에 SEO는 로컬로 배포된 LLM에 영향을 줄 수 없습니다. 주요 경로는: (1) 마감 전에 학습 데이터에 있었거나, (2) 모델을 배포하는 조직의 RAG 파이프라인에 포함되는 것입니다.',
             },
           },
           {
@@ -717,7 +717,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'AI 시스템': 'ChatGPT (유료)', '마감 후 동작': '자동으로 Bing 검색', '현재 정보 신뢰도': '사실은 높음; 뉘앙스는 낮음', '개선 방법': '출처 인용 요청; 주요 주장 교차 확인' },
           { 'AI 시스템': 'Gemini (유료)', '마감 후 동작': '자동으로 Google 검색', '현재 정보 신뢰도': '사실은 높음; 뉘앙스는 낮음', '개선 방법': '그라운딩 활성화; 인용된 URL 검토' },
-          { 'AI 시스템': 'Grok ([X.com](https://X.com))', '마감 후 동작': '자동으로 X 게시물 검색', '현재 정보 신뢰도': '소셜 트렌드에 좋음; 사실은 고르지 않음', '개선 방법': '더 깊은 웹 커버리지를 위해 DeepSearch 사용' },
+          { 'AI 시스템': 'Grok ([X.com](https://X.com))', '마감 후 동작': '자동으로 X 게시물 검색', '현재 정보 신뢰도': '소셜 트렌드에 적합; 사실은 별도로 확인 필요', '개선 방법': '더 깊은 웹 커버리지를 위해 DeepSearch 사용' },
           { 'AI 시스템': 'Claude (무료/프로)', '마감 후 동작': '기본적으로 학습 데이터만 사용', '현재 정보 신뢰도': '중간 — 2026년 6월 신뢰할 수 있는 마감', '개선 방법': '현재 텍스트를 컨텍스트에 붙여넣기; API 사용자는 검색 도구 활성화 가능' },
           { 'AI 시스템': 'Perplexity', '마감 후 동작': '항상 먼저 웹 검색', '현재 정보 신뢰도': '높음 — 검색 네이티브 제품', '개선 방법': '설계상 이미 출처 인용' },
           { 'AI 시스템': '모든 로컬 LLM', '마감 후 동작': '학습 데이터만 사용 — 재정의 없음', '현재 정보 신뢰도': '마감 후 주제에서 매우 낮음', '개선 방법': 'RAG 파이프라인 구축; 수동으로 컨텍스트 붙여넣기' },
@@ -734,7 +734,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-strategy',
         title: '기업을 위한 시사점: AI 시스템별 GEO 전략',
         content: [
-          '<strong>GEO(생성형 엔진 최적화)는 브랜드, 제품, 또는 콘텐츠를 AI 생성 답변에 노출시키는 실천입니다.</strong> 대부분의 AI 시스템에서 GEO는 SEO와 유사하게 작동합니다 — AI가 검색 엔진에서 콘텐츠를 검색하므로 Bing이나 Google에서 좋은 순위를 얻으면 AI 답변에 직접 반영됩니다.',
+          '<strong>GEO(생성형 엔진 최적화)는 브랜드, 제품, 또는 콘텐츠를 AI 생성 답변에 노출시키는 실천입니다.</strong> 대부분의 AI 시스템에서 GEO는 SEO와 유사하게 작동합니다 — AI가 검색 엔진에서 콘텐츠를 검색하므로 Bing이나 Google에서 좋은 순위를 얻으면 AI 답변에 반영될 수 있습니다.',
           '하지만 로컬 LLM은 이 모델을 완전히 깨뜨립니다. 로컬에 배포된 Llama나 Qwen은 웹을 검색하지 않습니다. 검색을 통해 답변에 최적화할 수 없습니다 — 마감 전에 학습 데이터에 있었거나, 배포 조직이 RAG를 통해 콘텐츠를 주입하는 경우에만 모델이 언급할 것입니다.',
           '이 표는 각 AI 시스템에 대한 GEO 채널을 매핑합니다:',
         ],
@@ -752,7 +752,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'warning',
             label: '로컬 LLM GEO 사각지대',
-            text: '대부분의 GEO 가이드는 클라우드 AI에만 집중합니다 — Bing이나 Google 검색을 위해 최적화하라고 말합니다. 그 조언은 Llama, Qwen, Gemma, 또는 Phi의 내부 배포에 도달하는 데 쓸모가 없습니다. 이 모델들은 검색하지 않습니다. 작동하는 유일한 GEO 채널은 모델을 배포하는 조직이 RAG 파이프라인에 콘텐츠를 포함하도록 설득하는 것입니다.',
+            text: '많은 GEO 가이드는 클라우드 AI에 집중합니다 — Bing이나 Google 검색을 위해 최적화하라고 말합니다. 그 조언은 Llama, Qwen, Gemma, 또는 Phi의 내부 배포에는 닿지 않습니다. 이 모델들은 검색하지 않습니다. 이런 배포에 닿는 GEO 채널은 모델을 배포하는 조직이 RAG 파이프라인에 콘텐츠를 포함하도록 설득하는 것입니다.',
           },
         ],
         image: '/images/knowledge-cutoffs-and-geo-geo-strategy-hero-ko.webp',
@@ -762,8 +762,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-solution',
         title: 'GEO 해결책: 두 AI 유형 모두를 위한 해자 구축',
         content: [
-          '<strong>2026년의 완전한 GEO 전략은 두 가지 병렬 트랙이 필요합니다: 클라우드 AI를 위한 검색 최적화와 로컬 AI를 위한 RAG 준비성.</strong> 대부분의 조직은 첫 번째 트랙만 실행하고 있습니다.',
-          '<strong>트랙 1 — 클라우드 AI(검색 기반 GEO):</strong> 전통적인 SEO 기법이 AI 특정 추가 사항과 함께 적용됩니다. 콘텐츠는 스니펫 적합성을 위해 구조화되어야 하고(FAQ 및 HowTo JSON-LD 스키마), 사실적으로 정확해야 하며(AI 모델은 수정 이력이 있는 페이지 인용을 피합니다), 권위 있어야 합니다(Bing 및 Google 품질 신호가 AI 인용 가능성에 직접 반영됩니다). Grok의 경우 X 존재(인증 계정, 참여율, 팔로워 수)가 브랜드가 Grok 답변에 나타나는지를 결정합니다.',
+          '<strong>2026년의 완전한 GEO 전략은 두 가지 병렬 트랙이 필요합니다: 클라우드 AI를 위한 검색 최적화와 로컬 AI를 위한 RAG 준비성.</strong> 많은 조직은 첫 번째 트랙만 실행하고 있습니다.',
+          '<strong>트랙 1 — 클라우드 AI(검색 기반 GEO):</strong> 전통적인 SEO 기법이 AI 특정 추가 사항과 함께 적용됩니다. 콘텐츠는 스니펫 적합성을 위해 구조화되어야 하고(FAQ 및 HowTo JSON-LD 스키마), 사실적으로 정확해야 하며(수정 이력이 있는 페이지는 덜 인용될 수 있습니다), 권위 있어야 합니다(Bing 및 Google 품질 신호가 AI 인용 가능성에 영향을 줄 수 있습니다). Grok의 경우 X 존재(인증 계정, 참여율, 팔로워 수)가 브랜드가 Grok 답변에 나타나는지에 영향을 줄 수 있습니다.',
           '<strong>트랙 2 — 로컬 AI(RAG 기반 GEO):</strong> 검색을 통해 로컬 LLM에 최적화할 수 없습니다. 경로는 완전히 다릅니다: (1) RAG 파이프라인이 소비하는 형식(Markdown, JSON-LD, OpenAPI 사양, 구조화 FAQ)으로 기계 판독 가능한 지식 베이스 생성; (2) 오픈 데이터 이니셔티브에 참여하여 RAG 시스템을 구축하는 조직이 정보를 사용할 수 있게 하기; (3) 로컬 LLM을 배포하는 기업 고객과 직접 관계를 구축하고 데이터 파트너십 계약 제안; (4) 콘텐츠를 RAG 파이프라인에 포함시키는 것을 간단하게 만드는 SDK 또는 API 제공.',
           '대부분의 회사에서 트랙 1은 SEO의 일환으로 이미 진행 중입니다. 트랙 2는 새로운 작업이 필요합니다 — 구체적으로 인간 독서가 아닌 기계 수집에 최적화된 형식으로 콘텐츠를 생성하는 것입니다.',
         ],
@@ -792,7 +792,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Llama나 Qwen 같은 로컬 LLM이 지식 업데이트를 받습니까?', a: '아닙니다 — 자동으로는 안 됩니다. 로컬 LLM의 지식은 학습 마감 날짜에 영구적으로 동결됩니다. 각 새로운 모델 릴리스(Llama 4 Scout, Qwen3 14B)는 다른 마감 날짜를 가지지만, 사용자 기기에서 실행 중인 복사본은 고정된 지식을 가집니다. 현재 정보를 얻으려면 RAG 파이프라인을 구축하십시오.' },
             { q: 'GEO란 무엇이며 지식 마감과 어떤 관계가 있습니까?', a: 'GEO(생성형 엔진 최적화)는 콘텐츠를 AI 생성 답변에 노출시키는 분야입니다. 클라우드 AI의 경우 GEO는 검색 최적화를 통해 작동합니다 — Bing/Google에서 순위를 얻으면 인용됩니다. 로컬 LLM의 경우 모델이 검색하지 않기 때문에 이것은 구조적으로 불가능합니다. 로컬 LLM GEO는 배포 조직의 RAG 파이프라인이 필요합니다.' },
             { q: '검증된 지식 마감 날짜가 가장 최근인 AI 모델은 어느 것입니까?', a: '1차 출처 검증 마감 날짜 중: Claude Opus 5.5가 2026년 6월로 가장 최근의 신뢰할 수 있는 마감 날짜를 가지며, Grok 4.7이 2026년 5월, GPT-6 Astra / GPT-6.1 Sol이 2026년 4월로 뒤를 잇습니다(GPT-6 Luna는 2026년 5월). Phi-4는 2024년 6월. GPT-4o(레거시)는 2023년 10월. Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3를 포함한 여러 현재 모델은 정확한 날짜를 공개적으로 공시하지 않았습니다. 이들에 의해 대체된 이전 세대 모델은 날짜를 공개했습니다: Gemini 3.1 Pro(2025년 1월), DeepSeek-V3(2024년 7월), Gemma 3 27B(2024년 8월).' },
-            { q: 'SEO를 사용하여 Llama나 Qwen 답변에 노출될 수 있습니까?', a: '아닙니다. 모델이 웹을 검색하지 않기 때문에 SEO는 로컬로 배포된 LLM에 영향을 줄 수 없습니다. 유일한 경로는: (1) 마감 전에 학습 데이터에 있었거나, (2) 모델을 배포하는 조직의 RAG 파이프라인에 포함되는 것입니다.' },
+            { q: 'SEO를 사용하여 Llama나 Qwen 답변에 노출될 수 있습니까?', a: '아닙니다. 모델이 웹을 검색하지 않기 때문에 SEO는 로컬로 배포된 LLM에 영향을 줄 수 없습니다. 주요 경로는: (1) 마감 전에 학습 데이터에 있었거나, (2) 모델을 배포하는 조직의 RAG 파이프라인에 포함되는 것입니다.' },
             { q: '마감 날짜의 영향을 받을 수 있는 AI 답변을 어떻게 사실 확인해야 합니까?', a: '세 가지 신호가 마감 위험을 시사합니다: (1) 주제가 특정 버전, 가격, 인물, 또는 이벤트를 포함; (2) 빠르게 변화하는 산업의 것을 물어봄; (3) AI 답변에 인용이 없음. 이 중 어느 하나가 적용되면 1차 출처에서 확인하십시오 — 모델의 자신감 있는 어조는 신뢰도 지표가 아닙니다.' },
             { q: 'AI 답변에서 실시간 검색을 사용했는지 알 수 있는 방법이 있습니까?', a: '종종 그렇습니다: Perplexity는 항상 출처 인용을 표시합니다. Gemini는 그라운딩이 사용될 때 Google 검색 아이콘을 표시합니다. Grok은 X 검색 결과를 나타냅니다. ChatGPT는 지구본 아이콘을 표시하며 출처를 표시하도록 요청할 수 있습니다. Claude는 기본적으로 검색하지 않으므로 지표가 필요 없습니다. 로컬 LLM은 검색하지 않으므로 지표가 없습니다 — 답변은 항상 학습 데이터에서 나옵니다.' },
             { q: '기본 모델의 학습 마감이 있음에도 ChatGPT가 최근 이벤트를 아는 이유는 무엇입니까?', a: 'ChatGPT(제품)는 유료 티어에서 기본적으로 Bing을 검색하여 현재 검색 결과로 응답을 보완합니다. 즉, 기본 모델의 학습 데이터에 고정된 마감 날짜(GPT-6 Astra 및 GPT-6.1 Sol의 학습 마감은 2026년 4월; 레거시 GPT-4o는 2023년 10월)가 있더라도 최근 이벤트에 대한 사실 질문에 답할 수 있습니다. 학습 마감은 여전히 마감 이후 주제에 대한 맥락적 이해를 제한합니다.' },
@@ -839,7 +839,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '**Modelos locais/open-weight** incluídos — todos com "nenhuma" camada de busca',
       '**Phi-4** tem corte em junho de 2024, **DeepSeek-V3** em julho de 2024 e **Gemma 3 27B** em agosto de 2024 — os dois últimos são de geração anterior, agora substituídos por DeepSeek-V4 e Gemma 4',
       '**Claude Opus 5.5** tem a data de corte confiável verificada mais recente da tabela: junho de 2026',
-      '**Grok 4.7** é o único modelo em nuvem cuja camada de busca padrão é uma plataforma social (X/Twitter) em vez da web geral',
+      '**Grok 4.7** é, entre os modelos em nuvem tratados aqui, o único cuja camada de busca padrão é uma plataforma social (X/Twitter) em vez da web geral',
       '**Implicação GEO**: empresas que implantam Llama/Qwen internamente só podem ser alcançadas por meio de pipelines RAG que a própria empresa construiu',
     ],
     toc: [
@@ -935,7 +935,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Posso usar SEO para aparecer nas respostas do Llama ou Qwen?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Não. SEO não consegue influenciar LLMs implantados localmente porque o modelo não busca na web. Os únicos caminhos são: (1) estar nos dados de treinamento antes do corte, ou (2) ser incluído no pipeline RAG da organização que implanta o modelo.',
+              'text': 'Não. SEO não consegue influenciar LLMs implantados localmente porque o modelo não busca na web. Os principais caminhos são: (1) estar nos dados de treinamento antes do corte, ou (2) ser incluído no pipeline RAG da organização que implanta o modelo.',
             },
           },
           {
@@ -1102,7 +1102,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'Sistema de IA': 'ChatGPT (pago)', 'Comportamento pós-corte': 'Busca automaticamente no Bing', 'Confiabilidade de informações atuais': 'Alta para fatos; baixa para nuances', 'Como melhorar': 'Peça citações de fontes; verifique afirmações principais' },
           { 'Sistema de IA': 'Gemini (pago)', 'Comportamento pós-corte': 'Busca automaticamente no Google', 'Confiabilidade de informações atuais': 'Alta para fatos; baixa para nuances', 'Como melhorar': 'Ative grounding; revise URLs citadas' },
-          { 'Sistema de IA': 'Grok ([X.com](https://X.com))', 'Comportamento pós-corte': 'Busca automaticamente posts do X', 'Confiabilidade de informações atuais': 'Bom para tendências sociais; irregular para fatos', 'Como melhorar': 'Use DeepSearch para cobertura web mais ampla' },
+          { 'Sistema de IA': 'Grok ([X.com](https://X.com))', 'Comportamento pós-corte': 'Busca automaticamente posts do X', 'Confiabilidade de informações atuais': 'Mais útil para tendências sociais; verifique os fatos por conta própria', 'Como melhorar': 'Use DeepSearch para cobertura web mais ampla' },
           { 'Sistema de IA': 'Claude (gratuito/pro)', 'Comportamento pós-corte': 'Usa apenas dados de treinamento por padrão', 'Confiabilidade de informações atuais': 'Média — corte confiável em junho 2026', 'Como melhorar': 'Cole texto atual no contexto; usuários de API podem ativar ferramenta de busca' },
           { 'Sistema de IA': 'Perplexity', 'Comportamento pós-corte': 'Sempre busca na web primeiro', 'Confiabilidade de informações atuais': 'Alta — produto nativo de busca', 'Como melhorar': 'Já cita fontes por design' },
           { 'Sistema de IA': 'Todos os LLMs locais', 'Comportamento pós-corte': 'Apenas dados de treinamento — sem substituição', 'Confiabilidade de informações atuais': 'Muito baixa para tópicos pós-corte', 'Como melhorar': 'Construa pipeline RAG; cole contexto manualmente' },
@@ -1137,7 +1137,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'warning',
             label: 'Ponto cego de GEO para LLM local',
-            text: 'A maioria dos guias de GEO se foca apenas em IA em nuvem. Esse conselho é inútil para alcançar implantações internas de Llama, Qwen, Gemma ou Phi. Esses modelos não buscam. O único canal GEO que funciona é convencer a organização que implanta o modelo a incluir seu conteúdo no pipeline RAG.',
+            text: 'Muitos guias de GEO se focam em IA em nuvem. Esse conselho não alcança implantações internas de Llama, Qwen, Gemma ou Phi. Esses modelos não buscam. O canal GEO que alcança essas implantações é convencer a organização que implanta o modelo a incluir seu conteúdo no pipeline RAG.',
           },
         ],
         image: '/images/knowledge-cutoffs-and-geo-geo-strategy-hero-pt.webp',
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-solution',
         title: 'Solução GEO: construindo vantagem competitiva para ambos os tipos de IA',
         content: [
-          '<strong>Uma estratégia GEO completa em 2026 requer duas trilhas paralelas: otimização de busca para IA em nuvem e prontidão para RAG para IA local.</strong> A maioria das organizações só está executando a primeira trilha.',
+          '<strong>Uma estratégia GEO completa em 2026 requer duas trilhas paralelas: otimização de busca para IA em nuvem e prontidão para RAG para IA local.</strong> Muitas organizações só estão executando a primeira trilha.',
           '<strong>Trilha 1 — IA em nuvem (GEO baseado em busca):</strong> Técnicas tradicionais de SEO com adições específicas de IA. O conteúdo precisa ser estruturado para adequação a snippets (esquemas JSON-LD FAQ e HowTo), factualmente preciso e autoritativo.',
           '<strong>Trilha 2 — IA local (GEO baseado em RAG):</strong> Crie base de conhecimento legível por máquina (Markdown, JSON-LD, especificações OpenAPI); participe de iniciativas de dados abertos; construa relacionamentos com clientes corporativos que implantam LLMs localmente.',
           'Para a maioria das empresas, a Trilha 1 já está em andamento como parte do SEO. A Trilha 2 requer trabalho novo.',
@@ -1177,7 +1177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'LLMs locais como Llama ou Qwen recebem atualizações de conhecimento?', a: 'Não — não automaticamente. O conhecimento de LLMs locais fica permanentemente congelado na data de corte de treinamento. Para obter informações atuais, construa um pipeline RAG.' },
             { q: 'O que é GEO e como se relaciona com datas de corte?', a: 'GEO (Otimização de Motor Generativo) é a área de fazer conteúdo aparecer em respostas geradas por IA. Para IA em nuvem, GEO funciona via otimização de busca. Para LLMs locais, isso é estruturalmente impossível porque o modelo não busca. GEO de LLM local requer pipeline RAG da organização implantadora.' },
             { q: 'Qual modelo de IA tem a data de corte verificada mais recente?', a: 'Claude Opus 5.5 tem a data de corte confiável mais recente, em junho de 2026, seguido por Grok 4.7 (maio de 2026) e GPT-6 Astra / GPT-6.1 Sol (abril de 2026; GPT-6 Luna: maio de 2026). Phi-4: junho de 2024. GPT-4o (legado): outubro de 2023. Gemini 4 Argon, Gemma 4, DeepSeek-V4 e Mistral Large 4 não divulgaram data de corte; seus antecessores, já substituídos, divulgaram: Gemini 3.1 Pro (janeiro de 2025), DeepSeek-V3 (julho de 2024) e Gemma 3 27B (agosto de 2024).' },
-            { q: 'Posso usar SEO para aparecer nas respostas do Llama ou Qwen?', a: 'Não. SEO não consegue influenciar LLMs implantados localmente porque o modelo não busca na web. Os únicos caminhos são: (1) estar nos dados de treinamento antes do corte, ou (2) ser incluído no pipeline RAG da organização que implanta o modelo.' },
+            { q: 'Posso usar SEO para aparecer nas respostas do Llama ou Qwen?', a: 'Não. SEO não consegue influenciar LLMs implantados localmente porque o modelo não busca na web. Os principais caminhos são: (1) estar nos dados de treinamento antes do corte, ou (2) ser incluído no pipeline RAG da organização que implanta o modelo.' },
             { q: 'Como verificar faticamente respostas de IA afetadas por datas de corte?', a: 'Três sinais indicam risco de corte: (1) o tópico envolve versões específicas, preços, pessoas ou eventos; (2) você está perguntando sobre um setor que muda rapidamente; (3) a resposta da IA não tem citações. Se qualquer um se aplicar, verifique em fontes primárias.' },
             { q: 'Como saber se uma resposta de IA usou busca ao vivo?', a: 'Perplexity sempre exibe citações de fontes. Gemini mostra ícone do Google Search quando usa grounding. Grok indica resultados de busca no X. ChatGPT exibe ícone de globo. Claude não busca por padrão. LLMs locais nunca buscam — as respostas sempre vêm dos dados de treinamento.' },
             { q: 'Por que o ChatGPT conhece eventos recentes mesmo tendo data de corte de outubro de 2023?', a: 'O ChatGPT (produto) busca no Bing por padrão nos planos pagos, complementando respostas com resultados de busca atuais. Os modelos base GPT-6 Astra e GPT-6.1 Sol têm data de corte de abril de 2026; o legado GPT-4o tem outubro de 2023. O que você vê é a camada de busca, não dados de treinamento atualizados.' },
@@ -1222,7 +1222,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '**ローカル/オープンウェイトモデル**収録 — すべて検索レイヤー「なし」',
       '**Phi-4**は2024年6月、**DeepSeek-V3**は2024年7月、**Gemma 3 27B**は2024年8月 — 後者2つは旧世代で、現在はDeepSeek-V4とGemma 4に置き換えられています',
       '**Claude Opus 5.5**は表中で検証済みの信頼性の高いカットオフが最も新しい：2026年6月',
-      '**Grok 4.7**はデフォルト検索レイヤーが一般ウェブではなくソーシャルプラットフォーム（X/Twitter）の唯一のクラウドモデル',
+      '**Grok 4.7**は、本稿で扱うクラウドモデルの中で、デフォルト検索レイヤーが一般ウェブではなくソーシャルプラットフォーム（X/Twitter）である唯一のモデル',
       '**GEOの示唆**：Llama/Qwenを社内にデプロイしている企業は、その企業が自ら構築したRAGパイプラインを通じてのみアプローチ可能',
     ],
     toc: [
@@ -1318,7 +1318,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'SEOを使ってLlamaやQwenの回答に露出できますか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'いいえ。モデルがウェブを検索しないため、SEOはローカルにデプロイされたLLMに影響を与えることができません。唯一の経路は：(1) カットオフ前に学習データに含まれていたか、(2) モデルをデプロイしている組織のRAGパイプラインに含まれることです。',
+              'text': 'いいえ。モデルがウェブを検索しないため、SEOはローカルにデプロイされたLLMに影響を与えることができません。主な経路は：(1) カットオフ前に学習データに含まれていたか、(2) モデルをデプロイしている組織のRAGパイプラインに含まれることです。',
             },
           },
           {
@@ -1501,7 +1501,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'AIシステム': 'ChatGPT（有料）', 'カットオフ後の動作': '自動でBingを検索', '現在情報の信頼性': '事実は高い；ニュアンスは低い', '改善方法': 'ソースの引用を求める；重要な主張をクロスチェック' },
           { 'AIシステム': 'Gemini（有料）', 'カットオフ後の動作': '自動でGoogle検索', '現在情報の信頼性': '事実は高い；ニュアンスは低い', '改善方法': 'グラウンディングを有効にする；引用URLを確認' },
-          { 'AIシステム': 'Grok ([X.com](https://X.com))', 'カットオフ後の動作': '自動でXの投稿を検索', '現在情報の信頼性': 'ソーシャルトレンドには良い；事実はムラがある', '改善方法': 'より深いウェブカバレッジにはDeepSearchを使用' },
+          { 'AIシステム': 'Grok ([X.com](https://X.com))', 'カットオフ後の動作': '自動でXの投稿を検索', '現在情報の信頼性': 'ソーシャルトレンドに強い；事実は別途確認が必要', '改善方法': 'より深いウェブカバレッジにはDeepSearchを使用' },
           { 'AIシステム': 'Claude（無料/プロ）', 'カットオフ後の動作': 'デフォルトでは学習データのみ使用', '現在情報の信頼性': '中程度 — 2026年6月の信頼性の高いカットオフ', '改善方法': '現在のテキストをコンテキストに貼り付ける；APIユーザーは検索ツールを有効化可能' },
           { 'AIシステム': 'Perplexity', 'カットオフ後の動作': '常にまずウェブを検索', '現在情報の信頼性': '高い — 検索ネイティブ製品', '改善方法': 'すでに設計上ソースを引用している' },
           { 'AIシステム': 'すべてのローカルLLM', 'カットオフ後の動作': '学習データのみ使用 — 上書き不可', '現在情報の信頼性': 'カットオフ後のトピックでは非常に低い', '改善方法': 'RAGパイプラインを構築；手動でコンテキストを貼り付ける' },
@@ -1518,7 +1518,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-strategy',
         title: '企業への示唆：AIシステム別GEO戦略',
         content: [
-          '<strong>GEO（生成エンジン最適化）とは、ブランド、製品、またはコンテンツをAI生成回答に露出させる取り組みです。</strong> ほとんどのAIシステムでは、GEOはSEOと同様に機能します — AIが検索エンジンからコンテンツを取得するため、BingやGoogleで良い順位を得ることがAI回答に直結します。',
+          '<strong>GEO（生成エンジン最適化）とは、ブランド、製品、またはコンテンツをAI生成回答に露出させる取り組みです。</strong> ほとんどのAIシステムでは、GEOはSEOと同様に機能します — AIが検索エンジンからコンテンツを取得するため、BingやGoogleで良い順位を得ることがAI回答に反映される場合があります。',
           'しかしローカルLLMはこのモデルを完全に崩します。ローカルにデプロイされたLlamaやQwenはウェブを検索しません。検索経由で回答に最適化することはできません — カットオフ前に学習データに含まれていたか、デプロイ組織がRAG経由でコンテンツを注入する場合にのみ、モデルはあなたについて言及します。',
           'この表は各AIシステムのGEOチャネルをまとめています：',
         ],
@@ -1536,7 +1536,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'warning',
             label: 'ローカルLLMのGEOの盲点',
-            text: 'ほとんどのGEOガイドはクラウドAIのみに焦点を当てています — BingやGoogle検索向けに最適化するよう指示します。そのアドバイスは、Llama、Qwen、Gemma、またはPhiの社内デプロイにリーチするには役立ちません。これらのモデルは検索しません。機能する唯一のGEOチャネルは、モデルをデプロイしている組織を説得して、あなたのコンテンツをRAGパイプラインに含めてもらうことです。',
+            text: '多くのGEOガイドはクラウドAIに焦点を当てています — BingやGoogle検索向けに最適化するよう指示します。そのアドバイスは、Llama、Qwen、Gemma、またはPhiの社内デプロイには届きません。これらのモデルは検索しません。こうしたデプロイに届くGEOチャネルは、モデルをデプロイしている組織を説得して、あなたのコンテンツをRAGパイプラインに含めてもらうことです。',
           },
         ],
         image: '/images/knowledge-cutoffs-and-geo-geo-strategy-hero-ja.webp',
@@ -1546,8 +1546,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-solution',
         title: 'GEO解決策：両AI型への参入戦略',
         content: [
-          '<strong>2026年の完全なGEO戦略には2つの並行トラックが必要です：クラウドAI向けの検索最適化と、ローカルAI向けのRAG準備性です。</strong> ほとんどの組織は最初のトラックしか実施していません。',
-          '<strong>トラック1 — クラウドAI（検索ベースGEO）：</strong> 従来のSEOテクニックにAI固有の追加事項を加えて適用します。コンテンツはスニペット適格性のために構造化されている必要があり（FAQ、HowToのJSON-LDスキーマ）、事実に正確であり（AIモデルは修正履歴のあるページの引用を避けます）、権威ある必要があります（BingとGoogleの品質シグナルがAI引用の可能性に直結します）。Grokについては特に、Xプレゼンス（認証済みアカウント、エンゲージメント率、フォロワー数）がブランドがGrok回答に現れるかどうかを決定します。',
+          '<strong>2026年の完全なGEO戦略には2つの並行トラックが必要です：クラウドAI向けの検索最適化と、ローカルAI向けのRAG準備性です。</strong> 多くの組織は最初のトラックしか実施していません。',
+          '<strong>トラック1 — クラウドAI（検索ベースGEO）：</strong> 従来のSEOテクニックにAI固有の追加事項を加えて適用します。コンテンツはスニペット適格性のために構造化されている必要があり（FAQ、HowToのJSON-LDスキーマ）、事実に正確であり（修正履歴のあるページは引用されにくい場合があります）、権威ある必要があります（BingとGoogleの品質シグナルはAI引用の可能性に影響し得ます）。Grokについては特に、Xプレゼンス（認証済みアカウント、エンゲージメント率、フォロワー数）がブランドがGrok回答に現れるかどうかに影響し得ます。',
           '<strong>トラック2 — ローカルAI（RAGベースGEO）：</strong> 検索経由でローカルLLMに最適化することはできません。アプローチはまったく異なります：(1) RAGパイプラインが消費する形式（Markdown、JSON-LD、OpenAPI仕様、構造化FAQ）で機械可読なナレッジベースを作成する；(2) オープンデータイニシアチブに参加して、RAGシステムを構築する組織が情報を利用できるようにする；(3) ローカルLLMをデプロイしているエンタープライズ顧客と直接関係を構築し、データパートナーシップ協定を提案する；(4) RAGパイプラインへのコンテンツ組み込みを簡単にするSDKやAPIを提供する。',
           'ほとんどの企業にとって、トラック1はすでにSEOの一環として進行中です。トラック2には新しい作業が必要です — 具体的には、人間が読むためではなく機械による取り込みに最適化された形式でコンテンツを制作することです。',
         ],
@@ -1576,7 +1576,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'LlamaやQwenのようなローカルLLMは知識のアップデートを受け取りますか？', a: 'いいえ — 自動的にはありません。ローカルLLMの知識はトレーニングカットオフ時点で永久に凍結されます。新しいモデルリリース（Llama 4 Scout、Qwen3 14B）はそれぞれ異なるカットオフを持ちますが、マシン上で実行中のコピーは固定された知識を持ちます。現在の情報を得るにはRAGパイプラインを構築してください。' },
             { q: 'GEOとは何ですか？知識カットオフとどう関係しますか？', a: 'GEO（生成エンジン最適化）とは、コンテンツをAI生成回答に露出させる分野です。クラウドAIでは、GEOは検索最適化を通じて機能します — Bing/Googleで順位を得ることで引用されます。ローカルLLMでは、モデルが検索しないため、これは構造的に不可能です。ローカルLLMのGEOはデプロイ組織のRAGパイプラインが必要です。' },
             { q: '検証済みの中で最も新しい知識カットオフ日を持つAIモデルはどれですか？', a: '一次情報源で検証済みのカットオフの中では：Claude Opus 5.5が2026年6月という最も新しい信頼性の高いカットオフを持ち、Grok 4.7が2026年5月、GPT-6 AstraとGPT-6.1 Solが2026年4月（GPT-6 Lunaは2026年5月）で続きます。Phi-4は2024年6月。GPT-4o（レガシー）は2023年10月。Gemini 4 Argon、Gemma 4、DeepSeek-V4、Mistral Large 4、Llama 4、Qwen3を含む複数の現行モデルは正確な日付を公式に開示していません。これらに置き換えられた旧世代のGemini 3.1 Pro（2025年1月）、DeepSeek-V3（2024年7月）、Gemma 3 27B（2024年8月）は日付を開示していました。' },
-            { q: 'SEOを使ってLlamaやQwenの回答に露出できますか？', a: 'いいえ。モデルがウェブを検索しないため、SEOはローカルにデプロイされたLLMに影響を与えることができません。唯一の経路は：(1) カットオフ前に学習データに含まれていたか、(2) モデルをデプロイしている組織のRAGパイプラインに含まれることです。' },
+            { q: 'SEOを使ってLlamaやQwenの回答に露出できますか？', a: 'いいえ。モデルがウェブを検索しないため、SEOはローカルにデプロイされたLLMに影響を与えることができません。主な経路は：(1) カットオフ前に学習データに含まれていたか、(2) モデルをデプロイしている組織のRAGパイプラインに含まれることです。' },
             { q: 'カットオフの影響を受ける可能性があるAI回答をどうやってファクトチェックすればよいですか？', a: 'カットオフリスクを示す3つのシグナル：(1) トピックが特定のバージョン、価格、人物、またはイベントを含む；(2) 変化の速い業界について尋ねている；(3) AI回答に引用がない。これらのいずれかが当てはまる場合、一次情報源で確認してください — モデルの自信に満ちたトーンは信頼性の指標ではありません。' },
             { q: 'AI回答がライブ検索を使ったかどうかわかりますか？', a: '多くの場合はわかります：Perplexityは常にソース引用を表示します。GeminiはグラウンディングとGoogle検索アイコンを表示します。GrokはXの検索結果を示します。ChatGPTは地球儀アイコンを表示し、ソースを表示するよう求めることができます。Claudeはデフォルトで検索しないため、インジケーターは不要です。ローカルLLMは決して検索しないため、インジケーターは存在しません — 回答は常に学習データから来ています。' },
             { q: 'ベースモデルにトレーニングカットオフがあるのに、ChatGPTが最近の出来事を知っているのはなぜですか？', a: 'ChatGPT（製品）は有料プランではデフォルトでBingを検索し、現在の検索結果で回答を補強します。これにより、基盤モデルの学習データに固定されたカットオフ日（GPT-6 AstraとGPT-6.1 Solは2026年4月、レガシーGPT-4oは2023年10月）があっても、最近のイベントについての質問に答えられます。ただし、カットオフ以降のトピックに関する文脈的理解は依然として制限されます。' },
@@ -1623,7 +1623,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '**النماذج المحلية / open-weight** متضمنة — جميعها بطبقة بحث "لا شيء"',
       '**Phi-4** تاريخ انقطاعه يونيو 2024 و**DeepSeek-V3** يوليو 2024 و**Gemma 3 27B** أغسطس 2024 — والأخيران من الجيل السابق وقد حلّ محلهما DeepSeek-V4 وGemma 4',
       '**Claude Opus 5.5** لديه أحدث تاريخ انقطاع موثّق وموثوق في الجدول: يونيو 2026',
-      '**Grok 4.7** هو النموذج السحابي الوحيد الذي طبقة بحثه الافتراضية منصة اجتماعية (X/Twitter)',
+      '**Grok 4.7** هو، بين النماذج السحابية المشمولة هنا، الوحيد الذي طبقة بحثه الافتراضية منصة اجتماعية (X/Twitter)',
       '**الأثر على GEO**: الشركات التي تنشر Llama/Qwen داخليًا لا يمكن الوصول إليها إلا عبر خطوط أنابيب RAG',
     ],
     toc: [
@@ -1886,7 +1886,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'نظام الذكاء الاصطناعي': 'ChatGPT (مدفوع)', 'السلوك بعد الانقطاع': 'يبحث تلقائيًا في Bing', 'موثوقية المعلومات الحالية': 'عالية للحقائق؛ منخفضة للفروق الدقيقة', 'كيفية التحسين': 'اطلب استشهادات بالمصادر؛ تحقق من الادعاءات الرئيسية' },
           { 'نظام الذكاء الاصطناعي': 'Gemini (مدفوع)', 'السلوك بعد الانقطاع': 'يبحث تلقائيًا في Google', 'موثوقية المعلومات الحالية': 'عالية للحقائق؛ منخفضة للفروق الدقيقة', 'كيفية التحسين': 'فعّل التأريض؛ راجع روابط URL المستشهد بها' },
-          { 'نظام الذكاء الاصطناعي': 'Grok ([X.com](https://X.com))', 'السلوك بعد الانقطاع': 'يبحث تلقائيًا في منشورات X', 'موثوقية المعلومات الحالية': 'جيد للاتجاهات الاجتماعية؛ غير منتظم للحقائق', 'كيفية التحسين': 'استخدم DeepSearch لتغطية أوسع' },
+          { 'نظام الذكاء الاصطناعي': 'Grok ([X.com](https://X.com))', 'السلوك بعد الانقطاع': 'يبحث تلقائيًا في منشورات X', 'موثوقية المعلومات الحالية': 'الأنسب للاتجاهات الاجتماعية؛ تحقّق من الحقائق بشكل مستقل', 'كيفية التحسين': 'استخدم DeepSearch لتغطية أوسع' },
           { 'نظام الذكاء الاصطناعي': 'Claude (مجاني/برو)', 'السلوك بعد الانقطاع': 'يستخدم بيانات التدريب فقط افتراضيًا', 'موثوقية المعلومات الحالية': 'متوسط — انقطاع موثوق يونيو 2026', 'كيفية التحسين': 'الصق النص الحالي في السياق' },
           { 'نظام الذكاء الاصطناعي': 'Perplexity', 'السلوك بعد الانقطاع': 'يبحث على الويب دائمًا أولًا', 'موثوقية المعلومات الحالية': 'عالية — منتج بحث أصيل', 'كيفية التحسين': 'يستشهد بالمصادر بالتصميم بالفعل' },
           { 'نظام الذكاء الاصطناعي': 'جميع نماذج LLM المحلية', 'السلوك بعد الانقطاع': 'بيانات تدريب فقط — بلا تجاوز', 'موثوقية المعلومات الحالية': 'منخفضة جدًا للمواضيع بعد الانقطاع', 'كيفية التحسين': 'ابنِ خط أنابيب RAG؛ الصق السياق يدويًا' },
@@ -1921,7 +1921,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'warning',
             label: 'نقطة عمياء GEO للـLLM المحلي',
-            text: 'معظم أدلة GEO تركز على ذكاء اصطناعي السحابة فقط. ذلك النصح عديم الجدوى للوصول إلى نشريات داخلية من Llama أو Qwen. هذه النماذج لا تبحث. قناة GEO الوحيدة الفعّالة هي إقناع المنظمة المنشِرة بتضمين محتواك في خط أنابيب RAG.',
+            text: 'كثير من أدلة GEO يركز على الذكاء الاصطناعي السحابي. ذلك النصح لا يصل إلى النشريات الداخلية من Llama أو Qwen. هذه النماذج لا تبحث. قناة GEO التي تصل إلى هذه النشريات هي إقناع المنظمة المنشِرة بتضمين محتواك في خط أنابيب RAG.',
           },
         ],
         image: '/images/knowledge-cutoffs-and-geo-geo-strategy-hero-ar.webp',
@@ -2006,7 +2006,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '**Modèles locaux/open-weight** couverts — tous ont "Aucune" pour la couche de recherche',
       '**Phi-4** a une coupure de juin 2024, **DeepSeek-V3** de juillet 2024 et **Gemma 3 27B** d\'août 2024 — les deux derniers sont de la génération précédente, désormais remplacés par DeepSeek-V4 et Gemma 4',
       '**Claude Opus 5.5** a la coupure fiable vérifiée la plus récente du tableau : juin 2026',
-      '**Grok 4.7** est le seul modèle cloud dont la couche de recherche par défaut est une plateforme sociale (X/Twitter) plutôt que le web général',
+      '**Grok 4.7** est, parmi les modèles cloud couverts ici, le seul dont la couche de recherche par défaut est une plateforme sociale (X/Twitter) plutôt que le web général',
       '**Implication GEO** : les entreprises qui déploient Llama/Qwen en interne ne peuvent être atteintes que via les pipelines RAG qu\'elles construisent elles-mêmes',
     ],
     toc: [
@@ -2102,7 +2102,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Puis-je utiliser le SEO pour apparaître dans les réponses de Llama ou Qwen ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Non. Le SEO ne peut pas influencer un LLM déployé localement car le modèle ne fait jamais de recherche web. Les seuls chemins sont : (1) être dans les données d\'entraînement avant la coupure, ou (2) être inclus dans un pipeline RAG par l\'organisation qui déploie le modèle.',
+              'text': 'Non. Le SEO ne peut pas influencer un LLM déployé localement car le modèle ne fait jamais de recherche web. Les principaux chemins sont : (1) être dans les données d\'entraînement avant la coupure, ou (2) être inclus dans un pipeline RAG par l\'organisation qui déploie le modèle.',
             },
           },
           {
@@ -2285,7 +2285,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'Système IA': 'ChatGPT (payant)', 'Comportement post-coupure': 'Recherche sur Bing automatiquement', 'Fiabilité pour l\'info actuelle': 'Élevée pour les faits ; moindre pour les nuances', 'Comment améliorer': 'Demandez-lui de citer ses sources ; vérifiez les affirmations clés' },
           { 'Système IA': 'Gemini (payant)', 'Comportement post-coupure': 'Recherche sur Google automatiquement', 'Fiabilité pour l\'info actuelle': 'Élevée pour les faits ; moindre pour les nuances', 'Comment améliorer': 'Activez le grounding ; vérifiez les URL citées' },
-          { 'Système IA': 'Grok ([X.com](https://X.com))', 'Comportement post-coupure': 'Recherche les posts X automatiquement', 'Fiabilité pour l\'info actuelle': 'Bonne pour les tendances sociales ; inégale pour les faits', 'Comment améliorer': 'Utilisez DeepSearch pour une couverture web plus large' },
+          { 'Système IA': 'Grok ([X.com](https://X.com))', 'Comportement post-coupure': 'Recherche les posts X automatiquement', 'Fiabilité pour l\'info actuelle': 'Surtout utile pour les tendances sociales ; vérifiez les faits indépendamment', 'Comment améliorer': 'Utilisez DeepSearch pour une couverture web plus large' },
           { 'Système IA': 'Claude (gratuit/pro)', 'Comportement post-coupure': 'Utilise uniquement les données d\'entraînement par défaut', 'Fiabilité pour l\'info actuelle': 'Modérée — coupure fiable de juin 2026', 'Comment améliorer': 'Collez le texte actuel dans le contexte ; les utilisateurs API peuvent activer l\'outil de recherche' },
           { 'Système IA': 'Perplexity', 'Comportement post-coupure': 'Recherche toujours le web en premier', 'Fiabilité pour l\'info actuelle': 'Élevée — produit natif de la recherche', 'Comment améliorer': 'Cite déjà les sources par conception' },
           { 'Système IA': 'Tout LLM local', 'Comportement post-coupure': 'Utilise uniquement les données d\'entraînement — pas de remplacement', 'Fiabilité pour l\'info actuelle': 'Très faible pour les sujets post-coupure', 'Comment améliorer': 'Construisez un pipeline RAG ; collez le contexte manuellement' },
@@ -2302,7 +2302,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-strategy',
         title: 'Implications pour les entreprises : stratégie GEO par système IA',
         content: [
-          '<strong>Le GEO (Generative Engine Optimization ou Optimisation pour les Moteurs Génératifs) est la pratique qui consiste à faire apparaître votre marque, produit ou contenu dans les réponses générées par l\'IA.</strong> Pour la plupart des systèmes IA, le GEO fonctionne de façon similaire au SEO — l\'IA récupère le contenu des moteurs de recherche, donc bien se classer dans Bing ou Google alimente directement les réponses IA.',
+          '<strong>Le GEO (Generative Engine Optimization ou Optimisation pour les Moteurs Génératifs) est la pratique qui consiste à faire apparaître votre marque, produit ou contenu dans les réponses générées par l\'IA.</strong> Pour la plupart des systèmes IA, le GEO fonctionne de façon similaire au SEO — l\'IA récupère le contenu des moteurs de recherche, donc bien se classer dans Bing ou Google peut alimenter les réponses IA.',
           'Mais les LLM locaux brisent complètement ce modèle. Un Llama ou Qwen déployé localement ne recherche jamais sur le web. Vous ne pouvez pas optimiser votre présence dans ses réponses via la recherche — le modèle ne vous mentionnera que si vous étiez dans ses données d\'entraînement avant la coupure, ou si l\'organisation qui le déploie injecte votre contenu via RAG.',
           'Ce tableau cartographie le canal GEO pour chaque système IA :',
         ],
@@ -2320,7 +2320,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'warning',
             label: 'L\'angle mort GEO des LLM locaux',
-            text: 'La plupart des guides GEO se concentrent entièrement sur l\'IA cloud — ils vous disent d\'optimiser pour Bing ou Google Search. Ces conseils sont inutiles pour atteindre les déploiements internes de Llama, Qwen, Gemma ou Phi. Ces modèles ne font jamais de recherche. Le seul canal GEO qui fonctionne est de convaincre l\'organisation qui déploie le modèle d\'inclure votre contenu dans son pipeline RAG.',
+            text: 'De nombreux guides GEO se concentrent sur l\'IA cloud — ils vous disent d\'optimiser pour Bing ou Google Search. Ces conseils n\'atteignent pas les déploiements internes de Llama, Qwen, Gemma ou Phi. Ces modèles ne font jamais de recherche. Le canal GEO qui atteint ces déploiements consiste à convaincre l\'organisation qui déploie le modèle d\'inclure votre contenu dans son pipeline RAG.',
           },
         ],
         image: '/images/knowledge-cutoffs-and-geo-geo-strategy-hero-fr.webp',
@@ -2330,8 +2330,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-solution',
         title: 'La solution GEO : construire un fossé défensif pour les deux types d\'IA',
         content: [
-          '<strong>Une stratégie GEO complète en 2026 nécessite deux pistes parallèles : l\'optimisation de recherche pour l\'IA cloud, et la préparation RAG pour l\'IA locale.</strong> La plupart des organisations n\'exécutent que la première piste.',
-          '<strong>Piste 1 — IA cloud (GEO basé sur la recherche) :</strong> Les techniques SEO traditionnelles s\'appliquent mais avec des ajouts spécifiques à l\'IA. Votre contenu doit être structuré pour l\'éligibilité aux extraits (schémas JSON-LD FAQ et HowTo), factuellement précis (les modèles IA évitent de citer des pages ayant un historique de corrections), et faisant autorité (les signaux de qualité Bing et Google se traduisent directement en probabilité de citation IA). Pour Grok spécifiquement, la présence sur X (compte vérifié, taux d\'engagement, nombre d\'abonnés) détermine si votre marque apparaît dans les réponses Grok.',
+          '<strong>Une stratégie GEO complète en 2026 nécessite deux pistes parallèles : l\'optimisation de recherche pour l\'IA cloud, et la préparation RAG pour l\'IA locale.</strong> De nombreuses organisations n\'exécutent que la première piste.',
+          '<strong>Piste 1 — IA cloud (GEO basé sur la recherche) :</strong> Les techniques SEO traditionnelles s\'appliquent mais avec des ajouts spécifiques à l\'IA. Votre contenu doit être structuré pour l\'éligibilité aux extraits (schémas JSON-LD FAQ et HowTo), factuellement précis (les pages ayant un historique de corrections peuvent être citées moins souvent), et faisant autorité (les signaux de qualité Bing et Google peuvent influencer la probabilité de citation IA). Pour Grok spécifiquement, la présence sur X (compte vérifié, taux d\'engagement, nombre d\'abonnés) peut influencer l\'apparition de votre marque dans les réponses Grok.',
           '<strong>Piste 2 — IA locale (GEO basé sur RAG) :</strong> Vous ne pouvez pas optimiser votre présence dans un LLM local via la recherche. Le chemin est entièrement différent : (1) créer des bases de connaissance lisibles par machine dans des formats que les pipelines RAG consomment (Markdown, JSON-LD, spécifications OpenAPI, FAQ structurées) ; (2) participer aux initiatives de données ouvertes pour que vos informations soient disponibles aux organisations qui construisent des systèmes RAG ; (3) construire des relations directes avec les clients entreprise déployant des LLM locaux et proposer des accords de partenariat de données ; (4) fournir des SDK ou APIs qui rendent triviale l\'inclusion de votre contenu dans un pipeline RAG.',
           'Pour la plupart des entreprises, la Piste 1 est déjà en cours dans le cadre du SEO. La Piste 2 nécessite un nouveau travail — spécifiquement, produire du contenu dans des formats optimisés pour l\'ingestion machine, pas pour la lecture humaine.',
         ],
@@ -2360,7 +2360,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Les LLM locaux comme Llama et Qwen reçoivent-ils des mises à jour de connaissance ?', a: 'Non — pas automatiquement. La connaissance d\'un LLM local est définitivement figée à sa coupure d\'entraînement. Chaque nouvelle version (Llama 4 Scout, Qwen3 14B) a une coupure différente, mais la copie sur votre machine a une connaissance fixe. Pour obtenir des informations actuelles, construisez un pipeline RAG.' },
             { q: 'Qu\'est-ce que le GEO et quel est son rapport avec les dates de coupure ?', a: 'Le GEO (Generative Engine Optimization) est la discipline qui consiste à faire apparaître votre contenu dans les réponses générées par l\'IA. Pour l\'IA cloud, le GEO fonctionne via l\'optimisation de recherche — classez-vous dans Bing/Google et vous serez cité. Pour les LLM locaux, c\'est structurellement impossible car le modèle ne fait jamais de recherche. Le GEO pour les LLM locaux nécessite des pipelines RAG chez l\'organisation qui déploie le modèle.' },
             { q: 'Quel modèle IA a la date de coupure de connaissance la plus récente (vérifiée) ?', a: 'Parmi les coupures vérifiées par source primaire : Claude Opus 5.5 a la coupure fiable la plus récente à juin 2026, suivi de Grok 4.7 à mai 2026 et de GPT-6 Astra / GPT-6.1 Sol à avril 2026 (GPT-6 Luna : mai 2026). Phi-4 est juin 2024. GPT-4o (héritage) est octobre 2023. Plusieurs modèles actuels (Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3) n\'ont pas divulgué de dates exactes publiquement. Leurs prédécesseurs, désormais remplacés, en avaient publié : Gemini 3.1 Pro (janvier 2025), DeepSeek-V3 (juillet 2024) et Gemma 3 27B (août 2024).' },
-            { q: 'Puis-je utiliser le SEO pour apparaître dans les réponses de Llama ou Qwen ?', a: 'Non. Le SEO ne peut pas influencer un LLM déployé localement car le modèle ne fait jamais de recherche web. Les seuls chemins sont : (1) être dans les données d\'entraînement avant la coupure, ou (2) être inclus dans un pipeline RAG par l\'organisation qui déploie le modèle.' },
+            { q: 'Puis-je utiliser le SEO pour apparaître dans les réponses de Llama ou Qwen ?', a: 'Non. Le SEO ne peut pas influencer un LLM déployé localement car le modèle ne fait jamais de recherche web. Les principaux chemins sont : (1) être dans les données d\'entraînement avant la coupure, ou (2) être inclus dans un pipeline RAG par l\'organisation qui déploie le modèle.' },
             { q: 'Comment vérifier une réponse IA sur quelque chose qui pourrait être affecté par la coupure ?', a: 'Trois signaux indiquent un risque de coupure : (1) le sujet implique des versions spécifiques, des prix, des personnes ou des événements ; (2) vous avez interrogé sur quelque chose dans un secteur en évolution rapide ; (3) la réponse IA manque de citations. Quand l\'un de ces éléments s\'applique, vérifiez auprès d\'une source primaire — le ton confiant du modèle n\'est pas un indicateur de fiabilité.' },
             { q: 'Peut-on voir dans la réponse d\'une IA si elle a utilisé la recherche en direct ?', a: 'Souvent oui : Perplexity montre toujours des citations de sources. Gemini affiche une icône Google Search quand le grounding est utilisé. Grok indique les résultats de recherche X. ChatGPT affiche une icône globe et peut être invité à montrer ses sources. Claude ne recherche pas par défaut, donc aucun indicateur n\'est nécessaire. Les LLM locaux ne font jamais de recherche, donc aucun indicateur n\'existe — la réponse provient toujours des données d\'entraînement.' },
             { q: 'Pourquoi ChatGPT semble-t-il connaître des événements récents alors que son modèle de base a une date de coupure d\'entraînement ?', a: 'ChatGPT (le produit) recherche sur Bing par défaut dans les niveaux payants et enrichit ses réponses avec des résultats de recherche actuels. Cela signifie qu\'il peut répondre à des questions factuelles sur des événements récents même si les données d\'entraînement du modèle sous-jacent ont une coupure fixe (la coupure d\'entraînement de GPT-6 Astra et GPT-6.1 Sol est avril 2026 ; le GPT-4o héritage se termine en octobre 2023). La coupure d\'entraînement limite toujours la compréhension contextuelle des sujets postérieurs à la coupure.' },
@@ -2407,7 +2407,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '**Lokale/Open-Weight-Modelle** abgedeckt — alle haben „Keine" für die Suchschicht',
       '**Phi-4** hat einen Cutoff im Juni 2024, **DeepSeek-V3** im Juli 2024 und **Gemma 3 27B** im August 2024 — die beiden letzteren sind Vorgängergenerationen, inzwischen abgelöst durch DeepSeek-V4 und Gemma 4',
       '**Claude Opus 5.5** hat den aktuellsten verifizierten zuverlässigen Cutoff in der Tabelle: Juni 2026',
-      '**Grok 4.7** ist das einzige Cloud-Modell, dessen Standard-Suchschicht eine soziale Plattform (X/Twitter) statt des allgemeinen Webs ist',
+      '**Grok 4.7** ist unter den hier behandelten Cloud-Modellen das einzige, dessen Standard-Suchschicht eine soziale Plattform (X/Twitter) statt des allgemeinen Webs ist',
       '**GEO-Implikation**: Unternehmen, die Llama/Qwen intern einsetzen, sind nur über die RAG-Pipelines erreichbar, die diese Unternehmen selbst aufbauen',
     ],
     toc: [
@@ -2503,7 +2503,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': 'Kann ich SEO nutzen, um in Llama- oder Qwen-Antworten zu erscheinen?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Nein. SEO kann einen lokal eingesetzten LLM nicht beeinflussen, weil das Modell nie das Web durchsucht. Die einzigen Wege sind: (1) vor dem Cutoff in den Trainingsdaten vorhanden gewesen sein, oder (2) über eine RAG-Pipeline der einsetzenden Organisation eingebunden werden.',
+              'text': 'Nein. SEO kann einen lokal eingesetzten LLM nicht beeinflussen, weil das Modell nie das Web durchsucht. Die wichtigsten Wege sind: (1) vor dem Cutoff in den Trainingsdaten vorhanden gewesen sein, oder (2) über eine RAG-Pipeline der einsetzenden Organisation eingebunden werden.',
             },
           },
           {
@@ -2686,7 +2686,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'KI-System': 'ChatGPT (bezahlt)', 'Verhalten nach Cutoff': 'Durchsucht automatisch Bing', 'Zuverlässigkeit für aktuelle Infos': 'Hoch für Fakten; geringer für Nuancen', 'Wie verbessern': 'Auffordern, Quellen zu nennen; wichtige Behauptungen gegenchecken' },
           { 'KI-System': 'Gemini (bezahlt)', 'Verhalten nach Cutoff': 'Durchsucht automatisch Google', 'Zuverlässigkeit für aktuelle Infos': 'Hoch für Fakten; geringer für Nuancen', 'Wie verbessern': 'Grounding aktivieren; zitierte URLs prüfen' },
-          { 'KI-System': 'Grok ([X.com](https://X.com))', 'Verhalten nach Cutoff': 'Durchsucht automatisch X-Posts', 'Zuverlässigkeit für aktuelle Infos': 'Gut für soziale Trends; ungleichmäßig für Fakten', 'Wie verbessern': 'DeepSearch für tiefere Web-Abdeckung nutzen' },
+          { 'KI-System': 'Grok ([X.com](https://X.com))', 'Verhalten nach Cutoff': 'Durchsucht automatisch X-Posts', 'Zuverlässigkeit für aktuelle Infos': 'Am stärksten bei sozialen Trends; Fakten unabhängig prüfen', 'Wie verbessern': 'DeepSearch für tiefere Web-Abdeckung nutzen' },
           { 'KI-System': 'Claude (kostenlos/pro)', 'Verhalten nach Cutoff': 'Nutzt standardmäßig nur Trainingsdaten', 'Zuverlässigkeit für aktuelle Infos': 'Mittel — zuverlässiger Cutoff Juni 2026', 'Wie verbessern': 'Aktuellen Text in den Kontext einfügen; API-Nutzer können Such-Tool aktivieren' },
           { 'KI-System': 'Perplexity', 'Verhalten nach Cutoff': 'Durchsucht immer zuerst das Web', 'Zuverlässigkeit für aktuelle Infos': 'Hoch — suchbasiertes Produkt', 'Wie verbessern': 'Zitiert bereits standardmäßig Quellen' },
           { 'KI-System': 'Jeder lokale LLM', 'Verhalten nach Cutoff': 'Nutzt nur Trainingsdaten — keine Überschreibung', 'Zuverlässigkeit für aktuelle Infos': 'Sehr gering für Themen nach dem Cutoff', 'Wie verbessern': 'RAG-Pipeline aufbauen; Kontext manuell einfügen' },
@@ -2703,7 +2703,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-strategy',
         title: 'Implikationen für Unternehmen: GEO-Strategie nach KI-System',
         content: [
-          '<strong>GEO (Generative Engine Optimization) ist die Praxis, dafür zu sorgen, dass die eigene Marke, das eigene Produkt oder die eigenen Inhalte in KI-generierten Antworten erscheinen.</strong> Bei den meisten KI-Systemen funktioniert GEO ähnlich wie SEO — die KI ruft Inhalte aus Suchmaschinen ab, sodass ein gutes Ranking in Bing oder Google direkt in KI-Antworten einfließt.',
+          '<strong>GEO (Generative Engine Optimization) ist die Praxis, dafür zu sorgen, dass die eigene Marke, das eigene Produkt oder die eigenen Inhalte in KI-generierten Antworten erscheinen.</strong> Bei den meisten KI-Systemen funktioniert GEO ähnlich wie SEO — die KI ruft Inhalte aus Suchmaschinen ab, sodass ein gutes Ranking in Bing oder Google in KI-Antworten einfließen kann.',
           'Lokale LLMs brechen dieses Modell jedoch vollständig auf. Ein lokal eingesetztes Llama oder Qwen durchsucht nie das Web. Es ist nicht möglich, sich über Suche in seine Antworten zu optimieren — das Modell erwähnt einen nur, wenn man vor dem Cutoff in seinen Trainingsdaten war oder wenn die einsetzende Organisation Inhalte über RAG einspeist.',
           'Diese Tabelle ordnet den GEO-Kanal für jedes KI-System zu:',
         ],
@@ -2721,7 +2721,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'warning',
             label: 'Der blinde Fleck bei lokalem LLM-GEO',
-            text: 'Die meisten GEO-Leitfäden konzentrieren sich ausschließlich auf Cloud-KI — sie empfehlen, für Bing oder Google Search zu optimieren. Dieser Ratschlag ist nutzlos, um interne Deployments von Llama, Qwen, Gemma oder Phi zu erreichen. Diese Modelle suchen nie. Der einzige funktionierende GEO-Kanal besteht darin, die Organisation, die das Modell betreibt, davon zu überzeugen, die eigenen Inhalte in ihre RAG-Pipeline aufzunehmen.',
+            text: 'Viele GEO-Leitfäden konzentrieren sich auf Cloud-KI — sie empfehlen, für Bing oder Google Search zu optimieren. Dieser Ratschlag erreicht interne Deployments von Llama, Qwen, Gemma oder Phi nicht. Diese Modelle suchen nie. Der GEO-Kanal, der solche Deployments erreicht, besteht darin, die Organisation, die das Modell betreibt, davon zu überzeugen, die eigenen Inhalte in ihre RAG-Pipeline aufzunehmen.',
           },
         ],
         image: '/images/knowledge-cutoffs-and-geo-geo-strategy-hero-de.webp',
@@ -2731,8 +2731,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-solution',
         title: 'Die GEO-Lösung: Einen Burggraben für beide KI-Typen aufbauen',
         content: [
-          '<strong>Eine vollständige GEO-Strategie erfordert 2026 zwei parallele Spuren: Suchoptimierung für Cloud-KI und RAG-Bereitschaft für lokale KI.</strong> Die meisten Organisationen verfolgen nur die erste Spur.',
-          '<strong>Spur 1 — Cloud-KI (suchbasiertes GEO):</strong> Traditionelle SEO-Techniken gelten, aber mit KI-spezifischen Ergänzungen. Inhalte müssen für Snippet-Eignung strukturiert sein (FAQ- und HowTo-JSON-LD-Schema), sachlich korrekt (KI-Modelle vermeiden das Zitieren von Seiten mit Korrekturhistorien) und autoritativ (Bing- und Google-Qualitätssignale übersetzen sich direkt in KI-Zitationswahrscheinlichkeit). Für Grok speziell bestimmt die X-Präsenz (verifiziertes Konto, Engagement-Rate, Follower-Anzahl), ob die Marke in Grok-Antworten erscheint.',
+          '<strong>Eine vollständige GEO-Strategie erfordert 2026 zwei parallele Spuren: Suchoptimierung für Cloud-KI und RAG-Bereitschaft für lokale KI.</strong> Viele Organisationen verfolgen nur die erste Spur.',
+          '<strong>Spur 1 — Cloud-KI (suchbasiertes GEO):</strong> Traditionelle SEO-Techniken gelten, aber mit KI-spezifischen Ergänzungen. Inhalte müssen für Snippet-Eignung strukturiert sein (FAQ- und HowTo-JSON-LD-Schema), sachlich korrekt (Seiten mit Korrekturhistorie werden möglicherweise seltener zitiert) und autoritativ (Bing- und Google-Qualitätssignale können die KI-Zitationswahrscheinlichkeit beeinflussen). Für Grok speziell kann die X-Präsenz (verifiziertes Konto, Engagement-Rate, Follower-Anzahl) beeinflussen, ob die Marke in Grok-Antworten erscheint.',
           '<strong>Spur 2 — Lokale KI (RAG-basiertes GEO):</strong> Es ist nicht möglich, sich über Suche in einen lokalen LLM zu optimieren. Der Weg ist völlig anders: (1) maschinenlesbare Wissensdatenbanken in Formaten erstellen, die RAG-Pipelines verarbeiten (Markdown, JSON-LD, OpenAPI-Specs, strukturierte FAQs); (2) an Open-Data-Initiativen teilnehmen, damit Informationen für Organisationen verfügbar sind, die RAG-Systeme aufbauen; (3) direkte Beziehungen zu Unternehmenskunden aufbauen, die lokale LLMs einsetzen, und Datenpartnerschaftsvereinbarungen vorschlagen; (4) SDKs oder APIs bereitstellen, die es trivial machen, eigene Inhalte in eine RAG-Pipeline aufzunehmen.',
           'Für die meisten Unternehmen ist Spur 1 bereits im Rahmen von SEO in Gang. Spur 2 erfordert neue Arbeit — insbesondere die Produktion von Inhalten in Formaten, die für maschinelle Aufnahme optimiert sind, nicht für menschliches Lesen.',
         ],
@@ -2761,7 +2761,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Erhalten lokale LLMs wie Llama und Qwen jemals Wissensaktualisierungen?', a: 'Nein — nicht automatisch. Das Wissen eines lokalen LLMs ist permanent auf seinen Trainings-Cutoff eingefroren. Jede neue Modellversion (Llama 4 Scout, Qwen3 14B) hat einen anderen Cutoff, aber die auf dem eigenen Rechner laufende Kopie hat festes Wissen. Für aktuelle Informationen eine RAG-Pipeline aufbauen.' },
             { q: 'Was ist GEO und wie hängt es mit Wissensgrenzen zusammen?', a: 'GEO (Generative Engine Optimization) ist die Disziplin, eigene Inhalte in KI-generierten Antworten erscheinen zu lassen. Bei Cloud-KI funktioniert GEO über Suchoptimierung — in Bing/Google ranken und zitiert werden. Bei lokalen LLMs ist dies strukturell unmöglich, weil das Modell nie sucht. Lokales LLM-GEO erfordert RAG-Pipelines bei der einsetzenden Organisation.' },
             { q: 'Welches KI-Modell hat das aktuellste verifizierte Wissens-Cutoff-Datum?', a: 'Unter primärquellen-verifizierten Cutoffs: Claude Opus 5.5 hat mit Juni 2026 den aktuellsten zuverlässigen Cutoff, gefolgt von Grok 4.7 (Mai 2026) und GPT-6 Astra / GPT-6.1 Sol (April 2026; GPT-6 Luna: Mai 2026). Phi-4 ist Juni 2024. GPT-4o (Legacy) ist Oktober 2023. Mehrere aktuelle Modelle (Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3) haben keine genauen Daten öffentlich bekannt gegeben. Ihre inzwischen abgelösten Vorgänger hatten Daten veröffentlicht: Gemini 3.1 Pro (Januar 2025), DeepSeek-V3 (Juli 2024) und Gemma 3 27B (August 2024).' },
-            { q: 'Kann ich SEO nutzen, um in Llama- oder Qwen-Antworten zu erscheinen?', a: 'Nein. SEO kann einen lokal eingesetzten LLM nicht beeinflussen, weil das Modell nie das Web durchsucht. Die einzigen Wege sind: (1) vor dem Cutoff in den Trainingsdaten vorhanden gewesen sein, oder (2) über eine RAG-Pipeline der einsetzenden Organisation eingebunden werden.' },
+            { q: 'Kann ich SEO nutzen, um in Llama- oder Qwen-Antworten zu erscheinen?', a: 'Nein. SEO kann einen lokal eingesetzten LLM nicht beeinflussen, weil das Modell nie das Web durchsucht. Die wichtigsten Wege sind: (1) vor dem Cutoff in den Trainingsdaten vorhanden gewesen sein, oder (2) über eine RAG-Pipeline der einsetzenden Organisation eingebunden werden.' },
             { q: 'Wie sollte eine KI-Antwort zu Faktencheck unterzogen werden, die vom Cutoff betroffen sein könnte?', a: 'Drei Signale deuten auf ein Cutoff-Risiko hin: (1) Das Thema betrifft spezifische Versionen, Preise, Personen oder Ereignisse; (2) es wurde nach etwas in einer schnelllebigen Branche gefragt; (3) die KI-Antwort enthält keine Zitate. Wenn eines dieser Zeichen zutrifft, anhand einer Primärquelle verifizieren — der selbstbewusste Ton des Modells ist kein Zuverlässigkeitsindikator.' },
             { q: 'Gibt es eine Möglichkeit, anhand einer KI-Antwort zu erkennen, ob Live-Suche verwendet wurde?', a: 'Oft ja: Perplexity zeigt immer Quellenangaben. Gemini zeigt ein Google-Such-Symbol, wenn Grounding genutzt wird. Grok weist auf X-Suchergebnisse hin. ChatGPT zeigt ein Globus-Symbol und kann aufgefordert werden, Quellen zu zeigen. Claude sucht standardmäßig nicht, daher ist kein Indikator nötig. Lokale LLMs suchen nie, daher gibt es keinen Indikator — die Antwort stammt immer aus den Trainingsdaten.' },
             { q: 'Warum scheint ChatGPT aktuelle Ereignisse zu kennen, obwohl sein Basismodell einen Trainings-Cutoff hat?', a: 'ChatGPT (das Produkt) durchsucht standardmäßig Bing in bezahlten Tarifen und ergänzt seine Antworten mit aktuellen Suchergebnissen. Dadurch kann es sachliche Fragen zu aktuellen Ereignissen beantworten, obwohl die Trainingsdaten des zugrundeliegenden Modells einen festen Cutoff haben (GPT-6 Astra und GPT-6.1 Sol haben einen Trainings-Cutoff im Apr 2026; Legacy GPT-4o endet Okt 2023). Der Trainings-Cutoff schränkt nach wie vor das kontextuelle Verständnis von Themen nach dem Cutoff ein.' },
@@ -2808,7 +2808,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '**本地/开源权重模型**收录 — 全部搜索层为"无"',
       '**Phi-4** 截止日期为2024年6月，**DeepSeek-V3** 为2024年7月，**Gemma 3 27B** 为2024年8月 — 后两者为上一代模型，现已被 DeepSeek-V4 和 Gemma 4 取代',
       '**Claude Opus 5.5** 在表中拥有最新的已验证可靠截止日期：2026年6月',
-      '**Grok 4.7** 是唯一一个默认搜索层为社交平台（X/Twitter）而非通用网络的云端模型',
+      '**Grok 4.7** 是本文涵盖的云端模型中唯一一个默认搜索层为社交平台（X/Twitter）而非通用网络的模型',
       '**GEO启示**：在内部部署Llama/Qwen的企业，只能通过该企业自己构建的RAG管道才能被触达',
     ],
     toc: [
@@ -2904,7 +2904,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': '我能用SEO让自己出现在Llama或Qwen的回答中吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '不能。SEO无法影响本地部署的LLM，因为该模型从不搜索网络。唯一的途径是：（1）在截止日期前已出现在训练数据中，或（2）被部署该模型的组织的RAG管道所纳入。',
+              'text': '不能。SEO无法影响本地部署的LLM，因为该模型从不搜索网络。主要的途径是：（1）在截止日期前已出现在训练数据中，或（2）被部署该模型的组织的RAG管道所纳入。',
             },
           },
           {
@@ -3087,7 +3087,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'AI系统': 'ChatGPT（付费）', '截止后行为': '自动搜索Bing', '当前信息可靠性': '事实层面较高；细微之处较低', '改善方法': '要求引用来源；交叉核实关键主张' },
           { 'AI系统': 'Gemini（付费）', '截止后行为': '自动搜索Google', '当前信息可靠性': '事实层面较高；细微之处较低', '改善方法': '开启接地功能；审阅引用的URL' },
-          { 'AI系统': 'Grok ([X.com](https://X.com))', '截止后行为': '自动搜索X帖子', '当前信息可靠性': '社交趋势方面较好；事实层面参差不齐', '改善方法': '使用DeepSearch获取更广泛的网络覆盖' },
+          { 'AI系统': 'Grok ([X.com](https://X.com))', '截止后行为': '自动搜索X帖子', '当前信息可靠性': '更适合了解社交趋势；事实需另行核实', '改善方法': '使用DeepSearch获取更广泛的网络覆盖' },
           { 'AI系统': 'Claude（免费/专业版）', '截止后行为': '默认仅使用训练数据', '当前信息可靠性': '中等 — 可靠截止日期为2026年6月', '改善方法': '将当前文本粘贴到上下文中；API用户可开启搜索工具' },
           { 'AI系统': 'Perplexity', '截止后行为': '始终优先搜索网络', '当前信息可靠性': '较高 — 原生搜索产品', '改善方法': '设计上已自动引用来源' },
           { 'AI系统': '任何本地LLM', '截止后行为': '仅使用训练数据 — 无法覆盖', '当前信息可靠性': '截止后话题极低', '改善方法': '构建RAG管道；手动粘贴上下文' },
@@ -3104,7 +3104,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-strategy',
         title: '对企业的影响：按AI系统划分的GEO策略',
         content: [
-          '<strong>GEO（生成式引擎优化）是使您的品牌、产品或内容出现在AI生成回答中的实践。</strong>对于大多数AI系统，GEO的运作方式类似于SEO——AI从搜索引擎检索内容，因此在Bing或Google上排名靠前就能直接影响AI回答。',
+          '<strong>GEO（生成式引擎优化）是使您的品牌、产品或内容出现在AI生成回答中的实践。</strong>对于大多数AI系统，GEO的运作方式类似于SEO——AI从搜索引擎检索内容，因此在Bing或Google上排名靠前可能影响AI回答。',
           '但本地LLM彻底打破了这一模式。本地部署的Llama或Qwen从不搜索网络。您无法通过搜索优化进入其回答——只有当您在截止日期之前就在训练数据中，或者部署组织通过RAG注入您的内容时，模型才会提及您。',
           '下表梳理了每个AI系统的GEO渠道：',
         ],
@@ -3122,7 +3122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'warning',
             label: '本地LLM GEO盲点',
-            text: '大多数GEO指南完全聚焦于云端AI——告诉您优化Bing或Google搜索。这些建议对于触达Llama、Qwen、Gemma或Phi的内部部署毫无用处。这些模型从不搜索。唯一有效的GEO渠道，是说服部署该模型的组织将您的内容纳入其RAG管道。',
+            text: '许多GEO指南主要聚焦于云端AI——告诉您优化Bing或Google搜索。这些建议无法触达Llama、Qwen、Gemma或Phi的内部部署。这些模型从不搜索。能触达这类部署的GEO渠道，是说服部署该模型的组织将您的内容纳入其RAG管道。',
           },
         ],
         image: '/images/knowledge-cutoffs-and-geo-geo-strategy-hero-zh.webp',
@@ -3132,8 +3132,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-solution',
         title: 'GEO解决方案：为两类AI构建护城河',
         content: [
-          '<strong>2026年的完整GEO策略需要两条并行轨道：面向云端AI的搜索优化，以及面向本地AI的RAG就绪准备。</strong>大多数组织只在执行第一条轨道。',
-          '<strong>轨道1 — 云端AI（基于搜索的GEO）：</strong>传统SEO技术适用，但需加入AI特定的补充措施。您的内容必须针对摘要资格进行结构化（FAQ和HowTo JSON-LD schema），事实准确（AI模型会避免引用有更正历史的页面），并具有权威性（Bing和Google质量信号直接转化为AI引用可能性）。针对Grok，X平台存在（认证账户、互动率、粉丝数量）决定您的品牌是否出现在Grok回答中。',
+          '<strong>2026年的完整GEO策略需要两条并行轨道：面向云端AI的搜索优化，以及面向本地AI的RAG就绪准备。</strong>许多组织只在执行第一条轨道。',
+          '<strong>轨道1 — 云端AI（基于搜索的GEO）：</strong>传统SEO技术适用，但需加入AI特定的补充措施。您的内容必须针对摘要资格进行结构化（FAQ和HowTo JSON-LD schema），事实准确（有更正历史的页面可能被引用得更少），并具有权威性（Bing和Google质量信号可能影响AI引用可能性）。针对Grok，X平台存在（认证账户、互动率、粉丝数量）可能影响您的品牌是否出现在Grok回答中。',
           '<strong>轨道2 — 本地AI（基于RAG的GEO）：</strong>您无法通过搜索优化进入本地LLM。路径完全不同：（1）创建RAG管道可消费格式的机器可读知识库（Markdown、JSON-LD、OpenAPI规范、结构化FAQ）；（2）参与开放数据计划，使构建RAG系统的组织可以使用您的信息；（3）与部署本地LLM的企业客户建立直接关系，提出数据合作协议；（4）提供SDK或API，让将您的内容纳入RAG管道变得轻而易举。',
           '对大多数公司而言，轨道1已作为SEO工作的一部分在进行中。轨道2需要新的工作——具体来说，是以针对机器摄取而非人类阅读优化的格式生产内容。',
         ],
@@ -3162,7 +3162,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '像Llama和Qwen这样的本地LLM会收到知识更新吗？', a: '不会——不会自动更新。本地LLM的知识在训练截止日期时就永久冻结。每个新模型版本（Llama 4 Scout、Qwen3 14B）有不同的截止日期，但运行在您机器上的副本具有固定知识。要获取当前信息，请构建RAG管道。' },
             { q: '什么是GEO，它与知识截止日期有何关联？', a: 'GEO（生成式引擎优化）是使内容出现在AI生成回答中的学科。对于云端AI，GEO通过搜索优化实现——在Bing/Google排名靠前就能被引用。对于本地LLM，这在结构上是不可能的，因为模型从不搜索。本地LLM GEO需要部署组织的RAG管道。' },
             { q: '哪个AI模型拥有最新的已验证知识截止日期？', a: '在一手资料已验证截止日期中：Claude Opus 5.5拥有最新的可靠截止日期——2026年6月，Grok 4.7（2026年5月）以及GPT-6 Astra / GPT-6.1 Sol（2026年4月；GPT-6 Luna为2026年5月）紧随其后。Phi-4为2024年6月。GPT-4o（旧版）为2023年10月。包括Gemini 4 Argon、Gemma 4、DeepSeek-V4、Mistral Large 4、Llama 4和Qwen3在内的多个当前模型尚未公开披露确切日期。已被它们取代的上一代模型曾公布过日期：Gemini 3.1 Pro（2025年1月）、DeepSeek-V3（2024年7月）、Gemma 3 27B（2024年8月）。' },
-            { q: '我能用SEO让自己出现在Llama或Qwen的回答中吗？', a: '不能。SEO无法影响本地部署的LLM，因为该模型从不搜索网络。唯一的途径是：（1）在截止日期前已出现在训练数据中，或（2）被部署该模型的组织的RAG管道所纳入。' },
+            { q: '我能用SEO让自己出现在Llama或Qwen的回答中吗？', a: '不能。SEO无法影响本地部署的LLM，因为该模型从不搜索网络。主要的途径是：（1）在截止日期前已出现在训练数据中，或（2）被部署该模型的组织的RAG管道所纳入。' },
             { q: '如何对可能受截止日期影响的AI回答进行事实核查？', a: '三个信号提示截止风险：（1）话题涉及特定版本、价格、人物或事件；（2）您询问的是快速变化行业的内容；（3）AI回答缺乏引用。任何一个适用时，请通过一手资料核实——模型自信的语气不是可靠性指标。' },
             { q: '有没有办法从AI的回答判断它是否使用了实时搜索？', a: '通常有：Perplexity始终显示来源引用。Gemini在使用接地功能时会显示Google搜索图标。Grok会标注X搜索结果。ChatGPT会显示地球图标，并可提示其展示来源。Claude默认不搜索，因此无需指示。本地LLM从不搜索，所以不存在任何指示——答案始终来自训练数据。' },
             { q: '为什么ChatGPT似乎知道最近发生的事情，即使其基础模型有训练截止日期？', a: 'ChatGPT（产品）在付费层默认搜索Bing，并以当前搜索结果补充其回答。这意味着即便底层模型的训练数据有固定截止（GPT-6 Astra和GPT-6.1 Sol的训练截止为2026年4月；旧版GPT-4o截止为2023年10月），它也能回答近期事件的事实性问题。训练截止仍会限制模型对截止后话题的语境理解。' },
@@ -3209,7 +3209,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '**Modelos locales/open-weight** cubiertos — todos tienen "Ninguna" para la capa de búsqueda',
       '**Phi-4** tiene un corte de junio de 2024, **DeepSeek-V3** de julio de 2024 y **Gemma 3 27B** de agosto de 2024 — los dos últimos son de la generación anterior, ya sustituidos por DeepSeek-V4 y Gemma 4',
       '**Claude Opus 5.5** tiene el corte fiable verificado más reciente de la tabla: junio de 2026',
-      '**Grok 4.7** es el único modelo en la nube cuya capa de búsqueda predeterminada es una plataforma social (X/Twitter) en lugar de la web general',
+      '**Grok 4.7** es, entre los modelos en la nube tratados aquí, el único cuya capa de búsqueda predeterminada es una plataforma social (X/Twitter) en lugar de la web general',
       '**Implicación GEO**: las empresas que despliegan Llama/Qwen internamente solo pueden ser alcanzadas a través de los pipelines RAG que esas empresas construyan por sí mismas',
     ],
     toc: [
@@ -3305,7 +3305,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'name': '¿Puedo usar el SEO para aparecer en las respuestas de Llama o Qwen?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No. El SEO no puede influir en un LLM desplegado localmente porque el modelo nunca realiza búsquedas web. Los únicos caminos son: (1) estar en los datos de entrenamiento antes del corte, o (2) ser incluido en un pipeline RAG por la organización que despliega el modelo.',
+              'text': 'No. El SEO no puede influir en un LLM desplegado localmente porque el modelo nunca realiza búsquedas web. Los caminos principales son: (1) estar en los datos de entrenamiento antes del corte, o (2) ser incluido en un pipeline RAG por la organización que despliega el modelo.',
             },
           },
           {
@@ -3488,7 +3488,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           { 'Sistema IA': 'ChatGPT (pago)', 'Comportamiento post-corte': 'Busca en Bing automáticamente', 'Fiabilidad para info actual': 'Alta para hechos; menor para matices', 'Cómo mejorar': 'Pide que cite fuentes; verifica afirmaciones clave' },
           { 'Sistema IA': 'Gemini (pago)', 'Comportamiento post-corte': 'Busca en Google automáticamente', 'Fiabilidad para info actual': 'Alta para hechos; menor para matices', 'Cómo mejorar': 'Activa grounding; revisa URLs citadas' },
-          { 'Sistema IA': 'Grok ([X.com](https://X.com))', 'Comportamiento post-corte': 'Busca posts de X automáticamente', 'Fiabilidad para info actual': 'Buena para tendencias sociales; desigual para hechos', 'Cómo mejorar': 'Usa DeepSearch para mayor cobertura web' },
+          { 'Sistema IA': 'Grok ([X.com](https://X.com))', 'Comportamiento post-corte': 'Busca posts de X automáticamente', 'Fiabilidad para info actual': 'Más útil para tendencias sociales; verifica los hechos por tu cuenta', 'Cómo mejorar': 'Usa DeepSearch para mayor cobertura web' },
           { 'Sistema IA': 'Claude (gratis/pro)', 'Comportamiento post-corte': 'Usa solo datos de entrenamiento por defecto', 'Fiabilidad para info actual': 'Moderada — corte fiable junio 2026', 'Cómo mejorar': 'Pega texto actual en contexto; usuarios API pueden activar herramienta de búsqueda' },
           { 'Sistema IA': 'Perplexity', 'Comportamiento post-corte': 'Siempre busca en web primero', 'Fiabilidad para info actual': 'Alta — producto nativo de búsqueda', 'Cómo mejorar': 'Ya cita fuentes por diseño' },
           { 'Sistema IA': 'Cualquier LLM local', 'Comportamiento post-corte': 'Usa solo datos de entrenamiento — sin anulación', 'Fiabilidad para info actual': 'Muy baja para temas post-corte', 'Cómo mejorar': 'Construye pipeline RAG; pega contexto manualmente' },
@@ -3505,7 +3505,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-strategy',
         title: 'Implicaciones para las empresas: estrategia GEO por sistema de IA',
         content: [
-          '<strong>El GEO (Generative Engine Optimization u Optimización para Motores Generativos) es la práctica de lograr que su marca, producto o contenido aparezca en las respuestas generadas por IA.</strong> Para la mayoría de los sistemas de IA, el GEO funciona de manera similar al SEO — la IA recupera contenido de los motores de búsqueda, por lo que posicionarse bien en Bing o Google se traslada directamente a las respuestas de IA.',
+          '<strong>El GEO (Generative Engine Optimization u Optimización para Motores Generativos) es la práctica de lograr que su marca, producto o contenido aparezca en las respuestas generadas por IA.</strong> Para la mayoría de los sistemas de IA, el GEO funciona de manera similar al SEO — la IA recupera contenido de los motores de búsqueda, por lo que posicionarse bien en Bing o Google puede trasladarse a las respuestas de IA.',
           'Pero los LLM locales rompen completamente este modelo. Un Llama o Qwen desplegado localmente nunca busca en la web. No puede optimizar su aparición en sus respuestas a través de la búsqueda — el modelo solo le mencionará si estaba en sus datos de entrenamiento antes del corte, o si la organización que lo despliega inyecta su contenido a través de RAG.',
           'Esta tabla mapea el canal GEO para cada sistema de IA:',
         ],
@@ -3523,7 +3523,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'warning',
             label: 'El punto ciego GEO de los LLM locales',
-            text: 'La mayoría de las guías GEO se centran íntegramente en la IA en la nube — le dicen que optimice para Bing o Google Search. Ese consejo es inútil para llegar a los despliegues internos de Llama, Qwen, Gemma o Phi. Esos modelos nunca buscan. El único canal GEO que funciona es convencer a la organización que despliega el modelo para que incluya su contenido en su pipeline RAG.',
+            text: 'Muchas guías GEO se centran en la IA en la nube — le dicen que optimice para Bing o Google Search. Ese consejo no llega a los despliegues internos de Llama, Qwen, Gemma o Phi. Esos modelos nunca buscan. El canal GEO que llega a esos despliegues es convencer a la organización que despliega el modelo para que incluya su contenido en su pipeline RAG.',
           },
         ],
         image: '/images/knowledge-cutoffs-and-geo-geo-strategy-hero-es.webp',
@@ -3533,8 +3533,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'geo-solution',
         title: 'La solución GEO: construir una ventaja competitiva para ambos tipos de IA',
         content: [
-          '<strong>Una estrategia GEO completa en 2026 requiere dos vías paralelas: optimización de búsqueda para la IA en la nube, y preparación RAG para la IA local.</strong> La mayoría de las organizaciones solo ejecutan la primera vía.',
-          '<strong>Vía 1 — IA en la nube (GEO basado en búsqueda):</strong> Las técnicas SEO tradicionales se aplican pero con adiciones específicas para IA. Su contenido debe estar estructurado para elegibilidad de fragmento destacado (esquemas JSON-LD FAQ y HowTo), ser factualmente preciso (los modelos de IA evitan citar páginas con historial de correcciones), y ser autoritativo (las señales de calidad de Bing y Google se traducen directamente en probabilidad de citación por IA). Para Grok específicamente, la presencia en X (cuenta verificada, tasa de engagement, número de seguidores) determina si su marca aparece en las respuestas de Grok.',
+          '<strong>Una estrategia GEO completa en 2026 requiere dos vías paralelas: optimización de búsqueda para la IA en la nube, y preparación RAG para la IA local.</strong> Muchas organizaciones solo ejecutan la primera vía.',
+          '<strong>Vía 1 — IA en la nube (GEO basado en búsqueda):</strong> Las técnicas SEO tradicionales se aplican pero con adiciones específicas para IA. Su contenido debe estar estructurado para elegibilidad de fragmento destacado (esquemas JSON-LD FAQ y HowTo), ser factualmente preciso (las páginas con historial de correcciones pueden citarse con menos frecuencia), y ser autoritativo (las señales de calidad de Bing y Google pueden influir en la probabilidad de citación por IA). Para Grok específicamente, la presencia en X (cuenta verificada, tasa de engagement, número de seguidores) puede influir en que su marca aparezca en las respuestas de Grok.',
           '<strong>Vía 2 — IA local (GEO basado en RAG):</strong> No puede optimizar su aparición en un LLM local a través de la búsqueda. El camino es completamente diferente: (1) crear bases de conocimiento legibles por máquina en formatos que consumen los pipelines RAG (Markdown, JSON-LD, especificaciones OpenAPI, preguntas frecuentes estructuradas); (2) participar en iniciativas de datos abiertos para que su información esté disponible para las organizaciones que construyen sistemas RAG; (3) establecer relaciones directas con clientes empresariales que despliegan LLM locales y proponer acuerdos de asociación de datos; (4) proporcionar SDK o APIs que hagan trivial incluir su contenido en un pipeline RAG.',
           'Para la mayoría de las empresas, la Vía 1 ya está en marcha como parte del SEO. La Vía 2 requiere trabajo nuevo — específicamente, producir contenido en formatos optimizados para la ingesta por máquinas, no para la lectura humana.',
         ],
@@ -3563,7 +3563,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '¿Reciben actualizaciones de conocimiento los LLM locales como Llama y Qwen?', a: 'No — no de forma automática. El conocimiento de un LLM local está permanentemente congelado en su corte de entrenamiento. Cada nueva versión del modelo (Llama 4 Scout, Qwen3 14B) tiene un corte diferente, pero la copia en ejecución en su máquina tiene un conocimiento fijo. Para obtener información actual, construya un pipeline RAG.' },
             { q: '¿Qué es el GEO y cómo se relaciona con las fechas de corte?', a: 'El GEO (Generative Engine Optimization) es la disciplina de lograr que su contenido aparezca en las respuestas generadas por IA. Para la IA en la nube, el GEO funciona a través de la optimización de búsqueda — posiciónese en Bing/Google y será citado. Para los LLM locales, esto es estructuralmente imposible porque el modelo nunca realiza búsquedas. El GEO para LLM locales requiere pipelines RAG en la organización que despliega el modelo.' },
             { q: '¿Qué modelo de IA tiene la fecha de corte del conocimiento más reciente (verificada)?', a: 'Entre los cortes verificados por fuente primaria: Claude Opus 5.5 tiene el corte fiable más reciente en junio de 2026, seguido de Grok 4.7 en mayo de 2026 y GPT-6 Astra / GPT-6.1 Sol en abril de 2026 (GPT-6 Luna: mayo de 2026). Phi-4 es junio de 2024. GPT-4o (heredado) es octubre de 2023. Varios modelos actuales (Gemini 4 Argon, Gemma 4, DeepSeek-V4, Mistral Large 4, Llama 4, Qwen3) no han divulgado fechas exactas públicamente. Sus predecesores, ya sustituidos, sí las habían publicado: Gemini 3.1 Pro (enero de 2025), DeepSeek-V3 (julio de 2024) y Gemma 3 27B (agosto de 2024).' },
-            { q: '¿Puedo usar el SEO para aparecer en las respuestas de Llama o Qwen?', a: 'No. El SEO no puede influir en un LLM desplegado localmente porque el modelo nunca realiza búsquedas web. Los únicos caminos son: (1) estar en los datos de entrenamiento antes del corte, o (2) ser incluido en un pipeline RAG por la organización que despliega el modelo.' },
+            { q: '¿Puedo usar el SEO para aparecer en las respuestas de Llama o Qwen?', a: 'No. El SEO no puede influir en un LLM desplegado localmente porque el modelo nunca realiza búsquedas web. Los caminos principales son: (1) estar en los datos de entrenamiento antes del corte, o (2) ser incluido en un pipeline RAG por la organización que despliega el modelo.' },
             { q: '¿Cómo verifico una respuesta de IA sobre algo que podría estar afectado por el corte?', a: 'Tres señales indican riesgo de corte: (1) el tema involucra versiones específicas, precios, personas o eventos; (2) preguntó sobre algo en un sector de rápida evolución; (3) la respuesta de IA carece de citas. Cuando alguna de estas aplique, verifique con una fuente primaria — el tono confiado del modelo no es un indicador de fiabilidad.' },
             { q: '¿Hay alguna manera de saber a partir de la respuesta de una IA si utilizó búsqueda en vivo?', a: 'A menudo sí: Perplexity siempre muestra citas de fuentes. Gemini muestra un ícono de Google Search cuando se usa grounding. Grok indica resultados de búsqueda en X. ChatGPT muestra un ícono de globo terráqueo y puede solicitársele que muestre las fuentes. Claude no busca de forma predeterminada, por lo que no se necesita indicador. Los LLM locales nunca buscan, así que no existe ningún indicador — la respuesta siempre proviene de los datos de entrenamiento.' },
             { q: '¿Por qué ChatGPT parece conocer eventos recientes aunque su modelo base tiene una fecha de corte de entrenamiento?', a: 'ChatGPT (el producto) busca en Bing de forma predeterminada en los planes de pago y enriquece sus respuestas con resultados de búsqueda actuales. Esto significa que puede responder preguntas factuales sobre eventos recientes aunque los datos de entrenamiento del modelo subyacente tengan un corte fijo (el corte de entrenamiento de GPT-6 Astra y GPT-6.1 Sol es abril de 2026; el GPT-4o heredado termina en octubre de 2023). El corte de entrenamiento sigue limitando la comprensión contextual de los temas posteriores al corte.' },
