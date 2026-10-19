@@ -165,7 +165,10 @@ export async function POST(request: Request) {
                   >
                     {i + 1}
                   </div>
-                  <div style={{ display: isRtl ? 'block' : 'flex', fontSize: '44px', fontWeight: 700, lineHeight: 1.15, textAlign, textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>{line}</div>
+                  <div style={{ display: 'flex', flexDirection: rowDir, flexWrap: 'wrap', columnGap: isRtl ? '6px' : '0px', fontSize: '44px', fontWeight: 700, lineHeight: 1.15, textAlign, textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>
+                    {/* Satori's bidi reorders multi-word Arabic text nodes inconsistently, so for RTL each word is its own flex item and row-reverse fixes the word order; shaping stays intact within a word. */}
+                    {isRtl ? line.split(' ').map((w, wi) => <div key={wi} style={{ display: 'flex' }}>{w}</div>) : line}
+                  </div>
                 </div>
               ))}
             </div>
