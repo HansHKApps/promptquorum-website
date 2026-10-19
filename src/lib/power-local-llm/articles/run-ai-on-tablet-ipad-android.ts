@@ -147,7 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad: On-Device Inference',
         content:
-          '**iPad Pro M5 is the only iPad that runs 7B–8B models at a comfortable speed.** Apple raised the base RAM on the M5 iPad Pro to 12 GB (16 GB on the 1 TB/2 TB storage tiers), up from 8 GB on the base M4 iPad Pro, and increased memory bandwidth to 153 GB/s from 120 GB/s — LLM inference on Apple Silicon is memory-bandwidth-bound, so this translates directly into faster generation. iPad Air M4 (12 GB, up from 8 GB on the M3 Air) now runs 3B–4B models comfortably instead of merely adequately. The iPad Air M3 (8 GB) and other 8 GB iPads are limited to 1B–3B models at Q4. [iPhone with 8 GB RAM also runs small models](/power-local-llm/best-local-llm-apps-iphone-2026) through LLM Farm.',
+          '**iPad Pro M5 is the iPad best suited to 7B–8B models.** Apple raised the base RAM on the M5 iPad Pro to 12 GB (16 GB on the 1 TB/2 TB storage tiers), up from 8 GB on the base M4 iPad Pro, and increased memory bandwidth to 153 GB/s from 120 GB/s — LLM inference on Apple Silicon is memory-bandwidth-bound, so this translates directly into faster generation. iPad Air M4 (12 GB, up from 8 GB on the M3 Air) now runs 3B–4B models comfortably instead of merely adequately. The iPad Air M3 (8 GB) and other 8 GB iPads are limited to 1B–3B models at Q4. [iPhone with 8 GB RAM also runs small models](/power-local-llm/best-local-llm-apps-iphone-2026) through LLM Farm.',
         items: [
           '**PocketPal AI** (free, open-source MIT, iOS + Android): runs GGUF models through llama.cpp, downloads models from Hugging Face inside the app or imports files, and includes a built-in benchmark so you can measure your own tablet\'s tokens per second. Last upstream update: 2026-10-16. See the [PocketPal AI review](/power-local-llm/pocketpal-ai-review).',
           '**Locally AI** (free with paid options, closed-source, iPhone/iPad/Mac): runs open models through Apple\'s MLX framework, built for Apple Silicon. Last App Store update: 2026-10-15. See the [Locally AI review](/power-local-llm/locally-ai-review).',
@@ -271,7 +271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'For roleplay and character-card fiction on iPad, RisuAI connected to a remote Ollama instance running Llama 3.3 70B is the best combination available in 2026. RisuAI\'s mobile interface is designed for touch; the remote connection gives access to a 70B model that produces significantly better character voice than any model that fits on a tablet.',
+            text: 'For roleplay and character-card fiction on iPad, RisuAI connected to a remote Ollama instance running Llama 3.3 70B is a strong combination in 2026. RisuAI\'s mobile interface is designed for touch; the remote connection gives access to a 70B model that produces significantly better character voice than any model that fits on a tablet.',
           },
         ],
       },
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can a tablet handle long-form RAG?',
-            a: 'On-device, no — embedding 1,000+ documents on a tablet is impractical. Via remote connection, yes — your home machine handles the RAG pipeline, the tablet displays the chat interface. AnythingLLM running on a home machine and accessed via browser on the tablet handles document collections of any size with no tablet-side limit. For students or knowledge workers wanting RAG on tablet, remote connection is the only practical option.',
+            a: 'On-device, no — embedding 1,000+ documents on a tablet is impractical. Via remote connection, yes — your home machine handles the RAG pipeline, the tablet displays the chat interface. AnythingLLM running on a home machine and accessed via browser on the tablet handles document collections of any size with no tablet-side limit. For students or knowledge workers wanting RAG on tablet, remote connection is usually the more practical option.',
           },
           {
             q: 'Can I use external displays with tablet AI?',
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is a tablet better than a phone for local AI?',
-            a: 'For typing-heavy use (drafting, RAG, long conversations), yes — keyboard support and screen size matter. For quick chat, voice queries, or on-the-go use, the phone you already carry is better. The iPad Pro M5 is the only tablet that significantly outperforms a flagship phone for local AI; mid-range tablets and phones are roughly equivalent. Most readers should not buy a tablet specifically for local AI — buy one if you want a tablet for other reasons; AI capability is a bonus.',
+            a: 'For typing-heavy use (drafting, RAG, long conversations), yes — keyboard support and screen size matter. For quick chat, voice queries, or on-the-go use, the phone you already carry is better. The iPad Pro M5 is the tablet most likely to outperform a flagship phone for local AI; mid-range tablets and phones are roughly equivalent. Most readers should not buy a tablet specifically for local AI — buy one if you want a tablet for other reasons; AI capability is a bonus.',
           },
           {
             q: 'Why is local AI so slow on my tablet?',
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad: Lokale Inferenz',
         content:
-          '**iPad Pro M5 ist das einzige iPad, das 7B–8B-Modelle mit angenehmer Geschwindigkeit ausführt.** Apple hat den Basis-RAM des M5 iPad Pro auf 12 GB angehoben (16 GB bei den 1 TB/2 TB-Speicherstufen), gegenüber 8 GB beim Basis-M4-iPad-Pro, und die Speicherbandbreite von 120 GB/s auf 153 GB/s erhöht — LLM-Inferenz auf Apple Silicon ist speicherbandbreiten-limitiert, was sich direkt in schnellerer Generierung niederschlägt. iPad Air M4 (12 GB, gegenüber 8 GB beim M3 Air) führt 3B–4B-Modelle jetzt komfortabel statt nur angemessen aus. Das iPad Air M3 (8 GB) und andere iPads mit 8 GB sind auf 1B–3B-Modelle in Q4 beschränkt. [iPhone mit 8 GB RAM führt auch kleine Modelle aus](/de/power-local-llm/best-local-llm-apps-iphone-2026).',
+          '**iPad Pro M5 ist das iPad, das sich am besten für 7B–8B-Modelle eignet.** Apple hat den Basis-RAM des M5 iPad Pro auf 12 GB angehoben (16 GB bei den 1 TB/2 TB-Speicherstufen), gegenüber 8 GB beim Basis-M4-iPad-Pro, und die Speicherbandbreite von 120 GB/s auf 153 GB/s erhöht — LLM-Inferenz auf Apple Silicon ist speicherbandbreiten-limitiert, was sich direkt in schnellerer Generierung niederschlägt. iPad Air M4 (12 GB, gegenüber 8 GB beim M3 Air) führt 3B–4B-Modelle jetzt komfortabel statt nur angemessen aus. Das iPad Air M3 (8 GB) und andere iPads mit 8 GB sind auf 1B–3B-Modelle in Q4 beschränkt. [iPhone mit 8 GB RAM führt auch kleine Modelle aus](/de/power-local-llm/best-local-llm-apps-iphone-2026).',
         items: [
           '**PocketPal AI** (kostenlos, Open-Source MIT, iOS + Android): führt GGUF-Modelle über llama.cpp aus, lädt Modelle in der App von Hugging Face herunter oder importiert Dateien und enthält einen integrierten Benchmark, mit dem Sie die Token pro Sekunde Ihres eigenen Tablets messen können. Letztes Upstream-Update: 16. Oktober 2026. Siehe das [PocketPal-AI-Review](/de/power-local-llm/pocketpal-ai-review).',
           '**Locally AI** (kostenlos mit Bezahloptionen, Closed-Source, iPhone/iPad/Mac): führt offene Modelle über Apples MLX-Framework aus, gebaut für Apple Silicon. Letztes App-Store-Update: 15. Oktober 2026. Siehe das [Locally-AI-Review](/de/power-local-llm/locally-ai-review).',
@@ -672,7 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Für Roleplay und Character-Card-Fiction auf iPad ist RisuAI verbunden mit einer Remote-Ollama-Instanz, auf der Llama 3.3 70B läuft, die beste verfügbare Kombination 2026. Die mobile RisuAI-Schnittstelle ist für Touch ausgelegt; die Remote-Verbindung ermöglicht Zugriff auf ein 70B-Modell, das eine erheblich bessere Character-Voice liefert als jedes Modell, das auf ein Tablet passt.',
+            text: 'Für Roleplay und Character-Card-Fiction auf iPad ist RisuAI verbunden mit einer Remote-Ollama-Instanz, auf der Llama 3.3 70B läuft, 2026 eine starke Kombination. Die mobile RisuAI-Schnittstelle ist für Touch ausgelegt; die Remote-Verbindung ermöglicht Zugriff auf ein 70B-Modell, das eine erheblich bessere Character-Voice liefert als jedes Modell, das auf ein Tablet passt.',
           },
         ],
       },
@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann ein Tablet Long-Form-RAG durchführen?',
-            a: 'On-Device, nein — das Einbetten von 1.000+ Dokumenten auf einem Tablet ist unpraktisch. Via Remote-Verbindung, ja — Ihr Home-Computer verwaltet die RAG-Pipeline, das Tablet zeigt die Chat-Schnittstelle. AnythingLLM auf einem Home-Computer und über Browser auf dem Tablet zugegriffen verwaltet Dokument-Sammlungen jeder Größe ohne Tablet-seitige Begrenzung. Für Schüler oder Knowledge-Worker, die RAG auf Tablet möchten, ist Remote-Verbindung die einzige praktische Option.',
+            a: 'On-Device, nein — das Einbetten von 1.000+ Dokumenten auf einem Tablet ist unpraktisch. Via Remote-Verbindung, ja — Ihr Home-Computer verwaltet die RAG-Pipeline, das Tablet zeigt die Chat-Schnittstelle. AnythingLLM auf einem Home-Computer und über Browser auf dem Tablet zugegriffen verwaltet Dokument-Sammlungen jeder Größe ohne Tablet-seitige Begrenzung. Für Schüler oder Knowledge-Worker, die RAG auf Tablet möchten, ist die Remote-Verbindung in der Regel die praktischere Option.',
           },
           {
             q: 'Kann ich externe Displays mit Tablet-KI verwenden?',
@@ -781,7 +781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist ein Tablet besser als ein Telefon für lokale KI?',
-            a: 'Für Tasten-intensive Nutzung (Entwurf, RAG, lange Unterhaltungen), ja — Tastatur-Unterstützung und Bildschirmgröße sind wichtig. Für schnelle Chats, Voice-Queries oder unterwegs ist das Telefon, das Sie bereits tragen, besser. Der iPad Pro M5 ist das einzige Tablet, das merklich über ein Flaggschiff-Telefon für lokale KI hinausgeht; Mid-Range-Tablets und Telefone sind ungefähr gleichwertig. Die meisten Leser sollten kein Tablet speziell für lokale KI kaufen — kaufen Sie eines, wenn Sie es aus anderen Gründen möchten; KI-Fähigkeit ist ein Bonus.',
+            a: 'Für Tasten-intensive Nutzung (Entwurf, RAG, lange Unterhaltungen), ja — Tastatur-Unterstützung und Bildschirmgröße sind wichtig. Für schnelle Chats, Voice-Queries oder unterwegs ist das Telefon, das Sie bereits tragen, besser. Der iPad Pro M5 ist das Tablet, das ein Flaggschiff-Telefon für lokale KI am ehesten übertrifft; Mid-Range-Tablets und Telefone sind ungefähr gleichwertig. Die meisten Leser sollten kein Tablet speziell für lokale KI kaufen — kaufen Sie eines, wenn Sie es aus anderen Gründen möchten; KI-Fähigkeit ist ein Bonus.',
           },
           {
             q: 'Warum ist lokale KI auf meinem Tablet so langsam?',
@@ -1020,7 +1020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad : inférence locale',
         content:
-          '**iPad Pro M5 est le seul iPad exécutant modèles 7B–8B à vitesse confortable.** Apple a porté la RAM de base du M5 iPad Pro à 12 GB (16 GB sur les paliers de stockage 1 TB/2 TB), contre 8 GB sur le M4 iPad Pro de base, et augmenté la bande passante mémoire de 120 GB/s à 153 GB/s — l\'inférence LLM sur Apple Silicon étant limitée par la bande passante mémoire, cela se traduit directement par une génération plus rapide. iPad Air M4 (12 GB, contre 8 GB sur le M3 Air) exécute désormais les modèles 3B–4B confortablement, et non plus seulement correctement. L\'iPad Air M3 (8 GB) et les autres iPad de 8 GB sont limités aux modèles 1B–3B en Q4. [Un iPhone avec 8 GB de RAM exécute aussi de petits modèles](/fr/power-local-llm/best-local-llm-apps-iphone-2026) via LLM Farm.',
+          '**iPad Pro M5 est l\'iPad le mieux adapté aux modèles 7B–8B.** Apple a porté la RAM de base du M5 iPad Pro à 12 GB (16 GB sur les paliers de stockage 1 TB/2 TB), contre 8 GB sur le M4 iPad Pro de base, et augmenté la bande passante mémoire de 120 GB/s à 153 GB/s — l\'inférence LLM sur Apple Silicon étant limitée par la bande passante mémoire, cela se traduit directement par une génération plus rapide. iPad Air M4 (12 GB, contre 8 GB sur le M3 Air) exécute désormais les modèles 3B–4B confortablement, et non plus seulement correctement. L\'iPad Air M3 (8 GB) et les autres iPad de 8 GB sont limités aux modèles 1B–3B en Q4. [Un iPhone avec 8 GB de RAM exécute aussi de petits modèles](/fr/power-local-llm/best-local-llm-apps-iphone-2026) via LLM Farm.',
         items: [
           '**PocketPal AI** (gratuit, open-source MIT, iOS + Android) : exécute des modèles GGUF via llama.cpp, télécharge les modèles depuis Hugging Face dans l\'app ou importe des fichiers, et inclut un benchmark intégré pour mesurer les tokens par seconde de votre propre tablette. Dernière mise à jour en amont : 16 octobre 2026 (2026-10-16). Voir l\'[avis sur PocketPal AI](/fr/power-local-llm/pocketpal-ai-review).',
           '**Locally AI** (gratuit avec options payantes, code fermé, iPhone/iPad/Mac) : exécute des modèles ouverts via le framework MLX d\'Apple, conçu pour Apple Silicon. Dernière mise à jour App Store : 15 octobre 2026 (2026-10-15). Voir l\'[avis sur Locally AI](/fr/power-local-llm/locally-ai-review).',
@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Jeu rôle iPad : RisuAI + Ollama distant Llama 3.3 70B meilleure combo 2026. Interface RisuAI tactile ; 70B produit character voice bien meilleur que tout modèle tablette.',
+            text: 'Jeu rôle iPad : RisuAI + Ollama distant Llama 3.3 70B combinaison solide en 2026. Interface RisuAI tactile ; 70B produit character voice bien meilleur que tout modèle tablette.',
           },
         ],
       },
@@ -1239,7 +1239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Une tablette peut-elle gérer du RAG sur de longs documents ?',
-            a: 'Sur l\'appareil, non — vectoriser plus de 1 000 documents sur une tablette n\'est pas réaliste. Via une connexion à distance, oui — votre machine gère le pipeline RAG, la tablette affiche l\'interface de chat. AnythingLLM exécuté sur une machine à la maison et consulté via le navigateur de la tablette gère des collections de documents de toute taille sans limite côté tablette. Pour les étudiants ou travailleurs du savoir qui veulent du RAG sur tablette, la connexion à distance est la seule option pratique.',
+            a: 'Sur l\'appareil, non — vectoriser plus de 1 000 documents sur une tablette n\'est pas réaliste. Via une connexion à distance, oui — votre machine gère le pipeline RAG, la tablette affiche l\'interface de chat. AnythingLLM exécuté sur une machine à la maison et consulté via le navigateur de la tablette gère des collections de documents de toute taille sans limite côté tablette. Pour les étudiants ou travailleurs du savoir qui veulent du RAG sur tablette, la connexion à distance est généralement l\'option la plus pratique.',
           },
           {
             q: 'Puis-je utiliser des écrans externes avec l\'IA sur tablette ?',
@@ -1247,7 +1247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Une tablette est-elle meilleure qu\'un téléphone pour l\'IA locale ?',
-            a: 'Pour un usage orienté saisie (rédaction, RAG, longues conversations), oui — le clavier et la taille d\'écran comptent. Pour un chat rapide, des requêtes vocales ou en déplacement, le téléphone que vous avez déjà est préférable. L\'iPad Pro M5 est la seule tablette qui surpasse nettement un téléphone haut de gamme pour l\'IA locale ; les tablettes et téléphones milieu de gamme sont à peu près équivalents. La plupart des lecteurs ne devraient pas acheter une tablette spécifiquement pour l\'IA locale — achetez-en une si vous la voulez pour d\'autres raisons ; la capacité IA est un bonus.',
+            a: 'Pour un usage orienté saisie (rédaction, RAG, longues conversations), oui — le clavier et la taille d\'écran comptent. Pour un chat rapide, des requêtes vocales ou en déplacement, le téléphone que vous avez déjà est préférable. L\'iPad Pro M5 est la tablette la plus susceptible de surpasser un téléphone haut de gamme pour l\'IA locale ; les tablettes et téléphones milieu de gamme sont à peu près équivalents. La plupart des lecteurs ne devraient pas acheter une tablette spécifiquement pour l\'IA locale — achetez-en une si vous la voulez pour d\'autres raisons ; la capacité IA est un bonus.',
           },
           {
             q: 'Pourquoi l\'IA locale est-elle si lente sur ma tablette ?',
@@ -1477,7 +1477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad：オンデバイス推論',
         content:
-          '**iPad Pro M5は7B〜8Bモデルを快適な速度で実行できる唯一のiPadです。** AppleはM5 iPad Proのベースメモリを従来のM4 iPad Proベースモデルの8GBから12GBに引き上げ（1TB/2TBストレージモデルは16GB）、メモリ帯域幅を120GB/sから153GB/sに向上させました — Apple SiliconでのLLM推論はメモリ帯域幅に律速されるため、これは直接的な生成速度の向上につながります。iPad Air M4（12GB、M3 Airの8GBから増加）は、3B〜4Bモデルを「適切」ではなく「快適」に実行できるようになりました。iPad Air M3（8GB）とその他の8GB iPadは、Q4で1B〜3Bモデルに限られます。[8GB RAM iPhoneもLLM Farm経由で小型モデルを実行できます](/ja/power-local-llm/best-local-llm-apps-iphone-2026)。',
+          '**iPad Pro M5は7B〜8Bモデルに最も適したiPadです。** AppleはM5 iPad Proのベースメモリを従来のM4 iPad Proベースモデルの8GBから12GBに引き上げ（1TB/2TBストレージモデルは16GB）、メモリ帯域幅を120GB/sから153GB/sに向上させました — Apple SiliconでのLLM推論はメモリ帯域幅に律速されるため、これは直接的な生成速度の向上につながります。iPad Air M4（12GB、M3 Airの8GBから増加）は、3B〜4Bモデルを「適切」ではなく「快適」に実行できるようになりました。iPad Air M3（8GB）とその他の8GB iPadは、Q4で1B〜3Bモデルに限られます。[8GB RAM iPhoneもLLM Farm経由で小型モデルを実行できます](/ja/power-local-llm/best-local-llm-apps-iphone-2026)。',
         items: [
           '**PocketPal AI**（無料、オープンソースMIT、iOS + Android）：llama.cpp経由でGGUFモデルを実行し、アプリ内でHugging Faceからモデルをダウンロードするかファイルをインポートでき、お使いのタブレットのトークン/秒を自分で測れるベンチマーク機能を内蔵しています。最終アップストリーム更新：2026-10-16。[PocketPal AIレビュー](/ja/power-local-llm/pocketpal-ai-review)を参照。',
           '**Locally AI**（無料、有料オプションあり、クローズドソース、iPhone/iPad/Mac）：Apple Silicon向けに作られたAppleのMLXフレームワークでオープンモデルを実行します。最終App Store更新：2026-10-15。[Locally AIレビュー](/ja/power-local-llm/locally-ai-review)を参照。',
@@ -1601,7 +1601,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'iPadでのロールプレイとキャラクターカードフィクションには、Llama 3.3 70Bを実行するリモートOllamaインスタンスに接続したRisuAIが2026年に利用可能な最高の組み合わせです。RisuAIのモバイルインターフェースはタッチ操作向けに設計されており、リモート接続によりタブレットに収まるどのモデルよりも大幅に優れたキャラクターボイスを生み出す70Bモデルにアクセスできます。',
+            text: 'iPadでのロールプレイとキャラクターカードフィクションには、Llama 3.3 70Bを実行するリモートOllamaインスタンスに接続したRisuAIが2026年における有力な組み合わせです。RisuAIのモバイルインターフェースはタッチ操作向けに設計されており、リモート接続によりタブレットに収まるどのモデルよりも大幅に優れたキャラクターボイスを生み出す70Bモデルにアクセスできます。',
           },
         ],
       },
@@ -1703,7 +1703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'タブレットで長文RAGを処理できますか？',
-            a: 'オンデバイスでは無理です — タブレットで1,000件以上のドキュメントを埋め込むのは非現実的です。リモート接続なら可能です — RAGパイプラインはホームマシンが処理し、タブレットはチャットインターフェースを表示します。ホームマシンで動作するAnythingLLMにタブレットのブラウザからアクセスすれば、タブレット側の制限なしにあらゆる規模のドキュメントコレクションを扱えます。タブレットでRAGを使いたい学生や知識労働者には、リモート接続が唯一の実用的な選択肢です。',
+            a: 'オンデバイスでは無理です — タブレットで1,000件以上のドキュメントを埋め込むのは非現実的です。リモート接続なら可能です — RAGパイプラインはホームマシンが処理し、タブレットはチャットインターフェースを表示します。ホームマシンで動作するAnythingLLMにタブレットのブラウザからアクセスすれば、タブレット側の制限なしにあらゆる規模のドキュメントコレクションを扱えます。タブレットでRAGを使いたい学生や知識労働者には、リモート接続の方が通常は実用的な選択肢です。',
           },
           {
             q: 'タブレットAIで外部ディスプレイを使えますか？',
@@ -1711,7 +1711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ローカルAIはスマートフォンよりタブレットの方が優れていますか？',
-            a: '入力中心の用途（下書き、RAG、長い会話）では、はい — キーボード対応と画面サイズが重要です。素早いチャット、音声クエリ、外出先での利用には、普段持ち歩いているスマートフォンの方が適しています。iPad Pro M5は、ローカルAIでフラッグシップスマートフォンを大きく上回る唯一のタブレットで、ミッドレンジのタブレットとスマートフォンはほぼ同等です。ほとんどの読者は、ローカルAIのためだけにタブレットを買うべきではありません — 他の理由でタブレットが欲しい場合に購入し、AI機能はおまけと考えてください。',
+            a: '入力中心の用途（下書き、RAG、長い会話）では、はい — キーボード対応と画面サイズが重要です。素早いチャット、音声クエリ、外出先での利用には、普段持ち歩いているスマートフォンの方が適しています。iPad Pro M5は、ローカルAIでフラッグシップスマートフォンを上回る可能性が最も高いタブレットで、ミッドレンジのタブレットとスマートフォンはほぼ同等です。ほとんどの読者は、ローカルAIのためだけにタブレットを買うべきではありません — 他の理由でタブレットが欲しい場合に購入し、AI機能はおまけと考えてください。',
           },
           {
             q: 'タブレットでローカルAIが遅いのはなぜですか？',
@@ -1946,7 +1946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad：本地推理',
         content:
-          '**iPad Pro M5是唯一能以舒适速度运行7B至8B模型的iPad。** 苹果将M5 iPad Pro基础内存提升至12 GB（1 TB/2 TB存储版为16 GB），高于上一代M4基础版的8 GB，内存带宽也从120 GB/s提升至153 GB/s——由于Apple Silicon上的LLM推理受内存带宽制约，这直接转化为更快的生成速度。iPad Air M4（12 GB，高于M3 Air的8 GB）现在可以流畅运行3B至4B模型，而不仅仅是勉强运行。iPad Air M3（8 GB）和其他8 GB iPad仅限于Q4量化的1B至3B模型。[配备8 GB RAM的iPhone也可通过LLM Farm运行小型模型](/zh/power-local-llm/best-local-llm-apps-iphone-2026)。',
+          '**iPad Pro M5是最适合运行7B至8B模型的iPad。** 苹果将M5 iPad Pro基础内存提升至12 GB（1 TB/2 TB存储版为16 GB），高于上一代M4基础版的8 GB，内存带宽也从120 GB/s提升至153 GB/s——由于Apple Silicon上的LLM推理受内存带宽制约，这直接转化为更快的生成速度。iPad Air M4（12 GB，高于M3 Air的8 GB）现在可以流畅运行3B至4B模型，而不仅仅是勉强运行。iPad Air M3（8 GB）和其他8 GB iPad仅限于Q4量化的1B至3B模型。[配备8 GB RAM的iPhone也可通过LLM Farm运行小型模型](/zh/power-local-llm/best-local-llm-apps-iphone-2026)。',
         items: [
           '**PocketPal AI**（免费，开源MIT，iOS + 安卓）：通过llama.cpp运行GGUF模型，可在应用内从Hugging Face下载模型或导入文件，并内置基准测试，方便您测量自己平板的每秒词元数。最近一次上游更新：2026-10-16。参见[PocketPal AI评测](/zh/power-local-llm/pocketpal-ai-review)。',
           '**Locally AI**（免费含付费选项，闭源，iPhone/iPad/Mac）：通过苹果的MLX框架运行开源模型，专为Apple Silicon打造。最近一次App Store更新：2026-10-15。参见[Locally AI评测](/zh/power-local-llm/locally-ai-review)。',
@@ -2070,7 +2070,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '在iPad上进行角色扮演和角色卡创作，连接到运行Llama 3.3 70B的远程Ollama实例的RisuAI是2026年可用的最佳组合。RisuAI的移动端界面专为触控设计；远程连接提供对70B模型的访问，角色声音质量远超任何能放进平板的模型。',
+            text: '在iPad上进行角色扮演和角色卡创作，连接到运行Llama 3.3 70B的远程Ollama实例的RisuAI是2026年的一种强力组合。RisuAI的移动端界面专为触控设计；远程连接提供对70B模型的访问，角色声音质量远超任何能放进平板的模型。',
           },
         ],
       },
@@ -2155,7 +2155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '平板能处理长文档RAG吗？',
-            a: '本地推理方式不行——在平板上嵌入1000+份文档不切实际。通过远程连接可以——家用机器处理RAG管道，平板显示聊天界面。AnythingLLM运行在家用机器上并通过浏览器在平板访问，可处理任意规模的文档集合，平板端无限制。对于需要在平板上使用RAG的学生或知识工作者，远程连接是唯一实用方案。',
+            a: '本地推理方式不行——在平板上嵌入1000+份文档不切实际。通过远程连接可以——家用机器处理RAG管道，平板显示聊天界面。AnythingLLM运行在家用机器上并通过浏览器在平板访问，可处理任意规模的文档集合，平板端无限制。对于需要在平板上使用RAG的学生或知识工作者，远程连接通常是更实用的方案。',
           },
           {
             q: '平板可以使用外接显示器进行AI工作吗？',
@@ -2163,7 +2163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '平板比手机更适合本地AI吗？',
-            a: '对于打字密集型使用（起草、RAG、长对话），是的——键盘支持和屏幕尺寸很重要。对于快速聊天、语音查询或移动使用，随身携带的手机更方便。iPad Pro M5是唯一在本地AI方面显著超越旗舰手机的平板；中端平板和手机大致相当。大多数读者不应专门为本地AI购买平板——如果因其他原因想要平板，AI能力是附加价值。',
+            a: '对于打字密集型使用（起草、RAG、长对话），是的——键盘支持和屏幕尺寸很重要。对于快速聊天、语音查询或移动使用，随身携带的手机更方便。iPad Pro M5是在本地AI方面最有可能超越旗舰手机的平板；中端平板和手机大致相当。大多数读者不应专门为本地AI购买平板——如果因其他原因想要平板，AI能力是附加价值。',
           },
           {
             q: '为什么我平板上的本地AI这么慢？',
@@ -2410,7 +2410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'ipad-on-device',
         title: 'iPad: inferencia en el dispositivo',
         content:
-          '**El iPad Pro M5 es el único iPad que ejecuta modelos de 7B a 8B a una velocidad cómoda.** Apple elevó la RAM base del iPad Pro M5 a 12 GB (16 GB en los niveles de almacenamiento de 1 TB/2 TB), frente a los 8 GB del iPad Pro M4 base, y aumentó el ancho de banda de memoria de 120 GB/s a 153 GB/s — la inferencia LLM en Apple Silicon está limitada por el ancho de banda de memoria, así que esto se traduce directamente en una generación más rápida. El iPad Air M4 (12 GB, frente a los 8 GB del M3 Air) ahora ejecuta modelos de 3B a 4B con comodidad, en lugar de simplemente de forma adecuada. El iPad Air M3 (8 GB) y otros iPads de 8 GB se limitan a modelos de 1B a 3B en Q4. [El iPhone con 8 GB de RAM también ejecuta modelos pequeños](/es/power-local-llm/best-local-llm-apps-iphone-2026) mediante LLM Farm.',
+          '**El iPad Pro M5 es el iPad más adecuado para modelos de 7B a 8B.** Apple elevó la RAM base del iPad Pro M5 a 12 GB (16 GB en los niveles de almacenamiento de 1 TB/2 TB), frente a los 8 GB del iPad Pro M4 base, y aumentó el ancho de banda de memoria de 120 GB/s a 153 GB/s — la inferencia LLM en Apple Silicon está limitada por el ancho de banda de memoria, así que esto se traduce directamente en una generación más rápida. El iPad Air M4 (12 GB, frente a los 8 GB del M3 Air) ahora ejecuta modelos de 3B a 4B con comodidad, en lugar de simplemente de forma adecuada. El iPad Air M3 (8 GB) y otros iPads de 8 GB se limitan a modelos de 1B a 3B en Q4. [El iPhone con 8 GB de RAM también ejecuta modelos pequeños](/es/power-local-llm/best-local-llm-apps-iphone-2026) mediante LLM Farm.',
         items: [
           '**PocketPal AI** (gratis, código abierto MIT, iOS + Android): ejecuta modelos GGUF mediante llama.cpp, descarga modelos de Hugging Face dentro de la app o importa archivos, e incluye un benchmark integrado para medir los tokens por segundo de tu propia tablet. Última actualización upstream: 16 de octubre de 2026. Consulta la [reseña de PocketPal AI](/es/power-local-llm/pocketpal-ai-review).',
           '**Locally AI** (gratis con opciones de pago, código cerrado, iPhone/iPad/Mac): ejecuta modelos abiertos mediante el framework MLX de Apple, creado para Apple Silicon. Última actualización en la App Store: 15 de octubre de 2026. Consulta la [reseña de Locally AI](/es/power-local-llm/locally-ai-review).',
@@ -2534,7 +2534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Para roleplay y ficción con tarjetas de personaje en iPad, RisuAI conectado a una instancia remota de Ollama ejecutando Llama 3.3 70B es la mejor combinación disponible en 2026. La interfaz móvil de RisuAI está diseñada para el tacto; la conexión remota da acceso a un modelo de 70B que produce una voz de personaje significativamente mejor que cualquier modelo que quepa en una tablet.',
+            text: 'Para roleplay y ficción con tarjetas de personaje en iPad, RisuAI conectado a una instancia remota de Ollama ejecutando Llama 3.3 70B es una combinación sólida en 2026. La interfaz móvil de RisuAI está diseñada para el tacto; la conexión remota da acceso a un modelo de 70B que produce una voz de personaje significativamente mejor que cualquier modelo que quepa en una tablet.',
           },
         ],
       },
@@ -2619,7 +2619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puede una tablet manejar RAG de formato largo?',
-            a: 'En el dispositivo, no — incrustar más de 1.000 documentos en una tablet no es práctico. Mediante conexión remota, sí — tu máquina en casa gestiona el pipeline de RAG, la tablet muestra la interfaz de chat. AnythingLLM ejecutándose en una máquina en casa y accedido mediante el navegador de la tablet gestiona colecciones de documentos de cualquier tamaño sin límite del lado de la tablet. Para estudiantes o trabajadores del conocimiento que quieran RAG en tablet, la conexión remota es la única opción práctica.',
+            a: 'En el dispositivo, no — incrustar más de 1.000 documentos en una tablet no es práctico. Mediante conexión remota, sí — tu máquina en casa gestiona el pipeline de RAG, la tablet muestra la interfaz de chat. AnythingLLM ejecutándose en una máquina en casa y accedido mediante el navegador de la tablet gestiona colecciones de documentos de cualquier tamaño sin límite del lado de la tablet. Para estudiantes o trabajadores del conocimiento que quieran RAG en tablet, la conexión remota suele ser la opción más práctica.',
           },
           {
             q: '¿Puedo usar pantallas externas con IA en tablet?',
@@ -2627,7 +2627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Es una tablet mejor que un teléfono para IA local?',
-            a: 'Para el uso intensivo en escritura (redacción, RAG, conversaciones largas), sí — el soporte de teclado y el tamaño de pantalla importan. Para chat rápido, consultas de voz o uso en movimiento, el teléfono que ya llevas es mejor. El iPad Pro M5 es la única tablet que supera significativamente a un teléfono insignia para IA local; las tablets y teléfonos de gama media son aproximadamente equivalentes. La mayoría de los lectores no deberían comprar una tablet específicamente para IA local — cómprate una si la quieres por otras razones; la capacidad de IA es un bonus.',
+            a: 'Para el uso intensivo en escritura (redacción, RAG, conversaciones largas), sí — el soporte de teclado y el tamaño de pantalla importan. Para chat rápido, consultas de voz o uso en movimiento, el teléfono que ya llevas es mejor. El iPad Pro M5 es la tablet con más probabilidades de superar a un teléfono insignia para IA local; las tablets y teléfonos de gama media son aproximadamente equivalentes. La mayoría de los lectores no deberían comprar una tablet específicamente para IA local — cómprate una si la quieres por otras razones; la capacidad de IA es un bonus.',
           },
           {
             q: '¿Por qué la IA local va tan lenta en mi tablet?',
@@ -2851,14 +2851,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '자택에 Ollama를 실행할 수 있는 Mac·PC가 있다면 원격 연결부터 시작하십시오. 모델 파일을 태블릿에 저장하거나 모바일 앱의 제한을 다룰 필요 없이 즉시 더 나은 모델 품질을 태블릿에서 얻을 수 있습니다. 오프라인 사용이 필요하다고 느끼면 나중에 온디바이스 기능을 추가하십시오.',
           },
         ],
-        image: '/images/run-ai-on-tablet-two-modes-es.svg',
+        image: '/images/run-ai-on-tablet-two-modes-ko.svg',
         imageCaption: '태블릿 AI 두 가지 모드: 온디바이스 추론(모델이 태블릿 칩에서 실행, 오프라인 작동, 3B~8B 모델로 제한) vs 원격 연결(태블릿 브라우저가 Ollama를 사용하는 자택 Mac·PC에 연결, 태블릿에 모델 저장 없음, 무제한 모델 크기).',
       },
       ipadOnDevice: {
         id: 'ipad-on-device',
         title: 'iPad: 온디바이스 추론',
         content:
-          '**iPad Pro M5만이 7B~8B 모델을 편안한 속도로 실행하는 유일한 iPad입니다.** Apple은 M5 iPad Pro의 기본 RAM을 기존 M4 iPad Pro 기본 모델의 8GB에서 12GB로 늘리고(1TB/2TB 스토리지는 16GB), 메모리 대역폭도 120GB/s에서 153GB/s로 늘렸습니다 — Apple Silicon에서 LLM 추론은 메모리 대역폭에 의해 제한되므로, 이는 곧바로 더 빠른 생성 속도로 이어집니다. iPad Air M4(12GB, M3 Air의 8GB에서 증가)는 이제 3B~4B 모델을 단순히 "적절히"가 아니라 "원활하게" 실행합니다. iPad Air M3(8GB)와 그 밖의 8GB iPad는 Q4 기준 1B~3B 모델로 제한됩니다. [RAM 8GB의 iPhone도](/ko/power-local-llm/best-local-llm-apps-iphone-2026) LLM Farm을 통해 소형 모델을 실행합니다.',
+          '**iPad Pro M5는 7B~8B 모델에 가장 적합한 iPad입니다.** Apple은 M5 iPad Pro의 기본 RAM을 기존 M4 iPad Pro 기본 모델의 8GB에서 12GB로 늘리고(1TB/2TB 스토리지는 16GB), 메모리 대역폭도 120GB/s에서 153GB/s로 늘렸습니다 — Apple Silicon에서 LLM 추론은 메모리 대역폭에 의해 제한되므로, 이는 곧바로 더 빠른 생성 속도로 이어집니다. iPad Air M4(12GB, M3 Air의 8GB에서 증가)는 이제 3B~4B 모델을 단순히 "적절히"가 아니라 "원활하게" 실행합니다. iPad Air M3(8GB)와 그 밖의 8GB iPad는 Q4 기준 1B~3B 모델로 제한됩니다. [RAM 8GB의 iPhone도](/ko/power-local-llm/best-local-llm-apps-iphone-2026) LLM Farm을 통해 소형 모델을 실행합니다.',
         items: [
           '**PocketPal AI**(무료, 오픈소스 MIT, iOS + Android): llama.cpp로 GGUF 모델을 실행하며, 앱 안에서 Hugging Face 모델을 내려받거나 파일을 가져올 수 있고, 내장 벤치마크로 내 태블릿의 초당 토큰 수를 직접 측정할 수 있습니다. 마지막 업스트림 업데이트: 2026-10-16. [PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review)를 참조하십시오.',
           '**Locally AI**(무료 + 유료 옵션, 비공개 소스, iPhone/iPad/Mac): Apple Silicon용으로 만들어진 Apple의 MLX 프레임워크로 오픈 모델을 실행합니다. 마지막 App Store 업데이트: 2026-10-15. [Locally AI 리뷰](/ko/power-local-llm/locally-ai-review)를 참조하십시오.',
@@ -2875,7 +2875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '12GB iPad Air에서 7B 모델을 실시간 채팅에 실행하려 하지 마십시오. 초당 7~10 토큰 속도로 각 응답은 여전히 10~20초가 걸립니다. 프롬프트를 보내고 기다리는 요약 작업에는 사용 가능하지만 대화용으로는 불편합니다. iPad Air에서는 3B~4B 모델을 사용하고, 7B 이상 모델을 위해서는 16GB iPad Pro M5로 업그레이드하거나 원격 연결로 전환하십시오.',
           },
         ],
-        image: '/images/run-ai-on-tablet-ipad-speed-es.svg',
+        image: '/images/run-ai-on-tablet-ipad-speed-ko.svg',
         imageCaption: 'iPad 온디바이스 추론 속도: iPad Pro M5(12GB / 16GB)는 Phi-4 Mini·Llama 3.2 3B에서 23~38 tok/초 달성; iPad Air M4(12GB)는 3B~4B 모델을 15~20 tok/초로 실행하지만 7B 모델에서 7~10 tok/초로 하락 — 여전히 실시간 채팅에는 느림.',
       },
       androidOnDevice: {
@@ -2907,7 +2907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Termux:Widget 플러그인을 설치하고 "ollama serve"를 실행하는 바로가기를 만드십시오 — 이렇게 하면 Termux를 수동으로 열지 않고도 Android 홈 화면에서 Ollama 서버를 시작할 수 있습니다. Ollama가 서빙 중이면 localhost:11434에 연결하도록 설정된 채팅 앱을 열면 됩니다.',
           },
         ],
-        image: '/images/run-ai-on-tablet-termux-setup-es.svg',
+        image: '/images/run-ai-on-tablet-termux-setup-ko.svg',
         imageCaption: 'Android 온디바이스 AI: Termux + Ollama 5단계 설정 — F-Droid에서 Termux 설치(Play Store 아님), 패키지 업데이트, pkg install ollama로 Ollama 설치, 모델 다운로드(phi4-mini 또는 qwen3:1.7b), localhost:11434에서 서버 시작. RAM 최소 8GB 필요.',
       },
       remoteConnection: {
@@ -2982,7 +2982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'iPad에서 캐릭터 카드 롤플레이·픽션 사용 시, Llama 3.3 70B를 실행하는 원격 Ollama 인스턴스에 연결된 RisuAI가 2026년 최고의 조합입니다. RisuAI의 모바일 인터페이스는 터치에 최적화되었으며, 원격 연결은 태블릿에 들어갈 수 있는 어떤 모델보다 훨씬 나은 캐릭터 목소리를 생성하는 70B 모델에 접근할 수 있게 합니다.',
+            text: 'iPad에서 캐릭터 카드 롤플레이·픽션 사용 시, Llama 3.3 70B를 실행하는 원격 Ollama 인스턴스에 연결된 RisuAI가 2026년에 강력한 조합입니다. RisuAI의 모바일 인터페이스는 터치에 최적화되었으며, 원격 연결은 태블릿에 들어갈 수 있는 어떤 모델보다 훨씬 나은 캐릭터 목소리를 생성하는 70B 모델에 접근할 수 있게 합니다.',
           },
         ],
       },
@@ -3067,7 +3067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '태블릿에서 장문 RAG를 처리할 수 있습니까?',
-            a: '온디바이스에서는 불가능합니다 — 태블릿에 1,000개 이상의 문서를 임베딩하는 것은 실용적이지 않습니다. 원격 연결을 통해서는 가능합니다 — 자택 기기가 RAG 파이프라인을 처리하고 태블릿은 채팅 인터페이스를 표시합니다. 자택 기기에서 실행되는 AnythingLLM을 태블릿 브라우저로 접속하면 태블릿 측 제한 없이 모든 크기의 문서 컬렉션을 처리합니다. 태블릿에서 RAG를 원하는 학생이나 지식 노동자에게 원격 연결이 유일한 실용적 옵션입니다.',
+            a: '온디바이스에서는 불가능합니다 — 태블릿에 1,000개 이상의 문서를 임베딩하는 것은 실용적이지 않습니다. 원격 연결을 통해서는 가능합니다 — 자택 기기가 RAG 파이프라인을 처리하고 태블릿은 채팅 인터페이스를 표시합니다. 자택 기기에서 실행되는 AnythingLLM을 태블릿 브라우저로 접속하면 태블릿 측 제한 없이 모든 크기의 문서 컬렉션을 처리합니다. 태블릿에서 RAG를 원하는 학생이나 지식 노동자에게 원격 연결이 대개 더 실용적인 옵션입니다.',
           },
           {
             q: '태블릿 AI와 함께 외부 모니터를 사용할 수 있습니까?',
@@ -3075,7 +3075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '로컬 AI에 태블릿이 스마트폰보다 낫습니까?',
-            a: '집중적인 타이핑 작업(초안 작성, RAG, 긴 대화)에는 네 — 키보드 지원과 화면 크기가 중요합니다. 빠른 채팅, 음성 쿼리, 이동 중 사용에는 이미 갖고 있는 스마트폰이 낫습니다. iPad Pro M5는 로컬 AI에서 플래그십 스마트폰을 크게 능가하는 유일한 태블릿입니다; 중급 태블릿과 스마트폰은 대략 동등합니다. 대부분의 독자는 특별히 로컬 AI를 위해 태블릿을 구매해서는 안 됩니다 — 다른 이유로 원한다면 구매하십시오; AI 기능은 보너스입니다.',
+            a: '집중적인 타이핑 작업(초안 작성, RAG, 긴 대화)에는 네 — 키보드 지원과 화면 크기가 중요합니다. 빠른 채팅, 음성 쿼리, 이동 중 사용에는 이미 갖고 있는 스마트폰이 낫습니다. iPad Pro M5는 로컬 AI에서 플래그십 스마트폰을 능가할 가능성이 가장 높은 태블릿입니다; 중급 태블릿과 스마트폰은 대략 동등합니다. 대부분의 독자는 특별히 로컬 AI를 위해 태블릿을 구매해서는 안 됩니다 — 다른 이유로 원한다면 구매하십시오; AI 기능은 보너스입니다.',
           },
           {
             q: '내 태블릿에서 로컬 AI가 왜 이렇게 느립니까?',
@@ -3297,14 +3297,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Se você já tem um Mac ou PC em casa que consegue executar o Ollama, comece com a conexão remota. Você obtém melhor qualidade de modelo no seu tablet imediatamente sem armazenar arquivos de modelo nele nem lidar com as limitações dos aplicativos móveis.',
           },
         ],
-        image: '/images/run-ai-on-tablet-two-modes-es.svg',
+        image: '/images/run-ai-on-tablet-two-modes-pt.svg',
         imageCaption: 'Dois modos de IA no tablet: inferência no dispositivo (o modelo roda no chip do tablet, funciona offline, limitado a modelos de 3B a 8B) vs conexão remota (o navegador do tablet se conecta ao Mac/PC em casa com Ollama, sem modelo armazenado no tablet, tamanho de modelo ilimitado).',
       },
       ipadOnDevice: {
         id: 'ipad-on-device',
         title: 'iPad: inferência no dispositivo',
         content:
-          '**O iPad Pro M5 é o único iPad que executa modelos de 7B a 8B em uma velocidade confortável.** A Apple elevou a RAM base do iPad Pro M5 para 12 GB (16 GB nos níveis de armazenamento de 1 TB/2 TB), ante os 8 GB do iPad Pro M4 base, e aumentou a largura de banda de memória de 120 GB/s para 153 GB/s — a inferência de LLM em Apple Silicon é limitada pela largura de banda de memória, então isso se traduz diretamente em geração mais rápida. O iPad Air M4 (12 GB, ante os 8 GB do M3 Air) agora executa modelos de 3B a 4B com folga, e não apenas adequadamente. O iPad Air M3 (8 GB) e outros iPads de 8 GB ficam limitados a modelos de 1B a 3B em Q4. [iPhones com 8 GB de RAM também executam modelos pequenos](/pt/power-local-llm/best-local-llm-apps-iphone-2026) por meio do LLM Farm.',
+          '**O iPad Pro M5 é o iPad mais indicado para modelos de 7B a 8B.** A Apple elevou a RAM base do iPad Pro M5 para 12 GB (16 GB nos níveis de armazenamento de 1 TB/2 TB), ante os 8 GB do iPad Pro M4 base, e aumentou a largura de banda de memória de 120 GB/s para 153 GB/s — a inferência de LLM em Apple Silicon é limitada pela largura de banda de memória, então isso se traduz diretamente em geração mais rápida. O iPad Air M4 (12 GB, ante os 8 GB do M3 Air) agora executa modelos de 3B a 4B com folga, e não apenas adequadamente. O iPad Air M3 (8 GB) e outros iPads de 8 GB ficam limitados a modelos de 1B a 3B em Q4. [iPhones com 8 GB de RAM também executam modelos pequenos](/pt/power-local-llm/best-local-llm-apps-iphone-2026) por meio do LLM Farm.',
         items: [
           '**PocketPal AI** (gratuito, código aberto MIT, iOS + Android): executa modelos GGUF via llama.cpp, baixa modelos do Hugging Face dentro do app ou importa arquivos, e inclui um benchmark integrado para você medir os tokens por segundo do seu próprio tablet. Última atualização upstream: 16 de outubro de 2026. Veja a [análise do PocketPal AI](/pt/power-local-llm/pocketpal-ai-review).',
           '**Locally AI** (gratuito com opções pagas, código fechado, iPhone/iPad/Mac): executa modelos abertos pelo framework MLX da Apple, feito para Apple Silicon. Última atualização na App Store: 15 de outubro de 2026. Veja a [análise do Locally AI](/pt/power-local-llm/locally-ai-review).',
@@ -3321,7 +3321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Não tente executar um modelo 7B em um iPad Air de 12 GB para chat em tempo real. A 7 a 10 tokens por segundo, cada resposta ainda leva de 10 a 20 segundos. Use modelos de 3B a 4B no iPad Air; atualize para o iPad Pro M5 de 16 GB ou mude para a conexão remota para modelos 7B em diante.',
           },
         ],
-        image: '/images/run-ai-on-tablet-ipad-speed-es.svg',
+        image: '/images/run-ai-on-tablet-ipad-speed-pt.svg',
         imageCaption: 'Velocidade de inferência no dispositivo no iPad: o iPad Pro M5 (12 GB / 16 GB) alcança de 23 a 38 tok/s no Phi-4 Mini e Llama 3.2 3B; o iPad Air M4 (12 GB) executa modelos de 3B a 4B a 15 a 20 tok/s, mas cai para 7 a 10 tok/s em modelos 7B — ainda lento para chat em tempo real.',
       },
       androidOnDevice: {
@@ -3351,7 +3351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instale o complemento Termux:Widget e crie um atalho que execute "ollama serve" — isso permite iniciar o servidor do Ollama na tela inicial do seu Android sem abrir o Termux manualmente.',
           },
         ],
-        image: '/images/run-ai-on-tablet-termux-setup-es.svg',
+        image: '/images/run-ai-on-tablet-termux-setup-pt.svg',
         imageCaption: 'IA no dispositivo no Android: configuração em 5 passos do Termux + Ollama — instale Termux pelo F-Droid (não Play Store), atualize pacotes, instale Ollama com pkg install ollama, baixe um modelo (phi4-mini ou qwen3:1.7b), depois inicie o servidor em localhost:11434. Requer mínimo de 8 GB de RAM.',
       },
       remoteConnection: {
@@ -3426,7 +3426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Para roleplay e ficção com cartões de personagem no iPad, RisuAI conectado a uma instância remota do Ollama executando Llama 3.3 70B é a melhor combinação disponível em 2026.',
+            text: 'Para roleplay e ficção com cartões de personagem no iPad, RisuAI conectado a uma instância remota do Ollama executando Llama 3.3 70B é uma combinação forte em 2026.',
           },
         ],
       },
@@ -3738,14 +3738,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'إذا كان لديك في المنزل جهاز Mac أو PC يستطيع تشغيل Ollama، فابدأ بالاتصال عن بُعد. ستحصل فورًا على جودة نموذج أفضل على لوحيك دون تخزين ملفات النماذج عليه ودون التعامل مع قيود تطبيقات الجوّال. يمكنك إضافة القدرة على التشغيل على الجهاز لاحقًا إذا احتجت إلى الاستخدام دون اتصال.',
           },
         ],
-        image: '/images/run-ai-on-tablet-two-modes-en.svg',
+        image: '/images/run-ai-on-tablet-two-modes-ar.svg',
         imageCaption: 'وضعا الذكاء الاصطناعي على اللوحي: الاستدلال على الجهاز (النموذج يعمل على شريحة اللوحي، ويعمل دون اتصال، ومحدود بنماذج 3B–8B) مقابل الاتصال عن بُعد (متصفح اللوحي يتصل بجهاز Mac/PC منزلي يشغّل Ollama، بلا نموذج مخزَّن على اللوحي وبحجم نموذج غير محدود).',
       },
       ipadOnDevice: {
         id: 'ipad-on-device',
         title: 'iPad: الاستدلال على الجهاز',
         content:
-          '**iPad Pro M5 هو الوحيد بين أجهزة iPad الذي يشغّل نماذج 7B–8B بسرعة مريحة.** رفعت Apple ذاكرة RAM الأساسية في iPad Pro M5 إلى 12 جيجابايت (16 جيجابايت في فئتَي التخزين 1 تيرابايت/2 تيرابايت)، مقارنة بـ 8 جيجابايت في iPad Pro M4 الأساسي، ورفعت سرعة نقل البيانات في الذاكرة إلى 153 جيجابايت/ثانية من 120 — والاستدلال على Apple Silicon محكوم بسرعة نقل الذاكرة، لذا ينعكس ذلك مباشرةً على سرعة التوليد. أما iPad Air M4 (12 جيجابايت، مقارنة بـ 8 جيجابايت في Air M3) فيشغّل الآن نماذج 3B–4B بسلاسة بدلًا من أداء مقبول فحسب. ويقتصر iPad Air M3 (8 جيجابايت) وأجهزة iPad الأخرى بذاكرة 8 جيجابايت على نماذج 1B–3B بتكميم Q4. [يشغّل iPhone بذاكرة 8 جيجابايت أيضًا نماذج صغيرة](/ar/power-local-llm/best-local-llm-apps-iphone-2026) عبر LLM Farm.',
+          '**iPad Pro M5 هو جهاز iPad الأنسب لنماذج 7B–8B.** رفعت Apple ذاكرة RAM الأساسية في iPad Pro M5 إلى 12 جيجابايت (16 جيجابايت في فئتَي التخزين 1 تيرابايت/2 تيرابايت)، مقارنة بـ 8 جيجابايت في iPad Pro M4 الأساسي، ورفعت سرعة نقل البيانات في الذاكرة إلى 153 جيجابايت/ثانية من 120 — والاستدلال على Apple Silicon محكوم بسرعة نقل الذاكرة، لذا ينعكس ذلك مباشرةً على سرعة التوليد. أما iPad Air M4 (12 جيجابايت، مقارنة بـ 8 جيجابايت في Air M3) فيشغّل الآن نماذج 3B–4B بسلاسة بدلًا من أداء مقبول فحسب. ويقتصر iPad Air M3 (8 جيجابايت) وأجهزة iPad الأخرى بذاكرة 8 جيجابايت على نماذج 1B–3B بتكميم Q4. [يشغّل iPhone بذاكرة 8 جيجابايت أيضًا نماذج صغيرة](/ar/power-local-llm/best-local-llm-apps-iphone-2026) عبر LLM Farm.',
         items: [
           '**PocketPal AI** (مجاني، مفتوح المصدر MIT، iOS + Android): يشغّل نماذج GGUF عبر llama.cpp، وينزّل النماذج من Hugging Face داخل التطبيق أو يستورد الملفات، ويتضمن اختبار أداء مدمجًا لتقيس بنفسك عدد الرموز في الثانية على لوحيك. آخر تحديث رسمي: 16 أكتوبر 2026 (2026-10-16). اطّلع على [مراجعة PocketPal AI](/ar/power-local-llm/pocketpal-ai-review).',
           '**Locally AI** (مجاني مع خيارات مدفوعة، مغلق المصدر، iPhone/iPad/Mac): يشغّل نماذج مفتوحة عبر إطار MLX من Apple المصمم لـ Apple Silicon. آخر تحديث على App Store: 15 أكتوبر 2026 (2026-10-15). اطّلع على [مراجعة Locally AI](/ar/power-local-llm/locally-ai-review).',
@@ -3762,7 +3762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'لا تحاول تشغيل نموذج 7B على iPad Air بذاكرة 12 جيجابايت للدردشة الفورية. عند 7–10 رموز في الثانية، يستغرق كل رد 10–20 ثانية. هذا مقبول لمهام التلخيص التي ترسل فيها الطلب وتنتظر، لكنه محبط للمحادثة. استخدم نماذج 3B–4B على iPad Air؛ وانتقل إلى iPad Pro M5 بذاكرة 16 جيجابايت أو إلى الاتصال عن بُعد لنماذج 7B فصاعدًا.',
           },
         ],
-        image: '/images/run-ai-on-tablet-ipad-speed-en.svg',
+        image: '/images/run-ai-on-tablet-ipad-speed-ar.svg',
         imageCaption: 'سرعة الاستدلال على iPad: يصل iPad Pro M5 (12 جيجابايت / 16 جيجابايت) إلى 23–38 رمز/ثانية على Phi-4 Mini وLlama 3.2 3B؛ ويشغّل iPad Air M4 (12 جيجابايت) نماذج 3B–4B بسرعة 15–20 رمز/ثانية لكنه ينخفض إلى 7–10 رموز/ثانية على نماذج 7B — وهي سرعة بطيئة للدردشة الفورية.',
       },
       androidOnDevice: {
@@ -3794,7 +3794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'ثبّت إضافة Termux:Widget وأنشئ اختصارًا يشغّل "ollama serve" — هذا يتيح لك بدء خادم Ollama من الشاشة الرئيسية في Android دون فتح Termux يدويًا. بمجرد أن يعمل Ollama، افتح أي تطبيق دردشة مضبوط للاتصال بـ localhost:11434.',
           },
         ],
-        image: '/images/run-ai-on-tablet-termux-setup-en.svg',
+        image: '/images/run-ai-on-tablet-termux-setup-ar.svg',
         imageCaption: 'الذكاء الاصطناعي على الجهاز في Android: إعداد Termux + Ollama في 5 خطوات — ثبّت Termux من F-Droid (وليس من متجر Play)، حدّث الحزم، ثبّت Ollama بالأمر pkg install ollama، نزّل نموذجًا (phi4-mini أو qwen3:1.7b)، ثم شغّل الخادم على localhost:11434. يتطلب 8 جيجابايت RAM كحد أدنى.',
       },
       remoteConnection: {
@@ -3863,7 +3863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'للعب الأدوار وخيال بطاقات الشخصيات على iPad، يُعد RisuAI المتصل بنسخة Ollama بعيدة تشغّل Llama 3.3 70B أفضل تركيبة متاحة في 2026. واجهة RisuAI للجوّال مصممة للمس؛ ويتيح الاتصال عن بُعد الوصول إلى نموذج 70B ينتج صوت شخصيات أفضل بكثير من أي نموذج يتسع على لوحي.',
+            text: 'للعب الأدوار وخيال بطاقات الشخصيات على iPad، يُعد RisuAI المتصل بنسخة Ollama بعيدة تشغّل Llama 3.3 70B تركيبة قوية في 2026. واجهة RisuAI للجوّال مصممة للمس؛ ويتيح الاتصال عن بُعد الوصول إلى نموذج 70B ينتج صوت شخصيات أفضل بكثير من أي نموذج يتسع على لوحي.',
           },
         ],
       },
@@ -3948,7 +3948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يستطيع اللوحي التعامل مع RAG للمستندات الطويلة؟',
-            a: 'على الجهاز، لا — فتضمين أكثر من 1000 مستند على لوحي غير عملي. عبر الاتصال عن بُعد، نعم — يتولى جهازك المنزلي خط RAG بينما يعرض اللوحي واجهة الدردشة. يتعامل AnythingLLM المشغَّل على جهاز منزلي والمُفتوح عبر متصفح اللوحي مع مجموعات مستندات بأي حجم دون حد من جانب اللوحي. للطلاب والعاملين في مجال المعرفة الراغبين في RAG على اللوحي، الاتصال عن بُعد هو الخيار العملي الوحيد.',
+            a: 'على الجهاز، لا — فتضمين أكثر من 1000 مستند على لوحي غير عملي. عبر الاتصال عن بُعد، نعم — يتولى جهازك المنزلي خط RAG بينما يعرض اللوحي واجهة الدردشة. يتعامل AnythingLLM المشغَّل على جهاز منزلي والمُفتوح عبر متصفح اللوحي مع مجموعات مستندات بأي حجم دون حد من جانب اللوحي. للطلاب والعاملين في مجال المعرفة الراغبين في RAG على اللوحي، الاتصال عن بُعد هو عادةً الخيار الأكثر عملية.',
           },
           {
             q: 'هل يمكنني استخدام شاشات خارجية مع الذكاء الاصطناعي على اللوحي؟',
@@ -3956,7 +3956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل اللوحي أفضل من الهاتف للذكاء الاصطناعي المحلي؟',
-            a: 'للاستخدام الكثيف الكتابة (الصياغة وRAG والمحادثات الطويلة)، نعم — فدعم لوحة المفاتيح وحجم الشاشة مهمان. للدردشة السريعة والاستعلامات الصوتية أو الاستخدام أثناء التنقل، الهاتف الذي تحمله أصلًا أفضل. iPad Pro M5 هو اللوحي الوحيد الذي يتفوق بوضوح على هاتف رائد في الذكاء الاصطناعي المحلي؛ أما الألواح والهواتف المتوسطة فمتقاربة تقريبًا. لا ينبغي لمعظم القراء شراء لوحي لأجل الذكاء الاصطناعي المحلي فقط — اشتره إذا أردت لوحيًا لأسباب أخرى؛ وقدرة الذكاء الاصطناعي ميزة إضافية.',
+            a: 'للاستخدام الكثيف الكتابة (الصياغة وRAG والمحادثات الطويلة)، نعم — فدعم لوحة المفاتيح وحجم الشاشة مهمان. للدردشة السريعة والاستعلامات الصوتية أو الاستخدام أثناء التنقل، الهاتف الذي تحمله أصلًا أفضل. iPad Pro M5 هو اللوحي الأكثر احتمالًا للتفوق على هاتف رائد في الذكاء الاصطناعي المحلي؛ أما الألواح والهواتف المتوسطة فمتقاربة تقريبًا. لا ينبغي لمعظم القراء شراء لوحي لأجل الذكاء الاصطناعي المحلي فقط — اشتره إذا أردت لوحيًا لأسباب أخرى؛ وقدرة الذكاء الاصطناعي ميزة إضافية.',
           },
           {
             q: 'لماذا الذكاء الاصطناعي المحلي بطيء جدًا على لوحي؟',
