@@ -79,12 +79,17 @@ export const US_FEDERAL_CERTIFICATION: CertificationInfo = {
 
 export const CHINA_PV_EXPORT_POLICY = {
   summary:
-    'China removed its PV-component export VAT rebate (not a tariff cut) effective Apr 1 2026 — rebate rate stepped 13%→9%→0%. This raises exporter costs, pushing module/kit prices up an estimated 10–15% into 2H 2026 (some forecasts as high as 30–40% short-term spike, others ~14.5% by year-end).',
+    'China removed its PV-component export VAT rebate effective April 1, 2026 (rate stepped 13%→9%→0%), and module prices jumped ahead of it — pv magazine reported Chinese TOPCon module prices up more than 30% between mid-December and late January. Since the rebate ended the move has not continued: the OPIS benchmark for Chinese TOPCon modules eased from about $0.119/W (April 7) to $0.108/W (September 22), and OPIS assessed Q1 2027 loading at a $0.02/W discount to spot.',
   sourceUrls: [
     'https://www.pv-tech.org/scrapping-of-chinas-pv-export-tax-rebate-prompts-panic-buying-and-module-price-surge/',
     'https://taiyangnews.info/markets/china-to-remove-solar-export-tax-rebates-from-april-1-2026',
+    'https://www.pv-magazine.com/2026/01/23/china-topcon-module-prices-climb-over-30-since-mid-december/',
+    'https://www.pv-magazine.com/2026/07/31/chinese-topcon-module-prices-fall-as-high-efficiency-supply-adds-pressure/',
+    'https://pv-magazine-usa.com/2026/09/29/china-and-u-s-module-prices-hold-ahead-of-golden-week-and-section-232-price-floors/',
   ],
-  lastVerified: '2026-07-02',
+  note:
+    'Wholesale FOB China module prices only — retail kit prices (inverter, cables, VAT, retailer margin) were NOT verified market by market. OPIS benchmark definition shifted over 2026 (≥600 W, then <645 W), so cross-date comparisons are approximate. The earlier 10–15% / 30–40% forecasts for 2H 2026 were not borne out in wholesale data as of 2026-10-19.',
+  lastVerified: '2026-10-19',
 };
 
 export const AMAZON_ASSOCIATES_POLICY = {
