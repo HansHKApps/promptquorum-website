@@ -8,12 +8,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud',
     seoTitle: 'Best LLM Fine-Tuning Framework 2026',
-    metaDescription: 'Unsloth is free and Apache-2.0 with multi-GPU included, Axolotl adds multi-node training, Together.ai charges $0.48/M tokens. Pricing.',
+    metaDescription: 'Unsloth is free and open-source with multi-GPU included, Axolotl adds multi-node training, Together.ai charges $0.48/M tokens. Pricing.',
     educationalLevel: 'Advanced',
     audience: 'ML engineers and developers fine-tuning LLMs',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-10-19',
     readTime: '13 min read',
     primaryTerm: 'LLM fine-tuning framework',
     targetKeywords: [
@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: 'Which LLM fine-tuning framework is best in 2026?',
       answer: '**Start with Unsloth if you are training on your own hardware, move to Axolotl when you need more than one machine, and use Together.ai or Fireworks.ai if you would rather not own the GPU at all.** The decision people actually face is not which library has the most stars but whether they want to run the training job themselves. If you own a capable GPU, local training costs almost nothing per run after setup. If you fine-tune a few times a year, a cloud API\'s per-token fee is usually cheaper than the time you would spend on drivers and environment setup.',
       bullets: [
-        '**Best overall local framework:** Unsloth — free Apache-2.0, multi-GPU included, runs on NVIDIA, AMD, Intel, CPU and macOS',
+        '**Best overall local framework:** Unsloth — free Apache-2.0 (core; Studio UI: AGPL-3.0), multi-GPU included, runs on NVIDIA, AMD, Intel, CPU and macOS',
         '**Best for scaling past one machine:** Axolotl — multi-node via Torchrun and Ray, ND parallelism, widest method surface',
         '**Leanest on Apple silicon:** MLX-LM — MIT-licensed, built on Apple\'s MLX, distributed training via mx.distributed',
         '**Best cloud API:** Together.ai — $0.48/M tokens LoRA on models up to 16B, $4 minimum per job',
@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Unsloth** — 75.0k GitHub stars, Apache-2.0. Its README states support for multi-GPU setups, NVIDIA, AMD and Intel GPUs, CPUs and the Vulkan backend, on Windows, Linux, WSL and macOS, and it ships desktop builds. Multi-GPU is **not** paywalled in the open-source project.',
+          '**Unsloth** — 75.0k GitHub stars, Apache-2.0 (core; Studio UI: AGPL-3.0). Its README states support for multi-GPU setups, NVIDIA, AMD and Intel GPUs, CPUs and the Vulkan backend, on Windows, Linux, WSL and macOS, and it ships desktop builds. Multi-GPU is **not** paywalled in the open-source project.',
           '**Axolotl** — 12.4k stars, Apache-2.0. The only one of the three with documented multi-node training (Torchrun, Ray) and ND parallelism composing context, tensor and fully-sharded data parallelism within and across nodes.',
           '**MLX-LM** — 6.8k stars, MIT, from Apple\'s `ml-explore` organisation, whose own profile describes it as "by Apple". Supports LoRA and full fine-tuning, quantized models, and distributed inference and fine-tuning through `mx.distributed`.',
           '**Together.ai** — LoRA supervised fine-tuning at $0.48/M training tokens up to 16B parameters, $1.50 at 17–69B and $2.90 at 70–100B. Full supervised fine-tuning is considerably more: $1.20, $3.75 and $7.25 across the same tiers. A $4.00 minimum applies per job.',
@@ -76,7 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '🏆 Best choice for your situation',
         content: '**The split that matters is whether you run the training job or pay someone else to run it.** Read down this list and stop at the first line that describes you.',
         items: [
-          '**You own a capable GPU and want the shortest path to a working fine-tune** → Unsloth. Free, Apache-2.0, and now covers multi-GPU and non-NVIDIA hardware, so the old reason to graduate away from it has largely gone.',
+          '**You own a capable GPU and want the shortest path to a working fine-tune** → Unsloth. Free, Apache-2.0 (core; Studio UI: AGPL-3.0), and now covers multi-GPU and non-NVIDIA hardware, so the old reason to graduate away from it has largely gone.',
           '**Your training run no longer fits on one machine** → Axolotl. Multi-node via Torchrun and Ray plus ND parallelism is the genuine dividing line between it and Unsloth in 2026.',
           '**You are on an M-series Mac** → MLX-LM if you want the leanest MLX-native path, though Unsloth now runs on macOS too, so this is a preference rather than the only option it used to be.',
           '**You need DPO, ORPO, KTO, GRPO or reward modelling** → Axolotl. Its documented method surface is the widest of the three by a clear margin.',
@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Criterion', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { Criterion: 'GitHub stars', Unsloth: '75.0k', Axolotl: '12.4k', 'MLX-LM': '6.8k' },
-          { Criterion: 'Licence', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
+          { Criterion: 'Licence', Unsloth: 'Core: Apache-2.0 / Studio UI: AGPL-3.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
           { Criterion: 'Best for', Unsloth: 'Fastest path on hardware you own', Axolotl: 'Scaling past a single machine', 'MLX-LM': 'Lean MLX-native work on a Mac' },
           { Criterion: 'Multi-GPU', Unsloth: 'Yes, in the open-source project', Axolotl: 'Yes — FSDP1, FSDP2, DeepSpeed', 'MLX-LM': 'Via mx.distributed' },
           { Criterion: 'Multi-node', Unsloth: 'Not documented in README', Axolotl: 'Yes — Torchrun and Ray', 'MLX-LM': 'Via mx.distributed' },
@@ -147,15 +147,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unsloth: {
         id: 'unsloth',
         title: 'Unsloth: the default local choice',
-        content: '**Unsloth is where most people should start, and the reasons have grown rather than shrunk.** It is the most-starred of the three by a wide margin, the licence is Apache-2.0, and the hardware and OS coverage is now the broadest of any framework here.',
+        content: '**Unsloth is where most people should start, and the reasons have grown rather than shrunk.** It is the most-starred of the three by a wide margin, the core is Apache-2.0 (the optional Studio UI is AGPL-3.0), and the hardware and OS coverage is now the broadest of any framework here.',
         rankedItems: [
           {
             rank: 1,
             name: 'Unsloth — best overall local framework',
-            tagline: 'Free Apache-2.0, multi-GPU included, runs on NVIDIA, AMD, Intel, CPU and macOS',
-            verdict: 'Unsloth rewrites attention and gradient kernels to cut VRAM use and speed up LoRA and QLoRA training, and that remains its core appeal. What has changed is reach. Its README now states support for multi-GPU setups across NVIDIA, AMD and Intel GPUs, CPUs and the Vulkan backend, running on Windows, Linux, WSL and macOS, with desktop builds available for each. Nothing in the 22 KB Apache-2.0 README gates any of that behind a paid tier. The project has also broadened beyond a training library into something closer to a local workbench, with a Studio UI and an OpenAI-compatible serving endpoint. Paid Pro and Enterprise tiers do exist, but their pricing is not published, so treat any specific dollar figure you see quoted elsewhere as unverified.',
+            tagline: 'Free Apache-2.0 (core; Studio UI: AGPL-3.0), multi-GPU included, runs on NVIDIA, AMD, Intel, CPU and macOS',
+            verdict: 'Unsloth rewrites attention and gradient kernels to cut VRAM use and speed up LoRA and QLoRA training, and that remains its core appeal. What has changed is reach. Its README now states support for multi-GPU setups across NVIDIA, AMD and Intel GPUs, CPUs and the Vulkan backend, running on Windows, Linux, WSL and macOS, with desktop builds available for each. Nothing in the 22 KB README gates any of that behind a paid tier. The project has also broadened beyond a training library into something closer to a local workbench, with a Studio UI and an OpenAI-compatible serving endpoint. Paid Pro and Enterprise tiers do exist, but their pricing is not published, so treat any specific dollar figure you see quoted elsewhere as unverified.',
             pros: [
-              'Free and Apache-2.0, with multi-GPU support in the open-source project',
+              'Free; core under Apache-2.0 (Studio UI: AGPL-3.0), with multi-GPU support in the open-source project',
               'Widest hardware coverage here: NVIDIA, AMD, Intel, CPU and Vulkan',
               'Runs on Windows, Linux, WSL and macOS, with desktop builds',
               'Lowest setup effort of the three — an installer rather than a config tree',
@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://github.com/unslothai/unsloth',
                 productName: 'Unsloth',
                 productCategory: 'dev-tool',
-                priceRange: 'Free, Apache-2.0; paid tiers quote-only',
+                priceRange: 'Free; core Apache-2.0, Studio UI AGPL-3.0; paid tiers quote-only',
                 label: 'Unsloth — open-source repository',
               },
             ],
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Believing multi-GPU requires Unsloth\'s paid tier',
-            whyItMatters: 'This was widely repeated and is contradicted by the project\'s current README, which lists multi-GPU support alongside AMD, Intel, CPU and Vulkan backends with no paid gate anywhere in the Apache-2.0 repository. Teams have adopted a heavier framework purely to get multi-GPU they already had.',
+            whyItMatters: 'This was widely repeated and is contradicted by the project\'s current README, which lists multi-GPU support alongside AMD, Intel, CPU and Vulkan backends with no paid gate anywhere in the open-source repository. Teams have adopted a heavier framework purely to get multi-GPU they already had.',
           },
           {
             title: 'Quoting Together.ai full fine-tuning as $0.54 to $3.20 per million tokens',
@@ -454,7 +454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud',
       description: 'Compares Unsloth, Axolotl and MLX-LM for local fine-tuning against Together.ai and Fireworks.ai cloud APIs, with verified pricing, licences and capability claims.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-10-19',
       url: 'https://www.promptquorum.com/local-llms/best-llm-fine-tuning-framework',
       inLanguage: 'en',
       proficiencyLevel: 'Advanced',
@@ -527,7 +527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'en',
       numberOfItems: 5,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: 'Best overall local framework — free Apache-2.0, multi-GPU included, runs on NVIDIA, AMD, Intel, CPU and macOS' },
+        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: 'Best overall local framework — free Apache-2.0 (core; Studio UI: AGPL-3.0), multi-GPU included, runs on NVIDIA, AMD, Intel, CPU and macOS' },
         { '@type': 'ListItem', position: 2, name: 'Axolotl', description: 'Best for scaling past one machine — multi-node via Torchrun and Ray, ND parallelism, widest method surface' },
         { '@type': 'ListItem', position: 3, name: 'MLX-LM', description: 'Best lean option on Apple silicon — MIT licence, built on Apple MLX, distributed training via mx.distributed' },
         { '@type': 'ListItem', position: 4, name: 'Together.ai', description: 'Best cloud API — $0.48 per million tokens LoRA SFT up to 16B, $4 minimum per job' },
@@ -542,12 +542,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Bestes LLM-Finetuning-Framework 2026: Unsloth, Axolotl oder Cloud',
     seoTitle: 'Bestes LLM-Finetuning-Framework 2026',
-    metaDescription: 'Unsloth ist kostenlos unter Apache-2.0 inklusive Multi-GPU, Axolotl ergänzt Multi-Node-Training, Together.ai kostet 0,48 $/Mio. Token.',
+    metaDescription: 'Unsloth ist kostenlos und quelloffen inklusive Multi-GPU, Axolotl ergänzt Multi-Node-Training, Together.ai kostet 0,48 $/Mio. Token.',
     educationalLevel: 'Advanced',
     audience: 'ML-Engineers und Entwickler, die LLMs feinabstimmen',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-10-19',
     readTime: '13 Min. Lesezeit',
     primaryTerm: 'LLM-Finetuning-Framework',
     targetKeywords: [
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: 'Welches LLM-Finetuning-Framework ist 2026 das beste?',
       answer: '**Beginnen Sie mit Unsloth, wenn Sie auf eigener Hardware trainieren, wechseln Sie zu Axolotl, sobald Sie mehr als eine Maschine brauchen, und nutzen Sie Together.ai oder Fireworks.ai, wenn Sie gar keine GPU besitzen möchten.** Die Entscheidung, vor der man tatsächlich steht, lautet nicht, welche Bibliothek die meisten Sterne hat, sondern ob man den Trainingslauf selbst betreiben will. Wer eine leistungsfähige GPU besitzt, zahlt nach der Einrichtung pro Lauf fast nichts. Wer wenige Male im Jahr feinabstimmt, fährt mit der Token-Gebühr einer Cloud-API meist günstiger als mit der Zeit für Treiber und Umgebungseinrichtung.',
       bullets: [
-        '**Bestes lokales Framework insgesamt:** Unsloth — kostenlos unter Apache-2.0, Multi-GPU inklusive, läuft auf NVIDIA, AMD, Intel, CPU und macOS',
+        '**Bestes lokales Framework insgesamt:** Unsloth — kostenlos unter Apache-2.0 (Kern; Studio-UI: AGPL-3.0), Multi-GPU inklusive, läuft auf NVIDIA, AMD, Intel, CPU und macOS',
         '**Am besten über eine Maschine hinaus:** Axolotl — Multi-Node über Torchrun und Ray, ND-Parallelität, breiteste Methodenauswahl',
         '**Am schlanksten auf Apple Silicon:** MLX-LM — MIT-Lizenz, auf Apples MLX aufgebaut, verteiltes Training über mx.distributed',
         '**Beste Cloud-API:** Together.ai — 0,48 $/Mio. Token für LoRA bei Modellen bis 16B, 4 $ Mindestbetrag pro Job',
@@ -596,7 +596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Unsloth** — 75,0k GitHub-Sterne, Apache-2.0. Die README nennt Unterstützung für Multi-GPU-Setups, NVIDIA-, AMD- und Intel-GPUs, CPUs sowie das Vulkan-Backend unter Windows, Linux, WSL und macOS, samt Desktop-Builds. Multi-GPU steht im Open-Source-Projekt **nicht** hinter einer Bezahlschranke.',
+          '**Unsloth** — 75,0k GitHub-Sterne, Apache-2.0 (Kern; Studio-UI: AGPL-3.0). Die README nennt Unterstützung für Multi-GPU-Setups, NVIDIA-, AMD- und Intel-GPUs, CPUs sowie das Vulkan-Backend unter Windows, Linux, WSL und macOS, samt Desktop-Builds. Multi-GPU steht im Open-Source-Projekt **nicht** hinter einer Bezahlschranke.',
           '**Axolotl** — 12,4k Sterne, Apache-2.0. Als einziges der drei dokumentiert es Multi-Node-Training (Torchrun, Ray) sowie ND-Parallelität, die Context-, Tensor- und Fully-Sharded-Data-Parallelität innerhalb einzelner und über mehrere Knoten hinweg kombiniert.',
           '**MLX-LM** — 6,8k Sterne, MIT, aus Apples Organisation `ml-explore`, deren eigenes Profil die Arbeit als „by Apple" beschreibt. Unterstützt LoRA und vollständiges Finetuning, quantisierte Modelle sowie verteilte Inferenz und Feinabstimmung über `mx.distributed`.',
           '**Together.ai** — überwachtes LoRA-Finetuning für 0,48 $/Mio. Trainings-Token bis 16B Parameter, 1,50 $ bei 17–69B und 2,90 $ bei 70–100B. Vollständiges überwachtes Finetuning kostet deutlich mehr: 1,20 $, 3,75 $ und 7,25 $ in denselben Stufen. Pro Job gilt ein Mindestbetrag von 4,00 $.',
@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '🏆 Die beste Wahl für Ihre Situation',
         content: '**Entscheidend ist, ob Sie den Trainingslauf selbst betreiben oder jemanden dafür bezahlen.** Lesen Sie die Liste von oben und halten Sie bei der ersten Zeile inne, die auf Sie zutrifft.',
         items: [
-          '**Sie besitzen eine leistungsfähige GPU und wollen den kürzesten Weg zu einem funktionierenden Finetuning** → Unsloth. Kostenlos, Apache-2.0 und inzwischen inklusive Multi-GPU und Nicht-NVIDIA-Hardware, womit der frühere Grund zum Wechsel weitgehend entfällt.',
+          '**Sie besitzen eine leistungsfähige GPU und wollen den kürzesten Weg zu einem funktionierenden Finetuning** → Unsloth. Kostenlos, Apache-2.0 (Kern; Studio-UI: AGPL-3.0) und inzwischen inklusive Multi-GPU und Nicht-NVIDIA-Hardware, womit der frühere Grund zum Wechsel weitgehend entfällt.',
           '**Ihr Trainingslauf passt nicht mehr auf eine Maschine** → Axolotl. Multi-Node über Torchrun und Ray sowie ND-Parallelität sind 2026 die echte Trennlinie zu Unsloth.',
           '**Sie arbeiten an einem Mac mit M-Series-Chip** → MLX-LM, wenn Sie den schlanksten MLX-nativen Weg wollen. Da Unsloth inzwischen ebenfalls unter macOS läuft, ist das jedoch eine Präferenz und nicht mehr die einzige Option.',
           '**Sie brauchen DPO, ORPO, KTO, GRPO oder Reward Modelling** → Axolotl. Die dokumentierte Methodenauswahl ist mit deutlichem Abstand die breiteste der drei.',
@@ -663,7 +663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Kriterium', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { Kriterium: 'GitHub-Sterne', Unsloth: '75,0k', Axolotl: '12,4k', 'MLX-LM': '6,8k' },
-          { Kriterium: 'Lizenz', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
+          { Kriterium: 'Lizenz', Unsloth: 'Kern: Apache-2.0 / Studio-UI: AGPL-3.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
           { Kriterium: 'Am besten für', Unsloth: 'Schnellster Weg auf eigener Hardware', Axolotl: 'Skalieren über eine Maschine hinaus', 'MLX-LM': 'Schlanke MLX-native Arbeit am Mac' },
           { Kriterium: 'Multi-GPU', Unsloth: 'Ja, im Open-Source-Projekt', Axolotl: 'Ja — FSDP1, FSDP2, DeepSpeed', 'MLX-LM': 'Über mx.distributed' },
           { Kriterium: 'Multi-Node', Unsloth: 'In der README nicht dokumentiert', Axolotl: 'Ja — Torchrun und Ray', 'MLX-LM': 'Über mx.distributed' },
@@ -681,15 +681,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unsloth: {
         id: 'unsloth',
         title: 'Unsloth: die lokale Standardwahl',
-        content: '**Bei Unsloth sollten die meisten anfangen, und die Gründe dafür sind mehr geworden, nicht weniger.** Es hat mit großem Abstand die meisten Sterne der drei, die Lizenz ist Apache-2.0, und die Hardware- und Betriebssystemabdeckung ist inzwischen die breiteste hier.',
+        content: '**Bei Unsloth sollten die meisten anfangen, und die Gründe dafür sind mehr geworden, nicht weniger.** Es hat mit großem Abstand die meisten Sterne der drei, der Kern steht unter Apache-2.0 (die optionale Studio-Oberfläche unter AGPL-3.0), und die Hardware- und Betriebssystemabdeckung ist inzwischen die breiteste hier.',
         rankedItems: [
           {
             rank: 1,
             name: 'Unsloth — bestes lokales Framework insgesamt',
-            tagline: 'Kostenlos unter Apache-2.0, Multi-GPU inklusive, läuft auf NVIDIA, AMD, Intel, CPU und macOS',
-            verdict: 'Unsloth schreibt Attention- und Gradienten-Kernel neu, um den VRAM-Bedarf zu senken und LoRA- sowie QLoRA-Training zu beschleunigen — das bleibt der Kern seiner Attraktivität. Verändert hat sich die Reichweite. Die README nennt inzwischen Unterstützung für Multi-GPU-Setups über NVIDIA-, AMD- und Intel-GPUs, CPUs und das Vulkan-Backend, lauffähig unter Windows, Linux, WSL und macOS, mit Desktop-Builds für jedes System. Nichts in der 22 KB großen Apache-2.0-README stellt davon etwas hinter eine Bezahlschranke. Das Projekt ist zudem über eine reine Trainingsbibliothek hinausgewachsen und ähnelt eher einer lokalen Werkbank, mit einer Studio-Oberfläche und einem OpenAI-kompatiblen Serving-Endpunkt. Kostenpflichtige Pro- und Enterprise-Stufen existieren, ihre Preise sind jedoch nicht veröffentlicht: Behandeln Sie jede anderswo genannte konkrete Zahl als ungeprüft.',
+            tagline: 'Kostenlos unter Apache-2.0 (Kern; Studio-UI: AGPL-3.0), Multi-GPU inklusive, läuft auf NVIDIA, AMD, Intel, CPU und macOS',
+            verdict: 'Unsloth schreibt Attention- und Gradienten-Kernel neu, um den VRAM-Bedarf zu senken und LoRA- sowie QLoRA-Training zu beschleunigen — das bleibt der Kern seiner Attraktivität. Verändert hat sich die Reichweite. Die README nennt inzwischen Unterstützung für Multi-GPU-Setups über NVIDIA-, AMD- und Intel-GPUs, CPUs und das Vulkan-Backend, lauffähig unter Windows, Linux, WSL und macOS, mit Desktop-Builds für jedes System. Nichts in der 22 KB großen README stellt davon etwas hinter eine Bezahlschranke. Das Projekt ist zudem über eine reine Trainingsbibliothek hinausgewachsen und ähnelt eher einer lokalen Werkbank, mit einer Studio-Oberfläche und einem OpenAI-kompatiblen Serving-Endpunkt. Kostenpflichtige Pro- und Enterprise-Stufen existieren, ihre Preise sind jedoch nicht veröffentlicht: Behandeln Sie jede anderswo genannte konkrete Zahl als ungeprüft.',
             pros: [
-              'Kostenlos und Apache-2.0, mit Multi-GPU-Unterstützung im Open-Source-Projekt',
+              'Kostenlos; Kern unter Apache-2.0 (Studio-UI: AGPL-3.0), mit Multi-GPU-Unterstützung im Open-Source-Projekt',
               'Breiteste Hardwareabdeckung hier: NVIDIA, AMD, Intel, CPU und Vulkan',
               'Läuft unter Windows, Linux, WSL und macOS, mit Desktop-Builds',
               'Geringster Einrichtungsaufwand der drei — ein Installer statt eines Konfigurationsbaums',
@@ -704,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://github.com/unslothai/unsloth',
                 productName: 'Unsloth',
                 productCategory: 'dev-tool',
-                priceRange: 'Kostenlos, Apache-2.0; kostenpflichtige Stufen nur auf Anfrage',
+                priceRange: 'Kostenlos; Kern Apache-2.0, Studio-UI AGPL-3.0; kostenpflichtige Stufen nur auf Anfrage',
                 label: 'Unsloth — Open-Source-Repository',
               },
             ],
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Glauben, Multi-GPU erfordere Unsloths kostenpflichtige Stufe',
-            whyItMatters: 'Das wurde vielfach wiederholt und widerspricht der aktuellen README des Projekts, die Multi-GPU-Unterstützung neben AMD-, Intel-, CPU- und Vulkan-Backends nennt, ohne dass es im Apache-2.0-Repository irgendwo eine Bezahlschranke gäbe. Teams haben ein schwereres Framework eingeführt, nur um Multi-GPU zu bekommen, das sie längst hatten.',
+            whyItMatters: 'Das wurde vielfach wiederholt und widerspricht der aktuellen README des Projekts, die Multi-GPU-Unterstützung neben AMD-, Intel-, CPU- und Vulkan-Backends nennt, ohne dass es im Open-Source-Repository irgendwo eine Bezahlschranke gäbe. Teams haben ein schwereres Framework eingeführt, nur um Multi-GPU zu bekommen, das sie längst hatten.',
           },
           {
             title: 'Vollständiges Finetuning bei Together.ai mit 0,54 bis 3,20 $ pro Million Token angeben',
@@ -921,7 +921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Ist Cloud-Finetuning teurer als lokales?', a: 'Das hängt davon ab, wie oft Sie trainieren. Für einen einzelnen Lauf auf einem kleinen Datensatz liegt die Cloud-Gebühr bei wenigen Dollar, was meist unter dem Wert eines Abends für die Umgebungseinrichtung liegt. Bei häufiger Iteration auf bereits vorhandener Hardware ist lokal ab dem zweiten Lauf günstiger, weil die Grenzkosten der Rechenleistung nahe null liegen.' },
             { q: 'Brauche ich Multi-GPU, um ein 7B-Modell feinabzustimmen?', a: 'In der Regel nicht. Eine einzelne Karte der 24-GB-Klasse bewältigt ein 7B-Modell mit QLoRA komfortabel. Multi-GPU ist eher bei größeren Modellen oder vollständigem Finetuning ohne LoRA relevant. Zur VRAM-Dimensionierung siehe den [Leitfaden zu den Hardwareanforderungen](/de/prompt-bites/fine-tuning-7b-model-locally-hardware).' },
             { q: 'Ist DSGVO-konformes Finetuning mit einer US-Cloud-API überhaupt möglich?', a: 'Möglich ja, aber aufwendiger als lokales Training. Sie brauchen einen Auftragsverarbeitungsvertrag nach Artikel 28, eine tragfähige Rechtsgrundlage für die Übermittlung nach den Artikeln 44 bis 49 und eine dokumentierte Folgenabschätzung, wenn der Trainingsdatensatz personenbezogene Daten enthält. Erschwerend kommt hinzu, dass Trainingsdaten in die Modellgewichte eingehen und sich damit schlechter zurückholen lassen als ein einzelner Prompt. Für sensible Datensätze ist lokales Finetuning mit Unsloth oder Axolotl der deutlich einfachere Weg zur Rechtskonformität.' },
-            { q: 'Welches Framework passt zu einem Mittelständler ohne eigenes ML-Team?', a: 'Unsloth auf einer einzelnen Workstation mit einer Karte der 24-GB-Klasse. Der Einrichtungsaufwand ist der geringste der drei, die Lizenz ist Apache-2.0 und damit kommerziell unproblematisch, und die Daten verlassen das Haus nicht — was die datenschutzrechtliche Prüfung erheblich verkürzt. Axolotl lohnt sich erst, wenn Sie tatsächlich über mehrere Maschinen trainieren, und bindet sonst nur Personal an ein Konfigurationssystem. Prüfen Sie vorab ernsthaft, ob eine RAG-Pipeline Ihr Problem nicht ohne Training löst: Bei den meisten Mittelstandsanwendungen lautet die Antwort ja.' },
+            { q: 'Welches Framework passt zu einem Mittelständler ohne eigenes ML-Team?', a: 'Unsloth auf einer einzelnen Workstation mit einer Karte der 24-GB-Klasse. Der Einrichtungsaufwand ist der geringste der drei, das Kernpaket steht unter Apache-2.0 (die optionale Studio-Oberfläche unter AGPL-3.0), und die Daten verlassen das Haus nicht — was die datenschutzrechtliche Prüfung erheblich verkürzt. Axolotl lohnt sich erst, wenn Sie tatsächlich über mehrere Maschinen trainieren, und bindet sonst nur Personal an ein Konfigurationssystem. Prüfen Sie vorab ernsthaft, ob eine RAG-Pipeline Ihr Problem nicht ohne Training löst: Bei den meisten Mittelstandsanwendungen lautet die Antwort ja.' },
           ],
       },
       verdict: {
@@ -966,7 +966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Bestes LLM-Finetuning-Framework 2026: Unsloth, Axolotl oder Cloud',
       description: 'Vergleicht Unsloth, Axolotl und MLX-LM für lokales Finetuning mit den Cloud-APIs von Together.ai und Fireworks.ai, mit geprüften Preisen, Lizenzen und Funktionsangaben.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-10-19',
       url: 'https://www.promptquorum.com/de/local-llms/best-llm-fine-tuning-framework',
       inLanguage: 'de',
       proficiencyLevel: 'Advanced',
@@ -1067,7 +1067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Welches Framework passt zu einem Mittelständler ohne eigenes ML-Team?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Unsloth auf einer einzelnen Workstation mit einer Karte der 24-GB-Klasse. Der Einrichtungsaufwand ist der geringste der drei, die Lizenz ist Apache-2.0 und damit kommerziell unproblematisch, und die Daten verlassen das Haus nicht — was die datenschutzrechtliche Prüfung erheblich verkürzt. Axolotl lohnt sich erst, wenn Sie tatsächlich über mehrere Maschinen trainieren, und bindet sonst nur Personal an ein Konfigurationssystem. Prüfen Sie vorab ernsthaft, ob eine RAG-Pipeline Ihr Problem nicht ohne Training löst: Bei den meisten Mittelstandsanwendungen lautet die Antwort ja.',
+              'text': 'Unsloth auf einer einzelnen Workstation mit einer Karte der 24-GB-Klasse. Der Einrichtungsaufwand ist der geringste der drei, das Kernpaket steht unter Apache-2.0 (die optionale Studio-Oberfläche unter AGPL-3.0), und die Daten verlassen das Haus nicht — was die datenschutzrechtliche Prüfung erheblich verkürzt. Axolotl lohnt sich erst, wenn Sie tatsächlich über mehrere Maschinen trainieren, und bindet sonst nur Personal an ein Konfigurationssystem. Prüfen Sie vorab ernsthaft, ob eine RAG-Pipeline Ihr Problem nicht ohne Training löst: Bei den meisten Mittelstandsanwendungen lautet die Antwort ja.',
             },
           },
         ],
@@ -1079,7 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'de',
       numberOfItems: 5,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: 'Bestes lokales Framework insgesamt — kostenlos unter Apache-2.0, Multi-GPU inklusive, läuft auf NVIDIA, AMD, Intel, CPU und macOS' },
+        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: 'Bestes lokales Framework insgesamt — kostenlos unter Apache-2.0 (Kern; Studio-UI: AGPL-3.0), Multi-GPU inklusive, läuft auf NVIDIA, AMD, Intel, CPU und macOS' },
         { '@type': 'ListItem', position: 2, name: 'Axolotl', description: 'Am besten zum Skalieren über eine Maschine hinaus — Multi-Node über Torchrun und Ray, ND-Parallelität, breiteste Methodenauswahl' },
         { '@type': 'ListItem', position: 3, name: 'MLX-LM', description: 'Beste schlanke Option auf Apple Silicon — MIT-Lizenz, auf Apples MLX aufgebaut, verteiltes Training über mx.distributed' },
         { '@type': 'ListItem', position: 4, name: 'Together.ai', description: 'Beste Cloud-API — 0,48 $ pro Million Token LoRA-SFT bis 16B, 4 $ Mindestbetrag pro Job' },
@@ -1094,12 +1094,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Mejor framework de fine-tuning de LLM 2026: Unsloth, Axolotl o nube',
     seoTitle: 'Mejor framework de fine-tuning de LLM 2026',
-    metaDescription: 'Unsloth es gratuito con Apache-2.0 e incluye multi-GPU, Axolotl añade entrenamiento multinodo, Together.ai cobra 0,48 $/M tokens.',
+    metaDescription: 'Unsloth es gratuito y de código abierto e incluye multi-GPU, Axolotl añade entrenamiento multinodo, Together.ai cobra 0,48 $/M tokens.',
     educationalLevel: 'Advanced',
     audience: 'Ingenieros de ML y desarrolladores que ajustan LLM',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-10-19',
     readTime: '13 min de lectura',
     primaryTerm: 'framework de fine-tuning de LLM',
     targetKeywords: [
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: '¿Qué framework de fine-tuning de LLM es mejor en 2026?',
       answer: '**Empiece con Unsloth si entrena en su propio hardware, pase a Axolotl cuando necesite más de una máquina y use Together.ai o Fireworks.ai si prefiere no tener GPU.** La decisión real no es qué biblioteca tiene más estrellas, sino si quiere ejecutar usted el entrenamiento. Si tiene una GPU capaz, entrenar en local no cuesta casi nada por ejecución una vez configurado. Si ajusta unas pocas veces al año, la tarifa por token de una API en la nube suele salir más barata que el tiempo que dedicaría a controladores y entorno.',
       bullets: [
-        '**Mejor framework local general:** Unsloth — gratuito con Apache-2.0, multi-GPU incluido, funciona en NVIDIA, AMD, Intel, CPU y macOS',
+        '**Mejor framework local general:** Unsloth — gratuito con Apache-2.0 (núcleo; Studio UI: AGPL-3.0), multi-GPU incluido, funciona en NVIDIA, AMD, Intel, CPU y macOS',
         '**Mejor para escalar más allá de una máquina:** Axolotl — multinodo con Torchrun y Ray, paralelismo ND, la gama de métodos más amplia',
         '**Más ligero en Apple Silicon:** MLX-LM — licencia MIT, construido sobre MLX de Apple, entrenamiento distribuido con mx.distributed',
         '**Mejor API en la nube:** Together.ai — 0,48 $/M tokens de LoRA en modelos de hasta 16B, mínimo de 4 $ por trabajo',
@@ -1148,7 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Unsloth** — 75,0k estrellas en GitHub, Apache-2.0. Su README declara compatibilidad con configuraciones multi-GPU, GPU de NVIDIA, AMD e Intel, CPU y el backend Vulkan, en Windows, Linux, WSL y macOS, con compilaciones de escritorio. Multi-GPU **no** está detrás de un muro de pago en el proyecto de código abierto.',
+          '**Unsloth** — 75,0k estrellas en GitHub, Apache-2.0 (núcleo; Studio UI: AGPL-3.0). Su README declara compatibilidad con configuraciones multi-GPU, GPU de NVIDIA, AMD e Intel, CPU y el backend Vulkan, en Windows, Linux, WSL y macOS, con compilaciones de escritorio. Multi-GPU **no** está detrás de un muro de pago en el proyecto de código abierto.',
           '**Axolotl** — 12,4k estrellas, Apache-2.0. El único de los tres con entrenamiento multinodo documentado (Torchrun, Ray) y paralelismo ND que combina paralelismo de contexto, de tensores y de datos totalmente fragmentados dentro de un nodo y entre varios.',
           '**MLX-LM** — 6,8k estrellas, MIT, de la organización `ml-explore` de Apple, cuyo propio perfil describe el trabajo como «by Apple». Admite LoRA y fine-tuning completo, modelos cuantizados e inferencia y ajuste distribuidos mediante `mx.distributed`.',
           '**Together.ai** — fine-tuning supervisado con LoRA a 0,48 $/M tokens de entrenamiento hasta 16B parámetros, 1,50 $ en 17–69B y 2,90 $ en 70–100B. El fine-tuning supervisado completo cuesta bastante más: 1,20 $, 3,75 $ y 7,25 $ en esos mismos tramos. Se aplica un mínimo de 4,00 $ por trabajo.',
@@ -1162,7 +1162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '🏆 La mejor opción para su caso',
         content: '**La división que importa es si ejecuta usted el entrenamiento o paga a otro por ejecutarlo.** Lea la lista y deténgase en la primera línea que le describa.',
         items: [
-          '**Tiene una GPU capaz y quiere el camino más corto a un ajuste funcional** → Unsloth. Gratuito, Apache-2.0 y ahora con multi-GPU y hardware no NVIDIA, así que el viejo motivo para abandonarlo ha desaparecido en gran medida.',
+          '**Tiene una GPU capaz y quiere el camino más corto a un ajuste funcional** → Unsloth. Gratuito, Apache-2.0 (núcleo; Studio UI: AGPL-3.0) y ahora con multi-GPU y hardware no NVIDIA, así que el viejo motivo para abandonarlo ha desaparecido en gran medida.',
           '**Su entrenamiento ya no cabe en una máquina** → Axolotl. El multinodo con Torchrun y Ray más el paralelismo ND es la verdadera línea divisoria frente a Unsloth en 2026.',
           '**Trabaja en un Mac con chip de la serie M** → MLX-LM si quiere la vía más ligera y nativa de MLX, aunque Unsloth ya funciona también en macOS, así que hoy es una preferencia y no la única opción.',
           '**Necesita DPO, ORPO, KTO, GRPO o modelado de recompensa** → Axolotl. Su gama documentada de métodos es con diferencia la más amplia de los tres.',
@@ -1215,7 +1215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Criterio', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { Criterio: 'Estrellas en GitHub', Unsloth: '75,0k', Axolotl: '12,4k', 'MLX-LM': '6,8k' },
-          { Criterio: 'Licencia', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
+          { Criterio: 'Licencia', Unsloth: 'Núcleo: Apache-2.0 / Studio UI: AGPL-3.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
           { Criterio: 'Mejor para', Unsloth: 'La vía más rápida en hardware propio', Axolotl: 'Escalar más allá de una máquina', 'MLX-LM': 'Trabajo ligero nativo de MLX en Mac' },
           { Criterio: 'Multi-GPU', Unsloth: 'Sí, en el proyecto de código abierto', Axolotl: 'Sí — FSDP1, FSDP2, DeepSpeed', 'MLX-LM': 'Mediante mx.distributed' },
           { Criterio: 'Multinodo', Unsloth: 'No documentado en el README', Axolotl: 'Sí — Torchrun y Ray', 'MLX-LM': 'Mediante mx.distributed' },
@@ -1233,15 +1233,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unsloth: {
         id: 'unsloth',
         title: 'Unsloth: la opción local por defecto',
-        content: '**Unsloth es por donde debería empezar la mayoría, y los motivos han aumentado en lugar de reducirse.** Es con diferencia el más valorado de los tres, la licencia es Apache-2.0 y su cobertura de hardware y sistemas operativos es hoy la más amplia de las aquí presentes.',
+        content: '**Unsloth es por donde debería empezar la mayoría, y los motivos han aumentado en lugar de reducirse.** Es con diferencia el más valorado de los tres, el núcleo usa Apache-2.0 (la interfaz Studio opcional usa AGPL-3.0) y su cobertura de hardware y sistemas operativos es hoy la más amplia de las aquí presentes.',
         rankedItems: [
           {
             rank: 1,
             name: 'Unsloth — mejor framework local general',
-            tagline: 'Gratuito con Apache-2.0, multi-GPU incluido, funciona en NVIDIA, AMD, Intel, CPU y macOS',
-            verdict: 'Unsloth reescribe los kernels de atención y de gradientes para reducir el uso de VRAM y acelerar el entrenamiento LoRA y QLoRA, y ese sigue siendo su atractivo central. Lo que ha cambiado es el alcance. Su README declara ahora compatibilidad con configuraciones multi-GPU en GPU de NVIDIA, AMD e Intel, CPU y el backend Vulkan, funcionando en Windows, Linux, WSL y macOS, con compilaciones de escritorio para cada uno. Nada en los 22 KB del README Apache-2.0 restringe eso a un plan de pago. El proyecto también ha crecido más allá de una biblioteca de entrenamiento hacia algo parecido a un banco de trabajo local, con una interfaz Studio y un endpoint de servicio compatible con OpenAI. Existen planes de pago Pro y Enterprise, pero sus precios no están publicados: trate como no verificada cualquier cifra concreta que vea citada en otro sitio.',
+            tagline: 'Gratuito con Apache-2.0 (núcleo; Studio UI: AGPL-3.0), multi-GPU incluido, funciona en NVIDIA, AMD, Intel, CPU y macOS',
+            verdict: 'Unsloth reescribe los kernels de atención y de gradientes para reducir el uso de VRAM y acelerar el entrenamiento LoRA y QLoRA, y ese sigue siendo su atractivo central. Lo que ha cambiado es el alcance. Su README declara ahora compatibilidad con configuraciones multi-GPU en GPU de NVIDIA, AMD e Intel, CPU y el backend Vulkan, funcionando en Windows, Linux, WSL y macOS, con compilaciones de escritorio para cada uno. Nada en los 22 KB del README restringe eso a un plan de pago. El proyecto también ha crecido más allá de una biblioteca de entrenamiento hacia algo parecido a un banco de trabajo local, con una interfaz Studio y un endpoint de servicio compatible con OpenAI. Existen planes de pago Pro y Enterprise, pero sus precios no están publicados: trate como no verificada cualquier cifra concreta que vea citada en otro sitio.',
             pros: [
-              'Gratuito y Apache-2.0, con soporte multi-GPU en el proyecto de código abierto',
+              'Gratuito; núcleo con Apache-2.0 (Studio UI: AGPL-3.0), con soporte multi-GPU en el proyecto de código abierto',
               'La cobertura de hardware más amplia aquí: NVIDIA, AMD, Intel, CPU y Vulkan',
               'Funciona en Windows, Linux, WSL y macOS, con compilaciones de escritorio',
               'El menor esfuerzo de instalación de los tres: un instalador en vez de un árbol de configuración',
@@ -1256,7 +1256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://github.com/unslothai/unsloth',
                 productName: 'Unsloth',
                 productCategory: 'dev-tool',
-                priceRange: 'Gratuito, Apache-2.0; planes de pago solo bajo presupuesto',
+                priceRange: 'Gratuito; núcleo Apache-2.0, Studio UI AGPL-3.0; planes de pago solo bajo presupuesto',
                 label: 'Unsloth — repositorio de código abierto',
               },
             ],
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Creer que el multi-GPU exige el plan de pago de Unsloth',
-            whyItMatters: 'Se ha repetido mucho y contradice el README actual del proyecto, que enumera el soporte multi-GPU junto a los backends de AMD, Intel, CPU y Vulkan sin ningún muro de pago en el repositorio Apache-2.0. Hay equipos que han adoptado un framework más pesado solo para obtener un multi-GPU que ya tenían.',
+            whyItMatters: 'Se ha repetido mucho y contradice el README actual del proyecto, que enumera el soporte multi-GPU junto a los backends de AMD, Intel, CPU y Vulkan sin ningún muro de pago en el repositorio de código abierto. Hay equipos que han adoptado un framework más pesado solo para obtener un multi-GPU que ya tenían.',
           },
           {
             title: 'Citar el fine-tuning completo de Together.ai como 0,54 a 3,20 $ por millón de tokens',
@@ -1517,7 +1517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Mejor framework de fine-tuning de LLM 2026: Unsloth, Axolotl o nube',
       description: 'Compara Unsloth, Axolotl y MLX-LM para fine-tuning local frente a las API en la nube de Together.ai y Fireworks.ai, con precios, licencias y capacidades verificadas.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-10-19',
       url: 'https://www.promptquorum.com/es/local-llms/best-llm-fine-tuning-framework',
       inLanguage: 'es',
       proficiencyLevel: 'Advanced',
@@ -1622,7 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'es',
       numberOfItems: 5,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: 'Mejor framework local general — gratuito con Apache-2.0, multi-GPU incluido, funciona en NVIDIA, AMD, Intel, CPU y macOS' },
+        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: 'Mejor framework local general — gratuito con Apache-2.0 (núcleo; Studio UI: AGPL-3.0), multi-GPU incluido, funciona en NVIDIA, AMD, Intel, CPU y macOS' },
         { '@type': 'ListItem', position: 2, name: 'Axolotl', description: 'Mejor para escalar más allá de una máquina — multinodo con Torchrun y Ray, paralelismo ND, la gama de métodos más amplia' },
         { '@type': 'ListItem', position: 3, name: 'MLX-LM', description: 'Mejor opción ligera en Apple Silicon — licencia MIT, construido sobre MLX de Apple, entrenamiento distribuido con mx.distributed' },
         { '@type': 'ListItem', position: 4, name: 'Together.ai', description: 'Mejor API en la nube — 0,48 $ por millón de tokens LoRA SFT hasta 16B, mínimo de 4 $ por trabajo' },
@@ -1637,12 +1637,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Meilleur framework de fine-tuning LLM 2026 : Unsloth, Axolotl ou cloud',
     seoTitle: 'Meilleur framework de fine-tuning LLM 2026',
-    metaDescription: 'Unsloth est gratuit sous Apache-2.0 avec le multi-GPU inclus, Axolotl ajoute l\'entrainement multi-noeud, Together.ai facture 0,48 $/M tokens. Tarifs verifies en aout 2026.',
+    metaDescription: 'Unsloth est gratuit et open source avec le multi-GPU inclus, Axolotl ajoute l\'entrainement multi-noeud, Together.ai facture 0,48 $/M tokens. Tarifs verifies en aout 2026.',
     educationalLevel: 'Advanced',
     audience: 'Ingenieurs ML et developpeurs qui affinent des LLM',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-10-19',
     readTime: '13 min de lecture',
     primaryTerm: 'framework de fine-tuning LLM',
     targetKeywords: [
@@ -1657,7 +1657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: 'Quel framework de fine-tuning LLM est le meilleur en 2026 ?',
       answer: '**Commencez par Unsloth si vous entrainez sur votre propre materiel, passez a Axolotl quand il vous faut plus d\'une machine, et utilisez Together.ai ou Fireworks.ai si vous preferez ne pas posseder de GPU du tout.** La vraie decision n\'est pas de savoir quelle bibliotheque a le plus d\'etoiles, mais si vous voulez executer l\'entrainement vous-meme. Avec un GPU capable, l\'entrainement local ne coute presque rien par execution une fois installe. Si vous n\'affinez que quelques fois par an, le tarif au token d\'une API cloud revient generalement moins cher que le temps passe sur les pilotes et l\'environnement.',
       bullets: [
-        '**Meilleur framework local global :** Unsloth — gratuit sous Apache-2.0, multi-GPU inclus, fonctionne sur NVIDIA, AMD, Intel, CPU et macOS',
+        '**Meilleur framework local global :** Unsloth — gratuit sous Apache-2.0 (cœur ; Studio UI : AGPL-3.0), multi-GPU inclus, fonctionne sur NVIDIA, AMD, Intel, CPU et macOS',
         '**Meilleur pour depasser une machine :** Axolotl — multi-noeud via Torchrun et Ray, parallelisme ND, la plus large palette de methodes',
         '**Le plus leger sur Apple Silicon :** MLX-LM — licence MIT, construit sur MLX d\'Apple, entrainement distribue via mx.distributed',
         '**Meilleure API cloud :** Together.ai — 0,48 $/M tokens en LoRA sur des modeles jusqu\'a 16B, minimum de 4 $ par tache',
@@ -1691,7 +1691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Unsloth** — 75,0k etoiles GitHub, Apache-2.0. Son README annonce la prise en charge des configurations multi-GPU, des GPU NVIDIA, AMD et Intel, des CPU et du backend Vulkan, sous Windows, Linux, WSL et macOS, avec des versions de bureau. Le multi-GPU n\'est **pas** derriere un mur payant dans le projet open source.',
+          '**Unsloth** — 75,0k etoiles GitHub, Apache-2.0 (cœur ; Studio UI : AGPL-3.0). Son README annonce la prise en charge des configurations multi-GPU, des GPU NVIDIA, AMD et Intel, des CPU et du backend Vulkan, sous Windows, Linux, WSL et macOS, avec des versions de bureau. Le multi-GPU n\'est **pas** derriere un mur payant dans le projet open source.',
           '**Axolotl** — 12,4k etoiles, Apache-2.0. Le seul des trois avec un entrainement multi-noeud documente (Torchrun, Ray) et un parallelisme ND combinant parallelisme de contexte, de tenseurs et de donnees entierement fragmentees au sein d\'un noeud et entre plusieurs.',
           '**MLX-LM** — 6,8k etoiles, MIT, issu de l\'organisation `ml-explore` d\'Apple, dont le profil decrit lui-meme le travail comme « by Apple ». Prend en charge LoRA et le fine-tuning complet, les modeles quantifies, ainsi que l\'inference et l\'affinage distribues via `mx.distributed`.',
           '**Together.ai** — fine-tuning supervise LoRA a 0,48 $/M tokens d\'entrainement jusqu\'a 16B parametres, 1,50 $ entre 17 et 69B et 2,90 $ entre 70 et 100B. Le fine-tuning supervise complet coute nettement plus : 1,20 $, 3,75 $ et 7,25 $ sur ces memes paliers. Un minimum de 4,00 $ s\'applique par tache.',
@@ -1705,7 +1705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '🏆 Le meilleur choix selon votre situation',
         content: '**La ligne de partage qui compte est de savoir si vous executez l\'entrainement ou si vous payez quelqu\'un pour le faire.** Parcourez cette liste et arretez-vous a la premiere ligne qui vous decrit.',
         items: [
-          '**Vous possedez un GPU capable et voulez le chemin le plus court vers un fine-tuning fonctionnel** → Unsloth. Gratuit, Apache-2.0, et desormais compatible multi-GPU et materiel non NVIDIA : l\'ancienne raison de le quitter a largement disparu.',
+          '**Vous possedez un GPU capable et voulez le chemin le plus court vers un fine-tuning fonctionnel** → Unsloth. Gratuit, Apache-2.0 (cœur ; Studio UI : AGPL-3.0), et desormais compatible multi-GPU et materiel non NVIDIA : l\'ancienne raison de le quitter a largement disparu.',
           '**Votre entrainement ne tient plus sur une machine** → Axolotl. Le multi-noeud via Torchrun et Ray plus le parallelisme ND constitue la vraie ligne de partage avec Unsloth en 2026.',
           '**Vous travaillez sur un Mac a puce M** → MLX-LM si vous voulez la voie la plus legere et native MLX, mais Unsloth tourne aussi sous macOS desormais : c\'est donc une preference et non plus la seule option.',
           '**Vous avez besoin de DPO, ORPO, KTO, GRPO ou de modelisation de recompense** → Axolotl. Sa palette de methodes documentee est de loin la plus large des trois.',
@@ -1758,7 +1758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Critere', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { Critere: 'Etoiles GitHub', Unsloth: '75,0k', Axolotl: '12,4k', 'MLX-LM': '6,8k' },
-          { Critere: 'Licence', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
+          { Critere: 'Licence', Unsloth: 'Cœur : Apache-2.0 / UI Studio : AGPL-3.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
           { Critere: 'Ideal pour', Unsloth: 'La voie la plus rapide sur son propre materiel', Axolotl: 'Depasser une seule machine', 'MLX-LM': 'Travail leger natif MLX sur Mac' },
           { Critere: 'Multi-GPU', Unsloth: 'Oui, dans le projet open source', Axolotl: 'Oui — FSDP1, FSDP2, DeepSpeed', 'MLX-LM': 'Via mx.distributed' },
           { Critere: 'Multi-noeud', Unsloth: 'Non documente dans le README', Axolotl: 'Oui — Torchrun et Ray', 'MLX-LM': 'Via mx.distributed' },
@@ -1776,15 +1776,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unsloth: {
         id: 'unsloth',
         title: 'Unsloth : le choix local par defaut',
-        content: '**C\'est par Unsloth que la plupart devraient commencer, et les raisons se sont multipliees plutot que reduites.** Il est de loin le plus etoile des trois, sa licence est Apache-2.0, et sa couverture materielle et systeme est aujourd\'hui la plus large ici.',
+        content: '**C\'est par Unsloth que la plupart devraient commencer, et les raisons se sont multipliees plutot que reduites.** Il est de loin le plus etoile des trois, son cœur est sous Apache-2.0 (la Studio UI optionnelle est sous AGPL-3.0), et sa couverture materielle et systeme est aujourd\'hui la plus large ici.',
         rankedItems: [
           {
             rank: 1,
             name: 'Unsloth — meilleur framework local global',
-            tagline: 'Gratuit sous Apache-2.0, multi-GPU inclus, fonctionne sur NVIDIA, AMD, Intel, CPU et macOS',
-            verdict: 'Unsloth reecrit les noyaux d\'attention et de gradients pour reduire l\'usage de VRAM et accelerer l\'entrainement LoRA et QLoRA, et cela reste son attrait central. Ce qui a change, c\'est la portee. Son README annonce desormais la prise en charge des configurations multi-GPU sur GPU NVIDIA, AMD et Intel, CPU et backend Vulkan, sous Windows, Linux, WSL et macOS, avec des versions de bureau pour chacun. Rien dans les 22 Ko du README Apache-2.0 ne place tout cela derriere une offre payante. Le projet a aussi depasse le statut de bibliotheque d\'entrainement pour ressembler a un etabli local, avec une interface Studio et un point de service compatible OpenAI. Des offres payantes Pro et Enterprise existent, mais leurs tarifs ne sont pas publies : considerez comme non verifie tout montant precis cite ailleurs.',
+            tagline: 'Gratuit sous Apache-2.0 (cœur ; Studio UI : AGPL-3.0), multi-GPU inclus, fonctionne sur NVIDIA, AMD, Intel, CPU et macOS',
+            verdict: 'Unsloth reecrit les noyaux d\'attention et de gradients pour reduire l\'usage de VRAM et accelerer l\'entrainement LoRA et QLoRA, et cela reste son attrait central. Ce qui a change, c\'est la portee. Son README annonce desormais la prise en charge des configurations multi-GPU sur GPU NVIDIA, AMD et Intel, CPU et backend Vulkan, sous Windows, Linux, WSL et macOS, avec des versions de bureau pour chacun. Rien dans les 22 Ko du README ne place tout cela derriere une offre payante. Le projet a aussi depasse le statut de bibliotheque d\'entrainement pour ressembler a un etabli local, avec une interface Studio et un point de service compatible OpenAI. Des offres payantes Pro et Enterprise existent, mais leurs tarifs ne sont pas publies : considerez comme non verifie tout montant precis cite ailleurs.',
             pros: [
-              'Gratuit et Apache-2.0, avec la prise en charge du multi-GPU dans le projet open source',
+              'Gratuit ; cœur sous Apache-2.0 (Studio UI : AGPL-3.0), avec la prise en charge du multi-GPU dans le projet open source',
               'La plus large couverture materielle ici : NVIDIA, AMD, Intel, CPU et Vulkan',
               'Fonctionne sous Windows, Linux, WSL et macOS, avec des versions de bureau',
               'Le moindre effort d\'installation des trois — un installeur plutot qu\'un arbre de configuration',
@@ -1799,7 +1799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://github.com/unslothai/unsloth',
                 productName: 'Unsloth',
                 productCategory: 'dev-tool',
-                priceRange: 'Gratuit, Apache-2.0 ; offres payantes sur devis',
+                priceRange: 'Gratuit ; cœur Apache-2.0, Studio UI AGPL-3.0 ; offres payantes sur devis',
                 label: 'Unsloth — depot open source',
               },
             ],
@@ -1972,7 +1972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Croire que le multi-GPU exige l\'offre payante d\'Unsloth',
-            whyItMatters: 'Cette idee a beaucoup circule et se trouve contredite par le README actuel du projet, qui mentionne la prise en charge du multi-GPU aux cotes des backends AMD, Intel, CPU et Vulkan sans aucun mur payant dans le depot Apache-2.0. Des equipes ont adopte un framework plus lourd uniquement pour obtenir un multi-GPU qu\'elles avaient deja.',
+            whyItMatters: 'Cette idee a beaucoup circule et se trouve contredite par le README actuel du projet, qui mentionne la prise en charge du multi-GPU aux cotes des backends AMD, Intel, CPU et Vulkan sans aucun mur payant dans le depot open source. Des equipes ont adopte un framework plus lourd uniquement pour obtenir un multi-GPU qu\'elles avaient deja.',
           },
           {
             title: 'Citer le fine-tuning complet de Together.ai a 0,54 – 3,20 $ par million de tokens',
@@ -2059,7 +2059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Meilleur framework de fine-tuning LLM 2026 : Unsloth, Axolotl ou cloud',
       description: 'Compare Unsloth, Axolotl et MLX-LM pour le fine-tuning local face aux API cloud de Together.ai et Fireworks.ai, avec tarifs, licences et capacites verifies. Verifie en aout 2026.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-10-19',
       url: 'https://www.promptquorum.com/fr/local-llms/best-llm-fine-tuning-framework',
       inLanguage: 'fr',
       proficiencyLevel: 'Advanced',
@@ -2156,7 +2156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'fr',
       numberOfItems: 5,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: 'Meilleur framework local global — gratuit sous Apache-2.0, multi-GPU inclus, fonctionne sur NVIDIA, AMD, Intel, CPU et macOS' },
+        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: 'Meilleur framework local global — gratuit sous Apache-2.0 (cœur ; Studio UI : AGPL-3.0), multi-GPU inclus, fonctionne sur NVIDIA, AMD, Intel, CPU et macOS' },
         { '@type': 'ListItem', position: 2, name: 'Axolotl', description: 'Meilleur pour depasser une machine — multi-noeud via Torchrun et Ray, parallelisme ND, la plus large palette de methodes' },
         { '@type': 'ListItem', position: 3, name: 'MLX-LM', description: 'Meilleure option legere sur Apple Silicon — licence MIT, construit sur MLX d\'Apple, entrainement distribue via mx.distributed' },
         { '@type': 'ListItem', position: 4, name: 'Together.ai', description: 'Meilleure API cloud — 0,48 $ par million de tokens LoRA SFT jusqu\'a 16B, minimum de 4 $ par tache' },
@@ -2171,12 +2171,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Melhor framework de fine-tuning de LLM 2026: Unsloth, Axolotl ou nuvem',
     seoTitle: 'Melhor framework de fine-tuning de LLM 2026',
-    metaDescription: 'Unsloth e gratuito sob Apache-2.0 com multi-GPU incluido, Axolotl acrescenta treino multinó, Together.ai cobra US$ 0,48/M tokens.',
+    metaDescription: 'Unsloth e gratuito e de codigo aberto com multi-GPU incluido, Axolotl acrescenta treino multinó, Together.ai cobra US$ 0,48/M tokens.',
     educationalLevel: 'Advanced',
     audience: 'Engenheiros de ML e desenvolvedores que ajustam LLMs',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-10-19',
     readTime: '13 min de leitura',
     primaryTerm: 'framework de fine-tuning de LLM',
     targetKeywords: [
@@ -2191,7 +2191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: 'Qual framework de fine-tuning de LLM e o melhor em 2026?',
       answer: '**Comece com o Unsloth se treinar no proprio hardware, migre para o Axolotl quando precisar de mais de uma maquina e use Together.ai ou Fireworks.ai se preferir nao ter GPU alguma.** A decisao real nao e qual biblioteca tem mais estrelas, e sim se voce quer executar o treino. Com uma GPU capaz, treinar localmente nao custa quase nada por execucao depois de configurado. Se voce ajusta poucas vezes por ano, a tarifa por token de uma API na nuvem costuma sair mais barata que o tempo gasto com drivers e ambiente.',
       bullets: [
-        '**Melhor framework local geral:** Unsloth — gratuito sob Apache-2.0, multi-GPU incluido, roda em NVIDIA, AMD, Intel, CPU e macOS',
+        '**Melhor framework local geral:** Unsloth — gratuito sob Apache-2.0 (núcleo; Studio UI: AGPL-3.0), multi-GPU incluido, roda em NVIDIA, AMD, Intel, CPU e macOS',
         '**Melhor para escalar alem de uma maquina:** Axolotl — multinó via Torchrun e Ray, paralelismo ND, a mais ampla gama de metodos',
         '**Mais enxuto em Apple Silicon:** MLX-LM — licenca MIT, construido sobre o MLX da Apple, treino distribuido via mx.distributed',
         '**Melhor API na nuvem:** Together.ai — US$ 0,48/M tokens de LoRA em modelos de ate 16B, minimo de US$ 4 por job',
@@ -2225,7 +2225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Unsloth** — 75,0 mil estrelas no GitHub, Apache-2.0. O README declara suporte a configuracoes multi-GPU, GPUs NVIDIA, AMD e Intel, CPUs e o backend Vulkan, em Windows, Linux, WSL e macOS, com builds de desktop. Multi-GPU **nao** esta atras de barreira paga no projeto de codigo aberto.',
+          '**Unsloth** — 75,0 mil estrelas no GitHub, Apache-2.0 (núcleo; Studio UI: AGPL-3.0). O README declara suporte a configuracoes multi-GPU, GPUs NVIDIA, AMD e Intel, CPUs e o backend Vulkan, em Windows, Linux, WSL e macOS, com builds de desktop. Multi-GPU **nao** esta atras de barreira paga no projeto de codigo aberto.',
           '**Axolotl** — 12,4 mil estrelas, Apache-2.0. O unico dos tres com treino multinó documentado (Torchrun, Ray) e paralelismo ND que combina paralelismo de contexto, de tensores e de dados totalmente fragmentados dentro de um nó e entre varios.',
           '**MLX-LM** — 6,8 mil estrelas, MIT, da organizacao `ml-explore` da Apple, cujo proprio perfil descreve o trabalho como "by Apple". Suporta LoRA e fine-tuning completo, modelos quantizados e inferencia e ajuste distribuidos via `mx.distributed`.',
           '**Together.ai** — fine-tuning supervisionado com LoRA a US$ 0,48/M tokens de treino ate 16B parametros, US$ 1,50 em 17–69B e US$ 2,90 em 70–100B. O fine-tuning supervisionado completo custa bem mais: US$ 1,20, US$ 3,75 e US$ 7,25 nas mesmas faixas. Aplica-se um minimo de US$ 4,00 por job.',
@@ -2239,7 +2239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '🏆 A melhor escolha para o seu caso',
         content: '**A divisao que importa e se voce executa o treino ou paga alguem para executa-lo.** Leia a lista e pare na primeira linha que descreva voce.',
         items: [
-          '**Voce tem uma GPU capaz e quer o caminho mais curto ate um ajuste funcional** → Unsloth. Gratuito, Apache-2.0 e agora com multi-GPU e hardware nao NVIDIA, de modo que o antigo motivo para abandona-lo praticamente desapareceu.',
+          '**Voce tem uma GPU capaz e quer o caminho mais curto ate um ajuste funcional** → Unsloth. Gratuito, Apache-2.0 (núcleo; Studio UI: AGPL-3.0) e agora com multi-GPU e hardware nao NVIDIA, de modo que o antigo motivo para abandona-lo praticamente desapareceu.',
           '**Seu treino nao cabe mais em uma maquina** → Axolotl. O multinó via Torchrun e Ray somado ao paralelismo ND e a verdadeira linha divisoria em relacao ao Unsloth em 2026.',
           '**Voce esta em um Mac com chip da serie M** → MLX-LM se quiser a via mais enxuta e nativa de MLX, embora o Unsloth ja rode em macOS tambem, o que torna isso uma preferencia e nao mais a unica opcao.',
           '**Voce precisa de DPO, ORPO, KTO, GRPO ou modelagem de recompensa** → Axolotl. Sua gama documentada de metodos e de longe a mais ampla dos tres.',
@@ -2292,7 +2292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Criterio', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { Criterio: 'Estrelas no GitHub', Unsloth: '75,0 mil', Axolotl: '12,4 mil', 'MLX-LM': '6,8 mil' },
-          { Criterio: 'Licenca', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
+          { Criterio: 'Licenca', Unsloth: 'Núcleo: Apache-2.0 / Studio UI: AGPL-3.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
           { Criterio: 'Ideal para', Unsloth: 'O caminho mais rapido no hardware proprio', Axolotl: 'Escalar alem de uma maquina', 'MLX-LM': 'Trabalho enxuto nativo de MLX no Mac' },
           { Criterio: 'Multi-GPU', Unsloth: 'Sim, no projeto de codigo aberto', Axolotl: 'Sim — FSDP1, FSDP2, DeepSpeed', 'MLX-LM': 'Via mx.distributed' },
           { Criterio: 'Multinó', Unsloth: 'Nao documentado no README', Axolotl: 'Sim — Torchrun e Ray', 'MLX-LM': 'Via mx.distributed' },
@@ -2310,15 +2310,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unsloth: {
         id: 'unsloth',
         title: 'Unsloth: a escolha local padrao',
-        content: '**E pelo Unsloth que a maioria deveria comecar, e os motivos aumentaram em vez de diminuir.** E de longe o mais estrelado dos tres, a licenca e Apache-2.0 e sua cobertura de hardware e de sistemas e hoje a mais ampla aqui.',
+        content: '**E pelo Unsloth que a maioria deveria comecar, e os motivos aumentaram em vez de diminuir.** E de longe o mais estrelado dos tres, a licenca do nucleo e Apache-2.0 (a interface Studio opcional e AGPL-3.0) e sua cobertura de hardware e de sistemas e hoje a mais ampla aqui.',
         rankedItems: [
           {
             rank: 1,
             name: 'Unsloth — melhor framework local geral',
-            tagline: 'Gratuito sob Apache-2.0, multi-GPU incluido, roda em NVIDIA, AMD, Intel, CPU e macOS',
-            verdict: 'O Unsloth reescreve kernels de atencao e de gradientes para reduzir o uso de VRAM e acelerar o treino LoRA e QLoRA, e esse segue sendo seu apelo central. O que mudou foi o alcance. Seu README agora declara suporte a configuracoes multi-GPU em GPUs NVIDIA, AMD e Intel, CPUs e o backend Vulkan, rodando em Windows, Linux, WSL e macOS, com builds de desktop para cada um. Nada nos 22 KB do README Apache-2.0 coloca isso atras de um plano pago. O projeto tambem cresceu para alem de uma biblioteca de treino, aproximando-se de uma bancada local, com uma interface Studio e um endpoint de serving compativel com OpenAI. Existem planos pagos Pro e Enterprise, mas seus precos nao sao publicados: trate como nao verificada qualquer cifra especifica citada em outro lugar.',
+            tagline: 'Gratuito sob Apache-2.0 (núcleo; Studio UI: AGPL-3.0), multi-GPU incluido, roda em NVIDIA, AMD, Intel, CPU e macOS',
+            verdict: 'O Unsloth reescreve kernels de atencao e de gradientes para reduzir o uso de VRAM e acelerar o treino LoRA e QLoRA, e esse segue sendo seu apelo central. O que mudou foi o alcance. Seu README agora declara suporte a configuracoes multi-GPU em GPUs NVIDIA, AMD e Intel, CPUs e o backend Vulkan, rodando em Windows, Linux, WSL e macOS, com builds de desktop para cada um. Nada nos 22 KB do README coloca isso atras de um plano pago. O projeto tambem cresceu para alem de uma biblioteca de treino, aproximando-se de uma bancada local, com uma interface Studio e um endpoint de serving compativel com OpenAI. Existem planos pagos Pro e Enterprise, mas seus precos nao sao publicados: trate como nao verificada qualquer cifra especifica citada em outro lugar.',
             pros: [
-              'Gratuito e Apache-2.0, com suporte a multi-GPU no projeto de codigo aberto',
+              'Gratuito; núcleo sob Apache-2.0 (Studio UI: AGPL-3.0), com suporte a multi-GPU no projeto de codigo aberto',
               'A mais ampla cobertura de hardware aqui: NVIDIA, AMD, Intel, CPU e Vulkan',
               'Roda em Windows, Linux, WSL e macOS, com builds de desktop',
               'O menor esforco de instalacao dos tres — um instalador em vez de uma arvore de configuracao',
@@ -2333,7 +2333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://github.com/unslothai/unsloth',
                 productName: 'Unsloth',
                 productCategory: 'dev-tool',
-                priceRange: 'Gratuito, Apache-2.0; planos pagos apenas sob orcamento',
+                priceRange: 'Gratuito; núcleo Apache-2.0, Studio UI AGPL-3.0; planos pagos apenas sob orcamento',
                 label: 'Unsloth — repositorio de codigo aberto',
               },
             ],
@@ -2506,7 +2506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'Acreditar que multi-GPU exige o plano pago do Unsloth',
-            whyItMatters: 'Isso foi muito repetido e e contrariado pelo README atual do projeto, que lista suporte a multi-GPU ao lado dos backends AMD, Intel, CPU e Vulkan sem nenhuma barreira paga no repositorio Apache-2.0. Ha times que adotaram um framework mais pesado apenas para obter um multi-GPU que ja tinham.',
+            whyItMatters: 'Isso foi muito repetido e e contrariado pelo README atual do projeto, que lista suporte a multi-GPU ao lado dos backends AMD, Intel, CPU e Vulkan sem nenhuma barreira paga no repositorio de codigo aberto. Ha times que adotaram um framework mais pesado apenas para obter um multi-GPU que ja tinham.',
           },
           {
             title: 'Citar o fine-tuning completo da Together.ai como US$ 0,54 a US$ 3,20 por milhao de tokens',
@@ -2594,7 +2594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Melhor framework de fine-tuning de LLM 2026: Unsloth, Axolotl ou nuvem',
       description: 'Compara Unsloth, Axolotl e MLX-LM para fine-tuning local ante as APIs na nuvem da Together.ai e da Fireworks.ai, com precos, licencas e capacidades verificados.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-10-19',
       url: 'https://www.promptquorum.com/pt/local-llms/best-llm-fine-tuning-framework',
       inLanguage: 'pt-BR',
       proficiencyLevel: 'Advanced',
@@ -2699,7 +2699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'pt-BR',
       numberOfItems: 5,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: 'Melhor framework local geral — gratuito sob Apache-2.0, multi-GPU incluido, roda em NVIDIA, AMD, Intel, CPU e macOS' },
+        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: 'Melhor framework local geral — gratuito sob Apache-2.0 (núcleo; Studio UI: AGPL-3.0), multi-GPU incluido, roda em NVIDIA, AMD, Intel, CPU e macOS' },
         { '@type': 'ListItem', position: 2, name: 'Axolotl', description: 'Melhor para escalar alem de uma maquina — multinó via Torchrun e Ray, paralelismo ND, a mais ampla gama de metodos' },
         { '@type': 'ListItem', position: 3, name: 'MLX-LM', description: 'Melhor opcao enxuta em Apple Silicon — licenca MIT, construido sobre o MLX da Apple, treino distribuido via mx.distributed' },
         { '@type': 'ListItem', position: 4, name: 'Together.ai', description: 'Melhor API na nuvem — US$ 0,48 por milhao de tokens LoRA SFT ate 16B, minimo de US$ 4 por job' },
@@ -2714,12 +2714,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: '2026年 最適なLLMファインチューニング基盤：Unsloth・Axolotl・クラウド',
     seoTitle: '2026年 最適なLLMファインチューニング基盤',
-    metaDescription: 'UnslothはApache-2.0で無料、マルチGPUも込み。Axolotlはマルチノード対応、Together.aiは100万トークン0.48ドル。',
+    metaDescription: 'Unslothはオープンソースで無料、マルチGPUも込み。Axolotlはマルチノード対応、Together.aiは100万トークン0.48ドル。',
     educationalLevel: 'Advanced',
     audience: 'LLMをファインチューニングするMLエンジニアと開発者',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-10-19',
     readTime: '13分で読めます',
     primaryTerm: 'LLMファインチューニング基盤',
     targetKeywords: [
@@ -2734,7 +2734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: '2026年のLLMファインチューニング基盤はどれが最適ですか？',
       answer: '**自分のハードウェアで学習するならUnslothから始め、1台を超える必要が出たらAxolotlへ移り、GPUを一切持ちたくないならTogether.aiかFireworks.aiを使ってください。** 実際に直面する判断は、どのライブラリのスター数が多いかではなく、学習ジョブを自分で回すかどうかです。十分なGPUがあれば、環境構築さえ済めば1回あたりの費用はほぼゼロです。年に数回しか調整しないなら、クラウドAPIのトークン単価のほうが、ドライバや環境設定に費やす時間より安く済むのが普通です。',
       bullets: [
-        '**総合的に最良のローカル基盤：** Unsloth — Apache-2.0で無料、マルチGPU込み、NVIDIA・AMD・Intel・CPU・macOSで動作',
+        '**総合的に最良のローカル基盤：** Unsloth — Apache-2.0（コア。Studio UIはAGPL-3.0）で無料、マルチGPU込み、NVIDIA・AMD・Intel・CPU・macOSで動作',
         '**1台を超える規模に最適：** Axolotl — TorchrunとRayによるマルチノード、ND並列、最も広い手法の幅',
         '**Apple Siliconで最も軽量：** MLX-LM — MITライセンス、AppleのMLX上に構築、mx.distributedによる分散学習',
         '**最良のクラウドAPI：** Together.ai — 16Bまでのモデルで100万トークン0.48ドル、1ジョブ最低4ドル',
@@ -2768,7 +2768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Unsloth** — GitHubスター7.50万、Apache-2.0。READMEはマルチGPU構成、NVIDIA・AMD・IntelのGPU、CPU、Vulkanバックエンドへの対応を、Windows・Linux・WSL・macOS上で明記し、デスクトップ版も配布しています。オープンソース版でマルチGPUが有料の壁の向こうにあるわけでは**ありません**。',
+          '**Unsloth** — GitHubスター7.50万、Apache-2.0（コア。Studio UIはAGPL-3.0）。READMEはマルチGPU構成、NVIDIA・AMD・IntelのGPU、CPU、Vulkanバックエンドへの対応を、Windows・Linux・WSL・macOS上で明記し、デスクトップ版も配布しています。オープンソース版でマルチGPUが有料の壁の向こうにあるわけでは**ありません**。',
           '**Axolotl** — スター1.24万、Apache-2.0。3つのうち唯一、マルチノード学習（Torchrun、Ray）と、コンテキスト並列・テンソル並列・完全シャード化データ並列をノード内および複数ノード間で組み合わせるND並列を文書化しています。',
           '**MLX-LM** — スター0.68万、MIT、Appleの`ml-explore`組織によるもので、同組織のプロフィール自体が「by Apple」と記しています。LoRAとフルファインチューニング、量子化モデル、`mx.distributed`による分散推論・分散調整に対応します。',
           '**Together.ai** — 教師ありLoRAファインチューニングは16Bパラメータまで学習トークン100万あたり0.48ドル、17〜69Bで1.50ドル、70〜100Bで2.90ドル。教師ありフルファインチューニングはかなり高く、同じ区分でそれぞれ1.20ドル、3.75ドル、7.25ドルです。1ジョブにつき最低4.00ドルが適用されます。',
@@ -2782,7 +2782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '🏆 状況別の最適な選択',
         content: '**重要な分かれ目は、学習ジョブを自分で回すか、誰かに費用を払って回してもらうかです。** 以下を上から読み、自分に当てはまる最初の行で止めてください。',
         items: [
-          '**十分なGPUを持っていて、動くファインチューニングまでの最短経路が欲しい** → Unsloth。無料でApache-2.0、いまやマルチGPUとNVIDIA以外のハードウェアにも対応しており、かつて乗り換えを促した理由はおおむね解消されています。',
+          '**十分なGPUを持っていて、動くファインチューニングまでの最短経路が欲しい** → Unsloth。無料でApache-2.0（コア。Studio UIはAGPL-3.0）、いまやマルチGPUとNVIDIA以外のハードウェアにも対応しており、かつて乗り換えを促した理由はおおむね解消されています。',
           '**学習が1台のマシンに収まらなくなった** → Axolotl。TorchrunとRayによるマルチノードにND並列を加えた点が、2026年におけるUnslothとの実質的な分岐点です。',
           '**MシリーズのMacで作業している** → 最も軽量でMLXネイティブな道が欲しいならMLX-LM。ただしUnslothもmacOSで動くようになったため、いまや唯一の選択肢ではなく好みの問題です。',
           '**DPO、ORPO、KTO、GRPO、報酬モデリングが必要** → Axolotl。文書化された手法の幅は3つの中で明らかに最も広いものです。',
@@ -2835,7 +2835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['評価軸', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { 評価軸: 'GitHubスター', Unsloth: '7.50万', Axolotl: '1.24万', 'MLX-LM': '0.68万' },
-          { 評価軸: 'ライセンス', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
+          { 評価軸: 'ライセンス', Unsloth: 'コア: Apache-2.0 / Studio UI: AGPL-3.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
           { 評価軸: '向いている用途', Unsloth: '自前のハードウェアでの最短経路', Axolotl: '1台を超える規模への拡張', 'MLX-LM': 'MacでのMLXネイティブな軽量作業' },
           { 評価軸: 'マルチGPU', Unsloth: '対応、オープンソース版で', Axolotl: '対応 — FSDP1、FSDP2、DeepSpeed', 'MLX-LM': 'mx.distributed経由' },
           { 評価軸: 'マルチノード', Unsloth: 'READMEに記載なし', Axolotl: '対応 — TorchrunとRay', 'MLX-LM': 'mx.distributed経由' },
@@ -2853,15 +2853,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unsloth: {
         id: 'unsloth',
         title: 'Unsloth：ローカルの標準的な選択',
-        content: '**ほとんどの人はUnslothから始めるべきで、その理由は減るどころか増えています。** 3つの中でスター数は圧倒的に多く、ライセンスはApache-2.0、ハードウェアとOSの対応範囲はここで最も広くなりました。',
+        content: '**ほとんどの人はUnslothから始めるべきで、その理由は減るどころか増えています。** 3つの中でスター数は圧倒的に多く、ライセンスはApache-2.0（コア。Studio UIはAGPL-3.0）、ハードウェアとOSの対応範囲はここで最も広くなりました。',
         rankedItems: [
           {
             rank: 1,
             name: 'Unsloth — 総合的に最良のローカル基盤',
-            tagline: 'Apache-2.0で無料、マルチGPU込み、NVIDIA・AMD・Intel・CPU・macOSで動作',
-            verdict: 'Unslothはアテンションと勾配のカーネルを書き換えてVRAM使用量を減らし、LoRAおよびQLoRA学習を高速化します。それが中核的な魅力である点は変わりません。変わったのは対応範囲です。READMEはいまやNVIDIA・AMD・IntelのGPU、CPU、VulkanバックエンドにわたるマルチGPU構成への対応を明記し、Windows・Linux・WSL・macOSで動作し、それぞれにデスクトップ版が用意されています。22KBのApache-2.0 READMEのどこにも、それらを有料枠に閉じ込める記述はありません。プロジェクト自体も学習ライブラリの枠を超え、StudioインターフェースとOpenAI互換の提供エンドポイントを備えたローカル作業台に近づいています。有料のProおよびEnterpriseは存在しますが価格は公開されておらず、他所で目にする具体的な金額は未検証として扱ってください。',
+            tagline: 'Apache-2.0（コア。Studio UIはAGPL-3.0）で無料、マルチGPU込み、NVIDIA・AMD・Intel・CPU・macOSで動作',
+            verdict: 'Unslothはアテンションと勾配のカーネルを書き換えてVRAM使用量を減らし、LoRAおよびQLoRA学習を高速化します。それが中核的な魅力である点は変わりません。変わったのは対応範囲です。READMEはいまやNVIDIA・AMD・IntelのGPU、CPU、VulkanバックエンドにわたるマルチGPU構成への対応を明記し、Windows・Linux・WSL・macOSで動作し、それぞれにデスクトップ版が用意されています。22KBのREADMEのどこにも、それらを有料枠に閉じ込める記述はありません。プロジェクト自体も学習ライブラリの枠を超え、StudioインターフェースとOpenAI互換の提供エンドポイントを備えたローカル作業台に近づいています。有料のProおよびEnterpriseは存在しますが価格は公開されておらず、他所で目にする具体的な金額は未検証として扱ってください。',
             pros: [
-              '無料かつApache-2.0で、オープンソース版にマルチGPU対応を含む',
+              '無料で、コアはApache-2.0（Studio UIはAGPL-3.0）、オープンソース版にマルチGPU対応を含む',
               'ここで最も広いハードウェア対応：NVIDIA、AMD、Intel、CPU、Vulkan',
               'Windows・Linux・WSL・macOSで動作し、デスクトップ版もある',
               '3つの中で導入の手間が最も少ない — 設定ツリーではなくインストーラ',
@@ -2876,7 +2876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://github.com/unslothai/unsloth',
                 productName: 'Unsloth',
                 productCategory: 'dev-tool',
-                priceRange: '無料、Apache-2.0、有料枠は個別見積のみ',
+                priceRange: '無料、コアはApache-2.0・Studio UIはAGPL-3.0、有料枠は個別見積のみ',
                 label: 'Unsloth — オープンソースリポジトリ',
               },
             ],
@@ -3049,7 +3049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'マルチGPUにはUnslothの有料枠が必要だと思い込む',
-            whyItMatters: 'これは広く繰り返されてきましたが、プロジェクトの現在のREADMEと矛盾します。READMEはマルチGPU対応をAMD・Intel・CPU・Vulkanの各バックエンドと並べて記載しており、Apache-2.0リポジトリのどこにも有料の壁はありません。すでに持っていたマルチGPUを得るためだけに、より重い基盤を導入したチームもあります。',
+            whyItMatters: 'これは広く繰り返されてきましたが、プロジェクトの現在のREADMEと矛盾します。READMEはマルチGPU対応をAMD・Intel・CPU・Vulkanの各バックエンドと並べて記載しており、オープンソースのリポジトリのどこにも有料の壁はありません。すでに持っていたマルチGPUを得るためだけに、より重い基盤を導入したチームもあります。',
           },
           {
             title: 'Together.aiのフルファインチューニングを100万トークン0.54〜3.20ドルと引用する',
@@ -3136,7 +3136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026年 最適なLLMファインチューニング基盤：Unsloth・Axolotl・クラウド',
       description: 'ローカル調整のUnsloth・Axolotl・MLX-LMを、Together.aiとFireworks.aiのクラウドAPIと比較。価格、ライセンス、機能を検証。2026年8月時点で確認。',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-10-19',
       url: 'https://www.promptquorum.com/ja/local-llms/best-llm-fine-tuning-framework',
       inLanguage: 'ja',
       proficiencyLevel: 'Advanced',
@@ -3233,7 +3233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ja',
       numberOfItems: 5,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: '総合的に最良のローカル基盤 — Apache-2.0で無料、マルチGPU込み、NVIDIA・AMD・Intel・CPU・macOSで動作' },
+        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: '総合的に最良のローカル基盤 — Apache-2.0（コア。Studio UIはAGPL-3.0）で無料、マルチGPU込み、NVIDIA・AMD・Intel・CPU・macOSで動作' },
         { '@type': 'ListItem', position: 2, name: 'Axolotl', description: '1台を超える規模に最適 — TorchrunとRayによるマルチノード、ND並列、最も広い手法の幅' },
         { '@type': 'ListItem', position: 3, name: 'MLX-LM', description: 'Apple Siliconで最良の軽量選択肢 — MITライセンス、AppleのMLX上に構築、mx.distributedによる分散学習' },
         { '@type': 'ListItem', position: 4, name: 'Together.ai', description: '最良のクラウドAPI — 16Bまでのモデルで100万トークン0.48ドル、1ジョブ最低4ドル' },
@@ -3248,12 +3248,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: '2026 年最佳 LLM 微调框架：Unsloth、Axolotl 还是云端',
     seoTitle: '2026 年最佳 LLM 微调框架',
-    metaDescription: 'Unsloth 采用 Apache-2.0 免费且已含多卡支持，Axolotl 提供多节点训练，Together.ai 每百万 token 收费 0.48 美元。',
+    metaDescription: 'Unsloth 开源免费且已含多卡支持，Axolotl 提供多节点训练，Together.ai 每百万 token 收费 0.48 美元。',
     educationalLevel: 'Advanced',
     audience: '微调大语言模型的机器学习工程师与开发者',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-10-19',
     readTime: '阅读时长 13 分钟',
     primaryTerm: 'LLM 微调框架',
     targetKeywords: [
@@ -3268,7 +3268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: '2026 年哪个 LLM 微调框架最好？',
       answer: '**在自有硬件上训练就从 Unsloth 开始，需要超过一台机器时转向 Axolotl，完全不想拥有 GPU 就用 Together.ai 或 Fireworks.ai。** 真正要做的判断不是哪个库星标更多，而是你是否愿意自己跑训练任务。如果有一块够用的 GPU，配置完成后每次运行几乎不花钱。如果一年只微调几次，云 API 的 token 费用通常比你花在驱动和环境上的时间更划算。',
       bullets: [
-        '**综合最佳本地框架：** Unsloth — Apache-2.0 免费，含多卡支持，可在 NVIDIA、AMD、Intel、CPU 与 macOS 上运行',
+        '**综合最佳本地框架：** Unsloth — Apache-2.0（核心；Studio UI 为 AGPL-3.0） 免费，含多卡支持，可在 NVIDIA、AMD、Intel、CPU 与 macOS 上运行',
         '**超越单机的最佳选择：** Axolotl — 通过 Torchrun 与 Ray 实现多节点，ND 并行，方法覆盖面最广',
         '**Apple Silicon 上最轻量：** MLX-LM — MIT 许可，构建于苹果 MLX 之上，通过 mx.distributed 分布式训练',
         '**最佳云 API：** Together.ai — 16B 以内模型 LoRA 每百万 token 0.48 美元，每任务最低 4 美元',
@@ -3302,7 +3302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Unsloth** — GitHub 星标 7.50 万，Apache-2.0。其 README 声明支持多卡配置，以及 NVIDIA、AMD 与 Intel 的 GPU、CPU 和 Vulkan 后端，运行于 Windows、Linux、WSL 与 macOS，并提供桌面版。在这个开源项目里，多卡**并未**被置于付费墙之后。',
+          '**Unsloth** — GitHub 星标 7.50 万，Apache-2.0（核心；Studio UI 为 AGPL-3.0）。其 README 声明支持多卡配置，以及 NVIDIA、AMD 与 Intel 的 GPU、CPU 和 Vulkan 后端，运行于 Windows、Linux、WSL 与 macOS，并提供桌面版。在这个开源项目里，多卡**并未**被置于付费墙之后。',
           '**Axolotl** — 星标 1.24 万，Apache-2.0。三者中唯一记录了多节点训练（Torchrun、Ray）以及在单节点内与跨多节点组合上下文并行、张量并行和完全分片数据并行的 ND 并行。',
           '**MLX-LM** — 星标 0.68 万，MIT，来自苹果的 `ml-explore` 组织，该组织自己的简介写着「by Apple」。支持 LoRA 与全参数微调、量化模型，以及通过 `mx.distributed` 进行的分布式推理与微调。',
           '**Together.ai** — 有监督 LoRA 微调在 16B 参数以内为每百万训练 token 0.48 美元，17–69B 为 1.50 美元，70–100B 为 2.90 美元。全参数有监督微调贵得多：同样这三档分别为 1.20、3.75 与 7.25 美元。每个任务适用 4.00 美元最低消费。',
@@ -3316,7 +3316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '🏆 按场景选择',
         content: '**真正的分野在于你自己跑训练任务，还是付钱让别人跑。** 按顺序往下读，在第一条符合你情况的地方停下。',
         items: [
-          '**你有一块够用的 GPU，想要通往可用微调的最短路径** → Unsloth。免费、Apache-2.0，如今还支持多卡与非 NVIDIA 硬件，过去让人转投他处的理由基本已经消失。',
+          '**你有一块够用的 GPU，想要通往可用微调的最短路径** → Unsloth。免费、Apache-2.0（核心；Studio UI 为 AGPL-3.0），如今还支持多卡与非 NVIDIA 硬件，过去让人转投他处的理由基本已经消失。',
           '**你的训练任务装不下一台机器了** → Axolotl。通过 Torchrun 与 Ray 的多节点加上 ND 并行，才是 2026 年它与 Unsloth 之间真正的分界线。',
           '**你在用 M 系列芯片的 Mac** → 若想要最轻量、原生于 MLX 的路径，选 MLX-LM；不过 Unsloth 现在也能在 macOS 上运行，所以这已是偏好问题，而非唯一选项。',
           '**你需要 DPO、ORPO、KTO、GRPO 或奖励建模** → Axolotl。它记录在案的方法覆盖面明显是三者中最广的。',
@@ -3369,7 +3369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['评估维度', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { 评估维度: 'GitHub 星标', Unsloth: '7.50 万', Axolotl: '1.24 万', 'MLX-LM': '0.68 万' },
-          { 评估维度: '许可证', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
+          { 评估维度: '许可证', Unsloth: '核心：Apache-2.0 / Studio UI：AGPL-3.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
           { 评估维度: '最适合', Unsloth: '自有硬件上最快的路径', Axolotl: '扩展到单机之外', 'MLX-LM': 'Mac 上原生于 MLX 的轻量工作' },
           { 评估维度: '多卡', Unsloth: '支持，在开源项目中', Axolotl: '支持 — FSDP1、FSDP2、DeepSpeed', 'MLX-LM': '通过 mx.distributed' },
           { 评估维度: '多节点', Unsloth: 'README 未记录', Axolotl: '支持 — Torchrun 与 Ray', 'MLX-LM': '通过 mx.distributed' },
@@ -3387,15 +3387,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unsloth: {
         id: 'unsloth',
         title: 'Unsloth：本地的默认之选',
-        content: '**大多数人应该从 Unsloth 开始，而且理由是变多了而不是变少了。** 它的星标在三者中遥遥领先，许可证是 Apache-2.0，硬件与操作系统的覆盖面如今也是这里最广的。',
+        content: '**大多数人应该从 Unsloth 开始，而且理由是变多了而不是变少了。** 它的星标在三者中遥遥领先，许可证为 Apache-2.0（核心；Studio UI 为 AGPL-3.0），硬件与操作系统的覆盖面如今也是这里最广的。',
         rankedItems: [
           {
             rank: 1,
             name: 'Unsloth — 综合最佳本地框架',
-            tagline: 'Apache-2.0 免费，含多卡支持，可在 NVIDIA、AMD、Intel、CPU 与 macOS 上运行',
-            verdict: 'Unsloth 重写了注意力与梯度内核以降低显存占用、加速 LoRA 与 QLoRA 训练，这仍是它的核心吸引力。变化的是覆盖面。其 README 现在声明支持跨 NVIDIA、AMD 与 Intel GPU、CPU 以及 Vulkan 后端的多卡配置，可运行于 Windows、Linux、WSL 与 macOS，并为每个系统提供桌面版。这份 22 KB 的 Apache-2.0 README 里没有任何内容把上述能力锁在付费档之后。该项目也已从一个训练库扩展成更接近本地工作台的东西，带有 Studio 界面和兼容 OpenAI 的服务端点。付费的 Pro 与 Enterprise 档位确实存在，但价格未公开，因此你在别处看到的任何具体金额都应视为未经核实。',
+            tagline: 'Apache-2.0（核心；Studio UI 为 AGPL-3.0） 免费，含多卡支持，可在 NVIDIA、AMD、Intel、CPU 与 macOS 上运行',
+            verdict: 'Unsloth 重写了注意力与梯度内核以降低显存占用、加速 LoRA 与 QLoRA 训练，这仍是它的核心吸引力。变化的是覆盖面。其 README 现在声明支持跨 NVIDIA、AMD 与 Intel GPU、CPU 以及 Vulkan 后端的多卡配置，可运行于 Windows、Linux、WSL 与 macOS，并为每个系统提供桌面版。这份 22 KB 的 README 里没有任何内容把上述能力锁在付费档之后。该项目也已从一个训练库扩展成更接近本地工作台的东西，带有 Studio 界面和兼容 OpenAI 的服务端点。付费的 Pro 与 Enterprise 档位确实存在，但价格未公开，因此你在别处看到的任何具体金额都应视为未经核实。',
             pros: [
-              '免费且采用 Apache-2.0，开源项目中即包含多卡支持',
+              '免费；核心采用 Apache-2.0（Studio UI 为 AGPL-3.0），开源项目中即包含多卡支持',
               '这里最广的硬件覆盖：NVIDIA、AMD、Intel、CPU 与 Vulkan',
               '可运行于 Windows、Linux、WSL 与 macOS，并有桌面版',
               '三者中安装成本最低——是一个安装器而不是一棵配置树',
@@ -3410,7 +3410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://github.com/unslothai/unsloth',
                 productName: 'Unsloth',
                 productCategory: 'dev-tool',
-                priceRange: '免费，Apache-2.0；付费档位仅提供报价',
+                priceRange: '免费，核心为 Apache-2.0、Studio UI 为 AGPL-3.0；付费档位仅提供报价',
                 label: 'Unsloth — 开源仓库',
               },
             ],
@@ -3583,7 +3583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: '以为多卡需要 Unsloth 的付费档',
-            whyItMatters: '这个说法流传很广，却与该项目当前的 README 相矛盾：README 把多卡支持与 AMD、Intel、CPU 和 Vulkan 后端并列，而 Apache-2.0 仓库中任何地方都没有付费墙。有团队仅仅为了获得自己早已具备的多卡能力，就引入了更重的框架。',
+            whyItMatters: '这个说法流传很广，却与该项目当前的 README 相矛盾：README 把多卡支持与 AMD、Intel、CPU 和 Vulkan 后端并列，而开源仓库中任何地方都没有付费墙。有团队仅仅为了获得自己早已具备的多卡能力，就引入了更重的框架。',
           },
           {
             title: '把 Together.ai 的全参数微调引作每百万 token 0.54 至 3.20 美元',
@@ -3694,7 +3694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026 年最佳 LLM 微调框架：Unsloth、Axolotl 还是云端',
       description: '对比用于本地微调的 Unsloth、Axolotl 与 MLX-LM，以及 Together.ai 和 Fireworks.ai 的云 API，包含核实过的价格、许可证与能力表述。',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-10-19',
       url: 'https://www.promptquorum.com/zh/local-llms/best-llm-fine-tuning-framework',
       inLanguage: 'zh',
       proficiencyLevel: 'Advanced',
@@ -3767,7 +3767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'zh',
       numberOfItems: 5,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: '综合最佳本地框架 — Apache-2.0 免费，含多卡支持，可在 NVIDIA、AMD、Intel、CPU 与 macOS 上运行' },
+        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: '综合最佳本地框架 — Apache-2.0（核心；Studio UI 为 AGPL-3.0） 免费，含多卡支持，可在 NVIDIA、AMD、Intel、CPU 与 macOS 上运行' },
         { '@type': 'ListItem', position: 2, name: 'Axolotl', description: '超越单机的最佳选择 — 通过 Torchrun 与 Ray 实现多节点，ND 并行，方法覆盖面最广' },
         { '@type': 'ListItem', position: 3, name: 'MLX-LM', description: 'Apple Silicon 上最佳的轻量选项 — MIT 许可，构建于苹果 MLX 之上，通过 mx.distributed 分布式训练' },
         { '@type': 'ListItem', position: 4, name: 'Together.ai', description: '最佳云 API — 16B 以内模型 LoRA SFT 每百万 token 0.48 美元，每任务最低 4 美元' },
@@ -3782,12 +3782,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'أفضل إطار عمل لضبط النماذج اللغوية 2026: Unsloth أم Axolotl أم السحابة',
     seoTitle: 'أفضل إطار عمل لضبط النماذج اللغوية 2026',
-    metaDescription: 'أداة Unsloth مجانية برخصة Apache-2.0 وتشمل تعدد المعالجات الرسومية، وAxolotl تضيف التدريب متعدد العقد، وTogether.ai تتقاضى 0.48 دولار لكل مليون رمز. أسعار.',
+    metaDescription: 'أداة Unsloth مجانية ومفتوحة المصدر وتشمل تعدد المعالجات الرسومية، وAxolotl تضيف التدريب متعدد العقد، وTogether.ai تتقاضى 0.48 دولار لكل مليون رمز. أسعار.',
     educationalLevel: 'Advanced',
     audience: 'مهندسو تعلم الآلة والمطورون الذين يضبطون النماذج اللغوية',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-10-19',
     readTime: 'قراءة 13 دقيقة',
     primaryTerm: 'إطار عمل ضبط النماذج اللغوية',
     targetKeywords: [
@@ -3802,7 +3802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: 'أي إطار عمل لضبط النماذج اللغوية هو الأفضل في 2026؟',
       answer: '**ابدأ بـUnsloth إن كنت تدرّب على عتادك الخاص، وانتقل إلى Axolotl حين تحتاج أكثر من جهاز واحد، واستخدم Together.ai أو Fireworks.ai إن كنت تفضّل ألا تمتلك معالجًا رسوميًا إطلاقًا.** القرار الحقيقي ليس أي مكتبة تحوز نجومًا أكثر، بل ما إذا كنت تريد تشغيل مهمة التدريب بنفسك. فإن كان لديك معالج رسومي قادر، لا يكلّفك التدريب المحلي شيئًا يُذكر لكل تشغيل بعد الإعداد. وإن كنت تضبط النموذج بضع مرات في السنة، فسعر الرمز لدى واجهة سحابية يكون عادةً أرخص من الوقت الذي ستنفقه على المشغّلات وتهيئة البيئة.',
       bullets: [
-        '**أفضل إطار محلي إجمالًا:** Unsloth — مجاني برخصة Apache-2.0، تعدد المعالجات مشمول، يعمل على NVIDIA وAMD وIntel والمعالجات المركزية وmacOS',
+        '**أفضل إطار محلي إجمالًا:** Unsloth — مجاني برخصة Apache-2.0 (النواة؛ واجهة Studio: AGPL-3.0)، تعدد المعالجات مشمول، يعمل على NVIDIA وAMD وIntel والمعالجات المركزية وmacOS',
         '**الأفضل لتجاوز جهاز واحد:** Axolotl — تدريب متعدد العقد عبر Torchrun وRay، وتواز متعدد الأبعاد، وأوسع مجموعة طرق',
         '**الأخف على Apple Silicon:** MLX-LM — رخصة MIT، مبني على إطار MLX من آبل، وتدريب موزّع عبر mx.distributed',
         '**أفضل واجهة سحابية:** Together.ai — 0.48 دولار لكل مليون رمز لطريقة LoRA على النماذج حتى 16 مليار معامل، بحد أدنى 4 دولارات للمهمة',
@@ -3836,7 +3836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Unsloth** — 75.0 ألف نجمة على GitHub، برخصة Apache-2.0. يذكر ملف التعريف الخاص به دعم إعدادات تعدد المعالجات الرسومية، ومعالجات NVIDIA وAMD وIntel، والمعالجات المركزية، وخلفية Vulkan، على Windows وLinux وWSL وmacOS، مع إصدارات سطح مكتب. وتعدد المعالجات **ليس** خلف جدار دفع في المشروع مفتوح المصدر.',
+          '**Unsloth** — 75.0 ألف نجمة على GitHub، برخصة Apache-2.0 (النواة؛ واجهة Studio: AGPL-3.0). يذكر ملف التعريف الخاص به دعم إعدادات تعدد المعالجات الرسومية، ومعالجات NVIDIA وAMD وIntel، والمعالجات المركزية، وخلفية Vulkan، على Windows وLinux وWSL وmacOS، مع إصدارات سطح مكتب. وتعدد المعالجات **ليس** خلف جدار دفع في المشروع مفتوح المصدر.',
           '**Axolotl** — 12.4 ألف نجمة، برخصة Apache-2.0. الوحيد بين الثلاثة الذي يوثّق التدريب متعدد العقد (عبر Torchrun وRay) والتوازي متعدد الأبعاد الذي يجمع توازي السياق وتوازي الموترات وتوازي البيانات المجزأة بالكامل داخل العقدة الواحدة وعبر عدة عقد.',
           '**MLX-LM** — 6.8 ألف نجمة، برخصة MIT، من منظمة `ml-explore` التابعة لآبل، والتي يصف ملفها التعريفي عملها بأنه «by Apple». يدعم LoRA والضبط الكامل، والنماذج المكمّمة، والاستدلال والضبط الموزّعين عبر `mx.distributed`.',
           '**Together.ai** — الضبط الخاضع للإشراف بطريقة LoRA بسعر 0.48 دولار لكل مليون رمز تدريب حتى 16 مليار معامل، و1.50 دولار في نطاق 17–69 مليارًا، و2.90 دولار في نطاق 70–100 مليار. أما الضبط الكامل الخاضع للإشراف فأغلى بكثير: 1.20 و3.75 و7.25 دولار في النطاقات نفسها. ويُطبَّق حد أدنى قدره 4.00 دولارات لكل مهمة.',
@@ -3850,7 +3850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '🏆 الخيار الأنسب لحالتك',
         content: '**الفارق الجوهري هو ما إذا كنت ستشغّل مهمة التدريب بنفسك أم تدفع لغيرك ليشغّلها.** اقرأ القائمة وتوقف عند أول سطر ينطبق عليك.',
         items: [
-          '**تملك معالجًا رسوميًا قادرًا وتريد أقصر طريق إلى ضبط ناجح** ← Unsloth. مجاني وبرخصة Apache-2.0، ويغطي الآن تعدد المعالجات والعتاد غير التابع لـNVIDIA، بحيث تلاشى إلى حد بعيد السبب القديم للانتقال عنه.',
+          '**تملك معالجًا رسوميًا قادرًا وتريد أقصر طريق إلى ضبط ناجح** ← Unsloth. مجاني وبرخصة Apache-2.0 (النواة؛ واجهة Studio: AGPL-3.0)، ويغطي الآن تعدد المعالجات والعتاد غير التابع لـNVIDIA، بحيث تلاشى إلى حد بعيد السبب القديم للانتقال عنه.',
           '**لم يعد تدريبك يتّسع في جهاز واحد** ← Axolotl. التدريب متعدد العقد عبر Torchrun وRay إضافةً إلى التوازي متعدد الأبعاد هو خط الفصل الحقيقي بينه وبين Unsloth في 2026.',
           '**تعمل على حاسوب Mac بمعالج من سلسلة M** ← MLX-LM إن أردت المسار الأخف والأقرب إلى MLX، غير أن Unsloth صار يعمل على macOS أيضًا، فصار ذلك تفضيلًا لا خيارًا وحيدًا كما كان.',
           '**تحتاج إلى DPO أو ORPO أو KTO أو GRPO أو نمذجة المكافأة** ← Axolotl. مجموعة الطرق الموثقة لديه هي الأوسع بين الثلاثة بفارق واضح.',
@@ -3903,7 +3903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['المعيار', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { المعيار: 'نجوم GitHub', Unsloth: '75.0 ألف', Axolotl: '12.4 ألف', 'MLX-LM': '6.8 ألف' },
-          { المعيار: 'الرخصة', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
+          { المعيار: 'الرخصة', Unsloth: 'النواة: Apache-2.0 / واجهة Studio: AGPL-3.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
           { المعيار: 'الأنسب لـ', Unsloth: 'أسرع طريق على عتادك الخاص', Axolotl: 'التوسّع خارج جهاز واحد', 'MLX-LM': 'عمل خفيف أصيل على MLX في Mac' },
           { المعيار: 'تعدد المعالجات', Unsloth: 'نعم، في المشروع مفتوح المصدر', Axolotl: 'نعم — FSDP1 وFSDP2 وDeepSpeed', 'MLX-LM': 'عبر mx.distributed' },
           { المعيار: 'تعدد العقد', Unsloth: 'غير موثق في ملف التعريف', Axolotl: 'نعم — Torchrun وRay', 'MLX-LM': 'عبر mx.distributed' },
@@ -3921,15 +3921,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unsloth: {
         id: 'unsloth',
         title: 'Unsloth: الخيار المحلي الافتراضي',
-        content: '**من Unsloth ينبغي أن يبدأ معظم الناس، وأسباب ذلك ازدادت لا تناقصت.** فهو الأكثر نجومًا بين الثلاثة بفارق واسع، ورخصته Apache-2.0، وتغطيته للعتاد وأنظمة التشغيل صارت الأوسع هنا.',
+        content: '**من Unsloth ينبغي أن يبدأ معظم الناس، وأسباب ذلك ازدادت لا تناقصت.** فهو الأكثر نجومًا بين الثلاثة بفارق واسع، ورخصته Apache-2.0 (النواة؛ واجهة Studio: AGPL-3.0)، وتغطيته للعتاد وأنظمة التشغيل صارت الأوسع هنا.',
         rankedItems: [
           {
             rank: 1,
             name: 'Unsloth — أفضل إطار محلي إجمالًا',
-            tagline: 'مجاني برخصة Apache-2.0، تعدد المعالجات مشمول، يعمل على NVIDIA وAMD وIntel والمعالجات المركزية وmacOS',
-            verdict: 'يعيد Unsloth كتابة نوى الانتباه والتدرجات لخفض استهلاك ذاكرة المعالج الرسومي وتسريع التدريب بطريقتي LoRA وQLoRA، وتلك تظل جاذبيته الأساسية. ما تغيّر هو المدى. فملف التعريف الخاص به صار يذكر دعم إعدادات تعدد المعالجات على معالجات NVIDIA وAMD وIntel، والمعالجات المركزية، وخلفية Vulkan، عاملًا على Windows وLinux وWSL وmacOS، مع إصدارات سطح مكتب لكل منها. ولا شيء في ملف التعريف البالغ 22 كيلوبايت برخصة Apache-2.0 يضع أيًا من ذلك خلف باقة مدفوعة. كما توسّع المشروع متجاوزًا كونه مكتبة تدريب ليقترب من منضدة عمل محلية، بواجهة Studio ونقطة تقديم متوافقة مع OpenAI. وتوجد باقتان مدفوعتان، Pro وEnterprise، غير أن أسعارهما غير منشورة، فتعامل مع أي رقم محدد تراه مقتبسًا في مكان آخر على أنه غير موثق.',
+            tagline: 'مجاني برخصة Apache-2.0 (النواة؛ واجهة Studio: AGPL-3.0)، تعدد المعالجات مشمول، يعمل على NVIDIA وAMD وIntel والمعالجات المركزية وmacOS',
+            verdict: 'يعيد Unsloth كتابة نوى الانتباه والتدرجات لخفض استهلاك ذاكرة المعالج الرسومي وتسريع التدريب بطريقتي LoRA وQLoRA، وتلك تظل جاذبيته الأساسية. ما تغيّر هو المدى. فملف التعريف الخاص به صار يذكر دعم إعدادات تعدد المعالجات على معالجات NVIDIA وAMD وIntel، والمعالجات المركزية، وخلفية Vulkan، عاملًا على Windows وLinux وWSL وmacOS، مع إصدارات سطح مكتب لكل منها. ولا شيء في ملف التعريف البالغ 22 كيلوبايت يضع أيًا من ذلك خلف باقة مدفوعة. كما توسّع المشروع متجاوزًا كونه مكتبة تدريب ليقترب من منضدة عمل محلية، بواجهة Studio ونقطة تقديم متوافقة مع OpenAI. وتوجد باقتان مدفوعتان، Pro وEnterprise، غير أن أسعارهما غير منشورة، فتعامل مع أي رقم محدد تراه مقتبسًا في مكان آخر على أنه غير موثق.',
             pros: [
-              'مجاني وبرخصة Apache-2.0، مع دعم تعدد المعالجات في المشروع مفتوح المصدر',
+              'مجاني، والنواة بترخيص Apache-2.0 (واجهة Studio: AGPL-3.0)، مع دعم تعدد المعالجات في المشروع مفتوح المصدر',
               'أوسع تغطية للعتاد هنا: NVIDIA وAMD وIntel ومعالجات مركزية وVulkan',
               'يعمل على Windows وLinux وWSL وmacOS، مع إصدارات سطح مكتب',
               'أقل جهد تثبيت بين الثلاثة — مثبّت بدل شجرة إعدادات',
@@ -3944,7 +3944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://github.com/unslothai/unsloth',
                 productName: 'Unsloth',
                 productCategory: 'dev-tool',
-                priceRange: 'مجاني، Apache-2.0؛ الباقات المدفوعة بعرض سعر فقط',
+                priceRange: 'مجاني، النواة Apache-2.0 وواجهة Studio AGPL-3.0؛ الباقات المدفوعة بعرض سعر فقط',
                 label: 'Unsloth — المستودع مفتوح المصدر',
               },
             ],
@@ -4117,7 +4117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: 'الاعتقاد بأن تعدد المعالجات يستلزم الباقة المدفوعة من Unsloth',
-            whyItMatters: 'تكرر هذا كثيرًا وهو يناقض ملف التعريف الحالي للمشروع، الذي يورد دعم تعدد المعالجات إلى جانب خلفيات AMD وIntel والمعالجات المركزية وVulkan دون أي جدار دفع في المستودع المرخّص بـApache-2.0. وقد تبنّت فرق إطارًا أثقل لمجرد الحصول على تعدد معالجات كان لديها أصلًا.',
+            whyItMatters: 'تكرر هذا كثيرًا وهو يناقض ملف التعريف الحالي للمشروع، الذي يورد دعم تعدد المعالجات إلى جانب خلفيات AMD وIntel والمعالجات المركزية وVulkan دون أي جدار دفع في المستودع مفتوح المصدر. وقد تبنّت فرق إطارًا أثقل لمجرد الحصول على تعدد معالجات كان لديها أصلًا.',
           },
           {
             title: 'اقتباس الضبط الكامل لدى Together.ai بأنه 0.54 إلى 3.20 دولار لكل مليون رمز',
@@ -4204,7 +4204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'أفضل إطار عمل لضبط النماذج اللغوية 2026: Unsloth أم Axolotl أم السحابة',
       description: 'مقارنة بين Unsloth وAxolotl وMLX-LM للضبط المحلي في مقابل واجهتي Together.ai وFireworks.ai السحابيتين، بأسعار وتراخيص وقدرات موثقة. جرى.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-10-19',
       url: 'https://www.promptquorum.com/ar/local-llms/best-llm-fine-tuning-framework',
       inLanguage: 'ar',
       proficiencyLevel: 'Advanced',
@@ -4301,7 +4301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ar',
       numberOfItems: 5,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: 'أفضل إطار محلي إجمالًا — مجاني برخصة Apache-2.0، تعدد المعالجات مشمول، يعمل على NVIDIA وAMD وIntel والمعالجات المركزية وmacOS' },
+        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: 'أفضل إطار محلي إجمالًا — مجاني برخصة Apache-2.0 (النواة؛ واجهة Studio: AGPL-3.0)، تعدد المعالجات مشمول، يعمل على NVIDIA وAMD وIntel والمعالجات المركزية وmacOS' },
         { '@type': 'ListItem', position: 2, name: 'Axolotl', description: 'الأفضل للتوسّع خارج جهاز واحد — تدريب متعدد العقد عبر Torchrun وRay، وتواز متعدد الأبعاد، وأوسع مجموعة طرق' },
         { '@type': 'ListItem', position: 3, name: 'MLX-LM', description: 'أفضل خيار خفيف على Apple Silicon — رخصة MIT، مبني على MLX من آبل، وتدريب موزّع عبر mx.distributed' },
         { '@type': 'ListItem', position: 4, name: 'Together.ai', description: 'أفضل واجهة سحابية — 0.48 دولار لكل مليون رمز لطريقة LoRA حتى 16 مليار معامل، بحد أدنى 4 دولارات للمهمة' },
@@ -4316,12 +4316,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: '2026년 최고의 LLM 파인튜닝 프레임워크: Unsloth, Axolotl, 클라우드',
     seoTitle: '2026년 최고의 LLM 파인튜닝 프레임워크',
-    metaDescription: 'Unsloth는 Apache-2.0으로 무료이며 멀티 GPU를 포함하고, Axolotl은 멀티노드 학습을 더하며, Together.ai는 100만 토큰당 0.48달러입니다. 확인된 가격.',
+    metaDescription: 'Unsloth는 오픈소스로 무료이며 멀티 GPU를 포함하고, Axolotl은 멀티노드 학습을 더하며, Together.ai는 100만 토큰당 0.48달러입니다. 확인된 가격.',
     educationalLevel: 'Advanced',
     audience: 'LLM을 파인튜닝하는 ML 엔지니어와 개발자',
     affiliateDisclosure: true,
     publishDate: '2026-08-28',
-    dateModified: '2026-08-28',
+    dateModified: '2026-10-19',
     readTime: '읽는 데 13분',
     primaryTerm: 'LLM 파인튜닝 프레임워크',
     targetKeywords: [
@@ -4336,7 +4336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       question: '2026년 어떤 LLM 파인튜닝 프레임워크가 가장 좋나요?',
       answer: '**자체 하드웨어에서 학습한다면 Unsloth로 시작하고, 한 대를 넘어서야 할 때 Axolotl로 옮기고, GPU를 아예 갖고 싶지 않다면 Together.ai나 Fireworks.ai를 쓰세요.** 실제로 맞닥뜨리는 판단은 어느 라이브러리의 별이 많은지가 아니라 학습 작업을 직접 돌릴 것인지입니다. 쓸 만한 GPU가 있다면 환경만 갖추면 실행당 비용은 거의 없습니다. 1년에 몇 번만 조정한다면, 클라우드 API의 토큰 요금이 드라이버와 환경 설정에 쓰는 시간보다 대개 저렴합니다.',
       bullets: [
-        '**종합 최고의 로컬 프레임워크:** Unsloth — Apache-2.0 무료, 멀티 GPU 포함, NVIDIA·AMD·Intel·CPU·macOS에서 실행',
+        '**종합 최고의 로컬 프레임워크:** Unsloth — Apache-2.0(코어; Studio UI는 AGPL-3.0) 무료, 멀티 GPU 포함, NVIDIA·AMD·Intel·CPU·macOS에서 실행',
         '**한 대를 넘어설 때 최적:** Axolotl — Torchrun과 Ray를 통한 멀티노드, ND 병렬, 가장 넓은 기법 범위',
         '**Apple Silicon에서 가장 가벼움:** MLX-LM — MIT 라이선스, 애플 MLX 위에 구축, mx.distributed로 분산 학습',
         '**최고의 클라우드 API:** Together.ai — 16B 이하 모델 LoRA 100만 토큰당 0.48달러, 작업당 최소 4달러',
@@ -4370,7 +4370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'tldr',
         isTldr: true,
         items: [
-          '**Unsloth** — GitHub 별 7만 5천, Apache-2.0. README는 멀티 GPU 구성과 NVIDIA·AMD·Intel GPU, CPU, Vulkan 백엔드 지원을 Windows·Linux·WSL·macOS에서 명시하며 데스크톱 빌드도 배포합니다. 오픈소스 프로젝트에서 멀티 GPU가 유료 장벽 뒤에 있는 것이 **아닙니다**.',
+          '**Unsloth** — GitHub 별 7만 5천, Apache-2.0(코어; Studio UI는 AGPL-3.0). README는 멀티 GPU 구성과 NVIDIA·AMD·Intel GPU, CPU, Vulkan 백엔드 지원을 Windows·Linux·WSL·macOS에서 명시하며 데스크톱 빌드도 배포합니다. 오픈소스 프로젝트에서 멀티 GPU가 유료 장벽 뒤에 있는 것이 **아닙니다**.',
           '**Axolotl** — 별 1만 2천 4백, Apache-2.0. 셋 중 유일하게 멀티노드 학습(Torchrun, Ray)과 컨텍스트·텐서·완전 샤딩 데이터 병렬을 노드 내부와 여러 노드에 걸쳐 결합하는 ND 병렬을 문서화합니다.',
           '**MLX-LM** — 별 6천 8백, MIT, 애플의 `ml-explore` 조직 소속이며 해당 조직 프로필 자체가 "by Apple"이라고 밝힙니다. LoRA와 전체 파인튜닝, 양자화 모델, 그리고 `mx.distributed`를 통한 분산 추론과 조정을 지원합니다.',
           '**Together.ai** — 지도 LoRA 파인튜닝이 16B 파라미터까지 학습 토큰 100만당 0.48달러, 17~69B는 1.50달러, 70~100B는 2.90달러입니다. 전체 지도 파인튜닝은 훨씬 비싸 같은 구간에서 각각 1.20, 3.75, 7.25달러입니다. 작업당 4.00달러 최소 요금이 적용됩니다.',
@@ -4384,7 +4384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '🏆 상황별 최적 선택',
         content: '**중요한 갈림길은 학습 작업을 직접 돌릴 것인지, 아니면 남에게 비용을 내고 맡길 것인지입니다.** 아래를 읽어 내려가다 본인에게 해당하는 첫 줄에서 멈추세요.',
         items: [
-          '**쓸 만한 GPU가 있고 동작하는 파인튜닝까지 가장 짧은 길을 원한다** → Unsloth. 무료이고 Apache-2.0이며 이제 멀티 GPU와 비 NVIDIA 하드웨어까지 지원하므로, 예전에 갈아탈 이유였던 것들이 대체로 사라졌습니다.',
+          '**쓸 만한 GPU가 있고 동작하는 파인튜닝까지 가장 짧은 길을 원한다** → Unsloth. 무료이고 Apache-2.0(코어; Studio UI는 AGPL-3.0)이며 이제 멀티 GPU와 비 NVIDIA 하드웨어까지 지원하므로, 예전에 갈아탈 이유였던 것들이 대체로 사라졌습니다.',
           '**학습이 한 대에 더는 들어가지 않는다** → Axolotl. Torchrun과 Ray를 통한 멀티노드에 ND 병렬을 더한 점이 2026년 Unsloth와의 실질적인 분기점입니다.',
           '**M 시리즈 칩 Mac에서 작업한다** → 가장 가볍고 MLX에 밀착한 길을 원하면 MLX-LM. 다만 Unsloth도 이제 macOS에서 돌아가므로, 이는 유일한 선택지가 아니라 취향의 문제입니다.',
           '**DPO, ORPO, KTO, GRPO 또는 보상 모델링이 필요하다** → Axolotl. 문서화된 기법의 범위가 셋 중 확연히 가장 넓습니다.',
@@ -4437,7 +4437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['평가 항목', '[Unsloth](https://github.com/unslothai/unsloth)', '[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)', '[MLX-LM](https://github.com/ml-explore/mlx-lm)'],
         rows: [
           { '평가 항목': 'GitHub 별', Unsloth: '7만 5천', Axolotl: '1만 2천 4백', 'MLX-LM': '6천 8백' },
-          { '평가 항목': '라이선스', Unsloth: 'Apache-2.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
+          { '평가 항목': '라이선스', Unsloth: '코어: Apache-2.0 / Studio UI: AGPL-3.0', Axolotl: 'Apache-2.0', 'MLX-LM': 'MIT' },
           { '평가 항목': '적합한 경우', Unsloth: '자체 하드웨어에서 가장 빠른 길', Axolotl: '한 대를 넘어선 확장', 'MLX-LM': 'Mac에서 MLX 네이티브 경량 작업' },
           { '평가 항목': '멀티 GPU', Unsloth: '지원, 오픈소스 프로젝트에서', Axolotl: '지원 — FSDP1, FSDP2, DeepSpeed', 'MLX-LM': 'mx.distributed 경유' },
           { '평가 항목': '멀티노드', Unsloth: 'README에 문서화 없음', Axolotl: '지원 — Torchrun과 Ray', 'MLX-LM': 'mx.distributed 경유' },
@@ -4455,15 +4455,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       unsloth: {
         id: 'unsloth',
         title: 'Unsloth: 로컬의 기본 선택',
-        content: '**대부분은 Unsloth에서 시작해야 하며, 그 이유는 줄어든 것이 아니라 늘었습니다.** 셋 중 별 수가 압도적으로 많고, 라이선스는 Apache-2.0이며, 하드웨어와 운영체제 지원 범위는 이제 여기서 가장 넓습니다.',
+        content: '**대부분은 Unsloth에서 시작해야 하며, 그 이유는 줄어든 것이 아니라 늘었습니다.** 셋 중 별 수가 압도적으로 많고, 라이선스는 Apache-2.0(코어; Studio UI는 AGPL-3.0)이며, 하드웨어와 운영체제 지원 범위는 이제 여기서 가장 넓습니다.',
         rankedItems: [
           {
             rank: 1,
             name: 'Unsloth — 종합 최고의 로컬 프레임워크',
-            tagline: 'Apache-2.0 무료, 멀티 GPU 포함, NVIDIA·AMD·Intel·CPU·macOS에서 실행',
-            verdict: 'Unsloth는 어텐션과 그래디언트 커널을 새로 작성해 VRAM 사용량을 줄이고 LoRA·QLoRA 학습을 가속하며, 그 점은 여전히 핵심 매력입니다. 달라진 것은 지원 범위입니다. README는 이제 NVIDIA·AMD·Intel GPU, CPU, Vulkan 백엔드에 걸친 멀티 GPU 구성을 명시하고, Windows·Linux·WSL·macOS에서 실행되며 각각에 데스크톱 빌드를 제공합니다. 22KB 분량의 Apache-2.0 README 어디에도 이를 유료 등급 뒤에 두는 내용은 없습니다. 프로젝트 자체도 학습 라이브러리를 넘어 Studio 인터페이스와 OpenAI 호환 서빙 엔드포인트를 갖춘 로컬 작업대에 가까워졌습니다. 유료 Pro와 Enterprise 등급이 있기는 하지만 가격이 공개되지 않았으므로, 다른 곳에서 인용된 구체적 금액은 검증되지 않은 것으로 취급하세요.',
+            tagline: 'Apache-2.0(코어; Studio UI는 AGPL-3.0) 무료, 멀티 GPU 포함, NVIDIA·AMD·Intel·CPU·macOS에서 실행',
+            verdict: 'Unsloth는 어텐션과 그래디언트 커널을 새로 작성해 VRAM 사용량을 줄이고 LoRA·QLoRA 학습을 가속하며, 그 점은 여전히 핵심 매력입니다. 달라진 것은 지원 범위입니다. README는 이제 NVIDIA·AMD·Intel GPU, CPU, Vulkan 백엔드에 걸친 멀티 GPU 구성을 명시하고, Windows·Linux·WSL·macOS에서 실행되며 각각에 데스크톱 빌드를 제공합니다. 22KB 분량의 README 어디에도 이를 유료 등급 뒤에 두는 내용은 없습니다. 프로젝트 자체도 학습 라이브러리를 넘어 Studio 인터페이스와 OpenAI 호환 서빙 엔드포인트를 갖춘 로컬 작업대에 가까워졌습니다. 유료 Pro와 Enterprise 등급이 있기는 하지만 가격이 공개되지 않았으므로, 다른 곳에서 인용된 구체적 금액은 검증되지 않은 것으로 취급하세요.',
             pros: [
-              '무료이며 Apache-2.0, 오픈소스 프로젝트에 멀티 GPU 지원 포함',
+              '무료이며 코어는 Apache-2.0(Studio UI는 AGPL-3.0), 오픈소스 프로젝트에 멀티 GPU 지원 포함',
               '여기서 가장 넓은 하드웨어 지원: NVIDIA, AMD, Intel, CPU, Vulkan',
               'Windows·Linux·WSL·macOS에서 실행되며 데스크톱 빌드 제공',
               '셋 중 설치 부담이 가장 적음 — 설정 트리가 아니라 설치 관리자',
@@ -4478,7 +4478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
                 url: 'https://github.com/unslothai/unsloth',
                 productName: 'Unsloth',
                 productCategory: 'dev-tool',
-                priceRange: '무료, Apache-2.0, 유료 등급은 견적 문의만',
+                priceRange: '무료, 코어 Apache-2.0·Studio UI AGPL-3.0, 유료 등급은 견적 문의만',
                 label: 'Unsloth — 오픈소스 저장소',
               },
             ],
@@ -4651,7 +4651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           {
             title: '멀티 GPU에 Unsloth 유료 등급이 필요하다고 믿는 것',
-            whyItMatters: '널리 반복된 이야기지만 프로젝트의 현재 README와 어긋납니다. README는 멀티 GPU 지원을 AMD·Intel·CPU·Vulkan 백엔드와 나란히 적고 있으며, Apache-2.0 저장소 어디에도 유료 장벽이 없습니다. 이미 갖고 있던 멀티 GPU를 얻겠다고 더 무거운 프레임워크를 도입한 팀들이 있습니다.',
+            whyItMatters: '널리 반복된 이야기지만 프로젝트의 현재 README와 어긋납니다. README는 멀티 GPU 지원을 AMD·Intel·CPU·Vulkan 백엔드와 나란히 적고 있으며, 오픈소스 저장소 어디에도 유료 장벽이 없습니다. 이미 갖고 있던 멀티 GPU를 얻겠다고 더 무거운 프레임워크를 도입한 팀들이 있습니다.',
           },
           {
             title: 'Together.ai 전체 파인튜닝을 100만 토큰당 0.54~3.20달러로 인용하는 것',
@@ -4738,7 +4738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: '2026년 최고의 LLM 파인튜닝 프레임워크: Unsloth, Axolotl, 클라우드',
       description: '로컬 파인튜닝용 Unsloth, Axolotl, MLX-LM을 Together.ai와 Fireworks.ai의 클라우드 API와 비교합니다. 검증된 가격, 라이선스, 기능 포함.',
       datePublished: '2026-08-28',
-      dateModified: '2026-08-28',
+      dateModified: '2026-10-19',
       url: 'https://www.promptquorum.com/ko/local-llms/best-llm-fine-tuning-framework',
       inLanguage: 'ko',
       proficiencyLevel: 'Advanced',
@@ -4835,7 +4835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       inLanguage: 'ko',
       numberOfItems: 5,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: '종합 최고의 로컬 프레임워크 — Apache-2.0 무료, 멀티 GPU 포함, NVIDIA·AMD·Intel·CPU·macOS에서 실행' },
+        { '@type': 'ListItem', position: 1, name: 'Unsloth', description: '종합 최고의 로컬 프레임워크 — Apache-2.0(코어; Studio UI는 AGPL-3.0) 무료, 멀티 GPU 포함, NVIDIA·AMD·Intel·CPU·macOS에서 실행' },
         { '@type': 'ListItem', position: 2, name: 'Axolotl', description: '한 대를 넘어설 때 최적 — Torchrun과 Ray를 통한 멀티노드, ND 병렬, 가장 넓은 기법 범위' },
         { '@type': 'ListItem', position: 3, name: 'MLX-LM', description: 'Apple Silicon에서 최적의 경량 선택지 — MIT 라이선스, 애플 MLX 위에 구축, mx.distributed로 분산 학습' },
         { '@type': 'ListItem', position: 4, name: 'Together.ai', description: '최고의 클라우드 API — 16B 이하 LoRA SFT 100만 토큰당 0.48달러, 작업당 최소 4달러' },

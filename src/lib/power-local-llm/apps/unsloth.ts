@@ -9,7 +9,7 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'vLLM', 'Claude Code', 'OpenAI', 'Anthropic'],
   engine: 'builtin',
-  license: 'Apache-2.0',
+  license: 'Apache-2.0 (core) / AGPL-3.0 (Studio UI)', // README License section, read 2026-10-19: "Unsloth uses a dual-licensing model of Apache 2.0 and AGPL-3.0. The core Unsloth package remains licensed under Apache 2.0, while certain optional components, such as the Unsloth Studio UI are licensed under the open-source license AGPL-3.0."
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // per github.com/unslothai/unsloth README: "Multi GPU setups, NVIDIA, AMD, Intel GPUs, CPUs and the Vulkan backend" are all supported, with claimed 2x faster training and 70% less VRAM vs. standard fine-tuning — no fixed RAM/VRAM floor since it scales with the model, method (LoRA/QLoRA/full fine-tune), and modality (LLM, diffusion, TTS, embedding) being trained; verified 2026-09-13
   stars: 76103,
@@ -37,7 +37,7 @@ export const app: ToolRecord = {
   reviewSlug: 'unsloth-review',
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { lowVram: true, loraQlora: true, webUi: true, multiGpu: true, exportGguf: true },
-  lastVerifiedDate: '2026-09-13',
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
-  lastUpstreamUpdateSource: 'https://github.com/unslothai/unsloth',
+  lastVerifiedDate: '2026-10-19',
+  lastUpstreamUpdate: '2026-10-19', // GitHub latest release v0.1.909-beta ("DeepSeek-V4.1 & FLUX-3"), published 2026-10-19T16:21:58Z, read via the GitHub API 2026-10-19
+  lastUpstreamUpdateSource: 'https://github.com/unslothai/unsloth/releases/tag/v0.1.909-beta',
 }
