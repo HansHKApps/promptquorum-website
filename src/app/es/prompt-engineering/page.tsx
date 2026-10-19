@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { PromptEngineeringHub } from '@/components/PromptEngineeringHub'
+import { PeHubTemplate, usesPeHubTemplate } from '@/lib/prompt-engineering/hub-template'
 import { buildPEHubData } from '@/lib/prompt-engineering/hub-data'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
@@ -29,7 +30,9 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function EsPromptEngineeringPage() {
-  const { titlesMap, articleLevels, datesMap } = buildPEHubData('es')
+  const hubData = buildPEHubData('es')
 
-  return <PromptEngineeringHub initialLang="es" titlesMap={titlesMap} articleLevels={articleLevels} datesMap={datesMap} />
+  if (usesPeHubTemplate('es')) return <PeHubTemplate lang="es" {...hubData} />
+
+  return <PromptEngineeringHub initialLang="es" {...hubData} />
 }

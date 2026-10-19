@@ -5900,7 +5900,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 38,
+    "totalCount": 39,
     "capped": true
   },
   "Pocket AI": {
@@ -11411,6 +11411,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "caelum-review",
+        "title": "Caelum Review: Free Offline AI Chat App for Android",
+        "url": "/power-local-llm/caelum-review",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llamatik-review",
         "title": "Llamatik Review: Free Offline AI Chatbot for Android and iPhone",
         "url": "/power-local-llm/llamatik-review",
@@ -11464,17 +11472,9 @@
         "url": "/power-local-llm/local-ai-geetmark-review",
         "dateModified": "2026-10-09",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "tokforge-review",
-        "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
-        "url": "/power-local-llm/tokforge-review",
-        "dateModified": "2026-10-09",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "LLM Hub": {
