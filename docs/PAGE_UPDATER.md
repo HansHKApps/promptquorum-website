@@ -289,6 +289,8 @@ After updating, verify:
 
 ### Step 5: Multi-Language Propagation
 
+> **HARD GATE — `docs/geo-translation.md` (owner rule, restated 2026-10-19).** Before writing ANY non-EN text (a whole article, a new section, or one FAQ), open and read `docs/geo-translation.md` in this session, then apply its per-language table (register, decimals, currency, readTime, never-translate identifiers, schema fidelity, regional-rule test) to every string you author. Hand-writing translations from memory is a protocol violation, not a shortcut — it happened on 2026-10-19 (DeepSeek-R1 refresh) and had to be redone. The Step 6 report MUST carry the `geo-translation:` line; a report without it is incomplete.
+
 After the English (EN) page is finalized, propagate changes to all active non-English language versions. The active set is **9 languages total** (EN + 8):
 - DE (German)
 - ES (Spanish)
@@ -349,6 +351,7 @@ After completing the update, output a section-by-section report:
 ```
 ## Update Report: [page-slug]
 - Risk gate: [PASS n/10 / REVIEW — HIGH items listed below / BLOCK → fixed, re-run PASS]
+- geo-translation: APPLIED — read docs/geo-translation.md this session; per-locale quality table below [or: N/A — no non-EN text authored]
 - GSC data reviewed: [date range], [X] queries, [Y] impressions, [Z] clicks
 - Top GSC query gaps addressed: [list queries that were missing from content]
 - Title tag: UPDATED (was "X", now "Y") — aligned to top query: "[query]"
