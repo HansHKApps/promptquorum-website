@@ -47,6 +47,18 @@ export const NOINDEX_PAGES = new Set([
   '/image-license', // robots.txt Disallow'd — utility/attribution page, not indexable
 ])
 
+// English URLs that 301/308 to another page (next.config.ts redirects / middleware PE_FRAMEWORK_REDIRECTS).
+// The translated /{lang}/ versions are live, self-canonical pages, so only the English entry (and the
+// hreflang alternate / x-default pointing at it) is dropped — a sitemap must list final URLs only.
+export const REDIRECTED_EN_PATHS = new Set([
+  '/local-llms/apple-silicon-vs-nvidia-gpu-local-llm',
+  '/prompt-engineering/co-star-framework',
+  '/prompt-engineering/risen-framework',
+  '/prompt-engineering/rtf-framework',
+  '/prompt-engineering/trace-framework',
+  '/prompt-engineering/craft-framework',
+])
+
 // Path prefixes excluded from sitemap entirely
 export const EXCLUDED_PATH_PREFIXES = [
   '/power-local-llm',
@@ -230,7 +242,8 @@ export function renderPageUrlXml({ path, priority, changefreq, lastmod }: Page):
   // Languages to emit for this path: article paths → only languages that actually have
   // real content (matches the live page's own <link rel="alternate"> tags); non-article
   // paths (static / hubs / frameworks) → all languages.
-  const emitLangs = availableLangsForPath(path) ?? LANGS
+  const enRedirects = REDIRECTED_EN_PATHS.has(path)
+  const emitLangs = (availableLangsForPath(path) ?? LANGS).filter(l => !(enRedirects && l === 'en'))
 
   let xml = ''
 
@@ -257,7 +270,7 @@ export function renderPageUrlXml({ path, priority, changefreq, lastmod }: Page):
       const otherPath = otherLang === 'en' ? path : (path === '' ? `/${otherLang}` : `/${otherLang}${path}`)
       xml += `    <xhtml:link rel="alternate" hreflang="${otherLang}" href="${escapeXml(`${BASE}${otherPath}`)}" />\n`
     })
-    xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(`${BASE}${path}`)}" />\n`
+    if (!enRedirects) xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(`${BASE}${path}`)}" />\n`
 
     // Add images with proper serialization
     pageImages.forEach((img) => {
