@@ -1100,7 +1100,7 @@
     ],
     [
       "UN-26",
-      "디렉터리에는 라이선스가 Apache-2.0으로 올라 있지만, GitHub 페이지에는 Studio UI는 AGPL-3.0, 코어는 Apache-2.0이라고 나와 있다.",
+      "GitHub README는 이중 라이선스 모델을 명시하고 있으며, 코어 패키지는 Apache-2.0, Studio UI 같은 선택 구성 요소는 AGPL-3.0이라고 나와 있다(PromptQuorum 디렉터리는 테스트 시점에 Apache-2.0만 표기했으며 이후 수정되었다).",
       "유지보수",
       "third-party",
       "Medium",
@@ -1151,7 +1151,7 @@
     ],
     [
       "third-party",
-      "PromptQuorum 디렉터리는 Unsloth를 무료, Apache-2.0, Mac·Windows·Linux 지원, 파인튜닝 및 LoRA 카테고리, GitHub 별 약 76,100개로 올려 두었습니다(데이터 확인 2026년 9월 13일). 릴리스 v0.1.905-beta의 macOS DMG(2026년 10월 9일 확인)와 2026년 10월 16일의 마지막 업스트림 업데이트도 기록되어 있습니다. PromptQuorum은 이 보고서 이전에는 직접 사용 테스트를 하지 않았습니다."
+      "PromptQuorum 디렉터리는 Unsloth를 무료, Apache-2.0(코어) / AGPL-3.0(Studio UI), Mac·Windows·Linux 지원, 파인튜닝 및 LoRA 카테고리, GitHub 별 약 76,100개로 올려 두었습니다(데이터 확인 2026년 9월 13일). 릴리스 v0.1.905-beta의 macOS DMG(2026년 10월 9일 확인)와 2026년 10월 16일의 마지막 업스트림 업데이트도 기록되어 있습니다. PromptQuorum은 이 보고서 이전에는 직접 사용 테스트를 하지 않았습니다."
     ],
     [
       "assumption",

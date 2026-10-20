@@ -1100,7 +1100,7 @@
     ],
     [
       "UN-26",
-      "目录里把许可证列为 Apache-2.0；GitHub 页面说 Studio UI 是 AGPL-3.0，核心是 Apache-2.0。",
+      "GitHub README 说明采用双重许可：核心包为 Apache-2.0，Studio UI 等可选组件为 AGPL-3.0（PromptQuorum 目录在测试时只列出 Apache-2.0，此后已更正）。",
       "维护",
       "third-party",
       "Medium",
@@ -1151,7 +1151,7 @@
     ],
     [
       "third-party",
-      "PromptQuorum 目录把 Unsloth 列为免费、Apache-2.0，支持 Mac、Windows 和 Linux，类别为微调与 LoRA，GitHub 星标约 76,100（数据于 2026 年 9 月 13 日核实）。目录记录了 v0.1.905-beta 版本中的 macOS DMG（2026 年 10 月 9 日查阅）以及 2026 年 10 月 16 日的最近一次上游更新。在这份报告之前，PromptQuorum 没有对它做过上手测试。"
+      "PromptQuorum 目录把 Unsloth 列为免费、Apache-2.0（核心）/ AGPL-3.0（Studio UI），支持 Mac、Windows 和 Linux，类别为微调与 LoRA，GitHub 星标约 76,100（数据于 2026 年 9 月 13 日核实）。目录记录了 v0.1.905-beta 版本中的 macOS DMG（2026 年 10 月 9 日查阅）以及 2026 年 10 月 16 日的最近一次上游更新。在这份报告之前，PromptQuorum 没有对它做过上手测试。"
     ],
     [
       "assumption",
