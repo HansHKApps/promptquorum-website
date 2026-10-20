@@ -3773,7 +3773,7 @@
       ]
     },
     "best-local-reasoning-model-deepseek-r1-2026": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-06-19",
       "hasSections": true,
@@ -4180,7 +4180,7 @@
       "images": []
     },
     "temperature-and-top-p": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-03-22",
       "hasSections": true,
@@ -4265,7 +4265,7 @@
       "images": []
     },
     "tokens-costs-limits": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-03-22",
       "hasSections": true,
@@ -4316,16 +4316,7 @@
         "ar",
         "ko"
       ],
-      "images": [
-        {
-          "url": "/images/context-windows-chart.svg",
-          "title": "Context window comparison: All three frontier models support 1M tokens — context window parity has arrived. Gemini 2.5 Pro previously led with 2M."
-        },
-        {
-          "url": "/images/model-strengths-radar.svg",
-          "title": "Radar chart: Claude dominates writing & reasoning; GPT-5.6 excels at tools & multimodal; Gemini wins on cost & long-context. No single winner — match model to task."
-        }
-      ]
+      "images": []
     },
     "write-better-code-with-ai": {
       "dateModified": "2026-08-31",
@@ -4503,7 +4494,7 @@
       "images": []
     },
     "how-llms-actually-work": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-03-30",
       "hasSections": true,
@@ -4803,8 +4794,8 @@
       "images": []
     },
     "zero-shot-vs-few-shot": {
-      "dateModified": "2026-08-31",
-      "lastFactChecked": "2026-08-31",
+      "dateModified": "2026-10-19",
+      "lastFactChecked": "2026-10-19",
       "publishDate": "2026-03-26",
       "hasSections": true,
       "langs": [
@@ -7523,7 +7514,7 @@
       ]
     },
     "deepseek-vs-qwen-coding-local-2026": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -7541,11 +7532,11 @@
       "images": [
         {
           "url": "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-en.webp",
-          "title": "Qwen2.5-Coder 32B vs DeepSeek-R1-Distill-Qwen-32B on identical RTX 4090 24 GB hardware: Qwen scores 88.4% HumanEval at 10-14 tok/s and wins Rust/C++, DeepSeek-R1-Distill scores 72.6% at 8-12 tok/s and wins algorithmic reasoning."
+          "title": "Qwen2.5-Coder 32B and DeepSeek-R1-Distill-Qwen-32B are both 32B dense models that fit an RTX 4090 24 GB at Q4_K_M; Qwen2.5-Coder targets code generation and completion, while the R1 distill targets step-by-step reasoning."
         },
         {
           "url": "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-en.webp",
-          "title": "Decision tree for DeepSeek vs Qwen coding: code must stay local and language is Rust/C++ leads to Qwen2.5-Coder 32B, budget local leads to Qwen2.5-Coder 14B, algorithmic tasks leads to DeepSeek-R1 API, Python/JS with cloud allowed leads to DeepSeek-V3 API."
+          "title": "Decision tree for DeepSeek vs Qwen coding: code must stay local and language is Rust/C++ leads to Qwen2.5-Coder 32B, budget local leads to Qwen2.5-Coder 14B, algorithmic tasks leads to DeepSeek API (now V4), Python/JS with cloud allowed leads to DeepSeek API (now V4)."
         }
       ]
     },
@@ -7757,7 +7748,7 @@
       "images": [
         {
           "url": "/images/deepseek-r1-vs-distills-explained-2026-distillation-tree-en.svg",
-          "title": "DeepSeek-R1 distillation tree: the full 671B R1 generates ~800K reasoning samples that fine-tune six official distills on Qwen2.5 (1.5B–32B) and Llama 3 (8B, 70B) bases, all of which run on consumer GPUs."
+          "title": "DeepSeek-R1 distillation tree: the full 671B R1 generates ~800K reasoning samples that fine-tune six official distills on Qwen2.5 (1.5B–32B) and Llama 3.1/3.3 (8B, 70B) bases, all of which run on consumer GPUs."
         },
         {
           "url": "/images/deepseek-r1-vs-distills-explained-2026-capability-comparison-en.svg",
@@ -7766,7 +7757,7 @@
       ]
     },
     "deepseek-offline-china-self-hosted-2026": {
-      "dateModified": "2026-08-25",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-06-19",
       "hasSections": true,
@@ -7784,11 +7775,11 @@
       "images": [
         {
           "url": "/images/deepseek-offline-china-self-hosted-2026-sovereignty-comparison-en.svg",
-          "title": "Hosted API vs. offline self-hosted DeepSeek: the cloud API sends prompts to a foreign endpoint and depends on network uptime, while offline self-hosting keeps every prompt and output on local hardware with no data leaving the machine."
+          "title": "Hosted API vs. offline self-hosted DeepSeek: the cloud API sends prompts to a foreign endpoint and depends on network uptime, while offline self-hosting keeps every prompt and output on local hardware with no inference traffic sent to a hosted endpoint."
         },
         {
           "url": "/images/deepseek-offline-china-self-hosted-2026-offline-setup-steps-en.svg",
-          "title": "5 steps to run DeepSeek offline: install Ollama or LM Studio, pull the distill once online, block network access, set temperature 0.6 with no system prompt, then run inference fully offline."
+          "title": "5 steps to run DeepSeek offline: install Ollama or LM Studio, pull the distill once online, block network access, set temperature 0.6 with no system prompt, then run inference offline."
         }
       ]
     },
@@ -14146,7 +14137,7 @@
       "images": []
     },
     "deepseekR1DistillVramCheatsheet": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-06-19",
       "hasSections": true,
@@ -14164,7 +14155,7 @@
       "images": []
     },
     "bestDeepseekDistillForYourGpu": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-10-19",
       "lastFactChecked": null,
       "publishDate": "2026-06-19",
       "hasSections": true,

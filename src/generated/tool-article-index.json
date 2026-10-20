@@ -11,6 +11,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "best-local-reasoning-model-deepseek-r1-2026",
+        "title": "Best Local Reasoning Model 2026: DeepSeek-R1 Ranked",
+        "url": "/local-llms/best-local-reasoning-model-deepseek-r1-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "long-context-local-llms",
         "title": "Long Context Local LLMs 2026: 128K, 256K and 1M Models Compared",
         "url": "/local-llms/long-context-local-llms",
@@ -19,9 +27,33 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "qwen-local-deployment-guide-2026",
+        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
+        "url": "/local-llms/qwen-local-deployment-guide-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "run-qwen-vl-locally-2026",
+        "title": "How to Run Qwen2.5-VL and Qwen3-VL Locally in 2026: Document OCR & Vision Guide",
+        "url": "/local-llms/run-qwen-vl-locally-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "saudi-pdpl-data-sovereignty-local-ai-2026",
         "title": "Saudi PDPL & Data Sovereignty: Why AI Must Run Inside the Kingdom (2026)",
         "url": "/local-llms/saudi-pdpl-data-sovereignty-local-ai-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "top-open-source-models-ollama",
+        "title": "Ollama Latest Version 2026: v0.40.5 + Best Models by Use Case",
+        "url": "/local-llms/top-open-source-models-ollama",
         "dateModified": "2026-10-19",
         "tier": "about"
       },
@@ -35,49 +67,17 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "deepseek-offline-china-self-hosted-2026",
+        "title": "Run DeepSeek Offline 2026: Best Hardware for Private Self-Hosted DeepSeek",
+        "url": "/power-local-llm/deepseek-offline-china-self-hosted-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "deepseek-r1-vs-distills-explained-2026",
         "title": "DeepSeek-R1 vs Distills 2026: What You Actually Lose",
         "url": "/power-local-llm/deepseek-r1-vs-distills-explained-2026",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-with-logseq-and-joplin",
-        "title": "Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)",
-        "url": "/power-local-llm/local-llm-with-logseq-and-joplin",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-vision-models-llava-ollama-2026",
-        "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
-        "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mobile-llm-models-phi4-gemma-smollm",
-        "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
-        "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "replace-grammarly-notion-ai-with-local",
-        "title": "Replace Grammarly and Notion AI with a Local LLM (2026)",
-        "url": "/power-local-llm/replace-grammarly-notion-ai-with-local",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "run-ai-on-tablet-ipad-android",
-        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
-        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
         "dateModified": "2026-10-19",
         "tier": "about"
       }
@@ -121,6 +121,22 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "deepseek-offline-china-self-hosted-2026",
+        "title": "Run DeepSeek Offline 2026: Best Hardware for Private Self-Hosted DeepSeek",
+        "url": "/power-local-llm/deepseek-offline-china-self-hosted-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "idefics-review",
+        "title": "Idefics Review: HuggingFace's Open Vision-Language Models, Honestly Assessed",
+        "url": "/power-local-llm/idefics-review",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llamatik-review",
         "title": "Llamatik Review: Free Offline AI Chatbot for Android and iPhone",
         "url": "/power-local-llm/llamatik-review",
@@ -149,22 +165,6 @@
         "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
         "url": "/power-local-llm/secret-ai-review",
         "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "70b-models-consumer-hardware",
-        "title": "Run a 70B LLM Locally 2026: RAM, VRAM & Speed by Hardware",
-        "url": "/local-llms/70b-models-consumer-hardware",
-        "dateModified": "2026-10-18",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "llm-quantization-explained",
-        "title": "LLM Quantization Explained: Q4_K_M vs Q4_0 vs Q8_0 (2026)",
-        "url": "/local-llms/llm-quantization-explained",
-        "dateModified": "2026-10-17",
         "tier": "about"
       }
     ],
@@ -868,6 +868,30 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "qwen-local-deployment-guide-2026",
+        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
+        "url": "/local-llms/qwen-local-deployment-guide-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "run-qwen-vl-locally-2026",
+        "title": "How to Run Qwen2.5-VL and Qwen3-VL Locally in 2026: Document OCR & Vision Guide",
+        "url": "/local-llms/run-qwen-vl-locally-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "deepseek-offline-china-self-hosted-2026",
+        "title": "Run DeepSeek Offline 2026: Best Hardware for Private Self-Hosted DeepSeek",
+        "url": "/power-local-llm/deepseek-offline-china-self-hosted-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "uncensored-local-llm-creative-writing-ethics",
         "title": "Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin",
@@ -904,30 +928,6 @@
         "slug": "best-local-llm-ide-plugins-2026",
         "title": "Best IDE Plugins for Local LLMs in 2026 (VS Code, JetBrains & LM Studio)",
         "url": "/power-local-llm/best-local-llm-ide-plugins-2026",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cursor-vs-windsurf-vs-copilot-cline-2026",
-        "title": "Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline",
-        "url": "/power-local-llm/cursor-vs-windsurf-vs-copilot-cline",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "localmind-review",
-        "title": "LocalMind Review: Free Chat App for On-Device and Self-Hosted Models",
-        "url": "/power-local-llm/localmind-review",
         "dateModified": "2026-10-17",
         "tier": "about"
       }
@@ -2049,6 +2049,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "qwen-local-deployment-complete-guide-2026",
+        "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
+        "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "run-ai-on-tablet-ipad-android",
         "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
         "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
@@ -2110,14 +2118,6 @@
         "url": "/local-llms/lobechat-review",
         "dateModified": "2026-09-11",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "nextchat-review",
-        "title": "NextChat Review 2026: Lightweight, One-Click-Deploy Chat UI",
-        "url": "/local-llms/nextchat-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
       }
     ],
     "totalCount": 54,
@@ -2175,6 +2175,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "qwen-local-deployment-complete-guide-2026",
+        "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
+        "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "web-search-mcp-review",
         "title": "web-search-mcp Review: Web Search Tool Access for Local LLMs",
         "url": "/power-local-llm/web-search-mcp-review",
@@ -2195,14 +2203,6 @@
         "title": "text-generation-webui in 2026: How Oobabooga's Local LLM UI Became \"TextGen\"",
         "url": "/local-llms/text-generation-webui-review",
         "dateModified": "2026-09-05",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "qwen-local-deployment-complete-guide-2026",
-        "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
-        "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
-        "dateModified": "2026-08-29",
         "tier": "mentioned"
       }
     ],
@@ -2654,6 +2654,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "deepseek-vs-qwen-coding-local-2026",
+        "title": "DeepSeek vs Qwen for Local Coding 2026: Which Wins?",
+        "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-ai-coding-assistant-local-llm",
         "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
@@ -2716,14 +2724,6 @@
         "url": "/power-local-llm/bodega-one-code-review",
         "dateModified": "2026-09-03",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-models-tool-calling-2026",
-        "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
-        "url": "/power-local-llm/best-local-models-tool-calling-2026",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
     "totalCount": 43,
@@ -2737,6 +2737,14 @@
         "title": "Cline Review: The Open-Source Agent That Grew From Claude Dev",
         "url": "/power-local-llm/cline-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "deepseek-vs-qwen-coding-local-2026",
+        "title": "DeepSeek vs Qwen for Local Coding 2026: Which Wins?",
+        "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
@@ -2801,14 +2809,6 @@
         "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
         "url": "/power-local-llm/best-local-models-tool-calling-2026",
         "dateModified": "2026-09-01",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "autonomous-local-agents-actually-work",
-        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
-        "url": "/power-local-llm/autonomous-local-agents-actually-work",
-        "dateModified": "2026-08-29",
         "tier": "about"
       }
     ],
@@ -3286,11 +3286,11 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-for-coding",
-        "title": "Best Local LLMs for Coding 2026: Qwen3.8 27B, Devstral, Laguna",
-        "url": "/local-llms/best-local-llms-for-coding",
-        "dateModified": "2026-10-17",
+        "cluster": "power-local-llm",
+        "slug": "deepseek-vs-qwen-coding-local-2026",
+        "title": "DeepSeek vs Qwen for Local Coding 2026: Which Wins?",
+        "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
+        "dateModified": "2026-10-19",
         "tier": "mentioned"
       }
     ],
@@ -4349,10 +4349,10 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "ollama-local-ai-review",
-        "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
-        "url": "/power-local-llm/ollama-local-ai-review",
-        "dateModified": "2026-10-02",
+        "slug": "qwen-local-deployment-complete-guide-2026",
+        "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
+        "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
+        "dateModified": "2026-10-19",
         "tier": "mentioned"
       }
     ],
@@ -5589,6 +5589,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "idefics-review",
+        "title": "Idefics Review: HuggingFace's Open Vision-Language Models, Honestly Assessed",
+        "url": "/power-local-llm/idefics-review",
+        "dateModified": "2026-10-19",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-vision-models-llava-ollama-2026",
         "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
         "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
@@ -5609,14 +5617,6 @@
         "title": "LLaMA-Factory Review: Fine-Tune 100+ LLMs via Web UI",
         "url": "/power-local-llm/llama-factory-review",
         "dateModified": "2026-09-14",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "idefics-review",
-        "title": "Idefics Review: HuggingFace's Open Vision-Language Models, Honestly Assessed",
-        "url": "/power-local-llm/idefics-review",
-        "dateModified": "2026-09-07",
         "tier": "about"
       },
       {
@@ -5660,7 +5660,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 19,
     "capped": true
   },
   "Ollama vision models": {
@@ -5675,18 +5675,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
+        "slug": "idefics-review",
+        "title": "Idefics Review: HuggingFace's Open Vision-Language Models, Honestly Assessed",
+        "url": "/power-local-llm/idefics-review",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "idefics-review",
-        "title": "Idefics Review: HuggingFace's Open Vision-Language Models, Honestly Assessed",
-        "url": "/power-local-llm/idefics-review",
-        "dateModified": "2026-09-07",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -5716,7 +5716,7 @@
         "slug": "idefics-review",
         "title": "Idefics Review: HuggingFace's Open Vision-Language Models, Honestly Assessed",
         "url": "/power-local-llm/idefics-review",
-        "dateModified": "2026-09-07",
+        "dateModified": "2026-10-19",
         "tier": "about"
       },
       {
@@ -10684,6 +10684,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "top-open-source-models-ollama",
+        "title": "Ollama Latest Version 2026: v0.40.5 + Best Models by Use Case",
+        "url": "/local-llms/top-open-source-models-ollama",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "best-local-llm-apps-android-2026",
         "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
@@ -10696,6 +10704,14 @@
         "slug": "castmates-review",
         "title": "Castmates Review: Offline AI Character Chat for iPhone",
         "url": "/power-local-llm/castmates-review",
+        "dateModified": "2026-10-19",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "deepseek-offline-china-self-hosted-2026",
+        "title": "Run DeepSeek Offline 2026: Best Hardware for Private Self-Hosted DeepSeek",
+        "url": "/power-local-llm/deepseek-offline-china-self-hosted-2026",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
       },
@@ -10736,22 +10752,6 @@
         "slug": "replace-grammarly-notion-ai-with-local",
         "title": "Replace Grammarly and Notion AI with a Local LLM (2026)",
         "url": "/power-local-llm/replace-grammarly-notion-ai-with-local",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "run-ai-on-tablet-ipad-android",
-        "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
-        "url": "/power-local-llm/run-ai-on-tablet-ipad-android",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "secret-ai-review",
-        "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
-        "url": "/power-local-llm/secret-ai-review",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
       }

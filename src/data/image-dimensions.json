@@ -44194,6 +44194,11 @@
     "width": 1200,
     "height": 675
   },
+  "/images/run-ai-on-tablet-ipad-speed-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
   "/images/run-ai-on-tablet-ipad-speed-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -44215,6 +44220,16 @@
     "height": 320
   },
   "/images/run-ai-on-tablet-ipad-speed-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/run-ai-on-tablet-ipad-speed-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 320
+  },
+  "/images/run-ai-on-tablet-ipad-speed-pt.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 320
@@ -44284,6 +44299,11 @@
     "width": 800,
     "height": 350
   },
+  "/images/run-ai-on-tablet-termux-setup-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
   "/images/run-ai-on-tablet-termux-setup-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -44309,10 +44329,25 @@
     "width": 800,
     "height": 360
   },
+  "/images/run-ai-on-tablet-termux-setup-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
+  "/images/run-ai-on-tablet-termux-setup-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 360
+  },
   "/images/run-ai-on-tablet-termux-setup-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 360
+  },
+  "/images/run-ai-on-tablet-two-modes-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
   },
   "/images/run-ai-on-tablet-two-modes-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -44335,6 +44370,16 @@
     "height": 350
   },
   "/images/run-ai-on-tablet-two-modes-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/run-ai-on-tablet-two-modes-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 350
+  },
+  "/images/run-ai-on-tablet-two-modes-pt.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 350
