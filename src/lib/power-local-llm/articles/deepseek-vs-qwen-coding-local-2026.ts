@@ -352,7 +352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Buy RTX 4090 24 GB on Amazon → (fits the 18 GB Qwen3.8-27B build)',
           },
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             label: 'Buy Minisforum UM890 Pro → (compact always-on server for smaller local models)',
@@ -1023,7 +1023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Comprar RTX 4090 24 GB en Amazon → (cabe la versión de 18 GB de Qwen3.8-27B)',
           },
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             label: 'Comprar Minisforum UM890 Pro → (servidor compacto siempre encendido para modelos locales pequeños)',
@@ -1694,7 +1694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Amazon에서 RTX 4090 24 GB 구매 → (18 GB 빌드의 Qwen3.8-27B 적재 가능)',
           },
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             label: 'Minisforum UM890 Pro 구매 → (작은 로컬 모델용 소형 상시 서버)',
@@ -3548,7 +3548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Comprar RTX 4090 24 GB na Amazon → (comporta a versão de 18 GB do Qwen3.8-27B)',
           },
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             label: 'Comprar Minisforum UM890 Pro → (servidor compacto sempre ligado para modelos locais menores)',
@@ -4218,7 +4218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'شراء RTX 4090 24 GB من Amazon ← (تتسع لنسخة Qwen3.8-27B ذات 18 GB)',
           },
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             label: 'شراء Minisforum UM890 Pro ← (خادم صغير يعمل دائماً للنماذج المحلية الأصغر)',
