@@ -31,7 +31,7 @@ export const app: ToolRecord = {
   addedDate: '2026-10-19',
   status: 'listed',
   uses: ['phone', 'chat', 'docs', 'audio'],
-  url: 'alessandrofacchini.github.io/memoryai-privacy',
+  url: 'alessandrofacchini.github.io/memoryai', // product page (EN/IT) announced by the developer 2026-10-20; privacy policy stays at /memoryai-privacy/
   storeLinks: {
     appStore: 'https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586',
     googlePlay: 'https://play.google.com/store/apps/details?id=com.ts.memoryai',

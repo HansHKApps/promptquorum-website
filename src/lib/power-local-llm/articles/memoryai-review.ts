@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-en.webp',
@@ -130,11 +130,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Platform': 'Website',
-            'Where to get it': '[alessandrofacchini.github.io/memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/)',
+            'Where to get it': '[alessandrofacchini.github.io/memoryai](https://alessandrofacchini.github.io/memoryai/)',
           },
           {
             'Platform': 'Privacy policy',
-            'Where to get it': '[Same page](https://alessandrofacchini.github.io/memoryai-privacy/) (English, Italian version linked there; last updated 19 October 2026)',
+            'Where to get it': '[memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/) (English, Italian version linked there; last updated 19 October 2026)',
           },
           {
             'Platform': 'Bug reports',
@@ -320,6 +320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[MemoryAI on the App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — price, version history, requirements, privacy label and description, checked 19 October 2026.',
           '[MemoryAI on Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) — description, download count, Data safety section and last-updated date, checked 19 October 2026.',
+          '[MemoryAI website](https://alessandrofacchini.github.io/memoryai/) — the developer\'s English and Italian product page on offline use, Kid Mode, features and supported models, checked 20 October 2026.',
           '[MemoryAI website and privacy policy](https://alessandrofacchini.github.io/memoryai-privacy/) — data handling, network use, permissions and third-party services, policy last updated 19 October 2026.',
           '[memoryai-feedback on GitHub](https://github.com/alessandrofacchini/memoryai-feedback) — the developer\'s public issue tracker.',
         ],
@@ -346,7 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://promptquorum.com/power-local-llm/memoryai-review',
       inLanguage: 'en',
       datePublished: '2026-10-19',
-      dateModified: '2026-10-19',
+      dateModified: '2026-10-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Beginner',
@@ -373,7 +374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-de.webp',
@@ -490,11 +491,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plattform': 'Website',
-            'Bezugsquelle': '[alessandrofacchini.github.io/memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/)',
+            'Bezugsquelle': '[alessandrofacchini.github.io/memoryai](https://alessandrofacchini.github.io/memoryai/)',
           },
           {
             'Plattform': 'Datenschutzerklärung',
-            'Bezugsquelle': '[Gleiche Seite](https://alessandrofacchini.github.io/memoryai-privacy/) (Englisch, italienische Fassung dort verlinkt; Stand 19. Oktober 2026)',
+            'Bezugsquelle': '[memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/) (Englisch, italienische Fassung dort verlinkt; Stand 19. Oktober 2026)',
           },
           {
             'Plattform': 'Fehlermeldungen',
@@ -680,6 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[MemoryAI im App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — Preis, Versionshistorie, Anforderungen, Datenschutzlabel und Beschreibung, geprüft am 19. Oktober 2026.',
           '[MemoryAI bei Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) — Beschreibung, Download-Zahl, Abschnitt „Datensicherheit“ und Datum der letzten Aktualisierung, geprüft am 19. Oktober 2026.',
+          '[MemoryAI-Website](https://alessandrofacchini.github.io/memoryai/) — die englische und italienische Produktseite des Entwicklers zu Offline-Nutzung, Kindermodus, Funktionen und unterstützten Modellen, geprüft am 20. Oktober 2026.',
           '[MemoryAI-Website und Datenschutzerklärung](https://alessandrofacchini.github.io/memoryai-privacy/) — Datenverarbeitung, Netzwerknutzung, Berechtigungen und Drittanbieterdienste, Erklärung zuletzt aktualisiert am 19. Oktober 2026.',
           '[memoryai-feedback auf GitHub](https://github.com/alessandrofacchini/memoryai-feedback) — der öffentliche Issue-Tracker des Entwicklers.',
         ],
@@ -701,7 +703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-es.webp',
@@ -818,11 +820,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plataforma': 'Sitio web',
-            'Dónde obtenerla': '[alessandrofacchini.github.io/memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/)',
+            'Dónde obtenerla': '[alessandrofacchini.github.io/memoryai](https://alessandrofacchini.github.io/memoryai/)',
           },
           {
             'Plataforma': 'Política de privacidad',
-            'Dónde obtenerla': '[La misma página](https://alessandrofacchini.github.io/memoryai-privacy/) (inglés e italiano; actualizada el 19 oct 2026)',
+            'Dónde obtenerla': '[memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/) (inglés e italiano; actualizada el 19 oct 2026)',
           },
           {
             'Plataforma': 'Informes de errores',
@@ -1008,6 +1010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[MemoryAI en la App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — precio, historial de versiones, requisitos, etiqueta de privacidad y descripción, consultados el 19 de octubre de 2026.',
           '[MemoryAI en Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) — descripción, número de descargas, sección Seguridad de los datos y fecha de la última actualización, consultados el 19 de octubre de 2026.',
+          '[Sitio web de MemoryAI](https://alessandrofacchini.github.io/memoryai/) — la página del producto del desarrollador, en inglés e italiano, sobre uso sin conexión, modo infantil, funciones y modelos compatibles, consultada el 20 de octubre de 2026.',
           '[Sitio web y política de privacidad de MemoryAI](https://alessandrofacchini.github.io/memoryai-privacy/) — tratamiento de datos, uso de la red, permisos y servicios de terceros; política actualizada por última vez el 19 de octubre de 2026.',
           '[memoryai-feedback en GitHub](https://github.com/alessandrofacchini/memoryai-feedback) — el gestor público de incidencias del desarrollador.',
         ],
@@ -1029,7 +1032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-fr.webp',
@@ -1146,11 +1149,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plateforme': 'Site web',
-            'Où la trouver': '[alessandrofacchini.github.io/memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/)',
+            'Où la trouver': '[alessandrofacchini.github.io/memoryai](https://alessandrofacchini.github.io/memoryai/)',
           },
           {
             'Plateforme': 'Confidentialité',
-            'Où la trouver': '[Même page](https://alessandrofacchini.github.io/memoryai-privacy/) (versions anglaise et italienne ; mise à jour le 19 octobre 2026)',
+            'Où la trouver': '[memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/) (versions anglaise et italienne ; mise à jour le 19 octobre 2026)',
           },
           {
             'Plateforme': 'Signaler un bug',
@@ -1336,6 +1339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[MemoryAI sur l\'App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — prix, historique des versions, prérequis, libellé de confidentialité et description, consultés le 19 octobre 2026.',
           '[MemoryAI sur Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) — description, nombre de téléchargements, section Sécurité des données et date de dernière mise à jour, consultés le 19 octobre 2026.',
+          '[Site web de MemoryAI](https://alessandrofacchini.github.io/memoryai/) — la page produit du développeur, en anglais et en italien, sur l\'usage hors ligne, le mode enfant, les fonctions et les modèles pris en charge, consultée le 20 octobre 2026.',
           '[Site web et politique de confidentialité de MemoryAI](https://alessandrofacchini.github.io/memoryai-privacy/) — traitement des données, usage du réseau, autorisations et services tiers, politique mise à jour pour la dernière fois le 19 octobre 2026.',
           '[memoryai-feedback sur GitHub](https://github.com/alessandrofacchini/memoryai-feedback) — l\'outil public de suivi des problèmes du développeur.',
         ],
@@ -1357,7 +1361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-ja.webp',
@@ -1474,11 +1478,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'プラットフォーム': 'ウェブサイト',
-            '入手先': '[alessandrofacchini.github.io/memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/)',
+            '入手先': '[alessandrofacchini.github.io/memoryai](https://alessandrofacchini.github.io/memoryai/)',
           },
           {
             'プラットフォーム': 'プライバシーポリシー',
-            '入手先': '[同じページ](https://alessandrofacchini.github.io/memoryai-privacy/)(英語、イタリア語版へのリンクあり。最終更新2026年10月19日)',
+            '入手先': '[memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/)(英語、イタリア語版へのリンクあり。最終更新2026年10月19日)',
           },
           {
             'プラットフォーム': '不具合の報告',
@@ -1664,6 +1668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[App StoreのMemoryAI](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — 価格、バージョン履歴、要件、プライバシーラベル、説明文。2026年10月19日に確認。',
           '[Google PlayのMemoryAI](https://play.google.com/store/apps/details?id=com.ts.memoryai) — 説明文、ダウンロード数、Data safetyセクション、最終更新日。2026年10月19日に確認。',
+          '[MemoryAIのウェブサイト](https://alessandrofacchini.github.io/memoryai/) — 開発者による英語・イタリア語の製品ページ。オフライン利用、キッズモード、機能、対応モデルについて。2026年10月20日確認。',
           '[MemoryAIのウェブサイトとプライバシーポリシー](https://alessandrofacchini.github.io/memoryai-privacy/) — データの扱い、ネットワーク利用、権限、第三者サービス。ポリシーの最終更新は2026年10月19日。',
           '[GitHubのmemoryai-feedback](https://github.com/alessandrofacchini/memoryai-feedback) — 開発者の公開イシュートラッカー。',
         ],
@@ -1685,7 +1690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-pt.webp',
@@ -1802,11 +1807,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plataforma': 'Site',
-            'Onde obter': '[alessandrofacchini.github.io/memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/)',
+            'Onde obter': '[alessandrofacchini.github.io/memoryai](https://alessandrofacchini.github.io/memoryai/)',
           },
           {
             'Plataforma': 'Política de privacidade',
-            'Onde obter': '[Mesma página](https://alessandrofacchini.github.io/memoryai-privacy/) (inglês, com link para a versão italiana; atualizada em 19 de outubro de 2026)',
+            'Onde obter': '[memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/) (inglês, com link para a versão italiana; atualizada em 19 de outubro de 2026)',
           },
           {
             'Plataforma': 'Relatos de bugs',
@@ -1992,6 +1997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[MemoryAI na App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — preço, histórico de versões, requisitos, rótulo de privacidade e descrição, consultados em 19 de outubro de 2026.',
           '[MemoryAI no Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) — descrição, número de downloads, seção Segurança dos dados e data da última atualização, consultados em 19 de outubro de 2026.',
+          '[Site do MemoryAI](https://alessandrofacchini.github.io/memoryai/) — a página do produto do desenvolvedor, em inglês e italiano, sobre uso offline, modo infantil, recursos e modelos compatíveis, consultada em 20 de outubro de 2026.',
           '[Site e política de privacidade do MemoryAI](https://alessandrofacchini.github.io/memoryai-privacy/) — tratamento de dados, uso da rede, permissões e serviços de terceiros, política atualizada em 19 de outubro de 2026.',
           '[memoryai-feedback no GitHub](https://github.com/alessandrofacchini/memoryai-feedback) — o rastreador público de problemas do desenvolvedor.',
         ],
@@ -2013,7 +2019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-ar.webp',
@@ -2130,11 +2136,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'المنصة': 'الموقع',
-            'مكان الحصول عليه': '[alessandrofacchini.github.io/memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/)',
+            'مكان الحصول عليه': '[alessandrofacchini.github.io/memoryai](https://alessandrofacchini.github.io/memoryai/)',
           },
           {
             'المنصة': 'سياسة الخصوصية',
-            'مكان الحصول عليه': '[الصفحة نفسها](https://alessandrofacchini.github.io/memoryai-privacy/) (إنجليزية/إيطالية؛ آخر تحديث 19 أكتوبر 2026)',
+            'مكان الحصول عليه': '[memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/) (إنجليزية/إيطالية؛ آخر تحديث 19 أكتوبر 2026)',
           },
           {
             'المنصة': 'الإبلاغ عن الأخطاء',
@@ -2320,6 +2326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[MemoryAI على App Store](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — السعر وسجل الإصدارات والمتطلبات وبطاقة الخصوصية والوصف، جرى التحقق منها في 19 أكتوبر 2026.',
           '[MemoryAI على Google Play](https://play.google.com/store/apps/details?id=com.ts.memoryai) — الوصف وعدد التنزيلات وقسم أمان البيانات وتاريخ آخر تحديث، جرى التحقق منها في 19 أكتوبر 2026.',
+          '[موقع MemoryAI](https://alessandrofacchini.github.io/memoryai/) — صفحة المنتج التي أعدّها المطوّر بالإنجليزية والإيطالية عن الاستخدام دون اتصال ووضع الأطفال والميزات والنماذج المدعومة، اطُّلع عليها في 20 أكتوبر 2026.',
           '[موقع MemoryAI وسياسة الخصوصية](https://alessandrofacchini.github.io/memoryai-privacy/) — التعامل مع البيانات واستخدام الشبكة والأذونات والخدمات الخارجية، وآخر تحديث للسياسة في 19 أكتوبر 2026.',
           '[memoryai-feedback على GitHub](https://github.com/alessandrofacchini/memoryai-feedback) — نظام تتبع المشكلات العام للمطوّر.',
         ],
@@ -2341,7 +2348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-zh.webp',
@@ -2458,11 +2465,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '平台': '网站',
-            '获取方式': '[alessandrofacchini.github.io/memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/)',
+            '获取方式': '[alessandrofacchini.github.io/memoryai](https://alessandrofacchini.github.io/memoryai/)',
           },
           {
             '平台': '隐私政策',
-            '获取方式': '[同一页面](https://alessandrofacchini.github.io/memoryai-privacy/)(含英语,另链接意大利语版;最后更新于 2026 年 10 月 19 日)',
+            '获取方式': '[memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/)(含英语,另链接意大利语版;最后更新于 2026 年 10 月 19 日)',
           },
           {
             '平台': '问题反馈',
@@ -2648,6 +2655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[App Store 上的 MemoryAI](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — 价格、版本历史、系统要求、隐私标签和描述,核实于 2026 年 10 月 19 日。',
           '[Google Play 上的 MemoryAI](https://play.google.com/store/apps/details?id=com.ts.memoryai) — 描述、下载量、数据安全部分和最后更新日期,核实于 2026 年 10 月 19 日。',
+          '[MemoryAI 网站](https://alessandrofacchini.github.io/memoryai/) — 开发者提供的英语和意大利语产品页面,介绍离线使用、儿童模式、功能和支持的模型,查阅于 2026 年 10 月 20 日。',
           '[MemoryAI 网站与隐私政策](https://alessandrofacchini.github.io/memoryai-privacy/) — 数据处理、网络使用、权限和第三方服务,政策最后更新于 2026 年 10 月 19 日。',
           '[GitHub 上的 memoryai-feedback](https://github.com/alessandrofacchini/memoryai-feedback) — 开发者的公开问题追踪器。',
         ],
@@ -2669,7 +2677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/memoryai-review-hero-ko.webp',
@@ -2786,11 +2794,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '플랫폼': '웹사이트',
-            '받는 곳': '[alessandrofacchini.github.io/memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/)',
+            '받는 곳': '[alessandrofacchini.github.io/memoryai](https://alessandrofacchini.github.io/memoryai/)',
           },
           {
             '플랫폼': '개인정보 처리방침',
-            '받는 곳': '[같은 페이지](https://alessandrofacchini.github.io/memoryai-privacy/) (영어, 이탈리아어판 링크 있음, 2026년 10월 19일 개정)',
+            '받는 곳': '[memoryai-privacy](https://alessandrofacchini.github.io/memoryai-privacy/) (영어, 이탈리아어판 링크 있음, 2026년 10월 19일 개정)',
           },
           {
             '플랫폼': '버그 신고',
@@ -2976,6 +2984,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[App Store의 MemoryAI](https://apps.apple.com/us/app/memoryai-offline-private-ai/id6758719586) — 가격, 버전 기록, 요구 사항, 개인정보 보호 라벨, 설명. 2026년 10월 19일 확인.',
           '[Google Play의 MemoryAI](https://play.google.com/store/apps/details?id=com.ts.memoryai) — 설명, 다운로드 수, 데이터 보안 항목, 마지막 업데이트 날짜. 2026년 10월 19일 확인.',
+          '[MemoryAI 웹사이트](https://alessandrofacchini.github.io/memoryai/) — 개발자가 제공하는 영어·이탈리아어 제품 페이지. 오프라인 사용, 키즈 모드, 기능, 지원 모델을 설명합니다. 2026년 10월 20일 확인.',
           '[MemoryAI 웹사이트와 개인정보 처리방침](https://alessandrofacchini.github.io/memoryai-privacy/) — 데이터 처리, 네트워크 사용, 권한, 제3자 서비스. 처리방침은 2026년 10월 19일 개정.',
           '[GitHub의 memoryai-feedback](https://github.com/alessandrofacchini/memoryai-feedback) — 개발자의 공개 이슈 트래커.',
         ],
