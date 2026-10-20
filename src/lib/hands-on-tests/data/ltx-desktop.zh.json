@@ -1,0 +1,752 @@
+{
+  "id": "pq-test-ltx-desktop-2026-10-20",
+  "hero": "setup",
+  "date_human": "2026年10月20日",
+  "captured": "2026-10-20 or earlier; exact times not recorded",
+  "standard_version": "0.1",
+  "locale": "zh",
+  "app": {
+    "name": "LTX Desktop",
+    "slug": "ltx-desktop",
+    "vendor": "Lightricks (splash screen: © 2026 Lightricks)",
+    "category": "Local AI video generation",
+    "platform": "macOS",
+    "pricing_url": "https://github.com/Lightricks/LTX-Desktop"
+  },
+  "title": "24 GB Mac 上的 LTX Desktop：卡在设置步骤，低于厂商的内存下限",
+  "page_title": "LTX Desktop 实测",
+  "dek": "在 24 GB 内存的 Mac 上的实测。应用启动顺畅，随后设置界面要求下载 129.1 GB 的模型，测试者就此放弃：他认为 24 GB 内存不足以运行这款应用。",
+  "seo": {
+    "title": "LTX Desktop 实测：24 GB Mac 卡在设置步骤",
+    "description": "在 24 GB 内存的 Mac 上实测 LTX Desktop：设置要求下载 129.1 GB 模型，厂商的内存下限更高，测试止步于此。"
+  },
+  "faq": [
+    [
+      "24 GB 内存的 Mac 能运行 LTX Desktop 吗？",
+      "测试者停在了设置界面，并得出结论：他的 24 GB Mac 无法运行。测试没有进行到生成这一步。Lightricks 的 README 列出的 macOS 本地生成下限是 32 GiB 总内存。",
+      "tester-view"
+    ],
+    [
+      "LTX Desktop 需要多少磁盘空间？",
+      "设置界面列出五项模型下载，合计 129.1 GB，而测试用 Mac 显示可用空间为 32.9 GB。README 要求 100 GB 或更多的可用磁盘空间，加上 LoRAs 最多需要 160 GB。",
+      "measured"
+    ],
+    [
+      "LTX Desktop 的安装包有多大？",
+      "约 700 MB，按测试者所读。模型在设置过程中另行下载，体积大得多。",
+      "observed"
+    ],
+    [
+      "使用 LTX Desktop 需要 Hugging Face 账号吗？",
+      "设置界面要求用户登录 Hugging Face 并接受许可，才能下载受限模型。测试在登录之前就停止了。",
+      "observed"
+    ],
+    [
+      "LTX Desktop 在设置时会下载什么？",
+      "五项内容：LTX 2.5（41.5 GB）、带有 LTX 2.5 投影的 Gemma 4 文本编码器（24.5 GB）、Gemma 4 E2B 指令版提示词增强器（9.6 GB）、Z-Image-Turbo 文生图模型（28.9 GB）和 LoRAs（24.6 GB）。",
+      "measured"
+    ]
+  ],
+  "status": "Not completed",
+  "published": "2026-10-20",
+  "started": "2026-10-20",
+  "ended": null,
+  "meta": [
+    [
+      "应用",
+      "LTX Desktop，Lightricks 出品。启动画面显示 '© 2026 Lightricks'。",
+      "observed"
+    ],
+    [
+      "版本",
+      "未记录。两张截图中应用都没有显示版本。",
+      null
+    ],
+    [
+      "测试者",
+      "Hans Kuepper，PromptQuorum 创始人",
+      null
+    ],
+    [
+      "开始时间",
+      "2026 年 10 月 20 日（时间未记录）。笔记没有标注日期；这是 Word 文件交来的日期。",
+      "assumption"
+    ],
+    [
+      "结束时间",
+      "未记录",
+      null
+    ],
+    [
+      "硬件",
+      "笔记写的是 'Mac 4 Pro'。标准测试机是搭载 M3 Pro 和 24 GB 的 MacBook Pro；这里假定是同一台机器。24 GB 这个数字没有疑问，芯片代际则存疑。",
+      "assumption"
+    ],
+    [
+      "系统",
+      "macOS；版本未记录。厂商 README 列出了若干 macOS 版本（见“说法核对”），所以这个空白很重要。",
+      null
+    ],
+    [
+      "来源",
+      "未记录安装包是从哪里下载的",
+      null
+    ],
+    [
+      "下载",
+      "约 700 MB 的安装包（按测试者所读）",
+      "observed"
+    ],
+    [
+      "测试原因",
+      "笔记中未说明。",
+      null
+    ],
+    [
+      "目标",
+      "未说明。根据笔记推断：安装这款本地视频应用，并在这台 24 GB 的 Mac 上试用。",
+      "assumption"
+    ],
+    [
+      "使用的 AI 辅助",
+      "未记录",
+      null
+    ]
+  ],
+  "disclosure": "测试者创办了 PromptQuorum（promptquorum.com），这是一个关于本地 AI 应用的内容网站和目录。进行本次测试时，站内没有 LTX Desktop 的目录条目，也没有相关评测。笔记中没有与厂商联系、付款或赞助的记录。",
+  "verdict": {
+    "general": "未评分：测试在设置界面就结束了，当时还没有生成任何视频或图片。笔记和截图显示的内容：首次启动顺畅，必须登录 Hugging Face，模型清单合计 129.1 GB，而可用空间为 32.9 GB。测试者的结论是，他的 24 GB 统一内存不足以运行这款应用，而不是磁盘空间的问题。厂商的 README 指向同一方向：它把 32 GiB 总内存列为 Mac 本地生成的下限。",
+    "fit": "据测试者说，不适合这台机器。最大的单项下载（LTX 2.5，41.5 GB）比 24 GB 内存还大，不过下载大小不等于运行时所需内存（假设）。2026年10月20日查阅的 README 称，内存低于 24 GB 的 Mac 只能使用云端 API，32 GB 限于 540p 和 5 秒；完整本地生成列的是 48 GB 或更多。然而应用仍在这台 24 GB 的 Mac 上提供了本地模型下载，README 对此没有解释（见“测试经过”）。"
+  },
+  "scores": [
+    [
+      "安装",
+      null,
+      "未评分。安装包已下载，应用已启动；设置没有完成。"
+    ],
+    [
+      "上手与模型选择",
+      null,
+      "未评分。设置界面列出五项下载及其大小和总量；需要登录 Hugging Face。"
+    ],
+    [
+      "核心功能",
+      null,
+      "未测试。没有生成任何视频或图片。"
+    ],
+    [
+      "引导与迭代",
+      null,
+      "未测试。"
+    ],
+    [
+      "性能",
+      null,
+      "未测试。"
+    ],
+    [
+      "文档",
+      null,
+      "未测试。"
+    ],
+    [
+      "信任与隐私",
+      null,
+      "未审计。"
+    ],
+    [
+      "卸载",
+      null,
+      "未测试。"
+    ]
+  ],
+  "scores_note": "由于测试在设置阶段就停止，所以没有给出评分。评分需要测试走到应用的主要功能。",
+  "tldr": [
+    [
+      "observed",
+      "应用启动后显示带有加载条的品牌启动画面；测试者称启动顺畅。"
+    ],
+    [
+      "measured",
+      "设置列出 129.1 GB 的模型下载，并显示模型文件夹所在磁盘有 32.9 GB 可用。"
+    ],
+    [
+      "tester-view",
+      "测试者就此停止，并得出结论：24 GB 的 Mac 无法运行这款应用——这是内存限制，不是清理磁盘能解决的问题。"
+    ],
+    [
+      "vendor-claim",
+      "README 把 macOS 本地生成的下限列为 32 GiB 总内存；测试用 Mac 为 24 GB。未在应用中核实。"
+    ]
+  ],
+  "quotes": [
+    "就这样结束了。我没法在我这台小笔记本上运行它。",
+    "我想将来所有的电脑都会越来越大。模型越来越好，要在那个水平上运行本地 AI，就需要越来越大的电脑。"
+  ],
+  "quote_note": "测试者笔记，按原文引用。译自英文。",
+  "moments_title": "左右这次测试的六个时刻",
+  "moments_nav": "六个时刻",
+  "moments": [
+    [
+      "700 MB 的安装包",
+      "安装包约 700 MB。模型在后面才下载。",
+      null,
+      "chapter-install"
+    ],
+    [
+      "启动顺畅",
+      "应用打开后是带加载条的启动画面。",
+      "splash",
+      "chapter-launch"
+    ],
+    [
+      "先要 Hugging Face",
+      "设置要求登录 Hugging Face 并接受许可，才能下载受限模型。",
+      "setup",
+      "chapter-setup"
+    ],
+    [
+      "五项合计 129.1 GB",
+      "模型清单：LTX 2.5、Gemma 4 文本编码器、Gemma 4 E2B 提示词增强器、Z-Image-Turbo 和 LoRAs。",
+      "setup",
+      "chapter-setup"
+    ],
+    [
+      "可用 32.9 GB",
+      "同一界面显示模型文件夹所在磁盘有 32.9 GB 可用。",
+      "setup",
+      "chapter-setup"
+    ],
+    [
+      "到此为止",
+      "“我没法在我这台小笔记本上运行它。”没有下载，也没有生成。",
+      null,
+      "chapter-stop"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "安装包",
+      "items": [
+        [
+          "observed",
+          "安装包是一个约 700 MB 的文件。",
+          null
+        ],
+        [
+          "assumption",
+          "笔记中没有写它是从哪里下载的。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-launch",
+      "title": "首次启动",
+      "items": [
+        [
+          "observed",
+          "应用打开后是启动画面：'LTX Desktop'、一条加载条，底部是 '© 2026 Lightricks'。",
+          "splash"
+        ],
+        [
+          "tester-view",
+          "“顺畅。”",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-setup",
+      "title": "设置界面",
+      "items": [
+        [
+          "observed",
+          "设置界面有一个 'Hugging Face access' 框：'Sign in and accept the license to download gated models.'，旁边有 Sign in 按钮。测试者没有登录。",
+          "setup"
+        ],
+        [
+          "measured",
+          "在 'Model downloads' 下勾选了五项：LTX 2.5（41.5 GB）、带有 LTX 2.5 投影的 Gemma 4 文本编码器（24.5 GB）、Gemma 4 E2B 指令版提示词增强器文件夹（9.6 GB）、用于文生图的 Z-Image-Turbo 模型（28.9 GB）和 LoRAs（24.6 GB）。界面显示 'Total: 129.1 GB'。",
+          null
+        ],
+        [
+          "measured",
+          "模型文件夹是 /Users/hanskuepper/Library/Application Support/LTXDesktop/models，显示 '32.9 GB available'。可通过 Change 按钮更改文件夹。",
+          null
+        ],
+        [
+          "assumption",
+          "129.1 GB 比 32.9 GB 多出 96.2 GB。应用是会阻止下载、发出警告，还是让下载中途失败，没有测试。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-stop",
+      "title": "测试为何停止",
+      "items": [
+        [
+          "tester-view",
+          "“就这样结束了。我没法在我这台小笔记本上运行它。”",
+          null
+        ],
+        [
+          "tester-view",
+          "测试者给出的原因是内存：他的 Mac 有 24 GB 统一内存，他认为这对这款应用来说太少。他说，腾出磁盘空间也改变不了这一点。",
+          null
+        ],
+        [
+          "assumption",
+          "最大的单项下载（LTX 2.5，41.5 GB）比 24 GB 还大。下载大小不等于运行时所需内存，因为应用可以分批加载或压缩权重；没有读取内存数据。",
+          null
+        ],
+        [
+          "observed",
+          "没有开始任何下载，没有尝试生成，两张截图中都没有出现内存警告。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-vendor",
+      "title": "厂商的说法（2026年10月20日查阅）",
+      "items": [
+        [
+          "vendor-claim",
+          "GitHub README（Lightricks/LTX-Desktop）对 macOS 的要求：完整本地生成需要 Apple Silicon（M1 或更新）和 48 GB 或更多内存；32 GB 限于 540p 和 5 秒；低于 24 GB 的 Mac 和 Intel Mac 只能使用 Gen Space API。应用需要 macOS 14 或更高版本。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "README 还写明，Mac 上本地生成的下限是 32 GiB 总内存和 macOS 26 或更高版本；低于下限时，应用会显示 'Coming soon to your device' 提示，而不是生成工具。所有平台都需要 100 GB 或更多的可用磁盘空间，加上 LoRAs 最多需要 160 GB 或更多。启动时从不需要 LTX API 密钥。",
+          null
+        ],
+        [
+          "observed",
+          "测试用 Mac 为 24 GB，低于 README 的 32 GiB 下限，但截图中应用仍显示了本地模型下载，没有出现 'Coming soon' 提示。应用版本和 macOS 版本都没有记录，所以两者无法对照。",
+          null
+        ],
+        [
+          "third-party",
+          "搜索结果还显示了较早的 Lightricks 帮助中心页面。按摘要所述，它们说在 Mac 上生成要通过 LTX API，Mac 上尚不支持本地推理，并且需要 16 GB 或更多统一内存。帮助中心页面本身打开时返回错误，所以这是二手信息，可能已经过时。",
+          null
+        ],
+        [
+          "assumption",
+          "README 和截图描述的可能是不同的应用版本。哪一种说法适用于测试者的版本，不得而知。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "设置需要 129.1 GB 的模型",
+      "应用设置界面",
+      "列出的五个大小加起来是 129.1 GB，与显示的总量一致。",
+      "measured"
+    ],
+    [
+      "需要 100 GB 或更多的可用磁盘空间；加上 LoRAs 最多需要 160 GB 或更多",
+      "厂商 README，2026年10月20日查阅",
+      "设置界面的总量（129.1 GB）落在这个范围内。磁盘空间并不是测试者所说的停止原因。",
+      "vendor-claim"
+    ],
+    [
+      "Mac 上本地生成需要 32 GiB 总内存；完整本地生成需要 48 GB 或更多；低于 24 GB 只能使用云端 API",
+      "厂商 README，2026年10月20日查阅",
+      "未测试。测试用 Mac 为 24 GB。应用仍然显示了本地模型下载。",
+      "vendor-claim"
+    ],
+    [
+      "在 macOS 上，生成通过 LTX API 进行；不支持本地推理",
+      "较早的帮助中心页面，二手",
+      "与设置界面相矛盾，后者提供本地模型下载。可能是不同的应用版本。",
+      "third-party"
+    ],
+    [
+      "拥有 32 GB 或更多内存的 MacBook 用户不足 10-15%；拥有 64 GB 或更多的不足 3-5%；拥有 64 GB 或更多的 Windows 电脑不足 1-2%",
+      "测试者笔记，仅注明来自“Google”",
+      "没有给出研究、发布者或日期。此处未核查。",
+      "third-party"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 45,
+    "rows": [
+      [
+        "LTX 2.5",
+        41.5,
+        "41.5 GB",
+        "measured"
+      ],
+      [
+        "Gemma 4 文本编码器（含 LTX 2.5 投影）",
+        24.5,
+        "24.5 GB",
+        "measured"
+      ],
+      [
+        "Gemma 4 E2B 指令版提示词增强器",
+        9.6,
+        "9.6 GB",
+        "measured"
+      ],
+      [
+        "Z-Image-Turbo",
+        28.9,
+        "28.9 GB",
+        "measured"
+      ],
+      [
+        "LoRAs",
+        24.6,
+        "24.6 GB",
+        "measured"
+      ]
+    ],
+    "note": "这些是设置界面上的下载大小，不是运行时占用的内存；应用可能分批加载权重（假设）。五项合计 129.1 GB，图表放不下。测试用 Mac 有 24 GB 统一内存。没有运行任何东西，所以没有内存读数。"
+  },
+  "usage_log": [
+    [
+      "设置应用并下载模型",
+      "不适用",
+      "停在设置界面；未下载任何内容",
+      "未记录",
+      "Not completed",
+      [
+        "setup"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "安装前没有对照 24 GB 的 Mac 核对应用的要求。不匹配直到设置界面才暴露出来。"
+    ],
+    [
+      "tester-error",
+      "把硬件写成 'Mac 4 Pro'。标准机器是 24 GB 的 M3 Pro；这里假定是同一台机器，芯片代际未确认。"
+    ],
+    [
+      "tester-error",
+      "记录中留有空白：应用版本、macOS 版本、开始和结束时间、安装包的来源。"
+    ],
+    [
+      "assumption",
+      "设置界面显示的是磁盘空间数字，而不是内存数字。内存方面的结论是测试者自己的，有厂商 README 作为支持，并且没有看到内存错误。"
+    ]
+  ],
+  "findings": [
+    [
+      "LTX-01",
+      "厂商 README 把 32 GiB 总内存列为 Mac 本地生成的下限；测试用 Mac 为 24 GB。",
+      "系统要求",
+      "vendor-claim",
+      "High",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-02",
+      "测试者得出结论，24 GB 统一内存无法运行这款应用；最大的单项模型下载（41.5 GB）比 24 GB 还大。",
+      "系统要求",
+      "tester-view",
+      "High",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-03",
+      "设置界面在一台 24 GB 的 Mac 上提供了 129.1 GB 的模型下载，截图中没有可见的内存警告。",
+      "上手",
+      "observed",
+      "High",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-04",
+      "所需总量（129.1 GB）远大于显示的可用空间（32.9 GB）；应用会阻止还是警告，没有测试。",
+      "上手",
+      "observed",
+      "Medium",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-05",
+      "模型受限：设置需要登录 Hugging Face 并接受许可。",
+      "上手",
+      "observed",
+      "Medium",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-06",
+      "厂商的各个资料在 Mac 上说法不一：较早的帮助页面说只能用 API，README 则描述了从 32 GiB 起的本地生成。",
+      "文档",
+      "third-party",
+      "Medium",
+      []
+    ],
+    [
+      "LTX-07",
+      "安装包很小（约 700 MB），模型却有 129.1 GB。",
+      "安装",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LTX-08",
+      "据测试者说，首次启动顺畅。",
+      "启动",
+      "tester-view",
+      "Positive",
+      [
+        "splash"
+      ]
+    ]
+  ],
+  "severity_note": "严重程度指对首次使用者的影响。为建议值，并非实测。",
+  "audience": {
+    "fits": [
+      [
+        "vendor-claim",
+        "配备 Apple Silicon 且内存 48 GB 或更多的 Mac，可用于完整本地生成，按厂商 README（未核实）。"
+      ],
+      [
+        "vendor-claim",
+        "配备 24 GB 或更多显存的 NVIDIA 显卡的 Windows 和 Linux 电脑，按厂商 README（未核实）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "拥有 24 GB 统一内存的 Mac，按测试者的说法。"
+      ],
+      [
+        "assumption",
+        "想要完整模型集、但可用磁盘空间不到约 130 GB 的人。"
+      ]
+    ],
+    "retest": "建议在内存 48 GB 或更多、至少有 150 GB 可用磁盘的 Mac 上重新测试，并先记录应用和 macOS 版本。还要检查应用在当前版本下于 24 GB 的 Mac 上的行为：是显示 'Coming soon to your device'，还是提供下载。未测试：登录、下载、生成、卸载。"
+  },
+  "background_intro": "非亲测。以下内容来自启动画面、厂商的 GitHub README 和测试者的笔记。README 于 2026年10月20日用一个会概括网页的网页抓取工具读取，未经独立核实。",
+  "background": [
+    [
+      "observed",
+      "启动画面注明 Lightricks 为出品方（'© 2026 Lightricks'）。"
+    ],
+    [
+      "vendor-claim",
+      "README 是厂商在 GitHub 上的 LTX Desktop 项目页面（Lightricks/LTX-Desktop）。它写明了系统下限和磁盘需求，概述见“厂商的说法”。"
+    ],
+    [
+      "third-party",
+      "网络搜索显示的较早帮助中心页面把 Mac 上的生成描述为只能用 API；这些页面没有打开（页面返回错误），可能已经过时。"
+    ],
+    [
+      "third-party",
+      "测试者笔记中的内存档位统计数据注明来自“Google”，没有给出来源。"
+    ]
+  ],
+  "sources": [
+    "测试者的实测笔记和两张截图，2026年10月20日（原始 Word 文档 'LTX desktop'；原始笔记 PDF 待补充）。",
+    "GitHub 上的 Lightricks LTX Desktop README（https://github.com/Lightricks/LTX-Desktop/blob/main/README.md），2026年10月20日通过会概括网页的抓取工具读取。",
+    "Lightricks 帮助中心关于 LTX Desktop 系统要求的页面，2026年10月20日仅见于网络搜索摘要。",
+    "测试者引用的 'Google' 内存档位统计数据；未给出来源。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "观察",
+      "meaning": "在应用、截图或测试者笔记中亲眼所见。"
+    },
+    "measured": {
+      "label": "测量",
+      "meaning": "从对话框、计数器或工具中读取的数值，并给出具体数字。"
+    },
+    "tester-estimate": {
+      "label": "测试者估计",
+      "meaning": "测试者自己的估计；未计时或计数。"
+    },
+    "vendor-claim": {
+      "label": "厂商声明",
+      "meaning": "由应用、商店页面或其网站所述；未核实。"
+    },
+    "third-party": {
+      "label": "第三方",
+      "meaning": "来自其他来源（AI 助手、文章）；此处未核实。"
+    },
+    "assumption": {
+      "label": "假设",
+      "meaning": "一种推断，可能是错的。"
+    },
+    "tester-view": {
+      "label": "测试者观点",
+      "meaning": "测试者的判断或意见。"
+    },
+    "tester-error": {
+      "label": "测试者失误",
+      "meaning": "测试者出错或遗漏之处。"
+    }
+  },
+  "images": [
+    {
+      "id": "setup",
+      "figure": 1,
+      "file": "ltx-desktop-setup-model-downloads-129-gb-32-gb-free.webp",
+      "path": "images/ltx-desktop-setup-model-downloads-129-gb-32-gb-free.webp",
+      "alt": "LTX Desktop 设置界面：一个 Hugging Face 登录框和五项模型下载（合计 129.1 GB），模型文件夹显示有 32.9 GB 可用。",
+      "caption": "设置界面：Hugging Face 登录、五项模型下载（LTX 2.5 41.5 GB、Gemma 4 文本编码器 24.5 GB、Gemma 4 E2B 提示词增强器 9.6 GB、Z-Image-Turbo 28.9 GB、LoRAs 24.6 GB），合计 129.1 GB，模型文件夹有 32.9 GB 可用。",
+      "role": "hero",
+      "width": 884,
+      "height": 508,
+      "bytes": 21968,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "measured",
+      "used_in": [
+        "hero",
+        "chapter-setup"
+      ],
+      "subject": "LTX Desktop 应用的截图",
+      "rights": "测试者本人拍摄的第三方软件界面截图。",
+      "captured": "2026-10-20 or earlier; exact time not recorded",
+      "original_docx_media": "LTX_desktop.docx, screenshot 2 (setup)"
+    },
+    {
+      "id": "splash",
+      "figure": 2,
+      "file": "ltx-desktop-launch-splash-screen-loading-bar.webp",
+      "path": "images/ltx-desktop-launch-splash-screen-loading-bar.webp",
+      "alt": "LTX Desktop 启动画面：应用名称、一条加载条和文字 '© 2026 Lightricks'。",
+      "caption": "首次启动：带加载条的启动画面。",
+      "role": "moment",
+      "width": 1431,
+      "height": 860,
+      "bytes": 7848,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-launch"
+      ],
+      "subject": "LTX Desktop 应用的截图",
+      "rights": "测试者本人拍摄的第三方软件界面截图。",
+      "captured": "2026-10-20 or earlier; exact time not recorded",
+      "original_docx_media": "LTX_desktop.docx, screenshot 1 (splash)"
+    }
+  ],
+  "figure_order": [
+    "setup",
+    "splash"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 上手测试 · {app} · {date}",
+    "date_line": "2026年10月20日",
+    "nav_aria": "章节",
+    "nav": {
+      "verdict": "结论",
+      "moments": "六个时刻",
+      "story": "测试经过",
+      "claims": "说法核对",
+      "fit": "24 GB",
+      "log": "使用记录",
+      "errors": "测试者失误",
+      "findings": "发现项",
+      "background": "背景"
+    },
+    "related": "相关内容：",
+    "review_link": "PromptQuorum 对 {app} 的评测",
+    "directory_link": "本地 AI 应用目录",
+    "verdict_h": "结论",
+    "general_assessment": "总体评价",
+    "fit_for_tester": "是否适合测试者的使用场景",
+    "scorecard": "评分卡",
+    "status_prefix": "状态：",
+    "na": "不适用",
+    "score_aria": "满分 5 分，得 {n} 分",
+    "details_h": "测试详情",
+    "label_intro": "每条陈述都带有标签：",
+    "legend_link": "标签含义",
+    "disclosure_label": "利益披露。",
+    "raw_notes": "原始笔记 PDF：",
+    "to_be_added": "待补充",
+    "moments_h": "左右这次测试的六个时刻",
+    "see_context": "查看上下文",
+    "story_h": "测试经过",
+    "claims_h": "官方说法与测试者所见",
+    "claims_cols": [
+      "说法",
+      "来源",
+      "所见",
+      "标签"
+    ],
+    "fit_h": "能装进 24 GB 吗？",
+    "memory_line": "{gb} GB 内存",
+    "above": "高于 {gb} GB",
+    "below": "低于 {gb} GB",
+    "log_h": "使用记录",
+    "log_cols": [
+      "#",
+      "任务",
+      "模型",
+      "结果",
+      "用时",
+      "状态",
+      "图"
+    ],
+    "statuses": {
+      "Fail": "失败",
+      "Partial": "部分完成",
+      "Pass": "通过",
+      "Not completed": "未完成"
+    },
+    "errors_h": "测试者出错的地方",
+    "findings_h": "发现清单",
+    "filter_aria": "按标签筛选发现项",
+    "filter_all": "全部",
+    "findings_cols": [
+      "编号",
+      "发现项",
+      "类别",
+      "标签",
+      "严重程度",
+      "图"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "正面"
+    },
+    "fig_abbr": "图",
+    "figure": "图",
+    "enlarge": "放大：",
+    "audience_h": "适合谁",
+    "likely_fit": "可能适合",
+    "likely_poor_fit": "可能不适合",
+    "retest": "复测。",
+    "background_h": "开发方背景",
+    "gallery_h": "测试中的更多图片",
+    "legend_h": "如何理解标签",
+    "sources_h": "资料来源",
+    "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
+    "crumb_home": "首页",
+    "crumb_directory": "目录",
+    "crumb_test": "{app} 上手测试",
+    "faq_h": "常见问题",
+    "more_tests_h": "更多实测"
+  }
+}
