@@ -141,7 +141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Best Mini PCs for Home Assistant + Local AI](/smart-home/best-mini-pc-home-assistant-local-ai) — the local monitoring and automation hardware for your battery storage',
-          '[Why Battery Storage Is Becoming Standard for Balcony Solar in 2027](/balcony-solar/balcony-solar-battery-storage-standard-2027) — the 2027 EU subsidy tier and new hardware (WattCycle, falling entry prices) reshaping this buying guide\'s category',
+          '[Balcony Solar Batteries in 2027: Is Storage Becoming Standard?](/balcony-solar/balcony-solar-battery-storage-standard-2027) — current German storage rules, falling entry prices and the tariff-arbitrage evidence behind this buying guide\'s category',
         ],
       },
     },
@@ -308,7 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Mejores mini PC para Home Assistant + IA local](/es/smart-home/best-mini-pc-home-assistant-local-ai) — el hardware local de monitoreo y automatización para tu almacenamiento de batería',
-          '[Por qué el almacenamiento en batería se está convirtiendo en estándar para la energía solar de balcón en 2027](/es/balcony-solar/balcony-solar-battery-storage-standard-2027) — el nuevo nivel de subvención de la UE para 2027 y el hardware emergente (WattCycle, precios de entrada a la baja) que están transformando esta categoría',
+          '[Baterías para energía solar de balcón en 2027: ¿se vuelven estándar?](/es/balcony-solar/balcony-solar-battery-storage-standard-2027) — reglas alemanas actuales de almacenamiento, precios de entrada a la baja y evidencia sobre arbitraje tarifario detrás de esta categoría de guía de compra',
         ],
       },
     },
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Melhores mini PCs para Home Assistant + IA local](/pt/smart-home/best-mini-pc-home-assistant-local-ai) — o hardware local de monitoramento e automação para seu armazenamento de bateria',
-          '[Por que o armazenamento em bateria está se tornando padrão para energia solar de varanda em 2027](/pt/balcony-solar/balcony-solar-battery-storage-standard-2027) — a nova faixa de subsídio da UE para 2027 e o novo hardware (WattCycle, preços de entrada em queda) que estão remodelando esta categoria',
+          '[Baterias para energia solar de varanda em 2027: viram padrão?](/pt/balcony-solar/balcony-solar-battery-storage-standard-2027) — regras alemãs atuais de armazenamento, preços de entrada em queda e evidências sobre arbitragem tarifária por trás desta categoria de guia de compra',
         ],
       },
     },
@@ -646,7 +646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[أفضل Mini PCs لـ Home Assistant + ذكاء اصطناعي محلي](/ar/smart-home/best-mini-pc-home-assistant-local-ai) — أجهزة المراقبة والأتمتة المحلية لتخزين البطارية',
-          '[لماذا يصبح تخزين البطاريات معيارًا للطاقة الشمسية للشرفة في 2027](/ar/balcony-solar/balcony-solar-battery-storage-standard-2027) — شريحة الدعم الأوروبية الجديدة لعام 2027 والأجهزة الجديدة (WattCycle، وانخفاض أسعار الفئة الأساسية) التي تعيد تشكيل هذه الفئة من أدلة الشراء',
+          '[بطاريات الطاقة الشمسية للشرفة في 2027: هل تصبح معيارًا؟](/ar/balcony-solar/balcony-solar-battery-storage-standard-2027) — قواعد التخزين الألمانية الحالية وانخفاض أسعار الدخول والأدلة على المراجحة السعرية وراء هذه الفئة من أدلة الشراء',
         ],
       },
     },
@@ -814,7 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[Home Assistant + ローカルAIに最適なミニPC](/ja/smart-home/best-mini-pc-home-assistant-local-ai) — バッテリーストレージのローカル監視・自動化ハードウェア',
-          '[2027年、バルコニーソーラーでバッテリー蓄電が標準になる理由](/ja/balcony-solar/balcony-solar-battery-storage-standard-2027) — 2027年のEU補助金枠と、このガイドのカテゴリーを変えつつある新ハードウェア(WattCycle、下落するエントリー価格)',
+          '[2027年のバルコニーソーラー用蓄電池：標準になるのか](/ja/balcony-solar/balcony-solar-battery-storage-standard-2027) — ドイツの最新の蓄電池ルール、下落する入門価格、このガイドの背景にある料金裁定の根拠',
         ],
       },
     },
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[Home Assistant + 本地 AI 的最佳迷你 PC](/zh/smart-home/best-mini-pc-home-assistant-local-ai) — 本地电池储能监控和自动化硬件',
-          '[为什么电池储能正在成为2027年阳台光伏的标准配置](/zh/balcony-solar/balcony-solar-battery-storage-standard-2027) — 2027年欧盟新补贴档位与正在重塑这一品类的新硬件(WattCycle、不断下降的入门价格)',
+          '[2027年阳台光伏电池：会成为标配吗？](/zh/balcony-solar/balcony-solar-battery-storage-standard-2027) — 德国当前的储能规则、不断下降的入门价格，以及本购买指南所属品类背后的电价套利证据',
         ],
       },
     },
@@ -1150,7 +1150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Meilleurs mini-PC pour Home Assistant + IA locale](/fr/smart-home/best-mini-pc-home-assistant-local-ai) — le matériel de surveillance et d\'automatisation local pour votre stockage par batterie',
-          '[Pourquoi le stockage par batterie devient la norme pour le solaire de balcon en 2027](/fr/balcony-solar/balcony-solar-battery-storage-standard-2027) — le nouveau palier de subvention européen pour 2027 et le nouveau matériel (WattCycle, baisse des prix d\'entrée) qui redessinent cette catégorie',
+          '[Batteries pour le solaire de balcon en 2027 : un nouveau standard ?](/fr/balcony-solar/balcony-solar-battery-storage-standard-2027) — règles allemandes actuelles sur le stockage, baisse des prix d\'entrée et preuves sur l\'arbitrage tarifaire derrière cette catégorie de guide d\'achat',
         ],
       },
     },
@@ -1319,7 +1319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[Home Assistant + 로컬 AI를 위한 최고의 미니 PC](/ko/smart-home/best-mini-pc-home-assistant-local-ai) — 배터리 저장장치를 위한 로컬 모니터링 및 자동화 하드웨어',
-          '[2027년 발코니 태양광에서 배터리 저장장치가 표준이 되는 이유](/ko/balcony-solar/balcony-solar-battery-storage-standard-2027) — 이 구매 가이드의 카테고리를 바꾸고 있는 2027년 EU 보조금 등급과 신제품 하드웨어(WattCycle, 하락하는 입문 가격)',
+          '[2027년 발코니 태양광 배터리: 표준이 되고 있습니까?](/ko/balcony-solar/balcony-solar-battery-storage-standard-2027) — 독일의 현재 저장장치 규정, 하락하는 입문 가격, 이 구매 가이드 카테고리의 배경이 되는 요금 차익 근거',
         ],
       },
     },
@@ -1487,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Lektüre',
         items: [
           '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — die lokale Überwachungs- und Automatisierungs-Hardware für Ihren Batteriespeicher',
-          '[Warum Batteriespeicher 2027 zum Standard für Balkonkraftwerke wird](/de/balcony-solar/balcony-solar-battery-storage-standard-2027) — die neue EU-Förderstufe für 2027 und neue Hardware (WattCycle, sinkende Einstiegspreise), die diese Kategorie dieses Kaufratgebers verändern',
+          '[Batteriespeicher für Balkonkraftwerke 2027: Wird er zum Standard?](/de/balcony-solar/balcony-solar-battery-storage-standard-2027) — aktuelle deutsche Speicherregeln, sinkende Einstiegspreise und die Belege zur Tarifarbitrage hinter dieser Kategorie des Kaufratgebers',
         ],
       },
     },
