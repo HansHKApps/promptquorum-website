@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     heroImage: '/images/ollama-128k-context-models-overview-hero-en.webp',
     title: 'Which Ollama Models Support 128K Context?',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     seoTitle: 'Ollama 128K Context 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.1 8B supports 128K context on Ollama. Qwen3-30B-A3B (MoE) reaches 256K context. Full context windows significantly increase VRAM. Updated 2026.',
     publishDate: '2026-05-18',
@@ -27,15 +27,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Llama 3.1 8B: 128K context, ~16 GB VRAM at full context',
           'Qwen3-30B-A3B: 256K context, ~24+ GB VRAM at full context',
-          'Set --num-ctx 4096 for normal use to save VRAM',
+          'Set num_ctx 4096 for normal use to save VRAM',
         ],
         updatedDate: '2026-09',
       },
-      de: { question: 'Welche Ollama-Modelle unterstützen 128K-Kontext?', answer: 'Llama 3.1 8B unterstützt 128K-Kontext in Ollama. Qwen3-30B-A3B erreicht 256K Kontext. Hinweis: Das Ausführen mit vollem Kontext erhöht den VRAM drastisch — ein 128K-Fenster benötigt 3–4× mehr VRAM als das Standard-4K-Fenster.', bullets: ['Llama 3.1 8B: 128K-Kontext, ~16 GB VRAM bei vollem Kontext', 'Qwen3-30B-A3B: 256K Kontext, 24+ GB VRAM bei vollem Kontext', 'Für normalen Einsatz --num-ctx 4096 setzen, um VRAM zu sparen'], updatedDate: '2026-09' },
-      fr: { question: 'Quels modèles Ollama supportent le contexte 128K ?', answer: 'Llama 3.1 8B prend en charge un contexte de 128K sur Ollama. Qwen3-30B-A3B atteint 256K de contexte. Attention : exécuter le contexte complet augmente fortement la VRAM — une fenêtre de 128K nécessite 3 à 4× plus de VRAM que la fenêtre par défaut de 4K.', bullets: ['Llama 3.1 8B : contexte 128K, ~16 Go de VRAM au contexte complet', 'Qwen3-30B-A3B : contexte 256K, 24+ Go de VRAM au contexte complet', 'Utiliser --num-ctx 4096 pour un usage normal et économiser la VRAM'], updatedDate: '2026-09' },
-      ja: { question: 'Ollamaで128Kコンテキスト対応モデルは？', answer: 'Llama 3.1 8BはOllamaで128Kコンテキストに対応しています。Qwen3-30B-A3Bは256Kコンテキストに到達します。注意：フルコンテキストで実行するとVRAMが大幅に増加します — 128Kウィンドウはデフォルト4Kの3〜4倍のVRAMが必要です。', bullets: ['Llama 3.1 8B：128Kコンテキスト、フルコンテキストで~16 GB VRAM', 'Qwen3-30B-A3B：256Kコンテキスト、フルコンテキストで24+ GB VRAM', '通常使用は--num-ctx 4096でVRAMを節約'], updatedDate: '2026-09' },
-      zh: { question: 'Ollama上哪些模型支持128K上下文？', answer: 'Llama 3.1 8B在Ollama上支持128K上下文。Qwen3-30B-A3B可达256K上下文。注意：运行完整上下文会大幅增加显存占用——128K窗口比默认4K窗口需要多3–4倍显存。', bullets: ['Llama 3.1 8B：128K上下文，完整上下文需~16 GB显存', 'Qwen3-30B-A3B：256K上下文，完整上下文需24+ GB显存', '日常使用设置--num-ctx 4096以节省显存'], updatedDate: '2026-09' },
-      es: { question: '¿Qué modelos de Ollama admiten contexto de 128K?', answer: 'Llama 3.1 8B admite contexto de 128K en Ollama. Qwen3-30B-A3B alcanza 256K de contexto. Nota: ejecutar el contexto completo aumenta drásticamente la VRAM — una ventana de 128K necesita entre 3 y 4 veces más VRAM que la ventana predeterminada de 4K.', bullets: ['Llama 3.1 8B: contexto de 128K, ~16 GB de VRAM con contexto completo', 'Qwen3-30B-A3B: contexto de 256K, 24+ GB de VRAM con contexto completo', 'Establece --num-ctx 4096 para uso normal y ahorra VRAM'], updatedDate: '2026-09' },
+      de: { question: 'Welche Ollama-Modelle unterstützen 128K-Kontext?', answer: 'Llama 3.1 8B unterstützt 128K-Kontext in Ollama. Qwen3-30B-A3B erreicht 256K Kontext. Hinweis: Das Ausführen mit vollem Kontext erhöht den VRAM drastisch — ein 128K-Fenster benötigt 3–4× mehr VRAM als das Standard-4K-Fenster.', bullets: ['Llama 3.1 8B: 128K-Kontext, ~16 GB VRAM bei vollem Kontext', 'Qwen3-30B-A3B: 256K Kontext, 24+ GB VRAM bei vollem Kontext', 'Für normalen Einsatz num_ctx 4096 setzen, um VRAM zu sparen'], updatedDate: '2026-09' },
+      fr: { question: 'Quels modèles Ollama supportent le contexte 128K ?', answer: 'Llama 3.1 8B prend en charge un contexte de 128K sur Ollama. Qwen3-30B-A3B atteint 256K de contexte. Attention : exécuter le contexte complet augmente fortement la VRAM — une fenêtre de 128K nécessite 3 à 4× plus de VRAM que la fenêtre par défaut de 4K.', bullets: ['Llama 3.1 8B : contexte 128K, ~16 Go de VRAM au contexte complet', 'Qwen3-30B-A3B : contexte 256K, 24+ Go de VRAM au contexte complet', 'Utiliser num_ctx 4096 pour un usage normal et économiser la VRAM'], updatedDate: '2026-09' },
+      ja: { question: 'Ollamaで128Kコンテキスト対応モデルは？', answer: 'Llama 3.1 8BはOllamaで128Kコンテキストに対応しています。Qwen3-30B-A3Bは256Kコンテキストに到達します。注意：フルコンテキストで実行するとVRAMが大幅に増加します — 128Kウィンドウはデフォルト4Kの3〜4倍のVRAMが必要です。', bullets: ['Llama 3.1 8B：128Kコンテキスト、フルコンテキストで~16 GB VRAM', 'Qwen3-30B-A3B：256Kコンテキスト、フルコンテキストで24+ GB VRAM', '通常使用はnum_ctx 4096でVRAMを節約'], updatedDate: '2026-09' },
+      zh: { question: 'Ollama上哪些模型支持128K上下文？', answer: 'Llama 3.1 8B在Ollama上支持128K上下文。Qwen3-30B-A3B可达256K上下文。注意：运行完整上下文会大幅增加显存占用——128K窗口比默认4K窗口需要多3–4倍显存。', bullets: ['Llama 3.1 8B：128K上下文，完整上下文需~16 GB显存', 'Qwen3-30B-A3B：256K上下文，完整上下文需24+ GB显存', '日常使用设置num_ctx 4096以节省显存'], updatedDate: '2026-09' },
+      es: { question: '¿Qué modelos de Ollama admiten contexto de 128K?', answer: 'Llama 3.1 8B admite contexto de 128K en Ollama. Qwen3-30B-A3B alcanza 256K de contexto. Nota: ejecutar el contexto completo aumenta drásticamente la VRAM — una ventana de 128K necesita entre 3 y 4 veces más VRAM que la ventana predeterminada de 4K.', bullets: ['Llama 3.1 8B: contexto de 128K, ~16 GB de VRAM con contexto completo', 'Qwen3-30B-A3B: contexto de 256K, 24+ GB de VRAM con contexto completo', 'Establece num_ctx 4096 para uso normal y ahorra VRAM'], updatedDate: '2026-09' },
     },
     sections: {
       tldr: {
@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Most 7B Ollama models advertise 128K context but degrade in quality above 32K tokens',
           'Llama 3.1 8B and Qwen3-30B-A3B are the two models that reliably deliver 128K+ context on Ollama',
           'A 128K context window can nearly triple VRAM usage — a 7B Q4 model needs ~15 GB at 128K vs ~5.5 GB at default',
-          'Set <code>--num-ctx 4096</code> for everyday tasks; only expand context when you need it',
+          'Set <code>num_ctx 4096</code> for everyday tasks; only expand context when you need it',
         ],
       },
       body1: {
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Expanding the context window increases VRAM usage significantly. <strong>The KV-cache, which stores attention state for all tokens in context, can add as much VRAM as the model weights themselves at 128K context.</strong>',
           'The table below shows how KV-cache VRAM scales for a 7B model at Q4_K_M. These figures assume models using grouped query attention (GQA) — models without GQA use significantly more KV-cache.',
-          'To save VRAM on everyday tasks, set <code>--num-ctx 4096</code> when running Ollama. Only expand to 32K or 128K when your specific task requires it. For the full guide on long-context local LLMs including model selection and RAM splitting, see the <a href="/local-llms/long-context-local-llms" class="text-primary hover:underline">long-context local LLMs guide</a>.',
+          'To save VRAM on everyday tasks, type <code>/set parameter num_ctx 4096</code> in an <code>ollama run</code> session (or start the server with <code>OLLAMA_CONTEXT_LENGTH=4096 ollama serve</code>). Only expand to 32K or 128K when your specific task requires it. For the full guide on long-context local LLMs including model selection and RAM splitting, see the <a href="/local-llms/long-context-local-llms" class="text-primary hover:underline">long-context local LLMs guide</a>.',
         ],
         columns: ['Context Length', 'KV-Cache (7B)', 'Total VRAM (7B Q4)'],
         rows: [
@@ -81,7 +81,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'How do I enable 128K context in Ollama?',
-            a: 'Add <code>--num-ctx 131072</code> to your run command: <code>ollama run llama3.1:8b --num-ctx 131072</code>. Without this flag, Ollama\'s Modelfile spec defaults num_ctx to 2048, and even the VRAM-tiered runtime default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) may fall short of the model\'s maximum capability — set num_ctx explicitly to guarantee it.',
+            a: 'Inside an interactive session (<code>ollama run llama3.1:8b</code>), type <code>/set parameter num_ctx 131072</code>. To make it permanent, put <code>PARAMETER num_ctx 131072</code> in a Modelfile, pass <code>options.num_ctx</code> in the API, or start the server with <code>OLLAMA_CONTEXT_LENGTH=131072 ollama serve</code>. Without an explicit setting, Ollama\'s Modelfile spec defaults num_ctx to 2048, and even the VRAM-tiered runtime default (4K under 24 GiB, 32K from 24–48 GiB, 256K above) may fall short of the model\'s maximum capability — set num_ctx explicitly so the larger window is actually used.',
           },
           {
             q: 'Why does long context use so much VRAM?',
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 128K Kontext 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.1 8B und Qwen3-30B-A3B unterstützen 128K+ Kontext auf Ollama. Qwen3-30B-A3B erreicht 256K. Voller Kontext erhöht den VRAM-Bedarf stark.',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -124,7 +124,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Llama 3.1 8B: 128K Kontext, ~16 GB VRAM bei vollem Kontext',
           'Qwen3-30B-A3B: 256K Kontext, 24+ GB VRAM bei vollem Kontext',
-          'Setzen Sie --num-ctx 4096 für die normale Nutzung, um VRAM zu sparen',
+          'Setzen Sie num_ctx 4096 für die normale Nutzung, um VRAM zu sparen',
         ],
         updatedDate: '2026-09',
       },
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Die meisten 7B-Ollama-Modelle werben mit 128K Kontext, liefern aber oberhalb von 32K Tokens sinkende Qualität',
           'Llama 3.1 8B und Qwen3-30B-A3B sind die zwei Modelle, die zuverlässig 128K+ Kontext auf Ollama liefern',
           'Ein 128K-Kontextfenster kann den VRAM-Verbrauch fast verdreifachen — ein 7B Q4-Modell benötigt ~15 GB bei 128K statt ~5,5 GB beim Standard',
-          'Setzen Sie <code>--num-ctx 4096</code> für alltägliche Aufgaben; erweitern Sie den Kontext nur, wenn Sie ihn benötigen',
+          'Setzen Sie <code>num_ctx 4096</code> für alltägliche Aufgaben; erweitern Sie den Kontext nur, wenn Sie ihn benötigen',
         ],
       },
       body1: {
@@ -157,7 +157,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Die Erweiterung des Kontextfensters erhöht den VRAM-Verbrauch erheblich. <strong>Der KV-Cache, der den Attention-Zustand für alle Tokens im Kontext speichert, kann bei 128K Kontext so viel VRAM belegen wie die Modellgewichte selbst.</strong>',
           'Die folgende Tabelle zeigt, wie der KV-Cache-VRAM für ein 7B-Modell bei Q4_K_M skaliert. Diese Werte gelten für Modelle mit Grouped Query Attention (GQA) — Modelle ohne GQA verwenden deutlich mehr KV-Cache.',
-          'Um VRAM bei alltäglichen Aufgaben zu sparen, setzen Sie <code>--num-ctx 4096</code> beim Starten von Ollama. Erweitern Sie auf 32K oder 128K nur, wenn Ihre spezifische Aufgabe es erfordert. Den vollständigen Leitfaden zu Long-Context-LLMs einschließlich Modellauswahl und RAM-Splitting finden Sie im <a href="/de/local-llms/long-context-local-llms" class="text-primary hover:underline">Leitfaden für Long-Context-LLMs</a>.',
+          'Um VRAM bei alltäglichen Aufgaben zu sparen, geben Sie in einer <code>ollama run</code>-Sitzung <code>/set parameter num_ctx 4096</code> ein (oder starten Sie den Server mit <code>OLLAMA_CONTEXT_LENGTH=4096 ollama serve</code>). Erweitern Sie auf 32K oder 128K nur, wenn Ihre spezifische Aufgabe es erfordert. Den vollständigen Leitfaden zu Long-Context-LLMs einschließlich Modellauswahl und RAM-Splitting finden Sie im <a href="/de/local-llms/long-context-local-llms" class="text-primary hover:underline">Leitfaden für Long-Context-LLMs</a>.',
         ],
         columns: ['Kontextlänge', 'KV-Cache (7B)', 'Gesamt-VRAM (7B Q4)'],
         rows: [
@@ -173,7 +173,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Wie aktiviere ich 128K Kontext in Ollama?',
-            a: 'Fügen Sie <code>--num-ctx 131072</code> zu Ihrem Run-Befehl hinzu: <code>ollama run llama3.1:8b --num-ctx 131072</code>. Ohne dieses Flag verwendet Ollamas Modelfile-Spezifikation standardmäßig 2048 Tokens, und selbst der VRAM-gestaffelte Laufzeit-Standard (4K unter 24 GiB, 32K bei 24–48 GiB, 256K darüber) kann unter der maximalen Fähigkeit des Modells liegen — setzen Sie num_ctx explizit, um dies zu garantieren.',
+            a: 'Geben Sie in einer interaktiven Sitzung (<code>ollama run llama3.1:8b</code>) <code>/set parameter num_ctx 131072</code> ein. Dauerhaft geht das mit <code>PARAMETER num_ctx 131072</code> in einem Modelfile, mit <code>options.num_ctx</code> in der API oder mit <code>OLLAMA_CONTEXT_LENGTH=131072 ollama serve</code>. Ohne ausdrückliche Einstellung verwendet Ollamas Modelfile-Spezifikation standardmäßig 2048 Tokens, und selbst der VRAM-gestaffelte Laufzeit-Standard (4K unter 24 GiB, 32K bei 24–48 GiB, 256K darüber) kann unter der maximalen Fähigkeit des Modells liegen — setzen Sie num_ctx explizit, damit das größere Fenster tatsächlich genutzt wird.',
           },
           {
             q: 'Warum verbraucht langer Kontext so viel VRAM?',
@@ -206,7 +206,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 128K contexte 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.1 8B et Qwen3-30B-A3B supportent 128K+ contexte sur Ollama. Qwen3-30B-A3B atteint 256K. Le contexte complet augmente fortement la VRAM.',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Llama 3.1 8B : contexte 128K, ~16 GB VRAM en contexte complet',
           'Qwen3-30B-A3B : contexte 256K, 24+ GB VRAM en contexte complet',
-          'Définissez --num-ctx 4096 pour l\'usage normal afin d\'économiser la VRAM',
+          'Définissez num_ctx 4096 pour l\'usage normal afin d\'économiser la VRAM',
         ],
         updatedDate: '2026-09',
       },
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'La plupart des modèles Ollama 7B annoncent 128K de contexte mais dégradent en qualité au-delà de 32K tokens',
           'Llama 3.1 8B et Qwen3-30B-A3B sont les deux modèles qui délivrent de façon fiable un contexte 128K+ sur Ollama',
           'Une fenêtre de contexte 128K peut presque tripler l\'utilisation VRAM — un modèle 7B Q4 a besoin de ~15 GB à 128K contre ~5,5 GB par défaut',
-          'Définissez <code>--num-ctx 4096</code> pour les tâches quotidiennes ; n\'étendez le contexte que lorsque nécessaire',
+          'Définissez <code>num_ctx 4096</code> pour les tâches quotidiennes ; n\'étendez le contexte que lorsque nécessaire',
         ],
       },
       body1: {
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'L\'extension de la fenêtre de contexte augmente significativement l\'utilisation VRAM. <strong>Le KV-cache, qui stocke l\'état d\'attention pour tous les tokens en contexte, peut utiliser autant de VRAM que les poids du modèle lui-même à 128K de contexte.</strong>',
           'Le tableau ci-dessous montre comment le VRAM du KV-cache évolue pour un modèle 7B en Q4_K_M. Ces chiffres supposent des modèles utilisant le grouped query attention (GQA) — les modèles sans GQA utilisent significativement plus de KV-cache.',
-          'Pour économiser la VRAM sur les tâches quotidiennes, définissez <code>--num-ctx 4096</code> lors du lancement d\'Ollama. N\'étendez à 32K ou 128K que lorsque votre tâche spécifique le requiert. Pour le guide complet sur les LLMs locaux à contexte long, consultez le <a href="/fr/local-llms/long-context-local-llms" class="text-primary hover:underline">guide des LLMs locaux à contexte long</a>.',
+          'Pour économiser la VRAM sur les tâches quotidiennes, saisissez <code>/set parameter num_ctx 4096</code> dans une session <code>ollama run</code> (ou lancez le serveur avec <code>OLLAMA_CONTEXT_LENGTH=4096 ollama serve</code>). N\'étendez à 32K ou 128K que lorsque votre tâche spécifique le requiert. Pour le guide complet sur les LLMs locaux à contexte long, consultez le <a href="/fr/local-llms/long-context-local-llms" class="text-primary hover:underline">guide des LLMs locaux à contexte long</a>.',
         ],
         columns: ['Longueur de contexte', 'KV-Cache (7B)', 'VRAM total (7B Q4)'],
         rows: [
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Comment activer le contexte 128K dans Ollama ?',
-            a: 'Ajoutez <code>--num-ctx 131072</code> à votre commande run : <code>ollama run llama3.1:8b --num-ctx 131072</code>. Sans ce paramètre, la spécification Modelfile d\'Ollama utilise par défaut 2048 tokens, et même la valeur par défaut échelonnée selon la VRAM (4K sous 24 Gio, 32K entre 24 et 48 Gio, 256K au-delà) peut rester en dessous de la capacité maximale du modèle — définissez num_ctx explicitement pour la garantir.',
+            a: 'Dans une session interactive (<code>ollama run llama3.1:8b</code>), saisissez <code>/set parameter num_ctx 131072</code>. Pour le rendre permanent, utilisez <code>PARAMETER num_ctx 131072</code> dans un Modelfile, <code>options.num_ctx</code> dans l\'API, ou lancez le serveur avec <code>OLLAMA_CONTEXT_LENGTH=131072 ollama serve</code>. Sans réglage explicite, la spécification Modelfile d\'Ollama utilise par défaut 2048 tokens, et même la valeur par défaut échelonnée selon la VRAM (4K sous 24 Gio, 32K entre 24 et 48 Gio, 256K au-delà) peut rester en dessous de la capacité maximale du modèle — définissez num_ctx explicitement pour que la fenêtre plus grande soit réellement utilisée.',
           },
           {
             q: 'Pourquoi le contexte long utilise-t-il autant de VRAM ?',
@@ -298,7 +298,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 128Kコンテキスト2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.1 8BとQwen3-30B-A3BはOllamaで128K以上のコンテキストに対応。Qwen3-30B-A3Bは256Kに到達。フルコンテキストはVRAMを大幅に増加させます。',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -308,7 +308,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Llama 3.1 8B：128Kコンテキスト、フルコンテキストで~16 GB VRAM',
           'Qwen3-30B-A3B：256Kコンテキスト、フルコンテキストで24+ GB VRAM',
-          '通常使用時はVRAMを節約するため--num-ctx 4096を設定',
+          '通常使用時はVRAMを節約するためnum_ctx 4096を設定',
         ],
         updatedDate: '2026-09',
       },
@@ -321,7 +321,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'ほとんどの7B Ollamaモデルは128Kコンテキストを宣伝しているが、32Kトークン以上では品質が低下する',
           'Llama 3.1 8BとQwen3-30B-A3BはOllamaで128K以上のコンテキストを安定して提供する2つのモデル',
           '128Kコンテキストウィンドウはデフォルトと比較してVRAM使用量をほぼ3倍にする可能性がある——7B Q4モデルはデフォルトの約5.5 GBに対し128Kで約15 GBが必要',
-          '日常的なタスクには<code>--num-ctx 4096</code>を設定し、必要な時だけコンテキストを拡張する',
+          '日常的なタスクには<code>num_ctx 4096</code>を設定し、必要な時だけコンテキストを拡張する',
         ],
       },
       body1: {
@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'コンテキストウィンドウを拡張するとVRAM使用量が大幅に増加します。<strong>KV-Cache（コンテキスト内のすべてのトークンのアテンション状態を保存）は、128Kコンテキストではモデルの重みと同量のVRAMを使用することがあります。</strong>',
           '下の表はQ4_K_Mの7BモデルにおけるKV-CacheのVRAMスケーリングを示します。これらの数値はGrouped Query Attention（GQA）を使用するモデルを想定しています——GQAを使用しないモデルはKV-Cacheの使用量が大幅に多くなります。',
-          '日常的なタスクでVRAMを節約するには、Ollamaの起動時に<code>--num-ctx 4096</code>を設定してください。特定のタスクで必要な場合にのみ32Kや128Kに拡張します。モデル選択やRAM分割を含む長文コンテキストLLMの完全ガイドは、<a href="/ja/local-llms/long-context-local-llms" class="text-primary hover:underline">長文コンテキストローカルLLMガイド</a>をご覧ください。',
+          '日常的なタスクでVRAMを節約するには、<code>ollama run</code>のセッション内で<code>/set parameter num_ctx 4096</code>と入力してください（またはサーバーを<code>OLLAMA_CONTEXT_LENGTH=4096 ollama serve</code>で起動します）。特定のタスクで必要な場合にのみ32Kや128Kに拡張します。モデル選択やRAM分割を含む長文コンテキストLLMの完全ガイドは、<a href="/ja/local-llms/long-context-local-llms" class="text-primary hover:underline">長文コンテキストローカルLLMガイド</a>をご覧ください。',
         ],
         columns: ['コンテキスト長', 'KV-Cache (7B)', '合計VRAM (7B Q4)'],
         rows: [
@@ -357,7 +357,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Ollamaで128Kコンテキストを有効にするには？',
-            a: '実行コマンドに<code>--num-ctx 131072</code>を追加します：<code>ollama run llama3.1:8b --num-ctx 131072</code>。このフラグがない場合、OllamaのModelfile仕様ではnum_ctxのデフォルトは2048ですが、VRAM階層別のランタイムデフォルト(24 GiB未満は4K、24〜48 GiBは32K、それ以上は256K)でもモデルの最大能力に届かないことがあります。確実に使うにはnum_ctxを明示的に設定してください。',
+            a: '対話セッション（<code>ollama run llama3.1:8b</code>）の中で<code>/set parameter num_ctx 131072</code>と入力します。恒久的に設定するには、Modelfileに<code>PARAMETER num_ctx 131072</code>を書く、APIで<code>options.num_ctx</code>を指定する、または<code>OLLAMA_CONTEXT_LENGTH=131072 ollama serve</code>でサーバーを起動します。明示的に設定しない場合、OllamaのModelfile仕様ではnum_ctxのデフォルトは2048ですが、VRAM階層別のランタイムデフォルト(24 GiB未満は4K、24〜48 GiBは32K、それ以上は256K)でもモデルの最大能力に届かないことがあります。確実に使うにはnum_ctxを明示的に設定してください。',
           },
           {
             q: '長いコンテキストはなぜVRAMを大量に消費するのですか？',
@@ -390,7 +390,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 128K上下文2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.1 8B和Qwen3-30B-A3B在Ollama上支持128K以上上下文。Qwen3-30B-A3B可达256K。完整上下文会大幅增加VRAM需求。',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Llama 3.1 8B：128K上下文，完整上下文约需16 GB VRAM',
           'Qwen3-30B-A3B：256K上下文，完整上下文需24+ GB VRAM',
-          '日常使用设置--num-ctx 4096以节省VRAM',
+          '日常使用设置num_ctx 4096以节省VRAM',
         ],
         updatedDate: '2026-09',
       },
@@ -413,7 +413,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '大多数7B Ollama模型宣称支持128K上下文，但超过32K token后质量明显下降',
           'Llama 3.1 8B和Qwen3-30B-A3B是能在Ollama上稳定提供128K以上上下文的两个模型',
           '128K上下文窗口可能使VRAM用量增至近3倍——7B Q4模型在128K下需约15 GB，默认只需约5.5 GB',
-          '日常任务设置<code>--num-ctx 4096</code>；仅在需要时扩展上下文',
+          '日常任务设置<code>num_ctx 4096</code>；仅在需要时扩展上下文',
         ],
       },
       body1: {
@@ -433,7 +433,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '扩展上下文窗口会显著增加VRAM使用量。<strong>KV-Cache存储上下文中所有token的注意力状态，在128K上下文下可能占用与模型权重相当的VRAM。</strong>',
           '下表显示Q4_K_M的7B模型KV-Cache VRAM的扩展情况。这些数值假设模型使用分组查询注意力（GQA）——不使用GQA的模型会消耗更多KV-Cache。',
-          '日常任务中节省VRAM，请在运行Ollama时设置<code>--num-ctx 4096</code>。仅在特定任务需要时扩展至32K或128K。长上下文本地LLM的完整指南（包括模型选择和RAM分割），请参阅<a href="/zh/local-llms/long-context-local-llms" class="text-primary hover:underline">长上下文本地LLM指南</a>。',
+          '日常任务中节省VRAM，请在<code>ollama run</code>会话中输入<code>/set parameter num_ctx 4096</code>（或使用<code>OLLAMA_CONTEXT_LENGTH=4096 ollama serve</code>启动服务）。仅在特定任务需要时扩展至32K或128K。长上下文本地LLM的完整指南（包括模型选择和RAM分割），请参阅<a href="/zh/local-llms/long-context-local-llms" class="text-primary hover:underline">长上下文本地LLM指南</a>。',
         ],
         columns: ['上下文长度', 'KV-Cache (7B)', '总VRAM (7B Q4)'],
         rows: [
@@ -449,7 +449,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '如何在Ollama中启用128K上下文？',
-            a: '在运行命令中添加<code>--num-ctx 131072</code>：<code>ollama run llama3.1:8b --num-ctx 131072</code>。不使用该参数时，Ollama的Modelfile规范默认num_ctx为2048，即使是按VRAM分级的运行时默认值(24 GiB以下为4K，24–48 GiB为32K，以上为256K)也可能达不到模型的最大能力——请显式设置num_ctx以确保达到该能力。',
+            a: '在交互会话（<code>ollama run llama3.1:8b</code>）中输入<code>/set parameter num_ctx 131072</code>。如需永久生效，可在Modelfile中写入<code>PARAMETER num_ctx 131072</code>，在API中传入<code>options.num_ctx</code>，或使用<code>OLLAMA_CONTEXT_LENGTH=131072 ollama serve</code>启动服务。未显式设置时，Ollama的Modelfile规范默认num_ctx为2048，即使是按VRAM分级的运行时默认值(24 GiB以下为4K，24–48 GiB为32K，以上为256K)也可能达不到模型的最大能力——请显式设置num_ctx，以便实际使用更大的上下文窗口。',
           },
           {
             q: '为什么长上下文需要这么多VRAM？',
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama contexto 128K 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.1 8B e Qwen3-30B-A3B suportam 128K+ de contexto no Ollama; Qwen3-30B-A3B chega a 256K. O contexto completo aumenta muito a VRAM. 2026.',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -492,7 +492,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Llama 3.1 8B: contexto de 128K, ~16 GB de VRAM com contexto completo',
           'Qwen3-30B-A3B: contexto de 256K, 24+ GB de VRAM com contexto completo',
-          'Defina --num-ctx 4096 para uso normal e economize VRAM',
+          'Defina num_ctx 4096 para uso normal e economize VRAM',
         ],
         updatedDate: '2026-09',
       },
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'A maioria dos modelos 7B do Ollama anuncia contexto de 128K, mas a qualidade se degrada acima de 32K tokens',
           'Llama 3.1 8B e Qwen3-30B-A3B são os dois modelos que oferecem 128K+ de contexto de forma confiável no Ollama',
           'Uma janela de contexto de 128K pode quase triplicar o uso de VRAM — um modelo 7B Q4 precisa de ~15 GB com 128K frente a ~5,5 GB no padrão',
-          'Defina <code>--num-ctx 4096</code> para tarefas cotidianas; expanda o contexto apenas quando necessário',
+          'Defina <code>num_ctx 4096</code> para tarefas cotidianas; expanda o contexto apenas quando necessário',
         ],
       },
       body1: {
@@ -525,7 +525,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Expandir a janela de contexto aumenta significativamente o uso de VRAM. <strong>O KV-cache, que armazena o estado de atenção para todos os tokens no contexto, pode usar tanta VRAM quanto os próprios pesos do modelo com contexto de 128K.</strong>',
           'A tabela abaixo mostra como a VRAM do KV-cache escala para um modelo 7B em Q4_K_M. Esses números assumem modelos usando grouped query attention (GQA) — modelos sem GQA usam significativamente mais KV-cache.',
-          'Para economizar VRAM em tarefas cotidianas, defina <code>--num-ctx 4096</code> ao executar o Ollama. Expanda para 32K ou 128K apenas quando sua tarefa específica exigir. Para o guia completo sobre LLMs locais de contexto longo, consulte o <a href="/pt/local-llms/long-context-local-llms" class="text-primary hover:underline">guia de LLMs locais de contexto longo</a>.',
+          'Para economizar VRAM em tarefas cotidianas, digite <code>/set parameter num_ctx 4096</code> em uma sessão <code>ollama run</code> (ou inicie o servidor com <code>OLLAMA_CONTEXT_LENGTH=4096 ollama serve</code>). Expanda para 32K ou 128K apenas quando sua tarefa específica exigir. Para o guia completo sobre LLMs locais de contexto longo, consulte o <a href="/pt/local-llms/long-context-local-llms" class="text-primary hover:underline">guia de LLMs locais de contexto longo</a>.',
         ],
         columns: ['Comprimento de contexto', 'KV-Cache (7B)', 'VRAM total (7B Q4)'],
         rows: [
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Como ativar o contexto de 128K no Ollama?',
-            a: 'Adicione <code>--num-ctx 131072</code> ao seu comando de execução: <code>ollama run llama3.1:8b --num-ctx 131072</code>. Sem essa opção, a especificação Modelfile do Ollama usa por padrão 2048 tokens, e mesmo o padrão de runtime escalonado por VRAM (4K abaixo de 24 GiB, 32K entre 24–48 GiB, 256K acima) pode ficar abaixo da capacidade máxima do modelo — defina num_ctx explicitamente para garanti-la.',
+            a: 'Em uma sessão interativa (<code>ollama run llama3.1:8b</code>), digite <code>/set parameter num_ctx 131072</code>. Para tornar permanente, use <code>PARAMETER num_ctx 131072</code> em um Modelfile, <code>options.num_ctx</code> na API ou inicie o servidor com <code>OLLAMA_CONTEXT_LENGTH=131072 ollama serve</code>. Sem uma configuração explícita, a especificação Modelfile do Ollama usa por padrão 2048 tokens, e mesmo o padrão de runtime escalonado por VRAM (4K abaixo de 24 GiB, 32K entre 24–48 GiB, 256K acima) pode ficar abaixo da capacidade máxima do modelo — defina num_ctx explicitamente para que a janela maior seja realmente usada.',
           },
           {
             q: 'Por que o contexto longo usa tanta VRAM?',
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama contexto 128K 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.1 8B y Qwen3-30B-A3B admiten 128K de contexto o más en Ollama; Qwen3-30B-A3B llega a 256K. El contexto completo aumenta mucho la VRAM. 2026.',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Llama 3.1 8B: contexto de 128K, ~16 GB de VRAM con contexto completo',
           'Qwen3-30B-A3B: contexto de 256K, 24+ GB de VRAM con contexto completo',
-          'Establece --num-ctx 4096 para uso normal y ahorra VRAM',
+          'Establece num_ctx 4096 para uso normal y ahorra VRAM',
         ],
         updatedDate: '2026-09',
       },
@@ -597,7 +597,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'La mayoría de los modelos 7B de Ollama anuncian contexto de 128K pero su calidad se degrada por encima de los 32K tokens',
           'Llama 3.1 8B y Qwen3-30B-A3B son los dos modelos que ofrecen de forma fiable 128K+ de contexto en Ollama',
           'Una ventana de contexto de 128K puede casi triplicar el uso de VRAM — un modelo 7B Q4 necesita ~15 GB con 128K frente a ~5,5 GB con el valor predeterminado',
-          'Establece <code>--num-ctx 4096</code> para tareas cotidianas; amplía el contexto solo cuando lo necesites',
+          'Establece <code>num_ctx 4096</code> para tareas cotidianas; amplía el contexto solo cuando lo necesites',
         ],
       },
       body1: {
@@ -617,7 +617,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'Ampliar la ventana de contexto aumenta el uso de VRAM de forma significativa. <strong>La KV-cache, que almacena el estado de atención para todos los tokens en contexto, puede añadir tanta VRAM como los propios pesos del modelo con contexto de 128K.</strong>',
           'La tabla a continuación muestra cómo escala la VRAM de la KV-cache para un modelo 7B en Q4_K_M. Estas cifras asumen modelos que utilizan grouped query attention (GQA) — los modelos sin GQA usan significativamente más KV-cache.',
-          'Para ahorrar VRAM en tareas cotidianas, establece <code>--num-ctx 4096</code> al ejecutar Ollama. Solo amplía a 32K o 128K cuando tu tarea específica lo requiera. Para la guía completa sobre LLM locales de contexto largo, incluyendo la selección de modelos y la división de RAM, consulta la <a href="/es/local-llms/long-context-local-llms" class="text-primary hover:underline">guía de LLM locales de contexto largo</a>.',
+          'Para ahorrar VRAM en tareas cotidianas, escribe <code>/set parameter num_ctx 4096</code> en una sesión de <code>ollama run</code> (o inicia el servidor con <code>OLLAMA_CONTEXT_LENGTH=4096 ollama serve</code>). Solo amplía a 32K o 128K cuando tu tarea específica lo requiera. Para la guía completa sobre LLM locales de contexto largo, incluyendo la selección de modelos y la división de RAM, consulta la <a href="/es/local-llms/long-context-local-llms" class="text-primary hover:underline">guía de LLM locales de contexto largo</a>.',
         ],
         columns: ['Longitud de contexto', 'KV-Cache (7B)', 'VRAM total (7B Q4)'],
         rows: [
@@ -633,7 +633,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Cómo activo el contexto de 128K en Ollama?',
-            a: 'Añade <code>--num-ctx 131072</code> a tu comando de ejecución: <code>ollama run llama3.1:8b --num-ctx 131072</code>. Sin esta opción, la especificación Modelfile de Ollama usa por defecto 2048 tokens, e incluso el valor predeterminado escalonado por VRAM (4K por debajo de 24 GiB, 32K entre 24 y 48 GiB, 256K por encima) puede quedarse corto frente a la capacidad máxima del modelo — configura num_ctx explícitamente para garantizarla.',
+            a: 'En una sesión interactiva (<code>ollama run llama3.1:8b</code>), escribe <code>/set parameter num_ctx 131072</code>. Para hacerlo permanente, usa <code>PARAMETER num_ctx 131072</code> en un Modelfile, <code>options.num_ctx</code> en la API o inicia el servidor con <code>OLLAMA_CONTEXT_LENGTH=131072 ollama serve</code>. Sin un ajuste explícito, la especificación Modelfile de Ollama usa por defecto 2048 tokens, e incluso el valor predeterminado escalonado por VRAM (4K por debajo de 24 GiB, 32K entre 24 y 48 GiB, 256K por encima) puede quedarse corto frente a la capacidad máxima del modelo — configura num_ctx explícitamente para que se use realmente la ventana más grande.',
           },
           {
             q: '¿Por qué el contexto largo usa tanta VRAM?',
@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨Ollama⁩ سياق ⁨128K⁩: ⁨Llama 3.1 8B⁩ و⁨Qwen 3 2026⁩',
     metaDescription: '⁨Llama 3.1 8B⁩ يدعم سياق ⁨128K⁩ على ⁨Ollama⁩؛ ⁨Qwen3-30B-A3B⁩ يصل إلى ⁨256K⁩. نافذة ⁨128K⁩ تستهلك ⁨3⁩–⁨4⁩ أضعاف ⁨VRAM⁩ مقارنةً بالإعداد الافتراضي ⁨4K⁩.',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -676,7 +676,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Llama 3.1 8B: سياق 128K، حوالي 16 GB من VRAM مع السياق الكامل',
           'Qwen3-30B-A3B: سياق 256K، أكثر من 24 GB من VRAM مع السياق الكامل',
-          'اضبط --num-ctx 4096 للاستخدام العادي وحافظ على VRAM',
+          'اضبط num_ctx 4096 للاستخدام العادي وحافظ على VRAM',
         ],
         updatedDate: '2026-09',
       },
@@ -689,7 +689,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'معظم نماذج 7B في Ollama تُعلن عن سياق 128K لكن جودتها تتراجع فوق 32K رمز',
           'Llama 3.1 8B وQwen3-30B-A3B هما النموذجان اللذان يوفران بشكل موثوق سياقاً يفوق 128K على Ollama',
           'نافذة سياق 128K قد تضاعف استخدام VRAM تقريباً ثلاث مرات — نموذج 7B بـ Q4 يحتاج حوالي 15 GB مع 128K مقابل حوالي 5.5 GB بالقيمة الافتراضية',
-          'اضبط <code>--num-ctx 4096</code> للمهام اليومية؛ وسّع السياق فقط عند الحاجة',
+          'اضبط <code>num_ctx 4096</code> للمهام اليومية؛ وسّع السياق فقط عند الحاجة',
         ],
       },
       body1: {
@@ -709,7 +709,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           'توسيع نافذة السياق يزيد استخدام VRAM بشكل كبير. <strong>ذاكرة KV-cache، التي تخزن حالة الانتباه لجميع الرموز في السياق، يمكن أن تضيف قدراً من VRAM يعادل أوزان النموذج نفسها مع سياق 128K.</strong>',
           'يوضح الجدول أدناه كيف يتوسع VRAM لـ KV-cache لنموذج 7B بـ Q4_K_M. تفترض هذه الأرقام نماذج تستخدم grouped query attention (GQA) — النماذج بدون GQA تستخدم KV-cache أكبر بكثير.',
-          'لتوفير VRAM في المهام اليومية، اضبط <code>--num-ctx 4096</code> عند تشغيل Ollama. وسّع إلى 32K أو 128K فقط عند الحاجة لمهمة معينة. للدليل الكامل حول LLM محلية بسياق طويل، بما في ذلك اختيار النماذج وتقسيم RAM، راجع <a href="/ar/local-llms/long-context-local-llms" class="text-primary hover:underline">دليل LLM المحلية بسياق طويل</a>.',
+          'لتوفير VRAM في المهام اليومية، اكتب <code>/set parameter num_ctx 4096</code> داخل جلسة <code>ollama run</code> (أو شغّل الخادم بالأمر <code>OLLAMA_CONTEXT_LENGTH=4096 ollama serve</code>). وسّع إلى 32K أو 128K فقط عند الحاجة لمهمة معينة. للدليل الكامل حول LLM محلية بسياق طويل، بما في ذلك اختيار النماذج وتقسيم RAM، راجع <a href="/ar/local-llms/long-context-local-llms" class="text-primary hover:underline">دليل LLM المحلية بسياق طويل</a>.',
         ],
         columns: ['طول السياق', 'KV-Cache (7B)', 'إجمالي VRAM (7B Q4)'],
         rows: [
@@ -725,7 +725,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'كيف أفعّل سياق 128K في Ollama؟',
-            a: 'أضف <code>--num-ctx 131072</code> إلى أمر التشغيل: <code>ollama run llama3.1:8b --num-ctx 131072</code>. بدون هذا الخيار، تحدد مواصفة Modelfile في Ollama القيمة الافتراضية لـ num_ctx بـ 2048 رمزاً، وحتى القيمة الافتراضية المتدرجة حسب VRAM (4K لأقل من 24 GiB، 32K من 24-48 GiB، 256K وما فوق) قد لا تصل إلى الحد الأقصى لقدرة النموذج — اضبط num_ctx صراحةً لضمان ذلك.',
+            a: 'داخل جلسة تفاعلية (<code>ollama run llama3.1:8b</code>) اكتب <code>/set parameter num_ctx 131072</code>. وللتثبيت الدائم استخدم <code>PARAMETER num_ctx 131072</code> في Modelfile، أو <code>options.num_ctx</code> في الـ API، أو شغّل الخادم بالأمر <code>OLLAMA_CONTEXT_LENGTH=131072 ollama serve</code>. بدون ضبط صريح، تحدد مواصفة Modelfile في Ollama القيمة الافتراضية لـ num_ctx بـ 2048 رمزاً، وحتى القيمة الافتراضية المتدرجة حسب VRAM (4K لأقل من 24 GiB، 32K من 24-48 GiB، 256K وما فوق) قد لا تصل إلى الحد الأقصى لقدرة النموذج — اضبط num_ctx صراحةً حتى تُستخدم النافذة الأكبر فعليًا.',
           },
           {
             q: 'لماذا يستهلك السياق الطويل كثيراً من VRAM؟',
@@ -758,7 +758,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 128K 컨텍스트 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Llama 3.1 8B와 Qwen3-30B-A3B는 Ollama에서 128K 이상의 컨텍스트를 지원합니다. Qwen3-30B-A3B는 256K에 도달합니다. 전체 컨텍스트 실행 시 VRAM이 크게 증가합니다. 2026년 업데이트.',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-18',
     quickAnswerTop: {
@@ -768,7 +768,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'Llama 3.1 8B: 128K 컨텍스트, 전체 컨텍스트 시 ~16 GB VRAM',
           'Qwen3-30B-A3B: 256K 컨텍스트, 전체 컨텍스트 시 24+ GB VRAM',
-          '일반 사용 시 --num-ctx 4096으로 설정하여 VRAM을 절약하십시오',
+          '일반 사용 시 num_ctx 4096으로 설정하여 VRAM을 절약하십시오',
         ],
         updatedDate: '2026-09',
       },
@@ -781,7 +781,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '대부분의 Ollama 7B 모델은 128K 컨텍스트를 지원한다고 광고하지만 32K 토큰 이상에서는 품질이 저하됩니다',
           'Llama 3.1 8B와 Qwen3-30B-A3B는 Ollama에서 128K 이상의 컨텍스트를 안정적으로 제공하는 두 가지 모델입니다',
           '128K 컨텍스트 윈도우는 VRAM 사용량을 거의 3배까지 늘릴 수 있습니다 — 7B Q4 모델은 기본값 대비 128K에서 ~15 GB VRAM이 필요합니다',
-          '일상적인 작업에는 <code>--num-ctx 4096</code>으로 설정하고, 필요할 때만 컨텍스트를 늘리십시오',
+          '일상적인 작업에는 <code>num_ctx 4096</code>으로 설정하고, 필요할 때만 컨텍스트를 늘리십시오',
         ],
       },
       body1: {
@@ -801,7 +801,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '컨텍스트 윈도우를 늘리면 VRAM 사용량이 크게 증가합니다. <strong>컨텍스트의 모든 토큰에 대한 어텐션 상태를 저장하는 KV-cache는 128K 컨텍스트에서 모델 가중치 자체만큼의 VRAM을 추가할 수 있습니다.</strong>',
           '아래 표는 Q4_K_M의 7B 모델에서 KV-cache VRAM이 어떻게 확장되는지를 보여줍니다. 이 수치는 grouped query attention(GQA)을 사용하는 모델을 기준으로 합니다 — GQA가 없는 모델은 KV-cache를 훨씬 더 많이 사용합니다.',
-          '일상적인 작업에서 VRAM을 절약하려면 Ollama 실행 시 <code>--num-ctx 4096</code>으로 설정하십시오. 특정 작업에 필요한 경우에만 32K 또는 128K로 확장하십시오. 모델 선택과 RAM 분할을 포함한 긴 컨텍스트 로컬 LLM 전체 가이드는 <a href="/ko/local-llms/long-context-local-llms" class="text-primary hover:underline">긴 컨텍스트 로컬 LLM 가이드</a>를 참조하십시오.',
+          '일상적인 작업에서 VRAM을 절약하려면 <code>ollama run</code> 세션에서 <code>/set parameter num_ctx 4096</code>을 입력하십시오(또는 <code>OLLAMA_CONTEXT_LENGTH=4096 ollama serve</code>로 서버를 시작하십시오). 특정 작업에 필요한 경우에만 32K 또는 128K로 확장하십시오. 모델 선택과 RAM 분할을 포함한 긴 컨텍스트 로컬 LLM 전체 가이드는 <a href="/ko/local-llms/long-context-local-llms" class="text-primary hover:underline">긴 컨텍스트 로컬 LLM 가이드</a>를 참조하십시오.',
         ],
         columns: ['컨텍스트 길이', 'KV-Cache (7B)', '총 VRAM (7B Q4)'],
         rows: [
@@ -817,7 +817,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Ollama에서 128K 컨텍스트를 활성화하는 방법은 무엇입니까?',
-            a: '실행 명령에 <code>--num-ctx 131072</code>를 추가하십시오: <code>ollama run llama3.1:8b --num-ctx 131072</code>. 이 플래그 없이는 Ollama의 Modelfile 사양이 num_ctx를 기본값 2048로 설정하며, VRAM 등급별 런타임 기본값(24 GiB 미만은 4K, 24-48 GiB는 32K, 그 이상은 256K)도 모델의 최대 용량에 못 미칠 수 있습니다 — 이를 보장하려면 num_ctx를 명시적으로 설정하십시오.',
+            a: '대화형 세션(<code>ollama run llama3.1:8b</code>)에서 <code>/set parameter num_ctx 131072</code>를 입력하십시오. 영구적으로 적용하려면 Modelfile에 <code>PARAMETER num_ctx 131072</code>를 넣거나, API에서 <code>options.num_ctx</code>를 전달하거나, <code>OLLAMA_CONTEXT_LENGTH=131072 ollama serve</code>로 서버를 시작하십시오. 명시적으로 설정하지 않으면 Ollama의 Modelfile 사양이 num_ctx를 기본값 2048로 설정하며, VRAM 등급별 런타임 기본값(24 GiB 미만은 4K, 24-48 GiB는 32K, 그 이상은 256K)도 모델의 최대 용량에 못 미칠 수 있습니다 — 더 큰 창이 실제로 사용되도록 num_ctx를 명시적으로 설정하십시오.',
           },
           {
             q: '긴 컨텍스트는 왜 그렇게 많은 VRAM을 사용합니까?',

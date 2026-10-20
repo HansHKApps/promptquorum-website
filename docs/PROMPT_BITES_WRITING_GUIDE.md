@@ -518,8 +518,7 @@ When the data needs 4+ attributes per item, use vertical cards:
 Mobile viewport = ~42–48 chars at default font. Break long commands:
 
 ```bash
-ollama run llama3:8b-instruct-q4_K_M \
-  --num-ctx 8192
+ollama run llama3:8b-instruct-q4_K_M
 ```
 
 ### PB-CODE-02: Max 1 Code Block Per Article
@@ -573,7 +572,7 @@ Zero callout boxes is acceptable for short Prompt Bites (under 700 words).
 ### PB-CALLOUT-02: Use Only These Two Types
 
 - **⚠️ Warning** — One common pitfall (e.g., "Don't confuse Q4_0 with Q4_K_M")
-- **💡 Pro Tip** — One optimization (e.g., "Set --num-ctx 4096 to save 2 GB VRAM")
+- **💡 Pro Tip** — One optimization (e.g., "Set num_ctx 4096 to save 2 GB VRAM")
 
 Skip 🔍 Did You Know?, 📌 Key Point, 🛠️ Best Practice for Prompt Bites.
 

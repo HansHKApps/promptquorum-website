@@ -210,7 +210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Install Ollama', whyItMatters: 'Available for macOS, Linux (one-line install), and Windows. No GPU drivers to configure — Ollama detects CUDA, ROCm, and Metal automatically.' },
           { title: 'Pull the model with an explicit size tag', whyItMatters: 'Always specify the size: `qwen2.5:7b`, `qwen2.5:14b`, `qwen2.5:32b`, or `qwen3.6:27b` for the flagship. The untagged `qwen2.5` resolves to the 7B model but may change between Ollama releases.' },
           { title: 'Run the model', whyItMatters: '`ollama run qwen2.5:7b` opens an interactive chat. Type your prompt and press Enter. Close with `/bye`.' },
-          { title: 'Set context window if needed', whyItMatters: 'Qwen3 supports 32K context by default in Ollama. To use 128K context on a 7B model, start `ollama run qwen2.5:7b` and type `/set parameter num_ctx 131072` inside the session. This requires more VRAM — add 2–4 GB for long contexts.' },
+          { title: 'Set context window if needed', whyItMatters: 'Qwen3 supports 32K context by default in Ollama. To use 128K context on a 7B model, start `ollama run qwen2.5:7b`, then type `/set parameter num_ctx 131072` in the session. This requires more VRAM — add 2–4 GB for long contexts.' },
           { title: 'Test the API endpoint', whyItMatters: 'Ollama exposes an OpenAI-compatible API. Applications like PromptQuorum, Continue.dev, and Open WebUI connect directly to `http://localhost:11434/v1`.' },
         ],
         codeBlock: `# Install Ollama (Linux)
@@ -314,10 +314,10 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**Running Qwen3 locally keeps inference prompts on your own hardware, so no inference data is sent to a cloud API — which avoids that cross-border transfer for the inference layer.** Cloud-based LLM APIs require sending prompts to servers abroad, which can raise cross-border data transfer questions under China\'s Data Security Law (DSL) and related rules. Whether your overall setup complies depends on your data, your purposes and your own legal assessment; this is not legal advice.',
           'Qwen3 is trained by Alibaba\'s Qwen team on a predominantly Chinese and multilingual corpus. This makes it a strong candidate for Simplified Chinese, Traditional Chinese, Classical Chinese, and mixed-language (Chinese/English) documents; test it on your own material.',
-          '**For enterprise deployments in China**: air-gapped Qwen3 setups (no internet at inference time) are generally easier to align with CAC regulations on generative AI, but compliance depends on your use case and should be confirmed with legal counsel. The model runs entirely on local compute, and the regulator\'s focus, as we read it, is training data and output moderation rather than inference on offline hardware. See [running AI fully offline](/power-local-llm/local-ai-behind-firewall-offline-2026) for a complete air-gapped setup guide.',
+          '**For enterprise deployments in China**: Qwen3 setups with no internet connection at inference time are generally easier to align with CAC regulations on generative AI, but compliance depends on your use case and should be confirmed with legal counsel. The model runs entirely on local compute, and the regulator\'s focus, as we read it, is training data and output moderation rather than inference on offline hardware. See [running AI fully offline](/power-local-llm/local-ai-behind-firewall-offline-2026) for a complete offline setup guide.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3 can run fully offline after download, so inference data need not leave your machine, which removes cross-border transfer of inference data (compliance under China\'s Data Security Law still depends on your use case).' },
+          { type: 'one-sentence', text: 'Qwen3 can run without an internet connection after download, so inference data need not leave your machine, which can reduce cross-border transfer of inference data (compliance under China\'s Data Security Law still depends on your use case).' },
           { type: 'plain-terms', text: 'When you run Qwen3 locally, your prompts and documents stay on your computer unless you connect it to a cloud service. Inference needs no cloud API call; how the rest of your setup handles data is your responsibility.' },
         ],
       },
@@ -424,7 +424,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'What Are the Common Mistakes Running Qwen3 Locally?',
         items: [
           '**Using an untagged `ollama pull qwen2.5` command.** Without an explicit size tag (`:7b`, `:14b`, etc.), Ollama may resolve to a default size that changes between library updates. Always use explicit tags: `ollama pull qwen2.5:14b`.',
-          '**Ignoring the context window size.** Qwen3 supports 128K context. Ollama\'s Modelfile spec defaults `num_ctx` to 2048, but the runtime actually picks a VRAM-tiered default instead — 4K under 24 GiB, 32K from 24–48 GiB, 256K above 48 GiB. Don\'t rely on either default: set `num_ctx` explicitly, e.g. type `/set parameter num_ctx 8192` (or higher) inside the session, or set `num_ctx` in a Modelfile or the API options — otherwise the model silently truncates input.',
+          '**Ignoring the context window size.** Qwen3 supports 128K context. Ollama\'s Modelfile spec defaults `num_ctx` to 2048, but the runtime actually picks a VRAM-tiered default instead — 4K under 24 GiB, 32K from 24–48 GiB, 256K above 48 GiB. Don\'t rely on either default: set `num_ctx` explicitly, e.g. type `/set parameter num_ctx 8192` (or higher) in the `ollama run` session — otherwise the model silently truncates input.',
           '**Choosing Q2_K quantization for Chinese-language use.** At 2-bit precision, Qwen3\'s Chinese output becomes noticeably degraded — character substitutions increase. Use Q4_K_M as the minimum for any Chinese-language work.',
           '**Running the 32B model with too little VRAM.** If your GPU has 16 GB and the model needs 20.5 GB, Ollama offloads layers to system RAM. The model runs but at 3–5 tok/s — unusable for interactive use. Check the hardware table above and pick a model that fits your VRAM.',
           '**Using the wrong sub-family for coding.** Qwen3 8B (general) scores 57.3% on HumanEval. Qwen2.5-Coder 7B scores 75.6% on the same benchmark — a 32% relative improvement. If your use case is code, always use the Coder variant of the same size.',
@@ -656,7 +656,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { title: 'Instalar Ollama', whyItMatters: 'Disponible para macOS, Linux (instalación en una línea) y Windows. No hay que configurar drivers de GPU — Ollama detecta CUDA, ROCm y Metal automáticamente.' },
           { title: 'Descargar el modelo con una etiqueta de tamaño explícita', whyItMatters: 'Especifica siempre el tamaño: `qwen2.5:7b`, `qwen2.5:14b`, `qwen2.5:32b`. El `qwen2.5` sin etiquetar se resuelve al modelo 7B, pero puede cambiar entre versiones de Ollama.' },
           { title: 'Ejecutar el modelo', whyItMatters: '`ollama run qwen2.5:7b` abre un chat interactivo. Escribe tu prompt y pulsa Enter. Cierra con `/bye`.' },
-          { title: 'Ajustar la ventana de contexto si es necesario', whyItMatters: 'Qwen3 soporta por defecto un contexto de 32K en Ollama. Para usar un contexto de 128K en un modelo 7B, inicia `ollama run qwen2.5:7b` y escribe `/set parameter num_ctx 131072` dentro de la sesión. Esto requiere más VRAM.' },
+          { title: 'Ajustar la ventana de contexto si es necesario', whyItMatters: 'Qwen3 soporta por defecto un contexto de 32K en Ollama. Para usar un contexto de 128K en un modelo 7B, inicia `ollama run qwen2.5:7b` y escribe `/set parameter num_ctx 131072` en la sesión. Esto requiere más VRAM.' },
           { title: 'Probar el endpoint de la API', whyItMatters: 'Ollama expone una API compatible con OpenAI. Aplicaciones como PromptQuorum, Continue.dev y Open WebUI se conectan directamente a `http://localhost:11434/v1`.' },
         ],
         codeBlock: `# Instalar Ollama (Linux)
@@ -760,10 +760,10 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**Ejecutar Qwen3 en local mantiene los prompts de inferencia en tu propio hardware, de modo que no se envían datos de inferencia a una API en la nube y se evita esa transferencia internacional en la capa de inferencia.** Las API de LLM en la nube exigen enviar prompts a servidores externos, lo que puede activar los requisitos del RGPD y de las leyes latinoamericanas sobre tratamiento de datos y transferencias internacionales. Que tu configuración en conjunto cumpla la normativa depende de tus datos, tus finalidades y tu propia valoración jurídica; esto no es asesoramiento legal.',
           'Qwen3 fue entrenado por el equipo Qwen de Alibaba sobre un corpus predominantemente chino y multilingüe. Es un candidato sólido para documentos en chino simplificado, chino tradicional y textos mixtos (chino/español/inglés); pruébalo con tu propio material.',
-          '**Para despliegues en empresas hispanohablantes**: una configuración de Qwen3 sin conexión a internet durante la inferencia puede facilitar el cumplimiento de los marcos regulatorios de España (RGPD/AEPD), México (LFPDPPP), Argentina (Ley 25.326) y otros países hispanohablantes, pero el cumplimiento depende de tu caso de uso y conviene confirmarlo con asesoría jurídica. El modelo corre íntegramente en hardware local, por lo que ningún proveedor externo recibe los datos de entrada o salida de la inferencia. Consulta [ejecutar IA completamente sin conexión](/es/power-local-llm/local-ai-behind-firewall-offline-2026) para una guía completa de configuración aislada.',
+          '**Para despliegues en empresas hispanohablantes**: una configuración de Qwen3 sin conexión a internet durante la inferencia puede facilitar el cumplimiento de los marcos regulatorios de España (RGPD/AEPD), México (LFPDPPP), Argentina (Ley 25.326) y otros países hispanohablantes, pero el cumplimiento depende de tu caso de uso y conviene confirmarlo con asesoría jurídica. El modelo corre íntegramente en hardware local, por lo que, salvo que actives servicios en la nube u otras herramientas conectadas, ningún proveedor externo recibe los datos de entrada o salida de la inferencia. Consulta [ejecutar IA completamente sin conexión](/es/power-local-llm/local-ai-behind-firewall-offline-2026) para una guía completa de configuración aislada.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3 puede funcionar completamente sin conexión después de la descarga, por lo que los datos de inferencia no tienen que salir de tu máquina, lo que reduce el riesgo de transferencia transfronteriza de datos bajo el RGPD y las leyes latinoamericanas (el cumplimiento sigue dependiendo de tu caso de uso).' },
+          { type: 'one-sentence', text: 'Qwen3 puede funcionar sin conexión a internet después de la descarga, por lo que los datos de inferencia no tienen que salir de tu máquina, lo que reduce el riesgo de transferencia transfronteriza de datos bajo el RGPD y las leyes latinoamericanas (el cumplimiento sigue dependiendo de tu caso de uso).' },
           { type: 'plain-terms', text: 'Cuando ejecutas Qwen3 en local, tus prompts y documentos permanecen en tu ordenador salvo que lo conectes a un servicio en la nube. La inferencia no necesita llamar a ninguna API en la nube; cómo trate los datos el resto de tu configuración es responsabilidad tuya.' },
         ],
       },
@@ -870,7 +870,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Errores frecuentes al ejecutar Qwen3 en local',
         items: [
           '**Usar el comando `ollama pull qwen2.5` sin etiqueta de tamaño.** Sin una etiqueta de tamaño explícita (`:7b`, `:14b`, etc.), Ollama puede resolver al tamaño predeterminado, que puede cambiar entre actualizaciones de la biblioteca. Usa siempre etiquetas explícitas: `ollama pull qwen2.5:14b`.',
-          '**Ignorar el tamaño de la ventana de contexto.** Qwen3 soporta un contexto de 128K. La especificación del Modelfile de Ollama establece `num_ctx` en 2048 por defecto, pero en tiempo de ejecución se aplica un valor predeterminado escalonado según la VRAM: 4K por debajo de 24 GiB, 32K entre 24 y 48 GiB, y 256K por encima de 48 GiB. No confíes en ninguno de los dos valores predeterminados: configura `num_ctx` explícitamente, por ejemplo escribiendo `/set parameter num_ctx 8192` (o más) dentro de la sesión, o fijando `num_ctx` en un Modelfile o en las opciones de la API — de lo contrario el modelo trunca la entrada en silencio.',
+          '**Ignorar el tamaño de la ventana de contexto.** Qwen3 soporta un contexto de 128K. La especificación del Modelfile de Ollama establece `num_ctx` en 2048 por defecto, pero en tiempo de ejecución se aplica un valor predeterminado escalonado según la VRAM: 4K por debajo de 24 GiB, 32K entre 24 y 48 GiB, y 256K por encima de 48 GiB. No confíes en ninguno de los dos valores predeterminados: configura `num_ctx` explícitamente, por ejemplo escribiendo `/set parameter num_ctx 8192` (o más) en la sesión de `ollama run` — de lo contrario el modelo trunca la entrada en silencio.',
           '**Elegir cuantización Q2_K para uso en chino.** A 2 bits de precisión, la salida en chino de Qwen3 se degrada notablemente. Usa Q4_K_M como mínimo para cualquier trabajo en chino.',
           '**Ejecutar el modelo 32B con poca VRAM.** Si la GPU tiene 16 GB y el modelo necesita 20,5 GB, Ollama descarga capas a la RAM del sistema. El modelo funciona pero a 3–5 tok/s — inutilizable para uso interactivo. Consulta la tabla de hardware y elige un modelo que quepa en tu VRAM.',
           '**Usar la subfamilia incorrecta para programación.** Qwen3 8B (uso general) puntúa 57,3 % en HumanEval. Qwen2.5-Coder 7B puntúa 75,6 % en el mismo benchmark — una mejora relativa del 32 %. Si tu caso de uso es código, usa siempre la variante Coder del mismo tamaño.',
@@ -1150,10 +1150,10 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**تشغيل Qwen3 محليًا يُبقي أوامر الاستدلال على جهازك، فلا تُرسل بيانات الاستدلال إلى واجهة API سحابية، وبذلك يُتجنَّب هذا النقل الدولي في طبقة الاستدلال.** تتطلب واجهات API لنماذج LLM السحابية إرسال الأوامر إلى خوادم خارجية، مما قد يُفعّل متطلبات GDPR وقوانين حماية البيانات في الخليج بشأن معالجة البيانات والنقل الدولي. ويعتمد امتثال إعدادك ككل على بياناتك وأغراضك وتقييمك القانوني؛ وهذا ليس استشارة قانونية.',
           'دُرّب Qwen3 على يد فريق Qwen التابع لـ Alibaba على مجموعة نصية صينية ومتعددة اللغات في الغالب. وهو مرشح قوي للمستندات بالصينية المبسّطة والتقليدية والنصوص المختلطة (صينية/عربية/إنجليزية)؛ جرّبه على موادك الخاصة.',
-          '**لعمليات النشر في الشركات الناطقة بالعربية**: إعداد Qwen3 دون اتصال بالإنترنت أثناء الاستدلال يسهّل الالتزام بالأطر التنظيمية في السعودية (PDPL) والإمارات (قانون حماية البيانات) ودول الخليج الأخرى، لكن الامتثال يعتمد على حالة الاستخدام ويُنصح بتأكيده مع مستشار قانوني. يعمل النموذج بالكامل على أجهزة محلية — لا يصل أي طرف ثالث إلى بيانات الإدخال أو الإخراج. كما تتوفر بدائل عربية سيادية مثل Jais وALLaM للمؤسسات التي تفضّل نماذج عربية المنشأ. راجع [تشغيل الذكاء الاصطناعي دون اتصال بالكامل](/ar/power-local-llm/local-ai-behind-firewall-offline-2026) للحصول على دليل كامل للإعداد المعزول.',
+          '**لعمليات النشر في الشركات الناطقة بالعربية**: إعداد Qwen3 دون اتصال بالإنترنت أثناء الاستدلال يسهّل الالتزام بالأطر التنظيمية في السعودية (PDPL) والإمارات (قانون حماية البيانات) ودول الخليج الأخرى، لكن الامتثال يعتمد على حالة الاستخدام ويُنصح بتأكيده مع مستشار قانوني. يعمل النموذج بالكامل على أجهزة محلية — ولا يصل أي طرف ثالث إلى بيانات الإدخال أو الإخراج ما لم تفعّل خدمات سحابية أو أدوات متصلة. كما تتوفر بدائل عربية سيادية مثل Jais وALLaM للمؤسسات التي تفضّل نماذج عربية المنشأ. راجع [تشغيل الذكاء الاصطناعي دون اتصال بالكامل](/ar/power-local-llm/local-ai-behind-firewall-offline-2026) للحصول على دليل كامل للإعداد المعزول.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'يمكن تشغيل Qwen3 دون اتصال بالكامل بعد التنزيل، فلا حاجة لأن تغادر بيانات الاستدلال جهازك، مما يقلّل مخاطر نقل البيانات عبر الحدود بموجب GDPR وقوانين الخليج (ويظل الامتثال معتمدًا على حالة استخدامك).' },
+          { type: 'one-sentence', text: 'يمكن تشغيل Qwen3 دون اتصال بالإنترنت بعد التنزيل، فلا حاجة لأن تغادر بيانات الاستدلال جهازك، مما يقلّل مخاطر نقل البيانات عبر الحدود بموجب GDPR وقوانين الخليج (ويظل الامتثال معتمدًا على حالة استخدامك).' },
           { type: 'plain-terms', text: 'عندما تشغّل Qwen3 محليًا، تبقى أوامرك ومستنداتك على حاسوبك ما لم تربطه بخدمة سحابية. لا يحتاج الاستدلال إلى استدعاء API سحابي؛ أما كيفية تعامل بقية إعدادك مع البيانات فمسؤوليتك.' },
         ],
       },
@@ -1260,7 +1260,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'الأخطاء الشائعة عند تشغيل Qwen3 محليًا',
         items: [
           '**استخدام الأمر `ollama pull qwen2.5` دون وسم حجم.** بدون وسم حجم صريح (`:7b`، `:14b`، إلخ)، قد يُحل Ollama إلى الحجم الافتراضي، الذي قد يتغير بين تحديثات المكتبة. استخدم دائمًا وسومًا صريحة: `ollama pull qwen2.5:14b`.',
-          '**تجاهل حجم نافذة السياق.** يدعم Qwen3 سياق 128K. تحدد مواصفات Modelfile في Ollama القيمة الافتراضية لـ `num_ctx` بـ 2048، لكن وقت التشغيل الفعلي يختار قيمة افتراضية متدرجة حسب VRAM: 4K أقل من 24 GiB، و32K بين 24 و48 GiB، و256K فوق 48 GiB. لا تعتمد على أي من القيمتين الافتراضيتين: اضبط `num_ctx` صراحةً، مثلاً بكتابة `/set parameter num_ctx 8192` (أو أكثر) داخل الجلسة، أو بتعيين `num_ctx` في Modelfile أو في خيارات API — وإلا يقتطع النموذج الإدخال بصمت.',
+          '**تجاهل حجم نافذة السياق.** يدعم Qwen3 سياق 128K. تحدد مواصفات Modelfile في Ollama القيمة الافتراضية لـ `num_ctx` بـ 2048، لكن وقت التشغيل الفعلي يختار قيمة افتراضية متدرجة حسب VRAM: 4K أقل من 24 GiB، و32K بين 24 و48 GiB، و256K فوق 48 GiB. لا تعتمد على أي من القيمتين الافتراضيتين: اضبط `num_ctx` صراحةً، مثلاً بكتابة `/set parameter num_ctx 8192` (أو أكثر) داخل جلسة `ollama run` — وإلا يقتطع النموذج الإدخال بصمت.',
           '**اختيار تكميم Q2_K للاستخدام بالصينية.** بدقة 2 بت، تتدهور مخرجات Qwen3 بالصينية بشكل ملحوظ. استخدم Q4_K_M كحد أدنى لأي عمل بالصينية.',
           '**تشغيل نموذج 32B بـ VRAM قليل.** إذا كانت بطاقة الرسوم تملك 16 GB والنموذج يحتاج إلى 20.5 GB، يفرّغ Ollama الطبقات إلى RAM النظام. يعمل النموذج لكن بـ 3–5 token/ثانية — غير قابل للاستخدام التفاعلي. راجع جدول الأجهزة واختر نموذجًا يتسع في VRAM لديك.',
           '**استخدام العائلة الفرعية الخاطئة للبرمجة.** يسجّل Qwen3 8B (استخدام عام) 57.3% في HumanEval. ويسجّل Qwen2.5-Coder 7B نسبة 75.6% في المعيار نفسه — تحسّن نسبي بنسبة 32%. إذا كانت حالة استخدامك هي الكود، استخدم دائمًا متغير Coder بالحجم نفسه.',
@@ -1436,7 +1436,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { title: 'Instalar o Ollama', whyItMatters: 'Disponível para macOS, Linux (instalação em uma linha) e Windows. Não é necessário configurar drivers de GPU — o Ollama detecta CUDA, ROCm e Metal automaticamente.' },
           { title: 'Baixar o modelo com uma tag de tamanho explícita', whyItMatters: 'Sempre especifique o tamanho: `qwen2.5:7b`, `qwen2.5:14b`, `qwen2.5:32b`. O `qwen2.5` sem tag resolve para o modelo 7B, mas pode mudar entre versões do Ollama.' },
           { title: 'Executar o modelo', whyItMatters: '`ollama run qwen2.5:7b` abre um chat interativo. Digite seu prompt e pressione Enter. Feche com `/bye`.' },
-          { title: 'Ajustar a janela de contexto se necessário', whyItMatters: 'O Qwen3 suporta por padrão um contexto de 32K no Ollama. Para usar um contexto de 128K em um modelo 7B, inicie `ollama run qwen2.5:7b` e digite `/set parameter num_ctx 131072` dentro da sessão. Isso requer mais VRAM.' },
+          { title: 'Ajustar a janela de contexto se necessário', whyItMatters: 'O Qwen3 suporta por padrão um contexto de 32K no Ollama. Para usar um contexto de 128K em um modelo 7B, inicie `ollama run qwen2.5:7b` e digite `/set parameter num_ctx 131072` na sessão. Isso requer mais VRAM.' },
           { title: 'Testar o endpoint da API', whyItMatters: 'O Ollama expõe uma API compatível com OpenAI. Aplicativos como PromptQuorum, Continue.dev e Open WebUI se conectam diretamente a `http://localhost:11434/v1`.' },
         ],
         codeBlock: `# Instalar o Ollama (Linux)
@@ -1539,10 +1539,10 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**Executar o Qwen3 localmente mantém os prompts de inferência no seu próprio hardware, de modo que nenhum dado de inferência é enviado a uma API na nuvem e essa transferência internacional é evitada na camada de inferência.** APIs de LLM na nuvem exigem enviar prompts para servidores externos, o que pode acionar os requisitos da LGPD e de outras leis de proteção de dados sobre tratamento e transferências internacionais. Se a sua configuração como um todo está em conformidade depende dos seus dados, das suas finalidades e da sua própria avaliação jurídica; isto não é aconselhamento jurídico.',
           'O Qwen3 foi treinado pela equipe Qwen da Alibaba em um corpus predominantemente chinês e multilíngue. É um candidato sólido para documentos em chinês simplificado, chinês tradicional e textos mistos; teste com o seu próprio material.',
-          '**Para implantações em empresas brasileiras**: uma configuração do Qwen3 sem conexão à internet durante a inferência pode facilitar a conformidade com a Lei Geral de Proteção de Dados (LGPD) e as diretrizes da ANPD, mas a conformidade depende do seu caso de uso e deve ser confirmada com assessoria jurídica. O modelo roda inteiramente em hardware local, de modo que nenhum fornecedor externo recebe os dados de entrada ou saída da inferência.',
+          '**Para implantações em empresas brasileiras**: uma configuração do Qwen3 sem conexão à internet durante a inferência pode facilitar a conformidade com a Lei Geral de Proteção de Dados (LGPD) e as diretrizes da ANPD, mas a conformidade depende do seu caso de uso e deve ser confirmada com assessoria jurídica. O modelo roda inteiramente em hardware local, de modo que, a menos que você ative serviços em nuvem ou outras ferramentas conectadas, nenhum fornecedor externo recebe os dados de entrada ou saída da inferência.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'O Qwen3 pode funcionar completamente offline após o download, de modo que os dados de inferência não precisam sair da sua máquina, o que reduz o risco de transferência transfronteiriça de dados sob a LGPD e as regulamentações da ANPD (a conformidade continua dependendo do seu caso de uso).' },
+          { type: 'one-sentence', text: 'O Qwen3 pode funcionar sem conexão à internet após o download, de modo que os dados de inferência não precisam sair da sua máquina, o que reduz o risco de transferência transfronteiriça de dados sob a LGPD e as regulamentações da ANPD (a conformidade continua dependendo do seu caso de uso).' },
           { type: 'plain-terms', text: 'Quando você executa o Qwen3 localmente, seus prompts e documentos permanecem no seu computador, a menos que você o conecte a um serviço na nuvem. A inferência não precisa chamar nenhuma API na nuvem; como o restante da sua configuração trata os dados é responsabilidade sua.' },
         ],
       },
@@ -1649,7 +1649,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Erros frequentes ao executar o Qwen3 localmente',
         items: [
           '**Usar o comando `ollama pull qwen2.5` sem tag de tamanho.** Sem uma tag de tamanho explícita (`:7b`, `:14b`, etc.), o Ollama pode resolver para o tamanho padrão, que pode mudar entre atualizações da biblioteca. Sempre use tags explícitas: `ollama pull qwen2.5:14b`.',
-          '**Ignorar o tamanho da janela de contexto.** O Qwen3 suporta um contexto de 128K. A especificação do Modelfile do Ollama define `num_ctx` como 2048 por padrão, mas o runtime na verdade aplica um padrão escalonado por VRAM: 4K abaixo de 24 GiB, 32K entre 24 e 48 GiB, 256K acima de 48 GiB. Não confie em nenhum dos dois padrões: defina `num_ctx` explicitamente, por exemplo digitando `/set parameter num_ctx 8192` (ou mais) dentro da sessão, ou definindo `num_ctx` em um Modelfile ou nas opções da API — caso contrário o modelo trunca a entrada silenciosamente.',
+          '**Ignorar o tamanho da janela de contexto.** O Qwen3 suporta um contexto de 128K. A especificação do Modelfile do Ollama define `num_ctx` como 2048 por padrão, mas o runtime na verdade aplica um padrão escalonado por VRAM: 4K abaixo de 24 GiB, 32K entre 24 e 48 GiB, 256K acima de 48 GiB. Não confie em nenhum dos dois padrões: defina `num_ctx` explicitamente, por exemplo digitando `/set parameter num_ctx 8192` (ou mais) na sessão `ollama run` — caso contrário o modelo trunca a entrada silenciosamente.',
           '**Escolher quantização Q2_K para uso em chinês.** A 2 bits de precisão, a saída em chinês do Qwen3 se degrada notavelmente. Use Q4_K_M no mínimo para qualquer trabalho em chinês.',
           '**Executar o modelo 32B com pouca VRAM.** Se a GPU tiver 16 GB e o modelo precisar de 20,5 GB, o Ollama descarrega camadas para a RAM do sistema. O modelo funciona mas a 3–5 tok/s — inutilizável para uso interativo.',
           '**Usar a subfamília errada para programação.** O Qwen3 8B (uso geral) pontua 57,3% no HumanEval. O Qwen2.5-Coder 7B pontua 75,6% — uma melhoria relativa de 32%. Para código, sempre use a variante Coder do mesmo tamanho.',
@@ -1998,10 +1998,10 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**Déployer Qwen3 en local garde les prompts d\'inférence sur votre propre matériel : aucune donnée d\'inférence n\'est envoyée à une API cloud, ce qui évite ce transfert pour la couche d\'inférence.** Les API LLM cloud exigent l\'envoi de prompts vers des serveurs externes, ce qui peut déclencher l\'article 28 du RGPD (sous-traitant) et potentiellement les articles 44 et suivants (transferts hors UE). La conformité de l\'ensemble de votre dispositif dépend de vos données, de vos finalités et de votre propre analyse juridique ; ceci ne constitue pas un conseil juridique.',
           'Qwen3 a été entraîné par l\'équipe Qwen d\'Alibaba sur un corpus principalement chinois et multilingue. C\'est un candidat solide pour le chinois simplifié, le traditionnel et les documents mixtes chinois/anglais/français ; testez-le sur vos propres documents.',
-          '**Pour les déploiements professionnels** : pour les données personnelles sensibles dans les secteurs réglementés (médical, juridique, financier), le traitement local peut réduire l\'exposition aux transferts de données, mais la conformité dépend de votre cas d\'usage et doit être confirmée avec un conseil juridique. Un déploiement Qwen3 sans connexion internet pendant l\'inférence n\'envoie aucune donnée d\'inférence à des tiers. Guide complet pour les setups hors ligne : [IA locale entièrement hors ligne](/fr/power-local-llm/local-ai-behind-firewall-offline-2026).',
+          '**Pour les déploiements professionnels** : pour les données personnelles sensibles dans les secteurs réglementés (médical, juridique, financier), le traitement local peut réduire l\'exposition aux transferts de données, mais la conformité dépend de votre cas d\'usage et doit être confirmée avec un conseil juridique. Un déploiement Qwen3 sans connexion internet pendant l\'inférence n\'envoie en principe aucune donnée d\'inférence à des tiers, tant que vous n\'activez pas de services cloud ou d\'outils connectés. Guide complet pour les setups hors ligne : [IA locale entièrement hors ligne](/fr/power-local-llm/local-ai-behind-firewall-offline-2026).',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3 peut fonctionner entièrement hors ligne après téléchargement : les données d\'inférence n\'ont pas à quitter votre appareil, ce qui réduit les risques de transfert transfrontalier sous le RGPD (la conformité dépend de votre cas d\'usage).' },
+          { type: 'one-sentence', text: 'Qwen3 peut fonctionner sans connexion internet après téléchargement : les données d\'inférence n\'ont pas à quitter votre appareil, ce qui réduit les risques de transfert transfrontalier sous le RGPD (la conformité dépend de votre cas d\'usage).' },
           { type: 'plain-terms', text: 'En mode local, vos prompts et documents restent sur votre ordinateur tant que vous ne le connectez pas à un service cloud. L\'inférence n\'exige aucun appel API cloud ; la façon dont le reste de votre dispositif traite les données relève de votre responsabilité.' },
         ],
       },
@@ -2108,7 +2108,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Erreurs courantes avec Qwen3 en local',
         items: [
           '**Utiliser `ollama pull qwen2.5` sans tag de taille.** Sans tag explicite (`:7b`, `:14b`, etc.), Ollama peut résoudre vers une taille par défaut qui change entre les mises à jour. Toujours utiliser des tags explicites.',
-          '**Ignorer la taille de la fenêtre de contexte.** Qwen3 supporte 128K de contexte. La spécification du Modelfile d\'Ollama fixe `num_ctx` à 2048 par défaut, mais le runtime applique en réalité une valeur par défaut échelonnée selon la VRAM : 4K en dessous de 24 Gio, 32K entre 24 et 48 Gio, 256K au-delà de 48 Gio. Ne comptez sur aucun des deux réglages par défaut : définissez `num_ctx` explicitement, par exemple en saisissant `/set parameter num_ctx 8192` (ou plus) dans la session, ou en définissant `num_ctx` dans un Modelfile ou dans les options de l\'API — sinon le modèle tronque silencieusement l\'entrée.',
+          '**Ignorer la taille de la fenêtre de contexte.** Qwen3 supporte 128K de contexte. La spécification du Modelfile d\'Ollama fixe `num_ctx` à 2048 par défaut, mais le runtime applique en réalité une valeur par défaut échelonnée selon la VRAM : 4K en dessous de 24 Gio, 32K entre 24 et 48 Gio, 256K au-delà de 48 Gio. Ne comptez sur aucun des deux réglages par défaut : définissez `num_ctx` explicitement, par exemple en saisissant `/set parameter num_ctx 8192` (ou plus) dans la session `ollama run` — sinon le modèle tronque silencieusement l\'entrée.',
           '**Choisir la quantification Q2_K pour du chinois.** À 2 bits, la sortie en langue chinoise de Qwen3 se dégrade notablement. Utiliser au minimum Q4_K_M pour tout travail en CJK.',
           '**Exécuter le modèle 32B avec trop peu de VRAM.** Si votre GPU a 16 Go et que le modèle en nécessite 20,5 Go, Ollama décharge des couches en RAM — le modèle tourne à 3–5 tokens/s, inutilisable en interactif.',
           '**Utiliser la mauvaise sous-famille pour le code.** Qwen3 8B (usage général) : 57,3 % sur HumanEval. Qwen2.5-Coder 7B : 75,6 % — soit +32 % de performance relative. Toujours utiliser la variante Coder pour le code.',
@@ -2212,7 +2212,7 @@ curl http://localhost:11434/v1/chat/completions \\
         { '@type': 'Question', name: 'Ist Qwen für chinesischsprachige Aufgaben geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 wurde auf einem umfangreichen chinesischen Korpus vortrainiert und unterstützt nativ Vereinfachtes Chinesisch, Traditionelles Chinesisch, Japanisch, Koreanisch, Arabisch und viele weitere Sprachen (siehe Modellkarte). Es ist ein starker Kandidat für lokale KI auf Chinesisch; testen Sie es mit Ihren eigenen Dokumenten.' } },
         { '@type': 'Question', name: 'Welche Quantisierung sollte ich für Qwen3 verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M ist die empfohlene Standardauswahl — es reduziert den VRAM um ~55 % gegenüber FP16 bei weniger als 1 % Qualitätsverlust. Q8_0 für nahezu FP16-Qualität bei ausreichend VRAM. Q2_K bei chinesischsprachigen Anwendungsfällen vermeiden.' } },
         { '@type': 'Question', name: 'Funktioniert Qwen2.5-VL für chinesisches Dokument-OCR?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Qwen2.5-VL 7B läuft über Ollama (`ollama pull qwen2.5vl:7b`, 6,0 GB Download), nimmt Text und Bilder entgegen und kann chinesischen, japanischen und koreanischen Text in gescannten Dokumenten lesen; testen Sie mit eigenen Scans, da die Genauigkeit von der Scanqualität abhängt. Das neuere Qwen3-VL gibt es als `qwen3-vl:8b` (6,1 GB).' } },
-        { '@type': 'Question', name: 'Muss ich bei der Verwendung von Qwen3 die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Beim lokalen Betrieb von Qwen3 verlassen keine Daten Ihren Server — das Modell verarbeitet Anfragen vollständig auf Ihrer Hardware. Damit ist für die Inferenz in der Regel kein Auftragsverarbeitungsvertrag (AVV) nach DSGVO Art. 28 nötig, sofern kein Drittanbieter Zugriff auf die Daten erhält; die DSGVO gilt für Ihre Verarbeitung aber weiterhin. Für Unternehmen, die das BSI-Grundschutz-Kompendium anwenden, kann die lokale Inferenz den IT-Grundschutz-Baustein OPS.2.2 unterstützen. Dies ist keine Rechtsberatung.' } },
+        { '@type': 'Question', name: 'Muss ich bei der Verwendung von Qwen3 die DSGVO beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Beim lokalen Betrieb von Qwen3 müssen Anfragedaten Ihren Server nicht verlassen — das Modell verarbeitet Anfragen auf Ihrer Hardware, solange Sie keine vernetzten Dienste aktivieren. Damit ist für die Inferenz in der Regel kein Auftragsverarbeitungsvertrag (AVV) nach DSGVO Art. 28 nötig, sofern kein Drittanbieter Zugriff auf die Daten erhält; die DSGVO gilt für Ihre Verarbeitung aber weiterhin. Für Unternehmen, die das BSI-Grundschutz-Kompendium anwenden, kann die lokale Inferenz den IT-Grundschutz-Baustein OPS.2.2 unterstützen. Dies ist keine Rechtsberatung.' } },
         { '@type': 'Question', name: 'Ist Qwen3 für den deutschen Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, insbesondere für mittelständische Unternehmen in DACH, die Datenschutz und Compliance priorisieren. Qwen3 14B oder 32B lässt sich auf einem lokalen Server betreiben, ohne Daten an externe Anbieter zu übermitteln. Damit erfüllt es die Anforderungen des BSI-Grundschutzes und eignet sich für Branchen mit erhöhtem Datenschutzbedarf wie Recht, Medizin und Finanzen.' } },
       ],
     },
@@ -2287,7 +2287,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { title: 'Ollama installieren', whyItMatters: 'Verfügbar für macOS, Linux (Ein-Zeilen-Installation) und Windows. Keine GPU-Treiber-Konfiguration erforderlich — Ollama erkennt CUDA, ROCm und Metal automatisch.' },
           { title: 'Modell mit explizitem Größen-Tag herunterladen', whyItMatters: 'Immer die Größe angeben: `qwen2.5:7b`, `qwen2.5:14b`, `qwen2.5:32b`. Das ungetaggte `qwen2.5` löst standardmäßig das 7B-Modell auf, kann sich aber zwischen Ollama-Releases ändern.' },
           { title: 'Modell ausführen', whyItMatters: '`ollama run qwen2.5:7b` öffnet einen interaktiven Chat. Eingabe tippen und Enter drücken. Beenden mit `/bye`.' },
-          { title: 'Kontextfenster bei Bedarf anpassen', whyItMatters: 'Qwen3 unterstützt standardmäßig 32K-Kontext in Ollama. Für 128K-Kontext bei einem 7B-Modell: `ollama run qwen2.5:7b` starten und in der Sitzung `/set parameter num_ctx 131072` eingeben. Dies benötigt mehr VRAM.' },
+          { title: 'Kontextfenster bei Bedarf anpassen', whyItMatters: 'Qwen3 unterstützt standardmäßig 32K-Kontext in Ollama. Für 128K-Kontext bei einem 7B-Modell: Starten Sie `ollama run qwen2.5:7b` und geben Sie in der Sitzung `/set parameter num_ctx 131072` ein. Dies benötigt mehr VRAM.' },
           { title: 'API-Endpunkt testen', whyItMatters: 'Ollama stellt eine OpenAI-kompatible API bereit. Anwendungen wie PromptQuorum, Continue.dev und Open WebUI verbinden sich direkt mit `http://localhost:11434/v1`.' },
         ],
         codeBlock: `# Ollama installieren (Linux)
@@ -2391,10 +2391,10 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**Der lokale Betrieb von Qwen3 bedeutet, dass die Prompts auf der eigenen Hardware bleiben — es gehen keine Inferenzdaten an eine Cloud-API, es entsteht kein Drittlandtransfer über eine Cloud-API; die DSGVO und das IT-Sicherheitsrecht gelten für Ihre Verarbeitung aber weiterhin.** Cloud-basierte LLM-APIs erfordern die Übermittlung von Prompts an externe Server im Ausland, was DSGVO Art. 28 (Auftragsverarbeitung) und ggf. Art. 44 ff. (Drittlandübermittlung) auslösen kann.',
           'Qwen3 wurde vom Qwen-Team bei Alibaba auf einem überwiegend chinesisch- und mehrsprachigen Korpus trainiert. Es ist ein starker Kandidat für Vereinfachtes Chinesisch, Traditionelles Chinesisch und gemischtsprachige Dokumente (Chinesisch/Englisch/Deutsch); testen Sie es mit Ihrem eigenen Material.',
-          '**Für Unternehmensdeployments im DACH-Raum**: Ein luftgespaltenes Qwen3-Setup (keine Internetverbindung während der Inferenz) vermeidet die Übermittlung von Inferenzdaten an externe Anbieter, was die DSGVO-Umsetzung erleichtert (keine Rechtsberatung). Das Modell läuft ausschließlich auf lokaler Hardware — kein Drittanbieter erhält Zugriff auf Eingabe- oder Ausgabedaten. Für Setups nach BSI-Grundschutz kann Baustein OPS.2.2 (Fremdsoftware) herangezogen werden; die Konformität ist stets im Einzelfall zu prüfen. Vollständige Anleitung für luftgespaltene Setups: [KI vollständig offline betreiben](/de/power-local-llm/local-ai-behind-firewall-offline-2026).',
+          '**Für Unternehmensdeployments im DACH-Raum**: Ein Qwen3-Setup ohne Internetverbindung während der Inferenz vermeidet in der Regel die Übermittlung von Inferenzdaten an externe Anbieter, was die DSGVO-Umsetzung erleichtert (keine Rechtsberatung). Das Modell läuft ausschließlich auf lokaler Hardware — kein Drittanbieter erhält Zugriff auf Eingabe- oder Ausgabedaten, solange Sie keine vernetzten Dienste aktivieren. Für Setups nach BSI-Grundschutz kann Baustein OPS.2.2 (Fremdsoftware) herangezogen werden; die Konformität ist stets im Einzelfall zu prüfen. Vollständige Anleitung für Setups ohne Internetverbindung: [KI vollständig offline betreiben](/de/power-local-llm/local-ai-behind-firewall-offline-2026).',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3 kann nach dem Download vollständig offline laufen — Inferenzdaten müssen Ihr Gerät nicht verlassen, wodurch das Risiko einer Drittlandübermittlung von Inferenzdaten sinkt (die Einhaltung der DSGVO hängt weiterhin von Ihrem Anwendungsfall ab).' },
+          { type: 'one-sentence', text: 'Qwen3 kann nach dem Download ohne Internetverbindung laufen — Inferenzdaten müssen Ihr Gerät nicht verlassen, wodurch das Risiko einer Drittlandübermittlung von Inferenzdaten sinkt (die Einhaltung der DSGVO hängt weiterhin von Ihrem Anwendungsfall ab).' },
           { type: 'plain-terms', text: 'Beim lokalen Betrieb von Qwen3 bleiben Ihre Prompts und Dokumente auf Ihrem Computer, solange Sie ihn nicht mit einem Cloud-Dienst verbinden. Die Inferenz braucht keinen Cloud-API-Aufruf; wie der Rest Ihres Setups mit Daten umgeht, liegt in Ihrer Verantwortung.' },
         ],
       },
@@ -2501,7 +2501,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Häufige Fehler beim lokalen Betrieb von Qwen3',
         items: [
           '**Ungetaggter `ollama pull qwen2.5`-Befehl verwenden.** Ohne expliziten Größen-Tag (`:7b`, `:14b` usw.) kann Ollama eine Standardgröße auflösen, die sich zwischen Library-Updates ändert. Immer explizite Tags verwenden: `ollama pull qwen2.5:14b`.',
-          '**Kontextfenstergröße ignorieren.** Qwen3 unterstützt 128K-Kontext. Die Modelfile-Spezifikation von Ollama setzt `num_ctx` standardmäßig auf 2048, doch die Laufzeitumgebung wählt tatsächlich einen VRAM-gestaffelten Standardwert: 4K unter 24 GiB, 32K zwischen 24 und 48 GiB, 256K über 48 GiB. Verlassen Sie sich auf keinen der beiden Standardwerte: Legen Sie `num_ctx` explizit fest, zum Beispiel mit `/set parameter num_ctx 8192` (oder höher) innerhalb der Sitzung oder über `num_ctx` in einem Modelfile bzw. in den API-Optionen — andernfalls kürzt das Modell die Eingabe stillschweigend.',
+          '**Kontextfenstergröße ignorieren.** Qwen3 unterstützt 128K-Kontext. Die Modelfile-Spezifikation von Ollama setzt `num_ctx` standardmäßig auf 2048, doch die Laufzeitumgebung wählt tatsächlich einen VRAM-gestaffelten Standardwert: 4K unter 24 GiB, 32K zwischen 24 und 48 GiB, 256K über 48 GiB. Verlassen Sie sich auf keinen der beiden Standardwerte: Legen Sie `num_ctx` explizit fest, zum Beispiel mit `/set parameter num_ctx 8192` (oder höher) in der `ollama run`-Sitzung — andernfalls kürzt das Modell die Eingabe stillschweigend.',
           '**Q2_K-Quantisierung für chinesischsprachige Nutzung wählen.** Bei 2-Bit-Präzision verschlechtert sich Qwen3\'s chinesische Ausgabe spürbar. Q4_K_M als Minimum für jede chinesischsprachige Arbeit verwenden.',
           '**32B-Modell mit zu wenig VRAM ausführen.** Wenn die GPU 16 GB hat und das Modell 20,5 GB benötigt, lagert Ollama Layer in den System-RAM aus. Das Modell läuft, aber mit 3–5 Tokens/Sek. — für interaktive Nutzung unbrauchbar.',
           '**Falsche Teilfamilie für Coding verwenden.** Qwen3 8B (allgemein) erreicht 57,3 % auf HumanEval. Qwen2.5-Coder 7B erreicht 75,6 % auf demselben Benchmark — eine 32 %ige relative Verbesserung. Für Coding immer die Coder-Variante gleicher Größe verwenden.',
@@ -2531,7 +2531,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { q: 'Ist Qwen für chinesischsprachige Aufgaben geeignet?', a: 'Ja. Qwen3 wurde auf einem umfangreichen chinesischen Korpus vortrainiert und unterstützt nativ Vereinfachtes Chinesisch, Traditionelles Chinesisch, Japanisch, Koreanisch und viele weitere Sprachen (siehe Modellkarte). Es ist ein starker Kandidat für lokale KI auf Chinesisch; testen Sie es mit Ihren eigenen Dokumenten.' },
           { q: 'Welche Quantisierung sollte ich für Qwen3 verwenden?', a: 'Q4_K_M ist die empfohlene Standardwahl — ~55 % VRAM-Reduktion bei weniger als 1 % Qualitätsverlust. Q8_0 für nahezu FP16-Qualität. Q2_K bei chinesischsprachigen Anwendungen vermeiden.' },
           { q: 'Funktioniert Qwen2.5-VL für chinesisches Dokument-OCR?', a: 'Ja — Qwen2.5-VL 7B läuft über Ollama (`ollama pull qwen2.5vl:7b`, 6,0 GB Download), nimmt Text und Bilder entgegen und liest CJK-Text in gescannten Dokumenten; testen Sie mit eigenen Scans. Das neuere Qwen3-VL ist `qwen3-vl:8b`.' },
-          { q: 'Muss ich bei der Verwendung von Qwen3 die DSGVO beachten?', a: 'Beim lokalen Betrieb verlassen keine Daten den eigenen Server — in der Regel kein AVV nach DSGVO Art. 28 nötig, sofern kein Drittanbieter Datenzugriff hat; die DSGVO gilt weiterhin. Kann den BSI-Baustein OPS.2.2 unterstützen.' },
+          { q: 'Muss ich bei der Verwendung von Qwen3 die DSGVO beachten?', a: 'Beim lokalen Betrieb müssen Daten den eigenen Server nicht verlassen — in der Regel kein AVV nach DSGVO Art. 28 nötig, sofern kein Drittanbieter Datenzugriff hat; die DSGVO gilt weiterhin. Kann den BSI-Baustein OPS.2.2 unterstützen.' },
           { q: 'Ist Qwen3 für den deutschen Mittelstand geeignet?', a: 'Ja. Qwen3 14B oder 32B lässt sich auf einem lokalen Server betreiben ohne externe Datenübermittlung — geeignet für datenschutzkritische Branchen wie Recht, Medizin und Finanzen im DACH-Raum.' },
         ],
       },
@@ -2763,7 +2763,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { title: 'Ollamaをインストール', whyItMatters: 'macOS、Linux（ワンライナーインストール）、Windowsで利用可能。GPUドライバーの設定は不要 — OllamaはCUDA、ROCm、Metalを自動検出します。' },
           { title: '明示的なサイズタグでモデルを取得', whyItMatters: '必ずサイズを指定してください：`qwen2.5:7b`、`qwen2.5:14b`、`qwen2.5:32b`。タグなしの`qwen2.5`はデフォルトで7Bに解決されますが、Ollamaのバージョン間で変わる可能性があります。' },
           { title: 'モデルを実行', whyItMatters: '`ollama run qwen2.5:7b`でインタラクティブチャットが開きます。プロンプトを入力してEnterキーを押します。終了は`/bye`。' },
-          { title: '必要に応じてコンテキストウィンドウを設定', whyItMatters: 'Qwen3はOllamaでデフォルト32Kコンテキストをサポートします。128Kコンテキストを使う場合：`ollama run qwen2.5:7b`を起動し、セッション内で`/set parameter num_ctx 131072`を入力します。追加VRAMが必要になります。' },
+          { title: '必要に応じてコンテキストウィンドウを設定', whyItMatters: 'Qwen3はOllamaでデフォルト32Kコンテキストをサポートします。128Kコンテキストを使う場合：`ollama run qwen2.5:7b`を起動し、セッション内で`/set parameter num_ctx 131072`と入力します。追加VRAMが必要になります。' },
           { title: 'APIエンドポイントをテスト', whyItMatters: 'OllamaはOpenAI互換APIを提供します。PromptQuorum、Continue.dev、Open WebUIなどのアプリが`http://localhost:11434/v1`に直接接続できます。' },
         ],
         codeBlock: `# Ollamaのインストール（Linux）
@@ -2870,7 +2870,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**アジア太平洋地域の規制環境** — 日本の個人情報保護法（改正法）では、個人データの安全管理措置として「技術的安全管理措置」が義務付けられています。ローカルLLMは、個人データをオンプレミスで処理することで、この要件に対応しやすい構成です。中国・韓国・シンガポール・オーストラリアでも同様に、機密データのローカル処理はクロスボーダーデータ転送リスクを低減します（適合性は用途によるため、専門家にご確認ください）。完全オフライン構成のガイドは[完全オフラインでAIを動かす](/ja/power-local-llm/local-ai-behind-firewall-offline-2026)をご覧ください。',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3はダウンロード後に完全オフラインで動作させることができ、推論データを社外に出さずに済むため、METIのAIガバナンスガイドラインへの対応を検討しやすくなります（適合性は用途によります）。' },
+          { type: 'one-sentence', text: 'Qwen3はダウンロード後にインターネット接続なしで動作させることができ、推論データを社外に出さずに済むため、METIのAIガバナンスガイドラインへの対応を検討しやすくなります（適合性は用途によります）。' },
           { type: 'plain-terms', text: 'ローカルで動かすと、クラウドサービスに接続しない限り、プロンプトや文書はコンピュータ上にとどまります。推論にクラウドAPI呼び出しは不要ですが、それ以外の構成がデータをどう扱うかは利用者の責任です。' },
         ],
       },
@@ -2977,7 +2977,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'よくあるミス',
         items: [
           '**タグなしで`ollama pull qwen2.5`を実行する。** 明示的なサイズタグ（`:7b`、`:14b`など）なしでは、OllamaはOllamaのアップデートで変わりうるデフォルトサイズに解決します。常に明示的なタグを使用：`ollama pull qwen2.5:14b`。',
-          '**コンテキストウィンドウサイズを無視する。** Qwen3は128Kコンテキストをサポートします。OllamaのModelfile仕様では`num_ctx`のデフォルトは2048ですが、実際のランタイムはVRAM容量に応じた段階的なデフォルト値を採用します（24GiB未満は4K、24〜48GiBは32K、48GiB超は256K）。どちらのデフォルトにも依存せず、`num_ctx`を明示的に設定してください。例えばセッション内で`/set parameter num_ctx 8192`（またはそれ以上）を入力するか、ModelfileまたはAPIオプションで`num_ctx`を指定します。設定しないと、モデルは入力を黙って切り詰めます。',
+          '**コンテキストウィンドウサイズを無視する。** Qwen3は128Kコンテキストをサポートします。OllamaのModelfile仕様では`num_ctx`のデフォルトは2048ですが、実際のランタイムはVRAM容量に応じた段階的なデフォルト値を採用します（24GiB未満は4K、24〜48GiBは32K、48GiB超は256K）。どちらのデフォルトにも依存せず、`num_ctx`を明示的に設定してください。例えば`ollama run`のセッション内で`/set parameter num_ctx 8192`（またはそれ以上）と入力します。設定しないと、モデルは入力を黙って切り詰めます。',
           '**中国語用途にQ2_K量子化を選ぶ。** 2ビット精度では、Qwen3の中国語出力品質が著しく低下します。中国語作業には最低でもQ4_K_Mを使用してください。',
           '**VRAMが不足した状態で32Bモデルを実行する。** GPUが16GBでモデルが20.5GB必要な場合、Ollamaはシステムメモリにレイヤーをオフロードします。3〜5トークン/秒でインタラクティブ使用には不向きです。',
           '**コーディングに間違ったサブファミリーを使う。** Qwen3 8B（汎用）はHumanEvalで57.3%。Qwen2.5-Coder 7Bは同ベンチマークで75.6% — 相対的に32%の改善。コーディングには必ず同サイズのCoder バリアントを使用してください。',
@@ -3228,7 +3228,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { title: '安装Ollama', whyItMatters: '支持macOS、Linux（一行安装命令）和Windows。无需配置GPU驱动——Ollama自动检测CUDA、ROCm和Metal。' },
           { title: '使用明确的尺寸标签拉取模型', whyItMatters: '始终指定尺寸：`qwen2.5:7b`、`qwen2.5:14b`、`qwen2.5:32b`。无标签的`qwen2.5`默认解析为7B，但可能随Ollama版本变化。' },
           { title: '运行模型', whyItMatters: '`ollama run qwen2.5:7b`打开交互式对话。输入提示词后按Enter。输入`/bye`退出。' },
-          { title: '按需设置上下文窗口', whyItMatters: 'Qwen3在Ollama中默认支持32K上下文。使用128K上下文：运行`ollama run qwen2.5:7b`，然后在会话中输入`/set parameter num_ctx 131072`，但需要更多显存。' },
+          { title: '按需设置上下文窗口', whyItMatters: 'Qwen3在Ollama中默认支持32K上下文。使用128K上下文：先运行`ollama run qwen2.5:7b`，再在会话中输入`/set parameter num_ctx 131072`，但需要更多显存。' },
           { title: '测试API端点', whyItMatters: 'Ollama提供OpenAI兼容API。PromptQuorum、Continue.dev和Open WebUI等应用可直接连接`http://localhost:11434/v1`。' },
         ],
         codeBlock: `# 安装Ollama（Linux）
@@ -3332,10 +3332,10 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**本地运行Qwen3可将推理提示词保留在自己的硬件上，不向云端API发送推理数据，从而在推理环节避免跨境传输。** 基于云端的LLM API需要将提示词发送至境外服务器，可能引发《数据安全法》（DSL）等规定下的数据出境问题。整体方案是否合规取决于您的数据、处理目的和自身的法律评估；本文不构成法律建议。',
           'Qwen3由阿里巴巴Qwen团队在大规模中文及多语言语料库上训练，是简体中文、繁体中文及中英混合文档本地部署的有力候选；请用您自己的资料测试。',
-          '**受监管行业（金融、医疗、法律）的企业部署方案**：完全离线的Qwen3部署（推理时无互联网连接）有助于满足合规要求，但是否符合国家互联网信息办公室（CAC）关于生成式AI服务的管理规定取决于具体用途，建议咨询法律专业人士。模型完全在本地算力上运行——在我们看来，监管关注点在于训练数据和输出内容审核，而非在离线硬件上进行的推理过程。**亚太地区数据跨境**：中国、韩国、新加坡、澳大利亚均已建立数据本地化框架，本地LLM推理可降低跨境传输风险。**金融/医疗/法律企业方案**：大型银行、医院、律所如需在内网处理敏感数据，搭配防火墙内Qwen3有助于满足内部AI合规要求。完整的离线部署指南请参阅[完全离线运行AI](/zh/power-local-llm/local-ai-behind-firewall-offline-2026)。',
+          '**受监管行业（金融、医疗、法律）的企业部署方案**：推理时无互联网连接的Qwen3部署可为合规评估提供支持，但是否符合国家互联网信息办公室（CAC）关于生成式AI服务的管理规定取决于具体用途，建议咨询法律专业人士。模型完全在本地算力上运行——在我们看来，监管关注点在于训练数据和输出内容审核，而非在离线硬件上进行的推理过程。**亚太地区数据跨境**：中国、韩国、新加坡、澳大利亚均已建立数据本地化框架，本地LLM推理可降低跨境传输风险。**金融/医疗/法律企业方案**：大型银行、医院、律所如需在内网处理敏感数据，搭配防火墙内Qwen3有助于满足内部AI合规要求。完整的离线部署指南请参阅[完全离线运行AI](/zh/power-local-llm/local-ai-behind-firewall-offline-2026)。',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3下载后可完全离线运行，推理数据无需离开本机，从而降低《数据安全法》下的跨境数据传输风险（是否合规仍取决于具体用途）。' },
+          { type: 'one-sentence', text: 'Qwen3下载后可在无互联网连接的情况下运行，推理数据无需离开本机，从而降低《数据安全法》下的跨境数据传输风险（是否合规仍取决于具体用途）。' },
           { type: 'plain-terms', text: '本地运行Qwen3时，只要不接入云服务，您的提示词和文档就留在自己的电脑上。推理不需要调用云API；其余环节如何处理数据，由您自行负责。' },
         ],
       },
@@ -3442,7 +3442,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: '常见错误',
         items: [
           '**使用无标签的`ollama pull qwen2.5`命令。** 没有明确的尺寸标签（`:7b`、`:14b`等），Ollama可能解析到随版本更新变化的默认尺寸。始终使用明确标签：`ollama pull qwen2.5:14b`。',
-          '**忽略上下文窗口大小。** Qwen3支持128K上下文。Ollama的Modelfile规范将`num_ctx`默认设为2048，但实际运行时会根据显存大小分级采用不同默认值：低于24 GiB为4K，24-48 GiB为32K，超过48 GiB为256K。不要依赖这两种默认值中的任何一个，应显式设置`num_ctx`，例如在会话中输入`/set parameter num_ctx 8192`（或更高），或在Modelfile或API选项中设置`num_ctx`——否则模型会静默截断输入。',
+          '**忽略上下文窗口大小。** Qwen3支持128K上下文。Ollama的Modelfile规范将`num_ctx`默认设为2048，但实际运行时会根据显存大小分级采用不同默认值：低于24 GiB为4K，24-48 GiB为32K，超过48 GiB为256K。不要依赖这两种默认值中的任何一个，应显式设置`num_ctx`，例如在`ollama run`会话中输入`/set parameter num_ctx 8192`（或更高）——否则模型会静默截断输入。',
           '**中文用途选择Q2_K量化。** 2位精度下，Qwen3的中文输出质量明显下降——出现字符替换问题。中文任务至少使用Q4_K_M。',
           '**显存不足时运行32B模型。** 若GPU只有16GB而模型需要20.5GB，Ollama会将层卸载到系统内存。模型可运行但速度仅3–5 token/秒，不适合交互使用。',
           '**代码任务使用错误的子系列。** Qwen3 8B（通用版）在HumanEval上得57.3%。Qwen2.5-Coder 7B得75.6%——相对提升32%。代码任务始终使用同等规格的Coder版本。',
@@ -3482,7 +3482,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { url: '/zh/local-llms/llm-quantization-explained', title: 'LLM量化解析', description: 'Q4_K_M、Q8_0和IQ4_XS的含义——对显存、速度和输出质量的影响。' },
           { url: '/zh/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'DeepSeek vs Qwen本地对比2026', description: '完整对比：DeepSeek-R1-Distill-Qwen-32B vs Qwen3 32B在代码、推理、中文和创意写作上的表现——含Mac vs NVIDIA详细分析。' },
           { url: '/zh/prompt-bites/best-qwen-model-for-coding', title: '最佳Qwen编码模型', description: 'Qwen2.5-Coder 7B vs 32B：本地自动补全与代码审查的选择指南。' },
-          { url: '/zh/power-local-llm/deepseek-offline-china-self-hosted-2026', title: '本地离线部署 DeepSeek：完全断网运行指南', description: '想用推理模型？了解如何在完全离线环境中本地部署 DeepSeek-R1 Distill，推理数据无需出境，有助于满足《数据安全法》合规要求。' },
+          { url: '/zh/power-local-llm/deepseek-offline-china-self-hosted-2026', title: '本地离线部署 DeepSeek：完全断网运行指南', description: '想用推理模型？了解如何在离线环境中本地部署 DeepSeek-R1 Distill，推理数据可不出境，可作为《数据安全法》合规评估的一部分（是否合规取决于具体用途）。' },
         ],
       },
     },
@@ -3685,7 +3685,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { title: 'Ollama 설치', whyItMatters: 'macOS, Linux(한 줄 설치), Windows에서 사용 가능합니다. GPU 드라이버를 별도로 설정할 필요가 없습니다 — Ollama가 CUDA, ROCm, Metal을 자동으로 감지합니다.' },
           { title: '명시적 크기 태그로 모델 Pull', whyItMatters: '항상 크기를 명시하십시오: `qwen2.5:7b`, `qwen2.5:14b`, `qwen2.5:32b`. 태그 없는 `qwen2.5`는 7B 모델로 해석되지만 Ollama 릴리즈 간에 변경될 수 있습니다.' },
           { title: '모델 실행', whyItMatters: '`ollama run qwen2.5:7b`를 실행하면 대화형 채팅이 시작됩니다. 프롬프트를 입력하고 Enter를 누르십시오. `/bye`로 종료합니다.' },
-          { title: '필요 시 컨텍스트 창 설정', whyItMatters: 'Qwen3는 Ollama에서 기본적으로 32K 컨텍스트를 지원합니다. 7B 모델에서 128K 컨텍스트를 사용하려면 `ollama run qwen2.5:7b`를 실행한 뒤 세션 안에서 `/set parameter num_ctx 131072`를 입력하십시오. 긴 컨텍스트에는 VRAM이 추가로 2–4 GB 필요합니다.' },
+          { title: '필요 시 컨텍스트 창 설정', whyItMatters: 'Qwen3는 Ollama에서 기본적으로 32K 컨텍스트를 지원합니다. 7B 모델에서 128K 컨텍스트를 사용하려면 `ollama run qwen2.5:7b`를 실행한 뒤 세션에서 `/set parameter num_ctx 131072`를 입력하십시오. 긴 컨텍스트에는 VRAM이 추가로 2–4 GB 필요합니다.' },
           { title: 'API 엔드포인트 테스트', whyItMatters: 'Ollama는 OpenAI 호환 API를 제공합니다. PromptQuorum, Continue.dev, Open WebUI 같은 애플리케이션이 `http://localhost:11434/v1`에 직접 연결됩니다.' },
         ],
         codeBlock: `# Install Ollama (Linux)
@@ -3789,10 +3789,10 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**Qwen3를 로컬에서 실행하면 추론용 프롬프트가 자신의 하드웨어에 머물러 클라우드 API로 추론 데이터가 전송되지 않으므로, 추론 단계에서는 해당 국경 간 전송을 피할 수 있습니다.** 클라우드 기반 LLM API는 프롬프트를 해외 서버로 전송해야 하며, 이는 중국 데이터 보안법(DSL) 등에 따른 국경 간 데이터 전송 문제를 일으킬 수 있습니다. 전체 구성이 규정을 준수하는지는 데이터, 목적, 그리고 자체 법률 검토에 달려 있으며, 이는 법률 자문이 아닙니다.',
           'Qwen3는 Alibaba의 Qwen 팀이 주로 중국어 및 다국어 코퍼스로 학습시킨 모델입니다. 이로 인해 간체 중국어, 번체 중국어, 고전 중국어, 혼합 언어(중국어/영어) 문서에 유력한 후보가 되지만, 직접 보유한 자료로 테스트하십시오.',
-          '**중국 내 엔터프라이즈 배포의 경우**: 에어갭(인터넷 차단) Qwen3 설정은 생성형 AI에 관한 CAC 규정을 충족하기 쉬운 구성이지만, 준수 여부는 사용 사례에 따라 다르므로 법률 전문가와 확인하십시오. 모델은 전적으로 로컬 컴퓨팅에서 실행됩니다 — 저희 판단으로는 규제 기관의 관심사는 학습 데이터와 출력 모더레이션이지, 오프라인 하드웨어에서의 추론이 아닙니다. 완전한 에어갭 설정 가이드는 [완전 오프라인 AI 실행](/ko/power-local-llm/local-ai-behind-firewall-offline-2026)을 참조하십시오.',
+          '**중국 내 엔터프라이즈 배포의 경우**: 추론 시 인터넷 연결이 없는 Qwen3 설정은 생성형 AI에 관한 CAC 규정을 충족하기 쉬운 구성일 수 있지만, 준수 여부는 사용 사례에 따라 다르므로 법률 전문가와 확인하십시오. 모델은 전적으로 로컬 컴퓨팅에서 실행됩니다 — 저희 판단으로는 규제 기관의 관심사는 학습 데이터와 출력 모더레이션이지, 오프라인 하드웨어에서의 추론이 아닙니다. 인터넷 차단 환경의 전체 설정 가이드는 [완전 오프라인 AI 실행](/ko/power-local-llm/local-ai-behind-firewall-offline-2026)을 참조하십시오.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3는 다운로드 후 완전히 오프라인으로 실행할 수 있어 추론 데이터가 기기를 떠날 필요가 없으며, 중국 데이터 보안법에 따른 국경 간 데이터 전송 위험을 줄여 줍니다(준수 여부는 여전히 사용 사례에 달려 있습니다).' },
+          { type: 'one-sentence', text: 'Qwen3는 다운로드 후 인터넷 연결 없이 실행할 수 있어 추론 데이터가 기기를 떠날 필요가 없으며, 중국 데이터 보안법에 따른 국경 간 데이터 전송 위험을 줄여 줍니다(준수 여부는 여전히 사용 사례에 달려 있습니다).' },
           { type: 'plain-terms', text: 'Qwen3를 로컬에서 실행하면 클라우드 서비스에 연결하지 않는 한 프롬프트와 문서가 컴퓨터에 머뭅니다. 추론에는 클라우드 API 호출이 필요 없으며, 나머지 구성이 데이터를 어떻게 다루는지는 사용자의 책임입니다.' },
         ],
       },
@@ -3899,7 +3899,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Qwen3 로컬 실행 시 흔한 실수',
         items: [
           '**태그 없는 `ollama pull qwen2.5` 명령어 사용.** 명시적 크기 태그(`:7b`, `:14b` 등) 없이는 Ollama가 라이브러리 업데이트 사이에 변경될 수 있는 기본 크기로 해석할 수 있습니다. 항상 명시적 태그를 사용하십시오: `ollama pull qwen2.5:14b`.',
-          '**컨텍스트 창 크기 무시.** Qwen3는 128K 컨텍스트를 지원합니다. Ollama의 Modelfile 사양은 `num_ctx` 기본값을 2048로 지정하지만, 실제 런타임은 VRAM 용량에 따라 단계별 기본값을 적용합니다(24 GiB 미만은 4K, 24~48 GiB는 32K, 48 GiB 초과는 256K). 두 기본값 중 어느 것에도 의존하지 말고 `num_ctx`를 명시적으로 설정하십시오. 예를 들어 세션 안에서 `/set parameter num_ctx 8192`(또는 더 높은 값)를 입력하거나 Modelfile 또는 API 옵션에서 `num_ctx`를 설정합니다 — 그렇지 않으면 모델이 자동으로 입력을 잘라냅니다.',
+          '**컨텍스트 창 크기 무시.** Qwen3는 128K 컨텍스트를 지원합니다. Ollama의 Modelfile 사양은 `num_ctx` 기본값을 2048로 지정하지만, 실제 런타임은 VRAM 용량에 따라 단계별 기본값을 적용합니다(24 GiB 미만은 4K, 24~48 GiB는 32K, 48 GiB 초과는 256K). 두 기본값 중 어느 것에도 의존하지 말고 `num_ctx`를 명시적으로 설정하십시오. 예를 들어 `ollama run` 세션에서 `/set parameter num_ctx 8192`(또는 더 높은 값)를 입력합니다 — 그렇지 않으면 모델이 자동으로 입력을 잘라냅니다.',
           '**중국어 용도에 Q2_K 양자화 선택.** 2비트 정밀도에서 Qwen3의 중국어 출력이 눈에 띄게 저하됩니다 — 문자 대체가 증가합니다. 중국어 작업에는 Q4_K_M을 최소값으로 사용하십시오.',
           '**VRAM이 부족한 상태에서 32B 모델 실행.** GPU에 16 GB가 있고 모델에 20.5 GB가 필요한 경우 Ollama가 레이어를 시스템 RAM으로 오프로드합니다. 모델은 실행되지만 초당 3–5 토큰으로 — 대화형 사용에는 적합하지 않습니다. 위의 하드웨어 표를 확인하고 VRAM에 맞는 모델을 선택하십시오.',
           '**코딩에 잘못된 하위 패밀리 사용.** Qwen3 8B(범용)는 HumanEval에서 57.3%를 기록합니다. Qwen2.5-Coder 7B는 같은 벤치마크에서 75.6%를 기록합니다 — 상대적으로 32% 향상입니다. 코딩이 목적이라면 항상 같은 크기의 Coder 변형을 사용하십시오.',

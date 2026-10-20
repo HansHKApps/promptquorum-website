@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     heroImage: '/images/best-ollama-models-rtx-3060-12gb-overview-hero-en.webp',
     title: 'Best Ollama Models for RTX 3060 12 GB?',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     seoTitle: 'Best Ollama Models for RTX 3060 12 GB 2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB: Qwen3 8B (6 GB VRAM, ~40 tok/s) for general tasks, Phi-4 Q4_K_M for reasoning, Mistral Nemo 12B for chat. All run at 30–40 tok/s. Quick answer from PromptQuorum.',
     publishDate: '2026-05-18',
@@ -122,7 +122,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Leave at least 1.5–2 GB of VRAM free at all times. Loading two models back-to-back without unloading the first triggers VRAM overflow and forces slow CPU offload. For the full GPU benchmark context, see the <a href="/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">best GPUs for local LLMs</a>. If your GPU has less than 12 GB, see the <a href="/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">best models for 6 GB VRAM</a>. To install all three top picks:',
         ],
         codeBlock: 'ollama pull qwen3:8b\nollama pull phi4\nollama pull mistral-nemo',
-        callouts: [{ type: 'tip', text: 'Each pull downloads 4–8 GB on first run. Subsequent runs start instantly from cache. Use <code>--num-ctx 4096</code> if you need a larger context window.' }],
+        callouts: [{ type: 'tip', text: 'Each pull downloads 4–8 GB on first run. Subsequent runs start instantly from cache. If you need a larger context window than the default, type <code>/set parameter num_ctx 8192</code> in an <code>ollama run</code> session.' }],
       },
       faq: {
         id: 'faq',
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Beste Ollama-Modelle für RTX 3060 12 GB 2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB: Qwen3 8B (6 GB VRAM, ~40 Tok/s) für Allzweck, Phi-4 Q4_K_M für Reasoning, Mistral Nemo 12B für Chat. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     sections: {
@@ -189,7 +189,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Halten Sie immer mindestens 1,5–2 GB VRAM frei. Das Laden zweier Modelle nacheinander ohne das erste zu entladen löst VRAM-Überlauf aus und erzwingt langsames CPU-Offload. Für den vollständigen GPU-Benchmark-Kontext, siehe <a href="/de/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">beste GPUs für lokale LLMs</a>. Wenn Ihre GPU weniger als 12 GB hat, siehe <a href="/de/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">beste Modelle für 6 GB VRAM</a>. So installieren Sie alle drei Top-Picks:',
         ],
         codeBlock: 'ollama pull qwen3:8b\nollama pull phi4\nollama pull mistral-nemo',
-        callouts: [{ type: 'tip', text: 'Jeder Pull lädt beim ersten Ausführen 4–8 GB herunter. Nachfolgende Ausführungen starten sofort aus dem Cache. Verwenden Sie <code>--num-ctx 4096</code> für ein größeres Kontextfenster.' }],
+        callouts: [{ type: 'tip', text: 'Jeder Pull lädt beim ersten Ausführen 4–8 GB herunter. Nachfolgende Ausführungen starten sofort aus dem Cache. Für ein größeres Kontextfenster als der Standard geben Sie in einer <code>ollama run</code>-Sitzung <code>/set parameter num_ctx 8192</code> ein.' }],
       },
       faq: {
         id: 'faq',
@@ -222,7 +222,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Meilleurs modèles Ollama RTX 3060 12 Go 2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 Go : Qwen3 8B (6 Go de VRAM, ~40 tok/s) pour l\'usage général, Phi-4 Q4_K_M pour le raisonnement, Mistral Nemo 12B pour le chat. Réponse rapide par PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     sections: {
@@ -256,7 +256,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Laissez toujours au moins 1,5–2 Go de VRAM libres. Pour le contexte complet des benchmarks GPU, voir <a href="/fr/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">les meilleurs GPU pour LLM locaux</a>. Si votre GPU a moins de 12 Go, voir <a href="/fr/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">les meilleurs modèles pour 6 Go de VRAM</a>. Pour installer les trois meilleurs choix :',
         ],
         codeBlock: 'ollama pull qwen3:8b\nollama pull phi4\nollama pull mistral-nemo',
-        callouts: [{ type: 'tip', text: 'Chaque pull télécharge 4 à 8 Go à la première exécution. Les exécutions suivantes démarrent instantanément depuis le cache. Utilisez <code>--num-ctx 4096</code> pour une fenêtre de contexte plus grande.' }],
+        callouts: [{ type: 'tip', text: 'Chaque pull télécharge 4 à 8 Go à la première exécution. Les exécutions suivantes démarrent instantanément depuis le cache. Pour une fenêtre de contexte plus grande que celle par défaut, saisissez <code>/set parameter num_ctx 8192</code> dans une session <code>ollama run</code>.' }],
       },
       faq: {
         id: 'faq',
@@ -289,7 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RTX 3060 12 GB最良Ollamaモデル2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GBは汎用用途にQwen3 8B（6 GB VRAM、約40トークン/秒）、推論にPhi-4 Q4_K_M、チャットにMistral Nemo 12Bが最適です。PromptQuorumの解説。',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     sections: {
@@ -323,7 +323,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '常に少なくとも1.5–2 GB VRAMを空けておいてください。完全なGPUベンチマーク背景については<a href="/ja/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">ローカルLLM向け最良GPU</a>を参照してください。GPUが12 GB未満の場合は<a href="/ja/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB VRAM向け最良モデル</a>をご覧ください。トップ3ピックすべてをインストールするには：',
         ],
         codeBlock: 'ollama pull qwen3:8b\nollama pull phi4\nollama pull mistral-nemo',
-        callouts: [{ type: 'tip', text: '各Pullは初回実行時に4～8 GBをダウンロードします。以降の実行はキャッシュから即座に開始します。より大きなコンテキストウィンドウが必要な場合は<code>--num-ctx 4096</code>を使用してください。' }],
+        callouts: [{ type: 'tip', text: '各Pullは初回実行時に4～8 GBをダウンロードします。以降の実行はキャッシュから即座に開始します。デフォルトより大きなコンテキストウィンドウが必要な場合は、<code>ollama run</code>のセッション内で<code>/set parameter num_ctx 8192</code>と入力してください。' }],
       },
       faq: {
         id: 'faq',
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RTX 3060 12 GB最佳Ollama模型2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB：Qwen3 8B（6 GB显存，约40 tok/s）适合通用任务，Phi-4 Q4_K_M适合推理，Mistral Nemo 12B适合聊天。PromptQuorum快速解答。',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     sections: {
@@ -390,7 +390,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '始终保持至少1.5–2 GB显存空闲。完整的GPU基准测试背景请参阅<a href="/zh/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">本地LLM最佳GPU</a>。如果您的GPU显存小于12 GB，请参阅<a href="/zh/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB显存最佳模型</a>。安装全部三款推荐模型：',
         ],
         codeBlock: 'ollama pull qwen3:8b\nollama pull phi4\nollama pull mistral-nemo',
-        callouts: [{ type: 'tip', text: '每次首次运行Pull下载4–8 GB。后续运行从缓存即时启动。如需更大上下文窗口，使用<code>--num-ctx 4096</code>。' }],
+        callouts: [{ type: 'tip', text: '每次首次运行Pull下载4–8 GB。后续运行从缓存即时启动。如需比默认值更大的上下文窗口，请在<code>ollama run</code>会话中输入<code>/set parameter num_ctx 8192</code>。' }],
       },
       faq: {
         id: 'faq',
@@ -423,7 +423,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Melhores modelos Ollama RTX 3060 12 GB 2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB: Qwen3 8B (6 GB de VRAM, ~40 tok/s) para uso geral, Phi-4 Q4_K_M para raciocínio, Mistral Nemo 12B para chat. Resposta rápida do PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     quickAnswerTop: {
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Deixe sempre pelo menos 1,5–2 GB de VRAM livre. Carregar dois modelos em sequência sem descarregar o primeiro provoca estouro de VRAM e força o lento offload para CPU. Para o contexto completo de benchmarks de GPU, consulte <a href="/pt/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">as melhores GPUs para LLMs locais</a>. Se sua GPU tiver menos de 12 GB, consulte <a href="/pt/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">os melhores modelos para 6 GB de VRAM</a>. Para instalar as três melhores opções:',
         ],
         codeBlock: 'ollama pull qwen3:8b\nollama pull phi4\nollama pull mistral-nemo',
-        callouts: [{ type: 'tip', text: 'Cada pull baixa 4–8 GB na primeira execução. As execuções seguintes iniciam instantaneamente do cache. Use <code>--num-ctx 4096</code> se precisar de uma janela de contexto maior.' }],
+        callouts: [{ type: 'tip', text: 'Cada pull baixa 4–8 GB na primeira execução. As execuções seguintes iniciam instantaneamente do cache. Se precisar de uma janela de contexto maior que a padrão, digite <code>/set parameter num_ctx 8192</code> em uma sessão <code>ollama run</code>.' }],
       },
       faq: {
         id: 'faq',
@@ -502,7 +502,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Mejores modelos Ollama RTX 3060 12 GB 2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB: Qwen3 8B (6 GB de VRAM, ~40 tok/s) para uso general, Phi-4 Q4_K_M para razonamiento, Mistral Nemo 12B para chat. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     quickAnswerTop: {
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Deja siempre al menos 1,5–2 GB de VRAM libres. Cargar dos modelos seguidos sin descargar el primero provoca desbordamiento de VRAM y fuerza un lento offloading a CPU. Para el contexto completo de benchmarks de GPU, consulta <a href="/es/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">las mejores GPUs para LLMs locales</a>. Si tu GPU tiene menos de 12 GB, consulta <a href="/es/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">los mejores modelos para 6 GB de VRAM</a>. Para instalar las tres mejores opciones:',
         ],
         codeBlock: 'ollama pull qwen3:8b\nollama pull phi4\nollama pull mistral-nemo',
-        callouts: [{ type: 'tip', text: 'Cada pull descarga 4–8 GB en la primera ejecución. Las ejecuciones siguientes arrancan al instante desde la caché. Usa <code>--num-ctx 4096</code> si necesitas una ventana de contexto más grande.' }],
+        callouts: [{ type: 'tip', text: 'Cada pull descarga 4–8 GB en la primera ejecución. Las ejecuciones siguientes arrancan al instante desde la caché. Si necesitas una ventana de contexto mayor que la predeterminada, escribe <code>/set parameter num_ctx 8192</code> en una sesión de <code>ollama run</code>.' }],
       },
       faq: {
         id: 'faq',
@@ -581,7 +581,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'أفضل نماذج ⁨Ollama⁩ لبطاقة ⁨RTX 3060 12 GB 2026⁩',
     metaDescription: '⁨RTX 3060 12 GB⁩: ⁨Qwen3 8B⁩ (⁨6 GB VRAM⁩، ⁨~40⁩ رمز/ثانية) للاستخدام العام، ⁨Phi-4 Q4⁩_⁨K⁩_⁨M⁩ للاستدلال، ⁨Mistral Nemo 12B⁩ للدردشة. إجابة سريعة من ⁨PromptQuorum⁩.',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     quickAnswerTop: {
@@ -627,7 +627,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'اترك دائماً 1.5–2 GB VRAM حرة على الأقل. تحميل نموذجين متتاليين دون تفريغ الأول يسبب تجاوز VRAM ويُجبر على تفريغ بطيء على CPU. للسياق الكامل لمعايير GPU، راجع <a href="/ar/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">أفضل بطاقات GPU لنماذج اللغة الكبيرة المحلية</a>. إذا كانت GPU لديك أقل من 12 GB، راجع <a href="/ar/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">أفضل النماذج لـ6 GB VRAM</a>. لتثبيت النماذج الثلاثة الموصى بها كلها:',
         ],
         codeBlock: 'ollama pull qwen3:8b\nollama pull phi4\nollama pull mistral-nemo',
-        callouts: [{ type: 'tip', text: 'كل تنزيل يحمّل 4–8 GB في التشغيل الأول. التشغيلات التالية تبدأ فوراً من الذاكرة المؤقتة. استخدم <code>--num-ctx 4096</code> إذا احتجت نافذة سياق أكبر.' }],
+        callouts: [{ type: 'tip', text: 'كل تنزيل يحمّل 4–8 GB في التشغيل الأول. التشغيلات التالية تبدأ فوراً من الذاكرة المؤقتة. إذا احتجت نافذة سياق أكبر من الافتراضية، فاكتب <code>/set parameter num_ctx 8192</code> داخل جلسة <code>ollama run</code>.' }],
       },
       faq: {
         id: 'faq',
@@ -660,7 +660,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RTX 3060 12 GB 최적 Ollama 모델 2026 | PromptQuorum',
     metaDescription: 'RTX 3060 12 GB: 범용 작업에는 Qwen3 8B (6 GB VRAM, 약 40 토큰/초), 추론에는 Phi-4 Q4_K_M, 채팅에는 Mistral Nemo 12B가 최적입니다. PromptQuorum의 빠른 답변.',
     publishDate: '2026-05-18',
-    dateModified: '2026-09-02',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-01',
     quickAnswerTop: {
@@ -716,7 +716,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '항상 최소 1.5–2 GB VRAM을 여유 공간으로 확보하십시오. 첫 번째 모델을 언로드하지 않고 두 모델을 연속으로 로드하면 VRAM 오버플로가 발생하고 느린 CPU 오프로드가 강제됩니다. GPU 벤치마크 전체 비교는 <a href="/ko/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">로컬 LLM 최적 GPU</a>를 참조하십시오. GPU가 12 GB 미만이라면 <a href="/ko/prompt-bites/best-local-llm-6gb-vram" class="text-primary hover:underline">6 GB VRAM 최적 모델</a>을 참조하십시오. 추천 모델 세 가지를 모두 설치하려면:',
         ],
         codeBlock: 'ollama pull qwen3:8b\nollama pull phi4\nollama pull mistral-nemo',
-        callouts: [{ type: 'tip', text: '각 Pull은 최초 실행 시 4–8 GB를 다운로드합니다. 이후 실행은 캐시에서 즉시 시작됩니다. 더 큰 컨텍스트 창이 필요한 경우 <code>--num-ctx 4096</code>을 사용하십시오.' }],
+        callouts: [{ type: 'tip', text: '각 Pull은 최초 실행 시 4–8 GB를 다운로드합니다. 이후 실행은 캐시에서 즉시 시작됩니다. 기본값보다 큰 컨텍스트 창이 필요하면 <code>ollama run</code> 세션에서 <code>/set parameter num_ctx 8192</code>를 입력하십시오.' }],
       },
       faq: {
         id: 'faq',
