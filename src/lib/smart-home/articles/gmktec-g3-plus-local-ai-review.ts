@@ -77,6 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Buy If / Skip If',
+        highlight: true,
         content: 'Quick decision guide — does the G3 Plus fit your needs? PromptQuorum\'s verdict: recommended for Home Assistant, light local models, and 24/7 low-power use.',
         items: [
           '**Buy the G3 Plus if:**',
@@ -485,6 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Kaufen wenn / Nicht kaufen wenn',
+        highlight: true,
         content: 'Schneller Entscheidungsleitfaden — passt der G3 Plus zu Ihren Anforderungen? Einschätzung von PromptQuorum: empfehlenswert für Home Assistant, leichte lokale Modelle und 24/7-Betrieb mit geringem Stromverbrauch.',
         items: [
           '**Kaufen Sie den G3 Plus, wenn:**',
@@ -895,6 +897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Achat conseillé / à éviter',
+        highlight: true,
         content: 'Guide de décision rapide — le G3 Plus correspond-il à vos besoins ? Avis de PromptQuorum : recommandé pour Home Assistant, les modèles locaux légers et un usage 24/7 à faible consommation.',
         items: [
           '**Achetez le G3 Plus si :**',
@@ -1303,6 +1306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Cómpralo si / Sáltatelo si',
+        highlight: true,
         content: 'Guía rápida de decisión — ¿te encaja el G3 Plus? Veredicto de PromptQuorum: recomendado para Home Assistant, modelos locales ligeros y uso de bajo consumo 24/7.',
         items: [
           '**Compra el G3 Plus si:**',
@@ -1711,6 +1715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: '買うべきか / 見送るべきか',
+        highlight: true,
         content: 'クイック判断ガイド — G3 Plus はあなたのニーズに合っていますか？ PromptQuorumの見解：Home Assistant、軽量なローカルモデル、24時間365日の低消費電力用途にはおすすめです。',
         items: [
           '**次に当てはまるなら G3 Plus を買う：**',
@@ -2119,6 +2124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: '购买建议 / 跳过建议',
+        highlight: true,
         content: '快速决策指南——G3 Plus 是否适合你的需求？PromptQuorum 的结论：适合用于 Home Assistant、轻量本地模型和 24/7 低功耗使用。',
         items: [
           '**以下情况建议购买 G3 Plus：**',
@@ -2526,6 +2532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: '구매 가이드 / 비추천 조건',
+        highlight: true,
         content: '빠른 결정 가이드 — G3 Plus가 당신의 필요에 맞습니까? PromptQuorum의 결론: Home Assistant, 경량 로컬 모델, 24시간 저전력 운용에 권장합니다.',
         items: [
           '**다음이라면 G3 Plus를 구매하십시오:**',
@@ -2933,6 +2940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Compre se / Evite se',
+        highlight: true,
         content: 'Guia rápido de decisão — o G3 Plus atende suas necessidades? Veredito da PromptQuorum: recomendado para Home Assistant, modelos locais leves e uso 24/7 de baixo consumo.',
         items: [
           '**Compre o G3 Plus se:**',
@@ -3342,6 +3350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'اشترِ إذا / تجاوز إذا',
+        highlight: true,
         content: 'دليل قرار سريع — هل يناسبك G3 Plus؟ تقييم PromptQuorum: يُنصح به لـ Home Assistant والنماذج المحلية الخفيفة والاستخدام المنخفض الطاقة على مدار الساعة.',
         items: [
           '**اشترِ G3 Plus إذا:**',

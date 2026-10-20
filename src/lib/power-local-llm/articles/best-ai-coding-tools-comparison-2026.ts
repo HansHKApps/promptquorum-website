@@ -118,6 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Editor\'s Choice: Continue.dev',
+        highlight: true,
         content:
           '**For developers who want an AI coding tool that runs on a local LLM, Continue.dev is the pick — it is free, open source, and built with Ollama and LM Studio as primary targets.** It supports VS Code, JetBrains IDEs, and Vim equally, all features work fully offline with local models, and no account is required for local-only use. If you want the most polished editor experience and will pay for it, Cursor is the better choice; if your code is public and you live in the GitHub ecosystem, GitHub Copilot is the simplest path. Choose Continue.dev when keeping code on your own machine and paying nothing are both priorities.',
         callouts: [
@@ -588,6 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Empfehlung der Redaktion: Continue.dev',
+        highlight: true,
         content:
           '**Für Entwickler, die ein KI-Coding-Tool wollen, das auf einem lokalen LLM läuft, ist Continue.dev die Wahl — es ist kostenlos, quelloffen und mit Ollama und LM Studio als primären Zielen entwickelt.** Es unterstützt VS Code, JetBrains-IDEs und Vim gleichermaßen, alle Funktionen arbeiten mit lokalen Modellen vollständig offline, und für die rein lokale Nutzung ist kein Konto erforderlich. Wenn Sie das ausgereifteste Editor-Erlebnis wollen und dafür zahlen, ist Cursor die bessere Wahl; wenn Ihr Code öffentlich ist und Sie im GitHub-Ökosystem leben, ist GitHub Copilot der einfachste Weg. Wählen Sie Continue.dev, wenn der Code auf dem eigenen Rechner zu halten und nichts zu zahlen beide Prioritäten sind.',
         callouts: [
@@ -1058,6 +1060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Choix de la rédaction : Continue.dev',
+        highlight: true,
         content:
           "**Pour les développeurs qui veulent un outil de codage IA tournant sur un LLM local, Continue.dev est le choix — il est gratuit, open source, et conçu avec Ollama et LM Studio comme cibles principales.** Il prend en charge VS Code, les IDE JetBrains et Vim à parts égales, toutes les fonctions marchent entièrement hors ligne avec des modèles locaux, et aucun compte n'est requis pour un usage local uniquement. Si vous voulez l'expérience d'édition la plus aboutie et acceptez de payer, Cursor est le meilleur choix ; si votre code est public et que vous vivez dans l'écosystème GitHub, GitHub Copilot est le chemin le plus simple. Choisissez Continue.dev quand garder le code sur votre propre machine et ne rien payer sont deux priorités.",
         callouts: [
@@ -1527,6 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '編集部のおすすめ: Continue.dev',
+        highlight: true,
         content:
           '**ローカルLLMで動作するAIコーディングツールを求める開発者には、Continue.dev がおすすめです — 無料、オープンソースで、OllamaとLM Studioを主要なターゲットとして作られています。** VS Code、JetBrains IDE、Vim を等しくサポートし、すべての機能がローカルモデルで完全にオフラインで動作し、ローカル専用の利用にはアカウントが不要です。最も洗練されたエディタ体験を求め、それに対価を払う意思があるなら、Cursor がより良い選択肢です。コードが公開されていてGitHubエコシステムで生活しているなら、GitHub Copilot が最もシンプルな道です。コードを自分のマシンに保ち、何も支払わないことの両方が優先事項なら、Continue.dev を選んでください。',
         callouts: [
@@ -1996,6 +2000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '编辑推荐：Continue.dev',
+        highlight: true,
         content:
           '**对于想要一款能在本地 LLM 上运行的 AI 编程工具的开发者，Continue.dev 是首选——它免费、开源，并以 Ollama 和 LM Studio 作为主要目标构建。** 它对 VS Code、JetBrains IDE 和 Vim 提供同等支持，所有功能都能在本地模型下完全离线运行，仅本地使用时无需账户。如果你想要最精致的编辑器体验并愿意为此付费，Cursor 是更好的选择；如果你的代码是公开的、并且生活在 GitHub 生态中，GitHub Copilot 是最简单的途径。当把代码保留在自己的机器上和分文不花都是优先事项时，选择 Continue.dev。',
         callouts: [
@@ -2465,6 +2470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Elección del editor: Continue.dev',
+        highlight: true,
         content:
           '**Para desarrolladores que quieren una herramienta de programación con IA que funcione sobre un LLM local, Continue.dev es la elección — es gratuita, de código abierto, y construida con Ollama y LM Studio como objetivos principales.** Soporta VS Code, JetBrains IDE y Vim por igual, todas las funciones funcionan completamente sin conexión con modelos locales, y no se requiere cuenta para uso exclusivamente local. Si quieres la experiencia de editor más pulida y estás dispuesto a pagar por ello, Cursor es la mejor opción; si tu código es público y vives en el ecosistema GitHub, GitHub Copilot es el camino más sencillo. Elige Continue.dev cuando mantener el código en tu propia máquina y no pagar nada sean ambas prioridades.',
         callouts: [
@@ -2947,6 +2953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Escolha do editor: Continue.dev',
+        highlight: true,
         content:
           '**Para desenvolvedores que querem uma ferramenta de programação com IA que funcione sobre um LLM local, o Continue.dev é a escolha — é gratuita, de código aberto, e construída com Ollama e LM Studio como alvos principais.** Ela suporta VS Code, JetBrains IDE e Vim por igual, todos os recursos funcionam totalmente offline com modelos locais, e nenhuma conta é necessária para uso exclusivamente local. Se você quer a experiência de editor mais polida e está disposto a pagar por isso, o Cursor é a melhor opção; se o seu código é público e você vive no ecossistema GitHub, o GitHub Copilot é o caminho mais simples. Escolha o Continue.dev quando manter o código na sua própria máquina e não pagar nada forem ambas prioridades.',
         callouts: [
@@ -3429,6 +3436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'اختيار المحرر: Continue.dev',
+        highlight: true,
         content:
           '**للمطورين الذين يريدون أداة برمجة بالذكاء الاصطناعي تعمل على نموذج لغوي محلي، Continue.dev هو الاختيار — مجاني ومفتوح المصدر ومبني مع Ollama وLM Studio كأهداف رئيسية.** يدعم VS Code وJetBrains IDE وVim بالتساوي، وجميع الميزات تعمل بالكامل دون اتصال مع النماذج المحلية، ولا حاجة إلى حساب للاستخدام المحلي الحصري. إذا كنت تريد تجربة المحرر الأكثر تطوراً وأنت مستعد للدفع، فـCursor هو الخيار الأفضل؛ وإذا كان كودك عاماً وتعيش في منظومة GitHub، فـGitHub Copilot هو المسار الأبسط. اختر Continue.dev عندما يكون الإبقاء على الكود في جهازك وعدم الدفع شيئاً كلتيهما أولويتين.',
         callouts: [
@@ -3911,6 +3919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '편집자 선택: Continue.dev',
+        highlight: true,
         content:
           '**로컬 LLM 위에서 작동하는 AI 코딩 도구를 원하는 개발자에게 Continue.dev가 선택입니다 — 무료, 오픈소스이며 Ollama와 LM Studio를 주요 대상으로 구축되었습니다.** VS Code, JetBrains IDE, Vim을 동등하게 지원하며, 로컬 모델로 모든 기능이 완전히 오프라인으로 작동하고, 로컬 전용 사용에는 계정이 필요하지 않습니다. 가장 세련된 편집기 경험을 원하고 그에 대한 비용을 지불할 의향이 있다면 Cursor가 최선이며, 코드가 공개적이고 GitHub 생태계에서 작업한다면 GitHub Copilot이 가장 간편한 경로입니다. 코드를 자신의 컴퓨터에 유지하고 비용을 전혀 지불하지 않는 것이 모두 우선순위라면 Continue.dev를 선택하십시오.',
         callouts: [

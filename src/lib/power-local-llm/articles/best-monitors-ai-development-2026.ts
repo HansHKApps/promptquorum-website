@@ -112,6 +112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: "Editor's Choice: A 4K 27-Inch IPS Monitor",
+        highlight: true,
         content:
           '**For most developers doing AI and LLM work, a 4K 27-inch IPS monitor is the pick that balances text sharpness, usable area, and price.** At 3840 x 2160 on a 27-inch panel, pixel density lands near 163 ppi — sharp enough that code and model output render cleanly without scaling artifacts. The panel fits a full-height editor and a terminal side by side, or an editor and a browser docs tab. An IPS panel gives the consistent color and wide viewing angles that matter for desk work, and 60-75 Hz is all development needs. If you regularly compare two model outputs at full width, step up to a 34-inch ultrawide instead. If a 4K panel is out of budget, a 1440p 27-inch monitor is the value pick. Prices for 4K 27-inch monitors span a wide range — check the current price before buying.',
         callouts: [
@@ -601,6 +602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Elección del editor: un monitor IPS 4K de 27 pulgadas',
+        highlight: true,
         content:
           '**Para la mayoría de los desarrolladores que hacen trabajo de IA y LLM, un monitor IPS 4K de 27 pulgadas es la elección que equilibra nitidez del texto, área utilizable y precio.** Con 3840 x 2160 en un panel de 27 pulgadas, la densidad de píxeles ronda los 163 ppi: suficientemente nítido para que el código y la salida del modelo se rendericen limpiamente sin artefactos de escalado. El panel cabe un editor de altura completa y un terminal en paralelo, o un editor y una pestaña de documentación del navegador. Un panel IPS ofrece el color consistente y los ángulos de visión amplios que importan para el trabajo en escritorio, y 60-75 Hz es todo lo que el desarrollo necesita. Si comparas regularmente dos salidas de modelos a ancho completo, sube a un ultrawide de 34 pulgadas en su lugar. Si un panel 4K está fuera del presupuesto, un monitor 1440p de 27 pulgadas es la elección de valor. Los precios de los monitores 4K de 27 pulgadas abarcan un rango amplio: consulta el precio actual antes de comprar.',
         callouts: [
@@ -1103,6 +1105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Empfehlung der Redaktion: Ein 4K-IPS-Monitor mit 27 Zoll',
+        highlight: true,
         content:
           '**Für die meisten Entwickler, die KI- und LLM-Arbeit leisten, ist ein 4K-IPS-Monitor mit 27 Zoll die Wahl, die Textschärfe, nutzbare Fläche und Preis ausbalanciert.** Bei 3840 x 2160 auf einem 27-Zoll-Panel liegt die Pixeldichte nahe bei 163 ppi — scharf genug, damit Code und Modellausgabe sauber und ohne Skalierungsartefakte dargestellt werden. Das Panel bietet Platz für einen Editor in voller Höhe und ein Terminal nebeneinander oder für einen Editor und einen Browser-Doku-Tab. Ein IPS-Panel liefert die gleichmäßigen Farben und weiten Blickwinkel, die für die Schreibtischarbeit zählen, und 60-75 Hz sind alles, was die Entwicklung braucht. Wenn Sie regelmäßig zwei Modellausgaben in voller Breite vergleichen, wechseln Sie stattdessen auf ein 34-Zoll-Ultrawide. Wenn ein 4K-Panel das Budget übersteigt, ist ein 1440p-Monitor mit 27 Zoll die Preis-Leistungs-Wahl. Die Preise für 4K-Monitore mit 27 Zoll decken eine weite Spanne ab — prüfen Sie den aktuellen Preis vor dem Kauf.',
         callouts: [
@@ -1600,6 +1603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Le choix de la rédaction : un moniteur IPS 4K 27 pouces',
+        highlight: true,
         content:
           "**Pour la plupart des développeurs faisant du travail IA et LLM, un moniteur IPS 4K 27 pouces est le choix qui équilibre netteté du texte, surface exploitable et prix.** À 3840 x 2160 sur une dalle 27 pouces, la densité de pixels atteint près de 163 ppi — assez nette pour que le code et la sortie du modèle s'affichent proprement sans artefacts de mise à l'échelle. La dalle accueille un éditeur pleine hauteur et un terminal côte à côte, ou un éditeur et un onglet de documentation dans le navigateur. Une dalle IPS offre les couleurs constantes et les larges angles de vision qui comptent pour le travail de bureau, et 60-75 Hz sont tout ce dont le développement a besoin. Si vous comparez régulièrement deux sorties de modèles en pleine largeur, passez plutôt à un ultrawide 34 pouces. Si une dalle 4K dépasse le budget, un moniteur 1440p 27 pouces est le choix économique. Les prix des moniteurs 4K 27 pouces couvrent une large fourchette — vérifiez le prix actuel avant d'acheter.",
         callouts: [
@@ -2089,6 +2093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '編集部の選択: 4K 27インチIPSモニター',
+        highlight: true,
         content:
           '**AI・LLM作業を行うほとんどの開発者にとって、4K 27インチIPSモニターはテキストの鮮明さ、使用可能な面積、価格のバランスが取れた選択肢です。** 27インチパネルで3840 x 2160の場合、ピクセル密度は約163 ppiに達します — コードとモデル出力がスケーリングのアーティファクトなく整然と描画されるのに十分な鮮明さです。このパネルはフルハイトのエディターとターミナルを横並びに、あるいはエディターとブラウザのドキュメントタブを収められます。IPSパネルはデスク作業で重要となる一定した色と広い視野角を提供し、開発に必要なのは60-75 Hzだけです。フル幅で2つのモデル出力を定期的に比較するなら、代わりに34インチウルトラワイドに進んでください。4Kパネルが予算を超える場合は、1440p 27インチモニターがコストパフォーマンスの選択肢です。4K 27インチモニターの価格は広い範囲に及びます — 購入前に現在の価格を確認してください。',
         callouts: [
@@ -2578,6 +2583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '编辑推荐：一台 4K 27 英寸 IPS 显示器',
+        highlight: true,
         content:
           '**对大多数做 AI 与 LLM 工作的开发者来说，4K 27 英寸 IPS 显示器是在文字锐度、可用面积和价格之间取得平衡的选择。** 在 27 英寸面板上达到 3840 x 2160 时，像素密度接近 163 ppi——足够清晰，让代码和模型输出能整洁渲染而无缩放伪影。这块面板可并排放下一个全高编辑器和一个终端，或者一个编辑器和一个浏览器文档标签页。IPS 面板提供桌面工作所需的一致色彩和宽广可视角度，而 60-75 Hz 是开发所需的全部。如果你经常以全宽并排比较两个模型输出，请改选 34 英寸带鱼屏。如果 4K 面板超出预算，1440p 27 英寸显示器是高性价比之选。4K 27 英寸显示器价格跨度很大——购买前请查看当前价格。',
         callouts: [
@@ -3067,6 +3073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Escolha do editor: um monitor IPS 4K de 27 polegadas',
+        highlight: true,
         content:
           '**Para a maioria dos desenvolvedores que fazem trabalho de IA e LLM, um monitor IPS 4K de 27 polegadas é a escolha que equilibra nitidez do texto, área utilizável e preço.** Com 3840 x 2160 em um painel de 27 polegadas, a densidade de pixels fica em torno de 163 ppi: nítido o suficiente para que o código e a saída do modelo sejam renderizados de forma limpa sem artefatos de escalonamento. O painel cabe um editor de altura completa e um terminal lado a lado, ou um editor e uma aba de documentação do navegador. Um painel IPS oferece a cor consistente e os ângulos de visão amplos que importam para o trabalho de mesa, e 60-75 Hz é tudo o que o desenvolvimento precisa. Se você compara regularmente duas saídas de modelos em largura completa, suba para um ultrawide de 34 polegadas em vez disso. Se um painel 4K está fora do orçamento, um monitor 1440p de 27 polegadas é a escolha de valor. Os preços dos monitores 4K de 27 polegadas abrangem uma faixa ampla: verifique o preço atual antes de comprar.',
         callouts: [
@@ -3570,6 +3577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'اختيار المحرر: شاشة IPS 4K بـ27 بوصة',
+        highlight: true,
         content:
           '**لمعظم المطورين الذين يعملون في الذكاء الاصطناعي ونماذج LLM، شاشة IPS 4K بـ27 بوصة هي الاختيار الذي يوازن بين وضوح النص والمساحة القابلة للاستخدام والسعر.** بدقة 3840 x 2160 على لوحة 27 بوصة، تبلغ كثافة البكسل حوالي 163 ppi: حادة بما يكفي لعرض الكود ومخرجات النماذج بنظافة دون تشوهات تحجيم. تتسع الشاشة لمحرر بارتفاع كامل وطرفية جنباً إلى جنب، أو محرر وتبويب توثيق متصفح. لوحة IPS توفر اللون المتسق وزوايا الرؤية الواسعة المهمة لعمل المكتب، و60-75 هرتز كل ما يحتاجه التطوير. إذا كنت تقارن بانتظام مخرجين بعرض كامل، ارتقِ إلى شاشة عريضة بـ34 بوصة بدلاً منها. إذا كانت شاشة 4K خارج الميزانية، شاشة 1440p بـ27 بوصة هي الاختيار ذو القيمة. تتنوع أسعار شاشات 4K بـ27 بوصة في نطاق واسع: تحقق من السعر الحالي قبل الشراء.',
         callouts: [
@@ -4072,6 +4080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '편집자 추천: 27인치 4K IPS 모니터',
+        highlight: true,
         content:
           '**AI 및 LLM 작업을 수행하는 대부분의 개발자에게 27인치 4K IPS 모니터는 텍스트 선명도, 사용 가능한 면적, 가격을 균형 있게 맞추는 선택입니다.** 27인치 패널의 3840 x 2160은 픽셀 밀도가 약 163ppi로, 코드와 모델 출력이 스케일링 아티팩트 없이 선명하게 렌더링될 만큼 충분히 선명합니다. 이 패널은 전체 높이 편집기와 터미널을 나란히 배치하거나 편집기와 브라우저 문서 탭을 함께 배치할 수 있습니다. IPS 패널은 데스크탑 작업에 중요한 일관된 색상과 넓은 시야각을 제공하며, 60-75Hz는 개발에 필요한 전부입니다. 두 개의 모델 출력을 전체 너비로 정기적으로 비교하는 경우 대신 34인치 울트라와이드로 업그레이드하십시오. 4K 패널이 예산을 초과하면 27인치 1440p 모니터가 가성비 선택입니다. 27인치 4K 모니터의 가격은 넓은 범위에 걸쳐 있습니다. 구매 전 현재 가격을 확인하십시오.',
         callouts: [

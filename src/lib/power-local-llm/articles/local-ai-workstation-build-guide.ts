@@ -120,6 +120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Editor\'s Choice: The Mid Build (~$3,100)',
+        highlight: true,
         content:
           '**For most buyers building a PC for local AI, the mid build is the tier that balances capability, cost, and headroom.** Built around an RTX 4070 Ti Super 16 GB, it runs every 14B model with context room, handles light 22B-33B work, and makes 7B-14B models feel instant — for roughly $3,100 all in. It is the build that will not frustrate you within months and will not need replacing within a year. Drop to the budget build only if your ceiling is firmly 7B-13B models; step up to the enthusiast build only if you specifically need 70B work. The mid build is the safe default for a machine you want to keep.',
         callouts: [
@@ -638,6 +639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Empfehlung der Redaktion: der Mittelklasse-Build (ca. 3.450 €)',
+        highlight: true,
         content:
           '**Für die meisten Käufer, die einen PC für lokale KI bauen, ist der Mittelklasse-Build die Stufe, die Leistungsfähigkeit, Kosten und Reserven ausbalanciert.** Aufgebaut um eine RTX 4070 Ti Super 16 GB, führt er jedes 14B-Modell mit Kontextspielraum aus, bewältigt leichte 22B- bis 33B-Arbeit und lässt 7B- bis 14B-Modelle sofort reagieren — für rund 3.450 € komplett. Es ist der Build, der Sie nicht binnen Monaten frustriert und nicht binnen eines Jahres ersetzt werden muss. Greifen Sie nur dann zum Budget-Build, wenn Ihre Obergrenze fest bei 7B- bis 13B-Modellen liegt; steigen Sie nur dann zum Enthusiasten-Build auf, wenn Sie gezielt 70B-Arbeit benötigen. Der Mittelklasse-Build ist die sichere Standardwahl für eine Maschine, die Sie behalten möchten.',
         callouts: [
@@ -1163,6 +1165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Choix de la rédaction : la configuration intermédiaire (env. 2 900 €)',
+        highlight: true,
         content:
           '**Pour la plupart des acheteurs montant un PC pour l\'IA locale, la configuration intermédiaire est le niveau qui équilibre capacité, coût et marge.** Bâtie autour d\'une RTX 4070 Ti Super 16 GB, elle exécute chaque modèle 14B avec de la marge de contexte, gère le travail léger en 22B-33B et rend les modèles 7B-14B instantanés — pour environ 2 900 € au total. C\'est la configuration qui ne vous frustrera pas en quelques mois et ne nécessitera pas d\'être remplacée en un an. Ne descendez à la configuration budget que si votre plafond est fermement les modèles 7B-13B ; ne montez à la configuration enthousiaste que si vous avez spécifiquement besoin du travail 70B. La configuration intermédiaire est le choix par défaut sûr pour une machine que vous voulez garder.',
         callouts: [
@@ -1680,6 +1683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '編集部のおすすめ：ミドル構成（約¥520,000）',
+        highlight: true,
         content:
           '**ローカルAI向けにPCを組むほとんどの購入者にとって、ミドル構成は能力・コスト・余裕のバランスが取れたティアです。** RTX 4070 Ti Super 16 GBを中心に構築され、すべての14Bモデルをコンテキストの余裕をもって実行し、軽めの22B〜33B作業をこなし、7B〜14Bモデルを即座に応答させます——総額でおよそ¥520,000です。数か月で不満が出ることもなく、1年以内に買い替えが必要になることもない構成です。上限が明確に7B〜13Bモデルである場合のみエントリー構成に下げ、70B作業が特に必要な場合のみハイエンド構成に上げてください。ミドル構成は、長く使いたいマシンにとって無難な標準の選択肢です。',
         callouts: [
@@ -2197,6 +2201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '编辑推荐：中端配置（约 3,100 美元）',
+        highlight: true,
         content:
           '**对大多数为本地 AI 装机的购买者来说,中端配置是在能力、成本和余量之间取得平衡的那一档。** 它围绕 RTX 4070 Ti Super 16 GB 构建,能在保有上下文空间的情况下运行每个 14B 模型,可应付轻量 22B-33B 工作,并让 7B-14B 模型即时响应——整机约 3,100 美元。这套配置不会在几个月内让你失望,也不需要在一年内更换。只有当你的上限明确停留在 7B-13B 模型时,才降到入门配置;只有当你确实需要 70B 工作负载时,才升到发烧配置。中端配置是一台你想长期保留的机器的稳妥默认选择。',
         callouts: [
@@ -2714,6 +2719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Elección del editor: la configuración media (~€3.250)',
+        highlight: true,
         content:
           '**Para la mayoría de quienes arman una PC para IA local, la configuración media es el nivel que equilibra capacidad, costo y margen.** Construida alrededor de una RTX 4070 Ti Super 16 GB, ejecuta cada modelo 14B con espacio de contexto, maneja trabajo ligero con 22B-33B y hace que los modelos 7B-14B respondan al instante — por alrededor de €3.250 en total. Es la configuración que no te frustrará en meses y no necesitará reemplazarse en un año. Baja a la configuración económica solo si tu techo es firmemente modelos 7B-13B; sube a la configuración entusiasta solo si necesitas específicamente trabajar con 70B. La configuración media es la opción predeterminada segura para una máquina que quieres conservar.',
         callouts: [
@@ -3244,6 +3250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Escolha do editor: a configuração intermediária (~R$ 20.600)',
+        highlight: true,
         content:
           '**Para a maioria de quem monta um PC para IA local, a configuração intermediária é o nível que equilibra capacidade, custo e margem.** Construída ao redor de uma RTX 4070 Ti Super 16 GB, executa cada modelo 14B com espaço de contexto, lida com trabalho leve com 22B–33B e faz os modelos 7B–14B responderem instantaneamente — por cerca de R$ 20.600 no total. É a configuração que não vai te frustrar em meses e não precisará ser substituída em um ano. Desça para a configuração econômica apenas se o seu teto for firmemente modelos 7B–13B; suba para a entusiasta apenas se precisar especificamente de trabalho com 70B.',
         callouts: [
@@ -3774,6 +3781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'اختيار المحرر: الإعداد المتوسط (~3100 دولار)',
+        highlight: true,
         content:
           '**لمعظم من يبنون حاسوباً للذكاء الاصطناعي المحلي، الإعداد المتوسط هو المستوى الذي يوازن القدرة والتكلفة والهامش.** مبني حول RTX 4070 Ti Super 16 GB، يُشغّل كل نموذج 14B بمساحة سياق، ويتعامل مع العمل الخفيف مع 22B–33B، ويجعل نماذج 7B–14B تستجيب فوراً — بحوالي 3100 دولار إجمالاً. إنه الإعداد الذي لن يُحبطك خلال أشهر ولن يحتاج استبدالاً خلال عام. انزل للاقتصادي فقط إن كانت نماذج 7B–13B حدّك الصارم؛ ارتفع للمتحمس فقط إن كنت تحتاج تحديداً العمل مع نماذج 70B.',
         callouts: [
@@ -4304,6 +4312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '에디터 추천: 중급형 구성 (~$3,100)',
+        highlight: true,
         content:
           '**대부분의 로컬 AI PC 구성자에게 중급형 구성은 성능, 비용, 여유 공간을 균형 있게 제공하는 단계입니다.** RTX 4070 Ti Super 16 GB를 중심으로 구성된 이 설정은 충분한 컨텍스트 공간으로 모든 14B 모델을 실행하고, 22B–33B 모델의 경량 작업도 처리하며, 7B–14B 모델을 즉각적인 속도로 응답합니다. 총 약 $3,100으로 몇 달이 지나도 답답하지 않고, 1년 내에 교체할 필요가 없는 구성입니다. 7B–13B 모델만 사용할 계획이라면 보급형으로 내려가고, 70B 작업이 꼭 필요하다면 고급형으로 올라가십시오. 중급형 구성은 오래 유지하고 싶은 기기를 위한 안전한 기본 선택입니다.',
         callouts: [
