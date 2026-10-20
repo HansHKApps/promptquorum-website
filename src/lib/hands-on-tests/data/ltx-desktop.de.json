@@ -1,0 +1,752 @@
+{
+  "id": "pq-test-ltx-desktop-2026-10-20",
+  "hero": "setup",
+  "date_human": "20. Oktober 2026",
+  "captured": "20.10.2026 oder früher; genaue Uhrzeiten nicht erfasst",
+  "standard_version": "0.1",
+  "locale": "de",
+  "app": {
+    "name": "LTX Desktop",
+    "slug": "ltx-desktop",
+    "vendor": "Lightricks (splash screen: © 2026 Lightricks)",
+    "category": "Local AI video generation",
+    "platform": "macOS",
+    "pricing_url": "https://github.com/Lightricks/LTX-Desktop"
+  },
+  "title": "LTX Desktop auf einem Mac mit 24 GB: Beim Setup gestoppt, unter der Speicher-Untergrenze des Herstellers",
+  "page_title": "LTX Desktop Praxistest",
+  "dek": "Praxistest auf einem Mac mit 24 GB. Die App startete reibungslos, dann verlangte der Setup-Bildschirm 129,1 GB an Modell-Downloads, und der Tester gab auf: 24 GB Speicher reichen für diese App nicht aus, sagt er.",
+  "seo": {
+    "title": "LTX Desktop Praxistest: Auf 24-GB-Mac beim Setup gestoppt",
+    "description": "Praxistest von LTX Desktop auf einem Mac mit 24 GB: Das Setup verlangte 129,1 GB an Modellen, die Herstellerangabe liegt höher, der Test endete dort."
+  },
+  "faq": [
+    [
+      "Kann ein Mac mit 24 GB LTX Desktop ausführen?",
+      "Der Tester brach am Setup-Bildschirm ab und schloss daraus, dass sein Mac mit 24 GB die App nicht ausführen kann. Der Test erreichte die Generierung nie. Die README von Lightricks nennt für die lokale Generierung unter macOS eine Untergrenze von 32 GiB Gesamt-RAM.",
+      "tester-view"
+    ],
+    [
+      "Wie viel Speicherplatz braucht LTX Desktop?",
+      "Der Setup-Bildschirm listete fünf Modell-Downloads mit zusammen 129,1 GB, und der Test-Mac zeigte 32,9 GB verfügbar. Die README verlangt 100 GB oder mehr freien Speicherplatz, mit LoRAs bis zu 160 GB.",
+      "measured"
+    ],
+    [
+      "Wie groß ist der Installer von LTX Desktop?",
+      "Etwa 700 MB, so vom Tester abgelesen. Die Modelle werden beim Setup separat heruntergeladen und sind weitaus größer.",
+      "observed"
+    ],
+    [
+      "Brauche ich für LTX Desktop ein Hugging-Face-Konto?",
+      "Der Setup-Bildschirm fordert dazu auf, sich bei Hugging Face anzumelden und eine Lizenz zu akzeptieren, um geschützte (gated) Modelle herunterzuladen. Der Test endete vor der Anmeldung.",
+      "observed"
+    ],
+    [
+      "Was lädt LTX Desktop beim Setup herunter?",
+      "Fünf Posten: LTX 2.5 (41,5 GB), einen Gemma-4-Textencoder mit LTX-2.5-Projektionen (24,5 GB), einen Gemma-4-E2B-Instruct-Prompt-Enhancer (9,6 GB), das Text-zu-Bild-Modell Z-Image-Turbo (28,9 GB) und LoRAs (24,6 GB).",
+      "measured"
+    ]
+  ],
+  "status": "Nicht abgeschlossen",
+  "published": "2026-10-20",
+  "started": "2026-10-20",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "LTX Desktop von Lightricks. Der Startbildschirm zeigt „© 2026 Lightricks“.",
+      "observed"
+    ],
+    [
+      "Version",
+      "Nicht erfasst. Die App zeigt auf den beiden Screenshots keine Version.",
+      null
+    ],
+    [
+      "Tester",
+      "Hans Kuepper, Gründer von PromptQuorum",
+      null
+    ],
+    [
+      "Beginn",
+      "20. Oktober 2026 (Uhrzeit nicht erfasst). Die Notizen tragen kein Datum; dies ist das Datum, an dem die Word-Datei eingereicht wurde.",
+      "assumption"
+    ],
+    [
+      "Ende",
+      "Nicht erfasst",
+      null
+    ],
+    [
+      "Hardware",
+      "Die Notizen sagen „Mac 4 Pro“. Das Standard-Testgerät ist ein MacBook Pro mit M3 Pro und 24 GB; es wird dasselbe Gerät angenommen. Die 24 GB sind unstrittig, die Chip-Generation nicht.",
+      "assumption"
+    ],
+    [
+      "System",
+      "macOS; Version nicht erfasst. Die Hersteller-README nennt macOS-Versionen (siehe „Angaben“), daher ist diese Lücke relevant.",
+      null
+    ],
+    [
+      "Quelle",
+      "Nicht erfasst, woher der Installer heruntergeladen wurde",
+      null
+    ],
+    [
+      "Download",
+      "Installer von etwa 700 MB (so vom Tester abgelesen)",
+      "observed"
+    ],
+    [
+      "Anlass des Tests",
+      "In den Notizen nicht angegeben.",
+      null
+    ],
+    [
+      "Ziel",
+      "Nicht angegeben. Aus den Notizen abgeleitet: die lokale Video-App installieren und auf dem Mac mit 24 GB ausprobieren.",
+      "assumption"
+    ],
+    [
+      "Genutzte KI-Hilfe",
+      "Nicht erfasst",
+      null
+    ]
+  ],
+  "disclosure": "Der Tester hat PromptQuorum (promptquorum.com) gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. LTX Desktop hat zum Zeitpunkt dieses Tests weder einen Verzeichniseintrag noch eine Review auf der Website. Die Notizen verzeichnen keinen Kontakt zum Hersteller, keine Zahlung und kein Sponsoring.",
+  "verdict": {
+    "general": "Nicht bewertet: Der Test endete am Setup-Bildschirm, bevor ein Video oder Bild entstand. Das zeigen die Notizen und Screenshots: ein reibungsloser erster Start, eine erforderliche Anmeldung bei Hugging Face und eine Modellliste mit zusammen 129,1 GB bei 32,9 GB freiem Speicherplatz. Der Tester schließt, dass seine 24 GB Unified Memory für die App nicht ausreichen, nicht dass der Speicherplatz das Problem ist. Die Hersteller-README weist in dieselbe Richtung: Sie nennt 32 GiB Gesamt-RAM als Untergrenze für die lokale Generierung auf einem Mac.",
+    "fit": "Laut Tester nicht geeignet für dieses Gerät. Der größte einzelne Download (LTX 2.5, 41,5 GB) ist größer als die 24 GB Speicher, wobei die Download-Größe nicht dem Speicherbedarf zur Laufzeit entspricht (Annahme). Die README, gelesen am 20. Oktober 2026, sagt, dass Macs mit weniger als 24 GB nur die Cloud-API nutzen und dass 32 GB auf 540p und 5 s begrenzt sind; für die volle lokale Generierung werden 48 GB oder mehr genannt. Die App bot auf diesem Mac mit 24 GB dennoch den lokalen Modell-Download an, was die README nicht erklärt (siehe „Wie der Test verlief“)."
+  },
+  "scores": [
+    [
+      "Installation",
+      null,
+      "Nicht bewertet. Der Installer wurde heruntergeladen und die App startete; das Setup wurde nicht abgeschlossen."
+    ],
+    [
+      "Einstieg und Modellauswahl",
+      null,
+      "Nicht bewertet. Das Setup zeigt fünf Downloads mit Größen und einer Summe; eine Anmeldung bei Hugging Face ist erforderlich."
+    ],
+    [
+      "Kernfunktion",
+      null,
+      "Nicht getestet. Es wurde kein Video und kein Bild erzeugt."
+    ],
+    [
+      "Anleitung und Iteration",
+      null,
+      "Nicht getestet."
+    ],
+    [
+      "Leistung",
+      null,
+      "Nicht getestet."
+    ],
+    [
+      "Dokumentation",
+      null,
+      "Nicht getestet."
+    ],
+    [
+      "Vertrauen und Datenschutz",
+      null,
+      "Nicht geprüft."
+    ],
+    [
+      "Deinstallation",
+      null,
+      "Nicht getestet."
+    ]
+  ],
+  "scores_note": "Es wurden keine Bewertungen vergeben, weil der Test beim Setup stoppte. Bewertungen setzen einen Test voraus, der die Hauptfunktion der App erreicht.",
+  "tldr": [
+    [
+      "observed",
+      "Die App startete mit einem Startbildschirm samt Ladebalken; der Tester nennt den Start reibungslos."
+    ],
+    [
+      "measured",
+      "Das Setup listet 129,1 GB an Modell-Downloads und zeigt 32,9 GB verfügbar auf dem Laufwerk des Modellordners."
+    ],
+    [
+      "tester-view",
+      "Der Tester hörte dort auf und schließt, dass ein Mac mit 24 GB diese App nicht ausführen kann: eine Speichergrenze, kein Problem des Aufräumens von Speicherplatz."
+    ],
+    [
+      "vendor-claim",
+      "Die README nennt für die lokale Generierung unter macOS eine Untergrenze von 32 GiB Gesamt-RAM; der Test-Mac hat 24 GB. In der App nicht überprüft."
+    ]
+  ],
+  "quotes": [
+    "And that ended. I cannot run this on my little laptop.",
+    "I guess in the future all of the computers will get bigger and bigger. While the models get better, it's just needed to have bigger and bigger computers to run local AI at that level."
+  ],
+  "quote_note": "Notizen des Testers, wörtlich zitiert (englisches Original).",
+  "moments_title": "Sechs Momente, die diesen Test geprägt haben",
+  "moments_nav": "Sechs Momente",
+  "moments": [
+    [
+      "Ein Installer mit 700 MB",
+      "Die Installer-Datei ist etwa 700 MB groß. Die Modelle kommen später.",
+      null,
+      "chapter-install"
+    ],
+    [
+      "Reibungsloser Start",
+      "Die App öffnet mit einem Startbildschirm samt Ladebalken.",
+      "splash",
+      "chapter-launch"
+    ],
+    [
+      "Zuerst Hugging Face",
+      "Das Setup verlangt eine Anmeldung bei Hugging Face und die Annahme einer Lizenz, um geschützte Modelle herunterzuladen.",
+      "setup",
+      "chapter-setup"
+    ],
+    [
+      "129,1 GB in fünf Teilen",
+      "Die Modellliste: LTX 2.5, Gemma-4-Textencoder, Gemma-4-E2B-Prompt-Enhancer, Z-Image-Turbo und LoRAs.",
+      "setup",
+      "chapter-setup"
+    ],
+    [
+      "32,9 GB frei",
+      "Derselbe Bildschirm zeigt 32,9 GB verfügbar auf dem Laufwerk des Modellordners.",
+      "setup",
+      "chapter-setup"
+    ],
+    [
+      "Hier war Schluss",
+      "„I cannot run this on my little laptop.“ Kein Download, keine Generierung.",
+      null,
+      "chapter-stop"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "Installer",
+      "items": [
+        [
+          "observed",
+          "Der Installer ist eine Datei von etwa 700 MB.",
+          null
+        ],
+        [
+          "assumption",
+          "Woher er heruntergeladen wurde, steht nicht in den Notizen.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-launch",
+      "title": "Erster Start",
+      "items": [
+        [
+          "observed",
+          "Die App öffnet mit einem Startbildschirm: „LTX Desktop“, ein Ladebalken und unten „© 2026 Lightricks“.",
+          "splash"
+        ],
+        [
+          "tester-view",
+          "„Smooth.“",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-setup",
+      "title": "Setup-Bildschirm",
+      "items": [
+        [
+          "observed",
+          "Der Setup-Bildschirm hat ein Feld „Hugging Face access“: „Sign in and accept the license to download gated models.“ mit einer Schaltfläche „Sign in“. Der Tester meldete sich nicht an.",
+          "setup"
+        ],
+        [
+          "measured",
+          "Unter „Model downloads“ sind fünf Posten angehakt: LTX 2.5 (41,5 GB), Gemma-4-Textencoder mit LTX-2.5-Projektionen (24,5 GB), Gemma-4-E2B-Instruct-Prompt-Enhancer, Ordner (9,6 GB), Z-Image-Turbo-Modell für die Text-zu-Bild-Generierung (28,9 GB) und LoRAs (24,6 GB). Der Bildschirm zeigt „Total: 129.1 GB“.",
+          null
+        ],
+        [
+          "measured",
+          "Der Modellordner ist /Users/hanskuepper/Library/Application Support/LTXDesktop/models, mit „32.9 GB available“. Der Ordner lässt sich über eine Schaltfläche „Change“ ändern.",
+          null
+        ],
+        [
+          "assumption",
+          "129,1 GB sind 96,2 GB mehr als 32,9 GB. Ob die App den Download blockiert, warnt oder ihn mittendrin scheitern lässt, wurde nicht getestet.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-stop",
+      "title": "Warum der Test stoppte",
+      "items": [
+        [
+          "tester-view",
+          "„And that ended. I cannot run this on my little laptop.“",
+          null
+        ],
+        [
+          "tester-view",
+          "Der Grund des Testers ist der Speicher: Sein Mac hat 24 GB Unified Memory, und er hält das für zu wenig für diese App. Mehr freier Speicherplatz würde daran nichts ändern, sagt er.",
+          null
+        ],
+        [
+          "assumption",
+          "Der größte einzelne Download (LTX 2.5, 41,5 GB) ist größer als 24 GB. Die Download-Größe entspricht nicht dem Speicherbedarf während des Betriebs, da eine App Gewichte in Teilen laden oder komprimieren kann; es wurde kein Speicherwert gemessen.",
+          null
+        ],
+        [
+          "observed",
+          "Es wurde kein Download gestartet, keine Generierung versucht, und auf keinem der beiden Screenshots erscheint eine Speicherwarnung.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-vendor",
+      "title": "Was der Hersteller sagt (gelesen am 20. Oktober 2026)",
+      "items": [
+        [
+          "vendor-claim",
+          "Die GitHub-README (Lightricks/LTX-Desktop) nennt für macOS: Apple Silicon (M1 oder neuer) mit 48 GB oder mehr für die volle lokale Generierung; 32 GB, begrenzt auf 540p und 5 s; weniger als 24 GB und Intel-Macs nutzen nur die Gen Space API. Die App braucht macOS 14 oder neuer.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "Die README nennt außerdem Untergrenzen von 32 GiB Gesamt-RAM und macOS 26 oder neuer für die lokale Generierung auf einem Mac; darunter zeigt die App statt der Generierungswerkzeuge den Hinweis „Coming soon to your device“. Alle Plattformen brauchen 100 GB oder mehr freien Speicherplatz, mit LoRAs bis zu 160 GB oder mehr. Ein LTX-API-Schlüssel ist zum Start nie erforderlich.",
+          null
+        ],
+        [
+          "observed",
+          "Der Test-Mac hat 24 GB, also weniger als die Untergrenze von 32 GiB der README, doch die App zeigte auf den Screenshots den lokalen Modell-Download und keinen Hinweis „Coming soon“. macOS-Version und App-Version wurden nicht erfasst, sodass sich beide nicht vergleichen lassen.",
+          null
+        ],
+        [
+          "third-party",
+          "Suchergebnisse förderten außerdem ältere Hilfecenter-Seiten von Lightricks zutage. In der Zusammenfassung heißt es dort, dass die Generierung auf einem Mac über die LTX API läuft, dass lokale Inferenz auf dem Mac noch nicht unterstützt wird und dass 16 GB oder mehr Unified Memory nötig sind. Die Hilfecenter-Seite selbst lieferte beim Öffnen einen Fehler, daher ist dies aus zweiter Hand und möglicherweise veraltet.",
+          null
+        ],
+        [
+          "assumption",
+          "Die README und die Screenshots beschreiben möglicherweise unterschiedliche App-Versionen. Welche Aussage für den Build des Testers gilt, ist unbekannt.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "Das Setup verlangt 129,1 GB an Modellen",
+      "Setup-Bildschirm der App",
+      "Die fünf angezeigten Größen ergeben zusammen 129,1 GB und entsprechen der angezeigten Summe.",
+      "measured"
+    ],
+    [
+      "100 GB oder mehr freier Speicherplatz nötig; mit LoRAs bis zu 160 GB oder mehr",
+      "Hersteller-README, gelesen am 20. Okt. 2026",
+      "Die Summe des Setup-Bildschirms (129,1 GB) liegt innerhalb dieses Bereichs. Speicherplatz war nicht der vom Tester genannte Grund für den Abbruch.",
+      "vendor-claim"
+    ],
+    [
+      "Lokale Generierung auf einem Mac braucht 32 GiB Gesamt-RAM; 48 GB oder mehr für die volle lokale Generierung; weniger als 24 GB nutzen nur die Cloud-API",
+      "Hersteller-README, gelesen am 20. Okt. 2026",
+      "Nicht getestet. Der Test-Mac hat 24 GB. Die App zeigte dennoch den lokalen Modell-Download.",
+      "vendor-claim"
+    ],
+    [
+      "Unter macOS läuft die Generierung über die LTX API; lokale Inferenz wird nicht unterstützt",
+      "Ältere Hilfecenter-Seiten, aus zweiter Hand",
+      "Widerlegt durch den Setup-Bildschirm, der lokale Modell-Downloads anbietet. Möglicherweise eine andere App-Version.",
+      "third-party"
+    ],
+    [
+      "Weniger als 10–15 % der MacBook-Nutzer haben 32 GB oder mehr Speicher; weniger als 3–5 % haben 64 GB oder mehr; weniger als 1–2 % der Windows-Rechner haben 64 GB oder mehr",
+      "Notizen des Testers, nur „Google“ zugeschrieben",
+      "Es ist weder eine Studie noch ein Herausgeber oder ein Datum angegeben. Hier nicht überprüft.",
+      "third-party"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 45,
+    "rows": [
+      [
+        "LTX 2.5",
+        41.5,
+        "41,5 GB",
+        "measured"
+      ],
+      [
+        "Gemma-4-Textencoder mit LTX-2.5-Projektionen",
+        24.5,
+        "24,5 GB",
+        "measured"
+      ],
+      [
+        "Gemma-4-E2B-Instruct-Prompt-Enhancer",
+        9.6,
+        "9,6 GB",
+        "measured"
+      ],
+      [
+        "Z-Image-Turbo",
+        28.9,
+        "28,9 GB",
+        "measured"
+      ],
+      [
+        "LoRAs",
+        24.6,
+        "24,6 GB",
+        "measured"
+      ]
+    ],
+    "note": "Dies sind Download-Größen vom Setup-Bildschirm, nicht der Speicher, der im Betrieb belegt wird; eine App kann Gewichte in Teilen laden (Annahme). Die fünf Posten zusammen ergeben 129,1 GB, was nicht ins Diagramm passt. Der Test-Mac hat 24 GB Unified Memory. Es wurde nichts ausgeführt, daher gibt es keinen Speicherwert."
+  },
+  "usage_log": [
+    [
+      "App einrichten und die Modelle herunterladen",
+      "Nicht zutreffend",
+      "Am Setup-Bildschirm gestoppt; nichts heruntergeladen",
+      "Nicht erfasst",
+      "Not completed",
+      [
+        "setup"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "Die Anforderungen der App wurden vor der Installation nicht gegen den Mac mit 24 GB geprüft. Die Unstimmigkeit zeigte sich erst auf dem Setup-Bildschirm."
+    ],
+    [
+      "tester-error",
+      "Die Hardware wurde als „Mac 4 Pro“ notiert. Das Standardgerät ist ein M3 Pro mit 24 GB; es wird dasselbe Gerät angenommen, die Chip-Generation ist unbestätigt."
+    ],
+    [
+      "tester-error",
+      "Lücken in der Dokumentation: App-Version, macOS-Version, Start- und Endzeit, Herkunft des Installers."
+    ],
+    [
+      "assumption",
+      "Der Setup-Bildschirm zeigt eine Angabe zum Speicherplatz, keine zum Arbeitsspeicher. Der Schluss auf den Arbeitsspeicher stammt vom Tester selbst, gestützt auf die Hersteller-README; ein Speicherfehler wurde nicht gesehen."
+    ]
+  ],
+  "findings": [
+    [
+      "LTX-01",
+      "Die Hersteller-README nennt 32 GiB Gesamt-RAM als Untergrenze für die lokale Generierung auf einem Mac; der Test-Mac hat 24 GB.",
+      "Systemanforderungen",
+      "vendor-claim",
+      "High",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-02",
+      "Der Tester schließt, dass 24 GB Unified Memory die App nicht ausführen können; der größte einzelne Modell-Download (41,5 GB) ist größer als 24 GB.",
+      "Systemanforderungen",
+      "tester-view",
+      "High",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-03",
+      "Der Setup-Bildschirm bot auf einem Mac mit 24 GB einen Modell-Download von 129,1 GB an, ohne sichtbare Speicherwarnung auf den Screenshots.",
+      "Setup",
+      "observed",
+      "High",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-04",
+      "Der erforderliche Gesamtumfang (129,1 GB) ist deutlich größer als der angezeigte freie Speicherplatz (32,9 GB); ob die App blockiert oder warnt, wurde nicht getestet.",
+      "Setup",
+      "observed",
+      "Medium",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-05",
+      "Die Modelle sind geschützt (gated): Das Setup verlangt eine Anmeldung bei Hugging Face und die Annahme einer Lizenz.",
+      "Setup",
+      "observed",
+      "Medium",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-06",
+      "Die Herstellerquellen widersprechen sich zu Macs: Ältere Hilfeseiten sagen nur API, die README beschreibt lokale Generierung ab 32 GiB.",
+      "Dokumentation",
+      "third-party",
+      "Medium",
+      []
+    ],
+    [
+      "LTX-07",
+      "Der Installer ist klein (etwa 700 MB) im Vergleich zu den Modellen (129,1 GB).",
+      "Installation",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LTX-08",
+      "Der erste Start verlief laut Tester reibungslos.",
+      "Start",
+      "tester-view",
+      "Positive",
+      [
+        "splash"
+      ]
+    ]
+  ],
+  "severity_note": "Der Schweregrad bezeichnet die Auswirkung auf einen Erstnutzer. Vorgeschlagen, nicht gemessen.",
+  "audience": {
+    "fits": [
+      [
+        "vendor-claim",
+        "Macs mit Apple Silicon und 48 GB oder mehr für die volle lokale Generierung, laut Hersteller-README (nicht überprüft)."
+      ],
+      [
+        "vendor-claim",
+        "Windows- und Linux-PCs mit einer NVIDIA-GPU mit 24 GB oder mehr VRAM, laut Hersteller-README (nicht überprüft)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "Macs mit 24 GB Unified Memory, laut Tester."
+      ],
+      [
+        "assumption",
+        "Alle mit weniger als etwa 130 GB freiem Speicherplatz, die den vollständigen Modellsatz wollen."
+      ]
+    ],
+    "retest": "Neutest auf einem Mac mit 48 GB oder mehr Speicher und mindestens 150 GB freiem Speicherplatz; zuvor App- und macOS-Version erfassen. Prüfen, was die App im aktuellen Release auf einem Mac mit 24 GB tut: ob sie „Coming soon to your device“ zeigt oder den Download anbietet. Nicht getestet: Anmeldung, Download, Generierung, Deinstallation."
+  },
+  "background_intro": "Nicht aus der Praxis. Die folgenden Punkte stammen vom Startbildschirm, der GitHub-README des Herstellers und den Notizen des Testers. Die README wurde am 20. Oktober 2026 mit einem Web-Fetch-Werkzeug gelesen, das Seiten zusammenfasst, und nicht unabhängig überprüft.",
+  "background": [
+    [
+      "observed",
+      "Der Startbildschirm nennt Lightricks als Hersteller („© 2026 Lightricks“)."
+    ],
+    [
+      "vendor-claim",
+      "Die README ist die eigene Projektseite des Herstellers für LTX Desktop auf GitHub (Lightricks/LTX-Desktop). Sie nennt die Systemuntergrenzen und den Speicherplatzbedarf, die unter „Was der Hersteller sagt“ zusammengefasst sind."
+    ],
+    [
+      "third-party",
+      "Ältere Hilfecenter-Seiten, die eine Websuche zutage förderte, beschreiben die Generierung auf dem Mac als nur über die API; sie wurden nicht geöffnet (die Seite lieferte einen Fehler) und sind möglicherweise veraltet."
+    ],
+    [
+      "third-party",
+      "Die Statistiken zu Speicherstufen in den Notizen des Testers werden „Google“ zugeschrieben, ohne Quelle."
+    ]
+  ],
+  "sources": [
+    "Hands-on-Notizen des Testers und zwei Screenshots vom 20. Oktober 2026 (Originaldokument in Word „LTX desktop“; PDF der Rohnotizen folgt).",
+    "Lightricks-README zu LTX Desktop auf GitHub (https://github.com/Lightricks/LTX-Desktop/blob/main/README.md), gelesen am 20. Oktober 2026 mit einem zusammenfassenden Web-Fetch-Werkzeug.",
+    "Hilfecenter-Seiten von Lightricks zu den Systemanforderungen von LTX Desktop, am 20. Oktober 2026 nur als Zusammenfassungen einer Websuche gesehen.",
+    "Vom Tester zitierte „Google“-Statistiken zu Speicherstufen; keine Quelle angegeben."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Beobachtet",
+      "meaning": "Aus erster Hand in der App, auf einem Screenshot oder in den Notizen des Testers gesehen."
+    },
+    "measured": {
+      "label": "Gemessen",
+      "meaning": "Ein Wert, der aus einem Dialog, Zähler oder Werkzeug abgelesen wurde, mit angegebener Zahl."
+    },
+    "tester-estimate": {
+      "label": "Tester-Schätzung",
+      "meaning": "Eigene Schätzung des Testers; nicht gestoppt oder gezählt."
+    },
+    "vendor-claim": {
+      "label": "Herstellerangabe",
+      "meaning": "Von der App, ihrem Store-Eintrag oder ihrer Website angegeben; nicht überprüft."
+    },
+    "third-party": {
+      "label": "Drittquelle",
+      "meaning": "Aus einer anderen Quelle (ein KI-Assistent, ein Artikel); hier nicht überprüft."
+    },
+    "assumption": {
+      "label": "Annahme",
+      "meaning": "Eine Schlussfolgerung. Sie kann falsch sein."
+    },
+    "tester-view": {
+      "label": "Tester-Meinung",
+      "meaning": "Urteil oder Meinung des Testers."
+    },
+    "tester-error": {
+      "label": "Tester-Fehler",
+      "meaning": "Wo dem Tester ein Fehler unterlaufen ist oder er etwas übersehen hat."
+    }
+  },
+  "images": [
+    {
+      "id": "setup",
+      "figure": 1,
+      "file": "ltx-desktop-setup-model-downloads-129-gb-32-gb-free.webp",
+      "path": "images/ltx-desktop-setup-model-downloads-129-gb-32-gb-free.webp",
+      "alt": "Setup-Bildschirm von LTX Desktop mit einem Hugging-Face-Anmeldefeld und fünf Modell-Downloads mit zusammen 129,1 GB, bei 32,9 GB verfügbar im Modellordner.",
+      "caption": "Setup-Bildschirm: Hugging-Face-Anmeldung, fünf Modell-Downloads (LTX 2.5 41,5 GB, Gemma-4-Textencoder 24,5 GB, Gemma-4-E2B-Prompt-Enhancer 9,6 GB, Z-Image-Turbo 28,9 GB, LoRAs 24,6 GB), Summe 129,1 GB, Modellordner mit 32,9 GB verfügbar.",
+      "role": "hero",
+      "width": 884,
+      "height": 508,
+      "bytes": 21968,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "measured",
+      "used_in": [
+        "hero",
+        "chapter-setup"
+      ],
+      "subject": "Screenshot der App LTX Desktop",
+      "rights": "Eigener Screenshot des Testers von der Oberfläche einer Drittanbieter-Software.",
+      "captured": "20.10.2026 oder früher; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "LTX_desktop.docx, screenshot 2 (setup)"
+    },
+    {
+      "id": "splash",
+      "figure": 2,
+      "file": "ltx-desktop-launch-splash-screen-loading-bar.webp",
+      "path": "images/ltx-desktop-launch-splash-screen-loading-bar.webp",
+      "alt": "Startbildschirm von LTX Desktop mit dem App-Namen, einem Ladebalken und dem Text „© 2026 Lightricks“.",
+      "caption": "Erster Start: Startbildschirm mit Ladebalken.",
+      "role": "moment",
+      "width": 1431,
+      "height": 860,
+      "bytes": 7848,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-launch"
+      ],
+      "subject": "Screenshot der App LTX Desktop",
+      "rights": "Eigener Screenshot des Testers von der Oberfläche einer Drittanbieter-Software.",
+      "captured": "20.10.2026 oder früher; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "LTX_desktop.docx, screenshot 1 (splash)"
+    }
+  ],
+  "figure_order": [
+    "setup",
+    "splash"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum Praxistest · {app} · {date}",
+    "date_line": "20. Oktober 2026",
+    "nav_aria": "Abschnitte",
+    "nav": {
+      "verdict": "Fazit",
+      "moments": "Sechs Momente",
+      "story": "Ablauf",
+      "claims": "Angaben",
+      "fit": "24 GB",
+      "log": "Nutzungsprotokoll",
+      "errors": "Tester-Fehler",
+      "findings": "Befunde",
+      "background": "Hintergrund"
+    },
+    "related": "Siehe auch:",
+    "review_link": "PromptQuorum-Review zu {app}",
+    "directory_link": "Verzeichnis lokaler KI-Apps",
+    "verdict_h": "Fazit",
+    "general_assessment": "Gesamteinschätzung",
+    "fit_for_tester": "Eignung für den Einsatz des Testers",
+    "scorecard": "Bewertungsübersicht",
+    "status_prefix": "Status:",
+    "na": "k. A.",
+    "score_aria": "{n} von 5",
+    "details_h": "Testdetails",
+    "label_intro": "Jede Aussage trägt eine Kennzeichnung:",
+    "legend_link": "Was die Kennzeichnungen bedeuten",
+    "disclosure_label": "Offenlegung.",
+    "raw_notes": "PDF der Rohnotizen:",
+    "to_be_added": "folgt",
+    "moments_h": "Sechs Momente, die diesen Test geprägt haben",
+    "see_context": "Im Zusammenhang ansehen",
+    "story_h": "Wie der Test verlief",
+    "claims_h": "Angaben im Vergleich zu dem, was der Tester sah",
+    "claims_cols": [
+      "Angabe",
+      "Quelle",
+      "Beobachtung",
+      "Kennzeichnung"
+    ],
+    "fit_h": "Passt es in 24 GB?",
+    "memory_line": "{gb} GB Speicher",
+    "above": "über {gb} GB",
+    "below": "unter {gb} GB",
+    "log_h": "Nutzungsprotokoll",
+    "log_cols": [
+      "#",
+      "Aufgabe",
+      "Modell",
+      "Ergebnis",
+      "Zeit",
+      "Status",
+      "Abbildungen"
+    ],
+    "statuses": {
+      "Fail": "Fehlgeschlagen",
+      "Partial": "Teilweise",
+      "Pass": "Bestanden",
+      "Not completed": "Nicht abgeschlossen"
+    },
+    "errors_h": "Wo der Tester sich geirrt hat",
+    "findings_h": "Befundregister",
+    "filter_aria": "Befunde nach Kennzeichnung filtern",
+    "filter_all": "Alle",
+    "findings_cols": [
+      "ID",
+      "Befund",
+      "Kategorie",
+      "Kennzeichnung",
+      "Schweregrad",
+      "Abbildungen"
+    ],
+    "severities": {
+      "High": "Hoch",
+      "Medium": "Mittel",
+      "Low": "Niedrig",
+      "Positive": "Positiv"
+    },
+    "fig_abbr": "Abb.",
+    "figure": "Abbildung",
+    "enlarge": "Vergrößern:",
+    "audience_h": "Für wen es gedacht ist",
+    "likely_fit": "Voraussichtlich geeignet",
+    "likely_poor_fit": "Voraussichtlich weniger geeignet",
+    "retest": "Neutest.",
+    "background_h": "Hintergrund zum Hersteller",
+    "gallery_h": "Mehr aus dem Test",
+    "legend_h": "So lesen Sie die Kennzeichnungen",
+    "sources_h": "Quellen",
+    "footer_line": "Test-ID {id} · Teststandard v{version} · PDF der Rohnotizen: folgt",
+    "crumb_home": "Startseite",
+    "crumb_directory": "Verzeichnis",
+    "crumb_test": "{app} Praxistest",
+    "faq_h": "Häufige Fragen",
+    "more_tests_h": "Weitere Praxistests"
+  }
+}

@@ -37,6 +37,15 @@ import unslothEs from './data/unsloth.es.json'
 import unslothPt from './data/unsloth.pt.json'
 import unslothAr from './data/unsloth.ar.json'
 import unslothKo from './data/unsloth.ko.json'
+import ltxDesktop from './data/ltx-desktop.json'
+import ltxDesktopDe from './data/ltx-desktop.de.json'
+import ltxDesktopFr from './data/ltx-desktop.fr.json'
+import ltxDesktopJa from './data/ltx-desktop.ja.json'
+import ltxDesktopZh from './data/ltx-desktop.zh.json'
+import ltxDesktopEs from './data/ltx-desktop.es.json'
+import ltxDesktopPt from './data/ltx-desktop.pt.json'
+import ltxDesktopAr from './data/ltx-desktop.ar.json'
+import ltxDesktopKo from './data/ltx-desktop.ko.json'
 import drawThingsDe from './data/draw-things.de.json'
 import drawThingsFr from './data/draw-things.fr.json'
 import drawThingsJa from './data/draw-things.ja.json'
@@ -246,6 +255,17 @@ const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
     pt: mstyPt as unknown as HandsOnTest,
     ar: mstyAr as unknown as HandsOnTest,
     ko: mstyKo as unknown as HandsOnTest,
+  },
+  'ltx-desktop': {
+    en: ltxDesktop as unknown as HandsOnTest,
+    de: ltxDesktopDe as unknown as HandsOnTest,
+    fr: ltxDesktopFr as unknown as HandsOnTest,
+    ja: ltxDesktopJa as unknown as HandsOnTest,
+    zh: ltxDesktopZh as unknown as HandsOnTest,
+    es: ltxDesktopEs as unknown as HandsOnTest,
+    pt: ltxDesktopPt as unknown as HandsOnTest,
+    ar: ltxDesktopAr as unknown as HandsOnTest,
+    ko: ltxDesktopKo as unknown as HandsOnTest,
   },
   unsloth: {
     en: unsloth as unknown as HandsOnTest,

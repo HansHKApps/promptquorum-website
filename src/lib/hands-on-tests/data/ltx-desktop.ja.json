@@ -1,0 +1,752 @@
+{
+  "id": "pq-test-ltx-desktop-2026-10-20",
+  "hero": "setup",
+  "date_human": "2026年10月20日",
+  "captured": "2026-10-20 or earlier; exact times not recorded",
+  "standard_version": "0.1",
+  "locale": "ja",
+  "app": {
+    "name": "LTX Desktop",
+    "slug": "ltx-desktop",
+    "vendor": "Lightricks (splash screen: © 2026 Lightricks)",
+    "category": "Local AI video generation",
+    "platform": "macOS",
+    "pricing_url": "https://github.com/Lightricks/LTX-Desktop"
+  },
+  "title": "24 GBのMacでLTX Desktop：ベンダーのメモリ下限を下回り、セットアップで中断",
+  "page_title": "LTX Desktop Test",
+  "dek": "24 GBのMacでの実機テストです。アプリの起動は滑らかでしたが、セットアップ画面で129.1 GBのモデルダウンロードを求められ、テスターは断念しました。彼によれば、24 GBのメモリではこのアプリには足りません。",
+  "seo": {
+    "title": "LTX Desktop実機テスト：24 GBのMacでセットアップ中断",
+    "description": "24 GBのMacでLTX Desktopを実機テスト。セットアップは129.1 GBのモデルを要求し、ベンダーのメモリ下限にも届かず、テストはそこで終了。"
+  },
+  "faq": [
+    [
+      "24 GBのMacでLTX Desktopは動きますか？",
+      "テスターはセットアップ画面で手を止め、自分の24 GBのMacでは動かないと結論づけました。テストは生成まで進んでいません。LightricksのREADMEは、macOSでのローカル生成にRAM合計32 GiBを下限として挙げています。",
+      "tester-view"
+    ],
+    [
+      "LTX Desktopにはどのくらいのディスク容量が必要ですか？",
+      "セットアップ画面には合計129.1 GBの5件のモデルダウンロードが並び、テスト用Macの空き容量は32.9 GBと表示されていました。READMEは、空きディスク容量100 GB以上、LoRAを使う場合は最大160 GBを求めています。",
+      "measured"
+    ],
+    [
+      "LTX Desktopのインストーラーの大きさは？",
+      "テスターが読み取った値で約700 MBです。モデルはセットアップ中に別途ダウンロードされ、はるかに大きくなります。",
+      "observed"
+    ],
+    [
+      "LTX DesktopにHugging Faceのアカウントは必要ですか？",
+      "セットアップ画面は、限定公開（gated）のモデルをダウンロードするために、Hugging Faceへのサインインとライセンスへの同意を求めます。テストはサインインの前に終了しました。",
+      "observed"
+    ],
+    [
+      "LTX Desktopはセットアップ中に何をダウンロードしますか？",
+      "5件です：LTX 2.5（41.5 GB）、LTX 2.5の射影付きGemma 4テキストエンコーダー（24.5 GB）、Gemma 4 E2Bのinstructプロンプト強化モデル（9.6 GB）、テキストから画像へのモデルZ-Image-Turbo（28.9 GB）、LoRA（24.6 GB）。",
+      "measured"
+    ]
+  ],
+  "status": "Not completed",
+  "published": "2026-10-20",
+  "started": "2026-10-20",
+  "ended": null,
+  "meta": [
+    [
+      "アプリ",
+      "LightricksのLTX Desktop。スプラッシュ画面には'© 2026 Lightricks'と表示されます。",
+      "observed"
+    ],
+    [
+      "バージョン",
+      "記録なし。2枚のスクリーンショットにバージョンは表示されていません。",
+      null
+    ],
+    [
+      "テスター",
+      "Hans Kuepper（PromptQuorum創設者）",
+      null
+    ],
+    [
+      "開始",
+      "2026年10月20日（時刻は記録なし）。メモに日付はなく、これはWordファイルが提出された日です。",
+      "assumption"
+    ],
+    [
+      "終了",
+      "記録なし",
+      null
+    ],
+    [
+      "ハードウェア",
+      "メモには'Mac 4 Pro'とあります。標準のテストマシンはM3 Pro・24 GBのMacBook Proで、同じマシンと推定しています。24 GBという数値に疑いはなく、不確かなのはチップの世代です。",
+      "assumption"
+    ],
+    [
+      "システム",
+      "macOS。バージョンは記録なし。ベンダーのREADMEはmacOSのバージョンを挙げているため（「主張」を参照）、この欠落は重要です。",
+      null
+    ],
+    [
+      "入手元",
+      "インストーラーの入手元は記録なし",
+      null
+    ],
+    [
+      "ダウンロード",
+      "約700 MBのインストーラー（テスターが読み取った値）",
+      "observed"
+    ],
+    [
+      "テストの理由",
+      "メモには記載なし。",
+      null
+    ],
+    [
+      "目的",
+      "記載なし。メモから推定：ローカルの動画アプリをインストールし、24 GBのMacで試す。",
+      "assumption"
+    ],
+    [
+      "使用したAI支援",
+      "記録なし",
+      null
+    ]
+  ],
+  "disclosure": "テスターはPromptQuorum（promptquorum.com）の創設者です。PromptQuorumはローカルAIアプリに関するコンテンツサイト兼ディレクトリです。このテストの時点で、LTX Desktopにはサイト上のディレクトリ掲載もレビューもありません。メモには、ベンダーとの接触、金銭の授受、スポンサー関係の記録はありません。",
+  "verdict": {
+    "general": "評価なし：テストはセットアップ画面で終了し、動画も画像も作られていません。メモとスクリーンショットから分かること：初回起動は滑らかで、Hugging Faceへのサインインが必須で、モデル一覧の合計は129.1 GB、空き容量は32.9 GBです。テスターの結論は、ディスク容量が問題なのではなく、24 GBのユニファイドメモリではアプリを動かせない、というものです。ベンダーのREADMEも同じ方向を示しており、Macでのローカル生成の下限としてRAM合計32 GiBを挙げています。",
+    "fit": "テスターによれば、このマシンには向きません。最大の単一ダウンロード（LTX 2.5、41.5 GB）は24 GBのメモリより大きいですが、ダウンロードサイズと実行時に必要なメモリは同じではありません（推測）。2026年10月20日に読んだREADMEによると、24 GB未満のMacはクラウドAPIのみ、32 GBは540pと5秒までに制限され、完全なローカル生成には48 GB以上が挙げられています。それでもアプリは、この24 GBのMacにローカルモデルのダウンロードを提示しており、READMEはこれを説明していません（「テストの経過」を参照）。"
+  },
+  "scores": [
+    [
+      "インストール",
+      null,
+      "評価なし。インストーラーはダウンロードされ、アプリは起動した。セットアップは完了していない。"
+    ],
+    [
+      "導入とモデル選び",
+      null,
+      "評価なし。セットアップにはサイズ付きの5件のダウンロードと合計が表示される。Hugging Faceへのサインインが必須。"
+    ],
+    [
+      "中核機能",
+      null,
+      "未テスト。動画も画像も生成していない。"
+    ],
+    [
+      "ガイダンスと反復",
+      null,
+      "未テスト。"
+    ],
+    [
+      "パフォーマンス",
+      null,
+      "未テスト。"
+    ],
+    [
+      "ドキュメント",
+      null,
+      "未テスト。"
+    ],
+    [
+      "信頼性とプライバシー",
+      null,
+      "監査していません。"
+    ],
+    [
+      "アンインストール",
+      null,
+      "未テスト。"
+    ]
+  ],
+  "scores_note": "テストがセットアップで止まったため、スコアは付けていません。スコアを付けるには、アプリの中核機能まで進むテストが必要です。",
+  "tldr": [
+    [
+      "observed",
+      "アプリはブランドのスプラッシュ画面と読み込みバーとともに起動した。テスターは起動を滑らかだと評価している。"
+    ],
+    [
+      "measured",
+      "セットアップには129.1 GBのモデルダウンロードが並び、モデルフォルダのドライブの空きは32.9 GBと表示されている。"
+    ],
+    [
+      "tester-view",
+      "テスターはそこで手を止め、24 GBのMacではこのアプリは動かないと結論づけた。問題はディスクの片付けではなく、メモリの限界だという。"
+    ],
+    [
+      "vendor-claim",
+      "READMEは、macOSでのローカル生成にRAM合計32 GiBを下限として挙げている。テスト用Macは24 GB。アプリ内では未検証。"
+    ]
+  ],
+  "quotes": [
+    "そこで終わりました。この小さなノートパソコンでは動かせません。",
+    "これからはコンピューターがどんどん大きくなっていくのでしょう。モデルが良くなるにつれて、そのレベルのローカルAIを動かすには、より大きなコンピューターが必要になるだけです。"
+  ],
+  "quote_note": "テスターのメモ。書かれたとおりに引用。英語から翻訳。",
+  "moments_title": "このテストを形づくった6つの場面",
+  "moments_nav": "6つの場面",
+  "moments": [
+    [
+      "700 MBのインストーラー",
+      "インストーラーのファイルは約700 MBです。モデルは後から来ます。",
+      null,
+      "chapter-install"
+    ],
+    [
+      "滑らかな起動",
+      "アプリは読み込みバー付きのスプラッシュ画面で開きます。",
+      "splash",
+      "chapter-launch"
+    ],
+    [
+      "まずHugging Face",
+      "セットアップは、限定公開モデルをダウンロードするために、Hugging Faceへのサインインとライセンスへの同意を求めます。",
+      "setup",
+      "chapter-setup"
+    ],
+    [
+      "5件で129.1 GB",
+      "モデル一覧：LTX 2.5、Gemma 4テキストエンコーダー、Gemma 4 E2Bプロンプト強化モデル、Z-Image-Turbo、LoRA。",
+      "setup",
+      "chapter-setup"
+    ],
+    [
+      "空き32.9 GB",
+      "同じ画面には、モデルフォルダのドライブの空き容量32.9 GBが表示されています。",
+      "setup",
+      "chapter-setup"
+    ],
+    [
+      "そこで終了",
+      "'そこで終わりました。この小さなノートパソコンでは動かせません。'ダウンロードも生成もなし。",
+      null,
+      "chapter-stop"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "インストーラー",
+      "items": [
+        [
+          "observed",
+          "インストーラーは約700 MBのファイルです。",
+          null
+        ],
+        [
+          "assumption",
+          "入手元はメモに記載がありません。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-launch",
+      "title": "初回起動",
+      "items": [
+        [
+          "observed",
+          "アプリはスプラッシュ画面で開きます：'LTX Desktop'、読み込みバー、下部に'© 2026 Lightricks'。",
+          "splash"
+        ],
+        [
+          "tester-view",
+          "'滑らか。'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-setup",
+      "title": "セットアップ画面",
+      "items": [
+        [
+          "observed",
+          "セットアップ画面には'Hugging Face access'の枠があり、'Sign in and accept the license to download gated models.'とSign inボタンが表示されます。テスターはサインインしていません。",
+          "setup"
+        ],
+        [
+          "measured",
+          "'Model downloads'の下に5件にチェックが入っています：LTX 2.5（41.5 GB）、LTX 2.5の射影付きGemma 4テキストエンコーダー（24.5 GB）、Gemma 4 E2B instructプロンプト強化モデル、フォルダ（9.6 GB）、テキストから画像を生成するZ-Image-Turboモデル（28.9 GB）、LoRA（24.6 GB）。画面には'Total: 129.1 GB'と表示されています。",
+          null
+        ],
+        [
+          "measured",
+          "モデルフォルダは/Users/hanskuepper/Library/Application Support/LTXDesktop/modelsで、'32.9 GB available'と表示されています。フォルダはChangeボタンで変更できます。",
+          null
+        ],
+        [
+          "assumption",
+          "129.1 GBは32.9 GBより96.2 GB多い。アプリがダウンロードをブロックするのか、警告するのか、途中で失敗させるのかは、テストしていません。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-stop",
+      "title": "テストが止まった理由",
+      "items": [
+        [
+          "tester-view",
+          "'そこで終わりました。この小さなノートパソコンでは動かせません。'",
+          null
+        ],
+        [
+          "tester-view",
+          "テスターの理由はメモリです。彼のMacのユニファイドメモリは24 GBで、このアプリには少なすぎると考えています。ディスク容量を空けても変わらない、と彼は述べています。",
+          null
+        ],
+        [
+          "assumption",
+          "最大の単一ダウンロード（LTX 2.5、41.5 GB）は24 GBより大きい。ダウンロードサイズは実行中に必要なメモリと同じではありません。アプリは重みを分割して読み込んだり圧縮したりできるためで、メモリの測定は行っていません。",
+          null
+        ],
+        [
+          "observed",
+          "ダウンロードは開始されず、生成も試されておらず、どちらのスクリーンショットにもメモリの警告は表示されていません。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-vendor",
+      "title": "ベンダーの説明（2026年10月20日に確認）",
+      "items": [
+        [
+          "vendor-claim",
+          "GitHubのREADME（Lightricks/LTX-Desktop）はmacOSについて次のように挙げています：完全なローカル生成にはApple Silicon（M1以降）で48 GB以上、32 GBは540pと5秒まで、24 GB未満およびIntel MacはGen Space APIのみ。アプリにはmacOS 14以降が必要です。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "READMEはさらに、Macでのローカル生成の下限として、RAM合計32 GiBとmacOS 26以降を挙げています。これらを下回ると、アプリは生成ツールの代わりに'Coming soon to your device'という通知を表示します。すべてのプラットフォームで空きディスク容量100 GB以上が必要で、LoRAを使う場合は最大160 GB以上です。開始にLTX APIキーは必要ありません。",
+          null
+        ],
+        [
+          "observed",
+          "テスト用Macは24 GBでREADMEの32 GiBの下限を下回っていますが、アプリはローカルモデルのダウンロードを表示し、スクリーンショットに'Coming soon'の通知はありませんでした。macOSとアプリのバージョンが記録されていないため、両者を比較できません。",
+          null
+        ],
+        [
+          "third-party",
+          "検索結果には、Lightricksの古いヘルプセンターのページも表示されました。要約によれば、Macでは生成はLTX API経由で行われ、Mac上のローカル推論はまだ未対応で、ユニファイドメモリ16 GB以上が必要とされています。ヘルプセンターのページ自体は開くとエラーになったため、これは又聞きであり、古い可能性があります。",
+          null
+        ],
+        [
+          "assumption",
+          "READMEとスクリーンショットは、異なるバージョンのアプリについて述べている可能性があります。テスターのビルドにどちらが当てはまるかは不明です。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "セットアップに129.1 GBのモデルが必要",
+      "アプリのセットアップ画面",
+      "一覧の5つのサイズを足すと129.1 GBになり、表示された合計と一致する。",
+      "measured"
+    ],
+    [
+      "空きディスク容量100 GB以上が必要、LoRAを使う場合は最大160 GB以上",
+      "ベンダーのREADME、2026年10月20日に確認",
+      "セットアップ画面の合計（129.1 GB）はこの範囲に収まる。ディスク容量は、テスターが述べた中止の理由ではない。",
+      "vendor-claim"
+    ],
+    [
+      "Macでのローカル生成にはRAM合計32 GiBが必要。完全なローカル生成には48 GB以上。24 GB未満はクラウドAPIのみ",
+      "ベンダーのREADME、2026年10月20日に確認",
+      "未テスト。テスト用Macは24 GB。それでもアプリはローカルモデルのダウンロードを表示した。",
+      "vendor-claim"
+    ],
+    [
+      "macOSでは生成はLTX API経由。ローカル推論は未対応",
+      "古いヘルプセンターのページ、又聞き",
+      "ローカルモデルのダウンロードを提示するセットアップ画面と食い違う。アプリのバージョンが異なる可能性がある。",
+      "third-party"
+    ],
+    [
+      "32 GB以上のメモリを持つMacBookユーザーは10〜15%未満。64 GB以上は3〜5%未満。64 GB以上を持つWindowsマシンは1〜2%未満",
+      "テスターのメモ、出典は'Google'とだけ記載",
+      "調査、発行元、日付の記載なし。ここでは確認していない。",
+      "third-party"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 45,
+    "rows": [
+      [
+        "LTX 2.5",
+        41.5,
+        "41.5 GB",
+        "measured"
+      ],
+      [
+        "LTX 2.5の射影付きGemma 4テキストエンコーダー",
+        24.5,
+        "24.5 GB",
+        "measured"
+      ],
+      [
+        "Gemma 4 E2B instructプロンプト強化モデル",
+        9.6,
+        "9.6 GB",
+        "measured"
+      ],
+      [
+        "Z-Image-Turbo",
+        28.9,
+        "28.9 GB",
+        "measured"
+      ],
+      [
+        "LoRA",
+        24.6,
+        "24.6 GB",
+        "measured"
+      ]
+    ],
+    "note": "これらはセットアップ画面のダウンロードサイズであり、実行中に使うメモリではありません。アプリは重みを分割して読み込むことがあります（推測）。5件の合計は129.1 GBで、グラフには収まりません。テスト用Macのユニファイドメモリは24 GBです。何も実行していないため、メモリの測定値はありません。"
+  },
+  "usage_log": [
+    [
+      "アプリのセットアップとモデルのダウンロード",
+      "該当なし",
+      "セットアップ画面で停止、ダウンロードなし",
+      "記録なし",
+      "Not completed",
+      [
+        "setup"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "インストール前に、アプリの要件を24 GBのMacと照らし合わせなかった。不一致はセットアップ画面で初めて分かった。"
+    ],
+    [
+      "tester-error",
+      "ハードウェアを'Mac 4 Pro'と書いた。標準マシンはM3 Pro・24 GBで、同じマシンと推定しており、チップの世代は未確認。"
+    ],
+    [
+      "tester-error",
+      "記録に抜けがある：アプリのバージョン、macOSのバージョン、開始・終了時刻、インストーラーの入手元。"
+    ],
+    [
+      "assumption",
+      "セットアップ画面に表示されるのはディスク容量であり、メモリの数値ではない。メモリについての結論はテスター自身のもので、ベンダーのREADMEが裏づけているが、メモリのエラーは確認されていない。"
+    ]
+  ],
+  "findings": [
+    [
+      "LTX-01",
+      "ベンダーのREADMEは、Macでのローカル生成の下限としてRAM合計32 GiBを挙げている。テスト用Macは24 GB。",
+      "システム要件",
+      "vendor-claim",
+      "High",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-02",
+      "テスターは、24 GBのユニファイドメモリではアプリを動かせないと結論づけている。最大の単一モデルダウンロード（41.5 GB）は24 GBより大きい。",
+      "システム要件",
+      "tester-view",
+      "High",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-03",
+      "セットアップ画面は24 GBのMacに129.1 GBのモデルダウンロードを提示し、スクリーンショットにメモリの警告は見当たらない。",
+      "セットアップ",
+      "observed",
+      "High",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-04",
+      "必要な合計（129.1 GB）は表示された空き容量（32.9 GB）を大きく上回る。アプリがブロックするのか警告するのかはテストしていない。",
+      "セットアップ",
+      "observed",
+      "Medium",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-05",
+      "モデルは限定公開：セットアップにはHugging Faceへのサインインとライセンスへの同意が必要。",
+      "セットアップ",
+      "observed",
+      "Medium",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-06",
+      "ベンダーの情報源はMacについて食い違っている：古いヘルプページはAPIのみ、READMEは32 GiBからのローカル生成を説明している。",
+      "ドキュメント",
+      "third-party",
+      "Medium",
+      []
+    ],
+    [
+      "LTX-07",
+      "インストーラーは小さい（約700 MB）が、モデル（129.1 GB）と比べるとその差は大きい。",
+      "インストール",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LTX-08",
+      "初回起動は、テスターによれば滑らかだった。",
+      "起動",
+      "tester-view",
+      "Positive",
+      [
+        "splash"
+      ]
+    ]
+  ],
+  "severity_note": "重大度は、初めて使う人への影響度です。案であり、実測値ではありません。",
+  "audience": {
+    "fits": [
+      [
+        "vendor-claim",
+        "完全なローカル生成には、Apple Siliconで48 GB以上のMac。ベンダーのREADMEによる（未検証）。"
+      ],
+      [
+        "vendor-claim",
+        "VRAM 24 GB以上のNVIDIA GPUを搭載したWindowsおよびLinuxのPC。ベンダーのREADMEによる（未検証）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "ユニファイドメモリ24 GBのMac。テスターによる。"
+      ],
+      [
+        "assumption",
+        "モデル一式を使いたいが、空きディスクが約130 GB未満の人。"
+      ]
+    ],
+    "retest": "メモリ48 GB以上、空きディスク150 GB以上のMacで再テストし、先にアプリとmacOSのバージョンを記録してください。現行リリースで24 GBのMacに対してアプリがどう動作するか（'Coming soon to your device'を表示するのか、ダウンロードを提示するのか）も確認してください。未テスト：サインイン、ダウンロード、生成、アンインストール。"
+  },
+  "background_intro": "実機テストには含まれていません。以下の項目は、スプラッシュ画面、ベンダーのGitHub README、テスターのメモに由来します。READMEは2026年10月20日に、ページを要約するウェブ取得ツールで読み取ったもので、独立した検証はしていません。",
+  "background": [
+    [
+      "observed",
+      "スプラッシュ画面は、開発元としてLightricksを示している（'© 2026 Lightricks'）。"
+    ],
+    [
+      "vendor-claim",
+      "READMEは、GitHub上のLTX Desktopのベンダー自身のプロジェクトページ（Lightricks/LTX-Desktop）。システム下限とディスク容量の要件は「ベンダーの説明」にまとめている。"
+    ],
+    [
+      "third-party",
+      "ウェブ検索で見つかった古いヘルプセンターのページは、Macでの生成をAPIのみと説明している。ページがエラーになったため開いておらず、古い可能性がある。"
+    ],
+    [
+      "third-party",
+      "テスターのメモにあるメモリ階層の統計は、出典なしで'Google'とされている。"
+    ]
+  ],
+  "sources": [
+    "テスターの実機テストのメモと2枚のスクリーンショット、2026年10月20日（元のWordドキュメント「LTX desktop」。元メモのPDFは追加予定）。",
+    "GitHub上のLightricks LTX Desktop README（https://github.com/Lightricks/LTX-Desktop/blob/main/README.md）、2026年10月20日に要約型のウェブ取得ツールで確認。",
+    "LTX Desktopのシステム要件に関するLightricksヘルプセンターのページ。2026年10月20日にウェブ検索の要約として見ただけ。",
+    "テスターが引用した、メモリ階層に関する'Google'の統計。出典の記載なし。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "観察",
+      "meaning": "アプリ、スクリーンショット、またはテスターのメモの中で、直接確認したもの。"
+    },
+    "measured": {
+      "label": "実測",
+      "meaning": "ダイアログ、カウンター、ツールから読み取った値。数値を併記。"
+    },
+    "tester-estimate": {
+      "label": "テスターの推定",
+      "meaning": "テスター自身の推定。計時や計数はしていない。"
+    },
+    "vendor-claim": {
+      "label": "ベンダーの主張",
+      "meaning": "アプリ、ストア掲載情報、またはウェブサイトが述べていること。未検証。"
+    },
+    "third-party": {
+      "label": "第三者情報",
+      "meaning": "別の情報源（AIアシスタント、記事など）によるもの。ここでは未検証。"
+    },
+    "assumption": {
+      "label": "推測",
+      "meaning": "推論です。誤りの可能性があります。"
+    },
+    "tester-view": {
+      "label": "テスターの見解",
+      "meaning": "テスターの判断または意見。"
+    },
+    "tester-error": {
+      "label": "テスターの誤り",
+      "meaning": "テスターが間違えた、または見落とした点。"
+    }
+  },
+  "images": [
+    {
+      "id": "setup",
+      "figure": 1,
+      "file": "ltx-desktop-setup-model-downloads-129-gb-32-gb-free.webp",
+      "path": "images/ltx-desktop-setup-model-downloads-129-gb-32-gb-free.webp",
+      "alt": "LTX Desktopのセットアップ画面。Hugging Faceのサインイン枠と、合計129.1 GBの5件のモデルダウンロード、モデルフォルダの空き容量32.9 GB。",
+      "caption": "セットアップ画面：Hugging Faceサインイン、5件のモデルダウンロード（LTX 2.5 41.5 GB、Gemma 4テキストエンコーダー 24.5 GB、Gemma 4 E2Bプロンプト強化モデル 9.6 GB、Z-Image-Turbo 28.9 GB、LoRA 24.6 GB）、合計129.1 GB、モデルフォルダの空き32.9 GB。",
+      "role": "hero",
+      "width": 884,
+      "height": 508,
+      "bytes": 21968,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "measured",
+      "used_in": [
+        "hero",
+        "chapter-setup"
+      ],
+      "subject": "LTX Desktopアプリのスクリーンショット",
+      "rights": "テスター自身によるサードパーティ製ソフトウェアUIのスクリーンショット。",
+      "captured": "2026年10月20日以前、正確な時刻は記録なし",
+      "original_docx_media": "LTX_desktop.docx, screenshot 2 (setup)"
+    },
+    {
+      "id": "splash",
+      "figure": 2,
+      "file": "ltx-desktop-launch-splash-screen-loading-bar.webp",
+      "path": "images/ltx-desktop-launch-splash-screen-loading-bar.webp",
+      "alt": "アプリ名、読み込みバー、'© 2026 Lightricks'の文字があるLTX Desktopのスプラッシュ画面。",
+      "caption": "初回起動：読み込みバー付きのスプラッシュ画面。",
+      "role": "moment",
+      "width": 1431,
+      "height": 860,
+      "bytes": 7848,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-launch"
+      ],
+      "subject": "LTX Desktopアプリのスクリーンショット",
+      "rights": "テスター自身によるサードパーティ製ソフトウェアUIのスクリーンショット。",
+      "captured": "2026年10月20日以前、正確な時刻は記録なし",
+      "original_docx_media": "LTX_desktop.docx, screenshot 1 (splash)"
+    }
+  ],
+  "figure_order": [
+    "setup",
+    "splash"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum ハンズオンテスト · {app} · {date}",
+    "date_line": "2026年10月20日",
+    "nav_aria": "セクション",
+    "nav": {
+      "verdict": "結論",
+      "moments": "6つの場面",
+      "story": "経過",
+      "claims": "主張",
+      "fit": "24 GB",
+      "log": "利用ログ",
+      "errors": "テスターの誤り",
+      "findings": "所見",
+      "background": "背景"
+    },
+    "related": "関連：",
+    "review_link": "{app}のPromptQuorumレビュー",
+    "directory_link": "ローカルAIアプリディレクトリ",
+    "verdict_h": "結論",
+    "general_assessment": "総合評価",
+    "fit_for_tester": "テスターの用途への適合度",
+    "scorecard": "スコアカード",
+    "status_prefix": "ステータス：",
+    "na": "該当なし",
+    "score_aria": "5点満点中{n}点",
+    "details_h": "テストの詳細",
+    "label_intro": "すべての記述にラベルが付いています：",
+    "legend_link": "ラベルの意味",
+    "disclosure_label": "開示事項。",
+    "raw_notes": "元ノートのPDF：",
+    "to_be_added": "追加予定",
+    "moments_h": "このテストを形作った6つの場面",
+    "see_context": "文脈の中で見る",
+    "story_h": "テストの経過",
+    "claims_h": "主張とテスターが確認した内容",
+    "claims_cols": [
+      "主張",
+      "出典",
+      "確認した内容",
+      "ラベル"
+    ],
+    "fit_h": "24 GBに収まるか",
+    "memory_line": "{gb} GBメモリ",
+    "above": "{gb} GB超",
+    "below": "{gb} GB未満",
+    "log_h": "利用ログ",
+    "log_cols": [
+      "#",
+      "タスク",
+      "モデル",
+      "結果",
+      "時間",
+      "ステータス",
+      "図"
+    ],
+    "statuses": {
+      "Fail": "失敗",
+      "Partial": "一部成功",
+      "Pass": "合格",
+      "Not completed": "未完了"
+    },
+    "errors_h": "テスターが誤った点",
+    "findings_h": "所見一覧",
+    "filter_aria": "ラベルで所見を絞り込む",
+    "filter_all": "すべて",
+    "findings_cols": [
+      "ID",
+      "所見",
+      "カテゴリ",
+      "ラベル",
+      "重要度",
+      "図"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "良好"
+    },
+    "fig_abbr": "図",
+    "figure": "図",
+    "enlarge": "拡大：",
+    "audience_h": "こんな人に向いています",
+    "likely_fit": "向いている可能性が高い人",
+    "likely_poor_fit": "向いていない可能性が高い人",
+    "retest": "再テスト。",
+    "background_h": "開発元の背景",
+    "gallery_h": "テストからのその他の画像",
+    "legend_h": "ラベルの見方",
+    "sources_h": "出典",
+    "footer_line": "テストID {id} · テスト標準 v{version} · 元ノートのPDF：追加予定",
+    "crumb_home": "ホーム",
+    "crumb_directory": "ディレクトリ",
+    "crumb_test": "{app} ハンズオンテスト",
+    "faq_h": "よくある質問",
+    "more_tests_h": "ほかの実機テスト"
+  }
+}

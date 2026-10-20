@@ -1,0 +1,752 @@
+{
+  "id": "pq-test-ltx-desktop-2026-10-20",
+  "hero": "setup",
+  "date_human": "2026년 10월 20일",
+  "captured": "2026-10-20일 또는 그 이전, 정확한 시각은 기록 없음",
+  "standard_version": "0.1",
+  "locale": "ko",
+  "app": {
+    "name": "LTX Desktop",
+    "slug": "ltx-desktop",
+    "vendor": "Lightricks (splash screen: © 2026 Lightricks)",
+    "category": "로컬 AI 동영상 생성",
+    "platform": "macOS",
+    "pricing_url": "https://github.com/Lightricks/LTX-Desktop"
+  },
+  "title": "24 GB Mac에서 LTX Desktop: 설정 단계에서 멈췄고, 업체가 제시한 메모리 최소 사양에 못 미쳤습니다",
+  "page_title": "LTX Desktop 테스트",
+  "dek": "24 GB Mac에서의 직접 사용 테스트. 앱은 매끄럽게 실행되었지만, 설정 화면이 129.1 GB의 모델 내려받기를 요구했고 테스터는 여기서 포기했습니다. 테스터는 24 GB 메모리로는 이 앱을 쓰기에 부족하다고 말합니다.",
+  "seo": {
+    "title": "LTX Desktop 직접 테스트: 24 GB Mac, 설정에서 중단",
+    "description": "24 GB Mac에서 LTX Desktop을 직접 테스트했습니다. 설정이 모델 129.1 GB를 요구했고 업체의 메모리 기준이 더 높아 테스트는 거기서 끝났습니다."
+  },
+  "faq": [
+    [
+      "24 GB Mac에서 LTX Desktop을 실행할 수 있나요?",
+      "테스터는 설정 화면에서 멈췄고, 24 GB Mac으로는 실행할 수 없다고 결론지었습니다. 테스트는 생성 단계까지 가지 못했습니다. Lightricks의 README는 macOS에서 로컬 생성에 필요한 최소 사양으로 총 RAM 32 GiB를 제시합니다.",
+      "tester-view"
+    ],
+    [
+      "LTX Desktop에는 디스크 공간이 얼마나 필요한가요?",
+      "설정 화면에는 모델 내려받기 다섯 가지가 합계 129.1 GB로 표시되었고, 테스트 Mac의 사용 가능 공간은 32.9 GB였습니다. README는 여유 디스크 공간 100 GB 이상, LoRA를 포함하면 최대 160 GB를 요구합니다.",
+      "measured"
+    ],
+    [
+      "LTX Desktop 설치 파일은 얼마나 큰가요?",
+      "테스터가 읽은 값으로 약 700 MB입니다. 모델은 설정 중에 별도로 내려받으며 훨씬 큽니다.",
+      "observed"
+    ],
+    [
+      "LTX Desktop을 쓰려면 Hugging Face 계정이 필요한가요?",
+      "설정 화면은 접근이 제한된 모델을 내려받기 위해 Hugging Face에 로그인하고 라이선스에 동의하라고 안내합니다. 테스트는 로그인 전에 중단되었습니다.",
+      "observed"
+    ],
+    [
+      "LTX Desktop은 설정 중에 무엇을 내려받나요?",
+      "다섯 가지입니다. LTX 2.5(41.5 GB), LTX 2.5 프로젝션이 포함된 Gemma 4 텍스트 인코더(24.5 GB), Gemma 4 E2B 인스트럭트 프롬프트 개선기(9.6 GB), Z-Image-Turbo 텍스트-이미지 모델(28.9 GB), LoRA(24.6 GB)입니다.",
+      "measured"
+    ]
+  ],
+  "status": "Not completed",
+  "published": "2026-10-20",
+  "started": "2026-10-20",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "LTX Desktop, Lightricks 제작. 시작 화면에 '© 2026 Lightricks'라고 표시됩니다.",
+      "observed"
+    ],
+    [
+      "Version",
+      "기록 없음. 스크린샷 두 장 어디에도 앱 버전이 표시되어 있지 않습니다.",
+      null
+    ],
+    [
+      "Tester",
+      "Hans Kuepper, PromptQuorum 설립자",
+      null
+    ],
+    [
+      "Started",
+      "2026년 10월 20일(시각은 기록 없음). 메모에는 날짜가 없으며, 이 날짜는 Word 파일이 제출된 날입니다.",
+      "assumption"
+    ],
+    [
+      "Ended",
+      "기록 없음",
+      null
+    ],
+    [
+      "Hardware",
+      "메모에는 'Mac 4 Pro'라고 되어 있습니다. 표준 테스트 기기는 M3 Pro와 24 GB를 탑재한 MacBook Pro이며, 같은 기기로 간주합니다. 24 GB라는 수치는 의심의 여지가 없고, 불확실한 것은 칩 세대입니다.",
+      "assumption"
+    ],
+    [
+      "System",
+      "macOS, 버전은 기록 없음. 업체 README가 macOS 버전을 명시하므로('주장' 참조) 이 누락은 중요합니다.",
+      null
+    ],
+    [
+      "Source",
+      "설치 파일을 어디에서 내려받았는지 기록 없음",
+      null
+    ],
+    [
+      "Download",
+      "약 700 MB 설치 파일(테스터가 읽은 값)",
+      "observed"
+    ],
+    [
+      "Why tested",
+      "메모에 언급 없음.",
+      null
+    ],
+    [
+      "Objective",
+      "언급 없음. 메모에서 도출했습니다: 로컬 동영상 앱을 설치하고 24 GB Mac에서 시도해 보기.",
+      "assumption"
+    ],
+    [
+      "AI help used",
+      "기록 없음",
+      null
+    ]
+  ],
+  "disclosure": "테스터는 로컬 AI 앱에 관한 콘텐츠 사이트이자 디렉터리인 PromptQuorum(promptquorum.com)을 설립했습니다. 이 테스트 시점에 LTX Desktop은 디렉터리 타일도, 사이트 내 리뷰도 없습니다. 메모에는 업체와의 접촉, 대가 지급, 후원이 기록되어 있지 않습니다.",
+  "verdict": {
+    "general": "점수 없음: 테스트가 설정 화면에서 끝나 동영상이나 이미지를 하나도 만들지 못했습니다. 메모와 스크린샷이 보여 주는 것은 매끄러운 첫 실행, 필수 Hugging Face 로그인, 그리고 여유 공간 32.9 GB에 대해 합계 129.1 GB인 모델 목록입니다. 테스터의 결론은 문제가 디스크 공간이 아니라, 24 GB 통합 메모리로는 앱을 실행하기에 부족하다는 것입니다. 업체 README도 같은 방향을 가리킵니다. Mac에서 로컬 생성의 최소 사양으로 총 RAM 32 GiB를 제시합니다.",
+    "fit": "테스터에 따르면 이 기기에는 맞지 않습니다. 가장 큰 내려받기 하나(LTX 2.5, 41.5 GB)가 메모리 24 GB보다 크지만, 내려받기 크기와 실행 중 필요한 메모리는 같지 않습니다(가정). 2026년 10월 20일에 읽은 README는 24 GB 미만 Mac은 클라우드 API만 쓰고, 32 GB는 540p와 5초로 제한되며, 전체 로컬 생성에는 48 GB 이상이 필요하다고 밝힙니다. 그런데도 앱은 이 24 GB Mac에 로컬 모델 내려받기를 제시했으며, README는 이를 설명하지 않습니다('테스트는 이렇게 진행되었습니다' 참조)."
+  },
+  "scores": [
+    [
+      "설치",
+      null,
+      "점수 없음. 설치 파일은 내려받아졌고 앱은 실행되었으나, 설정은 완료하지 못했습니다."
+    ],
+    [
+      "온보딩과 모델 선택",
+      null,
+      "점수 없음. 설정에는 크기와 합계가 표시된 내려받기 다섯 가지가 나오며, Hugging Face 로그인이 필요합니다."
+    ],
+    [
+      "핵심 기능",
+      null,
+      "테스트하지 않음. 동영상이나 이미지를 생성하지 않았습니다."
+    ],
+    [
+      "안내와 반복 작업",
+      null,
+      "테스트하지 않음."
+    ],
+    [
+      "성능",
+      null,
+      "테스트하지 않음."
+    ],
+    [
+      "문서",
+      null,
+      "테스트하지 않음."
+    ],
+    [
+      "신뢰와 개인정보",
+      null,
+      "감사하지 않음."
+    ],
+    [
+      "삭제",
+      null,
+      "테스트하지 않음."
+    ]
+  ],
+  "scores_note": "테스트가 설정 단계에서 멈췄기 때문에 점수를 매기지 않았습니다. 점수는 앱의 핵심 기능까지 도달한 테스트가 있어야 매길 수 있습니다.",
+  "tldr": [
+    [
+      "observed",
+      "앱은 로딩 바가 있는 브랜드 시작 화면으로 실행되었고, 테스터는 실행이 매끄러웠다고 말합니다."
+    ],
+    [
+      "measured",
+      "설정에는 모델 내려받기 129.1 GB가 나열되고, 모델 폴더가 있는 드라이브의 사용 가능 공간은 32.9 GB로 표시됩니다."
+    ],
+    [
+      "tester-view",
+      "테스터는 거기서 멈췄고, 24 GB Mac으로는 이 앱을 실행할 수 없다고 결론짓습니다. 디스크 정리 문제가 아니라 메모리 한계라는 것입니다."
+    ],
+    [
+      "vendor-claim",
+      "README는 macOS에서 로컬 생성의 최소 사양으로 총 RAM 32 GiB를 제시하는데, 테스트 Mac은 24 GB입니다. 앱에서는 검증하지 않았습니다."
+    ]
+  ],
+  "quotes": [
+    "그리고 거기서 끝났습니다. 제 작은 노트북에서는 이걸 실행할 수 없습니다.",
+    "앞으로 모든 컴퓨터가 점점 더 커질 것 같습니다. 모델이 좋아질수록 그 수준의 로컬 AI를 돌리려면 점점 더 큰 컴퓨터가 필요하니까요."
+  ],
+  "quote_note": "테스터의 메모이며, 쓰인 그대로 인용했습니다. 영어에서 번역했습니다.",
+  "moments_title": "이 테스트를 형성한 여섯 가지 순간",
+  "moments_nav": "여섯 가지 순간",
+  "moments": [
+    [
+      "700 MB 설치 파일",
+      "설치 파일은 약 700 MB입니다. 모델은 나중에 옵니다.",
+      null,
+      "chapter-install"
+    ],
+    [
+      "매끄러운 실행",
+      "앱은 로딩 바가 있는 시작 화면으로 열립니다.",
+      "splash",
+      "chapter-launch"
+    ],
+    [
+      "먼저 Hugging Face",
+      "설정은 접근이 제한된 모델을 내려받기 위해 Hugging Face 로그인과 라이선스 동의를 요구합니다.",
+      "setup",
+      "chapter-setup"
+    ],
+    [
+      "다섯 부분으로 129.1 GB",
+      "모델 목록: LTX 2.5, Gemma 4 텍스트 인코더, Gemma 4 E2B 프롬프트 개선기, Z-Image-Turbo, LoRA.",
+      "setup",
+      "chapter-setup"
+    ],
+    [
+      "32.9 GB 여유",
+      "같은 화면에 모델 폴더가 있는 드라이브의 사용 가능 공간 32.9 GB가 표시됩니다.",
+      "setup",
+      "chapter-setup"
+    ],
+    [
+      "거기서 끝났습니다",
+      "'제 작은 노트북에서는 이걸 실행할 수 없습니다.' 내려받기도, 생성도 없었습니다.",
+      null,
+      "chapter-stop"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-install",
+      "title": "설치 파일",
+      "items": [
+        [
+          "observed",
+          "설치 파일은 약 700 MB입니다.",
+          null
+        ],
+        [
+          "assumption",
+          "어디에서 내려받았는지는 메모에 없습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-launch",
+      "title": "첫 실행",
+      "items": [
+        [
+          "observed",
+          "앱은 시작 화면으로 열립니다. 'LTX Desktop', 로딩 바, 그리고 아래쪽의 '© 2026 Lightricks'.",
+          "splash"
+        ],
+        [
+          "tester-view",
+          "'매끄럽다.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-setup",
+      "title": "설정 화면",
+      "items": [
+        [
+          "observed",
+          "설정 화면에는 'Hugging Face access' 상자가 있습니다. 'Sign in and accept the license to download gated models.'라는 문구와 Sign in 버튼이 있습니다. 테스터는 로그인하지 않았습니다.",
+          "setup"
+        ],
+        [
+          "measured",
+          "'Model downloads' 아래에 다섯 항목이 선택되어 있습니다. LTX 2.5(41.5 GB), LTX 2.5 프로젝션이 포함된 Gemma 4 텍스트 인코더(24.5 GB), Gemma 4 E2B 인스트럭트 프롬프트 개선기 폴더(9.6 GB), 텍스트-이미지 생성용 Z-Image-Turbo 모델(28.9 GB), LoRA(24.6 GB). 화면에는 'Total: 129.1 GB'가 표시됩니다.",
+          null
+        ],
+        [
+          "measured",
+          "모델 폴더는 /Users/hanskuepper/Library/Application Support/LTXDesktop/models이며 '32.9 GB available'이 표시됩니다. 폴더는 Change 버튼으로 바꿀 수 있습니다.",
+          null
+        ],
+        [
+          "assumption",
+          "129.1 GB는 32.9 GB보다 96.2 GB 많습니다. 앱이 내려받기를 막는지, 경고하는지, 도중에 실패하게 두는지는 테스트하지 않았습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-stop",
+      "title": "테스트가 멈춘 이유",
+      "items": [
+        [
+          "tester-view",
+          "'그리고 거기서 끝났습니다. 제 작은 노트북에서는 이걸 실행할 수 없습니다.'",
+          null
+        ],
+        [
+          "tester-view",
+          "테스터가 든 이유는 메모리입니다. 그의 Mac은 통합 메모리가 24 GB이며, 그는 이것이 이 앱에는 너무 적다고 봅니다. 디스크 공간을 비워도 달라지지 않는다고 그는 말합니다.",
+          null
+        ],
+        [
+          "assumption",
+          "가장 큰 내려받기 하나(LTX 2.5, 41.5 GB)는 24 GB보다 큽니다. 내려받기 크기는 실행 중 필요한 메모리와 같지 않습니다. 앱이 가중치를 나누어 불러오거나 압축할 수 있기 때문이며, 메모리 측정값은 얻지 못했습니다.",
+          null
+        ],
+        [
+          "observed",
+          "내려받기를 시작하지 않았고 생성도 시도하지 않았으며, 두 스크린샷 어디에도 메모리 경고는 나타나지 않습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-vendor",
+      "title": "업체의 설명(2026년 10월 20일에 읽음)",
+      "items": [
+        [
+          "vendor-claim",
+          "GitHub README(Lightricks/LTX-Desktop)는 macOS에 대해 다음과 같이 밝힙니다. 전체 로컬 생성에는 48 GB 이상의 Apple Silicon(M1 이상), 32 GB는 540p와 5초로 제한, 24 GB 미만과 Intel Mac은 Gen Space API만 사용합니다. 앱에는 macOS 14 이상이 필요합니다.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "README는 또한 Mac에서 로컬 생성에 총 RAM 32 GiB와 macOS 26 이상이라는 최소 사양을 명시합니다. 이에 못 미치면 앱은 생성 도구 대신 'Coming soon to your device' 안내를 표시합니다. 모든 플랫폼에서 여유 디스크 공간 100 GB 이상이 필요하며, LoRA를 포함하면 최대 160 GB 이상입니다. 시작하는 데 LTX API 키는 필요하지 않습니다.",
+          null
+        ],
+        [
+          "observed",
+          "테스트 Mac은 24 GB로 README의 32 GiB 기준에 못 미치는데도, 스크린샷에서 앱은 로컬 모델 내려받기를 보여 주었고 'Coming soon' 안내는 없었습니다. macOS 버전과 앱 버전이 기록되지 않아 둘을 비교할 수 없습니다.",
+          null
+        ],
+        [
+          "third-party",
+          "검색 결과에는 이전 Lightricks 고객센터 페이지도 나왔습니다. 요약된 내용에 따르면 Mac에서는 생성이 LTX API를 거치고, Mac의 로컬 추론은 아직 지원되지 않으며, 통합 메모리 16 GB 이상이 필요하다고 합니다. 고객센터 페이지 자체는 열었을 때 오류가 나서, 이는 간접 정보이며 오래되었을 수 있습니다.",
+          null
+        ],
+        [
+          "assumption",
+          "README와 스크린샷이 서로 다른 앱 버전을 설명하고 있을 수 있습니다. 테스터의 빌드에 어느 쪽이 해당하는지는 알 수 없습니다.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "설정에 모델 129.1 GB가 필요함",
+      "앱 설정 화면",
+      "나열된 다섯 크기를 합하면 129.1 GB이며, 표시된 합계와 일치합니다.",
+      "measured"
+    ],
+    [
+      "여유 디스크 공간 100 GB 이상 필요, LoRA를 포함하면 최대 160 GB 이상",
+      "업체 README, 2026년 10월 20일에 읽음",
+      "설정 화면의 합계(129.1 GB)는 이 범위 안에 있습니다. 디스크 공간은 테스터가 밝힌 중단 이유가 아니었습니다.",
+      "vendor-claim"
+    ],
+    [
+      "Mac에서 로컬 생성에는 총 RAM 32 GiB 필요, 전체 로컬 생성에는 48 GB 이상, 24 GB 미만은 클라우드 API만 사용",
+      "업체 README, 2026년 10월 20일에 읽음",
+      "테스트하지 않음. 테스트 Mac은 24 GB입니다. 그런데도 앱은 로컬 모델 내려받기를 보여 주었습니다.",
+      "vendor-claim"
+    ],
+    [
+      "macOS에서는 생성이 LTX API를 거치며 로컬 추론은 지원되지 않음",
+      "이전 고객센터 페이지, 간접 정보",
+      "로컬 모델 내려받기를 제시하는 설정 화면과 모순됩니다. 앱 버전이 다를 수 있습니다.",
+      "third-party"
+    ],
+    [
+      "MacBook 사용자 중 메모리 32 GB 이상은 10-15% 미만, 64 GB 이상은 3-5% 미만이며, Windows 컴퓨터 중 64 GB 이상은 1-2% 미만",
+      "테스터의 메모, 'Google'로만 표기됨",
+      "연구, 발행처, 날짜가 제시되지 않았습니다. 여기서는 확인하지 않았습니다.",
+      "third-party"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 45,
+    "rows": [
+      [
+        "LTX 2.5",
+        41.5,
+        "41.5 GB",
+        "measured"
+      ],
+      [
+        "LTX 2.5 프로젝션이 포함된 Gemma 4 텍스트 인코더",
+        24.5,
+        "24.5 GB",
+        "measured"
+      ],
+      [
+        "Gemma 4 E2B 인스트럭트 프롬프트 개선기",
+        9.6,
+        "9.6 GB",
+        "measured"
+      ],
+      [
+        "Z-Image-Turbo",
+        28.9,
+        "28.9 GB",
+        "measured"
+      ],
+      [
+        "LoRA",
+        24.6,
+        "24.6 GB",
+        "measured"
+      ]
+    ],
+    "note": "이 값들은 설정 화면의 내려받기 크기이며 실행 중 사용하는 메모리가 아닙니다. 앱이 가중치를 나누어 불러올 수 있습니다(가정). 다섯 항목을 합치면 129.1 GB로, 차트에 들어가지 않습니다. 테스트 Mac의 통합 메모리는 24 GB입니다. 아무것도 실행하지 않았으므로 메모리 측정값은 없습니다."
+  },
+  "usage_log": [
+    [
+      "앱 설정 및 모델 내려받기",
+      "해당 없음",
+      "설정 화면에서 중단, 내려받은 것 없음",
+      "기록 없음",
+      "Not completed",
+      [
+        "setup"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "설치 전에 앱의 요구 사항을 24 GB Mac과 대조해 보지 않았습니다. 불일치는 설정 화면에서야 드러났습니다."
+    ],
+    [
+      "tester-error",
+      "하드웨어를 'Mac 4 Pro'라고 적었습니다. 표준 기기는 M3 Pro와 24 GB이며, 같은 기기로 간주하고 칩 세대는 확인되지 않았습니다."
+    ],
+    [
+      "tester-error",
+      "기록에 빈틈이 있습니다: 앱 버전, macOS 버전, 시작과 종료 시각, 설치 파일의 출처."
+    ],
+    [
+      "assumption",
+      "설정 화면에는 메모리 수치가 아니라 디스크 공간 수치가 표시됩니다. 메모리에 관한 결론은 업체 README가 뒷받침하는 테스터 본인의 판단이며, 메모리 오류는 보지 못했습니다."
+    ]
+  ],
+  "findings": [
+    [
+      "LTX-01",
+      "업체 README는 Mac에서 로컬 생성의 최소 사양으로 총 RAM 32 GiB를 제시하는데, 테스트 Mac은 24 GB입니다.",
+      "시스템 요구 사항",
+      "vendor-claim",
+      "High",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-02",
+      "테스터는 통합 메모리 24 GB로는 앱을 실행할 수 없다고 결론짓습니다. 가장 큰 모델 내려받기 하나(41.5 GB)는 24 GB보다 큽니다.",
+      "시스템 요구 사항",
+      "tester-view",
+      "High",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-03",
+      "설정 화면은 24 GB Mac에 129.1 GB의 모델 내려받기를 제시했으며, 스크린샷에는 눈에 띄는 메모리 경고가 없습니다.",
+      "설정",
+      "observed",
+      "High",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-04",
+      "필요한 합계(129.1 GB)가 표시된 여유 공간(32.9 GB)보다 훨씬 큽니다. 앱이 막는지 경고하는지는 테스트하지 않았습니다.",
+      "설정",
+      "observed",
+      "Medium",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-05",
+      "모델에 접근이 제한되어 있습니다. 설정은 Hugging Face 로그인과 라이선스 동의를 요구합니다.",
+      "설정",
+      "observed",
+      "Medium",
+      [
+        "setup"
+      ]
+    ],
+    [
+      "LTX-06",
+      "업체 자료가 Mac에 대해 서로 다릅니다. 이전 고객센터 페이지는 API만 가능하다고 하고, README는 32 GiB부터 로컬 생성을 설명합니다.",
+      "문서",
+      "third-party",
+      "Medium",
+      []
+    ],
+    [
+      "LTX-07",
+      "설치 파일(약 700 MB)은 모델(129.1 GB)에 비해 작습니다.",
+      "설치",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "LTX-08",
+      "첫 실행은 테스터에 따르면 매끄러웠습니다.",
+      "실행",
+      "tester-view",
+      "Positive",
+      [
+        "splash"
+      ]
+    ]
+  ],
+  "severity_note": "심각도는 처음 사용하는 사람에게 미치는 영향입니다. 제안값이며 측정값이 아닙니다.",
+  "audience": {
+    "fits": [
+      [
+        "vendor-claim",
+        "전체 로컬 생성을 위한 48 GB 이상의 Apple Silicon Mac, 업체 README에 따름(검증하지 않음)."
+      ],
+      [
+        "vendor-claim",
+        "VRAM 24 GB 이상의 NVIDIA GPU를 갖춘 Windows 및 Linux PC, 업체 README에 따름(검증하지 않음)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "통합 메모리 24 GB의 Mac, 테스터에 따름."
+      ],
+      [
+        "assumption",
+        "전체 모델 세트를 원하지만 여유 디스크가 약 130 GB 미만인 모든 사람."
+      ]
+    ],
+    "retest": "메모리 48 GB 이상, 여유 디스크 150 GB 이상인 Mac에서 다시 테스트하고, 먼저 앱과 macOS 버전을 기록하십시오. 현재 릴리스가 24 GB Mac에서 어떻게 동작하는지, 즉 'Coming soon to your device'를 표시하는지 내려받기를 제시하는지 확인하십시오. 테스트하지 않은 부분: 로그인, 내려받기, 생성, 삭제."
+  },
+  "background_intro": "직접 테스트가 아닙니다. 아래 항목은 시작 화면, 업체의 GitHub README, 테스터의 메모에서 가져왔습니다. README는 2026년 10월 20일에 페이지를 요약해 주는 웹 가져오기 도구로 읽었으며, 독립적으로 검증하지 않았습니다.",
+  "background": [
+    [
+      "observed",
+      "시작 화면은 제작사로 Lightricks를 밝힙니다('© 2026 Lightricks')."
+    ],
+    [
+      "vendor-claim",
+      "README는 GitHub(Lightricks/LTX-Desktop)에 있는 LTX Desktop의 업체 자체 프로젝트 페이지입니다. 시스템 최소 사양과 디스크 요구량을 밝히며, 이는 '업체의 설명'에 요약되어 있습니다."
+    ],
+    [
+      "third-party",
+      "웹 검색에 나온 이전 고객센터 페이지는 Mac에서의 생성을 API 전용으로 설명합니다. 이 페이지들은 열지 못했고(페이지가 오류를 반환했습니다) 오래되었을 수 있습니다."
+    ],
+    [
+      "third-party",
+      "테스터 메모의 메모리 구간 통계는 출처 없이 'Google'로만 표기되어 있습니다."
+    ]
+  ],
+  "sources": [
+    "테스터의 직접 사용 메모와 스크린샷 두 장, 2026년 10월 20일(원본 Word 문서 'LTX desktop', 원본 메모 PDF는 추가 예정).",
+    "GitHub의 Lightricks LTX Desktop README(https://github.com/Lightricks/LTX-Desktop/blob/main/README.md), 2026년 10월 20일에 페이지 요약 웹 가져오기 도구로 읽음.",
+    "LTX Desktop 시스템 요구 사항에 관한 Lightricks 고객센터 페이지, 2026년 10월 20일에 웹 검색 요약으로만 확인함.",
+    "테스터가 인용한 메모리 구간에 관한 'Google' 통계, 출처 없음."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "관찰",
+      "meaning": "앱, 스크린샷 또는 테스터의 메모에서 직접 확인한 내용입니다."
+    },
+    "measured": {
+      "label": "측정",
+      "meaning": "대화 상자, 카운터 또는 도구에서 읽은 값이며 숫자를 함께 제시합니다."
+    },
+    "tester-estimate": {
+      "label": "테스터 추정",
+      "meaning": "테스터 자신의 추정이며, 시간을 재거나 세지 않았습니다."
+    },
+    "vendor-claim": {
+      "label": "업체 주장",
+      "meaning": "앱, 스토어 등록 정보 또는 웹사이트가 밝힌 내용이며 검증하지 않았습니다."
+    },
+    "third-party": {
+      "label": "제3자",
+      "meaning": "다른 출처(AI 어시스턴트, 기사)에서 나온 내용이며 여기서는 검증하지 않았습니다."
+    },
+    "assumption": {
+      "label": "가정",
+      "meaning": "추론입니다. 틀릴 수 있습니다."
+    },
+    "tester-view": {
+      "label": "테스터 의견",
+      "meaning": "테스터의 판단 또는 의견입니다."
+    },
+    "tester-error": {
+      "label": "테스터 오류",
+      "meaning": "테스터가 실수했거나 놓친 부분입니다."
+    }
+  },
+  "images": [
+    {
+      "id": "setup",
+      "figure": 1,
+      "file": "ltx-desktop-setup-model-downloads-129-gb-32-gb-free.webp",
+      "path": "images/ltx-desktop-setup-model-downloads-129-gb-32-gb-free.webp",
+      "alt": "Hugging Face 로그인 상자와 합계 129.1 GB인 모델 내려받기 다섯 가지가 있고, 모델 폴더의 사용 가능 공간이 32.9 GB로 표시된 LTX Desktop 설정 화면.",
+      "caption": "설정 화면: Hugging Face 로그인, 모델 내려받기 다섯 가지(LTX 2.5 41.5 GB, Gemma 4 텍스트 인코더 24.5 GB, Gemma 4 E2B 프롬프트 개선기 9.6 GB, Z-Image-Turbo 28.9 GB, LoRA 24.6 GB), 합계 129.1 GB, 모델 폴더의 사용 가능 공간 32.9 GB.",
+      "role": "hero",
+      "width": 884,
+      "height": 508,
+      "bytes": 21968,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "measured",
+      "used_in": [
+        "hero",
+        "chapter-setup"
+      ],
+      "subject": "LTX Desktop 앱의 스크린샷",
+      "rights": "타사 소프트웨어 UI를 담은 테스터 본인의 스크린샷.",
+      "captured": "2026-10-20일 또는 그 이전, 정확한 시각은 기록 없음",
+      "original_docx_media": "LTX_desktop.docx, screenshot 2 (setup)"
+    },
+    {
+      "id": "splash",
+      "figure": 2,
+      "file": "ltx-desktop-launch-splash-screen-loading-bar.webp",
+      "path": "images/ltx-desktop-launch-splash-screen-loading-bar.webp",
+      "alt": "앱 이름, 로딩 바, '© 2026 Lightricks' 문구가 있는 LTX Desktop 시작 화면.",
+      "caption": "첫 실행: 로딩 바가 있는 시작 화면.",
+      "role": "moment",
+      "width": 1431,
+      "height": 860,
+      "bytes": 7848,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-launch"
+      ],
+      "subject": "LTX Desktop 앱의 스크린샷",
+      "rights": "타사 소프트웨어 UI를 담은 테스터 본인의 스크린샷.",
+      "captured": "2026-10-20일 또는 그 이전, 정확한 시각은 기록 없음",
+      "original_docx_media": "LTX_desktop.docx, screenshot 1 (splash)"
+    }
+  ],
+  "figure_order": [
+    "setup",
+    "splash"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 직접 사용 테스트 · {app} · {date}",
+    "date_line": "2026년 10월 20일",
+    "nav_aria": "섹션",
+    "nav": {
+      "verdict": "결론",
+      "moments": "여섯 가지 순간",
+      "story": "진행 과정",
+      "claims": "주장",
+      "fit": "24 GB",
+      "log": "사용 기록",
+      "errors": "테스터 오류",
+      "findings": "발견 사항",
+      "background": "배경"
+    },
+    "related": "관련 글:",
+    "review_link": "{app} PromptQuorum 리뷰",
+    "directory_link": "로컬 AI 앱 디렉터리",
+    "verdict_h": "결론",
+    "general_assessment": "종합 평가",
+    "fit_for_tester": "테스터의 사용 목적과의 적합성",
+    "scorecard": "점수표",
+    "status_prefix": "상태:",
+    "na": "해당 없음",
+    "score_aria": "5점 만점에 {n}점",
+    "details_h": "테스트 상세 정보",
+    "label_intro": "모든 진술에는 라벨이 붙습니다:",
+    "legend_link": "라벨의 의미",
+    "disclosure_label": "공개 사항.",
+    "raw_notes": "원본 노트 PDF:",
+    "to_be_added": "추가 예정",
+    "moments_h": "이 테스트를 형성한 여섯 가지 순간",
+    "see_context": "맥락 보기",
+    "story_h": "테스트는 이렇게 진행되었습니다",
+    "claims_h": "주장과 테스터가 확인한 내용",
+    "claims_cols": [
+      "주장",
+      "출처",
+      "확인한 내용",
+      "라벨"
+    ],
+    "fit_h": "24 GB에 들어갈까요?",
+    "memory_line": "{gb} GB 메모리",
+    "above": "{gb} GB 초과",
+    "below": "{gb} GB 미만",
+    "log_h": "사용 기록",
+    "log_cols": [
+      "#",
+      "작업",
+      "모델",
+      "결과",
+      "소요 시간",
+      "상태",
+      "그림"
+    ],
+    "statuses": {
+      "Fail": "실패",
+      "Partial": "부분 성공",
+      "Pass": "통과",
+      "Not completed": "미완료"
+    },
+    "errors_h": "테스터가 잘못한 부분",
+    "findings_h": "발견 사항 목록",
+    "filter_aria": "라벨별로 발견 사항 필터링",
+    "filter_all": "전체",
+    "findings_cols": [
+      "ID",
+      "발견 사항",
+      "분류",
+      "라벨",
+      "심각도",
+      "그림"
+    ],
+    "severities": {
+      "High": "높음",
+      "Medium": "보통",
+      "Low": "낮음",
+      "Positive": "긍정"
+    },
+    "fig_abbr": "그림",
+    "figure": "그림",
+    "enlarge": "확대:",
+    "audience_h": "추천 대상",
+    "likely_fit": "적합할 가능성이 높음",
+    "likely_poor_fit": "적합하지 않을 가능성이 높음",
+    "retest": "재테스트.",
+    "background_h": "개발사 배경",
+    "gallery_h": "테스트에서 나온 이미지 더 보기",
+    "legend_h": "라벨 읽는 법",
+    "sources_h": "출처",
+    "footer_line": "테스트 ID {id} · 테스트 표준 v{version} · 원본 노트 PDF: 추가 예정",
+    "crumb_home": "홈",
+    "crumb_directory": "디렉터리",
+    "crumb_test": "{app} 직접 사용 테스트",
+    "faq_h": "자주 묻는 질문",
+    "more_tests_h": "다른 직접 테스트"
+  }
+}
