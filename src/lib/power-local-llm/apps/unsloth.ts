@@ -40,4 +40,5 @@ export const app: ToolRecord = {
   lastVerifiedDate: '2026-10-19',
   lastUpstreamUpdate: '2026-10-19', // GitHub latest release v0.1.909-beta ("DeepSeek-V4.1 & FLUX-3"), published 2026-10-19T16:21:58Z, read via the GitHub API 2026-10-19
   lastUpstreamUpdateSource: 'https://github.com/unslothai/unsloth/releases/tag/v0.1.909-beta',
+  pqReview: { date: '2026-10-19', version: 'v0.1.909-beta', versionSourceUrl: 'https://github.com/unslothai/unsloth/releases/tag/v0.1.909-beta' },
 }

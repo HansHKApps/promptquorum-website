@@ -64,6 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Free and open-source; the [GitHub repository](https://github.com/unslothai/unsloth) states a dual-licensing model in its README (core package under Apache-2.0, optional components such as the Studio UI under AGPL-3.0), and this review found no separate pricing page linked from the README',
+          'Current version: v0.1.909-beta, last upstream update 19 October 2026 ([GitHub release page](https://github.com/unslothai/unsloth/releases/tag/v0.1.909-beta)).',
           'Three ways to use it: **Unsloth Desktop** (native app for Windows/macOS/Linux, recommended by the project itself), **Unsloth Studio** (self-hosted web UI, also runnable via Docker), and **Unsloth Core** (the original Python library, `pip install unsloth`)',
           'Trains AND runs LLMs, diffusion (image/video) models, text-to-speech models, and embedding models — per the project\'s own feature list, this goes beyond text-only fine-tuning',
           'Supports LoRA, QLoRA, full fine-tuning, pretraining, reinforcement learning (GRPO, DPO), and FP8 training methods',
@@ -340,6 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Kostenlos und Open Source; das [GitHub-Repository](https://github.com/unslothai/unsloth) nennt ein duales Lizenzmodell im README (Kernpaket unter Apache-2.0, optionale Komponenten wie die Studio-Oberfläche unter AGPL-3.0), und diese Review fand keine separate, im README verlinkte Preisseite',
+          'Aktuelle Version: v0.1.909-beta, letztes Upstream-Update am 19. Oktober 2026 ([GitHub-Release-Seite](https://github.com/unslothai/unsloth/releases/tag/v0.1.909-beta)).',
           'Drei Nutzungswege: **Unsloth Desktop** (native App für Windows/macOS/Linux, vom Projekt selbst empfohlen), **Unsloth Studio** (selbst gehostete Weboberfläche, auch über Docker lauffähig) und **Unsloth Core** (die ursprüngliche Python-Bibliothek, `pip install unsloth`)',
           'Trainiert UND führt LLMs, Diffusionsmodelle (Bild/Video), Text-zu-Sprache-Modelle und Embedding-Modelle aus — laut eigener Funktionsliste des Projekts geht das über reines Text-Fine-Tuning hinaus',
           'Unterstützt LoRA, QLoRA, vollständiges Fine-Tuning, Pretraining, Reinforcement Learning (GRPO, DPO) und FP8-Training',
@@ -616,6 +618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           "Gratuit et open source ; le [dépôt GitHub](https://github.com/unslothai/unsloth) indique un modèle de double licence dans son README (paquet principal sous Apache-2.0, composants optionnels comme la Studio UI sous AGPL-3.0), et ce test n'a trouvé aucune page tarifaire distincte liée depuis le README",
+          "Version actuelle : v0.1.909-beta, dernière mise à jour en amont le 19 octobre 2026 ([page de release GitHub](https://github.com/unslothai/unsloth/releases/tag/v0.1.909-beta)).",
           "Trois façons de l'utiliser : **Unsloth Desktop** (application native pour Windows/macOS/Linux, recommandée par le projet lui-même), **Unsloth Studio** (interface web auto-hébergée, exécutable aussi via Docker) et **Unsloth Core** (la bibliothèque Python d'origine, `pip install unsloth`)",
           "Entraîne ET exécute des LLM, des modèles de diffusion (image/vidéo), des modèles de synthèse vocale et des modèles d'embedding — selon la propre liste de fonctionnalités du projet, cela va au-delà du fine-tuning purement textuel",
           'Prend en charge LoRA, QLoRA, le fine-tuning complet, le pretraining, le reinforcement learning (GRPO, DPO) et le FP8',
@@ -892,6 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Gratis y de código abierto; el [repositorio de GitHub](https://github.com/unslothai/unsloth) indica un modelo de doble licencia en su README (paquete principal con Apache-2.0, componentes opcionales como la interfaz Studio con AGPL-3.0), y esta reseña no encontró ninguna página de precios enlazada desde el README',
+          'Versión actual: v0.1.909-beta, última actualización del proyecto el 19 de octubre de 2026 ([página de la versión en GitHub](https://github.com/unslothai/unsloth/releases/tag/v0.1.909-beta)).',
           'Tres formas de usarlo: **Unsloth Desktop** (app nativa para Windows/macOS/Linux, recomendada por el propio proyecto), **Unsloth Studio** (interfaz web autoalojada, también ejecutable vía Docker), y **Unsloth Core** (la librería de Python original, `pip install unsloth`)',
           'Entrena Y ejecuta LLMs, modelos de difusión (imagen/video), modelos de texto a voz y modelos de embeddings — según la propia lista de funciones del proyecto, esto va más allá del fine-tuning solo de texto',
           'Soporta LoRA, QLoRA, fine-tuning completo, preentrenamiento, aprendizaje por refuerzo (GRPO, DPO) y métodos de entrenamiento FP8',
@@ -1168,6 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Gratuito e de código aberto; o [repositório no GitHub](https://github.com/unslothai/unsloth) informa um modelo de licenciamento duplo no README (pacote principal sob Apache-2.0, componentes opcionais como a interface Studio sob AGPL-3.0), e esta análise não encontrou nenhuma página de preços vinculada a partir do README',
+          'Versão atual: v0.1.909-beta, última atualização do projeto em 19 de outubro de 2026 ([página da versão no GitHub](https://github.com/unslothai/unsloth/releases/tag/v0.1.909-beta)).',
           'Três formas de usá-lo: **Unsloth Desktop** (app nativo para Windows/macOS/Linux, recomendado pelo próprio projeto), **Unsloth Studio** (interface web auto-hospedada, também executável via Docker), e **Unsloth Core** (a biblioteca de Python original, `pip install unsloth`)',
           'Treina E roda LLMs, modelos de difusão (imagem/vídeo), modelos de texto para voz e modelos de embeddings — segundo a própria lista de recursos do projeto, isso vai além do fine-tuning apenas de texto',
           'Suporta LoRA, QLoRA, fine-tuning completo, pré-treinamento, aprendizado por reforço (GRPO, DPO) e métodos de treinamento FP8',
@@ -1444,6 +1449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '無料でオープンソース。[GitHubリポジトリ](https://github.com/unslothai/unsloth)はREADMEでデュアルライセンスを示しており（コアパッケージはApache-2.0、Studio UIなどの任意コンポーネントはAGPL-3.0）、このレビューではREADMEからリンクされた別途の料金ページは見つからなかった',
+          '現行バージョンはv0.1.909-beta、プロジェクトの最終アップデートは2026年10月19日です（[GitHubリリースページ](https://github.com/unslothai/unsloth/releases/tag/v0.1.909-beta)）。',
           '利用方法は3通り：**Unsloth Desktop**（Windows/macOS/Linux向けネイティブアプリ、プロジェクト自身が推奨）、**Unsloth Studio**（セルフホスト型Web UI、Docker経由でも実行可能）、**Unsloth Core**（元祖Pythonライブラリで`pip install unsloth`）',
           'LLM、拡散（画像/動画）モデル、テキスト読み上げモデル、埋め込みモデルをトレーニングAND実行できる — プロジェクト自身の機能一覧によれば、これはテキストのみのファインチューニングを超える範囲',
           'LoRA、QLoRA、フルファインチューニング、事前学習、強化学習（GRPO、DPO）、FP8トレーニング手法に対応',
@@ -1720,6 +1726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '免费开源；[GitHub 仓库](https://github.com/unslothai/unsloth)在 README 中说明采用双重许可（核心包为 Apache-2.0，Studio UI 等可选组件为 AGPL-3.0），本评测也没有在 README 中找到单独的定价页面链接',
+          '当前版本为 v0.1.909-beta，项目最近一次更新于 2026 年 10 月 19 日（[GitHub 发布页面](https://github.com/unslothai/unsloth/releases/tag/v0.1.909-beta)）。',
           '三种使用方式：**Unsloth Desktop**（面向 Windows/macOS/Linux 的原生应用，项目自身推荐使用）、**Unsloth Studio**（自托管 Web UI，也可通过 Docker 运行）、**Unsloth Core**（初代 Python 库，`pip install unsloth`）',
           '既能训练也能运行 LLM、扩散（图像/视频）模型、文本转语音模型和嵌入模型——根据项目自身的功能列表，这超出了纯文本微调的范围',
           '支持 LoRA、QLoRA、全量微调、预训练、强化学习（GRPO、DPO）以及 FP8 训练方法',
@@ -1996,6 +2003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Unsloth는 무료이며 오픈소스입니다. [GitHub 저장소](https://github.com/unslothai/unsloth)는 README에 이중 라이선스 모델(코어 패키지는 Apache-2.0, Studio UI 같은 선택 구성 요소는 AGPL-3.0)을 명시하고 있으며, 이 리뷰에서는 README에 링크된 별도의 가격 페이지를 찾지 못했습니다',
+          '현재 버전은 v0.1.909-beta이며, 프로젝트의 마지막 업데이트는 2026년 10월 19일입니다([GitHub 릴리스 페이지](https://github.com/unslothai/unsloth/releases/tag/v0.1.909-beta)).',
           '사용 방법은 세 가지입니다: **Unsloth Desktop**(Windows/macOS/Linux용 네이티브 앱, 프로젝트 자체가 권장), **Unsloth Studio**(자체 호스팅 웹 UI, Docker로도 실행 가능), **Unsloth Core**(원조 Python 라이브러리, `pip install unsloth`)',
           'LLM, 디퓨전(이미지/영상) 모델, 음성 합성(TTS) 모델, 임베딩 모델을 학습**하고** 실행합니다 — 프로젝트 자체 기능 목록에 따르면 이는 텍스트 전용 파인튜닝을 넘어서는 범위입니다',
           'LoRA, QLoRA, 전체 파인튜닝, 사전 학습(pretraining), 강화 학습(GRPO, DPO), FP8 학습 방식을 지원합니다',
@@ -2272,6 +2280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'مجانية ومفتوحة المصدر؛ يُظهر [مستودع GitHub](https://github.com/unslothai/unsloth) نموذج ترخيص مزدوجًا في README (الحزمة الأساسية بترخيص Apache-2.0، والمكوّنات الاختيارية مثل واجهة Studio بترخيص AGPL-3.0)، ولم تجد هذه المراجعة صفحة أسعار منفصلة مرتبطة من README',
+          'الإصدار الحالي: v0.1.909-beta، وآخر تحديث للمشروع في 19 أكتوبر 2026 ([صفحة الإصدار على GitHub](https://github.com/unslothai/unsloth/releases/tag/v0.1.909-beta)).',
           'ثلاث طرق للاستخدام: **Unsloth Desktop** (تطبيق أصلي لـ Windows/macOS/Linux، يوصي به المشروع نفسه)، و**Unsloth Studio** (واجهة ويب ذاتية الاستضافة، يمكن تشغيلها أيضًا عبر Docker)، و**Unsloth Core** (مكتبة Python الأصلية، `pip install unsloth`)',
           'تدرّب **و**تشغّل نماذج LLM ونماذج الانتشار (الصور/الفيديو) ونماذج تحويل النص إلى كلام (TTS) ونماذج التضمين — وفقًا لقائمة ميزات المشروع نفسه، وهذا يتجاوز الضبط النصي فقط',
           'تدعم LoRA وQLoRA والضبط الكامل والتدريب المسبق (pretraining) والتعلم المعزز (GRPO، DPO) والتدريب بصيغة FP8',

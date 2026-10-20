@@ -1100,7 +1100,7 @@
     ],
     [
       "UN-26",
-      "Directory lists the license as Apache-2.0; the GitHub page says the Studio UI is AGPL-3.0 and the core Apache-2.0.",
+      "The GitHub README states a dual-licensing model: core package Apache-2.0, optional components such as the Studio UI AGPL-3.0 (the PromptQuorum directory showed only Apache-2.0 at test time and has since been corrected).",
       "Maintenance",
       "third-party",
       "Medium",
@@ -1151,7 +1151,7 @@
     ],
     [
       "third-party",
-      "The PromptQuorum directory lists Unsloth as free, Apache-2.0, for Mac, Windows and Linux, in the category fine-tuning and LoRA, with about 76,100 GitHub stars (data verified 13 Sep 2026). It records a macOS DMG in release v0.1.905-beta (checked 9 Oct 2026) and a last upstream update on 16 Oct 2026. PromptQuorum has not hands-on tested it before this report."
+      "The PromptQuorum directory lists Unsloth as free, Apache-2.0 (core) / AGPL-3.0 (Studio UI), for Mac, Windows and Linux, in the category fine-tuning and LoRA, with about 76,100 GitHub stars (data verified 13 Sep 2026). It records a macOS DMG in release v0.1.905-beta (checked 9 Oct 2026) and a last upstream update on 16 Oct 2026. PromptQuorum has not hands-on tested it before this report."
     ],
     [
       "assumption",
