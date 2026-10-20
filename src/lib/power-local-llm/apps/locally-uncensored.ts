@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   categories: ['general-chat-clients', 'image-generation', 'video-generation', 'fine-tuning-lora', 'agent-frameworks'],
   interfaces: ['desktop'],
   locality: 'local',
-  platforms: ['win', 'linux'], // corrected 2026-09-22 per maker (David, LU Labs): .exe, .deb, .rpm, .AppImage — directory previously listed Windows only
+  platforms: ['win', 'linux', 'mac'], // 'mac' added 2026-10-20: signed .dmg for Apple Silicon (macOS 14+, beta) first shipped in v3.0.6 — verified against GitHub release assets (LU_3.0.7_aarch64.dmg) and https://locallyuncensored.com/mac/; earlier correction: 2026-09-22 per maker (David, LU Labs): .exe, .deb, .rpm, .AppImage — directory previously listed Windows only
   worksWith: ['Ollama'],
   engine: 'builtin',
   license: 'AGPL 3.0',
@@ -41,7 +41,7 @@ export const app: ToolRecord = {
   // particular is an LLM-fine-tuning concept (GGUF/Ollama) that doesn't apply to this image LoRA trainer.
   compare: { localLlm: true, ollama: true, mcp: true, fileChat: true, memory: true, videoGeneration: true, nodeWorkflow: false, loraQlora: true, webUi: true },
   lastVerifiedDate: '2026-09-22', // per maker (David, LU Labs) technical corrections email
-  lastUpstreamUpdate: '2026-10-11', // GitHub release v3.0.6, read 2026-10-16
+  lastUpstreamUpdate: '2026-10-19', // GitHub release v3.0.7, read 2026-10-20
   lastUpstreamUpdateSource: 'https://github.com/PurpleDoubleD/locally-uncensored/releases',
   reviewSlug: 'locally-uncensored-review', // dedicated PromptQuorum review
   pqReview: {
@@ -64,7 +64,7 @@ export const app: ToolRecord = {
     },
     why: 'My own local AI setup was a terminal running Ollama and a row of ComfyUI tabs, and every task meant switching between them. I wanted one installer that puts chat, a coding agent, image, video, and LoRA training on one screen, on my own PC, with nothing leaving it.',
     best: 'The local app is free and AGPL — you download it, it finds the backend you already have or installs its own, and you pick the model. The app adds no filter of its own on top of whatever open-weight model you load.',
-    limits: 'No macOS build yet, and the phone-pairing experience today runs in the browser rather than as a dedicated mobile app.',
+    limits: 'The phone-pairing experience today runs in the browser rather than as a dedicated mobile app.', // 2026-10-20: first clause ("No macOS build yet") dropped — a macOS beta for Apple Silicon has since shipped (v3.0.6); remainder is the maker's 2026-09-22 wording
     providedDate: '2026-09-22',
     // Verbatim, same text as the "From the Maker" section in the dedicated
     // review article (src/lib/power-local-llm/articles/locally-uncensored-review.ts).
