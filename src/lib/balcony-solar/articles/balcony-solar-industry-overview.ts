@@ -12,10 +12,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Balcony Solar Industry Overview (2026)',
     metaDescription: 'How the balcony solar industry formed, its three-layer supply chain, and the companies driving it, updated for 2026.',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-10-20',
     audience: 'Readers researching the balcony solar industry structure and major players',
     intro: 'This overview traces how the balcony solar industry took shape: the regulatory milestones that unlocked it, the three-layer supply chain that supplies it, and the companies most frequently cited across each layer. It draws on the same registry data and standards referenced throughout PromptQuorum\'s balcony solar coverage, so figures here match the country-specific guides linked below.',
-    leadAnswerBlock: '**The balcony solar industry grew from a small German-only niche into a global market by combining three distinct business layers — panel manufacturers, microinverter/battery makers, and kit resellers — while Germany\'s registry data (from roughly 40,000 systems in 2017 to an estimated 4 million by 2025) remained the industry\'s clearest public growth signal until the US passed its first dedicated safety standard, UL 3700, in December 2025.**',
+    leadAnswerBlock: '**The balcony solar industry grew from a small German-only niche into a global market by combining three distinct business layers — panel manufacturers, microinverter/battery makers, and kit resellers — while Germany\'s registry data (from about 500,000 systems in June 2024 to an estimated 1 million by mid-2025) remained the industry\'s clearest public growth signal until the US passed its first dedicated safety standard, UL 3700, in December 2025.**',
     // TODO (internal-linking phase): cross-link to trends-2027 category pages instead of re-covering per-country trend content here.
     sections: {
       tldr: {
@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         title: 'Balcony Solar Industry Overview: Key Facts',
         items: [
-          'Germany\'s registered balcony solar systems grew from roughly 40,000 in 2017 to an estimated 4 million by 2025, with about 430,000 new registrations added in 2025 alone (Bundesnetzagentur/Marktstammdatenregister).',
+          'Germany\'s registered balcony solar systems passed 500,000 in June 2024 and reached an estimated 1.03 million by June 2025 (heise estimate based on the Bundesnetzagentur Marktstammdatenregister).',
           'The industry splits into three distinct layers: panel manufacturers, microinverter/battery makers, and kit resellers — most companies operate in only one layer.',
           'Microinverter makers most frequently cited across the industry include Hoymiles, Deye, APsystems, Enphase, Growatt, and GoodWe.',
           'Kit and battery brands most frequently cited include Anker (SOLIX), EcoFlow, Zendure, priwatt, and Yuma.',
@@ -34,8 +34,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       snapshot: {
         title: 'Balcony Solar, in Brief',
         image: '/images/balcony-solar-industry-overview-snapshot-en.svg',
-        imageCaption: 'Germany scaled from roughly 40,000 registered balcony-solar systems in 2017 to an estimated 4 million installations by 2025 — the market’s clearest verified growth signal.',
-        content: 'Germany\'s Bundesnetzagentur/Marktstammdatenregister registry is the industry\'s most-cited growth figure because it is the only major market that requires public registration of every system. That data shows growth from roughly 40,000 registered systems in 2017 to an estimated 4 million by 2025, including approximately 430,000 new registrations added during 2025 alone. No other country currently publishes a comparably granular, mandatory count, which is why analysts and journalists covering the industry default to the German figure as a proxy for overall market momentum.',
+        imageCaption: 'Germany passed 500,000 registered balcony-solar systems in June 2024 and reached an estimated 1.03 million by June 2025 (heise estimate) — the market’s clearest growth signal.',
+        content: 'Germany\'s Bundesnetzagentur/Marktstammdatenregister registry is the industry\'s most-cited growth figure because it is the only major market that requires public registration of every system. That data shows growth from about 500,000 registered systems in June 2024 to an estimated 1.03 million by June 2025, per a heise analysis. No other country currently publishes a comparably granular, mandatory count, which is why analysts and journalists covering the industry default to the German figure as a proxy for overall market momentum.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'The balcony solar industry is built on three separate business layers — panel manufacturers, microinverter/battery makers, and kit resellers — with Germany\'s registration data as its clearest public growth benchmark.' },
           { type: 'plain-terms', text: 'Think of it like three separate supply chains feeding one product: someone makes the solar panel, someone else makes the small inverter box that makes it outlet-safe, and a third company packages both into the kit you actually buy.' },
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Germany: Registered Systems Over Time',
         image: '/images/balcony-solar-industry-overview-germany-growth-en.svg',
         imageCaption: 'Bundesnetzagentur/Marktstammdatenregister figures — the most authoritative registry-based count available.',
-        content: 'The Bundesnetzagentur\'s Marktstammdatenregister (MaStR) requires every grid-connected generation system, including balcony solar, to be registered, which is why Germany has the industry\'s only comprehensive public count. Registered systems grew from roughly 40,000 in 2017 to an estimated 4 million by 2025, with growth accelerating sharply in the final years of that window — approximately 430,000 new registrations were added in 2025 alone. That acceleration coincided with Germany easing its registration and wattage rules, removing friction that had previously discouraged casual buyers from registering at all.',
+        content: 'The Bundesnetzagentur\'s Marktstammdatenregister (MaStR) requires every grid-connected generation system, including balcony solar, to be registered, which is why Germany has the industry\'s only comprehensive public count. Registered systems passed 500,000 in June 2024 and reached an estimated 1.03 million by June 2025, according to a [heise analysis](https://heise.de/-10439636) of the register — an estimate, since the register can no longer filter plug-in systems directly. Germany has since eased its registration and wattage rules, removing friction that had previously discouraged casual buyers from registering at all.',
       },
       usEntry: {
         title: 'US Market: A 2026 Story',
@@ -75,10 +75,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'When did the balcony solar industry begin?', a: 'Balcony solar originated in Germany as an informal DIY movement before regulators formalized simplified registration rules for small plug-in systems. Growth then accelerated from roughly 40,000 registered systems in 2017 to an estimated 4 million by 2025, per Bundesnetzagentur/Marktstammdatenregister data.' },
+          { q: 'When did the balcony solar industry begin?', a: 'Balcony solar originated in Germany as an informal DIY movement before regulators formalized simplified registration rules for small plug-in systems. Growth then accelerated from about 500,000 registered systems in June 2024 to an estimated 1.03 million by June 2025, per a heise estimate based on Bundesnetzagentur/Marktstammdatenregister data.' },
           { q: 'What are the three layers of the balcony solar supply chain?', a: 'The industry splits into panel manufacturers (the physical solar panel), microinverter/battery makers (the electronics that make a system outlet-safe), and kit resellers (companies that package panels and microinverters into the consumer product sold to buyers). Most companies operate in only one of these three layers.' },
           { q: 'Which companies are most frequently cited in balcony solar market comparisons?', a: 'Hoymiles, Deye, APsystems, Enphase, Growatt, and GoodWe are the microinverter makers most often cited. Anker (SOLIX), EcoFlow, Zendure, priwatt, and Yuma are the kit and battery brands most often cited, and Meyer Burger, Solarwatt, and Heckert are the panel-layer names that come up most.' },
-          { q: 'How big is the balcony solar market?', a: 'Germany is the only market with a comprehensive public count: an estimated 4 million registered systems by 2025, up from roughly 40,000 in 2017. Other countries do not currently publish a comparably granular, mandatory registration figure, so global market-size claims outside Germany should be treated as estimates rather than verified counts.' },
+          { q: 'How big is the balcony solar market?', a: 'Germany is the only market with a comprehensive public count: an estimated 1.03 million registered systems by June 2025, up from about 500,000 in June 2024 (heise estimate). Other countries do not currently publish a comparably granular, mandatory registration figure, so global market-size claims outside Germany should be treated as estimates rather than verified counts.' },
           { q: 'When did the US legalize balcony solar?', a: 'Utah was the first US state to legalize balcony solar, signing HB 340 in March 2025 with an effective date of May 7, 2025 and a 1,200-watt system cap. Legality in the US is decided state by state — there is no federal balcony solar law.' },
           { q: 'What is UL 3700 and why does it matter for the industry?', a: 'UL 3700 is the safety certification standard several US state laws require before a plug-in solar system can be legally sold. It wasn\'t published until December 2025, eight months after Utah\'s law took effect, and as of write-time (2026-07-16) no complete system had earned full certification under it.' },
           { q: 'Is balcony solar legal across the whole US now?', a: 'No. Only individual states that have passed their own legalizing statutes, such as Utah, permit balcony solar, and each sets its own wattage cap and requirements. There is no nationwide legalization — check the current status for your specific state before buying.' },
@@ -94,17 +94,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Balkonsolar-Branche 2026: Überblick & Marktakteure',
     metaDescription: 'Wie sich die Balkonsolar-Branche entwickelte, ihre dreistufige Lieferkette und die Unternehmen, die sie antreiben – aktualisiert für 2026.',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-10-20',
     audience: 'Leser, die sich über die Struktur der Balkonsolar-Branche und wichtige Marktteilnehmer informieren möchten',
     intro: 'Dieser Überblick zeigt, wie sich die Balkonsolar-Branche entwickelt hat: die regulatorischen Meilensteine, die den Markt ermöglicht haben, die dreistufige Lieferkette, die ihn beliefert, sowie die Unternehmen, die auf jeder Ebene am häufigsten genannt werden. Die Zahlen stammen aus denselben Register- und Normendaten, auf die sich die gesamte Balkonsolar-Berichterstattung von PromptQuorum stützt, sodass sie mit den verlinkten länderspezifischen Leitfäden übereinstimmen.',
-    leadAnswerBlock: '**Die Balkonsolar-Branche wuchs von einer kleinen, rein deutschen Nische zu einem globalen Markt heran, indem drei getrennte Geschäftsebenen zusammenwirkten – Panelhersteller, Mikrowechselrichter-/Batteriehersteller und Kit-Wiederverkäufer –, während die deutschen Registerdaten (von rund 40.000 Systemen 2017 auf schätzungsweise 4 Millionen bis 2025) das eindeutigste öffentliche Wachstumssignal der Branche blieben, bis die USA im Dezember 2025 ihren ersten eigenen Sicherheitsstandard, UL 3700, verabschiedeten.**',
+    leadAnswerBlock: '**Die Balkonsolar-Branche wuchs von einer kleinen, rein deutschen Nische zu einem globalen Markt heran, indem drei getrennte Geschäftsebenen zusammenwirkten – Panelhersteller, Mikrowechselrichter-/Batteriehersteller und Kit-Wiederverkäufer –, während die deutschen Registerdaten (von rund 500.000 Systemen im Juni 2024 auf schätzungsweise 1 Million bis Mitte 2025) das eindeutigste öffentliche Wachstumssignal der Branche blieben, bis die USA im Dezember 2025 ihren ersten eigenen Sicherheitsstandard, UL 3700, verabschiedeten.**',
     sections: {
       tldr: {
         id: 'tldr',
         isTldr: true,
         title: 'Balkonsolar-Branchenüberblick: Die wichtigsten Fakten',
         items: [
-          'Die Zahl der registrierten Balkonsolar-Systeme in Deutschland wuchs von rund 40.000 im Jahr 2017 auf schätzungsweise 4 Millionen bis 2025 – allein 2025 kamen rund 430.000 Neuregistrierungen hinzu (Bundesnetzagentur/Marktstammdatenregister).',
+          'Die Zahl der registrierten Balkonsolar-Systeme in Deutschland überschritt im Juni 2024 die Marke von 500.000 und erreichte bis Juni 2025 schätzungsweise 1,03 Millionen (Schätzung von heise auf Basis des Marktstammdatenregisters der Bundesnetzagentur).',
           'Die Branche gliedert sich in drei getrennte Ebenen: Panelhersteller, Mikrowechselrichter-/Batteriehersteller und Kit-Wiederverkäufer – die meisten Unternehmen sind nur in einer Ebene tätig.',
           'Bei Mikrowechselrichterherstellern werden am häufigsten Hoymiles, Deye, APsystems, Enphase, Growatt und GoodWe genannt.',
           'Bei Kit- und Batteriemarken werden am häufigsten Anker (SOLIX), EcoFlow, Zendure, priwatt und Yuma genannt.',
@@ -115,8 +115,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       snapshot: {
         title: 'Balkonsolar auf einen Blick',
         image: '/images/balcony-solar-industry-overview-snapshot-en.svg',
-        imageCaption: 'Deutschland wuchs von rund 40.000 registrierten Balkonsolar-Systemen im Jahr 2017 auf schätzungsweise 4 Millionen Installationen bis 2025 – das eindeutigste verifizierte Wachstumssignal des Marktes.',
-        content: 'Das Marktstammdatenregister der Bundesnetzagentur liefert die am häufigsten zitierte Wachstumszahl der Branche, weil Deutschland der einzige große Markt ist, der eine öffentliche Registrierung jedes einzelnen Systems vorschreibt. Die Daten zeigen ein Wachstum von rund 40.000 registrierten Systemen im Jahr 2017 auf schätzungsweise 4 Millionen bis 2025, darunter allein rund 430.000 Neuregistrierungen im Jahr 2025. Kein anderes Land veröffentlicht derzeit eine vergleichbar detaillierte, verpflichtende Zählung – deshalb greifen Analysten und Fachjournalisten standardmäßig auf die deutsche Zahl als Proxy für die gesamte Marktdynamik zurück.',
+        imageCaption: 'Deutschland überschritt im Juni 2024 die Marke von 500.000 registrierten Balkonsolar-Systemen und erreichte bis Juni 2025 schätzungsweise 1,03 Millionen (Schätzung von heise) – das eindeutigste Wachstumssignal des Marktes.',
+        content: 'Das Marktstammdatenregister der Bundesnetzagentur liefert die am häufigsten zitierte Wachstumszahl der Branche, weil Deutschland der einzige große Markt ist, der eine öffentliche Registrierung jedes einzelnen Systems vorschreibt. Die Daten zeigen ein Wachstum von rund 500.000 registrierten Systemen im Juni 2024 auf schätzungsweise 1,03 Millionen bis Juni 2025, laut einer heise-Auswertung. Kein anderes Land veröffentlicht derzeit eine vergleichbar detaillierte, verpflichtende Zählung – deshalb greifen Analysten und Fachjournalisten standardmäßig auf die deutsche Zahl als Proxy für die gesamte Marktdynamik zurück.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Die Balkonsolar-Branche besteht aus drei getrennten Geschäftsebenen – Panelhersteller, Mikrowechselrichter-/Batteriehersteller und Kit-Wiederverkäufer –, wobei die deutschen Registrierungsdaten den klarsten öffentlichen Wachstumsmaßstab liefern.' },
           { type: 'plain-terms', text: 'Stellen Sie es sich wie drei getrennte Lieferketten für ein Produkt vor: Ein Unternehmen stellt das Solarpanel her, ein anderes die kleine Wechselrichter-Box, die es steckdosentauglich macht, und ein drittes packt beides zu dem Kit zusammen, das Sie am Ende kaufen.' },
@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Deutschland: Registrierte Systeme im Zeitverlauf',
         image: '/images/balcony-solar-industry-overview-germany-growth-en.svg',
         imageCaption: 'Zahlen der Bundesnetzagentur/des Marktstammdatenregisters – die verlässlichste registerbasierte Erhebung, die verfügbar ist.',
-        content: 'Das Marktstammdatenregister (MaStR) der Bundesnetzagentur verlangt die Registrierung jeder netzgekoppelten Erzeugungsanlage, einschließlich Balkonsolar – deshalb verfügt Deutschland als einziger Markt über eine umfassende öffentliche Zählung. Die registrierten Systeme wuchsen von rund 40.000 im Jahr 2017 auf schätzungsweise 4 Millionen bis 2025, wobei sich das Wachstum in den letzten Jahren dieses Zeitraums deutlich beschleunigte – allein 2025 kamen rund 430.000 Neuregistrierungen hinzu. Diese Beschleunigung fiel zeitlich mit der Lockerung der deutschen Registrierungs- und Leistungsregeln zusammen, wodurch Hürden abgebaut wurden, die Gelegenheitskäufer zuvor von einer Registrierung abgehalten hatten.',
+        content: 'Das Marktstammdatenregister (MaStR) der Bundesnetzagentur verlangt die Registrierung jeder netzgekoppelten Erzeugungsanlage, einschließlich Balkonsolar – deshalb verfügt Deutschland als einziger Markt über eine umfassende öffentliche Zählung. Die registrierten Systeme überschritten im Juni 2024 die Marke von 500.000 und erreichten bis Juni 2025 schätzungsweise 1,03 Millionen, laut einer [heise-Auswertung](https://heise.de/-10439636) des Registers – eine Schätzung, da das Register Steckersolaranlagen nicht mehr direkt filtern kann. Seither hat Deutschland seine Registrierungs- und Leistungsregeln gelockert, wodurch Hürden abgebaut wurden, die Gelegenheitskäufer zuvor von einer Registrierung abgehalten hatten.',
       },
       usEntry: {
         title: 'US-Markt: Eine Geschichte des Jahres 2026',
@@ -156,10 +156,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Wann entstand die Balkonsolar-Branche?', a: 'Balkonsolar entstand in Deutschland als informelle DIY-Bewegung, bevor Regulierungsbehörden vereinfachte Registrierungsregeln für kleine Steckersysteme einführten. Das Wachstum beschleunigte sich anschließend von rund 40.000 registrierten Systemen im Jahr 2017 auf schätzungsweise 4 Millionen bis 2025, gemäß Daten der Bundesnetzagentur/des Marktstammdatenregisters.' },
+          { q: 'Wann entstand die Balkonsolar-Branche?', a: 'Balkonsolar entstand in Deutschland als informelle DIY-Bewegung, bevor Regulierungsbehörden vereinfachte Registrierungsregeln für kleine Steckersysteme einführten. Das Wachstum beschleunigte sich anschließend von rund 500.000 registrierten Systemen im Juni 2024 auf schätzungsweise 1,03 Millionen bis Juni 2025, laut einer heise-Schätzung auf Basis von Daten der Bundesnetzagentur/des Marktstammdatenregisters.' },
           { q: 'Aus welchen drei Ebenen besteht die Lieferkette der Balkonsolar-Branche?', a: 'Die Branche gliedert sich in Panelhersteller (das physische Solarpanel), Mikrowechselrichter-/Batteriehersteller (die Elektronik, die ein System steckdosensicher macht) und Kit-Wiederverkäufer (Unternehmen, die Panels und Mikrowechselrichter zum verkauften Endprodukt verpacken). Die meisten Unternehmen sind nur in einer dieser drei Ebenen tätig.' },
           { q: 'Welche Unternehmen werden in Marktvergleichen für Balkonsolar am häufigsten genannt?', a: 'Bei Mikrowechselrichterherstellern werden am häufigsten Hoymiles, Deye, APsystems, Enphase, Growatt und GoodWe genannt. Bei Kits und Batteriemarken sind es am häufigsten Anker (SOLIX), EcoFlow, Zendure, priwatt und Yuma, während Meyer Burger, Solarwatt und Heckert die meistgenannten Namen auf der Panel-Ebene sind.' },
-          { q: 'Wie groß ist der Balkonsolar-Markt?', a: 'Deutschland ist der einzige Markt mit einer umfassenden öffentlichen Zählung: schätzungsweise 4 Millionen registrierte Systeme bis 2025, gegenüber rund 40.000 im Jahr 2017. Andere Länder veröffentlichen derzeit keine vergleichbar detaillierte, verpflichtende Registrierungszahl, weshalb globale Marktgrößenangaben außerhalb Deutschlands als Schätzungen und nicht als verifizierte Zählungen zu behandeln sind.' },
+          { q: 'Wie groß ist der Balkonsolar-Markt?', a: 'Deutschland ist der einzige Markt mit einer umfassenden öffentlichen Zählung: schätzungsweise 1,03 Millionen registrierte Systeme bis Juni 2025, gegenüber rund 500.000 im Juni 2024 (Schätzung von heise). Andere Länder veröffentlichen derzeit keine vergleichbar detaillierte, verpflichtende Registrierungszahl, weshalb globale Marktgrößenangaben außerhalb Deutschlands als Schätzungen und nicht als verifizierte Zählungen zu behandeln sind.' },
           { q: 'Wann legalisierten die USA Balkonsolar?', a: 'Utah war der erste US-Bundesstaat, der Balkonsolar legalisierte, mit der Unterzeichnung von HB 340 im März 2025, in Kraft seit 7. Mai 2025, bei einer Leistungsobergrenze von 1.200 Watt. Die Rechtslage in den USA wird bundesstaatlich entschieden – es gibt kein bundesweites Balkonsolar-Gesetz.' },
           { q: 'Was ist UL 3700, und warum ist der Standard für die Branche wichtig?', a: 'UL 3700 ist der Sicherheitszertifizierungsstandard, den mehrere US-Bundesstaatengesetze verlangen, bevor ein Steckersolar-System legal verkauft werden darf. Er wurde erst im Dezember 2025 veröffentlicht, acht Monate nachdem Utahs Gesetz in Kraft getreten war, und zum Stand dieses Texts (16.07.2026) hatte noch kein vollständiges System die volle Zertifizierung erhalten.' },
           { q: 'Ist Balkonsolar inzwischen in den gesamten USA legal?', a: 'Nein. Nur einzelne Bundesstaaten, die eigene Legalisierungsgesetze verabschiedet haben, wie Utah, erlauben Balkonsolar, und jeder legt seine eigene Leistungsobergrenze und Anforderungen fest. Es gibt keine bundesweite Legalisierung – prüfen Sie vor dem Kauf den aktuellen Stand für Ihren jeweiligen Bundesstaat.' },
@@ -175,17 +175,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Industrie du solaire de balcon : aperçu (2026)',
     metaDescription: 'Comment l\'industrie du solaire de balcon s\'est formée, sa chaîne d\'approvisionnement à trois niveaux et les entreprises qui la portent (2026).',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-10-20',
     audience: 'Lecteurs qui recherchent des informations sur la structure de l\'industrie du solaire de balcon et ses principaux acteurs',
     intro: 'Cet aperçu retrace la formation de l\'industrie du solaire de balcon : les jalons réglementaires qui l\'ont rendue possible, la chaîne d\'approvisionnement à trois niveaux qui l\'alimente, et les entreprises les plus citées à chaque niveau. Les chiffres proviennent des mêmes registres et normes utilisés dans l\'ensemble de la couverture du solaire de balcon sur PromptQuorum, afin de rester cohérents avec les guides par pays cités ci-dessous.',
-    leadAnswerBlock: '**L\'industrie du solaire de balcon est passée d\'une niche purement allemande à un marché mondial en combinant trois niveaux d\'activité distincts — fabricants de panneaux, fabricants de micro-onduleurs/batteries et revendeurs de kits —, les données du registre allemand (d\'environ 40 000 systèmes en 2017 à une estimation de 4 millions d\'ici 2025) restant le signal de croissance public le plus clair jusqu\'à ce que les États-Unis adoptent leur première norme de sécurité dédiée, UL 3700, en décembre 2025.**',
+    leadAnswerBlock: '**L\'industrie du solaire de balcon est passée d\'une niche purement allemande à un marché mondial en combinant trois niveaux d\'activité distincts — fabricants de panneaux, fabricants de micro-onduleurs/batteries et revendeurs de kits —, les données du registre allemand (d\'environ 500 000 systèmes en juin 2024 à une estimation d\'environ 1 million d\'ici mi-2025) restant le signal de croissance public le plus clair jusqu\'à ce que les États-Unis adoptent leur première norme de sécurité dédiée, UL 3700, en décembre 2025.**',
     sections: {
       tldr: {
         id: 'tldr',
         isTldr: true,
         title: 'Aperçu de l\'industrie du solaire de balcon : les chiffres clés',
         items: [
-          'Le nombre de systèmes solaires de balcon enregistrés en Allemagne est passé d\'environ 40 000 en 2017 à une estimation de 4 millions d\'ici 2025, avec environ 430 000 nouvelles inscriptions rien qu\'en 2025 (Bundesnetzagentur/Marktstammdatenregister).',
+          'Le nombre de systèmes solaires de balcon enregistrés en Allemagne a dépassé 500 000 en juin 2024 et atteint une estimation de 1,03 million d\'ici juin 2025 (estimation de heise à partir du Marktstammdatenregister de la Bundesnetzagentur).',
           'L\'industrie se divise en trois niveaux distincts : fabricants de panneaux, fabricants de micro-onduleurs/batteries et revendeurs de kits — la plupart des entreprises n\'opèrent que sur un seul niveau.',
           'Parmi les fabricants de micro-onduleurs les plus cités figurent Hoymiles, Deye, APsystems, Enphase, Growatt et GoodWe.',
           'Parmi les marques de kits et de batteries les plus citées figurent Anker (SOLIX), EcoFlow, Zendure, priwatt et Yuma.',
@@ -196,8 +196,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       snapshot: {
         title: 'Le solaire de balcon en bref',
         image: '/images/balcony-solar-industry-overview-snapshot-en.svg',
-        imageCaption: 'L\'Allemagne est passée d\'environ 40 000 systèmes solaires de balcon enregistrés en 2017 à une estimation de 4 millions d\'installations d\'ici 2025 – le signal de croissance le plus clairement vérifié du marché.',
-        content: 'Le registre Marktstammdatenregister de la Bundesnetzagentur fournit le chiffre de croissance le plus cité de l\'industrie, car l\'Allemagne est le seul grand marché à exiger l\'enregistrement public de chaque système. Ces données montrent une croissance d\'environ 40 000 systèmes enregistrés en 2017 à une estimation de 4 millions d\'ici 2025, dont environ 430 000 nouvelles inscriptions rien qu\'en 2025. Aucun autre pays ne publie actuellement un décompte obligatoire d\'une précision comparable, ce qui explique pourquoi analystes et journalistes s\'appuient par défaut sur le chiffre allemand comme indicateur de la dynamique globale du marché.',
+        imageCaption: 'L\'Allemagne a dépassé 500 000 systèmes solaires de balcon enregistrés en juin 2024 et atteint une estimation de 1,03 million d\'ici juin 2025 (estimation de heise) – le signal de croissance le plus clair du marché.',
+        content: 'Le registre Marktstammdatenregister de la Bundesnetzagentur fournit le chiffre de croissance le plus cité de l\'industrie, car l\'Allemagne est le seul grand marché à exiger l\'enregistrement public de chaque système. Ces données montrent une croissance d\'environ 500 000 systèmes enregistrés en juin 2024 à une estimation de 1,03 million d\'ici juin 2025, selon une analyse de heise. Aucun autre pays ne publie actuellement un décompte obligatoire d\'une précision comparable, ce qui explique pourquoi analystes et journalistes s\'appuient par défaut sur le chiffre allemand comme indicateur de la dynamique globale du marché.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'L\'industrie du solaire de balcon repose sur trois niveaux d\'activité distincts — fabricants de panneaux, fabricants de micro-onduleurs/batteries et revendeurs de kits —, les données d\'enregistrement allemandes servant de référence de croissance publique la plus claire.' },
           { type: 'plain-terms', text: 'Imaginez trois chaînes d\'approvisionnement distinctes pour un seul produit : une entreprise fabrique le panneau solaire, une autre fabrique le petit boîtier onduleur qui le rend compatible avec une prise murale, et une troisième assemble les deux dans le kit que vous achetez réellement.' },
@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Allemagne : systèmes enregistrés dans le temps',
         image: '/images/balcony-solar-industry-overview-germany-growth-en.svg',
         imageCaption: 'Chiffres de la Bundesnetzagentur/du Marktstammdatenregister – le décompte basé sur un registre le plus fiable disponible.',
-        content: 'Le Marktstammdatenregister (MaStR) de la Bundesnetzagentur impose l\'enregistrement de tout système de production raccordé au réseau, y compris le solaire de balcon, ce qui explique pourquoi l\'Allemagne dispose du seul décompte public exhaustif de l\'industrie. Le nombre de systèmes enregistrés est passé d\'environ 40 000 en 2017 à une estimation de 4 millions d\'ici 2025, la croissance s\'accélérant nettement sur les dernières années de cette période — environ 430 000 nouvelles inscriptions ont été ajoutées rien qu\'en 2025. Cette accélération a coïncidé avec l\'assouplissement par l\'Allemagne de ses règles d\'enregistrement et de puissance, supprimant les freins qui dissuadaient auparavant les acheteurs occasionnels de s\'enregistrer.',
+        content: 'Le Marktstammdatenregister (MaStR) de la Bundesnetzagentur impose l\'enregistrement de tout système de production raccordé au réseau, y compris le solaire de balcon, ce qui explique pourquoi l\'Allemagne dispose du seul décompte public exhaustif de l\'industrie. Le nombre de systèmes enregistrés a dépassé 500 000 en juin 2024 et atteint une estimation de 1,03 million d\'ici juin 2025, selon une [analyse de heise](https://heise.de/-10439636) du registre — une estimation, car le registre ne permet plus de filtrer directement les systèmes enfichables. L\'Allemagne a depuis assoupli ses règles d\'enregistrement et de puissance, supprimant les freins qui dissuadaient auparavant les acheteurs occasionnels de s\'enregistrer.',
       },
       usEntry: {
         title: 'Marché américain : une histoire de 2026',
@@ -237,10 +237,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquemment posées',
         faqs: [
-          { q: 'Quand l\'industrie du solaire de balcon a-t-elle vu le jour ?', a: 'Le solaire de balcon est né en Allemagne comme un mouvement DIY informel, avant que les régulateurs ne mettent en place des règles d\'enregistrement simplifiées pour les petits systèmes plug-in. La croissance s\'est ensuite accélérée, passant d\'environ 40 000 systèmes enregistrés en 2017 à une estimation de 4 millions d\'ici 2025, selon les données de la Bundesnetzagentur/du Marktstammdatenregister.' },
+          { q: 'Quand l\'industrie du solaire de balcon a-t-elle vu le jour ?', a: 'Le solaire de balcon est né en Allemagne comme un mouvement DIY informel, avant que les régulateurs ne mettent en place des règles d\'enregistrement simplifiées pour les petits systèmes plug-in. La croissance s\'est ensuite accélérée, passant d\'environ 500 000 systèmes enregistrés en juin 2024 à une estimation de 1,03 million d\'ici juin 2025, selon une estimation de heise à partir des données de la Bundesnetzagentur/du Marktstammdatenregister.' },
           { q: 'Quels sont les trois niveaux de la chaîne d\'approvisionnement du solaire de balcon ?', a: 'L\'industrie se divise en fabricants de panneaux (le panneau solaire physique), fabricants de micro-onduleurs/batteries (l\'électronique qui rend un système compatible avec une prise murale) et revendeurs de kits (les entreprises qui assemblent panneaux et micro-onduleurs dans le produit vendu aux acheteurs). La plupart des entreprises n\'opèrent que sur un seul de ces trois niveaux.' },
           { q: 'Quelles entreprises sont les plus citées dans les comparaisons du marché du solaire de balcon ?', a: 'Hoymiles, Deye, APsystems, Enphase, Growatt et GoodWe sont les fabricants de micro-onduleurs les plus cités. Anker (SOLIX), EcoFlow, Zendure, priwatt et Yuma sont les marques de kits et de batteries les plus citées, et Meyer Burger, Solarwatt et Heckert sont les noms les plus cités au niveau des panneaux.' },
-          { q: 'Quelle est la taille du marché du solaire de balcon ?', a: 'L\'Allemagne est le seul marché disposant d\'un décompte public exhaustif : une estimation de 4 millions de systèmes enregistrés d\'ici 2025, contre environ 40 000 en 2017. Les autres pays ne publient actuellement aucun chiffre d\'enregistrement obligatoire d\'une précision comparable, donc les estimations de taille de marché en dehors de l\'Allemagne doivent être considérées comme des approximations plutôt que des décomptes vérifiés.' },
+          { q: 'Quelle est la taille du marché du solaire de balcon ?', a: 'L\'Allemagne est le seul marché disposant d\'un décompte public exhaustif : une estimation de 1,03 million de systèmes enregistrés d\'ici juin 2025, contre environ 500 000 en juin 2024 (estimation de heise). Les autres pays ne publient actuellement aucun chiffre d\'enregistrement obligatoire d\'une précision comparable, donc les estimations de taille de marché en dehors de l\'Allemagne doivent être considérées comme des approximations plutôt que des décomptes vérifiés.' },
           { q: 'Quand les États-Unis ont-ils légalisé le solaire de balcon ?', a: 'L\'Utah a été le premier État américain à légaliser le solaire de balcon, avec la signature de la loi HB 340 en mars 2025, entrée en vigueur le 7 mai 2025, et un plafond de 1 200 watts par système. La légalité aux États-Unis se décide État par État — il n\'existe pas de loi fédérale sur le solaire de balcon.' },
           { q: 'Qu\'est-ce que la norme UL 3700 et pourquoi importe-t-elle pour l\'industrie ?', a: 'UL 3700 est la norme de certification de sécurité que plusieurs lois d\'États américains exigent avant qu\'un système solaire plug-in puisse être vendu légalement. Elle n\'a été publiée qu\'en décembre 2025, huit mois après l\'entrée en vigueur de la loi de l\'Utah, et à l\'heure de la rédaction (16/07/2026), aucun système complet n\'avait obtenu la certification intégrale.' },
           { q: 'Le solaire de balcon est-il désormais légal dans l\'ensemble des États-Unis ?', a: 'Non. Seuls les États ayant adopté leur propre loi de légalisation, comme l\'Utah, autorisent le solaire de balcon, chacun fixant son propre plafond de puissance et ses propres exigences. Il n\'existe pas de légalisation nationale — vérifiez le statut actuel de votre État avant tout achat.' },
@@ -256,17 +256,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'ベランダソーラー産業の歴史とサプライチェーン概観（2026年）',
     metaDescription: 'ベランダソーラー産業がどのように形成されたか、3層構造のサプライチェーン、そして業界を牽引する企業について、2026年版として解説します。',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-10-20',
     audience: 'ベランダソーラー産業の構造と主要企業について調べている読者向け',
     intro: '本記事では、ベランダソーラー産業がどのように形成されたかを整理します。市場を切り開いた規制上の節目、業界を支える3層構造のサプライチェーン、そして各層で最も頻繁に言及される企業です。数値はPromptQuorumのベランダソーラー関連記事全体で使用しているものと同じ登録データ・規格に基づいており、下記の国別ガイドとも整合しています。',
-    leadAnswerBlock: '**ベランダソーラー産業は、ドイツ発の小さなニッチ市場から、パネルメーカー、マイクロインバーター/バッテリーメーカー、キット販売業者という3つの異なる事業層が組み合わさることでグローバル市場へと成長しました。ドイツの登録データ（2017年の約4万件から2025年までに推定400万件へ）は、米国が2026年（2025年12月）に初の専用安全規格UL 3700を制定するまで、業界で最も明確な公開成長シグナルであり続けました。**',
+    leadAnswerBlock: '**ベランダソーラー産業は、ドイツ発の小さなニッチ市場から、パネルメーカー、マイクロインバーター/バッテリーメーカー、キット販売業者という3つの異なる事業層が組み合わさることでグローバル市場へと成長しました。ドイツの登録データ（2024年6月の約50万件から2025年半ばまでに推定約100万件へ）は、米国が2026年（2025年12月）に初の専用安全規格UL 3700を制定するまで、業界で最も明確な公開成長シグナルであり続けました。**',
     sections: {
       tldr: {
         id: 'tldr',
         isTldr: true,
         title: 'ベランダソーラー産業概観：重要な事実',
         items: [
-          'ドイツの登録済みベランダソーラーシステムは2017年の約4万件から2025年までに推定400万件に増加し、2025年単年だけで約43万件の新規登録が加わりました（Bundesnetzagentur/Marktstammdatenregister）。',
+          'ドイツの登録済みベランダソーラーシステムは2024年6月に50万件を超え、2025年6月までに推定約103万件に達しました（heiseによるMarktstammdatenregisterに基づく推計）。',
           '業界はパネルメーカー、マイクロインバーター/バッテリーメーカー、キット販売業者という3つの異なる層に分かれており、ほとんどの企業は1つの層のみで事業を行っています。',
           'マイクロインバーターメーカーとして最も頻繁に言及される企業は、Hoymiles、Deye、APsystems、Enphase、Growatt、GoodWeです。',
           'キット・バッテリーブランドとして最も頻繁に言及される企業は、Anker（SOLIX）、EcoFlow、Zendure、priwatt、Yumaです。',
@@ -277,8 +277,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       snapshot: {
         title: 'バルコニーソーラーの概要',
         image: '/images/balcony-solar-industry-overview-snapshot-en.svg',
-        imageCaption: 'ドイツでは2017年に約4万件だった登録済みバルコニーソーラーシステムが、2025年までに推定400万件に達しました。市場で最も明確に検証された成長シグナルです。',
-        content: 'ドイツのBundesnetzagentur（連邦ネットワーク庁）が管理するMarktstammdatenregisterは、すべてのシステムの公的登録を義務付けている唯一の主要市場であるため、業界で最も引用される成長データとなっています。このデータによれば、登録システム数は2017年の約4万件から2025年までに推定400万件へと増加し、そのうち2025年単年だけで約43万件の新規登録が加わりました。他国は現在のところ、これに匹敵する詳細な義務的統計を公表していないため、アナリストや業界を取材するメディアは、市場全体の勢いを示す代理指標としてドイツの数字を標準的に用いています。',
+        imageCaption: 'ドイツの登録済みバルコニーソーラーシステムは2024年6月に50万件を超え、2025年6月までに推定約103万件に達しました（heiseの推計）。市場で最も明確な成長シグナルです。',
+        content: 'ドイツのBundesnetzagentur（連邦ネットワーク庁）が管理するMarktstammdatenregisterは、すべてのシステムの公的登録を義務付けている唯一の主要市場であるため、業界で最も引用される成長データとなっています。このデータによれば、登録システム数は2024年6月の約50万件から2025年6月までに推定約103万件へと増加したと、heiseの分析は伝えています。他国は現在のところ、これに匹敵する詳細な義務的統計を公表していないため、アナリストや業界を取材するメディアは、市場全体の勢いを示す代理指標としてドイツの数字を標準的に用いています。',
         snippetBlocks: [
           { type: 'one-sentence', text: 'ベランダソーラー産業は、パネルメーカー、マイクロインバーター/バッテリーメーカー、キット販売業者という3つの異なる事業層で構成されており、ドイツの登録データが最も明確な公開成長指標となっています。' },
           { type: 'plain-terms', text: '1つの製品に対して3つの別々のサプライチェーンがあると考えるとわかりやすいです。ある会社がソーラーパネルを作り、別の会社がコンセントに接続できるようにする小さなインバーターボックスを作り、さらに別の会社が両者を組み合わせて実際に購入するキットに仕上げます。' },
@@ -306,7 +306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ドイツ：登録システム数の推移',
         image: '/images/balcony-solar-industry-overview-germany-growth-en.svg',
         imageCaption: 'Bundesnetzagentur（連邦ネットワーク庁）/Marktstammdatenregisterのデータ – 現時点で入手可能な最も信頼できる登録ベースの集計です。',
-        content: 'BundesnetzagenturのMarktstammdatenregister（MaStR）は、ベランダソーラーを含む系統連系型のすべての発電システムの登録を義務付けており、そのためドイツは業界で唯一、包括的な公的統計を持つ市場となっています。登録システム数は2017年の約4万件から2025年までに推定400万件へと増加し、この期間の終盤で成長が大きく加速しました。2025年単年だけで約43万件の新規登録が加わっています。この加速は、ドイツが登録・出力に関するルールを緩和した時期と重なっており、これまでカジュアルな購入者が登録をためらう原因となっていた摩擦が取り除かれました。',
+        content: 'BundesnetzagenturのMarktstammdatenregister（MaStR）は、ベランダソーラーを含む系統連系型のすべての発電システムの登録を義務付けており、そのためドイツは業界で唯一、包括的な公的統計を持つ市場となっています。登録システム数は2024年6月に50万件を超え、2025年6月までに推定約103万件に達したと、登録簿に基づく[heiseの分析](https://heise.de/-10439636)は伝えています。登録簿はプラグイン式システムを直接絞り込めなくなっているため、これは推計です。その後ドイツは登録・出力に関するルールを緩和し、これまでカジュアルな購入者が登録をためらう原因となっていた摩擦が取り除かれました。',
       },
       usEntry: {
         title: '米国市場：2026年の動き',
@@ -318,10 +318,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'ベランダソーラー産業はいつ始まりましたか？', a: 'ベランダソーラーは、規制当局が小型プラグイン型システム向けの簡素化された登録ルールを整備する以前、ドイツで非公式なDIYムーブメントとして始まりました。その後、Bundesnetzagentur/Marktstammdatenregisterのデータによると、登録システム数は2017年の約4万件から2025年までに推定400万件へと成長が加速しました。' },
+          { q: 'ベランダソーラー産業はいつ始まりましたか？', a: 'ベランダソーラーは、規制当局が小型プラグイン型システム向けの簡素化された登録ルールを整備する以前、ドイツで非公式なDIYムーブメントとして始まりました。その後、Bundesnetzagentur/Marktstammdatenregisterのデータによると、登録システム数は2024年6月の約50万件から2025年6月までに推定約103万件へと成長が加速しました（heiseの推計）。' },
           { q: 'ベランダソーラーのサプライチェーンにおける3つの層とは何ですか？', a: '業界は、物理的なソーラーパネルを供給するパネルメーカー、システムをコンセント対応にする電子部品を作るマイクロインバーター/バッテリーメーカー、パネルとマイクロインバーターを購入者向け製品にまとめるキット販売業者の3層に分かれています。ほとんどの企業はこの3層のうち1つだけで事業を行っています。' },
           { q: 'ベランダソーラーの市場比較で最も頻繁に言及される企業はどこですか？', a: 'マイクロインバーターメーカーとして最も頻繁に言及されるのはHoymiles、Deye、APsystems、Enphase、Growatt、GoodWeです。キット・バッテリーブランドとして最も頻繁に言及されるのはAnker（SOLIX）、EcoFlow、Zendure、priwatt、Yumaで、パネル層で最も多く言及される名前はMeyer Burger、Solarwatt、Heckertです。' },
-          { q: 'ベランダソーラー市場の規模はどのくらいですか？', a: '包括的な公的統計を持つのはドイツのみで、2025年までに推定400万件の登録システムがあり、2017年時点の約4万件から増加しています。他国は現在、これに匹敵する詳細で義務的な登録数値を公表していないため、ドイツ以外の世界市場規模に関する主張は、検証済みの数値ではなく推定値として扱うべきです。' },
+          { q: 'ベランダソーラー市場の規模はどのくらいですか？', a: '包括的な公的統計を持つのはドイツのみで、2025年6月までに推定約103万件の登録システムがあり、2024年6月時点の約50万件から増加しています（heiseの推計）。他国は現在、これに匹敵する詳細で義務的な登録数値を公表していないため、ドイツ以外の世界市場規模に関する主張は、検証済みの数値ではなく推定値として扱うべきです。' },
           { q: '米国はいつベランダソーラーを合法化しましたか？', a: 'ユタ州が米国で最初にベランダソーラーを合法化した州で、HB 340法に2025年3月に署名し、2025年5月7日に発効、出力上限は1,200ワットです。米国の合法性は州ごとに決定されており、連邦レベルのベランダソーラー法は存在しません。' },
           { q: 'UL 3700とは何ですか。なぜ業界にとって重要なのですか？', a: 'UL 3700は、プラグイン型ソーラーシステムを合法的に販売する前に、複数の米国州法が求める安全認証規格です。公開されたのはユタ州の法律発効から8か月後の2025年12月で、本稿執筆時点（2026年7月16日）でも、完全な認証を取得した製品は存在しません。' },
           { q: 'ベランダソーラーは今や米国全土で合法ですか？', a: 'いいえ。ユタ州のように独自の合法化法を成立させた個々の州のみがベランダソーラーを認めており、各州が独自の出力上限や要件を定めています。全国一律の合法化は存在しないため、購入前にお住まいの州の最新の状況を確認してください。' },
@@ -337,17 +337,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '阳台光伏产业发展历程、供应链结构与市场参与者概览（2026年）',
     metaDescription: '本文介绍阳台光伏行业的发展历程、三层供应链结构，以及推动行业发展的主要企业，内容更新至2026年。',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-10-20',
     audience: '希望了解阳台光伏行业结构及主要参与者的读者',
     intro: '本文梳理阳台光伏行业的形成过程：推动市场出现的监管里程碑、支撑行业运转的三层供应链，以及每个层级中被提及最多的企业。文中数据与PromptQuorum阳台光伏系列文章所引用的登记数据和标准保持一致,与下方各国指南中的数字相符。',
-    leadAnswerBlock: '**阳台光伏行业从德国本土的小众市场发展为全球市场,靠的是面板制造商、微型逆变器/电池制造商与套件经销商这三个各自独立的业务层级共同作用。在美国于2025年12月推出首个专门安全标准UL 3700之前,德国的登记数据(从2017年约4万套增长到2025年预计的400万套)一直是行业最明确的公开增长信号。**',
+    leadAnswerBlock: '**阳台光伏行业从德国本土的小众市场发展为全球市场,靠的是面板制造商、微型逆变器/电池制造商与套件经销商这三个各自独立的业务层级共同作用。在美国于2025年12月推出首个专门安全标准UL 3700之前,德国的登记数据(从2024年6月约50万套增长到2025年年中预计的约100万套)一直是行业最明确的公开增长信号。**',
     sections: {
       tldr: {
         id: 'tldr',
         isTldr: true,
         title: '阳台光伏行业概览:核心事实',
         items: [
-          '德国注册的阳台光伏系统数量从2017年的约4万套增长到2025年预计的400万套,仅2025年一年就新增约43万套注册(Bundesnetzagentur/Marktstammdatenregister数据)。',
+          '德国注册的阳台光伏系统数量在2024年6月超过50万套,到2025年6月预计达到约103万套(heise基于Marktstammdatenregister的估算)。',
           '该行业分为三个独立层级:面板制造商、微型逆变器/电池制造商与套件经销商——大多数企业只专注于其中一个层级。',
           '被提及最多的微型逆变器制造商包括Hoymiles、Deye、APsystems、Enphase、Growatt和GoodWe。',
           '被提及最多的套件与电池品牌包括Anker(SOLIX)、EcoFlow、Zendure、priwatt和Yuma。',
@@ -358,8 +358,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       snapshot: {
         title: '阳台光伏简介',
         image: '/images/balcony-solar-industry-overview-snapshot-en.svg',
-        imageCaption: '德国的注册阳台光伏系统数量从2017年的约4万套增长到2025年预计的400万套——这是该市场最明确的、经过验证的增长信号。',
-        content: '德国联邦网络局(Bundesnetzagentur)的Marktstammdatenregister登记系统提供了行业中被引用最多的增长数据,因为德国是唯一要求对每套系统进行公开登记的主要市场。数据显示,注册系统数量从2017年的约4万套增长到2025年预计的400万套,其中仅2025年一年就新增约43万套注册。目前没有其他国家发布同样细致的强制性统计数据,因此分析师和报道该行业的媒体通常将德国的数字作为衡量整体市场势头的替代指标。',
+        imageCaption: '德国的注册阳台光伏系统数量在2024年6月超过50万套,到2025年6月预计达到约103万套(heise估算)——这是该市场最明确的增长信号。',
+        content: '德国联邦网络局(Bundesnetzagentur)的Marktstammdatenregister登记系统提供了行业中被引用最多的增长数据,因为德国是唯一要求对每套系统进行公开登记的主要市场。数据显示,注册系统数量从2024年6月的约50万套增长到2025年6月预计的约103万套,这是heise的分析结果。目前没有其他国家发布同样细致的强制性统计数据,因此分析师和报道该行业的媒体通常将德国的数字作为衡量整体市场势头的替代指标。',
         snippetBlocks: [
           { type: 'one-sentence', text: '阳台光伏行业由三个独立的业务层级构成——面板制造商、微型逆变器/电池制造商与套件经销商——德国的登记数据是其最明确的公开增长基准。' },
           { type: 'plain-terms', text: '可以把它想象成一个产品背后的三条独立供应链:一家公司生产太阳能面板,另一家公司生产让它能安全接入插座的小型逆变器盒,第三家公司再把两者组装成你实际购买的套件。' },
@@ -387,7 +387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '德国:注册系统数量的变化趋势',
         image: '/images/balcony-solar-industry-overview-germany-growth-en.svg',
         imageCaption: 'Bundesnetzagentur/Marktstammdatenregister的数据——目前可获得的、基于官方登记的最权威统计。',
-        content: '德国联邦网络局的Marktstammdatenregister(MaStR)要求所有并网发电系统(包括阳台光伏)都必须登记,这也是德国拥有该行业唯一全面公开统计数据的原因。注册系统数量从2017年的约4万套增长到2025年预计的400万套,且在这段时期的最后几年增长明显加速——仅2025年一年就新增约43万套注册。这一加速期恰好与德国放宽登记和功率限制规则的时间重合,消除了此前让普通购买者不愿登记的障碍。',
+        content: '德国联邦网络局的Marktstammdatenregister(MaStR)要求所有并网发电系统(包括阳台光伏)都必须登记,这也是德国拥有该行业唯一全面公开统计数据的原因。注册系统数量在2024年6月超过50万套,到2025年6月预计达到约103万套,这是[heise对登记簿的分析](https://heise.de/-10439636)得出的数字;由于登记簿已无法直接筛选插电式系统,这只是估算。此后德国放宽了登记和功率限制规则,消除了此前让普通购买者不愿登记的障碍。',
       },
       usEntry: {
         title: '美国市场:2026年的故事',
@@ -399,10 +399,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: '阳台光伏行业是什么时候开始的?', a: '阳台光伏最初在德国以非正式DIY运动的形式出现,随后监管机构为小型插电式系统制定了简化的登记规则。此后,根据Bundesnetzagentur/Marktstammdatenregister的数据,注册系统数量从2017年的约4万套加速增长至2025年预计的400万套。' },
+          { q: '阳台光伏行业是什么时候开始的?', a: '阳台光伏最初在德国以非正式DIY运动的形式出现,随后监管机构为小型插电式系统制定了简化的登记规则。此后,根据Bundesnetzagentur/Marktstammdatenregister的数据,注册系统数量从2024年6月的约50万套加速增长至2025年6月预计的约103万套(heise估算)。' },
           { q: '阳台光伏供应链的三个层级是什么?', a: '该行业分为面板制造商(生产实体太阳能面板)、微型逆变器/电池制造商(生产让系统实现插座兼容的电子元件)和套件经销商(将面板和微型逆变器组装成销售给买家的成品)。大多数公司只专注于这三个层级中的一个。' },
           { q: '在阳台光伏市场比较中,哪些公司被提及最多?', a: 'Hoymiles、Deye、APsystems、Enphase、Growatt和GoodWe是被提及最多的微型逆变器制造商。Anker(SOLIX)、EcoFlow、Zendure、priwatt和Yuma是被提及最多的套件与电池品牌,而Meyer Burger、Solarwatt和Heckert则是面板层级中提及率最高的名称。' },
-          { q: '阳台光伏市场规模有多大?', a: '德国是唯一拥有全面公开统计数据的市场:预计到2025年注册系统达400万套,较2017年的约4万套大幅增长。其他国家目前尚未发布同等细致的强制性登记数据,因此除德国以外的全球市场规模说法应被视为估算,而非经过验证的统计。' },
+          { q: '阳台光伏市场规模有多大?', a: '德国是唯一拥有全面公开统计数据的市场:预计到2025年6月注册系统达约103万套,较2024年6月的约50万套大幅增长(heise估算)。其他国家目前尚未发布同等细致的强制性登记数据,因此除德国以外的全球市场规模说法应被视为估算,而非经过验证的统计。' },
           { q: '美国是什么时候将阳台光伏合法化的?', a: '犹他州是美国首个将阳台光伏合法化的州,HB 340法案于2025年3月签署,2025年5月7日生效,系统功率上限为1,200瓦。美国的合法性由各州分别决定——目前没有联邦层面的阳台光伏法律。' },
           { q: 'UL 3700是什么,为什么它对行业很重要?', a: 'UL 3700是多个美国州法律要求的安全认证标准,插电式光伏系统必须通过认证才能合法销售。该标准直到2025年12月才发布,比犹他州法案生效晚了8个月,截至本文撰写时(2026年7月16日),尚无一款完整系统获得该标准的完整认证。' },
           { q: '阳台光伏现在在美国全境都合法吗?', a: '不是。目前只有像犹他州这样已通过自身合法化法案的个别州才允许阳台光伏,且每个州都设定了各自的功率上限和要求。目前没有全国性的合法化——购买前请务必核实所在州的最新状态。' },
@@ -418,17 +418,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Panorama de la industria del solar de balcón (2026)',
     metaDescription: 'Cómo se formó la industria del solar de balcón, su cadena de suministro de tres niveles y las empresas que la impulsan, actualizado para 2026.',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-10-20',
     audience: 'Lectores que investigan la estructura de la industria del solar de balcón y sus principales actores',
     intro: 'Este panorama repasa cómo se formó la industria del solar de balcón: los hitos regulatorios que la hicieron posible, la cadena de suministro de tres niveles que la abastece y las empresas más citadas en cada nivel. Los datos proceden de los mismos registros y normas que se usan en toda la cobertura de solar de balcón de PromptQuorum, por lo que coinciden con las guías por país enlazadas más abajo.',
-    leadAnswerBlock: '**La industria del solar de balcón pasó de ser un nicho exclusivamente alemán a convertirse en un mercado global al combinar tres niveles de negocio distintos —fabricantes de paneles, fabricantes de microinversores/baterías y revendedores de kits—, mientras los datos del registro alemán (de unos 40.000 sistemas en 2017 a una estimación de 4 millones para 2025) siguieron siendo la señal de crecimiento público más clara del sector hasta que Estados Unidos aprobó su primera norma de seguridad dedicada, UL 3700, en diciembre de 2025.**',
+    leadAnswerBlock: '**La industria del solar de balcón pasó de ser un nicho exclusivamente alemán a convertirse en un mercado global al combinar tres niveles de negocio distintos —fabricantes de paneles, fabricantes de microinversores/baterías y revendedores de kits—, mientras los datos del registro alemán (de unos 500.000 sistemas en junio de 2024 a una estimación de 1 millón a mediados de 2025) siguieron siendo la señal de crecimiento público más clara del sector hasta que Estados Unidos aprobó su primera norma de seguridad dedicada, UL 3700, en diciembre de 2025.**',
     sections: {
       tldr: {
         id: 'tldr',
         isTldr: true,
         title: 'Panorama de la industria del solar de balcón: datos clave',
         items: [
-          'Los sistemas de solar de balcón registrados en Alemania pasaron de unos 40.000 en 2017 a una estimación de 4 millones para 2025, con unos 430.000 nuevos registros solo en 2025 (Bundesnetzagentur/Marktstammdatenregister).',
+          'Los sistemas de solar de balcón registrados en Alemania superaron los 500.000 en junio de 2024 y alcanzaron una estimación de 1,03 millones en junio de 2025 (estimación de heise a partir del Marktstammdatenregister de la Bundesnetzagentur).',
           'La industria se divide en tres niveles distintos: fabricantes de paneles, fabricantes de microinversores/baterías y revendedores de kits; la mayoría de las empresas opera en un solo nivel.',
           'Entre los fabricantes de microinversores más citados están Hoymiles, Deye, APsystems, Enphase, Growatt y GoodWe.',
           'Entre las marcas de kits y baterías más citadas están Anker (SOLIX), EcoFlow, Zendure, priwatt y Yuma.',
@@ -439,8 +439,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       snapshot: {
         title: 'El solar de balcón, en resumen',
         image: '/images/balcony-solar-industry-overview-snapshot-en.svg',
-        imageCaption: 'Alemania pasó de aproximadamente 40.000 sistemas solares de balcón registrados en 2017 a una estimación de 4 millones de instalaciones para 2025, la señal de crecimiento más claramente verificada del mercado.',
-        content: 'El registro Marktstammdatenregister de la Bundesnetzagentur ofrece la cifra de crecimiento más citada de la industria porque Alemania es el único mercado importante que exige el registro público de cada sistema. Esos datos muestran un crecimiento de unos 40.000 sistemas registrados en 2017 a una estimación de 4 millones para 2025, incluidos unos 430.000 nuevos registros solo durante 2025. Ningún otro país publica actualmente un recuento obligatorio con un nivel de detalle comparable, por lo que analistas y periodistas que cubren la industria recurren a la cifra alemana como indicador de referencia del impulso general del mercado.',
+        imageCaption: 'Alemania superó los 500.000 sistemas solares de balcón registrados en junio de 2024 y alcanzó una estimación de 1,03 millones en junio de 2025 (estimación de heise), la señal de crecimiento más clara del mercado.',
+        content: 'El registro Marktstammdatenregister de la Bundesnetzagentur ofrece la cifra de crecimiento más citada de la industria porque Alemania es el único mercado importante que exige el registro público de cada sistema. Esos datos muestran un crecimiento de unos 500.000 sistemas registrados en junio de 2024 a una estimación de 1,03 millones en junio de 2025, según un análisis de heise. Ningún otro país publica actualmente un recuento obligatorio con un nivel de detalle comparable, por lo que analistas y periodistas que cubren la industria recurren a la cifra alemana como indicador de referencia del impulso general del mercado.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'La industria del solar de balcón se basa en tres niveles de negocio distintos —fabricantes de paneles, fabricantes de microinversores/baterías y revendedores de kits—, con los datos de registro alemanes como el indicador de crecimiento público más claro.' },
           { type: 'plain-terms', text: 'Imagínalo como tres cadenas de suministro distintas que alimentan un solo producto: una empresa fabrica el panel solar, otra fabrica la pequeña caja del inversor que lo hace compatible con un enchufe, y una tercera empaqueta ambos en el kit que realmente compras.' },
@@ -468,7 +468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Alemania: sistemas registrados a lo largo del tiempo',
         image: '/images/balcony-solar-industry-overview-germany-growth-en.svg',
         imageCaption: 'Cifras de la Bundesnetzagentur/Marktstammdatenregister: el recuento basado en registros más autorizado disponible.',
-        content: 'El Marktstammdatenregister (MaStR) de la Bundesnetzagentur exige el registro de todo sistema de generación conectado a la red, incluido el solar de balcón, lo que explica por qué Alemania cuenta con el único recuento público exhaustivo de la industria. Los sistemas registrados pasaron de unos 40.000 en 2017 a una estimación de 4 millones para 2025, con una aceleración marcada en los últimos años de ese período: solo en 2025 se sumaron unos 430.000 nuevos registros. Esa aceleración coincidió con la flexibilización alemana de sus normas de registro y potencia, eliminando la fricción que antes desalentaba a los compradores ocasionales a registrarse siquiera.',
+        content: 'El Marktstammdatenregister (MaStR) de la Bundesnetzagentur exige el registro de todo sistema de generación conectado a la red, incluido el solar de balcón, lo que explica por qué Alemania cuenta con el único recuento público exhaustivo de la industria. Los sistemas registrados superaron los 500.000 en junio de 2024 y alcanzaron una estimación de 1,03 millones en junio de 2025, según un [análisis de heise](https://heise.de/-10439636) del registro — una estimación, porque el registro ya no permite filtrar directamente los sistemas enchufables. Desde entonces Alemania ha flexibilizado sus normas de registro y potencia, eliminando la fricción que antes desalentaba a los compradores ocasionales a registrarse siquiera.',
       },
       usEntry: {
         title: 'Mercado de EE. UU.: una historia de 2026',
@@ -480,10 +480,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Cuándo comenzó la industria del solar de balcón?', a: 'El solar de balcón se originó en Alemania como un movimiento DIY informal, antes de que los reguladores formalizaran normas de registro simplificadas para sistemas plug-in pequeños. El crecimiento se aceleró después, pasando de unos 40.000 sistemas registrados en 2017 a una estimación de 4 millones para 2025, según datos de la Bundesnetzagentur/Marktstammdatenregister.' },
+          { q: '¿Cuándo comenzó la industria del solar de balcón?', a: 'El solar de balcón se originó en Alemania como un movimiento DIY informal, antes de que los reguladores formalizaran normas de registro simplificadas para sistemas plug-in pequeños. El crecimiento se aceleró después, pasando de unos 500.000 sistemas registrados en junio de 2024 a una estimación de 1,03 millones en junio de 2025, según una estimación de heise a partir de datos de la Bundesnetzagentur/Marktstammdatenregister.' },
           { q: '¿Cuáles son los tres niveles de la cadena de suministro del solar de balcón?', a: 'La industria se divide en fabricantes de paneles (el panel solar físico), fabricantes de microinversores/baterías (la electrónica que hace que un sistema sea compatible con un enchufe) y revendedores de kits (empresas que empaquetan paneles y microinversores en el producto vendido a los compradores). La mayoría de las empresas opera en solo uno de estos tres niveles.' },
           { q: '¿Qué empresas se citan con más frecuencia en las comparativas del mercado del solar de balcón?', a: 'Hoymiles, Deye, APsystems, Enphase, Growatt y GoodWe son los fabricantes de microinversores más citados. Anker (SOLIX), EcoFlow, Zendure, priwatt y Yuma son las marcas de kits y baterías más citadas, y Meyer Burger, Solarwatt y Heckert son los nombres más citados en el nivel de paneles.' },
-          { q: '¿Qué tamaño tiene el mercado del solar de balcón?', a: 'Alemania es el único mercado con un recuento público exhaustivo: una estimación de 4 millones de sistemas registrados para 2025, frente a unos 40.000 en 2017. Otros países no publican actualmente una cifra de registro obligatoria con un nivel de detalle comparable, por lo que las afirmaciones sobre el tamaño del mercado global fuera de Alemania deben tratarse como estimaciones, no como recuentos verificados.' },
+          { q: '¿Qué tamaño tiene el mercado del solar de balcón?', a: 'Alemania es el único mercado con un recuento público exhaustivo: una estimación de 1,03 millones de sistemas registrados a junio de 2025, frente a unos 500.000 en junio de 2024 (estimación de heise). Otros países no publican actualmente una cifra de registro obligatoria con un nivel de detalle comparable, por lo que las afirmaciones sobre el tamaño del mercado global fuera de Alemania deben tratarse como estimaciones, no como recuentos verificados.' },
           { q: '¿Cuándo legalizó Estados Unidos el solar de balcón?', a: 'Utah fue el primer estado de EE. UU. en legalizar el solar de balcón, con la firma de la ley HB 340 en marzo de 2025, vigente desde el 7 de mayo de 2025, y un límite de 1.200 vatios por sistema. La legalidad en EE. UU. se decide estado por estado; no existe una ley federal de solar de balcón.' },
           { q: '¿Qué es UL 3700 y por qué importa para la industria?', a: 'UL 3700 es la norma de certificación de seguridad que varias leyes estatales de EE. UU. exigen antes de que un sistema solar plug-in pueda venderse legalmente. No se publicó hasta diciembre de 2025, ocho meses después de que la ley de Utah entrara en vigor, y al momento de escribir esto (16-07-2026) ningún sistema completo había obtenido la certificación total.' },
           { q: '¿Es legal el solar de balcón en todo Estados Unidos ahora?', a: 'No. Solo los estados individuales que han aprobado sus propias leyes de legalización, como Utah, permiten el solar de balcón, y cada uno establece su propio límite de potencia y requisitos. No existe una legalización a nivel nacional; verifica el estado actual de tu estado antes de comprar.' },
@@ -499,17 +499,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Panorama do setor de energia solar de varanda (2026)',
     metaDescription: 'Como a indústria de energia solar de varanda se formou, sua cadeia de suprimentos de três camadas e as empresas que a impulsionam, atualizado para 2026.',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-10-20',
     audience: 'Leitores que pesquisam a estrutura da indústria de energia solar de varanda e seus principais players',
     intro: 'Este panorama traça como a indústria de energia solar de varanda se formou: os marcos regulatórios que a viabilizaram, a cadeia de suprimentos de três camadas que a abastece e as empresas mais citadas em cada camada. Os números seguem os mesmos registros e normas usados em toda a cobertura de energia solar de varanda do PromptQuorum, por isso batem com os guias por país linkados abaixo.',
-    leadAnswerBlock: '**A indústria de energia solar de varanda cresceu de um nicho exclusivamente alemão para um mercado global ao combinar três camadas de negócio distintas — fabricantes de painéis, fabricantes de microinversores/baterias e revendedores de kits —, enquanto os dados do registro alemão (de cerca de 40.000 sistemas em 2017 para uma estimativa de 4 milhões até 2025) permaneceram o sinal de crescimento público mais claro do setor até os EUA aprovarem sua primeira norma de segurança dedicada, a UL 3700, em dezembro de 2025.**',
+    leadAnswerBlock: '**A indústria de energia solar de varanda cresceu de um nicho exclusivamente alemão para um mercado global ao combinar três camadas de negócio distintas — fabricantes de painéis, fabricantes de microinversores/baterias e revendedores de kits —, enquanto os dados do registro alemão (de cerca de 500.000 sistemas em junho de 2024 para uma estimativa de 1 milhão até meados de 2025) permaneceram o sinal de crescimento público mais claro do setor até os EUA aprovarem sua primeira norma de segurança dedicada, a UL 3700, em dezembro de 2025.**',
     sections: {
       tldr: {
         id: 'tldr',
         isTldr: true,
         title: 'Panorama da indústria de energia solar de varanda: principais fatos',
         items: [
-          'Os sistemas de energia solar de varanda registrados na Alemanha cresceram de cerca de 40.000 em 2017 para uma estimativa de 4 milhões até 2025, com cerca de 430.000 novos registros somente em 2025 (Bundesnetzagentur/Marktstammdatenregister).',
+          'Os sistemas de energia solar de varanda registrados na Alemanha ultrapassaram 500.000 em junho de 2024 e chegaram a uma estimativa de 1,03 milhão em junho de 2025 (estimativa da heise com base no Marktstammdatenregister da Bundesnetzagentur).',
           'O setor se divide em três camadas distintas: fabricantes de painéis, fabricantes de microinversores/baterias e revendedores de kits — a maioria das empresas atua em apenas uma camada.',
           'Entre os fabricantes de microinversores mais citados estão Hoymiles, Deye, APsystems, Enphase, Growatt e GoodWe.',
           'Entre as marcas de kits e baterias mais citadas estão Anker (SOLIX), EcoFlow, Zendure, priwatt e Yuma.',
@@ -520,8 +520,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       snapshot: {
         title: 'Energia solar de varanda, em resumo',
         image: '/images/balcony-solar-industry-overview-snapshot-en.svg',
-        imageCaption: 'A Alemanha passou de cerca de 40.000 sistemas de energia solar de varanda registrados em 2017 para uma estimativa de 4 milhões de instalações até 2025 — o sinal de crescimento mais claramente verificado do mercado.',
-        content: 'O registro Marktstammdatenregister da Bundesnetzagentur fornece o número de crescimento mais citado do setor porque a Alemanha é o único grande mercado que exige o registro público de cada sistema. Esses dados mostram crescimento de cerca de 40.000 sistemas registrados em 2017 para uma estimativa de 4 milhões até 2025, incluindo cerca de 430.000 novos registros somente durante 2025. Nenhum outro país publica atualmente uma contagem obrigatória com nível de detalhe comparável, e é por isso que analistas e jornalistas que cobrem o setor usam por padrão o número alemão como um indicador do ímpeto geral do mercado.',
+        imageCaption: 'A Alemanha ultrapassou 500.000 sistemas de energia solar de varanda registrados em junho de 2024 e chegou a uma estimativa de 1,03 milhão em junho de 2025 (estimativa da heise) — o sinal de crescimento mais claro do mercado.',
+        content: 'O registro Marktstammdatenregister da Bundesnetzagentur fornece o número de crescimento mais citado do setor porque a Alemanha é o único grande mercado que exige o registro público de cada sistema. Esses dados mostram crescimento de cerca de 500.000 sistemas registrados em junho de 2024 para uma estimativa de 1,03 milhão em junho de 2025, segundo uma análise da heise. Nenhum outro país publica atualmente uma contagem obrigatória com nível de detalhe comparável, e é por isso que analistas e jornalistas que cobrem o setor usam por padrão o número alemão como um indicador do ímpeto geral do mercado.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'A indústria de energia solar de varanda se apoia em três camadas de negócio distintas — fabricantes de painéis, fabricantes de microinversores/baterias e revendedores de kits —, com os dados de registro alemães como o indicador de crescimento público mais claro.' },
           { type: 'plain-terms', text: 'Pense nisso como três cadeias de suprimentos separadas alimentando um único produto: uma empresa fabrica o painel solar, outra fabrica a pequena caixa do inversor que o torna compatível com uma tomada, e uma terceira monta os dois no kit que você realmente compra.' },
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Alemanha: sistemas registrados ao longo do tempo',
         image: '/images/balcony-solar-industry-overview-germany-growth-en.svg',
         imageCaption: 'Dados da Bundesnetzagentur/Marktstammdatenregister — a contagem baseada em registro mais confiável disponível.',
-        content: 'O Marktstammdatenregister (MaStR) da Bundesnetzagentur exige o registro de todo sistema de geração conectado à rede, incluindo energia solar de varanda, o que explica por que a Alemanha tem a única contagem pública abrangente do setor. Os sistemas registrados cresceram de cerca de 40.000 em 2017 para uma estimativa de 4 milhões até 2025, com o crescimento acelerando fortemente nos últimos anos desse período — cerca de 430.000 novos registros foram adicionados somente em 2025. Essa aceleração coincidiu com a Alemanha flexibilizando suas regras de registro e potência, removendo o atrito que antes desencorajava compradores casuais a sequer se registrarem.',
+        content: 'O Marktstammdatenregister (MaStR) da Bundesnetzagentur exige o registro de todo sistema de geração conectado à rede, incluindo energia solar de varanda, o que explica por que a Alemanha tem a única contagem pública abrangente do setor. Os sistemas registrados ultrapassaram 500.000 em junho de 2024 e chegaram a uma estimativa de 1,03 milhão em junho de 2025, segundo uma [análise da heise](https://heise.de/-10439636) do registro — uma estimativa, pois o registro não permite mais filtrar diretamente os sistemas plug-in. Desde então a Alemanha flexibilizou suas regras de registro e potência, removendo o atrito que antes desencorajava compradores casuais a sequer se registrarem.',
       },
       usEntry: {
         title: 'Mercado dos EUA: uma história de 2026',
@@ -561,10 +561,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Quando a indústria de energia solar de varanda começou?', a: 'A energia solar de varanda surgiu na Alemanha como um movimento DIY informal, antes de reguladores formalizarem regras de registro simplificadas para pequenos sistemas plug-in. O crescimento então acelerou de cerca de 40.000 sistemas registrados em 2017 para uma estimativa de 4 milhões até 2025, segundo dados da Bundesnetzagentur/Marktstammdatenregister.' },
+          { q: 'Quando a indústria de energia solar de varanda começou?', a: 'A energia solar de varanda surgiu na Alemanha como um movimento DIY informal, antes de reguladores formalizarem regras de registro simplificadas para pequenos sistemas plug-in. O crescimento então acelerou de cerca de 500.000 sistemas registrados em junho de 2024 para uma estimativa de 1,03 milhão em junho de 2025, segundo uma estimativa da heise com base em dados da Bundesnetzagentur/Marktstammdatenregister.' },
           { q: 'Quais são as três camadas da cadeia de suprimentos de energia solar de varanda?', a: 'O setor se divide em fabricantes de painéis (o painel solar físico), fabricantes de microinversores/baterias (a eletrônica que torna um sistema compatível com tomada) e revendedores de kits (empresas que embalam painéis e microinversores no produto vendido aos compradores). A maioria das empresas atua em apenas uma dessas três camadas.' },
           { q: 'Quais empresas são mais citadas em comparações do mercado de energia solar de varanda?', a: 'Hoymiles, Deye, APsystems, Enphase, Growatt e GoodWe são os fabricantes de microinversores mais citados. Anker (SOLIX), EcoFlow, Zendure, priwatt e Yuma são as marcas de kits e baterias mais citadas, e Meyer Burger, Solarwatt e Heckert são os nomes mais citados na camada de painéis.' },
-          { q: 'Qual o tamanho do mercado de energia solar de varanda?', a: 'A Alemanha é o único mercado com uma contagem pública abrangente: uma estimativa de 4 milhões de sistemas registrados até 2025, ante cerca de 40.000 em 2017. Outros países não publicam atualmente um número de registro obrigatório com nível de detalhe comparável, então afirmações sobre o tamanho do mercado global fora da Alemanha devem ser tratadas como estimativas, não contagens verificadas.' },
+          { q: 'Qual o tamanho do mercado de energia solar de varanda?', a: 'A Alemanha é o único mercado com uma contagem pública abrangente: uma estimativa de 1,03 milhão de sistemas registrados até junho de 2025, ante cerca de 500.000 em junho de 2024 (estimativa da heise). Outros países não publicam atualmente um número de registro obrigatório com nível de detalhe comparável, então afirmações sobre o tamanho do mercado global fora da Alemanha devem ser tratadas como estimativas, não contagens verificadas.' },
           { q: 'Quando os EUA legalizaram a energia solar de varanda?', a: 'Utah foi o primeiro estado dos EUA a legalizar a energia solar de varanda, com a assinatura da HB 340 em março de 2025, em vigor desde 7 de maio de 2025, com limite de 1.200 watts por sistema. A legalidade nos EUA é decidida estado a estado — não existe lei federal de energia solar de varanda.' },
           { q: 'O que é a UL 3700 e por que ela importa para o setor?', a: 'A UL 3700 é a norma de certificação de segurança que várias leis estaduais dos EUA exigem antes que um sistema solar plug-in possa ser vendido legalmente. Ela só foi publicada em dezembro de 2025, oito meses após a lei de Utah entrar em vigor, e no momento em que este texto foi escrito (16/07/2026) nenhum sistema completo havia obtido a certificação total.' },
           { q: 'A energia solar de varanda já é legal em todos os EUA?', a: 'Não. Apenas estados individuais que aprovaram suas próprias leis de legalização, como Utah, permitem energia solar de varanda, e cada um define seu próprio limite de potência e exigências. Não existe legalização nacional — verifique o status atual do seu estado antes de comprar.' },
@@ -580,17 +580,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'نظرة عامة على صناعة الطاقة الشمسية للشرفات (2026)',
     metaDescription: 'كيف تشكّلت صناعة الطاقة الشمسية للشرفات، وسلسلة التوريد ثلاثية الطبقات، والشركات التي تقودها، محدّثة لعام 2026.',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-10-20',
     audience: 'القراء الذين يبحثون عن هيكل صناعة الطاقة الشمسية للشرفات وأبرز اللاعبين فيها',
     intro: 'تستعرض هذه النظرة العامة كيف تشكّلت صناعة الطاقة الشمسية للشرفات: المحطات التنظيمية التي مهّدت الطريق لها، وسلسلة التوريد ثلاثية الطبقات التي تُغذّيها، والشركات الأكثر ذكرًا في كل طبقة. تستند الأرقام إلى بيانات السجلات والمعايير نفسها المستخدمة في تغطية PromptQuorum لموضوع الطاقة الشمسية للشرفات، لذا فهي متسقة مع الأدلة الخاصة بكل دولة والمشار إليها أدناه.',
-    leadAnswerBlock: '**نمت صناعة الطاقة الشمسية للشرفات من سوق ألمانية صغيرة إلى سوق عالمية من خلال الجمع بين ثلاث طبقات تجارية منفصلة — الجهات المصنّعة للألواح، والجهات المصنّعة للمُحوّلات الدقيقة/البطاريات، وموزّعو الأطقم — بينما ظلّت بيانات السجل الألماني (من نحو 40,000 نظام في 2017 إلى ما يُقدَّر بـ 4 ملايين بحلول 2025) أوضح إشارة نمو موثّقة علنًا في القطاع، إلى أن أقرّت الولايات المتحدة أول معيار سلامة مخصص لها، وهو UL 3700، في ديسمبر 2025.**',
+    leadAnswerBlock: '**نمت صناعة الطاقة الشمسية للشرفات من سوق ألمانية صغيرة إلى سوق عالمية من خلال الجمع بين ثلاث طبقات تجارية منفصلة — الجهات المصنّعة للألواح، والجهات المصنّعة للمُحوّلات الدقيقة/البطاريات، وموزّعو الأطقم — بينما ظلّت بيانات السجل الألماني (من نحو 500,000 نظام في يونيو 2024 إلى ما يُقدَّر بنحو مليون نظام بحلول منتصف 2025) أوضح إشارة نمو موثّقة علنًا في القطاع، إلى أن أقرّت الولايات المتحدة أول معيار سلامة مخصص لها، وهو UL 3700، في ديسمبر 2025.**',
     sections: {
       tldr: {
         id: 'tldr',
         isTldr: true,
         title: 'نظرة عامة على صناعة الطاقة الشمسية للشرفات: أبرز الحقائق',
         items: [
-          'ارتفع عدد أنظمة الطاقة الشمسية للشرفات المسجّلة في ألمانيا من نحو 40,000 نظام في عام 2017 إلى ما يُقدَّر بـ 4 ملايين بحلول عام 2025، مع إضافة نحو 430,000 تسجيل جديد في عام 2025 وحده (بيانات Bundesnetzagentur/Marktstammdatenregister).',
+          'تجاوز عدد أنظمة الطاقة الشمسية للشرفات المسجّلة في ألمانيا 500,000 نظام في يونيو 2024 وبلغ نحو 1.03 مليون نظام تقديريًا في يونيو 2025 (تقدير heise استنادًا إلى Bundesnetzagentur/Marktstammdatenregister).',
           'تنقسم الصناعة إلى ثلاث طبقات منفصلة: الجهات المصنّعة للألواح، والجهات المصنّعة للمُحوّلات الدقيقة/البطاريات، وموزّعو الأطقم — ومعظم الشركات تعمل ضمن طبقة واحدة فقط.',
           'من أكثر الجهات المصنّعة للمُحوّلات الدقيقة ذكرًا: Hoymiles وDeye وAPsystems وEnphase وGrowatt وGoodWe.',
           'من أكثر علامات الأطقم والبطاريات ذكرًا: Anker (SOLIX) وEcoFlow وZendure وpriwatt وYuma.',
@@ -601,8 +601,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       snapshot: {
         title: 'الطاقة الشمسية للشرفات باختصار',
         image: '/images/balcony-solar-industry-overview-snapshot-en.svg',
-        imageCaption: 'ارتفع عدد أنظمة الطاقة الشمسية للشرفات المسجّلة في ألمانيا من نحو 40,000 نظام في عام 2017 إلى ما يُقدَّر بـ 4 ملايين تركيب بحلول عام 2025 – وهو أوضح إشارة نمو موثّقة في السوق.',
-        content: 'يوفّر سجل Marktstammdatenregister التابع لـ Bundesnetzagentur في ألمانيا أكثر رقم نمو استشهادًا في هذا القطاع، لأن ألمانيا هي السوق الرئيسية الوحيدة التي تُلزم بتسجيل كل نظام علنًا. وتُظهر هذه البيانات نموًا من نحو 40,000 نظام مسجّل في عام 2017 إلى ما يُقدَّر بـ 4 ملايين بحلول عام 2025، بما في ذلك نحو 430,000 تسجيل جديد خلال عام 2025 وحده. لا تنشر أي دولة أخرى حاليًا إحصاءً إلزاميًا بهذا القدر من التفصيل، لذلك يعتمد المحللون والصحفيون الذين يغطّون هذه الصناعة على الرقم الألماني كمؤشر بديل على زخم السوق ككل.',
+        imageCaption: 'تجاوز عدد أنظمة الطاقة الشمسية للشرفات المسجّلة في ألمانيا 500,000 نظام في يونيو 2024 وبلغ نحو 1.03 مليون نظام تقديريًا في يونيو 2025 (تقدير heise) – وهو أوضح إشارة نمو في السوق.',
+        content: 'يوفّر سجل Marktstammdatenregister التابع لـ Bundesnetzagentur في ألمانيا أكثر رقم نمو استشهادًا في هذا القطاع، لأن ألمانيا هي السوق الرئيسية الوحيدة التي تُلزم بتسجيل كل نظام علنًا. وتُظهر هذه البيانات نموًا من نحو 500,000 نظام مسجّل في يونيو 2024 إلى ما يُقدَّر بنحو 1.03 مليون بحلول يونيو 2025، وفق تحليل heise. لا تنشر أي دولة أخرى حاليًا إحصاءً إلزاميًا بهذا القدر من التفصيل، لذلك يعتمد المحللون والصحفيون الذين يغطّون هذه الصناعة على الرقم الألماني كمؤشر بديل على زخم السوق ككل.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'تقوم صناعة الطاقة الشمسية للشرفات على ثلاث طبقات تجارية منفصلة — الجهات المصنّعة للألواح، والجهات المصنّعة للمُحوّلات الدقيقة/البطاريات، وموزّعو الأطقم — وتُعد بيانات التسجيل الألمانية أوضح معيار علني لنمو هذه الصناعة.' },
           { type: 'plain-terms', text: 'تخيّل الأمر وكأنه ثلاث سلاسل توريد منفصلة تُغذّي منتجًا واحدًا: شركة تصنع اللوح الشمسي، وأخرى تصنع علبة المُحوّل الصغيرة التي تجعله آمنًا للتوصيل بمقبس الكهرباء، وثالثة تُجمّع الاثنين في الطقم الذي تشتريه فعليًا.' },
@@ -630,7 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ألمانيا: الأنظمة المسجّلة عبر الزمن',
         image: '/images/balcony-solar-industry-overview-germany-growth-en.svg',
         imageCaption: 'بيانات Bundesnetzagentur/Marktstammdatenregister – أكثر إحصاء رسمي معتمد على السجلات موثوقيةً ومتاح حاليًا.',
-        content: 'يشترط سجل Marktstammdatenregister (MaStR) التابع لـ Bundesnetzagentur تسجيل كل نظام توليد متصل بالشبكة، بما في ذلك الطاقة الشمسية للشرفات، وهذا ما يفسّر امتلاك ألمانيا الإحصاء العلني الوحيد الشامل في هذه الصناعة. ارتفع عدد الأنظمة المسجّلة من نحو 40,000 في عام 2017 إلى ما يُقدَّر بـ 4 ملايين بحلول عام 2025، مع تسارع ملحوظ في النمو خلال السنوات الأخيرة من تلك الفترة — إذ أُضيف نحو 430,000 تسجيل جديد في عام 2025 وحده. تزامن هذا التسارع مع تخفيف ألمانيا لقواعد التسجيل والقدرة الكهربائية، ما أزال العوائق التي كانت تُثني المشترين العاديين عن التسجيل أصلًا.',
+        content: 'يشترط سجل Marktstammdatenregister (MaStR) التابع لـ Bundesnetzagentur تسجيل كل نظام توليد متصل بالشبكة، بما في ذلك الطاقة الشمسية للشرفات، وهذا ما يفسّر امتلاك ألمانيا الإحصاء العلني الوحيد الشامل في هذه الصناعة. تجاوز عدد الأنظمة المسجّلة 500,000 في يونيو 2024 وبلغ نحو 1.03 مليون نظام تقديريًا في يونيو 2025، وفق [تحليل heise](https://heise.de/-10439636) للسجل — وهو تقدير لأن السجل لم يعد يتيح تصفية الأنظمة القابلة للتوصيل بالمقبس مباشرة. ومنذ ذلك الحين خففت ألمانيا قواعد التسجيل والقدرة الكهربائية، ما أزال العوائق التي كانت تُثني المشترين العاديين عن التسجيل أصلًا.',
       },
       usEntry: {
         title: 'السوق الأمريكية: قصة عام 2026',
@@ -642,10 +642,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'متى بدأت صناعة الطاقة الشمسية للشرفات؟', a: 'نشأت الطاقة الشمسية للشرفات في ألمانيا كحركة تصنيع ذاتي غير رسمية، قبل أن تُرسّخ الجهات التنظيمية قواعد تسجيل مبسّطة للأنظمة الصغيرة القابلة للتوصيل المباشر. ثم تسارع النمو من نحو 40,000 نظام مسجّل في عام 2017 إلى ما يُقدَّر بـ 4 ملايين بحلول عام 2025، وفقًا لبيانات Bundesnetzagentur/Marktstammdatenregister.' },
+          { q: 'متى بدأت صناعة الطاقة الشمسية للشرفات؟', a: 'نشأت الطاقة الشمسية للشرفات في ألمانيا كحركة تصنيع ذاتي غير رسمية، قبل أن تُرسّخ الجهات التنظيمية قواعد تسجيل مبسّطة للأنظمة الصغيرة القابلة للتوصيل المباشر. ثم تسارع النمو من نحو 500,000 نظام مسجّل في يونيو 2024 إلى ما يُقدَّر بنحو 1.03 مليون بحلول يونيو 2025، وفق تقدير heise استنادًا إلى بيانات Bundesnetzagentur/Marktstammdatenregister.' },
           { q: 'ما هي الطبقات الثلاث لسلسلة توريد الطاقة الشمسية للشرفات؟', a: 'تنقسم الصناعة إلى الجهات المصنّعة للألواح (اللوح الشمسي المادي)، والجهات المصنّعة للمُحوّلات الدقيقة/البطاريات (الإلكترونيات التي تجعل النظام آمنًا للتوصيل بمقبس الكهرباء)، وموزّعي الأطقم (الشركات التي تُجمّع الألواح والمُحوّلات الدقيقة في المنتج المُباع للمشترين). ومعظم الشركات تعمل ضمن طبقة واحدة فقط من هذه الطبقات الثلاث.' },
           { q: 'ما الشركات الأكثر ذكرًا في مقارنات سوق الطاقة الشمسية للشرفات؟', a: 'تُعد Hoymiles وDeye وAPsystems وEnphase وGrowatt وGoodWe أكثر الجهات المصنّعة للمُحوّلات الدقيقة ذكرًا. أما Anker (SOLIX) وEcoFlow وZendure وpriwatt وYuma فهي العلامات الأكثر ذكرًا في مجال الأطقم والبطاريات، بينما تُعد Meyer Burger وSolarwatt وHeckert الأسماء الأكثر ورودًا في طبقة الألواح.' },
-          { q: 'ما حجم سوق الطاقة الشمسية للشرفات؟', a: 'ألمانيا هي السوق الوحيدة التي تملك إحصاءً علنيًا شاملًا: ما يُقدَّر بـ 4 ملايين نظام مسجّل بحلول عام 2025، مقارنة بنحو 40,000 في عام 2017. لا تنشر دول أخرى حاليًا رقم تسجيل إلزاميًا بهذا القدر من التفصيل، لذا ينبغي التعامل مع تقديرات حجم السوق العالمي خارج ألمانيا باعتبارها تقديرات لا أرقامًا موثّقة.' },
+          { q: 'ما حجم سوق الطاقة الشمسية للشرفات؟', a: 'ألمانيا هي السوق الوحيدة التي تملك إحصاءً علنيًا شاملًا: ما يُقدَّر بنحو 1.03 مليون نظام مسجّل بحلول يونيو 2025، مقارنة بنحو 500,000 في يونيو 2024 (تقدير heise). لا تنشر دول أخرى حاليًا رقم تسجيل إلزاميًا بهذا القدر من التفصيل، لذا ينبغي التعامل مع تقديرات حجم السوق العالمي خارج ألمانيا باعتبارها تقديرات لا أرقامًا موثّقة.' },
           { q: 'متى قنّنت الولايات المتحدة الطاقة الشمسية للشرفات؟', a: 'كانت يوتا أول ولاية أمريكية تُقنّن الطاقة الشمسية للشرفات، إذ وقّعت قانون HB 340 في مارس 2025، ودخل حيّز التنفيذ في 7 مايو 2025، بسقف قدرة 1,200 واط للنظام. تُحدَّد المشروعية في الولايات المتحدة على مستوى كل ولاية على حدة — ولا يوجد قانون فيدرالي للطاقة الشمسية للشرفات.' },
           { q: 'ما هو معيار UL 3700، ولماذا يهم هذا القطاع؟', a: 'UL 3700 هو معيار شهادة السلامة الذي تشترطه عدة قوانين ولائية أمريكية قبل أن يُسمح ببيع نظام شمسي قابل للتوصيل المباشر قانونيًا. لم يُنشر إلا في ديسمبر 2025، أي بعد ثمانية أشهر من دخول قانون يوتا حيّز التنفيذ، وحتى وقت كتابة هذا النص (16 يوليو 2026) لم يحصل أي نظام متكامل على الشهادة الكاملة بموجبه.' },
           { q: 'هل الطاقة الشمسية للشرفات قانونية الآن في جميع أنحاء الولايات المتحدة؟', a: 'لا. فقط الولايات الفردية التي أقرّت قوانين التقنين الخاصة بها، مثل يوتا، تسمح بالطاقة الشمسية للشرفات، وتحدّد كل منها سقف القدرة الكهربائية والمتطلبات الخاصة بها. لا يوجد تقنين على مستوى البلاد بأكملها — تحقّق من الوضع الحالي في ولايتك قبل الشراء.' },
@@ -661,17 +661,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '발코니 태양광 산업 역사와 공급망 개요(2026)',
     metaDescription: '발코니 태양광 산업이 어떻게 형성되었는지, 3단계 공급망 구조, 그리고 이를 이끄는 기업들에 대해 2026년 기준으로 정리했습니다.',
     publishDate: '2026-07-19',
-    dateModified: '2026-07-20',
+    dateModified: '2026-10-20',
     audience: '발코니 태양광 산업 구조와 주요 참여 기업을 조사하는 독자를 위한 자료입니다',
     intro: '본 개요에서는 발코니 태양광 산업이 어떻게 형성되었는지를 정리합니다. 시장을 열어준 규제상의 주요 이정표, 이를 뒷받침하는 3단계 공급망 구조, 그리고 각 단계에서 가장 자주 언급되는 기업들을 다룹니다. 수치는 PromptQuorum의 발코니 태양광 관련 콘텐츠 전반에서 사용하는 것과 동일한 등록 데이터 및 표준을 기반으로 하며, 아래 링크된 국가별 가이드와도 일치합니다.',
-    leadAnswerBlock: '**발코니 태양광 산업은 패널 제조업체, 마이크로인버터/배터리 제조업체, 키트 재판매업체라는 세 가지 별개의 사업 계층이 결합하면서 독일 중심의 작은 틈새시장에서 글로벌 시장으로 성장했습니다. 독일의 등록 데이터(2017년 약 4만 대에서 2025년까지 추정 400만 대)는 미국이 2025년 12월 최초의 전용 안전 표준인 UL 3700을 도입하기 전까지 업계에서 가장 명확한 공개 성장 지표로 남아 있었습니다.**',
+    leadAnswerBlock: '**발코니 태양광 산업은 패널 제조업체, 마이크로인버터/배터리 제조업체, 키트 재판매업체라는 세 가지 별개의 사업 계층이 결합하면서 독일 중심의 작은 틈새시장에서 글로벌 시장으로 성장했습니다. 독일의 등록 데이터(2024년 6월 약 50만 대에서 2025년 중반까지 추정 약 100만 대)는 미국이 2025년 12월 최초의 전용 안전 표준인 UL 3700을 도입하기 전까지 업계에서 가장 명확한 공개 성장 지표로 남아 있었습니다.**',
     sections: {
       tldr: {
         id: 'tldr',
         isTldr: true,
         title: '발코니 태양광 산업 개요: 핵심 사실',
         items: [
-          '독일에 등록된 발코니 태양광 시스템은 2017년 약 4만 대에서 2025년까지 추정 400만 대로 증가했으며, 2025년 한 해에만 약 43만 건의 신규 등록이 추가되었습니다(Bundesnetzagentur/Marktstammdatenregister 데이터).',
+          '독일에 등록된 발코니 태양광 시스템은 2024년 6월 50만 대를 넘어섰고 2025년 6월에는 추정 약 103만 대에 달했습니다(heise가 Marktstammdatenregister를 바탕으로 한 추정치).',
           '이 산업은 패널 제조업체, 마이크로인버터/배터리 제조업체, 키트 재판매업체라는 세 가지 별개의 계층으로 나뉘며, 대부분의 기업은 하나의 계층에서만 활동합니다.',
           '마이크로인버터 제조업체 중 가장 자주 언급되는 기업은 Hoymiles, Deye, APsystems, Enphase, Growatt, GoodWe입니다.',
           '키트·배터리 브랜드 중 가장 자주 언급되는 기업은 Anker(SOLIX), EcoFlow, Zendure, priwatt, Yuma입니다.',
@@ -682,8 +682,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       snapshot: {
         title: '발코니 태양광, 한눈에 보기',
         image: '/images/balcony-solar-industry-overview-snapshot-en.svg',
-        imageCaption: '독일의 등록된 발코니 태양광 시스템은 2017년 약 4만 대에서 2025년까지 추정 400만 대로 증가했습니다 – 이는 시장에서 가장 명확하게 검증된 성장 신호입니다.',
-        content: '독일 연방네트워크청(Bundesnetzagentur)이 관리하는 Marktstammdatenregister 등록 시스템은 업계에서 가장 자주 인용되는 성장 지표를 제공합니다. 독일이 모든 시스템에 대한 공개 등록을 의무화하는 유일한 주요 시장이기 때문입니다. 이 데이터에 따르면 등록된 시스템 수는 2017년 약 4만 대에서 2025년까지 추정 400만 대로 증가했으며, 이 중 2025년 한 해에만 약 43만 건이 신규 등록되었습니다. 다른 국가는 현재 이와 견줄 만큼 세밀한 의무 통계를 발표하지 않기 때문에, 이 산업을 다루는 분석가와 언론은 시장 전반의 동향을 가늠하는 대리 지표로 독일 수치를 기본값으로 사용합니다.',
+        imageCaption: '독일의 등록된 발코니 태양광 시스템은 2024년 6월 50만 대를 넘어섰고 2025년 6월에는 추정 약 103만 대에 달했습니다(heise 추정) – 이는 시장에서 가장 명확한 성장 신호입니다.',
+        content: '독일 연방네트워크청(Bundesnetzagentur)이 관리하는 Marktstammdatenregister 등록 시스템은 업계에서 가장 자주 인용되는 성장 지표를 제공합니다. 독일이 모든 시스템에 대한 공개 등록을 의무화하는 유일한 주요 시장이기 때문입니다. 이 데이터에 따르면 등록된 시스템 수는 2024년 6월 약 50만 대에서 2025년 6월까지 추정 약 103만 대로 증가했습니다(heise 분석). 다른 국가는 현재 이와 견줄 만큼 세밀한 의무 통계를 발표하지 않기 때문에, 이 산업을 다루는 분석가와 언론은 시장 전반의 동향을 가늠하는 대리 지표로 독일 수치를 기본값으로 사용합니다.',
         snippetBlocks: [
           { type: 'one-sentence', text: '발코니 태양광 산업은 패널 제조업체, 마이크로인버터/배터리 제조업체, 키트 재판매업체라는 세 가지 별개의 사업 계층으로 구성되며, 독일의 등록 데이터가 가장 명확한 공개 성장 지표 역할을 합니다.' },
           { type: 'plain-terms', text: '하나의 제품을 위해 세 개의 별도 공급망이 존재한다고 생각하면 됩니다. 한 회사는 태양광 패널을 만들고, 다른 회사는 콘센트에 안전하게 연결할 수 있게 해주는 작은 인버터 박스를 만들며, 세 번째 회사가 이 둘을 실제로 구매하는 키트로 조립합니다.' },
@@ -711,7 +711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '독일: 시간에 따른 등록 시스템 현황',
         image: '/images/balcony-solar-industry-overview-germany-growth-en.svg',
         imageCaption: 'Bundesnetzagentur/Marktstammdatenregister 수치 – 현재 확인 가능한 가장 공신력 있는 등록 기반 집계입니다.',
-        content: '연방네트워크청(Bundesnetzagentur)의 Marktstammdatenregister(MaStR)는 발코니 태양광을 포함한 모든 계통 연계형 발전 시스템의 등록을 의무화하고 있으며, 이 때문에 독일은 이 업계에서 유일하게 포괄적인 공개 집계를 보유한 시장입니다. 등록된 시스템 수는 2017년 약 4만 대에서 2025년까지 추정 400만 대로 증가했으며, 이 기간의 마지막 몇 년 동안 성장이 크게 가속화되었습니다. 2025년 한 해에만 약 43만 건의 신규 등록이 추가되었습니다. 이러한 가속화는 독일이 등록 및 출력 관련 규정을 완화한 시기와 맞물렸으며, 이는 이전까지 일반 구매자들이 등록 자체를 꺼리게 만들었던 장벽을 없앤 결과였습니다.',
+        content: '연방네트워크청(Bundesnetzagentur)의 Marktstammdatenregister(MaStR)는 발코니 태양광을 포함한 모든 계통 연계형 발전 시스템의 등록을 의무화하고 있으며, 이 때문에 독일은 이 업계에서 유일하게 포괄적인 공개 집계를 보유한 시장입니다. 등록된 시스템 수는 2024년 6월 50만 대를 넘어섰고, 2025년 6월에는 추정 약 103만 대에 달했다고 등록부를 분석한 [heise 기사](https://heise.de/-10439636)는 전합니다. 등록부가 더 이상 플러그인 시스템을 직접 걸러낼 수 없으므로 이는 추정치입니다. 이후 독일은 등록 및 출력 관련 규정을 완화한 시기와 맞물렸으며, 이는 이전까지 일반 구매자들이 등록 자체를 꺼리게 만들었던 장벽을 없앤 결과였습니다.',
       },
       usEntry: {
         title: '미국 시장: 2026년의 이야기',
@@ -723,10 +723,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: '발코니 태양광 산업은 언제 시작되었습니까?', a: '발코니 태양광은 규제 당국이 소형 플러그인 시스템에 대한 간소화된 등록 규정을 공식화하기 전, 독일에서 비공식적인 DIY 운동으로 시작되었습니다. 이후 Bundesnetzagentur/Marktstammdatenregister 데이터에 따르면 등록된 시스템 수는 2017년 약 4만 대에서 2025년까지 추정 400만 대로 성장이 가속화되었습니다.' },
+          { q: '발코니 태양광 산업은 언제 시작되었습니까?', a: '발코니 태양광은 규제 당국이 소형 플러그인 시스템에 대한 간소화된 등록 규정을 공식화하기 전, 독일에서 비공식적인 DIY 운동으로 시작되었습니다. 이후 Bundesnetzagentur/Marktstammdatenregister 데이터에 따르면 등록된 시스템 수는 2024년 6월 약 50만 대에서 2025년 6월까지 추정 약 103만 대로 성장이 가속화되었습니다(heise 추정).' },
           { q: '발코니 태양광 공급망의 세 가지 계층은 무엇입니까?', a: '이 산업은 실제 태양광 패널을 공급하는 패널 제조업체, 시스템을 콘센트 호환으로 만드는 전자 부품을 개발하는 마이크로인버터/배터리 제조업체, 패널과 마이크로인버터를 구매자용 제품으로 조립하는 키트 재판매업체라는 세 계층으로 나뉩니다. 대부분의 기업은 이 세 계층 중 하나에서만 활동합니다.' },
           { q: '발코니 태양광 시장 비교에서 가장 자주 언급되는 기업은 어디입니까?', a: '마이크로인버터 제조업체 중 가장 자주 언급되는 곳은 Hoymiles, Deye, APsystems, Enphase, Growatt, GoodWe입니다. 키트·배터리 브랜드 중에서는 Anker(SOLIX), EcoFlow, Zendure, priwatt, Yuma가 가장 자주 언급되며, 패널 계층에서는 Meyer Burger, Solarwatt, Heckert가 가장 많이 언급되는 이름입니다.' },
-          { q: '발코니 태양광 시장의 규모는 어느 정도입니까?', a: '독일은 포괄적인 공개 집계를 보유한 유일한 시장으로, 2025년까지 추정 400만 대의 등록 시스템이 있으며 이는 2017년 약 4만 대에서 증가한 수치입니다. 다른 국가들은 현재 이와 견줄 만큼 세밀한 의무 등록 수치를 발표하지 않으므로, 독일 이외 지역의 전 세계 시장 규모 주장은 검증된 집계가 아니라 추정치로 취급해야 합니다.' },
+          { q: '발코니 태양광 시장의 규모는 어느 정도입니까?', a: '독일은 포괄적인 공개 집계를 보유한 유일한 시장으로, 2025년 6월까지 추정 약 103만 대의 등록 시스템이 있으며 이는 2024년 6월 약 50만 대에서 증가한 수치입니다(heise 추정). 다른 국가들은 현재 이와 견줄 만큼 세밀한 의무 등록 수치를 발표하지 않으므로, 독일 이외 지역의 전 세계 시장 규모 주장은 검증된 집계가 아니라 추정치로 취급해야 합니다.' },
           { q: '미국은 언제 발코니 태양광을 합법화했습니까?', a: '유타주는 미국에서 발코니 태양광을 최초로 합법화한 주로, 2025년 3월 HB 340 법안에 서명했으며 2025년 5월 7일 발효되었고 시스템 출력 상한은 1,200와트입니다. 미국의 합법성 여부는 주별로 결정되며, 연방 차원의 발코니 태양광 법률은 존재하지 않습니다.' },
           { q: 'UL 3700이란 무엇이며 왜 업계에 중요합니까?', a: 'UL 3700은 여러 미국 주 법률이 플러그인 태양광 시스템의 합법적 판매를 허용하기 전에 요구하는 안전 인증 표준입니다. 이 표준은 유타주 법률 발효로부터 8개월이 지난 2025년 12월에야 발표되었으며, 이 글을 작성하는 시점(2026년 7월 16일) 기준으로 완전한 인증을 받은 시스템은 아직 없습니다.' },
           { q: '발코니 태양광은 이제 미국 전역에서 합법입니까?', a: '아닙니다. 유타주처럼 자체 합법화 법률을 통과시킨 개별 주에서만 발코니 태양광이 허용되며, 각 주는 자체적으로 출력 상한과 요건을 정합니다. 전국 단위의 합법화는 존재하지 않으므로, 구매 전 반드시 해당 주의 최신 상태를 확인해야 합니다.' },

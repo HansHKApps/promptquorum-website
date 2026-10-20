@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in Colorado?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: 'Is Balcony Solar Legal in Colorado? | Prompt Bites | PromptQuorum',
     metaDescription: 'In effect since August 12, 2026. HB26-1007 allows up to 1,920W, the highest US cap; HOA protections count from January 1, 2027. Quick answer from PromptQuorum.',
     publishDate: '2026-07-16',
@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is balcony solar legal in Colorado?',
-        answer: 'In effect. Colorado HB26-1007 was signed May 7, 2026 and took effect August 12, 2026 (Colorado General Assembly bill page). It sets the highest wattage cap of any enacted state (1,920W, per trackers) and bars unreasonable prohibitions — from January 1, 2027 HOAs can no longer prohibit the devices — though reasonable restrictions may still apply.',
+        answer: 'In effect. Colorado HB26-1007 was signed May 7, 2026 and took effect August 12, 2026 (Colorado General Assembly bill page). It sets the highest wattage cap of any enacted state (1,920W, per the signed act) and bars unreasonable prohibitions — from January 1, 2027 HOAs can no longer prohibit the devices — though reasonable restrictions may still apply.',
         bullets: [
           'HB26-1007 signed May 7, 2026 — in effect since August 12, 2026; HOA protections from January 1, 2027',
           '1,920W cap — the highest of any US state balcony solar law found',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Will HB26-1007 Require in Colorado?',
         content: [
-          '<strong>Colorado HB26-1007 sets a 1,920W cap — the highest of any enacted US balcony solar law, per trackers — and has been in effect since August 12, 2026; the HOA protections count from January 1, 2027.</strong> It follows the standard exemption template (utilities cannot require customer approval, net metering excluded) with one major addition: covenants that unreasonably restrict the devices are void, though owners may impose reasonable restrictions.',
+          '<strong>Colorado HB26-1007 sets a 1,920W cap — the highest of any enacted US balcony solar law, per the signed act — and has been in effect since August 12, 2026; the HOA protections count from January 1, 2027.</strong> It follows the standard exemption template (utilities cannot require customer approval, net metering excluded) with one major addition: covenants that unreasonably restrict the devices are void, though owners may impose reasonable restrictions.',
           'That makes Colorado\'s law among the strongest consumer protections of the enacted states — though it limits only unreasonable prohibitions, not every restriction.',
         ],
         columns: ['Field', 'Colorado HB26-1007'],
@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-de.webp',
     title: 'Ist Balkonsolar in Colorado legal?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: 'Ist Balkonsolar in Colorado legal? | Prompt Bites | PromptQuorum',
     metaDescription: 'In Kraft seit 12. August 2026. HB26-1007 erlaubt bis zu 1.920 W, die höchste US-Grenze; HOA-Schutz gilt ab 1. Januar 2027. Kurzantwort von PromptQuorum.',
     publishDate: '2026-07-16',
@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Ist Balkonsolar in Colorado legal?',
-        answer: 'In Kraft. Colorados HB26-1007 wurde am 7. Mai 2026 unterzeichnet und trat am 12. August 2026 in Kraft (Gesetzesseite des Colorado General Assembly). Das Gesetz legt die höchste Leistungsgrenze aller Bundesstaaten mit entsprechender Regelung fest (1.920 W, laut Trackern) und untersagt unangemessene Verbote — ab 1. Januar 2027 dürfen HOAs die Geräte nicht mehr verbieten —, angemessene Einschränkungen können aber weiter gelten.',
+        answer: 'In Kraft. Colorados HB26-1007 wurde am 7. Mai 2026 unterzeichnet und trat am 12. August 2026 in Kraft (Gesetzesseite des Colorado General Assembly). Das Gesetz legt die höchste Leistungsgrenze aller Bundesstaaten mit entsprechender Regelung fest (1.920 W, laut unterzeichnetem Gesetz) und untersagt unangemessene Verbote — ab 1. Januar 2027 dürfen HOAs die Geräte nicht mehr verbieten —, angemessene Einschränkungen können aber weiter gelten.',
         bullets: [
           'HB26-1007 unterzeichnet am 7. Mai 2026 – in Kraft seit 12. August 2026; HOA-Schutz ab 1. Januar 2027',
           '1.920-W-Grenze – die höchste aller bekannten US-Gesetze zu Balkonsolar',
@@ -167,7 +167,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Was schreibt HB26-1007 in Colorado vor?',
         content: [
-          '<strong>Colorados HB26-1007 legt eine Leistungsgrenze von 1.920 W fest – laut Trackern die höchste aller US-Gesetze zu Balkonsolar – und ist seit 12. August 2026 in Kraft; der HOA-Schutz gilt ab 1. Januar 2027.</strong> Es folgt dem üblichen Ausnahmemodell (Versorger dürfen keine Zustimmung der Kunden verlangen, kein Net Metering) mit einer wichtigen Ergänzung: Vereinbarungen, die die Geräte unangemessen einschränken, sind nichtig, angemessene Einschränkungen dürfen Eigentümer aber festlegen.',
+          '<strong>Colorados HB26-1007 legt eine Leistungsgrenze von 1.920 W fest – laut dem unterzeichneten Gesetz die höchste aller US-Gesetze zu Balkonsolar – und ist seit 12. August 2026 in Kraft; der HOA-Schutz gilt ab 1. Januar 2027.</strong> Es folgt dem üblichen Ausnahmemodell (Versorger dürfen keine Zustimmung der Kunden verlangen, kein Net Metering) mit einer wichtigen Ergänzung: Vereinbarungen, die die Geräte unangemessen einschränken, sind nichtig, angemessene Einschränkungen dürfen Eigentümer aber festlegen.',
           'Damit gehört Colorados Gesetz zu den stärksten Verbraucherschutzregeln der Bundesstaaten mit Gesetz – es begrenzt allerdings nur unangemessene Verbote, nicht jede Einschränkung.',
         ],
         columns: ['Feld', 'Colorado HB26-1007'],
@@ -224,7 +224,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-fr.webp',
     title: "L'énergie solaire de balcon est-elle légale au Colorado ?",
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: 'Solaire de balcon légal au Colorado ? | Prompt Bites | PromptQuorum',
     metaDescription: 'En vigueur depuis le 12 août 2026. HB26-1007 autorise jusqu\'à 1 920 W, le plafond américain le plus élevé ; protections HOA dès le 1er janvier 2027. Réponse rapide de PromptQuorum.',
     publishDate: '2026-07-16',
@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: "L'énergie solaire de balcon est-elle légale au Colorado ?",
-        answer: 'En vigueur. La HB26-1007 du Colorado a été signée le 7 mai 2026 et est entrée en vigueur le 12 août 2026 (page du projet de loi de l\'Assemblée générale du Colorado). Elle fixe le plafond de puissance le plus élevé des États ayant légiféré (1 920 W, selon des sites de suivi) et interdit les interdictions déraisonnables — à partir du 1er janvier 2027, les HOA ne peuvent plus interdire ces appareils —, mais des restrictions raisonnables peuvent subsister.',
+        answer: 'En vigueur. La HB26-1007 du Colorado a été signée le 7 mai 2026 et est entrée en vigueur le 12 août 2026 (page du projet de loi de l\'Assemblée générale du Colorado). Elle fixe le plafond de puissance le plus élevé des États ayant légiféré (1 920 W, selon la loi signée) et interdit les interdictions déraisonnables — à partir du 1er janvier 2027, les HOA ne peuvent plus interdire ces appareils —, mais des restrictions raisonnables peuvent subsister.',
         bullets: [
           'HB26-1007 signée le 7 mai 2026 — en vigueur depuis le 12 août 2026 ; protections HOA dès le 1er janvier 2027',
           "Plafond de 1 920 W — le plus élevé parmi les lois d'État recensées",
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Que prévoit la loi HB26-1007 au Colorado ?',
         content: [
-          '<strong>La HB26-1007 du Colorado fixe un plafond de 1 920 W — le plus élevé de toutes les lois américaines sur le solaire de balcon, selon des sites de suivi — et est en vigueur depuis le 12 août 2026 ; les protections contre les HOA s\'appliquent dès le 1er janvier 2027.</strong> Elle suit le modèle d\'exemption standard (les fournisseurs ne peuvent exiger l\'accord du client, pas de net metering) avec un ajout majeur : les clauses qui restreignent déraisonnablement les appareils sont nulles, mais les propriétaires peuvent imposer des restrictions raisonnables.',
+          '<strong>La HB26-1007 du Colorado fixe un plafond de 1 920 W — le plus élevé de toutes les lois américaines sur le solaire de balcon, selon la loi signée — et est en vigueur depuis le 12 août 2026 ; les protections contre les HOA s\'appliquent dès le 1er janvier 2027.</strong> Elle suit le modèle d\'exemption standard (les fournisseurs ne peuvent exiger l\'accord du client, pas de net metering) avec un ajout majeur : les clauses qui restreignent déraisonnablement les appareils sont nulles, mais les propriétaires peuvent imposer des restrictions raisonnables.',
           'La loi du Colorado figure ainsi parmi les protections des consommateurs les plus fortes des États ayant légiféré — mais elle ne limite que les interdictions déraisonnables, pas toutes les restrictions.',
         ],
         columns: ['Champ', 'Colorado HB26-1007'],
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-ja.webp',
     title: 'コロラド州でベランダ太陽光発電は合法ですか?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: 'コロラド州でベランダ太陽光は合法? | Prompt Bites | PromptQuorum',
     metaDescription: '2026年8月12日から施行済み。HB26-1007は米国最高の1,920Wまで認め、HOA保護は2027年1月1日から。PromptQuorumによるクイックアンサー。',
     publishDate: '2026-07-16',
@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'コロラド州でベランダ太陽光発電は合法ですか?',
-        answer: '施行済み。コロラド州のHB26-1007は2026年5月7日に署名され、2026年8月12日に施行されました（コロラド州議会の法案ページ）。法律のある州で最高の出力上限（追跡サイトによる1,920W）を定め、不合理な禁止を認めません。2027年1月1日からはHOAが機器を禁止できなくなりますが、合理的な制限は引き続き適用されることがあります。',
+        answer: '施行済み。コロラド州のHB26-1007は2026年5月7日に署名され、2026年8月12日に施行されました（コロラド州議会の法案ページ）。法律のある州で最高の出力上限（署名済みの法律による1,920W）を定め、不合理な禁止を認めません。2027年1月1日からはHOAが機器を禁止できなくなりますが、合理的な制限は引き続き適用されることがあります。',
         bullets: [
           'HB26-1007は2026年5月7日に署名、2026年8月12日から施行済み。HOAの保護は2027年1月1日から',
           '1,920Wの上限 — 確認されている米国州法の中で最も高い数値',
@@ -381,7 +381,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'HB26-1007はコロラド州で何を定めますか?',
         content: [
-          '<strong>コロラド州のHB26-1007は1,920Wの上限を定めており、追跡サイトによれば米国のバルコニーソーラー法で最高です。2026年8月12日から施行済みで、HOAの保護は2027年1月1日から適用されます。</strong> 標準的な適用除外の枠組み（電力会社は顧客の承認を求められず、ネットメータリングは対象外）に、重要な追加があります。機器を不合理に制限する規約は無効ですが、所有者は合理的な制限を課すことができます。',
+          '<strong>コロラド州のHB26-1007は1,920Wの上限を定めており、署名済みの法律によれば米国のバルコニーソーラー法で最高です。2026年8月12日から施行済みで、HOAの保護は2027年1月1日から適用されます。</strong> 標準的な適用除外の枠組み（電力会社は顧客の承認を求められず、ネットメータリングは対象外）に、重要な追加があります。機器を不合理に制限する規約は無効ですが、所有者は合理的な制限を課すことができます。',
           'これにより、コロラド州の法律は制定州の中でも消費者保護が最も強い部類に入りますが、制限できるのは不合理な禁止だけで、あらゆる制限ではありません。',
         ],
         columns: ['項目', 'Colorado HB26-1007'],
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-zh.webp',
     title: '科罗拉多州的阳台太阳能合法吗?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: '科罗拉多州阳台太阳能合法吗? | Prompt Bites | PromptQuorum',
     metaDescription: '自2026年8月12日起已生效。HB26-1007允许最高1,920W，为美国最高上限；HOA保护自2027年1月1日起计。PromptQuorum快速解答。',
     publishDate: '2026-07-16',
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '科罗拉多州的阳台太阳能合法吗?',
-        answer: '已生效。科罗拉多州HB26-1007于2026年5月7日签署，2026年8月12日生效（科罗拉多州议会法案页面）。它设定了已立法州中最高的功率上限（据追踪网站为1,920W），并禁止不合理的禁令——自2027年1月1日起，HOA不能再禁止这些设备——但合理的限制仍可能适用。',
+        answer: '已生效。科罗拉多州HB26-1007于2026年5月7日签署，2026年8月12日生效（科罗拉多州议会法案页面）。它设定了已立法州中最高的功率上限（据已签署的法案为1,920W），并禁止不合理的禁令——自2027年1月1日起，HOA不能再禁止这些设备——但合理的限制仍可能适用。',
         bullets: [
           'HB26-1007于2026年5月7日签署——自2026年8月12日起生效；HOA保护自2027年1月1日起',
           '1,920W上限——已发现的美国各州阳台太阳能法中最高',
@@ -488,7 +488,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'HB26-1007在科罗拉多州具体规定了什么?',
         content: [
-          '<strong>科罗拉多州HB26-1007设定了1,920W的上限——据追踪网站为美国阳台太阳能法律中最高——并自2026年8月12日起生效；HOA保护自2027年1月1日起计。</strong> 它遵循标准的豁免模板（电力公司不得要求用户批准，不适用净计量），并有一项重要补充：不合理限制这些设备的约定无效，但所有者仍可设置合理的限制。',
+          '<strong>科罗拉多州HB26-1007设定了1,920W的上限——据已签署的法案为美国阳台太阳能法律中最高——并自2026年8月12日起生效；HOA保护自2027年1月1日起计。</strong> 它遵循标准的豁免模板（电力公司不得要求用户批准，不适用净计量），并有一项重要补充：不合理限制这些设备的约定无效，但所有者仍可设置合理的限制。',
           '这使科罗拉多州的法律成为已立法州中消费者保护最强的之一——但它只限制不合理的禁令，而不是所有限制。',
         ],
         columns: ['项目', 'Colorado HB26-1007'],
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón en Colorado?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: '¿Solar de balcón legal en Colorado? | Prompt Bites | PromptQuorum',
     metaDescription: 'En vigor desde el 12 de agosto de 2026. La HB26-1007 permite hasta 1,920W, el límite más alto de EE. UU.; protecciones frente a HOA desde el 1 de enero de 2027.',
     publishDate: '2026-07-16',
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Es legal la energía solar de balcón en Colorado?',
-        answer: 'En vigor. La HB26-1007 de Colorado se firmó el 7 de mayo de 2026 y entró en vigor el 12 de agosto de 2026 (página del proyecto de ley de la Asamblea General de Colorado). Fija el límite de potencia más alto de los estados con ley (1,920W, según rastreadores) y prohíbe las prohibiciones irrazonables — desde el 1 de enero de 2027 las HOA ya no pueden prohibir los dispositivos —, aunque pueden seguir aplicándose restricciones razonables.',
+        answer: 'En vigor. La HB26-1007 de Colorado se firmó el 7 de mayo de 2026 y entró en vigor el 12 de agosto de 2026 (página del proyecto de ley de la Asamblea General de Colorado). Fija el límite de potencia más alto de los estados con ley (1,920W, según la ley firmada) y prohíbe las prohibiciones irrazonables — desde el 1 de enero de 2027 las HOA ya no pueden prohibir los dispositivos —, aunque pueden seguir aplicándose restricciones razonables.',
         bullets: [
           'HB26-1007 firmada el 7 de mayo de 2026 — en vigor desde el 12 de agosto de 2026; protecciones frente a HOA desde el 1 de enero de 2027',
           'Límite de 1,920 W — el más alto de cualquier ley estatal de solar de balcón encontrada en EE. UU.',
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '¿Qué exigirá la HB26-1007 en Colorado?',
         content: [
-          '<strong>La HB26-1007 de Colorado fija un límite de 1,920W — el más alto de cualquier ley estadounidense de balcony solar, según rastreadores — y está en vigor desde el 12 de agosto de 2026; las protecciones frente a HOA cuentan desde el 1 de enero de 2027.</strong> Sigue la plantilla de exención estándar (las distribuidoras no pueden exigir aprobación del cliente, sin net metering) con un añadido importante: las cláusulas que restringen irrazonablemente los dispositivos son nulas, aunque los propietarios pueden imponer restricciones razonables.',
+          '<strong>La HB26-1007 de Colorado fija un límite de 1,920W — el más alto de cualquier ley estadounidense de balcony solar, según la ley firmada — y está en vigor desde el 12 de agosto de 2026; las protecciones frente a HOA cuentan desde el 1 de enero de 2027.</strong> Sigue la plantilla de exención estándar (las distribuidoras no pueden exigir aprobación del cliente, sin net metering) con un añadido importante: las cláusulas que restringen irrazonablemente los dispositivos son nulas, aunque los propietarios pueden imponer restricciones razonables.',
           'Eso sitúa la ley de Colorado entre las protecciones al consumidor más fuertes de los estados con ley — aunque solo limita las prohibiciones irrazonables, no todas las restricciones.',
         ],
         columns: ['Campo', 'Colorado HB26-1007'],
@@ -652,7 +652,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal no Colorado?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: 'Solar de varanda é legal no Colorado? | Prompt Bites | PromptQuorum',
     metaDescription: 'Em vigor desde 12 de agosto de 2026. A HB26-1007 permite até 1,920W, o maior limite dos EUA; proteções contra HOAs valem a partir de 1º de janeiro de 2027.',
     publishDate: '2026-07-16',
@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'A energia solar de varanda é legal no Colorado?',
-        answer: 'Em vigor. A HB26-1007 do Colorado foi sancionada em 7 de maio de 2026 e entrou em vigor em 12 de agosto de 2026 (página do projeto de lei da Assembleia Geral do Colorado). Ela define o maior limite de potência entre os estados com lei (1,920W, segundo rastreadores) e proíbe proibições irrazoáveis — a partir de 1º de janeiro de 2027 as HOAs não podem mais proibir os dispositivos —, embora restrições razoáveis ainda possam valer.',
+        answer: 'Em vigor. A HB26-1007 do Colorado foi sancionada em 7 de maio de 2026 e entrou em vigor em 12 de agosto de 2026 (página do projeto de lei da Assembleia Geral do Colorado). Ela define o maior limite de potência entre os estados com lei (1,920W, segundo a lei assinada) e proíbe proibições irrazoáveis — a partir de 1º de janeiro de 2027 as HOAs não podem mais proibir os dispositivos —, embora restrições razoáveis ainda possam valer.',
         bullets: [
           'HB26-1007 sancionada em 7 de maio de 2026 — em vigor desde 12 de agosto de 2026; proteções contra HOAs a partir de 1º de janeiro de 2027',
           'Limite de 1.920 W — o mais alto entre as leis estaduais de solar de varanda encontradas nos EUA',
@@ -702,7 +702,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'O que a HB26-1007 vai exigir no Colorado?',
         content: [
-          '<strong>A HB26-1007 do Colorado define um limite de 1,920W — o maior de qualquer lei americana de energia solar de varanda, segundo rastreadores — e está em vigor desde 12 de agosto de 2026; as proteções contra HOAs valem a partir de 1º de janeiro de 2027.</strong> Ela segue o modelo de isenção padrão (as distribuidoras não podem exigir aprovação do cliente, sem net metering) com um acréscimo importante: cláusulas que restringem irrazoavelmente os dispositivos são nulas, embora os proprietários possam impor restrições razoáveis.',
+          '<strong>A HB26-1007 do Colorado define um limite de 1,920W — o maior de qualquer lei americana de energia solar de varanda, segundo a lei assinada — e está em vigor desde 12 de agosto de 2026; as proteções contra HOAs valem a partir de 1º de janeiro de 2027.</strong> Ela segue o modelo de isenção padrão (as distribuidoras não podem exigir aprovação do cliente, sem net metering) com um acréscimo importante: cláusulas que restringem irrazoavelmente os dispositivos são nulas, embora os proprietários possam impor restrições razoáveis.',
           'Isso coloca a lei do Colorado entre as proteções ao consumidor mais fortes dos estados com lei — embora limite apenas proibições irrazoáveis, não toda restrição.',
         ],
         columns: ['Campo', 'Colorado HB26-1007'],
@@ -759,7 +759,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في كولورادو؟',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: 'هل الطاقة الشمسية للشرفات قانونية في كولورادو؟ | Prompt Bites | PromptQuorum',
     metaDescription: 'نافذ منذ 12 أغسطس 2026. يسمح HB26-1007 بحتى 1,920 واط، أعلى حد أمريكي؛ وتبدأ حماية اتحادات الملاك (HOA) في 1 يناير 2027. إجابة سريعة من PromptQuorum.',
     publishDate: '2026-07-16',
@@ -786,7 +786,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل الطاقة الشمسية للشرفات قانونية في كولورادو؟',
-        answer: 'نافذ. وُقّع HB26-1007 في كولورادو في 7 مايو 2026 وبدأ نفاذه في 12 أغسطس 2026 (صفحة مشروع القانون لدى الجمعية العامة لكولورادو). وهو يحدد أعلى حد للقدرة بين الولايات المُقِرّة (1,920 واط، بحسب المتتبّعين) ويحظر المنع غير المعقول — فمنذ 1 يناير 2027 لا يجوز لاتحادات الملاك (HOA) منع الأجهزة — مع بقاء إمكانية سريان قيود معقولة.',
+        answer: 'نافذ. وُقّع HB26-1007 في كولورادو في 7 مايو 2026 وبدأ نفاذه في 12 أغسطس 2026 (صفحة مشروع القانون لدى الجمعية العامة لكولورادو). وهو يحدد أعلى حد للقدرة بين الولايات المُقِرّة (1,920 واط، بحسب القانون الموقَّع) ويحظر المنع غير المعقول — فمنذ 1 يناير 2027 لا يجوز لاتحادات الملاك (HOA) منع الأجهزة — مع بقاء إمكانية سريان قيود معقولة.',
         bullets: [
           'وُقّع HB26-1007 في 7 مايو 2026 — نافذ منذ 12 أغسطس 2026؛ وحماية اتحادات الملاك من 1 يناير 2027',
           'حد 1,920W — الأعلى بين قوانين الطاقة الشمسية للشرفات في أي ولاية أمريكية تم رصدها',
@@ -809,7 +809,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'ماذا سيتطلب قانون HB26-1007 في كولورادو؟',
         content: [
-          '<strong>يحدد HB26-1007 في كولورادو حدًا قدره 1,920 واط — الأعلى بين قوانين الطاقة الشمسية للشرفات الأمريكية بحسب المتتبّعين — وهو نافذ منذ 12 أغسطس 2026؛ وتسري حماية اتحادات الملاك من 1 يناير 2027.</strong> ويتبع نموذج الإعفاء القياسي (لا يجوز لشركات الكهرباء اشتراط موافقة العميل، دون قياس صافٍ) مع إضافة كبيرة: تُعدّ الاتفاقات التي تقيّد الأجهزة تقييدًا غير معقول باطلة، مع جواز أن يفرض الملاك قيودًا معقولة.',
+          '<strong>يحدد HB26-1007 في كولورادو حدًا قدره 1,920 واط — الأعلى بين قوانين الطاقة الشمسية للشرفات الأمريكية بحسب القانون الموقَّع — وهو نافذ منذ 12 أغسطس 2026؛ وتسري حماية اتحادات الملاك من 1 يناير 2027.</strong> ويتبع نموذج الإعفاء القياسي (لا يجوز لشركات الكهرباء اشتراط موافقة العميل، دون قياس صافٍ) مع إضافة كبيرة: تُعدّ الاتفاقات التي تقيّد الأجهزة تقييدًا غير معقول باطلة، مع جواز أن يفرض الملاك قيودًا معقولة.',
           'وبذلك يُعدّ قانون كولورادو من أقوى حمايات المستهلك بين الولايات المُقِرّة — لكنه يقيّد المنع غير المعقول فقط، لا كل قيد.',
         ],
         columns: ['الحقل', 'Colorado HB26-1007'],
@@ -866,7 +866,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-colorado-overview-hero-ko.webp',
     title: '콜로라도주에서 발코니 태양광 발전은 합법입니까?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: '콜로라도주 발코니 태양광, 합법입니까? | Prompt Bites | PromptQuorum',
     metaDescription: '2026년 8월 12일부터 시행 중. HB26-1007은 미국 최고인 1,920W까지 허용하며 HOA 보호는 2027년 1월 1일부터입니다. PromptQuorum의 빠른 답변.',
     publishDate: '2026-07-16',
@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '콜로라도주에서 발코니 태양광 발전은 합법입니까?',
-        answer: '시행 중입니다. 콜로라도 HB26-1007은 2026년 5월 7일 서명되어 2026년 8월 12일 시행되었습니다(콜로라도 주 의회 법안 페이지). 입법한 주 중 가장 높은 출력 한도(추적 사이트 기준 1,920W)를 정하고 불합리한 금지를 막으며, 2027년 1월 1일부터는 HOA가 기기를 금지할 수 없지만 합리적인 제한은 여전히 적용될 수 있습니다.',
+        answer: '시행 중입니다. 콜로라도 HB26-1007은 2026년 5월 7일 서명되어 2026년 8월 12일 시행되었습니다(콜로라도 주 의회 법안 페이지). 입법한 주 중 가장 높은 출력 한도(서명된 법률 기준 1,920W)를 정하고 불합리한 금지를 막으며, 2027년 1월 1일부터는 HOA가 기기를 금지할 수 없지만 합리적인 제한은 여전히 적용될 수 있습니다.',
         bullets: [
           'HB26-1007은 2026년 5월 7일 서명, 2026년 8월 12일부터 시행 중이며 HOA 보호는 2027년 1월 1일부터입니다',
           '1,920W 상한 — 확인된 미국 주법 중 가장 높은 수준입니다',
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'HB26-1007은 콜로라도주에서 무엇을 요구합니까?',
         content: [
-          '<strong>콜로라도 HB26-1007은 1,920W 한도를 정하며, 추적 사이트 기준으로 미국 발코니 태양광 법 중 가장 높고, 2026년 8월 12일부터 시행 중이며 HOA 보호는 2027년 1월 1일부터 적용됩니다.</strong> 표준 면제 템플릿(전력회사는 고객 승인을 요구할 수 없고 순계량 제외)을 따르되 중요한 추가 사항이 있습니다. 기기를 불합리하게 제한하는 약정은 무효이지만, 소유자는 합리적인 제한을 둘 수 있습니다.',
+          '<strong>콜로라도 HB26-1007은 1,920W 한도를 정하며, 서명된 법률 기준으로 미국 발코니 태양광 법 중 가장 높고, 2026년 8월 12일부터 시행 중이며 HOA 보호는 2027년 1월 1일부터 적용됩니다.</strong> 표준 면제 템플릿(전력회사는 고객 승인을 요구할 수 없고 순계량 제외)을 따르되 중요한 추가 사항이 있습니다. 기기를 불합리하게 제한하는 약정은 무효이지만, 소유자는 합리적인 제한을 둘 수 있습니다.',
           '이로써 콜로라도 법은 입법한 주 중 소비자 보호가 가장 강한 편에 속하지만, 제한하는 것은 불합리한 금지일 뿐 모든 제한은 아닙니다.',
         ],
         columns: ['항목', 'Colorado HB26-1007'],

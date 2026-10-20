@@ -433,7 +433,7 @@ const HUB_COPY: Partial<Record<Lang, HubCopy>> = {
       { label: 'No Installer Needed', detail: 'Plug into an outlet or the inverter\'s own connector — no electrician, no roof work, and no permit at all in most notification-only markets.' },
       { label: 'Fast Payback', detail: 'A basic 600–800W kit typically costs a few hundred euros or dollars and can pay for itself within a few years, depending on local electricity prices.' },
       { label: 'No Vendor Cloud', detail: 'Home Assistant reads most major inverters and batteries directly over Modbus, MQTT, or a local API — production data stays on your own network.' },
-      { label: 'Increasingly Legal', detail: 'France, Austria, Belgium, the Netherlands, Germany, and Portugal all allow notification-only registration; eight US states have signed dedicated laws since 2025.' },
+      { label: 'Increasingly Legal', detail: 'France, Austria, Belgium, the Netherlands, Germany, and Portugal all allow notification-only registration; ten US states have signed dedicated laws since 2025.' },
     ],
   },
   de: {
@@ -444,7 +444,7 @@ const HUB_COPY: Partial<Record<Lang, HubCopy>> = {
       { label: 'Kein Installateur nötig', detail: 'Einfach in eine Steckdose oder den Anschluss des Wechselrichters stecken — **kein Elektriker, keine Dacharbeiten**, in den meisten meldepflichtigen Märkten **keine Genehmigung**.' },
       { label: 'Schnelle Amortisation', detail: 'Ein einfaches 600–800-Watt-Set kostet meist **ein paar Hundert Euro** und kann sich je nach lokalem Strompreis **innerhalb weniger Jahre** amortisieren.' },
       { label: 'Keine Hersteller-Cloud', detail: 'Home Assistant liest die meisten gängigen Wechselrichter und Speicher direkt über Modbus, MQTT oder eine lokale API aus — **die Erzeugungsdaten bleiben im eigenen Netzwerk**.' },
-      { label: 'Zunehmend legal', detail: 'Frankreich, Österreich, Belgien, die Niederlande, Deutschland und Portugal erlauben alle **eine reine Meldepflicht**; **acht US-Bundesstaaten** haben seit 2025 eigene Gesetze verabschiedet.' },
+      { label: 'Zunehmend legal', detail: 'Frankreich, Österreich, Belgien, die Niederlande, Deutschland und Portugal erlauben alle **eine reine Meldepflicht**; **zehn US-Bundesstaaten** haben seit 2025 eigene Gesetze verabschiedet.' },
     ],
   },
   fr: {
@@ -455,7 +455,7 @@ const HUB_COPY: Partial<Record<Lang, HubCopy>> = {
       { label: 'Aucun installateur requis', detail: 'Branchez-le sur une prise ou le connecteur propre de l\'onduleur — pas d\'électricien, pas de travaux de toiture, et aucun permis dans la plupart des marchés à simple notification.' },
       { label: 'Rentabilité rapide', detail: 'Un kit de base de 600 à 800 W coûte généralement quelques centaines d\'euros et peut s\'amortir en quelques années selon le prix local de l\'électricité.' },
       { label: 'Sans cloud propriétaire', detail: 'Home Assistant lit directement la plupart des onduleurs et batteries via Modbus, MQTT ou une API locale — les données de production restent sur votre propre réseau.' },
-      { label: 'De plus en plus légal', detail: 'La France, l\'Autriche, la Belgique, les Pays-Bas, l\'Allemagne et le Portugal autorisent tous un enregistrement par simple notification ; huit États américains ont adopté des lois dédiées depuis 2025.' },
+      { label: 'De plus en plus légal', detail: 'La France, l\'Autriche, la Belgique, les Pays-Bas, l\'Allemagne et le Portugal autorisent tous un enregistrement par simple notification ; dix États américains ont adopté des lois dédiées depuis 2025.' },
     ],
   },
   ja: {
@@ -466,7 +466,7 @@ const HUB_COPY: Partial<Record<Lang, HubCopy>> = {
       { label: '設置業者不要', detail: 'コンセントやインバーター自体のコネクタに差し込むだけ——電気工事士も屋根工事も、届出制の市場のほとんどでは許可も不要です。' },
       { label: '早い投資回収', detail: '基本的な600〜800Wのキットは数百ユーロ・ドル程度で、地域の電気料金次第では数年で元が取れます。' },
       { label: 'ベンダークラウド不要', detail: 'Home Assistantは主要なインバーターやバッテリーの多くをModbus・MQTT・ローカルAPI経由で直接読み取れるため、発電データは自分のネットワーク内に留まります。' },
-      { label: '合法化が進行中', detail: 'フランス・オーストリア・ベルギー・オランダ・ドイツ・ポルトガルはいずれも届出のみで登録可能。米国では2025年以降8州が専用法を制定しています。' },
+      { label: '合法化が進行中', detail: 'フランス・オーストリア・ベルギー・オランダ・ドイツ・ポルトガルはいずれも届出のみで登録可能。米国では2025年以降10州が専用法を制定しています。' },
     ],
   },
   zh: {
@@ -477,7 +477,7 @@ const HUB_COPY: Partial<Record<Lang, HubCopy>> = {
       { label: '无需安装工', detail: '直接插入插座或逆变器自带的接口即可——无需电工、无需屋顶施工，在大多数仅需备案的市场也无需许可。' },
       { label: '回本快', detail: '一套基础的600–800W套件通常只需几百欧元/美元，视当地电价而定，往往几年内即可回本。' },
       { label: '无厂商云端', detail: 'Home Assistant可通过Modbus、MQTT或本地API直接读取大多数主流逆变器和电池——发电数据留在您自己的网络内。' },
-      { label: '合法性持续提升', detail: '法国、奥地利、比利时、荷兰、德国和葡萄牙均允许仅备案登记；美国自2025年以来已有8个州通过专门立法。' },
+      { label: '合法性持续提升', detail: '法国、奥地利、比利时、荷兰、德国和葡萄牙均允许仅备案登记；美国自2025年以来已有10个州通过专门立法。' },
     ],
   },
   es: {
@@ -488,7 +488,7 @@ const HUB_COPY: Partial<Record<Lang, HubCopy>> = {
       { label: 'Sin instalador', detail: 'Conéctalo a un enchufe o al propio conector del inversor — sin electricista, sin obras en el tejado, y sin permiso en la mayoría de mercados de simple notificación.' },
       { label: 'Amortización rápida', detail: 'Un kit básico de 600–800 W suele costar unos pocos cientos de euros o dólares y puede amortizarse en pocos años según el precio local de la electricidad.' },
       { label: 'Sin nube del fabricante', detail: 'Home Assistant lee la mayoría de inversores y baterías principales directamente vía Modbus, MQTT o una API local — los datos de producción se quedan en tu propia red.' },
-      { label: 'Cada vez más legal', detail: 'Francia, Austria, Bélgica, los Países Bajos, Alemania y Portugal permiten un registro de simple notificación; ocho estados de EE. UU. han aprobado leyes dedicadas desde 2025.' },
+      { label: 'Cada vez más legal', detail: 'Francia, Austria, Bélgica, los Países Bajos, Alemania y Portugal permiten un registro de simple notificación; diez estados de EE. UU. han aprobado leyes dedicadas desde 2025.' },
     ],
   },
   pt: {
@@ -499,7 +499,7 @@ const HUB_COPY: Partial<Record<Lang, HubCopy>> = {
       { label: 'Sem instalador', detail: 'Basta conectar em uma tomada ou no próprio conector do inversor — sem eletricista, sem obra no telhado, e sem necessidade de licença na maioria dos mercados que exigem apenas notificação.' },
       { label: 'Retorno rápido', detail: 'Um kit básico de 600–800 W geralmente custa algumas centenas de dólares ou euros e pode se pagar em poucos anos, dependendo do preço local da eletricidade.' },
       { label: 'Sem nuvem do fabricante', detail: 'O Home Assistant lê a maioria dos principais inversores e baterias diretamente via Modbus, MQTT ou uma API local — os dados de produção ficam na sua própria rede.' },
-      { label: 'Cada vez mais legal', detail: 'França, Áustria, Bélgica, Países Baixos, Alemanha e Portugal permitem registro apenas por notificação; oito estados dos EUA sancionaram leis próprias desde 2025.' },
+      { label: 'Cada vez mais legal', detail: 'França, Áustria, Bélgica, Países Baixos, Alemanha e Portugal permitem registro apenas por notificação; dez estados dos EUA sancionaram leis próprias desde 2025.' },
     ],
   },
   ar: {
@@ -510,7 +510,7 @@ const HUB_COPY: Partial<Record<Lang, HubCopy>> = {
       { label: 'لا حاجة لفني تركيب', detail: 'وصّله بمقبس كهربائي أو موصل العاكس نفسه — دون كهربائي، ودون أعمال في السطح، ودون أي تصريح في معظم الأسواق التي تكتفي بالإخطار.' },
       { label: 'عائد سريع', detail: 'يكلف الطقم الأساسي بقدرة 600–800 واط عادةً بضع مئات من اليورو أو الدولار، ويمكن أن يسترد تكلفته خلال سنوات قليلة حسب أسعار الكهرباء المحلية.' },
       { label: 'دون سحابة الشركة المصنعة', detail: 'يقرأ Home Assistant معظم العواكس والبطاريات الرئيسية مباشرة عبر Modbus أو MQTT أو واجهة برمجية محلية — تبقى بيانات الإنتاج داخل شبكتك الخاصة.' },
-      { label: 'قانونية بشكل متزايد', detail: 'تسمح فرنسا والنمسا وبلجيكا وهولندا وألمانيا والبرتغال جميعها بالتسجيل بالإخطار فقط؛ وقد أقرت ثماني ولايات أمريكية قوانين مخصصة منذ عام 2025.' },
+      { label: 'قانونية بشكل متزايد', detail: 'تسمح فرنسا والنمسا وبلجيكا وهولندا وألمانيا والبرتغال جميعها بالتسجيل بالإخطار فقط؛ وقد أقرت عشر ولايات أمريكية قوانين مخصصة منذ عام 2025.' },
     ],
   },
   ko: {
@@ -521,7 +521,7 @@ const HUB_COPY: Partial<Record<Lang, HubCopy>> = {
       { label: '설치업자 불필요', detail: '콘센트나 인버터 자체 커넥터에 꽂기만 하면 됩니다 — 전기기사도, 지붕 공사도 필요 없고, 대부분의 신고제 시장에서는 허가도 필요 없습니다.' },
       { label: '빠른 투자 회수', detail: '기본 600–800W 키트는 보통 몇백 유로/달러 수준이며, 현지 전기 요금에 따라 몇 년 안에 투자금을 회수할 수 있습니다.' },
       { label: '제조사 클라우드 불필요', detail: 'Home Assistant는 Modbus, MQTT 또는 로컬 API를 통해 대부분의 주요 인버터와 배터리를 직접 읽을 수 있어 발전 데이터가 자체 네트워크 안에 머무릅니다.' },
-      { label: '점점 합법화', detail: '프랑스, 오스트리아, 벨기에, 네덜란드, 독일, 포르투갈 모두 신고만으로 등록이 가능하며, 미국은 2025년 이후 8개 주가 전용 법률을 제정했습니다.' },
+      { label: '점점 합법화', detail: '프랑스, 오스트리아, 벨기에, 네덜란드, 독일, 포르투갈 모두 신고만으로 등록이 가능하며, 미국은 2025년 이후 10개 주가 전용 법률을 제정했습니다.' },
     ],
   },
 }
@@ -597,7 +597,7 @@ interface HubFaqEntry { q: string; a: string; bullets?: string[] }
 const HUB_FAQ: Partial<Record<Lang, HubFaqEntry[]>> = {
   en: [
     { q: 'What is balcony solar (Balkonkraftwerk)?', a: 'A plug-in solar system — usually one or two panels feeding a small micro-inverter — that connects directly to a household outlet or dedicated connector, generating power for self-consumption without a rooftop installation or an electrician in most markets.' },
-    { q: 'Do I need a permit to install balcony solar?', a: 'It depends on the country. France, Austria, Belgium, the Netherlands, Germany, and Portugal use simple notification-only registration for small systems; the US now has 8 states with dedicated laws; several other markets — the UAE, Saudi Arabia, Brazil, Japan — have no dedicated framework yet, so requirements vary.' },
+    { q: 'Do I need a permit to install balcony solar?', a: 'It depends on the country. France, Austria, Belgium, the Netherlands, Germany, and Portugal use simple notification-only registration for small systems; the US now has 10 states with dedicated laws; several other markets — the UAE, Saudi Arabia, Brazil, Japan — have no dedicated framework yet, so requirements vary.' },
     { q: 'How much does a balcony solar kit cost, and what\'s the payback time?', a: 'Typical kits run from a few hundred to around a thousand dollars or euros depending on panel count, inverter brand, and whether a battery is included — payback commonly falls in the 2–5 year range depending on local electricity prices and how much of the output you self-consume.' },
     { q: 'Can I monitor my balcony solar system without the manufacturer\'s cloud app?', a: 'Yes, for most major brands — Hoymiles, Deye, APsystems, EcoFlow, Anker, and Zendure inverters and batteries can be read locally via Modbus, MQTT, or a local API and pulled into Home Assistant, keeping your production data off the vendor\'s servers.' },
     { q: 'Is balcony solar legal where I live?', a: 'Check the country-by-country guide in this cluster — legal status ranges from fully codified (Germany, Portugal, France) to notification-only (Austria, Belgium, Netherlands) to nascent or unaddressed (the UAE, Saudi Arabia, Brazil, Japan, Bahrain, Taiwan) to state-by-state (the US).' },
@@ -609,7 +609,7 @@ const HUB_FAQ: Partial<Record<Lang, HubFaqEntry[]>> = {
       a: 'Das hängt vom Land ab — die Anforderungen reichen von einer einfachen Meldung bis zu fehlenden Regeln.',
       bullets: [
         '**Frankreich, Österreich, Belgien, die Niederlande, Deutschland und Portugal**: nur eine einfache Meldung für kleine Anlagen.',
-        '**USA**: inzwischen 8 Bundesstaaten mit eigenen Gesetzen.',
+        '**USA**: inzwischen 10 Bundesstaaten mit eigenen Gesetzen.',
         '**VAE, Saudi-Arabien, Brasilien, Japan**: noch kein eigener Rahmen — die Anforderungen variieren.',
       ],
     },
@@ -628,49 +628,49 @@ const HUB_FAQ: Partial<Record<Lang, HubFaqEntry[]>> = {
   ],
   fr: [
     { q: 'Qu\'est-ce que le solaire de balcon (Balkonkraftwerk) ?', a: 'Un système solaire enfichable — généralement un ou deux panneaux alimentant un petit micro-onduleur — qui se branche directement sur une prise domestique ou un connecteur dédié, produisant de l\'électricité pour l\'autoconsommation sans installation sur toiture ni électricien dans la plupart des marchés.' },
-    { q: 'Ai-je besoin d\'un permis pour installer du solaire de balcon ?', a: 'Cela dépend du pays. La France, l\'Autriche, la Belgique, les Pays-Bas, l\'Allemagne et le Portugal utilisent une simple notification pour les petits systèmes ; les États-Unis comptent désormais 8 États avec des lois dédiées ; plusieurs autres marchés — les Émirats arabes unis, l\'Arabie saoudite, le Brésil, le Japon — n\'ont pas encore de cadre dédié, donc les exigences varient.' },
+    { q: 'Ai-je besoin d\'un permis pour installer du solaire de balcon ?', a: 'Cela dépend du pays. La France, l\'Autriche, la Belgique, les Pays-Bas, l\'Allemagne et le Portugal utilisent une simple notification pour les petits systèmes ; les États-Unis comptent désormais 10 États avec des lois dédiées ; plusieurs autres marchés — les Émirats arabes unis, l\'Arabie saoudite, le Brésil, le Japon — n\'ont pas encore de cadre dédié, donc les exigences varient.' },
     { q: 'Combien coûte un kit solaire de balcon, et quel est le délai de rentabilité ?', a: 'Les kits classiques coûtent de quelques centaines à environ mille dollars ou euros selon le nombre de panneaux, la marque de l\'onduleur et la présence d\'une batterie — la rentabilité se situe généralement entre 2 et 5 ans selon le prix local de l\'électricité et la part d\'autoconsommation.' },
     { q: 'Puis-je surveiller mon installation solaire de balcon sans l\'application cloud du fabricant ?', a: 'Oui, pour la plupart des grandes marques — les onduleurs et batteries Hoymiles, Deye, APsystems, EcoFlow, Anker et Zendure peuvent être lus localement via Modbus, MQTT ou une API locale et intégrés à Home Assistant, gardant vos données de production hors des serveurs du fabricant.' },
     { q: 'Le solaire de balcon est-il légal là où je vis ?', a: 'Consultez le guide pays par pays de ce cluster — le statut légal va du cadre pleinement codifié (Allemagne, Portugal, France) à la simple notification (Autriche, Belgique, Pays-Bas), en passant par des marchés naissants ou non réglementés (Émirats arabes unis, Arabie saoudite, Brésil, Japon, Bahreïn, Taïwan) jusqu\'à une réglementation État par État (États-Unis).' },
   ],
   ja: [
     { q: 'バルコニーソーラー（Balkonkraftwerk）とは何ですか？', a: '通常1〜2枚のパネルと小型マイクロインバーターで構成され、家庭用コンセントや専用コネクタに直接接続できるプラグイン式の太陽光発電システムです。ほとんどの市場で屋根工事や電気工事士なしに自家消費用の電力を発電できます。' },
-    { q: 'バルコニーソーラーの設置に許可は必要ですか？', a: '国によって異なります。フランス・オーストリア・ベルギー・オランダ・ドイツ・ポルトガルは小規模システムに対して簡易な届出のみで済みます。米国では現在8州に専用法があります。UAE・サウジアラビア・ブラジル・日本など専用の枠組みがまだない市場もあり、要件は様々です。' },
+    { q: 'バルコニーソーラーの設置に許可は必要ですか？', a: '国によって異なります。フランス・オーストリア・ベルギー・オランダ・ドイツ・ポルトガルは小規模システムに対して簡易な届出のみで済みます。米国では現在10州に専用法があります。UAE・サウジアラビア・ブラジル・日本など専用の枠組みがまだない市場もあり、要件は様々です。' },
     { q: 'バルコニーソーラーキットの費用と投資回収期間はどれくらいですか？', a: '一般的なキットはパネル枚数・インバーターブランド・バッテリーの有無により数百ドル（ユーロ）から千ドル（ユーロ）程度です。投資回収期間は地域の電気料金と自家消費率次第で、一般的に2〜5年程度です。' },
     { q: 'メーカーのクラウドアプリを使わずにバルコニーソーラーを監視できますか？', a: 'はい、主要ブランドのほとんどで可能です——Hoymiles・Deye・APsystems・EcoFlow・Anker・Zendureのインバーターやバッテリーは、Modbus・MQTT・ローカルAPI経由でローカルに読み取り、Home Assistantに取り込むことができ、発電データがベンダーのサーバーに送られるのを防げます。' },
     { q: '自分の住んでいる場所でバルコニーソーラーは合法ですか？', a: 'このクラスター内の国別ガイドをご確認ください——法的状況は、完全に成文化された国（ドイツ・ポルトガル・フランス）から、届出制のみの国（オーストリア・ベルギー・オランダ）、まだ枠組みが未整備または未対応の国（UAE・サウジアラビア・ブラジル・日本・バーレーン・台湾）、そして州ごとに異なる米国まで多岐にわたります。' },
   ],
   zh: [
     { q: '什么是阳台光伏（Balkonkraftwerk）？', a: '一种插入式太阳能系统——通常由一到两块面板配一个小型微型逆变器组成——可直接接入家用插座或专用接口，在大多数市场无需屋顶安装或电工即可为自家用电发电。' },
-    { q: '安装阳台光伏需要许可吗？', a: '这取决于所在国家。法国、奥地利、比利时、荷兰、德国和葡萄牙对小型系统仅要求简单备案；美国目前已有8个州出台专门法律；阿联酋、沙特阿拉伯、巴西、日本等一些市场尚无专门框架，因此要求各不相同。' },
+    { q: '安装阳台光伏需要许可吗？', a: '这取决于所在国家。法国、奥地利、比利时、荷兰、德国和葡萄牙对小型系统仅要求简单备案；美国目前已有10个州出台专门法律；阿联酋、沙特阿拉伯、巴西、日本等一些市场尚无专门框架，因此要求各不相同。' },
     { q: '阳台光伏套件多少钱，回本需要多久？', a: '典型套件价格从几百到约一千美元/欧元不等，取决于面板数量、逆变器品牌以及是否含电池——回本周期通常为2到5年，具体取决于当地电价及自用比例。' },
     { q: '我能否在不使用厂商云端App的情况下监控我的阳台光伏系统？', a: '可以，大多数主流品牌都支持——Hoymiles、Deye、APsystems、EcoFlow、Anker和Zendure的逆变器与电池均可通过Modbus、MQTT或本地API本地读取，并接入Home Assistant，使发电数据不经过厂商服务器。' },
     { q: '阳台光伏在我所在地是否合法？', a: '请查阅本专题内的各国指南——法律状态从完全成文（德国、葡萄牙、法国）到仅需备案（奥地利、比利时、荷兰），再到尚属新兴或无明确规定（阿联酋、沙特阿拉伯、巴西、日本、巴林、台湾），以及按州各异（美国），情况各不相同。' },
   ],
   es: [
     { q: '¿Qué es la energía solar de balcón (Balkonkraftwerk)?', a: 'Un sistema solar enchufable — normalmente uno o dos paneles alimentando un pequeño microinversor — que se conecta directamente a un enchufe doméstico o a un conector dedicado, generando electricidad para autoconsumo sin instalación en tejado ni electricista en la mayoría de mercados.' },
-    { q: '¿Necesito un permiso para instalar energía solar de balcón?', a: 'Depende del país. Francia, Austria, Bélgica, los Países Bajos, Alemania y Portugal usan un simple registro por notificación para sistemas pequeños; EE. UU. ya cuenta con 8 estados con leyes dedicadas; otros mercados — los Emiratos Árabes Unidos, Arabia Saudita, Brasil, Japón — aún no tienen un marco dedicado, por lo que los requisitos varían.' },
+    { q: '¿Necesito un permiso para instalar energía solar de balcón?', a: 'Depende del país. Francia, Austria, Bélgica, los Países Bajos, Alemania y Portugal usan un simple registro por notificación para sistemas pequeños; EE. UU. ya cuenta con 10 estados con leyes dedicadas; otros mercados — los Emiratos Árabes Unidos, Arabia Saudita, Brasil, Japón — aún no tienen un marco dedicado, por lo que los requisitos varían.' },
     { q: '¿Cuánto cuesta un kit de energía solar de balcón, y cuál es el plazo de amortización?', a: 'Los kits típicos van desde unos pocos cientos hasta cerca de mil dólares o euros según el número de paneles, la marca del inversor y si incluye batería — la amortización suele situarse entre 2 y 5 años según el precio local de la electricidad y cuánta producción autoconsumes.' },
     { q: '¿Puedo monitorizar mi sistema de energía solar de balcón sin la app en la nube del fabricante?', a: 'Sí, para la mayoría de las marcas principales — los inversores y baterías de Hoymiles, Deye, APsystems, EcoFlow, Anker y Zendure pueden leerse localmente vía Modbus, MQTT o una API local e integrarse en Home Assistant, manteniendo tus datos de producción fuera de los servidores del fabricante.' },
     { q: '¿Es legal la energía solar de balcón donde vivo?', a: 'Consulta la guía país por país de este clúster — el estado legal va desde plenamente codificado (Alemania, Portugal, Francia) hasta simple notificación (Austria, Bélgica, Países Bajos), pasando por mercados incipientes o sin regular (Emiratos Árabes Unidos, Arabia Saudita, Brasil, Japón, Baréin, Taiwán) y regulación estado por estado (EE. UU.).' },
   ],
   pt: [
     { q: 'O que é energia solar de varanda (Balkonkraftwerk)?', a: 'Um sistema solar plug-and-play — geralmente um ou dois painéis alimentando um pequeno microinversor — que se conecta diretamente a uma tomada residencial ou a um conector dedicado, gerando energia para autoconsumo sem instalação no telhado nem eletricista na maioria dos mercados.' },
-    { q: 'Preciso de licença para instalar energia solar de varanda?', a: 'Depende do país. França, Áustria, Bélgica, Países Baixos, Alemanha e Portugal usam apenas um registro simples por notificação para sistemas pequenos; os EUA já têm 8 estados com leis próprias; outros mercados — Emirados Árabes Unidos, Arábia Saudita, Brasil, Japão — ainda não têm um marco dedicado, então os requisitos variam.' },
+    { q: 'Preciso de licença para instalar energia solar de varanda?', a: 'Depende do país. França, Áustria, Bélgica, Países Baixos, Alemanha e Portugal usam apenas um registro simples por notificação para sistemas pequenos; os EUA já têm 10 estados com leis próprias; outros mercados — Emirados Árabes Unidos, Arábia Saudita, Brasil, Japão — ainda não têm um marco dedicado, então os requisitos variam.' },
     { q: 'Quanto custa um kit de energia solar de varanda, e qual é o prazo de retorno?', a: 'Kits típicos custam de algumas centenas a cerca de mil dólares ou euros, dependendo do número de painéis, da marca do inversor e da presença de bateria — o retorno costuma ficar entre 2 e 5 anos, dependendo do preço local da eletricidade e de quanto da produção você consome.' },
     { q: 'Posso monitorar meu sistema de energia solar de varanda sem o aplicativo na nuvem do fabricante?', a: 'Sim, para a maioria das grandes marcas — inversores e baterias da Hoymiles, Deye, APsystems, EcoFlow, Anker e Zendure podem ser lidos localmente via Modbus, MQTT ou uma API local e integrados ao Home Assistant, mantendo seus dados de produção fora dos servidores do fabricante.' },
     { q: 'A energia solar de varanda é legal onde eu moro?', a: 'Consulte o guia país por país deste cluster — o status legal varia de totalmente codificado (Alemanha, Portugal, França) a apenas notificação (Áustria, Bélgica, Países Baixos), passando por mercados incipientes ou sem regulamentação (Emirados Árabes Unidos, Arábia Saudita, Brasil, Japão, Bahrein, Taiwan) até regulamentação estado a estado (EUA).' },
   ],
   ar: [
     { q: 'ما هي الطاقة الشمسية للشرفة (Balkonkraftwerk)؟', a: 'نظام شمسي قابل للتوصيل المباشر — عادةً لوح أو لوحان يغذيان عاكسًا دقيقًا صغيرًا — يتصل مباشرة بمقبس كهربائي منزلي أو موصل مخصص، وينتج كهرباء للاستهلاك الذاتي دون الحاجة لتركيب على السطح أو فني كهربائي في معظم الأسواق.' },
-    { q: 'هل أحتاج إلى تصريح لتركيب طاقة شمسية للشرفة؟', a: 'يعتمد ذلك على الدولة. تستخدم فرنسا والنمسا وبلجيكا وهولندا وألمانيا والبرتغال تسجيلاً بالإخطار فقط للأنظمة الصغيرة؛ ولدى الولايات المتحدة الآن 8 ولايات لديها قوانين مخصصة؛ بينما لا تزال أسواق أخرى — الإمارات والسعودية والبرازيل واليابان — بلا إطار مخصص، لذا تختلف المتطلبات.' },
+    { q: 'هل أحتاج إلى تصريح لتركيب طاقة شمسية للشرفة؟', a: 'يعتمد ذلك على الدولة. تستخدم فرنسا والنمسا وبلجيكا وهولندا وألمانيا والبرتغال تسجيلاً بالإخطار فقط للأنظمة الصغيرة؛ ولدى الولايات المتحدة الآن 10 ولايات لديها قوانين مخصصة؛ بينما لا تزال أسواق أخرى — الإمارات والسعودية والبرازيل واليابان — بلا إطار مخصص، لذا تختلف المتطلبات.' },
     { q: 'كم تكلفة طقم الطاقة الشمسية للشرفة، وما هي مدة استرداد التكلفة؟', a: 'تتراوح تكلفة الأطقم النموذجية بين بضع مئات وحوالي ألف دولار أو يورو حسب عدد الألواح وماركة العاكس ووجود بطارية من عدمها — وعادةً ما تتراوح مدة استرداد التكلفة بين 2 و5 سنوات حسب أسعار الكهرباء المحلية ونسبة الاستهلاك الذاتي.' },
     { q: 'هل يمكنني مراقبة نظام الطاقة الشمسية للشرفة دون تطبيق السحابة الخاص بالشركة المصنعة؟', a: 'نعم، بالنسبة لمعظم العلامات التجارية الكبرى — يمكن قراءة عواكس وبطاريات Hoymiles وDeye وAPsystems وEcoFlow وAnker وZendure محليًا عبر Modbus أو MQTT أو واجهة برمجية محلية ودمجها في Home Assistant، مما يبقي بيانات الإنتاج بعيدًا عن خوادم الشركة المصنعة.' },
     { q: 'هل الطاقة الشمسية للشرفة قانونية في مكان إقامتي؟', a: 'راجع الدليل الخاص بكل دولة في هذه المجموعة — يتراوح الوضع القانوني بين مقنن بالكامل (ألمانيا والبرتغال وفرنسا)، وقائم على الإخطار فقط (النمسا وبلجيكا وهولندا)، وناشئ أو غير محدد (الإمارات والسعودية والبرازيل واليابان والبحرين وتايوان)، وحتى منظم على مستوى كل ولاية (الولايات المتحدة).' },
   ],
   ko: [
     { q: '발코니 태양광(Balkonkraftwerk)이란 무엇인가요?', a: '보통 한두 개의 패널과 소형 마이크로인버터로 구성되어 가정용 콘센트나 전용 커넥터에 직접 연결하는 플러그인 태양광 시스템으로, 대부분의 시장에서 지붕 공사나 전기기사 없이 자가소비용 전력을 생산합니다.' },
-    { q: '발코니 태양광 설치에 허가가 필요한가요?', a: '국가마다 다릅니다. 프랑스, 오스트리아, 벨기에, 네덜란드, 독일, 포르투갈은 소형 시스템에 대해 단순 신고 등록만 요구합니다. 미국은 현재 8개 주가 전용 법률을 갖추고 있습니다. UAE, 사우디아라비아, 브라질, 일본 등 일부 시장은 아직 전용 규정이 없어 요건이 다양합니다.' },
+    { q: '발코니 태양광 설치에 허가가 필요한가요?', a: '국가마다 다릅니다. 프랑스, 오스트리아, 벨기에, 네덜란드, 독일, 포르투갈은 소형 시스템에 대해 단순 신고 등록만 요구합니다. 미국은 현재 10개 주가 전용 법률을 갖추고 있습니다. UAE, 사우디아라비아, 브라질, 일본 등 일부 시장은 아직 전용 규정이 없어 요건이 다양합니다.' },
     { q: '발코니 태양광 키트 가격과 투자 회수 기간은 어느 정도인가요?', a: '일반적인 키트는 패널 수, 인버터 브랜드, 배터리 포함 여부에 따라 수백에서 약 천 달러/유로 수준입니다. 투자 회수 기간은 현지 전기 요금과 자가소비 비율에 따라 보통 2~5년입니다.' },
     { q: '제조사의 클라우드 앱 없이 발코니 태양광 시스템을 모니터링할 수 있나요?', a: '네, 대부분의 주요 브랜드에서 가능합니다 — Hoymiles, Deye, APsystems, EcoFlow, Anker, Zendure의 인버터와 배터리는 Modbus, MQTT 또는 로컬 API를 통해 로컬에서 읽어 Home Assistant에 연동할 수 있어, 발전 데이터가 제조사 서버로 전송되지 않습니다.' },
     { q: '제가 사는 곳에서 발코니 태양광은 합법인가요?', a: '이 클러스터의 국가별 가이드를 확인하세요 — 법적 상태는 완전히 성문화된 경우(독일, 포르투갈, 프랑스)부터 신고제만 있는 경우(오스트리아, 벨기에, 네덜란드), 아직 초기 단계이거나 규정이 없는 경우(UAE, 사우디아라비아, 브라질, 일본, 바레인, 대만), 그리고 주(州)별로 다른 미국까지 다양합니다.' },

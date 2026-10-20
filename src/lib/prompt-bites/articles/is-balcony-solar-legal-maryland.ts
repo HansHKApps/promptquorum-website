@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in Maryland?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: 'Is Balcony Solar Legal in Maryland? | Prompt Bites | PromptQuorum',
     metaDescription: 'Yes — HB 1532 was signed May 12, 2026 and, per the Maryland General Assembly bill page, took effect on enactment (some trackers list later dates). Quick answer from PromptQuorum.',
     publishDate: '2026-07-16',
@@ -61,7 +61,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'What Does HB 1532 Require in Maryland?',
         content: [
           '<strong>Maryland\'s HB 1532, the Utility RELIEF Act, was signed May 12, 2026 and is listed on the Maryland General Assembly bill page as effective upon enactment — trackers disagree on the exact effective date (some say July 1 or October 1, 2026), so confirm it with the state.</strong> The standard cap is 1,200W, matching the majority template used across most enacted states. A separate 391W sub-threshold also appears in the broader multi-state regulatory framework, which may apply lighter-touch treatment to smaller devices — confirm the exact mechanics against Maryland\'s statutory text before relying on the distinction for a specific device.',
-          'Like other enacted states, net metering does not apply — excess power exported to the grid earns no compensation, and the exact cap figures here were not independently re-verified against primary Maryland Public Service Commission text this pass.',
+          'Like other enacted states, net metering does not apply — excess power exported to the grid earns no compensation, and the 1,200W cap and the 391W exemption from UL listing rules that would require rewiring were read in the enrolled text of Chapter 353 (2026 Laws of Maryland); a parallel version of the same section in that chapter uses 391W as the cap, which we could not reconcile.',
         ],
         columns: ['Field', 'Maryland HB 1532'],
         rows: [
@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-de.webp',
     title: 'Ist Balkonsolar in Maryland legal?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: 'Ist Balkonsolar in Maryland legal? | Prompt Bites | PromptQuorum',
     metaDescription: 'Ja — HB 1532 wurde am 12. Mai 2026 unterzeichnet und trat laut Gesetzesseite der Maryland General Assembly mit Verkündung in Kraft (Tracker nennen teils spätere Daten). Kurzantwort von PromptQuorum.',
     publishDate: '2026-07-16',
@@ -167,7 +167,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Was schreibt HB 1532 in Maryland vor?',
         content: [
           '<strong>Marylands HB 1532, der Utility RELIEF Act, wurde am 12. Mai 2026 unterzeichnet und wird auf der Gesetzesseite der Maryland General Assembly als mit Verkündung in Kraft getreten geführt – Tracker weichen beim genauen Datum ab (teils 1. Juli oder 1. Oktober 2026), bestätigen Sie es daher beim Bundesstaat.</strong> Die Standardobergrenze liegt bei 1.200 W und entspricht damit der in den meisten Bundesstaaten verwendeten Mehrheitsvorlage. Eine separate 391-W-Unterschwelle taucht ebenfalls im breiteren, bundesstaatenübergreifenden regulatorischen Rahmenwerk auf, die möglicherweise eine vereinfachte Behandlung kleinerer Geräte vorsieht — prüfen Sie die genaue Mechanik anhand von Marylands Gesetzestext, bevor Sie sich für ein bestimmtes Gerät auf diese Unterscheidung verlassen.',
-          'Wie in anderen Bundesstaaten mit entsprechendem Gesetz gilt kein Net Metering — überschüssiger, ins Netz eingespeister Strom wird nicht vergütet, und die genauen Obergrenzen wurden in diesem Durchgang nicht unabhängig anhand des Primärtexts der Maryland Public Service Commission erneut überprüft.',
+          'Wie in anderen Bundesstaaten mit entsprechendem Gesetz gilt kein Net Metering — überschüssiger, ins Netz eingespeister Strom wird nicht vergütet, und die 1.200-W-Obergrenze sowie die 391-W-Ausnahme von UL-Listungsvorgaben, die eine Umverdrahtung erfordern würden, wurden im verabschiedeten Text von Chapter 353 (2026 Laws of Maryland) gelesen; eine parallele Fassung desselben Abschnitts in diesem Chapter nennt 391 W als Obergrenze, was wir nicht auflösen konnten.',
         ],
         columns: ['Feld', 'Maryland HB 1532'],
         rows: [
@@ -222,7 +222,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-fr.webp',
     title: 'Le solaire de balcon est-il légal dans le Maryland ?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: 'Le solaire de balcon est-il légal dans le Maryland ? | Prompt Bites | PromptQuorum',
     metaDescription: 'Oui — le HB 1532 a été signé le 12 mai 2026 et, selon la page du projet de loi de l\'Assemblée générale du Maryland, est entré en vigueur à la promulgation (certains sites de suivi donnent d\'autres dates). Réponse rapide de PromptQuorum.',
     publishDate: '2026-07-16',
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Que prévoit le HB 1532 dans le Maryland ?',
         content: [
           "<strong>Le HB 1532 du Maryland, le Utility RELIEF Act, a été signé le 12 mai 2026 et la page de l'Assemblée générale du Maryland l'indique en vigueur dès la promulgation — les sites de suivi divergent sur la date exacte (certains donnent le 1er juillet ou le 1er octobre 2026), confirmez-la donc auprès de l'État.</strong> Le plafond standard est de 1 200 W, conforme au modèle majoritaire utilisé dans la plupart des États. Un seuil distinct de 391 W apparaît aussi dans le cadre réglementaire multi-États plus large, qui pourrait appliquer un traitement allégé aux appareils plus petits — vérifiez le mécanisme exact dans le texte législatif du Maryland avant de vous fier à cette distinction pour un appareil donné.",
-          "Comme dans les autres États ayant adopté une loi, le net metering ne s'applique pas — l'électricité excédentaire exportée vers le réseau n'est pas compensée, et les plafonds exacts n'ont pas été revérifiés indépendamment cette fois-ci auprès du texte primaire de la Maryland Public Service Commission.",
+          "Comme dans les autres États ayant adopté une loi, le net metering ne s'applique pas — l'électricité excédentaire exportée vers le réseau n'est pas compensée, et le plafond de 1 200 W ainsi que l'exemption à 391 W des règles de référencement UL qui imposeraient de modifier le câblage ont été lus dans le texte promulgué du Chapter 353 (2026 Laws of Maryland) ; une version parallèle de la même section dans ce Chapter retient 391 W comme plafond, ce que nous n'avons pas pu concilier.",
         ],
         columns: ['Champ', 'Maryland HB 1532'],
         rows: [
@@ -328,7 +328,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-ja.webp',
     title: 'メリーランド州でバルコニーソーラーは合法ですか？',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: 'メリーランド州でバルコニーソーラーは合法ですか？ | Prompt Bites | PromptQuorum',
     metaDescription: 'はい。HB 1532は2026年5月12日に署名され、メリーランド州議会の法案ページによれば制定と同時に施行されました（追跡サイトの中には別の日付を挙げるものもあります）。PromptQuorumによるクイックアンサーです。',
     publishDate: '2026-07-16',
@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'メリーランド州のHB 1532は何を定めていますか？',
         content: [
           '<strong>メリーランド州のHB 1532（Utility RELIEF Act）は2026年5月12日に署名され、メリーランド州議会の法案ページでは制定と同時の施行とされています。追跡サイトは正確な施行日で食い違っており（2026年7月1日または10月1日とするものもあります）、州にご確認ください。</strong> 標準的な上限は1,200Wで、大多数の制定州で使われているテンプレートと一致します。より広い複数州規制フレームワークには391Wの下位しきい値も別途登場し、小型機器に対してより軽い扱いを適用する可能性があります——特定の機器についてこの区別に依拠する前に、メリーランド州の法令原文で正確な仕組みを確認してください。',
-          '他の制定州と同様、ネットメータリングは適用されません——グリッドに輸出された余剰電力への対価はなく、今回のパスでは正確な上限値をメリーランド州公益事業委員会（Public Service Commission）の一次資料と独自に再検証していません。',
+          '他の制定州と同様、ネットメータリングは適用されません——グリッドに輸出された余剰電力への対価はなく、1,200Wの上限と、配線変更を要するUL掲載規定に対する391Wの適用除外は、成立したChapter 353（2026 Laws of Maryland）の本文で確認しました。同Chapter内の同じ条項の並行版は391Wを上限としており、これは整理できていません。',
         ],
         columns: ['項目', 'メリーランド州 HB 1532'],
         rows: [
@@ -434,7 +434,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-zh.webp',
     title: '在马里兰州安装阳台太阳能合法吗？',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: '在马里兰州安装阳台太阳能合法吗？| Prompt Bites | PromptQuorum',
     metaDescription: '是的——HB 1532于2026年5月12日签署，据马里兰州议会法案页面，自颁布起生效（部分追踪网站给出其他日期）。PromptQuorum快速解答。',
     publishDate: '2026-07-16',
@@ -485,7 +485,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '马里兰州HB 1532有哪些要求？',
         content: [
           '<strong>马里兰州的HB 1532（Utility RELIEF Act）于2026年5月12日签署，马里兰州议会法案页面列明其自颁布起生效——各追踪网站对确切生效日期说法不一（部分称2026年7月1日或10月1日），请向州政府确认。</strong> 标准上限为1,200W，与大多数已立法州采用的模板一致。更广泛的多州监管框架中还出现了单独的391W较低门槛，可能对较小设备适用更宽松的处理方式——在依赖这一区分处理具体设备之前，请以马里兰州法律原文核实具体机制。',
-          '与其他已立法州一样，净计量（net metering）不适用——输送到电网的多余电力不获补偿，本文此次也未针对马里兰州公用事业委员会的一手资料独立重新核实具体上限数字。',
+          '与其他已立法州一样，净计量（net metering）不适用——输送到电网的多余电力不获补偿，1,200瓦的上限以及对需要改动布线的UL列名规定的391瓦豁免，已在已颁布的Chapter 353(2026 Laws of Maryland)文本中核对;同一Chapter中该条款的并行版本把391瓦作为上限,我们无法厘清。',
         ],
         columns: ['项目', '马里兰州 HB 1532'],
         rows: [
@@ -540,7 +540,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón en Maryland?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: '¿Es legal la energía solar de balcón en Maryland? | Prompt Bites | PromptQuorum',
     metaDescription: 'Sí — la HB 1532 se firmó el 12 de mayo de 2026 y, según la página del proyecto en la Asamblea General de Maryland, entró en vigor con su promulgación (algunos rastreadores dan otras fechas). Respuesta rápida de PromptQuorum.',
     publishDate: '2026-07-16',
@@ -591,7 +591,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '¿Qué exige la HB 1532 en Maryland?',
         content: [
           '<strong>La HB 1532 de Maryland, la Utility RELIEF Act, se firmó el 12 de mayo de 2026 y la página de la Asamblea General de Maryland la indica en vigor desde su promulgación — los rastreadores discrepan sobre la fecha exacta (algunos dan el 1 de julio o el 1 de octubre de 2026), así que confírmala con el estado.</strong> El límite estándar es de 1,200 W, coincidiendo con la plantilla que usan la mayoría de los estados con ley aprobada. También aparece un umbral separado de 391 W en el marco regulatorio multiestatal más amplio, que podría aplicar un trato más flexible a los dispositivos más pequeños — confirma el mecanismo exacto en el texto legal de Maryland antes de basarte en esta distinción para un dispositivo específico.',
-          'Como en otros estados con ley aprobada, el net metering no aplica — la energía excedente exportada a la red no recibe compensación, y las cifras exactas de los límites no se reverificaron de forma independiente contra el texto principal de la Comisión de Servicios Públicos de Maryland en esta revisión.',
+          'Como en otros estados con ley aprobada, el net metering no aplica — la energía excedente exportada a la red no recibe compensación, y el límite de 1.200 W y la exención de 391 W de las normas de listado UL que exigirían modificar el cableado se leyeron en el texto promulgado del Chapter 353 (2026 Laws of Maryland); una versión paralela de la misma sección en ese Chapter usa 391 W como límite, algo que no pudimos conciliar.',
         ],
         columns: ['Campo', 'Maryland HB 1532'],
         rows: [
@@ -646,7 +646,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal em Maryland?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: 'A energia solar de varanda é legal em Maryland? | Prompt Bites | PromptQuorum',
     metaDescription: 'Sim — a HB 1532 foi sancionada em 12 de maio de 2026 e, segundo a página do projeto na Assembleia Geral de Maryland, entrou em vigor com a promulgação (alguns rastreadores indicam outras datas). Resposta rápida da PromptQuorum.',
     publishDate: '2026-07-16',
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'O que a HB 1532 exige em Maryland?',
         content: [
           '<strong>A HB 1532 de Maryland, a Utility RELIEF Act, foi sancionada em 12 de maio de 2026 e a página da Assembleia Geral de Maryland a indica em vigor desde a promulgação — os rastreadores divergem quanto à data exata (alguns indicam 1º de julho ou 1º de outubro de 2026), então confirme-a com o estado.</strong> O limite padrão é de 1.200 W, seguindo o modelo usado na maioria dos estados com lei em vigor. Um subpatamar separado de 391 W também aparece no marco regulatório mais amplo entre estados, que pode aplicar um tratamento mais flexível a dispositivos menores — confirme o mecanismo exato no texto da lei de Maryland antes de confiar nessa distinção para um dispositivo específico.',
-          'Assim como em outros estados com lei em vigor, o net metering não se aplica — a energia excedente exportada para a rede não recebe compensação, e os valores exatos dos limites não foram reverificados de forma independente com o texto principal da Comissão de Serviços Públicos de Maryland nesta revisão.',
+          'Assim como em outros estados com lei em vigor, o net metering não se aplica — a energia excedente exportada para a rede não recebe compensação, e o limite de 1.200 W e a isenção de 391 W das regras de listagem UL que exigiriam alterar a fiação foram lidos no texto promulgado do Chapter 353 (2026 Laws of Maryland); uma versão paralela da mesma seção nesse Chapter usa 391 W como limite, o que não conseguimos conciliar.',
         ],
         columns: ['Campo', 'Maryland HB 1532'],
         rows: [
@@ -752,7 +752,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في ولاية ماريلاند؟',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: 'هل الطاقة الشمسية للشرفات قانونية في ماريلاند؟ | Prompt Bites | PromptQuorum',
     metaDescription: 'نعم — وُقّع HB 1532 في 12 مايو 2026 وبحسب صفحة المشروع لدى الجمعية العامة لماريلاند دخل حيز النفاذ عند سنّه (وتذكر بعض المتتبّعات تواريخ أخرى). إجابة سريعة من PromptQuorum.',
     publishDate: '2026-07-16',
@@ -803,7 +803,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'ماذا يتطلب قانون HB 1532 في ماريلاند؟',
         content: [
           '<strong>وُقّع قانون HB 1532 في ماريلاند (Utility RELIEF Act) في 12 مايو 2026 وتذكر صفحة الجمعية العامة لماريلاند أنه نافذ عند سنّه — وتختلف المتتبّعات في تاريخ النفاذ الدقيق (بعضها يذكر 1 يوليو أو 1 أكتوبر 2026)، فأكّده لدى الولاية.</strong> الحد الأقصى القياسي هو 1,200 واط، بما يتوافق مع النموذج المعتمد في غالبية الولايات المسنّة. كما تظهر عتبة فرعية منفصلة قدرها 391 واط في الإطار التنظيمي الأوسع بين الولايات، والتي قد تطبّق معاملة أخف على الأجهزة الأصغر — يُرجى التحقق من الآلية الدقيقة في نص التشريع الرسمي لماريلاند قبل الاعتماد على هذا التمييز لجهاز معين.',
-          'كما هو الحال في الولايات الأخرى المسنّة، لا ينطبق نظام "net metering" — فالطاقة الفائضة المصدَّرة إلى الشبكة لا تحصل على أي تعويض، ولم تتم إعادة التحقق المستقل من الأرقام الدقيقة للحدود القصوى مقابل النص الأساسي للجنة المرافق العامة في ماريلاند (Public Service Commission) في هذه المراجعة.',
+          'كما هو الحال في الولايات الأخرى المسنّة، لا ينطبق نظام "net metering" — فالطاقة الفائضة المصدَّرة إلى الشبكة لا تحصل على أي تعويض، وقد قُرئ حد 1,200 واط وإعفاء 391 واط من أحكام الإدراج لدى UL التي تتطلب تعديل التمديدات في النص المُقَرّ لـ Chapter 353 (2026 Laws of Maryland)؛ وتستخدم نسخة موازية للمادة نفسها في ذلك الـ Chapter رقم 391 واط حدًّا أقصى، ولم نتمكن من التوفيق بينهما.',
         ],
         columns: ['الحقل', 'Maryland HB 1532'],
         rows: [
@@ -858,7 +858,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-maryland-overview-hero-ko.webp',
     title: '메릴랜드주에서 발코니 태양광은 합법입니까?',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-20',
     seoTitle: '메릴랜드주에서 발코니 태양광은 합법입니까? | Prompt Bites | PromptQuorum',
     metaDescription: '네 — HB 1532는 2026년 5월 12일 서명되었으며, 메릴랜드 주 의회 법안 페이지에 따르면 제정과 동시에 시행되었습니다(일부 추적 사이트는 다른 날짜를 제시). PromptQuorum의 빠른 답변입니다.',
     publishDate: '2026-07-16',
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '메릴랜드주 HB 1532는 무엇을 요구합니까?',
         content: [
           '<strong>메릴랜드 HB 1532(Utility RELIEF Act)는 2026년 5월 12일 서명되었으며 메릴랜드 주 의회 법안 페이지는 제정과 동시에 시행되는 것으로 표기합니다. 추적 사이트는 정확한 시행일이 서로 다르므로(일부는 2026년 7월 1일 또는 10월 1일) 주에 확인하십시오.</strong> 표준 상한선은 1,200W로, 대다수 시행 주에서 사용하는 표준 모델과 일치합니다. 더 넓은 다주(multi-state) 규제 프레임워크에는 391W의 별도 하위 임계값도 등장하며, 이는 소형 기기에 더 완화된 처리를 적용할 수 있습니다 — 특정 기기에 이 구분을 적용하기 전에 메릴랜드주 법령 원문을 통해 정확한 적용 방식을 확인해야 합니다.',
-          '다른 시행 주와 마찬가지로 넷 미터링(net metering)은 적용되지 않습니다 — 전력망으로 송출된 잉여 전력에 대해서는 어떠한 보상도 제공되지 않으며, 이번 검토에서는 정확한 상한선 수치를 메릴랜드주 공공서비스위원회(Public Service Commission)의 1차 자료와 독립적으로 재확인하지 않았습니다.',
+          '다른 시행 주와 마찬가지로 넷 미터링(net metering)은 적용되지 않습니다 — 전력망으로 송출된 잉여 전력에 대해서는 어떠한 보상도 제공되지 않으며, 1,200W 상한선과 배선 변경을 요구하는 UL 등재 조항에 대한 391W 면제는 제정된 Chapter 353(2026 Laws of Maryland) 원문에서 확인했습니다. 같은 Chapter 안에는 391W를 상한으로 쓰는 병렬 조문도 있으며, 이를 조정하지 못했습니다.',
         ],
         columns: ['항목', '메릴랜드주 HB 1532'],
         rows: [
