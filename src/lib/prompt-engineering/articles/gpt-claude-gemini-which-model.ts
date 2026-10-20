@@ -282,6 +282,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         longContext: {
           id: 'best-for-long-context',
           title: 'Best LLM for long context or large documents 2026?',
+          image: '/images/gpt-claude-gemini-which-model-context-chart-en.svg',
+          imageCaption: 'Context windows (checked 2026-10-20): GPT-6 Astra, GPT-6.1 Sol and GPT-6 Luna list 1.05M tokens; Claude Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5 and Gemini 4 Argon list 1M tokens.',
           content: '**All three frontier models support 1M context tokens (handles ~800 pages). The long-context gap has closed. For tasks requiring more than 1M tokens, consider local models like Llama 4 Scout (10M tokens).** Choose based on cost, retrieval precision, and whether you need to load multiple files simultaneously.',
           items: [
             '**Gemini 4 Argon (1M tokens):** Load entire codebases, legal document sets, or research archives. Web search integration lets you reference external sources within long context. Best for: due diligence reviews, regulatory analysis, knowledge base search, processing 100+ page PDFs.',
@@ -302,6 +304,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         comparison: {
           title: 'GPT-6 Astra vs Claude Opus 5.5 vs Gemini 4 Argon: Quick comparison',
+          image: '/images/gpt-claude-gemini-which-model-price-chart-en.svg',
+          imageCaption: 'List prices per 1M tokens (USD, checked 2026-10-20): GPT-6 Astra and Claude Fable 5.1 cost $10 input / $50 output, Claude Opus 5.5 $4 / $20, GPT-6.1 Sol and Claude Sonnet 5.5 $2 / $10, GPT-6 Luna and Claude Haiku 5.5 $0.10 / $0.50. Gemini 4 Argon costs $2 / $10 until 2026-11-30, then $4 / $20.',
           content: '**This table compares 5 AI models across 8 key dimensions: general reasoning, writing, coding, long-context handling, multimodal support, cost efficiency, global ecosystem, and China access.**',
           tableFormat: true,
           columns: ['Dimension', 'GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon', 'DeepSeek', 'Baidu ERNIE'],
@@ -794,6 +798,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         longContext: {
           id: 'best-for-long-context',
           title: 'Bestes LLM für langen Kontext und große Dokumente 2026?',
+          image: '/images/gpt-claude-gemini-which-model-context-chart-de.svg',
+          imageCaption: 'Kontextfenster (geprüft am 2026-10-20): GPT-6 Astra, GPT-6.1 Sol und GPT-6 Luna nennen 1,05 Mio. Tokens; Claude Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5 und Gemini 4 Argon nennen 1 Mio. Tokens.',
           content: '**Alle drei Frontier-Modelle unterstützen 1M Kontext-Tokens (etwa 800 Seiten). Der Rückstand beim langen Kontext ist aufgeholt. Für Aufgaben jenseits von 1M Tokens kommen lokale Modelle wie Llama 4 Scout (10M Tokens) infrage.** Entscheiden Sie nach Kosten, Retrieval-Präzision und der Frage, ob Sie mehrere Dateien gleichzeitig laden müssen.',
           items: [
             '**Gemini 4 Argon (1M Tokens):** Laden Sie ganze Codebasen, Vertragssammlungen oder Rechercheeaarchive. Die Websuche-Integration erlaubt Verweise auf externe Quellen innerhalb des langen Kontexts. Am besten für: Due-Diligence-Prüfungen, regulatorische Analysen, Wissensdatenbank-Suche, PDFs mit 100+ Seiten.',
@@ -814,6 +820,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         comparison: {
           title: 'GPT-6 Astra vs Claude Opus 5.5 vs Gemini 4 Argon: Vergleich im Überblick',
+          image: '/images/gpt-claude-gemini-which-model-price-chart-de.svg',
+          imageCaption: 'Listenpreise pro 1 Mio. Tokens (USD, geprüft am 2026-10-20): GPT-6 Astra und Claude Fable 5.1 kosten $10 Input / $50 Output, Claude Opus 5.5 $4 / $20, GPT-6.1 Sol und Claude Sonnet 5.5 $2 / $10, GPT-6 Luna und Claude Haiku 5.5 $0,10 / $0,50. Gemini 4 Argon kostet bis 2026-11-30 $2 / $10, danach $4 / $20.',
           content: '**Diese Tabelle vergleicht 5 KI-Modelle über 8 Dimensionen: allgemeines Reasoning, Textqualität, Programmieren, langer Kontext, Multimodalität, Kosteneffizienz, globales Ökosystem und China-Zugang.**',
           tableFormat: true,
           columns: ['Dimension', 'GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon', 'DeepSeek', 'Baidu ERNIE'],
@@ -1306,6 +1314,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         longContext: {
           id: 'best-for-long-context',
           title: 'Quel LLM pour le contexte long et les documents volumineux en 2026 ?',
+          image: '/images/gpt-claude-gemini-which-model-context-chart-fr.svg',
+          imageCaption: 'Fenêtres de contexte (vérifiées le 2026-10-20) : GPT-6 Astra, GPT-6.1 Sol et GPT-6 Luna indiquent 1.05 M de tokens ; Claude Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5 et Gemini 4 Argon indiquent 1 M de tokens.',
           content: '**Les trois modèles frontier prennent en charge 1M de tokens de contexte (environ 800 pages). L\'écart sur le contexte long est comblé. Au-delà d\'un million de tokens, envisagez des modèles locaux comme Llama 4 Scout (10M de tokens).** Choisissez selon le coût, la précision de la recherche et le besoin de charger plusieurs fichiers simultanément.',
           items: [
             '**Gemini 4 Argon (1M de tokens) :** chargez des bases de code entières, des ensembles de documents juridiques ou des archives de recherche. L\'intégration de la recherche web permet de citer des sources externes dans un contexte long. Idéal pour : audits de due diligence, analyses réglementaires, recherche dans une base de connaissances, PDF de plus de 100 pages.',
@@ -1326,6 +1336,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         comparison: {
           title: 'GPT-6 Astra vs Claude Opus 5.5 vs Gemini 4 Argon : comparaison rapide',
+          image: '/images/gpt-claude-gemini-which-model-price-chart-fr.svg',
+          imageCaption: 'Prix catalogue par million de tokens (USD, vérifiés le 2026-10-20) : GPT-6 Astra et Claude Fable 5.1 coûtent 10 $ en entrée / 50 $ en sortie, Claude Opus 5.5 4 $ / 20 $, GPT-6.1 Sol et Claude Sonnet 5.5 2 $ / 10 $, GPT-6 Luna et Claude Haiku 5.5 0.10 $ / 0.50 $. Gemini 4 Argon coûte 2 $ / 10 $ jusqu’au 2026-11-30, puis 4 $ / 20 $.',
           content: '**Ce tableau compare 5 modèles d\'IA sur 8 dimensions clés : raisonnement général, rédaction, code, contexte long, multimodal, rapport coût/performance, écosystème mondial et accès en Chine.**',
           tableFormat: true,
           columns: ['Dimension', 'GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon', 'DeepSeek', 'Baidu ERNIE'],
@@ -1818,6 +1830,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         longContext: {
           id: 'best-for-long-context',
           title: '2026年、長文コンテキスト・大量文書に最適なLLMは？',
+          image: '/images/gpt-claude-gemini-which-model-context-chart-ja.svg',
+          imageCaption: 'コンテキストウィンドウ（2026-10-20確認）：GPT-6 Astra、GPT-6.1 Sol、GPT-6 Lunaは1.05Mトークン、Claude Fable 5.1、Opus 5.5、Sonnet 5.5、Haiku 5.5、Gemini 4 Argonは1Mトークンです。',
           content: '**フロンティア3モデルはいずれも1Mトークンのコンテキストに対応します（約800ページ相当）。長文コンテキストの差は解消しました。1Mトークンを超える処理には、Llama 4 Scout（10Mトークン）のようなローカルモデルを検討してください。** 選定基準はコスト、検索精度、複数ファイルを同時に読み込む必要があるかどうかです。',
           items: [
             '**Gemini 4 Argon（1Mトークン）：** コードベース全体、法務文書一式、リサーチアーカイブを投入できます。Web検索との統合により、長文コンテキストの中で外部ソースを参照できます。最適な用途：デューデリジェンス、規制分析、ナレッジベース検索、100ページ超のPDF処理。',
@@ -1838,6 +1852,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         comparison: {
           title: 'GPT-6 Astra vs Claude Opus 5.5 vs Gemini 4 Argon：早見比較',
+          image: '/images/gpt-claude-gemini-which-model-price-chart-ja.svg',
+          imageCaption: '100万トークンあたりの定価（USD、2026-10-20確認）：GPT-6 AstraとClaude Fable 5.1は入力$10／出力$50、Claude Opus 5.5は$4／$20、GPT-6.1 SolとClaude Sonnet 5.5は$2／$10、GPT-6 LunaとClaude Haiku 5.5は$0.10／$0.50です。Gemini 4 Argonは2026-11-30まで$2／$10、その後は$4／$20です。',
           content: '**この表では、5つのAIモデルを8つの主要観点で比較します：一般推論、文章、コーディング、長文コンテキスト、マルチモーダル対応、コスト効率、グローバルエコシステム、中国でのアクセス。**',
           tableFormat: true,
           columns: ['観点', 'GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon', 'DeepSeek', 'Baidu ERNIE'],
@@ -2330,6 +2346,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         longContext: {
           id: 'best-for-long-context',
           title: '2026 年长上下文和大文档最适合哪个 LLM？',
+          image: '/images/gpt-claude-gemini-which-model-context-chart-zh.svg',
+          imageCaption: '上下文窗口（2026-10-20核对）：GPT-6 Astra、GPT-6.1 Sol与GPT-6 Luna标注为1.05M token；Claude Fable 5.1、Opus 5.5、Sonnet 5.5、Haiku 5.5与Gemini 4 Argon标注为1M token。',
           content: '**三个前沿模型都支持 1M tokens 上下文（约 800 页）。长上下文的差距已经抹平。若任务需要超过 1M tokens，可以考虑 Llama 4 Scout（10M tokens）这类本地模型。** 按成本、检索精度，以及是否需要同时载入多个文件来选择。',
           items: [
             '**Gemini 4 Argon（1M tokens）：** 可以载入整个代码库、整套法务文档或研究档案。联网搜索集成让你能在长上下文中引用外部来源。最适合：尽职调查、合规分析、知识库检索、处理 100 页以上的 PDF。',
@@ -2350,6 +2368,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         comparison: {
           title: 'GPT-6 Astra vs Claude Opus 5.5 vs Gemini 4 Argon：快速对比',
+          image: '/images/gpt-claude-gemini-which-model-price-chart-zh.svg',
+          imageCaption: '每100万token标价（美元，2026-10-20核对）：GPT-6 Astra与Claude Fable 5.1为输入$10 / 输出$50，Claude Opus 5.5为$4 / $20，GPT-6.1 Sol与Claude Sonnet 5.5为$2 / $10，GPT-6 Luna与Claude Haiku 5.5为$0.10 / $0.50。Gemini 4 Argon至2026-11-30为$2 / $10，此后为$4 / $20。',
           content: '**下表从 8 个关键维度对比 5 个 AI 模型：通用推理、写作、编程、长上下文、多模态支持、成本效率、全球生态和中国大陆可用性。**',
           tableFormat: true,
           columns: ['维度', 'GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon', 'DeepSeek', '文心一言'],
@@ -2897,6 +2917,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       longContext: {
         id: 'best-for-long-context',
         title: '¿Cuál es el mejor LLM para contexto largo o documentos grandes en 2026?',
+        image: '/images/gpt-claude-gemini-which-model-context-chart-es.svg',
+        imageCaption: 'Context windows (verificadas el 2026-10-20): GPT-6 Astra, GPT-6.1 Sol y GPT-6 Luna indican 1.05M de tokens; Claude Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5 y Gemini 4 Argon indican 1M de tokens.',
         content: '**Los tres modelos frontier soportan 1M de tokens de contexto (gestiona ~800 páginas). La brecha de contexto largo se ha cerrado. Para tareas que requieren más de 1M tokens, considera modelos locales como Llama 4 Scout (10M tokens).** Elige según el costo, la precisión de recuperación y si necesitas cargar múltiples archivos simultáneamente.',
         items: [
           '**Gemini 4 Argon (1M tokens):** Carga bases de código completas, conjuntos de documentos legales o archivos de investigación. La integración de búsqueda web te permite hacer referencia a fuentes externas dentro del contexto largo. Mejor para: revisiones de due diligence, análisis normativo, búsqueda en bases de conocimiento, procesamiento de PDFs de más de 100 páginas.',
@@ -2917,6 +2939,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       comparison: {
         title: 'GPT-6 Astra vs Claude Opus 5.5 vs Gemini 4 Argon: Comparación rápida',
+        image: '/images/gpt-claude-gemini-which-model-price-chart-es.svg',
+        imageCaption: 'Precios de lista por 1M de tokens (USD, verificados el 2026-10-20): GPT-6 Astra y Claude Fable 5.1 cuestan $10 de entrada / $50 de salida, Claude Opus 5.5 $4 / $20, GPT-6.1 Sol y Claude Sonnet 5.5 $2 / $10, GPT-6 Luna y Claude Haiku 5.5 $0.10 / $0.50. Gemini 4 Argon cuesta $2 / $10 hasta 2026-11-30 y después $4 / $20.',
         content: '**Esta tabla compara 5 modelos de IA en 8 dimensiones clave: razonamiento general, escritura, programación, manejo de contexto largo, soporte multimodal, eficiencia de costos, ecosistema global y acceso en China.**',
         tableFormat: true,
         columns: ['Dimensión', 'GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon', 'DeepSeek', 'Baidu ERNIE'],
@@ -3382,6 +3406,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       longContext: {
         id: 'best-for-long-context',
         title: 'Melhor LLM para Contexto Longo ou Documentos Grandes em 2026?',
+        image: '/images/gpt-claude-gemini-which-model-context-chart-pt.svg',
+        imageCaption: 'Janelas de contexto (verificadas em 2026-10-20): GPT-6 Astra, GPT-6.1 Sol e GPT-6 Luna informam 1.05M de tokens; Claude Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5 e Gemini 4 Argon informam 1M de tokens.',
         content: '**Os três modelos frontier suportam 1M tokens de contexto (gerencia ~800 páginas). A lacuna de contexto longo foi fechada. Para tarefas que requerem mais de 1M tokens, considere modelos locais como Llama 4 Scout (10M tokens).** Escolha com base no custo, precisão de recuperação e se você precisa carregar vários arquivos simultaneamente.',
         items: [
           '**Gemini 4 Argon (1M tokens):** Carregue bases de código completas, conjuntos de documentos legais ou arquivos de pesquisa. A integração de busca na web permite referenciar fontes externas dentro do contexto longo. Melhor para: revisões de due diligence, análise regulatória, busca em bases de conhecimento, processamento de PDFs de mais de 100 páginas.',
@@ -3402,6 +3428,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       comparison: {
         title: 'GPT-6 Astra vs Claude Opus 5.5 vs Gemini 4 Argon: Comparação Rápida',
+        image: '/images/gpt-claude-gemini-which-model-price-chart-pt.svg',
+        imageCaption: 'Preços de tabela por 1M de tokens (USD, verificados em 2026-10-20): GPT-6 Astra e Claude Fable 5.1 custam $10 de entrada / $50 de saída, Claude Opus 5.5 $4 / $20, GPT-6.1 Sol e Claude Sonnet 5.5 $2 / $10, GPT-6 Luna e Claude Haiku 5.5 $0.10 / $0.50. O Gemini 4 Argon custa $2 / $10 até 2026-11-30 e depois $4 / $20.',
         content: '**Esta tabela compara 5 modelos de IA em 8 dimensões-chave: raciocínio geral, escrita, programação, manuseio de contexto longo, suporte multimodal, eficiência de custos, ecossistema global e acesso na China.**',
         tableFormat: true,
         columns: ['Dimensão', 'GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon', 'DeepSeek', 'Baidu ERNIE'],
@@ -3950,6 +3978,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       longContext: {
         id: 'best-for-long-context',
         title: 'ما أفضل LLM للسياق الطويل أو المستندات الكبيرة في 2026؟',
+        image: '/images/gpt-claude-gemini-which-model-context-chart-ar.svg',
+        imageCaption: 'نوافذ السياق (تم التحقق منها في 2026-10-20): تذكر GPT-6 Astra وGPT-6.1 Sol وGPT-6 Luna نافذة بحجم 1.05M توكن؛ وتذكر Claude Fable 5.1 وOpus 5.5 وSonnet 5.5 وHaiku 5.5 وGemini 4 Argon نافذة بحجم 1M توكن.',
         content: '**تدعم النماذج الحديثة الثلاثة 1M رمز سياق (تتعامل مع ~800 صفحة). لقد انتهت الفجوة في السياق الطويل. للمهام التي تتطلب أكثر من 1M رمز، فكّر في النماذج المحلية مثل Llama 4 Scout (10M رمز).** اختر بناءً على التكلفة ودقة الاسترجاع وما إذا كنت تحتاج إلى تحميل ملفات متعددة في وقت واحد.',
         items: [
           '**Gemini 4 Argon (1M رمز):** تحميل قواعد الكود الكاملة أو مجموعات الوثائق القانونية أو ملفات البحث. يتيح لك تكامل البحث على الويب الإشارة إلى مصادر خارجية ضمن السياق الطويل. الأفضل لـ: مراجعات العناية الواجبة والتحليل التنظيمي والبحث في قواعد المعرفة ومعالجة ملفات PDF التي تتجاوز 100 صفحة.',
@@ -3970,6 +4000,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       comparison: {
         title: 'GPT-6 Astra مقابل Claude Opus 5.5 مقابل Gemini 4 Argon: مقارنة سريعة',
+        image: '/images/gpt-claude-gemini-which-model-price-chart-ar.svg',
+        imageCaption: 'أسعار القائمة لكل 1M توكن (USD، تم التحقق منها في 2026-10-20): يكلّف GPT-6 Astra وClaude Fable 5.1 مبلغ $10 للمدخلات / $50 للمخرجات، وClaude Opus 5.5 مبلغ $4 / $20، وGPT-6.1 Sol وClaude Sonnet 5.5 مبلغ $2 / $10، وGPT-6 Luna وClaude Haiku 5.5 مبلغ $0.10 / $0.50. ويكلّف Gemini 4 Argon مبلغ $2 / $10 حتى 2026-11-30، ثم $4 / $20.',
         content: '**يقارن هذا الجدول 5 نماذج ذكاء اصطناعي عبر 8 أبعاد رئيسية: الاستدلال العام والكتابة والبرمجة ومعالجة السياق الطويل والدعم متعدد الوسائط وكفاءة التكلفة والنظام البيئي العالمي والوصول في الصين.**',
         tableFormat: true,
         columns: ['البُعد', 'GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon', 'DeepSeek', 'Baidu ERNIE'],
@@ -4423,6 +4455,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       longContext: {
         id: 'best-for-long-context',
         title: '2026년 긴 컨텍스트 또는 대용량 문서에 가장 적합한 LLM은?',
+        image: '/images/gpt-claude-gemini-which-model-context-chart-ko.svg',
+        imageCaption: '컨텍스트 윈도우(2026-10-20 확인): GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna는 1.05M 토큰, Claude Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5, Gemini 4 Argon은 1M 토큰입니다.',
         content: '**세 프런티어 모델 모두 1M 컨텍스트 토큰을 지원합니다(약 800페이지 처리). 긴 컨텍스트 격차가 해소되었습니다. 1M 토큰 이상이 필요한 작업에는 Llama 4 Scout(10M 토큰)와 같은 로컬 모델을 고려하십시오.** 비용, 검색 정밀도, 여러 파일을 동시에 로드할 필요성에 따라 선택하십시오.',
         items: [
           '**Gemini 4 Argon(1M 토큰):** 전체 코드베이스, 법률 문서 세트, 리서치 아카이브를 로드하십시오. 웹 검색 통합으로 긴 컨텍스트 내에서 외부 소스를 참조할 수 있습니다. 최적: 실사 검토, 규제 분석, 지식 베이스 검색, 100페이지 이상 PDF 처리.',
@@ -4443,6 +4477,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
       comparison: {
         title: 'GPT-6 Astra vs Claude Opus 5.5 vs Gemini 4 Argon: 빠른 비교',
+        image: '/images/gpt-claude-gemini-which-model-price-chart-ko.svg',
+        imageCaption: '100만 토큰당 정가(USD, 2026-10-20 확인): GPT-6 Astra와 Claude Fable 5.1은 입력 $10 / 출력 $50, Claude Opus 5.5는 $4 / $20, GPT-6.1 Sol과 Claude Sonnet 5.5는 $2 / $10, GPT-6 Luna와 Claude Haiku 5.5는 $0.10 / $0.50입니다. Gemini 4 Argon은 2026-11-30까지 $2 / $10, 이후 $4 / $20입니다.',
         content: '**이 표는 8가지 핵심 차원에서 5개 AI 모델을 비교합니다: 일반 추론, 작문, 코딩, 긴 컨텍스트 처리, 멀티모달 지원, 비용 효율성, 글로벌 에코시스템, 중국 접근성.**',
         tableFormat: true,
         columns: ['차원', 'GPT-6 Astra', 'Claude Opus 5.5', 'Gemini 4 Argon', 'DeepSeek', 'Baidu ERNIE'],

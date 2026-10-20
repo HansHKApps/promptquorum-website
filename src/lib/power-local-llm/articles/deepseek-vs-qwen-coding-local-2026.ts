@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Buy RTX 4060 Ti 16 GB on Amazon → (runs Qwen2.5-Coder 14B)',
           },
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             label: 'Buy Minisforum UM890 Pro → (dedicated coding server)',
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Comprar RTX 4060 Ti 16 GB en Amazon → (ejecuta Qwen2.5-Coder 14B)',
           },
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             label: 'Comprar Minisforum UM890 Pro → (servidor de coding dedicado)',
@@ -978,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Amazon에서 RTX 4060 Ti 16 GB 구매(Qwen2.5-Coder 14B 실행 가능)',
           },
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             label: 'Minisforum UM890 Pro 구매(전용 코딩 서버)',
@@ -1902,7 +1902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'Comprar RTX 4060 Ti 16 GB na Amazon → (executa Qwen2.5-Coder 14B)',
           },
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             label: 'Comprar Minisforum UM890 Pro → (servidor de codificação dedicado)',
@@ -2299,7 +2299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             label: 'اشترِ RTX 4060 Ti 16 GB على أمازون ← (يشغّل Qwen2.5-Coder 14B)',
           },
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             label: 'اشترِ جهاز Minisforum UM890 Pro ← (خادم برمجة مخصص)',

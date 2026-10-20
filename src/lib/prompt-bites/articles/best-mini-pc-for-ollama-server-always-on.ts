@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             content: 'The Minisforum UM890 Pro runs the AMD Ryzen 9 8945HS (8-core, up to 5.2 GHz) and supports up to 96 GB DDR5-5600 dual-channel RAM — enough to load Llama 3.3 70B at Q4 entirely in RAM. The Radeon 780M iGPU (12 RDNA3 CUs) accelerates 7B and 13B models at 8–14 tok/s via ROCm. CPU-only 7B Q4 speed: ~12–18 tok/s. Idle power: ~15 W. Load (GPU active): ~35–45 W. Price: ~$500 (32 GB/1 TB) to $600 (64 GB).',
             affiliateLinks: [
               { label: 'Minisforum UM890 Pro on Amazon', url: 'https://www.amazon.com/s?k=Minisforum+UM890+Pro' },
-              { label: 'Minisforum UM890 Pro on Minisforum.com', url: 'https://minisforum.com/products/UM890-Pro.html' },
+              { label: 'Minisforum UM890 Pro on Minisforum.com', url: 'https://www.minisforum.com/products/minisforum-um890-pro' },
             ],
           },
           {
