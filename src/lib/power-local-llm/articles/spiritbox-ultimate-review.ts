@@ -150,7 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Is SpiritBox Ultimate?',
         content: [
           '**SpiritBox Ultimate is a separate Windows application, not a model runner: it connects to the LM Studio model and server you already operate and adds Guide-based conversations, saved chats and spoken replies in one interface.**',
-          '"Guide" is SpiritBox\'s own term; the [edition overview](https://spiritbox.ca/) lists "custom Spirit Guides" under the free Basic edition, and the Ultimate offer page does not define it further. That page also notes that LM Studio already offers saved chats and reusable prompt presets, so the developer frames Ultimate as a way to evaluate the three features together.',
+          'In SpiritBox, a Guide is a reusable set of conversation instructions, as described at the start of the developer\'s [Ultimate offer page](https://spiritbox.ca/ultimate.html); the [edition overview](https://spiritbox.ca/) lists "custom Spirit Guides" under the free Basic edition. That page also notes that LM Studio already offers saved chats and reusable prompt presets, so the developer frames Ultimate as a way to evaluate the three features together.',
         ],
       },
       getIt: {
@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was ist SpiritBox Ultimate?',
         content: [
           '**SpiritBox Ultimate ist eine eigenständige Windows-Anwendung und kein Modell-Runner: Sie verbindet sich mit dem LM-Studio-Modell und -Server, den Sie bereits betreiben, und ergänzt Guide-basierte Unterhaltungen, gespeicherte Chats und gesprochene Antworten in einer Oberfläche.**',
-          '„Guide“ ist ein SpiritBox-eigener Begriff; die [Editionsübersicht](https://spiritbox.ca/) nennt „custom Spirit Guides“ bei der kostenlosen Edition Basic, und die Angebotsseite zu Ultimate definiert ihn nicht näher. Dort steht außerdem, dass LM Studio bereits gespeicherte Chats und wiederverwendbare Prompt-Vorlagen bietet; der Entwickler versteht Ultimate daher als Möglichkeit, die drei Funktionen gemeinsam zu erproben.',
+          'Ein Guide ist in SpiritBox ein wiederverwendbarer Satz von Anweisungen für Unterhaltungen, wie zu Beginn der [Ultimate-Angebotsseite](https://spiritbox.ca/ultimate.html) des Entwicklers beschrieben; die [Editionsübersicht](https://spiritbox.ca/) nennt „custom Spirit Guides“ bei der kostenlosen Edition Basic. Dort steht außerdem, dass LM Studio bereits gespeicherte Chats und wiederverwendbare Prompt-Vorlagen bietet; der Entwickler versteht Ultimate daher als Möglichkeit, die drei Funktionen gemeinsam zu erproben.',
         ],
       },
       getIt: {
@@ -976,7 +976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Qué es SpiritBox Ultimate?',
         content: [
           '**SpiritBox Ultimate es una aplicación independiente para Windows, no un ejecutor de modelos: se conecta al modelo y al servidor de LM Studio que ya usas y añade conversaciones basadas en Guides, chats guardados y respuestas habladas en una sola interfaz.**',
-          '"Guide" es un término propio de SpiritBox; la [descripción de ediciones](https://spiritbox.ca/) menciona "custom Spirit Guides" en la edición gratuita Basic, y la página de la oferta Ultimate no lo define con más detalle. Esa página señala además que LM Studio ya ofrece chats guardados y preajustes de prompts reutilizables, por lo que el desarrollador plantea Ultimate como una forma de evaluar las tres funciones juntas.',
+          'En SpiritBox, un Guide es un conjunto reutilizable de instrucciones para conversaciones, tal como se describe al inicio de la [página de la oferta Ultimate](https://spiritbox.ca/ultimate.html) del desarrollador; la [descripción de ediciones](https://spiritbox.ca/) menciona "custom Spirit Guides" en la edición gratuita Basic. Esa página señala además que LM Studio ya ofrece chats guardados y preajustes de prompts reutilizables, por lo que el desarrollador plantea Ultimate como una forma de evaluar las tres funciones juntas.',
         ],
       },
       getIt: {
@@ -1353,7 +1353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qu\'est-ce que SpiritBox Ultimate ?',
         content: [
           '**SpiritBox Ultimate est une application Windows distincte, et non un exécuteur de modèles : elle se connecte au modèle et au serveur LM Studio que vous utilisez déjà et ajoute des conversations fondées sur des Guides, des discussions enregistrées et des réponses parlées dans une seule interface.**',
-          '« Guide » est un terme propre à SpiritBox ; l\'[aperçu des éditions](https://spiritbox.ca/) mentionne des « custom Spirit Guides » dans l\'édition gratuite Basic, et la page de l\'offre Ultimate ne le définit pas davantage. Cette page rappelle aussi que LM Studio propose déjà des discussions enregistrées et des préréglages de prompts réutilisables ; le développeur présente donc Ultimate comme un moyen d\'évaluer ces trois fonctions ensemble.',
+          'Dans SpiritBox, un Guide est un ensemble réutilisable d\'instructions de conversation, comme le décrit le début de la [page de l\'offre Ultimate](https://spiritbox.ca/ultimate.html) du développeur ; l\'[aperçu des éditions](https://spiritbox.ca/) mentionne des « custom Spirit Guides » dans l\'édition gratuite Basic. Cette page rappelle aussi que LM Studio propose déjà des discussions enregistrées et des préréglages de prompts réutilisables ; le développeur présente donc Ultimate comme un moyen d\'évaluer ces trois fonctions ensemble.',
         ],
       },
       getIt: {
@@ -1730,7 +1730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'SpiritBox Ultimateとは?',
         content: [
           '**SpiritBox Ultimateは独立したWindowsアプリで、モデルの実行環境ではありません。すでに運用しているLM Studioのモデルとサーバーに接続し、Guideを軸にした会話、保存したチャット、音声での返答をひとつの画面で提供します。**',
-          '「Guide」はSpiritBox独自の用語です。[エディションの概要](https://spiritbox.ca/)では無料のBasicエディションに「custom Spirit Guides」と記載されていますが、Ultimateのオファーページはこれ以上詳しく定義していません。同ページは、LM Studioにも保存チャットと再利用できるプロンプトプリセットがすでにあると述べており、開発者はUltimateを、この3つの機能をまとめて評価する手段と位置づけています。',
+          'SpiritBoxでGuideとは、再利用できる会話用の指示のまとまりのことで、開発者の[Ultimateオファーページ](https://spiritbox.ca/ultimate.html)の冒頭でもそう説明されています。[エディションの概要](https://spiritbox.ca/)では無料のBasicエディションに「custom Spirit Guides」と記載されています。同ページは、LM Studioにも保存チャットと再利用できるプロンプトプリセットがすでにあると述べており、開発者はUltimateを、この3つの機能をまとめて評価する手段と位置づけています。',
         ],
       },
       getIt: {
@@ -2107,7 +2107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o SpiritBox Ultimate?',
         content: [
           '**O SpiritBox Ultimate é um aplicativo independente para Windows, e não um executor de modelos: ele se conecta ao modelo e ao servidor do LM Studio que você já opera e adiciona conversas baseadas em Guides, chats salvos e respostas faladas em uma só interface.**',
-          '"Guide" é um termo do próprio SpiritBox; a [visão geral das edições](https://spiritbox.ca/) lista "custom Spirit Guides" na edição gratuita Basic, e a página da oferta Ultimate não o define em mais detalhes. Essa página também observa que o LM Studio já oferece chats salvos e predefinições de prompt reutilizáveis, então o desenvolvedor apresenta o Ultimate como uma forma de avaliar os três recursos em conjunto.',
+          'No SpiritBox, um Guide é um conjunto reutilizável de instruções para conversas, conforme descrito no início da [página da oferta Ultimate](https://spiritbox.ca/ultimate.html) do desenvolvedor; a [visão geral das edições](https://spiritbox.ca/) lista "custom Spirit Guides" na edição gratuita Basic. Essa página também observa que o LM Studio já oferece chats salvos e predefinições de prompt reutilizáveis, então o desenvolvedor apresenta o Ultimate como uma forma de avaliar os três recursos em conjunto.',
         ],
       },
       getIt: {
@@ -2484,7 +2484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو SpiritBox Ultimate؟',
         content: [
           '**SpiritBox Ultimate تطبيق ويندوز مستقل وليس مشغّل نماذج: فهو يتصل بنموذج LM Studio وخادمه اللذين تشغّلهما بالفعل، ويضيف محادثات قائمة على Guides ومحادثات محفوظة وردودًا منطوقة في واجهة واحدة.**',
-          'كلمة "Guide" مصطلح خاص بـ SpiritBox؛ فـ[نظرة عامة على الإصدارات](https://spiritbox.ca/) تدرج "custom Spirit Guides" ضمن الإصدار المجاني Basic، ولا تعرّفه صفحة عرض Ultimate بمزيد من التفصيل. وتشير تلك الصفحة أيضًا إلى أن LM Studio يوفّر بالفعل محادثات محفوظة وإعدادات مسبقة قابلة لإعادة الاستخدام للأوامر النصية، ولذلك يقدّم المطوّر Ultimate بوصفه وسيلة لتقييم الميزات الثلاث معًا.',
+          'الـ Guide في SpiritBox هو مجموعة قابلة لإعادة الاستخدام من تعليمات المحادثة، كما يوضح مطلع [صفحة عرض Ultimate](https://spiritbox.ca/ultimate.html) لدى المطوّر؛ وتدرج [نظرة عامة على الإصدارات](https://spiritbox.ca/) "custom Spirit Guides" ضمن الإصدار المجاني Basic. وتشير تلك الصفحة أيضًا إلى أن LM Studio يوفّر بالفعل محادثات محفوظة وإعدادات مسبقة قابلة لإعادة الاستخدام للأوامر النصية، ولذلك يقدّم المطوّر Ultimate بوصفه وسيلة لتقييم الميزات الثلاث معًا.',
         ],
       },
       getIt: {
@@ -2861,7 +2861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'SpiritBox Ultimate 是什么?',
         content: [
           '**SpiritBox Ultimate 是一款独立的 Windows 应用，不是模型运行器：它连接你已在运行的 LM Studio 模型和服务器，并在同一个界面里增加 Guide 式对话、已保存聊天和语音回复。**',
-          '“Guide”是 SpiritBox 自己的术语；[版本概览](https://spiritbox.ca/)在免费的 Basic 版下列出了“custom Spirit Guides”，而 Ultimate 产品页没有进一步定义它。该页面还指出，LM Studio 本身已提供已保存聊天和可复用的提示词预设，因此开发者把 Ultimate 定位为一种把这三项功能放在一起评估的方式。',
+          '在 SpiritBox 中，Guide 是一组可重复使用的对话指令，开发者的 [Ultimate 产品页](https://spiritbox.ca/ultimate.html)开头即作此说明；[版本概览](https://spiritbox.ca/)在免费的 Basic 版下列出了“custom Spirit Guides”。该页面还指出，LM Studio 本身已提供已保存聊天和可复用的提示词预设，因此开发者把 Ultimate 定位为一种把这三项功能放在一起评估的方式。',
         ],
       },
       getIt: {
@@ -3238,7 +3238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'SpiritBox Ultimate란 무엇인가?',
         content: [
           '**SpiritBox Ultimate는 모델 실행기가 아니라 별도의 Windows 애플리케이션으로, 이미 운영 중인 LM Studio 모델과 서버에 연결해 Guide 기반 대화, 저장된 채팅, 음성 답변을 하나의 화면에서 제공합니다.**',
-          '"Guide"는 SpiritBox 고유의 용어입니다. [에디션 개요](https://spiritbox.ca/)는 무료 Basic 에디션에 "custom Spirit Guides"를 나열하지만, Ultimate 제품 페이지는 이를 더 자세히 정의하지 않습니다. 같은 페이지는 LM Studio에도 이미 저장된 채팅과 재사용 가능한 프롬프트 프리셋이 있다고 밝히고 있어, 개발자는 Ultimate를 이 세 가지 기능을 함께 평가하는 수단으로 제시합니다.',
+          'SpiritBox에서 Guide는 재사용할 수 있는 대화 지침 모음이며, 개발자의 [Ultimate 제품 페이지](https://spiritbox.ca/ultimate.html) 첫머리에서도 이렇게 설명합니다. [에디션 개요](https://spiritbox.ca/)는 무료 Basic 에디션에 "custom Spirit Guides"를 나열합니다. 같은 페이지는 LM Studio에도 이미 저장된 채팅과 재사용 가능한 프롬프트 프리셋이 있다고 밝히고 있어, 개발자는 Ultimate를 이 세 가지 기능을 함께 평가하는 수단으로 제시합니다.',
         ],
       },
       getIt: {
