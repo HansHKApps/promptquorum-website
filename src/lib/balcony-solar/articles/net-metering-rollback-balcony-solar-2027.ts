@@ -32,7 +32,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'balcony solar netherlands 2027',
       'terugleververgoeding 2027',
     ],
-    leadAnswerBlock: '**The Netherlands ends its 1:1 net metering scheme (saldering) on January 1, 2027.** Today a household that feeds in 3,000 kWh and draws 4,000 kWh pays only for the 1,000 kWh difference. From 2027 the supplier instead pays a "reasonable compensation" (redelijke vergoeding) for each fed-in kWh: until January 1, 2030 it must be at least 50% of the electricity price excluding energy tax and VAT, and suppliers may still charge feed-in fees. The practical effect is that a kWh you use yourself saves the full retail price while a kWh you export earns far less, so self-consumption gains value and, for some households, so does a battery.',
+    leadAnswerBlock: '**The Netherlands ends its 1:1 net metering scheme (saldering) on January 1, 2027.** Until January 1, 2027, a household that feeds in 3,000 kWh and draws 4,000 kWh pays only for the 1,000 kWh difference. From 2027 the supplier instead pays a "reasonable compensation" (redelijke vergoeding) for each fed-in kWh: until January 1, 2030 it must be at least 50% of the electricity price excluding energy tax and VAT, and suppliers may still charge feed-in fees. The practical effect is that a kWh you use yourself saves the full retail price while a kWh you export earns far less, so self-consumption gains value and, for some households, so does a battery.',
     quickAnswerTop: {
       en: {
         question: 'Is net metering ending for balcony solar in 2027?',
@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'The Netherlands ends saldering (1:1 net metering) on January 1, 2027; the law passed the Tweede Kamer on November 14, 2024 and the Eerste Kamer on December 17, 2024.',
-          'Today, fed-in and drawn electricity are netted: feeding in 3,000 kWh and drawing 4,000 kWh means paying for 1,000 kWh.',
+          'Until January 1, 2027, fed-in and drawn electricity are netted: feeding in 3,000 kWh and drawing 4,000 kWh means paying for 1,000 kWh.',
           'From 2027 suppliers owe a "reasonable compensation" for fed-in power. Until January 1, 2030 it must be at least 50% of the price excluding energy tax and VAT, according to the Dutch regulator ACM.',
           'Feed-in fees remain allowed and can exceed the payment for the power fed back. ACM has stated that a net-negative compensation is not banned as such, unless it leads to unreasonable tariffs.',
           'This is a Dutch change only. It does not alter balcony solar rules in Germany or any other country.',
@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'current-scheme',
         title: 'The Scheme That Ends and What Replaces It',
         content: [
-          '**Under saldering, electricity drawn from the grid and fed into it are netted 1:1, including energy tax and VAT.** A household that feeds in 3,000 kWh and draws 4,000 kWh pays for the 1,000 kWh difference. The scheme ends by law on January 1, 2027. The Wet beëindiging salderingsregeling (bill 36611) passed the Tweede Kamer on November 14, 2024 and the Eerste Kamer on December 17, 2024.',
+          '**Under saldering, electricity drawn from the grid and fed into it are netted 1:1, including energy tax and VAT.** Until January 1, 2027, a household that feeds in 3,000 kWh and draws 4,000 kWh pays for the 1,000 kWh difference. The scheme ends by law on January 1, 2027. The Wet beëindiging salderingsregeling (bill 36611) passed the Tweede Kamer on November 14, 2024 and the Eerste Kamer on December 17, 2024.',
           '**From January 1, 2027, households with a net surplus are entitled to a "reasonable compensation" (redelijke vergoeding) from their supplier.** The law sets no fixed price. According to the consumer site of the regulator ACM, the compensation must be at least 50% of the price paid for electricity excluding energy tax and VAT until January 1, 2030. ACM supervises whether compensation is reasonable. Because the floor is written to run only until 2030, check the rules in force when you sign or renew a contract.',
         ],
       },
@@ -82,6 +82,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Check three items in your energy contract: the per-kWh feed-in payment, the feed-in fee (terugleverkosten), and how the contract handles the switch on January 1, 2027.** ACM explains that feed-in fees can be a fixed amount or a charge per kWh fed back, and that they can sometimes be higher than the compensation for the power you feed back.',
           '**Suppliers cannot postpone the legal end date, but your contract terms may still matter.** ACM states that a contract can still grant a right to netting under its own terms, and that the supplier must split your consumption and feed-in into the period up to December 31, 2026 and the period from January 1, 2027. ACM advises comparing offers carefully, especially contracts that run past 2027. This page does not quote supplier rates because offers change often.',
+        ],
+        callouts: [
+          { type: 'info', text: 'This page is general information, not legal or financial advice. Check your own contract and ask your supplier or a qualified adviser before deciding.' },
         ],
       },
       batteryConnection: {
@@ -128,7 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How does the current Dutch net metering scheme work?',
-            a: 'Electricity drawn from the grid and fed into it are netted 1:1 over the billing period, including energy tax and VAT. A household that feeds in 3,000 kWh and draws 4,000 kWh pays only for the 1,000 kWh difference.',
+            a: 'Electricity drawn from the grid and fed into it are netted 1:1 over the billing period, including energy tax and VAT. Until January 1, 2027, a household that feeds in 3,000 kWh and draws 4,000 kWh pays only for the 1,000 kWh difference.',
           },
           {
             q: 'What replaces net metering after January 1, 2027?',
@@ -182,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'الطاقة الشمسية للشرفة هولندا 2027',
       'terugleververgoeding 2027',
     ],
-    leadAnswerBlock: '**تنهي هولندا نظام المقاصة 1:1 (saldering) في 1 يناير 2027.** حاليًا تدفع الأسرة التي تُصدّر 3,000 kWh وتسحب 4,000 kWh ثمن الفرق فقط، أي 1,000 kWh. ابتداءً من 2027 تدفع شركة التوريد بدلًا من ذلك «تعويضًا معقولًا» (redelijke vergoeding) عن كل kWh مُصدَّر: وحتى 1 يناير 2030 يجب ألا يقل عن 50% من سعر الكهرباء دون ضريبة الطاقة وضريبة القيمة المضافة، ويظل بإمكان شركات التوريد فرض رسوم تصدير. عمليًا، الـ kWh الذي تستهلكه بنفسك يوفّر سعر التجزئة كاملًا، بينما يدرّ الـ kWh المُصدَّر أقل بكثير؛ لذا تزداد قيمة الاستهلاك الذاتي، وقد تزداد قيمة البطارية لدى بعض الأسر.',
+    leadAnswerBlock: '**تنهي هولندا نظام المقاصة 1:1 (saldering) في 1 يناير 2027.** حتى 1 يناير 2027 تدفع الأسرة التي تُصدّر 3,000 kWh وتسحب 4,000 kWh ثمن الفرق فقط، أي 1,000 kWh. ابتداءً من 2027 تدفع شركة التوريد بدلًا من ذلك «تعويضًا معقولًا» (redelijke vergoeding) عن كل kWh مُصدَّر: وحتى 1 يناير 2030 يجب ألا يقل عن 50% من سعر الكهرباء دون ضريبة الطاقة وضريبة القيمة المضافة، ويظل بإمكان شركات التوريد فرض رسوم تصدير. عمليًا، الـ kWh الذي تستهلكه بنفسك يوفّر سعر التجزئة كاملًا، بينما يدرّ الـ kWh المُصدَّر أقل بكثير؛ لذا تزداد قيمة الاستهلاك الذاتي، وقد تزداد قيمة البطارية لدى بعض الأسر.',
     quickAnswerTop: {
       ar: {
         question: 'هل ينتهي نظام Net Metering للطاقة الشمسية للشرفة في 2027؟',
@@ -212,7 +215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'تنهي هولندا نظام saldering (المقاصة 1:1) في 1 يناير 2027؛ أقرّ القانون مجلس Tweede Kamer في 14 نوفمبر 2024 ومجلس Eerste Kamer في 17 ديسمبر 2024.',
-          'حاليًا تُجرى مقاصة بين الكهرباء المُصدَّرة والمسحوبة: تصدير 3,000 kWh وسحب 4,000 kWh يعني دفع ثمن 1,000 kWh.',
+          'حتى 1 يناير 2027 تُجرى مقاصة بين الكهرباء المُصدَّرة والمسحوبة: تصدير 3,000 kWh وسحب 4,000 kWh يعني دفع ثمن 1,000 kWh.',
           'ابتداءً من 2027 تدين شركات التوريد بـ«تعويض معقول» عن الكهرباء المُصدَّرة. وحتى 1 يناير 2030 يجب ألا يقل عن 50% من السعر دون ضريبة الطاقة وضريبة القيمة المضافة، وفق الجهة المنظِّمة الهولندية ACM.',
           'تبقى رسوم التصدير مسموحة وقد تتجاوز تعويض الكهرباء المُصدَّرة. وقد صرّحت ACM بأن التعويض السالب صافيًا غير محظور بحد ذاته ما لم يؤدِّ إلى تعرفة غير معقولة.',
           'هذا تغيير هولندي فقط، ولا يغيّر قواعد الطاقة الشمسية للشرفة في ألمانيا أو أي دولة أخرى.',
@@ -222,7 +225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'current-scheme',
         title: 'النظام الذي ينتهي وما يحلّ محله',
         content: [
-          '**في نظام saldering تُجرى مقاصة 1:1 بين الكهرباء المسحوبة من الشبكة والمُصدَّرة إليها، شاملةً ضريبة الطاقة وضريبة القيمة المضافة.** الأسرة التي تُصدّر 3,000 kWh وتسحب 4,000 kWh تدفع ثمن الفرق البالغ 1,000 kWh. ينتهي النظام بموجب القانون في 1 يناير 2027. أقرّ Tweede Kamer قانون Wet beëindiging salderingsregeling (مشروع القانون 36611) في 14 نوفمبر 2024، وأقرّه Eerste Kamer في 17 ديسمبر 2024.',
+          '**في نظام saldering تُجرى مقاصة 1:1 بين الكهرباء المسحوبة من الشبكة والمُصدَّرة إليها، شاملةً ضريبة الطاقة وضريبة القيمة المضافة.** حتى 1 يناير 2027 تدفع الأسرة التي تُصدّر 3,000 kWh وتسحب 4,000 kWh ثمن الفرق البالغ 1,000 kWh. ينتهي النظام بموجب القانون في 1 يناير 2027. أقرّ Tweede Kamer قانون Wet beëindiging salderingsregeling (مشروع القانون 36611) في 14 نوفمبر 2024، وأقرّه Eerste Kamer في 17 ديسمبر 2024.',
           '**ابتداءً من 1 يناير 2027 يحق للأسر التي لديها فائض صافٍ الحصول على «تعويض معقول» (redelijke vergoeding) من شركة التوريد.** لا يحدد القانون سعرًا ثابتًا. ووفق موقع المستهلكين التابع للجهة المنظِّمة ACM، يجب ألا يقل التعويض حتى 1 يناير 2030 عن 50% من السعر المدفوع للكهرباء دون ضريبة الطاقة وضريبة القيمة المضافة. وتشرف ACM على مدى معقولية التعويض. ولأن الحد الأدنى منصوص عليه حتى 2030 فقط، راجع القواعد السارية عند توقيع العقد أو تجديده.',
         ],
       },
@@ -232,6 +235,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**راجع في عقد الطاقة ثلاثة بنود: تعويض التصدير لكل kWh، ورسم التصدير (terugleverkosten)، وكيفية تعامل العقد مع الانتقال في 1 يناير 2027.** توضح ACM أن رسوم التصدير قد تكون مبلغًا ثابتًا أو رسمًا على كل kWh مُصدَّر، وأنها قد تتجاوز أحيانًا تعويض الكهرباء المُصدَّرة.',
           '**لا تستطيع شركات التوريد تأجيل تاريخ الانتهاء القانوني، لكن شروط عقدك قد تظل مهمة.** تذكر ACM أن العقد قد يمنح حق المقاصة وفق شروطه الخاصة، وأن على شركة التوريد تقسيم استهلاكك وتصديرك إلى الفترة حتى 31 ديسمبر 2026 والفترة منذ 1 يناير 2027. وتنصح ACM بمقارنة العروض بعناية، خصوصًا العقود التي تمتد بعد 2027. لا نذكر هنا تعرفات شركات بعينها لأن العروض تتغير كثيرًا.',
+        ],
+        callouts: [
+          { type: 'info', text: 'هذه الصفحة معلومات عامة وليست استشارة قانونية أو مالية. راجع عقدك الخاص واسأل شركة التوريد أو مستشارًا مؤهلًا قبل اتخاذ القرار.' },
         ],
       },
       batteryConnection: {
@@ -278,7 +284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كيف يعمل النظام الهولندي الحالي؟',
-            a: 'تُجرى مقاصة 1:1 بين الكهرباء المسحوبة من الشبكة والمُصدَّرة إليها خلال فترة الفوترة، شاملةً ضريبة الطاقة وضريبة القيمة المضافة. الأسرة التي تُصدّر 3,000 kWh وتسحب 4,000 kWh تدفع ثمن الفرق فقط، أي 1,000 kWh.',
+            a: 'تُجرى مقاصة 1:1 بين الكهرباء المسحوبة من الشبكة والمُصدَّرة إليها خلال فترة الفوترة، شاملةً ضريبة الطاقة وضريبة القيمة المضافة. حتى 1 يناير 2027 تدفع الأسرة التي تُصدّر 3,000 kWh وتسحب 4,000 kWh ثمن الفرق فقط، أي 1,000 kWh.',
           },
           {
             q: 'ما الذي يحلّ محل Net Metering بعد 1 يناير 2027؟',
@@ -332,7 +338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'balkonkraftwerk niederlande 2027',
       'terugleververgoeding 2027',
     ],
-    leadAnswerBlock: '**Die Niederlande beenden ihre 1:1-Verrechnung (Saldering) am 1. Januar 2027.** Heute zahlt ein Haushalt, der 3.000 kWh einspeist und 4.000 kWh bezieht, nur für die Differenz von 1.000 kWh. Ab 2027 zahlt der Versorger stattdessen für jede eingespeiste kWh eine „angemessene Vergütung“ (redelijke vergoeding): Bis zum 1. Januar 2030 muss sie mindestens 50 % des Strompreises ohne Energiesteuer und Mehrwertsteuer betragen, und Versorger dürfen weiterhin Einspeisegebühren erheben. Praktisch bedeutet das: Eine selbst verbrauchte kWh spart den vollen Endkundenpreis, eine eingespeiste kWh bringt deutlich weniger – Eigenverbrauch wird wertvoller, und für manche Haushalte auch ein Batteriespeicher.',
+    leadAnswerBlock: '**Die Niederlande beenden ihre 1:1-Verrechnung (Saldering) am 1. Januar 2027.** Bis zum 1. Januar 2027 zahlt ein Haushalt, der 3.000 kWh einspeist und 4.000 kWh bezieht, nur für die Differenz von 1.000 kWh. Ab 2027 zahlt der Versorger stattdessen für jede eingespeiste kWh eine „angemessene Vergütung“ (redelijke vergoeding): Bis zum 1. Januar 2030 muss sie mindestens 50 % des Strompreises ohne Energiesteuer und Mehrwertsteuer betragen, und Versorger dürfen weiterhin Einspeisegebühren erheben. Praktisch bedeutet das: Eine selbst verbrauchte kWh spart den vollen Endkundenpreis, eine eingespeiste kWh bringt deutlich weniger – Eigenverbrauch wird wertvoller, und für manche Haushalte auch ein Batteriespeicher.',
     quickAnswerTop: {
       de: {
         question: 'Endet das Net Metering für Balkonkraftwerke 2027?',
@@ -362,7 +368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Die Niederlande beenden die Saldering (1:1-Verrechnung) am 1. Januar 2027; das Gesetz wurde am 14. November 2024 von der Tweede Kamer und am 17. Dezember 2024 von der Eerste Kamer angenommen.',
-          'Heute werden eingespeister und bezogener Strom verrechnet: Wer 3.000 kWh einspeist und 4.000 kWh bezieht, zahlt für 1.000 kWh.',
+          'Bis zum 1. Januar 2027 werden eingespeister und bezogener Strom verrechnet: Wer 3.000 kWh einspeist und 4.000 kWh bezieht, zahlt für 1.000 kWh.',
           'Ab 2027 schulden Versorger eine „angemessene Vergütung“ für eingespeisten Strom. Bis zum 1. Januar 2030 muss sie laut der niederländischen Regulierungsbehörde ACM mindestens 50 % des Preises ohne Energiesteuer und Mehrwertsteuer betragen.',
           'Einspeisegebühren bleiben erlaubt und können höher sein als die Vergütung für den eingespeisten Strom. Die ACM hat erklärt, dass eine netto negative Vergütung als solche nicht verboten ist, sofern sie nicht zu unangemessenen Tarifen führt.',
           'Das ist eine rein niederländische Änderung. Sie berührt die Regeln für Balkonkraftwerke in Deutschland oder anderen Ländern nicht.',
@@ -372,7 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'current-scheme',
         title: 'Die Regelung, die endet, und was sie ersetzt',
         content: [
-          '**Bei der Saldering werden aus dem Netz bezogener und ins Netz eingespeister Strom 1:1 verrechnet, einschließlich Energiesteuer und Mehrwertsteuer.** Ein Haushalt, der 3.000 kWh einspeist und 4.000 kWh bezieht, zahlt für die Differenz von 1.000 kWh. Die Regelung endet gesetzlich am 1. Januar 2027. Das Wet beëindiging salderingsregeling (Gesetzentwurf 36611) wurde am 14. November 2024 von der Tweede Kamer und am 17. Dezember 2024 von der Eerste Kamer angenommen.',
+          '**Bei der Saldering werden aus dem Netz bezogener und ins Netz eingespeister Strom 1:1 verrechnet, einschließlich Energiesteuer und Mehrwertsteuer.** Bis zum 1. Januar 2027 zahlt ein Haushalt, der 3.000 kWh einspeist und 4.000 kWh bezieht, für die Differenz von 1.000 kWh. Die Regelung endet gesetzlich am 1. Januar 2027. Das Wet beëindiging salderingsregeling (Gesetzentwurf 36611) wurde am 14. November 2024 von der Tweede Kamer und am 17. Dezember 2024 von der Eerste Kamer angenommen.',
           '**Ab dem 1. Januar 2027 haben Haushalte mit einem Netto-Überschuss Anspruch auf eine „angemessene Vergütung“ (redelijke vergoeding) ihres Versorgers.** Das Gesetz legt keinen festen Preis fest. Laut der Verbraucherseite der Regulierungsbehörde ACM muss die Vergütung bis zum 1. Januar 2030 mindestens 50 % des gezahlten Strompreises ohne Energiesteuer und Mehrwertsteuer betragen. Die ACM überwacht, ob die Vergütung angemessen ist. Da die Untergrenze nur bis 2030 vorgesehen ist, sollten Sie bei Vertragsabschluss oder -verlängerung die dann geltenden Regeln prüfen.',
         ],
       },
@@ -382,6 +388,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Prüfen Sie in Ihrem Stromvertrag drei Punkte: die Einspeisevergütung pro kWh, die Einspeisegebühr (terugleverkosten) und den Umgang des Vertrags mit dem Wechsel am 1. Januar 2027.** Die ACM erläutert, dass Einspeisegebühren ein Festbetrag oder ein Preis pro eingespeister kWh sein können und mitunter höher ausfallen als die Vergütung für den eingespeisten Strom.',
           '**Versorger können den gesetzlichen Stichtag nicht verschieben, die Vertragsbedingungen können aber weiterhin eine Rolle spielen.** Die ACM führt aus, dass ein Vertrag nach seinen eigenen Bedingungen weiterhin ein Recht auf Verrechnung gewähren kann und dass der Versorger Bezug und Einspeisung in den Zeitraum bis zum 31. Dezember 2026 und den Zeitraum ab dem 1. Januar 2027 aufteilen muss. Die ACM rät, Angebote sorgfältig zu vergleichen, besonders Verträge mit Laufzeit über 2027 hinaus. Konkrete Versorgertarife nennen wir hier nicht, da sich Angebote häufig ändern.',
+        ],
+        callouts: [
+          { type: 'info', text: 'Diese Seite bietet allgemeine Informationen, keine Rechts- oder Finanzberatung. Prüfen Sie Ihren eigenen Vertrag und fragen Sie Ihren Versorger oder eine qualifizierte Beratung, bevor Sie entscheiden.' },
         ],
       },
       batteryConnection: {
@@ -428,7 +437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie funktioniert die aktuelle niederländische Regelung?',
-            a: 'Aus dem Netz bezogener und eingespeister Strom werden über den Abrechnungszeitraum 1:1 verrechnet, einschließlich Energiesteuer und Mehrwertsteuer. Ein Haushalt, der 3.000 kWh einspeist und 4.000 kWh bezieht, zahlt nur für die Differenz von 1.000 kWh.',
+            a: 'Aus dem Netz bezogener und eingespeister Strom werden über den Abrechnungszeitraum 1:1 verrechnet, einschließlich Energiesteuer und Mehrwertsteuer. Bis zum 1. Januar 2027 zahlt ein Haushalt, der 3.000 kWh einspeist und 4.000 kWh bezieht, nur für die Differenz von 1.000 kWh.',
           },
           {
             q: 'Was ersetzt das Net Metering nach dem 1. Januar 2027?',
@@ -482,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'energía solar de balcón países bajos 2027',
       'terugleververgoeding 2027',
     ],
-    leadAnswerBlock: '**Los Países Bajos ponen fin a su compensación 1:1 (saldering) el 1 de enero de 2027.** Hoy un hogar que inyecta 3.000 kWh y consume 4.000 kWh paga solo la diferencia de 1.000 kWh. A partir de 2027, la comercializadora paga en cambio una «compensación razonable» (redelijke vergoeding) por cada kWh inyectado: hasta el 1 de enero de 2030 debe ser al menos el 50 % del precio de la electricidad sin impuesto energético ni IVA, y las comercializadoras pueden seguir cobrando cargos por inyección. En la práctica, un kWh que usas tú mismo ahorra el precio minorista completo, mientras que un kWh exportado rinde mucho menos: el autoconsumo gana valor y, para algunos hogares, también la batería.',
+    leadAnswerBlock: '**Los Países Bajos ponen fin a su compensación 1:1 (saldering) el 1 de enero de 2027.** Hasta el 1 de enero de 2027, un hogar que inyecta 3.000 kWh y consume 4.000 kWh paga solo la diferencia de 1.000 kWh. A partir de 2027, la comercializadora paga en cambio una «compensación razonable» (redelijke vergoeding) por cada kWh inyectado: hasta el 1 de enero de 2030 debe ser al menos el 50 % del precio de la electricidad sin impuesto energético ni IVA, y las comercializadoras pueden seguir cobrando cargos por inyección. En la práctica, un kWh que usas tú mismo ahorra el precio minorista completo, mientras que un kWh exportado rinde mucho menos: el autoconsumo gana valor y, para algunos hogares, también la batería.',
     quickAnswerTop: {
       es: {
         question: '¿Termina el net metering para la energía solar de balcón en 2027?',
@@ -512,7 +521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Los Países Bajos terminan el saldering (compensación 1:1) el 1 de enero de 2027; la ley fue aprobada por la Tweede Kamer el 14 de noviembre de 2024 y por la Eerste Kamer el 17 de diciembre de 2024.',
-          'Hoy la electricidad inyectada y la consumida se compensan: inyectar 3.000 kWh y consumir 4.000 kWh significa pagar 1.000 kWh.',
+          'Hasta el 1 de enero de 2027, la electricidad inyectada y la consumida se compensan: inyectar 3.000 kWh y consumir 4.000 kWh significa pagar 1.000 kWh.',
           'Desde 2027 las comercializadoras deben una «compensación razonable» por la electricidad inyectada. Hasta el 1 de enero de 2030 debe ser al menos el 50 % del precio sin impuesto energético ni IVA, según el regulador neerlandés ACM.',
           'Los cargos por inyección siguen permitidos y pueden superar el pago por la electricidad inyectada. La ACM ha indicado que una compensación neta negativa no está prohibida en sí misma, salvo que genere tarifas poco razonables.',
           'Es un cambio exclusivamente neerlandés. No modifica las reglas de la energía solar de balcón en Alemania ni en otros países.',
@@ -522,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'current-scheme',
         title: 'El esquema que termina y lo que lo sustituye',
         content: [
-          '**Con el saldering, la electricidad tomada de la red y la inyectada en ella se compensan 1:1, incluidos el impuesto energético y el IVA.** Un hogar que inyecta 3.000 kWh y consume 4.000 kWh paga la diferencia de 1.000 kWh. El esquema termina por ley el 1 de enero de 2027. La Wet beëindiging salderingsregeling (proyecto de ley 36611) fue aprobada por la Tweede Kamer el 14 de noviembre de 2024 y por la Eerste Kamer el 17 de diciembre de 2024.',
+          '**Con el saldering, la electricidad tomada de la red y la inyectada en ella se compensan 1:1, incluidos el impuesto energético y el IVA.** Hasta el 1 de enero de 2027, un hogar que inyecta 3.000 kWh y consume 4.000 kWh paga la diferencia de 1.000 kWh. El esquema termina por ley el 1 de enero de 2027. La Wet beëindiging salderingsregeling (proyecto de ley 36611) fue aprobada por la Tweede Kamer el 14 de noviembre de 2024 y por la Eerste Kamer el 17 de diciembre de 2024.',
           '**Desde el 1 de enero de 2027, los hogares con excedente neto tienen derecho a una «compensación razonable» (redelijke vergoeding) de su comercializadora.** La ley no fija un precio. Según el sitio para consumidores del regulador ACM, la compensación debe ser al menos el 50 % del precio pagado por la electricidad sin impuesto energético ni IVA hasta el 1 de enero de 2030. La ACM supervisa que la compensación sea razonable. Como el mínimo está previsto solo hasta 2030, revisa las reglas vigentes cuando firmes o renueves un contrato.',
         ],
       },
@@ -532,6 +541,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Revisa tres puntos de tu contrato de energía: el pago por kWh inyectado, el cargo por inyección (terugleverkosten) y cómo trata el contrato el cambio del 1 de enero de 2027.** La ACM explica que los cargos por inyección pueden ser un importe fijo o un cargo por kWh inyectado, y que a veces son mayores que la compensación por la electricidad inyectada.',
           '**Las comercializadoras no pueden aplazar la fecha legal de fin, pero las condiciones de tu contrato pueden seguir importando.** La ACM indica que un contrato puede seguir otorgando un derecho a compensación según sus propios términos, y que la comercializadora debe dividir tu consumo e inyección en el periodo hasta el 31 de diciembre de 2026 y el periodo desde el 1 de enero de 2027. La ACM aconseja comparar las ofertas con cuidado, sobre todo los contratos que superan 2027. Aquí no citamos tarifas de comercializadoras porque las ofertas cambian a menudo.',
+        ],
+        callouts: [
+          { type: 'info', text: 'Esta página ofrece información general, no asesoramiento jurídico ni financiero. Revisa tu propio contrato y consulta con tu comercializadora o con un asesor cualificado antes de decidir.' },
         ],
       },
       batteryConnection: {
@@ -578,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cómo funciona el esquema neerlandés actual?',
-            a: 'La electricidad tomada de la red y la inyectada se compensan 1:1 durante el periodo de facturación, incluidos el impuesto energético y el IVA. Un hogar que inyecta 3.000 kWh y consume 4.000 kWh paga solo la diferencia de 1.000 kWh.',
+            a: 'La electricidad tomada de la red y la inyectada se compensan 1:1 durante el periodo de facturación, incluidos el impuesto energético y el IVA. Hasta el 1 de enero de 2027, un hogar que inyecta 3.000 kWh y consume 4.000 kWh paga solo la diferencia de 1.000 kWh.',
           },
           {
             q: '¿Qué sustituye al net metering después del 1 de enero de 2027?',
@@ -632,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'solaire de balcon pays-bas 2027',
       'terugleververgoeding 2027',
     ],
-    leadAnswerBlock: '**Les Pays-Bas mettent fin à leur dispositif de compensation 1:1 (saldering) le 1er janvier 2027.** Aujourd\'hui, un ménage qui injecte 3 000 kWh et soutire 4 000 kWh ne paie que la différence de 1 000 kWh. À partir de 2027, le fournisseur paie à la place une « rémunération raisonnable » (redelijke vergoeding) pour chaque kWh injecté : jusqu\'au 1er janvier 2030, elle doit représenter au moins 50 % du prix de l\'électricité hors taxe énergétique et TVA, et les fournisseurs peuvent toujours facturer des frais d\'injection. En pratique, un kWh que vous consommez vous-même économise le prix de détail complet, tandis qu\'un kWh exporté rapporte bien moins : l\'autoconsommation gagne en valeur et, pour certains ménages, la batterie aussi.',
+    leadAnswerBlock: '**Les Pays-Bas mettent fin à leur dispositif de compensation 1:1 (saldering) le 1er janvier 2027.** Jusqu\'au 1er janvier 2027, un ménage qui injecte 3 000 kWh et soutire 4 000 kWh ne paie que la différence de 1 000 kWh. À partir de 2027, le fournisseur paie à la place une « rémunération raisonnable » (redelijke vergoeding) pour chaque kWh injecté : jusqu\'au 1er janvier 2030, elle doit représenter au moins 50 % du prix de l\'électricité hors taxe énergétique et TVA, et les fournisseurs peuvent toujours facturer des frais d\'injection. En pratique, un kWh que vous consommez vous-même économise le prix de détail complet, tandis qu\'un kWh exporté rapporte bien moins : l\'autoconsommation gagne en valeur et, pour certains ménages, la batterie aussi.',
     quickAnswerTop: {
       fr: {
         question: 'Le net metering prend-il fin pour le solaire de balcon en 2027 ?',
@@ -662,7 +674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Les Pays-Bas mettent fin au saldering (compensation 1:1) le 1er janvier 2027 ; la loi a été adoptée par la Tweede Kamer le 14 novembre 2024 et par la Eerste Kamer le 17 décembre 2024.',
-          'Aujourd\'hui, l\'électricité injectée et soutirée est compensée : injecter 3 000 kWh et en soutirer 4 000 revient à payer 1 000 kWh.',
+          'Jusqu\'au 1er janvier 2027, l\'électricité injectée et soutirée est compensée : injecter 3 000 kWh et en soutirer 4 000 revient à payer 1 000 kWh.',
           'À partir de 2027, les fournisseurs doivent une « rémunération raisonnable » pour l\'électricité injectée. Jusqu\'au 1er janvier 2030, elle doit atteindre au moins 50 % du prix hors taxe énergétique et TVA, selon le régulateur néerlandais ACM.',
           'Les frais d\'injection restent autorisés et peuvent dépasser la rémunération de l\'électricité injectée. L\'ACM a indiqué qu\'une rémunération nette négative n\'est pas interdite en soi, tant qu\'elle n\'aboutit pas à des tarifs déraisonnables.',
           'Il s\'agit d\'un changement purement néerlandais. Il ne modifie pas les règles du solaire de balcon en Allemagne ni ailleurs.',
@@ -672,7 +684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'current-scheme',
         title: 'Le dispositif qui prend fin et ce qui le remplace',
         content: [
-          '**Avec le saldering, l\'électricité soutirée du réseau et celle qui y est injectée sont compensées 1:1, taxe énergétique et TVA comprises.** Un ménage qui injecte 3 000 kWh et soutire 4 000 kWh paie la différence de 1 000 kWh. Le dispositif prend fin par la loi le 1er janvier 2027. La Wet beëindiging salderingsregeling (projet de loi 36611) a été adoptée par la Tweede Kamer le 14 novembre 2024 et par la Eerste Kamer le 17 décembre 2024.',
+          '**Avec le saldering, l\'électricité soutirée du réseau et celle qui y est injectée sont compensées 1:1, taxe énergétique et TVA comprises.** Jusqu\'au 1er janvier 2027, un ménage qui injecte 3 000 kWh et soutire 4 000 kWh paie la différence de 1 000 kWh. Le dispositif prend fin par la loi le 1er janvier 2027. La Wet beëindiging salderingsregeling (projet de loi 36611) a été adoptée par la Tweede Kamer le 14 novembre 2024 et par la Eerste Kamer le 17 décembre 2024.',
           '**À partir du 1er janvier 2027, les ménages ayant un excédent net ont droit à une « rémunération raisonnable » (redelijke vergoeding) de leur fournisseur.** La loi ne fixe pas de prix. Selon le site grand public du régulateur ACM, la rémunération doit représenter au moins 50 % du prix payé pour l\'électricité hors taxe énergétique et TVA jusqu\'au 1er janvier 2030. L\'ACM contrôle le caractère raisonnable de la rémunération. Comme le plancher n\'est prévu que jusqu\'en 2030, vérifiez les règles en vigueur lorsque vous signez ou renouvelez un contrat.',
         ],
       },
@@ -682,6 +694,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Vérifiez trois éléments dans votre contrat d\'énergie : la rémunération d\'injection par kWh, les frais d\'injection (terugleverkosten) et la façon dont le contrat gère le passage du 1er janvier 2027.** L\'ACM explique que les frais d\'injection peuvent être un montant fixe ou un tarif par kWh injecté, et qu\'ils peuvent parfois dépasser la rémunération de l\'électricité injectée.',
           '**Les fournisseurs ne peuvent pas reporter la date légale, mais les conditions de votre contrat peuvent rester importantes.** L\'ACM précise qu\'un contrat peut encore ouvrir un droit à la compensation selon ses propres termes, et que le fournisseur doit répartir votre consommation et votre injection entre la période jusqu\'au 31 décembre 2026 et celle à partir du 1er janvier 2027. L\'ACM conseille de comparer attentivement les offres, surtout les contrats qui dépassent 2027. Nous ne citons pas de tarifs de fournisseurs, car les offres changent souvent.',
+        ],
+        callouts: [
+          { type: 'info', text: 'Cette page donne des informations générales, pas un conseil juridique ou financier. Vérifiez votre propre contrat et interrogez votre fournisseur ou un conseiller qualifié avant de décider.' },
         ],
       },
       batteryConnection: {
@@ -728,7 +743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Comment fonctionne le dispositif néerlandais actuel ?',
-            a: 'L\'électricité soutirée du réseau et celle qui y est injectée sont compensées 1:1 sur la période de facturation, taxe énergétique et TVA comprises. Un ménage qui injecte 3 000 kWh et soutire 4 000 kWh ne paie que la différence de 1 000 kWh.',
+            a: 'L\'électricité soutirée du réseau et celle qui y est injectée sont compensées 1:1 sur la période de facturation, taxe énergétique et TVA comprises. Jusqu\'au 1er janvier 2027, un ménage qui injecte 3 000 kWh et soutire 4 000 kWh ne paie que la différence de 1 000 kWh.',
           },
           {
             q: 'Qu\'est-ce qui remplace le net metering après le 1er janvier 2027 ?',
@@ -777,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'サルデリング終了の影響を受けるオランダのバルコニーソーラー所有者・購入者',
     primaryTerm: 'オランダ サルデリング終了 2027',
     targetKeywords: ['サルデリング 2027', 'オランダ ネットメータリング バルコニーソーラー', 'バルコニーソーラー オランダ 2027', 'terugleververgoeding 2027'],
-    leadAnswerBlock: '**オランダは2027年1月1日に、1対1のネットメータリング（サルデリング）を終了します。** 現在は、3,000 kWhを送電し4,000 kWhを購入した世帯は、差し引き1,000 kWh分だけを支払います。2027年からは、送電した1 kWhごとに小売事業者が「合理的な対価」（redelijke vergoeding）を支払います。2030年1月1日までは、エネルギー税とVATを除く電気料金の50％以上でなければならず、事業者は引き続き送電手数料を課すことができます。実際には、自分で使った1 kWhは小売価格の全額分の節約になる一方、売った1 kWhの対価ははるかに小さくなります。そのため自家消費の価値が高まり、世帯によっては蓄電池の価値も高まります。',
+    leadAnswerBlock: '**オランダは2027年1月1日に、1対1のネットメータリング（サルデリング）を終了します。** 2027年1月1日までは、3,000 kWhを送電し4,000 kWhを購入した世帯は、差し引き1,000 kWh分だけを支払います。2027年からは、送電した1 kWhごとに小売事業者が「合理的な対価」（redelijke vergoeding）を支払います。2030年1月1日までは、エネルギー税とVATを除く電気料金の50％以上でなければならず、事業者は引き続き送電手数料を課すことができます。実際には、自分で使った1 kWhは小売価格の全額分の節約になる一方、売った1 kWhの対価ははるかに小さくなります。そのため自家消費の価値が高まり、世帯によっては蓄電池の価値も高まります。',
     quickAnswerTop: {
       ja: {
         question: '2027年にバルコニーソーラーのネットメータリングは終了しますか？',
@@ -807,7 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'オランダは2027年1月1日にサルデリング（1対1のネットメータリング）を終了します。法律は2024年11月14日に下院、2024年12月17日に上院で可決されました。',
-          '現在は送電量と購入量が相殺されます。3,000 kWhを送電し4,000 kWhを購入した場合、支払うのは1,000 kWh分です。',
+          '2027年1月1日までは、送電量と購入量が相殺されます。3,000 kWhを送電し4,000 kWhを購入した場合、支払うのは1,000 kWh分です。',
           '2027年から、小売事業者は送電電力に「合理的な対価」を支払います。オランダの規制当局ACMによると、2030年1月1日まではエネルギー税とVATを除く価格の50％以上です。',
           '送電手数料は引き続き認められ、送電電力の対価を上回ることがあります。ACMは、正味でマイナスとなる対価も、料金が不合理にならない限りそれ自体は禁止されていないと述べています。',
           'これはオランダだけの変更です。ドイツなど他国のバルコニーソーラーのルールは変わりません。',
@@ -817,7 +832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'current-scheme',
         title: '終了する制度と、その後に来るもの',
         content: [
-          '**サルデリングでは、系統から購入した電力と系統へ送電した電力が、エネルギー税とVATを含めて1対1で相殺されます。** 3,000 kWhを送電し4,000 kWhを購入した世帯は、差の1,000 kWh分を支払います。この制度は法律により2027年1月1日に終了します。「Wet beëindiging salderingsregeling」（法案36611）は、2024年11月14日に下院、2024年12月17日に上院で可決されました。',
+          '**サルデリングでは、系統から購入した電力と系統へ送電した電力が、エネルギー税とVATを含めて1対1で相殺されます。** 2027年1月1日までは、3,000 kWhを送電し4,000 kWhを購入した世帯は、差の1,000 kWh分を支払います。この制度は法律により2027年1月1日に終了します。「Wet beëindiging salderingsregeling」（法案36611）は、2024年11月14日に下院、2024年12月17日に上院で可決されました。',
           '**2027年1月1日以降、正味で余剰がある世帯は、小売事業者から「合理的な対価」（redelijke vergoeding）を受け取る権利があります。** 法律は具体的な価格を定めていません。規制当局ACMの消費者向けサイトによると、2030年1月1日までは、エネルギー税とVATを除く電気料金の50％以上でなければなりません。ACMは対価が合理的かどうかを監督します。この下限は2030年までと定められているため、契約の締結・更新時には、その時点で有効なルールを確認してください。',
         ],
       },
@@ -827,6 +842,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**電力契約では、1 kWhあたりの売電対価、送電手数料（terugleverkosten）、2027年1月1日の切り替えの扱いという3点を確認してください。** ACMによると、送電手数料は定額の場合も送電量に応じた課金の場合もあり、送電電力の対価を上回ることがあります。',
           '**事業者は法定の終了日を延期できませんが、契約条件は引き続き重要な場合があります。** ACMは、契約自体の条件によって相殺の権利が残ることがあり、事業者は購入量と送電量を2026年12月31日までの期間と2027年1月1日以降の期間に分けなければならないと説明しています。ACMは、特に2027年をまたぐ契約について、オファーを慎重に比較するよう勧めています。オファーは頻繁に変わるため、このページでは事業者ごとの料金は挙げません。',
+        ],
+        callouts: [
+          { type: 'info', text: 'このページは一般的な情報であり、法的助言や金融上の助言ではありません。決める前にご自身の契約内容を確認し、供給事業者または資格のある専門家に相談してください。' },
         ],
       },
       batteryConnection: {
@@ -873,7 +891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '現在のオランダの制度はどのような仕組みですか？',
-            a: '系統から購入した電力と送電した電力が、エネルギー税とVATを含めて、請求期間にわたり1対1で相殺されます。3,000 kWhを送電し4,000 kWhを購入した世帯は、差の1,000 kWh分だけを支払います。',
+            a: '系統から購入した電力と送電した電力が、エネルギー税とVATを含めて、請求期間にわたり1対1で相殺されます。2027年1月1日までは、3,000 kWhを送電し4,000 kWhを購入した世帯は、差の1,000 kWh分だけを支払います。',
           },
           {
             q: '2027年1月1日以降は何に置き換わりますか？',
@@ -922,7 +940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: '살더링 종료의 영향을 받는 네덜란드 발코니 태양광 소유자 및 구매자',
     primaryTerm: '네덜란드 넷미터링 종료 2027',
     targetKeywords: ['살더링 2027', '네덜란드 넷미터링 발코니 태양광', '발코니 태양광 네덜란드 2027', 'terugleververgoeding 2027'],
-    leadAnswerBlock: '**네덜란드는 2027년 1월 1일에 1대1 넷미터링 제도(살더링)를 종료합니다.** 현재는 3,000 kWh를 역송하고 4,000 kWh를 사용한 가구가 차이인 1,000 kWh만큼만 요금을 냅니다. 2027년부터는 공급사가 역송한 1 kWh마다 "합리적인 보상"(redelijke vergoeding)을 지급합니다. 2030년 1월 1일까지는 에너지세와 부가세를 제외한 전기 가격의 50% 이상이어야 하며, 공급사는 계속 역송 수수료를 부과할 수 있습니다. 실제로는 직접 사용한 1 kWh는 소매 가격 전체만큼 절약되는 반면, 판매한 1 kWh의 수익은 훨씬 적습니다. 그래서 자가소비의 가치가 높아지고, 일부 가구에서는 배터리의 가치도 높아집니다.',
+    leadAnswerBlock: '**네덜란드는 2027년 1월 1일에 1대1 넷미터링 제도(살더링)를 종료합니다.** 2027년 1월 1일까지는 3,000 kWh를 역송하고 4,000 kWh를 사용한 가구가 차이인 1,000 kWh만큼만 요금을 냅니다. 2027년부터는 공급사가 역송한 1 kWh마다 "합리적인 보상"(redelijke vergoeding)을 지급합니다. 2030년 1월 1일까지는 에너지세와 부가세를 제외한 전기 가격의 50% 이상이어야 하며, 공급사는 계속 역송 수수료를 부과할 수 있습니다. 실제로는 직접 사용한 1 kWh는 소매 가격 전체만큼 절약되는 반면, 판매한 1 kWh의 수익은 훨씬 적습니다. 그래서 자가소비의 가치가 높아지고, 일부 가구에서는 배터리의 가치도 높아집니다.',
     quickAnswerTop: {
       ko: {
         question: '2027년에 발코니 태양광의 넷미터링이 종료됩니까?',
@@ -952,7 +970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '네덜란드는 2027년 1월 1일에 살더링(1대1 넷미터링)을 종료합니다. 이 법은 2024년 11월 14일 하원, 2024년 12월 17일 상원을 통과했습니다.',
-          '현재는 역송량과 사용량이 상계됩니다. 3,000 kWh를 역송하고 4,000 kWh를 사용하면 1,000 kWh만큼 요금을 냅니다.',
+          '2027년 1월 1일까지는 역송량과 사용량이 상계됩니다. 3,000 kWh를 역송하고 4,000 kWh를 사용하면 1,000 kWh만큼 요금을 냅니다.',
           '2027년부터 공급사는 역송 전력에 "합리적인 보상"을 지급해야 합니다. 네덜란드 규제 기관 ACM에 따르면 2030년 1월 1일까지는 에너지세와 부가세를 제외한 가격의 50% 이상이어야 합니다.',
           '역송 수수료는 계속 허용되며 역송 전력의 보상보다 클 수 있습니다. ACM은 순액이 마이너스인 보상도 요금이 불합리해지지 않는 한 그 자체로는 금지되지 않는다고 밝혔습니다.',
           '이는 네덜란드만의 변경입니다. 독일 등 다른 나라의 발코니 태양광 규정은 바뀌지 않습니다.',
@@ -962,7 +980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'current-scheme',
         title: '종료되는 제도와 그 이후의 방식',
         content: [
-          '**살더링에서는 계통에서 가져온 전력과 계통으로 보낸 전력이 에너지세와 부가세를 포함해 1대1로 상계됩니다.** 3,000 kWh를 역송하고 4,000 kWh를 사용한 가구는 차이인 1,000 kWh만큼 요금을 냅니다. 이 제도는 법에 따라 2027년 1월 1일에 종료됩니다. 「Wet beëindiging salderingsregeling」(법안 36611)은 2024년 11월 14일 하원, 2024년 12월 17일 상원을 통과했습니다.',
+          '**살더링에서는 계통에서 가져온 전력과 계통으로 보낸 전력이 에너지세와 부가세를 포함해 1대1로 상계됩니다.** 2027년 1월 1일까지는 3,000 kWh를 역송하고 4,000 kWh를 사용한 가구는 차이인 1,000 kWh만큼 요금을 냅니다. 이 제도는 법에 따라 2027년 1월 1일에 종료됩니다. 「Wet beëindiging salderingsregeling」(법안 36611)은 2024년 11월 14일 하원, 2024년 12월 17일 상원을 통과했습니다.',
           '**2027년 1월 1일부터 순잉여가 있는 가구는 공급사로부터 "합리적인 보상"(redelijke vergoeding)을 받을 권리가 있습니다.** 법은 고정 가격을 정하지 않습니다. 규제 기관 ACM의 소비자 사이트에 따르면 2030년 1월 1일까지는 에너지세와 부가세를 제외한 전기 가격의 50% 이상이어야 합니다. ACM은 보상이 합리적인지 감독합니다. 이 하한은 2030년까지만 규정되어 있으므로, 계약을 체결하거나 갱신할 때 그 시점에 유효한 규정을 확인하십시오.',
         ],
       },
@@ -972,6 +990,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**에너지 계약에서 세 가지를 확인하십시오. kWh당 역송 보상, 역송 수수료(terugleverkosten), 그리고 2027년 1월 1일 전환을 계약이 어떻게 다루는지입니다.** ACM은 역송 수수료가 정액일 수도 있고 역송 kWh당 요금일 수도 있으며, 때로는 역송 전력의 보상보다 클 수 있다고 설명합니다.',
           '**공급사는 법정 종료일을 연기할 수 없지만, 계약 조건은 여전히 중요할 수 있습니다.** ACM은 계약 자체의 조건에 따라 상계 권리가 남을 수 있으며, 공급사는 사용량과 역송량을 2026년 12월 31일까지의 기간과 2027년 1월 1일 이후의 기간으로 나누어야 한다고 밝혔습니다. ACM은 특히 2027년을 넘기는 계약의 제안을 신중히 비교하라고 권고합니다. 제안은 자주 바뀌므로 이 글에서는 공급사별 요금을 인용하지 않습니다.',
+        ],
+        callouts: [
+          { type: 'info', text: '이 페이지는 일반 정보이며 법률 또는 재정 자문이 아닙니다. 결정하기 전에 본인의 계약서를 확인하고 공급사 또는 자격을 갖춘 전문가에게 문의하십시오.' },
         ],
       },
       batteryConnection: {
@@ -1018,7 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '현재 네덜란드의 제도는 어떻게 작동합니까?',
-            a: '계통에서 가져온 전력과 계통으로 보낸 전력이 에너지세와 부가세를 포함해 청구 기간 동안 1대1로 상계됩니다. 3,000 kWh를 역송하고 4,000 kWh를 사용한 가구는 차이인 1,000 kWh만큼만 요금을 냅니다.',
+            a: '계통에서 가져온 전력과 계통으로 보낸 전력이 에너지세와 부가세를 포함해 청구 기간 동안 1대1로 상계됩니다. 2027년 1월 1일까지는 3,000 kWh를 역송하고 4,000 kWh를 사용한 가구는 차이인 1,000 kWh만큼만 요금을 냅니다.',
           },
           {
             q: '2027년 1월 1일 이후에는 무엇이 대체합니까?',
@@ -1072,7 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'energia solar de varanda países baixos 2027',
       'terugleververgoeding 2027',
     ],
-    leadAnswerBlock: '**Os Países Baixos encerram a compensação 1:1 (saldering) em 1º de janeiro de 2027.** Hoje, uma casa que injeta 3.000 kWh e consome 4.000 kWh paga apenas a diferença de 1.000 kWh. A partir de 2027, o fornecedor passa a pagar uma "remuneração razoável" (redelijke vergoeding) por cada kWh injetado: até 1º de janeiro de 2030, ela deve ser de pelo menos 50% do preço da eletricidade sem imposto de energia e IVA, e os fornecedores ainda podem cobrar taxas de injeção. Na prática, um kWh que você mesmo usa economiza o preço de varejo completo, enquanto um kWh exportado rende bem menos: o autoconsumo ganha valor e, para algumas famílias, a bateria também.',
+    leadAnswerBlock: '**Os Países Baixos encerram a compensação 1:1 (saldering) em 1º de janeiro de 2027.** Até 1º de janeiro de 2027, uma casa que injeta 3.000 kWh e consome 4.000 kWh paga apenas a diferença de 1.000 kWh. A partir de 2027, o fornecedor passa a pagar uma "remuneração razoável" (redelijke vergoeding) por cada kWh injetado: até 1º de janeiro de 2030, ela deve ser de pelo menos 50% do preço da eletricidade sem imposto de energia e IVA, e os fornecedores ainda podem cobrar taxas de injeção. Na prática, um kWh que você mesmo usa economiza o preço de varejo completo, enquanto um kWh exportado rende bem menos: o autoconsumo ganha valor e, para algumas famílias, a bateria também.',
     quickAnswerTop: {
       pt: {
         question: 'O net metering termina para a energia solar de varanda em 2027?',
@@ -1102,7 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           'Os Países Baixos encerram o saldering (compensação 1:1) em 1º de janeiro de 2027; a lei foi aprovada pela Tweede Kamer em 14 de novembro de 2024 e pela Eerste Kamer em 17 de dezembro de 2024.',
-          'Hoje, a eletricidade injetada e a consumida são compensadas: injetar 3.000 kWh e consumir 4.000 kWh significa pagar 1.000 kWh.',
+          'Até 1º de janeiro de 2027, a eletricidade injetada e a consumida são compensadas: injetar 3.000 kWh e consumir 4.000 kWh significa pagar 1.000 kWh.',
           'A partir de 2027, os fornecedores devem uma "remuneração razoável" pela energia injetada. Até 1º de janeiro de 2030, ela deve ser de pelo menos 50% do preço sem imposto de energia e IVA, segundo o regulador holandês ACM.',
           'As taxas de injeção continuam permitidas e podem superar o pagamento pela energia injetada. A ACM afirmou que uma remuneração líquida negativa não é proibida em si, a menos que leve a tarifas irrazoáveis.',
           'Esta é uma mudança exclusivamente holandesa. Ela não altera as regras do solar de varanda na Alemanha nem em outros países.',
@@ -1112,7 +1133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'current-scheme',
         title: 'O esquema que termina e o que o substitui',
         content: [
-          '**No saldering, a eletricidade retirada da rede e a injetada nela são compensadas 1:1, incluindo imposto de energia e IVA.** Uma casa que injeta 3.000 kWh e consome 4.000 kWh paga a diferença de 1.000 kWh. O esquema termina por lei em 1º de janeiro de 2027. A Wet beëindiging salderingsregeling (projeto de lei 36611) foi aprovada pela Tweede Kamer em 14 de novembro de 2024 e pela Eerste Kamer em 17 de dezembro de 2024.',
+          '**No saldering, a eletricidade retirada da rede e a injetada nela são compensadas 1:1, incluindo imposto de energia e IVA.** Até 1º de janeiro de 2027, uma casa que injeta 3.000 kWh e consome 4.000 kWh paga a diferença de 1.000 kWh. O esquema termina por lei em 1º de janeiro de 2027. A Wet beëindiging salderingsregeling (projeto de lei 36611) foi aprovada pela Tweede Kamer em 14 de novembro de 2024 e pela Eerste Kamer em 17 de dezembro de 2024.',
           '**A partir de 1º de janeiro de 2027, as famílias com excedente líquido têm direito a uma "remuneração razoável" (redelijke vergoeding) de seu fornecedor.** A lei não fixa um preço. Segundo o site para consumidores do regulador ACM, a remuneração deve ser de pelo menos 50% do preço pago pela eletricidade sem imposto de energia e IVA até 1º de janeiro de 2030. A ACM fiscaliza se a remuneração é razoável. Como o piso está previsto só até 2030, confira as regras em vigor quando assinar ou renovar um contrato.',
         ],
       },
@@ -1122,6 +1143,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Confira três itens no seu contrato de energia: o pagamento por kWh injetado, a taxa de injeção (terugleverkosten) e como o contrato trata a virada de 1º de janeiro de 2027.** A ACM explica que as taxas de injeção podem ser um valor fixo ou uma cobrança por kWh injetado, e que às vezes são maiores que a remuneração pela energia injetada.',
           '**Os fornecedores não podem adiar a data legal de término, mas as condições do seu contrato ainda podem importar.** A ACM afirma que um contrato pode continuar concedendo direito à compensação pelos seus próprios termos, e que o fornecedor deve dividir seu consumo e sua injeção no período até 31 de dezembro de 2026 e no período a partir de 1º de janeiro de 2027. A ACM recomenda comparar as ofertas com cuidado, especialmente contratos que vão além de 2027. Não citamos tarifas de fornecedores aqui porque as ofertas mudam com frequência.',
+        ],
+        callouts: [
+          { type: 'info', text: 'Esta página traz informações gerais, não aconselhamento jurídico ou financeiro. Confira o seu contrato e consulte seu fornecedor ou um consultor qualificado antes de decidir.' },
         ],
       },
       batteryConnection: {
@@ -1168,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Como funciona o esquema holandês atual?',
-            a: 'A eletricidade retirada da rede e a injetada são compensadas 1:1 no período de faturamento, incluindo imposto de energia e IVA. Uma casa que injeta 3.000 kWh e consome 4.000 kWh paga apenas a diferença de 1.000 kWh.',
+            a: 'A eletricidade retirada da rede e a injetada são compensadas 1:1 no período de faturamento, incluindo imposto de energia e IVA. Até 1º de janeiro de 2027, uma casa que injeta 3.000 kWh e consome 4.000 kWh paga apenas a diferença de 1.000 kWh.',
           },
           {
             q: 'O que substitui o net metering depois de 1º de janeiro de 2027?',
@@ -1217,7 +1241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: '受saldering制度终止影响的荷兰阳台光伏业主和购买者',
     primaryTerm: '荷兰净计量终止 2027',
     targetKeywords: ['2027年荷兰净计量政策', '荷兰阳台光伏净计量', '荷兰阳台光伏 2027', 'terugleververgoeding 2027'],
-    leadAnswerBlock: '**荷兰将于2027年1月1日终止1:1净计量制度（saldering）。** 目前，上网3,000 kWh、用电4,000 kWh的家庭，只需为1,000 kWh的差额付费。自2027年起，供电商改为为每度上网电量支付“合理补偿”（redelijke vergoeding）：到2030年1月1日之前，补偿不得低于不含能源税和增值税的电价的50%，供电商仍可收取上网费用。实际效果是：自己用掉的每度电可节省完整的零售电价，而卖出的每度电收入要低得多，因此自发自用的价值上升，对部分家庭而言，电池的价值也随之上升。',
+    leadAnswerBlock: '**荷兰将于2027年1月1日终止1:1净计量制度（saldering）。** 截至2027年1月1日，上网3,000 kWh、用电4,000 kWh的家庭，只需为1,000 kWh的差额付费。自2027年起，供电商改为为每度上网电量支付“合理补偿”（redelijke vergoeding）：到2030年1月1日之前，补偿不得低于不含能源税和增值税的电价的50%，供电商仍可收取上网费用。实际效果是：自己用掉的每度电可节省完整的零售电价，而卖出的每度电收入要低得多，因此自发自用的价值上升，对部分家庭而言，电池的价值也随之上升。',
     quickAnswerTop: {
       zh: {
         question: '2027年阳台光伏的净计量政策会终止吗？',
@@ -1247,7 +1271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '荷兰将于2027年1月1日终止saldering（1:1净计量）；该法律于2024年11月14日通过下议院，2024年12月17日通过上议院。',
-          '目前，上网电量与用电量相互抵扣：上网3,000 kWh、用电4,000 kWh，只需支付1,000 kWh。',
+          '截至2027年1月1日，上网电量与用电量相互抵扣：上网3,000 kWh、用电4,000 kWh，只需支付1,000 kWh。',
           '自2027年起，供电商须为上网电力支付“合理补偿”。据荷兰监管机构ACM，到2030年1月1日之前不得低于不含能源税和增值税价格的50%。',
           '上网费用仍然允许收取，且可能高于上网电力的补偿。ACM表示，净额为负的补偿本身并不被禁止，只要不导致不合理的电价。',
           '这仅是荷兰的变化，不改变德国或其他国家的阳台光伏规则。',
@@ -1257,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'current-scheme',
         title: '即将终止的制度与接替方案',
         content: [
-          '**在saldering制度下，从电网取用的电量与回送电网的电量按1:1抵扣，含能源税和增值税。** 上网3,000 kWh、用电4,000 kWh的家庭，为1,000 kWh的差额付费。该制度依法于2027年1月1日终止。《Wet beëindiging salderingsregeling》（法案36611）于2024年11月14日通过下议院，2024年12月17日通过上议院。',
+          '**在saldering制度下，从电网取用的电量与回送电网的电量按1:1抵扣，含能源税和增值税。** 截至2027年1月1日，上网3,000 kWh、用电4,000 kWh的家庭，为1,000 kWh的差额付费。该制度依法于2027年1月1日终止。《Wet beëindiging salderingsregeling》（法案36611）于2024年11月14日通过下议院，2024年12月17日通过上议院。',
           '**自2027年1月1日起，净有盈余的家庭有权从供电商获得“合理补偿”（redelijke vergoeding）。** 法律未规定固定价格。根据监管机构ACM的消费者网站，到2030年1月1日之前，补偿不得低于所付电价（不含能源税和增值税）的50%。ACM负责监督补偿是否合理。由于该下限只规定到2030年，签订或续签合同时请核实届时有效的规则。',
         ],
       },
@@ -1267,6 +1291,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**请在能源合同中核对三项：每度电的上网补偿、上网费用（terugleverkosten），以及合同如何处理2027年1月1日的切换。** ACM说明，上网费用可以是固定金额，也可以按上网电量收费，有时会高于上网电力的补偿。',
           '**供电商不能推迟法定的终止日期，但合同条款仍可能起作用。** ACM指出，合同按其自身条款仍可能赋予抵扣权利，供电商必须将您的用电和上网划分为截至2026年12月31日和自2027年1月1日起两个期间。ACM建议仔细比较各类报价，尤其是跨越2027年的合同。报价变化频繁，本页不引用具体供电商的价格。',
+        ],
+        callouts: [
+          { type: 'info', text: '本页面提供的是一般性信息，不构成法律或财务建议。做决定前，请核对您自己的合同，并咨询供电商或具备资质的专业人士。' },
         ],
       },
       batteryConnection: {
@@ -1308,7 +1335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           { q: '荷兰的净计量政策何时终止？', a: '2027年1月1日。《Wet beëindiging salderingsregeling》于2024年11月14日通过下议院，2024年12月17日通过上议院。在此之前，现行抵扣制度继续有效。', },
-          { q: '荷兰现行的净计量制度如何运作？', a: '从电网取用的电量与回送电网的电量在结算期内按1:1抵扣，含能源税和增值税。上网3,000 kWh、用电4,000 kWh的家庭，只需为1,000 kWh的差额付费。', },
+          { q: '荷兰现行的净计量制度如何运作？', a: '从电网取用的电量与回送电网的电量在结算期内按1:1抵扣，含能源税和增值税。截至2027年1月1日，上网3,000 kWh、用电4,000 kWh的家庭，只需为1,000 kWh的差额付费。', },
           { q: '2027年1月1日之后用什么取代净计量？', a: '供电商须为净有盈余的家庭上网电力支付“合理补偿”。据ACM，到2030年1月1日之前，补偿不得低于所付电价（不含能源税和增值税）的50%。法律未规定固定价格，因此实际费率取决于您的供电商。', },
           { q: '供电商仍可以收取上网费用吗？', a: '可以。据ACM，上网费用（terugleverkosten）仍然可行，可以是固定金额或按上网电量收取，有时会高于补偿。比较合同时，请把费用和补偿放在一起看。', },
           { q: '跨越2027年1月1日的合同会怎样？', a: '供电商不能推迟法定终止日期，但合同条款仍可能赋予您抵扣权利。据ACM，供电商必须将您的用电和上网划分为截至2026年12月31日和自2027年1月1日起两个期间。', },

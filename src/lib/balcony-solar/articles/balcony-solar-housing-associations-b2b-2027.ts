@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Balcony Solar for Landlords and Housing Associations in 2027',
     seoTitle: 'Balcony Solar for Landlords and Housing Associations',
     intro: 'In Germany, tenants and condominium owners have had a legal claim to plug-in solar devices ("Steckersolargeräte") since October 17, 2024, which moves the landlord question from "may I?" to "how, and on what terms?". This page explains what the law says, what landlords and owner communities may require, how a large landlord (Vonovia) has handled requests, and what the EU building directive does and does not demand. It is general information about Germany, not legal advice.',
-    metaDescription: 'Since October 2024, German tenants and condo owners can claim a plug-in solar device. What landlords may require, the Vonovia dispute and the EU EPBD.',
+    metaDescription: 'Since October 2024, German tenants and condo owners can claim a plug-in solar device. What landlords may require, and what the EU EPBD says.',
     publishDate: '2026-07-18',
     dateModified: '2026-10-19',
     readTime: '5 min read',
@@ -25,7 +25,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'balcony solar landlords',
       'balkonkraftwerk vermieter',
       'balcony solar tenant rights germany',
-      'vonovia balcony solar',
     ],
     leadAnswerBlock: '**Since October 17, 2024, German tenants can claim landlord consent for a plug-in solar device under § 554 BGB, and condominium owners have a comparable claim under § 20 (2) no. 5 WEG; consent can be refused only if the measure is unreasonable for the landlord even after weighing the tenant\'s interests.** Landlords and owner communities keep a say in how the device is mounted, but requirements may not hollow out the claim. Large landlords decide case by case: Vonovia agreed "without reservation" to an Aachen tenant\'s installation in January 2026 after a lawsuit supported by Deutsche Umwelthilfe. The EU building directive (EPBD) does not oblige landlords to install plug-in solar in existing rentals, and we found no primary source for reports of landlord programs with 50,000+ units.',
     quickAnswerTop: {
@@ -36,7 +35,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Tenants: § 554 (1) BGB; condominium owners: § 20 (2) no. 5 WEG; both in force since October 17, 2024',
           'Refusal requires that the measure be unreasonable for the landlord even after weighing the tenant\'s interests; this page makes no claim about any individual case',
           'Landlords and owner communities can set rules on mounting; Haufe notes that such requirements must not be excessive',
-          'Vonovia agreed to an Aachen tenant\'s installation without reservation in January 2026 after a lawsuit backed by Deutsche Umwelthilfe; its technical guideline reportedly bans batteries, which is contested',
+          'Vonovia agreed to an Aachen tenant\'s installation without reservation in January 2026 after a lawsuit backed by Deutsche Umwelthilfe. A 17 July 2026 report by drweb.de, citing inside digital, quotes Vonovia\'s technical guideline as prohibiting battery storage on balcony systems on fire-protection grounds and says Vonovia confirmed the document is genuine; Deutsche Umwelthilfe and Verbraucherzentrale NRW call a blanket ban problematic',
           'The EPBD (Directive (EU) 2024/1275) makes solar the norm for new buildings and certain existing non-residential buildings; it does not require landlords to install plug-in solar',
         ],
         updatedDate: '2026-10-19',
@@ -61,7 +60,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Since October 17, 2024, § 554 (1) BGB gives tenants, and § 20 (2) no. 5 WEG gives condominium owners, a claim to measures serving electricity generation by plug-in solar devices.',
           'A tenant\'s claim fails only if the measure is unreasonable for the landlord even after weighing the tenant\'s interests (§ 554 BGB). Agreements that disadvantage the tenant and deviate from the rule are void.',
           'Landlords and owner communities keep a say in how a device is mounted, but requirements must not be excessive. Whether a community resolution is formally required is not settled in the sources we checked; ask your administrator.',
-          'Vonovia conceded an Aachen tenant\'s installation without reservation in January 2026; a July 2026 report says its guideline bans batteries on balcony systems, which consumer groups call problematic.',
+          'Vonovia conceded an Aachen tenant\'s installation without reservation in January 2026. A 17 July 2026 report by drweb.de, citing inside digital, quotes Vonovia\'s technical guideline as prohibiting battery storage on balcony systems on fire-protection grounds and says Vonovia confirmed the document is genuine; Deutsche Umwelthilfe and Verbraucherzentrale NRW call a blanket ban problematic.',
           'The EU building directive does not require landlords to install plug-in solar, and we could not verify reports of landlord programs with 50,000+ units.',
         ],
       },
@@ -86,7 +85,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'How Large Landlords Are Handling Requests',
         content: [
           '**Large landlords decide case by case, and the practice is contested.** In January 2026 Vonovia agreed "without reservation" to an Aachen tenant\'s balcony system after a lawsuit supported by Deutsche Umwelthilfe (DUH); according to the DUH, Vonovia had demanded wind-load calculations, structural proofs and compliance with a vertical-glazing standard. The DUH wants Vonovia to revise its installation rules.',
-          '**A July 2026 report says Vonovia\'s technical guideline bans batteries and similar components on balcony systems, citing fire and explosion protection.** The same report says the DUH and Verbraucherzentrale NRW consider a blanket ban problematic. These are positions reported by third parties, not court rulings on storage; see [Balcony Solar Batteries in 2027](/balcony-solar/balcony-solar-battery-storage-standard-2027) for the storage rules.',
+          '**A 17 July 2026 report by drweb.de, citing inside digital, quotes Vonovia\'s technical guideline as prohibiting battery storage on balcony systems on fire-protection grounds and says Vonovia confirmed the document is genuine; Deutsche Umwelthilfe and Verbraucherzentrale NRW call a blanket ban problematic.** These are positions reported by third parties, not court rulings on storage; see [Balcony Solar Batteries in 2027](/balcony-solar/balcony-solar-battery-storage-standard-2027) for the storage rules.',
         ],
       },
       landlordRules: {
@@ -163,8 +162,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '§ 20 (2) no. 5 WEG gives each owner a claim to appropriate structural changes for plug-in solar devices, and the community decides on the implementation within proper administration. The sources we checked do not settle whether a resolution is still formally required, so ask your administrator.',
           },
           {
-            q: 'Are Vonovia and LEG installing 50,000 balcony solar systems?',
-            a: 'We found no primary source for that. Reported unit targets are unverified. What is documented is that Vonovia agreed to an Aachen tenant\'s installation without reservation in January 2026 after a lawsuit supported by Deutsche Umwelthilfe.',
+            q: 'Do large German landlords run balcony solar programs?',
+            a: 'We found no primary source for reports that Vonovia and LEG Immobilien run programs with combined targets above 50,000 plug-in units. Treat such figures as unverified. What is documented is that Vonovia agreed to an Aachen tenant\'s installation without reservation in January 2026 after a lawsuit supported by Deutsche Umwelthilfe.',
           },
           {
             q: 'Does the EU building directive require landlords to install balcony solar?',
@@ -172,7 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Can my landlord ban a battery with my balcony system?',
-            a: 'This is contested. A July 2026 report says Vonovia\'s guideline bans batteries, citing fire and explosion protection, while Deutsche Umwelthilfe and Verbraucherzentrale NRW call a blanket ban problematic. Whether § 554 BGB covers storage is disputed; ask in writing and seek advice.',
+            a: 'This is contested. A 17 July 2026 report by drweb.de, citing inside digital, quotes Vonovia\'s technical guideline as prohibiting battery storage on balcony systems on fire-protection grounds and says Vonovia confirmed the document is genuine; Deutsche Umwelthilfe and Verbraucherzentrale NRW call a blanket ban problematic. Whether § 554 BGB covers storage is disputed. Ask in writing and seek advice; this is not legal advice.',
           },
           {
             q: 'Which limits apply to a plug-in solar device in Germany?',
@@ -198,7 +197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'الطاقة الشمسية للشرفة لأصحاب العقارات وجمعيات الإسكان في 2027',
     seoTitle: 'الطاقة الشمسية للشرفة لأصحاب العقارات وجمعيات الإسكان',
     intro: 'في ألمانيا، يتمتع المستأجرون وملّاك الوحدات بحق قانوني في الأجهزة الشمسية القابلة للتوصيل بالمقبس («Steckersolargeräte») منذ 17 أكتوبر 2024، مما ينقل سؤال المؤجّر من «هل يجوز لي؟» إلى «كيف وبأي شروط؟». تشرح هذه الصفحة ما ينص عليه القانون، وما يجوز للمؤجّرين وجمعيات الملّاك اشتراطه، وكيف تعاملت شركة عقارية كبيرة (Vonovia) مع الطلبات، وما تتطلبه توجيهات الاتحاد الأوروبي للمباني وما لا تتطلبه. هذه معلومات عامة عن ألمانيا وليست استشارة قانونية.',
-    metaDescription: 'منذ أكتوبر 2024 يحق للمستأجرين وملّاك الوحدات في ألمانيا المطالبة بجهاز شمسي قابل للتوصيل بالمقبس. ما يجوز للمؤجّر اشتراطه، ونزاع Vonovia، وما تقوله EPBD.',
+    metaDescription: 'منذ أكتوبر 2024 يحق للمستأجرين وملّاك الوحدات في ألمانيا المطالبة بجهاز شمسي قابل للتوصيل بالمقبس. ما يجوز للمؤجّر اشتراطه، وما تقوله EPBD.',
     publishDate: '2026-07-18',
     dateModified: '2026-10-19',
     readTime: '5 دقائق للقراءة',
@@ -209,7 +208,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'طاقة شمسية للشرفة لأصحاب العقارات',
       'حقوق المستأجر الطاقة الشمسية للشرفة ألمانيا',
       'طاقة شمسية للشرفة جمعيات الإسكان',
-      'Vonovia طاقة شمسية للشرفة',
     ],
     leadAnswerBlock: '**منذ 17 أكتوبر 2024 يستطيع المستأجرون في ألمانيا المطالبة بموافقة المؤجّر على جهاز شمسي قابل للتوصيل بالمقبس بموجب § 554 BGB، ولملّاك الوحدات حق مماثل بموجب § 20 (2) رقم 5 WEG؛ ولا يجوز رفض الموافقة إلا إذا كان الإجراء غير معقول للمؤجّر حتى بعد موازنته بمصالح المستأجر.** يحتفظ المؤجّرون وجمعيات الملّاك بحق إبداء الرأي في طريقة تركيب الجهاز، لكن لا يجوز أن تُفرغ اشتراطاتهم الحق من مضمونه. وتقرر الشركات العقارية الكبيرة كل حالة على حدة: وافقت Vonovia «دون تحفظ» على تركيب مستأجر في آخن في يناير 2026 بعد دعوى قضائية دعمتها Deutsche Umwelthilfe. ولا تُلزم توجيهات الاتحاد الأوروبي للمباني (EPBD) المؤجّرين بتركيب أجهزة شمسية قابلة للتوصيل بالمقبس في المساكن المؤجرة القائمة، ولم نعثر على مصدر أولي للتقارير عن برامج مؤجّرين تتجاوز 50,000 وحدة.',
     quickAnswerTop: {
@@ -220,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'المستأجرون: § 554 (1) BGB؛ ملّاك الوحدات: § 20 (2) رقم 5 WEG؛ وكلاهما ساريان منذ 17 أكتوبر 2024',
           'يشترط الرفض أن يكون الإجراء غير معقول للمؤجّر حتى بعد موازنته بمصالح المستأجر؛ ولا تقدّم هذه الصفحة أي ادعاء بشأن حالة فردية',
           'يستطيع المؤجّرون وجمعيات الملّاك وضع قواعد للتركيب؛ وتشير Haufe إلى أن هذه الاشتراطات يجب ألا تكون مفرطة',
-          'وافقت Vonovia دون تحفظ على تركيب مستأجر في آخن في يناير 2026 بعد دعوى دعمتها Deutsche Umwelthilfe؛ وتفيد التقارير بأن إرشاداتها الفنية تحظر البطاريات، وهو أمر محل خلاف',
+          'وافقت Vonovia دون تحفظ على تركيب مستأجر في آخن في يناير 2026 بعد دعوى دعمتها Deutsche Umwelthilfe. ذكر تقرير نشره drweb.de في 17 يوليو 2026، نقلًا عن inside digital، أن الإرشادات الفنية لشركة Vonovia تحظر تخزين البطاريات على منشآت الشرفات لأسباب تتعلق بالحماية من الحريق، وأفاد بأن Vonovia أكدت صحة الوثيقة؛ وترى Deutsche Umwelthilfe وVerbraucherzentrale NRW أن الحظر الشامل إشكالي',
           'تجعل EPBD (التوجيه (EU) 2024/1275) الطاقة الشمسية القاعدة في المباني الجديدة وبعض المباني القائمة غير السكنية؛ ولا تُلزم المؤجّرين بتركيب أجهزة شمسية قابلة للتوصيل بالمقبس',
         ],
         updatedDate: '2026-10-19',
@@ -245,7 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'منذ 17 أكتوبر 2024 يمنح § 554 (1) BGB المستأجرين، و§ 20 (2) رقم 5 WEG ملّاك الوحدات، حقًا في إجراءات تخدم توليد الكهرباء بأجهزة شمسية قابلة للتوصيل بالمقبس.',
           'لا يسقط حق المستأجر إلا إذا كان الإجراء غير معقول للمؤجّر حتى بعد موازنته بمصالح المستأجر (§ 554 BGB). وأي اتفاق مخالف يضر بالمستأجر يكون باطلًا.',
           'يحتفظ المؤجّرون وجمعيات الملّاك بحق إبداء الرأي في طريقة التركيب، لكن يجب ألا تكون الاشتراطات مفرطة. أما هل لا يزال قرار الجمعية مطلوبًا شكليًا فلم تحسمه المصادر التي راجعناها؛ اسأل مدير العقار.',
-          'رضخت Vonovia دون تحفظ لتركيب مستأجر في آخن في يناير 2026؛ ويقول تقرير من يوليو 2026 إن إرشاداتها تحظر البطاريات على منشآت الشرفات، وتراه جمعيات المستهلكين إشكاليًا.',
+          'رضخت Vonovia دون تحفظ لتركيب مستأجر في آخن في يناير 2026. ذكر تقرير نشره drweb.de في 17 يوليو 2026، نقلًا عن inside digital، أن الإرشادات الفنية لشركة Vonovia تحظر تخزين البطاريات على منشآت الشرفات لأسباب تتعلق بالحماية من الحريق، وأفاد بأن Vonovia أكدت صحة الوثيقة؛ وترى Deutsche Umwelthilfe وVerbraucherzentrale NRW أن الحظر الشامل إشكالي.',
           'لا تُلزم توجيهات الاتحاد الأوروبي للمباني المؤجّرين بتركيب أجهزة شمسية قابلة للتوصيل بالمقبس، ولم نتمكن من التحقق من تقارير عن برامج مؤجّرين تتجاوز 50,000 وحدة.',
         ],
       },
@@ -270,7 +268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيف تتعامل الشركات العقارية الكبيرة مع الطلبات',
         content: [
           '**تقرر الشركات العقارية الكبيرة كل حالة على حدة، والممارسة محل خلاف.** في يناير 2026 وافقت Vonovia «دون تحفظ» على منشأة شرفة لمستأجر في آخن بعد دعوى قضائية دعمتها Deutsche Umwelthilfe (DUH)؛ ووفق DUH كانت Vonovia قد طالبت بحسابات حمل الرياح وإثباتات إنشائية والامتثال لمعيار الزجاج الرأسي. وتريد DUH أن تراجع Vonovia قواعد التركيب لديها.',
-          '**يفيد تقرير من يوليو 2026 بأن الإرشادات الفنية لشركة Vonovia تحظر البطاريات والمكونات المشابهة على منشآت الشرفات، مستندةً إلى الحماية من الحريق والانفجار.** ووفق التقرير نفسه، ترى DUH ومركز المستهلك في شمال الراين-وستفاليا (Verbraucherzentrale NRW) أن الحظر الشامل إشكالي. هذه مواقف ينقلها أطراف ثالثة، وليست أحكامًا قضائية بشأن التخزين؛ وللاطلاع على قواعد التخزين انظر [بطاريات الطاقة الشمسية للشرفة في 2027](/ar/balcony-solar/balcony-solar-battery-storage-standard-2027).',
+          '**ذكر تقرير نشره drweb.de في 17 يوليو 2026، نقلًا عن inside digital، أن الإرشادات الفنية لشركة Vonovia تحظر تخزين البطاريات على منشآت الشرفات لأسباب تتعلق بالحماية من الحريق، وأفاد بأن Vonovia أكدت صحة الوثيقة؛ وترى Deutsche Umwelthilfe وVerbraucherzentrale NRW أن الحظر الشامل إشكالي.** هذه مواقف ينقلها أطراف ثالثة، وليست أحكامًا قضائية بشأن التخزين؛ وللاطلاع على قواعد التخزين انظر [بطاريات الطاقة الشمسية للشرفة في 2027](/ar/balcony-solar/balcony-solar-battery-storage-standard-2027).',
         ],
       },
       landlordRules: {
@@ -347,8 +345,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'يمنح § 20 (2) رقم 5 WEG كل مالك حقًا في تغييرات إنشائية مناسبة للأجهزة الشمسية القابلة للتوصيل بالمقبس، وتقرر الجمعية التنفيذ ضمن الإدارة السليمة. ولم تحسم المصادر التي راجعناها ما إذا كان القرار لا يزال مطلوبًا شكليًا؛ اسأل مدير العقار.',
           },
           {
-            q: 'هل تركّب Vonovia وLEG نحو 50,000 منظومة طاقة شمسية للشرفة؟',
-            a: 'لم نعثر على مصدر أولي لذلك. أهداف الوحدات المتداولة غير مؤكدة. الموثَّق هو أن Vonovia وافقت دون تحفظ على تركيب مستأجر في آخن في يناير 2026 بعد دعوى دعمتها Deutsche Umwelthilfe.',
+            q: 'هل تدير شركات العقارات الألمانية الكبرى برامج للطاقة الشمسية للشرفة؟',
+            a: 'لم نعثر على مصدر أولي للتقارير التي تفيد بأن Vonovia وLEG Immobilien تنفذان برامج بأهداف مجمّعة تتجاوز 50,000 جهاز قابل للتوصيل بالمقبس. تعامل مع هذه الأرقام على أنها غير مؤكدة. الموثَّق هو أن Vonovia وافقت دون تحفظ على تركيب مستأجر في آخن في يناير 2026 بعد دعوى دعمتها Deutsche Umwelthilfe.',
           },
           {
             q: 'هل تُلزم توجيهات الاتحاد الأوروبي للمباني المؤجّرين بتركيب الطاقة الشمسية للشرفة؟',
@@ -356,7 +354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل يستطيع المؤجّر منع البطارية مع منظومة الشرفة الخاصة بي؟',
-            a: 'هذا موضع خلاف. يفيد تقرير من يوليو 2026 بأن إرشادات Vonovia تحظر البطاريات استنادًا إلى الحماية من الحريق والانفجار، بينما ترى Deutsche Umwelthilfe وVerbraucherzentrale NRW أن الحظر الشامل إشكالي. وهل يشمل § 554 BGB التخزين محل جدل؛ اسأل كتابيًا واستشر مختصًا.',
+            a: 'هذا موضع خلاف. ذكر تقرير نشره drweb.de في 17 يوليو 2026، نقلًا عن inside digital، أن الإرشادات الفنية لشركة Vonovia تحظر تخزين البطاريات على منشآت الشرفات لأسباب تتعلق بالحماية من الحريق، وأفاد بأن Vonovia أكدت صحة الوثيقة؛ وترى Deutsche Umwelthilfe وVerbraucherzentrale NRW أن الحظر الشامل إشكالي. وهل يشمل § 554 BGB التخزين محل جدل. اسأل كتابيًا واستشر مختصًا؛ وهذه ليست استشارة قانونية.',
           },
           {
             q: 'ما الحدود المطبقة على الجهاز الشمسي القابل للتوصيل بالمقبس في ألمانيا؟',
@@ -382,7 +380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Balkonsolar für Vermieter und Wohnungsgesellschaften 2027',
     seoTitle: 'Balkonsolar für Vermieter und Wohnungsgesellschaften',
     intro: 'In Deutschland haben Mieter und Wohnungseigentümer seit dem 17. Oktober 2024 einen gesetzlichen Anspruch auf Steckersolargeräte. Damit verschiebt sich die Vermieterfrage von „Darf ich?“ zu „Wie und zu welchen Bedingungen?“. Diese Seite erklärt, was das Gesetz sagt, was Vermieter und Eigentümergemeinschaften verlangen dürfen, wie ein großer Vermieter (Vonovia) mit Anfragen umgeht und was die EU-Gebäuderichtlinie fordert und was nicht. Es sind allgemeine Informationen zu Deutschland, keine Rechtsberatung.',
-    metaDescription: 'Seit Oktober 2024 haben Mieter und Eigentümer Anspruch auf ein Steckersolargerät. Was Vermieter verlangen dürfen, der Vonovia-Streit und was die EPBD sagt.',
+    metaDescription: 'Seit Oktober 2024 haben Mieter und Eigentümer Anspruch auf ein Steckersolargerät. Was Vermieter verlangen dürfen und was die EPBD sagt.',
     publishDate: '2026-07-18',
     dateModified: '2026-10-19',
     readTime: '5 Min. Lesezeit',
@@ -393,7 +391,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'balkonsolar vermieter',
       'balkonkraftwerk vermieter zustimmung',
       'balkonkraftwerk mieter recht',
-      'vonovia balkonkraftwerk',
     ],
     leadAnswerBlock: '**Seit dem 17. Oktober 2024 können Mieter in Deutschland nach § 554 BGB die Zustimmung des Vermieters zu einem Steckersolargerät verlangen, und Wohnungseigentümer haben nach § 20 Abs. 2 Nr. 5 WEG einen vergleichbaren Anspruch; verweigert werden darf die Zustimmung nur, wenn die Maßnahme dem Vermieter auch unter Würdigung der Interessen des Mieters nicht zugemutet werden kann.** Vermieter und Eigentümergemeinschaften behalten ein Mitspracherecht bei der Art der Anbringung, dürfen den Anspruch aber nicht aushöhlen. Große Vermieter entscheiden im Einzelfall: Vonovia stimmte im Januar 2026 nach einer von der Deutschen Umwelthilfe unterstützten Klage der Montage bei einem Aachener Mieter „vorbehaltlos“ zu. Die EU-Gebäuderichtlinie (EPBD) verpflichtet Vermieter nicht, Steckersolar in bestehenden Mietwohnungen zu installieren, und für Berichte über Vermieterprogramme mit mehr als 50.000 Einheiten haben wir keine Primärquelle gefunden.',
     quickAnswerTop: {
@@ -404,7 +401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mieter: § 554 Abs. 1 BGB; Wohnungseigentümer: § 20 Abs. 2 Nr. 5 WEG; beides in Kraft seit dem 17. Oktober 2024',
           'Eine Verweigerung setzt voraus, dass die Maßnahme dem Vermieter auch unter Würdigung der Interessen des Mieters nicht zumutbar ist; diese Seite trifft keine Aussage zu einem Einzelfall',
           'Vermieter und Eigentümergemeinschaften können Regeln zur Anbringung aufstellen; laut Haufe dürfen solche Vorgaben nicht überzogen sein',
-          'Vonovia stimmte im Januar 2026 nach einer von der Deutschen Umwelthilfe unterstützten Klage der Installation bei einem Aachener Mieter vorbehaltlos zu; die technische Richtlinie verbietet Berichten zufolge Batterien, was umstritten ist',
+          'Vonovia stimmte im Januar 2026 nach einer von der Deutschen Umwelthilfe unterstützten Klage der Installation bei einem Aachener Mieter vorbehaltlos zu. Ein Bericht von drweb.de vom 17. Juli 2026 zitiert unter Berufung auf inside digital die technische Richtlinie von Vonovia mit einem Verbot von Batteriespeichern an Balkonanlagen aus Brandschutzgründen und gibt an, Vonovia habe die Echtheit des Dokuments bestätigt; die Deutsche Umwelthilfe und die Verbraucherzentrale NRW halten ein pauschales Verbot für problematisch',
           'Die EPBD (Richtlinie (EU) 2024/1275) macht Solaranlagen zur Norm für Neubauten und bestimmte bestehende Nichtwohngebäude; Vermieter müssen kein Steckersolar installieren',
         ],
         updatedDate: '2026-10-19',
@@ -429,7 +426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Seit dem 17. Oktober 2024 gibt § 554 Abs. 1 BGB Mietern und § 20 Abs. 2 Nr. 5 WEG Wohnungseigentümern einen Anspruch auf Maßnahmen, die der Stromerzeugung durch Steckersolargeräte dienen.',
           'Der Anspruch des Mieters scheitert nur, wenn die Maßnahme dem Vermieter auch unter Würdigung der Interessen des Mieters nicht zugemutet werden kann (§ 554 BGB). Abweichende Vereinbarungen zum Nachteil des Mieters sind unwirksam.',
           'Vermieter und Eigentümergemeinschaften behalten ein Mitspracherecht bei der Anbringung, die Vorgaben dürfen aber nicht überzogen sein. Ob ein Gemeinschaftsbeschluss formal noch erforderlich ist, klären die von uns geprüften Quellen nicht; fragen Sie Ihre Verwaltung.',
-          'Vonovia gab im Januar 2026 der Installation eines Aachener Mieters vorbehaltlos nach; ein Bericht vom Juli 2026 besagt, die Richtlinie verbiete Batterien an Balkonanlagen, was Verbraucherverbände für problematisch halten.',
+          'Vonovia gab im Januar 2026 der Installation eines Aachener Mieters vorbehaltlos nach. Ein Bericht von drweb.de vom 17. Juli 2026 zitiert unter Berufung auf inside digital die technische Richtlinie von Vonovia mit einem Verbot von Batteriespeichern an Balkonanlagen aus Brandschutzgründen und gibt an, Vonovia habe die Echtheit des Dokuments bestätigt; die Deutsche Umwelthilfe und die Verbraucherzentrale NRW halten ein pauschales Verbot für problematisch.',
           'Die EU-Gebäuderichtlinie verpflichtet Vermieter nicht zu Steckersolar, und Berichte über Vermieterprogramme mit mehr als 50.000 Einheiten konnten wir nicht verifizieren.',
         ],
       },
@@ -454,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wie große Vermieter mit Anfragen umgehen',
         content: [
           '**Große Vermieter entscheiden im Einzelfall, und die Praxis ist umstritten.** Im Januar 2026 stimmte Vonovia nach einer von der Deutschen Umwelthilfe (DUH) unterstützten Klage dem Balkonkraftwerk eines Aachener Mieters „vorbehaltlos“ zu; laut DUH hatte Vonovia zuvor Windlastberechnungen, statische Nachweise und die Einhaltung einer Norm für vertikale Verglasung verlangt. Die DUH fordert, dass Vonovia seine Montageregeln überarbeitet.',
-          '**Ein Bericht vom Juli 2026 besagt, die technische Richtlinie von Vonovia verbiete Batterien und ähnliche Komponenten an Balkonanlagen und berufe sich auf Brand- und Explosionsschutz.** Laut demselben Bericht halten die DUH und die Verbraucherzentrale NRW ein pauschales Verbot für problematisch. Das sind von Dritten berichtete Positionen, keine Gerichtsurteile zu Speichern; zu den Speicherregeln siehe [Batteriespeicher für Balkonkraftwerke 2027](/de/balcony-solar/balcony-solar-battery-storage-standard-2027).',
+          '**Ein Bericht von drweb.de vom 17. Juli 2026 zitiert unter Berufung auf inside digital die technische Richtlinie von Vonovia mit einem Verbot von Batteriespeichern an Balkonanlagen aus Brandschutzgründen und gibt an, Vonovia habe die Echtheit des Dokuments bestätigt; die Deutsche Umwelthilfe und die Verbraucherzentrale NRW halten ein pauschales Verbot für problematisch.** Das sind von Dritten berichtete Positionen, keine Gerichtsurteile zu Speichern; zu den Speicherregeln siehe [Batteriespeicher für Balkonkraftwerke 2027](/de/balcony-solar/balcony-solar-battery-storage-standard-2027).',
         ],
       },
       landlordRules: {
@@ -531,8 +528,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '§ 20 Abs. 2 Nr. 5 WEG gibt jedem Eigentümer einen Anspruch auf angemessene bauliche Veränderungen für Steckersolargeräte, und die Gemeinschaft entscheidet über die Durchführung im Rahmen ordnungsmäßiger Verwaltung. Ob ein Beschluss formal noch erforderlich ist, klären die von uns geprüften Quellen nicht; fragen Sie Ihre Verwaltung.',
           },
           {
-            q: 'Installieren Vonovia und LEG 50.000 Balkonkraftwerke?',
-            a: 'Dafür haben wir keine Primärquelle gefunden. Berichtete Stückziele sind unbestätigt. Belegt ist, dass Vonovia im Januar 2026 nach einer von der Deutschen Umwelthilfe unterstützten Klage der Installation bei einem Aachener Mieter vorbehaltlos zustimmte.',
+            q: 'Betreiben große deutsche Vermieter Balkonkraftwerk-Programme?',
+            a: 'Für Berichte, Vonovia und LEG Immobilien betrieben Programme mit gemeinsamen Zielen von über 50.000 Steckersolargeräten, haben wir keine Primärquelle gefunden. Behandeln Sie solche Zahlen als unbestätigt. Belegt ist, dass Vonovia im Januar 2026 nach einer von der Deutschen Umwelthilfe unterstützten Klage der Installation bei einem Aachener Mieter vorbehaltlos zustimmte.',
           },
           {
             q: 'Verpflichtet die EU-Gebäuderichtlinie Vermieter zu Balkonsolar?',
@@ -540,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kann mein Vermieter eine Batterie an meinem Balkonkraftwerk verbieten?',
-            a: 'Das ist umstritten. Ein Bericht vom Juli 2026 besagt, die Vonovia-Richtlinie verbiete Batterien mit Verweis auf Brand- und Explosionsschutz, während die Deutsche Umwelthilfe und die Verbraucherzentrale NRW ein pauschales Verbot für problematisch halten. Ob § 554 BGB Speicher erfasst, ist strittig; fragen Sie schriftlich nach und holen Sie Rat ein.',
+            a: 'Das ist umstritten. Ein Bericht von drweb.de vom 17. Juli 2026 zitiert unter Berufung auf inside digital die technische Richtlinie von Vonovia mit einem Verbot von Batteriespeichern an Balkonanlagen aus Brandschutzgründen und gibt an, Vonovia habe die Echtheit des Dokuments bestätigt; die Deutsche Umwelthilfe und die Verbraucherzentrale NRW halten ein pauschales Verbot für problematisch. Ob § 554 BGB Speicher erfasst, ist strittig. Fragen Sie schriftlich nach und holen Sie Rat ein; dies ist keine Rechtsberatung.',
           },
           {
             q: 'Welche Grenzen gelten für ein Steckersolargerät in Deutschland?',
@@ -577,7 +574,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'energía solar de balcón propietarios',
       'balkonkraftwerk arrendador consentimiento',
       'energía solar de balcón derechos de inquilinos alemania',
-      'vonovia energía solar de balcón',
     ],
     leadAnswerBlock: '**Desde el 17 de octubre de 2024, los inquilinos alemanes pueden reclamar el consentimiento del arrendador para un dispositivo solar plug-in según el § 554 BGB, y los copropietarios tienen un derecho comparable según el § 20 apdo. 2 n.º 5 WEG; el consentimiento solo puede denegarse si la medida resulta irrazonable para el arrendador incluso valorando los intereses del inquilino.** Los arrendadores y las comunidades de propietarios conservan voz en cómo se monta el dispositivo, pero sus exigencias no pueden vaciar el derecho. Los grandes arrendadores deciden caso por caso: Vonovia aceptó «sin reservas» la instalación de un inquilino de Aquisgrán en enero de 2026 tras una demanda apoyada por la Deutsche Umwelthilfe. La directiva europea de edificios (EPBD) no obliga a los arrendadores a instalar solar plug-in en viviendas de alquiler existentes, y no encontramos fuente primaria para los informes sobre programas de arrendadores con más de 50.000 unidades.',
     quickAnswerTop: {
@@ -588,7 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Inquilinos: § 554 apdo. 1 BGB; copropietarios: § 20 apdo. 2 n.º 5 WEG; ambos en vigor desde el 17 de octubre de 2024',
           'La denegación exige que la medida sea irrazonable para el arrendador incluso valorando los intereses del inquilino; esta página no afirma nada sobre ningún caso concreto',
           'Los arrendadores y las comunidades pueden fijar reglas de montaje; según Haufe, esos requisitos no deben ser excesivos',
-          'Vonovia aceptó sin reservas la instalación de un inquilino de Aquisgrán en enero de 2026 tras una demanda respaldada por la Deutsche Umwelthilfe; su directriz técnica prohibiría las baterías, algo que se discute',
+          'Vonovia aceptó sin reservas la instalación de un inquilino de Aquisgrán en enero de 2026 tras una demanda respaldada por la Deutsche Umwelthilfe. Un informe de drweb.de del 17 de julio de 2026, que cita a inside digital, recoge la directriz técnica de Vonovia como una prohibición del almacenamiento con baterías en instalaciones de balcón por motivos de protección contra incendios y señala que Vonovia confirmó la autenticidad del documento; la Deutsche Umwelthilfe y la Verbraucherzentrale NRW consideran problemática una prohibición general',
           'La EPBD (Directiva (UE) 2024/1275) convierte la energía solar en la norma para edificios nuevos y ciertos edificios no residenciales existentes; no obliga a los arrendadores a instalar solar plug-in',
         ],
         updatedDate: '2026-10-19',
@@ -613,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desde el 17 de octubre de 2024, el § 554 apdo. 1 BGB para inquilinos y el § 20 apdo. 2 n.º 5 WEG para copropietarios dan derecho a medidas destinadas a generar electricidad con dispositivos solares plug-in.',
           'El derecho del inquilino solo decae si la medida es irrazonable para el arrendador incluso valorando los intereses del inquilino (§ 554 BGB). Los acuerdos contrarios en perjuicio del inquilino son nulos.',
           'Los arrendadores y las comunidades conservan voz en el montaje, pero sus requisitos no deben ser excesivos. Las fuentes consultadas no aclaran si sigue siendo formalmente necesario un acuerdo de la comunidad; pregunta a tu administrador.',
-          'Vonovia cedió sin reservas a la instalación de un inquilino de Aquisgrán en enero de 2026; un informe de julio de 2026 indica que su directriz prohíbe baterías en instalaciones de balcón, algo que las asociaciones de consumidores consideran problemático.',
+          'Vonovia cedió sin reservas a la instalación de un inquilino de Aquisgrán en enero de 2026. Un informe de drweb.de del 17 de julio de 2026, que cita a inside digital, recoge la directriz técnica de Vonovia como una prohibición del almacenamiento con baterías en instalaciones de balcón por motivos de protección contra incendios y señala que Vonovia confirmó la autenticidad del documento; la Deutsche Umwelthilfe y la Verbraucherzentrale NRW consideran problemática una prohibición general.',
           'La directiva europea de edificios no obliga a los arrendadores a instalar solar plug-in, y no pudimos verificar los informes sobre programas de arrendadores con más de 50.000 unidades.',
         ],
       },
@@ -638,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cómo gestionan las solicitudes los grandes arrendadores',
         content: [
           '**Los grandes arrendadores deciden caso por caso, y la práctica es discutida.** En enero de 2026, Vonovia aceptó «sin reservas» la instalación de balcón de un inquilino de Aquisgrán tras una demanda apoyada por la Deutsche Umwelthilfe (DUH); según la DUH, Vonovia había exigido cálculos de carga de viento, justificantes estructurales y el cumplimiento de una norma de acristalamiento vertical. La DUH pide que Vonovia revise sus reglas de instalación.',
-          '**Un informe de julio de 2026 indica que la directriz técnica de Vonovia prohíbe las baterías y componentes similares en instalaciones de balcón, alegando protección contra incendios y explosiones.** Según el mismo informe, la DUH y la Verbraucherzentrale NRW consideran problemática una prohibición general. Son posturas recogidas por terceros, no sentencias sobre el almacenamiento; para las reglas de almacenamiento, consulta [Baterías para energía solar de balcón en 2027](/es/balcony-solar/balcony-solar-battery-storage-standard-2027).',
+          '**Un informe de drweb.de del 17 de julio de 2026, que cita a inside digital, recoge la directriz técnica de Vonovia como una prohibición del almacenamiento con baterías en instalaciones de balcón por motivos de protección contra incendios y señala que Vonovia confirmó la autenticidad del documento; la Deutsche Umwelthilfe y la Verbraucherzentrale NRW consideran problemática una prohibición general.** Son posturas recogidas por terceros, no sentencias sobre el almacenamiento; para las reglas de almacenamiento, consulta [Baterías para energía solar de balcón en 2027](/es/balcony-solar/balcony-solar-battery-storage-standard-2027).',
         ],
       },
       landlordRules: {
@@ -715,8 +711,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'El § 20 apdo. 2 n.º 5 WEG da a cada copropietario un derecho a modificaciones estructurales adecuadas para dispositivos solares plug-in, y la comunidad decide sobre la ejecución dentro de una administración ordenada. Las fuentes consultadas no aclaran si sigue siendo formalmente necesario un acuerdo; pregunta a tu administrador.',
           },
           {
-            q: '¿Están instalando Vonovia y LEG 50.000 sistemas de solar de balcón?',
-            a: 'No encontramos fuente primaria para eso. Los objetivos de unidades que se citan no están verificados. Lo documentado es que Vonovia aceptó sin reservas la instalación de un inquilino de Aquisgrán en enero de 2026 tras una demanda apoyada por la Deutsche Umwelthilfe.',
+            q: '¿Tienen los grandes arrendadores alemanes programas de solar de balcón?',
+            a: 'No encontramos fuente primaria para los informes de que Vonovia y LEG Immobilien ejecuten programas con objetivos conjuntos de más de 50.000 dispositivos plug-in. Trata esas cifras como no verificadas. Lo documentado es que Vonovia aceptó sin reservas la instalación de un inquilino de Aquisgrán en enero de 2026 tras una demanda apoyada por la Deutsche Umwelthilfe.',
           },
           {
             q: '¿Obliga la directiva europea de edificios a los arrendadores a instalar solar de balcón?',
@@ -724,7 +720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Puede mi arrendador prohibir una batería en mi sistema de balcón?',
-            a: 'Es un tema discutido. Un informe de julio de 2026 indica que la directriz de Vonovia prohíbe las baterías alegando protección contra incendios y explosiones, mientras que la Deutsche Umwelthilfe y la Verbraucherzentrale NRW consideran problemática una prohibición general. Si el § 554 BGB cubre el almacenamiento es objeto de debate; pregunta por escrito y busca asesoramiento.',
+            a: 'Es un tema discutido. Un informe de drweb.de del 17 de julio de 2026, que cita a inside digital, recoge la directriz técnica de Vonovia como una prohibición del almacenamiento con baterías en instalaciones de balcón por motivos de protección contra incendios y señala que Vonovia confirmó la autenticidad del documento; la Deutsche Umwelthilfe y la Verbraucherzentrale NRW consideran problemática una prohibición general. Si el § 554 BGB cubre el almacenamiento es objeto de debate. Pregunta por escrito y busca asesoramiento; esto no es asesoramiento jurídico.',
           },
           {
             q: '¿Qué límites se aplican a un dispositivo solar plug-in en Alemania?',
@@ -761,7 +757,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'solaire de balcon bailleurs',
       'balkonkraftwerk bailleur accord',
       'solaire de balcon droits des locataires allemagne',
-      'vonovia solaire de balcon',
     ],
     leadAnswerBlock: '**Depuis le 17 octobre 2024, les locataires allemands peuvent exiger l\'accord du bailleur pour un appareil solaire plug-in en vertu du § 554 BGB, et les copropriétaires disposent d\'un droit comparable en vertu du § 20 al. 2 n° 5 WEG ; le refus n\'est possible que si la mesure est déraisonnable pour le bailleur, même en tenant compte des intérêts du locataire.** Les bailleurs et les copropriétés gardent leur mot à dire sur la fixation de l\'appareil, mais leurs exigences ne doivent pas vider le droit de sa substance. Les grands bailleurs décident au cas par cas : Vonovia a accepté « sans réserve » l\'installation d\'un locataire d\'Aix-la-Chapelle en janvier 2026, après une action en justice soutenue par la Deutsche Umwelthilfe. La directive européenne sur les bâtiments (EPBD) n\'oblige pas les bailleurs à installer du solaire plug-in dans les logements existants, et nous n\'avons trouvé aucune source primaire pour les annonces de programmes de bailleurs de plus de 50 000 unités.',
     quickAnswerTop: {
@@ -772,7 +767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Locataires : § 554 al. 1 BGB ; copropriétaires : § 20 al. 2 n° 5 WEG ; les deux en vigueur depuis le 17 octobre 2024',
           'Le refus suppose que la mesure soit déraisonnable pour le bailleur même en tenant compte des intérêts du locataire ; cette page ne se prononce sur aucun cas particulier',
           'Les bailleurs et les copropriétés peuvent fixer des règles de fixation ; selon Haufe, ces exigences ne doivent pas être excessives',
-          'Vonovia a accepté sans réserve l\'installation d\'un locataire d\'Aix-la-Chapelle en janvier 2026 après une action soutenue par la Deutsche Umwelthilfe ; sa directive technique interdirait les batteries, ce qui est contesté',
+          'Vonovia a accepté sans réserve l\'installation d\'un locataire d\'Aix-la-Chapelle en janvier 2026 après une action soutenue par la Deutsche Umwelthilfe. Un article de drweb.de du 17 juillet 2026, citant inside digital, cite la directive technique de Vonovia comme interdisant le stockage par batterie sur les installations de balcon pour des raisons de protection contre l\'incendie et indique que Vonovia a confirmé l\'authenticité du document ; la Deutsche Umwelthilfe et la Verbraucherzentrale NRW jugent problématique une interdiction générale',
           'L\'EPBD (directive (UE) 2024/1275) fait du solaire la norme pour les bâtiments neufs et certains bâtiments non résidentiels existants ; elle n\'oblige pas les bailleurs à installer du solaire plug-in',
         ],
         updatedDate: '2026-10-19',
@@ -797,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Depuis le 17 octobre 2024, le § 554 al. 1 BGB pour les locataires et le § 20 al. 2 n° 5 WEG pour les copropriétaires donnent un droit aux mesures servant à la production d\'électricité par des appareils solaires plug-in.',
           'Le droit du locataire ne tombe que si la mesure est déraisonnable pour le bailleur même en tenant compte des intérêts du locataire (§ 554 BGB). Les accords contraires au détriment du locataire sont nuls.',
           'Les bailleurs et les copropriétés gardent leur mot à dire sur la fixation, mais leurs exigences ne doivent pas être excessives. Les sources consultées ne tranchent pas si une décision de l\'assemblée est encore formellement requise ; interrogez votre gestionnaire.',
-          'Vonovia a cédé sans réserve à l\'installation d\'un locataire d\'Aix-la-Chapelle en janvier 2026 ; un article de juillet 2026 indique que sa directive interdit les batteries sur les installations de balcon, ce que des associations de consommateurs jugent problématique.',
+          'Vonovia a cédé sans réserve à l\'installation d\'un locataire d\'Aix-la-Chapelle en janvier 2026. Un article de drweb.de du 17 juillet 2026, citant inside digital, cite la directive technique de Vonovia comme interdisant le stockage par batterie sur les installations de balcon pour des raisons de protection contre l\'incendie et indique que Vonovia a confirmé l\'authenticité du document ; la Deutsche Umwelthilfe et la Verbraucherzentrale NRW jugent problématique une interdiction générale.',
           'La directive européenne sur les bâtiments n\'oblige pas les bailleurs à installer du solaire plug-in, et nous n\'avons pas pu vérifier les annonces de programmes de bailleurs de plus de 50 000 unités.',
         ],
       },
@@ -822,7 +817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Comment les grands bailleurs traitent les demandes',
         content: [
           '**Les grands bailleurs décident au cas par cas, et la pratique est contestée.** En janvier 2026, Vonovia a accepté « sans réserve » l\'installation de balcon d\'un locataire d\'Aix-la-Chapelle après une action en justice soutenue par la Deutsche Umwelthilfe (DUH) ; selon la DUH, Vonovia avait exigé des calculs de charge de vent, des justificatifs de structure et le respect d\'une norme de vitrage vertical. La DUH demande que Vonovia révise ses règles d\'installation.',
-          '**Un article de juillet 2026 indique que la directive technique de Vonovia interdit les batteries et composants similaires sur les installations de balcon, en invoquant la protection contre l\'incendie et l\'explosion.** Selon le même article, la DUH et la Verbraucherzentrale NRW jugent problématique une interdiction générale. Ce sont des positions rapportées par des tiers, pas des décisions de justice sur le stockage ; pour les règles de stockage, voir [Les batteries pour le solaire de balcon en 2027](/fr/balcony-solar/balcony-solar-battery-storage-standard-2027).',
+          '**Un article de drweb.de du 17 juillet 2026, citant inside digital, cite la directive technique de Vonovia comme interdisant le stockage par batterie sur les installations de balcon pour des raisons de protection contre l\'incendie et indique que Vonovia a confirmé l\'authenticité du document ; la Deutsche Umwelthilfe et la Verbraucherzentrale NRW jugent problématique une interdiction générale.** Ce sont des positions rapportées par des tiers, pas des décisions de justice sur le stockage ; pour les règles de stockage, voir [Les batteries pour le solaire de balcon en 2027](/fr/balcony-solar/balcony-solar-battery-storage-standard-2027).',
         ],
       },
       landlordRules: {
@@ -899,8 +894,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Le § 20 al. 2 n° 5 WEG donne à chaque copropriétaire un droit à des modifications structurelles appropriées pour les appareils solaires plug-in, et la communauté décide de la mise en œuvre dans le cadre d\'une gestion régulière. Les sources consultées ne tranchent pas si une décision est encore formellement requise ; interrogez votre gestionnaire.',
           },
           {
-            q: 'Vonovia et LEG installent-ils 50 000 systèmes de solaire de balcon ?',
-            a: 'Nous n\'avons trouvé aucune source primaire à ce sujet. Les objectifs d\'unités annoncés ne sont pas vérifiés. Ce qui est documenté, c\'est que Vonovia a accepté sans réserve l\'installation d\'un locataire d\'Aix-la-Chapelle en janvier 2026 après une action soutenue par la Deutsche Umwelthilfe.',
+            q: 'Les grands bailleurs allemands mènent-ils des programmes de solaire de balcon ?',
+            a: 'Nous n\'avons trouvé aucune source primaire pour les informations selon lesquelles Vonovia et LEG Immobilien mèneraient des programmes avec des objectifs cumulés de plus de 50 000 appareils plug-in. Considérez ces chiffres comme non vérifiés. Ce qui est documenté, c\'est que Vonovia a accepté sans réserve l\'installation d\'un locataire d\'Aix-la-Chapelle en janvier 2026 après une action soutenue par la Deutsche Umwelthilfe.',
           },
           {
             q: 'La directive européenne sur les bâtiments oblige-t-elle les bailleurs à installer du solaire de balcon ?',
@@ -908,7 +903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Mon bailleur peut-il interdire une batterie avec mon installation de balcon ?',
-            a: 'C\'est contesté. Un article de juillet 2026 indique que la directive de Vonovia interdit les batteries en invoquant la protection contre l\'incendie et l\'explosion, tandis que la Deutsche Umwelthilfe et la Verbraucherzentrale NRW jugent problématique une interdiction générale. La question de savoir si le § 554 BGB couvre le stockage est débattue ; demandez par écrit et faites-vous conseiller.',
+            a: 'C\'est contesté. Un article de drweb.de du 17 juillet 2026, citant inside digital, cite la directive technique de Vonovia comme interdisant le stockage par batterie sur les installations de balcon pour des raisons de protection contre l\'incendie et indique que Vonovia a confirmé l\'authenticité du document ; la Deutsche Umwelthilfe et la Verbraucherzentrale NRW jugent problématique une interdiction générale. La question de savoir si le § 554 BGB couvre le stockage est débattue. Demandez par écrit et faites-vous conseiller ; ceci n\'est pas un conseil juridique.',
           },
           {
             q: 'Quelles limites s\'appliquent à un appareil solaire plug-in en Allemagne ?',
@@ -934,14 +929,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2027年の大家・住宅会社向けバルコニーソーラー',
     seoTitle: '2027年版 大家・住宅会社向けバルコニーソーラーの法的ポイント',
     intro: 'ドイツでは、2024年10月17日から、借主と区分所有者にプラグイン式ソーラー機器（「Steckersolargeräte」）を求める法的な権利があります。これにより、貸主にとっての問いは「設置してよいか」から「どのような条件で、どう設置するか」に移りました。このページでは、法律の内容、貸主や管理組合が求めてよいこと、大手貸主（Vonovia）の対応、EUの建築物指令が求めていること・求めていないことを説明します。ドイツに関する一般的な情報であり、法的助言ではありません。',
-    metaDescription: '2024年10月以降、ドイツの借主と区分所有者はプラグイン式ソーラー機器を求める権利があります。貸主が求められること、Vonoviaの争い、EU指令EPBDの内容を解説。',
+    metaDescription: '2024年10月以降、ドイツの借主と区分所有者はプラグイン式ソーラー機器を求める権利があります。貸主が求められることと、EU指令EPBDの内容を解説。',
     publishDate: '2026-07-18',
     dateModified: '2026-10-19',
     readTime: '5分で読める',
     educationalLevel: 'Beginner',
     audience: 'プラグイン式ソーラーを検討しているドイツの貸主、不動産管理者、住宅会社、借主',
     primaryTerm: '大家・住宅会社向けバルコニーソーラー',
-    targetKeywords: ['バルコニーソーラー 大家', 'バルコニーソーラー 借主 権利 ドイツ', 'バルコニーソーラー 住宅会社', 'Vonovia バルコニーソーラー'],
+    targetKeywords: ['バルコニーソーラー 大家', 'バルコニーソーラー 借主 権利 ドイツ', 'バルコニーソーラー 住宅会社'],
     leadAnswerBlock: '**2024年10月17日以降、ドイツの借主はBGB第554条に基づいてプラグイン式ソーラー機器への貸主の同意を求めることができ、区分所有者にはWEG第20条第2項第5号に基づく同様の権利があります。同意を拒否できるのは、借主の利益を考慮しても、その措置が貸主にとって受け入れがたい場合に限られます。** 貸主や管理組合は取り付け方法について意見を述べることができますが、その要求で権利を空洞化させてはなりません。大手貸主は個別に判断しています。Vonoviaは2026年1月、ドイツ環境援助（Deutsche Umwelthilfe）が支援した訴訟を受けて、アーヘンの借主の設置に「留保なく」同意しました。EUの建築物指令（EPBD）は、既存の賃貸住宅にプラグイン式ソーラーを設置するよう貸主に義務づけてはおらず、5万台超の貸主プログラムとする報道には一次情報が見つかりませんでした。',
     quickAnswerTop: {
       ja: {
@@ -951,7 +946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '借主：BGB第554条第1項、区分所有者：WEG第20条第2項第5号。いずれも2024年10月17日から施行',
           '拒否には、借主の利益を考慮しても措置が貸主にとって受け入れがたいことが必要。このページは個別の事案については何も述べません',
           '貸主や管理組合は取り付けのルールを定められるが、Haufeによるとその要件は過大であってはならない',
-          'Vonoviaは2026年1月、Deutsche Umwelthilfeが支援した訴訟を受け、アーヘンの借主の設置に留保なく同意。技術ガイドラインは蓄電池を禁止していると報じられ、争いがある',
+          'Vonoviaは2026年1月、Deutsche Umwelthilfeが支援した訴訟を受け、アーヘンの借主の設置に留保なく同意。drweb.deの2026年7月17日付の報道は、inside digitalを引用して、Vonoviaの技術ガイドラインが防火上の理由からバルコニー設備への蓄電池の設置を禁止していると伝え、Vonoviaがこの文書の真正性を認めたとしています。Deutsche UmwelthilfeとVerbraucherzentrale NRWは一律の禁止には問題があるとしています',
           'EPBD（指令(EU) 2024/1275）は新築建築物と一部の既存の非住宅建築物で太陽光を標準にするもので、貸主にプラグイン式ソーラーの設置を義務づけてはいない',
         ],
         updatedDate: '2026-10-19',
@@ -976,7 +971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2024年10月17日以降、BGB第554条第1項が借主に、WEG第20条第2項第5号が区分所有者に、プラグイン式ソーラー機器による発電に資する措置を求める権利を認めています。',
           '借主の権利が認められないのは、借主の利益を考慮しても措置が貸主にとって受け入れがたい場合だけです（BGB第554条）。借主に不利な、これと異なる合意は無効です。',
           '貸主や管理組合は取り付け方法について意見を述べられますが、要件は過大であってはなりません。管理組合の決議がなお形式上必要かどうかは、確認した情報源では確定していません。管理会社に確認してください。',
-          'Vonoviaは2026年1月、アーヘンの借主の設置に留保なく同意しました。2026年7月の報道によると、同社のガイドラインはバルコニー設備への蓄電池を禁止しており、消費者団体は問題があるとしています。',
+          'Vonoviaは2026年1月、アーヘンの借主の設置に留保なく同意しました。drweb.deの2026年7月17日付の報道は、inside digitalを引用して、Vonoviaの技術ガイドラインが防火上の理由からバルコニー設備への蓄電池の設置を禁止していると伝え、Vonoviaがこの文書の真正性を認めたとしています。Deutsche UmwelthilfeとVerbraucherzentrale NRWは一律の禁止には問題があるとしています。',
           'EUの建築物指令は貸主にプラグイン式ソーラーの設置を義務づけておらず、5万台超の貸主プログラムとする報道は確認できませんでした。',
         ],
       },
@@ -1001,7 +996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '大手貸主は申請にどう対応しているか',
         content: [
           '**大手貸主は個別に判断しており、その運用には争いがあります。** 2026年1月、Vonoviaは、Deutsche Umwelthilfe（DUH）が支援した訴訟を受けて、アーヘンの借主のバルコニー設備に「留保なく」同意しました。DUHによると、Vonoviaはそれまで、風荷重の計算、構造上の証明、垂直ガラス規格の順守を求めていました。DUHはVonoviaに設置ルールの見直しを求めています。',
-          '**2026年7月の報道によると、Vonoviaの技術ガイドラインは、防火・防爆を理由に、バルコニー設備への蓄電池や類似の部品を禁止しています。** 同じ報道によれば、DUHとVerbraucherzentrale NRWは一律の禁止には問題があるとしています。これは第三者が伝える立場であり、蓄電池に関する裁判所の判断ではありません。蓄電池のルールは[2027年のバルコニーソーラー用蓄電池](/ja/balcony-solar/balcony-solar-battery-storage-standard-2027)をご覧ください。',
+          '**drweb.deの2026年7月17日付の報道は、inside digitalを引用して、Vonoviaの技術ガイドラインが防火上の理由からバルコニー設備への蓄電池の設置を禁止していると伝え、Vonoviaがこの文書の真正性を認めたとしています。Deutsche UmwelthilfeとVerbraucherzentrale NRWは一律の禁止には問題があるとしています。** これは第三者が伝える立場であり、蓄電池に関する裁判所の判断ではありません。蓄電池のルールは[2027年のバルコニーソーラー用蓄電池](/ja/balcony-solar/balcony-solar-battery-storage-standard-2027)をご覧ください。',
         ],
       },
       landlordRules: {
@@ -1078,8 +1073,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'WEG第20条第2項第5号は、各区分所有者にプラグイン式ソーラー機器のための適切な構造変更を求める権利を認め、実施については管理組合が適正な管理の範囲内で決定します。決議がなお形式上必要かどうかは、確認した情報源では確定していないため、管理会社に確認してください。',
           },
           {
-            q: 'VonoviaとLEGは5万台のバルコニーソーラーを設置していますか？',
-            a: 'それを裏づける一次情報は見つかりませんでした。報じられている台数目標は未確認です。記録されているのは、Vonoviaが2026年1月、Deutsche Umwelthilfeが支援した訴訟を受けて、アーヘンの借主の設置に留保なく同意したことです。',
+            q: 'ドイツの大手貸主はバルコニーソーラーのプログラムを実施していますか？',
+            a: 'VonoviaとLEG Immobilienが合計5万台超のプラグイン式機器を目標とするプログラムを進めているという報道について、一次情報は見つかりませんでした。これらの数字は未確認として扱ってください。記録されているのは、Vonoviaが2026年1月、Deutsche Umwelthilfeが支援した訴訟を受けて、アーヘンの借主の設置に留保なく同意したことです。',
           },
           {
             q: 'EUの建築物指令は貸主にバルコニーソーラーの設置を義務づけていますか？',
@@ -1087,7 +1082,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '貸主は私のバルコニー設備に蓄電池を付けることを禁止できますか？',
-            a: '争いがあります。2026年7月の報道によると、Vonoviaのガイドラインは防火・防爆を理由に蓄電池を禁止しており、Deutsche UmwelthilfeとVerbraucherzentrale NRWは一律の禁止に問題があるとしています。BGB第554条が蓄電池を含むかどうかは議論があります。書面で問い合わせ、助言を受けてください。',
+            a: '争いがあります。drweb.deの2026年7月17日付の報道は、inside digitalを引用して、Vonoviaの技術ガイドラインが防火上の理由からバルコニー設備への蓄電池の設置を禁止していると伝え、Vonoviaがこの文書の真正性を認めたとしています。Deutsche UmwelthilfeとVerbraucherzentrale NRWは一律の禁止には問題があるとしています。BGB第554条が蓄電池を含むかどうかは議論があります。書面で問い合わせ、助言を受けてください。これは法的助言ではありません。',
           },
           {
             q: 'ドイツでプラグイン式ソーラー機器にはどのような上限がありますか？',
@@ -1113,14 +1108,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2027년 임대인과 주택협회를 위한 발코니 태양광',
     seoTitle: '임대인·주택협회를 위한 발코니 태양광: 법적 권리와 규정',
     intro: '독일에서는 세입자와 구분소유자가 2024년 10월 17일부터 플러그인 태양광 장치("Steckersolargeräte")를 요구할 법적 권리를 갖습니다. 이로써 임대인의 질문은 "설치해도 되는가"에서 "어떤 조건으로, 어떻게 하는가"로 옮겨 갔습니다. 이 글은 법이 정하는 내용, 임대인과 관리조합이 요구할 수 있는 것, 대형 임대인(Vonovia)의 대응, EU 건축물 지침이 요구하는 것과 요구하지 않는 것을 설명합니다. 독일에 관한 일반 정보이며 법률 자문이 아닙니다.',
-    metaDescription: '2024년 10월부터 독일 세입자와 구분소유자는 플러그인 태양광 장치를 요구할 수 있습니다. 임대인이 요구할 수 있는 것, Vonovia 분쟁, EU EPBD의 내용을 정리합니다.',
+    metaDescription: '2024년 10월부터 독일 세입자와 구분소유자는 플러그인 태양광 장치를 요구할 수 있습니다. 임대인이 요구할 수 있는 것과 EU EPBD의 내용을 정리합니다.',
     publishDate: '2026-07-18',
     dateModified: '2026-10-19',
     readTime: '5분 읽기',
     educationalLevel: 'Beginner',
     audience: '플러그인 태양광을 검토하는 독일의 임대인, 부동산 관리자, 주택협회, 세입자',
     primaryTerm: '임대인 및 주택협회를 위한 발코니 태양광',
-    targetKeywords: ['발코니 태양광 임대인', '독일 발코니 태양광 세입자 권리', '발코니 태양광 주택협회', 'Vonovia 발코니 태양광'],
+    targetKeywords: ['발코니 태양광 임대인', '독일 발코니 태양광 세입자 권리', '발코니 태양광 주택협회'],
     leadAnswerBlock: '**2024년 10월 17일부터 독일 세입자는 BGB 제554조에 따라 플러그인 태양광 장치에 대한 임대인의 동의를 요구할 수 있고, 구분소유자도 WEG 제20조 제2항 제5호에 따라 유사한 권리를 갖습니다. 동의를 거부할 수 있는 것은 세입자의 이익을 고려하더라도 그 조치가 임대인에게 기대하기 어려운 경우뿐입니다.** 임대인과 관리조합은 장치를 설치하는 방식에 의견을 낼 수 있지만, 그 요구가 권리를 공동화해서는 안 됩니다. 대형 임대인은 사안별로 판단합니다. Vonovia는 2026년 1월, 독일환경지원(Deutsche Umwelthilfe)이 지원한 소송 이후 아헨 세입자의 설치에 "유보 없이" 동의했습니다. EU 건축물 지침(EPBD)은 기존 임대 주택에 플러그인 태양광을 설치하도록 임대인에게 의무를 지우지 않으며, 임대인 프로그램이 5만 대를 넘는다는 보도에 대해서는 1차 출처를 찾지 못했습니다.',
     quickAnswerTop: {
       ko: {
@@ -1130,7 +1125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '세입자: BGB 제554조 제1항, 구분소유자: WEG 제20조 제2항 제5호. 둘 다 2024년 10월 17일부터 시행',
           '거부하려면 세입자의 이익을 고려하더라도 조치가 임대인에게 기대하기 어려워야 합니다. 이 글은 개별 사안에 대해 어떤 주장도 하지 않습니다',
           '임대인과 관리조합은 설치 규칙을 정할 수 있으나, Haufe에 따르면 그 요건이 과도해서는 안 됩니다',
-          'Vonovia는 2026년 1월 독일환경지원이 지원한 소송 이후 아헨 세입자의 설치에 유보 없이 동의했습니다. 기술 지침이 배터리를 금지한다고 보도되었으며 이는 다툼이 있습니다',
+          'Vonovia는 2026년 1월 독일환경지원이 지원한 소송 이후 아헨 세입자의 설치에 유보 없이 동의했습니다. drweb.de의 2026년 7월 17일 보도는 inside digital을 인용하여 Vonovia의 기술 지침이 화재 방지를 이유로 발코니 설비에 배터리 저장장치를 금지한다고 전하며 Vonovia가 해당 문서가 진본임을 확인했다고 밝힙니다. Deutsche Umwelthilfe와 Verbraucherzentrale NRW는 일괄 금지가 문제라고 봅니다',
           'EPBD(지침 (EU) 2024/1275)는 신축 건물과 일부 기존 비주거 건물에서 태양광을 표준으로 삼으며, 임대인에게 플러그인 태양광 설치를 의무화하지 않습니다',
         ],
         updatedDate: '2026-10-19',
@@ -1155,7 +1150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2024년 10월 17일부터 BGB 제554조 제1항은 세입자에게, WEG 제20조 제2항 제5호는 구분소유자에게 플러그인 태양광 장치로 발전하는 데 도움이 되는 조치를 요구할 권리를 인정합니다.',
           '세입자의 청구권이 성립하지 않는 것은 세입자의 이익을 고려하더라도 조치가 임대인에게 기대하기 어려운 경우뿐입니다(BGB 제554조). 세입자에게 불리하게 이와 달리 정한 합의는 무효입니다.',
           '임대인과 관리조합은 설치 방식에 의견을 낼 수 있지만 요건이 과도해서는 안 됩니다. 관리조합 결의가 형식상 여전히 필요한지는 확인한 출처에서 확정되지 않았으니 관리자에게 문의하십시오.',
-          'Vonovia는 2026년 1월 아헨 세입자의 설치에 유보 없이 동의했습니다. 2026년 7월 보도에 따르면 이 회사의 지침은 발코니 설비에 배터리를 금지하며, 소비자 단체는 이를 문제로 봅니다.',
+          'Vonovia는 2026년 1월 아헨 세입자의 설치에 유보 없이 동의했습니다. drweb.de의 2026년 7월 17일 보도는 inside digital을 인용하여 Vonovia의 기술 지침이 화재 방지를 이유로 발코니 설비에 배터리 저장장치를 금지한다고 전하며 Vonovia가 해당 문서가 진본임을 확인했다고 밝힙니다. Deutsche Umwelthilfe와 Verbraucherzentrale NRW는 일괄 금지가 문제라고 봅니다.',
           'EU 건축물 지침은 임대인에게 플러그인 태양광 설치를 의무화하지 않으며, 임대인 프로그램이 5만 대를 넘는다는 보도는 확인할 수 없었습니다.',
         ],
       },
@@ -1180,7 +1175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '대형 임대인이 요청을 다루는 방식',
         content: [
           '**대형 임대인은 사안별로 판단하며, 그 관행에는 다툼이 있습니다.** 2026년 1월 Vonovia는 독일환경지원(DUH)이 지원한 소송 이후 아헨 세입자의 발코니 설비에 "유보 없이" 동의했습니다. DUH에 따르면 Vonovia는 그 전까지 풍하중 계산, 구조 증명, 수직 유리 규격 준수를 요구했습니다. DUH는 Vonovia가 설치 규칙을 수정하기를 요구합니다.',
-          '**2026년 7월 보도에 따르면 Vonovia의 기술 지침은 화재·폭발 방지를 이유로 발코니 설비에 배터리와 유사 부품을 금지합니다.** 같은 보도에 따르면 DUH와 노르트라인베스트팔렌 소비자센터(Verbraucherzentrale NRW)는 일괄 금지가 문제라고 봅니다. 이는 제3자가 전하는 입장이며, 저장장치에 대한 법원 판결이 아닙니다. 저장장치 규정은 [2027년 발코니 태양광 배터리](/ko/balcony-solar/balcony-solar-battery-storage-standard-2027)를 참고하십시오.',
+          '**drweb.de의 2026년 7월 17일 보도는 inside digital을 인용하여 Vonovia의 기술 지침이 화재 방지를 이유로 발코니 설비에 배터리 저장장치를 금지한다고 전하며 Vonovia가 해당 문서가 진본임을 확인했다고 밝힙니다. Deutsche Umwelthilfe와 Verbraucherzentrale NRW는 일괄 금지가 문제라고 봅니다.** 이는 제3자가 전하는 입장이며, 저장장치에 대한 법원 판결이 아닙니다. 저장장치 규정은 [2027년 발코니 태양광 배터리](/ko/balcony-solar/balcony-solar-battery-storage-standard-2027)를 참고하십시오.',
         ],
       },
       landlordRules: {
@@ -1257,8 +1252,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'WEG 제20조 제2항 제5호는 각 구분소유자에게 플러그인 태양광 장치를 위한 적절한 구조 변경을 요구할 권리를 주며, 실행 방법은 관리조합이 적정한 관리의 범위에서 결정합니다. 결의가 형식상 여전히 필요한지는 확인한 출처에서 확정되지 않았으니 관리자에게 문의하십시오.',
           },
           {
-            q: 'Vonovia와 LEG는 5만 대의 발코니 태양광을 설치하고 있습니까?',
-            a: '이를 뒷받침하는 1차 출처를 찾지 못했습니다. 보도된 대수 목표는 확인되지 않았습니다. 확인된 것은 Vonovia가 2026년 1월 독일환경지원이 지원한 소송 이후 아헨 세입자의 설치에 유보 없이 동의했다는 점입니다.',
+            q: '독일의 대형 임대인은 발코니 태양광 프로그램을 운영합니까?',
+            a: 'Vonovia와 LEG Immobilien이 합계 5만 대가 넘는 플러그인 장치를 목표로 한 프로그램을 운영한다는 보도에 대해서는 1차 출처를 찾지 못했습니다. 이런 수치는 확인되지 않은 것으로 취급하십시오. 확인된 것은 Vonovia가 2026년 1월 독일환경지원이 지원한 소송 이후 아헨 세입자의 설치에 유보 없이 동의했다는 점입니다.',
           },
           {
             q: 'EU 건축물 지침은 임대인에게 발코니 태양광 설치를 의무화합니까?',
@@ -1266,7 +1261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '임대인이 제 발코니 설비에 배터리를 금지할 수 있습니까?',
-            a: '다툼이 있습니다. 2026년 7월 보도에 따르면 Vonovia의 지침은 화재·폭발 방지를 이유로 배터리를 금지하며, 독일환경지원과 Verbraucherzentrale NRW는 일괄 금지가 문제라고 봅니다. BGB 제554조가 저장장치를 포함하는지는 논란이 있습니다. 서면으로 문의하고 조언을 구하십시오.',
+            a: '다툼이 있습니다. drweb.de의 2026년 7월 17일 보도는 inside digital을 인용하여 Vonovia의 기술 지침이 화재 방지를 이유로 발코니 설비에 배터리 저장장치를 금지한다고 전하며 Vonovia가 해당 문서가 진본임을 확인했다고 밝힙니다. Deutsche Umwelthilfe와 Verbraucherzentrale NRW는 일괄 금지가 문제라고 봅니다. BGB 제554조가 저장장치를 포함하는지는 논란이 있습니다. 서면으로 문의하고 조언을 구하십시오. 이는 법률 자문이 아닙니다.',
           },
           {
             q: '독일에서 플러그인 태양광 장치에는 어떤 한도가 적용됩니까?',
@@ -1303,7 +1298,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'energia solar de varanda proprietários',
       'balkonkraftwerk locador consentimento',
       'energia solar de varanda direitos do inquilino alemanha',
-      'vonovia energia solar de varanda',
     ],
     leadAnswerBlock: '**Desde 17 de outubro de 2024, inquilinos alemães podem reivindicar o consentimento do locador para um dispositivo solar plug-in conforme o § 554 BGB, e condôminos têm um direito comparável conforme o § 20 (2) n.º 5 WEG; o consentimento só pode ser recusado se a medida for irrazoável para o locador mesmo ponderando os interesses do inquilino.** Locadores e comunidades de proprietários mantêm voz sobre como o dispositivo é fixado, mas as exigências não podem esvaziar o direito. Grandes locadores decidem caso a caso: a Vonovia concordou "sem reservas" com a instalação de um inquilino de Aachen em janeiro de 2026, após uma ação apoiada pela Deutsche Umwelthilfe. A diretiva europeia de edifícios (EPBD) não obriga locadores a instalar solar plug-in em imóveis alugados existentes, e não encontramos fonte primária para relatos de programas de locadores com mais de 50.000 unidades.',
     quickAnswerTop: {
@@ -1314,7 +1308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Inquilinos: § 554 (1) BGB; condôminos: § 20 (2) n.º 5 WEG; ambos em vigor desde 17 de outubro de 2024',
           'A recusa exige que a medida seja irrazoável para o locador mesmo ponderando os interesses do inquilino; esta página não faz afirmações sobre nenhum caso individual',
           'Locadores e comunidades podem estabelecer regras de fixação; segundo a Haufe, esses requisitos não devem ser excessivos',
-          'A Vonovia concordou sem reservas com a instalação de um inquilino de Aachen em janeiro de 2026 após uma ação apoiada pela Deutsche Umwelthilfe; sua diretriz técnica proibiria baterias, o que é contestado',
+          'A Vonovia concordou sem reservas com a instalação de um inquilino de Aachen em janeiro de 2026 após uma ação apoiada pela Deutsche Umwelthilfe. Uma reportagem do drweb.de de 17 de julho de 2026, citando o inside digital, cita a diretriz técnica da Vonovia como proibindo o armazenamento em baterias em instalações de varanda por motivos de proteção contra incêndio e informa que a Vonovia confirmou a autenticidade do documento; a Deutsche Umwelthilfe e a Verbraucherzentrale NRW consideram problemática uma proibição geral',
           'A EPBD (Diretiva (UE) 2024/1275) faz da energia solar a norma para edifícios novos e certos edifícios não residenciais existentes; não obriga locadores a instalar solar plug-in',
         ],
         updatedDate: '2026-10-19',
@@ -1339,7 +1333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desde 17 de outubro de 2024, o § 554 (1) BGB para inquilinos e o § 20 (2) n.º 5 WEG para condôminos dão direito a medidas destinadas à geração de eletricidade por dispositivos solares plug-in.',
           'O direito do inquilino só cai se a medida for irrazoável para o locador mesmo ponderando os interesses do inquilino (§ 554 BGB). Acordos em contrário que prejudiquem o inquilino são nulos.',
           'Locadores e comunidades mantêm voz sobre a fixação, mas os requisitos não devem ser excessivos. As fontes consultadas não esclarecem se uma deliberação da comunidade ainda é formalmente exigida; pergunte ao seu administrador.',
-          'A Vonovia cedeu sem reservas à instalação de um inquilino de Aachen em janeiro de 2026; um relato de julho de 2026 diz que sua diretriz proíbe baterias em instalações de varanda, o que associações de consumidores consideram problemático.',
+          'A Vonovia cedeu sem reservas à instalação de um inquilino de Aachen em janeiro de 2026. Uma reportagem do drweb.de de 17 de julho de 2026, citando o inside digital, cita a diretriz técnica da Vonovia como proibindo o armazenamento em baterias em instalações de varanda por motivos de proteção contra incêndio e informa que a Vonovia confirmou a autenticidade do documento; a Deutsche Umwelthilfe e a Verbraucherzentrale NRW consideram problemática uma proibição geral.',
           'A diretiva europeia de edifícios não obriga locadores a instalar solar plug-in, e não conseguimos verificar relatos de programas de locadores com mais de 50.000 unidades.',
         ],
       },
@@ -1364,7 +1358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como grandes locadores tratam os pedidos',
         content: [
           '**Grandes locadores decidem caso a caso, e a prática é contestada.** Em janeiro de 2026, a Vonovia concordou "sem reservas" com o sistema de varanda de um inquilino de Aachen após uma ação apoiada pela Deutsche Umwelthilfe (DUH); segundo a DUH, a Vonovia havia exigido cálculos de carga de vento, comprovações estruturais e cumprimento de uma norma de envidraçamento vertical. A DUH quer que a Vonovia revise suas regras de instalação.',
-          '**Um relato de julho de 2026 diz que a diretriz técnica da Vonovia proíbe baterias e componentes semelhantes em instalações de varanda, citando proteção contra incêndio e explosão.** Segundo o mesmo relato, a DUH e a Verbraucherzentrale NRW consideram problemática uma proibição geral. São posições relatadas por terceiros, não decisões judiciais sobre armazenamento; para as regras de armazenamento, veja [Baterias para energia solar de varanda em 2027](/pt/balcony-solar/balcony-solar-battery-storage-standard-2027).',
+          '**Uma reportagem do drweb.de de 17 de julho de 2026, citando o inside digital, cita a diretriz técnica da Vonovia como proibindo o armazenamento em baterias em instalações de varanda por motivos de proteção contra incêndio e informa que a Vonovia confirmou a autenticidade do documento; a Deutsche Umwelthilfe e a Verbraucherzentrale NRW consideram problemática uma proibição geral.** São posições relatadas por terceiros, não decisões judiciais sobre armazenamento; para as regras de armazenamento, veja [Baterias para energia solar de varanda em 2027](/pt/balcony-solar/balcony-solar-battery-storage-standard-2027).',
         ],
       },
       landlordRules: {
@@ -1441,8 +1435,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'O § 20 (2) n.º 5 WEG dá a cada condômino um direito a alterações estruturais adequadas para dispositivos solares plug-in, e a comunidade decide sobre a execução dentro de uma administração regular. As fontes consultadas não esclarecem se uma deliberação ainda é formalmente exigida; pergunte ao seu administrador.',
           },
           {
-            q: 'A Vonovia e a LEG estão instalando 50.000 sistemas de solar de varanda?',
-            a: 'Não encontramos fonte primária para isso. As metas de unidades divulgadas não estão verificadas. O que está documentado é que a Vonovia concordou sem reservas com a instalação de um inquilino de Aachen em janeiro de 2026 após uma ação apoiada pela Deutsche Umwelthilfe.',
+            q: 'Grandes locadores alemães têm programas de solar de varanda?',
+            a: 'Não encontramos fonte primária para relatos de que a Vonovia e a LEG Immobilien executam programas com metas somadas acima de 50.000 dispositivos plug-in. Trate esses números como não verificados. O que está documentado é que a Vonovia concordou sem reservas com a instalação de um inquilino de Aachen em janeiro de 2026 após uma ação apoiada pela Deutsche Umwelthilfe.',
           },
           {
             q: 'A diretiva europeia de edifícios obriga locadores a instalar solar de varanda?',
@@ -1450,7 +1444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Meu locador pode proibir uma bateria no meu sistema de varanda?',
-            a: 'Isso é contestado. Um relato de julho de 2026 diz que a diretriz da Vonovia proíbe baterias citando proteção contra incêndio e explosão, enquanto a Deutsche Umwelthilfe e a Verbraucherzentrale NRW consideram problemática uma proibição geral. Se o § 554 BGB abrange armazenamento é discutido; pergunte por escrito e busque orientação.',
+            a: 'Isso é contestado. Uma reportagem do drweb.de de 17 de julho de 2026, citando o inside digital, cita a diretriz técnica da Vonovia como proibindo o armazenamento em baterias em instalações de varanda por motivos de proteção contra incêndio e informa que a Vonovia confirmou a autenticidade do documento; a Deutsche Umwelthilfe e a Verbraucherzentrale NRW consideram problemática uma proibição geral. Se o § 554 BGB abrange armazenamento é discutido. Pergunte por escrito e busque orientação; isto não é aconselhamento jurídico.',
           },
           {
             q: 'Quais limites se aplicam a um dispositivo solar plug-in na Alemanha?',
@@ -1476,14 +1470,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '面向房东与住房协会的阳台光伏：2027年',
     seoTitle: '2027年房东与住房协会阳台光伏：租户权利与规则',
     intro: '在德国，租户和业主自2024年10月17日起依法有权要求安装插拔式光伏设备（“Steckersolargeräte”），这使房东的问题从“我可以吗？”变成了“怎么装、条件是什么？”。本页说明法律规定了什么、房东和业主委员会可以提出哪些要求、大型房东（Vonovia）如何处理申请，以及欧盟建筑指令要求和不要求什么。以下是关于德国的一般信息，不构成法律建议。',
-    metaDescription: '2024年10月起，德国租户和业主有权要求安装插拔式光伏设备。房东可提出哪些要求、Vonovia争议，以及欧盟EPBD指令的规定。',
+    metaDescription: '2024年10月起，德国租户和业主有权要求安装插拔式光伏设备。房东可提出哪些要求，以及欧盟EPBD指令的规定。',
     publishDate: '2026-07-18',
     dateModified: '2026-10-19',
     readTime: '阅读约5分钟',
     educationalLevel: 'Beginner',
     audience: '正在评估插拔式光伏的德国房东、物业管理人员、住房协会和租户',
     primaryTerm: '面向房东和住房协会的阳台光伏',
-    targetKeywords: ['阳台光伏 房东', '德国阳台光伏 租户权利', '阳台光伏 住房协会', 'Vonovia 阳台光伏'],
+    targetKeywords: ['阳台光伏 房东', '德国阳台光伏 租户权利', '阳台光伏 住房协会'],
     leadAnswerBlock: '**自2024年10月17日起，德国租户可依据BGB第554条要求房东同意安装插拔式光伏设备，业主则依据WEG第20条第2款第5项享有类似权利；只有在权衡租户利益后该措施仍对房东不可合理期待时，才可拒绝同意。** 房东和业主委员会对设备的安装方式仍有发言权，但提出的要求不得使该权利落空。大型房东逐案决定：2026年1月，在德国环境援助组织（Deutsche Umwelthilfe）支持的诉讼之后，Vonovia对亚琛一名租户的安装表示“无保留”同意。欧盟建筑指令（EPBD）并不要求房东在现有出租房中安装插拔式光伏，而关于房东计划达到5万套以上的报道，我们没有找到一手来源。',
     quickAnswerTop: {
       zh: {
@@ -1493,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '租户：BGB第554条第1款；业主：WEG第20条第2款第5项；均自2024年10月17日起施行',
           '拒绝的前提是：在权衡租户利益后，该措施对房东仍不可合理期待；本页不对任何个案作出判断',
           '房东和业主委员会可以制定安装规则；据Haufe，这些要求不得过度',
-          '2026年1月，在德国环境援助组织支持的诉讼之后，Vonovia无保留同意了亚琛一名租户的安装；其技术指南据报道禁止电池，这一点存在争议',
+          '2026年1月，在德国环境援助组织支持的诉讼之后，Vonovia无保留同意了亚琛一名租户的安装。drweb.de在2026年7月17日的报道援引inside digital，称Vonovia的技术指南以防火为由禁止在阳台系统上安装电池储能，并称Vonovia确认该文件属实；Deutsche Umwelthilfe和Verbraucherzentrale NRW认为一刀切的禁令有问题',
           'EPBD（指令(EU) 2024/1275）使太阳能成为新建建筑和部分现有非住宅建筑的常态；它并不要求房东安装插拔式光伏',
         ],
         updatedDate: '2026-10-19',
@@ -1518,7 +1512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '自2024年10月17日起，BGB第554条第1款赋予租户、WEG第20条第2款第5项赋予业主要求采取有助于通过插拔式光伏设备发电的措施的权利。',
           '只有在权衡租户利益后该措施对房东仍不可合理期待时，租户的请求权才不成立（BGB第554条）。对租户不利且与该规定不一致的约定无效。',
           '房东和业主委员会对安装方式仍有发言权，但要求不得过度。业主委员会决议在形式上是否仍然必要，我们查阅的来源并未明确；请询问您的物业管理人。',
-          '2026年1月，Vonovia无保留同意了亚琛一名租户的安装；2026年7月的一篇报道称其指南禁止在阳台系统上使用电池，消费者团体认为这有问题。',
+          '2026年1月，Vonovia无保留同意了亚琛一名租户的安装。drweb.de在2026年7月17日的报道援引inside digital，称Vonovia的技术指南以防火为由禁止在阳台系统上安装电池储能，并称Vonovia确认该文件属实；Deutsche Umwelthilfe和Verbraucherzentrale NRW认为一刀切的禁令有问题。',
           '欧盟建筑指令并不要求房东安装插拔式光伏，关于房东计划达到5万套以上的报道，我们无法核实。',
         ],
       },
@@ -1543,7 +1537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '大型房东如何处理申请',
         content: [
           '**大型房东逐案决定，其做法也存在争议。** 2026年1月，在德国环境援助组织（DUH）支持的诉讼之后，Vonovia对亚琛一名租户的阳台系统表示“无保留”同意；据DUH称，此前Vonovia曾要求提供风荷载计算、结构证明并符合垂直玻璃幕规范。DUH希望Vonovia修订其安装规则。',
-          '**2026年7月的一篇报道称，Vonovia的技术指南以防火防爆为由，禁止在阳台系统上使用电池及类似部件。** 同一报道称，DUH和北莱茵-威斯特法伦州消费者中心（Verbraucherzentrale NRW）认为一刀切的禁令有问题。这些是第三方转述的立场，而非法院对储能作出的判决；储能规则参见[2027年阳台光伏电池](/zh/balcony-solar/balcony-solar-battery-storage-standard-2027)。',
+          '**drweb.de在2026年7月17日的报道援引inside digital，称Vonovia的技术指南以防火为由禁止在阳台系统上安装电池储能，并称Vonovia确认该文件属实；Deutsche Umwelthilfe和Verbraucherzentrale NRW认为一刀切的禁令有问题。** 这些是第三方转述的立场，而非法院对储能作出的判决；储能规则参见[2027年阳台光伏电池](/zh/balcony-solar/balcony-solar-battery-storage-standard-2027)。',
         ],
       },
       landlordRules: {
@@ -1620,8 +1614,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'WEG第20条第2款第5项赋予每位业主要求为插拔式光伏设备进行适当建筑改动的权利，具体实施由业主团体在正当管理范围内决定。决议在形式上是否仍然必要，我们查阅的来源并未明确；请询问您的物业管理人。',
           },
           {
-            q: 'Vonovia和LEG正在安装5万套阳台光伏吗？',
-            a: '我们没有找到相关的一手来源。所报道的数量目标未经证实。有记录的是：2026年1月，在德国环境援助组织支持的诉讼之后，Vonovia无保留同意了亚琛一名租户的安装。',
+            q: '德国大型房东是否开展阳台光伏计划？',
+            a: '对于“Vonovia和LEG Immobilien开展了合计目标超过5万套插拔式设备的计划”的报道，我们没有找到一手来源。请将这些数字视为未经证实。有记录的是：2026年1月，在德国环境援助组织支持的诉讼之后，Vonovia无保留同意了亚琛一名租户的安装。',
           },
           {
             q: '欧盟建筑指令要求房东安装阳台光伏吗？',
@@ -1629,7 +1623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '房东可以禁止我的阳台系统使用电池吗？',
-            a: '这存在争议。2026年7月的一篇报道称，Vonovia的指南以防火防爆为由禁止电池，而DUH和Verbraucherzentrale NRW认为一刀切的禁令有问题。BGB第554条是否涵盖储能存在争论；请以书面方式询问并寻求专业意见。',
+            a: '这存在争议。drweb.de在2026年7月17日的报道援引inside digital，称Vonovia的技术指南以防火为由禁止在阳台系统上安装电池储能，并称Vonovia确认该文件属实；Deutsche Umwelthilfe和Verbraucherzentrale NRW认为一刀切的禁令有问题。BGB第554条是否涵盖储能存在争论。请以书面方式询问并寻求专业意见；这不构成法律建议。',
           },
           {
             q: '德国的插拔式光伏设备适用哪些上限？',
