@@ -10,7 +10,7 @@
 // spiritbox.ca/buyer-policies.html (best-effort email support; licence = "included licence", commercial redistribution needs written permission).
 // Prices are shown in USD only (no other storefront currencies), so every locale keeps $199 USD. Basic (free) and Pro ($49 USD) are separate editions, not listed here.
 // `hardware` stays variesByModel (no RAM/VRAM minimum established). `compare` carries only voice: spoken replies are in the offer; engine/files/MCP/Ollama stay unset (not verified).
-// Maker comment from Ryan Lucas received 2026-10 (see `founder` below); founderReviewedDate is set as of go-live because the developer asked to check the draft before it is published.
+// Maker comment from Ryan Lucas received 2026-10 (see `founder` below); the developer did not review or approve the finished article, so founderReviewedDate is deliberately NOT set (no Founder-reviewed badge) — owner rule 2026-10-20, Ryan asked for removal.
 
 import type { ToolRecord } from './types'
 
@@ -52,7 +52,6 @@ export const app: ToolRecord = {
   // voice = spoken replies are part of the R6 offer. builtInEngine / ollama / customEndpoint / mcp / fileChat stay unset: not verified for R6.
   compare: { voice: true },
   lastVerifiedDate: '2026-10-16',
-  founderReviewedDate: '2026-10-16', // Ryan Lucas supplied scope facts and his own comment and asked to check the draft before it goes live; drives the Founder-reviewed banner + star. Do not merge/deploy before he has confirmed the draft.
   reviewSlug: 'spiritbox-ultimate-review',
   pqReview: {
     date: '2026-10-16',
