@@ -81,7 +81,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickPicks: {
         id: 'quick-picks',
         title: 'Quick Picks — One Product Per Category',
-        sponsoredSlot: true,
         content: 'Skip the reading — here is the specific product PromptQuorum would buy in each category, checked August 25, 2026.',
         columns: ['Category', 'Our pick', 'Best for'],
         rows: [
@@ -616,7 +615,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickPicks: {
         id: 'quick-picks',
         title: 'اختيارات سريعة — منتج واحد لكل فئة',
-        sponsoredSlot: true,
         content: 'تخطَّ القراءة — إليك المنتج المحدد الذي كانت PromptQuorum لتشتريه في كل فئة، تم التحقق منه في 25 أغسطس 2026.',
         columns: ['الفئة', 'اختيارنا', 'الأفضل لـ'],
         rows: [
@@ -1055,7 +1053,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickPicks: {
         id: 'quick-picks',
         title: 'Schnellauswahl — Ein Produkt pro Kategorie',
-        sponsoredSlot: true,
         content: 'Sparen Sie sich das Lesen — hier ist das konkrete Produkt, das PromptQuorum in jeder Kategorie kaufen würde, geprüft am 25. August 2026.',
         columns: ['Kategorie', 'Unsere Wahl', 'Am besten für'],
         rows: [
@@ -1503,7 +1500,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickPicks: {
         id: 'quick-picks',
         title: 'Recomendaciones rápidas — un producto por categoría',
-        sponsoredSlot: true,
         content: 'Sáltate la lectura — este es el producto concreto que compraría PromptQuorum en cada categoría, comprobado el 25 de agosto de 2026.',
         columns: ['Categoría', 'Nuestra recomendación', 'Mejor para'],
         rows: [
@@ -1947,7 +1943,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickPicks: {
         id: 'quick-picks',
         title: '빠른 추천 — 카테고리별 제품 하나',
-        sponsoredSlot: true,
         content: '전체 내용을 읽지 않아도 됩니다 — PromptQuorum이 각 카테고리에서 구매할 구체적인 제품입니다(2026년 8월 25일 확인).',
         columns: ['카테고리', '추천 제품', '적합한 대상'],
         rows: [
@@ -2390,7 +2385,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickPicks: {
         id: 'quick-picks',
         title: 'Choix Rapides — Un Produit Par Catégorie',
-        sponsoredSlot: true,
         content: 'Passez la lecture — voici le produit précis que PromptQuorum achèterait dans chaque catégorie, vérifié le 25 août 2026.',
         columns: ['Catégorie', 'Notre choix', 'Idéal pour'],
         rows: [
@@ -2834,7 +2828,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickPicks: {
         id: 'quick-picks',
         title: 'クイックピック——カテゴリーごとの一押し製品',
-        sponsoredSlot: true,
         content: '読む時間がない方へ——各カテゴリーで PromptQuorum が実際に買う製品はこちらです（2026年8月25日確認）。',
         columns: ['カテゴリー', 'おすすめ', '最適な用途'],
         rows: [
@@ -3277,7 +3270,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickPicks: {
         id: 'quick-picks',
         title: 'Escolhas Rápidas — Um Produto Por Categoria',
-        sponsoredSlot: true,
         content: 'Pule a leitura — aqui está o produto específico que a PromptQuorum compraria em cada categoria, conferido em 25 de agosto de 2026.',
         columns: ['Categoria', 'Nossa escolha', 'Melhor para'],
         rows: [
@@ -3721,7 +3713,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickPicks: {
         id: 'quick-picks',
         title: '快速推荐——每个类别一款产品',
-        sponsoredSlot: true,
         content: '跳过阅读——以下是 PromptQuorum 在每个类别中会购买的具体产品，核实于 2026 年 8 月 25 日。',
         columns: ['类别', '推荐', '适合'],
         rows: [

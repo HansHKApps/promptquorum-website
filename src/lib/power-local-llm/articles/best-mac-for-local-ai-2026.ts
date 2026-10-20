@@ -142,7 +142,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Editor\'s Choice: Mac Mini M5 Pro 64 GB',
-        sponsoredSlot: true,
         content:
           '**For most buyers choosing a Mac specifically for local AI, the Mac Mini M5 Pro with 64 GB of unified memory is the pick that balances capability, price, and running cost.** Its 64 GB clears every model up to 34B with context headroom and fits 70B Q4 tightly, it runs silently and draws only 25-55 W under inference load, and at about $2,700 (the $1,699 base model has only 24 GB) it is the cheapest Mac that holds a 64 GB model. It also makes an ideal always-on home or office AI server. Step down to the Mac Mini M6 32 GB (about $1,300) only if 7B-14B models genuinely cover your use case — its 32 GB ceiling cannot fit 30B or 70B models. Step up to a Mac Studio M5 Max 64 GB (about $3,500) if you want twice the memory bandwidth at the same memory size, to the MacBook Pro 16" only if you need portability, to a Mac Studio M5 Max 128 GB (about $5,100) only if you need 70B at higher quality on the desktop, or to a Mac Studio M5 Ultra if you need the largest local models.',
         callouts: [
@@ -716,7 +715,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Elección del editor: Mac Mini M5 Pro 64 GB',
-        sponsoredSlot: true,
         content:
           '**Para la mayoría de los compradores que eligen un Mac específicamente para IA local, el Mac Mini M5 Pro con 64 GB de memoria unificada es la opción que equilibra capacidad, precio y costo operativo.** Sus 64 GB acomodan todos los modelos hasta 34B con margen de contexto y ajustan 70B Q4, funciona en silencio y consume solo 25-55 W bajo carga de inferencia, y a unos $2,700 (el modelo base de $1,699 tiene solo 24 GB) es el Mac más económico que alberga un modelo de 64 GB. También es un servidor de IA siempre activo ideal para el hogar o la oficina. Baja al Mac Mini M6 de 32 GB (unos $1,300) solo si los modelos 7B-14B cubren de verdad tu caso de uso — su techo de 32 GB no admite modelos 30B ni 70B. Sube a un Mac Studio M5 Max de 64 GB (unos $3,500) si quieres el doble de ancho de banda con la misma memoria, al MacBook Pro 16" solo si necesitas portabilidad, a un Mac Studio M5 Max de 128 GB (unos $5,100) solo si necesitas 70B con mayor calidad en el escritorio, o a un Mac Studio M5 Ultra si necesitas los modelos locales más grandes.',
         callouts: [
@@ -1305,7 +1303,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Empfehlung der Redaktion: Mac Mini M5 Pro 64 GB',
-        sponsoredSlot: true,
         content:
           '**Für die meisten Käuferinnen und Käufer, die gezielt einen Mac für lokale KI wählen, ist der Mac Mini M5 Pro mit 64 GB Unified Memory die Wahl, die Leistungsfähigkeit, Preis und Betriebskosten ausbalanciert.** Seine 64 GB fassen jedes Modell bis 34B mit Kontext-Reserve und fassen 70B Q4 knapp, er arbeitet lautlos und zieht unter Inferenzlast nur 25-55 W, und bei etwa 2.700 $ (das Basismodell für 1.699 $ hat nur 24 GB) ist er der günstigste Mac, der ein Modell mit 64 GB fasst. Er gibt zudem einen idealen Always-on-KI-Server für Zuhause oder das Büro ab. Steigen Sie nur dann auf den Mac Mini M6 32 GB (ca. 1.300 $) herunter, wenn 7B-14B-Modelle Ihren Anwendungsfall wirklich abdecken — seine 32-GB-Grenze reicht nicht für 30B- oder 70B-Modelle. Wechseln Sie zu einem Mac Studio M5 Max mit 64 GB (ca. 3.500 $), wenn Sie bei gleicher Speichergröße die doppelte Speicherbandbreite wollen, zum MacBook Pro 16" nur, wenn Sie Portabilität brauchen, zu einem Mac Studio M5 Max mit 128 GB (ca. 5.100 $) nur, wenn Sie 70B in höherer Qualität auf dem Desktop brauchen, oder zu einem Mac Studio M5 Ultra, wenn Sie die größten lokalen Modelle brauchen.',
         callouts: [
@@ -1889,7 +1886,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Choix de la rédaction : Mac mini M5 Pro 64 Go',
-        sponsoredSlot: true,
         content:
           '**Pour la plupart des acheteurs qui choisissent un Mac spécifiquement pour l\'IA locale, le Mac mini M5 Pro doté de 64 Go de mémoire unifiée est le choix qui équilibre capacité, prix et coût d\'exploitation.** Ses 64 Go absorbent tous les modèles jusqu\'à 34B avec de la marge de contexte et font tenir le 70B Q4 de justesse, il fonctionne en silence et ne consomme que 25-55 W sous charge d\'inférence, et à environ 2 700 $ (le modèle de base à 1 699 $ n\'a que 24 Go) c\'est le Mac le moins cher qui contienne un modèle de 64 Go. Il fait aussi un serveur d\'IA toujours actif idéal pour la maison ou le bureau. Descendez au Mac mini M6 32 Go (environ 1 300 $) seulement si les modèles 7B-14B couvrent réellement votre usage — son plafond de 32 Go ne supporte pas les modèles 30B ou 70B. Passez à un Mac Studio M5 Max 64 Go (environ 3 500 $) si vous voulez le double de bande passante à mémoire égale, au MacBook Pro 16" uniquement si vous avez besoin de portabilité, à un Mac Studio M5 Max 128 Go (environ 5 100 $) uniquement si vous avez besoin du 70B en meilleure qualité sur le bureau, ou à un Mac Studio M5 Ultra si vous avez besoin des plus gros modèles locaux.',
         callouts: [
@@ -2465,7 +2461,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '編集部の選択：Mac mini M5 Pro 64GB',
-        sponsoredSlot: true,
         content:
           '**ローカルAI専用にMacを選ぶ大半の購入者にとって、64GBのunified memoryを備えたMac mini M5 Proが、能力・価格・運用コストのバランスが取れた選択肢です。** 64GBは34Bまでのあらゆるモデルをコンテキストの余裕とともに収め、70B Q4も余裕の少ない状態で収め、静音で動作し、推論負荷時の消費電力はわずか25-55Wです。約$2,700（$1,699のベースモデルは24GBのみ）で、64GBモデルを載せられる最も安いMacです。家庭やオフィスの常時稼働AIサーバーとしても理想的です。7B-14Bモデルで用途が本当に足りる場合のみMac mini M6 32GB（約$1,300）にダウングレードしてください——その32GBの上限は30Bや70Bモデルには対応できません。同じメモリ容量で2倍の帯域幅が欲しいならMac Studio M5 Max 64GB（約$3,500）へ、ポータビリティが必要な場合のみMacBook Pro 16"へ、デスクトップでより高品質な70Bが必要な場合のみMac Studio M5 Max 128GB（約$5,100）へ、最大のローカルモデルが必要な場合はMac Studio M5 Ultraへステップアップしてください。',
         callouts: [
@@ -3041,7 +3036,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '编辑推荐：Mac mini M5 Pro 64 GB',
-        sponsoredSlot: true,
         content:
           '**对于大多数专门为本地 AI 挑选 Mac 的购买者来说，配备 64 GB 统一内存的 Mac mini M5 Pro 是在能力、价格和运行成本之间取得平衡的选择。** 它的 64 GB 能装下最高 34B 的所有模型并留有上下文余量，也能较紧张地装下 70B Q4，运行静音，推理负载下功耗仅 25-55 W，约 $2,700 的价格（$1,699 的基础款只有 24 GB）使它成为能容纳 64 GB 模型的最便宜的 Mac。它也是理想的家用或办公常开 AI 服务器。只有当 7B-14B 模型确实能满足你的使用场景时，才降级选择 Mac mini M6 32 GB（约 $1,300）——它的 32 GB 上限无法支持 30B 或 70B 模型。如果你想在相同内存下获得两倍的内存带宽，就升级到 Mac Studio M5 Max 64 GB（约 $3,500）；只有当你需要便携性时，才升级到 MacBook Pro 16"；只有当你需要在桌面以更高质量跑 70B 时，才升级到 Mac Studio M5 Max 128 GB（约 $5,100）；如果你需要运行最大的本地模型，则升级到 Mac Studio M5 Ultra。',
         callouts: [
@@ -3617,7 +3611,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Escolha do editor: Mac Mini M5 Pro 64 GB',
-        sponsoredSlot: true,
         content:
           '**Para a maioria dos compradores que escolhem um Mac especificamente para IA local, o Mac Mini M5 Pro com 64 GB de memória unificada é a opção que equilibra capacidade, preço e custo operacional.** Seus 64 GB acomodam todos os modelos até 34B com margem de contexto e cabem 70B Q4 com margem apertada, ele funciona em silêncio e consome apenas 25-55 W sob carga de inferência, e por cerca de US$ 2.700 (o modelo base de US$ 1.699 tem apenas 24 GB) é o Mac mais barato que comporta um modelo de 64 GB. Ele também é um servidor de IA sempre ativo ideal para casa ou escritório. Desça para o Mac Mini M6 32 GB (cerca de US$ 1.300) apenas se modelos 7B-14B realmente cobrirem o seu caso de uso — seu teto de 32 GB não suporta modelos 30B ou 70B. Suba para um Mac Studio M5 Max de 64 GB (cerca de US$ 3.500) se quiser o dobro da largura de banda de memória com o mesmo tamanho de memória, para o MacBook Pro 16" apenas se precisar de portabilidade, para um Mac Studio M5 Max de 128 GB (cerca de US$ 5.100) apenas se precisar de 70B com maior qualidade no desktop, ou para um Mac Studio M5 Ultra se precisar dos maiores modelos locais.',
         callouts: [
@@ -4207,7 +4200,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'اختيار المحرر: Mac Mini M5 Pro 64 GB',
-        sponsoredSlot: true,
         content:
           '**لمعظم المشترين الذين يختارون Mac تحديداً للذكاء الاصطناعي المحلي، Mac Mini M5 Pro بذاكرة موحّدة 64 GB هو الخيار الذي يوازن بين السعة والسعر والتكلفة التشغيلية.** ذاكرته البالغة 64 GB تستوعب جميع النماذج حتى 34B مع هامش للسياق وتتسع لـ70B Q4 بهامش ضيق، ويعمل بصمت ولا يستهلك سوى 25-55 واط تحت حمل الاستدلال، وبحوالي 2,700 دولار (الطراز الأساسي بسعر 1,699 دولار لا يملك سوى 24 GB) هو أرخص Mac يستوعب نموذجاً بحجم 64 GB. كما يُعدّ خادم ذكاء اصطناعي دائم التشغيل مثالياً للمنزل أو المكتب. انتقل إلى Mac Mini M6 بذاكرة 32 GB (حوالي 1,300 دولار) فقط إذا كانت نماذج 7B-14B تغطي فعلاً حالة استخدامك — سقفه 32 GB لا يدعم نماذج 30B أو 70B. ارتقِ إلى Mac Studio M5 Max بذاكرة 64 GB (حوالي 3,500 دولار) إذا أردت ضعف عرض النطاق بنفس حجم الذاكرة، وإلى MacBook Pro 16" فقط إذا احتجت قابلية التنقل، وإلى Mac Studio M5 Max بذاكرة 128 GB (حوالي 5,100 دولار) فقط إذا احتجت نماذج 70B بجودة أعلى على سطح المكتب، أو إلى Mac Studio M5 Ultra إذا احتجت أكبر النماذج المحلية.',
         callouts: [
@@ -4796,7 +4788,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '편집자 추천: Mac Mini M5 Pro 64GB',
-        sponsoredSlot: true,
         content:
           '**로컬 AI를 위해 특별히 Mac을 선택하는 대부분의 구매자에게 통합 메모리 64GB의 Mac Mini M5 Pro는 성능, 가격, 운영 비용의 균형을 맞춘 선택입니다.** 64GB는 컨텍스트 여유를 두고 최대 34B 모델을 수용하며 70B Q4도 여유가 빠듯하게 수용합니다. 조용하게 작동하고 추론 부하 시 25-55W만 소비하며, 약 $2,700로(기본 $1,699 모델은 24GB뿐입니다) 64GB 모델을 담을 수 있는 가장 저렴한 Mac입니다. 또한 가정이나 사무실을 위한 이상적인 상시 가동 AI 서버이기도 합니다. 7B-14B 모델이 실제로 사용 사례를 충족하는 경우에만 Mac Mini M6 32GB(약 $1,300)로 내려가십시오. 32GB 한계로는 30B나 70B 모델을 담을 수 없습니다. 같은 메모리 크기에서 두 배의 메모리 대역폭을 원한다면 Mac Studio M5 Max 64GB(약 $3,500)로, 휴대성이 필요한 경우에만 MacBook Pro 16"로, 데스크톱에서 더 높은 품질의 70B가 필요한 경우에만 Mac Studio M5 Max 128GB(약 $5,100)로, 가장 큰 로컬 모델이 필요한 경우에는 Mac Studio M5 Ultra로 올라가십시오.',
         callouts: [

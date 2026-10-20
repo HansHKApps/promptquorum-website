@@ -193,7 +193,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'What You Pay For With ElevenLabs',
-        sponsoredSlot: true,
         content: 'ElevenLabs removes several tasks that running Kokoro yourself leaves with you:',
         columns: ['Cloud Benefit', 'What It Changes in Practice'],
         rows: [
@@ -987,7 +986,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'Wofür Sie bei ElevenLabs bezahlen',
-        sponsoredSlot: true,
         content: 'ElevenLabs nimmt Ihnen mehrere Aufgaben ab, die beim eigenständigen Betrieb von Kokoro bei Ihnen verbleiben:',
         columns: ['Cloud-Vorteil', 'Was das in der Praxis ändert'],
         rows: [
@@ -1781,7 +1779,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'Ce que vous payez avec ElevenLabs',
-        sponsoredSlot: true,
         content: 'ElevenLabs vous décharge de plusieurs tâches que l\'exploitation autonome de Kokoro vous laisse gérer :',
         columns: ['Avantage cloud', 'Ce que cela change en pratique'],
         rows: [
@@ -2575,7 +2572,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'Lo que pagas con ElevenLabs',
-        sponsoredSlot: true,
         content: 'ElevenLabs elimina varias tareas que quedan a tu cargo al ejecutar Kokoro tú mismo:',
         columns: ['Beneficio de la nube', 'Qué cambia en la práctica'],
         rows: [
@@ -3369,7 +3365,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'ElevenLabsで支払うもの',
-        sponsoredSlot: true,
         content: 'ElevenLabsは、Kokoroを自分で運用する場合に残される複数のタスクを取り除いてくれます:',
         columns: ['クラウドの利点', '実際に何が変わるか'],
         rows: [
@@ -4163,7 +4158,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: '使用ElevenLabs你付费的内容',
-        sponsoredSlot: true,
         content: 'ElevenLabs消除了自己运行Kokoro时留给你的若干任务:',
         columns: ['云端优势', '实际改变了什么'],
         rows: [
@@ -4957,7 +4951,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'Pelo que você paga com o ElevenLabs',
-        sponsoredSlot: true,
         content: 'O ElevenLabs elimina várias tarefas que ficam com você ao rodar o Kokoro por conta própria:',
         columns: ['Benefício em nuvem', 'O que muda na prática'],
         rows: [
@@ -5751,7 +5744,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'ما تدفع مقابله مع ElevenLabs',
-        sponsoredSlot: true,
         content: 'يزيل ElevenLabs عدة مهام تبقى على عاتقك عند تشغيل Kokoro بنفسك:',
         columns: ['ميزة سحابية', 'ما الذي يتغير عمليًا'],
         rows: [
@@ -6545,7 +6537,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'ElevenLabs를 사용하며 지불하는 것',
-        sponsoredSlot: true,
         content: 'ElevenLabs는 Kokoro를 직접 실행할 때 남는 여러 작업을 제거해 줍니다:',
         columns: ['클라우드 이점', '실제로 달라지는 점'],
         rows: [

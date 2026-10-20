@@ -78,7 +78,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Buy If / Skip If',
-        sponsoredSlot: true,
         content: 'Quick decision guide — does the EQ14 fit your needs? PromptQuorum\'s verdict: recommended for Home Assistant, home networking, light local models, and 24/7 low-power use.',
         items: [
           '**Buy the EQ14 if:**',
@@ -496,7 +495,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Kaufen wenn / Überspringen wenn',
-        sponsoredSlot: true,
         content: 'Kurzer Entscheidungsleitfaden — passt der EQ14 zu Ihren Anforderungen? Einschätzung von PromptQuorum: empfohlen für Home Assistant, Heimnetzwerk, leichte lokale Modelle und stromsparenden 24/7-Dauerbetrieb.',
         items: [
           '**Kaufen Sie den EQ14, wenn:**',
@@ -916,7 +914,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Acheter ou éviter',
-        sponsoredSlot: true,
         content: 'Guide de décision rapide — l\'EQ14 correspond-il à vos besoins ? Avis de PromptQuorum : recommandé pour Home Assistant, le réseau domestique, les petits modèles locaux et un usage permanent basse consommation.',
         items: [
           '**Achetez l\'EQ14 si :**',
@@ -1335,7 +1332,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Comprar si / Evitar si',
-        sponsoredSlot: true,
         content: 'Guía de decisión rápida — ¿encaja el EQ14 con lo que necesitas? Veredicto de PromptQuorum: recomendado para Home Assistant, redes domésticas, modelos locales ligeros y uso 24/7 de bajo consumo.',
         items: [
           '**Compra el EQ14 si:**',
@@ -1753,7 +1749,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: '買うべき人／見送るべき人',
-        sponsoredSlot: true,
         content: 'クイック判定ガイド — EQ14はあなたのニーズに合いますか？ PromptQuorumの結論：Home Assistant、家庭内ネットワーク、軽量ローカルモデル、24時間365日の低消費電力運用におすすめです。',
         items: [
           '**EQ14を買うべき人：**',
@@ -2170,7 +2165,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: '购买建议 / 跳过建议',
-        sponsoredSlot: true,
         content: '快速决策指南——EQ14 是否适合你的需求？PromptQuorum 的结论：适合用于 Home Assistant、家庭网络、轻量本地模型和 24/7 低功耗使用。',
         items: [
           '**以下情况建议购买 EQ14：**',
@@ -2587,7 +2581,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: '구매/건너뛰기 가이드',
-        sponsoredSlot: true,
         content: '빠른 결정 가이드 — EQ14가 당신의 필요에 맞습니까? PromptQuorum의 결론: Home Assistant, 홈 네트워킹, 경량 로컬 모델, 24시간 저전력 사용에 추천합니다.',
         items: [
           '**다음의 경우 EQ14를 구매하십시오:**',
@@ -3004,7 +2997,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Compre se / Evite se',
-        sponsoredSlot: true,
         content: 'Guia rápido de decisão — o EQ14 atende às suas necessidades? Veredito da PromptQuorum: recomendado para Home Assistant, rede doméstica, modelos locais leves e uso 24/7 de baixo consumo.',
         items: [
           '**Compre o EQ14 se:**',
@@ -3422,7 +3414,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'اشترِ إذا / تخطَّ إذا',
-        sponsoredSlot: true,
         content: 'دليل قرار سريع — هل يناسبك EQ14؟ حكم PromptQuorum: مُوصى به لـ Home Assistant، والشبكة المنزلية، والنماذج المحلية الخفيفة، والتشغيل المستمر منخفض الاستهلاك.',
         items: [
           '**اشترِ EQ14 إذا:**',
