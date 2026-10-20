@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-en.webp',
     title: 'Local AI Trends 2027, Part 6 of 10: Hybrid Routing Becomes a Product Category',
     seoTitle: 'Local AI Trends 2027 Part 6: Hybrid Routing | Prompt Bites',
-    metaDescription: 'Gartner now tracks AI gateways as a market, and LiteLLM, OpenRouter and Ollama cloud models already route requests. What changes when routing is a product.',
+    metaDescription: 'Gartner published a Market Guide for AI Gateways in October 2025; LiteLLM, OpenRouter and Ollama already route requests. What changes when routing is a product.',
     publishDate: '2026-07-16',
     dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
@@ -42,11 +42,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Will hybrid local-cloud LLM routing become a packaged product category by 2027?',
-        answer: 'Partly, and it is already happening. Gartner published a Market Guide for AI Gateways on 13 October 2025, treating gateways as a vendor category that governs AI traffic, limits unexpected provider costs and protects private data in API traffic. LiteLLM (MIT license), OpenRouter\'s Auto Router, Cloudflare AI Gateway and Ollama\'s cloud models already handle routing, fallbacks and local-plus-cloud model access. A packaged product that decides per request between your own hardware and the cloud is still mostly a forecast.',
+        answer: 'Partly, and it is already happening. Gartner published a Market Guide for AI Gateways on 13 October 2025, treating gateways as a vendor category that governs AI traffic, limits unexpected provider costs and protects private data in API traffic. LiteLLM (MIT license, except its enterprise/ directory), OpenRouter\'s Auto Router, Cloudflare AI Gateway and Ollama\'s cloud models already handle routing, fallbacks and local-plus-cloud model access. A packaged product that decides per request between your own hardware and the cloud is still mostly a forecast.',
         bullets: [
           'Category signal: Gartner Market Guide for AI Gateways, published 13 October 2025',
           'Working today: LiteLLM routing and fallbacks (supports Ollama models), OpenRouter Auto Router, Cloudflare AI Gateway retries and fallbacks',
-          'Local plus cloud behind one interface: Ollama cloud models, in preview since 19 September 2025',
+          'Local plus cloud behind one interface: Ollama cloud models, launched in preview on 19 September 2025 and now offered with Free, Pro and Max plans',
           'Still open: a packaged product that decides per request between your own hardware and the cloud is largely a forecast',
           'For the how-to of building routing logic yourself today, see the dedicated guide, not this piece',
         ],
@@ -59,7 +59,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'This is Part 6 of a 10-part Local AI Trends 2027 series — this piece covers the market/product-category angle on hybrid routing, not the how-to',
-          'Gartner published a Market Guide for AI Gateways on 13 October 2025, so gateways are now a tracked vendor category',
+          'Gartner published a Market Guide for AI Gateways on 13 October 2025, so AI gateways now have a Gartner Market Guide',
           'Routing, fallback and cost controls already ship in LiteLLM, OpenRouter\'s Auto Router and Cloudflare AI Gateway; Ollama cloud models put local and cloud models behind one interface',
           'The practical change for teams: routing becomes a build-vs-buy decision, not just an engineering task handled internally',
           'For the actual how-to of building hybrid routing logic today, see <a href="/prompt-bites/hybrid-local-cloud-llm-strategy">When Should You Combine Local and Cloud LLM Inference?</a> — that content is not repeated here',
@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**Once packaged routing-layer products exist as a distinct category, the decision facing a team shifts from "how do we build this" to "do we build or buy this."** That is a procurement and vendor-evaluation question, not primarily an engineering one — closer to choosing a CDN provider than writing a networking stack from scratch.',
           'A packaged product bundles what a team would otherwise build and maintain separately: a routing decision engine, a monitoring dashboard and failover handling. The tradeoff is the usual build-vs-buy one — less engineering time spent on routing logic, in exchange for vendor lock-in risk and a recurring subscription cost instead of one-time internal engineering effort.',
-          '**What already ships (examples, not a ranking):** [LiteLLM](https://docs.litellm.ai/docs/routing) is MIT-licensed and offers load balancing, retries, fallbacks and cost-, latency- and usage-based routing strategies, and it supports Ollama models. OpenRouter\'s [Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) picks a hosted model per prompt by task type and applies fallbacks at no extra fee, but it routes among cloud models only. Cloudflare\'s [AI Gateway](https://developers.cloudflare.com/ai-gateway/) adds observability, caching, rate limiting and model fallbacks in front of hosted providers. [Ollama cloud models](https://ollama.com/blog/cloud-models), in preview since 19 September 2025, let one CLI and API address both local and cloud models. The per-request choice between your own hardware and the cloud, with your data-residency policy built in, is the part that still mostly needs team-specific logic.',
+          '**What already ships (examples, not a ranking):** [LiteLLM](https://docs.litellm.ai/docs/routing) is MIT-licensed (except its enterprise/ directory) and offers load balancing, retries, fallbacks and cost-, latency- and usage-based routing strategies, and it supports Ollama models. OpenRouter\'s [Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) picks a hosted model per prompt by task type and applies fallbacks at no extra fee, but it routes among cloud models only. Cloudflare\'s [AI Gateway](https://developers.cloudflare.com/ai-gateway/) adds observability, caching, rate limiting and model fallbacks in front of hosted providers. [Ollama cloud models](https://ollama.com/blog/cloud-models), launched in preview on 19 September 2025 and now offered with Free, Pro and Max plans, let one CLI and API address both local and cloud models. The per-request choice between your own hardware and the cloud, with your data-residency policy built in, is the part that still mostly needs team-specific logic.',
           'For teams evaluating this shift, the open questions are ordinary procurement questions: does the vendor product support your specific local inference stack, does it meet the same data-residency requirements you\'d enforce in custom code, and does the subscription cost stay below what an in-house engineer\'s time would cost to build and maintain the same logic. None of those questions are answerable in general — they depend on team size, workload variability, and compliance requirements specific to each organization. Treat vendor privacy statements as claims to verify: Ollama says its cloud does not retain your data, but that is the vendor\'s own statement, and any request routed to a hosted model leaves your hardware.',
         ],
       },
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Which tools route between models or between local and cloud today?',
-            a: 'Examples include LiteLLM (MIT-licensed, supports Ollama models), OpenRouter\'s Auto Router (hosted models only), Cloudflare AI Gateway (fallbacks and caching in front of hosted providers) and Ollama cloud models (local and cloud models behind one interface). These are examples checked against each vendor\'s documentation, not a ranking or endorsement.',
+            a: 'Examples include LiteLLM (MIT-licensed except its enterprise/ directory, supports Ollama models), OpenRouter\'s Auto Router (hosted models only), Cloudflare AI Gateway (fallbacks and caching in front of hosted providers) and Ollama cloud models (local and cloud models behind one interface). These are examples checked against each vendor\'s documentation, not a ranking or endorsement.',
           },
           {
             q: 'Does a packaged routing product replace the need to understand routing patterns?',
@@ -119,9 +119,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Sources',
         items: [
           '[Gartner: Market Guide for AI Gateways (13 October 2025)](https://www.gartner.com/en/documents/7051698) — gateways as a vendor category',
-          '[LiteLLM docs: routing and fallbacks](https://docs.litellm.ai/docs/routing) — strategies, MIT license',
+          '[LiteLLM docs: routing and fallbacks](https://docs.litellm.ai/docs/routing) — strategies, MIT license (except enterprise/ directory)',
           '[OpenRouter docs: Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) — per-prompt model selection',
           '[Ollama blog: cloud models (19 September 2025)](https://ollama.com/blog/cloud-models) — local and cloud under one interface',
+          '[Ollama: pricing](https://ollama.com/pricing) — Free, Pro and Max plans',
         ],
       },
     },
@@ -131,7 +132,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-de.webp',
     title: 'Local AI Trends 2027, Teil 6 von 10: Hybrides Routing wird zur eigenen Produktkategorie',
     seoTitle: 'Local AI Trends 2027, Teil 6: Hybrid-Routing | Prompt Bites',
-    metaDescription: 'Gartner führt KI-Gateways als Markt, LiteLLM, OpenRouter und Ollama-Cloud-Modelle routen schon heute. Was sich ändert, wenn Routing zum Produkt wird.',
+    metaDescription: 'Gartner veröffentlichte im Oktober 2025 einen Market Guide for AI Gateways; LiteLLM, OpenRouter und Ollama routen schon heute. Was sich ändert, wenn Routing zum Produkt wird.',
     publishDate: '2026-07-16',
     dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
@@ -157,11 +158,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Wird hybrides Lokal-Cloud-LLM-Routing bis 2027 zu einer eigenen Produktkategorie?',
-        answer: 'Teilweise, und es passiert bereits. Gartner hat am 13. Oktober 2025 einen Market Guide for AI Gateways veröffentlicht und behandelt Gateways als Anbieterkategorie, die KI-Datenverkehr steuert, unerwartete Anbieterkosten begrenzt und private Daten im API-Verkehr schützt. LiteLLM (MIT-Lizenz), der Auto Router von OpenRouter, Cloudflare AI Gateway und die Cloud-Modelle von Ollama übernehmen bereits Routing, Fallbacks und den Zugriff auf lokale und Cloud-Modelle. Ein fertiges Produkt, das pro Anfrage zwischen eigener Hardware und Cloud entscheidet, ist noch überwiegend eine Prognose.',
+        answer: 'Teilweise, und es passiert bereits. Gartner hat am 13. Oktober 2025 einen Market Guide for AI Gateways veröffentlicht und behandelt Gateways als Anbieterkategorie, die KI-Datenverkehr steuert, unerwartete Anbieterkosten begrenzt und private Daten im API-Verkehr schützt. LiteLLM (MIT-Lizenz, außer dem Verzeichnis enterprise/), der Auto Router von OpenRouter, Cloudflare AI Gateway und die Cloud-Modelle von Ollama übernehmen bereits Routing, Fallbacks und den Zugriff auf lokale und Cloud-Modelle. Ein fertiges Produkt, das pro Anfrage zwischen eigener Hardware und Cloud entscheidet, ist noch überwiegend eine Prognose.',
         bullets: [
           'Kategoriesignal: Gartner Market Guide for AI Gateways, veröffentlicht am 13. Oktober 2025',
           'Heute im Einsatz: LiteLLM-Routing und Fallbacks (unterstützt Ollama-Modelle), OpenRouter Auto Router, Retries und Fallbacks im Cloudflare AI Gateway',
-          'Lokal und Cloud hinter einer Oberfläche: Ollama-Cloud-Modelle, in der Vorschau seit dem 19. September 2025',
+          'Lokal und Cloud hinter einer Oberfläche: Ollama-Cloud-Modelle, am 19. September 2025 in der Vorschau gestartet und inzwischen mit Free-, Pro- und Max-Tarifen angeboten',
           'Noch offen: Ein fertiges Produkt, das pro Anfrage zwischen eigener Hardware und Cloud entscheidet, ist überwiegend eine Prognose',
           'Für die Anleitung, wie Sie Routing-Logik heute selbst bauen, siehe den dedizierten Leitfaden, nicht diesen Beitrag',
         ],
@@ -174,7 +175,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Dies ist Teil 6 einer 10-teiligen Local-AI-Trends-2027-Serie — dieser Beitrag behandelt die Markt-/Produktkategorie-Perspektive auf hybrides Routing, nicht die Anleitung',
-          'Gartner hat am 13. Oktober 2025 einen Market Guide for AI Gateways veröffentlicht, Gateways sind damit eine beobachtete Anbieterkategorie',
+          'Gartner hat am 13. Oktober 2025 einen Market Guide for AI Gateways veröffentlicht, damit gibt es für KI-Gateways einen eigenen Gartner-Market-Guide',
           'Routing, Fallbacks und Kostenkontrolle gibt es bereits in LiteLLM, im Auto Router von OpenRouter und im Cloudflare AI Gateway; Ollama-Cloud-Modelle bringen lokale und Cloud-Modelle hinter eine Oberfläche',
           'Die praktische Änderung für Teams: Routing wird zu einer Build-vs-Buy-Entscheidung, nicht nur zu einer intern erledigten Engineering-Aufgabe',
           'Für die tatsächliche Anleitung zum Bau hybrider Routing-Logik siehe <a href="/de/prompt-bites/hybrid-local-cloud-llm-strategy">Wann sollten Sie lokale und Cloud-LLM-Inferenz kombinieren?</a> — dieser Inhalt wird hier nicht wiederholt',
@@ -199,7 +200,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**Sobald fertige Routing-Layer-Produkte als eigene Kategorie existieren, verschiebt sich die Entscheidung eines Teams von „wie bauen wir das" zu „bauen oder kaufen wir das".** Das ist eine Beschaffungs- und Anbieterbewertungsfrage, nicht in erster Linie eine Engineering-Frage — näher an der Wahl eines CDN-Anbieters als am Schreiben eines eigenen Netzwerk-Stacks.',
           'Ein fertiges Produkt bündelt, was ein Team sonst getrennt bauen und pflegen müsste: eine Routing-Entscheidungslogik, ein Monitoring-Dashboard und Failover-Behandlung. Der Tradeoff ist der übliche Build-vs-Buy: weniger Engineering-Zeit für Routing-Logik, dafür Abhängigkeit vom Anbieter und laufende Abo-Kosten statt einmaligem internem Entwicklungsaufwand.',
-          '**Was es bereits gibt (Beispiele, kein Ranking):** [LiteLLM](https://docs.litellm.ai/docs/routing) steht unter der MIT-Lizenz und bietet Lastverteilung, Retries, Fallbacks sowie kosten-, latenz- und nutzungsbasierte Routing-Strategien; es unterstützt Ollama-Modelle. Der [Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) von OpenRouter wählt pro Prompt nach Aufgabentyp ein gehostetes Modell und wendet Fallbacks ohne Aufpreis an, routet aber nur zwischen Cloud-Modellen. Das [AI Gateway](https://developers.cloudflare.com/ai-gateway/) von Cloudflare ergänzt Observability, Caching, Rate Limiting und Modell-Fallbacks vor gehosteten Anbietern. Mit [Ollama-Cloud-Modellen](https://ollama.com/blog/cloud-models), seit dem 19. September 2025 in der Vorschau, lassen sich lokale und Cloud-Modelle über dieselbe CLI und API ansprechen. Die Entscheidung pro Anfrage zwischen eigener Hardware und Cloud, mit eingebauter Datenresidenz-Richtlinie, braucht dagegen überwiegend weiterhin teamspezifische Logik.',
+          '**Was es bereits gibt (Beispiele, kein Ranking):** [LiteLLM](https://docs.litellm.ai/docs/routing) steht unter der MIT-Lizenz (außer dem Verzeichnis enterprise/) und bietet Lastverteilung, Retries, Fallbacks sowie kosten-, latenz- und nutzungsbasierte Routing-Strategien; es unterstützt Ollama-Modelle. Der [Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) von OpenRouter wählt pro Prompt nach Aufgabentyp ein gehostetes Modell und wendet Fallbacks ohne Aufpreis an, routet aber nur zwischen Cloud-Modellen. Das [AI Gateway](https://developers.cloudflare.com/ai-gateway/) von Cloudflare ergänzt Observability, Caching, Rate Limiting und Modell-Fallbacks vor gehosteten Anbietern. Mit [Ollama-Cloud-Modellen](https://ollama.com/blog/cloud-models), am 19. September 2025 in der Vorschau gestartet und inzwischen mit Free-, Pro- und Max-Tarifen angeboten, lassen sich lokale und Cloud-Modelle über dieselbe CLI und API ansprechen. Die Entscheidung pro Anfrage zwischen eigener Hardware und Cloud, mit eingebauter Datenresidenz-Richtlinie, braucht dagegen überwiegend weiterhin teamspezifische Logik.',
           'Für Teams, die diesen Wandel bewerten, sind die offenen Fragen gewöhnliche Beschaffungsfragen: Unterstützt das Anbieterprodukt Ihren spezifischen lokalen Inferenz-Stack, erfüllt es dieselben Anforderungen an den Datenstandort, die Sie in Eigenbau-Code durchsetzen würden, und bleibt die Abo-Kosten unter dem, was die Zeit eines internen Entwicklers für Bau und Pflege derselben Logik kosten würde. Keine dieser Fragen ist allgemein zu beantworten — sie hängen von Teamgröße, Auslastungsschwankungen und den jeweiligen Compliance-Anforderungen der Organisation ab. Behandeln Sie Datenschutzaussagen von Anbietern als Behauptungen, die Sie selbst prüfen: Ollama gibt an, dass seine Cloud Ihre Daten nicht speichert, aber das ist die Aussage des Anbieters, und jede an ein gehostetes Modell geroutete Anfrage verlässt Ihre Hardware.',
         ],
       },
@@ -213,7 +214,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Welche Werkzeuge routen heute zwischen Modellen oder zwischen lokal und Cloud?',
-            a: 'Beispiele sind LiteLLM (MIT-Lizenz, unterstützt Ollama-Modelle), der Auto Router von OpenRouter (nur gehostete Modelle), Cloudflare AI Gateway (Fallbacks und Caching vor gehosteten Anbietern) und Ollama-Cloud-Modelle (lokale und Cloud-Modelle hinter einer Oberfläche). Das sind anhand der jeweiligen Dokumentation geprüfte Beispiele, kein Ranking und keine Empfehlung.',
+            a: 'Beispiele sind LiteLLM (MIT-Lizenz außer dem Verzeichnis enterprise/, unterstützt Ollama-Modelle), der Auto Router von OpenRouter (nur gehostete Modelle), Cloudflare AI Gateway (Fallbacks und Caching vor gehosteten Anbietern) und Ollama-Cloud-Modelle (lokale und Cloud-Modelle hinter einer Oberfläche). Das sind anhand der jeweiligen Dokumentation geprüfte Beispiele, kein Ranking und keine Empfehlung.',
           },
           {
             q: 'Ersetzt ein fertiges Routing-Produkt das Verständnis der Routing-Muster?',
@@ -234,9 +235,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Quellen',
         items: [
           '[Gartner: Market Guide for AI Gateways (13. Oktober 2025)](https://www.gartner.com/en/documents/7051698) — Gateways als Anbieterkategorie',
-          '[LiteLLM-Dokumentation: Routing und Fallbacks](https://docs.litellm.ai/docs/routing) — Strategien, MIT-Lizenz',
+          '[LiteLLM-Dokumentation: Routing und Fallbacks](https://docs.litellm.ai/docs/routing) — Strategien, MIT-Lizenz (außer Verzeichnis enterprise/)',
           '[OpenRouter-Dokumentation: Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) — Modellauswahl pro Prompt',
           '[Ollama-Blog: Cloud-Modelle (19. September 2025)](https://ollama.com/blog/cloud-models) — lokal und Cloud über eine Oberfläche',
+          '[Ollama: Preise](https://ollama.com/pricing) — Free-, Pro- und Max-Tarife',
         ],
       },
     },
@@ -246,7 +248,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-fr.webp',
     title: 'Tendances de l\'IA locale 2027, partie 6 sur 10 : le routage hybride devient une catégorie de produits',
     seoTitle: 'IA locale 2027, partie 6 : routage hybride | Prompt Bites',
-    metaDescription: 'Gartner suit les passerelles d\'IA comme un marché, et LiteLLM, OpenRouter et Ollama routent déjà. Ce qui change quand le routage devient un produit.',
+    metaDescription: 'Gartner a publié un Market Guide for AI Gateways en octobre 2025 ; LiteLLM, OpenRouter et Ollama routent déjà. Ce qui change quand le routage devient un produit.',
     publishDate: '2026-07-16',
     dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
@@ -272,11 +274,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Le routage hybride local-cloud pour LLM deviendra-t-il une catégorie de produits packagés d\'ici 2027 ?',
-        answer: 'En partie, et cela se produit déjà. Gartner a publié un Market Guide for AI Gateways le 13 octobre 2025, qui traite les passerelles comme une catégorie de fournisseurs qui gouverne le trafic d\'IA, limite les coûts imprévus des fournisseurs et protège les données privées dans le trafic d\'API. LiteLLM (licence MIT), l\'Auto Router d\'OpenRouter, Cloudflare AI Gateway et les modèles cloud d\'Ollama gèrent déjà le routage, les replis et l\'accès à des modèles locaux et cloud. Un produit packagé qui décide à chaque requête entre votre propre matériel et le cloud reste surtout une prévision.',
+        answer: 'En partie, et cela se produit déjà. Gartner a publié un Market Guide for AI Gateways le 13 octobre 2025, qui traite les passerelles comme une catégorie de fournisseurs qui gouverne le trafic d\'IA, limite les coûts imprévus des fournisseurs et protège les données privées dans le trafic d\'API. LiteLLM (licence MIT, hors répertoire enterprise/), l\'Auto Router d\'OpenRouter, Cloudflare AI Gateway et les modèles cloud d\'Ollama gèrent déjà le routage, les replis et l\'accès à des modèles locaux et cloud. Un produit packagé qui décide à chaque requête entre votre propre matériel et le cloud reste surtout une prévision.',
         bullets: [
           'Signal de catégorie : Gartner Market Guide for AI Gateways, publié le 13 octobre 2025',
           'Déjà disponible : routage et replis de LiteLLM (prend en charge les modèles Ollama), Auto Router d\'OpenRouter, nouvelles tentatives et replis de Cloudflare AI Gateway',
-          'Local et cloud derrière une seule interface : modèles cloud d\'Ollama, en préversion depuis le 19 septembre 2025',
+          'Local et cloud derrière une seule interface : modèles cloud d\'Ollama, lancés en préversion le 19 septembre 2025 et désormais proposés avec les offres Free, Pro et Max',
           'Encore ouvert : un produit packagé qui décide à chaque requête entre votre propre matériel et le cloud reste largement une prévision',
           'Pour le how-to de construction d\'une logique de routage vous-même aujourd\'hui, voir le guide dédié, pas cet article',
         ],
@@ -289,7 +291,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Ceci est la partie 6 d\'une série de 10 sur les tendances de l\'IA locale 2027 — cet article traite l\'angle marché/catégorie de produit du routage hybride, pas le how-to',
-          'Gartner a publié un Market Guide for AI Gateways le 13 octobre 2025 : les passerelles sont désormais une catégorie de fournisseurs suivie',
+          'Gartner a publié un Market Guide for AI Gateways le 13 octobre 2025 : les passerelles ont désormais leur propre Market Guide chez Gartner',
           'Routage, replis et contrôle des coûts existent déjà dans LiteLLM, l\'Auto Router d\'OpenRouter et Cloudflare AI Gateway ; les modèles cloud d\'Ollama placent modèles locaux et cloud derrière une seule interface',
           'Le changement pratique pour les équipes : le routage devient une décision build-vs-buy, pas seulement une tâche d\'ingénierie traitée en interne',
           'Pour le how-to concret de construction d\'une logique de routage hybride aujourd\'hui, voir <a href="/fr/prompt-bites/hybrid-local-cloud-llm-strategy">Quand faut-il combiner inférence LLM locale et cloud ?</a> — ce contenu n\'est pas répété ici',
@@ -314,7 +316,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**Une fois que des produits de couche de routage packagés existent comme catégorie distincte, la décision d\'une équipe passe de « comment construisons-nous cela » à « construisons-nous ou achetons-nous cela ».** C\'est une question d\'achat et d\'évaluation de fournisseur, pas principalement une question d\'ingénierie — plus proche du choix d\'un fournisseur de CDN que de l\'écriture d\'une pile réseau à partir de zéro.',
           'Un produit packagé regroupe ce qu\'une équipe devrait sinon construire et maintenir séparément : un moteur de décision de routage, un tableau de bord de supervision et la gestion du basculement. Le compromis est le classique build-vs-buy : moins de temps d\'ingénierie consacré à la logique de routage, en échange d\'un risque de dépendance au fournisseur et d\'un abonnement récurrent plutôt que d\'un effort d\'ingénierie interne ponctuel.',
-          '**Ce qui existe déjà (exemples, pas un classement) :** [LiteLLM](https://docs.litellm.ai/docs/routing) est sous licence MIT et propose répartition de charge, nouvelles tentatives, replis et stratégies de routage fondées sur le coût, la latence et l\'usage ; il prend en charge les modèles Ollama. L\'[Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) d\'OpenRouter choisit un modèle hébergé par requête selon le type de tâche et applique des replis sans frais supplémentaires, mais il ne route qu\'entre modèles cloud. L\'[AI Gateway](https://developers.cloudflare.com/ai-gateway/) de Cloudflare ajoute observabilité, cache, limitation de débit et replis de modèles devant des fournisseurs hébergés. Les [modèles cloud d\'Ollama](https://ollama.com/blog/cloud-models), en préversion depuis le 19 septembre 2025, permettent d\'adresser modèles locaux et cloud avec la même CLI et la même API. Le choix à chaque requête entre votre matériel et le cloud, avec votre politique de résidence des données intégrée, demande encore surtout une logique propre à l\'équipe.',
+          '**Ce qui existe déjà (exemples, pas un classement) :** [LiteLLM](https://docs.litellm.ai/docs/routing) est sous licence MIT (hors répertoire enterprise/) et propose répartition de charge, nouvelles tentatives, replis et stratégies de routage fondées sur le coût, la latence et l\'usage ; il prend en charge les modèles Ollama. L\'[Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) d\'OpenRouter choisit un modèle hébergé par requête selon le type de tâche et applique des replis sans frais supplémentaires, mais il ne route qu\'entre modèles cloud. L\'[AI Gateway](https://developers.cloudflare.com/ai-gateway/) de Cloudflare ajoute observabilité, cache, limitation de débit et replis de modèles devant des fournisseurs hébergés. Les [modèles cloud d\'Ollama](https://ollama.com/blog/cloud-models), lancés en préversion le 19 septembre 2025 et désormais proposés avec les offres Free, Pro et Max, permettent d\'adresser modèles locaux et cloud avec la même CLI et la même API. Le choix à chaque requête entre votre matériel et le cloud, avec votre politique de résidence des données intégrée, demande encore surtout une logique propre à l\'équipe.',
           'Pour les équipes qui évaluent ce changement, les questions ouvertes sont des questions d\'achat ordinaires : le produit du fournisseur prend-il en charge votre pile d\'inférence locale spécifique, respecte-t-il les mêmes exigences de résidence des données que vous appliqueriez dans du code sur mesure, et le coût d\'abonnement reste-t-il inférieur à ce que coûterait le temps d\'un ingénieur interne pour construire et maintenir la même logique. Aucune de ces questions n\'a de réponse générale — elles dépendent de la taille de l\'équipe, de la variabilité de la charge de travail et des exigences de conformité propres à chaque organisation. Considérez les déclarations de confidentialité des fournisseurs comme des affirmations à vérifier : Ollama indique que son cloud ne conserve pas vos données, mais c\'est la déclaration du fournisseur lui-même, et toute requête routée vers un modèle hébergé quitte votre matériel.',
         ],
       },
@@ -328,7 +330,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quels outils routent aujourd\'hui entre modèles ou entre local et cloud ?',
-            a: 'Parmi les exemples : LiteLLM (licence MIT, prend en charge les modèles Ollama), l\'Auto Router d\'OpenRouter (modèles hébergés uniquement), Cloudflare AI Gateway (replis et cache devant des fournisseurs hébergés) et les modèles cloud d\'Ollama (modèles locaux et cloud derrière une seule interface). Ce sont des exemples vérifiés dans la documentation de chaque éditeur, pas un classement ni une recommandation.',
+            a: 'Parmi les exemples : LiteLLM (licence MIT hors répertoire enterprise/, prend en charge les modèles Ollama), l\'Auto Router d\'OpenRouter (modèles hébergés uniquement), Cloudflare AI Gateway (replis et cache devant des fournisseurs hébergés) et les modèles cloud d\'Ollama (modèles locaux et cloud derrière une seule interface). Ce sont des exemples vérifiés dans la documentation de chaque éditeur, pas un classement ni une recommandation.',
           },
           {
             q: 'Un produit de routage packagé remplace-t-il le besoin de comprendre les schémas de routage ?',
@@ -349,9 +351,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Sources',
         items: [
           '[Gartner : Market Guide for AI Gateways (13 octobre 2025)](https://www.gartner.com/en/documents/7051698) — les passerelles comme catégorie de fournisseurs',
-          '[Documentation LiteLLM : routage et replis](https://docs.litellm.ai/docs/routing) — stratégies, licence MIT',
+          '[Documentation LiteLLM : routage et replis](https://docs.litellm.ai/docs/routing) — stratégies, licence MIT (hors répertoire enterprise/)',
           '[Documentation OpenRouter : Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) — choix du modèle par requête',
           '[Blog Ollama : modèles cloud (19 septembre 2025)](https://ollama.com/blog/cloud-models) — local et cloud sous une seule interface',
+          '[Ollama : tarifs](https://ollama.com/pricing) — offres Free, Pro et Max',
         ],
       },
     },
@@ -361,7 +364,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-ja.webp',
     title: 'ローカルAIトレンド2027 第6回（全10回）：ハイブリッドルーティングが製品カテゴリになる',
     seoTitle: 'ローカルAI 2027 第6回：ハイブリッドルーティング',
-    metaDescription: 'GartnerはAIゲートウェイを市場として追跡し、LiteLLM、OpenRouter、Ollamaのクラウドモデルが既にリクエストをルーティング。ルーティングが製品になると何が変わるか。',
+    metaDescription: 'Gartnerは2025年10月にAI Gateways向けMarket Guideを公開し、LiteLLM、OpenRouter、Ollamaが既にルーティング。ルーティングが製品になると何が変わるか。',
     publishDate: '2026-07-16',
     dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
@@ -387,11 +390,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'ハイブリッドなローカル・クラウドLLMルーティングは2027年までにパッケージ化された製品カテゴリになりますか？',
-        answer: '一部はそうであり、既に起きています。Gartnerは2025年10月13日にAIゲートウェイのMarket Guideを公開し、ゲートウェイを、AIトラフィックを統制し、プロバイダー費用の想定外の増加を抑え、API通信内の非公開データを保護するベンダーカテゴリとして扱っています。LiteLLM（MITライセンス）、OpenRouterのAuto Router、Cloudflare AI Gateway、Ollamaのクラウドモデルは、既にルーティング、フォールバック、ローカルとクラウドのモデルへのアクセスを提供しています。自社ハードウェアとクラウドのどちらで処理するかをリクエストごとに決めるパッケージ製品は、まだ主に予測の段階です。',
+        answer: '一部はそうであり、既に起きています。Gartnerは2025年10月13日にAIゲートウェイのMarket Guideを公開し、ゲートウェイを、AIトラフィックを統制し、プロバイダー費用の想定外の増加を抑え、API通信内の非公開データを保護するベンダーカテゴリとして扱っています。LiteLLM（enterprise/ディレクトリを除きMITライセンス）、OpenRouterのAuto Router、Cloudflare AI Gateway、Ollamaのクラウドモデルは、既にルーティング、フォールバック、ローカルとクラウドのモデルへのアクセスを提供しています。自社ハードウェアとクラウドのどちらで処理するかをリクエストごとに決めるパッケージ製品は、まだ主に予測の段階です。',
         bullets: [
           'カテゴリのシグナル：Gartner Market Guide for AI Gateways（2025年10月13日公開）',
           '既に動作しているもの：LiteLLMのルーティングとフォールバック（Ollamaモデル対応）、OpenRouter Auto Router、Cloudflare AI Gatewayのリトライとフォールバック',
-          'ローカルとクラウドを1つのインターフェースで：Ollamaクラウドモデル（2025年9月19日からプレビュー）',
+          'ローカルとクラウドを1つのインターフェースで：Ollamaクラウドモデル（2025年9月19日にプレビューとして開始、現在はFree・Pro・Maxプランで提供）',
           '未解決の点：自社ハードウェアとクラウドのどちらかをリクエストごとに判断するパッケージ製品は、大部分がまだ予測です',
           'ルーティングロジックを今日自分で構築する方法は、本記事ではなく専用ガイドをご覧ください',
         ],
@@ -404,7 +407,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'これはローカルAIトレンド2027シリーズ全10回の第6回です——本稿はハイブリッドルーティングの市場・製品カテゴリの観点を扱い、ハウツーではありません',
-          'Gartnerは2025年10月13日にAIゲートウェイのMarket Guideを公開しており、ゲートウェイは追跡対象のベンダーカテゴリになっています',
+          'Gartnerは2025年10月13日にAIゲートウェイのMarket Guideを公開しており、AIゲートウェイにはGartnerのMarket Guideが存在します',
           'ルーティング、フォールバック、コスト管理は既にLiteLLM、OpenRouterのAuto Router、Cloudflare AI Gatewayに搭載されており、Ollamaのクラウドモデルはローカルとクラウドのモデルを1つのインターフェースにまとめます',
           'チームにとっての実務上の変化：ルーティングは社内で処理するエンジニアリング作業にとどまらず、自作か購入かの判断になります',
           'ハイブリッドルーティングロジックを今日構築する実際のハウツーは<a href="/ja/prompt-bites/hybrid-local-cloud-llm-strategy">ローカルとクラウドのLLM推論を組み合わせるべきタイミングとは？</a>をご覧ください——その内容はここでは繰り返しません',
@@ -429,7 +432,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**パッケージ化されたルーティングレイヤー製品が独立したカテゴリとして存在するようになると、チームが直面する判断は「どう構築するか」から「内製するか購入するか」へと移行します。** これは主にエンジニアリングの問題ではなく、調達とベンダー評価の問題であり、ネットワークスタックをゼロから書くというよりCDNプロバイダーを選ぶことに近い判断です。',
           'パッケージ製品は、チームが本来別々に構築・保守する必要があるもの、つまりルーティング判断エンジン、監視ダッシュボード、フェイルオーバー処理をまとめて提供します。トレードオフは自作か購入かという通常のものです。ルーティングロジックに割くエンジニアリング時間が減る代わりに、ベンダーロックインのリスクと、一度きりの社内開発ではなく継続的なサブスクリプション費用が発生します。',
-          '**既に提供されているもの（例であり、ランキングではありません）：** [LiteLLM](https://docs.litellm.ai/docs/routing)はMITライセンスで、負荷分散、リトライ、フォールバック、コスト・レイテンシ・使用量に基づくルーティング戦略を提供し、Ollamaモデルにも対応しています。OpenRouterの[Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router)はタスクの種類に応じてプロンプトごとにホスト型モデルを選び、追加料金なしでフォールバックを適用しますが、ルーティング対象はクラウドモデルのみです。Cloudflareの[AI Gateway](https://developers.cloudflare.com/ai-gateway/)は、ホスト型プロバイダーの前段に可観測性、キャッシュ、レート制限、モデルフォールバックを追加します。[Ollamaクラウドモデル](https://ollama.com/blog/cloud-models)（2025年9月19日からプレビュー）では、同じCLIとAPIでローカルとクラウドの両方のモデルを扱えます。自社ハードウェアとクラウドのどちらを使うかをリクエストごとに、データ所在地ポリシーを組み込んで判断する部分には、依然としてチーム固有のロジックが主に必要です。',
+          '**既に提供されているもの（例であり、ランキングではありません）：** [LiteLLM](https://docs.litellm.ai/docs/routing)はMITライセンス（enterprise/ディレクトリを除く）で、負荷分散、リトライ、フォールバック、コスト・レイテンシ・使用量に基づくルーティング戦略を提供し、Ollamaモデルにも対応しています。OpenRouterの[Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router)はタスクの種類に応じてプロンプトごとにホスト型モデルを選び、追加料金なしでフォールバックを適用しますが、ルーティング対象はクラウドモデルのみです。Cloudflareの[AI Gateway](https://developers.cloudflare.com/ai-gateway/)は、ホスト型プロバイダーの前段に可観測性、キャッシュ、レート制限、モデルフォールバックを追加します。[Ollamaクラウドモデル](https://ollama.com/blog/cloud-models)（2025年9月19日にプレビューとして開始、現在はFree・Pro・Maxプランで提供）では、同じCLIとAPIでローカルとクラウドの両方のモデルを扱えます。自社ハードウェアとクラウドのどちらを使うかをリクエストごとに、データ所在地ポリシーを組み込んで判断する部分には、依然としてチーム固有のロジックが主に必要です。',
           'この移行を評価するチームにとって、未解決の問いは通常の調達上の問いです。ベンダー製品が自社の特定のローカル推論スタックをサポートしているか、自作コードで実施するのと同じデータ所在地要件を満たしているか、そしてサブスクリプション費用が同じロジックを構築・保守する社内エンジニアの人件費を下回るか。これらの問いに一般的な答えはなく、チーム規模、ワークロードの変動性、組織固有のコンプライアンス要件に左右されます。 ベンダーのプライバシーに関する説明は、自分で確かめるべき主張として扱ってください。Ollamaは自社クラウドがデータを保持しないとしていますが、それはベンダー自身の説明であり、ホスト型モデルにルーティングされたリクエストはいずれもお使いのハードウェアの外に出ます。',
         ],
       },
@@ -443,7 +446,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '現在、モデル間やローカルとクラウド間でルーティングできるツールは何ですか？',
-            a: '例として、LiteLLM（MITライセンス、Ollamaモデル対応）、OpenRouterのAuto Router（ホスト型モデルのみ）、Cloudflare AI Gateway（ホスト型プロバイダーの前段でのフォールバックとキャッシュ）、Ollamaクラウドモデル（ローカルとクラウドのモデルを1つのインターフェースで利用）があります。これらは各ベンダーのドキュメントで確認した例であり、ランキングや推奨ではありません。',
+            a: '例として、LiteLLM（enterprise/ディレクトリを除きMITライセンス、Ollamaモデル対応）、OpenRouterのAuto Router（ホスト型モデルのみ）、Cloudflare AI Gateway（ホスト型プロバイダーの前段でのフォールバックとキャッシュ）、Ollamaクラウドモデル（ローカルとクラウドのモデルを1つのインターフェースで利用）があります。これらは各ベンダーのドキュメントで確認した例であり、ランキングや推奨ではありません。',
           },
           {
             q: 'パッケージ化されたルーティング製品は、ルーティングパターンを理解する必要性を代替しますか？',
@@ -464,9 +467,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '出典',
         items: [
           '[Gartner：Market Guide for AI Gateways（2025年10月13日）](https://www.gartner.com/en/documents/7051698) — ベンダーカテゴリとしてのゲートウェイ',
-          '[LiteLLMドキュメント：ルーティングとフォールバック](https://docs.litellm.ai/docs/routing) — 戦略、MITライセンス',
+          '[LiteLLMドキュメント：ルーティングとフォールバック](https://docs.litellm.ai/docs/routing) — 戦略、MITライセンス（enterprise/ディレクトリを除く）',
           '[OpenRouterドキュメント：Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) — プロンプトごとのモデル選択',
           '[Ollamaブログ：クラウドモデル（2025年9月19日）](https://ollama.com/blog/cloud-models) — ローカルとクラウドを1つのインターフェースで',
+          '[Ollama：料金](https://ollama.com/pricing) — Free・Pro・Maxプラン',
         ],
       },
     },
@@ -476,7 +480,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-zh.webp',
     title: '2027本地AI趋势 第6篇（共10篇）：混合路由成为独立产品类别',
     seoTitle: '2027本地AI趋势 第6篇：混合路由产品化 | Prompt Bites',
-    metaDescription: 'Gartner已将AI网关作为一个市场进行跟踪,LiteLLM、OpenRouter和Ollama云端模型已在路由请求。路由成为产品后会发生什么变化。',
+    metaDescription: 'Gartner于2025年10月发布了AI网关市场指南,LiteLLM、OpenRouter和Ollama已在路由请求。路由成为产品后会发生什么变化。',
     publishDate: '2026-07-16',
     dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
@@ -502,11 +506,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '混合本地-云端LLM路由会在2027年前成为打包的产品类别吗？',
-        answer: '部分如此,而且已经在发生。Gartner于2025年10月13日发布了AI网关市场指南,将网关视为一个供应商类别:它管控AI流量、限制意外的服务商费用,并保护API流量中的私有数据。LiteLLM(MIT许可)、OpenRouter的Auto Router、Cloudflare AI Gateway和Ollama的云端模型已经提供路由、回退以及本地加云端的模型访问。能够针对每个请求在自有硬件与云端之间做出决定的打包产品,目前主要仍是预测。',
+        answer: '部分如此,而且已经在发生。Gartner于2025年10月13日发布了AI网关市场指南,将网关视为一个供应商类别:它管控AI流量、限制意外的服务商费用,并保护API流量中的私有数据。LiteLLM(MIT许可,enterprise/目录除外)、OpenRouter的Auto Router、Cloudflare AI Gateway和Ollama的云端模型已经提供路由、回退以及本地加云端的模型访问。能够针对每个请求在自有硬件与云端之间做出决定的打包产品,目前主要仍是预测。',
         bullets: [
           '类别信号:Gartner AI网关市场指南(Market Guide for AI Gateways),2025年10月13日发布',
           '目前已可用:LiteLLM的路由与回退(支持Ollama模型)、OpenRouter Auto Router、Cloudflare AI Gateway的重试与回退',
-          '本地与云端合用一个界面:Ollama云端模型,自2025年9月19日起处于预览阶段',
+          '本地与云端合用一个界面:Ollama云端模型,于2025年9月19日以预览形式推出,现提供Free、Pro、Max套餐',
           '仍未定论:能针对每个请求在自有硬件与云端之间做决定的打包产品,在很大程度上仍是预测',
           '关于如何自己构建路由逻辑的操作指南,请参阅专门的指南,而非本文',
         ],
@@ -519,7 +523,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           '本文是10篇系列"2027本地AI趋势"中的第6篇——本文讨论混合路由的市场/产品类别角度,而非操作指南',
-          'Gartner于2025年10月13日发布了AI网关市场指南,网关因此成为被跟踪的供应商类别',
+          'Gartner于2025年10月13日发布了AI网关市场指南,AI网关因此有了Gartner的市场指南',
           '路由、回退和成本控制已内置于LiteLLM、OpenRouter的Auto Router和Cloudflare AI Gateway;Ollama云端模型把本地和云端模型放在同一个界面之后',
           '对团队的实际变化:路由成为自建还是采购的决策,而不仅仅是内部处理的工程任务',
           '关于如何构建混合路由逻辑的实际操作指南,请参阅<a href="/zh/prompt-bites/hybrid-local-cloud-llm-strategy">什么时候应该结合本地和云端LLM推理？</a>——此处不重复该内容',
@@ -544,7 +548,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**一旦打包的路由层产品作为独立类别存在,团队面临的决策就会从"我们如何构建"转变为"我们是自建还是购买"。** 这主要是采购和供应商评估问题,而非工程问题——更接近于选择CDN供应商,而不是从零开始编写网络堆栈。',
           '打包产品把团队原本需要分别构建和维护的内容捆绑在一起:路由决策引擎、监控仪表板和故障转移处理。权衡是常见的自建与采购之间的取舍:在路由逻辑上花费的工程时间更少,代价是供应商锁定风险和持续的订阅费用,而不是一次性的内部工程投入。',
-          '**目前已有的产品(示例,非排名):** [LiteLLM](https://docs.litellm.ai/docs/routing)采用MIT许可,提供负载均衡、重试、回退以及基于成本、延迟和使用量的路由策略,并支持Ollama模型。OpenRouter的[Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router)按任务类型为每个提示选择托管模型,并免费应用回退,但只在云端模型之间路由。Cloudflare的[AI Gateway](https://developers.cloudflare.com/ai-gateway/)在托管服务商之前增加可观测性、缓存、速率限制和模型回退。[Ollama云端模型](https://ollama.com/blog/cloud-models)自2025年9月19日起处于预览阶段,可用同一个CLI和API调用本地和云端模型。针对每个请求在自有硬件与云端之间做选择、并内置数据驻留策略,这一部分目前仍主要需要团队自己的逻辑。',
+          '**目前已有的产品(示例,非排名):** [LiteLLM](https://docs.litellm.ai/docs/routing)采用MIT许可(enterprise/目录除外),提供负载均衡、重试、回退以及基于成本、延迟和使用量的路由策略,并支持Ollama模型。OpenRouter的[Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router)按任务类型为每个提示选择托管模型,并免费应用回退,但只在云端模型之间路由。Cloudflare的[AI Gateway](https://developers.cloudflare.com/ai-gateway/)在托管服务商之前增加可观测性、缓存、速率限制和模型回退。[Ollama云端模型](https://ollama.com/blog/cloud-models)于2025年9月19日以预览形式推出,现提供Free、Pro、Max套餐,可用同一个CLI和API调用本地和云端模型。针对每个请求在自有硬件与云端之间做选择、并内置数据驻留策略,这一部分目前仍主要需要团队自己的逻辑。',
           '对于评估这一转变的团队而言,悬而未决的问题都是常规的采购问题:供应商产品是否支持你特定的本地推理技术栈,是否满足你在自建代码中会强制执行的相同数据驻留要求,以及订阅费用是否低于内部工程师构建和维护同等逻辑所需的时间成本。这些问题都没有普遍适用的答案——它们取决于团队规模、工作负载波动性以及各组织特定的合规要求。 请把供应商的隐私声明视为需要自行核实的说法:Ollama称其云端不会保留你的数据,但这是供应商自己的陈述,而且任何被路由到托管模型的请求都会离开你的硬件。',
         ],
       },
@@ -558,7 +562,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '目前有哪些工具可以在模型之间或本地与云端之间做路由？',
-            a: '示例包括LiteLLM(MIT许可,支持Ollama模型)、OpenRouter的Auto Router(仅限托管模型)、Cloudflare AI Gateway(在托管服务商之前提供回退和缓存)以及Ollama云端模型(本地和云端模型共用一个界面)。这些是对照各厂商文档核对过的示例,不是排名或推荐。',
+            a: '示例包括LiteLLM(MIT许可,enterprise/目录除外,支持Ollama模型)、OpenRouter的Auto Router(仅限托管模型)、Cloudflare AI Gateway(在托管服务商之前提供回退和缓存)以及Ollama云端模型(本地和云端模型共用一个界面)。这些是对照各厂商文档核对过的示例,不是排名或推荐。',
           },
           {
             q: '打包的路由产品是否可以取代对路由模式的理解？',
@@ -579,9 +583,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '来源',
         items: [
           '[Gartner:AI网关市场指南(2025年10月13日)](https://www.gartner.com/en/documents/7051698) — 作为供应商类别的网关',
-          '[LiteLLM文档:路由与回退](https://docs.litellm.ai/docs/routing) — 策略、MIT许可',
+          '[LiteLLM文档:路由与回退](https://docs.litellm.ai/docs/routing) — 策略、MIT许可(enterprise/目录除外)',
           '[OpenRouter文档:Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) — 按提示选择模型',
           '[Ollama博客:云端模型(2025年9月19日)](https://ollama.com/blog/cloud-models) — 本地与云端共用一个界面',
+          '[Ollama:定价](https://ollama.com/pricing) — Free、Pro、Max套餐',
         ],
       },
     },
@@ -591,7 +596,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-es.webp',
     title: 'Tendencias de IA local 2027, parte 6 de 10: el enrutamiento híbrido se convierte en una categoría de producto',
     seoTitle: 'IA local 2027, parte 6: enrutamiento híbrido | Prompt Bites',
-    metaDescription: 'Gartner ya sigue los gateways de IA como mercado, y LiteLLM, OpenRouter y Ollama ya enrutan solicitudes. Qué cambia cuando el enrutamiento es un producto.',
+    metaDescription: 'Gartner publicó un Market Guide for AI Gateways en octubre de 2025; LiteLLM, OpenRouter y Ollama ya enrutan. Qué cambia cuando el enrutamiento es un producto.',
     publishDate: '2026-07-16',
     dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
@@ -617,11 +622,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿El enrutamiento híbrido local-nube para LLM se convertirá en una categoría de producto empaquetada para 2027?',
-        answer: 'En parte, y ya está ocurriendo. Gartner publicó un Market Guide for AI Gateways el 13 de octubre de 2025, que trata los gateways como una categoría de proveedores que gobierna el tráfico de IA, limita los costos inesperados de los proveedores y protege los datos privados en el tráfico de API. LiteLLM (licencia MIT), el Auto Router de OpenRouter, Cloudflare AI Gateway y los modelos en la nube de Ollama ya gestionan enrutamiento, respaldos y acceso a modelos locales y en la nube. Un producto empaquetado que decida en cada solicitud entre tu propio hardware y la nube sigue siendo sobre todo una previsión.',
+        answer: 'En parte, y ya está ocurriendo. Gartner publicó un Market Guide for AI Gateways el 13 de octubre de 2025, que trata los gateways como una categoría de proveedores que gobierna el tráfico de IA, limita los costos inesperados de los proveedores y protege los datos privados en el tráfico de API. LiteLLM (licencia MIT, salvo su directorio enterprise/), el Auto Router de OpenRouter, Cloudflare AI Gateway y los modelos en la nube de Ollama ya gestionan enrutamiento, respaldos y acceso a modelos locales y en la nube. Un producto empaquetado que decida en cada solicitud entre tu propio hardware y la nube sigue siendo sobre todo una previsión.',
         bullets: [
           'Señal de categoría: Gartner Market Guide for AI Gateways, publicada el 13 de octubre de 2025',
           'Ya funciona: enrutamiento y respaldos de LiteLLM (admite modelos de Ollama), Auto Router de OpenRouter, reintentos y respaldos de Cloudflare AI Gateway',
-          'Local y nube tras una sola interfaz: modelos en la nube de Ollama, en vista previa desde el 19 de septiembre de 2025',
+          'Local y nube tras una sola interfaz: modelos en la nube de Ollama, lanzados en vista previa el 19 de septiembre de 2025 y ahora disponibles con los planes Free, Pro y Max',
           'Aún abierto: un producto empaquetado que decida en cada solicitud entre tu propio hardware y la nube sigue siendo en buena parte una previsión',
           'Para la guía práctica de cómo construir tú mismo la lógica de enrutamiento hoy, consulta la guía dedicada, no este artículo',
         ],
@@ -634,7 +639,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Esta es la parte 6 de una serie de 10 sobre tendencias de IA local 2027 — este artículo cubre el ángulo de mercado/categoría de producto del enrutamiento híbrido, no la guía práctica',
-          'Gartner publicó un Market Guide for AI Gateways el 13 de octubre de 2025, así que los gateways son ya una categoría de proveedores seguida',
+          'Gartner publicó un Market Guide for AI Gateways el 13 de octubre de 2025, así que los gateways de IA ya cuentan con un Market Guide de Gartner',
           'El enrutamiento, los respaldos y el control de costos ya existen en LiteLLM, el Auto Router de OpenRouter y Cloudflare AI Gateway; los modelos en la nube de Ollama ponen modelos locales y en la nube tras una sola interfaz',
           'El cambio práctico para los equipos: el enrutamiento se convierte en una decisión de construir o comprar, no solo en una tarea de ingeniería interna',
           'Para la guía práctica real de cómo construir lógica de enrutamiento híbrido hoy, consulta <a href="/es/prompt-bites/hybrid-local-cloud-llm-strategy">¿Cuándo deberías combinar inferencia de LLM local y en la nube?</a> — ese contenido no se repite aquí',
@@ -659,7 +664,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**Una vez que existen productos de capa de enrutamiento empaquetados como categoría distinta, la decisión que enfrenta un equipo pasa de "cómo construimos esto" a "construimos o compramos esto".** Esa es una pregunta de compras y evaluación de proveedores, no principalmente de ingeniería — más cercana a elegir un proveedor de CDN que a escribir una pila de red desde cero.',
           'Un producto empaquetado reúne lo que un equipo tendría que construir y mantener por separado: un motor de decisión de enrutamiento, un panel de monitorización y la gestión de conmutación por error. La contrapartida es la habitual de construir o comprar: menos tiempo de ingeniería dedicado a la lógica de enrutamiento, a cambio de riesgo de dependencia del proveedor y de una suscripción recurrente en lugar de un esfuerzo interno puntual.',
-          '**Lo que ya existe (ejemplos, no un ranking):** [LiteLLM](https://docs.litellm.ai/docs/routing) tiene licencia MIT y ofrece balanceo de carga, reintentos, respaldos y estrategias de enrutamiento por costo, latencia y uso; admite modelos de Ollama. El [Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) de OpenRouter elige un modelo alojado por solicitud según el tipo de tarea y aplica respaldos sin costo adicional, pero solo enruta entre modelos en la nube. El [AI Gateway](https://developers.cloudflare.com/ai-gateway/) de Cloudflare añade observabilidad, caché, limitación de tasa y respaldos de modelos delante de proveedores alojados. Los [modelos en la nube de Ollama](https://ollama.com/blog/cloud-models), en vista previa desde el 19 de septiembre de 2025, permiten dirigirse a modelos locales y en la nube con la misma CLI y API. La elección en cada solicitud entre tu hardware y la nube, con tu política de residencia de datos integrada, sigue necesitando sobre todo lógica propia del equipo.',
+          '**Lo que ya existe (ejemplos, no un ranking):** [LiteLLM](https://docs.litellm.ai/docs/routing) tiene licencia MIT (salvo su directorio enterprise/) y ofrece balanceo de carga, reintentos, respaldos y estrategias de enrutamiento por costo, latencia y uso; admite modelos de Ollama. El [Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) de OpenRouter elige un modelo alojado por solicitud según el tipo de tarea y aplica respaldos sin costo adicional, pero solo enruta entre modelos en la nube. El [AI Gateway](https://developers.cloudflare.com/ai-gateway/) de Cloudflare añade observabilidad, caché, limitación de tasa y respaldos de modelos delante de proveedores alojados. Los [modelos en la nube de Ollama](https://ollama.com/blog/cloud-models), lanzados en vista previa el 19 de septiembre de 2025 y ahora disponibles con los planes Free, Pro y Max, permiten dirigirse a modelos locales y en la nube con la misma CLI y API. La elección en cada solicitud entre tu hardware y la nube, con tu política de residencia de datos integrada, sigue necesitando sobre todo lógica propia del equipo.',
           'Para los equipos que evalúan este cambio, las preguntas abiertas son preguntas de compras ordinarias: ¿el producto del proveedor soporta tu pila de inferencia local específica?, ¿cumple los mismos requisitos de residencia de datos que aplicarías en código a medida?, y ¿el costo de suscripción se mantiene por debajo de lo que costaría el tiempo de un ingeniero interno para construir y mantener la misma lógica? Ninguna de esas preguntas tiene respuesta general — dependen del tamaño del equipo, la variabilidad de la carga de trabajo y los requisitos de cumplimiento específicos de cada organización. Trata las declaraciones de privacidad de los proveedores como afirmaciones que debes verificar: Ollama dice que su nube no conserva tus datos, pero es la declaración del propio proveedor, y cualquier solicitud enrutada a un modelo alojado sale de tu hardware.',
         ],
       },
@@ -673,7 +678,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué herramientas enrutan hoy entre modelos o entre local y nube?',
-            a: 'Algunos ejemplos son LiteLLM (licencia MIT, admite modelos de Ollama), el Auto Router de OpenRouter (solo modelos alojados), Cloudflare AI Gateway (respaldos y caché delante de proveedores alojados) y los modelos en la nube de Ollama (modelos locales y en la nube tras una sola interfaz). Son ejemplos contrastados con la documentación de cada proveedor, no un ranking ni una recomendación.',
+            a: 'Algunos ejemplos son LiteLLM (licencia MIT salvo su directorio enterprise/, admite modelos de Ollama), el Auto Router de OpenRouter (solo modelos alojados), Cloudflare AI Gateway (respaldos y caché delante de proveedores alojados) y los modelos en la nube de Ollama (modelos locales y en la nube tras una sola interfaz). Son ejemplos contrastados con la documentación de cada proveedor, no un ranking ni una recomendación.',
           },
           {
             q: '¿Un producto de enrutamiento empaquetado reemplaza la necesidad de entender los patrones de enrutamiento?',
@@ -694,9 +699,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Fuentes',
         items: [
           '[Gartner: Market Guide for AI Gateways (13 de octubre de 2025)](https://www.gartner.com/en/documents/7051698) — los gateways como categoría de proveedores',
-          '[Documentación de LiteLLM: enrutamiento y respaldos](https://docs.litellm.ai/docs/routing) — estrategias, licencia MIT',
+          '[Documentación de LiteLLM: enrutamiento y respaldos](https://docs.litellm.ai/docs/routing) — estrategias, licencia MIT (salvo el directorio enterprise/)',
           '[Documentación de OpenRouter: Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) — elección de modelo por solicitud',
           '[Blog de Ollama: modelos en la nube (19 de septiembre de 2025)](https://ollama.com/blog/cloud-models) — local y nube tras una sola interfaz',
+          '[Ollama: precios](https://ollama.com/pricing) — planes Free, Pro y Max',
         ],
       },
     },
@@ -706,7 +712,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-pt.webp',
     title: 'Tendências de IA local 2027, parte 6 de 10: o roteamento híbrido se torna uma categoria de produto',
     seoTitle: 'IA local 2027, parte 6: roteamento híbrido | Prompt Bites',
-    metaDescription: 'A Gartner já acompanha os gateways de IA como mercado, e LiteLLM, OpenRouter e Ollama já roteiam requisições. O que muda quando o roteamento vira produto.',
+    metaDescription: 'A Gartner publicou um Market Guide for AI Gateways em outubro de 2025; LiteLLM, OpenRouter e Ollama já roteiam. O que muda quando o roteamento vira produto.',
     publishDate: '2026-07-16',
     dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
@@ -732,11 +738,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'O roteamento híbrido local-nuvem para LLM vai se tornar uma categoria de produto empacotada até 2027?',
-        answer: 'Em parte, e isso já está acontecendo. A Gartner publicou um Market Guide for AI Gateways em 13 de outubro de 2025, tratando os gateways como uma categoria de fornecedores que governa o tráfego de IA, limita custos inesperados dos provedores e protege dados privados no tráfego de API. LiteLLM (licença MIT), o Auto Router do OpenRouter, o Cloudflare AI Gateway e os modelos em nuvem do Ollama já cuidam de roteamento, fallbacks e acesso a modelos locais e em nuvem. Um produto empacotado que decida a cada requisição entre o seu próprio hardware e a nuvem ainda é, sobretudo, uma previsão.',
+        answer: 'Em parte, e isso já está acontecendo. A Gartner publicou um Market Guide for AI Gateways em 13 de outubro de 2025, tratando os gateways como uma categoria de fornecedores que governa o tráfego de IA, limita custos inesperados dos provedores e protege dados privados no tráfego de API. LiteLLM (licença MIT, exceto o diretório enterprise/), o Auto Router do OpenRouter, o Cloudflare AI Gateway e os modelos em nuvem do Ollama já cuidam de roteamento, fallbacks e acesso a modelos locais e em nuvem. Um produto empacotado que decida a cada requisição entre o seu próprio hardware e a nuvem ainda é, sobretudo, uma previsão.',
         bullets: [
           'Sinal de categoria: Gartner Market Guide for AI Gateways, publicado em 13 de outubro de 2025',
           'Já funciona: roteamento e fallbacks do LiteLLM (suporta modelos do Ollama), Auto Router do OpenRouter, retentativas e fallbacks do Cloudflare AI Gateway',
-          'Local e nuvem atrás de uma única interface: modelos em nuvem do Ollama, em prévia desde 19 de setembro de 2025',
+          'Local e nuvem atrás de uma única interface: modelos em nuvem do Ollama, lançados em prévia em 19 de setembro de 2025 e agora oferecidos com os planos Free, Pro e Max',
           'Ainda em aberto: um produto empacotado que decida a cada requisição entre o seu hardware e a nuvem ainda é em grande parte uma previsão',
           'Para o passo a passo de construir você mesmo a lógica de roteamento hoje, veja o guia dedicado, não este texto',
         ],
@@ -749,7 +755,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Esta é a parte 6 de uma série de 10 sobre tendências de IA local 2027 — este texto cobre o ângulo de mercado/categoria de produto do roteamento híbrido, não o passo a passo',
-          'A Gartner publicou um Market Guide for AI Gateways em 13 de outubro de 2025, então os gateways já são uma categoria de fornecedores acompanhada',
+          'A Gartner publicou um Market Guide for AI Gateways em 13 de outubro de 2025, então os gateways de IA já têm um Market Guide da Gartner',
           'Roteamento, fallbacks e controle de custos já existem no LiteLLM, no Auto Router do OpenRouter e no Cloudflare AI Gateway; os modelos em nuvem do Ollama colocam modelos locais e em nuvem atrás de uma única interface',
           'A mudança prática para as equipes: o roteamento vira uma decisão de construir ou comprar, não apenas uma tarefa de engenharia feita internamente',
           'Para o passo a passo real de construir lógica de roteamento híbrido hoje, veja <a href="/pt/prompt-bites/hybrid-local-cloud-llm-strategy">Quando você deve combinar inferência de LLM local e na nuvem?</a> — esse conteúdo não é repetido aqui',
@@ -774,7 +780,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**Assim que produtos de camada de roteamento empacotados existirem como categoria distinta, a decisão que uma equipe enfrenta muda de "como construímos isso" para "construímos ou compramos isso".** Essa é uma pergunta de compras e avaliação de fornecedores, não principalmente de engenharia — mais próxima de escolher um provedor de CDN do que de escrever uma pilha de rede do zero.',
           'Um produto empacotado reúne o que uma equipe teria de construir e manter separadamente: um mecanismo de decisão de roteamento, um painel de monitoramento e o tratamento de failover. A contrapartida é a habitual de construir ou comprar: menos tempo de engenharia gasto com lógica de roteamento, em troca de risco de dependência do fornecedor e de uma assinatura recorrente em vez de um esforço interno pontual.',
-          '**O que já existe (exemplos, não um ranking):** o [LiteLLM](https://docs.litellm.ai/docs/routing) tem licença MIT e oferece balanceamento de carga, retentativas, fallbacks e estratégias de roteamento por custo, latência e uso; ele suporta modelos do Ollama. O [Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) do OpenRouter escolhe um modelo hospedado por prompt conforme o tipo de tarefa e aplica fallbacks sem custo extra, mas roteia apenas entre modelos em nuvem. O [AI Gateway](https://developers.cloudflare.com/ai-gateway/) da Cloudflare acrescenta observabilidade, cache, limite de taxa e fallbacks de modelo na frente de provedores hospedados. Os [modelos em nuvem do Ollama](https://ollama.com/blog/cloud-models), em prévia desde 19 de setembro de 2025, permitem acessar modelos locais e em nuvem com a mesma CLI e API. A escolha a cada requisição entre o seu hardware e a nuvem, com a sua política de residência de dados embutida, ainda exige principalmente lógica própria da equipe.',
+          '**O que já existe (exemplos, não um ranking):** o [LiteLLM](https://docs.litellm.ai/docs/routing) tem licença MIT (exceto o diretório enterprise/) e oferece balanceamento de carga, retentativas, fallbacks e estratégias de roteamento por custo, latência e uso; ele suporta modelos do Ollama. O [Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) do OpenRouter escolhe um modelo hospedado por prompt conforme o tipo de tarefa e aplica fallbacks sem custo extra, mas roteia apenas entre modelos em nuvem. O [AI Gateway](https://developers.cloudflare.com/ai-gateway/) da Cloudflare acrescenta observabilidade, cache, limite de taxa e fallbacks de modelo na frente de provedores hospedados. Os [modelos em nuvem do Ollama](https://ollama.com/blog/cloud-models), lançados em prévia em 19 de setembro de 2025 e agora oferecidos com os planos Free, Pro e Max, permitem acessar modelos locais e em nuvem com a mesma CLI e API. A escolha a cada requisição entre o seu hardware e a nuvem, com a sua política de residência de dados embutida, ainda exige principalmente lógica própria da equipe.',
           'Para equipes que avaliam essa mudança, as perguntas em aberto são perguntas de compras comuns: o produto do fornecedor suporta sua pilha específica de inferência local, ele atende às mesmas exigências de residência de dados que você aplicaria em código próprio, e o custo da assinatura fica abaixo do que custaria o tempo de um engenheiro interno para construir e manter a mesma lógica. Nenhuma dessas perguntas tem resposta geral — elas dependem do tamanho da equipe, da variabilidade da carga de trabalho e das exigências de conformidade específicas de cada organização. Trate as declarações de privacidade dos fornecedores como afirmações a verificar: o Ollama diz que sua nuvem não retém seus dados, mas essa é a declaração do próprio fornecedor, e qualquer requisição roteada para um modelo hospedado sai do seu hardware.',
         ],
       },
@@ -788,7 +794,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quais ferramentas roteiam hoje entre modelos ou entre local e nuvem?',
-            a: 'Exemplos incluem o LiteLLM (licença MIT, suporta modelos do Ollama), o Auto Router do OpenRouter (apenas modelos hospedados), o Cloudflare AI Gateway (fallbacks e cache na frente de provedores hospedados) e os modelos em nuvem do Ollama (modelos locais e em nuvem atrás de uma única interface). São exemplos conferidos na documentação de cada fornecedor, não um ranking nem uma recomendação.',
+            a: 'Exemplos incluem o LiteLLM (licença MIT exceto o diretório enterprise/, suporta modelos do Ollama), o Auto Router do OpenRouter (apenas modelos hospedados), o Cloudflare AI Gateway (fallbacks e cache na frente de provedores hospedados) e os modelos em nuvem do Ollama (modelos locais e em nuvem atrás de uma única interface). São exemplos conferidos na documentação de cada fornecedor, não um ranking nem uma recomendação.',
           },
           {
             q: 'Um produto de roteamento empacotado substitui a necessidade de entender os padrões de roteamento?',
@@ -809,9 +815,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Fontes',
         items: [
           '[Gartner: Market Guide for AI Gateways (13 de outubro de 2025)](https://www.gartner.com/en/documents/7051698) — gateways como categoria de fornecedores',
-          '[Documentação do LiteLLM: roteamento e fallbacks](https://docs.litellm.ai/docs/routing) — estratégias, licença MIT',
+          '[Documentação do LiteLLM: roteamento e fallbacks](https://docs.litellm.ai/docs/routing) — estratégias, licença MIT (exceto o diretório enterprise/)',
           '[Documentação do OpenRouter: Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) — escolha de modelo por prompt',
           '[Blog do Ollama: modelos em nuvem (19 de setembro de 2025)](https://ollama.com/blog/cloud-models) — local e nuvem atrás de uma única interface',
+          '[Ollama: preços](https://ollama.com/pricing) — planos Free, Pro e Max',
         ],
       },
     },
@@ -821,7 +828,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-ar.webp',
     title: 'اتجاهات الذكاء الاصطناعي المحلي 2027، الجزء 6 من 10: التوجيه الهجين يصبح فئة منتجات',
     seoTitle: 'اتجاهات 2027 – الجزء 6: التوجيه الهجين | Prompt Bites',
-    metaDescription: 'تتابع Gartner بوابات الذكاء الاصطناعي كسوق، وتوجّه LiteLLM وOpenRouter وOllama الطلبات فعلًا. ما الذي يتغير حين يصبح التوجيه منتجًا.',
+    metaDescription: 'نشرت Gartner دليل السوق لبوابات الذكاء الاصطناعي في أكتوبر 2025، وتوجّه LiteLLM وOpenRouter وOllama الطلبات فعلًا. ما الذي يتغير حين يصبح التوجيه منتجًا.',
     publishDate: '2026-07-16',
     dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
@@ -847,11 +854,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل سيصبح التوجيه الهجين بين النماذج اللغوية المحلية والسحابية فئة منتجات جاهزة بحلول 2027؟',
-        answer: 'جزئيًا، وهو يحدث بالفعل. نشرت Gartner دليل السوق الخاص ببوابات الذكاء الاصطناعي في 13 أكتوبر 2025، وتعامل البوابات كفئة موردين تضبط حركة الذكاء الاصطناعي، وتحدّ من تكاليف المزوّدين غير المتوقعة، وتحمي البيانات الخاصة في حركة API. وتتولى LiteLLM (ترخيص MIT) وAuto Router من OpenRouter وCloudflare AI Gateway ونماذج Ollama السحابية بالفعل التوجيه والاحتياطات (fallbacks) والوصول إلى النماذج المحلية والسحابية. أما المنتج الجاهز الذي يقرر لكل طلب بين عتادك الخاص والسحابة فلا يزال في الغالب توقعًا.',
+        answer: 'جزئيًا، وهو يحدث بالفعل. نشرت Gartner دليل السوق الخاص ببوابات الذكاء الاصطناعي في 13 أكتوبر 2025، وتعامل البوابات كفئة موردين تضبط حركة الذكاء الاصطناعي، وتحدّ من تكاليف المزوّدين غير المتوقعة، وتحمي البيانات الخاصة في حركة API. وتتولى LiteLLM (ترخيص MIT باستثناء مجلد enterprise/) وAuto Router من OpenRouter وCloudflare AI Gateway ونماذج Ollama السحابية بالفعل التوجيه والاحتياطات (fallbacks) والوصول إلى النماذج المحلية والسحابية. أما المنتج الجاهز الذي يقرر لكل طلب بين عتادك الخاص والسحابة فلا يزال في الغالب توقعًا.',
         bullets: [
           'إشارة الفئة: دليل Gartner لبوابات الذكاء الاصطناعي (Market Guide for AI Gateways)، نُشر في 13 أكتوبر 2025',
           'يعمل اليوم: توجيه LiteLLM واحتياطاته (يدعم نماذج Ollama)، وAuto Router من OpenRouter، وإعادة المحاولة والاحتياطات في Cloudflare AI Gateway',
-          'المحلي والسحابي خلف واجهة واحدة: نماذج Ollama السحابية، بمعاينة منذ 19 سبتمبر 2025',
+          'المحلي والسحابي خلف واجهة واحدة: نماذج Ollama السحابية، أُطلقت بمعاينة في 19 سبتمبر 2025 وتُقدَّم الآن بخطط Free وPro وMax',
           'لا يزال مفتوحًا: المنتج الجاهز الذي يقرر لكل طلب بين عتادك الخاص والسحابة هو في معظمه توقع',
           'لمعرفة كيفية بناء منطق التوجيه بنفسك اليوم، راجع الدليل المخصص وليس هذا المقال',
         ],
@@ -864,7 +871,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'هذا هو الجزء 6 من سلسلة اتجاهات الذكاء الاصطناعي المحلي 2027 المكوّنة من 10 أجزاء — يتناول هذا المقال زاوية السوق/فئة المنتج للتوجيه الهجين، وليس الدليل العملي',
-          'نشرت Gartner دليل السوق الخاص ببوابات الذكاء الاصطناعي في 13 أكتوبر 2025، فأصبحت البوابات فئة موردين تتم متابعتها',
+          'نشرت Gartner دليل السوق الخاص ببوابات الذكاء الاصطناعي في 13 أكتوبر 2025، فأصبح لبوابات الذكاء الاصطناعي دليل سوق من Gartner',
           'التوجيه والاحتياطات وضبط التكلفة موجودة فعلًا في LiteLLM وAuto Router من OpenRouter وCloudflare AI Gateway؛ وتضع نماذج Ollama السحابية النماذج المحلية والسحابية خلف واجهة واحدة',
           'التغيير العملي للفرق: يصبح التوجيه قرار بناء أم شراء، وليس مجرد مهمة هندسية تُنجز داخليًا',
           'لمعرفة الدليل العملي الفعلي لبناء منطق التوجيه الهجين اليوم، راجع <a href="/ar/prompt-bites/hybrid-local-cloud-llm-strategy">متى يجب الجمع بين الاستدلال المحلي واستدلال LLM السحابي؟</a> — لا يتكرر ذلك المحتوى هنا',
@@ -889,7 +896,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**بمجرد وجود منتجات طبقة توجيه جاهزة كفئة مستقلة، ينتقل القرار الذي يواجه الفريق من "كيف نبني هذا" إلى "هل نبني هذا أم نشتريه".** هذا سؤال متعلق بالمشتريات وتقييم الموردين، وليس بشكل أساسي سؤالًا هندسيًا — أقرب إلى اختيار مزود شبكة توصيل محتوى من كتابة حزمة شبكات من الصفر.',
           'يجمع المنتج الجاهز ما كان على الفريق أن يبنيه ويصونه منفصلًا: محرك قرار التوجيه ولوحة مراقبة ومعالجة التحويل عند الأعطال. والمفاضلة هي المعتادة بين البناء والشراء: وقت هندسي أقل يُنفق على منطق التوجيه، مقابل خطر الارتباط بالمورد واشتراك متكرر بدلاً من جهد هندسي داخلي لمرة واحدة.',
-          '**ما هو متاح بالفعل (أمثلة وليس ترتيبًا):** [LiteLLM](https://docs.litellm.ai/docs/routing) بترخيص MIT ويوفر موازنة الأحمال وإعادة المحاولة والاحتياطات واستراتيجيات توجيه مبنية على التكلفة والزمن والاستخدام، ويدعم نماذج Ollama. ويختار [Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) من OpenRouter نموذجًا مستضافًا لكل موجِّه بحسب نوع المهمة ويطبق الاحتياطات دون رسوم إضافية، لكنه يوجّه بين النماذج السحابية فقط. ويضيف [AI Gateway](https://developers.cloudflare.com/ai-gateway/) من Cloudflare قابلية المراقبة والتخزين المؤقت وتحديد المعدل واحتياطات النماذج أمام المزودين المستضافين. أما [نماذج Ollama السحابية](https://ollama.com/blog/cloud-models)، في المعاينة منذ 19 سبتمبر 2025، فتتيح مخاطبة النماذج المحلية والسحابية عبر واجهة CLI وAPI واحدة. أما الاختيار لكل طلب بين عتادك والسحابة، مع سياسة إقامة البيانات مدمجة فيه، فلا يزال يحتاج في الغالب إلى منطق خاص بالفريق.',
+          '**ما هو متاح بالفعل (أمثلة وليس ترتيبًا):** [LiteLLM](https://docs.litellm.ai/docs/routing) بترخيص MIT (باستثناء مجلد enterprise/) ويوفر موازنة الأحمال وإعادة المحاولة والاحتياطات واستراتيجيات توجيه مبنية على التكلفة والزمن والاستخدام، ويدعم نماذج Ollama. ويختار [Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) من OpenRouter نموذجًا مستضافًا لكل موجِّه بحسب نوع المهمة ويطبق الاحتياطات دون رسوم إضافية، لكنه يوجّه بين النماذج السحابية فقط. ويضيف [AI Gateway](https://developers.cloudflare.com/ai-gateway/) من Cloudflare قابلية المراقبة والتخزين المؤقت وتحديد المعدل واحتياطات النماذج أمام المزودين المستضافين. أما [نماذج Ollama السحابية](https://ollama.com/blog/cloud-models)، أُطلقت بمعاينة في 19 سبتمبر 2025 وتُقدَّم الآن بخطط Free وPro وMax، فتتيح مخاطبة النماذج المحلية والسحابية عبر واجهة CLI وAPI واحدة. أما الاختيار لكل طلب بين عتادك والسحابة، مع سياسة إقامة البيانات مدمجة فيه، فلا يزال يحتاج في الغالب إلى منطق خاص بالفريق.',
           'بالنسبة للفرق التي تقيّم هذا التحول، فإن الأسئلة المفتوحة هي أسئلة شراء عادية: هل يدعم منتج المورد مكدس الاستدلال المحلي الخاص بك تحديدًا، وهل يفي بنفس متطلبات إقامة البيانات التي كنت ستفرضها في كود مخصص، وهل تبقى تكلفة الاشتراك أقل مما ستكلفه ساعات مهندس داخلي لبناء وصيانة نفس المنطق. لا يمكن الإجابة عن أي من هذه الأسئلة بشكل عام — فهي تعتمد على حجم الفريق وتقلب عبء العمل ومتطلبات الامتثال الخاصة بكل مؤسسة. تعامل مع بيانات الخصوصية التي يعلنها الموردون كادعاءات يجب التحقق منها: تقول Ollama إن سحابتها لا تحتفظ ببياناتك، لكنه تصريح المورد نفسه، وأي طلب يُوجَّه إلى نموذج مستضاف يغادر عتادك.',
         ],
       },
@@ -903,7 +910,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'ما الأدوات التي توجّه اليوم بين النماذج أو بين المحلي والسحابي؟',
-            a: 'من الأمثلة: LiteLLM (ترخيص MIT، يدعم نماذج Ollama)، وAuto Router من OpenRouter (نماذج مستضافة فقط)، وCloudflare AI Gateway (احتياطات وتخزين مؤقت أمام مزودين مستضافين)، ونماذج Ollama السحابية (نماذج محلية وسحابية خلف واجهة واحدة). هذه أمثلة جرى التحقق منها بمقارنتها بوثائق كل مورد، وليست ترتيبًا ولا توصية.',
+            a: 'من الأمثلة: LiteLLM (ترخيص MIT باستثناء مجلد enterprise/، يدعم نماذج Ollama)، وAuto Router من OpenRouter (نماذج مستضافة فقط)، وCloudflare AI Gateway (احتياطات وتخزين مؤقت أمام مزودين مستضافين)، ونماذج Ollama السحابية (نماذج محلية وسحابية خلف واجهة واحدة). هذه أمثلة جرى التحقق منها بمقارنتها بوثائق كل مورد، وليست ترتيبًا ولا توصية.',
           },
           {
             q: 'هل يُغني منتج التوجيه الجاهز عن الحاجة إلى فهم أنماط التوجيه؟',
@@ -924,9 +931,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'المصادر',
         items: [
           '[Gartner: دليل السوق الخاص ببوابات الذكاء الاصطناعي (13 أكتوبر 2025)](https://www.gartner.com/en/documents/7051698) — البوابات كفئة موردين',
-          '[وثائق LiteLLM: التوجيه والاحتياطات](https://docs.litellm.ai/docs/routing) — الاستراتيجيات وترخيص MIT',
+          '[وثائق LiteLLM: التوجيه والاحتياطات](https://docs.litellm.ai/docs/routing) — الاستراتيجيات وترخيص MIT (باستثناء مجلد enterprise/)',
           '[وثائق OpenRouter: Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) — اختيار النموذج لكل موجِّه',
           '[مدونة Ollama: النماذج السحابية (19 سبتمبر 2025)](https://ollama.com/blog/cloud-models) — المحلي والسحابي خلف واجهة واحدة',
+          '[Ollama: الأسعار](https://ollama.com/pricing) — خطط Free وPro وMax',
         ],
       },
     },
@@ -936,7 +944,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/local-ai-trend-2027-hybrid-local-cloud-routing-overview-hero-ko.webp',
     title: '2027 로컬 AI 트렌드, 10부작 중 6부: 하이브리드 라우팅이 제품 카테고리가 되다',
     seoTitle: '로컬 AI 2027, 6부: 하이브리드 라우팅 | Prompt Bites',
-    metaDescription: 'Gartner는 AI 게이트웨이를 하나의 시장으로 추적하며, LiteLLM, OpenRouter, Ollama 클라우드 모델이 이미 요청을 라우팅합니다. 라우팅이 제품이 되면 달라지는 점.',
+    metaDescription: 'Gartner는 2025년 10월 AI 게이트웨이 마켓 가이드를 발표했고, LiteLLM, OpenRouter, Ollama가 이미 요청을 라우팅합니다. 라우팅이 제품이 되면 달라지는 점.',
     publishDate: '2026-07-16',
     dateModified: '2026-10-19',
     freshness_tier: 'semi_annual',
@@ -962,11 +970,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '하이브리드 로컬-클라우드 LLM 라우팅이 2027년까지 패키지화된 제품 카테고리가 될까요?',
-        answer: '일부는 그렇고, 이미 진행 중입니다. Gartner는 2025년 10월 13일 AI 게이트웨이 마켓 가이드를 발표해 게이트웨이를 AI 트래픽을 통제하고, 예상치 못한 제공업체 비용을 제한하며, API 트래픽의 비공개 데이터를 보호하는 벤더 카테고리로 다루었습니다. LiteLLM(MIT 라이선스), OpenRouter의 Auto Router, Cloudflare AI Gateway, Ollama의 클라우드 모델은 이미 라우팅, 폴백, 로컬과 클라우드 모델 접근을 처리합니다. 요청마다 자체 하드웨어와 클라우드 중 어디서 처리할지 결정하는 패키지 제품은 아직 대부분 예측입니다.',
+        answer: '일부는 그렇고, 이미 진행 중입니다. Gartner는 2025년 10월 13일 AI 게이트웨이 마켓 가이드를 발표해 게이트웨이를 AI 트래픽을 통제하고, 예상치 못한 제공업체 비용을 제한하며, API 트래픽의 비공개 데이터를 보호하는 벤더 카테고리로 다루었습니다. LiteLLM(MIT 라이선스, enterprise/ 디렉터리 제외), OpenRouter의 Auto Router, Cloudflare AI Gateway, Ollama의 클라우드 모델은 이미 라우팅, 폴백, 로컬과 클라우드 모델 접근을 처리합니다. 요청마다 자체 하드웨어와 클라우드 중 어디서 처리할지 결정하는 패키지 제품은 아직 대부분 예측입니다.',
         bullets: [
           '카테고리 신호: Gartner Market Guide for AI Gateways, 2025년 10월 13일 발표',
           '현재 동작하는 것: LiteLLM 라우팅과 폴백(Ollama 모델 지원), OpenRouter Auto Router, Cloudflare AI Gateway의 재시도와 폴백',
-          '로컬과 클라우드를 하나의 인터페이스로: Ollama 클라우드 모델, 2025년 9월 19일부터 프리뷰',
+          '로컬과 클라우드를 하나의 인터페이스로: Ollama 클라우드 모델, 2025년 9월 19일 프리뷰로 출시되어 현재 Free·Pro·Max 요금제로 제공',
           '아직 열려 있는 부분: 요청마다 자체 하드웨어와 클라우드 중 어디서 처리할지 결정하는 패키지 제품은 대부분 예측입니다',
           '라우팅 로직을 지금 직접 구축하는 방법은 이 글이 아니라 전용 가이드를 참고하세요',
         ],
@@ -979,7 +987,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           '이 글은 10부작 로컬 AI 트렌드 2027 시리즈의 6부입니다 — 하이브리드 라우팅의 시장·제품 카테고리 관점을 다루며, 하우투가 아닙니다',
-          'Gartner가 2025년 10월 13일 AI 게이트웨이 마켓 가이드를 발표해, 게이트웨이는 추적 대상 벤더 카테고리가 되었습니다',
+          'Gartner가 2025년 10월 13일 AI 게이트웨이 마켓 가이드를 발표해, AI 게이트웨이에 대한 Gartner 마켓 가이드가 생겼습니다',
           '라우팅, 폴백, 비용 통제는 이미 LiteLLM, OpenRouter의 Auto Router, Cloudflare AI Gateway에 들어 있으며, Ollama 클라우드 모델은 로컬과 클라우드 모델을 하나의 인터페이스 뒤에 둡니다',
           '팀에게 실질적인 변화: 라우팅이 사내에서 처리하는 엔지니어링 작업에 그치지 않고 직접 구축할지 구매할지의 결정이 됩니다',
           '하이브리드 라우팅 로직을 지금 구축하는 실제 하우투는 <a href="/ko/prompt-bites/hybrid-local-cloud-llm-strategy">로컬과 클라우드 LLM 추론을 언제 결합해야 할까요?</a>를 참고하세요 — 해당 내용은 여기서 반복하지 않습니다',
@@ -1004,7 +1012,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         content: [
           '**패키지화된 라우팅 계층 제품이 별도의 카테고리로 존재하게 되면, 팀이 마주하는 결정은 "어떻게 만들 것인가"에서 "만들 것인가, 살 것인가"로 바뀝니다.** 이는 주로 엔지니어링 문제가 아니라 조달 및 벤더 평가 문제이며, 네트워크 스택을 처음부터 작성하는 것보다는 CDN 제공업체를 선택하는 것에 더 가깝습니다.',
           '패키지 제품은 팀이 따로 구축하고 유지해야 했을 것들, 즉 라우팅 의사결정 엔진, 모니터링 대시보드, 장애 조치 처리를 한데 묶어 제공합니다. 트레이드오프는 흔한 구축 대 구매입니다. 라우팅 로직에 쓰는 엔지니어링 시간이 줄어드는 대신 벤더 종속 위험과, 일회성 내부 개발 비용이 아닌 반복적인 구독 비용이 생깁니다.',
-          '**이미 제공되는 것(예시이며 순위가 아닙니다):** [LiteLLM](https://docs.litellm.ai/docs/routing)은 MIT 라이선스이며 로드 밸런싱, 재시도, 폴백, 비용·지연·사용량 기반 라우팅 전략을 제공하고 Ollama 모델을 지원합니다. OpenRouter의 [Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router)는 작업 유형에 따라 프롬프트마다 호스팅 모델을 고르고 추가 요금 없이 폴백을 적용하지만, 클라우드 모델 사이에서만 라우팅합니다. Cloudflare의 [AI Gateway](https://developers.cloudflare.com/ai-gateway/)는 호스팅 제공업체 앞단에 관측성, 캐싱, 속도 제한, 모델 폴백을 더합니다. [Ollama 클라우드 모델](https://ollama.com/blog/cloud-models)은 2025년 9월 19일부터 프리뷰로, 같은 CLI와 API로 로컬과 클라우드 모델을 모두 다룰 수 있게 합니다. 요청마다 자체 하드웨어와 클라우드 중 하나를 고르고 데이터 상주 정책까지 반영하는 부분은 여전히 대부분 팀별 맞춤 로직이 필요합니다.',
+          '**이미 제공되는 것(예시이며 순위가 아닙니다):** [LiteLLM](https://docs.litellm.ai/docs/routing)은 MIT 라이선스(enterprise/ 디렉터리 제외)이며 로드 밸런싱, 재시도, 폴백, 비용·지연·사용량 기반 라우팅 전략을 제공하고 Ollama 모델을 지원합니다. OpenRouter의 [Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router)는 작업 유형에 따라 프롬프트마다 호스팅 모델을 고르고 추가 요금 없이 폴백을 적용하지만, 클라우드 모델 사이에서만 라우팅합니다. Cloudflare의 [AI Gateway](https://developers.cloudflare.com/ai-gateway/)는 호스팅 제공업체 앞단에 관측성, 캐싱, 속도 제한, 모델 폴백을 더합니다. [Ollama 클라우드 모델](https://ollama.com/blog/cloud-models)은 2025년 9월 19일 프리뷰로 출시되어 현재 Free·Pro·Max 요금제로 제공되며, 같은 CLI와 API로 로컬과 클라우드 모델을 모두 다룰 수 있게 합니다. 요청마다 자체 하드웨어와 클라우드 중 하나를 고르고 데이터 상주 정책까지 반영하는 부분은 여전히 대부분 팀별 맞춤 로직이 필요합니다.',
           '이러한 전환을 검토하는 팀에게 남는 의문은 통상적인 조달 관련 질문들입니다. 벤더 제품이 자사의 특정 로컬 추론 스택을 지원하는가, 맞춤 코드에서 강제했을 법한 것과 동일한 데이터 상주 요건을 충족하는가, 그리고 구독 비용이 동일한 로직을 구축·유지보수하는 데 드는 내부 엔지니어 시간 비용보다 낮은가. 이 질문들에는 일반적인 답이 없으며, 팀 규모, 워크로드 변동성, 조직별 규정 준수 요건에 따라 달라집니다. 벤더의 개인정보 관련 설명은 직접 확인해야 할 주장으로 다루세요. Ollama는 자사 클라우드가 데이터를 보관하지 않는다고 밝히지만 이는 벤더 자신의 설명이며, 호스팅 모델로 라우팅된 요청은 모두 하드웨어 밖으로 나갑니다.',
         ],
       },
@@ -1018,7 +1026,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '현재 모델 간 또는 로컬과 클라우드 간에 라우팅하는 도구는 무엇입니까?',
-            a: '예로는 LiteLLM(MIT 라이선스, Ollama 모델 지원), OpenRouter의 Auto Router(호스팅 모델만), Cloudflare AI Gateway(호스팅 제공업체 앞단의 폴백과 캐싱), Ollama 클라우드 모델(로컬과 클라우드 모델을 하나의 인터페이스로)이 있습니다. 각 벤더의 문서로 확인한 예시이며, 순위나 추천이 아닙니다.',
+            a: '예로는 LiteLLM(enterprise/ 디렉터리를 제외하면 MIT 라이선스, Ollama 모델 지원), OpenRouter의 Auto Router(호스팅 모델만), Cloudflare AI Gateway(호스팅 제공업체 앞단의 폴백과 캐싱), Ollama 클라우드 모델(로컬과 클라우드 모델을 하나의 인터페이스로)이 있습니다. 각 벤더의 문서로 확인한 예시이며, 순위나 추천이 아닙니다.',
           },
           {
             q: '패키지화된 라우팅 제품이 라우팅 패턴을 이해할 필요성을 대신하나요?',
@@ -1039,9 +1047,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '출처',
         items: [
           '[Gartner: Market Guide for AI Gateways(2025년 10월 13일)](https://www.gartner.com/en/documents/7051698) — 벤더 카테고리로서의 게이트웨이',
-          '[LiteLLM 문서: 라우팅과 폴백](https://docs.litellm.ai/docs/routing) — 전략, MIT 라이선스',
+          '[LiteLLM 문서: 라우팅과 폴백](https://docs.litellm.ai/docs/routing) — 전략, MIT 라이선스(enterprise/ 디렉터리 제외)',
           '[OpenRouter 문서: Auto Router](https://openrouter.ai/docs/guides/routing/routers/auto-router) — 프롬프트별 모델 선택',
           '[Ollama 블로그: 클라우드 모델(2025년 9월 19일)](https://ollama.com/blog/cloud-models) — 로컬과 클라우드를 하나의 인터페이스로',
+          '[Ollama: 요금](https://ollama.com/pricing) — Free, Pro, Max 요금제',
         ],
       },
     },
