@@ -238,48 +238,48 @@ const SPECS = {
   },
   "run-qwen-vl-locally-2026-overview": {
     "en": {
-      "title": "How to Run Qwen2-VL Locally in 2026: Document OCR & Vision Guide",
-      "subtitle": "Run Qwen2-VL locally in ~6 GB VRAM via Ollama: setup steps, Chinese and Japanese document OCR, image",
+      "title": "How to Run Qwen2.5-VL and Qwen3-VL Locally in 2026: Document OCR & Vision Guide",
+      "highlights": ["Qwen3-VL 8B: 6.1 GB download","Qwen2.5-VL 7B: 6.0 GB download","Runs locally via Ollama"],
       "footer": "PromptQuorum Guide"
     },
     "de": {
-      "title": "Qwen2-VL lokal ausführen 2026: Dokumenten-OCR & Vision-Setup-Anleitung",
-      "subtitle": "Qwen2-VL lokal mit ~6 GB VRAM über Ollama ausführen: Einrichtungsschritte, OCR für chinesische und j",
+      "title": "Qwen2.5-VL und Qwen3-VL lokal betreiben 2026: Leitfaden für Dokumenten-OCR und Bildverständnis",
+      "highlights": ["Qwen3-VL 8B: 6,1 GB Download","Qwen2.5-VL 7B: 6,0 GB Download","Läuft lokal mit Ollama"],
       "footer": "PromptQuorum-Leitfaden"
     },
     "fr": {
-      "title": "Exécuter Qwen2-VL en local en 2026 : guide OCR et vision",
-      "subtitle": "Exécuter Qwen2-VL en local avec ~6 GB de VRAM via Ollama : installation, OCR de documents chinois et",
+      "title": "Exécuter Qwen2.5-VL et Qwen3-VL en local en 2026 : guide de l'OCR de documents et de la vision",
+      "highlights": ["Qwen3-VL 8B : 6.1 Go","Qwen2.5-VL 7B : 6.0 Go","Tourne en local via Ollama"],
       "footer": "Guide PromptQuorum"
     },
     "ja": {
-      "title": "Qwen2-VLをローカル実行 2026：ドキュメントOCRと画像認識ガイド",
-      "subtitle": "約6 GBのVRAMでOllamaを使いQwen2-VLをローカル実行：セットアップ手順、中国語・日本語ドキュメントのOCR、画像Q&A、LLaVAとの比較を解説します。",
+      "title": "Qwen2.5-VLとQwen3-VLをローカルで動かす方法【2026年版】：ドキュメントOCRとビジョンガイド",
+      "highlights": ["Qwen3-VL 8B：6.1GB","Qwen2.5-VL 7B：6.0GB","Ollamaでローカル実行"],
       "footer": "PromptQuorumガイド"
     },
     "zh": {
-      "title": "本地运行 Qwen2-VL 2026：文档 OCR 与图像识别指南",
-      "subtitle": "通过 Ollama 在约 6 GB VRAM 下本地运行 Qwen2-VL：设置步骤、中文与日文文档 OCR、图像问答，以及与 LLaVA 的对比。",
+      "title": "2026年如何在本地运行Qwen2.5-VL和Qwen3-VL：文档OCR与视觉指南",
+      "highlights": ["Qwen3-VL 8B：6.1 GB","Qwen2.5-VL 7B：6.0 GB","通过Ollama本地运行"],
       "footer": "PromptQuorum 指南"
     },
     "es": {
-      "title": "Cómo ejecutar Qwen2-VL en local en 2026: guía de OCR de documentos y visión",
-      "subtitle": "Ejecuta Qwen2-VL en local con ~6 GB de VRAM vía Ollama: instalación, OCR en chino y japonés, pregunt",
+      "title": "Cómo ejecutar Qwen2.5-VL y Qwen3-VL en local en 2026: guía de OCR de documentos y visión",
+      "highlights": ["Qwen3-VL 8B: 6.1 GB","Qwen2.5-VL 7B: 6.0 GB","En local con Ollama"],
       "footer": "Guía de PromptQuorum"
     },
     "pt": {
-      "title": "Como executar o Qwen2-VL localmente em 2026: guia de OCR de documentos e visão",
-      "subtitle": "Execute o Qwen2-VL localmente com ~6 GB de VRAM via Ollama: instalação, OCR em chinês e japonês, per",
+      "title": "Como executar o Qwen2.5-VL e o Qwen3-VL localmente em 2026: guia de OCR de documentos e visão",
+      "highlights": ["Qwen3-VL 8B: 6.1 GB","Qwen2.5-VL 7B: 6.0 GB","Roda localmente no Ollama"],
       "footer": "Guia PromptQuorum"
     },
     "ar": {
-      "title": "كيفية تشغيل ⁨Qwen2-VL⁩ محليًا في ⁨2026⁩: دليل ⁨OCR⁩ للمستندات والرؤية",
-      "subtitle": "شغّل ⁨Qwen2-VL⁩ محليًا بـ ~⁨6 GB⁩ من ⁨VRAM⁩ عبر ⁨Ollama⁩: التثبيت، ⁨OCR⁩ بالصينية واليابانية، الأسئل",
+      "title": "كيفية تشغيل ⁨Qwen2.5-VL⁩ و⁨Qwen3-VL⁩ محليًا في ⁨2026⁩: دليل ⁨OCR⁩ للمستندات والرؤية",
+      "highlights": ["حجم Qwen3-VL 8B هو 6.1 GB","حجم Qwen2.5-VL 7B هو 6.0 GB","يعمل محليًا عبر Ollama"],
       "footer": "دليل PromptQuorum"
     },
     "ko": {
-      "title": "2026년 Qwen2-VL 로컬 실행 방법: 문서 OCR 및 비전 가이드",
-      "subtitle": "Ollama를 통해 약 6 GB VRAM으로 Qwen2-VL을 로컬 실행: 설정 단계, 중국어·일본어 문서 OCR, 이미지 Q&A, LLaVA 및 Llama 3.2 Vision 대",
+      "title": "2026년 Qwen2.5-VL과 Qwen3-VL 로컬 실행 방법: 문서 OCR 및 비전 가이드",
+      "highlights": ["Qwen3-VL 8B 6.1GB","Qwen2.5-VL 7B 6.0GB","Ollama로 로컬 실행"],
       "footer": "PromptQuorum 가이드"
     }
   },
@@ -477,7 +477,7 @@ async function generate(basename, lang, spec) {
   const res = await fetch(`${BASE}/api/hero-image`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ lang, title: spec.title, subtitle: spec.subtitle, footer: spec.footer }),
+    body: JSON.stringify({ lang, title: spec.title, subtitle: spec.subtitle, highlights: spec.highlights, footer: spec.footer }),
   });
   if (!res.ok) throw new Error(`${basename}/${lang}: HTTP ${res.status}`);
   const buf = Buffer.from(await res.arrayBuffer());

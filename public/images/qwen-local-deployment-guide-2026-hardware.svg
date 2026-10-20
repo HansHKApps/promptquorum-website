@@ -80,7 +80,7 @@
   <text x="680" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">15–30</text>
   <text x="820" y="358" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">Pro code review</text>
 
-  <!-- Row 7 — Qwen2-VL 7B -->
+  <!-- Row 7 — Qwen2.5-VL 7B -->
   <rect x="20" y="375" width="860" height="44" fill="#FFF3E0" rx="4"/>
   <text x="110" y="402" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#E65100" text-anchor="middle">VL 7B</text>
   <text x="270" y="402" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1B1F" text-anchor="middle">7B</text>

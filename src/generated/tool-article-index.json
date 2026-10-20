@@ -11,6 +11,62 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
+        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
+        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "multimodal-local-llms",
+        "title": "Multimodal Local LLMs: Vision, Audio, and Text Processing",
+        "url": "/local-llms/multimodal-local-llms",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "qwen-local-deployment-guide-2026",
+        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
+        "url": "/local-llms/qwen-local-deployment-guide-2026",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "deepseek-vs-qwen-coding-local-2026",
+        "title": "DeepSeek V4 vs Qwen3.8 for Local Coding 2026",
+        "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-vision-models-llava-ollama-2026",
+        "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
+        "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollama-vision-models-review",
+        "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
+        "url": "/power-local-llm/ollama-vision-models-review",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "swiftlm-review",
+        "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
+        "url": "/power-local-llm/swiftlm-review",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "best-local-reasoning-model-deepseek-r1-2026",
         "title": "Best Local Reasoning Model 2026: DeepSeek-R1 Ranked",
         "url": "/local-llms/best-local-reasoning-model-deepseek-r1-2026",
@@ -22,62 +78,6 @@
         "slug": "long-context-local-llms",
         "title": "Long Context Local LLMs 2026: 128K, 256K and 1M Models Compared",
         "url": "/local-llms/long-context-local-llms",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "qwen-local-deployment-guide-2026",
-        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
-        "url": "/local-llms/qwen-local-deployment-guide-2026",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "run-qwen-vl-locally-2026",
-        "title": "How to Run Qwen2.5-VL and Qwen3-VL Locally in 2026: Document OCR & Vision Guide",
-        "url": "/local-llms/run-qwen-vl-locally-2026",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "saudi-pdpl-data-sovereignty-local-ai-2026",
-        "title": "Saudi PDPL & Data Sovereignty: Why AI Must Run Inside the Kingdom (2026)",
-        "url": "/local-llms/saudi-pdpl-data-sovereignty-local-ai-2026",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "top-open-source-models-ollama",
-        "title": "Ollama Latest Version 2026: v0.40.5 + Best Models by Use Case",
-        "url": "/local-llms/top-open-source-models-ollama",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-llm-apps-android-2026",
-        "title": "Best Local LLM Apps for Android in 2026: 6 Apps Compared on Real Phones",
-        "url": "/power-local-llm/best-local-llm-apps-android-2026",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "deepseek-offline-china-self-hosted-2026",
-        "title": "Run DeepSeek Offline 2026: Best Hardware for Private Self-Hosted DeepSeek",
-        "url": "/power-local-llm/deepseek-offline-china-self-hosted-2026",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "deepseek-r1-vs-distills-explained-2026",
-        "title": "DeepSeek-R1 vs Distills 2026: What You Actually Lose",
-        "url": "/power-local-llm/deepseek-r1-vs-distills-explained-2026",
         "dateModified": "2026-10-19",
         "tier": "about"
       }
@@ -93,6 +93,30 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
+        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
+        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "memoryai-review",
+        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
+        "url": "/power-local-llm/memoryai-review",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollama-vision-models-review",
+        "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
+        "url": "/power-local-llm/ollama-vision-models-review",
+        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -140,30 +164,6 @@
         "slug": "llamatik-review",
         "title": "Llamatik Review: Free Offline AI Chatbot for Android and iPhone",
         "url": "/power-local-llm/llamatik-review",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "memoryai-review",
-        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
-        "url": "/power-local-llm/memoryai-review",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mobile-llm-models-phi4-gemma-smollm",
-        "title": "Best Mobile LLM Models for Phones in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
-        "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
-        "dateModified": "2026-10-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "secret-ai-review",
-        "title": "Secret AI Review: Private Offline AI Chat for iPhone, Android and Mac",
-        "url": "/power-local-llm/secret-ai-review",
         "dateModified": "2026-10-19",
         "tier": "about"
       }
@@ -822,19 +822,11 @@
         "tier": "about"
       },
       {
-        "cluster": "power-local-llm",
-        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
-        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
-        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
-        "dateModified": "2026-09-25",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "claude-code-local-review",
-        "title": "claude-code-local Review: Run Claude Code on a Local Model",
-        "url": "/power-local-llm/claude-code-local-review",
-        "dateModified": "2026-09-19",
+        "cluster": "local-llms",
+        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
+        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
+        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
+        "dateModified": "2026-10-20",
         "tier": "mentioned"
       },
       {
@@ -842,7 +834,15 @@
         "slug": "swiftlm-review",
         "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
         "url": "/power-local-llm/swiftlm-review",
-        "dateModified": "2026-09-19",
+        "dateModified": "2026-10-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
+        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "dateModified": "2026-09-25",
         "tier": "mentioned"
       }
     ],
@@ -861,17 +861,17 @@
       },
       {
         "cluster": "local-llms",
-        "slug": "long-context-local-llms",
-        "title": "Long Context Local LLMs 2026: 128K, 256K and 1M Models Compared",
-        "url": "/local-llms/long-context-local-llms",
-        "dateModified": "2026-10-19",
+        "slug": "qwen-local-deployment-guide-2026",
+        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
+        "url": "/local-llms/qwen-local-deployment-guide-2026",
+        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
         "cluster": "local-llms",
-        "slug": "qwen-local-deployment-guide-2026",
-        "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
-        "url": "/local-llms/qwen-local-deployment-guide-2026",
+        "slug": "long-context-local-llms",
+        "title": "Long Context Local LLMs 2026: 128K, 256K and 1M Models Compared",
+        "url": "/local-llms/long-context-local-llms",
         "dateModified": "2026-10-19",
         "tier": "about"
       },
@@ -2656,9 +2656,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "deepseek-vs-qwen-coding-local-2026",
-        "title": "DeepSeek vs Qwen for Local Coding 2026: Which Wins?",
+        "title": "DeepSeek V4 vs Qwen3.8 for Local Coding 2026",
         "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
-        "dateModified": "2026-10-19",
+        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -2742,9 +2742,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "deepseek-vs-qwen-coding-local-2026",
-        "title": "DeepSeek vs Qwen for Local Coding 2026: Which Wins?",
+        "title": "DeepSeek V4 vs Qwen3.8 for Local Coding 2026",
         "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
-        "dateModified": "2026-10-19",
+        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -3288,9 +3288,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "deepseek-vs-qwen-coding-local-2026",
-        "title": "DeepSeek vs Qwen for Local Coding 2026: Which Wins?",
+        "title": "DeepSeek V4 vs Qwen3.8 for Local Coding 2026",
         "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
-        "dateModified": "2026-10-19",
+        "dateModified": "2026-10-20",
         "tier": "mentioned"
       }
     ],
@@ -5588,11 +5588,19 @@
         "tier": "about"
       },
       {
-        "cluster": "power-local-llm",
-        "slug": "idefics-review",
-        "title": "Idefics Review: HuggingFace's Open Vision-Language Models, Honestly Assessed",
-        "url": "/power-local-llm/idefics-review",
-        "dateModified": "2026-10-19",
+        "cluster": "local-llms",
+        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
+        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
+        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "multimodal-local-llms",
+        "title": "Multimodal Local LLMs: Vision, Audio, and Text Processing",
+        "url": "/local-llms/multimodal-local-llms",
+        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -5600,6 +5608,22 @@
         "slug": "local-vision-models-llava-ollama-2026",
         "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
         "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollama-vision-models-review",
+        "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
+        "url": "/power-local-llm/ollama-vision-models-review",
+        "dateModified": "2026-10-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "idefics-review",
+        "title": "Idefics Review: HuggingFace's Open Vision-Language Models, Honestly Assessed",
+        "url": "/power-local-llm/idefics-review",
         "dateModified": "2026-10-19",
         "tier": "about"
       },
@@ -5634,30 +5658,6 @@
         "url": "/power-local-llm/llm-farm-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ollama-vision-models-review",
-        "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
-        "url": "/power-local-llm/ollama-vision-models-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "h2ogpt-review-2026",
-        "title": "h2oGPT Review: Features, Setup, and Why the Project Is Archived",
-        "url": "/power-local-llm/h2ogpt-review",
-        "dateModified": "2026-09-03",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "vlm-video-analytics-drones-edge",
-        "title": "VLMs in Cameras and on Drones 2026: On-Device Video Understanding",
-        "url": "/power-local-llm/vlm-video-analytics-drones-edge",
-        "dateModified": "2026-09-02",
-        "tier": "about"
       }
     ],
     "totalCount": 19,
@@ -5670,7 +5670,7 @@
         "slug": "ollama-vision-models-review",
         "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
         "url": "/power-local-llm/ollama-vision-models-review",
-        "dateModified": "2026-09-06",
+        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -10684,6 +10684,22 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-vision-models-llava-ollama-2026",
+        "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
+        "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
+        "dateModified": "2026-10-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "swiftlm-review",
+        "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
+        "url": "/power-local-llm/swiftlm-review",
+        "dateModified": "2026-10-20",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "top-open-source-models-ollama",
         "title": "Ollama Latest Version 2026: v0.40.5 + Best Models by Use Case",
@@ -10733,25 +10749,9 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-vision-models-llava-ollama-2026",
-        "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
-        "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
         "slug": "mlxhub-review",
         "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
         "url": "/power-local-llm/mlxhub-review",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "replace-grammarly-notion-ai-with-local",
-        "title": "Replace Grammarly and Notion AI with a Local LLM (2026)",
-        "url": "/power-local-llm/replace-grammarly-notion-ai-with-local",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
       }
@@ -11078,7 +11078,7 @@
         "slug": "swiftlm-review",
         "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
         "url": "/power-local-llm/swiftlm-review",
-        "dateModified": "2026-09-19",
+        "dateModified": "2026-10-20",
         "tier": "about"
       },
       {
@@ -11403,6 +11403,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "memoryai-review",
+        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
+        "url": "/power-local-llm/memoryai-review",
+        "dateModified": "2026-10-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "caelum-review",
         "title": "Caelum Review: Free Offline AI Chat App for Android",
         "url": "/power-local-llm/caelum-review",
@@ -11414,14 +11422,6 @@
         "slug": "llamatik-review",
         "title": "Llamatik Review: Free Offline AI Chatbot for Android and iPhone",
         "url": "/power-local-llm/llamatik-review",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "memoryai-review",
-        "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
-        "url": "/power-local-llm/memoryai-review",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
       },
@@ -11720,7 +11720,7 @@
         "slug": "memoryai-review",
         "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
         "url": "/power-local-llm/memoryai-review",
-        "dateModified": "2026-10-19",
+        "dateModified": "2026-10-20",
         "tier": "about"
       }
     ],

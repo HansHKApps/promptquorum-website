@@ -126,7 +126,8 @@ export async function POST(request: Request) {
         <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center', gap: '34px' }}>
           <div
             style={{
-              display: isRtl ? 'block' : 'flex',
+              display: 'flex',
+              ...(isRtl ? { flexDirection: 'row-reverse' as const, flexWrap: 'wrap' as const, columnGap: '0.28em' } : {}),
               fontSize: `${fontSize}px`,
               fontWeight: 800,
               lineHeight: 1.08,
@@ -135,7 +136,8 @@ export async function POST(request: Request) {
               textShadow: '0 4px 24px rgba(0,0,0,0.35)',
             }}
           >
-            {title}
+            {/* RTL: Satori picks the paragraph direction from the first strong char, so a title starting with a Latin brand name (e.g. "DeepSeek V4 مقابل …") renders with reversed word order. Word-per-flex-item + row-reverse (same trick as the highlight lines) keeps logical order; join Latin multi-word names with NBSP in the caller. */}
+            {isRtl ? title.split(' ').map((w, wi) => <div key={wi} style={{ display: 'flex' }}>{w}</div>) : title}
           </div>
 
           {showFormula && (

@@ -7,7 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-10-20',
     educationalLevel: 'Advanced',
     audience: 'Apple Silicon developers and power users who want a native, Python-free MLX inference server with an iOS companion app',
     primaryTerm: 'SwiftLM',
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**OpenAI-compatible serving** — exposes `/v1/chat/completions`, `/v1/models`, and `/health` endpoints, so existing OpenAI-client SDKs and tools can point at SwiftLM as a drop-in local backend',
           '**Broad model-family support** — the README lists native support for over 30 model families, including Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek-V3, GLM 4, Falcon H1, and several smaller research families',
-          '**Vision-language models (VLM)** — run with the `--vision` flag, supporting real-time base64 image parsing for models such as Qwen2-VL, Qwen2.5-VL, and PaliGemma',
+          '**Vision-language models (VLM)** — run with the `--vision` flag, supporting real-time base64 image parsing for models such as Qwen3-VL, Qwen2.5-VL, and PaliGemma',
           '**Audio-language models (ALM)** — run with the `--audio` flag for select Gemma-4 "Omni" variants, decoding OpenAI-spec `input_audio` payloads via AVFoundation WAV extraction',
           '**TurboQuant KV-cache compression** — a custom, non-linear (Lloyd-Max codebook) 3-bit-class quantization scheme for the attention KV cache, which SharpAI\'s own benchmarks report as roughly 3.5x smaller than FP16 with near-zero accuracy loss, enabled with `--turbo-kv`',
           '**SSD expert streaming** — for Mixture-of-Experts models, streams inactive expert layers from NVMe SSD instead of requiring the full model in RAM, enabled with `--stream-experts`; SharpAI\'s own tests cover models as large as 69.6 GB (Qwen3.5-122B-A10B) and 209 GB (Qwen3.5-397B-A22B) on a 64 GB Mac',
@@ -134,7 +134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Describe an image with a vision-language model',
-            content: 'Launch SwiftLM with the `--vision` flag and a VLM-capable model, for example `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`. Requests to `/v1/chat/completions` can then include a base64-encoded `image_url` field alongside text, using the same message format OpenAI\'s vision API expects.',
+            content: 'Launch SwiftLM with the `--vision` flag and a VLM-capable model, for example `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`. That repository belongs to the older Qwen2-VL generation; the README also lists newer Qwen3-VL families, and a Qwen3-VL build such as `mlx-community/Qwen3-VL-2B-Instruct-4bit` exists on Hugging Face. Requests to `/v1/chat/completions` can then include a base64-encoded `image_url` field alongside text, using the same message format OpenAI\'s vision API expects.',
           },
           {
             title: 'Run a 100B+ parameter MoE model on a 64 GB Mac',
@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No subscription, no paid tier, no usage limits imposed by SwiftLM itself',
           'No account or sign-up required to run the server or the SwiftBuddy app',
           'MIT license applies to the full repository, including SwiftBuddy, per the GitHub repository\'s license metadata',
-          'The only real cost is hardware: SwiftLM requires an Apple Silicon Mac running macOS 14.0 or later — it does not run on Intel Macs, Windows, or Linux',
+          'The main cost is hardware: SwiftLM requires an Apple Silicon Mac running macOS 14.0 or later — it does not run on Intel Macs, Windows, or Linux',
         ],
         note: 'As with any local inference server, actual usability for a given model depends on your Mac\'s unified memory. SwiftLM\'s SSD expert streaming feature extends how large a Mixture-of-Experts model you can run beyond your installed RAM, but dense (non-MoE) models still need enough unified memory to hold their weights.',
       },
@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Look elsewhere if',
             list: [
               'You need Windows, Linux, or Intel Mac support — SwiftLM requires Apple Silicon and macOS 14.0+, with no other platform build',
-              'You want a graphical desktop interface on the Mac itself — SwiftLM is a command-line server; only its separate SwiftBuddy companion has a GUI, and that is iOS/iPadOS-only',
+              'You want a graphical desktop interface on the Mac itself — SwiftLM is a command-line server; its separate SwiftBuddy companion app provides a GUI, and that is iOS/iPadOS-only',
               'You want the largest possible existing ecosystem of integrations, tutorials, and third-party tooling — Ollama and llama.cpp-based tools have a longer track record and much larger install bases',
               'You need a production SLA or commercial support contract — this review found no funding round, paid tier, or support contract associated with SwiftLM; treat it as an actively developed, community-facing open-source project from SharpAI rather than a vendor-backed product',
             ],
@@ -238,7 +238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Mistake 3: Expecting a graphical desktop app',
-            content: 'SwiftLM itself is a command-line server with no built-in macOS GUI. The only graphical client in the project is SwiftBuddy, and that is an iOS/iPadOS app, not a Mac desktop interface.',
+            content: 'SwiftLM itself is a command-line server with no built-in macOS GUI. The graphical client listed in the project repository is SwiftBuddy, and that is an iOS/iPadOS app, not a Mac desktop interface.',
           },
           {
             title: 'Mistake 4: Assuming every performance figure is independently verified',
@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'What are the system requirements for SwiftLM?', a: 'Per the repository\'s own Requirements section: macOS 14.0 or later, an Apple Silicon Mac (M1 through M5), Xcode Command Line Tools, and the Metal Toolchain. There is no Windows, Linux, or Intel Mac build.' },
           { q: 'How do I install SwiftLM?', a: 'Download a prebuilt macOS arm64 binary from the project\'s GitHub Releases page and run it directly, or clone the repository and run `./build.sh` to build from source, per the official README.' },
           { q: 'What is SwiftBuddy?', a: 'SwiftBuddy is SwiftLM\'s free, open-source companion app for iPhone and iPad that downloads MLX models from HuggingFace and runs them directly on-device via MLX Swift. Its source lives inside the SwiftLM repository; it is built and run through Xcode rather than distributed on the App Store, as of this review.' },
-          { q: 'Does SwiftLM support vision or audio input?', a: 'Yes. Launching SwiftLM with the `--vision` flag enables vision-language models such as Qwen2-VL and PaliGemma, and the `--audio` flag enables audio input for select Gemma-4 "Omni" variants, per the official README.' },
+          { q: 'Does SwiftLM support vision or audio input?', a: 'Yes. Launching SwiftLM with the `--vision` flag enables vision-language models such as Qwen3-VL, Qwen2.5-VL and PaliGemma, and the `--audio` flag enables audio input for select Gemma-4 "Omni" variants, per the official README.' },
           { q: 'What is TurboQuant?', a: 'TurboQuant is SwiftLM\'s custom KV-cache compression scheme, combining non-linear Lloyd-Max codebooks with a hardware-accelerated Metal implementation. SharpAI\'s own benchmarks report it compressing the KV cache to roughly 3.5x smaller than FP16 with near-zero accuracy loss, enabled with the `--turbo-kv` flag.' },
           { q: 'What is SSD expert streaming?', a: 'It is a feature that streams inactive Mixture-of-Experts layers directly from NVMe SSD to the GPU instead of requiring the full model resident in unified memory, enabled with `--stream-experts`. SharpAI\'s own tests cover models as large as 209 GB running on a 64 GB Mac.' },
           { q: 'Who develops SwiftLM?', a: 'SwiftLM is developed by [SharpAI](https://github.com/SharpAI), a Silicon Valley-based organization on GitHub since 2018 whose primary stated business is applying machine learning to CCTV/NVR surveillance systems. SwiftLM is a general-purpose inference server the organization has open-sourced separately from that core business.' },
@@ -290,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-03-19',
       publishDate: '2026-09-19',
-      dateModified: '2026-09-19',
+      dateModified: '2026-10-20',
       educationalLevel: 'Advanced',
       audience: 'Entwickler und Power-User mit Apple-Silicon-Hardware, die einen nativen, Python-freien MLX-Inferenzserver mit iOS-Begleit-App suchen',
       primaryTerm: 'SwiftLM',
@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**OpenAI-kompatible Bereitstellung** — stellt die Endpunkte `/v1/chat/completions`, `/v1/models` und `/health` bereit, sodass bestehende OpenAI-Client-SDKs und -Tools SwiftLM als Drop-in-lokales Backend nutzen können',
             '**Breite Modellfamilien-Unterstützung** — laut README werden nativ über 30 Modellfamilien unterstützt, darunter Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek-V3, GLM 4, Falcon H1 sowie mehrere kleinere Forschungsfamilien',
-            '**Vision-Language-Modelle (VLM)** — laufen mit dem Flag `--vision` und unterstützen Echtzeit-Base64-Bildparsing für Modelle wie Qwen2-VL, Qwen2.5-VL und PaliGemma',
+            '**Vision-Language-Modelle (VLM)** — laufen mit dem Flag `--vision` und unterstützen Echtzeit-Base64-Bildparsing für Modelle wie Qwen3-VL, Qwen2.5-VL und PaliGemma',
             '**Audio-Language-Modelle (ALM)** — laufen mit dem Flag `--audio` für ausgewählte Gemma-4-"Omni"-Varianten und dekodieren OpenAI-Spec-`input_audio`-Payloads über AVFoundation-WAV-Extraktion',
             '**TurboQuant-KV-Cache-Kompression** — ein eigenes, nichtlineares (Lloyd-Max-Codebook) 3-Bit-Klassen-Quantisierungsschema für den Attention-KV-Cache, das laut SharpAIs eigenen Benchmarks rund 3,5-mal kleiner ist als FP16 bei nahezu keinem Genauigkeitsverlust, aktivierbar mit `--turbo-kv`',
             '**SSD-Expertenstreaming** — streamt bei Mixture-of-Experts-Modellen inaktive Expertenschichten von der NVMe-SSD, statt das vollständige Modell im RAM zu benötigen, aktivierbar mit `--stream-experts`; SharpAIs eigene Tests umfassen Modelle bis 69,6 GB (Qwen3.5-122B-A10B) und 209 GB (Qwen3.5-397B-A22B) auf einem 64-GB-Mac',
@@ -417,7 +417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               title: 'Ein Bild mit einem Vision-Language-Modell beschreiben',
-              content: 'SwiftLM mit dem Flag `--vision` und einem VLM-fähigen Modell starten, zum Beispiel `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`. Anfragen an `/v1/chat/completions` können dann neben Text ein base64-kodiertes `image_url`-Feld enthalten, im gleichen Nachrichtenformat, das auch die Vision-API von OpenAI erwartet.',
+              content: 'SwiftLM mit dem Flag `--vision` und einem VLM-fähigen Modell starten, zum Beispiel `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`. Dieses Repository gehört zur älteren Generation Qwen2-VL; das README führt auch neuere Qwen3-VL-Familien auf, und ein Qwen3-VL-Build wie `mlx-community/Qwen3-VL-2B-Instruct-4bit` ist auf Hugging Face verfügbar. Anfragen an `/v1/chat/completions` können dann neben Text ein base64-kodiertes `image_url`-Feld enthalten, im gleichen Nachrichtenformat, das auch die Vision-API von OpenAI erwartet.',
             },
             {
               title: 'Ein MoE-Modell mit über 100 Mrd. Parametern auf einem 64-GB-Mac ausführen',
@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Kein Abonnement, keine kostenpflichtige Stufe, keine von SwiftLM selbst auferlegten Nutzungsgrenzen',
             'Kein Konto oder Registrierung nötig, um den Server oder die SwiftBuddy-App auszuführen',
             'Die MIT-Lizenz gilt für das gesamte Repository, einschließlich SwiftBuddy, laut den Lizenz-Metadaten des GitHub-Repositorys',
-            'Die einzigen echten Kosten sind Hardware: SwiftLM benötigt einen Apple-Silicon-Mac mit macOS 14.0 oder neuer – es läuft nicht auf Intel-Macs, Windows oder Linux',
+            'Die wesentlichen Kosten sind die Hardware: SwiftLM benötigt einen Apple-Silicon-Mac mit macOS 14.0 oder neuer – es läuft nicht auf Intel-Macs, Windows oder Linux',
           ],
           note: 'Wie bei jedem lokalen Inferenzserver hängt die tatsächliche Nutzbarkeit für ein bestimmtes Modell vom Unified Memory des eigenen Macs ab. SwiftLMs SSD-Expertenstreaming erweitert, wie groß ein Mixture-of-Experts-Modell über den installierten RAM hinaus sein darf, aber dichte (Nicht-MoE-)Modelle brauchen weiterhin genug Unified Memory, um ihre Gewichte zu halten.',
         },
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               title: 'Anderswo suchen, wenn',
               list: [
                 'Unterstützung für Windows, Linux oder Intel-Mac benötigt wird — SwiftLM erfordert Apple Silicon und macOS 14.0+, ohne Build für andere Plattformen',
-                'Eine grafische Desktop-Oberfläche auf dem Mac selbst gewünscht ist — SwiftLM ist ein Kommandozeilenserver; nur die separate Begleit-App SwiftBuddy hat eine GUI, und diese ist ausschließlich für iOS/iPadOS',
+                'Eine grafische Desktop-Oberfläche auf dem Mac selbst gewünscht ist — SwiftLM ist ein Kommandozeilenserver; die separate Begleit-App SwiftBuddy bietet eine GUI, und diese ist für iOS/iPadOS gedacht',
                 'Das größtmögliche bestehende Ökosystem an Integrationen, Tutorials und Drittanbieter-Tools gewünscht ist — Ollama und llama.cpp-basierte Tools haben eine längere Erfolgsgeschichte und deutlich größere Installationsbasen',
                 'Ein Produktions-SLA oder ein kommerzieller Supportvertrag benötigt wird — diese Rezension fand keine Finanzierungsrunde, kostenpflichtige Stufe oder Supportvertrag im Zusammenhang mit SwiftLM; es sollte als aktiv entwickeltes, community-orientiertes Open-Source-Projekt von SharpAI behandelt werden, nicht als von einem Anbieter unterstütztes Produkt',
               ],
@@ -521,7 +521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               title: 'Fehler 3: Eine grafische Desktop-App erwarten',
-              content: 'SwiftLM selbst ist ein Kommandozeilenserver ohne eingebaute macOS-GUI. Der einzige grafische Client im Projekt ist SwiftBuddy, und das ist eine iOS/iPadOS-App, keine Mac-Desktop-Oberfläche.',
+              content: 'SwiftLM selbst ist ein Kommandozeilenserver ohne eingebaute macOS-GUI. Der im Projekt-Repository aufgeführte grafische Client ist SwiftBuddy, und das ist eine iOS/iPadOS-App, keine Mac-Desktop-Oberfläche.',
             },
             {
               title: 'Fehler 4: Annehmen, jede Leistungsangabe sei unabhängig verifiziert',
@@ -538,7 +538,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Welche Systemanforderungen hat SwiftLM?', a: 'Laut dem eigenen Requirements-Abschnitt des Repositorys: macOS 14.0 oder neuer, ein Apple-Silicon-Mac (M1 bis M5), die Xcode Command Line Tools und die Metal Toolchain. Es gibt keinen Build für Windows, Linux oder Intel-Mac.' },
             { q: 'Wie installiere ich SwiftLM?', a: 'Eine vorgefertigte macOS-arm64-Binärdatei von der GitHub-Releases-Seite des Projekts herunterladen und direkt ausführen, oder das Repository klonen und `./build.sh` ausführen, um aus dem Quellcode zu bauen, laut offiziellem README.' },
             { q: 'Was ist SwiftBuddy?', a: 'SwiftBuddy ist SwiftLMs kostenlose, quelloffene Begleit-App für iPhone und iPad, die MLX-Modelle von HuggingFace herunterlädt und sie direkt geräteintern über MLX Swift ausführt. Ihr Quellcode liegt innerhalb des SwiftLM-Repositorys; sie wird über Xcode gebaut und ausgeführt statt über den App Store vertrieben, Stand dieser Rezension.' },
-            { q: 'Unterstützt SwiftLM Vision- oder Audioeingabe?', a: 'Ja. Der Start von SwiftLM mit dem Flag `--vision` aktiviert Vision-Language-Modelle wie Qwen2-VL und PaliGemma, und das Flag `--audio` aktiviert Audioeingabe für ausgewählte Gemma-4-"Omni"-Varianten, laut offiziellem README.' },
+            { q: 'Unterstützt SwiftLM Vision- oder Audioeingabe?', a: 'Ja. Der Start von SwiftLM mit dem Flag `--vision` aktiviert Vision-Language-Modelle wie Qwen3-VL, Qwen2.5-VL und PaliGemma, und das Flag `--audio` aktiviert Audioeingabe für ausgewählte Gemma-4-"Omni"-Varianten, laut offiziellem README.' },
             { q: 'Was ist TurboQuant?', a: 'TurboQuant ist SwiftLMs eigenes KV-Cache-Kompressionsschema, das nichtlineare Lloyd-Max-Codebooks mit einer hardwarebeschleunigten Metal-Implementierung kombiniert. SharpAIs eigene Benchmarks geben an, dass es den KV-Cache auf rund 3,5-mal kleiner als FP16 komprimiert, bei nahezu keinem Genauigkeitsverlust, aktivierbar mit dem Flag `--turbo-kv`.' },
             { q: 'Was ist SSD-Expertenstreaming?', a: 'Es ist eine Funktion, die inaktive Mixture-of-Experts-Schichten direkt von der NVMe-SSD zur GPU streamt, statt das vollständige Modell im Unified Memory vorzuhalten, aktivierbar mit `--stream-experts`. SharpAIs eigene Tests umfassen Modelle bis 209 GB auf einem 64-GB-Mac.' },
             { q: 'Wer entwickelt SwiftLM?', a: 'SwiftLM wird von [SharpAI](https://github.com/SharpAI) entwickelt, einer Organisation aus dem Silicon Valley, seit 2018 auf GitHub, deren erklärtes Hauptgeschäft die Anwendung von maschinellem Lernen auf CCTV/NVR-Überwachungssysteme ist. SwiftLM ist ein universeller Inferenzserver, den die Organisation getrennt von diesem Kerngeschäft quelloffen bereitgestellt hat.' },
@@ -573,7 +573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-03-19',
       publishDate: '2026-09-19',
-      dateModified: '2026-09-19',
+      dateModified: '2026-10-20',
       educationalLevel: 'Advanced',
       audience: 'Les développeurs et utilisateurs avancés sur Apple Silicon qui veulent un serveur d\'inférence MLX natif, sans Python, avec une application compagnon iOS',
       primaryTerm: 'SwiftLM',
@@ -680,7 +680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**Service compatible OpenAI** — expose les points de terminaison `/v1/chat/completions`, `/v1/models` et `/health`, de sorte que les SDK et outils clients OpenAI existants peuvent pointer vers SwiftLM comme backend local de substitution',
             '**Large prise en charge des familles de modèles** — le README répertorie une prise en charge native de plus de 30 familles de modèles, dont Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek-V3, GLM 4, Falcon H1, et plusieurs familles de recherche plus petites',
-            '**Modèles vision-langage (VLM)** — exécutés avec le drapeau `--vision`, prenant en charge l\'analyse d\'images en base64 en temps réel pour des modèles tels que Qwen2-VL, Qwen2.5-VL et PaliGemma',
+            '**Modèles vision-langage (VLM)** — exécutés avec le drapeau `--vision`, prenant en charge l\'analyse d\'images en base64 en temps réel pour des modèles tels que Qwen3-VL, Qwen2.5-VL et PaliGemma',
             '**Modèles audio-langage (ALM)** — exécutés avec le drapeau `--audio` pour certaines variantes « Omni » de Gemma-4, décodant les charges utiles `input_audio` au format OpenAI via l\'extraction WAV d\'AVFoundation',
             '**Compression du cache KV TurboQuant** — un schéma de quantification personnalisé, non linéaire (codebook Lloyd-Max), de classe 3 bits, pour le cache KV d\'attention, que les propres benchmarks de SharpAI annoncent environ 3,5 fois plus compact que le FP16 avec une perte de précision quasi nulle, activé avec `--turbo-kv`',
             '**Streaming d\'experts depuis SSD** — pour les modèles Mixture-of-Experts, diffuse les couches d\'experts inactives depuis un SSD NVMe au lieu de nécessiter le modèle complet en RAM, activé avec `--stream-experts` ; les propres tests de SharpAI couvrent des modèles aussi volumineux que 69,6 Go (Qwen3.5-122B-A10B) et 209 Go (Qwen3.5-397B-A22B) sur un Mac de 64 Go',
@@ -700,7 +700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               title: 'Décrire une image avec un modèle vision-langage',
-              content: 'Lancez SwiftLM avec le drapeau `--vision` et un modèle compatible VLM, par exemple `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`. Les requêtes vers `/v1/chat/completions` peuvent alors inclure un champ `image_url` encodé en base64 aux côtés du texte, en utilisant le même format de message que l\'API vision d\'OpenAI attend.',
+              content: 'Lancez SwiftLM avec le drapeau `--vision` et un modèle compatible VLM, par exemple `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`. Ce dépôt appartient à l\'ancienne génération Qwen2-VL ; le README mentionne aussi les familles Qwen3-VL, plus récentes, et une version Qwen3-VL comme `mlx-community/Qwen3-VL-2B-Instruct-4bit` existe sur Hugging Face. Les requêtes vers `/v1/chat/completions` peuvent alors inclure un champ `image_url` encodé en base64 aux côtés du texte, en utilisant le même format de message que l\'API vision d\'OpenAI attend.',
             },
             {
               title: 'Exécuter un modèle MoE de plus de 100 milliards de paramètres sur un Mac de 64 Go',
@@ -730,7 +730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Aucun abonnement, aucune offre payante, aucune limite d\'usage imposée par SwiftLM lui-même',
             'Aucun compte ni inscription requis pour exécuter le serveur ou l\'application SwiftBuddy',
             'La licence MIT s\'applique à l\'ensemble du dépôt, y compris SwiftBuddy, selon les métadonnées de licence du dépôt GitHub',
-            'Le seul coût réel est le matériel : SwiftLM nécessite un Mac Apple Silicon exécutant macOS 14.0 ou ultérieur — il ne fonctionne ni sur Mac Intel, ni sur Windows, ni sur Linux',
+            'Le principal coût est le matériel : SwiftLM nécessite un Mac Apple Silicon exécutant macOS 14.0 ou ultérieur — il ne fonctionne ni sur Mac Intel, ni sur Windows, ni sur Linux',
           ],
           note: 'Comme pour tout serveur d\'inférence local, l\'utilisabilité réelle pour un modèle donné dépend de la mémoire unifiée de votre Mac. La fonctionnalité de streaming d\'experts depuis SSD de SwiftLM étend la taille de modèle Mixture-of-Experts que vous pouvez exécuter au-delà de votre RAM installée, mais les modèles denses (non-MoE) ont toujours besoin d\'assez de mémoire unifiée pour contenir leurs poids.',
         },
@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               title: 'Cherchez ailleurs si',
               list: [
                 'Vous avez besoin d\'une prise en charge de Windows, Linux ou Mac Intel — SwiftLM nécessite Apple Silicon et macOS 14.0+, sans aucune autre version disponible',
-                'Vous voulez une interface graphique de bureau sur le Mac lui-même — SwiftLM est un serveur en ligne de commande ; seule son application compagnon distincte SwiftBuddy dispose d\'une interface graphique, et celle-ci est réservée à iOS/iPadOS',
+                'Vous voulez une interface graphique de bureau sur le Mac lui-même — SwiftLM est un serveur en ligne de commande ; son application compagnon distincte SwiftBuddy propose une interface graphique, mais celle-ci est destinée à iOS/iPadOS',
                 'Vous voulez le plus vaste écosystème existant d\'intégrations, de tutoriels et d\'outillage tiers — Ollama et les outils basés sur llama.cpp ont un historique plus long et des bases d\'installation bien plus larges',
                 'Vous avez besoin d\'un SLA de production ou d\'un contrat de support commercial — cette revue n\'a trouvé aucun tour de financement, offre payante ou contrat de support associé à SwiftLM ; considérez-le comme un projet open source activement développé et orienté communauté de SharpAI, plutôt que comme un produit soutenu par un fournisseur',
               ],
@@ -804,7 +804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               title: 'Erreur 3 : s\'attendre à une application graphique de bureau',
-              content: 'SwiftLM lui-même est un serveur en ligne de commande sans interface graphique macOS intégrée. Le seul client graphique du projet est SwiftBuddy, et c\'est une application iOS/iPadOS, pas une interface de bureau Mac.',
+              content: 'SwiftLM lui-même est un serveur en ligne de commande sans interface graphique macOS intégrée. Le client graphique indiqué dans le dépôt du projet est SwiftBuddy, et c\'est une application iOS/iPadOS, pas une interface de bureau Mac.',
             },
             {
               title: 'Erreur 4 : supposer que chaque chiffre de performance est vérifié indépendamment',
@@ -821,7 +821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Quelles sont les exigences système pour SwiftLM ?', a: 'Selon la propre section Requirements du dépôt : macOS 14.0 ou ultérieur, un Mac Apple Silicon (M1 à M5), les outils en ligne de commande Xcode, et le Metal Toolchain. Il n\'existe aucune version Windows, Linux ou Mac Intel.' },
             { q: 'Comment installer SwiftLM ?', a: 'Téléchargez un binaire macOS arm64 précompilé depuis la page GitHub Releases du projet et exécutez-le directement, ou clonez le dépôt et exécutez `./build.sh` pour compiler depuis les sources, selon le README officiel.' },
             { q: 'Qu\'est-ce que SwiftBuddy ?', a: 'SwiftBuddy est l\'application compagnon gratuite et open source de SwiftLM pour iPhone et iPad, qui télécharge des modèles MLX depuis HuggingFace et les exécute directement sur l\'appareil via MLX Swift. Son code source vit à l\'intérieur du dépôt SwiftLM ; elle se compile et s\'exécute via Xcode plutôt que d\'être distribuée sur l\'App Store, au moment de cette revue.' },
-            { q: 'SwiftLM prend-il en charge l\'entrée visuelle ou audio ?', a: 'Oui. Lancer SwiftLM avec le drapeau `--vision` active les modèles vision-langage tels que Qwen2-VL et PaliGemma, et le drapeau `--audio` active l\'entrée audio pour certaines variantes « Omni » de Gemma-4, selon le README officiel.' },
+            { q: 'SwiftLM prend-il en charge l\'entrée visuelle ou audio ?', a: 'Oui. Lancer SwiftLM avec le drapeau `--vision` active les modèles vision-langage tels que Qwen3-VL, Qwen2.5-VL et PaliGemma, et le drapeau `--audio` active l\'entrée audio pour certaines variantes « Omni » de Gemma-4, selon le README officiel.' },
             { q: 'Qu\'est-ce que TurboQuant ?', a: 'TurboQuant est le schéma de compression du cache KV personnalisé de SwiftLM, combinant des codebooks non linéaires Lloyd-Max avec une implémentation Metal accélérée matériellement. Les propres benchmarks de SharpAI indiquent qu\'il compresse le cache KV à environ 3,5 fois plus compact que le FP16, avec une perte de précision quasi nulle, activé avec le drapeau `--turbo-kv`.' },
             { q: 'Qu\'est-ce que le streaming d\'experts depuis SSD ?', a: 'C\'est une fonctionnalité qui diffuse les couches Mixture-of-Experts inactives directement depuis un SSD NVMe vers le GPU au lieu de nécessiter le modèle complet en mémoire unifiée, activée avec `--stream-experts`. Les propres tests de SharpAI couvrent des modèles aussi volumineux que 209 Go s\'exécutant sur un Mac de 64 Go.' },
             { q: 'Qui développe SwiftLM ?', a: 'SwiftLM est développé par [SharpAI](https://github.com/SharpAI), une organisation basée dans la Silicon Valley, présente sur GitHub depuis 2018, dont l\'activité principale déclarée est l\'application du machine learning aux systèmes de vidéosurveillance CCTV/NVR. SwiftLM est un serveur d\'inférence généraliste que l\'organisation a mis en open source séparément de cette activité principale.' },
@@ -856,7 +856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-10-20',
     educationalLevel: 'Advanced',
     audience: 'Desarrolladores y usuarios avanzados de Apple Silicon que quieren un servidor de inferencia MLX nativo, sin Python, con una app complementaria para iOS',
     primaryTerm: 'SwiftLM',
@@ -963,7 +963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Servicio compatible con OpenAI** — expone los endpoints `/v1/chat/completions`, `/v1/models` y `/health`, de modo que los SDKs y herramientas cliente de OpenAI existentes pueden apuntar a SwiftLM como backend local intercambiable',
           '**Amplia compatibilidad con familias de modelos** — el README enumera compatibilidad nativa con más de 30 familias de modelos, incluyendo Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek-V3, GLM 4, Falcon H1 y varias familias de investigación más pequeñas',
-          '**Modelos de visión y lenguaje (VLM)** — se ejecutan con el flag `--vision`, con análisis en tiempo real de imágenes en base64 para modelos como Qwen2-VL, Qwen2.5-VL y PaliGemma',
+          '**Modelos de visión y lenguaje (VLM)** — se ejecutan con el flag `--vision`, con análisis en tiempo real de imágenes en base64 para modelos como Qwen3-VL, Qwen2.5-VL y PaliGemma',
           '**Modelos de audio y lenguaje (ALM)** — se ejecutan con el flag `--audio` para algunas variantes "Omni" de Gemma-4, decodificando payloads `input_audio` con la especificación de OpenAI mediante extracción WAV con AVFoundation',
           '**Compresión de caché KV con TurboQuant** — un esquema propio de cuantización no lineal (codebook Lloyd-Max) de clase 3-bit para la caché KV de atención, que los propios benchmarks de SharpAI reportan como aproximadamente 3,5 veces más pequeño que FP16 con una pérdida de precisión casi nula, activado con `--turbo-kv`',
           '**Streaming de expertos desde SSD** — para modelos Mixture-of-Experts, transmite las capas de expertos inactivas desde SSD NVMe en lugar de requerir el modelo completo en RAM, activado con `--stream-experts`; las propias pruebas de SharpAI cubren modelos de hasta 69,6 GB (Qwen3.5-122B-A10B) y 209 GB (Qwen3.5-397B-A22B) en un Mac de 64 GB',
@@ -983,7 +983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Describir una imagen con un modelo de visión y lenguaje',
-            content: 'Inicia SwiftLM con el flag `--vision` y un modelo compatible con VLM, por ejemplo `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`. Las solicitudes a `/v1/chat/completions` pueden incluir entonces un campo `image_url` codificado en base64 junto con el texto, usando el mismo formato de mensaje que espera la API de visión de OpenAI.',
+            content: 'Inicia SwiftLM con el flag `--vision` y un modelo compatible con VLM, por ejemplo `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`. Ese repositorio pertenece a la generación anterior Qwen2-VL; el README también menciona las familias Qwen3-VL, más recientes, y en Hugging Face existe una versión Qwen3-VL como `mlx-community/Qwen3-VL-2B-Instruct-4bit`. Las solicitudes a `/v1/chat/completions` pueden incluir entonces un campo `image_url` codificado en base64 junto con el texto, usando el mismo formato de mensaje que espera la API de visión de OpenAI.',
           },
           {
             title: 'Ejecutar un modelo MoE de más de 100 000 millones de parámetros en un Mac de 64 GB',
@@ -1013,7 +1013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sin suscripción, sin plan de pago, sin límites de uso impuestos por el propio SwiftLM',
           'No se requiere cuenta ni registro para ejecutar el servidor ni la app SwiftBuddy',
           'La licencia MIT se aplica a todo el repositorio, incluido SwiftBuddy, según los metadatos de licencia del repositorio de GitHub',
-          'El único costo real es el hardware: SwiftLM requiere un Mac con Apple Silicon y macOS 14.0 o posterior — no funciona en Macs con Intel, Windows ni Linux',
+          'El principal costo es el hardware: SwiftLM requiere un Mac con Apple Silicon y macOS 14.0 o posterior — no funciona en Macs con Intel, Windows ni Linux',
         ],
         note: 'Como con cualquier servidor de inferencia local, la usabilidad real para un modelo determinado depende de la memoria unificada de tu Mac. La función de streaming de expertos desde SSD de SwiftLM amplía el tamaño de modelo Mixture-of-Experts que puedes ejecutar más allá de tu RAM instalada, pero los modelos densos (no MoE) siguen necesitando memoria unificada suficiente para contener sus pesos.',
       },
@@ -1052,7 +1052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Busca otra opción si',
             list: [
               'Necesitas compatibilidad con Windows, Linux o Mac con Intel — SwiftLM requiere Apple Silicon y macOS 14.0+, sin compilación para ninguna otra plataforma',
-              'Quieres una interfaz gráfica de escritorio en el propio Mac — SwiftLM es un servidor de línea de comandos; solo su app complementaria independiente SwiftBuddy tiene interfaz gráfica, y es exclusiva de iOS/iPadOS',
+              'Quieres una interfaz gráfica de escritorio en el propio Mac — SwiftLM es un servidor de línea de comandos; su app complementaria independiente SwiftBuddy ofrece interfaz gráfica, y está pensada para iOS/iPadOS',
               'Quieres el ecosistema más grande posible de integraciones, tutoriales y herramientas de terceros — Ollama y las herramientas basadas en llama.cpp tienen una trayectoria más larga y bases de instalación mucho más grandes',
               'Necesitas un SLA de producción o un contrato de soporte comercial — esta reseña no encontró ninguna ronda de financiación, plan de pago ni contrato de soporte asociado a SwiftLM; trátalo como un proyecto de código abierto orientado a la comunidad, en desarrollo activo, de SharpAI, no como un producto respaldado por un proveedor',
             ],
@@ -1087,7 +1087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Error 3: esperar una app gráfica de escritorio',
-            content: 'SwiftLM en sí es un servidor de línea de comandos sin interfaz gráfica integrada para macOS. El único cliente gráfico del proyecto es SwiftBuddy, y es una app para iOS/iPadOS, no una interfaz de escritorio para Mac.',
+            content: 'SwiftLM en sí es un servidor de línea de comandos sin interfaz gráfica integrada para macOS. El cliente gráfico que figura en el repositorio del proyecto es SwiftBuddy, y es una app para iOS/iPadOS, no una interfaz de escritorio para Mac.',
           },
           {
             title: 'Error 4: asumir que toda cifra de rendimiento está verificada de forma independiente',
@@ -1104,7 +1104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Cuáles son los requisitos del sistema para SwiftLM?', a: 'Según la propia sección de Requisitos del repositorio: macOS 14.0 o posterior, un Mac con Apple Silicon (de M1 a M5), las Xcode Command Line Tools y el Metal Toolchain. No existe compilación para Windows, Linux ni Mac con Intel.' },
           { q: '¿Cómo instalo SwiftLM?', a: 'Descarga un binario precompilado para macOS arm64 desde la página de Releases de GitHub del proyecto y ejecútalo directamente, o clona el repositorio y ejecuta `./build.sh` para compilarlo desde el código fuente, según el README oficial.' },
           { q: '¿Qué es SwiftBuddy?', a: 'SwiftBuddy es la app complementaria gratuita y de código abierto de SwiftLM para iPhone y iPad, que descarga modelos MLX desde HuggingFace y los ejecuta directamente en el dispositivo mediante MLX Swift. Su código fuente está dentro del repositorio de SwiftLM; se compila y ejecuta a través de Xcode en lugar de distribuirse en la App Store, al momento de esta reseña.' },
-          { q: '¿SwiftLM admite entrada de visión o audio?', a: 'Sí. Iniciar SwiftLM con el flag `--vision` habilita modelos de visión y lenguaje como Qwen2-VL y PaliGemma, y el flag `--audio` habilita la entrada de audio para algunas variantes "Omni" de Gemma-4, según el README oficial.' },
+          { q: '¿SwiftLM admite entrada de visión o audio?', a: 'Sí. Iniciar SwiftLM con el flag `--vision` habilita modelos de visión y lenguaje como Qwen3-VL, Qwen2.5-VL y PaliGemma, y el flag `--audio` habilita la entrada de audio para algunas variantes "Omni" de Gemma-4, según el README oficial.' },
           { q: '¿Qué es TurboQuant?', a: 'TurboQuant es el esquema propio de compresión de caché KV de SwiftLM, que combina codebooks no lineales de Lloyd-Max con una implementación acelerada por hardware en Metal. Los propios benchmarks de SharpAI reportan que comprime la caché KV a aproximadamente 3,5 veces menos tamaño que FP16 con una pérdida de precisión casi nula, activado con el flag `--turbo-kv`.' },
           { q: '¿Qué es el streaming de expertos desde SSD?', a: 'Es una función que transmite las capas inactivas de Mixture-of-Experts directamente desde SSD NVMe a la GPU en lugar de requerir que el modelo completo resida en memoria unificada, activada con `--stream-experts`. Las propias pruebas de SharpAI cubren modelos de hasta 209 GB ejecutándose en un Mac de 64 GB.' },
           { q: '¿Quién desarrolla SwiftLM?', a: 'SwiftLM es desarrollado por [SharpAI](https://github.com/SharpAI), una organización con sede en Silicon Valley presente en GitHub desde 2018, cuyo negocio principal declarado es aplicar machine learning a sistemas de videovigilancia CCTV/NVR. SwiftLM es un servidor de inferencia de propósito general que la organización ha publicado como código abierto de forma separada a ese negocio principal.' },
@@ -1139,7 +1139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       next_refresh_due: '2027-03-19',
       publishDate: '2026-09-19',
-      dateModified: '2026-09-19',
+      dateModified: '2026-10-20',
       educationalLevel: 'Advanced',
       audience: 'Desenvolvedores e usuários avançados de Apple Silicon que querem um servidor de inferência MLX nativo, sem Python, com um app complementar para iOS',
       primaryTerm: 'SwiftLM',
@@ -1246,7 +1246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**Serviço compatível com a OpenAI** — expõe os endpoints `/v1/chat/completions`, `/v1/models` e `/health`, permitindo que SDKs e ferramentas cliente já existentes para a OpenAI apontem para o SwiftLM como um backend local plug-and-play',
             '**Amplo suporte a famílias de modelos** — o README lista suporte nativo a mais de 30 famílias de modelos, incluindo Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek-V3, GLM 4, Falcon H1 e diversas famílias de pesquisa menores',
-            '**Modelos de visão e linguagem (VLM)** — executados com a flag `--vision`, suportando parsing de imagens em base64 em tempo real para modelos como Qwen2-VL, Qwen2.5-VL e PaliGemma',
+            '**Modelos de visão e linguagem (VLM)** — executados com a flag `--vision`, suportando parsing de imagens em base64 em tempo real para modelos como Qwen3-VL, Qwen2.5-VL e PaliGemma',
             '**Modelos de áudio e linguagem (ALM)** — executados com a flag `--audio` para variantes selecionadas "Omni" do Gemma-4, decodificando payloads `input_audio` no padrão OpenAI via extração de WAV com AVFoundation',
             '**Compressão de cache KV TurboQuant** — um esquema personalizado e não linear (codebook Lloyd-Max) de quantização em classe de 3 bits para o cache KV de atenção, que os próprios benchmarks da SharpAI relatam como cerca de 3,5x menor que FP16, com perda de precisão quase nula, habilitado com `--turbo-kv`',
             '**Streaming de especialistas via SSD** — para modelos Mixture-of-Experts, transmite camadas de especialistas inativas a partir do SSD NVMe em vez de exigir o modelo completo em RAM, habilitado com `--stream-experts`; os próprios testes da SharpAI cobrem modelos de até 69,6 GB (Qwen3.5-122B-A10B) e 209 GB (Qwen3.5-397B-A22B) em um Mac de 64 GB',
@@ -1266,7 +1266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               title: 'Descrever uma imagem com um modelo de visão e linguagem',
-              content: 'Inicie o SwiftLM com a flag `--vision` e um modelo capaz de VLM, por exemplo `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`. As requisições para `/v1/chat/completions` podem então incluir um campo `image_url` em base64 junto com texto, usando o mesmo formato de mensagem que a API de visão da OpenAI espera.',
+              content: 'Inicie o SwiftLM com a flag `--vision` e um modelo capaz de VLM, por exemplo `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`. Esse repositório pertence à geração mais antiga Qwen2-VL; o README também lista as famílias Qwen3-VL, mais recentes, e existe no Hugging Face uma versão Qwen3-VL como `mlx-community/Qwen3-VL-2B-Instruct-4bit`. As requisições para `/v1/chat/completions` podem então incluir um campo `image_url` em base64 junto com texto, usando o mesmo formato de mensagem que a API de visão da OpenAI espera.',
             },
             {
               title: 'Executar um modelo MoE com mais de 100B de parâmetros em um Mac de 64 GB',
@@ -1296,7 +1296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Sem assinatura, sem plano pago, sem limites de uso impostos pelo próprio SwiftLM',
             'Nenhuma conta ou cadastro necessário para executar o servidor ou o app SwiftBuddy',
             'A licença MIT se aplica a todo o repositório, incluindo o SwiftBuddy, segundo os metadados de licença do repositório no GitHub',
-            'O único custo real é o hardware: o SwiftLM exige um Mac com Apple Silicon rodando macOS 14.0 ou posterior — não funciona em Macs Intel, Windows ou Linux',
+            'O principal custo é o hardware: o SwiftLM exige um Mac com Apple Silicon rodando macOS 14.0 ou posterior — não funciona em Macs Intel, Windows ou Linux',
           ],
           note: 'Como em qualquer servidor de inferência local, a usabilidade real para um determinado modelo depende da memória unificada do seu Mac. O recurso de streaming de especialistas via SSD do SwiftLM amplia o tamanho de modelo Mixture-of-Experts que você consegue executar além da RAM instalada, mas modelos densos (não-MoE) ainda precisam de memória unificada suficiente para armazenar seus pesos.',
         },
@@ -1335,7 +1335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               title: 'Procure outra opção se',
               list: [
                 'Você precisa de suporte a Windows, Linux ou Mac Intel — o SwiftLM exige Apple Silicon e macOS 14.0+, sem build para nenhuma outra plataforma',
-                'Você quer uma interface gráfica de desktop no próprio Mac — o SwiftLM é um servidor de linha de comando; apenas seu complementar separado, o SwiftBuddy, tem uma GUI, e essa é exclusiva para iOS/iPadOS',
+                'Você quer uma interface gráfica de desktop no próprio Mac — o SwiftLM é um servidor de linha de comando; o app complementar separado, o SwiftBuddy, oferece uma GUI, e ela é voltada para iOS/iPadOS',
                 'Você quer o maior ecossistema possível de integrações, tutoriais e ferramentas de terceiros — o Ollama e ferramentas baseadas em llama.cpp têm um histórico mais longo e bases de instalação muito maiores',
                 'Você precisa de um SLA de produção ou contrato de suporte comercial — esta análise não encontrou nenhuma rodada de investimento, plano pago ou contrato de suporte associado ao SwiftLM; trate-o como um projeto de código aberto ativamente desenvolvido e voltado à comunidade, da SharpAI, e não como um produto apoiado por um fornecedor comercial',
               ],
@@ -1370,7 +1370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               title: 'Erro 3: Esperar um aplicativo gráfico de desktop',
-              content: 'O SwiftLM em si é um servidor de linha de comando, sem GUI nativa no macOS. O único cliente gráfico do projeto é o SwiftBuddy, e esse é um app para iOS/iPadOS, não uma interface de desktop para Mac.',
+              content: 'O SwiftLM em si é um servidor de linha de comando, sem GUI nativa no macOS. O cliente gráfico listado no repositório do projeto é o SwiftBuddy, e esse é um app para iOS/iPadOS, não uma interface de desktop para Mac.',
             },
             {
               title: 'Erro 4: Supor que todo número de desempenho é verificado de forma independente',
@@ -1387,7 +1387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Quais são os requisitos de sistema do SwiftLM?', a: 'Segundo a própria seção de Requisitos do repositório: macOS 14.0 ou posterior, um Mac com Apple Silicon (M1 a M5), as Xcode Command Line Tools e o Metal Toolchain. Não há build para Windows, Linux ou Mac Intel.' },
             { q: 'Como instalo o SwiftLM?', a: 'Baixe um binário pré-compilado para macOS arm64 na página de Releases do projeto no GitHub e execute-o diretamente, ou clone o repositório e execute `./build.sh` para compilar a partir do código-fonte, conforme o README oficial.' },
             { q: 'O que é o SwiftBuddy?', a: 'SwiftBuddy é o app complementar gratuito e de código aberto do SwiftLM para iPhone e iPad, que baixa modelos MLX do HuggingFace e os executa diretamente on-device via MLX Swift. Seu código-fonte está dentro do repositório do SwiftLM; ele é compilado e executado via Xcode, em vez de distribuído pela App Store, até o momento desta análise.' },
-            { q: 'O SwiftLM suporta entrada de visão ou áudio?', a: 'Sim. Iniciar o SwiftLM com a flag `--vision` habilita modelos de visão e linguagem como Qwen2-VL e PaliGemma, e a flag `--audio` habilita entrada de áudio para variantes selecionadas "Omni" do Gemma-4, conforme o README oficial.' },
+            { q: 'O SwiftLM suporta entrada de visão ou áudio?', a: 'Sim. Iniciar o SwiftLM com a flag `--vision` habilita modelos de visão e linguagem como Qwen3-VL, Qwen2.5-VL e PaliGemma, e a flag `--audio` habilita entrada de áudio para variantes selecionadas "Omni" do Gemma-4, conforme o README oficial.' },
             { q: 'O que é o TurboQuant?', a: 'TurboQuant é o esquema personalizado de compressão de cache KV do SwiftLM, combinando codebooks Lloyd-Max não lineares com uma implementação acelerada por hardware em Metal. Os próprios benchmarks da SharpAI relatam que ele comprime o cache KV para cerca de 3,5x menor que FP16, com perda de precisão quase nula, habilitado com a flag `--turbo-kv`.' },
             { q: 'O que é o streaming de especialistas via SSD?', a: 'É um recurso que transmite camadas inativas de Mixture-of-Experts diretamente do SSD NVMe para a GPU, em vez de exigir que o modelo completo fique residente na memória unificada, habilitado com `--stream-experts`. Os próprios testes da SharpAI cobrem modelos de até 209 GB rodando em um Mac de 64 GB.' },
             { q: 'Quem desenvolve o SwiftLM?', a: 'O SwiftLM é desenvolvido pela [SharpAI](https://github.com/SharpAI), organização sediada no Vale do Silício, no GitHub desde 2018, cujo negócio principal declarado é aplicar aprendizado de máquina a sistemas de vigilância CCTV/NVR. O SwiftLM é um servidor de inferência de propósito geral que a organização disponibilizou como código aberto, separadamente desse negócio principal.' },
@@ -1422,7 +1422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-10-20',
     educationalLevel: 'Advanced',
     audience: 'ネイティブでPython不要のMLX推論サーバーとiOSコンパニオンアプリを求めるApple Siliconの開発者・パワーユーザー',
     primaryTerm: 'SwiftLM',
@@ -1529,7 +1529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**OpenAI互換の提供** — `/v1/chat/completions`、`/v1/models`、`/health`エンドポイントを公開しており、既存のOpenAIクライアントSDKやツールをそのままSwiftLMに向けて、ローカルバックエンドとして差し替え利用できる',
           '**幅広いモデルファミリーへの対応** — READMEによれば、Gemma 4/3、Qwen 3.5/3/2.5、Llama 3.x、Mistral/Mixtral、Phi 4/3、DeepSeek-V3、GLM 4、Falcon H1、その他いくつかの小規模な研究系ファミリーを含む30以上のモデルファミリーをネイティブサポート',
-          '**ビジョン言語モデル（VLM）** — `--vision`フラグで実行し、Qwen2-VL、Qwen2.5-VL、PaliGemmaなどのモデルに対応したリアルタイムのbase64画像解析をサポート',
+          '**ビジョン言語モデル（VLM）** — `--vision`フラグで実行し、Qwen3-VL、Qwen2.5-VL、PaliGemmaなどのモデルに対応したリアルタイムのbase64画像解析をサポート',
           '**オーディオ言語モデル（ALM）** — 一部のGemma-4「Omni」系列に対して`--audio`フラグで実行し、AVFoundationのWAV抽出を通じてOpenAI仕様の`input_audio`ペイロードをデコードする',
           '**TurboQuant KVキャッシュ圧縮** — アテンションのKVキャッシュ向けの独自の非線形（Lloyd-Maxコードブック）3ビット級量子化方式。SharpAI自身のベンチマークによればFP16と比べておよそ3.5倍小さく精度低下がほぼゼロで、`--turbo-kv`で有効化する',
           '**SSDエキスパートストリーミング** — Mixture-of-Expertsモデル向けに、モデル全体をRAMに常駐させる代わりに非アクティブなエキスパートレイヤーをNVMe SSDからストリーミングする機能。`--stream-experts`で有効化。SharpAI自身のテストでは、64GBのMacで69.6GB（Qwen3.5-122B-A10B）や209GB（Qwen3.5-397B-A22B）のモデルまで検証されている',
@@ -1549,7 +1549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'ビジョン言語モデルで画像を説明する',
-            content: '`--vision`フラグとVLM対応モデルでSwiftLMを起動する。例えば`SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`。その後、`/v1/chat/completions`へのリクエストには、OpenAIのビジョンAPIが期待するのと同じメッセージ形式で、テキストと並んでbase64エンコードされた`image_url`フィールドを含めることができる。',
+            content: '`--vision`フラグとVLM対応モデルでSwiftLMを起動する。例えば`SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`。このリポジトリは旧世代のQwen2-VLのものです。READMEにはより新しいQwen3-VLファミリーも記載されており、Hugging Faceには`mlx-community/Qwen3-VL-2B-Instruct-4bit`のようなQwen3-VL版も公開されています。その後、`/v1/chat/completions`へのリクエストには、OpenAIのビジョンAPIが期待するのと同じメッセージ形式で、テキストと並んでbase64エンコードされた`image_url`フィールドを含めることができる。',
           },
           {
             title: '64GBのMacで100B以上のパラメータのMoEモデルを実行する',
@@ -1579,7 +1579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'SwiftLM自体によるサブスクリプション、有料プラン、利用制限は一切ない',
           'サーバーやSwiftBuddyアプリの実行にアカウントやサインアップは不要',
           'GitHubリポジトリのライセンスメタデータによれば、MITライセンスはSwiftBuddyを含むリポジトリ全体に適用される',
-          '実質的な唯一のコストはハードウェアである：SwiftLMにはmacOS 14.0以降を実行するApple Silicon Macが必要で、Intel Mac、Windows、Linuxでは動作しない',
+          '主なコストはハードウェアである：SwiftLMにはmacOS 14.0以降を実行するApple Silicon Macが必要で、Intel Mac、Windows、Linuxでは動作しない',
         ],
         note: 'ローカル推論サーバー全般と同様、特定のモデルの実用性は搭載Macの統合メモリに大きく依存する。SwiftLMのSSDエキスパートストリーミング機能は実行可能なMixture-of-Expertsモデルのサイズを搭載RAMを超えて拡張できるが、密（非MoE）モデルは依然として重みを保持できるだけの統合メモリを必要とする。',
       },
@@ -1618,7 +1618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'こんな場合は他を検討する',
             list: [
               'Windows、Linux、Intel Macのサポートが必要 — SwiftLMにはApple SiliconとmacOS 14.0以降が必須で、他のプラットフォーム向けビルドは存在しない',
-              'Mac本体上でグラフィカルなデスクトップインターフェースが欲しい — SwiftLMはコマンドラインサーバーであり、GUIを持つのは別のコンパニオンアプリSwiftBuddyのみで、それもiOS/iPadOS専用である',
+              'Mac本体上でグラフィカルなデスクトップインターフェースが欲しい — SwiftLMはコマンドラインサーバーであり、GUIを提供するのは別のコンパニオンアプリSwiftBuddyであり、それはiOS/iPadOS向けである',
               '可能な限り大規模な既存のエコシステム（統合、チュートリアル、サードパーティツール）が欲しい — OllamaやAllama.cpp系のツールはより長い実績とはるかに大きな導入基盤を持つ',
               '本番運用向けのSLAや商用サポート契約が必要 — 本レビューでは、SwiftLMに紐づく資金調達ラウンド、有料プラン、サポート契約は確認されなかった。ベンダー支援型の製品ではなく、SharpAIによる活発に開発中のコミュニティ向けオープンソースプロジェクトとして扱うべきである',
             ],
@@ -1653,7 +1653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '誤解3：グラフィカルなデスクトップアプリを期待する',
-            content: 'SwiftLM自体は、組み込みのmacOS GUIを持たないコマンドラインサーバーである。プロジェクト内で唯一のグラフィカルなクライアントはSwiftBuddyであり、それはiOS/iPadOSアプリであってMacデスクトップインターフェースではない。',
+            content: 'SwiftLM自体は、組み込みのmacOS GUIを持たないコマンドラインサーバーである。プロジェクトのリポジトリに記載されているグラフィカルなクライアントはSwiftBuddyであり、それはiOS/iPadOSアプリであってMacデスクトップインターフェースではない。',
           },
           {
             title: '誤解4：すべての性能数値が独立検証済みだと想定する',
@@ -1670,7 +1670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'SwiftLMのシステム要件は何ですか？', a: 'リポジトリ自身のRequirementsセクションによれば、macOS 14.0以降、Apple Silicon Mac（M1からM5）、Xcode Command Line Tools、Metal Toolchainが必要です。Windows、Linux、Intel Mac向けのビルドは存在しません。' },
           { q: 'SwiftLMはどうやってインストールしますか？', a: '公式READMEによれば、プロジェクトのGitHub Releasesページからビルド済みのmacOS arm64バイナリをダウンロードして直接実行するか、リポジトリをクローンして`./build.sh`を実行しソースからビルドします。' },
           { q: 'SwiftBuddyとは何ですか？', a: 'SwiftBuddyは、SwiftLMの無料・オープンソースのコンパニオンアプリで、iPhoneとiPad向けにHuggingFaceからMLXモデルをダウンロードし、MLX Swiftを通じてオンデバイスで直接実行します。ソースコードはSwiftLMリポジトリ内にあり、本レビュー時点ではApp Storeでは配布されておらず、Xcodeを通じてビルド・実行します。' },
-          { q: 'SwiftLMはビジョンやオーディオ入力をサポートしますか？', a: 'はい。公式READMEによれば、`--vision`フラグを付けてSwiftLMを起動するとQwen2-VLやPaliGemmaなどのビジョン言語モデルが有効になり、`--audio`フラグは一部のGemma-4「Omni」系列のオーディオ入力を有効にします。' },
+          { q: 'SwiftLMはビジョンやオーディオ入力をサポートしますか？', a: 'はい。公式READMEによれば、`--vision`フラグを付けてSwiftLMを起動するとQwen3-VL、Qwen2.5-VL、PaliGemmaなどのビジョン言語モデルが有効になり、`--audio`フラグは一部のGemma-4「Omni」系列のオーディオ入力を有効にします。' },
           { q: 'TurboQuantとは何ですか？', a: 'TurboQuantは、SwiftLM独自のKVキャッシュ圧縮方式で、非線形のLloyd-Maxコードブックとハードウェアアクセラレーション対応のMetal実装を組み合わせたものです。SharpAI自身のベンチマークによれば、KVキャッシュをFP16と比べておよそ3.5倍小さく、精度低下はほぼゼロに圧縮すると報告されており、`--turbo-kv`フラグで有効化します。' },
           { q: 'SSDエキスパートストリーミングとは何ですか？', a: 'これは、モデル全体を統合メモリに常駐させる代わりに、非アクティブなMixture-of-Expertsレイヤーを直接NVMe SSDからGPUへストリーミングする機能で、`--stream-experts`で有効化します。SharpAI自身のテストでは、64GBのMacで最大209GBのモデルの実行を検証しています。' },
           { q: 'SwiftLMは誰が開発していますか？', a: 'SwiftLMは、[SharpAI](https://github.com/SharpAI)によって開発されています。SharpAIは2018年からGitHubに存在するシリコンバレー拠点の組織で、主な事業として掲げているのはCCTV/NVR監視システムへの機械学習応用です。SwiftLMは、この中核事業とは別にオープンソース化された汎用推論サーバーです。' },
@@ -1705,7 +1705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-10-20',
     educationalLevel: 'Advanced',
     audience: '希望在 Apple Silicon 上使用原生、无需 Python 的 MLX 推理服务器并配备 iOS 配套应用的开发者和高级用户',
     primaryTerm: 'SwiftLM',
@@ -1812,7 +1812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**兼容 OpenAI 的服务** — 暴露 `/v1/chat/completions`、`/v1/models` 和 `/health` 端点，使现有的 OpenAI 客户端 SDK 和工具可以将 SwiftLM 作为即插即用的本地后端',
           '**广泛的模型系列支持** — README 中列出对超过 30 个模型系列的原生支持，包括 Gemma 4/3、Qwen 3.5/3/2.5、Llama 3.x、Mistral/Mixtral、Phi 4/3、DeepSeek-V3、GLM 4、Falcon H1 及若干较小的研究系模型系列',
-          '**视觉语言模型（VLM）** — 通过 `--vision` 标志运行，支持对 Qwen2-VL、Qwen2.5-VL 和 PaliGemma 等模型进行实时 base64 图像解析',
+          '**视觉语言模型（VLM）** — 通过 `--vision` 标志运行，支持对 Qwen3-VL、Qwen2.5-VL 和 PaliGemma 等模型进行实时 base64 图像解析',
           '**音频语言模型（ALM）** — 针对部分 Gemma-4「Omni」变体，通过 `--audio` 标志运行，借助 AVFoundation 的 WAV 提取来解码符合 OpenAI 规范的 `input_audio` 负载',
           '**TurboQuant KV 缓存压缩** — 一种针对注意力 KV 缓存的自研非线性（Lloyd-Max 码本）3 比特级量化方案，SharpAI 自身的基准测试称其体积比 FP16 小约 3.5 倍，且精度损失接近于零，通过 `--turbo-kv` 启用',
           '**SSD 专家流式加载** — 针对混合专家模型，从 NVMe SSD 流式加载非活跃的专家层，而不要求完整模型驻留在内存中，通过 `--stream-experts` 启用；SharpAI 自身的测试涵盖了在 64 GB Mac 上运行高达 69.6 GB（Qwen3.5-122B-A10B）和 209 GB（Qwen3.5-397B-A22B）的模型',
@@ -1832,7 +1832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '使用视觉语言模型描述一张图片',
-            content: '使用 `--vision` 标志和支持 VLM 的模型启动 SwiftLM，例如 `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`。此后发送给 `/v1/chat/completions` 的请求可以在文本之外，按照 OpenAI 视觉 API 所期望的相同消息格式，附带一个 base64 编码的 `image_url` 字段。',
+            content: '使用 `--vision` 标志和支持 VLM 的模型启动 SwiftLM，例如 `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`。该仓库属于较旧的 Qwen2-VL 世代；README 还列出了更新的 Qwen3-VL 系列，Hugging Face 上也有 `mlx-community/Qwen3-VL-2B-Instruct-4bit` 这样的 Qwen3-VL 版本。此后发送给 `/v1/chat/completions` 的请求可以在文本之外，按照 OpenAI 视觉 API 所期望的相同消息格式，附带一个 base64 编码的 `image_url` 字段。',
           },
           {
             title: '在 64 GB 的 Mac 上运行超过 100B 参数的 MoE 模型',
@@ -1862,7 +1862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'SwiftLM 本身不设订阅、付费套餐或使用限制',
           '运行服务器或 SwiftBuddy 应用无需账户或注册',
           '根据 GitHub 仓库许可证元数据，MIT 许可适用于整个仓库，包括 SwiftBuddy',
-          '唯一真正的成本是硬件：SwiftLM 需要运行 macOS 14.0 或更高版本的 Apple Silicon Mac——它不能在 Intel Mac、Windows 或 Linux 上运行',
+          '主要成本是硬件：SwiftLM 需要运行 macOS 14.0 或更高版本的 Apple Silicon Mac——它不能在 Intel Mac、Windows 或 Linux 上运行',
         ],
         note: '与任何本地推理服务器一样，某个特定模型的实际可用性取决于你 Mac 的统一内存容量。SwiftLM 的 SSD 专家流式加载功能可以让你运行超出已安装内存容量的混合专家模型，但稠密（非 MoE）模型仍然需要足够的统一内存来容纳其权重。',
       },
@@ -1901,7 +1901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: '以下情况请考虑其他方案',
             list: [
               '你需要 Windows、Linux 或 Intel Mac 支持——SwiftLM 要求 Apple Silicon 和 macOS 14.0 以上，没有其他平台的构建版本',
-              '你想在 Mac 本机上使用图形化桌面界面——SwiftLM 是一个命令行服务器，唯一具备图形界面的是独立的 SwiftBuddy 配套应用，而且仅限 iOS/iPadOS',
+              '你想在 Mac 本机上使用图形化桌面界面——SwiftLM 是一个命令行服务器，其独立的 SwiftBuddy 配套应用提供图形界面，但面向 iOS/iPadOS',
               '你想要尽可能庞大的现有集成、教程和第三方工具生态系统——Ollama 和基于 llama.cpp 的工具拥有更长的历史记录和远为庞大的安装基础',
               '你需要生产级 SLA 或商业支持合同——本评测未发现与 SwiftLM 相关的任何融资轮次、付费套餐或支持合同；应将其视为 SharpAI 旗下一个持续活跃开发、面向社区的开源项目，而非有厂商背书的产品',
             ],
@@ -1936,7 +1936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '误区三：期待一款图形化桌面应用',
-            content: 'SwiftLM 本身是一个没有内置 macOS 图形界面的命令行服务器。项目中唯一的图形化客户端是 SwiftBuddy，而它是一款 iOS/iPadOS 应用，并非 Mac 桌面界面。',
+            content: 'SwiftLM 本身是一个没有内置 macOS 图形界面的命令行服务器。项目仓库中列出的图形化客户端是 SwiftBuddy，而它是一款 iOS/iPadOS 应用，并非 Mac 桌面界面。',
           },
           {
             title: '误区四：假设每一项性能数据都经过独立验证',
@@ -1953,7 +1953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'SwiftLM 的系统要求是什么？', a: '根据仓库自身的 Requirements 章节：macOS 14.0 或更高版本、Apple Silicon Mac（M1 至 M5）、Xcode 命令行工具以及 Metal Toolchain。没有 Windows、Linux 或 Intel Mac 版本。' },
           { q: '如何安装 SwiftLM？', a: '根据官方 README，可以从项目的 GitHub Releases 页面下载预构建的 macOS arm64 二进制文件并直接运行，或者克隆仓库并运行 `./build.sh` 从源代码构建。' },
           { q: 'SwiftBuddy 是什么？', a: 'SwiftBuddy 是 SwiftLM 的免费开源配套应用，面向 iPhone 和 iPad，可从 HuggingFace 下载 MLX 模型并通过 MLX Swift 直接在设备端运行。其源代码位于 SwiftLM 仓库内；截至本评测时，它并未通过 App Store 分发，而是需要通过 Xcode 构建和运行。' },
-          { q: 'SwiftLM 支持视觉或音频输入吗？', a: '支持。根据官方 README，使用 `--vision` 标志启动 SwiftLM 可启用 Qwen2-VL、PaliGemma 等视觉语言模型，`--audio` 标志则为部分 Gemma-4「Omni」变体启用音频输入。' },
+          { q: 'SwiftLM 支持视觉或音频输入吗？', a: '支持。根据官方 README，使用 `--vision` 标志启动 SwiftLM 可启用 Qwen3-VL、Qwen2.5-VL、PaliGemma 等视觉语言模型，`--audio` 标志则为部分 Gemma-4「Omni」变体启用音频输入。' },
           { q: 'TurboQuant 是什么？', a: 'TurboQuant 是 SwiftLM 自研的 KV 缓存压缩方案，结合了非线性 Lloyd-Max 码本与硬件加速的 Metal 实现。SharpAI 自身的基准测试称，它能将 KV 缓存压缩到约为 FP16 大小的 1/3.5，且精度损失接近于零，通过 `--turbo-kv` 标志启用。' },
           { q: 'SSD 专家流式加载是什么？', a: '这是一项功能，可将非活跃的混合专家层直接从 NVMe SSD 流式加载到 GPU，而不要求完整模型驻留在统一内存中，通过 `--stream-experts` 启用。SharpAI 自身的测试涵盖了在 64 GB 的 Mac 上运行高达 209 GB 的模型。' },
           { q: '谁在开发 SwiftLM？', a: 'SwiftLM 由 [SharpAI](https://github.com/SharpAI) 开发，这是一家自 2018 年起活跃在 GitHub 上的硅谷组织，其主要业务是将机器学习应用于 CCTV/NVR 监控系统。SwiftLM 是该组织与其核心业务分开开源发布的通用推理服务器。' },
@@ -1988,7 +1988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-10-20',
     educationalLevel: 'Advanced',
     audience: 'مطورو ومستخدمو Apple Silicon المتقدمون الذين يريدون خادم استدلال MLX أصليًا وخاليًا من Python، مع تطبيق مرافق لنظام iOS',
     primaryTerm: 'SwiftLM',
@@ -2095,7 +2095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**تقديم متوافق مع OpenAI** — يوفّر نقاط النهاية `/v1/chat/completions` و`/v1/models` و`/health`، بحيث يمكن لحزم تطوير برامج (SDKs) وأدوات OpenAI الحالية أن تشير إلى SwiftLM كبديل محلي جاهز للاستخدام',
           '**دعم واسع لعائلات النماذج** — يذكر ملف README دعمًا أصليًا لأكثر من 30 عائلة نماذج، من ضمنها Gemma 4/3 وQwen 3.5/3/2.5 وLlama 3.x وMistral/Mixtral وPhi 4/3 وDeepSeek-V3 وGLM 4 وFalcon H1، إلى جانب عدة عائلات بحثية أصغر',
-          '**نماذج الرؤية اللغوية (VLM)** — تعمل عبر العلامة `--vision`، وتدعم تحليل صور base64 في الوقت الفعلي لنماذج مثل Qwen2-VL وQwen2.5-VL وPaliGemma',
+          '**نماذج الرؤية اللغوية (VLM)** — تعمل عبر العلامة `--vision`، وتدعم تحليل صور base64 في الوقت الفعلي لنماذج مثل Qwen3-VL وQwen2.5-VL وPaliGemma',
           '**نماذج الصوت اللغوية (ALM)** — تعمل عبر العلامة `--audio` لبعض إصدارات "Omni" من Gemma-4، عبر فك ترميز حمولات `input_audio` المتوافقة مع مواصفات OpenAI باستخدام استخراج WAV عبر AVFoundation',
           '**ضغط ذاكرة KV المؤقتة عبر TurboQuant** — مخطط تكميم غير خطي مخصص (بكتاب رموز Lloyd-Max) بدرجة 3 بتات لذاكرة KV الخاصة بالانتباه، تفيد اختبارات SharpAI الخاصة بأنه أصغر بنحو 3.5 مرة من FP16 مع خسارة دقة شبه معدومة، ويُفعَّل بالعلامة `--turbo-kv`',
           '**بث الخبراء من SSD** — بالنسبة لنماذج Mixture-of-Experts، يبث طبقات الخبراء غير النشطة من قرص NVMe بدلاً من اشتراط وجود النموذج الكامل في ذاكرة الوصول العشوائي، ويُفعَّل بالعلامة `--stream-experts`؛ تغطي اختبارات SharpAI الخاصة نماذج بحجم يصل إلى 69.6 جيجابايت (Qwen3.5-122B-A10B) و209 جيجابايت (Qwen3.5-397B-A22B) على جهاز Mac بذاكرة 64 جيجابايت',
@@ -2115,7 +2115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'وصف صورة باستخدام نموذج رؤية لغوي',
-            content: 'شغّل SwiftLM بالعلامة `--vision` مع نموذج يدعم VLM، على سبيل المثال `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`. يمكن للطلبات الموجَّهة إلى `/v1/chat/completions` عندئذٍ أن تتضمن حقل `image_url` مُرمَّزًا بصيغة base64 إلى جانب النص، باستخدام نفس تنسيق الرسائل الذي تتوقعه واجهة رؤية OpenAI.',
+            content: 'شغّل SwiftLM بالعلامة `--vision` مع نموذج يدعم VLM، على سبيل المثال `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`. ينتمي هذا المستودع إلى الجيل الأقدم Qwen2-VL؛ ويُدرج ملف README أيضًا عائلات Qwen3-VL الأحدث، ويتوفر على Hugging Face إصدار Qwen3-VL مثل `mlx-community/Qwen3-VL-2B-Instruct-4bit`. يمكن للطلبات الموجَّهة إلى `/v1/chat/completions` عندئذٍ أن تتضمن حقل `image_url` مُرمَّزًا بصيغة base64 إلى جانب النص، باستخدام نفس تنسيق الرسائل الذي تتوقعه واجهة رؤية OpenAI.',
           },
           {
             title: 'تشغيل نموذج MoE بأكثر من 100 مليار معلمة على جهاز Mac بذاكرة 64 جيجابايت',
@@ -2145,7 +2145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لا اشتراك ولا خطة مدفوعة ولا حدود استخدام يفرضها SwiftLM نفسه',
           'لا حاجة إلى حساب أو تسجيل لتشغيل الخادم أو تطبيق SwiftBuddy',
           'تسري رخصة MIT على المستودع بأكمله، بما في ذلك SwiftBuddy، بحسب بيانات الترخيص الوصفية لمستودع GitHub',
-          'التكلفة الحقيقية الوحيدة هي العتاد: يتطلب SwiftLM جهاز Mac بمعالج Apple Silicon يعمل بنظام macOS 14.0 أو أحدث — ولا يعمل على أجهزة Mac بمعالج Intel أو Windows أو Linux',
+          'التكلفة الرئيسية هي العتاد: يتطلب SwiftLM جهاز Mac بمعالج Apple Silicon يعمل بنظام macOS 14.0 أو أحدث — ولا يعمل على أجهزة Mac بمعالج Intel أو Windows أو Linux',
         ],
         note: 'كما هو الحال مع أي خادم استدلال محلي، تعتمد قابلية الاستخدام الفعلية لنموذج معيّن على الذاكرة الموحّدة في جهاز Mac الخاص بك. تُوسّع ميزة بث الخبراء من SSD في SwiftLM حجم نموذج Mixture-of-Experts القابل للتشغيل إلى ما وراء ذاكرة الوصول العشوائي المثبّتة، لكن النماذج الكثيفة (غير MoE) لا تزال تحتاج إلى ذاكرة موحّدة كافية لاستيعاب أوزانها.',
       },
@@ -2184,7 +2184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'ابحث عن بديل إذا',
             list: [
               'كنت بحاجة إلى دعم Windows أو Linux أو أجهزة Mac بمعالج Intel — يتطلب SwiftLM معالج Apple Silicon ونظام macOS 14.0 فأحدث، دون أي إصدار لأي منصة أخرى',
-              'أردت واجهة سطح مكتب رسومية على جهاز Mac نفسه — SwiftLM خادم يعمل من سطر الأوامر؛ التطبيق المرافق SwiftBuddy فقط هو من يمتلك واجهة رسومية، وهي مقتصرة على نظامي iOS/iPadOS',
+              'أردت واجهة سطح مكتب رسومية على جهاز Mac نفسه — SwiftLM خادم يعمل من سطر الأوامر؛ التطبيق المرافق SwiftBuddy يوفّر واجهة رسومية، وهي موجّهة لنظامي iOS/iPadOS',
               'أردت أكبر نظام بيئي ممكن من التكاملات والدروس التعليمية وأدوات الطرف الثالث — تمتلك Ollama والأدوات المبنية على llama.cpp سجلًا أطول وقاعدة تثبيت أكبر بكثير',
               'كنت بحاجة إلى اتفاقية مستوى خدمة إنتاجية أو عقد دعم تجاري — لم تجد هذه المراجعة أي جولة تمويل أو خطة مدفوعة أو عقد دعم مرتبط بـ SwiftLM؛ يُنصح بالتعامل معه كمشروع مفتوح المصدر موجَّه للمجتمع ويخضع لتطوير نشط من SharpAI، وليس منتجًا مدعومًا من مورّد',
             ],
@@ -2219,7 +2219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'الخطأ الثالث: توقّع تطبيق سطح مكتب رسومي',
-            content: 'SwiftLM نفسه خادم يعمل من سطر الأوامر دون واجهة رسومية مدمجة لنظام macOS. العميل الرسومي الوحيد في المشروع هو SwiftBuddy، وهو تطبيق لنظامي iOS/iPadOS، وليس واجهة سطح مكتب لنظام Mac.',
+            content: 'SwiftLM نفسه خادم يعمل من سطر الأوامر دون واجهة رسومية مدمجة لنظام macOS. العميل الرسومي المدرج في مستودع المشروع هو SwiftBuddy، وهو تطبيق لنظامي iOS/iPadOS، وليس واجهة سطح مكتب لنظام Mac.',
           },
           {
             title: 'الخطأ الرابع: افتراض أن كل رقم أداء تم التحقق منه بشكل مستقل',
@@ -2236,7 +2236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما هي متطلبات النظام لتشغيل SwiftLM؟', a: 'بحسب قسم المتطلبات الخاص بالمستودع نفسه: macOS 14.0 فأحدث، وجهاز Mac بمعالج Apple Silicon (من M1 إلى M5)، وأدوات سطر أوامر Xcode، وMetal Toolchain. لا يوجد إصدار لنظام Windows أو Linux أو لأجهزة Mac بمعالج Intel.' },
           { q: 'كيف أثبّت SwiftLM؟', a: 'نزّل ملفًا تنفيذيًا جاهزًا لمعمارية macOS arm64 من صفحة Releases الخاصة بالمشروع على GitHub وشغّله مباشرة، أو استنسخ المستودع وشغّل `./build.sh` للبناء من المصدر، بحسب ملف README الرسمي.' },
           { q: 'ما هو SwiftBuddy؟', a: 'SwiftBuddy هو تطبيق SwiftLM المرافق المجاني والمفتوح المصدر لأجهزة iPhone وiPad، ينزّل نماذج MLX من HuggingFace ويشغّلها مباشرة على الجهاز عبر MLX Swift. كوده المصدري موجود داخل مستودع SwiftLM؛ يُبنى ويُشغَّل عبر Xcode بدلاً من التوزيع عبر App Store، حتى وقت كتابة هذه المراجعة.' },
-          { q: 'هل يدعم SwiftLM إدخال الرؤية أو الصوت؟', a: 'نعم. تشغيل SwiftLM بالعلامة `--vision` يفعّل نماذج الرؤية اللغوية مثل Qwen2-VL وPaliGemma، والعلامة `--audio` تفعّل إدخال الصوت لبعض إصدارات "Omni" من Gemma-4، بحسب ملف README الرسمي.' },
+          { q: 'هل يدعم SwiftLM إدخال الرؤية أو الصوت؟', a: 'نعم. تشغيل SwiftLM بالعلامة `--vision` يفعّل نماذج الرؤية اللغوية مثل Qwen3-VL وQwen2.5-VL وPaliGemma، والعلامة `--audio` تفعّل إدخال الصوت لبعض إصدارات "Omni" من Gemma-4، بحسب ملف README الرسمي.' },
           { q: 'ما هو TurboQuant؟', a: 'TurboQuant هو مخطط ضغط ذاكرة KV المؤقتة الخاص بـ SwiftLM، ويجمع بين كتب رموز Lloyd-Max غير الخطية وتنفيذ Metal مُسرَّع بالعتاد. تفيد اختبارات SharpAI الخاصة بأنه يضغط ذاكرة KV المؤقتة إلى نحو 3.5 مرة أصغر من FP16 مع خسارة دقة شبه معدومة، ويُفعَّل بالعلامة `--turbo-kv`.' },
           { q: 'ما هو بث الخبراء من SSD؟', a: 'هي ميزة تبث طبقات Mixture-of-Experts غير النشطة مباشرة من قرص NVMe إلى وحدة معالجة الرسومات بدلاً من اشتراط إقامة النموذج بالكامل في الذاكرة الموحّدة، وتُفعَّل بالعلامة `--stream-experts`. تغطي اختبارات SharpAI الخاصة نماذج بحجم يصل إلى 209 جيجابايت تعمل على جهاز Mac بذاكرة 64 جيجابايت.' },
           { q: 'من يطوّر SwiftLM؟', a: 'SwiftLM من تطوير [SharpAI](https://github.com/SharpAI)، وهي منظمة مقرها سيليكون فالي وموجودة على GitHub منذ 2018، ويتمثل نشاطها الأساسي المعلن في تطبيق التعلم الآلي على أنظمة مراقبة CCTV/NVR. SwiftLM هو خادم استدلال عام الغرض أتاحته المنظمة كمصدر مفتوح بشكل منفصل عن نشاطها الأساسي.' },
@@ -2271,7 +2271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-19',
     publishDate: '2026-09-19',
-    dateModified: '2026-09-19',
+    dateModified: '2026-10-20',
     educationalLevel: 'Advanced',
     audience: 'Python 없이 네이티브로 동작하는 MLX 추론 서버와 iOS 동반 앱을 원하는 Apple Silicon 개발자 및 파워 유저',
     primaryTerm: 'SwiftLM',
@@ -2378,7 +2378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**OpenAI 호환 서빙** — `/v1/chat/completions`, `/v1/models`, `/health` 엔드포인트를 노출하여 기존 OpenAI 클라이언트 SDK와 도구가 SwiftLM을 드롭인 방식의 로컬 백엔드로 사용할 수 있습니다',
           '**광범위한 모델 패밀리 지원** — README에 따르면 Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek-V3, GLM 4, Falcon H1 및 여러 소규모 연구용 모델 패밀리를 포함해 30개 이상의 모델 패밀리를 네이티브로 지원합니다',
-          '**비전 언어 모델(VLM)** — `--vision` 플래그로 실행되며, Qwen2-VL, Qwen2.5-VL, PaliGemma 등의 모델에 대한 실시간 base64 이미지 파싱을 지원합니다',
+          '**비전 언어 모델(VLM)** — `--vision` 플래그로 실행되며, Qwen3-VL, Qwen2.5-VL, PaliGemma 등의 모델에 대한 실시간 base64 이미지 파싱을 지원합니다',
           '**오디오 언어 모델(ALM)** — 일부 Gemma-4 "Omni" 변형에 대해 `--audio` 플래그로 실행되며, AVFoundation의 WAV 추출을 통해 OpenAI 사양의 `input_audio` 페이로드를 디코딩합니다',
           '**TurboQuant KV 캐시 압축** — 어텐션 KV 캐시를 위한 자체 비선형(Lloyd-Max 코드북) 3비트급 양자화 방식으로, SharpAI 자체 벤치마크에 따르면 FP16 대비 약 3.5배 작으면서 정확도 손실이 거의 없으며, `--turbo-kv`로 활성화됩니다',
           '**SSD 전문가 스트리밍** — Mixture-of-Experts 모델의 경우, 전체 모델이 RAM에 상주해야 하는 대신 비활성 전문가 레이어를 NVMe SSD에서 스트리밍합니다. `--stream-experts`로 활성화되며, SharpAI 자체 테스트는 64GB Mac에서 최대 69.6GB(Qwen3.5-122B-A10B) 및 209GB(Qwen3.5-397B-A22B) 모델까지 다룹니다',
@@ -2398,7 +2398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '비전 언어 모델로 이미지 설명하기',
-            content: '`--vision` 플래그와 VLM을 지원하는 모델로 SwiftLM을 실행합니다. 예를 들어 `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`입니다. 이후 `/v1/chat/completions`로 보내는 요청에는 텍스트와 함께 base64로 인코딩된 `image_url` 필드를 포함할 수 있으며, OpenAI 비전 API가 요구하는 것과 동일한 메시지 형식을 사용합니다.',
+            content: '`--vision` 플래그와 VLM을 지원하는 모델로 SwiftLM을 실행합니다. 예를 들어 `SwiftLM --model mlx-community/Qwen2-VL-2B-Instruct-4bit --vision`입니다. 이 저장소는 이전 세대인 Qwen2-VL에 속합니다. README에는 더 새로운 Qwen3-VL 계열도 나와 있으며, Hugging Face에는 `mlx-community/Qwen3-VL-2B-Instruct-4bit` 같은 Qwen3-VL 빌드도 있습니다. 이후 `/v1/chat/completions`로 보내는 요청에는 텍스트와 함께 base64로 인코딩된 `image_url` 필드를 포함할 수 있으며, OpenAI 비전 API가 요구하는 것과 동일한 메시지 형식을 사용합니다.',
           },
           {
             title: '64GB Mac에서 100B 이상 파라미터의 MoE 모델 실행하기',
@@ -2428,7 +2428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'SwiftLM 자체가 부과하는 구독, 유료 등급, 사용량 제한이 없습니다',
           '서버나 SwiftBuddy 앱을 실행하는 데 계정이나 가입이 필요하지 않습니다',
           'GitHub 저장소의 라이선스 메타데이터에 따르면 MIT 라이선스는 SwiftBuddy를 포함한 저장소 전체에 적용됩니다',
-          '유일한 실질적 비용은 하드웨어입니다: SwiftLM은 macOS 14.0 이상을 실행하는 Apple Silicon Mac이 필요하며, Intel Mac, Windows, Linux에서는 실행되지 않습니다',
+          '주된 비용은 하드웨어입니다: SwiftLM은 macOS 14.0 이상을 실행하는 Apple Silicon Mac이 필요하며, Intel Mac, Windows, Linux에서는 실행되지 않습니다',
         ],
         note: '다른 로컬 추론 서버와 마찬가지로, 특정 모델의 실질적인 사용 가능 여부는 사용자 Mac의 통합 메모리에 달려 있습니다. SwiftLM의 SSD 전문가 스트리밍 기능은 실행 가능한 Mixture-of-Experts 모델의 크기를 설치된 RAM을 넘어 확장해주지만, 밀집(비-MoE) 모델은 여전히 가중치를 담을 수 있는 충분한 통합 메모리가 필요합니다.',
       },
@@ -2467,7 +2467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: '다음의 경우 다른 선택지를 찾으십시오',
             list: [
               'Windows, Linux, Intel Mac 지원이 필요한 경우 — SwiftLM은 Apple Silicon과 macOS 14.0 이상을 필요로 하며 다른 플랫폼용 빌드는 없습니다',
-              'Mac 자체에서 그래픽 데스크톱 인터페이스를 원하는 경우 — SwiftLM은 명령줄 서버이며, GUI를 가진 것은 별도의 동반 앱 SwiftBuddy뿐이고 그마저도 iOS/iPadOS 전용입니다',
+              'Mac 자체에서 그래픽 데스크톱 인터페이스를 원하는 경우 — SwiftLM은 명령줄 서버이며, GUI는 별도의 동반 앱 SwiftBuddy가 제공하며, 이는 iOS/iPadOS용입니다',
               '가능한 한 큰 기존 통합, 튜토리얼, 서드파티 도구 생태계를 원하는 경우 — Ollama와 llama.cpp 기반 도구들이 더 긴 실적과 훨씬 더 큰 설치 기반을 가지고 있습니다',
               '프로덕션 SLA나 상업적 지원 계약이 필요한 경우 — 이 리뷰에서는 SwiftLM과 관련된 투자 라운드, 유료 등급, 지원 계약을 확인하지 못했습니다. 벤더가 지원하는 제품이 아니라 SharpAI가 만든, 활발히 개발 중인 커뮤니티 지향 오픈소스 프로젝트로 취급하는 것이 적절합니다',
             ],
@@ -2502,7 +2502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '오해 3: 그래픽 데스크톱 앱을 기대함',
-            content: 'SwiftLM 자체는 내장된 macOS GUI가 없는 명령줄 서버입니다. 프로젝트 내 유일한 그래픽 클라이언트는 SwiftBuddy이며, 이는 iOS/iPadOS 앱이지 Mac 데스크톱 인터페이스가 아닙니다.',
+            content: 'SwiftLM 자체는 내장된 macOS GUI가 없는 명령줄 서버입니다. 프로젝트 저장소에 명시된 그래픽 클라이언트는 SwiftBuddy이며, 이는 iOS/iPadOS 앱이지 Mac 데스크톱 인터페이스가 아닙니다.',
           },
           {
             title: '오해 4: 모든 성능 수치가 독립적으로 검증되었다고 가정',
@@ -2519,7 +2519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'SwiftLM의 시스템 요구 사항은 무엇입니까?', a: '저장소 자체의 Requirements 섹션에 따르면 macOS 14.0 이상, Apple Silicon Mac(M1부터 M5까지), Xcode Command Line Tools, Metal Toolchain이 필요합니다. Windows, Linux, Intel Mac용 빌드는 없습니다.' },
           { q: 'SwiftLM은 어떻게 설치합니까?', a: '공식 README에 따르면, 프로젝트의 GitHub Releases 페이지에서 사전 빌드된 macOS arm64 바이너리를 다운로드해 직접 실행하거나, 저장소를 클론한 뒤 `./build.sh`를 실행해 소스에서 빌드할 수 있습니다.' },
           { q: 'SwiftBuddy란 무엇입니까?', a: 'SwiftBuddy는 SwiftLM의 무료 오픈소스 동반 앱으로, iPhone과 iPad용이며 HuggingFace에서 MLX 모델을 다운로드해 MLX Swift를 통해 온디바이스에서 직접 실행합니다. 소스 코드는 SwiftLM 저장소 안에 있으며, 이 리뷰 시점 기준 App Store를 통해 배포되지 않고 Xcode를 통해 빌드 및 실행됩니다.' },
-          { q: 'SwiftLM은 비전이나 오디오 입력을 지원합니까?', a: '예. 공식 README에 따르면, `--vision` 플래그로 SwiftLM을 실행하면 Qwen2-VL, PaliGemma 등의 비전 언어 모델이 활성화되고, `--audio` 플래그는 일부 Gemma-4 "Omni" 변형의 오디오 입력을 활성화합니다.' },
+          { q: 'SwiftLM은 비전이나 오디오 입력을 지원합니까?', a: '예. 공식 README에 따르면, `--vision` 플래그로 SwiftLM을 실행하면 Qwen3-VL, Qwen2.5-VL, PaliGemma 등의 비전 언어 모델이 활성화되고, `--audio` 플래그는 일부 Gemma-4 "Omni" 변형의 오디오 입력을 활성화합니다.' },
           { q: 'TurboQuant란 무엇입니까?', a: 'TurboQuant는 SwiftLM의 자체 KV 캐시 압축 방식으로, 비선형 Lloyd-Max 코드북과 하드웨어 가속 Metal 구현을 결합한 것입니다. SharpAI 자체 벤치마크에 따르면 KV 캐시를 FP16 대비 약 3.5배 작게 압축하면서도 정확도 손실이 거의 없으며, `--turbo-kv` 플래그로 활성화됩니다.' },
           { q: 'SSD 전문가 스트리밍이란 무엇입니까?', a: '이는 전체 모델이 통합 메모리에 상주해야 하는 대신, 비활성 Mixture-of-Experts 레이어를 NVMe SSD에서 GPU로 직접 스트리밍하는 기능으로, `--stream-experts`로 활성화됩니다. SharpAI 자체 테스트는 64GB Mac에서 최대 209GB에 달하는 모델의 실행까지 다룹니다.' },
           { q: 'SwiftLM은 누가 개발합니까?', a: 'SwiftLM은 [SharpAI](https://github.com/SharpAI)가 개발합니다. SharpAI는 2018년부터 GitHub에 존재해온 실리콘밸리 소재 조직으로, 주된 사업으로 밝힌 것은 CCTV/NVR 감시 시스템에 머신러닝을 적용하는 것입니다. SwiftLM은 이 핵심 사업과 별개로 해당 조직이 오픈소스로 공개한 범용 추론 서버입니다.' },

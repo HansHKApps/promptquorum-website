@@ -17344,27 +17344,7 @@
     "width": 1200,
     "height": 675
   },
-  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
   "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-ar.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-de.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -17379,16 +17359,6 @@
     "width": 1200,
     "height": 675
   },
-  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-fr.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-ja.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
   "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-ko.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -17398,36 +17368,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-zh.webp": {
-    "encodingFormat": "image/webp",
-    "width": 1200,
-    "height": 675
-  },
-  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-pt.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 400
-  },
-  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-ar.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-en.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-es.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
   },
   "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -17473,16 +17413,6 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
-  },
-  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-ko.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
-  },
-  "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-pt.svg": {
-    "encodingFormat": "image/svg+xml",
-    "width": 800,
-    "height": 350
   },
   "/images/deepseek-vs-qwen-local-comparison-2026-benchmark-comparison-ar.svg": {
     "encodingFormat": "image/svg+xml",
@@ -21134,6 +21064,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/gpt-claude-gemini-which-model-context-chart-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 600
+  },
+  "/images/gpt-claude-gemini-which-model-context-chart-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 600
+  },
+  "/images/gpt-claude-gemini-which-model-context-chart-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 600
+  },
+  "/images/gpt-claude-gemini-which-model-context-chart-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 600
+  },
+  "/images/gpt-claude-gemini-which-model-context-chart-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 600
+  },
+  "/images/gpt-claude-gemini-which-model-context-chart-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 600
+  },
+  "/images/gpt-claude-gemini-which-model-context-chart-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 600
+  },
+  "/images/gpt-claude-gemini-which-model-context-chart-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 600
+  },
+  "/images/gpt-claude-gemini-which-model-context-chart-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 600
+  },
   "/images/gpt-claude-gemini-which-model-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -21178,6 +21153,51 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/gpt-claude-gemini-which-model-price-chart-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 720
+  },
+  "/images/gpt-claude-gemini-which-model-price-chart-de.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 720
+  },
+  "/images/gpt-claude-gemini-which-model-price-chart-en.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 720
+  },
+  "/images/gpt-claude-gemini-which-model-price-chart-es.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 720
+  },
+  "/images/gpt-claude-gemini-which-model-price-chart-fr.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 720
+  },
+  "/images/gpt-claude-gemini-which-model-price-chart-ja.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 720
+  },
+  "/images/gpt-claude-gemini-which-model-price-chart-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 720
+  },
+  "/images/gpt-claude-gemini-which-model-price-chart-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 720
+  },
+  "/images/gpt-claude-gemini-which-model-price-chart-zh.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1200,
+    "height": 720
   },
   "/images/gpt-engineer-review-hero-ar.webp": {
     "encodingFormat": "image/webp",

@@ -365,7 +365,7 @@ docker run --gpus all \\
         ],
         affiliateLinks: [
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             priceRange: '$429',
@@ -1534,7 +1534,7 @@ docker run --gpus all \\
         ],
         affiliateLinks: [
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             priceRange: '$429',
@@ -2095,7 +2095,7 @@ docker run --gpus all \\
         ],
         affiliateLinks: [
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             priceRange: '$429',
@@ -3056,7 +3056,7 @@ docker run --gpus all \
         ],
         affiliateLinks: [
           {
-            url: 'https://minisforum.com/products/UM890-Pro.html',
+            url: 'https://www.minisforum.com/products/minisforum-um890-pro',
             productName: 'Minisforum UM890 Pro',
             productCategory: 'mini-pc',
             priceRange: '$429',

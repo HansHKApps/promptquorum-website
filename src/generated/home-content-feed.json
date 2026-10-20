@@ -12073,7 +12073,7 @@
     "title": "Multimodal Local LLMs: Vision, Audio, and Text Processing",
     "excerpt": "Best local vision models 2026: LLaVA, Qwen-VL, and Llama 3.2 Vision compared for OCR, image analysis, and visual Q&A — no cloud APIs needed.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-20",
     "url": "/local-llms/multimodal-local-llms",
     "cluster": "local-llms"
   },
@@ -15718,7 +15718,7 @@
     "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
     "excerpt": "MLX: 15–25% faster on Apple Silicon. Ollama: easiest. llama.cpp: most compatible. Speed benchmarks, setup time, and when to use each framework.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-20",
     "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
@@ -15727,7 +15727,7 @@
     "title": "MLX vs. Ollama vs. llama.cpp auf dem Mac 2026: Welches Framework für Apple Silicon LLMs?",
     "excerpt": "MLX ist 15–25% schneller auf Apple Silicon. Ollama am einfachsten. llama.cpp am kompatibel. Benchmarks, Setup-Zeit und Anwendungsszenarien.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-20",
     "url": "/de/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
@@ -15736,7 +15736,7 @@
     "title": "MLX vs Ollama vs llama.cpp sur Mac 2026 : quel framework pour Apple Silicon ?",
     "excerpt": "MLX : 15–25 % plus rapide sur Apple Silicon. Ollama : le plus simple. llama.cpp : le plus compatible. Benchmarks, temps de configuration, quand utiliser chaque framework.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-20",
     "url": "/fr/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
@@ -15745,7 +15745,7 @@
     "title": "MLX vs Ollama vs llama.cpp（Mac 2026年）：Apple Silicon LLMに最適なフレームワークは？",
     "excerpt": "MLXはApple Siliconで15～25%高速。Ollamaは初心者向けで最も簡単。llama.cppは最も互換性が高い。各フレームワークの速度ベンチマーク、セットアップ時間比較、モデル対応表、フレームワーク選択ガイド。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-20",
     "url": "/ja/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
@@ -15754,7 +15754,7 @@
     "title": "Mac 2026年：MLX vs Ollama vs llama.cpp — 哪个Apple Silicon LLM框架最适合你？",
     "excerpt": "MLX在Apple Silicon上快15–25%。Ollama最易用、最适合初学者。llama.cpp兼容性最强。包含速度基准测试、安装时间对比、模型兼容表、使用场景指南。本地LLM框架完全对比。",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-20",
     "url": "/zh/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
@@ -15763,7 +15763,7 @@
     "title": "MLX vs Ollama vs llama.cpp en Mac 2026: ¿Qué motor de inferencia usar en Mac?",
     "excerpt": "MLX: 15–25% más rápido en Apple Silicon. Ollama: el más fácil. llama.cpp: el más compatible. Benchmarks de velocidad, setup y cuándo usar cada framework.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-20",
     "url": "/es/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
@@ -15772,7 +15772,7 @@
     "title": "MLX vs Ollama vs llama.cpp no Mac 2026: Qual Motor de Inferência Usar no Mac?",
     "excerpt": "MLX: 15–25% mais rápido no Apple Silicon. Ollama: o mais fácil. llama.cpp: o mais compatível. Benchmarks de velocidade, setup e quando usar cada framework.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-20",
     "url": "/pt/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
@@ -15781,7 +15781,7 @@
     "title": "⁨MLX⁩ مقابل ⁨Ollama⁩ مقابل ⁨llama.cpp⁩ على ⁨Mac 2026⁩: أي محرك استدلال تستخدم على ⁨Mac⁩؟",
     "excerpt": "⁨MLX⁩ أسرع بنسبة ⁨15⁩–⁨25%⁩ على ⁨Apple Silicon. Ollama⁩ الأسهل. ⁨llama.cpp⁩ الأكثر توافقًا. اختبارات السرعة وأوقات الإعداد ومتى تستخدم كل إطار عمل على ⁨Mac⁩.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-20",
     "url": "/ar/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
@@ -15790,7 +15790,7 @@
     "title": "Mac에서 MLX vs Ollama vs llama.cpp 2026: Apple Silicon LLM을 위한 최적의 프레임워크는?",
     "excerpt": "MLX: Apple Silicon에서 15~25% 빠름. Ollama: 가장 간편. llama.cpp: 가장 넓은 호환성. 속도 벤치마크, 설치 시간, 프레임워크별 사용 시점 안내.",
     "publishDate": "2026-05-15",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-20",
     "url": "/ko/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
     "cluster": "local-llms"
   },
@@ -16852,7 +16852,7 @@
     "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
     "excerpt": "Run Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder and Qwen2.5-VL locally in 2026. VRAM requirements, Ollama + LM Studio setup, Q4_K_M benchmarks, and hardware tier guide.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16861,7 +16861,7 @@
     "title": "Qwen Lokal-Deployment-Guide 2026: Qwen 3.6 27B, Coder & VL je Hardware-Stufe",
     "excerpt": "Qwen 3.6 27B läuft lokal mit ~17 GB VRAM in Q4_K_M über `ollama run qwen3.6:27b`. VRAM-Bedarf je Modellgröße, Coder- und VL-Varianten, Hardware-Tiers.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/de/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16870,7 +16870,7 @@
     "title": "Guide de déploiement local Qwen 2026 : Qwen 3.6 27B, Coder et VL par niveau matériel",
     "excerpt": "Déployer Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder et Qwen2.5-VL en local en 2026. VRAM requis, Ollama + LM Studio, benchmarks Q4_K_M et guide par niveau matériel.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/fr/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16879,7 +16879,7 @@
     "title": "Qwenローカルデプロイガイド2026：Qwen 3.6 27B・Coder・VLを全ハードウェア階層で動かす",
     "excerpt": "Qwen 3.6 27B・Qwen3・Qwen2.5（7B〜72B）・Qwen2.5-Coder・Qwen2.5-VLを2026年にローカルで動かす完全実践ガイド。VRAM要件、OllamaとLM StudioのセットアップガイドQ4_K_Mベンチマーク、ハードウェア階層別の選び方を解説します。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/ja/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16888,7 +16888,7 @@
     "title": "Qwen本地部署指南2026：Qwen 3.6 27B、Coder和VL各硬件层级完整指南",
     "excerpt": "2026年本地运行Qwen 3.6 27B、Qwen3、Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2.5-VL的完整实战部署指南：显存需求对照表、Ollama与LM Studio配置步骤、Q4_K_M量化基准数据，以及各硬件预算档位的配置建议。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/zh/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16897,7 +16897,7 @@
     "title": "Guía de despliegue local de Qwen 2026: Qwen 3.6 27B, Coder y VL en cada nivel de hardware",
     "excerpt": "Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder y Qwen2.5-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/es/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16906,7 +16906,7 @@
     "title": "Guia de implantação local do Qwen 2026: Qwen 3.6 27B, Coder e VL por nível de hardware",
     "excerpt": "Execute Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder e Qwen2.5-VL localmente em 2026. Requisitos de VRAM, configuração Ollama e LM Studio e guia por nível de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/pt/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16915,7 +16915,7 @@
     "title": "دليل النشر المحلي لـ Qwen 2026: Qwen 3.6 27B وCoder وVL على كل مستوى أجهزة",
     "excerpt": "شغّل Qwen 3.6 27B وQwen3 وQwen2.5 (7B–72B) وQwen2.5-Coder وQwen2.5-VL محليًا في 2026. متطلبات VRAM وإعداد Ollama وLM Studio وبنشمارك Q4_K_M ودليل مستويات الأجهزة.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/ar/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16924,7 +16924,7 @@
     "title": "Qwen 로컬 배포 가이드 2026: Qwen 3.6 27B, Coder & VL 하드웨어 티어별 실행 방법",
     "excerpt": "2026년에 Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder, Qwen2.5-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 벤치마크, 하드웨어 티어 가이드를 제공합니다.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/ko/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -23737,7 +23737,7 @@
     "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
     "excerpt": "Best local VLMs for Ollama in 2026: Gemma 4, Qwen3.5, Qwen3-VL, MiniCPM-V, Moondream. VRAM per model, OCR picks and setup steps.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23746,7 +23746,7 @@
     "title": "Beste lokale Vision-Modelle 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal-Setup",
     "excerpt": "Beste lokale VLMs für Ollama 2026: Gemma 4, Qwen3.5, Qwen3-VL, MiniCPM-V, Moondream. VRAM je Modell, OCR-Empfehlungen und Setup-Schritte.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/de/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23755,7 +23755,7 @@
     "title": "Meilleurs modèles de vision locaux 2026 : Gemma 4, Qwen3-VL, LLaVA & configuration Ollama",
     "excerpt": "Meilleurs VLM locaux pour Ollama en 2026 : Gemma 4, Qwen3.5, Qwen3-VL, MiniCPM-V, Moondream. VRAM par modèle, choix OCR et étapes de configuration.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/fr/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23764,7 +23764,7 @@
     "title": "ベストローカルビジョンモデル2026：Gemma 4・Qwen3-VL・LLaVA & Ollamaマルチモーダルセットアップ",
     "excerpt": "2026年のOllama向けベストローカルVLM：Gemma 4、Qwen3.5、Qwen3-VL、MiniCPM-V、Moondream。モデル別VRAM、OCRおすすめ、セットアップ手順。",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/ja/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23773,7 +23773,7 @@
     "title": "2026年最佳本地视觉模型：Gemma 4、Qwen3-VL、LLaVA与Ollama多模态配置",
     "excerpt": "2026年Ollama最佳本地VLM：Gemma 4、Qwen3.5、Qwen3-VL、MiniCPM-V、Moondream。各模型VRAM需求、OCR推荐与配置步骤。",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/zh/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23782,7 +23782,7 @@
     "title": "Mejores modelos de visión locales 2026: Gemma 4, Qwen3-VL, LLaVA y configuración multimodal con Ollama",
     "excerpt": "Mejores VLM locales con Ollama en 2026: Gemma 4, Qwen3.5, Qwen3-VL, MiniCPM-V, Moondream. VRAM por modelo, OCR y pasos de configuración.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/es/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23791,7 +23791,7 @@
     "title": "Melhores modelos de visão locais 2026: Gemma 4, Qwen3-VL, LLaVA e configuração multimodal com Ollama",
     "excerpt": "Melhores VLMs locais para Ollama em 2026: Gemma 4, Qwen3.5, Qwen3-VL, MiniCPM-V, Moondream. VRAM por modelo, opções de OCR e passos de configuração.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/pt/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23800,7 +23800,7 @@
     "title": "أفضل نماذج الرؤية المحلية 2026: Gemma 4 وQwen3-VL وLLaVA وإعداد Ollama متعدد الوسائط",
     "excerpt": "أفضل نماذج VLM المحلية مع Ollama في 2026: Gemma 4 وQwen3.5 وQwen3-VL وMiniCPM-V وMoondream. VRAM لكل نموذج وأفضل خيارات OCR وخطوات الإعداد.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/ar/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -23809,7 +23809,7 @@
     "title": "최고의 로컬 비전 모델 2026: Gemma 4, Qwen3-VL, LLaVA 및 Ollama 멀티모달 설정 가이드",
     "excerpt": "2026년 Ollama용 최고의 로컬 VLM: Gemma 4, Qwen3.5, Qwen3-VL, MiniCPM-V, Moondream. 모델별 VRAM, OCR 추천, 설정 방법.",
     "publishDate": "2026-05-14",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/ko/power-local-llm/local-vision-models-llava-ollama-2026",
     "cluster": "power-local-llm"
   },
@@ -24544,82 +24544,82 @@
   },
   {
     "lang": "en",
-    "title": "DeepSeek vs Qwen for Local Coding 2026: Which Wins?",
-    "excerpt": "Previous-gen local coding comparison: Qwen2.5-Coder 32B beats DeepSeek-Coder on HumanEval (92.7% vs 81.1%). DeepSeek-V4 and Qwen3.6 are newer.",
+    "title": "DeepSeek V4 vs Qwen3.8 for Local Coding 2026",
+    "excerpt": "DeepSeek V4.x vs Qwen3.8 for local coding in 2026: vendor-published benchmarks, weights sizes, Ollama tags and which models fit one 24 GB GPU.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
-    "title": "DeepSeek vs Qwen für lokales Coding 2026: Wer gewinnt?",
-    "excerpt": "Qwen2.5-Coder vs DeepSeek-Coder für lokales Coding 2026: Qwen gewinnt HumanEval (92,7 % vs. 81,1 %); DeepSeek liegt bei Repo-Level-FIM vorn. Python, Rust, Refactoring.",
+    "title": "DeepSeek V4 vs Qwen3.8 für lokales Coding 2026",
+    "excerpt": "DeepSeek V4.x vs Qwen3.8 für lokales Coding 2026: Benchmarks der Hersteller, Gewichtsgrößen, Ollama-Tags und was auf eine 24-GB-GPU passt.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/de/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
-    "title": "DeepSeek vs Qwen pour le Coding Local 2026 : Lequel Gagne ?",
-    "excerpt": "Qwen2.5-Coder vs DeepSeek-Coder pour le code local 2026 : Qwen gagne HumanEval (92,7 % vs 81,1 %) ; DeepSeek devance en repo-level FIM. Python, Rust, refactoring.",
+    "title": "DeepSeek V4 vs Qwen3.8 pour le coding local 2026",
+    "excerpt": "DeepSeek V4.x vs Qwen3.8 pour le coding local en 2026 : benchmarks des éditeurs, tailles des poids, tags Ollama et ce qui tient sur un GPU de 24 GB.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/fr/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
-    "title": "DeepSeek vs Qwen ローカルコーディング2026：どちらが優れている？",
-    "excerpt": "DeepSeek-Coder vs Qwen2.5-Coder：2026年ローカルコーディング比較。ベンチマーク、VRAM要件、実際のコード品質。Python、JavaScript、リファクタリングに最適なのは。",
+    "title": "DeepSeek V4 vs Qwen3.8 ローカルコーディング2026",
+    "excerpt": "ローカルコーディング向けのDeepSeek V4.xとQwen3.8を比較。各社公表のベンチマーク、重みサイズ、Ollamaタグ、24GB GPUに載るモデルを整理します。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/ja/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
-    "title": "DeepSeek vs Qwen本地编程2026：哪个更好？",
-    "excerpt": "DeepSeek-Coder vs Qwen2.5-Coder：2026年本地编程对比。基准测试、VRAM需求和真实代码质量。Python、JavaScript和重构任务中哪个模型更优，全面评测。",
+    "title": "DeepSeek V4 vs Qwen3.8本地编程2026",
+    "excerpt": "本地编程场景下的DeepSeek V4.x与Qwen3.8对比：厂商公布的基准测试、权重大小、Ollama标签，以及哪些模型能放进24GB显卡。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/zh/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
-    "title": "DeepSeek vs Qwen para Coding Local 2026: ¿Cuál Gana?",
-    "excerpt": "Comparativa de la generación anterior: Qwen2.5-Coder 32B supera a DeepSeek-Coder en HumanEval (92,7 % vs 81,1 %). DeepSeek-V4 y Qwen3.6 son más recientes.",
+    "title": "DeepSeek V4 vs Qwen3.8 para coding local 2026",
+    "excerpt": "DeepSeek V4.x vs Qwen3.8 para coding local en 2026: benchmarks de cada proveedor, tamaño de pesos, etiquetas de Ollama y qué cabe en una GPU de 24 GB.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/es/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
-    "title": "DeepSeek vs Qwen para Codificação Local 2026: Qual Vence?",
-    "excerpt": "Comparativo da geração anterior: o Qwen2.5-Coder 32B supera o DeepSeek-Coder no HumanEval (92,7% vs 81,1%). DeepSeek-V4 e Qwen3.6 são mais novos.",
+    "title": "DeepSeek V4 vs Qwen3.8 para codificação local 2026",
+    "excerpt": "DeepSeek V4.x vs Qwen3.8 para codificação local em 2026: benchmarks dos fornecedores, tamanho dos pesos, tags do Ollama e o que cabe em uma GPU de 24 GB.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/pt/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
-    "title": "⁨DeepSeek⁩ مقابل ⁨Qwen⁩ للبرمجة المحلية ⁨2026⁩: أيّهما يفوز؟",
-    "excerpt": "مقارنة الجيل السابق: يتفوق Qwen2.5-Coder 32B على DeepSeek-Coder في HumanEval (92.7% مقابل 81.1%). DeepSeek-V4 وQwen3.6 أحدث.",
+    "title": "⁨DeepSeek V4⁩ مقابل ⁨Qwen3.8⁩ للبرمجة المحلية ⁨2026⁩",
+    "excerpt": "مقارنة DeepSeek V4.x وQwen3.8 للبرمجة المحلية في 2026: اختبارات منشورة من الشركتين وأحجام الأوزان ووسوم Ollama وما يناسب بطاقة 24 GB.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/ar/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
-    "title": "로컬 코딩 AI DeepSeek vs Qwen 2026: 승자는?",
-    "excerpt": "이전 세대 로컬 코딩 비교: Qwen2.5-Coder 32B가 HumanEval에서 DeepSeek-Coder보다 우세(92.7% vs 81.1%). DeepSeek-V4·Qwen3.6이 더 최신입니다.",
+    "title": "DeepSeek V4 vs Qwen3.8 로컬 코딩 2026",
+    "excerpt": "DeepSeek V4.x와 Qwen3.8의 로컬 코딩 비교: 벤더가 직접 공개한 벤치마크, 가중치 크기, Ollama 태그, 24 GB GPU 적합 여부를 정리했습니다.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/ko/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
@@ -34834,7 +34834,7 @@
     "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
     "excerpt": "Ollama vision models 2026: the practical how-to for running image-capable models through Ollama. Real pull/run commands, the /api/generate JSON shape with base64 images, and which models are actually listed.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-20",
     "url": "/power-local-llm/ollama-vision-models-review",
     "cluster": "power-local-llm"
   },
@@ -34843,7 +34843,7 @@
     "title": "Ollama-Vision-Modelle: So führen Sie Bildmodelle wirklich lokal aus",
     "excerpt": "Ollama-Vision-Modelle 2026: die praktische Anleitung zum Ausführen bildfähiger Modelle über Ollama. Echte pull/run-Befehle, die /api/generate-JSON-Form mit Base64-Bildern, und welche Modelle tatsächlich gelistet sind.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-20",
     "url": "/de/power-local-llm/ollama-vision-models-review",
     "cluster": "power-local-llm"
   },
@@ -34852,7 +34852,7 @@
     "title": "Modèles de vision Ollama: comment exécuter réellement des modèles d'image en local",
     "excerpt": "Modèles de vision Ollama 2026 : le guide pratique pour exécuter des modèles capables d'image via Ollama. Vraies commandes pull/run, la forme JSON de /api/generate avec des images en base64, et quels modèles sont réellement listés.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-20",
     "url": "/fr/power-local-llm/ollama-vision-models-review",
     "cluster": "power-local-llm"
   },
@@ -34861,7 +34861,7 @@
     "title": "Ollamaのビジョンモデル:画像モデルをローカルで実際に動かす方法",
     "excerpt": "Ollamaビジョンモデル2026:Ollamaで画像対応モデルを動かす実践ガイド。実際のpull/runコマンド、base64画像を使う/api/generateのJSON形式、実際に掲載されているモデル一覧。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-20",
     "url": "/ja/power-local-llm/ollama-vision-models-review",
     "cluster": "power-local-llm"
   },
@@ -34870,7 +34870,7 @@
     "title": "Ollama视觉模型:如何真正在本地运行图像模型",
     "excerpt": "Ollama视觉模型2026:通过Ollama运行具备图像能力模型的实用指南。真实的pull/run命令、使用base64图像的/api/generate JSON格式,以及实际列出的模型。",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-20",
     "url": "/zh/power-local-llm/ollama-vision-models-review",
     "cluster": "power-local-llm"
   },
@@ -34879,7 +34879,7 @@
     "title": "Modelos de visión de Ollama: cómo ejecutar realmente modelos de imagen en local",
     "excerpt": "Modelos de visión de Ollama 2026: la guía práctica para ejecutar modelos capaces de imagen a través de Ollama. Comandos reales pull/run, la forma JSON de /api/generate con imágenes en base64, y qué modelos están realmente listados.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-20",
     "url": "/es/power-local-llm/ollama-vision-models-review",
     "cluster": "power-local-llm"
   },
@@ -34888,7 +34888,7 @@
     "title": "Modelos de Visão do Ollama: Como Realmente Rodar Modelos de Imagem Localmente",
     "excerpt": "Modelos de visão do Ollama 2026: o guia prático para rodar modelos com capacidade de imagem pelo Ollama. Comandos reais de pull/run, o formato JSON do /api/generate com imagens em base64, e quais modelos estão realmente listados.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-20",
     "url": "/pt/power-local-llm/ollama-vision-models-review",
     "cluster": "power-local-llm"
   },
@@ -34897,7 +34897,7 @@
     "title": "نماذج الرؤية في Ollama: كيف تُشغّل نماذج الصور محليًا فعليًا",
     "excerpt": "نماذج رؤية Ollama 2026: الدليل العملي لتشغيل النماذج القادرة على معالجة الصور عبر Ollama. أوامر pull/run فعلية، وصيغة JSON الخاصة بـ /api/generate باستخدام صور base64، والنماذج المدرجة فعليًا.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-20",
     "url": "/ar/power-local-llm/ollama-vision-models-review",
     "cluster": "power-local-llm"
   },
@@ -34906,7 +34906,7 @@
     "title": "Ollama 비전 모델: 이미지 모델을 로컬에서 실제로 실행하는 방법",
     "excerpt": "Ollama 비전 모델 2026: Ollama로 이미지 지원 모델을 실행하는 실전 가이드. 실제 pull/run 명령어, base64 이미지를 사용하는 /api/generate JSON 형식, 실제로 등록된 모델 목록.",
     "publishDate": "2026-09-06",
-    "dateModified": "2026-09-06",
+    "dateModified": "2026-10-20",
     "url": "/ko/power-local-llm/ollama-vision-models-review",
     "cluster": "power-local-llm"
   },
@@ -40342,7 +40342,7 @@
     "title": "MemoryAI Review: Free Offline AI Chat for iPhone and Android",
     "excerpt": "MemoryAI review: free, closed-source offline AI chat for iPhone and Android with document Q&A, editable Agent Memory and voice. Privacy and limits.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40351,7 +40351,7 @@
     "title": "MemoryAI-Rezension: Kostenlose Offline-KI-Chat-App für iPhone und Android",
     "excerpt": "MemoryAI-Rezension: kostenlose, nicht quelloffene Offline-KI-Chat-App für iPhone und Android mit Dokumenten-Q&A, Agent Memory, Sprache. Datenschutz.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/de/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40360,7 +40360,7 @@
     "title": "Avis MemoryAI : chat IA gratuit hors ligne pour iPhone et Android",
     "excerpt": "Avis MemoryAI : appli de chat IA gratuite, code fermé, hors ligne, sur iPhone et Android, avec Q&R sur documents, Agent Memory, voix et contrôle parental.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/fr/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40369,7 +40369,7 @@
     "title": "MemoryAIレビュー:iPhone・Android向けの無料オフラインAIチャット",
     "excerpt": "MemoryAIレビュー:ドキュメントQ&A、編集可能なAgent Memory、音声、ペアレンタルコントロールを備えた無料のオフラインAIチャット。プライバシーと制約を解説します。",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/ja/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40378,7 +40378,7 @@
     "title": "MemoryAI 评测:适用于 iPhone 和 Android 的免费离线 AI 聊天应用",
     "excerpt": "MemoryAI 评测:免费、闭源的 iPhone 和 Android 离线 AI 聊天应用,支持文档问答、可编辑 Agent Memory、语音模式与家长控制。涵盖隐私与局限。",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/zh/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40387,7 +40387,7 @@
     "title": "Análisis de MemoryAI: chat de IA offline y gratuito para iPhone y Android",
     "excerpt": "Análisis de MemoryAI: chat de IA offline, gratuito y de código cerrado para iPhone y Android, con memoria editable y voz. Privacidad y límites.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/es/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40396,7 +40396,7 @@
     "title": "MemoryAI: Análise do App Gratuito de Chat de IA Offline para iPhone e Android",
     "excerpt": "Análise do MemoryAI: chat de IA offline, grátis e de código fechado para iPhone e Android, com perguntas sobre documentos, memória editável e voz.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/pt/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40405,7 +40405,7 @@
     "title": "مراجعة MemoryAI: تطبيق دردشة ذكاء اصطناعي مجاني دون اتصال لـ iPhone وأندرويد",
     "excerpt": "مراجعة MemoryAI: تطبيق دردشة مجاني ومغلق المصدر دون اتصال لـ iPhone وأندرويد مع أسئلة على المستندات وذاكرة قابلة للتعديل وصوت. الخصوصية والقيود.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/ar/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -40414,7 +40414,7 @@
     "title": "MemoryAI 리뷰: iPhone·Android용 무료 오프라인 AI 채팅 앱",
     "excerpt": "MemoryAI 리뷰: 문서 Q&A, 편집 가능한 Agent Memory, 음성 모드, 자녀 보호 기능을 갖춘 iPhone·Android용 무료 비공개 소스 오프라인 AI 앱. 개인정보와 한계.",
     "publishDate": "2026-10-19",
-    "dateModified": "2026-10-19",
+    "dateModified": "2026-10-20",
     "url": "/ko/power-local-llm/memoryai-review",
     "cluster": "power-local-llm"
   },
@@ -47956,7 +47956,7 @@
     "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
     "excerpt": "SwiftLM is a free, open-source, Python-free Swift MLX inference server for Apple Silicon with an iOS companion app. Verified facts, install steps, and comparisons for 2026.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-09-19",
+    "dateModified": "2026-10-20",
     "url": "/power-local-llm/swiftlm-review",
     "cluster": "power-local-llm"
   },
@@ -47965,7 +47965,7 @@
     "title": "SwiftLM-Rezension: Nativer Swift-MLX-Inferenzserver für Apple Silicon",
     "excerpt": "SwiftLM ist ein kostenloser, quelloffener, Python-freier Swift-MLX-Inferenzserver für Apple Silicon mit iOS-Begleit-App. Verifizierte Fakten, Installationsschritte und Vergleiche für 2026.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-09-19",
+    "dateModified": "2026-10-20",
     "url": "/de/power-local-llm/swiftlm-review",
     "cluster": "power-local-llm"
   },
@@ -47974,7 +47974,7 @@
     "title": "SwiftLM : serveur d'inférence MLX natif en Swift pour Apple Silicon",
     "excerpt": "SwiftLM est un serveur d'inférence MLX gratuit, open source et sans Python pour Apple Silicon, avec une application compagnon iOS. Faits vérifiés, étapes d'installation et comparaisons pour 2026.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-09-19",
+    "dateModified": "2026-10-20",
     "url": "/fr/power-local-llm/swiftlm-review",
     "cluster": "power-local-llm"
   },
@@ -47983,7 +47983,7 @@
     "title": "SwiftLMレビュー：Apple Silicon向けネイティブSwift MLX推論サーバー",
     "excerpt": "SwiftLMは無料・オープンソースの、Python不要のSwift MLX推論サーバーで、Apple Silicon向けにiOSコンパニオンアプリを備える。2026年版の検証済み事実、インストール手順、比較を掲載。",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-09-19",
+    "dateModified": "2026-10-20",
     "url": "/ja/power-local-llm/swiftlm-review",
     "cluster": "power-local-llm"
   },
@@ -47992,7 +47992,7 @@
     "title": "SwiftLM 评测：面向 Apple Silicon 的原生 Swift MLX 推理服务器",
     "excerpt": "SwiftLM 是一款免费、开源、无需 Python 的 Swift MLX 推理服务器，面向 Apple Silicon，配备 iOS 配套应用。提供 2026 年版经过核实的事实、安装步骤与对比。",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-09-19",
+    "dateModified": "2026-10-20",
     "url": "/zh/power-local-llm/swiftlm-review",
     "cluster": "power-local-llm"
   },
@@ -48001,7 +48001,7 @@
     "title": "SwiftLM Review: Servidor de Inferencia MLX Nativo en Swift para Apple Silicon",
     "excerpt": "SwiftLM es un servidor de inferencia MLX en Swift, gratuito, de código abierto y sin Python, para Apple Silicon, con una app complementaria para iOS. Datos verificados, pasos de instalación y comparativas para 2026.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-09-19",
+    "dateModified": "2026-10-20",
     "url": "/es/power-local-llm/swiftlm-review",
     "cluster": "power-local-llm"
   },
@@ -48010,7 +48010,7 @@
     "title": "Avaliação do SwiftLM: Servidor de Inferência MLX Nativo em Swift para Apple Silicon",
     "excerpt": "SwiftLM é um servidor de inferência MLX gratuito, de código aberto e sem Python para Apple Silicon, com app complementar para iOS. Fatos verificados, passos de instalação e comparações para 2026.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-09-19",
+    "dateModified": "2026-10-20",
     "url": "/pt/power-local-llm/swiftlm-review",
     "cluster": "power-local-llm"
   },
@@ -48019,7 +48019,7 @@
     "title": "مراجعة SwiftLM: خادم استدلال Swift MLX أصلي لأجهزة Apple Silicon",
     "excerpt": "SwiftLM خادم استدلال Swift MLX مجاني ومفتوح المصدر وخالٍ من Python لأجهزة Apple Silicon، مع تطبيق مرافق لنظام iOS. حقائق موثّقة وخطوات تثبيت ومقارنات لعام 2026.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-09-19",
+    "dateModified": "2026-10-20",
     "url": "/ar/power-local-llm/swiftlm-review",
     "cluster": "power-local-llm"
   },
@@ -48028,7 +48028,7 @@
     "title": "SwiftLM 리뷰: Apple Silicon을 위한 네이티브 Swift MLX 추론 서버",
     "excerpt": "SwiftLM은 무료 오픈소스이며 Python이 필요 없는 Swift MLX 추론 서버로, Apple Silicon용이며 iOS 동반 앱을 제공합니다. 2026년 기준 검증된 사실, 설치 단계, 비교 정보를 담았습니다.",
     "publishDate": "2026-09-19",
-    "dateModified": "2026-09-19",
+    "dateModified": "2026-10-20",
     "url": "/ko/power-local-llm/swiftlm-review",
     "cluster": "power-local-llm"
   },
@@ -48280,7 +48280,7 @@
     "title": "How Much VRAM Do You Need for a Local LLM?",
     "excerpt": "4 GB runs Llama 3.2 3B Q4. 6 GB handles Llama 3.1 8B Q4_K_M. 12 GB unlocks Qwen3 14B. Formula: params × 0.6 = GB at Q4. VRAM tier guide from PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/prompt-bites/how-much-vram-for-local-llm",
     "cluster": "prompt-bites"
   },
@@ -48289,7 +48289,7 @@
     "title": "Wie viel VRAM brauchen Sie für ein lokales LLM?",
     "excerpt": "4 GB für Llama 3.2 3B bei Q4. 6 GB für Llama 3.1 8B Q4_K_M. 12 GB für Qwen3 14B. Formel: Parameter × 0,6 = GB bei Q4. VRAM-Stufenführer von PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/de/prompt-bites/how-much-vram-for-local-llm",
     "cluster": "prompt-bites"
   },
@@ -48298,7 +48298,7 @@
     "title": "De combien de VRAM avez-vous besoin pour un LLM local ?",
     "excerpt": "4 Go pour Llama 3.2 3B en Q4. 6 Go pour Llama 3.1 8B Q4_K_M. 12 Go pour Qwen3 14B. Formule : params × 0,6 = Go en Q4. Paliers VRAM par PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/fr/prompt-bites/how-much-vram-for-local-llm",
     "cluster": "prompt-bites"
   },
@@ -48307,7 +48307,7 @@
     "title": "ローカルLLMに必要なVRAM量は？",
     "excerpt": "4 GBでLlama 3.2 3Bが動作。6 GBでLlama 3.1 8B Q4が動作。12 GBでQwen3 14B Q4が収まります。PromptQuorumによるVRAM選択ガイド。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/ja/prompt-bites/how-much-vram-for-local-llm",
     "cluster": "prompt-bites"
   },
@@ -48316,7 +48316,7 @@
     "title": "运行本地LLM需要多少显存？",
     "excerpt": "本地大模型各参数规模所需显存参考（2026）：4 GB运行Llama 3.2 3B Q4；6 GB运行Llama 3.1 8B Q4_K_M；12 GB解锁Qwen3 14B；24 GB承载Qwen3 32B。通用公式：参数量（B）×0.6≈Q4量化所需显存（GB）。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/zh/prompt-bites/how-much-vram-for-local-llm",
     "cluster": "prompt-bites"
   },
@@ -48325,7 +48325,7 @@
     "title": "¿Cuánta VRAM necesitas para un LLM local?",
     "excerpt": "4 GB para Llama 3.2 3B Q4. 6 GB para Llama 3.1 8B Q4_K_M. 12 GB para Qwen3 14B. Fórmula: params × 0,6 = GB en Q4. Guía de VRAM de PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/es/prompt-bites/how-much-vram-for-local-llm",
     "cluster": "prompt-bites"
   },
@@ -48334,7 +48334,7 @@
     "title": "Quanta VRAM você precisa para um LLM local?",
     "excerpt": "4 GB para Llama 3.2 3B Q4. 6 GB para Llama 3.1 8B Q4_K_M. 12 GB para Qwen3 14B. Fórmula: params × 0,6 = GB em Q4. Guia de VRAM do PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/pt/prompt-bites/how-much-vram-for-local-llm",
     "cluster": "prompt-bites"
   },
@@ -48343,7 +48343,7 @@
     "title": "كم ⁨VRAM⁩ تحتاج للنماذج اللغوية المحلية؟",
     "excerpt": "⁨4 GB⁩ تكفي لـ ⁨Llama 3.2 3B Q4⁩؛ ⁨6 GB⁩ تُشغّل ⁨Llama 3.1 8B Q4⁩_⁨K⁩_⁨M⁩؛ ⁨12 GB⁩ تفتح ⁨Qwen3 14B Q4⁩. القاعدة: معاملات × ⁨0.6⁩ = ⁨GB⁩ عند ⁨Q4⁩. من ⁨PromptQuorum⁩.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/ar/prompt-bites/how-much-vram-for-local-llm",
     "cluster": "prompt-bites"
   },
@@ -48352,7 +48352,7 @@
     "title": "로컬 LLM에 VRAM이 얼마나 필요합니까?",
     "excerpt": "4 GB로 Llama 3.2 3B Q4 실행. 6 GB로 Llama 3.1 8B Q4_K_M 처리. 12 GB로 Qwen3 14B 실행. 공식: 파라미터 × 0.6 = Q4 기준 GB. PromptQuorum VRAM 티어 가이드.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/ko/prompt-bites/how-much-vram-for-local-llm",
     "cluster": "prompt-bites"
   },
@@ -48523,7 +48523,7 @@
     "title": "Best Ollama Models for RTX 3060 12 GB?",
     "excerpt": "RTX 3060 12 GB: Qwen3 8B (6 GB VRAM, ~40 tok/s) for general tasks, Phi-4 Q4_K_M for reasoning, Mistral Nemo 12B for chat. All run at 30–40 tok/s. Quick answer from PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/prompt-bites/best-ollama-models-rtx-3060-12gb",
     "cluster": "prompt-bites"
   },
@@ -48532,7 +48532,7 @@
     "title": "Beste Ollama-Modelle für RTX 3060 12 GB?",
     "excerpt": "RTX 3060 12 GB: Qwen3 8B (6 GB VRAM, ~40 Tok/s) für Allzweck, Phi-4 Q4_K_M für Reasoning, Mistral Nemo 12B für Chat. Schnelle Antwort von PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/de/prompt-bites/best-ollama-models-rtx-3060-12gb",
     "cluster": "prompt-bites"
   },
@@ -48541,7 +48541,7 @@
     "title": "Meilleurs modèles Ollama pour RTX 3060 12 Go ?",
     "excerpt": "RTX 3060 12 Go : Qwen3 8B (6 Go de VRAM, ~40 tok/s) pour l'usage général, Phi-4 Q4_K_M pour le raisonnement, Mistral Nemo 12B pour le chat. Réponse rapide par PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/fr/prompt-bites/best-ollama-models-rtx-3060-12gb",
     "cluster": "prompt-bites"
   },
@@ -48550,7 +48550,7 @@
     "title": "RTX 3060 12 GB向け最良Ollamaモデルは？",
     "excerpt": "RTX 3060 12 GBは汎用用途にQwen3 8B（6 GB VRAM、約40トークン/秒）、推論にPhi-4 Q4_K_M、チャットにMistral Nemo 12Bが最適です。PromptQuorumの解説。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/ja/prompt-bites/best-ollama-models-rtx-3060-12gb",
     "cluster": "prompt-bites"
   },
@@ -48559,7 +48559,7 @@
     "title": "RTX 3060 12 GB最佳Ollama模型？",
     "excerpt": "RTX 3060 12 GB：Qwen3 8B（6 GB显存，约40 tok/s）适合通用任务，Phi-4 Q4_K_M适合推理，Mistral Nemo 12B适合聊天。PromptQuorum快速解答。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/zh/prompt-bites/best-ollama-models-rtx-3060-12gb",
     "cluster": "prompt-bites"
   },
@@ -48568,7 +48568,7 @@
     "title": "¿Mejores modelos Ollama para RTX 3060 12 GB?",
     "excerpt": "RTX 3060 12 GB: Qwen3 8B (6 GB de VRAM, ~40 tok/s) para uso general, Phi-4 Q4_K_M para razonamiento, Mistral Nemo 12B para chat. Respuesta rápida de PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/es/prompt-bites/best-ollama-models-rtx-3060-12gb",
     "cluster": "prompt-bites"
   },
@@ -48577,7 +48577,7 @@
     "title": "Melhores modelos Ollama para RTX 3060 12 GB?",
     "excerpt": "RTX 3060 12 GB: Qwen3 8B (6 GB de VRAM, ~40 tok/s) para uso geral, Phi-4 Q4_K_M para raciocínio, Mistral Nemo 12B para chat. Resposta rápida do PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/pt/prompt-bites/best-ollama-models-rtx-3060-12gb",
     "cluster": "prompt-bites"
   },
@@ -48586,7 +48586,7 @@
     "title": "أفضل نماذج ⁨Ollama⁩ لـ⁨RTX 3060 12 GB⁩؟",
     "excerpt": "⁨RTX 3060 12 GB⁩: ⁨Qwen3 8B⁩ (⁨6 GB VRAM⁩، ⁨~40⁩ رمز/ثانية) للاستخدام العام، ⁨Phi-4 Q4⁩_⁨K⁩_⁨M⁩ للاستدلال، ⁨Mistral Nemo 12B⁩ للدردشة. إجابة سريعة من ⁨PromptQuorum⁩.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/ar/prompt-bites/best-ollama-models-rtx-3060-12gb",
     "cluster": "prompt-bites"
   },
@@ -48595,7 +48595,7 @@
     "title": "RTX 3060 12 GB에 최적인 Ollama 모델은?",
     "excerpt": "RTX 3060 12 GB: 범용 작업에는 Qwen3 8B (6 GB VRAM, 약 40 토큰/초), 추론에는 Phi-4 Q4_K_M, 채팅에는 Mistral Nemo 12B가 최적입니다. PromptQuorum의 빠른 답변.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/ko/prompt-bites/best-ollama-models-rtx-3060-12gb",
     "cluster": "prompt-bites"
   },
@@ -48685,7 +48685,7 @@
     "title": "How Much RAM Does a 7B Model Need?",
     "excerpt": "A 7B model at Q4 needs 4–5 GB for the weights and 5–6 GB in total with context, in RAM or VRAM. Rule: params × 0.7 = GB at Q4. PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-20",
     "url": "/prompt-bites/how-much-ram-for-7b-model",
     "cluster": "prompt-bites"
   },
@@ -48694,7 +48694,7 @@
     "title": "Wie viel RAM braucht ein 7B-Modell?",
     "excerpt": "Ein 7B-Modell bei Q4 hat 4–5 GB Gewichte und braucht mit Kontext insgesamt 5–6 GB RAM oder VRAM. Faustregel: Parameter × 0,7 = GB bei Q4. PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-20",
     "url": "/de/prompt-bites/how-much-ram-for-7b-model",
     "cluster": "prompt-bites"
   },
@@ -48703,7 +48703,7 @@
     "title": "De combien de RAM a besoin un modèle 7B ?",
     "excerpt": "Un modèle 7B en Q4 pèse 4–5 Go de poids et exige 5–6 Go au total avec le contexte, en RAM ou VRAM. Règle : params × 0,7 = Go en Q4. PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-20",
     "url": "/fr/prompt-bites/how-much-ram-for-7b-model",
     "cluster": "prompt-bites"
   },
@@ -48712,7 +48712,7 @@
     "title": "7Bモデルにはどれくらいのメモリが必要ですか？",
     "excerpt": "Q4の7Bモデルは重みが4〜5 GB、コンテキスト込みでRAMまたはVRAM合計5〜6 GB必要です。目安：パラメータ数（十億）× 0.7 = Q4でのGB。PromptQuorum。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-20",
     "url": "/ja/prompt-bites/how-much-ram-for-7b-model",
     "cluster": "prompt-bites"
   },
@@ -48721,7 +48721,7 @@
     "title": "7B模型需要多少内存？",
     "excerpt": "Q4量化的7B模型权重约4–5 GB，含上下文共需5–6 GB内存或显存。规则：参数量×0.7=Q4所需GB数。PromptQuorum解答。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-20",
     "url": "/zh/prompt-bites/how-much-ram-for-7b-model",
     "cluster": "prompt-bites"
   },
@@ -48730,7 +48730,7 @@
     "title": "¿Cuánta RAM necesita un modelo 7B?",
     "excerpt": "Un modelo 7B en Q4 pesa 4–5 GB y necesita 5–6 GB en total con contexto, en RAM o VRAM. Regla: params × 0,7 = GB en Q4. PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-20",
     "url": "/es/prompt-bites/how-much-ram-for-7b-model",
     "cluster": "prompt-bites"
   },
@@ -48739,7 +48739,7 @@
     "title": "Quanta RAM um modelo 7B precisa?",
     "excerpt": "Um modelo 7B em Q4 tem 4–5 GB de pesos e precisa de 5–6 GB no total com contexto, em RAM ou VRAM. Regra: params × 0,7 = GB em Q4. PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-20",
     "url": "/pt/prompt-bites/how-much-ram-for-7b-model",
     "cluster": "prompt-bites"
   },
@@ -48748,7 +48748,7 @@
     "title": "كم من الذاكرة يحتاج نموذج ⁨7B⁩؟",
     "excerpt": "نموذج 7B بتكميم Q4 أوزانه 4–5 GB ويحتاج 5–6 GB إجمالاً مع السياق، في RAM أو VRAM. القاعدة: المعاملات × 0.7 = GB عند Q4. PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-20",
     "url": "/ar/prompt-bites/how-much-ram-for-7b-model",
     "cluster": "prompt-bites"
   },
@@ -48757,7 +48757,7 @@
     "title": "7B 모델에 얼마나 많은 RAM이 필요합니까?",
     "excerpt": "Q4 7B 모델은 가중치 4~5 GB, 컨텍스트 포함 총 5~6 GB의 RAM 또는 VRAM이 필요합니다. 공식: 파라미터 × 0.7 = Q4 기준 GB. PromptQuorum.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-20",
     "url": "/ko/prompt-bites/how-much-ram-for-7b-model",
     "cluster": "prompt-bites"
   },
@@ -49333,7 +49333,7 @@
     "title": "Which Ollama Models Support 128K Context?",
     "excerpt": "Llama 3.1 8B supports 128K context on Ollama. Qwen3-30B-A3B (MoE) reaches 256K context. Full context windows significantly increase VRAM. Updated 2026.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/prompt-bites/ollama-128k-context-models",
     "cluster": "prompt-bites"
   },
@@ -49342,7 +49342,7 @@
     "title": "Welche Ollama-Modelle unterstützen 128K Kontext?",
     "excerpt": "Llama 3.1 8B und Qwen3-30B-A3B unterstützen 128K+ Kontext auf Ollama. Qwen3-30B-A3B erreicht 256K. Voller Kontext erhöht den VRAM-Bedarf stark.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/de/prompt-bites/ollama-128k-context-models",
     "cluster": "prompt-bites"
   },
@@ -49351,7 +49351,7 @@
     "title": "Quels modèles Ollama supportent le contexte 128K ?",
     "excerpt": "Llama 3.1 8B et Qwen3-30B-A3B supportent 128K+ contexte sur Ollama. Qwen3-30B-A3B atteint 256K. Le contexte complet augmente fortement la VRAM.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/fr/prompt-bites/ollama-128k-context-models",
     "cluster": "prompt-bites"
   },
@@ -49360,7 +49360,7 @@
     "title": "Ollamaで128Kコンテキストに対応するモデルは？",
     "excerpt": "Llama 3.1 8BとQwen3-30B-A3BはOllamaで128K以上のコンテキストに対応。Qwen3-30B-A3Bは256Kに到達。フルコンテキストはVRAMを大幅に増加させます。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/ja/prompt-bites/ollama-128k-context-models",
     "cluster": "prompt-bites"
   },
@@ -49369,7 +49369,7 @@
     "title": "Ollama上哪些模型支持128K上下文？",
     "excerpt": "Llama 3.1 8B和Qwen3-30B-A3B在Ollama上支持128K以上上下文。Qwen3-30B-A3B可达256K。完整上下文会大幅增加VRAM需求。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/zh/prompt-bites/ollama-128k-context-models",
     "cluster": "prompt-bites"
   },
@@ -49378,7 +49378,7 @@
     "title": "¿Qué modelos de Ollama admiten contexto de 128K?",
     "excerpt": "Llama 3.1 8B y Qwen3-30B-A3B admiten 128K de contexto o más en Ollama; Qwen3-30B-A3B llega a 256K. El contexto completo aumenta mucho la VRAM. 2026.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/es/prompt-bites/ollama-128k-context-models",
     "cluster": "prompt-bites"
   },
@@ -49387,7 +49387,7 @@
     "title": "Quais modelos do Ollama suportam contexto de 128K?",
     "excerpt": "Llama 3.1 8B e Qwen3-30B-A3B suportam 128K+ de contexto no Ollama; Qwen3-30B-A3B chega a 256K. O contexto completo aumenta muito a VRAM. 2026.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/pt/prompt-bites/ollama-128k-context-models",
     "cluster": "prompt-bites"
   },
@@ -49396,7 +49396,7 @@
     "title": "ما نماذج ⁨Ollama⁩ التي تدعم سياق ⁨128K⁩؟",
     "excerpt": "⁨Llama 3.1 8B⁩ يدعم سياق ⁨128K⁩ على ⁨Ollama⁩؛ ⁨Qwen3-30B-A3B⁩ يصل إلى ⁨256K⁩. نافذة ⁨128K⁩ تستهلك ⁨3⁩–⁨4⁩ أضعاف ⁨VRAM⁩ مقارنةً بالإعداد الافتراضي ⁨4K⁩.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/ar/prompt-bites/ollama-128k-context-models",
     "cluster": "prompt-bites"
   },
@@ -49405,7 +49405,7 @@
     "title": "Ollama에서 128K 컨텍스트를 지원하는 모델은 무엇입니까?",
     "excerpt": "Llama 3.1 8B와 Qwen3-30B-A3B는 Ollama에서 128K 이상의 컨텍스트를 지원합니다. Qwen3-30B-A3B는 256K에 도달합니다. 전체 컨텍스트 실행 시 VRAM이 크게 증가합니다. 2026년 업데이트.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-09-02",
+    "dateModified": "2026-10-20",
     "url": "/ko/prompt-bites/ollama-128k-context-models",
     "cluster": "prompt-bites"
   },

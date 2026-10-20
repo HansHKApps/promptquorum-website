@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Quantization & VRAM',
     heroImage: '/images/how-much-ram-for-7b-model-overview-hero-en.webp',
     title: 'How Much RAM Does a 7B Model Need?',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-20',
     seoTitle: 'RAM for 7B Local Models 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'A 7B model at Q4 needs 4–5 GB for the weights and 5–6 GB in total with context, in RAM or VRAM. Rule: params × 0.7 = GB at Q4. PromptQuorum.',
     publishDate: '2026-05-18',
@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'What happens when a model exceeds available VRAM?',
-            a: 'Ollama offloads layers to system RAM, which is 10–20× slower. The model still runs but generation speed drops significantly. To prevent this, lower the quantization or reduce context with <code>--num-ctx 2048</code>.',
+            a: 'Ollama offloads layers to system RAM, which is 10–20× slower. The model still runs but generation speed drops significantly. To prevent this, lower the quantization or reduce context with <code>/set parameter num_ctx 2048</code>.',
           },
           {
             q: 'Is GPU inference always better than CPU?',
@@ -156,7 +156,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RAM für 7B-Modelle 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Ein 7B-Modell bei Q4 hat 4–5 GB Gewichte und braucht mit Kontext insgesamt 5–6 GB RAM oder VRAM. Faustregel: Parameter × 0,7 = GB bei Q4. PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     sections: {
@@ -205,7 +205,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Was passiert, wenn ein Modell den verfügbaren VRAM überschreitet?',
-            a: 'Ollama lagert Schichten in den System-RAM aus, der 10–20× langsamer ist. Das Modell läuft weiterhin, aber die Generierungsgeschwindigkeit sinkt erheblich. Um dies zu verhindern, reduzieren Sie die Quantisierung oder den Kontext mit <code>--num-ctx 2048</code>.',
+            a: 'Ollama lagert Schichten in den System-RAM aus, der 10–20× langsamer ist. Das Modell läuft weiterhin, aber die Generierungsgeschwindigkeit sinkt erheblich. Um dies zu verhindern, reduzieren Sie die Quantisierung oder den Kontext mit <code>/set parameter num_ctx 2048</code>.',
           },
           {
             q: 'Ist GPU-Inferenz immer besser als CPU?',
@@ -234,7 +234,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RAM pour modèle 7B local 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Un modèle 7B en Q4 pèse 4–5 Go de poids et exige 5–6 Go au total avec le contexte, en RAM ou VRAM. Règle : params × 0,7 = Go en Q4. PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     sections: {
@@ -283,7 +283,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Que se passe-t-il lorsqu\'un modèle dépasse la VRAM disponible ?',
-            a: 'Ollama décharge les couches vers la RAM système, 10–20× plus lente. Le modèle continue de fonctionner mais la vitesse de génération chute significativement. Pour l\'éviter, réduisez la quantisation ou le contexte avec <code>--num-ctx 2048</code>.',
+            a: 'Ollama décharge les couches vers la RAM système, 10–20× plus lente. Le modèle continue de fonctionner mais la vitesse de génération chute significativement. Pour l\'éviter, réduisez la quantisation ou le contexte avec <code>/set parameter num_ctx 2048</code>.',
           },
           {
             q: 'L\'inférence GPU est-elle toujours meilleure que le CPU ?',
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '7BモデルのRAMとVRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4の7Bモデルは重みが4〜5 GB、コンテキスト込みでRAMまたはVRAM合計5〜6 GB必要です。目安：パラメータ数（十億）× 0.7 = Q4でのGB。PromptQuorum。',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     sections: {
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'モデルが利用可能なVRAMを超えるとどうなりますか？',
-            a: 'OllamaはレイヤーをシステムRAMにオフロードしますが、これは10〜20倍遅くなります。モデルは動作を続けますが生成速度が大幅に低下します。防ぐには、量化を下げるか<code>--num-ctx 2048</code>でコンテキストを削減してください。',
+            a: 'OllamaはレイヤーをシステムRAMにオフロードしますが、これは10〜20倍遅くなります。モデルは動作を続けますが生成速度が大幅に低下します。防ぐには、量化を下げるか<code>/set parameter num_ctx 2048</code>でコンテキストを削減してください。',
           },
           {
             q: 'GPU推論は常にCPUより優れていますか？',
@@ -390,7 +390,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '7B模型所需RAM和VRAM 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'Q4量化的7B模型权重约4–5 GB，含上下文共需5–6 GB内存或显存。规则：参数量×0.7=Q4所需GB数。PromptQuorum解答。',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     sections: {
@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '当模型超出可用显存时会发生什么？',
-            a: 'Ollama会将层卸载到系统RAM，速度慢10–20倍。模型仍可运行，但生成速度大幅下降。为避免这种情况，请降低量化等级或使用<code>--num-ctx 2048</code>减少上下文长度。',
+            a: 'Ollama会将层卸载到系统RAM，速度慢10–20倍。模型仍可运行，但生成速度大幅下降。为避免这种情况，请降低量化等级或使用<code>/set parameter num_ctx 2048</code>减少上下文长度。',
           },
           {
             q: 'GPU推理总是优于CPU吗？',
@@ -468,7 +468,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RAM para modelos 7B locales 2026 | PromptQuorum',
     metaDescription: 'Un modelo 7B en Q4 pesa 4–5 GB y necesita 5–6 GB en total con contexto, en RAM o VRAM. Regla: params × 0,7 = GB en Q4. PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -529,7 +529,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué ocurre cuando un modelo supera la VRAM disponible?',
-            a: 'Ollama descarga capas a la RAM del sistema, que es 10–20× más lenta. El modelo sigue funcionando pero la velocidad de generación cae significativamente. Para evitarlo, reduce la cuantización o el contexto con <code>--num-ctx 2048</code>.',
+            a: 'Ollama descarga capas a la RAM del sistema, que es 10–20× más lenta. El modelo sigue funcionando pero la velocidad de generación cae significativamente. Para evitarlo, reduce la cuantización o el contexto con <code>/set parameter num_ctx 2048</code>.',
           },
           {
             q: '¿La inferencia en GPU es siempre mejor que en CPU?',
@@ -558,7 +558,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'RAM para modelos 7B locais 2026 | PromptQuorum',
     metaDescription: 'Um modelo 7B em Q4 tem 4–5 GB de pesos e precisa de 5–6 GB no total com contexto, em RAM ou VRAM. Regra: params × 0,7 = GB em Q4. PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -619,7 +619,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'O que acontece quando um modelo excede a VRAM disponível?',
-            a: 'O Ollama descarrega camadas para a RAM do sistema, que é 10–20× mais lenta. O modelo continua funcionando, mas a velocidade de geração cai significativamente. Para evitar isso, reduza a quantização ou o contexto com <code>--num-ctx 2048</code>.',
+            a: 'O Ollama descarrega camadas para a RAM do sistema, que é 10–20× mais lenta. O modelo continua funcionando, mas a velocidade de geração cai significativamente. Para evitar isso, reduza a quantização ou o contexto com <code>/set parameter num_ctx 2048</code>.',
           },
           {
             q: 'A inferência em GPU é sempre melhor que em CPU?',
@@ -648,7 +648,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '⁨RAM⁩ لنموذج ⁨7B⁩ المحلي ⁨2026⁩: القاعدة وأرقام ⁨VRAM⁩',
     metaDescription: 'نموذج 7B بتكميم Q4 أوزانه 4–5 GB ويحتاج 5–6 GB إجمالاً مع السياق، في RAM أو VRAM. القاعدة: المعاملات × 0.7 = GB عند Q4. PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
@@ -709,7 +709,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'ماذا يحدث عندما يتجاوز النموذج VRAM المتاحة؟',
-            a: 'Ollama يُفرغ الطبقات إلى RAM الجهاز التي تكون أبطأ بـ 10–20 مرة. النموذج يستمر في العمل لكن سرعة التوليد تنخفض بشكل ملحوظ. لتجنب ذلك، قلل التكميم أو السياق باستخدام <code>--num-ctx 2048</code>.',
+            a: 'Ollama يُفرغ الطبقات إلى RAM الجهاز التي تكون أبطأ بـ 10–20 مرة. النموذج يستمر في العمل لكن سرعة التوليد تنخفض بشكل ملحوظ. لتجنب ذلك، قلل التكميم أو السياق باستخدام <code>/set parameter num_ctx 2048</code>.',
           },
           {
             q: 'هل الاستدلال عبر GPU دائماً أفضل من CPU؟',
@@ -738,7 +738,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: '7B 로컬 모델 RAM 요구사항 2026 | PromptQuorum',
     metaDescription: 'Q4 7B 모델은 가중치 4~5 GB, 컨텍스트 포함 총 5~6 GB의 RAM 또는 VRAM이 필요합니다. 공식: 파라미터 × 0.7 = Q4 기준 GB. PromptQuorum.',
     publishDate: '2026-05-18',
-    dateModified: '2026-10-17',
+    dateModified: '2026-10-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     targetKeywords: [
@@ -811,7 +811,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '모델이 사용 가능한 VRAM을 초과하면 어떻게 됩니까?',
-            a: 'Ollama는 레이어를 시스템 RAM으로 오프로드하며, 이는 10~20배 더 느립니다. 모델은 계속 실행되지만 생성 속도가 현저히 저하됩니다. 이를 방지하려면 양자화를 줄이거나 <code>--num-ctx 2048</code>로 컨텍스트를 줄이십시오.',
+            a: 'Ollama는 레이어를 시스템 RAM으로 오프로드하며, 이는 10~20배 더 느립니다. 모델은 계속 실행되지만 생성 속도가 현저히 저하됩니다. 이를 방지하려면 양자화를 줄이거나 <code>/set parameter num_ctx 2048</code>로 컨텍스트를 줄이십시오.',
           },
           {
             q: 'GPU 추론이 항상 CPU보다 우수합니까?',
