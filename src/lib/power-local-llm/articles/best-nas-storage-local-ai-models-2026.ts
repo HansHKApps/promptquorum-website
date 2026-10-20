@@ -125,7 +125,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Editor\'s Choice: Synology 4-Bay NAS + Samsung 990 Pro SSD',
-        sponsoredSlot: true,
         content:
           '**For a small team building a local AI model library, the pairing that does both storage jobs well is a Synology 4-bay NAS for the library and a Samsung 990 Pro NVMe SSD on the inference machine.** Synology\'s DSM software makes RAID 6, scheduled snapshots, and backup configuration approachable without a storage specialist, and a 4-bay unit gives roughly 8 TB usable in RAID 6 — enough for a large library of quantized models. The Samsung 990 Pro handles the other job: fast loading of model weights from disk into VRAM on each model switch. A solo developer can skip the NAS entirely and pair the SSD with a single external backup drive. Choose QNAP over Synology only if you specifically want more CPU and ports per dollar and accept a steeper setup.',
         callouts: [
@@ -686,7 +685,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Empfehlung der Redaktion: Synology-NAS mit 4 Einschüben + Samsung 990 Pro SSD',
-        sponsoredSlot: true,
         content:
           '**Für ein kleines Team, das eine lokale KI-Modellbibliothek aufbaut, ist die Kombination, die beide Speicheraufgaben gut erfüllt, ein Synology-NAS mit 4 Einschüben für die Bibliothek und eine Samsung 990 Pro NVMe-SSD im Inferenzrechner.** Die DSM-Software von Synology macht RAID 6, geplante Snapshots und die Backup-Konfiguration auch ohne Speicherspezialisten zugänglich, und ein Gerät mit 4 Einschüben bietet im RAID 6 rund 8 TB nutzbar — genug für eine umfangreiche Bibliothek quantisierter Modelle. Die Samsung 990 Pro übernimmt die andere Aufgabe: das schnelle Laden der Modellgewichte von der Festplatte in den VRAM bei jedem Modellwechsel. Ein einzelner Entwickler kann das NAS ganz weglassen und die SSD mit einer einzelnen externen Sicherungsfestplatte kombinieren. Wählen Sie QNAP statt Synology nur dann, wenn Sie gezielt mehr CPU und Anschlüsse pro Euro wollen und eine steilere Einrichtung in Kauf nehmen.',
         callouts: [
@@ -1243,7 +1241,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Choix de la rédaction : NAS Synology 4 baies + SSD Samsung 990 Pro',
-        sponsoredSlot: true,
         content:
           '**Pour une petite équipe qui construit une bibliothèque de modèles IA locale, l\'association qui remplit bien les deux tâches de stockage est un NAS Synology 4 baies pour la bibliothèque et un SSD NVMe Samsung 990 Pro sur la machine d\'inférence.** Le logiciel DSM de Synology rend le RAID 6, les instantanés planifiés et la configuration des sauvegardes accessibles sans spécialiste du stockage, et un boîtier 4 baies offre environ 8 To utilisables en RAID 6 — assez pour une grande bibliothèque de modèles quantifiés. Le Samsung 990 Pro remplit l\'autre tâche : le chargement rapide des poids du modèle du disque vers la VRAM à chaque changement de modèle. Un développeur seul peut se passer entièrement du NAS et associer le SSD à un unique disque de sauvegarde externe. Choisissez QNAP plutôt que Synology uniquement si vous voulez précisément plus de processeur et de ports par euro et acceptez une mise en place plus exigeante.',
         callouts: [
@@ -1792,7 +1789,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '編集部のおすすめ：Synologyの4ベイNAS + Samsung 990 Pro SSD',
-        sponsoredSlot: true,
         content:
           '**ローカルAIモデルライブラリを構築する小規模チームにとって、2つのストレージの役割をいずれもうまく果たす組み合わせは、ライブラリ用のSynologyの4ベイNASと、推論マシン上のSamsung 990 Pro NVMe SSDです。** SynologyのDSMソフトウェアにより、RAID 6、スケジュール設定されたスナップショット、バックアップの設定がストレージの専門家なしでも扱えるようになります。また4ベイの機器はRAID 6で約8 TBを利用可能にし、量子化されたモデルの大規模なライブラリに十分です。Samsung 990 Proはもう一方の役割を担います。モデルを切り替えるたびに、モデルの重みをディスクからVRAMへ高速に読み込みます。1人で作業する開発者はNASを完全に省略し、SSDを1台の外付けバックアップドライブと組み合わせられます。SynologyではなくQNAPを選ぶのは、価格あたりのCPUとポートを特に多く求め、設定の難しさを受け入れる場合のみです。',
         callouts: [
@@ -2341,7 +2337,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '编辑推荐：Synology 4 盘位 NAS + Samsung 990 Pro SSD',
-        sponsoredSlot: true,
         content:
           '**对于构建本地 AI 模型库的小型团队，能很好地完成两项存储任务的组合是：用于模型库的 Synology 4 盘位 NAS，加上推理机上的 Samsung 990 Pro NVMe SSD。** Synology 的 DSM 软件让 RAID 6、计划快照和备份配置无需存储专家也能上手，4 盘位设备在 RAID 6 下提供约 8 TB 可用容量——足以容纳大型的量化模型库。Samsung 990 Pro 承担另一项任务：在每次切换模型时把模型权重从硬盘快速加载到显存。单人开发者可以完全跳过 NAS，把 SSD 与单块外置备份硬盘搭配使用。仅当你明确需要每美元更多的 CPU 和端口并接受更陡的设置时，才选择 QNAP 而非 Synology。',
         callouts: [
@@ -2890,7 +2885,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Elección del editor: NAS Synology de 4 bahías + SSD Samsung 990 Pro',
-        sponsoredSlot: true,
         content:
           '**Para un equipo pequeño que construye una biblioteca de modelos de IA local, la combinación que realiza bien ambas tareas de almacenamiento es un NAS Synology de 4 bahías para la biblioteca y un SSD NVMe Samsung 990 Pro en la máquina de inferencia.** El software DSM de Synology hace que RAID 6, las instantáneas programadas y la configuración de respaldo sean accesibles sin un especialista en almacenamiento, y una unidad de 4 bahías ofrece aproximadamente 8 TB utilizables en RAID 6 — suficiente para una biblioteca grande de modelos cuantizados. El Samsung 990 Pro se ocupa de la otra tarea: carga rápida de los pesos del modelo desde el disco a la VRAM en cada cambio de modelo. Un desarrollador en solitario puede prescindir del NAS por completo y combinar el SSD con una única unidad de respaldo externa. Elige QNAP sobre Synology solo si específicamente quieres más CPU y puertos por euro y aceptas una configuración más compleja.',
         callouts: [
@@ -3452,7 +3446,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Escolha do editor: NAS Synology de 4 baias + SSD Samsung 990 Pro',
-        sponsoredSlot: true,
         content:
           '**Para um time pequeno que constrói uma biblioteca de modelos de IA local, a combinação que realiza bem ambas as tarefas de armazenamento é um NAS Synology de 4 baias para a biblioteca e um SSD NVMe Samsung 990 Pro na máquina de inferência.** O software DSM da Synology faz com que RAID 6, os snapshots programados e a configuração de backup sejam acessíveis sem um especialista em armazenamento, e uma unidade de 4 baias oferece aproximadamente 8 TB utilizáveis em RAID 6 — suficiente para uma biblioteca grande de modelos quantizados. O Samsung 990 Pro cuida da outra tarefa: carregamento rápido dos pesos do modelo do disco para a VRAM em cada troca de modelo. Um desenvolvedor solo pode dispensar o NAS completamente e combinar o SSD com uma única unidade de backup externa. Escolha a QNAP em vez da Synology só se você especificamente quer mais CPU e portas por real e aceita uma configuração mais complexa.',
         callouts: [
@@ -4015,7 +4008,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'اختيار المحرر: NAS Synology بـ4 حجرات + SSD Samsung 990 Pro',
-        sponsoredSlot: true,
         content:
           '**لفريق صغير يبني مكتبة نماذج ذكاء اصطناعي محلية، التوليفة التي تُؤدي كلتا مهمتَي التخزين بشكل جيد هي NAS Synology بـ4 حجرات للمكتبة وSSD NVMe Samsung 990 Pro في جهاز الاستدلال.** برنامج DSM من Synology يجعل RAID 6 واللقطات المجدولة وإعداد النسخ الاحتياطي في متناول اليد بدون متخصص تخزين، وحجرات الـ4 توفر حوالي 8 TB قابلة للاستخدام على RAID 6 — كافية لمكتبة كبيرة من النماذج المكمّمة. Samsung 990 Pro يتكفل بالمهمة الأخرى: تحميل سريع لأوزان النموذج من القرص إلى VRAM في كل تبديل نموذج. مطور منفرد يمكنه الاستغناء تماماً عن NAS والجمع بين SSD ومحرك نسخ احتياطي خارجي واحد. اختر QNAP على Synology فقط إذا كنت تريد تحديداً مزيداً من المعالج والموانئ مقابل الدولار وتقبل إعداداً أكثر تعقيداً.',
         callouts: [
@@ -4577,7 +4569,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '편집자 선택: 4베이 Synology NAS + Samsung 990 Pro SSD',
-        sponsoredSlot: true,
         content:
           '**로컬 AI 모델 라이브러리를 구축하는 소규모 팀에게 두 가지 스토리지 작업을 모두 잘 수행하는 조합은 라이브러리를 위한 4베이 Synology NAS와 추론 머신의 Samsung 990 Pro NVMe SSD입니다.** Synology의 DSM 소프트웨어는 스토리지 전문가 없이도 RAID 6, 예약 스냅샷, 백업 설정을 접근 가능하게 하며, 4베이 유닛은 RAID 6에서 약 8 TB의 사용 가능 용량을 제공합니다. 이는 양자화된 모델의 대규모 라이브러리에 충분합니다. Samsung 990 Pro는 다른 작업인 모델 전환 시마다 디스크에서 VRAM으로의 빠른 모델 가중치 로드를 담당합니다. 단독 개발자는 NAS를 완전히 생략하고 SSD와 단일 외장 백업 드라이브를 조합할 수 있습니다. 특별히 달러당 더 많은 CPU와 포트를 원하고 더 복잡한 설정을 받아들일 수 있는 경우에만 Synology 대신 QNAP를 선택하십시오.',
         callouts: [

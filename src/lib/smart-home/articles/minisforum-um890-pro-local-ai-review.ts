@@ -73,7 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Buy If / Skip If',
-        sponsoredSlot: true,
         content: 'Quick decision guide — does the UM890 Pro fit your needs?',
         items: [
           '**Buy the UM890 Pro if:**',
@@ -463,7 +462,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Kaufen wenn / Nicht kaufen wenn',
-        sponsoredSlot: true,
         content: 'Schnelle Entscheidungshilfe — passt der UM890 Pro zu Ihren Anforderungen?',
         items: [
           '**Kaufen Sie den UM890 Pro wenn:**',
@@ -850,7 +848,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Acheter si / Ne pas acheter si',
-        sponsoredSlot: true,
         content: 'Guide rapide de décision — le UM890 Pro répond-il à vos besoins ?',
         items: [
           '**Achetez le UM890 Pro si :**',
@@ -1238,7 +1235,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Compra si / Pasa si',
-        sponsoredSlot: true,
         content: 'Guía rápida de decisión — ¿el UM890 Pro encaja con lo que necesitas?',
         items: [
           '**Compra el UM890 Pro si:**',
@@ -1626,7 +1622,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: '買うべきか・見送るべきか',
-        sponsoredSlot: true,
         content: 'クイック判断ガイド — UM890 Proはあなたのニーズに合っていますか？',
         items: [
           '**次に当てはまるならUM890 Proを買いましょう：**',
@@ -2014,7 +2009,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: '该买还是该跳过？',
-        sponsoredSlot: true,
         content: '快速决策指南——UM890 Pro是否适合你的需求？',
         items: [
           '**符合以下情况就买UM890 Pro：**',
@@ -2394,7 +2388,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: '구매할까요, 건너뛸까요?',
-        sponsoredSlot: true,
         content: '빠른 결정 가이드 — UM890 Pro가 당신의 요구에 맞습니까?',
         items: [
           '**다음에 해당하면 UM890 Pro를 구매하십시오:**',
@@ -2781,7 +2774,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Comprar ou pular?',
-        sponsoredSlot: true,
         content: 'Guia rápido de decisão — o UM890 Pro atende às suas necessidades?',
         items: [
           '**Compre o UM890 Pro se:**',
@@ -3163,7 +3155,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'اشترِ أم تخطَّ؟',
-        sponsoredSlot: true,
         content: 'دليل قرار سريع — هل يناسب UM890 Pro احتياجاتك؟',
         items: [
           '**اشترِ UM890 Pro إذا:**',

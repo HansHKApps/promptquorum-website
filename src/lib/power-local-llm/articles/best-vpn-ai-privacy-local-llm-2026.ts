@@ -117,7 +117,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Editor\'s Choice: ProtonVPN',
-        sponsoredSlot: true,
         content:
           '**For most people protecting a local LLM setup, ProtonVPN is the pick that balances proven privacy, usability, and price.** Its no-logs policy has been independently audited, it is based in Switzerland (outside the 14 Eyes intelligence-sharing alliance), its apps are open source, and it offers a free tier with no data cap so you can verify the experience before paying. For the strictest possible anonymity — anonymous account numbers, cash payment, no email — Mullvad is the better pick. For the fastest remote LLM access, NordVPN wins on raw speed. Choose ProtonVPN when you want one provider that does the privacy job well without forcing a trade-off.',
         callouts: [
@@ -574,7 +573,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Elección del editor: ProtonVPN',
-        sponsoredSlot: true,
         content:
           '**Para la mayoría de las personas que protegen un entorno de LLM local, ProtonVPN es la opción que equilibra privacidad comprobada, usabilidad y precio.** Su política sin registros ha sido auditada de forma independiente, tiene sede en Suiza (fuera de la alianza de inteligencia de los 14 Ojos), sus aplicaciones son de código abierto y ofrece un nivel gratuito sin límite de datos para que puedas verificar la experiencia antes de pagar. Para el anonimato más estricto posible —números de cuenta anónimos, pago en efectivo, sin correo electrónico— Mullvad es la mejor opción. Para el acceso remoto al LLM más rápido, NordVPN gana en velocidad bruta. Elige ProtonVPN cuando quieras un proveedor que gestione bien la privacidad sin obligarte a hacer concesiones.',
         callouts: [
@@ -1038,7 +1036,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '편집자 선택: ProtonVPN',
-        sponsoredSlot: true,
         content: '**로컬 LLM 환경을 보호하는 대부분의 사람들에게 ProtonVPN은 검증된 프라이버시, 사용성, 가격 사이에서 균형을 맞추는 선택입니다.** 무로그 정책이 독립적으로 감사되었고, 스위스(14개국 정보 동맹 밖)에 소재하며, 앱은 오픈소스이고, 무료 티어도 데이터 제한 없이 제공됩니다. 가장 엄격한 익명성(익명 계정 번호, 현금 결제, 이메일 없음)을 원한다면 Mullvad가 최선입니다. 가장 빠른 LLM 원격 접근을 원한다면 NordVPN이 속도에서 앞섭니다. 타협 없이 프라이버시를 잘 관리하는 제공업체를 원할 때 ProtonVPN을 선택하십시오.',
         callouts: [
           {
@@ -1499,7 +1496,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Escolha do editor: ProtonVPN',
-        sponsoredSlot: true,
         content:
           '**Para a maioria das pessoas que protegem uma configuração de LLM local, ProtonVPN é a escolha que equilibra privacidade comprovada, usabilidade e preço.** Sua política sem registros foi auditada de forma independente, ela é sediada na Suíça (fora da aliança de compartilhamento de inteligência dos 14 Olhos), seus apps são open source e oferece um nível gratuito sem limite de dados para que você possa verificar a experiência antes de pagar. Para o anonimato mais rigoroso possível — números de conta anônimos, pagamento em dinheiro, sem e-mail — Mullvad é a melhor escolha. Para o acesso remoto ao LLM mais rápido, NordVPN vence em velocidade bruta. Escolha ProtonVPN quando você quer um provedor que faça bem o trabalho de privacidade sem forçar uma concessão.',
         callouts: [
@@ -1969,7 +1965,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Empfehlung der Redaktion: ProtonVPN',
-        sponsoredSlot: true,
         content:
           '**Für die meisten Menschen, die ein lokales LLM-Setup schützen wollen, ist ProtonVPN die Wahl, die nachweislichen Datenschutz, Bedienbarkeit und Preis ausbalanciert.** Seine No-Logs-Richtlinie wurde unabhängig geprüft, der Anbieter hat seinen Sitz in der Schweiz (außerhalb des 14-Eyes-Geheimdienstbündnisses), seine Apps sind quelloffen, und er bietet einen kostenlosen Tarif ohne Datenlimit, sodass Sie das Erlebnis vor dem Bezahlen prüfen können. Für die strengstmögliche Anonymität — anonyme Kontonummern, Barzahlung, keine E-Mail — ist Mullvad die bessere Wahl. Für den schnellsten Fernzugriff auf das LLM gewinnt NordVPN bei der reinen Geschwindigkeit. Wählen Sie ProtonVPN, wenn Sie einen Anbieter wollen, der die Datenschutzaufgabe gut erledigt, ohne einen Kompromiss zu erzwingen.',
         callouts: [
@@ -2433,7 +2428,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Choix de la rédaction : ProtonVPN',
-        sponsoredSlot: true,
         content:
           '**Pour la plupart des personnes protégeant un LLM local, ProtonVPN est le choix qui équilibre confidentialité prouvée, facilité d\'usage et prix.** Sa politique sans journaux a été auditée de façon indépendante, il est établi en Suisse (hors de l\'alliance de renseignement des 14 Eyes), ses applications sont open source, et il propose une offre gratuite sans plafond de données qui vous permet de vérifier l\'expérience avant de payer. Pour l\'anonymat le plus strict possible — numéros de compte anonymes, paiement en espèces, aucun e-mail — Mullvad est le meilleur choix. Pour l\'accès distant au LLM le plus rapide, NordVPN l\'emporte sur la vitesse brute. Choisissez ProtonVPN lorsque vous voulez un fournisseur qui assure bien la confidentialité sans imposer de compromis.',
         callouts: [
@@ -2889,7 +2883,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '編集部のおすすめ：ProtonVPN',
-        sponsoredSlot: true,
         content:
           '**ローカルLLM環境を守るほとんどの人にとって、ProtonVPNは実証済みのプライバシー、使いやすさ、価格のバランスが取れた選択肢です。** そのノーログポリシーは独立した監査を受けており、拠点はスイス（14 Eyes諜報共有同盟の外）にあり、アプリはオープンソースで、データ上限のない無料プランを提供しているため、支払う前に使用感を確認できます。可能な限り厳格な匿名性 — 匿名のアカウント番号、現金支払い、メールアドレスなし — を求めるなら、Mullvadのほうが適しています。LLMへの最速のリモートアクセスを求めるなら、生の速度ではNordVPNが勝ります。トレードオフを強いることなくプライバシーの役割をしっかり果たす1つのプロバイダーが欲しいときは、ProtonVPNを選んでください。',
         callouts: [
@@ -3345,7 +3338,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '编辑推荐：ProtonVPN',
-        sponsoredSlot: true,
         content:
           '**对于大多数要保护本地 LLM 环境的人来说，ProtonVPN 是在经证实的隐私、易用性和价格之间取得平衡的选择。** 它的无日志政策经过独立审计，总部位于瑞士（在 14 眼情报共享联盟之外），其应用为开源，并提供无流量上限的免费套餐，让你在付费前先验证使用体验。若追求尽可能严格的匿名性——匿名账户编号、现金付款、无需邮箱——Mullvad 是更好的选择。若追求最快的远程 LLM 访问，NordVPN 在原始速度上胜出。当你想要一家无需做出取舍、又能把隐私工作做好的提供商时，请选择 ProtonVPN。',
         callouts: [
@@ -3802,7 +3794,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'اختيار المحرر: ProtonVPN',
-        sponsoredSlot: true,
         content:
           '**بالنسبة لمعظم من يحمون بيئة نموذج لغة محلي، تُعدّ ProtonVPN الخيار الذي يوازن بين الخصوصية الموثَّقة وسهولة الاستخدام والسعر.** سياسة عدم السجلات لديها مُدقَّقة بشكل مستقل، وتقع في سويسرا (خارج تحالف استخبارات 14 عيناً)، وتطبيقاتها مفتوحة المصدر، وتوفر مستوى مجاني بدون حد للبيانات للتحقق من التجربة قبل الدفع. للحصول على أقصى درجات الخفاء — أرقام حسابات مجهولة، دفع نقدي، لا بريد إلكتروني — Mullvad هي الخيار الأمثل. للوصول البعيد الأسرع لنماذج اللغة، تتفوق NordVPN في السرعة الخام. اختر ProtonVPN حين تريد مزوداً يتعامل مع الخصوصية بشكل صحيح دون إرغامك على تنازلات.',
         callouts: [
