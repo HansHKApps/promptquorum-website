@@ -13,11 +13,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       next_refresh_due: '2026-11-17',
       last_full_refresh: '2026-10-17',
       last_seo_review: '2026-10-17',
-      current_models_mentioned: ['Nemotron 3.5 Lightning', 'Nemotron 3.5 Super', 'Nemotron 3.5 Bolt', 'Laguna XS 2.1', 'Kimi K2.7 Code', 'Qwen3.8-27B', 'qwen3:30b', 'qwen3-coder:30b', 'Kimi K2.6', 'gpt-oss:20b', 'gpt-oss:120b', 'DeepSeek-R1', 'Gemma 4', 'GLM-5.3', 'Llama 4 Scout', 'Devstral Small 24B', 'Dolphin 3.0', 'Mistral Small', 'Phi-4 Mini'],
+      current_models_mentioned: ['Nemotron 3.5 Lightning', 'Nemotron 3.5 Super', 'Nemotron 3.5 Bolt', 'Laguna XS 2.1', 'Kimi K2.7 Code', 'Qwen3.8-27B', 'qwen3:30b', 'qwen3-coder:30b', 'Kimi K2.6', 'gpt-oss:20b', 'gpt-oss:120b', 'DeepSeek-R1 distills', 'Gemma 4', 'GLM-5.3', 'Llama 4 Scout', 'Devstral Small 2 24B', 'Dolphin 3.0', 'Mistral Small 3.1', 'Phi-4 Mini'],
       current_benchmarks_used: ['SWE-bench', 'SWE-bench Verified', 'SWE-Bench Pro', 'SWE-bench Multilingual', 'LiveCodeBench', 'HumanEval', 'MATH'],
       theme: 'Best Models',
       title: 'Ollama Latest Version 2026: v0.40.5 + Best Models by Use Case',
-      dateModified: '2026-10-17',
+      dateModified: '2026-10-19',
       seoTitle: 'Ollama Latest Version 2026: v0.40.5 + 10 Best Models',
       intro: 'The current stable Ollama version is v0.40.5 (October 14, 2026), which adds NVIDIA Nemotron 3.5 Super and Bolt, decision-model support and updated llama.cpp and MLX engines; v0.40.6 is a pre-release. Since v0.33.1 in August, Ollama made MLX the default engine on Apple Silicon (v0.40.0) and added ChatGPT Desktop integration (v0.34.0). Best overall on consumer hardware is still Qwen3.8-27B (61.7 SWE-bench Pro as reported by Qwen, 18 GB download, fits a 24 GB card or 32 GB Mac); best for coding depends on your setup — see the use-case breakdown below.',
       metaDescription: 'Ollama\'s latest version is v0.40.5. See what changed since v0.33, the newest models (Nemotron 3.5, GLM-5.3, Granite 4.2) and which model is best for chat, coding and vision.',
@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '→Llama 4 Scout — long-context (10M tokens) + multimodal, ~55 GB at Q4',
             '→DeepSeek-R1 — best reasoning/math; gpt-oss:20b for adjustable reasoning (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
           ],
-          updatedDate: '2026-10-17',
+          updatedDate: '2026-10-19',
         },
         de: {
           question: 'Was ist die neueste Ollama-Version und was sind 2026 die besten Modelle?',
@@ -55,7 +55,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '→Llama 4 Scout — Langkontext (10M Tokens) + multimodal, ~55 GB bei Q4',
             '→DeepSeek-R1 — bestes Reasoning/Mathe; gpt-oss:20b für einstellbares Reasoning (DeepSeek hat inzwischen DeepSeek-V4 — Flash/Pro — als neuere offene Generation veröffentlicht; R1/V3 bleiben lokal nutzbar.)',
           ],
-          updatedDate: '2026-10-17',
+          updatedDate: '2026-10-19',
         },
         fr: {
           question: 'Quelle est la dernière version d\'Ollama et les meilleurs modèles en 2026 ?',
@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '→Llama 4 Scout — contexte long (10M tokens) + multimodal, ~55 Go en Q4',
             '→DeepSeek-R1 — meilleur raisonnement/maths ; gpt-oss:20b pour un raisonnement réglable (DeepSeek a depuis publié DeepSeek-V4 — Flash/Pro — comme génération ouverte plus récente ; R1/V3 restent utilisables en local.)',
           ],
-          updatedDate: '2026-10-17',
+          updatedDate: '2026-10-19',
         },
         ja: {
           question: 'Ollamaの最新バージョンと2026年の最高のモデルは？',
@@ -87,7 +87,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '→Llama 4 Scout — 長コンテキスト（10Mトークン）＋マルチモーダル、Q4で約55GB',
             '→DeepSeek-R1 — 推論・数学最強；推論調整はgpt-oss:20b（DeepSeekはその後DeepSeek-V4（Flash/Pro）を新世代のオープンウェイトとして公開。R1/V3もローカルで引き続き利用可能）',
           ],
-          updatedDate: '2026-10-17',
+          updatedDate: '2026-10-19',
         },
         zh: {
           question: 'Ollama最新版本是什么？2026年最佳模型有哪些？',
@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '→Llama 4 Scout — 长上下文（10M tokens）+多模态，Q4下约55GB',
             '→DeepSeek-R1 — 推理/数学最佳；推理可调用gpt-oss:20b（DeepSeek此后发布了DeepSeek-V4（Flash/Pro）作为较新一代开放权重模型；R1/V3仍可在本地运行。）',
           ],
-          updatedDate: '2026-10-17',
+          updatedDate: '2026-10-19',
         },
       },
       audience: 'Beginners running their first local LLM on consumer hardware',
@@ -190,6 +190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Scout\'s standout features are its 10M-token context window and multimodal input, not consumer-hardware fit. For lightweight setups (8 GB RAM), Llama 3.2 3B remains the easiest first model.',
             'Kimi K2.6 (Moonshot AI, Modified MIT license, 32B active / 1T total MoE) scored SWE-Bench Pro 58.6, tying GPT-5.5. Laguna XS 2.1 (Poolside) is the newest agentic-coding challenger, purpose-built for long-horizon local coding sessions. Qwen3.8-27B achieved 61.7 SWE-bench Pro as the best overall model on consumer hardware (fits 24 GB at Q4). OpenAI\'s open-weight gpt-oss:20b (21B total / 3.6B active MoE) runs in 16 GB at ~o3-mini level with adjustable reasoning.',
             'The Ollama library holds several hundred curated models, with Laguna XS 2.1 and Kimi K2.7 Code the newest additions since the June refresh.',
+            'Version note: Qwen3.6 and Qwen3.8 are newer Qwen generations on Ollama (qwen3.6:35b, about 24 GB; qwen3.8:27b, 18 GB), so qwen3:30b and qwen3-coder:30b (19 GB each) are previous-generation options that still work. Mistral\'s current Small model is Mistral Small 4, but the Ollama library did not list it when checked, so mistral-small3.1 and mistral-small:24b (Mistral Small 3) remain the Small models you can pull there.',
           ],
         },
         byCategory: {
@@ -205,25 +206,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**General chat (best overall)**: `ollama run qwen3.8:27b` -- 61.7 SWE-bench Pro, best overall on consumer hardware, fits 24 GB at Q4. Balanced all-round: `ollama run qwen3:30b`. For 8 GB machines, keep `ollama run llama3.2:3b`.',
             '**Long-context / multimodal**: `ollama run llama4:scout` -- 10M-token context + multimodal, MoE (17B active/109B total). Needs ~55 GB VRAM at Q4 (fits 24 GB only at 1.78-bit ~20 tok/s).',
             '**Best small / 16 GB**: `ollama run gpt-oss:20b` -- 21B total / 3.6B active MoE, ~o3-mini level, adjustable reasoning. Larger: `ollama run gpt-oss:120b` (80 GB).',
-            '**Coding on 8 GB**: `ollama run qwen3:8b` -- Best local coding model for 8 GB VRAM machines. 76% HumanEval, 5 GB used, multilingual.',
-            '**General inference on 8 GB (if not coding)**: `ollama run mistral:7b` -- Fastest general-purpose model at 8 GB, 40-60 tok/sec.',
+            '**Coding on 8 GB**: `ollama run qwen3:8b` -- Strong coding option for 8 GB VRAM machines. 5 GB used, multilingual.',
+            '**General inference on 8 GB (if not coding)**: `ollama run mistral:7b` -- Lightweight general-purpose model for 8 GB machines; speed depends on your hardware.',
             '**Coding (best agentic, 24B)**: `ollama run devstral-small-2` -- Best agentic coding model (multi-file edits, debugging). 16 GB RAM. By Mistral AI.',
             '**Coding (best dense, 27B)**: `ollama run qwen3.8:27b` -- 61.7 SWE-bench Pro (Qwen-reported). Best dense coding model. 18 GB download.',
             '**Coding (frontier MoE)**: `ollama run kimi-k2.6:cloud` -- SWE-Bench Pro 58.6 (ties GPT-5.5), top tier. MoE (32B active/1T total). Modified MIT license. Ollama lists only a cloud tag; local GGUF builds need 300+ GB.',
             '**Coding (agentic, long-horizon)**: `ollama run laguna-xs-2.1` -- Poolside\'s 33B/3B-active MoE, SWE-bench Verified 70.9%, 256K context. Built for multi-step plan → code → test → iterate loops. OpenMDW-1.1 license.',
             '**Agent tasks and tool calling**: `ollama run gemma4:e4b` -- Released April 2, 2026. Built-in tool calling + vision support. Recommended for local agents, function calling, and structured output. 6 GB RAM.',
             '**Reasoning and math**: `ollama run deepseek-r1:7b` -- chain-of-thought model, best local math performance at 7B.',
-            '**Multilingual (general)**: `ollama run qwen3:8b` -- 29+ native languages, strongest non-English support, 76% HumanEval.',
+            '**Multilingual (general)**: `ollama run qwen3:8b` -- 29+ native languages, a multilingual general-purpose option.',
             '**Chinese-language tasks**: `ollama run qwen3.8:27b` -- native Chinese tokenization, Alibaba origin. See [Regional Context](#regional-context) for CAC compliance notes.',
-            '**Japanese-language tasks**: `ollama run qwen3.8:27b` -- processes Japanese text 30-40% more token-efficiently than Llama or Mistral.',
-            '**Russian-language tasks**: `ollama run qwen3:8b` or `ollama run mistral-small3.1` -- both include Russian in their native multilingual training data; Qwen3 scores higher on non-English HumanEval, Mistral Small has stronger conversational Russian fluency.',
+            '**Japanese-language tasks**: `ollama run qwen3.8:27b` -- multilingual model that lists Japanese among its supported languages; compare output on your own text.',
+            '**Russian-language tasks**: `ollama run qwen3:8b` or `ollama run mistral-small3.1` -- both include Russian in their native multilingual training data. This page does not rank the two for Russian, so test both on your own prompts.',
             '**Uncensored / general-purpose**: `ollama run dolphin3` -- Dolphin 3.0 (Cognitive Computations, built on Llama 3.1), no built-in content filtering, general chat/coding/agentic use.',
             '**Image understanding**: `ollama run gemma4:e4b` -- vision + tool calling. Or `ollama run llama3.2-vision:11b` for dedicated vision.',
             '**Fast and lightweight**: `ollama run gemma2:2b` -- fastest CPU inference, 1.7 GB RAM.',
-            '**High quality (16 GB RAM)**: `ollama run mistral-small3.1` -- near-70B quality at 14 GB RAM.',
+            '**High quality (16 GB RAM)**: `ollama run mistral-small3.1` -- strong quality at 14 GB RAM.',
             '**Embedding generation**: `ollama run nomic-embed-text` -- 137M parameter embedding model for RAG pipelines.',
             '**Document Q&A (RAG)**: `ollama run llama3.2` with Open WebUI\'s RAG feature -- best-supported combination.',
-            '**Home automation / wake word AI**: `ollama run phi4-mini` — Phi-4 Mini (3.8B, ~3 GB VRAM) handles Home Assistant voice queries at 20–25 tok/sec on a mini PC without a discrete GPU. See [Home Assistant + Ollama integration guide →](/smart-home/home-assistant-ollama-integration).',
+            '**Home automation / wake word AI**: `ollama run phi4-mini` — Phi-4 Mini (3.8B, ~3 GB VRAM) can handle Home Assistant voice queries on a mini PC without a discrete GPU; speed depends on your hardware. See [Home Assistant + Ollama integration guide →](/smart-home/home-assistant-ollama-integration).',
           ],
           image: '/images/top-open-source-models-ollama-use-case-picks-hero-en.webp',
           imageCaption: 'Ollama model selection by use case: pick qwen3.8:27b (best overall, 61.7 SWE-bench Pro) for chat and coding, kimi-k2.6 for frontier coding, gpt-oss:20b on 16 GB, deepseek-r1:7b for math.',
@@ -245,8 +246,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Model': '[gpt-oss:20b](https://ollama.com/library/gpt-oss)', 'Released': '2026', 'Best For': 'Best small / 16 GB, ~o3-mini, adjustable reasoning (also gpt-oss:120b)', 'Ollama Command': 'ollama run gpt-oss:20b' },
             { 'Model': 'glm-5.3', 'Released': 'Z.ai', 'Best For': '744B/40B active MoE, MIT license', 'Ollama Command': 'ollama run glm-5.3' },
             { 'Model': '[gemma4:e4b](https://ollama.com/library/gemma3)', 'Released': 'April 2, 2026', 'Best For': 'Vision + tool calling (E2B/E4B/E12B/E27B)', 'Ollama Command': 'ollama run gemma4:e4b' },
-            { 'Model': 'deepseek-v4-flash', 'Released': 'April/May 2026', 'Best For': 'Budget coding (78/100 real-world)', 'Ollama Command': 'ollama run deepseek-v4-flash' },
-            { 'Model': '[qwen3:8b](https://ollama.com/library/qwen3)', 'Released': '2026', 'Best For': 'HumanEval 76% at 7B, multilingual', 'Ollama Command': 'ollama run qwen3:8b' },
+            { 'Model': 'deepseek-v4-flash', 'Released': 'April/May 2026', 'Best For': 'Budget coding option', 'Ollama Command': 'ollama run deepseek-v4-flash' },
+            { 'Model': '[qwen3:8b](https://ollama.com/library/qwen3)', 'Released': '2026', 'Best For': '7B-class multilingual model', 'Ollama Command': 'ollama run qwen3:8b' },
           ],
           columns: ['Model', 'Released', 'Best For', 'Ollama Command'],
         },
@@ -255,12 +256,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'What Is DeepSeek-R1 and Why Is It Different?',
           content: [
             '**DeepSeek-R1 is a reasoning model -- unlike standard chat models that generate answers directly, DeepSeek-R1 generates explicit chain-of-thought reasoning before its final answer.** This significantly improves performance on math, logic puzzles, and step-by-step problem solving.',
-            'DeepSeek-R1 7B scores 52% on MATH (competition math) vs 28% for Mistral Small at the same size. It is slower than standard models (more tokens per response) but significantly more accurate on tasks where reasoning matters.',
+            'DeepSeek-R1 7B is a chain-of-thought reasoning model. It is slower than standard models (more tokens per response) but significantly more accurate on tasks where reasoning matters.',
+            'Version note: DeepSeek-R1 is a previous-generation model. DeepSeek\'s current open-weight family is DeepSeek-V4, which the Ollama library did not list when checked, so the deepseek-r1 distills (1.5B to 70B) remain the reasoning option you can pull there. DeepSeek has replaced the hosted R1 API model with DeepSeek-V4.',
           ],
           codeBlock: '# Pull and run DeepSeek-R1\nollama run deepseek-r1:7b\n\n# Larger variants for better quality\nollama run deepseek-r1:14b   # 10 GB RAM\nollama run deepseek-r1:32b   # 20 GB RAM',
           codeLanguage: 'bash',
-          image: '/images/ollama-deepseek-r1-reasoning-comparison-en.svg',
-          imageCaption: 'DeepSeek-R1 7B vs Mistral Small: 52% vs 28% on MATH. Chain-of-thought reasoning model -- slower, significantly better accuracy.',
         },
         visionModels: {
           id: 'vision-models',
@@ -287,11 +287,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { '#': '3', 'Model': '[gpt-oss:20b](https://ollama.com/library/gpt-oss)', 'Best For': 'Best small / 16 GB, adjustable reasoning', 'RAM': '16 GB', 'HumanEval': '~o3-mini' },
             { '#': '4', 'Model': '[qwen3:30b](https://ollama.com/library/qwen3)', 'Best For': 'Balanced all-round; qwen3-coder:30b for code', 'RAM': '~18 GB', 'HumanEval': 'strong' },
             { '#': '5', 'Model': '[Laguna XS 2.1](https://ollama.com/library/laguna-xs-2.1)', 'Best For': 'Agentic coding, long-horizon (plan/code/test/iterate)', 'RAM': 'Quantized', 'HumanEval': '70.9% SWE-bench Verified' },
-            { '#': '6', 'Model': '[Devstral Small 24B](https://ollama.com/library/devstral-small-2)', 'Best For': 'Agentic coding (multi-file)', 'RAM': '15 GB', 'HumanEval': '65.8% (Verified)' },
-            { '#': '7', 'Model': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', 'Best For': 'Reasoning, math', 'RAM': '5 GB', 'MATH': '52%' },
+            { '#': '6', 'Model': '[Devstral Small 2 24B](https://ollama.com/library/devstral-small-2)', 'Best For': 'Agentic coding (multi-file)', 'RAM': '15 GB', 'HumanEval': '68.0% (SWE-bench Verified)' },
+            { '#': '7', 'Model': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', 'Best For': 'Reasoning, math', 'RAM': '5 GB', 'MATH': '—' },
             { '#': '8', 'Model': '[gemma4:e4b](https://ollama.com/library/gemma3)', 'Best For': 'Vision + tool calling (multimodal)', 'RAM': '~6 GB', 'Notes': 'Agent-ready' },
-            { '#': '9', 'Model': '[Llama 4 Scout](https://ollama.com/library/llama3.3)', 'Best For': 'Long-context 10M + multimodal, MoE', 'RAM': '~55 GB (Q4)', 'HumanEval': '85%' },
-            { '#': '10', 'Model': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Best For': 'First model, general chat', 'RAM': '2.5 GB', 'HumanEval': '60%' },
+            { '#': '9', 'Model': '[Llama 4 Scout](https://ollama.com/library/llama3.3)', 'Best For': 'Long-context 10M + multimodal, MoE', 'RAM': '~55 GB (Q4)', 'HumanEval': '—' },
+            { '#': '10', 'Model': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Best For': 'First model, general chat', 'RAM': '2.5 GB', 'HumanEval': '—' },
           ],
           columns: ['#', 'Model', 'Best For', 'RAM', 'HumanEval'],
           image: '/images/top-open-source-models-ollama-top-models-hero-en.webp',
@@ -308,9 +308,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'regional-context',
           title: 'How Do Regional Privacy Rules Affect Your Ollama Model Choice?',
           content: [
-            '**EU / GDPR + Licence Compliance.** For EU organizations deploying Ollama models in production, licence choice matters as much as performance. Apache 2.0 (fully open, commercial use permitted): Mistral Small, Mistral Small 3.1, Qwen3 8B, Qwen3.8-27B, Devstral Small 2, Granite 4.2. Meta Llama Community Licence (commercial use restricted above 700M monthly active users): Llama 3.1 8B, Llama 3.2 3B, Llama 3.2 Vision 11B. MIT (commercial use permitted): DeepSeek-R1 7B, DeepSeek-R1 14B. Modified MIT (commercial use permitted with attribution clause): Kimi K2.6. OpenMDW-1.1 (permissive, commercial use permitted): Laguna XS 2.1. Always check the licence terms before commercial deployment. For EU enterprises in regulated sectors, Mistral models (France, Apache 2.0) such as Devstral Small 2 are a sensible default -- EU origin and a permissive licence. Running models entirely on-premises via Ollama means prompts are not sent to external servers; this supports, but does not by itself satisfy, GDPR obligations (a `:cloud` tag does send data to Ollama\'s hosted service).',
-            '**Japan (METI).** For Japanese enterprise Ollama deployments, Qwen3 / Qwen3.8 is a recommended model family -- it handles Japanese text natively, which helps inference time and KV cache requirements. For Japanese coding workflows: Qwen3.8-27B (61.7 SWE-bench Pro as reported by Qwen) handles Japanese code comments natively. METI AI governance documentation typically asks for the exact model version. Use `ollama show <model>` to get the full model specification including parameter count, quantization level, and context length for compliance records.',
-            '**China.** Under China\'s CAC Generative AI Measures (2023), organizations providing AI services to end users must register the models used. Qwen3 / Qwen3.8 (Alibaba, Apache 2.0) is a natural choice for Chinese enterprise Ollama deployments -- Chinese model origin, Apache 2.0 licence, strong Chinese-language performance. Kimi K2.6 (Moonshot AI, Modified MIT) is also Chinese-origin, but Ollama lists it only as a cloud tag and local runs need server-class hardware. Pull commands: `ollama run qwen3.8:27b` for best quality, `ollama run qwen3:8b` for speed. DeepSeek-R1 (MIT licence) is appropriate for reasoning tasks. For data processed locally via Ollama, China\'s PIPL cross-border transfer requirements are not triggered by the inference itself -- check your own compliance obligations.',
+            '**EU / GDPR + Licence Compliance.** For EU organizations deploying Ollama models in production, licence choice matters as much as performance. Apache 2.0 (fully open, commercial use permitted): Mistral Small 3, Mistral Small 3.1, Qwen3 8B, Qwen3.8-27B, Devstral Small 2, Granite 4.2. Meta Llama Community Licence (commercial use restricted above 700M monthly active users): Llama 3.1 8B, Llama 3.2 3B, Llama 3.2 Vision 11B. Llama 3.2 Vision is an exception: its Acceptable Use Policy does not grant the licence rights to individuals or companies domiciled in the EU (end users of products built on it are not affected), so check it before use in the EU. MIT (commercial use permitted): DeepSeek-R1 7B, DeepSeek-R1 14B. Modified MIT (commercial use permitted with attribution clause): Kimi K2.6. OpenMDW-1.1 (permissive, commercial use permitted): Laguna XS 2.1. Always check the licence terms before commercial deployment. For EU enterprises in regulated sectors, Mistral models (France, Apache 2.0) such as Devstral Small 2 are a sensible default -- EU origin and a permissive licence. Running models entirely on-premises via Ollama means prompts are not sent to external servers; this supports, but does not by itself satisfy, GDPR obligations (a `:cloud` tag does send data to Ollama\'s hosted service).',
+            '**Japan (METI).** For Japanese enterprise Ollama deployments, Qwen3 / Qwen3.8 is a recommended model family -- it handles Japanese text natively, which helps inference time and KV cache requirements. For Japanese coding workflows: Qwen3.8-27B (61.7 SWE-bench Pro as reported by Qwen) handles Japanese code comments natively. Recording the exact model version is good practice for compliance documentation. Use `ollama show <model>` to get the full model specification including parameter count, quantization level, and context length for compliance records.',
+            '**China.** China\'s CAC Generative AI Measures (2023) can impose filing or security-assessment duties on providers of generative AI services to the public in China; whether they apply to you is a question for your legal adviser. Qwen3 / Qwen3.8 (Alibaba, Apache 2.0) is a natural choice for Chinese enterprise Ollama deployments -- Chinese model origin, Apache 2.0 licence, strong Chinese-language performance. Kimi K2.6 (Moonshot AI, Modified MIT) is also Chinese-origin, but Ollama lists it only as a cloud tag and local runs need server-class hardware. Pull commands: `ollama run qwen3.8:27b` for best quality, `ollama run qwen3:8b` for speed. DeepSeek-R1 (MIT licence) is appropriate for reasoning tasks. Inference that runs locally via Ollama does not by itself send data abroad, which removes the cross-border transfer question for that step; whether PIPL or other obligations apply to your processing is for you and your legal adviser to decide. This section is general information, not legal advice.',
           ],
         },
         commonMistakes: {
@@ -323,7 +323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Using a general model when a task-specific model exists',
-              a: 'For coding tasks, `qwen2.5-coder:7b` scores 72% HumanEval while the general `qwen2.5:7b` also scores 72% -- but `qwen2.5-coder` includes FIM support for code completion. For reasoning/math, `deepseek-r1:7b` scores 52% MATH vs 28% for `mistral:7b`. Task-specific models exist in the Ollama library for a reason.',
+              a: 'For coding tasks, `qwen2.5-coder:7b` is built for code and includes FIM (fill-in-the-middle) support for code completion, which the general `qwen2.5:7b` does not. For reasoning/math, `deepseek-r1:7b` is a dedicated chain-of-thought reasoning model. Task-specific models exist in the Ollama library for a reason.',
             },
             {
               q: 'Not verifying a model is available before building a workflow',
@@ -372,7 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'What is the official name of the company behind Ollama?',
-              a: 'The company is Ollama Inc., a Series B-funded startup based in Palo Alto, California, founded in 2023 by Jeffrey Morgan and Michael Chiang. "Ollama" refers to both the company and the CLI tool/model runtime it publishes.',
+              a: 'The company behind Ollama is Ollama Inc. "Ollama" refers to both the company and the open-source CLI tool and model runtime it publishes; the project\'s first public release, v0.0.1, appeared on GitHub on July 8, 2023.',
             },
             {
               q: 'Can I use models from Hugging Face directly in Ollama?',
@@ -384,11 +384,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Are all Ollama models truly open source?',
-              a: 'Not all. The Ollama library includes models with varying licences. Llama 3.x/4.x use the Meta Llama Community Licence (not OSI-approved open source -- restricts commercial use above 700M monthly active users). Mistral Small, Qwen3, Qwen3.8, Devstral, and Gemma models are Apache 2.0 (fully open source). Kimi K2.6 is Modified MIT licensed (commercial-friendly with an attribution clause). Laguna XS 2.1 uses OpenMDW-1.1 (permissive, commercial use permitted, not OSI-approved). Always check the licence before commercial deployment.',
+              a: 'Not all. The Ollama library includes models with varying licences. Llama 3.x/4.x use the Meta Llama Community Licence (not OSI-approved open source -- restricts commercial use above 700M monthly active users). Mistral Small 3.1, Qwen3, Qwen3.8, Devstral Small 2 and Gemma 4 are Apache 2.0 (fully open source); Gemma 2 and Gemma 3 use Google\'s Gemma Terms of Use, which are not OSI-approved. Kimi K2.6 is Modified MIT licensed (commercial-friendly with an attribution clause). Laguna XS 2.1 uses OpenMDW-1.1 (permissive, commercial use permitted, not OSI-approved). Always check the licence before commercial deployment.',
             },
             {
               q: 'Which Dolphin model should I use with Ollama?',
-              a: 'Use Dolphin 3.0 (`ollama pull dolphin3`), not the older `dolphin-mistral` (last updated 2024, built on Mistral 0.2). Dolphin 3.0, maintained by Cognitive Computations (Eric Hartford), is built on Llama 3.1, has no built-in content filtering, and is designed as a general-purpose local model for coding, math, agentic tasks, and unrestricted chat.',
+              a: 'Use Dolphin 3.0 (`ollama pull dolphin3`), not the older `dolphin-mistral` (last updated 2024, built on Mistral 0.2). Dolphin 3.0, maintained by Cognitive Computations (Eric Hartford), is built on Llama 3.1, has no built-in content filtering, and is designed as a general-purpose local model for coding, math, agentic tasks, and chat without built-in content restrictions. Because it ships without built-in safety filtering, you are responsible for how its output is used, and the Llama 3.1 licence terms apply.',
             },
             {
               q: 'Which embedding model should I use with Ollama for RAG?',
@@ -412,7 +412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Are open source models on Ollama truly free to use commercially?',
-              a: 'Most are, but not all. Llama 3.x (Meta Llama Community Licence) restricts commercial use above 700M monthly active users. Mistral Small, Qwen3, and Gemma models use Apache 2.0 (fully commercial-friendly). Always verify the licence before enterprise deployment -- check the model\'s Hugging Face page or Ollama library entry.',
+              a: 'Most are, but not all. Llama 3.x (Meta Llama Community Licence) restricts commercial use above 700M monthly active users. Mistral Small 3.1, Qwen3 and Gemma 4 use Apache 2.0 (fully commercial-friendly); Gemma 2 and Gemma 3 use Google\'s Gemma Terms of Use, which permit commercial use under conditions. Always verify the licence before enterprise deployment -- check the model\'s Hugging Face page or Ollama library entry.',
             },
             {
               q: 'What is the latest version of Ollama?',
@@ -436,7 +436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Which Ollama models work best for Russian-language tasks?',
-              a: 'Qwen3 / Qwen3.8 (`ollama run qwen3:8b` or `ollama run qwen3.8:27b`) and Mistral Small 3.1 (`ollama run mistral-small3.1`) both include Russian in their native multilingual training. Qwen3 scores higher on non-English benchmark tasks; Mistral Small 3.1 has stronger conversational Russian fluency in informal testing. Neither is Russian-origin -- for regulatory data-residency requirements specific to Russia, check the model licence and your organization\'s compliance requirements separately, as this article does not cover Russian data-localization law.',
+              a: 'Qwen3 / Qwen3.8 (`ollama run qwen3:8b` or `ollama run qwen3.8:27b`) and Mistral Small 3.1 (`ollama run mistral-small3.1`) both include Russian in their native multilingual training. This page does not rank the two for Russian, so test both on your own prompts. Neither is Russian-origin -- for regulatory data-residency requirements specific to Russia, check the model licence and your organization\'s compliance requirements separately, as this article does not cover Russian data-localization law.',
             },
           ],
         },
@@ -444,13 +444,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'sources',
           title: 'Sources',
           items: [
-            '[Meta AI. (2025). "Llama 4 Model Card." llama.meta.com](https://llama.meta.com/) -- Official specifications for Llama 4 Scout (17B active, 109B total, MoE) and Maverick variants.',
-            '[DeepSeek AI. (2025). "DeepSeek-R1 Technical Report." arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- Chain-of-thought architecture and MATH benchmark (52%) for DeepSeek-R1.',
+            '[Meta. "Llama-4-Scout-17B-16E-Instruct model card." huggingface.co](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct) -- Official specifications for Llama 4 Scout (17B active, 109B total, MoE).',
+            '[DeepSeek AI. (2025). "DeepSeek-R1 Technical Report." arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- Chain-of-thought architecture and benchmark methodology for DeepSeek-R1.',
             '[Ollama. (2026). "qwen3.8." ollama.com/library/qwen3.8](https://ollama.com/library/qwen3.8) -- 61.7 SWE-bench Pro for best dense coding model.',
-            '[Moonshot AI. (2026). "Kimi K2.6 Model Card." moonshot.ai](https://moonshot.ai/) -- Modified MIT-licensed MoE coding model (32B active/1T total), SWE-Bench Pro 58.6.',
-            '[Mistral AI. (2026). "Devstral Small 24B." mistral.ai](https://mistral.ai/) -- Best agentic coding model for multi-file edits and debugging.',
+            '[Moonshot AI. Kimi K2.6 (Hugging Face organization page). huggingface.co/moonshotai](https://huggingface.co/moonshotai) -- Modified MIT-licensed MoE coding model (32B active/1T total), SWE-Bench Pro 58.6.',
+            '[Mistral AI. "Introducing: Devstral 2 and Mistral Vibe CLI." mistral.ai](https://mistral.ai/news/devstral-2-vibe-cli/) -- Best agentic coding model for multi-file edits and debugging.',
             '[Ollama. (2026). "Ollama Model Library." ollama.com/library](https://ollama.com/library) -- Official model library, download counts, tags, and quantization options.',
-            '[Google DeepMind. (2026). "Gemma 4 Technical Report."](https://ai.google.dev/) -- Vision + tool calling capabilities released April 2026.',
+            '[Google AI for Developers. "Gemma documentation." ai.google.dev](https://ai.google.dev/gemma/docs) -- Gemma 4 family; vision + tool calling capabilities released April 2026.',
             '[Poolside. (2026). "Introducing Laguna XS 2.1." poolside.ai](https://poolside.ai/blog/introducing-laguna-xs-2-1) -- 33B/3B active MoE agentic coding model, SWE-bench Verified 70.9%, OpenMDW-1.1 license.',
             '[Ollama. (2026). "Ollama Releases." github.com/ollama/ollama/releases](https://github.com/ollama/ollama/releases) -- Official release notes, v0.40.5 (October 14, 2026).',
           ],
@@ -463,7 +463,7 @@ schema: {
         'description': 'Looking for the latest Ollama version and models? See v0.40.5, the full changelog, what is new, and which models are worth using for chat, coding, and reasoning.',
         'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-10-17',
+        'dateModified': '2026-10-19',
         'proficiencyLevel': 'Beginner',
         'inLanguage': 'en',
         'audience': { '@type': 'Audience', 'audienceType': 'Beginners running their first local LLM on consumer hardware' },
@@ -491,13 +491,13 @@ schema: {
           { '@type': 'ListItem', 'position': 3, 'name': 'gpt-oss:20b', 'url': 'https://ollama.com/library/gpt-oss', 'description': 'Best small / 16 GB. 21B total / 3.6B active MoE. ~o3-mini level, adjustable reasoning. ollama run gpt-oss:20b' },
           { '@type': 'ListItem', 'position': 4, 'name': 'qwen3:30b', 'url': 'https://ollama.com/library/qwen3', 'description': 'Balanced all-round model; qwen3-coder:30b for code completion. ollama run qwen3:30b' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Laguna XS 2.1', 'url': 'https://ollama.com/library/laguna-xs-2.1', 'description': 'Agentic, long-horizon coding. 33B/3B active MoE. SWE-bench Verified 70.9%. OpenMDW-1.1 license. ollama run laguna-xs-2.1' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'Best reasoning. 5 GB RAM. 52% MATH vs 28% Mistral Small. ollama run deepseek-r1:7b' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'Best reasoning. 5 GB RAM. ollama run deepseek-r1:7b' },
           { '@type': 'ListItem', 'position': 7, 'name': 'gemma4:e4b', 'url': 'https://ollama.com/library/gemma4', 'description': 'Best vision/multimodal (E4B+). Tool calling + vision, ~90% faster on Apple Silicon (July 2026). ~6 GB RAM. ollama run gemma4:e4b' },
           { '@type': 'ListItem', 'position': 8, 'name': 'Llama 4 Scout', 'url': 'https://ollama.com/library/llama4', 'description': 'Best long-context (10M tokens) + large multimodal. MoE 17B active/109B total. ~55 GB at Q4. ollama run llama4:scout' },
-          { '@type': 'ListItem', 'position': 9, 'name': 'Devstral Small 24B', 'url': 'https://ollama.com/library/devstral-small', 'description': 'Best agentic coding (multi-file). Multi-file edits, debugging. 16 GB RAM. ollama run devstral-small-2' },
-          { '@type': 'ListItem', 'position': 10, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': 'Best quality 16 GB tier. 14 GB RAM. 74% HumanEval. Apache 2.0. ollama run mistral-small3.1' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Devstral Small 2 24B', 'url': 'https://ollama.com/library/devstral-small-2', 'description': 'Best agentic coding (multi-file). Multi-file edits, debugging. 16 GB RAM. ollama run devstral-small-2' },
+          { '@type': 'ListItem', 'position': 10, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': 'Strong quality in the 16 GB tier. 14 GB RAM. Apache 2.0. ollama run mistral-small3.1' },
           { '@type': 'ListItem', 'position': 11, 'name': 'gemma2:2b', 'url': 'https://ollama.com/library/gemma2', 'description': 'Fastest and lightest. 1.7 GB RAM. Best CPU inference. ollama run gemma2:2b' },
-          { '@type': 'ListItem', 'position': 12, 'name': 'phi4-mini', 'url': 'https://ollama.com/library/phi4-mini', 'description': 'Best reasoning under 4 GB. 2.5 GB RAM. 70% HumanEval. ollama run phi4-mini' },
+          { '@type': 'ListItem', 'position': 12, 'name': 'phi4-mini', 'url': 'https://ollama.com/library/phi4-mini', 'description': 'Small reasoning-oriented model. 2.5 GB RAM. ollama run phi4-mini' },
         ],
       },
       faqSchema: {
@@ -517,7 +517,7 @@ schema: {
             'name': 'What is the official name of the company behind Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'The company is Ollama Inc., a Series B-funded startup based in Palo Alto, California, founded in 2023 by Jeffrey Morgan and Michael Chiang. "Ollama" refers to both the company and the CLI tool/model runtime it publishes.',
+              'text': 'The company behind Ollama is Ollama Inc. "Ollama" refers to both the company and the open-source CLI tool and model runtime it publishes; the project\'s first public release, v0.0.1, appeared on GitHub on July 8, 2023.',
             }
           },
           {
@@ -541,7 +541,7 @@ schema: {
             'name': 'Are all Ollama models truly open source?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Not all. The Ollama library includes models with varying licences. Llama 3.x/4.x use the Meta Llama Community Licence (not OSI-approved open source -- restricts commercial use above 700M monthly active users). Mistral Small, Qwen3, Qwen3.8, Devstral, and Gemma models are Apache 2.0 (fully open source). Kimi K2.6 is Modified MIT licensed (commercial-friendly with an attribution clause). Laguna XS 2.1 uses OpenMDW-1.1 (permissive, commercial use permitted, not OSI-approved). Always check the licence before commercial deployment.',
+              'text': 'Not all. The Ollama library includes models with varying licences. Llama 3.x/4.x use the Meta Llama Community Licence (not OSI-approved open source -- restricts commercial use above 700M monthly active users). Mistral Small 3.1, Qwen3, Qwen3.8, Devstral Small 2 and Gemma 4 are Apache 2.0 (fully open source); Gemma 2 and Gemma 3 use Google\'s Gemma Terms of Use, which are not OSI-approved. Kimi K2.6 is Modified MIT licensed (commercial-friendly with an attribution clause). Laguna XS 2.1 uses OpenMDW-1.1 (permissive, commercial use permitted, not OSI-approved). Always check the licence before commercial deployment.',
             }
           },
           {
@@ -549,7 +549,7 @@ schema: {
             'name': 'Which Dolphin model should I use with Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Use Dolphin 3.0 (`ollama pull dolphin3`), not the older `dolphin-mistral` (last updated 2024, built on Mistral 0.2). Dolphin 3.0, maintained by Cognitive Computations (Eric Hartford), is built on Llama 3.1, has no built-in content filtering, and is designed as a general-purpose local model for coding, math, agentic tasks, and unrestricted chat.',
+              'text': 'Use Dolphin 3.0 (`ollama pull dolphin3`), not the older `dolphin-mistral` (last updated 2024, built on Mistral 0.2). Dolphin 3.0, maintained by Cognitive Computations (Eric Hartford), is built on Llama 3.1, has no built-in content filtering, and is designed as a general-purpose local model for coding, math, agentic tasks, and chat without built-in content restrictions. Because it ships without built-in safety filtering, you are responsible for how its output is used, and the Llama 3.1 licence terms apply.',
             }
           },
           {
@@ -597,7 +597,7 @@ schema: {
             'name': 'Are open source models on Ollama truly free to use commercially?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Most are, but not all. Llama 3.x (Meta Llama Community Licence) restricts commercial use above 700M monthly active users. Mistral Small, Qwen3, and Gemma models use Apache 2.0 (fully commercial-friendly). Always verify the licence before enterprise deployment -- check the model\'s Hugging Face page or Ollama library entry.',
+              'text': 'Most are, but not all. Llama 3.x (Meta Llama Community Licence) restricts commercial use above 700M monthly active users. Mistral Small 3.1, Qwen3 and Gemma 4 use Apache 2.0 (fully commercial-friendly); Gemma 2 and Gemma 3 use Google\'s Gemma Terms of Use, which permit commercial use under conditions. Always verify the licence before enterprise deployment -- check the model\'s Hugging Face page or Ollama library entry.',
             }
           },
           {
@@ -645,7 +645,7 @@ schema: {
             'name': 'Which Ollama models work best for Russian-language tasks?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 / Qwen3.8 (`ollama run qwen3:8b` or `ollama run qwen3.8:27b`) and Mistral Small 3.1 (`ollama run mistral-small3.1`) both include Russian in their native multilingual training. Qwen3 scores higher on non-English benchmark tasks; Mistral Small 3.1 has stronger conversational Russian fluency in informal testing. Neither is Russian-origin -- for regulatory data-residency requirements specific to Russia, check the model licence and your organization\'s compliance requirements separately.',
+              'text': 'Qwen3 / Qwen3.8 (`ollama run qwen3:8b` or `ollama run qwen3.8:27b`) and Mistral Small 3.1 (`ollama run mistral-small3.1`) both include Russian in their native multilingual training. This page does not rank the two for Russian, so test both on your own prompts. Neither is Russian-origin -- for regulatory data-residency requirements specific to Russia, check the model licence and your organization\'s compliance requirements separately.',
             }
           },
         ]
@@ -678,7 +678,7 @@ schema: {
             '→Llama 4 Scout — contexto largo (10M tokens) + multimodal, ~55 GB en Q4',
             '→DeepSeek-R1 — mejor razonamiento/matemáticas; gpt-oss:20b para razonamiento ajustable (DeepSeek lanzó después DeepSeek-V4 — Flash/Pro — como generación abierta más reciente; R1/V3 siguen siendo válidos en local)',
           ],
-          updatedDate: '2026-10-17',
+          updatedDate: '2026-10-19',
         },
       },
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
@@ -763,6 +763,7 @@ schema: {
             'Qwen3 es la familia de modelos de mayor crecimiento en la biblioteca de Ollama, con Qwen3 y la nueva variante densa Qwen3.8 desplazando rápidamente a Qwen2.5. DeepSeek-R1 experimentó grandes picos de descargas tras su lanzamiento y sigue siendo muy descargado para tareas de razonamiento. Dolphin 3.0 (Cognitive Computations, basado en Llama 3.1) sigue siendo el modelo de propósito general sin censura más descargado para usuarios que quieren un asistente local sin filtros.',
             'Meta lanzó **Llama 4** en abril de 2026 con las variantes Scout (17B activos, 109B total, MoE) y Maverick (17B activos, 400B total). Llama 4 Scout ya es estable en la biblioteca de Ollama (`ollama pull llama4:scout`). La familia Llama 4 usa arquitectura Mixture-of-Experts (MoE) — solo 17B parámetros están activos por token, pero con 109B parámetros totales Scout necesita ~55 GB de VRAM con Q4 (cabe en 24 GB solo a 1,78 bits, ~20 tok/s). Las características destacadas de Scout son su ventana de contexto de 10M tokens y su entrada multimodal, no su ajuste a hardware de consumo. Para configuraciones ligeras (8 GB de RAM), Llama 3.2 3B sigue siendo el modelo inicial más sencillo. Kimi K2.6 (Moonshot AI, licencia Modified MIT, 32B activos / 1T total MoE) obtuvo SWE-Bench Pro 58.6, empatando con GPT-5.5. Laguna XS 2.1 (Poolside) es el nuevo aspirante a programación agéntica, diseñado específicamente para sesiones de programación local de largo alcance. Qwen3.8-27B alcanzó el 61,7 SWE-bench Pro como el mejor modelo general en hardware de consumo (cabe en 24 GB con Q4). El gpt-oss:20b de OpenAI (21B total / 3,6B activos MoE) se ejecuta en 16 GB a ~nivel o3-mini con razonamiento ajustable.',
             'La biblioteca de Ollama contiene varios cientos de modelos seleccionados, siendo Laguna XS 2.1 y Kimi K2.7 Code las incorporaciones más nuevas desde la actualización de junio.',
+            'Nota de versión: Qwen3.6 y Qwen3.8 son generaciones de Qwen más recientes en Ollama (qwen3.6:35b, ~24 GB; qwen3.8:27b, 18 GB); qwen3:30b y qwen3-coder:30b (19 GB cada uno) son opciones de la generación anterior que siguen funcionando. El modelo Small actual de Mistral es Mistral Small 4, pero la biblioteca de Ollama no lo listaba en la comprobación; mistral-small3.1 y mistral-small:24b (Mistral Small 3) siguen siendo los modelos Small que puedes descargar.',
           ],
         },
         byCategory: {
@@ -774,23 +775,23 @@ schema: {
             '**Chat general (mejor opción)**: `ollama run qwen3.8:27b` -- 61,7 SWE-bench Pro, mejor general en hardware de consumo, cabe en 24 GB con Q4. Equilibrado: `ollama run qwen3:30b`. Para máquinas de 8 GB, usa `ollama run llama3.2:3b`.',
             '**Contexto largo / multimodal**: `ollama run llama4:scout` -- contexto de 10M tokens + multimodal, MoE (17B activos/109B total). Necesita ~55 GB de VRAM con Q4 (cabe en 24 GB solo a 1,78 bits, ~20 tok/s).',
             '**Mejor pequeño / 16 GB**: `ollama run gpt-oss:20b` -- 21B total / 3,6B activos MoE, ~nivel o3-mini, razonamiento ajustable. Mayor: `ollama run gpt-oss:120b` (80 GB).',
-            '**Programación en 8 GB**: `ollama run qwen3:8b` -- Mejor modelo local de programación para máquinas con 8 GB de VRAM. 76% HumanEval, 5 GB usados, multilingüe.',
-            '**Inferencia general en 8 GB (si no es programación)**: `ollama run mistral:7b` -- Modelo de propósito general más rápido a 8 GB, 40-60 tok/seg.',
+            '**Programación en 8 GB**: `ollama run qwen3:8b` -- Opción sólida de programación para máquinas con 8 GB de VRAM. 5 GB usados, multilingüe.',
+            '**Inferencia general en 8 GB (si no es programación)**: `ollama run mistral:7b` -- Modelo ligero de propósito general para máquinas de 8 GB; la velocidad depende de tu hardware.',
             '**Programación (mejor agéntico, 24B)**: `ollama run devstral-small-2` -- Mejor modelo de programación agéntico (ediciones de múltiples archivos, depuración). 16 GB de RAM. De Mistral AI.',
             '**Programación (mejor denso, 27B)**: `ollama run qwen3.8:27b` -- 61,7 SWE-bench Pro. Mejor modelo de programación denso. 18 GB de VRAM.',
             '**Programación (MoE de frontera)**: `ollama run kimi-k2.6:cloud` -- SWE-Bench Pro 58.6 (empata con GPT-5.5), nivel superior. MoE (32B activos/1T total). Licencia Modified MIT. Necesita cuantización para hardware de consumo.',
             '**Programación (agéntica, largo alcance)**: `ollama run laguna-xs-2.1` -- MoE de Poolside con 33B/3B activos, SWE-bench Verified 70,9%, contexto de 256K. Diseñado para bucles de varios pasos de planificar → programar → probar → iterar. Licencia OpenMDW-1.1.',
             '**Tareas de agentes y tool calling**: `ollama run gemma4:e4b` -- Lanzado el 2 de abril de 2026. Tool calling integrado + soporte de visión. Recomendado para agentes locales, llamadas a funciones y salida estructurada. 6 GB de RAM.',
             '**Razonamiento y matemáticas**: `ollama run deepseek-r1:7b` -- modelo chain-of-thought, mejor rendimiento matemático local a 7B.',
-            '**Multilingüe**: `ollama run qwen3:8b` -- 29+ idiomas nativos, soporte no inglés más sólido, 76% HumanEval.',
-            '**Tareas en ruso**: `ollama run qwen3:8b` o `ollama run mistral-small3.1` -- ambos incluyen el ruso en sus datos de entrenamiento multilingüe nativo; Qwen3 obtiene mejores resultados en benchmarks no ingleses, Mistral Small tiene fluidez conversacional en ruso más sólida en pruebas informales.',
+            '**Multilingüe**: `ollama run qwen3:8b` -- 29+ idiomas nativos, opción multilingüe de propósito general.',
+            '**Tareas en ruso**: `ollama run qwen3:8b` o `ollama run mistral-small3.1` -- ambos incluyen el ruso en sus datos de entrenamiento multilingüe nativo. Esta página no los clasifica para ruso; prueba ambos con tus propios prompts.',
             '**Sin censura / propósito general**: `ollama run dolphin3` -- Dolphin 3.0 (Cognitive Computations, basado en Llama 3.1), sin filtrado de contenido integrado, uso general en chat/programación/agentes.',
             '**Comprensión de imágenes**: `ollama run gemma4:e4b` -- visión + tool calling. O `ollama run llama3.2-vision:11b` para visión dedicada.',
             '**Rápido y ligero**: `ollama run gemma2:2b` -- inferencia CPU más rápida, 1,7 GB de RAM.',
-            '**Alta calidad (16 GB de RAM)**: `ollama run mistral-small3.1` -- calidad cercana a 70B con 14 GB de RAM.',
+            '**Alta calidad (16 GB de RAM)**: `ollama run mistral-small3.1` -- buena calidad con 14 GB de RAM.',
             '**Generación de embeddings**: `ollama run nomic-embed-text` -- modelo de embeddings de 137M de parámetros para pipelines RAG.',
             '**Q&A de documentos (RAG)**: `ollama run llama3.2` con la función RAG de Open WebUI -- combinación mejor soportada.',
-            '**Domótica / IA de palabra de activación**: `ollama run phi4-mini` — Phi-4 Mini (3,8B, ~3 GB VRAM) gestiona comandos de voz de Home Assistant a 20–25 tok/seg en un mini PC sin GPU dedicada. Ver [guía de integración Home Assistant + Ollama →](/smart-home/home-assistant-ollama-integration).',
+            '**Domótica / IA de palabra de activación**: `ollama run phi4-mini` — Phi-4 Mini (3,8B, ~3 GB VRAM) puede gestionar comandos de voz de Home Assistant en un mini PC sin GPU dedicada; la velocidad depende de tu hardware. Ver [guía de integración Home Assistant + Ollama →](/smart-home/home-assistant-ollama-integration).',
           ],
           image: '/images/top-open-source-models-ollama-use-case-picks-hero-es.webp',
           imageCaption: 'Selección de modelos Ollama por caso de uso: elige qwen3.8:27b (mejor general, 61,7 SWE-bench Pro) para chat y programación, kimi-k2.6 para programación de frontera, gpt-oss:20b en 16 GB, deepseek-r1:7b para matemáticas.',
@@ -812,8 +813,8 @@ schema: {
             { 'Modelo': '[gpt-oss:20b](https://ollama.com/library/gpt-oss)', 'Lanzamiento': '2026', 'Mejor para': 'Mejor pequeño / 16 GB, ~o3-mini, razonamiento ajustable (también gpt-oss:120b)', 'Comando Ollama': 'ollama run gpt-oss:20b' },
             { 'Modelo': 'glm-5.3', 'Lanzamiento': 'Z.ai', 'Mejor para': '744B/40B activos MoE, licencia MIT', 'Comando Ollama': 'ollama run glm-5.3' },
             { 'Modelo': '[gemma4:e4b](https://ollama.com/library/gemma3)', 'Lanzamiento': '2 de abril de 2026', 'Mejor para': 'Visión + tool calling (E2B/E4B/E12B/E27B)', 'Comando Ollama': 'ollama run gemma4:e4b' },
-            { 'Modelo': 'deepseek-v4-flash', 'Lanzamiento': 'Abril/mayo de 2026', 'Mejor para': 'Programación económica (78/100 en el mundo real)', 'Comando Ollama': 'ollama run deepseek-v4-flash' },
-            { 'Modelo': '[qwen3:8b](https://ollama.com/library/qwen3)', 'Lanzamiento': '2026', 'Mejor para': 'HumanEval 76% a 7B, multilingüe', 'Comando Ollama': 'ollama run qwen3:8b' },
+            { 'Modelo': 'deepseek-v4-flash', 'Lanzamiento': 'Abril/mayo de 2026', 'Mejor para': 'Opción económica para programar', 'Comando Ollama': 'ollama run deepseek-v4-flash' },
+            { 'Modelo': '[qwen3:8b](https://ollama.com/library/qwen3)', 'Lanzamiento': '2026', 'Mejor para': 'Modelo multilingüe de clase 7B', 'Comando Ollama': 'ollama run qwen3:8b' },
           ],
           columns: ['Modelo', 'Lanzamiento', 'Mejor para', 'Comando Ollama'],
         },
@@ -822,12 +823,11 @@ schema: {
           title: '¿Qué es DeepSeek-R1 y por qué es diferente?',
           content: [
             '**DeepSeek-R1 es un modelo de razonamiento -- a diferencia de los modelos de chat estándar que generan respuestas directamente, DeepSeek-R1 genera razonamiento explícito de cadena de pensamiento antes de su respuesta final.** Esto mejora significativamente el rendimiento en matemáticas, acertijos de lógica y resolución de problemas paso a paso.',
-            'DeepSeek-R1 7B obtiene un 52% en MATH (matemáticas de competición) frente al 28% de Mistral Small del mismo tamaño. Es más lento que los modelos estándar (más tokens por respuesta) pero significativamente más preciso en tareas donde el razonamiento importa.',
+            'DeepSeek-R1 7B es un modelo de razonamiento chain-of-thought. Es más lento que los modelos estándar (más tokens por respuesta) pero significativamente más preciso en tareas donde el razonamiento importa.',
+            'Nota de versión: DeepSeek-R1 es un modelo de la generación anterior. La familia de pesos abiertos actual de DeepSeek es DeepSeek-V4, que la biblioteca de Ollama no listaba en la comprobación; las versiones destiladas deepseek-r1 (1,5B a 70B) siguen siendo la opción de razonamiento que puedes descargar. DeepSeek ha sustituido el modelo R1 alojado en su API por DeepSeek-V4.',
           ],
           codeBlock: '# Pull and run DeepSeek-R1\nollama run deepseek-r1:7b\n\n# Larger variants for better quality\nollama run deepseek-r1:14b   # 10 GB RAM\nollama run deepseek-r1:32b   # 20 GB RAM',
           codeLanguage: 'bash',
-          image: '/images/ollama-deepseek-r1-reasoning-comparison-en.svg',
-          imageCaption: 'DeepSeek-R1 7B vs Mistral Small: 52% vs 28% en MATH. Modelo de razonamiento chain-of-thought -- más lento, precisión significativamente mayor.',
         },
         visionModels: {
           id: 'vision-models',
@@ -854,11 +854,11 @@ schema: {
             { '#': '3', 'Modelo': '[gpt-oss:20b](https://ollama.com/library/gpt-oss)', 'Mejor para': 'Mejor pequeño / 16 GB, razonamiento ajustable', 'RAM': '16 GB', 'HumanEval': '~o3-mini' },
             { '#': '4', 'Modelo': '[qwen3:30b](https://ollama.com/library/qwen3)', 'Mejor para': 'Equilibrado; qwen3-coder:30b para código', 'RAM': '~18 GB', 'HumanEval': 'sólido' },
             { '#': '5', 'Modelo': '[Laguna XS 2.1](https://ollama.com/library/laguna-xs-2.1)', 'Mejor para': 'Programación agéntica, largo alcance (planificar/programar/probar/iterar)', 'RAM': 'Cuantizado', 'HumanEval': '70,9% SWE-bench Verified' },
-            { '#': '6', 'Modelo': '[Devstral Small 24B](https://ollama.com/library/devstral-small-2)', 'Mejor para': 'Programación agéntica (multiarchivo)', 'RAM': '15 GB', 'HumanEval': '65.8% (Verified)' },
-            { '#': '7', 'Modelo': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', 'Mejor para': 'Razonamiento, matemáticas', 'RAM': '5 GB', 'MATH': '52%' },
+            { '#': '6', 'Modelo': '[Devstral Small 2 24B](https://ollama.com/library/devstral-small-2)', 'Mejor para': 'Programación agéntica (multiarchivo)', 'RAM': '15 GB', 'HumanEval': '68.0% (SWE-bench Verified)' },
+            { '#': '7', 'Modelo': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', 'Mejor para': 'Razonamiento, matemáticas', 'RAM': '5 GB', 'MATH': '—' },
             { '#': '8', 'Modelo': '[gemma4:e4b](https://ollama.com/library/gemma3)', 'Mejor para': 'Visión + tool calling (multimodal)', 'RAM': '~6 GB', 'Notes': 'Listo para agentes' },
-            { '#': '9', 'Modelo': '[Llama 4 Scout](https://ollama.com/library/llama3.3)', 'Mejor para': 'Contexto largo 10M + multimodal, MoE', 'RAM': '~55 GB (Q4)', 'HumanEval': '85%' },
-            { '#': '10', 'Modelo': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Mejor para': 'Primer modelo, chat general', 'RAM': '2,5 GB', 'HumanEval': '60%' },
+            { '#': '9', 'Modelo': '[Llama 4 Scout](https://ollama.com/library/llama3.3)', 'Mejor para': 'Contexto largo 10M + multimodal, MoE', 'RAM': '~55 GB (Q4)', 'HumanEval': '—' },
+            { '#': '10', 'Modelo': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Mejor para': 'Primer modelo, chat general', 'RAM': '2,5 GB', 'HumanEval': '—' },
           ],
           columns: ['#', 'Modelo', 'Mejor para', 'RAM', 'HumanEval'],
           image: '/images/top-open-source-models-ollama-top-models-hero-es.webp',
@@ -875,9 +875,9 @@ schema: {
           id: 'regional-context',
           title: 'Modelos Ollama de código abierto: contexto regional',
           content: [
-            '**UE / RGPD + cumplimiento de licencias.** Para las organizaciones de la UE que despliegan modelos de Ollama en producción, la licencia importa tanto como el rendimiento. Apache 2.0 (totalmente abierta, uso comercial permitido): Mistral Small, Mistral Small 3.1, Qwen3 8B, Qwen3.8-27B, Devstral Small 2, Granite 4.2. Licencia Comunitaria de Meta Llama (uso comercial restringido por encima de 700M de usuarios activos mensuales): Llama 3.1 8B, Llama 3.2 3B, Llama 3.2 Vision 11B. MIT (uso comercial permitido): DeepSeek-R1 7B y 14B. MIT modificada (uso comercial permitido con cláusula de atribución): Kimi K2.6. OpenMDW-1.1 (permisiva, uso comercial permitido): Laguna XS 2.1. Comprueba siempre los términos de licencia antes del despliegue comercial. Para empresas de la UE en sectores regulados, los modelos de Mistral (Francia, Apache 2.0) como Devstral Small 2 son una opción por defecto sensata: origen europeo y licencia permisiva. Ejecutar los modelos íntegramente en local con Ollama significa que los prompts no se envían a servidores externos; esto ayuda, pero por sí solo no basta, para cumplir el RGPD (una etiqueta `:cloud` sí envía datos al servicio alojado de Ollama).',
-            '**Japón (METI).** Para despliegues empresariales japoneses con Ollama, Qwen3 / Qwen3.8 es una familia recomendable: maneja el texto japonés de forma nativa, lo que ayuda al tiempo de inferencia y a la caché KV. Para flujos de programación en japonés: Qwen3.8-27B (61,7 en SWE-bench Pro según Qwen) gestiona de forma nativa los comentarios de código en japonés. La documentación de gobernanza de IA del METI suele pedir la versión exacta del modelo. Usa `ollama show <modelo>` para obtener la especificación completa (parámetros, cuantización y longitud de contexto) para los registros de cumplimiento.',
-            '**China.** Según las Medidas de IA Generativa de la CAC (2023), las organizaciones que prestan servicios de IA a usuarios finales deben registrar los modelos empleados. Qwen3 / Qwen3.8 (Alibaba, Apache 2.0) es una opción natural para despliegues empresariales chinos con Ollama: origen chino, licencia Apache 2.0 y buen rendimiento en chino. Kimi K2.6 (Moonshot AI, MIT modificada) también es de origen chino, pero Ollama solo lo lista como etiqueta en la nube y la ejecución local exige hardware de clase servidor. Comandos: `ollama run qwen3.8:27b` para la mejor calidad, `ollama run qwen3:8b` para velocidad. DeepSeek-R1 (licencia MIT) es adecuado para razonamiento. Para datos procesados en local con Ollama, la inferencia en sí no activa los requisitos de transferencia transfronteriza de la PIPL; revisa tus propias obligaciones de cumplimiento.',
+            '**UE / RGPD + cumplimiento de licencias.** Para las organizaciones de la UE que despliegan modelos de Ollama en producción, la licencia importa tanto como el rendimiento. Apache 2.0 (totalmente abierta, uso comercial permitido): Mistral Small 3, Mistral Small 3.1, Qwen3 8B, Qwen3.8-27B, Devstral Small 2, Granite 4.2. Licencia Comunitaria de Meta Llama (uso comercial restringido por encima de 700M de usuarios activos mensuales): Llama 3.1 8B, Llama 3.2 3B, Llama 3.2 Vision 11B. Llama 3.2 Vision es una excepción: su Política de uso aceptable no concede los derechos de la licencia a personas o empresas domiciliadas en la UE (los usuarios finales de productos construidos sobre él no se ven afectados), así que compruébalo antes de usarlo en la UE. MIT (uso comercial permitido): DeepSeek-R1 7B y 14B. MIT modificada (uso comercial permitido con cláusula de atribución): Kimi K2.6. OpenMDW-1.1 (permisiva, uso comercial permitido): Laguna XS 2.1. Comprueba siempre los términos de licencia antes del despliegue comercial. Para empresas de la UE en sectores regulados, los modelos de Mistral (Francia, Apache 2.0) como Devstral Small 2 son una opción por defecto sensata: origen europeo y licencia permisiva. Ejecutar los modelos íntegramente en local con Ollama significa que los prompts no se envían a servidores externos; esto ayuda, pero por sí solo no basta, para cumplir el RGPD (una etiqueta `:cloud` sí envía datos al servicio alojado de Ollama).',
+            '**Japón (METI).** Para despliegues empresariales japoneses con Ollama, Qwen3 / Qwen3.8 es una familia recomendable: maneja el texto japonés de forma nativa, lo que ayuda al tiempo de inferencia y a la caché KV. Para flujos de programación en japonés: Qwen3.8-27B (61,7 en SWE-bench Pro según Qwen) gestiona de forma nativa los comentarios de código en japonés. Registrar la versión exacta del modelo es una buena práctica para la documentación de cumplimiento. Usa `ollama show <modelo>` para obtener la especificación completa (parámetros, cuantización y longitud de contexto) para los registros de cumplimiento.',
+            '**China.** Las Medidas de IA Generativa de la CAC de China (2023) pueden imponer obligaciones de registro o de evaluación de seguridad a los proveedores de servicios de IA generativa al público en China; si se aplican a tu caso, es una cuestión para tu asesor jurídico. Qwen3 / Qwen3.8 (Alibaba, Apache 2.0) es una opción natural para despliegues empresariales chinos con Ollama: origen chino, licencia Apache 2.0 y buen rendimiento en chino. Kimi K2.6 (Moonshot AI, MIT modificada) también es de origen chino, pero Ollama solo lo lista como etiqueta en la nube y la ejecución local exige hardware de clase servidor. Comandos: `ollama run qwen3.8:27b` para la mejor calidad, `ollama run qwen3:8b` para velocidad. DeepSeek-R1 (licencia MIT) es adecuado para razonamiento. La inferencia que se ejecuta en local con Ollama no envía datos al extranjero por sí misma, lo que elimina la cuestión de la transferencia transfronteriza en ese paso; si la PIPL u otras obligaciones se aplican a tu tratamiento de datos es algo que debes decidir con tu asesor jurídico. Esta sección es información general, no asesoramiento jurídico.',
           ],
         },
         commonMistakes: {
@@ -890,7 +890,7 @@ schema: {
             },
             {
               q: 'Usar un modelo general cuando existe un modelo específico para la tarea',
-              a: 'Para tareas de programación, `qwen2.5-coder:7b` obtiene un 72% en HumanEval mientras que el general `qwen2.5:7b` también obtiene un 72% -- pero `qwen2.5-coder` incluye soporte FIM para completado de código. Para razonamiento/matemáticas, `deepseek-r1:7b` obtiene 52% en MATH frente al 28% de `mistral:7b`. Los modelos específicos de tarea existen en la biblioteca de Ollama por una razón.',
+              a: 'Para tareas de programación, `qwen2.5-coder:7b` está pensado para código e incluye soporte FIM (fill-in-the-middle) para completado de código, algo que el modelo general `qwen2.5:7b` no ofrece. Para razonamiento/matemáticas, `deepseek-r1:7b` es un modelo de razonamiento chain-of-thought específico. Los modelos específicos de tarea existen en la biblioteca de Ollama por una razón.',
             },
             {
               q: 'No verificar que un modelo está disponible antes de construir un flujo de trabajo',
@@ -933,14 +933,14 @@ schema: {
           id: 'common-questions',
           title: 'Preguntas frecuentes sobre modelos de código abierto en Ollama',
           faqs: [
-            { q: '¿Cuál es el mejor modelo de Ollama para programar?', a: 'Para programación de frontera y flujos agénticos, Kimi K2.6 y Laguna XS 2.1 son las opciones más capaces de la biblioteca; Kimi K2.7 Code, derivado de K2.6, está directamente enfocado en programación. Si trabajas con 16 GB de RAM, gpt-oss:20b es la mejor opción pequeña, y qwen3:30b ofrece el equilibrio más razonable entre calidad y tamaño. Elige según la RAM disponible antes que por el ranking: un modelo que no cabe en memoria no te sirve por muy bueno que sea.' },
-            { q: '¿Qué es Laguna XS 2.1 y para qué sirve?', a: 'Laguna XS 2.1 es un modelo de Poolside disponible en la biblioteca de Ollama. Usa una arquitectura MoE de 33B parámetros con 3B activos, lo que le permite rendir por encima de su coste de memoria, y está orientado a programación agéntica de largo alcance: tareas en las que el modelo encadena varios pasos sobre un repositorio en lugar de completar una sola función. Es uno de los añadidos más recientes a la biblioteca, junto con Kimi K2.7 Code.' },
+            { q: '¿Cuál es el mejor modelo de Ollama para programar?', a: 'Para programación agéntica, Laguna XS 2.1 y Devstral Small 2 se ejecutan en local, y Qwen3.8-27B es una opción densa para hardware de consumo (61,7 en SWE-bench Pro según Qwen). Kimi K2.6 y Kimi K2.7 Code solo existen como etiquetas en la nube en Ollama. Si trabajas con 16 GB de RAM, gpt-oss:20b es una opción pequeña, y qwen3:30b ofrece un equilibrio razonable entre calidad y tamaño. Elige según la RAM disponible antes que por el ranking: un modelo que no cabe en memoria no te sirve por muy bueno que sea.' },
+            { q: '¿Qué es Laguna XS 2.1 y para qué sirve?', a: 'Laguna XS 2.1 es un modelo de Poolside disponible en la biblioteca de Ollama. Usa una arquitectura MoE de 33B parámetros con 3B activos, lo que reduce el cómputo por token, y está orientado a programación agéntica de largo alcance: tareas en las que el modelo encadena varios pasos sobre un repositorio en lugar de completar una sola función. Es uno de los añadidos más recientes a la biblioteca, junto con Kimi K2.7 Code.' },
             { q: '¿Cuántos modelos hay en la biblioteca de Ollama?', a: 'La biblioteca de Ollama contiene varios cientos de modelos seleccionados (con soporte oficial), y crece cada semana con nuevos lanzamientos de peso abierto. Hugging Face aloja miles de modelos GGUF adicionales que se pueden cargar mediante Ollama usando Modelfiles personalizados.' },
-            { q: '¿Cuál es el nombre oficial de la empresa detrás de Ollama?', a: 'La empresa es Ollama Inc., una startup con financiación Serie B con sede en Palo Alto, California, fundada en 2023 por Jeffrey Morgan y Michael Chiang. "Ollama" se refiere tanto a la empresa como a la herramienta CLI/runtime de modelos que publica.' },
+            { q: '¿Cuál es el nombre oficial de la empresa detrás de Ollama?', a: 'La empresa detrás de Ollama es Ollama Inc. "Ollama" se refiere tanto a la empresa como a la herramienta CLI de código abierto y al runtime de modelos que publica; la primera versión pública del proyecto, v0.0.1, apareció en GitHub el 8 de julio de 2023.' },
             { q: '¿Puedo usar modelos de Hugging Face directamente en Ollama?', a: 'Sí. Descarga un archivo GGUF de Hugging Face y crea un Modelfile: `FROM ./model.gguf`. Luego ejecuta `ollama create mimodelo -f Modelfile`. Esto funciona para cualquier archivo GGUF incluyendo ajustes finos y modelos que no están en la biblioteca oficial de Ollama.' },
             { q: '¿Qué modelo de Ollama es mejor para construir un chatbot local?', a: 'Para un chatbot local de propósito general: `qwen3.8:27b` (mejor general en hardware de consumo, cabe en 24 GB con Q4), o `llama3.2:3b` con 8 GB de RAM (punto de entrada más sencillo). Para máquinas de 16 GB: `gpt-oss:20b` (~nivel o3-mini) o `mistral-small3.1`. Para un chatbot asistente de programación: `qwen3.8:27b` (61,7 SWE-bench Pro), `devstral-small-2` (15 GB, agéntico) o `laguna-xs-2.1` (agéntico, largo alcance). Combínalo con Open WebUI para una interfaz web que se conecta a la API de Ollama en localhost:11434.' },
-            { q: '¿Son todos los modelos de Ollama verdaderamente de código abierto?', a: 'No todos. La biblioteca de Ollama incluye modelos con licencias variadas. Llama 3.x/4.x usan la Meta Llama Community Licence (no aprobada por OSI como código abierto -- restringe el uso comercial por encima de 700M de usuarios activos mensuales). Mistral Small, Qwen3, Qwen3.8, Devstral y los modelos Gemma son Apache 2.0 (completamente de código abierto). Kimi K2.6 tiene licencia Modified MIT (compatible con uso comercial con cláusula de atribución). Laguna XS 2.1 usa OpenMDW-1.1 (permisiva, uso comercial permitido, no aprobada por OSI). Siempre verifica la licencia antes del despliegue comercial.' },
-            { q: '¿Qué modelo Dolphin debería usar con Ollama?', a: 'Usa Dolphin 3.0 (`ollama pull dolphin3`), no el más antiguo `dolphin-mistral` (última actualización en 2024, basado en Mistral 0.2). Dolphin 3.0, mantenido por Cognitive Computations (Eric Hartford), está basado en Llama 3.1, no tiene filtrado de contenido integrado y está diseñado como modelo local de propósito general para programación, matemáticas, tareas agénticas y chat sin restricciones.' },
+            { q: '¿Son todos los modelos de Ollama verdaderamente de código abierto?', a: 'No todos. La biblioteca de Ollama incluye modelos con licencias variadas. Llama 3.x/4.x usan la Meta Llama Community Licence (no aprobada por OSI como código abierto -- restringe el uso comercial por encima de 700M de usuarios activos mensuales). Mistral Small 3.1, Qwen3, Qwen3.8, Devstral Small 2 y Gemma 4 son Apache 2.0 (completamente de código abierto); Gemma 2 y Gemma 3 usan los Términos de uso de Gemma de Google, que no están aprobados por la OSI. Kimi K2.6 tiene licencia Modified MIT (compatible con uso comercial con cláusula de atribución). Laguna XS 2.1 usa OpenMDW-1.1 (permisiva, uso comercial permitido, no aprobada por OSI). Siempre verifica la licencia antes del despliegue comercial.' },
+            { q: '¿Qué modelo Dolphin debería usar con Ollama?', a: 'Usa Dolphin 3.0 (`ollama pull dolphin3`), no el más antiguo `dolphin-mistral` (última actualización en 2024, basado en Mistral 0.2). Dolphin 3.0, mantenido por Cognitive Computations (Eric Hartford), está basado en Llama 3.1, no tiene filtrado de contenido integrado y está diseñado como modelo local de propósito general para programación, matemáticas, tareas agénticas y chat sin restricciones de contenido integradas. Al no incluir filtrado de seguridad propio, tú eres responsable del uso de sus resultados, y se aplican los términos de la licencia de Llama 3.1.' },
             { q: '¿Qué modelo de embeddings debería usar con Ollama para RAG?', a: '`nomic-embed-text` es la opción estándar -- un modelo de 137M de parámetros que genera embeddings de 768 dimensiones, se ejecuta en milisegundos por documento y está específicamente diseñado para tareas de recuperación. Descárgalo con `ollama pull nomic-embed-text`. Úsalo con el RAG integrado de Open WebUI, OllamaEmbeddings de LangChain o LlamaIndex.' },
             { q: '¿Cuál es la última versión de Ollama?', a: 'La última versión estable de Ollama es la v0.40.5, publicada el 14 de octubre de 2026. El 16 de octubre apareció una versión preliminar v0.40.6 que todavía no está marcada como estable. Descárgala en ollama.com/download o actualiza con `curl https://ollama.ai/install.sh | sh` en Linux y `brew upgrade ollama` en macOS.' },
             { q: '¿Dónde puedo ver el changelog y las notas de versión de Ollama?', a: 'Las notas de cada versión están en github.com/ollama/ollama/releases, con la fecha y el changelog de cada tag. Las entradas estables más recientes son v0.40.5 (14 de octubre de 2026 -- soporte de NVIDIA Nemotron 3.5 Super, acceso en la nube a los modelos de decisión), v0.40.4 (12 de octubre -- modelos de decisión en `ollama run --ask`, carga más rápida) y v0.40.0 (25 de septiembre -- MLX por defecto en Apple Silicon).' },
@@ -950,8 +950,8 @@ schema: {
             { q: '¿Cuál es la diferencia entre `ollama pull` y `ollama run`?', a: '`ollama pull` descarga el archivo del modelo al almacenamiento local (operación única). `ollama run` inicia una sesión interactiva inmediatamente después de descargar, o reutiliza el modelo ya descargado si está disponible. Puedes descargar una vez y ejecutar múltiples veces sin volver a descargar.' },
             { q: '¿Puedo ejecutar varios modelos simultáneamente en la misma máquina?', a: 'Sí, si tu hardware tiene suficiente VRAM. Usa ventanas de terminal o sesiones de shell separadas -- una ventana ejecuta `ollama run llama3.2` mientras otra ejecuta `ollama run qwen2.5:7b`. Ollama gestiona automáticamente el uso compartido de VRAM. Monitorea `nvidia-smi` o la actividad del sistema para evitar sobrecargas.' },
             { q: '¿Cómo actualizo un modelo a la última versión?', a: '`ollama pull [nombre-del-modelo]` verifica las actualizaciones y descarga la última versión si está disponible. Para revertir o usar versiones específicas, usa tags de versión: `ollama pull llama3.1:8b` o `ollama pull llama3.1:8b-instruct-q4_K_M`. Comprueba las versiones disponibles con `ollama show [nombre-del-modelo]`.' },
-            { q: '¿Los modelos de código abierto en Ollama son realmente gratuitos para uso comercial?', a: 'La mayoría sí, pero no todos. Llama 3.x (Meta Llama Community Licence) restringe el uso comercial por encima de 700M de usuarios activos mensuales. Mistral Small, Qwen3 y Gemma 3 usan Apache 2.0 (completamente compatible con uso comercial). Verifica siempre la licencia antes del despliegue empresarial -- consulta la página de Hugging Face del modelo o la entrada de la biblioteca de Ollama.' },
-            { q: '¿Qué modelos de Ollama funcionan mejor para tareas en ruso?', a: 'Qwen3 / Qwen3.8 (`ollama run qwen3:8b` o `ollama run qwen3.8:27b`) y Mistral Small 3.1 (`ollama run mistral-small3.1`) incluyen ambos el ruso en su entrenamiento multilingüe nativo. Qwen3 obtiene mejores resultados en tareas de benchmark no inglesas; Mistral Small 3.1 tiene una fluidez conversacional en ruso más sólida en pruebas informales. Ninguno es de origen ruso.' },
+            { q: '¿Los modelos de código abierto en Ollama son realmente gratuitos para uso comercial?', a: 'La mayoría sí, pero no todos. Llama 3.x (Meta Llama Community Licence) restringe el uso comercial por encima de 700M de usuarios activos mensuales. Mistral Small 3.1, Qwen3 y Gemma 4 usan Apache 2.0 (completamente compatible con uso comercial); Gemma 2 y Gemma 3 usan los Términos de uso de Gemma de Google, que permiten el uso comercial bajo ciertas condiciones. Verifica siempre la licencia antes del despliegue empresarial -- consulta la página de Hugging Face del modelo o la entrada de la biblioteca de Ollama.' },
+            { q: '¿Qué modelos de Ollama funcionan mejor para tareas en ruso?', a: 'Qwen3 / Qwen3.8 (`ollama run qwen3:8b` o `ollama run qwen3.8:27b`) y Mistral Small 3.1 (`ollama run mistral-small3.1`) incluyen ambos el ruso en su entrenamiento multilingüe nativo. Esta página no los clasifica para ruso; prueba ambos con tus propios prompts. Ninguno es de origen ruso.' },
             { q: '¿Cuáles son los mejores nuevos modelos de Ollama en julio de 2026?', a: 'Las últimas incorporaciones son la familia Nemotron 3.5 de NVIDIA (Lightning: MoE de 30B con 3B activos; Super: MoE visión-lenguaje de 120B con 12B activos y hasta 1M de tokens de contexto; Bolt: 74B con 9B activos para una GPU de 24 GB), junto con Laguna XS 2.1 (Poolside, OpenMDW-1.1 -- programación agéntica de largo alcance, SWE-bench Verified 70,9%, 33B/3B activos MoE) y Kimi K2.7 Code (Moonshot AI -- modelo agéntico enfocado en programación basado en Kimi K2.6). Se suman a la alineación establecida de 2026: Kimi K2.6 (Modified MIT, MoE de frontera para programación, SWE-Bench Pro 58.6), Qwen3.8-27B (mejor general en hardware de consumo, 61,7 SWE-bench Pro), GLM-5.3 (744B/40B activos MoE, MIT, SWE-Bench Pro 58.4) y gpt-oss:20b (mejor pequeño / 16 GB, ~o3-mini). Algunos modelos recién listados, como mistral-large-4 y beam, son solo en la nube (etiqueta `:cloud`) y no se ejecutan en local. Comandos: ollama run nemotron-3.5-lightning, ollama run nemotron-3.5-super, ollama run laguna-xs-2.1, ollama run kimi-k2.7-code:cloud, ollama run qwen3.8:27b.' },
           ],
         },
@@ -959,13 +959,13 @@ schema: {
           id: 'sources',
           title: 'Fuentes',
           items: [
-            '[Meta AI. (2025). "Llama 4 Model Card." llama.meta.com](https://llama.meta.com/) -- Especificaciones oficiales para Llama 4 Scout (17B activos, 109B total, MoE) y variantes Maverick.',
-            '[DeepSeek AI. (2025). "DeepSeek-R1 Technical Report." arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- Arquitectura chain-of-thought y benchmark MATH (52%) para DeepSeek-R1.',
+            '[Meta. "Llama-4-Scout-17B-16E-Instruct model card." huggingface.co](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct) -- Especificaciones oficiales para Llama 4 Scout (17B activos, 109B total, MoE).',
+            '[DeepSeek AI. (2025). "DeepSeek-R1 Technical Report." arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- Arquitectura chain-of-thought y metodología de benchmarks de DeepSeek-R1.',
             '[Ollama. (2026). "qwen3.8." ollama.com/library/qwen3.8](https://ollama.com/library/qwen3.8) -- 61,7 SWE-bench Pro para el mejor modelo de programación denso.',
-            '[Moonshot AI. (2026). "Kimi K2.6 Model Card." moonshot.ai](https://moonshot.ai/) -- Modelo de programación MoE con licencia Modified MIT (32B activos/1T total), SWE-Bench Pro 58.6.',
-            '[Mistral AI. (2026). "Devstral Small 24B." mistral.ai](https://mistral.ai/) -- Mejor modelo de programación agéntico para ediciones de múltiples archivos y depuración.',
+            '[Moonshot AI. Kimi K2.6 (página de la organización en Hugging Face). huggingface.co/moonshotai](https://huggingface.co/moonshotai) -- Modelo de programación MoE con licencia Modified MIT (32B activos/1T total), SWE-Bench Pro 58.6.',
+            '[Mistral AI. "Introducing: Devstral 2 and Mistral Vibe CLI." mistral.ai](https://mistral.ai/news/devstral-2-vibe-cli/) -- Mejor modelo de programación agéntico para ediciones de múltiples archivos y depuración.',
             '[Ollama. (2026). "Ollama Model Library." ollama.com/library](https://ollama.com/library) -- Biblioteca oficial de modelos con más de 4.500 modelos, recuentos de descargas, tags y opciones de cuantización.',
-            '[Google DeepMind. (2026). "Gemma 4 Technical Report."](https://ai.google.dev/) -- Capacidades de visión + tool calling lanzadas en abril de 2026.',
+            '[Google AI for Developers. "Gemma documentation." ai.google.dev](https://ai.google.dev/gemma/docs) -- Familia Gemma 4; capacidades de visión + tool calling lanzadas en abril de 2026.',
           ],
         },
       },
@@ -976,7 +976,7 @@ schema: {
         'description': '¿Buscas la última versión de Ollama y sus modelos? Consulta v0.40.5, el changelog completo, qué hay de nuevo y qué modelos vale la pena usar para chat, programación y razonamiento.',
         'url': 'https://www.promptquorum.com/es/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-10-17',
+        'dateModified': '2026-10-19',
         'proficiencyLevel': 'Beginner',
         'about': [
           { '@type': 'Thing', 'name': 'Mejores modelos Ollama 2026' },
@@ -1001,13 +1001,13 @@ schema: {
           { '@type': 'ListItem', 'position': 3, 'name': 'gpt-oss:20b', 'url': 'https://ollama.com/library/gpt-oss', 'description': 'Mejor pequeño / 16 GB. 21B total / 3,6B activos MoE. ~nivel o3-mini, razonamiento ajustable. ollama run gpt-oss:20b' },
           { '@type': 'ListItem', 'position': 4, 'name': 'qwen3:30b', 'url': 'https://ollama.com/library/qwen3', 'description': 'Modelo equilibrado todoterreno; qwen3-coder:30b para completado de código. ollama run qwen3:30b' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Laguna XS 2.1', 'url': 'https://ollama.com/library/laguna-xs-2.1', 'description': 'Programación agéntica, largo alcance. 33B/3B activos MoE. SWE-bench Verified 70,9%. Licencia OpenMDW-1.1. ollama run laguna-xs-2.1' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'Mejor razonamiento. 5 GB de RAM. 52% MATH vs 28% Mistral Small. ollama run deepseek-r1:7b' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'Mejor razonamiento. 5 GB de RAM. ollama run deepseek-r1:7b' },
           { '@type': 'ListItem', 'position': 7, 'name': 'gemma4:e4b', 'url': 'https://ollama.com/library/gemma4', 'description': 'Mejor visión/multimodal (E4B+). Tool calling + visión, ~90% más rápido en Apple Silicon (julio de 2026). ~6 GB de RAM. ollama run gemma4:e4b' },
           { '@type': 'ListItem', 'position': 8, 'name': 'Llama 4 Scout', 'url': 'https://ollama.com/library/llama4', 'description': 'Mejor contexto largo (10M tokens) + multimodal grande. MoE 17B activos/109B total. ~55 GB con Q4. ollama run llama4:scout' },
-          { '@type': 'ListItem', 'position': 9, 'name': 'Devstral Small 24B', 'url': 'https://ollama.com/library/devstral-small', 'description': 'Mejor programación agéntica (multiarchivo). Ediciones de múltiples archivos, depuración. 16 GB de RAM. ollama run devstral-small-2' },
-          { '@type': 'ListItem', 'position': 10, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': 'Mejor calidad en el nivel de 16 GB. 14 GB de RAM. 74% HumanEval. Apache 2.0. ollama run mistral-small3.1' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Devstral Small 2 24B', 'url': 'https://ollama.com/library/devstral-small-2', 'description': 'Mejor programación agéntica (multiarchivo). Ediciones de múltiples archivos, depuración. 16 GB de RAM. ollama run devstral-small-2' },
+          { '@type': 'ListItem', 'position': 10, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': 'Buena calidad en el nivel de 16 GB. 14 GB de RAM. Apache 2.0. ollama run mistral-small3.1' },
           { '@type': 'ListItem', 'position': 11, 'name': 'gemma2:2b', 'url': 'https://ollama.com/library/gemma2', 'description': 'El más rápido y ligero. 1,7 GB de RAM. Mejor inferencia en CPU. ollama run gemma2:2b' },
-          { '@type': 'ListItem', 'position': 12, 'name': 'phi4-mini', 'url': 'https://ollama.com/library/phi4-mini', 'description': 'Mejor razonamiento por debajo de 4 GB. 2,5 GB de RAM. 70% HumanEval. ollama run phi4-mini' },
+          { '@type': 'ListItem', 'position': 12, 'name': 'phi4-mini', 'url': 'https://ollama.com/library/phi4-mini', 'description': 'Modelo pequeño orientado al razonamiento. 2,5 GB de RAM. ollama run phi4-mini' },
         ],
       },
       faqSchema: {
@@ -1027,7 +1027,7 @@ schema: {
             'name': 'Usar un modelo general cuando existe un modelo específico para la tarea',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Para tareas de programación, `qwen2.5-coder:7b` obtiene un 72% en HumanEval mientras que el general `qwen2.5:7b` también obtiene un 72% -- pero `qwen2.5-coder` incluye soporte FIM para completado de código. Para razonamiento/matemáticas, `deepseek-r1:7b` obtiene 52% en MATH frente al 28% de `mistral:7b`. Los modelos específicos de tarea existen en la biblioteca de Ollama por una razón.',
+              'text': 'Para tareas de programación, `qwen2.5-coder:7b` está pensado para código e incluye soporte FIM (fill-in-the-middle) para completado de código, algo que el modelo general `qwen2.5:7b` no ofrece. Para razonamiento/matemáticas, `deepseek-r1:7b` es un modelo de razonamiento chain-of-thought específico. Los modelos específicos de tarea existen en la biblioteca de Ollama por una razón.',
             },
           },
           {
@@ -1059,7 +1059,7 @@ schema: {
             'name': '¿Cuál es el mejor modelo de Ollama para programar?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Para programación de frontera y flujos agénticos, Kimi K2.6 y Laguna XS 2.1 son las opciones más capaces de la biblioteca; Kimi K2.7 Code, derivado de K2.6, está directamente enfocado en programación. Si trabajas con 16 GB de RAM, gpt-oss:20b es la mejor opción pequeña, y qwen3:30b ofrece el equilibrio más razonable entre calidad y tamaño. Elige según la RAM disponible antes que por el ranking: un modelo que no cabe en memoria no te sirve por muy bueno que sea.',
+              'text': 'Para programación agéntica, Laguna XS 2.1 y Devstral Small 2 se ejecutan en local, y Qwen3.8-27B es una opción densa para hardware de consumo (61,7 en SWE-bench Pro según Qwen). Kimi K2.6 y Kimi K2.7 Code solo existen como etiquetas en la nube en Ollama. Si trabajas con 16 GB de RAM, gpt-oss:20b es una opción pequeña, y qwen3:30b ofrece un equilibrio razonable entre calidad y tamaño. Elige según la RAM disponible antes que por el ranking: un modelo que no cabe en memoria no te sirve por muy bueno que sea.',
             },
           },
           {
@@ -1067,7 +1067,7 @@ schema: {
             'name': '¿Qué es Laguna XS 2.1 y para qué sirve?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Laguna XS 2.1 es un modelo de Poolside disponible en la biblioteca de Ollama. Usa una arquitectura MoE de 33B parámetros con 3B activos, lo que le permite rendir por encima de su coste de memoria, y está orientado a programación agéntica de largo alcance: tareas en las que el modelo encadena varios pasos sobre un repositorio en lugar de completar una sola función. Es uno de los añadidos más recientes a la biblioteca, junto con Kimi K2.7 Code.',
+              'text': 'Laguna XS 2.1 es un modelo de Poolside disponible en la biblioteca de Ollama. Usa una arquitectura MoE de 33B parámetros con 3B activos, lo que reduce el cómputo por token, y está orientado a programación agéntica de largo alcance: tareas en las que el modelo encadena varios pasos sobre un repositorio en lugar de completar una sola función. Es uno de los añadidos más recientes a la biblioteca, junto con Kimi K2.7 Code.',
             },
           },
           {
@@ -1083,7 +1083,7 @@ schema: {
             'name': '¿Cuál es el nombre oficial de la empresa detrás de Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'La empresa es Ollama Inc., una startup con financiación Serie B con sede en Palo Alto, California, fundada en 2023 por Jeffrey Morgan y Michael Chiang. "Ollama" se refiere tanto a la empresa como a la herramienta CLI/runtime de modelos que publica.',
+              'text': 'La empresa detrás de Ollama es Ollama Inc. "Ollama" se refiere tanto a la empresa como a la herramienta CLI de código abierto y al runtime de modelos que publica; la primera versión pública del proyecto, v0.0.1, apareció en GitHub el 8 de julio de 2023.',
             },
           },
           {
@@ -1107,7 +1107,7 @@ schema: {
             'name': '¿Son todos los modelos de Ollama verdaderamente de código abierto?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No todos. La biblioteca de Ollama incluye modelos con licencias variadas. Llama 3.x/4.x usan la Meta Llama Community Licence (no aprobada por OSI como código abierto -- restringe el uso comercial por encima de 700M de usuarios activos mensuales). Mistral Small, Qwen3, Qwen3.8, Devstral y los modelos Gemma son Apache 2.0 (completamente de código abierto). Kimi K2.6 tiene licencia Modified MIT (compatible con uso comercial con cláusula de atribución). Laguna XS 2.1 usa OpenMDW-1.1 (permisiva, uso comercial permitido, no aprobada por OSI). Siempre verifica la licencia antes del despliegue comercial.',
+              'text': 'No todos. La biblioteca de Ollama incluye modelos con licencias variadas. Llama 3.x/4.x usan la Meta Llama Community Licence (no aprobada por OSI como código abierto -- restringe el uso comercial por encima de 700M de usuarios activos mensuales). Mistral Small 3.1, Qwen3, Qwen3.8, Devstral Small 2 y Gemma 4 son Apache 2.0 (completamente de código abierto); Gemma 2 y Gemma 3 usan los Términos de uso de Gemma de Google, que no están aprobados por la OSI. Kimi K2.6 tiene licencia Modified MIT (compatible con uso comercial con cláusula de atribución). Laguna XS 2.1 usa OpenMDW-1.1 (permisiva, uso comercial permitido, no aprobada por OSI). Siempre verifica la licencia antes del despliegue comercial.',
             },
           },
           {
@@ -1115,7 +1115,7 @@ schema: {
             'name': '¿Qué modelo Dolphin debería usar con Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Usa Dolphin 3.0 (`ollama pull dolphin3`), no el más antiguo `dolphin-mistral` (última actualización en 2024, basado en Mistral 0.2). Dolphin 3.0, mantenido por Cognitive Computations (Eric Hartford), está basado en Llama 3.1, no tiene filtrado de contenido integrado y está diseñado como modelo local de propósito general para programación, matemáticas, tareas agénticas y chat sin restricciones.',
+              'text': 'Usa Dolphin 3.0 (`ollama pull dolphin3`), no el más antiguo `dolphin-mistral` (última actualización en 2024, basado en Mistral 0.2). Dolphin 3.0, mantenido por Cognitive Computations (Eric Hartford), está basado en Llama 3.1, no tiene filtrado de contenido integrado y está diseñado como modelo local de propósito general para programación, matemáticas, tareas agénticas y chat sin restricciones de contenido integradas. Al no incluir filtrado de seguridad propio, tú eres responsable del uso de sus resultados, y se aplican los términos de la licencia de Llama 3.1.',
             },
           },
           {
@@ -1195,7 +1195,7 @@ schema: {
             'name': '¿Los modelos de código abierto en Ollama son realmente gratuitos para uso comercial?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'La mayoría sí, pero no todos. Llama 3.x (Meta Llama Community Licence) restringe el uso comercial por encima de 700M de usuarios activos mensuales. Mistral Small, Qwen3 y Gemma 3 usan Apache 2.0 (completamente compatible con uso comercial). Verifica siempre la licencia antes del despliegue empresarial -- consulta la página de Hugging Face del modelo o la entrada de la biblioteca de Ollama.',
+              'text': 'La mayoría sí, pero no todos. Llama 3.x (Meta Llama Community Licence) restringe el uso comercial por encima de 700M de usuarios activos mensuales. Mistral Small 3.1, Qwen3 y Gemma 4 usan Apache 2.0 (completamente compatible con uso comercial); Gemma 2 y Gemma 3 usan los Términos de uso de Gemma de Google, que permiten el uso comercial bajo ciertas condiciones. Verifica siempre la licencia antes del despliegue empresarial -- consulta la página de Hugging Face del modelo o la entrada de la biblioteca de Ollama.',
             },
           },
           {
@@ -1203,7 +1203,7 @@ schema: {
             'name': '¿Qué modelos de Ollama funcionan mejor para tareas en ruso?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 / Qwen3.8 (`ollama run qwen3:8b` o `ollama run qwen3.8:27b`) y Mistral Small 3.1 (`ollama run mistral-small3.1`) incluyen ambos el ruso en su entrenamiento multilingüe nativo. Qwen3 obtiene mejores resultados en tareas de benchmark no inglesas; Mistral Small 3.1 tiene una fluidez conversacional en ruso más sólida en pruebas informales. Ninguno es de origen ruso.',
+              'text': 'Qwen3 / Qwen3.8 (`ollama run qwen3:8b` o `ollama run qwen3.8:27b`) y Mistral Small 3.1 (`ollama run mistral-small3.1`) incluyen ambos el ruso en su entrenamiento multilingüe nativo. Esta página no los clasifica para ruso; prueba ambos con tus propios prompts. Ninguno es de origen ruso.',
             },
           },
           {
@@ -1217,7 +1217,7 @@ schema: {
         ]
       },
       gammaEmbedUrl: '/presentations/top-open-source-models-ollama-static.html',
-      gammaDescription: 'La presentación a continuación cubre: top 10 modelos Ollama por número de descargas, comparación de rendimiento (60-74% HumanEval), mejores modelos por caso de uso (chat, programación, razonamiento, visión), razonamiento chain-of-thought de DeepSeek-R1 y comandos exactos de descarga. Descarga el PDF como tu tarjeta de referencia para selección de modelos Ollama.',
+      gammaDescription: 'La presentación a continuación cubre: top 10 modelos Ollama por número de descargas, comparación de rendimiento, mejores modelos por caso de uso (chat, programación, razonamiento, visión), razonamiento chain-of-thought de DeepSeek-R1 y comandos exactos de descarga. Descarga el PDF como tu tarjeta de referencia para selección de modelos Ollama.',
     },
     pt: {
       freshness_tier: 'monthly',
@@ -1244,7 +1244,7 @@ schema: {
             '→Llama 4 Scout — contexto longo (10M tokens) + multimodal, ~55 GB com Q4',
             '→DeepSeek-R1 — melhor raciocínio/matemática; gpt-oss:20b para raciocínio ajustável (a DeepSeek lançou depois o DeepSeek-V4 — Flash/Pro — como geração aberta mais nova; R1/V3 continuam válidos para rodar localmente.)',
           ],
-          updatedDate: '2026-10-17',
+          updatedDate: '2026-10-19',
         },
       },
       readTime: '14 min de leitura',
@@ -1314,6 +1314,7 @@ schema: {
             'Os destaques do Scout são a janela de contexto de 10M tokens e a entrada multimodal, não a adequação ao hardware de consumo. Para configurações leves (8 GB de RAM), o Llama 3.2 3B continua sendo o primeiro modelo mais fácil.',
             'O Kimi K2.6 (Moonshot AI, licença MIT modificada, MoE de 32B ativos / 1T no total) obteve 58,6 no SWE-Bench Pro, segundo a Moonshot, mas no Ollama só existe como tag na nuvem. O Laguna XS 2.1 (Poolside) é o desafiante agêntico mais novo, feito para sessões longas de programação local. O Qwen3.8-27B atingiu 61,7 no SWE-bench Pro (segundo a Qwen) como melhor modelo geral em hardware de consumo (download de 18 GB). O gpt-oss:20b da OpenAI (MoE de 21B no total / 3,6B ativos) roda em 16 GB em nível ~o3-mini com raciocínio ajustável.',
             'A biblioteca do Ollama tem centenas de modelos selecionados, com a família NVIDIA Nemotron 3.5, o Granite 4.2 e o GLM-5.3 entre as adições mais recentes desde a atualização anterior.',
+            'Nota de versão: Qwen3.6 e Qwen3.8 são gerações de Qwen mais novas no Ollama (qwen3.6:35b, ~24 GB; qwen3.8:27b, 18 GB); qwen3:30b e qwen3-coder:30b (19 GB cada) são opções da geração anterior que continuam funcionando. O modelo Small atual da Mistral é o Mistral Small 4, mas a biblioteca do Ollama não o listava na verificação; mistral-small3.1 e mistral-small:24b (Mistral Small 3) continuam sendo os modelos Small que você pode baixar.',
           ],
         },
         byCategory: {
@@ -1343,7 +1344,7 @@ schema: {
             '**Compreensão de imagens**: `ollama run gemma4:e4b` -- visão + chamada de ferramentas. Ou `ollama run llama3.2-vision:11b` para visão dedicada.',
             '**Modelos empresariais pequenos**: `ollama run granite4.2:8b` -- IBM, Apache 2.0, 5,3 GB, contexto de 128K, multilíngue, código, RAG e ferramentas.',
             '**Rápido e leve**: `ollama run gemma2:2b` -- inferência em CPU mais rápida, 1,7 GB de RAM.',
-            '**Alta qualidade (16 GB de RAM)**: `ollama run mistral-small3.1` -- qualidade próxima a 70B com 14 GB de RAM.',
+            '**Alta qualidade (16 GB de RAM)**: `ollama run mistral-small3.1` -- boa qualidade com 14 GB de RAM.',
             '**Embeddings**: `ollama run nomic-embed-text` -- modelo de embedding de 137M de parâmetros para pipelines de RAG.',
             '**Perguntas e respostas sobre documentos (RAG)**: `ollama run llama3.2` com o recurso de RAG do Open WebUI -- combinação mais bem suportada.',
             '**Automação residencial**: `ollama run phi4-mini` — o Phi-4 Mini (3,8B, ~3 GB de VRAM) atende consultas de voz do Home Assistant em um mini PC sem GPU dedicada. Veja o [guia de integração Home Assistant + Ollama →](/pt/smart-home/home-assistant-ollama-integration).',
@@ -1376,12 +1377,11 @@ schema: {
           title: 'O que é o DeepSeek-R1 e por que ele é diferente?',
           content: [
             '**O DeepSeek-R1 é um modelo de raciocínio -- ao contrário dos modelos de chat comuns, que geram a resposta diretamente, ele gera uma cadeia de pensamento explícita antes da resposta final.** Isso melhora bastante o desempenho em matemática, quebra-cabeças lógicos e resolução passo a passo.',
-            'O DeepSeek-R1 7B marca 52% no MATH (matemática de competição) contra 28% do Mistral Small no mesmo tamanho. É mais lento que os modelos comuns (mais tokens por resposta), mas bem mais preciso quando o raciocínio importa.',
+            'O DeepSeek-R1 7B é um modelo de raciocínio em cadeia de pensamento. É mais lento que os modelos comuns (mais tokens por resposta), mas bem mais preciso quando o raciocínio importa.',
+            'Nota de versão: o DeepSeek-R1 é um modelo da geração anterior. A família de pesos abertos atual da DeepSeek é o DeepSeek-V4, que a biblioteca do Ollama não listava na verificação; as versões destiladas deepseek-r1 (1,5B a 70B) continuam sendo a opção de raciocínio que você pode baixar. A DeepSeek substituiu o modelo R1 hospedado na API pelo DeepSeek-V4.',
           ],
           codeBlock: '# Baixar e rodar o DeepSeek-R1\nollama run deepseek-r1:7b\n\n# Variantes maiores para mais qualidade\nollama run deepseek-r1:14b   # 10 GB de RAM\nollama run deepseek-r1:32b   # 20 GB de RAM',
           codeLanguage: 'bash',
-          image: '/images/ollama-deepseek-r1-reasoning-comparison-en.svg',
-          imageCaption: 'DeepSeek-R1 7B vs Mistral Small: 52% vs 28% no MATH. Modelo de raciocínio em cadeia de pensamento -- mais lento, bem mais preciso.',
         },
         visionModels: {
           id: 'vision-models',
@@ -1404,11 +1404,11 @@ schema: {
           content: 'As contagens de download ainda favorecem o Llama 3.x pela prevalência em tutoriais. Em projetos novos de 2026, prefira Qwen3.8-27B (melhor geral em hardware de consumo), Laguna XS 2.1 ou Devstral Small 2 (programação), gpt-oss:20b e qwen3:30b.',
           rows: [
             { '#': '1', 'Modelo': '[Qwen3.8-27B](https://ollama.com/library/qwen3.8)', 'Ideal para': 'Melhor geral em hardware de consumo', 'RAM': '18 GB (Q4)', 'Benchmark': '61,7 SWE-bench Pro' },
-            { '#': '2', 'Modelo': '[Devstral Small 2](https://ollama.com/library/devstral-small-2)', 'Ideal para': 'Programação agêntica (vários arquivos)', 'RAM': '15 GB', 'Benchmark': '65,8% SWE-bench Verified' },
+            { '#': '2', 'Modelo': '[Devstral Small 2](https://ollama.com/library/devstral-small-2)', 'Ideal para': 'Programação agêntica (vários arquivos)', 'RAM': '15 GB', 'Benchmark': '68,0% SWE-bench Verified (segundo a Mistral)' },
             { '#': '3', 'Modelo': '[gpt-oss:20b](https://ollama.com/library/gpt-oss)', 'Ideal para': 'Melhor pequeno / 16 GB, raciocínio ajustável', 'RAM': '14 GB', 'Benchmark': '~o3-mini' },
             { '#': '4', 'Modelo': '[qwen3:30b](https://ollama.com/library/qwen3)', 'Ideal para': 'Equilibrado; qwen3-coder:30b para código', 'RAM': '~18 GB', 'Benchmark': 'forte' },
             { '#': '5', 'Modelo': '[Laguna XS 2.1](https://ollama.com/library/laguna-xs-2.1)', 'Ideal para': 'Código agêntico de longa duração', 'RAM': '20 GB', 'Benchmark': '70,9% SWE-bench Verified' },
-            { '#': '6', 'Modelo': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', 'Ideal para': 'Raciocínio, matemática', 'RAM': '5 GB', 'Benchmark': '52% MATH' },
+            { '#': '6', 'Modelo': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', 'Ideal para': 'Raciocínio, matemática', 'RAM': '5 GB', 'Benchmark': '—' },
             { '#': '7', 'Modelo': '[gemma4:e4b](https://ollama.com/library/gemma4)', 'Ideal para': 'Visão + chamada de ferramentas (multimodal)', 'RAM': '~6 GB', 'Benchmark': 'Pronto para agentes' },
             { '#': '8', 'Modelo': '[Llama 4 Scout](https://ollama.com/library/llama4)', 'Ideal para': 'Contexto longo de 10M + multimodal, MoE', 'RAM': '~55 GB (Q4)', 'Benchmark': 'contexto de 10M' },
             { '#': '9', 'Modelo': '[Granite 4.2](https://ollama.com/library/granite4.2)', 'Ideal para': 'Modelos empresariais pequenos, Apache 2.0', 'RAM': '2,2–18 GB', 'Benchmark': 'contexto de 128K' },
@@ -1429,9 +1429,9 @@ schema: {
           id: 'regional-context',
           title: 'Como as regras regionais de privacidade afetam a escolha do seu modelo Ollama?',
           content: [
-            '**UE / RGPD + conformidade de licenças.** Para organizações da UE que implantam modelos Ollama em produção, a licença importa tanto quanto o desempenho. Apache 2.0 (totalmente aberta, uso comercial permitido): Mistral Small, Mistral Small 3.1, Qwen3 8B, Qwen3.8-27B, Devstral Small 2, Granite 4.2. Licença Comunitária Meta Llama (uso comercial restrito acima de 700 milhões de usuários ativos mensais): Llama 3.1 8B, Llama 3.2 3B, Llama 3.2 Vision 11B. MIT (uso comercial permitido): DeepSeek-R1 7B e 14B. MIT modificada (uso comercial permitido com cláusula de atribuição): Kimi K2.6. OpenMDW-1.1 (permissiva, uso comercial permitido): Laguna XS 2.1. Sempre confira os termos de licença antes da implantação comercial. Para empresas da UE em setores regulados, modelos da Mistral (França, Apache 2.0) como o Devstral Small 2 são um padrão sensato: origem europeia e licença permissiva. Rodar os modelos totalmente local com o Ollama significa que os prompts não são enviados a servidores externos; isso apoia, mas por si só não cumpre, as obrigações do RGPD (uma tag `:cloud` envia dados ao serviço hospedado do Ollama).',
-            '**Japão (METI).** Para implantações corporativas japonesas com o Ollama, Qwen3 / Qwen3.8 é uma família recomendada: processa texto japonês nativamente, o que ajuda no tempo de inferência e no cache KV. Para fluxos de programação em japonês: o Qwen3.8-27B (61,7 no SWE-bench Pro segundo a Qwen) trata comentários de código em japonês de forma nativa. A documentação de governança de IA do METI costuma pedir a versão exata do modelo. Use `ollama show <modelo>` para obter a especificação completa (parâmetros, quantização e tamanho de contexto) para registros de conformidade.',
-            '**China.** Pelas Medidas da CAC para IA generativa (2023), organizações que oferecem serviços de IA a usuários finais devem registrar os modelos usados. Qwen3 / Qwen3.8 (Alibaba, Apache 2.0) é uma escolha natural para implantações corporativas chinesas com o Ollama: origem chinesa, licença Apache 2.0 e bom desempenho em chinês. O Kimi K2.6 (Moonshot AI, MIT modificada) também é de origem chinesa, mas o Ollama o lista apenas como tag na nuvem e a execução local exige hardware de servidor. Comandos: `ollama run qwen3.8:27b` para a melhor qualidade, `ollama run qwen3:8b` para velocidade. O DeepSeek-R1 (licença MIT) é adequado para raciocínio. Para dados processados localmente com o Ollama, a inferência em si não aciona os requisitos de transferência internacional da PIPL; confira suas próprias obrigações de conformidade.',
+            '**UE / RGPD + conformidade de licenças.** Para organizações da UE que implantam modelos Ollama em produção, a licença importa tanto quanto o desempenho. Apache 2.0 (totalmente aberta, uso comercial permitido): Mistral Small 3, Mistral Small 3.1, Qwen3 8B, Qwen3.8-27B, Devstral Small 2, Granite 4.2. Licença Comunitária Meta Llama (uso comercial restrito acima de 700 milhões de usuários ativos mensais): Llama 3.1 8B, Llama 3.2 3B, Llama 3.2 Vision 11B. O Llama 3.2 Vision é uma exceção: sua Política de Uso Aceitável não concede os direitos da licença a pessoas ou empresas domiciliadas na UE (usuários finais de produtos construídos sobre ele não são afetados); confira antes de usá-lo na UE. MIT (uso comercial permitido): DeepSeek-R1 7B e 14B. MIT modificada (uso comercial permitido com cláusula de atribuição): Kimi K2.6. OpenMDW-1.1 (permissiva, uso comercial permitido): Laguna XS 2.1. Sempre confira os termos de licença antes da implantação comercial. Para empresas da UE em setores regulados, modelos da Mistral (França, Apache 2.0) como o Devstral Small 2 são um padrão sensato: origem europeia e licença permissiva. Rodar os modelos totalmente local com o Ollama significa que os prompts não são enviados a servidores externos; isso apoia, mas por si só não cumpre, as obrigações do RGPD (uma tag `:cloud` envia dados ao serviço hospedado do Ollama).',
+            '**Japão (METI).** Para implantações corporativas japonesas com o Ollama, Qwen3 / Qwen3.8 é uma família recomendada: processa texto japonês nativamente, o que ajuda no tempo de inferência e no cache KV. Para fluxos de programação em japonês: o Qwen3.8-27B (61,7 no SWE-bench Pro segundo a Qwen) trata comentários de código em japonês de forma nativa. Registrar a versão exata do modelo é uma boa prática para a documentação de conformidade. Use `ollama show <modelo>` para obter a especificação completa (parâmetros, quantização e tamanho de contexto) para registros de conformidade.',
+            '**China.** As Medidas da CAC da China para IA generativa (2023) podem impor obrigações de registro ou de avaliação de segurança a provedores de serviços de IA generativa ao público na China; se elas se aplicam ao seu caso é uma questão para o seu assessor jurídico. Qwen3 / Qwen3.8 (Alibaba, Apache 2.0) é uma escolha natural para implantações corporativas chinesas com o Ollama: origem chinesa, licença Apache 2.0 e bom desempenho em chinês. O Kimi K2.6 (Moonshot AI, MIT modificada) também é de origem chinesa, mas o Ollama o lista apenas como tag na nuvem e a execução local exige hardware de servidor. Comandos: `ollama run qwen3.8:27b` para a melhor qualidade, `ollama run qwen3:8b` para velocidade. O DeepSeek-R1 (licença MIT) é adequado para raciocínio. A inferência executada localmente com o Ollama não envia dados ao exterior por si só, o que elimina a questão da transferência internacional nessa etapa; se a PIPL ou outras obrigações se aplicam ao seu tratamento de dados é algo a decidir com o seu assessor jurídico. Esta seção é informação geral, não aconselhamento jurídico.',
           ],
         },
         commonMistakes: {
@@ -1439,7 +1439,7 @@ schema: {
           title: 'Quais são os erros comuns ao escolher modelos do Ollama?',
           faqs: [
             { q: 'Baixar a maior tag do modelo por padrão sem checar a RAM', a: 'Rodar `ollama pull llama3.3` sem especificar a tag baixa a variante padrão, normalmente a maior quantização-padrão. Em uma máquina de 8 GB de RAM, baixar o llama3.3 (70B, ~40 GB) falha ou causa uso intenso de swap. Sempre especifique a variante: `ollama pull llama3.2:3b` para máquinas de 8 GB.' },
-            { q: 'Usar um modelo geral quando existe um específico para a tarefa', a: 'Para programação, modelos de código incluem suporte a FIM para completar código, o que modelos gerais não têm. Para raciocínio/matemática, `deepseek-r1:7b` marca 52% no MATH contra 28% do `mistral:7b`. Modelos específicos existem na biblioteca por um motivo.' },
+            { q: 'Usar um modelo geral quando existe um específico para a tarefa', a: 'Para programação, modelos de código incluem suporte a FIM para completar código, o que modelos gerais não têm. Para raciocínio/matemática, `deepseek-r1:7b` é um modelo dedicado de raciocínio em cadeia de pensamento. Modelos específicos existem na biblioteca por um motivo.' },
             { q: 'Não verificar se um modelo está disponível antes de montar um fluxo', a: 'A biblioteca do Ollama muda com o tempo -- modelos são adicionados e, ocasionalmente, removidos. Antes de montar um pipeline de produção em torno de um modelo, confirme que ele está na biblioteca (`ollama list` localmente ou ollama.com/library). Fixe versões específicas em produção: `ollama pull llama3.1:8b-instruct-q4_K_M`.' },
             { q: 'Não especificar a quantização em modelos grandes', a: 'Rodar `ollama pull` sem sufixo de quantização baixa a variante padrão -- que pode ser maior do que sua VRAM comporta. Para 16 GB de VRAM, baixe a variante Q4_K_M explícita e rode `ollama show <modelo>` depois para confirmar que os requisitos batem com o seu hardware.' },
             { q: 'Esperar que o DeepSeek-R1 seja tão rápido quanto os modelos de chat comuns', a: 'O DeepSeek-R1 gera tokens de raciocínio em cadeia de pensamento antes da resposta final -- por isso supera os modelos comuns em matemática e lógica, mas produz 3-5x mais tokens por resposta. Para chat rápido ou respostas de uma linha, use `llama3.1:8b`. Reserve o DeepSeek-R1 para tarefas em que a precisão importa mais que a velocidade.' },
@@ -1479,22 +1479,23 @@ schema: {
             { q: 'Quando o Ollama foi lançado pela primeira vez?', a: 'A primeira versão do Ollama, v0.0.1, foi publicada no GitHub em 8 de julho de 2023, pouco depois da criação do repositório em 26 de junho de 2023. Em outubro de 2026 o projeto havia chegado à v0.40.5. A lista completa está em github.com/ollama/ollama/releases.' },
             { q: 'Qual é o melhor modelo Ollama em 2026?', a: 'Qwen3.8-27B é o melhor em geral em hardware de consumo (61,7 SWE-bench Pro, cabe em 24 GB com Q4). Para programação frontier: Kimi K2.6. Para modelo pequeno/16 GB: gpt-oss:20b. Para contexto longo: Llama 4 Scout.' },
             { q: 'Qual modelo Ollama é melhor para programação?', a: 'Qwen3.8-27B para o melhor desempenho denso (61,7 SWE-bench Pro). Kimi K2.6 para programação frontier (SWE-Bench Pro 58,6%). Devstral Small 24B para fluxos de trabalho agentivos em múltiplos arquivos. Codestral 22B para autocompletar em IDE (FIM).' },
-            { q: 'Os modelos de código aberto no Ollama são realmente gratuitos para uso comercial?', a: 'A maioria sim, mas não todos. Llama 3.x (Meta Llama Community Licence) restringe o uso comercial acima de 700M de usuários ativos mensais. Mistral Small, Qwen3 e Gemma 3 usam Apache 2.0 (totalmente compatível com uso comercial). Verifique sempre a licença antes da implantação empresarial.' },
+            { q: 'Os modelos de código aberto no Ollama são realmente gratuitos para uso comercial?', a: 'A maioria sim, mas não todos. Llama 3.x (Meta Llama Community Licence) restringe o uso comercial acima de 700M de usuários ativos mensais. Mistral Small 3.1, Qwen3 e Gemma 4 usam Apache 2.0 (totalmente compatível com uso comercial); Gemma 2 e Gemma 3 usam os Termos de Uso do Gemma, do Google, que permitem uso comercial sob certas condições. Verifique sempre a licença antes da implantação empresarial.' },
             { q: 'Quais são os melhores novos modelos do Ollama em 2026?', a: 'Lançamentos principais em 2026: Qwen3.8-27B (melhor geral em 24 GB, 61,7 SWE-bench Pro), Kimi K2.6 (programação frontier, MoE), gpt-oss:20b (melhor pequeno/16 GB), Gemma 4 E4B (visão + tool calling) e Llama 4 Scout (contexto 10M, multimodal). Comandos: ollama run qwen3.8:27b, ollama run gpt-oss:20b, ollama run gemma4:e4b, ollama run llama4:scout.' },
-            { q: 'Qual modelo Dolphin devo usar com o Ollama?', a: 'Use Dolphin 3.0 (`ollama pull dolphin3`), não o `dolphin-mistral` desatualizado de 2024. Dolphin 3.0 é mantido pela Cognitive Computations, construído sobre a base Llama 3.1, e não aplica filtragem de conteúdo — é o melhor modelo sem censura / uso geral disponível no Ollama.' },
-            { q: 'Qual é o nome oficial da empresa por trás do Ollama?', a: 'A empresa é a Ollama Inc., uma startup com financiamento Series B sediada em Palo Alto, Califórnia, fundada em 2023 por Jeffrey Morgan e Michael Chiang.' },
-            { q: 'Quais modelos do Ollama funcionam melhor para tarefas em russo?', a: 'Qwen3/Qwen3.8 e Mistral Small 3.1 incluem russo em seu treinamento multilíngue nativo. Qwen3 pontua mais alto em benchmarks não ingleses; Mistral Small 3.1 tem fluência conversacional em russo informalmente mais forte. Nenhum dos dois é de origem russa.' },
+            { q: 'Qual modelo Dolphin devo usar com o Ollama?', a: 'Use Dolphin 3.0 (`ollama pull dolphin3`), não o `dolphin-mistral` desatualizado de 2024. Dolphin 3.0 é mantido pela Cognitive Computations, construído sobre a base Llama 3.1, e não aplica filtragem de conteúdo — é um modelo de uso geral sem filtragem de conteúdo embutida; você é responsável pelo uso das saídas, e os termos da licença do Llama 3.1 se aplicam.' },
+            { q: 'Qual é o nome oficial da empresa por trás do Ollama?', a: 'A empresa por trás do Ollama é a Ollama Inc. "Ollama" refere-se tanto à empresa quanto à ferramenta de linha de comando de código aberto e ao runtime de modelos que ela publica; a primeira versão pública do projeto, a v0.0.1, apareceu no GitHub em 8 de julho de 2023.' },
+            { q: 'Quais modelos do Ollama funcionam melhor para tarefas em russo?', a: 'Qwen3/Qwen3.8 e Mistral Small 3.1 incluem russo em seu treinamento multilíngue nativo. Esta página não os classifica para russo; teste ambos com seus próprios prompts. Nenhum dos dois é de origem russa.' },
           ],
         },
         sources: {
           id: 'sources',
           title: 'Fontes',
           items: [
-            '[Meta AI. (2025). "Llama 4 Model Card." llama.meta.com](https://llama.meta.com/) -- Especificações oficiais do Llama 4 Scout (17B ativos, 109B no total, MoE) e Maverick.',
-            '[DeepSeek AI. (2025). "DeepSeek-R1 Technical Report." arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- Arquitetura de cadeia de pensamento e benchmark MATH (52%) do DeepSeek-R1.',
+            '[Meta. "Llama-4-Scout-17B-16E-Instruct model card." huggingface.co](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct) -- Especificações oficiais do Llama 4 Scout (17B ativos, 109B no total, MoE).',
+            '[DeepSeek AI. (2025). "DeepSeek-R1 Technical Report." arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- Arquitetura de cadeia de pensamento e metodologia de benchmarks do DeepSeek-R1.',
             '[Equipe Qwen. (2026). Ficha do modelo "Qwen3.8-27B". huggingface.co](https://huggingface.co/Qwen/Qwen3.8-27B) -- 61,7 no SWE-bench Pro segundo a Qwen, Apache 2.0, contexto de 256K.',
             '[Ollama. (2026). "kimi-k2.6" na biblioteca do Ollama. ollama.com](https://ollama.com/library/kimi-k2.6) -- apenas uma tag `:cloud` listada.',
-            '[Ollama. (2026). "devstral-small-2" na biblioteca do Ollama. ollama.com](https://ollama.com/library/devstral-small-2) -- 15 GB, SWE-bench Verified 65,8%, requer Ollama 0.13.3 ou superior.',
+            '[Ollama. (2026). "devstral-small-2" na biblioteca do Ollama. ollama.com](https://ollama.com/library/devstral-small-2) -- 15 GB, requer Ollama 0.13.3 ou superior.',
+            '[Mistral AI. "Introducing: Devstral 2 and Mistral Vibe CLI." mistral.ai](https://mistral.ai/news/devstral-2-vibe-cli/) -- SWE-bench Verified 68,0% para o Devstral Small 2, segundo a Mistral.',
             '[Ollama. (2026). "Ollama Model Library." ollama.com/library](https://ollama.com/library) -- Biblioteca oficial de modelos, contagem de downloads, tags e opções de quantização.',
             '[Poolside. (2026). "Introducing Laguna XS 2.1." poolside.ai](https://poolside.ai/blog/introducing-laguna-xs-2-1) -- Modelo MoE agêntico de 33B/3B ativos, SWE-bench Verified 70,9%, licença OpenMDW-1.1.',
             '[Ollama. (2026). "Ollama Releases." github.com/ollama/ollama/releases](https://github.com/ollama/ollama/releases) -- Notas de versão oficiais, v0.40.5 (14 de outubro de 2026).',
@@ -1520,22 +1521,22 @@ schema: {
         'description': 'Os modelos de código aberto mais baixados e com melhor desempenho disponíveis via Ollama',
         'numberOfItems': 12,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Qwen3.8-27B', 'url': 'https://ollama.com/library/qwen3.8', 'description': 'Melhor opção geral em hardware de consumo. 61,7% no SWE-bench. Cabe em 24 GB com Q4. Apache 2.0. ollama run qwen3.8:27b' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Qwen3.8-27B', 'url': 'https://ollama.com/library/qwen3.8', 'description': 'Melhor opção geral em hardware de consumo. 61,7 no SWE-bench Pro (segundo a Qwen). Cabe em 24 GB com Q4. Apache 2.0. ollama run qwen3.8:27b' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Kimi K2.6', 'url': 'https://ollama.com/library/kimi-k2.6', 'description': 'Modelo de programação MoE de ponta. SWE-Bench Pro 58,6 (empata com GPT-5.5). 32B ativos/1T total. Licença MIT modificada. ollama run kimi-k2.6:cloud' },
           { '@type': 'ListItem', 'position': 3, 'name': 'gpt-oss:20b', 'url': 'https://ollama.com/library/gpt-oss', 'description': 'Melhor modelo pequeno / 16 GB. 21B total / 3,6B ativos MoE. Nível ~o3-mini, raciocínio ajustável. ollama run gpt-oss:20b' },
           { '@type': 'ListItem', 'position': 4, 'name': 'qwen3:30b', 'url': 'https://ollama.com/library/qwen3', 'description': 'Modelo equilibrado para uso geral; qwen3-coder:30b para completar código. ollama run qwen3:30b' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Laguna XS 2.1', 'url': 'https://ollama.com/library/laguna-xs-2.1', 'description': 'Programação agentiva de longo horizonte. 33B/3B ativos MoE. SWE-bench Verified 70,9%. Licença OpenMDW-1.1. ollama run laguna-xs-2.1' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'Melhor raciocínio. 5 GB de RAM. 52% no MATH vs 28% do Mistral Small. ollama run deepseek-r1:7b' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'Melhor raciocínio. 5 GB de RAM. ollama run deepseek-r1:7b' },
           { '@type': 'ListItem', 'position': 7, 'name': 'gemma4:e4b', 'url': 'https://ollama.com/library/gemma4', 'description': 'Melhor visão/multimodal (E4B+). Tool calling + visão, ~90% mais rápido em Apple Silicon (julho de 2026). ~6 GB de RAM. ollama run gemma4:e4b' },
           { '@type': 'ListItem', 'position': 8, 'name': 'Llama 4 Scout', 'url': 'https://ollama.com/library/llama4', 'description': 'Melhor contexto longo (10M de tokens) + multimodal grande. MoE 17B ativos/109B total. ~55 GB com Q4. ollama run llama4:scout' },
-          { '@type': 'ListItem', 'position': 9, 'name': 'Devstral Small 24B', 'url': 'https://ollama.com/library/devstral-small', 'description': 'Melhor programação agentiva (múltiplos arquivos). Edições em múltiplos arquivos, depuração. 16 GB de RAM. ollama run devstral-small-2' },
-          { '@type': 'ListItem', 'position': 10, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': 'Melhor qualidade na faixa de 16 GB. 14 GB de RAM. 74% no HumanEval. Apache 2.0. ollama run mistral-small3.1' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Devstral Small 2 24B', 'url': 'https://ollama.com/library/devstral-small-2', 'description': 'Melhor programação agentiva (múltiplos arquivos). Edições em múltiplos arquivos, depuração. 16 GB de RAM. ollama run devstral-small-2' },
+          { '@type': 'ListItem', 'position': 10, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': 'Boa qualidade na faixa de 16 GB. 14 GB de RAM. Apache 2.0. ollama run mistral-small3.1' },
           { '@type': 'ListItem', 'position': 11, 'name': 'gemma2:2b', 'url': 'https://ollama.com/library/gemma2', 'description': 'Mais rápido e leve. 1,7 GB de RAM. Melhor inferência em CPU. ollama run gemma2:2b' },
-          { '@type': 'ListItem', 'position': 12, 'name': 'phi4-mini', 'url': 'https://ollama.com/library/phi4-mini', 'description': 'Melhor raciocínio abaixo de 4 GB. 2,5 GB de RAM. 70% no HumanEval. ollama run phi4-mini' },
+          { '@type': 'ListItem', 'position': 12, 'name': 'phi4-mini', 'url': 'https://ollama.com/library/phi4-mini', 'description': 'Modelo pequeno voltado ao raciocínio. 2,5 GB de RAM. ollama run phi4-mini' },
         ],
       },
       gammaEmbedUrl: '/presentations/top-open-source-models-ollama-static.html',
-      gammaDescription: 'A apresentação abaixo cobre: top 10 modelos Ollama por número de downloads, comparação de desempenho (60-74% HumanEval), melhores modelos por caso de uso (chat, programação, raciocínio, visão), raciocínio chain-of-thought do DeepSeek-R1 e comandos exatos de download. Baixe o PDF como seu cartão de referência para seleção de modelos Ollama.',
+      gammaDescription: 'A apresentação abaixo cobre: top 10 modelos Ollama por número de downloads, comparação de desempenho, melhores modelos por caso de uso (chat, programação, raciocínio, visão), raciocínio chain-of-thought do DeepSeek-R1 e comandos exatos de download. Baixe o PDF como seu cartão de referência para seleção de modelos Ollama.',
     },
     de: {
       theme: 'Best Models',
@@ -1620,6 +1621,7 @@ schema: {
             '**Llama 3.2 3B** ist immer noch das am häufigsten heruntergeladene Modell insgesamt, großteils aufgrund seiner Verwendung als Standard-Testmodell beim ersten Install. Llama 4 Scout ist jedoch seit März 2026 schnell in den Rankings aufgestiegen und ist jetzt die bevorzugte Wahl für Qualität.',
             '**Qwen3 und Qwen3.8** sind die am schnellsten wachsende Modellfamilie in der Ollama-Bibliothek, mit Qwen3 und dem neuen Qwen3.8 dicht Variante schnell Qwen3 verdrängt. DeepSeek-R1 sah große Spitzen nach der Veröffentlichung und bleibt für Reasoning-Aufgaben stark heruntergeladen. Dolphin 3.0 (Cognitive Computations, aufbauend auf Llama 3.1) bleibt das meistgepullte unzensierte Allzweck-Modell für Nutzer, die einen ungefilterten lokalen Assistenten wollen.',
             '**Llama 4 Scout** wurde von Meta im April 2026 mit Scout (17B aktiv, 109B gesamt, MoE) und Maverick (17B aktiv, 400B gesamt) Varianten veröffentlicht. Llama 4 Scout ist jetzt stabil in der Ollama-Bibliothek (`ollama pull llama4:scout`). Die Llama 4 Familie nutzt Mixture-of-Experts (MoE) Architektur – nur 17B Parameter sind pro Token aktiv, aber mit 109B Gesamtparametern benötigt Scout ~55 GB VRAM bei Q4 (passt in 24 GB nur bei 1,78-Bit, ~20 tok/s). Scouts Stärken sind das 10M-Token-Kontextfenster und multimodale Eingabe, nicht die Consumer-Hardware-Tauglichkeit. Für leichte Setups (8 GB RAM) bleibt Llama 3.2 3B das einfachste Einstiegsmodell. Kimi K2.6 (Moonshot AI, Modified MIT-Lizenz, 32B aktiv / 1T gesamt MoE) erreichte SWE-Bench Pro 58.6 und liegt damit gleichauf mit GPT-5.5. Laguna XS 2.1 (Poolside) ist der neueste Herausforderer im agentischen Coding, speziell für langfristige lokale Coding-Sitzungen gebaut. Qwen3.8-27B erzielte 61,7 SWE-bench Pro als das beste Modell fuer Consumer-Hardware (passt in 24 GB bei Q4). OpenAIs Open-Weight gpt-oss:20b (21B gesamt / 3,6B aktiv MoE) läuft in 16 GB auf ~o3-mini-Niveau mit einstellbarem Reasoning. Die aktuelle Ollama-Version v0.40.5 (14. Oktober 2026) ergänzt Unterstützung für NVIDIA Nemotron 3.5 Super.Die Ollama-Bibliothek umfasst mehrere hundert Modelle, wobei Laguna XS 2.1 und Kimi K2.7 Code die neuesten Ergänzungen sind.',
+            'Versionshinweis: Qwen3.6 und Qwen3.8 sind neuere Qwen-Generationen auf Ollama (qwen3.6:35b, ca. 24 GB; qwen3.8:27b, 18 GB); qwen3:30b und qwen3-coder:30b (je 19 GB) sind Optionen der Vorgängergeneration, die weiterhin funktionieren. Mistrals aktuelles Small-Modell ist Mistral Small 4, die Ollama-Bibliothek führte es bei der Prüfung jedoch nicht; mistral-small3.1 und mistral-small:24b (Mistral Small 3) bleiben dort die ladbaren Small-Modelle.',
           ],
         },
         byCategory: {
@@ -1631,20 +1633,20 @@ schema: {
             '**Allgemeines Chat (beste Wahl)**: `ollama run qwen3.8:27b` -- 61,7 SWE-bench Pro, bestes Modell fuer Consumer-Hardware, passt in 24 GB bei Q4. Ausgewogen: `ollama run qwen3:30b`. Für 8 GB Maschinen `ollama run llama3.2:3b` verwenden.',
             '**Long-Context / multimodal**: `ollama run llama4:scout` -- 10M-Token-Kontext + multimodal, MoE (17B aktiv/109B gesamt). Benötigt ~55 GB VRAM bei Q4 (passt in 24 GB nur bei 1,78-Bit, ~20 tok/s).',
             '**Bestes kleines / 16 GB**: `ollama run gpt-oss:20b` -- 21B gesamt / 3,6B aktiv MoE, ~o3-mini-Niveau, einstellbares Reasoning. Größer: `ollama run gpt-oss:120b` (80 GB).',
-            '**Codierung (7B)**: `ollama run qwen3:8b` -- 76% HumanEval, verbessert gegenüber Qwen3, mehrsprachig.',
+            '**Codierung (7B)**: `ollama run qwen3:8b` -- mehrsprachig, solide Coding-Option für 8-GB-Rechner.',
             '**Codierung (bestes Agentic, 24B)**: `ollama run devstral-small-2` -- Bestes Agentic Coding-Modell (Multi-Datei-Edits, Debugging). 16 GB RAM. Von Mistral AI.',
             '**Codierung (bestes Dicht, 27B)**: `ollama run qwen3.8:27b` -- 61,7 SWE-bench Pro. Bestes dichtes Coding-Modell. 18 GB VRAM.',
             '**Codierung (Frontier MoE)**: `ollama run kimi-k2.6:cloud` -- SWE-Bench Pro 58.6 (gleichauf mit GPT-5.5), Top-Tier. MoE (32B aktiv/1T gesamt). Modified MIT-Lizenz. Benötigt Quantisierung für Consumer-Hardware.',
             '**Codierung (agentisch, langfristig)**: `ollama run laguna-xs-2.1` -- Poolsides 33B/3B-aktiv MoE, SWE-bench Verified 70,9%, 256K Kontext. Gebaut für mehrstufige Plan → Code → Test → Iterations-Schleifen. OpenMDW-1.1-Lizenz.',
             '**Agent-Aufgaben und Tool-Calling**: `ollama run gemma4:e4b` -- Veröffentlicht 2. April 2026. Built-in Tool-Calling + Vision-Unterstützung. Empfohlen für lokale Agenten, Function-Calling und strukturierte Ausgabe. 6 GB RAM.',
             '**Reasoning und Mathematik**: `ollama run deepseek-r1:7b` -- Chain-of-Thought-Modell, beste lokale Mathe-Leistung bei 7B.',
-            '**Mehrsprachig**: `ollama run qwen3:8b` -- 29+ native Sprachen, stärkste nicht-englische Unterstützung, 76% HumanEval.',
-            '**Russischsprachige Aufgaben**: `ollama run qwen3:8b` oder `ollama run mistral-small3.1` -- beide enthalten Russisch im nativen mehrsprachigen Training; Qwen3 erzielt höhere Werte bei nicht-englischen Benchmarks, Mistral Small 3.1 hat informell eine stärkere konversationelle russische Sprachgewandtheit. Keines der beiden Modelle hat russischen Ursprung.',
+            '**Mehrsprachig**: `ollama run qwen3:8b` -- 29+ native Sprachen, mehrsprachige Allzweck-Option.',
+            '**Russischsprachige Aufgaben**: `ollama run qwen3:8b` oder `ollama run mistral-small3.1` -- beide enthalten Russisch im nativen mehrsprachigen Training. Diese Seite reiht die beiden für Russisch nicht; testen Sie beide mit Ihren eigenen Prompts. Keines der beiden Modelle hat russischen Ursprung.',
             '**Unzensiert / Allzweck**: `ollama run dolphin3` -- Dolphin 3.0 (Cognitive Computations, aufbauend auf Llama 3.1), keine eingebaute Inhaltsfilterung, für allgemeinen Chat, Codierung und agentische Aufgaben.',
             '**Bildverarbeitung**: `ollama run gemma4:e4b` -- Vision + Tool Calling, jetzt ~90% schneller auf Apple Silicon. Oder `ollama run llama3.2-vision:11b` für dedizierte Vision.',
             '**Schnell und leichtgewichtig**: `ollama run gemma2:2b` -- schnellste CPU-Inferenz, 1,7 GB RAM.',
-            '**Hohe Qualität (16 GB RAM)**: `ollama run mistral-small3.1` -- nahe 70B Qualität bei 14 GB RAM.',
-            '**Heimautomatisierung / Wake-Word-KI**: `ollama run phi4-mini` — Phi-4 Mini (3.8B, ~3 GB VRAM) verarbeitet Home Assistant Sprachbefehle mit 20–25 Tok/Sek auf einem Mini-PC ohne dedizierte GPU. Siehe [Home Assistant + Ollama Integrationsguide →](/smart-home/home-assistant-ollama-integration).',
+            '**Hohe Qualität (16 GB RAM)**: `ollama run mistral-small3.1` -- gute Qualität bei 14 GB RAM.',
+            '**Heimautomatisierung / Wake-Word-KI**: `ollama run phi4-mini` — Phi-4 Mini (3.8B, ~3 GB VRAM) kann Home-Assistant-Sprachbefehle auf einem Mini-PC ohne dedizierte GPU verarbeiten; die Geschwindigkeit hängt von Ihrer Hardware ab. Siehe [Home Assistant + Ollama Integrationsguide →](/smart-home/home-assistant-ollama-integration).',
           ],
           image: '/images/top-open-source-models-ollama-use-case-picks-hero-de.webp',
           imageCaption: 'Ollama-Modellauswahl nach Anwendungsfall: Juli 2026. Chat: qwen3.8:27b, Codierung: kimi-k2.6 / laguna-xs-2.1, Reasoning: deepseek-r1:7b.',
@@ -1672,7 +1674,7 @@ schema: {
         deepseekR1: {
           id: 'deepseek-r1',
           title: 'DeepSeek-R1: Reasoning-Durchbruch',
-          content: 'DeepSeek-R1 wurde im Januar 2025 veröffentlicht und verkörpert einen signifikanten Fortschritt im Reasoning auf lokalen Größen. Das Modell führt explizite Chain-of-Thought (CoT) Reasoning durch: Sie sehen die internen Gedankenketten des Modells, bevor die endgültige Antwort gegeben wird.',
+          content: 'DeepSeek-R1 wurde im Januar 2025 veröffentlicht und verkörpert einen signifikanten Fortschritt im Reasoning auf lokalen Größen. Das Modell führt explizite Chain-of-Thought (CoT) Reasoning durch: Sie sehen die internen Gedankenketten des Modells, bevor die endgültige Antwort gegeben wird. Versionshinweis: DeepSeek-R1 ist ein Modell der Vorgängergeneration. DeepSeeks aktuelle Open-Weight-Familie ist DeepSeek-V4, die die Ollama-Bibliothek bei der Prüfung nicht führte; die deepseek-r1-Distillate (1,5B bis 70B) bleiben dort die ladbare Reasoning-Option. Das gehostete R1-API-Modell hat DeepSeek durch DeepSeek-V4 ersetzt.',
           codeBlock: `ollama run deepseek-r1:7b
 # Beispielprompt: "Wenn zwei Züge sich einer Station mit 100 km/h nähern, wann treffen sie sich?"
 # DeepSeek-R1:7b antwortet mit sichtbaren Gedankenketten:
@@ -1681,14 +1683,12 @@ schema: {
 # </Gedanken>
 # Antwort: Sie treffen sich ...`,
           codeLanguage: 'bash',
-          image: '/images/ollama-deepseek-r1-reasoning-comparison-de.svg',
-          imageCaption: 'DeepSeek-R1 7B vs Mistral Small: 52% vs 28% MATH. Chain-of-Thought-Reasoning -- langsamer, deutlich genauer.',
           items: [
-            '**Größen verfügbar**: 1,5B (mobil), 7B, 70B. 1,5B ist für Bildungsgeräte ausreichend; 7B übertrifft Llama 3.3 13B bei Mathematik.',
-            '**Leistung auf Benchmarks**: 52 % bei MATH (gegenüber 23 % Llama 3.1 8B), verbesserte Logik und mehrschrittige Problemlösung.',
+            '**Größen verfügbar**: Destillate von 1,5B bis 70B.',
+            '**Leistung**: verbesserte Logik und mehrschrittige Problemlösung.',
             '**RAM-Anforderungen**: 1,5B: 2 GB, 7B: 6 GB, 70B: 44 GB (Q4-Quantisierung).',
-            '**Lizenz**: Deepseek-Lizenzen (einige Einschränkungen bei Decompilation; überprüfen Sie vor Enterprise-Einsatz).',
-            '**EU-Datenhandhabung**: Bei Einsatz in EU-Regionen verarbeitet DeepSeek-R1 Daten gemäß EU-Datenschutzbestimmungen. Lokale Ausführung auf privaten Servern oder Geräten gewährleistet Datensouveränität -- keine Cloud-Übertragung erforderlich.',
+            '**Lizenz**: Die DeepSeek-R1-Modelle stehen unter der MIT-Lizenz; die Destillate erben zusätzlich die Bedingungen ihrer Qwen- oder Llama-Basismodelle. Prüfen Sie die jeweilige Modellkarte vor dem Einsatz.',
+            '**Datenhandhabung**: Läuft das Modell lokal auf eigenen Servern oder Geräten, verlassen Prompts und Antworten Ihr System nicht. Ob Ihre Verarbeitung die DSGVO erfüllt, hängt von Ihrer Gesamtkonfiguration ab (keine Rechtsberatung).',
           ],
         },
         visionModels: {
@@ -1719,11 +1719,11 @@ schema: {
             { '#': '3', 'Modell': '[gpt-oss:20b](https://ollama.com/library/gpt-oss)', 'Beste für': 'Bestes kleines / 16 GB, einstellbares Reasoning', 'RAM': '16 GB', 'HumanEval': '~o3-mini' },
             { '#': '4', 'Modell': '[qwen3:30b](https://ollama.com/library/qwen3)', 'Beste für': 'Ausgewogen; qwen3-coder:30b für Code', 'RAM': '~18 GB', 'HumanEval': 'stark' },
             { '#': '5', 'Modell': '[Laguna XS 2.1](https://ollama.com/library/laguna-xs-2.1)', 'Beste für': 'Agentische Codierung, langfristig (planen/coden/testen/iterieren)', 'RAM': 'Quantisiert', 'HumanEval': '70,9% SWE-bench Verified' },
-            { '#': '6', 'Modell': '[Devstral Small 24B](https://ollama.com/library/devstral-small-2)', 'Beste für': 'Agentic Codierung (Multi-Datei)', 'RAM': '15 GB', 'HumanEval': '65.8% (Verified)' },
-            { '#': '7', 'Modell': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', 'Beste für': 'Reasoning, Mathe', 'RAM': '5 GB', 'MATH': '52%' },
+            { '#': '6', 'Modell': '[Devstral Small 2 24B](https://ollama.com/library/devstral-small-2)', 'Beste für': 'Agentic Codierung (Multi-Datei)', 'RAM': '15 GB', 'HumanEval': '68.0% (SWE-bench Verified)' },
+            { '#': '7', 'Modell': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', 'Beste für': 'Reasoning, Mathe', 'RAM': '5 GB', 'MATH': '—' },
             { '#': '8', 'Modell': '[gemma4:e4b](https://ollama.com/library/gemma3)', 'Beste für': 'Vision + Tool Calling (multimodal)', 'RAM': '~6 GB', 'Notes': 'Agent-ready' },
-            { '#': '9', 'Modell': '[Llama 4 Scout](https://ollama.com/library/llama3.3)', 'Beste für': 'Long-Context 10M + multimodal, MoE', 'RAM': '~55 GB (Q4)', 'HumanEval': '85%' },
-            { '#': '10', 'Modell': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Beste für': 'Einstiegsmodell, allgemeiner Chat', 'RAM': '2,5 GB', 'HumanEval': '60%' },
+            { '#': '9', 'Modell': '[Llama 4 Scout](https://ollama.com/library/llama3.3)', 'Beste für': 'Long-Context 10M + multimodal, MoE', 'RAM': '~55 GB (Q4)', 'HumanEval': '—' },
+            { '#': '10', 'Modell': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Beste für': 'Einstiegsmodell, allgemeiner Chat', 'RAM': '2,5 GB', 'HumanEval': '—' },
           ],
         },
         howToBrowse: {
@@ -1746,19 +1746,17 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
 # Löst Reasoning-Aufgaben mit CoT aus`,
           codeLanguage: 'bash',
           items: [
-            'Öffnen Sie [ollama.ai/library](https://ollama.ai/library) in einem Webbrowser für die vollständige durchsuchbare Bibliothek mit mehreren hundert Modellen.',
-            'Filteroptionen: Modellgröße, Lizenz, Veröffentlichungsdatum, Benchmarks (MMLU, HumanEval, MATH).',
-            'Ratings pro Modell: Nutzer-Downloads, GitHub-Sterne (für das Basis-Modell), Ollama-Sterne.',
-            'Neue Modelle: Ollamás Bibliothek wird kontinuierlich aktualisiert (neue Modelle erscheinen Tage nach der Veröffentlichung).',
+            'Öffnen Sie [ollama.com/library](https://ollama.com/library) in einem Webbrowser für die vollständige durchsuchbare Bibliothek mit mehreren hundert Modellen.',
+            'Neue Modelle erscheinen in der Regel innerhalb weniger Tage nach ihrer Veröffentlichung in der Bibliothek.',
           ],
         },
         regionalContext: {
           id: 'regional-context',
           title: 'Wie beeinflussen regionale Datenschutzregeln deine Ollama-Modellwahl?',
           content: [
-            '**EU / DSGVO + Lizenz-Compliance.** Für EU-Organisationen, die Ollama-Modelle produktiv einsetzen, zählt die Lizenz so viel wie die Leistung. Apache 2.0 (vollständig offen, kommerzielle Nutzung erlaubt): Mistral Small, Mistral Small 3.1, Qwen3 8B, Qwen3.8-27B, Devstral Small 2, Granite 4.2. Meta Llama Community Licence (kommerzielle Nutzung ab 700 Mio. monatlich aktiven Nutzern eingeschränkt): Llama 3.1 8B, Llama 3.2 3B, Llama 3.2 Vision 11B. MIT (kommerzielle Nutzung erlaubt): DeepSeek-R1 7B und 14B. Modifizierte MIT (kommerzielle Nutzung mit Namensnennungsklausel erlaubt): Kimi K2.6. OpenMDW-1.1 (permissiv, kommerzielle Nutzung erlaubt): Laguna XS 2.1. Prüfe die Lizenzbedingungen vor dem kommerziellen Einsatz immer. Für EU-Unternehmen in regulierten Branchen sind Mistral-Modelle (Frankreich, Apache 2.0) wie Devstral Small 2 ein sinnvoller Standard -- EU-Herkunft und permissive Lizenz. Läuft ein Modell vollständig on-premises über Ollama, werden Prompts nicht an externe Server gesendet; das unterstützt die DSGVO-Pflichten, erfüllt sie aber nicht allein (ein `:cloud`-Tag sendet Daten an den gehosteten Dienst von Ollama).',
-            '**Japan (METI).** Für japanische Unternehmens-Deployments mit Ollama ist Qwen3 / Qwen3.8 eine empfehlenswerte Modellfamilie -- sie verarbeitet japanischen Text nativ, was Inferenzzeit und KV-Cache zugutekommt. Für japanische Coding-Workflows: Qwen3.8-27B (61,7 SWE-bench Pro laut Qwen) verarbeitet japanische Code-Kommentare nativ. Die METI-KI-Governance-Dokumentation verlangt in der Regel die exakte Modellversion. Mit `ollama show <modell>` erhältst du die vollständige Spezifikation (Parameterzahl, Quantisierung, Kontextlänge) für Compliance-Aufzeichnungen.',
-            '**China.** Nach den CAC-Maßnahmen für generative KI (2023) müssen Organisationen, die Endnutzern KI-Dienste anbieten, die verwendeten Modelle registrieren. Qwen3 / Qwen3.8 (Alibaba, Apache 2.0) ist eine naheliegende Wahl für chinesische Unternehmens-Deployments mit Ollama -- chinesische Herkunft, Apache-2.0-Lizenz, starke Leistung auf Chinesisch. Kimi K2.6 (Moonshot AI, modifizierte MIT) stammt ebenfalls aus China, wird bei Ollama aber nur als Cloud-Tag geführt, und lokale Läufe brauchen Server-Hardware. Befehle: `ollama run qwen3.8:27b` für beste Qualität, `ollama run qwen3:8b` für Geschwindigkeit. DeepSeek-R1 (MIT-Lizenz) eignet sich für Reasoning. Bei lokal mit Ollama verarbeiteten Daten löst die Inferenz selbst die PIPL-Anforderungen an grenzüberschreitende Übermittlung nicht aus -- prüfe deine eigenen Compliance-Pflichten.',
+            '**EU / DSGVO + Lizenz-Compliance.** Für EU-Organisationen, die Ollama-Modelle produktiv einsetzen, zählt die Lizenz so viel wie die Leistung. Apache 2.0 (vollständig offen, kommerzielle Nutzung erlaubt): Mistral Small 3, Mistral Small 3.1, Qwen3 8B, Qwen3.8-27B, Devstral Small 2, Granite 4.2. Meta Llama Community Licence (kommerzielle Nutzung ab 700 Mio. monatlich aktiven Nutzern eingeschränkt): Llama 3.1 8B, Llama 3.2 3B, Llama 3.2 Vision 11B. Llama 3.2 Vision ist eine Ausnahme: Seine Acceptable Use Policy gewährt die Lizenzrechte nicht an Personen oder Unternehmen mit Sitz in der EU (Endnutzer von darauf aufbauenden Produkten sind nicht betroffen); prüfen Sie dies vor einem Einsatz in der EU. MIT (kommerzielle Nutzung erlaubt): DeepSeek-R1 7B und 14B. Modifizierte MIT (kommerzielle Nutzung mit Namensnennungsklausel erlaubt): Kimi K2.6. OpenMDW-1.1 (permissiv, kommerzielle Nutzung erlaubt): Laguna XS 2.1. Prüfe die Lizenzbedingungen vor dem kommerziellen Einsatz immer. Für EU-Unternehmen in regulierten Branchen sind Mistral-Modelle (Frankreich, Apache 2.0) wie Devstral Small 2 ein sinnvoller Standard -- EU-Herkunft und permissive Lizenz. Läuft ein Modell vollständig on-premises über Ollama, werden Prompts nicht an externe Server gesendet; das unterstützt die DSGVO-Pflichten, erfüllt sie aber nicht allein (ein `:cloud`-Tag sendet Daten an den gehosteten Dienst von Ollama).',
+            '**Japan (METI).** Für japanische Unternehmens-Deployments mit Ollama ist Qwen3 / Qwen3.8 eine empfehlenswerte Modellfamilie -- sie verarbeitet japanischen Text nativ, was Inferenzzeit und KV-Cache zugutekommt. Für japanische Coding-Workflows: Qwen3.8-27B (61,7 SWE-bench Pro laut Qwen) verarbeitet japanische Code-Kommentare nativ. Die exakte Modellversion zu dokumentieren, ist gute Praxis für Compliance-Unterlagen. Mit `ollama show <modell>` erhältst du die vollständige Spezifikation (Parameterzahl, Quantisierung, Kontextlänge) für Compliance-Aufzeichnungen.',
+            '**China.** Die CAC-Maßnahmen für generative KI (2023) in China können Anbietern generativer KI-Dienste für die Öffentlichkeit in China Melde- oder Sicherheitsbewertungspflichten auferlegen; ob sie im Einzelfall gelten, ist mit einer Rechtsberatung zu klären. Qwen3 / Qwen3.8 (Alibaba, Apache 2.0) ist eine naheliegende Wahl für chinesische Unternehmens-Deployments mit Ollama -- chinesische Herkunft, Apache-2.0-Lizenz, starke Leistung auf Chinesisch. Kimi K2.6 (Moonshot AI, modifizierte MIT) stammt ebenfalls aus China, wird bei Ollama aber nur als Cloud-Tag geführt, und lokale Läufe brauchen Server-Hardware. Befehle: `ollama run qwen3.8:27b` für beste Qualität, `ollama run qwen3:8b` für Geschwindigkeit. DeepSeek-R1 (MIT-Lizenz) eignet sich für Reasoning. Inferenz, die lokal über Ollama läuft, sendet für sich genommen keine Daten ins Ausland und klammert damit die Frage der grenzüberschreitenden Übermittlung für diesen Schritt aus; ob die PIPL oder andere Pflichten für die jeweilige Datenverarbeitung gelten, ist mit einer Rechtsberatung zu klären. Dieser Abschnitt ist eine allgemeine Information, keine Rechtsberatung.',
           ],
         },
         commonMistakes: {
@@ -1770,7 +1768,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
             },
             {
               q: 'Ich verwende ein Allzweck-Modell wie Llama 3.3, aber die Codierung ist langsam. Warum?',
-              a: 'Llama 3.1 8B ist Allzweck-freundlich, aber Qwen3 oder Mistral Small sind für technische Aufgaben spezialisiert. Für Codierung: Schalten Sie zu Qwen3 8B um (75,4 % HumanEval gegenüber 68,2 % für Llama). Beide laufen unter 8 GB RAM.',
+              a: 'Llama 3.1 8B ist Allzweck-freundlich, aber Qwen3 oder Mistral Small sind für technische Aufgaben spezialisiert. Für Codierung: Probieren Sie Qwen3 8B statt Llama 3.1 8B und vergleichen Sie die Ergebnisse an Ihren eigenen Aufgaben. Beide laufen unter 8 GB RAM.',
             },
             {
               q: 'Ich habe ein Modell gepullt, sehe es aber nicht in der Liste. Wie überprüfe ich die Installation?',
@@ -1817,35 +1815,35 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
             },
             {
               q: 'Wie lautet der offizielle Name des Unternehmens hinter Ollama?',
-              a: 'Das Unternehmen ist Ollama Inc., ein Series-B-finanziertes Startup mit Sitz in Palo Alto, Kalifornien, gegründet 2023 von Jeffrey Morgan und Michael Chiang.',
+              a: 'Das Unternehmen hinter Ollama ist Ollama Inc. „Ollama“ bezeichnet sowohl das Unternehmen als auch das quelloffene CLI-Tool und die Modell-Laufzeitumgebung, die es veröffentlicht; die erste öffentliche Version des Projekts, v0.0.1, erschien am 8. Juli 2023 auf GitHub.',
             },
             {
               q: 'Welches Modell hat die beste deutsche Sprachunterstützung?',
-              a: 'Qwen3 / Qwen3.8-27B hat überlegene deutsche Unterstützung (trainiert auf CulturaX und DE-Wikitext). Llama 3.3 ist für Deutsch angemessen, aber Qwen ist präziser. Devstral Small 24B (Mistral AI, französisches Unternehmen, Apache 2.0) ist für Deutsch und Französisch kompetent.',
+              a: 'Mehrsprachige Modelle wie Qwen3 / Qwen3.8 und Mistral Small 3.1 unterstützen Deutsch; diese Seite reiht sie nicht nach deutscher Sprachqualität, testen Sie sie daher mit Ihren eigenen Texten.',
             },
             {
               q: 'Welche Ollama-Modelle eignen sich am besten für russischsprachige Aufgaben?',
-              a: 'Qwen3 / Qwen3.8 und Mistral Small 3.1 enthalten beide Russisch im nativen mehrsprachigen Training. Qwen3 erzielt höhere Werte bei nicht-englischen Benchmarks, Mistral Small 3.1 hat informell eine stärkere konversationelle russische Sprachgewandtheit. Keines der beiden Modelle hat russischen Ursprung.',
+              a: 'Qwen3 / Qwen3.8 und Mistral Small 3.1 enthalten beide Russisch im nativen mehrsprachigen Training. Diese Seite reiht die beiden für Russisch nicht; testen Sie beide mit Ihren eigenen Prompts. Keines der beiden Modelle hat russischen Ursprung.',
             },
             {
               q: 'Welches Dolphin-Modell sollte ich mit Ollama verwenden?',
-              a: 'Verwenden Sie Dolphin 3.0 (`ollama pull dolphin3`), nicht das veraltete `dolphin-mistral` (zuletzt 2024 aktualisiert, basierend auf Mistral 0.2). Dolphin 3.0, gepflegt von Cognitive Computations, basiert auf Llama 3.1, hat keine eingebaute Inhaltsfilterung und ist als Allzweck-Modell für Coding, Mathematik, agentische Aufgaben und uneingeschränkten Chat konzipiert.',
+              a: 'Verwenden Sie Dolphin 3.0 (`ollama pull dolphin3`), nicht das veraltete `dolphin-mistral` (zuletzt 2024 aktualisiert, basierend auf Mistral 0.2). Dolphin 3.0, gepflegt von Cognitive Computations, basiert auf Llama 3.1, hat keine eingebaute Inhaltsfilterung und ist als Allzweck-Modell für Coding, Mathematik, agentische Aufgaben und Chat ohne eingebaute Inhaltsbeschränkungen konzipiert. Da es ohne eingebaute Sicherheitsfilterung ausgeliefert wird, tragen Sie die Verantwortung für die Verwendung seiner Ausgaben; es gelten die Lizenzbedingungen von Llama 3.1.',
             },
             {
               q: 'Sind Ollama-Modelle wirklich kostenlos?',
-              a: 'Ja. Alle auf Ollama verfügbaren Modelle sind Open-Source mit freien Lizenzen (Apache 2.0, Meta Llama 3 Community, Deepseek). Keine Abonnements, keine API-Gebühren. Laden Sie herunter, installieren Sie lokal, und verwenden Sie unbegrenzt.',
+              a: 'Das Herunterladen und lokale Ausführen verursacht keine Abonnement- oder API-Gebühren, aber nicht alle Modelle sind Open Source im Sinne der OSI: Llama 3.x/4.x nutzen die Meta Llama Community Licence (nicht OSI-zertifiziert, kommerzielle Nutzung ab 700 Mio. monatlich aktiven Nutzern eingeschränkt), Mistral Small 3.1, Qwen3 und Gemma 4 stehen unter Apache 2.0, Gemma 2 und Gemma 3 unter den Gemma-Nutzungsbedingungen von Google. Prüfen Sie die Lizenz vor dem kommerziellen Einsatz.',
             },
             {
               q: 'Wie schnell ist DeepSeek-R1 wirklich?',
-              a: 'Erzeugungsgeschwindigkeit: 15-25 Token/Sek. auf M1 Pro (ähnlich wie Llama 3.3 7B). Die Gesamtlatenz ist höher, weil Gedankenketten ausgegeben werden -- erwarten Sie 8-12 Sekunden für mittlere Anfragen. Für Echtzeit-Interaktion nutzen Sie Llama 3.3 oder Mistral.',
+              a: 'Die Geschwindigkeit hängt von Hardware, Quantisierung und Prompt ab; diese Seite gibt keine Messwerte an. Da DeepSeek-R1 vor der Antwort Gedankenketten ausgibt, erzeugt es pro Antwort mehr Token als Standard-Chatmodelle und braucht entsprechend länger; für Echtzeit-Interaktion eignet sich ein Standard-Chatmodell besser.',
             },
             {
               q: 'Warum sollte ich Ollama verwenden und nicht einfach ChatGPT Plus?',
-              a: 'Datenschutz: Keine Chats an OpenAI übertragen. Kosten: Kein monatliches Abonnement; eine GPU-Einmalinvestition. Offline: Funktioniert vollständig ohne Internet. Anpassbar: Systemprompte, Verhaltensrichtlinien und Modellparameter vollständig unter Ihrer Kontrolle.',
+              a: 'Datenschutz: Bei lokaler Ausführung verlassen Ihre Prompts das Gerät nicht (ausgenommen `:cloud`-Tags). Kosten: Keine Abonnement- oder API-Gebühren für die Modelle selbst, dafür fallen Hardware- und Stromkosten an. Offline: Nach dem Download läuft die Inferenz ohne Internetverbindung. Anpassbar: Systemprompte und Modellparameter liegen bei Ihnen.',
             },
             {
               q: 'Können Ollama-Modelle Bilder verarbeiten?',
-              a: 'Ja. Llama 3.2 Vision, Qwen2-VL und Gemma 3 sind alle Multi-Modal. Laden Sie Bilder als lokale Dateien hoch; keine Cloud-Übertragung. Unterstützung: JPEG, PNG, GIF.',
+              a: 'Ja. Llama 3.2 Vision, Qwen2.5-VL und Gemma 3 sind alle Multi-Modal. Laden Sie Bilder als lokale Dateien hoch; bei lokaler Ausführung erfolgt keine Cloud-Übertragung. Unterstützung: JPEG, PNG, GIF.',
             },
             {
               q: 'Wie aktualisiere ich auf neuere Ollama-Modellversionen?',
@@ -1857,7 +1855,7 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
             },
             {
               q: 'Ist Ollama mit Open-Source-Modellen für den deutschen Mittelstand geeignet?',
-              a: 'Ja. Kleine und mittlere Unternehmen (KMU) in Deutschland profitieren von: Datensouveränität (kein Cloud-Vendor Lock-in), Einhaltung von IT-Sicherheitsstandards (BSI IT-Grundschutz), Skalierbarkeit auf Standard-Hardware und Einsparungen durch keine API-Gebühren. Qwen3 8B läuft auf einer typischen Office-GPU; Llama 3.1 8B ist ein bewährtes Standard-Mittelstand-Modell für interne Tools, Customer-Service-Automation und Dokumentenverarbeitung.',
+              a: 'Ja, in vielen Fällen. Kleine und mittlere Unternehmen (KMU) in Deutschland können profitieren von: Datensouveränität (kein Cloud-Vendor Lock-in), Unterstützung bei der Umsetzung von IT-Sicherheitsstandards wie dem BSI IT-Grundschutz (die Erfüllung hängt von Ihrer Gesamtkonfiguration ab; keine Rechtsberatung), Skalierbarkeit auf Standard-Hardware und Einsparungen durch entfallende API-Gebühren. Qwen3 8B läuft auf einer typischen Office-GPU; Llama 3.1 8B kommt häufig für interne Tools, Customer-Service-Automation und Dokumentenverarbeitung zum Einsatz.',
             },
           ],
         },
@@ -1879,9 +1877,8 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
           title: 'Quellen',
           items: [
             '[Ollama-Modellbibliothek](https://ollama.ai/library) -- Mehrere hundert Modelle mit Live-Download-Statistiken.',
-            '[Ollama GitHub: Beliebte Modelle nach Downloads](https://github.com/ollama/ollama/issues/3149) -- Monatliche Einträge zu Benutzern und Download-Trends (öffentliche Daten).',
-            '[DeepSeek-R1 Whitepaper](https://arxiv.org/abs/2501.12948) -- "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning" (Januar 2025).',
-            '[Gemma 3 Announcement](https://blog.google/technology/googles-latest-gemma-models/) -- Google Blog: Gemma 3 Multimodal, 128K Kontext, Februar 2026.',
+                        '[DeepSeek-R1 Whitepaper](https://arxiv.org/abs/2501.12948) -- "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning" (Januar 2025).',
+            '[Gemma 3 Announcement](https://developers.googleblog.com/en/introducing-gemma3/) -- Google Developers Blog: Gemma 3 multimodal, 128K Kontext, März 2025.',
           ],
         },
       },
@@ -1892,7 +1889,7 @@ schema: {
         'description': 'Aktuelle Ollama-Version v0.40.5 (Oktober 2026), vollstaendiges Changelog und die neuesten Modelle: Laguna XS 2.1, Kimi K2.7 Code, Kimi K2.6, Qwen3.8. Verifizierte Benchmarks, RAM, Pull-Befehle.',
         'url': 'https://www.promptquorum.com/de/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-11',
-        'dateModified': '2026-10-17',
+        'dateModified': '2026-10-19',
         'author': {
           '@type': 'Person',
           'name': 'Hans Kuepper',
@@ -1912,18 +1909,21 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'Top 10 Open-Source-Modelle auf Ollama',
+        'name': 'Top-Open-Source-Modelle auf Ollama -- 2026',
+        'numberOfItems': 12,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B', 'description': 'Das am häufigsten heruntergeladene Modell, ideal für Anfänger und Allzweckanwendungen. 6,5 GB RAM erforderlich.' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Qwen3 8B', 'description': 'Das am schnellsten wachsende Modell mit überlegener Codierungs- und Mathematikleistung. 6,5 GB RAM erforderlich.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small', 'description': 'Mehrsprachiges Modell mit guter französischer und spanischer Unterstützung. 6,5 GB RAM erforderlich.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Llama 3.3 70B', 'description': 'Großes Modell, das bei vielen Benchmarks mit GPT-4 konkurriert. 44 GB RAM erforderlich.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B', 'description': 'Reasoning-Modell mit expliziten Chain-of-Thought-Fähigkeiten, ideal für mathematische und logische Probleme. 6,5 GB RAM erforderlich.' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'Gemma 3 9B', 'description': 'Multi-Modal-Modell mit Vision-Fähigkeiten und 128K-Kontext-Länge. 9,5 GB RAM erforderlich.' },
-          { '@type': 'ListItem', 'position': 7, 'name': 'Llama 3.2 Vision 11B', 'description': 'Vision-Modell für Bildverarbeitung und Multi-Modal-Aufgaben. 11 GB RAM erforderlich.' },
-          { '@type': 'ListItem', 'position': 8, 'name': 'Phi-3.5 Mini 3.8B', 'description': 'Sehr kleines, hocheffizientes Modell ideal für Mobile und IoT-Geräte. 3 GB RAM erforderlich.' },
-          { '@type': 'ListItem', 'position': 9, 'name': 'Qwen3 32B', 'description': 'Größere Variante von Qwen mit überlegener Qualität für komplexe Aufgaben. 20 GB RAM erforderlich.' },
-          { '@type': 'ListItem', 'position': 10, 'name': 'Mistral Small 3.1', 'description': 'Schnelles und kompaktes Modell für Echtzeit-Anwendungen mit guter Qualität. 5 GB RAM erforderlich.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Qwen3.8-27B', 'url': 'https://ollama.com/library/qwen3.8', 'description': 'Bestes Gesamtmodell auf Consumer-Hardware. 61,7 SWE-bench Pro (laut Qwen). Passt bei Q4 in 24 GB. Apache 2.0. ollama run qwen3.8:27b' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Kimi K2.6', 'url': 'https://ollama.com/library/kimi-k2.6', 'description': 'Frontier-MoE-Coding-Modell. SWE-Bench Pro 58,6. 32B aktiv/1T gesamt. Modified-MIT-Lizenz. ollama run kimi-k2.6:cloud' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'gpt-oss:20b', 'url': 'https://ollama.com/library/gpt-oss', 'description': 'Kleines Modell für 16 GB. 21B gesamt / 3,6B aktiv MoE. ~o3-mini-Niveau, einstellbares Reasoning. ollama run gpt-oss:20b' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen3:30b', 'url': 'https://ollama.com/library/qwen3', 'description': 'Ausgewogenes Allround-Modell; qwen3-coder:30b für Code-Vervollständigung. ollama run qwen3:30b' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Laguna XS 2.1', 'url': 'https://ollama.com/library/laguna-xs-2.1', 'description': 'Agentisches Langzeit-Coding. 33B/3B aktiv MoE. SWE-bench Verified 70,9 %. OpenMDW-1.1-Lizenz. ollama run laguna-xs-2.1' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'Reasoning-Modell mit Chain-of-Thought. 5 GB RAM. ollama run deepseek-r1:7b' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'gemma4:e4b', 'url': 'https://ollama.com/library/gemma4', 'description': 'Vision und Tool Calling (E4B+). ca. 6 GB RAM. ollama run gemma4:e4b' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Llama 4 Scout', 'url': 'https://ollama.com/library/llama4', 'description': 'Langer Kontext (10M Token) und großes Multimodal. MoE 17B aktiv/109B gesamt. ca. 55 GB bei Q4. ollama run llama4:scout' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Devstral Small 2 24B', 'url': 'https://ollama.com/library/devstral-small-2', 'description': 'Agentisches Coding (Multi-Datei-Edits, Debugging). 16 GB RAM. ollama run devstral-small-2' },
+          { '@type': 'ListItem', 'position': 10, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': 'Starke Qualität in der 16-GB-Klasse. 14 GB RAM. Apache 2.0. ollama run mistral-small3.1' },
+          { '@type': 'ListItem', 'position': 11, 'name': 'gemma2:2b', 'url': 'https://ollama.com/library/gemma2', 'description': 'Sehr leichtgewichtig. 1,7 GB RAM. ollama run gemma2:2b' },
+          { '@type': 'ListItem', 'position': 12, 'name': 'phi4-mini', 'url': 'https://ollama.com/library/phi4-mini', 'description': 'Kleines Reasoning-orientiertes Modell. 2,5 GB RAM. ollama run phi4-mini' },
         ],
       },
       faqSchema: {
@@ -1983,7 +1983,7 @@ schema: {
             'name': 'Wie lautet der offizielle Name des Unternehmens hinter Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Das Unternehmen ist Ollama Inc., ein Series-B-finanziertes Startup mit Sitz in Palo Alto, Kalifornien, gegründet 2023 von Jeffrey Morgan und Michael Chiang.',
+              'text': 'Das Unternehmen hinter Ollama ist Ollama Inc. „Ollama“ bezeichnet sowohl das Unternehmen als auch das quelloffene CLI-Tool und die Modell-Laufzeitumgebung, die es veröffentlicht; die erste öffentliche Version des Projekts, v0.0.1, erschien am 8. Juli 2023 auf GitHub.',
             }
           },
           {
@@ -1991,7 +1991,7 @@ schema: {
             'name': 'Welches Modell hat die beste deutsche Sprachunterstützung?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 8B hat eine überlegene deutsche Unterstützung (trainierten auf CulturaX und DE-Wikitext). Llama 3.3 ist für Deutsch angemessen, aber Qwen ist präziser. Mistral Small ist für Deutsch und Französisch kompetent.',
+              'text': 'Mehrsprachige Modelle wie Qwen3 / Qwen3.8 und Mistral Small 3.1 unterstützen Deutsch; diese Seite reiht sie nicht nach deutscher Sprachqualität, testen Sie sie daher mit Ihren eigenen Texten.',
             }
           },
           {
@@ -1999,7 +1999,7 @@ schema: {
             'name': 'Welche Ollama-Modelle eignen sich am besten für russischsprachige Aufgaben?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 / Qwen3.8 und Mistral Small 3.1 enthalten beide Russisch im nativen mehrsprachigen Training. Qwen3 erzielt höhere Werte bei nicht-englischen Benchmarks, Mistral Small 3.1 hat informell eine stärkere konversationelle russische Sprachgewandtheit. Keines der beiden Modelle hat russischen Ursprung.',
+              'text': 'Qwen3 / Qwen3.8 und Mistral Small 3.1 enthalten beide Russisch im nativen mehrsprachigen Training. Diese Seite reiht die beiden für Russisch nicht; testen Sie beide mit Ihren eigenen Prompts. Keines der beiden Modelle hat russischen Ursprung.',
             }
           },
           {
@@ -2007,7 +2007,7 @@ schema: {
             'name': 'Welches Dolphin-Modell sollte ich mit Ollama verwenden?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Verwenden Sie Dolphin 3.0 (`ollama pull dolphin3`), nicht das veraltete `dolphin-mistral` (zuletzt 2024 aktualisiert, basierend auf Mistral 0.2). Dolphin 3.0, gepflegt von Cognitive Computations, basiert auf Llama 3.1, hat keine eingebaute Inhaltsfilterung und ist als Allzweck-Modell für Coding, Mathematik, agentische Aufgaben und uneingeschränkten Chat konzipiert.',
+              'text': 'Verwenden Sie Dolphin 3.0 (`ollama pull dolphin3`), nicht das veraltete `dolphin-mistral` (zuletzt 2024 aktualisiert, basierend auf Mistral 0.2). Dolphin 3.0, gepflegt von Cognitive Computations, basiert auf Llama 3.1, hat keine eingebaute Inhaltsfilterung und ist als Allzweck-Modell für Coding, Mathematik, agentische Aufgaben und Chat ohne eingebaute Inhaltsbeschränkungen konzipiert. Da es ohne eingebaute Sicherheitsfilterung ausgeliefert wird, tragen Sie die Verantwortung für die Verwendung seiner Ausgaben; es gelten die Lizenzbedingungen von Llama 3.1.',
             }
           },
           {
@@ -2015,7 +2015,7 @@ schema: {
             'name': 'Sind Ollama-Modelle wirklich kostenlos?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ja. Alle auf Ollama verfügbaren Modelle sind Open-Source mit freien Lizenzen (Apache 2.0, Meta Llama 3 Community, Deepseek). Keine Abonnements, keine API-Gebühren. Laden Sie herunter, installieren Sie lokal, und verwenden Sie unbegrenzt.',
+              'text': 'Das Herunterladen und lokale Ausführen verursacht keine Abonnement- oder API-Gebühren, aber nicht alle Modelle sind Open Source im Sinne der OSI: Llama 3.x/4.x nutzen die Meta Llama Community Licence (nicht OSI-zertifiziert, kommerzielle Nutzung ab 700 Mio. monatlich aktiven Nutzern eingeschränkt), Mistral Small 3.1, Qwen3 und Gemma 4 stehen unter Apache 2.0, Gemma 2 und Gemma 3 unter den Gemma-Nutzungsbedingungen von Google. Prüfen Sie die Lizenz vor dem kommerziellen Einsatz.',
             }
           },
           {
@@ -2023,7 +2023,7 @@ schema: {
             'name': 'Wie schnell ist DeepSeek-R1 wirklich?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Erzeugungsgeschwindigkeit: 15-25 Token/Sek. auf M1 Pro (ähnlich wie Llama 3.3 7B). Die Gesamtlatenz ist höher, weil Gedankenketten ausgegeben werden -- erwarten Sie 8-12 Sekunden für mittlere Anfragen. Für Echtzeit-Interaktion nutzen Sie Llama 3.3 oder Mistral.',
+              'text': 'Die Geschwindigkeit hängt von Hardware, Quantisierung und Prompt ab; diese Seite gibt keine Messwerte an. Da DeepSeek-R1 vor der Antwort Gedankenketten ausgibt, erzeugt es pro Antwort mehr Token als Standard-Chatmodelle und braucht entsprechend länger; für Echtzeit-Interaktion eignet sich ein Standard-Chatmodell besser.',
             }
           },
           {
@@ -2031,7 +2031,7 @@ schema: {
             'name': 'Warum sollte ich Ollama verwenden und nicht einfach ChatGPT Plus?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Datenschutz: Keine Chats an OpenAI übertragen. Kosten: Kein monatliches Abonnement; eine GPU-Einmalinvestition. Offline: Funktioniert vollständig ohne Internet. Anpassbar: Systemprompte, Verhaltensrichtlinien und Modellparameter vollständig unter Ihrer Kontrolle.',
+              'text': 'Datenschutz: Bei lokaler Ausführung verlassen Ihre Prompts das Gerät nicht (ausgenommen `:cloud`-Tags). Kosten: Keine Abonnement- oder API-Gebühren für die Modelle selbst, dafür fallen Hardware- und Stromkosten an. Offline: Nach dem Download läuft die Inferenz ohne Internetverbindung. Anpassbar: Systemprompte und Modellparameter liegen bei Ihnen.',
             }
           },
           {
@@ -2039,7 +2039,7 @@ schema: {
             'name': 'Können Ollama-Modelle Bilder verarbeiten?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ja. Llama 3.2 Vision, Qwen2-VL und Gemma 3 sind alle Multi-Modal. Laden Sie Bilder als lokale Dateien hoch; keine Cloud-Übertragung. Unterstützung: JPEG, PNG, GIF.',
+              'text': 'Ja. Llama 3.2 Vision, Qwen2.5-VL und Gemma 3 sind alle Multi-Modal. Laden Sie Bilder als lokale Dateien hoch; bei lokaler Ausführung erfolgt keine Cloud-Übertragung. Unterstützung: JPEG, PNG, GIF.',
             }
           },
           {
@@ -2063,13 +2063,13 @@ schema: {
             'name': 'Ist Ollama mit Open-Source-Modellen für den deutschen Mittelstand geeignet?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ja. Kleine und mittlere Unternehmen (KMU) in Deutschland profitieren von: Datensouveränität (kein Cloud-Vendor Lock-in), Einhaltung von IT-Sicherheitsstandards (BSI IT-Grundschutz), Skalierbarkeit auf Standard-Hardware und Einsparungen durch keine API-Gebühren. Qwen3 8B läuft auf einer typischen Office-GPU; Llama 3.1 8B ist ein bewährtes Standard-Mittelstand-Modell für interne Tools, Customer-Service-Automation und Dokumentenverarbeitung.',
+              'text': 'Ja, in vielen Fällen. Kleine und mittlere Unternehmen (KMU) in Deutschland können profitieren von: Datensouveränität (kein Cloud-Vendor Lock-in), Unterstützung bei der Umsetzung von IT-Sicherheitsstandards wie dem BSI IT-Grundschutz (die Erfüllung hängt von Ihrer Gesamtkonfiguration ab; keine Rechtsberatung), Skalierbarkeit auf Standard-Hardware und Einsparungen durch entfallende API-Gebühren. Qwen3 8B läuft auf einer typischen Office-GPU; Llama 3.1 8B kommt häufig für interne Tools, Customer-Service-Automation und Dokumentenverarbeitung zum Einsatz.',
             }
           },
         ]
       },
       gammaEmbedUrl: '/presentations/top-open-source-models-ollama-static.html',
-      gammaDescription: 'Die Präsentation behandelt: Top 10 Ollama-Modelle nach Download-Häufigkeit, Leistungsvergleich (60-74% HumanEval), beste Modelle nach Anwendungsfall (Chat, Codierung, Reasoning, Vision), DeepSeek-R1 Chain-of-Thought-Reasoning und exakte Pull-Befehle. Laden Sie die PDF als Ihre Ollama-Modellauswahl-Referenzkarte herunter.',
+      gammaDescription: 'Die Präsentation behandelt: Top 10 Ollama-Modelle nach Download-Häufigkeit, Leistungsvergleich, beste Modelle nach Anwendungsfall (Chat, Codierung, Reasoning, Vision), DeepSeek-R1 Chain-of-Thought-Reasoning und exakte Pull-Befehle. Laden Sie die PDF als Ihre Ollama-Modellauswahl-Referenzkarte herunter.',
     },
     fr: {
       theme: 'Best Models',
@@ -2154,30 +2154,31 @@ schema: {
             '**Llama 3.2 3B** reste le modèle le plus téléchargé au total, largement dû à son utilisation comme modèle de test standard lors de la première installation. Pour la qualité sur materiel grand public, Qwen3.8-27B (61,7 SWE-bench Pro, tient en 24 Go en Q4) est désormais le meilleur choix global.',
             '**Qwen3 et Qwen3.8** sont la famille de modèles la plus en forte croissance dans la bibliothèque Ollama, avec Qwen3 et la nouvelle variante dense Qwen3.8 déplaçant rapidement Qwen3. DeepSeek-R1 a connu des pics majeurs après sa sortie et reste très téléchargé pour les tâches de raisonnement. Dolphin 3.0 (Cognitive Computations, construit sur Llama 3.1) reste le modèle non censuré polyvalent le plus téléchargé pour les utilisateurs souhaitant un assistant local sans filtrage.',
             '**Llama 4 Scout** a été lancé par Meta en avril 2026 avec les variantes Scout (17B actif, 109B au total, MoE) et Maverick (17B actif, 400B au total). Llama 4 Scout est maintenant stable dans la bibliothèque Ollama (`ollama pull llama4:scout`). La famille Llama 4 utilise une architecture Mixture-of-Experts (MoE) – seuls 17B paramètres sont actifs par token, mais avec 109B paramètres au total Scout nécessite ~55 Go VRAM en Q4 (tient en 24 Go uniquement en 1,78 bit, ~20 tok/s). Les atouts de Scout sont sa fenêtre de contexte de 10M tokens et son entrée multimodale, pas son adéquation au materiel grand public. L\'écosystème Ollama s\'est considérablement étendu depuis avril 2026. Kimi K2.6 (Moonshot AI, licence Modified MIT, 32B actif / 1T au total MoE) a obtenu SWE-Bench Pro 58.6, à égalité avec GPT-5.5. Laguna XS 2.1 (Poolside) est le nouveau challenger en codage agentique, conçu spécifiquement pour les sessions de codage local de longue durée. Qwen3.8-27B a atteint 61,7 SWE-bench Pro en tant que meilleur modèle global sur materiel grand public (tient en 24 Go en Q4). Le gpt-oss:20b d\'OpenAI (21B au total / 3,6B actif MoE) tourne en 16 Go au ~niveau o3-mini avec raisonnement reglable. La version actuelle d\'Ollama, la v0.40.5 (14 octobre 2026), ajoute la prise en charge de NVIDIA Nemotron 3.5 Super.La bibliothèque Ollama référence maintenant plusieurs centaines de modèles, Laguna XS 2.1 et Kimi K2.7 Code étant les ajouts les plus récents depuis la mise à jour de juin.',
+            'Note de version : Qwen3.6 et Qwen3.8 sont des générations de Qwen plus récentes sur Ollama (qwen3.6:35b, ~24 Go ; qwen3.8:27b, 18 Go) ; qwen3:30b et qwen3-coder:30b (19 Go chacun) sont des options de la génération précédente qui fonctionnent toujours. Le modèle Small actuel de Mistral est Mistral Small 4, mais la bibliothèque Ollama ne le listait pas lors de la vérification ; mistral-small3.1 et mistral-small:24b (Mistral Small 3) restent les modèles Small disponibles au téléchargement.',
           ],
         },
         byCategory: {
           id: 'by-category',
           title: 'Meilleurs modèles par catégorie',
-          content: 'La qualité de la sortie d\'un modèle dépend fortement de la façon dont vous le promptez. Pour des techniques structurées applicables à tous les modèles locaux — chain-of-thought, exemples few-shot et formatage de sortie — consultez le [guide de prompt engineering](https://www.promptquorum.com/fr/prompt-engineering). Pour les tâches de raisonnement, [le prompt engineering de chaîne de pensée](https://www.promptquorum.com/fr/prompt-engineering/chain-of-thought-prompting) améliore considérablement la qualité des sorties DeepSeek-R1 et Qwen3. Pour déterminer la RAM requise pour chaque modèle, consultez le [guide des exigences VRAM →](/fr/local-llms/how-much-vram-local-llm). Pour les workflows d\'agents avec Gemini 4, voir [Tree-of-Thought et ReAct](https://www.promptquorum.com/fr/prompt-engineering/tree-of-thought-react). Une fois qu\'un modèle à appel d\'outils de cette liste est intégré dans une boucle multi-étapes avec accès aux fichiers et aux bases de données, voir [Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026) pour le pattern d\'orchestration open source.',
+          content: 'La qualité de la sortie d\'un modèle dépend fortement de la façon dont vous le promptez. Pour des techniques structurées applicables à tous les modèles locaux — chain-of-thought, exemples few-shot et formatage de sortie — consultez le [guide de prompt engineering](https://www.promptquorum.com/fr/prompt-engineering). Pour les tâches de raisonnement, [le prompt engineering de chaîne de pensée](https://www.promptquorum.com/fr/prompt-engineering/chain-of-thought-prompting) améliore considérablement la qualité des sorties DeepSeek-R1 et Qwen3. Pour déterminer la RAM requise pour chaque modèle, consultez le [guide des exigences VRAM →](/fr/local-llms/how-much-vram-local-llm). Pour les workflows d\'agents avec Gemma 4, voir [Tree-of-Thought et ReAct](https://www.promptquorum.com/fr/prompt-engineering/tree-of-thought-react). Une fois qu\'un modèle à appel d\'outils de cette liste est intégré dans une boucle multi-étapes avec accès aux fichiers et aux bases de données, voir [Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026) pour le pattern d\'orchestration open source.',
           items: [
             '**Chat général (débutant)** : `ollama run llama3.2:3b` -- la plupart de la documentation, le modèle de démarrage le mieux soutenu.',
             '**Chat général (meilleur choix)** : `ollama run qwen3.8:27b` -- 61,7 SWE-bench Pro, meilleur global sur materiel grand public, tient en 24 Go en Q4. Polyvalent : `ollama run qwen3:30b`. Pour les machines à 8 Go, gardez `ollama run llama3.2:3b`.',
             '**Long contexte / multimodal** : `ollama run llama4:scout` -- contexte 10M tokens + multimodal, MoE (17B actif/109B au total). Nécessite ~55 Go VRAM en Q4 (tient en 24 Go uniquement en 1,78 bit, ~20 tok/s).',
             '**Meilleur petit / 16 Go** : `ollama run gpt-oss:20b` -- 21B au total / 3,6B actif MoE, ~niveau o3-mini, raisonnement reglable. Plus grand : `ollama run gpt-oss:120b` (80 Go).',
-            '**Codage (7B)** : `ollama run qwen3:8b` -- 76% HumanEval, amélioré par rapport à Qwen3, multilingue.',
+            '**Codage (7B)** : `ollama run qwen3:8b` -- multilingue, option solide pour coder sur machines de 8 Go.',
             '**Codage (meilleur agentique, 24B)** : `ollama run devstral-small-2` -- Meilleur modèle de codage agentique (éditions multi-fichiers, débogage). 16 Go RAM. Par Mistral AI.',
             '**Codage (meilleur dense, 27B)** : `ollama run qwen3.8:27b` -- 61,7 SWE-bench Pro. Meilleur modèle de codage dense. 18 Go VRAM.',
             '**Codage (frontière MoE)** : `ollama run kimi-k2.6:cloud` -- SWE-Bench Pro 58.6 (à égalité avec GPT-5.5), tier supérieur. MoE (32B actif/1T au total). Licence Modified MIT.',
             '**Codage (agentique, longue durée)** : `ollama run laguna-xs-2.1` -- MoE 33B/3B actif de Poolside, SWE-bench Verified 70,9%, contexte 256K. Conçu pour les boucles multi-étapes planifier → coder → tester → itérer. Licence OpenMDW-1.1.',
             '**Tâches d\'agent et appel d\'outils** : `ollama run gemma4:e4b` -- Lancé le 2 avril 2026. Support d\'appel d\'outils intégré + vision. Recommandé pour les agents locaux, l\'appel de fonctions et la sortie structurée. 6 Go RAM.',
             '**Raisonnement et mathématiques** : `ollama run deepseek-r1:7b` -- modèle de chaîne de pensée, meilleure performance mathématique locale à 7B.',
-            '**Multilingue** : `ollama run qwen3:8b` -- 29+ langues natives, support non-anglais le plus fort, 76% HumanEval.',
+            '**Multilingue** : `ollama run qwen3:8b` -- 29+ langues natives, option multilingue polyvalente.',
             '**Non censuré / polyvalent** : `ollama run dolphin3` -- Dolphin 3.0 (Cognitive Computations, construit sur Llama 3.1), sans filtrage de contenu intégré, pour le chat, le codage et les tâches agentiques.',
             '**Compréhension d\'images** : `ollama run gemma4:e4b` -- vision + appel d\'outils (juillet 2026). Ou `ollama run llama3.2-vision:11b` pour une vision dédiée.',
             '**Rapide et léger** : `ollama run gemma2:2b` -- inférence CPU la plus rapide, 1,7 Go RAM.',
-            '**Haute qualité (16 Go RAM)** : `ollama run mistral-small3.1` -- qualité proche de 70B à 14 Go RAM.',
-            '**Domotique / IA mot de réveil** : `ollama run phi4-mini` — Phi-4 Mini (3,8B, ~3 Go VRAM) gère les commandes vocales Home Assistant à 20–25 tok/sec sur mini PC sans GPU dédié. Voir [guide d\'intégration Home Assistant + Ollama →](/smart-home/home-assistant-ollama-integration).',
+            '**Haute qualité (16 Go RAM)** : `ollama run mistral-small3.1` -- bonne qualité à 14 Go RAM.',
+            '**Domotique / IA mot de réveil** : `ollama run phi4-mini` — Phi-4 Mini (3,8B, ~3 Go VRAM) peut gérer les commandes vocales Home Assistant sur un mini PC sans GPU dédié ; la vitesse dépend de votre matériel. Voir [guide d\'intégration Home Assistant + Ollama →](/smart-home/home-assistant-ollama-integration).',
           ],
           image: '/images/top-open-source-models-ollama-use-case-picks-hero-fr.webp',
           imageCaption: 'Sélection Ollama par cas d\'usage : juillet 2026. Chat : llama4:scout, codage : qwen3.8:27b ou laguna-xs-2.1, raisonnement : deepseek-r1:7b.',
@@ -2205,7 +2206,7 @@ schema: {
         deepseekR1: {
           id: 'deepseek-r1',
           title: 'DeepSeek-R1 : Percée en raisonnement',
-          content: 'DeepSeek-R1 a été lancé en janvier 2025 et représente une avancée significative en raisonnement sur tailles locales. Le modèle effectue un raisonnement explicite en chaîne de pensée (CoT) : vous voyez les chaînes de pensée internes du modèle avant la réponse finale.',
+          content: 'DeepSeek-R1 a été lancé en janvier 2025 et représente une avancée significative en raisonnement sur tailles locales. Le modèle effectue un raisonnement explicite en chaîne de pensée (CoT) : vous voyez les chaînes de pensée internes du modèle avant la réponse finale. Note de version : DeepSeek-R1 est un modèle de la génération précédente. La famille open-weight actuelle de DeepSeek est DeepSeek-V4, que la bibliothèque Ollama ne listait pas lors de la vérification ; les versions distillées deepseek-r1 (1,5B à 70B) restent l\'option de raisonnement téléchargeable. DeepSeek a remplacé le modèle R1 hébergé par DeepSeek-V4 dans son API.',
           codeBlock: `ollama run deepseek-r1:7b
 # Exemple de prompt : "Si deux trains se rapprochent d'une gare à 100 km/h, quand se rencontrent-ils ?"
 # DeepSeek-R1:7b répond avec les chaînes de pensée visibles :
@@ -2214,14 +2215,12 @@ schema: {
 # </pensée>
 # Réponse : Ils se rencontrent ...`,
           codeLanguage: 'bash',
-          image: '/images/ollama-deepseek-r1-reasoning-comparison-fr.svg',
-          imageCaption: 'DeepSeek-R1 7B vs Mistral Small: 52% vs 28% MATH. Raisonnement chain-of-thought -- plus lent, nettement plus précis.',
           items: [
-            '**Tailles disponibles** : 1.5B (mobile), 7B, 70B. 1.5B suffisant pour appareils éducatifs ; 7B surpasse Llama 3.3 13B en mathématiques.',
-            '**Performance sur benchmarks** : 52 % MATH (vs 23 % Llama 3.1 8B), logique améliorée et résolution multiétapes.',
+            '**Tailles disponibles** : versions distillées de 1.5B à 70B.',
+            '**Performance** : logique améliorée et résolution multiétapes.',
             '**Exigences RAM** : 1.5B : 2 GB, 7B : 6 GB, 70B : 44 GB (quantification Q4).',
-            '**Licence** : Licences DeepSeek (certaines restrictions sur décompilation ; vérifier avant déploiement d\'entreprise).',
-            '**Gestion des données EU** : Lorsqu\'il est déployé dans les régions UE, DeepSeek-R1 traite les données selon les règlementations UE. L\'exécution locale sur serveurs privés ou appareils garantit la souveraineté des données -- aucune transmission cloud requise.',
+            '**Licence** : les modèles DeepSeek-R1 sont sous licence MIT ; les versions distillées héritent en plus des conditions de leurs modèles de base Qwen ou Llama. Vérifiez la fiche du modèle avant tout déploiement.',
+            '**Gestion des données** : exécuté en local sur vos propres serveurs ou appareils, le modèle ne fait pas sortir vos prompts ni ses réponses de votre système. La conformité au RGPD dépend de votre configuration globale (pas un conseil juridique).',
           ],
         },
         visionModels: {
@@ -2233,7 +2232,7 @@ schema: {
           imageCaption: '4 modèles Ollama vision : llama3.2-vision:11b (8 Go), gemma3:9b (6 Go), minicpm-v (5,5 Go). Tous en local.',
           rows: [
             { 'Modèle': '[Llama 3.2 Vision 11B](https://ollama.com/library/llama3.3)', 'RAM': '11 GB', 'Support image': 'JPEG, PNG, GIF; entrée multi-images', 'Commande Ollama': 'ollama run llama3.2-vision:11b' },
-            { 'Modèle': '[Qwen2-VL 7B](https://ollama.com/library/qwen3)', 'RAM': '8 GB', 'Support image': 'JPEG, PNG; meilleur en OCR et diagrammes', 'Commande Ollama': 'ollama run qwen2-vl:7b' },
+            { 'Modèle': '[Qwen2.5-VL 7B](https://ollama.com/library/qwen2.5vl)', 'RAM': '8 GB', 'Support image': 'JPEG, PNG; meilleur en OCR et diagrammes', 'Commande Ollama': 'ollama run qwen2.5vl:7b' },
             { 'Modèle': '[Gemma 3 Vision 9B](https://ollama.com/library/gemma3)', 'RAM': '9.5 GB', 'Support image': 'JPEG, PNG; contexte natif 128K', 'Commande Ollama': 'ollama run gemma3:9b' },
             { 'Modèle': '[Mistral AI Pixtral 12B](https://ollama.com/library/mistral)', 'RAM': '12.5 GB', 'Support image': 'JPEG, PNG; basé sur latent', 'Commande Ollama': 'ollama run pixtral:12b' },
           ],
@@ -2241,21 +2240,21 @@ schema: {
         fullTop10: {
           id: 'full-top-10',
           title: 'Comparaison complète du Top 10',
-          content: 'Les 10 modèles les plus téléchargés sur Ollama en avril 2026 selon les téléchargements mensuels :',
-          columns: ['#', 'Modèle', 'Meilleur pour', 'RAM', 'HumanEval'],
+          content: 'Les nombres de téléchargements favorisent encore Llama 3.x en raison de la place des tutoriels. Pour de nouveaux projets en 2026, privilégiez Qwen3.8-27B (meilleur global sur matériel grand public), Laguna XS 2.1 ou Devstral Small 2 (codage), gpt-oss:20b et qwen3:30b.',
+          columns: ['#', 'Modèle', 'Meilleur pour', 'RAM', 'Benchmark'],
           image: '/images/top-open-source-models-ollama-top-models-hero-fr.webp',
-          imageCaption: 'Top 10 modèles Ollama par téléchargements : RAM 1,7 Go (gemma2:2b) à 14 Go (mistral-small3.1). HumanEval 39-74 %.',
+          imageCaption: 'Meilleurs modèles Ollama 2026 : Qwen3.8-27B (meilleur global, 24 Go en Q4), Kimi K2.6, Laguna XS 2.1 (codage agentique), gpt-oss:20b. Llama 4 Scout pour un contexte de 10M tokens (~55 Go).',
           rows: [
-            { '#': '1', 'Modèle': '[Llama 3.1 8B](https://ollama.com/library/llama3.3)', 'Meilleur pour': 'Débutants, polyvalent', 'RAM': '6.5 GB', 'HumanEval': '68.2 %' },
-            { '#': '2', 'Modèle': '[Qwen3 8B](https://ollama.com/library/qwen3)', 'Meilleur pour': 'Codage, mathématiques', 'RAM': '6.5 GB', 'HumanEval': '75.4 %' },
-            { '#': '3', 'Modèle': '[Mistral Small](https://ollama.com/library/mistral)', 'Meilleur pour': 'Multilingue', 'RAM': '6.5 GB', 'HumanEval': '73.2 %' },
-            { '#': '4', 'Modèle': 'Llama 3.3 70B', 'Meilleur pour': 'Haut débit', 'RAM': '44 GB', 'HumanEval': '86.1 %' },
-            { '#': '5', 'Modèle': '[Laguna XS 2.1](https://ollama.com/library/laguna-xs-2.1)', 'Meilleur pour': 'Codage agentique, longue durée', 'RAM': 'Quantifié', 'HumanEval': '70.9 % SWE-bench Verified' },
-            { '#': '6', 'Modèle': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', 'Meilleur pour': 'Raisonnement', 'RAM': '6.5 GB', 'HumanEval': '76.8 %' },
-            { '#': '7', 'Modèle': '[Gemma 3 9B](https://ollama.com/library/gemma3)', 'Meilleur pour': 'Vision + texte', 'RAM': '9.5 GB', 'HumanEval': '72.1 %' },
-            { '#': '8', 'Modèle': 'Llama 3.2 Vision 11B', 'Meilleur pour': 'Multimodal', 'RAM': '11 GB', 'HumanEval': '71.5 %' },
-            { '#': '9', 'Modèle': 'Phi-3.5 Mini 3.8B', 'Meilleur pour': 'Petits appareils', 'RAM': '3 GB', 'HumanEval': '61.2 %' },
-            { '#': '10', 'Modèle': 'Qwen3 32B', 'Meilleur pour': 'Qualité plutôt que vitesse', 'RAM': '20 GB', 'HumanEval': '81.7 %' },
+            { '#': '1', 'Modèle': '[Qwen3.8-27B](https://ollama.com/library/qwen3.8)', 'Meilleur pour': 'Meilleur global sur matériel grand public', 'RAM': '24 Go (Q4)', 'Benchmark': '61,7 SWE-bench Pro (selon Qwen)' },
+            { '#': '2', 'Modèle': '[Kimi K2.6](https://huggingface.co/moonshotai)', 'Meilleur pour': 'Codage de frontière, MoE (32B/1T), Modified MIT', 'RAM': 'Quantifié', 'Benchmark': '58,6 SWE-Bench Pro' },
+            { '#': '3', 'Modèle': '[gpt-oss:20b](https://ollama.com/library/gpt-oss)', 'Meilleur pour': 'Meilleur petit modèle / 16 Go, raisonnement réglable', 'RAM': '16 Go', 'Benchmark': '~o3-mini' },
+            { '#': '4', 'Modèle': '[qwen3:30b](https://ollama.com/library/qwen3)', 'Meilleur pour': 'Polyvalent ; qwen3-coder:30b pour le code', 'RAM': '~18 Go', 'Benchmark': '—' },
+            { '#': '5', 'Modèle': '[Laguna XS 2.1](https://ollama.com/library/laguna-xs-2.1)', 'Meilleur pour': 'Codage agentique, longue durée (planifier/coder/tester/itérer)', 'RAM': 'Quantifié', 'Benchmark': '70,9 % SWE-bench Verified' },
+            { '#': '6', 'Modèle': '[Devstral Small 2 24B](https://ollama.com/library/devstral-small-2)', 'Meilleur pour': 'Codage agentique (multi-fichiers)', 'RAM': '15 Go', 'Benchmark': '68,0 % SWE-bench Verified (selon Mistral)' },
+            { '#': '7', 'Modèle': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', 'Meilleur pour': 'Raisonnement, maths', 'RAM': '5 Go', 'Benchmark': '—' },
+            { '#': '8', 'Modèle': '[gemma4:e4b](https://ollama.com/library/gemma4)', 'Meilleur pour': 'Vision + appel d\'outils (multimodal)', 'RAM': '~6 Go', 'Benchmark': 'Prêt pour les agents' },
+            { '#': '9', 'Modèle': '[Llama 4 Scout](https://ollama.com/library/llama4)', 'Meilleur pour': 'Contexte long 10M + multimodal, MoE', 'RAM': '~55 Go (Q4)', 'Benchmark': 'Contexte 10M' },
+            { '#': '10', 'Modèle': '[Llama 3.2 3B](https://ollama.com/library/llama3.2)', 'Meilleur pour': 'Premier modèle, chat général', 'RAM': '2,5 Go', 'Benchmark': '—' },
           ],
         },
         howToBrowse: {
@@ -2278,19 +2277,17 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
 # Résout les tâches de raisonnement avec CoT`,
           codeLanguage: 'bash',
           items: [
-            'Ouvrez [ollama.ai/library](https://ollama.ai/library) dans un navigateur pour la bibliothèque complète interrogeable de plusieurs centaines de modèles.',
-            'Options de filtrage : taille du modèle, licence, date de publication, benchmarks (MMLU, HumanEval, MATH).',
-            'Notation par modèle : téléchargements utilisateur, étoiles GitHub (pour le modèle de base), étoiles Ollama.',
-            'Nouveaux modèles : La bibliothèque Ollama est mise à jour chaque semaine (jeudis, 18:00 UTC).',
+            'Ouvrez [ollama.com/library](https://ollama.com/library) dans un navigateur pour la bibliothèque complète interrogeable de plusieurs centaines de modèles.',
+            'Les nouveaux modèles apparaissent en général dans la bibliothèque quelques jours après leur sortie.',
           ],
         },
         regionalContext: {
           id: 'regional-context',
           title: 'Comment les règles régionales de confidentialité influencent-elles votre choix de modèle Ollama ?',
           content: [
-            '**UE / RGPD + conformité des licences.** Pour les organisations de l\'UE qui déploient des modèles Ollama en production, la licence compte autant que la performance. Apache 2.0 (entièrement ouverte, usage commercial autorisé) : Mistral Small, Mistral Small 3.1, Qwen3 8B, Qwen3.8-27B, Devstral Small 2, Granite 4.2. Licence communautaire Meta Llama (usage commercial restreint au-delà de 700 M d\'utilisateurs actifs mensuels) : Llama 3.1 8B, Llama 3.2 3B, Llama 3.2 Vision 11B. MIT (usage commercial autorisé) : DeepSeek-R1 7B et 14B. MIT modifiée (usage commercial autorisé avec clause d\'attribution) : Kimi K2.6. OpenMDW-1.1 (permissive, usage commercial autorisé) : Laguna XS 2.1. Vérifiez toujours les termes de licence avant un déploiement commercial. Pour les entreprises de l\'UE dans des secteurs réglementés, les modèles Mistral (France, Apache 2.0) comme Devstral Small 2 sont un choix par défaut raisonnable : origine européenne et licence permissive. Exécuter les modèles entièrement sur site avec Ollama signifie que les prompts ne sont pas envoyés à des serveurs externes ; cela soutient, sans suffire à lui seul, le respect du RGPD (un tag `:cloud` envoie bien des données au service hébergé d\'Ollama).',
-            '**Japon (METI).** Pour les déploiements d\'entreprise japonais avec Ollama, Qwen3 / Qwen3.8 est une famille recommandée : elle traite nativement le texte japonais, ce qui aide le temps d\'inférence et le cache KV. Pour le codage en japonais : Qwen3.8-27B (61,7 SWE-bench Pro selon Qwen) gère nativement les commentaires de code en japonais. La documentation de gouvernance de l\'IA du METI demande généralement la version exacte du modèle. Utilisez `ollama show <modèle>` pour obtenir la spécification complète (paramètres, quantification, longueur de contexte) pour vos dossiers de conformité.',
-            '**Chine.** Selon les Mesures de la CAC sur l\'IA générative (2023), les organisations fournissant des services d\'IA aux utilisateurs finaux doivent enregistrer les modèles utilisés. Qwen3 / Qwen3.8 (Alibaba, Apache 2.0) est un choix naturel pour les déploiements d\'entreprise chinois avec Ollama : origine chinoise, licence Apache 2.0, bonnes performances en chinois. Kimi K2.6 (Moonshot AI, MIT modifiée) est aussi d\'origine chinoise, mais Ollama ne le liste qu\'en tag cloud et l\'exécution locale exige du matériel de classe serveur. Commandes : `ollama run qwen3.8:27b` pour la meilleure qualité, `ollama run qwen3:8b` pour la vitesse. DeepSeek-R1 (licence MIT) convient au raisonnement. Pour les données traitées localement avec Ollama, l\'inférence elle-même ne déclenche pas les exigences de transfert transfrontalier de la PIPL ; vérifiez vos propres obligations de conformité.',
+            '**UE / RGPD + conformité des licences.** Pour les organisations de l\'UE qui déploient des modèles Ollama en production, la licence compte autant que la performance. Apache 2.0 (entièrement ouverte, usage commercial autorisé) : Mistral Small 3, Mistral Small 3.1, Qwen3 8B, Qwen3.8-27B, Devstral Small 2, Granite 4.2. Licence communautaire Meta Llama (usage commercial restreint au-delà de 700 M d\'utilisateurs actifs mensuels) : Llama 3.1 8B, Llama 3.2 3B, Llama 3.2 Vision 11B. Llama 3.2 Vision fait exception : sa politique d\'utilisation acceptable n\'accorde pas les droits de la licence aux personnes ou entreprises domiciliées dans l\'UE (les utilisateurs finaux de produits construits dessus ne sont pas concernés) ; vérifiez-le avant tout usage dans l\'UE. MIT (usage commercial autorisé) : DeepSeek-R1 7B et 14B. MIT modifiée (usage commercial autorisé avec clause d\'attribution) : Kimi K2.6. OpenMDW-1.1 (permissive, usage commercial autorisé) : Laguna XS 2.1. Vérifiez toujours les termes de licence avant un déploiement commercial. Pour les entreprises de l\'UE dans des secteurs réglementés, les modèles Mistral (France, Apache 2.0) comme Devstral Small 2 sont un choix par défaut raisonnable : origine européenne et licence permissive. Exécuter les modèles entièrement sur site avec Ollama signifie que les prompts ne sont pas envoyés à des serveurs externes ; cela soutient, sans suffire à lui seul, le respect du RGPD (un tag `:cloud` envoie bien des données au service hébergé d\'Ollama).',
+            '**Japon (METI).** Pour les déploiements d\'entreprise japonais avec Ollama, Qwen3 / Qwen3.8 est une famille recommandée : elle traite nativement le texte japonais, ce qui aide le temps d\'inférence et le cache KV. Pour le codage en japonais : Qwen3.8-27B (61,7 SWE-bench Pro selon Qwen) gère nativement les commentaires de code en japonais. Consigner la version exacte du modèle est une bonne pratique pour la documentation de conformité. Utilisez `ollama show <modèle>` pour obtenir la spécification complète (paramètres, quantification, longueur de contexte) pour vos dossiers de conformité.',
+            '**Chine.** Les Mesures de la CAC sur l\'IA générative (2023) peuvent imposer des obligations de dépôt ou d\'évaluation de sécurité aux fournisseurs de services d\'IA générative destinés au public en Chine ; leur application à votre cas relève de votre conseiller juridique. Qwen3 / Qwen3.8 (Alibaba, Apache 2.0) est un choix naturel pour les déploiements d\'entreprise chinois avec Ollama : origine chinoise, licence Apache 2.0, bonnes performances en chinois. Kimi K2.6 (Moonshot AI, MIT modifiée) est aussi d\'origine chinoise, mais Ollama ne le liste qu\'en tag cloud et l\'exécution locale exige du matériel de classe serveur. Commandes : `ollama run qwen3.8:27b` pour la meilleure qualité, `ollama run qwen3:8b` pour la vitesse. DeepSeek-R1 (licence MIT) convient au raisonnement. Une inférence exécutée localement avec Ollama n\'envoie pas à elle seule de données à l\'étranger, ce qui écarte la question du transfert transfrontalier pour cette étape ; savoir si la PIPL ou d\'autres obligations s\'appliquent à votre traitement relève de vous et de votre conseiller juridique. Cette section est une information générale, non un conseil juridique.',
           ],
         },
         commonMistakes: {
@@ -2302,7 +2299,7 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
             },
             {
               q: 'J\'utilise un modèle polyvalent comme Llama 3.3, mais le codage est lent. Pourquoi ?',
-              a: 'Llama 3.1 8B est convivial, mais Qwen3 ou Mistral Small sont spécialisés pour les tâches techniques. Pour le codage : basculez à Qwen3 8B (75.4 % HumanEval vs 68.2 % pour Llama). Les deux fonctionnent en moins de 8 GB RAM.',
+              a: 'Llama 3.1 8B est convivial, mais Qwen3 ou Mistral Small sont spécialisés pour les tâches techniques. Pour le codage : essayez Qwen3 8B à la place de Llama 3.1 8B et comparez les résultats sur vos propres tâches. Les deux fonctionnent en moins de 8 GB RAM.',
             },
             {
               q: 'J\'ai téléchargé un modèle mais ne le vois pas dans la liste. Comment vérifier l\'installation ?',
@@ -2349,23 +2346,23 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
             },
             {
               q: 'Quel modèle a le meilleur support du français ?',
-              a: 'Qwen3 8B a un support français supérieur (entraîné sur CulturaX et texte wiki FR). Llama 3.3 est adéquat pour le français, mais Qwen est plus précis. Mistral Small est compétent en français et espagnol.',
+              a: 'Les modèles multilingues comme Qwen3 / Qwen3.8 et Mistral Small 3.1 prennent en charge le français ; cette page ne les classe pas selon la qualité du français, testez-les donc sur vos propres textes.',
             },
             {
               q: 'Les modèles Ollama sont-ils vraiment gratuits ?',
-              a: 'Oui. Tous les modèles disponibles sur Ollama sont open source avec des licences libres (Apache 2.0, Meta Llama 3 Community, Deepseek). Pas d\'abonnements, pas de frais d\'API. Téléchargez, installez localement et utilisez sans limite.',
+              a: 'Le téléchargement et l\'exécution en local n\'entraînent ni abonnement ni frais d\'API, mais tous les modèles ne sont pas open source au sens de l\'OSI : Llama 3.x/4.x utilisent la licence communautaire Meta Llama (non approuvée par l\'OSI, usage commercial restreint au-delà de 700 M d\'utilisateurs actifs mensuels), Mistral Small 3.1, Qwen3 et Gemma 4 sont sous Apache 2.0, Gemma 2 et Gemma 3 sous les conditions d\'utilisation Gemma de Google. Vérifiez la licence avant un déploiement commercial.',
             },
             {
               q: 'Quelle est vraiment la vitesse de DeepSeek-R1 ?',
-              a: 'Vitesse de génération : 15-25 tokens/sec sur M1 Pro (similaire à Llama 3.3 7B). La latence totale est plus élevée car les chaînes de pensée sont générées -- attendez-vous à 8-12 secondes pour les requêtes moyennes. Pour l\'interaction en temps réel, utilisez Llama 3.3 ou Mistral.',
+              a: 'La vitesse dépend du matériel, de la quantification et du prompt ; cette page ne publie pas de mesures. Comme DeepSeek-R1 génère une chaîne de pensée avant de répondre, il produit plus de tokens par réponse qu\'un modèle de chat standard et met donc plus de temps ; pour l\'interaction en temps réel, un modèle de chat standard convient mieux.',
             },
             {
               q: 'Pourquoi utiliser Ollama plutôt que simplement ChatGPT Plus ?',
-              a: 'Confidentialité : aucun chat n\'est transmis à OpenAI. Coût : pas d\'abonnement mensuel ; investissement GPU unique. Hors ligne : fonctionne complètement sans Internet. Personnalisable : invites système, directives de comportement et paramètres entièrement sous votre contrôle.',
+              a: 'Confidentialité : en exécution locale, vos prompts ne quittent pas l\'appareil (hors tags `:cloud`). Coût : pas d\'abonnement ni de frais d\'API pour les modèles eux-mêmes, mais des coûts de matériel et d\'électricité. Hors ligne : après le téléchargement, l\'inférence fonctionne sans connexion Internet. Personnalisable : invites système et paramètres du modèle sous votre contrôle.',
             },
             {
               q: 'Les modèles Ollama peuvent-ils traiter les images ?',
-              a: 'Oui. Llama 3.2 Vision, Qwen2-VL et Gemma 3 sont tous multimodaux. Chargez les images comme fichiers locaux ; aucune transmission cloud. Support : JPEG, PNG, GIF.',
+              a: 'Oui. Llama 3.2 Vision, Qwen2.5-VL et Gemma 3 sont tous multimodaux. Chargez les images comme fichiers locaux ; en exécution locale, aucune transmission cloud. Support : JPEG, PNG, GIF.',
             },
             {
               q: 'Comment mettre à jour vers les nouvelles versions des modèles Ollama ?',
@@ -2373,23 +2370,23 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
             },
             {
               q: 'Dois-je me soucier du RGPD avec Ollama ?',
-              a: 'Oui. Le RGPD exige des mesures de sécurité appropriées pour les données personnelles. L\'inférence locale sur appareils privés ou serveurs satisfait les exigences de protection par défaut. Aucune transmission cloud signifie : souveraineté des données, aucune export de données, conformité aux cadres de sécurité. Remarque : si vous utilisez un modèle cloud, vérifiez d\'abord les contrats de traitement des données.',
+              a: 'Oui, dès que vous traitez des données personnelles. Le RGPD (art. 32) exige des mesures de sécurité appropriées. Une inférence locale sur des appareils ou serveurs privés peut aider à répondre aux exigences de protection des données dès la conception : sans transmission vers le cloud, les données ne quittent pas votre système, ce qui facilite la souveraineté des données ; la conformité effective dépend toutefois de votre configuration globale (pas un conseil juridique). Remarque : si vous utilisez un modèle cloud, vérifiez d\'abord les contrats de traitement des données.',
             },
             {
               q: 'Ollama convient-il aux petites et moyennes entreprises (PME) françaises ?',
-              a: 'Oui. Les PME françaises bénéficient de : souveraineté des données (sans verrouillage éditeur cloud), conformité aux standards de sécurité IT (cadres de sécurité), scalabilité sur matériel standard et économies sans frais d\'API. Qwen3 8B s\'exécute sur une GPU de bureau typique ; Llama 3.1 8B est un modèle PME éprouvé pour les outils internes, l\'automatisation du service client et le traitement de documents.',
+              a: 'Oui, dans de nombreux cas. Les PME françaises peuvent y gagner : souveraineté des données (sans verrouillage éditeur cloud), appui à la mise en œuvre de standards de sécurité IT (la conformité effective dépend de votre configuration globale ; pas un conseil juridique), scalabilité sur matériel standard et économies sur les frais d\'API. Qwen3 8B s\'exécute sur une GPU de bureau typique ; Llama 3.1 8B est souvent utilisé pour les outils internes, l\'automatisation du service client et le traitement de documents.',
             },
             {
               q: 'Quel est le nom officiel de l\'entreprise derrière Ollama ?',
-              a: 'L\'entreprise est Ollama Inc., une startup financée en Série B basée à Palo Alto, en Californie, fondée en 2023 par Jeffrey Morgan et Michael Chiang.',
+              a: 'L\'entreprise derrière Ollama est Ollama Inc. « Ollama » désigne à la fois l\'entreprise et l\'outil CLI open source ainsi que le runtime de modèles qu\'elle publie ; la première version publique du projet, la v0.0.1, est apparue sur GitHub le 8 juillet 2023.',
             },
             {
               q: 'Quel modèle Dolphin dois-je utiliser avec Ollama ?',
-              a: 'Utilisez Dolphin 3.0 (`ollama pull dolphin3`), pas l\'ancien `dolphin-mistral` (dernière mise à jour en 2024, basé sur Mistral 0.2). Dolphin 3.0, maintenu par Cognitive Computations, est construit sur Llama 3.1, ne comporte aucun filtrage de contenu intégré et est conçu comme un modèle local polyvalent pour le codage, les mathématiques, les tâches agentiques et le chat sans restriction.',
+              a: 'Utilisez Dolphin 3.0 (`ollama pull dolphin3`), pas l\'ancien `dolphin-mistral` (dernière mise à jour en 2024, basé sur Mistral 0.2). Dolphin 3.0, maintenu par Cognitive Computations, est construit sur Llama 3.1, ne comporte aucun filtrage de contenu intégré et est conçu comme un modèle local polyvalent pour le codage, les mathématiques, les tâches agentiques et le chat sans restriction de contenu intégrée. Faute de filtrage de sécurité intégré, vous êtes responsable de l\'usage de ses sorties, et les termes de la licence Llama 3.1 s\'appliquent.',
             },
             {
               q: 'Quels modèles Ollama fonctionnent le mieux pour les tâches en russe ?',
-              a: 'Qwen3 / Qwen3.8 et Mistral Small 3.1 incluent tous deux le russe dans leurs données d\'entraînement multilingues natives. Qwen3 obtient de meilleurs scores sur les benchmarks non anglophones, tandis que Mistral Small 3.1 offre une fluidité conversationnelle en russe légèrement supérieure de façon informelle. Aucun des deux n\'est d\'origine russe.',
+              a: 'Qwen3 / Qwen3.8 et Mistral Small 3.1 incluent tous deux le russe dans leurs données d\'entraînement multilingues natives. Cette page ne les classe pas pour le russe ; testez les deux avec vos propres prompts. Aucun des deux n\'est d\'origine russe.',
             },
           ],
         },
@@ -2410,9 +2407,8 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
           title: 'Sources',
           items: [
             '[Bibliothèque de modèles Ollama](https://ollama.ai/library) -- Plusieurs centaines de modèles avec statistiques de téléchargement en direct.',
-            '[Ollama GitHub : Modèles populaires par téléchargements](https://github.com/ollama/ollama/issues/3149) -- Entrées mensuelles sur les utilisateurs et tendances (données publiques).',
-            '[Livre blanc DeepSeek-R1](https://arxiv.org/abs/2501.12948) -- "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning" (janvier 2025).',
-            '[Annonce Gemma 3](https://blog.google/technology/googles-latest-gemma-models/) -- Blog Google : Gemma 3 Multimodal, contexte 128K, février 2026.',
+                        '[Livre blanc DeepSeek-R1](https://arxiv.org/abs/2501.12948) -- "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning" (janvier 2025).',
+            '[Annonce Gemma 3](https://developers.googleblog.com/en/introducing-gemma3/) -- Blog Google Developers : Gemma 3 multimodal, contexte 128K, mars 2025.',
           ],
         },
       },
@@ -2423,7 +2419,7 @@ schema: {
         'description': 'Version actuelle d\'Ollama v0.40.5 (octobre 2026), changelog complet et modèles les plus récents : Nemotron 3.5, Laguna XS 2.1, Kimi K2.7 Code, Kimi K2.6, Qwen3.8, DeepSeek V4. Benchmarks vérifiés, RAM, commandes pull.',
         'url': 'https://www.promptquorum.com/fr/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-11',
-        'dateModified': '2026-10-17',
+        'dateModified': '2026-10-19',
         'author': {
           '@type': 'Person',
           'name': 'Hans Kuepper',
@@ -2443,18 +2439,21 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'Top 10 modèles open source sur Ollama',
+        'name': 'Meilleurs modèles open source sur Ollama -- 2026',
+        'numberOfItems': 12,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B', 'description': 'Le modèle le plus téléchargé, idéal pour les débutants et les applications polyvalentes. 6.5 GB RAM requis.' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Qwen3 8B', 'description': 'Le modèle en plus forte croissance avec des performances supérieures en codage et mathématiques. 6.5 GB RAM requis.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small', 'description': 'Modèle multilingue avec bon support du français et espagnol. 6.5 GB RAM requis.' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Llama 3.3 70B', 'description': 'Grand modèle qui concurrence GPT-4 sur de nombreux benchmarks. 44 GB RAM requis.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Laguna XS 2.1', 'description': 'Modèle de codage agentique de Poolside pour sessions de longue durée, 70.9% SWE-bench Verified, contexte 256K. Licence OpenMDW-1.1.' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'DeepSeek-R1 7B', 'description': 'Modèle de raisonnement avec capacités explicites de chaîne de pensée, idéal pour problèmes mathématiques et logiques. 6.5 GB RAM requis.' },
-          { '@type': 'ListItem', 'position': 7, 'name': 'Gemma 3 9B', 'description': 'Modèle multimodal avec capacités de vision et longueur de contexte 128K. 9.5 GB RAM requis.' },
-          { '@type': 'ListItem', 'position': 8, 'name': 'Llama 3.2 Vision 11B', 'description': 'Modèle de vision pour traitement d\'images et tâches multimodales. 11 GB RAM requis.' },
-          { '@type': 'ListItem', 'position': 9, 'name': 'Phi-3.5 Mini 3.8B', 'description': 'Modèle très petit et efficace, idéal pour les appareils mobiles et IoT. 3 GB RAM requis.' },
-          { '@type': 'ListItem', 'position': 10, 'name': 'Qwen3 32B', 'description': 'Variante plus grande de Qwen avec qualité supérieure pour les tâches complexes. 20 GB RAM requis.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Qwen3.8-27B', 'url': 'https://ollama.com/library/qwen3.8', 'description': 'Meilleur global sur matériel grand public. 61,7 SWE-bench Pro (selon Qwen). Tient en 24 Go en Q4. Apache 2.0. ollama run qwen3.8:27b' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Kimi K2.6', 'url': 'https://ollama.com/library/kimi-k2.6', 'description': 'Modèle de codage MoE de frontière. SWE-Bench Pro 58,6. 32B actifs / 1T au total. Licence Modified MIT. ollama run kimi-k2.6:cloud' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'gpt-oss:20b', 'url': 'https://ollama.com/library/gpt-oss', 'description': 'Petit modèle pour 16 Go. 21B au total / 3,6B actifs MoE. Niveau ~o3-mini, raisonnement réglable. ollama run gpt-oss:20b' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen3:30b', 'url': 'https://ollama.com/library/qwen3', 'description': 'Modèle polyvalent ; qwen3-coder:30b pour la complétion de code. ollama run qwen3:30b' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Laguna XS 2.1', 'url': 'https://ollama.com/library/laguna-xs-2.1', 'description': 'Codage agentique de longue durée. 33B/3B actifs MoE. SWE-bench Verified 70,9 %. Licence OpenMDW-1.1. ollama run laguna-xs-2.1' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'Modèle de raisonnement en chaîne de pensée. 5 Go de RAM. ollama run deepseek-r1:7b' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'gemma4:e4b', 'url': 'https://ollama.com/library/gemma4', 'description': 'Vision et appel d\'outils (E4B+). ~6 Go de RAM. ollama run gemma4:e4b' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Llama 4 Scout', 'url': 'https://ollama.com/library/llama4', 'description': 'Contexte long (10M tokens) et grand modèle multimodal. MoE 17B actifs/109B au total. ~55 Go en Q4. ollama run llama4:scout' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Devstral Small 2 24B', 'url': 'https://ollama.com/library/devstral-small-2', 'description': 'Codage agentique (éditions multi-fichiers, débogage). 16 Go de RAM. ollama run devstral-small-2' },
+          { '@type': 'ListItem', 'position': 10, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': 'Bonne qualité dans la tranche 16 Go. 14 Go de RAM. Apache 2.0. ollama run mistral-small3.1' },
+          { '@type': 'ListItem', 'position': 11, 'name': 'gemma2:2b', 'url': 'https://ollama.com/library/gemma2', 'description': 'Très léger. 1,7 Go de RAM. ollama run gemma2:2b' },
+          { '@type': 'ListItem', 'position': 12, 'name': 'phi4-mini', 'url': 'https://ollama.com/library/phi4-mini', 'description': 'Petit modèle orienté raisonnement. 2,5 Go de RAM. ollama run phi4-mini' },
         ],
       },
       faqSchema: {
@@ -2514,7 +2513,7 @@ schema: {
             'name': 'Quel modèle a le meilleur support du français ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 8B a un support français supérieur (entraîné sur CulturaX et texte wiki FR). Llama 3.3 est adéquat pour le français, mais Qwen est plus précis. Mistral Small est compétent en français et espagnol.',
+              'text': 'Les modèles multilingues comme Qwen3 / Qwen3.8 et Mistral Small 3.1 prennent en charge le français ; cette page ne les classe pas selon la qualité du français, testez-les donc sur vos propres textes.',
             }
           },
           {
@@ -2522,7 +2521,7 @@ schema: {
             'name': 'Les modèles Ollama sont-ils vraiment gratuits ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui. Tous les modèles disponibles sur Ollama sont open source avec des licences libres (Apache 2.0, Meta Llama 3 Community, Deepseek). Pas d\'abonnements, pas de frais d\'API. Téléchargez, installez localement et utilisez sans limite.',
+              'text': 'Le téléchargement et l\'exécution en local n\'entraînent ni abonnement ni frais d\'API, mais tous les modèles ne sont pas open source au sens de l\'OSI : Llama 3.x/4.x utilisent la licence communautaire Meta Llama (non approuvée par l\'OSI, usage commercial restreint au-delà de 700 M d\'utilisateurs actifs mensuels), Mistral Small 3.1, Qwen3 et Gemma 4 sont sous Apache 2.0, Gemma 2 et Gemma 3 sous les conditions d\'utilisation Gemma de Google. Vérifiez la licence avant un déploiement commercial.',
             }
           },
           {
@@ -2530,7 +2529,7 @@ schema: {
             'name': 'Quelle est vraiment la vitesse de DeepSeek-R1 ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Vitesse de génération : 15-25 tokens/sec sur M1 Pro (similaire à Llama 3.3 7B). La latence totale est plus élevée car les chaînes de pensée sont générées -- attendez-vous à 8-12 secondes pour les requêtes moyennes. Pour l\'interaction en temps réel, utilisez Llama 3.3 ou Mistral.',
+              'text': 'La vitesse dépend du matériel, de la quantification et du prompt ; cette page ne publie pas de mesures. Comme DeepSeek-R1 génère une chaîne de pensée avant de répondre, il produit plus de tokens par réponse qu\'un modèle de chat standard et met donc plus de temps ; pour l\'interaction en temps réel, un modèle de chat standard convient mieux.',
             }
           },
           {
@@ -2538,7 +2537,7 @@ schema: {
             'name': 'Pourquoi utiliser Ollama plutôt que simplement ChatGPT Plus ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Confidentialité : aucun chat n\'est transmis à OpenAI. Coût : pas d\'abonnement mensuel ; investissement GPU unique. Hors ligne : fonctionne complètement sans Internet. Personnalisable : invites système, directives de comportement et paramètres entièrement sous votre contrôle.',
+              'text': 'Confidentialité : en exécution locale, vos prompts ne quittent pas l\'appareil (hors tags `:cloud`). Coût : pas d\'abonnement ni de frais d\'API pour les modèles eux-mêmes, mais des coûts de matériel et d\'électricité. Hors ligne : après le téléchargement, l\'inférence fonctionne sans connexion Internet. Personnalisable : invites système et paramètres du modèle sous votre contrôle.',
             }
           },
           {
@@ -2546,7 +2545,7 @@ schema: {
             'name': 'Les modèles Ollama peuvent-ils traiter les images ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui. Llama 3.2 Vision, Qwen2-VL et Gemma 3 sont tous multimodaux. Chargez les images comme fichiers locaux ; aucune transmission cloud. Support : JPEG, PNG, GIF.',
+              'text': 'Oui. Llama 3.2 Vision, Qwen2.5-VL et Gemma 3 sont tous multimodaux. Chargez les images comme fichiers locaux ; en exécution locale, aucune transmission cloud. Support : JPEG, PNG, GIF.',
             }
           },
           {
@@ -2562,7 +2561,7 @@ schema: {
             'name': 'Dois-je me soucier du RGPD avec Ollama ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui. Le RGPD exige des mesures de sécurité appropriées pour les données personnelles. L\'inférence locale sur appareils privés ou serveurs satisfait les exigences de protection par défaut. Aucune transmission cloud signifie : souveraineté des données, aucune export de données, conformité aux cadres de sécurité. Remarque : si vous utilisez un modèle cloud, vérifiez d\'abord les contrats de traitement des données.',
+              'text': 'Oui, dès que vous traitez des données personnelles. Le RGPD (art. 32) exige des mesures de sécurité appropriées. Une inférence locale sur des appareils ou serveurs privés peut aider à répondre aux exigences de protection des données dès la conception : sans transmission vers le cloud, les données ne quittent pas votre système, ce qui facilite la souveraineté des données ; la conformité effective dépend toutefois de votre configuration globale (pas un conseil juridique). Remarque : si vous utilisez un modèle cloud, vérifiez d\'abord les contrats de traitement des données.',
             }
           },
           {
@@ -2570,7 +2569,7 @@ schema: {
             'name': 'Ollama convient-il aux petites et moyennes entreprises (PME) françaises ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui. Les PME françaises bénéficient de : souveraineté des données (sans verrouillage éditeur cloud), conformité aux standards de sécurité IT (cadres de sécurité), scalabilité sur matériel standard et économies sans frais d\'API. Qwen3 8B s\'exécute sur une GPU de bureau typique ; Llama 3.1 8B est un modèle PME éprouvé pour les outils internes, l\'automatisation du service client et le traitement de documents.',
+              'text': 'Oui, dans de nombreux cas. Les PME françaises peuvent y gagner : souveraineté des données (sans verrouillage éditeur cloud), appui à la mise en œuvre de standards de sécurité IT (la conformité effective dépend de votre configuration globale ; pas un conseil juridique), scalabilité sur matériel standard et économies sur les frais d\'API. Qwen3 8B s\'exécute sur une GPU de bureau typique ; Llama 3.1 8B est souvent utilisé pour les outils internes, l\'automatisation du service client et le traitement de documents.',
             }
           },
           {
@@ -2578,7 +2577,7 @@ schema: {
             'name': 'Quel est le nom officiel de l\'entreprise derrière Ollama ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'L\'entreprise est Ollama Inc., une startup financée en Série B basée à Palo Alto, en Californie, fondée en 2023 par Jeffrey Morgan et Michael Chiang.',
+              'text': 'L\'entreprise derrière Ollama est Ollama Inc. « Ollama » désigne à la fois l\'entreprise et l\'outil CLI open source ainsi que le runtime de modèles qu\'elle publie ; la première version publique du projet, la v0.0.1, est apparue sur GitHub le 8 juillet 2023.',
             }
           },
           {
@@ -2586,7 +2585,7 @@ schema: {
             'name': 'Quel modèle Dolphin dois-je utiliser avec Ollama ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Utilisez Dolphin 3.0 (`ollama pull dolphin3`), pas l\'ancien `dolphin-mistral` (dernière mise à jour en 2024, basé sur Mistral 0.2). Dolphin 3.0, maintenu par Cognitive Computations, est construit sur Llama 3.1, ne comporte aucun filtrage de contenu intégré et est conçu comme un modèle local polyvalent pour le codage, les mathématiques, les tâches agentiques et le chat sans restriction.',
+              'text': 'Utilisez Dolphin 3.0 (`ollama pull dolphin3`), pas l\'ancien `dolphin-mistral` (dernière mise à jour en 2024, basé sur Mistral 0.2). Dolphin 3.0, maintenu par Cognitive Computations, est construit sur Llama 3.1, ne comporte aucun filtrage de contenu intégré et est conçu comme un modèle local polyvalent pour le codage, les mathématiques, les tâches agentiques et le chat sans restriction de contenu intégrée. Faute de filtrage de sécurité intégré, vous êtes responsable de l\'usage de ses sorties, et les termes de la licence Llama 3.1 s\'appliquent.',
             }
           },
           {
@@ -2594,13 +2593,13 @@ schema: {
             'name': 'Quels modèles Ollama fonctionnent le mieux pour les tâches en russe ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 / Qwen3.8 et Mistral Small 3.1 incluent tous deux le russe dans leurs données d\'entraînement multilingues natives. Qwen3 obtient de meilleurs scores sur les benchmarks non anglophones, tandis que Mistral Small 3.1 offre une fluidité conversationnelle en russe légèrement supérieure de façon informelle. Aucun des deux n\'est d\'origine russe.',
+              'text': 'Qwen3 / Qwen3.8 et Mistral Small 3.1 incluent tous deux le russe dans leurs données d\'entraînement multilingues natives. Cette page ne les classe pas pour le russe ; testez les deux avec vos propres prompts. Aucun des deux n\'est d\'origine russe.',
             }
           },
         ]
       },
       gammaEmbedUrl: '/presentations/top-open-source-models-ollama-static.html',
-      gammaDescription: 'La présentation ci-dessous couvre : top 10 modèles Ollama par nombre de téléchargements, comparaison de performance (60-74% HumanEval), meilleurs modèles par cas d\'utilisation (chat, codage, raisonnement, vision), DeepSeek-R1 chain-of-thought reasoning et commandes pull exactes. Téléchargez le PDF comme votre carte de référence de sélection de modèles Ollama.',
+      gammaDescription: 'La présentation ci-dessous couvre : top 10 modèles Ollama par nombre de téléchargements, comparaison de performance, meilleurs modèles par cas d\'utilisation (chat, codage, raisonnement, vision), DeepSeek-R1 chain-of-thought reasoning et commandes pull exactes. Téléchargez le PDF comme votre carte de référence de sélection de modèles Ollama.',
     },
     ja: {
       theme: 'Best Models',
@@ -2686,6 +2685,7 @@ schema: {
             '**Llama 3.2 3B**は全体で最多ダウンロード。主にチュートリアルとして使用。コンシューマー向け品質では、Qwen3.8-27B（61.7 SWE-bench Pro、Q4で24GBに収まる）が現在の総合最良の選択。',
             '**Qwen3・Qwen3.8**はOllama ライブラリで最速成長のモデルファミリー。Qwen3と新しいQwen 3.6密度バリアントがQwen3を急速に置き換え。DeepSeek-R1はリリース後に大きなスパイクを記録し、推論タスク向けに常に高ダウンロード状態。',
             '**Meta Llama 4** 2026年4月リリースでScout（17B活性、109B合計、MoE）とMaverick（17B活性、400B合計）を展開。Ollama ライブラリで安定済み（`ollama pull llama4:scout`）。Llama 4はMoEアーキテクチャを採用し、トークンあたり17Bのみが活性だが、109B合計のためScoutはQ4で~55GB VRAMが必要（24GBは1.78ビットのみ、~20 tok/s）。Scoutの強みは10Mトークンのコンテキストとマルチモーダル入力であり、コンシューマーハードウェアへの適合性ではない。Ollama エコシステムは2026年4月に大幅拡張。Kimi K2.6（Moonshot AI、Modified MIT、32B活性/1T合計MoE）はSWE-Bench Pro 58.6を記録しGPT-5.5と同等。Qwen3.8-27Bは61.7 SWE-bench Proでコンシューマー向け総合最高を達成（Q4で24GBに収まる）。OpenAIのオープンウェイトgpt-oss:20b（21B合計/3.6B活性MoE）は16GBで~o3-miniレベル、推論調整可能で動作。現在のリリースであるOllama v0.40.5（2026年10月14日）はNVIDIA Nemotron 3.5 Superのサポートを追加しました。Ollama ライブラリは現在数百のモデルを参照しており、最新追加はLaguna XS 2.1（Poolside、エージェント型コーディング）とKimi K2.7 Code（Moonshot AI）です。',
+            'バージョン注記：Ollamaでは、Qwen3.6とQwen3.8がより新しいQwen世代です（qwen3.6:35bは約24GB、qwen3.8:27bは18GB）。qwen3:30bとqwen3-coder:30b（各19GB）は前世代の選択肢で、引き続き利用できます。Mistralの現行のSmallモデルはMistral Small 4ですが、確認時点でOllamaライブラリには掲載されていませんでした。そのため、mistral-small3.1とmistral-small:24b（Mistral Small 3）が、取得できるSmallモデルです。',
           ],
         },
         byCategory: {
@@ -2697,19 +2697,19 @@ schema: {
             '**一般チャット（最良の選択）**：`ollama run qwen3.8:27b` -- 61.7 SWE-bench Pro、コンシューマー向け総合最高、Q4で24GBに収まる。バランス型：`ollama run qwen3:30b`。8GB機はllama3.2:3b維持。',
             '**長コンテキスト / マルチモーダル**：`ollama run llama4:scout` -- 10Mトークンコンテキスト + マルチモーダル、MoE（17B活性/109B合計）。Q4で~55GB VRAM必要（24GBは1.78ビットのみ、~20 tok/s）。',
             '**小型・16GB最強**：`ollama run gpt-oss:20b` -- 21B合計 / 3.6B活性MoE、~o3-miniレベル、推論調整可能。大型：`ollama run gpt-oss:120b`（80GB）。',
-            '**コード（7B）**：`ollama run qwen3:8b` -- 76% HumanEval、Qwen3から改善、多言語対応。',
+            '**コード（7B）**：`ollama run qwen3:8b` -- 多言語対応、8GB機向けの堅実なコード用選択肢。',
             '**コード（最高エージェント、24B）**：`ollama run devstral-small-2` -- 最高エージェントコーディング（マルチファイル編集、デバッグ）。16GB RAM。Mistral AI製。',
             '**コード（最高密集、27B）**：`ollama run qwen3.8:27b` -- 61.7 SWE-bench Pro。最高密集コーディングモデル。18 GB VRAM。',
             '**コード（フロンティアMoE）**：`ollama run kimi-k2.6:cloud` -- SWE-Bench Pro 58.6（GPT-5.5と同等）、トップティア。MoE（32B活性/1T合計）。Modified MIT License。',
             '**コード（エージェント型・長期タスク）**：`ollama run laguna-xs-2.1` -- SWE-bench Verified 70.9%、SWE-bench Multilingual 63.1%、256Kコンテキスト。33B総パラメータ/3B活性MoE。OpenMDW-1.1ライセンス。',
             '**エージェント・ツール呼び出し**：`ollama run gemma4:e4b` -- 2026年4月2日リリース。組み込みツール呼び出し+ビジョンサポート。ローカルエージェント、機能呼び出し、構造出力推奨。6GB RAM。',
             '**推論・数学**：`ollama run deepseek-r1:7b` -- Chain-of-Thoughtモデル、ローカル数学最高性能at 7B。',
-            '**多言語**：`ollama run qwen3:8b` -- 29+言語対応、非英語対応最強、76% HumanEval。',
+            '**多言語**：`ollama run qwen3:8b` -- 29+言語対応、多言語向けの汎用選択肢。',
             '**画像理解**：`ollama run gemma4:e4b` -- Vision + Tool Calling。v0.31.1のMLXカーネル刷新でApple Silicon推論が約90%高速化。または `ollama run llama3.2-vision:11b`専用Vision。',
             '**うんちく系/検閲なし**：`ollama run dolphin3` -- Dolphin 3.0、Llama 3.1ベース、コンテンツフィルタリングなし。Cognitive Computations製。',
             '**高速・軽量**：`ollama run gemma2:2b` -- 最速CPU推論、1.7GB RAM。',
-            '**高品質（16GB RAM）**：`ollama run mistral-small3.1` -- 70B品質に近い14GB RAM。',
-            '**ホームオートメーション / ウェイクワードAI**：`ollama run phi4-mini` — Phi-4 Mini（3.8B、VRAM約3 GB）は専用GPUなしのミニPCでHome Assistantの音声コマンドを20〜25 tok/secで処理できます。[Home Assistant + Ollama 統合ガイド →](/smart-home/home-assistant-ollama-integration)をご覧ください。',
+            '**高品質（16GB RAM）**：`ollama run mistral-small3.1` -- 14GB RAMで良好な品質。',
+            '**ホームオートメーション / ウェイクワードAI**：`ollama run phi4-mini` — Phi-4 Mini（3.8B、VRAM約3 GB）は専用GPUなしのミニPCでHome Assistantの音声コマンドを処理できます。速度はハードウェア次第です。[Home Assistant + Ollama 統合ガイド →](/smart-home/home-assistant-ollama-integration)をご覧ください。',
           ],
           image: '/images/top-open-source-models-ollama-use-case-picks-hero-ja.webp',
           imageCaption: '用途別Ollamaモデル選択：2026年7月。チャット：llama4:scout、コーディング：qwen3.8:27b、推論：deepseek-r1:7b。',
@@ -2737,7 +2737,7 @@ schema: {
         deepseekR1: {
           id: 'deepseek-r1',
           title: 'DeepSeek-R1：推論ブレークスルー',
-          content: 'DeepSeek-R1は2025年1月リリース。ローカルサイズでの推論大躍進。Chain-of-Thought（CoT）実装で思考過程を表示。',
+          content: 'DeepSeek-R1は2025年1月リリース。ローカルサイズでの推論大躍進。Chain-of-Thought（CoT）実装で思考過程を表示。バージョン注記：DeepSeek-R1は前世代のモデルです。DeepSeekの現行のオープンウェイトファミリーはDeepSeek-V4ですが、確認時点でOllamaライブラリには掲載されていませんでした。そのため、deepseek-r1の蒸留版（1.5B〜70B）が、取得できる推論モデルの選択肢です。DeepSeekは、ホスト型のR1 APIモデルをDeepSeek-V4に置き換えました。',
           codeBlock: `ollama run deepseek-r1:7b
 # プロンプト例：「時速100kmで駅に近づく列車2台、いつ出会う？」
 # DeepSeek-R1:7bが思考過程を表示：
@@ -2746,14 +2746,12 @@ schema: {
 # </思考>
 # 答え：彼らは出会う...`,
           codeLanguage: 'bash',
-          image: '/images/ollama-deepseek-r1-reasoning-comparison-ja.svg',
-          imageCaption: 'DeepSeek-R1 7B vs Mistral Small: MATH 52% vs 28%。思考連鎖推論モデル -- やや遅いが精度が大幅に向上。',
           items: [
-            '**サイズ展開**：1.5B（モバイル）、7B、70B。1.5Bは教育端末で十分。7Bはllama 3.1 13Bを数学で上回る。',
-            '**ベンチマーク**：52% MATH（Llama 3.1 8B比23%）。ロジック・多段階問題解決向上。',
+            '**サイズ展開**：1.5Bから70Bまでの蒸留版。',
+            '**特徴**：ロジック・多段階問題解決向上。',
             '**RAM必須**：1.5B：2GB、7B：6GB、70B：44GB（Q4量子化）。',
-            '**ライセンス**：DeepSeek License（逆アセンブリ制限あり。エンタープライズ前に確認）。',
-            '**日本データ処理**：APAC地域デプロイ時、DeepSeek-R1はデータ保護方針準拠。ローカル実行で主権確保--クラウド転送なし。',
+            '**ライセンス**：DeepSeek-R1モデルはMITライセンスです。蒸留版はさらにQwenまたはLlamaのベースモデルの条件を引き継ぎます。導入前にモデルカードを確認してください。',
+            '**データの扱い**：自社のサーバーや端末でローカル実行すれば、プロンプトと応答はシステムの外に出ません。GDPRや日本の個人情報保護法などへの適合は全体の構成次第です（法的助言ではありません）。',
           ],
         },
         visionModels: {
@@ -2765,7 +2763,7 @@ schema: {
           imageCaption: '4つのOllamaビジョンモデル: llama3.2-vision:11b (8 GB)、gemma3:9b (6 GB)、minicpm-v (5.5 GB)。全てローカル実行。',
           rows: [
             { 'モデル': '[Llama 3.2 Vision 11B](https://ollama.com/library/llama3.3)', 'RAM': '11 GB', '画像対応': 'JPEG、PNG、GIF・複数画像入力', 'Ollamaコマンド': 'ollama run llama3.2-vision:11b' },
-            { 'モデル': '[Qwen2-VL 7B](https://ollama.com/library/qwen3)', 'RAM': '8 GB', '画像対応': 'JPEG、PNG・OCR精密', 'Ollamaコマンド': 'ollama run qwen2-vl:7b' },
+            { 'モデル': '[Qwen2.5-VL 7B](https://ollama.com/library/qwen2.5vl)', 'RAM': '8 GB', '画像対応': 'JPEG、PNG・OCR精密', 'Ollamaコマンド': 'ollama run qwen2.5vl:7b' },
             { 'モデル': '[Gemma 3 Vision 9B](https://ollama.com/library/gemma3)', 'RAM': '9.5 GB', '画像対応': 'JPEG、PNG・ネイティブ128Kコンテキスト', 'Ollamaコマンド': 'ollama run gemma3:9b' },
             { 'モデル': '[Mistral AI Pixtral 12B](https://ollama.com/library/mistral)', 'RAM': '12.5 GB', '画像対応': 'JPEG、PNG・潜在表現', 'Ollamaコマンド': 'ollama run pixtral:12b' },
           ],
@@ -2773,21 +2771,21 @@ schema: {
         fullTop10: {
           id: 'full-top-10',
           title: 'トップ10完全比較',
-          content: '2026年4月Ollama月間DL数トップ10：',
-          columns: ['#', 'モデル', '最適用途', 'RAM', 'HumanEval'],
+          content: 'ダウンロード数は、チュートリアルの多さからいまもLlama 3.xが優勢です。2026年の新規プロジェクトでは、Qwen3.8-27B（コンシューマー向け総合最高）、Laguna XS 2.1またはDevstral Small 2（コーディング）、gpt-oss:20b、qwen3:30bをおすすめします。',
+          columns: ['#', 'モデル', '最適用途', 'RAM', 'ベンチマーク'],
           image: '/images/top-open-source-models-ollama-top-models-hero-ja.webp',
-          imageCaption: 'ダウンロード数Top 10 Ollamaモデル: RAM 1.7 GB (gemma2:2b)から14 GB (mistral-small3.1)。HumanEval 39-74%。',
+          imageCaption: '2026年のOllamaおすすめモデル：Qwen3.8-27B（総合最高、24GB Q4）、Kimi K2.6、Laguna XS 2.1（エージェント型コーディング）、gpt-oss:20b。10Mトークンのコンテキストが必要ならLlama 4 Scout（約55GB）。',
           rows: [
-            { '#': '1', 'モデル': '[Llama 3.1 8B](https://ollama.com/library/llama3.3)', '最適用途': '初心者・汎用', 'RAM': '6.5 GB', 'HumanEval': '68.2%' },
-            { '#': '2', 'モデル': '[Qwen3 8B](https://ollama.com/library/qwen3)', '最適用途': 'コード・数学', 'RAM': '6.5 GB', 'HumanEval': '75.4%' },
-            { '#': '3', 'モデル': '[Mistral Small](https://ollama.com/library/mistral)', '最適用途': '多言語', 'RAM': '6.5 GB', 'HumanEval': '73.2%' },
-            { '#': '4', 'モデル': 'Llama 3.3 70B', '最適用途': '高スループット', 'RAM': '44 GB', 'HumanEval': '86.1%' },
-            { '#': '5', 'モデル': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', '最適用途': '推論', 'RAM': '6.5 GB', 'HumanEval': '76.8%' },
-            { '#': '6', 'モデル': '[Gemma 3 9B](https://ollama.com/library/gemma3)', '最適用途': 'ビジョン+テキスト', 'RAM': '9.5 GB', 'HumanEval': '72.1%' },
-            { '#': '7', 'モデル': 'Llama 3.2 Vision 11B', '最適用途': 'マルチモーダル', 'RAM': '11 GB', 'HumanEval': '71.5%' },
-            { '#': '8', 'モデル': 'Phi-3.5 Mini 3.8B', '最適用途': '小型端末', 'RAM': '3 GB', 'HumanEval': '61.2%' },
-            { '#': '9', 'モデル': 'Qwen3 32B', '最適用途': '品質重視', 'RAM': '20 GB', 'HumanEval': '81.7%' },
-            { '#': '10', 'モデル': 'Mistral Small 3.1', '最適用途': '高速・軽量', 'RAM': '5 GB', 'HumanEval': '68.9%' },
+            { '#': '1', 'モデル': '[Qwen3.8-27B](https://ollama.com/library/qwen3.8)', '最適用途': 'コンシューマー向け総合最高', 'RAM': '24GB（Q4）', 'ベンチマーク': 'SWE-bench Pro 61.7（Qwen公表値）' },
+            { '#': '2', 'モデル': '[Kimi K2.6](https://huggingface.co/moonshotai)', '最適用途': 'フロンティアコーディング、MoE（32B/1T）、Modified MIT', 'RAM': '量子化', 'ベンチマーク': 'SWE-Bench Pro 58.6' },
+            { '#': '3', 'モデル': '[gpt-oss:20b](https://ollama.com/library/gpt-oss)', '最適用途': '小型最強/16GB、推論調整可能', 'RAM': '16GB', 'ベンチマーク': '~o3-mini' },
+            { '#': '4', 'モデル': '[qwen3:30b](https://ollama.com/library/qwen3)', '最適用途': 'バランス型；コードはqwen3-coder:30b', 'RAM': '~18GB', 'ベンチマーク': '—' },
+            { '#': '5', 'モデル': '[Laguna XS 2.1](https://ollama.com/library/laguna-xs-2.1)', '最適用途': 'エージェント型コーディング、長期タスク（計画/コード/テスト/反復）', 'RAM': '量子化', 'ベンチマーク': 'SWE-bench Verified 70.9%' },
+            { '#': '6', 'モデル': '[Devstral Small 2 24B](https://ollama.com/library/devstral-small-2)', '最適用途': 'エージェント型コーディング（マルチファイル）', 'RAM': '15GB', 'ベンチマーク': 'SWE-bench Verified 68.0%（Mistral公表値）' },
+            { '#': '7', 'モデル': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', '最適用途': '推論、数学', 'RAM': '5GB', 'ベンチマーク': '—' },
+            { '#': '8', 'モデル': '[gemma4:e4b](https://ollama.com/library/gemma4)', '最適用途': 'ビジョン＋ツール呼び出し（マルチモーダル）', 'RAM': '~6GB', 'ベンチマーク': 'エージェント対応' },
+            { '#': '9', 'モデル': '[Llama 4 Scout](https://ollama.com/library/llama4)', '最適用途': '長コンテキスト10M＋マルチモーダル、MoE', 'RAM': '~55GB（Q4）', 'ベンチマーク': '10Mコンテキスト' },
+            { '#': '10', 'モデル': '[Llama 3.2 3B](https://ollama.com/library/llama3.2)', '最適用途': '最初のモデル、一般チャット', 'RAM': '2.5GB', 'ベンチマーク': '—' },
           ],
         },
         howToBrowse: {
@@ -2810,19 +2808,17 @@ ollama run -m deepseek-r1:7b "2^10を解く"
 # CoTで推論タスク実行`,
           codeLanguage: 'bash',
           items: [
-            'ブラウザで [ollama.ai/library](https://ollama.ai/library) を開く。数百のモデル検索可能。',
-            'フィルタオプション：モデルサイズ、ライセンス、リリース日、ベンチマーク（MMLU、HumanEval、MATH）。',
-            'モデル評価：ユーザーDL数、GitHub⭐（ベースモデル）、Ollama⭐。',
-            'Ollama新モデル：毎週木曜日UTC 18:00更新。',
+            'ブラウザで [ollama.com/library](https://ollama.com/library) を開く。数百のモデル検索可能。',
+            '新しいモデルは通常、リリースから数日でライブラリに掲載されます。',
           ],
         },
         regionalContext: {
           id: 'regional-context',
           title: '地域のプライバシー規則はOllamaのモデル選択にどう影響しますか？',
           content: [
-            '**EU / GDPR＋ライセンス遵守。** 本番環境でOllamaモデルを展開するEU組織にとって、ライセンスの選択は性能と同じくらい重要です。Apache 2.0（完全オープン、商用利用可）：Mistral Small、Mistral Small 3.1、Qwen3 8B、Qwen3.8-27B、Devstral Small 2、Granite 4.2。Meta Llama Community Licence（月間アクティブユーザー7億人超で商用利用制限）：Llama 3.1 8B、Llama 3.2 3B、Llama 3.2 Vision 11B。MIT（商用利用可）：DeepSeek-R1 7B・14B。修正MIT（帰属表示条項つきで商用利用可）：Kimi K2.6。OpenMDW-1.1（寛容、商用利用可）：Laguna XS 2.1。商用展開の前に必ずライセンス条件を確認してください。規制業種のEU企業には、Devstral Small 2などのMistralモデル（フランス、Apache 2.0）が妥当な既定の選択です。EU発で寛容なライセンスだからです。Ollamaでモデルを完全オンプレミスで動かせばプロンプトは外部サーバーに送信されません。これはGDPR対応を支えますが、それだけで満たすわけではありません（`:cloud`タグはOllamaのホスト型サービスにデータを送信します）。',
-            '**日本（METI）。** 日本企業のOllama展開では、Qwen3 / Qwen3.8が推奨できるモデルファミリーです。日本語テキストをネイティブに扱えるため、推論時間とKVキャッシュの面で有利です。日本語のコーディングワークフローでは、Qwen3.8-27B（Qwen公表のSWE-bench Pro 61.7）が日本語のコードコメントをネイティブに扱います。METIのAIガバナンス文書では通常、正確なモデルバージョンの記載が求められます。`ollama show <モデル>`で、パラメータ数、量子化レベル、コンテキスト長を含む完全な仕様をコンプライアンス記録用に取得できます。',
-            '**中国。** 中国のCAC生成AI管理弁法（2023年）では、エンドユーザーにAIサービスを提供する組織は使用するモデルを登録する必要があります。Qwen3 / Qwen3.8（Alibaba、Apache 2.0）は、中国企業のOllama展開に自然な選択肢です。中国発のモデルで、Apache 2.0ライセンス、中国語性能も高いためです。Kimi K2.6（Moonshot AI、修正MIT）も中国発ですが、Ollamaではクラウドタグのみで、ローカル実行にはサーバー級ハードウェアが必要です。コマンド：最高品質なら`ollama run qwen3.8:27b`、速度重視なら`ollama run qwen3:8b`。推論にはDeepSeek-R1（MITライセンス）が適しています。Ollamaでローカル処理するデータについては、推論そのものがPIPLの越境移転要件を発生させるわけではありませんが、ご自身のコンプライアンス義務は確認してください。',
+            '**EU / GDPR＋ライセンス遵守。** 本番環境でOllamaモデルを展開するEU組織にとって、ライセンスの選択は性能と同じくらい重要です。Apache 2.0（完全オープン、商用利用可）：Mistral Small 3、Mistral Small 3.1、Qwen3 8B、Qwen3.8-27B、Devstral Small 2、Granite 4.2。Meta Llama Community Licence（月間アクティブユーザー7億人超で商用利用制限）：Llama 3.1 8B、Llama 3.2 3B、Llama 3.2 Vision 11B。Llama 3.2 Visionは例外で、その利用規定（Acceptable Use Policy）はEUに居住または主たる事業所を置く個人・企業にライセンス上の権利を付与していません（それを組み込んだ製品のエンドユーザーは対象外）。EUで使う前に確認してください。MIT（商用利用可）：DeepSeek-R1 7B・14B。修正MIT（帰属表示条項つきで商用利用可）：Kimi K2.6。OpenMDW-1.1（寛容、商用利用可）：Laguna XS 2.1。商用展開の前に必ずライセンス条件を確認してください。規制業種のEU企業には、Devstral Small 2などのMistralモデル（フランス、Apache 2.0）が妥当な既定の選択です。EU発で寛容なライセンスだからです。Ollamaでモデルを完全オンプレミスで動かせばプロンプトは外部サーバーに送信されません。これはGDPR対応を支えますが、それだけで満たすわけではありません（`:cloud`タグはOllamaのホスト型サービスにデータを送信します）。',
+            '**日本（METI）。** 日本企業のOllama展開では、Qwen3 / Qwen3.8が推奨できるモデルファミリーです。日本語テキストをネイティブに扱えるため、推論時間とKVキャッシュの面で有利です。日本語のコーディングワークフローでは、Qwen3.8-27B（Qwen公表のSWE-bench Pro 61.7）が日本語のコードコメントをネイティブに扱います。正確なモデルバージョンを記録しておくことは、コンプライアンス文書の良い実務です。`ollama show <モデル>`で、パラメータ数、量子化レベル、コンテキスト長を含む完全な仕様をコンプライアンス記録用に取得できます。',
+            '**中国。** 中国のCAC生成AI管理弁法（2023年）は、中国で一般向けに生成AIサービスを提供する事業者に、届出や安全評価の義務を課す場合があります。ご自身に該当するかどうかは法務の専門家にご確認ください。Qwen3 / Qwen3.8（Alibaba、Apache 2.0）は、中国企業のOllama展開に自然な選択肢です。中国発のモデルで、Apache 2.0ライセンス、中国語性能も高いためです。Kimi K2.6（Moonshot AI、修正MIT）も中国発ですが、Ollamaではクラウドタグのみで、ローカル実行にはサーバー級ハードウェアが必要です。コマンド：最高品質なら`ollama run qwen3.8:27b`、速度重視なら`ollama run qwen3:8b`。推論にはDeepSeek-R1（MITライセンス）が適しています。Ollamaでローカル実行する推論それ自体はデータを国外へ送信しないため、その工程については越境移転の問題が生じません。ただし、PIPLなどの義務がご自身のデータ処理に適用されるかどうかは、法務の専門家とご確認ください。本セクションは一般的な情報であり、法的助言ではありません。',
           ],
         },
         commonMistakes: {
@@ -2850,7 +2846,7 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             },
             {
               q: 'Llama 3.3みたいな汎用モデル使うがコード遅い。なぜ？',
-              a: 'Llama 3.1 8Bは汎用向きだがQwen3やMistral Smallは技術専門。コード：Qwen3 8B切替（HumanEval 75.4% vs Llama 68.2%）。両方RAM 8GB以下。',
+              a: 'Llama 3.1 8Bは汎用向きだがQwen3やMistral Smallは技術専門。コード：Llama 3.1 8BからQwen3 8Bに切り替え、ご自身のタスクで結果を比較してください。両方RAM 8GB以下。',
             },
             {
               q: 'モデルプルしたが表示されない。確認は？',
@@ -2897,23 +2893,23 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             },
             {
               q: '日本語サポート最高のモデルは？',
-              a: 'Qwen3 8B。CulturaXと日本語Wikiで高精度。Llama 3.3は日本語OK但しQwenが精密。Mistral Smallは仏語西語向き。',
+              a: 'Qwen3 / Qwen3.8やMistral Small 3.1などの多言語モデルは日本語に対応していますが、このページでは日本語品質での順位付けは行っていません。ご自身のテキストで試してください。',
             },
             {
               q: 'Ollamaモデルは本当に無料？',
-              a: 'はい。全Ollamaモデルはオープンソース・フリーライセンス（Apache 2.0、Meta Llama Community、Deepseek）。サブスク・API料金なし。DL・ローカルインストール・無制限使用。',
+              a: 'ダウンロードとローカル実行にサブスクリプションやAPI料金はかかりませんが、すべてのモデルがOSI基準のオープンソースというわけではありません。Llama 3.x/4.xはMeta Llama Community Licence（OSI非承認、月間アクティブユーザー7億人超で商用利用を制限）、Mistral Small 3.1、Qwen3、Gemma 4はApache 2.0、Gemma 2とGemma 3はGoogleのGemma利用規約です。商用展開の前にライセンスを確認してください。',
             },
             {
               q: 'DeepSeek-R1の速度は本当？',
-              a: '生成速度：M1 Pro 15-25tokens/秒（Llama 3.3 7B相応）。総レイテンシは思考過程生成で高い--中程度クエリ8-12秒。リアルタイム：Llama 3.3やMistral。',
+              a: '速度はハードウェア、量子化、プロンプトによって変わり、このページでは実測値を掲載していません。DeepSeek-R1は回答の前に思考過程を出力するため、標準のチャットモデルより1回答あたりのトークン数が多く、その分時間がかかります。リアルタイム用途には標準のチャットモデルが向いています。',
             },
             {
               q: 'OllamaでなくChatGPT Plusを選ぶ理由は？',
-              a: 'プライバシー：チャットがOpenAIに送信されない。コスト：月額なし・GPU買い切り。オフライン：完全インターネット不要。カスタマイズ：システムプロンプト・動作・パラメータ全掌握。',
+              a: 'プライバシー：ローカル実行ではプロンプトが端末の外に出ません（`:cloud`タグを除く）。コスト：モデル自体にサブスクリプションやAPI料金はかかりませんが、ハードウェアと電気代は必要です。オフライン：ダウンロード後は、インターネット接続なしで推論できます。カスタマイズ：システムプロンプトとモデルのパラメータを自分で制御できます。',
             },
             {
               q: 'Ollamaモデルは画像処理できる？',
-              a: 'はい。Llama 3.2 Vision、Qwen2-VL、Gemma 3全てマルチモーダル。画像をローカルファイルアップロード。クラウド転送なし。JPEG、PNG、GIF対応。',
+              a: 'はい。Llama 3.2 Vision、Qwen2.5-VL、Gemma 3全てマルチモーダル。画像をローカルファイルとしてアップロード。ローカル実行ではクラウド転送なし。JPEG、PNG、GIF対応。',
             },
             {
               q: 'Ollamaモデルを新版にアップデートは？',
@@ -2921,23 +2917,23 @@ ollama run -m deepseek-r1:7b "2^10を解く"
             },
             {
               q: 'GDPRはOllamaで気にすべき？',
-              a: 'はい。GDPR個人データセキュリティ必須。ローカル推論で設計による保護要件満たし。クラウド転送なし＝主権・非エクスポート・コンプライアンス。注：クラウドモデル使用時は処理契約確認。',
+              a: 'はい、個人データを扱う場合は該当します。GDPR第32条は適切なセキュリティ対策を求めています。プライベートな端末やサーバー上でのローカル推論は、設計によるデータ保護の要件への対応に役立つ場合があります。クラウドへの転送がなければデータはシステムの外に出ないため、データ主権や保護措置の実施が容易になりますが、実際の適合性は全体の構成次第です（法的助言ではありません）。注：クラウドモデルを使う場合は、まず処理契約をご確認ください。',
             },
             {
               q: '日本企業向けOllama活用は？',
-              a: 'はい。日本企業が利益：データ主権（クラウドロックイン回避）、IT標準準拠（IPA・MEI-TI Governance 2024）、標準HW スケーラビリティ、API料金排除。Qwen3 8Bは標準デスクGPUで実行。Llama 3.1 8Bはエンタープライズスタンダードツール・顧客自動化・文書処理向け検証済み。',
+              a: 'はい、多くの場合に有効です。日本企業にとっての利点：データ主権（クラウドロックインの回避）、IT標準への対応支援（実際の適合性は全体の構成次第で、法的助言ではありません）、標準ハードウェアでのスケーラビリティ、API料金の削減。Qwen3 8Bは標準的なデスクトップGPUで動作し、Llama 3.1 8Bは社内ツール、顧客対応の自動化、文書処理に使われることが多いモデルです。',
             },
             {
               q: 'Ollamaを開発している会社の正式名称は何ですか？',
-              a: '同社はOllama Inc.で、カリフォルニア州パロアルトを拠点とするシリーズB資金調達済みのスタートアップです。2023年にJeffrey MorganとMichael Chiangによって設立されました。',
+              a: 'Ollamaを開発している会社はOllama Inc.です。「Ollama」は、同社と、同社が公開するオープンソースのCLIツール／モデルランタイムの両方を指します。プロジェクト最初の公開リリースv0.0.1は2023年7月8日にGitHubで公開されました。',
             },
             {
               q: 'ロシア語タスクに最適なOllamaモデルはどれですか？',
-              a: 'Qwen3/Qwen 3.6とMistral Small 3.1はどちらもロシア語をネイティブの多言語トレーニングデータに含みます。非英語ベンチマークではQwen3が高いスコアを示す一方、Mistral Small 3.1は非公式な会話的ロシア語の流暢さで評価されることが多いです。どちらもロシア発のモデルではありません。',
+              a: 'Qwen3/Qwen 3.6とMistral Small 3.1はどちらもロシア語をネイティブの多言語トレーニングデータに含みます。このページではロシア語での優劣は判定していません。ご自身のプロンプトで両方を試してください。どちらもロシア発のモデルではありません。',
             },
             {
               q: 'OllamaでどのDolphinモデルを使うべきですか？',
-              a: '`ollama pull dolphin3`（Dolphin 3.0）を使用してください。Cognitive Computationsが保守する現行版で、Llama 3.1をベースにコンテンツフィルタリングなしで構築されています。旧版の`dolphin-mistral`は2024年リリースで更新が止まっています。',
+              a: '`ollama pull dolphin3`（Dolphin 3.0）を使用してください。Cognitive Computationsが保守する現行版で、Llama 3.1をベースにコンテンツフィルタリングなしで構築されています。旧版の`dolphin-mistral`は2024年リリースで更新が止まっています。組み込みの安全フィルタがないため、出力の利用についてはご自身が責任を負い、Llama 3.1のライセンス条件が適用されます。',
             },
           ],
         },
@@ -2958,9 +2954,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           title: 'ソース',
           items: [
             '[Ollama モデルライブラリ](https://ollama.ai/library) -- 数百のモデル、ライブDL統計。',
-            '[Ollama GitHub：DL人気モデル](https://github.com/ollama/ollama/issues/3149) -- 月別ユーザー・トレンド（公開）。',
-            '[DeepSeek-R1 論文](https://arxiv.org/abs/2501.12948) -- "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"（2025年1月）。',
-            '[Gemma 3 発表](https://blog.google/technology/googles-latest-gemma-models/) -- GoogleブログGemma 3マルチモーダル・128Kコンテキスト（2026年2月）。',
+                        '[DeepSeek-R1 論文](https://arxiv.org/abs/2501.12948) -- "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning"（2025年1月）。',
+            '[Gemma 3 発表](https://developers.googleblog.com/en/introducing-gemma3/) -- Google DevelopersブログGemma 3マルチモーダル・128Kコンテキスト（2025年3月）。',
           ],
         },
       },
@@ -2971,7 +2966,7 @@ schema: {
         'description': '現在のOllamaバージョンv0.40.5（2026年10月）、完全な変更履歴と最新モデル：Laguna XS 2.1、Kimi K2.7 Code、Qwen3.8、DeepSeek V4。検証済みベンチマーク、RAM、pullコマンド。',
         'url': 'https://www.promptquorum.com/ja/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-11',
-        'dateModified': '2026-10-17',
+        'dateModified': '2026-10-19',
         'author': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -2995,18 +2990,21 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'Ollama トップ10 オープンソースモデル',
+        'name': 'Ollama向けトップオープンソースモデル -- 2026年',
+        'numberOfItems': 12,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B', 'description': '最多DLモデル。初心者向け・汎用。6.5GB RAM要。' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Qwen3 8B', 'description': '急速成長。コード・数学優秀。6.5GB RAM要。' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small', 'description': '多言語モデル。仏語西語対応。6.5GB RAM要。' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Llama 3.3 70B', 'description': '大型。多ベンチでGPT-4競争。44GB RAM要。' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B', 'description': '推論モデル。Chain-of-Thought。6.5GB RAM要。' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'Gemma 3 9B', 'description': 'マルチモーダル。ビジョン・128Kコンテキスト。9.5GB RAM要。' },
-          { '@type': 'ListItem', 'position': 7, 'name': 'Llama 3.2 Vision 11B', 'description': 'ビジョンモデル。画像処理・マルチモーダル。11GB RAM要。' },
-          { '@type': 'ListItem', 'position': 8, 'name': 'Phi-3.5 Mini 3.8B', 'description': '超小型・高効率。モバイル・IoT向け。3GB RAM要。' },
-          { '@type': 'ListItem', 'position': 9, 'name': 'Qwen3 32B', 'description': 'Qwen大型版。複雑タスク高品質。20GB RAM要。' },
-          { '@type': 'ListItem', 'position': 10, 'name': 'Mistral Small 3.1', 'description': '高速・軽量。リアルタイム応用・品質両立。5GB RAM要。' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Qwen3.8-27B', 'url': 'https://ollama.com/library/qwen3.8', 'description': 'コンシューマー向けハードウェアでの総合最高。Qwen公表のSWE-bench Pro 61.7。Q4で24GBに収まる。Apache 2.0。ollama run qwen3.8:27b' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Kimi K2.6', 'url': 'https://ollama.com/library/kimi-k2.6', 'description': 'フロンティア級のMoEコーディングモデル。SWE-Bench Pro 58.6。32B活性/1T合計。Modified MITライセンス。ollama run kimi-k2.6:cloud' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'gpt-oss:20b', 'url': 'https://ollama.com/library/gpt-oss', 'description': '16GB向けの小型モデル。21B合計/3.6B活性MoE。~o3-miniレベル、推論調整可能。ollama run gpt-oss:20b' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen3:30b', 'url': 'https://ollama.com/library/qwen3', 'description': 'バランス型のオールラウンドモデル。コード補完はqwen3-coder:30b。ollama run qwen3:30b' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Laguna XS 2.1', 'url': 'https://ollama.com/library/laguna-xs-2.1', 'description': 'エージェント型・長期タスクのコーディング。33B/3B活性MoE。SWE-bench Verified 70.9%。OpenMDW-1.1ライセンス。ollama run laguna-xs-2.1' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'Chain-of-Thought型の推論モデル。RAM 5GB。ollama run deepseek-r1:7b' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'gemma4:e4b', 'url': 'https://ollama.com/library/gemma4', 'description': 'ビジョンとツール呼び出し（E4B以上）。RAM約6GB。ollama run gemma4:e4b' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Llama 4 Scout', 'url': 'https://ollama.com/library/llama4', 'description': '長コンテキスト（10Mトークン）と大型マルチモーダル。MoE 17B活性/109B合計。Q4で約55GB。ollama run llama4:scout' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Devstral Small 2 24B', 'url': 'https://ollama.com/library/devstral-small-2', 'description': 'エージェント型コーディング（マルチファイル編集、デバッグ）。RAM 16GB。ollama run devstral-small-2' },
+          { '@type': 'ListItem', 'position': 10, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': '16GBクラスで高品質。RAM 14GB。Apache 2.0。ollama run mistral-small3.1' },
+          { '@type': 'ListItem', 'position': 11, 'name': 'gemma2:2b', 'url': 'https://ollama.com/library/gemma2', 'description': '非常に軽量。RAM 1.7GB。ollama run gemma2:2b' },
+          { '@type': 'ListItem', 'position': 12, 'name': 'phi4-mini', 'url': 'https://ollama.com/library/phi4-mini', 'description': '推論向けの小型モデル。RAM 2.5GB。ollama run phi4-mini' },
         ],
       },
       faqSchema: {
@@ -3034,7 +3032,7 @@ schema: {
             'name': '日本語サポート最高のモデルは？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 8B。CulturaXと日本語Wikiで高精度。Llama 3.3は日本語OK但しQwenが精密。Mistral Smallは仏語西語向き。',
+              'text': 'Qwen3 / Qwen3.8やMistral Small 3.1などの多言語モデルは日本語に対応していますが、このページでは日本語品質での順位付けは行っていません。ご自身のテキストで試してください。',
             }
           },
           {
@@ -3042,7 +3040,7 @@ schema: {
             'name': 'Ollamaモデルは本当に無料？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'はい。全Ollamaモデルはオープンソース・フリーライセンス（Apache 2.0、Meta Llama Community、Deepseek）。サブスク・API料金なし。DL・ローカルインストール・無制限使用。',
+              'text': 'ダウンロードとローカル実行にサブスクリプションやAPI料金はかかりませんが、すべてのモデルがOSI基準のオープンソースというわけではありません。Llama 3.x/4.xはMeta Llama Community Licence（OSI非承認、月間アクティブユーザー7億人超で商用利用を制限）、Mistral Small 3.1、Qwen3、Gemma 4はApache 2.0、Gemma 2とGemma 3はGoogleのGemma利用規約です。商用展開の前にライセンスを確認してください。',
             }
           },
           {
@@ -3050,7 +3048,7 @@ schema: {
             'name': 'DeepSeek-R1の速度は本当？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '生成速度：M1 Pro 15-25tokens/秒（Llama 3.3 7B相応）。総レイテンシは思考過程生成で高い--中程度クエリ8-12秒。リアルタイム：Llama 3.3やMistral。',
+              'text': '速度はハードウェア、量子化、プロンプトによって変わり、このページでは実測値を掲載していません。DeepSeek-R1は回答の前に思考過程を出力するため、標準のチャットモデルより1回答あたりのトークン数が多く、その分時間がかかります。リアルタイム用途には標準のチャットモデルが向いています。',
             }
           },
           {
@@ -3058,7 +3056,7 @@ schema: {
             'name': 'OllamaでなくChatGPT Plusを選ぶ理由は？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'プライバシー：チャットがOpenAIに送信されない。コスト：月額なし・GPU買い切り。オフライン：完全インターネット不要。カスタマイズ：システムプロンプト・動作・パラメータ全掌握。',
+              'text': 'プライバシー：ローカル実行ではプロンプトが端末の外に出ません（`:cloud`タグを除く）。コスト：モデル自体にサブスクリプションやAPI料金はかかりませんが、ハードウェアと電気代は必要です。オフライン：ダウンロード後は、インターネット接続なしで推論できます。カスタマイズ：システムプロンプトとモデルのパラメータを自分で制御できます。',
             }
           },
           {
@@ -3066,7 +3064,7 @@ schema: {
             'name': 'Ollamaモデルは画像処理できる？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'はい。Llama 3.2 Vision、Qwen2-VL、Gemma 3全てマルチモーダル。画像をローカルファイルアップロード。クラウド転送なし。JPEG、PNG、GIF対応。',
+              'text': 'はい。Llama 3.2 Vision、Qwen2.5-VL、Gemma 3全てマルチモーダル。画像をローカルファイルとしてアップロード。ローカル実行ではクラウド転送なし。JPEG、PNG、GIF対応。',
             }
           },
           {
@@ -3082,7 +3080,7 @@ schema: {
             'name': 'GDPRはOllamaで気にすべき？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'はい。GDPR個人データセキュリティ必須。ローカル推論で設計による保護要件満たし。クラウド転送なし＝主権・非エクスポート・コンプライアンス。注：クラウドモデル使用時は処理契約確認。',
+              'text': 'はい、個人データを扱う場合は該当します。GDPR第32条は適切なセキュリティ対策を求めています。プライベートな端末やサーバー上でのローカル推論は、設計によるデータ保護の要件への対応に役立つ場合があります。クラウドへの転送がなければデータはシステムの外に出ないため、データ主権や保護措置の実施が容易になりますが、実際の適合性は全体の構成次第です（法的助言ではありません）。注：クラウドモデルを使う場合は、まず処理契約をご確認ください。',
             }
           },
           {
@@ -3090,7 +3088,7 @@ schema: {
             'name': '日本企業向けOllama活用は？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'はい。日本企業が利益：データ主権（クラウドロックイン回避）、IT標準準拠（IPA・METI AI Governance 2024）、標準HW スケーラビリティ、API料金排除。Qwen3 8Bは標準デスクGPUで実行。Llama 3.1 8Bはエンタープライズスタンダードツール・顧客自動化・文書処理向け検証済み。',
+              'text': 'はい、多くの場合に有効です。日本企業にとっての利点：データ主権（クラウドロックインの回避）、IT標準への対応支援（実際の適合性は全体の構成次第で、法的助言ではありません）、標準ハードウェアでのスケーラビリティ、API料金の削減。Qwen3 8Bは標準的なデスクトップGPUで動作し、Llama 3.1 8Bは社内ツール、顧客対応の自動化、文書処理に使われることが多いモデルです。',
             }
           },
           {
@@ -3098,7 +3096,7 @@ schema: {
             'name': 'Ollamaを開発している会社の正式名称は何ですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '同社はOllama Inc.で、カリフォルニア州パロアルトを拠点とするシリーズB資金調達済みのスタートアップです。2023年にJeffrey MorganとMichael Chiangによって設立されました。',
+              'text': 'Ollamaを開発している会社はOllama Inc.です。「Ollama」は、同社と、同社が公開するオープンソースのCLIツール／モデルランタイムの両方を指します。プロジェクト最初の公開リリースv0.0.1は2023年7月8日にGitHubで公開されました。',
             }
           },
           {
@@ -3106,7 +3104,7 @@ schema: {
             'name': 'ロシア語タスクに最適なOllamaモデルはどれですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3/Qwen 3.6とMistral Small 3.1はどちらもロシア語をネイティブの多言語トレーニングデータに含みます。非英語ベンチマークではQwen3が高いスコアを示す一方、Mistral Small 3.1は非公式な会話的ロシア語の流暢さで評価されることが多いです。どちらもロシア発のモデルではありません。',
+              'text': 'Qwen3/Qwen 3.6とMistral Small 3.1はどちらもロシア語をネイティブの多言語トレーニングデータに含みます。このページではロシア語での優劣は判定していません。ご自身のプロンプトで両方を試してください。どちらもロシア発のモデルではありません。',
             }
           },
           {
@@ -3114,13 +3112,13 @@ schema: {
             'name': 'OllamaでどのDolphinモデルを使うべきですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '`ollama pull dolphin3`（Dolphin 3.0）を使用してください。Cognitive Computationsが保守する現行版で、Llama 3.1をベースにコンテンツフィルタリングなしで構築されています。旧版の`dolphin-mistral`は2024年リリースで更新が止まっています。',
+              'text': '`ollama pull dolphin3`（Dolphin 3.0）を使用してください。Cognitive Computationsが保守する現行版で、Llama 3.1をベースにコンテンツフィルタリングなしで構築されています。旧版の`dolphin-mistral`は2024年リリースで更新が止まっています。組み込みの安全フィルタがないため、出力の利用についてはご自身が責任を負い、Llama 3.1のライセンス条件が適用されます。',
             }
           },
         ]
       },
       gammaEmbedUrl: '/presentations/top-open-source-models-ollama-static.html',
-      gammaDescription: '下記のスライドデッキは以下をカバーしています：ダウンロード数別の Top 10 Ollama モデル、パフォーマンス比較（60-74% HumanEval）、ユースケース別の最高モデル（チャット、コーディング、推論、ビジョン）、DeepSeek-R1 chain-of-thought 推論、および正確なプルコマンド。Ollama モデル選択リファレンスカードとして PDF をダウンロードしてください。',
+      gammaDescription: '下記のスライドデッキは以下をカバーしています：ダウンロード数別の Top 10 Ollama モデル、パフォーマンス比較、ユースケース別の最高モデル（チャット、コーディング、推論、ビジョン）、DeepSeek-R1 chain-of-thought 推論、および正確なプルコマンド。Ollama モデル選択リファレンスカードとして PDF をダウンロードしてください。',
     },
     zh: {
       theme: 'Best Models',
@@ -3208,6 +3206,7 @@ schema: {
             '**Llama 3.2 3B** 仍为总下载量最高，主要作为初安装测试模型。在消费级硬件品质方面，Qwen3.8-27B（61.7 SWE-bench Pro、Q4下可装入24GB）仍为综合最佳选择。',
             '**Qwen3和Qwen3.8** 是Ollama库中增长最快的模型家族，Qwen3和新的Qwen 3.6密集变体正在快速取代Qwen3。DeepSeek-R1在发布后出现大幅增长，并保持推理任务的高下载量。**Dolphin 3.0**（Cognitive Computations、基于Llama 3.1构建）是希望获得无内容过滤本地助手的用户中下载量最高的无审查通用模型，拉取命令为`ollama pull dolphin3`（不是已过时的`dolphin-mistral`）。',
             '**Meta Llama 4** 于2026年4月推出Scout（17B活跃、109B总数、MoE）和Maverick（17B活跃、400B总数）变体。Llama 4 Scout现已稳定在Ollama库中（`ollama pull llama4:scout`）。Llama 4采用Mixture-of-Experts（MoE）架构，每个token仅17B参数活跃，但因109B总参数，Scout在Q4下需~55GB显存（24GB仅限1.78位，~20 tok/s）。Scout的亮点是10M token上下文窗口和多模态输入，而非消费级硬件适配性。Ollama生态在2026年4月显著扩展。Kimi K2.6（Moonshot AI、Modified MIT许可、32B活跃/1T总数MoE）取得SWE-Bench Pro 58.6，与GPT-5.5持平。Laguna XS 2.1（Poolside）是智能体编程领域的最新挑战者，专为长周期本地编程会话构建。Qwen3.8-27B达到61.7 SWE-bench Pro，成为消费级硬件综合最佳（Q4下可装入24GB）。OpenAI的开放权重gpt-oss:20b（21B总数/3.6B活跃MoE）在16GB下以~o3-mini水平运行，推理可调。当前版本Ollama v0.40.5（2026年10月14日）新增NVIDIA Nemotron 3.5 Super支持。Ollama库现涵盖数百个精选模型，其中Laguna XS 2.1和Kimi K2.7 Code为最新新增。',
+            '版本说明：Qwen3.6 和 Qwen3.8 是 Ollama 上较新的 Qwen 世代（qwen3.6:35b 约 24GB；qwen3.8:27b 为 18GB）；qwen3:30b 和 qwen3-coder:30b（各 19GB）是上一代选项，仍可正常使用。Mistral 当前的 Small 模型是 Mistral Small 4，但核查时 Ollama 库中未列出该模型；因此 mistral-small3.1 和 mistral-small:24b（Mistral Small 3）仍是可拉取的 Small 模型。',
           ],
         },
         byCategory: {
@@ -3219,19 +3218,19 @@ schema: {
             '**通用聊天（最佳选择）**：`ollama run qwen3.8:27b` -- 61.7 SWE-bench Pro，消费级硬件综合最佳，Q4下可装入24GB。均衡全能：`ollama run qwen3:30b`。8GB机器保持`ollama run llama3.2:3b`。',
             '**长上下文 / 多模态**：`ollama run llama4:scout` -- 10M token上下文 + 多模态，MoE（17B活跃/109B总数）。Q4下需~55GB显存（24GB仅限1.78位，~20 tok/s）。',
             '**小型/16GB最强**：`ollama run gpt-oss:20b` -- 21B总数 / 3.6B活跃MoE，~o3-mini水平，推理可调。更大：`ollama run gpt-oss:120b`（80GB）。',
-            '**编程（7B）**：`ollama run qwen3:8b` -- 76% HumanEval，改进自Qwen3，多语言。',
+            '**编程（7B）**：`ollama run qwen3:8b` -- 多语言，适合8GB设备的编程选择。',
             '**编程（最优代理、24B）**：`ollama run devstral-small-2` -- 最优代理编程（多文件编辑、调试）。16GB RAM。Mistral AI出品。',
             '**编程（最优密集、27B）**：`ollama run qwen3.8:27b` -- 61.7 SWE-bench Pro。最优密集编程模型。18 GB显存。',
             '**编程（前沿MoE）**：`ollama run kimi-k2.6:cloud` -- SWE-Bench Pro 58.6（与GPT-5.5持平），顶级。MoE（32B活跃/1T总数）。Modified MIT许可。',
             '**代理和工具调用**：`ollama run gemma4:e4b` -- 2026年4月2日发布。内置工具调用+视觉支持。推荐本地代理、函数调用、结构化输出。6GB RAM。',
             '**推理和数学**：`ollama run deepseek-r1:7b` -- Chain-of-Thought模型，7B最高本地数学性能。',
-            '**多语言**：`ollama run qwen3:8b` -- 29+本地语言，最强非英文支持，76% HumanEval。',
-            '**俄语任务**：`ollama run qwen3:8b` 或 `ollama run mistral-small3.1` -- 两者的原生多语言训练均包含俄语；Qwen3在非英语基准上得分更高，Mistral Small 3.1在非正式对话俄语流利度上更强。',
+            '**多语言**：`ollama run qwen3:8b` -- 29+本地语言，多语言通用选择。',
+            '**俄语任务**：`ollama run qwen3:8b` 或 `ollama run mistral-small3.1` -- 两者的原生多语言训练均包含俄语；本页不对二者的俄语表现排序；请用你自己的提示词分别测试。',
             '**无审查/通用**：`ollama run dolphin3` -- Dolphin 3.0（Cognitive Computations，基于Llama 3.1构建），无内置内容过滤，适用于通用聊天、编程和智能体任务。',
             '**图像理解**：`ollama run gemma4:e4b` -- 视觉+工具调用。或`ollama run llama3.2-vision:11b`专用视觉。',
             '**快速轻量**：`ollama run gemma2:2b` -- 最快CPU推理，1.7GB RAM。',
-            '**高质量（16GB显存）**：`ollama run mistral-small3.1` -- 70B品质14GB显存。',
-            '**家庭自动化 / 唤醒词AI**：`ollama run phi4-mini` — Phi-4 Mini（3.8B，约3 GB VRAM）在无独显的迷你PC上以20–25 tok/sec处理Home Assistant语音命令。参阅[Home Assistant + Ollama集成指南 →](/smart-home/home-assistant-ollama-integration)。',
+            '**高质量（16GB显存）**：`ollama run mistral-small3.1` -- 14GB显存下质量良好。',
+            '**家庭自动化 / 唤醒词AI**：`ollama run phi4-mini` — Phi-4 Mini（3.8B，约3 GB VRAM）可在无独显的迷你PC上处理Home Assistant语音命令；速度取决于你的硬件。参阅[Home Assistant + Ollama集成指南 →](/smart-home/home-assistant-ollama-integration)。',
           ],
           image: '/images/top-open-source-models-ollama-use-case-picks-hero-zh.webp',
           imageCaption: '按用途选择Ollama：2026年7月。聊天llama4:scout，编码kimi-k2.6 / laguna-xs-2.1，推理deepseek-r1:7b。',
@@ -3258,17 +3257,16 @@ schema: {
         },
         deepseekR1: {
           id: 'deepseek-r1',
-          title: 'DeepSeek-R1：2026年推理最强的模型',
+          title: 'DeepSeek-R1：面向推理任务的模型',
           content: [
-            '**DeepSeek-R1 7B在推理任务中表现最强。** 采用Chain-of-Thought（思维链）架构，让模型在生成答案前进行"思考"。',
-            '**关键数据**：MATH 52%（7B模型中最高）、AIME 19.5%、AlphaCode 65%。适合数学推导、代码审查、复杂逻辑。',
-            '**生成速度**：M1 Pro上15-25 tokens/秒（与Llama 3.3相同）。但总延迟较高（思考过程生成需要额外时间）。中等查询约8-12秒。',
+            '**DeepSeek-R1 7B是专为推理任务设计的模型。** 采用Chain-of-Thought（思维链）架构，让模型在生成答案前进行"思考"。',
+            '**适用场景**：适合数学推导、代码审查、复杂逻辑。',
+            '**生成速度**：取决于硬件、量化方式和提示词，本页不提供实测数据。由于需要先生成思考过程，总延迟高于标准聊天模型。',
             '**安装命令**：',
+            '版本说明：DeepSeek-R1 是上一代模型。DeepSeek 当前的开放权重系列是 DeepSeek-V4，核查时 Ollama 库中未列出；deepseek-r1 蒸馏版（1.5B 至 70B）仍是可拉取的推理选项。DeepSeek 已用 DeepSeek-V4 取代其 API 中托管的 R1 模型。',
           ],
           codeBlock: 'ollama run deepseek-r1:7b',
           codeLanguage: 'bash',
-          image: '/images/ollama-deepseek-r1-reasoning-comparison-zh.svg',
-          imageCaption: 'DeepSeek-R1 7B vs Mistral Small: MATH 52% vs 28%。链式思维推理模型 -- 较慢，精度显著提升。',
         },
         visionModels: {
           id: 'vision-models',
@@ -3280,28 +3278,28 @@ schema: {
           rows: [
             { '模型': '[Llama 3.2 Vision 11B](https://ollama.com/library/llama3.3)', 'RAM要求': '11 GB', '图像支持': '是（JPEG、PNG、GIF）', 'Ollama命令': 'ollama run llama3.2-vision:11b' },
             { '模型': '[Gemma 3 9B](https://ollama.com/library/gemma3)', 'RAM要求': '9.5 GB', '图像支持': '是（Gemma 3全系多模态）', 'Ollama命令': 'ollama run gemma3:9b' },
-            { '模型': '[Qwen2-VL 7B](https://ollama.com/library/qwen3)', 'RAM要求': '7.5 GB', '图像支持': '是（视频帧、多页PDF）', 'Ollama命令': 'ollama run qwen2-vl:7b' },
+            { '模型': '[Qwen2.5-VL 7B](https://ollama.com/library/qwen2.5vl)', 'RAM要求': '7.5 GB', '图像支持': '是（JPEG、PNG）', 'Ollama命令': 'ollama run qwen2.5vl:7b' },
             { '模型': '[Phi-4 Vision 14B](https://ollama.com/library/phi4)', 'RAM要求': '14 GB', '图像支持': '是（高分辨率输入）', 'Ollama命令': 'ollama run phi4:14b' },
           ],
         },
         fullTop10: {
           id: 'full-top-10',
-          title: 'Ollama完整Top 10模型排行（2026年4月）',
-          content: '根据Ollama官方下载统计和HumanEval、MMLU基准：',
-          columns: ['排名', '模型', '最适用于', 'RAM要求', 'HumanEval'],
+          title: 'Ollama完整Top 10模型排行',
+          content: '下载量仍以Llama 3.x居前，主要因为教程众多。2026年的新项目建议优先考虑Qwen3.8-27B（消费级硬件综合最佳）、Laguna XS 2.1或Devstral Small 2（编程）、gpt-oss:20b和qwen3:30b。',
+          columns: ['#', '模型', '最适用于', 'RAM要求', '基准'],
           image: '/images/top-open-source-models-ollama-top-models-hero-zh.webp',
-          imageCaption: '按下载量排名前10的Ollama模型：RAM从1.7 GB (gemma2:2b)到14 GB (mistral-small3.1)。HumanEval 39-74%。',
+          imageCaption: '2026年Ollama推荐模型：Qwen3.8-27B（综合最佳，24GB Q4）、Kimi K2.6、Laguna XS 2.1（代理式编程）、gpt-oss:20b。需要10M token上下文时选Llama 4 Scout（约55GB）。',
           rows: [
-            { '排名': '1', '模型': '[Llama 3.1 8B](https://ollama.com/library/llama3.3)', '最适用于': '通用、初学者入门', 'RAM要求': '6.5 GB', 'HumanEval': '76%' },
-            { '排名': '2', '模型': '[Qwen3 8B](https://ollama.com/library/qwen3)', '最适用于': '代码和中文', 'RAM要求': '6.5 GB', 'HumanEval': '90%' },
-            { '排名': '3', '模型': '[Mistral Small](https://ollama.com/library/mistral)', '最适用于': '多语言和欧洲市场', 'RAM要求': '6.5 GB', 'HumanEval': '85%' },
-            { '排名': '4', '模型': 'Llama 3.3 70B', '最适用于': '企业级和复杂任务', 'RAM要求': '44 GB', 'HumanEval': '92%' },
-            { '排名': '5', '模型': '[DeepSeek-R1 7B](https://ollama.com/library/deepseek-r1)', '最适用于': '推理和问题求解', 'RAM要求': '6.5 GB', 'HumanEval': '88%' },
-            { '排名': '6', '模型': '[Gemma 3 9B](https://ollama.com/library/gemma3)', '最适用于': '视觉和多模态', 'RAM要求': '9.5 GB', 'HumanEval': '84%' },
-            { '排名': '7', '模型': 'Llama 3.2 Vision 11B', '最适用于': '图像理解和分析', 'RAM要求': '11 GB', 'HumanEval': '80%' },
-            { '排名': '8', '模型': 'Phi-3.5 Mini 3.8B', '最适用于': '移动和物联网', 'RAM要求': '3 GB', 'HumanEval': '76%' },
-            { '排名': '9', '模型': 'Qwen3 32B', '最适用于': '高质量和复杂推理', 'RAM要求': '20 GB', 'HumanEval': '92%' },
-            { '排名': '10', '模型': 'Mistral Small 3.1', '最适用于': '实时应用和低延迟', 'RAM要求': '5 GB', 'HumanEval': '83%' },
+            { '#': '1', '模型': '[Qwen3.8-27B](https://ollama.com/library/qwen3.8)', '最适用于': '消费级硬件综合最佳', 'RAM要求': '24GB（Q4）', '基准': 'SWE-bench Pro 61.7（Qwen公布）' },
+            { '#': '2', '模型': '[Kimi K2.6](https://huggingface.co/moonshotai)', '最适用于': '前沿编程，MoE（32B/1T），Modified MIT', 'RAM要求': '量化', '基准': 'SWE-Bench Pro 58.6' },
+            { '#': '3', '模型': '[gpt-oss:20b](https://ollama.com/library/gpt-oss)', '最适用于': '小型最佳/16GB，推理可调', 'RAM要求': '16GB', '基准': '~o3-mini' },
+            { '#': '4', '模型': '[qwen3:30b](https://ollama.com/library/qwen3)', '最适用于': '均衡；代码用qwen3-coder:30b', 'RAM要求': '~18GB', '基准': '—' },
+            { '#': '5', '模型': '[Laguna XS 2.1](https://ollama.com/library/laguna-xs-2.1)', '最适用于': '代理式编程，长周期（规划/编码/测试/迭代）', 'RAM要求': '量化', '基准': 'SWE-bench Verified 70.9%' },
+            { '#': '6', '模型': '[Devstral Small 2 24B](https://ollama.com/library/devstral-small-2)', '最适用于': '代理式编程（多文件）', 'RAM要求': '15GB', '基准': 'SWE-bench Verified 68.0%（Mistral公布）' },
+            { '#': '7', '模型': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', '最适用于': '推理、数学', 'RAM要求': '5GB', '基准': '—' },
+            { '#': '8', '模型': '[gemma4:e4b](https://ollama.com/library/gemma4)', '最适用于': '视觉+工具调用（多模态）', 'RAM要求': '~6GB', '基准': '适合代理' },
+            { '#': '9', '模型': '[Llama 4 Scout](https://ollama.com/library/llama4)', '最适用于': '长上下文10M+多模态，MoE', 'RAM要求': '~55GB（Q4）', '基准': '10M上下文' },
+            { '#': '10', '模型': '[Llama 3.2 3B](https://ollama.com/library/llama3.2)', '最适用于': '第一个模型，通用聊天', 'RAM要求': '2.5GB', '基准': '—' },
           ],
         },
         howToBrowse: {
@@ -3315,9 +3313,9 @@ schema: {
           id: 'regional-context',
           title: '地区隐私规则如何影响你的Ollama模型选择？',
           content: [
-            '**欧盟 / GDPR + 许可证合规。** 对于在生产中部署Ollama模型的欧盟组织，许可证的选择与性能同样重要。Apache 2.0（完全开放，允许商用）：Mistral Small、Mistral Small 3.1、Qwen3 8B、Qwen3.8-27B、Devstral Small 2、Granite 4.2。Meta Llama社区许可证（月活用户超过7亿时限制商用）：Llama 3.1 8B、Llama 3.2 3B、Llama 3.2 Vision 11B。MIT（允许商用）：DeepSeek-R1 7B和14B。修改版MIT（允许商用，含署名条款）：Kimi K2.6。OpenMDW-1.1（宽松，允许商用）：Laguna XS 2.1。商用部署前务必核对许可证条款。对于受监管行业的欧盟企业，Devstral Small 2等Mistral模型（法国，Apache 2.0）是合理的默认选择：欧盟来源且许可证宽松。通过Ollama完全在本地运行模型意味着提示词不会发送到外部服务器；这有助于满足GDPR义务，但本身并不足以满足（`:cloud`标签会把数据发送到Ollama的托管服务）。',
-            '**日本（METI）。** 对于日本企业的Ollama部署，Qwen3 / Qwen3.8是值得推荐的模型家族：它原生处理日文文本，有利于推理时间和KV缓存。对于日语编程工作流：Qwen3.8-27B（Qwen公布的SWE-bench Pro为61.7）原生处理日文代码注释。METI的AI治理文档通常要求注明确切的模型版本。使用`ollama show <模型>`可获取包含参数量、量化级别和上下文长度的完整规格，用于合规记录。',
-            '**中国。** 根据CAC《生成式人工智能服务管理暂行办法》（2023年），向终端用户提供AI服务的组织必须登记所用模型。Qwen3 / Qwen3.8（Alibaba，Apache 2.0）是中国企业Ollama部署的自然选择：中国来源、Apache 2.0许可证、中文表现出色。Kimi K2.6（Moonshot AI，修改版MIT）同样来自中国，但Ollama仅提供云端标签，本地运行需要服务器级硬件。命令：追求最佳质量用`ollama run qwen3.8:27b`，追求速度用`ollama run qwen3:8b`。DeepSeek-R1（MIT许可证）适合推理任务。对于通过Ollama在本地处理的数据，推理本身不会触发PIPL的跨境传输要求；请核对你自身的合规义务。',
+            '**欧盟 / GDPR + 许可证合规。** 对于在生产中部署Ollama模型的欧盟组织，许可证的选择与性能同样重要。Apache 2.0（完全开放，允许商用）：Mistral Small 3、Mistral Small 3.1、Qwen3 8B、Qwen3.8-27B、Devstral Small 2、Granite 4.2。Meta Llama社区许可证（月活用户超过7亿时限制商用）：Llama 3.1 8B、Llama 3.2 3B、Llama 3.2 Vision 11B。Llama 3.2 Vision是例外：其可接受使用政策不向住所或主要营业地在欧盟的个人或公司授予许可权利（基于它构建的产品的最终用户不受影响），在欧盟使用前请先核实。MIT（允许商用）：DeepSeek-R1 7B和14B。修改版MIT（允许商用，含署名条款）：Kimi K2.6。OpenMDW-1.1（宽松，允许商用）：Laguna XS 2.1。商用部署前务必核对许可证条款。对于受监管行业的欧盟企业，Devstral Small 2等Mistral模型（法国，Apache 2.0）是合理的默认选择：欧盟来源且许可证宽松。通过Ollama完全在本地运行模型意味着提示词不会发送到外部服务器；这有助于满足GDPR义务，但本身并不足以满足（`:cloud`标签会把数据发送到Ollama的托管服务）。',
+            '**日本（METI）。** 对于日本企业的Ollama部署，Qwen3 / Qwen3.8是值得推荐的模型家族：它原生处理日文文本，有利于推理时间和KV缓存。对于日语编程工作流：Qwen3.8-27B（Qwen公布的SWE-bench Pro为61.7）原生处理日文代码注释。记录确切的模型版本是合规文档的良好做法。使用`ollama show <模型>`可获取包含参数量、量化级别和上下文长度的完整规格，用于合规记录。',
+            '**中国。** 根据CAC《生成式人工智能服务管理暂行办法》（2023年），面向中国公众提供生成式AI服务的提供者可能需要履行备案或安全评估等义务；是否适用于你，请咨询法律顾问。Qwen3 / Qwen3.8（Alibaba，Apache 2.0）是中国企业Ollama部署的自然选择：中国来源、Apache 2.0许可证、中文表现出色。Kimi K2.6（Moonshot AI，修改版MIT）同样来自中国，但Ollama仅提供云端标签，本地运行需要服务器级硬件。命令：追求最佳质量用`ollama run qwen3.8:27b`，追求速度用`ollama run qwen3:8b`。DeepSeek-R1（MIT许可证）适合推理任务。通过Ollama在本地运行的推理本身不会将数据发送到境外，因此这一步不涉及跨境传输问题；PIPL或其他义务是否适用于你的数据处理，请与法律顾问确认。本节仅为一般信息，不构成法律建议。',
           ],
         },
         commonMistakes: {
@@ -3342,15 +3340,15 @@ schema: {
             },
             {
               q: '中国企业使用本地LLM如何符合数据安全法？',
-              a: '根据《中华人民共和国数据安全法》（2021年），敏感数据（用户、金融、医疗）在中国境内处理。本地推理完全满足此要求：数据不离开企业系统。推荐使用Qwen3系列（阿里开发，针对中文优化）或Llama 3.3。关键：选择与您数据分类相符的模型。',
+              a: '《中华人民共和国数据安全法》（2021年）对数据分类分级保护和重要数据出境等作出规定。本地推理本身不会把数据发送到境外，可以减少这一环节的出境问题；但企业是否符合数据安全法，取决于数据分类、整体系统设计和管理措施，请与法律顾问确认。模型选择应与自身的数据分类相匹配。本文为一般信息，不构成法律建议。',
             },
             {
               q: '亚太地区跨境数据如何处理？',
-              a: '东南亚、日本、澳大利亚等地有跨境数据限制（PDPA、APPI、Privacy Act）。本地LLM优势：推理完全本地化，无跨境传输。ASEAN成员国建议使用本地部署+地理位置锁定。中国企业对APAC客户：Qwen3或Llama可在本地数据中心运行，满足所有地域要求。',
+              a: '东南亚、日本、澳大利亚等地设有个人数据跨境规则（例如各国的PDPA、日本的APPI、澳大利亚的Privacy Act）。本地部署的推理本身不会把数据发送到境外，可以减少跨境传输环节；各地规则是否适用于你的处理活动，请与当地法律顾问确认。本文为一般信息，不构成法律建议。',
             },
             {
               q: '金融、医疗、法律企业如何部署？',
-              a: '这些高监管行业要求：数据主权、完整审计、合规认证。本地LLM方案：（1）Llama 3.3/70B：标准金融基准检验；（2）Qwen3：中文医疗文档理解；（3）Mistral：法律条款分析。部署步骤：孤立网络、受限访问、日志记录、定期审计。Ollama与标准企业IT（Kubernetes、Docker）兼容。',
+              a: '金融、医疗和法律等受严格监管的行业，通常对数据主权、审计和合规认证有较高要求。本地部署有助于让数据留在自有环境，常见做法包括网络隔离、访问控制、日志记录和定期审计；是否满足监管要求取决于具体用例、数据保护措施和适用法规。模型输出不能替代合格专业人员的判断：涉及信贷、医疗诊断或法律意见等场景时，应由合格人员作最终决定，并咨询法律顾问。Ollama可与Kubernetes、Docker等常见企业IT工具配合使用。本文为一般信息，不构成法律建议。',
             },
           ],
         },
@@ -3393,23 +3391,23 @@ schema: {
             },
             {
               q: '哪个模型对中文支持最好？',
-              a: 'Qwen3 8B。使用CulturaX中文微调和Wikipedia中文语料。Llama 3.3中文可接受，但Qwen精度更高。Mistral Small主要针对法文和西班牙文。',
+              a: 'Qwen3 / Qwen3.8、Mistral Small 3.1等多语言模型支持中文，但本页不按中文质量对它们排序，请用你自己的文本测试。',
             },
             {
               q: 'Ollama模型真的完全免费吗？',
-              a: '是的。所有Ollama模型遵循开源许可（Apache 2.0、Meta Llama Community、DeepSeek）。无订阅、无API费用。下载、本地安装和无限使用完全免费。',
+              a: '下载并在本地运行无需订阅或API费用，但并非所有模型都是OSI意义上的开源：Llama 3.x/4.x使用Meta Llama社区许可证（未获OSI认可，月活用户超过7亿时限制商用），Mistral Small 3.1、Qwen3和Gemma 4采用Apache 2.0，Gemma 2和Gemma 3采用Google的Gemma使用条款。商用部署前请核对许可证。',
             },
             {
               q: 'DeepSeek-R1的速度真的那么快？',
-              a: '生成速度：M1 Pro 15-25 tokens/秒（与Llama 3.3相同）。总延迟更高因为思维链生成需要额外处理。中等查询约8-12秒。实时应用选Llama 3.3或Mistral。',
+              a: '速度取决于硬件、量化方式和提示词，本页不提供实测数据。DeepSeek-R1在回答前会输出思维链，因此每次回答产生的token比标准聊天模型更多，耗时相应更长；实时交互场景更适合标准聊天模型。',
             },
             {
               q: '为什么不直接用ChatGPT Plus而用本地Ollama？',
-              a: '隐私：对话不发送给OpenAI。成本：无月费，GPU一次性购买。离线：完全无网络需求。自定义：完全控制系统提示、行为和参数。',
+              a: '隐私：本地运行时提示词不会离开设备（`:cloud`标签除外）。成本：模型本身没有订阅或API费用，但需要硬件和电费。离线：下载后推理无需联网。自定义：系统提示词和模型参数由你自行控制。',
             },
             {
               q: 'Ollama模型支持图像处理吗？',
-              a: '支持。Llama 3.2 Vision、Qwen2-VL、Gemma 3都是多模态。图像本地上传无云传输。支持JPEG、PNG、GIF。',
+              a: '支持。Llama 3.2 Vision、Qwen2.5-VL、Gemma 3都是多模态。图像本地上传，本地运行时无云传输。支持JPEG、PNG、GIF。',
             },
             {
               q: '如何更新Ollama模型？',
@@ -3417,23 +3415,23 @@ schema: {
             },
             {
               q: 'GDPR对Ollama有影响吗？',
-              a: '有。GDPR个人数据安全强制。本地推理满足内置保护要求。无云传输=主权、防护、合规性。注意：使用云模型时需确认处理合同。',
+              a: '是的，只要处理个人数据就需要。GDPR第32条要求采取适当的安全措施。在私有设备或服务器上进行本地推理有助于满足数据保护设计的要求：没有云传输，数据不会离开你的系统，这有利于数据主权和防护措施的落实；但实际是否合规取决于你的整体配置（不构成法律建议）。注意：使用云模型时，请先确认数据处理合同。',
             },
             {
               q: '日本企业如何利用Ollama？',
-              a: '优势：数据主权（避免云锁定）、符合IT标准（IPA/METI AI Governance 2024）、标准硬件可扩展、无API费用。Qwen3 8B在标准企业GPU上运行。Llama 3.1 8B适合企业工具、客户自动化和文档处理验证。',
+              a: '是的，在很多情况下适用。优势：数据主权（避免云锁定）、有助于落实IT安全标准（实际合规取决于你的整体配置，不构成法律建议）、标准硬件上的可扩展性、无API费用。Qwen3 8B可在标准企业GPU上运行；Llama 3.1 8B常用于企业内部工具、客户自动化和文档处理。',
             },
             {
               q: '在Ollama中应该使用哪个Dolphin模型？',
-              a: '应使用Dolphin 3.0（`ollama pull dolphin3`），而非已过时的`dolphin-mistral`（2024年模型，已停止维护）。Dolphin 3.0由Cognitive Computations开发，基于Llama 3.1构建，无内置内容过滤，适用于通用聊天、编程和智能体任务。',
+              a: '应使用Dolphin 3.0（`ollama pull dolphin3`），而非已过时的`dolphin-mistral`（2024年模型，已停止维护）。Dolphin 3.0由Cognitive Computations开发，基于Llama 3.1构建，无内置内容过滤，适用于通用聊天、编程和智能体任务。由于没有内置的安全过滤，其输出的使用责任由你自行承担，并适用Llama 3.1许可证条款。',
             },
             {
               q: 'Ollama背后公司的官方名称是什么？',
-              a: '该公司是Ollama Inc.，一家总部位于加利福尼亚州帕洛阿尔托的B轮融资初创公司，由Jeffrey Morgan和Michael Chiang于2023年创立。',
+              a: 'Ollama背后的公司是Ollama Inc.。“Ollama”既指该公司，也指其发布的开源CLI工具和模型运行时；项目首个公开版本v0.0.1于2023年7月8日在GitHub发布。',
             },
             {
               q: '哪些Ollama模型最适合俄语任务？',
-              a: 'Qwen3/Qwen 3.6和Mistral Small 3.1的原生多语言训练均包含俄语；Qwen3在非英语基准上得分更高，Mistral Small 3.1在非正式对话中俄语流利度更强。',
+              a: 'Qwen3/Qwen 3.6和Mistral Small 3.1的原生多语言训练均包含俄语；本页不对二者的俄语表现排序；请用你自己的提示词分别测试。',
             },
           ],
         },
@@ -3456,9 +3454,9 @@ schema: {
           title: '参考来源',
           items: [
             '[Ollama官方库](https://ollama.ai/library)----所有支持的模型和下载命令',
-            '[OpenCompass 2026基准](https://opencompass.org/)----MMLU、HumanEval、MATH排名',
+            '[OpenCompass](https://opencompass.org/)----第三方基准榜单',
             '[DeepSeek-R1研究论文](https://arxiv.org/abs/2501.12948)----推理模型技术细节',
-            '[Qwen3技术报告](https://qwenlm.github.io/blog/qwen2-5-opensource/)----中文优化和性能数据',
+            '[Qwen2.5开源发布博客](https://qwenlm.github.io/blog/qwen2-5-opensource/)----Qwen模型系列与性能说明',
           ],
         },
       },
@@ -3469,7 +3467,7 @@ schema: {
         'description': '当前Ollama版本v0.40.5（2026年10月）、完整更新日志及最新模型：Laguna XS 2.1、Kimi K2.7 Code、Qwen3.8、Kimi K2.6。验证基准、RAM需求、pull命令。',
         'url': 'https://www.promptquorum.com/zh/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-11',
-        'dateModified': '2026-10-17',
+        'dateModified': '2026-10-19',
         'author': {
           '@type': 'Organization',
           'name': 'PromptQuorum',
@@ -3493,18 +3491,21 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'Ollama Top 10 开源模型',
+        'name': 'Ollama上的顶级开源模型 -- 2026年',
+        'numberOfItems': 12,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B', 'description': '下载量最高。通用、初学者适用。6.5GB RAM。' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Qwen3 8B', 'description': '增长最快。代码和中文优秀。6.5GB RAM。' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small', 'description': '多语言模型。法文西班牙文优秀。6.5GB RAM。' },
-          { '@type': 'ListItem', 'position': 4, 'name': 'Llama 3.3 70B', 'description': '大型模型。多基准接近GPT-4。44GB RAM。' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'DeepSeek-R1 7B', 'description': '推理模型。思维链推理。6.5GB RAM。' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'Gemma 3 9B', 'description': '多模态。视觉和128K上下文。9.5GB RAM。' },
-          { '@type': 'ListItem', 'position': 7, 'name': 'Llama 3.2 Vision 11B', 'description': '视觉模型。图像处理和多模态。11GB RAM。' },
-          { '@type': 'ListItem', 'position': 8, 'name': 'Phi-3.5 Mini 3.8B', 'description': '超小型高效。移动和物联网。3GB RAM。' },
-          { '@type': 'ListItem', 'position': 9, 'name': 'Qwen3 32B', 'description': 'Qwen大型版。复杂任务高质量。20GB RAM。' },
-          { '@type': 'ListItem', 'position': 10, 'name': 'Mistral Small 3.1', 'description': '高速轻量。实时应用质量兼顾。5GB RAM。' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Qwen3.8-27B', 'url': 'https://ollama.com/library/qwen3.8', 'description': '消费级硬件综合最佳。Qwen公布的SWE-bench Pro为61.7。Q4下可装入24GB。Apache 2.0。ollama run qwen3.8:27b' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Kimi K2.6', 'url': 'https://ollama.com/library/kimi-k2.6', 'description': '前沿级MoE编程模型。SWE-Bench Pro 58.6。32B激活/1T总参数。Modified MIT许可证。ollama run kimi-k2.6:cloud' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'gpt-oss:20b', 'url': 'https://ollama.com/library/gpt-oss', 'description': '适合16GB的小型模型。21B总参数/3.6B激活MoE。约o3-mini水平，推理可调。ollama run gpt-oss:20b' },
+          { '@type': 'ListItem', 'position': 4, 'name': 'qwen3:30b', 'url': 'https://ollama.com/library/qwen3', 'description': '均衡的全能模型；代码补全可用qwen3-coder:30b。ollama run qwen3:30b' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Laguna XS 2.1', 'url': 'https://ollama.com/library/laguna-xs-2.1', 'description': '代理式长周期编程。33B/3B激活MoE。SWE-bench Verified 70.9%。OpenMDW-1.1许可证。ollama run laguna-xs-2.1' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': '思维链推理模型。5GB内存。ollama run deepseek-r1:7b' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'gemma4:e4b', 'url': 'https://ollama.com/library/gemma4', 'description': '视觉与工具调用（E4B及以上）。约6GB内存。ollama run gemma4:e4b' },
+          { '@type': 'ListItem', 'position': 8, 'name': 'Llama 4 Scout', 'url': 'https://ollama.com/library/llama4', 'description': '长上下文（10M token）与大型多模态。MoE 17B激活/109B总参数。Q4下约55GB。ollama run llama4:scout' },
+          { '@type': 'ListItem', 'position': 9, 'name': 'Devstral Small 2 24B', 'url': 'https://ollama.com/library/devstral-small-2', 'description': '代理式编程（多文件编辑、调试）。16GB内存。ollama run devstral-small-2' },
+          { '@type': 'ListItem', 'position': 10, 'name': 'mistral-small3.1', 'url': 'https://ollama.com/library/mistral-small3.1', 'description': '16GB档位质量良好。14GB内存。Apache 2.0。ollama run mistral-small3.1' },
+          { '@type': 'ListItem', 'position': 11, 'name': 'gemma2:2b', 'url': 'https://ollama.com/library/gemma2', 'description': '非常轻量。1.7GB内存。ollama run gemma2:2b' },
+          { '@type': 'ListItem', 'position': 12, 'name': 'phi4-mini', 'url': 'https://ollama.com/library/phi4-mini', 'description': '面向推理的小型模型。2.5GB内存。ollama run phi4-mini' },
         ],
       },
       faqSchema: {
@@ -3532,7 +3533,7 @@ schema: {
             'name': '哪个模型对中文支持最好？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3 8B。使用CulturaX中文微调和Wikipedia中文语料。Llama 3.3中文可接受，但Qwen精度更高。Mistral Small主要针对法文和西班牙文。',
+              'text': 'Qwen3 / Qwen3.8、Mistral Small 3.1等多语言模型支持中文，但本页不按中文质量对它们排序，请用你自己的文本测试。',
             }
           },
           {
@@ -3540,7 +3541,7 @@ schema: {
             'name': 'Ollama模型真的完全免费吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '是的。所有Ollama模型遵循开源许可（Apache 2.0、Meta Llama Community、DeepSeek）。无订阅、无API费用。下载、本地安装和无限使用完全免费。',
+              'text': '下载并在本地运行无需订阅或API费用，但并非所有模型都是OSI意义上的开源：Llama 3.x/4.x使用Meta Llama社区许可证（未获OSI认可，月活用户超过7亿时限制商用），Mistral Small 3.1、Qwen3和Gemma 4采用Apache 2.0，Gemma 2和Gemma 3采用Google的Gemma使用条款。商用部署前请核对许可证。',
             }
           },
           {
@@ -3548,7 +3549,7 @@ schema: {
             'name': 'DeepSeek-R1的速度真的那么快？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '生成速度：M1 Pro 15-25 tokens/秒（与Llama 3.3相同）。总延迟更高因为思维链生成需要额外处理。中等查询约8-12秒。实时应用选Llama 3.3或Mistral。',
+              'text': '速度取决于硬件、量化方式和提示词，本页不提供实测数据。DeepSeek-R1在回答前会输出思维链，因此每次回答产生的token比标准聊天模型更多，耗时相应更长；实时交互场景更适合标准聊天模型。',
             }
           },
           {
@@ -3556,7 +3557,7 @@ schema: {
             'name': '为什么不直接用ChatGPT Plus而用本地Ollama？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '隐私：对话不发送给OpenAI。成本：无月费，GPU一次性购买。离线：完全无网络需求。自定义：完全控制系统提示、行为和参数。',
+              'text': '隐私：本地运行时提示词不会离开设备（`:cloud`标签除外）。成本：模型本身没有订阅或API费用，但需要硬件和电费。离线：下载后推理无需联网。自定义：系统提示词和模型参数由你自行控制。',
             }
           },
           {
@@ -3564,7 +3565,7 @@ schema: {
             'name': 'Ollama模型支持图像处理吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '支持。Llama 3.2 Vision、Qwen2-VL、Gemma 3都是多模态。图像本地上传无云传输。支持JPEG、PNG、GIF。',
+              'text': '支持。Llama 3.2 Vision、Qwen2.5-VL、Gemma 3都是多模态。图像本地上传，本地运行时无云传输。支持JPEG、PNG、GIF。',
             }
           },
           {
@@ -3580,7 +3581,7 @@ schema: {
             'name': 'GDPR对Ollama有影响吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '有。GDPR个人数据安全强制。本地推理满足内置保护要求。无云传输=主权、防护、合规性。注意：使用云模型时需确认处理合同。',
+              'text': '是的，只要处理个人数据就需要。GDPR第32条要求采取适当的安全措施。在私有设备或服务器上进行本地推理有助于满足数据保护设计的要求：没有云传输，数据不会离开你的系统，这有利于数据主权和防护措施的落实；但实际是否合规取决于你的整体配置（不构成法律建议）。注意：使用云模型时，请先确认数据处理合同。',
             }
           },
           {
@@ -3588,7 +3589,7 @@ schema: {
             'name': '日本企业如何利用Ollama？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '优势：数据主权（避免云锁定）、符合IT标准（IPA/METI AI Governance 2024）、标准硬件可扩展、无API费用。Qwen3 8B在标准企业GPU上运行。Llama 3.1 8B适合企业工具、客户自动化和文档处理验证。',
+              'text': '是的，在很多情况下适用。优势：数据主权（避免云锁定）、有助于落实IT安全标准（实际合规取决于你的整体配置，不构成法律建议）、标准硬件上的可扩展性、无API费用。Qwen3 8B可在标准企业GPU上运行；Llama 3.1 8B常用于企业内部工具、客户自动化和文档处理。',
             }
           },
           {
@@ -3596,7 +3597,7 @@ schema: {
             'name': '在Ollama中应该使用哪个Dolphin模型？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '应使用Dolphin 3.0（`ollama pull dolphin3`），而非已过时的`dolphin-mistral`（2024年模型，已停止维护）。Dolphin 3.0由Cognitive Computations开发，基于Llama 3.1构建，无内置内容过滤，适用于通用聊天、编程和智能体任务。',
+              'text': '应使用Dolphin 3.0（`ollama pull dolphin3`），而非已过时的`dolphin-mistral`（2024年模型，已停止维护）。Dolphin 3.0由Cognitive Computations开发，基于Llama 3.1构建，无内置内容过滤，适用于通用聊天、编程和智能体任务。由于没有内置的安全过滤，其输出的使用责任由你自行承担，并适用Llama 3.1许可证条款。',
             }
           },
           {
@@ -3604,7 +3605,7 @@ schema: {
             'name': 'Ollama背后公司的官方名称是什么？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '该公司是Ollama Inc.，一家总部位于加利福尼亚州帕洛阿尔托的B轮融资初创公司，由Jeffrey Morgan和Michael Chiang于2023年创立。',
+              'text': 'Ollama背后的公司是Ollama Inc.。“Ollama”既指该公司，也指其发布的开源CLI工具和模型运行时；项目首个公开版本v0.0.1于2023年7月8日在GitHub发布。',
             }
           },
           {
@@ -3612,20 +3613,20 @@ schema: {
             'name': '哪些Ollama模型最适合俄语任务？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3/Qwen 3.6和Mistral Small 3.1的原生多语言训练均包含俄语；Qwen3在非英语基准上得分更高，Mistral Small 3.1在非正式对话中俄语流利度更强。',
+              'text': 'Qwen3/Qwen 3.6和Mistral Small 3.1的原生多语言训练均包含俄语；本页不对二者的俄语表现排序；请用你自己的提示词分别测试。',
             }
           },
         ]
       },
       gammaEmbedUrl: '/presentations/top-open-source-models-ollama-static.html',
-      gammaDescription: '下面的幻灯片涵盖：按下载次数排名的 Top 10 Ollama 模型、性能对比（60-74% HumanEval）、按用途分类的最佳模型（聊天、编码、推理、视觉）、DeepSeek-R1 链式思维推理及确切的拉取命令。将 PDF 下载为您的 Ollama 模型选择参考卡。',
+      gammaDescription: '下面的幻灯片涵盖：按下载次数排名的 Top 10 Ollama 模型、性能对比、按用途分类的最佳模型（聊天、编码、推理、视觉）、DeepSeek-R1 链式思维推理及确切的拉取命令。将 PDF 下载为您的 Ollama 模型选择参考卡。',
     },
   ko: {
       freshness_tier: 'monthly',
       next_seo_review_due: '2026-11-17',
       next_refresh_due: '2026-11-17',
       last_full_refresh: '2026-10-17',
-      current_models_mentioned: ['Nemotron 3.5 Lightning', 'Nemotron 3.5 Super', 'Nemotron 3.5 Bolt', 'Laguna XS 2.1', 'Kimi K2.7 Code', 'Dolphin 3.0', 'Qwen3.8-27B', 'qwen3:30b', 'qwen3-coder:30b', 'Kimi K2.6', 'gpt-oss:20b', 'gpt-oss:120b', 'DeepSeek-R1', 'Gemma 4', 'GLM-5.3', 'Llama 4 Scout', 'Devstral Small 24B', 'Mistral Small', 'Phi-4 Mini'],
+      current_models_mentioned: ['Nemotron 3.5 Lightning', 'Nemotron 3.5 Super', 'Nemotron 3.5 Bolt', 'Laguna XS 2.1', 'Kimi K2.7 Code', 'Dolphin 3.0', 'Qwen3.8-27B', 'qwen3:30b', 'qwen3-coder:30b', 'Kimi K2.6', 'gpt-oss:20b', 'gpt-oss:120b', 'DeepSeek-R1 distills', 'Gemma 4', 'GLM-5.3', 'Llama 4 Scout', 'Devstral Small 2 24B', 'Mistral Small 3.1', 'Phi-4 Mini'],
       current_benchmarks_used: ['SWE-bench', 'SWE-bench Verified', 'SWE-bench Multilingual', 'SWE-Bench Pro', 'HumanEval', 'MATH'],
       theme: 'Best Models',
       title: 'Ollama 최신 버전 2026: v0.40.5 + 용도별 최고 모델',
@@ -3650,7 +3651,7 @@ schema: {
             '→Llama 4 Scout — 장문 컨텍스트(10M 토큰) + 멀티모달, Q4 기준 약 55GB',
             '→DeepSeek-R1 — 추론/수학 최고; 추론 조절은 gpt-oss:20b (DeepSeek은 이후 DeepSeek-V4(Flash/Pro)를 더 새로운 오픈 웨이트 세대로 공개했으며, R1/V3는 로컬에서 계속 사용할 수 있습니다.)',
           ],
-          updatedDate: '2026-10-17',
+          updatedDate: '2026-10-19',
         },
       },
       audience: '소비자 하드웨어에서 처음으로 로컬 LLM을 실행하는 입문자',
@@ -3736,6 +3737,7 @@ schema: {
             'Meta는 2026년 4월에 Scout(17B 활성, 109B 전체, MoE)와 Maverick(17B 활성, 400B 전체) 변형을 포함한 **Llama 4**를 출시했습니다. Llama 4 Scout는 이제 Ollama 라이브러리에서 안정적으로 사용 가능합니다(`ollama pull llama4:scout`). Llama 4 계열은 혼합 전문가(MoE) 아키텍처를 사용합니다 — 토큰당 17B 파라미터만 활성화되지만, 109B 전체 파라미터로 Scout는 Q4에서 ~55GB VRAM이 필요합니다(1.78비트에서만 24GB에 적합, ~20 tok/s). Scout의 핵심 특징은 소비자 하드웨어 적합성이 아니라 1,000만 토큰 컨텍스트 창과 멀티모달 입력입니다. 경량 설정(8GB RAM)에서는 Llama 3.2 3B가 여전히 가장 쉬운 첫 번째 모델입니다.',
             'Kimi K2.6(Moonshot AI, Modified MIT 라이선스, 32B 활성 / 1T 전체 MoE)은 SWE-Bench Pro 58.6을 달성하여 GPT-5.5와 동점을 기록했습니다. Laguna XS 2.1(Poolside)은 장시간 로컬 코딩 세션을 위해 구축된 가장 새로운 에이전틱 코딩 도전자입니다. Qwen3.8-27B는 소비자 하드웨어 전반 최고 모델로서 61.7 SWE-bench Pro를 달성했습니다(Q4에서 24GB에 적합). OpenAI의 오픈 웨이트 gpt-oss:20b(21B 전체 / 3.6B 활성 MoE)는 16GB에서 ~o3-mini 수준의 조정 가능한 추론으로 실행됩니다.',
             'Ollama 라이브러리는 수백 개의 큐레이팅된 모델을 보유하고 있으며, Laguna XS 2.1과 Kimi K2.7 Code가 6월 업데이트 이후 최신 추가 모델입니다.',
+            '버전 참고: Ollama에서는 Qwen3.6과 Qwen3.8이 더 새로운 Qwen 세대입니다(qwen3.6:35b 약 24 GB, qwen3.8:27b 18 GB). qwen3:30b와 qwen3-coder:30b(각 19 GB)는 이전 세대 선택지로 계속 사용할 수 있습니다. Mistral의 현재 Small 모델은 Mistral Small 4이지만 확인 시점에 Ollama 라이브러리에는 올라와 있지 않았으므로, mistral-small3.1과 mistral-small:24b(Mistral Small 3)가 받을 수 있는 Small 모델로 남아 있습니다.',
           ],
         },
         byCategory: {
@@ -3747,23 +3749,23 @@ schema: {
             '**일반 채팅(전반 최고)**: `ollama run qwen3.8:27b` -- 61.7 SWE-bench Pro, 소비자 하드웨어 전반 최고, Q4에서 24GB에 적합. 균형잡힌 범용: `ollama run qwen3:30b`. 8GB 기기에서는 `ollama run llama3.2:3b`를 유지하십시오.',
             '**긴 컨텍스트 / 멀티모달**: `ollama run llama4:scout` -- 1,000만 토큰 컨텍스트 + 멀티모달, MoE(17B 활성/109B 전체). Q4에서 ~55GB VRAM 필요(1.78비트에서만 24GB에 적합, ~20 tok/s).',
             '**소형 최강 / 16GB**: `ollama run gpt-oss:20b` -- 21B 전체 / 3.6B 활성 MoE, ~o3-mini 수준, 조정 가능한 추론. 더 큰 모델: `ollama run gpt-oss:120b`(80GB).',
-            '**8GB에서 코딩**: `ollama run qwen3:8b` -- 8GB VRAM 기기 최고 로컬 코딩 모델. 76% HumanEval, 5GB 사용, 다국어 지원.',
-            '**8GB에서 일반 추론(코딩 외)**: `ollama run mistral:7b` -- 8GB에서 가장 빠른 범용 모델, 40~60 tok/sec.',
+            '**8GB에서 코딩**: `ollama run qwen3:8b` -- 8GB VRAM 기기에서 쓸 만한 로컬 코딩 모델. 5GB 사용, 다국어 지원.',
+            '**8GB에서 일반 추론(코딩 외)**: `ollama run mistral:7b` -- 8GB 기기용 경량 범용 모델이며, 속도는 하드웨어에 따라 달라집니다.',
             '**코딩(최고 에이전트, 24B)**: `ollama run devstral-small-2` -- 최고 에이전트 코딩 모델(다중 파일 편집, 디버깅). 16GB RAM. Mistral AI 제공.',
             '**코딩(최고 밀집, 27B)**: `ollama run qwen3.8:27b` -- 61.7 SWE-bench Pro. 최고 밀집 코딩 모델. 18 GB VRAM.',
             '**코딩(최전선 MoE)**: `ollama run kimi-k2.6:cloud` -- SWE-Bench Pro 58.6(GPT-5.5 동점), 최상위. MoE(32B 활성/1T 전체). Modified MIT 라이선스. 소비자 하드웨어에는 양자화 필요.',
             '**코딩(에이전틱, 장시간 작업)**: `ollama run laguna-xs-2.1` -- Poolside의 33B/3B 활성 MoE, SWE-bench Verified 70.9%, 256K 컨텍스트. 계획 → 코드 작성 → 테스트 → 반복의 다단계 루프용으로 구축. OpenMDW-1.1 라이선스.',
             '**에이전트 작업 및 도구 호출**: `ollama run gemma4:e4b` -- 2026년 4월 2일 출시. 내장 도구 호출 + 비전 지원. 로컬 에이전트, 함수 호출, 구조화된 출력에 권장. 6GB RAM.',
             '**추론 및 수학**: `ollama run deepseek-r1:7b` -- 연쇄 사고 모델, 7B에서 최고 로컬 수학 성능.',
-            '**다국어**: `ollama run qwen3:8b` -- 29개 이상 언어 기본 지원, 가장 강력한 비영어 지원, 76% HumanEval.',
-            '**러시아어 작업**: `ollama run qwen3:8b` 또는 `ollama run mistral-small3.1` -- 두 모델 모두 네이티브 다국어 학습 데이터에 러시아어를 포함합니다. Qwen3는 비영어 벤치마크에서 더 높은 점수를 기록하며, Mistral Small 3.1은 비공식 테스트에서 더 자연스러운 러시아어 대화 유창성을 보입니다.',
+            '**다국어**: `ollama run qwen3:8b` -- 29개 이상 언어 기본 지원, 다국어 범용 모델.',
+            '**러시아어 작업**: `ollama run qwen3:8b` 또는 `ollama run mistral-small3.1` -- 두 모델 모두 네이티브 다국어 학습 데이터에 러시아어를 포함합니다. 이 페이지는 러시아어 성능 순위를 매기지 않습니다. 직접 작성한 프롬프트로 두 모델을 모두 시험해 보십시오.',
             '**무검열 / 범용**: `ollama run dolphin3` -- Dolphin 3.0(Cognitive Computations, Llama 3.1 기반), 내장 콘텐츠 필터링 없음, 일반 채팅/코딩/에이전틱 작업에 사용.',
             '**이미지 이해**: `ollama run gemma4:e4b` -- 비전 + 도구 호출(2026년 7월 기준 Apple Silicon에서 약 90% 빨라짐). 또는 전용 비전용 `ollama run llama3.2-vision:11b`.',
             '**빠르고 경량**: `ollama run gemma2:2b` -- 가장 빠른 CPU 추론, 1.7GB RAM.',
-            '**고품질(16GB RAM)**: `ollama run mistral-small3.1` -- 14GB RAM에서 ~70B급 품질.',
+            '**고품질(16GB RAM)**: `ollama run mistral-small3.1` -- 14GB RAM에서 우수한 품질.',
             '**임베딩 생성**: `ollama run nomic-embed-text` -- RAG 파이프라인용 1억 3,700만 파라미터 임베딩 모델.',
             '**문서 Q&A(RAG)**: Open WebUI의 RAG 기능과 함께 `ollama run llama3.2` -- 가장 잘 지원되는 조합.',
-            '**홈 자동화 / 웨이크 워드 AI**: `ollama run phi4-mini` — Phi-4 Mini(3.8B, ~3GB VRAM)는 독립 GPU 없이 미니 PC에서 20~25 tok/sec로 Home Assistant 음성 쿼리를 처리합니다. [Home Assistant + Ollama 통합 가이드 →](/ko/smart-home/home-assistant-ollama-integration) 참조.',
+            '**홈 자동화 / 웨이크 워드 AI**: `ollama run phi4-mini` — Phi-4 Mini(3.8B, ~3GB VRAM)는 독립 GPU 없이 미니 PC에서 Home Assistant 음성 쿼리를 처리할 수 있으며, 속도는 하드웨어에 따라 달라집니다. [Home Assistant + Ollama 통합 가이드 →](/ko/smart-home/home-assistant-ollama-integration) 참조.',
           ],
           image: '/images/top-open-source-models-ollama-use-case-picks-hero-ko.webp',
           imageCaption: '사용 사례별 Ollama 모델 선택: 채팅과 코딩에는 qwen3.8:27b(전반 최고, 61.7 SWE-bench Pro), 최전선 코딩에는 kimi-k2.6, 16GB에서는 gpt-oss:20b, 수학에는 deepseek-r1:7b.',
@@ -3785,8 +3787,8 @@ schema: {
             { 'Model': '[gpt-oss:20b](https://ollama.com/library/gpt-oss)', 'Released': '2026년', 'Best For': '소형 최강 / 16GB, ~o3-mini, 조정 가능한 추론(gpt-oss:120b도 있음)', 'Ollama Command': 'ollama run gpt-oss:20b' },
             { 'Model': 'glm-5.3', 'Released': 'Z.ai', 'Best For': '744B/40B 활성 MoE, MIT 라이선스', 'Ollama Command': 'ollama run glm-5.3' },
             { 'Model': '[gemma4:e4b](https://ollama.com/library/gemma3)', 'Released': '2026년 4월 2일', 'Best For': '비전 + 도구 호출(E2B/E4B/E12B/E27B)', 'Ollama Command': 'ollama run gemma4:e4b' },
-            { 'Model': 'deepseek-v4-flash', 'Released': '2026년 4~5월', 'Best For': '저비용 코딩(실세계 78/100)', 'Ollama Command': 'ollama run deepseek-v4-flash' },
-            { 'Model': '[qwen3:8b](https://ollama.com/library/qwen3)', 'Released': '2026년', 'Best For': '7B에서 HumanEval 76%, 다국어', 'Ollama Command': 'ollama run qwen3:8b' },
+            { 'Model': 'deepseek-v4-flash', 'Released': '2026년 4~5월', 'Best For': '저비용 코딩 옵션', 'Ollama Command': 'ollama run deepseek-v4-flash' },
+            { 'Model': '[qwen3:8b](https://ollama.com/library/qwen3)', 'Released': '2026년', 'Best For': '7B급 다국어 모델', 'Ollama Command': 'ollama run qwen3:8b' },
           ],
           columns: ['Model', 'Released', 'Best For', 'Ollama Command'],
         },
@@ -3795,12 +3797,11 @@ schema: {
           title: 'DeepSeek-R1이란 무엇이며 어떻게 다릅니까?',
           content: [
             '**DeepSeek-R1은 추론 모델입니다 -- 답변을 직접 생성하는 표준 채팅 모델과 달리, DeepSeek-R1은 최종 답변 전에 명시적인 연쇄 사고 추론을 생성합니다.** 이를 통해 수학, 논리 퍼즐, 단계별 문제 해결에서 성능이 크게 향상됩니다.',
-            'DeepSeek-R1 7B는 경쟁 수학(MATH)에서 52%를 기록하는 반면, 같은 크기의 Mistral Small은 28%에 그칩니다. 표준 모델보다 느리지만(응답당 토큰 수가 많음) 추론이 중요한 작업에서 훨씬 더 정확합니다.',
+            'DeepSeek-R1 7B는 연쇄 사고 추론 모델입니다. 표준 모델보다 느리지만(응답당 토큰 수가 많음) 추론이 중요한 작업에서 훨씬 더 정확합니다.',
+            '버전 참고: DeepSeek-R1은 이전 세대 모델입니다. DeepSeek의 현재 오픈 웨이트 제품군은 DeepSeek-V4이며 확인 시점에 Ollama 라이브러리에는 올라와 있지 않았으므로, deepseek-r1 증류 모델(1.5B~70B)이 받을 수 있는 추론 선택지로 남아 있습니다. DeepSeek은 호스팅된 R1 API 모델을 DeepSeek-V4로 대체했습니다.',
           ],
           codeBlock: '# DeepSeek-R1 Pull 및 실행\nollama run deepseek-r1:7b\n\n# 더 나은 품질을 위한 대형 변형\nollama run deepseek-r1:14b   # 10GB RAM\nollama run deepseek-r1:32b   # 20GB RAM',
           codeLanguage: 'bash',
-          image: '/images/ollama-deepseek-r1-reasoning-comparison-en.svg',
-          imageCaption: 'DeepSeek-R1 7B vs Mistral Small: MATH에서 52% vs 28%. 연쇄 사고 추론 모델 -- 더 느리지만 정확도가 크게 향상됩니다.',
         },
         visionModels: {
           id: 'vision-models',
@@ -3827,11 +3828,11 @@ schema: {
             { '#': '3', 'Model': '[gpt-oss:20b](https://ollama.com/library/gpt-oss)', 'Best For': '소형 최강 / 16GB, 조정 가능한 추론', 'RAM': '16GB', 'HumanEval': '~o3-mini' },
             { '#': '4', 'Model': '[qwen3:30b](https://ollama.com/library/qwen3)', 'Best For': '균형잡힌 범용; 코드에는 qwen3-coder:30b', 'RAM': '~18GB', 'HumanEval': '강력' },
             { '#': '5', 'Model': '[Laguna XS 2.1](https://ollama.com/library/laguna-xs-2.1)', 'Best For': '에이전틱 코딩, 장시간 작업(계획/코드/테스트/반복)', 'RAM': '양자화', 'HumanEval': '70.9% SWE-bench Verified' },
-            { '#': '6', 'Model': '[Devstral Small 24B](https://ollama.com/library/devstral-small-2)', 'Best For': '에이전트 코딩(다중 파일)', 'RAM': '16GB', 'HumanEval': '65.8% (Verified)' },
-            { '#': '7', 'Model': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', 'Best For': '추론, 수학', 'RAM': '5GB', 'MATH': '52%' },
+            { '#': '6', 'Model': '[Devstral Small 2 24B](https://ollama.com/library/devstral-small-2)', 'Best For': '에이전트 코딩(다중 파일)', 'RAM': '16GB', 'HumanEval': '68.0% (SWE-bench Verified)' },
+            { '#': '7', 'Model': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', 'Best For': '추론, 수학', 'RAM': '5GB', 'MATH': '—' },
             { '#': '8', 'Model': '[gemma4:e4b](https://ollama.com/library/gemma3)', 'Best For': '비전 + 도구 호출(멀티모달)', 'RAM': '~6GB', 'Notes': '에이전트 지원' },
-            { '#': '9', 'Model': '[Llama 4 Scout](https://ollama.com/library/llama3.3)', 'Best For': '긴 컨텍스트 10M + 멀티모달, MoE', 'RAM': '~55GB (Q4)', 'HumanEval': '85%' },
-            { '#': '10', 'Model': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Best For': '첫 번째 모델, 일반 채팅', 'RAM': '2.5GB', 'HumanEval': '60%' },
+            { '#': '9', 'Model': '[Llama 4 Scout](https://ollama.com/library/llama3.3)', 'Best For': '긴 컨텍스트 10M + 멀티모달, MoE', 'RAM': '~55GB (Q4)', 'HumanEval': '—' },
+            { '#': '10', 'Model': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Best For': '첫 번째 모델, 일반 채팅', 'RAM': '2.5GB', 'HumanEval': '—' },
           ],
           columns: ['#', 'Model', 'Best For', 'RAM', 'HumanEval'],
           image: '/images/top-open-source-models-ollama-top-models-hero-ko.webp',
@@ -3848,9 +3849,9 @@ schema: {
           id: 'regional-context',
           title: '오픈소스 Ollama 모델: 지역별 맥락',
           content: [
-            '**EU / GDPR + 라이선스 준수.** 프로덕션에서 Ollama 모델을 배포하는 EU 조직에게는 라이선스 선택이 성능만큼 중요합니다. Apache 2.0(완전 개방, 상업적 사용 가능): Mistral Small, Mistral Small 3.1, Qwen3 8B, Qwen3.8-27B, Devstral Small 2, Granite 4.2. Meta Llama 커뮤니티 라이선스(월간 활성 사용자 7억 명 초과 시 상업적 사용 제한): Llama 3.1 8B, Llama 3.2 3B, Llama 3.2 Vision 11B. MIT(상업적 사용 가능): DeepSeek-R1 7B·14B. 수정 MIT(저작자 표시 조항과 함께 상업적 사용 가능): Kimi K2.6. OpenMDW-1.1(허용적, 상업적 사용 가능): Laguna XS 2.1. 상업 배포 전에는 항상 라이선스 조건을 확인하세요. 규제 산업의 EU 기업에는 Devstral Small 2 같은 Mistral 모델(프랑스, Apache 2.0)이 합리적인 기본 선택입니다. EU 출신이며 허용적인 라이선스이기 때문입니다. Ollama로 모델을 완전히 온프레미스에서 실행하면 프롬프트가 외부 서버로 전송되지 않습니다. 이는 GDPR 의무 이행을 돕지만 그것만으로 충족되지는 않습니다(`:cloud` 태그는 Ollama의 호스팅 서비스로 데이터를 보냅니다).',
-            '**일본(METI).** 일본 기업의 Ollama 배포에는 Qwen3 / Qwen3.8이 권장할 만한 모델 계열입니다. 일본어 텍스트를 네이티브로 처리해 추론 시간과 KV 캐시에 도움이 됩니다. 일본어 코딩 워크플로에서는 Qwen3.8-27B(Qwen 발표 SWE-bench Pro 61.7)가 일본어 코드 주석을 네이티브로 처리합니다. METI AI 거버넌스 문서는 보통 정확한 모델 버전을 요구합니다. `ollama show <모델>`로 파라미터 수, 양자화 수준, 컨텍스트 길이를 포함한 전체 사양을 규정 준수 기록용으로 얻을 수 있습니다.',
-            '**중국.** 중국 CAC 생성형 AI 관리 조치(2023)에 따라 최종 사용자에게 AI 서비스를 제공하는 조직은 사용하는 모델을 등록해야 합니다. Qwen3 / Qwen3.8(Alibaba, Apache 2.0)은 중국 기업의 Ollama 배포에 자연스러운 선택입니다. 중국 출신 모델, Apache 2.0 라이선스, 뛰어난 중국어 성능 때문입니다. Kimi K2.6(Moonshot AI, 수정 MIT)도 중국 출신이지만 Ollama에서는 클라우드 태그로만 제공되며 로컬 실행에는 서버급 하드웨어가 필요합니다. 명령: 최고 품질은 `ollama run qwen3.8:27b`, 속도는 `ollama run qwen3:8b`. 추론에는 DeepSeek-R1(MIT 라이선스)이 적합합니다. Ollama로 로컬에서 처리하는 데이터의 경우 추론 자체가 PIPL의 국외 이전 요건을 발생시키지는 않지만, 자체 규정 준수 의무는 확인하세요.',
+            '**EU / GDPR + 라이선스 준수.** 프로덕션에서 Ollama 모델을 배포하는 EU 조직에게는 라이선스 선택이 성능만큼 중요합니다. Apache 2.0(완전 개방, 상업적 사용 가능): Mistral Small 3, Mistral Small 3.1, Qwen3 8B, Qwen3.8-27B, Devstral Small 2, Granite 4.2. Meta Llama 커뮤니티 라이선스(월간 활성 사용자 7억 명 초과 시 상업적 사용 제한): Llama 3.1 8B, Llama 3.2 3B, Llama 3.2 Vision 11B. Llama 3.2 Vision은 예외입니다. 허용 가능한 사용 정책(Acceptable Use Policy)은 EU에 거주하거나 주된 사업장을 둔 개인·기업에는 라이선스 권리를 부여하지 않습니다(이를 기반으로 한 제품의 최종 사용자는 해당되지 않음). EU에서 사용하기 전에 확인하십시오. MIT(상업적 사용 가능): DeepSeek-R1 7B·14B. 수정 MIT(저작자 표시 조항과 함께 상업적 사용 가능): Kimi K2.6. OpenMDW-1.1(허용적, 상업적 사용 가능): Laguna XS 2.1. 상업 배포 전에는 항상 라이선스 조건을 확인하세요. 규제 산업의 EU 기업에는 Devstral Small 2 같은 Mistral 모델(프랑스, Apache 2.0)이 합리적인 기본 선택입니다. EU 출신이며 허용적인 라이선스이기 때문입니다. Ollama로 모델을 완전히 온프레미스에서 실행하면 프롬프트가 외부 서버로 전송되지 않습니다. 이는 GDPR 의무 이행을 돕지만 그것만으로 충족되지는 않습니다(`:cloud` 태그는 Ollama의 호스팅 서비스로 데이터를 보냅니다).',
+            '**일본(METI).** 일본 기업의 Ollama 배포에는 Qwen3 / Qwen3.8이 권장할 만한 모델 계열입니다. 일본어 텍스트를 네이티브로 처리해 추론 시간과 KV 캐시에 도움이 됩니다. 일본어 코딩 워크플로에서는 Qwen3.8-27B(Qwen 발표 SWE-bench Pro 61.7)가 일본어 코드 주석을 네이티브로 처리합니다. 정확한 모델 버전을 기록해 두는 것은 규정 준수 문서화의 모범 사례입니다. `ollama show <모델>`로 파라미터 수, 양자화 수준, 컨텍스트 길이를 포함한 전체 사양을 규정 준수 기록용으로 얻을 수 있습니다.',
+            '**중국.** 중국 CAC 생성형 AI 관리 조치(2023)는 중국 내 일반 대중에게 생성형 AI 서비스를 제공하는 사업자에게 신고 또는 보안 평가 의무를 부과할 수 있습니다. 해당 여부는 법률 자문을 통해 확인하십시오. Qwen3 / Qwen3.8(Alibaba, Apache 2.0)은 중국 기업의 Ollama 배포에 자연스러운 선택입니다. 중국 출신 모델, Apache 2.0 라이선스, 뛰어난 중국어 성능 때문입니다. Kimi K2.6(Moonshot AI, 수정 MIT)도 중국 출신이지만 Ollama에서는 클라우드 태그로만 제공되며 로컬 실행에는 서버급 하드웨어가 필요합니다. 명령: 최고 품질은 `ollama run qwen3.8:27b`, 속도는 `ollama run qwen3:8b`. 추론에는 DeepSeek-R1(MIT 라이선스)이 적합합니다. Ollama로 로컬에서 실행하는 추론 자체는 데이터를 국외로 보내지 않으므로 해당 단계에서는 국외 이전 문제가 발생하지 않습니다. 다만 PIPL 등의 의무가 귀하의 데이터 처리에 적용되는지는 법률 자문을 통해 확인하십시오. 이 섹션은 일반 정보이며 법률 자문이 아닙니다.',
           ],
         },
         commonMistakes: {
@@ -3863,7 +3864,7 @@ schema: {
             },
             {
               q: '작업별 특화 모델이 있을 때 범용 모델을 사용하는 경우',
-              a: '코딩 작업의 경우, `qwen2.5-coder:7b`는 72% HumanEval을 기록하고 범용 `qwen2.5:7b`도 72%를 기록하지만 -- `qwen2.5-coder`는 코드 완성을 위한 FIM 지원이 포함됩니다. 추론/수학에서는 `deepseek-r1:7b`가 MATH에서 52%, `mistral:7b`는 28%를 기록합니다. Ollama 라이브러리에 작업별 특화 모델이 존재하는 이유가 있습니다.',
+              a: '코딩 작업의 경우, `qwen2.5-coder:7b`는 코드용으로 만들어졌고 범용 `qwen2.5:7b`에는 없는 FIM(fill-in-the-middle) 코드 완성 지원을 포함합니다. 추론/수학에서는 `deepseek-r1:7b`는 전용 연쇄 사고 추론 모델입니다. Ollama 라이브러리에 작업별 특화 모델이 존재하는 이유가 있습니다.',
             },
             {
               q: '워크플로 구축 전에 모델 가용성을 확인하지 않는 경우',
@@ -3928,7 +3929,7 @@ schema: {
             },
             {
               q: 'Ollama를 개발한 회사의 공식 명칭은 무엇입니까?',
-              a: '이 회사는 Ollama Inc.로, 캘리포니아주 팔로알토에 본사를 둔 시리즈 B 투자 유치 스타트업이며, 2023년 Jeffrey Morgan과 Michael Chiang이 설립했습니다. "Ollama"는 이 회사와 회사가 배포하는 CLI 도구/모델 런타임을 모두 가리킵니다.',
+              a: 'Ollama의 운영 회사는 Ollama Inc.입니다. "Ollama"는 이 회사와 회사가 배포하는 오픈소스 CLI 도구/모델 런타임을 모두 가리키며, 프로젝트의 첫 공개 릴리스인 v0.0.1은 2023년 7월 8일 GitHub에 게시되었습니다.',
             },
             {
               q: 'Hugging Face 모델을 Ollama에서 직접 사용할 수 있습니까?',
@@ -3940,11 +3941,11 @@ schema: {
             },
             {
               q: '모든 Ollama 모델이 진정한 오픈소스입니까?',
-              a: '그렇지 않습니다. Ollama 라이브러리에는 다양한 라이선스의 모델이 포함되어 있습니다. Llama 3.x/4.x는 Meta Llama Community Licence를 사용합니다(OSI 승인 오픈소스 아님 -- 월간 활성 사용자 7억 명 초과 시 상업적 이용 제한). Mistral Small, Qwen3, Qwen3.8, Devstral, Gemma 모델은 Apache 2.0(완전 오픈소스)입니다. Kimi K2.6은 Modified MIT 라이선스(귀속 조항이 있는 상업적 이용 허용)입니다. Laguna XS 2.1은 OpenMDW-1.1을 사용합니다(관대한 라이선스, 상업적 이용 허용, OSI 승인 아님). 상업적 배포 전에 항상 라이선스를 확인하십시오.',
+              a: '그렇지 않습니다. Ollama 라이브러리에는 다양한 라이선스의 모델이 포함되어 있습니다. Llama 3.x/4.x는 Meta Llama Community Licence를 사용합니다(OSI 승인 오픈소스 아님 -- 월간 활성 사용자 7억 명 초과 시 상업적 이용 제한). Mistral Small 3.1, Qwen3, Qwen3.8, Devstral Small 2, Gemma 4는 Apache 2.0(완전 오픈소스)이며, Gemma 2와 Gemma 3는 OSI 승인을 받지 않은 Google의 Gemma 이용약관을 사용합니다. Kimi K2.6은 Modified MIT 라이선스(귀속 조항이 있는 상업적 이용 허용)입니다. Laguna XS 2.1은 OpenMDW-1.1을 사용합니다(관대한 라이선스, 상업적 이용 허용, OSI 승인 아님). 상업적 배포 전에 항상 라이선스를 확인하십시오.',
             },
             {
               q: 'Ollama에서 어떤 Dolphin 모델을 사용해야 하나요?',
-              a: '오래된 `dolphin-mistral`(2024년 마지막 업데이트, Mistral 0.2 기반) 대신 Dolphin 3.0(`ollama pull dolphin3`)을 사용하십시오. Cognitive Computations(Eric Hartford)가 유지 관리하는 Dolphin 3.0은 Llama 3.1을 기반으로 하며, 내장 콘텐츠 필터링이 없고, 코딩·수학·에이전틱 작업·무제한 채팅용 범용 로컬 모델로 설계되었습니다.',
+              a: '오래된 `dolphin-mistral`(2024년 마지막 업데이트, Mistral 0.2 기반) 대신 Dolphin 3.0(`ollama pull dolphin3`)을 사용하십시오. Cognitive Computations(Eric Hartford)가 유지 관리하는 Dolphin 3.0은 Llama 3.1을 기반으로 하며, 내장 콘텐츠 필터링이 없고, 코딩·수학·에이전틱 작업·콘텐츠 제한이 내장되지 않은 채팅용 범용 로컬 모델로 설계되었습니다. 내장 안전 필터링이 없으므로 출력물의 사용에 대한 책임은 사용자에게 있으며, Llama 3.1 라이선스 조건이 적용됩니다.',
             },
             {
               q: 'RAG를 위해 Ollama에서 사용해야 하는 임베딩 모델은 무엇입니까?',
@@ -3968,7 +3969,7 @@ schema: {
             },
             {
               q: 'Ollama의 오픈소스 모델은 상업적으로 무료로 사용할 수 있습니까?',
-              a: '대부분은 그렇지만 전부는 아닙니다. Llama 3.x(Meta Llama Community Licence)는 월간 활성 사용자 7억 명 초과 시 상업적 이용을 제한합니다. Mistral Small, Qwen3, Gemma 모델은 Apache 2.0(완전 상업적 이용 허용)을 사용합니다. 기업 배포 전에 항상 라이선스를 확인하십시오 -- 모델의 Hugging Face 페이지나 Ollama 라이브러리 항목을 확인하십시오.',
+              a: '대부분은 그렇지만 전부는 아닙니다. Llama 3.x(Meta Llama Community Licence)는 월간 활성 사용자 7억 명 초과 시 상업적 이용을 제한합니다. Mistral Small 3.1, Qwen3, Gemma 4는 Apache 2.0(완전 상업적 이용 허용)을 사용하며, Gemma 2와 Gemma 3는 조건부로 상업적 이용을 허용하는 Google의 Gemma 이용약관을 사용합니다. 기업 배포 전에 항상 라이선스를 확인하십시오 -- 모델의 Hugging Face 페이지나 Ollama 라이브러리 항목을 확인하십시오.',
             },
             {
               q: '2026년 7월 Ollama의 최신 신규 모델은 무엇입니까?',
@@ -3976,7 +3977,7 @@ schema: {
             },
             {
               q: '러시아어 작업에 가장 적합한 Ollama 모델은 무엇입니까?',
-              a: 'Qwen3 / Qwen3.8(`ollama run qwen3:8b` 또는 `ollama run qwen3.8:27b`)과 Mistral Small 3.1(`ollama run mistral-small3.1`) 모두 네이티브 다국어 학습 데이터에 러시아어를 포함합니다. Qwen3는 비영어 벤치마크 작업에서 더 높은 점수를 기록하며, Mistral Small 3.1은 비공식 테스트에서 더 자연스러운 러시아어 대화 유창성을 보입니다. 두 모델 모두 러시아 출신은 아닙니다 -- 러시아에 특화된 규제상 데이터 거주 요건이 있는 경우, 모델 라이선스와 조직의 컴플라이언스 요구 사항을 별도로 확인하십시오. 이 문서는 러시아 데이터 현지화 법률을 다루지 않습니다.',
+              a: 'Qwen3 / Qwen3.8(`ollama run qwen3:8b` 또는 `ollama run qwen3.8:27b`)과 Mistral Small 3.1(`ollama run mistral-small3.1`) 모두 네이티브 다국어 학습 데이터에 러시아어를 포함합니다. 이 페이지는 러시아어 성능 순위를 매기지 않습니다. 직접 작성한 프롬프트로 두 모델을 모두 시험해 보십시오. 두 모델 모두 러시아 출신은 아닙니다 -- 러시아에 특화된 규제상 데이터 거주 요건이 있는 경우, 모델 라이선스와 조직의 컴플라이언스 요구 사항을 별도로 확인하십시오. 이 문서는 러시아 데이터 현지화 법률을 다루지 않습니다.',
             },
           ],
         },
@@ -3984,13 +3985,13 @@ schema: {
           id: 'sources',
           title: '출처',
           items: [
-            '[Meta AI. (2025). "Llama 4 Model Card." llama.meta.com](https://llama.meta.com/) -- Llama 4 Scout(17B 활성, 109B 전체, MoE)와 Maverick 변형의 공식 사양.',
-            '[DeepSeek AI. (2025). "DeepSeek-R1 Technical Report." arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- DeepSeek-R1의 연쇄 사고 아키텍처와 MATH 벤치마크(52%).',
+            '[Meta. "Llama-4-Scout-17B-16E-Instruct model card." huggingface.co](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct) -- Llama 4 Scout(17B 활성, 109B 전체, MoE)의 공식 사양.',
+            '[DeepSeek AI. (2025). "DeepSeek-R1 Technical Report." arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- DeepSeek-R1의 연쇄 사고 아키텍처와 벤치마크 방법론.',
             '[Ollama. (2026). "qwen3.8." ollama.com/library/qwen3.8](https://ollama.com/library/qwen3.8) -- 최고 밀집 코딩 모델로서 61.7 SWE-bench Pro.',
-            '[Moonshot AI. (2026). "Kimi K2.6 Model Card." moonshot.ai](https://moonshot.ai/) -- Modified MIT 라이선스 MoE 코딩 모델(32B 활성/1T 전체), SWE-Bench Pro 58.6.',
-            '[Mistral AI. (2026). "Devstral Small 24B." mistral.ai](https://mistral.ai/) -- 다중 파일 편집 및 디버깅을 위한 최고 에이전트 코딩 모델.',
+            '[Moonshot AI. Kimi K2.6 (Hugging Face 조직 페이지). huggingface.co/moonshotai](https://huggingface.co/moonshotai) -- Modified MIT 라이선스 MoE 코딩 모델(32B 활성/1T 전체), SWE-Bench Pro 58.6.',
+            '[Mistral AI. "Introducing: Devstral 2 and Mistral Vibe CLI." mistral.ai](https://mistral.ai/news/devstral-2-vibe-cli/) -- 다중 파일 편집 및 디버깅을 위한 최고 에이전트 코딩 모델.',
             '[Ollama. (2026). "Ollama Model Library." ollama.com/library](https://ollama.com/library) -- 수백 개의 큐레이팅된 모델, 다운로드 수, 태그, 양자화 옵션이 있는 공식 모델 라이브러리.',
-            '[Google DeepMind. (2026). "Gemma 4 Technical Report."](https://ai.google.dev/) -- 2026년 4월 출시된 비전 + 도구 호출 기능.',
+            '[Google AI for Developers. "Gemma documentation." ai.google.dev](https://ai.google.dev/gemma/docs) -- Gemma 4 계열. 2026년 4월 출시된 비전 + 도구 호출 기능.',
             '[Poolside. (2026). "Introducing Laguna XS 2.1." poolside.ai](https://poolside.ai/blog/introducing-laguna-xs-2-1) -- 33B/3B 활성 MoE 에이전틱 코딩 모델, SWE-bench Verified 70.9%, OpenMDW-1.1 라이선스.',
             '[Ollama. (2026). "Ollama Releases." github.com/ollama/ollama/releases](https://github.com/ollama/ollama/releases) -- 공식 릴리스 노트, v0.40.5 (2026년 10월 14일).',
           ],
@@ -4008,8 +4009,8 @@ schema: {
           { '@type': 'ListItem', 'position': 3, 'name': 'gpt-oss:20b', 'url': 'https://ollama.com/library/gpt-oss', 'description': '소형 최강 / 16GB. 21B 전체/3.6B 활성 MoE. ~o3-mini 수준, 조정 가능한 추론. ollama run gpt-oss:20b' },
           { '@type': 'ListItem', 'position': 4, 'name': 'qwen3:30b', 'url': 'https://ollama.com/library/qwen3', 'description': '균형잡힌 범용 모델; 코드 완성에는 qwen3-coder:30b. ollama run qwen3:30b' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Laguna XS 2.1', 'url': 'https://ollama.com/library/laguna-xs-2.1', 'description': '에이전틱, 장시간 코딩. 33B/3B 활성 MoE. SWE-bench Verified 70.9%. OpenMDW-1.1 라이선스. ollama run laguna-xs-2.1' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'Devstral Small 24B', 'url': 'https://ollama.com/library/devstral', 'description': '최고 에이전트 코딩(다중 파일). 다중 파일 편집, 디버깅. 16GB RAM. ollama run devstral-small-2' },
-          { '@type': 'ListItem', 'position': 7, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': '추론 최고. 5GB RAM. MATH 52% (Mistral Small은 28%). ollama run deepseek-r1:7b' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Devstral Small 2 24B', 'url': 'https://ollama.com/library/devstral-small-2', 'description': '최고 에이전트 코딩(다중 파일). 다중 파일 편집, 디버깅. 16GB RAM. ollama run devstral-small-2' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': '추론 최고. 5GB RAM. ollama run deepseek-r1:7b' },
           { '@type': 'ListItem', 'position': 8, 'name': 'gemma4:e4b', 'url': 'https://ollama.com/library/gemma3', 'description': '비전/멀티모달 최고(E4B+). 도구 호출 + 비전, Apple Silicon에서 약 90% 더 빠름(2026년 7월). ~6GB RAM. ollama run gemma4:e4b' },
           { '@type': 'ListItem', 'position': 9, 'name': 'Llama 4 Scout', 'url': 'https://ollama.com/library/llama3.3', 'description': '긴 컨텍스트(1,000만 토큰) + 대형 멀티모달 최고. MoE 17B 활성/109B 전체. Q4에서 ~55GB. ollama run llama4:scout' },
           { '@type': 'ListItem', 'position': 10, 'name': 'Llama 3.2 3B', 'url': 'https://ollama.com/library/llama3.3', 'description': '첫 번째 모델로 최적. 2.5GB RAM. 일반 채팅. ollama run llama3.2:3b' },
@@ -4021,7 +4022,7 @@ schema: {
       next_seo_review_due: '2026-11-17',
       next_refresh_due: '2026-11-17',
       last_full_refresh: '2026-10-17',
-      current_models_mentioned: ['Nemotron 3.5 Lightning', 'Nemotron 3.5 Super', 'Nemotron 3.5 Bolt', 'Laguna XS 2.1', 'Kimi K2.7 Code', 'Qwen3.8-27B', 'qwen3:30b', 'qwen3-coder:30b', 'Kimi K2.6', 'gpt-oss:20b', 'gpt-oss:120b', 'DeepSeek-R1', 'Gemma 4', 'GLM-5.3', 'Llama 4 Scout', 'Devstral Small 24B', 'Dolphin 3.0', 'Mistral Small', 'Phi-4 Mini'],
+      current_models_mentioned: ['Nemotron 3.5 Lightning', 'Nemotron 3.5 Super', 'Nemotron 3.5 Bolt', 'Laguna XS 2.1', 'Kimi K2.7 Code', 'Qwen3.8-27B', 'qwen3:30b', 'qwen3-coder:30b', 'Kimi K2.6', 'gpt-oss:20b', 'gpt-oss:120b', 'DeepSeek-R1 distills', 'Gemma 4', 'GLM-5.3', 'Llama 4 Scout', 'Devstral Small 2 24B', 'Dolphin 3.0', 'Mistral Small 3.1', 'Phi-4 Mini'],
       current_benchmarks_used: ['SWE-bench', 'SWE-bench Verified', 'SWE-Bench Pro', 'SWE-bench Multilingual', 'HumanEval', 'MATH'],
       theme: 'Best Models',
       title: 'أحدث إصدار من Ollama 2026: v0.40.5 + أفضل النماذج حسب حالة الاستخدام',
@@ -4046,7 +4047,7 @@ schema: {
             '→Llama 4 Scout — سياق طويل (10M رمز) + متعدد الوسائط، نحو 55 GB بتكميم Q4',
             '→DeepSeek-R1 — الأفضل للاستدلال والرياضيات؛ وgpt-oss:20b لاستدلال قابل للضبط (أصدرت DeepSeek لاحقاً DeepSeek-V4 — Flash/Pro — كجيل مفتوح الأوزان أحدث؛ ويبقى R1/V3 صالحَين للتشغيل محلياً.)',
           ],
-          updatedDate: '2026-10-17',
+          updatedDate: '2026-10-19',
         },
       },
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على عتاد المستهلك',
@@ -4130,6 +4131,7 @@ schema: {
             '**تُقاس الشعبية على Ollama بعدد التنزيلات الظاهر في صفحة مكتبة كل نموذج.** اعتبارًا من يوليو 2026، لا تزال النماذج الأكثر تنزيلاً تهيمن عليها عائلة Llama من Meta -- إذ يُعدّ Llama 3.2 3B الأكثر تنزيلاً عمومًا، ويعود ذلك إلى حدٍّ كبير لاستخدامه كنموذج اختبار أول للتثبيت. غير أن Llama 4 Scout صعد بسرعة منذ إطلاقه في أبريل 2026.',
             'تُعدّ Qwen3 عائلة النماذج الأسرع نموًّا في مكتبة Ollama، حيث يحلّ Qwen3 والمتغيّر الكثيف الجديد Qwen3.8 محل Qwen3 بسرعة. وشهد DeepSeek-R1 قفزات كبيرة بعد إطلاقه، ولا يزال من الأكثر تنزيلاً لمهام الاستدلال.',
             'أطلقت Meta نموذج **Llama 4** في أبريل 2026 بمتغيّري Scout (17B نشط، 109B إجمالي، MoE) وMaverick (17B نشط، 400B إجمالي). أصبح Llama 4 Scout الآن مستقرًا في مكتبة Ollama (`ollama pull llama4:scout`). تستخدم عائلة Llama 4 بنية مزيج الخبراء (MoE) — إذ يُفعَّل 17B معامل فقط لكل توكن، لكن مع 109B معامل إجمالي يحتاج Scout إلى ~55 GB VRAM عند Q4 (ويلائم 24 GB فقط عند 1.78 بت، ~20 tok/s). ميزتا Scout البارزتان هما نافذة سياقه البالغة 10M توكن ودخله متعدد الوسائط، وليس ملاءمته لعتاد المستهلك. للإعدادات الخفيفة (8 GB RAM)، يبقى Llama 3.2 3B أسهل نموذج أول. توسّعت منظومة Ollama بشكل ملحوظ في أبريل 2026. حقق Kimi K2.6 (Moonshot AI، رخصة Modified MIT، 32B نشط / 1T إجمالي MoE) نتيجة SWE-Bench Pro 58.6، متعادلاً مع GPT-5.5. وLaguna XS 2.1 (من Poolside) هو أحدث منافس للبرمجة الوكيلة، مصمّم خصيصًا لجلسات البرمجة المحلية طويلة الأفق. وحقق Qwen3.8-27B نتيجة 61.7 SWE-bench Pro كأفضل نموذج عام على عتاد المستهلك (يلائم 24 GB عند Q4). ويعمل gpt-oss:20b مفتوح الأوزان من OpenAI (21B إجمالي / 3.6B نشط MoE) في 16 GB بمستوى ~o3-mini مع استدلال قابل للضبط. تضم مكتبة Ollama الآن مئات النماذج المنسّقة، وتُعدّ Laguna XS 2.1 وKimi K2.7 Code أحدث الإضافات منذ تحديث يونيو.',
+            'ملاحظة حول الإصدارات: يُعدّ Qwen3.6 وQwen3.8 جيلين أحدث من Qwen على Ollama (qwen3.6:35b بحجم ~24 GB، وqwen3.8:27b بحجم 18 GB)، أما qwen3:30b وqwen3-coder:30b (19 GB لكل منهما) فخياران من الجيل السابق ما زالا يعملان. نموذج Small الحالي من Mistral هو Mistral Small 4، لكن مكتبة Ollama لم تدرجه وقت الفحص، لذا يبقى mistral-small3.1 وmistral-small:24b (Mistral Small 3) نموذجَي Small القابلين للتنزيل هناك.',
           ],
         },
         byCategory: {
@@ -4141,22 +4143,22 @@ schema: {
             '**الدردشة العامة (أفضل خيار عام)**: `ollama run qwen3.8:27b` -- 61.7 SWE-bench Pro، أفضل خيار عام على عتاد المستهلك، يلائم 24 GB عند Q4. متوازن لكل الاستخدامات: `ollama run qwen3:30b`. للأجهزة بسعة 8 GB، التزم بـ `ollama run llama3.2:3b`.',
             '**السياق الطويل / متعدد الوسائط**: `ollama run llama4:scout` -- سياق 10M توكن + متعدد الوسائط، MoE (17B نشط/109B إجمالي). يحتاج ~55 GB VRAM عند Q4 (يلائم 24 GB فقط عند 1.78 بت، ~20 tok/s).',
             '**أفضل نموذج صغير / 16 GB**: `ollama run gpt-oss:20b` -- 21B إجمالي / 3.6B نشط MoE، بمستوى ~o3-mini، استدلال قابل للضبط. أكبر: `ollama run gpt-oss:120b` (80 GB).',
-            '**البرمجة على 8 GB**: `ollama run qwen3:8b` -- أفضل نموذج برمجة محلي لأجهزة 8 GB VRAM. 76% HumanEval، يستهلك 5 GB، متعدد اللغات.',
-            '**الاستدلال العام على 8 GB (لغير البرمجة)**: `ollama run mistral:7b` -- أسرع نموذج عام الأغراض عند 8 GB، 40-60 tok/sec.',
+            '**البرمجة على 8 GB**: `ollama run qwen3:8b` -- خيار برمجة محلي جيد لأجهزة 8 GB VRAM. يستهلك 5 GB، متعدد اللغات.',
+            '**الاستدلال العام على 8 GB (لغير البرمجة)**: `ollama run mistral:7b` -- نموذج خفيف عام الأغراض لأجهزة 8 GB؛ وتعتمد السرعة على عتادك.',
             '**البرمجة (أفضل وكيل، 24B)**: `ollama run devstral-small-2` -- أفضل نموذج برمجة وكيل (تعديلات متعددة الملفات، التنقيح). 16 GB RAM. من Mistral AI.',
             '**البرمجة (أفضل كثيف، 27B)**: `ollama run qwen3.8:27b` -- 61.7 SWE-bench Pro. أفضل نموذج برمجة كثيف. 18 GB VRAM.',
             '**البرمجة (MoE متقدم)**: `ollama run kimi-k2.6:cloud` -- SWE-Bench Pro 58.6 (يتعادل مع GPT-5.5)، الطبقة العليا. MoE (32B نشط/1T إجمالي). رخصة Modified MIT. يحتاج تكميمًا لعتاد المستهلك.',
             '**البرمجة (وكيلة، طويلة الأفق)**: `ollama run laguna-xs-2.1` -- من Poolside، MoE بحجم 33B إجمالي/3B نشط، SWE-bench Verified 70.9%، سياق 256K. مصمّم لحلقات تخطيط → برمجة → اختبار → تكرار متعددة الخطوات. رخصة OpenMDW-1.1.',
             '**مهام الوكلاء واستدعاء الأدوات**: `ollama run gemma4:e4b` -- صدر في 2 أبريل 2026. استدعاء أدوات مدمج + دعم الرؤية. يُوصى به للوكلاء المحليين واستدعاء الدوال والمخرجات المنظّمة. 6 GB RAM.',
             '**الاستدلال والرياضيات**: `ollama run deepseek-r1:7b` -- نموذج سلسلة التفكير، أفضل أداء رياضي محلي عند 7B.',
-            '**متعدد اللغات**: `ollama run qwen3:8b` -- أكثر من 29 لغة أصلية، أقوى دعم لغير الإنجليزية، 76% HumanEval.',
+            '**متعدد اللغات**: `ollama run qwen3:8b` -- أكثر من 29 لغة أصلية، خيار متعدد اللغات عام الأغراض.',
             '**غير خاضع للرقابة / عام الأغراض**: `ollama run dolphin3` -- Dolphin 3.0 (من Cognitive Computations، مبني على Llama 3.1)، بلا تصفية محتوى مدمجة، للدردشة العامة والبرمجة والمهام الوكيلة.',
             '**فهم الصور**: `ollama run gemma4:e4b` -- رؤية + استدعاء أدوات. أو `ollama run llama3.2-vision:11b` للرؤية المخصّصة.',
             '**سريع وخفيف**: `ollama run gemma2:2b` -- أسرع استدلال على المعالج، 1.7 GB RAM.',
-            '**جودة عالية (16 GB RAM)**: `ollama run mistral-small3.1` -- جودة تقارب فئة 70B عند 14 GB RAM.',
+            '**جودة عالية (16 GB RAM)**: `ollama run mistral-small3.1` -- جودة جيدة عند 14 GB RAM.',
             '**توليد المتجهات (Embeddings)**: `ollama run nomic-embed-text` -- نموذج تضمين بـ 137M معامل لخطوط أنابيب RAG.',
             '**أسئلة وأجوبة المستندات (RAG)**: `ollama run llama3.2` مع ميزة RAG في Open WebUI -- أفضل تركيبة مدعومة.',
-            '**أتمتة المنزل / الذكاء بكلمة التنبيه**: `ollama run phi4-mini` — يعالج Phi-4 Mini (3.8B، ~3 GB VRAM) استعلامات Home Assistant الصوتية بسرعة 20-25 tok/sec على حاسوب مصغّر دون GPU منفصل. راجع [دليل تكامل Home Assistant + Ollama ←](/ar/smart-home/home-assistant-ollama-integration).',
+            '**أتمتة المنزل / الذكاء بكلمة التنبيه**: `ollama run phi4-mini` — يعالج Phi-4 Mini (3.8B، ~3 GB VRAM) استعلامات Home Assistant الصوتية على حاسوب مصغّر دون GPU منفصل؛ وتعتمد السرعة على عتادك. راجع [دليل تكامل Home Assistant + Ollama ←](/ar/smart-home/home-assistant-ollama-integration).',
           ],
           image: '/images/top-open-source-models-ollama-use-case-picks-hero-ar.webp',
           imageCaption: 'اختيار نموذج Ollama حسب حالة الاستخدام: اختر qwen3.8:27b (أفضل خيار عام، 61.7 SWE-bench Pro) للدردشة والبرمجة، وkimi-k2.6 للبرمجة المتقدمة، وgpt-oss:20b على 16 GB، وdeepseek-r1:7b للرياضيات.',
@@ -4178,8 +4180,8 @@ schema: {
             { 'Model': '[gpt-oss:20b](https://ollama.com/library/gpt-oss)', 'Released': '2026', 'Best For': 'أفضل نموذج صغير / 16 GB، ~o3-mini، استدلال قابل للضبط (وأيضًا gpt-oss:120b)', 'Ollama Command': 'ollama run gpt-oss:20b' },
             { 'Model': 'glm-5.3', 'Released': 'Z.ai', 'Best For': '744B/40B نشط MoE، رخصة MIT', 'Ollama Command': 'ollama run glm-5.3' },
             { 'Model': '[gemma4:e4b](https://ollama.com/library/gemma3)', 'Released': '2 أبريل 2026', 'Best For': 'رؤية + استدعاء أدوات (E2B/E4B/E12B/E27B)', 'Ollama Command': 'ollama run gemma4:e4b' },
-            { 'Model': 'deepseek-v4-flash', 'Released': 'أبريل/مايو 2026', 'Best For': 'برمجة اقتصادية (78/100 واقعيًا)', 'Ollama Command': 'ollama run deepseek-v4-flash' },
-            { 'Model': '[qwen3:8b](https://ollama.com/library/qwen3)', 'Released': '2026', 'Best For': 'HumanEval 76% عند 7B، متعدد اللغات', 'Ollama Command': 'ollama run qwen3:8b' },
+            { 'Model': 'deepseek-v4-flash', 'Released': 'أبريل/مايو 2026', 'Best For': 'خيار برمجة اقتصادي', 'Ollama Command': 'ollama run deepseek-v4-flash' },
+            { 'Model': '[qwen3:8b](https://ollama.com/library/qwen3)', 'Released': '2026', 'Best For': 'نموذج متعدد اللغات من فئة 7B', 'Ollama Command': 'ollama run qwen3:8b' },
           ],
           columns: ['Model', 'Released', 'Best For', 'Ollama Command'],
         },
@@ -4188,12 +4190,11 @@ schema: {
           title: 'ما هو DeepSeek-R1 ولماذا يختلف؟',
           content: [
             '**DeepSeek-R1 هو نموذج استدلال -- وعلى عكس نماذج الدردشة القياسية التي تولّد الإجابات مباشرة، يولّد DeepSeek-R1 استدلال سلسلة تفكير صريح قبل إجابته النهائية.** وهذا يحسّن الأداء بشكل كبير في الرياضيات وألغاز المنطق وحل المشكلات خطوة بخطوة.',
-            'يحقق DeepSeek-R1 7B نسبة 52% في MATH (رياضيات المسابقات) مقابل 28% لـ Mistral Small بالحجم نفسه. وهو أبطأ من النماذج القياسية (توكنات أكثر لكل رد) لكنه أكثر دقة بكثير في المهام التي يهمّ فيها الاستدلال.',
+            'DeepSeek-R1 7B هو نموذج استدلال بسلسلة التفكير. وهو أبطأ من النماذج القياسية (توكنات أكثر لكل رد) لكنه أكثر دقة بكثير في المهام التي يهمّ فيها الاستدلال.',
+            'ملاحظة حول الإصدارات: DeepSeek-R1 نموذج من الجيل السابق. عائلة الأوزان المفتوحة الحالية من DeepSeek هي DeepSeek-V4، ولم تدرجها مكتبة Ollama وقت الفحص؛ لذا تبقى النسخ المقطّرة deepseek-r1 (من 1.5B إلى 70B) خيار الاستدلال القابل للتنزيل هناك. وقد استبدلت DeepSeek نموذج R1 المستضاف في واجهتها البرمجية بـ DeepSeek-V4.',
           ],
           codeBlock: '# Pull and run DeepSeek-R1\nollama run deepseek-r1:7b\n\n# Larger variants for better quality\nollama run deepseek-r1:14b   # 10 GB RAM\nollama run deepseek-r1:32b   # 20 GB RAM',
           codeLanguage: 'bash',
-          image: '/images/ollama-deepseek-r1-reasoning-comparison-en.svg',
-          imageCaption: 'DeepSeek-R1 7B مقابل Mistral Small: 52% مقابل 28% في MATH. نموذج استدلال سلسلة التفكير -- أبطأ، لكن بدقة أعلى بكثير.',
         },
         visionModels: {
           id: 'vision-models',
@@ -4220,11 +4221,11 @@ schema: {
             { '#': '3', 'Model': '[gpt-oss:20b](https://ollama.com/library/gpt-oss)', 'Best For': 'أفضل نموذج صغير / 16 GB، استدلال قابل للضبط', 'RAM': '16 GB', 'HumanEval': '~o3-mini' },
             { '#': '4', 'Model': '[qwen3:30b](https://ollama.com/library/qwen3)', 'Best For': 'متوازن لكل الاستخدامات؛ qwen3-coder:30b للبرمجة', 'RAM': '~18 GB', 'HumanEval': 'قوي' },
             { '#': '5', 'Model': '[Laguna XS 2.1](https://ollama.com/library/laguna-xs-2.1)', 'Best For': 'برمجة وكيلة، طويلة الأفق (تخطيط/برمجة/اختبار/تكرار)', 'RAM': 'مكمّم', 'HumanEval': '70.9% SWE-bench Verified' },
-            { '#': '6', 'Model': '[Devstral Small 24B](https://ollama.com/library/devstral-small-2)', 'Best For': 'برمجة وكيلة (متعددة الملفات)', 'RAM': '15 GB', 'HumanEval': '65.8% (Verified)' },
-            { '#': '7', 'Model': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', 'Best For': 'استدلال، رياضيات', 'RAM': '5 GB', 'MATH': '52%' },
+            { '#': '6', 'Model': '[Devstral Small 2 24B](https://ollama.com/library/devstral-small-2)', 'Best For': 'برمجة وكيلة (متعددة الملفات)', 'RAM': '15 GB', 'HumanEval': '68.0% (SWE-bench Verified)' },
+            { '#': '7', 'Model': '[deepseek-r1:7b](https://ollama.com/library/deepseek-r1)', 'Best For': 'استدلال، رياضيات', 'RAM': '5 GB', 'MATH': '—' },
             { '#': '8', 'Model': '[gemma4:e4b](https://ollama.com/library/gemma3)', 'Best For': 'رؤية + استدعاء أدوات (متعدد الوسائط)', 'RAM': '~6 GB', 'Notes': 'جاهز للوكلاء' },
-            { '#': '9', 'Model': '[Llama 4 Scout](https://ollama.com/library/llama3.3)', 'Best For': 'سياق طويل 10M + متعدد الوسائط، MoE', 'RAM': '~55 GB (Q4)', 'HumanEval': '85%' },
-            { '#': '10', 'Model': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Best For': 'النموذج الأول، الدردشة العامة', 'RAM': '2.5 GB', 'HumanEval': '60%' },
+            { '#': '9', 'Model': '[Llama 4 Scout](https://ollama.com/library/llama3.3)', 'Best For': 'سياق طويل 10M + متعدد الوسائط، MoE', 'RAM': '~55 GB (Q4)', 'HumanEval': '—' },
+            { '#': '10', 'Model': '[Llama 3.2 3B](https://ollama.com/library/llama3.3)', 'Best For': 'النموذج الأول، الدردشة العامة', 'RAM': '2.5 GB', 'HumanEval': '—' },
           ],
           columns: ['#', 'Model', 'Best For', 'RAM', 'HumanEval'],
           image: '/images/top-open-source-models-ollama-top-models-hero-ar.webp',
@@ -4241,9 +4242,9 @@ schema: {
           id: 'regional-context',
           title: 'نماذج Ollama مفتوحة المصدر: السياق الإقليمي',
           content: [
-            '**الاتحاد الأوروبي / GDPR + الامتثال للتراخيص.** بالنسبة للمؤسسات الأوروبية التي تنشر نماذج Ollama في الإنتاج، لا يقل اختيار الترخيص أهمية عن الأداء. Apache 2.0 (مفتوح بالكامل، الاستخدام التجاري مسموح): Mistral Small وMistral Small 3.1 وQwen3 8B وQwen3.8-27B وDevstral Small 2 وGranite 4.2. ترخيص Meta Llama المجتمعي (يُقيَّد الاستخدام التجاري فوق 700 مليون مستخدم نشط شهرياً): Llama 3.1 8B وLlama 3.2 3B وLlama 3.2 Vision 11B. MIT (الاستخدام التجاري مسموح): DeepSeek-R1 7B و14B. MIT المعدّل (الاستخدام التجاري مسموح مع بند الإسناد): Kimi K2.6. OpenMDW-1.1 (متساهل، الاستخدام التجاري مسموح): Laguna XS 2.1. تحقق دائماً من شروط الترخيص قبل النشر التجاري. وللشركات الأوروبية في القطاعات المنظَّمة، تُعدّ نماذج Mistral (فرنسا، Apache 2.0) مثل Devstral Small 2 خياراً افتراضياً معقولاً: منشأ أوروبي وترخيص متساهل. وتشغيل النماذج بالكامل داخل المنشأة عبر Ollama يعني ألا تُرسل الأوامر إلى خوادم خارجية؛ وهذا يدعم التزامات GDPR لكنه لا يحققها وحده (فالوسم `:cloud` يرسل البيانات إلى خدمة Ollama المستضافة).',
-            '**اليابان (METI).** لعمليات النشر المؤسسية اليابانية مع Ollama، تُعدّ عائلة Qwen3 / Qwen3.8 خياراً موصى به: فهي تعالج النص الياباني أصلاً، مما يفيد زمن الاستدلال وذاكرة KV المؤقتة. وفي سير عمل البرمجة باليابانية: يتعامل Qwen3.8-27B (61.7 في SWE-bench Pro بحسب Qwen) مع تعليقات الكود اليابانية أصلاً. وتطلب وثائق حوكمة الذكاء الاصطناعي لدى METI عادةً الإصدار الدقيق للنموذج. استخدم `ollama show <النموذج>` للحصول على المواصفات الكاملة (عدد المعاملات ومستوى التكميم وطول السياق) لسجلات الامتثال.',
-            '**الصين.** بموجب تدابير CAC للذكاء الاصطناعي التوليدي (2023)، يجب على المؤسسات التي تقدّم خدمات ذكاء اصطناعي للمستخدمين النهائيين تسجيل النماذج المستخدمة. يُعدّ Qwen3 / Qwen3.8 (من Alibaba، Apache 2.0) خياراً طبيعياً لعمليات النشر المؤسسية الصينية مع Ollama: منشأ صيني وترخيص Apache 2.0 وأداء قوي بالصينية. وKimi K2.6 (من Moonshot AI، MIT المعدّل) صيني المنشأ أيضاً، لكن Ollama تدرجه كوسم سحابي فقط ويحتاج التشغيل المحلي إلى عتاد بمستوى الخوادم. الأوامر: `ollama run qwen3.8:27b` لأفضل جودة، و`ollama run qwen3:8b` للسرعة. ويناسب DeepSeek-R1 (ترخيص MIT) مهام الاستدلال. وبالنسبة للبيانات المعالجة محلياً عبر Ollama، لا يُفعّل الاستدلال نفسه متطلبات PIPL لنقل البيانات عبر الحدود؛ لكن راجع التزامات الامتثال الخاصة بك.',
+            '**الاتحاد الأوروبي / GDPR + الامتثال للتراخيص.** بالنسبة للمؤسسات الأوروبية التي تنشر نماذج Ollama في الإنتاج، لا يقل اختيار الترخيص أهمية عن الأداء. Apache 2.0 (مفتوح بالكامل، الاستخدام التجاري مسموح): Mistral Small 3 وMistral Small 3.1 وQwen3 8B وQwen3.8-27B وDevstral Small 2 وGranite 4.2. ترخيص Meta Llama المجتمعي (يُقيَّد الاستخدام التجاري فوق 700 مليون مستخدم نشط شهرياً): Llama 3.1 8B وLlama 3.2 3B وLlama 3.2 Vision 11B. يُستثنى Llama 3.2 Vision: فسياسة الاستخدام المقبول الخاصة به لا تمنح حقوق الترخيص للأفراد أو الشركات المقيمة في الاتحاد الأوروبي (ولا يتأثر المستخدمون النهائيون للمنتجات المبنية عليه)، لذا تحقق منها قبل الاستخدام في الاتحاد الأوروبي. MIT (الاستخدام التجاري مسموح): DeepSeek-R1 7B و14B. MIT المعدّل (الاستخدام التجاري مسموح مع بند الإسناد): Kimi K2.6. OpenMDW-1.1 (متساهل، الاستخدام التجاري مسموح): Laguna XS 2.1. تحقق دائماً من شروط الترخيص قبل النشر التجاري. وللشركات الأوروبية في القطاعات المنظَّمة، تُعدّ نماذج Mistral (فرنسا، Apache 2.0) مثل Devstral Small 2 خياراً افتراضياً معقولاً: منشأ أوروبي وترخيص متساهل. وتشغيل النماذج بالكامل داخل المنشأة عبر Ollama يعني ألا تُرسل الأوامر إلى خوادم خارجية؛ وهذا يدعم التزامات GDPR لكنه لا يحققها وحده (فالوسم `:cloud` يرسل البيانات إلى خدمة Ollama المستضافة).',
+            '**اليابان (METI).** لعمليات النشر المؤسسية اليابانية مع Ollama، تُعدّ عائلة Qwen3 / Qwen3.8 خياراً موصى به: فهي تعالج النص الياباني أصلاً، مما يفيد زمن الاستدلال وذاكرة KV المؤقتة. وفي سير عمل البرمجة باليابانية: يتعامل Qwen3.8-27B (61.7 في SWE-bench Pro بحسب Qwen) مع تعليقات الكود اليابانية أصلاً. ويُعدّ تسجيل الإصدار الدقيق للنموذج ممارسة جيدة لوثائق الامتثال. استخدم `ollama show <النموذج>` للحصول على المواصفات الكاملة (عدد المعاملات ومستوى التكميم وطول السياق) لسجلات الامتثال.',
+            '**الصين.** قد تفرض تدابير CAC للذكاء الاصطناعي التوليدي (2023) التزامات تسجيل أو تقييم أمني على مزوّدي خدمات الذكاء الاصطناعي التوليدي المقدَّمة للجمهور في الصين؛ وتحديد انطباقها عليك مسألة تُعرض على مستشارك القانوني. يُعدّ Qwen3 / Qwen3.8 (من Alibaba، Apache 2.0) خياراً طبيعياً لعمليات النشر المؤسسية الصينية مع Ollama: منشأ صيني وترخيص Apache 2.0 وأداء قوي بالصينية. وKimi K2.6 (من Moonshot AI، MIT المعدّل) صيني المنشأ أيضاً، لكن Ollama تدرجه كوسم سحابي فقط ويحتاج التشغيل المحلي إلى عتاد بمستوى الخوادم. الأوامر: `ollama run qwen3.8:27b` لأفضل جودة، و`ollama run qwen3:8b` للسرعة. ويناسب DeepSeek-R1 (ترخيص MIT) مهام الاستدلال. الاستدلال الذي يعمل محليًا عبر Ollama لا يرسل البيانات إلى الخارج بحد ذاته، مما يزيل مسألة النقل عبر الحدود في هذه الخطوة؛ أما انطباق PIPL أو التزامات أخرى على معالجتك للبيانات فمسألة تُحسم مع مستشارك القانوني. هذا القسم معلومات عامة وليس استشارة قانونية.',
           ],
         },
         commonMistakes: {
@@ -4256,7 +4257,7 @@ schema: {
             },
             {
               q: 'استخدام نموذج عام مع وجود نموذج متخصص للمهمة',
-              a: 'لمهام البرمجة، يحقق `qwen2.5-coder:7b` نسبة 72% HumanEval بينما يحقق العام `qwen2.5:7b` أيضًا 72% -- لكن `qwen2.5-coder` يتضمن دعم FIM لإكمال الشيفرة. للاستدلال/الرياضيات، يحقق `deepseek-r1:7b` نسبة 52% MATH مقابل 28% لـ `mistral:7b`. توجد النماذج المتخصصة للمهام في مكتبة Ollama لسبب وجيه.',
+              a: 'لمهام البرمجة، صُمم `qwen2.5-coder:7b` للشيفرة ويتضمن دعم FIM (الإكمال في المنتصف) لإكمال الشيفرة، وهو ما لا يتوفر في النموذج العام `qwen2.5:7b`. للاستدلال/الرياضيات، `deepseek-r1:7b` هو نموذج استدلال مخصص بسلسلة التفكير. توجد النماذج المتخصصة للمهام في مكتبة Ollama لسبب وجيه.',
             },
             {
               q: 'عدم التحقق من توفّر النموذج قبل بناء تدفق العمل',
@@ -4321,7 +4322,7 @@ schema: {
             },
             {
               q: 'ما هو الاسم الرسمي للشركة التي تقف وراء Ollama؟',
-              a: 'الشركة هي Ollama Inc.، وهي شركة ناشئة ممولة بجولة تمويل من فئة Series B ومقرها Palo Alto، كاليفورنيا، أسسها عام 2023 كل من Jeffrey Morgan وMichael Chiang. يشير اسم "Ollama" إلى كل من الشركة وأداة CLI/محرك تشغيل النماذج الذي تصدره.',
+              a: 'الشركة التي تقف وراء Ollama هي Ollama Inc. يشير اسم "Ollama" إلى كل من الشركة وأداة CLI مفتوحة المصدر ومحرك تشغيل النماذج الذي تصدره؛ وقد صدر أول إصدار عام للمشروع، v0.0.1، على GitHub في 8 يوليو 2023.',
             },
             {
               q: 'هل يمكنني استخدام نماذج Hugging Face مباشرةً في Ollama؟',
@@ -4333,11 +4334,11 @@ schema: {
             },
             {
               q: 'هل جميع نماذج Ollama مفتوحة المصدر فعليًا؟',
-              a: 'ليست جميعها. تتضمن مكتبة Ollama نماذج برخص متنوعة. تستخدم Llama 3.x/4.x رخصة Meta Llama Community (ليست مفتوحة المصدر بموافقة OSI -- تقيّد الاستخدام التجاري فوق 700M مستخدم نشط شهريًا). نماذج Mistral Small وQwen3 وQwen3.8 وDevstral وGemma هي Apache 2.0 (مفتوحة المصدر بالكامل). وKimi K2.6 مرخّص بـ Modified MIT (متوافق تجاريًا مع شرط إسناد). ويستخدم Laguna XS 2.1 رخصة OpenMDW-1.1 (متساهلة، الاستخدام التجاري مسموح، لكنها غير معتمدة من OSI). تحقّق دائمًا من الرخصة قبل النشر التجاري.',
+              a: 'ليست جميعها. تتضمن مكتبة Ollama نماذج برخص متنوعة. تستخدم Llama 3.x/4.x رخصة Meta Llama Community (ليست مفتوحة المصدر بموافقة OSI -- تقيّد الاستخدام التجاري فوق 700M مستخدم نشط شهريًا). نماذج Mistral Small 3.1 وQwen3 وQwen3.8 وDevstral Small 2 وGemma 4 هي Apache 2.0 (مفتوحة المصدر بالكامل)، بينما تستخدم Gemma 2 وGemma 3 شروط استخدام Gemma من Google وهي غير معتمدة من OSI. وKimi K2.6 مرخّص بـ Modified MIT (متوافق تجاريًا مع شرط إسناد). ويستخدم Laguna XS 2.1 رخصة OpenMDW-1.1 (متساهلة، الاستخدام التجاري مسموح، لكنها غير معتمدة من OSI). تحقّق دائمًا من الرخصة قبل النشر التجاري.',
             },
             {
               q: 'أي نموذج من عائلة Dolphin ينبغي أن أستخدمه مع Ollama؟',
-              a: 'استخدم Dolphin 3.0 (`ollama pull dolphin3`)، وليس `dolphin-mistral` الأقدم (آخر تحديث له كان في 2024، ومبني على Mistral 0.2). Dolphin 3.0، الذي تصونه Cognitive Computations (Eric Hartford)، مبني على Llama 3.1، ولا يتضمن أي تصفية محتوى مدمجة، وهو مصمّم كنموذج محلي عام الأغراض للبرمجة والرياضيات والمهام الوكيلة والدردشة غير المقيدة.',
+              a: 'استخدم Dolphin 3.0 (`ollama pull dolphin3`)، وليس `dolphin-mistral` الأقدم (آخر تحديث له كان في 2024، ومبني على Mistral 0.2). Dolphin 3.0، الذي تصونه Cognitive Computations (Eric Hartford)، مبني على Llama 3.1، ولا يتضمن أي تصفية محتوى مدمجة، وهو مصمّم كنموذج محلي عام الأغراض للبرمجة والرياضيات والمهام الوكيلة والدردشة بلا قيود محتوى مدمجة. ولأنه يأتي دون تصفية أمان مدمجة، فأنت المسؤول عن استخدام مخرجاته، وتنطبق شروط ترخيص Llama 3.1.',
             },
             {
               q: 'أي نموذج تضمين ينبغي أن أستخدمه مع Ollama لـ RAG؟',
@@ -4361,11 +4362,11 @@ schema: {
             },
             {
               q: 'هل النماذج مفتوحة المصدر على Ollama مجانية للاستخدام التجاري فعليًا؟',
-              a: 'معظمها كذلك، لكن ليس جميعها. تقيّد Llama 3.x (رخصة Meta Llama Community) الاستخدام التجاري فوق 700M مستخدم نشط شهريًا. تستخدم نماذج Mistral Small وQwen3 وGemma رخصة Apache 2.0 (متوافقة تجاريًا بالكامل). تحقّق دائمًا من الرخصة قبل النشر المؤسسي -- راجع صفحة النموذج على Hugging Face أو مدخله في مكتبة Ollama.',
+              a: 'معظمها كذلك، لكن ليس جميعها. تقيّد Llama 3.x (رخصة Meta Llama Community) الاستخدام التجاري فوق 700M مستخدم نشط شهريًا. تستخدم نماذج Mistral Small 3.1 وQwen3 وGemma 4 رخصة Apache 2.0 (متوافقة تجاريًا بالكامل)، أما Gemma 2 وGemma 3 فتستخدمان شروط استخدام Gemma من Google التي تتيح الاستخدام التجاري بشروط. تحقّق دائمًا من الرخصة قبل النشر المؤسسي -- راجع صفحة النموذج على Hugging Face أو مدخله في مكتبة Ollama.',
             },
             {
               q: 'ما هي أفضل نماذج Ollama لمهام اللغة الروسية؟',
-              a: 'يتضمن كل من Qwen3 / Qwen3.8 (`ollama run qwen3:8b` أو `ollama run qwen3.8:27b`) وMistral Small 3.1 (`ollama run mistral-small3.1`) اللغة الروسية ضمن بيانات التدريب متعددة اللغات الأصلية لكل منهما. يحقق Qwen3 نتائج أعلى في معايير غير الإنجليزية، بينما يتميّز Mistral Small 3.1 بطلاقة محادثة روسية أقوى بحسب اختبارات غير رسمية. لا ينتمي أي منهما لأصل روسي -- بالنسبة لمتطلبات إقامة البيانات التنظيمية الخاصة بروسيا، تحقّق من رخصة النموذج ومتطلبات الامتثال الخاصة بمؤسستك بشكل منفصل، إذ لا يتناول هذا المقال قانون توطين البيانات الروسي.',
+              a: 'يتضمن كل من Qwen3 / Qwen3.8 (`ollama run qwen3:8b` أو `ollama run qwen3.8:27b`) وMistral Small 3.1 (`ollama run mistral-small3.1`) اللغة الروسية ضمن بيانات التدريب متعددة اللغات الأصلية لكل منهما. لا ترتّب هذه الصفحة النموذجين في اللغة الروسية؛ اختبر كليهما بمطالباتك الخاصة. لا ينتمي أي منهما لأصل روسي -- بالنسبة لمتطلبات إقامة البيانات التنظيمية الخاصة بروسيا، تحقّق من رخصة النموذج ومتطلبات الامتثال الخاصة بمؤسستك بشكل منفصل، إذ لا يتناول هذا المقال قانون توطين البيانات الروسي.',
             },
           ],
         },
@@ -4373,13 +4374,13 @@ schema: {
           id: 'sources',
           title: 'المصادر',
           items: [
-            '[Meta AI. (2025). "Llama 4 Model Card." llama.meta.com](https://llama.meta.com/) -- المواصفات الرسمية لـ Llama 4 Scout (17B نشط، 109B إجمالي، MoE) ومتغيّرات Maverick.',
-            '[DeepSeek AI. (2025). "DeepSeek-R1 Technical Report." arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- بنية سلسلة التفكير ومعيار MATH (52%) لـ DeepSeek-R1.',
+            '[Meta. "Llama-4-Scout-17B-16E-Instruct model card." huggingface.co](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E-Instruct) -- المواصفات الرسمية لـ Llama 4 Scout (17B نشط، 109B إجمالي، MoE).',
+            '[DeepSeek AI. (2025). "DeepSeek-R1 Technical Report." arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) -- بنية سلسلة التفكير ومنهجية القياس لـ DeepSeek-R1.',
             '[Ollama. (2026). "qwen3.8." ollama.com/library/qwen3.8](https://ollama.com/library/qwen3.8) -- 61.7 SWE-bench Pro لأفضل نموذج برمجة كثيف.',
-            '[Moonshot AI. (2026). "Kimi K2.6 Model Card." moonshot.ai](https://moonshot.ai/) -- نموذج برمجة MoE مرخّص بـ Modified MIT (32B نشط/1T إجمالي)، SWE-Bench Pro 58.6.',
-            '[Mistral AI. (2026). "Devstral Small 24B." mistral.ai](https://mistral.ai/) -- أفضل نموذج برمجة وكيل للتعديلات متعددة الملفات والتنقيح.',
+            '[Moonshot AI. Kimi K2.6 (صفحة المنظمة على Hugging Face). huggingface.co/moonshotai](https://huggingface.co/moonshotai) -- نموذج برمجة MoE مرخّص بـ Modified MIT (32B نشط/1T إجمالي)، SWE-Bench Pro 58.6.',
+            '[Mistral AI. "Introducing: Devstral 2 and Mistral Vibe CLI." mistral.ai](https://mistral.ai/news/devstral-2-vibe-cli/) -- أفضل نموذج برمجة وكيل للتعديلات متعددة الملفات والتنقيح.',
             '[Ollama. (2026). "Ollama Model Library." ollama.com/library](https://ollama.com/library) -- مكتبة النماذج الرسمية بمئات النماذج المنسّقة وأعداد التنزيلات والوسوم وخيارات التكميم.',
-            '[Google DeepMind. (2026). "Gemma 4 Technical Report."](https://ai.google.dev/) -- قدرات الرؤية + استدعاء الأدوات الصادرة في أبريل 2026.',
+            '[Google AI for Developers. "Gemma documentation." ai.google.dev](https://ai.google.dev/gemma/docs) -- عائلة Gemma 4؛ قدرات الرؤية + استدعاء الأدوات الصادرة في أبريل 2026.',
             '[Poolside. (2026). "Introducing Laguna XS 2.1." poolside.ai](https://poolside.ai/blog/introducing-laguna-xs-2-1) -- نموذج برمجة وكيلة MoE بحجم 33B/3B نشط، SWE-bench Verified 70.9%، رخصة OpenMDW-1.1.',
             '[Ollama. (2026). "Ollama Releases." github.com/ollama/ollama/releases](https://github.com/ollama/ollama/releases) -- ملاحظات الإصدارات الرسمية، v0.40.5 (14 أكتوبر 2026).',
           ],
@@ -4397,8 +4398,8 @@ schema: {
           { '@type': 'ListItem', 'position': 3, 'name': 'gpt-oss:20b', 'url': 'https://ollama.com/library/gpt-oss', 'description': 'أفضل نموذج صغير / 16 GB. 21B إجمالي / 3.6B نشط MoE. بمستوى ~o3-mini، استدلال قابل للضبط. ollama run gpt-oss:20b' },
           { '@type': 'ListItem', 'position': 4, 'name': 'qwen3:30b', 'url': 'https://ollama.com/library/qwen3', 'description': 'نموذج متوازن لكل الاستخدامات؛ استخدم qwen3-coder:30b لإكمال الكود. ollama run qwen3:30b' },
           { '@type': 'ListItem', 'position': 5, 'name': 'Laguna XS 2.1', 'url': 'https://ollama.com/library/laguna-xs-2.1', 'description': 'برمجة وكيلة طويلة الأفق. 33B/3B نشط MoE. SWE-bench Verified 70.9%. رخصة OpenMDW-1.1. ollama run laguna-xs-2.1' },
-          { '@type': 'ListItem', 'position': 6, 'name': 'Devstral Small 24B', 'url': 'https://ollama.com/library/devstral', 'description': 'أفضل نموذج برمجة وكيلة (متعددة الملفات). تعديلات متعددة الملفات، تنقيح. 16 GB RAM. ollama run devstral-small-2' },
-          { '@type': 'ListItem', 'position': 7, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'أفضل استدلال. 5 GB RAM. 52% في MATH مقابل 28% لـ Mistral Small. ollama run deepseek-r1:7b' },
+          { '@type': 'ListItem', 'position': 6, 'name': 'Devstral Small 2 24B', 'url': 'https://ollama.com/library/devstral-small-2', 'description': 'أفضل نموذج برمجة وكيلة (متعددة الملفات). تعديلات متعددة الملفات، تنقيح. 16 GB RAM. ollama run devstral-small-2' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'deepseek-r1:7b', 'url': 'https://ollama.com/library/deepseek-r1', 'description': 'أفضل استدلال. 5 GB RAM. ollama run deepseek-r1:7b' },
           { '@type': 'ListItem', 'position': 8, 'name': 'gemma4:e4b', 'url': 'https://ollama.com/library/gemma3', 'description': 'أفضل رؤية/تعدد وسائط (E4B+). استدعاء أدوات + رؤية، أسرع بنحو 90% على Apple Silicon (يوليو 2026). ~6 GB RAM. ollama run gemma4:e4b' },
           { '@type': 'ListItem', 'position': 9, 'name': 'Llama 4 Scout', 'url': 'https://ollama.com/library/llama3.3', 'description': 'أفضل سياق طويل (10 ملايين توكن) + تعدد وسائط كبير. MoE بـ17B نشط/109B إجمالي. ~55 GB بتكميم Q4. ollama run llama4:scout' },
           { '@type': 'ListItem', 'position': 10, 'name': 'Llama 3.2 3B', 'url': 'https://ollama.com/library/llama3.3', 'description': 'الأفضل كنموذج أول. 2.5 GB RAM. دردشة عامة. ollama run llama3.2:3b' },

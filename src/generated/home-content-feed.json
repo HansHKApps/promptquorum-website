@@ -490,16 +490,16 @@
     "title": "Temperature and Top-P: Control AI Creativity",
     "excerpt": "Temperature 0–2, Top-P 0.1–1.0: set AI randomness for code, summaries and brainstorming — plus which frontier models now refuse a custom temperature.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/prompt-engineering/temperature-and-top-p-control-ai-creativity",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "de",
     "title": "Temperatur und Top-P: Kontrolliere die KI-Kreativität",
-    "excerpt": "Temperatur 0–2 und Top-P 0,1–1,0 kontrollieren KI-Zufälligkeit direkt. Optimale Werte für Code, Zusammenfassungen, Brainstorming. GPT-5.6, Claude, Gemini.",
+    "excerpt": "Temperatur 0–2 und Top-P 0,1–1,0 kontrollieren KI-Zufälligkeit direkt. Optimale Werte für Code, Zusammenfassungen, Brainstorming. GPT-6 Astra, Claude, Gemini.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/de/prompt-engineering/temperature-and-top-p-control-ai-creativity",
     "cluster": "prompt-engineering"
   },
@@ -508,25 +508,25 @@
     "title": "Température et Top-P : Contrôle la créativité de l'IA",
     "excerpt": "Maîtrisez la température et les paramètres top-p. Équilibrez créativité vs précision pour le codage, résumés, brainstorming. Avec ChatGPT, Claude, Gemini.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ja",
     "title": "温度とTop-P：AI創造性を制御する",
-    "excerpt": "温度は0.0〜2.0でAI出力のランダム性を制御し、Top-Pは0.1〜1.0で語彙選択の幅を調整します。コードには低温度（0.1〜0.3）、ブレーンストーミングには高温度（0.8以上）を推奨します。GPT-5.6、Claude Opus 5、Gemini 3.1 Proで確認済みの設定値を提供します。",
+    "excerpt": "温度は0.0〜2.0でAI出力のランダム性を制御し、Top-Pは0.1〜1.0で語彙選択の幅を調整します。コードには低温度（0.1〜0.3）、ブレーンストーミングには高温度（0.8以上）を推奨します。GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argonで確認済みの設定値を提供します。",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "zh",
     "title": "温度和Top-P：控制AI创造力",
-    "excerpt": "温度参数范围0至2控制AI输出的随机程度，Top-P参数范围0.1至1.0决定模型考虑的词汇选项范围。代码生成推荐低温度（0.1至0.3），头脑风暴推荐高温度（0.8以上）。GPT-5.6、Claude Opus 5和Gemini 3.1 Pro均已完整验证以上参数设置效果。",
+    "excerpt": "温度参数范围0至2控制AI输出的随机程度，Top-P参数范围0.1至1.0决定模型考虑的词汇选项范围。代码生成推荐低温度（0.1至0.3），头脑风暴推荐高温度（0.8以上）。GPT-6 Astra、Claude Opus 5.5和Gemini 4 Argon均已完整验证以上参数设置效果。",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity",
     "cluster": "prompt-engineering"
   },
@@ -535,7 +535,7 @@
     "title": "Temperatura y Top-P: Controla la creatividad de la IA",
     "excerpt": "Temperatura 0–2 y Top-P 0.1–1.0: define la aleatoriedad de la IA para código, resúmenes o brainstorming. Rangos prácticos para ChatGPT, Claude y Gemini.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/es/prompt-engineering/temperature-and-top-p-control-ai-creativity",
     "cluster": "prompt-engineering"
   },
@@ -544,7 +544,7 @@
     "title": "Temperatura e Top-P: Controle a Criatividade da IA",
     "excerpt": "Temperatura 0–2 e Top-P 0,1–1,0: defina criatividade e precisão da IA. Guia prático com valores ideais para escrita criativa, código e chat.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/pt/prompt-engineering/temperature-and-top-p-control-ai-creativity",
     "cluster": "prompt-engineering"
   },
@@ -553,7 +553,7 @@
     "title": "درجة الحرارة و⁨Top-P⁩: تحكّم في إبداع الذكاء الاصطناعي",
     "excerpt": "⁨Temperature⁩ من ⁨0⁩ إلى ⁨2⁩ و⁨Top-P⁩ من ⁨0.1⁩ إلى ⁨1.0⁩: تحكم في عشوائية ⁨LLMs⁩ للكود والملخصات والعصف الذهني. نطاقات مُختبرة على ⁨ChatGPT⁩ و⁨Claude⁩ و⁨Gemini⁩.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/ar/prompt-engineering/temperature-and-top-p-control-ai-creativity",
     "cluster": "prompt-engineering"
   },
@@ -562,7 +562,7 @@
     "title": "Temperature와 Top-P: AI 창의성 제어하기",
     "excerpt": "Temperature 0–2, Top-P 0.1–1.0: 코딩, 요약, 브레인스토밍에 맞게 AI 무작위성을 설정하고, 어떤 최신 모델이 사용자 지정 temperature를 거부하는지 확인하세요.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/ko/prompt-engineering/temperature-and-top-p-control-ai-creativity",
     "cluster": "prompt-engineering"
   },
@@ -812,16 +812,16 @@
   {
     "lang": "en",
     "title": "Tokens, Costs & Limits: The Economics of AI Prompting in 2026",
-    "excerpt": "Every prompt uses tokens—the unit controlling AI costs and limits. Understand token counting, pricing for GPT-5.6/Claude/Gemini, and the local LLM option.",
+    "excerpt": "Every prompt uses tokens—the unit controlling AI costs and limits. Understand token counting, pricing for GPT-6/Claude/Gemini, and the local LLM option.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "de",
     "title": "Token, Kosten & Limits: Die Ökonomie des KI-Prompting",
-    "excerpt": "Jeder Prompt verbraucht Tokens – die Einheit für KI-Kosten und Limits. Token-Zählung, Preise für GPT-5.6, Claude und Gemini sowie die lokale LLM-Option.",
+    "excerpt": "Jeder Prompt verbraucht Tokens – die Einheit für KI-Kosten und Limits. Token-Zählung, Preise für GPT-6, Claude und Gemini sowie die lokale LLM-Option.",
     "publishDate": "2026-03-22",
     "dateModified": "2026-03-22",
     "url": "/de/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting",
@@ -857,36 +857,36 @@
   {
     "lang": "es",
     "title": "Tokens, costes y límites: La economía del prompting de IA en 2026",
-    "excerpt": "Cada prompt usa tokens, la unidad que controla los costes y límites de la IA. Entiende el conteo, los precios de GPT-5.6/Claude/Gemini y el LLM local.",
+    "excerpt": "Cada prompt usa tokens, la unidad que controla los costes y límites de la IA. Entiende el conteo, los precios de GPT-6/Claude/Gemini y el LLM local.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "pt",
     "title": "Tokens, Custos e Limites: A Economia do Prompting de IA em 2026",
-    "excerpt": "Cada prompt usa tokens, a unidade que controla os custos e limites da IA. Entenda a contagem, os preços de GPT-5.6/Claude/Gemini e a opção de LLM local.",
+    "excerpt": "Cada prompt usa tokens, a unidade que controla os custos e limites da IA. Entenda a contagem, os preços de GPT-6/Claude/Gemini e a opção de LLM local.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/pt/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ar",
     "title": "الرموز والتكاليف والحدود: اقتصاديات استدعاء الذكاء الاصطناعي في ⁨2026⁩",
-    "excerpt": "⁨1M⁩ رمز إدخال يكلف $⁨3⁩–⁨5⁩ في ⁨GPT-5.6⁩ و⁨Claude⁩. افهم احتساب الرموز ومعدلات الحدود واختيار نموذج ⁨LLM⁩ المناسب لتخفيض تكاليفك الشهرية.",
+    "excerpt": "⁨1M⁩ رمز إدخال يكلف $⁨2⁩–⁨4⁩ في ⁨GPT-6.1 Sol⁩ و⁨Claude⁩. افهم احتساب الرموز ومعدلات الحدود واختيار نموذج ⁨LLM⁩ المناسب لتخفيض تكاليفك الشهرية.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/ar/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting",
     "cluster": "prompt-engineering"
   },
   {
     "lang": "ko",
     "title": "토큰, 비용 및 제한: 2026년 AI 프롬프팅의 경제학",
-    "excerpt": "모든 프롬프트는 토큰을 사용합니다. AI 비용과 제한을 제어하는 단위를 이해하십시오. GPT-5.6/Claude/Gemini의 토큰 계산, 가격 책정, 그리고 로컬 LLM 옵션을 알아보십시오.",
+    "excerpt": "모든 프롬프트는 토큰을 사용합니다. AI 비용과 제한을 제어하는 단위를 이해하십시오. GPT-6/Claude/Gemini의 토큰 계산, 가격 책정, 그리고 로컬 LLM 옵션을 알아보십시오.",
     "publishDate": "2026-03-22",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/ko/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting",
     "cluster": "prompt-engineering"
   },
@@ -974,7 +974,7 @@
   {
     "lang": "en",
     "title": "GPT, Claude or Gemini: How to Pick the Right AI Model",
-    "excerpt": "GPT-5.6 excels at tool integration, Claude at writing quality, Gemini at cost-efficiency. All support 1M context. Decision matrix, pricing comparison, and routing guide.",
+    "excerpt": "Compare GPT-6 Astra, Claude Opus 5.5 and Gemini 4 Argon by task, price and context window. Decision matrix, vendor price comparison and routing guide.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -983,7 +983,7 @@
   {
     "lang": "de",
     "title": "GPT, Claude oder Gemini: Wie Sie das richtige KI-Modell auswählen",
-    "excerpt": "GPT-5.6 punktet bei Tool-Integration, Claude bei Textqualität, Gemini bei Kosteneffizienz. Alle mit 1M Kontext. Entscheidungsmatrix, Preisvergleich und Routing-Leitfaden.",
+    "excerpt": "GPT-6 Astra, Claude Opus 5.5 und Gemini 4 Argon im Vergleich nach Aufgabe, Preis und Kontextfenster. Entscheidungsmatrix, Preisvergleich und Routing-Leitfaden.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -992,7 +992,7 @@
   {
     "lang": "fr",
     "title": "GPT, Claude ou Gemini : comment choisir le bon modèle d'IA",
-    "excerpt": "GPT-5.6 excelle en intégration d'outils, Claude en qualité rédactionnelle, Gemini en rapport coût/performance. Tous à 1M de contexte. Matrice de décision, prix et routage.",
+    "excerpt": "GPT-6 Astra, Claude Opus 5.5 et Gemini 4 Argon comparés par tâche, prix et contexte. Matrice de décision, comparatif des prix officiels et guide de routage.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -1001,7 +1001,7 @@
   {
     "lang": "ja",
     "title": "GPT、Claude、Gemini：適切なAIモデルの選び方",
-    "excerpt": "GPT-5.6はツール連携、Claudeは文章品質、Geminiはコスト効率に強みがあります。3モデルとも1Mコンテキスト対応。判断マトリクス、価格比較、ルーティング指針を掲載。",
+    "excerpt": "GPT-6 Astra、Claude Opus 5.5、Gemini 4 Argonをタスク、価格、コンテキストで比較。判断マトリクス、各社の価格比較、ルーティング指針を掲載。",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -1010,7 +1010,7 @@
   {
     "lang": "zh",
     "title": "GPT、Claude 还是 Gemini：如何选择合适的 AI 模型",
-    "excerpt": "GPT-5.6 强在工具集成，Claude 强在文字质量，Gemini 强在成本效率。三者均支持 1M 上下文。含决策矩阵、价格对比与路由方案。",
+    "excerpt": "按任务、价格和上下文窗口对比 GPT-6 Astra、Claude Opus 5.5 与 Gemini 4 Argon。含决策矩阵、官方价格对比与路由方案。",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/zh/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -1019,7 +1019,7 @@
   {
     "lang": "es",
     "title": "GPT, Claude o Gemini: Cómo elegir el modelo de IA correcto",
-    "excerpt": "GPT-5.6 destaca en herramientas, Claude en escritura y Gemini en costos. Todos con 1M de contexto. Matriz de decisión, precios y guía de enrutamiento.",
+    "excerpt": "GPT-6 Astra, Claude Opus 5.5 y Gemini 4 Argon comparados por tarea, precio y ventana de contexto. Matriz de decisión, precios y guía de enrutamiento.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/es/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -1028,7 +1028,7 @@
   {
     "lang": "pt",
     "title": "GPT, Claude ou Gemini: Como Escolher o Modelo de IA Certo",
-    "excerpt": "GPT-5.6 se destaca em integração de ferramentas, Claude em qualidade de escrita, Gemini em custo-eficiência. Todos suportam 1M de contexto. Matriz de decisão, preços e guia de roteamento.",
+    "excerpt": "GPT-6 Astra, Claude Opus 5.5 e Gemini 4 Argon comparados por tarefa, preço e janela de contexto. Matriz de decisão, preços e guia de roteamento.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/pt/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -1037,7 +1037,7 @@
   {
     "lang": "ar",
     "title": "⁨GPT⁩ أم ⁨Claude⁩ أم ⁨Gemini⁩: كيف تختار نموذج الذكاء الاصطناعي المناسب",
-    "excerpt": "⁨GPT-5.6⁩ يتفوق في تكامل الأدوات، و⁨Claude⁩ في جودة الكتابة، و⁨Gemini⁩ في خفض التكلفة. مصفوفة قرار ومقارنة أسعار ودليل التوجيه لكل مهمة.",
+    "excerpt": "مقارنة ⁨GPT-6 Astra⁩ و⁨Claude Opus 5.5⁩ و⁨Gemini 4 Argon⁩ حسب المهمة والسعر ونافذة السياق. مصفوفة قرار ومقارنة أسعار ودليل التوجيه.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/ar/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -1046,7 +1046,7 @@
   {
     "lang": "ko",
     "title": "GPT, Claude, Gemini: 올바른 AI 모델을 선택하는 방법",
-    "excerpt": "GPT-5.6는 도구 통합에, Claude는 작문 품질에, Gemini는 비용 효율성에 강합니다. 모두 1M 컨텍스트를 지원합니다. 의사결정 매트릭스, 가격 비교, 라우팅 가이드를 제공합니다.",
+    "excerpt": "GPT-6 Astra, Claude Opus 5.5, Gemini 4 Argon을 작업, 가격, 컨텍스트로 비교합니다. 의사결정 매트릭스, 가격 비교, 라우팅 가이드를 제공합니다.",
     "publishDate": "2026-03-23",
     "dateModified": "2026-03-23",
     "url": "/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model",
@@ -1786,7 +1786,7 @@
     "title": "How LLMs Actually Work: Tokens, Attention, and Inference",
     "excerpt": "LLMs predict tokens via probability distributions — not meaning. Learn tokenization, transformer attention, RLHF, and inference parameters with specific model benchmarks and regional context.",
     "publishDate": "2026-03-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/prompt-engineering/how-llms-actually-work",
     "cluster": "prompt-engineering"
   },
@@ -1795,7 +1795,7 @@
     "title": "Wie LLMs wirklich funktionieren: Tokens, Attention und Inferenz",
     "excerpt": "LLMs sagen Tokens per Wahrscheinlichkeitsverteilung voraus – nicht aus Verständnis. Tokenisierung, Transformer-Attention, RLHF und Inferenzparameter erklärt.",
     "publishDate": "2026-03-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/de/prompt-engineering/how-llms-actually-work",
     "cluster": "prompt-engineering"
   },
@@ -1804,7 +1804,7 @@
     "title": "Comment fonctionnent vraiment les LLMs : tokens, attention et inférence",
     "excerpt": "Les LLM prédisent les tokens par distribution probabiliste, pas par compréhension. Apprenez la tokenisation, l'attention transformer, RLHF et les paramètres d'inférence.",
     "publishDate": "2026-03-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/fr/prompt-engineering/how-llms-actually-work",
     "cluster": "prompt-engineering"
   },
@@ -1813,7 +1813,7 @@
     "title": "LLMは実際にどのように機能するか：トークン、注意、推論",
     "excerpt": "LLMはトークンを確率分布で予測します（理解ではなく）。トークン化、Transformer注意メカニズム、RLHF、推論パラメータ、モデルベンチマークを学びます。",
     "publishDate": "2026-03-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/ja/prompt-engineering/how-llms-actually-work",
     "cluster": "prompt-engineering"
   },
@@ -1822,7 +1822,7 @@
     "title": "大型语言模型实际如何工作：令牌、注意力与推理",
     "excerpt": "LLM通过概率分布预测令牌，并非真实理解。学习令牌化、Transformer注意力机制、RLHF和推理参数，参考主流模型基准数据，掌握提示工程最佳实践。",
     "publishDate": "2026-03-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/zh/prompt-engineering/how-llms-actually-work",
     "cluster": "prompt-engineering"
   },
@@ -1831,7 +1831,7 @@
     "title": "Cómo funcionan realmente los LLMs: tokens, attention e inferencia",
     "excerpt": "Los LLMs predicen tokens por probabilidad, no por significado. Aprende tokenización, transformer attention, RLHF y parámetros de inferencia con benchmarks.",
     "publishDate": "2026-03-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/es/prompt-engineering/how-llms-actually-work",
     "cluster": "prompt-engineering"
   },
@@ -1840,7 +1840,7 @@
     "title": "Como os LLMs Realmente Funcionam: Tokens, Atenção e Inferência",
     "excerpt": "LLMs preveem tokens por distribuições de probabilidade — não por significado. Aprenda tokenização, transformer attention, RLHF e parâmetros de inferência com benchmarks específicos de modelos.",
     "publishDate": "2026-03-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/pt/prompt-engineering/how-llms-actually-work",
     "cluster": "prompt-engineering"
   },
@@ -1849,7 +1849,7 @@
     "title": "كيف تعمل نماذج اللغة الكبيرة فعلاً: الرموز والانتباه والاستدلال",
     "excerpt": "نماذج ⁨LLMs⁩ تتنبأ بالرموز عبر توزيعات الاحتمال لا بالفهم. تعلّم التحليل إلى رموز، وانتباه المحوّل، و⁨RLHF⁩، ومعاملات الاستدلال مع معايير الأداء.",
     "publishDate": "2026-03-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/ar/prompt-engineering/how-llms-actually-work",
     "cluster": "prompt-engineering"
   },
@@ -1858,7 +1858,7 @@
     "title": "LLM이 실제로 작동하는 방식: 토큰, 어텐션, 추론",
     "excerpt": "LLM은 의미 이해가 아닌 확률 분포를 통해 토큰을 예측합니다. 토크나이제이션, 트랜스포머 어텐션, RLHF, 추론 매개변수를 주요 모델 벤치마크와 함께 학습하십시오.",
     "publishDate": "2026-03-30",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/ko/prompt-engineering/how-llms-actually-work",
     "cluster": "prompt-engineering"
   },
@@ -3001,7 +3001,7 @@
     "title": "Zero-Shot vs. Few-Shot Prompting",
     "excerpt": "Compare zero-shot and few-shot prompting. When to use each technique. Learn context requirements, accuracy tradeoffs, and best practices for both methods.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/prompt-engineering/zero-shot-vs-few-shot",
     "cluster": "prompt-engineering"
   },
@@ -3010,7 +3010,7 @@
     "title": "Zero-Shot vs. Few-Shot Prompting",
     "excerpt": "Zero-Shot und Few-Shot Prompting im Vergleich: wann welche Technik, Kosten pro Aufruf, Beispielauswahl und Genauigkeits-Tradeoffs im Überblick.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/de/prompt-engineering/zero-shot-vs-few-shot",
     "cluster": "prompt-engineering"
   },
@@ -3019,7 +3019,7 @@
     "title": "Zero-Shot vs. Few-Shot Prompting",
     "excerpt": "Zero-shot ou few-shot prompting : quand utiliser chaque technique, coût par appel, choix des exemples et gain réel de précision selon le modèle.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/fr/prompt-engineering/zero-shot-vs-few-shot",
     "cluster": "prompt-engineering"
   },
@@ -3028,7 +3028,7 @@
     "title": "ゼロショット vs. フューショットプロンプティング",
     "excerpt": "ゼロショットとフューショットプロンプティングを比較。使い分けの基準、1回あたりのコスト、例の選び方、実際に得られる精度差を解説します。",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/ja/prompt-engineering/zero-shot-vs-few-shot",
     "cluster": "prompt-engineering"
   },
@@ -3037,7 +3037,7 @@
     "title": "零样本与少样本提示对比",
     "excerpt": "对比零样本与少样本提示：各自适用场景、单次调用成本、示例该怎么选，以及在不同模型上到底能提升多少准确率。",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/zh/prompt-engineering/zero-shot-vs-few-shot",
     "cluster": "prompt-engineering"
   },
@@ -3046,7 +3046,7 @@
     "title": "Zero-Shot vs. Few-Shot Prompting",
     "excerpt": "Compara zero-shot y few-shot prompting: cuándo usar cada técnica, coste por llamada, cómo elegir los ejemplos y qué precisión ganas realmente.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/es/prompt-engineering/zero-shot-vs-few-shot",
     "cluster": "prompt-engineering"
   },
@@ -3055,7 +3055,7 @@
     "title": "Zero-Shot vs. Few-Shot Prompting",
     "excerpt": "Compare zero-shot e few-shot prompting: quando usar cada técnica, custo por chamada, como escolher os exemplos e quanta precisão você ganha de verdade.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/pt/prompt-engineering/zero-shot-vs-few-shot",
     "cluster": "prompt-engineering"
   },
@@ -3064,7 +3064,7 @@
     "title": "التوجيه الصفري مقابل التوجيه بأمثلة قليلة",
     "excerpt": "مقارنة بين التوجيه الصفري والتوجيه بأمثلة قليلة: متى تستخدم كل أسلوب، تكلفة كل استدعاء، اختيار الأمثلة، ومقدار الدقة التي تكسبها فعليًا.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/ar/prompt-engineering/zero-shot-vs-few-shot",
     "cluster": "prompt-engineering"
   },
@@ -3073,7 +3073,7 @@
     "title": "제로샷 vs. 퓨샷 프롬프팅",
     "excerpt": "제로샷과 퓨샷 프롬프팅 비교. 각 기법을 언제 쓸지, 호출당 비용은 얼마인지, 예시는 어떻게 고르고 정확도는 얼마나 오르는지 정리했습니다.",
     "publishDate": "2026-03-26",
-    "dateModified": "2026-08-31",
+    "dateModified": "2026-10-19",
     "url": "/ko/prompt-engineering/zero-shot-vs-few-shot",
     "cluster": "prompt-engineering"
   },
@@ -6565,7 +6565,7 @@
     "title": "AI Knowledge Cutoffs, Live Search, and GEO: The Complete Guide",
     "excerpt": "Complete guide to AI knowledge cutoffs: verified dates for Claude, GPT, Gemini, Grok, Llama, Qwen, Gemma, Phi — plus GEO strategy for appearing in cloud AI vs local LLMs. Local models need RAG, not SEO.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/prompt-engineering/knowledge-cutoffs-and-geo",
     "cluster": "prompt-engineering"
   },
@@ -6574,7 +6574,7 @@
     "title": "KI-Wissensgrenzen, Live-Suche und GEO: Der vollständige Leitfaden",
     "excerpt": "Vollständiger Leitfaden zu KI-Wissensgrenzen: Verifizierte Daten für Claude, GPT, Gemini, Grok, Llama, Qwen, Gemma, Phi — plus GEO-Strategie für das Erscheinen in Cloud-KI vs. lokalen LLMs. Lokale Modelle brauchen RAG, nicht SEO.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/de/prompt-engineering/knowledge-cutoffs-and-geo",
     "cluster": "prompt-engineering"
   },
@@ -6583,7 +6583,7 @@
     "title": "Dates de coupure des IA, recherche en direct et GEO : le guide complet",
     "excerpt": "Guide complet sur les dates de coupure des IA : dates vérifiées pour Claude, GPT, Gemini, Grok, Llama, Qwen, Gemma, Phi — plus stratégie GEO pour apparaître dans l'IA cloud vs LLM locaux. Les modèles locaux ont besoin de RAG, pas de SEO.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/fr/prompt-engineering/knowledge-cutoffs-and-geo",
     "cluster": "prompt-engineering"
   },
@@ -6592,7 +6592,7 @@
     "title": "AI知識カットオフ、ライブ検索、GEO：完全ガイド",
     "excerpt": "AIの知識カットオフ完全ガイド：Claude、GPT、Gemini、Grok、Llama、Qwen、Gemma、Phiの検証済み日付 — クラウドAI対ローカルLLMのGEO戦略付き。ローカルモデルにはSEOではなくRAGが必要です。",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/ja/prompt-engineering/knowledge-cutoffs-and-geo",
     "cluster": "prompt-engineering"
   },
@@ -6601,7 +6601,7 @@
     "title": "AI知识截止日期、实时搜索与GEO：完整指南",
     "excerpt": "AI知识截止日期完整指南：Claude、GPT、Gemini、Grok、Llama、Qwen、Gemma、Phi的已验证日期——以及出现在云端AI与本地LLM回答中的GEO策略。本地模型需要RAG，而非SEO。",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/zh/prompt-engineering/knowledge-cutoffs-and-geo",
     "cluster": "prompt-engineering"
   },
@@ -6610,7 +6610,7 @@
     "title": "Fechas de corte del conocimiento de la IA, búsqueda en vivo y GEO: la guía completa",
     "excerpt": "Guía completa sobre fechas de corte de la IA: fechas verificadas para Claude, GPT, Gemini, Grok, Llama, Qwen, Gemma, Phi — más estrategia GEO para aparecer en IA en la nube vs LLM locales. Los modelos locales necesitan RAG, no SEO.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/es/prompt-engineering/knowledge-cutoffs-and-geo",
     "cluster": "prompt-engineering"
   },
@@ -6619,7 +6619,7 @@
     "title": "Datas de corte de conhecimento de IA, busca ao vivo e GEO: Guia completo",
     "excerpt": "Guia completo sobre datas de corte de conhecimento de IA: datas verificadas para Claude, GPT, Gemini, Grok, Llama, Qwen, Gemma e Phi — com estratégia GEO para IA em nuvem vs LLM local. Modelos locais precisam de RAG, não de SEO.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/pt/prompt-engineering/knowledge-cutoffs-and-geo",
     "cluster": "prompt-engineering"
   },
@@ -6628,7 +6628,7 @@
     "title": "تواريخ انقطاع معرفة الذكاء الاصطناعي والبحث المباشر و⁨GEO⁩: الدليل الكامل",
     "excerpt": "تواريخ انقطاع موثّقة لـ ⁨Claude⁩ و⁨GPT⁩ و⁨Gemini⁩ و⁨Llama⁩ و⁨Qwen⁩، مع استراتيجية ⁨GEO⁩: السحابي مقابل ⁨LLM⁩ المحلي. النماذج المحلية تحتاج ⁨RAG⁩ لا ⁨SEO⁩.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/ar/prompt-engineering/knowledge-cutoffs-and-geo",
     "cluster": "prompt-engineering"
   },
@@ -6637,7 +6637,7 @@
     "title": "AI 지식 마감 날짜, 실시간 검색, 그리고 GEO: 완전 가이드",
     "excerpt": "AI 지식 마감 날짜 완전 가이드: Claude, GPT, Gemini, Grok, Llama, Qwen, Gemma, Phi의 검증된 날짜 — 클라우드 AI vs 로컬 LLM GEO 전략 포함. 로컬 모델에는 SEO가 아닌 RAG가 필요합니다.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/ko/prompt-engineering/knowledge-cutoffs-and-geo",
     "cluster": "prompt-engineering"
   },
@@ -8590,7 +8590,7 @@
     "title": "Ollama Latest Version 2026: v0.40.5 + Best Models by Use Case",
     "excerpt": "Ollama's latest version is v0.40.5. See what changed since v0.33, the newest models (Nemotron 3.5, GLM-5.3, Granite 4.2) and which model is best for chat, coding and vision.",
     "publishDate": "2026-04-04",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/local-llms/top-open-source-models-ollama",
     "cluster": "local-llms"
   },
@@ -16687,82 +16687,82 @@
   },
   {
     "lang": "en",
-    "title": "How to Run Qwen2-VL Locally in 2026: Document OCR & Vision Guide",
-    "excerpt": "Run Qwen2-VL locally in ~6 GB VRAM via Ollama: setup steps, Chinese and Japanese document OCR, image Q&A, and how it beats LLaVA and Llama 3.2 Vision.",
+    "title": "How to Run Qwen2.5-VL and Qwen3-VL Locally in 2026: Document OCR & Vision Guide",
+    "excerpt": "Run Qwen2.5-VL and Qwen3-VL locally via Ollama: verified tags, download sizes, licences, setup steps and document OCR. Qwen2-VL is superseded.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-07-31",
+    "dateModified": "2026-10-19",
     "url": "/local-llms/run-qwen-vl-locally-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
-    "title": "Qwen2-VL lokal ausführen 2026: Dokumenten-OCR & Vision-Setup-Anleitung",
-    "excerpt": "Qwen2-VL lokal mit ~6 GB VRAM über Ollama ausführen: Einrichtungsschritte, OCR für chinesische und japanische Dokumente, Bild-Q&A und der Vergleich mit LLaVA.",
+    "title": "Qwen2.5-VL und Qwen3-VL lokal betreiben 2026: Leitfaden für Dokumenten-OCR und Bildverständnis",
+    "excerpt": "Qwen2.5-VL und Qwen3-VL lokal mit Ollama betreiben: geprüfte Tags, Download-Größen, Lizenzen, Einrichtung und Dokumenten-OCR. Qwen2-VL ist überholt.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-07-31",
+    "dateModified": "2026-10-19",
     "url": "/de/local-llms/run-qwen-vl-locally-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
-    "title": "Exécuter Qwen2-VL en local en 2026 : guide OCR et vision",
-    "excerpt": "Exécuter Qwen2-VL en local avec ~6 GB de VRAM via Ollama : installation, OCR de documents chinois et japonais, questions-réponses sur image et comparatifs.",
+    "title": "Exécuter Qwen2.5-VL et Qwen3-VL en local en 2026 : guide de l'OCR de documents et de la vision",
+    "excerpt": "Exécutez Qwen2.5-VL et Qwen3-VL en local avec Ollama : tags, tailles et licences vérifiés, installation et OCR de documents. Qwen2-VL est dépassé.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-07-31",
+    "dateModified": "2026-10-19",
     "url": "/fr/local-llms/run-qwen-vl-locally-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
-    "title": "Qwen2-VLをローカル実行 2026：ドキュメントOCRと画像認識ガイド",
-    "excerpt": "約6 GBのVRAMでOllamaを使いQwen2-VLをローカル実行：セットアップ手順、中国語・日本語ドキュメントのOCR、画像Q&A、LLaVAとの比較を解説します。",
+    "title": "Qwen2.5-VLとQwen3-VLをローカルで動かす方法【2026年版】：ドキュメントOCRとビジョンガイド",
+    "excerpt": "Qwen2.5-VLとQwen3-VLをOllamaでローカル実行：確認済みのタグ・サイズ・ライセンス、手順、ドキュメントOCR。Qwen2-VLは旧世代です。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-07-31",
+    "dateModified": "2026-10-19",
     "url": "/ja/local-llms/run-qwen-vl-locally-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
-    "title": "本地运行 Qwen2-VL 2026：文档 OCR 与图像识别指南",
-    "excerpt": "通过 Ollama 在约 6 GB VRAM 下本地运行 Qwen2-VL：设置步骤、中文与日文文档 OCR、图像问答，以及与 LLaVA 的对比。",
+    "title": "2026年如何在本地运行Qwen2.5-VL和Qwen3-VL：文档OCR与视觉指南",
+    "excerpt": "通过Ollama在本地运行Qwen2.5-VL和Qwen3-VL：核实过的标签、下载大小、许可证、配置步骤与文档OCR。Qwen2-VL已被取代。",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-07-31",
+    "dateModified": "2026-10-19",
     "url": "/zh/local-llms/run-qwen-vl-locally-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
-    "title": "Cómo ejecutar Qwen2-VL en local en 2026: guía de OCR de documentos y visión",
-    "excerpt": "Ejecuta Qwen2-VL en local con ~6 GB de VRAM vía Ollama: instalación, OCR en chino y japonés, preguntas sobre imágenes y comparación con LLaVA.",
+    "title": "Cómo ejecutar Qwen2.5-VL y Qwen3-VL en local en 2026: guía de OCR de documentos y visión",
+    "excerpt": "Ejecuta Qwen2.5-VL y Qwen3-VL en local con Ollama: etiquetas, tamaños y licencias verificados, instalación y OCR de documentos. Qwen2-VL está superado.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-07-31",
+    "dateModified": "2026-10-19",
     "url": "/es/local-llms/run-qwen-vl-locally-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
-    "title": "Como executar o Qwen2-VL localmente em 2026: guia de OCR de documentos e visão",
-    "excerpt": "Execute o Qwen2-VL localmente com ~6 GB de VRAM via Ollama: instalação, OCR em chinês e japonês, perguntas sobre imagens e comparação com LLaVA.",
+    "title": "Como executar o Qwen2.5-VL e o Qwen3-VL localmente em 2026: guia de OCR de documentos e visão",
+    "excerpt": "Execute o Qwen2.5-VL e o Qwen3-VL localmente com Ollama: tags, tamanhos e licenças verificados, instalação e OCR de documentos. O Qwen2-VL foi superado.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/pt/local-llms/run-qwen-vl-locally-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
-    "title": "كيفية تشغيل ⁨Qwen2-VL⁩ محليًا في ⁨2026⁩: دليل ⁨OCR⁩ للمستندات والرؤية",
-    "excerpt": "شغّل ⁨Qwen2-VL⁩ محليًا بـ ~⁨6 GB⁩ من ⁨VRAM⁩ عبر ⁨Ollama⁩: التثبيت، ⁨OCR⁩ بالصينية واليابانية، الأسئلة عن الصور، والمقارنة بـ ⁨LLaVA⁩.",
+    "title": "كيفية تشغيل ⁨Qwen2.5-VL⁩ و⁨Qwen3-VL⁩ محليًا في ⁨2026⁩: دليل ⁨OCR⁩ للمستندات والرؤية",
+    "excerpt": "شغّل ⁨Qwen2.5-VL⁩ و⁨Qwen3-VL⁩ محليًا عبر ⁨Ollama⁩: وسوم وأحجام وتراخيص تم التحقق منها، وخطوات الإعداد، و⁨OCR⁩ للمستندات. ⁨Qwen2-VL⁩ تجاوزه الزمن.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-07-31",
+    "dateModified": "2026-10-19",
     "url": "/ar/local-llms/run-qwen-vl-locally-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
-    "title": "2026년 Qwen2-VL 로컬 실행 방법: 문서 OCR 및 비전 가이드",
-    "excerpt": "Ollama를 통해 약 6 GB VRAM으로 Qwen2-VL을 로컬 실행: 설정 단계, 중국어·일본어 문서 OCR, 이미지 Q&A, LLaVA 및 Llama 3.2 Vision 대비 성능 비교.",
+    "title": "2026년 Qwen2.5-VL과 Qwen3-VL 로컬 실행 방법: 문서 OCR 및 비전 가이드",
+    "excerpt": "Ollama로 Qwen2.5-VL과 Qwen3-VL을 로컬 실행: 확인된 태그·다운로드 크기·라이선스, 설정 단계, 문서 OCR. Qwen2-VL은 구세대입니다.",
     "publishDate": "2026-05-22",
-    "dateModified": "2026-08-30",
+    "dateModified": "2026-10-19",
     "url": "/ko/local-llms/run-qwen-vl-locally-2026",
     "cluster": "local-llms"
   },
@@ -16850,9 +16850,9 @@
   {
     "lang": "en",
     "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
-    "excerpt": "Run Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder and Qwen2-VL locally in 2026. VRAM requirements, Ollama + LM Studio setup, Q4_K_M benchmarks, and hardware tier guide.",
+    "excerpt": "Run Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder and Qwen2.5-VL locally in 2026. VRAM requirements, Ollama + LM Studio setup, Q4_K_M benchmarks, and hardware tier guide.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-10-19",
     "url": "/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -16861,70 +16861,70 @@
     "title": "Qwen Lokal-Deployment-Guide 2026: Qwen 3.6 27B, Coder & VL je Hardware-Stufe",
     "excerpt": "Qwen 3.6 27B läuft lokal mit ~17 GB VRAM in Q4_K_M über `ollama run qwen3.6:27b`. VRAM-Bedarf je Modellgröße, Coder- und VL-Varianten, Hardware-Tiers.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/de/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Guide de déploiement local Qwen 2026 : Qwen 3.6 27B, Coder et VL par niveau matériel",
-    "excerpt": "Déployer Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder et Qwen2-VL en local en 2026. VRAM requis, Ollama + LM Studio, benchmarks Q4_K_M et guide par niveau matériel.",
+    "excerpt": "Déployer Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder et Qwen2.5-VL en local en 2026. VRAM requis, Ollama + LM Studio, benchmarks Q4_K_M et guide par niveau matériel.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/fr/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "Qwenローカルデプロイガイド2026：Qwen 3.6 27B・Coder・VLを全ハードウェア階層で動かす",
-    "excerpt": "Qwen 3.6 27B・Qwen3・Qwen2.5（7B〜72B）・Qwen2.5-Coder・Qwen2-VLを2026年にローカルで動かす完全実践ガイド。VRAM要件、OllamaとLM StudioのセットアップガイドQ4_K_Mベンチマーク、ハードウェア階層別の選び方を解説します。",
+    "excerpt": "Qwen 3.6 27B・Qwen3・Qwen2.5（7B〜72B）・Qwen2.5-Coder・Qwen2.5-VLを2026年にローカルで動かす完全実践ガイド。VRAM要件、OllamaとLM StudioのセットアップガイドQ4_K_Mベンチマーク、ハードウェア階層別の選び方を解説します。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/ja/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "Qwen本地部署指南2026：Qwen 3.6 27B、Coder和VL各硬件层级完整指南",
-    "excerpt": "2026年本地运行Qwen 3.6 27B、Qwen3、Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2-VL的完整实战部署指南：显存需求对照表、Ollama与LM Studio配置步骤、Q4_K_M量化基准数据，以及各硬件预算档位的配置建议。",
+    "excerpt": "2026年本地运行Qwen 3.6 27B、Qwen3、Qwen2.5全系列（7B–72B）、Qwen2.5-Coder与Qwen2.5-VL的完整实战部署指南：显存需求对照表、Ollama与LM Studio配置步骤、Q4_K_M量化基准数据，以及各硬件预算档位的配置建议。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/zh/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "Guía de despliegue local de Qwen 2026: Qwen 3.6 27B, Coder y VL en cada nivel de hardware",
-    "excerpt": "Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder y Qwen2-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.",
+    "excerpt": "Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder y Qwen2.5-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/es/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Guia de implantação local do Qwen 2026: Qwen 3.6 27B, Coder e VL por nível de hardware",
-    "excerpt": "Execute Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder e Qwen2-VL localmente em 2026. Requisitos de VRAM, configuração Ollama e LM Studio e guia por nível de hardware.",
+    "excerpt": "Execute Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder e Qwen2.5-VL localmente em 2026. Requisitos de VRAM, configuração Ollama e LM Studio e guia por nível de hardware.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/pt/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "دليل النشر المحلي لـ Qwen 2026: Qwen 3.6 27B وCoder وVL على كل مستوى أجهزة",
-    "excerpt": "شغّل Qwen 3.6 27B وQwen3 وQwen2.5 (7B–72B) وQwen2.5-Coder وQwen2-VL محليًا في 2026. متطلبات VRAM وإعداد Ollama وLM Studio وبنشمارك Q4_K_M ودليل مستويات الأجهزة.",
+    "excerpt": "شغّل Qwen 3.6 27B وQwen3 وQwen2.5 (7B–72B) وQwen2.5-Coder وQwen2.5-VL محليًا في 2026. متطلبات VRAM وإعداد Ollama وLM Studio وبنشمارك Q4_K_M ودليل مستويات الأجهزة.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/ar/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "Qwen 로컬 배포 가이드 2026: Qwen 3.6 27B, Coder & VL 하드웨어 티어별 실행 방법",
-    "excerpt": "2026년에 Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder, Qwen2-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 벤치마크, 하드웨어 티어 가이드를 제공합니다.",
+    "excerpt": "2026년에 Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen2.5-Coder, Qwen2.5-VL을 로컬에서 실행하십시오. VRAM 요구사항, Ollama + LM Studio 설정, Q4_K_M 벤치마크, 하드웨어 티어 가이드를 제공합니다.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/ko/local-llms/qwen-local-deployment-guide-2026",
     "cluster": "local-llms"
   },
@@ -17903,81 +17903,81 @@
   {
     "lang": "en",
     "title": "Best Local Reasoning Model 2026: DeepSeek-R1 Ranked",
-    "excerpt": "The 6 DeepSeek-R1 distills ranked for local reasoning — which fits your GPU, real AIME 2024 scores, and the best small distill (R1-0528-Qwen3-8B).",
+    "excerpt": "The 6 DeepSeek-R1 distills ranked for local reasoning — which fits your GPU, published AIME 2024 scores, and the best small distill (R1-0528-Qwen3-8B).",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/local-llms/best-local-reasoning-model-deepseek-r1-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "de",
     "title": "Bestes lokales Reasoning-Modell 2026: DeepSeek-R1 im Ranking",
-    "excerpt": "Die 6 DeepSeek-R1-Distills im Ranking für lokales Reasoning – Mathe, Logik, mehrstufig. Welches passt zu Ihrer GPU, echte AIME-Werte und der beste kleine Distill (R1-0528-Qwen3-8B).",
+    "excerpt": "Die 6 DeepSeek-R1-Distills im Ranking für lokales Reasoning – Mathe, Logik, mehrstufig. Welches passt zu Ihrer GPU, veröffentlichte AIME-Werte und der beste kleine Distill (R1-0528-Qwen3-8B).",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/de/local-llms/best-local-reasoning-model-deepseek-r1-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "fr",
     "title": "Meilleur modèle de raisonnement local 2026 : DeepSeek-R1 classé",
-    "excerpt": "Les 6 distillés DeepSeek-R1 classés pour le raisonnement local — maths, logique, multi-étapes. Lequel convient à votre GPU, vrais scores AIME et le meilleur petit distillé (R1-0528-Qwen3-8B).",
+    "excerpt": "Les 6 distillés DeepSeek-R1 classés pour le raisonnement local — maths, logique, multi-étapes. Lequel convient à votre GPU, scores AIME publiés et le meilleur petit distillé (R1-0528-Qwen3-8B).",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/fr/local-llms/best-local-reasoning-model-deepseek-r1-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ja",
     "title": "ローカル推論モデル2026最強は: DeepSeek-R1ディスティル比較",
-    "excerpt": "ローカル推論向けにDeepSeek-R1ディスティル6種をランキング — 数学・論理・多段階推論。どれがあなたのGPUに収まるか、実測AIMEスコア、最良の小型ディスティル(R1-0528-Qwen3-8B)を解説。",
+    "excerpt": "ローカル推論向けにDeepSeek-R1ディスティル6種をランキング — 数学・論理・多段階推論。どれがあなたのGPUに収まるか、公表AIMEスコア、最良の小型ディスティル(R1-0528-Qwen3-8B)を解説。",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/ja/local-llms/best-local-reasoning-model-deepseek-r1-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "zh",
     "title": "2026 最佳本地推理模型：DeepSeek-R1 蒸馏版排名",
-    "excerpt": "6 个 DeepSeek-R1 蒸馏模型本地推理（数学、逻辑、多步）排名——哪个适合你的 GPU、真实 AIME 分数，以及最佳小型蒸馏版（R1-0528-Qwen3-8B）。",
+    "excerpt": "6 个 DeepSeek-R1 蒸馏模型本地推理（数学、逻辑、多步）排名——哪个适合你的 GPU、已公布的 AIME 分数，以及最佳小型蒸馏版（R1-0528-Qwen3-8B）。",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/zh/local-llms/best-local-reasoning-model-deepseek-r1-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "es",
     "title": "Mejor modelo de razonamiento local 2026: DeepSeek-R1 clasificado",
-    "excerpt": "Los 6 destilados de DeepSeek-R1 clasificados para razonamiento local: matemáticas, lógica, multipaso. Cuál encaja en tu GPU, puntuaciones reales de AIME y el mejor destilado pequeño (R1-0528-Qwen3-8B).",
+    "excerpt": "Los 6 destilados de DeepSeek-R1 clasificados para razonamiento local: matemáticas, lógica, multipaso. Cuál encaja en tu GPU, puntuaciones de AIME publicadas y el mejor destilado pequeño (R1-0528-Qwen3-8B).",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/es/local-llms/best-local-reasoning-model-deepseek-r1-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "pt",
     "title": "Melhor Modelo de Raciocínio Local 2026: DeepSeek-R1",
-    "excerpt": "Os 6 destilados do DeepSeek-R1 classificados para raciocínio local — matemática, lógica, múltiplas etapas. Qual serve sua GPU, pontuações AIME reais e o melhor destilado pequeno (R1-0528-Qwen3-8B).",
+    "excerpt": "Os 6 destilados do DeepSeek-R1 classificados para raciocínio local — matemática, lógica, múltiplas etapas. Qual serve sua GPU, pontuações AIME publicadas e o melhor destilado pequeno (R1-0528-Qwen3-8B).",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/pt/local-llms/best-local-reasoning-model-deepseek-r1-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ar",
     "title": "أفضل نموذج استدلال محلي ⁨2026⁩: تصنيف ⁨DeepSeek-R1⁩",
-    "excerpt": "تصنيف نماذج ⁨DeepSeek-R1⁩ المُقطّرة الستة للاستدلال المحلي — رياضيات ومنطق ومهام متعددة الخطوات. أيّها يناسب ⁨GPU⁩ لديك، درجات ⁨AIME⁩ حقيقية، وأفضل نموذج صغير (⁨R1-0528-Qwen3-8B⁩).",
+    "excerpt": "تصنيف نماذج ⁨DeepSeek-R1⁩ المُقطّرة الستة للاستدلال المحلي — رياضيات ومنطق ومهام متعددة الخطوات. أيّها يناسب ⁨GPU⁩ لديك، درجات ⁨AIME⁩ المنشورة، وأفضل نموذج صغير (⁨R1-0528-Qwen3-8B⁩).",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/ar/local-llms/best-local-reasoning-model-deepseek-r1-2026",
     "cluster": "local-llms"
   },
   {
     "lang": "ko",
     "title": "2026년 최고의 로컬 추론 모델: DeepSeek-R1 순위",
-    "excerpt": "로컬 추론을 위한 6개 DeepSeek-R1 증류 모델 순위 — 수학, 논리, 다단계 문제. 어떤 것이 GPU에 맞는지, 실제 AIME 점수, 그리고 최고의 소형 증류 모델(R1-0528-Qwen3-8B)을 정리했습니다.",
+    "excerpt": "로컬 추론을 위한 6개 DeepSeek-R1 증류 모델 순위 — 수학, 논리, 다단계 문제. 어떤 것이 GPU에 맞는지, 공개된 AIME 점수, 그리고 최고의 소형 증류 모델(R1-0528-Qwen3-8B)을 정리했습니다.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026",
     "cluster": "local-llms"
   },
@@ -20900,7 +20900,7 @@
   {
     "lang": "en",
     "title": "Best Local Models for Tool Calling in 2026: Benchmarks & Comparison",
-    "excerpt": "Compare Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, and Llama 3.3 70B for tool-calling reliability. Real MCP benchmarks, not leaderboard scores.",
+    "excerpt": "Best small local LLM for tool calling? Gemma 4 27B runs in 16 GB VRAM at ~95% well-formed calls. Compared with Qwen3, GLM-4.7, Llama 3.3 on real MCP.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-01",
     "url": "/power-local-llm/best-local-models-tool-calling-2026",
@@ -20909,7 +20909,7 @@
   {
     "lang": "de",
     "title": "Beste lokale Modelle für Tool Calling in 2026: Benchmarks und Vergleich",
-    "excerpt": "Vergleichen Sie Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder und Llama 3.3 für Zuverlässigkeit von Tool Calls. Echte MCP-Benchmarks, keine Leaderboard-Scores.",
+    "excerpt": "Bestes kleines lokales LLM für Tool Calling? Gemma 4 27B: 16 GB VRAM, ca. 95 % wohlgeformte Aufrufe. Verglichen mit Qwen3, GLM-4.7, Llama 3.3 auf echtem MCP.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-01",
     "url": "/de/power-local-llm/best-local-models-tool-calling-2026",
@@ -20918,7 +20918,7 @@
   {
     "lang": "fr",
     "title": "Meilleurs modèles locaux pour Tool Calling en 2026 : Benchmarks et comparaison",
-    "excerpt": "Comparez Gemma 4, GLM-4.7, Qwen3, Qwen3-Coder et Llama 3.3 pour la fiabilité du Tool Calling. Benchmarks MCP réels, pas des scores de classement.",
+    "excerpt": "Meilleur petit LLM local pour le tool calling ? Gemma 4 27B : 16 GB de VRAM, ~95 % d'appels valides. Comparé à Qwen3, GLM-4.7 et Llama 3.3 sur MCP réel.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-01",
     "url": "/fr/power-local-llm/best-local-models-tool-calling-2026",
@@ -20927,7 +20927,7 @@
   {
     "lang": "ja",
     "title": "2026年のベストローカルツール呼び出しモデル : ベンチマークと比較",
-    "excerpt": "2026年のツール呼び出しに最適なローカルLLM。Qwen3、Llama 3.3、Mistralを実機テスト。関数呼び出し精度、JSON出力の信頼性、エージェント対応を比較。",
+    "excerpt": "ツール呼び出しに強い小型ローカルLLMは？Gemma 4 27BはVRAM約16 GBで整形式の呼び出し率約95%。Qwen3・GLM-4.7・Llama 3.3と実MCPサーバーで比較。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-01",
     "url": "/ja/power-local-llm/best-local-models-tool-calling-2026",
@@ -20936,7 +20936,7 @@
   {
     "lang": "zh",
     "title": "2026年最佳本地工具调用模型：基准和比较",
-    "excerpt": "比较Gemma 4、GLM-4.7、Qwen3、Qwen3-Coder和Llama 3.3的工具调用可靠性。真实MCP基准，而非排行榜分数。",
+    "excerpt": "工具调用最佳小型本地模型？Gemma 4 27B 仅需约16 GB VRAM，格式正确率约95%。与Qwen3、GLM-4.7、Llama 3.3在真实MCP服务器上对比。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-01",
     "url": "/zh/power-local-llm/best-local-models-tool-calling-2026",
@@ -20945,7 +20945,7 @@
   {
     "lang": "es",
     "title": "Mejores modelos locales para Tool Calling en 2026: Benchmarks y comparativa",
-    "excerpt": "Compara Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B y Llama 3.3 70B en fiabilidad de Tool Calling. Benchmarks MCP reales, no de leaderboard.",
+    "excerpt": "¿Mejor LLM local pequeño para tool calling? Gemma 4 27B: 16 GB de VRAM y ~95 % de llamadas válidas. Comparado con Qwen3, GLM-4.7 y Llama 3.3 en MCP real.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-01",
     "url": "/es/power-local-llm/best-local-models-tool-calling-2026",
@@ -20954,7 +20954,7 @@
   {
     "lang": "pt",
     "title": "Melhores modelos locais para Tool Calling em 2026: Benchmarks e comparativo",
-    "excerpt": "Compare Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B e Llama 3.3 70B na confiabilidade de Tool Calling. Benchmarks MCP reais, não de leaderboard.",
+    "excerpt": "Melhor LLM local pequeno para tool calling? Gemma 4 27B: 16 GB de VRAM e ~95% de chamadas válidas. Comparado a Qwen3, GLM-4.7 e Llama 3.3 em MCP real.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-01",
     "url": "/pt/power-local-llm/best-local-models-tool-calling-2026",
@@ -20963,7 +20963,7 @@
   {
     "lang": "ar",
     "title": "أفضل النماذج المحلية لاستدعاء الأدوات في ⁨2026⁩: المعايير والمقارنة",
-    "excerpt": "Qwen3 32B وGemma 4 27B وLlama 3.3 70B مُقيَّمة على سير عمل MCP حقيقية. موثوقية استدعاء الأدوات والفشل وVRAM لكل نموذج — لا نقاط لوحة صدارة.",
+    "excerpt": "ما أفضل نموذج محلي صغير لاستدعاء الأدوات؟ يعمل Gemma 4 27B بنحو 16 GB من VRAM وبدقة ~95%. مقارنة مع Qwen3 وGLM-4.7 وLlama 3.3 على خوادم MCP حقيقية.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-01",
     "url": "/ar/power-local-llm/best-local-models-tool-calling-2026",
@@ -20972,7 +20972,7 @@
   {
     "lang": "ko",
     "title": "2026년 Tool Calling 최고의 로컬 모델: 벤치마크 및 비교",
-    "excerpt": "Gemma 4 27B, GLM-4.7 32B, Qwen3 32B, Qwen3-Coder 30B, Llama 3.3 70B의 Tool Calling 신뢰성 비교. 리더보드가 아닌 실제 MCP 벤치마크입니다.",
+    "excerpt": "소형 로컬 Tool Calling 모델은? Gemma 4 27B는 VRAM 약 16 GB에서 올바른 호출 약 95%. Qwen3, GLM-4.7, Llama 3.3과 실제 MCP 서버로 비교.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-01",
     "url": "/ko/power-local-llm/best-local-models-tool-calling-2026",
@@ -24466,7 +24466,7 @@
     "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
     "excerpt": "Self-host Qwen3 locally: 8B, 14B and 32B via Ollama/vLLM, hardware requirements, Docker API, and multi-GPU setup. Qwen3 has no 7B — use the 8B (qwen3:8b).",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -24475,7 +24475,7 @@
     "title": "Qwen3 Lokales Deployment: Vollständiger Produktionsleitfaden (2026)",
     "excerpt": "Qwen3 lokal betreiben: 8B, 14B und 32B via Ollama/vLLM mit Docker-API-Server, Hardware-Empfehlungen und Multi-GPU. Hinweis — Qwen3 hat kein 7B; nutze das 8B (qwen3:8b). Leitfaden 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/de/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -24484,7 +24484,7 @@
     "title": "Déploiement Local de Qwen3 : Guide Complet de Production (2026)",
     "excerpt": "Déployez Qwen3 en local : 8B, 14B et 32B via Ollama/vLLM avec un serveur API Docker, choix matériel et multi-GPU. Note — Qwen3 n'a pas de 7B ; utilisez le 8B (qwen3:8b). Guide 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/fr/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -24493,7 +24493,7 @@
     "title": "Qwen3ローカルデプロイ完全ガイド（2026）：本番運用",
     "excerpt": "Qwen3をローカルにデプロイ：8B・14B・32BをOllama/vLLMとDocker APIサーバーで、ハードウェア選定とマルチGPUも解説。注記 — Qwen3に7Bはありません。8B（qwen3:8b）を使用。2026年版ガイド。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/ja/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -24502,7 +24502,7 @@
     "title": "Qwen3本地部署完整指南（2026）：生产环境",
     "excerpt": "Qwen3本地部署：通过Ollama/vLLM运行8B、14B和32B，搭配Docker API服务器、硬件选型与多GPU方案。注意——Qwen3没有7B，请使用8B（qwen3:8b）。2026年指南。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/zh/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -24511,7 +24511,7 @@
     "title": "Despliegue Local de Qwen3: Guía Completa de Producción (2026)",
     "excerpt": "Despliega Qwen3 en local: 8B, 14B y 32B con Ollama/vLLM y un servidor API Docker, elección de hardware y multi-GPU. Nota — Qwen3 no tiene 7B; usa el 8B (qwen3:8b). Guía 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/es/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -24520,7 +24520,7 @@
     "title": "Implantação Local do Qwen3: Guia Completo de Produção (2026)",
     "excerpt": "Implante o Qwen3 localmente: 8B, 14B e 32B via Ollama/vLLM com servidor API Docker, escolha de hardware e multi-GPU. Nota — o Qwen3 não tem 7B; use o 8B (qwen3:8b). Guia 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/pt/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -24529,7 +24529,7 @@
     "title": "نشر ⁨Qwen3⁩ محليًا: الدليل الكامل للإنتاج ⁨2026⁩",
     "excerpt": "انشر Qwen3 محليًا: نماذج 8B و14B و32B عبر Ollama/vLLM مع خادم Docker API، واختيار الأجهزة، وتعدد GPU. ملاحظة — لا يوجد Qwen3 بحجم 7B؛ استخدم 8B (qwen3:8b). دليل 2026.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/ar/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
@@ -24538,88 +24538,88 @@
     "title": "Qwen3 로컬 배포 완전 가이드 (2026): 프로덕션",
     "excerpt": "Qwen3 로컬 배포: 8B, 14B, 32B를 Ollama/vLLM과 Docker API 서버로 실행, 하드웨어 선택과 Multi-GPU 포함. 참고 — Qwen3에는 7B가 없으니 8B(qwen3:8b)를 사용하세요. 2026년 가이드.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/ko/power-local-llm/qwen-local-deployment-complete-guide-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "en",
     "title": "DeepSeek vs Qwen for Local Coding 2026: Which Wins?",
-    "excerpt": "Qwen2.5-Coder vs DeepSeek-Coder for local coding: Qwen wins HumanEval (88.4% vs 83.5%); DeepSeek edges repo-level FIM. Vs CodeLlama & Llama 3. August 2026.",
+    "excerpt": "Previous-gen local coding comparison: Qwen2.5-Coder 32B beats DeepSeek-Coder on HumanEval (92.7% vs 81.1%). DeepSeek-V4 and Qwen3.6 are newer.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "DeepSeek vs Qwen für lokales Coding 2026: Wer gewinnt?",
-    "excerpt": "Qwen2.5-Coder vs DeepSeek-Coder für lokales Coding 2026: Qwen gewinnt HumanEval (88,4 % vs. 83,5 %); DeepSeek liegt bei Repo-Level-FIM vorn. Python, Rust, Refactoring.",
+    "excerpt": "Qwen2.5-Coder vs DeepSeek-Coder für lokales Coding 2026: Qwen gewinnt HumanEval (92,7 % vs. 81,1 %); DeepSeek liegt bei Repo-Level-FIM vorn. Python, Rust, Refactoring.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/de/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "DeepSeek vs Qwen pour le Coding Local 2026 : Lequel Gagne ?",
-    "excerpt": "Qwen2.5-Coder vs DeepSeek-Coder pour le code local 2026 : Qwen gagne HumanEval (88,4 % vs 83,5 %) ; DeepSeek devance en repo-level FIM. Python, Rust, refactoring.",
+    "excerpt": "Qwen2.5-Coder vs DeepSeek-Coder pour le code local 2026 : Qwen gagne HumanEval (92,7 % vs 81,1 %) ; DeepSeek devance en repo-level FIM. Python, Rust, refactoring.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/fr/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "DeepSeek vs Qwen ローカルコーディング2026：どちらが優れている？",
-    "excerpt": "DeepSeek-Coder vs Qwen3-Coder：2026年ローカルコーディング比較。ベンチマーク、VRAM要件、実際のコード品質。Python、JavaScript、リファクタリングに最適なのは。",
+    "excerpt": "DeepSeek-Coder vs Qwen2.5-Coder：2026年ローカルコーディング比較。ベンチマーク、VRAM要件、実際のコード品質。Python、JavaScript、リファクタリングに最適なのは。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/ja/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "DeepSeek vs Qwen本地编程2026：哪个更好？",
-    "excerpt": "DeepSeek-Coder vs Qwen3-Coder：2026年本地编程对比。基准测试、VRAM需求和真实代码质量。Python、JavaScript和重构任务中哪个模型更优，全面评测。",
+    "excerpt": "DeepSeek-Coder vs Qwen2.5-Coder：2026年本地编程对比。基准测试、VRAM需求和真实代码质量。Python、JavaScript和重构任务中哪个模型更优，全面评测。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/zh/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "DeepSeek vs Qwen para Coding Local 2026: ¿Cuál Gana?",
-    "excerpt": "Qwen2.5-Coder vs DeepSeek-Coder para coding local: Qwen gana HumanEval (88,4 % vs 83,5 %); DeepSeek destaca en FIM a nivel de repo. Vs CodeLlama y Llama 3. Agosto 2026.",
+    "excerpt": "Comparativa de la generación anterior: Qwen2.5-Coder 32B supera a DeepSeek-Coder en HumanEval (92,7 % vs 81,1 %). DeepSeek-V4 y Qwen3.6 son más recientes.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/es/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "DeepSeek vs Qwen para Codificação Local 2026: Qual Vence?",
-    "excerpt": "Qwen2.5-Coder vs DeepSeek-Coder para codificação local: Qwen vence no HumanEval (88,4% vs 83,5%); DeepSeek leva vantagem em repo-level e FIM. Vs CodeLlama e Llama 3. Julho de 2026.",
+    "excerpt": "Comparativo da geração anterior: o Qwen2.5-Coder 32B supera o DeepSeek-Coder no HumanEval (92,7% vs 81,1%). DeepSeek-V4 e Qwen3.6 são mais novos.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/pt/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "⁨DeepSeek⁩ مقابل ⁨Qwen⁩ للبرمجة المحلية ⁨2026⁩: أيّهما يفوز؟",
-    "excerpt": "Qwen2.5-Coder مقابل DeepSeek-Coder للبرمجة المحلية: يفوز Qwen في HumanEval (88.4% مقابل 83.5%)؛ يتقدّم DeepSeek في مستوى المستودع وFIM. مقابل CodeLlama وLlama 3. يوليو 2026.",
+    "excerpt": "مقارنة الجيل السابق: يتفوق Qwen2.5-Coder 32B على DeepSeek-Coder في HumanEval (92.7% مقابل 81.1%). DeepSeek-V4 وQwen3.6 أحدث.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/ar/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "로컬 코딩 AI DeepSeek vs Qwen 2026: 승자는?",
-    "excerpt": "Qwen2.5-Coder vs DeepSeek-Coder 로컬 코딩: Qwen이 HumanEval 우세(88.4% vs 83.5%), DeepSeek은 repo-level·FIM에서 근소 우세. CodeLlama·Llama 3 대비. 2026년 7월 기준.",
+    "excerpt": "이전 세대 로컬 코딩 비교: Qwen2.5-Coder 32B가 HumanEval에서 DeepSeek-Coder보다 우세(92.7% vs 81.1%). DeepSeek-V4·Qwen3.6이 더 최신입니다.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-08-27",
+    "dateModified": "2026-10-19",
     "url": "/ko/power-local-llm/deepseek-vs-qwen-coding-local-2026",
     "cluster": "power-local-llm"
   },
@@ -25355,81 +25355,81 @@
   {
     "lang": "en",
     "title": "Run DeepSeek Offline 2026: Best Hardware for Private Self-Hosted DeepSeek",
-    "excerpt": "Run DeepSeek reasoning models fully offline — no API, no Great Firewall. Which model, how much VRAM, which hardware class, and current DeepSeek API prices to compare against.",
+    "excerpt": "Run DeepSeek reasoning models offline — no API or Great Firewall dependency at inference time. Which model, how much VRAM, which hardware class, and current DeepSeek API prices to compare against.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-10-19",
     "url": "/power-local-llm/deepseek-offline-china-self-hosted-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "DeepSeek offline betreiben 2026: Beste Hardware für privates Self-Hosted DeepSeek",
-    "excerpt": "Betreiben Sie DeepSeek-Reasoning-Modelle vollständig offline — keine API, keine Great Firewall. Welches Modell, wie viel VRAM, welche Hardware-Klasse und aktuelle DeepSeek-API-Preise zum Vergleich.",
+    "excerpt": "Betreiben Sie DeepSeek-Reasoning-Modelle offline — keine API und keine Great-Firewall-Abhängigkeit bei der Inferenz. Welches Modell, wie viel VRAM, welche Hardware-Klasse und aktuelle DeepSeek-API-Preise zum Vergleich.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-10-19",
     "url": "/de/power-local-llm/deepseek-offline-china-self-hosted-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Exécuter DeepSeek hors ligne 2026 : meilleur matériel pour DeepSeek auto-hébergé",
-    "excerpt": "Exécutez les modèles de raisonnement DeepSeek entièrement hors ligne — sans API, sans Grand Pare-feu. Quel modèle, combien de VRAM, quelle classe de matériel, et les prix actuels de l'API DeepSeek à comparer.",
+    "excerpt": "Exécutez les modèles de raisonnement DeepSeek hors ligne — sans API ni dépendance au Grand Pare-feu à l'inférence. Quel modèle, combien de VRAM, quelle classe de matériel, et les prix actuels de l'API DeepSeek à comparer.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-10-19",
     "url": "/fr/power-local-llm/deepseek-offline-china-self-hosted-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "DeepSeekをオフライン実行 2026：プライベートなセルフホストDeepSeekに最適なハードウェア",
-    "excerpt": "DeepSeekの推論モデルを完全オフラインで実行。APIなし、グレートファイアウォールなし。どのモデルを選ぶか、必要なVRAM、ハードウェアクラス、比較対象となる現行のDeepSeek API価格を解説します。",
+    "excerpt": "DeepSeekの推論モデルをオフラインで実行。推論時のAPIなし、グレートファイアウォール依存なし。どのモデルを選ぶか、必要なVRAM、ハードウェアクラス、比較対象となる現行のDeepSeek API価格を解説します。",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-10-19",
     "url": "/ja/power-local-llm/deepseek-offline-china-self-hosted-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "DeepSeek 离线运行 2026：私有化部署的最佳硬件",
-    "excerpt": "完全离线运行 DeepSeek 推理模型——无需 API，不依赖防火长城。该选哪个模型、需要多少 VRAM、哪类硬件，以及可供比较的当前 DeepSeek API 价格。",
+    "excerpt": "离线运行 DeepSeek 推理模型——推理时无需 API，不依赖防火长城。该选哪个模型、需要多少 VRAM、哪类硬件，以及可供比较的当前 DeepSeek API 价格。",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-10-19",
     "url": "/zh/power-local-llm/deepseek-offline-china-self-hosted-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Ejecuta DeepSeek sin conexión 2026: el mejor hardware para DeepSeek privado y autoalojado",
-    "excerpt": "Ejecuta los modelos de razonamiento DeepSeek totalmente sin conexión — sin API, sin Gran Cortafuegos. Qué modelo, cuánta VRAM, qué clase de hardware y los precios actuales de la API de DeepSeek para comparar.",
+    "excerpt": "Ejecuta los modelos de razonamiento DeepSeek sin conexión — sin API ni dependencia del Gran Cortafuegos en la inferencia. Qué modelo, cuánta VRAM, qué clase de hardware y los precios actuales de la API de DeepSeek para comparar.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-10-19",
     "url": "/es/power-local-llm/deepseek-offline-china-self-hosted-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Rodar o DeepSeek offline em 2026: melhor hardware para DeepSeek auto-hospedado e privado",
-    "excerpt": "Rode os modelos de raciocínio DeepSeek totalmente offline — sem API, sem Grande Firewall. Qual modelo, quanta VRAM, qual classe de hardware e os preços atuais da API DeepSeek para comparar.",
+    "excerpt": "Rode os modelos de raciocínio DeepSeek offline — sem API nem dependência do Grande Firewall na inferência. Qual modelo, quanta VRAM, qual classe de hardware e os preços atuais da API DeepSeek para comparar.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-10-19",
     "url": "/pt/power-local-llm/deepseek-offline-china-self-hosted-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "تشغيل DeepSeek دون اتصال 2026: أفضل عتاد لاستضافة ذاتية خاصة",
-    "excerpt": "شغّل نماذج الاستدلال DeepSeek دون اتصال بالكامل — بلا API، بلا جدار ناري عظيم. أي نموذج، كم VRAM، أي فئة عتاد، وأسعار API الحالية لـ DeepSeek للمقارنة.",
+    "excerpt": "شغّل نماذج الاستدلال DeepSeek دون اتصال — بلا API وبلا اعتماد على الجدار الناري العظيم عند الاستدلال. أي نموذج، كم VRAM، أي فئة عتاد، وأسعار API الحالية لـ DeepSeek للمقارنة.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-10-19",
     "url": "/ar/power-local-llm/deepseek-offline-china-self-hosted-2026",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "DeepSeek 오프라인 실행 2026: 프라이빗 자체 호스팅 최적 하드웨어",
-    "excerpt": "DeepSeek 추론 모델을 완전히 오프라인으로 실행 — API 없이, 만리방화벽 없이. 어떤 모델, 얼마의 VRAM, 어떤 하드웨어 등급, 그리고 비교할 현재 DeepSeek API 가격.",
+    "excerpt": "DeepSeek 추론 모델을 오프라인으로 실행 — 추론 시 API와 만리방화벽 의존 없이. 어떤 모델, 얼마의 VRAM, 어떤 하드웨어 등급, 그리고 비교할 현재 DeepSeek API 가격.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-08-25",
+    "dateModified": "2026-10-19",
     "url": "/ko/power-local-llm/deepseek-offline-china-self-hosted-2026",
     "cluster": "power-local-llm"
   },
@@ -34915,7 +34915,7 @@
     "title": "Idefics Review: HuggingFace's Open Vision-Language Models, Honestly Assessed",
     "excerpt": "Idefics review 2026: HuggingFace's open vision-language model family. Idefics vs Idefics2 vs Idefics3 compared honestly — license nuances, real VRAM requirements, and which version to use today.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-19",
     "url": "/power-local-llm/idefics-review",
     "cluster": "power-local-llm"
   },
@@ -34924,7 +34924,7 @@
     "title": "Idefics-Rezension: HuggingFace's offene Vision-Language-Modelle, ehrlich bewertet",
     "excerpt": "Idefics-Test 2026: HuggingFace's offene Vision-Language-Modellfamilie. Idefics vs Idefics2 vs Idefics3 ehrlich verglichen — Lizenznuancen, echte VRAM-Anforderungen und welche Version heute zu nutzen ist.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-19",
     "url": "/de/power-local-llm/idefics-review",
     "cluster": "power-local-llm"
   },
@@ -34933,7 +34933,7 @@
     "title": "Avis sur Idefics: les modèles vision-langage ouverts de HuggingFace, évalués honnêtement",
     "excerpt": "Avis Idefics 2026 : la famille de modèles vision-langage ouverts de HuggingFace. Idefics vs Idefics2 vs Idefics3 comparés honnêtement — nuances de licence, exigences réelles en VRAM, et quelle version utiliser aujourd'hui.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-19",
     "url": "/fr/power-local-llm/idefics-review",
     "cluster": "power-local-llm"
   },
@@ -34942,7 +34942,7 @@
     "title": "Idefics レビュー:HuggingFaceのオープンなビジョン言語モデルを正直に評価する",
     "excerpt": "Idefics レビュー2026:HuggingFaceのオープンなビジョン言語モデルファミリー。Idefics vs Idefics2 vs Idefics3を正直に比較——ライセンスの注意点、実際のVRAM要件、今日使うべきバージョン。",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-19",
     "url": "/ja/power-local-llm/idefics-review",
     "cluster": "power-local-llm"
   },
@@ -34951,7 +34951,7 @@
     "title": "Idefics评测:HuggingFace开源视觉语言模型,诚实评估",
     "excerpt": "Idefics评测2026:HuggingFace的开源视觉语言模型系列。诚实比较Idefics与Idefics2与Idefics3——许可证细节、真实VRAM需求,以及今天该用哪个版本。",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-19",
     "url": "/zh/power-local-llm/idefics-review",
     "cluster": "power-local-llm"
   },
@@ -34960,7 +34960,7 @@
     "title": "Análisis de Idefics: los modelos de visión-lenguaje abiertos de HuggingFace, evaluados con honestidad",
     "excerpt": "Análisis de Idefics 2026: la familia de modelos de visión-lenguaje abiertos de HuggingFace. Idefics vs Idefics2 vs Idefics3 comparados con honestidad — matices de licencia, requisitos reales de VRAM y qué versión usar hoy.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-19",
     "url": "/es/power-local-llm/idefics-review",
     "cluster": "power-local-llm"
   },
@@ -34969,7 +34969,7 @@
     "title": "Análise do Idefics: os modelos de visão-linguagem abertos da HuggingFace, avaliados com honestidade",
     "excerpt": "Análise do Idefics 2026: a família de modelos de visão-linguagem abertos da HuggingFace. Idefics vs Idefics2 vs Idefics3 comparados com honestidade — nuances de licença, requisitos reais de VRAM e qual versão usar hoje.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-19",
     "url": "/pt/power-local-llm/idefics-review",
     "cluster": "power-local-llm"
   },
@@ -34978,7 +34978,7 @@
     "title": "مراجعة Idefics: نماذج الرؤية-اللغة المفتوحة من HuggingFace، بتقييم صريح",
     "excerpt": "مراجعة Idefics 2026: عائلة نماذج الرؤية-اللغة المفتوحة من HuggingFace. مقارنة صريحة بين Idefics وIdefics2 وIdefics3 — فروق الترخيص الدقيقة، متطلبات VRAM الفعلية، والإصدار الذي يُستخدم اليوم.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-19",
     "url": "/ar/power-local-llm/idefics-review",
     "cluster": "power-local-llm"
   },
@@ -34987,7 +34987,7 @@
     "title": "Idefics 리뷰: HuggingFace의 오픈 비전-언어 모델, 솔직하게 평가하다",
     "excerpt": "Idefics 리뷰 2026: HuggingFace의 오픈 비전-언어 모델 계열. Idefics vs Idefics2 vs Idefics3를 솔직하게 비교 — 라이선스 세부 사항, 실제 VRAM 요구 사항, 오늘 사용해야 할 버전.",
     "publishDate": "2026-09-07",
-    "dateModified": "2026-09-07",
+    "dateModified": "2026-10-19",
     "url": "/ko/power-local-llm/idefics-review",
     "cluster": "power-local-llm"
   },
@@ -50627,81 +50627,81 @@
   {
     "lang": "en",
     "title": "Best LLM Right Now?",
-    "excerpt": "Cloud coding: Claude Opus 5 (leads Frontier-Bench v0.1). General: GPT-5.6 Sol. Multimodal: Gemini 3.1 Pro (77.1% ARC-AGI-2). Local: qwen3.5:9b.",
+    "excerpt": "Cloud coding: Claude Opus 5.5. Top tier: GPT-6 Astra; balanced: GPT-6.1 Sol. Google: Gemini 4 Argon. Local: qwen3.5:9b.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/prompt-bites/best-llm-right-now",
     "cluster": "prompt-bites"
   },
   {
     "lang": "de",
     "title": "Welches LLM ist aktuell das beste?",
-    "excerpt": "Cloud-Coding: Claude Opus 5 (führt Frontier-Bench v0.1). Allgemein: GPT-5.6 Sol. Multimodal: Gemini 3.1 Pro (77,1% ARC-AGI-2). Lokal: qwen3.5:9b.",
+    "excerpt": "Cloud-Coding: Claude Opus 5.5. Spitzenklasse: GPT-6 Astra; ausgewogen: GPT-6.1 Sol. Google: Gemini 4 Argon. Lokal: qwen3.5:9b.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/de/prompt-bites/best-llm-right-now",
     "cluster": "prompt-bites"
   },
   {
     "lang": "fr",
     "title": "Quel est le meilleur LLM en ce moment ?",
-    "excerpt": "Code cloud : Claude Opus 5 (en tête de Frontier-Bench v0.1). Général : GPT-5.6 Sol. Multimodal : Gemini 3.1 Pro (77,1% ARC-AGI-2). Local : qwen3.5:9b.",
+    "excerpt": "Code cloud : Claude Opus 5.5. Haut de gamme : GPT-6 Astra ; équilibré : GPT-6.1 Sol. Google : Gemini 4 Argon. Local : qwen3.5:9b.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/fr/prompt-bites/best-llm-right-now",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ja",
     "title": "現在最良のLLMは何ですか？",
-    "excerpt": "クラウドのコーディングはClaude Opus 5（Frontier-Bench v0.1首位）。汎用はGPT-5.6 Sol。マルチモーダルはGemini 3.1 Pro（ARC-AGI-2で77.1%）。ローカルはqwen3.5:9b。",
+    "excerpt": "クラウドのコーディング：Claude Opus 5.5。最上位：GPT-6 Astra、バランス型：GPT-6.1 Sol。Google：Gemini 4 Argon。ローカル：qwen3.5:9b。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/ja/prompt-bites/best-llm-right-now",
     "cluster": "prompt-bites"
   },
   {
     "lang": "zh",
     "title": "当前最好的 LLM 是什么？",
-    "excerpt": "云端编程：Claude Opus 5（领先 Frontier-Bench v0.1）。通用：GPT-5.6 Sol。多模态：Gemini 3.1 Pro（ARC-AGI-2 达 77.1%）。本地：qwen3.5:9b。",
+    "excerpt": "云端编程：Claude Opus 5.5。最高档：GPT-6 Astra；均衡：GPT-6.1 Sol。Google：Gemini 4 Argon。本地：qwen3.5:9b。",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/zh/prompt-bites/best-llm-right-now",
     "cluster": "prompt-bites"
   },
   {
     "lang": "es",
     "title": "¿Cuál es el mejor LLM ahora mismo?",
-    "excerpt": "Código en la nube: Claude Opus 5 (lidera Frontier-Bench v0.1). General: GPT-5.6 Sol. Multimodal: Gemini 3.1 Pro (77,1% ARC-AGI-2). Local: qwen3.5:9b.",
+    "excerpt": "Código en la nube: Claude Opus 5.5. Gama alta: GPT-6 Astra; equilibrado: GPT-6.1 Sol. Google: Gemini 4 Argon. Local: qwen3.5:9b.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/es/prompt-bites/best-llm-right-now",
     "cluster": "prompt-bites"
   },
   {
     "lang": "pt",
     "title": "Qual é o melhor LLM agora?",
-    "excerpt": "Código na nuvem: Claude Opus 5 (lidera o Frontier-Bench v0.1). Geral: GPT-5.6 Sol. Multimodal: Gemini 3.1 Pro (77,1% no ARC-AGI-2). Local: qwen3.5:9b.",
+    "excerpt": "Código na nuvem: Claude Opus 5.5. Topo de linha: GPT-6 Astra; equilibrado: GPT-6.1 Sol. Google: Gemini 4 Argon. Local: qwen3.5:9b.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/pt/prompt-bites/best-llm-right-now",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ar",
     "title": "ما أفضل نموذج لغوي كبير الآن؟",
-    "excerpt": "البرمجة السحابية: Claude Opus 5 (يتصدر Frontier-Bench v0.1). العام: GPT-5.6 Sol. متعدد الوسائط: Gemini 3.1 Pro (77.1% في ARC-AGI-2). محليًا: qwen3.5:9b. جرى.",
+    "excerpt": "البرمجة السحابية: Claude Opus 5.5. الفئة العليا: GPT-6 Astra؛ المتوازن: GPT-6.1 Sol. Google: Gemini 4 Argon. محليًا: qwen3.5:9b.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/ar/prompt-bites/best-llm-right-now",
     "cluster": "prompt-bites"
   },
   {
     "lang": "ko",
     "title": "지금 가장 좋은 LLM은 무엇입니까?",
-    "excerpt": "코딩: Claude Opus 5 (Frontier-Bench v0.1 선두). 일반: GPT-5.6 Sol. 멀티모달: Gemini 3.1 Pro (ARC-AGI-2 77.1%). 로컬: qwen3.5:9b.",
+    "excerpt": "클라우드 코딩: Claude Opus 5.5. 최상위: GPT-6 Astra, 균형형: GPT-6.1 Sol. Google: Gemini 4 Argon. 로컬: qwen3.5:9b.",
     "publishDate": "2026-05-18",
-    "dateModified": "2026-08-28",
+    "dateModified": "2026-10-19",
     "url": "/ko/prompt-bites/best-llm-right-now",
     "cluster": "prompt-bites"
   },
@@ -53545,7 +53545,7 @@
     "title": "AI Model Knowledge Cutoff Dates 2026: Complete Cheat Sheet",
     "excerpt": "Verified knowledge cutoff dates for Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma, and Phi. Which models search the live web — and which ones are frozen in time.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/prompt-bites/ai-model-knowledge-cutoff-dates",
     "cluster": "prompt-bites"
   },
@@ -53554,7 +53554,7 @@
     "title": "KI-Modell Wissens-Cutoff-Daten 2026: Vollständige Übersicht",
     "excerpt": "Verifizierte Wissens-Cutoff-Daten für Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma und Phi. Welche Modelle live suchen — und welche eingefroren sind.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/de/prompt-bites/ai-model-knowledge-cutoff-dates",
     "cluster": "prompt-bites"
   },
@@ -53563,7 +53563,7 @@
     "title": "Dates de Coupure des Modèles IA 2026 : Référence Complète",
     "excerpt": "Dates de coupure vérifiées pour Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma et Phi. Quels modèles utilisent la recherche live — et lesquels sont figés dans le temps.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/fr/prompt-bites/ai-model-knowledge-cutoff-dates",
     "cluster": "prompt-bites"
   },
@@ -53572,7 +53572,7 @@
     "title": "AIモデルの知識カットオフ日2026：完全チートシート",
     "excerpt": "Claude、ChatGPT、Gemini、Grok、Llama、Qwen、Gemma、Phiの検証済み知識カットオフ日。どのモデルがライブ検索を使用し、どのモデルが凍結されているかを解説。",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/ja/prompt-bites/ai-model-knowledge-cutoff-dates",
     "cluster": "prompt-bites"
   },
@@ -53581,7 +53581,7 @@
     "title": "AI模型知识截止日期2026：完整参考表",
     "excerpt": "Claude、ChatGPT、Gemini、Grok、Llama、Qwen、Gemma和Phi的已验证知识截止日期。哪些模型使用实时搜索，哪些模型知识被冻结。",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/zh/prompt-bites/ai-model-knowledge-cutoff-dates",
     "cluster": "prompt-bites"
   },
@@ -53590,7 +53590,7 @@
     "title": "Fechas de Corte de Conocimiento de los Modelos de IA 2026: Hoja de Referencia Completa",
     "excerpt": "Fechas de corte de conocimiento verificadas para Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma y Phi. Descubre qué modelos usan búsqueda web en vivo y cuáles quedaron congelados en el tiempo.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/es/prompt-bites/ai-model-knowledge-cutoff-dates",
     "cluster": "prompt-bites"
   },
@@ -53599,7 +53599,7 @@
     "title": "Datas de corte de conhecimento dos modelos de IA 2026: guia de referência completo",
     "excerpt": "Datas de corte verificadas para Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma e Phi. Descubra quais modelos usam busca web ao vivo e quais estão congelados em um ponto no tempo.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/pt/prompt-bites/ai-model-knowledge-cutoff-dates",
     "cluster": "prompt-bites"
   },
@@ -53608,7 +53608,7 @@
     "title": "تواريخ انقطاع معرفة نماذج الذكاء الاصطناعي ⁨2026⁩: دليل مرجعي شامل",
     "excerpt": "تواريخ انقطاع موثّقة لـ ⁨Claude⁩ و⁨ChatGPT⁩ و⁨Gemini⁩ و⁨Llama⁩ و⁨Qwen⁩. اكتشف أي النماذج تستخدم البحث المباشر وأيها مجمّدة عند نقطة زمنية محددة.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/ar/prompt-bites/ai-model-knowledge-cutoff-dates",
     "cluster": "prompt-bites"
   },
@@ -53617,7 +53617,7 @@
     "title": "AI 모델 지식 컷오프 날짜 2026: 완전한 치트 시트",
     "excerpt": "Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma, Phi의 검증된 지식 컷오프 날짜. 어떤 모델이 실시간 웹 검색을 사용하고 어떤 모델이 과거 시점에 고정되어 있는지 확인하세요.",
     "publishDate": "2026-06-12",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-10-19",
     "url": "/ko/prompt-bites/ai-model-knowledge-cutoff-dates",
     "cluster": "prompt-bites"
   },
@@ -53626,7 +53626,7 @@
     "title": "DeepSeek-R1 Distill VRAM Cheatsheet (2026)",
     "excerpt": "DeepSeek-R1 14B needs ~9.5 GB VRAM at Q4_K_M and fits a 16 GB card. Every distill (1.5B–70B) by quant: Q8_0, FP16, file size and minimum GPU.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -53635,7 +53635,7 @@
     "title": "DeepSeek-R1 Distill VRAM-Spickzettel (2026)",
     "excerpt": "DeepSeek-R1 14B braucht ~9.5 GB VRAM bei Q4_K_M und passt auf eine 16-GB-Karte. Jeder Distill (1.5B–70B) je Quant: Q8_0, FP16, Dateigröße, Mindest-GPU.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -53644,7 +53644,7 @@
     "title": "Aide-mémoire VRAM DeepSeek-R1 Distill (2026)",
     "excerpt": "DeepSeek-R1 14B demande ~9.5 GB de VRAM en Q4_K_M et tient sur une carte 16 GB. Chaque distillation (1.5B–70B) par quant : Q8_0, FP16, fichier, GPU minimum.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -53653,7 +53653,7 @@
     "title": "DeepSeek-R1 Distill VRAM 早見表（2026年版）",
     "excerpt": "DeepSeek-R1 14BはQ4_K_Mで約9.5 GBのVRAMを使い、16 GBカードに収まります。全Distill（1.5B〜70B）の量子化別VRAM・ファイルサイズ・最小GPUを掲載。",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/ja/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -53662,7 +53662,7 @@
     "title": "DeepSeek-R1 Distill 显存速查表（2026）",
     "excerpt": "DeepSeek-R1 14B 在 Q4_K_M 下约需 9.5 GB 显存，可装入 16 GB 显卡。按量化等级列出全部 distill（1.5B–70B）的显存、文件大小和最低 GPU。",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/zh/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -53671,7 +53671,7 @@
     "title": "Tabla de VRAM de DeepSeek-R1 Distill (2026)",
     "excerpt": "DeepSeek-R1 14B necesita ~9.5 GB de VRAM en Q4_K_M y cabe en una tarjeta de 16 GB. Cada distill (1.5B–70B) por cuantización: Q8_0, FP16, archivo y GPU mínima.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -53680,7 +53680,7 @@
     "title": "Tabela de VRAM do DeepSeek-R1 Distill (2026)",
     "excerpt": "DeepSeek-R1 14B precisa de ~9.5 GB de VRAM no Q4_K_M e cabe em uma placa de 16 GB. Cada distill (1.5B–70B) por quant: Q8_0, FP16, arquivo e GPU mínima.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -53689,7 +53689,7 @@
     "title": "جدول ⁨VRAM⁩ لنماذج ⁨DeepSeek-R1 Distill⁩ (⁨2026⁩)",
     "excerpt": "يحتاج ⁨DeepSeek-R1 14B⁩ إلى نحو ⁨9.5 GB⁩ من ⁨VRAM⁩ عند ⁨Q4_K_M⁩ ويتسع في بطاقة ⁨16 GB⁩. كل نماذج ⁨distill⁩ (من ⁨1.5B⁩ إلى ⁨70B⁩) حسب التكميم: ⁨VRAM⁩ وحجم الملف وأدنى ⁨GPU⁩.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/ar/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -53698,7 +53698,7 @@
     "title": "DeepSeek-R1 Distill VRAM 치트시트 (2026)",
     "excerpt": "DeepSeek-R1 14B는 Q4_K_M에서 약 9.5 GB VRAM이 필요해 16 GB 카드에 들어갑니다. 모든 distill(1.5B–70B)의 양자화별 VRAM, 파일 크기, 최소 GPU를 정리했습니다.",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet",
     "cluster": "prompt-bites"
   },
@@ -53707,7 +53707,7 @@
     "title": "Best DeepSeek Distill for Your GPU (2026)",
     "excerpt": "Your GPU → the exact DeepSeek-R1 distill to run + the Ollama command. RTX 3060 to dual-GPU, matched in one table. R1 reasoning family (not V3).",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/prompt-bites/best-deepseek-distill-for-your-gpu",
     "cluster": "prompt-bites"
   },
@@ -53716,7 +53716,7 @@
     "title": "Beste DeepSeek-Distill für Ihre GPU (2026)",
     "excerpt": "Ihre GPU → die passende DeepSeek-R1-Distill plus den Ollama-Befehl. Von RTX 3060 bis Dual-GPU, in einer Tabelle. R1-Reasoning-Familie (nicht V3).",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/de/prompt-bites/best-deepseek-distill-for-your-gpu",
     "cluster": "prompt-bites"
   },
@@ -53725,7 +53725,7 @@
     "title": "Meilleure distillation DeepSeek pour votre GPU (2026)",
     "excerpt": "Votre GPU → la distillation DeepSeek-R1 à exécuter et la commande Ollama. De la RTX 3060 au double GPU, dans un tableau. Famille R1 (pas V3).",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/fr/prompt-bites/best-deepseek-distill-for-your-gpu",
     "cluster": "prompt-bites"
   },
@@ -53734,7 +53734,7 @@
     "title": "DeepSeek-R1 Distill GPU別おすすめ早見表（2026）",
     "excerpt": "お使いのGPU → 実行すべきDeepSeek-R1 distillとOllamaコマンド。RTX 3060からデュアルGPUまで1つの表に。R1推論ファミリー（V3ではありません）。",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/ja/prompt-bites/best-deepseek-distill-for-your-gpu",
     "cluster": "prompt-bites"
   },
@@ -53743,7 +53743,7 @@
     "title": "为你的 GPU 选择最佳 DeepSeek 蒸馏模型（2026）",
     "excerpt": "你的 GPU → 应运行的 DeepSeek-R1 蒸馏模型加 Ollama 命令。从 RTX 3060 到双 GPU，一张表对应。R1 推理家族（非 V3）。",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/zh/prompt-bites/best-deepseek-distill-for-your-gpu",
     "cluster": "prompt-bites"
   },
@@ -53752,7 +53752,7 @@
     "title": "Mejor destilación DeepSeek para tu GPU (2026)",
     "excerpt": "Tu GPU → la destilación DeepSeek-R1 exacta a ejecutar más el comando Ollama. De la RTX 3060 a doble GPU, en una tabla. Familia R1 (no V3).",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/es/prompt-bites/best-deepseek-distill-for-your-gpu",
     "cluster": "prompt-bites"
   },
@@ -53761,7 +53761,7 @@
     "title": "Melhor destilação DeepSeek para sua GPU (2026)",
     "excerpt": "Sua GPU → a destilação DeepSeek-R1 exata para rodar mais o comando Ollama. Da RTX 3060 ao GPU duplo, em uma tabela. Família R1 (não V3).",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/pt/prompt-bites/best-deepseek-distill-for-your-gpu",
     "cluster": "prompt-bites"
   },
@@ -53770,7 +53770,7 @@
     "title": "أفضل نموذج ⁨DeepSeek⁩ مقطّر لكرت الشاشة لديك (⁨2026⁩)",
     "excerpt": "كرت الشاشة لديك → نموذج ⁨DeepSeek-R1⁩ المقطّر المناسب وأمر ⁨Ollama⁩. من ⁨RTX 3060⁩ إلى كرتين، في جدول واحد. عائلة ⁨R1⁩ الاستدلالية (وليس ⁨V3⁩).",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/ar/prompt-bites/best-deepseek-distill-for-your-gpu",
     "cluster": "prompt-bites"
   },
@@ -53779,7 +53779,7 @@
     "title": "GPU별 최적 DeepSeek 디스틸 모델 (2026)",
     "excerpt": "내 GPU → 실행할 DeepSeek-R1 디스틸과 Ollama 명령어. RTX 3060부터 듀얼 GPU까지 한 표로. R1 추론 계열(V3 아님).",
     "publishDate": "2026-06-19",
-    "dateModified": "2026-10-17",
+    "dateModified": "2026-10-19",
     "url": "/ko/prompt-bites/best-deepseek-distill-for-your-gpu",
     "cluster": "prompt-bites"
   },
