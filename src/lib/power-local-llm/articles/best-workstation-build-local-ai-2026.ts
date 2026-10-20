@@ -70,6 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       editorsChoice: {
         title: "Editor's Choice: RTX 4090 Recommended Workstation",
+        highlight: true,
         content: 'Best overall local-AI workstation for 2026 — the balance point between VRAM, upgrade headroom, and price for the widest range of models.',
         items: [
           '24 GB VRAM — runs every model up to 32B Q4 fully on GPU',
@@ -486,6 +487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       editorsChoice: {
         title: 'Redaktionsempfehlung: RTX 4090 Empfohlene Workstation',
+        highlight: true,
         content: 'Die beste lokale KI-Workstation insgesamt für 2026 — der Balancepunkt zwischen VRAM, Aufrüstpotenzial und Preis für die breiteste Modellpalette.',
         items: [
           '24 GB VRAM — läuft jedes Modell bis 32B Q4 vollständig auf GPU',
@@ -843,6 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       editorsChoice: {
         title: 'Choix de la rédaction : Workstation Recommandée RTX 4090',
+        highlight: true,
         content: 'La meilleure workstation IA locale globale pour 2026 — le point d\'équilibre entre VRAM, marge d\'évolution et prix pour la plus large gamme de modèles.',
         items: [
           '24 Go VRAM — fait tourner tout modèle jusqu\'à 32B Q4 entièrement sur GPU',
@@ -1195,6 +1198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       editorsChoice: {
         title: '編集部のおすすめ：RTX 4090推奨ワークステーション',
+        highlight: true,
         content: '2026年の総合ベストなローカルAIワークステーション——最も幅広いモデルに対応するVRAM・拡張余地・価格のバランス点。',
         items: [
           '24GB VRAM——32B Q4までのモデルを完全にGPU上で実行',
@@ -1551,6 +1555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       editorsChoice: {
         title: '编辑推荐：RTX 4090推荐档工作站',
+        highlight: true,
         content: '2026年综合最佳本地AI工作站——在显存、升级空间和价格之间为最广泛的模型范围取得平衡。',
         items: [
           '24GB显存——32B Q4以内的模型均可完全在GPU上运行',
@@ -1916,6 +1921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       editorsChoice: {
         title: 'Elección del editor: Workstation Recomendada RTX 4090',
+        highlight: true,
         content: 'La mejor workstation de IA local en general para 2026 — el punto de equilibrio entre VRAM, margen de actualización y precio para la gama más amplia de modelos.',
         items: [
           '24 GB VRAM — ejecuta cualquier modelo hasta 32B Q4 completamente en GPU',
@@ -2289,6 +2295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       editorsChoice: {
         title: '편집부 추천: RTX 4090 추천형 워크스테이션',
+        highlight: true,
         content: '2026년 종합 최고의 로컬 AI 워크스테이션 — 가장 폭넓은 모델 범위에 대해 VRAM, 업그레이드 여지, 가격의 균형점.',
         items: [
           '24GB VRAM — 32B Q4까지 모든 모델을 GPU에서 완전히 실행',
@@ -2661,6 +2668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       editorsChoice: {
         title: 'Escolha do editor: Workstation Recomendada RTX 4090',
+        highlight: true,
         content: 'A melhor workstation de IA local no geral para 2026 — o ponto de equilíbrio entre VRAM, margem de upgrade e preço para a gama mais ampla de modelos.',
         items: [
           '24 GB VRAM — roda qualquer modelo até 32B Q4 totalmente na GPU',
@@ -3034,6 +3042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       editorsChoice: {
         title: 'اختيار المحرر: محطة العمل الموصى بها RTX 4090',
+        highlight: true,
         content: 'أفضل محطة عمل للذكاء الاصطناعي المحلي إجمالاً لعام 2026 — نقطة التوازن بين VRAM وهامش الترقية والسعر لأوسع نطاق من النماذج.',
         items: [
           '24 GB VRAM — تُشغّل أي نموذج حتى 32B Q4 بالكامل على GPU',

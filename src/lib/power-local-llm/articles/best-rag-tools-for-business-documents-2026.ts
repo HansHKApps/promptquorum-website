@@ -99,6 +99,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickVerdict: {
         id: 'quick-verdict',
         title: 'Quick Verdict',
+        highlight: true,
         content: 'One pick per buyer profile, checked August 26, 2026 against each project\'s own documentation and GitHub activity — not a hands-on lab comparison.',
         items: [
           '**Best overall: AnythingLLM.** Best choice for most businesses that want private document Q&A without building a RAG system from scratch.',
@@ -680,6 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickVerdict: {
         id: 'quick-verdict',
         title: 'Kurzfazit',
+        highlight: true,
         content: 'Eine Empfehlung pro Unternehmensprofil, Stand 26. August 2026, geprüft anhand der eigenen Dokumentation und GitHub-Aktivität jedes Projekts — kein praktischer Labor-Vergleich.',
         items: [
           '**Insgesamt am besten: AnythingLLM.** Beste Wahl für die meisten Unternehmen, die private Dokumenten-Q&A wollen, ohne ein RAG-System von Grund auf selbst zu bauen.',
@@ -1269,6 +1271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickVerdict: {
         id: 'quick-verdict',
         title: 'Verdict rapide',
+        highlight: true,
         content: 'Un choix par profil d\'acheteur, vérifié le 26 août 2026 dans la documentation et l\'activité GitHub de chaque projet — pas un comparatif pratique en laboratoire.',
         items: [
           '**Meilleur choix global : AnythingLLM.** Idéal pour la plupart des entreprises qui veulent un Q&A documentaire privé sans construire un système RAG depuis zéro.',
@@ -1850,6 +1853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickVerdict: {
         id: 'quick-verdict',
         title: 'クイック結論',
+        highlight: true,
         content: '購入プロファイルごとの推奨は1つずつ。2026年8月26日時点で各プロジェクト自身のドキュメントとGitHubの活動状況を確認したものであり、実機によるラボ比較ではありません。',
         items: [
           '**総合ベスト：AnythingLLM。** 独自にRAGシステムを構築せずにプライベートな文書Q&Aを利用したいほとんどの企業に最適です。',
@@ -2418,6 +2422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickVerdict: {
         id: 'quick-verdict',
         title: '快速结论',
+        highlight: true,
         content: '每种买家画像对应一个推荐，核对于2026年8月26日，依据各项目自身文档与GitHub活跃度——并非动手实验室对比测试。',
         items: [
           '**综合最佳：AnythingLLM。** 大多数希望无需从零搭建RAG系统即可实现私有文档问答的企业首选。',
@@ -3003,6 +3008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickVerdict: {
         id: 'quick-verdict',
         title: 'Veredicto rápido',
+        highlight: true,
         content: 'Una recomendación por perfil de comprador, verificada el 26 de agosto de 2026 con la documentación propia de cada proyecto y su actividad en GitHub — no es una comparativa práctica de laboratorio.',
         items: [
           '**Mejor en general: AnythingLLM.** La mejor opción para la mayoría de las empresas que quieren consultar documentos privados sin construir un sistema RAG desde cero.',
@@ -3584,6 +3590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickVerdict: {
         id: 'quick-verdict',
         title: 'Veredito Rápido',
+        highlight: true,
         content: 'Uma escolha por perfil de comprador, verificada em 26 de agosto de 2026 com base na documentação e na atividade no GitHub de cada projeto — não uma comparação prática em laboratório.',
         items: [
           '**Melhor no geral: AnythingLLM.** A melhor escolha para a maioria das empresas que querem consultar documentos de forma privada sem construir um sistema RAG do zero.',
@@ -4169,6 +4176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickVerdict: {
         id: 'quick-verdict',
         title: 'الحكم السريع',
+        highlight: true,
         content: 'اختيار واحد لكل فئة مشترين، تم التحقق منه في 26 أغسطس 2026 مقابل وثائق كل مشروع الخاصة ونشاط GitHub — وليس مقارنة عملية في المختبر.',
         items: [
           '**الأفضل عموماً: AnythingLLM.** أفضل خيار لمعظم الشركات التي تريد الإجابة الخاصة على أسئلة الوثائق دون بناء نظام RAG من الصفر.',
@@ -4750,6 +4758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       quickVerdict: {
         id: 'quick-verdict',
         title: '빠른 결론',
+        highlight: true,
         content: '2026년 8월 26일 기준으로 각 프로젝트 자체 문서와 GitHub 활동을 참고하여 확인한, 구매자 프로필별 추천입니다 — 직접 실습 비교가 아닙니다.',
         items: [
           '**종합 최고: AnythingLLM.** 처음부터 RAG 시스템을 직접 구축하지 않고 프라이빗 문서 Q&A를 원하는 대부분의 기업에 가장 적합한 선택입니다.',

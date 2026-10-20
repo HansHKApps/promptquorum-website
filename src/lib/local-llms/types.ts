@@ -82,6 +82,7 @@ export interface LLMSection {
   affiliateLinks?: AffiliateLinkEntry[]
   rankedItems?: RankedItem[]
   sponsoredSlot?: boolean
+  highlight?: boolean
   [key: string]: unknown
 }
 

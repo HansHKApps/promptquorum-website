@@ -148,6 +148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pickCompact: {
         id: 'pick-compact',
         title: 'Best First Buy: UKSOL Pro Compact 460 W Ground Mount Kit',
+        highlight: true,
         content: [
           '**Buy this if you cannot drill into the building.** It is a single 460 W panel on a foldable ground frame with a ballast tray and an 800 W micro-inverter, so it needs a floor to stand on rather than a fixing point — which sidesteps both the wooden-surface ban and most of the landlord-consent problem in one move.',
           'Three things make it the day-one pick rather than a guess: it was listed as Compliant on the ENA register on 18 August 2026, so its legal status is verifiable rather than a marketing claim; it is around £699 RRP at trade retailers, or £849 direct from UKSOL including VAT and two-man delivery; and it was in stock on 27 August rather than on pre-order.',
@@ -468,6 +469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pickCompact: {
         id: 'pick-compact',
         title: 'Mejor primera compra: UKSOL Pro Compact 460 W Ground Mount Kit',
+        highlight: true,
         content: [
           '**Cómpralo si no puedes taladrar el edificio.** Es un único panel de 460 W sobre un bastidor de suelo plegable con bandeja de lastre y un microinversor de 800 W, así que necesita un suelo donde apoyarse en lugar de un punto de fijación, lo que esquiva de una vez tanto la prohibición sobre superficies de madera como buena parte del problema del permiso del propietario.',
           'Tres cosas lo convierten en la elección del primer día y no en una apuesta: figuraba como Compliant en el registro ENA el 18 de agosto de 2026, así que su estatus legal es verificable y no una afirmación de marketing; cuesta unas £699 de PVP en distribuidores profesionales, o £849 directamente de UKSOL con IVA y entrega por dos operarios incluidos; y estaba en stock el 27 de agosto, no en reserva.',
@@ -789,6 +791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pickCompact: {
         id: 'pick-compact',
         title: 'Melhor primeira compra: UKSOL Pro Compact 460 W Ground Mount Kit',
+        highlight: true,
         content: [
           '**Compre este se você não pode furar o prédio.** É um único painel de 460 W sobre uma estrutura de chão dobrável com bandeja de lastro e um microinversor de 800 W, então precisa de um piso para apoiar em vez de um ponto de fixação, o que resolve de uma vez tanto a proibição sobre superfícies de madeira quanto boa parte do problema da autorização do proprietário.',
           'Três coisas fazem dele a escolha do primeiro dia e não um palpite: constava como Compliant no registro da ENA em 18 de agosto de 2026, então seu status legal é verificável e não uma alegação de marketing; custa cerca de £699 de preço sugerido em distribuidores profissionais, ou £849 direto da UKSOL com impostos e entrega por dois operadores incluídos; e estava em estoque em 27 de agosto, não em pré-venda.',
@@ -1110,6 +1113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pickCompact: {
         id: 'pick-compact',
         title: 'Meilleur premier achat : UKSOL Pro Compact 460 W Ground Mount Kit',
+        highlight: true,
         content: [
           '**Achetez-le si vous ne pouvez pas percer le bâtiment.** C\'est un unique panneau de 460 W sur un châssis au sol pliable avec bac de lestage et un micro-onduleur de 800 W : il lui faut donc un sol pour reposer plutôt qu\'un point de fixation, ce qui contourne d\'un coup l\'interdiction des surfaces en bois et l\'essentiel du problème de l\'accord du propriétaire.',
           'Trois éléments en font le choix du premier jour et non un pari : il figurait comme Compliant au registre ENA le 18 août 2026, son statut légal est donc vérifiable et non une allégation marketing ; il coûte environ 699 £ de prix conseillé chez les distributeurs professionnels, ou 849 £ en direct chez UKSOL, TVA et livraison à deux personnes comprises ; et il était en stock le 27 août, pas en précommande.',
@@ -1431,6 +1435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pickCompact: {
         id: 'pick-compact',
         title: 'Bester Erstkauf: UKSOL Pro Compact 460 W Ground Mount Kit',
+        highlight: true,
         content: [
           '**Kaufen Sie dieses Set, wenn Sie nicht ins Gebäude bohren können.** Es besteht aus einem einzelnen 460-W-Modul auf einem klappbaren Bodengestell mit Ballastwanne und einem 800-W-Mikrowechselrichter. Es braucht also eine Standfläche statt eines Befestigungspunkts – und umgeht damit in einem Zug sowohl das Holzverbot als auch den größten Teil des Problems mit der Vermieterzustimmung.',
           'Drei Punkte machen es zur Wahl des ersten Tages statt zu einem Ratespiel: Es stand am 18. August 2026 als Compliant im ENA-Register, sein Rechtsstatus ist also überprüfbar und keine Marketingaussage; es kostet rund 699 £ UVP im Fachhandel oder 849 £ direkt bei UKSOL inklusive Mehrwertsteuer und Zwei-Mann-Lieferung; und es war am 27. August lieferbar, nicht nur vorbestellbar.',
@@ -1752,6 +1757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pickCompact: {
         id: 'pick-compact',
         title: '最初の一台：UKSOL Pro Compact 460 W Ground Mount Kit',
+        highlight: true,
         content: [
           '**建物に穴を開けられないなら、これを選んでください。** 折りたたみ式の地上架台とバラストトレー、800 Wマイクロインバーターに460 Wパネル1枚という構成で、固定点ではなく置くための床面があればよい設計です。これにより木製面への設置禁止と、家主の同意という問題の大半を一度に回避できます。',
           '当てずっぽうではなく初日の推奨といえる理由は3つあります。2026年8月18日にENA登録簿でCompliantとされたため、法的地位がマーケティング上の主張ではなく検証可能であること。業販店での参考価格が約£699、UKSOL直販ならVATと2名配送込みで£849であること。そして予約ではなく8月27日時点で在庫があったことです。',
@@ -2073,6 +2079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pickCompact: {
         id: 'pick-compact',
         title: '首选入门：UKSOL Pro Compact 460 W Ground Mount Kit',
+        highlight: true,
         content: [
           '**如果你不能在建筑上打孔，就买这一款。** 它是一块460 W组件配可折叠落地支架、配重托盘和一台800 W微型逆变器，需要的是一块能放置的地面而不是固定点，一步就绕开了木质表面禁令和房东同意问题的大部分。',
           '让它成为首日之选而非碰运气的，有三点：它在2026年8月18日被列为ENA登记册上的Compliant，法律地位可以核实而非营销说辞；在专业渠道建议零售价约£699，从UKSOL直购则为£849，含增值税和两人配送；而且8月27日当天有现货，不是预售。',
@@ -2394,6 +2401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pickCompact: {
         id: 'pick-compact',
         title: '첫 구매 추천: UKSOL Pro Compact 460 W Ground Mount Kit',
+        highlight: true,
         content: [
           '**건물에 타공할 수 없다면 이 제품을 사십시오.** 접이식 지상 프레임과 밸러스트 트레이, 800 W 마이크로인버터에 460 W 패널 한 장으로 구성되어, 고정점이 아니라 놓을 바닥만 있으면 됩니다. 덕분에 목재 표면 금지와 집주인 동의 문제의 상당 부분을 한 번에 피할 수 있습니다.',
           '어림짐작이 아니라 첫날의 선택이라고 할 수 있는 이유는 세 가지입니다. 2026년 8월 18일 ENA 등록부에서 Compliant로 등재되어 법적 지위가 마케팅 문구가 아니라 검증 가능하다는 점, 전문 유통 권장가가 약 £699이고 UKSOL 직판은 부가세와 2인 배송 포함 £849라는 점, 그리고 예약 판매가 아니라 8월 27일에 실제 재고가 있었다는 점입니다.',
@@ -2715,6 +2723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       pickCompact: {
         id: 'pick-compact',
         title: 'أفضل شراء أول: طقم UKSOL Pro Compact 460 W Ground Mount',
+        highlight: true,
         content: [
           '**اشترِ هذا الطقم إن كنت لا تستطيع الحفر في المبنى.** فهو لوح واحد بقدرة 460 W على هيكل أرضي قابل للطي مع صينية ثِقل وعاكس صغير بقدرة 800 W، أي أنه يحتاج إلى أرضية يقف عليها بدلًا من نقطة تثبيت، وهو ما يتجاوز في خطوة واحدة حظر الأسطح الخشبية ومعظم مشكلة موافقة المالك.',
           'ثلاثة أمور تجعله خيار اليوم الأول لا مجرد تخمين: أنه أُدرج بحالة Compliant في سجل ENA يوم 18 أغسطس 2026، فوضعه القانوني قابل للتحقق وليس ادعاءً تسويقيًا؛ وأن سعره نحو £699 كسعر استرشادي لدى موزّعي القطاع، أو £849 مباشرةً من UKSOL شاملًا ضريبة القيمة المضافة والتوصيل بشخصين؛ وأنه كان متوفرًا في المخزون يوم 27 أغسطس لا بالحجز المسبق.',

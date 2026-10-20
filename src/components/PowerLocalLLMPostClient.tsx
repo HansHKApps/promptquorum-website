@@ -730,7 +730,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks, compareData, pag
 
   return (
     <div
-      className={section.sponsoredSlot ? 'mt-8 sponsored-slot rounded-xl border border-primary/30 bg-primary/5 p-5' : 'mt-8'}
+      className={(section.highlight || section.sponsoredSlot) ? 'mt-8 sponsored-slot rounded-xl border border-primary/30 bg-primary/5 p-5' : 'mt-8'}
       id={id}
     >
       {section.sponsoredSlot && (

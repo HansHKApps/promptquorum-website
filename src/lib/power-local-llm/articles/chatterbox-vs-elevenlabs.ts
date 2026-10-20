@@ -207,6 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'What You Pay For With ElevenLabs',
+        highlight: true,
         content: 'ElevenLabs removes several tasks that self-hosting Chatterbox leaves with you:',
         columns: ['Cloud Benefit', 'What It Changes in Practice'],
         rows: [
@@ -878,6 +879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'Wofür Sie bei ElevenLabs bezahlen',
+        highlight: true,
         content: 'ElevenLabs nimmt Ihnen mehrere Aufgaben ab, die beim Selbstbetrieb von Chatterbox bei Ihnen liegen:',
         columns: ['Cloud-Vorteil', 'Was sich in der Praxis ändert'],
         rows: [
@@ -1551,6 +1553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'Ce que vous payez avec ElevenLabs',
+        highlight: true,
         content: 'ElevenLabs vous décharge de plusieurs tâches que l\'auto-hébergement de Chatterbox vous laisse assumer :',
         columns: ['Avantage cloud', 'Ce que cela change en pratique'],
         rows: [
@@ -2224,6 +2227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'Por qué pagas con ElevenLabs',
+        highlight: true,
         content: 'ElevenLabs te libera de varias tareas que autoalojar Chatterbox te deja a ti:',
         columns: ['Ventaja en la nube', 'Qué cambia en la práctica'],
         rows: [
@@ -2897,6 +2901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'ElevenLabsで支払う対価は何か',
+        highlight: true,
         content: 'ElevenLabsは、Chatterboxをセルフホストする場合に自分で担うことになる複数の作業を肩代わりします:',
         columns: ['クラウドの利点', '実際に何が変わるか'],
         rows: [
@@ -3569,6 +3574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: '使用 ElevenLabs 你在为什么付费',
+        highlight: true,
         content: 'ElevenLabs 替你承担了自托管 Chatterbox 时需要自己处理的多项任务:',
         columns: ['云端优势', '实际影响'],
         rows: [
@@ -4241,6 +4247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'Pelo que você paga no ElevenLabs',
+        highlight: true,
         content: 'O ElevenLabs tira de você várias tarefas que auto-hospedar o Chatterbox deixaria sob sua responsabilidade:',
         columns: ['Vantagem na nuvem', 'O que muda na prática'],
         rows: [
@@ -4914,6 +4921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'مقابل ماذا تدفع مع ElevenLabs',
+        highlight: true,
         content: 'يُريحك ElevenLabs من عدة مهام يتركها لك استضافة Chatterbox ذاتياً:',
         columns: ['ميزة سحابية', 'ما الذي يتغيّر عملياً'],
         rows: [
@@ -5586,6 +5594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'ElevenLabs를 사용하며 지불하는 대가',
+        highlight: true,
         content: 'ElevenLabs는 Chatterbox를 자체 호스팅할 때 직접 처리해야 할 여러 작업을 대신 해결해 줍니다:',
         columns: ['클라우드의 장점', '실제로 달라지는 점'],
         rows: [

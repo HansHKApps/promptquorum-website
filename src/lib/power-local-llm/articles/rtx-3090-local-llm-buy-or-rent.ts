@@ -227,6 +227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyUsed: {
         id: 'buy-used',
         title: 'Buying Used: What to Check Before You Pay',
+        highlight: true,
         content: [
           '**If you buy, buy used — nobody sells the RTX 3090 new any more, and the used market is where the price advantage lives.** At $850–$1,050 it is the cheapest 24 GB card available, and it holds resale value well, which materially reduces the real cost of ownership.',
           'The honest caveat: these are five-year-old cards, many of them ex-mining or ex-gaming, sold without warranty by strangers. The failure modes are known and checkable, so the risk is manageable — but it is real, and it is the reason to buy from a seller with returns rather than the cheapest listing you can find.',
@@ -293,6 +294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudOptions: {
         id: 'cloud-options',
         title: 'Renting an RTX 3090: What It Costs and Where',
+        highlight: true,
         content: [
           '**Vast.ai is the cheapest way to rent an RTX 3090 at around $0.12 per hour, and RunPod is the more reliable one at $0.22 per hour on its Community tier.** That difference is the entire trade-off: Vast.ai is a marketplace of privately owned GPUs, so pricing is lower and host quality varies; RunPod runs its own capacity, so it costs more and behaves more predictably.',
           'For a first try, the cheap tier is genuinely fine — a failed instance on an experiment costs you nothing but the restart. For anything on a deadline, or any job longer than a few hours, the extra ten cents an hour buys you the thing you actually want, which is for the job to still be running when you come back.',
@@ -681,6 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyUsed: {
         id: 'buy-used',
         title: 'Gebraucht kaufen: Worauf Sie vor dem Kauf achten sollten',
+        highlight: true,
         content: [
           '**Wenn Sie kaufen, kaufen Sie gebraucht — die RTX 3090 wird nicht mehr neu verkauft, und der Preisvorteil liegt im Gebrauchtmarkt.** Bei 850–1.050 $ ist sie die günstigste verfügbare 24-GB-Karte, und sie hält ihren Wiederverkaufswert gut, was die tatsächlichen Besitzkosten spürbar senkt.',
           'Der ehrliche Vorbehalt: Das sind fünf Jahre alte Karten, viele davon ex-Mining oder ex-Gaming, ohne Garantie von Privatverkäufern verkauft. Die Fehlerbilder sind bekannt und prüfbar, das Risiko also beherrschbar — aber real, und genau deshalb sollte man bei einem Verkäufer mit Rückgaberecht kaufen statt beim billigsten Angebot.',
@@ -747,6 +750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudOptions: {
         id: 'cloud-options',
         title: 'Eine RTX 3090 mieten: Was es kostet und wo',
+        highlight: true,
         content: [
           '**Vast.ai ist der günstigste Weg, eine RTX 3090 zu mieten, für rund 0,12 $ pro Stunde, und RunPod ist die zuverlässigere Option für 0,22 $ pro Stunde im Community-Tarif.** Dieser Unterschied ist der gesamte Trade-off: Vast.ai ist ein Marktplatz privat besessener GPUs, daher niedrigere Preise bei variierender Host-Qualität; RunPod betreibt eigene Kapazität, kostet daher mehr und verhält sich vorhersehbarer.',
           'Für einen ersten Versuch ist der günstige Tarif wirklich in Ordnung — eine fehlgeschlagene Instanz bei einem Experiment kostet nur den Neustart. Bei allem mit Deadline oder jedem Job über wenige Stunden hinaus kaufen die zusätzlichen zehn Cent pro Stunde genau das, was Sie wollen: dass der Job noch läuft, wenn Sie zurückkommen.',
@@ -1135,6 +1139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyUsed: {
         id: 'buy-used',
         title: 'Acheter d\'occasion : ce qu\'il faut vérifier avant de payer',
+        highlight: true,
         content: [
           '**Si vous achetez, achetez d\'occasion — personne ne vend plus la RTX 3090 neuve, et l\'avantage de prix se trouve sur le marché de l\'occasion.** À 850–1 050 $, c\'est la carte 24 Go la moins chère disponible, et elle conserve bien sa valeur de revente, ce qui réduit sensiblement le coût réel de possession.',
           'La réserve honnête : ce sont des cartes vieilles de cinq ans, souvent issues du minage ou du gaming, vendues sans garantie par des particuliers. Les modes de défaillance sont connus et vérifiables, le risque est donc gérable — mais il est réel, et c\'est pourquoi il vaut mieux acheter chez un vendeur qui accepte les retours plutôt que sur l\'annonce la moins chère trouvée.',
@@ -1201,6 +1206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudOptions: {
         id: 'cloud-options',
         title: 'Louer une RTX 3090 : ce que ça coûte et où',
+        highlight: true,
         content: [
           '**Vast.ai est le moyen le moins cher de louer une RTX 3090, autour de 0,12 $ de l\'heure, et RunPod est l\'option la plus fiable à 0,22 $ de l\'heure sur son offre Community.** Cette différence résume tout l\'arbitrage : Vast.ai est un marché de GPU appartenant à des particuliers, donc des prix plus bas et une qualité d\'hôte variable ; RunPod gère sa propre capacité, donc coûte plus cher mais se comporte plus prévisiblement.',
           'Pour un premier essai, l\'offre bon marché convient parfaitement — une instance qui échoue sur une expérimentation ne coûte que le redémarrage. Pour tout ce qui a une échéance, ou tout travail dépassant quelques heures, les dix centimes supplémentaires par heure achètent exactement ce qu\'on veut : que le travail tourne encore à votre retour.',
@@ -1589,6 +1595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyUsed: {
         id: 'buy-used',
         title: 'Comprar usada: qué revisar antes de pagar',
+        highlight: true,
         content: [
           '**Si compras, compra usada — ya nadie vende la RTX 3090 nueva, y la ventaja de precio está en el mercado de segunda mano.** A 850–1.050 $ es la tarjeta de 24 GB más barata disponible, y mantiene bien su valor de reventa, lo que reduce de forma notable el coste real de propiedad.',
           'La advertencia honesta: son tarjetas de cinco años, muchas ex-minería o ex-gaming, vendidas sin garantía por particulares. Los modos de fallo son conocidos y verificables, así que el riesgo es manejable — pero es real, y por eso conviene comprar a un vendedor con devoluciones en lugar del anuncio más barato que encuentres.',
@@ -1655,6 +1662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudOptions: {
         id: 'cloud-options',
         title: 'Alquilar una RTX 3090: qué cuesta y dónde',
+        highlight: true,
         content: [
           '**Vast.ai es la forma más barata de alquilar una RTX 3090, a unos 0,12 $ por hora, y RunPod es la opción más fiable a 0,22 $ por hora en su nivel Community.** Esa diferencia resume todo el compromiso: Vast.ai es un marketplace de GPU de propiedad privada, así que los precios son más bajos y la calidad del host varía; RunPod gestiona su propia capacidad, así que cuesta más pero se comporta de forma más predecible.',
           'Para una primera prueba, el nivel barato está bien — una instancia fallida en un experimento solo cuesta el reinicio. Para cualquier cosa con plazo, o cualquier trabajo de más de unas pocas horas, los diez céntimos extra por hora compran justo lo que quieres: que el trabajo siga corriendo cuando vuelvas.',
@@ -2043,6 +2051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyUsed: {
         id: 'buy-used',
         title: 'Comprando usada: o que verificar antes de pagar',
+        highlight: true,
         content: [
           '**Se você comprar, compre usada — ninguém mais vende a RTX 3090 nova, e a vantagem de preço está no mercado usado.** A US$ 850–1.050, é a placa de 24 GB mais barata disponível, e mantém bem o valor de revenda, o que reduz de forma real o custo total de propriedade.',
           'A ressalva honesta: são placas de cinco anos, muitas ex-mineração ou ex-gaming, vendidas sem garantia por particulares. Os modos de falha são conhecidos e verificáveis, então o risco é administrável — mas é real, e por isso vale comprar de um vendedor com política de devolução em vez do anúncio mais barato que você encontrar.',
@@ -2109,6 +2118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudOptions: {
         id: 'cloud-options',
         title: 'Alugando uma RTX 3090: quanto custa e onde',
+        highlight: true,
         content: [
           '**A Vast.ai é a forma mais barata de alugar uma RTX 3090, a cerca de US$ 0,12 por hora, e a RunPod é a opção mais confiável a US$ 0,22 por hora no plano Community.** Essa diferença resume todo o trade-off: a Vast.ai é um marketplace de GPUs de propriedade privada, então os preços são menores e a qualidade do host varia; a RunPod opera sua própria capacidade, então custa mais, mas se comporta de forma mais previsível.',
           'Para uma primeira tentativa, o plano barato serve bem — uma instância que falha num experimento custa apenas o reinício. Para qualquer coisa com prazo, ou qualquer trabalho de mais de poucas horas, os dez centavos extras por hora compram exatamente o que você quer: que o trabalho ainda esteja rodando quando você voltar.',
@@ -2496,6 +2506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyUsed: {
         id: 'buy-used',
         title: 'الشراء المستعمل: ما يجب التحقق منه قبل الدفع',
+        highlight: true,
         content: [
           '**إذا اشتريت، فاشترِ مستعملة — لم يعد أحد يبيع RTX 3090 جديدة، وميزة السعر موجودة في السوق المستعملة.** بسعر 850–1,050 $ هي أرخص بطاقة متوفرة بسعة 24 GB، وتحافظ على قيمتها عند إعادة البيع بشكل جيد، ما يقلل فعليًا تكلفة الامتلاك الحقيقية.',
           'التحفظ الصادق: هذه بطاقات عمرها خمس سنوات، كثير منها سبق استخدامها في التعدين أو الألعاب، وتُباع دون ضمان من أفراد. أنماط الأعطال معروفة وقابلة للفحص، لذا فإن المخاطرة قابلة للإدارة — لكنها حقيقية، ولهذا يجدر الشراء من بائع يقبل الإرجاع بدلًا من أرخص إعلان تجده.',
@@ -2562,6 +2573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudOptions: {
         id: 'cloud-options',
         title: 'استئجار RTX 3090: التكلفة والمكان',
+        highlight: true,
         content: [
           '**Vast.ai هي أرخص طريقة لاستئجار RTX 3090 بنحو 0.12 $ في الساعة، وRunPod هي الخيار الأكثر موثوقية بـ 0.22 $ في الساعة في مستواها Community.** يلخّص هذا الفرق المفاضلة بأكملها: Vast.ai سوق لـ GPU مملوكة بشكل خاص، لذا الأسعار أقل وجودة المضيف متفاوتة؛ أما RunPod فتدير سعتها الخاصة، لذا تكلف أكثر لكنها تتصرف بشكل أكثر قابلية للتنبؤ.',
           'للمحاولة الأولى، المستوى الرخيص مناسب فعلًا — نسخة فاشلة في تجربة ما تكلف فقط إعادة التشغيل. لأي عمل له موعد نهائي، أو أي مهمة تتجاوز بضع ساعات، تشتري العشرة سنتات الإضافية في الساعة بالضبط ما تريده: أن تظل المهمة تعمل عندما تعود.',
@@ -2949,6 +2961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyUsed: {
         id: 'buy-used',
         title: '中古購入：支払う前に確認すべきこと',
+        highlight: true,
         content: [
           '**購入するなら中古を選んでください。RTX 3090はもう新品では販売されておらず、価格の優位性は中古市場にあります。** 850〜1,050ドルという価格は入手可能な24GBカードの中で最も安く、転売価値もよく保たれるため、実質的な所有コストを大きく下げます。',
           '正直な留意点として、これらは5年前のカードであり、多くはマイニングやゲーミングの中古であり、個人から保証なしで販売されます。故障モードは既知で確認可能なのでリスクは管理できますが、実在するリスクです。だからこそ、最安値の出品より返品を受け付ける販売者から買う方がよいのです。',
@@ -3015,6 +3028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudOptions: {
         id: 'cloud-options',
         title: 'RTX 3090をレンタルする：費用とどこで',
+        highlight: true,
         content: [
           '**Vast.aiは約1時間0.12ドルでRTX 3090をレンタルできる最も安い方法で、RunPodはCommunity階層で1時間0.22ドルとより信頼性の高い選択肢です。** この差がトレードオフのすべてを表しています。Vast.aiは個人所有GPUのマーケットプレイスなので価格は安くホストの品質にばらつきがあり、RunPodは自前のキャパシティを運用するため価格は高いもののより予測しやすく動作します。',
           '最初の試みなら安い階層で十分です。実験でインスタンスが失敗しても再起動のコストしかかかりません。締め切りがある作業や数時間を超える作業では、追加の1時間10セントで「戻ってきたときも作業がまだ動いている」という本当に欲しいものが手に入ります。',
@@ -3402,6 +3416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyUsed: {
         id: 'buy-used',
         title: '购买二手：付款前该检查什么',
+        highlight: true,
         content: [
           '**如果要买,就买二手——已经没有人在卖全新的RTX 3090了,价格优势就在二手市场。** 850–1,050美元的价格使它成为可买到的最便宜的24GB显卡,并且转售价值保持得不错,这实质上降低了真实持有成本。',
           '一个诚实的提醒：这些是已有五年历史的显卡,很多来自矿卡或游戏卡,由个人卖家在无保修的情况下出售。故障模式是已知且可检查的,因此风险是可控的——但风险确实存在,这也是为什么应该向接受退货的卖家购买,而不是找最便宜的那条listing。',
@@ -3468,6 +3483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudOptions: {
         id: 'cloud-options',
         title: '租用RTX 3090：费用与渠道',
+        highlight: true,
         content: [
           '**Vast.ai是租用RTX 3090最便宜的方式,约每小时0.12美元,而RunPod在其Community层级上以每小时0.22美元提供更可靠的选择。** 这一差异概括了全部权衡：Vast.ai是私人拥有GPU的市场,因此价格更低,但主机质量参差不齐；RunPod运营自有算力,因此价格更高,但表现更可预测。',
           '对于第一次尝试,便宜的层级完全够用——一次实验中失败的实例,损失的只是重启的时间。对于有截止日期的任务,或者超过几个小时的任何工作,每小时多付的十美分买到的正是你真正想要的：当你回来时,任务仍在运行。',
@@ -3855,6 +3871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyUsed: {
         id: 'buy-used',
         title: '중고 구매: 결제 전 확인해야 할 사항',
+        highlight: true,
         content: [
           '**구매한다면 중고를 사십시오 — RTX 3090을 신품으로 판매하는 곳은 더 이상 없으며, 가격 이점은 중고 시장에 있습니다.** 850–1,050달러라는 가격은 구할 수 있는 가장 저렴한 24GB 카드이며, 재판매 가치도 잘 유지되어 실질적인 소유 비용을 크게 낮춰줍니다.',
           '솔직한 유의점: 이들은 5년 된 카드이며, 상당수가 채굴 또는 게이밍용으로 사용되었고, 개인 판매자로부터 보증 없이 판매됩니다. 고장 유형은 알려져 있고 점검 가능하므로 위험은 관리할 수 있지만 실재하며, 그렇기 때문에 가장 저렴한 매물보다는 반품이 가능한 판매자에게서 구매해야 합니다.',
@@ -3921,6 +3938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudOptions: {
         id: 'cloud-options',
         title: 'RTX 3090 대여하기: 비용과 장소',
+        highlight: true,
         content: [
           '**Vast.ai는 시간당 약 0.12달러로 RTX 3090을 대여하는 가장 저렴한 방법이며, RunPod는 Community 등급에서 시간당 0.22달러로 더 신뢰할 수 있는 선택지입니다.** 이 차이가 전체 트레이드오프를 요약합니다: Vast.ai는 개인 소유 GPU의 마켓플레이스이므로 가격이 낮은 대신 호스트 품질이 제각각이고, RunPod는 자체 용량을 운영하므로 비용은 더 들지만 더 예측 가능하게 작동합니다.',
           '처음 시도해보는 것이라면 저렴한 등급으로도 충분합니다 — 실험에서 인스턴스가 실패해도 재시작 비용밖에 들지 않습니다. 마감이 있는 작업이나 몇 시간을 넘는 작업이라면, 시간당 추가되는 10센트가 여러분이 진짜로 원하는 것, 즉 돌아왔을 때 작업이 여전히 실행 중인 상태를 사줍니다.',

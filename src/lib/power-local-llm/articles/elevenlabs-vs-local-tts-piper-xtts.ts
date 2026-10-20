@@ -194,6 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'What You Pay For With Cloud TTS',
+        highlight: true,
         content: 'ElevenLabs removes several tasks that local deployment leaves with you:',
         columns: ['Cloud Benefit', 'What It Changes in Practice'],
         rows: [
@@ -1154,6 +1155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'Wofür Sie bei Cloud-TTS bezahlen',
+        highlight: true,
         content: 'ElevenLabs nimmt Ihnen mehrere Aufgaben ab, die bei lokaler Bereitstellung bei Ihnen bleiben:',
         columns: ['Cloud-Vorteil', 'Was sich in der Praxis ändert'],
         rows: [
@@ -2111,6 +2113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'Ce que vous payez avec le TTS cloud',
+        highlight: true,
         content: 'ElevenLabs vous décharge de plusieurs tâches que le déploiement local laisse à votre charge :',
         columns: ['Avantage cloud', 'Ce que ça change en pratique'],
         rows: [
@@ -3067,6 +3070,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudCosts: {
         id: 'cloud-costs',
         title: '你为云端TTS付的钱买了什么',
+        highlight: true,
         content: 'ElevenLabs帮你省去了本地部署会留给你的几项任务：',
         columns: ['Cloud Benefit', 'What It Changes in Practice'],
         rows: [
@@ -4021,6 +4025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudCosts: {
         id: 'cloud-costs',
         title: 'クラウドTTSで支払う対価は何か',
+        highlight: true,
         content: 'ElevenLabsは、ローカルデプロイでは自分でこなすことになる複数のタスクを取り除いてくれます。',
         columns: ['Cloud Benefit', 'What It Changes in Practice'],
         rows: [
@@ -4976,6 +4981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'Por qué pagas con el TTS en la nube',
+        highlight: true,
         content: 'ElevenLabs elimina varias tareas que un despliegue local te deja a ti:',
         columns: ['Cloud Benefit', 'What It Changes in Practice'],
         rows: [
@@ -5933,6 +5939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         id: 'cloud-costs',
         title: 'Pelo Que Você Paga com TTS em Nuvem',
+        highlight: true,
         content: 'O ElevenLabs remove várias tarefas que a implantação local deixa por sua conta:',
         columns: ['Cloud Benefit', 'What It Changes in Practice'],
         rows: [
@@ -6888,6 +6895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudCosts: {
         id: 'cloud-costs',
         title: '클라우드 TTS로 얻는 대가',
+        highlight: true,
         content: 'ElevenLabs는 로컬 배포에서는 직접 처리해야 할 여러 작업을 없애줍니다.',
         columns: ['Cloud Benefit', 'What It Changes in Practice'],
         rows: [
@@ -7839,6 +7847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudCosts: {
         id: 'cloud-costs',
         title: 'ما الذي تدفع مقابله في TTS السحابي',
+        highlight: true,
         content: 'يزيل ElevenLabs عدة مهام يتركها النشر المحلي على عاتقك:',
         columns: ['Cloud Benefit', 'What It Changes in Practice'],
         rows: [

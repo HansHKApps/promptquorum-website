@@ -87,6 +87,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Buy If / Skip If',
+        highlight: true,
         content: 'Quick decision guide — does an energy-monitoring smart plug fit what you actually need? PromptQuorum\'s assessment based on published specs and documentation, not hands-on testing.',
         items: [
           '**Buy an energy-monitoring smart plug if:**',
@@ -415,6 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Kaufen oder nicht?',
+        highlight: true,
         content: 'Kurzer Entscheidungsleitfaden — passt ein Energiemonitoring-Smart-Plug zu dem, was du tatsächlich brauchst? PromptQuorums Einschätzung basiert auf veröffentlichten Spezifikationen und Dokumentation, nicht auf einem eigenen Praxistest.',
         items: [
           '**Kaufe ein Energiemonitoring-Smart-Plug, wenn:**',
@@ -737,6 +739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Acheter si / Éviter si',
+        highlight: true,
         content: "Guide de décision rapide — une prise connectée de monitoring énergétique correspond-elle vraiment à votre besoin ? Évaluation de PromptQuorum basée sur les spécifications publiées et la documentation, pas sur un test pratique.",
         items: [
           '**Achetez une prise connectée de monitoring énergétique si :**',
@@ -1056,6 +1059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: '買うべき場合・避けるべき場合',
+        highlight: true,
         content: '簡単な判断ガイド — 電力量モニタリング対応スマートプラグは本当に自分に必要か？PromptQuorumの評価は、実機テストではなく公開されている仕様とドキュメントに基づく。',
         items: [
           '**次の場合は電力量モニタリング対応スマートプラグを買うべき：**',
@@ -1385,6 +1389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: '购买建议 / 跳过建议',
+        highlight: true,
         content: '快速决策指南——能耗监测智能插座是否符合你的实际需求？以下判断基于PromptQuorum对已公开规格和文档的评估，而非实机测试。',
         items: [
           '**在以下情况下购买能耗监测智能插座：**',
@@ -1715,6 +1720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Comprar / Evitar',
+        highlight: true,
         content: 'Guía de decisión rápida — ¿un enchufe inteligente con monitorización energética encaja con lo que realmente necesitas? Valoración de PromptQuorum basada en especificaciones y documentación publicadas, no en pruebas prácticas.',
         items: [
           '**Compra un enchufe inteligente con monitorización energética si:**',
@@ -2036,6 +2042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'Compre / Não compre',
+        highlight: true,
         content: 'Guia rápido de decisão — uma tomada inteligente com monitoramento de energia atende ao que você realmente precisa? Avaliação da PromptQuorum baseada em especificações publicadas e documentação, não em testes práticos.',
         items: [
           '**Compre uma tomada inteligente com monitoramento de energia se:**',
@@ -2363,6 +2370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: 'اشترِ إذا / تخطَّ إذا',
+        highlight: true,
         content: 'دليل قرار سريع — هل يناسبك مقبس ذكي لمراقبة استهلاك الطاقة فعلاً؟ تقييم PromptQuorum استناداً إلى المواصفات والوثائق المنشورة، وليس اختباراً عملياً.',
         items: [
           '**اشترِ مقبساً ذكياً لمراقبة الطاقة إذا:**',
@@ -2697,6 +2705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       buyIfSkipIf: {
         id: 'buy-skip-if',
         title: '구매 조건 / 비구매 조건',
+        highlight: true,
         content: '빠른 결정 가이드 — 에너지 모니터링 스마트 플러그가 실제로 필요한 것에 맞는지 확인하세요. 직접 사용 테스트가 아니라 공개된 사양과 문서를 기반으로 한 PromptQuorum의 평가입니다.',
         items: [
           '**다음의 경우 에너지 모니터링 스마트 플러그를 구매하세요:**',

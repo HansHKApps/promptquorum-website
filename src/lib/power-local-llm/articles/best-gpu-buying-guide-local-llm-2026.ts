@@ -127,6 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Editor\'s Choice: RTX 4080 Super 16 GB',
+        highlight: true,
         content:
           '**For buyers who want a card that lasts and can stretch past $1,000, the NVIDIA RTX 4080 Super 16 GB is the pick that balances VRAM, speed, and price.** Its 16 GB of VRAM clears every 14B model with context headroom, it is the fastest 16 GB card here at roughly 120 tok/s, and at ~$1,200 it is the premium 16 GB choice. It costs about $300 more than the RTX 4070 Ti Super (~$900) and ~$190 more than the RTX 5070 Ti (~$1,008), so if price matters more than the last 20-30% of speed, pick one of those instead. If your budget is fixed below $700, the RTX 5060 Ti 16 GB is the value pick. Spend more only if you specifically need 33B or 70B models.',
         callouts: [
@@ -755,6 +756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Redaktionsempfehlung: RTX 4080 Super 16 GB',
+        highlight: true,
         content:
           '**Für Käufer, die eine langlebige Karte wollen und über 1.000 $ ausgeben können, ist die NVIDIA RTX 4080 Super 16 GB die Wahl, die VRAM, Tempo und Preis ausbalanciert.** Ihre 16 GB VRAM bewältigen jedes 14B-Modell mit Kontextreserve, sie ist mit rund 120 Token/s die schnellste 16-GB-Karte hier, und mit ~1.200 $ ist sie die Premium-Wahl unter den 16-GB-Karten. Sie kostet etwa 300 $ mehr als die RTX 4070 Ti Super (~900 $) und ~190 $ mehr als die RTX 5070 Ti (~1.008 $) — wenn der Preis wichtiger ist als die letzten 20–30 % Tempo, wählen Sie stattdessen eine von diesen. Liegt Ihr Budget fest unter 700 $, ist die RTX 5060 Ti 16 GB die Preis-Leistungs-Wahl. Geben Sie nur dann mehr aus, wenn Sie gezielt 33B- oder 70B-Modelle benötigen.',
         callouts: [
@@ -1382,6 +1384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Choix de la rédaction : RTX 4080 Super 16 Go',
+        highlight: true,
         content:
           '**Pour les acheteurs qui veulent une carte durable et peuvent dépasser les 1 000 $, le NVIDIA RTX 4080 Super 16 Go est le choix qui équilibre VRAM, vitesse et prix.** Ses 16 Go de VRAM dégagent tout modèle 14B avec une marge de contexte, c\'est la carte 16 Go la plus rapide ici à environ 120 tok/s, et à env. 1 200 $ c\'est le choix 16 Go premium. Elle coûte environ 300 $ de plus que le RTX 4070 Ti Super (env. 900 $) et env. 190 $ de plus que le RTX 5070 Ti (env. 1 008 $) ; si le prix compte plus que les derniers 20-30 % de vitesse, choisissez plutôt l\'une de ces deux cartes. Si votre budget est plafonné sous 700 $, le RTX 5060 Ti 16 Go est le choix valeur. Ne dépensez davantage que si vous avez spécifiquement besoin de modèles 33B ou 70B.',
         callouts: [
@@ -2008,6 +2011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '編集部の選択：RTX 4080 Super 16 GB',
+        highlight: true,
         content:
           '**長く使えるカードを求め、$1,000を超える予算を確保できる購入者には、NVIDIA RTX 4080 Super 16 GBがVRAM・速度・価格のバランスを取った選択肢です。** 16 GBのVRAMはコンテキストの余裕を残してあらゆる14Bモデルをこなし、ここで最速の16 GBカードで約120 tok/s、約$1,200で、16 GBカードの上位モデルにあたります。RTX 4070 Ti Super（約$900）より約$300、RTX 5070 Ti（約$1,008）より約$190高いため、最後の20～30%の速度より価格を重視するなら、そちらを選んでください。予算が$700以下に固定されているなら、RTX 5060 Ti 16 GBがコストパフォーマンスの選択です。33Bや70Bモデルが特に必要な場合に限り、さらに支出してください。',
         callouts: [
@@ -2634,6 +2638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '编辑推荐：RTX 4080 Super 16 GB',
+        highlight: true,
         content:
           '**对于想要一款耐用、且预算能超过 $1,000 的买家，NVIDIA RTX 4080 Super 16 GB 是兼顾显存、速度和价格的选择。** 它的 16 GB 显存能容纳每一款 14B 模型并留有上下文余量，是这里最快的 16 GB 显卡，约 120 tok/s，售价约 $1,200，是高端的 16 GB 之选。它比 RTX 4070 Ti Super（约 $900）贵约 $300，比 RTX 5070 Ti（约 $1,008）贵约 $190，因此如果价格比最后 20-30% 的速度更重要，请选那两款。如果你的预算固定在 $700 以下，RTX 5060 Ti 16 GB 是性价比之选。只有在确实需要 33B 或 70B 模型时才花更多钱。',
         callouts: [
@@ -3272,6 +3277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Elección del editor: RTX 4080 Super 16 GB',
+        highlight: true,
         content:
           '**Para compradores que quieren una tarjeta duradera y pueden superar los $1.000, la NVIDIA RTX 4080 Super 16 GB es la elección que equilibra VRAM, velocidad y precio.** Sus 16 GB de VRAM resuelven cualquier modelo de 14B con margen de contexto, es la tarjeta de 16 GB más rápida aquí a aproximadamente 120 tok/s, y a ~$1.200 es la opción premium de 16 GB. Cuesta unos $300 más que la RTX 4070 Ti Super (~$900) y ~$190 más que la RTX 5070 Ti (~$1.008), así que si el precio importa más que el último 20-30 % de velocidad, elige una de esas. Si tu presupuesto está fijo por debajo de $700, la RTX 5060 Ti 16 GB es la elección de valor. Gasta más solo si específicamente necesitas modelos de 33B o 70B.',
         callouts: [
@@ -3911,6 +3917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Escolha do editor: RTX 4080 Super 16 GB',
+        highlight: true,
         content:
           '**Para compradores que querem uma placa duradoura e podem gastar mais de $1.000, a NVIDIA RTX 4080 Super 16 GB é a escolha que equilibra VRAM, velocidade e preço.** Seus 16 GB de VRAM lidam com qualquer modelo 14B com margem de contexto, é a placa de 16 GB mais rápida aqui com cerca de 120 tok/s, e a ~$1.200 é a escolha premium de 16 GB. Custa cerca de $300 a mais que a RTX 4070 Ti Super (~$900) e ~$190 a mais que a RTX 5070 Ti (~$1.008); se o preço importa mais que os últimos 20–30% de velocidade, escolha uma dessas. Se o seu orçamento está fixo abaixo de $700, a RTX 5060 Ti 16 GB é a escolha de custo-benefício. Gaste mais apenas se precisar especificamente de modelos 33B ou 70B.',
         callouts: [
@@ -4550,6 +4557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'اختيار المحرر: RTX 4080 Super 16 GB',
+        highlight: true,
         content:
           '**لمن يريد بطاقة تدوم ويمكنه تجاوز 1000 دولار، فإن NVIDIA RTX 4080 Super 16 GB هي الخيار الذي يوازن بين VRAM والسرعة والسعر.** تتعامل 16 جيجابايت VRAM فيها مع أي نموذج 14B بهامش للسياق، وهي أسرع بطاقة 16 جيجابايت هنا بنحو 120 رمز/ثانية، وبنحو 1200 دولار هي الخيار المميز في فئة 16 جيجابايت. تكلّف أكثر بنحو 300 دولار من RTX 4070 Ti Super (نحو 900 دولار) وبنحو 190 دولاراً من RTX 5070 Ti (نحو 1008 دولارات)، فإن كان السعر أهم من آخر 20–30% من السرعة فاختر إحداهما. وإن كانت ميزانيتك ثابتة تحت 700 دولار، فـRTX 5060 Ti 16 GB هي الخيار الأوفر قيمة. لا تنفق أكثر إلا إذا كنت تحتاج تحديداً نماذج 33B أو 70B.',
         callouts: [
@@ -5190,6 +5198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '편집자 추천: RTX 4080 Super 16 GB',
+        highlight: true,
         content:
           '**$1,000 이상을 지출할 수 있고 오래 사용할 카드를 원하는 구매자에게 NVIDIA RTX 4080 Super 16 GB는 VRAM, 속도, 가격의 균형을 맞추는 선택입니다.** 16 GB VRAM으로 여유 있는 컨텍스트와 함께 14B 모델을 처리하고, 여기서 16 GB 카드 중 가장 빠른 약 120 토큰/초를 제공하며, ~$1,200에 판매되는 프리미엄 16 GB 선택입니다. RTX 4070 Ti Super (~$900)보다 약 $300, RTX 5070 Ti (~$1,008)보다 약 $190 더 비싸므로, 마지막 20-30%의 속도보다 가격이 더 중요하다면 이 둘 중 하나를 선택하십시오. 예산이 $700 이하로 고정되어 있다면, RTX 5060 Ti 16 GB가 가성비 선택입니다. 구체적으로 33B 또는 70B 모델이 필요한 경우에만 더 많이 지출하십시오.',
         callouts: [

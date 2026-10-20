@@ -198,6 +198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudTools: {
         id: 'cloud-tools',
         title: 'The 4 Cloud Writing Tools Worth Considering',
+        highlight: true,
         content: [
           'Cloud writing tools dominate because they offer finished, integrated workflows that reduce the review overhead G2 identifies. Here are the four most compelling options for different writing needs, with what you are actually paying for.',
         ],
@@ -553,6 +554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudTools: {
         id: 'cloud-tools',
         title: 'أربع أدوات كتابة سحابية جديرة بالاعتبار',
+        highlight: true,
         content: [
           'تهيمن أدوات الكتابة السحابية لأنها تقدّم سير عمل متكاملاً وجاهزًا يقلّص عبء المراجعة الذي حدّدته G2. إليك أربعة خيارات جديرة بالاهتمام لاحتياجات كتابة مختلفة، مع توضيح ما تدفعه ثمنه فعليًا.',
         ],
@@ -908,6 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudTools: {
         id: 'cloud-tools',
         title: 'Die 4 Cloud-Schreibtools im Überblick',
+        highlight: true,
         content: [
           'Cloud-Schreibtools dominieren, weil sie fertige, integrierte Workflows bieten, die den von G2 identifizierten Prüfaufwand senken. Hier sind die vier überzeugendsten Optionen für unterschiedliche Schreibbedürfnisse — und wofür Sie tatsächlich bezahlen.',
         ],
@@ -1263,6 +1266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudTools: {
         id: 'cloud-tools',
         title: 'Las 4 herramientas de escritura en la nube que vale la pena considerar',
+        highlight: true,
         content: [
           'Las herramientas de escritura en la nube dominan porque ofrecen flujos de trabajo terminados e integrados que reducen la sobrecarga de revisión que identifica G2. Aquí están las cuatro opciones más interesantes para distintas necesidades de escritura, con lo que realmente estás pagando.',
         ],
@@ -1618,6 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudTools: {
         id: 'cloud-tools',
         title: 'Les 4 outils d\'écriture cloud à considérer',
+        highlight: true,
         content: [
           'Les outils d\'écriture cloud dominent car ils offrent des flux de travail aboutis et intégrés qui réduisent la charge de relecture identifiée par G2. Voici les quatre options les plus pertinentes selon vos besoins d\'écriture, avec ce que vous payez réellement.',
         ],
@@ -1973,6 +1978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         cloudTools: {
             id: 'cloud-tools',
             title: '検討する価値のある4つのクラウド執筆ツール',
+            highlight: true,
             content: [
                 'クラウド執筆ツールが主流なのは、G2が指摘するレビュー負担を減らす、完成された統合ワークフローを提供するからです。ここでは異なる執筆ニーズに応える最も有力な4つの選択肢と、実際に何に対して料金を払っているのかを紹介します。',
             ],
@@ -2328,6 +2334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudTools: {
         id: 'cloud-tools',
         title: '고려할 가치가 있는 4가지 클라우드 글쓰기 도구',
+        highlight: true,
         content: [
           '클라우드 글쓰기 도구가 시장을 주도하는 이유는 G2가 확인한 검토 부담을 줄여주는 완성되고 통합된 워크플로우를 제공하기 때문입니다. 다양한 글쓰기 요구에 맞는 가장 설득력 있는 네 가지 옵션과, 실제로 무엇에 비용을 지불하는지 소개합니다.',
         ],
@@ -2683,6 +2690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudTools: {
         id: 'cloud-tools',
         title: 'As 4 Ferramentas de Escrita na Nuvem Que Valem a Pena Considerar',
+        highlight: true,
         content: [
           'As ferramentas de escrita na nuvem dominam porque oferecem fluxos de trabalho prontos e integrados que reduzem a sobrecarga de revisão identificada pela G2. Aqui estão as quatro opções mais interessantes para diferentes necessidades de escrita, com o que você realmente está pagando.',
         ],
@@ -3038,6 +3046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       cloudTools: {
         id: 'cloud-tools',
         title: '值得考虑的4款云端写作工具',
+        highlight: true,
         content: [
           '云端写作工具占据主流地位,因为它们提供成熟、集成的工作流程,能减少G2所指出的审核成本。以下是针对不同写作需求最具吸引力的四款工具,以及你实际付费购买的内容。',
         ],

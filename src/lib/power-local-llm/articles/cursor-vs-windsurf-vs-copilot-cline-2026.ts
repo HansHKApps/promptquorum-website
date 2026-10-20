@@ -136,6 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Editor\'s Choice: Cursor',
+        highlight: true,
         content:
           '**Cursor is the pick for most professional developers who want the most mature agent mode and the widest model choice.** Composer and Cloud Agents handle multi-file, multi-step changes with less hand-holding than the alternatives, and you can switch between GPT, Claude, and Gemini models inside the same editor. The trade-off is cost predictability: paid plans share a weekly usage pool, and Claude and GPT usage is billed at API list price from prepaid credit on top. If GitHub-native workflow integration matters more than raw agent capability, choose GitHub Copilot instead; if $0 is a hard requirement, choose Cline with a local model.',
         callouts: [
@@ -557,6 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Redaktionsempfehlung: Cursor',
+        highlight: true,
         content:
           '**Cursor ist die Wahl für die meisten professionellen Entwickler, die den ausgereiftesten Agentenmodus und die größte Modellauswahl wollen.** Composer und Cloud Agents bewältigen mehrstufige Änderungen über mehrere Dateien mit weniger manueller Steuerung als die Alternativen, und Sie können innerhalb desselben Editors zwischen GPT-, Claude- und Gemini-Modellen wechseln. Der Kompromiss liegt bei der Kostenvorhersagbarkeit: Bezahlte Pläne teilen sich ein wöchentliches Nutzungskontingent, und die Nutzung von Claude und GPT wird zusätzlich zum API-Listenpreis über Guthaben im Voraus abgerechnet. Wenn GitHub-native Workflow-Integration wichtiger ist als reine Agentenfähigkeit, wählen Sie stattdessen GitHub Copilot; wenn 0 $ zwingend erforderlich sind, wählen Sie Cline mit einem lokalen Modell.',
         callouts: [
@@ -945,6 +947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Choix de la rédaction : Cursor',
+        highlight: true,
         content:
           '**Cursor est le choix pour la plupart des développeurs professionnels qui veulent le mode agent le plus mature et le plus large choix de modèles.** Composer et Cloud Agents gèrent les changements multi-fichiers et multi-étapes avec moins de pilotage manuel que les alternatives, et vous pouvez basculer entre les modèles GPT, Claude et Gemini dans le même éditeur. Le compromis porte sur la prévisibilité du coût : les forfaits payants partagent un quota hebdomadaire, et l\'usage de Claude et GPT est facturé en plus au tarif API public via un crédit prépayé. Si l\'intégration native GitHub compte plus que la capacité agentique brute, choisissez plutôt GitHub Copilot ; si 0 $ est une exigence stricte, choisissez Cline avec un modèle local.',
         callouts: [
@@ -1333,6 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Elección del editor: Cursor',
+        highlight: true,
         content:
           '**Cursor es la elección para la mayoría de desarrolladores profesionales que quieren el modo agente más maduro y la mayor variedad de modelos.** Composer y Cloud Agents manejan cambios multiarchivo y multipaso con menos guía manual que las alternativas, y puedes cambiar entre modelos GPT, Claude y Gemini dentro del mismo editor. El compromiso es la previsibilidad del costo: los planes de pago comparten un cupo de uso semanal, y el uso de Claude y GPT se factura aparte al precio de lista de la API con crédito prepago. Si la integración nativa con GitHub importa más que la capacidad agéntica bruta, elige GitHub Copilot; si 0 $ es un requisito estricto, elige Cline con un modelo local.',
         callouts: [
@@ -1721,6 +1725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '編集部のおすすめ：Cursor',
+        highlight: true,
         content:
           '**Cursorは、最も成熟したエージェントモードと最も幅広いモデル選択肢を求める大多数のプロ開発者にとっての選択肢です。** ComposerとCloud Agentsは、他の選択肢より手動での誘導を少なくして複数ファイル・複数ステップの変更を処理し、同じエディタ内でGPT、Claude、Geminiモデルを切り替えられます。トレードオフはコストの予測可能性です——有料プランは週ごとの利用枠を共有し、ClaudeとGPTの利用は前払いクレジットからAPI定価で別途課金されます。GitHubネイティブなワークフロー統合が純粋なエージェント能力より重要ならGitHub Copilotを、0ドルが絶対条件ならローカルモデル付きのClineを選んでください。',
         callouts: [
@@ -2109,6 +2114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '编辑精选：Cursor',
+        highlight: true,
         content:
           '**对大多数希望获得最成熟智能体模式和最广泛模型选择的专业开发者而言，Cursor是首选。**Composer和Cloud Agents处理多文件、多步骤的更改所需的手动干预比其他选项更少，你还可以在同一编辑器内切换GPT、Claude和Gemini模型。代价在于成本可预测性：付费套餐共享每周用量额度，Claude和GPT的用量另从预付额度中按API标价计费。如果GitHub原生工作流集成比纯智能体能力更重要，请改选GitHub Copilot；如果0美元是硬性要求，请选择搭配本地模型的Cline。',
         callouts: [
@@ -2497,6 +2503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'Escolha do Editor: Cursor',
+        highlight: true,
         content:
           '**O Cursor é a escolha para a maioria dos desenvolvedores profissionais que querem o modo agente mais maduro e a maior variedade de modelos.** Composer e Cloud Agents lidam com mudanças multi-arquivo e multi-etapa com menos condução manual que as alternativas, e você pode alternar entre modelos GPT, Claude e Gemini no mesmo editor. O trade-off é a previsibilidade de custo: os planos pagos compartilham uma cota de uso semanal, e o uso de Claude e GPT é cobrado à parte ao preço de tabela da API com crédito pré-pago. Se a integração nativa com o GitHub importa mais que a capacidade agêntica bruta, escolha o GitHub Copilot; se 0 $ é um requisito rígido, escolha o Cline com um modelo local.',
         callouts: [
@@ -2885,6 +2892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: 'اختيار المحرر: Cursor',
+        highlight: true,
         content:
           '**Cursor هو الخيار لمعظم المطورين المحترفين الذين يريدون أنضج وضع وكيل وأوسع تشكيلة نماذج.** يتعامل Composer وCloud Agents مع التغييرات متعددة الملفات والخطوات بتوجيه يدوي أقل من البدائل، ويمكنك التبديل بين نماذج GPT وClaude وGemini داخل المحرر نفسه. المقايضة هي إمكانية التنبؤ بالتكلفة: تتشارك الخطط المدفوعة حصة استخدام أسبوعية، ويُحاسَب استخدام Claude وGPT إضافةً بسعر القائمة لواجهة API من رصيد مدفوع مسبقاً. إذا كان التكامل الأصلي مع GitHub أهم من القدرة الوكيلية الخام، اختر GitHub Copilot بدلاً من ذلك؛ وإذا كان 0 دولار متطلباً صارماً، اختر Cline مع نموذج محلي.',
         callouts: [
@@ -3273,6 +3281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       editorsChoice: {
         id: 'editors-choice',
         title: '편집자 선택: Cursor',
+        highlight: true,
         content:
           '**Cursor는 가장 성숙한 에이전트 모드와 가장 폭넓은 모델 선택지를 원하는 대다수 전문 개발자에게 적합한 선택입니다.** Composer와 Cloud Agents는 다른 대안보다 적은 수동 개입으로 여러 파일에 걸친 다단계 변경을 처리하며, 동일한 에디터 안에서 GPT, Claude, Gemini 모델을 전환할 수 있습니다. 다만 비용 예측 가능성이 트레이드오프입니다 — 유료 요금제는 주간 사용량 풀을 공유하며, Claude와 GPT 사용량은 선불 크레딧에서 API 정가로 별도 청구됩니다. 원시 에이전트 능력보다 GitHub 네이티브 워크플로 통합이 더 중요하다면 대신 GitHub Copilot을, 0달러가 절대 조건이라면 로컬 모델을 사용하는 Cline을 선택하세요.',
         callouts: [
