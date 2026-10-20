@@ -52,7 +52,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Connecticut HB 5340 has been in effect since October 1, 2026 — the legal gate is cleared, but product certification is still open.',
-          'Unlike most of the other 7 enacted states, Connecticut\'s balcony solar provisions are part of a broader omnibus solar bill, not standalone legislation.',
+          'Unlike most of the other 9 enacted states, Connecticut\'s balcony solar provisions are part of a broader omnibus solar bill, not standalone legislation.',
           'The 1,200W cap matches the majority template used across most enacted states.',
           'No complete system has confirmed full UL 3700 certification yet, same as every other enacted state.',
         ],
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Does HB 5340 Require in Connecticut?',
         content: [
-          '<strong>Connecticut HB 5340 folds balcony solar provisions into a broader omnibus solar bill, rather than passing standalone legislation the way most of the other 7 enacted states did.</strong> It sets a 1,200W cap matching the majority template, and the law has been in effect since October 1, 2026. Expect the standard exemption structure: no utility interconnection agreement or fee, with net metering excluded.',
+          '<strong>Connecticut HB 5340 folds balcony solar provisions into a broader omnibus solar bill, rather than passing standalone legislation the way most of the other 9 enacted states did.</strong> It sets a 1,200W cap matching the majority template, and the law has been in effect since October 1, 2026. Expect the standard exemption structure: no utility interconnection agreement or fee, with net metering excluded.',
           'No HOA or landlord preemption language for Connecticut was confirmed in this pass — check your lease or HOA covenant separately.',
         ],
         columns: ['Field', 'Connecticut HB 5340'],
@@ -99,7 +99,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Why is Connecticut\'s balcony solar provision part of a bigger bill?',
-            a: 'HB 5340 is an omnibus solar bill covering multiple solar policy areas, with balcony solar as one component — unlike most of the other 7 enacted states, which passed dedicated standalone legislation.',
+            a: 'HB 5340 is an omnibus solar bill covering multiple solar policy areas, with balcony solar as one component — unlike most of the other 9 enacted states, which passed dedicated standalone legislation.',
           },
           {
             q: 'Can my HOA in Connecticut ban balcony solar?',
@@ -159,7 +159,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'Connecticuts HB 5340 ist seit dem 1. Oktober 2026 in Kraft — die rechtliche Hürde ist genommen, die Produktzertifizierung bleibt jedoch offen.',
-          'Anders als in den meisten der anderen 7 Bundesstaaten mit Gesetz sind Connecticuts Balkonsolar-Bestimmungen Teil eines umfassenderen Solar-Sammelgesetzes, keine eigenständige Gesetzgebung.',
+          'Anders als in den meisten der anderen 9 Bundesstaaten mit Gesetz sind Connecticuts Balkonsolar-Bestimmungen Teil eines umfassenderen Solar-Sammelgesetzes, keine eigenständige Gesetzgebung.',
           'Die Obergrenze von 1.200 W entspricht der Mehrheitsvorlage, die in den meisten Bundesstaaten mit Gesetz verwendet wird.',
           'Kein vollständiges System hat bisher eine vollständige UL-3700-Zertifizierung bestätigt — wie in jedem anderen Bundesstaat mit Gesetz.',
         ],
@@ -167,7 +167,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Was schreibt HB 5340 in Connecticut vor?',
         content: [
-          '<strong>Connecticuts HB 5340 integriert Balkonsolar-Bestimmungen in ein umfassenderes Solar-Sammelgesetz, anstatt wie in den meisten der anderen 7 Bundesstaaten mit Gesetz eine eigenständige Gesetzgebung zu verabschieden.</strong> Es legt eine Obergrenze von 1.200 W fest, die der Mehrheitsvorlage entspricht, und das Gesetz ist seit dem 1. Oktober 2026 in Kraft. Zu erwarten ist die übliche Ausnahmestruktur: keine Netzanschlussvereinbarung oder -gebühr des Versorgungsunternehmens, ohne Net Metering.',
+          '<strong>Connecticuts HB 5340 integriert Balkonsolar-Bestimmungen in ein umfassenderes Solar-Sammelgesetz, anstatt wie in den meisten der anderen 9 Bundesstaaten mit Gesetz eine eigenständige Gesetzgebung zu verabschieden.</strong> Es legt eine Obergrenze von 1.200 W fest, die der Mehrheitsvorlage entspricht, und das Gesetz ist seit dem 1. Oktober 2026 in Kraft. Zu erwarten ist die übliche Ausnahmestruktur: keine Netzanschlussvereinbarung oder -gebühr des Versorgungsunternehmens, ohne Net Metering.',
           'Für Connecticut wurde in dieser Prüfung keine Sprachregelung zur Vorrangstellung gegenüber HOA- oder Vermieterverboten bestätigt — prüfen Sie Ihren Mietvertrag oder Ihre HOA-Satzung separat.',
         ],
         columns: ['Feld', 'Connecticut HB 5340'],
@@ -206,7 +206,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Warum ist Connecticuts Balkonsolar-Bestimmung Teil eines größeren Gesetzes?',
-            a: 'HB 5340 ist ein Solar-Sammelgesetz, das mehrere solarpolitische Bereiche abdeckt, wobei Balkonsolar nur eine Komponente ist — anders als in den meisten der anderen 7 Bundesstaaten mit Gesetz, die eine eigenständige Gesetzgebung verabschiedet haben.',
+            a: 'HB 5340 ist ein Solar-Sammelgesetz, das mehrere solarpolitische Bereiche abdeckt, wobei Balkonsolar nur eine Komponente ist — anders als in den meisten der anderen 9 Bundesstaaten mit Gesetz, die eine eigenständige Gesetzgebung verabschiedet haben.',
           },
           {
             q: 'Kann meine HOA in Connecticut Balkonsolar verbieten?',
@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'La loi HB 5340 du Connecticut est en vigueur depuis le 1er octobre 2026 — l\'obstacle juridique est levé, mais la certification des produits reste ouverte.',
-          'Contrairement à la plupart des 7 autres États ayant légiféré, les dispositions sur le solaire de balcon du Connecticut s\'inscrivent dans une loi solaire omnibus plus large, pas dans une législation autonome.',
+          'Contrairement à la plupart des 9 autres États ayant légiféré, les dispositions sur le solaire de balcon du Connecticut s\'inscrivent dans une loi solaire omnibus plus large, pas dans une législation autonome.',
           'Le plafond de 1 200 W correspond au modèle majoritaire utilisé dans la plupart des États ayant légiféré.',
           'Aucun système complet n\'a confirmé de certification UL 3700 intégrale à ce jour, comme dans tous les autres États ayant légiféré.',
         ],
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Qu\'exige la loi HB 5340 dans le Connecticut ?',
         content: [
-          '<strong>La loi HB 5340 du Connecticut intègre les dispositions sur le solaire de balcon dans une loi solaire omnibus plus large, plutôt que d\'adopter une législation autonome comme la plupart des 7 autres États ayant légiféré.</strong> Elle fixe un plafond de 1 200 W conforme au modèle majoritaire, et la loi est en vigueur depuis le 1er octobre 2026. La structure d\'exemption standard est attendue : aucun contrat d\'interconnexion ni de frais auprès du fournisseur d\'électricité, sans compensation nette (net metering).',
+          '<strong>La loi HB 5340 du Connecticut intègre les dispositions sur le solaire de balcon dans une loi solaire omnibus plus large, plutôt que d\'adopter une législation autonome comme la plupart des 9 autres États ayant légiféré.</strong> Elle fixe un plafond de 1 200 W conforme au modèle majoritaire, et la loi est en vigueur depuis le 1er octobre 2026. La structure d\'exemption standard est attendue : aucun contrat d\'interconnexion ni de frais auprès du fournisseur d\'électricité, sans compensation nette (net metering).',
           'Aucune disposition de préemption vis-à-vis des copropriétés ou des propriétaires n\'a été confirmée pour le Connecticut lors de cette analyse — vérifiez votre bail ou le règlement de copropriété séparément.',
         ],
         columns: ['Champ', 'Connecticut HB 5340'],
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Pourquoi la disposition sur le solaire de balcon du Connecticut fait-elle partie d\'une loi plus large ?',
-            a: 'La loi HB 5340 est une loi solaire omnibus couvrant plusieurs domaines de politique solaire, le solaire de balcon n\'en étant qu\'une composante — contrairement à la plupart des 7 autres États ayant légiféré, qui ont adopté une législation autonome dédiée.',
+            a: 'La loi HB 5340 est une loi solaire omnibus couvrant plusieurs domaines de politique solaire, le solaire de balcon n\'en étant qu\'une composante — contrairement à la plupart des 9 autres États ayant légiféré, qui ont adopté une législation autonome dédiée.',
           },
           {
             q: 'Ma copropriété dans le Connecticut peut-elle interdire le solaire de balcon ?',
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'コネチカット州のHB 5340は2026年10月1日から施行されています — 法的な条件は満たされましたが、製品認証は依然として未解決です。',
-          '他の7つの制定州の多くとは異なり、コネチカット州のバルコニーソーラー規定は単独の法律ではなく、より広範な包括的ソーラー法案の一部です。',
+          '他の9つの制定州の多くとは異なり、コネチカット州のバルコニーソーラー規定は単独の法律ではなく、より広範な包括的ソーラー法案の一部です。',
           '1,200Wの上限は、大半の制定州で使われている多数派テンプレートと一致します。',
           '他のすべての制定州と同様、完全なUL 3700認証を取得したシステムはまだ確認されていません。',
         ],
@@ -381,7 +381,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'コネチカット州のHB 5340は何を求めていますか？',
         content: [
-          '<strong>コネチカット州のHB 5340は、他の7つの制定州の多くが行ったような単独立法ではなく、バルコニーソーラー規定をより広範な包括的ソーラー法案に組み込んでいます。</strong> 多数派テンプレートと同じ1,200Wの上限を設けており、法律は2026年10月1日から施行されています。標準的な適用除外構造（電力会社との系統連系契約や手数料は不要で、ネットメータリングは対象外）が想定されます。',
+          '<strong>コネチカット州のHB 5340は、他の9つの制定州の多くが行ったような単独立法ではなく、バルコニーソーラー規定をより広範な包括的ソーラー法案に組み込んでいます。</strong> 多数派テンプレートと同じ1,200Wの上限を設けており、法律は2026年10月1日から施行されています。標準的な適用除外構造（電力会社との系統連系契約や手数料は不要で、ネットメータリングは対象外）が想定されます。',
           '今回の調査ではコネチカット州のHOAまたは家主による優先規定は確認されていません — 賃貸契約またはHOA規約を別途確認してください。',
         ],
         columns: ['項目', 'コネチカット州 HB 5340'],
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'なぜコネチカット州のバルコニーソーラー規定はより大きな法案の一部なのですか？',
-            a: 'HB 5340は複数のソーラー政策分野を扱う包括的ソーラー法案であり、バルコニーソーラーはその一部にすぎません — 専用の単独立法を可決した他の7つの制定州の多くとは異なります。',
+            a: 'HB 5340は複数のソーラー政策分野を扱う包括的ソーラー法案であり、バルコニーソーラーはその一部にすぎません — 専用の単独立法を可決した他の9つの制定州の多くとは異なります。',
           },
           {
             q: 'コネチカット州のHOAはバルコニーソーラーを禁止できますか？',
@@ -480,7 +480,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           '康涅狄格州HB 5340自2026年10月1日起已生效——法律层面的条件已满足，但产品认证仍未解决。',
-          '与其他7个已立法州中的大多数不同，康涅狄格州的阳台太阳能条款属于更广泛的综合太阳能法案的一部分，而非独立立法。',
+          '与其他9个已立法州中的大多数不同，康涅狄格州的阳台太阳能条款属于更广泛的综合太阳能法案的一部分，而非独立立法。',
           '1,200W的上限与大多数已立法州采用的多数模板一致。',
           '与所有其他已立法州一样，目前尚无完整系统确认获得完整的UL 3700认证。',
         ],
@@ -488,7 +488,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'HB 5340对康涅狄格州有哪些要求？',
         content: [
-          '<strong>康涅狄格州HB 5340将阳台太阳能条款并入更广泛的综合太阳能法案，而不是像其他7个已立法州中的大多数那样单独立法。</strong> 该法案设定了与多数模板一致的1,200W上限，该法律自2026年10月1日起已生效。预计将采用标准的豁免结构：无需与电力公司签订并网协议或支付费用，且不适用净计量。',
+          '<strong>康涅狄格州HB 5340将阳台太阳能条款并入更广泛的综合太阳能法案，而不是像其他9个已立法州中的大多数那样单独立法。</strong> 该法案设定了与多数模板一致的1,200W上限，该法律自2026年10月1日起已生效。预计将采用标准的豁免结构：无需与电力公司签订并网协议或支付费用，且不适用净计量。',
           '本次核查未确认康涅狄格州存在针对HOA或房东的优先适用条款——请单独核实你的租约或HOA规约。',
         ],
         columns: ['项目', '康涅狄格州 HB 5340'],
@@ -527,7 +527,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '为什么康涅狄格州的阳台太阳能条款是更大法案的一部分？',
-            a: 'HB 5340是涵盖多个太阳能政策领域的综合法案，阳台太阳能只是其中一个组成部分——这与其他7个已立法州中的大多数不同，那些州通过了专门的独立立法。',
+            a: 'HB 5340是涵盖多个太阳能政策领域的综合法案，阳台太阳能只是其中一个组成部分——这与其他9个已立法州中的大多数不同，那些州通过了专门的独立立法。',
           },
           {
             q: '康涅狄格州的HOA可以禁止阳台太阳能吗？',
@@ -587,7 +587,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'La HB 5340 de Connecticut está en vigor desde el 1 de octubre de 2026 — la condición legal está cumplida, pero la certificación de producto sigue abierta.',
-          'A diferencia de la mayoría de los otros 7 estados que han legislado, las disposiciones de energía solar de balcón de Connecticut forman parte de una ley solar general más amplia, no de una legislación independiente.',
+          'A diferencia de la mayoría de los otros 9 estados que han legislado, las disposiciones de energía solar de balcón de Connecticut forman parte de una ley solar general más amplia, no de una legislación independiente.',
           'El límite de 1,200W coincide con la plantilla mayoritaria usada en la mayoría de los estados que han legislado.',
           'Ningún sistema completo ha confirmado aún la certificación UL 3700 completa, igual que en todos los demás estados que han legislado.',
         ],
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '¿Qué exige la HB 5340 en Connecticut?',
         content: [
-          '<strong>La HB 5340 de Connecticut incorpora las disposiciones de energía solar de balcón dentro de una ley solar general más amplia, en lugar de aprobar una legislación independiente como hicieron la mayoría de los otros 7 estados que han legislado.</strong> Establece un límite de 1,200W acorde con la plantilla mayoritaria, y la ley está en vigor desde el 1 de octubre de 2026. Se espera la estructura de exención estándar: sin acuerdo de interconexión ni tarifa con la compañía eléctrica, sin medición neta (net metering).',
+          '<strong>La HB 5340 de Connecticut incorpora las disposiciones de energía solar de balcón dentro de una ley solar general más amplia, en lugar de aprobar una legislación independiente como hicieron la mayoría de los otros 9 estados que han legislado.</strong> Establece un límite de 1,200W acorde con la plantilla mayoritaria, y la ley está en vigor desde el 1 de octubre de 2026. Se espera la estructura de exención estándar: sin acuerdo de interconexión ni tarifa con la compañía eléctrica, sin medición neta (net metering).',
           'En esta revisión no se confirmó ningún lenguaje de prevalencia sobre HOA o arrendadores para Connecticut — revisa tu contrato de alquiler o el reglamento de tu HOA por separado.',
         ],
         columns: ['Campo', 'Connecticut HB 5340'],
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Por qué la disposición de energía solar de balcón de Connecticut forma parte de una ley más grande?',
-            a: 'La HB 5340 es una ley solar general que abarca varias áreas de política solar, siendo la energía solar de balcón solo un componente — a diferencia de la mayoría de los otros 7 estados que han legislado, que aprobaron legislación independiente dedicada.',
+            a: 'La HB 5340 es una ley solar general que abarca varias áreas de política solar, siendo la energía solar de balcón solo un componente — a diferencia de la mayoría de los otros 9 estados que han legislado, que aprobaron legislación independiente dedicada.',
           },
           {
             q: '¿Puede mi HOA en Connecticut prohibir la energía solar de balcón?',
@@ -694,7 +694,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           'A HB 5340 de Connecticut está em vigor desde 1º de outubro de 2026 — a condição legal foi cumprida, mas a certificação de produto continua em aberto.',
-          'Diferente da maioria dos outros 7 estados que legislaram, as disposições de energia solar de varanda de Connecticut fazem parte de uma lei solar abrangente mais ampla, não de uma legislação independente.',
+          'Diferente da maioria dos outros 9 estados que legislaram, as disposições de energia solar de varanda de Connecticut fazem parte de uma lei solar abrangente mais ampla, não de uma legislação independente.',
           'O limite de 1.200W está alinhado ao modelo majoritário usado na maioria dos estados que legislaram.',
           'Nenhum sistema completo confirmou certificação UL 3700 total até o momento, assim como em todos os outros estados que legislaram.',
         ],
@@ -702,7 +702,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'O que a HB 5340 exige em Connecticut?',
         content: [
-          '<strong>A HB 5340 de Connecticut incorpora as disposições sobre energia solar de varanda a uma lei solar abrangente mais ampla, em vez de aprovar uma legislação independente como fizeram a maioria dos outros 7 estados que legislaram.</strong> Ela define um limite de 1.200W alinhado ao modelo majoritário, e a lei está em vigor desde 1º de outubro de 2026. Espera-se a estrutura de isenção padrão: sem acordo de interconexão ou taxa com a concessionária, sem net metering.',
+          '<strong>A HB 5340 de Connecticut incorpora as disposições sobre energia solar de varanda a uma lei solar abrangente mais ampla, em vez de aprovar uma legislação independente como fizeram a maioria dos outros 9 estados que legislaram.</strong> Ela define um limite de 1.200W alinhado ao modelo majoritário, e a lei está em vigor desde 1º de outubro de 2026. Espera-se a estrutura de isenção padrão: sem acordo de interconexão ou taxa com a concessionária, sem net metering.',
           'Nenhuma linguagem de prevalência sobre HOA (associação de moradores) ou locadores foi confirmada para Connecticut nesta análise — verifique seu contrato de aluguel ou o regulamento da HOA separadamente.',
         ],
         columns: ['Campo', 'Connecticut HB 5340'],
@@ -741,7 +741,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Por que a disposição sobre energia solar de varanda de Connecticut faz parte de uma lei maior?',
-            a: 'A HB 5340 é uma lei solar abrangente que cobre várias áreas de política solar, sendo a energia solar de varanda apenas um componente — diferente da maioria dos outros 7 estados que legislaram, que aprovaram legislação independente dedicada.',
+            a: 'A HB 5340 é uma lei solar abrangente que cobre várias áreas de política solar, sendo a energia solar de varanda apenas um componente — diferente da maioria dos outros 9 estados que legislaram, que aprovaram legislação independente dedicada.',
           },
           {
             q: 'Minha HOA em Connecticut pode proibir energia solar de varanda?',
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         isTldr: true,
         items: [
           '코네티컷주 HB 5340은 2026년 10월 1일부터 시행 중입니다 — 법적 요건은 충족되었지만 제품 인증은 아직 해결되지 않았습니다.',
-          '다른 7개 제정 주 대부분과 달리, 코네티컷주의 발코니 태양광 규정은 독립 입법이 아니라 더 포괄적인 태양광 법안의 일부입니다.',
+          '다른 9개 제정 주 대부분과 달리, 코네티컷주의 발코니 태양광 규정은 독립 입법이 아니라 더 포괄적인 태양광 법안의 일부입니다.',
           '1,200W 상한선은 대부분의 제정 주에서 사용되는 다수 템플릿과 일치합니다.',
           '다른 모든 제정 주와 마찬가지로, 완전한 UL 3700 인증을 확인받은 시스템은 아직 없습니다.',
         ],
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '코네티컷주 HB 5340은 무엇을 요구합니까?',
         content: [
-          '<strong>코네티컷주 HB 5340은 다른 7개 제정 주 대부분이 그랬던 것처럼 독립 입법을 통과시키는 대신, 발코니 태양광 규정을 더 포괄적인 태양광 법안에 포함시켰습니다.</strong> 다수 템플릿과 동일한 1,200W 상한선을 설정하지만, 이 법은 2026년 10월 1일부터 시행 중입니다. 표준 면제 구조가 적용될 것으로 예상됩니다. 즉, 전력회사와의 계통 연계 계약이나 수수료가 필요 없으며, 넷 미터링(net metering)은 제외됩니다.',
+          '<strong>코네티컷주 HB 5340은 다른 9개 제정 주 대부분이 그랬던 것처럼 독립 입법을 통과시키는 대신, 발코니 태양광 규정을 더 포괄적인 태양광 법안에 포함시켰습니다.</strong> 다수 템플릿과 동일한 1,200W 상한선을 설정하지만, 이 법은 2026년 10월 1일부터 시행 중입니다. 표준 면제 구조가 적용될 것으로 예상됩니다. 즉, 전력회사와의 계통 연계 계약이나 수수료가 필요 없으며, 넷 미터링(net metering)은 제외됩니다.',
           '이번 조사에서는 코네티컷주에 대한 HOA 또는 임대인 우선 적용 조항이 확인되지 않았습니다 — 임대 계약서 또는 HOA 규약을 별도로 확인하십시오.',
         ],
         columns: ['항목', '코네티컷주 HB 5340'],
@@ -955,7 +955,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '왜 코네티컷주의 발코니 태양광 규정은 더 큰 법안의 일부입니까?',
-            a: 'HB 5340은 여러 태양광 정책 분야를 다루는 포괄적 법안이며, 발코니 태양광은 그중 한 구성 요소일 뿐입니다 — 전용 독립 입법을 통과시킨 다른 7개 제정 주 대부분과는 다릅니다.',
+            a: 'HB 5340은 여러 태양광 정책 분야를 다루는 포괄적 법안이며, 발코니 태양광은 그중 한 구성 요소일 뿐입니다 — 전용 독립 입법을 통과시킨 다른 9개 제정 주 대부분과는 다릅니다.',
           },
           {
             q: '코네티컷주의 HOA가 발코니 태양광을 금지할 수 있습니까?',

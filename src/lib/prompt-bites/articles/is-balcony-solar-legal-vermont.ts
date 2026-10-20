@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is balcony solar legal in Vermont?',
-        answer: 'In effect. Vermont S.202/H.598 took effect July 1, 2026. It caps devices at 1,200W and explicitly requires UL 3700 (or equivalent) certification by statute, with net metering excluded — one of the more explicitly worded laws among the 8 enacted states.',
+        answer: 'In effect. Vermont S.202/H.598 took effect July 1, 2026. It caps devices at 1,200W and explicitly requires UL 3700 (or equivalent) certification by statute, with net metering excluded — one of the more explicitly worded laws among the 10 enacted states.',
         bullets: [
           'S.202/H.598 in effect since July 1, 2026',
           '1,200W cap, with UL 3700 (or equivalent) certification explicitly required by the statute\'s own text',
@@ -60,7 +60,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Does S.202/H.598 Require in Vermont?',
         content: [
-          '<strong>Vermont\'s law caps devices at 1,200W, matching the majority template, but is more explicit than most of the 8 enacted states in naming UL 3700 or an equivalent nationally recognized certification directly in the statutory text.</strong> Net metering is explicitly excluded — excess power exported to the grid earns no compensation under the law.',
+          '<strong>Vermont\'s law caps devices at 1,200W, matching the majority template, but is more explicit than most of the 10 enacted states in naming UL 3700 or an equivalent nationally recognized certification directly in the statutory text.</strong> Net metering is explicitly excluded — excess power exported to the grid earns no compensation under the law.',
           'No HOA or landlord preemption language for Vermont was confirmed in this pass — check your lease or HOA covenant separately, since the state law addresses utility interconnection and certification, not HOA authority.',
         ],
         columns: ['Field', 'Vermont S.202/H.598'],
@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Le solaire de balcon est-il légal dans le Vermont ?',
-        answer: "En vigueur. La loi S.202/H.598 du Vermont est entrée en vigueur le 1er juillet 2026. Elle plafonne les appareils à 1 200 W et exige explicitement, dans le texte même de la loi, la certification UL 3700 (ou équivalente), tout en excluant la revente au réseau — l'une des lois les plus explicites parmi les 8 États l'ayant adoptée.",
+        answer: "En vigueur. La loi S.202/H.598 du Vermont est entrée en vigueur le 1er juillet 2026. Elle plafonne les appareils à 1 200 W et exige explicitement, dans le texte même de la loi, la certification UL 3700 (ou équivalente), tout en excluant la revente au réseau — l'une des lois les plus explicites parmi les 10 États l'ayant adoptée.",
         bullets: [
           'S.202/H.598 en vigueur depuis le 1er juillet 2026',
           'Plafond de 1 200 W, avec certification UL 3700 (ou équivalente) explicitement exigée par le texte même de la loi',
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Que prévoit la loi S.202/H.598 dans le Vermont ?',
         content: [
-          "<strong>La loi du Vermont plafonne les appareils à 1 200 W, conformément au modèle majoritaire, mais elle est plus explicite que la plupart des 8 États l'ayant adoptée en nommant directement UL 3700 ou une certification équivalente reconnue nationalement dans le texte légal.</strong> La revente au réseau est explicitement exclue — l'excédent d'électricité exporté vers le réseau n'est pas rémunéré selon la loi.",
+          "<strong>La loi du Vermont plafonne les appareils à 1 200 W, conformément au modèle majoritaire, mais elle est plus explicite que la plupart des 10 États l'ayant adoptée en nommant directement UL 3700 ou une certification équivalente reconnue nationalement dans le texte légal.</strong> La revente au réseau est explicitement exclue — l'excédent d'électricité exporté vers le réseau n'est pas rémunéré selon la loi.",
           "Aucune disposition de préemption des HOA ou des propriétaires n'a été confirmée pour le Vermont lors de cette analyse — vérifiez séparément votre bail ou le règlement de copropriété, car la loi de l'État traite de l'interconnexion au réseau et de la certification, pas de l'autorité des HOA.",
         ],
         columns: ['Champ', 'Vermont S.202/H.598'],
@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'バーモント州でバルコニーソーラーは合法ですか？',
-        answer: '施行済み。バーモント州のS.202/H.598は2026年7月1日に施行されました。機器の出力を1,200Wに制限し、法文でUL 3700（またはそれと同等の認証）を明示的に義務付けており、ネットメータリングは対象外です――8つの制定州の中でも特に明示的な条文を持つ法律の一つです。',
+        answer: '施行済み。バーモント州のS.202/H.598は2026年7月1日に施行されました。機器の出力を1,200Wに制限し、法文でUL 3700（またはそれと同等の認証）を明示的に義務付けており、ネットメータリングは対象外です――10の制定州の中でも特に明示的な条文を持つ法律の一つです。',
         bullets: [
           'S.202/H.598は2026年7月1日から施行済み',
           '上限1,200W。UL 3700（またはそれと同等の認証）を法文自体が明示的に要求',
@@ -381,7 +381,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'バーモント州のS.202/H.598は何を義務付けているか？',
         content: [
-          '<strong>バーモント州の法律は、多数派のテンプレートに合わせて機器を1,200Wに制限していますが、8つの制定州の多くよりも明示的に、法文中で直接UL 3700または同等の全米認定認証を指定しています。</strong> ネットメータリングは明示的に除外されており、系統へ送電された余剰電力に対する補償はこの法律では発生しません。',
+          '<strong>バーモント州の法律は、多数派のテンプレートに合わせて機器を1,200Wに制限していますが、10の制定州の多くよりも明示的に、法文中で直接UL 3700または同等の全米認定認証を指定しています。</strong> ネットメータリングは明示的に除外されており、系統へ送電された余剰電力に対する補償はこの法律では発生しません。',
           '今回の調査では、バーモント州のHOA（管理組合）や賃貸人による優先規定は確認されていません――州法は系統連系と認証を対象としており、HOAの権限を扱うものではないため、リースやHOA規約は別途確認してください。',
         ],
         columns: ['項目', 'バーモント州 S.202/H.598'],
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '佛蒙特州的阳台太阳能合法吗？',
-        answer: '已生效。佛蒙特州S.202/H.598法案已于2026年7月1日生效。该法律将设备功率上限设为1,200W，并在法条中明确要求UL 3700（或同等）认证，同时明确排除净计量——是已立法的8个州中措辞最为明确的法律之一。',
+        answer: '已生效。佛蒙特州S.202/H.598法案已于2026年7月1日生效。该法律将设备功率上限设为1,200W，并在法条中明确要求UL 3700（或同等）认证，同时明确排除净计量——是已立法的10个州中措辞最为明确的法律之一。',
         bullets: [
           'S.202/H.598自2026年7月1日起生效',
           '功率上限1,200W，法律条文本身明确要求UL 3700（或同等）认证',
@@ -488,7 +488,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '佛蒙特州S.202/H.598法案有哪些要求？',
         content: [
-          '<strong>佛蒙特州的法律将设备功率上限设为1,200W，与大多数州的通用模板一致，但相比8个已立法州中的大多数，佛蒙特州在法条正文中更明确地直接列出了UL 3700或同等的全国认可认证。</strong> 净计量被明确排除——根据该法律，输出到电网的多余电力不获得补偿。',
+          '<strong>佛蒙特州的法律将设备功率上限设为1,200W，与大多数州的通用模板一致，但相比10个已立法州中的大多数，佛蒙特州在法条正文中更明确地直接列出了UL 3700或同等的全国认可认证。</strong> 净计量被明确排除——根据该法律，输出到电网的多余电力不获得补偿。',
           '在本次核查中，未确认佛蒙特州存在业主协会（HOA）或房东优先条款——请单独查看你的租约或HOA公约，因为州法针对的是电网互联和认证问题，而非HOA权限。',
         ],
         columns: ['项目', '佛蒙特州 S.202/H.598'],
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Es legal la energía solar de balcón en Vermont?',
-        answer: 'En vigor. La ley S.202/H.598 de Vermont entró en vigor el 1 de julio de 2026. Limita los dispositivos a 1,200W y exige explícitamente, en el propio texto de la ley, la certificación UL 3700 (o equivalente), excluyendo el net metering — una de las leyes redactadas de forma más explícita entre los 8 estados que la han aprobado.',
+        answer: 'En vigor. La ley S.202/H.598 de Vermont entró en vigor el 1 de julio de 2026. Limita los dispositivos a 1,200W y exige explícitamente, en el propio texto de la ley, la certificación UL 3700 (o equivalente), excluyendo el net metering — una de las leyes redactadas de forma más explícita entre los 10 estados que la han aprobado.',
         bullets: [
           'S.202/H.598 vigente desde el 1 de julio de 2026',
           'Tope de 1,200W, con certificación UL 3700 (o equivalente) exigida explícitamente por el propio texto de la ley',
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '¿Qué exige S.202/H.598 en Vermont?',
         content: [
-          '<strong>La ley de Vermont limita los dispositivos a 1,200W, en línea con la plantilla mayoritaria, pero es más explícita que la mayoría de los 8 estados que han aprobado leyes similares al nombrar directamente UL 3700 o una certificación equivalente reconocida a nivel nacional en el propio texto legal.</strong> El net metering está explícitamente excluido: la energía excedente exportada a la red no recibe compensación bajo esta ley.',
+          '<strong>La ley de Vermont limita los dispositivos a 1,200W, en línea con la plantilla mayoritaria, pero es más explícita que la mayoría de los 10 estados que han aprobado leyes similares al nombrar directamente UL 3700 o una certificación equivalente reconocida a nivel nacional en el propio texto legal.</strong> El net metering está explícitamente excluido: la energía excedente exportada a la red no recibe compensación bajo esta ley.',
           'No se confirmó ninguna disposición de anulación de HOA o de arrendadores para Vermont en esta revisión — verifica tu contrato de alquiler o el reglamento de tu HOA por separado, ya que la ley estatal aborda la interconexión con la red eléctrica y la certificación, no la autoridad de las HOA.',
         ],
         columns: ['Campo', 'Vermont S.202/H.598'],
@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'A energia solar de varanda é legal em Vermont?',
-        answer: 'Em vigor. A lei S.202/H.598 de Vermont entrou em vigor em 1º de julho de 2026. Ela limita os dispositivos a 1.200W e exige explicitamente, no próprio texto da lei, a certificação UL 3700 (ou equivalente), com o net metering excluído — uma das leis com redação mais explícita entre os 8 estados que já aprovaram legislação semelhante.',
+        answer: 'Em vigor. A lei S.202/H.598 de Vermont entrou em vigor em 1º de julho de 2026. Ela limita os dispositivos a 1.200W e exige explicitamente, no próprio texto da lei, a certificação UL 3700 (ou equivalente), com o net metering excluído — uma das leis com redação mais explícita entre os 10 estados que já aprovaram legislação semelhante.',
         bullets: [
           'S.202/H.598 em vigor desde 1º de julho de 2026',
           'Limite de 1.200W, com certificação UL 3700 (ou equivalente) exigida explicitamente pelo próprio texto da lei',
@@ -702,7 +702,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'O que a lei S.202/H.598 exige em Vermont?',
         content: [
-          '<strong>A lei de Vermont limita os dispositivos a 1.200W, seguindo o modelo adotado pela maioria, mas é mais explícita do que a maioria dos 8 estados que aprovaram leis semelhantes ao citar diretamente a UL 3700 ou uma certificação equivalente reconhecida nacionalmente no próprio texto legal.</strong> O net metering é explicitamente excluído — o excedente de energia exportado para a rede não recebe compensação segundo a lei.',
+          '<strong>A lei de Vermont limita os dispositivos a 1.200W, seguindo o modelo adotado pela maioria, mas é mais explícita do que a maioria dos 10 estados que aprovaram leis semelhantes ao citar diretamente a UL 3700 ou uma certificação equivalente reconhecida nacionalmente no próprio texto legal.</strong> O net metering é explicitamente excluído — o excedente de energia exportado para a rede não recebe compensação segundo a lei.',
           'Nenhuma disposição de preempção de HOA (associação de moradores) ou de locadores foi confirmada para Vermont nesta análise — verifique seu contrato de aluguel ou o regulamento da HOA separadamente, já que a lei estadual trata da interconexão com a rede elétrica e da certificação, não da autoridade da HOA.',
         ],
         columns: ['Campo', 'Vermont S.202/H.598'],
@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '버몬트주에서 발코니 태양광은 합법입니까?',
-        answer: '시행 중입니다. 버몬트주의 S.202/H.598 법안은 2026년 7월 1일부터 시행되었습니다. 이 법은 기기 용량을 1,200W로 제한하고, 법률 조문에서 UL 3700(또는 동등 인증)을 명시적으로 요구하며, 넷미터링은 제외됩니다 — 이는 법안을 제정한 8개 주 가운데서도 조문이 특히 명시적인 법률 중 하나입니다.',
+        answer: '시행 중입니다. 버몬트주의 S.202/H.598 법안은 2026년 7월 1일부터 시행되었습니다. 이 법은 기기 용량을 1,200W로 제한하고, 법률 조문에서 UL 3700(또는 동등 인증)을 명시적으로 요구하며, 넷미터링은 제외됩니다 — 이는 법안을 제정한 10개 주 가운데서도 조문이 특히 명시적인 법률 중 하나입니다.',
         bullets: [
           'S.202/H.598은 2026년 7월 1일부터 시행 중',
           '상한 1,200W, 법률 조문 자체가 UL 3700(또는 동등 인증)을 명시적으로 요구',
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '버몬트주 S.202/H.598은 무엇을 요구합니까?',
         content: [
-          '<strong>버몬트주 법률은 대다수 주가 따르는 표준 모델과 동일하게 기기 용량을 1,200W로 제한하지만, 법안을 제정한 8개 주 대부분보다 더 명시적으로 UL 3700 또는 이에 상응하는 전국적으로 인정된 인증을 법률 조문에 직접 명시하고 있습니다.</strong> 넷미터링은 명시적으로 제외됩니다 — 이 법에 따르면 전력망으로 송출된 잉여 전력에 대한 보상은 없습니다.',
+          '<strong>버몬트주 법률은 대다수 주가 따르는 표준 모델과 동일하게 기기 용량을 1,200W로 제한하지만, 법안을 제정한 10개 주 대부분보다 더 명시적으로 UL 3700 또는 이에 상응하는 전국적으로 인정된 인증을 법률 조문에 직접 명시하고 있습니다.</strong> 넷미터링은 명시적으로 제외됩니다 — 이 법에 따르면 전력망으로 송출된 잉여 전력에 대한 보상은 없습니다.',
           '이번 검토에서는 버몬트주에 대해 HOA(주택소유자협회) 또는 임대인의 우선 규정이 확인되지 않았습니다 — 주 법률은 전력망 연계와 인증을 다루며 HOA의 권한을 다루지 않으므로, 임대 계약서나 HOA 규약을 별도로 확인하십시오.',
         ],
         columns: ['항목', '버몬트주 S.202/H.598'],
