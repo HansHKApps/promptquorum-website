@@ -1873,7 +1873,7 @@
       ]
     },
     "multimodal-local-llms": {
-      "dateModified": "2026-08-31",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -3080,7 +3080,7 @@
       ]
     },
     "mlx-vs-ollama-vs-llama-cpp-mac": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3431,7 +3431,7 @@
       "images": []
     },
     "qwen-local-deployment-guide-2026": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -4316,7 +4316,16 @@
         "ar",
         "ko"
       ],
-      "images": []
+      "images": [
+        {
+          "url": "/images/gpt-claude-gemini-which-model-context-chart-en.svg",
+          "title": "Context windows (checked 2026-10-20): GPT-6 Astra, GPT-6.1 Sol and GPT-6 Luna list 1.05M tokens; Claude Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5 and Gemini 4 Argon list 1M tokens."
+        },
+        {
+          "url": "/images/gpt-claude-gemini-which-model-price-chart-en.svg",
+          "title": "List prices per 1M tokens (USD, checked 2026-10-20): GPT-6 Astra and Claude Fable 5.1 cost $10 input / $50 output, Claude Opus 5.5 $4 / $20, GPT-6.1 Sol and Claude Sonnet 5.5 $2 / $10, GPT-6 Luna and Claude Haiku 5.5 $0.10 / $0.50. Gemini 4 Argon costs $2 / $10 until 2026-11-30, then $4 / $20."
+        }
+      ]
     },
     "write-better-code-with-ai": {
       "dateModified": "2026-08-31",
@@ -7276,7 +7285,7 @@
       ]
     },
     "local-vision-models-llava-ollama-2026": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-05-14",
       "hasSections": true,
@@ -7514,7 +7523,7 @@
       ]
     },
     "deepseek-vs-qwen-coding-local-2026": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -7532,11 +7541,11 @@
       "images": [
         {
           "url": "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-en.webp",
-          "title": "Qwen2.5-Coder 32B and DeepSeek-R1-Distill-Qwen-32B are both 32B dense models that fit an RTX 4090 24 GB at Q4_K_M; Qwen2.5-Coder targets code generation and completion, while the R1 distill targets step-by-step reasoning."
+          "title": "Current open-weight coding models from Qwen and DeepSeek, with parameters, licence and weights size as listed on Hugging Face and Ollama."
         },
         {
           "url": "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-en.webp",
-          "title": "Decision tree for DeepSeek vs Qwen coding: code must stay local and language is Rust/C++ leads to Qwen2.5-Coder 32B, budget local leads to Qwen2.5-Coder 14B, algorithmic tasks leads to DeepSeek API (now V4), Python/JS with cloud allowed leads to DeepSeek API (now V4)."
+          "title": "Decision tree: code must stay local leads to Qwen3.8-27B on a 24 GB card; self-hosting open weights on server hardware leads to DeepSeek V4; code may leave the machine leads to a vendor API."
         }
       ]
     },
@@ -9882,7 +9891,7 @@
       "images": []
     },
     "ollama-vision-models-review": {
-      "dateModified": "2026-09-06",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -11106,7 +11115,7 @@
       "images": []
     },
     "memoryai-review": {
-      "dateModified": "2026-10-19",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-10-19",
       "hasSections": true,
@@ -12798,7 +12807,7 @@
       "images": []
     },
     "swiftlm-review": {
-      "dateModified": "2026-09-19",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-09-19",
       "hasSections": true,
@@ -12872,7 +12881,7 @@
   },
   "prompt-bites": {
     "howMuchVramForLocalLlm": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -12935,7 +12944,7 @@
       "images": []
     },
     "bestOllamaModelsRtx3060": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -12971,7 +12980,7 @@
       "images": []
     },
     "howMuchRamFor7bModel": {
-      "dateModified": "2026-10-17",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -13138,7 +13147,7 @@
       "images": []
     },
     "ollama128kContextModels": {
-      "dateModified": "2026-09-02",
+      "dateModified": "2026-10-20",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
