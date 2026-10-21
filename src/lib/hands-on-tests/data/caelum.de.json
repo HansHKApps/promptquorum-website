@@ -1,0 +1,1033 @@
+{
+  "id": "pq-test-caelum-2026-10-21",
+  "hero": "caelum-home-screen",
+  "date_human": "21. Oktober 2026",
+  "captured": "21.10.2026, 10:36 bis mindestens 10:56 Uhr nach der Handyuhr",
+  "standard_version": "0.1",
+  "locale": "de",
+  "app": {
+    "name": "Caelum",
+    "slug": "caelum",
+    "vendor": "Not stated in the tester's notes; see the PromptQuorum review",
+    "category": "Lokale KI-Chat-App (Android-Smartphone)",
+    "platform": "Android",
+    "pricing_url": "https://play.google.com/store/apps/details?id=com.reactnativeai"
+  },
+  "title": "Caelum auf einem Android-Smartphone: liest einen Paketschein, stolpert bei Fakten und Logik",
+  "page_title": "Caelum-Test",
+  "dek": "Der erste Praxistest von PromptQuorum auf einem Smartphone statt auf einem Mac. Ein OnePlus 8 Pro, ein Modell-Download von 1,020 Mo und ein reiner Funktionstest: Die Einrichtung machte keine Probleme, also ging es darum, was die App kann.",
+  "seo": {
+    "title": "Caelum-Praxistest: Android-Handy, schwach bei Fakten",
+    "description": "Praxistest von Caelum auf dem OnePlus 8 Pro: Paketschein per Foto gelesen, aber falsche Nachrichtenantwort; ChatGPT bewertete einen Logik-Prompt mit 5/25."
+  },
+  "faq": [
+    [
+      "Läuft Caelum auf einem Android-Smartphone ohne Einrichtungsprobleme?",
+      "Im Test ja: Beim ersten Start lud die App 1,020 Mo mit Fortschrittsbalken und ETA herunter, und der Chat-Bildschirm erschien auf einem OnePlus 8 Pro etwa drei Minuten nach dem ersten Screenshot. Android-Version und RAM wurden nicht erfasst.",
+      "measured"
+    ],
+    [
+      "Kann Caelum ein Foto lesen?",
+      "Ja, bei einem Versuch. Bei einem fotografierten DHL-Paketschein nannte die App den Paketdienst, das Gewicht, eine Sendungsnummer und eine Route; der Tester zweifelte am Ziel und prüfte den Rest nicht am Schein.",
+      "observed"
+    ],
+    [
+      "Ist die Websuche von Caelum zuverlässig?",
+      "Nicht in der einen geprüften Antwort. Sie behauptete, Präsident Paul Kagame sei im Juli 2023 ermordet worden; eine Google-KI-Übersicht und eine weitere Prüfung sagen, er sei im Amt. Die Websuche-Schaltfläche hat außerdem zwei ähnliche Blautöne und keine Beschriftung.",
+      "observed"
+    ],
+    [
+      "Wie schnitt Caelum bei einem schweren Logik-Prompt ab?",
+      "Laut ChatGPT als Bewerter schlecht: 5/25 nach dessen eigener Skala. Der Tester prüfte die Logik nicht selbst, und die Antwort von Caelum wurde nicht festgehalten; das Ergebnis stützt sich also auf die Beschreibung von ChatGPT.",
+      "third-party"
+    ],
+    [
+      "Funktioniert Caelum offline?",
+      "Nicht getestet. Der Hersteller wirbt mit Offline-Betrieb, doch es gab keinen Test im Flugmodus, und auf keinem App-Screenshot erscheint das Wort „local“ oder „offline“.",
+      "vendor-claim"
+    ]
+  ],
+  "status": "Teilweise",
+  "published": "2026-10-21",
+  "started": "2026-10-21",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "Caelum: Local AI Assistant (Google-Play-Paket com.reactnativeai).",
+      "observed"
+    ],
+    [
+      "Version",
+      "Nicht erfasst. Der Google-Play-Eintrag, am 19. Oktober 2026 vom PromptQuorum-Verzeichnis gelesen, zeigt v1.3.1, zuletzt aktualisiert am 14. August 2025 (älter als ein Jahr). Es wird angenommen, dass dies die installierte Version ist.",
+      "assumption"
+    ],
+    [
+      "Tester",
+      "Hans Kuepper, Gründer von PromptQuorum",
+      null
+    ],
+    [
+      "Beginn",
+      "21. Oktober 2026, 10:36 Uhr nach der Handyuhr (Statusleiste). Das Datum stammt aus dem Erstellungszeitpunkt der Notizdatei, 10:37 Uhr Ortszeit.",
+      "assumption"
+    ],
+    [
+      "Ende",
+      "Mindestens 10:56 Uhr nach der Handyuhr (Statusleiste). Die späteren Gegenprüfungen mit anderen Modellen tragen keine Uhrzeit.",
+      "measured"
+    ],
+    [
+      "Hardware",
+      "OnePlus 8 Pro (laut Tester). Chip, RAM-Variante und Akkuzustand nicht erfasst. Drittquelle: ein Smartphone von 2020 mit Snapdragon 865 und 8 oder 12 GB RAM (hier nicht überprüft).",
+      "third-party"
+    ],
+    [
+      "System",
+      "Android; Version nicht erfasst. Netzwerk: Die Statusleiste zeigt um 10:36 Uhr 5G und ab 10:39 Uhr ein WLAN-Symbol.",
+      "observed"
+    ],
+    [
+      "Quelle",
+      "Nicht erfasst. Es wird Google Play angenommen.",
+      "assumption"
+    ],
+    [
+      "Download",
+      "1,020 Mo Modelldaten beim ersten Start (so von der App angezeigt); 1,020 Mo entsprechen etwa 1,0 GB.",
+      "measured"
+    ],
+    [
+      "Anlass des Tests",
+      "Um zu sehen, was eine reine Smartphone-KI-Chat-App in der Praxis leistet. Dies ist der erste Praxistest von PromptQuorum auf einem Smartphone und unter Android: Die sieben früheren Tests (Draw Things, BoBe, Page Assist, Msty Studio, Unsloth, DiffusionBee, LTX Desktop) liefen auf einem Mac mit 24 GB. Dass niemand sonst eine On-Device-LLM-App auf einem Android-Smartphone praktisch getestet hat, wurde nicht geprüft; die Aussage lautet „erster in dieser Reihe“.",
+      "observed"
+    ],
+    [
+      "Ziel",
+      "Nur Funktion: Chat, Foto-Eingabe, Websuche und ein schwerer Reasoning-Prompt. Das Setup war nicht die Frage, und es wurden keine Setup-Probleme erfasst.",
+      null
+    ],
+    [
+      "Genutzte KI-Hilfe",
+      "ChatGPT schrieb den Logik-Prompt und bewertete die Antworten. Grok, Claude Opus 5.5 (medium) und Claude Fable 5.1 (high) bekamen denselben Prompt als Gegenprüfung. Die Notizen wurden diktiert; die Modellnamen sind daher aus der Sprache gelesen und sollten bestätigt werden.",
+      "assumption"
+    ]
+  ],
+  "disclosure": "Der Tester hat PromptQuorum gegründet, eine Content-Seite und ein Verzeichnis zu lokalen KI-Apps. Caelum hat einen Verzeichniseintrag und einen bestehenden, separat verfassten Testbericht auf der Seite (gelistet am 19. Oktober 2026). Die Notizen halten nicht fest, ob der Tester diesen Bericht vor dem Test gelesen hat. Kontakt zum Hersteller, Zahlung und Sponsoring sind nicht verzeichnet.",
+  "verdict": {
+    "general": "Reiner Funktionstest, teilweise abgeschlossen. Auf einem OnePlus 8 Pro lud Caelum in etwa drei Minuten 1,020 Mo Modelldaten herunter und bewältigte dann Chat, Foto-Eingabe und Websuche. Den Tester beeindruckte, dass die App einen fotografierten Paketschein beschrieb. In den beiden Genauigkeitsprüfungen, die er durchführte, versagten die Antworten: Eine Nachrichtenfrage lieferte ein Attentat, das eine Drittquelle widerlegt, und ein schwerer Logik-Prompt wurde von ChatGPT als Bewerter mit 5/25 bewertet. Der Tester würde die App nicht behalten. Offline-Betrieb, Dokumente und Datenschutz wurden nicht getestet.",
+    "fit": "Für den Tester kein Fit: Er arbeitet mit Frontier-Modellen und mit lokalen Modellen auf einem Mac; aus seiner Sicht leisten kostenlose Frontier-Dienste weit mehr, und eine 1-GB-Datei auf dem Smartphone „liefert meistens nicht“. Der Fit für andere Nutzer ist nicht belegt: Die Offline-Angabe, die Dokumentfunktion und der Umgang mit Daten wurden nicht getestet."
+  },
+  "scores": [
+    [
+      "Installation",
+      4,
+      "Vorschlag auf Basis der Belege, vom Tester zu bestätigen. Der Erstdownload zeigte Größe, Fortschritt und ETA, und es wurden keine Setup-Probleme erfasst. Die Installation über den Play Store selbst wurde nicht per Screenshot festgehalten."
+    ],
+    [
+      "Einstieg und Modellauswahl",
+      null,
+      "Nicht bewertet. Auf den Screenshots erscheint keine Modellauswahl, und das Modell wird dort nie genannt; die Einstellungen wurden nicht geöffnet."
+    ],
+    [
+      "Kernfunktion",
+      2,
+      "Vorschlag auf Basis der Belege, vom Tester zu bestätigen. Die Fotobeschreibung beeindruckte den Tester; eine falsche Nachrichtenantwort und eine schwache Logikantwort (von ChatGPT bewertet, vom Tester nicht geprüft) drücken die Bewertung."
+    ],
+    [
+      "Anleitung und Iteration",
+      null,
+      "Nicht getestet. Schaltflächen für Bearbeiten, Neu generieren, Löschen, Kopieren und Vorlesen sind sichtbar; benutzt wurde nur Kopieren."
+    ],
+    [
+      "Leistung",
+      null,
+      "Nicht gemessen. Der Tester schätzt die Logikantwort auf mehr als eine Minute; RAM und Android-Version des Smartphones wurden nicht erfasst."
+    ],
+    [
+      "Dokumentation",
+      null,
+      "Nicht getestet."
+    ],
+    [
+      "Vertrauen und Datenschutz",
+      null,
+      "Nicht geprüft. Offline-Nutzung (Flugmodus) wurde nicht getestet."
+    ],
+    [
+      "Deinstallation",
+      null,
+      "Nicht getestet."
+    ]
+  ],
+  "scores_note": "Die Bewertungen sind Vorschläge, abgeleitet aus den folgenden Belegen (1 = schlecht, 5 = sehr gut). Sie sind vom Tester zu bestätigen. Nur zwei Dimensionen sind bewertet; der Rest wurde nicht getestet.",
+  "tldr": [
+    [
+      "observed",
+      "Erster Test dieser Reihe auf einem Smartphone: ein OnePlus 8 Pro mit Android. Die sieben früheren Tests liefen auf einem Mac mit 24 GB."
+    ],
+    [
+      "measured",
+      "Erster Start: Die App lädt 1,020 Mo Daten herunter, mit Fortschrittsbalken, Größenanzeige und ETA, und erreichte den Chat-Bildschirm etwa drei Minuten nach dem ersten Screenshot."
+    ],
+    [
+      "observed",
+      "Foto-Eingabe funktionierte: Auf die Frage „what is the picture about“ zu einem fotografierten DHL-Paketschein antwortete die App mit Paketdienst, Gewicht, einer Sendungsnummer und einer Route. Der Tester zweifelte am Ziel."
+    ],
+    [
+      "observed",
+      "Auf eine Frage zu Ruanda behauptete die App, Präsident Paul Kagame sei im Juli 2023 ermordet worden. Eine Google-KI-Übersicht, die der Tester sah, sagt, er sei seit 2000 im Amt und im Juli 2024 wiedergewählt worden."
+    ],
+    [
+      "third-party",
+      "ChatGPT als Bewerter gab der Antwort der App auf einen schweren Logik-Prompt 5/25 („qualitative evaluation, not a standardized benchmark score“). Der Tester prüfte die Logik nicht selbst."
+    ],
+    [
+      "tester-view",
+      "Er würde die App nicht behalten: Kostenlose Frontier-Dienste leisten weit mehr, und die lokale KI-Seite wird in der App kaum erklärt."
+    ]
+  ],
+  "quotes": [
+    "Wow, diese kleine App kann Bilder lesen und mir den Inhalt der Bilder liefern.",
+    "Sie verpacken immer alles schön, und etwas schön zu verpacken lässt Leute glauben, dass es richtig ist. Aber dann ist es nicht richtig.",
+    "Kostenlose Dienste auf Frontier-Modellen können hundertmal mehr. Warum sollte ich mein Smartphone mit einer Ein-Gigabyte-Datei blockieren, die meistens nicht liefert?"
+  ],
+  "quote_note": "Notizen des Testers, wörtlich zitiert (sie wurden diktiert; englisches Original). Das erste Zitat folgt auf den fotografierten DHL-Schein; das zweite betrifft kleine lokale Modelle allgemein; das dritte ist sein Grund, die App nicht zu behalten, und „hundertmal“ ist eine Redewendung, keine Messung.",
+  "moments_title": "Sechs Momente, die diesen Test geprägt haben",
+  "moments_nav": "Sechs Momente",
+  "moments": [
+    [
+      "Ein erster Start mit 1,020 Mo",
+      "Status 10:36 Uhr: 41 Mo von 1,020 Mo, ETA 3 m 8 s, 5.60 MB/s in der Statusleiste. Der Tipp sagt, die App nicht zu beenden, während das Modell lädt.",
+      "caelum-download-progress",
+      "chapter-download"
+    ],
+    [
+      "Sie liest ein Foto",
+      "Bei einem DHL-Schein nennt sie Paketdienst, Gewicht, Sendungsnummer und Route. Der Tester war beeindruckt, zweifelte aber an „Switzerland“. Sendungsnummer für die Veröffentlichung geschwärzt.",
+      "caelum-parcel-slip-description",
+      "chapter-photo"
+    ],
+    [
+      "Zwei Blautöne",
+      "Die Globus-Schaltfläche wird dunkelblau, solange „Searching the web...“ angezeigt wird. Der Tester konnte nicht erkennen, wann die Websuche an oder aus ist.",
+      "caelum-web-search-running",
+      "chapter-search"
+    ],
+    [
+      "Eine falsche Attentatsbehauptung",
+      "Die Antwort berichtet vom Attentat auf Präsident Paul Kagame im Juli 2023 und beruft sich auf „Reuters and BBC“. Eine Drittquelle sagt, er sei im Amt und im Juli 2024 wiedergewählt worden.",
+      "caelum-rwanda-assassination-claim",
+      "chapter-rwanda"
+    ],
+    [
+      "Der Logik-Stresstest",
+      "Ein langer, ordentlicher Bericht; das Urteil von ChatGPT: 5/25, eine richtig wirkende Schlussfolgerung ohne den eigentlichen Widerspruch. Screenshots des Bewerters gehören einem anderen Dienst und werden nicht gezeigt.",
+      null,
+      "chapter-logic"
+    ],
+    [
+      "Die Entscheidung",
+      "Würde er sie behalten? Nein. Kostenlose Frontier-Dienste leisten viel mehr, und die App sagt kaum, dass die KI lokal läuft.",
+      null,
+      "chapter-decision"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "Der Eintrag",
+      "items": [
+        [
+          "third-party",
+          "Das PromptQuorum-Verzeichnis führt Caelum als kostenlose Android-Chat-App mit geschlossenem Quellcode, die nach eigener Angabe KI offline ausführt, mit Dokumentfragen und optionaler Websuche. Es verzeichnet kein benanntes Modell, eine Website, die nicht mehr auflöst, 10K+ Play-Downloads, Android 7.0+ und kein Update seit dem 14. August 2025 (Daten gelesen am 19. Oktober 2026; das Update-Datum ist älter als ein Jahr).",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-download",
+      "title": "Erster Start und Download (10:36 bis 10:39 Uhr)",
+      "items": [
+        [
+          "measured",
+          "Der erste Bildschirm zeigt „downloading needed data...“, 41 Mo/1020 Mo, ETA 3m 8s, mit einem Tipp-Kasten und „Tap to see other tips...“. Die Angabe 5.60 MB/s ist die eigene Anzeige der Statusleiste.",
+          "caelum-download-progress"
+        ],
+        [
+          "assumption",
+          "Der nächste Screenshot um 10:39 Uhr zeigt den Chat-Startbildschirm. Das Ende des Downloads wurde nicht per Screenshot festgehalten; „etwa drei Minuten“ ist daher aus den beiden Uhrzeiten abgeleitet.",
+          null
+        ],
+        [
+          "tester-view",
+          "Der Tester nannte den Bildschirm „very colorful, very beautiful“ und den Eingabebereich „a little bit crowded“.",
+          null
+        ],
+        [
+          "observed",
+          "Die angezeigte Einheit ist „Mo“, die französische Abkürzung für Megabyte, während der übrige sichtbare Text englisch ist. Der Tester nennt den Download „one gigabyte“; 1,020 Mo sind etwa 1,0 GB.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-home",
+      "title": "Startbildschirm (10:39 Uhr)",
+      "items": [
+        [
+          "observed",
+          "„How can I help you today?“, zwei vorgeschlagene Prompts („What are the benefits of meditation?“, „Explain quantum physics in simple terms“) und eine Eingabezeile: Textfeld, blaue Globus-Schaltfläche, grüne Ordner-Schaltfläche, gelber Senden-Pfeil.",
+          "caelum-home-screen"
+        ],
+        [
+          "assumption",
+          "Über die Ordner-Schaltfläche wurde vermutlich das Foto angehängt; die Notizen sagen es nicht.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-photo",
+      "title": "Foto-Eingabe (10:43 Uhr)",
+      "items": [
+        [
+          "observed",
+          "Der Tester schickte einen fotografierten DHL-Schein mit dem Prompt „what is the picture about“. Die Antwort: ein DHL-Paket, Gewicht 4.7 kg, eine Sendungsnummer, „sent from Germany to Switzerland“.",
+          "caelum-parcel-slip-description"
+        ],
+        [
+          "tester-view",
+          "Er war beeindruckt, dass eine so kleine App Bilder liest, und schrieb: „Switzerland, not sure where it got that idea.“",
+          null
+        ],
+        [
+          "assumption",
+          "Ob Gewicht, Sendungsnummer und Route zum Schein passen, ist nicht erfasst: Der Schein selbst ist nicht in den Notizen. Nur das Ziel wurde angezweifelt.",
+          null
+        ],
+        [
+          "observed",
+          "Der Chat-Titel lautet „where is paris?“, während die sichtbare Nachricht „what is the picture about“ ist. Der Tester sagt, das System habe es „messed it up, mixed the requests“ und einen neuen Chat begonnen. Die Ursache wurde nicht gefunden.",
+          null
+        ],
+        [
+          "observed",
+          "Aktionsschaltflächen: Bearbeiten, Neu generieren und Löschen unter der Nutzernachricht; Kopieren und Vorlesen unter der Antwort. Der Bildschirm war um 10:43 Uhr im dunklen und um 10:39 Uhr im hellen Design; wie das Design wechselte, ist nicht erfasst. Der Tester: „it has a dark theme. Nice.“",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-search",
+      "title": "Websuche (10:43 bis 10:47 Uhr)",
+      "items": [
+        [
+          "observed",
+          "Während ein Kasten mit Regenbogenrahmen „Searching the web...“ anzeigt, ist die Globus-Schaltfläche dunkelblau und der Senden-Pfeil wird zu einem gelben Quadrat. Im Ruhezustand ist der Globus hellblau.",
+          "caelum-web-search-running"
+        ],
+        [
+          "tester-view",
+          "Er fand unklar, wann die Websuche an oder aus ist: „two different shades of blue“.",
+          null
+        ],
+        [
+          "assumption",
+          "Der Globus ist auch im Ruanda-Screenshot um 10:47 Uhr dunkelblau, was nahelegt, dass die Websuche an blieb.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-rwanda",
+      "title": "Die Ruanda-Frage (10:47 Uhr)",
+      "items": [
+        [
+          "observed",
+          "In einem neuen Chat mit dem Titel „what is the politi...“ sagt der sichtbare Teil der Antwort, Ruanda „has been experiencing significant political instability following the assassination of President Paul Kagame in July 2023“, mit Verweis auf „reputable news sources (like Reuters and BBC)“. Im Screenshot sind keine Links sichtbar. Die vollständige Frage wurde nicht festgehalten; es wird eine Frage zur politischen Lage in Ruanda angenommen.",
+          "caelum-rwanda-assassination-claim"
+        ],
+        [
+          "third-party",
+          "Eine Google-KI-Übersicht, die der Tester festhielt, sagt, Kagame sei seit dem 22. April 2000 im Amt und im Juli 2024 wiedergewählt worden; Googles eigener Hinweis besagt, KI-Antworten könnten Fehler enthalten. Die Übersicht zeigt das Foto einer realen Person, daher wird der Screenshot hier nicht veröffentlicht.",
+          null
+        ],
+        [
+          "third-party",
+          "Eine weitere Websuche von PromptQuorum am 21. Oktober 2026 fand seine offizielle Website und einen Wahlbericht, aber keinen Bericht über ein Attentat. Dies ist eine begrenzte Prüfung.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-logic",
+      "title": "Logik-Stresstest und Gegenprüfung (ab 10:49 Uhr)",
+      "items": [
+        [
+          "observed",
+          "ChatGPT erzeugte einen Prompt mit dem Titel „Advanced Logic Stress Test: The Blackout Protocol“, beschrieben als Test von Bedingungen, zeitlichem Schlussfolgern, Widersprüchen und mehrstufiger Deduktion. Der Tester fügte ihn in Caelum ein.",
+          null
+        ],
+        [
+          "tester-estimate",
+          "Caelum schrieb „a big report“ und schrieb eine Minute später noch; am Ende bot es eine tiefere Analyse an. Der Text der Antwort wurde nicht festgehalten; das einzige sichtbare Fragment in einer eingefügten Vorschau beginnt mit „1. Feasibility Ve...“ und „The plan is highly improbable to...“.",
+          null
+        ],
+        [
+          "third-party",
+          "Der Tester fügte die Antwort in ChatGPT ein. Dessen Urteil: „The AI sounds analytical, but it makes several serious logical errors. I would score this response quite poorly“, mit der „correct-looking conclusion — no valid plan — without establishing the actual contradiction“. Seine Bewertung: 5/25 insgesamt (Bedingungsverständnis 2/5, formale Deduktion 1/5, zeitliches Schlussfolgern 1/5, Beweisqualität 0/5, Befolgen der Anweisung 1/5), „not a standardized benchmark score“. ChatGPT schrieb außerdem: „One important correction to my own earlier analysis“.",
+          null
+        ],
+        [
+          "third-party",
+          "Um zu prüfen, ob der Prompt selbst unfair war, ließ der Tester ihn durch Grok, Claude Opus 5.5 (medium) und Claude Fable 5.1 (high) laufen und zeigte jede Antwort ChatGPT. ChatGPT bewertete die späteren Antworten besser („substantially better“, in einem Fall 8/10 bei logischer Deduktion) und fand dennoch in jeder Fehler, etwa eine Zahl von 12 gültigen Plänen, die „are actually 13“, und einen Beweis der minimalen Reparatur, der „not yet rigorous enough“ sei.",
+          null
+        ],
+        [
+          "tester-estimate",
+          "Opus antwortete „in less than one minute“; Grok arbeitete nach etwa drei Minuten noch. Beides wurde nicht gestoppt.",
+          null
+        ],
+        [
+          "assumption",
+          "Die Notizen wurden diktiert; „Croc“ und „groc“ werden als Grok gelesen, und welcher ChatGPT-Screenshot zu welchem Modell gehört, folgt der Reihenfolge der Notizen. Die Zuordnung der letzten vier Screenshots ist am unsichersten.",
+          null
+        ],
+        [
+          "tester-view",
+          "Seine Regel: immer gegenprüfen, nie einem einzelnen Modell vertrauen, „especially not the smaller one“. Er sagt außerdem, Fable habe als Erstes erklärt, was die Aufgabe war.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "Die Entscheidung",
+      "items": [
+        [
+          "tester-view",
+          "Der Tester fasst zusammen: Bilder zu lesen sei für ein kleines Modell „incredible“; Websuche sei unter vergleichbaren Apps ungewöhnlich (von PromptQuorum nicht geprüft); die Qualität sei gemischt, was bei einem 1-GB-Modell keine Überraschung ist. Die lokale Natur der KI „is actually not stressed at all“, und er bezweifelt, dass ein Nutzer wüsste, dass das Modell lokal läuft.",
+          null
+        ],
+        [
+          "tester-view",
+          "Würde er sie behalten? „No, I don't see the point.“ Kostenlose Dienste auf Frontier-Modellen leisten viel mehr, daher sei die Datei den Platz nicht wert.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-numbers",
+      "title": "Handyuhr und Akku",
+      "items": [
+        [
+          "measured",
+          "10:36 Uhr: erster Bildschirm, 41 Mo von 1,020 Mo heruntergeladen, ETA 3 m 8 s, 5.60 MB/s, 5G, Akku 70 %.",
+          null
+        ],
+        [
+          "measured",
+          "10:39 Uhr: Chat-Startbildschirm, helles Design, WLAN-Symbol, Akku 67 %.",
+          null
+        ],
+        [
+          "measured",
+          "10:43 Uhr: Fotofrage, dunkles Design, Websuche startet, Akku 66 % und 65 %.",
+          null
+        ],
+        [
+          "measured",
+          "10:47 Uhr: Ruanda-Antwort, Akku 64 %.",
+          null
+        ],
+        [
+          "measured",
+          "10:49 Uhr: ChatGPT schreibt den Logik-Prompt (in der ChatGPT-App), Akku 63 %. 10:55 bis 10:56 Uhr: ChatGPT bewertet die Logikantwort von Caelum (in der ChatGPT-App), Akku 59 %.",
+          null
+        ],
+        [
+          "assumption",
+          "Der Akku fiel in 20 Minuten bei eingeschaltetem Bildschirm und teilweiser Nutzung der ChatGPT-App von 70 % auf 59 %; nichts davon lässt sich Caelum zuordnen. Zwischen 10:39 und 10:47 Uhr, überwiegend in Caelum, fiel er von 67 % auf 64 %. Ein Speicherdiagramm ist nicht möglich, weil RAM des Smartphones und Speichernutzung der App nicht erfasst wurden. Die Durchsatzwerte in der Statusleiste (0.03 bis 0.58 KB/s auf den Chat-Screenshots) sind Einzelmomentaufnahmen, kein Datenverkehrsprotokoll, und zeigen nicht, ob die App offline ist.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "Führt KI offline aus",
+      "Google-Play-Eintrag und Datenschutzerklärung des Entwicklers, über den PromptQuorum-Bericht (gelesen am 19. Oktober 2026)",
+      "Nicht getestet (kein Test im Flugmodus). Der Download von 1,020 Mo passt zu einem On-Device-Modell (Annahme). Auf keinem der fünf App-Screenshots erscheint das Wort „local“ oder „offline“; der Tester sagt, die App betone es nicht.",
+      "assumption"
+    ],
+    [
+      "Fragen zu Dokumenten",
+      "Google-Play-Eintrag, über den PromptQuorum-Bericht",
+      "Nicht getestet. Es wurde nur Foto-Eingabe benutzt.",
+      "observed"
+    ],
+    [
+      "Optionale Websuche",
+      "Google-Play-Eintrag, über den PromptQuorum-Bericht",
+      "Funktionierte sichtbar: „Searching the web...“ erschien und eine Antwort folgte. Die eine geprüfte Antwort war in einer Kernaussage falsch (siehe CAE-09).",
+      "observed"
+    ],
+    [
+      "Kostenlos, ohne Konto",
+      "Google-Play-Eintrag, über den PromptQuorum-Bericht",
+      "Auf den Screenshots erscheint kein Anmeldebildschirm; der Rest der App wurde nicht erkundet.",
+      "observed"
+    ],
+    [
+      "Läuft ab Android 7.0",
+      "Google-Play-Eintrag, über den PromptQuorum-Bericht",
+      "Nicht getestet; die Android-Version des Testgeräts wurde nicht erfasst.",
+      "observed"
+    ]
+  ],
+  "usage_log": [
+    [
+      "Download der ersten Modelldaten",
+      "Nicht benannt",
+      "1,020 Mo heruntergeladen, Chat-Bildschirm etwa drei Minuten später",
+      "etwa 3 Min. (Uhrzeiten)",
+      "Pass",
+      [
+        "caelum-download-progress"
+      ]
+    ],
+    [
+      "Einen fotografierten Paketschein beschreiben",
+      "Nicht benannt",
+      "Paketdienst, Gewicht (4.7 kg, laut App), Sendungsnummer und Route geliefert; Ziel angezweifelt, Rest ungeprüft",
+      "Nicht gemessen",
+      "Partial",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "Websuche",
+      "Nicht benannt",
+      "„Searching the web...“ angezeigt; Globus wird dunkelblau; Zustand des Schalters unklar",
+      "Nicht gemessen",
+      "Partial",
+      [
+        "caelum-web-search-running"
+      ]
+    ],
+    [
+      "Frage zu Ruanda (Websuche offenbar an)",
+      "Nicht benannt",
+      "Meldet ein Attentat auf Präsident Kagame im Juli 2023; von einer Drittquelle widerlegt",
+      "Nicht gemessen",
+      "Fail",
+      [
+        "caelum-rwanda-assassination-claim"
+      ]
+    ],
+    [
+      "Schwerer Logik-Prompt (Blackout Protocol)",
+      "Nicht benannt",
+      "Langer strukturierter Bericht; von ChatGPT als schlecht beurteilt (5/25 nach dessen eigener Skala), vom Tester nicht geprüft",
+      "Mehr als 1 Min. (Schätzung des Testers)",
+      "Fail",
+      []
+    ],
+    [
+      "Antwort in eine andere App kopieren",
+      "Nicht benannt",
+      "Kopieren-Schaltfläche funktionierte; Antwort in ChatGPT eingefügt",
+      "Nicht gemessen",
+      "Pass",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "Lücken in der Dokumentation gelassen: App-Version, Android-Version, RAM des Smartphones, Installationsquelle der App und das Datum. Nur die Handyuhr auf den Screenshots datiert den Test."
+    ],
+    [
+      "tester-error",
+      "Die eigene Logikantwort von Caelum, den fotografierten Schein und die vollständige Ruanda-Frage nicht festgehalten. Gewicht, Sendungsnummer und Route lassen sich nicht prüfen, und das Logik-Ergebnis stützt sich auf die Beschreibung der Antwort durch ChatGPT."
+    ],
+    [
+      "tester-error",
+      "Das Logikrätsel nicht selbst geprüft („why use my brain if I have ChatGPT?“). ChatGPT schrieb das Rätsel und bewertete die Antworten; seine Angaben zur Zahl der Pläne unterscheiden sich zwischen Screenshots (13 in einem, „consistent with 12“ in einem anderen), und es ist unklar, auf welche Antwort sich jede bezieht. Der Bewerter war daher nicht unabhängig und nicht überprüft."
+    ],
+    [
+      "tester-error",
+      "Weder den Offline-Test (Flugmodus) noch die Dokumentfunktion durchgeführt, obwohl „lokale KI“ der Kern der App ist und dies die wichtigsten Herstellerangaben sind."
+    ],
+    [
+      "tester-error",
+      "Der Chat-Thread mit dem Titel „where is paris?“ enthielt eine fachfremde Fotofrage. Der Tester hielt nicht fest, was er getan hatte, um das auszulösen; daher lässt sich nicht sagen, ob es ein App-Fehler oder ein Bedienfehler ist."
+    ],
+    [
+      "tester-view",
+      "Der Tester räumt ein, dass der Prompt für ein 1-GB-Modell womöglich zu schwer war („maybe the test was too difficult“) und dass Frontier-Modelle ein unfairer Maßstab sind; dieser Bericht behält diesen Vorbehalt bei."
+    ],
+    [
+      "assumption",
+      "Die Notizen wurden diktiert. Die Modellnamen wurden als Grok, Claude Opus 5.5 (medium) und Claude Fable 5.1 (high) gelesen; sie sollten bestätigt werden."
+    ]
+  ],
+  "findings": [
+    [
+      "CAE-01",
+      "Der erste Start lädt 1,020 Mo mit Fortschrittsbalken, Größenanzeige und ETA (3 m 8 s bei 5.60 MB/s); der Chat-Bildschirm erschien etwa drei Minuten nach dem ersten Screenshot.",
+      "Einrichtung",
+      "measured",
+      "Positive",
+      [
+        "caelum-download-progress"
+      ]
+    ],
+    [
+      "CAE-02",
+      "Der Download-Bildschirm bittet darum, die App während des Downloads nicht zu beenden, und zeigt wechselnde Tipps.",
+      "Einrichtung",
+      "observed",
+      "Low",
+      [
+        "caelum-download-progress"
+      ]
+    ],
+    [
+      "CAE-03",
+      "Foto-Eingabe funktionierte: Ein fotografierter DHL-Schein wurde mit Paketdienst, Gewicht (4.7 kg, Angabe der App), Sendungsnummer und Route beschrieben.",
+      "Kernfunktion",
+      "observed",
+      "Positive",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-04",
+      "Das Ziel in dieser Beschreibung („Switzerland“) zweifelte der Tester an; die übrigen Angaben wurden nicht geprüft.",
+      "Genauigkeit",
+      "tester-view",
+      "Medium",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-05",
+      "Ein Chat mit dem Titel „where is paris?“ enthielt eine fachfremde Fotofrage; der Tester sagt, die App habe Anfragen vermischt, und er begann einen neuen Chat.",
+      "Chat-Verhalten",
+      "observed",
+      "Medium",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-06",
+      "Die Websuche-Schaltfläche hat zwei Blautöne (heller im Ruhezustand, dunkler während der Suche) und keine Beschriftung; der Tester konnte nicht erkennen, wann sie an ist.",
+      "Oberfläche",
+      "observed",
+      "Medium",
+      [
+        "caelum-web-search-running"
+      ]
+    ],
+    [
+      "CAE-07",
+      "Während der Websuche wird der Senden-Pfeil zu einem gelben Quadrat, und ein Kasten mit Regenbogenrahmen „Searching the web...“ erscheint.",
+      "Oberfläche",
+      "observed",
+      "Low",
+      [
+        "caelum-web-search-running"
+      ]
+    ],
+    [
+      "CAE-08",
+      "Ein dunkles Design existiert. Der Bildschirm war um 10:39 Uhr hell und um 10:43 Uhr dunkel; wie er wechselte, ist nicht erfasst.",
+      "Oberfläche",
+      "observed",
+      "Positive",
+      [
+        "caelum-home-screen",
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-09",
+      "Auf eine Frage zu Ruanda behauptete die App, Präsident Paul Kagame sei im Juli 2023 ermordet worden, und nannte Reuters und BBC ohne sichtbare Links; eine Drittquelle sagt, er sei im Amt und im Juli 2024 wiedergewählt worden.",
+      "Genauigkeit",
+      "observed",
+      "High",
+      [
+        "caelum-rwanda-assassination-claim"
+      ]
+    ],
+    [
+      "CAE-10",
+      "Das Modell hinter der App wird auf den Screenshots nicht genannt, und das Verzeichnis verzeichnet ebenfalls kein benanntes Modell.",
+      "Transparenz",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "CAE-11",
+      "ChatGPT bewertete die Antwort auf einen schweren Logik-Prompt mit 5/25 (eigene Skala) und sagte, sie gelange zu einer richtig wirkenden Schlussfolgerung, ohne den Widerspruch zu belegen.",
+      "Kernfunktion",
+      "third-party",
+      "High",
+      []
+    ],
+    [
+      "CAE-12",
+      "Drei andere Modelle mit demselben Prompt wurden von ChatGPT besser beurteilt, das dennoch in jedem Fehler fand; der Bewerter wurde vom Tester nicht überprüft.",
+      "Testaufbau",
+      "third-party",
+      "Medium",
+      []
+    ],
+    [
+      "CAE-13",
+      "Die Logikantwort dauerte länger als eine Minute und endete mit dem Angebot einer tieferen Analyse, die der Tester nicht wollte.",
+      "Leistung",
+      "tester-estimate",
+      "Low",
+      []
+    ],
+    [
+      "CAE-14",
+      "Die App betont nicht, dass die KI auf dem Smartphone läuft; der Tester bezweifelt, dass ein Nutzer es wüsste. Auf keinem der fünf App-Screenshots erscheint „local“ oder „offline“.",
+      "Transparenz",
+      "tester-view",
+      "Medium",
+      [
+        "caelum-home-screen"
+      ]
+    ],
+    [
+      "CAE-15",
+      "Offline-Betrieb (die Herstellerangabe) wurde nicht getestet.",
+      "Vertrauen und Datenschutz",
+      "vendor-claim",
+      "Medium",
+      []
+    ],
+    [
+      "CAE-16",
+      "Schaltflächen für Bearbeiten, Neu generieren, Löschen, Kopieren und Vorlesen sind vorhanden; Kopieren funktionierte, um eine Antwort in eine andere App zu übernehmen.",
+      "Oberfläche",
+      "observed",
+      "Positive",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-17",
+      "Der Tester würde die App nicht behalten: Kostenlose Frontier-Dienste leisten mehr, und die 1-GB-Datei ist den Platz nicht wert.",
+      "Fazit",
+      "tester-view",
+      "High",
+      []
+    ],
+    [
+      "CAE-18",
+      "Der Akku fiel zwischen 10:36 und 10:56 Uhr bei eingeschaltetem Bildschirm von 70 % auf 59 %; ein Teil dieser Zeit lief in der ChatGPT-App und lässt sich daher nicht Caelum zuordnen.",
+      "Leistung",
+      "measured",
+      "Low",
+      []
+    ]
+  ],
+  "severity_note": "Der Schweregrad bezeichnet die Auswirkung auf einen Erstnutzer. Vorgeschlagen, nicht gemessen.",
+  "audience": {
+    "fits": [
+      [
+        "third-party",
+        "Laut PromptQuorum-Bericht (von diesem Test nicht überprüft): Android-Nutzer, die eine kostenlose Chat- und Dokument-App ohne Konto wollen und ein Projekt mit geschlossenem Quellcode, ohne benanntes Modell und ohne Update seit dem 14. August 2025 akzeptieren."
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "Laut Tester: niemand, den er nennen könnte; er würde sie nicht behalten."
+      ]
+    ],
+    "retest": "Neutest nach einer neuen Play-Store-Version (das letzte Update stammt vom 14. August 2025, älter als ein Jahr), sobald der Hersteller das Modell benennt, mit einem Test im Flugmodus und einem Dokumenttest auf demselben Smartphone sowie auf einem zweiten Android-Smartphone mit bekanntem RAM und bekannter Android-Version."
+  },
+  "background_intro": "Nicht aus der Praxis. Der folgende Punkt stammt aus dem PromptQuorum-Verzeichniseintrag zu Caelum, gelesen am 19. Oktober 2026, und wurde nicht unabhängig überprüft.",
+  "background": [
+    [
+      "third-party",
+      "Ungeprüfte Verzeichnisdaten, gelesen am 19. Oktober 2026: geschlossener Quellcode, Paket com.reactnativeai, 10K+ Downloads bei Google Play, Android 7.0+, v1.3.1 aktualisiert am 14. August 2025, eine Website, die nicht mehr auflöst. Der Hersteller wird in den Notizen des Testers nicht genannt; der PromptQuorum-Bericht zu Caelum nennt den Entwickler aus einem öffentlichen Profil, und der Tester hat dies nicht geprüft."
+    ]
+  ],
+  "sources": [
+    "Hands-on-Notizen und Screenshots des Testers, 21. Oktober 2026 (Original-Word-Dokument „Caelum App on Android“; PDF der Rohnotizen folgt).",
+    "Google Play: Caelum: Local AI Assistant (https://play.google.com/store/apps/details?id=com.reactnativeai), wie am 19. Oktober 2026 im PromptQuorum-Verzeichnis erfasst.",
+    "PromptQuorum-Verzeichniseintrag und Testbericht zu Caelum (Slug: caelum).",
+    "Wahlbericht, AFP über EWN, 16. Juli 2024 (ewn.co.za/2024/07/16/rwandas-kagame-wins-fourth-term-with-99-of-vote), abgerufen am 21. Oktober 2026: Präsident Kagame mit 99 % der Stimmen wiedergewählt.",
+    "Google-KI-Übersicht zu Paul Kagame und ChatGPT-Antworten, vom Tester festgehalten (nicht erneut veröffentlicht)."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Beobachtet",
+      "meaning": "Aus erster Hand in der App, auf einem Screenshot oder in den Notizen des Testers gesehen."
+    },
+    "measured": {
+      "label": "Gemessen",
+      "meaning": "Ein Wert, der aus einem Dialog, Zähler oder Werkzeug abgelesen wurde, mit angegebener Zahl."
+    },
+    "tester-estimate": {
+      "label": "Tester-Schätzung",
+      "meaning": "Eigene Schätzung des Testers; nicht gestoppt oder gezählt."
+    },
+    "vendor-claim": {
+      "label": "Herstellerangabe",
+      "meaning": "Von der App, ihrem Store-Eintrag oder ihrer Website angegeben; nicht überprüft."
+    },
+    "third-party": {
+      "label": "Drittquelle",
+      "meaning": "Aus einer anderen Quelle (ein KI-Assistent, ein Artikel); hier nicht überprüft."
+    },
+    "assumption": {
+      "label": "Annahme",
+      "meaning": "Eine Schlussfolgerung. Sie kann falsch sein."
+    },
+    "tester-view": {
+      "label": "Tester-Meinung",
+      "meaning": "Urteil oder Meinung des Testers."
+    },
+    "tester-error": {
+      "label": "Tester-Fehler",
+      "meaning": "Wo dem Tester ein Fehler unterlaufen ist oder er etwas übersehen hat."
+    }
+  },
+  "images": [
+    {
+      "id": "caelum-home-screen",
+      "figure": 1,
+      "file": "caelum-home-screen.webp",
+      "path": "images/caelum-home-screen.webp",
+      "alt": "Startbildschirm von Caelum mit „How can I help you today?“, zwei vorgeschlagenen Prompts sowie Textfeld mit Globus-, Ordner- und Senden-Schaltfläche.",
+      "caption": "Chat-Startbildschirm um 10:39 Uhr, helles Design. Beobachtet.",
+      "role": "hero",
+      "width": 582,
+      "height": 1280,
+      "bytes": 46838,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-home"
+      ],
+      "subject": "Screenshot der Android-App Caelum",
+      "rights": "Eigener Screenshot des Testers von seinem eigenen Gerät",
+      "captured": "21.10.2026, Handyuhr laut Screenshot",
+      "original_docx_media": "Caelum App on Android.docx"
+    },
+    {
+      "id": "caelum-download-progress",
+      "figure": 2,
+      "file": "caelum-download-progress.webp",
+      "path": "images/caelum-download-progress.webp",
+      "alt": "Android-Bildschirm mit „downloading needed data“, 41 Mo von 1020 Mo, ETA 3 Minuten 8 Sekunden, mit einem Tipp-Kasten.",
+      "caption": "Erster Download um 10:36 Uhr. Gemessen; die Angabe 5.60 MB/s stammt aus der Statusleiste.",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 30174,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "moment 1",
+        "chapter-download"
+      ],
+      "subject": "Screenshot der Android-App Caelum",
+      "rights": "Eigener Screenshot des Testers von seinem eigenen Gerät",
+      "captured": "21.10.2026, Handyuhr laut Screenshot",
+      "original_docx_media": "Caelum App on Android.docx"
+    },
+    {
+      "id": "caelum-parcel-slip-description",
+      "figure": 3,
+      "file": "caelum-parcel-slip-description.webp",
+      "path": "images/caelum-parcel-slip-description.webp",
+      "alt": "Chat im dunklen Design: Die App beschreibt ein DHL-Paket mit 4.7 kg, gesendet von Deutschland in die Schweiz; Sendungsnummer geschwärzt.",
+      "caption": "Antwort auf „what is the picture about“ um 10:43 Uhr. Beobachtet; Sendungsnummer von PromptQuorum geschwärzt.",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 42104,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "moment 2",
+        "chapter-photo"
+      ],
+      "subject": "Screenshot der Android-App Caelum; Sendungsnummer von PromptQuorum geschwärzt",
+      "rights": "Eigener Screenshot des Testers von seinem eigenen Gerät; Sendungsnummer geschwärzt",
+      "captured": "21.10.2026, Handyuhr laut Screenshot",
+      "original_docx_media": "Caelum App on Android.docx"
+    },
+    {
+      "id": "caelum-web-search-running",
+      "figure": 4,
+      "file": "caelum-web-search-running.webp",
+      "path": "images/caelum-web-search-running.webp",
+      "alt": "Chat im dunklen Design mit „Searching the web...“ in einem Kasten mit Regenbogenrahmen, dunkelblauer Globus-Schaltfläche und gelbem Stopp-Quadrat.",
+      "caption": "Websuche läuft um 10:43 Uhr. Beobachtet.",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 42610,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "moment 3",
+        "chapter-search"
+      ],
+      "subject": "Screenshot der Android-App Caelum",
+      "rights": "Eigener Screenshot des Testers von seinem eigenen Gerät",
+      "captured": "21.10.2026, Handyuhr laut Screenshot",
+      "original_docx_media": "Caelum App on Android.docx"
+    },
+    {
+      "id": "caelum-rwanda-assassination-claim",
+      "figure": 5,
+      "file": "caelum-rwanda-assassination-claim.webp",
+      "path": "images/caelum-rwanda-assassination-claim.webp",
+      "alt": "Antworttext, der behauptet, Ruanda sei nach dem Attentat auf Präsident Paul Kagame im Juli 2023 instabil, mit Verweis auf Reuters und BBC.",
+      "caption": "Die falsche Behauptung um 10:47 Uhr. Beobachtet; von einer Drittquelle widerlegt.",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 69732,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "moment 4",
+        "chapter-rwanda"
+      ],
+      "subject": "Screenshot der Android-App Caelum (Antworttext)",
+      "rights": "Eigener Screenshot des Testers von seinem eigenen Gerät",
+      "captured": "21.10.2026, Handyuhr laut Screenshot",
+      "original_docx_media": "Caelum App on Android.docx"
+    }
+  ],
+  "figure_order": [
+    "caelum-home-screen",
+    "caelum-download-progress",
+    "caelum-parcel-slip-description",
+    "caelum-web-search-running",
+    "caelum-rwanda-assassination-claim"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum Praxistest · {app} · {date}",
+    "date_line": "21. Oktober 2026",
+    "nav_aria": "Abschnitte",
+    "nav": {
+      "verdict": "Fazit",
+      "moments": "Sechs Momente",
+      "story": "Ablauf",
+      "claims": "Angaben",
+      "fit": "24 GB",
+      "log": "Nutzungsprotokoll",
+      "errors": "Tester-Fehler",
+      "findings": "Befunde",
+      "background": "Hintergrund"
+    },
+    "related": "Siehe auch:",
+    "review_link": "PromptQuorum-Review zu {app}",
+    "directory_link": "Verzeichnis lokaler KI-Apps",
+    "verdict_h": "Fazit",
+    "general_assessment": "Gesamteinschätzung",
+    "fit_for_tester": "Eignung für den Einsatz des Testers",
+    "scorecard": "Bewertungsübersicht",
+    "status_prefix": "Status:",
+    "na": "k. A.",
+    "score_aria": "{n} von 5",
+    "details_h": "Testdetails",
+    "label_intro": "Jede Aussage trägt eine Kennzeichnung:",
+    "legend_link": "Was die Kennzeichnungen bedeuten",
+    "disclosure_label": "Offenlegung.",
+    "raw_notes": "PDF der Rohnotizen:",
+    "to_be_added": "folgt",
+    "moments_h": "Sechs Momente, die diesen Test geprägt haben",
+    "see_context": "Im Zusammenhang ansehen",
+    "story_h": "Wie der Test verlief",
+    "claims_h": "Angaben im Vergleich zu dem, was der Tester sah",
+    "claims_cols": [
+      "Angabe",
+      "Quelle",
+      "Beobachtung",
+      "Kennzeichnung"
+    ],
+    "fit_h": "Passt es in 24 GB?",
+    "memory_line": "{gb} GB Speicher",
+    "above": "über {gb} GB",
+    "below": "unter {gb} GB",
+    "log_h": "Nutzungsprotokoll",
+    "log_cols": [
+      "#",
+      "Aufgabe",
+      "Modell",
+      "Ergebnis",
+      "Zeit",
+      "Status",
+      "Abbildungen"
+    ],
+    "statuses": {
+      "Fail": "Fehlgeschlagen",
+      "Partial": "Teilweise",
+      "Pass": "Bestanden",
+      "Not completed": "Nicht abgeschlossen"
+    },
+    "errors_h": "Wo der Tester sich geirrt hat",
+    "findings_h": "Befundregister",
+    "filter_aria": "Befunde nach Kennzeichnung filtern",
+    "filter_all": "Alle",
+    "findings_cols": [
+      "ID",
+      "Befund",
+      "Kategorie",
+      "Kennzeichnung",
+      "Schweregrad",
+      "Abbildungen"
+    ],
+    "severities": {
+      "High": "Hoch",
+      "Medium": "Mittel",
+      "Low": "Niedrig",
+      "Positive": "Positiv"
+    },
+    "fig_abbr": "Abb.",
+    "figure": "Abbildung",
+    "enlarge": "Vergrößern:",
+    "audience_h": "Für wen es gedacht ist",
+    "likely_fit": "Voraussichtlich geeignet",
+    "likely_poor_fit": "Voraussichtlich weniger geeignet",
+    "retest": "Neutest.",
+    "background_h": "Hintergrund zum Hersteller",
+    "gallery_h": "Mehr aus dem Test",
+    "legend_h": "So lesen Sie die Kennzeichnungen",
+    "sources_h": "Quellen",
+    "footer_line": "Test-ID {id} · Teststandard v{version} · PDF der Rohnotizen: folgt",
+    "crumb_home": "Startseite",
+    "crumb_directory": "Verzeichnis",
+    "crumb_test": "{app} Praxistest",
+    "faq_h": "Häufige Fragen",
+    "more_tests_h": "Weitere Praxistests"
+  }
+}

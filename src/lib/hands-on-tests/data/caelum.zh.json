@@ -1,0 +1,1033 @@
+{
+  "id": "pq-test-caelum-2026-10-21",
+  "hero": "caelum-home-screen",
+  "date_human": "2026年10月21日",
+  "captured": "2026-10-21，手机时钟 10:36 至至少 10:56",
+  "standard_version": "0.1",
+  "locale": "zh",
+  "app": {
+    "name": "Caelum",
+    "slug": "caelum",
+    "vendor": "Not stated in the tester's notes; see the PromptQuorum review",
+    "category": "本地 AI 聊天应用（Android 手机）",
+    "platform": "Android",
+    "pricing_url": "https://play.google.com/store/apps/details?id=com.reactnativeai"
+  },
+  "title": "Android 手机上的 Caelum：能读懂包裹单，事实与逻辑却出错",
+  "page_title": "Caelum 测试",
+  "dek": "PromptQuorum 首次在手机而非 Mac 上进行的实测。设备为 OnePlus 8 Pro，需下载 1,020 Mo 模型，只测功能：安装没有出问题，所以问题是这款应用到底能做什么。",
+  "seo": {
+    "title": "Caelum 实测：Android 手机上读懂包裹单，事实出错",
+    "description": "Caelum 在 OnePlus 8 Pro 上的实测：能从照片读出包裹单，但一条新闻回答有误，一道逻辑题被 ChatGPT 评为 5/25。"
+  },
+  "faq": [
+    [
+      "Caelum 在 Android 手机上安装顺利吗？",
+      "测试中是的：在 OnePlus 8 Pro 上，首次运行下载了 1,020 Mo，带进度条和预计时间，聊天界面在第一张截图后约三分钟出现。Android 版本和内存未记录。",
+      "measured"
+    ],
+    [
+      "Caelum 能读照片吗？",
+      "能，一次尝试成功。给它一张 DHL 包裹单的照片，它说出了承运商、重量、一个运单号和一条路线；测试者对目的地有疑问，其余内容没有与包裹单逐一核对。",
+      "observed"
+    ],
+    [
+      "Caelum 的网页搜索可靠吗？",
+      "在所核对的这一条回答里不可靠。它说总统 Paul Kagame 于 2023 年 7 月遇刺；Google AI Overview 和进一步核对都表明他仍在任。网页搜索按钮还有两种相近的蓝色，且没有文字标签。",
+      "observed"
+    ],
+    [
+      "Caelum 在高难度逻辑题上表现如何？",
+      "按作为评判者的 ChatGPT 所说，表现很差：按它自己的评分标准为 5/25。测试者没有自己核对逻辑，Caelum 的回答也没有截图保存，所以这一结果依赖 ChatGPT 的描述。",
+      "third-party"
+    ],
+    [
+      "Caelum 能离线使用吗？",
+      "未测试。厂商宣称可以离线运行，但没有做飞行模式测试，应用截图中也没有出现“local”或“offline”字样。",
+      "vendor-claim"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-10-21",
+  "started": "2026-10-21",
+  "ended": null,
+  "meta": [
+    [
+      "应用",
+      "Caelum: Local AI Assistant（Google Play 包名 com.reactnativeai）。",
+      "observed"
+    ],
+    [
+      "版本",
+      "未记录。PromptQuorum 目录于 2026年10月19日 读取的 Google Play 页面显示为 v1.3.1，最后更新于 2025年8月14日（已超过一年）。假定安装的就是这个版本。",
+      "assumption"
+    ],
+    [
+      "测试者",
+      "Hans Kuepper，PromptQuorum 创始人",
+      null
+    ],
+    [
+      "开始时间",
+      "2026年10月21日，手机时钟 10:36（状态栏）。日期取自笔记文件的创建时间，本地 10:37。",
+      "assumption"
+    ],
+    [
+      "结束时间",
+      "手机时钟至少 10:56（状态栏）。后面在其他模型上做的交叉核对没有时钟记录。",
+      "measured"
+    ],
+    [
+      "硬件",
+      "OnePlus 8 Pro（测试者提供）。芯片、内存版本和电池健康度未记录。第三方资料：2020 年的手机，搭载 Snapdragon 865，内存 8 或 12 GB（此处未核实）。",
+      "third-party"
+    ],
+    [
+      "系统",
+      "Android；版本未记录。网络：状态栏在 10:36 显示 5G，从 10:39 起显示 Wi-Fi 图标。",
+      "observed"
+    ],
+    [
+      "来源",
+      "未记录。假定为 Google Play。",
+      "assumption"
+    ],
+    [
+      "下载",
+      "首次启动时需下载 1,020 Mo 的模型数据（按应用显示）；1,020 Mo 约为 1.0 GB。",
+      "measured"
+    ],
+    [
+      "测试原因",
+      "想看看一款纯手机端的 AI 聊天应用实际能做什么。这是 PromptQuorum 首次在手机上、也是首次在 Android 上进行实测：此前七项测试（Draw Things、BoBe、Page Assist、Msty Studio、Unsloth、DiffusionBee、LTX Desktop）都在一台 24 GB 的 Mac 上完成。别人是否从未对 Android 手机上的端侧 LLM 应用做过实测，我们没有核查；这里的说法只是“本系列中的第一次”。",
+      "observed"
+    ],
+    [
+      "目标",
+      "只测功能：聊天、照片输入、网页搜索和一道高难度推理题。安装不是测试的重点，也没有记录到安装问题。",
+      null
+    ],
+    [
+      "使用的 AI 辅助",
+      "ChatGPT 编写了逻辑题并评判了回答。Grok、Claude Opus 5.5（medium）和 Claude Fable 5.1（high）拿到同一道题作为交叉核对。笔记是口述的，所以模型名称是按语音记下的，需要确认。",
+      "assumption"
+    ]
+  ],
+  "disclosure": "测试者创办了 PromptQuorum，这是一个关于本地 AI 应用的内容网站和目录。Caelum 在站内有目录条目和一篇单独撰写的现有评测（2026年10月19日 收录）。笔记没有记录测试者在测试前是否读过那篇评测。笔记中没有与开发者联系、付款或赞助的记录。",
+  "verdict": {
+    "general": "只测功能，部分完成。在 OnePlus 8 Pro 上，Caelum 约三分钟下载了 1,020 Mo 的模型数据，随后可以聊天、输入照片和使用网页搜索。它能描述一张拍下来的包裹单，这让测试者印象深刻。但在他做的两项准确性核对中，回答都不过关：一条新闻问题给出了第三方来源不予支持的“遇刺”说法；一道高难度逻辑题被作为评判者的 ChatGPT 打了 5/25。测试者不会保留这款应用。离线运行、文档功能和隐私都没有测试。",
+    "fit": "不适合测试者：他日常使用前沿模型，也在 Mac 上用本地模型；在他看来，免费的前沿服务能做的多得多，手机上一个 1 GB 的文件“大多数时候都交不出东西”。是否适合其他用户尚无定论：离线说法、文档功能和数据处理都没有测试。"
+  },
+  "scores": [
+    [
+      "安装",
+      4,
+      "根据证据提出的建议值，需由测试者确认。首次运行的下载显示了大小、进度和预计时间，也没有记录到安装问题。Play 商店的安装步骤本身没有截图。"
+    ],
+    [
+      "引导与模型选择",
+      null,
+      "未评分。截图中没有出现模型选择，也从未出现模型名称；没有打开设置。"
+    ],
+    [
+      "核心功能",
+      2,
+      "根据证据提出的建议值，需由测试者确认。照片描述给测试者留下了印象；一条错误的新闻回答和一个很弱的逻辑回答（由 ChatGPT 评判，测试者未核对）拉低了分数。"
+    ],
+    [
+      "引导与迭代",
+      null,
+      "未测试。编辑、重新生成、删除、复制和朗读按钮可见；只用了复制。"
+    ],
+    [
+      "性能",
+      null,
+      "未计时。测试者估计逻辑题的回答用了一分钟以上；手机的内存和 Android 版本未记录。"
+    ],
+    [
+      "文档",
+      null,
+      "未测试。"
+    ],
+    [
+      "信任与隐私",
+      null,
+      "未做审计。离线使用（飞行模式）没有测试。"
+    ],
+    [
+      "卸载",
+      null,
+      "未测试。"
+    ]
+  ],
+  "scores_note": "评分是根据下方证据得出的建议（1 = 差，5 = 很好），需由测试者确认。只有两个维度打了分，其余没有测试。",
+  "tldr": [
+    [
+      "observed",
+      "本系列第一次在手机上测试：一台运行 Android 的 OnePlus 8 Pro。此前七项测试都在 24 GB 的 Mac 上完成。"
+    ],
+    [
+      "measured",
+      "首次运行：应用下载 1,020 Mo 的数据，带进度条、大小计数和预计时间，在第一张截图后约三分钟进入聊天界面。"
+    ],
+    [
+      "observed",
+      "照片输入可用：用一张拍下来的 DHL 包裹单问“what is the picture about”，它回答了承运商、重量、一个运单号和一条路线。测试者对目的地有疑问。"
+    ],
+    [
+      "observed",
+      "被问到卢旺达时，它说总统 Paul Kagame 于 2023 年 7 月遇刺。测试者看到的 Google AI Overview 则说他自 2000 年起在任，并在 2024 年 7 月连任。"
+    ],
+    [
+      "third-party",
+      "作为评判者的 ChatGPT 给应用对一道高难度逻辑题的回答打了 5/25（“qualitative evaluation, not a standardized benchmark score”）。测试者没有自己核对逻辑。"
+    ],
+    [
+      "tester-view",
+      "他不会保留这款应用：免费的前沿服务强得多，而且应用里几乎没有解释本地 AI 这一面。"
+    ]
+  ],
+  "quotes": [
+    "哇，这个小应用能读图片，还能把图片的内容告诉我。",
+    "他们总是把一切包装得很漂亮，而漂亮的包装会让人相信它是对的。可它并不对。",
+    "基于前沿模型的免费服务能做 100 倍的事。我为什么要让一个一千兆字节的文件占着我的手机，而它大多数时候都交不出东西？"
+  ],
+  "quote_note": "测试者笔记，按原文引用（笔记为口述）。第一句出现在拍下 DHL 单据之后；第二句泛指小型本地模型；第三句是他不保留这款应用的理由，其中的“100 倍”只是一种说法，不是测量值。译自英文。",
+  "moments_title": "左右这次测试的六个时刻",
+  "moments_nav": "六个时刻",
+  "moments": [
+    [
+      "1,020 Mo 的首次运行",
+      "10:36 的状态：已下载 41 Mo / 共 1,020 Mo，预计 3 m 8 s，状态栏显示 5.60 MB/s。提示要求下载模型期间不要退出应用。",
+      "caelum-download-progress",
+      "chapter-download"
+    ],
+    [
+      "它能读照片",
+      "给它一张 DHL 单据，它说出了承运商、重量、运单号和路线。测试者印象深刻，但对“Switzerland”有疑问。发布时已遮盖运单号。",
+      "caelum-parcel-slip-description",
+      "chapter-photo"
+    ],
+    [
+      "两种蓝色",
+      "显示“Searching the web...”时，地球按钮变成更深的蓝色。测试者分不清网页搜索是开还是关。",
+      "caelum-web-search-running",
+      "chapter-search"
+    ],
+    [
+      "一则不实的遇刺说法",
+      "回答称总统 Paul Kagame 于 2023 年 7 月遇刺，并引用“Reuters and BBC”。第三方来源称他仍在任，并于 2024 年 7 月连任。",
+      "caelum-rwanda-assassination-claim",
+      "chapter-rwanda"
+    ],
+    [
+      "逻辑压力测试",
+      "一份冗长而整齐的报告；ChatGPT 的评语是：5/25，结论看似正确，却没有指出真正的矛盾。评判者的截图属于另一项服务，此处不展示。",
+      null,
+      "chapter-logic"
+    ],
+    [
+      "最终决定",
+      "他会保留吗？不会。免费的前沿服务能做的多得多，而应用几乎没说 AI 是在本地运行的。",
+      null,
+      "chapter-decision"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "应用列表",
+      "items": [
+        [
+          "third-party",
+          "PromptQuorum 目录把 Caelum 列为免费、闭源的 Android 聊天应用，称其可离线运行 AI，支持文档提问和可选的网页搜索。目录中没有记录具体模型，网站已无法解析，Google Play 下载量 10K+，要求 Android 7.0+，自 2025年8月14日 起没有更新（数据读取于 2026年10月19日；更新日期已超过一年）。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-download",
+      "title": "首次启动与下载（10:36 至 10:39）",
+      "items": [
+        [
+          "measured",
+          "第一屏写着“downloading needed data...”，41 Mo/1020 Mo，预计 3m 8s，下面有提示框和“Tap to see other tips...”。5.60 MB/s 这个数字是状态栏自己的指示。",
+          "caelum-download-progress"
+        ],
+        [
+          "assumption",
+          "下一张截图（10:39）显示聊天主屏。下载结束的那一刻没有截图，所以“约三分钟”是根据两个时钟推算的。",
+          null
+        ],
+        [
+          "tester-view",
+          "测试者称这个界面“非常多彩、非常漂亮”（very colorful, very beautiful），输入区域“有点拥挤”。",
+          null
+        ],
+        [
+          "observed",
+          "显示的单位是“Mo”，即兆字节的法语缩写，而其余可见文字都是英文。测试者把这次下载称为“一千兆字节”；1,020 Mo 约为 1.0 GB。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-home",
+      "title": "主屏（10:39）",
+      "items": [
+        [
+          "observed",
+          "“How can I help you today?”、两条推荐提示（“What are the benefits of meditation?”“Explain quantum physics in simple terms”），以及一排输入控件：文本框、蓝色地球按钮、绿色文件夹按钮、黄色发送箭头。",
+          "caelum-home-screen"
+        ],
+        [
+          "assumption",
+          "照片是通过文件夹按钮附上的；笔记中没有说明。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-photo",
+      "title": "照片输入（10:43）",
+      "items": [
+        [
+          "observed",
+          "测试者发送了一张拍下来的 DHL 单据，提示词是“what is the picture about”。回答：一个 DHL 包裹，重 4.7 kg，有一个运单号，“sent from Germany to Switzerland”。",
+          "caelum-parcel-slip-description"
+        ],
+        [
+          "tester-view",
+          "他对这么小的应用能读图片印象深刻，并写道：“Switzerland, not sure where it got that idea.”",
+          null
+        ],
+        [
+          "assumption",
+          "重量、运单号和路线是否与单据相符没有记录：单据本身不在笔记里。只有目的地被质疑。",
+          null
+        ],
+        [
+          "observed",
+          "对话标题是“where is paris?”，而可见的消息是“what is the picture about”。测试者说系统“messed it up, mixed the requests”，于是他新开了一个对话。原因没有查明。",
+          null
+        ],
+        [
+          "observed",
+          "操作按钮：用户消息下方有编辑、重新生成和删除；回答下方有复制和朗读。10:43 时屏幕是深色主题，10:39 时是浅色主题；主题如何切换没有记录。测试者说：“it has a dark theme. Nice.”",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-search",
+      "title": "网页搜索（10:43 至 10:47）",
+      "items": [
+        [
+          "observed",
+          "彩虹边框的方框显示“Searching the web...”时，地球按钮是更深的蓝色，发送箭头变成黄色方块。静止时地球是较浅的蓝色。",
+          "caelum-web-search-running"
+        ],
+        [
+          "tester-view",
+          "他分不清网页搜索何时开启、何时关闭：“two different shades of blue”。",
+          null
+        ],
+        [
+          "assumption",
+          "10:47 的卢旺达截图里地球按钮同样是深蓝色，这表明网页搜索可能一直开着。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-rwanda",
+      "title": "卢旺达问题（10:47）",
+      "items": [
+        [
+          "observed",
+          "在一个标题为“what is the politi...”的新对话中，回答的可见部分称卢旺达“has been experiencing significant political instability following the assassination of President Paul Kagame in July 2023”，并引用“reputable news sources (like Reuters and BBC)”。截图中看不到任何链接。完整的问题没有截图保存；推测是一个关于卢旺达政治局势的问题。",
+          "caelum-rwanda-assassination-claim"
+        ],
+        [
+          "third-party",
+          "测试者截下的 Google AI Overview 称 Kagame 自 2000年4月22日起在任，并于 2024 年 7 月连任；Google 自己的提示说 AI 回答可能包含错误。该 Overview 里有一位真人的照片，所以这里不发布截图。",
+          null
+        ],
+        [
+          "third-party",
+          "PromptQuorum 于 2026年10月21日 又做了一次网页搜索，找到了他的官方网站和一篇选举报道，没有找到任何遇刺的报道。这只是有限的核对。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-logic",
+      "title": "逻辑压力测试与交叉核对（10:49 起）",
+      "items": [
+        [
+          "observed",
+          "ChatGPT 生成了一道题，标题为“Advanced Logic Stress Test: The Blackout Protocol”，据说考察约束、时间推理、矛盾和多步推导。测试者把它粘贴给了 Caelum。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "Caelum 写出了“a big report”，一分钟后仍在继续写；最后还提出可以再深入展开。它的回答原文没有保存；唯一可见的片段出现在粘贴预览里，以“1. Feasibility Ve...”和“The plan is highly improbable to...”开头。",
+          null
+        ],
+        [
+          "third-party",
+          "测试者把回答粘贴到 ChatGPT。它的评语：“The AI sounds analytical, but it makes several serious logical errors. I would score this response quite poorly”，并指出“correct-looking conclusion — no valid plan — without establishing the actual contradiction”。它的评分：总分 5/25（约束理解 2/5、形式推导 1/5、时间推理 1/5、论证质量 0/5、遵循指令 1/5），“not a standardized benchmark score”。ChatGPT 还写道：“One important correction to my own earlier analysis”。",
+          null
+        ],
+        [
+          "third-party",
+          "为了检验这道题本身是否不公平，测试者把它依次交给 Grok、Claude Opus 5.5（medium）和 Claude Fable 5.1（high），并把每个回答拿给 ChatGPT 看。ChatGPT 认为后面的回答更好（“substantially better”，其中一次逻辑推导 8/10），但每个回答仍有错误，例如把 12 个有效排班说成“are actually 13”，以及一个最小修复的证明“not yet rigorous enough”。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "Opus 回答“in less than one minute”；Grok 约三分钟后仍在运行。两者都没有计时。",
+          null
+        ],
+        [
+          "assumption",
+          "笔记是口述的；“Croc”和“groc”被理解为 Grok，而哪张 ChatGPT 截图对应哪个模型，是按笔记的顺序推定的。最后四张截图的对应关系最不确定。",
+          null
+        ],
+        [
+          "tester-view",
+          "他的规则：始终交叉核对，不要只信一个模型，“especially not the smaller one”。他还说 Fable 是第一个解释清楚这道题在问什么的。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "最终决定",
+      "items": [
+        [
+          "tester-view",
+          "测试者总结：对一个小模型来说，读图片“incredible”；网页搜索在同类应用中并不常见（PromptQuorum 未核查）；质量参差不齐，对 1 GB 的模型来说并不意外。AI 在本地运行这一点“is actually not stressed at all”，他怀疑用户是否会知道模型是在本地运行的。",
+          null
+        ],
+        [
+          "tester-view",
+          "他会保留吗？“No, I don't see the point.”基于前沿模型的免费服务能做的多得多，所以这个文件不值得占用空间。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-numbers",
+      "title": "手机时钟与电池",
+      "items": [
+        [
+          "measured",
+          "10:36：第一屏，已下载 41 Mo / 共 1,020 Mo，预计 3 m 8 s，5.60 MB/s，5G，电量 70%。",
+          null
+        ],
+        [
+          "measured",
+          "10:39：聊天主屏，浅色主题，Wi-Fi 图标，电量 67%。",
+          null
+        ],
+        [
+          "measured",
+          "10:43：照片提问，深色主题，网页搜索开始，电量 66% 和 65%。",
+          null
+        ],
+        [
+          "measured",
+          "10:47：卢旺达回答，电量 64%。",
+          null
+        ],
+        [
+          "measured",
+          "10:49：ChatGPT 编写逻辑题（在 ChatGPT 应用中），电量 63%。10:55 至 10:56：ChatGPT 评判 Caelum 的逻辑回答（在 ChatGPT 应用中），电量 59%。",
+          null
+        ],
+        [
+          "assumption",
+          "20 分钟内电量从 70% 降到 59%，期间屏幕一直亮着，其中一部分时间在用 ChatGPT 应用，所以这些消耗都不能算在 Caelum 头上。10:39 到 10:47 之间主要在 Caelum 里，电量从 67% 降到 64%。无法给出内存图表，因为手机内存和应用的内存占用都没有记录。状态栏里的流量读数（聊天截图中为 0.03 至 0.58 KB/s）只是单次快照，不是流量日志，也不能说明应用是否处于离线状态。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "可离线运行 AI",
+      "Google Play 页面和开发者的隐私页面，经 PromptQuorum 评测转引（2026年10月19日 读取）",
+      "未测试（没有做飞行模式测试）。1,020 Mo 的下载量与端侧模型相符（假设）。五张应用截图中都没有出现“local”或“offline”字样；测试者说应用并不强调这一点。",
+      "assumption"
+    ],
+    [
+      "可对文档提问",
+      "Google Play 页面，经 PromptQuorum 评测转引",
+      "未测试。只使用了照片输入。",
+      "observed"
+    ],
+    [
+      "可选的网页搜索",
+      "Google Play 页面，经 PromptQuorum 评测转引",
+      "看到它在运行：出现了“Searching the web...”，随后给出了回答。唯一核对过的回答在关键事实上是错的（见 CAE-09）。",
+      "observed"
+    ],
+    [
+      "免费、无需账号",
+      "Google Play 页面，经 PromptQuorum 评测转引",
+      "截图中没有出现登录界面；应用的其余部分没有探索。",
+      "observed"
+    ],
+    [
+      "支持 Android 7.0+",
+      "Google Play 页面，经 PromptQuorum 评测转引",
+      "未测试；测试手机的 Android 版本没有记录。",
+      "observed"
+    ]
+  ],
+  "usage_log": [
+    [
+      "首次运行的模型下载",
+      "未命名",
+      "下载了 1,020 Mo，约三分钟后进入聊天界面",
+      "约 3 分钟（按时钟）",
+      "Pass",
+      [
+        "caelum-download-progress"
+      ]
+    ],
+    [
+      "描述一张拍下来的包裹单",
+      "未命名",
+      "返回了承运商、重量（4.7 kg，按应用所述）、运单号和路线；目的地有疑问，其余未核对",
+      "未计时",
+      "Partial",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "网页搜索",
+      "未命名",
+      "显示“Searching the web...”；地球按钮变深蓝；开关状态不清楚",
+      "未计时",
+      "Partial",
+      [
+        "caelum-web-search-running"
+      ]
+    ],
+    [
+      "关于卢旺达的提问（网页搜索似乎已开启）",
+      "未命名",
+      "称 President Kagame 于 2023 年 7 月遇刺；与第三方来源相矛盾",
+      "未计时",
+      "Fail",
+      [
+        "caelum-rwanda-assassination-claim"
+      ]
+    ],
+    [
+      "高难度逻辑题（Blackout Protocol）",
+      "未命名",
+      "冗长的结构化报告；ChatGPT 判为很差（按 ChatGPT 自己的标准为 5/25），测试者未核对",
+      "1 分钟以上（测试者估计）",
+      "Fail",
+      []
+    ],
+    [
+      "把回答复制到另一个应用",
+      "未命名",
+      "复制按钮可用；回答已粘贴到 ChatGPT",
+      "未计时",
+      "Pass",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "记录中留有空白：应用版本、Android 版本、手机内存、应用的安装来源以及日期。只有截图中的手机时钟能给测试定个时间。"
+    ],
+    [
+      "tester-error",
+      "没有保存 Caelum 自己的逻辑回答、拍下来的单据，以及完整的卢旺达问题。重量、运单号和路线无法核对，逻辑题的结果依赖 ChatGPT 对回答的描述。"
+    ],
+    [
+      "tester-error",
+      "没有自己核对逻辑题（“why use my brain if I have ChatGPT?”）。题目由 ChatGPT 出，回答也由它评判；它关于排班数量的说法在不同截图之间不一致（一处是 13，另一处是“consistent with 12”），而每次指的是哪个回答并不清楚。因此评判者既不独立，也未经核实。"
+    ],
+    [
+      "tester-error",
+      "没有做离线测试（飞行模式），也没有测试文档功能，尽管“本地 AI”正是这款应用的卖点，而这些又是厂商的主要说法。"
+    ],
+    [
+      "tester-error",
+      "标题为“where is paris?”的对话里放进了一个无关的照片问题。测试者没有记录自己做了什么导致这种情况，所以无法判断这是应用的缺陷还是操作失误。"
+    ],
+    [
+      "tester-view",
+      "测试者承认这道题对一个 1 GB 的模型可能太难了（“maybe the test was too difficult”），拿前沿模型当标尺也不公平；本报告保留了这一说明。"
+    ],
+    [
+      "assumption",
+      "笔记是口述的。模型名称按语音记为 Grok、Claude Opus 5.5（medium）和 Claude Fable 5.1（high）；需要确认。"
+    ]
+  ],
+  "findings": [
+    [
+      "CAE-01",
+      "首次运行下载 1,020 Mo，带进度条、大小计数和预计时间（5.60 MB/s 时为 3 m 8 s）；聊天界面在第一张截图后约三分钟出现。",
+      "安装",
+      "measured",
+      "Positive",
+      [
+        "caelum-download-progress"
+      ]
+    ],
+    [
+      "CAE-02",
+      "下载界面要求用户下载期间不要退出应用，并轮换显示提示。",
+      "安装",
+      "observed",
+      "Low",
+      [
+        "caelum-download-progress"
+      ]
+    ],
+    [
+      "CAE-03",
+      "照片输入可用：一张拍下来的 DHL 单据被描述出了承运商、重量（4.7 kg，应用的说法）、运单号和路线。",
+      "核心功能",
+      "observed",
+      "Positive",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-04",
+      "测试者对该描述中的目的地（“Switzerland”）有疑问；其他细节没有核对。",
+      "准确性",
+      "tester-view",
+      "Medium",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-05",
+      "一个标题为“where is paris?”的对话里放着一个无关的照片问题；测试者说应用把请求弄混了，于是他新开了一个对话。",
+      "对话处理",
+      "observed",
+      "Medium",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-06",
+      "网页搜索按钮有两种蓝色（静止时较浅，搜索时较深），且没有文字标签；测试者分不清它何时开启。",
+      "界面",
+      "observed",
+      "Medium",
+      [
+        "caelum-web-search-running"
+      ]
+    ],
+    [
+      "CAE-07",
+      "网页搜索期间，发送箭头变成黄色方块，并出现彩虹边框的“Searching the web...”方框。",
+      "界面",
+      "observed",
+      "Low",
+      [
+        "caelum-web-search-running"
+      ]
+    ],
+    [
+      "CAE-08",
+      "有深色主题。10:39 时屏幕是浅色，10:43 时是深色；如何切换没有记录。",
+      "界面",
+      "observed",
+      "Positive",
+      [
+        "caelum-home-screen",
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-09",
+      "被问到卢旺达时，应用称总统 Paul Kagame 于 2023 年 7 月遇刺，并引用 Reuters 和 BBC，但看不到链接；第三方来源称他仍在任，并于 2024 年 7 月连任。",
+      "准确性",
+      "observed",
+      "High",
+      [
+        "caelum-rwanda-assassination-claim"
+      ]
+    ],
+    [
+      "CAE-10",
+      "截图中没有写明应用背后的模型，目录也没有记录具体模型。",
+      "透明度",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "CAE-11",
+      "ChatGPT 给一道高难度逻辑题的回答打了 5/25（它自己的标准），并说它得出了看似正确的结论，却没有论证出真正的矛盾。",
+      "核心功能",
+      "third-party",
+      "High",
+      []
+    ],
+    [
+      "CAE-12",
+      "另外三个模型拿到同一道题，被 ChatGPT 评为更好，但每个仍有错误；评判者未经测试者核实。",
+      "测试设计",
+      "third-party",
+      "Medium",
+      []
+    ],
+    [
+      "CAE-13",
+      "逻辑题的回答超过一分钟，最后还提出可以再深入展开，而测试者并不想要。",
+      "性能",
+      "tester-estimate",
+      "Low",
+      []
+    ],
+    [
+      "CAE-14",
+      "应用没有强调 AI 是在手机上运行的；测试者怀疑用户是否知道。五张应用截图中都没有出现“local”或“offline”。",
+      "透明度",
+      "tester-view",
+      "Medium",
+      [
+        "caelum-home-screen"
+      ]
+    ],
+    [
+      "CAE-15",
+      "离线运行（厂商的说法）没有测试。",
+      "信任与隐私",
+      "vendor-claim",
+      "Medium",
+      []
+    ],
+    [
+      "CAE-16",
+      "有编辑、重新生成、删除、复制和朗读按钮；复制可以把回答转到另一个应用。",
+      "界面",
+      "observed",
+      "Positive",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-17",
+      "测试者不会保留这款应用：免费的前沿服务能做更多，而 1 GB 的文件不值得占用空间。",
+      "结论",
+      "tester-view",
+      "High",
+      []
+    ],
+    [
+      "CAE-18",
+      "10:36 至 10:56 之间电量从 70% 降到 59%，期间屏幕一直亮着；其中一部分时间在 ChatGPT 应用里，所以不能算在 Caelum 头上。",
+      "性能",
+      "measured",
+      "Low",
+      []
+    ]
+  ],
+  "severity_note": "严重程度指对首次使用者的影响。为建议值，并非实测。",
+  "audience": {
+    "fits": [
+      [
+        "third-party",
+        "按 PromptQuorum 评测的说法（本次测试未核实）：想要一款免费、无需账号的聊天和文档应用，并能接受一个闭源、没有写明模型、自 2025年8月14日 起没有更新的项目的 Android 用户。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "按测试者的说法：他想不出谁适合；他不会保留这款应用。"
+      ]
+    ],
+    "retest": "Play 商店出现新版本后重新测试（最近一次更新是 2025年8月14日，已超过一年），等开发者写明模型之后再测，在同一部手机上做一次飞行模式测试和文档测试，并换一部已知内存和 Android 版本的 Android 手机再测。"
+  },
+  "background_intro": "非亲测。下面这一条来自 PromptQuorum 目录中的 Caelum 条目，读取于 2026年10月19日，未经独立核实。",
+  "background": [
+    [
+      "third-party",
+      "2026年10月19日 读取的未经核实的目录数据：闭源，包名 com.reactnativeai，Google Play 下载量 10K+，Android 7.0+，v1.3.1 更新于 2025年8月14日，网站已无法解析。测试者的笔记中没有写开发者是谁；PromptQuorum 对 Caelum 的评测根据一个公开主页写明了开发者是谁，测试者没有核实这一点。"
+    ]
+  ],
+  "sources": [
+    "测试者的实测笔记和截图，2026年10月21日（原始 Word 文档“Caelum App on Android”；原始笔记的 PDF 待补充）。",
+    "Google Play：Caelum: Local AI Assistant（https://play.google.com/store/apps/details?id=com.reactnativeai），按 PromptQuorum 目录 2026年10月19日 的记录。",
+    "PromptQuorum 目录中的 Caelum 条目和评测（slug：caelum）。",
+    "选举报道，AFP（经 EWN 发布），2024年7月16日（ewn.co.za/2024/07/16/rwandas-kagame-wins-fourth-term-with-99-of-vote），2026年10月21日查阅：卡加梅总统以99%得票率连任。",
+    "测试者截取的关于 Paul Kagame 的 Google AI Overview 和 ChatGPT 的回答（不再发布）。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "观察",
+      "meaning": "在应用、截图或测试者笔记中亲眼所见。"
+    },
+    "measured": {
+      "label": "测量",
+      "meaning": "从对话框、计数器或工具中读取的数值，并给出具体数字。"
+    },
+    "tester-estimate": {
+      "label": "测试者估计",
+      "meaning": "测试者自己的估计；未计时或计数。"
+    },
+    "vendor-claim": {
+      "label": "厂商声明",
+      "meaning": "由应用、商店页面或其网站所述；未核实。"
+    },
+    "third-party": {
+      "label": "第三方",
+      "meaning": "来自其他来源（AI 助手、文章）；此处未核实。"
+    },
+    "assumption": {
+      "label": "假设",
+      "meaning": "一种推断，可能是错的。"
+    },
+    "tester-view": {
+      "label": "测试者观点",
+      "meaning": "测试者的判断或意见。"
+    },
+    "tester-error": {
+      "label": "测试者失误",
+      "meaning": "测试者出错或遗漏之处。"
+    }
+  },
+  "images": [
+    {
+      "id": "caelum-home-screen",
+      "figure": 1,
+      "file": "caelum-home-screen.webp",
+      "path": "images/caelum-home-screen.webp",
+      "alt": "Caelum 主屏，显示“How can I help you today?”、两条推荐提示，以及带地球、文件夹和发送按钮的文本框",
+      "caption": "10:39 的聊天主屏，浅色主题。观察所得。",
+      "role": "hero",
+      "width": 582,
+      "height": 1280,
+      "bytes": 46838,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-home"
+      ],
+      "subject": "Caelum Android 应用的截图",
+      "rights": "测试者本人用自己设备拍摄的截图。",
+      "captured": "2026-10-21，截图所示的手机时钟",
+      "original_docx_media": "Caelum App on Android.docx"
+    },
+    {
+      "id": "caelum-download-progress",
+      "figure": 2,
+      "file": "caelum-download-progress.webp",
+      "path": "images/caelum-download-progress.webp",
+      "alt": "Android 屏幕显示“downloading needed data”，已下载 41 Mo / 共 1020 Mo，预计 3 分 8 秒，下方有提示框",
+      "caption": "10:36 的首次运行下载。观察所得；5.60 MB/s 这个数字来自状态栏。",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 30174,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "moment 1",
+        "chapter-download"
+      ],
+      "subject": "Caelum Android 应用的截图",
+      "rights": "测试者本人用自己设备拍摄的截图。",
+      "captured": "2026-10-21，截图所示的手机时钟",
+      "original_docx_media": "Caelum App on Android.docx"
+    },
+    {
+      "id": "caelum-parcel-slip-description",
+      "figure": 3,
+      "file": "caelum-parcel-slip-description.webp",
+      "path": "images/caelum-parcel-slip-description.webp",
+      "alt": "深色主题的聊天：应用描述了一个 4.7 kg 的 DHL 包裹，称从 Germany 寄往 Switzerland；运单号已遮盖",
+      "caption": "10:43 对“what is the picture about”的回答。观察所得；运单号已由 PromptQuorum 遮盖。",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 42104,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "moment 2",
+        "chapter-photo"
+      ],
+      "subject": "Caelum Android 应用的截图；运单号已由 PromptQuorum 遮盖",
+      "rights": "测试者本人用自己设备拍摄的截图。运单号已遮盖。",
+      "captured": "2026-10-21，截图所示的手机时钟",
+      "original_docx_media": "Caelum App on Android.docx"
+    },
+    {
+      "id": "caelum-web-search-running",
+      "figure": 4,
+      "file": "caelum-web-search-running.webp",
+      "path": "images/caelum-web-search-running.webp",
+      "alt": "深色主题的聊天，在彩虹边框的方框里显示“Searching the web...”，地球按钮为更深的蓝色，右侧是黄色停止方块",
+      "caption": "10:43 正在运行的网页搜索。观察所得。",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 42610,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "moment 3",
+        "chapter-search"
+      ],
+      "subject": "Caelum Android 应用的截图",
+      "rights": "测试者本人用自己设备拍摄的截图。",
+      "captured": "2026-10-21，截图所示的手机时钟",
+      "original_docx_media": "Caelum App on Android.docx"
+    },
+    {
+      "id": "caelum-rwanda-assassination-claim",
+      "figure": 5,
+      "file": "caelum-rwanda-assassination-claim.webp",
+      "path": "images/caelum-rwanda-assassination-claim.webp",
+      "alt": "回答文字称卢旺达在总统 Paul Kagame 于 2023 年 7 月遇刺后局势不稳，并引用 Reuters 和 BBC",
+      "caption": "10:47 的错误说法。观察所得；与一个第三方来源相矛盾。",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 69732,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "moment 4",
+        "chapter-rwanda"
+      ],
+      "subject": "Caelum Android 应用的截图（回答文字）",
+      "rights": "测试者本人用自己设备拍摄的截图。",
+      "captured": "2026-10-21，截图所示的手机时钟",
+      "original_docx_media": "Caelum App on Android.docx"
+    }
+  ],
+  "figure_order": [
+    "caelum-home-screen",
+    "caelum-download-progress",
+    "caelum-parcel-slip-description",
+    "caelum-web-search-running",
+    "caelum-rwanda-assassination-claim"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 上手测试 · {app} · {date}",
+    "date_line": "2026年10月21日",
+    "nav_aria": "章节",
+    "nav": {
+      "verdict": "结论",
+      "moments": "六个时刻",
+      "story": "测试经过",
+      "claims": "说法核对",
+      "fit": "24 GB",
+      "log": "使用记录",
+      "errors": "测试者失误",
+      "findings": "发现项",
+      "background": "背景"
+    },
+    "related": "相关内容：",
+    "review_link": "PromptQuorum 对 {app} 的评测",
+    "directory_link": "本地 AI 应用目录",
+    "verdict_h": "结论",
+    "general_assessment": "总体评价",
+    "fit_for_tester": "是否适合测试者的使用场景",
+    "scorecard": "评分卡",
+    "status_prefix": "状态：",
+    "na": "不适用",
+    "score_aria": "满分 5 分，得 {n} 分",
+    "details_h": "测试详情",
+    "label_intro": "每条陈述都带有标签：",
+    "legend_link": "标签含义",
+    "disclosure_label": "利益披露。",
+    "raw_notes": "原始笔记 PDF：",
+    "to_be_added": "待补充",
+    "moments_h": "左右这次测试的六个时刻",
+    "see_context": "查看上下文",
+    "story_h": "测试经过",
+    "claims_h": "官方说法与测试者所见",
+    "claims_cols": [
+      "说法",
+      "来源",
+      "所见",
+      "标签"
+    ],
+    "fit_h": "能装进 24 GB 吗？",
+    "memory_line": "{gb} GB 内存",
+    "above": "高于 {gb} GB",
+    "below": "低于 {gb} GB",
+    "log_h": "使用记录",
+    "log_cols": [
+      "#",
+      "任务",
+      "模型",
+      "结果",
+      "用时",
+      "状态",
+      "图"
+    ],
+    "statuses": {
+      "Fail": "失败",
+      "Partial": "部分完成",
+      "Pass": "通过",
+      "Not completed": "未完成"
+    },
+    "errors_h": "测试者出错的地方",
+    "findings_h": "发现清单",
+    "filter_aria": "按标签筛选发现项",
+    "filter_all": "全部",
+    "findings_cols": [
+      "编号",
+      "发现项",
+      "类别",
+      "标签",
+      "严重程度",
+      "图"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "正面"
+    },
+    "fig_abbr": "图",
+    "figure": "图",
+    "enlarge": "放大：",
+    "audience_h": "适合谁",
+    "likely_fit": "可能适合",
+    "likely_poor_fit": "可能不适合",
+    "retest": "复测。",
+    "background_h": "开发方背景",
+    "gallery_h": "测试中的更多图片",
+    "legend_h": "如何理解标签",
+    "sources_h": "资料来源",
+    "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
+    "crumb_home": "首页",
+    "crumb_directory": "目录",
+    "crumb_test": "{app} 上手测试",
+    "faq_h": "常见问题",
+    "more_tests_h": "更多实测"
+  }
+}
