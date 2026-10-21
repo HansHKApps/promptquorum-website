@@ -75,7 +75,6 @@ https://www.promptquorum.com/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-20
 https://www.promptquorum.com/local-llms/apple-on-device-ai-vs-local-llms
 https://www.promptquorum.com/local-llms/apple-silicon-local-llm-guide-2026
 https://www.promptquorum.com/local-llms/apple-silicon-m5-local-llm
-https://www.promptquorum.com/local-llms/apple-silicon-vs-nvidia-gpu-local-llm
 https://www.promptquorum.com/local-llms/apple-silicon-whisper-metal-benchmark
 https://www.promptquorum.com/local-llms/best-7b-models-consumer-hardware
 https://www.promptquorum.com/local-llms/best-ai-agent-framework
@@ -448,6 +447,7 @@ https://www.promptquorum.com/power-local-llm/loci-ai-review-offline-local-ai
 https://www.promptquorum.com/power-local-llm/logseq-copilot-review
 https://www.promptquorum.com/power-local-llm/longmemory-review
 https://www.promptquorum.com/power-local-llm/lorax-review
+https://www.promptquorum.com/power-local-llm/ltx-desktop-hands-on-test
 https://www.promptquorum.com/power-local-llm/lucebox-review
 https://www.promptquorum.com/power-local-llm/macwhisper-review
 https://www.promptquorum.com/power-local-llm/maid-review
@@ -739,11 +739,9 @@ https://www.promptquorum.com/prompt-engineering/build-a-prompt-library
 https://www.promptquorum.com/prompt-engineering/build-quality-checks
 https://www.promptquorum.com/prompt-engineering/build-your-own-prompt-framework
 https://www.promptquorum.com/prompt-engineering/chain-of-thought-prompting
-https://www.promptquorum.com/prompt-engineering/co-star-framework
 https://www.promptquorum.com/prompt-engineering/constrained-prompting
 https://www.promptquorum.com/prompt-engineering/context-windows-explained-why-ai-forgets
 https://www.promptquorum.com/prompt-engineering/control-the-output
-https://www.promptquorum.com/prompt-engineering/craft-framework
 https://www.promptquorum.com/prompt-engineering/extract-and-summarise
 https://www.promptquorum.com/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed
 https://www.promptquorum.com/prompt-engineering/fundamentals-of-prompt-optimization
@@ -785,8 +783,6 @@ https://www.promptquorum.com/prompt-engineering/promptlayer-vs-mirascope-vs-prom
 https://www.promptquorum.com/prompt-engineering/prompts-for-reliable-structured-data
 https://www.promptquorum.com/prompt-engineering/prompts-to-repeatable-workflows
 https://www.promptquorum.com/prompt-engineering/rag-explained
-https://www.promptquorum.com/prompt-engineering/risen-framework
-https://www.promptquorum.com/prompt-engineering/rtf-framework
 https://www.promptquorum.com/prompt-engineering/self-consistency-prompting
 https://www.promptquorum.com/prompt-engineering/seo-meets-ai
 https://www.promptquorum.com/prompt-engineering/specs-framework
@@ -796,7 +792,6 @@ https://www.promptquorum.com/prompt-engineering/teaching-with-ai
 https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity
 https://www.promptquorum.com/prompt-engineering/the-single-step-prompt-method
 https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting
-https://www.promptquorum.com/prompt-engineering/trace-framework
 https://www.promptquorum.com/prompt-engineering/tree-of-thought-and-react
 https://www.promptquorum.com/prompt-engineering/what-is-prompt-engineering
 https://www.promptquorum.com/prompt-engineering/which-prompt-framework-should-you-use
