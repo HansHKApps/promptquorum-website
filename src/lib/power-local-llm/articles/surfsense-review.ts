@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Who Should Use It',
         items: [
-          '**People who want NotebookLM-style research without uploading files.** Documents stay on disk unless you choose a remote model.',
+          '**People who want NotebookLM-style research without uploading files.** Per the project, documents stay on disk unless you choose a remote model.',
           '**Users who already run a local or OpenAI-compatible model** and want an agent front end for it.',
           '**Tinkerers who want to read or build the code** from the GitHub repository.',
         ],
@@ -532,7 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Für wen sich die App eignet',
         items: [
-          '**Menschen, die Recherche im Stil von NotebookLM ohne Datei-Upload wollen.** Dokumente bleiben auf der Festplatte, sofern Sie kein Remote-Modell wählen.',
+          '**Menschen, die Recherche im Stil von NotebookLM ohne Datei-Upload wollen.** Laut Projekt bleiben Dokumente auf der Festplatte, sofern Sie kein Remote-Modell wählen.',
           '**Nutzer, die bereits ein lokales oder OpenAI-kompatibles Modell betreiben** und dafür eine Agenten-Oberfläche wünschen.',
           '**Tüftler, die den Code lesen oder bauen möchten** und ihn aus dem GitHub-Repository beziehen.',
         ],
@@ -817,7 +817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Para quién es',
         items: [
-          '**Personas que quieren investigar al estilo de NotebookLM sin subir archivos.** Los documentos permanecen en el disco salvo que elijas un modelo remoto.',
+          '**Personas que quieren investigar al estilo de NotebookLM sin subir archivos.** Según el proyecto, los documentos permanecen en el disco salvo que elijas un modelo remoto.',
           '**Usuarios que ya ejecutan un modelo local o compatible con OpenAI** y quieren una interfaz de agente para él.',
           '**Aficionados que quieren leer o compilar el código** desde el repositorio de GitHub.',
         ],
@@ -1102,7 +1102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'À qui elle s’adresse',
         items: [
-          '**Ceux qui veulent une recherche à la NotebookLM sans envoyer de fichiers.** Les documents restent sur le disque, sauf si vous choisissez un modèle distant.',
+          '**Ceux qui veulent une recherche à la NotebookLM sans envoyer de fichiers.** Selon le projet, les documents restent sur le disque, sauf si vous choisissez un modèle distant.',
           '**Les utilisateurs qui exécutent déjà un modèle local ou compatible OpenAI** et veulent une interface d’agent pour celui-ci.',
           '**Les bricoleurs qui veulent lire ou compiler le code** depuis le dépôt GitHub.',
         ],
@@ -1387,7 +1387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: '向いている人',
         items: [
-          '**ファイルをアップロードせずにNotebookLM型のリサーチをしたい人。** リモートモデルを選ばない限り、文書はディスクに残ります。',
+          '**ファイルをアップロードせずにNotebookLM型のリサーチをしたい人。** プロジェクトによると、リモートモデルを選ばない限り、文書はディスクに残ります。',
           '**すでにローカルまたはOpenAI互換のモデルを動かしていて、そのエージェント用フロントエンドが欲しい人。**',
           '**GitHubのリポジトリからコードを読んだりビルドしたりしたい人。**',
         ],
@@ -1672,7 +1672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'Para quem serve',
         items: [
-          '**Quem quer pesquisa no estilo do NotebookLM sem enviar arquivos.** Os documentos ficam no disco, a menos que você escolha um modelo remoto.',
+          '**Quem quer pesquisa no estilo do NotebookLM sem enviar arquivos.** Segundo o projeto, os documentos ficam no disco, a menos que você escolha um modelo remoto.',
           '**Usuários que já executam um modelo local ou compatível com a OpenAI** e querem uma interface de agente para ele.',
           '**Entusiastas que querem ler ou compilar o código** a partir do repositório do GitHub.',
         ],
@@ -1957,7 +1957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: 'لمن يناسب',
         items: [
-          '**من يريدون بحثًا على غرار NotebookLM دون رفع الملفات.** تبقى المستندات على القرص ما لم تختر نموذجًا بعيدًا.',
+          '**من يريدون بحثًا على غرار NotebookLM دون رفع الملفات.** وفقًا للمشروع، تبقى المستندات على القرص ما لم تختر نموذجًا بعيدًا.',
           '**مستخدمون يشغّلون بالفعل نموذجًا محليًا أو متوافقًا مع OpenAI** ويريدون واجهة وكيل له.',
           '**هواة يريدون قراءة الشيفرة أو بناءها** من مستودع GitHub.',
         ],
@@ -2242,7 +2242,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: '适合哪些人',
         items: [
-          '**想要 NotebookLM 式研究、又不想上传文件的人。** 除非选用远程模型，文档都保留在磁盘上。',
+          '**想要 NotebookLM 式研究、又不想上传文件的人。** 据项目方称，除非选用远程模型，文档都保留在磁盘上。',
           '**已在运行本地或兼容 OpenAI 模型的用户**，想要一个智能体前端。',
           '**想从 GitHub 仓库阅读或自行构建代码的爱好者。**',
         ],
@@ -2527,7 +2527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-use',
         title: '이런 분께 적합합니다',
         items: [
-          '**파일을 올리지 않고 NotebookLM 방식의 리서치를 하고 싶은 분.** 원격 모델을 고르지 않는 한 문서는 디스크에 남습니다.',
+          '**파일을 올리지 않고 NotebookLM 방식의 리서치를 하고 싶은 분.** 프로젝트에 따르면 원격 모델을 고르지 않는 한 문서는 디스크에 남습니다.',
           '**이미 로컬 또는 OpenAI 호환 모델을 운영하며 에이전트 프런트엔드가 필요한 분.**',
           '**GitHub 저장소에서 코드를 읽거나 직접 빌드하고 싶은 분.**',
         ],
