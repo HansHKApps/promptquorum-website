@@ -1,0 +1,1033 @@
+{
+  "id": "pq-test-caelum-2026-10-21",
+  "hero": "caelum-home-screen",
+  "date_human": "2026년 10월 21일",
+  "captured": "2026-10-21, 휴대폰 시계 기준 10:36부터 최소 10:56까지",
+  "standard_version": "0.1",
+  "locale": "ko",
+  "app": {
+    "name": "Caelum",
+    "slug": "caelum",
+    "vendor": "Not stated in the tester's notes; see the PromptQuorum review",
+    "category": "로컬 AI 채팅 앱(Android 휴대폰)",
+    "platform": "Android",
+    "pricing_url": "https://play.google.com/store/apps/details?id=com.reactnativeai"
+  },
+  "title": "Android 휴대폰의 Caelum: 택배 송장은 읽었지만 사실과 논리에서는 흔들렸습니다",
+  "page_title": "Caelum 테스트",
+  "dek": "PromptQuorum 직접 테스트 중 Mac이 아닌 휴대폰에서 진행한 첫 번째 테스트입니다. OnePlus 8 Pro, 1,020 Mo 모델 내려받기, 기능만 보는 테스트였습니다. 설정 단계에서 문제는 없었으므로 질문은 이 앱이 무엇을 할 수 있는가였습니다.",
+  "seo": {
+    "title": "Caelum 직접 테스트: Android 휴대폰, 사실 정확도 약함",
+    "description": "OnePlus 8 Pro에서 Caelum을 직접 테스트했습니다. 송장은 읽었지만 뉴스 답변은 틀렸고 논리 문제는 ChatGPT 채점으로 5/25점이었습니다."
+  },
+  "faq": [
+    [
+      "Caelum은 Android 휴대폰에서 설정 문제 없이 실행됩니까?",
+      "테스트에서는 그랬습니다. OnePlus 8 Pro에서 첫 실행 시 진행 막대와 ETA가 표시되며 1,020 Mo를 내려받았고, 첫 스크린샷으로부터 약 3분 뒤 채팅 화면이 나타났습니다. Android 버전과 RAM은 기록하지 않았습니다.",
+      "measured"
+    ],
+    [
+      "Caelum은 사진을 읽을 수 있습니까?",
+      "한 번 시도한 결과로는 그렇습니다. 촬영한 DHL 택배 송장을 주자 운송사, 무게, 추적 번호, 경로를 답했습니다. 테스터는 목적지를 의심했고, 나머지는 송장과 대조하지 않았습니다.",
+      "observed"
+    ],
+    [
+      "Caelum의 웹 검색은 믿을 만합니까?",
+      "확인한 답변 하나에서는 그렇지 않았습니다. Paul Kagame 대통령이 2023년 7월에 암살되었다고 답했지만, Google AI 개요와 추가 확인에 따르면 그는 현직입니다. 웹 검색 버튼은 비슷한 두 가지 파란색이며 라벨도 없습니다.",
+      "observed"
+    ],
+    [
+      "Caelum은 어려운 논리 문제를 어떻게 풀었습니까?",
+      "심사 역할을 한 ChatGPT에 따르면 좋지 않았습니다. ChatGPT 자체 기준으로 5/25점입니다. 테스터는 논리를 직접 확인하지 않았고 Caelum의 답변도 저장하지 않았으므로, 이 결과는 ChatGPT의 설명에 의존합니다.",
+      "third-party"
+    ],
+    [
+      "Caelum은 오프라인으로 작동합니까?",
+      "테스트하지 않았습니다. 업체는 오프라인 작동을 내세우지만 비행기 모드 실행은 하지 않았고, 앱 스크린샷 어디에도 'local'이나 'offline'이라는 단어가 없습니다.",
+      "vendor-claim"
+    ]
+  ],
+  "status": "Partial",
+  "published": "2026-10-21",
+  "started": "2026-10-21",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "Caelum: Local AI Assistant(Google Play 패키지 com.reactnativeai).",
+      "observed"
+    ],
+    [
+      "Version",
+      "기록 없음. PromptQuorum 디렉터리가 2026년 10월 19일에 읽은 Google Play 목록에는 v1.3.1, 마지막 업데이트 2025년 8월 14일(1년 이상 지남)로 표시됩니다. 설치된 버전도 이것이라고 가정합니다.",
+      "assumption"
+    ],
+    [
+      "Tester",
+      "Hans Kuepper, PromptQuorum 설립자",
+      null
+    ],
+    [
+      "Started",
+      "2026년 10월 21일, 휴대폰 시계 기준 10:36(상태 표시줄). 날짜는 메모 파일의 생성 시각(현지 10:37)에서 가져왔습니다.",
+      "assumption"
+    ],
+    [
+      "Ended",
+      "휴대폰 시계 기준 최소 10:56(상태 표시줄). 다른 모델로 한 이후의 교차 확인에는 시계가 없습니다.",
+      "measured"
+    ],
+    [
+      "Hardware",
+      "OnePlus 8 Pro(테스터). 칩, RAM 구성, 배터리 상태는 기록 없음. 제3자 정보: Snapdragon 865와 8 또는 12 GB RAM을 탑재한 2020년 휴대폰(여기서는 검증하지 않음).",
+      "third-party"
+    ],
+    [
+      "System",
+      "Android, 버전은 기록 없음. 네트워크: 상태 표시줄에 10:36에는 5G, 10:39부터는 Wi-Fi 아이콘이 보입니다.",
+      "observed"
+    ],
+    [
+      "Source",
+      "설치 경로는 기록 없음. Google Play로 가정합니다.",
+      "assumption"
+    ],
+    [
+      "Download",
+      "첫 실행 시 모델 데이터 1,020 Mo(앱 표시 기준). 1,020 Mo는 약 1.0 GB입니다.",
+      "measured"
+    ],
+    [
+      "Why tested",
+      "휴대폰만으로 쓰는 AI 채팅 앱이 실제로 무엇을 하는지 보기 위해서입니다. 휴대폰, 그리고 Android에서 진행한 PromptQuorum 직접 테스트로는 이것이 처음입니다. 이전 일곱 건(Draw Things, BoBe, Page Assist, Msty Studio, Unsloth, DiffusionBee, LTX Desktop)은 24 GB Mac에서 진행했습니다. 다른 누구도 Android 휴대폰에서 온디바이스 LLM 앱을 직접 테스트하지 않았는지는 확인하지 않았으며, 주장은 '이 시리즈에서 처음'입니다.",
+      "observed"
+    ],
+    [
+      "Objective",
+      "기능만 확인: 채팅, 사진 입력, 웹 검색, 어려운 추론 문제 하나. 설정은 질문 대상이 아니었으며 설정 문제는 기록되지 않았습니다.",
+      null
+    ],
+    [
+      "AI help used",
+      "ChatGPT가 논리 문제를 만들고 답변을 심사했습니다. Grok, Claude Opus 5.5(medium), Claude Fable 5.1(high)에는 교차 확인용으로 같은 문제를 주었습니다. 메모는 음성으로 받아 적은 것이므로 모델 이름은 말을 듣고 옮긴 것이며 확인이 필요합니다.",
+      "assumption"
+    ]
+  ],
+  "disclosure": "테스터는 로컬 AI 앱에 관한 콘텐츠 사이트이자 디렉터리인 PromptQuorum을 설립했습니다. Caelum은 디렉터리 항목과, 사이트에 이미 따로 작성된 리뷰가 있습니다(2026년 10월 19일 등재). 테스터가 테스트 전에 그 리뷰를 읽었는지는 메모에 기록되어 있지 않습니다. 제작자와의 접촉, 대가 지급, 후원은 기록되어 있지 않습니다.",
+  "verdict": {
+    "general": "기능만 본 테스트이며 일부만 완료했습니다. OnePlus 8 Pro에서 Caelum은 약 3분 만에 모델 데이터 1,020 Mo를 내려받은 뒤 채팅, 사진 입력, 웹 검색을 처리했습니다. 테스터는 촬영한 택배 송장을 설명하는 데 감탄했습니다. 정확도를 본 두 가지 확인에서는 답변이 실패했습니다. 뉴스 질문에는 제3자 출처와 모순되는 암살 사건을 답했고, 어려운 논리 문제는 심사 역할을 한 ChatGPT에게서 5/25점을 받았습니다. 테스터는 이 앱을 계속 쓰지 않겠다고 했습니다. 오프라인 작동, 문서, 개인정보는 테스트하지 않았습니다.",
+    "fit": "테스터에게는 맞지 않습니다. 그는 최첨단 모델과 Mac의 로컬 모델을 함께 쓰며, 그의 견해로는 무료 최첨단 서비스가 훨씬 많은 일을 하고 휴대폰의 1 GB 파일은 '대부분의 경우 제 몫을 하지 못'합니다. 다른 사용자에게 맞는지는 확인되지 않았습니다. 오프라인 주장, 문서 기능, 데이터 처리는 테스트하지 않았습니다."
+  },
+  "scores": [
+    [
+      "설치",
+      4,
+      "근거에서 도출한 제안이며 확정은 테스터가 합니다. 첫 실행 내려받기에 크기, 진행률, ETA가 표시되었고 설정 문제는 기록되지 않았습니다. Play 스토어 설치 단계 자체는 스크린샷으로 남기지 않았습니다."
+    ],
+    [
+      "온보딩과 모델 선택",
+      null,
+      "점수 없음. 스크린샷에 모델 선택 화면이 없고 모델 이름도 나오지 않으며, 설정은 열지 않았습니다."
+    ],
+    [
+      "핵심 기능",
+      2,
+      "근거에서 도출한 제안이며 확정은 테스터가 합니다. 사진 설명은 테스터에게 깊은 인상을 주었지만, 틀린 뉴스 답변 하나와 약한 논리 답변(ChatGPT가 심사했고 테스터는 확인하지 않음)이 점수를 낮춥니다."
+    ],
+    [
+      "안내와 반복 작업",
+      null,
+      "테스트하지 않음. 편집, 다시 생성, 삭제, 복사, 읽어 주기 버튼이 보이지만 복사만 사용했습니다."
+    ],
+    [
+      "성능",
+      null,
+      "시간을 재지 않음. 테스터는 논리 답변에 1분 넘게 걸렸다고 추정합니다. 휴대폰의 RAM과 Android 버전은 기록하지 않았습니다."
+    ],
+    [
+      "문서",
+      null,
+      "테스트하지 않음."
+    ],
+    [
+      "신뢰와 개인정보",
+      null,
+      "감사하지 않음. 오프라인 사용(비행기 모드)은 테스트하지 않았습니다."
+    ],
+    [
+      "삭제",
+      null,
+      "테스트하지 않음."
+    ]
+  ],
+  "scores_note": "점수는 아래 근거에서 도출한 제안입니다(1 = 나쁨, 5 = 매우 좋음). 확정은 테스터가 합니다. 두 항목만 점수를 매겼고 나머지는 테스트하지 않았습니다.",
+  "tldr": [
+    [
+      "observed",
+      "이 시리즈에서 휴대폰으로 진행한 첫 테스트입니다. Android를 쓰는 OnePlus 8 Pro를 사용했습니다. 이전 일곱 건은 24 GB Mac에서 진행했습니다."
+    ],
+    [
+      "measured",
+      "첫 실행: 앱은 진행 막대, 크기 카운터, ETA와 함께 데이터 1,020 Mo를 내려받았고, 첫 스크린샷으로부터 약 3분 뒤 채팅 화면에 도달했습니다."
+    ],
+    [
+      "observed",
+      "사진 입력이 작동했습니다. 촬영한 DHL 택배 송장과 함께 'what is the picture about'라고 묻자 운송사, 무게, 추적 번호, 경로를 답했습니다. 테스터는 목적지를 의심했습니다."
+    ],
+    [
+      "observed",
+      "르완다에 관한 질문에 Paul Kagame 대통령이 2023년 7월에 암살되었다고 답했습니다. 테스터가 본 Google AI 개요에 따르면 그는 2000년부터 재임 중이며 2024년 7월에 재선되었습니다."
+    ],
+    [
+      "third-party",
+      "심사 역할을 한 ChatGPT는 어려운 논리 문제에 대한 앱의 답변에 5/25점을 주었습니다('qualitative evaluation, not a standardized benchmark score'). 테스터는 논리를 직접 확인하지 않았습니다."
+    ],
+    [
+      "tester-view",
+      "그는 이 앱을 계속 쓰지 않겠다고 했습니다. 무료 최첨단 서비스가 훨씬 많은 일을 하며, 앱 안에는 로컬 AI라는 점이 거의 설명되어 있지 않다는 이유입니다."
+    ]
+  ],
+  "quotes": [
+    "와, 이 작은 앱이 사진을 읽고 사진의 내용을 알려 줄 수 있네요.",
+    "이런 것들은 늘 보기 좋게 포장하고, 보기 좋게 포장하면 사람들은 그게 맞다고 믿습니다. 하지만 맞지 않습니다.",
+    "무료 서비스의 최첨단 모델은 100배는 더 할 수 있습니다. 대부분 제 몫을 못 하는 1 GB짜리 파일로 왜 제 휴대폰을 막아야 합니까?"
+  ],
+  "quote_note": "테스터의 메모이며, 쓰인 그대로 인용했습니다(음성으로 받아 적은 것입니다). 첫 번째 인용은 촬영한 DHL 송장 뒤의 말이고, 두 번째는 작은 로컬 모델 전반에 관한 말이며, 세 번째는 앱을 계속 쓰지 않으려는 이유입니다. '100배'는 측정값이 아니라 비유적 표현입니다.",
+  "moments_title": "이 테스트를 형성한 여섯 가지 순간",
+  "moments_nav": "여섯 가지 순간",
+  "moments": [
+    [
+      "1,020 Mo 첫 실행",
+      "상태 10:36: 1,020 Mo 중 41 Mo, ETA 3 m 8 s, 상태 표시줄에 5.60 MB/s. 팁은 모델을 내려받는 동안 앱을 종료하지 말라고 안내합니다.",
+      "caelum-download-progress",
+      "chapter-download"
+    ],
+    [
+      "사진을 읽다",
+      "DHL 송장을 주자 운송사, 무게, 추적 번호, 경로를 답했습니다. 테스터는 감탄했지만 'Switzerland'는 의심했습니다. 추적 번호는 게시를 위해 가렸습니다.",
+      "caelum-parcel-slip-description",
+      "chapter-photo"
+    ],
+    [
+      "두 가지 파란색",
+      "'Searching the web...'이 표시되는 동안 지구본 버튼이 더 짙은 파란색으로 바뀝니다. 테스터는 웹 검색이 켜져 있는지 꺼져 있는지 알 수 없었습니다.",
+      "caelum-web-search-running",
+      "chapter-search"
+    ],
+    [
+      "잘못된 암살 주장",
+      "답변은 Paul Kagame 대통령이 2023년 7월에 암살되었다고 하며 'Reuters and BBC'를 인용합니다. 제3자 출처에 따르면 그는 현직이며 2024년 7월에 재선되었습니다.",
+      "caelum-rwanda-assassination-claim",
+      "chapter-rwanda"
+    ],
+    [
+      "논리 스트레스 테스트",
+      "길고 정돈된 보고서이지만, ChatGPT의 평가는 5/25점으로 결론은 그럴듯해 보여도 실제 모순은 짚지 못했다는 것입니다. 심사자의 스크린샷은 다른 서비스의 것이므로 싣지 않습니다.",
+      null,
+      "chapter-logic"
+    ],
+    [
+      "결정",
+      "계속 쓰겠느냐고요? 아니요. 무료 최첨단 서비스가 훨씬 많은 일을 하며, 앱은 AI가 로컬에서 실행된다는 점을 거의 알려 주지 않습니다.",
+      null,
+      "chapter-decision"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "목록 정보",
+      "items": [
+        [
+          "third-party",
+          "PromptQuorum 디렉터리는 Caelum을 오프라인으로 AI를 실행한다고 밝히는 무료 비공개 소스 Android 채팅 앱으로 소개하며, 문서 질문과 선택형 웹 검색을 제공합니다. 모델 이름은 기록되어 있지 않고, 웹사이트는 더 이상 열리지 않으며, Play 다운로드는 10K+, Android 7.0+, 2025년 8월 14일 이후 업데이트가 없습니다(데이터는 2026년 10월 19일에 읽었으며, 업데이트 날짜는 1년 이상 지났습니다).",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-download",
+      "title": "첫 실행과 내려받기(10:36~10:39)",
+      "items": [
+        [
+          "measured",
+          "첫 화면에는 'downloading needed data...', 41 Mo/1020 Mo, ETA 3m 8s, 팁 상자와 'Tap to see other tips...'가 표시됩니다. 5.60 MB/s는 상태 표시줄 자체의 표시값입니다.",
+          "caelum-download-progress"
+        ],
+        [
+          "assumption",
+          "10:39의 다음 스크린샷은 채팅 홈 화면입니다. 내려받기가 끝나는 순간은 스크린샷으로 남기지 않았으므로 '약 3분'은 두 시계에서 계산한 값입니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "테스터는 이 화면을 '아주 화려하고 아주 예쁘다', 입력 영역을 '조금 빽빽하다'고 평했습니다.",
+          null
+        ],
+        [
+          "observed",
+          "표시된 단위는 프랑스어의 메가바이트 약어인 'Mo'이고, 화면에 보이는 나머지 글은 영어입니다. 테스터는 내려받기를 '1 기가바이트'라고 부르며, 1,020 Mo는 약 1.0 GB입니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-home",
+      "title": "홈 화면(10:39)",
+      "items": [
+        [
+          "observed",
+          "'How can I help you today?', 추천 프롬프트 두 개('What are the benefits of meditation?', 'Explain quantum physics in simple terms'), 그리고 입력 줄: 텍스트 필드, 파란 지구본 버튼, 초록 폴더 버튼, 노란 전송 화살표.",
+          "caelum-home-screen"
+        ],
+        [
+          "assumption",
+          "사진은 폴더 버튼으로 첨부한 것으로 보이지만, 메모에는 적혀 있지 않습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-photo",
+      "title": "사진 입력(10:43)",
+      "items": [
+        [
+          "observed",
+          "테스터는 촬영한 DHL 송장을 'what is the picture about'라는 프롬프트와 함께 보냈습니다. 답변은 DHL 소포, 무게 4.7 kg, 추적 번호, 'sent from Germany to Switzerland'였습니다.",
+          "caelum-parcel-slip-description"
+        ],
+        [
+          "tester-view",
+          "그는 이렇게 작은 앱이 사진을 읽는다는 점에 감탄했고, 'Switzerland, not sure where it got that idea.'라고 적었습니다.",
+          null
+        ],
+        [
+          "assumption",
+          "무게, 추적 번호, 경로가 송장과 맞는지는 기록되어 있지 않습니다. 송장 자체가 메모에 없기 때문입니다. 의심한 것은 목적지뿐입니다.",
+          null
+        ],
+        [
+          "observed",
+          "채팅 제목은 'where is paris?'인데 화면에 보이는 메시지는 'what is the picture about'입니다. 테스터는 시스템이 '엉망으로 만들고 요청을 뒤섞었다'고 말하며 새 채팅을 시작했습니다. 원인은 찾지 못했습니다.",
+          null
+        ],
+        [
+          "observed",
+          "동작 버튼: 사용자 메시지 아래에 편집, 다시 생성, 삭제, 답변 아래에 복사와 읽어 주기. 화면은 10:43에는 어두운 테마, 10:39에는 밝은 테마였으며 테마가 바뀐 경위는 기록되어 있지 않습니다. 테스터: 'it has a dark theme. Nice.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-search",
+      "title": "웹 검색(10:43~10:47)",
+      "items": [
+        [
+          "observed",
+          "무지개색 테두리 상자에 'Searching the web...'이 표시되는 동안 지구본 버튼은 더 짙은 파란색이고 전송 화살표는 노란 사각형이 됩니다. 대기 상태에서는 지구본이 더 옅은 파란색입니다.",
+          "caelum-web-search-running"
+        ],
+        [
+          "tester-view",
+          "그는 웹 검색이 켜져 있는지 꺼져 있는지 불분명하다고 느꼈습니다. 'two different shades of blue'.",
+          null
+        ],
+        [
+          "assumption",
+          "10:47의 르완다 스크린샷에서도 지구본이 더 짙은 파란색인데, 웹 검색이 계속 켜져 있었음을 시사합니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-rwanda",
+      "title": "르완다 질문(10:47)",
+      "items": [
+        [
+          "observed",
+          "'what is the politi...'라는 제목의 새 채팅에서, 답변의 보이는 부분은 르완다가 'has been experiencing significant political instability following the assassination of President Paul Kagame in July 2023'이라고 하며 'reputable news sources (like Reuters and BBC)'를 인용합니다. 스크린샷에는 링크가 보이지 않습니다. 질문 전문은 저장하지 않았으며, 르완다의 정치 상황에 관한 질문으로 추정합니다.",
+          "caelum-rwanda-assassination-claim"
+        ],
+        [
+          "third-party",
+          "테스터가 캡처한 Google AI 개요에 따르면 Kagame는 2000년 4월 22일부터 재임 중이며 2024년 7월에 재선되었습니다. Google 자체 안내문은 AI 응답에 오류가 있을 수 있다고 밝힙니다. 이 개요에는 실존 인물의 사진이 있으므로 스크린샷은 여기에 싣지 않습니다.",
+          null
+        ],
+        [
+          "third-party",
+          "PromptQuorum이 2026년 10월 21일에 추가로 웹 검색을 한 결과 그의 공식 사이트와 선거 보도가 나왔고 암살 보도는 없었습니다. 제한적인 확인입니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-logic",
+      "title": "논리 스트레스 테스트와 교차 확인(10:49 이후)",
+      "items": [
+        [
+          "observed",
+          "ChatGPT가 'Advanced Logic Stress Test: The Blackout Protocol'이라는 제목의 프롬프트를 만들었으며, 제약 조건, 시간 추론, 모순, 다단계 연역을 시험하는 것으로 설명되어 있습니다. 테스터는 이를 Caelum에 붙여 넣었습니다.",
+          null
+        ],
+        [
+          "tester-estimate",
+          "Caelum은 'a big report'를 작성했고 1분 뒤에도 계속 쓰고 있었으며, 마지막에는 더 깊은 분석을 제안했습니다. 답변 본문은 저장하지 않았습니다. 붙여 넣은 미리 보기에서 보이는 조각은 '1. Feasibility Ve...'와 'The plan is highly improbable to...'로 시작하는 부분뿐입니다.",
+          null
+        ],
+        [
+          "third-party",
+          "테스터는 답변을 ChatGPT에 붙여 넣었습니다. ChatGPT의 평가: 'The AI sounds analytical, but it makes several serious logical errors. I would score this response quite poorly', 그리고 'correct-looking conclusion — no valid plan — without establishing the actual contradiction'. 점수는 전체 5/25(제약 이해 2/5, 형식 연역 1/5, 시간 추론 1/5, 증명 품질 0/5, 지시 이행 1/5)이며 'not a standardized benchmark score'입니다. ChatGPT는 'One important correction to my own earlier analysis'라고도 썼습니다.",
+          null
+        ],
+        [
+          "third-party",
+          "프롬프트 자체가 부당했는지 알아보기 위해 테스터는 같은 문제를 Grok, Claude Opus 5.5(medium), Claude Fable 5.1(high)에 돌리고 각 답변을 ChatGPT에 보여 주었습니다. ChatGPT는 이후 답변들을 더 높이 평가했으며('substantially better', 한 경우 논리 연역 8/10), 그래도 각각에서 오류를 찾았습니다. 예를 들어 유효한 일정이 12개라는 계산은 'are actually 13'이었고, 최소 수리 증명은 'not yet rigorous enough'였습니다.",
+          null
+        ],
+        [
+          "tester-estimate",
+          "Opus는 'in less than one minute'에 답했고, Grok은 약 3분 뒤에도 작업 중이었습니다. 둘 다 시간을 재지는 않았습니다.",
+          null
+        ],
+        [
+          "assumption",
+          "메모는 음성으로 받아 적은 것이며, 'Croc'과 'groc'은 Grok으로 읽었습니다. 어느 ChatGPT 스크린샷이 어느 모델의 것인지는 메모의 순서를 따랐습니다. 마지막 스크린샷 네 장의 배정이 가장 불확실합니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "그의 원칙: 항상 교차 확인하고, 하나의 모델을 믿지 말 것, 'especially not the smaller one'. 그는 또한 과제가 무엇인지 처음 설명해 준 것은 Fable이었다고 말합니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "결정",
+      "items": [
+        [
+          "tester-view",
+          "테스터의 정리: 작은 모델이 사진을 읽는 것은 'incredible'하고, 웹 검색은 비슷한 앱 중에서 드문 편이며(PromptQuorum은 확인하지 않음), 품질은 들쭉날쭉하지만 1 GB 모델이니 놀랍지 않다고 합니다. AI가 로컬에서 실행된다는 점은 'is actually not stressed at all'이며, 사용자가 모델이 로컬에서 돌아간다는 것을 알 수 있을지 의문이라고 합니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "계속 쓰겠느냐고요? 'No, I don't see the point.' 무료 최첨단 모델 서비스가 훨씬 많은 일을 하므로 그 파일은 공간을 차지할 가치가 없다고 합니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-numbers",
+      "title": "휴대폰 시계와 배터리",
+      "items": [
+        [
+          "measured",
+          "10:36: 첫 화면, 1,020 Mo 중 41 Mo 내려받음, ETA 3 m 8 s, 5.60 MB/s, 5G, 배터리 70%.",
+          null
+        ],
+        [
+          "measured",
+          "10:39: 채팅 홈 화면, 밝은 테마, Wi-Fi 아이콘, 배터리 67%.",
+          null
+        ],
+        [
+          "measured",
+          "10:43: 사진 질문, 어두운 테마, 웹 검색 시작, 배터리 66%와 65%.",
+          null
+        ],
+        [
+          "measured",
+          "10:47: 르완다 답변, 배터리 64%.",
+          null
+        ],
+        [
+          "measured",
+          "10:49: ChatGPT가 논리 프롬프트를 작성함(ChatGPT 앱에서), 배터리 63%. 10:55~10:56: ChatGPT가 Caelum의 논리 답변을 심사함(ChatGPT 앱에서), 배터리 59%.",
+          null
+        ],
+        [
+          "assumption",
+          "배터리는 화면을 켠 채 20분 동안 70%에서 59%로 떨어졌고, 그동안 일부 시간은 ChatGPT 앱을 썼으므로 어느 것도 Caelum의 몫으로 돌릴 수 없습니다. 10:39부터 10:47까지, 대부분 Caelum 안에서는 67%에서 64%로 떨어졌습니다. 휴대폰의 RAM과 앱의 메모리 사용량을 기록하지 않았으므로 메모리 차트는 만들 수 없습니다. 상태 표시줄의 처리량 값(채팅 스크린샷에서 0.03~0.58 KB/s)은 한 시점의 값일 뿐 트래픽 로그가 아니며, 앱이 오프라인인지 보여 주지 않습니다.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "AI를 오프라인으로 실행",
+      "Google Play 목록과 개발자의 개인정보 처리방침(PromptQuorum 리뷰 경유, 2026년 10월 19일 확인)",
+      "테스트하지 않음(비행기 모드 실행 없음). 1,020 Mo 내려받기는 온디바이스 모델과 맞아 보입니다(추정). 앱 스크린샷 다섯 장 어디에도 'local'이나 'offline'이라는 단어가 없으며, 테스터는 앱이 이를 강조하지 않는다고 말합니다.",
+      "assumption"
+    ],
+    [
+      "문서 질문",
+      "Google Play 목록(PromptQuorum 리뷰 경유)",
+      "테스트하지 않음. 사진 입력만 사용했습니다.",
+      "observed"
+    ],
+    [
+      "선택형 웹 검색",
+      "Google Play 목록(PromptQuorum 리뷰 경유)",
+      "작동하는 것을 확인했습니다. 'Searching the web...'이 표시되고 답변이 이어졌습니다. 확인한 답변 하나는 핵심 주장이 틀렸습니다(CAE-09 참조).",
+      "observed"
+    ],
+    [
+      "무료, 계정 불필요",
+      "Google Play 목록(PromptQuorum 리뷰 경유)",
+      "스크린샷에 로그인 화면은 나오지 않습니다. 앱의 나머지는 살펴보지 않았습니다.",
+      "observed"
+    ],
+    [
+      "Android 7.0+에서 작동",
+      "Google Play 목록(PromptQuorum 리뷰 경유)",
+      "테스트하지 않음. 테스트 휴대폰의 Android 버전은 기록되어 있지 않습니다.",
+      "observed"
+    ]
+  ],
+  "usage_log": [
+    [
+      "첫 실행 모델 내려받기",
+      "이름 없음",
+      "1,020 Mo를 내려받았고 약 3분 뒤 채팅 화면에 도달",
+      "약 3분(시계 기준)",
+      "Pass",
+      [
+        "caelum-download-progress"
+      ]
+    ],
+    [
+      "촬영한 택배 송장 설명",
+      "이름 없음",
+      "운송사, 무게(앱 표시 기준 4.7 kg), 추적 번호, 경로를 답함. 목적지는 의심했고 나머지는 확인하지 않음",
+      "시간 재지 않음",
+      "Partial",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "웹 검색",
+      "이름 없음",
+      "'Searching the web...' 표시, 지구본이 더 짙은 파란색으로 바뀜, 토글 상태 불분명",
+      "시간 재지 않음",
+      "Partial",
+      [
+        "caelum-web-search-running"
+      ]
+    ],
+    [
+      "르완다 질문(웹 검색이 켜져 있던 것으로 보임)",
+      "이름 없음",
+      "Kagame 대통령이 2023년 7월에 암살되었다고 답함. 제3자 출처와 모순됨",
+      "시간 재지 않음",
+      "Fail",
+      [
+        "caelum-rwanda-assassination-claim"
+      ]
+    ],
+    [
+      "어려운 논리 문제(Blackout Protocol)",
+      "이름 없음",
+      "길고 구조화된 보고서. ChatGPT가 나쁘다고 평가(ChatGPT 자체 기준 5/25), 테스터는 확인하지 않음",
+      "1분 이상(테스터 추정)",
+      "Fail",
+      []
+    ],
+    [
+      "답변을 다른 앱으로 복사",
+      "이름 없음",
+      "복사 버튼이 작동했고 답변을 ChatGPT에 붙여 넣음",
+      "시간 재지 않음",
+      "Pass",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "기록에 빈틈을 남겼습니다. 앱 버전, Android 버전, 휴대폰 RAM, 앱을 설치한 경로, 날짜입니다. 스크린샷의 휴대폰 시계만이 테스트 시점을 알려 줍니다."
+    ],
+    [
+      "tester-error",
+      "Caelum 자체의 논리 답변, 촬영한 송장, 르완다 질문 전문을 저장하지 않았습니다. 무게, 추적 번호, 경로는 확인할 수 없고, 논리 결과는 답변에 대한 ChatGPT의 설명에 의존합니다."
+    ],
+    [
+      "tester-error",
+      "논리 퍼즐을 직접 확인하지 않았습니다('why use my brain if I have ChatGPT?'). ChatGPT가 퍼즐을 만들고 답변을 심사했으며, 일정 개수에 관한 ChatGPT의 진술은 스크린샷마다 다르고(한쪽은 13, 다른 쪽은 'consistent with 12'), 각각이 어느 답변을 가리키는지 불분명합니다. 따라서 심사자는 독립적이지 않았고 검증되지도 않았습니다."
+    ],
+    [
+      "tester-error",
+      "오프라인 테스트(비행기 모드)와 문서 기능을 실행하지 않았습니다. '로컬 AI'가 앱의 핵심 내세움이고 이것들이 주된 업체 주장인데도 그랬습니다."
+    ],
+    [
+      "tester-error",
+      "'where is paris?'라는 제목의 채팅 스레드에 관련 없는 사진 질문이 들어 있었습니다. 테스터는 무엇을 해서 그렇게 되었는지 기록하지 않았으므로, 앱 버그인지 사용 실수인지 알 수 없습니다."
+    ],
+    [
+      "tester-view",
+      "테스터는 이 프롬프트가 1 GB 모델에게 너무 어려웠을 수 있고('maybe the test was too difficult') 최첨단 모델은 부당한 잣대일 수 있음을 인정합니다. 이 보고서도 그 단서를 그대로 둡니다."
+    ],
+    [
+      "assumption",
+      "메모는 음성으로 받아 적은 것입니다. 모델 이름은 Grok, Claude Opus 5.5(medium), Claude Fable 5.1(high)로 읽었으며 확인이 필요합니다."
+    ]
+  ],
+  "findings": [
+    [
+      "CAE-01",
+      "첫 실행에서 진행 막대, 크기 카운터, ETA(5.60 MB/s에서 3 m 8 s)와 함께 1,020 Mo를 내려받았습니다. 채팅 화면은 첫 스크린샷으로부터 약 3분 뒤 나타났습니다.",
+      "설정",
+      "measured",
+      "Positive",
+      [
+        "caelum-download-progress"
+      ]
+    ],
+    [
+      "CAE-02",
+      "내려받기 화면은 내려받는 동안 앱을 종료하지 말라고 안내하며 팁을 번갈아 보여 줍니다.",
+      "설정",
+      "observed",
+      "Low",
+      [
+        "caelum-download-progress"
+      ]
+    ],
+    [
+      "CAE-03",
+      "사진 입력이 작동했습니다. 촬영한 DHL 송장을 운송사, 무게(4.7 kg, 앱의 진술), 추적 번호, 경로와 함께 설명했습니다.",
+      "핵심 기능",
+      "observed",
+      "Positive",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-04",
+      "그 설명의 목적지('Switzerland')를 테스터는 의심했으며, 나머지 내용은 확인하지 않았습니다.",
+      "정확도",
+      "tester-view",
+      "Medium",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-05",
+      "'where is paris?'라는 제목의 채팅에 관련 없는 사진 질문이 들어 있었습니다. 테스터는 앱이 요청을 뒤섞었다고 말하며 새 채팅을 시작했습니다.",
+      "채팅 처리",
+      "observed",
+      "Medium",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-06",
+      "웹 검색 버튼은 파란색이 두 가지(대기 시 더 옅고 검색 중 더 짙음)이며 라벨이 없습니다. 테스터는 언제 켜져 있는지 알 수 없었습니다.",
+      "인터페이스",
+      "observed",
+      "Medium",
+      [
+        "caelum-web-search-running"
+      ]
+    ],
+    [
+      "CAE-07",
+      "웹 검색 중에는 전송 화살표가 노란 사각형으로 바뀌고 무지개색 테두리의 'Searching the web...' 상자가 나타납니다.",
+      "인터페이스",
+      "observed",
+      "Low",
+      [
+        "caelum-web-search-running"
+      ]
+    ],
+    [
+      "CAE-08",
+      "어두운 테마가 있습니다. 화면은 10:39에는 밝고 10:43에는 어두웠으며, 바뀐 경위는 기록되어 있지 않습니다.",
+      "인터페이스",
+      "observed",
+      "Positive",
+      [
+        "caelum-home-screen",
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-09",
+      "르완다에 관한 질문에 앱은 Paul Kagame 대통령이 2023년 7월에 암살되었다고 답하고 보이는 링크 없이 Reuters와 BBC를 인용했습니다. 제3자 출처에 따르면 그는 현직이며 2024년 7월에 재선되었습니다.",
+      "정확도",
+      "observed",
+      "High",
+      [
+        "caelum-rwanda-assassination-claim"
+      ]
+    ],
+    [
+      "CAE-10",
+      "앱 뒤의 모델 이름은 스크린샷에 나오지 않으며, 디렉터리에도 모델 이름이 기록되어 있지 않습니다.",
+      "투명성",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "CAE-11",
+      "ChatGPT는 어려운 논리 문제에 대한 답변에 5/25점(자체 기준)을 주었고, 그럴듯해 보이는 결론에 도달했지만 모순을 입증하지 못했다고 평가했습니다.",
+      "핵심 기능",
+      "third-party",
+      "High",
+      []
+    ],
+    [
+      "CAE-12",
+      "같은 프롬프트를 받은 다른 모델 세 개는 ChatGPT에게 더 낫다고 평가받았으나 각각에서 여전히 오류가 발견되었습니다. 테스터는 심사자를 검증하지 않았습니다.",
+      "테스트 설계",
+      "third-party",
+      "Medium",
+      []
+    ],
+    [
+      "CAE-13",
+      "논리 답변은 1분 넘게 걸렸고, 테스터가 원하지 않은 더 깊은 분석 제안으로 끝났습니다.",
+      "성능",
+      "tester-estimate",
+      "Low",
+      []
+    ],
+    [
+      "CAE-14",
+      "앱은 AI가 휴대폰에서 실행된다는 점을 강조하지 않으며, 테스터는 사용자가 알 수 있을지 의문이라고 합니다. 앱 스크린샷 다섯 장 어디에도 'local'이나 'offline'이 없습니다.",
+      "투명성",
+      "tester-view",
+      "Medium",
+      [
+        "caelum-home-screen"
+      ]
+    ],
+    [
+      "CAE-15",
+      "오프라인 작동(업체 주장)은 테스트하지 않았습니다.",
+      "신뢰와 개인정보",
+      "vendor-claim",
+      "Medium",
+      []
+    ],
+    [
+      "CAE-16",
+      "편집, 다시 생성, 삭제, 복사, 읽어 주기 버튼이 있으며, 복사는 답변을 다른 앱으로 옮기는 데 작동했습니다.",
+      "인터페이스",
+      "observed",
+      "Positive",
+      [
+        "caelum-parcel-slip-description"
+      ]
+    ],
+    [
+      "CAE-17",
+      "테스터는 이 앱을 계속 쓰지 않겠다고 했습니다. 무료 최첨단 서비스가 더 많은 일을 하고 1 GB 파일은 공간을 차지할 가치가 없다는 이유입니다.",
+      "종합 평가",
+      "tester-view",
+      "High",
+      []
+    ],
+    [
+      "CAE-18",
+      "화면을 켠 채 10:36부터 10:56 사이 배터리가 70%에서 59%로 떨어졌습니다. 그중 일부 시간은 ChatGPT 앱에서 보냈으므로 Caelum의 몫으로 돌릴 수 없습니다.",
+      "성능",
+      "measured",
+      "Low",
+      []
+    ]
+  ],
+  "severity_note": "심각도는 처음 사용하는 사람에게 미치는 영향입니다. 제안값이며 측정값이 아닙니다.",
+  "audience": {
+    "fits": [
+      [
+        "third-party",
+        "PromptQuorum 리뷰에 따르면(이 테스트로 검증하지 않음): 무료이고 계정이 필요 없는 채팅·문서 앱을 원하며, 모델 이름이 없고 2025년 8월 14일 이후 업데이트가 없는 비공개 소스 프로젝트를 받아들일 수 있는 Android 사용자."
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "테스터에 따르면: 떠오르는 사람이 없으며, 그는 계속 쓰지 않을 것입니다."
+      ]
+    ],
+    "retest": "Play 스토어에 새 버전이 나온 뒤(마지막 업데이트는 2025년 8월 14일이며 1년 이상 지남), 제작자가 모델 이름을 밝힌 뒤, 같은 휴대폰에서 비행기 모드 실행과 문서 테스트를 하고, RAM과 Android 버전이 알려진 두 번째 Android 휴대폰에서 다시 테스트하십시오."
+  },
+  "background_intro": "직접 테스트가 아닙니다. 아래 항목은 2026년 10월 19일에 읽은 Caelum의 PromptQuorum 디렉터리 항목에서 가져왔으며, 독립적으로 검증하지 않았습니다.",
+  "background": [
+    [
+      "third-party",
+      "2026년 10월 19일에 읽은 미검증 디렉터리 데이터: 비공개 소스, 패키지 com.reactnativeai, Google Play 다운로드 10K+, Android 7.0+, v1.3.1(2025년 8월 14일 업데이트), 더 이상 열리지 않는 웹사이트. 제작자는 테스터의 메모에 나오지 않습니다. Caelum의 PromptQuorum 리뷰가 공개 프로필을 근거로 개발자가 누구인지 밝히고 있으나, 테스터는 이를 확인하지 않았습니다."
+    ]
+  ],
+  "sources": [
+    "테스터의 직접 사용 메모와 스크린샷, 2026년 10월 21일(원본 Word 문서 'Caelum App on Android', 원본 메모 PDF는 추가 예정).",
+    "Google Play: Caelum: Local AI Assistant (https://play.google.com/store/apps/details?id=com.reactnativeai), 2026년 10월 19일 PromptQuorum 디렉터리 기록 기준.",
+    "Caelum의 PromptQuorum 디렉터리 항목과 리뷰(slug: caelum).",
+    "선거 보도, AFP(EWN 경유), 2024년 7월 16일 (ewn.co.za/2024/07/16/rwandas-kagame-wins-fourth-term-with-99-of-vote), 2026년 10월 21일 확인: Kagame 대통령이 득표율 99%로 재선.",
+    "Paul Kagame에 관한 Google AI 개요와 ChatGPT 답변, 테스터가 캡처한 그대로(다시 게재하지 않음)."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "관찰",
+      "meaning": "앱, 스크린샷 또는 테스터의 메모에서 직접 확인한 내용입니다."
+    },
+    "measured": {
+      "label": "측정",
+      "meaning": "대화 상자, 카운터 또는 도구에서 읽은 값이며 숫자를 함께 제시합니다."
+    },
+    "tester-estimate": {
+      "label": "테스터 추정",
+      "meaning": "테스터 자신의 추정이며, 시간을 재거나 세지 않았습니다."
+    },
+    "vendor-claim": {
+      "label": "업체 주장",
+      "meaning": "앱, 스토어 등록 정보 또는 웹사이트가 밝힌 내용이며 검증하지 않았습니다."
+    },
+    "third-party": {
+      "label": "제3자",
+      "meaning": "다른 출처(AI 어시스턴트, 기사)에서 나온 내용이며 여기서는 검증하지 않았습니다."
+    },
+    "assumption": {
+      "label": "가정",
+      "meaning": "추론입니다. 틀릴 수 있습니다."
+    },
+    "tester-view": {
+      "label": "테스터 의견",
+      "meaning": "테스터의 판단 또는 의견입니다."
+    },
+    "tester-error": {
+      "label": "테스터 오류",
+      "meaning": "테스터가 실수했거나 놓친 부분입니다."
+    }
+  },
+  "images": [
+    {
+      "id": "caelum-home-screen",
+      "figure": 1,
+      "file": "caelum-home-screen.webp",
+      "path": "images/caelum-home-screen.webp",
+      "alt": "\"How can I help you today?\", 추천 프롬프트 두 개, 지구본·폴더·전송 버튼이 있는 입력 필드가 보이는 Caelum 홈 화면.",
+      "caption": "10:39의 채팅 홈 화면, 밝은 테마. 관찰.",
+      "role": "hero",
+      "width": 582,
+      "height": 1280,
+      "bytes": 46838,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-home"
+      ],
+      "subject": "Caelum Android 앱의 스크린샷",
+      "rights": "테스터 본인 기기의 본인 스크린샷.",
+      "captured": "2026-10-21, 스크린샷에 표시된 휴대폰 시계 기준",
+      "original_docx_media": "Caelum App on Android.docx"
+    },
+    {
+      "id": "caelum-download-progress",
+      "figure": 2,
+      "file": "caelum-download-progress.webp",
+      "path": "images/caelum-download-progress.webp",
+      "alt": "\"downloading needed data\", 1020 Mo 중 41 Mo, ETA 3분 8초와 팁 상자가 표시된 Android 화면.",
+      "caption": "10:36의 첫 실행 내려받기. 관찰. 5.60 MB/s는 상태 표시줄의 값입니다.",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 30174,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "moment 1",
+        "chapter-download"
+      ],
+      "subject": "Caelum Android 앱의 스크린샷",
+      "rights": "테스터 본인 기기의 본인 스크린샷.",
+      "captured": "2026-10-21, 스크린샷에 표시된 휴대폰 시계 기준",
+      "original_docx_media": "Caelum App on Android.docx"
+    },
+    {
+      "id": "caelum-parcel-slip-description",
+      "figure": 3,
+      "file": "caelum-parcel-slip-description.webp",
+      "path": "images/caelum-parcel-slip-description.webp",
+      "alt": "어두운 테마의 채팅: 앱이 독일에서 스위스로 보낸 4.7 kg짜리 DHL 소포를 설명합니다. 추적 번호는 가려져 있습니다.",
+      "caption": "10:43, 'what is the picture about'에 대한 답변. 관찰. 추적 번호는 PromptQuorum이 가렸습니다.",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 42104,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "moment 2",
+        "chapter-photo"
+      ],
+      "subject": "Caelum Android 앱의 스크린샷, 추적 번호는 PromptQuorum이 가림",
+      "rights": "테스터 본인 기기의 본인 스크린샷. 추적 번호는 가림 처리.",
+      "captured": "2026-10-21, 스크린샷에 표시된 휴대폰 시계 기준",
+      "original_docx_media": "Caelum App on Android.docx"
+    },
+    {
+      "id": "caelum-web-search-running",
+      "figure": 4,
+      "file": "caelum-web-search-running.webp",
+      "path": "images/caelum-web-search-running.webp",
+      "alt": "어두운 테마의 채팅. 무지개색 테두리 상자에 \"Searching the web...\", 더 짙은 파란색 지구본 버튼, 노란 정지 사각형이 보입니다.",
+      "caption": "10:43에 실행 중인 웹 검색. 관찰.",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 42610,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "moment 3",
+        "chapter-search"
+      ],
+      "subject": "Caelum Android 앱의 스크린샷",
+      "rights": "테스터 본인 기기의 본인 스크린샷.",
+      "captured": "2026-10-21, 스크린샷에 표시된 휴대폰 시계 기준",
+      "original_docx_media": "Caelum App on Android.docx"
+    },
+    {
+      "id": "caelum-rwanda-assassination-claim",
+      "figure": 5,
+      "file": "caelum-rwanda-assassination-claim.webp",
+      "path": "images/caelum-rwanda-assassination-claim.webp",
+      "alt": "르완다가 2023년 7월 Paul Kagame 대통령 암살 이후 불안정하다고 주장하며 Reuters와 BBC를 인용하는 답변 텍스트.",
+      "caption": "10:47의 허위 주장. 관찰. 제3자 출처와 모순됩니다.",
+      "role": "moment",
+      "width": 582,
+      "height": 1280,
+      "bytes": 69732,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "moment 4",
+        "chapter-rwanda"
+      ],
+      "subject": "Caelum Android 앱의 스크린샷(답변 텍스트)",
+      "rights": "테스터 본인 기기의 본인 스크린샷.",
+      "captured": "2026-10-21, 스크린샷에 표시된 휴대폰 시계 기준",
+      "original_docx_media": "Caelum App on Android.docx"
+    }
+  ],
+  "figure_order": [
+    "caelum-home-screen",
+    "caelum-download-progress",
+    "caelum-parcel-slip-description",
+    "caelum-web-search-running",
+    "caelum-rwanda-assassination-claim"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 직접 사용 테스트 · {app} · {date}",
+    "date_line": "2026년 10월 21일",
+    "nav_aria": "섹션",
+    "nav": {
+      "verdict": "결론",
+      "moments": "여섯 가지 순간",
+      "story": "진행 과정",
+      "claims": "주장",
+      "fit": "24 GB",
+      "log": "사용 기록",
+      "errors": "테스터 오류",
+      "findings": "발견 사항",
+      "background": "배경"
+    },
+    "related": "관련 글:",
+    "review_link": "{app} PromptQuorum 리뷰",
+    "directory_link": "로컬 AI 앱 디렉터리",
+    "verdict_h": "결론",
+    "general_assessment": "종합 평가",
+    "fit_for_tester": "테스터의 사용 목적과의 적합성",
+    "scorecard": "점수표",
+    "status_prefix": "상태:",
+    "na": "해당 없음",
+    "score_aria": "5점 만점에 {n}점",
+    "details_h": "테스트 상세 정보",
+    "label_intro": "모든 진술에는 라벨이 붙습니다:",
+    "legend_link": "라벨의 의미",
+    "disclosure_label": "공개 사항.",
+    "raw_notes": "원본 노트 PDF:",
+    "to_be_added": "추가 예정",
+    "moments_h": "이 테스트를 형성한 여섯 가지 순간",
+    "see_context": "맥락 보기",
+    "story_h": "테스트는 이렇게 진행되었습니다",
+    "claims_h": "주장과 테스터가 확인한 내용",
+    "claims_cols": [
+      "주장",
+      "출처",
+      "확인한 내용",
+      "라벨"
+    ],
+    "fit_h": "24 GB에 들어갈까요?",
+    "memory_line": "{gb} GB 메모리",
+    "above": "{gb} GB 초과",
+    "below": "{gb} GB 미만",
+    "log_h": "사용 기록",
+    "log_cols": [
+      "#",
+      "작업",
+      "모델",
+      "결과",
+      "소요 시간",
+      "상태",
+      "그림"
+    ],
+    "statuses": {
+      "Fail": "실패",
+      "Partial": "부분 성공",
+      "Pass": "통과",
+      "Not completed": "미완료"
+    },
+    "errors_h": "테스터가 잘못한 부분",
+    "findings_h": "발견 사항 목록",
+    "filter_aria": "라벨별로 발견 사항 필터링",
+    "filter_all": "전체",
+    "findings_cols": [
+      "ID",
+      "발견 사항",
+      "분류",
+      "라벨",
+      "심각도",
+      "그림"
+    ],
+    "severities": {
+      "High": "높음",
+      "Medium": "보통",
+      "Low": "낮음",
+      "Positive": "긍정"
+    },
+    "fig_abbr": "그림",
+    "figure": "그림",
+    "enlarge": "확대:",
+    "audience_h": "추천 대상",
+    "likely_fit": "적합할 가능성이 높음",
+    "likely_poor_fit": "적합하지 않을 가능성이 높음",
+    "retest": "재테스트.",
+    "background_h": "개발사 배경",
+    "gallery_h": "테스트에서 나온 이미지 더 보기",
+    "legend_h": "라벨 읽는 법",
+    "sources_h": "출처",
+    "footer_line": "테스트 ID {id} · 테스트 표준 v{version} · 원본 노트 PDF: 추가 예정",
+    "crumb_home": "홈",
+    "crumb_directory": "디렉터리",
+    "crumb_test": "{app} 직접 사용 테스트",
+    "faq_h": "자주 묻는 질문",
+    "more_tests_h": "다른 직접 테스트"
+  }
+}

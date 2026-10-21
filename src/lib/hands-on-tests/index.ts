@@ -38,6 +38,15 @@ import unslothPt from './data/unsloth.pt.json'
 import unslothAr from './data/unsloth.ar.json'
 import unslothKo from './data/unsloth.ko.json'
 import ltxDesktop from './data/ltx-desktop.json'
+import caelum from './data/caelum.json'
+import caelumDe from './data/caelum.de.json'
+import caelumFr from './data/caelum.fr.json'
+import caelumJa from './data/caelum.ja.json'
+import caelumZh from './data/caelum.zh.json'
+import caelumEs from './data/caelum.es.json'
+import caelumPt from './data/caelum.pt.json'
+import caelumAr from './data/caelum.ar.json'
+import caelumKo from './data/caelum.ko.json'
 import ltxDesktopDe from './data/ltx-desktop.de.json'
 import ltxDesktopFr from './data/ltx-desktop.fr.json'
 import ltxDesktopJa from './data/ltx-desktop.ja.json'
@@ -266,6 +275,17 @@ const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
     pt: ltxDesktopPt as unknown as HandsOnTest,
     ar: ltxDesktopAr as unknown as HandsOnTest,
     ko: ltxDesktopKo as unknown as HandsOnTest,
+  },
+  caelum: {
+    en: caelum as unknown as HandsOnTest,
+    de: caelumDe as unknown as HandsOnTest,
+    fr: caelumFr as unknown as HandsOnTest,
+    ja: caelumJa as unknown as HandsOnTest,
+    zh: caelumZh as unknown as HandsOnTest,
+    es: caelumEs as unknown as HandsOnTest,
+    pt: caelumPt as unknown as HandsOnTest,
+    ar: caelumAr as unknown as HandsOnTest,
+    ko: caelumKo as unknown as HandsOnTest,
   },
   unsloth: {
     en: unsloth as unknown as HandsOnTest,

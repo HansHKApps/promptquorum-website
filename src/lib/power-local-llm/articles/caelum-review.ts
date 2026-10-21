@@ -4,7 +4,7 @@
 // best-local-llm-apps-android-2026
 // Sources: Google Play listing (read 2026-10-19), the developer's website and privacy page as captured by the Internet
 // Archive on 2026-05-10 (the domain caelum-app.me returns NXDOMAIN on 2026-10-19), and the developer's public GitHub
-// profile — no hands-on testing. The request came from the site owner, not from the developer: no maker comment exists.
+// profile — no hands-on use in the review itself (a separate hands-on test, caelum-hands-on-test, was added 2026-10-21). The request came from the site owner, not from the developer: no maker comment exists.
 // Last upstream update 2025-08-14 => stale warning at the top (owner rule 2026-10-16), 9 locales.
 
 import type { Language } from '@/lib/blog/blogContent'
@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-21',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/caelum-review-hero-en.webp',
@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'This review is based on the Google Play listing, an archived copy of the developer\'s website and privacy policy, and the developer\'s public GitHub profile, checked on 19 October 2026. PromptQuorum has not installed, tested or benchmarked the app.',
+            text: 'This review is based on the Google Play listing, an archived copy of the developer\'s website and privacy policy, and the developer\'s public GitHub profile, checked on 19 October 2026. This review itself involved no hands-on use or benchmarking; a separate first-hand test is linked below.',
           },
         ],
       },
@@ -171,7 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'What We Could Not Verify',
         items: [
-          '**Hands-on performance.** PromptQuorum did not run the app, so speed, battery use and answer quality are not assessed.',
+          '**Hands-on performance.** This review itself does not assess speed, battery use or answer quality. The separate hands-on test (one phone, one session) covers the first run, photo input, web search and a logic prompt, but did not time answers or test offline use.',
           '**The model.** The listing says "advanced on-device AI" and the sources name no model, size, source or runtime, so it is unknown what the app actually runs.',
           '**Offline behavior.** Whether the AI is bundled or downloaded on first run, and whether the app works in airplane mode, is untested; the listing says no internet is needed after installation.',
           '**Hardware needs.** No RAM or storage requirement is stated; the only stated floor is Android 7.0.',
@@ -250,6 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
+          '[Caelum Hands-on Test](/power-local-llm/caelum-hands-on-test) — a first-hand test on a OnePlus 8 Pro: it read a parcel slip from a photo, but one news answer was false and a hard logic prompt was rated poorly; every statement is labelled by how it is known.',
           '[Private Mind Review](/power-local-llm/private-mind-review) — a free, MIT-licensed offline chat app for iPhone and Android.',
           '[PocketPal AI Review](/power-local-llm/pocketpal-ai-review) — a free, open-source on-device chat client for iOS and Android.',
           '[MemoryAI Review](/power-local-llm/memoryai-review) — a free offline chat app with editable memory for iPhone and Android.',
@@ -267,7 +268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://promptquorum.com/power-local-llm/caelum-review',
       inLanguage: 'en',
       datePublished: '2026-10-19',
-      dateModified: '2026-10-19',
+      dateModified: '2026-10-21',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Beginner',
@@ -293,7 +294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-21',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/caelum-review-hero-de.webp',
@@ -375,7 +376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Diese Rezension stützt sich auf den Google-Play-Eintrag, eine archivierte Kopie der Website und der Datenschutzerklärung des Entwicklers sowie sein öffentliches GitHub-Profil, geprüft am 19. Oktober 2026. PromptQuorum hat die App weder installiert noch getestet oder einem Benchmark unterzogen.',
+            text: 'Diese Rezension stützt sich auf den Google-Play-Eintrag, eine archivierte Kopie der Website und der Datenschutzerklärung des Entwicklers sowie sein öffentliches GitHub-Profil, geprüft am 19. Oktober 2026. Für diese Rezension selbst wurde die App weder ausprobiert noch einem Benchmark unterzogen; ein separater Praxistest ist weiter unten verlinkt.',
           },
         ],
       },
@@ -450,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Was wir nicht überprüfen konnten',
         items: [
-          '**Praktische Leistung.** PromptQuorum hat die App nicht ausgeführt; Geschwindigkeit, Akkuverbrauch und Antwortqualität wurden daher nicht bewertet.',
+          '**Praktische Leistung.** Diese Rezension bewertet Geschwindigkeit, Akkuverbrauch und Antwortqualität selbst nicht. Der separate Praxistest (ein Telefon, eine Sitzung) deckt den ersten Start, Fotoeingabe, Websuche und eine Logikaufgabe ab, hat aber weder Antwortzeiten gemessen noch die Offline-Nutzung getestet.',
           '**Das Modell.** Der Eintrag spricht von „fortschrittlicher KI auf dem Gerät“, und die Quellen nennen weder Modell noch Größe, Herkunft oder Laufzeitumgebung; was die App tatsächlich ausführt, ist unbekannt.',
           '**Offline-Verhalten.** Ob die KI mitgeliefert oder beim ersten Start heruntergeladen wird und ob die App im Flugmodus funktioniert, wurde nicht getestet; laut Eintrag ist nach der Installation keine Internetverbindung nötig.',
           '**Hardware-Anforderungen.** Eine Anforderung an RAM oder Speicher wird nicht genannt; die einzige angegebene Untergrenze ist Android 7.0.',
@@ -529,6 +530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[Caelum Praxistest](/de/power-local-llm/caelum-hands-on-test) — ein Praxistest auf einem OnePlus 8 Pro: Die App las einen Paketschein per Foto, gab aber eine falsche Nachrichtenantwort und schnitt bei einer schweren Logikaufgabe schlecht ab; jede Aussage ist danach gekennzeichnet, woher sie stammt.',
           '[Private-Mind-Rezension](/de/power-local-llm/private-mind-review) — eine kostenlose, MIT-lizenzierte Offline-Chat-App für iPhone und Android.',
           '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — ein kostenloser, quelloffener On-Device-Chat-Client für iOS und Android.',
           '[MemoryAI-Rezension](/de/power-local-llm/memoryai-review) — eine kostenlose Offline-Chat-App mit editierbarem Gedächtnis für iPhone und Android.',
@@ -541,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-21',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/caelum-review-hero-es.webp',
@@ -623,7 +625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Este análisis se basa en la ficha de Google Play, una copia archivada del sitio web y de la política de privacidad del desarrollador y su perfil público de GitHub, consultados el 19 de octubre de 2026. PromptQuorum no ha instalado, probado ni evaluado con pruebas comparativas la app.',
+            text: 'Este análisis se basa en la ficha de Google Play, una copia archivada del sitio web y de la política de privacidad del desarrollador y su perfil público de GitHub, consultados el 19 de octubre de 2026. Este análisis en sí no se basa en el uso ni en pruebas comparativas de la app; más abajo se enlaza una prueba práctica aparte.',
           },
         ],
       },
@@ -698,7 +700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Lo que no pudimos verificar',
         items: [
-          '**Rendimiento en la práctica.** PromptQuorum no ejecutó la app, así que no se evalúan la velocidad, el consumo de batería ni la calidad de las respuestas.',
+          '**Rendimiento en la práctica.** Este análisis en sí no evalúa la velocidad, el consumo de batería ni la calidad de las respuestas. La prueba práctica aparte (un teléfono, una sesión) cubre el primer arranque, la entrada de fotos, la búsqueda web y un prompt de lógica, pero no cronometró las respuestas ni probó el uso sin conexión.',
           '**El modelo.** La ficha dice «advanced on-device AI» y las fuentes no nombran ningún modelo, tamaño, origen ni motor de ejecución, por lo que se desconoce qué ejecuta realmente la app.',
           '**Comportamiento offline.** No se probó si la IA viene incluida o se descarga en la primera ejecución, ni si la app funciona en modo avión; la ficha dice que no hace falta internet tras la instalación.',
           '**Requisitos de hardware.** No se indica ningún requisito de RAM ni de almacenamiento; el único mínimo indicado es Android 7.0.',
@@ -777,6 +779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Prueba práctica de Caelum](/es/power-local-llm/caelum-hands-on-test) — una prueba en un OnePlus 8 Pro: la app leyó la etiqueta de envío de un paquete en una foto, pero una respuesta de actualidad fue falsa y un prompt de lógica difícil se valoró mal; cada afirmación indica cómo se sabe.',
           '[Análisis de Private Mind](/es/power-local-llm/private-mind-review) — una app de chat offline gratuita y con licencia MIT para iPhone y Android.',
           '[Análisis de PocketPal AI](/es/power-local-llm/pocketpal-ai-review) — un cliente de chat en el dispositivo gratuito y de código abierto para iOS y Android.',
           '[Análisis de MemoryAI](/es/power-local-llm/memoryai-review) — una app de chat offline gratuita con memoria editable para iPhone y Android.',
@@ -789,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-21',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/caelum-review-hero-fr.webp',
@@ -871,7 +874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Cet avis se fonde sur la fiche Google Play, une copie archivée du site et de la politique de confidentialité du développeur, ainsi que son profil GitHub public, consultés le 19 octobre 2026. PromptQuorum n\'a ni installé, ni testé, ni évalué l\'application.',
+            text: 'Cet avis se fonde sur la fiche Google Play, une copie archivée du site et de la politique de confidentialité du développeur, ainsi que son profil GitHub public, consultés le 19 octobre 2026. Cet avis lui-même ne repose sur aucune utilisation ni évaluation de l\'application ; un test pratique distinct est lié plus bas.',
           },
         ],
       },
@@ -946,7 +949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Ce que nous n\'avons pas pu vérifier',
         items: [
-          '**Performances en pratique.** PromptQuorum n\'a pas exécuté l\'application : la vitesse, la consommation de batterie et la qualité des réponses ne sont donc pas évaluées.',
+          '**Performances en pratique.** Cet avis n\'évalue lui-même ni la vitesse, ni la consommation de batterie, ni la qualité des réponses. Le test pratique distinct (un téléphone, une séance) couvre le premier lancement, l\'entrée photo, la recherche web et une consigne de logique, mais n\'a ni chronométré les réponses ni testé l\'usage hors ligne.',
           '**Le modèle.** La fiche parle d\'« IA avancée sur l\'appareil » et les sources ne nomment ni modèle, ni taille, ni origine, ni moteur d\'exécution : on ignore donc ce que l\'application exécute réellement.',
           '**Fonctionnement hors ligne.** On ne sait pas si l\'IA est intégrée ou téléchargée au premier lancement, ni si l\'application fonctionne en mode avion, car cela n\'a pas été testé ; la fiche indique qu\'aucune connexion internet n\'est nécessaire après l\'installation.',
           '**Besoins matériels.** Aucune exigence de RAM ou de stockage n\'est indiquée ; le seul minimum mentionné est Android 7.0.',
@@ -1025,6 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
+          '[Test pratique de Caelum](/fr/power-local-llm/caelum-hands-on-test) — un test sur un OnePlus 8 Pro : l\'application a lu un bordereau de colis sur une photo, mais une réponse d\'actualité était fausse et une consigne de logique difficile a été mal notée ; chaque affirmation est étiquetée selon son origine.',
           '[Avis Private Mind](/fr/power-local-llm/private-mind-review) — une application de chat hors ligne gratuite, sous licence MIT, pour iPhone et Android.',
           '[Avis PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) — un client de chat open source gratuit sur l\'appareil pour iOS et Android.',
           '[Avis MemoryAI](/fr/power-local-llm/memoryai-review) — une application de chat hors ligne gratuite, avec mémoire modifiable, pour iPhone et Android.',
@@ -1037,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-21',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/caelum-review-hero-ja.webp',
@@ -1119,7 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '本レビューは、2026年10月19日に確認したGoogle Playの掲載情報、開発者のウェブサイトとプライバシーポリシーのアーカイブ、開発者の公開GitHubプロフィールに基づいています。PromptQuorumはアプリのインストール、テスト、ベンチマークを行っていません。',
+            text: '本レビューは、2026年10月19日に確認したGoogle Playの掲載情報、開発者のウェブサイトとプライバシーポリシーのアーカイブ、開発者の公開GitHubプロフィールに基づいています。本レビュー自体は、アプリの実機使用やベンチマークに基づいていません。別途行った実機テストを下にリンクしています。',
           },
         ],
       },
@@ -1194,7 +1198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '確認できなかった点',
         items: [
-          '**実機での性能。** PromptQuorumはアプリを動かしていないため、速度、バッテリー消費、回答の質は評価していません。',
+          '**実機での性能。** 本レビュー自体は、速度、バッテリー消費、回答の質を評価していません。別途行った実機テスト（スマートフォン1台、1回のセッション）では、初回起動、写真入力、ウェブ検索、論理問題を試しましたが、回答時間の計測とオフライン動作の確認は行っていません。',
           '**モデル。** 掲載情報には「advanced on-device AI」とあるだけで、情報源にはモデル名、サイズ、入手元、ランタイムのいずれも記載がないため、アプリが実際に何を動かしているのかは不明です。',
           '**オフラインでの動作。** AIがアプリに同梱されているのか初回起動時にダウンロードされるのか、機内モードで動作するのかは未検証です。掲載情報には、インストール後はインターネットが不要と書かれています。',
           '**必要なハードウェア。** RAMやストレージの要件は示されておらず、確認できる最低条件はAndroid 7.0だけです。',
@@ -1273,6 +1277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[Caelumの実機テスト](/ja/power-local-llm/caelum-hands-on-test)——OnePlus 8 Proで行ったテスト。写真から荷物の伝票を読み取れた一方、ニュースへの回答は誤りで、難しい論理問題の評価は低いものでした。各記述に根拠のラベルを付けています。',
           '[Private Mindレビュー](/ja/power-local-llm/private-mind-review) — iPhoneとAndroid向けの、無料でMITライセンスのオフラインチャットアプリ。',
           '[PocketPal AIレビュー](/ja/power-local-llm/pocketpal-ai-review) — iOSとAndroid向けの、無料でオープンソースの端末内チャットクライアント。',
           '[MemoryAIレビュー](/ja/power-local-llm/memoryai-review) — iPhoneとAndroid向けの、編集可能なメモリを備えた無料のオフラインチャットアプリ。',
@@ -1285,7 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-21',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/caelum-review-hero-pt.webp',
@@ -1367,7 +1372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Esta análise se baseia na ficha do Google Play, em uma cópia arquivada do site e da política de privacidade do desenvolvedor e no perfil público dele no GitHub, consultados em 19 de outubro de 2026. A PromptQuorum não instalou, não testou nem fez benchmarks do app.',
+            text: 'Esta análise se baseia na ficha do Google Play, em uma cópia arquivada do site e da política de privacidade do desenvolvedor e no perfil público dele no GitHub, consultados em 19 de outubro de 2026. Esta análise em si não se baseia em uso nem em benchmarks do app; um teste prático separado está linkado mais abaixo.',
           },
         ],
       },
@@ -1442,7 +1447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'O que não conseguimos verificar',
         items: [
-          '**Desempenho na prática.** A PromptQuorum não executou o app, então velocidade, consumo de bateria e qualidade das respostas não foram avaliados.',
+          '**Desempenho na prática.** Esta análise em si não avalia velocidade, consumo de bateria nem qualidade das respostas. O teste prático separado (um celular, uma sessão) cobre a primeira execução, a entrada de fotos, a busca na web e um prompt de lógica, mas não cronometrou as respostas nem testou o uso offline.',
           '**O modelo.** A ficha diz "IA avançada no dispositivo" e as fontes não informam modelo, tamanho, origem nem runtime, então não se sabe o que o app realmente executa.',
           '**Comportamento offline.** Não foi testado se a IA vem embutida ou é baixada na primeira execução, nem se o app funciona no modo avião; a ficha diz que não é preciso internet após a instalação.',
           '**Requisitos de hardware.** Nenhum requisito de RAM ou de armazenamento é informado; o único mínimo declarado é o Android 7.0.',
@@ -1521,6 +1526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[Teste prático do Caelum](/pt/power-local-llm/caelum-hands-on-test) — um teste em um OnePlus 8 Pro: o app leu a etiqueta de uma encomenda em uma foto, mas uma resposta sobre notícias foi falsa e um prompt de lógica difícil foi mal avaliado; cada afirmação indica como se sabe.',
           '[Análise do Private Mind](/pt/power-local-llm/private-mind-review) — um app de chat offline gratuito, com licença MIT, para iPhone e Android.',
           '[Análise do PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) — um cliente de chat gratuito e de código aberto no dispositivo, para iOS e Android.',
           '[Análise do MemoryAI](/pt/power-local-llm/memoryai-review) — um app de chat offline gratuito, com memória editável, para iPhone e Android.',
@@ -1533,7 +1539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-21',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/caelum-review-hero-ar.webp',
@@ -1615,7 +1621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'تستند هذه المراجعة إلى صفحة Google Play ونسخة مؤرشفة من موقع المطوّر وسياسة الخصوصية وملفه العام على GitHub، وقد جرى التحقق منها في 19 أكتوبر 2026. لم تثبّت PromptQuorum التطبيق ولم تختبره ولم تقِس أداءه.',
+            text: 'تستند هذه المراجعة إلى صفحة Google Play ونسخة مؤرشفة من موقع المطوّر وسياسة الخصوصية وملفه العام على GitHub، وقد جرى التحقق منها في 19 أكتوبر 2026. لا تستند هذه المراجعة نفسها إلى استخدام فعلي للتطبيق أو اختبارات أداء؛ ويوجد اختبار عملي منفصل مرتبط أدناه.',
           },
         ],
       },
@@ -1690,7 +1696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'ما لم نتمكن من التحقق منه',
         items: [
-          '**الأداء العملي.** لم تشغّل PromptQuorum التطبيق، لذا لم تُقيَّم السرعة واستهلاك البطارية وجودة الإجابات.',
+          '**الأداء العملي.** لا تقيّم هذه المراجعة نفسها السرعة واستهلاك البطارية وجودة الإجابات. أما الاختبار العملي المنفصل (هاتف واحد وجلسة واحدة) فيشمل التشغيل الأول وإدخال الصور والبحث على الويب ومسألة منطقية، لكنه لم يقِس زمن الإجابات ولم يختبر الاستخدام دون اتصال.',
           '**النموذج.** تقول الصفحة «ذكاء اصطناعي متقدم على الجهاز» ولا تسمّي المصادر نموذجاً أو حجماً أو مصدراً أو بيئة تشغيل، لذا لا يُعرف ما الذي يشغّله التطبيق فعلاً.',
           '**العمل دون اتصال.** لم يُختبر هل النموذج مضمَّن في التطبيق أم يُنزَّل عند أول تشغيل، وهل يعمل التطبيق في وضع الطيران؛ وتقول الصفحة إنه لا حاجة إلى الإنترنت بعد التثبيت.',
           '**متطلبات العتاد.** لا يُذكر أي حد أدنى للذاكرة أو التخزين؛ والحد الوحيد المذكور هو Android 7.0.',
@@ -1769,6 +1775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
+          '[اختبار Caelum العملي](/ar/power-local-llm/caelum-hands-on-test) — اختبار على هاتف OnePlus 8 Pro: قرأ التطبيق بيانات شحنة من صورة، لكن إجابة إخبارية واحدة كانت خاطئة وحصلت مسألة منطقية صعبة على تقييم ضعيف، مع وسم كل عبارة بمصدر معرفتها.',
           '[مراجعة Private Mind](/ar/power-local-llm/private-mind-review) — تطبيق دردشة مجاني دون اتصال بترخيص MIT لـ iPhone وAndroid.',
           '[مراجعة PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) — عميل دردشة مجاني مفتوح المصدر على الجهاز لنظامي iOS وAndroid.',
           '[مراجعة MemoryAI](/ar/power-local-llm/memoryai-review) — تطبيق دردشة مجاني دون اتصال مع ذاكرة قابلة للتعديل لـ iPhone وAndroid.',
@@ -1781,7 +1788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-21',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/caelum-review-hero-zh.webp',
@@ -1863,7 +1870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '本评测基于 Google Play 页面、开发者网站和隐私政策的存档副本，以及开发者公开的 GitHub 主页，核实日期为 2026 年 10 月 19 日。PromptQuorum 并未安装、测试该应用，也未对其进行基准测试。',
+            text: '本评测基于 Google Play 页面、开发者网站和隐私政策的存档副本，以及开发者公开的 GitHub 主页，核实日期为 2026 年 10 月 19 日。本评测本身并非基于实际使用或基准测试；另有一篇实测文章，链接见下方。',
           },
         ],
       },
@@ -1938,7 +1945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '我们无法核实的内容',
         items: [
-          '**实际使用表现。** PromptQuorum 没有运行该应用，因此速度、耗电和回答质量均未评估。',
+          '**实际使用表现。** 本评测本身不评估速度、耗电和回答质量。另有的实测（一部手机、一次测试）涵盖首次运行、照片输入、网页搜索和一道逻辑题，但没有给回答计时，也没有测试离线使用。',
           '**模型。** 页面只写“先进的设备端 AI”，来源没有说明任何模型、大小、出处或运行时，因此不清楚该应用实际运行的是什么。',
           '**离线行为。** AI 是内置的还是首次运行时下载的，以及应用能否在飞行模式下工作，均未经测试；页面称安装后无需联网。',
           '**硬件需求。** 未说明内存或存储要求；唯一注明的下限是 Android 7.0。',
@@ -2017,6 +2024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
+          '[Caelum实测](/zh/power-local-llm/caelum-hands-on-test)——在 OnePlus 8 Pro 上进行的测试：能从照片中读出包裹面单，但一条新闻回答有误，高难度逻辑题得分很低，每条陈述都标明了依据。',
           '[Private Mind 评测](/zh/power-local-llm/private-mind-review) — 一款适用于 iPhone 和 Android 的免费、MIT 许可的离线聊天应用。',
           '[PocketPal AI 评测](/zh/power-local-llm/pocketpal-ai-review) — 一款适用于 iOS 和 Android 的免费、开源设备端聊天客户端。',
           '[MemoryAI 评测](/zh/power-local-llm/memoryai-review) — 一款适用于 iPhone 和 Android、带可编辑记忆的免费离线聊天应用。',
@@ -2029,7 +2037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-19',
-    dateModified: '2026-10-19',
+    dateModified: '2026-10-21',
     next_refresh_due: '2027-04-19',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/caelum-review-hero-ko.webp',
@@ -2111,7 +2119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '이 리뷰는 Google Play 게재 정보, 개발자 웹사이트와 개인정보 처리방침의 보관 사본, 개발자의 공개 GitHub 프로필을 2026년 10월 19일에 확인한 내용을 근거로 합니다. PromptQuorum은 앱을 설치하거나 테스트하거나 벤치마크하지 않았습니다.',
+            text: '이 리뷰는 Google Play 게재 정보, 개발자 웹사이트와 개인정보 처리방침의 보관 사본, 개발자의 공개 GitHub 프로필을 2026년 10월 19일에 확인한 내용을 근거로 합니다. 이 리뷰 자체는 앱을 직접 사용하거나 벤치마크한 내용에 근거하지 않으며, 별도의 직접 테스트는 아래에 링크되어 있습니다.',
           },
         ],
       },
@@ -2186,7 +2194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '확인하지 못한 사항',
         items: [
-          '**실제 사용 성능.** PromptQuorum은 앱을 실행하지 않았으므로 속도, 배터리 사용량, 답변 품질은 평가하지 않았습니다.',
+          '**실제 사용 성능.** 이 리뷰 자체는 속도, 배터리 사용량, 답변 품질을 평가하지 않습니다. 별도의 직접 테스트(휴대폰 한 대, 한 번의 세션)에서는 첫 실행, 사진 입력, 웹 검색, 논리 문제를 다뤘지만 응답 시간을 측정하거나 오프라인 사용을 테스트하지는 않았습니다.',
           '**모델.** 게재 정보에는 "고급 온디바이스 AI"라고만 되어 있고 출처에 모델, 크기, 출처, 런타임이 나와 있지 않아, 앱이 실제로 무엇을 실행하는지 알 수 없습니다.',
           '**오프라인 동작.** AI가 앱에 포함되어 있는지 처음 실행할 때 내려받는지, 비행기 모드에서 앱이 작동하는지는 테스트하지 않았습니다. 게재 정보에는 설치 후 인터넷이 필요 없다고 되어 있습니다.',
           '**하드웨어 요구 사항.** RAM이나 저장 공간 요구 사항은 나와 있지 않으며, 명시된 최소 조건은 Android 7.0뿐입니다.',
@@ -2265,6 +2273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
+          '[Caelum 직접 테스트](/ko/power-local-llm/caelum-hands-on-test) — OnePlus 8 Pro에서 진행한 테스트로, 사진 속 택배 송장은 읽어 냈지만 뉴스 질문에는 틀린 답을 했고 어려운 논리 문제는 낮게 평가되었으며 모든 서술에 근거 라벨을 붙였습니다.',
           '[Private Mind 리뷰](/ko/power-local-llm/private-mind-review) — iPhone·Android용 무료 MIT 라이선스 오프라인 채팅 앱.',
           '[PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review) — iOS·Android용 무료 오픈 소스 온디바이스 채팅 클라이언트.',
           '[MemoryAI 리뷰](/ko/power-local-llm/memoryai-review) — iPhone·Android용 편집 가능한 메모리를 갖춘 무료 오프라인 채팅 앱.',
