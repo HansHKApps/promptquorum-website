@@ -13,9 +13,9 @@
     "platform": "Android",
     "pricing_url": "https://play.google.com/store/apps/details?id=com.reactnativeai"
   },
-  "title": "Caelum on an Android Phone: Reads a Parcel Slip, Stumbles on Facts and Logic",
+  "title": "Caelum on an Android Phone: Reads a Parcel Slip, Stumbles on Facts and Logic (Other AIs Slipped on the Logic Too)",
   "page_title": "Caelum Test",
-  "dek": "The first PromptQuorum hands-on test run on a phone instead of a Mac. A OnePlus 8 Pro, a 1,020 Mo model download and a function-only test: setup caused no problems, so the question was what the app can do.",
+  "dek": "The first PromptQuorum hands-on test run on a phone instead of a Mac. A OnePlus 8 Pro with 12 GB, a 1,020 Mo model download and no word on which model it is. The aim was simply to see how the app works and what is possible; setup caused no problems.",
   "seo": {
     "title": "Caelum Hands-on Test: Android Phone, Weak on Facts",
     "description": "Hands-on test of Caelum on a OnePlus 8 Pro: it read a parcel slip from a photo, but a news answer was false and ChatGPT scored a logic prompt 5/25."
@@ -23,8 +23,13 @@
   "faq": [
     [
       "Does Caelum run on an Android phone without setup problems?",
-      "In the test, yes: the first run downloaded 1,020 Mo with a progress bar and ETA, and the chat screen appeared about three minutes after the first screenshot on a OnePlus 8 Pro. The Android version and RAM were not recorded.",
+      "In the test, yes: the first run downloaded 1,020 Mo with a progress bar and ETA, and the chat screen appeared about three minutes after the first screenshot on a OnePlus 8 Pro. The phone has 12 GB; the Android version was not recorded.",
       "measured"
+    ],
+    [
+      "Which LLM does Caelum use?",
+      "The app does not say. It downloads 1,020 Mo on first start, and no model name appears on the download screen or in the chat; the PromptQuorum directory records none either.",
+      "observed"
     ],
     [
       "Can Caelum read a photo?",
@@ -43,11 +48,11 @@
     ],
     [
       "Does Caelum work offline?",
-      "Not tested. The vendor claims offline operation, but no airplane-mode run was made and none of the app screenshots shows the words 'local' or 'offline'.",
+      "Not tested. The vendor claims offline operation, but it is unclear when the app's web interface is on or off and what it does, so no airplane-mode run was made; none of the app screenshots shows the words 'local' or 'offline'.",
       "vendor-claim"
     ]
   ],
-  "status": "Partial",
+  "status": "Completed",
   "published": "2026-10-21",
   "started": "2026-10-21",
   "ended": null,
@@ -59,8 +64,8 @@
     ],
     [
       "Version",
-      "Not recorded. The Google Play listing, read by the PromptQuorum directory on 19 October 2026, shows v1.3.1, last updated 14 August 2025 (older than one year). Assumed to be the version installed.",
-      "assumption"
+      "1.3.1. The tester downloaded the app on 21 October 2026; the Google Play listing, read by PromptQuorum the same day, shows v1.3.1, last updated 14 August 2025 (older than one year).",
+      "third-party"
     ],
     [
       "Tester",
@@ -79,8 +84,8 @@
     ],
     [
       "Hardware",
-      "OnePlus 8 Pro (tester). Chip, RAM variant and battery health not recorded. Third party: a 2020 phone with a Snapdragon 865 and 8 or 12 GB of RAM (not verified here).",
-      "third-party"
+      "OnePlus 8 Pro with 12 GB of memory (the tester calls it 12 GB VRAM; on a phone the memory is shared). Chip and battery health not recorded. Third party: a 2020 phone with a Snapdragon 865 and 8 or 12 GB of RAM (not verified here).",
+      "observed"
     ],
     [
       "System",
@@ -89,7 +94,7 @@
     ],
     [
       "Source",
-      "Not recorded. Google Play is assumed.",
+      "Not recorded. Downloaded on 21 October 2026; Google Play is assumed.",
       "assumption"
     ],
     [
@@ -104,19 +109,19 @@
     ],
     [
       "Objective",
-      "Function only: chat, photo input, web search and one hard reasoning prompt. Setup was not the question and no setup problems were recorded.",
+      "No fixed goal: just see how the app works and what is possible. Setup was not the question and no setup problems were recorded.",
       null
     ],
     [
       "AI help used",
-      "ChatGPT wrote the logic prompt and judged the answers. Grok, Claude Opus 5.5 (medium) and Claude Fable 5.1 (high) were given the same prompt as cross-checks. The notes were dictated, so the model names are read from speech and should be confirmed.",
-      "assumption"
+      "ChatGPT wrote the logic prompt and judged the answers. Grok (free version), Claude Opus 5.5 (medium) and Claude Fable 5.1 (high) were given the same prompt as cross-checks. The tester confirmed these names. The ChatGPT screenshots are not used on this page.",
+      null
     ]
   ],
   "disclosure": "The tester founded PromptQuorum, a content site and directory about local AI apps. Caelum has a directory entry and an existing, separately written review on the site (listed 19 October 2026). The notes do not record whether the tester read that review before testing. No contact with the maker, no payment and no sponsorship are recorded.",
   "verdict": {
-    "general": "Function-only test, partly completed. On a OnePlus 8 Pro, Caelum downloaded 1,020 Mo of model data in about three minutes, then handled chat, photo input and web search. The tester was impressed that it described a photographed parcel slip. In the two accuracy checks he ran, the answers failed: a news question returned an assassination that a third-party source contradicts, and a hard logic prompt was rated 5/25 by ChatGPT, used as the judge. The tester would not keep the app. Offline operation, documents and privacy were not tested.",
-    "fit": "Not a fit for the tester, who works with frontier models and with local models on a Mac: in his view free frontier services do far more, and a 1 GB file on the phone 'doesn't deliver most of the time'. Fit for other users is not established: the offline claim, the document feature and data handling were not tested."
+    "general": "Test completed: the tester went through what the app offers on a OnePlus 8 Pro with 12 GB. Caelum downloaded 1,020 Mo of model data in about three minutes, then handled chat, photo input and web search, but never says which LLM it downloaded. The tester was impressed that it described a photographed parcel slip. In the two accuracy checks he ran, the answers failed: a news question returned an assassination that a third-party source contradicts, and a hard logic prompt was rated 5/25 by ChatGPT, used as the judge. ChatGPT rated three other AIs (Grok in its free version, Claude Opus 5.5, Claude Fable 5.1) better on the same prompt but found logic errors in each. The tester would not keep the app. Offline operation was not tested: it is unclear when the app's web interface is on or off and what it does.",
+    "fit": "Not a fit for the tester, who works with frontier models and with local models on a Mac: in his view free frontier services do far more, and a 1 GB file on the phone 'doesn't deliver most of the time'. Fit for other users is not established: the offline claim and data handling were not tested."
   },
   "scores": [
     [
@@ -127,7 +132,7 @@
     [
       "Onboarding and model choice",
       null,
-      "Not scored. No model choice appears in the screenshots and the model is never named there; settings were not opened."
+      "Not scored. No model choice appears in the screenshots and the app never says which model was downloaded."
     ],
     [
       "Core function",
@@ -142,7 +147,7 @@
     [
       "Performance",
       null,
-      "Not timed. The tester estimates more than one minute for the logic answer; the phone's RAM and Android version are not recorded."
+      "Not timed. The tester estimates more than one minute for the logic answer; the phone has 12 GB, the Android version is not recorded."
     ],
     [
       "Documentation",
@@ -160,7 +165,7 @@
       "Not tested."
     ]
   ],
-  "scores_note": "Scores are proposals derived from the evidence below (1 = poor, 5 = very good). They are the tester's to confirm. Only two dimensions are scored; the rest were not tested.",
+  "scores_note": "Scores are proposals derived from the evidence below (1 = poor, 5 = very good). They are the tester's to confirm. Only two dimensions are scored; the others were not scored.",
   "tldr": [
     [
       "observed",
@@ -176,11 +181,15 @@
     ],
     [
       "observed",
+      "The app never says which LLM it downloaded: no model name appears on the download screen or in the chat."
+    ],
+    [
+      "observed",
       "On a question about Rwanda it stated that President Paul Kagame was assassinated in July 2023. A Google AI Overview, seen by the tester, says he has been in office since 2000 and was re-elected in July 2024."
     ],
     [
       "third-party",
-      "ChatGPT, used as judge, scored the app's answer to a hard logic prompt 5/25 ('qualitative evaluation, not a standardized benchmark score'). The tester did not check the logic himself."
+      "ChatGPT, used as judge, scored the app's answer to a hard logic prompt 5/25 ('qualitative evaluation, not a standardized benchmark score'). The tester did not check the logic himself. Three other AIs (Grok in its free version, Claude Opus 5.5, Claude Fable 5.1) were rated better by ChatGPT, but each still made logic errors."
     ],
     [
       "tester-view",
@@ -222,7 +231,7 @@
     ],
     [
       "The logic stress test",
-      "A long, tidy report; ChatGPT's verdict: 5/25, a correct-looking conclusion without the actual contradiction. Screenshots of the judge belong to another service and are not shown.",
+      "A long, tidy report; ChatGPT's verdict: 5/25, a correct-looking conclusion without the actual contradiction. Three other AIs slipped on the same prompt too. Screenshots of the judge belong to another service and are not shown.",
       null,
       "chapter-logic"
     ],
@@ -253,6 +262,11 @@
           "measured",
           "The first screen reads 'downloading needed data...', 41 Mo/1020 Mo, ETA 3m 8s, with a tip box and 'Tap to see other tips...'. The 5.60 MB/s figure is the status bar's own indicator.",
           "caelum-download-progress"
+        ],
+        [
+          "observed",
+          "The app never says which LLM it is downloading: the screen shows only 'downloading needed data...'.",
+          null
         ],
         [
           "assumption",
@@ -308,7 +322,7 @@
         ],
         [
           "observed",
-          "The chat title reads 'where is paris?' while the visible message is 'what is the picture about'. The tester says the system 'messed it up, mixed the requests' and started a new chat. The cause was not found.",
+          "The chat title reads 'where is paris?' while the visible message is 'what is the picture about'. The title is the chat's first question: the tester had added two further questions, including the photo question, to the same chat.",
           null
         ],
         [
@@ -329,7 +343,7 @@
         ],
         [
           "tester-view",
-          "He found it unclear when web search is on or off: 'two different shades of blue'.",
+          "He found it totally unclear when web search is on or off and what it does: 'two different shades of blue'.",
           null
         ],
         [
@@ -381,17 +395,12 @@
         ],
         [
           "third-party",
-          "To test whether the prompt itself was unfair, the tester ran it through Grok, Claude Opus 5.5 (medium) and Claude Fable 5.1 (high) and showed each answer to ChatGPT. ChatGPT rated the later answers better ('substantially better', 8/10 on logical deduction in one case) and still found errors in each, for example a count of 12 valid schedules that 'are actually 13', and a minimum-repair proof 'not yet rigorous enough'.",
+          "To test whether the prompt itself was unfair, the tester ran it through Grok (free version), Claude Opus 5.5 (medium) and Claude Fable 5.1 (high) and showed each answer to ChatGPT. ChatGPT rated the later answers better ('substantially better', 8/10 on logical deduction in one case) and still found errors in each, for example a count of 12 valid schedules that 'are actually 13', and a minimum-repair proof 'not yet rigorous enough'.",
           null
         ],
         [
           "tester-estimate",
           "Opus answered 'in less than one minute'; Grok was still working after about three minutes. Neither was timed.",
-          null
-        ],
-        [
-          "assumption",
-          "The notes were dictated; 'Croc' and 'groc' are read as Grok, and which ChatGPT screenshot belongs to which model follows the order of the notes. The assignment of the last four screenshots is the least certain.",
           null
         ],
         [
@@ -448,7 +457,7 @@
         ],
         [
           "assumption",
-          "Battery fell from 70% to 59% in 20 minutes with the screen on and with the ChatGPT app in use for part of that time, so none of it can be assigned to Caelum. Between 10:39 and 10:47, mostly inside Caelum, it fell from 67% to 64%. No memory chart is possible because the phone's RAM and the app's memory use were not recorded. Throughput readings in the status bar (0.03 to 0.58 KB/s in the chat screenshots) are single snapshots, not a traffic log, and do not show whether the app is offline.",
+          "Battery fell from 70% to 59% in 20 minutes with the screen on and with the ChatGPT app in use for part of that time, so none of it can be assigned to Caelum. Between 10:39 and 10:47, mostly inside Caelum, it fell from 67% to 64%. No memory chart is possible because the app's memory use was not recorded (the phone has 12 GB). Throughput readings in the status bar (0.03 to 0.58 KB/s in the chat screenshots) are single snapshots, not a traffic log, and do not show whether the app is offline.",
           null
         ]
       ]
@@ -458,14 +467,14 @@
     [
       "Runs AI offline",
       "Google Play listing and developer's privacy page, via the PromptQuorum review (read 19 October 2026)",
-      "Not tested (no airplane-mode run). The 1,020 Mo download fits an on-device model (assumption). None of the five app screenshots shows the words 'local' or 'offline'; the tester says the app does not stress it.",
+      "Not tested (no airplane-mode run): it is unclear when the app's web interface is on or off and what it does. The 1,020 Mo download fits an on-device model (assumption). None of the five app screenshots shows the words 'local' or 'offline'; the tester says the app does not stress it.",
       "assumption"
     ],
     [
       "Document questions",
       "Google Play listing, via the PromptQuorum review",
-      "Not tested. Only photo input was used.",
-      "observed"
+      "Not tested. The tester used the folder button for the photo and did not find another documents function (assumption: documents would go through the same button).",
+      "assumption"
     ],
     [
       "Optional web search",
@@ -549,7 +558,7 @@
   "errors": [
     [
       "tester-error",
-      "Left gaps in the record: app version, Android version, phone RAM, where the app was installed from, and the date. Only the phone clock in the screenshots dates the test."
+      "Left gaps in the record: the Android version and where the app was installed from. Only the phone clock in the screenshots times the test."
     ],
     [
       "tester-error",
@@ -560,20 +569,8 @@
       "Did not check the logic puzzle himself ('why use my brain if I have ChatGPT?'). ChatGPT wrote the puzzle and judged the answers; its statements about the schedule count differ between screenshots (13 in one, 'consistent with 12' in another), and which answer each refers to is unclear. The judge was therefore not independent and not verified."
     ],
     [
-      "tester-error",
-      "Did not run the offline test (airplane mode) or the document feature, although 'local AI' is the app's pitch and these are the main vendor claims."
-    ],
-    [
-      "tester-error",
-      "The chat thread titled 'where is paris?' carried an unrelated photo question. The tester did not record what he did to cause it, so it cannot be told whether this is an app bug or a usage slip."
-    ],
-    [
       "tester-view",
       "The tester accepts that the prompt may have been too hard for a 1 GB model ('maybe the test was too difficult') and that frontier models are an unfair yardstick; this report keeps that caveat."
-    ],
-    [
-      "assumption",
-      "The notes were dictated. Model names were read as Grok, Claude Opus 5.5 (medium) and Claude Fable 5.1 (high); they should be confirmed."
     ]
   ],
   "findings": [
@@ -619,10 +616,10 @@
     ],
     [
       "CAE-05",
-      "A chat titled 'where is paris?' held an unrelated photo question; the tester says the app mixed up requests and he started a new chat.",
+      "The chat is titled 'where is paris?', the first question asked in it; the photo question was one of two further questions the tester added to the same chat, so the title does not match the visible message.",
       "Chat handling",
       "observed",
-      "Medium",
+      "Low",
       [
         "caelum-parcel-slip-description"
       ]
@@ -670,7 +667,7 @@
     ],
     [
       "CAE-10",
-      "The model behind the app is not named in the screenshots, and the directory records no named model either.",
+      "The app does not say which LLM was downloaded: no model name appears on the download or chat screens, and the directory records no named model either.",
       "Transparency",
       "observed",
       "Medium",
@@ -712,9 +709,9 @@
     ],
     [
       "CAE-15",
-      "Offline operation (the vendor claim) was not tested.",
+      "Offline operation (the vendor claim) was not tested: it is unclear when the app's web interface is on or off and what it does.",
       "Trust and privacy",
-      "vendor-claim",
+      "tester-view",
       "Medium",
       []
     ],
@@ -759,7 +756,7 @@
         "Per the tester: nobody he can name; he would not keep it."
       ]
     ],
-    "retest": "Retest after a new Play Store version (the last update is from 14 August 2025, older than one year), once the maker names the model, with an airplane-mode run and a document test on the same phone, and on a second Android phone with known RAM and Android version."
+    "retest": "Retest after a new Play Store version (the last update is from 14 August 2025, older than one year), once the maker names the model, with an airplane-mode run on the same phone, and on a second Android phone with a known Android version."
   },
   "background_intro": "Not hands-on. The item below comes from the PromptQuorum directory entry for Caelum, read on 19 October 2026, and was not independently verified.",
   "background": [
