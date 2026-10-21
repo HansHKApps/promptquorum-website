@@ -914,6 +914,11 @@
     "urlSlug": "blinko-review",
     "url": "/power-local-llm/blinko-review"
   },
+  "surfsense": {
+    "cluster": "power-local-llm",
+    "urlSlug": "surfsense-review",
+    "url": "/power-local-llm/surfsense-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",

@@ -897,6 +897,7 @@ const HUB_THEMES: Array<{
       'chroma-review',
       'longmemory-review',
       'return-editor-review',
+      'surfsense-review',
     ],
   },
   {

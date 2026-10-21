@@ -538,5 +538,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'memoryai-review':                          'memoryai-review',
   'llamatik-review':                          'llamatik-review',
   'castmates-review':                         'castmates-review',
+  'surfsense-review':                         'surfsense-review',
   'caelum-review':                            'caelum-review',
 }

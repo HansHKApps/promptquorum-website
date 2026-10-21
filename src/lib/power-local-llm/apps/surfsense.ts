@@ -40,7 +40,17 @@ export const app: ToolRecord = {
     ko: '오프라인 구동이 가능한 오픈소스 NotebookLM 대안: 내 컴퓨터에서 문서를 조사·변환·편집하는 데스크톱 AI 에이전트',
   },
   mcpSupport: true, // README: third-party MCP servers from the plugin registry or any added by URL
-  lastVerifiedDate: '2026-10-17',
-  lastUpstreamUpdate: '2026-10-16', // GitHub: release v2.2.2 published 2026-10-16, read 2026-10-17
+  // Comparison attributes (document-chat segment), each verified against surfsense.com / the GitHub README on 2026-10-21;
+  // dockerDeploy and apiServer are not documented on the pages checked, so they stay unset (not stated, never false).
+  compare: { localLlm: true, multiFormat: true, citations: true, desktopApp: true },
+  reviewSlug: 'surfsense-review',
+  pqReview: {
+    date: '2026-10-21',
+    version: '2.2.2',
+    versionSourceUrl: 'https://github.com/MODSetter/SurfSense/releases',
+  },
+  verdict: 'Best for people who want a private, NotebookLM-style desktop agent over their own documents with a model of their choice; limited by unverified privacy and offline claims, no Intel Mac or mobile build, paid web plugins, and the shutdown of the hosted version it grew out of.',
+  lastVerifiedDate: '2026-10-21',
+  lastUpstreamUpdate: '2026-10-16', // GitHub: release v2.2.2 published 2026-10-16, re-read 2026-10-21 (still the latest)
   lastUpstreamUpdateSource: 'https://github.com/MODSetter/SurfSense/releases',
 }
