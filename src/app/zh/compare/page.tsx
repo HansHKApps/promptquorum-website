@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { ogLocale } from '@/lib/i18n/constants'
 import { translations } from '@/translations'
 import { ComparePageClient } from '@/components/ComparePageClient'
 import { generateAlternates } from '@/lib/hreflang'
@@ -17,6 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
       type: 'website',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
     },
     twitter: {
       card: 'summary_large_image',

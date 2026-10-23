@@ -14,7 +14,7 @@ import { isPromptBitePublished, isPromptBitesHubPublished, PROMPT_BITES_PUBLISHE
 import { promptBitesAlternates, promptBitesHubPath, promptBitesArticlePath } from './metadata-helpers'
 import { getHubMetadata } from './hub-metadata'
 import { PromptBitesHubTemplate, usesPromptBitesHubTemplate } from './hub-template'
-import { toOutputLocale } from '@/lib/i18n/constants'
+import { toOutputLocale, ogLocale } from '@/lib/i18n/constants'
 import { buildArticleImageObject } from '@/lib/imageObjectSchema'
 import { narrowArticleData } from '@/lib/narrowArticleData'
 
@@ -81,6 +81,7 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
       url: `${BASE}${promptBitesArticlePath(lang, slug)}`,
       type: 'article',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
       images: [{ url: `${BASE}/api/og/${slug}?lang=${lang}`, width: 1200, height: 675, alt: article?.title ?? fallbackTitle }],
       publishedTime: article?.publishDate,
     },
@@ -242,6 +243,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
       url: `${BASE}${promptBitesHubPath(lang)}`,
       type: 'website',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
       images: [{ url: `${BASE}/images/prompt-bites-hub-overview-hero-${lang}.webp`, width: 1200, height: 675, alt: titleByLang[lang] ?? titleByLang['en']! }],
     },
     twitter: {

@@ -89,3 +89,14 @@ export const RTL_LANGS = ['ar'] as const;
 export function getLangDir(lang: string): 'rtl' | 'ltr' {
   return (RTL_LANGS as readonly string[]).includes(lang) ? 'rtl' : 'ltr';
 }
+
+/** Open Graph locale per internal language code (og:locale uses language_TERRITORY). */
+export const OG_LOCALE: Record<string, string> = {
+  en: 'en_US', de: 'de_DE', fr: 'fr_FR', ja: 'ja_JP', zh: 'zh_CN', es: 'es_ES', pt: 'pt_BR', ar: 'ar_AR', ko: 'ko_KR',
+};
+
+/** Spread into `openGraph` so each locale's raw HTML declares its own og:locale plus the other eight as alternates. */
+export function ogLocale(lang: string): { locale: string; alternateLocale: string[] } {
+  const locale = OG_LOCALE[lang] ?? OG_LOCALE.en;
+  return { locale, alternateLocale: Object.values(OG_LOCALE).filter((l) => l !== locale) };
+}

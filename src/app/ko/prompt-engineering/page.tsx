@@ -4,7 +4,7 @@ import { PromptEngineeringHub } from '@/components/PromptEngineeringHub'
 import { PeHubTemplate, usesPeHubTemplate } from '@/lib/prompt-engineering/hub-template'
 import { buildPEHubData } from '@/lib/prompt-engineering/hub-data'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = 'ko'
@@ -20,6 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
       type: 'website',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
     },
     twitter: {
       card: 'summary_large_image',

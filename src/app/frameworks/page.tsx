@@ -3,7 +3,7 @@ import { AppLink as Link } from '@/components/AppLink'
 import { translations } from '@/translations'
 import { FRAMEWORKS } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -22,6 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
       type: 'website',
       siteName: 'PromptQuorum',
+      ...ogLocale(selectedLang),
     },
     twitter: {
       card: 'summary_large_image',

@@ -12,6 +12,7 @@
 // see published.ts. The Coming-Soon renderer below stays as a safety net for any new
 // slug added to the registry before its content lands.
 
+import { ogLocale } from '@/lib/i18n/constants'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { AppLink as Link } from '@/components/AppLink'
@@ -159,6 +160,7 @@ export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Me
       url: `${BASE}${smartHomeArticlePath(lang, slug)}`,
       type: 'article',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
       images: [
         {
           url: (article as any)?.heroImage
@@ -390,6 +392,7 @@ export async function buildHubMetadata(lang: Lang): Promise<Metadata> {
       url: `${BASE}${smartHomeHubPath(lang)}`,
       type: 'website',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
       images: [{ url: `${BASE}/images/smart-home-hub-overview-hero-${lang}.webp`, width: 1200, height: 675, alt: title }],
     },
     twitter: {

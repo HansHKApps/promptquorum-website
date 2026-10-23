@@ -3,7 +3,7 @@ import { AppLink as Link } from '@/components/AppLink'
 import { translations } from '@/translations'
 import { FRAMEWORKS } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 
 const COMPLEXITY_COLOR: Record<string, string> = {
   Low: 'text-green-400 bg-green-400/10 border-green-400/30',
@@ -25,6 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
       type: 'website',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
     },
     twitter: {
       card: 'summary_large_image',

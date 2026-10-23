@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 import { PrivacyPageClient } from '@/components/PrivacyPageClient'
 
 export const dynamic = 'force-static'
@@ -25,6 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
       type: 'website',
       siteName: 'PromptQuorum',
+      ...ogLocale(selectedLang),
     },
     twitter: {
       card: 'summary_large_image',

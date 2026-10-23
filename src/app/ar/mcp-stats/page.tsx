@@ -6,7 +6,7 @@
 
 import type { Metadata } from 'next'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS, toOutputLocale } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, toOutputLocale, ogLocale } from '@/lib/i18n/constants'
 import { getMcpUsageSnapshot } from '@/lib/mcp/usage'
 import { McpStatsContent } from '@/components/tools/McpStatsContent'
 import { t as tMcp } from '@/components/tools/mcp-stats-i18n'
@@ -27,7 +27,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: `${title} | PromptQuorum`,
     description,
     alternates: generateAlternates(PATH, LANG, true, undefined, [...PATH_PREFIX_LANGS]),
-    openGraph: { title, description, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'website', siteName: 'PromptQuorum' },
+    openGraph: { title, description, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'website', siteName: 'PromptQuorum', ...ogLocale(LANG) },
     twitter: { card: 'summary_large_image', title, description },
   }
 }

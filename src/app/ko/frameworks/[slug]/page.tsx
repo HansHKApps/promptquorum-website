@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import { FRAMEWORKS, getFrameworkLocalized } from '@/lib/frameworksData'
 import { getFrameworkUiLabels } from '@/lib/frameworksUiLabels'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, ogLocale } from '@/lib/i18n/constants'
 
 export const revalidate = 86400
 
@@ -37,6 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'article',
       url: `https://www.promptquorum.com/ko/frameworks/${fw.slug}`,
       siteName: 'PromptQuorum',
+      ...ogLocale(LANG),
       title: fwTitle,
       description: fw.tagline,
       images: [{ url: ogImageUrl, width: 1200, height: 675, alt: `${fw.name} Prompt Framework` }],

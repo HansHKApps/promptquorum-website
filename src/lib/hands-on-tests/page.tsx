@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import type { Language } from '@/lib/blog/blogContent'
 import { generateAlternates } from '@/lib/hreflang'
-import { getLangDir, toOutputLocale } from '@/lib/i18n/constants'
+import { getLangDir, toOutputLocale, ogLocale } from '@/lib/i18n/constants'
 import { buildImageObject } from '@/lib/imageObjectSchema'
 import { HandsOnTestView } from '@/components/hands-on-test/HandsOnTestView'
 import { LangLinksBar } from '@/components/LangLinksBar'
@@ -59,7 +59,8 @@ export function buildHandsOnTestMetadata(urlSlug: string, lang: Language = 'en')
     // Hands-on tests are always indexable; scripts/validate-hands-on-tests.mjs rejects an 'index' field.
     robots: { index: true, follow: true },
     alternates: generateAlternates(pathFor(urlSlug), lang, true, [...handsOnTestLangs(appSlug)]),
-    openGraph: { title, description, url, images: [ogImage], type: 'article', siteName: 'PromptQuorum', publishedTime: test.published, modifiedTime: test.modified ?? test.published },
+    openGraph: { title, description, url, images: [ogImage], type: 'article', siteName: 'PromptQuorum',
+      ...ogLocale(lang), publishedTime: test.published, modifiedTime: test.modified ?? test.published },
     twitter: { card: 'summary_large_image', title, description, images: [ogImage.url] },
   }
 }

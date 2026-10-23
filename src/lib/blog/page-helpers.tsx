@@ -5,7 +5,7 @@ import { BlogIndexClient } from '@/components/BlogIndexClient'
 import { blogContent, type Language } from '@/lib/blog/blogContent'
 import { SLUG_TO_POST_ID, type BlogSlug } from '@/lib/blogSlugs'
 import { generateAlternates } from '@/lib/hreflang'
-import { PATH_PREFIX_LANGS, toOutputLocale } from '@/lib/i18n/constants'
+import { PATH_PREFIX_LANGS, toOutputLocale, ogLocale } from '@/lib/i18n/constants'
 import { translations } from '@/translations'
 import { truncateTitle } from '@/lib/utils'
 import { getBlogPostIsoDate, getBlogPostModifiedIsoDate } from '@/lib/blog/parsePublishDate'
@@ -73,6 +73,7 @@ export async function buildHubMetadata(lang: Language): Promise<Metadata> {
       images: [{ url: '/og-image.png', alt: `${t.blogTitle} — PromptQuorum Blog` }],
       type: 'website',
       siteName: 'PromptQuorum',
+      ...ogLocale(lang),
     },
     twitter: {
       card: 'summary_large_image',
