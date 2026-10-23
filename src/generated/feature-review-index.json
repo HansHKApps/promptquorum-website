@@ -929,6 +929,11 @@
     "urlSlug": "mlx-audio-review",
     "url": "/power-local-llm/mlx-audio-review"
   },
+  "speechbrain": {
+    "cluster": "power-local-llm",
+    "urlSlug": "speechbrain-review",
+    "url": "/power-local-llm/speechbrain-review"
+  },
   "candle-vllm": {
     "cluster": "power-local-llm",
     "urlSlug": "candle-vllm-review",

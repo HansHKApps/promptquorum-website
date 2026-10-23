@@ -564,6 +564,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'surfsense-review',
   // Strata review (Run & Serve, inference engine) — 2026-10-23
   'strata-review',
+  // SpeechBrain review (Voice & Audio, speech toolkit) — 2026-10-23
+  'speechbrain-review',
   // Llamatik review (Mobile & Edge LLMs) — 2026-10-19
   'llamatik-review',
   // Caelum review (Mobile & Edge LLMs) — 2026-10-19
