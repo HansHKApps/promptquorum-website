@@ -23,7 +23,7 @@ export function AboutLanguagePill({ href, lang, children }: AboutLanguagePillPro
     <Link
       href={href}
       onClick={handleClick}
-      className="px-3 py-1.5 rounded-full bg-primary/10 text-text-primary text-sm font-medium hover:bg-primary/20 transition-colors"
+      className="px-3 py-1.5 rounded-full border border-hub-violet-edge bg-hub-violet-tint text-hub-violet-ink text-sm font-medium hover:border-hub-violet transition-colors"
     >
       {children}
     </Link>
