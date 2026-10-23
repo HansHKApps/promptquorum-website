@@ -49,8 +49,8 @@ export default async function JaFAQPage() {
               { '@type': 'Question', name: '利用制限はありますか？', acceptedAnswer: { '@type': 'Answer', text: 'PromptQuorum側からの制限はありません。利用はAPIキーまたはローカルLLMのリソースにのみ依存します。' } },
               { '@type': 'Question', name: 'プロンプトエンジニアリングとは何ですか？なぜ重要なのですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトエンジニアリングとは、AIモデルへの入力をより正確で有用な出力が得られるよう設計する実践です。よく構造化されたプロンプトはAI出力品質を25〜45%向上させます。PromptQuorumは9つの組み込みフレームワークでこれを自動化します — 専門知識は不要です。' } },
               { '@type': 'Question', name: 'PromptQuorumはどのようにプロンプトを最適化しますか？', acceptedAnswer: { '@type': 'Answer', text: '接続されたLLMがフレームワークの生のフィールドを精密なプロンプトに変換します。その後、8つのワンクリック改善（簡潔にする・詳細を拡張・ステップに分解・簡略化・具体性向上・マルチエキスパート相談・品質コントロール追加・カスタム指示）で反復的に改善できます。すべてのステップがバージョン履歴に保存されます。' } },
-              { '@type': 'Question', name: 'PromptQuorumにはどのようなプロンプトフレームワークが組み込まれていますか？', acceptedAnswer: { '@type': 'Answer', text: '9つのフレームワークが含まれています：Single Prompt Line、APE、CRAFT、CO-STAR（シンガポールGPT-4コンテスト優勝）、SPECS、RISEN、TRACE、Google Prompt、RTF。さらに2つの完全カスタムフレームワークを作成できます。' } },
-              { '@type': 'Question', name: 'CO-STARフレームワークとは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'CO-STARはContext（文脈）、Objective（目標）、Style（スタイル）、Tone（トーン）、Audience（対象者）、Response（回答形式）の略です。シンガポールGPT-4プロンプトエンジニアリングコンテストで優勝し、ビジネスコミュニケーションやマーケティングに最適です。' } },
+              { '@type': 'Question', name: 'PromptQuorumにはどのようなプロンプトフレームワークが組み込まれていますか？', acceptedAnswer: { '@type': 'Answer', text: '9つのフレームワークが含まれています：Single Prompt Line、APE、CRAFT、CO-STAR（シンガポールGPT-4コンテストの優勝に使用）、SPECS、RISEN、TRACE、Google Prompt、RTF。さらに2つの完全カスタムフレームワークを作成できます。' } },
+              { '@type': 'Question', name: 'CO-STARフレームワークとは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'CO-STARはContext（文脈）、Objective（目標）、Style（スタイル）、Tone（トーン）、Audience（対象者）、Response（回答形式）の略です。シンガポールGPT-4プロンプトエンジニアリングコンテストの優勝に使われ、ビジネスコミュニケーションやマーケティングに最適です。' } },
             ],
             breadcrumb: {
               '@type': 'BreadcrumbList',

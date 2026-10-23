@@ -24,6 +24,8 @@ export type Framework = {
   notFor: string[]
   example: { scenario: string; prompt: string }
   badge?: string
+  /** Primary sources for claims on the page (titles stay in the source's own language; the heading is localized). */
+  sources?: { title: string; url: string }[]
   related: string[]
   faq: { q: string; a: string }[]
   seoTitle?: string
@@ -43,15 +45,19 @@ export const FRAMEWORKS: Framework[] = [
     slug: 'co-star',
     name: 'CO-STAR',
     expansion: 'Context · Objective · Style · Tone · Audience · Response',
-    tagline: 'The Singapore GPT-4 competition winner. Maximum control over voice, audience, and output format.',
+    tagline: 'Credited to GovTech Singapore\'s Data Science & AI team, and used to win Singapore\'s first GPT-4 prompt engineering competition. Maximum control over voice, audience, and output format.',
     seoTitle: 'CO-STAR Framework: 6 Fields That Won a GPT-4 Contest',
-    metaDescription: 'CO-STAR beat every entry in Singapore\'s GPT-4 contest by splitting Style from Tone. See all 6 fields, a real example, and CRAFT comparison.',
+    metaDescription: 'CO-STAR, from GovTech Singapore, splits Style from Tone across 6 fields. See every field, a real example prompt, and when to choose it over CRAFT.',
     heroImage: '/images/frameworks-co-star-fields-overview-hero-en.webp',
     bestForImage: '/images/frameworks-co-star-best-for-hero-en.webp',
     publishDate: '2026-03-16',
     dateModified: '2026-07-16',
     complexity: 'Medium',
-    badge: 'Won Singapore GPT-4 Competition',
+    badge: 'Used to win Singapore\'s GPT-4 competition',
+    sources: [
+      { title: 'Sheila Teo, "How I Won Singapore\'s GPT-4 Prompt Engineering Competition" (Towards Data Science)', url: 'https://towardsdatascience.com/how-i-won-singapores-gpt-4-prompt-engineering-competition-34c195a93d41' },
+      { title: 'GovTech Singapore, "Mastering the art of prompt engineering with Empower"', url: 'https://www.tech.gov.sg/media/technews/mastering-the-art-of-prompt-engineering-with-empower' },
+    ],
     fields: [
       { name: 'Context', description: 'Background information the AI needs to understand the task and situation.' },
       { name: 'Objective', description: 'The specific goal or outcome you want the AI to achieve.' },
@@ -75,17 +81,17 @@ export const FRAMEWORKS: Framework[] = [
       scenario: 'Writing a product launch email for a SaaS tool targeting CTOs',
       prompt: 'Context: PromptQuorum is a multi-model AI tool launching in July 2026. Objective: Write a product launch email that drives signups. Style: Clear and direct, no fluff. Tone: Confident and professional. Audience: CTOs at mid-size tech companies. Response: 200-word email with subject line.',
     },
-    related: ['craft', 'specs', 'rtf'],
+    related: ['craft', 'risen', 'trace', 'rtf'],
     faq: [
       { q: 'What does CO-STAR stand for?', a: 'CO-STAR stands for Context, Objective, Style, Tone, Audience, and Response — six fields that give you precise control over AI output.' },
-      { q: 'Why did CO-STAR win the Singapore GPT-4 competition?', a: 'CO-STAR won because it separates Style (presentation) from Tone (emotion), giving more precise control than frameworks that treat them as one field.' },
+      { q: 'Where does CO-STAR come from, and did it win the Singapore GPT-4 competition?', a: 'CO-STAR is credited to GovTech Singapore\'s Data Science & AI team. Sheila Teo used it to win GovTech\'s first GPT-4 prompt engineering competition, which drew over 400 participants, and described the approach in a Towards Data Science article. The framework did not win by itself; the win was Teo\'s. Its core design idea is separating Style (presentation) from Tone (emotion).' },
       { q: 'When should I use CO-STAR vs CRAFT?', a: 'Use CO-STAR when you need fine-grained control over voice and audience. Use CRAFT when you want a Role-based framing with a clear Target persona. Learn how to measure the effectiveness of your CO-STAR prompts at https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality.' },
     ],
     translations: {
       de: {
-        tagline: 'Der Gewinner des Singapur-GPT-4-Wettbewerbs. Maximale Kontrolle über Stimme, Zielgruppe und Ausgabeformat.',
+        tagline: 'Dem Data-Science-&-KI-Team von GovTech Singapur zugeschrieben und zum Sieg im ersten GPT-4-Prompt-Engineering-Wettbewerb Singapurs eingesetzt. Maximale Kontrolle über Stimme, Zielgruppe und Ausgabeformat.',
         seoTitle: 'CO-STAR Framework: 6 Felder, die einen GPT-4-Contest gewannen',
-        metaDescription: 'CO-STAR schlug jeden Beitrag im GPT-4-Wettbewerb aus Singapur, weil es Style von Tone trennt. Alle 6 Felder, ein echtes Beispiel und der Vergleich mit CRAFT.',
+        metaDescription: 'CO-STAR von GovTech Singapur trennt Style und Tone in 6 Feldern. Alle Felder, ein echtes Beispiel und die Frage, wann du es statt CRAFT wählst.',
         heroImage: '/images/frameworks-co-star-fields-overview-hero-de.webp',
         bestForImage: '/images/frameworks-co-star-best-for-hero-de.webp',
         fields: [
@@ -113,14 +119,14 @@ export const FRAMEWORKS: Framework[] = [
         },
         faq: [
           { q: 'Wofür steht CO-STAR?', a: 'CO-STAR steht für Context, Objective, Style, Tone, Audience und Response — sechs Felder, die dir präzise Kontrolle über die KI-Ausgabe geben.' },
-          { q: 'Warum hat CO-STAR den Singapur-GPT-4-Wettbewerb gewonnen?', a: 'CO-STAR gewann, weil es Style (Darstellung) von Tone (Emotion) trennt und dadurch präzisere Kontrolle ermöglicht als Frameworks, die beides als ein Feld behandeln.' },
+          { q: 'Woher stammt CO-STAR, und hat es den Singapur-GPT-4-Wettbewerb gewonnen?', a: 'CO-STAR wird dem Data-Science-&-KI-Team von GovTech Singapur zugeschrieben. Sheila Teo gewann damit den ersten GPT-4-Prompt-Engineering-Wettbewerb von GovTech mit über 400 Teilnehmenden und beschrieb das Vorgehen in einem Artikel auf Towards Data Science. Das Framework hat also nicht selbst gewonnen, der Sieg war Teos. Seine zentrale Idee ist die Trennung von Style (Darstellung) und Tone (Emotion).' },
           { q: 'Wann sollte ich CO-STAR statt CRAFT verwenden?', a: 'Verwende CO-STAR, wenn du feingranulare Kontrolle über Stimme und Zielgruppe brauchst. Verwende CRAFT, wenn du eine rollenbasierte Herangehensweise mit klar definierter Zielperson willst. Wie du die Qualität deiner CO-STAR-Prompts misst, erfährst du unter https://www.promptquorum.com/de/prompt-engineering/how-to-evaluate-prompt-quality.' },
         ],
       },
       fr: {
-        tagline: 'Le grand gagnant du concours GPT-4 de Singapour. Un contrôle maximal sur la voix, le public et le format de sortie.',
+        tagline: 'Attribué à l\'équipe Data Science & IA de GovTech Singapour et utilisé pour remporter le premier concours de prompt engineering GPT-4 de Singapour. Un contrôle maximal sur la voix, le public et le format de sortie.',
         seoTitle: 'Framework CO-STAR : les 6 champs qui ont gagné un concours GPT-4',
-        metaDescription: 'CO-STAR a battu toutes les autres méthodes au concours GPT-4 de Singapour en séparant Style et Tone. Découvrez les 6 champs, un exemple concret et la comparaison avec CRAFT.',
+        metaDescription: 'CO-STAR, créé par GovTech Singapour, sépare Style et Tone en 6 champs. Découvrez chaque champ, un exemple concret et quand le choisir plutôt que CRAFT.',
         heroImage: '/images/frameworks-co-star-fields-overview-hero-fr.webp',
         bestForImage: '/images/frameworks-co-star-best-for-hero-fr.webp',
         fields: [
@@ -148,14 +154,14 @@ export const FRAMEWORKS: Framework[] = [
         },
         faq: [
           { q: 'Que signifie CO-STAR ?', a: 'CO-STAR signifie Context, Objective, Style, Tone, Audience et Response — six champs qui vous donnent un contrôle précis sur la sortie de l\'IA.' },
-          { q: 'Pourquoi CO-STAR a-t-il gagné le concours GPT-4 de Singapour ?', a: 'CO-STAR a gagné parce qu\'il sépare le Style (la présentation) du Tone (l\'émotion), offrant un contrôle plus fin que les frameworks qui les traitent comme un seul champ.' },
+          { q: 'D\'où vient CO-STAR, et a-t-il gagné le concours GPT-4 de Singapour ?', a: 'CO-STAR est attribué à l\'équipe Data Science & IA de GovTech Singapour. Sheila Teo l\'a utilisé pour remporter le premier concours de prompt engineering GPT-4 de GovTech, qui comptait plus de 400 participants, et a décrit l\'approche dans un article sur Towards Data Science. Le framework n\'a donc pas gagné seul : la victoire revient à Teo. Son idée centrale est de séparer le Style (la présentation) du Tone (l\'émotion).' },
           { q: 'Quand utiliser CO-STAR plutôt que CRAFT ?', a: 'Utilisez CO-STAR quand vous avez besoin d\'un contrôle fin sur la voix et le public. Utilisez CRAFT quand vous voulez une approche basée sur un rôle avec une cible bien définie. Pour apprendre à mesurer l\'efficacité de vos prompts CO-STAR, consultez https://www.promptquorum.com/fr/prompt-engineering/how-to-evaluate-prompt-quality.' },
         ],
       },
       es: {
-        tagline: 'El ganador del concurso GPT-4 de Singapur. Control máximo sobre la voz, el público y el formato de salida.',
+        tagline: 'Atribuido al equipo de Data Science e IA de GovTech Singapur y usado para ganar el primer concurso de prompt engineering con GPT-4 de Singapur. Control máximo sobre la voz, el público y el formato de salida.',
         seoTitle: 'Framework CO-STAR: los 6 campos que ganaron un concurso GPT-4',
-        metaDescription: 'CO-STAR venció a todos los rivales en el concurso GPT-4 de Singapur al separar Style de Tone. Descubre los 6 campos, un ejemplo real y la comparación con CRAFT.',
+        metaDescription: 'CO-STAR, de GovTech Singapur, separa Style y Tone en 6 campos. Descubre cada campo, un ejemplo real con su prompt y cuándo elegirlo en lugar de CRAFT.',
         heroImage: '/images/frameworks-co-star-fields-overview-hero-es.webp',
         bestForImage: '/images/frameworks-co-star-best-for-hero-es.webp',
         fields: [
@@ -183,14 +189,14 @@ export const FRAMEWORKS: Framework[] = [
         },
         faq: [
           { q: '¿Qué significa CO-STAR?', a: 'CO-STAR significa Context, Objective, Style, Tone, Audience y Response — seis campos que te dan control preciso sobre la salida de la IA.' },
-          { q: '¿Por qué ganó CO-STAR el concurso GPT-4 de Singapur?', a: 'CO-STAR ganó porque separa el Style (la presentación) del Tone (la emoción), lo que da un control más preciso que los frameworks que tratan ambos como un solo campo.' },
+          { q: '¿De dónde viene CO-STAR y ganó el concurso GPT-4 de Singapur?', a: 'CO-STAR se atribuye al equipo de Data Science e IA de GovTech Singapur. Sheila Teo lo usó para ganar el primer concurso de prompt engineering con GPT-4 de GovTech, con más de 400 participantes, y describió el enfoque en un artículo en Towards Data Science. El framework no ganó por sí solo: la victoria fue de Teo. Su idea central es separar el Style (presentación) del Tone (emoción).' },
           { q: '¿Cuándo usar CO-STAR en lugar de CRAFT?', a: 'Usa CO-STAR cuando necesites un control muy fino sobre la voz y el público. Usa CRAFT cuando quieras un enfoque basado en un rol con un target bien definido. Aprende a medir la efectividad de tus prompts CO-STAR en https://www.promptquorum.com/es/prompt-engineering/how-to-evaluate-prompt-quality.' },
         ],
       },
       pt: {
-        tagline: 'O vencedor do concurso GPT-4 de Singapura. Controle máximo sobre voz, público e formato de saída.',
+        tagline: 'Atribuído à equipe de Data Science e IA da GovTech Singapura e usado para vencer o primeiro concurso de prompt engineering com GPT-4 de Singapura. Controle máximo sobre voz, público e formato de saída.',
         seoTitle: 'Framework CO-STAR: os 6 campos que venceram um concurso GPT-4',
-        metaDescription: 'O CO-STAR venceu todos os concorrentes no concurso GPT-4 de Singapura ao separar Style de Tone. Veja os 6 campos, um exemplo real e a comparação com o CRAFT.',
+        metaDescription: 'O CO-STAR, da GovTech Singapura, separa Style e Tone em 6 campos. Veja cada campo, um exemplo real com o prompt e quando escolhê-lo em vez do CRAFT.',
         heroImage: '/images/frameworks-co-star-fields-overview-hero-pt.webp',
         bestForImage: '/images/frameworks-co-star-best-for-hero-pt.webp',
         fields: [
@@ -218,14 +224,14 @@ export const FRAMEWORKS: Framework[] = [
         },
         faq: [
           { q: 'O que significa CO-STAR?', a: 'CO-STAR significa Context, Objective, Style, Tone, Audience e Response — seis campos que dão a você controle preciso sobre a saída da IA.' },
-          { q: 'Por que o CO-STAR venceu o concurso GPT-4 de Singapura?', a: 'O CO-STAR venceu porque separa o Style (a apresentação) do Tone (a emoção), oferecendo um controle mais preciso do que frameworks que tratam os dois como um único campo.' },
+          { q: 'De onde vem o CO-STAR e ele venceu o concurso GPT-4 de Singapura?', a: 'O CO-STAR é atribuído à equipe de Data Science e IA da GovTech Singapura. Sheila Teo o usou para vencer o primeiro concurso de prompt engineering com GPT-4 da GovTech, que teve mais de 400 participantes, e descreveu a abordagem em um artigo no Towards Data Science. O framework não venceu sozinho: a vitória foi de Teo. Sua ideia central é separar o Style (a apresentação) do Tone (a emoção).' },
           { q: 'Quando usar CO-STAR em vez de CRAFT?', a: 'Use o CO-STAR quando precisar de controle refinado sobre voz e público. Use o CRAFT quando quiser uma abordagem baseada em papel (Role) com um público-alvo bem definido. Aprenda a medir a eficácia dos seus prompts CO-STAR em https://www.promptquorum.com/pt/prompt-engineering/how-to-evaluate-prompt-quality.' },
         ],
       },
       ja: {
-        tagline: 'シンガポールのGPT-4コンテスト優勝フレームワーク。声のトーン・読者・出力形式を最大限にコントロールできる。',
+        tagline: 'シンガポールGovTechのData Science & AIチームによるものとされ、同国初のGPT-4プロンプトエンジニアリングコンテストの優勝に使われたフレームワーク。声のトーン・読者・出力形式を最大限にコントロールできる。',
         seoTitle: 'CO-STARフレームワーク:GPT-4コンテストを制した6要素',
-        metaDescription: 'CO-STARはStyleとToneを分離することで、シンガポールのGPT-4コンテストの全出場作を上回った。6つの要素、実例、CRAFTとの比較を解説。',
+        metaDescription: 'GovTechシンガポール発のCO-STARは、StyleとToneを分けた6要素の構成。全要素、実例、CRAFTではなくCO-STARを選ぶ場面を解説。',
         heroImage: '/images/frameworks-co-star-fields-overview-hero-ja.webp',
         bestForImage: '/images/frameworks-co-star-best-for-hero-ja.webp',
         fields: [
@@ -253,14 +259,14 @@ export const FRAMEWORKS: Framework[] = [
         },
         faq: [
           { q: 'CO-STARとは何の略ですか?', a: 'CO-STARはContext、Objective、Style、Tone、Audience、Responseの略で、AIの出力を精密にコントロールする6つの要素を表します。' },
-          { q: 'なぜCO-STARはシンガポールのGPT-4コンテストで優勝したのですか?', a: 'CO-STARはStyle(表現方法)とTone(感情)を分けて扱うことで、両者を一つの要素として扱う他のフレームワークより精密なコントロールを実現したため優勝しました。' },
+          { q: 'CO-STARはどこから生まれ、シンガポールのGPT-4コンテストで優勝したのですか?', a: 'CO-STARはシンガポールGovTechのData Science & AIチームによるものとされるフレームワークです。Sheila Teoさんがこれを使ってGovTech主催の初のGPT-4プロンプトエンジニアリングコンテスト(参加者400人超)で優勝し、その手法をTowards Data Scienceの記事で紹介しています。フレームワーク自体が優勝したわけではなく、優勝はTeoさんの成果です。中心となる考え方は、Style(表現方法)とTone(感情)を分けることです。' },
           { q: 'CO-STARとCRAFTはどちらを使うべきですか?', a: '声のトーンや読者層を細かくコントロールしたい場合はCO-STARを使ってください。明確なターゲット像を持つロールベースの構成にしたい場合はCRAFTが適しています。CO-STARプロンプトの効果測定方法はhttps://www.promptquorum.com/ja/prompt-engineering/how-to-evaluate-prompt-qualityで解説しています。' },
         ],
       },
       zh: {
-        tagline: '新加坡GPT-4大赛冠军框架。对语气、受众和输出格式拥有最大程度的控制力。',
+        tagline: '由新加坡GovTech数据科学与人工智能团队被认为是其出处,曾被用于赢得新加坡首届GPT-4提示工程大赛。对语气、受众和输出格式拥有最大程度的控制力。',
         seoTitle: 'CO-STAR框架:赢得GPT-4大赛的6个字段',
-        metaDescription: 'CO-STAR通过将Style与Tone分离,击败了新加坡GPT-4大赛的所有对手。了解全部6个字段、真实案例,以及与CRAFT的对比。',
+        metaDescription: '新加坡GovTech推出的CO-STAR将Style与Tone分开,共6个字段。了解每个字段、真实案例,以及何时选CO-STAR而不是CRAFT。',
         heroImage: '/images/frameworks-co-star-fields-overview-hero-zh.webp',
         bestForImage: '/images/frameworks-co-star-best-for-hero-zh.webp',
         fields: [
@@ -288,14 +294,14 @@ export const FRAMEWORKS: Framework[] = [
         },
         faq: [
           { q: 'CO-STAR代表什么?', a: 'CO-STAR代表Context、Objective、Style、Tone、Audience和Response——这六个字段能让你精确控制AI的输出。' },
-          { q: '为什么CO-STAR能赢得新加坡的GPT-4大赛?', a: 'CO-STAR之所以获胜,是因为它将Style(呈现方式)与Tone(情感基调)分开处理,比把两者合并为一个字段的框架提供了更精确的控制。' },
+          { q: 'CO-STAR从何而来?它赢得了新加坡的GPT-4大赛吗?', a: 'CO-STAR被认为出自新加坡GovTech的数据科学与人工智能团队。Sheila Teo用它赢得了GovTech首届GPT-4提示工程大赛(参赛者超过400人),并在Towards Data Science上发表文章介绍了这一做法。框架本身并未参赛获奖,获奖的是Teo。它的核心设计思路是将Style(呈现方式)与Tone(情感基调)分开。' },
           { q: '什么时候该用CO-STAR而不是CRAFT?', a: '当你需要对语气和受众进行精细控制时,使用CO-STAR;当你想要基于角色设定、并有明确目标人群时,使用CRAFT。想了解如何评估CO-STAR提示词的效果,请访问https://www.promptquorum.com/zh/prompt-engineering/how-to-evaluate-prompt-quality。' },
         ],
       },
       ar: {
-        tagline: 'الإطار الفائز في مسابقة GPT-4 بسنغافورة. أقصى قدر من التحكم في نبرة الصوت والجمهور وصيغة المخرجات.',
+        tagline: 'يُنسب إلى فريق علوم البيانات والذكاء الاصطناعي في GovTech سنغافورة، واستُخدم للفوز بأول مسابقة لهندسة موجهات GPT-4 في سنغافورة. أقصى قدر من التحكم في نبرة الصوت والجمهور وصيغة المخرجات.',
         seoTitle: 'إطار CO-STAR: 6 حقول فازت بمسابقة GPT-4',
-        metaDescription: 'تفوّق CO-STAR على كل المتسابقين في مسابقة GPT-4 بسنغافورة بفصله بين Style وTone. تعرّف على الحقول الـ6 كافة، ومثال حقيقي، ومقارنة مع CRAFT.',
+        metaDescription: 'إطار CO-STAR من GovTech سنغافورة يفصل بين Style وTone عبر 6 حقول. تعرّف على كل حقل، ومثال حقيقي، ومتى تختاره بدلاً من CRAFT.',
         heroImage: '/images/frameworks-co-star-fields-overview-hero-ar.webp',
         bestForImage: '/images/frameworks-co-star-best-for-hero-ar.webp',
         fields: [
@@ -323,14 +329,14 @@ export const FRAMEWORKS: Framework[] = [
         },
         faq: [
           { q: 'ماذا يعني CO-STAR؟', a: 'يرمز CO-STAR إلى Context وObjective وStyle وTone وAudience وResponse — ستة حقول تمنحك تحكماً دقيقاً في مخرجات الذكاء الاصطناعي.' },
-          { q: 'لماذا فاز CO-STAR بمسابقة GPT-4 في سنغافورة؟', a: 'فاز CO-STAR لأنه يفصل بين Style (طريقة العرض) وTone (النبرة العاطفية)، مما يمنح تحكماً أدق مقارنة بالأطر التي تعامل الاثنين كحقل واحد.' },
+          { q: 'من أين جاء CO-STAR، وهل فاز بمسابقة GPT-4 في سنغافورة؟', a: 'يُنسب CO-STAR إلى فريق علوم البيانات والذكاء الاصطناعي في GovTech سنغافورة. وقد استُخدم للفوز بأول مسابقة لهندسة موجهات GPT-4 نظّمتها GovTech وشارك فيها أكثر من 400 شخص، وشُرحت الطريقة في مقال منشور على Towards Data Science بقلم Sheila Teo. الإطار لم يفز بنفسه؛ فالفوز يعود إلى Teo. وفكرته الأساسية هي الفصل بين Style (طريقة العرض) وTone (النبرة العاطفية).' },
           { q: 'متى أستخدم CO-STAR بدلاً من CRAFT؟', a: 'استخدم CO-STAR عندما تحتاج إلى تحكم دقيق في نبرة الصوت والجمهور. واستخدم CRAFT عندما تريد صياغة قائمة على الدور مع شخصية مستهدفة واضحة. تعرّف على كيفية قياس فعالية موجهات CO-STAR الخاصة بك على الرابط https://www.promptquorum.com/ar/prompt-engineering/how-to-evaluate-prompt-quality.' },
         ],
       },
       ko: {
-        tagline: '싱가포르 GPT-4 대회 우승 프레임워크. 어조와 독자, 출력 형식을 최대한으로 제어할 수 있다.',
+        tagline: '싱가포르 GovTech의 데이터 사이언스·AI 팀에서 나온 것으로 알려졌고, 싱가포르 최초의 GPT-4 프롬프트 엔지니어링 대회 우승에 쓰인 프레임워크. 어조와 독자, 출력 형식을 최대한으로 제어할 수 있다.',
         seoTitle: 'CO-STAR 프레임워크: GPT-4 대회를 제패한 6가지 요소',
-        metaDescription: 'CO-STAR는 Style과 Tone을 분리해 싱가포르 GPT-4 대회의 모든 참가작을 이겼다. 6가지 요소와 실제 예시, CRAFT와의 비교를 확인해 보세요.',
+        metaDescription: '싱가포르 GovTech가 만든 CO-STAR는 Style과 Tone을 분리한 6가지 요소로 구성됩니다. 요소별 설명, 실제 예시, CRAFT 대신 선택할 상황을 확인해 보세요.',
         heroImage: '/images/frameworks-co-star-fields-overview-hero-ko.webp',
         bestForImage: '/images/frameworks-co-star-best-for-hero-ko.webp',
         fields: [
@@ -358,7 +364,7 @@ export const FRAMEWORKS: Framework[] = [
         },
         faq: [
           { q: 'CO-STAR는 무엇의 약자인가요?', a: 'CO-STAR는 Context, Objective, Style, Tone, Audience, Response의 약자로, AI 출력을 정밀하게 제어할 수 있는 여섯 가지 요소입니다.' },
-          { q: 'CO-STAR는 왜 싱가포르 GPT-4 대회에서 우승했나요?', a: 'CO-STAR는 Style(표현 방식)과 Tone(감정적 어조)을 분리함으로써, 두 요소를 하나로 묶어 다루는 다른 프레임워크보다 더 정밀한 제어가 가능했기 때문에 우승했습니다.' },
+          { q: 'CO-STAR는 어디에서 왔고, 싱가포르 GPT-4 대회에서 우승했나요?', a: 'CO-STAR는 싱가포르 GovTech의 데이터 사이언스·AI 팀에서 나온 것으로 알려져 있습니다. Sheila Teo 님이 이를 활용해 GovTech가 연 첫 GPT-4 프롬프트 엔지니어링 대회(참가자 400명 이상)에서 우승했고, 그 접근법을 Towards Data Science 기사로 설명했습니다. 프레임워크 자체가 우승한 것이 아니라 우승은 Teo 님의 성과입니다. 핵심 아이디어는 Style(표현 방식)과 Tone(감정적 어조)을 분리하는 것입니다.' },
           { q: 'CRAFT 대신 CO-STAR는 언제 써야 하나요?', a: '어조와 독자층을 세밀하게 제어해야 할 때는 CO-STAR를 사용하세요. 명확한 타깃 페르소나가 있는 역할 기반 구성을 원할 때는 CRAFT를 사용하세요. CO-STAR 프롬프트의 효과를 측정하는 방법은 https://www.promptquorum.com/ko/prompt-engineering/how-to-evaluate-prompt-quality 에서 확인할 수 있습니다.' },
         ],
       },
