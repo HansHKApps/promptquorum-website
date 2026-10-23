@@ -568,7 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokale KI auf dem iPhone: Die besten Local-LLM-Apps 2026 (ohne WLAN)',
     seoTitle: 'Lokale KI auf dem iPhone: Die besten LLM-Apps 2026',
     intro:
-      'Sechs iPhone-Optionen führen 2026 echte LLMs vollständig auf dem Gerät aus: PocketPal AI, Private LLM, Locally AI (von LM Studio), Google AI Edge Gallery, MLC Chat und Apple Intelligence (systemintegriert). Alle funktionieren ohne WLAN, sobald das Modell heruntergeladen ist. Dieser Leitfaden vergleicht sie nach Kosten, Modellbibliothek, iOS-Integration, Datenschutz und Pflegestand – mit Richtwerten zur Geschwindigkeit auf iPhone 16 Pro und iPhone 17 Pro sowie einer RAM-Übersicht, die jetzt auch das iPhone 18 Pro enthält – und erklärt, warum LLM Farm aus dem Ranking gefallen ist.',
+      'Sechs iPhone-Optionen führen 2026 echte LLMs vollständig auf dem Gerät aus: PocketPal AI, Private LLM, Locally AI (von LM Studio), Google AI Edge Gallery, MLC Chat und Apple Intelligence (systemintegriert). Der Chat funktioniert nach dem Download des Modells ohne WLAN. Dieser Leitfaden vergleicht sie nach Kosten, Modellbibliothek, iOS-Integration, Datenschutz und Pflegestand – mit Richtwerten zur Geschwindigkeit auf iPhone 16 Pro und iPhone 17 Pro sowie einer RAM-Übersicht, die jetzt auch das iPhone 18 Pro enthält – und erklärt, warum LLM Farm aus dem Ranking gefallen ist.',
     metaDescription:
       'Lokale KI auf dem iPhone 2026: PocketPal AI, Private LLM, Locally AI, Google AI Edge Gallery und MLC Chat im Vergleich. Kosten, Datenschutz, RAM je iPhone.',
     heroImage: '/images/best-local-llm-apps-iphone-2026-which-app-hero-de.webp',
@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ollama für ios',
     ],
     leadAnswerBlock:
-      '**Für die meisten iPhone-Nutzer 2026: PocketPal AI aus dem App Store installieren und ein kleines Modell wie Phi-4 Mini (3,8B Q4_K_M, ~2,7 GB) herunterladen.** Die App ist kostenlos nutzbar (optionale In-App-Käufe für Premium-Inhalte), quelloffen (MIT) und läuft auf dem iPhone 14 Pro und neueren Modellen (jedes iPhone mit 6 GB+ RAM) mit grob 10–15 Tokens/Sek. (Richtwert) auf dem iPhone 16 Pro für den Alltag. Für Siri- und Kurzbefehle-Integration ist Private LLM die kostenpflichtige Option ($4.99 einmalig, iPhone, iPad und Mac). Locally AI – vom LM-Studio-Team entwickelt – ist die kostenlose App auf Basis von Apple MLX, mit Kurzbefehle-Unterstützung und Zugriff auf Apples On-Device-Foundation-Modell. Google AI Edge Gallery ist Googles kostenlose App für die Gemma-4-Modelle, mit Agent Skills und Denkmodus. Neuere kleine Modelle – Gemma 4 E2B/E4B und Qwen3.5 – gibt es ebenfalls in diesen Apps (siehe Modelle nach iPhone-Modell). MLC Chat bleibt die Metal-Referenz-App, doch der iPhone-Build wurde seit September 2024 nicht aktualisiert. LLM Farm ist derzeit weder im App Store noch über TestFlight verfügbar (die README nennt die App „vorübergehend nicht verfügbar") und nur per Quellcode installierbar. Apple Intelligence führt ebenfalls Modelle auf dem Gerät aus, ist aber systemintegriert und keine Chat-App – es ergänzt diese Apps, statt mit ihnen zu konkurrieren.',
+      '**Für die meisten iPhone-Nutzer 2026: PocketPal AI aus dem App Store installieren und ein kleines Modell wie Phi-4 Mini (3,8B Q4_K_M, ~2,7 GB) herunterladen.** Die App ist kostenlos nutzbar (optionale In-App-Käufe für Premium-Inhalte), quelloffen (MIT) und läuft auf dem iPhone 15 Pro und neueren Modellen (8 GB+ RAM) mit grob 10–15 Tokens/Sek. (Richtwert) auf dem iPhone 16 Pro für den Alltag; auf einem iPhone mit 6 GB wie dem iPhone 14 Pro verwenden Sie stattdessen ein 1.7B-Modell wie Qwen3 1.7B. Für Siri- und Kurzbefehle-Integration ist Private LLM die kostenpflichtige Option ($4.99 einmalig, iPhone, iPad und Mac). Locally AI – vom LM-Studio-Team entwickelt – ist die kostenlose App auf Basis von Apple MLX, mit Kurzbefehle-Unterstützung und Zugriff auf Apples On-Device-Foundation-Modell. Google AI Edge Gallery ist Googles kostenlose App für die Gemma-4-Modelle, mit Agent Skills und Denkmodus. Neuere kleine Modelle – Gemma 4 E2B/E4B und Qwen3.5 – gibt es ebenfalls in diesen Apps (siehe Modelle nach iPhone-Modell). MLC Chat bleibt die Metal-Referenz-App, doch der iPhone-Build wurde seit September 2024 nicht aktualisiert. LLM Farm ist derzeit weder im App Store noch über TestFlight verfügbar (die README nennt die App „vorübergehend nicht verfügbar") und nur per Quellcode installierbar. Apple Intelligence führt ebenfalls Modelle auf dem Gerät aus, ist aber systemintegriert und keine Chat-App – es ergänzt diese Apps, statt mit ihnen zu konkurrieren.',
     quickAnswerTop: {
       de: {
         question: 'Was ist die beste Local-LLM-App für das iPhone 2026?',
@@ -672,25 +672,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Verglichene Apps:** PocketPal AI, Private LLM, Locally AI (von LM Studio), Google AI Edge Gallery, MLC Chat, Apple Intelligence (System) – sowie LLM Farm, derzeit nicht im App Store (README: „vorübergehend nicht verfügbar").',
           '**Letzte Upstream-Updates (geprüft am 23. Oktober 2026):** PocketPal AI v1.20.1 (19. Okt. 2026) · Locally AI v1.66.0 (15. Okt. 2026) · Google AI Edge Gallery v1.0.13 (8. Okt. 2026) · Private LLM v1.9.16 (14. Sep. 2026) · MLC Chat iPhone-App v1.6 (27. Sep. 2024 – veraltet) · LLM Farm Release 1.4.3 (27. Jan. 2025), letzter Code-Push 30. Jan. 2026 – veraltet.',
-          '**Referenzgeräte für die Geschwindigkeitswerte:** iPhone 16 Pro (A18 Pro, 8 GB RAM) und iPhone 17 Pro (A19 Pro, 12 GB RAM). Die Geschwindigkeitswerte sind Richtwerte, kein kontrollierter PromptQuorum-Benchmark. Für das iPhone 18 Pro, das 18 Pro Max und das iPhone Duo (A20 Pro) gibt es hier keine Geschwindigkeitswerte.',
+          '**Referenzgeräte für die Geschwindigkeitswerte:** iPhone 16 Pro (A18 Pro, 8 GB RAM) und iPhone 17 Pro (A19 Pro, 12 GB RAM). Die Geschwindigkeitswerte sind grobe Orientierungswerte, keine Messungen von PromptQuorum. Für das iPhone 18 Pro, das 18 Pro Max und das iPhone Duo (A20 Pro) gibt es hier keine Geschwindigkeitswerte.',
           '**Inference-Engines:** llama.cpp (PocketPal AI, LLM Farm), Apple MLX (Locally AI), MLC LLM mit Metal (MLC Chat), Google LiteRT-LM (Google AI Edge Gallery), proprietäre On-Device-Runtime (Private LLM, Apple Intelligence).',
           '**Mindest-iPhone für größere Modelle:** iPhone 14 Pro (A16, 6 GB RAM) für 1.7B; jedes 8-GB+-iPhone (15 Pro, 16er-Serie, 16e, 17er-Serie, 18 Pro) für 3B–4B.',
           '**Empfohlene kostenlose App:** PocketPal AI – App Store, quelloffen, Modellflexibilität.',
           '**Kostenpflichtige Option:** Private LLM – $4.99 einmalig (iPhone + iPad + Mac), Kurzbefehle- + Siri-Unterstützung.',
-          '**Offline:** Alle sechs laufen vollständig offline, sobald das Modell heruntergeladen ist; laut README oder Eintrag der jeweiligen App gibt es für den On-Device-Chat keine Cloud-Aufrufe (Apple Intelligence kann optional Private Cloud Compute nutzen).',
+          '**Offline:** Nach dem Download des Modells funktioniert der On-Device-Chat in allen sechs ohne WLAN; Funktionen, die Live-Daten abrufen (zum Beispiel die Wikipedia- und Karten-Skills der Google AI Edge Gallery oder das optionale LM Link von Locally AI), brauchen eine Verbindung. Laut README oder Eintrag der jeweiligen App gibt es für den On-Device-Chat keine Cloud-Aufrufe; Apple Intelligence kann optional Private Cloud Compute nutzen.',
         ],
       },
       whichApp: {
         id: 'which-app',
         title: 'Welche App für iOS sollten Sie zuerst installieren?',
         content:
-          '**Für die meisten Nutzer: PocketPal AI aus dem App Store, dann Phi-4 Mini (3,8B Q4_K_M) herunterladen – oder ein neueres kleines Modell wie Gemma 4 E2B/E4B oder Qwen3.5 4B.** Diese Kombination funktioniert auf dem iPhone 14 Pro und neueren Modellen, kostet für den Chat nichts und liefert brauchbare Ergebnisse für alltäglichen Chat, Zusammenfassungen und schnelles Schreiben. Wählen Sie eine andere App nur, wenn Sie einen spezifischen Bedarf haben, den PocketPal AI nicht abdeckt.',
+          '**Für die meisten Nutzer: PocketPal AI aus dem App Store, dann Phi-4 Mini (3,8B Q4_K_M) herunterladen – oder ein neueres kleines Modell wie Gemma 4 E2B/E4B oder Qwen3.5 4B.** Diese Kombination funktioniert auf dem iPhone 15 Pro und neueren Modellen (8 GB+ RAM); auf einem iPhone mit 6 GB wie dem iPhone 14 Pro laden Sie stattdessen ein 1.7B-Modell wie Qwen3 1.7B herunter (siehe Modelle nach iPhone-Klasse). Sie kostet für den Chat nichts und liefert brauchbare Ergebnisse für alltäglichen Chat, Zusammenfassungen und schnelles Schreiben. Wählen Sie eine andere App nur, wenn Sie einen spezifischen Bedarf haben, den PocketPal AI nicht abdeckt.',
         image: '/images/best-local-llm-apps-iphone-2026-which-app-hero-de.webp',
         imageCaption: 'Welche lokale KI-App für das iPhone: Entscheidungstabelle vom kostenlosen PocketPal AI bis zum Siri-fähigen Private LLM',
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Für die meisten iPhone-Nutzer 2026 gilt: PocketPal AI (kostenlos, App Store) installieren und Phi-4 Mini oder ein neueres kleines Modell wie Gemma 4 E2B herunterladen – damit sind alltäglicher Chat, Zusammenfassungen und Textentwürfe auf jedem iPhone mit 6 GB+ RAM abgedeckt.',
+            text: 'Für die meisten iPhone-Nutzer 2026 gilt: PocketPal AI (kostenlos, App Store) installieren und Phi-4 Mini oder ein neueres kleines Modell wie Gemma 4 E2B herunterladen – damit sind alltäglicher Chat, Zusammenfassungen und Textentwürfe abgedeckt – mit einem 3B–4B-Modell auf iPhones mit 8 GB+ und einem 1.7B-Modell auf iPhones mit 6 GB.',
           },
           {
             type: 'plain-terms',
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'Die Wahl hängt meist von drei Fragen ab: Möchten Sie für Siri-Integration zahlen (Private LLM), möchten Sie das LM-Studio-Ökosystem mit Kurzbefehlen kostenlos (Locally AI), oder möchten Sie Googles eigenes Gemma 4 mit Denkmodus (Google AI Edge Gallery)? Für alles andere ist PocketPal AI die Standardwahl. Die Geschwindigkeitswerte in der Tabelle sind Richtwerte für Q4_K_M-Quantisierung – den Standard für mobile Inferenz 2026 –, kein kontrollierter Benchmark.',
+            text: 'Die Wahl hängt meist von drei Fragen ab: Möchten Sie für Siri-Integration zahlen (Private LLM), möchten Sie das LM-Studio-Ökosystem mit Kurzbefehlen kostenlos (Locally AI), oder möchten Sie Googles eigenes Gemma 4 mit Denkmodus (Google AI Edge Gallery)? Für alles andere ist PocketPal AI die Standardwahl. Die Geschwindigkeitswerte in der Tabelle sind Richtwerte für Q4_K_M-Quantisierung – den Standard für mobile Inferenz 2026 –, keine Messungen von PromptQuorum.',
           },
         ],
         columns: ['App', 'Preis', 'Tok./Sek. (Phi-4 Mini, 16 Pro)', 'Datenschutz', 'Am besten geeignet für'],
@@ -748,17 +748,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'App': '[PocketPal AI](https://github.com/a-ghorbani/pocketpal-ai)', 'Preis': 'Kostenlos (MIT) + optionale In-App-Käufe', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': '~10–15', 'Datenschutz': 'On-Device-Chat, kein Konto (README)', 'Am besten geeignet für': 'Kostenlose Standard-App für die meisten' },
           { 'App': '[Private LLM](https://privatellm.app)', 'Preis': '$4.99 einmalig', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'Keine Angabe', 'Datenschutz': 'On-Device; keine Konten oder Tracking (Entwickler)', 'Am besten geeignet für': 'Kurzbefehle + Siri-Integration' },
           { 'App': '[Locally AI](https://lmstudio.ai/locally)', 'Preis': 'Kostenlos (LM-Studio-Team)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'k. A. – MLX-Katalog (kein Phi-4)', 'Datenschutz': 'On-Device; keine Datenerhebung (Eintrag)', 'Am besten geeignet für': 'MLX + Kurzbefehle, LM-Studio-Anbindung' },
-          { 'App': '[Google AI Edge Gallery](https://apps.apple.com/app/id6749645337)', 'Preis': 'Kostenlos (Google)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'k. A. – LiteRT-LM, Gemma 4', 'Datenschutz': 'On-Device nach dem Modell-Download', 'Am besten geeignet für': 'Gemma 4, Denkmodus, Agent Skills' },
+          { 'App': '[Google AI Edge Gallery](https://apps.apple.com/app/id6749645337)', 'Preis': 'Kostenlos (Google)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'k. A. – LiteRT-LM, Gemma 4', 'Datenschutz': 'On-Device nach Modell-Download (Eintrag)', 'Am besten geeignet für': 'Gemma 4, Denkmodus, Agent Skills' },
           { 'App': '[MLC Chat](https://llm.mlc.ai)', 'Preis': 'Kostenlos (Open Source)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'k. A. – Bibliothek vor Phi-4', 'Datenschutz': 'Lokale Inferenz (Projektdoku; ungeprüft)', 'Am besten geeignet für': 'MLC-LLM-Toolchain (iOS-App inaktiv)' },
           { 'App': '[LLM Farm](https://github.com/guinmoon/LLMFarm)', 'Preis': 'Kostenlos (nur Quellcode)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'Keine Angabe', 'Datenschutz': 'Lokale Inferenz (Projektdoku; ungeprüft)', 'Am besten geeignet für': 'Entwickler (nicht im App Store, veraltet)' },
-          { 'App': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'Preis': 'Kostenlos (in iOS integriert)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'k. A. (Systemfunktion)', 'Datenschutz': 'Lokal + opt-in Private Cloud Compute', 'Am besten geeignet für': 'Hilfe in Mail, Nachrichten, Notizen' },
+          { 'App': '[Apple Intelligence](https://www.apple.com/apple-intelligence/)', 'Preis': 'Kostenlos (in iOS integriert)', 'Tok./Sek. (Phi-4 Mini, 16 Pro)': 'k. A. (Systemfunktion)', 'Datenschutz': 'Lokal + opt-in Private Cloud Compute (Apple)', 'Am besten geeignet für': 'Hilfe in Mail, Nachrichten, Notizen' },
         ],
         note:
           '**Hinweis zur Apple Neural Engine (ANE) im Vergleich zu Metal und MLX:** PocketPal AI und LLM Farm verwenden llama.cpp mit Metal Performance Shadern, die auf der GPU laufen. MLC Chat verwendet MLC LLM mit tieferer Metal-Optimierung, die das MLC-LLM-Projekt auf gleicher Hardware als schneller beschreibt als llama.cpp-basierte Apps (Projektangabe; von PromptQuorum nicht nachgemessen). Locally AI nutzt Apple MLX, Apples eigenes Open-Source-Array-Framework, das auf Apple Silicon eine ähnliche GPU-Effizienz erreicht. Google AI Edge Gallery führt Gemma 4 über Googles LiteRT-LM-Runtime aus. Apple Intelligence nutzt die ANE speziell für das systemintegrierte ~3B-Modell – energieeffizienter, aber weniger flexibel als Metal-basierte Inferenz. Seit iOS 26 können Drittanbieter-Apps dieses Systemmodell über das Foundation-Models-Framework aufrufen – genau das tut Locally AI –, aber eigene GGUF/MLX-Modelle können die ANE weiterhin nicht direkt ansprechen. Apple gibt an, der A20 Pro im iPhone 18 Pro habe eine Dual-16-Core-Neural-Engine mit doppelter Rechenleistung wie zuvor; das ist eine Apple-Angabe, und PromptQuorum hat nicht gemessen, was sie für diese Apps bedeutet.',
         callouts: [
           {
             type: 'tip',
-            text: 'Die Tokens/Sek.-Werte sind gerundete Richtwerte zur Orientierung, kein kontrollierter PromptQuorum-Benchmark und nicht an eine App-Version oder ein Testdatum gebunden. Sie gehen von Q4_K_M-Quantisierung (Standard für mobile Inferenz 2026) und einem inaktiven iPhone ohne andere ressourcenintensive Apps aus. Hintergrund-Apps können den Durchsatz spürbar senken, und das iPhone 17 Pro läuft in der Regel schneller als das iPhone 16 Pro. Messen Sie Ihr eigenes Telefon mit dem eingebauten Benchmark von PocketPal AI.',
+            text: 'Die Tokens/Sek.-Werte sind grobe Orientierungswerte für Q4_K_M-Modelle auf aktuellen iPhones, keine Messungen von PromptQuorum und nicht an eine App-Version oder ein Testdatum gebunden. Sie gehen von Q4_K_M-Quantisierung (Standard für mobile Inferenz 2026) und einem inaktiven iPhone ohne andere ressourcenintensive Apps aus. Hintergrund-Apps können den Durchsatz spürbar senken, und das iPhone 17 Pro läuft in der Regel schneller als das iPhone 16 Pro. Messen Sie Ihr eigenes Telefon mit dem eingebauten Benchmark von PocketPal AI.',
           },
         ],
       },
@@ -769,10 +769,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**PocketPal AI ist der empfohlene Einstiegspunkt für die meisten iPhone-Nutzer 2026.** Die App ist kostenlos nutzbar, quelloffen (MIT; GitHub: [a-ghorbani/pocketpal-ai](https://github.com/a-ghorbani/pocketpal-ai)), im App Store verfügbar und unterstützt jedes GGUF-Modell von Hugging Face. Unter der Haube verwendet sie llama.cpp mit Apple-Silicon-Optimierungen. Ausführlicher Test: [PocketPal AI Review](/de/power-local-llm/pocketpal-ai-review).',
         items: [
           '**Was sie ist:** eine iOS-/iPadOS- und Android-App, die GGUF-Modelle lokal mit llama.cpp ausführt, veröffentlicht von Gooya UG. Laut README werden Prompts, Antworten und Dokumente nicht auf externe Server hochgeladen; der Chat braucht kein Konto.',
-          '**Version und letztes Update:** v1.20.1, veröffentlicht am 19. Oktober 2026 ([GitHub-Release](https://github.com/a-ghorbani/pocketpal-ai/releases)); der App-Store-Eintrag zeigt dieselbe Version. Update-Rhythmus: etwa alle ein bis zwei Wochen – keine Veraltet-Warnung.',
+          '**Version und letztes Update:** v1.20.1, veröffentlicht am 19. Oktober 2026 ([GitHub-Release](https://github.com/a-ghorbani/pocketpal-ai/releases)); der App-Store-Eintrag zeigt dieselbe Version. Letzte Releases: v1.19.0 (4. Okt.), v1.20.0 (14. Okt.), v1.20.1 (19. Okt. 2026) – keine Veraltet-Warnung.',
           '**Installation:** App Store → „PocketPal AI". Kostenloser Download mit optionalen In-App-Käufen (Premium-Pals und „PocketPal Plus"). Erfordert iOS/iPadOS 15.1 oder neuer; nicht die iOS-Version, sondern der RAM bestimmt die nutzbare Modellgröße. Seit v1.20.0 bietet die App außerdem optional „Mit Apple anmelden" und das Löschen des Kontos.',
           '**Modell hinzufügen:** In der App auf „Modelle" tippen → „Von Hugging Face hinzufügen" → suchen (z. B. „phi-4-mini-instruct-Q4_K_M") → zum Herunterladen tippen. Das Modell wird im lokalen Speicher der App gespeichert (~2,7 GB für Phi-4 Mini Q4).',
-          '**Generierungsgeschwindigkeit (iPhone 16 Pro, Richtwerte):** Phi-4 Mini ~10–15 Tokens/Sek., Llama 3.2 3B ~12–18 Tokens/Sek., Gemma 3 4B ~7–10 Tokens/Sek., Qwen3 1.7B ~18–24 Tokens/Sek. Das sind keine kontrollierten PromptQuorum-Messungen – nutzen Sie den eingebauten Benchmark, der Tokens/Sek. und Speicher auf Ihrem eigenen iPhone misst.',
+          '**Generierungsgeschwindigkeit (iPhone 16 Pro, Richtwerte):** Phi-4 Mini ~10–15 Tokens/Sek., Llama 3.2 3B ~12–18 Tokens/Sek., Gemma 3 4B ~7–10 Tokens/Sek., Qwen3 1.7B ~18–24 Tokens/Sek. Das sind grobe Orientierungswerte, keine Messungen von PromptQuorum – nutzen Sie den eingebauten Benchmark, der Tokens/Sek. und Speicher auf Ihrem eigenen iPhone misst.',
           '**Weitere Funktionen:** Pals (eigene Assistenten), Sprachausgabe auf dem Gerät, Talents (Rechner- und Datum-/Uhrzeit-Werkzeuge für leistungsfähige Modelle) und ein Hugging-Face-Modellbrowser, der gesperrte (gated) Modelle mit Zugriffstoken unterstützt.',
           '**Am besten geeignet für:** Nutzer, die eine kostenlose, über den App Store installierbare Chat-App ohne Konto wünschen, die jedes Community-GGUF-Modell unterstützt.',
         ],
@@ -787,7 +787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'private-llm',
         title: 'Private LLM: Kostenpflichtige Option mit iOS-Integration',
         content:
-          '**Private LLM ist in diesem Leitfaden die kostenpflichtige iPhone-Option ($4.99 einmalig, kein Abo).** Die App gibt es nur im App Store, sie wird mit einer kuratierten Bibliothek optimierter Modelle ausgeliefert. Ihr Alleinstellungsmerkmal ist die iOS-Integration: Laut Entwickler ist sie direkt in Siri und die Kurzbefehle-App eingebunden. Ausführlicher Test: [Private LLM Review](/de/power-local-llm/private-llm-review).',
+          '**Private LLM ist in diesem Leitfaden die kostenpflichtige iPhone-Option ($4.99 einmalig, kein Abo).** Die App gibt es nur im App Store, sie wird mit einer kuratierten Bibliothek optimierter Modelle ausgeliefert. Ihr Unterscheidungsmerkmal in diesem Leitfaden ist die iOS-Integration: Laut Entwickler ist sie direkt in Siri und die Kurzbefehle-App eingebunden. Ausführlicher Test: [Private LLM Review](/de/power-local-llm/private-llm-review).',
         items: [
           '**Was sie ist:** eine kostenpflichtige iOS-App mit kuratierter Modellbibliothek und tiefer iOS-Integration. Verwendet eine proprietäre, für Apple Silicon optimierte On-Device-Runtime.',
           '**Installation:** App Store → „Private LLM - Local AI Chat" (Numen Technologies Limited). Einmalkauf $4.99 (US-App-Store-Preis, in Deutschland kann der Preis in € abweichen; kein Abo, der Eintrag nennt keine In-App-Käufe). Erfordert iOS/iPadOS 17.0 oder neuer auf einem A12-Bionic-Chip oder neuer.',
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'locally-ai',
         title: 'Locally AI: Kostenlose MLX-App von LM Studio',
         content:
-          '**Locally AI ist eine kostenlose, datenschutzorientierte Chat-App des LM-Studio-Teams (gelistet unter Element Labs Inc), die auf Apples eigenem MLX-Framework statt auf llama.cpp aufbaut.** Es ist die einzige App hier, die Apples On-Device-Foundation-Modell als Chat-Oberfläche bereitstellt. Ausführlicher Test: [Locally AI Review](/de/power-local-llm/locally-ai-review).',
+          '**Locally AI ist eine kostenlose Chat-App (laut Eintrag werden keine Daten erhoben) des LM-Studio-Teams (gelistet unter Element Labs Inc), die auf Apples eigenem MLX-Framework statt auf llama.cpp aufbaut.** Es ist die einzige App hier, die Apples On-Device-Foundation-Modell als Chat-Oberfläche bereitstellt. Ausführlicher Test: [Locally AI Review](/de/power-local-llm/locally-ai-review).',
         items: [
           '**Was sie ist:** eine iOS-/iPadOS-/macOS-App, die Apple MLX für die Inferenz nutzt, entwickelt vom Team hinter der Desktop-App LM Studio.',
           '**Installation:** App Store → „Locally AI". Kostenlos, keine In-App-Käufe aufgeführt, kein Konto erforderlich (laut Eintrag), läuft offline.',
@@ -871,7 +871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Veraltet-Warnung: Der letzte Release von LLM Farm (1.4.3) erschien am 27. Januar 2025 und der letzte Code-Push am 30. Januar 2026 – seit fast neun Monaten gibt es kein Update –, daher wird die App möglicherweise nicht mehr gepflegt.** Die PromptQuorum-Rezension des Projekts datiert die Entfernung aus dem App Store auf August 2025; die eigene GitHub-README beschreibt die App im App Store und auf TestFlight als „vorübergehend nicht verfügbar". Das Projekt (GitHub: [guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm)) ist weiterhin quelloffen und verzeichnete bis Oktober 2026 GitHub-Issue-Aktivität, doch neue Nutzer können es nicht mehr über den App Store installieren; es muss über Xcode aus dem Quellcode gebaut werden (README: macOS 13+ und iOS 16+). Ausführlicher Test: [LLM Farm Review](/de/power-local-llm/llm-farm-review).',
         items: [
-          '**Was sie ist:** eine iOS-App des Entwicklers @guinmoon, die GGUF-Modelle mit umfangreichen Konfigurationsoptionen ausführt und früher über den App Store vertrieben wurde.',
+          '**Was sie ist:** eine iOS-App vom Maintainer des Projekts, die GGUF-Modelle mit umfangreichen Konfigurationsoptionen ausführt und früher über den App Store vertrieben wurde.',
           '**Aktuelle Verfügbarkeit:** Zum Zeitpunkt dieser Aktualisierung weder über den App Store noch über TestFlight installierbar. Der Quellcode bleibt öffentlich und baubar.',
           '**Aus dem Quellcode bauen:** Repository klonen, in Xcode öffnen und mit einem kostenlosen oder kostenpflichtigen Apple-Developer-Konto auf ein Gerät bauen – der übliche Sideloading-Ablauf für jede Open-Source-iOS-App ohne App-Store-Eintrag.',
           '**Verfügbare Konfiguration (nach dem Bauen):** Temperatur, Top-p, Top-k, Mirostat-Sampling, Wiederholungsstrafe, System-Prompt pro Modell, Auswahl der Chat-Vorlage, Länge des Kontextfensters.',
@@ -933,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'battery-heat',
         title: 'Akkuverbrauch und thermisches Throttling',
         content:
-          '**On-Device-LLM-Inferenz auf dem iPhone ist CPU-/GPU-intensiv und erzeugt Wärme.** Als grobe Orientierung (Richtwert, keine kontrollierte PromptQuorum-Messung) zieht aktive Inferenz ~3–5 W; dauerhafte Generierung drosselt den Chip und kann den Akku auf dem iPhone 16 Pro um grob 20–30 % pro Stunde entladen.',
+          '**On-Device-LLM-Inferenz auf dem iPhone ist CPU-/GPU-intensiv und erzeugt Wärme.** Als grobe Orientierung (grobe Orientierung, keine Messung von PromptQuorum) zieht aktive Inferenz ~3–5 W; dauerhafte Generierung drosselt den Chip und kann den Akku auf dem iPhone 16 Pro um grob 20–30 % pro Stunde entladen.',
         image: '/images/iphone-llm-apps-battery-thermal-de.svg',
         imageCaption: 'Akku- und Hitze-Leitfaden für lokale LLMs auf dem iPhone: Leistungsaufnahme, thermisches Throttling und Kühltipps',
         items: [
@@ -941,7 +941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Dauerhafte Generierung kann thermisches Throttling auslösen.** Wird der Chip heiß, senkt iOS die Taktfrequenz, und die Tokens/Sek. sinken. Wann das beginnt und wie viel Geschwindigkeit verloren geht, hängt von Telefon, Hülle, Ladevorgang und Raumtemperatur ab; PromptQuorum hat das nicht gemessen. Lässt man das Telefon abkühlen, kehrt die Geschwindigkeit zurück.',
           '**Gegenmaßnahme:** Halten Sie das iPhone bei langen Inferenz-Sitzungen mit dem Display nach oben auf einer harten Oberfläche (nicht in der Hand oder Tasche), damit die Wärme abgeführt wird. Ein passives Kühlkörper-Case hilft, ist bei kurzen Interaktionen aber selten nötig.',
           '**Verbrauch im Leerlauf:** Wenn Sie nach der Generierung eine Chat-App im Hintergrund geöffnet lassen, bleibt der RAM belegt, aber es läuft keine Inferenz – der Akkueinfluss ist minimal. Das vollständige Schließen der App gibt die ~3 GB RAM wieder frei.',
-          '**MagSafe-Laden während der Inferenz:** Laden während der Generierung kann bei jedem iPhone zusätzliche Wärme erzeugen, beim iPhone 15 Pro eher stärker; wird das Telefon warm, pausieren Sie das Laden oder die Generierung, oder laden Sie erst danach.',
+          '**MagSafe-Laden während der Inferenz:** Laden während der Generierung kann zusätzliche Wärme erzeugen; wird das Telefon warm, pausieren Sie das Laden oder die Generierung, oder laden Sie erst danach.',
         ],
         callouts: [
           {
@@ -970,7 +970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         promptExamples: [
           {
             label: 'Private-LLM-Kurzbefehl: Ausgewählten Text zusammenfassen',
-            text: '1. Aktion: „Ausgewählten Text abrufen" (iOS-Share-Sheet-Eingabe).\n2. Aktion: Private-LLM-Textgenerierung (aus den Kurzbefehle-Aktionen der Private-LLM-App) → Prompt: „Fasse den folgenden Text in drei Stichpunkten zusammen: [Ausgewählter Text]" → ein in der App installiertes Modell wählen.\n3. Aktion: „Ergebnis anzeigen" oder „In Zwischenablage kopieren".\nZum Share Sheet hinzufügen, damit Sie es für beliebigen Text in jeder App vollständig offline ausführen können. Die Aktionsnamen folgen der Beschreibung des Entwicklers und können je nach App-Version abweichen.',
+            text: '1. Aktion: „Ausgewählten Text abrufen" (iOS-Share-Sheet-Eingabe).\n2. Aktion: Private-LLM-Textgenerierung (aus den Kurzbefehle-Aktionen der Private-LLM-App) → Prompt: „Fasse den folgenden Text in drei Stichpunkten zusammen: [Ausgewählter Text]" → ein in der App installiertes Modell wählen.\n3. Aktion: „Ergebnis anzeigen" oder „In Zwischenablage kopieren".\nZum Share Sheet hinzufügen, damit Sie es für beliebigen Text in jeder App ohne Internetverbindung ausführen können. Die Aktionsnamen folgen der Beschreibung des Entwicklers und können je nach App-Version abweichen.',
           },
           {
             label: 'Apple-Intelligence-Kurzbefehl: Ton anpassen',
