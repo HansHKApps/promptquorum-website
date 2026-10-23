@@ -42,6 +42,7 @@ import toolArticleIndex from '@/generated/tool-article-index.json'
 import { getCalloutLabel } from '@/lib/calloutLabels'
 import { StarIcon } from '@/components/local-ai-directory/icons'
 import { DirectoryBlock } from '@/components/local-ai-directory/DirectoryBlock'
+import { DirectoryHero } from '@/components/local-ai-directory/DirectoryHero'
 import { DirectoryPopupLoader } from '@/components/local-ai-directory/DirectoryPopupLoader'
 import type { DirectoryFunnelData } from '@/lib/power-local-llm/directory-funnel'
 import { t as directoryT, type DirUi } from '@/components/local-ai-directory/directory-ui-client'
@@ -75,7 +76,7 @@ interface Props {
    * through the normal `SectionBlock` path below, unchanged. Undefined for every
    * other article, so this prop never alters any other article's output.
    */
-  directorySlot?: { sectionKeys: string[]; element: React.ReactNode }
+  directorySlot?: { sectionKeys: string[]; element: React.ReactNode; toolCount: number }
   /**
    * Set when this article is a dedicated FeatureAppPost review whose subject
    * (matched via the ToolRecord's `reviewSlug`) has an active
@@ -1431,12 +1432,49 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
   // `isDirectoryPage` below is scoped to that one slug — no other
   // power-local-llm article's layout changes.
   const isDirectoryPage = !!directorySlot
+  // The hero shows the short intro; the longer answer-first block (most non-EN locales) stays visible below it.
+  const directoryLeadIsSeparate = isDirectoryPage && (article.leadAnswerBlock?.length ?? 0) > (article.intro?.length ?? 0) * 1.5
+
+  const updatedBadge = (
+    <time dateTime={article.dateModified ?? article.publishDate} className={isDirectoryPage ? 'inline-flex items-center gap-1.5 border px-2.5 py-0.5 rounded-full text-xs font-semibold bg-hub-new-tint border-hub-new-edge text-hub-new-ink' : skinCls.updatedBadge}>
+      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <polyline points="12 6 12 12 16 14"></polyline>
+      </svg>
+      {POST_UI.lastUpdated[lang] ?? POST_UI.lastUpdated['en']} {formatDisplayDate(article.dateModified ?? article.publishDate, lang)}
+    </time>
+  )
 
   return (
-    <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6" key={`${slug}-${lang}`}>
-      <div className="max-w-3xl mx-auto">
+    <div className={isDirectoryPage ? 'min-h-screen bg-white pb-20' : 'min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6'} key={`${slug}-${lang}`}>
+      {/* Directory page: hub-style hero in place of the plain article header (see DirectoryHero). */}
+      {isDirectoryPage && directorySlot && (
+        <DirectoryHero
+          ui={ui}
+          title={article.title ?? ''}
+          lead={renderInlineLinks(article.intro ?? article.leadAnswerBlock ?? '', lang)}
+          toolCount={directorySlot.toolCount}
+          breadcrumb={
+            <>
+              <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:underline">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
+              <span aria-hidden="true"> &nbsp;/&nbsp; </span>
+              <span aria-current="page">{ui.heroPill}</span>
+            </>
+          }
+          meta={
+            <>
+              {updatedBadge}
+              <span>{article.readTime}</span>
+              <span aria-hidden="true">·</span>
+              <span>{renderInlineLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'], lang)}</span>
+            </>
+          }
+        />
+      )}
+      <div className={isDirectoryPage ? 'max-w-3xl mx-auto px-4 sm:px-6 pt-10' : 'max-w-3xl mx-auto'}>
 
         {/* Breadcrumb + language */}
+        {!isDirectoryPage && (
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-2 text-sm text-text-secondary flex-wrap">
             <a href={lang === 'en' ? '/' : `/${lang}`} className="hover:text-primary">{POST_UI.breadcrumbHome[lang] ?? 'Home'}</a>
@@ -1451,10 +1489,12 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
           </div>
           {/* LanguageSwitcher omitted: cluster ships noindex; path-based switcher to be added before launch */}
         </div>
+        )}
 
-        <ClusterBanner cluster="power-local-llm" />
+        {!isDirectoryPage && <ClusterBanner cluster="power-local-llm" />}
 
         {/* Article header */}
+        {!isDirectoryPage && (
         <div className="mb-10">
           <span className={`inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-4 ${colors.badge}`}>
             {article.theme}
@@ -1476,6 +1516,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
             <span>{renderInlineLinks(POST_UI.byLine[lang] ?? POST_UI.byLine['en'], lang)}</span>
           </div>
         </div>
+        )}
 
         {/* Cross-language links */}
         <LangLinksBar cluster={isDirectoryPage ? 'directory' : 'power-local-llm'} slug={isDirectoryPage ? '' : slug} availableLangs={availableLangs ?? Object.keys(articleData)} initialLang={lang} />
@@ -1535,7 +1576,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
         )}
 
         {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
-        {article.leadAnswerBlock && (
+        {(!isDirectoryPage || directoryLeadIsSeparate) && article.leadAnswerBlock && (
           <div className={skinCls.leadBlock}>
             <p className="text-text-primary font-semibold leading-relaxed">
               {renderInlineLinks(article.leadAnswerBlock, lang)}
@@ -1544,7 +1585,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
         )}
 
         {/* Article intro paragraph */}
-        {article.intro && (
+        {!isDirectoryPage && article.intro && (
           <p className="text-lg text-text-secondary leading-relaxed mb-6 max-w-2xl article-intro">
             {renderInlineLinks(article.intro, lang)}
           </p>

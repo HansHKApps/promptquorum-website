@@ -439,7 +439,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   // importing the full 9-language DIR_UI object client-side.
   const ui = resolveAll(lang)
   const directorySlot = isLocalAiDirectory
-    ? { sectionKeys: LOCAL_AI_DIRECTORY_TOOL_SECTION_KEYS, element: <DirectoryClient apps={localAiApps} lang={lang} ui={ui} /> }
+    ? { sectionKeys: LOCAL_AI_DIRECTORY_TOOL_SECTION_KEYS, element: <DirectoryClient apps={localAiApps} lang={lang} ui={ui} />, toolCount: localAiApps.length }
     : undefined
 
   // Surface the same "founder-reviewed" fact-check credit shown on the tool's

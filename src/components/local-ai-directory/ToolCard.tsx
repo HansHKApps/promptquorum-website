@@ -29,15 +29,15 @@ import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { INSTALL_EFFORT_UI, installOnSuffix } from './installEffort'
 
 /** Per-group accent so a grid of cards reads as a colour-coded map, not a wall of grey. */
-const GROUP_ACCENT: Record<CategoryGroupKey, { bar: string; chip: string; avatar: string }> = {
-  'run-serve': { bar: 'bg-hub-violet', chip: 'bg-hub-violet-tint text-hub-violet-ink', avatar: 'bg-hub-violet-tint text-hub-violet-ink' },
-  'chat-assistants': { bar: 'bg-hub-azure', chip: 'bg-hub-azure-tint text-hub-azure-ink', avatar: 'bg-hub-azure-tint text-hub-azure-ink' },
-  'code-development': { bar: 'bg-hub-indigo', chip: 'bg-hub-indigo-tint text-hub-indigo-ink', avatar: 'bg-hub-indigo-tint text-hub-indigo-ink' },
-  'knowledge-retrieval': { bar: 'bg-hub-cyan', chip: 'bg-hub-cyan-tint text-hub-cyan-ink', avatar: 'bg-hub-cyan-tint text-hub-cyan-ink' },
-  'voice-audio': { bar: 'bg-hub-rose', chip: 'bg-hub-rose-tint text-hub-rose-ink', avatar: 'bg-hub-rose-tint text-hub-rose-ink' },
-  'images-video': { bar: 'bg-hub-orchid', chip: 'bg-hub-orchid-tint text-hub-orchid-ink', avatar: 'bg-hub-orchid-tint text-hub-orchid-ink' },
-  'train-operate': { bar: 'bg-hub-amber', chip: 'bg-hub-amber-tint text-hub-amber-ink', avatar: 'bg-hub-amber-tint text-hub-amber-ink' },
-  'at-the-edge': { bar: 'bg-hub-orange', chip: 'bg-hub-orange-tint text-hub-orange-ink', avatar: 'bg-hub-orange-tint text-hub-orange-ink' },
+const GROUP_ACCENT: Record<CategoryGroupKey, { wash: string; bar: string; chip: string; avatar: string }> = {
+  'run-serve': { wash: 'border-hub-violet-edge bg-gradient-to-b from-hub-violet-tint to-white hover:border-hub-violet', bar: 'bg-hub-violet', chip: 'bg-hub-violet-tint text-hub-violet-ink', avatar: 'bg-hub-violet-tint text-hub-violet-ink' },
+  'chat-assistants': { wash: 'border-hub-azure-edge bg-gradient-to-b from-hub-azure-tint to-white hover:border-hub-azure', bar: 'bg-hub-azure', chip: 'bg-hub-azure-tint text-hub-azure-ink', avatar: 'bg-hub-azure-tint text-hub-azure-ink' },
+  'code-development': { wash: 'border-hub-indigo-edge bg-gradient-to-b from-hub-indigo-tint to-white hover:border-hub-indigo', bar: 'bg-hub-indigo', chip: 'bg-hub-indigo-tint text-hub-indigo-ink', avatar: 'bg-hub-indigo-tint text-hub-indigo-ink' },
+  'knowledge-retrieval': { wash: 'border-hub-cyan-edge bg-gradient-to-b from-hub-cyan-tint to-white hover:border-hub-cyan', bar: 'bg-hub-cyan', chip: 'bg-hub-cyan-tint text-hub-cyan-ink', avatar: 'bg-hub-cyan-tint text-hub-cyan-ink' },
+  'voice-audio': { wash: 'border-hub-rose-edge bg-gradient-to-b from-hub-rose-tint to-white hover:border-hub-rose', bar: 'bg-hub-rose', chip: 'bg-hub-rose-tint text-hub-rose-ink', avatar: 'bg-hub-rose-tint text-hub-rose-ink' },
+  'images-video': { wash: 'border-hub-orchid-edge bg-gradient-to-b from-hub-orchid-tint to-white hover:border-hub-orchid', bar: 'bg-hub-orchid', chip: 'bg-hub-orchid-tint text-hub-orchid-ink', avatar: 'bg-hub-orchid-tint text-hub-orchid-ink' },
+  'train-operate': { wash: 'border-hub-amber-edge bg-gradient-to-b from-hub-amber-tint to-white hover:border-hub-amber', bar: 'bg-hub-amber', chip: 'bg-hub-amber-tint text-hub-amber-ink', avatar: 'bg-hub-amber-tint text-hub-amber-ink' },
+  'at-the-edge': { wash: 'border-hub-orange-edge bg-gradient-to-b from-hub-orange-tint to-white hover:border-hub-orange', bar: 'bg-hub-orange', chip: 'bg-hub-orange-tint text-hub-orange-ink', avatar: 'bg-hub-orange-tint text-hub-orange-ink' },
 }
 
 const LOCALITY_BADGE: Record<'local' | 'hybrid' | 'cloud', string> = {
@@ -156,7 +156,7 @@ export function ToolCard({
           ? 'border border-gray-300 bg-gray-100 grayscale opacity-80 hover:opacity-100 hover:border-gray-400'
           : isFounderReviewed
           ? 'border-2 border-hub-amber bg-gradient-to-b from-hub-amber-tint to-white shadow-[0_6px_18px_-8px_var(--hub-amber)] hover:border-hub-amber hover:shadow-[0_12px_26px_-8px_var(--hub-amber)]'
-          : 'border border-hub-violet-edge bg-white hover:border-hub-violet'
+          : `border ${accent.wash}`
       }`}
       role="button"
       tabIndex={0}
