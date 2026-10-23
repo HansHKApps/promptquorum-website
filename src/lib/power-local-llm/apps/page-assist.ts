@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // per github.com/n4ze3m/page-assist README: a Chrome/Firefox browser extension and sidebar UI that talks to a separately-installed backend (Ollama or any OpenAI-compatible endpoint) — the extension itself never runs inference, so it needs no GPU of its own — verified 2026-09-13
-  stars: 8200,
+  stars: 8277,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],

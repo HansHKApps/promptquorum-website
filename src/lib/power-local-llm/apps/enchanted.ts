@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'Apache 2.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // pure Ollama client (github.com/AugustDev/enchanted), ships no inference engine of its own — hardware floor is entirely the connected Ollama server's, checked 2026-09-13
-  stars: 6000,
+  stars: 6015,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat', 'phone'],

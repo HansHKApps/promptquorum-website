@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'MIT',
   price: 'freemium',
   hardware: { ramGb: null, vramGb: null, cpuOnly: true }, // LobeChat is a self-hosted Next.js chat UI (lobehub.com/docs/self-hosting) that calls out to external LLM providers/local backends via API rather than running inference itself — no GPU needed for the app; official self-hosting docs did not publish a fixed minimum RAM figure for the container itself (checked 2026-09-13, docs page under migration)
-  stars: 82229,
+  stars: 83441,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],
