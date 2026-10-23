@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     is_living_page: false,
     quickAnswerTop: {
       en: {
-        question: 'Best local LLM for a 16 GB RAM laptop?',
+        question: 'Best Local LLM for a 16 GB RAM Laptop (2026)?',
         answer: 'For a 16 GB RAM laptop without a dedicated GPU, Qwen3.5 9B (Q4, ~7 GB download) is the best all-rounder, and Gemma 4 12B (~8 GB) is the strongest model that still fits, at lower speed. Qwen3.5 4B (~3.5 GB) or Phi-4-mini (~2.5 GB) suit weaker machines. Qwen3 8B and Gemma 3 12B still run fine but have newer successors. Speeds are estimates: roughly 6–12 tok/s for a 9B model on CPU, and about 1.5–2× that on Apple Silicon. At 32 GB, 26–27B models become options.',
         bullets: [
           'Qwen3.5 9B (Q4): ~7 GB, est. ~6–12 tok/s on CPU — best all-rounder for 16 GB',
@@ -32,7 +32,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         updatedDate: '2026-10',
       },
       de: {
-        question: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop?',
+        question: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop (2026)?',
         answer: 'Für einen 16-GB-RAM-Laptop ohne dedizierte GPU ist Qwen3.5 9B (Q4, ~7 GB Download) der beste Allrounder, und Gemma 4 12B (~8 GB) ist das stärkste Modell, das noch passt, allerdings langsamer. Qwen3.5 4B (~3,5 GB) oder Phi-4-mini (~2,5 GB) eignen sich für schwächere Rechner. Qwen3 8B und Gemma 3 12B laufen weiterhin, haben aber neuere Nachfolger. Die Geschwindigkeiten sind Schätzwerte: etwa 6–12 tok/s für ein 9B-Modell auf der CPU, auf Apple Silicon rund das 1,5- bis 2-Fache. Mit 32 GB kommen 26–27B-Modelle in Frage.',
         bullets: [
           'Qwen3.5 9B (Q4): ~7 GB, geschätzt ~6–12 tok/s auf CPU — bester Allrounder für 16 GB',
@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         updatedDate: '2026-10',
       },
       fr: {
-        question: 'Meilleur LLM local pour un laptop avec 16 Go de RAM ?',
+        question: 'Meilleur LLM local pour un laptop avec 16 Go de RAM (2026) ?',
         answer: 'Pour un laptop 16 Go de RAM sans GPU dédié, Qwen3.5 9B (Q4, ~7 Go à télécharger) est le meilleur polyvalent, et Gemma 4 12B (~8 Go) est le modèle le plus puissant qui tient encore, mais plus lent. Qwen3.5 4B (~3,5 Go) ou Phi-4-mini (~2,5 Go) conviennent aux machines plus faibles. Qwen3 8B et Gemma 3 12B fonctionnent toujours, mais ont des successeurs plus récents. Les vitesses sont des estimations : environ 6–12 tok/s pour un modèle 9B sur CPU, et environ 1,5 à 2 fois plus sur Apple Silicon. Avec 32 Go, les modèles 26–27B deviennent possibles.',
         bullets: [
           'Qwen3.5 9B (Q4) : ~7 Go, ~6–12 tok/s estimés sur CPU — meilleur polyvalent pour 16 Go',
@@ -54,7 +54,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         updatedDate: '2026-10',
       },
       ja: {
-        question: '16 GB RAM ラップトップに最適なローカル LLM は？',
+        question: '16 GB RAM ラップトップに最適なローカル LLM は？（2026）',
         answer: '専用 GPU のない 16 GB RAM ラップトップでは、Qwen3.5 9B（Q4、ダウンロード約 7 GB）が最良のオールラウンダーで、Gemma 4 12B（約 8 GB）は収まる最も強力なモデルです（低速）。非力なマシンには Qwen3.5 4B（約 3.5 GB）や Phi-4-mini（約 2.5 GB）が向いています。Qwen3 8B と Gemma 3 12B も動作しますが、後継モデルがあります。速度は推定値で、9B モデルは CPU で約 6～12 tok/s、Apple Silicon ではその約 1.5～2 倍です。32 GB なら 26～27B モデルも選択肢になります。',
         bullets: [
           'Qwen3.5 9B（Q4）：約 7 GB、CPU で推定 ~6–12 tok/s — 16 GB で最良のオールラウンダー',
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         updatedDate: '2026-10',
       },
       zh: {
-        question: '16 GB 内存笔记本最适合哪款本地 LLM？',
+        question: '16 GB 内存笔记本最适合哪款本地 LLM？（2026）',
         answer: '对于没有独立 GPU 的 16 GB 内存笔记本，Qwen3.5 9B（Q4，下载约 7 GB）是最佳全能选择，Gemma 4 12B（约 8 GB）是仍能装下的最强模型，但速度较慢。较弱的机器可选 Qwen3.5 4B（约 3.5 GB）或 Phi-4-mini（约 2.5 GB）。Qwen3 8B 和 Gemma 3 12B 仍可运行，但已有更新的后继模型。速度为估算值：9B 模型在 CPU 上约 6–12 tok/s，Apple Silicon 约为其 1.5–2 倍。32 GB 内存可考虑 26–27B 模型。',
         bullets: [
           'Qwen3.5 9B（Q4）：约 7 GB，CPU 估算约 6–12 tok/s——16 GB 最佳全能选择',
@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Model': 'Gemma 4 12B', 'Download (Q4)': '~8 GB', 'Speed (best for)': '~5–8 tok/s — strongest that fits' },
           { 'Model': 'Qwen3.5 4B', 'Download (Q4)': '3.3–4.0 GB', 'Speed (best for)': '~12–20 tok/s — 8 GB / weak CPUs' },
           { 'Model': 'Phi-4-mini', 'Download (Q4)': '~2.5 GB', 'Speed (best for)': '~15–25 tok/s — speed first' },
-          { 'Model': 'Qwen3 8B', 'Download (Q4)': '~5.2 GB', 'Speed (best for)': '~8–12 tok/s — older, still solid' },
+          { 'Model': 'Qwen3 8B', 'Download (Q4)': '~5.2 GB', 'Speed (best for)': '~8–15 tok/s — older, still solid' },
         ],
         content2: [
           'Gemma 4 12B is the practical ceiling for 16 GB: its 7.7–8.0 GB download fits with headroom but runs slower on CPU, which suits quality-first, non-interactive tasks such as document analysis and batch summarization. Gemma 4 E4B (6.6 GB) adds audio input for multimodal use. For coding on 16 GB, use Qwen3.5 9B or Gemma 4 12B: Qwen3-Coder is a 30B model (19 GB download) and needs a 32 GB machine. Both Qwen3.5 9B and Gemma 4 12B are listed under the Apache 2.0 license on Ollama; Gemma 4 12B was released on June 3, 2026 per Google\'s release notes.',
@@ -163,13 +163,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     title: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop (2026)?',
     dateModified: '2026-10-17',
     seoTitle: 'Bestes lokales LLM 16 GB Laptop 2026: Qwen3.5, Gemma 4',
-    metaDescription: 'Beste lokale LLMs für einen 16-GB-Laptop: Qwen3.5 9B (Allrounder), Gemma 4 12B (das stärkste, das passt), Qwen3.5 4B für schwache Rechner. Größen und CPU-Tempo.',
+    metaDescription: 'Beste lokale LLMs für einen 16-GB-Laptop: Qwen3.5 9B (Allrounder), Gemma 4 12B (stärkstes, das passt), Qwen3.5 4B für schwache Rechner. Größen, CPU-Tempo.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       de: {
-        question: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop?',
+        question: 'Bestes lokales LLM für einen 16-GB-RAM-Laptop (2026)?',
         answer: 'Für einen 16-GB-RAM-Laptop ohne dedizierte GPU ist Qwen3.5 9B (Q4, ~7 GB Download) der beste Allrounder, und Gemma 4 12B (~8 GB) ist das stärkste Modell, das noch passt, allerdings langsamer. Qwen3.5 4B (~3,5 GB) oder Phi-4-mini (~2,5 GB) eignen sich für schwächere Rechner. Qwen3 8B und Gemma 3 12B laufen weiterhin, haben aber neuere Nachfolger. Die Geschwindigkeiten sind Schätzwerte: etwa 6–12 tok/s für ein 9B-Modell auf der CPU, auf Apple Silicon rund das 1,5- bis 2-Fache. Mit 32 GB kommen 26–27B-Modelle in Frage.',
         bullets: [
           'Qwen3.5 9B (Q4): ~7 GB, geschätzt ~6–12 tok/s auf CPU — bester Allrounder für 16 GB',
@@ -205,7 +205,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modell': 'Gemma 4 12B', 'Download (Q4)': '~8 GB', 'Tempo (am besten für)': '~5–8 tok/s — stärkstes, das passt' },
           { 'Modell': 'Qwen3.5 4B', 'Download (Q4)': '3,3–4,0 GB', 'Tempo (am besten für)': '~12–20 tok/s — 8 GB / schwache CPUs' },
           { 'Modell': 'Phi-4-mini', 'Download (Q4)': '~2,5 GB', 'Tempo (am besten für)': '~15–25 tok/s — Tempo zuerst' },
-          { 'Modell': 'Qwen3 8B', 'Download (Q4)': '~5,2 GB', 'Tempo (am besten für)': '~8–12 tok/s — älter, weiter solide' },
+          { 'Modell': 'Qwen3 8B', 'Download (Q4)': '~5,2 GB', 'Tempo (am besten für)': '~8–15 tok/s — älter, weiter solide' },
         ],
         content2: [
           'Gemma 4 12B ist die praktische Obergrenze für 16 GB: Der Download von 7,7–8,0 GB passt mit Reserve, läuft auf der CPU aber langsamer — geeignet für qualitätsorientierte, nicht-interaktive Aufgaben wie Dokumentenanalyse und Batch-Zusammenfassungen. Gemma 4 E4B (6,6 GB) ergänzt Audio-Eingabe für multimodale Nutzung. Fürs Coding auf 16 GB nutzen Sie Qwen3.5 9B oder Gemma 4 12B: Qwen3-Coder ist ein 30B-Modell (19 GB Download) und braucht einen Rechner mit 32 GB. Qwen3.5 9B und Gemma 4 12B sind bei Ollama beide unter der Apache-2.0-Lizenz aufgeführt; Gemma 4 12B erschien laut Googles Release Notes am 3. Juni 2026.',
@@ -267,13 +267,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     title: 'Meilleur LLM local pour un laptop avec 16 Go de RAM (2026) ?',
     dateModified: '2026-10-17',
     seoTitle: 'Meilleur LLM local laptop 16 Go 2026 : Qwen3.5, Gemma 4',
-    metaDescription: 'Meilleurs LLM locaux pour un laptop 16 Go : Qwen3.5 9B (polyvalent), Gemma 4 12B (le plus puissant qui tient), Qwen3.5 4B pour machines faibles. Tailles et vitesses CPU.',
+    metaDescription: 'Meilleurs LLM locaux pour laptop 16 Go : Qwen3.5 9B (polyvalent), Gemma 4 12B (le plus puissant qui tient), Qwen3.5 4B pour machines faibles. Tailles, CPU.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       fr: {
-        question: 'Meilleur LLM local pour un laptop avec 16 Go de RAM ?',
+        question: 'Meilleur LLM local pour un laptop avec 16 Go de RAM (2026) ?',
         answer: 'Pour un laptop 16 Go de RAM sans GPU dédié, Qwen3.5 9B (Q4, ~7 Go à télécharger) est le meilleur polyvalent, et Gemma 4 12B (~8 Go) est le modèle le plus puissant qui tient encore, mais plus lent. Qwen3.5 4B (~3,5 Go) ou Phi-4-mini (~2,5 Go) conviennent aux machines plus faibles. Qwen3 8B et Gemma 3 12B fonctionnent toujours, mais ont des successeurs plus récents. Les vitesses sont des estimations : environ 6–12 tok/s pour un modèle 9B sur CPU, et environ 1,5 à 2 fois plus sur Apple Silicon. Avec 32 Go, les modèles 26–27B deviennent possibles.',
         bullets: [
           'Qwen3.5 9B (Q4) : ~7 Go, ~6–12 tok/s estimés sur CPU — meilleur polyvalent pour 16 Go',
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modèle': 'Gemma 4 12B', 'Téléchargement (Q4)': '~8 Go', 'Vitesse (meilleur usage)': '~5–8 tok/s — le plus puissant qui tient' },
           { 'Modèle': 'Qwen3.5 4B', 'Téléchargement (Q4)': '3,3–4,0 Go', 'Vitesse (meilleur usage)': '~12–20 tok/s — 8 Go / CPU faibles' },
           { 'Modèle': 'Phi-4-mini', 'Téléchargement (Q4)': '~2,5 Go', 'Vitesse (meilleur usage)': '~15–25 tok/s — vitesse avant tout' },
-          { 'Modèle': 'Qwen3 8B', 'Téléchargement (Q4)': '~5,2 Go', 'Vitesse (meilleur usage)': '~8–12 tok/s — plus ancien, solide' },
+          { 'Modèle': 'Qwen3 8B', 'Téléchargement (Q4)': '~5,2 Go', 'Vitesse (meilleur usage)': '~8–15 tok/s — plus ancien, solide' },
         ],
         content2: [
           'Gemma 4 12B est le plafond pratique pour 16 Go : son téléchargement de 7,7–8,0 Go tient avec de la marge, mais il est plus lent sur CPU, ce qui convient aux tâches non interactives axées qualité (analyse de documents, résumé par lots). Gemma 4 E4B (6,6 Go) ajoute l\'entrée audio pour un usage multimodal. Pour le Coding sur 16 Go, utilisez Qwen3.5 9B ou Gemma 4 12B : Qwen3-Coder est un modèle 30B (19 Go à télécharger) et demande une machine de 32 Go. Qwen3.5 9B et Gemma 4 12B sont tous deux répertoriés sous licence Apache 2.0 sur Ollama ; Gemma 4 12B est sorti le 3 juin 2026 selon les notes de version de Google.',
@@ -370,14 +370,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-ja.webp',
     title: '16 GB RAM ラップトップに最適なローカル LLM は？（2026）',
     dateModified: '2026-10-17',
-    seoTitle: '16 GB ラップトップ最適ローカル LLM 2026：Qwen3.5, Gemma 4',
+    seoTitle: '16GBノートのローカルLLM：Qwen3.5・Gemma 4',
     metaDescription: '16 GB ラップトップに最適なローカル LLM：Qwen3.5 9B（オールラウンダー）、Gemma 4 12B（収まる最強）、非力なマシンには Qwen3.5 4B。サイズと CPU 速度。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       ja: {
-        question: '16 GB RAM ラップトップに最適なローカル LLM は？',
+        question: '16 GB RAM ラップトップに最適なローカル LLM は？（2026）',
         answer: '専用 GPU のない 16 GB RAM ラップトップでは、Qwen3.5 9B（Q4、ダウンロード約 7 GB）が最良のオールラウンダーで、Gemma 4 12B（約 8 GB）は収まる最も強力なモデルです（低速）。非力なマシンには Qwen3.5 4B（約 3.5 GB）や Phi-4-mini（約 2.5 GB）が向いています。Qwen3 8B と Gemma 3 12B も動作しますが、後継モデルがあります。速度は推定値で、9B モデルは CPU で約 6～12 tok/s、Apple Silicon ではその約 1.5～2 倍です。32 GB なら 26～27B モデルも選択肢になります。',
         bullets: [
           'Qwen3.5 9B（Q4）：約 7 GB、CPU で推定 ~6–12 tok/s — 16 GB で最良のオールラウンダー',
@@ -413,7 +413,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'モデル': 'Gemma 4 12B', 'ダウンロード（Q4）': '~8 GB', '速度（最適用途）': '~5–8 tok/s — 収まる最強' },
           { 'モデル': 'Qwen3.5 4B', 'ダウンロード（Q4）': '3.3–4.0 GB', '速度（最適用途）': '~12–20 tok/s — 8 GB／非力な CPU' },
           { 'モデル': 'Phi-4-mini', 'ダウンロード（Q4）': '~2.5 GB', '速度（最適用途）': '~15–25 tok/s — 速度優先' },
-          { 'モデル': 'Qwen3 8B', 'ダウンロード（Q4）': '~5.2 GB', '速度（最適用途）': '~8–12 tok/s — 旧世代だが堅実' },
+          { 'モデル': 'Qwen3 8B', 'ダウンロード（Q4）': '~5.2 GB', '速度（最適用途）': '~8–15 tok/s — 旧世代だが堅実' },
         ],
         content2: [
           'Gemma 4 12B は 16 GB の実用的な上限です。7.7～8.0 GB のダウンロードで余裕を持って収まりますが、CPU では低速になるため、文書分析やバッチ要約のような品質重視の非対話型タスク向けです。Gemma 4 E4B（6.6 GB）は音声入力にも対応し、マルチモーダル用途に向いています。16 GB での Coding には Qwen3.5 9B か Gemma 4 12B を使ってください。Qwen3-Coder は 30B モデル（ダウンロード 19 GB）で、32 GB のマシンが必要です。 Ollama では Qwen3.5 9B と Gemma 4 12B はどちらも Apache 2.0 ライセンスと表示されています。Gemma 4 12B は Google のリリースノートによると 2026 年 6 月 3 日に公開されました。',
@@ -474,14 +474,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-es.webp',
     title: '¿Qué LLM Local es Mejor para un Laptop con 16 GB de RAM (2026)?',
     dateModified: '2026-10-17',
-    seoTitle: 'Mejor LLM local para laptop de 16 GB 2026: Qwen3.5, Gemma 4',
-    metaDescription: 'Mejores LLM locales para un laptop de 16 GB: Qwen3.5 9B (todoterreno), Gemma 4 12B (el más potente que cabe), Qwen3.5 4B para equipos débiles. Tamaños y velocidad en CPU.',
+    seoTitle: 'Mejor LLM local para laptop 16 GB 2026: Qwen3.5, Gemma 4',
+    metaDescription: 'Mejores LLM locales para laptop de 16 GB: Qwen3.5 9B (todoterreno), Gemma 4 12B (el más potente que cabe), Qwen3.5 4B para equipos débiles. Tamaños y CPU.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       es: {
-        question: '¿Qué LLM local es mejor para un laptop con 16 GB de RAM?',
+        question: '¿Qué LLM Local es Mejor para un Laptop con 16 GB de RAM (2026)?',
         answer: 'Para un laptop con 16 GB de RAM sin GPU dedicada, Qwen3.5 9B (Q4, ~7 GB de descarga) es el mejor todoterreno, y Gemma 4 12B (~8 GB) es el modelo más potente que aún cabe, aunque más lento. Qwen3.5 4B (~3,5 GB) o Phi-4-mini (~2,5 GB) sirven para equipos más débiles. Qwen3 8B y Gemma 3 12B siguen funcionando, pero tienen sucesores más nuevos. Las velocidades son estimaciones: unos 6–12 tok/s para un modelo de 9B en CPU y entre 1,5 y 2 veces más en Apple Silicon. Con 32 GB entran en juego los modelos de 26–27B.',
         bullets: [
           'Qwen3.5 9B (Q4): ~7 GB, ~6–12 tok/s estimados en CPU — mejor todoterreno para 16 GB',
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modelo': 'Gemma 4 12B', 'Descarga (Q4)': '~8 GB', 'Velocidad (mejor para)': '~5–8 tok/s — el más potente que cabe' },
           { 'Modelo': 'Qwen3.5 4B', 'Descarga (Q4)': '3,3–4,0 GB', 'Velocidad (mejor para)': '~12–20 tok/s — 8 GB / CPU débiles' },
           { 'Modelo': 'Phi-4-mini', 'Descarga (Q4)': '~2,5 GB', 'Velocidad (mejor para)': '~15–25 tok/s — velocidad primero' },
-          { 'Modelo': 'Qwen3 8B', 'Descarga (Q4)': '~5,2 GB', 'Velocidad (mejor para)': '~8–12 tok/s — más antiguo, sólido' },
+          { 'Modelo': 'Qwen3 8B', 'Descarga (Q4)': '~5,2 GB', 'Velocidad (mejor para)': '~8–15 tok/s — más antiguo, sólido' },
         ],
         content2: [
           'Gemma 4 12B es el techo práctico para 16 GB: su descarga de 7,7–8,0 GB cabe con margen, pero va más lento en CPU, lo que encaja con tareas no interactivas centradas en la calidad, como el análisis de documentos y los resúmenes por lotes. Gemma 4 E4B (6,6 GB) añade entrada de audio para uso multimodal. Para programación con 16 GB, usa Qwen3.5 9B o Gemma 4 12B: Qwen3-Coder es un modelo de 30B (19 GB de descarga) y necesita un equipo de 32 GB. Qwen3.5 9B y Gemma 4 12B figuran ambos con la licencia Apache 2.0 en Ollama; Gemma 4 12B se lanzó el 3 de junio de 2026, según las notas de versión de Google.',
@@ -578,14 +578,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-pt.webp',
     title: 'Qual é o Melhor LLM Local para um Notebook com 16 GB de RAM (2026)?',
     dateModified: '2026-10-17',
-    seoTitle: 'Melhor LLM local para notebook de 16 GB 2026: Qwen3.5, Gemma 4',
-    metaDescription: 'Melhores LLMs locais para notebook de 16 GB: Qwen3.5 9B (generalista), Gemma 4 12B (o mais forte que cabe), Qwen3.5 4B para máquinas fracas. Tamanhos e velocidade em CPU.',
+    seoTitle: 'Melhor LLM local em notebook 16 GB 2026: Qwen3.5, Gemma 4',
+    metaDescription: 'Melhores LLMs locais para notebook de 16 GB: Qwen3.5 9B (generalista), Gemma 4 12B (o mais forte que cabe), Qwen3.5 4B para máquinas fracas. Tamanhos, CPU.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       pt: {
-        question: 'Qual é o melhor LLM local para um notebook com 16 GB de RAM?',
+        question: 'Qual é o Melhor LLM Local para um Notebook com 16 GB de RAM (2026)?',
         answer: 'Para um notebook com 16 GB de RAM sem GPU dedicada, o Qwen3.5 9B (Q4, ~7 GB de download) é o melhor generalista, e o Gemma 4 12B (~8 GB) é o modelo mais forte que ainda cabe, porém mais lento. Qwen3.5 4B (~3,5 GB) ou Phi-4-mini (~2,5 GB) servem para máquinas mais fracas. Qwen3 8B e Gemma 3 12B ainda funcionam, mas têm sucessores mais novos. As velocidades são estimativas: cerca de 6–12 tok/s para um modelo de 9B na CPU e de 1,5 a 2 vezes isso no Apple Silicon. Com 32 GB, modelos de 26–27B passam a ser opção.',
         bullets: [
           'Qwen3.5 9B (Q4): ~7 GB, ~6–12 tok/s estimados na CPU — melhor generalista para 16 GB',
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modelo': 'Gemma 4 12B', 'Download (Q4)': '~8 GB', 'Velocidade (melhor para)': '~5–8 tok/s — o mais forte que cabe' },
           { 'Modelo': 'Qwen3.5 4B', 'Download (Q4)': '3,3–4,0 GB', 'Velocidade (melhor para)': '~12–20 tok/s — 8 GB / CPUs fracas' },
           { 'Modelo': 'Phi-4-mini', 'Download (Q4)': '~2,5 GB', 'Velocidade (melhor para)': '~15–25 tok/s — velocidade primeiro' },
-          { 'Modelo': 'Qwen3 8B', 'Download (Q4)': '~5,2 GB', 'Velocidade (melhor para)': '~8–12 tok/s — mais antigo, sólido' },
+          { 'Modelo': 'Qwen3 8B', 'Download (Q4)': '~5,2 GB', 'Velocidade (melhor para)': '~8–15 tok/s — mais antigo, sólido' },
         ],
         content2: [
           'O Gemma 4 12B é o teto prático para 16 GB: o download de 7,7–8,0 GB cabe com margem, mas fica mais lento na CPU, o que serve para tarefas não interativas focadas em qualidade, como análise de documentos e resumos em lote. O Gemma 4 E4B (6,6 GB) acrescenta entrada de áudio para uso multimodal. Para programar com 16 GB, use o Qwen3.5 9B ou o Gemma 4 12B: o Qwen3-Coder é um modelo de 30B (19 GB de download) e exige uma máquina de 32 GB. O Qwen3.5 9B e o Gemma 4 12B constam ambos com a licença Apache 2.0 no Ollama; o Gemma 4 12B foi lançado em 3 de junho de 2026, segundo as notas de versão do Google.',
@@ -683,13 +683,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     title: 'ما أفضل نموذج لغوي كبير محلي لحاسب محمول بـ⁨16⁩ جيجابايت ⁨RAM⁩؟ (⁨2026⁩)',
     dateModified: '2026-10-17',
     seoTitle: 'أفضل LLM محلي لحاسب 16 جيجابايت 2026: Qwen3.5 وGemma 4',
-    metaDescription: 'أفضل نماذج LLM المحلية لحاسب محمول بذاكرة 16 جيجابايت: Qwen3.5 9B (شامل) وGemma 4 12B (الأقوى الذي يتسع) وQwen3.5 4B للأجهزة الضعيفة. الأحجام وسرعة المعالج.',
+    metaDescription: 'أفضل نماذج LLM المحلية لحاسب محمول بذاكرة 16 جيجابايت: Qwen3.5 9B (شامل) وGemma 4 12B (الأقوى الذي يتسع) وQwen3.5 4B للأجهزة الضعيفة. الأحجام والسرعة.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       ar: {
-        question: 'ما أفضل نموذج لغوي كبير محلي لحاسب محمول بـ16 جيجابايت RAM؟',
+        question: 'ما أفضل نموذج لغوي كبير محلي لحاسب محمول بـ⁨16⁩ جيجابايت ⁨RAM⁩؟ (⁨2026⁩)',
         answer: 'لحاسب محمول بذاكرة RAM بسعة 16 جيجابايت وبدون معالج رسومات مخصص، يُعدّ Qwen3.5 9B (بتكميم Q4، حجم التنزيل ~7 جيجابايت) أفضل نموذج شامل، ويُعدّ Gemma 4 12B (~8 جيجابايت) أقوى نموذج لا يزال يتسع، لكنه أبطأ. أما Qwen3.5 4B (~3.5 جيجابايت) أو Phi-4-mini (~2.5 جيجابايت) فيناسبان الأجهزة الأضعف. ما زال Qwen3 8B وGemma 3 12B يعملان، لكن لهما خلفاء أحدث. السرعات تقديرية: نحو 6–12 tok/s لنموذج 9B على المعالج، وحوالي 1.5–2 ضعف ذلك على Apple Silicon. مع 32 جيجابايت تصبح نماذج 26–27B خياراً ممكناً.',
         bullets: [
           'Qwen3.5 9B (Q4): ~7 جيجابايت، تقديرياً ~6–12 tok/s على المعالج — أفضل نموذج شامل لسعة 16 جيجابايت',
@@ -725,7 +725,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'النموذج': 'Gemma 4 12B', 'التنزيل (Q4)': '~8 GB', 'السرعة (الأفضل لـ)': '~5–8 tok/s — الأقوى الذي يتسع' },
           { 'النموذج': 'Qwen3.5 4B', 'التنزيل (Q4)': '3.3–4.0 GB', 'السرعة (الأفضل لـ)': '~12–20 tok/s — 8 GB / معالجات ضعيفة' },
           { 'النموذج': 'Phi-4-mini', 'التنزيل (Q4)': '~2.5 GB', 'السرعة (الأفضل لـ)': '~15–25 tok/s — السرعة أولاً' },
-          { 'النموذج': 'Qwen3 8B', 'التنزيل (Q4)': '~5.2 GB', 'السرعة (الأفضل لـ)': '~8–12 tok/s — أقدم لكنه متين' },
+          { 'النموذج': 'Qwen3 8B', 'التنزيل (Q4)': '~5.2 GB', 'السرعة (الأفضل لـ)': '~8–15 tok/s — أقدم لكنه متين' },
         ],
         content2: [
           'يُعدّ Gemma 4 12B الحد العملي لسعة 16 جيجابايت: يتسع تنزيله البالغ 7.7–8.0 جيجابايت بهامش جيد، لكنه أبطأ على المعالج، ما يناسب المهام غير التفاعلية التي تُقدّم الجودة، مثل تحليل المستندات والتلخيص الدفعي. ويضيف Gemma 4 E4B (6.6 جيجابايت) إدخال الصوت للاستخدام متعدد الوسائط. وللبرمجة على 16 جيجابايت استخدم Qwen3.5 9B أو Gemma 4 12B: فـ Qwen3-Coder نموذج 30B (تنزيل 19 جيجابايت) ويحتاج إلى جهاز بذاكرة 32 جيجابايت. يُدرج Ollama كلاً من Qwen3.5 9B وGemma 4 12B برخصة Apache 2.0؛ وصدر Gemma 4 12B في 3 يونيو 2026 وفق ملاحظات إصدار Google.',
@@ -786,14 +786,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-zh.webp',
     title: '16 GB 内存笔记本最适合哪款本地 LLM？（2026）',
     dateModified: '2026-10-17',
-    seoTitle: '16 GB 笔记本最佳本地 LLM 2026：Qwen3.5、Gemma 4',
+    seoTitle: '16 GB笔记本本地LLM：Qwen3.5、Gemma 4',
     metaDescription: '16 GB 笔记本最佳本地 LLM：Qwen3.5 9B（全能）、Gemma 4 12B（能装下的最强）、弱机选 Qwen3.5 4B。含模型大小与 CPU 速度。',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-17',
     quickAnswerTop: {
       zh: {
-        question: '16 GB 内存笔记本最适合哪款本地 LLM？',
+        question: '16 GB 内存笔记本最适合哪款本地 LLM？（2026）',
         answer: '对于没有独立 GPU 的 16 GB 内存笔记本，Qwen3.5 9B（Q4，下载约 7 GB）是最佳全能选择，Gemma 4 12B（约 8 GB）是仍能装下的最强模型，但速度较慢。较弱的机器可选 Qwen3.5 4B（约 3.5 GB）或 Phi-4-mini（约 2.5 GB）。Qwen3 8B 和 Gemma 3 12B 仍可运行，但已有更新的后继模型。速度为估算值：9B 模型在 CPU 上约 6–12 tok/s，Apple Silicon 约为其 1.5–2 倍。32 GB 内存可考虑 26–27B 模型。',
         bullets: [
           'Qwen3.5 9B（Q4）：约 7 GB，CPU 估算约 6–12 tok/s——16 GB 最佳全能选择',
@@ -829,7 +829,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { '模型': 'Gemma 4 12B', '下载大小（Q4）': '~8 GB', '速度（最适用途）': '~5–8 tok/s——能装下的最强' },
           { '模型': 'Qwen3.5 4B', '下载大小（Q4）': '3.3–4.0 GB', '速度（最适用途）': '~12–20 tok/s——8 GB／弱 CPU' },
           { '模型': 'Phi-4-mini', '下载大小（Q4）': '~2.5 GB', '速度（最适用途）': '~15–25 tok/s——速度优先' },
-          { '模型': 'Qwen3 8B', '下载大小（Q4）': '~5.2 GB', '速度（最适用途）': '~8–12 tok/s——较旧但可靠' },
+          { '模型': 'Qwen3 8B', '下载大小（Q4）': '~5.2 GB', '速度（最适用途）': '~8–15 tok/s——较旧但可靠' },
         ],
         content2: [
           'Gemma 4 12B 是 16 GB 的实际上限：7.7–8.0 GB 的下载大小可留有余量，但在 CPU 上较慢，适合文档分析、批量摘要等注重质量的非交互任务。Gemma 4 E4B（6.6 GB）增加了音频输入，适合多模态用途。16 GB 上的编程请使用 Qwen3.5 9B 或 Gemma 4 12B：Qwen3-Coder 是 30B 模型（下载 19 GB），需要 32 GB 的机器。 Ollama 上 Qwen3.5 9B 和 Gemma 4 12B 均标注为 Apache 2.0 许可；据 Google 发布说明，Gemma 4 12B 于 2026 年 6 月 3 日发布。',
@@ -890,7 +890,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-local-llm-16gb-ram-laptop-overview-hero-ko.webp',
     title: '16 GB RAM 노트북에 가장 적합한 로컬 LLM은 무엇입니까? (2026)',
     dateModified: '2026-10-17',
-    seoTitle: '16 GB 노트북 최적 로컬 LLM 2026: Qwen3.5, Gemma 4',
+    seoTitle: '16 GB 노트북 로컬 LLM: Qwen3.5, Gemma 4',
     metaDescription: '16 GB 노트북 최적 로컬 LLM: Qwen3.5 9B(범용), Gemma 4 12B(들어가는 가장 강력한 모델), 저사양 기기는 Qwen3.5 4B. 모델 크기와 CPU 속도 정리.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
@@ -905,7 +905,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     readTime: '4분 분량',
     quickAnswerTop: {
       ko: {
-        question: '16 GB RAM 노트북에 가장 적합한 로컬 LLM은 무엇입니까?',
+        question: '16 GB RAM 노트북에 가장 적합한 로컬 LLM은 무엇입니까? (2026)',
         answer: '독립 GPU가 없는 16 GB RAM 노트북에서는 Qwen3.5 9B(Q4, 다운로드 약 7 GB)가 최고의 범용 모델이고, Gemma 4 12B(약 8 GB)는 여전히 들어가는 가장 강력한 모델이지만 더 느립니다. 저사양 기기에는 Qwen3.5 4B(약 3.5 GB)나 Phi-4-mini(약 2.5 GB)가 적합합니다. Qwen3 8B와 Gemma 3 12B도 계속 동작하지만 더 새로운 후속 모델이 있습니다. 속도는 추정치로, 9B 모델은 CPU에서 약 6–12 tok/s이고 Apple Silicon에서는 약 1.5–2배입니다. 32 GB면 26–27B 모델도 선택지가 됩니다.',
         bullets: [
           'Qwen3.5 9B(Q4): 약 7 GB, CPU에서 추정 ~6–12 tok/s — 16 GB 최고의 범용 모델',
@@ -957,7 +957,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { '모델': 'Gemma 4 12B', '다운로드 (Q4)': '~8 GB', '속도 (최적 용도)': '~5–8 tok/s — 들어가는 최강' },
           { '모델': 'Qwen3.5 4B', '다운로드 (Q4)': '3.3–4.0 GB', '속도 (최적 용도)': '~12–20 tok/s — 8 GB / 약한 CPU' },
           { '모델': 'Phi-4-mini', '다운로드 (Q4)': '~2.5 GB', '속도 (최적 용도)': '~15–25 tok/s — 속도 우선' },
-          { '모델': 'Qwen3 8B', '다운로드 (Q4)': '~5.2 GB', '속도 (최적 용도)': '~8–12 tok/s — 구형이지만 견고' },
+          { '모델': 'Qwen3 8B', '다운로드 (Q4)': '~5.2 GB', '속도 (최적 용도)': '~8–15 tok/s — 구형이지만 견고' },
         ],
         content2: [
           'Gemma 4 12B는 16 GB의 실질적인 상한입니다. 7.7–8.0 GB 다운로드는 여유 있게 들어가지만 CPU에서 더 느려, 문서 분석이나 일괄 요약처럼 품질을 우선하는 비대화형 작업에 적합합니다. Gemma 4 E4B(6.6 GB)는 오디오 입력이 추가되어 멀티모달 용도에 맞습니다. 16 GB에서 코딩에는 Qwen3.5 9B 또는 Gemma 4 12B를 사용하십시오. Qwen3-Coder는 30B 모델(다운로드 19 GB)이라 32 GB 기기가 필요합니다. Ollama에서 Qwen3.5 9B와 Gemma 4 12B는 모두 Apache 2.0 라이선스로 표시되며, Gemma 4 12B는 Google 릴리스 노트에 따르면 2026년 6월 3일에 출시되었습니다.',
