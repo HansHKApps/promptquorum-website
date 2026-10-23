@@ -234,9 +234,17 @@ async function check(url) {
   if (topic.length >= 2 && real.length) {
     const off = real.filter((a) => !topic.some((t) => hit(t, field(a))))
     if (off.length) add('C1c', `${off.length} of ${real.length} alt text(s) share no term with the page title/H1 (topic terms: ${topic.slice(0, 5).join(', ')}) (e.g. "${off[0].slice(0, 70)}")`)
-    const need = Math.max(1, Math.ceil(topic.length / 2))
-    const best = Math.max(...real.map((a) => topic.filter((t) => hit(t, field(a))).length))
-    if (best < need) add('C1c', `no image alt reflects the page topic (best alt covers ${best} of ${topic.length} title/H1 terms; hero/main diagram alt should name the subject)`)
+    // Score against the title terms and the H1 terms separately: when the two are worded differently (common in
+    // ja/zh/ko) their union inflates the denominator, and an alt equal to the H1 would still fail.
+    const clean = (t) => t !== 'promptquorum' && !/^\d{4}$/.test(t)
+    const sets = [keyTerms(title.replace(/\|.*$/, ''), lang).filter(clean), keyTerms(h1Plain, lang).filter(clean)].filter((x) => x.length)
+    const cover = (a, set) => set.filter((t) => hit(t, field(a))).length
+    const ok = real.some((a) => sets.some((set) => cover(a, set) >= Math.max(1, Math.ceil(set.length / 2))))
+    if (!ok) {
+      const bestSet = sets.reduce((m, set) => (set.length < m.length ? set : m), sets[0] ?? topic)
+      const best = Math.max(...real.map((a) => cover(a, bestSet)))
+      add('C1c', `no image alt reflects the page topic (best alt covers ${best} of ${bestSet.length} title/H1 terms; hero/main diagram alt should name the subject)`)
+    }
   }
   const ph = text.match(PLACEHOLDER_CI) ?? text.match(PLACEHOLDER_CS)
   if (ph) add('C2', `placeholder string "${ph[0]}" in the page text`)
