@@ -18,7 +18,7 @@ export const app: ToolRecord = {
   hardware: null, // TODO: hardware floor depends on which model is loaded, not a fixed tool attribute — needs manual research
   stars: null,
   addedDate: '2026-08-22',
-  founderReviewedDate: '2026-09-05',
+  founderReviewedDate: '2026-10-23',
   status: 'listed',
   uses: ['chat'],
   url: 'askloci.ai',
