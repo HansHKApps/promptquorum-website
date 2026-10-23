@@ -11,6 +11,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "qwen-local-deployment-guide-2026",
         "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
         "url": "/local-llms/qwen-local-deployment-guide-2026",
@@ -70,14 +78,6 @@
         "slug": "ollama-vision-models-review",
         "title": "Ollama Vision Models: How to Actually Run Image Models Locally",
         "url": "/power-local-llm/ollama-vision-models-review",
-        "dateModified": "2026-10-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "swiftlm-review",
-        "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
-        "url": "/power-local-llm/swiftlm-review",
         "dateModified": "2026-10-20",
         "tier": "about"
       }
@@ -254,7 +254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 93,
+    "totalCount": 92,
     "capped": true
   },
   "LocalAI": {
@@ -861,6 +861,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "qwen-local-deployment-guide-2026",
         "title": "Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers",
         "url": "/local-llms/qwen-local-deployment-guide-2026",
@@ -920,14 +928,6 @@
         "slug": "lm-studio-vs-jan-ai",
         "title": "Jan AI vs LM Studio: Which Is Better for Local LLMs?",
         "url": "/local-llms/lm-studio-vs-jan-ai",
-        "dateModified": "2026-10-17",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-ai-coding-tools-comparison-2026",
-        "title": "Best AI Coding Tools Compared 2026: Cursor vs Continue.dev",
-        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
         "dateModified": "2026-10-17",
         "tier": "about"
       }
@@ -992,6 +992,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
@@ -1053,14 +1061,6 @@
         "title": "GPT4All Review: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-09-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "maid-review",
-        "title": "Maid Review: Open-Source Local LLM Chat App for Android",
-        "url": "/power-local-llm/maid-review",
-        "dateModified": "2026-09-06",
         "tier": "about"
       }
     ],
@@ -1164,6 +1164,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "anythingllm-vs-privategpt-vs-openwebui-rag",
         "title": "AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026",
@@ -1226,17 +1234,9 @@
         "url": "/power-local-llm/onyx-review",
         "dateModified": "2026-09-12",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "anythingllm-mobile-review",
-        "title": "AnythingLLM Mobile Review: On-Device Chat + RAG",
-        "url": "/power-local-llm/anythingllm-mobile-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 36,
+    "totalCount": 37,
     "capped": true
   },
   "Msty": {
@@ -1353,6 +1353,14 @@
       },
       {
         "cluster": "local-llms",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "local-llms",
         "slug": "open-webui-review",
         "title": "Open WebUI in 2026: The Self-Hosted ChatGPT Interface for Ollama and Any AI Model",
         "url": "/local-llms/open-webui-review",
@@ -1384,7 +1392,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Backyard AI": {
@@ -1460,6 +1468,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
@@ -1473,14 +1489,6 @@
         "title": "BoltAI Review: Native Mac AI App, Ollama Ready",
         "url": "/power-local-llm/boltai-review",
         "dateModified": "2026-09-06",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-08-31",
         "tier": "about"
       },
       {
@@ -2056,6 +2064,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "qwen-local-deployment-complete-guide-2026",
         "title": "Qwen3 Local Deployment: Complete Production Guide (2026)",
@@ -2116,14 +2132,6 @@
         "slug": "big-agi-review",
         "title": "Big-AGI Review 2026: Self-Hosted Multi-Model Chat with Beam Compare",
         "url": "/local-llms/big-agi-review",
-        "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "lobechat-review",
-        "title": "LobeChat Review 2026: Self-Hosted AI Chat Interface with Agents and Plugins",
-        "url": "/local-llms/lobechat-review",
         "dateModified": "2026-09-11",
         "tier": "about"
       }
@@ -2300,7 +2308,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 16,
+    "totalCount": 15,
     "capped": true
   },
   "SillyTavern": {
@@ -2578,6 +2586,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-10-23",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
@@ -2602,7 +2618,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Chatbox": {
@@ -2659,6 +2675,14 @@
         "title": "Continue.dev Review: Why the Open-Source Coding Assistant Shut Down",
         "url": "/power-local-llm/continue-dev-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-10-23",
         "tier": "about"
       },
       {
@@ -2723,14 +2747,6 @@
         "title": "PearAI Review: The Free VS Code Fork With a Rocky Start",
         "url": "/power-local-llm/pearai-review",
         "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "bodega-one-code-review-2026",
-        "title": "Bodega One Code Review: A Local-First BYOLLM Coding IDE",
-        "url": "/power-local-llm/bodega-one-code-review",
-        "dateModified": "2026-09-03",
         "tier": "about"
       }
     ],
@@ -3010,6 +3026,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "cursor-local-mode-review",
         "title": "Cursor \"Local Mode\": Does It Really Run Local Models?",
@@ -3055,14 +3079,6 @@
         "title": "Twinny Review: Archived by Its Maker, Still Open Source",
         "url": "/power-local-llm/twinny-review",
         "dateModified": "2026-09-05",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llm-frontends",
-        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
-        "url": "/local-llms/best-local-llm-frontends",
-        "dateModified": "2026-08-31",
         "tier": "mentioned"
       }
     ],
@@ -10728,6 +10744,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "best-local-llm-frontends",
+        "title": "Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More",
+        "url": "/local-llms/best-local-llm-frontends",
+        "dateModified": "2026-10-23",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "local-vision-models-llava-ollama-2026",
         "title": "Best Local Vision Models 2026: Gemma 4, Qwen3-VL, LLaVA & Ollama Multimodal Setup",
@@ -10788,14 +10812,6 @@
         "slug": "top-open-source-models-ollama",
         "title": "Ollama Latest Version 2026: v0.40.5 + Best Models by Use Case",
         "url": "/local-llms/top-open-source-models-ollama",
-        "dateModified": "2026-10-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-ai-courses-certifications-2026",
-        "title": "Best AI Courses and Certifications: 2026 Buying Guide",
-        "url": "/power-local-llm/best-ai-courses-certifications-2026",
         "dateModified": "2026-10-19",
         "tier": "mentioned"
       }
