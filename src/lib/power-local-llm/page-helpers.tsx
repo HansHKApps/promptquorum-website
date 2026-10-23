@@ -1021,6 +1021,7 @@ const HUB_THEMES: Array<{
       'goose-review',
       'atomic-bot-review',
       'librechat-review',
+      'obscurify-review',
       'hermes-agent-review',
       'msty-go-review',
       'multica-review',
