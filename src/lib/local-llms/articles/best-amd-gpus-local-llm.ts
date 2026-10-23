@@ -318,7 +318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Yes, with caveats. AMD cards such as the RX 7900 XTX (24 GB) and Radeon AI PRO R9700 (32 GB) run quantized LLMs through ROCm or Vulkan in Ollama, LM Studio and llama.cpp. NVIDIA CUDA still has broader software support and faster prompt processing, so AMD fits best when VRAM per dollar matters.',
           },
           {
-            q: 'What is the best AMD GPU for local LLMs?',
+            q: 'What is the best AMD card for AI and local LLMs?',
             a: 'The RX 7900 XTX is the best all-round AMD card for local LLMs: 24 GB of VRAM, 960 GB/s of bandwidth, and support in AMD\'s ROCm 7.2.1 matrix and Ollama. For more VRAM per card, the Radeon AI PRO R9700 offers 32 GB; for 7B–14B models, the RX 9070 XT (16 GB) is enough.',
           },
           {
@@ -334,7 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Yes. LM Studio runs AMD GPUs through llama.cpp runtimes, either Vulkan or ROCm. If the ROCm runtime does not detect your card, switch the runtime to Vulkan. Earlier versions of this page wrongly said LM Studio was NVIDIA-only.',
           },
           {
-            q: 'How do I run quantized LLM inference on an AMD GPU?',
+            q: 'How do I run quantized LLM inference on AMD GPU hardware?',
             a: 'Pick a quantized model that fits your VRAM (Q4_K_M is roughly 0.6 GB per billion parameters), install Ollama or LM Studio, and use Vulkan or ROCm. On Linux, install ROCm v7 with amdgpu-install, run the model, then confirm GPU use with ollama ps or rocm-smi.',
           },
           {
@@ -358,8 +358,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Instinct (MI300X, MI350X) competes with NVIDIA\'s data-center GPUs and is bought for servers; the MI300X has 192 GB of HBM3. For a single desktop, Radeon or Radeon AI PRO cards are the relevant AMD options, and NVIDIA\'s CUDA ecosystem is still broader.',
           },
           {
-            q: 'Is AMD good for deep learning and machine learning, not just LLMs?',
-            a: 'For inference, yes. ROCm ships PyTorch builds (the ROCm 7.14.0 release lists PyTorch 2.12.0). For training and research code that assumes CUDA, NVIDIA still has the broader ecosystem, so check your framework\'s AMD support before buying.',
+            q: 'What is the best AMD GPU for deep learning and machine learning?',
+            a: 'For inference, the RX 7900 XTX (24 GB) and Radeon AI PRO R9700 (32 GB) are the best AMD choices. ROCm ships PyTorch builds (the ROCm 7.14.0 release lists PyTorch 2.12.0). For training and research code that assumes CUDA, NVIDIA still has the broader ecosystem, so check your framework\'s AMD support before buying.',
           },
           {
             q: 'Is a Ryzen AI Max+ 395 mini PC better than a discrete AMD GPU?',
@@ -706,7 +706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Sí, con matices. Tarjetas AMD como la RX 7900 XTX (24 GB) y la Radeon AI PRO R9700 (32 GB) ejecutan LLMs cuantizados mediante ROCm o Vulkan en Ollama, LM Studio y llama.cpp. NVIDIA CUDA sigue teniendo un soporte de software más amplio y un procesamiento de prompts más rápido, así que AMD encaja mejor cuando importa la VRAM por dólar.',
           },
           {
-            q: '¿Cuál es la mejor GPU AMD para LLMs locales?',
+            q: '¿Cuál es la mejor tarjeta AMD para IA y LLMs locales?',
             a: 'La RX 7900 XTX es la mejor AMD en general para LLMs locales: 24 GB de VRAM, 960 GB/s de ancho de banda y soporte en la matriz ROCm 7.2.1 de AMD y en Ollama. Para más VRAM por tarjeta, la Radeon AI PRO R9700 ofrece 32 GB; para modelos de 7B–14B, la RX 9070 XT (16 GB) es suficiente.',
           },
           {
@@ -722,7 +722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Sí. LM Studio ejecuta GPUs AMD mediante los runtimes de llama.cpp, ya sea Vulkan o ROCm. Si el runtime ROCm no detecta tu tarjeta, cambia el runtime a Vulkan. Versiones anteriores de esta página decían por error que LM Studio era solo para NVIDIA.',
           },
           {
-            q: '¿Cómo ejecuto inferencia cuantizada de LLM en una GPU AMD?',
+            q: '¿Cómo ejecuto inferencia cuantizada de LLM en hardware de GPU AMD?',
             a: 'Elige un modelo cuantizado que quepa en tu VRAM (Q4_K_M son unos 0.6 GB por cada mil millones de parámetros), instala Ollama o LM Studio y usa Vulkan o ROCm. En Linux, instala ROCm v7 con amdgpu-install, ejecuta el modelo y confirma el uso de la GPU con ollama ps o rocm-smi.',
           },
           {
@@ -746,8 +746,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Instinct (MI300X, MI350X) compite con las GPUs de centro de datos de NVIDIA y se compra para servidores; la MI300X tiene 192 GB de HBM3. Para un solo equipo de sobremesa, las Radeon o Radeon AI PRO son las opciones AMD relevantes, y el ecosistema CUDA de NVIDIA sigue siendo más amplio.',
           },
           {
-            q: '¿Sirve AMD para deep learning y machine learning, no solo para LLMs?',
-            a: 'Para inferencia, sí. ROCm incluye compilaciones de PyTorch (la versión ROCm 7.14.0 lista PyTorch 2.12.0). Para entrenamiento y código de investigación que asume CUDA, NVIDIA sigue teniendo el ecosistema más amplio, así que comprueba el soporte AMD de tu framework antes de comprar.',
+            q: '¿Cuál es la mejor GPU AMD para deep learning y machine learning?',
+            a: 'Para inferencia, la RX 7900 XTX (24 GB) y la Radeon AI PRO R9700 (32 GB) son las mejores opciones de AMD. ROCm incluye compilaciones de PyTorch (la versión ROCm 7.14.0 lista PyTorch 2.12.0). Para entrenamiento y código de investigación que asume CUDA, NVIDIA sigue teniendo el ecosistema más amplio, así que comprueba el soporte AMD de tu framework antes de comprar.',
           },
           {
             q: '¿Es mejor un mini PC con Ryzen AI Max+ 395 que una GPU AMD dedicada?',
@@ -1094,7 +1094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'نعم، مع بعض التحفظات. تشغّل بطاقات AMD مثل RX 7900 XTX (24 GB) وRadeon AI PRO R9700 (32 GB) نماذج LLM المكمَّمة عبر ROCm أو Vulkan في Ollama وLM Studio وllama.cpp. ما زالت NVIDIA CUDA تتمتع بدعم برمجي أوسع ومعالجة أسرع للموجّه، لذا تناسب AMD أكثر عندما يهمّك VRAM لكل دولار.',
           },
           {
-            q: 'ما أفضل بطاقة AMD لنماذج LLM المحلية؟',
+            q: 'ما أفضل بطاقة AMD للذكاء الاصطناعي ونماذج LLM المحلية؟',
             a: 'RX 7900 XTX هي أفضل بطاقة AMD عامة لنماذج LLM المحلية: ‏24 GB من VRAM وعرض نطاق 960 GB/s ودعم في مصفوفة ROCm 7.2.1 من AMD وفي Ollama. وللحصول على VRAM أكبر في البطاقة الواحدة توفر Radeon AI PRO R9700 سعة 32 GB؛ وللنماذج من 7B إلى 14B تكفي RX 9070 XT (16 GB).',
           },
           {
@@ -1110,7 +1110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'نعم. يشغّل LM Studio بطاقات AMD عبر بيئات تشغيل llama.cpp، إما Vulkan أو ROCm. إذا لم تكتشف بيئة ROCm بطاقتك فبدّل البيئة إلى Vulkan. كانت نسخ سابقة من هذه الصفحة تذكر خطأً أن LM Studio يعمل مع NVIDIA فقط.',
           },
           {
-            q: 'كيف أشغّل استدلال LLM مكمَّمًا على بطاقة AMD؟',
+            q: 'كيف أشغّل استدلال LLM مكمَّمًا على عتاد GPU من AMD؟',
             a: 'اختر نموذجًا مكمَّمًا يتّسع في VRAM (يستهلك Q4_K_M نحو 0.6 GB لكل مليار معامل)، وثبّت Ollama أو LM Studio، واستخدم Vulkan أو ROCm. على Linux ثبّت ROCm v7 بـ amdgpu-install، ثم شغّل النموذج وتأكد من استخدام GPU عبر ollama ps أو rocm-smi.',
           },
           {
@@ -1134,8 +1134,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'تنافس Instinct (MI300X وMI350X) وحدات NVIDIA لمراكز البيانات وتُشترى للخوادم؛ ويحمل MI300X ذاكرة HBM3 بسعة 192 GB. أما لحاسوب مكتبي واحد فالخيارات ذات الصلة من AMD هي Radeon أو Radeon AI PRO، ويظل نظام CUDA البيئي لدى NVIDIA أوسع.',
           },
           {
-            q: 'هل AMD جيدة للتعلم العميق وتعلم الآلة وليس لنماذج LLM فقط؟',
-            a: 'للاستدلال نعم. يوفّر ROCm إصدارات من PyTorch (يذكر إصدار ROCm 7.14.0 نسخة PyTorch 2.12.0). أما التدريب والشفرات البحثية التي تفترض CUDA فما زال لدى NVIDIA نظام بيئي أوسع لها، فتحقق من دعم إطار عملك لـ AMD قبل الشراء.',
+            q: 'ما أفضل بطاقة AMD للتعلم العميق وتعلم الآلة؟',
+            a: 'للاستدلال، تُعد RX 7900 XTX (24 GB) وRadeon AI PRO R9700 (32 GB) أفضل خيارات AMD. يوفّر ROCm إصدارات من PyTorch (يذكر إصدار ROCm 7.14.0 نسخة PyTorch 2.12.0). أما التدريب والشفرات البحثية التي تفترض CUDA فما زال لدى NVIDIA نظام بيئي أوسع لها، فتحقق من دعم إطار عملك لـ AMD قبل الشراء.',
           },
           {
             q: 'هل جهاز Mini PC بمعالج Ryzen AI Max+ 395 أفضل من بطاقة AMD مستقلة؟',
@@ -1241,7 +1241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: '#software-support',
       },
       {
-        label: 'Como executar inferência quantizada de LLM em uma GPU AMD?',
+        label: 'Como executar inferência quantizada de LLM em hardware de GPU AMD?',
         anchor: '#run-quantized',
       },
       {
@@ -1404,7 +1404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'run-quantized': {
         id: 'run-quantized',
-        title: 'Como executar inferência quantizada de LLM em uma GPU AMD?',
+        title: 'Como executar inferência quantizada de LLM em hardware de GPU AMD?',
         numberedItems: [
           '**Ajuste o modelo à sua VRAM.** Um arquivo Q4_K_M ocupa cerca de 0.6 GB por bilhão de parâmetros (cerca de 9 GB para 14B, 20 GB para 32B; estimativas). Reserve 2–4 GB para o cache de contexto.',
           '**Escolha um backend.** O Vulkan é o início mais rápido (só o driver gráfico). O ROCm (HIP) é o melhor caminho em configurações Linux compatíveis.',
@@ -1482,7 +1482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Sim, com ressalvas. Placas AMD como a RX 7900 XTX (24 GB) e a Radeon AI PRO R9700 (32 GB) rodam LLMs quantizados via ROCm ou Vulkan no Ollama, LM Studio e llama.cpp. A NVIDIA CUDA ainda tem suporte de software mais amplo e processamento de prompt mais rápido, então a AMD faz mais sentido quando a VRAM por dólar importa.',
           },
           {
-            q: 'Qual é a melhor GPU AMD para LLMs locais?',
+            q: 'Qual é a melhor placa AMD para IA e LLMs locais?',
             a: 'A RX 7900 XTX é a melhor AMD no geral para LLMs locais: 24 GB de VRAM, 960 GB/s de largura de banda e suporte na matriz ROCm 7.2.1 da AMD e no Ollama. Para mais VRAM por placa, a Radeon AI PRO R9700 oferece 32 GB; para modelos de 7B–14B, a RX 9070 XT (16 GB) basta.',
           },
           {
@@ -1498,7 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Sim. O LM Studio roda GPUs AMD pelos runtimes do llama.cpp, Vulkan ou ROCm. Se o runtime ROCm não detectar sua placa, troque o runtime para Vulkan. Versões anteriores desta página diziam erroneamente que o LM Studio era só para NVIDIA.',
           },
           {
-            q: 'Como executar inferência quantizada de LLM em uma GPU AMD?',
+            q: 'Como executar inferência quantizada de LLM em hardware de GPU AMD?',
             a: 'Escolha um modelo quantizado que caiba na sua VRAM (Q4_K_M é cerca de 0.6 GB por bilhão de parâmetros), instale o Ollama ou o LM Studio e use Vulkan ou ROCm. No Linux, instale o ROCm v7 com amdgpu-install, rode o modelo e confirme o uso da GPU com ollama ps ou rocm-smi.',
           },
           {
@@ -1522,8 +1522,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'O Instinct (MI300X, MI350X) concorre com as GPUs de data center da NVIDIA e é comprado para servidores; o MI300X tem 192 GB de HBM3. Para um único desktop, Radeon ou Radeon AI PRO são as opções AMD relevantes, e o ecossistema CUDA da NVIDIA continua mais amplo.',
           },
           {
-            q: 'A AMD é boa para deep learning e machine learning, não só para LLMs?',
-            a: 'Para inferência, sim. O ROCm oferece builds do PyTorch (a versão ROCm 7.14.0 lista o PyTorch 2.12.0). Para treinamento e código de pesquisa que pressupõe CUDA, a NVIDIA ainda tem o ecossistema mais amplo; confira o suporte a AMD do seu framework antes de comprar.',
+            q: 'Qual é a melhor GPU AMD para deep learning e machine learning?',
+            a: 'Para inferência, a RX 7900 XTX (24 GB) e a Radeon AI PRO R9700 (32 GB) são as melhores opções da AMD. O ROCm oferece builds do PyTorch (a versão ROCm 7.14.0 lista o PyTorch 2.12.0). Para treinamento e código de pesquisa que pressupõe CUDA, a NVIDIA ainda tem o ecossistema mais amplo; confira o suporte a AMD do seu framework antes de comprar.',
           },
           {
             q: 'Um mini PC com Ryzen AI Max+ 395 é melhor que uma GPU AMD dedicada?',
@@ -1870,7 +1870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Ja, mit Einschränkungen. AMD-Karten wie die RX 7900 XTX (24 GB) und die Radeon AI PRO R9700 (32 GB) betreiben quantisierte LLMs über ROCm oder Vulkan in Ollama, LM Studio und llama.cpp. NVIDIA CUDA hat weiterhin die breitere Software-Unterstützung und die schnellere Prompt-Verarbeitung; AMD passt daher am besten, wenn VRAM pro Dollar zählt.',
           },
           {
-            q: 'Was ist die beste AMD-GPU für lokale LLMs?',
+            q: 'Was ist die beste AMD-Karte für KI und lokale LLMs?',
             a: 'Die RX 7900 XTX ist die beste AMD-Allroundkarte für lokale LLMs: 24 GB VRAM, 960 GB/s Speicherbandbreite und Unterstützung in AMDs ROCm-7.2.1-Matrix und in Ollama. Für mehr VRAM pro Karte bietet die Radeon AI PRO R9700 32 GB; für Modelle mit 7B–14B genügt die RX 9070 XT (16 GB).',
           },
           {
@@ -1886,7 +1886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Ja. LM Studio betreibt AMD-GPUs über llama.cpp-Runtimes, entweder Vulkan oder ROCm. Erkennt die ROCm-Runtime Ihre Karte nicht, stellen Sie die Runtime auf Vulkan um. Frühere Versionen dieser Seite nannten LM Studio fälschlich NVIDIA-only.',
           },
           {
-            q: 'Wie führe ich quantisierte LLM-Inferenz auf einer AMD-GPU aus?',
+            q: 'Wie führe ich quantisierte LLM-Inferenz auf AMD-GPU-Hardware aus?',
             a: 'Wählen Sie ein quantisiertes Modell, das in Ihren VRAM passt (Q4_K_M sind grob 0,6 GB pro Milliarde Parameter), installieren Sie Ollama oder LM Studio und nutzen Sie Vulkan oder ROCm. Installieren Sie unter Linux ROCm v7 mit amdgpu-install, starten Sie das Modell und prüfen Sie die GPU-Nutzung mit ollama ps oder rocm-smi.',
           },
           {
@@ -1910,8 +1910,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Instinct (MI300X, MI350X) konkurriert mit NVIDIAs Rechenzentrums-GPUs und wird für Server gekauft; die MI300X hat 192 GB HBM3. Für einen einzelnen Desktop sind Radeon oder Radeon AI PRO die relevanten AMD-Optionen, und NVIDIAs CUDA-Ökosystem ist weiterhin breiter.',
           },
           {
-            q: 'Ist AMD gut für Deep Learning und Machine Learning, nicht nur für LLMs?',
-            a: 'Für Inferenz ja. ROCm liefert PyTorch-Builds (das Release ROCm 7.14.0 führt PyTorch 2.12.0 auf). Für Training und Forschungscode, der CUDA voraussetzt, hat NVIDIA weiterhin das breitere Ökosystem; prüfen Sie die AMD-Unterstützung Ihres Frameworks vor dem Kauf.',
+            q: 'Was ist die beste AMD-GPU für Deep Learning und Machine Learning?',
+            a: 'Für Inferenz sind die RX 7900 XTX (24 GB) und die Radeon AI PRO R9700 (32 GB) die besten AMD-Optionen. ROCm liefert PyTorch-Builds (das Release ROCm 7.14.0 führt PyTorch 2.12.0 auf). Für Training und Forschungscode, der CUDA voraussetzt, hat NVIDIA weiterhin das breitere Ökosystem; prüfen Sie die AMD-Unterstützung Ihres Frameworks vor dem Kauf.',
           },
           {
             q: 'Ist ein Mini-PC mit Ryzen AI Max+ 395 besser als eine dedizierte AMD-GPU?',
@@ -2017,7 +2017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: '#software-support',
       },
       {
-        label: 'Comment exécuter une inférence LLM quantifiée sur un GPU AMD ?',
+        label: 'Comment exécuter une inférence LLM quantifiée sur du matériel GPU AMD ?',
         anchor: '#run-quantized',
       },
       {
@@ -2180,7 +2180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'run-quantized': {
         id: 'run-quantized',
-        title: 'Comment exécuter une inférence LLM quantifiée sur un GPU AMD ?',
+        title: 'Comment exécuter une inférence LLM quantifiée sur du matériel GPU AMD ?',
         numberedItems: [
           '**Adaptez le modèle à votre VRAM.** Un fichier Q4_K_M occupe environ 0.6 Go par milliard de paramètres (environ 9 Go pour 14B, 20 Go pour 32B ; estimations). Laissez 2 à 4 Go pour le cache de contexte.',
           '**Choisissez un backend.** Vulkan est le démarrage le plus rapide (pilote graphique seul). ROCm (HIP) est préférable sur une configuration Linux prise en charge.',
@@ -2258,7 +2258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Oui, avec des réserves. Des cartes AMD comme la RX 7900 XTX (24 Go) et la Radeon AI PRO R9700 (32 Go) exécutent des LLM quantifiés via ROCm ou Vulkan dans Ollama, LM Studio et llama.cpp. NVIDIA CUDA offre toujours une prise en charge logicielle plus large et un traitement des prompts plus rapide : AMD convient donc surtout quand la VRAM par dollar compte.',
           },
           {
-            q: 'Quel est le meilleur GPU AMD pour les LLM locaux ?',
+            q: 'Quelle est la meilleure carte AMD pour l\'IA et les LLM locaux ?',
             a: 'La RX 7900 XTX est le meilleur GPU AMD polyvalent pour les LLM locaux : 24 Go de VRAM, 960 Go/s de bande passante et une prise en charge dans la matrice ROCm 7.2.1 d\'AMD et dans Ollama. Pour plus de VRAM par carte, la Radeon AI PRO R9700 offre 32 Go ; pour les modèles de 7B à 14B, la RX 9070 XT (16 Go) suffit.',
           },
           {
@@ -2274,7 +2274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Oui. LM Studio exécute les GPU AMD via les runtimes llama.cpp, Vulkan ou ROCm. Si le runtime ROCm ne détecte pas votre carte, passez le runtime sur Vulkan. Des versions précédentes de cette page indiquaient à tort que LM Studio était réservé à NVIDIA.',
           },
           {
-            q: 'Comment exécuter une inférence LLM quantifiée sur un GPU AMD ?',
+            q: 'Comment exécuter une inférence LLM quantifiée sur du matériel GPU AMD ?',
             a: 'Choisissez un modèle quantifié qui tient dans votre VRAM (Q4_K_M représente environ 0.6 Go par milliard de paramètres), installez Ollama ou LM Studio et utilisez Vulkan ou ROCm. Sous Linux, installez ROCm v7 avec amdgpu-install, lancez le modèle, puis confirmez l\'usage du GPU avec ollama ps ou rocm-smi.',
           },
           {
@@ -2298,8 +2298,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Instinct (MI300X, MI350X) concurrence les GPU de datacenter de NVIDIA et s\'achète pour des serveurs ; le MI300X a 192 Go de HBM3. Pour un poste de bureau unique, les Radeon ou Radeon AI PRO sont les options AMD pertinentes, et l\'écosystème CUDA de NVIDIA reste plus large.',
           },
           {
-            q: 'AMD convient-il au deep learning et au machine learning, pas seulement aux LLM ?',
-            a: 'Pour l\'inférence, oui. ROCm fournit des builds de PyTorch (la version ROCm 7.14.0 liste PyTorch 2.12.0). Pour l\'entraînement et le code de recherche qui suppose CUDA, NVIDIA garde l\'écosystème le plus large : vérifiez la prise en charge d\'AMD par votre framework avant d\'acheter.',
+            q: 'Quel est le meilleur GPU AMD pour le deep learning et le machine learning ?',
+            a: 'Pour l\'inférence, la RX 7900 XTX (24 Go) et la Radeon AI PRO R9700 (32 Go) sont les meilleurs choix AMD. ROCm fournit des builds de PyTorch (la version ROCm 7.14.0 liste PyTorch 2.12.0). Pour l\'entraînement et le code de recherche qui suppose CUDA, NVIDIA garde l\'écosystème le plus large : vérifiez la prise en charge d\'AMD par votre framework avant d\'acheter.',
           },
           {
             q: 'Un mini-PC Ryzen AI Max+ 395 vaut-il mieux qu\'un GPU AMD dédié ?',
@@ -2646,7 +2646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'はい。ただし条件があります。RX 7900 XTX（24 GB）やRadeon AI PRO R9700（32 GB）などのAMDカードは、Ollama、LM Studio、llama.cppでROCmまたはVulkan経由の量子化LLMを動かせます。NVIDIA CUDAはソフトウェア対応が広くプロンプト処理も速いため、AMDはドルあたりのVRAMを重視する場合に向きます。',
           },
           {
-            q: 'ローカルLLM向けに最適なAMD GPUはどれですか？',
+            q: 'AIとローカルLLM向けに最適なAMDカードはどれですか？',
             a: '総合ではRX 7900 XTXです。24 GBのVRAM、960 GB/sの帯域を持ち、AMDのROCm 7.2.1対応表とOllamaに対応しています。1枚あたりのVRAMを増やしたいならRadeon AI PRO R9700（32 GB）、7B〜14BならRX 9070 XT（16 GB）で足ります。',
           },
           {
@@ -2662,7 +2662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'はい。LM Studioはllama.cppランタイムのVulkanまたはROCmでAMD GPUを動かします。ROCmランタイムがカードを認識しない場合は、ランタイムをVulkanに切り替えてください。このページの以前の版はLM StudioをNVIDIA専用としていましたが、誤りでした。',
           },
           {
-            q: 'AMD GPUで量子化LLM推論を動かすにはどうすればよいですか？',
+            q: 'AMD GPUハードウェアで量子化LLM推論を動かすにはどうすればよいですか？',
             a: 'VRAMに収まる量子化モデルを選び（Q4_K_Mはパラメータ10億あたり約0.6 GB）、OllamaまたはLM Studioを入れ、VulkanかROCmを使います。LinuxではROCm v7をamdgpu-installで入れ、モデルを実行して、ollama psまたはrocm-smiでGPUの使用を確認します。',
           },
           {
@@ -2686,8 +2686,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Instinct（MI300X、MI350X）はNVIDIAのデータセンターGPUと競合する製品で、サーバー用に購入します。MI300Xは192 GBのHBM3を搭載しています。1台のデスクトップならRadeonまたはRadeon AI PROが該当し、NVIDIAのCUDAエコシステムは今も幅広いです。',
           },
           {
-            q: 'AMDはLLMだけでなくディープラーニングや機械学習にも向いていますか？',
-            a: '推論なら向いています。ROCmはPyTorchのビルドを提供しています（ROCm 7.14.0のリリースはPyTorch 2.12.0を挙げています）。CUDAを前提とする学習や研究用コードでは、NVIDIAのエコシステムが依然として広いので、購入前にお使いのフレームワークのAMD対応を確認してください。',
+            q: 'ディープラーニングや機械学習に最適なAMD GPUはどれですか？',
+            a: '推論ならRX 7900 XTX（24 GB）とRadeon AI PRO R9700（32 GB）が最良のAMD選択肢です。ROCmはPyTorchのビルドを提供しています（ROCm 7.14.0のリリースはPyTorch 2.12.0を挙げています）。CUDAを前提とする学習や研究用コードでは、NVIDIAのエコシステムが依然として広いので、購入前にお使いのフレームワークのAMD対応を確認してください。',
           },
           {
             q: 'Ryzen AI Max+ 395搭載ミニPCは、単体のAMD GPUより優れていますか？',
@@ -2744,7 +2744,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-23',
     theme: 'GPU 购买指南',
     title: '本地LLM与AI推理的最佳AMD显卡',
-    seoTitle: '本地LLM最佳AMD显卡2026：7900 XTX/9070 XT',
+    seoTitle: '本地LLM的AMD显卡2026：7900 XTX/9070 XT',
     intro: '**2026年本地LLM的最佳AMD显卡：30B级模型选Radeon RX 7900 XTX（24 GB），7B–14B模型选RX 9070 XT（16 GB），需要单卡最大显存时选Radeon AI PRO R9700（32 GB）。** 这三款都在Ollama的Linux ROCm v7支持列表中，llama.cpp也能通过Vulkan后端运行它们。NVIDIA CUDA仍是最省事的路径，因此只有在看重每美元显存、或已拥有该显卡时才建议选AMD。',
     metaDescription: 'AI与本地LLM最佳AMD显卡：RX 7900 XTX（24GB）、RX 9070 XT（16GB）、Radeon AI PRO R9700（32GB），含ROCm、Vulkan及AMD与NVIDIA对比。',
     heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-zh.webp',
@@ -2793,7 +2793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: '#software-support',
       },
       {
-        label: '如何在AMD显卡上运行量化LLM推理？',
+        label: '如何在AMD GPU硬件上运行量化LLM推理？',
         anchor: '#run-quantized',
       },
       {
@@ -2956,7 +2956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'run-quantized': {
         id: 'run-quantized',
-        title: '如何在AMD显卡上运行量化LLM推理？',
+        title: '如何在AMD GPU硬件上运行量化LLM推理？',
         numberedItems: [
           '**按显存选择模型大小。** Q4_K_M文件每十亿参数约占0.6 GB（14B约9 GB，32B约20 GB；均为估算）。为上下文缓存预留2–4 GB。',
           '**选择后端。** Vulkan上手最快（只需图形驱动）。在受支持的Linux环境中，ROCm（HIP）是更好的路径。',
@@ -3034,7 +3034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '适合，但有前提。RX 7900 XTX（24 GB）和Radeon AI PRO R9700（32 GB）等AMD显卡可在Ollama、LM Studio和llama.cpp中通过ROCm或Vulkan运行量化LLM。NVIDIA CUDA的软件支持仍更广、提示词处理更快，所以AMD更适合看重每美元显存的情况。',
           },
           {
-            q: '本地LLM最好的AMD显卡是哪款？',
+            q: 'AI和本地LLM最好的AMD显卡是哪款？',
             a: '综合最佳是RX 7900 XTX：24 GB显存、960 GB/s带宽，并被AMD的ROCm 7.2.1支持表和Ollama支持。要更大的单卡显存可选32 GB的Radeon AI PRO R9700；7B–14B模型用RX 9070 XT（16 GB）就够了。',
           },
           {
@@ -3050,7 +3050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '支持。LM Studio通过llama.cpp运行时（Vulkan或ROCm）运行AMD显卡。如果ROCm运行时识别不到显卡，请把运行时切换为Vulkan。本页早先版本曾错误地称LM Studio仅支持NVIDIA。',
           },
           {
-            q: '如何在AMD显卡上运行量化LLM推理？',
+            q: '如何在AMD GPU硬件上运行量化LLM推理？',
             a: '选一个能放进显存的量化模型（Q4_K_M每十亿参数约0.6 GB），安装Ollama或LM Studio，使用Vulkan或ROCm。在Linux上用amdgpu-install安装ROCm v7，运行模型，再用ollama ps或rocm-smi确认GPU在使用。',
           },
           {
@@ -3074,8 +3074,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Instinct（MI300X、MI350X）与NVIDIA的数据中心GPU竞争，面向服务器采购；MI300X配备192 GB HBM3。对单台桌面机而言，相关的AMD选择是Radeon或Radeon AI PRO，而NVIDIA的CUDA生态仍然更广。',
           },
           {
-            q: 'AMD适合深度学习和机器学习吗，而不只是LLM？',
-            a: '推理没问题。ROCm提供PyTorch构建（ROCm 7.14.0版本列出了PyTorch 2.12.0）。对于默认依赖CUDA的训练和研究代码，NVIDIA的生态仍然更广，购买前请确认你的框架对AMD的支持。',
+            q: '深度学习和机器学习最好的AMD显卡是哪款？',
+            a: '做推理时，RX 7900 XTX（24 GB）和Radeon AI PRO R9700（32 GB）是最好的AMD选择。ROCm提供PyTorch构建（ROCm 7.14.0版本列出了PyTorch 2.12.0）。对于默认依赖CUDA的训练和研究代码，NVIDIA的生态仍然更广，购买前请确认你的框架对AMD的支持。',
           },
           {
             q: 'Ryzen AI Max+ 395迷你主机比独立AMD显卡更好吗？',
@@ -3181,7 +3181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         anchor: '#software-support',
       },
       {
-        label: 'AMD GPU에서 양자화 LLM 추론은 어떻게 실행합니까?',
+        label: 'AMD GPU 하드웨어에서 양자화 LLM 추론은 어떻게 실행합니까?',
         anchor: '#run-quantized',
       },
       {
@@ -3344,7 +3344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'run-quantized': {
         id: 'run-quantized',
-        title: 'AMD GPU에서 양자화 LLM 추론은 어떻게 실행합니까?',
+        title: 'AMD GPU 하드웨어에서 양자화 LLM 추론은 어떻게 실행합니까?',
         numberedItems: [
           '**모델 크기를 VRAM에 맞춥니다.** Q4_K_M 파일은 파라미터 10억 개당 약 0.6 GB를 사용합니다(14B는 약 9 GB, 32B는 약 20 GB이며 추정치입니다). 컨텍스트 캐시용으로 2–4 GB를 남겨 두십시오.',
           '**백엔드를 선택합니다.** Vulkan이 가장 빠른 시작입니다(그래픽 드라이버만 필요). 지원되는 Linux 환경에서는 ROCm(HIP)이 더 낫습니다.',
@@ -3422,7 +3422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '네, 다만 조건이 있습니다. RX 7900 XTX(24 GB)와 Radeon AI PRO R9700(32 GB) 같은 AMD 카드는 Ollama, LM Studio, llama.cpp에서 ROCm 또는 Vulkan으로 양자화 LLM을 실행합니다. NVIDIA CUDA는 여전히 소프트웨어 지원이 더 넓고 프롬프트 처리가 빠르므로, 달러당 VRAM이 중요할 때 AMD가 적합합니다.',
           },
           {
-            q: '로컬 LLM용으로 가장 좋은 AMD GPU는 무엇입니까?',
+            q: 'AI와 로컬 LLM용으로 가장 좋은 AMD 카드는 무엇입니까?',
             a: 'RX 7900 XTX가 종합적으로 가장 좋습니다. 24 GB VRAM, 960 GB/s 대역폭을 갖추고 AMD의 ROCm 7.2.1 지원표와 Ollama에서 지원됩니다. 카드당 VRAM을 더 늘리려면 Radeon AI PRO R9700(32 GB), 7B–14B 모델이라면 RX 9070 XT(16 GB)로 충분합니다.',
           },
           {
@@ -3438,7 +3438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '네. LM Studio는 llama.cpp 런타임인 Vulkan 또는 ROCm으로 AMD GPU를 실행합니다. ROCm 런타임이 카드를 인식하지 못하면 런타임을 Vulkan으로 바꾸십시오. 이 페이지의 이전 버전은 LM Studio를 NVIDIA 전용이라고 잘못 안내했습니다.',
           },
           {
-            q: 'AMD GPU에서 양자화 LLM 추론은 어떻게 실행합니까?',
+            q: 'AMD GPU 하드웨어에서 양자화 LLM 추론은 어떻게 실행합니까?',
             a: 'VRAM에 들어가는 양자화 모델(Q4_K_M은 파라미터 10억 개당 약 0.6 GB)을 고르고, Ollama 또는 LM Studio를 설치한 뒤 Vulkan이나 ROCm을 사용합니다. Linux에서는 amdgpu-install로 ROCm v7을 설치하고 모델을 실행한 다음 ollama ps 또는 rocm-smi로 GPU 사용을 확인하십시오.',
           },
           {
@@ -3462,8 +3462,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'Instinct(MI300X, MI350X)는 NVIDIA의 데이터센터 GPU와 경쟁하며 서버용으로 구매하고, MI300X는 192 GB HBM3를 갖추고 있습니다. 데스크톱 한 대에는 Radeon 또는 Radeon AI PRO가 해당되는 AMD 선택지이며, NVIDIA의 CUDA 생태계는 여전히 더 넓습니다.',
           },
           {
-            q: 'AMD는 LLM뿐 아니라 딥러닝과 머신러닝에도 적합합니까?',
-            a: '추론에는 적합합니다. ROCm은 PyTorch 빌드를 제공합니다(ROCm 7.14.0 릴리스는 PyTorch 2.12.0을 나열합니다). CUDA를 전제로 하는 학습과 연구 코드에서는 NVIDIA 생태계가 여전히 더 넓으므로, 구매 전에 사용하는 프레임워크의 AMD 지원을 확인하십시오.',
+            q: '딥러닝과 머신러닝에 가장 좋은 AMD GPU는 무엇입니까?',
+            a: '추론에는 RX 7900 XTX(24 GB)와 Radeon AI PRO R9700(32 GB)이 최선의 AMD 선택지입니다. ROCm은 PyTorch 빌드를 제공합니다(ROCm 7.14.0 릴리스는 PyTorch 2.12.0을 나열합니다). CUDA를 전제로 하는 학습과 연구 코드에서는 NVIDIA 생태계가 여전히 더 넓으므로, 구매 전에 사용하는 프레임워크의 AMD 지원을 확인하십시오.',
           },
           {
             q: 'Ryzen AI Max+ 395 미니 PC가 단독 AMD GPU보다 낫습니까?',
