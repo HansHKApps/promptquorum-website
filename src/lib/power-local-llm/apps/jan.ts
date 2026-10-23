@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'Apache 2.0 (variant)',
   price: 'free',
   hardware: { ramGb: 8, vramGb: 6, cpuOnly: true }, // per jan.ai/docs/desktop/windows official install docs: "8GB minimum (16GB recommended)" RAM, "6GB VRAM minimum" only if using GPU acceleration — GPU is optional, Jan runs on CPU alone, verified 2026-09-13
-  stars: 44331,
+  stars: 45051,
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat'],

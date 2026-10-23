@@ -6,10 +6,17 @@ import type { Language } from "@/lib/blog/blogContent";
 
 import type { LLMArticle } from "@/lib/local-llms/types";
 import { localAiApps } from "@/lib/power-local-llm/apps-barrel";
+import { starsFor } from "@/lib/power-local-llm/app-facts";
 
 // Live count from the directory — recomputed at build time so this CTA never drifts from the
 // actual tool count as the directory grows.
 const TOTAL_APP_COUNT = localAiApps.length;
+
+// Star counts come from the directory tiles (GEO_WRITING_GUIDELINES.md Rule 49) -- never type them into a string.
+const st = {
+  en: starsFor('en'), de: starsFor('de'), fr: starsFor('fr'), ja: starsFor('ja'), zh: starsFor('zh'),
+  es: starsFor('es'), pt: starsFor('pt'), ar: starsFor('ar'), ko: starsFor('ko'),
+};
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
@@ -17,14 +24,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Tools & Interfaces',
       title: 'Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More',
       seoTitle: 'Best Ollama & Local LLM Frontends 2026: 8 Compared',
-      intro: 'A frontend is the chat interface for your local LLM -- Ollama or LM Studio runs the model, but a frontend provides the polished UI. Ollama itself now ships a basic desktop chat app for macOS and Windows, so a separate frontend mainly adds RAG, multi-user access, mobile apps, or coding tools. Open WebUI has the most features (RAG, multimodal, multi-user) and 150,000+ GitHub stars, Enchanted UI is a native macOS/iOS/visionOS app, and Jan AI handles offline desktop use across Windows, macOS, and Linux. This guide compares 8 frontends by features, setup time, license, and use case.',
-      metaDescription: 'Compare 8 Ollama frontends: Open WebUI (150k+ stars, RAG), Ollama desktop app, Enchanted UI (native Apple app), Jan AI (offline). Licenses and setup guide.',
+      intro: `A frontend is the chat interface for your local LLM -- Ollama or LM Studio runs the model, but a frontend provides the polished UI. Ollama itself now ships a basic desktop chat app for macOS and Windows, so a separate frontend mainly adds RAG, multi-user access, mobile apps, or coding tools. Open WebUI has the most features (RAG, multimodal, multi-user) and ${st.en('open-webui')} GitHub stars, Enchanted UI is a native macOS/iOS/visionOS app, and Jan AI handles offline desktop use across Windows, macOS, and Linux. This guide compares 8 frontends by features, setup time, license, and use case.`,
+      metaDescription: `Compare 8 Ollama frontends: Open WebUI (${st.en('open-webui', 'k')} stars, RAG), Ollama desktop app, Enchanted UI (native Apple app), Jan AI (offline). Licenses and setup guide.`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-en.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-10-23',
       next_refresh_due: '2027-04-23',
       last_full_refresh: '2026-10-23',
-      leadAnswerBlock: '**A frontend is the chat interface for your local LLM -- Ollama or LM Studio runs the model, but a frontend provides the polished UI. Ollama itself now ships a basic desktop chat app for macOS and Windows, so a separate frontend mainly adds RAG, multi-user access, mobile apps, or coding tools. Open WebUI has the most features (RAG, multimodal, multi-user) and 150,000+ GitHub stars, Enchanted UI is a native macOS/iOS/visionOS app, and Jan AI handles offline desktop use across Windows, macOS, and Linux.**',
+      leadAnswerBlock: `**A frontend is the chat interface for your local LLM -- Ollama or LM Studio runs the model, but a frontend provides the polished UI. Ollama itself now ships a basic desktop chat app for macOS and Windows, so a separate frontend mainly adds RAG, multi-user access, mobile apps, or coding tools. Open WebUI has the most features (RAG, multimodal, multi-user) and ${st.en('open-webui')} GitHub stars, Enchanted UI is a native macOS/iOS/visionOS app, and Jan AI handles offline desktop use across Windows, macOS, and Linux.**`,
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '11 min read',
       educationalLevel: 'Beginner to Advanced',
@@ -45,13 +52,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Sources', anchor: '#sources' },
       ],
       gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
-      gammaDescription: 'The slide deck below covers 8 local LLM frontends -- Open WebUI (150,000+ stars, RAG), the Ollama desktop app, Enchanted UI (native Apple app), Jan AI (desktop), Continue.dev (code) -- with feature comparison table, license notes, setup guide, regional compliance context (EU/GDPR, Japan, China), and 5 common mistakes. Download the PDF as a Local LLM Frontend reference card.',
+      gammaDescription: `The slide deck below covers 8 local LLM frontends -- Open WebUI (${st.en('open-webui')} stars, RAG), the Ollama desktop app, Enchanted UI (native Apple app), Jan AI (desktop), Continue.dev (code) -- with feature comparison table, license notes, setup guide, regional compliance context (EU/GDPR, Japan, China), and 5 common mistakes. Download the PDF as a Local LLM Frontend reference card.`,
       quickAnswerTop: {
         en: {
           question: 'What is the best frontend for running local LLMs in 2026?',
-          answer: 'The best local LLM frontend: Open WebUI (RAG, multimodal, multi-user, 150,000+ GitHub stars, Docker or pip install, 12 GB RAM+) for feature-rich use. The Ollama desktop app (macOS, Windows) for basic chat with nothing extra to install. Enchanted UI (native macOS/iOS/visionOS app, 8 GB RAM) for Apple users, but it has had no update since July 7, 2026. Jan AI (desktop app, offline, Windows/macOS/Linux) for non-technical users. Open WebUI uses a branding-clause license rather than an OSI open-source license; Jan AI and Enchanted UI are Apache-2.0.',
+          answer: `The best local LLM frontend: Open WebUI (RAG, multimodal, multi-user, ${st.en('open-webui')} GitHub stars, Docker or pip install, 12 GB RAM+) for feature-rich use. The Ollama desktop app (macOS, Windows) for basic chat with nothing extra to install. Enchanted UI (native macOS/iOS/visionOS app, 8 GB RAM) for Apple users, but it has had no update since July 7, 2026. Jan AI (desktop app, offline, Windows/macOS/Linux) for non-technical users. Open WebUI uses a branding-clause license rather than an OSI open-source license; Jan AI and Enchanted UI are Apache-2.0.`,
           bullets: [
-            'Open WebUI: most features (RAG, multimodal, knowledge bases), 150,000+ GitHub stars, Docker or pip install, 12 GB RAM+',
+            `Open WebUI: most features (RAG, multimodal, knowledge bases), ${st.en('open-webui')} GitHub stars, Docker or pip install, 12 GB RAM+`,
             'Ollama desktop app: built-in chat for macOS and Windows, drag-and-drop files, nothing extra to install',
             'Enchanted UI: native macOS/iOS/visionOS app (App Store), 8 GB RAM -- no update since July 7, 2026 (over 3 months), check before relying on it',
             'Jan AI: desktop app (Windows/macOS/Linux), runs offline with local models, no server setup required',
@@ -62,9 +69,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         de: {
           question: 'Was ist das beste Frontend für lokale LLMs im Jahr 2026?',
-          answer: 'Das beste lokale LLM-Frontend: Open WebUI (RAG, multimodal, Mehrbenutzerbetrieb, 150.000+ GitHub-Sterne, Installation mit Docker oder pip, 12 GB RAM+) für funktionsreiche Nutzung. Die Ollama-Desktop-App (macOS, Windows) für einfachen Chat ohne zusätzliche Installation. Enchanted UI (native macOS/iOS/visionOS-App, 8 GB RAM) für Apple-Nutzer, es gab dafür jedoch seit dem 7. Juli 2026 kein Update mehr. Jan AI (Desktop-App, offline, Windows/macOS/Linux) für nicht-technische Nutzer. Open WebUI nutzt eine Lizenz mit Branding-Klausel statt einer OSI-Open-Source-Lizenz; Jan AI und Enchanted UI stehen unter Apache-2.0.',
+          answer: `Das beste lokale LLM-Frontend: Open WebUI (RAG, multimodal, Mehrbenutzerbetrieb, ${st.de('open-webui')} GitHub-Sterne, Installation mit Docker oder pip, 12 GB RAM+) für funktionsreiche Nutzung. Die Ollama-Desktop-App (macOS, Windows) für einfachen Chat ohne zusätzliche Installation. Enchanted UI (native macOS/iOS/visionOS-App, 8 GB RAM) für Apple-Nutzer, es gab dafür jedoch seit dem 7. Juli 2026 kein Update mehr. Jan AI (Desktop-App, offline, Windows/macOS/Linux) für nicht-technische Nutzer. Open WebUI nutzt eine Lizenz mit Branding-Klausel statt einer OSI-Open-Source-Lizenz; Jan AI und Enchanted UI stehen unter Apache-2.0.`,
           bullets: [
-            'Open WebUI: die meisten Funktionen (RAG, multimodal, Wissensdatenbanken), 150.000+ GitHub-Sterne, Installation mit Docker oder pip, 12 GB RAM+',
+            `Open WebUI: die meisten Funktionen (RAG, multimodal, Wissensdatenbanken), ${st.de('open-webui')} GitHub-Sterne, Installation mit Docker oder pip, 12 GB RAM+`,
             'Ollama-Desktop-App: eingebauter Chat für macOS und Windows, Dateien per Drag-and-drop, nichts extra zu installieren',
             'Enchanted UI: native macOS/iOS/visionOS-App (App Store), 8 GB RAM -- kein Update seit dem 7. Juli 2026 (mehr als 3 Monate), vor dem Einsatz prüfen',
             'Jan AI: Desktop-App (Windows/macOS/Linux), läuft mit lokalen Modellen offline, keine Server-Einrichtung nötig',
@@ -75,9 +82,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         fr: {
           question: 'Quel est le meilleur frontend pour exécuter des LLM locaux en 2026 ?',
-          answer: 'Le meilleur frontend LLM local : Open WebUI (RAG, multimodal, multi-utilisateurs, plus de 150 000 étoiles GitHub, installation Docker ou pip, 12 Go de RAM+) pour un usage riche en fonctions. L\'app de bureau Ollama (macOS, Windows) pour un chat de base sans rien installer en plus. Enchanted UI (app native macOS/iOS/visionOS, 8 Go de RAM) pour les utilisateurs Apple, mais sans mise à jour depuis le 7 juillet 2026. Jan AI (app de bureau, hors ligne, Windows/macOS/Linux) pour les non-techniciens. Open WebUI utilise une licence à clause de marque plutôt qu\'une licence open source approuvée par l\'OSI ; Jan AI et Enchanted UI sont sous Apache-2.0.',
+          answer: `Le meilleur frontend LLM local : Open WebUI (RAG, multimodal, multi-utilisateurs, plus de ${st.fr('open-webui', 'bare')} étoiles GitHub, installation Docker ou pip, 12 Go de RAM+) pour un usage riche en fonctions. L\'app de bureau Ollama (macOS, Windows) pour un chat de base sans rien installer en plus. Enchanted UI (app native macOS/iOS/visionOS, 8 Go de RAM) pour les utilisateurs Apple, mais sans mise à jour depuis le 7 juillet 2026. Jan AI (app de bureau, hors ligne, Windows/macOS/Linux) pour les non-techniciens. Open WebUI utilise une licence à clause de marque plutôt qu\'une licence open source approuvée par l\'OSI ; Jan AI et Enchanted UI sont sous Apache-2.0.`,
           bullets: [
-            'Open WebUI : le plus de fonctions (RAG, multimodal, bases de connaissances), plus de 150 000 étoiles GitHub, installation Docker ou pip, 12 Go de RAM+',
+            `Open WebUI : le plus de fonctions (RAG, multimodal, bases de connaissances), plus de ${st.fr('open-webui', 'bare')} étoiles GitHub, installation Docker ou pip, 12 Go de RAM+`,
             'App de bureau Ollama : chat intégré pour macOS et Windows, glisser-déposer de fichiers, rien d\'autre à installer',
             'Enchanted UI : app native macOS/iOS/visionOS (App Store), 8 Go de RAM -- aucune mise à jour depuis le 7 juillet 2026 (plus de 3 mois), vérifiez avant de vous y fier',
             'Jan AI : app de bureau (Windows/macOS/Linux), hors ligne avec des modèles locaux, sans configuration de serveur',
@@ -88,9 +95,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         ja: {
           question: '2026年のローカルLLMに最適なフロントエンドは何ですか？',
-          answer: 'ローカルLLMフロントエンドの選び方：多機能ならOpen WebUI（RAG、マルチモーダル、マルチユーザー、GitHubスター150,000+、DockerまたはpipでインストールRAM 12 GB以上）。追加インストール不要の基本チャットならOllamaデスクトップアプリ（macOS、Windows）。AppleユーザーにはEnchanted UI（macOS/iOS/visionOSネイティブアプリ、RAM 8 GB）ですが、2026年7月7日以降更新がありません。非技術ユーザーにはJan AI（デスクトップアプリ、オフライン、Windows/macOS/Linux）。Open WebUIはOSIのオープンソースライセンスではなくブランディング条項付きライセンスで、Jan AIとEnchanted UIはApache-2.0です。',
+          answer: `ローカルLLMフロントエンドの選び方：多機能ならOpen WebUI（RAG、マルチモーダル、マルチユーザー、GitHubスター${st.ja('open-webui')}、DockerまたはpipでインストールRAM 12 GB以上）。追加インストール不要の基本チャットならOllamaデスクトップアプリ（macOS、Windows）。AppleユーザーにはEnchanted UI（macOS/iOS/visionOSネイティブアプリ、RAM 8 GB）ですが、2026年7月7日以降更新がありません。非技術ユーザーにはJan AI（デスクトップアプリ、オフライン、Windows/macOS/Linux）。Open WebUIはOSIのオープンソースライセンスではなくブランディング条項付きライセンスで、Jan AIとEnchanted UIはApache-2.0です。`,
           bullets: [
-            'Open WebUI：機能が最多（RAG、マルチモーダル、ナレッジベース）、GitHubスター150,000+、DockerまたはpipでインストールRAM 12 GB以上',
+            `Open WebUI：機能が最多（RAG、マルチモーダル、ナレッジベース）、GitHubスター${st.ja('open-webui')}、DockerまたはpipでインストールRAM 12 GB以上`,
             'Ollamaデスクトップアプリ：macOSとWindows向けの内蔵チャット、ファイルのドラッグ＆ドロップ対応、追加インストール不要',
             'Enchanted UI：macOS/iOS/visionOSネイティブアプリ（App Store）、RAM 8 GB -- 2026年7月7日以降更新なし（3か月以上）、利用前に確認してください',
             'Jan AI：デスクトップアプリ（Windows/macOS/Linux）、ローカルモデルならオフライン動作、サーバー設定不要',
@@ -101,9 +108,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         zh: {
           question: '2026年运行本地LLM最好的前端是什么？',
-          answer: '最佳本地LLM前端：功能丰富选Open WebUI（RAG、多模态、多用户，150,000+ GitHub星，Docker或pip安装，12 GB RAM+）。基础聊天选Ollama桌面应用（macOS、Windows），无需额外安装。Apple用户选Enchanted UI（macOS/iOS/visionOS原生应用，8 GB RAM），但它自2026年7月7日起没有更新。非技术用户选Jan AI（桌面应用，离线，Windows/macOS/Linux）。Open WebUI采用带品牌条款的许可证，而非OSI认可的开源许可证；Jan AI和Enchanted UI采用Apache-2.0。',
+          answer: `最佳本地LLM前端：功能丰富选Open WebUI（RAG、多模态、多用户，${st.zh('open-webui')} GitHub星，Docker或pip安装，12 GB RAM+）。基础聊天选Ollama桌面应用（macOS、Windows），无需额外安装。Apple用户选Enchanted UI（macOS/iOS/visionOS原生应用，8 GB RAM），但它自2026年7月7日起没有更新。非技术用户选Jan AI（桌面应用，离线，Windows/macOS/Linux）。Open WebUI采用带品牌条款的许可证，而非OSI认可的开源许可证；Jan AI和Enchanted UI采用Apache-2.0。`,
           bullets: [
-            'Open WebUI：功能最多（RAG、多模态、知识库），150,000+ GitHub星，Docker或pip安装，12 GB RAM+',
+            `Open WebUI：功能最多（RAG、多模态、知识库），${st.zh('open-webui')} GitHub星，Docker或pip安装，12 GB RAM+`,
             'Ollama桌面应用：macOS和Windows内置聊天，支持拖入文件，无需额外安装',
             'Enchanted UI：macOS/iOS/visionOS原生应用（App Store），8 GB RAM -- 自2026年7月7日起无更新（已超过3个月），依赖前请先确认',
             'Jan AI：桌面应用（Windows/macOS/Linux），使用本地模型时可离线运行，无需设置服务器',
@@ -114,9 +121,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         es: {
           question: '¿Cuál es el mejor frontend para ejecutar LLMs locales en 2026?',
-          answer: 'El mejor frontend para LLMs locales: Open WebUI (RAG, multimodal, multiusuario, más de 150.000 estrellas en GitHub, instalación con Docker o pip, 12 GB de RAM o más) para un uso con muchas funciones. La app de escritorio de Ollama (macOS, Windows) para un chat básico sin instalar nada más. Enchanted UI (app nativa de macOS/iOS/visionOS, 8 GB de RAM) para usuarios de Apple, aunque no recibe actualizaciones desde el 7 de julio de 2026. Jan AI (app de escritorio, sin conexión, Windows/macOS/Linux) para usuarios no técnicos. Open WebUI usa una licencia con cláusula de marca y no una licencia de código abierto aprobada por la OSI; Jan AI y Enchanted UI usan Apache-2.0.',
+          answer: `El mejor frontend para LLMs locales: Open WebUI (RAG, multimodal, multiusuario, más de ${st.es('open-webui', 'bare')} estrellas en GitHub, instalación con Docker o pip, 12 GB de RAM o más) para un uso con muchas funciones. La app de escritorio de Ollama (macOS, Windows) para un chat básico sin instalar nada más. Enchanted UI (app nativa de macOS/iOS/visionOS, 8 GB de RAM) para usuarios de Apple, aunque no recibe actualizaciones desde el 7 de julio de 2026. Jan AI (app de escritorio, sin conexión, Windows/macOS/Linux) para usuarios no técnicos. Open WebUI usa una licencia con cláusula de marca y no una licencia de código abierto aprobada por la OSI; Jan AI y Enchanted UI usan Apache-2.0.`,
           bullets: [
-            'Open WebUI: más funciones (RAG, multimodal, bases de conocimiento), más de 150.000 estrellas en GitHub, instalación con Docker o pip, 12 GB de RAM o más',
+            `Open WebUI: más funciones (RAG, multimodal, bases de conocimiento), más de ${st.es('open-webui', 'bare')} estrellas en GitHub, instalación con Docker o pip, 12 GB de RAM o más`,
             'App de escritorio de Ollama: chat integrado para macOS y Windows, arrastra archivos, sin instalar nada más',
             'Enchanted UI: app nativa de macOS/iOS/visionOS (App Store), 8 GB de RAM -- sin actualizaciones desde el 7 de julio de 2026 (más de 3 meses), compruébalo antes de depender de ella',
             'Jan AI: app de escritorio (Windows/macOS/Linux), funciona sin conexión con modelos locales, sin configurar ningún servidor',
@@ -127,9 +134,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         pt: {
           question: 'Qual é o melhor frontend para rodar LLMs locais em 2026?',
-          answer: 'O melhor frontend para LLMs locais: Open WebUI (RAG, multimodal, multiusuário, mais de 150.000 estrelas no GitHub, instalação com Docker ou pip, 12 GB de RAM+) para uso com muitos recursos. O app desktop do Ollama (macOS, Windows) para chat básico sem instalar nada extra. Enchanted UI (app nativo para macOS/iOS/visionOS, 8 GB de RAM) para usuários Apple, mas sem atualização desde 7 de julho de 2026. Jan AI (app desktop, offline, Windows/macOS/Linux) para usuários não técnicos. O Open WebUI usa uma licença com cláusula de marca, e não uma licença de código aberto da OSI; Jan AI e Enchanted UI usam Apache-2.0.',
+          answer: `O melhor frontend para LLMs locais: Open WebUI (RAG, multimodal, multiusuário, mais de ${st.pt('open-webui', 'bare')} estrelas no GitHub, instalação com Docker ou pip, 12 GB de RAM+) para uso com muitos recursos. O app desktop do Ollama (macOS, Windows) para chat básico sem instalar nada extra. Enchanted UI (app nativo para macOS/iOS/visionOS, 8 GB de RAM) para usuários Apple, mas sem atualização desde 7 de julho de 2026. Jan AI (app desktop, offline, Windows/macOS/Linux) para usuários não técnicos. O Open WebUI usa uma licença com cláusula de marca, e não uma licença de código aberto da OSI; Jan AI e Enchanted UI usam Apache-2.0.`,
           bullets: [
-            'Open WebUI: mais recursos (RAG, multimodal, bases de conhecimento), mais de 150.000 estrelas no GitHub, instalação com Docker ou pip, 12 GB de RAM+',
+            `Open WebUI: mais recursos (RAG, multimodal, bases de conhecimento), mais de ${st.pt('open-webui', 'bare')} estrelas no GitHub, instalação com Docker ou pip, 12 GB de RAM+`,
             'App desktop do Ollama: chat integrado para macOS e Windows, arraste e solte arquivos, nada extra para instalar',
             'Enchanted UI: app nativo para macOS/iOS/visionOS (App Store), 8 GB de RAM -- sem atualização desde 7 de julho de 2026 (há mais de 3 meses), verifique antes de depender dele',
             'Jan AI: app desktop (Windows/macOS/Linux), funciona offline com modelos locais, sem configurar servidor',
@@ -140,9 +147,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         ar: {
           question: 'ما أفضل واجهة لتشغيل نماذج LLM المحلية في عام 2026؟',
-          answer: 'أفضل واجهات نماذج LLM المحلية: Open WebUI (RAG، متعددة الوسائط، متعددة المستخدمين، أكثر من 150,000 نجمة على GitHub، تثبيت عبر Docker أو pip، ذاكرة 12 GB RAM+) للاستخدام الغني بالميزات. تطبيق Ollama المكتبي (macOS وWindows) للدردشة الأساسية دون تثبيت أي شيء إضافي. Enchanted UI (تطبيق أصلي لأنظمة macOS وiOS وvisionOS، ذاكرة 8 GB RAM) لمستخدمي Apple، لكنه لم يتلقَّ أي تحديث منذ 7 يوليو 2026. Jan AI (تطبيق مكتبي يعمل دون اتصال على Windows وmacOS وLinux) للمستخدمين غير التقنيين. يعتمد Open WebUI ترخيصاً ببند العلامة التجارية وليس ترخيصاً مفتوح المصدر معتمداً من OSI؛ أما Jan AI وEnchanted UI فبترخيص Apache-2.0.',
+          answer: `أفضل واجهات نماذج LLM المحلية: Open WebUI (RAG، متعددة الوسائط، متعددة المستخدمين، أكثر من ${st.ar('open-webui', 'bare')} نجمة على GitHub، تثبيت عبر Docker أو pip، ذاكرة 12 GB RAM+) للاستخدام الغني بالميزات. تطبيق Ollama المكتبي (macOS وWindows) للدردشة الأساسية دون تثبيت أي شيء إضافي. Enchanted UI (تطبيق أصلي لأنظمة macOS وiOS وvisionOS، ذاكرة 8 GB RAM) لمستخدمي Apple، لكنه لم يتلقَّ أي تحديث منذ 7 يوليو 2026. Jan AI (تطبيق مكتبي يعمل دون اتصال على Windows وmacOS وLinux) للمستخدمين غير التقنيين. يعتمد Open WebUI ترخيصاً ببند العلامة التجارية وليس ترخيصاً مفتوح المصدر معتمداً من OSI؛ أما Jan AI وEnchanted UI فبترخيص Apache-2.0.`,
           bullets: [
-            'Open WebUI: الأكثر ميزات (RAG، متعددة الوسائط، قواعد المعرفة)، أكثر من 150,000 نجمة على GitHub، تثبيت عبر Docker أو pip، ذاكرة 12 GB RAM+',
+            `Open WebUI: الأكثر ميزات (RAG، متعددة الوسائط، قواعد المعرفة)، أكثر من ${st.ar('open-webui', 'bare')} نجمة على GitHub، تثبيت عبر Docker أو pip، ذاكرة 12 GB RAM+`,
             'تطبيق Ollama المكتبي: دردشة مدمجة لأنظمة macOS وWindows، اسحب الملفات وأفلتها، دون تثبيت أي شيء إضافي',
             'Enchanted UI: تطبيق أصلي لأنظمة macOS وiOS وvisionOS (App Store)، ذاكرة 8 GB RAM -- لا تحديثات منذ 7 يوليو 2026 (أكثر من 3 أشهر)، تحقق قبل الاعتماد عليه',
             'Jan AI: تطبيق مكتبي (Windows/macOS/Linux)، يعمل دون اتصال مع النماذج المحلية، دون إعداد خادم',
@@ -153,9 +160,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         ko: {
           question: '2026년 로컬 LLM을 실행하기에 가장 좋은 프론트엔드는 무엇입니까?',
-          answer: '로컬 LLM 프론트엔드 추천: 기능이 풍부한 용도에는 Open WebUI(RAG, 멀티모달, 다중 사용자, GitHub 스타 150,000개 이상, Docker 또는 pip 설치, RAM 12 GB 이상)가 적합합니다. 추가 설치 없이 기본 채팅만 필요하다면 Ollama 데스크톱 앱(macOS, Windows)을 쓰면 됩니다. Apple 사용자에게는 Enchanted UI(네이티브 macOS/iOS/visionOS 앱, RAM 8 GB)가 있으나 2026년 7월 7일 이후 업데이트가 없습니다. 비기술 사용자에게는 Jan AI(데스크톱 앱, 오프라인, Windows/macOS/Linux)가 맞습니다. Open WebUI는 OSI 오픈소스 라이선스가 아닌 브랜딩 조항 라이선스를 사용하며, Jan AI와 Enchanted UI는 Apache-2.0입니다.',
+          answer: `로컬 LLM 프론트엔드 추천: 기능이 풍부한 용도에는 Open WebUI(RAG, 멀티모달, 다중 사용자, GitHub 스타 ${st.ko('open-webui', 'bare')}개 이상, Docker 또는 pip 설치, RAM 12 GB 이상)가 적합합니다. 추가 설치 없이 기본 채팅만 필요하다면 Ollama 데스크톱 앱(macOS, Windows)을 쓰면 됩니다. Apple 사용자에게는 Enchanted UI(네이티브 macOS/iOS/visionOS 앱, RAM 8 GB)가 있으나 2026년 7월 7일 이후 업데이트가 없습니다. 비기술 사용자에게는 Jan AI(데스크톱 앱, 오프라인, Windows/macOS/Linux)가 맞습니다. Open WebUI는 OSI 오픈소스 라이선스가 아닌 브랜딩 조항 라이선스를 사용하며, Jan AI와 Enchanted UI는 Apache-2.0입니다.`,
           bullets: [
-            'Open WebUI: 최다 기능(RAG, 멀티모달, 지식 베이스), GitHub 스타 150,000개 이상, Docker 또는 pip 설치, RAM 12 GB 이상',
+            `Open WebUI: 최다 기능(RAG, 멀티모달, 지식 베이스), GitHub 스타 ${st.ko('open-webui', 'bare')}개 이상, Docker 또는 pip 설치, RAM 12 GB 이상`,
             'Ollama 데스크톱 앱: macOS와 Windows용 내장 채팅, 파일 끌어다 놓기 지원, 추가 설치 불필요',
             'Enchanted UI: 네이티브 macOS/iOS/visionOS 앱(App Store), RAM 8 GB -- 2026년 7월 7일 이후 업데이트 없음(3개월 이상), 사용 전에 확인하십시오',
             'Jan AI: 데스크톱 앱(Windows/macOS/Linux), 로컬 모델 사용 시 오프라인 동작, 서버 설정 불필요',
@@ -170,13 +177,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'The best local LLM frontends: Open WebUI (most features, RAG, 150,000+ GitHub stars), the Ollama desktop app (built-in basic chat on macOS and Windows), Enchanted UI (native macOS/iOS/visionOS app), and Jan AI (offline desktop app) — all free to use.' }, { type: 'plain-terms', text: 'A "frontend" is the chat window you type in — it connects to Ollama or LM Studio running in the background. Open WebUI is the most powerful and installs with Docker or pip. The Ollama desktop app is the simplest start on macOS and Windows. Enchanted UI is the simplest way to chat on an iPhone or Mac — install the app and point it at your Ollama server.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: `The best local LLM frontends: Open WebUI (most features, RAG, ${st.en('open-webui')} GitHub stars), the Ollama desktop app (built-in basic chat on macOS and Windows), Enchanted UI (native macOS/iOS/visionOS app), and Jan AI (offline desktop app) — all free to use.` }, { type: 'plain-terms', text: 'A "frontend" is the chat window you type in — it connects to Ollama or LM Studio running in the background. Open WebUI is the most powerful and installs with Docker or pip. The Ollama desktop app is the simplest start on macOS and Windows. Enchanted UI is the simplest way to chat on an iPhone or Mac — install the app and point it at your Ollama server.' }],
           items: [
             'A local LLM frontend is the chat interface you use to talk to your model. Ollama provides the API; the frontend is the UI. Since July 2025 Ollama also ships its own basic desktop chat app.',
-            '**Open WebUI** is the most feature-rich (RAG, multimodal, knowledge bases, function calling) with 150,000+ GitHub stars. Install it with Docker or `pip install open-webui`; 12 GB RAM+ recommended. Since v0.6.6 its license includes a branding clause, so it is free but not OSI open source. Latest release: v0.12.3 (October 16, 2026).',
+            `**Open WebUI** is the most feature-rich (RAG, multimodal, knowledge bases, function calling) with ${st.en('open-webui')} GitHub stars. Install it with Docker or \`pip install open-webui\`; 12 GB RAM+ recommended. Since v0.6.6 its license includes a branding clause, so it is free but not OSI open source. Latest release: v0.12.3 (October 16, 2026).`,
             '**Ollama desktop app** (macOS and Windows) downloads models and chats with them, accepts dropped text files and PDFs, and sends images to multimodal models. It is a single-user chat window; for knowledge bases or teams use Open WebUI.',
             '**Enchanted UI** is a native iOS, macOS, and visionOS app (not a browser tool), available on the App Store. **It has had no update since July 7, 2026 (over 3 months), so it may be unmaintained -- check the repository before relying on it.**',
-            '**Jan AI** is a desktop app (Windows, macOS, Linux) that runs offline with no server setup, 45,000+ GitHub stars, Apache-2.0. Latest release: v0.8.7 (October 20, 2026).',
+            `**Jan AI** is a desktop app (Windows, macOS, Linux) that runs offline with no server setup, ${st.en('jan')} GitHub stars, Apache-2.0. Latest release: v0.8.7 (October 20, 2026).`,
             '**Continue.dev** is a VS Code extension for inline code suggestions from your local Ollama model — development stopped after Cursor acquired the project in June 2026 (last release June 19, 2026), so the extension still works but gets no further updates.',
             'Licenses differ: Jan AI, Enchanted UI, Continue.dev, Gradio and Streamlit are Apache-2.0; Open WebUI and LobeHub use custom community licenses; TextGen is AGPL-3.0. Check the license before commercial or white-label use.',
           ],
@@ -204,7 +211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           image: '/images/best-local-llm-frontends-architecture-hero-en.webp',
           imageCaption: 'Open WebUI sits between your browser and Ollama -- enabling multi-user access, RAG, and multimodal features via Docker.',
           content: [
-            '**Open WebUI is the most-starred local LLM frontend in this guide with 150,000+ GitHub stars -- it packs RAG, multimodal, web search, and multi-user collaboration into a single Docker container or Python package.** It works with Ollama, LM Studio, or any OpenAI-compatible API. Latest release: v0.12.3 (October 16, 2026).',
+            `**Open WebUI is the most-starred local LLM frontend in this guide with ${st.en('open-webui')} GitHub stars -- it packs RAG, multimodal, web search, and multi-user collaboration into a single Docker container or Python package.** It works with Ollama, LM Studio, or any OpenAI-compatible API. Latest release: v0.12.3 (October 16, 2026).`,
             '**Key features:**',
             '- **RAG (Retrieval-Augmented Generation)**: Upload documents (PDFs, text files) and have the model answer questions about them.',
             '- **Multimodal support**: Upload images and ask questions about them.',
@@ -228,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Why Choose Enchanted UI for a Native Apple App?',
           content: [
             '**⚠️ No update since July 7, 2026 (over 3 months) -- this project may be unmaintained. Check the repository before relying on it.** The latest tagged release is v1.8.2 (June 15, 2026).',
-            '**Enchanted UI is a native iOS, macOS, and visionOS app for chatting with your local Ollama model -- install it from the App Store or build it from source, then point it at your Ollama server address.** The open-source project has 6,000+ GitHub stars and ships under the Apache-2.0 license, making it the most polished native option for Apple hardware in this guide.',
+            `**Enchanted UI is a native iOS, macOS, and visionOS app for chatting with your local Ollama model -- install it from the App Store or build it from source, then point it at your Ollama server address.** The open-source project has ${st.en('enchanted')} GitHub stars and ships under the Apache-2.0 license, making it the most polished native option for Apple hardware in this guide.`,
             '**Key features:**',
             '- **Native Apple app**: Runs on iPhone, iPad, Mac, and Apple Vision Pro with a ChatGPT-style interface -- not a browser tab.',
             '- **Multimodal input**: Supports voice prompts and image attachments in addition to text.',
@@ -252,7 +259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '- **GPU and CPU fallback**: Automatically uses GPU if available (including AMD ROCm/HIP acceleration on Linux, added in v0.8.2), falls back to CPU.',
             '- **Private by default**: No account required; usage analytics are collected only if you allow them at first launch.',
             '- **Extension marketplace**: Add plugins like RAG, web search, or tools.',
-            'Jan is best for non-technical users who want a polished desktop app. Jan AI has 45,000+ GitHub stars and full native support on Windows, macOS, and Linux -- it is a mature LM Studio alternative with strong community support.',
+            `Jan is best for non-technical users who want a polished desktop app. Jan AI has ${st.en('jan')} GitHub stars and full native support on Windows, macOS, and Linux -- it is a mature LM Studio alternative with strong community support.`,
           ],
           callouts: [
             { type: '📌 Key Point', text: 'Jan AI stores models at ~/jan/models -- separate from Ollama\'s model cache. If you use both, downloaded models are not shared and disk usage doubles for any model used in both apps.' },
@@ -282,10 +289,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: '**If Open WebUI feels too heavy, start with the Ollama desktop app or the Page Assist browser extension; if document Q&A is your main goal, try AnythingLLM.** Each option below connects to the same local Ollama API (localhost:11434).',
           items: [
             '**Ollama desktop app** -- Built-in chat for macOS and Windows: download models, drag in text files or PDFs, send images to multimodal models. Nothing else to install. Download it from [ollama.com/download](https://ollama.com/download).',
-            '**Page Assist** -- Browser sidebar chat for Chrome and Firefox, 8,000+ GitHub stars (MIT). The lightest option: no extra server or Docker. Latest release v1.5.88 (October 18, 2026) on [GitHub](https://github.com/n4ze3m/page-assist).',
-            '**AnythingLLM** -- Desktop app and Docker image built around RAG workspaces, 67,000+ GitHub stars (MIT). Latest release v1.18.0 (October 13, 2026) on [GitHub](https://github.com/Mintplex-Labs/anything-llm).',
+            `**Page Assist** -- Browser sidebar chat for Chrome and Firefox, ${st.en('page-assist')} GitHub stars (MIT). The lightest option: no extra server or Docker. Latest release v1.5.88 (October 18, 2026) on [GitHub](https://github.com/n4ze3m/page-assist).`,
+            `**AnythingLLM** -- Desktop app and Docker image built around RAG workspaces, ${st.en('anythingllm')} GitHub stars (MIT). Latest release v1.18.0 (October 13, 2026) on [GitHub](https://github.com/Mintplex-Labs/anything-llm).`,
             '**LM Studio** -- Closed-source desktop app (free for personal and business use) with built-in chat and a local OpenAI-compatible server at localhost:1234, so Open WebUI and other frontends can use it as a backend. See its [changelog](https://lmstudio.ai/changelog) (last update October 12, 2026).',
-            '**Cherry Studio** -- Multi-provider desktop client with built-in knowledge bases, 52,000+ GitHub stars (AGPL-3.0). Latest release v2.1.7 (October 19, 2026). Read the [Cherry Studio Review](/local-llms/cherry-studio-ai-desktop-client).',
+            `**Cherry Studio** -- Multi-provider desktop client with built-in knowledge bases, ${st.en('cherry-studio')} GitHub stars (AGPL-3.0). Latest release v2.1.7 (October 19, 2026). Read the [Cherry Studio Review](/local-llms/cherry-studio-ai-desktop-client).`,
           ],
           callouts: [
             { type: '📌 Key Point', text: 'For side-by-side detail, see [LM Studio vs Jan AI](/local-llms/lm-studio-vs-jan-ai) and [LobeChat, Big-AGI, NextChat, Page Assist and Chatbox compared](/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared).' },
@@ -347,7 +354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Which frontend is best for RAG?',
-              a: 'Open WebUI has the most mature general-purpose RAG implementation among the frontends in this guide -- upload documents and the model answers questions about them. If document Q&A is your primary use case rather than a secondary feature, AnythingLLM (67,000+ GitHub stars) is purpose-built around RAG workspaces and is worth evaluating separately. For advanced RAG workflows, see [Best Local RAG Tools](/local-llms/best-local-rag-tools).',
+              a: `Open WebUI has the most mature general-purpose RAG implementation among the frontends in this guide -- upload documents and the model answers questions about them. If document Q&A is your primary use case rather than a secondary feature, AnythingLLM (${st.en('anythingllm')} GitHub stars) is purpose-built around RAG workspaces and is worth evaluating separately. For advanced RAG workflows, see [Best Local RAG Tools](/local-llms/best-local-rag-tools).`,
             },
             {
               q: 'Do I need a frontend at all?',
@@ -430,7 +437,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Best Local LLM Frontends in 2026: Open WebUI, Enchanted UI, and More',
-        'description': 'Best local LLM chat UIs in 2026: Open WebUI (150k+ GitHub stars), Ollama desktop app, Enchanted UI (native Apple app), Jan AI (offline app). Comparison and setup guide.',
+        'description': `Best local LLM chat UIs in 2026: Open WebUI (${st.en('open-webui', 'k')} GitHub stars), Ollama desktop app, Enchanted UI (native Apple app), Jan AI (offline app). Comparison and setup guide.`,
         'url': 'https://www.promptquorum.com/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
         'dateModified': '2026-10-23',
@@ -457,7 +464,7 @@ schema: {
         'name': 'Best Local LLM Frontends 2026',
         'numberOfItems': 8,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'Web app (Docker/pip). Best for RAG, teams, feature-rich. 5 min setup. 12 GB+ RAM. 150,000+ GitHub stars. Free; source-available under a branding-clause license.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': `Web app (Docker/pip). Best for RAG, teams, feature-rich. 5 min setup. 12 GB+ RAM. ${st.en('open-webui')} GitHub stars. Free; source-available under a branding-clause license.` },
           { '@type': 'ListItem', 'position': 2, 'name': 'Ollama desktop app', 'description': 'Native app for macOS and Windows. Best for basic chat with nothing extra to install. ~2 min setup. 8 GB+ RAM. Free.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Enchanted UI', 'description': 'Native iOS/macOS/visionOS app. Best for Apple users wanting a polished chat client; no update since July 7, 2026. ~2 min install (App Store). 8 GB+ RAM. Free open source (Apache-2.0).' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Jan AI', 'description': 'Desktop app (Windows/macOS/Linux). Best for non-technical users, offline. 3 min setup. 8 GB+ RAM. Free open source (Apache-2.0).' },
@@ -479,7 +486,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Which frontend is best for RAG?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI has the most mature general-purpose RAG implementation among the frontends in this guide. If document Q&A is your primary use case, AnythingLLM (67,000+ GitHub stars) is purpose-built around RAG workspaces and is worth evaluating separately. For advanced RAG workflows, see Best Local RAG Tools.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': `Open WebUI has the most mature general-purpose RAG implementation among the frontends in this guide. If document Q&A is your primary use case, AnythingLLM (${st.en('anythingllm')} GitHub stars) is purpose-built around RAG workspaces and is worth evaluating separately. For advanced RAG workflows, see Best Local RAG Tools.` }
           },
           {
             '@type': 'Question',
@@ -538,12 +545,12 @@ schema: {
       theme: 'Tools & Interfaces',
       title: 'Beste lokale LLM-Frontends 2026: Open WebUI, Enchanted UI und mehr',
       seoTitle: 'Lokale LLM-Frontends 2026: 8 Ollama-Frontends im Vergleich',
-      intro: 'Ein Frontend ist die Chat-Oberfläche für Ihr lokales LLM -- Ollama oder LM Studio führt das Modell aus, das Frontend liefert die komfortable Benutzeroberfläche. Ollama selbst enthält inzwischen eine einfache Desktop-Chat-App für macOS und Windows; ein separates Frontend bringt daher vor allem RAG, Mehrbenutzerzugriff, mobile Apps oder Coding-Werkzeuge. Open WebUI bietet die meisten Funktionen (RAG, multimodal, Mehrbenutzerbetrieb) und über 150.000 GitHub-Sterne, Enchanted UI ist eine native macOS/iOS/visionOS-App, und Jan AI deckt den Offline-Desktop-Einsatz unter Windows, macOS und Linux ab. Dieser Leitfaden vergleicht 8 Frontends nach Funktionen, Einrichtungszeit, Lizenz und Anwendungsfall.',
-      metaDescription: '8 Ollama-Frontends im Vergleich: Open WebUI (150.000+ Sterne, RAG), Ollama-Desktop-App, Enchanted UI (Apple-App), Jan AI (offline). Lizenzen, Setup.',
+      intro: `Ein Frontend ist die Chat-Oberfläche für Ihr lokales LLM -- Ollama oder LM Studio führt das Modell aus, das Frontend liefert die komfortable Benutzeroberfläche. Ollama selbst enthält inzwischen eine einfache Desktop-Chat-App für macOS und Windows; ein separates Frontend bringt daher vor allem RAG, Mehrbenutzerzugriff, mobile Apps oder Coding-Werkzeuge. Open WebUI bietet die meisten Funktionen (RAG, multimodal, Mehrbenutzerbetrieb) und über ${st.de('open-webui', 'bare')} GitHub-Sterne, Enchanted UI ist eine native macOS/iOS/visionOS-App, und Jan AI deckt den Offline-Desktop-Einsatz unter Windows, macOS und Linux ab. Dieser Leitfaden vergleicht 8 Frontends nach Funktionen, Einrichtungszeit, Lizenz und Anwendungsfall.`,
+      metaDescription: `8 Ollama-Frontends im Vergleich: Open WebUI (${st.de('open-webui')} Sterne, RAG), Ollama-Desktop-App, Enchanted UI (Apple-App), Jan AI (offline). Lizenzen, Setup.`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-de.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-10-23',
-      leadAnswerBlock: '**Ein Frontend ist die Chat-Oberfläche für Ihr lokales LLM -- Ollama oder LM Studio führt das Modell aus, das Frontend liefert die komfortable Benutzeroberfläche. Ollama selbst enthält inzwischen eine einfache Desktop-Chat-App für macOS und Windows; ein separates Frontend bringt daher vor allem RAG, Mehrbenutzerzugriff, mobile Apps oder Coding-Werkzeuge. Open WebUI bietet die meisten Funktionen (RAG, multimodal, Mehrbenutzerbetrieb) und über 150.000 GitHub-Sterne, Enchanted UI ist eine native macOS/iOS/visionOS-App, und Jan AI deckt den Offline-Desktop-Einsatz unter Windows, macOS und Linux ab.**',
+      leadAnswerBlock: `**Ein Frontend ist die Chat-Oberfläche für Ihr lokales LLM -- Ollama oder LM Studio führt das Modell aus, das Frontend liefert die komfortable Benutzeroberfläche. Ollama selbst enthält inzwischen eine einfache Desktop-Chat-App für macOS und Windows; ein separates Frontend bringt daher vor allem RAG, Mehrbenutzerzugriff, mobile Apps oder Coding-Werkzeuge. Open WebUI bietet die meisten Funktionen (RAG, multimodal, Mehrbenutzerbetrieb) und über ${st.de('open-webui', 'bare')} GitHub-Sterne, Enchanted UI ist eine native macOS/iOS/visionOS-App, und Jan AI deckt den Offline-Desktop-Einsatz unter Windows, macOS und Linux ab.**`,
       audience: 'Einsteiger, die ihr erstes lokales LLM auf Standard-Hardware betreiben',
       readTime: '11 Min. Lesezeit',
       educationalLevel: 'Beginner to Advanced',
@@ -564,19 +571,19 @@ schema: {
         { label: 'Quellen', anchor: '#sources' },
       ],
       gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
-      gammaDescription: 'Die Folien unten behandeln 8 lokale LLM-Frontends -- Open WebUI (150.000+ Sterne, RAG), die Ollama-Desktop-App, Enchanted UI (native Apple-App), Jan AI (Desktop), Continue.dev (Code) -- mit Funktionsvergleichstabelle, Lizenzhinweisen, Einrichtungsanleitung, regionalem Compliance-Kontext (DSGVO, BSI, Japan, China) und 5 häufigen Fehlern. Laden Sie das PDF als Referenzkarte für lokale LLM-Frontends herunter.',
+      gammaDescription: `Die Folien unten behandeln 8 lokale LLM-Frontends -- Open WebUI (${st.de('open-webui')} Sterne, RAG), die Ollama-Desktop-App, Enchanted UI (native Apple-App), Jan AI (Desktop), Continue.dev (Code) -- mit Funktionsvergleichstabelle, Lizenzhinweisen, Einrichtungsanleitung, regionalem Compliance-Kontext (DSGVO, BSI, Japan, China) und 5 häufigen Fehlern. Laden Sie das PDF als Referenzkarte für lokale LLM-Frontends herunter.`,
       sections: {
         tldr: {
           id: 'key-takeaways',
 
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'Die besten lokalen LLM-Frontends: Open WebUI (die meisten Funktionen, RAG, 150.000+ GitHub-Sterne), die Ollama-Desktop-App (einfacher Chat unter macOS und Windows eingebaut), Enchanted UI (native macOS/iOS/visionOS-App) und Jan AI (Offline-Desktop-App) — alle kostenlos nutzbar.' }, { type: 'plain-terms', text: 'Ein "Frontend" ist das Chat-Fenster, in das Sie tippen — es verbindet sich mit Ollama oder LM Studio, das im Hintergrund läuft. Open WebUI ist am leistungsfähigsten und wird mit Docker oder pip installiert. Die Ollama-Desktop-App ist der einfachste Einstieg unter macOS und Windows. Enchanted UI ist der einfachste Weg, auf dem iPhone oder Mac zu chatten — App installieren und auf den eigenen Ollama-Server verweisen.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: `Die besten lokalen LLM-Frontends: Open WebUI (die meisten Funktionen, RAG, ${st.de('open-webui')} GitHub-Sterne), die Ollama-Desktop-App (einfacher Chat unter macOS und Windows eingebaut), Enchanted UI (native macOS/iOS/visionOS-App) und Jan AI (Offline-Desktop-App) — alle kostenlos nutzbar.` }, { type: 'plain-terms', text: 'Ein "Frontend" ist das Chat-Fenster, in das Sie tippen — es verbindet sich mit Ollama oder LM Studio, das im Hintergrund läuft. Open WebUI ist am leistungsfähigsten und wird mit Docker oder pip installiert. Die Ollama-Desktop-App ist der einfachste Einstieg unter macOS und Windows. Enchanted UI ist der einfachste Weg, auf dem iPhone oder Mac zu chatten — App installieren und auf den eigenen Ollama-Server verweisen.' }],
           items: [
             'Ein lokales LLM-Frontend ist die Chat-Oberfläche, über die Sie mit Ihrem Modell sprechen. Ollama stellt die API bereit; das Frontend ist die Benutzeroberfläche. Seit Juli 2025 enthält Ollama außerdem eine eigene einfache Desktop-Chat-App.',
-            '**Open WebUI** ist das funktionsreichste Frontend (RAG, multimodal, Wissensdatenbanken, Function Calling) mit über 150.000 GitHub-Sternen. Installation mit Docker oder `pip install open-webui`; empfohlen sind 12 GB RAM+. Seit v0.6.6 enthält die Lizenz eine Branding-Klausel, sie ist also kostenlos, aber keine OSI-Open-Source-Lizenz. Aktuelle Version: v0.12.3 (16. Oktober 2026).',
+            `**Open WebUI** ist das funktionsreichste Frontend (RAG, multimodal, Wissensdatenbanken, Function Calling) mit über ${st.de('open-webui', 'bare')} GitHub-Sternen. Installation mit Docker oder \`pip install open-webui\`; empfohlen sind 12 GB RAM+. Seit v0.6.6 enthält die Lizenz eine Branding-Klausel, sie ist also kostenlos, aber keine OSI-Open-Source-Lizenz. Aktuelle Version: v0.12.3 (16. Oktober 2026).`,
             'Die **Ollama-Desktop-App** (macOS und Windows) lädt Modelle herunter und chattet mit ihnen, akzeptiert per Drag-and-drop abgelegte Textdateien und PDFs und sendet Bilder an multimodale Modelle. Sie ist ein Chat-Fenster für einen einzelnen Nutzer; für Wissensdatenbanken oder Teams nutzen Sie Open WebUI.',
             '**Enchanted UI** ist eine native iOS-, macOS- und visionOS-App (kein Browser-Tool), erhältlich im App Store. **Seit dem 7. Juli 2026 gab es kein Update mehr (mehr als 3 Monate); das Projekt wird möglicherweise nicht mehr gepflegt -- prüfen Sie das Repository, bevor Sie sich darauf verlassen.**',
-            '**Jan AI** ist eine Desktop-App (Windows, macOS, Linux), die offline und ohne Server-Einrichtung läuft, mit über 45.000 GitHub-Sternen und Apache-2.0-Lizenz. Aktuelle Version: v0.8.7 (20. Oktober 2026).',
+            `**Jan AI** ist eine Desktop-App (Windows, macOS, Linux), die offline und ohne Server-Einrichtung läuft, mit über ${st.de('jan', 'bare')} GitHub-Sternen und Apache-2.0-Lizenz. Aktuelle Version: v0.8.7 (20. Oktober 2026).`,
             '**Continue.dev** ist eine VS-Code-Erweiterung für Inline-Code-Vorschläge Ihres lokalen Ollama-Modells — die Entwicklung wurde eingestellt, nachdem Cursor das Projekt im Juni 2026 übernommen hat (letzte Version 19. Juni 2026); die Erweiterung funktioniert weiter, erhält aber keine Updates mehr.',
             'Die Lizenzen unterscheiden sich: Jan AI, Enchanted UI, Continue.dev, Gradio und Streamlit stehen unter Apache-2.0; Open WebUI und LobeHub nutzen eigene Community-Lizenzen; TextGen steht unter AGPL-3.0. Prüfen Sie die Lizenz vor kommerzieller Nutzung oder White-Label-Einsatz.',
           ],
@@ -604,7 +611,7 @@ schema: {
           image: '/images/best-local-llm-frontends-architecture-hero-de.webp',
           imageCaption: 'Open WebUI sitzt zwischen Ihrem Browser und Ollama -- und ermöglicht per Docker Mehrbenutzerzugriff, RAG und multimodale Funktionen.',
           content: [
-            '**Open WebUI ist das meistbesternte lokale LLM-Frontend in diesem Leitfaden mit über 150.000 GitHub-Sternen -- es vereint RAG, Multimodalität, Websuche und Mehrbenutzer-Zusammenarbeit in einem einzigen Docker-Container oder Python-Paket.** Es funktioniert mit Ollama, LM Studio oder jeder OpenAI-kompatiblen API. Aktuelle Version: v0.12.3 (16. Oktober 2026).',
+            `**Open WebUI ist das meistbesternte lokale LLM-Frontend in diesem Leitfaden mit über ${st.de('open-webui', 'bare')} GitHub-Sternen -- es vereint RAG, Multimodalität, Websuche und Mehrbenutzer-Zusammenarbeit in einem einzigen Docker-Container oder Python-Paket.** Es funktioniert mit Ollama, LM Studio oder jeder OpenAI-kompatiblen API. Aktuelle Version: v0.12.3 (16. Oktober 2026).`,
             '**Wichtigste Funktionen:**',
             '- **RAG (Retrieval-Augmented Generation)**: Laden Sie Dokumente (PDFs, Textdateien) hoch und lassen Sie das Modell Fragen dazu beantworten.',
             '- **Multimodale Unterstützung**: Laden Sie Bilder hoch und stellen Sie Fragen dazu.',
@@ -628,7 +635,7 @@ schema: {
           title: 'Warum Enchanted UI als native Apple-App wählen?',
           content: [
             '**⚠️ Kein Update seit dem 7. Juli 2026 (mehr als 3 Monate) -- dieses Projekt wird möglicherweise nicht mehr gepflegt. Prüfen Sie das Repository, bevor Sie sich darauf verlassen.** Die letzte getaggte Version ist v1.8.2 (15. Juni 2026).',
-            '**Enchanted UI ist eine native iOS-, macOS- und visionOS-App zum Chatten mit Ihrem lokalen Ollama-Modell -- installieren Sie sie über den App Store oder bauen Sie sie aus dem Quellcode und verweisen Sie sie dann auf die Adresse Ihres Ollama-Servers.** Das Open-Source-Projekt hat über 6.000 GitHub-Sterne und steht unter der Apache-2.0-Lizenz; es ist die ausgereifteste native Option für Apple-Hardware in diesem Leitfaden.',
+            `**Enchanted UI ist eine native iOS-, macOS- und visionOS-App zum Chatten mit Ihrem lokalen Ollama-Modell -- installieren Sie sie über den App Store oder bauen Sie sie aus dem Quellcode und verweisen Sie sie dann auf die Adresse Ihres Ollama-Servers.** Das Open-Source-Projekt hat über ${st.de('enchanted', 'bare')} GitHub-Sterne und steht unter der Apache-2.0-Lizenz; es ist die ausgereifteste native Option für Apple-Hardware in diesem Leitfaden.`,
             '**Wichtigste Funktionen:**',
             '- **Native Apple-App**: Läuft auf iPhone, iPad, Mac und Apple Vision Pro mit einer ChatGPT-ähnlichen Oberfläche -- kein Browser-Tab.',
             '- **Multimodale Eingabe**: Unterstützt neben Text auch Sprach-Prompts und Bildanhänge.',
@@ -652,7 +659,7 @@ schema: {
             '- **GPU- und CPU-Fallback**: Nutzt automatisch die GPU, falls vorhanden (einschließlich AMD-ROCm/HIP-Beschleunigung unter Linux, hinzugefügt in v0.8.2), und fällt sonst auf die CPU zurück.',
             '- **Standardmäßig privat**: Kein Konto erforderlich; Nutzungsanalysen werden nur erhoben, wenn Sie dem beim ersten Start zustimmen.',
             '- **Erweiterungs-Marktplatz**: Fügen Sie Plugins wie RAG, Websuche oder Tools hinzu.',
-            'Jan ist am besten für nicht-technische Nutzer, die eine ausgereifte Desktop-App möchten. Jan AI hat über 45.000 GitHub-Sterne und volle native Unterstützung für Windows, macOS und Linux -- eine ausgereifte LM-Studio-Alternative mit starker Community.',
+            `Jan ist am besten für nicht-technische Nutzer, die eine ausgereifte Desktop-App möchten. Jan AI hat über ${st.de('jan', 'bare')} GitHub-Sterne und volle native Unterstützung für Windows, macOS und Linux -- eine ausgereifte LM-Studio-Alternative mit starker Community.`,
           ],
           callouts: [
             { type: '📌 Kernpunkt', text: 'Jan AI speichert Modelle unter ~/jan/models -- getrennt vom Modell-Cache von Ollama. Wenn Sie beide nutzen, werden heruntergeladene Modelle nicht geteilt, und der Speicherbedarf verdoppelt sich für jedes Modell, das in beiden Apps verwendet wird.' },
@@ -682,10 +689,10 @@ schema: {
           content: '**Wenn Open WebUI Ihnen zu schwer ist, beginnen Sie mit der Ollama-Desktop-App oder der Browser-Erweiterung Page Assist; steht Dokumenten-Q&A im Vordergrund, probieren Sie AnythingLLM.** Jede der folgenden Optionen verbindet sich mit derselben lokalen Ollama-API (localhost:11434).',
           items: [
             '**Ollama-Desktop-App** -- Eingebauter Chat für macOS und Windows: Modelle herunterladen, Textdateien oder PDFs hineinziehen, Bilder an multimodale Modelle senden. Es muss nichts weiter installiert werden. Download unter [ollama.com/download](https://ollama.com/download).',
-            '**Page Assist** -- Chat in der Browser-Seitenleiste für Chrome und Firefox, über 8.000 GitHub-Sterne (MIT). Die schlankste Option: kein zusätzlicher Server und kein Docker. Aktuelle Version v1.5.88 (18. Oktober 2026) auf [GitHub](https://github.com/n4ze3m/page-assist).',
-            '**AnythingLLM** -- Desktop-App und Docker-Image rund um RAG-Workspaces, über 67.000 GitHub-Sterne (MIT). Aktuelle Version v1.18.0 (13. Oktober 2026) auf [GitHub](https://github.com/Mintplex-Labs/anything-llm).',
+            `**Page Assist** -- Chat in der Browser-Seitenleiste für Chrome und Firefox, über ${st.de('page-assist', 'bare')} GitHub-Sterne (MIT). Die schlankste Option: kein zusätzlicher Server und kein Docker. Aktuelle Version v1.5.88 (18. Oktober 2026) auf [GitHub](https://github.com/n4ze3m/page-assist).`,
+            `**AnythingLLM** -- Desktop-App und Docker-Image rund um RAG-Workspaces, über ${st.de('anythingllm', 'bare')} GitHub-Sterne (MIT). Aktuelle Version v1.18.0 (13. Oktober 2026) auf [GitHub](https://github.com/Mintplex-Labs/anything-llm).`,
             '**LM Studio** -- Closed-Source-Desktop-App (kostenlos für private und geschäftliche Nutzung) mit eingebautem Chat und einem lokalen OpenAI-kompatiblen Server unter localhost:1234, den Open WebUI und andere Frontends als Backend nutzen können. Siehe das [Changelog](https://lmstudio.ai/changelog) (letztes Update 12. Oktober 2026).',
-            '**Cherry Studio** -- Desktop-Client für mehrere Anbieter mit eingebauten Wissensdatenbanken, über 52.000 GitHub-Sterne (AGPL-3.0). Aktuelle Version v2.1.7 (19. Oktober 2026). Lesen Sie den [Cherry-Studio-Testbericht](/de/local-llms/cherry-studio-ai-desktop-client).',
+            `**Cherry Studio** -- Desktop-Client für mehrere Anbieter mit eingebauten Wissensdatenbanken, über ${st.de('cherry-studio', 'bare')} GitHub-Sterne (AGPL-3.0). Aktuelle Version v2.1.7 (19. Oktober 2026). Lesen Sie den [Cherry-Studio-Testbericht](/de/local-llms/cherry-studio-ai-desktop-client).`,
           ],
           callouts: [
             { type: '📌 Kernpunkt', text: 'Für Detailvergleiche siehe [LM Studio vs. Jan AI](/de/local-llms/lm-studio-vs-jan-ai) und [LobeChat, Big-AGI, NextChat, Page Assist und Chatbox im Vergleich](/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared).' },
@@ -747,7 +754,7 @@ schema: {
             },
             {
               q: 'Welches Frontend ist am besten für RAG?',
-              a: 'Open WebUI hat unter den Frontends in diesem Leitfaden die ausgereifteste allgemeine RAG-Implementierung -- Sie laden Dokumente hoch, und das Modell beantwortet Fragen dazu. Steht Dokumenten-Q&A im Vordergrund und ist nicht nur eine Nebenfunktion, ist AnythingLLM (über 67.000 GitHub-Sterne) speziell um RAG-Workspaces herum gebaut und eine eigene Prüfung wert. Für fortgeschrittene RAG-Workflows siehe [Beste lokale RAG-Tools](/de/local-llms/best-local-rag-tools).',
+              a: `Open WebUI hat unter den Frontends in diesem Leitfaden die ausgereifteste allgemeine RAG-Implementierung -- Sie laden Dokumente hoch, und das Modell beantwortet Fragen dazu. Steht Dokumenten-Q&A im Vordergrund und ist nicht nur eine Nebenfunktion, ist AnythingLLM (über ${st.de('anythingllm', 'bare')} GitHub-Sterne) speziell um RAG-Workspaces herum gebaut und eine eigene Prüfung wert. Für fortgeschrittene RAG-Workflows siehe [Beste lokale RAG-Tools](/de/local-llms/best-local-rag-tools).`,
             },
             {
               q: 'Brauche ich überhaupt ein Frontend?',
@@ -838,7 +845,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Beste lokale LLM-Frontends 2026: Open WebUI, Enchanted UI und mehr',
-        'description': 'Beste Chat-Oberflächen für lokale LLMs 2026: Open WebUI (150k+ GitHub-Sterne), Ollama-Desktop-App, Enchanted UI (native Apple-App), Jan AI (Offline-App). Vergleich und Einrichtungsanleitung.',
+        'description': `Beste Chat-Oberflächen für lokale LLMs 2026: Open WebUI (${st.de('open-webui', 'k')} GitHub-Sterne), Ollama-Desktop-App, Enchanted UI (native Apple-App), Jan AI (Offline-App). Vergleich und Einrichtungsanleitung.`,
         'url': 'https://www.promptquorum.com/de/local-llms/best-local-llm-frontends',
         'inLanguage': 'de',
         'datePublished': '2026-04-04',
@@ -867,7 +874,7 @@ schema: {
         'name': 'Beste lokale LLM-Frontends 2026',
         'numberOfItems': 8,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'Web-App (Docker/pip). Beste Wahl für RAG, Teams, funktionsreich. 5 Min. Einrichtung. 12 GB+ RAM. 150.000+ GitHub-Sterne. Kostenlos; Source-available mit Branding-Klausel-Lizenz.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': `Web-App (Docker/pip). Beste Wahl für RAG, Teams, funktionsreich. 5 Min. Einrichtung. 12 GB+ RAM. ${st.de('open-webui')} GitHub-Sterne. Kostenlos; Source-available mit Branding-Klausel-Lizenz.` },
           { '@type': 'ListItem', 'position': 2, 'name': 'Ollama-Desktop-App', 'description': 'Native App für macOS und Windows. Beste Wahl für einfachen Chat ohne zusätzliche Installation. ~2 Min. Einrichtung. 8 GB+ RAM. Kostenlos.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Enchanted UI', 'description': 'Native iOS/macOS/visionOS-App. Beste Wahl für Apple-Nutzer, die einen ausgereiften Chat-Client wünschen; kein Update seit dem 7. Juli 2026. ~2 Min. Installation (App Store). 8 GB+ RAM. Kostenlos, Open Source (Apache-2.0).' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Jan AI', 'description': 'Desktop-App (Windows/macOS/Linux). Beste Wahl für nicht-technische Nutzer, offline. 3 Min. Einrichtung. 8 GB+ RAM. Kostenlos, Open Source (Apache-2.0).' },
@@ -890,7 +897,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Welches Frontend ist am besten für RAG?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI hat unter den Frontends in diesem Leitfaden die ausgereifteste allgemeine RAG-Implementierung -- Sie laden Dokumente hoch, und das Modell beantwortet Fragen dazu. Steht Dokumenten-Q&A im Vordergrund und ist nicht nur eine Nebenfunktion, ist AnythingLLM (über 67.000 GitHub-Sterne) speziell um RAG-Workspaces herum gebaut und eine eigene Prüfung wert. Für fortgeschrittene RAG-Workflows siehe Beste lokale RAG-Tools.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': `Open WebUI hat unter den Frontends in diesem Leitfaden die ausgereifteste allgemeine RAG-Implementierung -- Sie laden Dokumente hoch, und das Modell beantwortet Fragen dazu. Steht Dokumenten-Q&A im Vordergrund und ist nicht nur eine Nebenfunktion, ist AnythingLLM (über ${st.de('anythingllm', 'bare')} GitHub-Sterne) speziell um RAG-Workspaces herum gebaut und eine eigene Prüfung wert. Für fortgeschrittene RAG-Workflows siehe Beste lokale RAG-Tools.` }
           },
           {
             '@type': 'Question',
@@ -959,12 +966,12 @@ schema: {
       theme: 'Tools & Interfaces',
       title: 'Meilleures interfaces locales LLM en 2026 : Open WebUI, Enchanted UI et autres',
       seoTitle: 'Meilleures interfaces Ollama et LLM locaux 2026 : 8 outils',
-      intro: 'Un frontend est l\'interface de chat de votre LLM local : Ollama ou LM Studio exécute le modèle, le frontend fournit l\'interface soignée. Ollama propose désormais lui-même une application de chat de base pour macOS et Windows ; un frontend séparé apporte donc surtout le RAG, l\'accès multi-utilisateurs, des applications mobiles ou des outils de programmation. Open WebUI offre le plus de fonctionnalités (RAG, multimodal, multi-utilisateurs) et compte plus de 150 000 étoiles GitHub, Enchanted UI est une application native macOS/iOS/visionOS, et Jan AI couvre l\'usage hors ligne sur Windows, macOS et Linux. Ce guide compare 8 interfaces selon les fonctionnalités, le temps de configuration, la licence et le cas d\'usage.',
-      metaDescription: 'Comparez 8 interfaces pour Ollama : Open WebUI (150k+ étoiles, RAG), app de bureau Ollama, Enchanted UI (Apple), Jan AI (hors ligne). Licences et guide.',
+      intro: `Un frontend est l\'interface de chat de votre LLM local : Ollama ou LM Studio exécute le modèle, le frontend fournit l\'interface soignée. Ollama propose désormais lui-même une application de chat de base pour macOS et Windows ; un frontend séparé apporte donc surtout le RAG, l\'accès multi-utilisateurs, des applications mobiles ou des outils de programmation. Open WebUI offre le plus de fonctionnalités (RAG, multimodal, multi-utilisateurs) et compte plus de ${st.fr('open-webui', 'bare')} étoiles GitHub, Enchanted UI est une application native macOS/iOS/visionOS, et Jan AI couvre l\'usage hors ligne sur Windows, macOS et Linux. Ce guide compare 8 interfaces selon les fonctionnalités, le temps de configuration, la licence et le cas d\'usage.`,
+      metaDescription: `Comparez 8 interfaces pour Ollama : Open WebUI (${st.fr('open-webui', 'k')} étoiles, RAG), app de bureau Ollama, Enchanted UI (Apple), Jan AI (hors ligne). Licences et guide.`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-fr.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-10-23',
-      leadAnswerBlock: '**Un frontend est l\'interface de chat de votre LLM local : Ollama ou LM Studio exécute le modèle, le frontend fournit l\'interface soignée. Ollama propose désormais lui-même une application de chat de base pour macOS et Windows ; un frontend séparé apporte donc surtout le RAG, l\'accès multi-utilisateurs, des applications mobiles ou des outils de programmation. Open WebUI offre le plus de fonctionnalités (RAG, multimodal, multi-utilisateurs) et compte plus de 150 000 étoiles GitHub, Enchanted UI est une application native macOS/iOS/visionOS, et Jan AI couvre l\'usage hors ligne sur Windows, macOS et Linux.**',
+      leadAnswerBlock: `**Un frontend est l\'interface de chat de votre LLM local : Ollama ou LM Studio exécute le modèle, le frontend fournit l\'interface soignée. Ollama propose désormais lui-même une application de chat de base pour macOS et Windows ; un frontend séparé apporte donc surtout le RAG, l\'accès multi-utilisateurs, des applications mobiles ou des outils de programmation. Open WebUI offre le plus de fonctionnalités (RAG, multimodal, multi-utilisateurs) et compte plus de ${st.fr('open-webui', 'bare')} étoiles GitHub, Enchanted UI est une application native macOS/iOS/visionOS, et Jan AI couvre l\'usage hors ligne sur Windows, macOS et Linux.**`,
       audience: 'Débutants qui font tourner leur premier LLM local sur du matériel grand public',
       readTime: '11 min de lecture',
       educationalLevel: 'Beginner to Advanced',
@@ -985,19 +992,19 @@ schema: {
         { label: 'Sources', anchor: '#sources' },
       ],
       gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
-      gammaDescription: 'La présentation ci-dessous couvre 8 interfaces LLM locales -- Open WebUI (150 000+ étoiles, RAG), l\'app de bureau Ollama, Enchanted UI (app native Apple), Jan AI (bureau), Continue.dev (code) -- avec tableau comparatif, notes sur les licences, guide de configuration, contexte réglementaire régional (UE/RGPD, Japon, Chine) et 5 erreurs courantes. Téléchargez le PDF comme fiche de référence sur les interfaces LLM locales.',
+      gammaDescription: `La présentation ci-dessous couvre 8 interfaces LLM locales -- Open WebUI (${st.fr('open-webui')} étoiles, RAG), l\'app de bureau Ollama, Enchanted UI (app native Apple), Jan AI (bureau), Continue.dev (code) -- avec tableau comparatif, notes sur les licences, guide de configuration, contexte réglementaire régional (UE/RGPD, Japon, Chine) et 5 erreurs courantes. Téléchargez le PDF comme fiche de référence sur les interfaces LLM locales.`,
       sections: {
         tldr: {
           id: 'key-takeaways',
 
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'Les meilleures interfaces LLM locales : Open WebUI (le plus de fonctionnalités, RAG, 150 000+ étoiles GitHub), l\'app de bureau Ollama (chat de base intégré sur macOS et Windows), Enchanted UI (app native macOS/iOS/visionOS) et Jan AI (app de bureau hors ligne) — toutes gratuites.' }, { type: 'plain-terms', text: 'Un « frontend » est la fenêtre de chat dans laquelle vous écrivez — il se connecte à Ollama ou LM Studio, qui tourne en arrière-plan. Open WebUI est le plus puissant et s\'installe avec Docker ou pip. L\'app de bureau Ollama est le point de départ le plus simple sur macOS et Windows. Enchanted UI est le moyen le plus simple de discuter sur un iPhone ou un Mac — installez l\'app et indiquez-lui l\'adresse de votre serveur Ollama.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: `Les meilleures interfaces LLM locales : Open WebUI (le plus de fonctionnalités, RAG, ${st.fr('open-webui')} étoiles GitHub), l\'app de bureau Ollama (chat de base intégré sur macOS et Windows), Enchanted UI (app native macOS/iOS/visionOS) et Jan AI (app de bureau hors ligne) — toutes gratuites.` }, { type: 'plain-terms', text: 'Un « frontend » est la fenêtre de chat dans laquelle vous écrivez — il se connecte à Ollama ou LM Studio, qui tourne en arrière-plan. Open WebUI est le plus puissant et s\'installe avec Docker ou pip. L\'app de bureau Ollama est le point de départ le plus simple sur macOS et Windows. Enchanted UI est le moyen le plus simple de discuter sur un iPhone ou un Mac — installez l\'app et indiquez-lui l\'adresse de votre serveur Ollama.' }],
           items: [
             'Une interface LLM locale est l\'interface de chat avec laquelle vous parlez à votre modèle. Ollama fournit l\'API ; le frontend est l\'interface utilisateur. Depuis juillet 2025, Ollama propose aussi sa propre application de chat de base pour le bureau.',
-            '**Open WebUI** est le plus riche en fonctionnalités (RAG, multimodal, bases de connaissances, appel de fonctions) avec plus de 150 000 étoiles GitHub. Installez-le avec Docker ou `pip install open-webui` ; 12 Go de RAM ou plus recommandés. Depuis la v0.6.6, sa licence comporte une clause de marque : il est gratuit, mais pas open source au sens de l\'OSI. Dernière version : v0.12.3 (16 octobre 2026).',
+            `**Open WebUI** est le plus riche en fonctionnalités (RAG, multimodal, bases de connaissances, appel de fonctions) avec plus de ${st.fr('open-webui', 'bare')} étoiles GitHub. Installez-le avec Docker ou \`pip install open-webui\` ; 12 Go de RAM ou plus recommandés. Depuis la v0.6.6, sa licence comporte une clause de marque : il est gratuit, mais pas open source au sens de l\'OSI. Dernière version : v0.12.3 (16 octobre 2026).`,
             '**L\'app de bureau Ollama** (macOS et Windows) télécharge les modèles et discute avec eux, accepte les fichiers texte et PDF déposés par glisser-déposer, et envoie des images aux modèles multimodaux. C\'est une fenêtre de chat mono-utilisateur ; pour des bases de connaissances ou des équipes, utilisez Open WebUI.',
             '**Enchanted UI** est une application native iOS, macOS et visionOS (pas un outil de navigateur), disponible sur l\'App Store. **Elle n\'a reçu aucune mise à jour depuis le 7 juillet 2026 (plus de 3 mois) ; elle est peut-être abandonnée -- vérifiez le dépôt avant de vous y fier.**',
-            '**Jan AI** est une application de bureau (Windows, macOS, Linux) qui fonctionne hors ligne sans configuration de serveur, avec plus de 45 000 étoiles GitHub, sous licence Apache-2.0. Dernière version : v0.8.7 (20 octobre 2026).',
+            `**Jan AI** est une application de bureau (Windows, macOS, Linux) qui fonctionne hors ligne sans configuration de serveur, avec plus de ${st.fr('jan', 'bare')} étoiles GitHub, sous licence Apache-2.0. Dernière version : v0.8.7 (20 octobre 2026).`,
             '**Continue.dev** est une extension VS Code pour des suggestions de code en ligne depuis votre modèle Ollama local — le développement s\'est arrêté après le rachat du projet par Cursor en juin 2026 (dernière version le 19 juin 2026) ; l\'extension fonctionne toujours mais ne reçoit plus de mises à jour.',
             'Les licences diffèrent : Jan AI, Enchanted UI, Continue.dev, Gradio et Streamlit sont sous Apache-2.0 ; Open WebUI et LobeHub utilisent des licences communautaires personnalisées ; TextGen est sous AGPL-3.0. Vérifiez la licence avant tout usage commercial ou en marque blanche.',
           ],
@@ -1025,7 +1032,7 @@ schema: {
           image: '/images/best-local-llm-frontends-architecture-hero-fr.webp',
           imageCaption: 'Open WebUI se place entre votre navigateur et Ollama -- accès multi-utilisateurs, RAG et fonctions multimodales via Docker.',
           content: [
-            '**Open WebUI est l\'interface LLM locale la plus étoilée de ce guide, avec plus de 150 000 étoiles GitHub -- elle réunit RAG, multimodal, recherche web et collaboration multi-utilisateurs dans un seul conteneur Docker ou paquet Python.** Elle fonctionne avec Ollama, LM Studio ou n\'importe quelle API compatible OpenAI. Dernière version : v0.12.3 (16 octobre 2026).',
+            `**Open WebUI est l\'interface LLM locale la plus étoilée de ce guide, avec plus de ${st.fr('open-webui', 'bare')} étoiles GitHub -- elle réunit RAG, multimodal, recherche web et collaboration multi-utilisateurs dans un seul conteneur Docker ou paquet Python.** Elle fonctionne avec Ollama, LM Studio ou n\'importe quelle API compatible OpenAI. Dernière version : v0.12.3 (16 octobre 2026).`,
             '**Fonctionnalités principales :**',
             '- **RAG (génération augmentée par récupération)** : téléversez des documents (PDF, fichiers texte) et laissez le modèle répondre aux questions à leur sujet.',
             '- **Support multimodal** : téléversez des images et posez des questions à leur sujet.',
@@ -1049,7 +1056,7 @@ schema: {
           title: 'Pourquoi choisir Enchanted UI comme app native Apple ?',
           content: [
             '**⚠️ Aucune mise à jour depuis le 7 juillet 2026 (plus de 3 mois) -- ce projet est peut-être abandonné. Vérifiez le dépôt avant de vous y fier.** La dernière version publiée est la v1.8.2 (15 juin 2026).',
-            '**Enchanted UI est une application native iOS, macOS et visionOS pour discuter avec votre modèle Ollama local -- installez-la depuis l\'App Store ou compilez-la depuis le code source, puis indiquez-lui l\'adresse de votre serveur Ollama.** Le projet open source compte plus de 6 000 étoiles GitHub et est publié sous licence Apache-2.0 ; c\'est l\'option native la plus soignée pour le matériel Apple dans ce guide.',
+            `**Enchanted UI est une application native iOS, macOS et visionOS pour discuter avec votre modèle Ollama local -- installez-la depuis l\'App Store ou compilez-la depuis le code source, puis indiquez-lui l\'adresse de votre serveur Ollama.** Le projet open source compte plus de ${st.fr('enchanted', 'bare')} étoiles GitHub et est publié sous licence Apache-2.0 ; c\'est l\'option native la plus soignée pour le matériel Apple dans ce guide.`,
             '**Fonctionnalités principales :**',
             '- **App Apple native** : fonctionne sur iPhone, iPad, Mac et Apple Vision Pro avec une interface façon ChatGPT -- pas un onglet de navigateur.',
             '- **Entrées multimodales** : prend en charge les prompts vocaux et les images jointes en plus du texte.',
@@ -1073,7 +1080,7 @@ schema: {
             '- **GPU avec repli sur le CPU** : utilise automatiquement le GPU s\'il est disponible (y compris l\'accélération AMD ROCm/HIP sous Linux, ajoutée dans la v0.8.2), sinon bascule sur le CPU.',
             '- **Privé par défaut** : aucun compte requis ; les statistiques d\'usage ne sont collectées que si vous les autorisez au premier lancement.',
             '- **Marketplace d\'extensions** : ajoutez des plugins comme RAG, recherche web ou outils.',
-            'Jan convient surtout aux non-techniciens qui veulent une application de bureau soignée. Jan AI compte plus de 45 000 étoiles GitHub et un support natif complet sur Windows, macOS et Linux -- une alternative mature à LM Studio, avec une communauté active.',
+            `Jan convient surtout aux non-techniciens qui veulent une application de bureau soignée. Jan AI compte plus de ${st.fr('jan', 'bare')} étoiles GitHub et un support natif complet sur Windows, macOS et Linux -- une alternative mature à LM Studio, avec une communauté active.`,
           ],
           callouts: [
             { type: '📌 À retenir', text: 'Jan AI stocke ses modèles dans ~/jan/models -- séparément du cache de modèles d\'Ollama. Si vous utilisez les deux, les modèles téléchargés ne sont pas partagés et l\'espace disque double pour tout modèle utilisé dans les deux applications.' },
@@ -1103,10 +1110,10 @@ schema: {
           content: '**Si Open WebUI vous semble trop lourd, commencez par l\'app de bureau Ollama ou l\'extension de navigateur Page Assist ; si les questions-réponses sur documents sont votre objectif principal, essayez AnythingLLM.** Chaque option ci-dessous se connecte à la même API Ollama locale (localhost:11434).',
           items: [
             '**App de bureau Ollama** -- Chat intégré pour macOS et Windows : téléchargez des modèles, glissez-déposez des fichiers texte ou PDF, envoyez des images aux modèles multimodaux. Rien d\'autre à installer. Téléchargez-la sur [ollama.com/download](https://ollama.com/download).',
-            '**Page Assist** -- Chat en barre latérale du navigateur pour Chrome et Firefox, plus de 8 000 étoiles GitHub (MIT). L\'option la plus légère : ni serveur supplémentaire ni Docker. Dernière version v1.5.88 (18 octobre 2026) sur [GitHub](https://github.com/n4ze3m/page-assist).',
-            '**AnythingLLM** -- Application de bureau et image Docker construites autour d\'espaces de travail RAG, plus de 67 000 étoiles GitHub (MIT). Dernière version v1.18.0 (13 octobre 2026) sur [GitHub](https://github.com/Mintplex-Labs/anything-llm).',
+            `**Page Assist** -- Chat en barre latérale du navigateur pour Chrome et Firefox, plus de ${st.fr('page-assist', 'bare')} étoiles GitHub (MIT). L\'option la plus légère : ni serveur supplémentaire ni Docker. Dernière version v1.5.88 (18 octobre 2026) sur [GitHub](https://github.com/n4ze3m/page-assist).`,
+            `**AnythingLLM** -- Application de bureau et image Docker construites autour d\'espaces de travail RAG, plus de ${st.fr('anythingllm', 'bare')} étoiles GitHub (MIT). Dernière version v1.18.0 (13 octobre 2026) sur [GitHub](https://github.com/Mintplex-Labs/anything-llm).`,
             '**LM Studio** -- Application de bureau à code fermé (gratuite pour un usage personnel et professionnel) avec chat intégré et serveur local compatible OpenAI sur localhost:1234, que Open WebUI et d\'autres interfaces peuvent utiliser comme backend. Voir son [journal des modifications](https://lmstudio.ai/changelog) (dernière mise à jour le 12 octobre 2026).',
-            '**Cherry Studio** -- Client de bureau multi-fournisseurs avec bases de connaissances intégrées, plus de 52 000 étoiles GitHub (AGPL-3.0). Dernière version v2.1.7 (19 octobre 2026). Lisez l\'[avis sur Cherry Studio](/fr/local-llms/cherry-studio-ai-desktop-client).',
+            `**Cherry Studio** -- Client de bureau multi-fournisseurs avec bases de connaissances intégrées, plus de ${st.fr('cherry-studio', 'bare')} étoiles GitHub (AGPL-3.0). Dernière version v2.1.7 (19 octobre 2026). Lisez l\'[avis sur Cherry Studio](/fr/local-llms/cherry-studio-ai-desktop-client).`,
           ],
           callouts: [
             { type: '📌 À retenir', text: 'Pour des comparaisons détaillées, voir [LM Studio vs Jan AI](/fr/local-llms/lm-studio-vs-jan-ai) et [LobeChat, Big-AGI, NextChat, Page Assist et Chatbox comparés](/fr/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared).' },
@@ -1168,7 +1175,7 @@ schema: {
             },
             {
               q: 'Quelle interface est la meilleure pour le RAG ?',
-              a: 'Open WebUI propose l\'implémentation RAG généraliste la plus aboutie parmi les interfaces de ce guide -- téléversez des documents et le modèle répond aux questions à leur sujet. Si les questions-réponses sur documents sont votre usage principal plutôt qu\'une fonction secondaire, AnythingLLM (plus de 67 000 étoiles GitHub) est conçu autour d\'espaces de travail RAG et mérite d\'être évalué séparément. Pour des workflows RAG avancés, voir [Meilleurs outils RAG locaux](/fr/local-llms/best-local-rag-tools).',
+              a: `Open WebUI propose l\'implémentation RAG généraliste la plus aboutie parmi les interfaces de ce guide -- téléversez des documents et le modèle répond aux questions à leur sujet. Si les questions-réponses sur documents sont votre usage principal plutôt qu\'une fonction secondaire, AnythingLLM (plus de ${st.fr('anythingllm', 'bare')} étoiles GitHub) est conçu autour d\'espaces de travail RAG et mérite d\'être évalué séparément. Pour des workflows RAG avancés, voir [Meilleurs outils RAG locaux](/fr/local-llms/best-local-rag-tools).`,
             },
             {
               q: 'Ai-je vraiment besoin d\'une interface ?',
@@ -1252,7 +1259,7 @@ schema: {
         '@type': 'TechArticle',
         'inLanguage': 'fr',
         'headline': 'Meilleures interfaces locales LLM en 2026 : Open WebUI, Enchanted UI et autres',
-        'description': 'Meilleures interfaces de chat pour LLM locaux en 2026 : Open WebUI (150k+ étoiles GitHub), app de bureau Ollama, Enchanted UI (app Apple native), Jan AI (app hors ligne). Comparaison et guide.',
+        'description': `Meilleures interfaces de chat pour LLM locaux en 2026 : Open WebUI (${st.fr('open-webui', 'k')} étoiles GitHub), app de bureau Ollama, Enchanted UI (app Apple native), Jan AI (app hors ligne). Comparaison et guide.`,
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
         'dateModified': '2026-10-23',
@@ -1280,7 +1287,7 @@ schema: {
         'name': 'Meilleures interfaces LLM locales 2026',
         'numberOfItems': 8,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'App web (Docker/pip). Idéal pour le RAG, les équipes, un maximum de fonctions. Mise en route en 5 min. 12 Go+ de RAM. Plus de 150 000 étoiles GitHub. Gratuit ; source disponible sous une licence à clause de marque.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': `App web (Docker/pip). Idéal pour le RAG, les équipes, un maximum de fonctions. Mise en route en 5 min. 12 Go+ de RAM. Plus de ${st.fr('open-webui', 'bare')} étoiles GitHub. Gratuit ; source disponible sous une licence à clause de marque.` },
           { '@type': 'ListItem', 'position': 2, 'name': 'App de bureau Ollama', 'description': 'App native pour macOS et Windows. Idéale pour un chat de base sans rien installer en plus. Mise en route en ~2 min. 8 Go+ de RAM. Gratuite.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Enchanted UI', 'description': 'App native iOS/macOS/visionOS. Idéale pour les utilisateurs Apple qui veulent un client de chat soigné ; aucune mise à jour depuis le 7 juillet 2026. Installation en ~2 min (App Store). 8 Go+ de RAM. Gratuite et open source (Apache-2.0).' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Jan AI', 'description': 'App de bureau (Windows/macOS/Linux). Idéale pour les non-techniciens, hors ligne. Mise en route en 3 min. 8 Go+ de RAM. Gratuite et open source (Apache-2.0).' },
@@ -1303,7 +1310,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Quelle interface est la meilleure pour le RAG ?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI propose l\'implémentation RAG généraliste la plus aboutie parmi les interfaces de ce guide -- téléversez des documents et le modèle répond aux questions à leur sujet. Si les questions-réponses sur documents sont votre usage principal plutôt qu\'une fonction secondaire, AnythingLLM (plus de 67 000 étoiles GitHub) est conçu autour d\'espaces de travail RAG et mérite d\'être évalué séparément. Pour des workflows RAG avancés, voir Meilleurs outils RAG locaux.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': `Open WebUI propose l\'implémentation RAG généraliste la plus aboutie parmi les interfaces de ce guide -- téléversez des documents et le modèle répond aux questions à leur sujet. Si les questions-réponses sur documents sont votre usage principal plutôt qu\'une fonction secondaire, AnythingLLM (plus de ${st.fr('anythingllm', 'bare')} étoiles GitHub) est conçu autour d\'espaces de travail RAG et mérite d\'être évalué séparément. Pour des workflows RAG avancés, voir Meilleurs outils RAG locaux.` }
           },
           {
             '@type': 'Question',
@@ -1362,12 +1369,12 @@ schema: {
       theme: 'Tools & Interfaces',
       title: '2026年のローカルLLMフロントエンド比較：Open WebUI、Enchanted UIなど',
       seoTitle: 'ローカルLLMフロントエンド2026：Ollama対応8種を比較',
-      intro: 'フロントエンドはローカルLLM用のチャットUIです。モデルを動かすのはOllamaやLM Studioで、フロントエンドは使いやすい画面を提供します。Ollama自体もmacOSとWindows向けに基本的なデスクトップチャットアプリを提供しているため、別途フロントエンドを入れる主な理由は、RAG、マルチユーザー対応、モバイルアプリ、コーディング支援のいずれかです。Open WebUIは機能が最も多く（RAG、マルチモーダル、マルチユーザー）、GitHubスターは150,000以上。Enchanted UIはmacOS/iOS/visionOSのネイティブアプリ、Jan AIはWindows・macOS・Linuxでのオフライン利用に向いています。本ガイドでは8つのフロントエンドを、機能・セットアップ時間・ライセンス・用途で比較します。',
-      metaDescription: 'Ollama対応フロントエンド8種を比較：Open WebUI（150k+スター・RAG）、Ollamaデスクトップアプリ、Enchanted UI（Apple向け）、Jan AI（オフライン）。ライセンスも解説。',
+      intro: `フロントエンドはローカルLLM用のチャットUIです。モデルを動かすのはOllamaやLM Studioで、フロントエンドは使いやすい画面を提供します。Ollama自体もmacOSとWindows向けに基本的なデスクトップチャットアプリを提供しているため、別途フロントエンドを入れる主な理由は、RAG、マルチユーザー対応、モバイルアプリ、コーディング支援のいずれかです。Open WebUIは機能が最も多く（RAG、マルチモーダル、マルチユーザー）、GitHubスターは${st.ja('open-webui', 'bare')}以上。Enchanted UIはmacOS/iOS/visionOSのネイティブアプリ、Jan AIはWindows・macOS・Linuxでのオフライン利用に向いています。本ガイドでは8つのフロントエンドを、機能・セットアップ時間・ライセンス・用途で比較します。`,
+      metaDescription: `Ollama対応フロントエンド8種を比較：Open WebUI（${st.ja('open-webui', 'k')}スター・RAG）、Ollamaデスクトップアプリ、Enchanted UI（Apple向け）、Jan AI（オフライン）。ライセンスも解説。`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-ja.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-10-23',
-      leadAnswerBlock: '**フロントエンドはローカルLLM用のチャットUIです。モデルを動かすのはOllamaやLM Studioで、フロントエンドは使いやすい画面を提供します。Ollama自体もmacOSとWindows向けに基本的なデスクトップチャットアプリを提供しているため、別途フロントエンドを入れる主な理由は、RAG、マルチユーザー対応、モバイルアプリ、コーディング支援のいずれかです。Open WebUIは機能が最も多く（RAG、マルチモーダル、マルチユーザー）、GitHubスターは150,000以上。Enchanted UIはmacOS/iOS/visionOSのネイティブアプリ、Jan AIはWindows・macOS・Linuxでのオフライン利用に向いています。**',
+      leadAnswerBlock: `**フロントエンドはローカルLLM用のチャットUIです。モデルを動かすのはOllamaやLM Studioで、フロントエンドは使いやすい画面を提供します。Ollama自体もmacOSとWindows向けに基本的なデスクトップチャットアプリを提供しているため、別途フロントエンドを入れる主な理由は、RAG、マルチユーザー対応、モバイルアプリ、コーディング支援のいずれかです。Open WebUIは機能が最も多く（RAG、マルチモーダル、マルチユーザー）、GitHubスターは${st.ja('open-webui', 'bare')}以上。Enchanted UIはmacOS/iOS/visionOSのネイティブアプリ、Jan AIはWindows・macOS・Linuxでのオフライン利用に向いています。**`,
       audience: 'コンシューマー向けハードウェアで初めてローカルLLMを動かす初心者',
       readTime: '11分で読める',
       educationalLevel: 'Beginner to Advanced',
@@ -1388,19 +1395,19 @@ schema: {
         { label: '出典', anchor: '#sources' },
       ],
       gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
-      gammaDescription: 'このスライドデッキは8つのローカルLLMフロントエンドを取り上げます -- Open WebUI（150,000+スター、RAG）、Ollamaデスクトップアプリ、Enchanted UI（Apple向けネイティブアプリ）、Jan AI（デスクトップ）、Continue.dev（コード）-- 機能比較表、ライセンスの注意点、セットアップガイド、地域別コンプライアンスの背景（日本・METI）、5つのよくある間違いを含みます。ローカルLLMフロントエンドのリファレンスカードとしてPDFをダウンロードできます。',
+      gammaDescription: `このスライドデッキは8つのローカルLLMフロントエンドを取り上げます -- Open WebUI（${st.ja('open-webui')}スター、RAG）、Ollamaデスクトップアプリ、Enchanted UI（Apple向けネイティブアプリ）、Jan AI（デスクトップ）、Continue.dev（コード）-- 機能比較表、ライセンスの注意点、セットアップガイド、地域別コンプライアンスの背景（日本・METI）、5つのよくある間違いを含みます。ローカルLLMフロントエンドのリファレンスカードとしてPDFをダウンロードできます。`,
       sections: {
         tldr: {
           id: 'key-takeaways',
 
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'ローカルLLMのおすすめフロントエンド：Open WebUI（機能が最多・RAG・GitHubスター150,000+）、Ollamaデスクトップアプリ（macOS/Windows標準の基本チャット）、Enchanted UI（macOS/iOS/visionOSネイティブアプリ）、Jan AI（オフラインデスクトップアプリ）— いずれも無料で利用できます。' }, { type: 'plain-terms', text: '「フロントエンド」とは入力するチャット画面のことで、バックグラウンドで動くOllamaやLM Studioに接続します。Open WebUIは最も高機能で、Dockerまたはpipでインストールします。OllamaデスクトップアプリはmacOSとWindowsで最も手軽な始め方です。Enchanted UIはiPhoneやMacで最も簡単にチャットできる方法で、アプリをインストールしてOllamaサーバーに接続するだけです。' }],
+          snippetBlocks: [{ type: 'one-sentence', text: `ローカルLLMのおすすめフロントエンド：Open WebUI（機能が最多・RAG・GitHubスター${st.ja('open-webui')}）、Ollamaデスクトップアプリ（macOS/Windows標準の基本チャット）、Enchanted UI（macOS/iOS/visionOSネイティブアプリ）、Jan AI（オフラインデスクトップアプリ）— いずれも無料で利用できます。` }, { type: 'plain-terms', text: '「フロントエンド」とは入力するチャット画面のことで、バックグラウンドで動くOllamaやLM Studioに接続します。Open WebUIは最も高機能で、Dockerまたはpipでインストールします。OllamaデスクトップアプリはmacOSとWindowsで最も手軽な始め方です。Enchanted UIはiPhoneやMacで最も簡単にチャットできる方法で、アプリをインストールしてOllamaサーバーに接続するだけです。' }],
           items: [
             'ローカルLLMフロントエンドは、モデルとチャットするためのUIです。OllamaがAPIを提供し、フロントエンドがUIを担当します。2025年7月からは、Ollama自身も基本的なデスクトップチャットアプリを提供しています。',
-            '**Open WebUI** は最も多機能（RAG、マルチモーダル、ナレッジベース、関数呼び出し）で、GitHubスターは150,000以上。Dockerまたは `pip install open-webui` でインストールでき、RAM 12 GB以上を推奨します。v0.6.6以降のライセンスにはブランディング条項が含まれるため、無料ですがOSIのオープンソースではありません。最新リリース：v0.12.3（2026年10月16日）。',
+            `**Open WebUI** は最も多機能（RAG、マルチモーダル、ナレッジベース、関数呼び出し）で、GitHubスターは${st.ja('open-webui', 'bare')}以上。Dockerまたは \`pip install open-webui\` でインストールでき、RAM 12 GB以上を推奨します。v0.6.6以降のライセンスにはブランディング条項が含まれるため、無料ですがOSIのオープンソースではありません。最新リリース：v0.12.3（2026年10月16日）。`,
             '**Ollamaデスクトップアプリ**（macOSとWindows）は、モデルのダウンロードとチャットができ、テキストファイルやPDFのドラッグ＆ドロップにも対応し、マルチモーダルモデルには画像も送れます。シングルユーザー向けのチャット画面なので、ナレッジベースやチーム利用にはOpen WebUIを使います。',
             '**Enchanted UI** はiOS・macOS・visionOS向けのネイティブアプリ（ブラウザツールではない）で、App Storeから入手できます。**2026年7月7日以降更新がなく（3か月以上）、メンテナンスされていない可能性があります -- 利用前にリポジトリを確認してください。**',
-            '**Jan AI** はオフラインで動くデスクトップアプリ（Windows、macOS、Linux）で、サーバー設定は不要です。GitHubスターは45,000以上、ライセンスはApache-2.0。最新リリース：v0.8.7（2026年10月20日）。',
+            `**Jan AI** はオフラインで動くデスクトップアプリ（Windows、macOS、Linux）で、サーバー設定は不要です。GitHubスターは${st.ja('jan', 'bare')}以上、ライセンスはApache-2.0。最新リリース：v0.8.7（2026年10月20日）。`,
             '**Continue.dev** はVS Code拡張機能で、ローカルのOllamaモデルからインラインのコード提案を受けられます — 2026年6月にCursorが同プロジェクトを買収して以降、開発は停止しています（最終リリースは2026年6月19日）。拡張機能は引き続き動作しますが、今後の更新はありません。',
             'ライセンスは異なります：Jan AI、Enchanted UI、Continue.dev、Gradio、StreamlitはApache-2.0、Open WebUIとLobeHubは独自のコミュニティライセンス、TextGenはAGPL-3.0です。商用利用やホワイトラベル利用の前にライセンスを確認してください。',
           ],
@@ -1428,7 +1435,7 @@ schema: {
           image: '/images/best-local-llm-frontends-architecture-hero-ja.webp',
           imageCaption: 'Open WebUIはブラウザとOllamaの間に位置し、Dockerでマルチユーザー対応、RAG、マルチモーダル機能を実現します。',
           content: [
-            '**Open WebUIは、このガイドで最もスター数の多いローカルLLMフロントエンドで、GitHubスターは150,000以上です -- RAG、マルチモーダル、Web検索、マルチユーザーでの共同作業を、1つのDockerコンテナまたはPythonパッケージにまとめています。** Ollama、LM Studio、またはOpenAI互換APIで動作します。最新リリース：v0.12.3（2026年10月16日）。',
+            `**Open WebUIは、このガイドで最もスター数の多いローカルLLMフロントエンドで、GitHubスターは${st.ja('open-webui', 'bare')}以上です -- RAG、マルチモーダル、Web検索、マルチユーザーでの共同作業を、1つのDockerコンテナまたはPythonパッケージにまとめています。** Ollama、LM Studio、またはOpenAI互換APIで動作します。最新リリース：v0.12.3（2026年10月16日）。`,
             '**主な機能：**',
             '- **RAG（検索拡張生成）**：ドキュメント（PDF、テキストファイル）をアップロードして、その内容についてモデルに質問できます。',
             '- **マルチモーダル対応**：画像をアップロードして、その内容について質問できます。',
@@ -1452,7 +1459,7 @@ schema: {
           title: 'Appleのネイティブアプリ用にEnchanted UIを選ぶ理由',
           content: [
             '**⚠️ 2026年7月7日以降更新なし（3か月以上） -- このプロジェクトはメンテナンスされていない可能性があります。利用前にリポジトリを確認してください。** 最新のタグ付きリリースはv1.8.2（2026年6月15日）です。',
-            '**Enchanted UIは、ローカルのOllamaモデルとチャットするためのiOS・macOS・visionOS向けネイティブアプリです -- App Storeからインストールするかソースからビルドし、Ollamaサーバーのアドレスを指定します。** このオープンソースプロジェクトはGitHubスター6,000以上、ライセンスはApache-2.0で、このガイドの中ではApple端末向けに最も洗練されたネイティブの選択肢です。',
+            `**Enchanted UIは、ローカルのOllamaモデルとチャットするためのiOS・macOS・visionOS向けネイティブアプリです -- App Storeからインストールするかソースからビルドし、Ollamaサーバーのアドレスを指定します。** このオープンソースプロジェクトはGitHubスター${st.ja('enchanted', 'bare')}以上、ライセンスはApache-2.0で、このガイドの中ではApple端末向けに最も洗練されたネイティブの選択肢です。`,
             '**主な機能：**',
             '- **ネイティブAppleアプリ**：iPhone、iPad、Mac、Apple Vision ProでChatGPTのようなインターフェースを利用できます -- ブラウザのタブではありません。',
             '- **マルチモーダル入力**：テキストに加えて、音声プロンプトと画像の添付に対応しています。',
@@ -1476,7 +1483,7 @@ schema: {
             '- **GPUとCPUのフォールバック**：GPUが使える場合は自動的に使用し（Linuxでのv0.8.2で追加されたAMD ROCm/HIPアクセラレーションを含む）、使えない場合はCPUに切り替えます。',
             '- **既定でプライベート**：アカウントは不要で、使用状況の分析データは初回起動時に許可した場合にのみ収集されます。',
             '- **拡張機能マーケットプレイス**：RAG、Web検索、ツールなどのプラグインを追加できます。',
-            'Jan AIは、洗練されたデスクトップアプリを求める非技術ユーザーに向いています。GitHubスターは45,000以上で、Windows、macOS、Linuxをネイティブにフルサポートしており、コミュニティのサポートも充実した、成熟したLM Studioの代替です。',
+            `Jan AIは、洗練されたデスクトップアプリを求める非技術ユーザーに向いています。GitHubスターは${st.ja('jan', 'bare')}以上で、Windows、macOS、Linuxをネイティブにフルサポートしており、コミュニティのサポートも充実した、成熟したLM Studioの代替です。`,
           ],
           callouts: [
             { type: '📌 重要ポイント', text: 'Jan AIはモデルを ~/jan/models に保存します -- Ollamaのモデルキャッシュとは別の場所です。両方を使う場合、ダウンロード済みモデルは共有されず、両方のアプリで使うモデルはディスク使用量が2倍になります。' },
@@ -1506,10 +1513,10 @@ schema: {
           content: '**Open WebUIが重いと感じる場合は、Ollamaデスクトップアプリかブラウザ拡張機能のPage Assistから始めましょう。ドキュメントのQ&Aが主な目的なら、AnythingLLMを試してください。** 以下の選択肢はいずれも、同じローカルのOllama API（localhost:11434）に接続します。',
           items: [
             '**Ollamaデスクトップアプリ** -- macOSとWindows向けの内蔵チャット：モデルのダウンロード、テキストファイルやPDFのドラッグ＆ドロップ、マルチモーダルモデルへの画像送信ができます。追加のインストールは不要です。[ollama.com/download](https://ollama.com/download)からダウンロードできます。',
-            '**Page Assist** -- ChromeとFirefox向けのブラウザサイドバーチャット、GitHubスターは8,000以上（MIT）。追加のサーバーやDockerが不要で、最も軽量な選択肢です。最新リリースはv1.5.88（2026年10月18日）、[GitHub](https://github.com/n4ze3m/page-assist)で入手できます。',
-            '**AnythingLLM** -- RAGワークスペースを中心に作られたデスクトップアプリとDockerイメージ、GitHubスターは67,000以上（MIT）。最新リリースはv1.18.0（2026年10月13日）、[GitHub](https://github.com/Mintplex-Labs/anything-llm)で入手できます。',
+            `**Page Assist** -- ChromeとFirefox向けのブラウザサイドバーチャット、GitHubスターは${st.ja('page-assist', 'bare')}以上（MIT）。追加のサーバーやDockerが不要で、最も軽量な選択肢です。最新リリースはv1.5.88（2026年10月18日）、[GitHub](https://github.com/n4ze3m/page-assist)で入手できます。`,
+            `**AnythingLLM** -- RAGワークスペースを中心に作られたデスクトップアプリとDockerイメージ、GitHubスターは${st.ja('anythingllm', 'bare')}以上（MIT）。最新リリースはv1.18.0（2026年10月13日）、[GitHub](https://github.com/Mintplex-Labs/anything-llm)で入手できます。`,
             '**LM Studio** -- クローズドソースのデスクトップアプリ（個人・業務ともに無料）で、内蔵チャットとlocalhost:1234のOpenAI互換ローカルサーバーを備えているため、Open WebUIなどのフロントエンドがバックエンドとして使えます。[変更履歴](https://lmstudio.ai/changelog)を参照してください（最終更新は2026年10月12日）。',
-            '**Cherry Studio** -- 内蔵ナレッジベースを備えたマルチプロバイダー対応のデスクトップクライアント、GitHubスターは52,000以上（AGPL-3.0）。最新リリースはv2.1.7（2026年10月19日）。[Cherry Studioレビュー](/ja/local-llms/cherry-studio-ai-desktop-client)をお読みください。',
+            `**Cherry Studio** -- 内蔵ナレッジベースを備えたマルチプロバイダー対応のデスクトップクライアント、GitHubスターは${st.ja('cherry-studio', 'bare')}以上（AGPL-3.0）。最新リリースはv2.1.7（2026年10月19日）。[Cherry Studioレビュー](/ja/local-llms/cherry-studio-ai-desktop-client)をお読みください。`,
           ],
           callouts: [
             { type: '📌 重要ポイント', text: '詳しい比較は、[LM Studio vs Jan AI](/ja/local-llms/lm-studio-vs-jan-ai)と[LobeChat、Big-AGI、NextChat、Page Assist、Chatboxの比較](/ja/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)を参照してください。' },
@@ -1568,7 +1575,7 @@ schema: {
             },
             {
               q: 'RAGに最適なフロントエンドはどれですか？',
-              a: 'このガイドで取り上げたフロントエンドの中では、Open WebUIが最も成熟した汎用のRAG実装を備えています -- ドキュメントをアップロードすると、モデルがその内容について質問に答えます。ドキュメントQ&Aが副次機能ではなく主な用途なら、RAGワークスペースを中心に作られたAnythingLLM（GitHubスター67,000以上）を別途検討する価値があります。高度なRAGワークフローについては、[ベストローカルRAGツール](/ja/local-llms/best-local-rag-tools)を参照してください。',
+              a: `このガイドで取り上げたフロントエンドの中では、Open WebUIが最も成熟した汎用のRAG実装を備えています -- ドキュメントをアップロードすると、モデルがその内容について質問に答えます。ドキュメントQ&Aが副次機能ではなく主な用途なら、RAGワークスペースを中心に作られたAnythingLLM（GitHubスター${st.ja('anythingllm', 'bare')}以上）を別途検討する価値があります。高度なRAGワークフローについては、[ベストローカルRAGツール](/ja/local-llms/best-local-rag-tools)を参照してください。`,
             },
             {
               q: 'そもそもフロントエンドは必要ですか？',
@@ -1652,7 +1659,7 @@ schema: {
         '@type': 'TechArticle',
         'inLanguage': 'ja',
         'headline': '2026年のローカルLLMフロントエンド比較：Open WebUI、Enchanted UIなど',
-        'description': '2026年のローカルLLMチャットUI比較：Open WebUI（150k+ GitHubスター）、Ollamaデスクトップアプリ、Enchanted UI（Apple向けネイティブアプリ）、Jan AI（オフラインアプリ）。比較とセットアップガイド。',
+        'description': `2026年のローカルLLMチャットUI比較：Open WebUI（${st.ja('open-webui', 'k')} GitHubスター）、Ollamaデスクトップアプリ、Enchanted UI（Apple向けネイティブアプリ）、Jan AI（オフラインアプリ）。比較とセットアップガイド。`,
         'url': 'https://www.promptquorum.com/ja/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
         'dateModified': '2026-10-23',
@@ -1680,7 +1687,7 @@ schema: {
         'name': '2026年のローカルLLMフロントエンド8選',
         'numberOfItems': 8,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'Webアプリ（Docker/pip）。RAG・チーム利用・多機能向け。セットアップ5分。RAM 12 GB以上。GitHubスター150,000+。無料。ブランディング条項付きライセンスでソース公開。' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': `Webアプリ（Docker/pip）。RAG・チーム利用・多機能向け。セットアップ5分。RAM 12 GB以上。GitHubスター${st.ja('open-webui')}。無料。ブランディング条項付きライセンスでソース公開。` },
           { '@type': 'ListItem', 'position': 2, 'name': 'Ollamaデスクトップアプリ', 'description': 'macOSとWindows向けネイティブアプリ。追加インストール不要の基本チャット向け。セットアップ約2分。RAM 8 GB以上。無料。' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Enchanted UI', 'description': 'iOS/macOS/visionOS向けネイティブアプリ。洗練されたチャットクライアントを求めるAppleユーザー向け。2026年7月7日以降更新なし。インストール約2分（App Store）。RAM 8 GB以上。無料のオープンソース（Apache-2.0）。' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Jan AI', 'description': 'デスクトップアプリ（Windows/macOS/Linux）。非技術ユーザー・オフライン向け。セットアップ3分。RAM 8 GB以上。無料のオープンソース（Apache-2.0）。' },
@@ -1703,7 +1710,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'RAGに最適なフロントエンドはどれですか？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'このガイドで取り上げたフロントエンドの中では、Open WebUIが最も成熟した汎用のRAG実装を備えています -- ドキュメントをアップロードすると、モデルがその内容について質問に答えます。ドキュメントQ&Aが副次機能ではなく主な用途なら、RAGワークスペースを中心に作られたAnythingLLM（GitHubスター67,000以上）を別途検討する価値があります。高度なRAGワークフローについては、ベストローカルRAGツールを参照してください。' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': `このガイドで取り上げたフロントエンドの中では、Open WebUIが最も成熟した汎用のRAG実装を備えています -- ドキュメントをアップロードすると、モデルがその内容について質問に答えます。ドキュメントQ&Aが副次機能ではなく主な用途なら、RAGワークスペースを中心に作られたAnythingLLM（GitHubスター${st.ja('anythingllm', 'bare')}以上）を別途検討する価値があります。高度なRAGワークフローについては、ベストローカルRAGツールを参照してください。` }
           },
           {
             '@type': 'Question',
@@ -1762,12 +1769,12 @@ schema: {
       theme: 'Tools & Interfaces',
       title: '2026年最佳本地LLM前端：Open WebUI、Enchanted UI等',
       seoTitle: '2026年Ollama与本地LLM前端对比：8款工具',
-      intro: '前端是本地LLM的聊天界面——由Ollama或LM Studio运行模型，前端则提供精致的UI。Ollama自身现已为macOS和Windows提供基础的桌面聊天应用，因此单独的前端主要增加RAG、多用户访问、移动应用或编程工具。Open WebUI功能最丰富（RAG、多模态、多用户），拥有150,000+ GitHub星；Enchanted UI是macOS/iOS/visionOS原生应用；Jan AI支持Windows、macOS和Linux上的离线桌面使用。本指南按功能、设置时间、许可证和使用场景比较8个前端。',
-      metaDescription: '8款Ollama前端对比：Open WebUI（150k+星、RAG）、Ollama桌面应用、Enchanted UI（Apple原生）、Jan AI（离线），含许可证与设置指南。',
+      intro: `前端是本地LLM的聊天界面——由Ollama或LM Studio运行模型，前端则提供精致的UI。Ollama自身现已为macOS和Windows提供基础的桌面聊天应用，因此单独的前端主要增加RAG、多用户访问、移动应用或编程工具。Open WebUI功能最丰富（RAG、多模态、多用户），拥有${st.zh('open-webui')} GitHub星；Enchanted UI是macOS/iOS/visionOS原生应用；Jan AI支持Windows、macOS和Linux上的离线桌面使用。本指南按功能、设置时间、许可证和使用场景比较8个前端。`,
+      metaDescription: `8款Ollama前端对比：Open WebUI（${st.zh('open-webui', 'k')}星、RAG）、Ollama桌面应用、Enchanted UI（Apple原生）、Jan AI（离线），含许可证与设置指南。`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-zh.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-10-23',
-      leadAnswerBlock: '**前端是本地LLM的聊天界面——由Ollama或LM Studio运行模型，前端则提供精致的UI。Ollama自身现已为macOS和Windows提供基础的桌面聊天应用，因此单独的前端主要增加RAG、多用户访问、移动应用或编程工具。Open WebUI功能最丰富（RAG、多模态、多用户），拥有150,000+ GitHub星；Enchanted UI是macOS/iOS/visionOS原生应用；Jan AI支持Windows、macOS和Linux上的离线桌面使用。**',
+      leadAnswerBlock: `**前端是本地LLM的聊天界面——由Ollama或LM Studio运行模型，前端则提供精致的UI。Ollama自身现已为macOS和Windows提供基础的桌面聊天应用，因此单独的前端主要增加RAG、多用户访问、移动应用或编程工具。Open WebUI功能最丰富（RAG、多模态、多用户），拥有${st.zh('open-webui')} GitHub星；Enchanted UI是macOS/iOS/visionOS原生应用；Jan AI支持Windows、macOS和Linux上的离线桌面使用。**`,
       audience: '在消费级硬件上运行首个本地LLM的初学者',
       readTime: '阅读约11分钟',
       educationalLevel: 'Beginner to Advanced',
@@ -1788,19 +1795,19 @@ schema: {
         { label: '来源', anchor: '#sources' },
       ],
       gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
-      gammaDescription: '幻灯片对比8个本地LLM前端 -- Open WebUI（150,000+星、RAG）、Ollama桌面应用、Enchanted UI（Apple原生应用）、Jan AI（桌面）、Continue.dev（代码）-- 包含功能对比表、许可证说明、设置指南、地域合规背景（中国数据安全法、亚太跨境数据、企业部署）和5个常见错误。下载PDF作为本地LLM前端参考卡。',
+      gammaDescription: `幻灯片对比8个本地LLM前端 -- Open WebUI（${st.zh('open-webui')}星、RAG）、Ollama桌面应用、Enchanted UI（Apple原生应用）、Jan AI（桌面）、Continue.dev（代码）-- 包含功能对比表、许可证说明、设置指南、地域合规背景（中国数据安全法、亚太跨境数据、企业部署）和5个常见错误。下载PDF作为本地LLM前端参考卡。`,
       sections: {
         tldr: {
           id: 'key-takeaways',
 
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: '最佳本地LLM前端：Open WebUI（功能最多、RAG、150,000+ GitHub星）、Ollama桌面应用（macOS和Windows内置基础聊天）、Enchanted UI（macOS/iOS/visionOS原生应用）和Jan AI（离线桌面应用）——均可免费使用。' }, { type: 'plain-terms', text: '“前端”就是你输入内容的聊天窗口——它连接到在后台运行的Ollama或LM Studio。Open WebUI功能最强大，可通过Docker或pip安装。Ollama桌面应用是macOS和Windows上最简单的起点。Enchanted UI是在iPhone或Mac上聊天最简单的方式——安装应用并连接到你的Ollama服务器即可。' }],
+          snippetBlocks: [{ type: 'one-sentence', text: `最佳本地LLM前端：Open WebUI（功能最多、RAG、${st.zh('open-webui')} GitHub星）、Ollama桌面应用（macOS和Windows内置基础聊天）、Enchanted UI（macOS/iOS/visionOS原生应用）和Jan AI（离线桌面应用）——均可免费使用。` }, { type: 'plain-terms', text: '“前端”就是你输入内容的聊天窗口——它连接到在后台运行的Ollama或LM Studio。Open WebUI功能最强大，可通过Docker或pip安装。Ollama桌面应用是macOS和Windows上最简单的起点。Enchanted UI是在iPhone或Mac上聊天最简单的方式——安装应用并连接到你的Ollama服务器即可。' }],
           items: [
             '本地LLM前端是与模型对话的聊天界面。Ollama提供API；前端是UI。自2025年7月起，Ollama也提供自己的基础桌面聊天应用。',
-            '**Open WebUI**功能最丰富（RAG、多模态、知识库、函数调用），拥有150,000+ GitHub星。可用Docker或`pip install open-webui`安装；建议12 GB RAM+。自v0.6.6起其许可证包含品牌条款，因此可免费使用，但不属于OSI认可的开源许可证。最新版本：v0.12.3（2026年10月16日）。',
+            `**Open WebUI**功能最丰富（RAG、多模态、知识库、函数调用），拥有${st.zh('open-webui')} GitHub星。可用Docker或\`pip install open-webui\`安装；建议12 GB RAM+。自v0.6.6起其许可证包含品牌条款，因此可免费使用，但不属于OSI认可的开源许可证。最新版本：v0.12.3（2026年10月16日）。`,
             '**Ollama桌面应用**（macOS和Windows）可下载模型并与之聊天，支持拖入文本文件和PDF，并可向多模态模型发送图片。它是单用户聊天窗口；如需知识库或团队使用，请选择Open WebUI。',
             '**Enchanted UI**是iOS、macOS和visionOS原生应用（不是浏览器工具），可在App Store下载。**自2026年7月7日起没有更新（已超过3个月），可能已无人维护——依赖它之前请先查看其代码仓库。**',
-            '**Jan AI**是桌面应用（Windows、macOS、Linux），可离线运行，无需设置服务器，拥有45,000+ GitHub星，采用Apache-2.0许可。最新版本：v0.8.7（2026年10月20日）。',
+            `**Jan AI**是桌面应用（Windows、macOS、Linux），可离线运行，无需设置服务器，拥有${st.zh('jan')} GitHub星，采用Apache-2.0许可。最新版本：v0.8.7（2026年10月20日）。`,
             '**Continue.dev**是VS Code扩展，可从本地Ollama模型获得行内代码建议——2026年6月Cursor收购该项目后开发已停止（最后版本发布于2026年6月19日），扩展仍可使用，但不会再获得更新。',
             '许可证各不相同：Jan AI、Enchanted UI、Continue.dev、Gradio和Streamlit采用Apache-2.0；Open WebUI和LobeHub采用自定义社区许可证；TextGen采用AGPL-3.0。商用或白标使用前请先核对许可证。',
           ],
@@ -1828,7 +1835,7 @@ schema: {
           image: '/images/best-local-llm-frontends-architecture-hero-zh.webp',
           imageCaption: 'Open WebUI位于浏览器与Ollama之间 -- 通过Docker提供多用户访问、RAG和多模态功能。',
           content: [
-            '**Open WebUI是本指南中GitHub星数最多的本地LLM前端（150,000+星）——它将RAG、多模态、Web搜索和多用户协作集成在单个Docker容器或Python包中。** 适用于Ollama、LM Studio或任何OpenAI兼容API。最新版本：v0.12.3（2026年10月16日）。',
+            `**Open WebUI是本指南中GitHub星数最多的本地LLM前端（${st.zh('open-webui')}星）——它将RAG、多模态、Web搜索和多用户协作集成在单个Docker容器或Python包中。** 适用于Ollama、LM Studio或任何OpenAI兼容API。最新版本：v0.12.3（2026年10月16日）。`,
             '**主要功能：**',
             '- **RAG（检索增强生成）**：上传文档（PDF、文本文件），让模型回答相关问题。',
             '- **多模态支持**：上传图像并就图像提问。',
@@ -1852,7 +1859,7 @@ schema: {
           title: '为什么选择Enchanted UI作为Apple原生应用？',
           content: [
             '**⚠️ 自2026年7月7日起没有更新（已超过3个月）——该项目可能已无人维护。依赖它之前请先查看其代码仓库。** 最新的标签版本为v1.8.2（2026年6月15日）。',
-            '**Enchanted UI是用于与本地Ollama模型聊天的iOS、macOS和visionOS原生应用——可从App Store安装或从源代码构建，然后指向你的Ollama服务器地址即可。** 这个开源项目拥有6,000+ GitHub星，采用Apache-2.0许可，是本指南中Apple硬件上最精致的原生选项。',
+            `**Enchanted UI是用于与本地Ollama模型聊天的iOS、macOS和visionOS原生应用——可从App Store安装或从源代码构建，然后指向你的Ollama服务器地址即可。** 这个开源项目拥有${st.zh('enchanted')} GitHub星，采用Apache-2.0许可，是本指南中Apple硬件上最精致的原生选项。`,
             '**主要功能：**',
             '- **Apple原生应用**：可在iPhone、iPad、Mac和Apple Vision Pro上运行，提供ChatGPT式界面——不是浏览器标签页。',
             '- **多模态输入**：除文本外还支持语音提示和图片附件。',
@@ -1876,7 +1883,7 @@ schema: {
             '- **GPU与CPU回退**：有GPU时自动使用（包括v0.8.2中新增的Linux上AMD ROCm/HIP加速），否则回退到CPU。',
             '- **默认私密**：无需账户；仅在首次启动时你允许的情况下才会收集使用分析数据。',
             '- **扩展市场**：可添加RAG、Web搜索或工具等插件。',
-            'Jan最适合希望使用精致桌面应用的非技术用户。Jan AI拥有45,000+ GitHub星，在Windows、macOS和Linux上均有完整的原生支持——它是成熟的LM Studio替代方案，社区支持有力。',
+            `Jan最适合希望使用精致桌面应用的非技术用户。Jan AI拥有${st.zh('jan')} GitHub星，在Windows、macOS和Linux上均有完整的原生支持——它是成熟的LM Studio替代方案，社区支持有力。`,
           ],
           callouts: [
             { type: '📌 关键点', text: 'Jan AI将模型存储在~/jan/models——与Ollama的模型缓存相互独立。如果两者都用，已下载的模型不会共享，两个应用都用到的模型会使磁盘占用翻倍。' },
@@ -1906,10 +1913,10 @@ schema: {
           content: '**如果觉得Open WebUI太重，可先试试Ollama桌面应用或Page Assist浏览器扩展；如果主要目标是文档问答，可试试AnythingLLM。** 下面每个选项都连接到同一个本地Ollama API（localhost:11434）。',
           items: [
             '**Ollama桌面应用** -- macOS和Windows内置聊天：下载模型、拖入文本文件或PDF、向多模态模型发送图片，无需额外安装。可从[ollama.com/download](https://ollama.com/download)下载。',
-            '**Page Assist** -- 适用于Chrome和Firefox的浏览器侧边栏聊天，8,000+ GitHub星（MIT）。最轻量的选择：无需额外服务器或Docker。最新版本v1.5.88（2026年10月18日），见[GitHub](https://github.com/n4ze3m/page-assist)。',
-            '**AnythingLLM** -- 围绕RAG工作区构建的桌面应用和Docker镜像，67,000+ GitHub星（MIT）。最新版本v1.18.0（2026年10月13日），见[GitHub](https://github.com/Mintplex-Labs/anything-llm)。',
+            `**Page Assist** -- 适用于Chrome和Firefox的浏览器侧边栏聊天，${st.zh('page-assist')} GitHub星（MIT）。最轻量的选择：无需额外服务器或Docker。最新版本v1.5.88（2026年10月18日），见[GitHub](https://github.com/n4ze3m/page-assist)。`,
+            `**AnythingLLM** -- 围绕RAG工作区构建的桌面应用和Docker镜像，${st.zh('anythingllm')} GitHub星（MIT）。最新版本v1.18.0（2026年10月13日），见[GitHub](https://github.com/Mintplex-Labs/anything-llm)。`,
             '**LM Studio** -- 闭源桌面应用（个人和商业使用均免费），内置聊天，并在localhost:1234提供本地OpenAI兼容服务器，因此Open WebUI等前端可将其用作后端。见其[更新日志](https://lmstudio.ai/changelog)（最近更新于2026年10月12日）。',
-            '**Cherry Studio** -- 多提供商桌面客户端，内置知识库，52,000+ GitHub星（AGPL-3.0）。最新版本v2.1.7（2026年10月19日）。请阅读[Cherry Studio评测](/zh/local-llms/cherry-studio-ai-desktop-client)。',
+            `**Cherry Studio** -- 多提供商桌面客户端，内置知识库，${st.zh('cherry-studio')} GitHub星（AGPL-3.0）。最新版本v2.1.7（2026年10月19日）。请阅读[Cherry Studio评测](/zh/local-llms/cherry-studio-ai-desktop-client)。`,
           ],
           callouts: [
             { type: '📌 关键点', text: '如需逐项对比，请参阅[LM Studio vs Jan AI](/zh/local-llms/lm-studio-vs-jan-ai)和[LobeChat、Big-AGI、NextChat、Page Assist与Chatbox对比](/zh/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)。' },
@@ -1970,7 +1977,7 @@ schema: {
             },
             {
               q: '哪个前端最适合RAG？',
-              a: '在本指南介绍的前端中，Open WebUI拥有最成熟的通用RAG实现——上传文档后，模型即可回答相关问题。如果文档问答是你的主要用途而非附加功能，专为RAG工作区打造的AnythingLLM（67,000+ GitHub星）值得单独评估。关于进阶RAG工作流，请参阅[最佳本地RAG工具](/zh/local-llms/best-local-rag-tools)。',
+              a: `在本指南介绍的前端中，Open WebUI拥有最成熟的通用RAG实现——上传文档后，模型即可回答相关问题。如果文档问答是你的主要用途而非附加功能，专为RAG工作区打造的AnythingLLM（${st.zh('anythingllm')} GitHub星）值得单独评估。关于进阶RAG工作流，请参阅[最佳本地RAG工具](/zh/local-llms/best-local-rag-tools)。`,
             },
             {
               q: '真的需要前端吗？',
@@ -2054,7 +2061,7 @@ schema: {
         '@type': 'TechArticle',
         'inLanguage': 'zh',
         'headline': '2026年最佳本地LLM前端：Open WebUI、Enchanted UI等',
-        'description': '2026年本地LLM聊天界面：Open WebUI（150k+ GitHub星）、Ollama桌面应用、Enchanted UI（Apple原生应用）、Jan AI（离线应用）。对比与设置指南。',
+        'description': `2026年本地LLM聊天界面：Open WebUI（${st.zh('open-webui', 'k')} GitHub星）、Ollama桌面应用、Enchanted UI（Apple原生应用）、Jan AI（离线应用）。对比与设置指南。`,
         'url': 'https://www.promptquorum.com/zh/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
         'dateModified': '2026-10-23',
@@ -2082,7 +2089,7 @@ schema: {
         'name': '2026年最佳本地LLM前端',
         'numberOfItems': 8,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'Web应用（Docker/pip）。适合RAG、团队、功能丰富的场景。设置5分钟。12 GB+ RAM。150,000+ GitHub星。免费；源码可见，采用带品牌条款的许可证。' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': `Web应用（Docker/pip）。适合RAG、团队、功能丰富的场景。设置5分钟。12 GB+ RAM。${st.zh('open-webui')} GitHub星。免费；源码可见，采用带品牌条款的许可证。` },
           { '@type': 'ListItem', 'position': 2, 'name': 'Ollama桌面应用', 'description': 'macOS和Windows原生应用。适合无需额外安装的基础聊天。设置约2分钟。8 GB+ RAM。免费。' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Enchanted UI', 'description': 'iOS/macOS/visionOS原生应用。适合需要精致聊天客户端的Apple用户；自2026年7月7日起无更新。安装约2分钟（App Store）。8 GB+ RAM。免费开源（Apache-2.0）。' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Jan AI', 'description': '桌面应用（Windows/macOS/Linux）。适合非技术用户、离线使用。设置3分钟。8 GB+ RAM。免费开源（Apache-2.0）。' },
@@ -2105,7 +2112,7 @@ schema: {
           {
             '@type': 'Question',
             'name': '哪个前端最适合RAG？',
-            'acceptedAnswer': { '@type': 'Answer', 'text': '在本指南介绍的前端中，Open WebUI拥有最成熟的通用RAG实现——上传文档后，模型即可回答相关问题。如果文档问答是你的主要用途而非附加功能，专为RAG工作区打造的AnythingLLM（67,000+ GitHub星）值得单独评估。关于进阶RAG工作流，请参阅最佳本地RAG工具。' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': `在本指南介绍的前端中，Open WebUI拥有最成熟的通用RAG实现——上传文档后，模型即可回答相关问题。如果文档问答是你的主要用途而非附加功能，专为RAG工作区打造的AnythingLLM（${st.zh('anythingllm')} GitHub星）值得单独评估。关于进阶RAG工作流，请参阅最佳本地RAG工具。` }
           },
           {
             '@type': 'Question',
@@ -2165,12 +2172,12 @@ schema: {
       theme: 'Tools & Interfaces',
       title: 'Los mejores frontends para LLMs locales en 2026: Open WebUI, Enchanted UI y más',
       seoTitle: 'Frontends para Ollama y LLMs locales 2026: 8 comparados',
-      intro: 'Un frontend es la interfaz de chat de tu LLM local: Ollama o LM Studio ejecutan el modelo, pero el frontend proporciona la interfaz visual. Ollama ya incluye una app de chat básica para macOS y Windows, así que un frontend aparte aporta sobre todo RAG, acceso multiusuario, apps móviles o herramientas de programación. Open WebUI tiene más funciones (RAG, multimodal, multiusuario) y más de 150.000 estrellas en GitHub, Enchanted UI es una app nativa de macOS/iOS/visionOS y Jan AI cubre el uso de escritorio sin conexión en Windows, macOS y Linux. Esta guía compara 8 frontends según sus funciones, tiempo de configuración, licencia y caso de uso.',
-      metaDescription: 'Compara 8 frontends para Ollama: Open WebUI (150k+ estrellas, RAG), app de Ollama, Enchanted UI (app nativa Apple) y Jan AI. Licencias y guía.',
+      intro: `Un frontend es la interfaz de chat de tu LLM local: Ollama o LM Studio ejecutan el modelo, pero el frontend proporciona la interfaz visual. Ollama ya incluye una app de chat básica para macOS y Windows, así que un frontend aparte aporta sobre todo RAG, acceso multiusuario, apps móviles o herramientas de programación. Open WebUI tiene más funciones (RAG, multimodal, multiusuario) y más de ${st.es('open-webui', 'bare')} estrellas en GitHub, Enchanted UI es una app nativa de macOS/iOS/visionOS y Jan AI cubre el uso de escritorio sin conexión en Windows, macOS y Linux. Esta guía compara 8 frontends según sus funciones, tiempo de configuración, licencia y caso de uso.`,
+      metaDescription: `Compara 8 frontends para Ollama: Open WebUI (${st.es('open-webui', 'k')} estrellas, RAG), app de Ollama, Enchanted UI (app nativa Apple) y Jan AI. Licencias y guía.`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-es.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-10-23',
-      leadAnswerBlock: '**Un frontend es la interfaz de chat de tu LLM local: Ollama o LM Studio ejecutan el modelo, pero el frontend proporciona la interfaz visual. Ollama ya incluye una app de chat básica para macOS y Windows, así que un frontend aparte aporta sobre todo RAG, acceso multiusuario, apps móviles o herramientas de programación. Open WebUI tiene más funciones (RAG, multimodal, multiusuario) y más de 150.000 estrellas en GitHub, Enchanted UI es una app nativa de macOS/iOS/visionOS y Jan AI cubre el uso de escritorio sin conexión en Windows, macOS y Linux.**',
+      leadAnswerBlock: `**Un frontend es la interfaz de chat de tu LLM local: Ollama o LM Studio ejecutan el modelo, pero el frontend proporciona la interfaz visual. Ollama ya incluye una app de chat básica para macOS y Windows, así que un frontend aparte aporta sobre todo RAG, acceso multiusuario, apps móviles o herramientas de programación. Open WebUI tiene más funciones (RAG, multimodal, multiusuario) y más de ${st.es('open-webui', 'bare')} estrellas en GitHub, Enchanted UI es una app nativa de macOS/iOS/visionOS y Jan AI cubre el uso de escritorio sin conexión en Windows, macOS y Linux.**`,
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '11 min de lectura',
       educationalLevel: 'Beginner to Advanced',
@@ -2192,19 +2199,19 @@ schema: {
         { label: 'Fuentes', anchor: '#sources' },
       ],
       gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
-      gammaDescription: 'La presentación cubre 8 frontends para LLMs locales -- Open WebUI (más de 150.000 estrellas, RAG), la app de escritorio de Ollama, Enchanted UI (app nativa Apple), Jan AI (escritorio) y Continue.dev (código) -- con tabla comparativa de funciones, notas de licencia, guía de configuración, contexto regional de cumplimiento (UE/RGPD, Japón, China) y 5 errores comunes. Descarga el PDF como tarjeta de referencia de frontends para LLMs locales.',
+      gammaDescription: `La presentación cubre 8 frontends para LLMs locales -- Open WebUI (más de ${st.es('open-webui', 'bare')} estrellas, RAG), la app de escritorio de Ollama, Enchanted UI (app nativa Apple), Jan AI (escritorio) y Continue.dev (código) -- con tabla comparativa de funciones, notas de licencia, guía de configuración, contexto regional de cumplimiento (UE/RGPD, Japón, China) y 5 errores comunes. Descarga el PDF como tarjeta de referencia de frontends para LLMs locales.`,
       sections: {
         tldr: {
           id: 'key-takeaways',
 
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'Los mejores frontends para LLMs locales: Open WebUI (más funciones, RAG, más de 150.000 estrellas en GitHub), la app de escritorio de Ollama (chat básico integrado en macOS y Windows), Enchanted UI (app nativa de macOS/iOS/visionOS) y Jan AI (app de escritorio sin conexión) — todos de uso gratuito.' }, { type: 'plain-terms', text: 'Un "frontend" es la ventana de chat donde escribes: se conecta a Ollama o LM Studio, que se ejecutan en segundo plano. Open WebUI es el más potente y se instala con Docker o pip. La app de escritorio de Ollama es el inicio más simple en macOS y Windows. Enchanted UI es la forma más simple de chatear en un iPhone o un Mac: instala la app y conéctala a tu servidor Ollama.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: `Los mejores frontends para LLMs locales: Open WebUI (más funciones, RAG, más de ${st.es('open-webui', 'bare')} estrellas en GitHub), la app de escritorio de Ollama (chat básico integrado en macOS y Windows), Enchanted UI (app nativa de macOS/iOS/visionOS) y Jan AI (app de escritorio sin conexión) — todos de uso gratuito.` }, { type: 'plain-terms', text: 'Un "frontend" es la ventana de chat donde escribes: se conecta a Ollama o LM Studio, que se ejecutan en segundo plano. Open WebUI es el más potente y se instala con Docker o pip. La app de escritorio de Ollama es el inicio más simple en macOS y Windows. Enchanted UI es la forma más simple de chatear en un iPhone o un Mac: instala la app y conéctala a tu servidor Ollama.' }],
           items: [
             'Un frontend para LLM local es la interfaz de chat con la que hablas con tu modelo. Ollama proporciona la API; el frontend es la interfaz visual. Desde julio de 2025, Ollama también incluye su propia app de chat básica para escritorio.',
-            '**Open WebUI** es el más completo en funciones (RAG, multimodal, bases de conocimiento, llamadas a funciones) con más de 150.000 estrellas en GitHub. Se instala con Docker o con `pip install open-webui`; se recomiendan 12 GB de RAM o más. Desde la v0.6.6 su licencia incluye una cláusula de marca, por lo que es gratuito pero no es código abierto según la OSI. Última versión: v0.12.3 (16 de octubre de 2026).',
+            `**Open WebUI** es el más completo en funciones (RAG, multimodal, bases de conocimiento, llamadas a funciones) con más de ${st.es('open-webui', 'bare')} estrellas en GitHub. Se instala con Docker o con \`pip install open-webui\`; se recomiendan 12 GB de RAM o más. Desde la v0.6.6 su licencia incluye una cláusula de marca, por lo que es gratuito pero no es código abierto según la OSI. Última versión: v0.12.3 (16 de octubre de 2026).`,
             'La **app de escritorio de Ollama** (macOS y Windows) descarga modelos y chatea con ellos, acepta archivos de texto y PDF arrastrados y envía imágenes a modelos multimodales. Es una ventana de chat para un solo usuario; para bases de conocimiento o equipos usa Open WebUI.',
             '**Enchanted UI** es una app nativa de iOS, macOS y visionOS (no una herramienta de navegador), disponible en la App Store. **No recibe actualizaciones desde el 7 de julio de 2026 (más de 3 meses), así que puede estar sin mantenimiento: revisa el repositorio antes de depender de ella.**',
-            '**Jan AI** es una app de escritorio (Windows, macOS, Linux) que funciona sin conexión y sin configurar ningún servidor, con más de 45.000 estrellas en GitHub y licencia Apache-2.0. Última versión: v0.8.7 (20 de octubre de 2026).',
+            `**Jan AI** es una app de escritorio (Windows, macOS, Linux) que funciona sin conexión y sin configurar ningún servidor, con más de ${st.es('jan', 'bare')} estrellas en GitHub y licencia Apache-2.0. Última versión: v0.8.7 (20 de octubre de 2026).`,
             '**Continue.dev** es una extensión de VS Code para sugerencias de código en línea desde tu modelo Ollama local — el desarrollo se detuvo tras la adquisición del proyecto por Cursor en junio de 2026 (última versión: 19 de junio de 2026); la extensión sigue funcionando, pero ya no recibe actualizaciones.',
             'Las licencias difieren: Jan AI, Enchanted UI, Continue.dev, Gradio y Streamlit usan Apache-2.0; Open WebUI y LobeHub usan licencias comunitarias personalizadas; TextGen usa AGPL-3.0. Revisa la licencia antes de un uso comercial o de marca blanca.',
           ],
@@ -2232,7 +2239,7 @@ schema: {
           image: '/images/best-local-llm-frontends-architecture-hero-es.webp',
           imageCaption: 'Open WebUI se sitúa entre tu navegador y Ollama, y habilita acceso multiusuario, RAG y funciones multimodales mediante Docker.',
           content: [
-            '**Open WebUI es el frontend para LLMs locales con más estrellas de esta guía, con más de 150.000 estrellas en GitHub: integra RAG, multimodal, búsqueda web y colaboración multiusuario en un único contenedor Docker o paquete de Python.** Funciona con Ollama, LM Studio o cualquier API compatible con OpenAI. Última versión: v0.12.3 (16 de octubre de 2026).',
+            `**Open WebUI es el frontend para LLMs locales con más estrellas de esta guía, con más de ${st.es('open-webui', 'bare')} estrellas en GitHub: integra RAG, multimodal, búsqueda web y colaboración multiusuario en un único contenedor Docker o paquete de Python.** Funciona con Ollama, LM Studio o cualquier API compatible con OpenAI. Última versión: v0.12.3 (16 de octubre de 2026).`,
             '**Características principales:**',
             '- **RAG (generación aumentada por recuperación)**: sube documentos (PDF, archivos de texto) y haz que el modelo responda preguntas sobre ellos.',
             '- **Soporte multimodal**: sube imágenes y haz preguntas sobre ellas.',
@@ -2256,7 +2263,7 @@ schema: {
           title: '¿Por qué elegir Enchanted UI como app nativa de Apple?',
           content: [
             '**⚠️ Sin actualizaciones desde el 7 de julio de 2026 (más de 3 meses): este proyecto puede estar sin mantenimiento. Revisa el repositorio antes de depender de él.** La última versión etiquetada es la v1.8.2 (15 de junio de 2026).',
-            '**Enchanted UI es una app nativa de iOS, macOS y visionOS para chatear con tu modelo Ollama local: instálala desde la App Store o compílala desde el código fuente y conéctala a la dirección de tu servidor Ollama.** El proyecto de código abierto tiene más de 6.000 estrellas en GitHub y se distribuye bajo la licencia Apache-2.0, lo que la convierte en la opción nativa más pulida para hardware Apple de esta guía.',
+            `**Enchanted UI es una app nativa de iOS, macOS y visionOS para chatear con tu modelo Ollama local: instálala desde la App Store o compílala desde el código fuente y conéctala a la dirección de tu servidor Ollama.** El proyecto de código abierto tiene más de ${st.es('enchanted', 'bare')} estrellas en GitHub y se distribuye bajo la licencia Apache-2.0, lo que la convierte en la opción nativa más pulida para hardware Apple de esta guía.`,
             '**Características principales:**',
             '- **App nativa de Apple**: funciona en iPhone, iPad, Mac y Apple Vision Pro con una interfaz al estilo ChatGPT, no en una pestaña del navegador.',
             '- **Entrada multimodal**: admite prompts de voz y archivos adjuntos de imagen además de texto.',
@@ -2280,7 +2287,7 @@ schema: {
             '- **GPU con respaldo en CPU**: usa automáticamente la GPU si está disponible (incluida la aceleración AMD ROCm/HIP en Linux, añadida en la v0.8.2) y recurre a la CPU en caso contrario.',
             '- **Privada por defecto**: no requiere cuenta; las analíticas de uso solo se recopilan si las permites en el primer arranque.',
             '- **Marketplace de extensiones**: añade plugins como RAG, búsqueda web o herramientas.',
-            'Jan es la mejor opción para usuarios no técnicos que quieren una app de escritorio pulida. Jan AI tiene más de 45.000 estrellas en GitHub y soporte nativo completo en Windows, macOS y Linux: es una alternativa madura a LM Studio con un fuerte respaldo de la comunidad.',
+            `Jan es la mejor opción para usuarios no técnicos que quieren una app de escritorio pulida. Jan AI tiene más de ${st.es('jan', 'bare')} estrellas en GitHub y soporte nativo completo en Windows, macOS y Linux: es una alternativa madura a LM Studio con un fuerte respaldo de la comunidad.`,
           ],
           callouts: [
             { type: '📌 Punto clave', text: 'Jan AI guarda los modelos en ~/jan/models, separado de la caché de modelos de Ollama. Si usas ambas apps, los modelos descargados no se comparten y el uso de disco se duplica para cualquier modelo que uses en las dos.' },
@@ -2310,10 +2317,10 @@ schema: {
           content: '**Si Open WebUI te parece demasiado pesado, empieza con la app de escritorio de Ollama o con la extensión de navegador Page Assist; si tu objetivo principal son las preguntas sobre documentos, prueba AnythingLLM.** Cada opción de abajo se conecta a la misma API local de Ollama (localhost:11434).',
           items: [
             '**App de escritorio de Ollama** -- Chat integrado para macOS y Windows: descarga modelos, arrastra archivos de texto o PDF y envía imágenes a modelos multimodales. No hay que instalar nada más. Descárgala desde [ollama.com/download](https://ollama.com/download).',
-            '**Page Assist** -- Chat en barra lateral del navegador para Chrome y Firefox, con más de 8.000 estrellas en GitHub (MIT). La opción más ligera: sin servidor adicional ni Docker. Última versión v1.5.88 (18 de octubre de 2026) en [GitHub](https://github.com/n4ze3m/page-assist).',
-            '**AnythingLLM** -- App de escritorio e imagen de Docker construidas en torno a espacios de trabajo RAG, con más de 67.000 estrellas en GitHub (MIT). Última versión v1.18.0 (13 de octubre de 2026) en [GitHub](https://github.com/Mintplex-Labs/anything-llm).',
+            `**Page Assist** -- Chat en barra lateral del navegador para Chrome y Firefox, con más de ${st.es('page-assist', 'bare')} estrellas en GitHub (MIT). La opción más ligera: sin servidor adicional ni Docker. Última versión v1.5.88 (18 de octubre de 2026) en [GitHub](https://github.com/n4ze3m/page-assist).`,
+            `**AnythingLLM** -- App de escritorio e imagen de Docker construidas en torno a espacios de trabajo RAG, con más de ${st.es('anythingllm', 'bare')} estrellas en GitHub (MIT). Última versión v1.18.0 (13 de octubre de 2026) en [GitHub](https://github.com/Mintplex-Labs/anything-llm).`,
             '**LM Studio** -- App de escritorio de código cerrado (gratuita para uso personal y empresarial) con chat integrado y un servidor local compatible con OpenAI en localhost:1234, de modo que Open WebUI y otros frontends pueden usarla como backend. Consulta su [registro de cambios](https://lmstudio.ai/changelog) (última actualización: 12 de octubre de 2026).',
-            '**Cherry Studio** -- Cliente de escritorio multiproveedor con bases de conocimiento integradas, con más de 52.000 estrellas en GitHub (AGPL-3.0). Última versión v2.1.7 (19 de octubre de 2026). Lee la [reseña de Cherry Studio](/es/local-llms/cherry-studio-ai-desktop-client).',
+            `**Cherry Studio** -- Cliente de escritorio multiproveedor con bases de conocimiento integradas, con más de ${st.es('cherry-studio', 'bare')} estrellas en GitHub (AGPL-3.0). Última versión v2.1.7 (19 de octubre de 2026). Lee la [reseña de Cherry Studio](/es/local-llms/cherry-studio-ai-desktop-client).`,
           ],
           callouts: [
             { type: '📌 Punto clave', text: 'Para un detalle comparativo, consulta [LM Studio vs Jan AI](/es/local-llms/lm-studio-vs-jan-ai) y [LobeChat, Big-AGI, NextChat, Page Assist y Chatbox comparados](/es/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared).' },
@@ -2375,7 +2382,7 @@ schema: {
             },
             {
               q: '¿Qué frontend es mejor para RAG?',
-              a: 'Open WebUI tiene la implementación de RAG de propósito general más madura entre los frontends de esta guía: subes documentos y el modelo responde preguntas sobre ellos. Si las preguntas sobre documentos son tu caso de uso principal y no una función secundaria, AnythingLLM (más de 67.000 estrellas en GitHub) está construido en torno a espacios de trabajo RAG y conviene evaluarlo aparte. Para flujos de trabajo RAG avanzados, consulta [Mejores herramientas RAG locales](/es/local-llms/best-local-rag-tools).',
+              a: `Open WebUI tiene la implementación de RAG de propósito general más madura entre los frontends de esta guía: subes documentos y el modelo responde preguntas sobre ellos. Si las preguntas sobre documentos son tu caso de uso principal y no una función secundaria, AnythingLLM (más de ${st.es('anythingllm', 'bare')} estrellas en GitHub) está construido en torno a espacios de trabajo RAG y conviene evaluarlo aparte. Para flujos de trabajo RAG avanzados, consulta [Mejores herramientas RAG locales](/es/local-llms/best-local-rag-tools).`,
             },
             {
               q: '¿Necesito un frontend?',
@@ -2458,7 +2465,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Los mejores frontends para LLMs locales en 2026: Open WebUI, Enchanted UI y más',
-        'description': 'Mejores interfaces de chat para LLMs locales en 2026: Open WebUI (150k+ estrellas en GitHub), app de escritorio de Ollama, Enchanted UI (app nativa Apple), Jan AI (app sin conexión). Comparativa y guía de configuración.',
+        'description': `Mejores interfaces de chat para LLMs locales en 2026: Open WebUI (${st.es('open-webui', 'k')} estrellas en GitHub), app de escritorio de Ollama, Enchanted UI (app nativa Apple), Jan AI (app sin conexión). Comparativa y guía de configuración.`,
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llm-frontends',
         'inLanguage': 'es',
         'datePublished': '2026-04-04',
@@ -2487,7 +2494,7 @@ schema: {
         'name': 'Los mejores frontends para LLMs locales 2026',
         'numberOfItems': 8,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'App web (Docker/pip). Ideal para RAG, equipos y funciones avanzadas. 5 min de configuración. 12 GB+ de RAM. Más de 150.000 estrellas en GitHub. Gratuito; código visible bajo una licencia con cláusula de marca.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': `App web (Docker/pip). Ideal para RAG, equipos y funciones avanzadas. 5 min de configuración. 12 GB+ de RAM. Más de ${st.es('open-webui', 'bare')} estrellas en GitHub. Gratuito; código visible bajo una licencia con cláusula de marca.` },
           { '@type': 'ListItem', 'position': 2, 'name': 'App de escritorio de Ollama', 'description': 'App nativa para macOS y Windows. Ideal para chat básico sin instalar nada más. ~2 min de configuración. 8 GB+ de RAM. Gratuita.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Enchanted UI', 'description': 'App nativa iOS/macOS/visionOS. Ideal para usuarios de Apple que buscan un cliente de chat pulido; sin actualizaciones desde el 7 de julio de 2026. ~2 min de instalación (App Store). 8 GB+ de RAM. Gratuita y de código abierto (Apache-2.0).' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Jan AI', 'description': 'App de escritorio (Windows/macOS/Linux). Ideal para usuarios no técnicos y uso sin conexión. 3 min de configuración. 8 GB+ de RAM. Gratuita y de código abierto (Apache-2.0).' },
@@ -2510,7 +2517,7 @@ schema: {
           {
             '@type': 'Question',
             'name': '¿Qué frontend es mejor para RAG?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI tiene la implementación de RAG de propósito general más madura entre los frontends de esta guía: subes documentos y el modelo responde preguntas sobre ellos. Si las preguntas sobre documentos son tu caso de uso principal y no una función secundaria, AnythingLLM (más de 67.000 estrellas en GitHub) está construido en torno a espacios de trabajo RAG y conviene evaluarlo aparte. Para flujos de trabajo RAG avanzados, consulta Mejores herramientas RAG locales.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': `Open WebUI tiene la implementación de RAG de propósito general más madura entre los frontends de esta guía: subes documentos y el modelo responde preguntas sobre ellos. Si las preguntas sobre documentos son tu caso de uso principal y no una función secundaria, AnythingLLM (más de ${st.es('anythingllm', 'bare')} estrellas en GitHub) está construido en torno a espacios de trabajo RAG y conviene evaluarlo aparte. Para flujos de trabajo RAG avanzados, consulta Mejores herramientas RAG locales.` }
           },
           {
             '@type': 'Question',
@@ -2570,14 +2577,14 @@ schema: {
       theme: 'Tools & Interfaces',
       title: 'أفضل واجهات نماذج LLM المحلية في 2026: Open WebUI وEnchanted UI وغيرهما',
       seoTitle: 'أفضل واجهات Ollama وLLM المحلية 2026: مقارنة 8 أدوات',
-      intro: 'الواجهة هي نافذة الدردشة التي تتعامل بها مع نموذج LLM المحلي -- يشغّل Ollama أو LM Studio النموذج، وتوفّر الواجهة تجربة الاستخدام المصقولة. يأتي Ollama نفسه الآن مع تطبيق دردشة مكتبي أساسي لأنظمة macOS وWindows، لذا تضيف الواجهة المستقلة في الغالب RAG أو الوصول متعدد المستخدمين أو تطبيقات الجوال أو أدوات البرمجة. يملك Open WebUI أكثر الميزات (RAG، متعددة الوسائط، متعددة المستخدمين) وأكثر من 150,000 نجمة على GitHub، وEnchanted UI تطبيق أصلي لأنظمة macOS وiOS وvisionOS، وJan AI يغطي الاستخدام المكتبي دون اتصال على Windows وmacOS وLinux. يقارن هذا الدليل 8 واجهات حسب الميزات وزمن الإعداد والترخيص وحالة الاستخدام.',
-      metaDescription: 'قارن 8 واجهات لـ Ollama: Open WebUI (أكثر من 150,000 نجمة، RAG)، تطبيق Ollama المكتبي، Enchanted UI، Jan AI (دون اتصال). التراخيص ودليل الإعداد.',
+      intro: `الواجهة هي نافذة الدردشة التي تتعامل بها مع نموذج LLM المحلي -- يشغّل Ollama أو LM Studio النموذج، وتوفّر الواجهة تجربة الاستخدام المصقولة. يأتي Ollama نفسه الآن مع تطبيق دردشة مكتبي أساسي لأنظمة macOS وWindows، لذا تضيف الواجهة المستقلة في الغالب RAG أو الوصول متعدد المستخدمين أو تطبيقات الجوال أو أدوات البرمجة. يملك Open WebUI أكثر الميزات (RAG، متعددة الوسائط، متعددة المستخدمين) وأكثر من ${st.ar('open-webui', 'bare')} نجمة على GitHub، وEnchanted UI تطبيق أصلي لأنظمة macOS وiOS وvisionOS، وJan AI يغطي الاستخدام المكتبي دون اتصال على Windows وmacOS وLinux. يقارن هذا الدليل 8 واجهات حسب الميزات وزمن الإعداد والترخيص وحالة الاستخدام.`,
+      metaDescription: `قارن 8 واجهات لـ Ollama: Open WebUI (أكثر من ${st.ar('open-webui', 'bare')} نجمة، RAG)، تطبيق Ollama المكتبي، Enchanted UI، Jan AI (دون اتصال). التراخيص ودليل الإعداد.`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-ar.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-10-23',
       next_refresh_due: '2027-04-23',
       last_full_refresh: '2026-10-23',
-      leadAnswerBlock: '**الواجهة هي نافذة الدردشة التي تتعامل بها مع نموذج LLM المحلي -- يشغّل Ollama أو LM Studio النموذج، وتوفّر الواجهة تجربة الاستخدام المصقولة. يأتي Ollama نفسه الآن مع تطبيق دردشة مكتبي أساسي لأنظمة macOS وWindows، لذا تضيف الواجهة المستقلة في الغالب RAG أو الوصول متعدد المستخدمين أو تطبيقات الجوال أو أدوات البرمجة. يملك Open WebUI أكثر الميزات (RAG، متعددة الوسائط، متعددة المستخدمين) وأكثر من 150,000 نجمة على GitHub، وEnchanted UI تطبيق أصلي لأنظمة macOS وiOS وvisionOS، وJan AI يغطي الاستخدام المكتبي دون اتصال على Windows وmacOS وLinux.**',
+      leadAnswerBlock: `**الواجهة هي نافذة الدردشة التي تتعامل بها مع نموذج LLM المحلي -- يشغّل Ollama أو LM Studio النموذج، وتوفّر الواجهة تجربة الاستخدام المصقولة. يأتي Ollama نفسه الآن مع تطبيق دردشة مكتبي أساسي لأنظمة macOS وWindows، لذا تضيف الواجهة المستقلة في الغالب RAG أو الوصول متعدد المستخدمين أو تطبيقات الجوال أو أدوات البرمجة. يملك Open WebUI أكثر الميزات (RAG، متعددة الوسائط، متعددة المستخدمين) وأكثر من ${st.ar('open-webui', 'bare')} نجمة على GitHub، وEnchanted UI تطبيق أصلي لأنظمة macOS وiOS وvisionOS، وJan AI يغطي الاستخدام المكتبي دون اتصال على Windows وmacOS وLinux.**`,
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على عتاد استهلاكي',
       readTime: '11 دقيقة للقراءة',
       educationalLevel: 'Beginner to Advanced',
@@ -2598,19 +2605,19 @@ schema: {
         { label: 'المصادر', anchor: '#sources' },
       ],
       gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
-      gammaDescription: 'يغطي العرض التقديمي أدناه 8 واجهات لنماذج LLM المحلية -- Open WebUI (أكثر من 150,000 نجمة، RAG)، وتطبيق Ollama المكتبي، وEnchanted UI (تطبيق Apple أصلي)، وJan AI (مكتبي)، وContinue.dev (للبرمجة) -- مع جدول مقارنة للميزات، وملاحظات التراخيص، ودليل الإعداد، وسياق الامتثال الإقليمي (الاتحاد الأوروبي/GDPR واليابان والصين)، و5 أخطاء شائعة. حمّل ملف PDF كبطاقة مرجعية لواجهات نماذج LLM المحلية.',
+      gammaDescription: `يغطي العرض التقديمي أدناه 8 واجهات لنماذج LLM المحلية -- Open WebUI (أكثر من ${st.ar('open-webui', 'bare')} نجمة، RAG)، وتطبيق Ollama المكتبي، وEnchanted UI (تطبيق Apple أصلي)، وJan AI (مكتبي)، وContinue.dev (للبرمجة) -- مع جدول مقارنة للميزات، وملاحظات التراخيص، ودليل الإعداد، وسياق الامتثال الإقليمي (الاتحاد الأوروبي/GDPR واليابان والصين)، و5 أخطاء شائعة. حمّل ملف PDF كبطاقة مرجعية لواجهات نماذج LLM المحلية.`,
       sections: {
         tldr: {
           id: 'key-takeaways',
 
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'أفضل واجهات نماذج LLM المحلية: Open WebUI (أكثر الميزات، RAG، أكثر من 150,000 نجمة على GitHub)، وتطبيق Ollama المكتبي (دردشة أساسية مدمجة على macOS وWindows)، وEnchanted UI (تطبيق أصلي لأنظمة macOS وiOS وvisionOS)، وJan AI (تطبيق مكتبي يعمل دون اتصال) — جميعها مجانية الاستخدام.' }, { type: 'plain-terms', text: '"الواجهة" هي نافذة الدردشة التي تكتب فيها — تتصل بـ Ollama أو LM Studio العاملين في الخلفية. Open WebUI هو الأقوى ويُثبَّت عبر Docker أو pip. تطبيق Ollama المكتبي هو أبسط بداية على macOS وWindows. Enchanted UI هو أبسط طريقة للدردشة على iPhone أو Mac — ثبّت التطبيق ووجّهه إلى خادم Ollama لديك.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: `أفضل واجهات نماذج LLM المحلية: Open WebUI (أكثر الميزات، RAG، أكثر من ${st.ar('open-webui', 'bare')} نجمة على GitHub)، وتطبيق Ollama المكتبي (دردشة أساسية مدمجة على macOS وWindows)، وEnchanted UI (تطبيق أصلي لأنظمة macOS وiOS وvisionOS)، وJan AI (تطبيق مكتبي يعمل دون اتصال) — جميعها مجانية الاستخدام.` }, { type: 'plain-terms', text: '"الواجهة" هي نافذة الدردشة التي تكتب فيها — تتصل بـ Ollama أو LM Studio العاملين في الخلفية. Open WebUI هو الأقوى ويُثبَّت عبر Docker أو pip. تطبيق Ollama المكتبي هو أبسط بداية على macOS وWindows. Enchanted UI هو أبسط طريقة للدردشة على iPhone أو Mac — ثبّت التطبيق ووجّهه إلى خادم Ollama لديك.' }],
           items: [
             'واجهة نموذج LLM المحلي هي واجهة الدردشة التي تتحدث بها مع نموذجك. يوفّر Ollama الـ API، والواجهة هي الشاشة المرئية. ومنذ يوليو 2025 يأتي Ollama أيضاً مع تطبيق دردشة مكتبي أساسي خاص به.',
-            '**Open WebUI** هي الأغنى بالميزات (RAG، متعددة الوسائط، قواعد المعرفة، استدعاء الدوال) بأكثر من 150,000 نجمة على GitHub. ثبّتها عبر Docker أو `pip install open-webui`؛ يُوصى بذاكرة 12 GB RAM+. يتضمن ترخيصها منذ الإصدار v0.6.6 بنداً للعلامة التجارية، فهي مجانية لكنها ليست مفتوحة المصدر وفق OSI. آخر إصدار: v0.12.3 (16 أكتوبر 2026).',
+            `**Open WebUI** هي الأغنى بالميزات (RAG، متعددة الوسائط، قواعد المعرفة، استدعاء الدوال) بأكثر من ${st.ar('open-webui', 'bare')} نجمة على GitHub. ثبّتها عبر Docker أو \`pip install open-webui\`؛ يُوصى بذاكرة 12 GB RAM+. يتضمن ترخيصها منذ الإصدار v0.6.6 بنداً للعلامة التجارية، فهي مجانية لكنها ليست مفتوحة المصدر وفق OSI. آخر إصدار: v0.12.3 (16 أكتوبر 2026).`,
             '**تطبيق Ollama المكتبي** (macOS وWindows) ينزّل النماذج ويدردش معها، ويقبل الملفات النصية وملفات PDF المسحوبة إليه، ويرسل الصور إلى النماذج متعددة الوسائط. هو نافذة دردشة لمستخدم واحد؛ أما لقواعد المعرفة أو الفرق فاستخدم Open WebUI.',
             '**Enchanted UI** تطبيق أصلي لأنظمة iOS وmacOS وvisionOS (وليس أداة متصفح)، متاح على App Store. **لم يتلقَّ أي تحديث منذ 7 يوليو 2026 (أكثر من 3 أشهر)، لذا قد يكون غير مُصان -- تحقق من المستودع قبل الاعتماد عليه.**',
-            '**Jan AI** تطبيق مكتبي (Windows وmacOS وLinux) يعمل دون اتصال ودون إعداد خادم، بأكثر من 45,000 نجمة على GitHub وبترخيص Apache-2.0. آخر إصدار: v0.8.7 (20 أكتوبر 2026).',
+            `**Jan AI** تطبيق مكتبي (Windows وmacOS وLinux) يعمل دون اتصال ودون إعداد خادم، بأكثر من ${st.ar('jan', 'bare')} نجمة على GitHub وبترخيص Apache-2.0. آخر إصدار: v0.8.7 (20 أكتوبر 2026).`,
             '**Continue.dev** امتداد VS Code لاقتراحات الكود السطرية من نموذج Ollama المحلي — توقف تطويره بعد استحواذ Cursor على المشروع في يونيو 2026 (آخر إصدار في 19 يونيو 2026)، فما زال الامتداد يعمل لكن دون تحديثات جديدة.',
             'التراخيص مختلفة: Jan AI وEnchanted UI وContinue.dev وGradio وStreamlit بترخيص Apache-2.0؛ أما Open WebUI وLobeHub فبتراخيص مجتمعية مخصصة؛ وTextGen بترخيص AGPL-3.0. تحقق من الترخيص قبل الاستخدام التجاري أو إعادة البيع بعلامتك.',
           ],
@@ -2638,7 +2645,7 @@ schema: {
           image: '/images/best-local-llm-frontends-architecture-hero-ar.webp',
           imageCaption: 'يقع Open WebUI بين متصفحك وOllama -- مُتيحاً الوصول متعدد المستخدمين وRAG والميزات متعددة الوسائط عبر Docker.',
           content: [
-            '**Open WebUI هي الواجهة الأعلى نجوماً على GitHub بين واجهات LLM المحلية في هذا الدليل بأكثر من 150,000 نجمة -- تدمج RAG ومتعددة الوسائط والبحث على الويب والتعاون متعدد المستخدمين في حاوية Docker واحدة أو حزمة Python واحدة.** تعمل مع Ollama أو LM Studio أو أي API متوافق مع OpenAI. آخر إصدار: v0.12.3 (16 أكتوبر 2026).',
+            `**Open WebUI هي الواجهة الأعلى نجوماً على GitHub بين واجهات LLM المحلية في هذا الدليل بأكثر من ${st.ar('open-webui', 'bare')} نجمة -- تدمج RAG ومتعددة الوسائط والبحث على الويب والتعاون متعدد المستخدمين في حاوية Docker واحدة أو حزمة Python واحدة.** تعمل مع Ollama أو LM Studio أو أي API متوافق مع OpenAI. آخر إصدار: v0.12.3 (16 أكتوبر 2026).`,
             '**الميزات الرئيسية:**',
             '- **RAG (التوليد المعزّز بالاسترجاع)**: ارفع مستندات (PDF، ملفات نصية) ودع النموذج يجيب عن أسئلة حولها.',
             '- **دعم متعدد الوسائط**: ارفع صوراً واطرح أسئلة حولها.',
@@ -2662,7 +2669,7 @@ schema: {
           title: 'لماذا تختار Enchanted UI لتطبيق Apple أصلي؟',
           content: [
             '**⚠️ لا تحديثات منذ 7 يوليو 2026 (أكثر من 3 أشهر) -- قد يكون هذا المشروع غير مُصان. تحقق من المستودع قبل الاعتماد عليه.** أحدث إصدار موسوم هو v1.8.2 (15 يونيو 2026).',
-            '**Enchanted UI تطبيق أصلي لأنظمة iOS وmacOS وvisionOS للدردشة مع نموذج Ollama المحلي -- ثبّته من App Store أو ابنِه من المصدر، ثم وجّهه إلى عنوان خادم Ollama لديك.** للمشروع المفتوح المصدر أكثر من 6,000 نجمة على GitHub ويصدر بترخيص Apache-2.0، وهو أكثر الخيارات الأصلية صقلاً لعتاد Apple في هذا الدليل.',
+            `**Enchanted UI تطبيق أصلي لأنظمة iOS وmacOS وvisionOS للدردشة مع نموذج Ollama المحلي -- ثبّته من App Store أو ابنِه من المصدر، ثم وجّهه إلى عنوان خادم Ollama لديك.** للمشروع المفتوح المصدر أكثر من ${st.ar('enchanted', 'bare')} نجمة على GitHub ويصدر بترخيص Apache-2.0، وهو أكثر الخيارات الأصلية صقلاً لعتاد Apple في هذا الدليل.`,
             '**الميزات الرئيسية:**',
             '- **تطبيق Apple أصلي**: يعمل على iPhone وiPad وMac وApple Vision Pro بواجهة شبيهة بـ ChatGPT -- وليس تبويب متصفح.',
             '- **إدخال متعدد الوسائط**: يدعم المطالبات الصوتية ومرفقات الصور إضافة إلى النص.',
@@ -2686,7 +2693,7 @@ schema: {
             '- **GPU وCPU كبديل**: يستخدم GPU تلقائياً إن توفّرت (بما في ذلك تسريع AMD ROCm/HIP على Linux، المضاف في v0.8.2)، ويعود إلى CPU عند غيابها.',
             '- **خاص افتراضياً**: لا يتطلب حساباً؛ ولا تُجمع تحليلات الاستخدام إلا إذا سمحت بذلك عند أول تشغيل.',
             '- **سوق الامتدادات**: أضف إضافات مثل RAG أو البحث على الويب أو الأدوات.',
-            'Jan مناسب للمستخدمين غير التقنيين الذين يريدون تطبيقاً مكتبياً متقناً. يملك Jan AI أكثر من 45,000 نجمة على GitHub ودعماً أصلياً كاملاً على Windows وmacOS وLinux -- فهو بديل ناضج لـ LM Studio بدعم مجتمعي قوي.',
+            `Jan مناسب للمستخدمين غير التقنيين الذين يريدون تطبيقاً مكتبياً متقناً. يملك Jan AI أكثر من ${st.ar('jan', 'bare')} نجمة على GitHub ودعماً أصلياً كاملاً على Windows وmacOS وLinux -- فهو بديل ناضج لـ LM Studio بدعم مجتمعي قوي.`,
           ],
           callouts: [
             { type: '📌 نقطة رئيسية', text: 'يخزّن Jan AI النماذج في ~/jan/models، منفصلة عن ذاكرة النماذج المؤقتة في Ollama. إذا استخدمت التطبيقين، فلا تُشارَك النماذج المنزَّلة ويتضاعف استخدام القرص لأي نموذج مستخدَم في كليهما.' },
@@ -2716,10 +2723,10 @@ schema: {
           content: '**إذا بدا Open WebUI ثقيلاً، فابدأ بتطبيق Ollama المكتبي أو إضافة المتصفح Page Assist؛ وإذا كان هدفك الرئيسي الأسئلة والأجوبة على المستندات، فجرّب AnythingLLM.** يتصل كل خيار أدناه بنفس واجهة Ollama API المحلية (localhost:11434).',
           items: [
             '**تطبيق Ollama المكتبي** -- دردشة مدمجة لأنظمة macOS وWindows: نزّل النماذج، واسحب الملفات النصية أو PDF، وأرسل الصور إلى النماذج متعددة الوسائط. لا شيء آخر لتثبيته. نزّله من [ollama.com/download](https://ollama.com/download).',
-            '**Page Assist** -- دردشة في الشريط الجانبي للمتصفح (Chrome وFirefox)، أكثر من 8,000 نجمة على GitHub (MIT). أخف خيار: بلا خادم إضافي أو Docker. آخر إصدار v1.5.88 (18 أكتوبر 2026) على [GitHub](https://github.com/n4ze3m/page-assist).',
-            '**AnythingLLM** -- تطبيق مكتبي وصورة Docker مبنيان حول مساحات عمل RAG، أكثر من 67,000 نجمة على GitHub (MIT). آخر إصدار v1.18.0 (13 أكتوبر 2026) على [GitHub](https://github.com/Mintplex-Labs/anything-llm).',
+            `**Page Assist** -- دردشة في الشريط الجانبي للمتصفح (Chrome وFirefox)، أكثر من ${st.ar('page-assist', 'bare')} نجمة على GitHub (MIT). أخف خيار: بلا خادم إضافي أو Docker. آخر إصدار v1.5.88 (18 أكتوبر 2026) على [GitHub](https://github.com/n4ze3m/page-assist).`,
+            `**AnythingLLM** -- تطبيق مكتبي وصورة Docker مبنيان حول مساحات عمل RAG، أكثر من ${st.ar('anythingllm', 'bare')} نجمة على GitHub (MIT). آخر إصدار v1.18.0 (13 أكتوبر 2026) على [GitHub](https://github.com/Mintplex-Labs/anything-llm).`,
             '**LM Studio** -- تطبيق مكتبي مغلق المصدر (مجاني للاستخدام الشخصي والتجاري) مع دردشة مدمجة وخادم محلي متوافق مع OpenAI على localhost:1234، فيمكن لـ Open WebUI وغيره من الواجهات استخدامه كخلفية. راجع [سجل التغييرات](https://lmstudio.ai/changelog) (آخر تحديث 12 أكتوبر 2026).',
-            '**Cherry Studio** -- عميل مكتبي متعدد المزودين مع قواعد معرفة مدمجة، أكثر من 52,000 نجمة على GitHub (AGPL-3.0). آخر إصدار v2.1.7 (19 أكتوبر 2026). اقرأ [مراجعة Cherry Studio](/ar/local-llms/cherry-studio-ai-desktop-client).',
+            `**Cherry Studio** -- عميل مكتبي متعدد المزودين مع قواعد معرفة مدمجة، أكثر من ${st.ar('cherry-studio', 'bare')} نجمة على GitHub (AGPL-3.0). آخر إصدار v2.1.7 (19 أكتوبر 2026). اقرأ [مراجعة Cherry Studio](/ar/local-llms/cherry-studio-ai-desktop-client).`,
           ],
           callouts: [
             { type: '📌 نقطة رئيسية', text: 'لمقارنة أكثر تفصيلاً راجع [LM Studio مقابل Jan AI](/ar/local-llms/lm-studio-vs-jan-ai) و[مقارنة LobeChat وBig-AGI وNextChat وPage Assist وChatbox](/ar/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared).' },
@@ -2781,7 +2788,7 @@ schema: {
             },
             {
               q: 'أي واجهة أفضل لـ RAG؟',
-              a: 'لدى Open WebUI أنضج تطبيق عام لـ RAG بين الواجهات في هذا الدليل -- ارفع مستندات ويجيب النموذج عن أسئلة حولها. وإذا كانت الأسئلة والأجوبة على المستندات هي استخدامك الرئيسي لا ميزة ثانوية، فإن AnythingLLM (أكثر من 67,000 نجمة على GitHub) مبني أساساً حول مساحات عمل RAG ويستحق التقييم بشكل منفصل. لسير عمل RAG المتقدم راجع [أفضل أدوات RAG المحلية](/ar/local-llms/best-local-rag-tools).',
+              a: `لدى Open WebUI أنضج تطبيق عام لـ RAG بين الواجهات في هذا الدليل -- ارفع مستندات ويجيب النموذج عن أسئلة حولها. وإذا كانت الأسئلة والأجوبة على المستندات هي استخدامك الرئيسي لا ميزة ثانوية، فإن AnythingLLM (أكثر من ${st.ar('anythingllm', 'bare')} نجمة على GitHub) مبني أساساً حول مساحات عمل RAG ويستحق التقييم بشكل منفصل. لسير عمل RAG المتقدم راجع [أفضل أدوات RAG المحلية](/ar/local-llms/best-local-rag-tools).`,
             },
             {
               q: 'هل أحتاج إلى واجهة أصلاً؟',
@@ -2865,7 +2872,7 @@ schema: {
         '@type': 'TechArticle',
         'inLanguage': 'ar',
         'headline': 'أفضل واجهات نماذج LLM المحلية في 2026: Open WebUI وEnchanted UI وغيرهما',
-        'description': 'أفضل واجهات الدردشة لنماذج LLM المحلية في 2026: Open WebUI (أكثر من 150,000 نجمة)، تطبيق Ollama المكتبي، Enchanted UI (تطبيق Apple أصلي)، Jan AI (دون اتصال). مقارنة ودليل إعداد.',
+        'description': `أفضل واجهات الدردشة لنماذج LLM المحلية في 2026: Open WebUI (أكثر من ${st.ar('open-webui', 'bare')} نجمة)، تطبيق Ollama المكتبي، Enchanted UI (تطبيق Apple أصلي)، Jan AI (دون اتصال). مقارنة ودليل إعداد.`,
         'url': 'https://www.promptquorum.com/ar/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
         'dateModified': '2026-10-23',
@@ -2893,7 +2900,7 @@ schema: {
         'name': 'أفضل واجهات نماذج LLM المحلية 2026',
         'numberOfItems': 8,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'تطبيق ويب (Docker/pip). الأنسب لـ RAG والفرق والميزات الغنية. إعداد في 5 دقائق. ذاكرة 12 GB+ RAM. أكثر من 150,000 نجمة على GitHub. مجاني؛ مصدر متاح بترخيص ببند العلامة التجارية.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': `تطبيق ويب (Docker/pip). الأنسب لـ RAG والفرق والميزات الغنية. إعداد في 5 دقائق. ذاكرة 12 GB+ RAM. أكثر من ${st.ar('open-webui', 'bare')} نجمة على GitHub. مجاني؛ مصدر متاح بترخيص ببند العلامة التجارية.` },
           { '@type': 'ListItem', 'position': 2, 'name': 'تطبيق Ollama المكتبي', 'description': 'تطبيق أصلي لأنظمة macOS وWindows. الأنسب للدردشة الأساسية دون تثبيت أي شيء إضافي. إعداد في ~2 دقيقة. ذاكرة 8 GB+ RAM. مجاني.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Enchanted UI', 'description': 'تطبيق أصلي لأنظمة iOS وmacOS وvisionOS. الأنسب لمستخدمي Apple الراغبين بعميل دردشة متقن؛ لا تحديث منذ 7 يوليو 2026. تثبيت في ~2 دقيقة (App Store). ذاكرة 8 GB+ RAM. مجاني ومفتوح المصدر (Apache-2.0).' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Jan AI', 'description': 'تطبيق مكتبي (Windows/macOS/Linux). الأنسب للمستخدمين غير التقنيين والعمل دون اتصال. إعداد في 3 دقائق. ذاكرة 8 GB+ RAM. مجاني ومفتوح المصدر (Apache-2.0).' },
@@ -2916,7 +2923,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'أي واجهة أفضل لـ RAG؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'لدى Open WebUI أنضج تطبيق عام لـ RAG بين الواجهات في هذا الدليل -- ارفع مستندات ويجيب النموذج عن أسئلة حولها. وإذا كانت الأسئلة والأجوبة على المستندات هي استخدامك الرئيسي لا ميزة ثانوية، فإن AnythingLLM (أكثر من 67,000 نجمة على GitHub) مبني أساساً حول مساحات عمل RAG ويستحق التقييم بشكل منفصل. لسير عمل RAG المتقدم راجع أفضل أدوات RAG المحلية.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': `لدى Open WebUI أنضج تطبيق عام لـ RAG بين الواجهات في هذا الدليل -- ارفع مستندات ويجيب النموذج عن أسئلة حولها. وإذا كانت الأسئلة والأجوبة على المستندات هي استخدامك الرئيسي لا ميزة ثانوية، فإن AnythingLLM (أكثر من ${st.ar('anythingllm', 'bare')} نجمة على GitHub) مبني أساساً حول مساحات عمل RAG ويستحق التقييم بشكل منفصل. لسير عمل RAG المتقدم راجع أفضل أدوات RAG المحلية.` }
           },
           {
             '@type': 'Question',
@@ -2976,14 +2983,14 @@ schema: {
       theme: 'Tools & Interfaces',
       title: 'Melhores frontends para LLMs locais em 2026: Open WebUI, Enchanted UI e mais',
       seoTitle: 'Melhores frontends Ollama e LLMs locais 2026: 8 comparados',
-      intro: 'Um frontend é a interface de chat do seu LLM local: o Ollama ou o LM Studio executa o modelo, e o frontend oferece a interface visual. O próprio Ollama agora inclui um app de chat básico para macOS e Windows, então um frontend separado serve principalmente para RAG, acesso multiusuário, apps móveis ou ferramentas de programação. O Open WebUI tem mais recursos (RAG, multimodal, multiusuário) e mais de 150.000 estrelas no GitHub, o Enchanted UI é um app nativo para macOS/iOS/visionOS e o Jan AI cobre o uso offline no desktop em Windows, macOS e Linux. Este guia compara 8 frontends por recursos, tempo de configuração, licença e caso de uso.',
-      metaDescription: 'Compare 8 frontends para Ollama: Open WebUI (150 mil+ estrelas, RAG), app do Ollama, Enchanted UI (app Apple nativo), Jan AI (offline). Licenças e guia.',
+      intro: `Um frontend é a interface de chat do seu LLM local: o Ollama ou o LM Studio executa o modelo, e o frontend oferece a interface visual. O próprio Ollama agora inclui um app de chat básico para macOS e Windows, então um frontend separado serve principalmente para RAG, acesso multiusuário, apps móveis ou ferramentas de programação. O Open WebUI tem mais recursos (RAG, multimodal, multiusuário) e mais de ${st.pt('open-webui', 'bare')} estrelas no GitHub, o Enchanted UI é um app nativo para macOS/iOS/visionOS e o Jan AI cobre o uso offline no desktop em Windows, macOS e Linux. Este guia compara 8 frontends por recursos, tempo de configuração, licença e caso de uso.`,
+      metaDescription: `Compare 8 frontends para Ollama: Open WebUI (${st.pt('open-webui', 'k')} estrelas, RAG), app do Ollama, Enchanted UI (app Apple nativo), Jan AI (offline). Licenças e guia.`,
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-pt.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-10-23',
       next_refresh_due: '2027-04-23',
       last_full_refresh: '2026-10-23',
-      leadAnswerBlock: '**Um frontend é a interface de chat do seu LLM local: o Ollama ou o LM Studio executa o modelo, e o frontend oferece a interface visual. O próprio Ollama agora inclui um app de chat básico para macOS e Windows, então um frontend separado serve principalmente para RAG, acesso multiusuário, apps móveis ou ferramentas de programação. O Open WebUI tem mais recursos (RAG, multimodal, multiusuário) e mais de 150.000 estrelas no GitHub, o Enchanted UI é um app nativo para macOS/iOS/visionOS e o Jan AI cobre o uso offline no desktop em Windows, macOS e Linux.**',
+      leadAnswerBlock: `**Um frontend é a interface de chat do seu LLM local: o Ollama ou o LM Studio executa o modelo, e o frontend oferece a interface visual. O próprio Ollama agora inclui um app de chat básico para macOS e Windows, então um frontend separado serve principalmente para RAG, acesso multiusuário, apps móveis ou ferramentas de programação. O Open WebUI tem mais recursos (RAG, multimodal, multiusuário) e mais de ${st.pt('open-webui', 'bare')} estrelas no GitHub, o Enchanted UI é um app nativo para macOS/iOS/visionOS e o Jan AI cobre o uso offline no desktop em Windows, macOS e Linux.**`,
       audience: 'Iniciantes rodando seu primeiro LLM local em hardware de consumo',
       readTime: '11 min de leitura',
       educationalLevel: 'Beginner to Advanced',
@@ -3004,19 +3011,19 @@ schema: {
         { label: 'Fontes', anchor: '#sources' },
       ],
       gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
-      gammaDescription: 'A apresentação abaixo cobre 8 frontends para LLMs locais -- Open WebUI (mais de 150.000 estrelas, RAG), o app desktop do Ollama, Enchanted UI (app Apple nativo), Jan AI (desktop), Continue.dev (código) -- com tabela comparativa de recursos, notas sobre licenças, guia de configuração, contexto regional de conformidade (Brasil/LGPD, UE/RGPD) e 5 erros comuns. Baixe o PDF como cartão de referência de frontends para LLMs locais.',
+      gammaDescription: `A apresentação abaixo cobre 8 frontends para LLMs locais -- Open WebUI (mais de ${st.pt('open-webui', 'bare')} estrelas, RAG), o app desktop do Ollama, Enchanted UI (app Apple nativo), Jan AI (desktop), Continue.dev (código) -- com tabela comparativa de recursos, notas sobre licenças, guia de configuração, contexto regional de conformidade (Brasil/LGPD, UE/RGPD) e 5 erros comuns. Baixe o PDF como cartão de referência de frontends para LLMs locais.`,
       sections: {
         tldr: {
           id: 'key-takeaways',
 
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: 'Os melhores frontends para LLMs locais: Open WebUI (mais recursos, RAG, mais de 150.000 estrelas no GitHub), o app desktop do Ollama (chat básico integrado no macOS e no Windows), Enchanted UI (app nativo para macOS/iOS/visionOS) e Jan AI (app desktop offline) — todos gratuitos.' }, { type: 'plain-terms', text: 'Um "frontend" é a janela de chat em que você digita — ele se conecta ao Ollama ou ao LM Studio rodando em segundo plano. O Open WebUI é o mais completo e é instalado com Docker ou pip. O app desktop do Ollama é o começo mais simples no macOS e no Windows. O Enchanted UI é a forma mais simples de conversar no iPhone ou no Mac — instale o app e aponte para o seu servidor Ollama.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: `Os melhores frontends para LLMs locais: Open WebUI (mais recursos, RAG, mais de ${st.pt('open-webui', 'bare')} estrelas no GitHub), o app desktop do Ollama (chat básico integrado no macOS e no Windows), Enchanted UI (app nativo para macOS/iOS/visionOS) e Jan AI (app desktop offline) — todos gratuitos.` }, { type: 'plain-terms', text: 'Um "frontend" é a janela de chat em que você digita — ele se conecta ao Ollama ou ao LM Studio rodando em segundo plano. O Open WebUI é o mais completo e é instalado com Docker ou pip. O app desktop do Ollama é o começo mais simples no macOS e no Windows. O Enchanted UI é a forma mais simples de conversar no iPhone ou no Mac — instale o app e aponte para o seu servidor Ollama.' }],
           items: [
             'Um frontend para LLM local é a interface de chat que você usa para conversar com o seu modelo. O Ollama fornece a API; o frontend é a interface. Desde julho de 2025, o Ollama também inclui seu próprio app de chat básico para desktop.',
-            'O **Open WebUI** é o mais completo (RAG, multimodal, bases de conhecimento, function calling) e tem mais de 150.000 estrelas no GitHub. Instale com Docker ou `pip install open-webui`; recomenda-se 12 GB de RAM ou mais. Desde a v0.6.6, sua licença inclui uma cláusula de marca, então ele é gratuito, mas não é código aberto segundo a OSI. Versão mais recente: v0.12.3 (16 de outubro de 2026).',
+            `O **Open WebUI** é o mais completo (RAG, multimodal, bases de conhecimento, function calling) e tem mais de ${st.pt('open-webui', 'bare')} estrelas no GitHub. Instale com Docker ou \`pip install open-webui\`; recomenda-se 12 GB de RAM ou mais. Desde a v0.6.6, sua licença inclui uma cláusula de marca, então ele é gratuito, mas não é código aberto segundo a OSI. Versão mais recente: v0.12.3 (16 de outubro de 2026).`,
             'O **app desktop do Ollama** (macOS e Windows) baixa modelos e conversa com eles, aceita arquivos de texto e PDFs arrastados para a janela e envia imagens para modelos multimodais. É uma janela de chat para um único usuário; para bases de conhecimento ou equipes, use o Open WebUI.',
             'O **Enchanted UI** é um app nativo para iOS, macOS e visionOS (não é uma ferramenta de navegador), disponível na App Store. **Ele está sem atualização desde 7 de julho de 2026 (há mais de 3 meses), então pode estar sem manutenção -- verifique o repositório antes de depender dele.**',
-            'O **Jan AI** é um app desktop (Windows, macOS, Linux) que roda offline, sem configuração de servidor, com mais de 45.000 estrelas no GitHub e licença Apache-2.0. Versão mais recente: v0.8.7 (20 de outubro de 2026).',
+            `O **Jan AI** é um app desktop (Windows, macOS, Linux) que roda offline, sem configuração de servidor, com mais de ${st.pt('jan', 'bare')} estrelas no GitHub e licença Apache-2.0. Versão mais recente: v0.8.7 (20 de outubro de 2026).`,
             'O **Continue.dev** é uma extensão do VS Code que sugere código em linha a partir do seu modelo Ollama local — o desenvolvimento parou depois que a Cursor adquiriu o projeto em junho de 2026 (última versão em 19 de junho de 2026); a extensão continua funcionando, mas não recebe mais atualizações.',
             'As licenças variam: Jan AI, Enchanted UI, Continue.dev, Gradio e Streamlit usam Apache-2.0; Open WebUI e LobeHub usam licenças personalizadas da comunidade; TextGen usa AGPL-3.0. Confira a licença antes de qualquer uso comercial ou white-label.',
           ],
@@ -3044,7 +3051,7 @@ schema: {
           image: '/images/best-local-llm-frontends-architecture-hero-pt.webp',
           imageCaption: 'O Open WebUI fica entre o seu navegador e o Ollama -- habilitando acesso multiusuário, RAG e recursos multimodais via Docker.',
           content: [
-            '**O Open WebUI é o frontend para LLMs locais com mais estrelas neste guia, com mais de 150.000 estrelas no GitHub -- ele reúne RAG, multimodal, busca na web e colaboração multiusuário em um único contêiner Docker ou pacote Python.** Funciona com Ollama, LM Studio ou qualquer API compatível com OpenAI. Versão mais recente: v0.12.3 (16 de outubro de 2026).',
+            `**O Open WebUI é o frontend para LLMs locais com mais estrelas neste guia, com mais de ${st.pt('open-webui', 'bare')} estrelas no GitHub -- ele reúne RAG, multimodal, busca na web e colaboração multiusuário em um único contêiner Docker ou pacote Python.** Funciona com Ollama, LM Studio ou qualquer API compatível com OpenAI. Versão mais recente: v0.12.3 (16 de outubro de 2026).`,
             '**Principais recursos:**',
             '- **RAG (Retrieval-Augmented Generation)**: envie documentos (PDFs, arquivos de texto) e faça o modelo responder perguntas sobre eles.',
             '- **Suporte multimodal**: envie imagens e faça perguntas sobre elas.',
@@ -3068,7 +3075,7 @@ schema: {
           title: 'Por que escolher o Enchanted UI como app nativo para Apple?',
           content: [
             '**⚠️ Sem atualização desde 7 de julho de 2026 (há mais de 3 meses) -- este projeto pode estar sem manutenção. Verifique o repositório antes de depender dele.** A versão mais recente com tag é a v1.8.2 (15 de junho de 2026).',
-            '**O Enchanted UI é um app nativo para iOS, macOS e visionOS para conversar com o seu modelo Ollama local -- instale pela App Store ou compile a partir do código-fonte e aponte para o endereço do seu servidor Ollama.** O projeto de código aberto tem mais de 6.000 estrelas no GitHub e usa a licença Apache-2.0, sendo a opção nativa mais refinada para hardware Apple neste guia.',
+            `**O Enchanted UI é um app nativo para iOS, macOS e visionOS para conversar com o seu modelo Ollama local -- instale pela App Store ou compile a partir do código-fonte e aponte para o endereço do seu servidor Ollama.** O projeto de código aberto tem mais de ${st.pt('enchanted', 'bare')} estrelas no GitHub e usa a licença Apache-2.0, sendo a opção nativa mais refinada para hardware Apple neste guia.`,
             '**Principais recursos:**',
             '- **App nativo da Apple**: roda no iPhone, iPad, Mac e Apple Vision Pro com uma interface no estilo ChatGPT -- não é uma aba do navegador.',
             '- **Entrada multimodal**: aceita comandos de voz e anexos de imagem, além de texto.',
@@ -3092,7 +3099,7 @@ schema: {
             '- **GPU com fallback para CPU**: usa a GPU automaticamente quando disponível (incluindo aceleração AMD ROCm/HIP no Linux, adicionada na v0.8.2) e recorre à CPU quando não há.',
             '- **Privado por padrão**: não exige conta; as análises de uso só são coletadas se você permitir na primeira execução.',
             '- **Marketplace de extensões**: adicione plugins como RAG, busca na web ou ferramentas.',
-            'O Jan é ideal para usuários não técnicos que querem um app desktop refinado. O Jan AI tem mais de 45.000 estrelas no GitHub e suporte nativo completo em Windows, macOS e Linux -- é uma alternativa madura ao LM Studio, com forte apoio da comunidade.',
+            `O Jan é ideal para usuários não técnicos que querem um app desktop refinado. O Jan AI tem mais de ${st.pt('jan', 'bare')} estrelas no GitHub e suporte nativo completo em Windows, macOS e Linux -- é uma alternativa madura ao LM Studio, com forte apoio da comunidade.`,
           ],
           callouts: [
             { type: '📌 Ponto-chave', text: 'O Jan AI armazena os modelos em ~/jan/models -- separado do cache de modelos do Ollama. Se você usa os dois, os modelos baixados não são compartilhados e o uso de disco dobra para qualquer modelo usado nos dois apps.' },
@@ -3122,10 +3129,10 @@ schema: {
           content: '**Se o Open WebUI parecer pesado demais, comece pelo app desktop do Ollama ou pela extensão de navegador Page Assist; se o seu foco principal é perguntar sobre documentos, experimente o AnythingLLM.** Cada opção abaixo se conecta à mesma API local do Ollama (localhost:11434).',
           items: [
             '**App desktop do Ollama** -- Chat integrado para macOS e Windows: baixe modelos, arraste arquivos de texto ou PDFs e envie imagens para modelos multimodais. Nada mais para instalar. Baixe em [ollama.com/download](https://ollama.com/download).',
-            '**Page Assist** -- Chat em barra lateral do navegador para Chrome e Firefox, com mais de 8.000 estrelas no GitHub (MIT). A opção mais leve: sem servidor extra nem Docker. Versão mais recente v1.5.88 (18 de outubro de 2026) no [GitHub](https://github.com/n4ze3m/page-assist).',
-            '**AnythingLLM** -- App desktop e imagem Docker construídos em torno de workspaces de RAG, com mais de 67.000 estrelas no GitHub (MIT). Versão mais recente v1.18.0 (13 de outubro de 2026) no [GitHub](https://github.com/Mintplex-Labs/anything-llm).',
+            `**Page Assist** -- Chat em barra lateral do navegador para Chrome e Firefox, com mais de ${st.pt('page-assist', 'bare')} estrelas no GitHub (MIT). A opção mais leve: sem servidor extra nem Docker. Versão mais recente v1.5.88 (18 de outubro de 2026) no [GitHub](https://github.com/n4ze3m/page-assist).`,
+            `**AnythingLLM** -- App desktop e imagem Docker construídos em torno de workspaces de RAG, com mais de ${st.pt('anythingllm', 'bare')} estrelas no GitHub (MIT). Versão mais recente v1.18.0 (13 de outubro de 2026) no [GitHub](https://github.com/Mintplex-Labs/anything-llm).`,
             '**LM Studio** -- App desktop de código fechado (gratuito para uso pessoal e comercial) com chat integrado e um servidor local compatível com OpenAI em localhost:1234, que o Open WebUI e outros frontends podem usar como backend. Veja o [changelog](https://lmstudio.ai/changelog) (última atualização em 12 de outubro de 2026).',
-            '**Cherry Studio** -- Cliente desktop multiprovedor com bases de conhecimento integradas e mais de 52.000 estrelas no GitHub (AGPL-3.0). Versão mais recente v2.1.7 (19 de outubro de 2026). Leia a [análise do Cherry Studio](/pt/local-llms/cherry-studio-ai-desktop-client).',
+            `**Cherry Studio** -- Cliente desktop multiprovedor com bases de conhecimento integradas e mais de ${st.pt('cherry-studio', 'bare')} estrelas no GitHub (AGPL-3.0). Versão mais recente v2.1.7 (19 de outubro de 2026). Leia a [análise do Cherry Studio](/pt/local-llms/cherry-studio-ai-desktop-client).`,
           ],
           callouts: [
             { type: '📌 Ponto-chave', text: 'Para uma comparação lado a lado, veja [LM Studio vs Jan AI](/pt/local-llms/lm-studio-vs-jan-ai) e [LobeChat, Big-AGI, NextChat, Page Assist e Chatbox comparados](/pt/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared).' },
@@ -3185,7 +3192,7 @@ schema: {
             },
             {
               q: 'Qual frontend é o melhor para RAG?',
-              a: 'O Open WebUI tem a implementação de RAG de uso geral mais madura entre os frontends deste guia -- você envia documentos e o modelo responde perguntas sobre eles. Se perguntar sobre documentos é o seu caso de uso principal, e não um recurso secundário, o AnythingLLM (mais de 67.000 estrelas no GitHub) foi construído em torno de workspaces de RAG e vale uma avaliação à parte. Para fluxos de RAG avançados, veja [Melhores ferramentas de RAG local](/pt/local-llms/best-local-rag-tools).',
+              a: `O Open WebUI tem a implementação de RAG de uso geral mais madura entre os frontends deste guia -- você envia documentos e o modelo responde perguntas sobre eles. Se perguntar sobre documentos é o seu caso de uso principal, e não um recurso secundário, o AnythingLLM (mais de ${st.pt('anythingllm', 'bare')} estrelas no GitHub) foi construído em torno de workspaces de RAG e vale uma avaliação à parte. Para fluxos de RAG avançados, veja [Melhores ferramentas de RAG local](/pt/local-llms/best-local-rag-tools).`,
             },
             {
               q: 'Eu preciso mesmo de um frontend?',
@@ -3268,7 +3275,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Melhores frontends para LLMs locais em 2026: Open WebUI, Enchanted UI e mais',
-        'description': 'Melhores interfaces de chat para LLMs locais em 2026: Open WebUI (150 mil+ estrelas no GitHub), app desktop do Ollama, Enchanted UI (app Apple nativo), Jan AI (app offline). Comparativo e guia de configuração.',
+        'description': `Melhores interfaces de chat para LLMs locais em 2026: Open WebUI (${st.pt('open-webui', 'k')} estrelas no GitHub), app desktop do Ollama, Enchanted UI (app Apple nativo), Jan AI (app offline). Comparativo e guia de configuração.`,
         'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llm-frontends',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
@@ -3297,7 +3304,7 @@ schema: {
         'name': 'Melhores frontends para LLMs locais em 2026',
         'numberOfItems': 8,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': 'App web (Docker/pip). Ideal para RAG, equipes e muitos recursos. 5 min de configuração. 12 GB+ de RAM. Mais de 150.000 estrelas no GitHub. Gratuito; código disponível sob licença com cláusula de marca.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': `App web (Docker/pip). Ideal para RAG, equipes e muitos recursos. 5 min de configuração. 12 GB+ de RAM. Mais de ${st.pt('open-webui', 'bare')} estrelas no GitHub. Gratuito; código disponível sob licença com cláusula de marca.` },
           { '@type': 'ListItem', 'position': 2, 'name': 'App desktop do Ollama', 'description': 'App nativo para macOS e Windows. Ideal para chat básico sem instalar nada extra. ~2 min de configuração. 8 GB+ de RAM. Gratuito.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Enchanted UI', 'description': 'App nativo para iOS/macOS/visionOS. Ideal para usuários Apple que querem um cliente de chat refinado; sem atualização desde 7 de julho de 2026. ~2 min de instalação (App Store). 8 GB+ de RAM. Gratuito e de código aberto (Apache-2.0).' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Jan AI', 'description': 'App desktop (Windows/macOS/Linux). Ideal para usuários não técnicos e uso offline. 3 min de configuração. 8 GB+ de RAM. Gratuito e de código aberto (Apache-2.0).' },
@@ -3320,7 +3327,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Qual frontend é o melhor para RAG?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'O Open WebUI tem a implementação de RAG de uso geral mais madura entre os frontends deste guia -- você envia documentos e o modelo responde perguntas sobre eles. Se perguntar sobre documentos é o seu caso de uso principal, e não um recurso secundário, o AnythingLLM (mais de 67.000 estrelas no GitHub) foi construído em torno de workspaces de RAG e vale uma avaliação à parte. Para fluxos de RAG avançados, veja Melhores ferramentas de RAG local.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': `O Open WebUI tem a implementação de RAG de uso geral mais madura entre os frontends deste guia -- você envia documentos e o modelo responde perguntas sobre eles. Se perguntar sobre documentos é o seu caso de uso principal, e não um recurso secundário, o AnythingLLM (mais de ${st.pt('anythingllm', 'bare')} estrelas no GitHub) foi construído em torno de workspaces de RAG e vale uma avaliação à parte. Para fluxos de RAG avançados, veja Melhores ferramentas de RAG local.` }
           },
           {
             '@type': 'Question',
@@ -3380,14 +3387,14 @@ schema: {
       theme: 'Tools & Interfaces',
       title: '2026년 최고의 로컬 LLM 프론트엔드: Open WebUI, Enchanted UI 등',
       seoTitle: 'Ollama 프론트엔드 8종 비교 2026: Open WebUI 외',
-      intro: '프론트엔드는 로컬 LLM을 위한 채팅 인터페이스입니다. Ollama 또는 LM Studio가 모델을 실행하고, 프론트엔드는 다듬어진 UI를 제공합니다. Ollama 자체도 이제 macOS와 Windows용 기본 데스크톱 채팅 앱을 제공하므로, 별도 프론트엔드는 주로 RAG, 다중 사용자 접근, 모바일 앱, 코딩 도구를 추가할 때 의미가 있습니다. Open WebUI는 기능이 가장 많고(RAG, 멀티모달, 다중 사용자) GitHub 스타가 150,000개 이상이며, Enchanted UI는 네이티브 macOS/iOS/visionOS 앱이고, Jan AI는 Windows, macOS, Linux에서 오프라인 데스크톱 사용을 지원합니다. 이 가이드는 8개 프론트엔드를 기능, 설정 시간, 라이선스, 용도별로 비교합니다.',
+      intro: `프론트엔드는 로컬 LLM을 위한 채팅 인터페이스입니다. Ollama 또는 LM Studio가 모델을 실행하고, 프론트엔드는 다듬어진 UI를 제공합니다. Ollama 자체도 이제 macOS와 Windows용 기본 데스크톱 채팅 앱을 제공하므로, 별도 프론트엔드는 주로 RAG, 다중 사용자 접근, 모바일 앱, 코딩 도구를 추가할 때 의미가 있습니다. Open WebUI는 기능이 가장 많고(RAG, 멀티모달, 다중 사용자) GitHub 스타가 ${st.ko('open-webui', 'bare')}개 이상이며, Enchanted UI는 네이티브 macOS/iOS/visionOS 앱이고, Jan AI는 Windows, macOS, Linux에서 오프라인 데스크톱 사용을 지원합니다. 이 가이드는 8개 프론트엔드를 기능, 설정 시간, 라이선스, 용도별로 비교합니다.`,
       metaDescription: 'Open WebUI(RAG), Ollama 데스크톱 앱, Enchanted UI, Jan AI 등 로컬 LLM 프론트엔드 8종을 기능, 라이선스, 설정 시간으로 비교합니다.',
       heroImage: '/images/best-local-llm-frontends-frontend-selection-hero-ko.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-10-23',
       next_refresh_due: '2027-04-23',
       last_full_refresh: '2026-10-23',
-      leadAnswerBlock: '**프론트엔드는 로컬 LLM을 위한 채팅 인터페이스입니다. Ollama 또는 LM Studio가 모델을 실행하고, 프론트엔드는 다듬어진 UI를 제공합니다. Ollama 자체도 이제 macOS와 Windows용 기본 데스크톱 채팅 앱을 제공하므로, 별도 프론트엔드는 주로 RAG, 다중 사용자 접근, 모바일 앱, 코딩 도구를 추가할 때 의미가 있습니다. Open WebUI는 기능이 가장 많고(RAG, 멀티모달, 다중 사용자) GitHub 스타가 150,000개 이상이며, Enchanted UI는 네이티브 macOS/iOS/visionOS 앱이고, Jan AI는 Windows, macOS, Linux에서 오프라인 데스크톱 사용을 지원합니다.**',
+      leadAnswerBlock: `**프론트엔드는 로컬 LLM을 위한 채팅 인터페이스입니다. Ollama 또는 LM Studio가 모델을 실행하고, 프론트엔드는 다듬어진 UI를 제공합니다. Ollama 자체도 이제 macOS와 Windows용 기본 데스크톱 채팅 앱을 제공하므로, 별도 프론트엔드는 주로 RAG, 다중 사용자 접근, 모바일 앱, 코딩 도구를 추가할 때 의미가 있습니다. Open WebUI는 기능이 가장 많고(RAG, 멀티모달, 다중 사용자) GitHub 스타가 ${st.ko('open-webui', 'bare')}개 이상이며, Enchanted UI는 네이티브 macOS/iOS/visionOS 앱이고, Jan AI는 Windows, macOS, Linux에서 오프라인 데스크톱 사용을 지원합니다.**`,
       audience: '소비자용 하드웨어에서 첫 로컬 LLM을 실행하는 초보자',
       readTime: '11분 읽기',
       educationalLevel: 'Beginner to Advanced',
@@ -3408,19 +3415,19 @@ schema: {
         { label: '출처', anchor: '#sources' },
       ],
       gammaEmbedUrl: '/presentations/best-local-llm-frontends-static.html',
-      gammaDescription: '아래 슬라이드 덱은 로컬 LLM 프론트엔드 8종 -- Open WebUI(GitHub 스타 150,000개 이상, RAG), Ollama 데스크톱 앱, Enchanted UI(네이티브 Apple 앱), Jan AI(데스크톱), Continue.dev(코딩) -- 을 다루며, 기능 비교표, 라이선스 안내, 설정 가이드, 지역별 규정 준수 맥락(EU/GDPR, 일본, 중국), 흔한 실수 5가지를 포함합니다. PDF를 로컬 LLM 프론트엔드 참고 카드로 내려받으십시오.',
+      gammaDescription: `아래 슬라이드 덱은 로컬 LLM 프론트엔드 8종 -- Open WebUI(GitHub 스타 ${st.ko('open-webui', 'bare')}개 이상, RAG), Ollama 데스크톱 앱, Enchanted UI(네이티브 Apple 앱), Jan AI(데스크톱), Continue.dev(코딩) -- 을 다루며, 기능 비교표, 라이선스 안내, 설정 가이드, 지역별 규정 준수 맥락(EU/GDPR, 일본, 중국), 흔한 실수 5가지를 포함합니다. PDF를 로컬 LLM 프론트엔드 참고 카드로 내려받으십시오.`,
       sections: {
         tldr: {
           id: 'key-takeaways',
 
           isTldr: true,
-          snippetBlocks: [{ type: 'one-sentence', text: '최고의 로컬 LLM 프론트엔드: Open WebUI(최다 기능, RAG, GitHub 스타 150,000개 이상), Ollama 데스크톱 앱(macOS와 Windows용 내장 기본 채팅), Enchanted UI(네이티브 macOS/iOS/visionOS 앱), Jan AI(오프라인 데스크톱 앱) — 모두 무료로 사용할 수 있습니다.' }, { type: 'plain-terms', text: '"프론트엔드"는 입력하는 채팅 창이며, 백그라운드에서 실행 중인 Ollama 또는 LM Studio에 연결됩니다. Open WebUI는 가장 강력하며 Docker 또는 pip로 설치합니다. Ollama 데스크톱 앱은 macOS와 Windows에서 가장 간단한 시작 방법입니다. Enchanted UI는 iPhone이나 Mac에서 채팅하는 가장 간단한 방법으로, 앱을 설치하고 Ollama 서버를 지정하면 됩니다.' }],
+          snippetBlocks: [{ type: 'one-sentence', text: `최고의 로컬 LLM 프론트엔드: Open WebUI(최다 기능, RAG, GitHub 스타 ${st.ko('open-webui', 'bare')}개 이상), Ollama 데스크톱 앱(macOS와 Windows용 내장 기본 채팅), Enchanted UI(네이티브 macOS/iOS/visionOS 앱), Jan AI(오프라인 데스크톱 앱) — 모두 무료로 사용할 수 있습니다.` }, { type: 'plain-terms', text: '"프론트엔드"는 입력하는 채팅 창이며, 백그라운드에서 실행 중인 Ollama 또는 LM Studio에 연결됩니다. Open WebUI는 가장 강력하며 Docker 또는 pip로 설치합니다. Ollama 데스크톱 앱은 macOS와 Windows에서 가장 간단한 시작 방법입니다. Enchanted UI는 iPhone이나 Mac에서 채팅하는 가장 간단한 방법으로, 앱을 설치하고 Ollama 서버를 지정하면 됩니다.' }],
           items: [
             '로컬 LLM 프론트엔드는 모델과 대화하는 데 쓰는 채팅 인터페이스입니다. Ollama가 API를 제공하고, 프론트엔드가 UI를 담당합니다. 2025년 7월부터는 Ollama도 자체 기본 데스크톱 채팅 앱을 제공합니다.',
-            '**Open WebUI**는 기능이 가장 풍부하며(RAG, 멀티모달, 지식 베이스, 함수 호출) GitHub 스타가 150,000개 이상입니다. Docker 또는 `pip install open-webui`로 설치하며, RAM 12 GB 이상을 권장합니다. v0.6.6부터 라이선스에 브랜딩 조항이 포함되어 무료이지만 OSI 오픈소스는 아닙니다. 최신 릴리스: v0.12.3(2026년 10월 16일).',
+            `**Open WebUI**는 기능이 가장 풍부하며(RAG, 멀티모달, 지식 베이스, 함수 호출) GitHub 스타가 ${st.ko('open-webui', 'bare')}개 이상입니다. Docker 또는 \`pip install open-webui\`로 설치하며, RAM 12 GB 이상을 권장합니다. v0.6.6부터 라이선스에 브랜딩 조항이 포함되어 무료이지만 OSI 오픈소스는 아닙니다. 최신 릴리스: v0.12.3(2026년 10월 16일).`,
             '**Ollama 데스크톱 앱**(macOS와 Windows)은 모델을 내려받아 채팅할 수 있고, 끌어다 놓은 텍스트 파일과 PDF를 받으며, 이미지를 멀티모달 모델에 보냅니다. 단일 사용자용 채팅 창이므로, 지식 베이스나 팀 사용에는 Open WebUI를 쓰십시오.',
             '**Enchanted UI**는 App Store에서 받을 수 있는 네이티브 iOS, macOS, visionOS 앱입니다(브라우저 도구가 아닙니다). **2026년 7월 7일 이후 업데이트가 없어(3개월 이상) 유지보수가 중단되었을 수 있습니다 -- 사용하기 전에 저장소를 확인하십시오.**',
-            '**Jan AI**는 서버 설정 없이 오프라인으로 실행되는 데스크톱 앱(Windows, macOS, Linux)이며, GitHub 스타 45,000개 이상, Apache-2.0입니다. 최신 릴리스: v0.8.7(2026년 10월 20일).',
+            `**Jan AI**는 서버 설정 없이 오프라인으로 실행되는 데스크톱 앱(Windows, macOS, Linux)이며, GitHub 스타 ${st.ko('jan', 'bare')}개 이상, Apache-2.0입니다. 최신 릴리스: v0.8.7(2026년 10월 20일).`,
             '**Continue.dev**는 로컬 Ollama 모델로 인라인 코드 제안을 제공하는 VS Code 확장 프로그램입니다 — 2026년 6월 Cursor가 프로젝트를 인수한 뒤 개발이 중단되었으며(마지막 릴리스 2026년 6월 19일), 확장 프로그램은 계속 동작하지만 추가 업데이트는 없습니다.',
             '라이선스는 서로 다릅니다: Jan AI, Enchanted UI, Continue.dev, Gradio, Streamlit은 Apache-2.0이고, Open WebUI와 LobeHub는 별도의 커뮤니티 라이선스를 사용하며, TextGen은 AGPL-3.0입니다. 상업적 사용이나 화이트 라벨 사용 전에 라이선스를 확인하십시오.',
           ],
@@ -3448,7 +3455,7 @@ schema: {
           image: '/images/best-local-llm-frontends-architecture-hero-ko.webp',
           imageCaption: 'Open WebUI는 브라우저와 Ollama 사이에 위치하며, Docker를 통해 다중 사용자 접근, RAG, 멀티모달 기능을 제공합니다.',
           content: [
-            '**Open WebUI는 이 가이드에서 GitHub 스타가 가장 많은(150,000개 이상) 로컬 LLM 프론트엔드이며, RAG, 멀티모달, 웹 검색, 다중 사용자 협업을 하나의 Docker 컨테이너 또는 Python 패키지에 담았습니다.** Ollama, LM Studio, 또는 OpenAI 호환 API와 함께 동작합니다. 최신 릴리스: v0.12.3(2026년 10월 16일).',
+            `**Open WebUI는 이 가이드에서 GitHub 스타가 가장 많은(${st.ko('open-webui', 'bare')}개 이상) 로컬 LLM 프론트엔드이며, RAG, 멀티모달, 웹 검색, 다중 사용자 협업을 하나의 Docker 컨테이너 또는 Python 패키지에 담았습니다.** Ollama, LM Studio, 또는 OpenAI 호환 API와 함께 동작합니다. 최신 릴리스: v0.12.3(2026년 10월 16일).`,
             '**주요 기능:**',
             '- **RAG(검색 증강 생성)**: 문서(PDF, 텍스트 파일)를 업로드하면 모델이 해당 문서에 대한 질문에 답합니다.',
             '- **멀티모달 지원**: 이미지를 업로드하고 이미지에 대해 질문할 수 있습니다.',
@@ -3472,7 +3479,7 @@ schema: {
           title: '네이티브 Apple 앱으로 Enchanted UI를 선택해야 하는 이유는 무엇입니까?',
           content: [
             '**⚠️ 2026년 7월 7일 이후 업데이트 없음(3개월 이상) -- 이 프로젝트는 유지보수가 중단되었을 수 있습니다. 사용하기 전에 저장소를 확인하십시오.** 마지막 태그 릴리스는 v1.8.2(2026년 6월 15일)입니다.',
-            '**Enchanted UI는 로컬 Ollama 모델과 채팅하기 위한 네이티브 iOS, macOS, visionOS 앱입니다 -- App Store에서 설치하거나 소스에서 빌드한 뒤 Ollama 서버 주소를 지정하면 됩니다.** 오픈소스 프로젝트이며 GitHub 스타가 6,000개 이상이고 Apache-2.0 라이선스로 배포되어, 이 가이드에서 Apple 하드웨어용으로 가장 다듬어진 네이티브 옵션입니다.',
+            `**Enchanted UI는 로컬 Ollama 모델과 채팅하기 위한 네이티브 iOS, macOS, visionOS 앱입니다 -- App Store에서 설치하거나 소스에서 빌드한 뒤 Ollama 서버 주소를 지정하면 됩니다.** 오픈소스 프로젝트이며 GitHub 스타가 ${st.ko('enchanted', 'bare')}개 이상이고 Apache-2.0 라이선스로 배포되어, 이 가이드에서 Apple 하드웨어용으로 가장 다듬어진 네이티브 옵션입니다.`,
             '**주요 기능:**',
             '- **네이티브 Apple 앱**: iPhone, iPad, Mac, Apple Vision Pro에서 브라우저 탭이 아닌 ChatGPT 스타일 인터페이스로 실행됩니다.',
             '- **멀티모달 입력**: 텍스트 외에 음성 프롬프트와 이미지 첨부를 지원합니다.',
@@ -3496,7 +3503,7 @@ schema: {
             '- **GPU 및 CPU 폴백**: GPU가 있으면 자동으로 사용하고(v0.8.2에서 추가된 Linux의 AMD ROCm/HIP 가속 포함), 없으면 CPU로 전환합니다.',
             '- **기본적으로 비공개**: 계정이 필요 없으며, 사용 분석은 첫 실행 시 허용한 경우에만 수집됩니다.',
             '- **확장 마켓플레이스**: RAG, 웹 검색, 도구 같은 플러그인을 추가할 수 있습니다.',
-            'Jan은 다듬어진 데스크톱 앱을 원하는 비기술 사용자에게 가장 적합합니다. Jan AI는 GitHub 스타가 45,000개 이상이며 Windows, macOS, Linux를 모두 네이티브로 지원합니다 -- 커뮤니티 지원이 탄탄한 성숙한 LM Studio 대안입니다.',
+            `Jan은 다듬어진 데스크톱 앱을 원하는 비기술 사용자에게 가장 적합합니다. Jan AI는 GitHub 스타가 ${st.ko('jan', 'bare')}개 이상이며 Windows, macOS, Linux를 모두 네이티브로 지원합니다 -- 커뮤니티 지원이 탄탄한 성숙한 LM Studio 대안입니다.`,
           ],
           callouts: [
             { type: '📌 핵심 포인트', text: 'Jan AI는 모델을 ~/jan/models에 저장하며, 이는 Ollama의 모델 캐시와 별개입니다. 두 앱을 모두 쓰면 내려받은 모델이 공유되지 않으므로, 두 앱에서 쓰는 모델은 디스크 사용량이 두 배가 됩니다.' },
@@ -3526,10 +3533,10 @@ schema: {
           content: '**Open WebUI가 무겁게 느껴지면 Ollama 데스크톱 앱이나 Page Assist 브라우저 확장 프로그램으로 시작하고, 문서 질의응답이 주된 목적이라면 AnythingLLM을 써 보십시오.** 아래 옵션은 모두 동일한 로컬 Ollama API(localhost:11434)에 연결됩니다.',
           items: [
             '**Ollama 데스크톱 앱** -- macOS와 Windows용 내장 채팅: 모델 내려받기, 텍스트 파일이나 PDF 끌어다 놓기, 멀티모달 모델에 이미지 보내기를 지원합니다. 추가 설치가 필요 없습니다. [ollama.com/download](https://ollama.com/download)에서 받으십시오.',
-            '**Page Assist** -- Chrome과 Firefox용 브라우저 사이드바 채팅, GitHub 스타 8,000개 이상(MIT). 가장 가벼운 옵션으로, 별도 서버나 Docker가 필요 없습니다. 최신 릴리스 v1.5.88(2026년 10월 18일), [GitHub](https://github.com/n4ze3m/page-assist).',
-            '**AnythingLLM** -- RAG 워크스페이스 중심의 데스크톱 앱 및 Docker 이미지, GitHub 스타 67,000개 이상(MIT). 최신 릴리스 v1.18.0(2026년 10월 13일), [GitHub](https://github.com/Mintplex-Labs/anything-llm).',
+            `**Page Assist** -- Chrome과 Firefox용 브라우저 사이드바 채팅, GitHub 스타 ${st.ko('page-assist', 'bare')}개 이상(MIT). 가장 가벼운 옵션으로, 별도 서버나 Docker가 필요 없습니다. 최신 릴리스 v1.5.88(2026년 10월 18일), [GitHub](https://github.com/n4ze3m/page-assist).`,
+            `**AnythingLLM** -- RAG 워크스페이스 중심의 데스크톱 앱 및 Docker 이미지, GitHub 스타 ${st.ko('anythingllm', 'bare')}개 이상(MIT). 최신 릴리스 v1.18.0(2026년 10월 13일), [GitHub](https://github.com/Mintplex-Labs/anything-llm).`,
             '**LM Studio** -- 폐쇄형 소스 데스크톱 앱(개인 및 업무용 무료)으로, 내장 채팅과 localhost:1234의 로컬 OpenAI 호환 서버를 제공하므로 Open WebUI 등 다른 프론트엔드가 백엔드로 쓸 수 있습니다. [변경 내역](https://lmstudio.ai/changelog)을 참고하십시오(마지막 업데이트 2026년 10월 12일).',
-            '**Cherry Studio** -- 지식 베이스를 내장한 다중 공급자 데스크톱 클라이언트, GitHub 스타 52,000개 이상(AGPL-3.0). 최신 릴리스 v2.1.7(2026년 10월 19일). [Cherry Studio 리뷰](/ko/local-llms/cherry-studio-ai-desktop-client)를 읽어 보십시오.',
+            `**Cherry Studio** -- 지식 베이스를 내장한 다중 공급자 데스크톱 클라이언트, GitHub 스타 ${st.ko('cherry-studio', 'bare')}개 이상(AGPL-3.0). 최신 릴리스 v2.1.7(2026년 10월 19일). [Cherry Studio 리뷰](/ko/local-llms/cherry-studio-ai-desktop-client)를 읽어 보십시오.`,
           ],
           callouts: [
             { type: '📌 핵심 포인트', text: '나란히 놓고 자세히 비교하려면 [LM Studio vs Jan AI](/ko/local-llms/lm-studio-vs-jan-ai)와 [LobeChat, Big-AGI, NextChat, Page Assist, Chatbox 비교](/ko/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)를 참고하십시오.' },
@@ -3591,7 +3598,7 @@ schema: {
             },
             {
               q: 'RAG에는 어떤 프론트엔드가 가장 좋습니까?',
-              a: 'Open WebUI는 이 가이드의 프론트엔드 중 가장 성숙한 범용 RAG 구현을 갖추고 있습니다 -- 문서를 업로드하면 모델이 그 문서에 대한 질문에 답합니다. 문서 질의응답이 부가 기능이 아니라 주된 용도라면, RAG 워크스페이스 중심으로 만들어진 AnythingLLM(GitHub 스타 67,000개 이상)을 따로 평가해 볼 만합니다. 고급 RAG 워크플로는 [최고의 로컬 RAG 도구](/ko/local-llms/best-local-rag-tools)를 참고하십시오.',
+              a: `Open WebUI는 이 가이드의 프론트엔드 중 가장 성숙한 범용 RAG 구현을 갖추고 있습니다 -- 문서를 업로드하면 모델이 그 문서에 대한 질문에 답합니다. 문서 질의응답이 부가 기능이 아니라 주된 용도라면, RAG 워크스페이스 중심으로 만들어진 AnythingLLM(GitHub 스타 ${st.ko('anythingllm', 'bare')}개 이상)을 따로 평가해 볼 만합니다. 고급 RAG 워크플로는 [최고의 로컬 RAG 도구](/ko/local-llms/best-local-rag-tools)를 참고하십시오.`,
             },
             {
               q: '프론트엔드가 꼭 필요합니까?',
@@ -3675,7 +3682,7 @@ schema: {
         '@type': 'TechArticle',
         'inLanguage': 'ko',
         'headline': '2026년 최고의 로컬 LLM 프론트엔드: Open WebUI, Enchanted UI 등',
-        'description': '2026년 로컬 LLM 채팅 UI 비교: Open WebUI(GitHub 스타 150,000개 이상), Ollama 데스크톱 앱, Enchanted UI(네이티브 Apple 앱), Jan AI(오프라인 앱). 비교와 설정 가이드.',
+        'description': `2026년 로컬 LLM 채팅 UI 비교: Open WebUI(GitHub 스타 ${st.ko('open-webui', 'bare')}개 이상), Ollama 데스크톱 앱, Enchanted UI(네이티브 Apple 앱), Jan AI(오프라인 앱). 비교와 설정 가이드.`,
         'url': 'https://www.promptquorum.com/ko/local-llms/best-local-llm-frontends',
         'datePublished': '2026-04-04',
         'dateModified': '2026-10-23',
@@ -3703,7 +3710,7 @@ schema: {
         'name': '2026년 최고의 로컬 LLM 프론트엔드',
         'numberOfItems': 8,
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': '웹 앱(Docker/pip). RAG, 팀, 다기능 용도에 적합. 설정 5분. RAM 12 GB 이상. GitHub 스타 150,000개 이상. 무료이며 브랜딩 조항 라이선스로 소스 공개.' },
+          { '@type': 'ListItem', 'position': 1, 'name': 'Open WebUI', 'description': `웹 앱(Docker/pip). RAG, 팀, 다기능 용도에 적합. 설정 5분. RAM 12 GB 이상. GitHub 스타 ${st.ko('open-webui', 'bare')}개 이상. 무료이며 브랜딩 조항 라이선스로 소스 공개.` },
           { '@type': 'ListItem', 'position': 2, 'name': 'Ollama 데스크톱 앱', 'description': 'macOS와 Windows용 네이티브 앱. 추가 설치 없는 기본 채팅에 적합. 설정 약 2분. RAM 8 GB 이상. 무료.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Enchanted UI', 'description': '네이티브 iOS/macOS/visionOS 앱. 다듬어진 채팅 클라이언트를 원하는 Apple 사용자에게 적합하나 2026년 7월 7일 이후 업데이트 없음. 설치 약 2분(App Store). RAM 8 GB 이상. 무료 오픈소스(Apache-2.0).' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Jan AI', 'description': '데스크톱 앱(Windows/macOS/Linux). 비기술 사용자, 오프라인 사용에 적합. 설정 3분. RAM 8 GB 이상. 무료 오픈소스(Apache-2.0).' },
@@ -3726,7 +3733,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'RAG에는 어떤 프론트엔드가 가장 좋습니까?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI는 이 가이드의 프론트엔드 중 가장 성숙한 범용 RAG 구현을 갖추고 있습니다 -- 문서를 업로드하면 모델이 그 문서에 대한 질문에 답합니다. 문서 질의응답이 부가 기능이 아니라 주된 용도라면, RAG 워크스페이스 중심으로 만들어진 AnythingLLM(GitHub 스타 67,000개 이상)을 따로 평가해 볼 만합니다. 고급 RAG 워크플로는 최고의 로컬 RAG 도구를 참고하십시오.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': `Open WebUI는 이 가이드의 프론트엔드 중 가장 성숙한 범용 RAG 구현을 갖추고 있습니다 -- 문서를 업로드하면 모델이 그 문서에 대한 질문에 답합니다. 문서 질의응답이 부가 기능이 아니라 주된 용도라면, RAG 워크스페이스 중심으로 만들어진 AnythingLLM(GitHub 스타 ${st.ko('anythingllm', 'bare')}개 이상)을 따로 평가해 볼 만합니다. 고급 RAG 워크플로는 최고의 로컬 RAG 도구를 참고하십시오.` }
           },
           {
             '@type': 'Question',

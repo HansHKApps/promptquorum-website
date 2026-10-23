@@ -17,7 +17,7 @@ export const app: ToolRecord = {
   license: 'AGPL 3.0',
   price: 'free',
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // github.com/CherryHQ/cherry-studio has no published hardware requirements (open issue CherryHQ/cherry-studio#9440 requests adding them); floor depends on the model backend configured, verified 2026-09-13
-  stars: 52008, // github.com/CherryHQ/cherry-studio, checked 2026-09-20
+  stars: 52910, // github.com/CherryHQ/cherry-studio, checked 2026-10-23
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['chat', 'agent', 'docs'],
