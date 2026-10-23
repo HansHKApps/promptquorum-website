@@ -5315,5 +5315,31 @@
       "t14": "2026-11-06",
       "t28": "2026-11-20"
     }
+  },
+  {
+    "id": "eb5786ff-5fae-427a-8d81-0111da1f6ab2",
+    "slug": "power-local-llm/run-ai-on-tablet-ipad-android",
+    "date": "2026-10-23T19:24:51.673Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Run a local LLM on an iPad or Android tablet: on-device apps (PocketPal AI, Locally AI), Termux + Ollama, and why Ollama on iPad needs a remote connection.",
+        "new": "Ollama does not run on iPad, but a local LLM does: PocketPal AI or Locally AI on-device, Termux on Android, or Ollama on a Mac over Wi-Fi."
+      }
+    ],
+    "queries": [
+      "ollama ipad",
+      "ollama on ipad",
+      "ollama for ipad",
+      "local ai on ipad"
+    ],
+    "baseline": {
+      "position": 4.22,
+      "impressions": 8148,
+      "clicks": 134,
+      "ctr": 0.01644575355915562,
+      "period": "2026-09-24..2026-10-21"
+    },
+    "deployedAt": null
   }
 ]

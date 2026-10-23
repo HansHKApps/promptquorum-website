@@ -35,6 +35,6 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { voice: true, offline: true, importModels: true, modelDownloads: true, visionInput: true },
   lastVerifiedDate: '2026-09-12',
-  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdate: '2026-10-23', // GitHub API (latest release or push, whichever is newer), read 2026-10-23
   lastUpstreamUpdateSource: 'https://github.com/google-ai-edge/gallery',
 }
