@@ -2908,7 +2908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['模型', '参数量', '文件（Ollama）', '最低内存', '估算 tok/s', '最适合'],
           image: '/images/best-cpu-only-llm-model-speeds-hero-zh.webp',
-          imageCaption: '2026 年最佳纯 CPU 本地 LLM：按模型文件大小估算的 tok/s',
+          imageCaption: '2026 年最佳纯 CPU 本地 LLM：5 款模型，无需 GPU（按文件大小估算 tok/s）',
         },
         speedComparison: {
           id: 'speed-comparison',
