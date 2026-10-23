@@ -35,6 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'mlc-chat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: '2026-09-07', // Verified against the App Store listing, MLC's GitHub Android APK release, and mlc-ai/mlc-llm docs — see /power-local-llm/mlc-chat-review
-  lastUpstreamUpdate: '2026-10-06', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
-  lastUpstreamUpdateSource: 'https://github.com/mlc-ai/mlc-llm',
+  // The APP (not the engine) was last built Sept 2024: iOS v1.6 on 2024-09-27 (App Store version history), Android demo APK tagged Android-09262024. The mlc-ai/mlc-llm engine repo is still active (pushes into 2026-10, see the mlc-llm tile). Read 2026-10-23.
+  lastUpstreamUpdate: '2024-09-27',
+  lastUpstreamUpdateSource: 'https://apps.apple.com/us/app/mlc-chat/id6448482937',
 }
